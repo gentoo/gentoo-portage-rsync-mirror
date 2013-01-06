@@ -1,6 +1,19 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.100 2013/01/06 16:50:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.103 2013/01/06 18:19:40 armin76 Exp $
+
+  06 Jan 2013; Raúl Porcel <armin76@gentoo.org> spidermonkey-1.8.5-r1.ebuild,
+  spidermonkey-1.8.5-r2.ebuild, spidermonkey-1.8.5-r3.ebuild:
+  Mark other non-working versions on ia64
+
+  06 Jan 2013; Raúl Porcel <armin76@gentoo.org> spidermonkey-1.8.5-r4.ebuild,
+  spidermonkey-1.8.7.ebuild, spidermonkey-1.8.7-r2.ebuild,
+  spidermonkey-1.8.7-r3.ebuild:
+  Add ~sh
+
+  06 Jan 2013; Raúl Porcel <armin76@gentoo.org> spidermonkey-1.8.7.ebuild,
+  spidermonkey-1.8.7-r2.ebuild, spidermonkey-1.8.7-r3.ebuild:
+  1.8.7 segfaults on ia64
 
   06 Jan 2013; Raúl Porcel <armin76@gentoo.org> spidermonkey-1.8.5-r4.ebuild,
   +files/spidermonkey-1.8.5-ia64-fix.patch,

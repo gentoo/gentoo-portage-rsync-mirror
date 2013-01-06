@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-appswitcher/razorqt-appswitcher-0.5.1.ebuild,v 1.1 2012/10/24 11:32:58 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-appswitcher/razorqt-appswitcher-0.5.1.ebuild,v 1.2 2013/01/06 18:11:08 ago Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -15,7 +15,7 @@ if [[ ${PV} = *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="https://github.com/downloads/Razor-qt/razor-qt/razorqt-${PV}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~ppc ~x86"
 	S="${WORKDIR}/razorqt-${PV}"
 fi
 

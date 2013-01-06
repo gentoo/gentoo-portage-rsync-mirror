@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/a8/a8-0.11-r1.ebuild,v 1.1 2013/01/06 00:54:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/a8/a8-0.11-r1.ebuild,v 1.2 2013/01/06 18:21:03 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -22,7 +22,7 @@ DEPEND=">=dev-python/dbus-python-1
 	dev-python/pyyaml
 	>=dev-python/pygtk-2.22
 	>=dev-python/pygtkhelpers-0.4.3
-	virtual/python-argparse
+	virtual/python-argparse[${PYTHON_USEDEP}]
 	x11-libs/vte:0[python]"
 RDEPEND="${DEPEND}
 	app-editors/gvim

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63-r1.ebuild,v 1.1 2013/01/06 00:50:44 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63-r1.ebuild,v 1.3 2013/01/06 18:20:24 hasufell Exp $
 
 EAPI=5
 
@@ -24,9 +24,9 @@ VCS_DEPEND="
 DEPEND="bazaar? ( dev-vcs/bzr )"
 RDEPEND="${DEPEND}
 	app-portage/portage-utils
-	virtual/python-argparse
 	cron? ( virtual/cron )
-	bazaar? ( ${PYTHON_DEPS} )
+	bazaar? ( ${PYTHON_DEPS}
+		virtual/python-argparse[${PYTHON_USEDEP}] )
 	!bazaar? ( || ( ${VCS_DEPEND} ) )"
 
 src_prepare(){

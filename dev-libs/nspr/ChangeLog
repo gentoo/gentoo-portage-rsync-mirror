@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nspr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.204 2012/11/29 23:40:13 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.205 2013/01/06 18:14:51 armin76 Exp $
+
+  06 Jan 2013; Raúl Porcel <armin76@gentoo.org> nspr-4.9.ebuild,
+  nspr-4.9.1.ebuild, nspr-4.9.2.ebuild, nspr-4.9.2-r1.ebuild,
+  nspr-4.9.4.ebuild:
+  Add ~sh
 
   29 Nov 2012; Anthony G. Basile <blueness@gentoo.org> nspr-4.9.2.ebuild:
   stable ppc64, bug #439586

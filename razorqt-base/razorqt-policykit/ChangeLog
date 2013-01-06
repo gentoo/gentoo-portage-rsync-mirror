@@ -1,6 +1,9 @@
 # ChangeLog for razorqt-base/razorqt-policykit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-policykit/ChangeLog,v 1.2 2012/10/24 11:38:38 yngwin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-policykit/ChangeLog,v 1.3 2013/01/06 18:13:56 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> razorqt-policykit-0.5.1.ebuild:
+  Add ~ppc, wrt bug #449322
 
 *razorqt-policykit-0.5.1 (24 Oct 2012)
 

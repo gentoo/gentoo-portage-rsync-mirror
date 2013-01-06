@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/collectl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/ChangeLog,v 1.16 2012/02/23 07:44:16 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/ChangeLog,v 1.17 2013/01/06 18:18:29 vapier Exp $
+
+*collectl-3.6.5 (06 Jan 2013)
+
+  06 Jan 2013; Mike Frysinger <vapier@gentoo.org> +collectl-3.6.5.ebuild:
+  Version bump #450580 by Agostino Sarubbo.
 
   23 Feb 2012; Tim Harder <radhermit@gentoo.org> collectl-3.6.0.ebuild,
   collectl-3.6.1.ebuild:
@@ -72,4 +77,3 @@
   05 Jan 2008; Mike Frysinger <vapier@gentoo.org> +files/collectl.initd,
   +metadata.xml, +collectl-2.4.1.ebuild:
   Initial import.  Ebuild by Rene Zbinden #188743.
-
