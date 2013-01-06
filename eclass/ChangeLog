@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.601 2013/01/05 10:02:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.602 2013/01/06 13:06:35 slyfox Exp $
+
+  06 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org> ghc-package.eclass,
+  haskell-cabal.eclass:
+  Added 'ghc-supports-threaded-runtime' function. Removed implicit RDEPEND on
+  'ghc'.
 
   05 Jan 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Support overriding job-count for parallel build.

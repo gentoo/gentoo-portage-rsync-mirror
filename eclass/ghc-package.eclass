@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.35 2012/11/16 15:47:17 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.36 2013/01/06 13:06:35 slyfox Exp $
 
 # @ECLASS: ghc-package.eclass
 # @MAINTAINER:
@@ -92,6 +92,14 @@ ghc-sanecabal() {
 # shared libraries (aka '-dynamic' option)
 ghc-supports-shared-libraries() {
 	$(ghc-getghc) --info | grep "RTS ways" | grep -q "dyn"
+}
+
+# @FUNCTION: ghc-supports-threaded-runtime
+# @DESCRIPTION:
+# checks if ghc is built with support for threaded
+# runtime (aka '-threaded' option)
+ghc-supports-threaded-runtime() {
+	$(ghc-getghc) --info | grep "RTS ways" | grep -q "thr"
 }
 
 # @FUNCTION: ghc-extractportageversion
