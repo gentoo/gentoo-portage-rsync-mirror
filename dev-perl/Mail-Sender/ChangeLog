@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-Sender
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/ChangeLog,v 1.24 2012/12/25 20:59:02 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/ChangeLog,v 1.25 2013/01/06 14:04:25 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> Mail-Sender-0.8.22.ebuild:
+  Add ~ppc, wrt bug #369695
 
 *Mail-Sender-0.8.22 (25 Dec 2012)
 

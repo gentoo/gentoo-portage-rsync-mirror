@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/postfixadmin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.26 2012/07/06 08:41:27 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.27 2013/01/06 14:03:56 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> postfixadmin-2.3.5.ebuild:
+  Add ~ppc, wrt bug #369695
 
   06 Jul 2012; Jeff Horelick <jdhore@gentoo.org> postfixadmin-2.3.5.ebuild:
   marked x86 per bug 400971
@@ -142,4 +145,3 @@
   14 Dec 2005; <php@gunnarwrobel.de> ChangeLog:
   Initial ebuild import into the overlay. Original ebuild from SteveB
   <tp22a@softhome.net>. See bug #50035
-

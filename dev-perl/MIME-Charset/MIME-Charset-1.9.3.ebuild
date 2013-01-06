@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Charset/MIME-Charset-1.9.3.ebuild,v 1.1 2012/12/30 12:00:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Charset/MIME-Charset-1.9.3.ebuild,v 1.2 2013/01/06 14:04:38 ago Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Charset Informations for MIME"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 SRC_TEST=do
