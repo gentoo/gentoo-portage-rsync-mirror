@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/quota
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.63 2012/12/24 02:29:19 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.64 2013/01/06 22:37:43 vapier Exp $
+
+*quota-4.01 (06 Jan 2013)
+
+  06 Jan 2013; Mike Frysinger <vapier@gentoo.org> +files/quota-4.01-mnt.patch,
+  +quota-4.01.ebuild:
+  Version bump #450614 by Agostino Sarubbo.
 
   24 Dec 2012; Mike Frysinger <vapier@gentoo.org> quota-4.00.ebuild:
   Use CC from configure #446277 by Julian Ospald.

@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/nvram-wakeup
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/ChangeLog,v 1.12 2012/05/24 05:48:22 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/ChangeLog,v 1.13 2013/01/06 22:48:26 vapier Exp $
+
+*nvram-wakeup-1.1 (06 Jan 2013)
+
+  06 Jan 2013; Mike Frysinger <vapier@gentoo.org> +nvram-wakeup-1.1.ebuild:
+  Version bump #450622 by Agostino Sarubbo.
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> nvram-wakeup-0.97_p863.ebuild,
   nvram-wakeup-0.99b.ebuild, nvram-wakeup-1.0.ebuild:

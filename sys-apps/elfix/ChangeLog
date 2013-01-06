@@ -1,4 +1,11 @@
 
+  06 Jan 2013; Anthony G. Basile <blueness@gentoo.org> -elfix-0.8.0.ebuild:
+  Remove deprecated unstable version
+
+*elfix-0.8.1 (06 Jan 2013)
+
+  06 Jan 2013; Anthony G. Basile <blueness@gentoo.org> +elfix-0.8.1.ebuild:
+  Minor version bump, switch to EAPI=5
 
   31 Dec 2012; Jeroen Roovers <jer@gentoo.org> elfix-0.7.0.ebuild:
   Stable for HPPA (bug #445334).
