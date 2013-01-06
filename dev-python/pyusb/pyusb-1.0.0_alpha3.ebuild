@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyusb/pyusb-1.0.0_alpha3.ebuild,v 1.1 2013/01/05 05:58:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyusb/pyusb-1.0.0_alpha3.ebuild,v 1.2 2013/01/06 08:10:32 idella4 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
@@ -22,8 +22,10 @@ IUSE=""
 
 ### This version is compatible with both 0.X and 1.X versions of libusb
 DEPEND="virtual/libusb:1
-	dev-python/setuptools"
+	dev-python/setuptools
+	app-arch/unzip"
 RDEPEND="${DEPEND}"
+
 DOCS="README.rst docs/tutorial.rst"
 
 S="${WORKDIR}/${MY_P}"
