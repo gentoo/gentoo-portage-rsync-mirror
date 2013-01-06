@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.38.ebuild,v 1.4 2012/12/27 15:24:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.38.ebuild,v 1.5 2013/01/06 17:54:29 floppym Exp $
 
 EAPI="4"
 
@@ -130,6 +130,9 @@ src_install() {
 	docompress -x /usr/share/doc/${PF}/contrib
 
 	newinitd "${FILESDIR}"/ipsec-initd ipsec
+
+	# We don't need to install /var/run/pluto.
+	rm -rf "${D}var" || die
 }
 
 pkg_preinst() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openswan
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.86 2012/12/27 15:24:03 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.87 2013/01/06 17:54:29 floppym Exp $
+
+  06 Jan 2013; Mike Gilbert <floppym@gentoo.org> openswan-2.6.38.ebuild:
+  Remove /var/run/pluto after the build system creates it, bug 448834.
 
   27 Dec 2012; Mike Gilbert <floppym@gentoo.org> -files/ipsec,
   -files/openswan-2.4-allow-ms-bad-proposal.patch,

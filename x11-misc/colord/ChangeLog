@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.49 2013/01/06 11:22:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.50 2013/01/06 17:59:10 tetromino Exp $
+
+*colord-0.1.26-r1 (06 Jan 2013)
+
+  06 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  colord-0.1.26.ebuild, +colord-0.1.26-r1.ebuild:
+  Disable systemd in stable ebuild; add 0.1.26-r1 for systemd support. Thanks
+  to Markus Meier for pointing out the problem.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> colord-0.1.26.ebuild:
   Add ~sparc, wrt bug #449220

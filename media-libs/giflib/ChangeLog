@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/giflib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.65 2012/12/30 00:55:49 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.66 2013/01/06 17:50:05 vapier Exp $
+
+*giflib-5.0.3 (06 Jan 2013)
+
+  06 Jan 2013; Mike Frysinger <vapier@gentoo.org> +giflib-5.0.3.ebuild:
+  Version bump #450566 by Agostino Sarubbo.
 
 *giflib-5.0.2 (30 Dec 2012)
 
