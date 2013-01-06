@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcsc-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.14 2012/06/16 16:07:15 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.15 2013/01/06 17:19:37 alonbl Exp $
+
+*pcsc-tools-1.4.21 (06 Jan 2013)
+
+  06 Jan 2013; Alon Bar-Lev <alonbl@gentoo.org> +pcsc-tools-1.4.21.ebuild:
+  Version bump, per bug#450600
 
 *pcsc-tools-1.4.20 (16 Jun 2012)
 
@@ -102,4 +107,3 @@
   Tested with a USB smartcard reader (Axalto Reflex USB v3).  The older 
   reader I tried (mentioned on several forum posts) won't work without 
   a firmware update.
-
