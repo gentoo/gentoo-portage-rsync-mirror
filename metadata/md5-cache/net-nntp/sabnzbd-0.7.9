@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm prepare setup
+DEPEND=|| ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[sqlite] =dev-lang/python-2.6*[sqlite] )
+DESCRIPTION=Binary newsgrabber with web-interface
+EAPI=4
+HOMEPAGE=http://www.sabnzbd.org/
+IUSE=+rar +ssl unzip yenc
+KEYWORDS=~amd64
+LICENSE=GPL-2 BSD LGPL-2 MIT BSD-1
+RDEPEND=>=app-arch/par2cmdline-0.4 >=dev-python/cheetah-2.0.1 =dev-python/cherrypy-3.2* dev-python/configobj dev-python/feedparser dev-python/gntp dev-python/pythonutils net-misc/wget rar? ( app-arch/rar ) ssl? ( dev-python/pyopenssl ) unzip? ( >=app-arch/unzip-5.5.2 ) yenc? ( dev-python/yenc ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[sqlite] =dev-lang/python-2.6*[sqlite] )
+SLOT=0
+SRC_URI=mirror://sourceforge/sabnzbdplus/SABnzbd-0.7.9-src.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=f44cf948298de07b87c7597dfc93d493
