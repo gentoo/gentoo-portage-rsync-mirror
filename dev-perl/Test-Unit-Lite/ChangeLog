@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Unit-Lite
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Unit-Lite/ChangeLog,v 1.9 2012/12/25 11:52:05 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Unit-Lite/ChangeLog,v 1.10 2013/01/06 14:56:04 tove Exp $
+
+  06 Jan 2013; Torsten Veller <tove@gentoo.org>
+  -Test-Unit-Lite-0.120.100.ebuild:
+  Cleanup
 
 *Test-Unit-Lite-0.120.200 (25 Dec 2012)
 

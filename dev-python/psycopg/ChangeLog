@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.150 2012/12/31 19:20:10 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.151 2013/01/06 14:49:13 maekke Exp $
+
+  06 Jan 2013; Markus Meier <maekke@gentoo.org> psycopg-2.4.5.ebuild:
+  arm stable, bug #449426
 
   31 Dec 2012; Jeroen Roovers <jer@gentoo.org> psycopg-2.4.5.ebuild:
   Stable for HPPA (bug #449426).

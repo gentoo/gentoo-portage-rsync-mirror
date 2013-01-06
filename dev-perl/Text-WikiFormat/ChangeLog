@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-WikiFormat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/ChangeLog,v 1.34 2012/10/14 18:44:59 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/ChangeLog,v 1.35 2013/01/06 14:51:20 tove Exp $
+
+  06 Jan 2013; Torsten Veller <tove@gentoo.org>
+  -Text-WikiFormat-0.790.0.ebuild:
+  Cleanup
 
   14 Oct 2012; Raúl Porcel <armin76@gentoo.org>
   Text-WikiFormat-0.790.0.ebuild, Text-WikiFormat-0.800.0.ebuild:

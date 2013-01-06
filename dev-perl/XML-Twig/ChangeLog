@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Twig
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.93 2012/12/27 08:43:07 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.94 2013/01/06 14:44:13 tove Exp $
+
+  06 Jan 2013; Torsten Veller <tove@gentoo.org> -XML-Twig-3.390.0.ebuild:
+  Cleanup
 
   27 Dec 2012; Raúl Porcel <armin76@gentoo.org> XML-Twig-3.410.0.ebuild:
   alpha/sparc stable wrt #441264

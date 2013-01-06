@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.141 2013/01/04 03:52:55 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.142 2013/01/06 14:49:19 maksbotan Exp $
+
+*awesome-3.4.14 (06 Jan 2013)
+
+  06 Jan 2013; Maxim Koltsov <maksbotan@gentoo.org> +awesome-3.4.14.ebuild:
+  Bump to 3.4.14, bug #450456
 
 *awesome-3.5 (04 Jan 2013)
 
