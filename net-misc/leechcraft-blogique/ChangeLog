@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/leechcraft-blogique
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-blogique/ChangeLog,v 1.2 2012/12/25 16:42:49 maksbotan Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-blogique/ChangeLog,v 1.3 2013/01/06 18:36:06 kensington Exp $
+
+  06 Jan 2013; Michael Palimaka <kensington@gentoo.org>
+  leechcraft-blogique-0.5.90.ebuild, leechcraft-blogique-9999.ebuild:
+  Add missing Qt slots.
 
 *leechcraft-blogique-0.5.90 (25 Dec 2012)
 

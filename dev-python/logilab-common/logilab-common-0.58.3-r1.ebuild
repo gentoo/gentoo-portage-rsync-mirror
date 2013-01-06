@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.58.3-r1.ebuild,v 1.2 2013/01/01 14:14:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.58.3-r1.ebuild,v 1.3 2013/01/06 18:57:00 mgorny Exp $
 
 EAPI=5
 # broken with python3.3, bug #449276
@@ -17,14 +17,16 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="test doc"
 
-# dev-python/unittest2 is not required with Python 2.7+ and 3.2+.
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	dev-python/unittest2"
+	virtual/python-unittest2[${PYTHON_USEDEP}]"
 
-# Tests using dev-python/psycopg are skipped when dev-python/psycopg isn't installed.
+# Tests using dev-python/psycopg are skipped when dev-python/psycopg
+# isn't installed.
+# egenix-mx-base tests are optional, and egenix-mx-base does support
+# Python2 only.
 DEPEND="${RDEPEND}
 	test? (
-		dev-python/egenix-mx-base
+		dev-python/egenix-mx-base[$(python_gen_usedep python2*)]
 		!dev-python/psycopg[-mxdatetime]
 	)
 	doc? ( dev-python/epydoc )"

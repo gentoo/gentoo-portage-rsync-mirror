@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1-r1.ebuild,v 1.7 2012/10/16 18:46:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpe2/mpe2-1.0.6_p1-r1.ebuild,v 1.8 2013/01/06 18:48:37 jsbronder Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ DESCRIPTION="MPI development tools"
 HOMEPAGE="http://www-unix.mcs.anl.gov/perfvis/download/index.htm"
 SRC_URI="ftp://ftp.mcs.anl.gov/pub/mpi/${PN%2}/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="mpich2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="minimal fortran threads debug"

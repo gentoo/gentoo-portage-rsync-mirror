@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-blogique/leechcraft-blogique-0.5.90.ebuild,v 1.1 2012/12/25 16:42:49 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-blogique/leechcraft-blogique-0.5.90.ebuild,v 1.2 2013/01/06 18:36:06 kensington Exp $
 
 EAPI="4"
 
@@ -13,8 +13,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug +metida"
 
 DEPEND="~net-misc/leechcraft-core-${PV}
-	x11-libs/qt-sql[sqlite]
-	metida? ( x11-libs/qt-xmlpatterns )
+	x11-libs/qt-sql:4[sqlite]
+	metida? ( x11-libs/qt-xmlpatterns:4 )
 	"
 RDEPEND="${DEPEND}
 	virtual/leechcraft-wysiwyg-editor

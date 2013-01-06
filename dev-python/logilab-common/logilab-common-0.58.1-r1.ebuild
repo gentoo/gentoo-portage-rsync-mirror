@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.58.1-r1.ebuild,v 1.2 2012/11/10 15:36:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.58.1-r1.ebuild,v 1.3 2013/01/06 18:57:00 mgorny Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,7 +20,7 @@ IUSE="test doc"
 
 # dev-python/unittest2 is not required with Python >=3.2.
 RDEPEND="dev-python/setuptools
-	dev-python/unittest2"
+	virtual/python-unittest2"
 
 # Tests using dev-python/psycopg are skipped when dev-python/psycopg isn't installed.
 DEPEND="${RDEPEND}

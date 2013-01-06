@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/mock-0.7.1.ebuild,v 1.8 2011/07/20 22:54:25 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/mock-0.7.1.ebuild,v 1.9 2013/01/06 18:48:32 mgorny Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,7 +19,7 @@ IUSE="doc test"
 
 # dev-python/unittest2 is not required with Python >=3.2.
 DEPEND="dev-python/setuptools
-	test? ( dev-python/unittest2 )"
+	test? ( virtual/python-unittest2 )"
 RDEPEND=""
 
 DOCS="docs/*.txt"

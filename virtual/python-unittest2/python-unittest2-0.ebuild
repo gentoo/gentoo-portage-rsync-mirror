@@ -1,0 +1,18 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/python-unittest2-0.ebuild,v 1.1 2013/01/06 18:40:15 mgorny Exp $
+
+EAPI=5
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} pypy{1_9,2_0} )
+inherit python-r1
+
+DESCRIPTION="A virtual for Python 2.7/3.2+-compatible unittest or unittest2"
+HOMEPAGE=""
+SRC_URI=""
+
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+LICENSE=""
+SLOT="0"
+IUSE=""
+
+RDEPEND="$(python_gen_cond_dep 'dev-python/unittest2' python{2_5,2_6,3_1})"

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare test
-DEPEND=sci-libs/hdf5 dev-python/numpy dev-python/setuptools test? ( dev-python/unittest2 ) dev-lang/python
+DEPEND=sci-libs/hdf5 dev-python/numpy dev-python/setuptools test? ( virtual/python-unittest2 ) dev-lang/python
 DESCRIPTION=A simple Python interface to HDF5 files.
 EAPI=3
 HOMEPAGE=http://h5py.alfven.org/ http://code.google.com/p/h5py/ http://pypi.python.org/pypi/h5py
@@ -10,4 +10,4 @@ RDEPEND=sci-libs/hdf5 dev-python/numpy dev-lang/python
 SLOT=0
 SRC_URI=http://h5py.googlecode.com/files/h5py-2.1.0.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=3d03bf494f60c7a4c058d8a2697f172a
+_md5_=6e61a58a45d47660588de2ed0e758bd2

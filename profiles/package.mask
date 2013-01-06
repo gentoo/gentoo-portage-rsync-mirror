@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14349 2013/01/06 16:29:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14350 2013/01/06 18:45:21 qnikst Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -759,6 +759,10 @@ app-crypt/hmaccalc
 # Keeping samba-4 masked until release.
 >net-fs/samba-4
 
+# Alexander Vershilov <qnikst@gentoo.org> (06 Jan 2013)
+# Require samba:4 (bug #450226)
+>=sys-auth/sssd-1.9.3
+
 # Mike Frysinger <vapier@gentoo.org> (07 Mar 2010)
 # Very old packages that people should have upgraded away from
 # long ago.  Courtesy mask ... time to upgrade.
@@ -867,7 +871,6 @@ dev-embedded/avr-libc
 
 # Steve Dibb <beandog@gentoo.org> (05 Nov 2008)
 # Mask realplayer codecs for security bug 245662
-# http://forums.gentoo.org/viewtopic-t-713051.html
 media-libs/amd64codecs
 media-libs/realcodecs
 
@@ -947,3 +950,4 @@ games-fps/unreal-tournament-goty
 games-fps/unreal-tournament-strikeforce
 games-fps/unreal-tournament-bonuspacks
 games-fps/aaut
+
