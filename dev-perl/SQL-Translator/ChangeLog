@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/SQL-Translator
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Translator/ChangeLog,v 1.32 2012/11/18 11:36:38 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Translator/ChangeLog,v 1.33 2013/01/06 15:08:47 tove Exp $
+
+  06 Jan 2013; Torsten Veller <tove@gentoo.org>
+  -SQL-Translator-0.110.120.ebuild, -SQL-Translator-0.110.130.ebuild,
+  -SQL-Translator-0.110.150.ebuild:
+  Cleanup
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

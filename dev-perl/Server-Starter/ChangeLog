@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Server-Starter
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Server-Starter/ChangeLog,v 1.3 2012/09/30 07:13:21 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Server-Starter/ChangeLog,v 1.4 2013/01/06 15:04:56 tove Exp $
+
+  06 Jan 2013; Torsten Veller <tove@gentoo.org> -Server-Starter-0.110.0.ebuild:
+  Cleanup
 
 *Server-Starter-0.120.0 (30 Sep 2012)
 

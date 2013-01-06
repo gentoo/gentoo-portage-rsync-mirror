@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Role-Tiny
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Role-Tiny/ChangeLog,v 1.12 2012/11/03 19:20:07 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Role-Tiny/ChangeLog,v 1.13 2013/01/06 15:20:08 tove Exp $
+
+  06 Jan 2013; Torsten Veller <tove@gentoo.org> -Role-Tiny-1.1.5.ebuild:
+  Cleanup
 
 *Role-Tiny-1.2.4 (03 Nov 2012)
 
