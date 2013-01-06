@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.193 2012/12/31 05:08:43 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.194 2013/01/06 09:03:50 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask, use.mask:
+  Add -zeitgeist. Remove eds/telepathy from folks and sendto from nautilus
 
   31 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask,
   use.mask:

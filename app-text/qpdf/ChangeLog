@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.19 2013/01/03 06:29:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.20 2013/01/06 09:16:27 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> qpdf-3.0.2.ebuild:
+  Add ~sparc, wrt bug #449220
 
 *qpdf-4.0.0 (03 Jan 2013)
 

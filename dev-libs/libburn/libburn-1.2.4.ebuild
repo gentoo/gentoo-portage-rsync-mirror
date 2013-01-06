@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-1.2.4.ebuild,v 1.8 2013/01/01 11:43:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/libburn-1.2.4.ebuild,v 1.9 2013/01/06 09:23:11 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://files.libburnia-project.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ppc64 x86"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ppc64 ~sparc x86"
 IUSE="cdio debug static-libs track-src-odirect"
 
 RDEPEND="cdio? ( >=dev-libs/libcdio-0.83 )"

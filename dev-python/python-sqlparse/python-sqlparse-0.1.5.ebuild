@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-sqlparse/python-sqlparse-0.1.5.ebuild,v 1.5 2013/01/01 14:16:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-sqlparse/python-sqlparse-0.1.5.ebuild,v 1.6 2013/01/06 09:30:28 ago Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://code.google.com/p/python-sqlparse/ https://github.com/andialbre
 SRC_URI="http://python-sqlparse.googlecode.com/files/${P#python-}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="BSD-2"
 IUSE=""
 

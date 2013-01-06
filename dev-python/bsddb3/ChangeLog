@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.84 2013/01/01 14:14:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.85 2013/01/06 09:28:25 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> bsddb3-5.3.0.ebuild:
+  Add ~sparc, wrt bug #449220
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> bsddb3-5.3.0.ebuild:
   Add ~alpha, wrt bug #449220

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.128 2012/12/31 05:08:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.129 2013/01/06 09:03:50 ago Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
 # requires firefox, which is not keyworded on sparc
@@ -31,10 +31,6 @@ dev-util/devhelp gedit
 # remove mask when app-crypt/libsecret is keyworded here
 >=gnome-base/gvfs-1.14 gnome-keyring
 >=gnome-extra/libgda-5.1 gnome-keyring
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when dev-libs/libzeitgeist is keyworded here
->=dev-libs/folks-0.8 telepathy
 
 # Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
 # MySQL 5.5 wants systemtap, tcmalloc & jemalloc
@@ -98,10 +94,10 @@ sys-cluster/openmpi openmpi_fabrics_psm openmpi_fabrics_knem openmpi_fabrics_ope
 # bug #390345
 >=app-cdr/brasero-3 tracker
 app-text/evince xps
->=dev-libs/folks-0.6 eds socialweb tracker
+>=dev-libs/folks-0.6 socialweb tracker
 >=gnome-base/gnome-menus-3.2 test
 >=gnome-base/gnome-panel-3 eds
->=gnome-base/nautilus-3 previewer sendto tracker
+>=gnome-base/nautilus-3 previewer tracker
 
 # Raúl Porcel <armin76@gentoo.org> (05 Nov 2011)
 # jit not supported on sparc

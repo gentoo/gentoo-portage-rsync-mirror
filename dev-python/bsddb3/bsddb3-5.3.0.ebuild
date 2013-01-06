@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-5.3.0.ebuild,v 1.9 2013/01/01 14:14:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-5.3.0.ebuild,v 1.10 2013/01/06 09:28:25 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2 3:3.1"
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86"
 IUSE="doc"
 
 RDEPEND=">=sys-libs/db-4.8.30"

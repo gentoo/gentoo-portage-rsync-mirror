@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.80 2013/01/01 14:11:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.81 2013/01/06 09:25:54 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> rasqal-0.9.29.ebuild:
+  Add ~sparc, wrt bug #449220
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> rasqal-0.9.29.ebuild:
   Add ~alpha, wrt bug #449220

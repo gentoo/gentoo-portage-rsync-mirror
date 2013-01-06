@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.99.20121006.ebuild,v 1.3 2013/01/01 14:03:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.99.20121006.ebuild,v 1.4 2013/01/06 09:15:15 ago Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.5"
@@ -17,7 +17,7 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="dconf deprecated +gconf gtk +gtk3 +introspection nls +python test vala +X"
 REQUIRED_USE="|| ( gtk gtk3 X )
 	deprecated? ( python )

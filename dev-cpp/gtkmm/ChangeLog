@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.243 2012/12/27 05:05:55 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.244 2013/01/06 09:17:11 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gtkmm-3.6.0.ebuild:
+  Add ~sparc, wrt bug #449220
 
   27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gtkmm-3.6.0.ebuild:
   Drop sparc keyword, needs gtk+-3.6 keyworded.

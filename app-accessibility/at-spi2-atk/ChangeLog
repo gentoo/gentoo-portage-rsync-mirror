@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/at-spi2-atk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.16 2012/12/29 16:03:22 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.17 2013/01/06 09:09:57 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> at-spi2-atk-2.6.2.ebuild:
+  Add ~sparc, wrt bug #449220
 
   29 Dec 2012; Anthony G. Basile <blueness@gentoo.org> at-spi2-atk-2.6.2.ebuild:
   Keyword ~mips

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.101 2012/12/31 05:08:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.102 2013/01/06 09:03:50 ago Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -327,3 +327,5 @@ python_targets_jython2_5
 python_single_target_pypy1_8
 python_single_target_pypy1_9
 python_single_target_jython2_5
+
+-zeitgeist
