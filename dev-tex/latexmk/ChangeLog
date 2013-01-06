@@ -1,9 +1,9 @@
 # ChangeLog for dev-tex/latexmk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.60 2013/01/06 14:48:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.61 2013/01/06 16:48:42 maekke Exp $
 
   06 Jan 2013; Markus Meier <maekke@gentoo.org> latexmk-435.ebuild:
-  arm stable, bug #449926
+  arm stable, bug #449928
 
   05 Jan 2013; Agostino Sarubbo <ago@gentoo.org> latexmk-435.ebuild:
   Stable for sparc, wrt bug #449928

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r4.ebuild,v 1.2 2013/01/01 11:41:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r4.ebuild,v 1.3 2013/01/06 16:50:09 armin76 Exp $
 
 EAPI="5"
 WANT_AUTOCONF="2.1"
@@ -16,7 +16,7 @@ SRC_URI="https://ftp.mozilla.org/pub/mozilla.org/js/${TARBALL_P}.tar.gz"
 
 LICENSE="NPL-1.1"
 SLOT="0/mozjs185"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug minimal static-libs test"
 
 S="${WORKDIR}/${MY_P}"
@@ -50,6 +50,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.5-perf_event-check.patch
 	# https://bugs.gentoo.org/show_bug.cgi?id=439260
 	epatch "${FILESDIR}"/${P}-symbol-versions.patch
+	# https://bugs.gentoo.org/show_bug.cgi?id=441934
+	epatch "${FILESDIR}"/${PN}-1.8.5-ia64-fix.patch
+	epatch "${FILESDIR}"/${PN}-1.8.5-ia64-static-strings.patch
 
 	epatch_user
 
