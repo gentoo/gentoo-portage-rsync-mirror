@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.239 2012/09/09 17:15:31 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.240 2013/01/06 20:12:40 tove Exp $
+
+  06 Jan 2013; Torsten Veller <tove@gentoo.org> openvpn-2.2.2.ebuild:
+  Drop duplicate arches from KEYWORDS
 
   09 Sep 2012; Justin Lecher <jlec@gentoo.org> openvpn-2.1.4.ebuild,
   openvpn-2.2.2.ebuild, openvpn-9999.ebuild:

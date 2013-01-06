@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Pager
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Pager/ChangeLog,v 1.32 2012/12/06 18:41:47 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Pager/ChangeLog,v 1.33 2013/01/06 20:23:00 tove Exp $
+
+  06 Jan 2013; Torsten Veller <tove@gentoo.org> -IO-Pager-0.240.0.ebuild:
+  Cleanup
 
   06 Dec 2012; Agostino Sarubbo <ago@gentoo.org> IO-Pager-0.300.0.ebuild:
   Stable for ppc, wrt bug #441230

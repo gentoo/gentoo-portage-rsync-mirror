@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-RewriteAttributes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-RewriteAttributes/ChangeLog,v 1.8 2012/11/04 15:04:02 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-RewriteAttributes/ChangeLog,v 1.9 2013/01/06 20:29:24 tove Exp $
+
+  06 Jan 2013; Torsten Veller <tove@gentoo.org>
+  -HTML-RewriteAttributes-0.40.0.ebuild:
+  Cleanup
 
 *HTML-RewriteAttributes-0.50.0 (04 Nov 2012)
 

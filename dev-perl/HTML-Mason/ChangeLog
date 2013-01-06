@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Mason
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.106 2012/10/08 15:35:57 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.107 2013/01/06 20:30:04 tove Exp $
+
+  06 Jan 2013; Torsten Veller <tove@gentoo.org> -HTML-Mason-1.480.0.ebuild:
+  Cleanup
 
   08 Oct 2012; Torsten Veller <tove@gentoo.org> HTML-Mason-1.500.0.ebuild:
   Remove useflag 'doc' as HTML documentation was eleminated from the
