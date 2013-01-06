@@ -1,19 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.154 2012/12/31 14:09:20 ago Exp $
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when gnome-extra/gnome-color-manager is keyworded here
-gnome-base/gnome-control-center colord
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when >=app-editors/gedit-3.6 is keyworded here
-dev-util/devhelp gedit
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when x11-misc/colord is stable on ppc/ppc64
-=x11-libs/gtk+-3.2.4-r1 colord
-=x11-libs/gtk+-3.4.4 colord
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.155 2013/01/06 21:25:15 tetromino Exp $
 
 # Anthony G. Basile <blueness@gentoo.org> (15 Nove 2012)
 # Mask telepathy, no stable net-libs/telepathy-qt, bug #441456
@@ -76,23 +63,9 @@ net-misc/connman wimax ofono
 # Mask some use flags for openmpi due to unkeyworded deps
 sys-cluster/openmpi openmpi_fabrics_psm openmpi_fabrics_knem openmpi_fabrics_open-mx openmpi_fabrics_ofed openmpi_fabrics_dapl openmpi_rm_slurm openmpi_ofed_features_rdmacm
 
-# Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
-# Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
-# bug #390345
->=app-cdr/brasero-3 tracker
-app-text/evince xps
->=dev-libs/folks-0.6 socialweb tracker
->=gnome-base/gnome-menus-3.2 test
->=gnome-base/gnome-panel-3 eds
->=gnome-base/nautilus-3 previewer tracker
-
 # Kacper Kowalik <xarthisius@gentoo.org> (20 Nov 2011)
 # Dropped dietlibc wrt #364103
 sys-fs/dmraid dietlibc
-
-# Pacho Ramos <pacho@gentoo.org> (24 Oct 2011)
-# Missing keywords in needed packages, bug #388367
-net-im/empathy map
 
 # Pacho Ramos <pacho@gentoo.org> (26 Sep 2011)
 # Dependencies not keyworded yet, bug #372245

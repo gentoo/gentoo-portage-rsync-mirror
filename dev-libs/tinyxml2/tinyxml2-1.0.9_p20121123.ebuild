@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml2/tinyxml2-1.0.9_p20121123.ebuild,v 1.2 2013/01/05 12:07:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml2/tinyxml2-1.0.9_p20121123.ebuild,v 1.3 2013/01/06 21:25:12 jdhore Exp $
 
 EAPI="5"
 CMAKE_MIN_VERSION="2.8.5"
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~radhermit/distfiles/${P}.tar.bz2"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="static-libs test"
 
 PATCHES=(
