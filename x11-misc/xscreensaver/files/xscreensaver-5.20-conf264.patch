@@ -1,0 +1,26 @@
+http://pkgs.fedoraproject.org/cgit/xscreensaver.git/tree/xscreensaver-5.11-conf264.patch
+
+--- Makefile.in
++++ Makefile.in
+@@ -99,8 +99,8 @@
+ # or later, feel free.  Personally, I can't be bothered.
+ #
+ configure::
+-	autoconf263
+-	autoheader263
++	autoconf
++	autoheader
+ 	@TMP=configure.$$$$ ;						     \
+ 	echo "munging configure's --help message..." ;			     \
+ 	( perl -e '							     \
+--- configure.in
++++ configure.in
+@@ -315,7 +315,7 @@
+ ###############################################################################
+ 
+ AC_DEFUN(AC_PROG_CC_ANSI,
+- [AC_PROG_CC
++ [AC_REQUIRE([AC_PROG_CC])
+ 
+   if test -z "$GCC"; then
+     # not using GCC

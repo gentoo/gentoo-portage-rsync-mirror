@@ -1,0 +1,41 @@
+# ChangeLog for sci-chemistry/pdb-tools
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/ChangeLog,v 1.8 2012/10/19 10:11:54 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> pdb-tools-0.1.4-r3.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
+
+*pdb-tools-0.1.4-r3 (29 Aug 2011)
+
+  29 Aug 2011; Justin Lecher <jlec@gentoo.org> -pdb-tools-0.1.4-r2.ebuild,
+  +pdb-tools-0.1.4-r3.ebuild, metadata.xml:
+  Fix doubled entries in wrapper scripts
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> pdb-tools-0.1.4-r2.ebuild:
+  Add dependency on virtual/fortran
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> pdb-tools-0.1.4-r2.ebuild:
+  Added fortran-2.eclass support
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> pdb-tools-0.1.4-r2.ebuild:
+  Removal of fortran.eclass, #348851
+
+*pdb-tools-0.1.4-r2 (28 Oct 2010)
+
+  28 Oct 2010; Justin Lecher <jlec@gentoo.org> -pdb-tools-0.1.4-r1.ebuild,
+  +pdb-tools-0.1.4-r2.ebuild:
+  important fix and Support for Python ABIs
+
+*pdb-tools-0.1.4-r1 (28 Oct 2010)
+
+  28 Oct 2010; Justin Lecher <jlec@gentoo.org> -pdb-tools-0.1.4.ebuild,
+  +pdb-tools-0.1.4-r1.ebuild:
+  Important fix
+
+*pdb-tools-0.1.4 (28 Oct 2010)
+
+  28 Oct 2010; Justin Lecher <jlec@gentoo.org> +pdb-tools-0.1.4.ebuild,
+  +metadata.xml:
+  New addition
+

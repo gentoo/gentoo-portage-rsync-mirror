@@ -1,0 +1,67 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/files/dropbox.initd,v 1.2 2012/07/25 02:39:58 naota Exp $
+
+PID_DIR=/var/run/dropbox
+
+depend() {
+    need localmount net
+    after bootmisc
+}
+
+start() {
+    local tmpnice="${NICE:+"--nicelevel "}${NICE}"
+    local tmpionice="${IONICE:+"--ionice "}${IONICE}"
+    local started=""
+
+    mkdir -p ${PID_DIR}
+
+    ebegin "Starting dropbox"
+    for dbuser in ${DROPBOX_USERS}; do
+	local homedir=$(eval echo ~${dbuser})
+	if test -d "${homedir}" && \
+	    start-stop-daemon -S -b \
+	    -m --pidfile ${PID_DIR}/$dbuser.pid \
+	    ${tmpnice} ${tmpionice} \
+	    -u ${dbuser} -v \
+	    -e HOME=${homedir} \
+	    -x /opt/bin/dropbox; then
+	    started="${started} ${dbuser}"
+	else
+	    eend $?
+	    eerror "Failed to start dropbox for ${dbuser}"
+	    if [ -n "${started}" ]; then
+		eerror "Stopping already started dropbox"
+		DROPBOX_USERS=${started} stop
+	    fi
+	    return 1
+	fi
+    done
+    if [ -z "${started}" ];then
+	eerror "No dropbox started"
+	eend 1
+    else
+	eend 0
+    fi
+}
+
+stop() {
+    local retval=0
+    ebegin "Stopping dropbox"
+    for dbuser in ${DROPBOX_USERS}; do
+	start-stop-daemon --stop \
+	    --pidfile ${PID_DIR}/${dbuser}.pid || retval=$?
+    done
+    eend ${retval}
+}
+
+status() {
+    for dbuser in ${DROPBOX_USERS}; do
+	if [ -e ${PID_DIR}/${dbuser}.pid ] ; then
+            echo "dropboxd for USER $dbuser: running."
+	else
+            echo "dropboxd for USER $dbuser: not running."
+	fi
+    done
+}

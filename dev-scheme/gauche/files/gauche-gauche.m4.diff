@@ -1,0 +1,11 @@
+--- Gauche-0.8.6.orig/m4/gauche.m4
++++ Gauche-0.8.6/m4/gauche.m4
+@@ -103,7 +103,7 @@
+   i686-*) I686OPT="-DUSE_I686_PREFETCH";;
+ esac
+ case "$CC" in
+-  gcc*)  # some systems may have gcc-2.95, gcc-3, etc.
++  *gcc*)  # some systems may have gcc-2.95, gcc-3, etc.
+     case "$target" in
+       *mingw*) ;;
+       *)     GCCOPT="-fomit-frame-pointer";;

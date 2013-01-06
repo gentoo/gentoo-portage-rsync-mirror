@@ -1,0 +1,16 @@
+ zlib/zlibtclDecls.h |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/zlib/zlibtclDecls.h b/zlib/zlibtclDecls.h
+index d6666ab..416f42d 100644
+--- a/zlib/zlibtclDecls.h
++++ b/zlib/zlibtclDecls.h
+@@ -120,7 +120,7 @@ ZEXTERN char *		gzgets(gzFile file, char *buf, int len);
+ /* 38 */
+ ZEXTERN int		gzputc(gzFile file, int c);
+ /* 39 */
+-ZEXTERN int		gzgetc(gzFile file);
++ZEXTERN int		gzgetc_(gzFile file);
+ /* 40 */
+ ZEXTERN int		gzflush(gzFile file, int flush);
+ /* 41 */

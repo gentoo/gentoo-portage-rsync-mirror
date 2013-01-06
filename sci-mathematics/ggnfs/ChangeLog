@@ -1,0 +1,24 @@
+# ChangeLog for sci-mathematics/ggnfs
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ChangeLog,v 1.5 2012/11/30 08:00:06 patrick Exp $
+
+  30 Nov 2012; Patrick Lauer <patrick@gentoo.org> ggnfs-0.77.1-r1.ebuild:
+  Correctify displayed version number
+
+  30 Nov 2012; Patrick Lauer <patrick@gentoo.org> ggnfs-0.77.1-r1.ebuild:
+  Adding another default parameter list file
+
+*ggnfs-0.77.1-r1 (30 Nov 2012)
+
+  30 Nov 2012; Patrick Lauer <patrick@gentoo.org> +ggnfs-0.77.1-r1.ebuild,
+  -ggnfs-0.77.1.ebuild:
+  Adding default parameter list file
+
+  28 Nov 2012; Patrick Lauer <patrick@gentoo.org> ggnfs-0.77.1.ebuild:
+  Avoid parallel make failure
+
+*ggnfs-0.77.1 (27 Nov 2012)
+
+  27 Nov 2012; Patrick Lauer <patrick@gentoo.org> +ggnfs-0.77.1.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me

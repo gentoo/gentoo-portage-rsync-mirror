@@ -1,0 +1,16 @@
+# ChangeLog for app-emacs/pov-mode
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pov-mode/ChangeLog,v 1.2 2012/09/03 20:13:06 ulm Exp $
+
+*pov-mode-3.3 (03 Sep 2012)
+
+  03 Sep 2012; Ulrich Müller <ulm@gentoo.org> +pov-mode-3.3.ebuild:
+  Version bump, bug 433744.
+
+*pov-mode-3.2 (12 Aug 2011)
+
+  12 Aug 2011; Ulrich Mueller <ulm@gentoo.org> +files/50pov-mode-gentoo.el,
+  +pov-mode-3.2.ebuild, +metadata.xml:
+  Initial import, from Emacs overlay. Ebuild and site-init file contributed by
+  Martin von Gagern <Martin.vGagern@gmx.net> in bug 373741.
+

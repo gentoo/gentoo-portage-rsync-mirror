@@ -1,0 +1,6 @@
+[Let users in plugdev group modify ModemManager]
+Identity=unix-group:plugdev
+Action=org.freedesktop.ModemManager.Device.Control;org.freedesktop.ModemManager.Contacts;org.freedesktop.ModemManager.SMS;org.freedesktop.ModemManager.Location
+ResultAny=no
+ResultInactive=no
+ResultActive=yes

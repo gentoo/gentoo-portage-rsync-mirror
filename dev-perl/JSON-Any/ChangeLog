@@ -1,0 +1,75 @@
+# ChangeLog for dev-perl/JSON-Any
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-Any/ChangeLog,v 1.17 2012/11/18 11:23:33 robbat2 Exp $
+
+  18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Drop duplication of myself as a maintainer where there is a herd.
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org> JSON-Any-1.290.0.ebuild:
+  Marked ~x64-macos
+
+  29 Jul 2011; Torsten Veller <tove@gentoo.org> -JSON-Any-1.25.ebuild,
+  -JSON-Any-1.260.0.ebuild, -JSON-Any-1.270.0.ebuild, -JSON-Any-1.280.0.ebuild:
+  Cleanup
+
+*JSON-Any-1.290.0 (09 Jun 2011)
+
+  09 Jun 2011; Torsten Veller <tove@gentoo.org> +JSON-Any-1.290.0.ebuild:
+  Version bump
+
+*JSON-Any-1.280.0 (27 May 2011)
+
+  27 May 2011; Torsten Veller <tove@gentoo.org> +JSON-Any-1.280.0.ebuild:
+  Version bump. Only test changes
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org> JSON-Any-1.270.0.ebuild:
+  Marked ~x86-solaris, bug #296509
+
+*JSON-Any-1.270.0 (09 Apr 2011)
+
+  09 Apr 2011; Torsten Veller <tove@gentoo.org> +JSON-Any-1.270.0.ebuild:
+  Version bump
+
+*JSON-Any-1.260.0 (31 Mar 2011)
+
+  31 Mar 2011; Torsten Veller <tove@gentoo.org> +JSON-Any-1.260.0.ebuild:
+  Version bump
+
+  14 Jan 2011; Torsten Veller <tove@gentoo.org> -JSON-Any-1.22.ebuild:
+  Cleanup
+
+*JSON-Any-1.25 (22 Nov 2010)
+
+  22 Nov 2010; Torsten Veller <tove@gentoo.org> +JSON-Any-1.25.ebuild:
+  Version bump
+
+  24 Dec 2009; Torsten Veller <tove@gentoo.org> -JSON-Any-1.21.ebuild:
+  Cleanup
+
+*JSON-Any-1.22 (13 Oct 2009)
+
+  13 Oct 2009; Torsten Veller <tove@gentoo.org> +JSON-Any-1.22.ebuild:
+  Version bump
+
+  07 Sep 2009; Torsten Veller <tove@gentoo.org> -JSON-Any-1.19.ebuild,
+  -JSON-Any-1.20.ebuild:
+  Cleanup
+
+*JSON-Any-1.21 (04 Jul 2009)
+
+  04 Jul 2009; Torsten Veller <tove@gentoo.org> +JSON-Any-1.21.ebuild:
+  Version bump
+
+*JSON-Any-1.20 (03 Jul 2009)
+
+  03 Jul 2009; Torsten Veller <tove@gentoo.org> +JSON-Any-1.20.ebuild:
+  Version bump
+
+*JSON-Any-1.19 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org> +JSON-Any-1.19.ebuild,
+  +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.

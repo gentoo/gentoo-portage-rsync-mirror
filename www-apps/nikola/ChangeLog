@@ -1,0 +1,30 @@
+# ChangeLog for www-apps/nikola
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.6 2012/10/02 15:25:31 yngwin Exp $
+
+*nikola-4.0.3 (02 Oct 2012)
+
+  02 Oct 2012; Ben de Groot <yngwin@gentoo.org> +nikola-4.0.3.ebuild:
+  Version bump
+
+  26 Aug 2012; Ben de Groot <yngwin@gentoo.org> -nikola-3.ebuild,
+  -nikola-4.ebuild:
+  Remove old
+
+  26 Aug 2012; Ben de Groot <yngwin@gentoo.org> nikola-4.0.1.ebuild:
+  Update deps
+
+*nikola-4.0.1 (26 Aug 2012)
+
+  26 Aug 2012; Ben de Groot <yngwin@gentoo.org> +nikola-4.0.1.ebuild:
+  Version bump
+
+*nikola-4 (23 Aug 2012)
+
+  23 Aug 2012; Patrick Lauer <patrick@gentoo.org> +nikola-4.ebuild:
+  Bump
+
+*nikola-3 (27 Jun 2012)
+
+  27 Jun 2012; Ben de Groot <yngwin@gentoo.org> +metadata.xml, +nikola-3.ebuild:
+  Initial commit

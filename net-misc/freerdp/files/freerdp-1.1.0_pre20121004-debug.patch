@@ -1,0 +1,149 @@
+https://bugs.gentoo.org/show_bug.cgi?id=437864
+
+commit 11d99595b2cc74ed4fe596eeda9fa4d40a828e02
+Author: Marc-André Moreau <marcandre.moreau@gmail.com>
+Date:   Tue Oct 9 14:52:07 2012 -0400
+
+    debug: fix debug output build
+
+diff --git a/channels/tsmf/client/gstreamer/tsmf_gstreamer.c b/channels/tsmf/client/gstreamer/tsmf_gstreamer.c
+index 64c0f82..5d67cfd 100644
+--- a/channels/tsmf/client/gstreamer/tsmf_gstreamer.c
++++ b/channels/tsmf/client/gstreamer/tsmf_gstreamer.c
+@@ -46,8 +46,12 @@
+ #include "tsmf_constants.h"
+ #include "tsmf_decoder.h"
+ 
+-#define SHARED_MEM_KEY 7777
+-#define TRY_DECODEBIN 0
++#ifdef HAVE_INTTYPES_H
++#include <inttypes.h>
++#endif
++
++#define SHARED_MEM_KEY	7777
++#define TRY_DECODEBIN	0
+ 
+ typedef struct _TSMFGstreamerDecoder
+ {
+@@ -80,10 +84,10 @@ typedef struct _TSMFGstreamerDecoder
+ 	Window subwin;
+ 	int xOffset;
+ 	int yOffset;
+-	bool offsetObtained;
++	BOOL offsetObtained;
+ 	int linked;
+ 	double gstVolume;
+-	bool gstMuted;
++	BOOL gstMuted;
+ 
+ 	int pipeline_start_time_valid; /* We've set the start time and have not reset the pipeline */
+ 	int shutdown; /* The decoder stream is shutting down */
+@@ -685,7 +689,7 @@ static void tsmf_gstreamer_pipeline_send_end_of_stream(TSMFGstreamerDecoder * md
+ /* code from TI to check whether OMX is being lock or not */
+ static BOOL tsmf_gstreamer_pipeline_omx_available()
+ {
+-	bool ret = TRUE;
++	BOOL ret = TRUE;
+ 	int shm_fd = 0;
+ 	struct shm_info
+ 	{
+@@ -788,7 +792,7 @@ static BOOL tsmf_gstreamer_pipeline_build(TSMFGstreamerDecoder * mdecoder)
+ 		return FALSE;
+ 	}
+ 
+-	bool OMXavailable = FALSE;
++	BOOL OMXavailable = FALSE;
+ 
+ #ifdef __arm__
+ 	OMXavailable = tsmf_gstreamer_pipeline_omx_available();
+@@ -800,8 +804,8 @@ static BOOL tsmf_gstreamer_pipeline_build(TSMFGstreamerDecoder * mdecoder)
+ 	const char *blank = ""; 
+ 	printf("%s", blank);
+ 
+-	bool hwaccelflu = FALSE;
+-	bool hwaccelomx = FALSE;
++	BOOL hwaccelflu = FALSE;
++	BOOL hwaccelomx = FALSE;
+ 
+ 	switch (mdecoder->tsmf_media_type.SubType)
+ 	{
+@@ -1100,14 +1104,16 @@ static BOOL tsmf_gstreamer_pipeline_build(TSMFGstreamerDecoder * mdecoder)
+ static BOOL tsmf_gstreamer_decodeEx(ITSMFDecoder * decoder, const BYTE * data, UINT32 data_size, UINT32 extensions,
+         			UINT64 start_time, UINT64 end_time, UINT64 duration)
+ {
+-	TSMFGstreamerDecoder * mdecoder = (TSMFGstreamerDecoder *) decoder;
++	TSMFGstreamerDecoder * mdecoder = (TSMFGstreamerDecoder*) decoder;
++
+ 	if (!mdecoder)
+ 	{
+ 		return FALSE;
+ 	}
+ 
+ 	int mutexret = pthread_mutex_lock(&mdecoder->gst_mutex);
+-	if(mutexret != 0)
++
++	if (mutexret != 0)
+ 		return FALSE;
+ 
+ 	if (mdecoder->shutdown)
+@@ -1126,9 +1132,15 @@ static BOOL tsmf_gstreamer_decodeEx(ITSMFDecoder * decoder, const BYTE * data, U
+          */
+ 
+ 	if (mdecoder->media_type == TSMF_MAJOR_TYPE_VIDEO)
+-		DEBUG_DVC("tsmf_gstreamer_decodeEx_VIDEO. Start:(%llu) End:(%llu) Duration:(%llu) Last End:(%llu)", start_time, end_time, duration, mdecoder->last_sample_end_time);
++	{
++		DEBUG_DVC("tsmf_gstreamer_decodeEx_VIDEO. Start:(%llu) End:(%llu) Duration:(%llu) Last End:(%llu)",
++				start_time, end_time, duration, mdecoder->last_sample_end_time);
++	}
+ 	else
+-		DEBUG_DVC("tsmf_gstreamer_decodeEX_AUDIO. Start:(%llu) End:(%llu) Duration:(%llu) Last End:(%llu)", start_time, end_time, duration, mdecoder->last_sample_end_time);
++	{
++		DEBUG_DVC("tsmf_gstreamer_decodeEX_AUDIO. Start:(%llu) End:(%llu) Duration:(%llu) Last End:(%llu)",
++				start_time, end_time, duration, mdecoder->last_sample_end_time);
++	}
+ 
+ 	if (mdecoder->gst_caps == NULL) 
+ 	{
+@@ -1322,7 +1334,7 @@ static void tsmf_gstreamer_change_volume(ITSMFDecoder * decoder, UINT32 newVolum
+ 	if (!G_IS_OBJECT(mdecoder->aVolume))
+ 		return;
+ 
+-	mdecoder->gstMuted = (bool) muted;
++	mdecoder->gstMuted = (BOOL) muted;
+ 	DEBUG_DVC("tsmf_gstreamer_change_volume: mute=[%d]", mdecoder->gstMuted);
+ 	g_object_set(mdecoder->aVolume, "mute", mdecoder->gstMuted, NULL);
+ 	mdecoder->gstVolume = (double) newVolume / (double) 10000;
+diff --git a/libfreerdp/core/certificate.c b/libfreerdp/core/certificate.c
+index 5f65790..d13ce7d 100644
+--- a/libfreerdp/core/certificate.c
++++ b/libfreerdp/core/certificate.c
+@@ -437,14 +437,14 @@ BOOL certificate_read_server_x509_certificate_chain(rdpCertificate* certificate,
+ 			rdpCertInfo cert_info;
+ 			DEBUG_CERTIFICATE("License Server Certificate");
+ 			certificate_read_x509_certificate(&certificate->x509_cert_chain->array[i], &cert_info);
+-			DEBUG_LICENSE("modulus length:%d", cert_info.ModulusLength);
++			DEBUG_LICENSE("modulus length:%d", (int) cert_info.ModulusLength);
+ 			free(cert_info.Modulus);
+ 		}
+ 		else if (numCertBlobs - i == 1)
+ 		{
+ 			DEBUG_CERTIFICATE("Terminal Server Certificate");
+ 			certificate_read_x509_certificate(&certificate->x509_cert_chain->array[i], &certificate->cert_info);
+-			DEBUG_CERTIFICATE("modulus length:%d", certificate->cert_info.modulus.length);
++			DEBUG_CERTIFICATE("modulus length:%d", (int) certificate->cert_info.ModulusLength);
+ 		}
+ 	}
+ 
+diff --git a/libfreerdp/core/redirection.c b/libfreerdp/core/redirection.c
+index 46f982a..dcf2d52 100644
+--- a/libfreerdp/core/redirection.c
++++ b/libfreerdp/core/redirection.c
+@@ -89,7 +89,7 @@ BOOL rdp_recv_server_redirection_pdu(rdpRdp* rdp, STREAM* s)
+ 		stream_read(s, redirection->LoadBalanceInfo, redirection->LoadBalanceInfoLength);
+ #ifdef WITH_DEBUG_REDIR
+ 		DEBUG_REDIR("loadBalanceInfo:");
+-		freerdp_hexdump(redirection->loadBalanceInfo.data, redirection->loadBalanceInfo.length);
++		freerdp_hexdump(redirection->LoadBalanceInfo, redirection->LoadBalanceInfoLength);
+ #endif
+ 	}
+ 

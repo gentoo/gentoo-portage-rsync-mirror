@@ -1,0 +1,30 @@
+# ChangeLog for app-office/qchartdiary
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/qchartdiary/ChangeLog,v 1.5 2010/07/14 13:50:12 fauli Exp $
+
+  14 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  qchartdiary-0.6.4.1-r2.ebuild:
+  stable x86, bug 325713
+
+  27 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  qchartdiary-0.6.4.1-r2.ebuild:
+  Stable on amd64 wrt bug #325713
+
+*qchartdiary-0.6.4.1-r2 (01 Jan 2010)
+
+  01 Jan 2010; <hwoarang@gentoo.org> -qchartdiary-0.6.4.1-r1.ebuild,
+  +qchartdiary-0.6.4.1-r2.ebuild:
+  Revbump to install binary correctly. Fixes bug #299187
+
+*qchartdiary-0.6.4.1-r1 (26 Dec 2009)
+
+  26 Dec 2009; <hwoarang@gentoo.org> -qchartdiary-0.6.4.1.ebuild,
+  +qchartdiary-0.6.4.1-r1.ebuild:
+  Migrate to qt4-r2 and fix documentation path wrt bug #298398
+
+*qchartdiary-0.6.4.1 (09 May 2009)
+
+  09 May 2009; Markos Chandras <hwoarang@gentoo.org>
+  +qchartdiary-0.6.4.1.ebuild, +metadata.xml:
+  Initial commit for qchartdiary application
+

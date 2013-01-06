@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>games</herd>
+  <use>
+    <flag name="awe32">Enable AWE32 support</flag>
+    <flag name="mpu401">Enable MPU401 music support</flag>
+  </use>
+</pkgmetadata>

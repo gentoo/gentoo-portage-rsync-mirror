@@ -1,0 +1,17 @@
+# ChangeLog for app-office/abiword-docs
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-docs/ChangeLog,v 1.3 2011/07/23 15:31:28 tomka Exp $
+
+  23 Jul 2011; Thomas Kahle <tomka@gentoo.org> abiword-docs-2.8.6.ebuild:
+  ~x86 per bug 372185
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> abiword-docs-2.8.6.ebuild:
+  Stable on amd64 wrt bug #353436
+
+*abiword-docs-2.8.6 (26 Jan 2011)
+
+  26 Jan 2011; Pacho Ramos <pacho@gentoo.org> +abiword-docs-2.8.6.ebuild,
+  +metadata.xml:
+  Add abiword-docs package that was splitted from abiword sometime ago by
+  upstream. This also fixes that old bug #149765 (by Benno Schulenberg).
+

@@ -1,0 +1,42 @@
+# ChangeLog for app-vim/vim-r
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-r/ChangeLog,v 1.7 2012/09/18 03:45:24 radhermit Exp $
+
+*vim-r-0.9.7 (18 Sep 2012)
+
+  18 Sep 2012; Tim Harder <radhermit@gentoo.org> +vim-r-0.9.7.ebuild,
+  -vim-r-111114.ebuild:
+  Version bump and remove old.
+
+  18 Sep 2012; Tim Harder <radhermit@gentoo.org> -vim-r-110805.ebuild,
+  -vim-r-111014.ebuild:
+  Remove old.
+
+*vim-r-111114 (17 Nov 2011)
+
+  17 Nov 2011; Tim Harder <radhermit@gentoo.org> -vim-r-110614.ebuild,
+  +vim-r-111114.ebuild:
+  Version bump and remove old.
+
+*vim-r-111014 (01 Nov 2011)
+
+  01 Nov 2011; Tim Harder <radhermit@gentoo.org> +vim-r-111014.ebuild:
+  Version bump.
+
+*vim-r-110805 (07 Aug 2011)
+
+  07 Aug 2011; Tim Harder <radhermit@gentoo.org> -vim-r-110222.ebuild,
+  +vim-r-110805.ebuild:
+  Version bump and remove old.
+
+*vim-r-110614 (25 Jun 2011)
+
+  25 Jun 2011; Tim Harder <radhermit@gentoo.org> +vim-r-110614.ebuild:
+  Version bump. Use github mirror.
+
+*vim-r-110222 (14 Mar 2011)
+
+  14 Mar 2011; Tim Harder <radhermit@gentoo.org> +vim-r-110222.ebuild,
+  +metadata.xml:
+  Initial import (bug #335113 by Jose).
+

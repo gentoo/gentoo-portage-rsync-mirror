@@ -1,0 +1,11 @@
+--- thinkfan-0.7.3/rcscripts/thinkfan.gentoo
++++ thinkfan-0.7.3/rcscripts/thinkfan.gentoo
+@@ -3,7 +3,7 @@
+ # Distributed under the terms of the GNU General Public License v2
+ # $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkfan/files/thinkfan-0.7.3-openrc.patch,v 1.1 2012/02/13 02:27:51 xmw Exp $
+ 
+-opts="reload"
++extra_started_commands="reload"
+ 
+ depend() {
+ 	after modules

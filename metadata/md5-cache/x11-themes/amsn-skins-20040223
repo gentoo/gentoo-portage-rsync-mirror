@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DEPEND=app-arch/unzip
+DESCRIPTION=Collection of AMSN themes
+HOMEPAGE=http://amsn.sourceforge.net/
+KEYWORDS=amd64 ppc ~x86
+LICENSE=freedist
+RDEPEND=net-im/amsn
+RESTRICT=mirror
+SLOT=0
+SRC_URI=mirror://sourceforge/amsn//aMac.zip mirror://sourceforge/amsn//Bolos.zip mirror://sourceforge/amsn//crystola.zip mirror://sourceforge/amsn//cubic.zip mirror://sourceforge/amsn//Fluox.zip mirror://sourceforge/amsn//MSN.zip
+_md5_=fa0891228bdceeb49a2fa5392372cfcd

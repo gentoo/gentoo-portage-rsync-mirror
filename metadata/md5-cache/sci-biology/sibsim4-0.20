@@ -1,0 +1,9 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=A rewrite and improvement upon sim4, a DNA-mRNA aligner
+EAPI=2
+HOMEPAGE=http://sibsim4.sourceforge.net/
+KEYWORDS=~amd64 x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=mirror://sourceforge/sibsim4/SIBsim4-0.20.tar.gz
+_md5_=8b692b96c659bda4ca941b382058ab6a

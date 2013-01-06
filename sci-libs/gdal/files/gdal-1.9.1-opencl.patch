@@ -1,0 +1,27 @@
+diff -ur gdal-1.9.0b1_orig/alg/gdalwarpkernel_opencl.c gdal-1.9.0b1/alg/gdalwarpkernel_opencl.c
+--- gdal-1.9.0b1_orig/alg/gdalwarpkernel_opencl.c	2011-12-20 02:18:27.000000000 +0100
++++ gdal-1.9.0b1/alg/gdalwarpkernel_opencl.c	2011-12-26 19:28:04.564576034 +0100
+@@ -1409,20 +1409,9 @@
+         handleErr(err);
+     } else {
+         //Make a fake image so we don't have a NULL pointer
+-        if (warper->bIsATI)
+-        {
+-            /* The code in the else clause generates a CL_INVALID_IMAGE_SIZE with ATI SDK 2.2 */
+-            /* while theoretically correct and working on other SDKs. The following is a */
+-            /* workaround */
+-            char dummyImageData[16];
+-            (*srcImag) = clCreateImage2D(warper->context, CL_MEM_READ_ONLY | CL_MEM_COPY_HOST_PTR, &imgFmt,
+-                                        1, 1, sz, dummyImageData, &err);
+-        }
+-        else
+-        {
+-            (*srcImag) = clCreateImage2D(warper->context, CL_MEM_READ_ONLY, &imgFmt,
+-                                         1, 1, sz, NULL, &err);
+-        }
++	char dummyImageData[16];
++	(*srcImag) = clCreateImage2D(warper->context, CL_MEM_READ_ONLY | CL_MEM_COPY_HOST_PTR, &imgFmt,
++				    1, 1, sz, dummyImageData, &err);
+         handleErr(err);
+     }
+ 

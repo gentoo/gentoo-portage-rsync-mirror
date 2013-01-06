@@ -1,0 +1,61 @@
+--- setup.py.orig	2012-08-02 10:46:39.683501361 -0700
++++ setup.py	2012-08-02 10:48:16.479009298 -0700
+@@ -13,7 +13,6 @@
+ 
+ from distutils.core import setup
+ from distutils.command.build import build
+-from sphinx import setup_command
+ import os
+ import os.path as osp
+ import sys
+@@ -40,34 +39,6 @@
+     return splist
+ 
+ 
+-# Sphinx build (documentation)
+-class MyBuild(build):
+-    def has_doc(self):
+-        setup_dir = os.path.dirname(os.path.abspath(__file__))
+-        return os.path.isdir(os.path.join(setup_dir, 'doc'))
+-    sub_commands = build.sub_commands + [('build_doc', has_doc)]
+-
+-
+-class MyBuildDoc(setup_command.BuildDoc):
+-    def run(self):
+-        build = self.get_finalized_command('build')
+-        sys.path.insert(0, os.path.abspath(build.build_lib))
+-        dirname = self.distribution.get_command_obj('build').build_purelib
+-        self.builder_target_dir = osp.join(dirname, 'spyderlib', 'doc')
+-        try:
+-            setup_command.BuildDoc.run(self)
+-        except UnicodeDecodeError:
+-            print >>sys.stderr, "ERROR: unable to build documentation "\
+-                                "because Sphinx do not handle source path "\
+-                                "with non-ASCII characters. Please try to "\
+-                                "move the source package to another location "\
+-                                "(path with *only* ASCII characters)."        
+-        sys.path.pop(0)
+-
+-
+-cmdclass = {'build': MyBuild, 'build_doc': MyBuildDoc}
+-
+-
+ NAME = 'spyder'
+ LIBNAME = 'spyderlib'
+ from spyderlib import __version__, __project_url__
+@@ -110,7 +81,7 @@
+                     'spyderplugins':
+                     get_package_data('spyderplugins',
+                                      ('.mo', '.svg', '.png'))},
+-      requires=["rope (>=0.9.2)", "sphinx (>=0.6.0)", "PyQt4 (>=4.4)"],
++      requires=["rope (>=0.9.2)", "PyQt4 (>=4.4)"],
+       scripts=[osp.join('scripts', fname) for fname in 
+                (['spyder', 'spyder.bat', "%s_win_post_install.py" % NAME,
+                  'spyder.ico', 'spyder_light.ico']
+@@ -132,5 +103,4 @@
+                    'Programming Language :: Python :: 2.7',
+                    'Development Status :: 5 - Production/Stable',
+                    'Topic :: Scientific/Engineering',
+-                   'Topic :: Software Development :: Widget Sets'],
+-      cmdclass=cmdclass)
++                   'Topic :: Software Development :: Widget Sets'])

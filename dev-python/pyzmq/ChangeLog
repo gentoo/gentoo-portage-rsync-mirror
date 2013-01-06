@@ -1,0 +1,103 @@
+# ChangeLog for dev-python/pyzmq
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.24 2012/08/29 17:11:31 floppym Exp $
+
+  29 Aug 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/pyzmq-2.2.0.1-python3.patch, pyzmq-2.2.0.1.ebuild:
+  Apply patch to fix exception syntax and unrestrict python 3.
+
+  29 Aug 2012; Mike Gilbert <floppym@gentoo.org> pyzmq-2.2.0.1.ebuild,
+  pyzmq-2.2.0.ebuild:
+  Restrict python 2.5; setup.py claims that 2.1.11 was the last supported
+  version.
+
+  29 Aug 2012; Justin Lecher <jlec@gentoo.org> pyzmq-2.2.0.1.ebuild:
+  Restrict py3 due to syntax incompatibility
+
+*pyzmq-2.2.0.1 (29 Aug 2012)
+
+  29 Aug 2012; Patrick Lauer <patrick@gentoo.org> +pyzmq-2.2.0.1.ebuild:
+  Bump
+
+  06 Jun 2012; Benda Xu <heroxbd@gentoo.org> pyzmq-2.2.0.ebuild:
+  keyword~amd64-linux and ~x86-linux
+
+*pyzmq-2.2.0 (21 May 2012)
+
+  21 May 2012; Patrick Lauer <patrick@gentoo.org> +pyzmq-2.2.0.ebuild:
+  Bump for #416639
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyzmq-2.1.10.ebuild,
+  pyzmq-2.1.11.ebuild, pyzmq-2.1.7.ebuild, pyzmq-2.1.9.ebuild:
+  Restrict pypy for #403811
+
+  26 Dec 2011; Dirkjan Ochtman <djc@gentoo.org> pyzmq-2.1.10.ebuild,
+  pyzmq-2.1.11.ebuild:
+  Restrict pypy ABI.
+
+  21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pyzmq-2.1.10.ebuild:
+  x86 stable wrt bug #386049
+
+  19 Dec 2011; Agostino Sarubbo <ago@gentoo.org> pyzmq-2.1.10.ebuild:
+  Stable for AMD64, wrt bug #386049
+
+*pyzmq-2.1.11 (19 Dec 2011)
+
+  19 Dec 2011; Dirkjan Ochtman <djc@gentoo.org> +pyzmq-2.1.11.ebuild:
+  Version bump to 2.1.11.
+
+*pyzmq-2.1.10 (17 Oct 2011)
+
+  17 Oct 2011; Dirkjan Ochtman <djc@gentoo.org> +pyzmq-2.1.10.ebuild:
+  Version bump to 2.1.10.
+
+  30 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> -pyzmq-2.0.10.1.ebuild,
+  -files/pyzmq-2.0.10.1-python-2.7.patch,
+  -files/pyzmq-2.0.10.1-python-3.1.patch,
+  -files/pyzmq-2.0.10.1-python-3.2.patch, -pyzmq-2.1.4.ebuild:
+  Clean up old versions.
+
+*pyzmq-2.1.9 (30 Aug 2011)
+
+  30 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> +pyzmq-2.1.9.ebuild:
+  Version bump to 2.1.9.
+
+  13 Jul 2011; Markus Meier <maekke@gentoo.org> pyzmq-2.1.7.ebuild:
+  x86 stable, bug #371377
+
+  03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> pyzmq-2.1.7.ebuild:
+  Stable on amd64 wrt bug #371377
+
+  28 Jun 2011; Dirkjan Ochtman <djc@gentoo.org> pyzmq-2.1.7.ebuild:
+  Remove support for generating docs (bug 371481).
+
+*pyzmq-2.1.7 (14 May 2011)
+
+  14 May 2011; Dirkjan Ochtman <djc@gentoo.org> +pyzmq-2.1.7.ebuild:
+  Version bump to 2.1.7.
+
+*pyzmq-2.1.4 (02 May 2011)
+
+  02 May 2011; Dirkjan Ochtman <djc@gentoo.org> +pyzmq-2.1.4.ebuild:
+  Version bump to 2.1.4.
+
+  16 Mar 2011; Dirkjan Ochtman <djc@gentoo.org> pyzmq-2.0.10.1.ebuild:
+  Use pre-built docs and offer examples (bug 358941).
+
+  07 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyzmq-2.0.10.1.ebuild, +files/pyzmq-2.0.10.1-python-3.2.patch:
+  Fix building with Python 3.2 (bug #357845).
+
+  06 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyzmq-2.0.10.1.ebuild, +files/pyzmq-2.0.10.1-python-3.1.patch:
+  Fix tests with Python 3.1.
+
+  06 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyzmq-2.0.10.1.ebuild, +files/pyzmq-2.0.10.1-python-2.7.patch:
+  Fix tests with Python 2.7.
+
+*pyzmq-2.0.10.1 (04 Mar 2011)
+
+  04 Mar 2011; Dirkjan Ochtman <djc@gentoo.org> +pyzmq-2.0.10.1.ebuild,
+  +metadata.xml:
+  Initial version of pyzmq.

@@ -1,0 +1,57 @@
+# ChangeLog for virtual/perl-podlators
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-podlators/ChangeLog,v 1.11 2012/06/02 18:40:09 tove Exp $
+
+*perl-podlators-2.4.2 (02 Jun 2012)
+
+  02 Jun 2012; Torsten Veller <tove@gentoo.org> +perl-podlators-2.4.2.ebuild:
+  Version bump
+
+  28 Jun 2011; Torsten Veller <tove@gentoo.org> perl-podlators-2.3.1.ebuild:
+  Add perl-5.12.4 virtual
+
+*perl-podlators-2.4.0-r2 (18 Jun 2011)
+
+  18 Jun 2011; Torsten Veller <tove@gentoo.org>
+  -perl-podlators-2.4.0-r1.ebuild, +perl-podlators-2.4.0-r2.ebuild:
+  Add perl-5.14 as provider
+
+*perl-podlators-2.4.0-r1 (17 May 2011)
+
+  17 May 2011; Torsten Veller <tove@gentoo.org> -perl-podlators-2.4.0.ebuild,
+  +perl-podlators-2.4.0-r1.ebuild:
+  Add perl-5.14.0 as provider
+
+*perl-podlators-2.4.0 (27 Jan 2011)
+
+  27 Jan 2011; Robin H. Johnson <robbat2@gentoo.org>
+  +perl-podlators-2.4.0.ebuild:
+  Version bump via perl-bump experimental tool.
+
+  22 Jan 2011; Torsten Veller <tove@gentoo.org> perl-podlators-2.3.1.ebuild:
+  Add perl-5.12.3 as provider
+
+  07 Sep 2010; Torsten Veller <tove@gentoo.org> perl-podlators-2.3.1.ebuild:
+  Add perl-5.12.2 as provider
+
+  14 Jul 2010; Torsten Veller <tove@gentoo.org> perl-podlators-2.3.1.ebuild:
+  Add perl-5.12 as provider
+
+*perl-podlators-2.3.1 (19 Feb 2010)
+
+  19 Feb 2010; Torsten Veller <tove@gentoo.org>
+  +perl-podlators-2.3.1.ebuild:
+  Version bump
+
+*perl-podlators-2.3.0 (07 Jan 2010)
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org> perl-podlators-2.2.2.ebuild,
+  +perl-podlators-2.3.0.ebuild:
+  Version bump. Set empty HOMEPAGE and LICENSE
+
+*perl-podlators-2.2.2 (16 Nov 2009)
+
+  16 Nov 2009; Torsten Veller <tove@gentoo.org>
+  +perl-podlators-2.2.2.ebuild, +metadata.xml:
+  Initial commit (#286962)
+

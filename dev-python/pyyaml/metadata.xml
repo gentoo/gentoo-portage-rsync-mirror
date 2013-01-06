@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>sbriesen@gentoo.org</email>
+		<name>Stefan Briesenick</name>
+	</maintainer>
+	<use>
+		<flag name='libyaml'>enable libyaml support</flag>
+	</use>
+	<longdescription lang="en">
+		PyYAML is a YAML parser and emitter for the Python programming language.
+	</longdescription>
+</pkgmetadata>

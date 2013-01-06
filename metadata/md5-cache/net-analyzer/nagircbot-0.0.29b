@@ -1,0 +1,9 @@
+DEFINED_PHASES=install
+DESCRIPTION=An irc bot that alerts you to nagios changes
+HOMEPAGE=http://www.vanheusden.com/nagircbot
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=net-analyzer/nagios-core
+SLOT=0
+SRC_URI=http://www.vanheusden.com/nagircbot/nagircbot-0.0.29b.tgz
+_md5_=6b92ae535c0a6010b3c3698f2b8ab0db

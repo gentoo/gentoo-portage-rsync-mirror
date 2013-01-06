@@ -1,0 +1,22 @@
+#!/sbin/runscript
+
+extra_started_commands="reload"
+
+command="/usr/bin/nrpe"
+command_args="-c /etc/nagios/nrpe.cfg --daemon"
+pidfile="${pidfile:-/var/run/nrpe/nrpe.pid}"
+start_stop_daemon_args="--user nagios --group nagios"
+
+depend() {
+	need net
+}
+
+start_pre() {
+	checkpath -d -m 0750 -o nagios:nagios /var/run/nrpe
+}
+
+reload() {
+	ebegin "Reloading nrpe"
+	kill -HUP $(head -n1 ${pidfile})
+	eend $? "Failed to reload nrpe"
+}

@@ -1,0 +1,307 @@
+# ChangeLog for xfce-extra/xfce4-power-manager
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.61 2012/11/28 12:19:07 ssuominen Exp $
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-1.2.0-r1.ebuild:
+  EAPI5
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce4-power-manager-1.2.0.ebuild:
+  old
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-1.2.0-r1.ebuild:
+  ppc/ppc64 stable wrt #429484
+
+  16 Nov 2012; Andreas Schuerch <nativemad@gentoo.org>
+  xfce4-power-manager-1.2.0-r1.ebuild:
+  x86 stable, see bug 429484
+
+  27 Oct 2012; <ago@gentoo.org> xfce4-power-manager-1.2.0-r1.ebuild:
+  Stable for amd64, wrt bug #429484
+
+*xfce4-power-manager-1.2.0-r1 (25 Sep 2012)
+
+  25 Sep 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-power-manager-1.2.0-r1.ebuild,
+  +files/xfce4-power-manager-1.2.0-prevent_crash_with_locale-en_GB.patch:
+  Fix crash with en_GB locale wrt #419973 by Ciprian Ciubotariu
+
+  05 Sep 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-1.2.0.ebuild, metadata.xml:
+  New USE flag called "udisks" so people using SSD's can avoid pulling in the
+  spindown support wrt #431570 by Olof Kindgren
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce4-power-manager-1.0.10-r1.ebuild,
+  -files/xfce4-power-manager-1.0.10-libnotify-0.7.patch,
+  -files/xfce4-power-manager-1.0.10-modifiers.patch:
+  old
+
+  22 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  xfce4-power-manager-1.2.0.ebuild:
+  marked x86 per bug 416233
+
+  20 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce4-power-manager-1.0.11.ebuild, -xfce4-power-manager-1.1.0.ebuild:
+  old
+
+  20 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-1.2.0.ebuild:
+  ppc/ppc64 stable wrt #416233
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org>
+  xfce4-power-manager-1.2.0.ebuild:
+  Stable for amd64, wrt bug #416233
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org>
+  xfce4-power-manager-1.0.10-r1.ebuild, xfce4-power-manager-1.0.11.ebuild,
+  xfce4-power-manager-1.1.0.ebuild, xfce4-power-manager-1.2.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*xfce4-power-manager-1.2.0 (29 Apr 2012)
+
+  29 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-power-manager-1.2.0.ebuild:
+  Version bump.
+
+*xfce4-power-manager-1.1.0 (14 Apr 2012)
+
+  14 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-power-manager-1.1.0.ebuild:
+  Version bump to development release.
+
+*xfce4-power-manager-1.0.11 (30 Mar 2012)
+
+  30 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-power-manager-1.0.11.ebuild:
+  Version bump.
+
+  27 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-1.0.10-r1.ebuild:
+  Pin to SLOT="0" of sys-fs/udisks.
+
+  07 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-1.0.10-r1.ebuild:
+  Check for CONFIG_TIMER_STATS (for xfce4-power-information, see
+  src/xfpm-power-info.c) wrt #402455 by "haarp"
+
+  06 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce4-power-manager-1.0.10.ebuild:
+  old
+
+  06 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-1.0.10-r1.ebuild:
+  ppc/ppc64 stable wrt #386963
+
+  16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-1.0.10-r1.ebuild:
+  amd64 stable wrt #386963
+
+  16 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  xfce4-power-manager-1.0.10-r1.ebuild:
+  x86 stable wrt bug #386963
+
+*xfce4-power-manager-1.0.10-r1 (03 Jul 2011)
+
+  03 Jul 2011; Christoph Mende <angelos@gentoo.org>
+  +xfce4-power-manager-1.0.10-r1.ebuild,
+  +files/xfce4-power-manager-1.0.10-modifiers.patch:
+  Grab keys with any modifier set
+
+  05 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  xfce4-power-manager-1.0.10.ebuild:
+  x86 stable wrt bug #363767
+
+  01 May 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  xfce4-power-manager-1.0.10.ebuild:
+  ppc/ppc64 stable wrt #363767
+
+  16 Apr 2011; Christoph Mende <angelos@gentoo.org>
+  xfce4-power-manager-1.0.10.ebuild:
+  Stable on amd64 wrt bug #363767
+
+*xfce4-power-manager-1.0.10 (20 Feb 2011)
+
+  20 Feb 2011; <angelos@gentoo.org> +xfce4-power-manager-1.0.10.ebuild,
+  +files/xfce4-power-manager-1.0.10-libnotify-0.7.patch:
+  Version bump
+
+  29 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-1.0.3.ebuild,
+  +files/xfce4-power-manager-1.0.3-libnotify-0.7.patch:
+  Fix building with x11-libs/libnotify >= 0.7.
+
+  17 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  xfce4-power-manager-1.0.3.ebuild:
+  ppc stable wrt #349053, mark ~ppc64
+
+  16 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-1.0.3.ebuild:
+  amd64/x86 stable wrt #349053
+
+*xfce4-power-manager-1.0.3 (05 Jan 2011)
+
+  05 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-power-manager-1.0.3.ebuild:
+  Version bump.
+
+*xfce4-power-manager-1.0.2 (19 Dec 2010)
+
+  19 Dec 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-power-manager-1.0.2.ebuild:
+  Version bump.
+
+*xfce4-power-manager-1.0.1 (31 Aug 2010)
+
+  31 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-power-manager-1.0.1.ebuild:
+  Version bump.
+
+  23 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-0.8.5.ebuild, xfce4-power-manager-1.0.0.ebuild:
+  Convert USE="plugins" to XFCE_PLUGINS="brightness" expand.
+
+*xfce4-power-manager-1.0.0 (12 Aug 2010)
+
+  12 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-power-manager-1.0.0.ebuild:
+  Version bump.
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org>
+  xfce4-power-manager-0.8.5.ebuild:
+  Marked ppc stable for bug #323729.
+
+  11 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-0.9.98.ebuild:
+  Remove redudant libxfcegui4 include from brightness-button.c to fix
+  building with USE="debug".
+
+  06 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-0.9.98.ebuild,
+  +files/xfce4-power-manager-0.9.98-fix_polkit_switch.patch:
+  Fix --disable-polkit configure switch wrt #329157 by "Livid".
+
+  30 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  xfce4-power-manager-0.8.5.ebuild:
+  x86 stable, bug 323729
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  xfce4-power-manager-0.8.5.ebuild:
+  Stable on amd64 wrt bug #323729
+
+*xfce4-power-manager-0.9.98 (22 May 2010)
+
+  22 May 2010; Christoph Mende <angelos@gentoo.org>
+  +xfce4-power-manager-0.9.98.ebuild:
+  Version bump
+
+*xfce4-power-manager-0.8.5 (17 Apr 2010)
+
+  17 Apr 2010; Jeremy Olexa <darkside@gentoo.org>
+  +xfce4-power-manager-0.8.5.ebuild:
+  Version bump for bug 311309
+
+  07 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-0.9.90.ebuild:
+  Fix dependencies from HAL to udisks/upower.
+
+  22 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  xfce4-power-manager-0.8.4.2.ebuild:
+  stable x86, bug 305657
+
+*xfce4-power-manager-0.9.90 (20 Feb 2010)
+
+  20 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-power-manager-0.9.90.ebuild:
+  Version bump wrt #304337, thanks to Jeremy Olexa for reporting.
+
+  19 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-0.8.4.2.ebuild:
+  amd64 stable wrt #305657
+
+  19 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-0.8.4.2.ebuild:
+  Remove USE="dpms" and always enable it wrt #305933, thanks to Thomas
+  Beierlein for reporting.
+
+*xfce4-power-manager-0.8.4.2 (21 Nov 2009)
+
+  21 Nov 2009; Christoph Mende <angelos@gentoo.org>
+  +xfce4-power-manager-0.8.4.2.ebuild:
+  Version bump
+
+*xfce4-power-manager-0.8.4.1 (12 Nov 2009)
+
+  12 Nov 2009; Christoph Mende <angelos@gentoo.org>
+  +xfce4-power-manager-0.8.4.1.ebuild:
+  Version bump (bug 292626)
+
+  03 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-0.8.4.ebuild:
+  amd64 stable
+
+*xfce4-power-manager-0.8.4 (29 Sep 2009)
+
+  29 Sep 2009; Jeremy Olexa <darkside@gentoo.org>
+  +xfce4-power-manager-0.8.4.ebuild:
+  Version bump, noteables include reduced memory usage and crash fix.
+  http://releases.xfce.org/feeds/project/xfce4-power-manager
+
+  07 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-power-manager-0.8.3.1.ebuild:
+  librsvg (drop in runtime dep.) is required since there is no png icon for
+  panel.
+
+*xfce4-power-manager-0.8.3.1 (10 Aug 2009)
+
+  10 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
+  +xfce4-power-manager-0.8.3.1.ebuild:
+  Version bump, upstream bug fixes
+
+*xfce4-power-manager-0.8.3 (02 Aug 2009)
+
+  02 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
+  +xfce4-power-manager-0.8.3.ebuild:
+  version bump, convert to xfconf eclass. see release notes at bug 279953
+
+*xfce4-power-manager-0.8.2 (01 Aug 2009)
+
+  01 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
+  -xfce4-power-manager-0.8.0_rc1.ebuild, +xfce4-power-manager-0.8.2.ebuild:
+  Version bump, bug 278842
+
+*xfce4-power-manager-0.8.0_rc1 (18 May 2009)
+
+  18 May 2009; Christoph Mende <angelos@gentoo.org>
+  -xfce4-power-manager-0.6.4.ebuild,
+  -xfce4-power-manager-0.8.0_alpha.ebuild,
+  -xfce4-power-manager-0.8.0_beta2.ebuild,
+  +xfce4-power-manager-0.8.0_rc1.ebuild:
+  Version bump
+
+*xfce4-power-manager-0.8.0_beta2 (14 Apr 2009)
+
+  14 Apr 2009; Christoph Mende <angelos@gentoo.org>
+  +xfce4-power-manager-0.8.0_beta2.ebuild:
+  Version bump
+
+*xfce4-power-manager-0.8.0_alpha (29 Mar 2009)
+
+  29 Mar 2009; Christoph Mende <angelos@gentoo.org>
+  +xfce4-power-manager-0.8.0_alpha.ebuild:
+  Version bump
+
+*xfce4-power-manager-0.6.5 (27 Mar 2009)
+
+  27 Mar 2009; Christoph Mende <angelos@gentoo.org>
+  +xfce4-power-manager-0.6.5.ebuild:
+  Version bump
+
+*xfce4-power-manager-0.6.4 (10 Mar 2009)
+
+  10 Mar 2009; Christoph Mende <angelos@gentoo.org>
+  +xfce4-power-manager-0.6.4.ebuild:
+  Initial import
+

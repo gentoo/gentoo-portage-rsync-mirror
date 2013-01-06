@@ -1,0 +1,36 @@
+# ChangeLog for gnustep-apps/fisicalab
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/fisicalab/ChangeLog,v 1.6 2012/10/11 13:05:59 voyageur Exp $
+
+*fisicalab-0.3.0 (11 Oct 2012)
+
+  11 Oct 2012; Bernard Cafarelli <voyageur@gentoo.org> +fisicalab-0.3.0.ebuild:
+  Version bump
+
+*fisicalab-0.2.2 (12 Jul 2012)
+
+  12 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org> -fisicalab-0.2.ebuild,
+  +fisicalab-0.2.2.ebuild:
+  Version bump, mostly bugfixes for newer GNUstep releases. Remove old
+
+*fisicalab-0.2.1 (28 Jun 2011)
+
+  28 Jun 2011; Bernard Cafarelli <voyageur@gentoo.org> +fisicalab-0.2.1.ebuild:
+  Version bump
+
+*fisicalab-0.2 (13 Jul 2010)
+
+  13 Jul 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  -fisicalab-0.1.ebuild, +fisicalab-0.2.ebuild:
+  Version bump, remove previous version
+
+  21 Jul 2009; Bernard Cafarelli <voyageur@gentoo.org> fisicalab-0.1.ebuild,
+  +files/fisicalab-0.1-as-needed.patch:
+  Fix compilation with forced --as-needed, bug #278135
+
+*fisicalab-0.1 (16 Mar 2009)
+
+  16 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org> +metadata.xml,
+  +fisicalab-0.1.ebuild:
+  Initial commit
+

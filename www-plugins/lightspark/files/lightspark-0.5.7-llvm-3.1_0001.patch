@@ -1,0 +1,30 @@
+From 1d9004f0cc14bff0a4f35590fa94e51c4723174d Mon Sep 17 00:00:00 2001
+From: Alessandro Pignotti <a.pignotti@sssup.it>
+Date: Sun, 27 May 2012 16:15:07 +0200
+Subject: [PATCH] Fix support for LLVM 3.1
+
+---
+ src/scripting/abc.cpp |    6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/scripting/abc.cpp b/src/scripting/abc.cpp
+index 5fdae55..de7e0f3 100644
+--- a/src/scripting/abc.cpp
++++ b/src/scripting/abc.cpp
+@@ -23,10 +23,10 @@
+ #include <llvm/ExecutionEngine/JIT.h>
+ #include <llvm/LLVMContext.h>
+ #include <llvm/Target/TargetData.h>
+-#ifdef LLVM_30
+-#include <llvm/Support/TargetSelect.h>
+-#else
++#ifdef LLVM_28
+ #include <llvm/Target/TargetSelect.h>
++#else
++#include <llvm/Support/TargetSelect.h>
+ #endif
+ #include <llvm/Target/TargetOptions.h>
+ #include <llvm/Analysis/Verifier.h>
+-- 
+1.7.10
+

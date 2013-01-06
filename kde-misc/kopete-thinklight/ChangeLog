@@ -1,0 +1,18 @@
+# ChangeLog for kde-misc/kopete-thinklight
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-thinklight/ChangeLog,v 1.3 2011/04/29 14:01:52 scarabeus Exp $
+
+  29 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  kopete-thinklight-0.50.ebuild:
+  Fix repoman warnings.
+
+  31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  kopete-thinklight-0.50.ebuild:
+  EAPI3
+
+*kopete-thinklight-0.50 (09 Nov 2009)
+
+  09 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +kopete-thinklight-0.50.ebuild:
+  Initial commit wrt #223903, thanks to Baldrun Orv for reporting.
+

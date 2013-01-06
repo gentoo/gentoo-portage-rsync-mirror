@@ -1,0 +1,16 @@
+# ChangeLog for sci-libs/rosetta-fragments
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rosetta-fragments/ChangeLog,v 1.3 2010/12/16 14:40:23 jlec Exp $
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> rosetta-fragments-3.1.ebuild:
+  Removal of fortran.eclass, #348851
+
+  04 Jul 2010; Justin Lecher <jlec@gentoo.org> rosetta-fragments-3.1.ebuild:
+  Fixed protocol for HOMPAGE
+
+*rosetta-fragments-3.1 (18 May 2010)
+
+  18 May 2010; Justin Lecher <jlec@gentoo.org> +files/3.1-chemshift.patch,
+  +files/3.1-nnmake.patch, +rosetta-fragments-3.1.ebuild, +metadata.xml:
+  Initial addition, #250415
+

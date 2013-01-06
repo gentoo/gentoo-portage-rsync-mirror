@@ -1,0 +1,160 @@
+# ChangeLog for app-editors/mg
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.45 2012/09/22 13:32:28 blueness Exp $
+
+  22 Sep 2012; Anthony G. Basile <blueness@gentoo.org> mg-20110905.ebuild:
+  keyword ~ppc64, bug #384639
+
+  24 Jul 2012; Ulrich Müller <ulm@gentoo.org> mg-20110905.ebuild:
+  Add ~amd64-fbsd keyword, bug 384639.
+
+  13 Jan 2012; Christian Faulhammer <fauli@gentoo.org> -mg-20110120.ebuild:
+  clean up
+
+  06 Jan 2012; Brent Baude <ranger@gentoo.org> mg-20110905.ebuild:
+  Marking mg-20110905 ppc for bug 386689
+
+  03 Dec 2011; Raúl Porcel <armin76@gentoo.org> mg-20110905.ebuild:
+  alpha/sparc stable wrt #386689
+
+  17 Oct 2011; Jeroen Roovers <jer@gentoo.org> mg-20110905.ebuild:
+  Stable for HPPA (bug #386689).
+
+  13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mg-20110905.ebuild:
+  x86 stable wrt bug #386689
+
+  12 Oct 2011; Tony Vroon <chainsaw@gentoo.org> mg-20110905.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #386689.
+
+  05 Oct 2011; Naohiro Aota <naota@gentoo.org> mg-20110905.ebuild:
+  Add ~x86-fbsd
+
+  03 Oct 2011; Jeroen Roovers <jer@gentoo.org> mg-20110905.ebuild:
+  Marked ~hppa (bug #384639).
+
+  25 Sep 2011; Ulrich Mueller <ulm@gentoo.org> mg-20110120.ebuild,
+  mg-20110905.ebuild:
+  Set /usr/bin/emacs symlink with USE=livecd, bug 384451.
+
+  25 Sep 2011; Raúl Porcel <armin76@gentoo.org> mg-20110120.ebuild,
+  mg-20110905.ebuild:
+  alpha/sparc stable
+
+*mg-20110905 (07 Sep 2011)
+
+  07 Sep 2011; Ulrich Mueller <ulm@gentoo.org> +mg-20110905.ebuild:
+  Version bump.
+
+  31 Aug 2011; Ulrich Mueller <ulm@gentoo.org> mg-20110120.ebuild:
+  Depend on ncurses, bug 381023.
+
+  26 May 2011; Ulrich Mueller <ulm@gentoo.org> -mg-20090107.ebuild,
+  -mg-20110103.ebuild:
+  Remove old.
+
+  26 May 2011; Brent Baude <ranger@gentoo.org> mg-20110120.ebuild:
+  Marking mg-20110120 ppc for bug 361631
+
+  08 Apr 2011; Thomas Kahle <tomka@gentoo.org> mg-20110120.ebuild:
+  x86 stable per bug 361631
+
+  02 Apr 2011; Christoph Mende <angelos@gentoo.org> mg-20110120.ebuild:
+  Stable on amd64 wrt bug #361631
+
+*mg-20110120 (12 Feb 2011)
+
+  12 Feb 2011; Ulrich Mueller <ulm@gentoo.org> +mg-20110120.ebuild:
+  Version bump.
+
+  03 Jan 2011; Ulrich Mueller <ulm@gentoo.org> mg-20110103.ebuild:
+  Upstream distfile has been replaced. Update Manifest and ebuild accordingly.
+
+*mg-20110103 (03 Jan 2011)
+
+  03 Jan 2011; Ulrich Mueller <ulm@gentoo.org> +mg-20110103.ebuild:
+  Version bump.
+
+  16 Oct 2010; Brent Baude <ranger@gentoo.org> mg-20090107.ebuild:
+  stable ppc, bug 265307
+
+  12 Sep 2010; Ulrich Mueller <ulm@gentoo.org> mg-20090107.ebuild:
+  Honour LDFLAGS, bug 336975. Update HOMEPAGE and SRC_URI.
+
+  10 Mar 2010; Joseph Jezak <josejx@gentoo.org> mg-20090107.ebuild:
+  Marked ~ppc for bug #305487.
+
+  25 Nov 2009; Christian Faulhammer <fauli@gentoo.org> mg-20090107.ebuild:
+  import changes from Prefix overlay
+
+  15 Apr 2009; Christian Faulhammer <fauli@gentoo.org> -mg-20080610.ebuild:
+  clean up
+
+  14 Apr 2009; Raúl Porcel <armin76@gentoo.org> mg-20090107.ebuild:
+  x86 stable wrt #265307
+
+  11 Apr 2009; Tiago Cunha <tcunha@gentoo.org> mg-20090107.ebuild:
+  stable amd64, bug 265307
+
+*mg-20090107 (06 Mar 2009)
+
+  06 Mar 2009; Christian Faulhammer <fauli@gentoo.org> mg-20080610.ebuild,
+  +mg-20090107.ebuild:
+  version bump and new HOMEPAGE and SRC_URI
+
+  24 Oct 2008; Ulrich Mueller <ulm@gentoo.org> mg-20080610.ebuild:
+  Honour CC variable, fixes bug 243566.
+
+  11 Sep 2008; Christian Faulhammer <opfer@gentoo.org> -mg-20080322.ebuild:
+  clean up
+
+  29 Aug 2008; Markus Meier <maekke@gentoo.org> mg-20080610.ebuild:
+  amd64/x86 stable, bug #236090
+
+*mg-20080610 (30 Jul 2008)
+
+  30 Jul 2008; Ulrich Mueller <ulm@gentoo.org> +mg-20080610.ebuild:
+  Version bump.
+
+  06 May 2008; Christian Faulhammer <opfer@gentoo.org> -mg-20070918.ebuild,
+  -mg-20080305.ebuild:
+  clean up
+
+  06 May 2008; Christian Faulhammer <opfer@gentoo.org> mg-20080322.ebuild:
+  stable x86/amd64, bug 220525
+
+*mg-20080322 (06 Apr 2008)
+
+  06 Apr 2008; Ulrich Mueller <ulm@gentoo.org> mg-20070918.ebuild,
+  mg-20080305.ebuild, +mg-20080322.ebuild:
+  Version bump. Some of the source files are unter a BSD licence, add it.
+
+*mg-20080305 (15 Mar 2008)
+
+  15 Mar 2008; Ulrich Mueller <ulm@gentoo.org> -mg-20070529.ebuild,
+  +mg-20080305.ebuild:
+  Version bump. Remove old.
+
+  27 Jan 2008; Christian Faulhammer <opfer@gentoo.org> mg-20070918.ebuild:
+  stable amd64, bug 207608
+
+  27 Jan 2008; Christian Faulhammer <opfer@gentoo.org> mg-20070918.ebuild:
+  stable x86, bug 207608
+
+  18 Dec 2007; Ulrich Mueller <ulm@gentoo.org> mg-20070918.ebuild:
+  Add ~amd64 keyword, bug #202428.
+
+*mg-20070918 (02 Nov 2007)
+
+  02 Nov 2007; Ulrich Mueller <ulm@gentoo.org> +mg-20070918.ebuild:
+  Version bump. Install documentation.
+
+  10 Oct 2007; Christian Faulhammer <opfer@gentoo.org> mg-20070529.ebuild:
+  remove PROVIDE=virtual/editor as we have now a new-style virtual
+
+*mg-20070529 (25 Jun 2007)
+
+  25 Jun 2007; Christian Faulhammer <opfer@gentoo.org> +metadata.xml,
+  +mg-20070529.ebuild:
+  initial import, a MicroEmacs
+

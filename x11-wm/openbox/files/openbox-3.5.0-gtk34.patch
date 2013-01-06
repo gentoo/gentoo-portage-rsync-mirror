@@ -1,0 +1,28 @@
+https://bugs.gentoo.org/show_bug.cgi?id=424747
+https://bugzilla.icculus.org/show_bug.cgi?id=5460
+
+From: Mikael Magnusson <mikachu@gmail.com>
+Date: Sun, 3 Jun 2012 18:18:48 +0000 (+0200)
+Subject: Fix crash on unexpected NET_WM_MOVERESIZE_CANCEL messages
+X-Git-Url: http://git.openbox.org/?p=mikachu%2Fopenbox.git;a=commitdiff_plain;h=339c19d1b3a7a5139aed8b59bad755ddd0e518ff;hp=9a20250243dd57525d83d6e9bba069c932dbe542
+
+Fix crash on unexpected NET_WM_MOVERESIZE_CANCEL messages
+
+gtk+ 3.4 apparently sends these randomly when you select text in a
+GtkEntry. This also fixes bug #5460.
+---
+
+diff --git a/openbox/event.c b/openbox/event.c
+index b9ec1c5..4d091bf 100644
+--- a/openbox/event.c
++++ b/openbox/event.c
+@@ -1495,7 +1495,8 @@ static void event_handle_client(ObClient *client, XEvent *e)
+             }
+             else if ((Atom)e->xclient.data.l[2] ==
+                      OBT_PROP_ATOM(NET_WM_MOVERESIZE_CANCEL))
+-                moveresize_end(TRUE);
++                if (moveresize_client)
++                    moveresize_end(TRUE);
+         } else if (msgtype == OBT_PROP_ATOM(NET_MOVERESIZE_WINDOW)) {
+             gint ograv, x, y, w, h;
+ 

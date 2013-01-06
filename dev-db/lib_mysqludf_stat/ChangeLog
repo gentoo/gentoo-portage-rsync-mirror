@@ -1,0 +1,11 @@
+# ChangeLog for dev-db/lib_mysqludf_stat
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lib_mysqludf_stat/ChangeLog,v 1.1 2011/10/19 12:19:53 sbriesen Exp $
+
+*lib_mysqludf_stat-0.0.3 (19 Oct 2011)
+
+  19 Oct 2011; Stefan Briesenick <sbriesen@gentoo.org>
+  +lib_mysqludf_stat-0.0.3.ebuild, +files/lib_mysqludf_stat-warnings.patch,
+  +metadata.xml:
+  initial commit
+

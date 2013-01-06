@@ -1,0 +1,72 @@
+# ChangeLog for profile directory
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7329 2013/01/05 20:21:43 slyfox Exp $
+#
+# This ChangeLog should include records for all changes in profiles directory.
+# Only typo fixes which don't affect portage/repoman behaviour could be avoided
+# here. If in doubt put a record here!
+
+  05 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org> package.mask:
+  masked cvsps-3 for testing
+
+  05 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> thirdpartymirrors:
+  Remove ftp.caliu.cat from kde mirrors since it times out
+
+  05 Jan 2013; Hanno Boeck <hanno@gentoo.org> license_groups:
+  Add DES license to MSIC-FREE.
+
+  04 Jan 2013; Raúl Porcel <armin76@gentoo.org>
+  -default/linux/arm/10.0/package.use.mask:
+  Remove p.use.mask from wrong place
+
+  04 Jan 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add gd to MISC-FREE license group, bug 450244.
+  Add xboing to MISC-FREE license group, bug 448274.
+
+  04 Jan 2013; Dirkjan Ochtman <djc@gentoo.org> package.mask:
+  Revert mod_python mask (bug 343663).
+
+  04 Jan 2013; Eray Aslan <eras@gentoo.org> package.mask:
+  Remove mask for mail-client/pine as it is no longer in the tree
+
+  04 Jan 2013; Ole Markus With <olemarkus@gentoo.org> package.mask:
+  Masking ezc-* for removal
+
+  04 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Mask some prerelease x11 packages
+
+  03 Jan 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add new license group MISC-FREE-DOCS for free documentation and other
+  non-software. Move font licenses from MISC-FREE to it.
+  Add x2x to MISC-FREE, bug 449944; add Unicode_Fonts_for_Ancient_Scripts to
+  MISC-FREE-DOCS license group, bug 449152. Remove as-is from MISC-FREE; most
+  free packages using it were moved to more specific licenses, bug 436214.
+
+  03 Jan 2013; Raúl Porcel <armin76@gentoo.org>
+  +default/linux/s390/10.0/s390x/parent, profiles.desc:
+  Add s390x server-less profile
+
+  02 Jan 2013; Anthony G. Basile <blueness@gentoo.org> profiles.desc:
+  Add hardened/linux/arm/armv7a to profiles.desc list
+
+  02 Jan 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add Openwall to MISC-FREE license group, bug 449832.
+
+  02 Jan 2013; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Mention USE_PYTHON and PYTHON_TARGETS in the pypy-1.8 mask.
+
+  02 Jan 2013; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Mask pypy-1.8 for removal.
+
+  01 Jan 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Remove jaxen and saxpath (JDOM duplicates) from MISC-FREE license group.
+
+  01 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org> package.mask:
+  masked dev-haskell/wash for removal
+
+  01 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2012:
+  Split ChangeLog.
+
+  For previous entries, please see ChangeLog-2012.
+

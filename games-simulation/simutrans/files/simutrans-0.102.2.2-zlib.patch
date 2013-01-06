@@ -1,0 +1,69 @@
+--- dataobj/loadsave.cc.old	2012-03-23 20:37:16.071335099 +0100
++++ dataobj/loadsave.cc	2012-03-23 20:39:53.600282699 +0100
+@@ -82,7 +82,7 @@
+ 		if(fp==NULL) {
+ 			return false;
+ 		}
+-		gzgets(fp, buf, 80);
++		gzgets((gzFile)fp, buf, 80);
+ 	}
+ 	saving = false;
+ 
+@@ -237,11 +237,11 @@
+ 		}
+ 		if(is_zipped()) {
+ 			int err_no;
+-			const char *err_str = gzerror( fp, &err_no );
++			const char *err_str = gzerror((gzFile)fp, &err_no );
+ 			if(err_no!=Z_OK  &&  err_no!=Z_STREAM_END) {
+ 				success =  err_no==Z_ERRNO ? strerror(errno) : err_str;
+ 			}
+-			gzclose(fp);
++			gzclose((gzFile)fp);
+ 		}
+ 		else if(  is_bzip2()  ) {
+ 			if(   saving  ) {
+@@ -280,7 +280,7 @@
+ 		return bse!=BZ_OK;
+ 	}
+ 	else {
+-		return gzeof(fp) != 0;
++		return gzeof((gzFile)fp) != 0;
+ 	}
+ }
+ 
+@@ -288,7 +288,7 @@
+ void loadsave_t::lsputc(int c)
+ {
+ 	if(is_zipped()) {
+-		gzputc(fp, c);
++		gzputc((gzFile)fp, c);
+ 	}
+ 	else if(is_bzip2()) {
+ 		uint8 ch = c;
+@@ -309,14 +309,14 @@
+ 		return bse==BZ_OK ? c[0] : -1;
+ 	}
+ 	else {
+-		return gzgetc(fp);
++		return gzgetc((gzFile)fp);
+ 	}
+ }
+ 
+ long loadsave_t::write(const void *buf, size_t len)
+ {
+ 	if(is_zipped()) {
+-		return gzwrite(fp, const_cast<void *>(buf), len);
++		return gzwrite((gzFile)fp, const_cast<void *>(buf), len);
+ 	}
+ 	else if(is_bzip2()) {
+ 		BZ2_bzWrite( &bse, bzfp, const_cast<void *>(buf), len);
+@@ -338,7 +338,7 @@
+ 		return (long)len&~(bse-BZ_OK);
+ 	}
+ 	else {
+-		return gzread(fp, buf, len);
++		return gzread((gzFile)fp, buf, len);
+ 	}
+ }
+ 

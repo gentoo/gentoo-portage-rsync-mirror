@@ -1,0 +1,86 @@
+--- Makefile
++++ Makefile
+@@ -37,7 +37,7 @@
+ BC_CPP     	= g++
+ BC_CFLAGS       = -Wall -fno-strict-aliasing -I$(FRAMEWORK_PATH) $(EXTRA_CFLAGS) -DBC_BACKEND_HAS_PIO
+ 
+-LDFLAGS 	= -Wl,-whole-archive,$(BC_BUILD)/$(BACKEND),$(BC_BUILD)/$(TOOLS),-no-whole-archive -L$(BC_BUILD) -lbccore
++LIBS    	= -Wl,-whole-archive,$(BC_BUILD)/$(BACKEND),$(BC_BUILD)/$(TOOLS),-no-whole-archive -L$(BC_BUILD) -lbccore -ldl
+ 
+ # main target
+ # build subtargets and core
+@@ -46,14 +46,14 @@
+ 
+ release: Makefile
+ 	set -e; for i in $(SUBDIRS); do $(MAKE) -C $$i BC_BUILD="$(BC_BUILD)" BC_CPP=$(BC_CPP) BC_CFLAGS="$(BC_CFLAGS)"; done 
+-	$(BC_CPP) $(LDFLAGS) -o $(BC_BUILD)/$(TARGET) 
++	$(BC_CPP) $(LDFLAGS) -o $(BC_BUILD)/$(TARGET) $(LIBS)
+ 
+ debug: Makefile 
+ 	set -e; for i in $(SUBDIRS); do $(MAKE) -C $$i BC_BUILD="$(BC_BUILD)" BC_CPP=$(BC_CPP) BC_CFLAGS="$(BC_CFLAGS) -pg -DBC_DEBUG"; done 
+-	$(BC_CPP) $(LDFLAGS) -o $(BC_BUILD)/$(TARGET) 
++	$(BC_CPP) $(LDFLAGS) -o $(BC_BUILD)/$(TARGET) $(LIBS)
+ 
+ 
+-# subtragets build
++# subtargets build
+ subdirs:
+ 
+ install: subdirs
+--- core/Makefile
++++ core/Makefile
+@@ -23,7 +23,8 @@
+ # build flags
+ CFLAGS 		= -fPIC 
+ CFLAGS 		+= $(BC_CFLAGS)
+-LDFLAGS		= -shared -Wl,-soname,$(DYNAMIC) -Wl,-whole-archive,$(LOCAL_BUILD)/$(STATIC),-no-whole-archive -ldl
++LDFLAGS		+= -shared -Wl,-soname,$(DYNAMIC)
++LIBS    	= -Wl,-whole-archive,$(LOCAL_BUILD)/$(STATIC),-no-whole-archive -ldl
+ 
+ 
+ # ----------------------------------------------------------
+@@ -35,7 +36,7 @@
+ 
+ 
+ $(DYNAMIC): $(STATIC) Makefile
+-	$(BC_CPP) $(LDFLAGS) -o $(LOCAL_BUILD)/$(DYNAMIC)
++	$(BC_CPP) $(LDFLAGS) -o $(LOCAL_BUILD)/$(DYNAMIC) $(LIBS)
+ 
+ 
+ $(STATIC): 
+--- core/mod/v7/kgsha/Makefile
++++ core/mod/v7/kgsha/Makefile
+@@ -20,12 +20,13 @@
+ TARGET = libkgsha.so
+ OBJ = sha1.o random.o sha1defs.o
+ COMMON = ../libkgsha_common.a
+-LDFLAGS = -shared -Wl,-soname,$(TARGET) -Wl,-whole-archive,$(COMMON),-no-whole-archive 
++LDFLAGS += -shared -Wl,-soname,$(TARGET)
++LIBS = -Wl,-whole-archive,$(COMMON),-no-whole-archive 
+ 
+ all: $(TARGET) Makefile
+ 
+ $(TARGET):$(OBJ)
+-	$(CPP) $(OBJ) $(LDFLAGS) -o $(TARGET) 
++	$(CPP) $(OBJ) $(LDFLAGS) -o $(TARGET) $(LIBS)
+ 	$(CP) $(TARGET) $(BUILD_PATH)
+ 
+ %.o: %.cpp
+--- core/mod/v7/kgsha256/Makefile
++++ core/mod/v7/kgsha256/Makefile
+@@ -21,12 +21,13 @@
+ TARGET = libkgsha256.so
+ OBJ = sha256.o random.o sha256defs.o
+ COMMON = ../libkgsha_common.a
+-LDFLAGS = -shared -Wl,-soname,$(TARGET) -Wl,-whole-archive,$(COMMON),-no-whole-archive 
++LDFLAGS += -shared -Wl,-soname,$(TARGET)
++LIBS = -Wl,-whole-archive,$(COMMON),-no-whole-archive 
+ 
+ all: $(TARGET) Makefile
+ 
+ $(TARGET):$(OBJ)
+-	$(CPP) $(OBJ) $(LDFLAGS) -o $(TARGET) 
++	$(CPP) $(OBJ) $(LDFLAGS) -o $(TARGET) $(LIBS)
+ 	$(CP) $(TARGET) $(BUILD_PATH)
+ 
+ %.o: %.cpp

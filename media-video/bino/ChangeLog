@@ -1,0 +1,10 @@
+# ChangeLog for media-video/bino
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/bino/ChangeLog,v 1.1 2012/10/20 13:36:13 robbat2 Exp $
+
+*bino-1.3.0 (20 Oct 2012)
+
+  20 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> +bino-1.3.0.ebuild,
+  +metadata.xml:
+  Initial commit, bug #355543. Ebuild submitted by Jožka Kejzlar (cuchac)
+  <cuchac@email.cz>.

@@ -1,0 +1,17 @@
+# ChangeLog for sys-fs/clamfs
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clamfs/ChangeLog,v 1.2 2010/06/17 17:29:26 matsuu Exp $
+
+*clamfs-1.0.1-r1 (17 Jun 2010)
+
+  17 Jun 2010; MATSUU Takuto <matsuu@gentoo.org> +clamfs-1.0.1-r1.ebuild,
+  +files/clamfs-1.0.1-gcc45.patch:
+  Fixed gcc-4.5 issue, bug #320107.
+
+*clamfs-1.0.1 (08 Jan 2010)
+
+  08 Jan 2010; MATSUU Takuto <matsuu@gentoo.org> +clamfs-1.0.1.ebuild,
+  +files/clamfs-1.0.1-gentoo.patch, +files/clamfs.confd,
+  +files/clamfs.initd, +metadata.xml:
+  Initial import, bug #259863.
+

@@ -1,0 +1,203 @@
+# ChangeLog for kde-base/smokegen
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokegen/ChangeLog,v 1.51 2013/01/05 20:18:26 creffett Exp $
+
+*smokegen-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +smokegen-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
+
+  25 Dec 2012; Markus Meier <maekke@gentoo.org> smokegen-4.9.4.ebuild:
+  add ~arm
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -smokegen-4.8.5.ebuild:
+  Drop KDE 4.8
+
+*smokegen-4.9.4 (05 Dec 2012)
+
+  05 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> +smokegen-4.9.4.ebuild:
+  Version bump KDE SC 4.9.4
+
+  30 Nov 2012; <ago@gentoo.org> smokegen-4.9.3.ebuild:
+  Stable for ppc, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> smokegen-4.9.3.ebuild:
+  Stable for x86, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> smokegen-4.9.3.ebuild:
+  Stable for amd64, wrt bug #442394
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -smokegen-4.9.2.ebuild:
+  Remove KDE SC 4.9.2
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -smokegen-4.9.1.ebuild:
+  Remove KDE SC 4.9.1
+
+*smokegen-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +smokegen-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
+
+*smokegen-4.9.2 (02 Oct 2012)
+
+  02 Oct 2012; Johannes Huber <johu@gentoo.org> +smokegen-4.9.2.ebuild:
+  Version bump KDE SC 4.9.2
+
+  21 Sep 2012; Johannes Huber <johu@gentoo.org> -smokegen-4.9.0.ebuild:
+  Remove KDE SC 4.9.0
+
+*smokegen-4.9.1 (04 Sep 2012)
+
+  04 Sep 2012; Johannes Huber <johu@gentoo.org> +smokegen-4.9.1.ebuild:
+  Version bump KDE SC 4.9.1
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org>
+  -files/smokegen-4.7.4-akonadicrash.patch:
+  Remove old.
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -smokegen-4.7.4-r1.ebuild:
+  Remove KDE SC 4.7.4
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -smokegen-4.8.3.ebuild:
+  Remove KDE SC 4.8.3
+
+  03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> smokegen-4.8.5.ebuild:
+  Stable on ppc wrt bug#431892.
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> smokegen-4.8.5.ebuild:
+  Stable for x86, wrt bug #431892
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> smokegen-4.8.5.ebuild:
+  Stable for amd64, wrt bug #431892
+
+  17 Aug 2012; Johannes Huber <johu@gentoo.org> -smokegen-4.8.4.ebuild:
+  Remove KDE SC 4.8.4
+
+*smokegen-4.8.5 (07 Aug 2012)
+
+  07 Aug 2012; Johannes Huber <johu@gentoo.org> +smokegen-4.8.5.ebuild:
+  Version bump KDE SC 4.8.5
+
+*smokegen-4.9.0 (01 Aug 2012)
+
+  01 Aug 2012; Johannes Huber <johu@gentoo.org> +smokegen-4.9.0.ebuild:
+  Version bump KDE SC 4.9.0
+
+*smokegen-4.8.4 (21 Jun 2012)
+
+  21 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +smokegen-4.8.4.ebuild:
+  Version bump KDE SC 4.8.4
+
+  24 May 2012; Johannes Huber <johu@gentoo.org> -smokegen-4.8.1.ebuild:
+  Remove KDE SC 4.8.1
+
+  24 May 2012; Agostino Sarubbo <ago@gentoo.org> smokegen-4.8.3.ebuild:
+  Stable for x86, wrt bug #414605
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> smokegen-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
+
+  18 May 2012; Joseph Jezak <josejx@gentoo.org> smokegen-4.8.3.ebuild:
+  Marked ~ppc ~ppc64 for bug #402989.
+
+  08 May 2012; Johannes Huber <johu@gentoo.org> -smokegen-4.8.2.ebuild:
+  Remove KDE SC 4.8.2
+
+*smokegen-4.8.3 (03 May 2012)
+
+  03 May 2012; Johannes Huber <johu@gentoo.org> +smokegen-4.8.3.ebuild:
+  Version bump KDE SC 4.8.3
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> smokegen-4.8.1.ebuild:
+  x86 stable, bug #409403
+
+*smokegen-4.8.2 (04 Apr 2012)
+
+  04 Apr 2012; Johannes Huber <johu@gentoo.org> +smokegen-4.8.2.ebuild:
+  Version bump KDE SC 4.8.2
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> smokegen-4.8.1.ebuild:
+  Stable for amd64, wrt bug #409403
+
+  23 Mar 2012; Johannes Huber <johu@gentoo.org> -smokegen-4.8.0.ebuild:
+  Remove KDE SC 4.8.0
+
+*smokegen-4.8.1 (06 Mar 2012)
+
+  06 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +smokegen-4.8.1.ebuild:
+  Version bump KDE SC 4.8.1
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> smokegen-4.7.4-r1.ebuild:
+  ppc stable #396359
+
+  14 Feb 2012; nixnut <nixnut@gentoo.org> smokegen-4.7.4-r1.ebuild:
+  ~ppc, preparing for #396359
+
+*smokegen-4.8.0 (25 Jan 2012)
+
+  25 Jan 2012; Johannes Huber <johu@gentoo.org> +smokegen-4.8.0.ebuild:
+  Version bump KDE SC 4.8.0
+
+  17 Jan 2012; Johannes Huber <johu@gentoo.org> -smokegen-4.7.3.ebuild:
+  Remove KDE SC 4.7.3
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> smokegen-4.7.4-r1.ebuild:
+  Stable for amd64, wrt bug #396359
+
+  09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  smokegen-4.7.4-r1.ebuild:
+  x86 stable wrt bug #396359
+
+*smokegen-4.7.4-r1 (12 Dec 2011)
+
+  12 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -smokegen-4.7.4.ebuild, +smokegen-4.7.4-r1.ebuild,
+  +files/smokegen-4.7.4-akonadicrash.patch:
+  Fix crash when building akonadi bindings, bug 392925
+
+*smokegen-4.7.4 (11 Dec 2011)
+
+  11 Dec 2011; Alexey Shvetsov <alexxy@gentoo.org> +smokegen-4.7.4.ebuild:
+  Version bump KDE SC 4.7.4
+
+  07 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -smokegen-4.7.2.ebuild:
+  Drop KDE 4.7.2
+
+  07 Dec 2011; Markos Chandras <hwoarang@gentoo.org> smokegen-4.7.3.ebuild:
+  Stable on amd64 wrt bug #388279
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> smokegen-4.7.3.ebuild:
+  x86 stable wrt bug #388279
+
+*smokegen-4.7.3 (02 Nov 2011)
+
+  02 Nov 2011; Alexey Shvetsov <alexxy@gentoo.org> +smokegen-4.7.3.ebuild:
+  Version bump KDE SC 4.7.3
+
+  28 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -smokegen-4.7.1.ebuild:
+  Drop KDEpim 4.6.1 and KDE 4.7.1
+
+  15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -smokegen-4.7.0.ebuild:
+  Drop KDE 4.7.0
+
+*smokegen-4.7.2 (06 Oct 2011)
+
+  06 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> +smokegen-4.7.2.ebuild:
+  Version bump KDE SC 4.7.2
+
+*smokegen-4.7.1 (07 Sep 2011)
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> +smokegen-4.7.1.ebuild:
+  Version bump KDE SC 4.7.1
+
+*smokegen-4.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +smokegen-4.7.0.ebuild,
+  +metadata.xml:
+  Version bump KDE SC 4.7.0

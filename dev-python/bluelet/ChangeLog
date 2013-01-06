@@ -1,0 +1,14 @@
+# ChangeLog for dev-python/bluelet
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bluelet/ChangeLog,v 1.2 2012/05/29 17:14:42 jdhore Exp $
+
+  29 May 2012; Jeff Horelick <jdhore@gentoo.org> bluelet-0.1.ebuild:
+  Keyword ~x86
+
+*bluelet-0.1 (29 May 2012)
+
+  29 May 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +bluelet-0.1.ebuild, +metadata.xml:
+  New ebuild for dev-python/bluelet module for pure Python asynchronous I/O
+  using coroutines
+

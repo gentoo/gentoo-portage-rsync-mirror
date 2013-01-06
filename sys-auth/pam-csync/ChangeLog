@@ -1,0 +1,22 @@
+# ChangeLog for sys-auth/pam-csync
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-csync/ChangeLog,v 1.4 2012/12/16 06:41:26 creffett Exp $
+
+  16 Dec 2012; Chris Reffett <creffett@gentoo.org> -pam-csync-0.42.0.ebuild:
+  Remove old version depending on now-removed csync.
+
+*pam-csync-0.42.0-r1 (17 Oct 2012)
+
+  17 Oct 2012; Michael Palimaka <kensington@gentoo.org>
+  +files/pam-csync-0.42.0-ocsync.patch, +pam-csync-0.42.0-r1.ebuild,
+  pam-csync-0.42.0.ebuild:
+  Add patch to fix upstream rename of csync -> ocsync. Fixes bug #438510.
+
+  28 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> pam-csync-0.42.0.ebuild:
+  Raise the dep over iniparser to be same as on csync.
+
+*pam-csync-0.42.0 (28 Aug 2012)
+
+  28 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> +metadata.xml,
+  +pam-csync-0.42.0.ebuild:
+  Intial commit. Can be used by net-misc/csync package.

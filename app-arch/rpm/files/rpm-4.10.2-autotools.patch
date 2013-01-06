@@ -1,0 +1,40 @@
+diff --git a/configure.ac b/configure.ac
+index 19e32bc..c74221a 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -245,18 +245,12 @@ AM_CONDITIONAL(LIBDWARF,[test "$WITH_LIBDWARF" = yes])
+ # which we use too and hopefully is slightly more unique to NSS.
+ WITH_NSS_INCLUDE=
+ WITH_NSS_LIB=
+-AC_CHECK_HEADERS([nspr.h nss.h sechash.h], [], [
+-  AC_MSG_ERROR([missing required NSPR / NSS header])
+-])
+-AC_CHECK_LIB(nss3, NSS_NoDB_Init, [
+-  WITH_NSS_LIB=-lnss3
+-  AC_CHECK_LIB(nss3, NSS_InitContext, [
+-    AC_DEFINE(HAVE_NSS_INITCONTEXT, 1, [Define to 1 if NSS has NSS_InitContext])
+-    AC_SUBST(HAVE_NSS_INITCONTEXT, [1])
+-  ])
+-], [
+-  AC_MSG_ERROR([missing required NSS library 'nss3'])
+-])
++# NSS_InitContext() was added in 3.12.5
++PKG_CHECK_MODULES(NSS, [ nss >= 3.12.5 ])
++AC_DEFINE(HAVE_NSS_INITCONTEXT, 1, [Define to 1 if NSS has NSS_InitContext])
++AC_SUBST(HAVE_NSS_INITCONTEXT, [1])
++WITH_NSS_INCLUDE=$NSS_CFLAGS
++WITH_NSS_LIB=$NSS_LIBS
+ AC_SUBST(WITH_NSS_INCLUDE)
+ AC_SUBST(WITH_NSS_LIB)
+ 
+@@ -797,10 +791,6 @@ AC_SUBST(RPMCONFIGDIR)
+ 
+ AC_SUBST(OBJDUMP)
+ 
+-if test "$with_external_db" = no; then
+-    AC_CONFIG_SUBDIRS(db3)
+-fi
+-
+ AM_CONDITIONAL([WITH_INTERNAL_DB],[test "$with_external_db" = no])
+ AM_CONDITIONAL([DOXYGEN],[test "$DOXYGEN" != no])
+ AM_CONDITIONAL([HACKINGDOCS],[test "$with_hackingdocs" = yes])

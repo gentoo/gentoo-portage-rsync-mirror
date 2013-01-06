@@ -1,0 +1,21 @@
+# ChangeLog for media-gfx/postr
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/ChangeLog,v 1.3 2012/10/09 22:53:51 tetromino Exp $
+
+*postr-0.13 (09 Oct 2012)
+
+  09 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org> postr-0.12.4.ebuild,
+  +postr-0.13.ebuild, +files/postr-0.13-exception-after-quit.patch,
+  metadata.xml:
+  Bump with bugfixes, UI improvements, and internationalization. Switch to
+  python.eclass due to upstream build system changes. Update license.
+
+  21 May 2012; Krzysztof Pawlik <nelchael@gentoo.org> postr-0.12.4.ebuild:
+  Remove calls to python-distutils-ng_redoscript, it is automated in eclass.
+
+*postr-0.12.4 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +postr-0.12.4.ebuild, +metadata.xml:
+  Add yet another flickr image uploader; needed for eog-plugins.
+

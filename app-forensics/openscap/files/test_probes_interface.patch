@@ -1,0 +1,11 @@
+--- tests/probes/interface/test_probes_interface.sh.orig	2012-04-05 14:41:53.846540789 +0200
++++ tests/probes/interface/test_probes_interface.sh	2012-04-05 14:42:41.141285232 +0200
+@@ -22,6 +22,8 @@
+     local DF="test_probes_interface.xml"
+     local RF="results.xml"
+ 
++    require "ipcalc" || return 255
++
+     [ -f $RF ] && rm -f $RF
+ 
+     if [ ! -x test_probes_interface ]; then		

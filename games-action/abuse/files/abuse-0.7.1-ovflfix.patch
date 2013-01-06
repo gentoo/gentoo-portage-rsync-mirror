@@ -1,0 +1,11 @@
+--- src/imlib/loader.cpp.old	2010-11-05 17:30:54.000000000 +0100
++++ src/imlib/loader.cpp	2010-11-05 17:31:19.000000000 +0100
+@@ -114,7 +114,7 @@
+ graphics_type tell_file_type(char *filename)
+ {
+   FILE *fp;
+-  unsigned char header[10];
++  unsigned char header[12];
+   fp=fopen(filename,"rb");
+   if (!fp)
+     return LOADER_not_supported;

@@ -1,0 +1,51 @@
+# ChangeLog for sys-kernel/aufs-sources
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.8 2012/12/23 09:49:57 jlec Exp $
+
+  23 Dec 2012; Justin Lecher <jlec@gentoo.org> aufs-sources-3.6.11.ebuild:
+  Move last versions dep
+
+  21 Dec 2012; Justin Lecher <jlec@gentoo.org> aufs-sources-3.6.6.ebuild,
+  aufs-sources-3.6.8.ebuild, aufs-sources-3.6.10.ebuild:
+  Move deps to PDEPEND
+
+*aufs-sources-3.6.11 (19 Dec 2012)
+
+  19 Dec 2012; Justin Lecher <jlec@gentoo.org> aufs-sources-3.6.6.ebuild,
+  aufs-sources-3.6.8.ebuild, aufs-sources-3.6.10.ebuild,
+  +aufs-sources-3.6.11.ebuild:
+  Version Bump; Stop installing files oputside kernel dir in order to prevent
+  file collisions
+
+*aufs-sources-3.6.10 (17 Dec 2012)
+
+  17 Dec 2012; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.6.10.ebuild,
+  metadata.xml:
+  Version Bump
+
+  29 Nov 2012; Justin Lecher <jlec@gentoo.org> aufs-sources-3.6.8.ebuild:
+  Revert installation position of header file
+
+  29 Nov 2012; Justin Lecher <jlec@gentoo.org> aufs-sources-3.6.8.ebuild,
+  metadata.xml:
+  Allow aufs support being build as module; install header outside linux-header
+  dir
+
+*aufs-sources-3.6.8 (27 Nov 2012)
+
+  27 Nov 2012; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.6.8.ebuild:
+  Version Bump
+
+  26 Nov 2012; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.6.6.ebuild,
+  +metadata.xml:
+  Move from betagarden to the tree
+
+  19 Nov 2012; Justin Lecher <jlec@gentoo.org> aufs-sources-3.6.6.ebuild:
+  Add sys-fs/aufs-util as dependency
+
+*aufs-sources-3.6.6 (13 Nov 2012)
+
+  13 Nov 2012; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.6.6.ebuild,
+  +metadata.xml:
+  New addition
+

@@ -1,0 +1,49 @@
+# ChangeLog for dev-python/pylzma
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylzma/ChangeLog,v 1.6 2012/02/22 08:45:49 patrick Exp $
+
+  22 Feb 2012; Patrick Lauer <patrick@gentoo.org> pylzma-0.4.4.ebuild:
+  Restricting pypy
+
+*pylzma-0.4.4 (24 Mar 2011)
+
+  24 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pylzma-0.4.4.ebuild:
+  Version bump.
+
+*pylzma-0.4.3 (29 Jan 2011)
+
+  29 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pylzma-0.4.2.ebuild, +pylzma-0.4.3.ebuild:
+  Version bump.
+
+*pylzma-0.4.2 (03 Jul 2010)
+
+  03 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pylzma-0.3.0.ebuild, -files/pylzma-0.3.0-fbsd.patch,
+  +pylzma-0.4.2.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
+
+  23 Apr 2009; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Fixing metadata.xml
+
+*pylzma-0.3.0 (23 Apr 2009)
+
+  23 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/pylzma-0.3.0-fbsd.patch, +metadata.xml, +pylzma-0.3.0.ebuild:
+  Initial import from sunrise overlay. Fixes #166953
+
+  10 Apr 2007; Ali Polatel (hawking) <polatel@gmail.com>
+  pylzma-0.3.0.ebuild, +files/pylzma-0.3.0-fbsd.patch:
+  Add freebsd patch and ~x86-fbsd keyword
+
+  16 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> pylzma-0.3.0.ebuild:
+  Corrected python dependency. Fixed tests.
+
+  16 Feb 2007; Christian Faulhammer <opfer@gentoo.org> pylzma-0.3.0.ebuild:
+  don't depend on base packages: removed python from DEPEND
+
+  15 Feb 2007; Ali Polatel (hawking) <polatel@nerdshack.com>
+  +pylzma-0.3.0.ebuild, +metadata.xml:
+  New ebuild for bug 166953 thanks to pigfoot
+

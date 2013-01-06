@@ -1,0 +1,12 @@
+diff -Naur Pantomime.orig/Framework/Pantomime/NSString+Extensions.m Pantomime/Framework/Pantomime/NSString+Extensions.m
+--- Pantomime.orig/Framework/Pantomime/NSString+Extensions.m	2010-07-07 22:46:19.000000000 +0200
++++ Pantomime/Framework/Pantomime/NSString+Extensions.m	2010-07-07 22:47:16.000000000 +0200
+@@ -42,8 +42,6 @@
+ #ifdef MACOSX
+ #include <CoreFoundation/CFString.h>
+ #include <CoreFoundation/CFStringEncodingExt.h>
+-#else
+-#include <GNUstepBase/GSCategories.h>
+ #endif
+ 
+ #include <ctype.h>

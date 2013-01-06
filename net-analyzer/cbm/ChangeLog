@@ -1,0 +1,19 @@
+# ChangeLog for net-analyzer/cbm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cbm/ChangeLog,v 1.3 2012/11/07 16:56:04 jer Exp $
+
+  07 Nov 2012; Jeroen Roovers <jer@gentoo.org> files/cbm-gcc-4.3.patch,
+  files/cbm-gcc-4.7.patch:
+  Clean up patches.
+
+  03 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> cbm-0.1.ebuild,
+  +files/cbm-gcc-4.7.patch:
+  Fix building with GCC 4.7 wrt bug #441030. Thanks to Diego Elio Pettenò for
+  discovering this issue
+
+*cbm-0.1 (23 Oct 2012)
+
+  23 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +cbm-0.1.ebuild,
+  +files/cbm-gcc-4.3.patch, +metadata.xml:
+  Initial commit from sunrise overlay wrt bug #246005
+

@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install
+DEPEND=>=sys-libs/libieee1284-0.2.11
+DESCRIPTION=A library to get the ink level of your printer
+EAPI=2
+HOMEPAGE=http://libinklevel.sourceforge.net/
+IUSE=debug
+KEYWORDS=~x86 ~amd64 ~ppc
+LICENSE=GPL-2
+RDEPEND=>=sys-libs/libieee1284-0.2.11
+SLOT=0
+SRC_URI=mirror://sourceforge/libinklevel/libinklevel-0.8.0.tar.gz
+_md5_=d4341b63a78b86d4c451ab74f114e4fd

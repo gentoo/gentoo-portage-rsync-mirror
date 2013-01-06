@@ -1,0 +1,8 @@
+--- codecgraph-20080422/Makefile.orig	2008-04-22 16:50:14.000000000 +0100
++++ codecgraph-20080422/Makefile	2008-04-22 16:50:21.000000000 +0100
+@@ -1,4 +1,4 @@
+-PREFIX = /usr/local
++PREFIX = /usr
+ DOTTY = dot
+ 
+ samples = \

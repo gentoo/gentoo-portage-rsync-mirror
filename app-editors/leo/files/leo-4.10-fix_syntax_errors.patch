@@ -1,0 +1,22 @@
+--- leo/external/edb.py
++++ leo/external/edb.py
+@@ -74,6 +74,8 @@
+ 
+ """
+ 
++from __future__ import print_function
++
+ # NOTE: the actual command documentation is collected from docstrings of the
+ # commands and is appended to __doc__ after the class has been defined.
+ #@-<< docstring >>
+--- leo/scripts/gen_blender_docs.py
++++ leo/scripts/gen_blender_docs.py
+@@ -857,7 +857,7 @@
+             py_descr2predef(_IDENT, fw, descr, module_name, type_name, key)
+ 
+     for key, descr in descr_items:
+-        if type(descr) in {types.FunctionType, types.MethodType}:
++        if type(descr) in (types.FunctionType, types.MethodType):
+             pyfunc2predef(_IDENT, fw, key, descr)
+ 
+     for key, descr in descr_items:

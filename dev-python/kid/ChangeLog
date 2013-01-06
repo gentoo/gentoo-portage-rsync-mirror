@@ -1,0 +1,79 @@
+# ChangeLog for dev-python/kid
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/ChangeLog,v 1.15 2009/10/10 17:24:44 grobian Exp $
+
+  10 Oct 2009; Fabian Groffen <grobian@gentoo.org> kid-0.9.6.ebuild:
+  Merge from Prefix
+
+  01 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  kid-0.9.6.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+*kid-0.9.6 (17 Jul 2007)
+
+  17 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> -kid-0.9.5.ebuild,
+  +kid-0.9.6.ebuild:
+  Version bump. Dropped old version.
+
+  04 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org> kid-0.9.5.ebuild:
+  Removed use_setuptools sed.
+
+*kid-0.9.5 (03 Feb 2007)
+
+  03 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -files/kid-0.9.4-ezsetup-gentoo.patch,
+  -files/kid-0.9-ezsetup-gentoo.patch, -kid-0.9.1.ebuild, -kid-0.9.3.ebuild,
+  -kid-0.9.4.ebuild, +kid-0.9.5.ebuild:
+  Version bump including some cleanups and fixes. Dropped old versions.
+
+  24 Dec 2006; Lukasz Strzygowski <lucass@gentoo.org> kid-0.9.4.ebuild:
+  Fixed deps, bug #158870.
+
+*kid-0.9.4 (23 Dec 2006)
+
+  23 Dec 2006; Lukasz Strzygowski <lucass@gentoo.org>
+  +files/kid-0.9.4-ezsetup-gentoo.patch, files/kid-0.9-ezsetup-gentoo.patch,
+  +kid-0.9.4.ebuild:
+  Version bump (bug #158870), updated patch.
+
+*kid-0.9.3 (21 Jul 2006)
+
+  21 Jul 2006; Lukasz Strzygowski <lucass@gentoo.org>
+  -files/kid-0.7.1-ezsetup-gentoo.patch,
+  -files/kid-0.8-ezsetup-gentoo.patch, -kid-0.7.1.ebuild, -kid-0.8.ebuild,
+  -kid-0.9.ebuild, kid-0.9.1.ebuild, +kid-0.9.3.ebuild:
+  Version bump: added src_test. Removed older versions.
+
+*kid-0.9.1 (27 May 2006)
+
+  27 May 2006; Lukasz Strzygowski <lucass@gentoo.org> +kid-0.9.1.ebuild:
+  Version bump. Closing bug #134509, thanks to Nicolas Lalevee.
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> kid-0.9.ebuild:
+  Mark 0.9 ~ia64
+
+*kid-0.9 (30 Mar 2006)
+
+  30 Mar 2006; Lukasz Strzygowski <lucass@gentoo.org>
+  +files/kid-0.9-ezsetup-gentoo.patch, metadata.xml, +kid-0.9.ebuild:
+  Version bump and cleanup. Added description to metadata.
+
+  17 Mar 2006; Scott Stoddard <deltacow@gentoo.org> kid-0.8.ebuild:
+  Added ~amd64.
+
+*kid-0.8 (06 Jan 2006)
+
+  06 Jan 2006; Lukasz Strzygowski <lucass@gentoo.org>
+  +files/kid-0.8-ezsetup-gentoo.patch, +kid-0.8.ebuild:
+  Version bump, updated patch, fixed typo (bug #117549). Fixed to install html
+  docs and examples.
+
+  28 Nov 2005; Marien Zwart <marienz@gentoo.org> kid-0.7.1.ebuild:
+  Add missing eutils inherit.
+
+*kid-0.7.1 (10 Nov 2005)
+
+  10 Nov 2005; Rob Cakebread <pythonhead@gentoo.org>
+  +files/kid-0.7.1-ezsetup-gentoo.patch, +metadata.xml, +kid-0.7.1.ebuild:
+  Initial commit.
+

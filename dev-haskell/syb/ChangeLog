@@ -1,0 +1,55 @@
+# ChangeLog for dev-haskell/syb
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.13 2012/12/16 18:52:18 ago Exp $
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> syb-0.3.7.ebuild:
+  Stable for x86, wrt bug #447462
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> syb-0.3.7.ebuild:
+  Stable for amd64, wrt bug #447462
+
+*syb-0.3.7 (18 Sep 2012)
+
+  18 Sep 2012; Mark Wright <gienah@gentoo.org> +syb-0.3.7.ebuild:
+  Bump syb to 0.3.7
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> syb-0.3.2.ebuild,
+  syb-0.3.6.1.ebuild, syb-0.3.6.ebuild:
+  move dev-haskell/syb/syb-0.3.6.ebuild ebuild to mirror://hackage
+
+*syb-0.3.6.1 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +syb-0.3.6.1.ebuild:
+  Bump syb to 0.3.6.1
+
+*syb-0.3.6 (23 Jan 2012)
+
+  23 Jan 2012; Mark Wright <gienah@gentoo.org> +syb-0.3.6.ebuild:
+  Bump syb to 0.3.6. test fixed by upstream.
+
+  13 Oct 2011; Naohiro Aota <naota@gentoo.org> syb-0.3.2.ebuild:
+  Add ~x86-fbsd
+
+  03 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> syb-0.3.2.ebuild:
+  marked ~ppc (split out of ghc-6 to separate package)
+
+  02 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> -syb-0.3.ebuild:
+  Removed old.
+
+*syb-0.3.2 (02 Aug 2011)
+
+  02 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> +syb-0.3.2.ebuild,
+  +files/syb-0.3.2-ghc-7.2.patch:
+  Version bump.
+
+  11 May 2011; Sergei Trofimovich <slyfox@gentoo.org> syb-0.3.ebuild:
+  keyworded ~sparc (shipped with ghc)
+
+  23 Apr 2011; Sergei Trofimovich <slyfox@gentoo.org> syb-0.3.ebuild:
+  keyworded ~ppc64
+
+*syb-0.3 (23 Apr 2011)
+
+  23 Apr 2011; Sergei Trofimovich <slyfox@gentoo.org> +syb-0.3.ebuild,
+  +metadata.xml:
+  Initial version.

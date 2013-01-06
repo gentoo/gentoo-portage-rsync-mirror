@@ -1,0 +1,47 @@
+# ChangeLog for net-misc/zssh
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/ChangeLog,v 1.15 2011/05/11 23:17:27 xmw Exp $
+
+  11 May 2011; Michael Weber <xmw@gentoo.org> zssh-1.5c.ebuild:
+  added ~amd64 keyword (bug 363001, thanks to Agostino Sarubbo for testing)
+
+  19 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> zssh-1.5c.ebuild:
+  Mark ~ppc wrt #346269. Thanks to XU Benda <heroxbd@gmail.com> for the
+  report and testing.
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
+
+  26 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  -files/zssh-1.5a-gentoo-termcap.diff, -zssh-1.5a.ebuild, zssh-1.5c.ebuild:
+  sparc/x86 stable, remove old
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
+  add metadata.xml
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
+
+*zssh-1.5c (12 Jan 2007)
+
+  12 Jan 2007; Charlie Shepherd <masterdriverz@gentoo.org>
+  +zssh-1.5c.ebuild:
+  Bump to zssh-1.5c; thanks to Andreas Bleischwitz; bug 160933
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> zssh-1.5a.ebuild:
+  change virtual/glibc to virtual/libc
+
+  03 Mar 2004; Seemant Kulleen <seemant@gentoo.org> zssh-1.5a.ebuild:
+  moved to stable x86, at the behest of: Petter <tt@linux.nu> in bug #43451, and
+  he thinks he's rough around the edges, but he's not
+
+*zssh-1.5a (20 Sep 2002)
+
+  23 Dec 2002; Christian Birchinger <joker@gentoo.org> :     
+  Removed sparc64 keyword.
+
+  20 Sep 2002; phoen][x <phoenix@gentoo.org> ChangeLog, zssh-1.5a.ebuild,
+  files/digest-zssh-1.5a :
+  Initial import. Ebuild contributed by Uwe Ohse <uwe-gentoo@ohse.de>.
+  This closes bug #8140.

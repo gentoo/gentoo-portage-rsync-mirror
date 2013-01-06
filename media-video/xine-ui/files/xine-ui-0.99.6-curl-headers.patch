@@ -1,0 +1,12 @@
+diff --git a/src/xitk/download.c b/src/xitk/download.c
+index 99d8489..c83d0d1 100644
+--- a/src/xitk/download.c
++++ b/src/xitk/download.c
+@@ -28,7 +28,6 @@
+ 
+ #ifdef HAVE_CURL
+ #include <curl/curl.h>
+-#include <curl/types.h>
+ #include <curl/easy.h>
+ #endif
+ 

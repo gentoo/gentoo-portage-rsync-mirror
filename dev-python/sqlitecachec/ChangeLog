@@ -1,0 +1,24 @@
+# ChangeLog for dev-python/sqlitecachec
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlitecachec/ChangeLog,v 1.5 2012/05/04 15:12:17 patrick Exp $
+
+  04 May 2012; Patrick Lauer <patrick@gentoo.org> sqlitecachec-1.1.4.ebuild:
+  Migrating dev-util/pkgconfig -> virtual/pkgconfig
+
+*sqlitecachec-1.1.4 (26 Dec 2010)
+
+  26 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -sqlitecachec-1.1.2.ebuild, +sqlitecachec-1.1.4.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
+
+  19 May 2008; Samuli Suominen <drac@gentoo.org> sqlitecachec-1.1.2.ebuild:
+  Move pkgconfig to DEPEND.
+
+  10 Jan 2008; Lukasz Strzygowski <lucass@gentoo.org>
+  sqlitecachec-1.1.2.ebuild:
+  Added dev-util/pkgconfig dep (bug #205192).
+
+*sqlitecachec-1.1.2 (30 Dec 2007)
+
+  30 Dec 2007; Mike Frysinger <vapier@gentoo.org> +sqlitecachec-1.1.2.ebuild:
+  Initial ebuild by me.

@@ -1,0 +1,28 @@
+From f79bf2d8e632771275e89b67a218b22bb699afa7 Mon Sep 17 00:00:00 2001
+From: Matthias Clasen <mclasen@redhat.com>
+Date: Wed, 22 Dec 2010 21:11:01 +0000
+Subject: Add schemehandler information to the desktop file
+
+This should arrange things so that gtk_show_uri (..."ghelp:epiphany"...)
+will just work.
+---
+diff --git a/yelp.desktop.in.in b/yelp.desktop.in.in
+index 6c71b95..02e8cdf 100644
+--- a/yelp.desktop.in.in
++++ b/yelp.desktop.in.in
+@@ -2,7 +2,7 @@
+ _Name=Help
+ _Comment=Get help with GNOME
+ OnlyShowIn=GNOME;
+-Exec=yelp
++Exec=yelp %u
+ Icon=help-browser
+ StartupNotify=true
+ Terminal=false
+@@ -12,3 +12,4 @@ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=Yelp
+ X-GNOME-Bugzilla-Component=general
+ X-GNOME-Bugzilla-Version=@VERSION@
++MimeType=x-scheme-handler/ghelp;x-scheme-handler/help;x-scheme-handler/info;x-scheme-handler/man;
+--
+cgit v0.9

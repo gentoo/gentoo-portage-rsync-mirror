@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>proxy-maintainers</herd>
+	<maintainer>
+		<email>givi-zurabovich@mail.ru</email>
+		<name>Georgy Kovtunov</name>
+		<description>Maintainer. Assign bugs to him</description>
+	</maintainer>
+	<maintainer>
+		<email>pinkbyte@gentoo.org</email>
+		<name>Sergey Popov</name>
+		<description>Proxy maintainer. CC him on bugs</description>
+	</maintainer>
+<longdescription lang="en">Radically simple deployment, model-driven configuration management, and command execution framework.</longdescription>
+<use>
+<flag name="paramiko">Use <pkg>dev-python/paramiko</pkg> as SSH library</flag>
+<flag name="sudo">Use <pkg>app-admin/sudo</pkg> on client nodes</flag>
+</use>
+</pkgmetadata>

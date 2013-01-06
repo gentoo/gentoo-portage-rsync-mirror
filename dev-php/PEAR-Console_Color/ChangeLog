@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-Console_Color
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_Color/ChangeLog,v 1.1 2010/07/15 15:55:48 beandog Exp $
+
+*PEAR-Console_Color-1.0.2 (15 Jul 2010)
+
+  15 Jul 2010; Steve Dibb <beandog@gentoo.org>
+  +PEAR-Console_Color-1.0.2.ebuild, +metadata.xml:
+  Initial commit
+

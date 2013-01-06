@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/nachocalendar
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nachocalendar/ChangeLog,v 1.1 2008/07/21 21:33:08 serkan Exp $
+
+*nachocalendar-0.23 (21 Jul 2008)
+
+  21 Jul 2008; Serkan Kaba <serkan@gentoo.org> +metadata.xml,
+  +nachocalendar-0.23.ebuild:
+  Initial commit, created as dep for l2fprod-common.
+

@@ -1,0 +1,43 @@
+# ChangeLog for games-action/phobiaii
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/ChangeLog,v 1.13 2012/09/24 00:22:57 vapier Exp $
+
+  24 Sep 2012; Mike Frysinger <vapier@gentoo.org> phobiaii-1.1.ebuild:
+  QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness)
+
+  04 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> phobiaii-1.1.ebuild:
+  Set QA_DT_HASH and QA_PRESTRIPPED instead of using RESTRICT="strip".
+
+  12 Mar 2007; Tristan Heaven <nyhm@gentoo.org> phobiaii-1.1.ebuild:
+  Install menu entry, bug #159760
+
+  27 Nov 2006; <blubb@gentoo.org> phobiaii-1.1.ebuild:
+  stable on amd64
+
+  20 Oct 2006; Tristan Heaven <nyhm@gentoo.org> -files/phobiaII,
+  phobiaii-1.1.ebuild:
+  Use games_make_wrapper
+
+  15 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> phobiaii-1.1.ebuild:
+  I forgot the s in my sed.  Bad me.
+
+  15 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> files/phobiaII,
+  phobiaii-1.1.ebuild:
+  Change hard-coded /opt to GAMES_PREFIX_OPT.
+
+  11 Aug 2005; Carlos Silva <r3pek@gentoo.org> phobiaii-1.1.ebuild:
+  marked ~amd64. closes bug #102056
+
+  19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> phobiaii-1.1.ebuild:
+  Added IUSE.
+
+*phobiaii-1.1 (12 Dec 2002)
+
+  19 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Trim DEPEND #33822.
+
+  09 May 2003; Martin Holzer <mholzer@gentoo.org> phobiaii-1.1.ebuild:
+  Added sys-libs/lib-compat to DEPEND. Closes #17321.
+  
+  12 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for #4616.

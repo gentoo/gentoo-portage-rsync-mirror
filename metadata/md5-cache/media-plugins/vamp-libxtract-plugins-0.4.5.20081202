@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare
+DEPEND==sci-libs/fftw-3* >=media-libs/libxtract-0.6.3 media-libs/vamp-plugin-sdk
+DESCRIPTION=Low-level feature extraction plugins using Jamie Bullock's libxtract library to provide around 50 spectral and other features
+EAPI=2
+HOMEPAGE=http://www.vamp-plugins.org/
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
+LICENSE=GPL-2
+RDEPEND==sci-libs/fftw-3* >=media-libs/libxtract-0.6.3 media-libs/vamp-plugin-sdk
+SLOT=0
+SRC_URI=mirror://sourceforge/vamp/vamp-libxtract-plugins-0.4.5.20081202.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=673f2dda47174144172e5acb93c15c61

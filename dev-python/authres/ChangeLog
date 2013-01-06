@@ -1,0 +1,34 @@
+# ChangeLog for dev-python/authres
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/ChangeLog,v 1.7 2012/06/28 06:05:53 patrick Exp $
+
+*authres-0.402 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +authres-0.402.ebuild:
+  Bump
+
+  09 May 2012; Mike Gilbert <floppym@gentoo.org> -authres-0.3.ebuild:
+  Just remove the old version instead.
+
+  09 May 2012; Mike Gilbert <floppym@gentoo.org> authres-0.3.ebuild:
+  Restore PYTHON_MODNAME for old version.
+
+  09 May 2012; Mike Gilbert <floppym@gentoo.org> authres-0.3.ebuild,
+  authres-0.401.ebuild:
+  Remove bad PYTHON_MODNAME.
+
+*authres-0.401 (24 Apr 2012)
+
+  24 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> +authres-0.401.ebuild:
+  Version bump, thanks to Marienz and Arfrever for suggestions regarding
+  src_test()
+
+  24 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> authres-0.3.ebuild:
+  Fix PYTHON_MODNAME
+
+*authres-0.3 (24 Apr 2012)
+
+  24 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> +authres-0.3.ebuild,
+  +metadata.xml:
+  Initial import, ebuild written by me. Fixes #410907 by Ian Delaney
+  <johneed@hotmail.com>

@@ -1,0 +1,59 @@
+# ChangeLog for media-radio/wspr
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/ChangeLog,v 1.5 2012/10/19 10:43:50 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> wspr-2.00.ebuild, metadata.xml:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> wspr-2.00.ebuild:
+  Add dependency on virtual/fortran
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> wspr-2.00.ebuild:
+  Added fortran-2.eclass support
+
+  10 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  wspr-2.00.ebuild:
+  Use Python 2 (bug #362339).
+
+*wspr-2.00 (03 Apr 2011)
+
+  03 Apr 2011; Thomas Beierlein <tomjbe@gentoo.org> +wspr-2.00.ebuild,
+  +metadata.xml:
+  Moved from sunrise
+
+  14 Mar 2011; Justin Lecher <jlec@gentoo.org> wspr-2.00.ebuild:
+  Removed almost deprecated fortran.eclass
+
+  01 Apr 2010; Thomas Beierlein (TomJBE) <tb@forth-ev.de> wspr-2.00.ebuild:
+  fix for changes in python.eclass
+
+  25 Nov 2009; Thomas Beierlein (TomJBE) <tb@forth-ev.de> metadata.xml:
+  fix metadata.xml
+
+  22 Nov 2009; Thomas Beierlein (TomJBE) <tb@forth-ev.de> wspr-2.00.ebuild:
+  use fortran.eclass
+
+  21 Nov 2009; Thomas Beierlein (TomJBE) <tb@forth-ev.de> wspr-2.00.ebuild:
+  added dependency on gcc[fortran]
+
+  20 Nov 2009; Thomas Beierlein (TomJBE) <tb@forth-ev.de> wspr-2.00.ebuild:
+  Simplify MY_P. Thanks Tommy[D]
+
+  20 Nov 2009; Thomas Beierlein (TomJBE) <tb@forth-ev.de> wspr-2.00.ebuild:
+  simplify sed expression
+
+  20 Nov 2009; Thomas Beierlein (TomJBE) <tb@forth-ev.de> wspr-2.00.ebuild:
+  added || die to insinto
+
+  19 Nov 2009; Thomas Beierlein (TomJBE) <tb@forth-ev.de> -wspr-1.12.ebuild,
+  +wspr-2.00.ebuild:
+  Version bump
+
+  17 Nov 2009; Thomas Beierlein (TomJBE) <tb@forth-ev.de> wspr-1.12.ebuild:
+  fix minor configuration problem
+
+  03 Nov 2009; Thomas Beierlein (TomJBE) <tb@forth-ev.de> +wspr-1.12.ebuild,
+  +metadata.xml:
+  New ebuild for bug 291186. Thanks Tommy[D] for thorough review and help.
+

@@ -1,0 +1,37 @@
+# ChangeLog for dev-haskell/testpack
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/testpack/ChangeLog,v 1.8 2012/12/07 17:59:52 ago Exp $
+
+  07 Dec 2012; <ago@gentoo.org> testpack-2.1.2.ebuild:
+  Stable for x86, wrt bug #441160
+
+  07 Dec 2012; <ago@gentoo.org> testpack-2.1.2.ebuild:
+  Stable for amd64, wrt bug #441160
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> testpack-2.1.1.ebuild,
+  testpack-2.1.2.ebuild:
+  move dev-haskell/testpack/testpack-2.1.2.ebuild ebuild to mirror://hackage
+
+*testpack-2.1.2 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +testpack-2.1.2.ebuild:
+  Bump testpack to 2.1.2
+
+  24 Jan 2012; Thomas Kahle <tomka@gentoo.org> testpack-2.1.1.ebuild:
+  x86 stable per bug 342977
+
+  22 Jan 2012; Agostino Sarubbo <ago@gentoo.org> testpack-2.1.1.ebuild:
+  Stable for amd64, wrt bug #342977
+
+*testpack-2.1.1 (04 Dec 2011)
+
+  04 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org> +testpack-2.1.1.ebuild,
+  -testpack-2.1.0.ebuild:
+  Version bump.
+
+*testpack-2.1.0 (12 Jun 2011)
+
+  12 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> +testpack-2.1.0.ebuild,
+  +metadata.xml:
+  Initial version. New package: library with testing interface to HUnit and
+  QuickCheck.

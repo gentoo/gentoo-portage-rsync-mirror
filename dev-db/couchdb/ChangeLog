@@ -1,0 +1,239 @@
+# ChangeLog for dev-db/couchdb
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.61 2012/10/19 09:15:55 ssuominen Exp $
+
+  19 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> couchdb-1.1.1.ebuild,
+  couchdb-1.2.0.ebuild:
+  Raise spidermonkey dependency to 1.8.5 wrt #431336. Set missing SLOT
+  dependency for openssl to ensure headers are installed.
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> couchdb-1.2.0.ebuild:
+  x86 stable wrt bug #428920
+
+  11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> couchdb-1.2.0.ebuild:
+  Stable for amd64, wrt bug #428920
+
+  08 Aug 2012; Brent Baude <ranger@gentoo.org> couchdb-1.2.0.ebuild:
+  Marking couchdb-1.2.0 ppc for bug 428920
+
+  31 Jul 2012; Dirkjan Ochtman <djc@gentoo.org> files/couchdb.init-2:
+  Relicense init script I wrote to Apache-2.0 (bug 425918).
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> couchdb-1.1.1.ebuild,
+  couchdb-1.2.0.ebuild:
+  inherit multilib for get_libdir, and user for enewgroup and enewuser
+
+  09 Apr 2012; Dirkjan Ochtman <djc@gentoo.org> -couchdb-1.0.2.ebuild,
+  -couchdb-1.1.0.ebuild:
+  Remove old versions.
+
+*couchdb-1.2.0 (09 Apr 2012)
+
+  09 Apr 2012; Dirkjan Ochtman <djc@gentoo.org> +couchdb-1.2.0.ebuild:
+  Version bump to 1.2.0.
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> couchdb-1.1.1.ebuild:
+  x86 stable wrt bug #404087
+
+  23 Feb 2012; Brent Baude <ranger@gentoo.org> couchdb-1.1.1.ebuild:
+  Marking couchdb-1.1.1 ppc for bug 404087
+
+  16 Feb 2012; Agostino Sarubbo <ago@gentoo.org> couchdb-1.1.1.ebuild:
+  Stable for amd64, wrt bug #404087
+
+*couchdb-1.1.1 (31 Oct 2011)
+
+  31 Oct 2011; Dirkjan Ochtman <djc@gentoo.org> +couchdb-1.1.1.ebuild,
+  +files/couchdb.init-2:
+  Version bump to 1.1.1.
+
+  06 Jun 2011; Dirkjan Ochtman <djc@gentoo.org> -couchdb-1.0.1.ebuild,
+  -couchdb-1.0.1-r2.ebuild:
+  Remove old versions.
+
+*couchdb-1.1.0 (06 Jun 2011)
+
+  06 Jun 2011; Dirkjan Ochtman <djc@gentoo.org> +couchdb-1.1.0.ebuild:
+  Version bump to 1.1.0.
+
+  10 Feb 2011; Markos Chandras <hwoarang@gentoo.org> couchdb-1.0.2.ebuild:
+  Stable on amd64 wrt bug #353243
+
+  08 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> couchdb-1.0.2.ebuild:
+  ppc stable wrt #353243
+
+  05 Feb 2011; Christian Faulhammer <fauli@gentoo.org> couchdb-1.0.2.ebuild:
+  stable x86, security bug 353243
+
+  01 Feb 2011; Markos Chandras <hwoarang@gentoo.org> couchdb-1.0.2.ebuild:
+  Revert my commit
+
+  01 Feb 2011; Markos Chandras <hwoarang@gentoo.org> couchdb-1.0.2.ebuild:
+  Stable on amd64 wrt bug #353243
+
+*couchdb-1.0.2 (30 Jan 2011)
+
+  30 Jan 2011; Dirkjan Ochtman <djc@gentoo.org> +couchdb-1.0.2.ebuild:
+  Version bump to 1.0.2.
+
+*couchdb-1.0.1-r2 (27 Oct 2010)
+
+  27 Oct 2010; Dirkjan Ochtman <djc@gentoo.org> -couchdb-1.0.1-r1.ebuild,
+  +couchdb-1.0.1-r2.ebuild:
+  Fix /etc/couchdb/*.ini permissions, bug 337636.
+
+  27 Oct 2010; Dirkjan Ochtman <djc@gentoo.org> -couchdb-0.11.0-r1.ebuild:
+  Remove old version.
+
+  12 Sep 2010; Joseph Jezak <josejx@gentoo.org> couchdb-1.0.1.ebuild:
+  Marked ppc stable for bug #333175.
+
+  09 Sep 2010; Dirkjan Ochtman <djc@gentoo.org> couchdb-1.0.1-r1.ebuild:
+  enewuser wants -1 instead of explicit /sbin/nologin (bug 336293).
+
+*couchdb-1.0.1-r1 (01 Sep 2010)
+
+  01 Sep 2010; Dirkjan Ochtman <djc@gentoo.org> +couchdb-1.0.1-r1.ebuild:
+  Set shell to nologin for couchdb user (bug 334857).
+
+  01 Sep 2010; Dirkjan Ochtman <djc@gentoo.org> -couchdb-0.10.2.ebuild,
+  -couchdb-1.0.0.ebuild:
+  Removed old and crappy versions.
+
+  30 Aug 2010; Markos Chandras <hwoarang@gentoo.org> couchdb-1.0.1.ebuild:
+  Stable on amd64 wrt bug #333175
+
+  30 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> couchdb-1.0.1.ebuild:
+  x86 stable wrt security bug #333175
+
+*couchdb-1.0.1 (17 Aug 2010)
+
+  17 Aug 2010; Dirkjan Ochtman <djc@gentoo.org> +couchdb-1.0.1.ebuild:
+  Version bump to 1.0.1, doesn't have data loss bug (bug 331811).
+
+  18 Jul 2010; Jeroen Roovers <jer@gentoo.org> couchdb-0.11.0-r1.ebuild:
+  Stable for PPC (bug #327877).
+
+  17 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  couchdb-0.11.0-r1.ebuild:
+  stable x86, bug 327877
+
+  16 Jul 2010; Dirkjan Ochtman <djc@gentoo.org> -couchdb-0.10.1.ebuild:
+  Clean up old version.
+
+*couchdb-1.0.0 (16 Jul 2010)
+
+  16 Jul 2010; Dirkjan Ochtman <djc@gentoo.org> +couchdb-1.0.0.ebuild:
+  Version bump to 1.0.0.
+
+  13 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  couchdb-0.11.0-r1.ebuild:
+  Stable on amd64 wrt bug #327877
+
+  26 Jun 2010; <nixnut@gentoo.org> couchdb-0.10.2.ebuild:
+  ppc stable #321437
+
+  02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove caleb from metadata.xml (#317071)
+
+  01 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  couchdb-0.10.2.ebuild:
+  x86 stable wrt bug #321437
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> couchdb-0.10.2.ebuild:
+  stable amd64, bug 321437
+
+*couchdb-0.11.0-r1 (25 May 2010)
+
+  25 May 2010; Dirkjan Ochtman <djc@gentoo.org> +couchdb-0.11.0-r1.ebuild:
+  Fix permissions on configuration files (bug 317055).
+
+*couchdb-0.10.2 (19 Apr 2010)
+
+  19 Apr 2010; Dirkjan Ochtman <djc@gentoo.org> +couchdb-0.10.2.ebuild:
+  Version bump to 0.10.2.
+
+*couchdb-0.11.0 (29 Mar 2010)
+
+  29 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> +couchdb-0.11.0.ebuild:
+  Version bump to 0.11.0.
+
+  15 Mar 2010; nixnut <nixnut@gentoo.org> couchdb-0.10.1.ebuild:
+  ppc stable #307283
+
+  09 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> couchdb-0.10.1.ebuild:
+  amd64 stable, bug 307283
+
+  09 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> couchdb-0.10.1.ebuild:
+  Add src_test() function couchdb-0.10.1.
+
+  02 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  couchdb-0.10.1.ebuild:
+  x86 stable wrt bug #307283
+
+  14 Jan 2010; Dirkjan Ochtman <djc@gentoo.org> couchdb-0.10.1.ebuild:
+  Fix bugs 300010 and 296609.
+
+  24 Dec 2009; Dirkjan Ochtman <djc@gentoo.org> -couchdb-0.9.0.ebuild,
+  -couchdb-0.9.1.ebuild:
+  Prune old versions.
+
+*couchdb-0.10.1 (03 Dec 2009)
+
+  03 Dec 2009; Dirkjan Ochtman <djc@gentoo.org> +couchdb-0.10.1.ebuild:
+  Version bump to 0.10.1.
+
+  02 Dec 2009; Markus Meier <maekke@gentoo.org> couchdb-0.10.0.ebuild:
+  amd64/x86 stable, bug #295217
+
+  30 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> couchdb-0.10.0.ebuild:
+  Keywording for ppc.
+
+  15 Oct 2009; <djc@gentoo.org> -files/couchdb.conf-0.8.1,
+  -files/couchdb.init-0.8.1, -couchdb-0.8.1.ebuild:
+  Remove old versions.
+
+  15 Oct 2009; <djc@gentoo.org> couchdb-0.10.0.ebuild:
+  Clean up the ebuild for 0.10, thanks to pva for comments.
+
+*couchdb-0.10.0 (13 Oct 2009)
+
+  13 Oct 2009; <djc@gentoo.org> +files/couchdb.conf-0.10,
+  +files/couchdb.init-0.10, +couchdb-0.10.0.ebuild:
+  Add version 0.10.0.
+
+  09 Oct 2009; Patrick Lauer <patrick@gentoo.org> couchdb-0.9.1.ebuild:
+  Add usedep for erlang +ssl, fixes #287744
+
+  19 Sep 2009; Markus Meier <maekke@gentoo.org> couchdb-0.9.1.ebuild:
+  amd64/x86 stable, bug #285176
+
+  16 Sep 2009; <djc@gentoo.org> metadata.xml:
+  Add myself as a maintainer (after asking caleb about it).
+
+*couchdb-0.9.1 (02 Aug 2009)
+
+  02 Aug 2009; Caleb Tennis <caleb@gentoo.org> +couchdb-0.9.1.ebuild:
+  Bump couchdb
+
+  10 Jul 2009; Caleb Tennis <caleb@gentoo.org> files/couchdb.conf-0.9,
+  couchdb-0.9.0.ebuild:
+  conf.d file fix for 268222
+
+  21 Jun 2009; Caleb Tennis <caleb@gentoo.org> files/couchdb.conf-0.9,
+  files/couchdb.init-0.9:
+  Add steps to conf.d and init.d scripts to determine which beam.smp script
+  needs to be run
+
+*couchdb-0.9.0 (01 Apr 2009)
+
+  01 Apr 2009; Caleb Tennis <caleb@gentoo.org> +files/couchdb.conf-0.9,
+  +files/couchdb.init-0.9, +couchdb-0.9.0.ebuild:
+  Version bump
+
+*couchdb-0.8.1 (22 Mar 2009)
+
+  22 Mar 2009; Caleb Tennis <caleb@gentoo.org> +files/couchdb.conf-0.8.1,
+  +files/couchdb.init-0.8.1, +couchdb-0.8.1.ebuild:
+  Initial import, from bug 197176.  Thanks to everyone there who submitted ebuilds and supplemental files.
+

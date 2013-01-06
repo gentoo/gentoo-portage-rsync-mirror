@@ -1,0 +1,11 @@
+--- a/data/devhelp.schemas.in	2010-10-22 22:36:22.000000000 +0200
++++ b/data/devhelp.schemas.in	2010-10-22 22:36:30.000000000 +0200
+@@ -132,7 +132,7 @@
+       <owner>devhelp</owner>
+       <type>list</type>
+       <list_type>string</list_type>
+-      <default></default>
++      <default>[]</default>
+       <locale name="C">
+          <short>Books disabled</short>
+          <long>List of books disabled by the user.</long>

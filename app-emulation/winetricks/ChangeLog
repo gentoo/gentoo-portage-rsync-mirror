@@ -1,0 +1,92 @@
+# ChangeLog for app-emulation/winetricks
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.14 2013/01/06 02:58:24 tetromino Exp $
+
+*winetricks-931 (06 Jan 2013)
+
+  06 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-922.ebuild, +winetricks-931.ebuild:
+  Bump, drop old.
+
+*winetricks-927 (08 Dec 2012)
+
+  08 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-920.ebuild, +winetricks-927.ebuild:
+  Bump, drop old.
+
+*winetricks-922 (24 Nov 2012)
+
+  24 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-916.ebuild, +winetricks-922.ebuild, winetricks-99999999.ebuild:
+  Version bump. Use 'Wine' as the category for the .desktop file since our
+  >=wine-1.5.18 now provides applications-merged/wine.menu (bug #438806).
+
+*winetricks-920 (09 Nov 2012)
+
+  09 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-913.ebuild, +winetricks-920.ebuild:
+  Version bump; drop old.
+
+  19 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  winetricks-916.ebuild, winetricks-99999999.ebuild:
+  Only install .desktop file and icon if USE=gtk or USE=kde.
+
+*winetricks-916 (19 Oct 2012)
+
+  19 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-909.ebuild, winetricks-913.ebuild, +winetricks-916.ebuild,
+  winetricks-99999999.ebuild:
+  Version bump. Install .desktop file and icon (bug #438806, thanks to C.J.
+  Wijtmans). Update license. Add dependencies on cabextract and unzip. Drop
+  old.
+
+*winetricks-913 (14 Sep 2012)
+
+  14 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-886.ebuild, +winetricks-913.ebuild:
+  Version bump, drop old.
+
+*winetricks-909 (08 Sep 2012)
+
+  08 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-881.ebuild, +winetricks-909.ebuild:
+  Version bump, drop old.
+
+*winetricks-886 (17 Aug 2012)
+
+  17 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-744.ebuild, +winetricks-886.ebuild:
+  Version bump, drop old.
+
+*winetricks-881 (12 Aug 2012)
+
+  12 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-696.ebuild, winetricks-744.ebuild, +winetricks-881.ebuild,
+  winetricks-99999999.ebuild:
+  Version bump, drop old. Capitalize description.
+
+*winetricks-744 (05 Dec 2011)
+
+  05 Dec 2011; Mike Frysinger <vapier@gentoo.org> +winetricks-744.ebuild:
+  Version bump.
+
+*winetricks-696 (22 Sep 2011)
+
+  22 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> -winetricks-185.ebuild,
+  -winetricks-672.ebuild, +winetricks-696.ebuild, winetricks-99999999.ebuild:
+  Update to eapi4. Bump to the latest release, fixes crash for me when
+  installing dontnet stuff, remove older.
+
+*winetricks-99999999 (05 Jul 2011)
+*winetricks-672 (05 Jul 2011)
+
+  05 Jul 2011; Mike Frysinger <vapier@gentoo.org> +winetricks-672.ebuild,
+  +winetricks-99999999.ebuild:
+  Add live ebuild and version bump #358997 by Sven Eden.
+
+*winetricks-185 (01 Mar 2011)
+
+  01 Mar 2011; Mike Frysinger <vapier@gentoo.org> +winetricks-185.ebuild,
+  +metadata.xml:
+  Initial ebuild.
+

@@ -1,0 +1,26 @@
+# ChangeLog for media-gfx/entangle
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/entangle/ChangeLog,v 1.5 2012/12/31 02:50:01 flameeyes Exp $
+
+*entangle-0.4.1 (31 Dec 2012)
+
+  31 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> +entangle-0.4.1.ebuild:
+  Version bump.
+
+  11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> entangle-0.4.0.ebuild:
+  Use virtual/udev. Put missing SLOT operator to media-libs/lcms dependency.
+  Raise to EAPI=5 in order to drop both --disable-silent-rules and
+  --disable-dependency-tracking from G2CONF.
+
+  07 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Use proper herd
+
+  12 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> entangle-0.4.0.ebuild:
+  Fix dependency over Gtk+ to require at least version 3.3.18 (which introduced
+  smooth scrolling). Thanks to Gian for reporting in bug #426208.
+
+*entangle-0.4.0 (08 Jul 2012)
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> +entangle-0.4.0.ebuild,
+  +metadata.xml:
+  Initial import of entangle ebuild.

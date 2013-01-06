@@ -1,0 +1,46 @@
+# ChangeLog for dev-python/ipdb
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ChangeLog,v 1.8 2012/08/29 08:04:30 xarthisius Exp $
+
+*ipdb-0.7 (29 Aug 2012)
+
+  29 Aug 2012; Kacper Kowalik <xarthisius@gentoo.org> +ipdb-0.7.ebuild,
+  -ipdb-0.6.ebuild:
+  Version bump, drop old
+
+*ipdb-0.6.1 (01 Mar 2012)
+
+  01 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +ipdb-0.6.1.ebuild:
+  Version bump to 0.6.1 for bug 402805 (thanks to Ian Delaney).
+
+*ipdb-0.6 (16 Sep 2011)
+
+  16 Sep 2011; Jesus Rivero <neurogeek@gentoo.org> -ipdb-0.3.ebuild,
+  +ipdb-0.6.ebuild:
+  Version bump. Removed older version.
+
+*ipdb-0.3 (17 Jan 2011)
+
+  17 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -ipdb-0.2.ebuild, +ipdb-0.3.ebuild:
+  Version bump.
+
+*ipdb-0.2 (08 Nov 2010)
+
+  08 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -ipdb-0.1_p1716.ebuild, +ipdb-0.2.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
+
+  07 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  ipdb-0.1_p1716.ebuild:
+  Fix DESCRIPTION and HOMEPAGE.
+
+  10 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  ipdb-0.1_p1716.ebuild:
+  Add dev-python/setuptools to DEPEND (bug #271577).
+
+*ipdb-0.1_p1716 (04 Apr 2009)
+
+  04 Apr 2009; Benedikt Böhm <hollow@gentoo.org> +metadata.xml,
+  +ipdb-0.1_p1716.ebuild:
+  initial version

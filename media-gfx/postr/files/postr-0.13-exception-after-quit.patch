@@ -1,0 +1,50 @@
+From 63b803acba957ea81946a86cd3f03dd34ed1779f Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Germ=C3=A1n=20Poo-Caama=C3=B1o?= <gpoo@gnome.org>
+Date: Thu, 4 Oct 2012 00:32:31 -0700
+Subject: [PATCH] Fixed exception after quit
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+This bug was silly.  It caused an exception when python was
+cleaning up twisted before closing.  It seems there was a callback
+in the stack that was trying to be applied to an object already
+released.  This happened only when there were callbacks on
+callbacks in twisted.
+
+It seems that modules imported insude functions or methods
+are cleaned up differently than when they are imported at the
+beginning of a module.  Or maybe is a bug in either twisted or
+bsddb3 that mess the garbage collector up.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=535572
+
+Signed-off-by: Germán Poo-Caamaño <gpoo@gnome.org>
+---
+ src/util.py | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/src/util.py b/src/util.py
+index 5ad3410..68ab8b8 100644
+--- a/src/util.py
++++ b/src/util.py
+@@ -16,7 +16,7 @@
+ # St, Fifth Floor, Boston, MA 02110-1301 USA
+ 
+ import gtk, os
+-
++import bsddb3
+ 
+ def greek(size):
+     """Take a quantity (like 1873627) and display it in a human-readable rounded
+@@ -71,7 +71,6 @@ def get_buddyicon(flickr, data, size=48):
+     """Lookup the buddyicon from the data in @data using @flickr and resize it
+     to @size pixels."""
+     from twisted.web.client import getPage
+-    import bsddb3
+ 
+     global __buddy_cache
+     if __buddy_cache is None:
+-- 
+1.7.12
+

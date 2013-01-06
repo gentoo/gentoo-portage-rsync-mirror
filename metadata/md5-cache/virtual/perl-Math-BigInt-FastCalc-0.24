@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Math::BigInt::Calc with some XS for more speed
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sh ~sparc ~x86
+RDEPEND=~perl-core/Math-BigInt-FastCalc-0.24
+SLOT=0
+_md5_=453b31bcbe3fbe2b45c88df6a9fa31f2

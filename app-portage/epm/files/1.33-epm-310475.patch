@@ -1,0 +1,32 @@
+Fix "Use of uninitialized value in printf" warning
+http://bugs.gentoo.org/310475
+Patch from Alexander Miller
+
+--- epm
++++ epm
+@@ -189,7 +189,7 @@
+     my ($p) = @_;
+     my ($group, $ename) = $p =~ /^(.+?)\/(.+)$/;
+     my ($key, $value);
+-    my %vals;
++    my %vals = map {$_, '(n/a)'} qw/CATEGORY HOSTNAME DESCRIPTION URL LICENSE NAME RELEASE VERSION SLOT PACKAGER/;
+     my $ldbpath = "$dbpath/$p";
+     my $fmt = <<EOT;
+ Name        : \%s
+@@ -206,7 +206,7 @@
+     open(F, "bzcat $ldbpath/environment.bz2|")
+ 	or die "epm: Can't open $ldbpath/environment.bz2: $!\n";
+     while (<F>) {
+-	next unless (/^(CATEGORY|HOSTNAME|DESCRIPTION|HOMEPAGE|LICENSE|PN|PR|PV|SLOT)=(.*)/);
++	next unless (/^(?:declare\s+(?:-[x-]\s+)*)?(CATEGORY|HOSTNAME|DESCRIPTION|HOMEPAGE|LICENSE|PN|PR|PV|SLOT)=(.*)/);
+ 	($key, $value) = ($1, $2);
+ 	if ($key eq 'PN') {
+ 	    $key = 'NAME';
+@@ -221,6 +221,7 @@
+ 	}
+ 	# Clean up the double and single quotes
+ 	$value =~ s/^'(.*)'$/$1/o;
++	$value =~ s/^"(.*)"$/$1/o;
+ 	$value =~ s/'\\''/'/go;
+ 	$value =~ s/\\"/"/go;
+ 

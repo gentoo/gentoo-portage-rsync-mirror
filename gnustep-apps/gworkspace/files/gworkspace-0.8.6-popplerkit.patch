@@ -1,0 +1,372 @@
+diff -Naur GWorkspace-0.8.5.orig/Inspector/aclocal.m4 GWorkspace-0.8.5/Inspector/aclocal.m4
+--- GWorkspace-0.8.5.orig/Inspector/aclocal.m4	2007-06-05 22:13:59.000000000 +0200
++++ GWorkspace-0.8.5/Inspector/aclocal.m4	2007-06-05 22:21:16.000000000 +0200
+@@ -1,4 +1,4 @@
+-AC_DEFUN(AC_CHECK_PDFKIT,[
++AC_DEFUN(AC_CHECK_POPPLERKIT,[
+   
+   GNUSTEP_SH_EXPORT_ALL_VARIABLES=yes
+   . "$GNUSTEP_MAKEFILES/GNUstep.sh"
+@@ -31,47 +31,47 @@
+   LDFLAGS="$LDFLAGS $PREFIX$GNUSTEP_SYSTEM_LIBRARIES $PREFIX$GNUSTEP_LOCAL_LIBRARIES"
+   OLD_LIBS="$LIBS"
+   LIBS="-lgnustep-gui"
+-  AC_MSG_CHECKING([for PDFKit])
++  AC_MSG_CHECKING([for PopplerKit])
+ 
+-  LIBS="$LIBS -lPDFKit"
++  LIBS="$LIBS -lPopplerKit"
+ 
+   AC_LINK_IFELSE(
+           AC_LANG_PROGRAM(
+                   [[#include <Foundation/Foundation.h>
+                     #include <AppKit/AppKit.h>
+-                    #include <PDFKit/PDFDocument.h>]],
+-                  [[[[PDFDocument class]];]]),
++                    #include <PopplerKit/PopplerDocument.h>]],
++                  [[[[PopplerDocument class]];]]),
+ 	  $1;
+-	  have_pdfkit=yes,
++	  have_popplerkit=yes,
+ 	  $2;
+-	  have_pdfkit=no)
++	  have_popplerkit=no)
+ 
+   LIBS="$OLD_LIBS"
+   CPPFLAGS="$OLD_CPPFLAGS"
+   LDFLAGS="$OLD_LDFLAGS"
+   CFLAGS="$OLD_CFLAGS"
+ 
+-  AC_MSG_RESULT($have_pdfkit)
++  AC_MSG_RESULT($have_popplerkit)
+ ])
+ 
+ 
+-AC_DEFUN(AC_CHECK_PDFKIT_DARWIN,[
+-  AC_MSG_CHECKING([for PDFKit])
+-  PDF_H="PDFKit/PDFDocument.h"
++AC_DEFUN(AC_CHECK_POPPLERKIT_DARWIN,[
++  AC_MSG_CHECKING([for PopplerKit])
++  PDF_H="PopplerKit/PopplerDocument.h"
+   PDF_H_PATH="$GNUSTEP_SYSTEM_HEADERS/$PDF_H"
+ 
+   if test -e $PDF_H_PATH; then
+-    have_pdfkit=yes
++    have_popplerkit=yes
+   else 
+     PDF_H_PATH="$GNUSTEP_LOCAL_HEADERS/$PDF_H"
+     if test -e $PDF_H_PATH; then
+-      have_pdfkit=yes
++      have_popplerkit=yes
+     else 
+-      have_pdfkit=no
++      have_popplerkit=no
+     fi
+   fi
+   
+-  AC_MSG_RESULT($have_pdfkit)
++  AC_MSG_RESULT($have_popplerkit)
+ ])
+ 
+ 
+diff -Naur GWorkspace-0.8.5.orig/Inspector/configure.ac GWorkspace-0.8.5/Inspector/configure.ac
+--- GWorkspace-0.8.5.orig/Inspector/configure.ac	2007-06-05 22:13:59.000000000 +0200
++++ GWorkspace-0.8.5/Inspector/configure.ac	2007-06-05 22:15:43.000000000 +0200
+@@ -55,23 +55,23 @@
+ AC_DEFINE_UNQUOTED([FILEPATH], ["$FILE_PATH"], [Path to file])
+ 
+ #--------------------------------------------------------------------
+-# We need PDFKit
++# We need PopplerKit
+ #--------------------------------------------------------------------
+ case "$target_os" in
+   darwin*)
+-    AC_CHECK_PDFKIT_DARWIN(have_pdfkit=yes, have_pdfkit=no)
++    AC_CHECK_POPPLERKIT_DARWIN(have_popplerkit=yes, have_popplerkit=no)
+     ;;
+   *)	
+-    AC_CHECK_PDFKIT(have_pdfkit=yes, have_pdfkit=no)
++    AC_CHECK_POPPLERKIT(have_popplerkit=yes, have_popplerkit=no)
+     ;;
+ esac
+ 
+-if test "$have_pdfkit" = "no"; then
+-  AC_MSG_NOTICE([The PDFKit framework can't be found.])
++if test "$have_popplerkit" = "no"; then
++  AC_MSG_NOTICE([The PopplerKit framework can't be found.])
+   AC_MSG_NOTICE([The pdf viewer will not be built.])  
+ fi
+ 
+-AC_SUBST(have_pdfkit)
++AC_SUBST(have_popplerkit)
+ 
+ AC_CONFIG_FILES([GNUmakefile inspector.make])
+ AC_OUTPUT
+diff -Naur GWorkspace-0.8.5.orig/Inspector/ContentViewers/GNUmakefile GWorkspace-0.8.5/Inspector/ContentViewers/GNUmakefile
+--- GWorkspace-0.8.5.orig/Inspector/ContentViewers/GNUmakefile	2007-06-05 22:13:59.000000000 +0200
++++ GWorkspace-0.8.5/Inspector/ContentViewers/GNUmakefile	2007-06-05 22:15:43.000000000 +0200
+@@ -6,7 +6,7 @@
+ 
+ include ../inspector.make
+ 
+-ifneq ($(PDFKIT),no)
++ifneq ($(POPPLERKIT),no)
+ SUBPROJECTS = \
+   FolderViewer \
+   ImageViewer \
+diff -Naur GWorkspace-0.8.5.orig/Inspector/ContentViewers/GNUmakefile.orig GWorkspace-0.8.5/Inspector/ContentViewers/GNUmakefile.orig
+--- GWorkspace-0.8.5.orig/Inspector/ContentViewers/GNUmakefile.orig	1970-01-01 01:00:00.000000000 +0100
++++ GWorkspace-0.8.5/Inspector/ContentViewers/GNUmakefile.orig	2007-02-23 14:14:24.000000000 +0100
+@@ -0,0 +1,41 @@
++# Install into the system root by default
++GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
++RPM_DISABLE_RELOCATABLE=YES
++
++include $(GNUSTEP_MAKEFILES)/common.make
++
++include ../inspector.make
++
++ifneq ($(PDFKIT),no)
++SUBPROJECTS = \
++  FolderViewer \
++  ImageViewer \
++  SoundViewer \
++  AppViewer \
++  RtfViewer \
++  PdfViewer \
++  NSTIFFViewer \
++  NSRTFViewer \
++  NSColorViewer \
++  IBViewViewer
++else
++SUBPROJECTS = \
++  FolderViewer \
++  ImageViewer \
++  SoundViewer \
++  AppViewer \
++  RtfViewer \
++  NSTIFFViewer \
++  NSRTFViewer \
++  NSColorViewer \
++  IBViewViewer
++endif
++
++-include GNUmakefile.preamble
++
++-include GNUmakefile.local
++
++include $(GNUSTEP_MAKEFILES)/aggregate.make
++
++-include GNUmakefile.postamble
++
+diff -Naur GWorkspace-0.8.5.orig/Inspector/ContentViewers/PdfViewer/GNUmakefile GWorkspace-0.8.5/Inspector/ContentViewers/PdfViewer/GNUmakefile
+--- GWorkspace-0.8.5.orig/Inspector/ContentViewers/PdfViewer/GNUmakefile	2007-06-05 22:13:59.000000000 +0200
++++ GWorkspace-0.8.5/Inspector/ContentViewers/PdfViewer/GNUmakefile	2007-06-05 22:15:43.000000000 +0200
+@@ -11,7 +11,7 @@
+ 
+ OBJCFLAGS += -Wall
+ 
+-PdfViewer_GUI_LIBS += -lPDFKit
++PdfViewer_GUI_LIBS += -lPopplerKit
+ 
+ PdfViewer_OBJC_FILES = PdfViewer.m 
+ 
+diff -Naur GWorkspace-0.8.5.orig/Inspector/ContentViewers/PdfViewer/GNUmakefile.orig GWorkspace-0.8.5/Inspector/ContentViewers/PdfViewer/GNUmakefile.orig
+--- GWorkspace-0.8.5.orig/Inspector/ContentViewers/PdfViewer/GNUmakefile.orig	1970-01-01 01:00:00.000000000 +0100
++++ GWorkspace-0.8.5/Inspector/ContentViewers/PdfViewer/GNUmakefile.orig	2007-02-23 14:14:24.000000000 +0100
+@@ -0,0 +1,32 @@
++# Install into the system root by default
++GNUSTEP_INSTALLATION_DOMAIN=SYSTEM
++RPM_DISABLE_RELOCATABLE=YES
++
++include $(GNUSTEP_MAKEFILES)/common.make
++
++BUNDLE_NAME = PdfViewer
++BUNDLE_EXTENSION = .inspector
++
++PdfViewer_HAS_RESOURCE_BUNDLE = yes
++
++OBJCFLAGS += -Wall
++
++PdfViewer_GUI_LIBS += -lPDFKit
++
++PdfViewer_OBJC_FILES = PdfViewer.m 
++
++PdfViewer_PRINCIPAL_CLASS = PdfViewer
++
++#PdfViewer_LANGUAGES = English 
++PdfViewer_RESOURCE_FILES = Images/* \
++                           InspectorInfo.plist \
++                           Resources/English.lproj 
++
++#PdfViewer_LOCALIZED_RESOURCE_FILES = Localizable.strings
++
++-include GNUmakefile.preamble
++
++include $(GNUSTEP_MAKEFILES)/bundle.make
++
++-include GNUmakefile.postamble
++
+diff -Naur GWorkspace-0.8.5.orig/Inspector/ContentViewers/PdfViewer/PdfViewer.h GWorkspace-0.8.5/Inspector/ContentViewers/PdfViewer/PdfViewer.h
+--- GWorkspace-0.8.5.orig/Inspector/ContentViewers/PdfViewer/PdfViewer.h	2007-06-05 22:13:59.000000000 +0200
++++ GWorkspace-0.8.5/Inspector/ContentViewers/PdfViewer/PdfViewer.h	2007-06-05 22:15:43.000000000 +0200
+@@ -46,8 +46,7 @@
+ @class NSTextField;
+ @class NSWorkspace;
+ @class NSButton;
+-@class PDFDocument;
+-@class PDFImageRep;
++@class PopplerDocument;
+ @class NSImage;
+ 
+ @interface PdfViewer : NSView <ContentViewersProtocol>
+@@ -62,8 +61,8 @@
+   NSButton *editButt;
+ 
+   NSString *pdfPath;
+-  PDFDocument *pdfDoc;
+-  PDFImageRep *imageRep;
++  PopplerDocument *pdfDoc;
++  id <PopplerBufferedRenderer> pdfRenderer;
+   
+   id <ContentInspectorProtocol>inspector;
+   NSFileManager *fm;
+diff -Naur GWorkspace-0.8.5.orig/Inspector/ContentViewers/PdfViewer/PdfViewer.m GWorkspace-0.8.5/Inspector/ContentViewers/PdfViewer/PdfViewer.m
+--- GWorkspace-0.8.5.orig/Inspector/ContentViewers/PdfViewer/PdfViewer.m	2007-06-05 22:13:59.000000000 +0200
++++ GWorkspace-0.8.5/Inspector/ContentViewers/PdfViewer/PdfViewer.m	2007-06-05 22:27:13.000000000 +0200
+@@ -23,8 +23,9 @@
+  */
+ 
+ #include <AppKit/AppKit.h>
+-#include <PDFKit/PDFDocument.h>
+-#include <PDFKit/PDFImageRep.h>
++#include <PopplerKit/PopplerDocument.h>
++#include <PopplerKit/PopplerSplashRenderer.h>
++#include <PopplerKit/PopplerCairoImageRenderer.h>
+ #include <math.h>
+ #include "PdfViewer.h"
+ 
+@@ -38,7 +39,7 @@
+ {
+   TEST_RELEASE (pdfPath);	
+   TEST_RELEASE (pdfDoc);
+-  TEST_RELEASE (imageRep);
++  TEST_RELEASE (pdfRenderer);
+ 	RELEASE (backButt);
+ 	RELEASE (nextButt);
+ 	RELEASE (scroll);
+@@ -158,7 +159,7 @@
+ 
+ - (void)displayPath:(NSString *)path
+ {
+-  PDFDocument *doc;
++  PopplerDocument *doc;
+   
+   ASSIGN (pdfPath, path);
+ 
+@@ -168,11 +169,14 @@
+   
+   [editButt setEnabled: NO];	
+   
+-  doc = [PDFDocument documentFromFile: pdfPath];
++  NS_DURING
++    doc = [PopplerDocument documentWithPath: pdfPath];
++  NS_HANDLER
++    doc = nil;
++  NS_ENDHANDLER
+ 
+-  if ([doc isOk] && ([doc errorCode] == 0)) {
++  if (doc) {
+     int npages;
+-    NSSize imageSize;
+ 	  NSBundle *bundle;
+ 	  NSString *imagePath;
+ 	  NSImage *miniPage;
+@@ -234,13 +238,13 @@
+ 		[matrix sizeToCells];
+ 		RELEASE (miniPage);	    
+ 
+-    DESTROY (imageRep);
++    DESTROY (pdfRenderer);
+     ASSIGN (pdfDoc, doc);
+ 
+-    imageSize = NSMakeSize([pdfDoc pageWidth: 1],
+-                                    [pdfDoc pageHeight: 1]);
+-    imageRep = [[PDFImageRep alloc] initWithDocument: pdfDoc];
+-    [imageRep setSize: imageSize];
++    if ([PopplerCairoImageRenderer isSupported])
++      pdfRenderer = [[PopplerCairoImageRenderer alloc] initWithDocument: pdfDoc];
++    else
++      pdfRenderer = [[PopplerSplashRenderer alloc] initWithDocument: pdfDoc];
+ 
+   } else {
+     if (valid) {
+@@ -276,18 +280,21 @@
+   NSImage *image = nil;
+   int index = [matrix selectedColumn] + 1;
+   NSSize imsize = [imageView bounds].size;
+-  NSSize unscaledSize = NSMakeSize([pdfDoc pageWidth: index], 
+-                                              [pdfDoc pageHeight: index]);  
++  NSSize unscaledSize = [[pdfDoc page: index] size];
++  NSSize scaledSize = unscaledSize;
++  float scaleFactor = 1.0;
++  NSImageRep *imageRep;
+ 
+   if ((imsize.width < unscaledSize.width) 
+                         || (imsize.height < unscaledSize.height)) {
+     float rw, rh;
+-	  NSSize scaledSize;
+     float xfactor, yfactor;  
+ 
+     rw = imsize.width / unscaledSize.width;
+     rh = imsize.height / unscaledSize.height;
+ 
++	scaleFactor = rw <= rh ? rw : rh;
++
+     if (rw <= rh) {
+       scaledSize.width = unscaledSize.width * rw;
+       scaledSize.height = floor(imsize.width * unscaledSize.height / unscaledSize.width + 0.5);
+@@ -295,15 +302,9 @@
+       scaledSize.height = unscaledSize.height * rh;
+       scaledSize.width  = floor(imsize.height * unscaledSize.width / unscaledSize.height + 0.5);    
+     }
+-
+-    xfactor = scaledSize.width / unscaledSize.width * PDFResolution;
+-    yfactor = scaledSize.height / unscaledSize.height * PDFResolution;
+-
+-    [imageRep setResolution: (xfactor < yfactor ? xfactor : yfactor)];
+   }
+ 
+-  [imageRep setPageNum: index];
+-  
++  imageRep = [pdfRenderer renderPage: [pdfDoc page: index] scale: scaleFactor];
+   image = [[NSImage alloc] initWithSize: [imageRep size]];
+   [image setBackgroundColor: [NSColor whiteColor]];
+   [image setScalesWhenResized: YES];
+diff -Naur GWorkspace-0.8.5.orig/Inspector/GNUmakefile.in GWorkspace-0.8.5/Inspector/GNUmakefile.in
+--- GWorkspace-0.8.5.orig/Inspector/GNUmakefile.in	2007-06-05 22:13:59.000000000 +0200
++++ GWorkspace-0.8.5/Inspector/GNUmakefile.in	2007-06-05 22:15:43.000000000 +0200
+@@ -15,9 +15,9 @@
+ Inspector_PRINCIPAL_CLASS = Inspector
+ Inspector_HAS_RESOURCE_BUNDLE = yes
+ 
+-ifneq ($(PDFKIT),no)
+-  Inspector_GUI_LIBS += -lPDFKit
+-  ADDITIONAL_LDFLAGS = -lPDFKit
++ifneq ($(POPPLERKIT),no)
++  Inspector_GUI_LIBS += -lPopplerKit
++  ADDITIONAL_LDFLAGS = -lPopplerKit
+ endif
+ 
+ Inspector_RESOURCE_FILES = \
+diff -Naur GWorkspace-0.8.5.orig/Inspector/inspector.make.in GWorkspace-0.8.5/Inspector/inspector.make.in
+--- GWorkspace-0.8.5.orig/Inspector/inspector.make.in	2007-06-05 22:13:59.000000000 +0200
++++ GWorkspace-0.8.5/Inspector/inspector.make.in	2007-06-05 22:15:43.000000000 +0200
+@@ -2,6 +2,6 @@
+ #   Makefile flags and configs to build with the bundle
+ #
+ 
+-PDFKIT=@have_pdfkit@
++POPPLERKIT=@have_popplerkit@
+ SH_PATH=@SH_PATH@
+ FILE_PATH=@FILE_PATH@

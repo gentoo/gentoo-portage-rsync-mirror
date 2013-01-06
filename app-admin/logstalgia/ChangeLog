@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/logstalgia
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logstalgia/ChangeLog,v 1.1 2012/12/07 09:08:26 pinkbyte Exp $
+
+*logstalgia-1.0.3 (07 Dec 2012)
+
+  07 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> +logstalgia-1.0.3.ebuild,
+  +metadata.xml:
+  Initial import from sunrise with my fixes, wrt bug #242414. Thanks to
+  everyone, who worked on this ebuild
+

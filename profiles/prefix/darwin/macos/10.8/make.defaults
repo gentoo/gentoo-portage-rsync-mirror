@@ -1,0 +1,8 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.8/make.defaults,v 1.3 2012/10/30 17:50:49 grobian Exp $
+
+MACOSX_DEPLOYMENT_TARGET="10.8"
+
+# sandbox is working with use of Mac OS X's seatbelt (since 10.5)
+FEATURES="sandbox"

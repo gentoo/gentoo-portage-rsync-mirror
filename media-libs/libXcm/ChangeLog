@@ -1,0 +1,39 @@
+# ChangeLog for media-libs/libXcm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/ChangeLog,v 1.8 2012/07/05 06:29:04 xmw Exp $
+
+  05 Jul 2012; Michael Weber <xmw@gentoo.org> -libXcm-0.5.0.ebuild:
+  Drop old
+
+*libXcm-0.5.1 (30 Jun 2012)
+
+  30 Jun 2012; Michael Weber <xmw@gentoo.org> +libXcm-0.5.1.ebuild,
+  -files/libXcm-0.4.2-buildsystem.patch, -libXcm-0.4.2.ebuild,
+  -libXcm-0.5.0-r1.ebuild:
+  Version bump (thanks euscan), upstream accepted buildsystem patch, drop old
+
+  19 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> libXcm-0.5.0-r1.ebuild:
+  Fix typo.
+
+*libXcm-0.5.0-r1 (10 Mar 2012)
+
+  10 Mar 2012; Michael Weber <xmw@gentoo.org> +libXcm-0.5.0-r1.ebuild,
+  +files/libXcm-0.5.0-buildsystem.patch:
+  Revbump to restore X use flag.
+
+  09 Mar 2012; Michael Weber <xmw@gentoo.org> libXcm-0.5.0.ebuild:
+  Work around upstream bug, [-X] does not work.
+
+*libXcm-0.5.0 (09 Mar 2012)
+
+  09 Mar 2012; Michael Weber <xmw@gentoo.org> +libXcm-0.5.0.ebuild:
+  Version bump (thanks Andreas Sturmlechner, bug 407485)
+
+  06 Feb 2012; Michael Weber <xmw@gentoo.org> libXcm-0.4.2.ebuild:
+  Adding ~x86
+
+*libXcm-0.4.2 (05 Feb 2012)
+
+  05 Feb 2012; Michael Weber <xmw@gentoo.org> +libXcm-0.4.2.ebuild,
+  +files/libXcm-0.4.2-buildsystem.patch, +metadata.xml:
+  Initial import

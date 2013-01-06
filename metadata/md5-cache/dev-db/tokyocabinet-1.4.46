@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare test
+DEPEND=sys-libs/zlib app-arch/bzip2
+DESCRIPTION=A library of routines for managing a database
+EAPI=2
+HOMEPAGE=http://fallabs.com/tokyocabinet/
+IUSE=debug doc examples
+KEYWORDS=alpha amd64 hppa ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris
+LICENSE=LGPL-2.1
+RDEPEND=sys-libs/zlib app-arch/bzip2
+SLOT=0
+SRC_URI=http://fallabs.com/tokyocabinet/tokyocabinet-1.4.46.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=c708a09467b7eaf6091440390b7cb2a7

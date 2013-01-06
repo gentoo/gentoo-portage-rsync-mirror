@@ -1,0 +1,7 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/use.mask,v 1.1 2012/02/10 21:52:56 mattst88 Exp $
+
+# Matt Turner <mattst88@gentoo.org) (10 Feb 2012)
+# mask d3d since wine is 32-bit
+d3d

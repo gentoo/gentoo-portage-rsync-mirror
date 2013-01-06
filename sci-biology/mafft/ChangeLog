@@ -1,0 +1,53 @@
+# ChangeLog for sci-biology/mafft
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.9 2011/11/21 15:30:19 jlec Exp $
+
+  21 Nov 2011; Justin Lecher <jlec@gentoo.org> mafft-6.811.ebuild:
+  keyworded for ~x86-macos ~x64-macos, tested by Johan Hattne #390123
+
+  24 Jun 2010; Justin Lecher <jlec@gentoo.org> mafft-6.240-r1.ebuild,
+  mafft-6.707.ebuild, mafft-6.811.ebuild:
+  Fix installpath for manpages, #278571
+
+*mafft-6.811 (15 Jun 2010)
+
+  15 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/6.811-respect.patch,
+  +mafft-6.811.ebuild:
+  Version BUmp, keyworded for prefix, repecting multilib and LDFLAGS
+
+*mafft-6.707 (27 Jul 2009)
+
+  27 Jul 2009; Donnie Berkholz <dberkholz@gentoo.org>; +mafft-6.707.ebuild:
+  Bump to latest. Use no-extensions version because the extensions rely on a
+  bunch of bundled packages. That means you don't get RNA structural
+  alignment, sorry.
+
+  27 Jul 2009; Donnie Berkholz <dberkholz@gentoo.org>;
+  mafft-6.240-r1.ebuild:
+  Keyword ~amd64.
+
+*mafft-6.240-r1 (23 Sep 2008)
+
+  23 Sep 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/mafft-6.240-mktemp.patch, -mafft-5.861-r1.ebuild,
+  -mafft-6.240.ebuild, +mafft-6.240-r1.ebuild:
+  Added patch to fix insecure tempfile handling (see bug #235804). 
+  Removed ebuilds for vulnerable versions.
+
+  08 Oct 2007; Markus Dittrich <markusle@gentoo.org> mafft-5.861-r1.ebuild, +mafft-6.240.ebuild:
+  Fixed wrongs SRC_URI and HOMEPAGE (see bug #195080). Also bumped
+  package to the most recent version.
+
+*mafft-5.861-r1 (09 Nov 2006)
+
+  09 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; -mafft-5.861.ebuild,
+  +mafft-5.861-r1.ebuild:
+  (#154545) Install to correct locations and set PREFIX so it finds the
+  binaries automatically.
+
+*mafft-5.861 (21 Oct 2006)
+
+  21 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +mafft-5.861.ebuild:
+  New package: Multiple sequence alignments using a variety of algorithms.
+

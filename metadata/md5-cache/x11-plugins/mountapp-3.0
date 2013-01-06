@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DEPEND==x11-libs/gtk+-1.2* x11-libs/libX11 >=x11-libs/libXpm-3.5.7 <x11-wm/windowmaker-0.95 x11-proto/xextproto x11-proto/xproto
+DESCRIPTION=mount filesystems via an easy-to-use windowmaker applet
+HOMEPAGE=http://mountapp.sourceforge.net
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+RDEPEND==x11-libs/gtk+-1.2* x11-libs/libX11 >=x11-libs/libXpm-3.5.7 <x11-wm/windowmaker-0.95
+SLOT=0
+SRC_URI=http://mountapp.sourceforge.net/mountapp-3.0.tar.gz
+_md5_=9568410e2bdf6ace39b34e738eb449ff

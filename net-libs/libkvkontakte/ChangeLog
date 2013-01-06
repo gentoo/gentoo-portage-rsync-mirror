@@ -1,0 +1,107 @@
+# ChangeLog for net-libs/libkvkontakte
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/ChangeLog,v 1.22 2012/10/27 04:23:26 phajdan.jr Exp $
+
+  27 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libkvkontakte-2.9.0.ebuild:
+  x86 stable wrt bug #438352
+
+  16 Oct 2012; Agostino Sarubbo <ago@gentoo.org> libkvkontakte-2.9.0.ebuild:
+  Stable for amd64, wrt bug #438352
+
+*libkvkontakte-2.9.0 (03 Sep 2012)
+
+  03 Sep 2012; Chris Reffett <creffett@gentoo.org> +libkvkontakte-2.9.0.ebuild:
+  Version bump to 2.9.0
+
+  25 Aug 2012; Johannes Huber <johu@gentoo.org> -libkvkontakte-2.5.0.ebuild:
+  Remove old.
+
+  25 Aug 2012; Johannes Huber <johu@gentoo.org> libkvkontakte-2.6.0.ebuild:
+  Stable for x86, wrt bug #429842
+
+*libkvkontakte-2.8.0 (11 Aug 2012)
+
+  11 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libkvkontakte-2.8.0.ebuild:
+  Version bump, bug 430802, thanks creffett
+
+  06 Aug 2012; Agostino Sarubbo <ago@gentoo.org> libkvkontakte-2.6.0.ebuild:
+  Stable for amd64, wrt bug #429842
+
+*libkvkontakte-2.7.0 (09 Jul 2012)
+
+  09 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libkvkontakte-2.7.0.ebuild:
+  Version bump
+
+*libkvkontakte-2.6.0 (07 Jun 2012)
+
+  07 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkvkontakte-2.4.1.ebuild, -libkvkontakte-2.6.0_beta3.ebuild,
+  -libkvkontakte-2.6.0_rc.ebuild, +libkvkontakte-2.6.0.ebuild:
+  Version bump; remove old, beta, and rc
+
+*libkvkontakte-2.6.0_rc (13 May 2012)
+
+  13 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libkvkontakte-2.6.0_rc.ebuild:
+  Version bump
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> libkvkontakte-2.5.0.ebuild:
+  x86 stable, bug #409403
+
+*libkvkontakte-2.6.0_beta3 (08 Apr 2012)
+
+  08 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkvkontakte-2.3.0.ebuild, +libkvkontakte-2.6.0_beta3.ebuild:
+  Version bump; remove old
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> libkvkontakte-2.5.0.ebuild:
+  Stable for amd64, wrt bug #409403
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> libkvkontakte-2.4.1.ebuild:
+  Stable for amd64, wrt bug #396359
+
+  09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libkvkontakte-2.4.1.ebuild:
+  x86 stable wrt bug #396359
+
+*libkvkontakte-2.5.0 (03 Jan 2012)
+
+  03 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libkvkontakte-2.5.0.ebuild:
+  Version bump
+
+  07 Dec 2011; Markos Chandras <hwoarang@gentoo.org> libkvkontakte-2.3.0.ebuild:
+  Stable on amd64 wrt bug #388279
+
+*libkvkontakte-2.4.1 (07 Dec 2011)
+
+  07 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkvkontakte-2.2.0.ebuild, +libkvkontakte-2.4.1.ebuild:
+  Version bump; remove old
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libkvkontakte-2.3.0.ebuild:
+  x86 stable wrt bug #388279
+
+*libkvkontakte-2.3.0 (09 Nov 2011)
+
+  09 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkvkontakte-2.1.0.ebuild, -files/libkvkontakte-2.1.0-definstall.patch,
+  -files/libkvkontakte-2.1.0-libsuffix.patch, +libkvkontakte-2.3.0.ebuild:
+  Version bump; remove old
+
+*libkvkontakte-2.2.0 (03 Oct 2011)
+
+  03 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libkvkontakte-2.2.0.ebuild, +files/libkvkontakte-2.2.0-libdir.patch:
+  Version bump
+
+*libkvkontakte-2.1.0 (09 Sep 2011)
+
+  09 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libkvkontakte-2.1.0.ebuild, +files/libkvkontakte-2.1.0-definstall.patch,
+  +files/libkvkontakte-2.1.0-libsuffix.patch, +metadata.xml:
+  New library, dependency of media-plugins/kipi-plugins

@@ -1,0 +1,33 @@
+# ChangeLog for dev-python/hachoir-regex
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-regex/ChangeLog,v 1.6 2010/03/26 20:03:01 arfrever Exp $
+
+*hachoir-regex-1.0.5 (26 Mar 2010)
+
+  26 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -hachoir-regex-1.0.2.ebuild, +hachoir-regex-1.0.5.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
+
+  12 Aug 2008; Cédric Krier <cedk@gentoo.org> hachoir-regex-1.0.2.ebuild,
+  hachoir-regex-1.0.3.ebuild:
+  Add amd64 keyword
+
+  04 Apr 2008; Cédric Krier <cedk@gentoo.org> hachoir-regex-1.0.2.ebuild,
+  hachoir-regex-1.0.3.ebuild:
+  Add ~ppc keyword for bug #216165
+
+*hachoir-regex-1.0.3 (03 Apr 2008)
+
+  03 Apr 2008; Cédric Krier <cedk@gentoo.org> +hachoir-regex-1.0.3.ebuild:
+  Version bump
+
+  31 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Correcting <herd> tag, it's either no <herd> tag at all, or just
+  <herd>no-herd/<herd>.
+
+*hachoir-regex-1.0.2 (14 Jul 2007)
+
+  14 Jul 2007; Cédric Krier <cedk@gentoo.org> +metadata.xml,
+  +hachoir-regex-1.0.2.ebuild:
+  New ebuild for bug #144532 thanks to TGL, Damien Thébault
+

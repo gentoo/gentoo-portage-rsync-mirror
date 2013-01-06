@@ -1,0 +1,66 @@
+# ChangeLog for virtual/ruby-ssl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.18 2012/11/06 16:49:25 jer Exp $
+
+  06 Nov 2012; Jeroen Roovers <jer@gentoo.org> ruby-ssl-1.ebuild:
+  Stable for HPPA (bug #411507).
+
+  21 Oct 2012; Raúl Porcel <armin76@gentoo.org> ruby-ssl-1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #411507
+
+  25 Jul 2012; Anthony G. Basile <blueness@gentoo.org> ruby-ssl-1.ebuild:
+  Stable ppc64, bug #411507
+
+  22 Jul 2012; <nixnut@gentoo.org> ruby-ssl-1.ebuild:
+  ppc stable #411507
+
+  25 Jun 2012; Andreas Schuerch <nativemad@gentoo.org> ruby-ssl-1.ebuild:
+  x86 stable, see bug 411507
+
+  27 May 2012; Markus Meier <maekke@gentoo.org> ruby-ssl-1.ebuild:
+  arm stable, bug #411507
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> ruby-ssl-1.ebuild:
+  Stable for amd64, wrt bug #411507
+
+  20 May 2012; Hans de Graaff <graaff@gentoo.org> ruby-ssl-1.ebuild:
+  Keyword for arm since the underlying implementation is keyworded already.
+
+  01 Jan 2012; Fabian Groffen <grobian@gentoo.org> ruby-ssl-1.ebuild:
+  Marked ~x64-macos, ~sparc64-solaris
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> ruby-ssl-1.ebuild:
+  Add Prefix keywords, bug #396547
+
+  31 Dec 2011; Hans de Graaff <graaff@gentoo.org> ruby-ssl-1.ebuild:
+  Add hppa keyword since underlying implementation is now also keyworded.
+
+  31 Dec 2011; Hans de Graaff <graaff@gentoo.org> ruby-ssl-1.ebuild:
+  Add alpha keyword since underlying implementation is now also keyworded.
+
+  28 Dec 2011; Hans de Graaff <graaff@gentoo.org> ruby-ssl-1.ebuild:
+  Add keywords similar to the underlying implementation, most notable ruby 1.9.
+
+  15 Dec 2011; Hans de Graaff <graaff@gentoo.org> ruby-ssl-2.ebuild:
+  Mark stable for amd64 and x86 since the underlying provider is already
+  stable.
+
+  23 Nov 2011; Hans de Graaff <graaff@gentoo.org> ruby-ssl-3.ebuild:
+  Mark ruby-ssl-3 stable since the underlying implementation is marked stable.
+
+  15 Jul 2011; Matt Turner <mattst88@gentoo.org> ruby-ssl-1.ebuild:
+  Added ~mips, bug 332593
+
+  11 Jul 2011; Fabian Groffen <grobian@gentoo.org> ruby-ssl-0.ebuild:
+  Add Prefix keywords, bug #374763
+
+*ruby-ssl-3 (13 Aug 2010)
+*ruby-ssl-2 (13 Aug 2010)
+*ruby-ssl-1 (13 Aug 2010)
+*ruby-ssl-0 (13 Aug 2010)
+
+  13 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org> +ruby-ssl-0.ebuild,
+  +ruby-ssl-1.ebuild, +ruby-ssl-2.ebuild, +ruby-ssl-3.ebuild, +metadata.xml:
+  Add virtual ebuild for the OpenSSL binding for all the Ruby
+  implementations.
+

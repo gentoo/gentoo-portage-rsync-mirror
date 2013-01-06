@@ -1,0 +1,245 @@
+# ChangeLog for x11-themes/oxygen-gtk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/oxygen-gtk/ChangeLog,v 1.48 2012/12/10 16:13:41 ago Exp $
+
+  10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> oxygen-gtk-1.1.1.ebuild,
+  oxygen-gtk-1.3.1.ebuild:
+  Add ~ppc, wrt bug #445466
+
+  24 Nov 2012; Johannes Huber <johu@gentoo.org> -oxygen-gtk-1.1.0.ebuild,
+  -oxygen-gtk-1.3.0.ebuild:
+  Remove old.
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> oxygen-gtk-1.1.1.ebuild:
+  Stable for amd64, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> oxygen-gtk-1.3.1.ebuild:
+  Stable for x86, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> oxygen-gtk-1.1.1.ebuild:
+  Stable for amd64, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> oxygen-gtk-1.3.1.ebuild:
+  Stable for amd64, wrt bug #442394
+
+*oxygen-gtk-1.1.1 (08 Oct 2012)
+*oxygen-gtk-1.3.1 (08 Oct 2012)
+
+  08 Oct 2012; Michael Palimaka <kensington@gentoo.org>
+  +oxygen-gtk-1.1.1.ebuild, +oxygen-gtk-1.3.1.ebuild:
+  Version bump for slots 2 and 3.
+
+  01 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> -oxygen-gtk-1.0.5.ebuild,
+  -oxygen-gtk-1.2.5.ebuild, oxygen-gtk-1.1.0.ebuild, oxygen-gtk-1.3.0.ebuild:
+  Stabilise amd64 and x86 both slot latest versions. Remove older.
+
+*oxygen-gtk-1.1.0 (18 Jul 2012)
+
+  18 Jul 2012; Johannes Huber <johu@gentoo.org> +oxygen-gtk-1.1.0.ebuild:
+  Version bump in SLOT 3.
+
+*oxygen-gtk-1.3.0 (18 Jul 2012)
+
+  18 Jul 2012; Johannes Huber <johu@gentoo.org> +oxygen-gtk-1.3.0.ebuild:
+  Version bump in SLOT 2.
+
+  19 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -oxygen-gtk-1.0.3.ebuild,
+  -oxygen-gtk-1.2.3.ebuild, oxygen-gtk-1.0.5.ebuild, oxygen-gtk-1.2.5.ebuild:
+  Stabilise latest to be done with the lo issues for good.
+
+*oxygen-gtk-1.0.5 (19 Jun 2012)
+*oxygen-gtk-1.2.5 (19 Jun 2012)
+
+  19 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +oxygen-gtk-1.0.5.ebuild,
+  +oxygen-gtk-1.2.5.ebuild, -oxygen-gtk-1.0.4.ebuild, -oxygen-gtk-1.2.4.ebuild:
+  Bump to 1.0.5 and 1.2.5 respectively, finaly fixes lo issues.
+
+*oxygen-gtk-1.2.4 (15 May 2012)
+
+  15 May 2012; Johannes Huber <johu@gentoo.org> +oxygen-gtk-1.2.4.ebuild:
+  Version bump in slot 2.
+
+  04 May 2012; Johannes Huber <johu@gentoo.org> oxygen-gtk-1.0.3.ebuild,
+  oxygen-gtk-1.2.3.ebuild:
+  Migrate to virtual/pkgconfig.
+
+  22 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/oxygen-gtk-1.2.2-fix-filezilla-crash.patch, -oxygen-gtk-1.0.1.ebuild,
+  -oxygen-gtk-1.0.2.ebuild, -oxygen-gtk-1.2.1.ebuild,
+  -oxygen-gtk-1.2.2-r1.ebuild, oxygen-gtk-1.0.3.ebuild, oxygen-gtk-1.2.3.ebuild:
+  Stabilise latest on amd64 and x86. Remove older. Fix desc for gtk3 version.
+
+*oxygen-gtk-1.0.3 (14 Apr 2012)
+
+  14 Apr 2012; Johannes Huber <johu@gentoo.org> +oxygen-gtk-1.0.3.ebuild:
+  Version bump in slot 3.
+
+*oxygen-gtk-1.2.3 (14 Apr 2012)
+
+  14 Apr 2012; Johannes Huber <johu@gentoo.org> +oxygen-gtk-1.2.3.ebuild,
+  -oxygen-gtk-1.2.2.ebuild:
+  Version bump, remove old in slot 2.
+
+*oxygen-gtk-1.2.2-r1 (12 Apr 2012)
+
+  12 Apr 2012; Johannes Huber <johu@gentoo.org>
+  +files/oxygen-gtk-1.2.2-fix-filezilla-crash.patch,
+  +oxygen-gtk-1.2.2-r1.ebuild:
+  Revision bump in slot 2. Add upstream patch to fix crash with filezilla wrt
+  bug #410817.
+
+*oxygen-gtk-1.0.2 (12 Mar 2012)
+
+  12 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> +oxygen-gtk-1.0.2.ebuild,
+  -oxygen-gtk-1.0.0-r1.ebuild, -oxygen-gtk-1.2.0-r1.ebuild,
+  oxygen-gtk-1.0.1.ebuild, oxygen-gtk-1.2.1.ebuild:
+  Add 1.0.2 for gtk3. Stabilise 1.0.1 and 1.2.1 on amd64 and x86.
+
+*oxygen-gtk-1.2.2 (12 Mar 2012)
+
+  12 Mar 2012; Johannes Huber <johu@gentoo.org> +oxygen-gtk-1.2.2.ebuild:
+  Version bump, for slot 2.
+
+*oxygen-gtk-1.0.1 (17 Feb 2012)
+
+  17 Feb 2012; Johannes Huber <johu@gentoo.org> +oxygen-gtk-1.0.1.ebuild:
+  Version bump, for slot 3.
+
+*oxygen-gtk-1.2.1 (17 Feb 2012)
+
+  17 Feb 2012; Johannes Huber <johu@gentoo.org> +oxygen-gtk-1.2.1.ebuild:
+  Version bump, for slot 2.
+
+  16 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  oxygen-gtk-1.0.0-r1.ebuild, -oxygen-gtk-1.1.6.ebuild,
+  oxygen-gtk-1.2.0-r1.ebuild:
+  Stable 1.0.0-r1:3 and 1.2.0-r1:2 on amd64 and x86. Drop older
+
+  18 Jan 2012; Johannes Huber <johu@gentoo.org> oxygen-gtk-1.0.0-r1.ebuild:
+  Move blocker to RDEPEND, thx zmedico. Fixes bug #399285.
+
+  18 Jan 2012; Zac Medico <zmedico@gentoo.org> oxygen-gtk-1.2.0-r1.ebuild:
+  Move !x11-themes/oxygen-gtk:0 blocker to RDEPEND due to file collision.
+
+*oxygen-gtk-1.2.0-r1 (17 Jan 2012)
+*oxygen-gtk-1.0.0-r1 (17 Jan 2012)
+
+  17 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -oxygen-gtk-1.0.0.ebuild, +oxygen-gtk-1.0.0-r1.ebuild,
+  -oxygen-gtk-1.2.0.ebuild, +oxygen-gtk-1.2.0-r1.ebuild:
+  Revision bump to rename env files. Fixes bug #399171.
+
+*oxygen-gtk-1.2.0 (17 Jan 2012)
+
+  17 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +oxygen-gtk-1.0.0.ebuild, +oxygen-gtk-1.2.0.ebuild:
+  Version bump introduce slotted gtk3 and gtk2 versions in slot 2 and 3
+  respectively.
+
+  13 Jan 2012; Johannes Huber <johu@gentoo.org> -oxygen-gtk-1.0.5.ebuild,
+  -oxygen-gtk-1.1.5.ebuild:
+  Remove old.
+
+  13 Jan 2012; Agostino Sarubbo <ago@gentoo.org> oxygen-gtk-1.1.6.ebuild:
+  Stable for AMD64, wrt bug #398793
+
+  13 Jan 2012; Agostino Sarubbo <ago@gentoo.org> oxygen-gtk-1.1.6.ebuild:
+  Stable for X86, wrt bug #398793
+
+*oxygen-gtk-1.1.6 (15 Dec 2011)
+
+  15 Dec 2011; Johannes Huber <johu@gentoo.org> +oxygen-gtk-1.1.6.ebuild,
+  -oxygen-gtk-1.1.4.ebuild:
+  Version bump.
+
+*oxygen-gtk-1.1.5 (29 Nov 2011)
+
+  29 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +oxygen-gtk-1.1.5.ebuild:
+  Version bump. Wrt #392021.
+
+*oxygen-gtk-1.1.4 (18 Oct 2011)
+
+  18 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -oxygen-gtk-1.1.3.ebuild, +oxygen-gtk-1.1.4.ebuild:
+  Version bump.
+
+  24 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -oxygen-gtk-1.1.1.ebuild, -oxygen-gtk-1.1.2.ebuild:
+  Remove old
+
+*oxygen-gtk-1.1.3 (24 Sep 2011)
+
+  24 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +oxygen-gtk-1.1.3.ebuild:
+  Version bump
+
+*oxygen-gtk-1.1.2 (05 Sep 2011)
+
+  05 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +oxygen-gtk-1.1.2.ebuild:
+  Version bump to latest.
+
+*oxygen-gtk-1.1.1 (17 Jul 2011)
+
+  17 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -oxygen-gtk-1.1.0.ebuild, +oxygen-gtk-1.1.1.ebuild:
+  Version bump to latest. Drop older.
+
+*oxygen-gtk-1.1.0 (16 Jun 2011)
+
+  16 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -oxygen-gtk-1.0.4.ebuild, oxygen-gtk-1.0.5.ebuild, +oxygen-gtk-1.1.0.ebuild:
+  Stabilise last 1.0 series release on amd64 and x86. Remove older. Add first
+  1.1 release (more just intended for testing as it will fit into 4.7 and in
+  4.6 might have glitches).
+
+*oxygen-gtk-1.0.5 (20 May 2011)
+
+  20 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> oxygen-gtk-1.0.4.ebuild,
+  +oxygen-gtk-1.0.5.ebuild:
+  Version bump to latest. Stabilise 1.0.4 on amd64 and x86.
+
+*oxygen-gtk-1.0.4 (16 Apr 2011)
+
+  16 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -oxygen-gtk-1.0.1-r1.ebuild, -oxygen-gtk-1.0.2.ebuild,
+  -oxygen-gtk-1.0.3.ebuild, +oxygen-gtk-1.0.4.ebuild:
+  Version bump. Drop old.
+
+*oxygen-gtk-1.0.3 (14 Mar 2011)
+
+  14 Mar 2011; Maciej Mrozowski <reavertm@gentoo.org> +oxygen-gtk-1.0.3.ebuild:
+  Version bump, bug 358939
+
+  21 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  oxygen-gtk-1.0.1-r1.ebuild, oxygen-gtk-1.0.2.ebuild:
+  Depend on proper slot with gtk2.
+
+*oxygen-gtk-1.0.2 (12 Feb 2011)
+
+  12 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  +oxygen-gtk-1.0.2.ebuild:
+  Version bump
+
+*oxygen-gtk-1.0.1-r1 (20 Jan 2011)
+
+  20 Jan 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  -oxygen-gtk-1.0.0.ebuild, -oxygen-gtk-1.0.1.ebuild,
+  +oxygen-gtk-1.0.1-r1.ebuild:
+  Remove old, add CONFIG_PROTECT to fix bug 351614, install some misc files,
+  sort dependencies, add debug and doc USE flags.
+
+*oxygen-gtk-1.0.1 (13 Jan 2011)
+
+  13 Jan 2011; Dror Levin <spatz@gentoo.org> +oxygen-gtk-1.0.1.ebuild:
+  Version bump.
+
+  13 Dec 2010; Dror Levin <spatz@gentoo.org> oxygen-gtk-1.0.0.ebuild:
+  Add ~x86 keyword.
+
+*oxygen-gtk-1.0.0 (13 Dec 2010)
+
+  13 Dec 2010; Dror Levin <spatz@gentoo.org> +oxygen-gtk-1.0.0.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by Enrico Tagliavini from kde overlay.

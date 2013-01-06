@@ -1,0 +1,5 @@
+Please read http://tt-rss.org/trac/wiki/InstallationNotes
+
+Note on update from 1.5.6 or earlier: The directory containing the
+feed icons has been renamed from 'icons' to 'feed-icons'. Please
+move your *.ico files over, and then remove the old 'icons' dir.

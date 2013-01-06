@@ -1,0 +1,29 @@
+# ChangeLog for app-cdr/cue2toc
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cue2toc/ChangeLog,v 1.7 2009/12/31 17:45:03 ranger Exp $
+
+  31 Dec 2009; Brent Baude <ranger@gentoo.org> cue2toc-0.4.ebuild:
+  Marking cue2toc-0.4 ppc64 for bug 277813
+
+  07 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> cue2toc-0.4.ebuild:
+  Keywording for ppc, bug 277813
+
+  08 Aug 2009; Jeroen Roovers <jer@gentoo.org> cue2toc-0.4.ebuild:
+  Marked ~hppa (bug #277813).
+
+  22 Jul 2009; Raúl Porcel <armin76@gentoo.org> cue2toc-0.4.ebuild:
+  Add ~alpha/~arm/~ia64/~sh/~sparc wrt #277813
+
+  22 Jul 2009; Alexis Ballier <aballier@gentoo.org> cue2toc-0.4.ebuild:
+  keyword ~x86-fbsd, bug #277813
+
+  05 Dec 2008; <ssuominen@gentoo.org> cue2toc-0.4.ebuild:
+  Block cdrdao because they both install cue2toc application wrt #247387,
+  thanks to Diego E. Pettenò.
+
+*cue2toc-0.4 (24 Jun 2006)
+
+  24 Jun 2006; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
+  +cue2toc-0.4.ebuild:
+  initial commit.
+

@@ -1,0 +1,43 @@
+# ChangeLog for net-misc/asterisk
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.436 2013/01/04 14:34:49 chainsaw Exp $
+
+  04 Jan 2013; Tony Vroon <chainsaw@gentoo.org> asterisk-1.8.19.1.ebuild,
+  asterisk-11.1.1.ebuild:
+  Remove /var/run keepdir statements as per Diego Elio Pettenò in bug #450222.
+
+  04 Jan 2013; Tony Vroon <chainsaw@gentoo.org> -asterisk-10.11.1.ebuild:
+  As previously announced the 10 branch of Asterisk is now being removed. For
+  stable releases, you want the 1.8 branch. For an actively developed branch
+  with more features, you want the 11 branch.
+
+  03 Jan 2013; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.18.0-r2.ebuild:
+  Clear vulnerable ebuild in 1.8 branch now that stabling has completed.
+
+  03 Jan 2013; Agostino Sarubbo <ago@gentoo.org> asterisk-1.8.19.1.ebuild:
+  Stable for amd64, wrt bug #449828
+
+  03 Jan 2013; Andreas Schuerch <nativemad@gentoo.org>
+  asterisk-1.8.19.1.ebuild:
+  x86 stable, see bug 449828
+
+*asterisk-11.1.1 (02 Jan 2013)
+*asterisk-10.11.1 (02 Jan 2013)
+*asterisk-1.8.19.1 (02 Jan 2013)
+
+  02 Jan 2013; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.15.1.ebuild,
+  -asterisk-1.8.18.1.ebuild, -asterisk-1.8.19.0.ebuild,
+  +asterisk-1.8.19.1.ebuild, -asterisk-10.10.1.ebuild,
+  -asterisk-10.11.0.ebuild, +asterisk-10.11.1.ebuild, -asterisk-11.0.2.ebuild,
+  -asterisk-11.1.0.ebuild, +asterisk-11.1.1.ebuild:
+  Security releases on all three branches; stop using stack allocations in TCP
+  receive paths, as multiple packets may be concatenated together and overflow
+  the stack as a result (CVE-2012-5976 / AST-2012-015). Never cache devices
+  that are not associated with a physical entity, as to do so allows a denial
+  of service through cache exhaustion (CVE-2012-5977 / AST-2012-014). Remove
+  all non-stable vulnerable ebuilds. As requested by Sean Amoss in bug #449828.
+
+  01 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2012:
+  Split ChangeLog.
+
+  For previous entries, please see ChangeLog-2012.

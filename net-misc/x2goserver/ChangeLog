@@ -1,0 +1,95 @@
+# ChangeLog for net-misc/x2goserver
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.17 2012/12/16 16:29:21 ago Exp $
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> x2goserver-3.1.1.4-r1.ebuild:
+  Stable for x86, wrt bug #445766
+
+  03 Dec 2012; <ago@gentoo.org> x2goserver-3.1.1.4-r1.ebuild:
+  Stable for amd64, wrt bug #445766
+
+*x2goserver-3.1.1.9 (26 Nov 2012)
+
+  26 Nov 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  -x2goserver-3.1.1.3.ebuild, -x2goserver-3.1.1.4.ebuild,
+  -x2goserver-3.1.1.6.ebuild, +x2goserver-3.1.1.9.ebuild:
+  Version bump, bugfixes only. Remove some 3.1.1 versions
+
+*x2goserver-3.1.1.6 (15 Nov 2012)
+
+  15 Nov 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  +x2goserver-3.1.1.6.ebuild:
+  Version bump
+
+*x2goserver-3.1.1.4-r1 (31 Oct 2012)
+
+  31 Oct 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  +x2goserver-3.1.1.4-r1.ebuild, +files/x2goserver-3.1.1.4-cflags.patch:
+  Build requires man2html so depend on sys-apps/man, thanks Hans-Peter Deifel
+  <hpdeifel@gmx.de> in bug #435652. Server will not work at runtime without
+  font-misc-misc and font-cursor-misc, spotted by rich0 in bug #436156. Respect
+  CFLAGS in sqlitewrapper compilation, bug #426830
+
+*x2goserver-3.1.1.4 (28 Sep 2012)
+
+  28 Sep 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  +x2goserver-3.1.1.4.ebuild:
+  Version bump, mostly bugfixes
+
+  13 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org> files/x2goserver.init:
+  x2gocleansessions uses x2goserver.pid for PID file, update init script
+  accordingly. Reported by <xenon.kay@gmail.com> in bug #426258
+
+  11 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  x2goserver-3.1.1.3.ebuild:
+  Add symlink for published applications
+
+*x2goserver-3.1.1.3 (10 Jul 2012)
+
+  10 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  x2goserver-3.1.0.1.ebuild, +x2goserver-3.1.1.3.ebuild:
+  Version bump, add some details on database creation in postinst. Import user
+  eclass
+
+*x2goserver-3.1.0.1 (14 Mar 2012)
+
+  14 Mar 2012; Bernard Cafarelli <voyageur@gentoo.org> files/x2goserver.init,
+  -x2goserver-3.0.1.5.ebuild, -x2goserver-3.0.1.5-r1.ebuild,
+  +x2goserver-3.1.0.1.ebuild,
+  -files/x2goserver-mountdirs_no_desktop_icon.patch:
+  Version bump, cleaned ebuild and adapted to new server system. Fixes bug
+  #408105
+
+*x2goserver-3.0.1.5-r1 (01 Jul 2010)
+
+  01 Jul 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +x2goserver-3.0.1.5-r1.ebuild:
+  Handle both sqlite/postgres USE flags disabled/enabled
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> x2goserver-3.0.1.5.ebuild:
+  Migrating away from deprecated postgres virtuals
+
+  09 May 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  x2goserver-3.0.1.5.ebuild:
+  Add dev-perl/Config-Simple depend
+
+  29 Apr 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  -x2goserver-2.0.1.19.ebuild:
+  Repair ChangeLog, actually remove 2.x version
+
+*x2goserver-3.0.1.5 (29 Apr 2010)
+
+  29 Apr 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/x2goserver-mountdirs_no_desktop_icon.patch,
+  +x2goserver-3.0.1.5.ebuild:
+  Version bump from NX overlay, drop 2.x version
+
+  05 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  x2goserver-2.0.1.19.ebuild:
+  Remove kde-base/kdelibs:3.5 support.
+
+*x2goserver-2.0.1.19 (13 Mar 2009)
+
+  13 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/x2goserver.init, +metadata.xml, +x2goserver-2.0.1.19.ebuild:
+  Initial portage commit, from the NX overlay

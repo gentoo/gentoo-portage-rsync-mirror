@@ -1,0 +1,30 @@
+From 7253a75b18452f71db3f2d58d0b0e5ccc6ff16cc Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Florian=20M=C3=BCllner?= <fmuellner@gnome.org>
+Date: Sat, 10 Mar 2012 21:28:13 +0100
+Subject: [PATCH] frames: Explicitly initialize style contexts
+
+We were relying on GTK+ emitting GtkWidget::style-updated during
+widget initialization to create the GtkStyleContexts used for
+window decorations. A recent GTK+ update broke this assumption,
+so do the necessary initialization ourselves.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=671796
+---
+ src/ui/frames.c |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/src/ui/frames.c b/src/ui/frames.c
+index 0204f1a..1b4ef8d 100644
+--- a/src/ui/frames.c
++++ b/src/ui/frames.c
+@@ -273,6 +273,7 @@ meta_frames_init (MetaFrames *frames)
+ 
+   frames->style_variants = g_hash_table_new_full (g_str_hash, g_str_equal,
+                                                   g_free, g_object_unref);
++  update_style_contexts (frames);
+ 
+   gtk_widget_set_double_buffered (GTK_WIDGET (frames), FALSE);
+ 
+-- 
+1.7.8.5
+

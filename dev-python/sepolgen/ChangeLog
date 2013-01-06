@@ -1,0 +1,111 @@
+# ChangeLog for dev-python/sepolgen
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.27 2012/11/17 16:52:06 swift Exp $
+
+  17 Nov 2012; <swift@gentoo.org> sepolgen-1.1.8.ebuild:
+  Stabilization
+
+  13 Oct 2012; <swift@gentoo.org> sepolgen-1.1.8.ebuild:
+  Supporting user-provided patches using epatch_user
+
+*sepolgen-1.1.8 (09 Oct 2012)
+
+  09 Oct 2012; <swift@gentoo.org> +sepolgen-1.1.8.ebuild:
+  Introduce new upstream version
+
+  29 Sep 2012; <swift@gentoo.org> sepolgen-1.1.5-r3.ebuild:
+  Stabilize sepolgen (also due to #436516)
+
+  10 Jul 2012; <swift@gentoo.org> sepolgen-1.1.5-r2.ebuild:
+  Stabilization (main need for #415091)
+
+*sepolgen-1.1.5-r3 (10 Jul 2012)
+
+  10 Jul 2012; <swift@gentoo.org> +sepolgen-1.1.5-r3.ebuild:
+  Support refpolicy style audit2allow (#417199)
+
+  26 Jun 2012; Mike Gilbert <floppym@gentoo.org> sepolgen-1.1.5.ebuild:
+  Restrict pypy.
+
+  26 Jun 2012; Mike Gilbert <floppym@gentoo.org> sepolgen-1.1.5-r2.ebuild:
+  Set PYTHON_DEPEND="*". Restrict pypy. Thanks Arfrever.
+
+*sepolgen-1.1.5-r2 (25 Jun 2012)
+
+  25 Jun 2012; <swift@gentoo.org> +sepolgen-1.1.5-r2.ebuild:
+  Support python3, fix audit2allow support. bugs #415091 and #408179
+
+  13 May 2012; <swift@gentoo.org> -sepolgen-1.0.23.ebuild,
+  -sepolgen-1.1.0.ebuild:
+  Removing obsoleted ebuilds
+
+  29 Apr 2012; <swift@gentoo.org> sepolgen-1.1.5.ebuild:
+  Stabilization
+
+  13 Apr 2012; Mike Gilbert <floppym@gentoo.org> sepolgen-1.1.5.ebuild:
+  Fix dependencies. Patch by Arfrever.
+
+*sepolgen-1.1.5 (31 Mar 2012)
+
+  31 Mar 2012; <swift@gentoo.org> +sepolgen-1.1.5.ebuild:
+  Bump to version 1.1.5
+
+  23 Oct 2011; <swift@gentoo.org> sepolgen-1.1.0.ebuild:
+  Stabilization (tracker #384231)
+
+  12 Aug 2011; Anthony G. Basile <blueness@gentoo.org> -sepolgen-1.0.13.ebuild,
+  -sepolgen-1.0.17.ebuild, -sepolgen-1.0.17-r1.ebuild:
+  Removed deprecated versions
+
+*sepolgen-1.1.0 (03 Aug 2011)
+
+  03 Aug 2011; Anthony G. Basile <blueness@gentoo.org> +sepolgen-1.1.0.ebuild:
+  Bump to 20110727 release of SELinux userspace
+
+  28 May 2011; Anthony G. Basile <blueness@gentoo.org> sepolgen-1.0.23.ebuild:
+  Stable amd64 x86
+
+  25 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sepolgen-1.0.13.ebuild, sepolgen-1.0.17.ebuild, sepolgen-1.0.17-r1.ebuild:
+  Fix deprecation warnings.
+
+  13 Feb 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Updated metadata.xml to reflect new selinux herd.
+
+  06 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sepolgen-1.0.23.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #345551).
+
+*sepolgen-1.0.23 (06 Feb 2011)
+
+  06 Feb 2011; Anthony G. Basile <blueness@gentoo.org>
+  +sepolgen-1.0.23.ebuild:
+  New upstream release.
+
+  04 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sepolgen-1.0.13.ebuild, sepolgen-1.0.17.ebuild, sepolgen-1.0.17-r1.ebuild:
+  Delete calls to deprecated python_version().
+
+*sepolgen-1.0.17-r1 (16 Dec 2009)
+
+  16 Dec 2009; Chris PeBenito <pebenito@gentoo.org>
+  +sepolgen-1.0.17-r1.ebuild:
+  Fix build tests for #296737.
+
+  02 Aug 2009; Chris PeBenito <pebenito@gentoo.org> sepolgen-1.0.13.ebuild,
+  sepolgen-1.0.17.ebuild:
+  Fix bug #244742.
+
+*sepolgen-1.0.17 (02 Aug 2009)
+
+  02 Aug 2009; Chris PeBenito <pebenito@gentoo.org> +sepolgen-1.0.17.ebuild:
+  New upstream release.
+
+  18 Jul 2009; Chris PeBenito <pebenito@gentoo.org> sepolgen-1.0.13.ebuild:
+  Mark stable. Remove old ebuilds.
+
+*sepolgen-1.0.13 (03 Oct 2008)
+
+  03 Oct 2008; Chris PeBenito <pebenito@gentoo.org> +metadata.xml,
+  +sepolgen-1.0.13.ebuild:
+  Initial commit.

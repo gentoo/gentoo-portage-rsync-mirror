@@ -1,0 +1,146 @@
+stuart@hickinbottom.demon.co.uk:
+* Remove reliance on LLONG_MAX and LLONG_MIN and replace it with
+  std::numeric_limits<long long>::max() and
+  std::numeric_limits<long long>::min().
+
+--- boxbackup-0.10/bin/bbackupquery/BackupQueries.cpp
++++ boxbackup-0.10/bin/bbackupquery/BackupQueries.cpp
+@@ -64,6 +64,7 @@
+ #endif
+ 
+ #include <set>
++#include <limits>
+ 
+ #include "BackupQueries.h"
+ #include "Utils.h"
+@@ -815,7 +816,7 @@
+ 	}
+ 	
+ 	int64_t id = ::strtoll(args[0].c_str(), 0, 16);
+-	if(id == LLONG_MIN || id == LLONG_MAX || id == 0)
++	if(id == std::numeric_limits<long long>::min() || id == std::numeric_limits<long long>::max() || id == 0)
+ 	{
+ 		printf("Not a valid object ID (specified in hex)\n");
+ 		return;
+@@ -901,7 +902,7 @@
+ 		{
+ 			// Specified as ID. 
+ 			id = ::strtoll(args[0].c_str(), 0, 16);
+-			if(id == LLONG_MIN || id == LLONG_MAX || id == 0)
++			if(id == std::numeric_limits<long long>::min() || id == std::numeric_limits<long long>::max() || id == 0)
+ 			{
+ 				printf("Not a valid object ID (specified in hex)\n");
+ 				return;
+@@ -1694,7 +1695,7 @@
+ 	{
+ 		// Specified as ID. 
+ 		dirID = ::strtoll(args[0].c_str(), 0, 16);
+-		if(dirID == LLONG_MIN || dirID == LLONG_MAX || dirID == 0)
++		if(dirID == std::numeric_limits<long long>::min() || dirID == std::numeric_limits<long long>::max() || dirID == 0)
+ 		{
+ 			printf("Not a valid object ID (specified in hex)\n");
+ 			return;
+--- boxbackup-0.10/configure.ac
++++ boxbackup-0.10/configure.ac
+@@ -114,7 +114,6 @@
+ AC_STRUCT_TM
+ AX_CHECK_DIRENT_D_TYPE
+ AC_SYS_LARGEFILE
+-AX_CHECK_LLONG_MINMAX
+ AX_CHECK_DEFINE_PRAGMA
+ if test "x$ac_cv_c_bigendian" != "xyes"; then
+   AX_BSWAP64
+--- boxbackup-0.10/infrastructure/m4/ax_check_llong_minmax.m4
++++ boxbackup-0.10/infrastructure/m4/ax_check_llong_minmax.m4
+@@ -1,76 +0,0 @@
+-dnl @synopsis AX_CHECK_LLONG_MINMAX
+-dnl
+-dnl This macro will fix up LLONG_MIN and LLONG_MAX as appropriate. I'm finding
+-dnl it quite difficult to believe that so many hoops are necessary. The world
+-dnl seems to have gone quite mad.
+-dnl
+-dnl This gem is adapted from the OpenSSH configure script so here's
+-dnl the original copyright notice:
+-dnl
+-dnl Copyright (c) 1999-2004 Damien Miller
+-dnl
+-dnl Permission to use, copy, modify, and distribute this software for any
+-dnl purpose with or without fee is hereby granted, provided that the above
+-dnl copyright notice and this permission notice appear in all copies.
+-dnl
+-dnl @category C
+-dnl @author Martin Ebourne and Damien Miller
+-dnl @version 2005/07/07
+-
+-AC_DEFUN([AX_CHECK_LLONG_MINMAX], [
+-  AC_CHECK_DECL([LLONG_MAX], [have_llong_max=1], , [[#include <limits.h>]])
+-  if test -z "$have_llong_max"; then
+-    AC_MSG_CHECKING([[for max value of long long]])
+-    AC_RUN_IFELSE([AC_LANG_SOURCE([[
+-      #include <stdio.h>
+-      /* Why is this so damn hard? */
+-      #undef __GNUC__
+-      #undef __USE_ISOC99
+-      #define __USE_ISOC99
+-      #include <limits.h>
+-      #define DATA "conftest.llminmax"
+-      int main(void) {
+-        FILE *f;
+-        long long i, llmin, llmax = 0;
+-
+-        if((f = fopen(DATA,"w")) == NULL)
+-          exit(1);
+-
+-        #if defined(LLONG_MIN) && defined(LLONG_MAX)
+-        fprintf(stderr, "Using system header for LLONG_MIN and LLONG_MAX\n");
+-        llmin = LLONG_MIN;
+-        llmax = LLONG_MAX;
+-        #else
+-        fprintf(stderr, "Calculating LLONG_MIN and LLONG_MAX\n");
+-        /* This will work on one's complement and two's complement */
+-        for (i = 1; i > llmax; i <<= 1, i++)
+-          llmax = i;
+-        llmin = llmax + 1LL;    /* wrap */
+-        #endif
+-
+-        /* Sanity check */
+-        if (llmin + 1 < llmin || llmin - 1 < llmin || llmax + 1 > llmax || llmax - 1 > llmax) {
+-          fprintf(f, "unknown unknown\n");
+-          exit(2);
+-        }
+-
+-        if (fprintf(f ,"%lld %lld", llmin, llmax) < 0)
+-          exit(3);
+-
+-        exit(0);
+-      }
+-      ]])], [
+-      read llong_min llong_max < conftest.llminmax
+-      AC_MSG_RESULT([$llong_max])
+-      AC_DEFINE_UNQUOTED([LLONG_MAX], [${llong_max}LL],
+-                         [max value of long long calculated by configure])
+-      AC_MSG_CHECKING([[for min value of long long]])
+-      AC_MSG_RESULT([$llong_min])
+-      AC_DEFINE_UNQUOTED([LLONG_MIN], [${llong_min}LL],
+-                         [min value of long long calculated by configure])
+-      ],
+-      [AC_MSG_RESULT(not found)],
+-      [AC_MSG_WARN([[cross compiling: not checking]])]
+-      )
+-    fi
+-  ])dnl
+--- boxbackup-0.10/lib/win32/config.h.win32
++++ boxbackup-0.10/lib/win32/config.h.win32
+@@ -318,12 +318,6 @@
+ /* Define to 1 if __syscall is available but needs a definition */
+ /* #undef HAVE___SYSCALL_NEED_DEFN */
+ 
+-/* max value of long long calculated by configure */
+-/* #undef LLONG_MAX */
+-
+-/* min value of long long calculated by configure */
+-/* #undef LLONG_MIN */
+-
+ /* Define to 1 if `lstat' dereferences a symlink specified with a trailing
+    slash. */
+ /* #undef LSTAT_FOLLOWS_SLASHED_SYMLINK */

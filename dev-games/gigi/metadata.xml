@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>tomka@gentoo.org</email>
+    <name>Thomas Kahle</name>
+  </maintainer>
+  <use>
+    <flag name="devil">Use DevIL instead of libpng/libjpeg/libtiff</flag>
+    <flag name="eve">Add experimental eve support</flag>
+    <flag name="ogre">Add support for <pkg>dev-games/ogre</pkg></flag>
+    <flag name="ois">Add support for <pkg>dev-games/ois</pkg></flag>
+  </use>
+<longdescription lang="en">
+GiGi (aka GG) is a GUI library for OpenGL. It is platform-independent
+(it runs at least on Linux and Windows, and probably more),
+compiler-independent (it compiles under at GCC 3.4 or higher and
+MSVC++ 8.0 SP1 or higher, and probably more), and
+driver-independent. Reference drivers for SDL and Ogre are provided,
+and it is straightforward to write one for yourself should you decide
+to do so.
+
+The Gentoo version is slightly patched by the makers of
+games-strategy/freeorion.
+</longdescription>
+
+</pkgmetadata>

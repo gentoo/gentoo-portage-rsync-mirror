@@ -1,0 +1,11 @@
+diff -udr a/deja-dup/Makefile.am b/deja-dup/Makefile.am
+--- a/deja-dup/Makefile.am	2012-06-05 22:01:48.000000000 +0200
++++ b/deja-dup/Makefile.am	2012-06-10 21:19:50.888004476 +0200
+@@ -55,6 +55,7 @@
+ 	$(UNITY_VALAFLAGS) \
+ 	--pkg @GTK_MODULE@ \
+ 	--pkg gio-2.0 \
++	--pkg gio-unix-2.0 \
+ 	--pkg gnome-keyring-1 \
+ 	--pkg libpeas-1.0 \
+ 	--pkg libnotify \

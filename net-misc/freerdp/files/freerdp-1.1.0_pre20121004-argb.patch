@@ -1,0 +1,61 @@
+https://bugs.gentoo.org/show_bug.cgi?id=437918
+https://github.com/FreeRDP/Remmina/issues/111
+
+commit 8b70615b30f4a3b5c20df20dbadf7a8199e2e54a
+Author: Jean-Louis Dupond <jean-louis@dupond.be>
+Date:   Thu Oct 11 00:07:56 2012 +0200
+
+    libfreerdp-codec: return ARGB32/ABGR32 for dstBpp 32 with alpha
+
+diff --git a/libfreerdp/codec/color.c b/libfreerdp/codec/color.c
+index 42aa4e5..cf65680 100644
+--- a/libfreerdp/codec/color.c
++++ b/libfreerdp/codec/color.c
+@@ -426,7 +426,14 @@ BYTE* freerdp_image_convert_8bpp(BYTE* srcData, BYTE* dstData, int width, int he
+ 			red = clrconv->palette->entries[pixel].red;
+ 			green = clrconv->palette->entries[pixel].green;
+ 			blue = clrconv->palette->entries[pixel].blue;
+-			pixel = (clrconv->invert) ? RGB32(red, green, blue) : BGR32(red, green, blue);
++			if (clrconv->alpha)
++			{
++				pixel = (clrconv->invert) ? ARGB32(0xFF, red, green, blue) : ABGR32(0xFF, red, green, blue);
++			}
++			else
++			{
++				pixel = (clrconv->invert) ? RGB32(red, green, blue) : BGR32(red, green, blue);
++			}
+ 			*dst32 = pixel;
+ 			dst32++;
+ 		}
+@@ -468,7 +475,14 @@ BYTE* freerdp_image_convert_15bpp(BYTE* srcData, BYTE* dstData, int width, int h
+ 			pixel = *src16;
+ 			src16++;
+ 			GetBGR15(red, green, blue, pixel);
+-			pixel = (clrconv->invert) ? RGB32(red, green, blue) : BGR32(red, green, blue);
++			if (clrconv->alpha)
++			{
++				pixel = (clrconv->invert) ? ARGB32(0xFF, red, green, blue) : ABGR32(0xFF, red, green, blue);
++			}
++			else
++			{
++				pixel = (clrconv->invert) ? RGB32(red, green, blue) : BGR32(red, green, blue);
++			}
+ 			*dst32 = pixel;
+ 			dst32++;
+ 		}
+@@ -582,7 +596,14 @@ BYTE* freerdp_image_convert_16bpp(BYTE* srcData, BYTE* dstData, int width, int h
+ 			pixel = *src16;
+ 			src16++;
+ 			GetBGR16(red, green, blue, pixel);
+-			pixel = (clrconv->invert) ? RGB32(red, green, blue) : BGR32(red, green, blue);
++			if (clrconv->alpha)
++			{
++				pixel = (clrconv->invert) ? ARGB32(0xFF, red, green, blue) : ABGR32(0xFF, red, green, blue);
++			}
++			else
++			{
++				pixel = (clrconv->invert) ? RGB32(red, green, blue) : BGR32(red, green, blue);
++			}
+ 			*dst32 = pixel;
+ 			dst32++;
+ 		}

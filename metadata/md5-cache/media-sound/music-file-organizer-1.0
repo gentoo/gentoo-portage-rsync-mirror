@@ -1,0 +1,11 @@
+DEFINED_PHASES=postinst
+DEPEND=media-libs/taglib dev-libs/icu virtual/pkgconfig
+DESCRIPTION=Organizes audio files into directories based on metadata tags, along with other metadata utilities.
+EAPI=4
+HOMEPAGE=http://blog.zx2c4.com/813
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=media-libs/taglib dev-libs/icu
+SLOT=0
+SRC_URI=http://git.zx2c4.com/music-file-organizer/snapshot/music-file-organizer-1.0.tar.xz
+_md5_=a701debd8dbc05cfd096f1c98a17e36c

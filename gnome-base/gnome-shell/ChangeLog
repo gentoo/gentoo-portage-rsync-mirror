@@ -1,0 +1,152 @@
+# ChangeLog for gnome-base/gnome-shell
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.23 2013/01/01 14:21:55 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gnome-shell-3.6.2-r1.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gnome-shell-3.6.2-r1.ebuild:
+  Add ~ia64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gnome-shell-3.6.2-r1.ebuild:
+  Add ~ppc64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gnome-shell-3.6.2-r1.ebuild:
+  Add ~ppc, wrt bug #449220
+
+*gnome-shell-3.6.2-r1 (26 Dec 2012)
+
+  26 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gnome-shell-3.2.1-optional-networkmanager.patch,
+  -gnome-shell-3.2.2.1.ebuild,
+  -files/gnome-shell-3.4.0-libgnome-shell-js.so-link-1.patch,
+  -files/gnome-shell-3.4.0-libgnome-shell-js.so-link-2.patch,
+  -gnome-shell-3.4.1.ebuild, gnome-shell-3.4.2.ebuild,
+  +files/gnome-shell-3.5.x-bluetooth-flag.patch,
+  +files/gnome-shell-3.6.0-networkmanager-flag.patch,
+  +gnome-shell-3.6.2-r1.ebuild, metadata.xml:
+  Version bump for Gnome 3.6. Switch to EAPI=5 and python-r1.eclass. Clean up
+  old revisions.
+
+  07 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-shell-3.2.2.1.ebuild, gnome-shell-3.4.1.ebuild,
+  gnome-shell-3.4.2.ebuild:
+  Slot gstreamer dependencies in preparation for gstreamer-1.0; update license.
+
+  10 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-shell-3.2.2.1.ebuild, gnome-shell-3.4.1.ebuild,
+  gnome-shell-3.4.2.ebuild:
+  Depend on dejavu font for special symbols used in the shell UI (bug #437734,
+  thanks to Jacob Godserv).
+
+*gnome-shell-3.4.2 (21 Jul 2012)
+
+  21 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-shell-3.4.2.ebuild:
+  Version bump with some bugfixes.
+
+  22 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-shell-3.2.2.1.ebuild, gnome-shell-3.4.1.ebuild:
+  eautoreconf now does intltoolize.
+
+  21 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-shell-3.2.2.1.ebuild, gnome-shell-3.4.1.ebuild:
+  Temporary workaround for autotools.eclass breakage (bug #416789).
+
+*gnome-shell-3.4.1 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-shell-3.2.1-r3.ebuild,
+  +files/gnome-shell-3.4.0-libgnome-shell-js.so-link-1.patch,
+  +files/gnome-shell-3.4.0-libgnome-shell-js.so-link-2.patch,
+  +files/gnome-shell-3.4.0-optional-networkmanager.patch,
+  +gnome-shell-3.4.1.ebuild, metadata.xml:
+  Version bump for gnome-3.4 with lots of changes. Drop old.
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-shell-3.2.1-r3.ebuild,
+  gnome-shell-3.2.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  14 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-shell-3.2.1-r3.ebuild, gnome-shell-3.2.2.1.ebuild:
+  Add missing dependency on gnome-icon-theme-symbolic (bug #403503).
+
+  07 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-shell-3.2.1-r3.ebuild, gnome-shell-3.2.2.1.ebuild:
+  Directly inherit multilib, thanks to Arfrever for reporting.
+
+*gnome-shell-3.2.2.1 (21 Jan 2012)
+
+  21 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-shell-3.2.1-r1.ebuild, -gnome-shell-3.2.1-r2.ebuild,
+  -files/gnome-shell-3.2.1-messageTray-reduce-fade.patch,
+  -files/gnome-shell-3.2.1-theme-lighten-sent-message.patch,
+  +gnome-shell-3.2.2.1.ebuild:
+  Bump, fixes lots of crashes, rendering errrors, and memory leaks (in network
+  menu, notifications, workspace thumbnails, icons, etc.) Also, mark
+  gnome-shell executable to allow running under hardened/PaX (bug #398941,
+  thanks to Orson Teodoro). Drop old.
+
+*gnome-shell-3.2.1-r3 (13 Jan 2012)
+
+  13 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-shell-3.2.1-r1.ebuild, gnome-shell-3.2.1-r2.ebuild,
+  +gnome-shell-3.2.1-r3.ebuild,
+  +files/gnome-shell-3.2.1-optional-networkmanager.patch:
+  Make networkmanager optional (bug #398593, reported by Florian Klink; patch
+  based on Michael Biebl's work for Debian). Add missing timezone-data and
+  mobile-broadband-provider-info rdeps.
+
+*gnome-shell-3.2.1-r2 (09 Jan 2012)
+
+  09 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-shell-3.2.1-r2.ebuild,
+  +files/gnome-shell-3.2.1-automagic-gnome-bluetooth.patch:
+  Add lots of upstream patches: fix browser plugin on chromium and epiphany,
+  fix some crashes, improve extension system stability, do not load disabled
+  extensions at shell startup, do not allow message popups to steal mouse
+  focus, have the message tray use a hot corner so that mouse events on bottom
+  pixel row do not get blocked, and do not depend on nautilus's schemas or
+  libgnome's gnome-open. Also, fix automagic gnome-bluetooth dependency (bug
+  #398145, thanks to Ed Catmur for the patch).
+
+  01 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-shell-3.2.1-r1.ebuild:
+  Add pkg_postinst message about graphics driver compatibility.
+
+  13 Dec 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gnome-shell-3.2.1-r1.ebuild:
+  Add ewarn about xorg-server-1.11 and pointer barriers
+
+  13 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-shell-3.0.2-r1.ebuild,
+  -files/gnome-shell-3.0.2-unbreak-extension-css.patch,
+  -files/gnome-shell-3.0.2-user-removed-signals.patch,
+  gnome-shell-3.2.1-r1.ebuild, metadata.xml:
+  Depend on accountsservice[introspection] (bug #390361, thanks to Cesko Voeten
+  <cvoeten@gmail.com> for reporting).
+  Also, drop old 3.0 version.
+
+*gnome-shell-3.2.1-r1 (05 Nov 2011)
+
+  05 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-shell-3.2.1-r1.ebuild,
+  +files/gnome-shell-3.2.1-messageTray-reduce-fade.patch,
+  +files/gnome-shell-3.2.1-theme-lighten-sent-message.patch:
+  Bump to 3.2.1 from the gnome overlay. Notable changes: built-in (and
+  non-optional) networkmanager UI, telepathy chat integration, removable media
+  UI, completely overhauled extension system, login-screen mode for gdm, and
+  many improvements and bugfixes.
+
+  21 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-shell-3.0.2-r1.ebuild:
+  Drop -DG_DISABLE_DEPRECATED flag for sanity on glib upgrades (bug #384765).
+  Thanks to Oschtan <dawnstyle@gmail.com> for reporting.
+
+*gnome-shell-3.0.2-r1 (30 Sep 2011)
+
+  30 Sep 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gnome-shell-3.0.2-r1.ebuild,
+  +files/gnome-shell-3.0.2-unbreak-extension-css.patch,
+  +files/gnome-shell-3.0.2-user-removed-signals.patch, +metadata.xml:
+  Add GNOME Shell from the gnome overlay, for GNOME 3

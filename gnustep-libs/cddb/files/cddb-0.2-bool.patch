@@ -1,0 +1,57 @@
+diff -Naur cddb.bundle.orig/Cddb/Cddb.h cddb.bundle/Cddb/Cddb.h
+--- cddb.bundle.orig/Cddb/Cddb.h	2002-10-15 16:32:13.000000000 +0200
++++ cddb.bundle/Cddb/Cddb.h	2011-04-20 17:13:48.209532185 +0200
+@@ -54,8 +54,7 @@
+  * The number of object in NSArray are the number of tracks.
+  * The keys of NSDictionary are "length" and "offset".
+  */
+-- (NSString *) discidWithCDTracks: (NSArray *) tracks
+-                          locally: (BOOL) bool;
++- (NSString *) discidWithCDTracks: (NSArray *) tracks locally: (BOOL) boolean;
+ 
+ /* Return the query using a NSArray of NSDictionary.
+  * The number of object in NSArray are the number of tracks.
+@@ -75,9 +74,7 @@
+  * NSString, "extdata" (extra data about this album)
+  * NSArray, "exttitles" (extra-title of each track)
+  */
+-- (NSDictionary *) readWithCategory: (NSString *) category
+-                             discid: (NSString *) discid
+-                        postProcess: (BOOL) bool;
++- (NSDictionary *) readWithCategory: (NSString *) category discid: (NSString *) discid postProcess: (BOOL) boolean;
+ 
+ /* Low-level methods */
+ /* Input format:
+diff -Naur cddb.bundle.orig/Cddb/Cddb.m cddb.bundle/Cddb/Cddb.m
+--- cddb.bundle.orig/Cddb/Cddb.m	2002-10-17 15:17:01.000000000 +0200
++++ cddb.bundle/Cddb/Cddb.m	2011-04-20 17:14:08.737891180 +0200
+@@ -44,7 +44,7 @@
+ 
+ 
+ - (NSString *) discidWithCDTracks: (NSArray *) tracks 
+-                          locally: (BOOL) bool
++                          locally: (BOOL) boolean
+ {
+   NSMutableString *string = [NSMutableString new];
+   int i = 0, numtracks = 0;
+@@ -72,7 +72,7 @@
+ 
+   [string appendFormat: @" %d", totaltime];
+ 
+-  if (bool == YES) // Calculate locally
++  if (boolean == YES) // Calculate locally
+     {
+       RELEASE(string);
+       RELEASE(tracks);
+@@ -123,9 +123,9 @@
+ 
+ - (NSDictionary *) readWithCategory: (NSString *) category
+                              discid: (NSString *) discid
+-                        postProcess: (BOOL) bool
++                        postProcess: (BOOL) boolean
+ {
+-  if (bool == NO)
++  if (boolean == NO)
+     return [self read: [NSString stringWithFormat: @"%@ %@", category, discid]];
+   else
+     {

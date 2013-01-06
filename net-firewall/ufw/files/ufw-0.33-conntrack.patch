@@ -1,0 +1,187 @@
+use conntrack instead of state
+https://bugs.launchpad.net/ufw/+bug/1065297
+diff -urp ufw-0.33.orig/conf/before6.rules ufw-0.33/conf/before6.rules
+--- ufw-0.33.orig/conf/before6.rules	2012-10-10 22:26:26.021931270 +0200
++++ ufw-0.33/conf/before6.rules	2012-10-10 22:38:58.803605951 +0200
+@@ -34,16 +34,16 @@
+ -A ufw6-before-input -p icmpv6 --icmpv6-type router-advertisement -m hl --hl-eq 255 -j ACCEPT
+ 
+ # quickly process packets for which we already have a connection
+--A ufw6-before-input -m state --state RELATED,ESTABLISHED -j ACCEPT
+--A ufw6-before-output -m state --state RELATED,ESTABLISHED -j ACCEPT
++-A ufw6-before-input -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
++-A ufw6-before-output -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+ 
+ # for multicast ping replies from link-local addresses (these don't have an
+ # associated connection and would otherwise be marked INVALID)
+ -A ufw6-before-input -p icmpv6 --icmpv6-type echo-reply -s fe80::/10 -j ACCEPT
+ 
+ # drop INVALID packets (logs these in loglevel medium and higher)
+--A ufw6-before-input -m state --state INVALID -j ufw6-logging-deny
+--A ufw6-before-input -m state --state INVALID -j DROP
++-A ufw6-before-input -m conntrack --ctstate INVALID -j ufw6-logging-deny
++-A ufw6-before-input -m conntrack --ctstate INVALID -j DROP
+ 
+ # ok icmp codes
+ -A ufw6-before-input -p icmpv6 --icmpv6-type destination-unreachable -j ACCEPT
+diff -urp ufw-0.33.orig/conf/before.rules ufw-0.33/conf/before.rules
+--- ufw-0.33.orig/conf/before.rules	2012-10-10 22:26:26.021931270 +0200
++++ ufw-0.33/conf/before.rules	2012-10-10 22:38:17.442349148 +0200
+@@ -22,12 +22,12 @@
+ -A ufw-before-output -o lo -j ACCEPT
+ 
+ # quickly process packets for which we already have a connection
+--A ufw-before-input -m state --state RELATED,ESTABLISHED -j ACCEPT
+--A ufw-before-output -m state --state RELATED,ESTABLISHED -j ACCEPT
++-A ufw-before-input -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
++-A ufw-before-output -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+ 
+ # drop INVALID packets (logs these in loglevel medium and higher)
+--A ufw-before-input -m state --state INVALID -j ufw-logging-deny
+--A ufw-before-input -m state --state INVALID -j DROP
++-A ufw-before-input -m conntrack --ctstate INVALID -j ufw-logging-deny
++-A ufw-before-input -m conntrack --ctstate INVALID -j DROP
+ 
+ # ok icmp codes
+ -A ufw-before-input -p icmp --icmp-type destination-unreachable -j ACCEPT
+diff -urp ufw-0.33.orig/doc/ufw-framework.8 ufw-0.33/doc/ufw-framework.8
+--- ufw-0.33.orig/doc/ufw-framework.8	2012-10-10 22:26:26.020931143 +0200
++++ ufw-0.33/doc/ufw-framework.8	2012-10-10 23:06:21.407372442 +0200
+@@ -167,9 +167,9 @@ Edit #CONFIG_PREFIX#/ufw/sysctl.conf to
+  net.ipv4.ip_forward=1
+ .TP
+ Add to the *filter section of #CONFIG_PREFIX#/ufw/before.rules:
+- \-A ufw\-before\-forward \-m state \-\-state RELATED,ESTABLISHED \\
+-   \-j ACCEPT
+- \-A ufw\-before\-forward \-m state \-\-state NEW \-i eth0 \\
++ \-A ufw\-before\-forward \-m conntrack \\
++   \-\-ctstate RELATED,ESTABLISHED \-j ACCEPT
++ \-A ufw\-before\-forward \-m conntrack \-\-ctstate NEW \-i eth0 \\
+    \-d 10.0.0.2 \-p tcp \-\-dport 80 \-j ACCEPT
+ .TP
+ Add to the end of #CONFIG_PREFIX#/ufw/before.rules, after the *filter section:
+@@ -209,13 +209,13 @@ Edit #CONFIG_PREFIX#/ufw/sysctl.conf to
+   net.ipv4.ip_forward=1
+ .TP
+ Add to the *filter section of #CONFIG_PREFIX#/ufw/before.rules:
+- \-A ufw\-before\-forward \-m state \-\-state RELATED,ESTABLISHED \\
+-   \-j ACCEPT
++ \-A ufw\-before\-forward \-m conntrack \\
++   \-\-ctstate RELATED,ESTABLISHED \-j ACCEPT
+ 
+- \-A ufw\-before\-forward \-i eth1 \-s 10.0.0.0/8 \-o eth0 \-m state \\
+-   \-\-state NEW \-j ACCEPT
++ \-A ufw\-before\-forward \-i eth1 \-s 10.0.0.0/8 \-o eth0 \\
++   \-m conntrack \-\-ctstate NEW \-j ACCEPT
+ 
+- \-A ufw\-before\-forward \-m state \-\-state NEW \-i eth0 \\
++ \-A ufw\-before\-forward \-m conntrack \-\-ctstate NEW \-i eth0 \\
+    \-d 10.0.0.2 \-p tcp \-\-dport 80 \-j ACCEPT
+ 
+  \-A ufw\-before\-forward \-o eth0 \-d 10.0.0.0/8 \-j REJECT
+diff -urp ufw-0.33.orig/src/backend_iptables.py ufw-0.33/src/backend_iptables.py
+--- ufw-0.33.orig/src/backend_iptables.py	2012-10-10 22:26:26.022931397 +0200
++++ ufw-0.33/src/backend_iptables.py	2012-10-10 22:29:53.981361845 +0200
+@@ -558,7 +558,7 @@ class UFWBackendIptables(ufw.backend.UFW
+                 lstr = '%s -j LOG --log-prefix "[UFW %s] "' % (limit_args, \
+                        policy)
+                 if not pat_logall.search(s):
+-                    lstr = '-m state --state NEW ' + lstr
++                    lstr = '-m conntrack --ctstate NEW ' + lstr
+                 snippets[i] = pat_log.sub(r'\1-j \2\4', s)
+                 snippets.insert(i, pat_log.sub(r'\1-j ' + prefix + \
+                                                '-user-logging-' + suffix, s))
+@@ -574,9 +574,9 @@ class UFWBackendIptables(ufw.backend.UFW
+         pat_limit = re.compile(r' -j LIMIT')
+         for i, s in enumerate(snippets):
+             if pat_limit.search(s):
+-                tmp1 = pat_limit.sub(' -m state --state NEW -m recent --set', \
++                tmp1 = pat_limit.sub(' -m conntrack --ctstate NEW -m recent --set', \
+                                      s)
+-                tmp2 = pat_limit.sub(' -m state --state NEW -m recent' + \
++                tmp2 = pat_limit.sub(' -m conntrack --ctstate NEW -m recent' + \
+                                      ' --update --seconds 30 --hitcount 6' + \
+                                      ' -j ' + prefix + '-user-limit', s)
+                 tmp3 = pat_limit.sub(' -j ' + prefix + '-user-limit-accept', s)
+@@ -1196,12 +1196,12 @@ class UFWBackendIptables(ufw.backend.UFW
+                     prefix = "[UFW BLOCK] "
+                     if self.loglevels[level] < self.loglevels["medium"]:
+                         # only log INVALID in medium and higher
+-                        rules_t.append([c, ['-I', c, '-m', 'state', \
+-                                            '--state', 'INVALID', \
++                        rules_t.append([c, ['-I', c, '-m', 'conntrack', \
++                                            '--ctstate', 'INVALID', \
+                                             '-j', 'RETURN'] + largs, ''])
+                     else:
+-                        rules_t.append([c, ['-A', c, '-m', 'state', \
+-                                            '--state', 'INVALID', \
++                        rules_t.append([c, ['-A', c, '-m', 'conntrack', \
++                                            '--ctstate', 'INVALID', \
+                                             '-j', 'LOG', \
+                                             '--log-prefix', \
+                                             "[UFW AUDIT INVALID] "] + \
+@@ -1220,7 +1220,7 @@ class UFWBackendIptables(ufw.backend.UFW
+ 
+             # loglevel medium logs all new packets with limit
+             if self.loglevels[level] < self.loglevels["high"]:
+-                largs = ['-m', 'state', '--state', 'NEW'] + limit_args
++                largs = ['-m', 'conntrack', '--ctstate', 'NEW'] + limit_args
+ 
+             prefix = "[UFW AUDIT] "
+             for c in self.chains['before']:
+diff -urp ufw-0.33.orig/src/ufw-init-functions ufw-0.33/src/ufw-init-functions
+--- ufw-0.33.orig/src/ufw-init-functions	2012-10-10 22:26:26.023931524 +0200
++++ ufw-0.33/src/ufw-init-functions	2012-10-10 22:48:38.305257627 +0200
+@@ -251,15 +251,15 @@ ufw_start() {
+             # add tracking policy
+             if [ "$DEFAULT_INPUT_POLICY" = "ACCEPT" ]; then
+                 printf "*filter\n"\
+-"-A ufw${type}-track-input -p tcp -m state --state NEW -j ACCEPT\n"\
+-"-A ufw${type}-track-input -p udp -m state --state NEW -j ACCEPT\n"\
++"-A ufw${type}-track-input -p tcp -m conntrack --ctstate NEW -j ACCEPT\n"\
++"-A ufw${type}-track-input -p udp -m conntrack --ctstate NEW -j ACCEPT\n"\
+ "COMMIT\n" | $exe-restore -n || error="yes"
+             fi
+ 
+             if [ "$DEFAULT_OUTPUT_POLICY" = "ACCEPT" ]; then
+                 printf "*filter\n"\
+-"-A ufw${type}-track-output -p tcp -m state --state NEW -j ACCEPT\n"\
+-"-A ufw${type}-track-output -p udp -m state --state NEW -j ACCEPT\n"\
++"-A ufw${type}-track-output -p tcp -m conntrack --ctstate NEW -j ACCEPT\n"\
++"-A ufw${type}-track-output -p udp -m conntrack --ctstate NEW -j ACCEPT\n"\
+ "COMMIT\n" | $exe-restore -n || error="yes"
+             fi
+ 
+diff -urp ufw-0.33.orig/tests/check-requirements ufw-0.33/tests/check-requirements
+--- ufw-0.33.orig/tests/check-requirements	2012-10-10 22:26:25.944921482 +0200
++++ ufw-0.33/tests/check-requirements	2012-10-10 22:41:54.378920671 +0200
+@@ -167,24 +167,24 @@ for i in "" 6; do
+     done
+ 
+     echo -n "hashlimit: "
+-    runcmd $exe -A $c -m hashlimit -m tcp -p tcp --dport 22 --hashlimit 1/min --hashlimit-mode srcip --hashlimit-name ssh -m state --state NEW -j ACCEPT
++    runcmd $exe -A $c -m hashlimit -m tcp -p tcp --dport 22 --hashlimit 1/min --hashlimit-mode srcip --hashlimit-name ssh -m conntrack --ctstate NEW -j ACCEPT
+ 
+     echo -n "limit: "
+     runcmd $exe -A $c -m limit --limit 3/min --limit-burst 10 -j ACCEPT
+ 
+     for j in NEW RELATED ESTABLISHED INVALID; do
+         echo -n "state ($j): "
+-        runcmd $exe -A $c -m state --state $j
++        runcmd $exe -A $c -m conntrack --ctstate $j
+     done
+ 
+     echo -n "state (new, recent set): "
+-    runcmd runtime $exe -A $c -m state --state NEW -m recent --set
++    runcmd runtime $exe -A $c -m conntrack --ctstate NEW -m recent --set
+ 
+     echo -n "state (new, recent update): "
+-    runcmd runtime $exe -A $c -m state --state NEW -m recent --update --seconds 30 --hitcount 6 -j ACCEPT
++    runcmd runtime $exe -A $c -m conntrack --ctstate NEW -m recent --update --seconds 30 --hitcount 6 -j ACCEPT
+ 
+     echo -n "state (new, limit): "
+-    runcmd $exe -A $c -m state --state NEW -m limit --limit 3/min --limit-burst 10 -j ACCEPT
++    runcmd $exe -A $c -m conntrack --ctstate NEW -m limit --limit 3/min --limit-burst 10 -j ACCEPT
+ 
+     echo -n "interface (input): "
+     runcmd $exe -A $c -i eth0 -j ACCEPT

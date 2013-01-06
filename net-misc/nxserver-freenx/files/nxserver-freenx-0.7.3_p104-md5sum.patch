@@ -1,0 +1,24 @@
+diff -Naur freenx-server.orig//node.conf.sample freenx-server/node.conf.sample
+--- freenx-server.orig//node.conf.sample	2010-07-19 17:01:24.146731690 +0200
++++ freenx-server/node.conf.sample	2010-07-19 17:03:04.910481227 +0200
+@@ -560,7 +560,7 @@
+ #COMMAND_CUPSD=/usr/sbin/cupsd
+ 
+ # The tool to generate md5sums with
+-#COMMAND_MD5SUM="openssl md5"
++#COMMAND_MD5SUM="md5sum"
+ 
+ # The key that contains the name of the complete path of the 'rdesktop' command.
+ #COMMAND_RDESKTOP=rdesktop
+diff -Naur freenx-server.orig//nxloadconfig freenx-server/nxloadconfig
+--- freenx-server.orig//nxloadconfig	2010-07-19 17:01:24.146731690 +0200
++++ freenx-server/nxloadconfig	2010-07-19 17:03:14.234544279 +0200
+@@ -213,7 +213,7 @@
+ COMMAND_SSH=ssh
+ COMMAND_SSH_KEYGEN=ssh-keygen
+ COMMAND_CUPSD=/usr/sbin/cupsd
+-COMMAND_MD5SUM="openssl md5"
++COMMAND_MD5SUM="md5sum"
+ COMMAND_PERL=perl
+ COMMAND_RDESKTOP="rdesktop"
+ COMMAND_VNCVIEWER="vncviewer"

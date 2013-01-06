@@ -1,0 +1,15 @@
+# ChangeLog for net-analyzer/nagios-check_glsa2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_glsa2/ChangeLog,v 1.2 2012/10/01 01:34:08 flameeyes Exp $
+
+*nagios-check_glsa2-20120930-r1 (01 Oct 2012)
+
+  01 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +nagios-check_glsa2-20120930-r1.ebuild, -nagios-check_glsa2-20120930.ebuild:
+  Actually install it.
+
+*nagios-check_glsa2-20120930 (30 Sep 2012)
+
+  30 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +nagios-check_glsa2-20120930.ebuild, +metadata.xml:
+  Import check_glsa2 by Craig and Robin.

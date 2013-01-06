@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>mozilla</herd>
+<use>
+	<flag name="bindist">Disable official Firefox branding (icons, name) which 
+		are not binary-redistributable according to upstream.</flag>
+	<flag name='crypt'> Enable encryption support with enigmail</flag>
+	<flag name='mozdom'>Enable Mozilla's DOM inspector</flag>
+	<flag name='lightning'>Enable calendar support</flag>
+	<flag name='custom-optimization'>Enable user CFLAGS</flag>
+	 <flag name='system-sqlite'>Use the system-wide <pkg>dev-db/sqlite</pkg>
+		 installation with secure-delete enabled</flag>
+	<flag name="ipc">Use inter-process communication between tabs and plugins.
+		Allows for greater stability in case of plugin crashes</flag>
+	<flag name="gconf">Enable gnome2 gconf support</flag>
+	<flag name="webm">Use system <pkg>media-libs/libvpx</pkg> for HTML5 WebM
+		video support.</flag>
+	<flag name="minimal">Remove the software development kit and headers</flag>
+</use>
+</pkgmetadata>

@@ -1,0 +1,11 @@
+--- APC-3.0.16/php_apc.c.orig      2007-12-26 23:51:32.000000000 +0100
++++ APC-3.0.16/php_apc.c       2008-01-04 23:34:30.000000000 +0100
+@@ -300,7 +300,7 @@
+         apc_request_init(TSRMLS_C);
+ 
+ #if HAVE_SIGACTION
+-        apc_set_signals();
++        apc_set_signals(TSRMLS_C);
+ #endif
+     }
+     return SUCCESS;

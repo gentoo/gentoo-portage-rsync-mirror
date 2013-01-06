@@ -1,0 +1,29 @@
+# ChangeLog for dev-perl/Passwd-Linux
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Passwd-Linux/ChangeLog,v 1.6 2012/06/24 12:58:55 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Passwd-Linux-1.2.ebuild:
+  Cleanup
+
+*Passwd-Linux-1.200.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +Passwd-Linux-1.200.0.ebuild:
+  Change version scheme
+
+  02 May 2009; Torsten Veller <tove@gentoo.org> -Passwd-Linux-0.70.ebuild:
+  Cleanup
+
+*Passwd-Linux-1.2 (19 Oct 2007)
+
+  19 Oct 2007; Christian Hartmann <ian@gentoo.org> +Passwd-Linux-1.2.ebuild:
+  Version bump
+
+*Passwd-Linux-0.70 (25 Apr 2007)
+
+  25 Apr 2007; Christian Hartmann <ian@gentoo.org>
+  +Passwd-Linux-0.70.ebuild:
+  New package for upcoming nx-server requested by Bernard Cafarelli
+  <voyageur@gentoo.org>

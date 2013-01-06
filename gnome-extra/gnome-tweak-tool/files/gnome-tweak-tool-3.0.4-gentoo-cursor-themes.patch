@@ -1,0 +1,26 @@
+From 4dc16c9c7b409cc39f51031be8202093d22563c9 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gmail.com>
+Date: Mon, 23 May 2011 06:50:28 -0400
+Subject: [PATCH] Support Gentoo's /usr/share/cursors/xorg-x11 cursor theme directory
+
+---
+ gtweak/tweaks/tweak_interface.py |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+diff --git a/gtweak/tweaks/tweak_interface.py b/gtweak/tweaks/tweak_interface.py
+index 33ee362..31f6e1d 100644
+--- a/gtweak/tweaks/tweak_interface.py
++++ b/gtweak/tweaks/tweak_interface.py
+@@ -66,7 +66,8 @@ class CursorThemeSwitcher(GSettingsComboTweak):
+             **options)
+ 
+     def _get_valid_cursor_themes(self):
+-        dirs = ( os.path.join(gtweak.DATA_DIR, "icons"),
++        dirs = ( os.path.join(gtweak.DATA_DIR, "cursors", "xorg-x11"),
++                 os.path.join(gtweak.DATA_DIR, "icons"),
+                  os.path.join(os.path.expanduser("~"), ".icons"))
+         valid = walk_directories(dirs, lambda d:
+                     os.path.isdir(d) and \
+-- 
+1.7.5.rc3
+

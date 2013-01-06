@@ -1,0 +1,9 @@
+# ChangeLog for sci-mathematics/sha1-polyml
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/sha1-polyml/ChangeLog,v 1.1 2012/12/08 08:05:32 gienah Exp $
+
+*sha1-polyml-5.5.0 (08 Dec 2012)
+
+  08 Dec 2012; Mark Wright <gienah@gentoo.org> +metadata.xml,
+  +sha1-polyml-5.5.0.ebuild:
+  Add sci-mathematics/sha1-polyml for sci-mathematics/isabelle

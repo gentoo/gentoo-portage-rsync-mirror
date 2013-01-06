@@ -1,0 +1,30 @@
+Don't call AC_PROG_CXX conditionally
+
+Results in the following error during configure:
+
+"""
+configure: error: conditional "am__fastdepCXX" was never defined.
+Usually this means the macro was only invoked conditionally.
+"""
+
+When need_cxx=no because quadrapassel isn't being built.
+
+--- configure.in
++++ configure.in
+@@ -227,6 +227,7 @@
+ PKG_PROG_PKG_CONFIG([0.15])
+ 
+ AC_PROG_CC
++AC_PROG_CXX
+ AC_PROG_CPP
+ AC_PROG_LN_S
+ AC_PROG_SED
+@@ -236,8 +237,6 @@
+ fi
+ 
+ if test "$need_cxx" = "yes"; then
+-  AC_PROG_CXX
+-
+   # Check whether a C++ was found (AC_PROG_CXX sets $CXX to "g++" even when it
+   # doesn't exist)
+   AC_LANG_PUSH([C++])

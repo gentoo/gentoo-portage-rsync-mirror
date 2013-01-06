@@ -1,0 +1,28 @@
+# ChangeLog for dev-haskell/httpd-shed
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/httpd-shed/ChangeLog,v 1.7 2012/12/10 21:53:13 slyfox Exp $
+
+  10 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> httpd-shed-0.4.ebuild:
+  stable on alpha/ia64/sparc (bug #421351)
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> httpd-shed-0.4.ebuild:
+  Stable for ppc64, wrt bug #421351
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> httpd-shed-0.4.ebuild:
+  Stable for ppc, wrt bug #421351
+
+  25 Sep 2012; Andreas Schuerch <nativemad@gentoo.org> httpd-shed-0.4.ebuild:
+  x86 stable, see bug 421351
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> httpd-shed-0.4.ebuild:
+  move dev-haskell/httpd-shed/httpd-shed-0.4.ebuild ebuild to mirror://hackage
+
+  07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> httpd-shed-0.4.ebuild:
+  Stable for amd64, wrt bug #421351
+
+*httpd-shed-0.4 (04 Mar 2012)
+
+  04 Mar 2012; Mark Wright <gienah@gentoo.org> +httpd-shed-0.4.ebuild,
+  +metadata.xml:
+  Add httpd-shed, which is used in testing http. With same keywords as http as
+  http is a darcs dependency.

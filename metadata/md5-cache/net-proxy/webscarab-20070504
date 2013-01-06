@@ -1,0 +1,9 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=A framework for analysing applications that communicate using the HTTP and HTTPS protocols
+HOMEPAGE=https://www.owasp.org/index.php/Webscarab
+KEYWORDS=amd64 ~ppc x86
+LICENSE=GPL-2
+RDEPEND=>=virtual/jre-1.5
+SLOT=0
+SRC_URI=mirror://sourceforge/owasp/webscarab-selfcontained-20070504-1631.jar
+_md5_=850a2201acd63f77acb25d259a846399

@@ -1,0 +1,23 @@
+# ChangeLog for games-mud/wxmud
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/wxmud/ChangeLog,v 1.5 2011/03/27 13:19:58 nirbheek Exp $
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> wxmud-9999.ebuild:
+  Fix slot-dep on gtk+
+
+  15 Nov 2009; Tomáš Chvátal <scarabeus@gentoo.org> wxmud-9999.ebuild:
+  QA: drop keywords from live package.
+
+  13 Feb 2008; Mart Raudsepp <leio@gentoo.org> wxmud-9999.ebuild:
+  Add ~amd64
+
+  28 Dec 2007; Mart Raudsepp <leio@gentoo.org> wxmud-9999.ebuild:
+  Use games.eclass
+
+*wxmud-9999 (28 Dec 2007)
+
+  28 Dec 2007; Mart Raudsepp <leio@gentoo.org> +metadata.xml,
+  +wxmud-9999.ebuild:
+  Initial import of wxMUD as a live SVN version till first release is out - a
+  graphical MUD client with MXP support amongst other more usual features
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>net-proxy</herd>
+<longdescription>A small and fast caching web proxy designed to be used by one person or a small group of people.</longdescription>
+</pkgmetadata>

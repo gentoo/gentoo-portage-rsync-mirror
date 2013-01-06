@@ -1,0 +1,27 @@
+ data/deja-dup-monitor.desktop.in.in     | 2 +-
+ data/deja-dup-preferences.desktop.in.in | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/data/deja-dup-monitor.desktop.in.in b/data/deja-dup-monitor.desktop.in.in
+index c137b79..1f8e720 100644
+--- a/data/deja-dup-monitor.desktop.in.in
++++ b/data/deja-dup-monitor.desktop.in.in
+@@ -14,4 +14,4 @@ StartupNotify=false
+ NoDisplay=true
+ 
+ Type=Application
+-Categories=System;Utility;Archiving;
++Categories=Utility;Archiving;
+diff --git a/data/deja-dup-preferences.desktop.in.in b/data/deja-dup-preferences.desktop.in.in
+index 0c3a906..fed53ef 100644
+--- a/data/deja-dup-preferences.desktop.in.in
++++ b/data/deja-dup-preferences.desktop.in.in
+@@ -11,7 +11,7 @@ Exec=deja-dup-preferences
+ StartupNotify=true
+ 
+ Type=Application
+-Categories=GNOME;GTK;System;Archiving;Utility;Settings;X-GNOME-SystemSettings;
++Categories=GNOME;GTK;Archiving;Utility;X-GNOME-SystemSettings;
+ 
+ # Translators: Add whatever keywords you want in your language, separated by semicolons
+ # These keywords are used when searching for applications in dashes, etc.

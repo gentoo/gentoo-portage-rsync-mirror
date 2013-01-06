@@ -1,0 +1,49 @@
+# ChangeLog for app-officeext/texmaths
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/texmaths/ChangeLog,v 1.11 2012/11/24 22:17:10 dilfridge Exp $
+
+  24 Nov 2012; Andreas K. Huettel <dilfridge@gentoo.org> -texmaths-0.36.ebuild:
+  Remove old and b0rken
+
+  24 Nov 2012; Agostino Sarubbo <ago@gentoo.org> texmaths-0.36a.ebuild:
+  Stable for x86, wrt bug #444618
+
+  24 Nov 2012; Agostino Sarubbo <ago@gentoo.org> texmaths-0.36a.ebuild:
+  Stable for amd64, wrt bug #444618
+
+  19 Oct 2012; Andreas K. Huettel <dilfridge@gentoo.org> texmaths-0.36a.ebuild:
+  Better SRC_URI
+
+*texmaths-0.36a (19 Oct 2012)
+
+  19 Oct 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +texmaths-0.36a.ebuild:
+  Add re-packed oxt that removes the 'bug workaround' which breaks with lo-3.6
+  ...
+
+  21 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> -texmaths-0.35.ebuild,
+  texmaths-0.36.ebuild:
+  Stable 0.36 on amd64 and x86. Drop older.
+
+*texmaths-0.36 (16 Aug 2012)
+
+  16 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> +texmaths-0.36.ebuild:
+  Bump to latest.
+
+  23 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> texmaths-0.35.ebuild:
+  Stable on amd64 and x86.
+
+*texmaths-0.35 (09 May 2012)
+
+  09 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +texmaths-0.35.ebuild,
+  -texmaths-0.34.ebuild:
+  Version bump wrt bug#415217.
+
+  09 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> texmaths-0.34.ebuild:
+  Use unpack from office-ext eclass now.
+
+*texmaths-0.34 (08 May 2012)
+
+  08 May 2012; Andreas K. Huettel <dilfridge@gentoo.org> +texmaths-0.34.ebuild,
+  +metadata.xml:
+  New package

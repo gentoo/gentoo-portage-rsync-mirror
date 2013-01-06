@@ -1,0 +1,9 @@
+DEFINED_PHASES=install
+DESCRIPTION=V.E.R.A. -- Virtual Entity of Relevant Acronyms for dict
+HOMEPAGE=http://www.dict.org/
+KEYWORDS=~x86 ~ppc ~sparc amd64
+LICENSE=GPL-2
+RDEPEND=>=app-text/dictd-1.5.5
+SLOT=0
+SRC_URI=ftp://ftp.dict.org/pub/dict/pre/dict-vera-1.9-pre.tar.gz
+_md5_=34d29d8edf71f8e01b43484889d1daee

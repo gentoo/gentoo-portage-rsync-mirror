@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<use>
+	<flag name="designer-plugin">Enable designer plugin</flag>
+	<flag name="shapefile">Enable support for ESRI shapefiles</flag>
+</use>
+<herd>kde</herd>
+</pkgmetadata>

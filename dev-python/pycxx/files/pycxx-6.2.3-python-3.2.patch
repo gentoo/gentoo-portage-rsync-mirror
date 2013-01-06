@@ -1,0 +1,232 @@
+http://cxx.svn.sourceforge.net/viewvc?view=revision&revision=266
+
+--- CXX/Python3/ExtensionModule.hxx
++++ CXX/Python3/ExtensionModule.hxx
+@@ -82,8 +82,6 @@
+     extern "C" PyObject *method_varargs_call_handler( PyObject *_self_and_name_tuple, PyObject *_args );
+     extern "C" PyObject *method_keyword_call_handler( PyObject *_self_and_name_tuple, PyObject *_args, PyObject *_keywords );
+ 
+-    extern "C" void do_not_dealloc( void * );
+-
+     template<TEMPLATE_TYPENAME T>
+     class ExtensionModule : public ExtensionModuleBase
+     {
+@@ -134,11 +132,11 @@
+             {
+                 MethodDefExt<T> *method_def = (*i).second;
+ 
+-                static PyObject *self = PyCObject_FromVoidPtr( this, do_not_dealloc );
++                static PyObject *self = PyCapsule_New( this, NULL, NULL );
+ 
+                 Tuple args( 2 );
+                 args[0] = Object( self );
+-                args[1] = Object( PyCObject_FromVoidPtr( method_def, do_not_dealloc ) );
++                args[1] = Object( PyCapsule_New( method_def, NULL, NULL ) );
+ 
+                 PyObject *func = PyCFunction_New
+                                     (
+--- CXX/Python3/ExtensionOldType.hxx
++++ CXX/Python3/ExtensionOldType.hxx
+@@ -178,7 +178,7 @@
+             Tuple self( 2 );
+ 
+             self[0] = Object( this );
+-            self[1] = Object( PyCObject_FromVoidPtr( method_def, do_not_dealloc ) );
++            self[1] = Object( PyCapsule_New( method_def, NULL, NULL ) );
+ 
+             PyObject *func = PyCFunction_New( &method_def->ext_meth_def, self.ptr() );
+ 
+@@ -237,7 +237,7 @@
+                 T *self = static_cast<T *>( self_in_cobject );
+ 
+                 MethodDefExt<T> *meth_def = reinterpret_cast<MethodDefExt<T> *>(
+-                                                PyCObject_AsVoidPtr( self_and_name_tuple[1].ptr() ) );
++                                                PyCapsule_GetPointer( self_and_name_tuple[1].ptr(), NULL ) );
+ 
+                 Object result;
+ 
+@@ -273,7 +273,7 @@
+                 PyObject *self_in_cobject = self_and_name_tuple[0].ptr();
+                 T *self = static_cast<T *>( self_in_cobject );
+                 MethodDefExt<T> *meth_def = reinterpret_cast<MethodDefExt<T> *>(
+-                                                PyCObject_AsVoidPtr( self_and_name_tuple[1].ptr() ) );
++                                                PyCapsule_GetPointer( self_and_name_tuple[1].ptr(), NULL ) );
+ 
+                 Tuple args( _args );
+ 
+@@ -310,7 +310,7 @@
+                 PyObject *self_in_cobject = self_and_name_tuple[0].ptr();
+                 T *self = static_cast<T *>( self_in_cobject );
+                 MethodDefExt<T> *meth_def = reinterpret_cast<MethodDefExt<T> *>(
+-                                                PyCObject_AsVoidPtr( self_and_name_tuple[1].ptr() ) );
++                                                PyCapsule_GetPointer( self_and_name_tuple[1].ptr(), NULL ) );
+ 
+                 Tuple args( _args );
+ 
+--- CXX/Python3/IndirectPythonInterface.hxx
++++ CXX/Python3/IndirectPythonInterface.hxx
+@@ -109,9 +109,6 @@
+ PyTypeObject * _Method_Type();
+ bool _Method_Check( PyObject *op );
+ 
+-PyTypeObject * _CObject_Type();
+-bool _CObject_Check( PyObject *op );
+-
+ PyTypeObject * _Complex_Type();
+ bool _Complex_Check( PyObject *op );
+ 
+--- Src/IndirectPythonInterface.cxx
++++ Src/IndirectPythonInterface.cxx
+@@ -40,7 +40,6 @@
+ namespace Py
+ {
+ bool _CFunction_Check( PyObject *op )   { return op->ob_type == _CFunction_Type(); }
+-bool _CObject_Check( PyObject *op )     { return op->ob_type == _CObject_Type(); }
+ bool _Complex_Check( PyObject *op )     { return op->ob_type == _Complex_Type(); }
+ bool _Dict_Check( PyObject *op )        { return op->ob_type == _Dict_Type(); }
+ bool _Float_Check( PyObject *op )       { return op->ob_type == _Float_Type(); }
+@@ -59,6 +58,7 @@
+ #if PY_MAJOR_VERSION == 2
+ bool _String_Check( PyObject *op )      { return op->ob_type == _String_Type(); }
+ bool _Int_Check( PyObject *op )         { return op->ob_type == _Int_Type(); }
++bool _CObject_Check( PyObject *op )     { return op->ob_type == _CObject_Type(); }
+ #endif
+ #if PY_MAJOR_VERSION >= 3
+ bool _Bytes_Check( PyObject *op )       { return op->ob_type == _Bytes_Type(); }
+@@ -111,7 +111,6 @@
+ static PyObject *ptr__PyFalse = NULL;
+ static PyObject *ptr__PyTrue = NULL;
+ static PyTypeObject *ptr__CFunction_Type = NULL;
+-static PyTypeObject *ptr__CObject_Type = NULL;
+ static PyTypeObject *ptr__Complex_Type = NULL;
+ static PyTypeObject *ptr__Dict_Type = NULL;
+ static PyTypeObject *ptr__Float_Type = NULL;
+@@ -129,6 +128,7 @@
+ #if PY_MAJOR_VERSION == 2
+ static PyTypeObject *ptr__Int_Type = NULL;
+ static PyTypeObject *ptr__String_Type = NULL;
++static PyTypeObject *ptr__CObject_Type = NULL;
+ #endif
+ #if PY_MAJOR_VERSION >= 3
+ static PyTypeObject *ptr__Bytes_Type = NULL;
+@@ -284,7 +284,6 @@
+     ptr__PyTrue                 = GetPyObject_As_PyObjectPointer( "_Py_TrueStruct" );
+ 
+     ptr__CFunction_Type         = GetPyTypeObject_As_PyTypeObjectPointer( "PyCFunction_Type" );
+-    ptr__CObject_Type           = GetPyTypeObject_As_PyTypeObjectPointer( "PyCObject_Type" );
+     ptr__Complex_Type           = GetPyTypeObject_As_PyTypeObjectPointer( "PyComplex_Type" );
+     ptr__Dict_Type              = GetPyTypeObject_As_PyTypeObjectPointer( "PyDict_Type" );
+     ptr__Float_Type             = GetPyTypeObject_As_PyTypeObjectPointer( "PyFloat_Type" );
+@@ -303,6 +302,7 @@
+ #if PY_MAJOR_VERSION == 2
+     ptr__String_Type            = GetPyTypeObject_As_PyTypeObjectPointer( "PyString_Type" );
+     ptr__Int_Type               = GetPyTypeObject_As_PyTypeObjectPointer( "PyInt_Type" );
++    ptr__CObject_Type           = GetPyTypeObject_As_PyTypeObjectPointer( "PyCObject_Type" );
+ #endif
+ #if PY_MAJOR_VERSION >= 3
+     ptr__Bytes_Type             = GetPyTypeObject_As_PyTypeObjectPointer( "PyBytes_Type" );
+@@ -367,7 +367,6 @@
+ PyObject *_True()                       { return ptr__PyTrue; }
+ 
+ PyTypeObject *_CFunction_Type()         { return ptr__CFunction_Type; }
+-PyTypeObject *_CObject_Type()           { return ptr__CObject_Type; }
+ PyTypeObject *_Complex_Type()           { return ptr__Complex_Type; }
+ PyTypeObject *_Dict_Type()              { return ptr__Dict_Type; }
+ PyTypeObject *_Float_Type()             { return ptr__Float_Type; }
+@@ -386,6 +385,7 @@
+ #if PY_MAJOR_VERSION == 2
+ PyTypeObject *_String_Type()            { return ptr__String_Type; }
+ PyTypeObject *_Int_Type()               { return ptr__Int_Type; }
++PyTypeObject *_CObject_Type()           { return ptr__CObject_Type; }
+ #endif
+ #if PY_MAJOR_VERSION >= 3
+ PyTypeObject *_Bytes_Type()             { return ptr__Bytes_Type; }
+@@ -506,7 +506,6 @@
+ PyObject *_True()                       { return Py_True; }
+ 
+ PyTypeObject *_CFunction_Type()         { return &PyCFunction_Type; }
+-PyTypeObject *_CObject_Type()           { return &PyCObject_Type; }
+ PyTypeObject *_Complex_Type()           { return &PyComplex_Type; }
+ PyTypeObject *_Dict_Type()              { return &PyDict_Type; }
+ PyTypeObject *_Float_Type()             { return &PyFloat_Type; }
+@@ -525,6 +524,7 @@
+ #if PY_MAJOR_VERSION == 2
+ PyTypeObject *_String_Type()            { return &PyString_Type; }
+ PyTypeObject *_Int_Type()               { return &PyInt_Type; }
++PyTypeObject *_CObject_Type()           { return &PyCObject_Type; }
+ #endif
+ #if PY_MAJOR_VERSION >= 3
+ PyTypeObject *_Bytes_Type()             { return &PyBytes_Type; }
+--- Src/Python3/cxx_extensions.cxx
++++ Src/Python3/cxx_extensions.cxx
+@@ -1471,13 +1471,13 @@
+         Tuple self_and_name_tuple( _self_and_name_tuple );
+ 
+         PyObject *self_in_cobject = self_and_name_tuple[0].ptr();
+-        void *self_as_void = PyCObject_AsVoidPtr( self_in_cobject );
++        void *self_as_void = PyCapsule_GetPointer( self_in_cobject, NULL );
+         if( self_as_void == NULL )
+             return NULL;
+ 
+         ExtensionModuleBase *self = static_cast<ExtensionModuleBase *>( self_as_void );
+ 
+-        Object result( self->invoke_method_noargs( PyCObject_AsVoidPtr( self_and_name_tuple[1].ptr() ) ) );
++        Object result( self->invoke_method_noargs( PyCapsule_GetPointer( self_and_name_tuple[1].ptr(), NULL ) ) );
+ 
+         return new_reference_to( result.ptr() );
+     }
+@@ -1494,7 +1494,7 @@
+         Tuple self_and_name_tuple( _self_and_name_tuple );
+ 
+         PyObject *self_in_cobject = self_and_name_tuple[0].ptr();
+-        void *self_as_void = PyCObject_AsVoidPtr( self_in_cobject );
++        void *self_as_void = PyCapsule_GetPointer( self_in_cobject, NULL );
+         if( self_as_void == NULL )
+             return NULL;
+ 
+@@ -1504,7 +1504,7 @@
+                 (
+                 self->invoke_method_varargs
+                     (
+-                    PyCObject_AsVoidPtr( self_and_name_tuple[1].ptr() ),
++                    PyCapsule_GetPointer( self_and_name_tuple[1].ptr(), NULL ),
+                     args
+                     )
+                 );
+@@ -1524,7 +1524,7 @@
+         Tuple self_and_name_tuple( _self_and_name_tuple );
+ 
+         PyObject *self_in_cobject = self_and_name_tuple[0].ptr();
+-        void *self_as_void = PyCObject_AsVoidPtr( self_in_cobject );
++        void *self_as_void = PyCapsule_GetPointer( self_in_cobject, NULL );
+         if( self_as_void == NULL )
+             return NULL;
+ 
+@@ -1540,7 +1540,7 @@
+                 (
+                 self->invoke_method_keyword
+                     (
+-                    PyCObject_AsVoidPtr( self_and_name_tuple[1].ptr() ),
++                    PyCapsule_GetPointer( self_and_name_tuple[1].ptr(), NULL ),
+                     args,
+                     keywords
+                     )
+@@ -1556,7 +1556,7 @@
+                     (
+                     self->invoke_method_keyword
+                         (
+-                        PyCObject_AsVoidPtr( self_and_name_tuple[1].ptr() ),
++                        PyCapsule_GetPointer( self_and_name_tuple[1].ptr(), NULL ),
+                         args,
+                         keywords
+                         )
+@@ -1571,9 +1571,6 @@
+     }
+ }
+ 
+-extern "C" void do_not_dealloc( void * )
+-{}
+-
+ 
+ //--------------------------------------------------------------------------------
+ //

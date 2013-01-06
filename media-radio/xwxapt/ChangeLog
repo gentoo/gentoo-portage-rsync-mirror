@@ -1,0 +1,10 @@
+# ChangeLog for media-radio/xwxapt
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xwxapt/ChangeLog,v 1.1 2012/11/02 18:31:25 tomjbe Exp $
+
+*xwxapt-2.1 (02 Nov 2012)
+
+  02 Nov 2012; Thomas Beierlein <tomjbe@gentoo.org> +xwxapt-2.1.ebuild,
+  +metadata.xml:
+  Moved from sunrise (bug #237460). Version bump
+

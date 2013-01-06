@@ -1,0 +1,114 @@
+# ChangeLog for sys-fs/fatsort
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/ChangeLog,v 1.23 2012/07/13 17:00:51 billie Exp $
+
+  13 Jul 2012; Daniel Pielmeier <billie@gentoo.org> -fatsort-0.9.15.247.ebuild:
+  Remove old.
+
+  08 Jul 2012; Johannes Huber <johu@gentoo.org> fatsort-0.9.17.269.ebuild:
+  Stable for x86, wrt bug #425234
+
+  08 Jul 2012; Markos Chandras <hwoarang@gentoo.org> fatsort-0.9.17.269.ebuild:
+  Stable on amd64 wrt bug #425234
+
+*fatsort-0.9.17.269 (16 Jun 2012)
+
+  16 Jun 2012; Daniel Pielmeier <billie@gentoo.org> -fatsort-0.9.16.254.ebuild,
+  +fatsort-0.9.17.269.ebuild:
+  Version bump. Remove old.
+
+*fatsort-0.9.16.254 (28 May 2012)
+
+  28 May 2012; Daniel Pielmeier <billie@gentoo.org> +fatsort-0.9.16.254.ebuild:
+  Version bump.
+
+  25 Jan 2012; Daniel Pielmeier <billie@gentoo.org>
+  -fatsort-0.9.14.1.213.ebuild:
+  Remove old.
+
+  02 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  fatsort-0.9.15.247.ebuild:
+  x86 stable wrt bug #388979
+
+  01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> fatsort-0.9.15.247.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Ian "idella4" Delaney in bug #388979.
+
+*fatsort-0.9.15.247 (16 Oct 2011)
+
+  16 Oct 2011; Daniel Pielmeier <billie@gentoo.org> +fatsort-0.9.15.247.ebuild:
+  Version bump. Switch to EAPI 4.
+
+  09 Jun 2011; Daniel Pielmeier <billie@gentoo.org>
+  -fatsort-0.9.13.1.206.ebuild:
+  Remove old.
+
+  26 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  fatsort-0.9.14.1.213.ebuild:
+  x86 stable wrt bug #355087
+
+  16 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  fatsort-0.9.14.1.213.ebuild:
+  Stable on amd64 wrt bug #355087
+
+*fatsort-0.9.14.1.213 (06 Nov 2010)
+
+  06 Nov 2010; Daniel Pielmeier <billie@gentoo.org>
+  +fatsort-0.9.14.1.213.ebuild:
+  Version bump.
+
+  12 Jul 2010; Daniel Pielmeier <billie@gentoo.org>
+  -fatsort-0.9.12.199.ebuild:
+  Remove old.
+
+  16 Apr 2010; Markos Chandras <hwoarang@gentoo.org>
+  fatsort-0.9.13.1.206.ebuild:
+  Stable on amd64 wrt bug #304051
+
+  03 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  fatsort-0.9.13.1.206.ebuild:
+  x86 stable wrt bug #304051, arch-tested by Andreas Schurch
+
+  12 Jan 2010; Daniel Pielmeier <billie@gentoo.org>
+  fatsort-0.9.13.1.206.ebuild:
+  Cosmetics.
+
+*fatsort-0.9.13.1.206 (12 Jan 2010)
+
+  12 Jan 2010; Daniel Pielmeier <billie@gentoo.org>
+  -fatsort-0.9.10.187-r1.ebuild, -fatsort-0.9.11.196.ebuild,
+  +fatsort-0.9.13.1.206.ebuild:
+  Version bump. Remove old.
+
+*fatsort-0.9.12.199 (30 Sep 2009)
+
+  30 Sep 2009; Pielmeier Daniel <billie@gentoo.org>
+  +fatsort-0.9.12.199.ebuild:
+  Version bump.
+
+*fatsort-0.9.11.196 (28 Sep 2009)
+
+  28 Sep 2009; Pielmeier Daniel <billie@gentoo.org> -fatsort-0.9.9.1.ebuild,
+  -fatsort-0.9.10.187.ebuild, +fatsort-0.9.11.196.ebuild:
+  Version bump. Remove old.
+
+*fatsort-0.9.10.187-r1 (29 May 2009)
+
+  29 May 2009; Pielmeier Daniel <billie@gentoo.org> metadata.xml,
+  +fatsort-0.9.10.187-r1.ebuild:
+  Taking the ebuild, thanks to darkside for proxy committing. Adding a new
+  revision to make use of EAPI 2.
+
+*fatsort-0.9.10.187 (08 Dec 2008)
+
+  08 Dec 2008; Jeremy Olexa <darkside@gentoo.org>
+  +fatsort-0.9.10.187.ebuild:
+  version bump by Daniel Pielmeier
+
+*fatsort-0.9.9.1 (04 Dec 2008)
+
+  04 Dec 2008; Jeremy Olexa <darkside@gentoo.org> +metadata.xml,
+  +fatsort-0.9.9.1.ebuild:
+  New package. sys-fs/fatsort, "Sorts files on FAT16/32 partitions, ideal for
+  basic audio players." ebuild by Daniel Pielmeier, initial ebuild by Joerg S.
+  bug #170425. Daniel will be the maintainer, I will proxy commit for him

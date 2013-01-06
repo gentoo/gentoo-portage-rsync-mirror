@@ -1,0 +1,48 @@
+From b1ec2058673f8ca582a490c2dd4a8405698221ae Mon Sep 17 00:00:00 2001
+From: Eliot Horowitz <eliot@10gen.com>
+Date: Thu, 28 Jul 2011 19:54:51 -0400
+Subject: [PATCH] compile on linux3 SERVER-3457
+
+---
+ SConstruct                |    4 +++-
+ distsrc/client/SConstruct |    2 +-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/SConstruct b/SConstruct
+index 55d34d5..c47d3f6 100644
+--- a/SConstruct
++++ b/SConstruct
+@@ -343,6 +343,8 @@ processInfoFiles = [ "util/processinfo.cpp" ]
+ 
+ if os.path.exists( "util/processinfo_" + os.sys.platform + ".cpp" ):
+     processInfoFiles += [ "util/processinfo_" + os.sys.platform + ".cpp" ]
++elif os.sys.platform == "linux3":
++    processInfoFiles += [ "util/processinfo_linux2.cpp" ]
+ else:
+     processInfoFiles += [ "util/processinfo_none.cpp" ]
+ 
+@@ -474,7 +476,7 @@ if "darwin" == os.sys.platform:
+         env.Append( CPPPATH=filterExists(["/sw/include" , "/opt/local/include"]) )
+         env.Append( LIBPATH=filterExists(["/sw/lib/", "/opt/local/lib"]) )
+ 
+-elif "linux2" == os.sys.platform:
++elif "linux2" == os.sys.platform or "linux3" == os.sys.platform:
+     linux = True
+     platform = "linux"
+ 
+diff --git a/distsrc/client/SConstruct b/distsrc/client/SConstruct
+index c2d309a..54fc943 100755
+--- a/distsrc/client/SConstruct
++++ b/distsrc/client/SConstruct
+@@ -41,7 +41,7 @@ linux = False
+ if "darwin" == os.sys.platform:
+     addExtraLibs( "/opt/local/" )
+     nix = True
+-elif "linux2" == os.sys.platform:
++elif "linux2" == os.sys.platform or "linux3" == os.sys.platform:
+     nix = True
+     linux = True
+ 
+-- 
+1.7.5.4
+

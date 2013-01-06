@@ -1,0 +1,296 @@
+From 40f1f558b5b0ccd9d60e34178fbebf376ed48b5f Mon Sep 17 00:00:00 2001
+From: Mike Gilbert <floppym@gentoo.org>
+Date: Fri, 6 Apr 2012 21:20:23 -0400
+Subject: [PATCH] Gentoo changes
+
+---
+ Makefile.inc                    |    2 +-
+ lib/libcrypto/libmd5/Makefile   |    2 +-
+ lib/libcrypto/libsha1/Makefile  |    2 +-
+ lib/libcrypto/libsha2/Makefile  |    2 +-
+ lib/libdns/Makefile             |    2 +-
+ lib/libipsecconf/Makefile       |    2 +-
+ lib/libisc/Makefile             |    2 +-
+ lib/liblwres/Makefile           |    2 +-
+ lib/libopenswan/Makefile        |    2 +-
+ packaging/makefiles/module.make |    1 -
+ programs/Makefile.program       |    8 +-------
+ programs/pluto/Makefile.options |    5 +++--
+ programs/rsasigkey/Makefile     |    3 ++-
+ programs/setup/Makefile         |   10 ++--------
+ programs/showhostkey/Makefile   |    2 +-
+ testing/utils/make-uml.sh       |    2 +-
+ 16 files changed, 19 insertions(+), 30 deletions(-)
+
+diff --git a/Makefile.inc b/Makefile.inc
+index c827328..f63e660 100644
+--- a/Makefile.inc
++++ b/Makefile.inc
+@@ -55,7 +55,7 @@ export SHELL
+ DESTDIR?=
+ 
+ # "local" part of tree, used in building other pathnames
+-INC_USRLOCAL=/usr/local
++INC_USRLOCAL?=/usr
+ 
+ # PUBDIR is where the "ipsec" command goes; beware, many things define PATH
+ # settings which are assumed to include it (or at least, to include *some*
+diff --git a/lib/libcrypto/libmd5/Makefile b/lib/libcrypto/libmd5/Makefile
+index 2d6c566..948ba38 100644
+--- a/lib/libcrypto/libmd5/Makefile
++++ b/lib/libcrypto/libmd5/Makefile
+@@ -12,7 +12,7 @@ LIB=libmd5.a
+ 
+ ifeq ($(USE_LIBNSS),true)
+ CFLAGS+=-DHAVE_LIBNSS
+-CFLAGS+=-I/usr/include/nspr4 -I/usr/include/nss3
++CFLAGS+=-I/usr/include/nspr -I/usr/include/nss
+ endif
+ 
+ include ${srcdir}../../Makefile.library
+diff --git a/lib/libcrypto/libsha1/Makefile b/lib/libcrypto/libsha1/Makefile
+index a2c006c..1f7bc3e 100644
+--- a/lib/libcrypto/libsha1/Makefile
++++ b/lib/libcrypto/libsha1/Makefile
+@@ -12,7 +12,7 @@ LIB=libsha1.a
+ 
+ ifeq ($(USE_LIBNSS),true)
+ CFLAGS+=-DHAVE_LIBNSS  
+-CFLAGS+=-I/usr/include/nspr4 -I/usr/include/nss3
++CFLAGS+=-I/usr/include/nspr -I/usr/include/nss
+ endif
+ 
+ 
+diff --git a/lib/libcrypto/libsha2/Makefile b/lib/libcrypto/libsha2/Makefile
+index 7db2862..7f1517f 100644
+--- a/lib/libcrypto/libsha2/Makefile
++++ b/lib/libcrypto/libsha2/Makefile
+@@ -15,5 +15,5 @@ include ${srcdir}../../Makefile.library
+ 
+ ifeq ($(USE_LIBNSS),true)
+ CFLAGS+=-DHAVE_LIBNSS
+-INCLUDES+=-I/usr/include/nspr4 -I/usr/include/nss3
++INCLUDES+=-I/usr/include/nspr -I/usr/include/nss
+ endif
+diff --git a/lib/libdns/Makefile b/lib/libdns/Makefile
+index 9b1993f..be3f896 100644
+--- a/lib/libdns/Makefile
++++ b/lib/libdns/Makefile
+@@ -31,7 +31,7 @@ CINCLUDES =	-I${srcdir}${ISCARCH}/include \
+ 		-I. -I./include -I${srcdir}include \
+ 		-I${srcdir}../libisc/include
+ CDEFINES = ${USERCOMPILE} ${PORTINCLUDE}
+-CWARNINGS = -Werror
++CWARNINGS =
+ 
+ CFLAGS+=${CINCLUDES} ${CDEFINES} ${CWARNINGS}
+ 
+diff --git a/lib/libipsecconf/Makefile b/lib/libipsecconf/Makefile
+index 02422fb..b4ccc10 100644
+--- a/lib/libipsecconf/Makefile
++++ b/lib/libipsecconf/Makefile
+@@ -33,7 +33,7 @@ SRCS+=interfaces.c
+ #CFLAGS+=-DFIPS_CHECK
+ ifeq ($(USE_LIBNSS),true)
+ CFLAGS+=-DHAVE_LIBNSS
+-CFLAGS+=-I/usr/include/nspr4 -I/usr/include/nss3
++CFLAGS+=-I/usr/include/nspr -I/usr/include/nss
+ endif
+ 
+ ifeq ($(USE_NM),true)
+diff --git a/lib/libisc/Makefile b/lib/libisc/Makefile
+index 777b4b2..dcb082a 100644
+--- a/lib/libisc/Makefile
++++ b/lib/libisc/Makefile
+@@ -23,7 +23,7 @@ CINCLUDES =	-I${srcdir}${ISCARCH}/include \
+ 		-I. -I./include -I${srcdir}include \
+ 		$(PORTINCLUDE) -I${OPENSWANSRCDIR}/include
+ CDEFINES = -DHAVE_STRERROR ${USERCOMPILE} ${PORTINCLUDE}
+-# CWARNINGS = -Werror
++CWARNINGS =
+ 
+ CFLAGS+=${CINCLUDES} ${CDEFINES} ${CWARNINGS}
+ 
+diff --git a/lib/liblwres/Makefile b/lib/liblwres/Makefile
+index 4b045cc..c6d18a4 100644
+--- a/lib/liblwres/Makefile
++++ b/lib/liblwres/Makefile
+@@ -23,7 +23,7 @@ CINCLUDES =	-I${srcdir}${ISCARCH}/include \
+ 		-I${srcdir}../libisc/include \
+ 		-I. -I./include -I${srcdir}include 
+ CDEFINES =
+-CWARNINGS = -Werror
++CWARNINGS =
+ 
+ CFLAGS+=${USERCOMPILE} ${PORTINCLUDE} ${CINCLUDES} ${CDEFINES} ${CWARNINGS} 
+ 
+diff --git a/lib/libopenswan/Makefile b/lib/libopenswan/Makefile
+index 1661522..033ef86 100644
+--- a/lib/libopenswan/Makefile
++++ b/lib/libopenswan/Makefile
+@@ -103,7 +103,7 @@ endif
+ 
+ ifeq ($(USE_LIBNSS),true)
+ CFLAGS+=-DHAVE_LIBNSS
+-CFLAGS+=-I/usr/include/nspr4 -I/usr/include/nss3
++CFLAGS+=-I/usr/include/nspr -I/usr/include/nss
+ endif
+ 
+ ifeq ($(USE_MODP_RFC5114),true)
+diff --git a/packaging/makefiles/module.make b/packaging/makefiles/module.make
+index 74a9f09..6f21471 100644
+--- a/packaging/makefiles/module.make
++++ b/packaging/makefiles/module.make
+@@ -25,7 +25,6 @@ EXTRA_CFLAGS += -DDISABLE_UDP_CHECKSUM
+ 
+ EXTRA_CFLAGS += $(KLIPSCOMPILE)
+ EXTRA_CFLAGS += -Wall -DIPCOMP_PREFIX
+-#EXTRA_CFLAGS += -Werror
+ #EXTRA_CFLAGS += -Wconversion 
+ #EXTRA_CFLAGS += -Wmissing-prototypes 
+ # 'override CFLAGS' should really be 'EXTRA_CFLAGS'
+diff --git a/programs/Makefile.program b/programs/Makefile.program
+index 342f6c4..276777f 100644
+--- a/programs/Makefile.program
++++ b/programs/Makefile.program
+@@ -48,12 +48,7 @@ CFLAGS+=-DFINALCONFDDIR=\"${FINALCONFDDIR}\"
+ CFLAGS+=-DFINALCONFFILE=\"${FINALCONFFILE}\"
+ CFLAGS+=-DFINALVARDIR=\"${FINALVARDIR}\"
+ 
+-# die if there are any warnings
+-ifndef WERROR
+-WERROR:= -Werror
+-endif
+ 
+-CFLAGS+= ${WERROR}
+ 
+ ifneq ($(LD_LIBRARY_PATH),)
+ LDFLAGS=-L$(LD_LIBRARY_PATH)
+@@ -104,8 +99,6 @@ endif
+ ifneq ($(NOINSTALL),true)
+ 
+ doinstall:: $(PROGRAM) $(CONFFILES) $(EXTRA8MAN) $(EXTRA5MAN) $(EXTRA5PROC) $(LIBFILES) $(CONFDFILES)
+-	# remove any old vendor file installed previously
+-	@rm -f $(FINALLIBEXECDIR)/vendor
+ 	@mkdir -p $(PROGRAMDIR) $(MANDIR8) $(MANDIR5) $(LIBDIR) $(CONFDIR) $(CONFDDIR) $(CONFDDIR)/$(CONFDSUBDIR) $(EXAMPLECONFDIR)
+ 	@if [ -n "$(PROGRAM)" ]; then $(INSTALL) $(INSTBINFLAGS) $(PROGRAM) $(PROGRAMDIR); fi
+ 	@$(foreach f, $(addsuffix .8, $(PROGRAM)), \
+@@ -180,6 +173,7 @@ ifeq ($(USE_LIBNSS),false)
+ LDLIBS=${LIBS} ${USERLINK} ${LIBS} ${EXTRALIBS} -lgmp
+ else
+ LDLIBS=${LIBS} ${USERLINK} ${LIBS} ${EXTRALIBS} -lgmp -lnspr4 -lnss3
++LDFLAGS+=-L/usr/lib/nspr -L/usr/lib/nss
+ endif
+ 
+ 
+diff --git a/programs/pluto/Makefile.options b/programs/pluto/Makefile.options
+index bf09b32..a7bcd12 100644
+--- a/programs/pluto/Makefile.options
++++ b/programs/pluto/Makefile.options
+@@ -44,7 +44,7 @@ endif
+ 
+ # -O on Linux makes gcc coredump when compiling sha1.c
+ # -Wundef is nice but RHL5.2 compiler doesn't support it
+-CFLAGS +=-g -Wall -W -Wmissing-prototypes -Wpointer-arith -Wbad-function-cast \
++CFLAGS +=-Wall -W -Wmissing-prototypes -Wpointer-arith -Wbad-function-cast \
+ 	-Wcast-qual -Wmissing-declarations -Wwrite-strings \
+ 	-Wstrict-prototypes # -Wundef
+ 
+@@ -58,7 +58,7 @@ HDRDIRS = -I${OPENSWANSRCDIR}/programs/pluto/linux26 -I${OPENSWANSRCDIR}/include
+ 
+ # Use LIBNSS
+ ifeq ($(USE_LIBNSS),true)
+-HDRDIRS+= -I/usr/include/nspr4 -I/usr/include/nss3	
++HDRDIRS+= -I/usr/include/nspr -I/usr/include/nss
+ endif
+ 
+ # BYTE_ORDER = -DBIG_ENDIAN=4321 -DLITTLE_ENDIAN=1234 -DBYTE_ORDER=BIG_ENDIAN
+@@ -318,6 +318,7 @@ HAVE_LIBNSS=1
+ DEFINES+=-DHAVE_LIBNSS
+ LIBSPLUTO+= -lnspr4
+ LIBSPLUTO+= -lnss3
++LDFLAGS+=-L/usr/lib/nspr -L/usr/lib/nss
+ # For avoiding implicit DSO linking
+ LIBSPLUTO+= -lpthread
+ ifeq ($(USE_FIPSCHECK),true)
+diff --git a/programs/rsasigkey/Makefile b/programs/rsasigkey/Makefile
+index 6c87280..ac117d5 100644
+--- a/programs/rsasigkey/Makefile
++++ b/programs/rsasigkey/Makefile
+@@ -21,13 +21,14 @@ ifeq ($(USE_FIPSCHECK),true)
+ FIPS_CHECK=1
+ CFLAGS+=-DFIPS_CHECK
+ endif
+-INCLUDES+=-I/usr/include/nspr4 -I/usr/include/nss3
++INCLUDES+=-I/usr/include/nspr -I/usr/include/nss
+ endif
+ 
+ PROGRAM=rsasigkey
+ LIBS=${OPENSWANLIB} -lgmp
+ ifeq ($(USE_LIBNSS),true)
+ LIBS+= -lnspr4 -lnss3 -lplc4
++LDFLAGS+=-L/usr/lib/nspr -L/usr/lib/nss
+ ifeq ($(USE_FIPSCHECK),true)
+ LIBS+=  -lfipscheck
+ endif
+diff --git a/programs/setup/Makefile b/programs/setup/Makefile
+index 7ac3dbe..ce0ba07 100644
+--- a/programs/setup/Makefile
++++ b/programs/setup/Makefile
+@@ -14,11 +14,7 @@
+ OPENSWANSRCDIR?=$(shell cd ../..; pwd)
+ include ${OPENSWANSRCDIR}/Makefile.inc
+ 
+-# this dance is because setup has to get installed as /etc/rc.d/init.d/ipsec
+-# not as /etc/rc.d/init.d/setup.
+-PROGRAMDIR=$(RCDIR)
+ PROGRAM=setup
+-NOINSTALL=true
+ EXTRA8MAN=setup.8
+ 
+ include ${srcdir}../Makefile.program
+@@ -32,13 +28,11 @@ doinstall:: $(PROGRAM) $(CONFFILES) $(EXTRA8MAN) $(EXTRA5MAN) $(EXTRA5PROC) $(LI
+ 	# remove any old vendor file installed previously
+ 	@rm -f $(BINDIR)/setup
+ 	# check the directories we need exist (ie., make install DESTDIR=/tmp/IPsec)
+-	@mkdir -p $(RCDIR) $(BINDIR)
++	@mkdir -p $(BINDIR)
+ 	# install and link everything
+-	@$(INSTALL) $(INSTBINFLAGS) setup $(RCDIR)/ipsec
+-	@ln -s $(FINALRCDIR)/ipsec $(BINDIR)/setup
++	@$(INSTALL) $(INSTBINFLAGS) setup $(BINDIR)/setup
+ 
+ install_file_list::
+-	@echo $(RCDIR)/ipsec
+ 	@echo $(BINDIR)/setup
+ 
+ cleanall::
+diff --git a/programs/showhostkey/Makefile b/programs/showhostkey/Makefile
+index 3a127fc..decaf1c 100644
+--- a/programs/showhostkey/Makefile
++++ b/programs/showhostkey/Makefile
+@@ -16,7 +16,7 @@ OPENSWANSRCDIR?=$(shell cd ../..; pwd)
+ include ${OPENSWANSRCDIR}/Makefile.inc
+ ifeq ($(USE_LIBNSS),true)
+ CFLAGS+=-DHAVE_LIBNSS
+-INCLUDES+=-I/usr/include/nspr4 -I/usr/include/nss3
++INCLUDES+=-I/usr/include/nspr -I/usr/include/nss
+ endif
+ 
+ PROGRAM=showhostkey
+diff --git a/testing/utils/make-uml.sh b/testing/utils/make-uml.sh
+index b8ee039..cb8a232 100755
+--- a/testing/utils/make-uml.sh
++++ b/testing/utils/make-uml.sh
+@@ -264,7 +264,7 @@ fi
+ 
+ cd $OPENSWANSRCDIR || exit 1
+ 
+-make ${WERROR:-WERROR=-Werror} USE_OBJDIR=true USE_IPSECPOLICY=true programs
++make ${WERROR:-WERROR=} USE_OBJDIR=true USE_IPSECPOLICY=true programs
+ 
+ # now, execute the Makefile that we have created!
+ cd $POOLSPACE && make $OPENSWANHOSTS 
+-- 
+1.7.9.4
+

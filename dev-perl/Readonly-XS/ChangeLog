@@ -1,0 +1,20 @@
+# ChangeLog for dev-perl/Readonly-XS
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly-XS/ChangeLog,v 1.4 2012/06/24 12:59:10 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Readonly-XS-1.05.ebuild:
+  Cleanup
+
+*Readonly-XS-1.50.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +Readonly-XS-1.50.0.ebuild:
+  Change version scheme
+
+*Readonly-XS-1.05 (10 Apr 2010)
+
+  10 Apr 2010; Torsten Veller <tove@gentoo.org> +Readonly-XS-1.05.ebuild,
+  +metadata.xml:
+  Initial commit for Padre

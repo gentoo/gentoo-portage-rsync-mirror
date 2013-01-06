@@ -1,0 +1,10 @@
+# ChangeLog for sci-mathematics/kodkodi
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkodi/ChangeLog,v 1.1 2012/12/05 10:44:14 gienah Exp $
+
+*kodkodi-1.5.2 (05 Dec 2012)
+
+  05 Dec 2012; Mark Wright <gienah@gentoo.org> +kodkodi-1.5.2.ebuild,
+  +metadata.xml:
+  Add kodkodi. Required for sci-mathematics/isabelle nitpick couter-example
+  checking.

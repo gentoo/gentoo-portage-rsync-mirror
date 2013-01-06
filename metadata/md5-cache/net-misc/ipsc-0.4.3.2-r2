@@ -1,0 +1,9 @@
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=IP Subnet Calculator
+HOMEPAGE=http://packages.debian.org/unstable/net/ipsc
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=mirror://gentoo/ipsc-0.4.3.2.tar.bz2
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=c5cff48f5a8769fa4eb3c270ec5916c1

@@ -1,0 +1,10 @@
+DEFINED_PHASES=install postinst
+DEPEND=>=app-i18n/scim-1.0 >=app-i18n/prime-1.0.0 virtual/pkgconfig
+DESCRIPTION=Japanese input method PRIME IMEngine for SCIM
+HOMEPAGE=http://scim-imengine.sourceforge.jp/index.cgi?cmd=view;name=SCIMPRIME
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+RDEPEND=>=app-i18n/scim-1.0 >=app-i18n/prime-1.0.0
+SLOT=0
+SRC_URI=mirror://sourceforge.jp/scim-imengine/19007/scim-prime-1.0.0.tar.gz
+_md5_=2f1d57a635451f01456293a7a1536ef0

@@ -1,0 +1,29 @@
+--- simgear-2.4.0/simgear/structure/Singleton.hxx
++++ simgear-2.4.0/simgear/structure/Singleton.hxx
+@@ -1,7 +1,7 @@
+ #ifndef SIMGEAR_SINGLETON_HXX
+ #define SIMGEAR_SINGLETON_HXX 1
+ 
+-#include <boost/pool/detail/singleton.hpp>
++#include "boost/thread/detail/singleton.hpp"
+ 
+ #include <osg/Referenced>
+ #include <osg/ref_ptr>
+@@ -22,7 +22,7 @@
+     static Class* instance()
+     {
+         Class& singleton
+-            = boost::details::pool::singleton_default<Class>::instance();
++            = boost::detail::thread::singleton<Class>::instance();
+         return &singleton;
+     }
+ };
+@@ -38,7 +38,7 @@
+     static RefClass* instance()
+     {
+         SingletonRefPtr& singleton
+-            = boost::details::pool::singleton_default<SingletonRefPtr>::instance();
++            = boost::detail::thread::singleton<SingletonRefPtr>::instance();
+         return singleton.ptr.get();
+     }
+ private:

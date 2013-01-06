@@ -1,0 +1,70 @@
+# ChangeLog for sci-chemistry/aria
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.15 2012/07/10 07:14:24 jlec Exp $
+
+  10 Jul 2012; Justin Lecher <jlec@gentoo.org> -aria-2.3.1.ebuild,
+  -aria-2.3.2.ebuild, -aria-2.3.2-r1.ebuild, -aria-2.3.2-r2.ebuild:
+  Drop old
+
+  10 Jul 2012; Jeff Horelick <jdhore@gentoo.org> aria-2.3.2-r3.ebuild:
+  marked x86 per bug 419885
+
+  12 Jun 2012; Agostino Sarubbo <ago@gentoo.org> aria-2.3.2-r3.ebuild:
+  Stable for amd64, wrt bug #419885
+
+*aria-2.3.2-r3 (21 Mar 2012)
+
+  21 Mar 2012; Justin Lecher <jlec@gentoo.org> +aria-2.3.2-r3.ebuild,
+  +files/aria-2.3.2-through-space-2.patch:
+  Added latest correction to through-space patch needed for global name
+  'excludeSimulated' is not defined
+
+*aria-2.3.2-r2 (11 Oct 2011)
+
+  11 Oct 2011; Justin Lecher <jlec@gentoo.org> +aria-2.3.2-r2.ebuild,
+  +files/aria-2.3.2-python.patch:
+  Added fix for python import
+
+*aria-2.3.2-r1 (07 Oct 2011)
+
+  07 Oct 2011; Justin Lecher <jlec@gentoo.org> +aria-2.3.2-r1.ebuild,
+  +files/aria-2.3.2-through-space.patch:
+  Add patches for newer ccpn data model, kindly provided by Tim Stevens
+
+  30 Aug 2011; Justin Lecher <jlec@gentoo.org> aria-2.3.2.ebuild:
+  Corrected dep version of cns so that new changes are present
+
+*aria-2.3.2 (29 Aug 2011)
+
+  29 Aug 2011; Justin Lecher <jlec@gentoo.org> aria-2.3.1.ebuild,
+  +aria-2.3.2.ebuild, metadata.xml:
+  Version Bump sci-chemistry/aria-2.3.2, 379153
+
+  18 Nov 2010; Justin Lecher <jlec@gentoo.org> -files/2.2_p2-numpy.patch,
+  -files/2.2_p2-test.patch, -files/sa_ls_cool2.patch, -aria-2.2_p2.ebuild:
+  Dropped old
+
+  22 Jul 2010; Justin Lecher <jlec@gentoo.org> aria-2.3.1.ebuild:
+  Added clashscore as DEP
+
+  19 Jul 2010; Justin Lecher <jlec@gentoo.org> aria-2.3.1.ebuild:
+  Fixed DEPS
+
+  04 Apr 2010; Justin Lecher <jlec@gentoo.org> Manifest:
+  distfile digest fix
+
+*aria-2.3.1 (20 Mar 2010)
+
+  20 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org> +aria-2.3.1.ebuild:
+  Version Bump
+
+  07 Mar 2010; Justin Lecher (jlec) <jlec@gentoo.org> aria-2.2_p2.ebuild:
+  keyworded for *-linux, tested by me
+
+*aria-2.2_p2 (06 Feb 2010)
+
+  06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
+  +files/2.2_p2-numpy.patch, +aria-2.2_p2.ebuild, +files/2.2_p2-test.patch,
+  +files/sa_ls_cool2.patch, +metadata.xml:
+  Initial commit
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>openoffice</herd>
+<use>
+	<flag name='gsf'>Add support for structured files using <pkg>gnome-extra/libgsf</pkg></flag>
+	<flag name='visio'>Add support for visio format using <pkg>media-libs/libvisio</pkg></flag>
+	<flag name='wpg'>Add support for wpg format using <pkg>app-text/libwpg</pkg></flag>
+	<flag name='wps'>Add support for wps format using <pkg>app-text/libwps</pkg></flag>
+</use>
+</pkgmetadata>

@@ -1,0 +1,103 @@
+# ChangeLog for dev-python/python-openid
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/ChangeLog,v 1.18 2011/05/24 21:02:40 maekke Exp $
+
+  24 May 2011; Markus Meier <maekke@gentoo.org> python-openid-2.2.5.ebuild:
+  x86 stable, bug #365537
+
+  05 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  python-openid-2.2.5.ebuild:
+  Stable on amd64 wrt bug #365537
+
+  21 Nov 2010; Raúl Porcel <armin76@gentoo.org> python-openid-2.2.5.ebuild:
+  Add ~arm wrt #345299
+
+  30 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-openid-2.2.5.ebuild:
+  Fix dependencies.
+
+*python-openid-2.2.5 (28 Jun 2010)
+
+  28 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -python-openid-2.2.4.ebuild, +python-openid-2.2.5.ebuild:
+  Version bump.
+
+  08 Feb 2010; Peter Volkov <pva@gentoo.org> python-openid-2.2.4.ebuild:
+  Add inherit eutils for epatch.
+
+  12 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-openid-2.2.4.ebuild:
+  Fix tests (bug #295962).
+
+  01 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-openid-2.2.4.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+*python-openid-2.2.4 (03 Sep 2009)
+
+  03 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  +python-openid-2.2.4.ebuild:
+  Bump to 2.2.4, fixes #283621
+
+*python-openid-2.2.1 (06 Oct 2008)
+
+  06 Oct 2008; Ali Polatel <hawking@gentoo.org>
+  -python-openid-1.2.0-r1.ebuild, -python-openid-2.1.1.ebuild,
+  -python-openid-2.2.0.ebuild, +python-openid-2.2.1.ebuild:
+  Version bump. Drop old.
+
+*python-openid-2.2.0 (25 Jun 2008)
+
+  25 Jun 2008; Ali Polatel <hawking@gentoo.org> +python-openid-2.2.0.ebuild:
+  Version bump.
+
+*python-openid-2.1.1 (13 Mar 2008)
+
+  13 Mar 2008; Rob Cakebread <pythonhead@gentoo.org>
+  -python-openid-2.0.1.ebuild, +python-openid-2.1.1.ebuild:
+  Version bump, dropped old version. Thanks Oldrich Jedlicka
+  <oldium.pro@seznam.cz> bug #213058
+
+*python-openid-2.0.1 (23 Jun 2007)
+
+  23 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  -python-openid-2.0.0.ebuild, +python-openid-2.0.1.ebuild:
+  Version bump, cleanup, fixed deps. Dropped old version.
+
+*python-openid-2.0.0 (07 Jun 2007)
+
+  07 Jun 2007; Rob Cakebread <pythonhead@gentoo.org>
+  +files/python-openid-2.0.0-gentoo-test_fetchers.diff,
+  +python-openid-2.0.0.ebuild:
+  Version bump, added dep for pycrypto removed deps for python-yadis
+  python-urljr. Thanks Paul Rauch <LightLan@lightlan.de>
+
+  01 Jun 2007; Rob Cakebread <pythonhead@gentoo.org>
+  python-openid-1.2.0-r1.ebuild:
+  Added server db USE flags
+
+  31 May 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  python-openid-1.2.0-r1.ebuild:
+  Marked ~amd64, bug #180481. Fixed tests to skip storetest.
+
+*python-openid-1.2.0-r1 (31 May 2007)
+
+  31 May 2007; Rob Cakebread <pythonhead@gentoo.org>
+  -python-openid-1.2.0.ebuild, +python-openid-1.2.0-r1.ebuild:
+  Dropped amd64 keyword due to two missing deps bug#180397 - Thanks Paul Rauch
+  <LightLan@lightlan.de>. Added src_test, missing deps for python-yadis,
+  python-urljr and USE/dep for postgres/pyscopg, added PYTHON_MODNAME. Dropped
+  old version.
+
+  04 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
+  python-openid-1.2.0.ebuild:
+  Corrected license.
+
+  04 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
+  python-openid-1.2.0.ebuild:
+  Added ~amd64 keyword.
+
+  03 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
+  python-openid-1.2.0.ebuild, +metadata.xml:
+  Inital ebuild.
+

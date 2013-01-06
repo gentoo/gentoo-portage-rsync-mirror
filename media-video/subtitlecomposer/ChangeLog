@@ -1,0 +1,58 @@
+# ChangeLog for media-video/subtitlecomposer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.11 2012/09/11 10:16:53 johu Exp $
+
+  11 Sep 2012; Johannes Huber <johu@gentoo.org>
+  subtitlecomposer-0.5.3-r1.ebuild, subtitlecomposer-0.5.3.ebuild:
+  Add slot dependency on media-libs/gstreamer.
+
+*subtitlecomposer-0.5.3-r1 (25 Aug 2012)
+
+  25 Aug 2012; Chris Reffett <creffett@gentoo.org>
+  +subtitlecomposer-0.5.3-r1.ebuild:
+  Bump to EAPI 4.
+
+  01 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  files/subtitlecomposer-linkage-patch.patch:
+  Use absolute paths in patch so we won't get QA warning.
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  subtitlecomposer-0.5.3.ebuild:
+  EAPI3
+
+  12 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  subtitlecomposer-0.5.3.ebuild:
+  x86 stable wrt bug #340213
+
+  10 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  subtitlecomposer-0.5.3.ebuild:
+  Stable on amd64 wrt bug #340213
+
+  24 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  subtitlecomposer-0.5.3.ebuild, +files/subtitlecomposer-0.5.3-gcc45.patch:
+  Fix build with GCC-4.5 wrt bug 323055. Thanks to Diego for reporting.
+
+  08 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  subtitlecomposer-0.5.3.ebuild:
+  List phonon dependency explicitly, convert mycmakeargs to array
+
+*subtitlecomposer-0.5.3 (05 Jun 2009)
+
+  05 Jun 2009; Ben de Groot <yngwin@gentoo.org>
+  +subtitlecomposer-0.5.3.ebuild,
+  +files/subtitlecomposer-linkage-patch.patch, metadata.xml:
+  Version bump. Thanks to Maciej Mrozowski (reavertm) for developing this
+  0.5.x version in the kde overlay. Fixes bug 249055.
+
+*subtitlecomposer-0.4.3 (15 Feb 2009)
+
+  15 Feb 2009; Carsten Lohrke <carlo@gentoo.org>
+  +subtitlecomposer-0.4.3.ebuild:
+  Version bump. Correct KDE dependency.
+
+*subtitlecomposer-0.4.1 (14 Jun 2008)
+
+  14 Jun 2008; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +subtitlecomposer-0.4.1.ebuild:
+  Initial import. Thanks to the various people in bug 202503 for reporting,
+  submitting and improving the ebuild.

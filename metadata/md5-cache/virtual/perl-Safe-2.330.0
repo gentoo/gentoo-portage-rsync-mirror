@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Safe
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86
+RDEPEND=~perl-core/Safe-2.330.0
+SLOT=0
+_md5_=533e3c7130a79b157785b70aa91f5007

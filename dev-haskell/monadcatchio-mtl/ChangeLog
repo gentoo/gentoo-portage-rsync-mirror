@@ -1,0 +1,23 @@
+# ChangeLog for dev-haskell/monadcatchio-mtl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monadcatchio-mtl/ChangeLog,v 1.4 2012/11/18 13:59:18 gienah Exp $
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> monadcatchio-mtl-0.3.0.5.ebuild:
+  rdep cgi has ~ppc ~sparc ~x86 keywords
+
+*monadcatchio-mtl-0.3.0.5 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> +monadcatchio-mtl-0.3.0.5.ebuild:
+  Bump monadcatchio-mtl to 0.3.0.5
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  monadcatchio-mtl-0.3.0.4.ebuild:
+  move dev-haskell/monadcatchio-mtl/monadcatchio-mtl-0.3.0.4.ebuild ebuild to
+  mirror://hackage
+
+*monadcatchio-mtl-0.3.0.4 (11 Apr 2012)
+
+  11 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org> +metadata.xml,
+  +monadcatchio-mtl-0.3.0.4.ebuild:
+  Initial version. Monad-transformer version of the Control.Exception module. A
+  depend of new dev-haskell/cgi-3001.1.8.2.

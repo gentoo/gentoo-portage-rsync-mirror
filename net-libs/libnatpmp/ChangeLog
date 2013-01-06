@@ -1,0 +1,80 @@
+
+
+  16 Dec 2012; Raúl Porcel <armin76@gentoo.org> libnatpmp-20110808-r1.ebuild,
+  libnatpmp-20120821.ebuild:
+  sparc stable
+
+  14 Dec 2012; Anthony G. Basile <blueness@gentoo.org>
+  libnatpmp-20110808-r1.ebuild:
+  stable arm, bug #444804
+
+  26 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  libnatpmp-20120821.ebuild:
+  keyword ~mips
+
+*libnatpmp-20120821 (27 Aug 2012)
+
+  27 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  +libnatpmp-20120821.ebuild, +files/remove-static-lib-20120821.patch,
+  +files/respect-FLAGS-20120821.patch, +files/respect-libdir-20120821.patch:
+  Version bump
+
+  25 Mar 2012; Naohiro Aota <naota@gentoo.org> libnatpmp-20110808-r1.ebuild:
+  Add ~x86-fbsd. #400929
+
+  21 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libnatpmp-20110808-r1.ebuild:
+  ppc/ppc64/x86 stable wrt #406035
+
+  13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libnatpmp-20110808-r1.ebuild:
+  amd64 stable wrt #406035
+
+  09 Mar 2012; Mike Frysinger <vapier@gentoo.org> libnatpmp-20110808-r1.ebuild,
+  files/remove-static-lib.patch, files/respect-FLAGS.patch,
+  files/respect-libdir.patch:
+  Clean up patches a bit to respect LDFLAGS and not over use -fPIC.
+
+  03 Mar 2012; Markus Meier <maekke@gentoo.org> libnatpmp-20110808-r1.ebuild:
+  add ~arm, bug #400929
+
+  01 Feb 2012; Samuli Suominen <ssuominen@gentoo.org>
+  libnatpmp-20110808-r1.ebuild:
+  Keyword ~ppc/~ppc64 wrt #400929; required by net-p2p/transmission
+
+*libnatpmp-20110808-r1 (17 Dec 2011)
+
+  17 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
+  -libnatpmp-20110808.ebuild, +libnatpmp-20110808-r1.ebuild,
+  +files/respect-libdir.patch, files/respect-FLAGS.patch:
+  Rev bump, bugs 395039, 395041, 395043
+
+  17 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
+  -libnatpmp-20110715-r1.ebuild:
+  Removed older version
+
+*libnatpmp-20110808 (09 Aug 2011)
+
+  09 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  +libnatpmp-20110808.ebuild:
+  Version bump
+
+  03 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  libnatpmp-20110715-r1.ebuild:
+  Fix HOMEPAGE
+
+  23 Jul 2011; Anthony G. Basile <blueness@gentoo.org>
+  -libnatpmp-20110715.ebuild, libnatpmp-20110715-r1.ebuild:
+  Removed old version and added docs
+
+*libnatpmp-20110715-r1 (23 Jul 2011)
+
+  23 Jul 2011; Anthony G. Basile <blueness@gentoo.org>
+  +libnatpmp-20110715-r1.ebuild, +files/remove-static-lib.patch:
+  Added USE="static-libs"
+
+*libnatpmp-20110715 (22 Jul 2011)
+
+  22 Jul 2011; Anthony G. Basile <blueness@gentoo.org>
+  +libnatpmp-20110715.ebuild, +files/respect-FLAGS.patch, +metadata.xml:
+  Initial commit to satisfy tor's net-pmp USE flag

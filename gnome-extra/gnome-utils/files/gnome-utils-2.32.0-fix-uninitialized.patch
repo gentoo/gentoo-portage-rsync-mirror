@@ -1,0 +1,30 @@
+From 731213444231504c558216930a0bfe5010a2ea67 Mon Sep 17 00:00:00 2001
+From: Paolo Borelli <pborelli@gnome.org>
+Date: Fri, 05 Nov 2010 23:52:30 +0000
+Subject: [logview] Fix uninitialized variable
+
+If buffer_lines is empty date is never initialized.
+---
+diff --git a/logview/logview-utils.c b/logview/logview-utils.c
+index cd43f07..793a89d 100644
+--- a/logview/logview-utils.c
++++ b/logview/logview-utils.c
+@@ -136,7 +136,8 @@ log_read_dates (const char **buffer_lines, time_t current)
+ {
+   int current_year, offsetyear, i, n, rangemin, rangemax, timestamp_len = 0;
+   GSList *days = NULL;
+-  GDate *date, *newdate;
++  GDate *date = NULL;
++  GDate *newdate;
+   struct tm *tmptm;
+   char *date_string;
+   Day *day;
+@@ -274,4 +275,4 @@ log_read_dates (const char **buffer_lines, time_t current)
+   days = g_slist_sort (days, days_compare);
+ 
+   return days;
+-}
+\ No newline at end of file
++}
+--
+cgit v0.9

@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/gksu-polkit
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gksu-polkit/ChangeLog,v 1.1 2012/09/12 11:57:26 tetromino Exp $
+
+*gksu-polkit-0.0.3 (12 Sep 2012)
+
+  12 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gksu-polkit-0.0.3.ebuild, +files/gksu-polkit-0.0.3-auth_admin.patch,
+  +files/gksu-polkit-0.0.3-gksupkcommon-libs.patch, +metadata.xml:
+  Add a new ebuild for a polkit-based replacement for x11-libs/gksu.
+

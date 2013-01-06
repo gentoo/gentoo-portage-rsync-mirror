@@ -1,0 +1,11 @@
+diff -ru music-0.2.0-orig/imagecache.h music-0.2.0/imagecache.h
+--- music-0.2.0-orig/imagecache.h	2009-01-13 21:43:51.680447146 +0100
++++ music-0.2.0/imagecache.h	2009-01-13 21:47:06.427098002 +0100
+@@ -8,6 +8,7 @@
+ #include <map>
+ #include <vector>
+ #include <string>
++#include <stdlib.h>
+ 
+ template<class key_type, class data_type>
+ class cxCache {

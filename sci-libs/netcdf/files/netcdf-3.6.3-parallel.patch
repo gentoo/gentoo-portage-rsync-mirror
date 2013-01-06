@@ -1,0 +1,17 @@
+diff --git a/f90/Makefile.am b/f90/Makefile.am
+index ee56177..e9828eb 100644
+--- a/f90/Makefile.am
++++ b/f90/Makefile.am
+@@ -64,10 +64,12 @@ if UPPER_CASE_MOD
+ nodist_include_HEADERS = TYPESIZES.mod NETCDF.mod
+ TYPESIZES.mod: typeSizes.o
+ NETCDF.mod: $(NETCDF_O)
++BUILT_SOURCES = TYPESIZES.mod
+ else
+ nodist_include_HEADERS = typesizes.mod netcdf.mod 
+ typesizes.mod: typeSizes.o
+ netcdf.mod: $(NETCDF_O)
++BUILT_SOURCES = typesizes.mod
+ endif
+ 
+ # This is what we are building: a convenience library of F90 functions.

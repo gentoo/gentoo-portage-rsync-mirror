@@ -1,0 +1,40 @@
+# HG changeset patch
+# User Mike Gilbert <floppym@gentoo.org>
+# Date 1357409273 18000
+# Node ID c4ba9e12eee5964399d62f638e02d6791c7d220c
+# Parent  0942fae60b774e5a59b76295a05365168a35464e
+Specify encoding when opening files in setup.py
+
+Fixes UnicodeDecodeError when installing under python3 with LANG=C.
+https://bugs.gentoo.org/show_bug.cgi?id=448728
+
+diff --git a/setup.py b/setup.py
+--- a/setup.py
++++ b/setup.py
+@@ -20,6 +20,7 @@
+ #    along with Argh.  If not, see <http://gnu.org/licenses/>.
+ 
+ 
++import io
+ import os
+ 
+ # Why distutils?
+@@ -36,7 +37,7 @@
+ # Importing `__version__` from `argh` would trigger a cascading import
+ # of `argparse`. We need to avoid this as Python < 2.7 ships without argparse.
+ __version__ = None
+-with open('argh/__init__.py') as f:
++with io.open('argh/__init__.py', encoding='utf8') as f:
+     for line in f:
+         if line.startswith('__version__'):
+             exec(line)
+@@ -44,7 +45,8 @@
+ assert __version__, 'argh.__version__ must be imported correctly'
+ 
+ 
+-readme = open(os.path.join(os.path.dirname(__file__), 'README')).read()
++with io.open(os.path.join(os.path.dirname(__file__), 'README'), encoding='ascii') as f:
++	readme = f.read()
+ 
+ 
+ setup(

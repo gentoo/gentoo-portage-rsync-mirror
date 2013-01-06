@@ -1,0 +1,17 @@
+# ChangeLog for sci-mathematics/twelf
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/twelf/ChangeLog,v 1.2 2012/12/12 13:12:19 gienah Exp $
+
+  12 Dec 2012; Mark Wright <gienah@gentoo.org> twelf-1.7.1.ebuild:
+  twelf does not depend on omake. subslot dep in case any future ebuild depends
+  on twelf.
+
+*twelf-1.7.1 (09 Dec 2012)
+
+  09 Dec 2012; Mark Wright <gienah@gentoo.org> +files/50twelf-gentoo.el,
+  +files/twelf-1.7.1-Makefile.patch,
+  +files/twelf-1.7.1-doc-guide-Makefile.patch,
+  +files/twelf-1.7.1-doc-guide-twelf-dot-texi.patch,
+  +files/twelf-1.7.1-emacs-twelf-init.patch,
+  +files/twelf-1.7.1-emacs-twelf.patch, +metadata.xml, +twelf-1.7.1.ebuild:
+  Add twelf, ebuild by me

@@ -1,0 +1,15 @@
+# ChangeLog for net-analyzer/sqlninja
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sqlninja/ChangeLog,v 1.2 2012/12/09 00:39:50 zerochaos Exp $
+
+*sqlninja-0.2.6_p1-r1 (09 Dec 2012)
+
+  09 Dec 2012; Rick Farina <zerochaos@gentoo.org> +sqlninja-0.2.6_p1-r1.ebuild:
+  remove broken symlink per bug #446436
+
+*sqlninja-0.2.6_p1 (06 Oct 2012)
+
+  06 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +sqlninja-0.2.6_p1.ebuild,
+  +files/sqlninja, +metadata.xml:
+  Initial import wrt bug #208201. Ebuild is picked up from pentoo overlay with
+  a bunch of improvements

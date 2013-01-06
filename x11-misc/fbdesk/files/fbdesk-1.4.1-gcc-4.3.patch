@@ -1,0 +1,146 @@
+--- fbdesk-1.4.1.orig/src/FbDesk.cc	2008-04-18 22:42:17.000000000 +0200
++++ fbdesk-1.4.1/src/FbDesk.cc	2008-04-18 23:23:53.000000000 +0200
+@@ -37,10 +37,11 @@
+ #include <iostream>
+ #include <fstream>
+ #include <algorithm>
+ #include <unistd.h>
+ #include <cstdio>
++#include <cstring>
+ 
+ using namespace std;
+ using namespace FbTk;
+ 
+ 
+--- fbdesk-1.4.1.orig/src/FbTk/FbPixmap.cc	2008-04-18 22:42:17.000000000 +0200
++++ fbdesk-1.4.1/src/FbTk/FbPixmap.cc	2008-04-18 22:55:06.000000000 +0200
+@@ -28,10 +28,11 @@
+ 
+ #include <X11/Xutil.h>
+ #include <X11/Xatom.h>
+ #include <iostream>
+ #include <string>
++#include <cstring>
+ 
+ using namespace std;
+ 
+ namespace FbTk {
+ 
+--- fbdesk-1.4.1.orig/src/FbTk/KeyUtil.cc	2008-04-18 22:42:17.000000000 +0200
++++ fbdesk-1.4.1/src/FbTk/KeyUtil.cc	2008-04-18 22:56:17.000000000 +0200
+@@ -23,10 +23,11 @@
+ 
+ #include "KeyUtil.hh"
+ #include "App.hh"
+ 
+ #include <string>
++#include <cstring>
+ 
+ namespace {
+ 
+ struct t_modlist{
+     char *str;
+--- fbdesk-1.4.1.orig/src/FbTk/StringUtil.cc	2008-04-18 22:42:17.000000000 +0200
++++ fbdesk-1.4.1/src/FbTk/StringUtil.cc	2008-04-18 22:52:54.000000000 +0200
+@@ -47,10 +47,11 @@
+ 
+ 
+ #include <memory>
+ #include <algorithm>
+ #include <string>
++#include <cstring>
+ 
+ using std::string;
+ using std::transform;
+ 
+ namespace FbTk {
+--- fbdesk-1.4.1.orig/src/FbTk/TextBox.cc	2008-04-18 22:42:17.000000000 +0200
++++ fbdesk-1.4.1/src/FbTk/TextBox.cc	2008-04-18 22:58:22.000000000 +0200
+@@ -34,10 +34,11 @@
+ #endif
+ #include <X11/keysym.h>
+ #include <X11/Xutil.h>
+ 
+ #include <iostream>
++#include <cstdlib>
+ 
+ namespace FbTk {
+ 
+ TextBox::TextBox(int screen_num,
+                  const Font &font, const std::string &text):
+--- fbdesk-1.4.1.orig/src/FbTk/TextureRender.cc	2008-04-18 22:42:17.000000000 +0200
++++ fbdesk-1.4.1/src/FbTk/TextureRender.cc	2008-04-18 22:48:18.000000000 +0200
+@@ -31,10 +31,11 @@
+ #include "FbPixmap.hh"
+ #include "GContext.hh"
+ 
+ #include <iostream>
+ #include <string>
++#include <cstring>
+ #ifdef HAVE_CSTDIO
+   #include <cstdio>
+ #else
+   #include <stdio.h>
+ #endif
+--- fbdesk-1.4.1.orig/src/FbTk/Theme.cc	2008-04-18 22:42:17.000000000 +0200
++++ fbdesk-1.4.1/src/FbTk/Theme.cc	2008-04-18 22:49:14.000000000 +0200
+@@ -34,10 +34,11 @@
+ #else
+   #include <stdio.h>
+ #endif
+ #include <memory>
+ #include <iostream>
++#include <algorithm>
+ 
+ using namespace std;
+ 
+ namespace FbTk {
+ 
+--- fbdesk-1.4.1.orig/src/FbTk/ThemeItems.cc	2008-04-18 22:42:17.000000000 +0200
++++ fbdesk-1.4.1/src/FbTk/ThemeItems.cc	2008-04-18 23:22:03.000000000 +0200
+@@ -46,10 +46,12 @@
+   #include <stdio.h>
+ #endif
+ 
+ #include <iostream>
+ #include <memory>
++#include <cstdlib>
++#include <cstring>
+ 
+ namespace FbTk {
+ 
+ using std::string;
+ using std::cerr;
+--- fbdesk-1.4.1.orig/src/FbTk/XFontImp.cc	2008-04-18 22:42:17.000000000 +0200
++++ fbdesk-1.4.1/src/FbTk/XFontImp.cc	2008-04-18 22:45:31.000000000 +0200
+@@ -26,10 +26,11 @@
+ #include "GContext.hh"
+ #include "FbPixmap.hh"
+ 
+ #include <X11/Xutil.h>
+ 
++#include <cstdlib>
+ #include <iostream>
+ #include <new>
+ #ifdef HAVE_CSTDIO
+   #include <cstdio>
+ #else
+--- fbdesk-1.4.1.orig/src/main.cc	2008-04-18 22:42:17.000000000 +0200
++++ fbdesk-1.4.1/src/main.cc	2008-04-18 23:24:47.000000000 +0200
+@@ -21,14 +21,16 @@
+ 
+ #include "App.hh"
+ #include "FbDesk.hh"
+ #include "version.h"
+ 
++#include <cstdlib>
+ #include <iostream>
+ #include <stdexcept>
+ #include <signal.h>
+ #include <sys/wait.h>
++#include <cstring>
+ 
+ using namespace std;
+ 
+ ///  handles system signals
+ void signalhandler(int sig) {

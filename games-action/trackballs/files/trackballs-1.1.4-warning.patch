@@ -1,0 +1,45 @@
+diff -ru trackballs-1.1.4.orig/src/glHelp.cc trackballs-1.1.4/src/glHelp.cc
+--- trackballs-1.1.4.orig/src/glHelp.cc	2007-04-07 09:15:09.000000000 -0400
++++ trackballs-1.1.4/src/glHelp.cc	2011-04-12 12:04:01.142847026 -0400
+@@ -741,29 +741,6 @@
+     }
+ }
+ 
+-/* C <- A(B) */
+-void useMatrix(Matrix4d A,const double B[3],double C[3]) {
+-  int i,k;
+-  for(i=0;i<3;i++) {
+-    C[i] = A[i][3];
+-    for(k=0;k<3;k++)
+-      C[i] += A[i][k] * B[k];
+-  }
+-  double h=A[3][3];
+-  for(k=0;k<3;k++) h+=A[3][k];
+-  for(k=0;k<3;k++) C[k] /= h;
+-}
+-
+-/* C <- A(B) */
+-void useMatrix(Matrix3d A,const double B[3],double C[3]) {
+-  int i,k;
+-  for(i=0;i<3;i++) {
+-    C[i] = A[i][3];
+-    for(k=0;k<3;k++)
+-      C[i] += A[i][k] * B[k];
+-  }
+-}
+-
+ /* C <- A */
+ void assign(const Matrix4d A,Matrix4d C) {
+   int i,j;
+diff -ru trackballs-1.1.4.orig/src/glHelp.h trackballs-1.1.4/src/glHelp.h
+--- trackballs-1.1.4.orig/src/glHelp.h	2006-08-05 11:22:32.000000000 -0400
++++ trackballs-1.1.4/src/glHelp.h	2011-04-12 12:04:16.689745593 -0400
+@@ -57,8 +57,6 @@
+ void zero(double[3]);
+ 
+ void debugMatrix(Matrix4d);
+-void useMatrix(Matrix4d,const double[3],double[3]);
+-void useMatrix(Matrix3d,const double[3],double[3]);
+ void identityMatrix(Matrix4d);
+ void assign(const Matrix4d,Matrix4d);
+ void matrixMult(Matrix4d,Matrix4d,Matrix4d);

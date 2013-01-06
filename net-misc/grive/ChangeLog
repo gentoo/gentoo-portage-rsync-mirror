@@ -1,0 +1,34 @@
+# ChangeLog for net-misc/grive
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/ChangeLog,v 1.8 2012/11/13 02:36:08 ottxor Exp $
+
+  13 Nov 2012; Christoph Junghans <ottxor@gentoo.org>
+  +files/grive-0.2.0-check-bfd.h.patch, grive-0.2.0.ebuild:
+  improve fix for bug #428636
+
+  01 Nov 2012; Christoph Junghans <ottxor@gentoo.org> grive-0.2.0.ebuild:
+  fix for >=sys-devel/binutils-2.22.90 (bug #428636)
+
+  10 Sep 2012; Christoph Junghans <ottxor@gentoo.org> metadata.xml:
+  updated metadata.xml
+
+  26 Aug 2012; Christoph Junghans <ottxor@gentoo.org> grive-0.2.0.ebuild:
+  switch to github
+
+  21 Jul 2012; Christoph Junghans <ottxor@gentoo.org> grive-0.2.0.ebuild:
+  fixed dependency (bug #426848)
+
+*grive-0.2.0 (14 Jul 2012)
+
+  14 Jul 2012; Christoph Junghans <ottxor@gentoo.org> +grive-0.2.0.ebuild,
+  -grive-0.2_pre20120628.ebuild:
+  version bump
+
+  01 Jul 2012; Agostino Sarubbo <ago@gentoo.org> grive-0.2_pre20120628.ebuild:
+  add ~amd64, wrt to bug #424425
+
+*grive-0.2_pre20120628 (30 Jun 2012)
+
+  30 Jun 2012; Christoph Junghans <ottxor@gentoo.org>
+  +grive-0.2_pre20120628.ebuild, +metadata.xml:
+  initial commit

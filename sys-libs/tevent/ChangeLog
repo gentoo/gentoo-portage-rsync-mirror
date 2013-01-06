@@ -1,0 +1,118 @@
+# ChangeLog for sys-libs/tevent
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.28 2012/12/19 15:54:22 ago Exp $
+
+  19 Dec 2012; Agostino Sarubbo <ago@gentoo.org> tevent-0.9.17.ebuild:
+  Add ~ia64, wrt bug #377809
+
+  29 Nov 2012; Jeroen Roovers <jer@gentoo.org> tevent-0.9.17.ebuild:
+  Stable for HPPA (bug #444686).
+
+  25 Nov 2012; Anthony G. Basile <blueness@gentoo.org> tevent-0.9.17.ebuild:
+  stable ppc ppc64, bug #444686
+
+  25 Nov 2012; Agostino Sarubbo <ago@gentoo.org> tevent-0.9.17.ebuild:
+  Stable for x86, wrt bug #444686
+
+  25 Nov 2012; Agostino Sarubbo <ago@gentoo.org> tevent-0.9.17.ebuild:
+  Stable for amd64, wrt bug #444686
+
+  30 Sep 2012; Mike Gilbert <floppym@gentoo.org> tevent-0.9.16.ebuild,
+  tevent-0.9.17.ebuild:
+  Remove minimum python version.
+
+*tevent-0.9.17 (23 Sep 2012)
+
+  23 Sep 2012; Víctor Ostorga <vostorga@gentoo.org> +tevent-0.9.17.ebuild:
+  Version bump to 0.9.17
+
+  20 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/add-py-file-0.9.14.patch, +files/tevent-version.patch:
+  Also add missing patches wrt bug#435568.
+
+*tevent-0.9.14-r1 (13 Sep 2012)
+
+  13 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> +tevent-0.9.14-r1.ebuild:
+  Restore 0.9.14 it is still needed.
+
+  13 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/add-py-file-0.9.14.patch, -files/tevent-version.patch,
+  -tevent-0.9.12.ebuild, -tevent-0.9.14-r1.ebuild, -tevent-0.9.15.ebuild,
+  tevent-0.9.16.ebuild:
+  Stabilise latest on amd64 and x86. Drop older.
+
+  06 Jul 2012; Jeff Horelick <jdhore@gentoo.org> tevent-0.9.14-r1.ebuild:
+  marked x86 per bug 417115
+
+*tevent-0.9.16 (04 Jul 2012)
+
+  04 Jul 2012; Patrick Lauer <patrick@gentoo.org> +tevent-0.9.16.ebuild:
+  Bump for #424705
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> tevent-0.9.15.ebuild:
+  keyword ~amd64-fbsd
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> tevent-0.9.14-r1.ebuild,
+  tevent-0.9.15.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  21 Apr 2012; Markus Meier <maekke@gentoo.org> tevent-0.9.15.ebuild:
+  add ~arm, bug #412489
+
+  25 Feb 2012; Agostino Sarubbo <ago@gentoo.org> tevent-0.9.14-r1.ebuild:
+  Stable for amd64, wrt bug #405617
+
+  18 Feb 2012; Tobias Klausmann <klausman@gentoo.org> tevent-0.9.14-r1.ebuild:
+  Keyworded on alpha, bug #377809
+
+*tevent-0.9.14-r1 (12 Feb 2012)
+
+  12 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/add-py-file-0.9.14.patch, +files/tevent-version.patch,
+  +tevent-0.9.14-r1.ebuild, -tevent-0.9.14.ebuild:
+  Add patches to 0.9.14, fix bug 403239. Thanks to slepnoga
+
+*tevent-0.9.15 (12 Feb 2012)
+
+  12 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> +files/add-py-file.patch,
+  +tevent-0.9.15.ebuild:
+  Bump to 0.9.15, bug 403237. Fix bug 403239 for 0.9.15
+
+  31 Oct 2011; Víctor Ostorga <vostorga@gentoo.org> tevent-0.9.14.ebuild:
+  Fixing file collision with sys-libs/talloc, bug #384873
+
+*tevent-0.9.14 (27 Sep 2011)
+
+  27 Sep 2011; Víctor Ostorga <vostorga@gentoo.org> -tevent-0.9.8.ebuild,
+  -tevent-0.9.11.ebuild, +tevent-0.9.14.ebuild:
+  Version bump to 0.9.14
+
+  14 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> tevent-0.9.12.ebuild:
+  Marked ~ppc/~ppc64 wrt #377809
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> tevent-0.9.12.ebuild:
+  keyword ~x86-fbsd
+
+*tevent-0.9.12 (28 Jun 2011)
+
+  28 Jun 2011; Víctor Ostorga <vostorga@gentoo.org> +tevent-0.9.12.ebuild:
+  Version bump to 0.9.12, moving to waf, ebuild thanks to Ewoud Kohl van
+  Wijngaarden <gentoo@kohlvanwijngaarden.nl> bug 373311
+
+*tevent-0.9.11 (02 Apr 2011)
+
+  02 Apr 2011; Patrick Lauer <patrick@gentoo.org> +tevent-0.9.11.ebuild:
+  Bump
+
+  04 Nov 2009; Patrick Lauer <patrick@gentoo.org> tevent-0.9.8.ebuild:
+  Cleanup
+
+  09 Oct 2009; Patrick Lauer <patrick@gentoo.org> tevent-0.9.8.ebuild:
+  Improve description
+
+*tevent-0.9.8 (09 Oct 2009)
+
+  09 Oct 2009; Patrick Lauer <patrick@gentoo.org> +tevent-0.9.8.ebuild,
+  +metadata.xml:
+  Initial commit. Ebuilds based on those provided by Marcel Greter in
+  #231273

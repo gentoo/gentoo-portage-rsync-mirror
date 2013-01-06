@@ -1,0 +1,35 @@
+diff --git a/Makefile b/Makefile
+index b743389..f7c1b33 100644
+--- a/Makefile
++++ b/Makefile
+@@ -42,10 +42,13 @@ slim: $(OBJECTS)
+ 	$(CC) $(CFLAGS) $(DEFINES) $(CUSTOM) -c $< -o $@
+ 
+ install: slim install-theme
+-	install -D -m 755 slim $(DESTDIR)$(PREFIX)/bin/slim
+-	install -D -m 644 slim.1 $(DESTDIR)$(MANDIR)/man1/slim.1
++	install -d $(DESTDIR)$(PREFIX)/bin
++	install -m 755 slim $(DESTDIR)$(PREFIX)/bin/slim	
++	install -d $(DESTDIR)$(MANDIR)/man1
++	install -m 644 slim.1 $(DESTDIR)$(MANDIR)/man1/slim.1
+ 	test -e $(DESTDIR)$(CFGDIR)/slim.conf || \
+-		install -D -m 644 slim.conf $(DESTDIR)$(CFGDIR)/slim.conf
++		(install -d $(DESTDIR)$(CFGDIR); \
++		 install -m 644 slim.conf $(DESTDIR)$(CFGDIR)/slim.conf)
+ 
+ clean:
+ 	@rm -f slim *.o
+@@ -61,9 +64,10 @@ dist:
+ 
+ 
+ install-theme:
+-	install -D -m 644 themes/default/slim.theme \
++	install -d $(DESTDIR)$(PREFIX)/share/slim/themes/default
++	install -m 644 themes/default/slim.theme \
+ 		 $(DESTDIR)$(PREFIX)/share/slim/themes/default/slim.theme
+-	install -D -m 644 themes/default/panel.png \
++	install -m 644 themes/default/panel.png \
+ 		 $(DESTDIR)$(PREFIX)/share/slim/themes/default/panel.png
+-	install -D -m 644 themes/default/background.jpg \
++	install -m 644 themes/default/background.jpg \
+ 		 $(DESTDIR)$(PREFIX)/share/slim/themes/default/background.jpg

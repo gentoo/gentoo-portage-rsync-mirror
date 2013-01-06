@@ -1,0 +1,57 @@
+diff -Nur ez-ipupdate-3.0.11b8/ez-ipupdate.c ez-ipupdate-3.0.11b8.3322/ez-ipupdate.c
+--- ez-ipupdate-3.0.11b8/ez-ipupdate.c	2002-03-11 19:31:47.000000000 -0400
++++ ez-ipupdate-3.0.11b8.3322/ez-ipupdate.c	2004-10-26 23:49:38.781671824 -0300
+@@ -62,6 +62,12 @@
+ #define DYNDNS_STAT_REQUEST "/nic/update"
+ #define DYNDNS_MAX_INTERVAL (25*24*3600)
+ 
++#define QDNS_DEFAULT_SERVER "members.3322.org"
++#define QDNS_DEFAULT_PORT "80"
++#define QDNS_REQUEST "/dyndns/update"
++#define QDNS_STAT_REQUEST "/dyndns/update"
++#define QDNS_MAX_INTERVAL (25*24*3600)
++
+ #define ODS_DEFAULT_SERVER "update.ods.org"
+ #define ODS_DEFAULT_PORT "7070"
+ #define ODS_REQUEST "update"
+@@ -299,6 +305,12 @@
+ static char *DYNDNS_fields_used[] = { "server", "user", "address", "wildcard", "mx", "host", NULL };
+ static char *DYNDNS_STAT_fields_used[] = { "server", "user", "address", "wildcard", "mx", "host", NULL };
+ 
++void QDNS_init(void);
++int QDNS_update_entry(void);
++int QDNS_check_info(void);
++static char *QDNS_fields_used[] = { "server", "user", "address", "wildcard", "mx", "host", NULL };
++static char *QDNS_STAT_fields_used[] = { "server", "user", "address", "wildcard", "mx", "host", NULL };
++
+ int ODS_update_entry(void);
+ int ODS_check_info(void);
+ static char *ODS_fields_used[] = { "server", "host", "address", NULL };
+@@ -412,6 +424,27 @@
+     DYNDNS_DEFAULT_PORT,
+     DYNDNS_REQUEST
+   },
++  { "qdns",
++    { "qdns", 0, 0, },
++    DYNDNS_init,
++    DYNDNS_update_entry,
++    DYNDNS_check_info,
++    DYNDNS_fields_used,
++    QDNS_DEFAULT_SERVER,
++    QDNS_DEFAULT_PORT,
++    QDNS_REQUEST
++  },
++  { "qdns-static",
++    { "qdns-static", "qdns-stat", "statdns", },
++    DYNDNS_init,
++    DYNDNS_update_entry,
++    DYNDNS_check_info,
++    DYNDNS_STAT_fields_used,
++    QDNS_DEFAULT_SERVER,
++    QDNS_DEFAULT_PORT,
++    QDNS_STAT_REQUEST
++  },
++  
+   { "ods",
+     { "ods", 0, 0, },
+     NULL,

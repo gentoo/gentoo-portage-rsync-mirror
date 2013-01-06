@@ -1,0 +1,12 @@
+#We dont have ubuntu_sso package in the tree. Maybe this patch
+#can be dropped later on.
+#Jesus Rivero <neurogeek> 
+#Dec. 15, 2010
+--- desktopcouch/replication_services/__init__.py.orig	2010-12-15 09:31:29.000000000 -0500
++++ desktopcouch/replication_services/__init__.py	2010-12-15 09:30:53.000000000 -0500
+@@ -1,4 +1,4 @@
+ """Modules imported here are available as services."""
+ 
+-import ubuntuone
++#import ubuntuone
+ import example

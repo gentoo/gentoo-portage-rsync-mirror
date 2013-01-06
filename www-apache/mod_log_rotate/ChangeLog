@@ -1,0 +1,17 @@
+# ChangeLog for www-apache/mod_log_rotate
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_rotate/ChangeLog,v 1.3 2012/11/27 19:23:00 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
+
+  08 Apr 2009; Benedikt Böhm <hollow@gentoo.org>
+  mod_log_rotate-1.00.ebuild:
+  stable on amd64/x86
+
+*mod_log_rotate-1.00 (08 Feb 2008)
+
+  08 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
+  +files/10_mod_log_rotate.conf, +metadata.xml, +mod_log_rotate-1.00.ebuild:
+  initial ebuild

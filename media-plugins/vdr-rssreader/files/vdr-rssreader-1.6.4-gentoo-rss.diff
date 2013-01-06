@@ -1,0 +1,13 @@
+diff -Naur rssreader-1.6.4.orig/rssreader/rssreader.conf rssreader-1.6.4/rssreader/rssreader.conf
+--- rssreader-1.6.4.orig/rssreader/rssreader.conf	2010-09-24 02:16:28.000000000 +0200
++++ rssreader-1.6.4/rssreader/rssreader.conf	2010-09-24 02:19:00.000000000 +0200
+@@ -1,6 +1,9 @@
+ # Configuration file for RssReader plugin (VDR)
+ # "Label" : # Comment
+ # "Title" : "URL"
++-- Gentoo              : # Label
++http://overlays.gentoo.org/proj/vdr/timeline?changeset=on&wiki=on&max=50&daysback=90&format=rss
++http://www.gentoo.org/rdf/en/gentoo-news.rdf
+ -- VDR                 : # Label
+ VDR Announcements      : http://www.linuxtv.fi/extras/vdr_announce_rss.php?num=10
+ Linuxtv.fi foorumi     : http://www.linuxtv.fi/rss.php

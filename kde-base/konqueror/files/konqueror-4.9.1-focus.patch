@@ -1,0 +1,43 @@
+commit 5fa3dbc49f8cac8253e198298948832ca7d38674
+Author: Dawit Alemayehu <adawit@kde.org>
+Date:   Wed Sep 5 03:14:52 2012 -0400
+
+    Fix commit a2ae8003352442efdb5731b3fd3de3107b0c1e99. :(
+    
+    Do not attempt to change focus when the active view is not the current one.
+    Fixes location bar address being changed when opening URLs in a background tab.
+
+diff --git a/konqueror/src/konqview.cpp b/konqueror/src/konqview.cpp
+index 0130292..2ee9896 100644
+--- a/konqueror/src/konqview.cpp
++++ b/konqueror/src/konqview.cpp
+@@ -518,19 +518,20 @@ void KonqView::slotRequestFocus( KParts::ReadOnlyPart * )
+ void KonqView::setLoading( bool loading, bool hasPending /*= false*/)
+ {
+     //kDebug() << "loading=" << loading << "hasPending=" << hasPending;
+-    if (loading) {
++    m_bLoading = loading;
++    m_bPendingRedirection = hasPending;
++    if ( m_pMainWindow->currentView() == this ) {
++        m_pMainWindow->updateToolBarActions( hasPending );
+         // Make sure the focus is restored on the part's widget and not the combo
+         // box if it starts loading a request. See #304933.
+-        QWidget* partWidget = (m_pPart ? m_pPart->widget() : 0);
+-        if (partWidget && !partWidget->hasFocus()) {
+-            //kDebug() << "SET FOCUS on the widget";
+-            partWidget->setFocus();
++        if (loading) {
++            QWidget* partWidget = (m_pPart ? m_pPart->widget() : 0);
++            if (partWidget && !partWidget->hasFocus()) {
++              //kDebug() << "SET FOCUS on the widget";
++              partWidget->setFocus();
++            }
+         }
+     }
+-    m_bLoading = loading;
+-    m_bPendingRedirection = hasPending;
+-    if ( m_pMainWindow->currentView() == this )
+-        m_pMainWindow->updateToolBarActions( hasPending );
+ 
+     m_pMainWindow->viewManager()->setLoading( this, loading || hasPending );
+ }

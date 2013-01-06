@@ -1,0 +1,10 @@
+DEFINED_PHASES=install postinst unpack
+DEPEND=>=sys-apps/sed-4.0
+DESCRIPTION=Console file manager with vi/vim-like keybindings
+HOMEPAGE=http://vifm.sourceforge.net/
+KEYWORDS=amd64 ~ppc s390 x86
+LICENSE=GPL-2
+RDEPEND=>=sys-apps/sed-4.0
+SLOT=0
+SRC_URI=mirror://sourceforge/vifm/vifm-0.3a.tar.gz
+_md5_=a234e945abc0f763f736c1774869f9ae

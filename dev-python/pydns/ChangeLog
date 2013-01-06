@@ -1,0 +1,67 @@
+# ChangeLog for dev-python/pydns
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.14 2012/06/24 12:22:55 sbriesen Exp $
+
+*pydns-3.0.2 (24 Jun 2012)
+*pydns-2.3.6 (24 Jun 2012)
+
+  24 Jun 2012; Stefan Briesenick <sbriesen@gentoo.org> -pydns-2.3.5.ebuild,
+  +pydns-2.3.6.ebuild, +pydns-3.0.2.ebuild:
+  version bump, removed obsolete ebuild, solving bug #416377.
+
+  05 Apr 2012; Jeff Horelick <jdhore@gentoo.org> pydns-3.0.1.ebuild:
+  marked x86 per bug 404715
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> pydns-3.0.1.ebuild:
+  Stable for amd64, wrt bug #404715
+
+*pydns-3.0.1 (10 Nov 2011)
+*pydns-2.3.5-r1 (10 Nov 2011)
+
+  10 Nov 2011; Stefan Briesenick <sbriesen@gentoo.org> +pydns-2.3.5-r1.ebuild,
+  +pydns-3.0.1.ebuild:
+  rev-bump and slotting python2 version, version-bump and slotting python3
+  version. slot=3 replaces dev-python/py3dns.
+
+*pydns-2.3.5 (10 Jul 2011)
+
+  10 Jul 2011; Stefan Briesenick <sbriesen@gentoo.org> +pydns-2.3.5.ebuild:
+  version bump. Solves bug #364031
+
+  23 Feb 2010; Christian Faulhammer <fauli@gentoo.org> pydns-2.3.4.ebuild:
+  stable x86, bug 303247
+
+  06 Feb 2010; Markos Chandras <hwoarang@gentoo.org> pydns-2.3.4.ebuild:
+  Stable on amd64 wrt bug #303247
+
+*pydns-2.3.4 (02 Jan 2010)
+
+  02 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pydns-2.3.4.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
+
+  15 Feb 2009; Markus Meier <maekke@gentoo.org> pydns-2.3.3.ebuild:
+  amd64/x86 stable, bug #258328
+
+  09 Dec 2008; Stefan Briesenick <sbriesen@gentoo.org> -pydns-2.3.1.ebuild:
+  removed old version
+
+  12 Sep 2008; Stefan Briesenick <sbriesen@gentoo.org> -pydns-2.3.0.ebuild:
+  removed old version.
+
+*pydns-2.3.3 (12 Sep 2008)
+
+  12 Sep 2008; Stefan Briesenick <sbriesen@gentoo.org> +pydns-2.3.3.ebuild:
+  version bump, solving bug #233217.
+
+*pydns-2.3.1 (07 Apr 2008)
+
+  07 Apr 2008; Stefan Briesenick <sbriesen@gentoo.org> +pydns-2.3.1.ebuild:
+  version bump, thanks to Bartłomiej Syryjczyk for reporting.
+
+*pydns-2.3.0 (06 Oct 2006)
+
+  06 Oct 2006; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
+  +pydns-2.3.0.ebuild:
+  initial commit.
+

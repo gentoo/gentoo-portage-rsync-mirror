@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/agedu
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/agedu/ChangeLog,v 1.1 2012/10/21 20:14:52 blueness Exp $
+
+*agedu-9671 (21 Oct 2012)
+
+  21 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  +files/agedu-r9671-fix-automagic.patch, +agedu-9671.ebuild, +metadata.xml:
+  Initial commit
+

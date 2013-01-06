@@ -1,0 +1,20 @@
+# ChangeLog for sci-mathematics/form
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/form/ChangeLog,v 1.4 2012/06/01 21:17:19 tomka Exp $
+
+  01 Jun 2012; Thomas Kahle <tomka@gentoo.org> form-4.0_p20120529.ebuild:
+  keyworded ~amd64 after request on sci-ml
+
+  01 Jun 2012; Andrey Grozin <grozin@gentoo.org> form-4.0_p20120529.ebuild:
+  Snapshot now hosted at dev.gentoo.org
+
+  31 May 2012; Andrey Grozin <grozin@gentoo.org> form-4.0_p20120529.ebuild:
+  Fixing RDEPEND
+
+*form-4.0_p20120529 (31 May 2012)
+
+  31 May 2012; Andrey Grozin <grozin@gentoo.org> +form-4.0_p20120529.ebuild,
+  +metadata.xml:
+  Initial import, thanks to Jauhien Piatlicki <piatlicki@gmail.com>, closing
+  bug #418079
+

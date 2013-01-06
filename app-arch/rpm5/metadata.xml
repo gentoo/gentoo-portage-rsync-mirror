@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>maintainer-needed@gentoo.org</email>
+</maintainer>
+<use>
+	<flag name='augeas'>Add support for configuration files changing (<pkg>app-admin/augeas</pkg>)</flag>
+	<flag name='keyutils'>Enable for the keyring ccache using keyutils.</flag>
+	<flag name='magic'>Add magic file support (<pkg>sys-apps/file</pkg>)</flag>
+	<flag name='nss'>Build support for ssl/crypto handling using <pkg>dev-libs/nss</pkg></flag>
+	<flag name='openssl'>Build support for ssl/crypto handling using <pkg>dev-libs/openssl</pkg></flag>
+	<flag name='pkcs11'>Build token data management utilities based on OpenCryptoki's (<pkg>dev-libs/opencryptoki</pkg>) PKCS#11 implementation.</flag>
+	<flag name='uuid'>Enable server side UUID generation (via <pkg>dev-libs/ossp-uuid</pkg>)</flag>
+	<flag name='webdav-neon'>Include support for <pkg>net-libs/neon</pkg></flag>
+	<flag name='xar'>Build support for xar archives using <pkg>app-arch/xar</pkg></flag>
+</use>
+</pkgmetadata>

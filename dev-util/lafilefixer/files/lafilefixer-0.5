@@ -1,0 +1,203 @@
+#!/bin/bash
+
+# Libtool does not support spaces in dependency_libs entries so we won't worry
+# overly about them either.
+
+NEWLINE="
+"
+
+has() {
+	[[ " ${*:2} " == *" $1 "* ]]
+}
+
+fix_la_files() {
+	local lafile
+	for lafile in "${@:2}"
+	do
+		local has_inh_link_flags="no"
+		local new_inh_link_flags=""
+		local dependency_libs=""
+		local inh_link_flags=""
+		local has_dep_libs="no"
+		local new_dep_libs=""
+		local remove_lib=""
+		local contents="$(<"${lafile}")"
+		local libladir=""
+		local librpath=""
+		local dep_libs=""
+		local line=""
+		local lib=""
+
+
+		save_IFS="${IFS}"
+		IFS="$NEWLINE"
+		for line in $contents
+		do
+			if [[ "${line#dependency_libs=\'}" != "${line}" ]]
+			then
+				[[ "$has_dep_libs" == "no" ]] || { echo "dependency_libs= assigned more than once in $lafile" && return 1 ; }
+				line="${line#dependency_libs=\'}"
+				dep_libs="${line%\'}"
+				has_dep_libs="yes"
+
+			elif [[ "${line#inherited_linker_flags=\'}" != "${line}" ]]
+			then
+
+				[[ "$has_inh_link_flags" == "no" ]] || { echo "inherited_linker_flags= assigned more than once in $lafile" && return 1 ; }
+				line="${line#inherited_linker_flags=\'}"
+				inh_link_flags="${line%\'}"
+				new_inh_link_flags="${inh_link_flags}"
+				has_inh_link_flags="yes"
+			fi
+		done
+		IFS="$save_IFS"
+
+		if [[ "$has_dep_libs" == "no" ]]
+		then
+			printf '%s\n' "$lafile is not a .la file. Skipping."
+			continue
+		fi
+
+		for entry in $dep_libs
+		do
+			case $entry in
+				-l*)
+					has ${entry} ${new_dep_libs} || new_dep_libs="${new_dep_libs} ${entry}"
+					;;
+				*.la)
+
+					if [[ "${entry##*\/lib}" == "${entry}" ]]
+					then
+						has ${entry} ${new_dep_libs} || new_dep_libs="${new_dep_libs} ${entry}"
+					else
+						lib="${entry##*\/lib}"
+						lib="${lib%.la}"
+						lib="-l${lib}"
+						has ${lib} ${new_dep_libs} || new_dep_libs="${new_dep_libs} ${lib}"
+						has -L${entry%/*.la} ${libladir} || libladir="${libladir} -L${entry%/*.la}"
+					fi
+					;;
+				-L*)
+					[[ ${entry/X11R6\/lib} != ${entry} ]] && entry="${entry/X11R6\/}"
+					[[ ${entry/local\/lib} != ${entry} ]] && entry="${entry/local\/}"
+					[[ ${entry/usr\/lib*\/pkgconfig\/..\/..} != ${entry} ]] && entry="${entry/\/lib*\/pkgconfig\/..\/..}"
+					[[ ${entry/usr\/lib*\/pkgconfig\/..} != ${entry} ]] && entry="${entry/\/pkgconfig\/..}"
+					has ${entry} ${libladir} || libladir="${libladir} ${entry}"
+					;;
+				-R*)
+					has ${entry} ${librpath} || librpath="${librpath} ${entry}"
+					;;
+				-mt|-mthreads|-kthread|-Kthread|-pthread|-pthreads|--thread-safe|-threads)
+					if [[ "${has_inh_link_flags}" == "yes" ]]
+					then
+						has ${entry} ${new_inh_link_flags} || new_inh_link_flags="${new_inh_link_flags} ${entry}"
+					else
+						has ${entry} ${new_dep_libs} || new_dep_libs="${new_dep_libs} ${entry}"
+					fi
+					;;
+				*)
+					echo "Debug information:"
+					echo $lafile
+					echo "${entry}"
+					echo "Holy Moley, Dorothy, we ain't in Kansas and Luke, I'm not your father"
+					return 1
+					;;
+			esac
+		done
+
+		[[ "${dep_libs}" == "${librpath}${libladir}${new_dep_libs}" && "${new_inh_link_flags}" == "${inh_link_flags}" ]] && { echo "$lafile already clean, skipping update."; continue; }
+		echo "${lafile}: Updating..."
+		contents="${contents/${NEWLINE}dependency_libs=\'${dep_libs}\'${NEWLINE}/${NEWLINE}dependency_libs='${librpath}${libladir}${new_dep_libs}'${NEWLINE}}"
+		[[ "${has_inh_link_flags}" == "yes" ]] && \
+			contents="${contents/${NEWLINE}inherited_linker_flags=\'${inh_link_flags}\'${NEWLINE}/${NEWLINE}inherited_linker_flags='${new_inh_link_flags}'${NEWLINE}}"
+
+		printf '%s' "$contents" > "${lafile}"
+	done
+}
+
+case "$1" in
+	-h|--help)
+		cat <<- EOF
+		lafilefixer (C) 2009 Peter Alfredsen <loki_val@gentoo.org>
+		Released under the MIT/X11 license.
+
+		Usage: lafilefixer [OPTION] [FILE|DIR]...
+		Fix .la libtool archives to list libraries, not .la files in dependency_libs and
+		do some minor fixups, moving -pthread to inherited_linker_flags if available and
+		eliminating duplicate library listings.
+
+		By default, lafilefixer is recursive, fixing all .la files in all subdirectories
+		so if you want to fix only a single file, it must be specified in full.
+
+		Options:
+		  -h, --help            Display this text and exit.
+		      --justfixit       Choose some reasonable dirs, such as /usr/lib*, etc. ,
+		                        find all .la files and fix them to not use .la files
+		                        for linking
+		      --license	        Display the license and exit.
+		EOF
+		;;
+	--justfixit)
+		declare dirlist=""
+		declare files=()
+		for dir in {/usr/lib,/usr/qt/3/lib,/usr/kde/3.5/lib,/opt/lib,/lib}{,32,64}
+		do
+			[[ -d "${dir}" ]] && dirlist="${dirlist} ${dir}"
+		done
+
+		while read -r line
+		do
+			files+=( "$line" )
+		done< <( find ${dirlist} -name '*.la' -type f )
+
+		fix_la_files --cleanup "${files[@]}"
+		;;
+	--license)
+		cat <<- EOF
+		Copyright (c) 2009 Peter Alfredsen <loki_val@gentoo.org>
+
+		Permission is hereby granted, free of charge, to any person obtaining a copy of
+		this software and associated documentation files (the "Software"), to deal in
+		the Software without restriction, including without limitation the rights to
+		use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+		of the Software, and to permit persons to whom the Software is furnished to
+		do so, subject to the following conditions:
+
+		The above copyright notice and this permission notice shall be included in all
+		copies or substantial portions of the Software.
+
+		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+		FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+		COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+		IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+		CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+		EOF
+		;;
+	*)
+		declare arglist=()
+		declare files=()
+		declare arg=""
+
+		# Default to $PWD #276447
+		[[ $# -eq 0 ]] && set -- "${PWD}"
+
+		for arg in "${@}"
+		do
+			if [[ -d "${arg}" || -f "${arg}" ]]
+			then
+				arglist+=( "${arg}" )
+			else
+				printf '%s\n' "${arg} is not a valid directory or file, skipping."
+			fi
+		done
+
+		while read -r line
+		do
+			files+=( "$line" )
+		done< <( find "${arglist[@]}" -name '*.la' -type f )
+
+		fix_la_files --cleanup "${files[@]}"
+		;;
+esac
+

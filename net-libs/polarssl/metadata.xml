@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>tommy@gentoo.org</email>
+	</maintainer>
+	<longdescription lang="en">
+		The aim of the PolarSSL project is to provide a quality, open-source
+		cryptographic library written in C and targeted at embedded systems.
+	</longdescription>
+</pkgmetadata>

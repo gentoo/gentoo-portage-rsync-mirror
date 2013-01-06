@@ -1,0 +1,13 @@
+Index: homebank-4.3/src/gtkchart.c
+===================================================================
+--- homebank-4.3.orig/src/gtkchart.c
++++ homebank-4.3/src/gtkchart.c
+@@ -108,7 +108,7 @@ gchar *chart_print_int(GtkChart *chart, 
+ gchar *chart_print_double(GtkChart *chart, gdouble value);
+ 
+ static GtkHBoxClass *parent_class = NULL;
+-
++GdkGC* gdk_gc_new (GdkDrawable *drawable);
+ 
+ struct mycolors
+ {

@@ -1,0 +1,10 @@
+# ChangeLog for dev-tex/abntex
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/abntex/ChangeLog,v 1.1 2011/05/08 16:26:08 rafaelmartins Exp $
+
+*abntex-0.9_beta2 (08 May 2011)
+
+  08 May 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +abntex-0.9_beta2.ebuild, +metadata.xml:
+  Initial version.
+

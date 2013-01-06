@@ -1,0 +1,14 @@
+# ChangeLog for media-fonts/wqy-microhei
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-microhei/ChangeLog,v 1.2 2009/09/11 21:44:06 maekke Exp $
+
+  11 Sep 2009; Markus Meier <maekke@gentoo.org>
+  wqy-microhei-0.2.0_beta.ebuild:
+  amd64/x86 stable, bug #284010
+
+*wqy-microhei-0.2.0_beta (02 Jul 2009)
+
+  02 Jul 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +wqy-microhei-0.2.0_beta.ebuild, +metadata.xml:
+  Initial import.
+

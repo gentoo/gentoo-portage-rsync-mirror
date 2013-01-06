@@ -1,0 +1,69 @@
+# ChangeLog for dev-tcltk/thread
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/ChangeLog,v 1.18 2011/04/25 17:17:46 jlec Exp $
+
+  25 Apr 2011; Justin Lecher <jlec@gentoo.org> thread-2.6.2.ebuild,
+  thread-2.6.6.ebuild:
+  Fixed missing debug in IUSE, #364811; Fix build with USE=-gdbm, #247586
+
+*thread-2.6.6 (07 Dec 2010)
+
+  07 Dec 2010; Justin Lecher <jlec@gentoo.org> thread-2.6.2.ebuild,
+  +thread-2.6.6.ebuild:
+  Version Bump, which fixes the LDFLAGS repect, #335963
+
+  14 Aug 2009; Christian Faulhammer <fauli@gentoo.org> thread-2.6.2.ebuild:
+  port to EAPI 2
+
+  08 Aug 2009; Federico Ferri <mescalinum@gentoo.org> thread-2.6.2.ebuild:
+  fix bug 247586
+
+  10 Apr 2007; Ferris McCormick <fmccor@gentoo.org> thread-2.6.2.ebuild:
+  Stable on sparc --- Bug #173645 --- seems OK.
+
+  10 Apr 2007; Raúl Porcel <armin76@gentoo.org> thread-2.6.2.ebuild:
+  ia64 stable wrt bug 173645
+
+  10 Apr 2007; Jeroen Roovers <jer@gentoo.org> thread-2.6.2.ebuild:
+  Stable for HPPA (bug #173645).
+
+  08 Apr 2007; Markus Rothe <corsair@gentoo.org> thread-2.6.2.ebuild:
+  Stable on ppc64; bug #173645
+
+  07 Apr 2007; nixnut <nixnut@gentoo.org> thread-2.6.2.ebuild:
+  Stable on ppc wrt bug 173645
+
+  07 Apr 2007; Peter Weller <welp@gentoo.org> thread-2.6.2.ebuild:
+  Stable on amd64 wrt bug 173645, restricted test
+
+  07 Apr 2007; Markus Ullmann <jokey@gentoo.org> thread-2.6.2.ebuild:
+  Meh, forgot it... Stable on arm as well ;)
+
+  07 Apr 2007; Markus Ullmann <jokey@gentoo.org> thread-2.6.2.ebuild:
+  Stable on x86
+
+  07 Apr 2007; Markus Ullmann <jokey@gentoo.org> -thread-2.6.1.ebuild,
+  thread-2.6.2.ebuild:
+  Fix bug #116709
+
+  09 Dec 2006; Timothy Redaelli <drizzt@gentoo.org> thread-2.6.2.ebuild:
+  Add ~x86-fbsd keyword
+
+*thread-2.6.2 (08 Jan 2006)
+
+  08 Jan 2006; MATSUU Takuto <matsuu@gentoo.org> +thread-2.6.2.ebuild:
+  Version bumped. Bug 117121.
+
+  16 Nov 2005; Herbie Hopkins <herbs@gentoo.org> thread-2.6.1.ebuild:
+  Multilib fix.
+
+  03 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> thread-2.6.1.ebuild:
+  Fixed with gdbm cofigure issue. Bug 97738.
+  Fixed DISCRIPTION. Bug 97739.
+
+*thread-2.6.1 (02 Jul 2005)
+
+  02 Jul 2005; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
+  +thread-2.6.1.ebuild:
+  initial ebuild. Bug 97357.
+

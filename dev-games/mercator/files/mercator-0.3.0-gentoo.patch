@@ -1,0 +1,11 @@
+--- Mercator/TerrainMod.cpp.old	2012-02-26 21:30:39.000000000 +0100
++++ Mercator/TerrainMod.cpp	2012-02-26 21:29:58.000000000 +0100
+@@ -40,6 +40,8 @@
+     s.removeMod(this);
+ }
+ 
++template class ShapeTerrainMod<WFMath::Polygon >;
++
+ template class LevelTerrainMod<WFMath::Ball >;
+ template class LevelTerrainMod<WFMath::Polygon >;
+ template class LevelTerrainMod<WFMath::RotBox >;

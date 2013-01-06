@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=x11-libs/libdockapp
+DESCRIPTION=XScreenSaver dockapp for the Window Maker window manager.
+EAPI=2
+HOMEPAGE=http://xscreensaverapp.sourceforge.net/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/libdockapp x11-misc/xscreensaver
+SLOT=0
+SRC_URI=http://www.asleep.net/download/XScreenSaver.App-2.3.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=a790c9042a37559949d3454b2a592c7a

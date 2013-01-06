@@ -1,0 +1,15 @@
+# ChangeLog for media-plugins/vdr-coverviewer
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-coverviewer/ChangeLog,v 1.2 2011/01/28 18:27:57 hd_brummy Exp $
+
+  28 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-coverviewer-0.0.2.ebuild:
+  eapi=3
+
+*vdr-coverviewer-0.0.2 (13 Jan 2008)
+
+  13 Jan 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr-coverviewer-0.0.2-vdr-1.5.x.diff, +metadata.xml,
+  +vdr-coverviewer-0.0.2.ebuild:
+  initial ebuild; moved from vdr-testing overlay; Thanks to T.Kost
+

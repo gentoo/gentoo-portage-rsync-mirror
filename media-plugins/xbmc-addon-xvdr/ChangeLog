@@ -1,0 +1,14 @@
+# ChangeLog for media-plugins/xbmc-addon-xvdr
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xbmc-addon-xvdr/ChangeLog,v 1.2 2011/09/18 11:36:52 flameeyes Exp $
+
+  18 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  xbmc-addon-xvdr-9999.ebuild:
+  QA: do not keyword live ebuild.
+
+*xbmc-addon-xvdr-9999 (17 Sep 2011)
+
+  17 Sep 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +xbmc-addon-xvdr-9999.ebuild, +metadata.xml:
+  initial ebuild, pmasked for livetime
+

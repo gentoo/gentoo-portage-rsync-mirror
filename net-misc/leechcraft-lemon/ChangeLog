@@ -1,0 +1,19 @@
+# ChangeLog for net-misc/leechcraft-lemon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-lemon/ChangeLog,v 1.2 2012/12/25 16:47:14 maksbotan Exp $
+
+*leechcraft-lemon-0.5.90 (25 Dec 2012)
+
+  25 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-lemon-0.5.90.ebuild:
+  Bump LeechCraft to 0.5.90, thanks to 0xd34df00d
+
+  20 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  leechcraft-lemon-9999.ebuild:
+  Add qt-bearer dependency
+
+*leechcraft-lemon-9999 (18 Dec 2012)
+
+  18 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-lemon-9999.ebuild, +metadata.xml:
+  Add leechraft-lemon, thanks to 0xd34df00d

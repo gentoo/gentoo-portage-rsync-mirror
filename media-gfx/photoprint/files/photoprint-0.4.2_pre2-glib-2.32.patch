@@ -1,0 +1,21 @@
+--- photoprint-0.4.2-pre2/gp_cppsupport/gprinter.cpp
++++ photoprint-0.4.2-pre2/gp_cppsupport/gprinter.cpp
+@@ -22,8 +22,6 @@
+ #include <gutenprint/gutenprint.h>
+ 
+ #include <glib.h>
+-#include <glib/gstrfuncs.h>
+-#include <glib/gprintf.h>
+ 
+ #include "../imagesource/imagesource.h"
+ #include "../imagesource/imagesource_flatten.h"
+--- photoprint-0.4.2-pre2/gp_cppsupport/gprintersettings.cpp
++++ photoprint-0.4.2-pre2/gp_cppsupport/gprintersettings.cpp
+@@ -13,7 +13,6 @@
+ 
+ #include <string.h>
+ #include <glib.h>
+-#include <glib/gprintf.h>
+ 
+ #include "stp_support/stputil.h"
+ #include "gprintersettings.h"

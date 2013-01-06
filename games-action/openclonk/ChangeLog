@@ -1,0 +1,29 @@
+# ChangeLog for games-action/openclonk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.7 2012/07/29 12:00:46 hasufell Exp $
+
+  29 Jul 2012; Julian Ospald <hasufell@gentoo.org> openclonk-5.2.2.ebuild,
+  +files/openclonk-5.2.2-zlib-1.2.6.patch:
+  fix compilation for zlib-1.2.[67] wrt #428496
+
+  10 Jul 2012; Julian Ospald <hasufell@gentoo.org> openclonk-5.2.2.ebuild:
+  add WANT_AUTOMAKE to fix bug #425576
+
+  22 Jun 2012; Jeff Horelick <jdhore@gentoo.org> openclonk-5.2.2.ebuild:
+  marked x86 per bug 422461
+
+  20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> openclonk-5.2.2.ebuild:
+  Stable for amd64, wrt bug #422461
+
+  02 Jun 2012; Julian Ospald <hasufell@gentoo.org> openclonk-5.2.2.ebuild:
+  bump to EAPI=4 and fix doc destination
+
+  12 May 2012; Julian Ospald <hasufell@gentoo.org> openclonk-5.2.2.ebuild:
+  fix licenses wrt #415645
+
+*openclonk-5.2.2 (08 May 2012)
+
+  08 May 2012; Julian Ospald <hasufell@gentoo.org> +openclonk-5.2.2.ebuild,
+  +files/openclonk-wrapper-script.sh, +metadata.xml:
+  initial import wrt #348149
+

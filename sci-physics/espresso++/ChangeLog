@@ -1,0 +1,18 @@
+# ChangeLog for sci-physics/espresso++
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso++/ChangeLog,v 1.4 2012/12/26 23:27:55 ottxor Exp $
+
+  26 Dec 2012; Christoph Junghans <ottxor@gentoo.org> espresso++-1.3.1.ebuild:
+  use new mercurial.eclass defaults
+
+  23 Dec 2012; Christoph Junghans <ottxor@gentoo.org> espresso++-1.3.1.ebuild:
+  fix python dep
+
+  09 Oct 2012; Kacper Kowalik <xarthisius@gentoo.org> espresso++-1.3.1.ebuild:
+  Fix SRC_URI, previous address had SSL cert problems
+
+*espresso++-1.3.1 (09 Oct 2012)
+
+  09 Oct 2012; Christoph Junghans <ottxor@gentoo.org> +espresso++-1.3.1.ebuild,
+  +metadata.xml:
+  initial commit (thx to Torsten Stuehn)

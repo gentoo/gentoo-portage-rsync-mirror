@@ -1,0 +1,18 @@
+# ChangeLog for x11-plugins/screenlets
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/screenlets/ChangeLog,v 1.3 2011/04/28 18:40:25 halcy0n Exp $
+
+  28 Apr 2011; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
+  Non-existant herd: desktop -> desktop-misc
+
+  11 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  screenlets-0.1.2.ebuild:
+  Use Python 2 (bug #317033).
+
+*screenlets-0.1.2 (22 Aug 2009)
+
+  22 Aug 2009; Jim Ramsay <lack@gentoo.org> +screenlets-0.1.2.ebuild,
+  +metadata.xml:
+  New package: Screenlets is another desktop applet thing, like desklets...
+  only newer ;) Bug #212448
+

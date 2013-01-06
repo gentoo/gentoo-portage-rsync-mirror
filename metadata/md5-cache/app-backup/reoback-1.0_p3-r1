@@ -1,0 +1,10 @@
+DEFINED_PHASES=install postinst unpack
+DEPEND=>=app-arch/tar-1.13
+DESCRIPTION=Reoback Backup Solution
+HOMEPAGE=http://reoback.sourceforge.net/
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=>=dev-lang/perl-5.6.1
+SLOT=0
+SRC_URI=mirror://sourceforge/reoback/reoback-1.0_r3.tar.gz
+_md5_=1177bc470ce9e6c9690aafe810a8f6a0

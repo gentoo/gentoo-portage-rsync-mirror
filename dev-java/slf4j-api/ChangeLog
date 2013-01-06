@@ -1,0 +1,69 @@
+# ChangeLog for dev-java/slf4j-api
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/ChangeLog,v 1.18 2012/12/08 16:00:48 ago Exp $
+
+  08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> slf4j-api-1.6.6.ebuild:
+  Stable for ppc64, wrt bug #441172
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> slf4j-api-1.6.6.ebuild:
+  Stable for ppc, wrt bug #441172
+
+  07 Dec 2012; <ago@gentoo.org> slf4j-api-1.6.6.ebuild:
+  Stable for x86, wrt bug #441172
+
+  07 Dec 2012; <ago@gentoo.org> slf4j-api-1.6.6.ebuild:
+  Stable for amd64, wrt bug #441172
+
+*slf4j-api-1.6.6 (03 Aug 2012)
+
+  03 Aug 2012; Vlastimil Babka <caster@gentoo.org>
+  +files/slf4j-api_maven-build.xml, +slf4j-api-1.6.6.ebuild:
+  Version bump, bug #395639. Thanks to Ivan Baidakou <the.dmol@gmail.com> for
+  the ebuild and build.xml base.
+
+  17 Oct 2010; Vlastimil Babka <caster@gentoo.org> -slf4j-api-1.5.2.ebuild:
+  Remove old.
+
+  14 Oct 2010; Brent Baude <ranger@gentoo.org> slf4j-api-1.5.11.ebuild:
+  stable ppc, bug 316317
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> slf4j-api-1.5.11.ebuild:
+  stable amd64, bug 316317
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> slf4j-api-1.5.11.ebuild:
+  stable ppc64, bug 316317
+
+  11 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  slf4j-api-1.5.11.ebuild:
+  x86 stable wrt bug #316317
+
+*slf4j-api-1.5.11 (20 Mar 2010)
+
+  20 Mar 2010; Petteri Räty <betelgeuse@gentoo.org>
+  +slf4j-api-1.5.11.ebuild:
+  Version bump. Fixes bug #309455.
+
+  19 Jul 2009; nixnut <nixnut@gentoo.org> slf4j-api-1.5.2.ebuild:
+  ppc stable #258723
+
+  23 Jan 2009; Brent Baude <ranger@gentoo.org> slf4j-api-1.5.2.ebuild:
+  Marking slf4j-api-1.5.2 ppc64 for bug 253054
+
+  10 Jan 2009; Markus Meier <maekke@gentoo.org> slf4j-api-1.5.2.ebuild:
+  amd64/x86 stable, bug #253054
+
+  26 Jul 2008; Markus Rothe <corsair@gentoo.org> ChangeLog:
+  Added ~ppc; bug #232411
+
+  26 Jul 2008; Markus Rothe <corsair@gentoo.org> slf4j-api-1.5.2.ebuild:
+  Added ~ppc; bug #232411
+
+  22 Jul 2008; Markus Rothe <corsair@gentoo.org> slf4j-api-1.5.2.ebuild:
+  Added ~ppc64; bug #232411
+
+*slf4j-api-1.5.2 (18 Jul 2008)
+
+  18 Jul 2008; Serkan Kaba <serkan@gentoo.org> +files/build.xml,
+  +metadata.xml, +slf4j-api-1.5.2.ebuild:
+  Initial ebuild. Fixes bug #230573.
+

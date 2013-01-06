@@ -1,0 +1,41 @@
+# ChangeLog for games-util/nml
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/nml/ChangeLog,v 1.10 2012/12/31 16:32:33 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> nml-0.2.3.ebuild:
+  Add ~ppc64, wrt bug #412329
+
+  29 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> nml-0.2.3.ebuild,
+  nml-0.2.4.ebuild:
+  Add dev-python/setuptools as dependency, wrt bug #449052. Thanks to Tuomo
+  Hartikainen for discovering this issue
+
+*nml-0.2.4 (01 Nov 2012)
+
+  01 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> +nml-0.2.4.ebuild:
+  version bump
+
+  27 Jun 2012; Markus Meier <maekke@gentoo.org> nml-0.2.3.ebuild:
+  add ~arm, bug #412329
+
+  19 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org> nml-0.2.3.ebuild:
+  silly python eclasses
+
+  19 Apr 2012; Agostino Sarubbo <ago@gentoo.org> nml-0.2.3.ebuild:
+  Stable for amd64, wrt bug #398161
+
+  19 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> nml-0.2.3.ebuild:
+  x86 stable, see bug 398161
+
+  18 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org> nml-0.2.3.ebuild:
+  call python_pkg_setup; tidy
+
+  18 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> nml-0.2.3.ebuild:
+  Aparently does not build with py3. Fixes bug#412527. Thanks to
+  hendrik<at>consetetur.de for the patch
+
+*nml-0.2.3 (17 Apr 2012)
+
+  17 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +metadata.xml,
+  +nml-0.2.3.ebuild:
+  Initial commit for new tool used to build OpenGFX files used by OpenTTD.

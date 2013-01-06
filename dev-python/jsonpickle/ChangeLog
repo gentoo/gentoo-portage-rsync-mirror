@@ -1,0 +1,50 @@
+# ChangeLog for dev-python/jsonpickle
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.10 2011/09/09 10:53:14 jlec Exp $
+
+  09 Sep 2011; Justin Lecher <jlec@gentoo.org> jsonpickle-0.4.0.ebuild:
+  keyworded *-linux, tested by me
+
+  06 Aug 2011; Markos Chandras <hwoarang@gentoo.org> jsonpickle-0.4.0.ebuild:
+  Ignore test failures with Jython. Fix dependencies. Run tests requiring
+  dev-python/feedparser. Patch by Arfrever.
+
+  05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -jsonpickle-0.3.1.ebuild:
+  Remove old ebuild. Requested by Arfrever
+
+*jsonpickle-0.4.0 (29 Jul 2011)
+
+  29 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +jsonpickle-0.4.0.ebuild:
+  Version bump
+
+  06 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  jsonpickle-0.3.1.ebuild:
+  Update EAPI. Fix dependencies.
+
+  06 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -jsonpickle-0.2.0.ebuild, -jsonpickle-0.3.0.ebuild:
+  Delete.
+
+*jsonpickle-0.3.1 (12 Dec 2009)
+
+  12 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +jsonpickle-0.3.1.ebuild:
+  Version bump.
+
+*jsonpickle-0.3.0 (12 Dec 2009)
+
+  12 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +jsonpickle-0.3.0.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
+
+  30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  jsonpickle-0.2.0.ebuild:
+  keyworded ~arch for x86, bug 275353
+
+*jsonpickle-0.2.0 (19 Jun 2009)
+
+  19 Jun 2009; Tiziano Müller <dev-zero@gentoo.org>
+  +jsonpickle-0.2.0.ebuild, +metadata.xml:
+  Initial commit (needed as dependency for git-cola).
+

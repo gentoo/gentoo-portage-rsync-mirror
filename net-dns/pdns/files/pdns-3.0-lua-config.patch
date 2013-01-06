@@ -1,0 +1,33 @@
+Index: configure.ac
+===================================================================
+--- configure.ac	(revision 2250)
++++ configure.ac	(working copy)
+@@ -16,6 +16,7 @@
+ AC_PROG_MAKE_SET
+ AC_PROG_LIBTOOL 
+ AC_LANG_CPLUSPLUS
++PKG_PROG_PKG_CONFIG
+ 
+ BOOST_REQUIRE([1.34])
+ BOOST_FOREACH
+@@ -26,7 +27,7 @@
+ 
+ dnl Check for lua
+ AC_MSG_CHECKING(if with lua)
+-AC_ARG_WITH(lua, AC_HELP_STRING([--with-lua],[lua]), WITH_LUA=$withval],[WITH_LUA=yes])
++AC_ARG_WITH(lua, AC_HELP_STRING([--with-lua],[lua]), [WITH_LUA=$withval],[WITH_LUA=yes])
+ 
+ AC_MSG_RESULT($WITH_LUA)
+ if test "$WITH_LUA" != "no"; then
+Index: pdns/lua-pdns-recursor.cc
+===================================================================
+--- pdns/lua-pdns-recursor.cc	(revision 2250)
++++ pdns/lua-pdns-recursor.cc	(working copy)
+@@ -1,6 +1,6 @@
+ #include "lua-pdns-recursor.hh"
+ 
+-#if !defined(PDNS_ENABLE_LUA) && !defined(LIBDIR)
++#if !defined(HAVE_LUA) || !defined(LIBDIR)
+ 
+ // stub implementation
+ 

@@ -1,0 +1,13 @@
+--- vpnclient-orig/frag.c	2008-06-23 11:59:12.000000000 -0500
++++ vpnclient/frag.c	2009-11-12 15:15:50.915673034 -0600
+@@ -22,7 +22,9 @@
+ #include "frag.h"
+ 
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
+-#define SKB_IPHDR(skb) ((struct iphdr*)skb->network_header)
++/* 2.6.22 added an inline function for 32-/64-bit usage here, so use it.
++ */
++#define SKB_IPHDR(skb) ((struct iphdr*)skb_network_header)
+ #else
+ #define SKB_IPHDR(skb) skb->nh.iph
+ #endif

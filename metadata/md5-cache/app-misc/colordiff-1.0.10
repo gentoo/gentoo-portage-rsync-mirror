@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=Colorizes output of diff
+EAPI=4
+HOMEPAGE=http://colordiff.sourceforge.net/
+KEYWORDS=alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 sparc x86 ~ppc-aix ~x86-fbsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris
+LICENSE=GPL-2
+RDEPEND=sys-apps/diffutils
+SLOT=0
+SRC_URI=http://colordiff.sourceforge.net/colordiff-1.0.10.tar.gz
+_eclasses_=prefix	21058c21ca48453d771df15500873ede
+_md5_=dccbae562a18bc5bf778304fcda6937f

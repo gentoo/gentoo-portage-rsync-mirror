@@ -1,0 +1,24 @@
+From d8b9dbd6dac0125957b997c2fe8d246237ec9f94 Mon Sep 17 00:00:00 2001
+From: naota <naota@elisp.net>
+Date: Fri, 25 May 2012 13:03:21 +0900
+Subject: [PATCH] Avoid infinite loop when there's unsupported acl type
+
+---
+ libarchive/archive_read_disk_entry_from_file.c |    1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/libarchive/archive_read_disk_entry_from_file.c b/libarchive/archive_read_disk_entry_from_file.c
+index 7987fa5..25b1edc 100644
+--- a/libarchive/archive_read_disk_entry_from_file.c
++++ b/libarchive/archive_read_disk_entry_from_file.c
+@@ -584,6 +584,7 @@ static int translate_acl(struct archive_read_disk *a,
+ 			break;
+ 		default:
+ 			/* Skip types that libarchive can't support. */
++			s = acl_get_entry(acl, ACL_NEXT_ENTRY, &acl_entry);
+ 			continue;
+ 		}
+ 
+-- 
+1.7.10
+

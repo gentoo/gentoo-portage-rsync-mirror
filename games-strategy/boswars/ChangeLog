@@ -1,0 +1,86 @@
+# ChangeLog for games-strategy/boswars
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/ChangeLog,v 1.20 2012/10/12 02:29:29 mr_bones_ Exp $
+
+  12 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> boswars-2.6.1.ebuild:
+  slot dep for libpng; tidy
+
+  20 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org> boswars-2.6.1.ebuild,
+  +files/boswars-2.6.1-scons-blows.patch:
+  use scons-utils; honor LDFLAGS
+
+  17 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/boswars-2.6.1-gentoo.patch, -files/boswars-2.6-gentoo.patch:
+  clean correct file
+
+  15 Oct 2010; Brent Baude <ranger@gentoo.org> boswars-2.6.1.ebuild:
+  stable ppc, bug 325915
+
+  15 Oct 2010; Tupone Alfredo <tupone@gentoo.org> boswars-2.6.1.ebuild:
+  Respect LDFLAGS. Bug #335229 by flameeyes@gentoo.org
+
+  15 Jul 2010; Christian Faulhammer <fauli@gentoo.org> boswars-2.6.1.ebuild:
+  stable x86, bug 325915
+
+*boswars-2.6.1 (24 May 2010)
+
+  24 May 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +boswars-2.6.1.ebuild, +files/boswars-2.6.1-gentoo.patch:
+  version bump
+
+*boswars-2.6 (12 Apr 2010)
+
+  12 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org> +boswars-2.6.ebuild,
+  +files/boswars-2.6-gentoo.patch:
+  version bump
+
+  01 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> boswars-2.5.ebuild:
+  x86 stable wrt bug #308531
+
+  24 Mar 2010; Brent Baude <ranger@gentoo.org> boswars-2.5.ebuild:
+  stable ppc, bug 308531
+
+  05 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org> boswars-2.5.ebuild:
+  EAPI=2; respect CXX
+
+  21 Jun 2009; Tristan Heaven <nyhm@gentoo.org> boswars-2.5.ebuild,
+  +files/boswars-2.5-gcc44.patch:
+  Fix building with gcc-4.4, bug #273532
+
+  01 May 2008; Tristan Heaven <nyhm@gentoo.org>
+  +files/boswars-2.5-gcc43.patch, boswars-2.5.ebuild:
+  Fix building with gcc-4.3
+
+*boswars-2.5 (02 Mar 2008)
+
+  02 Mar 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/boswars-2.5-gentoo.patch, +boswars-2.5.ebuild:
+  version bump
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> boswars-2.4.1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
+
+  22 Jan 2008; Tristan Heaven <nyhm@gentoo.org> boswars-2.4.1.ebuild:
+  Add virtual/opengl dep, bug #206422
+
+*boswars-2.4.1 (10 Sep 2007)
+
+  10 Sep 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/boswars-2.4.1-gentoo.patch, +boswars-2.4.1.ebuild:
+  version bump
+
+*boswars-2.4 (11 Aug 2007)
+
+  11 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/boswars-2.4-gentoo.patch, +boswars-2.4.ebuild:
+  version bump
+
+  10 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org> boswars-2.3.ebuild:
+  match keywords to games-strategy/bos for package move
+
+*boswars-2.3 (04 Aug 2007)
+
+  04 Aug 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/boswars-2.3-gentoo.patch, +metadata.xml, +boswars-2.3.ebuild:
+  New ebuild. Bug #172298 by Tomas Kovacik
+  It was formerly games-strategy/bos, but upstream changed the name

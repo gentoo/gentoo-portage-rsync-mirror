@@ -1,0 +1,11 @@
+--- x11/Makefile.am.old	2011-06-14 12:31:30.676664440 +0200
++++ x11/Makefile.am	2011-06-14 12:31:57.661423436 +0200
+@@ -42,7 +42,7 @@
+ 
+ AM_CPPFLAGS = -I$(top_srcdir) -I$(top_srcdir)/common -I$(top_srcdir)/pixmaps
+ 
+-crossfire_client_x11_LDADD = $(DMALLOC_LIB) $(X_LIBS) ../common/libcfclient.a @LUA_LIBS@
++crossfire_client_x11_LDADD = $(DMALLOC_LIB) $(X_LIBS) ../common/libcfclient.a @LUA_LIBS@ -lpthread
+ 
+ ../common/libcfclient.a:
+ 	( cd ../common ; make libcfclient.a )

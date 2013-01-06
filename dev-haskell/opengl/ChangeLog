@@ -1,0 +1,63 @@
+# ChangeLog for dev-haskell/opengl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/opengl/ChangeLog,v 1.15 2012/11/18 12:53:31 gienah Exp $
+
+*opengl-2.6.0.1 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> +opengl-2.6.0.1.ebuild:
+  Bump opengl to 2.6.0.1
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> opengl-2.2.1.1.ebuild,
+  opengl-2.5.0.0.ebuild:
+  move dev-haskell/opengl/opengl-2.2.1.1.ebuild ebuild to mirror://hackage
+
+*opengl-2.5.0.0 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +opengl-2.5.0.0.ebuild:
+  Bump opengl to 2.5.0.0, fixes bug #363977
+
+  30 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/opengl-2.2.1.1-ghc-7.4.patch, opengl-2.2.1.1.ebuild:
+  Fix build failure against ghc-7.4 (reported by Christian Lask).
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  opengl-2.2.1.1.ebuild:
+  virtual/glut -> media-libs/glut
+
+  24 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> -opengl-2.0.ebuild,
+  -opengl-2.1.ebuild, -opengl-2.2.1.ebuild:
+  Removed old versions.
+
+  03 Oct 2008; Ferris McCormick <fmccor@gentoo.org> opengl-2.2.1.1.ebuild:
+  Sparc stable --- Bug #230919 and Bug #239368.
+
+  06 Jul 2008; Markus Meier <maekke@gentoo.org> ChangeLog:
+  amd64/x86 stable, bug #230919
+
+  16 Dec 2007; Ferris McCormick <fmccor@gentoo.org> opengl-2.2.1.1.ebuild:
+  Add ~sparc keyword, new version (Bug #201984).
+
+  16 Dec 2007; Samuli Suominen <drac@gentoo.org> opengl-2.2.1.ebuild:
+  amd64 stable wrt #201984
+
+*opengl-2.2.1.1 (13 Dec 2007)
+
+  13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> +opengl-2.2.1.1.ebuild:
+  New version.
+
+  12 Dec 2007; Ferris McCormick <fmccor@gentoo.org> opengl-2.2.1.ebuild:
+  Add ~sparc keyword (completeness with bug #201984)
+
+  12 Dec 2007; Christian Faulhammer <opfer@gentoo.org> opengl-2.2.1.ebuild:
+  quote variable
+
+  12 Dec 2007; Christian Faulhammer <opfer@gentoo.org> opengl-2.2.1.ebuild:
+  stable x86, bug 201984
+
+*opengl-2.2.1 (09 Jul 2007)
+*opengl-2.1 (09 Jul 2007)
+*opengl-2.0 (09 Jul 2007)
+
+  09 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> +metadata.xml,
+  +opengl-2.0.ebuild, +opengl-2.1.ebuild, +opengl-2.2.1.ebuild:
+  Initial versions.

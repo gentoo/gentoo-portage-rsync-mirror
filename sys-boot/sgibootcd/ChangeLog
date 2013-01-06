@@ -1,0 +1,17 @@
+# ChangeLog for sys-boot/sgibootcd
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/sgibootcd/ChangeLog,v 1.3 2011/02/06 22:21:48 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> sgibootcd-0.12.ebuild:
+  Fix repoman QA warnings. Drop to ~mips, we don't have a stable tree at the
+  moment
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+*sgibootcd-0.12 (12 Sep 2005)
+
+  12 Sep 2005; Joshua Kinard <kumba@gentoo.org> +metadata.xml,
+  +sgibootcd-0.12.ebuild:
+  Initial import of sgibootcd for creating burnable CD images for SGI LiveCDs.
+

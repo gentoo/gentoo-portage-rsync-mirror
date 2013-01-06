@@ -1,0 +1,27 @@
+# ChangeLog for games-strategy/ja2-stracciatella
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ja2-stracciatella/ChangeLog,v 1.5 2012/11/21 10:13:12 ago Exp $
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
+  ja2-stracciatella-0.12.1_p7072.ebuild:
+  Stable for x86, wrt bug #422465
+
+  02 Jul 2012; Julian Ospald <hasufell@gentoo.org>
+  ja2-stracciatella-0.12.1_p7072.ebuild:
+  mark stable for amd64 wrt bug #422465
+
+  23 Jun 2012; Julian Ospald <hasufell@gentoo.org>
+  ja2-stracciatella-0.12.1_p7072.ebuild:
+  simplify LANGS stuff, fixes bug #423051
+
+  02 Jun 2012; Julian Ospald <hasufell@gentoo.org>
+  ja2-stracciatella-0.12.1_p7072.ebuild:
+  bump to EAPI=4
+
+*ja2-stracciatella-0.12.1_p7072 (10 May 2012)
+
+  10 May 2012; Julian Ospald <hasufell@gentoo.org> +files/ja2-convert.sh,
+  +ja2-stracciatella-0.12.1_p7072.ebuild,
+  +files/ja2-stracciatella-0.12.1_p7072-makefile.patch, +metadata.xml:
+  initial import wrt #171475
+

@@ -1,0 +1,40 @@
+--- sxiv-1.0/Makefile
++++ sxiv-1.0/Makefile
+@@ -1,8 +1,8 @@
+ VERSION = 1.0
+ 
+-CC      = gcc
+-CFLAGS  = -ansi -Wall -pedantic -O2
+-LDFLAGS =
++CC      ?= gcc
++CFLAGS  += -ansi -Wall -pedantic
++LDFLAGS +=
+ LIBS    = -lX11 -lImlib2
+ 
+ PREFIX    = /usr/local
+@@ -21,21 +21,18 @@
+ 	@echo "PREFIX  = $(PREFIX)"
+ 
+ .c.o:
+-	@echo "CC $<"
+-	@$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -c -o $@ $<
++	$(CC) $(CFLAGS) -DVERSION=\"$(VERSION)\" -c -o $@ $<
+ 
+ $(OBJ) config: Makefile config.h
+ 
+ config: config.c
+-	@$(CC) $(CFLAGS) -o $@ $@.c
++	$(CC) $(CFLAGS) -o $@ $@.c
+ 
+ config.h:
+-	@echo "creating $@ from config.def.h"
+-	@cp config.def.h $@
++	cp config.def.h $@
+ 
+ sxiv:	$(OBJ) config
+-	@echo "CC -o $@"
+-	@$(CC) $(LDFLAGS) -o $@ $(OBJ) $(LIBS) $$(./config -l)
++	$(CC) $(LDFLAGS) -o $@ $(OBJ) $(LIBS) $$(./config -l)
+ 
+ clean:
+ 	@echo "cleaning"

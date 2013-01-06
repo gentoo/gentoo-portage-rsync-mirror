@@ -1,0 +1,10 @@
+# ChangeLog for app-accessibility/festival-ru
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-ru/ChangeLog,v 1.1 2010/03/14 21:02:40 neurogeek Exp $
+
+*festival-ru-0.5 (14 Mar 2010)
+
+  14 Mar 2010; Jesus Rivero <neurogeek@gentoo.org> +festival-ru-0.5.ebuild,
+  +metadata.xml:
+  Initial commit. Closes bug #195629
+

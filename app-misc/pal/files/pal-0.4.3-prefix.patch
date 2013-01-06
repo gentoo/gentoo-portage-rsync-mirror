@@ -1,0 +1,44 @@
+--- Makefile.defs~	2007-10-12 04:11:32 +0200
++++ Makefile.defs	2007-10-12 04:11:59 +0200
+@@ -3,7 +3,7 @@
+ 
+ # directory to install to. Depending on your distribution, you might
+ # want to change this to /usr/local
+-prefix = /usr
++prefix = @GENTOO_PORTAGE_EPREFIX@/usr
+ CC      = gcc
+ 
+ PAL_VERSION = 0.3.5_pre1
+--- input.c~	2007-10-12 04:08:59 +0200
++++ input.c	2007-10-12 04:17:45 +0200
+@@ -567,7 +567,7 @@
+ 	    }
+ 
+ 	    /* attempt to copy /etc/pal.conf to ~/.pal/pal.conf */
+-	    file = fopen("/etc/pal.conf", "r");
++	    file = fopen("@GENTOO_PORTAGE_EPREFIX@/etc/pal.conf", "r");
+ 
+ 	    /* if not found, try PREFIX/share/pal/pal.conf instead */
+ 	    /* NOTE: This is will be removed in the future */
+@@ -577,7 +577,7 @@
+ 
+ 	    if(file == NULL)
+ 	    {
+-		pal_output_error(_("ERROR: Can't open file: /etc/pal.conf\n"));
++		pal_output_error(_("ERROR: Can't open file: @GENTOO_PORTAGE_EPREFIX@/etc/pal.conf\n"));
+ 		pal_output_error(_("ERROR: Can't open file: " PREFIX "/share/pal/pal.conf\n"));
+ 		pal_output_error(_("ERROR: This indicates an improper installation.\n"));
+ 		return ht;
+--- Makefile~	2007-10-12 04:23:38 +0200
++++ Makefile	2007-10-12 04:24:23 +0200
+@@ -51,8 +51,8 @@
+ 	@echo " --- Installing global data --- "
+ 	@mkdir -p ${DESTDIR}${prefix}/share/pal;
+ 	install -m 0644 -o root ../share/*.pal ${DESTDIR}${prefix}/share/pal
+-	@mkdir -p ${DESTDIR}/etc;
+-	install -m 0644 -o root ../pal.conf ${DESTDIR}/etc/
++	@mkdir -p ${DESTDIR}@GENTOO_PORTAGE_EPREFIX@/etc;
++	install -m 0644 -o root ../pal.conf ${DESTDIR}@GENTOO_PORTAGE_EPREFIX@/etc/
+ 	@echo
+ 
+ # "install" will install the files needed by pal and also check to see

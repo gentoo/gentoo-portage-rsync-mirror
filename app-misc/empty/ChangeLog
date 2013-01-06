@@ -1,0 +1,29 @@
+# ChangeLog for app-misc/empty
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/empty/ChangeLog,v 1.5 2012/10/21 15:07:39 pinkbyte Exp $
+
+*empty-0.6.19b (21 Oct 2012)
+
+  21 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> empty-0.6.18b.ebuild,
+  -files/empty-0.6.18b-respect-LDFLAGS.patch, +empty-0.6.19b.ebuild,
+  +files/empty-respect-LDFLAGS.patch:
+  Version bump
+
+  30 Aug 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Set correct email address, drop proxy-maint herd
+
+  04 Aug 2012; Michael Weber <xmw@gentoo.org> empty-0.6.18b.ebuild:
+  Respect LDFLAGS (bug 429664, thanks flameeyes for the report and pinkbyte for
+  the suggested fix).
+
+  04 Aug 2012; Michael Weber <xmw@gentoo.org>
+  +files/empty-0.6.18b-respect-LDFLAGS.patch, empty-0.6.18b.ebuild:
+  Respect LDFLAGS (bug 429664, thanks flameeyes for the report and pinkbyte for
+  the suggested fix).
+
+*empty-0.6.18b (18 Jun 2012)
+
+  18 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> +empty-0.6.18b.ebuild,
+  +files/overflow-fixes.patch, +metadata.xml:
+  Add app-misc/empty, ebuild by James Le Cuirot <chewi@aura-online.co.uk>. Bug
+  #97387

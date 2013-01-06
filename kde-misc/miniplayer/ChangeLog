@@ -1,0 +1,50 @@
+# ChangeLog for kde-misc/miniplayer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/miniplayer/ChangeLog,v 1.11 2012/11/14 20:14:50 johu Exp $
+
+  14 Nov 2012; Johannes Huber <johu@gentoo.org> -miniplayer-2.4.ebuild:
+  Remove old.
+
+  14 Nov 2012; Johannes Huber <johu@gentoo.org> miniplayer-2.5.ebuild:
+  Stable for x86, wrt bug #441334
+
+  06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> miniplayer-2.5.ebuild:
+  Stable for amd64, wrt bug #441334
+
+  16 Jul 2012; Agostino Sarubbo <ago@gentoo.org> miniplayer-2.4.ebuild:
+  Stable for amd64, wrt bug #426740
+
+  16 Jul 2012; Jeff Horelick <jdhore@gentoo.org> miniplayer-2.4.ebuild:
+  marked x86 per bug 426740
+
+*miniplayer-2.5 (15 Jul 2012)
+
+  15 Jul 2012; Johannes Huber <johu@gentoo.org> +miniplayer-2.5.ebuild:
+  Version bump.
+
+  15 Jul 2012; Johannes Huber <johu@gentoo.org> -miniplayer-2.3.ebuild,
+  miniplayer-2.4.ebuild:
+  Respect LINGUAS. Add missing dep. Remove old.
+
+*miniplayer-2.4 (31 May 2012)
+
+  31 May 2012; Johannes Huber <johu@gentoo.org> +miniplayer-2.4.ebuild,
+  -miniplayer-2.2.ebuild:
+  Version bump, remove old.
+
+*miniplayer-2.3 (01 Apr 2012)
+
+  01 Apr 2012; Johannes Huber <johu@gentoo.org> +miniplayer-2.3.ebuild,
+  -miniplayer-2.1.ebuild:
+  Version bump, remove old.
+
+*miniplayer-2.2 (01 Mar 2012)
+
+  01 Mar 2012; Johannes Huber <johu@gentoo.org> +miniplayer-2.2.ebuild:
+  Version bump.
+
+*miniplayer-2.1 (16 Jan 2012)
+
+  16 Jan 2012; Johannes Huber <johu@gentoo.org> +metadata.xml,
+  +miniplayer-2.1.ebuild:
+  New ebuild. Initial import from kde overlay.

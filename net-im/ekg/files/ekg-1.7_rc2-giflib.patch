@@ -1,0 +1,46 @@
+diff -Naurp ekg-1.7rc2-orig/configure.in ekg-1.7rc2/configure.in
+--- ekg-1.7rc2-orig/configure.in	2006-10-23 20:33:54.000000000 +0200
++++ ekg-1.7rc2/configure.in	2006-10-23 20:35:45.000000000 +0200
+@@ -454,20 +454,20 @@ if test "x$with_libgsm" != "xno"; then
+ fi
+ 
+ dnl
+-dnl  Sprawdzamy libungif.so i <gif_lib.h>
++dnl  Sprawdzamy libgif.so i <gif_lib.h>
+ dnl
+   
+-AC_ARG_WITH(libungif,
+-	[  --without-libungif      Compile without GIF token support])
++AC_ARG_WITH(libgif,
++	[  --without-libgif      Compile without GIF token support])
+ 
+-if test "x$with_libungif" != "xno"; then
+-	AC_CHECK_LIB(ungif, DGifSlurp,
++if test "x$with_libgif" != "xno"; then
++	AC_CHECK_LIB(gif, DGifSlurp,
+ 	[ 
+ 		AC_CHECK_HEADERS(gif_lib.h,
+ 		[
+-			AC_DEFINE(HAVE_LIBUNGIF, 1, [define if you have libungif])
+-			LDFLAGS="-lungif $LDFLAGS"
+-			have_libungif=yes
++			AC_DEFINE(HAVE_LIBUNGIF, 1, [define if you have libgif])
++			LDFLAGS="-lgif $LDFLAGS"
++			have_libgif=yes
+ 		])
+ 	])
+ fi
+@@ -686,10 +686,10 @@ else
+ 	echo " - pthread: disabled"
+ fi
+ 
+-if test "x$have_libungif" = "xyes"; then
+-	echo " - libungif: enabled"
++if test "x$have_libgif" = "xyes"; then
++	echo " - libgif: enabled"
+ else
+-	echo " - libungif: disabled"
++	echo " - libgif: disabled"
+ fi
+ 
+ if test "x$have_libjpeg" = "xyes"; then

@@ -1,0 +1,61 @@
+From 8b62e545aa61111d8dd522ff62445b2827da3f25 Mon Sep 17 00:00:00 2001
+From: William Jon McCann <jmccann@redhat.com>
+Date: Thu, 30 Sep 2010 00:50:44 +0000
+Subject: Remove GDK_DISPLAY() usage
+
+https://bugzilla.gnome.org/show_bug.cgi?id=630974
+---
+diff --git a/capplet/gkbd-indicator-plugins-capplet.c b/capplet/gkbd-indicator-plugins-capplet.c
+index c232c98..752d28c 100644
+--- a/capplet/gkbd-indicator-plugins-capplet.c
++++ b/capplet/gkbd-indicator-plugins-capplet.c
+@@ -376,7 +376,7 @@ main (int argc, char **argv)
+ 	}
+ 	gconf_error = NULL;
+ 	/*GkbdIndicatorInstallGlibLogAppender(  ); */
+-	gipc.engine = xkl_engine_get_instance (GDK_DISPLAY ());
++	gipc.engine = xkl_engine_get_instance (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
+ 	gipc.config_registry =
+ 	    xkl_config_registry_get_instance (gipc.engine);
+ 
+diff --git a/libgnomekbd/gkbd-indicator.c b/libgnomekbd/gkbd-indicator.c
+index cb2ed56..4fd42d8 100644
+--- a/libgnomekbd/gkbd-indicator.c
++++ b/libgnomekbd/gkbd-indicator.c
+@@ -817,7 +817,7 @@ gkbd_indicator_global_init (void)
+ 	GConfClient *gconf_client;
+ 	XklConfigRec *xklrec = xkl_config_rec_new ();
+ 
+-	globals.engine = xkl_engine_get_instance (GDK_DISPLAY ());
++	globals.engine = xkl_engine_get_instance (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
+ 	if (globals.engine == NULL) {
+ 		xkl_debug (0, "Libxklavier initialization error");
+ 		return;
+diff --git a/libgnomekbd/gkbd-keyboard-drawing.c b/libgnomekbd/gkbd-keyboard-drawing.c
+index 7e3c3e8..e31dc94 100644
+--- a/libgnomekbd/gkbd-keyboard-drawing.c
++++ b/libgnomekbd/gkbd-keyboard-drawing.c
+@@ -2524,7 +2524,7 @@ gkbd_keyboard_drawing_new_dialog (gint group, gchar * group_name)
+ 	GdkRectangle *rect;
+ 	GError *error = NULL;
+ 	char title[128] = "";
+-	XklEngine *engine = xkl_engine_get_instance (GDK_DISPLAY ());
++	XklEngine *engine = xkl_engine_get_instance (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
+ 
+ 	builder = gtk_builder_new ();
+ 	gtk_builder_add_from_file (builder, UIDIR "/show-layout.ui",
+diff --git a/libgnomekbd/gkbd-status.c b/libgnomekbd/gkbd-status.c
+index 83a5d47..c6ac2d6 100644
+--- a/libgnomekbd/gkbd-status.c
++++ b/libgnomekbd/gkbd-status.c
+@@ -771,7 +771,7 @@ gkbd_status_global_init (void)
+ 	GConfClient *gconf_client;
+ 	XklConfigRec *xklrec = xkl_config_rec_new ();
+ 
+-	globals.engine = xkl_engine_get_instance (GDK_DISPLAY ());
++	globals.engine = xkl_engine_get_instance (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()));
+ 	if (globals.engine == NULL) {
+ 		xkl_debug (0, "Libxklavier initialization error");
+ 		return;
+--
+cgit v0.9.0.2

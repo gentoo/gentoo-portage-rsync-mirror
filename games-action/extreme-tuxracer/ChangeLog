@@ -1,0 +1,59 @@
+# ChangeLog for games-action/extreme-tuxracer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.12 2012/08/22 18:55:03 mr_bones_ Exp $
+
+  22 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  extreme-tuxracer-0.4.ebuild, extreme-tuxracer-0.5_beta.ebuild:
+  convert to more general 'mod' use flag
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> extreme-tuxracer-0.4.ebuild,
+  extreme-tuxracer-0.5_beta.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  29 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  extreme-tuxracer-0.5_beta.ebuild:
+  stable x86, bug 322907
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org>
+  extreme-tuxracer-0.5_beta.ebuild:
+  stable amd64, bug 322907
+
+  09 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
+  extreme-tuxracer-0.5_beta.ebuild,
+  +files/extreme-tuxracer-0.5_beta-libpng14.patch:
+  Fix building with libpng14 wrt #308651 by Locke Shinseiko (Wizzleby).
+
+*extreme-tuxracer-0.5_beta (22 Aug 2009)
+
+  22 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +extreme-tuxracer-0.5_beta.ebuild:
+  beta version bump
+
+  22 Feb 2009; Raúl Porcel <armin76@gentoo.org>
+  extreme-tuxracer-0.4.ebuild:
+  x86 stable wrt #256746
+
+  07 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  extreme-tuxracer-0.4.ebuild:
+  stable amd64, bug 256746
+
+  04 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  extreme-tuxracer-0.4.ebuild:
+  add use-based dep for media-libs/sdl-mixer (bug #250815)
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
+  extreme-tuxracer-0.4.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
+
+*extreme-tuxracer-0.4 (23 Jan 2008)
+
+  23 Jan 2008; Tupone Alfredo <tupone@gentoo.org>
+  +extreme-tuxracer-0.4.ebuild, -extreme-tuxracer-0.35.ebuild:
+  Version bump to 0.4. Bug #207035 by Pacho Ramos
+  Old ebuild removed as file version numbering is incompatible
+
+*extreme-tuxracer-0.35 (04 Oct 2007)
+
+  04 Oct 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/extreme-tuxracer.svg, +metadata.xml, +extreme-tuxracer-0.35.ebuild:
+  New package. Bug #193576 by Matija Suklje (hook)

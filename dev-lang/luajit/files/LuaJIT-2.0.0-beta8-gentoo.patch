@@ -1,0 +1,174 @@
+Index: LuaJIT-2.0.0-beta8/etc/luajit.pc
+===================================================================
+--- LuaJIT-2.0.0-beta8.orig/etc/luajit.pc
++++ LuaJIT-2.0.0-beta8/etc/luajit.pc
+@@ -3,13 +3,13 @@ majver=2
+ minver=0
+ relver=0
+ version=${majver}.${minver}.${relver}-beta8
+-abiver=5.1
++abiver=jit-5.1
+ 
+-prefix=/usr/local
++prefix=/usr
+ exec_prefix=${prefix}
+-libdir=${exec_prefix}/lib
++libdir=${exec_prefix}/@LIBDIR@
+ libname=luajit-${abiver}
+-includedir=${prefix}/include/luajit-${majver}.${minver}
++includedir=${prefix}/include/luajit-@SHORTVER@
+ 
+ INSTALL_LMOD=${prefix}/share/lua/${abiver}
+ INSTALL_CMOD=${prefix}/lib/lua/${abiver}
+Index: LuaJIT-2.0.0-beta8/Makefile
+===================================================================
+--- LuaJIT-2.0.0-beta8.orig/Makefile
++++ LuaJIT-2.0.0-beta8/Makefile
+@@ -18,37 +18,38 @@ MINVER=  0
+ RELVER=  0
+ PREREL=  -beta8
+ VERSION= $(MAJVER).$(MINVER).$(RELVER)$(PREREL)
+-ABIVER=  5.1
+-NODOTABIVER=  51
++SHORTVER= $(MAJVER).$(MINVER)
++ABIVER=  jit-$(SHORTVER)
++NODOTSHORTVER=  $(MAJVER)$(MINVER)
+ 
+ ##############################################################################
+ #
+ # Change the installation path as needed. This automatically adjusts
+ # the paths in src/luaconf.h, too. Note: PREFIX must be an absolute path!
+ #
+-export PREFIX= /usr/local
++export PREFIX= /usr
+ ##############################################################################
+ 
+ DPREFIX= $(DESTDIR)$(PREFIX)
+ INSTALL_BIN=   $(DPREFIX)/bin
+-INSTALL_LIB=   $(DPREFIX)/lib
++INSTALL_LIB=   $(DPREFIX)/$(LIBDIR)
+ INSTALL_SHARE= $(DPREFIX)/share
+-INSTALL_INC=   $(DPREFIX)/include/luajit-$(MAJVER).$(MINVER)
++INSTALL_INC=   $(DPREFIX)/include/luajit-$(SHORTVER)
+ 
+-INSTALL_JITLIB= $(INSTALL_SHARE)/luajit-$(VERSION)/jit
++INSTALL_JITLIB= $(INSTALL_SHARE)/luajit-$(SHORTVER)/jit
+ INSTALL_LMOD= $(INSTALL_SHARE)/lua/$(ABIVER)
+ INSTALL_CMOD= $(INSTALL_LIB)/lua/$(ABIVER)
+ INSTALL_MAN= $(INSTALL_SHARE)/man/man1
+ INSTALL_PKGCONFIG= $(INSTALL_LIB)/pkgconfig
+ 
+-INSTALL_TNAME= luajit-$(VERSION)
++INSTALL_TNAME= luajit-$(SHORTVER)
+ INSTALL_TSYMNAME= luajit
+-INSTALL_ANAME= libluajit-$(ABIVER).a
+-INSTALL_SONAME= libluajit-$(ABIVER).so.$(MAJVER).$(MINVER).$(RELVER)
+-INSTALL_SOSHORT= libluajit-$(ABIVER).so
+-INSTALL_DYLIBNAME= libluajit-$(NODOTABIVER).$(MAJVER).$(MINVER).$(RELVER).dylib
+-INSTALL_DYLIBSHORT1= libluajit-$(NODOTABIVER).dylib
+-INSTALL_DYLIBSHORT2= libluajit-$(NODOTABIVER).$(MAJVER).dylib
++INSTALL_ANAME= libluajit-$(SHORTVER).a
++INSTALL_SONAME= libluajit-$(SHORTVER).so.$(RELVER)
++INSTALL_SOSHORT= libluajit-$(SHORTVER).so
++INSTALL_DYLIBNAME= libluajit-$(NODOTSHORTVER).$(MAJVER).$(MINVER).$(RELVER).dylib
++INSTALL_DYLIBSHORT1= libluajit-$(NODOTSHORTVER).dylib
++INSTALL_DYLIBSHORT2= libluajit-$(NODOTSHORTVER).$(MAJVER).dylib
+ INSTALL_PCNAME= luajit.pc
+ 
+ INSTALL_STATIC= $(INSTALL_LIB)/$(INSTALL_ANAME)
+@@ -57,7 +58,7 @@ INSTALL_SHORT1= $(INSTALL_LIB)/$(INSTALL
+ INSTALL_SHORT2= $(INSTALL_LIB)/$(INSTALL_SOSHORT)
+ INSTALL_T= $(INSTALL_BIN)/$(INSTALL_TNAME)
+ INSTALL_TSYM= $(INSTALL_BIN)/$(INSTALL_TSYMNAME)
+-INSTALL_PC= $(INSTALL_PKGCONFIG)/$(INSTALL_PCNAME)
++INSTALL_PC= $(INSTALL_PKGCONFIG)/luajit-$(SHORTVER).pc
+ 
+ INSTALL_DIRS= $(INSTALL_BIN) $(INSTALL_LIB) $(INSTALL_INC) $(INSTALL_MAN) \
+   $(INSTALL_PKGCONFIG) $(INSTALL_JITLIB) $(INSTALL_LMOD) $(INSTALL_CMOD)
+@@ -68,7 +69,7 @@ SYMLINK= ln -sf
+ INSTALL_X= install -m 0755
+ INSTALL_F= install -m 0644
+ LDCONFIG= ldconfig -n
+-SED_PC= sed -e "s|^prefix=.*|prefix=$(PREFIX)|"
++SED_PC= sed -e "s|@SHORTVER@|$(SHORTVER)|" -e "s|@LIBDIR@|$(LIBDIR)|"
+ 
+ FILE_T= luajit
+ FILE_A= libluajit.a
+@@ -107,7 +108,7 @@ install: $(INSTALL_DEP)
+ 	  $(LDCONFIG) $(INSTALL_LIB) && \
+ 	  $(SYMLINK) $(INSTALL_SONAME) $(INSTALL_SHORT1) && \
+ 	  $(SYMLINK) $(INSTALL_SONAME) $(INSTALL_SHORT2) || :
+-	cd etc && $(INSTALL_F) $(FILE_MAN) $(INSTALL_MAN)
++	cd etc && $(INSTALL_F) $(FILE_MAN) $(INSTALL_MAN)/luajit-$(SHORTVER).1
+ 	cd etc && $(SED_PC) $(FILE_PC) > $(FILE_PC).tmp && \
+ 	  $(INSTALL_F) $(FILE_PC).tmp $(INSTALL_PC) && \
+ 	  $(RM) $(FILE_PC).tmp
+Index: LuaJIT-2.0.0-beta8/src/luaconf.h
+===================================================================
+--- LuaJIT-2.0.0-beta8.orig/src/luaconf.h
++++ LuaJIT-2.0.0-beta8/src/luaconf.h
+@@ -22,16 +22,16 @@
+ #define LUA_CPATH_DEFAULT \
+   ".\\?.dll;" LUA_CDIR"?.dll;" LUA_CDIR"loadall.dll"
+ #else
+-#define LUA_ROOT	"/usr/local/"
+-#define LUA_LDIR	LUA_ROOT "share/lua/5.1/"
+-#define LUA_CDIR	LUA_ROOT "lib/lua/5.1/"
++#define LUA_ROOT	"/usr/"
++#define LUA_LDIR	LUA_ROOT "share/lua/jit-2.0/"
++#define LUA_CDIR	LUA_ROOT "lib/lua/jit-2.0/"
+ #ifdef LUA_XROOT
+-#define LUA_JDIR	LUA_XROOT "share/luajit-2.0.0-beta8/"
++#define LUA_JDIR	LUA_XROOT "share/luajit-2.0/"
+ #define LUA_XPATH \
+-  ";" LUA_XROOT "share/lua/5.1/?.lua;" LUA_XROOT "share/lua/5.1/?/init.lua"
+-#define LUA_XCPATH	LUA_XROOT "lib/lua/5.1/?.so;"
++  ";" LUA_XROOT "share/lua/5.1/?.lua;" LUA_XROOT "share/lua/jit-2.0/?/init.lua"
++#define LUA_XCPATH	LUA_XROOT "lib/lua/jit-2.0/?.so;"
+ #else
+-#define LUA_JDIR	LUA_ROOT "share/luajit-2.0.0-beta8/"
++#define LUA_JDIR	LUA_ROOT "share/luajit-2.0/"
+ #define LUA_XPATH
+ #define LUA_XCPATH
+ #endif
+Index: LuaJIT-2.0.0-beta8/src/Makefile
+===================================================================
+--- LuaJIT-2.0.0-beta8.orig/src/Makefile
++++ LuaJIT-2.0.0-beta8/src/Makefile
+@@ -13,8 +13,8 @@
+ MAJVER=  2
+ MINVER=  0
+ RELVER=  0
+-ABIVER=  5.1
+-NODOTABIVER= 51
++SHORTVER= $(MAJVER).$(MINVER)
++NODOTSHORTVER=  $(MAJVER)$(MINVER)
+ 
+ ##############################################################################
+ #############################  COMPILER OPTIONS  #############################
+@@ -197,9 +197,9 @@ TARGET_LD= $(CROSS)$(CC)
+ TARGET_AR= $(CROSS)ar rcus
+ TARGET_STRIP= $(CROSS)strip
+ 
+-TARGET_SONAME= libluajit-$(ABIVER).so.$(MAJVER)
+-TARGET_DYLIBNAME= libluajit-$(NODOTABIVER).$(MAJVER).$(MINVER).$(RELVER).dylib
+-TARGET_DLLNAME= lua$(NODOTABIVER).dll
++TARGET_SONAME= libluajit-$(SHORTVER).so.$(RELVER)
++TARGET_DYLIBNAME= libluajit-$(NODOTSHORTVER).$(MAJVER).$(MINVER).$(RELVER).dylib
++TARGET_DLLNAME= lua$(NODOTSHORTVER).dll
+ TARGET_XSHLDFLAGS= -shared -fPIC -Wl,-soname,$(TARGET_SONAME)
+ TARGET_DYNXLDOPTS=
+ 
+@@ -451,10 +451,8 @@ endif
+ endif
+ endif
+ 
+-Q= @
+-E= @echo
+-#Q=
+-#E= @:
++Q=
++E= @:
+ 
+ ##############################################################################
+ # Make targets.

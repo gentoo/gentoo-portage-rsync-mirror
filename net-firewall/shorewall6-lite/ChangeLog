@@ -1,0 +1,231 @@
+# ChangeLog for net-firewall/shorewall6-lite
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.41 2012/10/12 18:17:40 constanze Exp $
+
+*shorewall6-lite-4.5.8.2 (12 Oct 2012)
+
+  12 Oct 2012; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.5.8.2.ebuild, +files/shorewallrc_new:
+  Version Bump with altered rc-file
+
+*shorewall6-lite-4.5.6.2 (15 Aug 2012)
+
+  15 Aug 2012; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.5.6.2.ebuild:
+  Version Bump
+
+*shorewall6-lite-4.5.4.2 (08 Jun 2012)
+
+  08 Jun 2012; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.5.4.2.ebuild, +files/shorewallrc:
+  Version bump with new config file
+
+*shorewall6-lite-4.4.27-r1 (27 Feb 2012)
+
+  27 Feb 2012; Constanze Hausner <constanze@gentoo.org>
+  -shorewall6-lite-4.4.22.1.ebuild, -shorewall6-lite-4.4.22.3.ebuild,
+  -shorewall6-lite-4.4.24.1.ebuild, +shorewall6-lite-4.4.27-r1.ebuild:
+  Cleaned up old versions and added anti-dep for shorewall-core to unstable
+  versions < 4.5
+
+*shorewall6-lite-4.5.0.1 (24 Feb 2012)
+
+  24 Feb 2012; Constanze Hausner <constanze@gentoo.org>
+  files/shorewall6-lite.initd, +shorewall6-lite-4.5.0.1.ebuild:
+  Version Bump
+
+  23 Jan 2012; Tobias Klausmann <klausman@gentoo.org>
+  shorewall6-lite-4.4.23.2.ebuild:
+  Stable on alpha, bug #388195
+
+*shorewall6-lite-4.4.27 (03 Jan 2012)
+
+  03 Jan 2012; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.4.27.ebuild:
+  Version bump
+
+  13 Nov 2011; Markus Meier <maekke@gentoo.org>
+  shorewall6-lite-4.4.23.2.ebuild:
+  x86 stable, bug #388195
+
+  01 Nov 2011; Jeroen Roovers <jer@gentoo.org> shorewall6-lite-4.4.23.2.ebuild:
+  Stable for HPPA (bug #388195).
+
+  27 Oct 2011; Tony Vroon <chainsaw@gentoo.org>
+  shorewall6-lite-4.4.23.2.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
+  Agostino "ago" Sarubbo in bug #388195.
+
+*shorewall6-lite-4.4.24.1 (23 Oct 2011)
+
+  23 Oct 2011; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.4.24.1.ebuild:
+  Version bump.
+
+*shorewall6-lite-4.4.23.2 (14 Sep 2011)
+
+  14 Sep 2011; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.4.23.2.ebuild:
+  Version bump.
+
+*shorewall6-lite-4.4.22.3 (20 Aug 2011)
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org>
+  +shorewall6-lite-4.4.22.3.ebuild:
+  Version bump. Exchange R/DEPEND.
+
+*shorewall6-lite-4.4.22.1 (06 Aug 2011)
+
+  06 Aug 2011; Constanze Hausner <constanze@gentoo.org>
+  -shorewall6-lite-4.4.19.3.ebuild, -shorewall6-lite-4.4.19.4.ebuild,
+  -shorewall6-lite-4.4.20.3.ebuild, -shorewall6-lite-4.4.21.ebuild,
+  +shorewall6-lite-4.4.22.1.ebuild:
+  Version bump and cleanup, see bug #377473
+
+*shorewall6-lite-4.4.21 (16 Jul 2011)
+
+  16 Jul 2011; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.4.21.ebuild:
+  Version Bump
+
+*shorewall6-lite-4.4.20.3 (19 Jun 2011)
+
+  19 Jun 2011; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.4.20.3.ebuild:
+  Version bump; EAPI bump to EAPI4; General cleanup
+
+*shorewall6-lite-4.4.19.4 (21 May 2011)
+
+  21 May 2011; Constanze Hausner <constanze@gentoo.org>
+  -shorewall6-lite-4.4.18.ebuild, -shorewall6-lite-4.4.18.1.ebuild,
+  -shorewall6-lite-4.4.18.2.ebuild, -shorewall6-lite-4.4.19.1.ebuild,
+  +shorewall6-lite-4.4.19.4.ebuild:
+  Cleaned up old unstable versions; Version bump
+
+*shorewall6-lite-4.4.19.3 (14 May 2011)
+
+  14 May 2011; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.4.19.3.ebuild:
+  Version bump.
+
+*shorewall6-lite-4.4.19.1 (16 Apr 2011)
+
+  16 Apr 2011; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.4.19.1.ebuild:
+  Version bump.
+
+*shorewall6-lite-4.4.18.2 (10 Apr 2011)
+
+  10 Apr 2011; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.4.18.2.ebuild:
+  Version bump.
+
+*shorewall6-lite-4.4.18.1 (27 Mar 2011)
+
+  27 Mar 2011; Constanze Hausner <constanze@gentoo.org>
+  -shorewall6-lite-4.4.15.3.ebuild, -shorewall6-lite-4.4.16.1.ebuild,
+  -shorewall6-lite-4.4.17.ebuild, +shorewall6-lite-4.4.18.1.ebuild:
+  Cleaning up old versions; version bump
+
+*shorewall6-lite-4.4.18 (13 Mar 2011)
+
+  13 Mar 2011; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.4.18.ebuild:
+  Version bump.
+
+  27 Feb 2011; Tobias Klausmann <klausman@gentoo.org>
+  shorewall6-lite-4.4.15.1.ebuild:
+  Stable on alpha, bug #352532
+
+  17 Feb 2011; Thomas Kahle <tomka@gentoo.org> shorewall6-lite-4.4.15.1.ebuild:
+  x86 stable per bug 352532
+
+*shorewall6-lite-4.4.17 (12 Feb 2011)
+
+  12 Feb 2011; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.4.17.ebuild:
+  Version bump
+
+  26 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  shorewall6-lite-4.4.15.1.ebuild:
+  Stable on amd64 wrt bug #352532
+
+  25 Jan 2011; Jeroen Roovers <jer@gentoo.org> shorewall6-lite-4.4.15.1.ebuild:
+  Stable for HPPA (bug #352532).
+
+*shorewall6-lite-4.4.16.1 (23 Jan 2011)
+
+  23 Jan 2011; Constanze Hausner <constanze@gentoo.org>
+  -shorewall6-lite-4.2.8.ebuild, -shorewall6-lite-4.2.9.ebuild,
+  -shorewall6-lite-4.2.11.ebuild, -shorewall6-lite-4.4.2.ebuild,
+  -shorewall6-lite-4.4.10.ebuild, +shorewall6-lite-4.4.16.1.ebuild:
+  Version bump; Cleaned up old versions
+
+*shorewall6-lite-4.4.15.3 (11 Jan 2011)
+
+  11 Jan 2011; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.4.15.3.ebuild:
+  Version bump.
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> shorewall6-lite-4.2.11.ebuild,
+  shorewall6-lite-4.4.2.ebuild, shorewall6-lite-4.4.10.ebuild,
+  shorewall6-lite-4.4.15.1.ebuild:
+  added ~sparc keyword (bug 256063)
+
+*shorewall6-lite-4.4.15.1 (13 Dec 2010)
+
+  13 Dec 2010; Constanze Hausner <constanze@gentoo.org>
+  +shorewall6-lite-4.4.15.1.ebuild:
+  Version bump as requested by bug #339034. Thanks to Zoltan Karcagi.
+
+*shorewall6-lite-4.4.10 (16 Jun 2010)
+
+  16 Jun 2010; <chainsaw@gentoo.org> +shorewall6-lite-4.4.10.ebuild:
+  Version bump, closes bug #298301 by Magnus Kessler.
+
+*shorewall6-lite-4.4.2 (09 Oct 2009)
+
+  09 Oct 2009; Peter Volkov <pva@gentoo.org> +shorewall6-lite-4.4.2.ebuild:
+  Version bump, bug #281505, thank Vieri for this work and Conway S. Smith
+  for report.
+
+*shorewall6-lite-4.2.11 (09 Oct 2009)
+
+  09 Oct 2009; Peter Volkov <pva@gentoo.org> +shorewall6-lite-4.2.11.ebuild:
+  Version bump, bug #281617, thank Vieri for this work.
+
+  22 Jun 2009; Jeroen Roovers <jer@gentoo.org> shorewall6-lite-4.2.9.ebuild:
+  Marked ~hppa (bug #256063).
+
+*shorewall6-lite-4.2.9 (24 May 2009)
+
+  24 May 2009; Peter Volkov <pva@gentoo.org>
+  -shorewall6-lite-4.2.4.1.ebuild, -shorewall6-lite-4.2.6.ebuild,
+  +shorewall6-lite-4.2.9.ebuild:
+  Version bump, remove old, thank Vieri for maintaining this package (bug
+  269929 and bug 270193).
+
+*shorewall6-lite-4.2.8 (15 May 2009)
+
+  15 May 2009; Peter Volkov <pva@gentoo.org> +shorewall6-lite-4.2.8.ebuild:
+  Version bump, bug #269578, thank Vieri for maintaining this package.
+
+*shorewall6-lite-4.2.6 (22 Feb 2009)
+
+  22 Feb 2009; Peter Volkov <pva@gentoo.org> +shorewall6-lite-4.2.6.ebuild:
+  Version bump, thank Vieri for this work #257895.
+
+  01 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
+  shorewall6-lite-4.2.4.1.ebuild:
+  Keyworded on alpha, bug #256063
+
+  22 Jan 2009; Peter Volkov <pva@gentoo.org> shorewall6-lite-4.2.4.1.ebuild:
+  Fixed iptables dependency, bug #255437, as always... thank Vieri for all
+  work.
+
+*shorewall6-lite-4.2.4.1 (22 Jan 2009)
+
+  22 Jan 2009; Peter Volkov <pva@gentoo.org> +files/shorewall6-lite.initd,
+  +metadata.xml, +shorewall6-lite-4.2.4.1.ebuild:
+  Initial import, bug #255437, thank Vieri for all work.
+

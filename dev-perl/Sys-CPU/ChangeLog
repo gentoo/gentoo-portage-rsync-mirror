@@ -1,0 +1,75 @@
+# ChangeLog for dev-perl/Sys-CPU
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.22 2012/11/13 19:30:44 tove Exp $
+
+*Sys-CPU-0.540.0 (13 Nov 2012)
+
+  13 Nov 2012; Torsten Veller <tove@gentoo.org> +Sys-CPU-0.540.0.ebuild:
+  Version bump
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  17 Mar 2012; Raúl Porcel <armin76@gentoo.org> Sys-CPU-0.520.0.ebuild:
+  sparc stable wrt #356387
+
+  16 Mar 2012; Brent Baude <ranger@gentoo.org> Sys-CPU-0.520.0.ebuild:
+  Marking Sys-CPU-0.520.0 ppc64 for bug 356387
+
+  12 Mar 2012; Markus Meier <maekke@gentoo.org> Sys-CPU-0.520.0.ebuild:
+  arm stable, bug #356387
+
+  07 Mar 2012; Thomas Kahle <tomka@gentoo.org> Sys-CPU-0.520.0.ebuild:
+  marked x86 per bug 356387
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> Sys-CPU-0.520.0.ebuild:
+  Marking Sys-CPU-0.520.0 ppc for bug 356387
+
+  02 Mar 2012; Jeroen Roovers <jer@gentoo.org> Sys-CPU-0.520.0.ebuild:
+  Stable for HPPA (bug #356387).
+
+  02 Mar 2012; Agostino Sarubbo <ago@gentoo.org> Sys-CPU-0.520.0.ebuild:
+  Stable for amd64, wrt bug #356387
+
+  02 Mar 2012; Tobias Klausmann <klausman@gentoo.org> Sys-CPU-0.520.0.ebuild:
+  Stable on alpha, bug #356387
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Sys-CPU-0.52.ebuild:
+  Cleanup
+
+*Sys-CPU-0.520.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Sys-CPU-0.520.0.ebuild:
+  Change version scheme
+
+  14 Jan 2011; Torsten Veller <tove@gentoo.org> -Sys-CPU-0.51.ebuild:
+  Cleanup
+
+*Sys-CPU-0.52 (17 Aug 2010)
+
+  17 Aug 2010; Torsten Veller <tove@gentoo.org> +Sys-CPU-0.52.ebuild:
+  Version bump
+
+  24 Apr 2010; Raúl Porcel <armin76@gentoo.org> Sys-CPU-0.51.ebuild:
+  Add ~arm
+
+  23 Feb 2010; Joseph Jezak <josejx@gentoo.org> Sys-CPU-0.51.ebuild:
+  Marked ~ppc for bug #295639.
+
+  31 Dec 2009; Brent Baude <ranger@gentoo.org> Sys-CPU-0.51.ebuild:
+  Marking Sys-CPU-0.51 ~ppc64 for bug 295639
+
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org> Sys-CPU-0.51.ebuild:
+  Add ~alpha/~sparc wrt #295639
+
+  07 Dec 2009; Jeroen Roovers <jer@gentoo.org> Sys-CPU-0.51.ebuild:
+  Marked ~hppa (bug #295639).
+
+  04 Dec 2009; Torsten Veller <tove@gentoo.org> Sys-CPU-0.51.ebuild:
+  Remove explicit version from SRC_URI
+
+*Sys-CPU-0.51 (04 Dec 2009)
+
+  04 Dec 2009; Benedikt Böhm <hollow@gentoo.org> +Sys-CPU-0.51.ebuild,
+  +metadata.xml:
+  initial ebuild. required by sys-apps/logwatch

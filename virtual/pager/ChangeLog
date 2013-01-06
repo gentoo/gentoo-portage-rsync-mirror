@@ -1,0 +1,37 @@
+# ChangeLog for virtual/pager
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/pager/ChangeLog,v 1.11 2012/04/27 23:15:27 aballier Exp $
+
+  27 Apr 2012; Alexis Ballier <aballier@gentoo.org> pager-0.ebuild:
+  keyword ~amd64-fbsd
+
+  10 Jan 2012; Ulrich Müller <ulm@gentoo.org> pager-0.ebuild:
+  Drop USE conditional for prefix, since util-linux is no longer
+  package.provided in prefix/linux profiles. Bug 339854.
+
+  14 Nov 2011; Christian Faulhammer <fauli@gentoo.org> pager-0.ebuild:
+  Add app-editors/vim with vim-pagers USE flag as reported in bug 390465 by
+  Douglas Freed <dwfreed AT mtu DOT edu>
+
+  13 Jun 2011; Christian Faulhammer <fauli@gentoo.org> pager-0.ebuild:
+  Add dependency on USE=ncurses on sys-apps/util-linux, see bug 370367 by
+  Albert W. Hopkins <marduk AT python DOT net>
+
+  05 Oct 2010; Jeremy Olexa <darkside@gentoo.org> pager-0.ebuild:
+  Don't depend on util-linux for Gentoo Prefix, bug 339854
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> pager-0.ebuild:
+  QA: Add prefix keywords
+
+  18 Apr 2009; Ulrich Mueller <ulm@gentoo.org> pager-0.ebuild:
+  Include util-linux as alternative, since it installs /bin/more.
+
+  28 Nov 2008; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
+  Change my email address
+
+*pager-0 (21 Mar 2008)
+
+  21 Mar 2008; Christian Faulhammer <opfer@gentoo.org> +metadata.xml,
+  +pager-0.ebuild:
+  initial import
+

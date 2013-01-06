@@ -1,0 +1,16 @@
+--- OpenCPN-2.5.0-Source/CMakeLists.txt	2011-07-26 16:51:59.000000000 +0200
++++ opencpn/CMakeLists.txt	2011-09-28 16:28:35.181651034 +0200
+@@ -325,9 +325,12 @@
+       )
+ 
+ IF(TINYXML_FOUND)
++    message (STATUS "Building with tinyxml includes")
+     INCLUDE_DIRECTORIES(${TINYXML_INCLUDE_DIR})
++    ADD_DEFINITIONS(-DTIXML_USE_STL)
+ ELSE(TINYXML_FOUND)
+-  SET(SRCS ${SRCS} ${SRC_TINYXML})
++    message (STATUS "tinyxml library not found")
++    SET(SRCS ${SRCS} ${SRC_TINYXML})
+ ENDIF(TINYXML_FOUND)
+ 
+ 

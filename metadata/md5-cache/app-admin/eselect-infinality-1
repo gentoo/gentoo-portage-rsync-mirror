@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst unpack
+DESCRIPTION=Eselect module to choose an infinality font configuration style
+EAPI=4
+HOMEPAGE=https://github.com/yngwin/eselect-infinality
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=app-admin/eselect
+SLOT=0
+SRC_URI=https://github.com/yngwin/eselect-infinality/tarball/v1 -> eselect-infinality-1.tar.gz
+_eclasses_=vcs-snapshot	d7572a392e0bd8e207deae5414f6a887
+_md5_=e3f07e1fbb4e8345c4541a3edd2cc6d7

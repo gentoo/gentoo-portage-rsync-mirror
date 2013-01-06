@@ -1,0 +1,19 @@
+--- gphoto2-2.4.11/configure.ac.orig
++++ gphoto2-2.4.11/configure.ac
+@@ -146,8 +146,14 @@
+         CPPFLAGS="-I$cdk_prefix/include $CPPFLAGS"
+         AC_CHECK_HEADER([cdk/cdk.h], [
+                 have_cdk=:
+-                CDK_CFLAGS="-I$cdk_prefix/include"
+-                CDK_LIBS="-L$cdk_prefix/lib -lcdk -lncurses"
++                AC_PATH_PROG([CDK_CONFIG], [cdk5-config])
++                if test -n "${CDK_CONFIG}"; then
++                        CDK_CFLAGS=`$CDK_CONFIG --cflags`
++                        CDK_LIBS=`$CDK_CONFIG --libs`
++                else
++                        CDK_CFLAGS="-I$cdk_prefix/include"
++                        CDK_LIBS="-L$cdk_prefix/lib -lcdk -lncurses"
++                fi
+                 AC_DEFINE([HAVE_CDK],1,[whether we have CDK])
+                 LDFLAGS_save="$LDFLAGS"
+                 LDFLAGS="$CDK_LIBS"

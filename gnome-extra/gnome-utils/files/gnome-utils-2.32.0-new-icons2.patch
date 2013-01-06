@@ -1,0 +1,22 @@
+From 104f536687255ac939ab4e779081ef30aa033d15 Mon Sep 17 00:00:00 2001
+From: Cosimo Cecchi <cosimoc@gnome.org>
+Date: Mon, 21 Mar 2011 16:50:00 +0000
+Subject: logview: ship the SVG source for the new hires icon
+
+---
+(limited to 'logview/data/icons/Makefile.am')
+
+diff --git a/logview/data/icons/Makefile.am b/logview/data/icons/Makefile.am
+index 5131cf9..65be8d4 100644
+--- a/logview/data/icons/Makefile.am
++++ b/logview/data/icons/Makefile.am
+@@ -13,6 +13,7 @@ public_icons = \
+ 	$(NULL)
+ 
+ noinst_DATA = \
++	logview.svg \
+ 	$(NULL)
+ 
+ EXTRA_DIST = \
+--
+cgit v0.9

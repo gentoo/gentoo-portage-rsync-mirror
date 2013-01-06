@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/sword-tagalog
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-tagalog/ChangeLog,v 1.1 2008/05/17 02:41:53 beandog Exp $
+
+*sword-tagalog-1.1 (17 May 2008)
+
+  17 May 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-tagalog-1.1.ebuild:
+  Initial commit
+

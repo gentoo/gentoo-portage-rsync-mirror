@@ -1,0 +1,26 @@
+# ChangeLog for sec-policy/selinux-dbadm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dbadm/ChangeLog,v 1.6 2012/12/30 19:25:49 swift Exp $
+
+*selinux-dbadm-2.20120725-r9 (21 Dec 2012)
+
+  21 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-dbadm-2.20120725-r9.ebuild:
+  Bumping to revision 9
+
+  13 Dec 2012; Sven Vermeulen <swift@gentoo.org> selinux-dbadm-2.20120725-r8.ebuild:
+  Stabilization
+
+*selinux-dbadm-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-dbadm-2.20120725-r8.ebuild:
+  Bumping to revision 8
+
+*selinux-dbadm-2.20120725-r7 (18 Nov 2012)
+
+  18 Nov 2012; Sven Vermeulen <swift@gentoo.org> +selinux-dbadm-2.20120725-r7.ebuild:
+  Pushing out rev 7
+
+*selinux-dbadm-9999 (17 Nov 2012)
+
+  17 Nov 2012; Sven Vermeulen <swift@gentoo.org> +selinux-dbadm-9999.ebuild, +metadata.xml:
+  Add live ebuild for dbadm policy

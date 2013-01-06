@@ -1,0 +1,10 @@
+--- source/global.h.old	2011-04-21 08:36:56.986592821 +0200
++++ source/global.h	2011-04-21 08:37:51.575981236 +0200
+@@ -17,6 +17,7 @@
+ #ifndef _global_h
+ #define _global_h 1
+ 
++#include <cstddef>
+ #ifndef _METH_RC
+ 
+ #ifndef METHANE_OLD_CPP_NEW

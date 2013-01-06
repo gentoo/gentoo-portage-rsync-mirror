@@ -1,0 +1,24 @@
+# ChangeLog for mail-filter/spamassassin-botnet
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-botnet/ChangeLog,v 1.4 2012/06/17 15:06:13 ago Exp $
+
+  17 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
+  -spamassassin-botnet-0.7.ebuild:
+  Remove old
+
+*spamassassin-botnet-0.8 (29 Aug 2007)
+
+  29 Aug 2007; Patrick McLean <chutzpah@gentoo.org>
+  +spamassassin-botnet-0.8.ebuild:
+  Version bump.
+
+  24 Feb 2007; Raúl Porcel <armin76@gentoo.org>
+  spamassassin-botnet-0.7.ebuild:
+  Add ~x86 keyword wrt bug 168153
+
+*spamassassin-botnet-0.7 (23 Feb 2007)
+
+  23 Feb 2007; Patrick McLean <chutzpah@gentoo.org> +metadata.xml,
+  +spamassassin-botnet-0.7.ebuild:
+  Initial import.
+

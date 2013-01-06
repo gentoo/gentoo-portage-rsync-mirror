@@ -1,0 +1,27 @@
+The LANG vars aren't reset early enough so when sed tries to use [a-zA-Z] in 
+option parsing, it may break.
+
+http://bugs.gentoo.org/128253
+
+--- configure
++++ configure
+@@ -8,6 +8,19 @@
+ #  New default: /usr/share/kbd
+ #
+ 
++# NLS nuisances.
++for as_var in \
++  LANG LANGUAGE LC_ADDRESS LC_ALL LC_COLLATE LC_CTYPE LC_IDENTIFICATION \
++  LC_MEASUREMENT LC_MESSAGES LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER \
++  LC_TELEPHONE LC_TIME
++do
++  if (set +x; test -z "`(eval $as_var=C; export $as_var) 2>&1`"); then
++    eval $as_var=C; export $as_var
++  else
++    unset $as_var
++  fi
++done
++
+ prefix=
+ datadir=
+ mandir=

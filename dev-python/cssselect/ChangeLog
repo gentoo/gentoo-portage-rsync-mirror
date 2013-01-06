@@ -1,0 +1,47 @@
+# ChangeLog for dev-python/cssselect
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssselect/ChangeLog,v 1.12 2012/11/14 19:31:03 scarabeus Exp $
+
+  14 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> cssselect-0.7.1.ebuild:
+  Stable on x86. Closing bug#439090.
+
+  20 Oct 2012; Agostino Sarubbo <ago@gentoo.org> cssselect-0.7.1.ebuild:
+  Stable for amd64, wrt bug #439090
+
+  13 Oct 2012; Raúl Porcel <armin76@gentoo.org> cssselect-0.6.1.ebuild,
+  cssselect-0.7.1.ebuild:
+  Add ~ia64/~s390/~sh
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> cssselect-0.6.1.ebuild,
+  cssselect-0.7.1.ebuild:
+  Add ~alpha/~sparc wrt #416099
+
+  22 Jul 2012; Anthony G. Basile <blueness@gentoo.org> cssselect-0.7.1.ebuild:
+  Keyword ~ppc ~ppc64 0.7.1 as well, related to bug #383195
+
+  22 Jul 2012; Anthony G. Basile <blueness@gentoo.org> cssselect-0.6.1.ebuild:
+  Keyword ~ppc ~ppc64, related to bug #383195
+
+*cssselect-0.7.1 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +cssselect-0.7.1.ebuild:
+  Bump
+
+  27 Jun 2012; Markus Meier <maekke@gentoo.org> cssselect-0.6.1.ebuild:
+  add ~arm, bug #416099
+
+  27 May 2012; Naohiro Aota <naota@gentoo.org> cssselect-0.6.1.ebuild:
+  Add ~x86-fbsd. #416099
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> cssselect-0.6.1.ebuild:
+  Marked ~hppa (bug #416099).
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> cssselect-0.6.1.ebuild:
+  Stable for HPPA (bug #416099).
+
+*cssselect-0.6.1 (15 May 2012)
+
+  15 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +cssselect-0.6.1.ebuild,
+  +metadata.xml:
+  Initial import, ebuild written by me. It's new dependency for >=dev-
+  python/pyquery-1.2

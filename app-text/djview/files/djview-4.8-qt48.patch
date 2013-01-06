@@ -1,0 +1,56 @@
+From: Leon Bottou <leon@bottou.org>
+Date: Mon, 2 Apr 2012 14:11:36 +0000 (-0700)
+Subject: removed swap (use qSwap instead).
+X-Git-Tag: release.4.9~5
+X-Git-Url: http://djvu.git.sourceforge.net/git/gitweb.cgi?p=djvu%2Fdjview.git;a=commitdiff_plain;h=7d4802964b9e74506c63f43505b632f6e7b5db3c;hp=6389dcba572c6439acd226d27872c2f0db583875
+
+removed swap (use qSwap instead).
+
+Fixes Gentoo bug 401517, compilation problems with qt-4.8.
+Unclear why is namespace std in scope at this point when using qt-4.8...
+---
+
+diff --git a/src/qdjvuwidget.cpp b/src/qdjvuwidget.cpp
+index 52ac366..8136d07 100644
+--- a/src/qdjvuwidget.cpp
++++ b/src/qdjvuwidget.cpp
+@@ -152,15 +152,6 @@ all_numbers(const char *s)
+   return true;
+ }
+ 
+-template<class T> static inline void 
+-swap(T& x, T& y)
+-{
+-  T tmp;
+-  tmp = x;
+-  x = y;
+-  y = tmp;
+-}
+-
+ template<class T> static inline int
+ ksmallest(T *v, int n, int k)
+ {
+@@ -173,11 +164,11 @@ ksmallest(T *v, int n, int k)
+       /* Sort v[lo], v[m], v[hi] by insertion */
+       m = (lo+hi)/2;
+       if (v[lo]>v[m])
+-        swap(v[lo],v[m]);
++        qSwap(v[lo],v[m]);
+       if (v[m]>v[hi]) {
+-        swap(v[m],v[hi]);
++        qSwap(v[m],v[hi]);
+         if (v[lo]>v[m])
+-          swap(v[lo],v[m]);
++          qSwap(v[lo],v[m]);
+       }
+       /* Extract pivot, place sentinel */
+       pivot = v[m];
+@@ -191,7 +182,7 @@ ksmallest(T *v, int n, int k)
+       do ++l; while (v[l]<pivot);
+       do --h; while (v[h]>pivot);
+       if (l < h) { 
+-        swap(v[l],v[h]); 
++        qSwap(v[l],v[h]); 
+         goto loop; 
+       }
+       /* Finish up */

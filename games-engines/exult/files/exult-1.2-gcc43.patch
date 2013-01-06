@@ -1,0 +1,212 @@
+--- actions.cc
++++ actions.cc
+@@ -22,6 +22,8 @@
+ #  include <config.h>
+ #endif
+ 
++#include <cstdlib>
++#include <cstring>
+ #include "gamewin.h"
+ #include "actions.h"
+ #include "actors.h"
+--- args.cc
++++ args.cc
+@@ -24,6 +24,7 @@
+ #  include <iostream>
+ #endif
+ 
++#include <cstdlib>
+ #include "args.h"
+ 
+ #ifndef UNDER_CE
+--- audio/xmidi.cc
++++ audio/xmidi.cc
+@@ -31,6 +31,7 @@
+ #  include <cmath>
+ #endif
+ #include <unistd.h>
++#include <cstdlib>
+ #include "../files/utils.h"
+ #include "xmidi.h"
+ #include "../conf/Configuration.h"
+--- conf/Configuration.cc
++++ conf/Configuration.cc
+@@ -32,6 +32,7 @@
+ #include <stdio.h>
+ #include <iostream>
+ #include <fstream>
++#include <cstdlib>
+ #ifdef HAVE_SSTREAM
+ #include <sstream>
+ #endif
+--- files/Flex.h
++++ files/Flex.h
+@@ -24,6 +24,7 @@
+ #include <vector>
+ #include <string>
+ #include <iosfwd>
++#include <cstring>
+ #include "common_types.h"
+ #include "U7file.h"
+ 
+--- files/IFF.h
++++ files/IFF.h
+@@ -21,6 +21,7 @@
+ 
+ #include <vector>
+ #include <string>
++#include <cstring>
+ #include "common_types.h"
+ #include "U7file.h"
+ 
+--- files/listfiles.cc
++++ files/listfiles.cc
+@@ -29,6 +29,7 @@
+ #include <vector>
+ #include <string>
+ #include <iostream>
++#include <cstring>
+ 
+ #ifndef UNDER_CE
+ using std::vector;
+--- files/msgfile.cc
++++ files/msgfile.cc
+@@ -24,6 +24,7 @@
+ 
+ #include <iostream>
+ #include <vector>
++#include <cstdlib>
+ #include "utils.h"
+ 
+ using std::istream;
+--- files/Table.cc
++++ files/Table.cc
+@@ -26,6 +26,7 @@
+ #  include <cstdio>
+ #endif
+ #include <iostream>
++#include <cstdlib>
+ #include "exceptions.h"
+ #include "utils.h"
+ 
+--- files/U7file.cc
++++ files/U7file.cc
+@@ -24,6 +24,7 @@
+ #  include <cstdio>
+ #endif
+ #include <iostream>
++#include <cstdlib>
+ 
+ #include "U7file.h"
+ #include "Flex.h"
+--- hash_utils.h
++++ hash_utils.h
+@@ -19,6 +19,7 @@
+ #ifndef _HASH_UTILS_H_
+ #define _HASH_UTILS_H_
+ 
++#include <cstring>
+ #include "exult_types.h"
+ 
+ #ifdef DONT_HAVE_HASH_MAP
+--- imagewin/ibuf8.cc
++++ imagewin/ibuf8.cc
+@@ -29,6 +29,8 @@
+ #  include <iostream>
+ #endif
+ 
++#include <cstdlib>
++#include <cstring>
+ #include "exult_types.h"
+ #include "utils.h"
+ 
+--- objs/chunkter.cc
++++ objs/chunkter.cc
+@@ -25,6 +25,7 @@
+ #ifdef HAVE_CONFIG_H
+ #  include <config.h>
+ #endif
++#include <cstring>
+ #include "chunkter.h"
+ #include "gamewin.h"
+ #ifdef INCL_OPENGL
+--- party.cc
++++ party.cc
+@@ -26,6 +26,7 @@
+ 
+ #include <iostream>
+ #include <string>
++#include <cstring>
+ #include "party.h"
+ #include "actors.h"
+ #include "gamewin.h"
+--- server/objserial.cc
++++ server/objserial.cc
+@@ -30,6 +30,7 @@
+ #include "objserial.h"
+ #include "servemsg.h"
+ #include <iostream>
++#include <cstring>
+ 
+ using std::cout;
+ using std::endl;
+--- server/server.cc
++++ server/server.cc
+@@ -45,6 +45,7 @@
+ #endif
+ 
+ #include <cstdio>
++#include <cstdlib>
+ 
+ #ifdef _AIX
+ #include <strings.h>
+--- shapes/shapeinf.cc
++++ shapes/shapeinf.cc
+@@ -32,6 +32,7 @@
+ 
+ #include "utils.h"
+ #include <iomanip>	/* Debugging */
++#include <cstring>
+ using std::cout;
+ using std::endl;
+ 
+--- shapes/shapewrite.cc
++++ shapes/shapewrite.cc
+@@ -24,6 +24,7 @@
+ #  include <config.h>
+ #endif
+ 
++#include <cstring>
+ #include "shapevga.h"
+ #include "shapeinf.h"
+ #include "monstinf.h"
+--- usecode/ucmachine.cc
++++ usecode/ucmachine.cc
+@@ -23,6 +23,7 @@
+ #  include <config.h>
+ #endif
+ 
++#include <cstring>
+ #include "ucmachine.h"
+ #include "keyring.h"
+ #include "conversation.h"
+--- usecode/useval.cc
++++ usecode/useval.cc
+@@ -32,6 +32,7 @@
+   #include <cstdio>
+ #endif
+ 
++#include <cstdlib>
+ #include "useval.h"
+ #include "utils.h"
+ 
+--- usecode/useval.h
++++ usecode/useval.h
+@@ -24,6 +24,7 @@
+ 
+ #include <cassert>
+ #include <iostream>
++#include <cstdlib>
+ 
+ #include <vector>	// STL container
+ #include <deque>	// STL container

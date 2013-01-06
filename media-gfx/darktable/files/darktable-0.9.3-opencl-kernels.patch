@@ -1,0 +1,12 @@
+--- darktable-0.9.3/data/kernels/CMakeLists.txt.orig
++++ darktable-0.9.3/data/kernels/CMakeLists.txt
+@@ -3,5 +3,7 @@
+ #
+ # install opencl kernel source files
+ #
+-FILE(GLOB DT_OPENCL_KERNELS "*.cl" "programs.conf")
+-install(FILES ${DT_OPENCL_KERNELS} DESTINATION ${SHARE_INSTALL}/kernels)
++if(USE_OPENCL)
++	FILE(GLOB DT_OPENCL_KERNELS "*.cl" "programs.conf")
++	install(FILES ${DT_OPENCL_KERNELS} DESTINATION ${SHARE_INSTALL}/kernels)
++endif(USE_OPENCL)

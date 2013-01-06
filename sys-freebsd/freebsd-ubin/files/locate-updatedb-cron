@@ -1,0 +1,6 @@
+#! /bin/sh
+
+if [ -x /usr/libexec/locate.updatedb ]
+then
+	nice /usr/libexec/locate.updatedb
+fi

@@ -1,0 +1,11 @@
+--- ggz-gtk/Makefile.am.old	2011-12-15 10:56:10.060319162 +0100
++++ ggz-gtk/Makefile.am	2011-12-15 10:56:15.830319202 +0100
+@@ -73,7 +73,7 @@
+ 			xtext-ggz.h
+ 
+ libggz_gtk_la_LIBADD = $(GTK_LIBS) $(LDADD) $(LIBS) $(INTLLIBS) \
+-			$(LIB_GGZCORE) $(LIB_GGZ) $(LIB_GETTEXT)
++			$(LIB_GGZCORE) $(LIB_GGZ) $(LIB_GETTEXT) -lX11
+ libggz_gtk_la_LDFLAGS = $(GGZCORE_LDFLAGS) $(LIBGGZ_LDFLAGS) -version-info 1:0:0
+ 
+ #if WIN32

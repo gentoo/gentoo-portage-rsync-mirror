@@ -1,0 +1,92 @@
+From 362ba4585a48273289f382c16947e858ff3818cf Mon Sep 17 00:00:00 2001
+From: Brian Dolbec <dolsen@gentoo.org>
+Date: Sat, 15 Dec 2012 18:37:50 -0800
+Subject: [PATCH] Add aditional debug info, fix bug 373195, removing garbage
+ or otherwise inaccessible file system mirrors from existing
+ SYNC or GENTOO_MIRRORS make.conf values.
+
+---
+ mirrorselect/main.py      | 14 +++++++++++---
+ mirrorselect/selectors.py |  4 +++-
+ 2 files changed, 14 insertions(+), 4 deletions(-)
+
+diff --git a/mirrorselect/main.py b/mirrorselect/main.py
+index cbff890..48d74a7 100755
+--- a/mirrorselect/main.py
++++ b/mirrorselect/main.py
+@@ -154,8 +154,7 @@ class MirrorSelect(object):
+ 		sys.exit(0)
+
+
+-	@staticmethod
+-	def get_filesystem_mirrors(config_path, sync=False):
++	def get_filesystem_mirrors(self, config_path, sync=False):
+ 		"""Read the current mirrors and retain mounted filesystems mirrors
+
+ 		@param config_path: string
+@@ -170,6 +169,7 @@ class MirrorSelect(object):
+ 		else:
+ 			var = 'GENTOO_MIRRORS'
+
++		self.output.write('get_filesystem_mirrors(): config_path = %s\n' % config_path, 2)
+ 		try:
+ 			f = open(config_path,'r')
+ 		except IOError:
+@@ -182,6 +182,8 @@ class MirrorSelect(object):
+ 			lex.quotes = "\"'"
+ 			while 1:
+ 				key = lex.get_token()
++				#self.output.write('get_filesystem_mirrors(): processing key = %s\n' % key, 2)
++
+ 				if key == var:
+ 					equ = lex.get_token()
+
+@@ -196,16 +198,22 @@ class MirrorSelect(object):
+
+ 					""" Look for mounted filesystem in value """
+ 					mirrorlist = val.rsplit()
++					self.output.write('get_filesystem_mirrors(): mirrorlist = %s\n' % mirrorlist, 2)
+ 					p = re.compile('rsync://|http://|ftp://', re.IGNORECASE)
+ 					for mirror in mirrorlist:
+ 						if (p.match(mirror) == None):
+-							fsmirrors.append(mirror)
++							if os.access(mirror, os.F_OK):
++								self.output.write('get_filesystem_mirrors(): found file system mirror = %s\n' % mirror, 2)
++								fsmirrors.append(mirror)
++							else:
++								self.output.write('get_filesystem_mirrors(): ignoring non-accessible mirror = %s\n' % mirror, 2)
+ 					break
+ 				elif key is None:
+ 					break
+ 		except Exception:
+ 			fsmirrors = []
+
++		self.output.write('get_filesystem_mirrors(): fsmirrors = %s\n' % fsmirrors, 2)
+ 		return fsmirrors
+
+
+diff --git a/mirrorselect/selectors.py b/mirrorselect/selectors.py
+index b2a5fc7..38ca07a 100644
+--- a/mirrorselect/selectors.py
++++ b/mirrorselect/selectors.py
+@@ -303,14 +303,16 @@ class Deep(object):
+
+ 		self.output.write('\n')	#this just makes output nicer
+
+-		#can't just return the dict.valuse, because we want the fastest mirror first...
++		#can't just return the dict.values, because we want the fastest mirror first...
+ 		keys = list(top_hosts.keys())
+ 		keys.sort()
+
+ 		rethosts = []
+ 		for key in keys:
++			#self.output.write('deeptest(): adding rethost %s, %s' % (key, top_hosts[key]), 2)
+ 			rethosts.append(top_hosts[key])
+
++		self.output.write('deeptest(): final rethost %s' % (rethosts), 2)
+ 		self.urls = rethosts
+
+
+--
+1.8.0
+

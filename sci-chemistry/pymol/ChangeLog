@@ -1,0 +1,92 @@
+# ChangeLog for sci-chemistry/pymol
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.96 2012/10/15 17:22:52 jlec Exp $
+
+  15 Oct 2012; Justin Lecher <jlec@gentoo.org> pymol-1.5.0.3-r1.ebuild:
+  Add mime type definition
+
+  06 Oct 2012; Justin Lecher <jlec@gentoo.org>
+  -files/pymol-0.99_rc10-data-path.patch, -files/pymol-1.2.2-data-path.patch,
+  -files/pymol-1.2.2-prefix.patch, -files/pymol-1.2.2-shaders.patch,
+  -files/pymol-1.2.2-vmd.patch, -files/pymol-1.3.0-vmd.patch,
+  -pymol-1.3.1_pre3925-r1.ebuild, -pymol-1.4.1.ebuild,
+  -files/pymol-1.4.1-data-path.patch, -files/pymol-1.4.1-shaders.patch,
+  -files/pymol-1.4.1-web.patch, -files/pymol-1.4-shaders.patch,
+  -files/pymol-1.4-vmd.patch, -pymol-1.5.0.1.ebuild,
+  -files/pymol-1.5.0.1-prefix.patch, -pymol-1.5.0.2.ebuild,
+  -pymol-1.5.0.3.ebuild, pymol-1.5.0.3-r1.ebuild, metadata.xml:
+  Add fix for OSX prefix and keyword ~x64-macos ~x86-macos; #437324; Drop old
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pymol-1.5.0.3-r1.ebuild:
+  x86 stable wrt bug #431120
+
+  14 Aug 2012; Anthony G. Basile <blueness@gentoo.org> pymol-1.5.0.3-r1.ebuild:
+  Stable ppc, bug #431120
+
+  14 Aug 2012; Agostino Sarubbo <ago@gentoo.org> pymol-1.5.0.3-r1.ebuild:
+  Stable for amd64, wrt bug #431120
+
+  14 Aug 2012; Justin Lecher <jlec@gentoo.org> pymol-1.5.0.3-r1.ebuild:
+  Add aditional messages for crashing shader support
+
+  12 Aug 2012; Justin Lecher <jlec@gentoo.org> pymol-1.5.0.1.ebuild,
+  pymol-1.5.0.2.ebuild, pymol-1.5.0.3.ebuild, pymol-1.5.0.3-r1.ebuild:
+  Correct Desktop entry
+
+  04 Jun 2012; Michael Weber <xmw@gentoo.org> pymol-1.3.1_pre3925-r1.ebuild:
+  ppc stable (bug 366229)
+
+  29 Mar 2012; Justin Lecher <jlec@gentoo.org> pymol-1.5.0.1.ebuild,
+  pymol-1.5.0.2.ebuild, pymol-1.5.0.3.ebuild, pymol-1.5.0.3-r1.ebuild:
+  Add new icon files provided by Ramiro Téllez Sanz
+
+*pymol-1.5.0.3-r1 (28 Mar 2012)
+
+  28 Mar 2012; Justin Lecher <jlec@gentoo.org>
+  files/pymol-1.5.0.1-data-path.patch, +pymol-1.5.0.3-r1.ebuild:
+  Add missing wrong usage of PYMOL_PATH, #409971
+
+*pymol-1.5.0.3 (10 Mar 2012)
+
+  10 Mar 2012; Justin Lecher <jlec@gentoo.org> +pymol-1.5.0.3.ebuild,
+  +files/pymol-1.5.0.3-prefix.patch, +files/pymol-1.5.0.3-web.patch:
+  Version BUmp
+
+*pymol-1.5.0.2 (27 Feb 2012)
+
+  27 Feb 2012; Justin Lecher <jlec@gentoo.org> pymol-1.5.0.1.ebuild,
+  +pymol-1.5.0.2.ebuild:
+  Version Bump
+
+  26 Feb 2012; Patrick Lauer <patrick@gentoo.org> pymol-1.3.1_pre3925-r1.ebuild,
+  pymol-1.4.1.ebuild, pymol-1.5.0.1.ebuild:
+  Restricting pypy and jython
+
+  14 Feb 2012; Justin Lecher <jlec@gentoo.org> -files/1.2.2-data-path.patch,
+  -files/1.2.1/pymol-1.2.1-data-path.patch, -files/1.2.2-prefix.patch,
+  -files/1.2.1/pymol-1.2.1-shaders.patch, -files/1.3.0-vmd.patch,
+  -pymol-1.2.3-r1.ebuild, -files/1.4.1-data-path.patch,
+  pymol-1.3.1_pre3925-r1.ebuild, -files/1.4.1-shaders.patch,
+  pymol-1.4.1.ebuild, -files/1.4-shaders.patch,
+  +files/pymol-1.2.2-data-path.patch, +files/pymol-1.4.1-data-path.patch,
+  -files/1.4-vmd.patch, +files/pymol-1.3.0-vmd.patch,
+  +files/pymol-1.4.1-shaders.patch, -files/1.4.1-web.patch,
+  +files/pymol-1.2.2-prefix.patch, +files/pymol-1.4.1-web.patch,
+  +files/pymol-1.4-shaders.patch, +files/pymol-1.4-vmd.patch,
+  pymol-1.5.0.1.ebuild, -files/pymol-1.5.0.1-nosplash.patch:
+  Rename all patches, add support for desktop icon, drop nosplash patch and add
+  launch option
+
+*pymol-1.5.0.1 (13 Feb 2012)
+
+  13 Feb 2012; Justin Lecher <jlec@gentoo.org> +pymol-1.5.0.1.ebuild,
+  +files/pymol-1.5.0.1-data-path.patch, +files/pymol-1.5.0.1-flags.patch,
+  +files/pymol-1.5.0.1-nosplash.patch, +files/pymol-1.5.0.1-prefix.patch,
+  +files/pymol-1.5.0.1-setup.py.patch, +files/pymol-1.5.0.1-vmd.patch,
+  +files/pymol-1.5.0.1-web.patch, metadata.xml:
+  Version Bump
+
+  02 Jun 2011; Justin Lecher <jlec@gentoo.org> +files/1.4.1-web.patch,
+  pymol-1.4.1.ebuild, metadata.xml:
+  Fix collision with dev-python/webpy, #368947
+

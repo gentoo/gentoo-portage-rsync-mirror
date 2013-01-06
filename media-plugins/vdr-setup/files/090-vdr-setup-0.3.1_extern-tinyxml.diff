@@ -1,0 +1,107 @@
+diff -Naur setup-0.3.1.orig/config.cpp setup-0.3.1/config.cpp
+--- setup-0.3.1.orig/config.cpp	2010-10-02 18:16:25.000000000 +0200
++++ setup-0.3.1/config.cpp	2010-10-02 18:18:52.000000000 +0200
+@@ -13,7 +13,7 @@
+ #include <sys/types.h>
+ #include <dirent.h>
+ #include "vdr/plugin.h"
+-#include "vdr/tinystr.h"
++#include <tinystr.h>
+ #include "config.h"
+ #include "sysconfig.h"
+ #include "plugins.h"
+diff -Naur setup-0.3.1.orig/config.h setup-0.3.1/config.h
+--- setup-0.3.1.orig/config.h	2010-10-02 18:16:25.000000000 +0200
++++ setup-0.3.1/config.h	2010-10-02 18:19:06.000000000 +0200
+@@ -11,7 +11,7 @@
+ 
+ #ifndef CONFIG_H
+ #define CONFIG_H
+-#include "vdr/tinystr.h"
++#include <tinystr.h>
+ #include "plugins.h"
+ #include "sysconfig.h"
+ #include "menus.h"
+diff -Naur setup-0.3.1.orig/Makefile setup-0.3.1/Makefile
+--- setup-0.3.1.orig/Makefile	2010-10-02 18:16:25.000000000 +0200
++++ setup-0.3.1/Makefile	2010-10-02 18:18:21.000000000 +0200
+@@ -46,7 +46,9 @@
+ INCLUDES += -I$(VDRDIR)
+ 
+ DEFINES += -D_GNU_SOURCE -DPLUGIN_NAME_I18N='"$(PLUGIN)"' -DVDRVERSION="\"$(VDRVERSION)\"" 
++DEFINES += -DTIXML_USE_STL
+ 
++LIBS += -ltinyxml
+ 
+ ifdef BIGPATCH_INSTALLED
+         DEFINES += -DBIGPATCH_INSTALLED
+@@ -81,7 +83,7 @@
+ 
+ 
+ libvdr-$(PLUGIN).so: setupsystemmenu.cpp $(OBJS) 
+-	$(CXX) $(CXXFLAGS) -shared $(OBJS) -o $@
++	$(CXX) $(CXXFLAGS) -shared $(OBJS) $(LIBS) -o $@
+ 	@cp $@ $(LIBDIR)/$@.$(VDRVERSION)
+ 
+ setupsystemmenu.cpp:  /usr/share/vdr/setup/menu.c
+diff -Naur setup-0.3.1.orig/menus.cpp setup-0.3.1/menus.cpp
+--- setup-0.3.1.orig/menus.cpp	2010-10-02 18:16:25.000000000 +0200
++++ setup-0.3.1/menus.cpp	2010-10-02 18:20:06.000000000 +0200
+@@ -344,11 +344,11 @@
+   bool ok = true;
+   TiXmlElement *elem = NULL;
+ 
+-  if(xmlNode != NULL && xmlNode->Type() == TiXmlNode::ELEMENT)
++  if(xmlNode != NULL && xmlNode->Type() == TiXmlNode::TINYXML_ELEMENT)
+   {
+     do
+     {
+-        if(xmlNode->Type() == TiXmlNode::ELEMENT)
++        if(xmlNode->Type() == TiXmlNode::TINYXML_ELEMENT)
+         {
+           elem = xmlNode->ToElement ();
+           if( strcmp(xmlNode->Value(), "menu")== 0)
+@@ -810,7 +810,7 @@
+      }
+     }
+     else
+-        if( node != NULL && node->Type() == TiXmlNode::ELEMENT)
++        if( node != NULL && node->Type() == TiXmlNode::TINYXML_ELEMENT)
+         {
+             do
+             {
+@@ -991,7 +991,7 @@
+     bool          ok   = true;
+     TiXmlElement *elem = NULL;
+ 
+-    if(node != NULL && node->Type() == TiXmlNode::ELEMENT)
++    if(node != NULL && node->Type() == TiXmlNode::TINYXML_ELEMENT)
+     {
+ 
+       elem = node->ToElement ();
+@@ -1183,11 +1183,11 @@
+ {
+    bool ok = true;
+    TiXmlElement *elem = NULL;
+-   if(node != NULL && node->Type() == TiXmlNode::ELEMENT && (node=node->FirstChild())!=NULL)
++   if(node != NULL && node->Type() == TiXmlNode::TINYXML_ELEMENT && (node=node->FirstChild())!=NULL)
+    {
+         do
+         {
+-           if(node->Type() == TiXmlNode::ELEMENT && strcmp(node->Value(), "menu")== 0)
++           if(node->Type() == TiXmlNode::TINYXML_ELEMENT && strcmp(node->Value(), "menu")== 0)
+            {
+             elem = node->ToElement ();
+             const char* name = elem->Attribute("name");
+diff -Naur setup-0.3.1.orig/menus.h setup-0.3.1/menus.h
+--- setup-0.3.1.orig/menus.h	2010-10-02 18:16:25.000000000 +0200
++++ setup-0.3.1/menus.h	2010-10-02 18:20:42.000000000 +0200
+@@ -13,7 +13,7 @@
+ #define MENUS_H
+ #include <vdr/tools.h>
+ #include "util.h"
+-#include "vdr/tinystr.h"
++#include <tinyxml.h>
+ #include "sysconfig.h"
+ 
+ 

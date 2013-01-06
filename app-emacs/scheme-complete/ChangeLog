@@ -1,0 +1,46 @@
+# ChangeLog for app-emacs/scheme-complete
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/scheme-complete/ChangeLog,v 1.8 2012/03/19 18:01:25 ulm Exp $
+
+*scheme-complete-0.8.10 (19 Mar 2012)
+
+  19 Mar 2012; Ulrich Müller <ulm@gentoo.org> -scheme-complete-0.8.8.ebuild,
+  +scheme-complete-0.8.10.ebuild:
+  Version bump. Update HOMEPAGE. Remove old.
+
+  01 Jun 2010; Joseph Jezak <josejx@gentoo.org>
+  scheme-complete-0.8.9.ebuild:
+  Marked ~ppc/~ppc64 for bug #314707.
+
+  09 May 2010; Raúl Porcel <armin76@gentoo.org>
+  scheme-complete-0.8.8.ebuild, scheme-complete-0.8.9.ebuild:
+  Add ~alpha wrt #314707
+
+*scheme-complete-0.8.9 (30 Dec 2009)
+
+  30 Dec 2009; Ulrich Mueller <ulm@gentoo.org>
+  -scheme-complete-0.8.1.ebuild, +scheme-complete-0.8.9.ebuild:
+  Version bump. Remove old.
+
+  24 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  scheme-complete-0.8.1.ebuild, scheme-complete-0.8.8.ebuild:
+  import changes from Prefix overlay
+
+*scheme-complete-0.8.8 (15 Oct 2009)
+
+  15 Oct 2009; Ulrich Mueller <ulm@gentoo.org>
+  +scheme-complete-0.8.8.ebuild:
+  Version bump.
+
+  14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> scheme-complete-0.8.1.ebuild:
+  Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
+  automatically.
+
+*scheme-complete-0.8.1 (22 Apr 2008)
+
+  22 Apr 2008; Ulrich Mueller <ulm@gentoo.org>
+  +files/60scheme-complete-gentoo.el, +metadata.xml,
+  +scheme-complete-0.8.1.ebuild:
+  Initial import from Emacs overlay. Ebuild originally contributed by
+  Leonardo Valeri Manera <l.valerimanera@gmail.com>.
+

@@ -1,0 +1,10 @@
+DEFINED_PHASES=install nofetch
+DEPEND=>=app-arch/unzip-5.50-r1
+DESCRIPTION=Sun's documentation bundle (including API) for Java SE
+HOMEPAGE=http://java.sun.com/j2se/1.5.0/
+KEYWORDS=amd64 ia64 ppc ppc64 x86
+LICENSE=sun-j2sl
+RESTRICT=fetch
+SLOT=1.5.0
+SRC_URI=jdk-1_5_0-doc-r1.zip
+_md5_=c59118d41f90490446ba6814d9e99392

@@ -1,0 +1,16 @@
+diff -urNp pitivi-0.13.5.old/pitivi/factories/base.py pitivi-0.13.5/pitivi/factories/base.py
+--- pitivi-0.13.5.old/pitivi/factories/base.py	2011-01-30 16:40:27.672000221 +0530
++++ pitivi-0.13.5/pitivi/factories/base.py	2011-01-30 16:41:12.784000223 +0530
+@@ -421,7 +421,11 @@ class SourceFactory(ObjectFactory):
+                 b.csp = gst.element_factory_make("identity")
+ 
+             b.alpha = gst.element_factory_make("alpha", "internal-alpha")
+-            b.alpha.props.prefer_passthrough = True
++            try:
++                b.alpha.props.prefer_passthrough = True
++            except AttributeError:
++                self.warning("User has old version of alpha. "
++                        "prefer-passthrough not enabled")
+             b.scale = gst.element_factory_make("videoscale")
+             try:
+                 b.scale.props.add_borders = True

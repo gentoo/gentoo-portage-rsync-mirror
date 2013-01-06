@@ -1,0 +1,23 @@
+# ChangeLog for dev-python/carbon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/carbon/ChangeLog,v 1.3 2012/06/22 15:23:20 marienz Exp $
+
+*carbon-0.9.10 (22 Jun 2012)
+
+  22 Jun 2012; Marien Zwart <marienz@gentoo.org> +carbon-0.9.10.ebuild,
+  +files/no-data-files.patch:
+  Version bump, fix install paths (bug #417221, thanks to Tom Prince and Ian
+  Delaney). Remove old broken version.
+
+*carbon-0.9.9-r2 (22 Mar 2012)
+
+  22 Mar 2012; Patrick Lauer <patrick@gentoo.org> +carbon-0.9.9-r2.ebuild,
+  -carbon-0.9.9-r1.ebuild:
+  Fixing install path
+
+*carbon-0.9.9-r1 (22 Mar 2012)
+
+  22 Mar 2012; Patrick Lauer <patrick@gentoo.org> +carbon-0.9.9-r1.ebuild,
+  +metadata.xml:
+  Initial import, ebuild borrowed from kormoc overlay
+

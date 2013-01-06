@@ -1,0 +1,11 @@
+--- src/Makefile.old	2010-09-16 14:07:38.000000000 +0200
++++ src/Makefile	2010-09-16 14:07:54.000000000 +0200
+@@ -33,7 +33,7 @@
+ 	doxygen .doxygen.conf 2>&1 | tee .doxygen.log
+ 
+ ../dark-oberon: $(OBJECTS)
+-	$(CPP) $(OBJECTS) $(LIBPATHS) $(LIBRARIES) -o ../dark-oberon
++	$(CPP) $(LDFLAGS) $(OBJECTS) $(LIBPATHS) $(LIBRARIES) -o ../dark-oberon
+ 
+ doalloc.o: doalloc.cpp cfg.h doalloc.h dologs.h
+ 	$(CPP) -c doalloc.cpp

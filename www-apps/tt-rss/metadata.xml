@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>proxy-maintainers</herd>
+<maintainer>
+     <email>mail@patrick-nagel.net</email>
+     <name>Patrick Nagel</name>
+     <description>Maintainer</description>
+</maintainer>
+<maintainer>
+<email>hwoarang@gentoo.org</email>
+<name>Markos Chandras</name>
+<description>Proxy maintainer</description>
+</maintainer>
+<use>
+	<flag name="daemon">Install additional init scripts for automated RSS updates</flag>
+</use>
+</pkgmetadata>

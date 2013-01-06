@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>rafaelmartins@gentoo.org</email>
+  </maintainer>
+  <maintainer>
+    <email>klausman@gentoo.org</email>
+  </maintainer>
+  <use>
+    <flag name="libevent">Use libevent for event handling</flag>
+    <flag name="zlib">Support for compressing XMPP streams with mod_compression</flag>
+  </use>
+</pkgmetadata>

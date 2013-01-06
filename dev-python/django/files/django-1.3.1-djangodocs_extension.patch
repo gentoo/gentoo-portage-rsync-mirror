@@ -1,0 +1,55 @@
+https://code.djangoproject.com/changeset/16223
+https://code.djangoproject.com/changeset/16231
+https://code.djangoproject.com/changeset/16952
+
+--- docs/_ext/djangodocs.py
++++ docs/_ext/djangodocs.py
+@@ -16,7 +16,7 @@
+         except ImportError:
+             json = None
+ 
+-from sphinx import addnodes, roles
++from sphinx import addnodes, roles, __version__ as sphinx_ver
+ from sphinx.builders.html import StandaloneHTMLBuilder
+ from sphinx.writers.html import SmartyPantsHTMLTranslator
+ from sphinx.util.console import bold
+@@ -127,26 +127,29 @@
+ 
+     # Don't use border=1, which docutils does by default.
+     def visit_table(self, node):
++        self._table_row_index = 0 # Needed by Sphinx
+         self.body.append(self.starttag(node, 'table', CLASS='docutils'))
+ 
+     # <big>? Really?
+     def visit_desc_parameterlist(self, node):
+         self.body.append('(')
+         self.first_param = 1
++        self.param_separator = node.child_text_separator
+ 
+     def depart_desc_parameterlist(self, node):
+         self.body.append(')')
+ 
+-    #
+-    # Don't apply smartypants to literal blocks
+-    #
+-    def visit_literal_block(self, node):
+-        self.no_smarty += 1
+-        SmartyPantsHTMLTranslator.visit_literal_block(self, node)
+-
+-    def depart_literal_block(self, node):
+-        SmartyPantsHTMLTranslator.depart_literal_block(self, node)
+-        self.no_smarty -= 1
++    if sphinx_ver < '1.0.8':
++        #
++        # Don't apply smartypants to literal blocks
++        #
++        def visit_literal_block(self, node):
++            self.no_smarty += 1
++            SmartyPantsHTMLTranslator.visit_literal_block(self, node)
++
++        def depart_literal_block(self, node):
++            SmartyPantsHTMLTranslator.depart_literal_block(self, node)
++            self.no_smarty -= 1
+ 
+     #
+     # Turn the "new in version" stuff (versionadded/versionchanged) into a

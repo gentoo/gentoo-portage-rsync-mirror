@@ -1,0 +1,45 @@
+# ChangeLog for gnome-extra/gnome-contacts
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/ChangeLog,v 1.10 2013/01/01 14:31:37 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gnome-contacts-3.6.2.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gnome-contacts-3.6.2.ebuild:
+  Add ~ia64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gnome-contacts-3.6.2.ebuild:
+  Add ~ppc64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gnome-contacts-3.6.2.ebuild:
+  Add ~ppc, wrt bug #449220
+
+  19 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-contacts-3.6.2.ebuild:
+  Add some subslot operators.
+
+*gnome-contacts-3.6.2 (18 Dec 2012)
+
+  18 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-contacts-3.2.2.ebuild, +gnome-contacts-3.6.2.ebuild, metadata.xml:
+  Version bump for Gnome 3.6. Fix license.
+
+*gnome-contacts-3.4.1 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-contacts-3.4.1.ebuild:
+  Version bump for gnome-3.4 with an updated UI.
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-contacts-3.2.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  06 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-contacts-3.2.2.ebuild:
+  Do not check for valac when building from pre-generated C sources; thanks to
+  Gilles Dartiguelongue for noticing.
+
+*gnome-contacts-3.2.2 (04 Nov 2011)
+
+  04 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-contacts-3.2.2.ebuild, +metadata.xml:
+  Add the new gnome-3.2 contact management application from the gnome overlay.

@@ -1,0 +1,37 @@
+# ChangeLog for sys-fs/fuse-exfat
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/ChangeLog,v 1.7 2012/12/12 11:15:54 ssuominen Exp $
+
+  12 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> -fuse-exfat-0.9.7.ebuild,
+  -fuse-exfat-0.9.8.ebuild:
+  old
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> fuse-exfat-0.9.8-r1.ebuild:
+  install udev rules with udev.eclass, to support virtual/udev
+
+*fuse-exfat-0.9.8-r1 (19 Oct 2012)
+
+  19 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> +files/99-exfat.rules,
+  +fuse-exfat-0.9.8-r1.ebuild:
+  Use /usr/sbin instead of /usr/bin for now because util-linux fails to search
+  /usr/bin for mount wrappers. Install udev rules too as per forums post. See
+  bug #437230 for details and link to the forums post.
+
+*fuse-exfat-0.9.8 (27 Aug 2012)
+
+  27 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> +fuse-exfat-0.9.8.ebuild:
+  Version bump.
+
+  17 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> -fuse-exfat-0.9.5.ebuild:
+  old
+
+*fuse-exfat-0.9.7 (17 Mar 2012)
+
+  17 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +fuse-exfat-0.9.7.ebuild:
+  Version bump wrt #400745 by "teidakankan". Move everything from / to /usr.
+
+*fuse-exfat-0.9.5 (14 Jun 2011)
+
+  14 Jun 2011; Samuli Suominen <ssuominen@gentoo.org> +fuse-exfat-0.9.5.ebuild:
+  Initial commit wrt #371587 by Azamat H. Hackimov
+

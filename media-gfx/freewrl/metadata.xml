@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>axs@gentoo.org</email>
+	<name>Ian Stakenvicius</name>
+</maintainer>
+<use> 
+        <flag name='glew'>Enable glew extensions</flag>
+        <flag name='libeai'>Build EAI C library</flag>
+        <flag name='osc'>Allows for OSC-based control and communication between multiple freewrl instances</flag>
+        <flag name='java'>Build and install java EAI/SAI support library</flag>
+</use>
+</pkgmetadata>

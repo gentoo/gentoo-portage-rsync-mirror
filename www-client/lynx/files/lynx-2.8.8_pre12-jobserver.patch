@@ -1,0 +1,26 @@
+Index: lynx2-8-8/makefile.in
+===================================================================
+--- lynx2-8-8.orig/makefile.in
++++ lynx2-8-8/makefile.in
+@@ -196,9 +196,9 @@ binary_PROG  = $(actual_PROG)$x
+ 
+ all lynx$x: cfg_defs.h LYHelp.h
+ @MSG_DIR_MAKE@	$(SHELL) $(scripts_dir)/fixtext.sh $(srcdir)/LYMessages_en.h >LYMessages.c
+-@MSG_DIR_MAKE@	cd $(PO_DIR) && $(MAKE_RECUR)
+-	cd $(WWW_DIR) && $(MAKE_RECUR) $(WWW_CFLAGS)
+-	cd $(SRC_DIR) && $(MAKE_RECUR) all $(SRC_CFLAGS)
++@MSG_DIR_MAKE@	$(MAKE_RECUR) -C $(PO_DIR)
++	$(MAKE_RECUR) -C $(WWW_DIR) $(WWW_CFLAGS)
++	$(MAKE_RECUR) -C $(SRC_DIR) all $(SRC_CFLAGS)
+ 
+ lint:
+ 	cd $(WWW_DIR) && $(MAKE_RECUR) LINT="$(LINT)" $(WWW_CFLAGS) $@
+@@ -317,7 +317,7 @@ install-full: install install-help insta
+ 	@echo Full installation complete.
+ 
+ install-bin: $(BINDIR) lynx$x
+-@MSG_DIR_MAKE@	cd $(PO_DIR) && $(MAKE_RECUR) install
++@MSG_DIR_MAKE@	$(MAKE_RECUR) -C $(PO_DIR) install
+ 	@ECHO_CC@$(SHELL) -c \
+ 	'if test -f $(BINDIR)/$(binary_PROG) ; then \
+ 	      mv -f $(BINDIR)/$(binary_PROG) $(BINDIR)/lynx.old; fi'

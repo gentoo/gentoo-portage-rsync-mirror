@@ -1,0 +1,16 @@
+# ChangeLog for dev-python/python-debian
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/ChangeLog,v 1.3 2011/09/09 05:05:44 floppym Exp $
+
+  09 Sep 2011; Mike Gilbert <floppym@gentoo.org> python-debian-0.1.21.ebuild:
+  Tests require app-arch/dpkg
+
+  09 Sep 2011; Mike Gilbert <floppym@gentoo.org> python-debian-0.1.21.ebuild:
+  Keyword for x86
+
+*python-debian-0.1.21 (08 Sep 2011)
+
+  08 Sep 2011; Mike Gilbert <floppym@gentoo.org> +python-debian-0.1.21.ebuild,
+  +metadata.xml:
+  New package for bug 356129
+

@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=x11-libs/gtk+:2 nls? ( sys-devel/gettext ) virtual/pkgconfig
+DESCRIPTION=Application designed to test GTK+ performance
+EAPI=1
+HOMEPAGE=http://gtkperf.sourceforge.net/
+IUSE=nls
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/gtk+:2
+SLOT=0
+SRC_URI=mirror://sourceforge/gtkperf/gtkperf_0.40.tar.gz
+_md5_=6f9a969a81cff736da6df7a69d08aca0

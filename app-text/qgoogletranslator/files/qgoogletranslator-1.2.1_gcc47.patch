@@ -1,0 +1,23 @@
+diff -ur qgoogletranslator-1.2.1.orig//src/3rdparty/qtsingleapplication/qtlocalpeer.cpp qgoogletranslator-1.2.1/src/3rdparty/qtsingleapplication/qtlocalpeer.cpp
+--- qgoogletranslator-1.2.1.orig//src/3rdparty/qtsingleapplication/qtlocalpeer.cpp	2012-07-07 18:41:55.961074073 +0200
++++ qgoogletranslator-1.2.1/src/3rdparty/qtsingleapplication/qtlocalpeer.cpp	2012-07-07 18:42:44.082072652 +0200
+@@ -59,6 +59,8 @@
+ #include <time.h>
+ #endif
+ 
++#include <unistd.h>
++
+ namespace QtLP_Private {
+ #include "qtlockedfile.cpp"
+ #if defined(Q_OS_WIN)
+diff -ur qgoogletranslator-1.2.1.orig//src/3rdparty/qtsingleapplication/qtlockedfile_unix.cpp qgoogletranslator-1.2.1/src/3rdparty/qtsingleapplication/qtlockedfile_unix.cpp
+--- qgoogletranslator-1.2.1.orig//src/3rdparty/qtsingleapplication/qtlockedfile_unix.cpp	2012-07-07 18:41:55.961074073 +0200
++++ qgoogletranslator-1.2.1/src/3rdparty/qtsingleapplication/qtlockedfile_unix.cpp	2012-07-07 18:56:25.938048374 +0200
+@@ -46,7 +46,6 @@
+ 
+ #include <string.h>
+ #include <errno.h>
+-#include <unistd.h>
+ #include <fcntl.h>
+ 
+ #include "qtlockedfile.h"

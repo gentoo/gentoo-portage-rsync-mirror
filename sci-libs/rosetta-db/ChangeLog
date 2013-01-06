@@ -1,0 +1,13 @@
+# ChangeLog for sci-libs/rosetta-db
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rosetta-db/ChangeLog,v 1.2 2010/07/04 08:06:36 jlec Exp $
+
+  04 Jul 2010; Justin Lecher <jlec@gentoo.org> rosetta-db-3.1.ebuild:
+  Fixed protocol for HOMPAGE
+
+*rosetta-db-3.1 (18 May 2010)
+
+  18 May 2010; Justin Lecher <jlec@gentoo.org> +rosetta-db-3.1.ebuild,
+  +metadata.xml:
+  Initial addition, #250415
+

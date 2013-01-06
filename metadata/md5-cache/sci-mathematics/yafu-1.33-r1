@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=dev-libs/gmp sci-mathematics/gmp-ecm sieve? ( sci-mathematics/msieve sci-mathematics/ggnfs )
+DESCRIPTION=Yet another factoring utility
+EAPI=4
+HOMEPAGE=http://sourceforge.net/projects/yafu/
+IUSE=+sieve
+KEYWORDS=~amd64 ~x86
+LICENSE=public-domain
+RDEPEND=dev-libs/gmp sci-mathematics/gmp-ecm sieve? ( sci-mathematics/msieve sci-mathematics/ggnfs )
+SLOT=0
+SRC_URI=mirror://sourceforge/yafu/1.33/yafu-1.33-src.zip
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=f2cb7f82fe91a0be707634eb0d68813b

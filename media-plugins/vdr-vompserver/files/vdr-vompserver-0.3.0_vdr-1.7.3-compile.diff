@@ -1,0 +1,59 @@
+compile fix for >=vdr-1..3
+suggested by T.Ghuenter
+Joerg Bornkessel <hd_brummy@gento.org> 07 May 2009
+diff -Naur vompserver-0.3.0.orig/recplayer.c vompserver-0.3.0/recplayer.c
+--- vompserver-0.3.0.orig/recplayer.c	2009-05-07 19:48:18.592438442 +0200
++++ vompserver-0.3.0/recplayer.c	2009-05-07 19:49:26.375764634 +0200
+@@ -34,7 +34,11 @@
+ 
+   // FIXME find out max file path / name lengths
+ 
++#if VDRVERSNUM >= 10703
++  indexFile = new cIndexFile(recording->FileName(), false, rec->IsPesRecording());
++#else
+   indexFile = new cIndexFile(recording->FileName(), false);
++#endif
+   if (!indexFile) log->log("RecPlayer", Log::ERR, "Failed to create indexfile!");
+ 
+   scan();
+@@ -193,12 +197,19 @@
+ {
+   if (!indexFile) return 0;
+ 
++#if VDRVERSNUM >= 10703
++  uint16_t retFileNumber;
++  off_t retFileOffset;
++
++  if (!indexFile->Get((int)frameNumber, &retFileNumber, &retFileOffset))
++#else
+   uchar retFileNumber;
+   int retFileOffset;
+   uchar retPicType;
+   int retLength;
+ 
+   if (!indexFile->Get((int)frameNumber, &retFileNumber, &retFileOffset, &retPicType, &retLength))
++#endif
+   {
+     return 0;
+   }
+@@ -240,6 +251,12 @@
+ 
+   if (!indexFile) return false;
+ 
++#if VDRVERSNUM >= 10703
++  int iframeLength;
++  int indexReturnFrameNumber;
++
++  indexReturnFrameNumber = (ULONG)indexFile->GetNextIFrame(frameNumber, (direction==1 ? true : false), NULL, NULL, &iframeLength);
++#else
+   uchar waste1;
+   int waste2;
+ 
+@@ -247,6 +264,7 @@
+   int indexReturnFrameNumber;
+ 
+   indexReturnFrameNumber = (ULONG)indexFile->GetNextIFrame(frameNumber, (direction==1 ? true : false), &waste1, &waste2, &iframeLength);
++#endif
+   log->log("RecPlayer", Log::DEBUG, "GNIF input framenumber:%lu, direction=%lu, output:framenumber=%i, framelength=%i", frameNumber, direction, indexReturnFrameNumber, iframeLength);
+ 
+   if (indexReturnFrameNumber == -1) return false;

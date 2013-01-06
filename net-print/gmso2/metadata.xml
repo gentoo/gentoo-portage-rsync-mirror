@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>java</herd>
+	<maintainer>
+		<email>java@gentoo.org</email>
+	</maintainer>
+	<maintainer>
+		<email>serkan@gentoo.org</email>
+		<name>Serkan Kaba</name>
+		<description>Maintainer</description>
+	</maintainer>
+	<upstream>
+		<remote-id type="google-code">mso</remote-id>
+	</upstream>
+</pkgmetadata>

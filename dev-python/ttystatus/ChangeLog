@@ -1,0 +1,28 @@
+# ChangeLog for dev-python/ttystatus
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ttystatus/ChangeLog,v 1.6 2012/10/06 23:19:40 mschiff Exp $
+
+  06 Oct 2012; Marc Schiffbauer <mschiff@gentoo.org> -ttystatus-0.18.ebuild:
+  Drop old version.
+
+  06 Oct 2012; Marc Schiffbauer <mschiff@gentoo.org> ChangeLog:
+  Version bump. Drop old version.
+
+*ttystatus-0.21 (06 Oct 2012)
+
+  06 Oct 2012; Marc Schiffbauer <mschiff@gentoo.org> +ttystatus-0.21.ebuild:
+  Version bump. Drop old version.
+
+*ttystatus-0.19 (08 Jul 2012)
+
+  08 Jul 2012; Marc Schiffbauer <mschiff@gentoo.org> +ttystatus-0.19.ebuild:
+  Version bump.
+
+  04 Jul 2012; Marc Schiffbauer <mschiff@gentoo.org> ttystatus-0.18.ebuild:
+  Restrict test for now
+
+*ttystatus-0.18 (15 Jun 2012)
+
+  15 Jun 2012; Marc Schiffbauer <mschiff@gentoo.org> +ttystatus-0.18.ebuild,
+  +metadata.xml:
+  Initial commit of ttystatus.

@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/martian-modem
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/martian-modem/ChangeLog,v 1.1 2012/12/15 16:41:36 pacho Exp $
+
+*martian-modem-20100123 (15 Dec 2012)
+
+  15 Dec 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/martian-modem-20100123-makefile.patch, +files/martian-modem.conf.d,
+  +files/martian-modem.init.d, +martian-modem-20100123.ebuild, +metadata.xml:
+  Add alternative for net-dialup/ltmodem maintained by Roger (#285016)

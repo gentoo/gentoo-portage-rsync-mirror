@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+	</maintainer>
+	<use>
+		<flag name='pcap'>Build PCAP output plugin to save packets in PCAP format. Uses the <pkg>net-libs/libpcap</pkg> library</flag>
+		<flag name='mysql'>Build MYSQL output plugin to save packets in a mysql database.</flag>
+		<flag name='postgres'>Build PGSQL output plugin to save packets in a postgres database.</flag>
+		<flag name='sqlite'>Build SQLITE3 output plugin to save packets in an sqlite database.</flag>
+	</use>
+</pkgmetadata>

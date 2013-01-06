@@ -1,0 +1,22 @@
+# ChangeLog for sec-policy/selinux-logsentry
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-logsentry/ChangeLog,v 1.5 2012/12/30 19:25:46 swift Exp $
+
+*selinux-logsentry-2.20120725-r9 (21 Dec 2012)
+
+  21 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-logsentry-2.20120725-r9.ebuild:
+  Bumping to revision 9
+
+  13 Dec 2012; Sven Vermeulen <swift@gentoo.org> selinux-logsentry-2.20120725-r8.ebuild:
+  Stabilization
+
+*selinux-logsentry-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-logsentry-2.20120725-r8.ebuild:
+  Bumping to revision 8
+
+*selinux-logsentry-9999 (18 Nov 2012)
+
+  18 Nov 2012; Sven Vermeulen <swift@gentoo.org> +selinux-logsentry-9999.ebuild,
+  +metadata.xml:
+  Adding live ebuild for selinux-logsentry

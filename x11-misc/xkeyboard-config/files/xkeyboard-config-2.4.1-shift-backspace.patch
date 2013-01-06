@@ -1,0 +1,35 @@
+From 81fc86a911b55481b9597bb9284b3beca460104c Mon Sep 17 00:00:00 2001
+From: Sergey V. Udaltsov <svu@gnome.org>
+Date: Sun, 20 Nov 2011 20:03:26 +0000
+Subject: Extend BackSpace to the 2nd group
+
+https://bugs.freedesktop.org/show_bug.cgi?id=43098
+---
+diff --git a/symbols/pc b/symbols/pc
+index e1965ce..7e13ecb 100644
+--- a/symbols/pc
++++ b/symbols/pc
+@@ -14,7 +14,7 @@ xkb_symbols "pc105" {
+     include "pc(editing)"
+     include "keypad(x11)"
+ 
+-    key <BKSP> {	[ BackSpace	]	};
++    key <BKSP> {	[ BackSpace, BackSpace	]	};
+ 
+     key  <TAB> {	[ Tab,	ISO_Left_Tab	]	};
+     key <RTRN> {	[ Return	]	};
+diff --git a/symbols/us b/symbols/us
+index 1d8bdd0..7c3ee24 100644
+--- a/symbols/us
++++ b/symbols/us
+@@ -573,7 +573,7 @@ xkb_symbols "dvp" {
+     key <AE10> { [ bracketright,    6                                           ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
+     key <AE11> { [ exclam,          8,              exclamdown                  ], type[Group1] = "FOUR_LEVEL_ALPHABETIC" };
+     key <AE12> { [ numbersign,      grave,          dead_grave                  ] };
+-    key <BKSP> { [ BackSpace                                                    ] };
++    key <BKSP> { [ BackSpace,       BackSpace                                   ] };
+ 
+     // upper row, left side
+     key <AD01> { [ semicolon,       colon,          dead_diaeresis              ] };
+--
+cgit v0.9.0.2-2-gbebe

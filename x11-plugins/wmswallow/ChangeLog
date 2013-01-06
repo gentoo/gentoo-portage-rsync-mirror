@@ -1,0 +1,30 @@
+# ChangeLog for x11-plugins/wmswallow
+# Copyright 2000-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmswallow/ChangeLog,v 1.8 2010/09/03 08:24:28 s4t4n Exp $
+
+  03 Sep 2010; Michele Noberasco <s4t4n@gentoo.org>; wmswallow-0.6.1.ebuild:
+  Honour Gentoo LDFLAGS. Closes bug #335692.
+  Honour Gentoo CFLAGS.
+
+  22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  wmswallow-0.6.1.ebuild:
+  Drop virtual/x11 references.
+
+  21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
+  Redigest for Manifest2
+
+  31 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmswallow-0.6.1.ebuild:
+  Fixed DEPEND for modular X.
+
+  11 Nov 2005; Michele Noberasco <s4t4n@gentoo.org>; wmswallow-0.6.1.ebuild:
+  Removed INSTALL and LICENSE from dodoc.
+
+  13 Apr 2004; Don Seiler <rizzo@gentoo.org>; wmswallow-0.6.1.ebuild:
+  Changed dependency to virtual/x11 to work with x11-base/xorg-x11
+
+*wmswallow-0.6.1 (16 Jul 2003)
+
+  16 Jul 2003; Nick Hadaway <raker@gentoo.org> wmswallow-0.6.1.ebuild:
+  Suggested by Susan Edgeworth on bug #19629.
+  
+ 

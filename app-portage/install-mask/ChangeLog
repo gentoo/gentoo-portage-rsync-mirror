@@ -1,0 +1,70 @@
+# ChangeLog for app-portage/install-mask
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.17 2012/12/17 20:02:40 mgorny Exp $
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> install-mask-0.0.2-r2.ebuild,
+  install-mask-9999.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
+
+*install-mask-9999 (15 Dec 2012)
+
+  15 Dec 2012; Michał Górny <mgorny@gentoo.org> +install-mask-9999.ebuild:
+  Import the live ebuild.
+
+  09 Dec 2012; Michał Górny <mgorny@gentoo.org> install-mask-0.0.2-r2.ebuild:
+  Enable python3.3.
+
+  08 Dec 2012; Michał Górny <mgorny@gentoo.org> install-mask-0.0.2-r2.ebuild:
+  Add PYTHON_USEDEP on lxml.
+
+  29 Nov 2012; Michał Górny <mgorny@gentoo.org> -install-mask-0.0.2-r1.ebuild:
+  Remove old.
+
+  21 Oct 2012; Michał Górny <mgorny@gentoo.org> install-mask-0.0.2-r2.ebuild:
+  Re-add ~x86-fbsd & ~amd64-fbsd after keywording python-exec.
+
+*install-mask-0.0.2-r2 (15 Oct 2012)
+
+  15 Oct 2012; Michał Górny <mgorny@gentoo.org> +install-mask-0.0.2-r2.ebuild:
+  Revision bump to distutils-r1.
+
+  07 Sep 2012; Michał Górny <mgorny@gentoo.org> install-mask-0.0.2-r1.ebuild,
+  metadata.xml:
+  Update URIs.
+
+*install-mask-0.0.2-r1 (31 Aug 2012)
+
+  31 Aug 2012; Michał Górny <mgorny@gentoo.org> +install-mask-0.0.2-r1.ebuild,
+  -install-mask-0.0.2.ebuild, metadata.xml:
+  Sync to the live ebuild.
+
+  08 Aug 2012; Michał Górny <mgorny@gentoo.org> files/location-db.xml:
+  Remove tmpfiles.d from systemd locations, since that directory is used by
+  OpenRC now.
+
+  07 Aug 2012; Alexis Ballier <aballier@gentoo.org> install-mask-0.0.2.ebuild:
+  keyword ~amd64-fbsd, bug #393181
+
+  21 May 2012; Michał Górny <mgorny@gentoo.org> files/location-db.xml:
+  Update systemd mask location.
+
+  09 Feb 2012; Matt Turner <mattst88@gentoo.org> install-mask-0.0.2.ebuild:
+  Added ~mips, bug 393181.
+
+  16 Dec 2011; Michał Górny <mgorny@gentoo.org> files/location-db.xml:
+  Add logrotate to supported install-mask methods.
+
+  09 Dec 2011; Naohiro Aota <naota@gentoo.org> install-mask-0.0.2.ebuild:
+  Add ~x86-fbsd #393181
+
+*install-mask-0.0.2 (04 Nov 2011)
+
+  04 Nov 2011; Michał Górny <mgorny@gentoo.org> -install-mask-0.0.1.ebuild,
+  +install-mask-0.0.2.ebuild:
+  Version bump. The new version prints slotted atoms on --rebuild.
+
+*install-mask-0.0.1 (19 Sep 2011)
+
+  19 Sep 2011; Michał Górny <mgorny@gentoo.org> +install-mask-0.0.1.ebuild,
+  +files/location-db.xml, +metadata.xml:
+  Introduce install-mask, a tool to manage INSTALL_MASK setting.

@@ -1,0 +1,30 @@
+# ChangeLog for dev-python/mozprocess
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozprocess/ChangeLog,v 1.6 2012/10/30 07:08:28 patrick Exp $
+
+*mozprocess-0.8 (30 Oct 2012)
+
+  30 Oct 2012; Patrick Lauer <patrick@gentoo.org> +mozprocess-0.8.ebuild:
+  Bump
+
+*mozprocess-0.7 (29 Sep 2012)
+
+  29 Sep 2012; Tim Harder <radhermit@gentoo.org> +mozprocess-0.7.ebuild:
+  Version bump.
+
+  27 Aug 2012; Mike Gilbert <floppym@gentoo.org> -mozprocess-0.1_beta2.ebuild:
+  Actually remove old.
+
+  27 Aug 2012; Mike Gilbert <floppym@gentoo.org> mozprocess-0.5.ebuild:
+  Fix LICENSE. Remove old.
+
+*mozprocess-0.5 (24 Aug 2012)
+
+  24 Aug 2012; Patrick Lauer <patrick@gentoo.org> +mozprocess-0.5.ebuild:
+  Bump
+
+*mozprocess-0.1_beta2 (21 Apr 2012)
+
+  21 Apr 2012; Mike Gilbert <floppym@gentoo.org> +metadata.xml,
+  +mozprocess-0.1_beta2.ebuild:
+  New ebuild for #410919. Ebuild by iksaif.

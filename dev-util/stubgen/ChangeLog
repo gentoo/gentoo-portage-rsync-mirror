@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/stubgen
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stubgen/ChangeLog,v 1.1 2011/05/31 19:28:42 angelos Exp $
+
+*stubgen-2.08 (31 May 2011)
+
+  31 May 2011; Christoph Mende <angelos@gentoo.org> +stubgen-2.08.ebuild,
+  +metadata.xml:
+  Initial import
+

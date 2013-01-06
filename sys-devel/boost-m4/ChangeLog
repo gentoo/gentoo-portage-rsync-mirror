@@ -1,0 +1,31 @@
+# ChangeLog for sys-devel/boost-m4
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.6 2012/12/01 19:04:00 armin76 Exp $
+
+  01 Dec 2012; Raúl Porcel <armin76@gentoo.org> boost-m4-0.2.ebuild,
+  boost-m4-0.3_pre121130.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #442470
+
+*boost-m4-0.3_pre121130 (30 Nov 2012)
+
+  30 Nov 2012; Justin Lecher <jlec@gentoo.org> +boost-m4-0.3_pre121130.ebuild,
+  metadata.xml:
+  Add latest snapshot; fixes compilation with >gcc-4.6; fixes gold issues,
+  #442582
+
+  13 Nov 2012; Jeroen Roovers <jer@gentoo.org> boost-m4-0.2.ebuild:
+  Marked ~hppa (bug #442470).
+
+  10 Nov 2012; Anthony G. Basile <blueness@gentoo.org> boost-m4-0.2.ebuild:
+  keyword ppc, bug #442470
+
+  10 Jun 2012; Nathan Phillip Brink <binki@gentoo.org> boost-m4-0.2.ebuild:
+  Use tarball instead of zipball, reducing DEPENDencies and (hopefully) making
+  mgorny happier.
+
+*boost-m4-0.2 (01 Feb 2012)
+
+  01 Feb 2012; Nathan Phillip Brink <binki@gentoo.org> +boost-m4-0.2.ebuild,
+  +metadata.xml:
+  Add boost-m4-0.2 for bug #352618, an alternate set of boost-detecting m4
+  macros.

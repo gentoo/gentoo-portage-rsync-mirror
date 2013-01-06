@@ -1,0 +1,31 @@
+From 68fc98278ffb871309b67080b8bdd5af2b2326a8 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Sat, 19 May 2012 20:53:27 -0400
+Subject: [PATCH] Do not crash in --forms --add-list without column values
+
+Be a bit more user friendly, and instead of crashing, add a default
+column name if the user forgot to use --column-values with a --forms list.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=676406
+---
+ src/option.c |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+diff --git a/src/option.c b/src/option.c
+index 7fdb7f1..334ec86 100644
+--- a/src/option.c
++++ b/src/option.c
+@@ -1918,7 +1918,9 @@ zenity_forms_post_callback (GOptionContext *context,
+         results->forms_data->column_values = g_slist_append (results->forms_data->column_values, values);
+         values = zenity_forms_list_values[++i];
+       }
+-    }
++    } else
++      results->forms_data->column_values = g_slist_append (NULL, "column");
++
+     if (zenity_forms_date_format)
+       results->forms_data->date_format = zenity_forms_date_format;
+     else
+-- 
+1.7.8.6
+

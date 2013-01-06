@@ -1,0 +1,77 @@
+# ChangeLog for dev-python/pyqwt
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/ChangeLog,v 1.19 2012/02/27 05:37:40 patrick Exp $
+
+  27 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyqwt-5.2.0.ebuild:
+  Restricting pypy
+
+  06 Mar 2011; Justin Lecher <jlec@gentoo.org> pyqwt-5.2.0.ebuild:
+  Moved to slotted qwt
+
+  06 Mar 2011; Justin Lecher <jlec@gentoo.org> pyqwt-5.2.0.ebuild:
+  Restrict qwt deps to version 5, 357555 & 357557
+
+  07 Feb 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyqwt-5.2.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS. Require >=dev-python/PyQt4-4.6.1 to avoid file
+  collision (bug #303673). Delete unused "debug" USE flag.
+
+*pyqwt-5.2.0 (27 Dec 2009)
+
+  27 Dec 2009; Ben de Groot <yngwin@gentoo.org> pyqwt-5.1.0.ebuild,
+  +pyqwt-5.2.0.ebuild:
+  Version bump, thanks to Rafael G. Martins (bug 248968). Adjust sip dep
+  in version 5.1.0 (bug 294630).
+
+  21 Oct 2009; Dirkjan Ochtman <djc@gentoo.org> -pyqwt-4.2-r1.ebuild:
+  Clean up old version that still depended upon numarray.
+
+*pyqwt-5.1.0 (07 Apr 2009)
+
+  07 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  -pyqwt-5.0.1.ebuild, +pyqwt-5.1.0.ebuild:
+  Version bump
+
+  27 Oct 2008; Ali Polatel <hawking@gentoo.org> pyqwt-4.2-r1.ebuild,
+  pyqwt-5.0.1.ebuild:
+  Use python_need_rebuild.
+
+  23 Feb 2008; Tiziano Müller <dev-zero@gentoo.org> pyqwt-4.2-r1.ebuild,
+  pyqwt-5.0.1.ebuild:
+  Fixed a couple of serious QA issues.
+
+  23 Feb 2008; Tiziano Müller <dev-zero@gentoo.org> -pyqwt-4.2.ebuild:
+  Dropped old revision.
+
+  14 Jan 2008; Christoph Mende <angelos@gentoo.org> pyqwt-5.0.1.ebuild:
+  Added ~amd64 wrt bug #204045
+
+  02 Jan 2008; Raúl Porcel <armin76@gentoo.org> pyqwt-5.0.1.ebuild:
+  Re-add ~ia64
+
+*pyqwt-5.0.1 (15 Nov 2007)
+
+  15 Nov 2007; Caleb Tennis <caleb@gentoo.org> +pyqwt-5.0.1.ebuild:
+  version bump, thanks to bug #175657 and Gerard Vermeulen
+
+*pyqwt-4.2-r1 (13 Mar 2007)
+
+  13 Mar 2007; Rob Cakebread <pythonhead@gentoo.org> +pyqwt-4.2-r1.ebuild:
+  Python 2.5 fix. bug# 158510 Thanks to Troy Melhase <troy@gci.net>
+
+  21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  files/digest-pyqwt-4.2, Manifest:
+  Convert to Manifest2.
+
+  15 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org> pyqwt-4.2.ebuild:
+  Marked ~amd64, closes bug 129695.
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pyqwt-4.2.ebuild:
+  Mark 4.2 ~ia64
+
+*pyqwt-4.2 (01 Mar 2005)
+
+  01 Mar 2005; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  +pyqwt-4.2.ebuild:
+  Initial ebuild. Thanks to Toby Dickenson, #30101
+

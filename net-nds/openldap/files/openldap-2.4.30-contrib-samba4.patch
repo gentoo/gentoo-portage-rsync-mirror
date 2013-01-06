@@ -1,0 +1,51 @@
+--- openldap-2.4.30/contrib/slapd-modules/samba4/Makefile.orig	2012-02-29 21:37:09.000000000 +0400
++++ openldap-2.4.30/contrib/slapd-modules/samba4/Makefile	2012-05-13 17:01:38.155625715 +0400
+@@ -17,7 +17,7 @@
+ LDAP_BUILD=../../..
+ 
+ LIBTOOL=$(LDAP_BUILD)/libtool
+-OPT=-g -O2
++#OPT=-g -O2
+ CC=gcc
+ 
+ DEFS=-DSLAPD_OVER_RDNVAL=2 -DSLAPD_OVER_PGUID=2 -DSLAPD_OVER_VERNUM=2
+@@ -26,7 +26,7 @@
+ 	-I$(LDAP_BUILD)/include
+ INCS=$(LDAP_INC)
+ 
+-LDAP_LIB=-lldap_r -llber
++LDAP_LIB=-L../../../libraries/libldap_r -lldap_r -llber
+ LIBS=$(LDAP_LIB)
+ 
+ prefix=/usr/local
+@@ -42,24 +42,24 @@
+ all:	$(PROGRAMS)
+ 
+ pguid.lo:	pguid.c
+-	$(LIBTOOL) --mode=compile $(CC) $(OPT) $(DEFS) $(INCS) -c $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(DEFS) $(INCS) -c $?
+ 
+ pguid.la:	pguid.lo
+-	$(LIBTOOL) --mode=link $(CC) $(OPT) -version-info 0:0:0 \
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -version-info 0:0:0 \
+ 	-rpath $(moduledir) -module -o $@ $? $(LIBS)
+ 
+ rdnval.lo:	rdnval.c
+-	$(LIBTOOL) --mode=compile $(CC) $(OPT) $(DEFS) $(INCS) -c $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(DEFS) $(INCS) -c $?
+ 
+ rdnval.la:	rdnval.lo
+-	$(LIBTOOL) --mode=link $(CC) $(OPT) -version-info 0:0:0 \
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -version-info 0:0:0 \
+ 	-rpath $(moduledir) -module -o $@ $? $(LIBS)
+ 
+ vernum.lo:	vernum.c
+-	$(LIBTOOL) --mode=compile $(CC) $(OPT) $(DEFS) $(INCS) -c $?
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(DEFS) $(INCS) -c $?
+ 
+ vernum.la:	vernum.lo
+-	$(LIBTOOL) --mode=link $(CC) $(OPT) -version-info 0:0:0 \
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -version-info 0:0:0 \
+ 	-rpath $(moduledir) -module -o $@ $? $(LIBS)
+ 
+ clean:

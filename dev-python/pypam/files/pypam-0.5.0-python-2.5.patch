@@ -1,0 +1,13 @@
+=== modified file 'PAMmodule.c'
+--- PAMmodule.c	2007-05-28 17:50:59 +0000
++++ PAMmodule.c	2007-05-28 17:56:02 +0000
+@@ -541,7 +541,7 @@
+     pam_end(self->pamh, PAM_SUCCESS);
+     dlclose(self->dlh2);
+     dlclose(self->dlh1);
+-    PyMem_DEL(self);
++    PyObject_FREE(self);
+ }
+ 
+ static PyObject * PyPAM_getattr(PyPAMObject *self, char *name)
+

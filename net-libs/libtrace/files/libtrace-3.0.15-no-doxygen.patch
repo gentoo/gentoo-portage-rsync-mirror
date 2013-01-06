@@ -1,0 +1,46 @@
+--- libtrace-3.0.15/docs/Makefile.am
++++ libtrace-3.0.15/docs/Makefile.am
+@@ -1,11 +1,7 @@
+ DOXYGEN_CONF = libtrace.doxygen
+ DOXYGEN_FOLDERS = doxygen/html doxygen/man
+ 
+-if HAS_DOXYGEN
+ EXTRA_DIST = $(DOXYGEN_FOLDERS)
+-else
+-EXTRA_DIST = 
+-endif
+ 
+ doxygen/html: doxy
+ 
+@@ -19,8 +15,6 @@
+ latex: *.tex
+ 	latex2html -dir html -split 0 *.tex
+ 
+-all: doxy
+-
+ distclean: doxyclean
+ 
+ doxy:
+--- libtrace-3.0.15/Makefile.am
++++ libtrace-3.0.15/Makefile.am
+@@ -6,9 +6,7 @@
+ ACLOCAL_AMFLAGS = -I m4
+ AUTOMAKE_OPTIONS = 1.9 foreign
+ 
+-if HAS_DOXYGEN
+ man_MANS = docs/doxygen/man/man3/trace*.3 docs/doxygen/man/man3/libtrace*.3 
+-endif
+ EXTRA_DIST=libtrace.sln libtrace.vcproj test-convert.vcproj \
+ 		   test-format.vcproj test-pcap-bpf.vcproj
+ 
+@@ -27,10 +25,6 @@
+ 		sed -i "s/SVN_REVISION.*/SVN_REVISION $$r/" $(distdir)/lib/libtrace.h.in; \
+ 	fi
+ 
+-if HAS_DOXYGEN
+-docs/doxygen/man/man3/*.3: docs
+-else
+ docs/doxygen/man/man3/*.3: 
+-endif
+ 
+ install-man-hook: docs

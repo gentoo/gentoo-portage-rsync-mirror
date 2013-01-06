@@ -1,0 +1,81 @@
+# ChangeLog for sys-boot/os-prober
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/ChangeLog,v 1.16 2013/01/05 22:52:56 pinkbyte Exp $
+
+*os-prober-1.57 (05 Jan 2013)
+
+  05 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> +os-prober-1.57.ebuild:
+  Version bump, wrt bug #415617
+
+*os-prober-1.56 (14 Oct 2012)
+
+  14 Oct 2012; Jonathan Callen <abcd@gentoo.org> +os-prober-1.56.ebuild:
+  Update to latest upstream, use upstream's installation directories
+
+*os-prober-1.53 (29 Jun 2012)
+
+  29 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -os-prober-1.47.ebuild,
+  -os-prober-1.51.ebuild, +os-prober-1.53.ebuild:
+  Version bump to version from wheezy. Drop older and stable the
+  to-be-stable-debian version.
+
+*os-prober-1.51 (30 Mar 2012)
+
+  30 Mar 2012; Mike Gilbert <floppym@gentoo.org> +os-prober-1.51.ebuild:
+  Version bump.
+
+  14 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> os-prober-1.47.ebuild:
+  Stable on amd64 and x86, works fine and usefull for grub2.
+
+  26 May 2011; Jonathan Callen <abcd@gentoo.org> os-prober-1.47.ebuild:
+  Fix unpacking (upstream changed the top-level dir *again*)
+
+*os-prober-1.47 (26 May 2011)
+
+  26 May 2011; Jonathan Callen <abcd@gentoo.org> -os-prober-1.46.ebuild,
+  +os-prober-1.47.ebuild:
+  Bump to new upstream version, remove old.
+
+  07 May 2011; Jonathan Callen <abcd@gentoo.org> os-prober-1.46.ebuild:
+  udev now installs to /lib/udev, so remove sed adjusting its path
+
+*os-prober-1.46 (05 May 2011)
+
+  05 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> -os-prober-1.35.ebuild,
+  -files/os-prober-1.35-multilib.patch, -os-prober-1.36.ebuild,
+  -os-prober-1.38.ebuild, -os-prober-1.39.ebuild, -os-prober-1.44.ebuild,
+  +os-prober-1.46.ebuild:
+  Version bump to latest. Drop older.
+
+  16 Apr 2011; Jonathan Callen <abcd@gentoo.org> os-prober-1.44.ebuild:
+  Fix build (upstream changed where the tarball unpacks)
+
+*os-prober-1.44 (16 Apr 2011)
+
+  16 Apr 2011; Jonathan Callen <abcd@gentoo.org> +os-prober-1.44.ebuild:
+  Version bump, bump EAPI
+
+*os-prober-1.39 (26 Jul 2010)
+
+  26 Jul 2010; Fabio Erculiani <lxnay@gentoo.org> +os-prober-1.39.ebuild:
+  Version bump
+
+*os-prober-1.38 (04 Jun 2010)
+
+  04 Jun 2010; Steve Dibb <beandog@gentoo.org> +os-prober-1.38.ebuild:
+  Version bump
+
+*os-prober-1.36 (06 Mar 2010)
+
+  06 Mar 2010; Jonathan Callen <abcd@gentoo.org> +os-prober-1.36.ebuild,
+  metadata.xml:
+  Version bump; update metadata.xml
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> os-prober-1.35.ebuild:
+  Add elog about NTFS to postinst
+
+*os-prober-1.35 (15 Dec 2009)
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org> +os-prober-1.35.ebuild,
+  +files/os-prober-1.35-multilib.patch, +metadata.xml:
+  New ebuild. Thanks to Wizzelby <wizzleby@gmail.com> for initial ebuild.

@@ -1,0 +1,15 @@
+# ChangeLog for dev-python/pytest-cov
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-cov/ChangeLog,v 1.3 2012/12/17 19:59:56 mgorny Exp $
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> pytest-cov-1.6.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
+
+  08 Dec 2012; Michał Górny <mgorny@gentoo.org> pytest-cov-1.6.ebuild:
+  Add PYTHON_USEDEP on migrated packages.
+
+*pytest-cov-1.6 (16 Nov 2012)
+
+  16 Nov 2012; Patrick McLean <chutzpah@gentoo.org> +pytest-cov-1.6.ebuild,
+  +metadata.xml:
+  New package, py.test plugin for coverage reporting

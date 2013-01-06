@@ -1,0 +1,13 @@
+# ChangeLog for dev-python/envoy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envoy/ChangeLog,v 1.2 2012/01/15 19:14:25 tove Exp $
+
+  15 Jan 2012; Torsten Veller <tove@gentoo.org> envoy-0.0.2.ebuild:
+  Fix cvs keyword in the header (#398773)
+
+*envoy-0.0.2 (30 Dec 2011)
+
+  30 Dec 2011; Patrick Lauer <patrick@gentoo.org> +envoy-0.0.2.ebuild,
+  +metadata.xml:
+  Initial import for #396287, ebuild by jbergstroem
+

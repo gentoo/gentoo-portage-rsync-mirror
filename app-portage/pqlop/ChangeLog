@@ -1,0 +1,12 @@
+# ChangeLog for app-portage/pqlop
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pqlop/ChangeLog,v 1.2 2012/10/31 08:54:55 mgorny Exp $
+
+  31 Oct 2012; Michał Górny <mgorny@gentoo.org> pqlop-0.02.ebuild:
+  Use virtual for argparse.
+
+*pqlop-0.02 (11 Dec 2011)
+
+  11 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> +pqlop-0.02.ebuild,
+  +metadata.xml:
+  Add app-portage/pqlop-0.02, thanks to lk4d4. Bug 363889

@@ -1,0 +1,15 @@
+# ChangeLog for dev-tcltk/tklib
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tklib/ChangeLog,v 1.2 2010/08/02 14:27:14 jlec Exp $
+
+*tklib-0.5-r1 (02 Aug 2010)
+
+  02 Aug 2010; Justin Lecher <jlec@gentoo.org> +tklib-0.5-r1.ebuild:
+  Unversioning the installation path
+
+*tklib-0.5 (29 Mar 2010)
+
+  29 Mar 2010; Justin Lecher <jlec@gentoo.org> +tklib-0.5.ebuild,
+  +metadata.xml:
+  new ebuild per 311845
+

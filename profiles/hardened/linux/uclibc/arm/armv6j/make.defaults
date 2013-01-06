@@ -1,0 +1,9 @@
+# Copyright 1999-2012 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/uclibc/arm/armv6j/make.defaults,v 1.2 2012/10/07 11:42:38 blueness Exp $
+
+CHOST="armv6j-unknown-linux-uclibc"
+CFLAGS="-O2 -pipe -march=armv6j -mfpu=vfp -mfloat-abi=softfp"
+CXXFLAGS="${CFLAGS}"
+FFLAGS="${CFLAGS}"
+FCFLAGS="${CFLAGS}"

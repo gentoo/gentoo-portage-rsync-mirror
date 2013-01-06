@@ -1,0 +1,28 @@
+# ChangeLog for sci-biology/GBrowse
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/GBrowse/ChangeLog,v 1.4 2012/02/27 15:55:41 weaver Exp $
+
+*GBrowse-2.48 (27 Feb 2012)
+
+  27 Feb 2012; Andrey Kislyuk <weaver@gentoo.org> -GBrowse-2.39.ebuild,
+  +GBrowse-2.48.ebuild:
+  Version bump
+
+*GBrowse-2.44-r1 (02 Jan 2012)
+
+  02 Jan 2012; Andrey Kislyuk <weaver@gentoo.org> -GBrowse-2.44.ebuild,
+  +GBrowse-2.44-r1.ebuild:
+  Disable webapp autoslotting, bug 396085
+
+*GBrowse-2.44 (26 Dec 2011)
+
+  26 Dec 2011; Andrey Kislyuk <weaver@gentoo.org> +GBrowse-2.44.ebuild:
+  Version bump
+
+*GBrowse-2.39 (20 Jul 2011)
+
+  20 Jul 2011; Andrey Kislyuk <weaver@gentoo.org> +GBrowse-2.39.ebuild,
+  +files/GBrowseInstall.pm-2.39.patch, +metadata.xml:
+  Import from sci overlay, rename and rewrite; thanks to Martin Mokrejs
+  <mmokrejs@fold.natur.cuni.cz> and Justin Lecher <jlec@gentoo.org>
+

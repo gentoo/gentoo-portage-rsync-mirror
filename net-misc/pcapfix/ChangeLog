@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/pcapfix
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pcapfix/ChangeLog,v 1.1 2012/10/21 09:58:35 robbat2 Exp $
+
+*pcapfix-0.7 (21 Oct 2012)
+
+  21 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +pcapfix-0.7.ebuild:
+  Initial commit. Ebuild by Robin H Johnson <robbat2@gentoo.org>.

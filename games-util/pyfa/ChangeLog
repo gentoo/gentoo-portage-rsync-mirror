@@ -1,0 +1,107 @@
+# ChangeLog for games-util/pyfa
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.17 2012/12/09 21:37:27 tetromino Exp $
+
+*pyfa-1.1.12 (09 Dec 2012)
+
+  09 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.10.ebuild,
+  +pyfa-1.1.12.ebuild:
+  Bump, adds Retribution 1.0.2 updates. Drop old.
+
+*pyfa-1.1.11 (05 Dec 2012)
+
+  05 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -pyfa-1.1.9-r1.ebuild, +pyfa-1.1.11.ebuild,
+  +files/pyfa-1.1.11-import-pyfa.patch:
+  Bump, adds Retribution 1.0 updates (bug #446030, thanks to Matthew Marlowe).
+  Update to EAPI5 and python-r1.eclass. Drop old.
+
+*pyfa-1.1.10 (23 Nov 2012)
+
+  23 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.8.ebuild,
+  pyfa-1.1.9-r1.ebuild, +pyfa-1.1.10.ebuild:
+  Bump, fixes Marauder bonuses and some rig stacking bugs. Update license,
+  homepage. Drop old.
+
+*pyfa-1.1.9-r1 (11 Aug 2012)
+
+  11 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.9.ebuild,
+  +pyfa-1.1.9-r1.ebuild:
+  Upstream source tarball was updated but not renamed.
+
+*pyfa-1.1.9 (08 Aug 2012)
+
+  08 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.7.ebuild,
+  +pyfa-1.1.9.ebuild:
+  Bump, adds Inferno 1.2 updates. Drop old.
+
+*pyfa-1.1.8 (16 Jul 2012)
+
+  16 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.6.ebuild,
+  +pyfa-1.1.8.ebuild, +files/pyfa-1.1.8-html-export-path.patch:
+  Bump, adds Inferno 1.1 updates and html export for viewing fits in the
+  in-game browser. Drop old.
+
+*pyfa-1.1.7 (24 May 2012)
+
+  24 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.5.ebuild,
+  +pyfa-1.1.7.ebuild:
+  Bump, adds Inferno updates, implants import/export. Drop old.
+
+*pyfa-1.1.6 (02 May 2012)
+
+  02 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -pyfa-1.1.4-r1.ebuild, +pyfa-1.1.6.ebuild:
+  Version bump with updates for Escalation to Inferno. Drop old.
+
+*pyfa-1.1.5 (03 Apr 2012)
+
+  03 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +pyfa-1.1.5.ebuild:
+  Bump, adds Crucible 1.6 updates.
+
+*pyfa-1.1.4-r1 (21 Mar 2012)
+
+  21 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.3.ebuild,
+  -pyfa-1.1.4.ebuild, +pyfa-1.1.4-r1.ebuild, +files/pyfa-1.1.4-wxversion.patch:
+  Pyfa only supports wxpython:2.8. Fix dependency, add patch to select correct
+  slot of wxpython at runtime, and drop broken versions. Thanks to Samuli
+  Suominen for noticing.
+
+*pyfa-1.1.4 (21 Mar 2012)
+
+  21 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.2.ebuild,
+  +pyfa-1.1.4.ebuild:
+  Bump with UI improvements and afterburner fixes. Drop old.
+
+*pyfa-1.1.3 (14 Mar 2012)
+
+  14 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.1.ebuild,
+  +pyfa-1.1.3.ebuild:
+  Bump, adds Crucible 1.5 updates. Drop old.
+
+*pyfa-1.1.2 (26 Jan 2012)
+
+  26 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.ebuild,
+  +pyfa-1.1.2.ebuild:
+  Bump, adds Crucible 1.1 updates. Drop old.
+
+*pyfa-1.1.1 (26 Dec 2011)
+
+  26 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/pyfa-1.0.3-staticPath.patch, -pyfa-1.0.6.ebuild, +pyfa-1.1.1.ebuild:
+  Bump. Adds Crucible 1.0.2 updates, proxy support, bugfixes and UI
+  improvements. Install icons in all available sizes. Drop obsolete version.
+
+*pyfa-1.1 (30 Nov 2011)
+
+  30 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> +pyfa-1.1.ebuild,
+  +files/pyfa-1.1-staticPath.patch:
+  Bump. Adds support for Crucible expansion, fleet boosting, wormhole effects.
+
+*pyfa-1.0.6 (02 Nov 2011)
+
+  02 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +files/pyfa-1.0.3-staticPath.patch, +pyfa-1.0.6.ebuild,
+  +files/configforced.py, +files/pyfa.desktop, +metadata.xml:
+  New ebuild for bug #352188, formerly maintained in Sunrise.
+

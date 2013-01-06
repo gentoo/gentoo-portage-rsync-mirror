@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>ramereth@gentoo.org</email>
+		<name>Lance Albertson</name>
+	</maintainer>
+	<longdescription lang="en">
+		mod_fcgid has a new process management strategy, which concentrates on
+		reducing the number of fastcgi server, and kick out the corrupt fastcgi
+		server as soon as possible.
+	</longdescription>
+</pkgmetadata>

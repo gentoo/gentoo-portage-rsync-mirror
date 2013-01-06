@@ -1,0 +1,13 @@
+DEFINED_PHASES=install nofetch postinst unpack
+DESCRIPTION=simplified/streamlined version of wine with commercial support
+EAPI=3
+HOMEPAGE=http://www.codeweavers.com/products/cxoffice/
+IUSE=nas
+KEYWORDS=-* amd64 x86
+LICENSE=CROSSOVER
+RDEPEND=sys-libs/glibc x11-libs/libXrandr x11-libs/libXi x11-libs/libXmu x11-libs/libXxf86dga x11-libs/libXxf86vm dev-util/desktop-file-utils nas? ( media-libs/nas ) amd64? ( app-emulation/emul-linux-x86-xlibs ) media-libs/jpeg:62 media-libs/libpng:1.2
+RESTRICT=fetch strip
+SLOT=0
+SRC_URI=install-crossover-pro-9.1.0.sh
+_eclasses_=unpacker	50e1227854e96469a19a63f053496328
+_md5_=f771360b34a39eccaaefca55c1f621d7

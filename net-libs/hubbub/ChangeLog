@@ -1,0 +1,15 @@
+# ChangeLog for net-libs/hubbub
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/hubbub/ChangeLog,v 1.3 2012/07/18 14:24:39 mr_bones_ Exp $
+
+  18 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org> hubbub-0.1.2.ebuild:
+  add missing test to IUSE
+
+  18 Jul 2012; Michael Weber <xmw@gentoo.org> hubbub-0.1.2.ebuild:
+  fix inherit
+
+*hubbub-0.1.2 (17 Jul 2012)
+
+  17 Jul 2012; Michael Weber <xmw@gentoo.org> +hubbub-0.1.2.ebuild,
+  +metadata.xml:
+  Initial import

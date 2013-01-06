@@ -1,0 +1,32 @@
+# ChangeLog for app-text/liblangtag
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/ChangeLog,v 1.6 2012/12/01 12:57:10 scarabeus Exp $
+
+  01 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/liblangtag-0.3-automagic-tests.patch, -liblangtag-0.3-r1.ebuild,
+  liblangtag-0.4.0.ebuild:
+  Stable on ppc amd64 and x86. Drop older.
+
+  06 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> liblangtag-0.4.0.ebuild:
+  Drop not needed inherits.
+
+*liblangtag-0.4.0 (06 Nov 2012)
+
+  06 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> +liblangtag-0.4.0.ebuild:
+  Version bump to latest.
+
+  21 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> liblangtag-0.3-r1.ebuild:
+  Fix the damn sed statement.
+
+*liblangtag-0.3-r1 (20 Sep 2012)
+
+  20 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> +liblangtag-0.3-r1.ebuild,
+  -liblangtag-0.3.ebuild:
+  Revision bump to fix pc files.
+
+*liblangtag-0.3 (07 Aug 2012)
+
+  07 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/liblangtag-0.3-automagic-tests.patch, +liblangtag-0.3.ebuild,
+  +metadata.xml:
+  Initial commit, will be required by libreoffice-3.7.

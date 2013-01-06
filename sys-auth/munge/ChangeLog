@@ -1,0 +1,51 @@
+# ChangeLog for sys-auth/munge
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/ChangeLog,v 1.12 2012/05/24 05:04:28 vapier Exp $
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> munge-0.5.10-r1.ebuild:
+  Inherit user for enewuser/etc... rather than eutils.
+
+*munge-0.5.10-r1 (18 Apr 2012)
+
+  18 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> +munge-0.5.10-r1.ebuild,
+  -munge-0.5.10.ebuild, files/munged.initd:
+  [sys-auth/munge] Move dir creation to init.d and eapi bump
+
+  04 Oct 2011; Justin Lecher <jlec@gentoo.org> munge-0.5.10.ebuild,
+  metadata.xml:
+  Cleaned additional . and die
+
+*munge-0.5.10 (31 Aug 2011)
+
+  31 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> -munge-0.5.9.ebuild,
+  +munge-0.5.10.ebuild:
+  Version bump
+
+  09 Jan 2011; Raúl Porcel <armin76@gentoo.org> munge-0.5.9.ebuild:
+  Add ~alpha/~ia64 wrt #345465
+
+  06 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> munge-0.5.9.ebuild:
+  Marked ~ppc64 wrt bug 345465
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> munge-0.5.9.ebuild:
+  added ~sparc (bug 345465)
+
+  26 Dec 2010; Matt Turner <mattst88@gentoo.org> munge-0.5.9.ebuild:
+  Added ~mips, bug 345465
+
+  06 Dec 2010; Jeroen Roovers <jer@gentoo.org> munge-0.5.9.ebuild:
+  Marked ~ppc (bug #345465).
+
+  06 Dec 2010; Jeroen Roovers <jer@gentoo.org> munge-0.5.9.ebuild:
+  Marked ~hppa (bug #345465).
+
+  04 Dec 2010; Justin Bronder <jsbronder@gentoo.org> munge-0.5.9.ebuild:
+  Conditionally remove unnecessary directories; they're only created if certain
+  directories already exist in /etc. #346683
+
+*munge-0.5.9 (14 Nov 2010)
+
+  14 Nov 2010; Justin Bronder <jsbronder@gentoo.org> +munge-0.5.9.ebuild,
+  +files/munged.confd, +files/munged.initd, +metadata.xml:
+  Initial import.
+

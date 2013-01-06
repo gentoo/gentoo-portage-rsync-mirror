@@ -1,0 +1,62 @@
+# ChangeLog for www-apps/tt-rss
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.11 2012/12/03 19:42:26 hwoarang Exp $
+
+*tt-rss-1.6.1 (03 Dec 2012)
+
+  03 Dec 2012; Markos Chandras <hwoarang@gentoo.org> +tt-rss-1.6.1.ebuild:
+  Version bump. Bug #443488. Thanks to Patrick <mail@patrick-nagel.net>
+
+*tt-rss-1.5.11 (23 May 2012)
+
+  23 May 2012; Markos Chandras <hwoarang@gentoo.org> +tt-rss-1.5.11.ebuild:
+  Version bump. Bug #416915
+
+*tt-rss-1.5.10 (07 Mar 2012)
+
+  07 Mar 2012; Markos Chandras <hwoarang@gentoo.org> +tt-rss-1.5.10.ebuild:
+  version bump. Bug #405709
+
+*tt-rss-1.5.9 (03 Feb 2012)
+
+  03 Feb 2012; Markos Chandras <hwoarang@gentoo.org> +tt-rss-1.5.9.ebuild,
+  files/ttrssd.initd:
+  version bump. thanks to Patrick <mail@patrick-nagel.net>. Bug #399889
+
+*tt-rss-1.5.8.1 (30 Dec 2011)
+
+  30 Dec 2011; Markos Chandras <hwoarang@gentoo.org> +tt-rss-1.5.8.1.ebuild:
+  Version bump. Bug #396267
+
+  28 Dec 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Fix maintainer tag order, remove bug assignment instructions from description
+  tags.
+
+*tt-rss-1.5.7 (04 Dec 2011)
+
+  04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> +tt-rss-1.5.7.ebuild,
+  -tt-rss-1.5.5.ebuild, -tt-rss-1.5.4.ebuild, files/postinstall-en.txt,
+  files/ttrssd.initd, files/postinstall-en-with-daemon.txt:
+  version bump. Bug #390395. Thanks to Patrick <mail@patrick-nagel.net>
+
+  02 Nov 2011; Mike Frysinger <vapier@gentoo.org> tt-rss-1.5.5.ebuild:
+  Drop "die" from enew{user,group} since these have always taken care of
+  calling it when necessary.
+
+  24 Aug 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add package to proxy-maintainers herd
+
+*tt-rss-1.5.5 (17 Jul 2011)
+
+  17 Jul 2011; Markos Chandras <hwoarang@gentoo.org> +tt-rss-1.5.5.ebuild,
+  +files/postinstall-en-with-daemon.txt, +files/ttrssd.confd,
+  +files/ttrssd.initd, +files/ttrssd.logrotated:
+  Version bump. Introducing init script and logrotate file. Thanks to Patrick
+  Nagel <mail@patrick-nagel.net>
+
+*tt-rss-1.5.4 (03 Jul 2011)
+
+  03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> +tt-rss-1.5.4.ebuild,
+  +files/postinstall-en.txt, +metadata.xml:
+  Moved from sunrise overlay. Thanks to Patrick Nagel <mail@patrick-nagel.net>.
+  Bug #250607

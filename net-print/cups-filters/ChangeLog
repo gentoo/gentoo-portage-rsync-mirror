@@ -1,0 +1,217 @@
+# ChangeLog for net-print/cups-filters
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.47 2013/01/01 14:50:44 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.25.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  19 Dec 2012; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.25.ebuild:
+  Add ~ia64, wrt bug #428356
+
+*cups-filters-1.0.25 (03 Dec 2012)
+
+  03 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org> +cups-filters-1.0.25.ebuild,
+  -cups-filters-1.0.23-r1.ebuild, -cups-filters-1.0.24.ebuild:
+  Version bump. Drop older.
+
+  06 Nov 2012; Alexis Ballier <aballier@gentoo.org> cups-filters-1.0.24.ebuild,
+  cups-filters-9999.ebuild:
+  keyword ~amd64-fbsd, bug #428356
+
+  04 Oct 2012;  <naota@gentoo.org> cups-filters-1.0.24.ebuild:
+  Add ~x86-fbsd wrt bug #428356
+
+  28 Sep 2012; Timo Gurr <tgurr@gentoo.org> cups-filters-1.0.24.ebuild,
+  +files/cups-filters-1.0.24-rev7009.diff:
+  Add Upstream patch to fix bug #434686, thanks to everyone involved.
+
+  21 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  cups-filters-9999.ebuild:
+  Keyword ~ppc64, bug #428356
+
+  11 Sep 2012; Olivier Crête <tester@gentoo.org> cups-filters-1.0.24.ebuild,
+  cups-filters-9999.ebuild:
+  Now requires qpdf >=3.0.2, patch by deadhead, bug #434648
+
+*cups-filters-1.0.24 (10 Sep 2012)
+
+  10 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> +cups-filters-1.0.24.ebuild,
+  -files/cups-filters-1.0.11-makefiles.patch,
+  -files/cups-filters-1.0.19-libdl.patch,
+  -files/cups-filters-1.0.19-poppler020.patch:
+  Version bump to latest. Drop unused patches.
+
+  01 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  cups-filters-1.0.23-r1.ebuild, cups-filters-9999.ebuild:
+  Keyword ~arm, bug #428356
+
+  01 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  cups-filters-1.0.23-r1.ebuild, cups-filters-9999.ebuild:
+  Keyword ~ppc, bug #428356
+
+  24 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-filters-9999.ebuild:
+  Respect eprefix on docdir.
+
+*cups-filters-1.0.23-r1 (23 Aug 2012)
+
+  23 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -cups-filters-1.0.23.ebuild, +cups-filters-1.0.23-r1.ebuild,
+  cups-filters-9999.ebuild:
+  Add configure option --with-pdftops=pdftops so pdf is rendered via poppler
+  not ghostscript, bug 431406
+
+  23 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-9999.ebuild:
+  Sync live ebuild
+
+  23 Aug 2012; Jeroen Roovers <jer@gentoo.org> cups-filters-1.0.23.ebuild:
+  Marked ~hppa (bug #428356).
+
+*cups-filters-1.0.23 (21 Aug 2012)
+
+  21 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> +cups-filters-1.0.23.ebuild,
+  -cups-filters-1.0.19-r1.ebuild, -cups-filters-1.0.20.ebuild:
+  Version bump to 1.0.23. Drop older. Depend on qpdf.
+
+  21 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-filters-9999.ebuild:
+  Depend on qpdf.
+
+  16 Aug 2012; Jeroen Roovers <jer@gentoo.org> cups-filters-1.0.20.ebuild:
+  Marked ~hppa (bug #428356).
+
+  11 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-filters-9999.ebuild:
+  Fontembed is mit licensed.
+
+  08 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.19-r1.ebuild, cups-filters-1.0.20.ebuild,
+  cups-filters-9999.ebuild:
+  Block <=cups-1.5, bug 429338
+
+  08 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.19-r1.ebuild, cups-filters-1.0.20.ebuild,
+  cups-filters-9999.ebuild:
+  xpdf-headers useflag for poppler is going away
+
+  05 Aug 2012; Markus Meier <maekke@gentoo.org> cups-filters-1.0.20.ebuild:
+  add ~arm, bug #428356
+
+*cups-filters-1.0.20 (31 Jul 2012)
+
+  31 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +cups-filters-1.0.20.ebuild, cups-filters-9999.ebuild:
+  Version bump
+
+  31 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.19-r1.ebuild, cups-filters-9999.ebuild:
+  Needs bc, bug 428534
+
+*cups-filters-1.0.19-r1 (31 Jul 2012)
+
+  31 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -cups-filters-1.0.19.ebuild, +cups-filters-1.0.19-r1.ebuild,
+  cups-filters-9999.ebuild:
+  Fix doc location, bug 427806
+
+  31 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.19.ebuild, cups-filters-9999.ebuild:
+  Needs xpdf-headers, bug 428702
+
+  29 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.19.ebuild, cups-filters-9999.ebuild:
+  Add temporary workaround for bug 428386
+
+  28 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  cups-filters-1.0.19.ebuild, cups-filters-9999.ebuild:
+  Keyword ~mips, bug #428356
+
+  27 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.19.ebuild, +files/cups-filters-1.0.19-libdl.patch:
+  Replace libdl hack with a proper patch
+
+  27 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.19.ebuild, cups-filters-9999.ebuild:
+  Add keywords and a disgusting libdl hack
+
+  19 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-9999.ebuild:
+  Patch integrated upstream
+
+  18 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.19.ebuild, +files/cups-filters-1.0.19-poppler020.patch,
+  cups-filters-9999.ebuild:
+  Make this beast build against poppler-0.20
+
+*cups-filters-1.0.19 (18 Jul 2012)
+
+  18 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org> +cups-filters-1.0.19.ebuild,
+  -cups-filters-1.0.17.ebuild, -cups-filters-1.0.18.ebuild,
+  cups-filters-9999.ebuild:
+  Version bump to the latest using my autotools system, yay.
+
+  26 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-9999.ebuild:
+  Fix perl dependency, thanks _AxS_
+
+  10 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/cups-filters-9999-imagetopdf.patch,
+  -files/cups-filters-9999-imagetoraster.patch,
+  -files/cups-filters-9999-png.patch, cups-filters-9999.ebuild:
+  Remove applied patches.
+
+  09 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-filters-9999.ebuild:
+  Introduce also perl useflag.
+
+  08 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-9999.ebuild, -files/cups-filters-9999-beta.patch,
+  +files/cups-filters-9999-imagetopdf.patch,
+  +files/cups-filters-9999-imagetoraster.patch,
+  -files/cups-filters-9999-lib.patch, +files/cups-filters-9999-png.patch,
+  -files/cups-filters-9999-warnings.patch:
+  Add some patches sent upstream, now also builds with extreme toolchain tuning
+  and cups-1.6 :)
+
+  08 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-filters-9999.ebuild:
+  Patches applied upstream. Reflex it.
+
+  08 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> cups-filters-9999.ebuild:
+  DESCRIPTION goes after inherit
+
+  08 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-filters-9999.ebuild:
+  Remanifest the patch as it changed.
+
+  08 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-filters-9999.ebuild:
+  Few fixups to build with forced as needed.
+
+*cups-filters-9999 (07 Jun 2012)
+
+  07 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +cups-filters-9999.ebuild, +files/cups-filters-9999-beta.patch,
+  +files/cups-filters-9999-lib.patch, +files/cups-filters-9999-warnings.patch:
+  Started with live ebuild, does not link yet
+
+*cups-filters-1.0.18 (02 Jun 2012)
+
+  02 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -cups-filters-1.0.11.ebuild, cups-filters-1.0.17.ebuild,
+  +cups-filters-1.0.18.ebuild:
+  Version bump, remove old; this needs cups-1.6, which is not keyworded yet, so
+  remove keywords for now
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  cups-filters-1.0.11.ebuild, cups-filters-1.0.17.ebuild:
+  Add missing inheritance of eutils.eclass
+
+  21 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> cups-filters-1.0.17.ebuild:
+  Eutils inherit was missing.
+
+*cups-filters-1.0.17 (02 May 2012)
+
+  02 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +cups-filters-1.0.17.ebuild:
+  Version bump to latest.
+
+*cups-filters-1.0.11 (03 Apr 2012)
+
+  03 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +cups-filters-1.0.11.ebuild,
+  +files/cups-filters-1.0.11-makefiles.patch, +metadata.xml:
+  Initial commit of cups-filters that provide cups-pdf backend that is already
+  in use by debian and ubuntu folks.

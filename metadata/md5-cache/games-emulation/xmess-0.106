@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DEPEND=sys-libs/zlib alsa? ( media-libs/alsa-lib ) dga? ( x11-libs/libXxf86dga x11-libs/libXxf86vm ) expat? ( dev-libs/expat ) ggi? ( media-libs/libggi ) lirc? ( app-misc/lirc ) opengl? ( virtual/opengl virtual/glu ) sdl? ( >=media-libs/libsdl-1.2.0 ) svga? ( media-libs/svgalib ) xinerama? ( x11-libs/libXinerama ) xv? ( x11-libs/libXv ) X? ( x11-libs/libXext ) dga? ( x11-proto/xf86dgaproto x11-proto/xf86vidmodeproto ) xinerama? ( x11-proto/xineramaproto ) xv? ( x11-proto/videoproto ) x86? ( dev-lang/nasm )
+DESCRIPTION=Multiple Arcade Machine Emulator for X11
+EAPI=2
+HOMEPAGE=http://x.mame.net/
+IUSE=alsa dga expat ggi joystick lirc mmx net opengl sdl svga X xinerama xv
+KEYWORDS=alpha amd64 ia64 ppc sparc x86
+LICENSE=XMAME
+RDEPEND=sys-libs/zlib alsa? ( media-libs/alsa-lib ) dga? ( x11-libs/libXxf86dga x11-libs/libXxf86vm ) expat? ( dev-libs/expat ) ggi? ( media-libs/libggi ) lirc? ( app-misc/lirc ) opengl? ( virtual/opengl virtual/glu ) sdl? ( >=media-libs/libsdl-1.2.0 ) svga? ( media-libs/svgalib ) xinerama? ( x11-libs/libXinerama ) xv? ( x11-libs/libXv ) X? ( x11-libs/libXext )
+SLOT=0
+SRC_URI=http://x.mame.net/download/xmame-0.106.tar.bz2
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	61ad55e732e494378165e7dcd4744b91	games	e0a83e3f3f024b8c8ef7a8217d716cbf	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=3de02e4905cff91068eb6a2791c90ca2

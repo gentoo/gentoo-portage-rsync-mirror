@@ -1,0 +1,20 @@
+--- gnome-hdaps-applet.c	2008-12-04 22:58:58.000000000 +0100
++++ gnome-hdaps-applet.c	2010-04-04 02:16:48.000000000 +0200
+@@ -21,6 +21,8 @@
+ #include <string.h>
+ #include <panel-applet.h>
+ #include <gtk/gtk.h>
++#include <unistd.h>
++#include <stdlib.h>
+ 
+ #define BUF_LEN				32
+ #define SYSFS_PROTECT_FILE_HDA		"/sys/block/hda/queue/protect"
+@@ -50,8 +52,6 @@
+ 	GtkWidget *image = gdata;
+ 	GtkWidget *applet;
+ 	GtkTooltipsData *tooltips_data;
+-	static int timerval = 0;
+-	gchar *text_label;
+ 	int status;
+ 
+ 	applet = image->parent;

@@ -1,0 +1,32 @@
+diff --git a/Setup.py b/Setup.py
+index c6ef27f..8baedc4 100644
+--- a/Setup.py
++++ b/Setup.py
+@@ -40,7 +40,7 @@ def remove(itm, lst):
+ # Unixoid OS's I will just look for the usual suspects.
+ 
+ libdirs = dirtest([
+-    "/usr/local/lib", "/sw/lib", "/usr/lib",
++    "/usr/lib", "/usr/lib64",
+     "/usr/lib/X11", "/usr/X11R6/lib",
+     "/opt/gnome/lib",
+ ])
+@@ -48,7 +48,7 @@ libdirs = dirtest([
+ # include_dirs are also non-portable; same trick here.
+ 
+ incdirs = dirtest([
+-    "/usr/local/include", "/sw/include", "/usr/include",
++    "/usr/include",
+     "/usr/include/X11", "/usr/X11R6/include",
+     "/opt/gnome/include",
+ ])
+@@ -57,9 +57,6 @@ incdirs = dirtest([
+ 
+ want_libs = [
+     "gd",
+-    "jpeg", "png", "gif", "z",
+-    "X11", "Xpm",
+-    "ttf", "freetype",
+ ]
+ 
+ libs = filetest(libdirs, want_libs)

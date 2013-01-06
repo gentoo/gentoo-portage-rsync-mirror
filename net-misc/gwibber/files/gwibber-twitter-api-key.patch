@@ -1,0 +1,13 @@
+--- gwibber/microblog/util/const.py_old	2011-07-03 13:54:45.820418606 +0200
++++ gwibber/microblog/util/const.py	2011-07-03 13:55:37.039418630 +0200
+@@ -12,8 +12,8 @@
+ else:
+   FB_APP_KEY = "71b85c6d8cb5bbb9f1a3f8bbdcdd4b05"
+ 
+-TWITTER_OAUTH_KEY = "VDOuA5qCJ1XhjaSa4pl76g"
+-TWITTER_OAUTH_SECRET = "BqHlB8sMz5FhZmmFimwgiIdB0RiBr72Y0bio49IVJM"
++TWITTER_OAUTH_KEY = "qp51C1PWucL45GxsYT76w"
++TWITTER_OAUTH_SECRET = "a5YnLmbuQnZTabsGm1Eg96qcMy96msVsgFLYZQ3VVGs"
+ 
+ # Gwibber
+ MAX_MESSAGE_LENGTH = 140

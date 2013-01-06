@@ -1,0 +1,16 @@
+# ChangeLog for dev-java/xz-java
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xz-java/ChangeLog,v 1.3 2012/06/11 13:06:25 johu Exp $
+
+  11 Jun 2012; Johannes Huber <johu@gentoo.org> xz-java-1.0.ebuild:
+  Stable for x86, wrt bug #417909
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> xz-java-1.0.ebuild:
+  Stable for amd64, wrt bug #417909
+
+*xz-java-1.0 (01 Jun 2012)
+
+  01 Jun 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +xz-java-1.0.ebuild,
+  +files/xz-java-stop-fetching-external-files.patch, +metadata.xml:
+  Initial commit, required for >=commons-compress-1.4.1
+

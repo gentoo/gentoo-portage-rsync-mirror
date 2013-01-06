@@ -1,0 +1,11 @@
+--- mk/jam/unix.jam.old	2010-09-30 17:33:30.000000000 +0200
++++ mk/jam/unix.jam	2010-09-30 17:33:48.000000000 +0200
+@@ -41,7 +41,7 @@
+ 
+ actions LinkApplication bind NEEDLIBS bind EXTRAOBJECTS
+ {
+-    $(LINK) -o $(<) $(>) $(EXTRAOBJECTS) $(NEEDLIBS) $(LFLAGS)
++    $(LINK) $(LDFLAGS) -o $(<) $(>) $(EXTRAOBJECTS) $(NEEDLIBS) $(LFLAGS)
+ }
+ 
+ 

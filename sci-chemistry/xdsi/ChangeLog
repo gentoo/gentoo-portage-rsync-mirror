@@ -1,0 +1,24 @@
+# ChangeLog for sci-chemistry/xdsi
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsi/ChangeLog,v 1.4 2012/01/31 08:30:01 jlec Exp $
+
+*xdsi-0.92-r1 (31 Jan 2012)
+
+  31 Jan 2012; Justin Lecher <jlec@gentoo.org> -files/0.91-gentoo.patch,
+  +xdsi-0.92-r1.ebuild, files/0.92-gentoo.patch, -xdsi-0.91.ebuild,
+  -xdsi-0.92.ebuild, metadata.xml:
+  Optionally depend on media-gfx/graphicsmagick[image], #314369; exchange RDEP
+  xpdf -> mupdf, #401289; drop old
+
+*xdsi-0.92 (17 May 2010)
+
+  17 May 2010; Justin Lecher <jlec@gentoo.org> +files/0.92-gentoo.patch,
+  +xdsi-0.92.ebuild:
+  Version Bump
+
+*xdsi-0.91 (17 Feb 2010)
+
+  17 Feb 2010; Justin Lecher <jlec@gentoo.org>
+  +files/0.91-gentoo.patch, +xdsi-0.91.ebuild, +metadata.xml:
+  Initial addition
+

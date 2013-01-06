@@ -1,0 +1,13 @@
+--- SConstruct.org	2011-06-07 21:33:28.876609681 +0200
++++ SConstruct	2011-06-07 21:34:11.420368249 +0200
+@@ -70,6 +70,10 @@
+     env.ParseConfig('pkg-config --cflags --libs gtk+-3.0')
+     env.Append(CPPDEFINES=["_GTK3"])
+     env.Append(CCFLAGS = ["-D_GTK"])
++  env.Append(LIBS =["-lz"])
++  env.Append(LIBS =["-ldl"])
++  env.Append(LIBS =["-lX11"])
++
+   ### Lua platform defines
+   ### Applies to all files even though only lua needs it, but should be ok
+   if env['LUA']:

@@ -1,0 +1,56 @@
+# ChangeLog for dev-haskell/haskell-platform
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/ChangeLog,v 1.10 2012/12/29 13:49:31 gienah Exp $
+
+  29 Dec 2012; Mark Wright <gienah@gentoo.org>
+  haskell-platform-2012.2.0.0.ebuild:
+  Only list dev-haskell/glut and dev-haskell/opengl deps once in haskell-
+  platform-2012.2.0.0 (they were listed twice)
+
+  06 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  haskell-platform-2009.2.0.2-r1.ebuild:
+  Get rid of 'dev-haskell/time' depend as it's a ghc's core library.
+
+*haskell-platform-2012.4.0.0 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org>
+  +haskell-platform-2012.4.0.0.ebuild:
+  Bump haskell-platform to 2012.4.0.0
+
+*haskell-platform-2011.4.0.0 (03 Jun 2012)
+*haskell-platform-2012.2.0.0 (03 Jun 2012)
+
+  03 Jun 2012; Mark Wright <gienah@gentoo.org>
+  +haskell-platform-2011.4.0.0.ebuild, +haskell-platform-2012.2.0.0.ebuild,
+  metadata.xml:
+  Bump haskell-platform to 2012.2.0.0 and include previous 2011.4.0.0 version
+  for ghc 7.0.4
+
+*haskell-platform-2011.2.0.1-r2 (11 Apr 2012)
+
+  11 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +haskell-platform-2011.2.0.1-r2.ebuild:
+  Version bump to newer platform version (should help bug #411393 by Leonid
+  Podolny)
+
+*haskell-platform-2009.2.0.2-r1 (11 Dec 2011)
+
+  11 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +haskell-platform-2009.2.0.2-r1.ebuild, -haskell-platform-2009.2.0.2.ebuild:
+  Dont't use too strict depend range for regex-* libs.
+
+  14 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  haskell-platform-2009.2.0.2.ebuild:
+  Reflect that dev-haskell/quickcheck-1* now has SLOT=1.
+
+  01 Nov 2009; <kolmodin@gentoo.org> -haskell-platform-2009.2.0.ebuild:
+  Remove old version as its dependency ghc-6.10.2 has been removed too.
+
+*haskell-platform-2009.2.0.2 (02 Aug 2009)
+
+  02 Aug 2009; Lennart Kolmodin <kolmodin@gentoo.org>
+  +haskell-platform-2009.2.0.2.ebuild:
+  Version bump.
+
+  10 May 2009; Lennart Kolmodin <kolmodin@gentoo.org> ChangeLog:
+  Initial version.

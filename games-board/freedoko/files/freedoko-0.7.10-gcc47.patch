@@ -1,0 +1,10 @@
+--- src/freedoko.cpp.old	2012-09-24 09:49:20.770335560 +0200
++++ src/freedoko.cpp	2012-09-24 09:49:59.696057735 +0200
+@@ -37,6 +37,7 @@
+ 
+ #include "constants.h"
+ #include <time.h>
++#include <unistd.h>
+ #ifdef WINDOWS
+ // for 'mkdir'
+ #include <io.h>

@@ -1,0 +1,37 @@
+# ChangeLog for sys-auth/ykpers
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/ykpers/ChangeLog,v 1.7 2012/12/31 02:22:31 flameeyes Exp $
+
+*ykpers-1.9.0 (31 Dec 2012)
+
+  31 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> +ykpers-1.9.0.ebuild,
+  metadata.xml:
+  Version bump; add support for consolekit/udev.
+
+*ykpers-1.7.0 (24 Jun 2012)
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> +ykpers-1.7.0.ebuild,
+  -files/ykpers-1.3.4-rpath.patch, -ykpers-1.3.4.ebuild:
+  Version bump yubikey-related packages. Close bugs #394565, #394563, #423289,
+  #371345, #394567. Remove old and old patch.
+
+  24 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> ykpers-1.3.4.ebuild:
+  USE="static-libs" and convert to prune_libtool_files() function. Remove
+  -Werror from AM_INIT_AUTOMAKE for compability with sys-devel/automake >=
+  1.12.
+
+  12 Jun 2012; Corentin Chary <iksaif@gentoo.org> ykpers-1.3.4.ebuild:
+  Fix HOMEPAGE
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> ykpers-1.3.4.ebuild:
+  Use virtual/libusb instead of dev-libs/libusb.
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> ykpers-1.3.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*ykpers-1.3.4 (23 Oct 2010)
+
+  23 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +ykpers-1.3.4.ebuild, +files/ykpers-1.3.4-rpath.patch, +metadata.xml:
+  Add ykpers, proxy-maintained by Brant Gurganus. Ebuild and patch from bug
+  #342105, updated for style and repoman.

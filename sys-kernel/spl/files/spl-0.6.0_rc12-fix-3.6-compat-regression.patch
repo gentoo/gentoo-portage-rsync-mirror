@@ -1,0 +1,33 @@
+From 053678f3b0572db442551dfa547dea939f45c96b Mon Sep 17 00:00:00 2001
+From: Brian Behlendorf <behlendorf1@llnl.gov>
+Date: Mon, 3 Dec 2012 12:01:28 -0800
+Subject: [PATCH] Handle errors from spl_kern_path_locked()
+
+When the Linux 3.6 KERN_PATH_LOCKED compatibility code was added
+by commit bcb1589 an entirely new vn_remove() implementation was
+added.  That function did not properly handle an error from
+spl_kern_path_locked() which would result in an panic.  This
+patch addresses the issue by returning the error to the caller.
+
+Signed-off-by: Brian Behlendorf <behlendorf1@llnl.gov>
+Closes #187
+---
+ module/spl/spl-vnode.c |    2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/module/spl/spl-vnode.c b/module/spl/spl-vnode.c
+index a0fed32..0ecd9ad 100644
+--- a/module/spl/spl-vnode.c
++++ b/module/spl/spl-vnode.c
+@@ -332,6 +332,8 @@
+ 		rc = vfs_unlink(parent.dentry->d_inode, dentry);
+ exit1:
+ 		dput(dentry);
++	} else {
++		return (-rc);
+ 	}
+ 
+ 	spl_inode_unlock(parent.dentry->d_inode);
+-- 
+1.7.10
+

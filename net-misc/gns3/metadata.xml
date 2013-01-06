@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+<email>hwoarang@gentoo.org</email>
+<name>Markos Chandras</name>
+<description>Proxy maintainer. CC him on bugs</description>
+</maintainer>
+<maintainer>
+<email>jan.bednar@gmail.com</email>
+<name>Ján Bednár</name>
+<description>Maintainer. Assing bugs to him</description>
+</maintainer>
+<longdescription lang="en">
+</longdescription>
+</pkgmetadata>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>media-tv</herd>
+<maintainer>
+<email>vdr@gentoo.org</email>
+<name>Gentoo VDR Project</name>
+</maintainer>
+<use>
+	<flag name='4mb-mod'>Enables support for modded FF-Card to 4MB ram or
+		softdecoder</flag>
+	<flag name='ff-card'>Enables scrollmode on FF-Card</flag>
+	<flag name='graphtft'>Enable support for
+		<pkg>media-plugins/vdr-graphtft</pkg></flag>
+	<flag name='hd'>Support for HighDefinition OSD on softdecoder( e.g xineliboutput, vdpau, ehd )</flag>
+</use>
+</pkgmetadata>
+

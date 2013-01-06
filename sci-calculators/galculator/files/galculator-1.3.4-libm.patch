@@ -1,0 +1,43 @@
+From fa663985f73197570af03ab28ac2cbfe703fbaee Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Sun, 13 May 2012 11:06:30 -0400
+Subject: [PATCH] Use AC_CHECK_LIBM to add -lm to LDADD if needed
+
+Otherwise, galculator fails to link to libm when GNU gold is used as the linker.
+
+https://sourceforge.net/tracker/?func=detail&aid=3526340&group_id=80471&atid=559874
+---
+ configure.in    |    3 +++
+ src/Makefile.am |    2 +-
+ 2 files changed, 4 insertions(+), 1 deletions(-)
+
+diff --git a/configure.in b/configure.in
+index 19fddad..bf1c2c0 100644
+--- a/configure.in
++++ b/configure.in
+@@ -17,6 +17,9 @@ PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])
+ AC_SUBST(PACKAGE_CFLAGS)
+ AC_SUBST(PACKAGE_LIBS)
+ 
++AC_CHECK_LIBM
++AC_SUBST(LIBM)
++
+ GETTEXT_PACKAGE=galculator
+ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Name of gettext package])
+ AC_SUBST(GETTEXT_PACKAGE)
+diff --git a/src/Makefile.am b/src/Makefile.am
+index bb35226..c24e135 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -19,7 +19,7 @@ galculator_SOURCES = \
+ 	ui.c ui.h \
+ 	flex_parser.l flex_parser.h
+ 
+-galculator_LDADD = @PACKAGE_LIBS@
++galculator_LDADD = @PACKAGE_LIBS@ $(LIBM)
+ 
+ galculator_LDFLAGS = -export-dynamic
+ 
+-- 
+1.7.8.6
+

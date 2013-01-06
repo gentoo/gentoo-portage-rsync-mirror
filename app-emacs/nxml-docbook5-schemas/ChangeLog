@@ -1,0 +1,30 @@
+# ChangeLog for app-emacs/nxml-docbook5-schemas
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-docbook5-schemas/ChangeLog,v 1.6 2012/12/06 04:27:15 phajdan.jr Exp $
+
+  06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  nxml-docbook5-schemas-20080922.ebuild:
+  x86 stable wrt bug #445542
+
+  02 Dec 2012; <ago@gentoo.org> nxml-docbook5-schemas-20080922.ebuild:
+  Stable for amd64, wrt bug #445542
+
+  26 Sep 2012; Ulrich Müller <ulm@gentoo.org>
+  nxml-docbook5-schemas-20080922.ebuild:
+  Specify LICENSE more precisely. Bump ebuild to EAPI 4.
+
+  12 Mar 2011; Ulrich Mueller <ulm@gentoo.org>
+  nxml-docbook5-schemas-20080922.ebuild:
+  Drop dependency on app-emacs/nxml-mode.
+
+  25 Sep 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add package to emacs herd.
+
+*nxml-docbook5-schemas-20080922 (22 Sep 2008)
+
+  22 Sep 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/60nxml-docbook5-schemas-gentoo.el, +files/schemas.xml,
+  +metadata.xml, +nxml-docbook5-schemas-20080922.ebuild:
+  Add a package to quickly add support for DocBook 5 to nxml (whether
+  standalone or included in emacs).
+

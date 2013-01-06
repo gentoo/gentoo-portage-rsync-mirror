@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/alive
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/alive/ChangeLog,v 1.1 2012/09/16 14:17:34 jer Exp $
+
+*alive-2.0.1 (16 Sep 2012)
+
+  16 Sep 2012; Jeroen Roovers <jer@gentoo.org> +alive-2.0.1.ebuild,
+  +metadata.xml:
+  Initial commit.
+

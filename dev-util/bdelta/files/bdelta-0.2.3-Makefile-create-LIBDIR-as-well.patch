@@ -1,0 +1,27 @@
+From aeecce25c8d6223d8f35a5000aa21ec807302c81 Mon Sep 17 00:00:00 2001
+From: Sergei Trofimovich <slyfox@gentoo.org>
+Date: Wed, 7 Dec 2011 21:52:00 +0300
+Subject: [PATCH] Makefile: create LIBDIR as well
+
+Useful when DISTDIR points to empty directory hierarchy
+
+Signed-off-by: Sergei Trofimovich <slyfox@gentoo.org>
+---
+ trunk/src/Makefile |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/trunk/src/Makefile b/trunk/src/Makefile
+index 1f4ff3e..f3a56f0 100644
+--- a/trunk/src/Makefile
++++ b/trunk/src/Makefile
+@@ -21,6 +21,7 @@ bpatch: bpatch.cpp compatibility.h bdelta.h file.h
+ 
+ install: libbdelta.so bdelta bpatch
+ 	mkdir -p $(DESTDIR)$(BINDIR)
++	mkdir -p $(DESTDIR)$(LIBDIR)
+ 	install -m 755 libbdelta.so $(DESTDIR)$(LIBDIR)
+ 	install -m 755 bdelta $(DESTDIR)$(BINDIR)
+ 	install -m 755 bpatch $(DESTDIR)$(BINDIR)
+-- 
+1.7.8
+

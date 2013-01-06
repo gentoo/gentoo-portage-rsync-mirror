@@ -1,0 +1,13 @@
+diff --git a/ui.c b/ui.c
+index f74f3d3..37889fd 100644
+--- a/ui.c
++++ b/ui.c
+@@ -2465,7 +2465,7 @@ void regexp_error_popup(int rc, regex_t *pre)
+ 			popup_buffer[sizeof(popup_buffer) - 1] = 0x00;
+ 		}
+ 		else
+-			strncat(popup_buffer, error, sizeof(popup_buffer));
++			strncat(popup_buffer, error, sizeof(popup_buffer) - sizeof(error));
+ 
+ 		myfree(error);
+ 	}

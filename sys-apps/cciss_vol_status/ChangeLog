@@ -1,0 +1,74 @@
+# ChangeLog for sys-apps/cciss_vol_status
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.12 2012/06/20 14:42:28 ago Exp $
+
+  20 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
+  cciss_vol_status-1.09-r1.ebuild:
+  Stable for amd64, wrt bug #422167
+
+  20 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
+  cciss_vol_status-1.09-r1.ebuild:
+  marked x86 per bug 422167
+
+  04 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  files/cciss_vol_status.cron:
+  Bug #402109: Refactor grep/awk mess with bad linebreak to single awk.
+
+*cciss_vol_status-1.09-r1 (27 Jan 2012)
+
+  27 Jan 2012; Tony Vroon <chainsaw@gentoo.org> -cciss_vol_status-1.02.ebuild,
+  -cciss_vol_status-1.06.ebuild, +cciss_vol_status-1.09-r1.ebuild,
+  +files/cciss_vol_status.cron:
+  Added cron job to check volume status on a daily basis and e-mail for errors.
+  Suggestion & implementation by Oleg Gawriloff, closes bug #350029. Removed
+  old ebuilds.
+
+*cciss_vol_status-1.09 (27 May 2011)
+
+  27 May 2011; Tony Vroon <chainsaw@gentoo.org> +cciss_vol_status-1.09.ebuild:
+  Version bump, as requested by Marcin Miroslaw in bug #368859. The strlen bug
+  was fixed upstream.
+
+*cciss_vol_status-1.06 (02 May 2010)
+
+  02 May 2010; <chainsaw@gentoo.org> +files/1.06-strlen-typo.patch,
+  +cciss_vol_status-1.06.ebuild:
+  Version bump, as requested by Johan Bergström in bug #299729. Patched out
+  a strnlen vs strlen typo.
+
+  22 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  cciss_vol_status-1.03.ebuild:
+  stable x86, bug 276971
+
+  21 Jul 2009; <chainsaw@gentoo.org> cciss_vol_status-1.03.ebuild:
+  Mark stable on AMD64 as requested by Christian Hartmann <ian@gentoo.org>
+  in bug #276971. Tested on a 6 drive RAID6 array attached to a P400i SAS
+  Controller on a Proliant DL365 G1.
+
+*cciss_vol_status-1.03 (15 Feb 2008)
+
+  15 Feb 2008; Tony Vroon <chainsaw@gentoo.org>
+  cciss_vol_status-1.02.ebuild, +cciss_vol_status-1.03.ebuild:
+  Version bump to 1.03; contains a major overhaul of the logical drive
+  discovery algorithm. This adds supports for the MSA500 fibre channel
+  controller. Marked 1.02 stable on AMD64, tested on a Proliant DL365 G1 with
+  a P400i controller. Closes bug #209640 by Johan Andersson <johan@e-626.net>.
+
+  17 Jan 2008; Tony Vroon <chainsaw@gentoo.org>
+  cciss_vol_status-1.02.ebuild:
+  Mark stable on X86.
+
+  30 May 2007; Tony Vroon <chainsaw@gentoo.org>
+  cciss_vol_status-1.02.ebuild:
+  Added ~x86 keyword based on user testing by Alois Schmid
+  <alois.schmid@gmx.de> on HP ProLiant DL380 G3, DL380 G4 & DL360, as reported
+  in bug #171244.
+
+*cciss_vol_status-1.02 (19 Apr 2007)
+
+  19 Apr 2007; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
+  +cciss_vol_status-1.02.ebuild:
+  Initial commit. Ebuild by me, but based on the submission by Peter Molnar
+  <mp428@hszk.bme.hu> in bug #171244. AMD64 keyword approval from KingTaco,
+  tested by me on a HP Proliant DL365 G1.
+

@@ -1,0 +1,10 @@
+# ChangeLog for sys-auth/pam-script
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-script/ChangeLog,v 1.1 2012/11/30 11:00:17 radhermit Exp $
+
+*pam-script-1.1.6 (30 Nov 2012)
+
+  30 Nov 2012; Tim Harder <radhermit@gentoo.org> +pam-script-1.1.6.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me (bug #70064).
+

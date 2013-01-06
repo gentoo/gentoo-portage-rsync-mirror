@@ -1,0 +1,140 @@
+Gentoo Bug#334647:
+Respect CC, CFLAGS, LDFLAGS (with gcc).
+Support verbose building via 'make V=1'.
+--- configure.orig	2012-10-02 14:01:48.735669564 +0200
++++ configure	2012-10-02 14:23:01.224271511 +0200
+@@ -10,7 +10,7 @@
+ # This can be disabled if neccessary.
+ #
+ 
+-CCS="xlc_r gcc"
++CCS=${CC-"xlc_r gcc"}
+ 
+ #
+ # Look for supported compilers
+@@ -31,15 +31,21 @@
+ else
+ 	echo "Using $CCPATH to compile Cntlm"
+ 	[ -h Makefile ] && rm -f Makefile 2>/dev/null
+-	case "$CC" in
+-		gcc)
++	if $CC -v >/dev/null 2>&1; then
+ 			# default Makefile is for GCC; just revert back to
+ 			# GCC if Makefile is linked to other compiler version
+ 			if [ ! -f Makefile ]; then
+ 				mv Makefile.gcc Makefile
+ 			fi
+-			;;
+-		*)
++			: ${CFLAGS=-O3}
++			: ${LDFLAGS=}
++			CFLAGS="$CFLAGS -std=c99 -Wall -Wno-unused-but-set-variable -pedantic -pthread"
++			LDFLAGS="$LDFLAGS -pthread"
++			sed -e "s~^CFLAGS=~CFLAGS=$CFLAGS ~" \
++				-e "s~^LDFLAGS=.*~LDFLAGS=$LDFLAGS~" \
++				-e "s~^CC=.*~CC=$CC~" \
++				-i Makefile
++	else
+ 			# backup default GCC Makefile and create a link to other
+ 			if [ -f Makefile ]; then
+ 				mv Makefile Makefile.gcc
+@@ -47,8 +53,7 @@
+ 
+ 			EXT=`echo "$CC" | sed 's/_.*//'`
+ 			ln -s Makefile.$EXT Makefile
+-			;;
+-	esac
++	fi
+ fi
+ 
+ STAMP=configure-stamp
+@@ -62,7 +67,7 @@
+ for i in $TESTS; do
+ 	printf "Checking $i... "
+ 	printf "#define config_$i " >> $CONFIG
+-	OUT=`$CC -D_POSIX_C_SOURCE=199506L -D_ISOC99_SOURCE -D_REENTRANT -o config/$i config/$i.c 2>&1`
++	OUT=`$CC $CFLAGS $LDFLAGS -D_POSIX_C_SOURCE=199506L -D_ISOC99_SOURCE -D_REENTRANT -o config/$i config/$i.c 2>&1`
+ 	rc=$?
+ 
+ 	if [ $rc -ne 0 ]; then # -o -n "$OUT" ]; then
+--- Makefile.orig	2012-10-02 15:05:58.924914577 +0200
++++ Makefile	2012-10-02 15:10:09.644014197 +0200
+@@ -15,10 +15,10 @@
+ NAME=cntlm
+ CC=gcc
+ VER=`cat VERSION`
+-CFLAGS+=$(FLAGS) -std=c99 -Wall -Wno-unused-but-set-variable -pedantic -O3 -D__BSD_VISIBLE -D_ALL_SOURCE -D_XOPEN_SOURCE=600 -D_POSIX_C_SOURCE=200112 -D_ISOC99_SOURCE -D_REENTRANT -D_BSD_SOURCE -DVERSION=\"`cat VERSION`\"
++CFLAGS=-D__BSD_VISIBLE -D_ALL_SOURCE -D_XOPEN_SOURCE=600 -D_POSIX_C_SOURCE=200112 -D_ISOC99_SOURCE -D_REENTRANT -D_BSD_SOURCE -DVERSION=\"`cat VERSION`\"
+ OS=$(shell uname -s)
+-OSLDFLAGS=$(shell [ $(OS) = "SunOS" ] && echo "-lrt -lsocket -lnsl")
+-LDFLAGS:=-lpthread $(OSLDFLAGS)
++LIBS=$(shell [ $(OS) = "SunOS" ] && echo "-lrt -lsocket -lnsl")
++LDFLAGS=
+ 
+ ifeq ($(findstring CYGWIN,$(OS)),)
+ 	OBJS=utils.o ntlm.o xcrypt.o config.o socket.o acl.o auth.o http.o forward.o direct.o scanner.o pages.o main.o
+@@ -26,21 +26,28 @@
+ 	OBJS=utils.o ntlm.o xcrypt.o config.o socket.o acl.o auth.o http.o forward.o direct.o scanner.o pages.o main.o win/resources.o
+ endif
+ 
++VE_=@echo
++VE_1=@:
++VE=$(VE_$(V))
++VV_=@
++VV_1=
++VV=$(VV_$(V))
++
+ $(NAME): configure-stamp $(OBJS)
+-	@echo "Linking $@"
+-	@$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS)
++	$(VE) "Linking $@"
++	$(VV) $(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS) $(LIBS)
+ 
+ main.o: main.c
+-	@echo "Compiling $<"
+-	@if [ -z "$(SYSCONFDIR)" ]; then \
++	$(VE) "Compiling $<"
++	$(VV) if [ -z "$(SYSCONFDIR)" ]; then \
+ 		$(CC) $(CFLAGS) -c main.c -o $@; \
+ 	else \
+ 		$(CC) $(CFLAGS) -DSYSCONFDIR=\"$(SYSCONFDIR)\" -c main.c -o $@; \
+ 	fi
+ 
+ .c.o:
+-	@echo "Compiling $<"
+-	@$(CC) $(CFLAGS) -c -o $@ $<
++	$(VE) "Compiling $<"
++	$(VV) $(CC) $(CFLAGS) -c -o $@ $<
+ 
+ install: $(NAME)
+ 	# Special handling for install(1)
+@@ -123,17 +130,17 @@
+ 	@echo
+ 
+ win/resources.o: win/resources.rc
+-	@echo Adding EXE resources
+-	@windres $^ -o $@
++	$(VE) Adding EXE resources
++	$(VV) windres $^ -o $@
+ 
+ uninstall:
+ 	rm -f $(BINDIR)/$(NAME) $(MANDIR)/man1/$(NAME).1 2>/dev/null || true
+ 
+ clean:
+-	@rm -f *.o cntlm cntlm.exe configure-stamp build-stamp config/config.h 2>/dev/null
+-	@rm -f win/*.exe win/*.dll win/*.iss win/*.pdf win/cntlm.ini win/license.txt win/resouces.o 2>/dev/null
+-	@rm -f config/endian config/gethostname config/strdup config/socklen_t config/*.exe
+-	@if [ -h Makefile ]; then rm -f Makefile; mv Makefile.gcc Makefile; fi
++	$(VV) rm -f *.o cntlm cntlm.exe configure-stamp build-stamp config/config.h 2>/dev/null
++	$(VV) rm -f win/*.exe win/*.dll win/*.iss win/*.pdf win/cntlm.ini win/license.txt win/resouces.o 2>/dev/null
++	$(VV) rm -f config/endian config/gethostname config/strdup config/socklen_t config/*.exe
++	$(VV) if [ -h Makefile ]; then rm -f Makefile; mv Makefile.gcc Makefile; fi
+ 
+ distclean: clean
+ 	if [ `id -u` = 0 ]; then \
+@@ -143,4 +150,4 @@
+ 		fakeroot debian/rules clean; \
+ 		fakeroot rpm/rules clean; \
+ 	fi
+-	@rm -f *.exe *.deb *.rpm *.tgz *.tar.gz *.tar.bz2 tags ctags pid 2>/dev/null
++	$(VV) rm -f *.exe *.deb *.rpm *.tgz *.tar.gz *.tar.bz2 tags ctags pid 2>/dev/null

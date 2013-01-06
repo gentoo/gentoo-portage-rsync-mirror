@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=dev-libs/glib ssl? ( dev-libs/openssl )
+DESCRIPTION=RFC3261 compliant SIP User-Agent library
+HOMEPAGE=http://sofia-sip.sourceforge.net/
+IUSE=ssl
+KEYWORDS=alpha amd64 ia64 ppc sparc x86
+LICENSE=LGPL-2.1
+RDEPEND=dev-libs/glib ssl? ( dev-libs/openssl )
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://sourceforge/sofia-sip/sofia-sip-1.12.10.tar.gz
+_md5_=2f5fc41a31497a90cabaa8e76c5bcabe

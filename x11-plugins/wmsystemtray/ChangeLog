@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/wmsystemtray
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystemtray/ChangeLog,v 1.1 2012/02/22 11:29:03 voyageur Exp $
+
+*wmsystemtray-1.2 (20 Feb 2012)
+
+  20 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  +wmsystemtray-1.2.ebuild, +metadata.xml:
+  Initial commit
+

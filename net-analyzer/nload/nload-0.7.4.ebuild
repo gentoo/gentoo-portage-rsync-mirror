@@ -1,0 +1,22 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/nload-0.7.4.ebuild,v 1.6 2012/12/26 09:12:27 pinkbyte Exp $
+
+EAPI="4"
+
+DESCRIPTION="console application which monitors network traffic and bandwidth usage in real time"
+HOMEPAGE="http://www.roland-riegel.de/nload/index.html"
+SRC_URI="http://www.roland-riegel.de/nload/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="amd64 ~arm ppc x86"
+IUSE=""
+
+DEPEND=">=sys-libs/ncurses-5.2"
+RDEPEND="${DEPEND}"
+
+src_configure() {
+	# --enable-debug  do not strip debugging symbols (default no)
+	econf --enable-debug
+}

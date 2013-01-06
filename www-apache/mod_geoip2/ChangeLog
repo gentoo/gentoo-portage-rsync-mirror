@@ -1,0 +1,22 @@
+# ChangeLog for www-apache/mod_geoip2
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_geoip2/ChangeLog,v 1.4 2013/01/03 19:15:55 pacho Exp $
+
+*mod_geoip2-1.2.7-r1 (03 Jan 2013)
+
+  03 Jan 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/mod_geoip2-1.2.7-httpd24.patch, +mod_geoip2-1.2.7-r1.ebuild:
+  Apply fedora patch to fix apache 2.4 compat
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
+
+  12 Oct 2012; Patrick Lauer <patrick@gentoo.org> mod_geoip2-1.2.7.ebuild:
+  Restricting to apache 2.2
+
+*mod_geoip2-1.2.7 (14 Oct 2011)
+
+  14 Oct 2011; Jeremy Olexa <darkside@gentoo.org> +files/30_mod_geoip2.conf,
+  +mod_geoip2-1.2.7.ebuild, +metadata.xml:
+  New Apache module. Original ebuild by Lance Albertson. bug 304675

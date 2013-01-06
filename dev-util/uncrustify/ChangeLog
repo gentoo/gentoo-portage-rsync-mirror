@@ -1,0 +1,81 @@
+# ChangeLog for dev-util/uncrustify
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.18 2012/05/08 08:17:05 grobian Exp $
+
+  08 May 2012; Fabian Groffen <grobian@gentoo.org> uncrustify-0.59.ebuild:
+  Marked ~x64-solaris
+
+  06 May 2012; Fabian Groffen <grobian@gentoo.org>
+  +files/uncrustify-0.59-unistdh.patch, uncrustify-0.59.ebuild:
+  Add patch to fix compilation with GCC 4.7, bug #413859
+
+*uncrustify-0.59 (14 Mar 2012)
+
+  14 Mar 2012; Fabian Groffen <grobian@gentoo.org> +uncrustify-0.59.ebuild,
+  -uncrustify-0.55.ebuild, -uncrustify-0.56.ebuild:
+  Version bump
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> uncrustify-0.58.ebuild:
+  x86 stable wrt bug #400353
+
+  27 Jan 2012; Agostino Sarubbo <ago@gentoo.org> uncrustify-0.58.ebuild:
+  Stable for amd64, wrt bug #400353
+
+  07 Aug 2011; Markos Chandras <hwoarang@gentoo.org> uncrustify-0.57.ebuild:
+  Stable on amd64 wrt bug #377547
+
+  07 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> uncrustify-0.57.ebuild:
+  x86 stable wrt bug #377547
+
+*uncrustify-0.58 (03 Aug 2011)
+
+  03 Aug 2011; Fabian Groffen <grobian@gentoo.org> +uncrustify-0.58.ebuild:
+  Version bump to 0.58
+
+*uncrustify-0.57 (20 Dec 2010)
+
+  20 Dec 2010; Fabian Groffen <grobian@gentoo.org> -uncrustify-0.52.ebuild,
+  -uncrustify-0.53.ebuild, +uncrustify-0.57.ebuild:
+  Clean old, version bump, bug #349141
+
+  03 Jul 2010; Fabian Groffen <grobian@gentoo.org> uncrustify-0.52.ebuild,
+  uncrustify-0.53.ebuild, uncrustify-0.55.ebuild, uncrustify-0.56.ebuild:
+  Tests seem not to work with python3, depend on python2.
+
+  25 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  uncrustify-0.55.ebuild:
+  stable x86, bug 323221
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> uncrustify-0.55.ebuild:
+  stable amd64, bug 323221
+
+*uncrustify-0.56 (08 Jun 2010)
+
+  08 Jun 2010; Fabian Groffen <grobian@gentoo.org> +uncrustify-0.56.ebuild:
+  Version bump, bug #323217
+
+*uncrustify-0.55 (09 Feb 2010)
+
+  09 Feb 2010; Fabian Groffen <grobian@gentoo.org> +uncrustify-0.55.ebuild,
+  -uncrustify-9999.ebuild:
+  Version bump to 0.55, drop live ebuild: upstream switched from SVN to Git.
+
+  09 Feb 2010; Fabian Groffen <grobian@gentoo.org> uncrustify-0.53.ebuild:
+  Marked ~amd64-linux
+
+*uncrustify-9999 (04 Oct 2009)
+
+  04 Oct 2009; Sebastian Pipping <sping@gentoo.org> +uncrustify-9999.ebuild:
+  Add live ebuild from sunrise
+
+*uncrustify-0.53 (04 Oct 2009)
+
+  04 Oct 2009; Sebastian Pipping <sping@gentoo.org> +uncrustify-0.53.ebuild:
+  Bump to 0.53
+
+*uncrustify-0.52 (01 Oct 2009)
+
+  01 Oct 2009; Fabian Groffen <grobian@gentoo.org> +uncrustify-0.52.ebuild,
+  +metadata.xml:
+  Initial version, ebuild by Nick Fortino and Mario Fetka, bug #208199
+

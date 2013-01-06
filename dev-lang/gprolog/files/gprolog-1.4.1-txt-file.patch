@@ -1,0 +1,10 @@
+--- gprolog-1.4.1.orig/src/Makefile.in	2012-01-10 18:24:39.000000000 +0100
++++ gprolog-1.4.1/src/Makefile.in	2012-07-02 12:55:39.000000000 +0200
+@@ -60,7 +60,6 @@
+ install-system:
+ 	./mkinstalldirs $(INSTALL_DIR) $(INSTALL_DIR)/bin \
+ 	$(INSTALL_DIR)/include $(INSTALL_DIR)/lib
+-	for i in $(TXT_FILES); do $(INSTALL_DATA) ../$$i $(INSTALL_DIR); done
+ 	for i in $(BIN_FILES); do $(INSTALL_PROGRAM) */$$i $(INSTALL_DIR)/bin; done
+ 	for i in $(OBJ_FILES); do $(INSTALL_DATA) */$$i $(INSTALL_DIR)/lib; done
+ 	for i in $(LIB_FILES); do $(INSTALL_DATA) */$$i $(INSTALL_DIR)/lib; done

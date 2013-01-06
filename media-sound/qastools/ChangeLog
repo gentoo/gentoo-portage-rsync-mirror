@@ -1,0 +1,25 @@
+# ChangeLog for media-sound/qastools
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qastools/ChangeLog,v 1.3 2012/05/09 16:17:38 kensington Exp $
+
+*qastools-0.17.2 (09 May 2012)
+
+  09 May 2012; Michael Palimaka <kensington@gentoo.org> +qastools-0.17.2.ebuild,
+  -files/qastools-0.17.1-gcc-4.7.patch, -qastools-0.17.1-r1.ebuild:
+  Version bump, noticed by Thomas Capricelli <orzel@freehackers.org>. Remove
+  old.
+
+*qastools-0.17.1-r1 (09 May 2012)
+
+  09 May 2012; Michael Palimaka <kensington@gentoo.org>
+  +files/qastools-0.17.1-gcc-4.7.patch, +qastools-0.17.1-r1.ebuild:
+  Respect LINGUAS. Fix build failure with gcc-4.7, fixing bug #414149 by David
+  Kredba <nheghathivhistha@gmail.com>.
+
+*qastools-0.17.1 (13 Mar 2012)
+
+  13 Mar 2012; Davide Pesavento <pesa@gentoo.org> +metadata.xml,
+  +qastools-0.17.1.ebuild:
+  Import QasTools from qt overlay. Ebuild by <bigfoot@xmail.net> and Ben de
+  Groot <yngwin@gmail.com>, bug #394517.
+

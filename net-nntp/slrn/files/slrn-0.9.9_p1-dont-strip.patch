@@ -1,0 +1,13 @@
+--- slrn-0.9.9p1/src/Makefile.in
++++ slrn-0.9.9p1/src/Makefile.in
+@@ -205,8 +205,8 @@
+ installlocales:
+ 	cd ../po; $(MAKE) DESTDIR=$(DESTDIR) LOCALEDIR=$(LOCALEDIR) install 
+ installbin:
+-	$(INSTALL) -m 755 -s $(OBJDIR)/slrn $(DEST_BINDIR)
+-	-$(INSTALL) -m 755 -s $(OBJDIR)/slrnpull $(DEST_BINDIR)
++	$(INSTALL) -m 755 $(OBJDIR)/slrn $(DEST_BINDIR)
++	-$(INSTALL) -m 755 $(OBJDIR)/slrnpull $(DEST_BINDIR)
+ install: all installdirs installbin installdocs installslang installlocales
+ 
+ # The symlinks target is for my own private use.  It simply creates the object

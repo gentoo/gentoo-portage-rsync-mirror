@@ -1,0 +1,18 @@
+# Copyright 1999-2012 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/uclibc/use.mask,v 1.3 2012/10/25 16:06:42 blueness Exp $
+
+nls
+pam
+
+# JIT leads to RWX mmap denials with a PaX kernel
+jit
+orc
+
+emul-linux-x86
+-uclibc
+
+-elibc_uclibc
+elibc_glibc
+
+-hardened

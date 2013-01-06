@@ -1,0 +1,32 @@
+--- omake-0.9.8.5/src/libmojave-external/cutil/lm_printf.c	2007-07-15 17:55:23.000000000 +0000
++++ 0.9.8.x/src/libmojave-external/cutil/lm_printf.c	2009-10-19 21:24:26.264561909 +0000
+@@ -142,12 +142,12 @@
+ #endif
+     if(code < 0) {
+         if(bufp != buffer)
+-            free(buffer);
++            free(bufp);
+         failwith("ml_print_string");
+     }
+     v_result = copy_string(bufp);
+     if(bufp != buffer)
+-        free(buffer);
++        free(bufp);
+     return v_result;
+ }
+ 
+@@ -190,12 +190,12 @@
+ #endif
+     if(code < 0) {
+         if(bufp != buffer)
+-            free(buffer);
++            free(bufp);
+         failwith("ml_print_string");
+     }
+     v_result = copy_string(bufp);
+     if(bufp != buffer)
+-        free(buffer);
++        free(bufp);
+     return v_result;
+ }
+ 

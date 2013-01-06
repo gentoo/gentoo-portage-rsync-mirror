@@ -1,0 +1,48 @@
+# ChangeLog for net-misc/badvpn
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/ChangeLog,v 1.10 2012/12/26 02:22:00 hasufell Exp $
+
+*badvpn-1.999.126 (26 Dec 2012)
+
+  26 Dec 2012; Julian Ospald <hasufell@gentoo.org> +badvpn-1.999.126.ebuild:
+  version bump by Ambroz Bizjak wrt #448226
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> badvpn-1.999.123-r3.ebuild:
+  virtualize udev dependency
+
+  17 Oct 2012; <ago@gentoo.org> badvpn-1.999.123-r3.ebuild:
+  Stable for amd64, wrt bug #435912
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  badvpn-1.999.123-r3.ebuild:
+  x86 stable wrt bug #435912
+
+*badvpn-1.999.123-r3 (22 Sep 2012)
+
+  22 Sep 2012; William Hubbs <williamh@gentoo.org> +badvpn-1.999.123-r3.ebuild,
+  -badvpn-1.999.123-r2.ebuild, files/badvpn-ncd.init, files/badvpn-server.init:
+  Fix init scripts to use logger if syslogging is enabled.
+
+*badvpn-1.999.123-r2 (23 Aug 2012)
+
+  23 Aug 2012; William Hubbs <williamh@gentoo.org> -badvpn-1.999.123-r1.ebuild,
+  +badvpn-1.999.123-r2.ebuild, files/badvpn-ncd.init, files/badvpn-server.init:
+  My initial rewrite of the init scripts broke them for stable OpenRc
+  users, so this fixes that issue.
+
+  19 Aug 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  add williamh as maintainer
+
+*badvpn-1.999.123-r1 (19 Aug 2012)
+
+  19 Aug 2012; Julian Ospald <hasufell@gentoo.org> -badvpn-1.999.123.ebuild,
+  +badvpn-1.999.123-r1.ebuild, files/badvpn-ncd.conf, files/badvpn-ncd.init,
+  files/badvpn-server.conf, files/badvpn-server.init:
+  make init scripts posix compliant wrt #431792 thanks to William Hubbs
+
+*badvpn-1.999.123 (13 Aug 2012)
+
+  13 Aug 2012; Julian Ospald <hasufell@gentoo.org> +badvpn-1.999.123.ebuild,
+  +files/badvpn-ncd.conf, +files/badvpn-ncd.init, +files/badvpn-server.conf,
+  +files/badvpn-server.init, +metadata.xml:
+  initial commit with Ambroz Bizjak

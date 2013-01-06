@@ -1,0 +1,55 @@
+--- makefile
++++ makefile
+@@ -185,7 +185,7 @@
+ #
+ # This is my compiler of choice, it seems to work most everywhere
+ #
+-CC = gcc
++CC ?= gcc
+ 
+ # For allowing #if..#else..#endif constructs in LUA files - C. Blue
+ # Note: The flags must contain
+@@ -197,11 +197,11 @@
+ # need to use the gcc invocation below instead.
+ #
+ # cpp variant:
+-CPP = cpp
+-CPPFLAGS = -C -P
++#CPP ?= cpp
++#CPPFLAGS += -C -P
+ # gcc variant:
+-#CPP = gcc
+-#CPPFLAGS = -x c -E -Wp,-C,-P
++CPP ?= gcc
++CPPFLAGS = -x c -E -Wp,-C,-P
+ 
+ 
+ #
+@@ -225,6 +225,15 @@
+ #CFLAGS = -Wall -g -pipe -DUSE_X11 -DUSE_GCU
+ #LIBS = -L/usr/X11R6/lib -lX11 -lcurses
+ 
++# defines
++ifdef USE_SDL
++CFLAGS += -DSOUND_SDL
++SDL_LIBS = $(shell sdl-config --libs) -lSDL_mixer
++endif
++
++ifdef DEFAULT_PATH
++CFLAGS += -DDEFAULT_PATH=\"$(DEFAULT_PATH)\"
++endif
+ 
+ X11BASE = /usr/X11R6
+ 
+@@ -241,8 +250,9 @@
+ #LIBS = -L${X11BASE}/lib -L/usr/pkg/lib -lX11 -lncurses -lcrypt -lm
+ ##
+ ## With SDL
+-CFLAGS = -g -pipe -Wall -DUSE_X11 -DUSE_GCU -I${X11BASE}/include -O2 -D_XOPEN_SOURCE -D_BSD_SOURCE -DMEXP=19937 -DSOUND_SDL `sdl-config --cflags`
+-LIBS = -L${X11BASE}/lib -L/usr/pkg/lib -lX11 -lncurses -lcrypt -lm `sdl-config --libs` -lSDL_mixer
++CFLAGS += -Wall
++CFLAGS += -I${X11BASE}/include -DUSE_GCU -DUSE_X11 -D_XOPEN_SOURCE -D_BSD_SOURCE -DMEXP=19937 $(shell sdl-config --cflags)
++LIBS += -L${X11BASE}/lib -L/usr/pkg/lib -lX11 -lncurses -lcrypt -lm ${SDL_LIBS}
+ #-lXtst (for numlock - obsolete)
+ 
+ ## Uncomment this if you want to bundle libraries with the client

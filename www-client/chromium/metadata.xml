@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>chromium</herd>
+	<longdescription>Chromium is the open-source web browser project behind Google Chrome</longdescription>
+	<use>
+		<flag name="bindist">Disable patent-encumbered HTML5 video codecs</flag>
+		<flag name="system-ffmpeg">Use system ffmpeg instead of bundled ffmpeg.</flag>
+		<flag name="tcmalloc">Use bundled tcmalloc instead of system malloc.</flag>
+	</use>
+</pkgmetadata>

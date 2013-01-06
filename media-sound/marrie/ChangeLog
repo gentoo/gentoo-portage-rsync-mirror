@@ -1,0 +1,30 @@
+# ChangeLog for media-sound/marrie
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/ChangeLog,v 1.5 2012/12/26 23:20:34 ottxor Exp $
+
+  26 Dec 2012; Christoph Junghans <ottxor@gentoo.org> marrie-0.3-r2.ebuild,
+  marrie-9999.ebuild:
+  use new mercurial.eclass defaults
+
+  23 Nov 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  marrie-0.3-r2.ebuild, marrie-9999.ebuild:
+  Recommend a media player and a file downloader.
+
+*marrie-0.3-r2 (23 Nov 2012)
+
+  23 Nov 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -marrie-0.3-r1.ebuild, +marrie-0.3-r2.ebuild, marrie-9999.ebuild:
+  Fix bytecode compilation
+
+*marrie-9999 (23 Nov 2012)
+*marrie-0.3-r1 (23 Nov 2012)
+
+  23 Nov 2012; Rafael G. Martins <rafaelmartins@gentoo.org> -marrie-0.3.ebuild,
+  +marrie-0.3-r1.ebuild, +marrie-9999.ebuild:
+  Use distutils.eclass instead of distutils-r1.eclass. Add live ebuild.
+
+*marrie-0.3 (22 Nov 2012)
+
+  22 Nov 2012; Rafael G. Martins <rafaelmartins@gentoo.org> +marrie-0.3.ebuild,
+  +metadata.xml:
+  Initial commit

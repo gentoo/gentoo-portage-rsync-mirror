@@ -1,0 +1,17 @@
+# ChangeLog for dev-java/guava
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/guava/ChangeLog,v 1.3 2011/11/30 12:00:35 grobian Exp $
+
+  30 Nov 2011; Fabian Groffen <grobian@gentoo.org> guava-07.ebuild:
+  Add Prefix keywords for bug #390017
+
+  15 Nov 2011; Ralph Sennhauser <sera@gentoo.org> guava-07.ebuild:
+  Require 1.6 JDK for building. Bug #390579
+
+*guava-07 (09 Nov 2011)
+
+  09 Nov 2011; Ralph Sennhauser <sera@gentoo.org> +guava-07.ebuild,
+  +metadata.xml:
+  Initial import. Thanks to James Le Cuirot <chewi@aura-online.co.uk> for the
+  initial ebuild submitted to java-overlay.
+

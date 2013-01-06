@@ -1,0 +1,14 @@
+diff --git a/telnet/libtelnet/encrypt.c b/telnet/libtelnet/encrypt.c
+index f75317d..b8d6cdd 100644
+--- a/telnet/libtelnet/encrypt.c
++++ b/telnet/libtelnet/encrypt.c
+@@ -757,6 +757,9 @@ static void encrypt_keyid(kp, keyid, len)
+ 	int dir = kp->dir;
+ 	register int ret = 0;
+ 
++	if (len > MAXKEYLEN)
++		len = MAXKEYLEN;
++
+ 	if (!(ep = (*kp->getcrypt)(*kp->modep))) {
+ 		if (len == 0)
+ 			return;

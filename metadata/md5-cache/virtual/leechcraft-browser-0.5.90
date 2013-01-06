@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for LeechCraft plugins providing a web browser.
+EAPI=4
+KEYWORDS=~amd64 ~x86
+RDEPEND=www-client/leechcraft-poshuku
+SLOT=0
+_md5_=1cf3194e726447041f996a48df757057

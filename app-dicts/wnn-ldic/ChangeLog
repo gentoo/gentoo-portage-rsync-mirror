@@ -1,0 +1,19 @@
+# ChangeLog for app-dicts/wnn-ldic
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wnn-ldic/ChangeLog,v 1.5 2012/10/20 18:37:13 ago Exp $
+
+  20 Oct 2012; Agostino Sarubbo <ago@gentoo.org> wnn-ldic-1.04.ebuild:
+  Add ~amd64, wrt bug #439086
+
+  18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> wnn-ldic-1.04.ebuild:
+  QA fixes; unquoted variables
+
+  25 Jan 2007; Marius Mauch <genone@gentoo.org> wnn-ldic-1.04.ebuild:
+  Replacing einfo with elog
+
+*wnn-ldic-1.04 (23 Oct 2004)
+
+  23 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +wnn-ldic-1.04.ebuild:
+  Initial import. Thanks to mft at GentooJP EbuildJP,
+  http://ebuild.gentoo.gr.jp/.

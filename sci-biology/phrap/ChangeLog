@@ -1,0 +1,11 @@
+# ChangeLog for sci-biology/phrap
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phrap/ChangeLog,v 1.1 2008/12/31 00:28:51 weaver Exp $
+
+*phrap-1.080812 (31 Dec 2008)
+
+  31 Dec 2008; weaver <weaver@gentoo.org> +metadata.xml,
+  +phrap-1.080812.ebuild:
+  Import from Science overlay, bug 114094. Thanks to Brady Catherman and Martin
+  Mokrejs.
+

@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Time-HiRes
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris
+RDEPEND=|| ( =dev-lang/perl-5.16* ~perl-core/Time-HiRes-1.972.500 )
+SLOT=0
+_md5_=9ae9146a0182b6ca2cadd8218938c195

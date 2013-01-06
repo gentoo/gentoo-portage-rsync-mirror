@@ -1,0 +1,38 @@
+# ChangeLog for dev-php5/adodb-ext
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb-ext/ChangeLog,v 1.1 2011/04/09 19:29:39 olemarkus Exp $
+
+  06 Mar 2011; <olemarkus@gentoo.org> files/php53.patch:
+  The old patch seemed to have incorrect line endings in it and would not
+  apply. #357025
+
+*adodb-ext-504-r2 (03 Nov 2010)
+
+  03 Nov 2010; Matti Bickel <mabi@gentoo.org> +adodb-ext-504-r2.ebuild:
+  create minor slotting compatible version
+
+*adodb-ext-504-r1 (11 Sep 2010)
+
+  11 Sep 2010; Matti Bickel <mabi@gentoo.org> +files/php53.patch,
+  +adodb-ext-504-r1.ebuild:
+  add patch to make adodb-ext compatible with php-5.3 (patch taken from
+  http://github.com/wojo/adodb-ext)
+
+*adodb-ext-504 (08 Mar 2007)
+
+  08 Mar 2007; Luca Longinotti <chtekk@gentoo.org> -adodb-ext-503.ebuild,
+  +adodb-ext-504.ebuild:
+  Version bump, cleanup.
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
+
+  15 Oct 2006; Thomas Cort <tcort@gentoo.org> adodb-ext-503.ebuild:
+  Added ~amd64 keyword wrt Bug #139742.
+
+*adodb-ext-503 (26 Nov 2005)
+
+  26 Nov 2005; Luca Longinotti <chtekk@gentoo.org> +metadata.xml,
+  +adodb-ext-503.ebuild:
+  Inital import from the PHP Overlay.
+

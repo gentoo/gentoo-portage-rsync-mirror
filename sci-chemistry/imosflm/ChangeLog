@@ -1,0 +1,13 @@
+# ChangeLog for sci-chemistry/imosflm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/imosflm/ChangeLog,v 1.13 2012/07/06 13:39:21 jlec Exp $
+
+  06 Jul 2012; Justin Lecher <jlec@gentoo.org> imosflm-1.0.7.ebuild:
+  Fix version of mosflm dependency
+
+*imosflm-1.0.7 (05 Jul 2012)
+
+  05 Jul 2012; Justin Lecher <jlec@gentoo.org> imosflm-1.0.5.ebuild,
+  +imosflm-1.0.7.ebuild:
+  Version Bump
+

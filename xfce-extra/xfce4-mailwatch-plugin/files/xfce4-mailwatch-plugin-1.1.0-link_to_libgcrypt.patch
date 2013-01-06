@@ -1,0 +1,37 @@
+diff --git a/configure.ac b/configure.ac
+index df02271..e17375f 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -82,6 +82,7 @@ XDT_CHECK_OPTIONAL_PACKAGE([GNUTLS], [gnutls], [1.2.0], [ssl],
+ 	[gnutls support for secure IMAP/POP3 connections], [yes])
+ if test "x$GNUTLS_FOUND" = "xyes"; then
+ 	AC_DEFINE([HAVE_SSL_SUPPORT], [1], [Define if SSL support is enabled])
++	AM_PATH_LIBGCRYPT()
+ fi
+ AM_CONDITIONAL([HAVE_SSL_SUPPORT], [test "x$GNUTLS_FOUND" = "xyes"])
+ 
+diff --git a/libmailwatch-core/Makefile.am b/libmailwatch-core/Makefile.am
+index 181992e..03a8675 100644
+--- a/libmailwatch-core/Makefile.am
++++ b/libmailwatch-core/Makefile.am
+@@ -20,10 +20,6 @@ libmailwatch_core_la_SOURCES = \
+ 	mailwatch.c \
+ 	mailwatch.h
+ 
+-if HAVE_SSL_SUPPORT
+-libmailwatch_core_la_SOURCES += mailwatch-mailbox-gmail.c
+-endif
+-
+ libmailwatch_core_la_CFLAGS = \
+ 	@GTHREAD_CFLAGS@ \
+ 	@GTK_CFLAGS@ \
+@@ -31,3 +27,9 @@ libmailwatch_core_la_CFLAGS = \
+ 	@GNUTLS_CFLAGS@ \
+ 	-DDATADIR=\"$(datadir)\" \
+ 	-DLOCALEDIR=\"$(localedir)\"
++
++if HAVE_SSL_SUPPORT
++libmailwatch_core_la_SOURCES += mailwatch-mailbox-gmail.c
++libmailwatch_core_la_CFLAGS += @LIBGCRYPT_CFLAGS@
++libmailwatch_core_la_LIBADD = @LIBGCRYPT_LIBS@
++endif

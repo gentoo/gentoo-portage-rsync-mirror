@@ -1,0 +1,17 @@
+diff -Naur dar-2.4.0.orig/src/check/all_features.cpp dar-2.4.0/src/check/all_features.cpp
+--- dar-2.4.0.orig/src/check/all_features.cpp	2011-04-01 04:21:02.000000000 +0900
++++ dar-2.4.0/src/check/all_features.cpp	2011-06-07 09:03:47.772855768 +0900
+@@ -25,6 +25,13 @@
+ 
+ #include "../my_config.h"
+ 
++extern "C"
++{
++#if HAVE_STDLIB_H
++#include <stdlib.h>
++#endif
++}
++
+ #include "libdar.hpp"
+ 
+ using namespace libdar;

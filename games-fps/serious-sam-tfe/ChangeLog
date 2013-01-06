@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/serious-sam-tfe
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/serious-sam-tfe/ChangeLog,v 1.1 2012/09/22 01:59:43 pinkbyte Exp $
+
+*serious-sam-tfe-1_beta3 (22 Sep 2012)
+
+  22 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
+  +serious-sam-tfe-1_beta3.ebuild, +metadata.xml:
+  Initial commit wrt bug #71436. Thanks to all those people who helps writing
+  this ebuild
+

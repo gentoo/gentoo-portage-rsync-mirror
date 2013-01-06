@@ -1,0 +1,21 @@
+# ChangeLog for dev-python/pygpgme
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/ChangeLog,v 1.5 2012/08/09 08:13:49 patrick Exp $
+
+  09 Aug 2012; Patrick Lauer <patrick@gentoo.org> pygpgme-0.3.ebuild:
+  Restrict pythonic things
+
+  31 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> pygpgme-0.3.ebuild:
+  Added ~x86 keyword. All non-interactive tests pass on x86.
+
+  31 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> pygpgme-0.3.ebuild:
+  Remove interactive tests. die if sed fails in src_prepare.
+
+  31 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> metadata.xml:
+  Added python herd to metadata.xml.
+
+*pygpgme-0.3 (31 Jul 2012)
+
+  31 Jul 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +pygpgme-0.3.ebuild,
+  +metadata.xml:
+  Initial ebuild wrt bug #416485.

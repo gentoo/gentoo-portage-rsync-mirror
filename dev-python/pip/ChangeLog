@@ -1,0 +1,59 @@
+# ChangeLog for dev-python/pip
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.14 2012/11/11 11:32:02 radhermit Exp $
+
+  11 Nov 2012; Tim Harder <radhermit@gentoo.org> -pip-1.0.2.ebuild:
+  Remove old.
+
+  30 Oct 2012; Agostino Sarubbo <ago@gentoo.org> pip-1.2.1.ebuild:
+  Stable for amd64, wrt bug #439720
+
+  29 Oct 2012; Jeff Horelick <jdhore@gentoo.org> pip-1.2.1.ebuild:
+  marked x86 per bug 439720
+
+  22 Oct 2012; Tim Harder <radhermit@gentoo.org> -pip-1.1.ebuild,
+  -pip-1.2.ebuild:
+  Remove old.
+
+*pip-1.2.1 (06 Sep 2012)
+
+  06 Sep 2012; Tim Harder <radhermit@gentoo.org> +pip-1.2.1.ebuild:
+  Version bump.
+
+*pip-1.2 (02 Sep 2012)
+
+  02 Sep 2012; Tim Harder <radhermit@gentoo.org> +pip-1.2.ebuild:
+  Version bump.
+
+  06 Jun 2012; Benda Xu <heroxbd@gentoo.org> pip-1.1.ebuild:
+  keyword ~amd64-linux and ~x86-linux
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pip-1.0.2.ebuild:
+  x86 stable wrt bug #403871
+
+*pip-1.1 (17 Feb 2012)
+
+  17 Feb 2012; Tim Harder <radhermit@gentoo.org> +pip-1.1.ebuild:
+  Version bump.
+
+  16 Feb 2012; Agostino Sarubbo <ago@gentoo.org> pip-1.0.2.ebuild:
+  Stable for amd64, wrt bug #403871
+
+  10 Sep 2011; Tim Harder <radhermit@gentoo.org> pip-1.0.2.ebuild:
+  Migrate to the bash-completion-r1 eclass.
+
+  05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -pip-1.0.1.ebuild:
+  Remove old ebuild. Requested by Arfrever
+
+*pip-1.0.2 (20 Jul 2011)
+
+  20 Jul 2011; Tim Harder <radhermit@gentoo.org> +pip-1.0.2.ebuild:
+  Version bump.
+
+*pip-1.0.1 (31 May 2011)
+
+  31 May 2011; Tim Harder <radhermit@gentoo.org> +pip-1.0.1.ebuild,
+  +files/pip-1.0.1-unversioned.patch, +metadata.xml:
+  Initial import from sunrise (bug #317791). Thanks to Michail Denev for the
+  initial ebuild work.
+

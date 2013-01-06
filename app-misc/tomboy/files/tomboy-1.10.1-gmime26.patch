@@ -1,0 +1,24 @@
+From 36c0f0c7d78972fe28f804c6021d6dc78871f1f8 Mon Sep 17 00:00:00 2001
+From: Alex Tereschenko <frozen.and.blue@gmail.com>
+Date: Wed, 18 Jul 2012 17:31:26 +0000
+Subject: Fixed building Evolution add-in on Ubuntu 12.04
+
+...and most probably other Debian-based systems with gmime-sharp 2.6
+
+Signed-off-by: Jared Jennings <jjennings@src.gnome.org>
+---
+diff --git a/configure.in b/configure.in
+index 1cde9ec..bd9e1ff 100644
+--- a/configure.in
++++ b/configure.in
+@@ -237,6 +237,8 @@ done
+ if test "x$ENABLE_GNOME" != "xno"; then
+ 	if pkg-config --exists gmime-sharp-2.4; then
+ 		PKG_CHECK_MODULES(EVOLUTION, gmime-sharp-2.4, ENABLE_EVOLUTION="yes", ENABLE_EVOLUTION="no")
++	elif pkg-config --exists gmime-sharp-2.6; then
++		PKG_CHECK_MODULES(EVOLUTION, gmime-sharp-2.6, ENABLE_EVOLUTION="yes", ENABLE_EVOLUTION="no")
+ 	else
+ 		PKG_CHECK_MODULES(EVOLUTION, gmime-sharp >= 2.2.7, ENABLE_EVOLUTION="yes", ENABLE_EVOLUTION="no")
+ 	fi
+--
+cgit v0.9.0.2

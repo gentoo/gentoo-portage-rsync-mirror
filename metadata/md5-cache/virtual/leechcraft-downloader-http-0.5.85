@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for LeechCraft plugins providing HTTP downloading
+EAPI=4
+KEYWORDS=~amd64 ~x86
+RDEPEND=net-misc/leechcraft-cstp
+SLOT=0
+_md5_=e7526e7dd30e541280b95f63fda5d718

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Powiedz
+Comment=Polish speak synthesizer
+Comment[pl]=Polski syntezator mowy
+Exec=powiedz
+Type=Application
+Encoding=UTF-8
+Terminal=0
+Categories=Application;Audio;

@@ -1,0 +1,31 @@
+# ChangeLog for dev-haskell/glade
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glade/ChangeLog,v 1.7 2012/09/12 15:18:19 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> glade-0.12.0.ebuild,
+  glade-0.12.1.ebuild:
+  move dev-haskell/glade/glade-0.12.0.ebuild ebuild to mirror://hackage
+
+  17 Aug 2012; Agostino Sarubbo <ago@gentoo.org> glade-0.12.1.ebuild:
+  Stable for amd64, wrt bug #422021
+
+  16 Aug 2012; Andreas Schuerch <nativemad@gentoo.org> glade-0.12.1.ebuild:
+  x86 stable, see bug 422021
+
+*glade-0.12.1 (13 May 2012)
+
+  13 May 2012; Sergei Trofimovich <slyfox@gentoo.org> +glade-0.12.1.ebuild,
+  metadata.xml:
+  Version bump (ghc-7.4 support)
+
+  21 Jun 2011; Markos Chandras <hwoarang@gentoo.org> glade-0.12.0.ebuild:
+  Stable on amd64 wrt bug #314059
+
+  12 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> glade-0.12.0.ebuild:
+  x86 stable wrt bug #314059
+
+*glade-0.12.0 (09 May 2011)
+
+  09 May 2011; Sergei Trofimovich <slyfox@gentoo.org> +glade-0.12.0.ebuild,
+  +metadata.xml:
+  Initial version. Haskell bindings for gnome-base/libglade.

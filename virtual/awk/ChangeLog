@@ -1,0 +1,16 @@
+# ChangeLog for virtual/awk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/awk/ChangeLog,v 1.3 2012/08/22 14:52:58 flameeyes Exp $
+
+  22 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> awk-0.ebuild:
+  QA: mark stable on all arches, since there is bound to be a stable version of
+  gawk or busybox in each one of them.
+
+  06 Jul 2012; Christoph Junghans <ottxor@gentoo.org> awk-0.ebuild:
+  add ~x86-macos
+
+*awk-0 (04 Jun 2012)
+
+  04 Jun 2012; Christoph Junghans <ottxor@gentoo.org> +awk-0.ebuild,
+  +metadata.xml:
+  initial commit

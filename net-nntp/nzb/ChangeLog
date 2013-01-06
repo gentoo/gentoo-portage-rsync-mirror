@@ -1,0 +1,20 @@
+# ChangeLog for net-nntp/nzb
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzb/ChangeLog,v 1.3 2012/11/06 15:37:20 kensington Exp $
+
+*nzb-0.3 (06 Nov 2012)
+
+  06 Nov 2012; Michael Palimaka <kensington@gentoo.org> +nzb-0.3.ebuild,
+  metadata.xml:
+  Version bump. Add upstream metadata.
+
+*nzb-0.2 (27 Mar 2012)
+
+  27 Mar 2012; Davide Pesavento <pesa@gentoo.org> +nzb-0.2.ebuild,
+  -nzb-0.1.9.ebuild:
+  Version bump by Michael (kensington) in bug 409765. Remove old.
+
+*nzb-0.1.9 (08 Nov 2009)
+
+  08 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> +nzb-0.1.9.ebuild:
+  Initial commit.

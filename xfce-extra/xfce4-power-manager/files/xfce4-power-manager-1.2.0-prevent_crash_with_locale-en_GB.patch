@@ -1,0 +1,24 @@
+http://bugs.gentoo.org/419973
+http://bugzilla.xfce.org/show_bug.cgi?id=8992
+
+--- po/en_GB.po
++++ po/en_GB.po
+@@ -549,7 +549,6 @@ msgid ""
+ "%s until is fully charged."
+ msgstr ""
+-"%s\n"
+-"Your %s is charging (%i%%)\n"
++"%s (%i%%)\n"
+ "%s until is fully charged."
+ 
+ #: ../src/xfpm-battery.c:232 ../src/xfpm-battery.c:268
+@@ -568,8 +567,7 @@ msgid ""
+ "%s (%i%%)\n"
+ "Estimated time left is %s."
+ msgstr ""
+-"%s\n"
+-"Your %s is discharging (%i%%)\n"
++"%s (%i%%)\n"
+ "Estimated time left is %s."
+ 
+ #: ../src/xfpm-battery.c:250 ../src/xfpm-battery.c:271

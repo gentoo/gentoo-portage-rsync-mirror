@@ -1,0 +1,15 @@
+From: Andre Reinke <andre.reinke@googlemail.com>
+
+https://gna.org/bugs/index.php?19709
+
+--- a/plugins/actions/findandreplace/findandreplace.cc
++++ b/plugins/actions/findandreplace/findandreplace.cc
+@@ -26,7 +26,7 @@
+ #include <gui/dialogutility.h>
+ #include <gtkmm_utility.h>
+ #include <widget_config_utility.h>
+-#include <glib/gregex.h>
++#include <glib.h>
+ 
+ /*
+  * FIXME:

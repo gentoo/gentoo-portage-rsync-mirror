@@ -1,0 +1,29 @@
+http://savannah.gnu.org/bugs/?34196
+http://bugs.gentoo.org/show_bug.cgi?id=290351
+
+patch by Alan Hourihane
+
+* don't patch configure.ac, or one gets a reconf, bug #286848
+
+*--- configure.ac.old	2009-10-23 10:36:00.000000000 +0100
+*+++ configure.ac	2009-10-23 10:06:41.000000000 +0100
+*@@ -255,7 +255,7 @@
+*     ])
+* 
+*     dnl Now actually check for -lssl
+*-    AC_LIB_HAVE_LINKFLAGS([ssl], [crypto], [
+*+    AC_LIB_HAVE_LINKFLAGS([ssl], [crypto z], [
+*   #include <openssl/ssl.h>
+*   #include <openssl/x509.h>
+*   #include <openssl/err.h>
+--- configure.old	2009-10-24 10:20:08.000000000 +0100
++++ configure	2009-10-24 10:20:26.000000000 +0100
+@@ -27496,7 +27496,7 @@
+   rpathdirs=
+   ltrpathdirs=
+   names_already_handled=
+-  names_next_round='ssl crypto'
++  names_next_round='ssl crypto z'
+   while test -n "$names_next_round"; do
+     names_this_round="$names_next_round"
+     names_next_round=

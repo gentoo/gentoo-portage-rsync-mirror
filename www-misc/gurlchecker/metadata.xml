@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>maintainer-needed@gentoo.org</email>
+</maintainer>
+<longdescription>
+  gURLChecker is a graphical web links checker for GNU/Linux and
+  other POSIX OS. It can work on a whole site, a single local page
+  or a browser bookmarks file.
+</longdescription>
+</pkgmetadata>

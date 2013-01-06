@@ -1,0 +1,17 @@
+# ChangeLog for dev-scheme/schemik
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/schemik/ChangeLog,v 1.3 2011/11/24 12:49:00 pacho Exp $
+
+  24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #290906
+
+  16 Sep 2010; Tomas Touceda <chiiph@gentoo.org> schemik-1.2.40.0.ebuild,
+  +files/schemik-1.2.40.0-asneeded.patch:
+  Add as-needed patch, wrt bug 330623
+
+*schemik-1.2.40.0 (05 Jul 2010)
+
+  05 Jul 2010; Tomas Touceda <chiiph@gentoo.org> +schemik-1.2.40.0.ebuild,
+  +metadata.xml:
+  Schemik initial commit. Thanks to Petr Pisar for the ebuild
+

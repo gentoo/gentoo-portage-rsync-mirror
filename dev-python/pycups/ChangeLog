@@ -1,0 +1,252 @@
+# ChangeLog for dev-python/pycups
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.66 2012/12/20 16:47:42 kensington Exp $
+
+  20 Dec 2012; Michael Palimaka <kensington@gentoo.org> -pycups-1.9.61.ebuild:
+  Remove old.
+
+  01 Dec 2012; Raúl Porcel <armin76@gentoo.org> pycups-1.9.62.ebuild:
+  alpha/ia64/sh/sparc stable wrt #441294
+
+  14 Nov 2012; Johannes Huber <johu@gentoo.org> pycups-1.9.62.ebuild:
+  Stable for x86, wrt bug #441294
+
+  07 Nov 2012; Jeroen Roovers <jer@gentoo.org> pycups-1.9.62.ebuild:
+  Stable for HPPA (bug #441294).
+
+  06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> pycups-1.9.62.ebuild:
+  Stable for amd64, wrt bug #441294
+
+  05 Nov 2012; Anthony G. Basile <blueness@gentoo.org> pycups-1.9.62.ebuild:
+  stable arm, bug #441294
+
+  05 Nov 2012; Anthony G. Basile <blueness@gentoo.org> pycups-1.9.62.ebuild:
+  stable ppc ppc64, bug #441294
+
+*pycups-1.9.62 (05 Aug 2012)
+
+  05 Aug 2012; Maciej Mrozowski <reavertm@gentoo.org> +pycups-1.9.62.ebuild,
+  -pycups-1.9.49.ebuild, -pycups-1.9.57.ebuild, -pycups-1.9.60.ebuild,
+  -pycups-1.9.61-r1.ebuild:
+  Version bump, remove old.
+
+*pycups-1.9.61-r1 (31 Jul 2012)
+
+  31 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +pycups-1.9.61-r1.ebuild, metadata.xml, pycups-1.9.49.ebuild,
+  pycups-1.9.57.ebuild, pycups-1.9.60.ebuild, pycups-1.9.61.ebuild:
+  Add version that works with cups-1.6, adjust dependencies
+
+  09 Jul 2012; Jeroen Roovers <jer@gentoo.org> pycups-1.9.61.ebuild:
+  Stable for HPPA (bug #418905).
+
+  08 Jul 2012; Raúl Porcel <armin76@gentoo.org> pycups-1.9.61.ebuild:
+  alpha/ia64/sh/sparc stable wrt #418905
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> pycups-1.9.61.ebuild:
+  Marking pycups-1.9.61 ppc for bug 418905
+
+  06 Jun 2012; Markus Meier <maekke@gentoo.org> pycups-1.9.61.ebuild:
+  arm stable, bug #418905
+
+  06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> pycups-1.9.61.ebuild:
+  marked x86 per bug 418905
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> pycups-1.9.61.ebuild:
+  Marking pycups-1.9.61 ppc64 for bug 418905
+
+  05 Jun 2012; Agostino Sarubbo <ago@gentoo.org> pycups-1.9.61.ebuild:
+  Stable for amd64, wrt bug #418905
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> pycups-1.9.60.ebuild:
+  alpha/ia64/sh/sparc stable wrt #400333
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> pycups-1.9.60.ebuild:
+  Marking pycups-1.9.60 ppc64 for bug 400333
+
+*pycups-1.9.61 (06 Mar 2012)
+
+  06 Mar 2012; Maciej Mrozowski <reavertm@gentoo.org> +pycups-1.9.61.ebuild:
+  Version bump
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pycups-1.9.60.ebuild:
+  x86 stable wrt bug #400333
+
+  09 Feb 2012; Jeroen Roovers <jer@gentoo.org> pycups-1.9.60.ebuild:
+  Stable for HPPA (bug #400333).
+
+  08 Feb 2012; Markus Meier <maekke@gentoo.org> pycups-1.9.60.ebuild:
+  arm stable, bug #400333
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> pycups-1.9.60.ebuild:
+  Marking pycups-1.9.60 ppc for bug 400333
+
+  31 Jan 2012; Agostino Sarubbo <ago@gentoo.org> pycups-1.9.60.ebuild:
+  Stable for amd64, wrt bug #400333
+
+*pycups-1.9.60 (14 Oct 2011)
+
+  14 Oct 2011; Maciej Mrozowski <reavertm@gentoo.org> -pycups-1.9.58.ebuild,
+  -pycups-1.9.59.ebuild, +pycups-1.9.60.ebuild:
+  Version bump, remove old
+
+*pycups-1.9.59 (04 Oct 2011)
+
+  04 Oct 2011; Maciej Mrozowski <reavertm@gentoo.org> +pycups-1.9.59.ebuild:
+  Version bump
+
+  12 Sep 2011; Maciej Mrozowski <reavertm@gentoo.org> pycups-1.9.58.ebuild,
+  pycups-1.9.49.ebuild, pycups-1.9.57.ebuild:
+  Does not build against python3, bug 382579. Bump to EAPI3.
+
+  06 Sep 2011; Maciej Mrozowski <reavertm@gentoo.org> metadata.xml:
+  My email fixed.
+
+*pycups-1.9.58 (22 Aug 2011)
+
+  22 Aug 2011; Maciej Mrozowski <reavertm@gentoo.org> +pycups-1.9.58.ebuild:
+  Version bump
+
+  10 Aug 2011; Markus Meier <maekke@gentoo.org> pycups-1.9.57.ebuild:
+  arm stable, bug #349496
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> pycups-1.9.57.ebuild:
+  alpha/ia64/sparc stable wrt #349496
+
+  24 Jul 2011; Markos Chandras <hwoarang@gentoo.org> pycups-1.9.57.ebuild:
+  Stable on amd64 wrt bug #349496
+
+  19 Jul 2011; Markus Meier <maekke@gentoo.org> pycups-1.9.57.ebuild:
+  x86 stable, bug #349496
+
+  18 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> pycups-1.9.57.ebuild:
+  ppc/ppc64 stable wrt #349496
+
+*pycups-1.9.57 (13 Jun 2011)
+
+  13 Jun 2011; Maciej Mrozowski <reavertm@gentoo.org> -pycups-1.9.55.ebuild,
+  +pycups-1.9.57.ebuild:
+  Version bump (brings <cups-1.4 support), remove old
+
+*pycups-1.9.55 (30 Apr 2011)
+
+  30 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -pycups-1.9.53.ebuild,
+  +pycups-1.9.55.ebuild:
+  Version bump to latest. Drop older.
+
+  27 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pycups-1.9.46.ebuild, pycups-1.9.49.ebuild, pycups-1.9.51.ebuild,
+  pycups-1.9.52.ebuild, pycups-1.9.53.ebuild:
+  Restrict Jython ABIs.
+
+*pycups-1.9.53 (27 Jan 2011)
+
+  27 Jan 2011; Maciej Mrozowski <reavertm@gentoo.org> +pycups-1.9.53.ebuild:
+  Version bump
+
+  06 Nov 2010; Mark Loeser <halcy0n@gentoo.org> pycups-1.9.46.ebuild:
+  Revert to ~ppc64; bug #322849
+
+*pycups-1.9.52 (01 Nov 2010)
+
+  01 Nov 2010; Maciej Mrozowski <reavertm@gentoo.org> +pycups-1.9.52.ebuild:
+  Version bump
+
+  19 Sep 2010; Raúl Porcel <armin76@gentoo.org> pycups-1.9.46.ebuild,
+  pycups-1.9.49.ebuild, pycups-1.9.51.ebuild:
+  Add ~arm/~sh wrt #336920
+
+  22 Aug 2010; Jeroen Roovers <jer@gentoo.org> pycups-1.9.49.ebuild:
+  Stable for HPPA (bug #322849).
+
+  18 Jul 2010; <nixnut@gentoo.org> pycups-1.9.49.ebuild:
+  ppc stable #322849
+
+*pycups-1.9.51 (28 Jun 2010)
+
+  28 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> -pycups-1.9.50.ebuild,
+  +pycups-1.9.51.ebuild:
+  Version bump 1.9.51, remove old, also fix bug 325499
+
+  26 Jun 2010; Raúl Porcel <armin76@gentoo.org> pycups-1.9.49.ebuild:
+  alpha/ia64/sparc stable wrt #322849
+
+*pycups-1.9.50 (22 Jun 2010)
+
+  22 Jun 2010; Maciej Mrozowski <reavertm@gentoo.org> +pycups-1.9.50.ebuild:
+  Version bump 1.9.50
+
+  20 Jun 2010; Markos Chandras <hwoarang@gentoo.org> pycups-1.9.49.ebuild:
+  Stable on amd64 wrt bug #322849
+
+  14 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> pycups-1.9.49.ebuild:
+  x86 stable wrt bug #322849
+
+*pycups-1.9.49 (11 Mar 2010)
+
+  11 Mar 2010; Maciej Mrozowski <reavertm@gentoo.org>
+  -pycups-1.9.45-r1.ebuild, -pycups-1.9.48.ebuild, +pycups-1.9.49.ebuild:
+  Version bump 1.9.49, remove old versions
+
+  10 Mar 2010; Jonathan Callen <abcd@gentoo.org> pycups-1.9.45-r1.ebuild,
+  pycups-1.9.46.ebuild, pycups-1.9.48.ebuild:
+  Replace NEED_PYTHON with PYTHON_DEPEND
+
+*pycups-1.9.48 (02 Feb 2010)
+
+  02 Feb 2010; Maciej Mrozowski <reavertm@gentoo.org> +pycups-1.9.48.ebuild:
+  Version bump 1.9.48
+
+  30 Jan 2010; Maciej Mrozowski <reavertm@gentoo.org> metadata.xml:
+  Updated my email
+
+  27 Dec 2009; Raúl Porcel <armin76@gentoo.org> pycups-1.9.46.ebuild:
+  alpha/ia64/sparc stable
+
+  30 Nov 2009; Joseph Jezak <josejx@gentoo.org> pycups-1.9.46.ebuild:
+  Marked ppc/ppc64 stable for bug #292455.
+
+  29 Nov 2009; Raúl Porcel <armin76@gentoo.org> pycups-1.9.46.ebuild:
+  Add ~sparc
+
+  08 Nov 2009; Jeroen Roovers <jer@gentoo.org> pycups-1.9.46.ebuild:
+  Marked ~hppa (bug #280312).
+
+  08 Nov 2009; Joseph Jezak <josejx@gentoo.org> pycups-1.9.45-r1.ebuild,
+  pycups-1.9.46.ebuild:
+  Marked ~ppc/~ppc64 for bug #280312.
+
+  12 Sep 2009; Raúl Porcel <armin76@gentoo.org> pycups-1.9.45-r1.ebuild,
+  pycups-1.9.46.ebuild:
+  Add ~alpha/~ia64 wrt #280312
+
+  04 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pycups-1.9.46.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+*pycups-1.9.46 (04 Aug 2009)
+
+  04 Aug 2009; Alex Alexander <wired@gentoo.org> +pycups-1.9.46.ebuild:
+  version bump, ebuild from kde-testing
+
+*pycups-1.9.45-r1 (12 Jun 2009)
+
+  12 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -pycups-1.9.45.ebuild, +pycups-1.9.45-r1.ebuild:
+  Use distutils correctly here. Fixes distcc issues.
+
+*pycups-1.9.45 (05 Apr 2009)
+
+  05 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml,
+  -pycups-1.9.12.ebuild, +pycups-1.9.45.ebuild:
+  Version bump. Add reavertm as maintainer with kde herd as bonus :] (kde
+  printing system needed dep)
+
+  31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Give up maintainership; reassign to maintainer-needed.
+
+*pycups-1.9.12 (05 Sep 2006)
+
+  05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +pycups-1.9.12.ebuild:
+  Python bindings for the CUPS API

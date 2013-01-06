@@ -1,0 +1,160 @@
+From a396eaa80e13c0397c7802ce628715d8daa581f4 Mon Sep 17 00:00:00 2001
+From: Christian Ruppert <idl0r@gentoo.org>
+Date: Fri, 17 Feb 2012 05:40:53 +0100
+Subject: [PATCH] Makefile improvements
+
+Do not abuse LDFLAGS.
+Fix *FLAGS order, *FLAGS before objects and LIBS behind objects.
+Capitalize MANDIR, BINDIR and PREFIX.
+---
+ Makefile         |   29 ++++++++++++++++-------------
+ samples/Makefile |    4 ++--
+ utils.mk         |   18 ++++++++----------
+ 3 files changed, 26 insertions(+), 25 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index a1f5235..60314f0 100644
+--- a/Makefile
++++ b/Makefile
+@@ -49,7 +49,11 @@ ifndef GTK_CFLAGS
+ endif
+ 
+ ifndef GTK_LDFLAGS
+-  GTK_LDFLAGS         := $(shell $(PKG_CONFIG) --libs gtk+-2.0)
++  GTK_LDFLAGS      := $(shell $(PKG_CONFIG) --libs-only-L gtk+-2.0)
++endif
++
++ifndef GTK_LIBS
++  GTK_LIBS         := $(shell $(PKG_CONFIG) --libs-only-l gtk+-2.0)
+ endif
+ 
+ 
+@@ -93,14 +97,13 @@ LDFLAGS += $(X_LDFLAGS)
+ # when building nvidia-settings within the NVIDIA driver build, but
+ # dynamically link against libXxf86vm in the public builds.
+ ifdef NV_LINK_LIBXXF86VM_STATICALLY
+-    LDFLAGS += -Wl,-Bstatic -lXxf86vm -Wl,-Bdynamic
++    LIBS += -Wl,-Bstatic -lXxf86vm -Wl,-Bdynamic
+ else
+-    LDFLAGS += -lXxf86vm
++    LIBS += -lXxf86vm
+ endif
+ 
+-LDFLAGS += -lX11 -lXext -lm
++LIBS += -lX11 -lXext -lm $(GTK_LIBS) $(LIBDL_LIBS)
+ LDFLAGS += $(GTK_LDFLAGS)
+-LDFLAGS += $(LIBDL_LDFLAGS)
+ 
+ MANPAGE_GZIP ?= 1
+ 
+@@ -152,16 +155,16 @@ all: $(NVIDIA_SETTINGS) $(MANPAGE)
+ install: NVIDIA_SETTINGS_install MANPAGE_install
+ 
+ NVIDIA_SETTINGS_install: $(NVIDIA_SETTINGS)
+-	$(MKDIR) $(bindir)
+-	$(INSTALL) $(INSTALL_BIN_ARGS) $< $(bindir)/$(notdir $<)
++	$(MKDIR) $(BINDIR)
++	$(INSTALL) $(INSTALL_BIN_ARGS) $< $(BINDIR)/$(notdir $<)
+ 
+ MANPAGE_install: $(MANPAGE)
+-	$(MKDIR) $(mandir)
+-	$(INSTALL) $(INSTALL_BIN_ARGS) $< $(mandir)/$(notdir $<)
++	$(MKDIR) $(MANDIR)
++	$(INSTALL) $(INSTALL_BIN_ARGS) $< $(MANDIR)/$(notdir $<)
+ 
+ $(NVIDIA_SETTINGS): $(OBJS) $(XNVCTRL_ARCHIVE)
+-	$(call quiet_cmd,LINK) -o $@ $(OBJS) $(XNVCTRL_ARCHIVE) \
+-		$(CFLAGS) $(LDFLAGS) $(BIN_LDFLAGS)
++	$(call quiet_cmd,LINK) $(CFLAGS) $(LDFLAGS) $(BIN_LDFLAGS) -o $@ $(OBJS) \
++		$(XNVCTRL_ARCHIVE) $(LIBS)
+ 	$(call quiet_cmd,STRIP_CMD) $@
+ 
+ # define the rule to build each object file
+@@ -193,8 +196,8 @@ GEN_MANPAGE_OPTS_OBJS = \
+ 	$(call BUILD_MANPAGE_OBJECT_LIST,$(GEN_MANPAGE_OPTS_SRC))
+ 
+ $(GEN_MANPAGE_OPTS): $(GEN_MANPAGE_OPTS_OBJS)
+-	$(call quiet_cmd,HOST_LINK) $(GEN_MANPAGE_OPTS_OBJS) -o $@ \
+-		$(HOST_CFLAGS) $(HOST_LDFLAGS) $(HOST_BIN_LDFLAGS)
++	$(call quiet_cmd,HOST_LINK) $(HOST_CFLAGS) $(HOST_LDFLAGS) $(HOST_BIN_LDFLAGS) \
++		$(GEN_MANPAGE_OPTS_OBJS) -o $@
+ 
+ # define a rule to build each GEN_MANPAGE_OPTS object file
+ $(foreach src,$(GEN_MANPAGE_OPTS_SRC),\
+diff --git a/samples/Makefile b/samples/Makefile
+index 35be348..ea67106 100644
+--- a/samples/Makefile
++++ b/samples/Makefile
+@@ -55,7 +55,7 @@ CFLAGS                += -I $(LIBXNVCTRL_DIR)
+ 
+ LDFLAGS               += $(X_LDFLAGS)
+ LDFLAGS               += -L $(LIBXNVCTRL_DIR)
+-LDFLAGS               += -lXNVCtrl -lXext -lX11
++LIBS                  += -lXNVCtrl -lXext -lX11
+ 
+ 
+ ##############################################################################
+@@ -84,7 +84,7 @@ $(foreach src, $(SAMPLE_SOURCES), $(eval $(call DEFINE_OBJECT_RULE,CC,$(src))))
+ # define the rule to link each sample app from its corresponding object file
+ define link_sample_from_object
+   $$(OUTPUTDIR)/$(1:.c=): $$(call BUILD_OBJECT_LIST,$(1))
+-	$$(call quiet_cmd,LINK) $$(CFLAGS) -o $$@ $$< $$(LDFLAGS) $$(BIN_LDFLAGS)
++	$$(call quiet_cmd,LINK) $$(CFLAGS) $$(LDFLAGS) $$(BIN_LDFLAGS) -o $$@ $$< $$(LIBS)
+   all:: $$(OUTPUTDIR)/$(1:.c=)
+   SAMPLES += $$(OUTPUTDIR)/$(1:.c=)
+ endef
+diff --git a/utils.mk b/utils.mk
+index 32014a3..4c13b6a 100644
+--- a/utils.mk
++++ b/utils.mk
+@@ -28,9 +28,8 @@
+ 
+ CC                    ?= gcc
+ LD                    ?= ld
+-CFLAGS                ?=
+-CFLAGS                += -Wall -fno-strict-aliasing -Wno-unused-parameter
+-CFLAGS                += -O2 -fno-omit-frame-pointer
++CFLAGS                ?= -Wall -Wno-unused-parameter -O2
++CFLAGS                += -fno-strict-aliasing -fno-omit-frame-pointer
+ CC_ONLY_CFLAGS        ?=
+ LDFLAGS               ?=
+ BIN_LDFLAGS           ?=
+@@ -93,9 +92,9 @@ ifndef TARGET_ARCH
+ endif
+ 
+ ifeq ($(TARGET_OS),Linux)
+-  LIBDL_LDFLAGS = -ldl
++  LIBDL_LIBS = -ldl
+ else
+-  LIBDL_LDFLAGS =
++  LIBDL_LIBS =
+ endif
+ 
+ OUTPUTDIR             ?= _out/$(TARGET_OS)_$(TARGET_ARCH)
+@@ -124,11 +123,10 @@ endif
+ # the source tarball
+ ##############################################################################
+ 
+-prefix = /usr/local
++PREFIX ?= /usr/local
+ 
+-exec_prefix = $(prefix)
+-bindir = $(exec_prefix)/bin
+-mandir = $(exec_prefix)/share/man/man1
++BINDIR = $(DESTDIR)$(PREFIX)/bin
++MANDIR = $(DESTDIR)$(PREFIX)/share/man/man1
+ 
+ 
+ ##############################################################################
+@@ -260,7 +258,7 @@ BUILD_DEPENDENCY_LIST = \
+ define DEFINE_OBJECT_RULE_WITH_OBJECT_NAME
+   $(3): $(2)
+ 	@$(MKDIR) $(OUTPUTDIR)
+-	$$(call quiet_cmd,$(1)) -c $$< -o $$@ $$(CFLAGS) \
++	$$(call quiet_cmd,$(1)) $$(CFLAGS) -c $$< -o $$@ \
+ 	  $(call AUTO_DEP_CMD,$(1),$(2),$(3))
+ 
+   -include $$(call BUILD_DEPENDENCY_LIST,$(3))
+-- 
+1.7.3.4
+

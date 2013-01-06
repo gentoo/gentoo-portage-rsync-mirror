@@ -1,0 +1,15 @@
+[Unit]
+Description=Router advertisement daemon for IPv6
+Documentation=man:radvd(8)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/radvd --username radvd --logmethod stderr --debug 1
+ExecReload=/usr/sbin/radvd --configtest ; \
+           /bin/kill -HUP $MAINPID
+CPUSchedulingPolicy=idle
+LimitNOFSIZE=0
+
+[Install]
+WantedBy=multi-user.target

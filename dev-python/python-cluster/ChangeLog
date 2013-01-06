@@ -1,0 +1,20 @@
+# ChangeLog for dev-python/python-cluster
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cluster/ChangeLog,v 1.3 2011/04/19 09:37:11 tomka Exp $
+
+  19 Apr 2011; Thomas Kahle <tomka@gentoo.org>
+  python-cluster-1.1.1_beta3.ebuild:
+  x86 stable per bug 359827
+
+  22 Mar 2011; Christoph Mende <angelos@gentoo.org>
+  python-cluster-1.1.1_beta3.ebuild:
+  Stable on amd64 wrt bug #359827
+
+*python-cluster-1.1.1_beta3 (26 Oct 2010)
+
+  26 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  +files/python-cluster-python3.patch, +python-cluster-1.1.1_beta3.ebuild,
+  +metadata.xml:
+  Initial commit of python-cluster. Bug #340975. Thanks to montjoie
+  <corentin.labbe@geomatys.com> for the ebuild
+

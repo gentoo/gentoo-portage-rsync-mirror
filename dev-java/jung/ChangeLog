@@ -1,0 +1,25 @@
+# ChangeLog for dev-java/jung
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jung/ChangeLog,v 1.5 2012/12/16 14:51:19 pacho Exp $
+
+  16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due retirement, #169737
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> jung-1.7.6.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
+
+  06 Sep 2009; Markus Meier <maekke@gentoo.org> jung-1.7.6.ebuild:
+  amd64 stable, bug #280654
+
+  02 Sep 2009; Christian Faulhammer <fauli@gentoo.org> jung-1.7.6.ebuild:
+  stable x86, bug 280654
+
+  06 Jul 2009; Alistair Bush <ali_bush@gentoo.org> +jung-1.7.6.ebuild,
+  +files/jung-1.7.6-build.xml.patch, +metadata.xml:
+  Keyword ~x86 and move from java-overlay
+
+*jung-1.7.6 (24 May 2009)
+
+  24 May 2009; Alistair Bush <ali_bush@gentoo.org> +jung-1.7.6.ebuild,
+  +files/jung-1.7.6-build.xml.patch, +metadata.xml:
+  New Package

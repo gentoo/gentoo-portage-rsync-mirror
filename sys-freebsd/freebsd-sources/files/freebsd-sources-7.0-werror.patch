@@ -1,0 +1,27 @@
+diff -ur ../src.orig/sys/conf/kern.pre.mk ./sys/conf/kern.pre.mk
+--- ../src.orig/sys/conf/kern.pre.mk	2007-08-08 21:12:06.000000000 +0200
++++ ./sys/conf/kern.pre.mk	2008-03-14 14:10:03.183569137 +0100
+@@ -90,7 +90,7 @@
+ .if ${MACHINE_ARCH} == "amd64" || ${MACHINE} == "i386" || \
+     ${MACHINE_ARCH} == "ia64" || ${MACHINE_ARCH} == "powerpc" || \
+     ${MACHINE_ARCH} == "sparc64"
+-WERROR?= -Werror
++WERROR?= -Wno-error
+ .endif
+ .endif
+ 
+Only in ./sys/conf: kern.pre.mk.rej
+Only in ./sys/conf: kern.pre.mk~
+diff -ur ../src.orig/sys/conf/kmod.mk ./sys/conf/kmod.mk
+--- ../src.orig/sys/conf/kmod.mk	2007-07-11 03:20:37.000000000 +0200
++++ ./sys/conf/kmod.mk	2008-03-14 14:11:21.856366378 +0100
+@@ -79,7 +79,6 @@
+ . if !empty(CFLAGS:M-O[23s]) && empty(CFLAGS:M-fno-strict-aliasing)
+ CFLAGS+=	-fno-strict-aliasing
+ . endif
+-#WERROR?=	-Werror
+ .endif
+ CFLAGS+=	${WERROR}
+ CFLAGS+=	-D_KERNEL
+Only in ./sys/conf: kmod.mk.rej
+Only in ./sys/conf: kmod.mk~

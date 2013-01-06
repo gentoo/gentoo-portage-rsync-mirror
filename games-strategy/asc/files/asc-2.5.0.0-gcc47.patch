@@ -1,0 +1,41 @@
+--- source/graphics/drawing.h.old	2012-10-30 10:33:47.617844756 +0100
++++ source/graphics/drawing.h	2012-10-30 10:46:23.444784874 +0100
+@@ -169,7 +169,7 @@
+          PixelType* pix = (PixelType*)( surf.pixels() );
+          pix += pos.y * surf.pitch()/pixelsize + pos.x;
+ 
+-         assign ( src, pix );
++         this->assign ( src, pix );
+       };
+ };
+ 
+--- source/graphics/blitter.h.old	2012-10-30 12:21:14.767021349 +0100
++++ source/graphics/blitter.h	2012-10-30 12:22:18.492472029 +0100
+@@ -928,6 +928,7 @@
+       ;
+ };
+ 
++#include "drawing.h"
+ 
+ 
+ extern const int ColorMerger_Alpha_XLAT_Table_shadings[8]; 
+--- source/itemrepository.cpp.old	2012-10-30 10:32:06.771697823 +0100
++++ source/itemrepository.cpp	2012-10-30 12:23:42.973448933 +0100
+@@ -88,7 +88,7 @@
+    t->filename = fileName;
+    t->location = location;
+    t->archive = prc.getArchive();
+-   add ( t );
++   this->add ( t );
+ }
+ 
+ 
+@@ -110,7 +110,7 @@
+       t->archive = stream.readString();
+       dataLoaderTicker();
+ 
+-      add ( t );
++      this->add ( t );
+       // add ( T::newFromStream(stream ));
+    }
+ }

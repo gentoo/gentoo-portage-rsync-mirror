@@ -1,0 +1,26 @@
+# ChangeLog for dev-python/pygtkhelpers
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkhelpers/ChangeLog,v 1.4 2012/01/11 23:38:52 ssuominen Exp $
+
+*pygtkhelpers-0.4.3 (11 Jan 2012)
+
+  11 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +pygtkhelpers-0.4.3.ebuild:
+  Version bump.
+
+  29 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pygtkhelpers-0.4.2.ebuild:
+  Fix dependencies. Restrict 2.4 and 2.5 Python ABIs (bug #343233).
+
+*pygtkhelpers-0.4.2 (12 Sep 2010)
+
+  12 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pygtkhelpers-0.4.1.ebuild, +pygtkhelpers-0.4.2.ebuild:
+  Version bump.
+
+*pygtkhelpers-0.4.1 (23 Jun 2010)
+
+  23 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pygtkhelpers-0.4.1.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+

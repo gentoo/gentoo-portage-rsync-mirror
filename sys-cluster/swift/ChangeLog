@@ -1,0 +1,11 @@
+# ChangeLog for sys-cluster/swift
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.1 2013/01/02 20:03:40 prometheanfire Exp $
+
+*swift-1.7.4 (31 Dec 2012)
+
+  31 Dec 2012; Matthew Thode <prometheanfire@gentoo.org> +swift-1.7.4.ebuild,
+  +files/swift-proxy-server.initd, +files/swift-storage-server.confd,
+  +files/swift-storage-server.initd, +metadata.xml:
+  initial add of openstack-swift
+

@@ -1,0 +1,42 @@
+This patch is expecting result of `pkg-config --cflags npapi-sdk nspr` passed to the compiler.
+
+http://bugs.gentoo.org/383145
+
+--- plugin/npshell.c
++++ plugin/npshell.c
+@@ -83,8 +83,9 @@
+ #include <string.h>
+ #include <strings.h>
+ 
++#include <nspr.h>
+ #include <npapi.h>
+-#include <npupp.h>
++#include <npfunctions.h>
+ 
+ #include "virt-viewer-plugin.h"
+ 
+--- plugin/npunix.c
++++ plugin/npunix.c
+@@ -56,8 +56,9 @@
+ #define XP_UNIX 1
+ 
+ #include <stdio.h>
++#include <nspr.h>
+ #include <npapi.h>
+-#include <npupp.h>
++#include <npfunctions.h>
+ 
+ #include <glib.h>               /* just for G_GNUC_UNUSED */
+ 
+--- plugin/virt-viewer-plugin.h
++++ plugin/virt-viewer-plugin.h
+@@ -36,7 +36,9 @@
+ #ifndef VIRT_VIEWER_PLUGIN_H
+ #define VIRT_VIEWER_PLUGIN_H
+ 
++#include <nspr.h>
+ #include <npapi.h>
++#include <npfunctions.h>
+ #include <gtk/gtk.h>
+ #include <X11/Xlib.h>
+ #include "virt-viewer-app.h"

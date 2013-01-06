@@ -1,0 +1,64 @@
+# ChangeLog for dev-python/Djblets
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Djblets/ChangeLog,v 1.14 2012/08/03 08:03:20 xmw Exp $
+
+*Djblets-0.7 (03 Aug 2012)
+*Djblets-0.6.22 (03 Aug 2012)
+
+  03 Aug 2012; Michael Weber <xmw@gentoo.org> +Djblets-0.6.22.ebuild,
+  +Djblets-0.7.ebuild, -Djblets-0.6.19.ebuild, -Djblets-0.6.20.ebuild:
+  Version bumps to latest 0.6.* and 0.7, drop old
+
+*Djblets-0.6.20 (03 Aug 2012)
+
+  03 Aug 2012; Michael Weber <xmw@gentoo.org> +Djblets-0.6.20.ebuild:
+  Version bump (thanks euscan)
+
+  05 Jul 2012; Michael Weber <xmw@gentoo.org> -Djblets-0.6.14.ebuild:
+  Drop old
+
+*Djblets-0.6.19 (02 Jul 2012)
+
+  02 Jul 2012; Michael Weber <xmw@gentoo.org> +Djblets-0.6.19.ebuild,
+  -Djblets-0.6.13.ebuild:
+  Version bump (thanks euscan), drop old
+
+*Djblets-0.6.14 (22 Jun 2012)
+
+  22 Jun 2012; Michael Weber <xmw@gentoo.org> +Djblets-0.6.14.ebuild,
+  -Djblets-0.6.11.ebuild, -Djblets-0.6.12.ebuild:
+  Version bump (thanks euscan), drop old.
+
+*Djblets-0.6.13 (11 Jun 2012)
+
+  11 Jun 2012; Michael Weber <xmw@gentoo.org> +Djblets-0.6.13.ebuild:
+  Version bump (thanks euscan), EAPI-4, drop old.
+
+*Djblets-0.6.12 (19 Apr 2012)
+
+  19 Apr 2012; Patrick Lauer <patrick@gentoo.org> +Djblets-0.6.12.ebuild:
+  Bump
+
+  18 Apr 2012; Mike Gilbert <floppym@gentoo.org> Djblets-0.6.11.ebuild:
+  Set PYTHON_MODNAME=djblets.
+
+  11 Nov 2011; Michael Weber <xmw@gentoo.org> -Djblets-0.6.3.ebuild:
+  Remove old versions
+
+*Djblets-0.6.11 (25 Sep 2011)
+
+  25 Sep 2011; Michael Weber <xmw@gentoo.org> +Djblets-0.6.11.ebuild:
+  Version bump (thanks to James Broadhead for the hint, bug 383495)
+
+  01 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  Djblets-0.6.3.ebuild:
+  Fix deprecation warning.
+
+  24 Aug 2010; Michael Weber <xmw@gentoo.org> Djblets-0.6.3.ebuild:
+  Removed useless comments.
+
+*Djblets-0.6.3 (24 Aug 2010)
+
+  24 Aug 2010; Michael Weber <xmw@gentoo.org> +Djblets-0.6.3.ebuild,
+  +metadata.xml:
+  Initial commit for Djblets. Fixes bug #318993

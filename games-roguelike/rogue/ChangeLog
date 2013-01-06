@@ -1,0 +1,16 @@
+# ChangeLog for games-roguelike/rogue
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/rogue/ChangeLog,v 1.3 2010/07/15 08:56:03 fauli Exp $
+
+  15 Jul 2010; Christian Faulhammer <fauli@gentoo.org> rogue-5.4.4.ebuild:
+  stable x86, bug 322635
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> rogue-5.4.4.ebuild:
+  stable amd64, bug 322635
+
+*rogue-5.4.4 (03 May 2010)
+
+  03 May 2010; Michael Sterrett <mr_bones_@gentoo.org> +rogue-5.4.4.ebuild,
+  +metadata.xml:
+  Initial commit - ebuild submitted by Michał Kiedrowicz via bug #318299
+

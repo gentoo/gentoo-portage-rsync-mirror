@@ -1,0 +1,25 @@
+--- notify/uim-libnotify.c
++++ notify/uim-libnotify.c
+@@ -44,6 +44,10 @@
+ #include "uim-notify.h"
+ #include "gettext.h"
+ 
++#ifndef NOTIFY_CHECK_VERSION
++#define NOTIFY_CHECK_VERSION(x,y,z) 0
++#endif
++
+ #define UIM_ICON UIM_PIXMAPSDIR "/uim-icon.png"
+ #define UGETTEXT(str)	(dgettext(GETTEXT_PACKAGE, (str)))
+ 
+@@ -73,7 +77,11 @@
+     return UIM_FALSE;
+   }
+ 
++#if NOTIFY_CHECK_VERSION (0, 7, 0)
++  notification = notify_notification_new("uim", gmsg, UIM_ICON);
++#else
+   notification = notify_notification_new("uim", gmsg, UIM_ICON, NULL);
++#endif
+ 
+   if (!notification) {
+     fprintf(stderr, "notify_notification_new: can not create notification object\n");

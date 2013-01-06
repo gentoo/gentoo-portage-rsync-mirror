@@ -1,0 +1,19 @@
+Description: fix build with ld --as-needed
+ uim-counted-init is a static library which needs symbols from libuim
+ which it must be placed behind it on the command line so it is not
+ dropped by ld --as-needed
+Author: Julian Taylor <jtaylor.debian@googlemail.com>
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/uim/+bug/832939
+Index: uim-1.7.1/qt4/pref/uim-pref-qt4.pro.in
+===================================================================
+--- uim-1.7.1.orig/qt4/pref/uim-pref-qt4.pro.in	2011-08-25 23:31:03.080564183 +0200
++++ uim-1.7.1/qt4/pref/uim-pref-qt4.pro.in	2011-08-25 23:31:01.170564166 +0200
+@@ -4,7 +4,7 @@
+ 
+ # to include qtgettext.h
+ INCLUDEPATH += @srcdir@/..
+-LIBS += -luim-custom -luim-counted-init @LIBINTL@
++LIBS += -luim-custom -luim-counted-init -luim @LIBINTL@
+ 
+ QMAKE_UIC = $$QMAKE_UIC -tr UIC_
+ 

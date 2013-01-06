@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>sound</herd>
+	<maintainer>
+		<email>nixphoeni@gentoo.org</email>
+		<name>Joe Sapp</name>
+	</maintainer>
+	<use>
+		<flag name='alsa'>Adds support for ALSA audio input/output.</flag>
+		<flag name='xwax_decoders_aac'>Sets runtime dependencies to support decoding AAC audio.</flag>
+		<flag name='xwax_decoders_cd'>Sets runtime dependencies to support decoding audio from a compact disc.</flag>
+		<flag name='xwax_decoders_flac'>Sets runtime dependencies to support decoding FLAC audio.</flag>
+		<flag name='xwax_decoders_mp3'>Sets runtime dependencies to support decoding MP3 audio.</flag>
+		<flag name='xwax_decoders_ogg'>Sets runtime dependencies to support decoding Ogg Vorbis audio.</flag>
+		<flag name='xwax_decoders_misc'>Sets runtime dependencies to support decoding "other" audio files.</flag>
+		<flag name='cdda'>Sets runtime dependencies to support decoding audio from a compact disc.</flag>
+		<flag name='mp3'>Sets runtime dependencies to support decoding MP3 audio.</flag>
+		<flag name='fallback'>Sets runtime dependencies to support decoding "other" audio files.</flag>
+	</use>
+</pkgmetadata>

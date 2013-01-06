@@ -1,0 +1,36 @@
+# ChangeLog for net-misc/zsync
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zsync/ChangeLog,v 1.7 2011/02/09 22:01:44 robbat2 Exp $
+
+*zsync-0.6.2 (09 Feb 2011)
+
+  09 Feb 2011; Robin H. Johnson <robbat2@gentoo.org> +zsync-0.6.2.ebuild,
+  +files/zsync-0.6.2-zlib-1.2.3-support.patch, +metadata.xml:
+  Re-add zsync with a port of zlib-1.2.3 for previous security problem.
+
+  15 May 2008; <drac@gentoo.org> -zsync-0.5.ebuild, -ChangeLog, -metadata.xml:
+  Removed zsync wrt bug 208660, has been masked for 3 years. 
+
+*zsync-0.5 (27 Dec 2007)
+
+  27 Dec 2007; Raúl Porcel <armin76@gentoo.org> -zsync-0.3.2.ebuild,
+  -zsync-0.4.1.ebuild, +zsync-0.5.ebuild:
+  Version bump wrt #159135, remove old
+
+  25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing karltk from metadata.xml as per #200332. Assigning to
+  maintainer-needed.
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+*zsync-0.4.1 (30 Jul 2005)
+
+  30 Jul 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +zsync-0.4.1.ebuild:
+  New upstream version.
+
+  23 Mar 2005; Karl Trygve Kalleberg <karltk@gentoo.org> :
+  Initial import. Ebuild submitted by Ricardo Correia <gentoo-bugs@wizy.org>.
+  Fixes #86406.
+

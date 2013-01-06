@@ -1,0 +1,36 @@
+fix building on uclibc when nls is disabled
+
+--- util/check.c
++++ util/check.c
+@@ -21,7 +21,9 @@
+ 	int i;
+ 
+ 	setlocale(LC_ALL, "");
++#ifdef ENABLE_NLS
+ 	textdomain(PACKAGE);
++#endif
+ 
+ 	while (fgets(buf, sizeof(buf), stdin) != NULL) {
+ 		while (((i = strlen(buf)) > 0) && (i > 0)) {
+--- python/_cracklibmodule.c
++++ python/_cracklibmodule.c
+@@ -32,7 +32,9 @@
+ #endif
+ #include <crack.h>
+ #include <locale.h>
++#ifdef HAVE_LIBINTL_H
+ #include <libintl.h>
++#endif
+ 
+ #ifdef HAVE_PTHREAD_H
+ static pthread_mutex_t cracklib_mutex = PTHREAD_MUTEX_INITIALIZER;
+@@ -133,7 +135,9 @@
+     }
+ 
+ 	setlocale(LC_ALL, "");
++#ifdef ENABLE_NLS
+ 	textdomain("cracklib");
++#endif
+ 
+     LOCK();
+     result = FascistCheck(candidate, dict ? dict : defaultdict);

@@ -1,0 +1,9 @@
+# ChangeLog for media-fonts/nunito
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/nunito/ChangeLog,v 1.1 2012/07/25 09:27:39 yngwin Exp $
+
+*nunito-1.0 (25 Jul 2012)
+
+  25 Jul 2012; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +nunito-1.0.ebuild:
+  Initial commit. Ebuild by proxy maintainer Nikoli in bug #427934.

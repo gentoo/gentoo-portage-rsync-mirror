@@ -1,0 +1,56 @@
+# ChangeLog for app-text/zathura-djvu
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/ChangeLog,v 1.12 2012/09/03 18:49:48 ssuominen Exp $
+
+*zathura-djvu-0.2.1 (03 Sep 2012)
+
+  03 Sep 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +zathura-djvu-0.2.1.ebuild:
+  Version bump wrt #433718 by Simon Kohlmeyer
+
+  11 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -zathura-djvu-0.1.1.ebuild:
+  old
+
+  11 Jul 2012; Jeff Horelick <jdhore@gentoo.org> zathura-djvu-0.2.0.ebuild:
+  marked x86 per bug 425674
+
+  10 Jul 2012; Agostino Sarubbo <ago@gentoo.org> zathura-djvu-0.2.0.ebuild:
+  Stable for amd64, wrt bug #425674
+
+*zathura-djvu-0.2.0 (15 Jun 2012)
+
+  15 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +zathura-djvu-0.2.0.ebuild:
+  Version bump.
+
+  15 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -zathura-djvu-0.1.0.ebuild:
+  old
+
+  22 May 2012; Jeff Horelick <jdhore@gentoo.org> zathura-djvu-0.1.1.ebuild:
+  marked x86 per bug 414985
+
+  07 May 2012; Agostino Sarubbo <ago@gentoo.org> zathura-djvu-0.1.1.ebuild:
+  Stable for amd64, wrt bug #414985
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> zathura-djvu-0.1.0.ebuild,
+  zathura-djvu-0.1.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*zathura-djvu-0.1.1 (30 Mar 2012)
+
+  30 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +zathura-djvu-0.1.1.ebuild:
+  Version bump.
+
+  13 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  zathura-djvu-0.1.0.ebuild:
+  Force -r1 of app-text/djvu for sanitized headers wrt #407989
+
+*zathura-djvu-0.1.0 (11 Mar 2012)
+
+  11 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +zathura-djvu-0.1.0.ebuild:
+  Initial commit.
+

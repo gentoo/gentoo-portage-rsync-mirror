@@ -1,0 +1,23 @@
+# ChangeLog for games-board/tetzle
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/tetzle/ChangeLog,v 1.5 2012/03/09 10:10:27 phajdan.jr Exp $
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tetzle-2.0.0.ebuild:
+  x86 stable wrt bug #405215
+
+  22 Feb 2012; Agostino Sarubbo <ago@gentoo.org> tetzle-2.0.0.ebuild:
+  Stable for amd64, wrt bug #405215
+
+*tetzle-2.0.0 (19 Jan 2012)
+
+  19 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +tetzle-2.0.0.ebuild:
+  Version bump.
+
+  27 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> tetzle-1.2.1.ebuild:
+  x86 stable wrt bug #303497
+
+*tetzle-1.2.1 (05 Jan 2010)
+
+  05 Jan 2010; Samuli Suominen <ssuominen@gentoo.org> +tetzle-1.2.1.ebuild:
+  Initial commit.
+

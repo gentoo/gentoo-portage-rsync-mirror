@@ -1,0 +1,259 @@
+From 41200f48909dbf48fd2c96f305b71797634aca3e Mon Sep 17 00:00:00 2001
+From: Priit Laes <plaes@plaes.org>
+Date: Tue, 20 Dec 2011 15:42:44 +0200
+Subject: [PATCH] Split support for libsoup-gnome
+
+https://bugzilla.gnome.org/show_bug.cgi?id=595065
+
+Original patch by Romain Perier.
+---
+ Makefile.am         | 12 ++++++++--
+ configure.ac        | 35 +++++++++++++++++++----------
+ libsoup/Makefile.am | 63 ++++++++++++++++++++++++++++++++++++++---------------
+ 3 files changed, 79 insertions(+), 31 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 18bf80a..046f945 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -1,7 +1,11 @@
+ ## Process this file with automake to produce Makefile.in
+ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
+ 
+-SUBDIRS = libsoup po tests docs
++SUBDIRS = libsoup
++
++if BUILD_LIBSOUP
++SUBDIRS += po tests docs
++endif
+ 
+ EXTRA_DIST =				\
+ 	data/effective_tld_names.dat	\
+@@ -16,7 +20,11 @@ DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc --enable-introspection
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+ 
+-pkgconfig_DATA = libsoup-2.4.pc
++pkgconfig_DATA =
++
++if BUILD_LIBSOUP
++pkgconfig_DATA += libsoup-2.4.pc
++endif
+ 
+ if BUILD_LIBSOUP_GNOME
+ pkgconfig_DATA += libsoup-gnome-2.4.pc
+diff --git a/configure.ac b/configure.ac
+index 95410de..1f00bdd 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -71,20 +71,27 @@ LT_INIT([win32-dll])
+ dnl ***********************
+ dnl *** Checks for glib ***
+ dnl ***********************
++PKG_PROG_PKG_CONFIG
++enable_ssl=no
++AC_ARG_WITH(libsoup-system,
++   AS_HELP_STRING([--with-libsoup-system], [Use libsoup system library to build(default=no)]),
++   [with_libsoup_system=$withval], [with_libsoup_system=no])
++if test "$with_libsoup_system" = "no"; then
++    GLIB_REQUIRED=2.33.1
++    AM_PATH_GLIB_2_0($GLIB_REQUIRED,,,gobject gio)
++	if test "$GLIB_LIBS" = ""; then
++       AC_MSG_ERROR(GLIB $GLIB_REQUIRED or later is required to build libsoup)
++	fi
++    GLIB_CFLAGS="$GLIB_CFLAGS -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_34"
++    GLIB_MAKEFILE='$(top_srcdir)/Makefile.glib'
++    AC_SUBST(GLIB_MAKEFILE)
+ 
+-GLIB_REQUIRED=2.33.1
+-AM_PATH_GLIB_2_0($GLIB_REQUIRED,,,gobject gio)
+-if test "$GLIB_LIBS" = ""; then
+-   AC_MSG_ERROR(GLIB $GLIB_REQUIRED or later is required to build libsoup)
+-fi
+-GLIB_CFLAGS="$GLIB_CFLAGS -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_34"
+-
+-GLIB_MAKEFILE='$(top_srcdir)/Makefile.glib'
+-AC_SUBST(GLIB_MAKEFILE)
++	PKG_CHECK_MODULES(XML, libxml-2.0)
++	AC_SUBST(XML_CFLAGS)
++	AC_SUBST(XML_LIBS)
+ 
+-PKG_CHECK_MODULES(XML, libxml-2.0)
+-AC_SUBST(XML_CFLAGS)
+-AC_SUBST(XML_LIBS)
++fi
++AM_CONDITIONAL(BUILD_LIBSOUP, test $with_libsoup_system = no)
+ 
+ dnl ***********************
+ dnl *** Check for Win32 ***
+@@ -143,6 +150,10 @@ AM_CONDITIONAL(BUILD_LIBSOUP_GNOME, test $with_gnome != no)
+ if test $with_gnome != no; then
+ 	AC_DEFINE(HAVE_GNOME, 1, [Defined if GNOME support is enabled])
+ 
++	if test $with_libsoup_system != no; then
++		PKG_CHECK_MODULES(LIBSOUP, libsoup-$SOUP_API_VERSION = $VERSION)
++	fi
++
+ 	PKG_CHECK_MODULES(SQLITE, sqlite3, :, [AC_MSG_ERROR(dnl
+ [Could not find sqlite3 devel files:
+ 
+diff --git a/libsoup/Makefile.am b/libsoup/Makefile.am
+index cc99e75..f9b25fc 100644
+--- a/libsoup/Makefile.am
++++ b/libsoup/Makefile.am
+@@ -1,23 +1,26 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+ EXTRA_DIST =
+-
++BUILT_SOURCES =
+ include $(GLIB_MAKEFILE)
+ 
+ if OS_WIN32
+ LIBWS2_32 = -lws2_32
+ endif
+ 
+-INCLUDES = 				\
++INCLUDES =
++lib_LTLIBRARIES =
++CLEANFILES =
++
++if BUILD_LIBSOUP
++INCLUDES += 				\
+ 	-DG_LOG_DOMAIN=\"libsoup\" 	\
+ 	-DLOCALEDIR=\"$(localedir)\"	\
+ 	-I$(top_srcdir)			\
+ 	$(SOUP_DEBUG_FLAGS)		\
+ 	$(SOUP_MAINTAINER_FLAGS)	\
+ 	$(GLIB_CFLAGS)			\
+-	$(XML_CFLAGS)			\
+-	$(SQLITE_CFLAGS)		\
+-	$(GNOME_KEYRING_CFLAGS)
++	$(XML_CFLAGS)
+ 
+ libsoupincludedir = $(includedir)/libsoup-2.4/libsoup
+ 
+@@ -72,7 +75,7 @@ libsoupinclude_HEADERS =	\
+ 	$(soup_headers)		\
+ 	soup-enum-types.h
+ 
+-lib_LTLIBRARIES = libsoup-2.4.la
++lib_LTLIBRARIES += libsoup-2.4.la
+ 
+ libsoup_2_4_la_LDFLAGS =	\
+ 	-version-info $(SOUP_CURRENT):$(SOUP_REVISION):$(SOUP_AGE) -no-undefined
+@@ -173,14 +176,17 @@ libsoup_2_4_la_SOURCES =		\
+ 	soup-value-utils.c		\
+ 	soup-xmlrpc.c
+ 
+-# TLD rules
+-EXTRA_DIST += tld-parser.py
+-
++BUILT_SOURCES = tld_data.inc
+ TLD_DATA_FILE=$(top_srcdir)/data/effective_tld_names.dat
+ 
+ tld_data.inc: tld-parser.py $(TLD_DATA_FILE)
+ 	$(srcdir)/tld-parser.py $(TLD_DATA_FILE) tld_data.inc
+ 
++# TLD rules
++EXTRA_DIST += tld-parser.py
++
++endif
++
+ if BUILD_LIBSOUP_GNOME
+ 
+ if OS_WIN32
+@@ -193,6 +199,10 @@ endif
+ 
+ libsoupgnomeincludedir = $(includedir)/libsoup-gnome-2.4/libsoup
+ 
++INCLUDES += $(LIBSOUP_CFLAGS)		\
++    $(SQLITE_CFLAGS)			\
++    $(GNOME_KEYRING_CFLAGS)
++
+ libsoupgnomeinclude_HEADERS =	\
+ 	soup-cookie-jar-sqlite.h\
+ 	soup-gnome.h		\
+@@ -200,14 +210,24 @@ libsoupgnomeinclude_HEADERS =	\
+ 
+ lib_LTLIBRARIES += libsoup-gnome-2.4.la
+ 
++if BUILD_LIBSOUP
+ libsoup_gnome_2_4_la_LDFLAGS = $(libsoup_2_4_la_LDFLAGS)
++else
++libsoup_gnome_2_4_la_LDFLAGS =		\
++	-version-info $(SOUP_CURRENT):$(SOUP_REVISION):$(SOUP_AGE) -no-undefined
++endif
+ 
+ libsoup_gnome_2_4_la_LIBADD =		\
+-	libsoup-2.4.la			\
+ 	$(GLIB_LIBS)			\
+ 	$(SQLITE_LIBS)			\
+ 	$(GNOME_KEYRING_LIBS)
+ 
++if BUILD_LIBSOUP
++libsoup_gnome_2_4_la_LIBADD += libsoup-2.4.la
++else
++libsoup_gnome_2_4_la_LIBADD += $(LIBSOUP_LIBS)
++endif
++
+ libsoup_gnome_2_4_la_SOURCES =		\
+ 	soup-cookie-jar-sqlite.c	\
+ 	soup-gnome-features.c		\
+@@ -219,9 +239,8 @@ endif
+ 
+ GLIB_GENERATED = soup-marshal.c soup-marshal.h
+ GLIB_GENERATED += soup-enum-types.c soup-enum-types.h
+-BUILT_SOURCES = \
+-	$(GLIB_GENERATED)   \
+-	tld_data.inc
++BUILT_SOURCES += \
++	$(GLIB_GENERATED)
+ 
+ soup_marshal_sources = $(libsoup_2_4_la_SOURCES) $(libsoup_gnome_2_4_la_SOURCES)
+ soup_enum_types_sources = $(libsoupinclude_HEADERS) $(libsoupgnomeinclude_HEADERS)
+@@ -237,6 +256,8 @@ INTROSPECTION_COMPILER_ARGS = --includedir=.
+ 
+ if HAVE_INTROSPECTION
+ 
++if BUILD_LIBSOUP
++
+ # Core library
+ gi_soup_files = \
+ 	$(filter-out soup.h soup-enum-types.% soup-marshal.% soup-proxy-resolver.h,\
+@@ -258,20 +279,28 @@ Soup_2_4_gir_FILES = \
+ 
+ INTROSPECTION_GIRS += Soup-2.4.gir
+ 
++endif
++
+ if BUILD_LIBSOUP_GNOME
+ 
++if BUILD_LIBSOUP
++SOUP_GIR = Soup-2.4.gir
++else
++SOUP_GIR =
++endif
++
+ # GNOME extensions
+ gi_soup_gnome_files = $(filter-out soup-gnome.h,\
+ 		          $(libsoupgnomeinclude_HEADERS) \
+ 	                  $(filter-out %.h, $(libsoup_gnome_2_4_la_SOURCES)))
+-SoupGNOME-2.4.gir: libsoup-gnome-2.4.la Soup-2.4.gir
++SoupGNOME-2.4.gir: libsoup-gnome-2.4.la $(SOUP_GIR)
++SoupGNOME_2_4_gir_INCLUDES = Soup-2.4
+ SoupGNOME_2_4_gir_SCANNERFLAGS =			\
+ 	--identifier-prefix=Soup			\
+ 	--symbol-prefix=soup				\
+-	--c-include "libsoup/soup-gnome.h"		\
+-	--include-uninstalled=$(builddir)/Soup-2.4.gir
++	--c-include "libsoup/soup-gnome.h"
+ SoupGNOME_2_4_gir_CFLAGS = $(INCLUDES)
+-SoupGNOME_2_4_gir_LIBS = libsoup-gnome-2.4.la libsoup-2.4.la
++SoupGNOME_2_4_gir_LIBS = libsoup-gnome-2.4.la
+ SoupGNOME_2_4_gir_FILES = $(addprefix $(srcdir)/,$(gi_soup_gnome_files))
+ SoupGNOME_2_4_gir_EXPORT_PACKAGES = libsoup-gnome-2.4
+ 
+-- 
+1.7.12
+

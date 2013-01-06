@@ -1,0 +1,20 @@
+# ChangeLog for media-gfx/qosmic
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qosmic/ChangeLog,v 1.4 2012/05/05 07:00:23 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> qosmic-1.5.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  02 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> -qosmic-1.4.8.ebuild:
+  old
+
+*qosmic-1.5.0 (02 Nov 2011)
+
+  02 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> +qosmic-1.5.0.ebuild:
+  Version bump wrt #388487 by David Bitseff
+
+*qosmic-1.4.8 (16 Dec 2009)
+
+  16 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> +qosmic-1.4.8.ebuild:
+  Initial commit wrt #234695, thanks to David Bitseff and Jouni Rinne.
+

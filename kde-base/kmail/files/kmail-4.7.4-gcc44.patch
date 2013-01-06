@@ -1,0 +1,11 @@
+diff -urN kmail-4.7.4.orig/messagecomposer/akonadisender.cpp kmail-4.7.4/messagecomposer/akonadisender.cpp
+--- kmail-4.7.4.orig/messagecomposer/akonadisender.cpp	2011-12-02 00:25:40.000000000 +0100
++++ kmail-4.7.4/messagecomposer/akonadisender.cpp	2011-12-30 23:10:05.151509937 +0100
+@@ -38,7 +38,6 @@
+ #include <messagecore/stringutil.h>
+ #include <messagecore/messagehelpers.h>
+ 
+-using namespace KMime;
+ using namespace KMime::Types;
+ using namespace KPIM;
+ using namespace MailTransport;

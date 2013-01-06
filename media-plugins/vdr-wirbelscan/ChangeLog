@@ -1,0 +1,40 @@
+# ChangeLog for media-plugins/vdr-wirbelscan
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-wirbelscan/ChangeLog,v 1.6 2011/09/15 14:18:25 hd_brummy Exp $
+
+*vdr-wirbelscan-0.0.7 (15 Sep 2011)
+
+  15 Sep 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-wirbelscan-0.0.7.ebuild:
+  version bump; thx to E.Groeper on #356603
+
+*vdr-wirbelscan-0.0.4a (31 Jul 2008)
+
+  31 Jul 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +vdr-wirbelscan-0.0.4a.ebuild:
+  Version bumped. This uses a changed homepage and src_uri.
+
+*vdr-wirbelscan-0.0.3 (09 Sep 2007)
+
+  09 Sep 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +vdr-wirbelscan-0.0.3.ebuild:
+  Version bumped.
+
+  02 Dec 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-wirbelscan-0.0.2.ebuild:
+  Corrected Homepage.
+
+*vdr-wirbelscan-0.0.2 (02 Dec 2006)
+
+  02 Dec 2006; Matthias Schwarzott <zzam@gentoo.org>
+  -files/vdr-wirbelscan-0.0.1-include.diff, -vdr-wirbelscan-0.0.1.ebuild,
+  +vdr-wirbelscan-0.0.2.ebuild:
+  Version bumped.
+
+*vdr-wirbelscan-0.0.1 (27 Nov 2006)
+
+  27 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-wirbelscan-0.0.1-include.diff, +metadata.xml,
+  +vdr-wirbelscan-0.0.1.ebuild:
+  Initial import of ebuild written by me.
+

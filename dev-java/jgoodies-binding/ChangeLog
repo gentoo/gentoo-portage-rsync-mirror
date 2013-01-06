@@ -1,0 +1,36 @@
+# ChangeLog for dev-java/jgoodies-binding
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-binding/ChangeLog,v 1.7 2008/02/13 03:53:55 ali_bush Exp $
+
+  13 Feb 2008; Alistair Bush <ali_bush@gentoo.org>
+  jgoodies-binding-1.1.2.ebuild:
+  Replacing direct execution of xml-rewrite.py with a call to
+  java-ant_xml-rewrite
+
+  06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  jgoodies-binding-1.1.2.ebuild:
+  Added ~ppc, bug #186081
+
+  21 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  jgoodies-binding-1.1.2.ebuild:
+  stable x86, bug 189329; filter jikes
+
+  22 Jul 2007; Wulf C. Krueger <philantrop@gentoo.org>
+  jgoodies-binding-1.1.2.ebuild:
+  Keyworded ~amd64 as per bug 186081.
+
+  20 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
+  -jgoodies-binding-1.0.3.ebuild:
+  Remove generation 1 ebuild.
+
+  20 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
+  jgoodies-binding-1.1.2.ebuild:
+  Only depend on dev-java/jgoodies-looks with the examples use flag and use
+  java-pkg_doexamples.
+
+*jgoodies-binding-1.0.3 (10 Dec 2005)
+
+  10 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/build-1.0.3.xml, +metadata.xml, +jgoodies-binding-1.0.3.ebuild:
+  Initial import.
+

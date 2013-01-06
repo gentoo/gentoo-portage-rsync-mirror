@@ -1,0 +1,21 @@
+--- photoprint-0.4.2-pre2.orig/configure.ac
++++ photoprint-0.4.2-pre2/configure.ac
+@@ -30,6 +30,7 @@
+ PKG_CHECK_MODULES([GDKPIXBUF2], [gdk-pixbuf-2.0])
+ PKG_CHECK_MODULES([GP], [gutenprint])
+ PKG_CHECK_MODULES([LCMS], [lcms])
++PKG_CHECK_MODULES([X11], [x11])
+ AC_CHECK_LIB(m,pow, LIBM_LIBS="-lm")
+ AC_SUBST([LIBM_LIBS])
+ AC_CHECK_LIB([pnm], [pnm_readpaminit],,,[-lm])
+--- photoprint-0.4.2-pre2.orig/Makefile.am
++++ photoprint-0.4.2-pre2/Makefile.am
+@@ -97,7 +97,7 @@
+ 	stp_support/libstp_support.la \
+ 	pixbufthumbnail/libpixbufthumbnail.la	\
+ 	splashscreen/libsplashscreen.la	\
+-	$(LIBINTL) $(LIBM_LIBS) $(GETOPT_LIBS) $(JPEG_LIBS) $(PNM_LIBS) $(TIFF_LIBS) $(LCMS_LIBS) $(GP_LIBS) $(GTK2_LIBS)
++	$(LIBINTL) $(LIBM_LIBS) $(GETOPT_LIBS) $(JPEG_LIBS) $(PNM_LIBS) $(TIFF_LIBS) $(LCMS_LIBS) $(GP_LIBS) $(GTK2_LIBS) $(X11_LIBS)
+ 
+ check_PROGRAMS = menucheck carouselcheck misccheck
+ 

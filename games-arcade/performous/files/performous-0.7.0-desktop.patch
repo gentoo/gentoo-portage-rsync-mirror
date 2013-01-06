@@ -1,0 +1,18 @@
+--- ./data/performous.desktop.orig	2012-11-15 12:31:30.686153241 -0500
++++ ./data/performous.desktop	2012-11-15 12:32:00.460142521 -0500
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=Performous
+ Comment=A karaoke game
+ Comment[de]=Ein Karaoke Spiel
+@@ -10,7 +9,7 @@
+ Comment[ro]=Un joc de tip karaoke
+ Comment[se]=Ett karaoke-spel
+ Exec=performous
+-Icon=performous.xpm
++Icon=performous
+ Terminal=false
+ Type=Application
+-Categories=Application;Game;ArcadeGame;
++Categories=Game;ArcadeGame;

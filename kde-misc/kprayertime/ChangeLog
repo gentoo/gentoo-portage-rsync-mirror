@@ -1,0 +1,22 @@
+# ChangeLog for kde-misc/kprayertime
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kprayertime/ChangeLog,v 1.4 2011/10/29 00:29:38 abcd Exp $
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org> kprayertime-4.01.ebuild:
+  Bump to EAPI=4; make DOCS an array
+
+  31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> -kprayertime-4.ebuild,
+  kprayertime-4.01.ebuild:
+  EAPI3, remove old
+
+*kprayertime-4.01 (27 Dec 2009)
+
+  27 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +kprayertime-4.01.ebuild:
+  Version bump.
+
+*kprayertime-4 (21 Dec 2009)
+
+  21 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> +kprayertime-4.ebuild:
+  Initial commit.
+

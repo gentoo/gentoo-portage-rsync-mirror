@@ -1,0 +1,19 @@
+--- python/Makefile.am
++++ python/Makefile.am
+@@ -1,6 +1,7 @@
+ PYDEFS=`pkg-config --variable=defsdir pygobject-2.0`
+ 
+ AM_CPPFLAGS =						\
++	-shared						\
+ 	-I.						\
+ 	-I$(top_srcdir)					\
+ 	-DDATADIR=\""$(datadir)"\"			\
+@@ -27,7 +28,7 @@
+ 
+ igd_la_LDFLAGS =					\
+ 	`python-config --libs`				\
+-	-module -avoid-version
++	-module -avoid-version -shared
+ 
+ pygupnp-igd.c: $(srcdir)/pygupnp-igd.override $(srcdir)/pygupnp-igd.defs
+ 	$(PYCODEGEN)						\

@@ -1,0 +1,18 @@
+# ChangeLog for app-arch/funzix
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/funzix/ChangeLog,v 1.4 2008/10/23 02:38:38 flameeyes Exp $
+
+  23 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> funzix-1.0.ebuild:
+  Respect CC.
+
+  20 Apr 2008; Mike Frysinger <vapier@gentoo.org> funzix-1.0.ebuild:
+  Mark amd64 stable #214961.
+
+  01 Apr 2008; Christian Faulhammer <opfer@gentoo.org> funzix-1.0.ebuild:
+  stable x86, bug 214961
+
+*funzix-1.0 (22 Dec 2007)
+
+  22 Dec 2007; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +funzix-1.0.ebuild:
+  Initial import.  Ebuild by me.

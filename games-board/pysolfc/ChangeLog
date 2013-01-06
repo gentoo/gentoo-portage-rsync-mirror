@@ -1,0 +1,22 @@
+# ChangeLog for games-board/pysolfc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.5 2012/10/15 05:39:54 mr_bones_ Exp $
+
+  15 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
+  metadata fix (bug #438318)
+
+  06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pysolfc-2.0.ebuild:
+  Fix deprecation warning. Use distutils_pkg_postinst() and distutils_pkg_postrm().
+
+  31 May 2010; Markus Meier <maekke@gentoo.org> pysolfc-2.0.ebuild:
+  amd64/x86 stable, bug #315295
+
+  07 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> pysolfc-2.0.ebuild:
+  Set "python_set_active_version 2" to ensure used python is 2.
+
+*pysolfc-2.0 (07 Mar 2010)
+
+  07 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> +pysolfc-2.0.ebuild:
+  Initial commit wrt #253200, thanks to Arthur Nascimento, Gary Hunt, Joshua
+  Rich and others.

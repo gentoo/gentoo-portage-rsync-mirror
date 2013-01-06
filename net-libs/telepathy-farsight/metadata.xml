@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>gnome</herd>
+	<herd>voip</herd>
+	<maintainer>
+		<email>nirbheek@gentoo.org</email>
+		<name>Nirbheek Chauhan</name>
+		<description>is empathy/GNOME</description>
+	</maintainer>
+	<maintainer>
+		<email>tester@gentoo.org</email>
+		<name>Olivier Crête</name>
+		<description>is upstream</description>
+	</maintainer>
+</pkgmetadata>
+

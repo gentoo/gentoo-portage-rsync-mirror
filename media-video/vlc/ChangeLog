@@ -1,0 +1,247 @@
+# ChangeLog for media-video/vlc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.830 2012/12/15 15:34:57 lu_zero Exp $
+
+*vlc-2.0.5 (15 Dec 2012)
+
+  15 Dec 2012; Luca Barbato <lu_zero@gentoo.org> +vlc-2.0.5.ebuild:
+  New version
+
+  11 Dec 2012; Patrick Lauer <patrick@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.2.ebuild, vlc-2.0.3.ebuild, vlc-2.0.4.ebuild, vlc-2.0.9999.ebuild,
+  vlc-9999.ebuild:
+  Migrating to virtual/udev
+
+  03 Dec 2012; Zac Medico <zmedico@gentoo.org> vlc-2.0.4.ebuild:
+  Add upstream BI_RGB patch for bug #438874.
+
+  19 Oct 2012; Luca Barbato <lu_zero@gentoo.org> vlc-2.0.4.ebuild:
+  Properly support opus, thanks to Nikoli for pointing it
+
+*vlc-2.0.4 (18 Oct 2012)
+
+  18 Oct 2012; Luca Barbato <lu_zero@gentoo.org> +vlc-2.0.4.ebuild:
+  Version Bump
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> vlc-2.0.3.ebuild:
+  stable ppc64, bug #424435
+
+  07 Oct 2012; Raúl Porcel <armin76@gentoo.org> vlc-2.0.3.ebuild:
+  alpha stable wrt #424435
+
+  05 Oct 2012; Brent Baude <ranger@gentoo.org> vlc-2.0.3.ebuild:
+  Marking vlc-2.0.3 ppc for bug 424435
+
+  24 Sep 2012; Agostino Sarubbo <ago@gentoo.org> vlc-2.0.3.ebuild:
+  Stable for X86, wrt bug #424435
+
+  24 Sep 2012; Agostino Sarubbo <ago@gentoo.org> vlc-2.0.3.ebuild:
+  Stable for amd64, wrt bug #424435
+
+  14 Sep 2012; Alexis Ballier <aballier@gentoo.org> metadata.xml:
+  drop maintainership to herd
+
+  13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> -vlc-1.1.13.ebuild:
+  Remove vulnerable version, bug #408881
+
+  13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> vlc-2.0.1.ebuild:
+  Stable ppc64, bug #408881
+
+  11 Sep 2012; Raúl Porcel <armin76@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.2.ebuild, vlc-2.0.3.ebuild, vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  alpha stable wrt #408881, mark -sparc on 2.x since it sigbuses
+
+  06 Aug 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.2.ebuild, vlc-2.0.3.ebuild, vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  httpd requires lua nowadays, bug #411549
+
+*vlc-2.0.3 (19 Jul 2012)
+
+  19 Jul 2012; Alexis Ballier <aballier@gentoo.org> +vlc-2.0.3.ebuild:
+  version bump
+
+  19 Jul 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.9999.ebuild,
+  vlc-9999.ebuild:
+  fix ogg automagic, bug #422515 by Franz Fellner
+
+  11 Jul 2012; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  qt4 renamed to qt configure switch, reflect that; there is now qt5 support
+  that we will handle once it hits the tree
+
+  30 Jun 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.2.ebuild, vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  fix ffmpeg useflag logic: it means avcodec, avformat, swscale and postproc,
+  bug #423017 by Hans
+
+*vlc-2.0.2 (30 Jun 2012)
+
+  30 Jun 2012; Alexis Ballier <aballier@gentoo.org> +vlc-2.0.2.ebuild:
+  version bump
+
+  17 Jun 2012; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Remove libass useflag description, as it is now a global useflag
+
+  14 Jun 2012; Michael Weber <xmw@gentoo.org> vlc-2.0.1.ebuild:
+  ppc stable (bug 408881)
+
+  13 Jun 2012; Andreas Schuerch <nativemad@gentoo.org> vlc-2.0.1.ebuild:
+  x86 stable, see bug 408881
+
+  13 Jun 2012; Agostino Sarubbo <ago@gentoo.org> vlc-2.0.1.ebuild:
+  Stable for AMD64, wrt bug #408881
+
+  12 Jun 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  skins require xinerama too, by ago
+
+  12 Jun 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild:
+  disable maintainer-mode since we are patching Modules.am, to avoid useless
+  regeneration of makefiles
+
+  09 Jun 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild:
+  backport upstream fix to build with automake 1.12, by Bernard Cafarelli, bug
+  #420207
+
+  02 Jun 2012; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  Fix default projectm font path and add media-font/dejvu to projectm deps
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  keyword ~amd64-fbsd
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  without-tuning option has been removed
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  Change order of USE="postproc" to || ( media-video/ffmpeg
+  media-libs/libpostproc )
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org> vlc-1.1.13.ebuild:
+  Remove USE="nsplugin" in favour of media-plugins/npapi-vlc (and because
+  net-libs/xulrunner is vulnerable) wrt #407567 and #415479.
+
+  18 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  vlc-2.0.1.ebuild, vlc-9999.ebuild:
+  Revert previous commit.
+
+  17 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  Depend just on postproc when postproc is required. This requires users to use
+  ~ffmpegs for now.
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  fbosd and xosd plugins are gone
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  dv has been renamed to dv1394
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> -vlc-2.0.0.ebuild:
+  remove old
+
+  15 May 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.9999.ebuild,
+  vlc-9999.ebuild:
+  libcaca requires X
+
+  14 May 2012; Luca Barbato <lu_zero@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  Support stand-alone libpostproc
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> vlc-1.1.13.ebuild,
+  vlc-2.0.0.ebuild, vlc-2.0.1.ebuild, vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  04 May 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  bump dvbpsi dep, bug #414495 by karpi
+
+  22 Apr 2012; Markus Meier <maekke@gentoo.org> vlc-2.0.1.ebuild:
+  add ~arm, bug #397891
+
+  22 Mar 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild:
+  fix switcher build, patch from upstream based on the one from Richard
+  Grenville <pyxlcy@gmail.com> in bug #409001
+
+  20 Mar 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.1.ebuild:
+  allow stable zlib too, vlc will build its bundled minizip version with it
+  though, bug #408881
+
+*vlc-2.0.1 (20 Mar 2012)
+
+  20 Mar 2012; Alexis Ballier <aballier@gentoo.org> +vlc-2.0.1.ebuild:
+  version bump
+
+  15 Mar 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.0.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  depend on ncurses[unicode] by Dylan in bug #408223
+
+  23 Feb 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.0.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild, metadata.xml:
+  add a dvbpsi useflag, enabled by default and with a correct description, as
+  its needed to read Mpeg-TS files. Bug #405267
+
+  20 Feb 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.0.ebuild:
+  drop arm keyword prior to unmasking for bug #397891
+
+  20 Feb 2012; Alexis Ballier <aballier@gentoo.org> vlc-2.0.0.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  libvlc is lgpl now
+
+  19 Feb 2012; Alexis Ballier <aballier@gentoo.org> -vlc-1.1.9999.ebuild:
+  drop live ebuild for 1.1 now that 2.0 is out it is discontinued
+
+  19 Feb 2012; Alexis Ballier <aballier@gentoo.org> -vlc-2.0.0_rc1.ebuild:
+  remove old
+
+*vlc-2.0.0 (19 Feb 2012)
+
+  19 Feb 2012; Alexis Ballier <aballier@gentoo.org> +vlc-2.0.0.ebuild:
+  bump to 2.0.0
+
+  01 Feb 2012; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  bump fluidsynth dep
+
+  01 Feb 2012; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  portaudio has been removed
+
+  01 Feb 2012; Alexis Ballier <aballier@gentoo.org> vlc-1.1.13.ebuild,
+  vlc-1.1.9999.ebuild:
+  backport upstream patch to fix build with latest zlib, bug #401629
+
+  28 Jan 2012; Alexis Ballier <aballier@gentoo.org> -vlc-1.2.0_pre3.ebuild,
+  -vlc-1.2.0_pre4.ebuild:
+  remove old
+
+*vlc-2.0.0_rc1 (28 Jan 2012)
+
+  28 Jan 2012; Alexis Ballier <aballier@gentoo.org> +vlc-2.0.0_rc1.ebuild,
+  vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  libv44l has been renamed to v4l and bump to 2.0.0 rc1
+
+*vlc-2.0.9999 (28 Jan 2012)
+
+  28 Jan 2012; Alexis Ballier <aballier@gentoo.org> -vlc-1.2.9999.ebuild,
+  +vlc-2.0.9999.ebuild:
+  vlc-1.2 will be 2.0, git branches have been moved too
+
+  20 Jan 2012; Alexis Ballier <aballier@gentoo.org> vlc-1.2.9999.ebuild:
+  bump live dep
+
+*vlc-1.2.0_pre4 (09 Jan 2012)
+
+  09 Jan 2012; Alexis Ballier <aballier@gentoo.org> +vlc-1.2.0_pre4.ebuild:
+  bump
+
+  06 Jan 2012; Alexis Ballier <aballier@gentoo.org> -vlc-1.1.12.ebuild:
+  remove old
+
+  02 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  USE description for flag "neon" is in use.desc now.
+
+  01 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2011:
+  Split ChangeLog.
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org> vlc-1.1.13.ebuild:
+  alpha/sparc stable wrt #395543
+
+  For previous entries, please see ChangeLog-2011.

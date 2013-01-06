@@ -1,0 +1,50 @@
+# ChangeLog for dev-perl/Net-IMAP-Simple
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IMAP-Simple/ChangeLog,v 1.9 2012/11/04 13:40:01 tove Exp $
+
+*Net-IMAP-Simple-1.203.400 (04 Nov 2012)
+
+  04 Nov 2012; Torsten Veller <tove@gentoo.org>
+  +Net-IMAP-Simple-1.203.400.ebuild:
+  Version bump
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  21 Apr 2012; Torsten Veller <tove@gentoo.org>
+  -Net-IMAP-Simple-1.202.400.ebuild, -Net-IMAP-Simple-1.202.500.ebuild,
+  -Net-IMAP-Simple-1.202.600.ebuild:
+  Cleanup
+
+  01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Add missing cpan remote-id tags in metadata.xml (#406287)
+
+*Net-IMAP-Simple-1.203.000 (29 Feb 2012)
+
+  29 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +Net-IMAP-Simple-1.203.000.ebuild:
+  Version bump via perl-bump experimental tool.
+
+*Net-IMAP-Simple-1.202.600 (20 Oct 2011)
+
+  20 Oct 2011; Torsten Veller <tove@gentoo.org>
+  +Net-IMAP-Simple-1.202.600.ebuild:
+  Version bump
+
+*Net-IMAP-Simple-1.202.500 (05 Sep 2011)
+
+  05 Sep 2011; Torsten Veller <tove@gentoo.org>
+  +Net-IMAP-Simple-1.202.500.ebuild:
+  Version bump
+
+*Net-IMAP-Simple-1.202.400 (02 Sep 2011)
+
+  02 Sep 2011; Torsten Veller <tove@gentoo.org>
+  +Net-IMAP-Simple-1.202.400.ebuild, -Net-IMAP-Simple-1.2024.ebuild:
+  Change version scheme. Looks like a downgrade
+
+*Net-IMAP-Simple-1.2024 (15 Aug 2011)
+
+  15 Aug 2011; Patrick Lauer <patrick@gentoo.org>
+  +Net-IMAP-Simple-1.2024.ebuild, +metadata.xml:
+  Initial import from Rion overlay, ebuilds by the respective authors

@@ -1,0 +1,30 @@
+# ChangeLog for app-text/rtf2html
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/ChangeLog,v 1.8 2012/10/19 19:11:51 ago Exp $
+
+  19 Oct 2012; Agostino Sarubbo <ago@gentoo.org> rtf2html-0.2.0-r1.ebuild:
+  Add ~amd64, wrt to bug #438774
+
+  18 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> rtf2html-0.2.0-r1.ebuild:
+  Add debug USE-flag, improve CFLAGS handling
+
+  18 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> rtf2html-0.2.0-r1.ebuild:
+  Fix issue with incorrect parsing of '-g' compile flag in configure script.
+  Thanks to Agostino Sarubbo for discovering this issue
+
+  18 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> rtf2html-0.2.0-r1.ebuild:
+  Remove duplicate IUSE definition
+
+*rtf2html-0.2.0-r1 (18 Oct 2012)
+
+  18 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +rtf2html-0.2.0-r1.ebuild:
+  Revision bump: EAPI 4, drop stage functions, use base eclass
+
+  03 Jan 2009; Mark Loeser <halcy0n@gentoo.org>
+  +files/rtf2html-0.2.0-gcc43.patch, rtf2html-0.2.0.ebuild:
+  Add patch to fix compilation with gcc-4.3; bug #250754
+
+*rtf2html-0.2.0 (17 Mar 2008)
+
+  17 Mar 2008; Michele Noberasco <s4t4n@gentoo.org> rtf2html-0.2.0.ebuild:
+  Initial import.

@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install setup
+DEPEND=doc? ( app-doc/doxygen || ( dev-lang/python:2.7 ) )
+DESCRIPTION=C++ JSON reader and writer
+EAPI=5
+HOMEPAGE=http://jsoncpp.sourceforge.net/
+IUSE=doc
+KEYWORDS=~x86
+LICENSE=public-domain
+SLOT=0
+SRC_URI=mirror://sourceforge/jsoncpp/jsoncpp-src-0.5.0.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	python-any-r1	f6b255f0bf44569e52128b09ad30fcec	python-utils-r1	069a968fde0ceb8a9cd5c6a89d77cbc2	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=886cf1bb09ff5a4990500513670aa0e4

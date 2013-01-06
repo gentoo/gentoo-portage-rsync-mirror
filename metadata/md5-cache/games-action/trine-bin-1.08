@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install nofetch postinst preinst setup unpack
+DEPEND=app-arch/unzip
+DESCRIPTION=a physics-based action game where diff characters allow diff solutions to challenges
+HOMEPAGE=http://trine-thegame.com/
+KEYWORDS=-* ~amd64 ~x86
+LICENSE=frozenbyte-eula
+RDEPEND=>=sys-libs/glibc-2.4 >=sys-devel/gcc-4.3.0 dev-libs/libx86 gnome-base/libglade
+RESTRICT=fetch strip
+SLOT=0
+SRC_URI=Trine.64.run
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	games	e0a83e3f3f024b8c8ef7a8217d716cbf	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=869169d3a6da70360e022522feeb32ed

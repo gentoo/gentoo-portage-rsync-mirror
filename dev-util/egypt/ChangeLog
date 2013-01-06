@@ -1,0 +1,32 @@
+# ChangeLog for dev-util/egypt
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/egypt/ChangeLog,v 1.7 2012/12/02 16:14:41 ulm Exp $
+
+  02 Dec 2012; Ulrich Müller <ulm@gentoo.org> egypt-1.9.ebuild:
+  Fix LICENSE, this is licensed "under the same terms as Perl itself", see
+  notice in source.
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -egypt-1.8.ebuild:
+  Remove old
+
+*egypt-1.9 (14 Mar 2012)
+
+  14 Mar 2012; Patrick Lauer <patrick@gentoo.org> +egypt-1.9.ebuild:
+  Bump
+
+*egypt-1.8 (21 Apr 2011)
+
+  21 Apr 2011; Jeroen Roovers <jer@gentoo.org> +egypt-1.8.ebuild:
+  Version bump.
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
+  add metadata.xml
+
+*egypt-1.6 (19 Apr 2007)
+
+  19 Apr 2007; Mike Frysinger <vapier@gentoo.org> +egypt-1.6.ebuild:
+  Initial ebuild by me.

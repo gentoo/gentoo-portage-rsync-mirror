@@ -1,0 +1,27 @@
+# ChangeLog for app-benchmarks/filebench
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/filebench/ChangeLog,v 1.5 2012/08/27 08:57:06 patrick Exp $
+
+*filebench-1.4.9.1 (27 Aug 2012)
+
+  27 Aug 2012; Patrick Lauer <patrick@gentoo.org> +filebench-1.4.9.1.ebuild:
+  Bump
+
+*filebench-1.4.9 (22 Jul 2011)
+
+  22 Jul 2011; Patrick Lauer <patrick@gentoo.org> +filebench-1.4.9.ebuild:
+  Bump, fixes #331769
+
+  30 Apr 2009; Patrick Lauer <patrick@gentoo.org> -filebench-1.2.4.ebuild:
+  Remove old
+
+*filebench-1.3.4 (08 Mar 2009)
+
+  08 Mar 2009; Patrick Lauer <patrick@gentoo.org> +filebench-1.3.4.ebuild:
+  Bump to 1.3.4
+
+*filebench-1.2.4 (01 Mar 2009)
+
+  01 Mar 2009; Patrick Lauer <patrick@gentoo.org> +files/linux-port.patch,
+  +metadata.xml, +filebench-1.2.4.ebuild:
+  Initial import from sunrise. Fixes #218223. Ebuild by Cheng Renquan.

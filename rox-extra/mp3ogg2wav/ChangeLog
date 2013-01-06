@@ -1,0 +1,32 @@
+# ChangeLog for rox-extra/mp3ogg2wav
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/mp3ogg2wav/ChangeLog,v 1.8 2008/08/30 15:37:03 ranger Exp $
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org> mp3ogg2wav-1.0.ebuild:
+  Marking mp3ogg2wav-1.0 ~ppc for bug 236057
+
+  16 Nov 2007; Samuli Suominen <drac@gentoo.org> mp3ogg2wav-1.0.ebuild:
+  amd64 stable wrt #197514
+
+  22 Jun 2007; Jim Ramsay <lack@gentoo.org> mp3ogg2wav-1.0.ebuild:
+  Adding ~amd64 keyword
+
+  09 Feb 2007; Christian Faulhammer <opfer@gentoo.org>
+  mp3ogg2wav-1.0.ebuild:
+  stable x86; bug #165956
+
+  23 Nov 2006; Jim Ramsay <lack@gentoo.org> mp3ogg2wav-1.0.ebuild:
+  Updated SRC_URI/HOMEPAGE
+
+  01 Nov 2006; Jim Ramsay <lack@gentoo.org> metadata.xml:
+  Now owned by new rox herd
+
+  30 Oct 2006; Jim Ramsay <lack@gentoo.org> mp3ogg2wav-1.0.ebuild:
+  Dependencies are RUNTIME, being python libs
+
+*mp3ogg2wav-1.0 (11 Oct 2006)
+
+  11 Oct 2006; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +mp3ogg2wav-1.0.ebuild:
+  New package - Mp3Ogg2Wav, imported from breakmygentoo.net (Thanks Peter Hyman)
+

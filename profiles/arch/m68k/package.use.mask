@@ -1,0 +1,23 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/package.use.mask,v 1.10 2012/04/08 15:08:09 armin76 Exp $
+
+# Ryan Hill <dirtyepic@gentoo.org> (20 Jul 2011)
+# graphite requires dev-libs/ppl & dev-libs/cloog-ppl
+# (bugs #269087 and #269088)
+# lto in 4.5 requires dev-libs/elfutils (bug #375737)
+sys-devel/gcc graphite lto
+
+# Mike Frysinger <vapier@gentoo.org> (10 Feb 2011)
+# Waiting for keywording #354309
+net-firewall/iptables netlink
+
+# Diego Pettenò <flameeyes@gentoo.org> (10 Nov 2007)
+# Tests for Linux-PAM 0.99 require >=sys-libs/glibc-2.4
+>=sys-libs/pam-0.99.8 test
+
+# Masking since this pulls in app-crypt/pinentry, which isn't keyworded
+dev-libs/opensc nsplugin
+
+# Masking these to keep repoman happy
+media-gfx/graphviz perl

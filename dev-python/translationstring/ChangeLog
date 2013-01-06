@@ -1,0 +1,43 @@
+# ChangeLog for dev-python/translationstring
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/ChangeLog,v 1.8 2012/02/22 23:12:14 marienz Exp $
+
+  22 Feb 2012; Marien Zwart <marienz@gentoo.org> translationstring-1.1.ebuild:
+  Fix unnecessarily strict PYTHON_DEPEND.
+
+*translationstring-1.1 (22 Feb 2012)
+
+  22 Feb 2012; Marien Zwart <marienz@gentoo.org> +translationstring-1.1.ebuild:
+  Version bump.
+  Support python 3.
+  Stop building documentation, as upstream's preferred theme does not work
+  offline.
+  Drop unnecessary test dependency.
+
+*translationstring-0.4 (08 Feb 2012)
+
+  08 Feb 2012; Patrick Lauer <patrick@gentoo.org> +translationstring-0.4.ebuild:
+  Bump for #401953
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  translationstring-0.3.ebuild:
+  Fixed dependency again. :(
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  translationstring-0.3.ebuild:
+  Added setuptools dependency.
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  translationstring-0.3.ebuild:
+  Added missing dependencies.
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  translationstring-0.3.ebuild:
+  Re-added missing USE flag: test
+
+*translationstring-0.3 (30 Jul 2011)
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +translationstring-0.3.ebuild, +metadata.xml:
+  Initial version. Based on ebuild by Jan Matějka (bug #353769).
+

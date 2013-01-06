@@ -1,0 +1,46 @@
+# ChangeLog for games-strategy/openra
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.11 2013/01/02 11:43:04 ago Exp $
+
+  02 Jan 2013; Agostino Sarubbo <ago@gentoo.org> openra-20120630.ebuild:
+  Stable for x86, wrt bug #445093
+
+  02 Jan 2013; Agostino Sarubbo <ago@gentoo.org> openra-20120630.ebuild:
+  Stable for amd64, wrt bug #445093
+
+*openra-20121019 (21 Oct 2012)
+
+  21 Oct 2012; Julian Ospald <hasufell@gentoo.org> +openra-20121019.ebuild:
+  version bump
+
+  29 Jul 2012; Julian Ospald <hasufell@gentoo.org> openra-20120630.ebuild:
+  minor fix to elog
+
+  01 Jul 2012; Julian Ospald <hasufell@gentoo.org> openra-20120630.ebuild:
+  fix SRC_URI
+
+*openra-20120630 (01 Jul 2012)
+
+  01 Jul 2012; Julian Ospald <hasufell@gentoo.org> -openra-20120504.ebuild,
+  -files/openra-20120504-makefile.patch, +openra-20120630.ebuild,
+  +files/openra-20120630-sound.patch:
+  version bump, remove old
+
+  02 Jun 2012; Julian Ospald <hasufell@gentoo.org> openra-20120504.ebuild:
+  bump to EAPI=4
+
+  14 May 2012; Julian Ospald <hasufell@gentoo.org> openra-20120504.ebuild:
+  improve elog
+
+  04 May 2012; Julian Ospald <hasufell@gentoo.org> openra-20120504.ebuild:
+  add missing '|| die' to emake
+
+  04 May 2012; Julian Ospald <hasufell@gentoo.org> +files/README.gentoo,
+  +files/openra-20120504-makefile.patch:
+  missed files dir
+
+*openra-20120504 (04 May 2012)
+
+  04 May 2012; Julian Ospald <hasufell@gentoo.org> +openra-20120504.ebuild,
+  +metadata.xml:
+  initial commit wrt #372029 with help from diamond

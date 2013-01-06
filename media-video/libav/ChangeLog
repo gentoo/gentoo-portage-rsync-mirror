@@ -1,0 +1,504 @@
+# ChangeLog for media-video/libav
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.122 2013/01/01 10:40:07 scarabeus Exp $
+
+  01 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/0001-cpu.h-define-AV_CPU_FLAG_MMX2-for-libavutil-major-52.patch,
+  -libav-9_beta2-r1.ebuild, -libav-9_beta2.ebuild:
+  Trim down amount of versions.
+
+*libav-9_beta3 (21 Dec 2012)
+
+  21 Dec 2012; Luca Barbato <lu_zero@gentoo.org> +libav-9_beta3.ebuild:
+  New beta
+
+*libav-9_beta2-r1 (20 Dec 2012)
+
+  20 Dec 2012; Luca Barbato <lu_zero@gentoo.org> +libav-9_beta2-r1.ebuild,
+  +files/0001-cpu.h-define-AV_CPU_FLAG_MMX2-for-libavutil-major-52.patch:
+  Backport upstream fix
+
+  05 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libav-0.8.3.ebuild:
+  Remove overshadowed.
+
+  01 Dec 2012; Raúl Porcel <armin76@gentoo.org> libav-0.8.4.ebuild:
+  ia64/sparc stable wrt #439052
+
+  26 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Update to global useflag.
+
+  19 Nov 2012; Markus Meier <maekke@gentoo.org> libav-0.8.4.ebuild:
+  arm stable, bug #439052
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> libav-9_beta2.ebuild:
+  workaround for bug 399061
+
+*libav-9_beta2 (12 Nov 2012)
+
+  12 Nov 2012; Luca Barbato <lu_zero@gentoo.org> +libav-9_beta2.ebuild:
+  New beta version
+
+  12 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libav-0.8.2-r2.ebuild,
+  -libav-0.8.2.ebuild:
+  Redux versions a bit.
+
+  30 Oct 2012; Agostino Sarubbo <ago@gentoo.org> libav-0.8.4.ebuild:
+  Stable for x86, wrt bug #439052
+
+  28 Oct 2012; Anthony G. Basile <blueness@gentoo.org> libav-0.8.4.ebuild:
+  stable ppc, bug #439052
+
+  27 Oct 2012; Anthony G. Basile <blueness@gentoo.org> libav-0.8.4.ebuild:
+  stable ppc64, bug #439052
+
+  27 Oct 2012; Tobias Klausmann <klausman@gentoo.org> libav-0.8.4.ebuild:
+  Stable on alpha, bug #439052
+
+  26 Oct 2012; Jeroen Roovers <jer@gentoo.org> libav-0.8.4.ebuild:
+  Stable for HPPA (bug #439052).
+
+  26 Oct 2012; Agostino Sarubbo <ago@gentoo.org> libav-0.8.4.ebuild:
+  Stable for amd64, wrt bug #439052
+
+  25 Oct 2012;  <ago@gentoo.org> libav-0.8.4.ebuild:
+  minor cleanup, acked by lu_zero
+
+  23 Oct 2012; Luca Barbato <lu_zero@gentoo.org> libav-0.8.4.ebuild,
+  libav-9999.ebuild:
+  Mark cdio as gpl
+
+*libav-0.8.4 (23 Oct 2012)
+
+  23 Oct 2012; Luca Barbato <lu_zero@gentoo.org>
+  +files/0001-svq3-replace-unsafe-pointer-casting-with-intreadwrit.patch,
+  +libav-0.8.4.ebuild, libav-9999.ebuild:
+  New version
+
+  20 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> libav-0.8.3.ebuild:
+  ppc64 stable wrt #422537
+
+  13 Sep 2012; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild,
+  metadata.xml:
+  Add support for fdk-aac encoder
+
+  23 Aug 2012; Michael Weber <xmw@gentoo.org> libav-0.8.3.ebuild:
+  ppc stable (bug 422537).
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> libav-0.8.3.ebuild:
+  alpha/ia64/sparc stable wrt #422537
+
+  07 Aug 2012; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  Update to current git
+
+  01 Aug 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libav-0.8.3.ebuild:
+  x86 stable wrt bug #422537
+
+  19 Jul 2012; Markus Meier <maekke@gentoo.org> libav-0.8.3.ebuild:
+  arm stable, bug #422537
+
+  23 Jun 2012; Agostino Sarubbo <ago@gentoo.org> libav-0.8.3.ebuild:
+  amd64 really stable
+
+  23 Jun 2012; Jeroen Roovers <jer@gentoo.org> libav-0.8.3.ebuild:
+  Stable for HPPA (bug #422537).
+
+  20 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.8.2.ebuild:
+  0.8.2 works on ppc64 stable too, so stabilise.
+
+*libav-0.8.3 (20 Jun 2012)
+
+  20 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libav-0.8.3.ebuild:
+  Version bump to latest release.
+
+  08 Jun 2012; Brent Baude <ranger@gentoo.org> libav-0.8.2.ebuild:
+  Marking libav-0.8.2 ppc for bug 408555
+
+  22 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> libav-0.8.2-r2.ebuild,
+  libav-0.8.9999.ebuild, libav-9999.ebuild:
+  Drop PDEPEND over libpostproc, since the packages using it should depend on it
+  directly.
+
+  18 May 2012; Samuli Suominen <ssuominen@gentoo.org> libav-0.8.2-r2.ebuild,
+  libav-0.8.9999.ebuild, libav-9999.ebuild:
+  Move libpostproc RDEPEND from virtual/ffmpeg to here as PDEPEND to resolve
+  circular dependencies wrt #416411
+
+  17 May 2012; Samuli Suominen <ssuominen@gentoo.org> libav-0.8.2.ebuild:
+  Block media-libs/libpostproc wrt #416421
+
+  17 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.8.2-r2.ebuild,
+  libav-0.8.9999.ebuild, libav-9999.ebuild:
+  Postproc is no longer here.
+
+  15 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild:
+  Tests needs bc.
+
+  15 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild:
+  Sort IUSE to not contain dupes. Expand tools with all the available binaries.
+  Restrict test on live due to fate req rather than providing ewarn. Sort deps
+  alphabetically. Drop dirac that is no longer in configure. Drop sse test that
+  is handled by configure. Quote configure params.
+
+*libav-0.8.2-r2 (15 May 2012)
+
+  15 May 2012; Luca Barbato <lu_zero@gentoo.org> -libav-0.8.2-r1.ebuild,
+  +libav-0.8.2-r2.ebuild, libav-0.8.9999.ebuild, libav-9999.ebuild,
+  metadata.xml:
+  Cleanup ebuilds, enable fate for 0.8
+
+  14 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.8.2-r1.ebuild,
+  libav-0.8.9999.ebuild, libav-9999.ebuild:
+  Actually ffmpeg has openal, libav does not. My overlook.
+
+  14 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.8.9999.ebuild,
+  libav-9999.ebuild:
+  Drop code that is commented since ever.
+
+  14 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.8.2-r1.ebuild,
+  libav-0.8.9999.ebuild:
+  Fix the cosmetic also on 0.8 branch as requested.
+
+  14 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.8.2-r1.ebuild,
+  libav-0.8.9999.ebuild:
+  Unmask tests as they pass.
+
+  14 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild:
+  Fix typo.
+
+  14 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.8.2-r1.ebuild,
+  libav-0.8.9999.ebuild, libav-9999.ebuild:
+  use the same use expand for tools like ffmpeg does so we are more inline with
+  each other.
+
+*libav-0.8.2-r1 (14 May 2012)
+
+  14 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libav-0.8.2-r1.ebuild,
+  libav-0.8.9999.ebuild:
+  Sync and update 0.8 branch with configure switches.
+
+  14 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild:
+  Remove redundant check for sse3 handled by configure.
+
+  13 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild,
+  metadata.xml:
+  Update live ebuild, cleanup various parts. Line up some changes from ffmpeg.
+
+  13 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libav-0.8.1.ebuild:
+  Delete security affected version.
+
+  12 May 2012; Raúl Porcel <armin76@gentoo.org> libav-0.8.2.ebuild:
+  ia64/sparc stable wrt #408555
+
+  12 May 2012; Tobias Klausmann <klausman@gentoo.org> libav-0.8.2.ebuild:
+  Stable on alpha, bug 408555
+
+  12 May 2012; Markus Meier <maekke@gentoo.org> libav-0.8.2.ebuild:
+  arm stable, bug #408555
+
+  10 May 2012; Jeroen Roovers <jer@gentoo.org> libav-0.8.2.ebuild:
+  Stable for HPPA (bug #408555).
+
+  07 May 2012; Markos Chandras <hwoarang@gentoo.org> libav-0.8.2.ebuild:
+  Stable on amd64 wrt bug #408555
+
+  06 May 2012; Andreas Schuerch <nativemad@gentoo.org> libav-0.8.2.ebuild:
+  x86 stable, see bug 408555
+
+*libav-0.8.2 (05 May 2012)
+
+  05 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libav-0.8.2.ebuild,
+  -libav-0.7.5.ebuild, -libav-0.7.9999.ebuild:
+  Version bump to latest version. Punt older with security issues.
+
+  05 May 2012; Markus Meier <maekke@gentoo.org> libav-0.8.1.ebuild:
+  x86 stable, bug #408555
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libav-0.7.5.ebuild,
+  libav-0.7.9999.ebuild, libav-0.8.1.ebuild, libav-0.8.9999.ebuild,
+  libav-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*libav-0.7.5 (16 Apr 2012)
+
+  16 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libav-0.7.5.ebuild,
+  -libav-0.6.5.ebuild, -libav-0.7.4.ebuild, -libav-0.8.ebuild:
+  Version bump 0.7 series to latest. Drop all security affected ebuilds,
+  effectively loosing stable on amd64 and hppa again.
+
+  22 Mar 2012; Diego E. Pettenò <flameeyes@gentoo.org> libav-0.6.5.ebuild,
+  libav-0.7.4.ebuild, libav-0.8.1.ebuild, libav-0.8.ebuild:
+  Rename the variable on all ebuilds, since it could never have worked before
+  anyway.
+
+  22 Mar 2012; Diego E. Pettenò <flameeyes@gentoo.org> libav-0.7.4.ebuild,
+  libav-0.7.9999.ebuild, libav-0.8.1.ebuild, libav-0.8.9999.ebuild,
+  libav-0.8.ebuild, libav-9999.ebuild:
+  Complete rename on live ebuilds, and fix overwriting of the variable on all.
+
+  22 Mar 2012; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  Use EXTRA_LIBAV_CONF instead of EXTRA_FFMPEG_CONF
+
+  20 Mar 2012; Luca Barbato <lu_zero@gentoo.org> libav-0.7.4.ebuild,
+  libav-0.7.9999.ebuild, libav-0.8.ebuild, libav-0.8.1.ebuild,
+  libav-0.8.9999.ebuild, libav-9999.ebuild, metadata.xml:
+  Small update, mark proper license and introduce tools useflag in the
+  live ebuild
+
+*libav-0.8.1 (16 Mar 2012)
+
+  16 Mar 2012; Luca Barbato <lu_zero@gentoo.org> libav-0.8.ebuild,
+  +libav-0.8.1.ebuild, libav-0.8.9999.ebuild, libav-9999.ebuild:
+  Introduce libav 0.8.1 and minor updates
+
+  13 Mar 2012; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  iwmmxt removed upstream
+
+  07 Mar 2012; Luca Barbato <lu_zero@gentoo.org> libav-0.8.ebuild,
+  libav-0.8.9999.ebuild, libav-9999.ebuild:
+  Make sure librtmp requires network enabled
+
+  04 Mar 2012; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  libpostproc spun off
+
+  29 Feb 2012; Luca Barbato <lu_zero@gentoo.org> libav-0.8.ebuild,
+  libav-0.8.9999.ebuild, libav-9999.ebuild:
+  vdpau is not nvidia only now, thanks to Nikoli for testing and the patch
+  provided in bug #406269
+
+  09 Feb 2012; Diego E. Pettenò <flameeyes@gentoo.org> libav-0.8.9999.ebuild,
+  libav-0.8.ebuild, libav-9999.ebuild:
+  Do not create symlink for utilities that weren't built.
+
+  09 Feb 2012; Jeroen Roovers <jer@gentoo.org> libav-0.6.5.ebuild:
+  Stable for HPPA (bug #401017).
+
+  08 Feb 2012; Diego E. Pettenò <flameeyes@gentoo.org> libav-0.7.9999.ebuild,
+  libav-0.8.9999.ebuild, libav-0.8.ebuild, libav-9999.ebuild:
+  Add missing GPL requirement over x264. Ack by Luca.
+
+  07 Feb 2012; Agostino Sarubbo <ago@gentoo.org> libav-0.6.5.ebuild:
+  Stable for AMD64, wrt bug #401017
+
+  27 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Whitespace.
+
+*libav-0.8.9999 (27 Jan 2012)
+
+  27 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libav-0.8.9999.ebuild:
+  Add 0.8 live branch ebuild.
+
+  27 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.8.ebuild,
+  libav-9999.ebuild:
+  Fix repoman warning.
+
+*libav-0.7.4 (27 Jan 2012)
+*libav-0.6.5 (27 Jan 2012)
+
+  27 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/0.6.2-fix_enable_hardcoded_tables.patch,
+  -libav-0.8_pre20110818.ebuild, -files/0.6.2-float_arrays.patch,
+  -libav-0.6.2.ebuild, +libav-0.6.5.ebuild, -libav-0.6.9999.ebuild,
+  -libav-0.7.2.ebuild, +libav-0.7.4.ebuild, -libav-0.8_beta1.ebuild,
+  -libav-0.8_pre20111116.ebuild, -libav-0.8_pre20111222.ebuild,
+  libav-0.8.ebuild, libav-9999.ebuild:
+  Version bump to latest versions. Remove overshadowed ebuilds. Remove 0.6
+  series live as nobody would use it nowdays. Update x264 dep on 0.8 series and
+  later.
+
+*libav-0.8 (25 Jan 2012)
+
+  25 Jan 2012; Luca Barbato <lu_zero@gentoo.org> +libav-0.8.ebuild:
+  New version
+
+  04 Jan 2012; Luca Barbato <lu_zero@gentoo.org> libav-0.8_beta1.ebuild,
+  libav-9999.ebuild:
+  Fix dodoc when html docs aren't being generated
+
+  04 Jan 2012; Luca Barbato <lu_zero@gentoo.org> libav-0.8_beta1.ebuild,
+  libav-9999.ebuild:
+  Fix dodoc invocation
+
+*libav-0.8_beta1 (02 Jan 2012)
+
+  02 Jan 2012; Luca Barbato <lu_zero@gentoo.org> +libav-0.8_beta1.ebuild:
+  New beta version
+
+  02 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  USE description for flag "neon" is in use.desc now.
+
+*libav-0.8_pre20111222 (22 Dec 2011)
+
+  22 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +libav-0.8_pre20111222.ebuild:
+  Add new snapshot to build mplayer1 and provide something for ffmpeg-0.9
+  virtual.
+
+  02 Dec 2011; Steve Dibb <beandog@gentoo.org> libav-0.6.2.ebuild,
+  libav-0.6.9999.ebuild, libav-0.7.2.ebuild, libav-0.7.9999.ebuild,
+  libav-0.8_pre20110818.ebuild, libav-0.8_pre20111116.ebuild,
+  libav-9999.ebuild:
+  Build qt-faststart by default
+
+  27 Nov 2011; Luca Barbato <lu_zero@gentoo.org> libav-0.8_pre20111116.ebuild:
+  Fix dependency, as reported in bug #391255
+
+*libav-0.8_pre20111116 (16 Nov 2011)
+
+  16 Nov 2011; Luca Barbato <lu_zero@gentoo.org> +libav-0.8_pre20111116.ebuild:
+  New snapshot
+
+  15 Nov 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  Make neon sure we enable and build neon code on use neon
+
+  13 Nov 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild,
+  metadata.xml:
+  Update useflags to expose new features
+
+  12 Nov 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  Remove typo
+
+  08 Nov 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  Add support for drawtext
+
+  01 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> libav-0.6.2.ebuild,
+  libav-0.6.9999.ebuild, libav-0.7.2.ebuild, libav-0.7.9999.ebuild,
+  libav-0.8_pre20110818.ebuild, libav-9999.ebuild:
+  Rename USE="v4l2" to USE="v4l" while removing support for video4linux 1.x wrt
+  #385241
+
+  07 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libav-0.7_pre20110327.ebuild, -libav-0.7.ebuild, -libav-0.7.1.ebuild:
+  Drop quite few overshadowed versions.
+
+  03 Oct 2011; Luca Barbato <lu_zero@gentoo.org> libav-0.7.2.ebuild:
+  Fix wrong option bump, 0.7.2 doesn't introduce avtools
+
+*libav-0.7.2 (30 Sep 2011)
+
+  30 Sep 2011; Luca Barbato <lu_zero@gentoo.org> +libav-0.7.2.ebuild:
+  New version
+
+  22 Sep 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  Update vaapi logic, thanks to Tobias Jakobi for the notice
+
+  18 Aug 2011; Luca Barbato <lu_zero@gentoo.org> libav-0.8_pre20110818.ebuild,
+  libav-9999.ebuild:
+  disable tests and let faac and voaacenc built together
+
+  18 Aug 2011; Luca Barbato <lu_zero@gentoo.org> libav-0.8_pre20110818.ebuild:
+  Switch to local permanent url
+
+*libav-0.8_pre20110818 (18 Aug 2011)
+
+  18 Aug 2011; Luca Barbato <lu_zero@gentoo.org> +libav-0.8_pre20110818.ebuild:
+  New snapshot
+
+  18 Aug 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  Fix eprefix usage, dosym already adds it
+
+  10 Aug 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  Update the ebuild to follow the program name changes
+
+*libav-0.7.1 (23 Jul 2011)
+
+  23 Jul 2011; Luca Barbato <lu_zero@gentoo.org> +libav-0.7.1.ebuild:
+  Version Bump
+
+  21 Jul 2011; Matt Turner <mattst88@gentoo.org> libav-0.7.9999.ebuild,
+  libav-9999.ebuild:
+  Add ~mips to 7.9999 and 9999 ebuilds so that the keyword doesn't get lost
+  again.
+
+  12 Jul 2011; Matt Turner <mattst88@gentoo.org> libav-0.7.ebuild:
+  Added ~mips, bug 154882
+
+*libav-0.7.9999 (21 Jun 2011)
+*libav-0.7 (21 Jun 2011)
+
+  21 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libav-0.7_rc1.ebuild,
+  +libav-0.7.ebuild, +libav-0.7.9999.ebuild:
+  Version bump to final 0.7 release. Remove older RC. Add 0.7 branch live
+  ebuild.
+
+*libav-0.7_rc1 (15 Jun 2011)
+
+  15 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libav-0.7_beta2.ebuild,
+  +libav-0.7_rc1.ebuild:
+  Version bump to rc1, drop older beta.
+
+  24 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild:
+  Bump dependency over x264.
+
+*libav-0.7_beta2 (13 May 2011)
+
+  13 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libav-0.7_beta1.ebuild,
+  +libav-0.7_beta2.ebuild, libav-9999.ebuild:
+  Version bump to beta2 drop beta1.
+
+  20 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.6.9999.ebuild,
+  libav-9999.ebuild:
+  Migrate to git-2 eclass.
+
+*libav-0.7_beta1 (19 Apr 2011)
+
+  19 Apr 2011; Luca Barbato <lu_zero@gentoo.org> +libav-0.7_beta1.ebuild:
+  Prerelease
+
+  12 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild,
+  metadata.xml:
+  Try to split up gpl code so user can compile just LGPL version.
+
+  12 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild:
+  Update deps to match latest reality.
+
+  11 Apr 2011; Luca Barbato <lu_zero@gentoo.org> metadata.xml,
+  libav-9999.ebuild:
+  Add support for the Google/VisualOn encoders for aac and amrwb
+
+  01 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.6.2.ebuild,
+  libav-0.6.9999.ebuild:
+  Drop frei0r option that is availible only in trunk.
+
+  30 Mar 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  Drop removed configure option
+
+  28 Mar 2011; Luca Barbato <lu_zero@gentoo.org> libav-0.6.2.ebuild,
+  libav-0.6.9999.ebuild, libav-0.7_pre20110327.ebuild, libav-9999.ebuild:
+  Add Gentoo Prefix support
+
+  27 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.6.9999.ebuild,
+  libav-0.7_pre20110327.ebuild, libav-9999.ebuild:
+  Fixup version settings in snapshot. Remove useless quoting. Handle branching
+  magically.
+
+*libav-0.7_pre20110327 (27 Mar 2011)
+
+  27 Mar 2011; Luca Barbato <lu_zero@gentoo.org>
+  -libav-0.6_p20110327.ebuild, +libav-0.7_pre20110327.ebuild:
+  Rename
+
+*libav-0.6_p20110327 (27 Mar 2011)
+
+  27 Mar 2011; Luca Barbato <lu_zero@gentoo.org>
+  +libav-0.6_p20110327.ebuild, libav-0.6.9999.ebuild, libav-9999.ebuild:
+  New snapshot
+
+  25 Mar 2011; Luca Barbato <lu_zero@gentoo.org> libav-0.6.2.ebuild,
+  libav-0.6.9999.ebuild, libav-9999.ebuild:
+  Typo fix
+
+  22 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Fix whitespace in metadata.xml to be nicer. Drop unused flag (result of copy
+  from ffmpeg).
+
+*libav-9999 (22 Mar 2011)
+*libav-0.6.9999 (22 Mar 2011)
+*libav-0.6.2 (22 Mar 2011)
+
+  22 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0.6.2-fix_enable_hardcoded_tables.patch, +libav-9999.ebuild,
+  +files/0.6.2-float_arrays.patch, +libav-0.6.2.ebuild, +libav-0.6.9999.ebuild,
+  +metadata.xml:
+  Initial commit for ffmpeg fork/alternative. Ebuild adjusted from ffmpeg ones.
+  Thanks for lu_zero for help with testing it. Virtual pkg and dependency
+  testing on current ffmpeg deps still needs to be done.

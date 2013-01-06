@@ -1,0 +1,15 @@
+# ChangeLog for app-emacs/mcomplete
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mcomplete/ChangeLog,v 1.2 2008/06/14 23:27:32 ulm Exp $
+
+  14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> mcomplete-1.5.ebuild:
+  Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
+  automatically.
+
+*mcomplete-1.5 (24 Feb 2008)
+
+  24 Feb 2008; Ulrich Mueller <ulm@gentoo.org> +files/50mcomplete-gentoo.el,
+  +metadata.xml, +mcomplete-1.5.ebuild:
+  Initial import. Ebuild contributed by MATSUYAMA Tomohiro
+  <matsuyama@ariel-networks.com>, bug 207192.
+

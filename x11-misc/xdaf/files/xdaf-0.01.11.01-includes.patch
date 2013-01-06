@@ -1,0 +1,37 @@
+--- a/cursors.c	2002-11-08 00:10:19.000000000 +0100
++++ b/cursors.c	2010-09-17 02:53:48.000000000 +0200
+@@ -3,6 +3,7 @@
+ #include <X11/Xlib.h>
+ #include <X11/Xutil.h>
+ #include <X11/cursorfont.h>
++#include <unistd.h> /* usleep() */
+ 
+ #define CURSORS 4
+ 
+--- a/procstat.c	2002-10-30 17:59:35.000000000 +0100
++++ b/procstat.c	2010-09-17 02:53:48.000000000 +0200
+@@ -1,5 +1,6 @@
+ #include <stdio.h>
+ #include <string.h>
++#include <stdlib.h> /* strtoul() */
+ 
+ #if defined(hpux)
+ 
+--- a/version.c	2002-10-30 17:59:35.000000000 +0100
++++ b/version.c	2010-09-17 02:53:48.000000000 +0200
+@@ -1,5 +1,6 @@
+ #include "version.h"
+ #include <string.h>
++#include <ctype.h> /* isalnum() */
+ 
+ #define RELEASE_SIZE 80
+ 
+--- a/xdaf.c	2002-11-02 14:44:02.000000000 +0100
++++ b/xdaf.c	2010-09-17 02:53:48.000000000 +0200
+@@ -1,5 +1,6 @@
+ #include <unistd.h>
+ #include <stdio.h>
++#include <stdlib.h> /* exit() */
+ #include <X11/Xlib.h>
+ #include <X11/Intrinsic.h>
+ #include <X11/StringDefs.h>

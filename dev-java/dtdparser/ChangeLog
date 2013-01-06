@@ -1,0 +1,37 @@
+# ChangeLog for dev-java/dtdparser
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dtdparser/ChangeLog,v 1.8 2007/06/01 09:25:10 caster Exp $
+
+  01 Jun 2007; Vlastimil Babka <caster@gentoo.org> -dtdparser-1.21.ebuild:
+  Gen-1 punt.
+
+  01 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  dtdparser-1.21-r1.ebuild:
+  Stable on amd64 for bug #180021.
+
+  01 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
+  dtdparser-1.21-r1.ebuild:
+  stable x86, bug 180021
+
+  27 May 2007; Petteri Räty <betelgeuse@gentoo.org>
+  dtdparser-1.21-r1.ebuild:
+  Delete bundled jars and classes in src_unpack.
+
+*dtdparser-1.21-r1 (27 Dec 2006)
+
+  27 Dec 2006; Petteri Räty <betelgeuse@gentoo.org>
+  +dtdparser-1.21-r1.ebuild:
+  Migrated to generation 2.
+
+  04 May 2005; Jan Brinkmann <luckyduck@gentoo.org> dtdparser-1.21.ebuild:
+  stable on amd64 and x86, added ~ppc to KEYWORDS.
+
+  16 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> dtdparser-1.21.ebuild:
+  dtdparser now makes use of java-pkg_dosrc
+
+*dtdparser-1.21 (22 Jan 2005)
+
+  22 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/buildfile.patch, +dtdparser-1.21.ebuild:
+  Initial import. Fixes #75529
+

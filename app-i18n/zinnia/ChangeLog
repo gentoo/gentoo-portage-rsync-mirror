@@ -1,0 +1,30 @@
+# ChangeLog for app-i18n/zinnia
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/ChangeLog,v 1.5 2012/06/01 00:21:10 zmedico Exp $
+
+  01 Jun 2012; Zac Medico <zmedico@gentoo.org> zinnia-0.06-r1.ebuild:
+  inherit eutils for epatch
+
+  07 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> zinnia-0.06-r1.ebuild:
+  Remove .la files.
+
+*zinnia-0.06-r1 (07 Apr 2011)
+
+  07 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> -zinnia-0.06.ebuild,
+  +zinnia-0.06-r1.ebuild, +files/zinnia-0.06-perl.patch,
+  +files/zinnia-0.06-ricedown.patch:
+  Revision bump: there are not tests (close bug #348577); fix building with
+  USE=perl if zinnia was not installed before (bug #356039); rice the build
+  down to respect flags and not use -O3 instead.
+
+*zinnia-0.06 (04 Nov 2010)
+
+  04 Nov 2010; MATSUU Takuto <matsuu@gentoo.org> +zinnia-0.06.ebuild:
+  Version bumped, bug #331563. Added perl USE flag.
+
+*zinnia-0.05 (04 May 2010)
+
+  04 May 2010; MATSUU Takuto <matsuu@gentoo.org> +zinnia-0.05.ebuild,
+  +metadata.xml:
+  Initial import.
+

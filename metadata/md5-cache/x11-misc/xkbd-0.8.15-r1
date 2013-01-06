@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=x11-libs/libXrender x11-libs/libX11 x11-libs/libXft x11-libs/libXtst x11-libs/libXpm media-libs/freetype dev-libs/expat sys-libs/zlib doc? ( app-text/docbook-sgml-utils ) x11-proto/xproto x11-proto/xextproto
+DESCRIPTION=Xkbd - onscreen soft keyboard for X11
+EAPI=2
+HOMEPAGE=http://handhelds.org/
+IUSE=doc debug
+KEYWORDS=amd64 ~arm ~ppc x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/libXrender x11-libs/libX11 x11-libs/libXft x11-libs/libXtst x11-libs/libXpm media-libs/freetype dev-libs/expat sys-libs/zlib doc? ( app-text/docbook-sgml-utils )
+SLOT=0
+SRC_URI=ftp://ftp.yzu.edu.tw/mirror/pub2/ftp.handhelds.org/distributions/familiar/source/v0.8.4-rc1/sources/xkbd-0.8.15-CVS.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=9345565b0c103e3a22c431ad667200ab

@@ -1,0 +1,10 @@
+# ChangeLog for dev-php5/ezc-Search
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ezc-Search/ChangeLog,v 1.1 2011/12/14 22:19:14 mabi Exp $
+
+*ezc-Search-1.0.9 (20 May 2010)
+
+  20 May 2010; Peter Volkov <pva@gentoo.org> +ezc-Search-1.0.9.ebuild,
+  +metadata.xml:
+  New component for ezc-eZcomponents 2009.2.1, bug #320547
+

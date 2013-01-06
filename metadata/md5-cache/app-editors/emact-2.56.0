@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=sys-libs/ncurses X? ( x11-libs/libX11 x11-libs/libICE x11-libs/libSM )
+DESCRIPTION=EmACT, a fork of Conroy's MicroEmacs
+EAPI=4
+HOMEPAGE=http://www.eligis.com/emacs/
+IUSE=X
+KEYWORDS=amd64 x86
+LICENSE=GPL-2 BSD
+RDEPEND=sys-libs/ncurses X? ( x11-libs/libX11 x11-libs/libICE x11-libs/libSM )
+SLOT=0
+SRC_URI=mirror://sourceforge/emact/emact-2.56.0.tar.gz
+_md5_=2c1e5b9adca5ee41c67257130d50fa17

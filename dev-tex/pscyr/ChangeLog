@@ -1,0 +1,13 @@
+# ChangeLog for dev-tex/pscyr
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pscyr/ChangeLog,v 1.2 2012/12/03 01:36:14 radhermit Exp $
+
+  03 Dec 2012; Tim Harder <radhermit@gentoo.org> pscyr-0.4d_beta9.ebuild:
+  Fix LICENSE (bug #445610 by ulm).
+
+*pscyr-0.4d_beta9 (23 May 2012)
+
+  23 May 2012; Alexey Shvetsov <alexxy@gentoo.org> +files/90pscyr.cfg,
+  +metadata.xml, +pscyr-0.4d_beta9.ebuild:
+  [dev-tex/pscyr] Import per bug #108850
+

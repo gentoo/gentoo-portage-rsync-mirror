@@ -1,0 +1,9 @@
+# ChangeLog for gpe-base/libgpelaunch
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpelaunch/ChangeLog,v 1.1 2009/03/01 00:51:42 solar Exp $
+
+*libgpelaunch-0.14 (01 Mar 2009)
+
+  01 Mar 2009; <solar@gentoo.org> +metadata.xml, +libgpelaunch-0.14.ebuild:
+  Initial commit
+

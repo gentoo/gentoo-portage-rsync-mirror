@@ -1,0 +1,56 @@
+From 002a073fe2b403ae7d006372e690743b664236d3 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Wed, 24 Oct 2012 02:52:28 -0400
+Subject: [PATCH] Explicitly link to gmodule
+
+Fixes build failure with glib-2.32 and gold.
+---
+ configure.in     | 4 ++++
+ gp11/Makefile.am | 4 +++-
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/configure.in b/configure.in
+index f781384..cdf9a2e 100644
+--- a/configure.in
++++ b/configure.in
+@@ -70,6 +70,10 @@ PKG_CHECK_MODULES(GLIB, glib-2.0 >= 2.16.0)
+ AC_SUBST(GLIB_CFLAGS)
+ AC_SUBST(GLIB_LIBS)
+ 
++PKG_CHECK_MODULES(GMODULE, gmodule-no-export-2.0)
++AC_SUBST(GMODULE_CFLAGS)
++AC_SUBST(GMODULE_LIBS)
++
+ PKG_CHECK_MODULES(GTHREAD, gthread-2.0 >= 2.8.0)
+ AC_SUBST(GTHREAD_CFLAGS)
+ AC_SUBST(GTHREAD_LIBS)
+diff --git a/gp11/Makefile.am b/gp11/Makefile.am
+index 18942bd..5a90404 100644
+--- a/gp11/Makefile.am
++++ b/gp11/Makefile.am
+@@ -8,6 +8,7 @@ INCLUDES = \
+     	-I$(top_srcdir) \
+     	$(GOBJECT_CFLAGS) \
+ 	$(GTHREAD_CFLAGS) \
++	$(GMODULE_CFLAGS) \
+ 	$(GLIB_CFLAGS)
+ 
+ BUILT_SOURCES = \
+@@ -34,6 +35,7 @@ libgp11_la_LIBADD = \
+ 	$(GOBJECT_LIBS) \
+ 	$(GTHREAD_LIBS) \
+ 	$(GIO_LIBS) \
++	$(GMODULE_LIBS) \
+ 	$(GLIB_LIBS)
+ 
+ gp11-marshal.h: gp11-marshal.list $(GLIB_GENMARSHAL)
+@@ -64,4 +66,4 @@ endif
+ 
+ SUBDIRS = . \
+ 	$(TESTS_DIR)
+-	
+\ No newline at end of file
++	
+-- 
+1.7.12.4
+

@@ -1,0 +1,114 @@
+# Added by Jesus Rivero <neurogeek@gentoo.org>
+# We can get rid of this when bumping 3.0.5 (source not released yet)
+# 2012-04-14
+--- org/src/pyodbccompat.h	2011-12-23 15:44:54.000000000 -0500
++++ new/src/pyodbccompat.h	2012-04-14 02:37:29.000000000 -0400
+@@ -16,6 +16,19 @@
+ #define Py_TYPE(ob) (((PyObject*)(ob))->ob_type)
+ #endif
+ 
++// Macros were introduced in 2.6 to map "bytes" to "str" in Python 2.  Back port to 2.5.
++#if PY_VERSION_HEX >= 0x02060000
++    #include <bytesobject.h>
++#else
++    #define PyBytes_AS_STRING PyString_AS_STRING
++    #define PyBytes_Check PyString_Check
++    #define PyBytes_CheckExact PyString_CheckExact 
++    #define PyBytes_FromStringAndSize PyString_FromStringAndSize
++    #define PyBytes_GET_SIZE PyString_GET_SIZE
++    #define PyBytes_Size PyString_Size
++    #define _PyBytes_Resize _PyString_Resize
++#endif
++
+ // Used for items that are ANSI in Python 2 and Unicode in Python 3 or in int 2 and long in 3.
+ 
+ #if PY_MAJOR_VERSION >= 3
+--- org/src/pyodbc.h	2012-01-03 18:04:08.000000000 -0500
++++ new/src/pyodbc.h	2012-04-14 02:37:29.000000000 -0400
+@@ -44,7 +44,6 @@
+ #include <boolobject.h>
+ #include <unicodeobject.h>
+ #include <structmember.h>
+-#include <bytesobject.h>
+ 
+ #include <sql.h>
+ #include <sqlext.h>
+--- org/setup.py	2012-01-03 18:04:24.000000000 -0500
++++ new/setup.py	2012-04-14 02:37:29.000000000 -0400
+@@ -67,39 +67,45 @@
+     if exists('MANIFEST'):
+         os.remove('MANIFEST')
+ 
+-    options = {}
++    kwargs = {
++        'name': "pyodbc",
++        'version': version_str,
++        'description': "DB API Module for ODBC",
++
++        'long_description': ('A Python DB API 2 module for ODBC. This project provides an up-to-date, '
++                            'convenient interface to ODBC using native data types like datetime and decimal.'),
++        
++        'maintainer':       "Michael Kleehammer",
++        'maintainer_email': "michael@kleehammer.com",
++        
++        'ext_modules': [Extension('pyodbc', files, **settings)],
++
++        'license': 'MIT',
++
++        'classifiers': ['Development Status :: 5 - Production/Stable',
++                       'Intended Audience :: Developers',
++                       'Intended Audience :: System Administrators',
++                       'License :: OSI Approved :: MIT License',
++                       'Operating System :: Microsoft :: Windows',
++                       'Operating System :: POSIX',
++                       'Programming Language :: Python',
++                       'Programming Language :: Python :: 2',
++                       'Programming Language :: Python :: 3',
++                       'Topic :: Database',
++                       ],
++
++        'url': 'http://code.google.com/p/pyodbc',
++        'download_url': 'http://code.google.com/p/pyodbc/downloads/list',
++        'cmdclass': { 'version' : VersionCommand,
++                     'tags'    : TagsCommand }
++        }
++    
+     if sys.hexversion >= 0x02060000:
+-        options['bdist_wininst'] = {'user_access_control' : 'auto'}
+-
+-    setup (name = "pyodbc",
+-           version = version_str,
+-           description = "DB API Module for ODBC",
+-
+-           long_description = ('A Python DB API 2 module for ODBC. This project provides an up-to-date, '
+-                               'convenient interface to ODBC using native data types like datetime and decimal.'),
+-
+-           maintainer       = "Michael Kleehammer",
+-           maintainer_email = "michael@kleehammer.com",
+-
+-           ext_modules = [Extension('pyodbc', files, **settings)],
+-
+-           options = options,
+-
+-           classifiers = ['Development Status :: 5 - Production/Stable',
+-                           'Intended Audience :: Developers',
+-                           'Intended Audience :: System Administrators',
+-                           'License :: OSI Approved :: MIT License',
+-                           'Operating System :: Microsoft :: Windows',
+-                           'Operating System :: POSIX',
+-                           'Programming Language :: Python',
+-                           'Topic :: Database',
+-                          ],
+-
+-           url = 'http://code.google.com/p/pyodbc',
+-           download_url = 'http://code.google.com/p/pyodbc/downloads/list',
+-           cmdclass = { 'version' : VersionCommand,
+-                        'tags'    : TagsCommand })
++        kwargs['options'] = {
++            'bdist_wininst': {'user_access_control' : 'auto'}
++            }
+ 
++    setup(**kwargs)
+ 
+ 
+ def get_compiler_settings(version_str):

@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DEPEND=virtual/mta app-arch/sharutils >=sys-libs/slang-2.1.3 ssl? ( dev-libs/openssl ) uudeview? ( dev-libs/uulib ) nls? ( sys-devel/gettext )
+DESCRIPTION=a s-lang based newsreader
+HOMEPAGE=http://slrn.sourceforge.net
+IUSE=nls ssl uudeview
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+RDEPEND=virtual/mta app-arch/sharutils >=sys-libs/slang-2.1.3 ssl? ( dev-libs/openssl ) uudeview? ( dev-libs/uulib )
+SLOT=0
+SRC_URI=http://slrn.sourceforge.net/patches/slrn-0.9.8.1pl1.tar.gz
+_md5_=65b28bc1f814ea380abe1ced777287c2

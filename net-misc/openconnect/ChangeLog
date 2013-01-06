@@ -1,0 +1,45 @@
+# ChangeLog for net-misc/openconnect
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.7 2013/01/04 22:20:14 hwoarang Exp $
+
+*openconnect-4.07-r3 (04 Jan 2013)
+
+  04 Jan 2013; Markos Chandras <hwoarang@gentoo.org>
+  +openconnect-4.07-r3.ebuild:
+  rework gnutls, ssl use flags logic. Bug #448436. Thanks to Matthew Schultz
+  <mattsch@gmail.com>
+
+  22 Dec 2012; Markos Chandras <hwoarang@gentoo.org>
+  -openconnect-4.07-r1.ebuild, -openconnect-4.07.ebuild:
+  Remove old
+
+*openconnect-4.07-r2 (22 Dec 2012)
+
+  22 Dec 2012; Markos Chandras <hwoarang@gentoo.org>
+  +openconnect-4.07-r2.ebuild, files/openconnect.init.in:
+   Revbump to fix #447114 and #447106. Thanks to Matthew Schultz
+  <mattsch@gmail.com>
+
+*openconnect-4.07-r1 (11 Dec 2012)
+
+  11 Dec 2012; Markos Chandras <hwoarang@gentoo.org>
+  +openconnect-4.07-r1.ebuild, files/openconnect.init.in:
+  Revbump with improved init script for missing pid directory. Bug #446255.
+  Thanks to Matthew Schultz <mattsch@gmail.com>
+
+*openconnect-4.07 (05 Dec 2012)
+
+  05 Dec 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/openconnect.logrotate, +openconnect-4.07.ebuild,
+  files/openconnect.conf.in, files/openconnect.init.in, metadata.xml:
+  Version bump. Thanks to Matthew Schultz <mattsch@gmail.com> who will maintain
+  it. Bug #384099
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as talked with him via mail.
+
+*openconnect-3.11 (16 Aug 2011)
+
+  16 Aug 2011; Robert Piasek <dagger@gentoo.org> +openconnect-3.11.ebuild,
+  +files/openconnect.conf.in, +files/openconnect.init.in:
+  Add OpenConnect 3.11

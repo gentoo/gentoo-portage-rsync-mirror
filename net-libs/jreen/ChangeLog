@@ -1,0 +1,54 @@
+# ChangeLog for net-libs/jreen
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/ChangeLog,v 1.8 2012/04/15 22:15:10 johu Exp $
+
+*jreen-1.1.0 (15 Apr 2012)
+
+  15 Apr 2012; Johannes Huber <johu@gentoo.org> +jreen-1.1.0.ebuild,
+  -jreen-1.0.5.ebuild:
+  Version bump, remove old.
+
+*jreen-1.0.5-r1 (05 Apr 2012)
+
+  05 Apr 2012; Johannes Huber <johu@gentoo.org>
+  +files/jreen-1.0.5-fix-typo.patch, +jreen-1.0.5-r1.ebuild,
+  -jreen-1.0.3.ebuild:
+  Revision bump adds patch which fixes typo in localized string by Jeff
+  'jefferai' Mitchell. Remove old.
+
+*jreen-1.0.5 (01 Apr 2012)
+
+  01 Apr 2012; Johannes Huber <johu@gentoo.org> +jreen-1.0.5.ebuild,
+  -jreen-1.0.2.ebuild, jreen-1.0.3.ebuild, jreen-9999.ebuild:
+  Version bump, remove old.
+
+*jreen-1.0.3 (18 Mar 2012)
+
+  18 Mar 2012; Johannes Huber <johu@gentoo.org> +jreen-1.0.3.ebuild,
+  -jreen-1.0.1.ebuild, jreen-9999.ebuild:
+  Version bump, remove old.
+
+*jreen-1.0.2 (13 Mar 2012)
+
+  13 Mar 2012; Johannes Huber <johu@gentoo.org> +jreen-1.0.2.ebuild:
+  Version bump.
+
+  21 Nov 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -jreen-0_p20110709.ebuild, jreen-1.0.1.ebuild, jreen-9999.ebuild:
+  [net-libs/jreen] Drop pre-release now that there was a release and update $S
+  instead of adding a custom SRC_UNPACK.
+
+*jreen-1.0.1 (21 Nov 2011)
+
+  21 Nov 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +jreen-1.0.1.ebuild:
+  [net-libs/jreen] Version bump 1.0.1 from the kde overlay by Johannes Huber
+  <johu@gmx.de>.
+
+*jreen-9999 (12 Nov 2011)
+*jreen-0_p20110709 (12 Nov 2011)
+
+  12 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +jreen-0_p20110709.ebuild, +jreen-9999.ebuild, +metadata.xml:
+  New library, dependency of media-sound/tomahawk; imported from KDE overlay.
+

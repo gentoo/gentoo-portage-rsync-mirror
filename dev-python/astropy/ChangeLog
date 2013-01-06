@@ -1,0 +1,30 @@
+# ChangeLog for dev-python/astropy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.7 2012/08/08 19:10:03 bicatali Exp $
+
+  08 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> astropy-0.1-r1.ebuild:
+  Blocking pyfits and vo (bug #426822 and bug #429148)
+
+  27 Jun 2012; Sebastien Fabbro <fabbros@gentoo.org> astropy-0.1-r1.ebuild:
+  keyword amd64-linux x86-linux
+
+*astropy-0.1-r1 (21 Jun 2012)
+
+  21 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> +astropy-0.1-r1.ebuild,
+  +files/astropy-0.1-debundle_zlib.patch, -astropy-0.1.ebuild:
+  Debundle zlib wrt #422657 by Diego Elio Pettenò <flameeyes@gentoo.org>, rename
+  fitschecker to avoid collision with dev-python/pyfits wrt #422659 by Helmut
+  Jarausch <jarausch@igpm.rwth-aachen.de>
+
+  19 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org> astropy-0.1.ebuild,
+  metadata.xml:
+  restrict python-3, added matplotlib for doc building, add longdescription
+
+  19 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> astropy-0.1.ebuild:
+  Depend on dev-python/pytest unconditionally
+
+*astropy-0.1 (19 Jun 2012)
+
+  19 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> +astropy-0.1.ebuild,
+  +files/astropy-0.1-expat.patch, +metadata.xml:
+  Initial import, ebuild written by me

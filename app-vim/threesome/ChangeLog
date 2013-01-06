@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/threesome
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/threesome/ChangeLog,v 1.1 2011/09/19 06:45:50 radhermit Exp $
+
+*threesome-0.2.0 (19 Sep 2011)
+
+  19 Sep 2011; Tim Harder <radhermit@gentoo.org> +threesome-0.2.0.ebuild,
+  +metadata.xml:
+  Initial import.
+

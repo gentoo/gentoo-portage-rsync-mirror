@@ -1,0 +1,20 @@
+--- Makefile.orig	2008-06-17 19:23:19.000000000 +0200
++++ Makefile	2010-10-19 16:23:35.000000000 +0200
+@@ -12,7 +12,6 @@
+ CPPFLAGS=-I/usr/include/pcap
+ LIBS=-lpcap
+ CFLAGS := -Wall $(CFLAGS)
+-CC=gcc 
+ 
+ ifndef PREFIX
+ PREFIX=/usr
+@@ -49,8 +48,7 @@
+ all: 	$(BIN)
+ 
+ $(BIN):	$(OBJ_C)
+-	$(CC) -o $(BIN) $(OBJ_C) $(LIBS) $(CFLAGS)
+-	strip $(BIN)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $(BIN) $(OBJ_C) $(LIBS)
+ 
+ install-strip:	install
+ 

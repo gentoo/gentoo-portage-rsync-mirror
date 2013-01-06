@@ -1,0 +1,97 @@
+# ChangeLog for sys-apps/ucspi-ssl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.27 2012/11/06 08:12:14 ulm Exp $
+
+  06 Nov 2012; Ulrich Müller <ulm@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
+  Update LICENSE, public domain according to information on HOMEPAGE.
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118937
+
+  11 Jul 2011; Alexis Ballier <aballier@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
+  keyword ~x86-fbsd
+
+  13 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  ucspi-ssl-0.70-r1.ebuild:
+  ppc/ppc64 stable wrt #333915
+
+  27 Nov 2010; Raúl Porcel <armin76@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
+  ia64/m68k/s390/sh/sparc stable wrt #333915
+
+  24 Oct 2010; Tobias Klausmann <klausman@gentoo.org>
+  ucspi-ssl-0.70-r1.ebuild:
+  Stable on alpha, bug #333915
+
+  25 Sep 2010; Markus Meier <maekke@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
+  arm stable, bug #333915
+
+  24 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  ucspi-ssl-0.70-r1.ebuild:
+  Stable on amd64 wrt bug #333915
+
+  23 Aug 2010; Jeroen Roovers <jer@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
+  Stable for HPPA (bug #333915).
+
+  22 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  ucspi-ssl-0.70-r1.ebuild:
+  x86 stable wrt bug #333915
+
+  23 Feb 2009; Raúl Porcel <armin76@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
+  Add ~arm/~ia64/~s390/~sh wrt #253453
+
+  06 Feb 2009; Jeroen Roovers <jer@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
+  Marked ~hppa (bug #253453).
+
+  03 Feb 2009; Thilo Bangert <bangert@gentoo.org>
+  -files/ucspi-ssl-0.50-errno.patch, -files/ucspi-ssl-0.70-fix-paths.patch,
+  -ucspi-ssl-0.50.ebuild, -ucspi-ssl-0.70.ebuild:
+  remove old versions - fixes bug #252064 (pre-stripped files)
+
+  18 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
+  ucspi-ssl-0.70-r1.ebuild:
+  Keyworded on alpha, bug #253453
+
+  09 Jan 2009; Joseph Jezak <josejx@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
+  Marked ~ppc for bug #253453.
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
+  keyworded ~arch for ppc64, bug 253453
+
+  05 Jan 2009; Friedrich Oslage <bluebird@gentoo.org>
+  ucspi-ssl-0.70-r1.ebuild:
+  Add ~sparc keyword, bug #253453
+
+  23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
+
+*ucspi-ssl-0.70-r1 (06 Apr 2008)
+
+  06 Apr 2008; Benedikt Böhm <hollow@gentoo.org> +ucspi-ssl-0.70-r1.ebuild:
+  use new qmail.eclass; ebuild cleanup
+
+  25 Jan 2008; Thilo Bangert <bangert@gentoo.org>
+  +files/ucspi-ssl-0.70-fix-paths.patch, ucspi-ssl-0.50.ebuild,
+  ucspi-ssl-0.70.ebuild:
+  fix quoting, minor cleanups, add tls patch
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+*ucspi-ssl-0.70 (02 Jan 2006)
+
+  02 Jan 2006; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +ucspi-ssl-0.70.ebuild:
+  version bump as per bug #91681 thanks to Thilo Bangert
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ucspi-ssl-0.50.ebuild:
+  virtual/glibc -> virtual/libc
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> ucspi-ssl-0.50.ebuild:
+  Add inherit eutils
+
+*ucspi-ssl-0.50 (04 Jan 2004)
+
+  04 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> ucspi-ssl-0.50.ebuild:
+  Initial import. Ebuild submitted by sen_ml@eccosys.com in #14937
+

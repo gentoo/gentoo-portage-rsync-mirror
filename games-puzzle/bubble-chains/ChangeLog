@@ -1,0 +1,31 @@
+# ChangeLog for games-puzzle/bubble-chains
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bubble-chains/ChangeLog,v 1.6 2011/05/23 12:10:30 tupone Exp $
+
+  23 May 2011; Tupone Alfredo <tupone@gentoo.org> bubble-chains-0.1.1.ebuild:
+  Fix underlink. Bug #367593 by Diego Elio Pettenò
+
+  12 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  bubble-chains-0.1.1.ebuild:
+  stable x86, bug 332333
+
+  12 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  bubble-chains-0.1.1.ebuild:
+  fix level location
+
+*bubble-chains-0.1.1 (08 Jul 2010)
+
+  08 Jul 2010; Tupone Alfredo <tupone@gentoo.org>
+  +bubble-chains-0.1.1.ebuild:
+  Version bump to 0.1.1 Bug #327261 by Ines Willenbrock
+
+  05 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  bubble-chains-0.1.0.ebuild:
+  x86 stable wrt bug #303479
+
+*bubble-chains-0.1.0 (03 Jan 2010)
+
+  03 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +bubble-chains-0.1.0.ebuild:
+  Initial commit.
+

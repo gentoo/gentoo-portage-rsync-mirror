@@ -1,0 +1,9 @@
+DEFINED_PHASES=install unpack
+DEPEND=dev-vcs/git
+DESCRIPTION=A tool for checking backward compatibility of a C/C++ library
+EAPI=4
+HOMEPAGE=http://ispras.linuxbase.org/index.php/ABI_compliance_checker
+LICENSE=GPL-2
+SLOT=0
+_eclasses_=git-2	15733ab6a6feb34af9837b41623c2bad
+_md5_=8257aa4cbd47c3c735c222146f95a6db

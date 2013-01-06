@@ -1,0 +1,66 @@
+# ChangeLog for app-arch/tarsync
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tarsync/ChangeLog,v 1.15 2010/08/11 08:30:41 ferringb Exp $
+
+*tarsync-0.2.1-r1 (11 Aug 2010)
+
+  11 Aug 2010; Brian Harring <ferringb@gentoo.org> +tarsync-0.2.1-r1.ebuild:
+
+
+  bug 331855, respect LDFLAGS
+
+
+  12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> tarsync-0.2.1.ebuild:
+  QA fixes; redundant "cd "
+
+  25 Jan 2007; Alec Warner <antarus@gentoo.org> tarsync-0.2.1.ebuild:
+  unstable on amd64
+
+  20 Dec 2006; Zac Medico <zmedico@gentoo.org>
+  -tarsync-0.1.ebuild, tarsync-0.2.1.ebuild:
+  Punt the old version and fix the SRC_URI in the remaining ebuild.
+
+  08 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  tarsync-0.2.1.ebuild:
+  stable on ppc (Bug #141388)
+
+  07 Aug 2006; Andrej Kacian <ticho@gentoo.org> tarsync-0.2.1.ebuild:
+  Stable on x86. Bug #141388.
+
+*tarsync-0.2.1 (24 Jul 2006)
+
+  24 Jul 2006; Zac Medico <zmedico@gentoo.org> +tarsync-0.2.1.ebuild,
+  -files/bug_140593_strcmp.patch, -tarsync-0.2.ebuild, -tarsync-0.2-r1.ebuild:
+  Add the new 0.2.1 release and remove the outdated 0.2 release.
+
+*tarsync-0.2-r1 (24 Jul 2006)
+
+  24 Jul 2006; Zac Medico <zmedico@gentoo.org> +tarsync-0.2-r1.ebuild,
+  +files/bug_140593_strcmp.patch:
+  0.2-r1 revbump for bug #140593.
+
+  08 May 2006; Thomas Cort <tcort@gentoo.org> tarsync-0.1.ebuild,
+  tarsync-0.2.ebuild:
+  Added missing IUSE and removed useless RDEPEND=RDEPEND line.
+
+*tarsync-0.2 (02 Feb 2006)
+
+  02 Feb 2006; <bharring@gentoo.org> +tarsync-0.2.ebuild:
+  version 2, baby. Mainly, can be compiled under gcc4, and relies on
+  diffball's libcfile (at some point, that'll be split out and the dep
+  converted to || () )
+
+  07 Sep 2005; Joseph Jezak <josejx@gentoo.org> tarsync-0.1.ebuild:
+  Marked ppc stable for bug #105038.
+
+  22 Jul 2005; David Holm <dholm@gentoo.org> tarsync-0.1.ebuild:
+  Added to ~ppc.
+
+  26 May 2005; Sven Wegener <swegener@gentoo.org> metadata.xml:
+  Herd name is 'no-herd' not 'None'
+
+*tarsync-0.1: May 24 2005
+
+  24 May 2005; Brian Harring <ferringb@gentoo.org> tarsync-0.1.ebuild:
+  Initial import.  Used for sync'ing a directory against a tarball, _including_
+  doing deletions (tar lacks the latter).

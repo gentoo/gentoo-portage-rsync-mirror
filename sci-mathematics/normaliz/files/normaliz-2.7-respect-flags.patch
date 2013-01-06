@@ -1,0 +1,42 @@
+diff -U 3 -dHrN Normaliz2.7.orig/source/Makefile Normaliz2.7/source/Makefile
+--- Normaliz2.7.orig/source/Makefile	2011-07-08 13:02:49.000000000 +0200
++++ Normaliz2.7/source/Makefile	2011-07-08 13:04:45.000000000 +0200
+@@ -17,14 +17,14 @@
+ 	$(MAKE) --directory=libnormaliz libnormaliz.o
+ 
+ normaliz: $(SOURCES) $(HEADERS) libnormaliz/libnormaliz.o
+-	$(CXX) $(CXXFLAGS) $(NORMFLAGS) Normaliz.cpp libnormaliz/libnormaliz.o $(GMPFLAGS) -o normaliz
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(NORMFLAGS) Normaliz.cpp libnormaliz/libnormaliz.o $(GMPFLAGS) -o normaliz
+ 
+ normaliz1: $(SOURCES) $(HEADERS) $(LIBHEADERS) $(LIBSOURCES)
+-	$(CXX) $(CXXFLAGS) $(NORMFLAGS) Normaliz-impl.cpp $(GMPFLAGS) -o normaliz1
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(NORMFLAGS) Normaliz-impl.cpp $(GMPFLAGS) -o normaliz1
+ 
+ 
+ normaliz-pg: $(SOURCES) $(HEADERS) $(LIBHEADERS) $(LIBSOURCES)
+-	$(CXX) $(CXXFLAGS) $(NORMFLAGS) -pg Normaliz-impl.cpp $(GMPFLAGS) -o normaliz-pg
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(NORMFLAGS) -pg Normaliz-impl.cpp $(GMPFLAGS) -o normaliz-pg
+ 
+ clean:
+ 	$(MAKE) --directory=libnormaliz clean
+diff -U 3 -dHrN Normaliz2.7.orig/source/Makefile.configuration Normaliz2.7/source/Makefile.configuration
+--- Normaliz2.7.orig/source/Makefile.configuration	2011-07-08 13:02:49.000000000 +0200
++++ Normaliz2.7/source/Makefile.configuration	2011-07-08 13:03:26.000000000 +0200
+@@ -1,10 +1,8 @@
+ ##
+ ## Makefile configuration for normaliz
+ ##
+-CXX = g++ 
+ CXXFLAGS += -Wall
+ CXXFLAGS += -pedantic -Wno-long-long
+-CXXFLAGS += -O3 -funroll-loops
+ #CXXFLAGS += -g
+ #CXXFLAGS += -pg
+ 
+@@ -15,6 +13,5 @@
+  CXXFLAGS += -fopenmp
+ endif
+ 
+-NORMFLAGS = -static
+ GMPFLAGS = -lgmpxx -lgmp
+ 

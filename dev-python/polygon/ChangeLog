@@ -1,0 +1,38 @@
+# ChangeLog for dev-python/polygon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/polygon/ChangeLog,v 1.10 2012/11/11 13:35:09 blueness Exp $
+
+  11 Nov 2012; Anthony G. Basile <blueness@gentoo.org> polygon-2.0.4.ebuild:
+  Rapid stabilization to heal tree, bug #442318
+
+  11 Nov 2012; Anthony G. Basile <blueness@gentoo.org> polygon-2.0.4.ebuild:
+  keyword ~ppc, bug #442318
+
+  11 Nov 2012; Anthony G. Basile <blueness@gentoo.org> polygon-3.0.4.ebuild:
+  keyword ~ppc, bug #442318
+
+  02 Aug 2012; Patrick Lauer <patrick@gentoo.org> polygon-2.0.4.ebuild:
+  Restricting jython
+
+  21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> polygon-3.0.4.ebuild:
+  marked x86 per bug 422067
+
+  20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> polygon-3.0.4.ebuild:
+  Stable for amd64, wrt bug #422067
+
+  14 Jun 2012; Jeff Horelick <jdhore@gentoo.org> polygon-2.0.4.ebuild:
+  marked x86 per bug 413815
+
+  23 May 2012; Agostino Sarubbo <ago@gentoo.org> polygon-2.0.4.ebuild:
+  Stable for amd64, wrt bug #413815
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> polygon-2.0.4.ebuild,
+  polygon-3.0.4.ebuild:
+  Use mirror://github.
+
+*polygon-3.0.4 (04 Jan 2012)
+*polygon-2.0.4 (04 Jan 2012)
+
+  04 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +polygon-2.0.4.ebuild,
+  +polygon-3.0.4.ebuild, +metadata.xml:
+  Initial import

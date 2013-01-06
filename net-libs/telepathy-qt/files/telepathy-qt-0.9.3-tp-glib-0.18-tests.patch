@@ -1,0 +1,41 @@
+From 145e58636b130502adf0bd0ad5d5551aae2e2932 Mon Sep 17 00:00:00 2001
+From: Dario Freddi <dario.freddi@collabora.com>
+Date: Mon, 27 Aug 2012 17:37:49 +0000
+Subject: Merge branch 'tp-glib-0.18'
+
+Reviewed-by: George Kiagiadakis <george.kiagiadakis@collabora.com>
+---
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 574cb60..2e52f27 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -185,7 +185,7 @@ macro_log_feature(HAVE_TEST_PYTHON "dbus-python"
+ 
+ if(ENABLE_TESTS OR ENABLE_FARSTREAM OR ENABLE_FARSIGHT)
+     # Find telepathy-glib
+-    set(TELEPATHY_GLIB_MIN_VERSION 0.17.5)
++    set(TELEPATHY_GLIB_MIN_VERSION 0.18.0)
+     find_package(TelepathyGlib)
+     macro_log_feature(TELEPATHYGLIB_FOUND "Telepathy-glib"
+                       "Glib bindings for Telepathy"
+diff --git a/tests/lib/glib/util.c b/tests/lib/glib/util.c
+index 21d3855..f0bcd96 100644
+--- a/tests/lib/glib/util.c
++++ b/tests/lib/glib/util.c
+@@ -431,6 +431,9 @@ tp_tests_connection_assert_disconnect_succeeds (TpConnection *connection)
+   g_object_unref (result);
+ }
+ 
++/* The following blocks require tp-glib 0.19 to compile. However, tp_tests_connection_run_until_contact_by_id
++   is never used in our code, so we simply disable its compilation. */
++#if 0
+ static void
+ one_contact_cb (GObject *object,
+     GAsyncResult *result,
+@@ -463,3 +466,4 @@ tp_tests_connection_run_until_contact_by_id (TpConnection *connection,
+ 
+   return contact;
+ }
++#endif
+--
+cgit v0.9.0.2-2-gbebe

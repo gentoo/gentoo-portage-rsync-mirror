@@ -1,0 +1,19 @@
+# ChangeLog for games-strategy/coldwar
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar/ChangeLog,v 1.4 2012/02/05 06:22:15 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org> coldwar-1.0.1.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
+
+  16 Jan 2012; Ulrich Müller <ulm@gentoo.org> coldwar-1.0.1.ebuild:
+  Migrate to cdrom.eclass, bug 398809.
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> coldwar-1.0.1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
+
+*coldwar-1.0.1 (06 Feb 2007)
+
+  06 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +coldwar-1.0.1.ebuild:
+  Initial import.  Ebuild by Paul Bredbury <brebs@sent.com> and edited by me.
+

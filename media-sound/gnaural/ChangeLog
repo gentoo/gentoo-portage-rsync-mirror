@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/gnaural
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnaural/ChangeLog,v 1.1 2012/09/10 11:16:53 miknix Exp $
+
+*gnaural-1.0.20110606 (10 Sep 2012)
+
+  10 Sep 2012; Angelo Arrifano <miknix@gentoo.org>
+  +gnaural-1.0.20110606.ebuild, +metadata.xml:
+  Add package to the tree. #128275
+

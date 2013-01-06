@@ -1,0 +1,37 @@
+--- mkinitcpio-0.9.2-r1/install/keymap
++++ mkinitcpio-0.9.2-r1/install/keymap
+@@ -7,21 +7,21 @@
+         l=$LANG
+         unset LANG
+ 
+-        for cfg in /etc/{rc,vconsole,locale}.conf; do
++        for cfg in /etc/conf.d/keymaps; do
+             [[ -s $cfg ]] && . "$cfg"
+         done
+ 
+         [[ $LANG ]] && LOCALE=$LANG
+         LANG=$l
+ 
+-        if [[ $KEYMAP ]]; then
++        if [[ $keymap ]]; then
+             if [[ $LOCALE = *[Uu][Tt][Ff]?(-)8 ]]; then
+                 touch "$BUILDROOT/keymap.utf8"
+                 uc=-u
+             fi
+-            loadkeys -q $uc $KEYMAP -b > "$BUILDROOT/keymap.bin"
++            loadkeys -q $uc $keymap -b > "$BUILDROOT/keymap.bin"
+         else
+-            warning "keymap: hook specified, but no KEYMAP found in configuration"
++            warning "keymap: hook specified, but no keymap found in configuration"
+             return 1
+         fi
+     ) && add_runscript
+@@ -29,7 +29,7 @@
+ 
+ help() {
+     cat <<HELPEOF
+-This hook loads keymap(s) specified in vconsole.conf or rc.conf during early
++This hook loads keymap(s) specified in keymaps during early
+ userspace.
+ HELPEOF
+ }

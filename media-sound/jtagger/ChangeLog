@@ -1,0 +1,72 @@
+# ChangeLog for media-sound/jtagger
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/ChangeLog,v 1.15 2010/01/03 19:02:40 betelgeuse Exp $
+
+  03 Jan 2010; Petteri Räty <betelgeuse@gentoo.org> jtagger-1.0.ebuild:
+  Fix building. Fixes bug #290536.
+
+  17 May 2009; Serkan Kaba <serkan@gentoo.org>
+  jtagger-1.0_pre20080428.ebuild:
+  Correct patch file reference to fix bug #270181 reported by Alexander
+  Sulfrian <alexander@sulfrian.net>
+
+*jtagger-1.0 (16 May 2009)
+*jtagger-1.0_pre20080428 (16 May 2009)
+
+  16 May 2009; Serkan Kaba <serkan@gentoo.org>
+  +jtagger-1.0_pre20080428.ebuild, +jtagger-1.0.ebuild,
+  -jtagger-2008.01.ebuild, -jtagger-2008.04.28.ebuild:
+  Version bump. Rename 2008.04.28 version to allow upgrade. Remove old.
+
+  18 Jul 2008; Christian Faulhammer <opfer@gentoo.org>
+  jtagger-2008.04.28.ebuild:
+  stable x86, bug 231571
+
+  12 Jul 2008; Kenneth Prugh <ken69267@gentoo.org>
+  jtagger-2008.04.28.ebuild:
+  amd64 stable, bug #231571
+
+  12 Jul 2008; Serkan Kaba <serkan@gentoo.org>
+  +files/jtagger-2008.04.28-override-annotation.patch,
+  jtagger-2008.04.28.ebuild:
+  Fix compilation errors with Java 1.5. Reported by Kenneth Prugh
+  <ken69267@gentoo.org> in bug #231571.
+
+  12 Jul 2008; Kenneth Prugh <ken69267@gentoo.org>
+  jtagger-2008.04.28.ebuild:
+  sun jdk 1.5 regression, reverting to ~amd64
+
+  12 Jul 2008; Kenneth Prugh <ken69267@gentoo.org>
+  jtagger-2008.04.28.ebuild:
+  amd64 stable, bug #231571
+
+  12 Jun 2008; Serkan Kaba <serkan@gentoo.org> -jtagger-2007.02.ebuild:
+  Remove old version.
+
+  10 Jun 2008; Kenneth Prugh <ken69267@gentoo.org> jtagger-2008.01.ebuild:
+  amd64 stable, bug #220191
+
+*jtagger-2008.04.28 (28 May 2008)
+
+  28 May 2008; Serkan Kaba <serkan@gentoo.org> +jtagger-2008.04.28.ebuild:
+  Version bump. Fixes bug #220189.
+
+  09 May 2008; Christian Faulhammer <opfer@gentoo.org>
+  jtagger-2008.01.ebuild:
+  stable x86, bug 220191
+
+*jtagger-2008.01 (19 Mar 2008)
+
+  19 Mar 2008; Vlastimil Babka <caster@gentoo.org> +jtagger-2008.01.ebuild:
+  Version bump based on Serkan Kaba's ebuild, bug #213954. Adding ~amd64.
+
+  10 Jan 2008; Vlastimil Babka <caster@gentoo.org> jtagger-2007.02.ebuild:
+  Restrict junit dependency.
+
+*jtagger-2007.02 (09 May 2007)
+
+  09 May 2007; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
+  +jtagger-2007.02.ebuild:
+  Initial addition. Thanks to Serkan Kaba <serkan_kaba@yahoo.com> for the
+  initial ebuild. Fixes bug #173994.
+

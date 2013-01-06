@@ -1,0 +1,29 @@
+IMLIB_LIBS=$(shell exec pkg-config --libs imlib)
+IMLIB_CFLAGS=$(shell exec pkg-config --cflags imlib)
+
+all: pogo pogo-remote
+
+pogo: pogo.c
+	$(CC) $(LDFLAGS) $(CFLAGS) $(IMLIB_CFLAGS) -o pogo pogo.c -Wall $(IMLIB_LIBS)
+
+pogo-remote: pogo-remote.c
+	$(CC) $(LDFLAGS) $(CFLAGS) $(IMLIB_CFLAGS) -o pogo-remote pogo-remote.c -Wall 
+
+install: 
+	mkdir -p ${DESTDIR}/usr/bin
+	mkdir -p ${DESTDIR}/usr/share/pogo-2.2
+	mkdir -p ${DESTDIR}/usr/share/pogo-2.2/images
+	mkdir -p ${DESTDIR}/usr/share/pogo-2.2/scripts
+	mkdir -p ${DESTDIR}/usr/share/pogo-2.2/configs
+
+	cp images/*.jpg ${DESTDIR}/usr/share/pogo-2.2/images/
+	cp scripts/*.pogo ${DESTDIR}/usr/share/pogo-2.2/scripts/
+	cp configs/*.config ${DESTDIR}/usr/share/pogo-2.2/configs/
+
+	cp pogo ${DESTDIR}/usr/bin/
+	cp pogo-remote ${DESTDIR}/usr/bin
+
+clean:
+	rm -rf pogo
+	rm -rf pogo-remote
+

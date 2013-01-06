@@ -1,0 +1,19 @@
+# ChangeLog for dev-java/jnlp-api
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-api/ChangeLog,v 1.3 2011/10/09 17:01:04 maekke Exp $
+
+  09 Oct 2011; Markus Meier <maekke@gentoo.org> jnlp-api-6.0.18.ebuild:
+  x86 stable, bug #382695
+
+  16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> jnlp-api-6.0.18.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #382695 filed by Vlastimil "Caster" Babka in bug
+  #382695.
+
+*jnlp-api-6.0.18 (09 Sep 2011)
+
+  09 Sep 2011; Vlastimil Babka <caster@gentoo.org> +jnlp-api-6.0.18.ebuild,
+  +metadata.xml:
+  New package for stuff that builds against JNLP API classes javax/jnlp, to
+  replace the broken dev-java/netx, bug #382351.
+

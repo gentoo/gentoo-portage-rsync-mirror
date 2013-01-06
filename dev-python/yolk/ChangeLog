@@ -1,0 +1,73 @@
+# ChangeLog for dev-python/yolk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk/ChangeLog,v 1.15 2012/03/13 03:04:52 floppym Exp $
+
+  13 Mar 2012; Mike Gilbert <floppym@gentoo.org> yolk-0.4.3.ebuild:
+  Use EAPI=4. Don't inherit unused eclass. Fix dependencies. Patch by Arfrever.
+
+*yolk-0.4.3 (09 Mar 2012)
+
+  09 Mar 2012; Patrick Lauer <patrick@gentoo.org> +yolk-0.4.3.ebuild:
+  Bump for 405605
+
+  20 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> -yolk-0.4.1.ebuild:
+  Removed older version
+
+*yolk-0.4.1-r1 (20 Jul 2011)
+
+  20 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> +yolk-0.4.1-r1.ebuild,
+  +files/yolk-0.4.1_entry_map.patch:
+  Added patch to fix bug #335335 --entry-map crashes.
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #28480
+
+  30 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  yolk-0.4.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  24 Apr 2009; Patrick Lauer <patrick@gentoo.org> -yolk-0.3.0.ebuild:
+  Remove old
+
+*yolk-0.4.1 (15 Feb 2009)
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> +yolk-0.4.1.ebuild:
+  Bump to 0.4.1
+
+*yolk-0.3.0 (17 Jul 2007)
+
+  17 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> -yolk-0.2.0.ebuild,
+  +yolk-0.3.0.ebuild:
+  Version bump. Removed obsolete version.
+
+*yolk-0.2.0 (07 Jul 2007)
+
+  07 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> -yolk-0.1.0.ebuild,
+  +yolk-0.2.0.ebuild:
+  Version bump, dropped obsolete version.
+
+  23 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org> yolk-0.1.0.ebuild:
+  Fixed deps, moved NEED_PYTHON before inherit.
+
+  02 Jun 2007; Christoph Mende <angelos@gentoo.org> yolk-0.1.0.ebuild:
+  Added ~amd64 wrt bug 179059
+
+*yolk-0.1.0 (18 May 2007)
+
+  18 May 2007; Rob Cakebread <pythonhead@gentoo.org>
+  -files/yolk-0.0.7-bad-egg.patch, -yolk-0.0.7-r1.ebuild,
+  +yolk-0.1.0.ebuild:
+  Version bump, removed old version.
+
+*yolk-0.0.7-r1 (23 Apr 2007)
+
+  23 Apr 2007; Rob Cakebread <pythonhead@gentoo.org>
+  +files/yolk-0.0.7-bad-egg.patch, +yolk-0.0.7-r1.ebuild:
+  Patch to skip corrupt eggs. Removed previous version.
+
+*yolk-0.0.7 (23 Apr 2007)
+
+  23 Apr 2007; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +yolk-0.0.7.ebuild:
+  Initial commit.
+

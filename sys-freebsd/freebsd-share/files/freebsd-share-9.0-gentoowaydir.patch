@@ -1,0 +1,16 @@
+diff -Nur etc.orig/mtree/BSD.usr.dist etc/mtree/BSD.usr.dist
+--- etc.orig/mtree/BSD.usr.dist	2012-01-03 12:26:10.000000000 +0900
++++ etc/mtree/BSD.usr.dist	2012-01-27 21:50:47.941466067 +0900
+@@ -25,12 +25,6 @@
+ 	i18n
+ 	..
+     ..
+-    lib32
+-	dtrace
+-	..
+-	i18n
+-	..
+-    ..
+     libdata
+         gcc
+         ..

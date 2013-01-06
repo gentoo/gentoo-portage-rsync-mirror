@@ -1,0 +1,11 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=Web Server vulnerability scanner.
+EAPI=3
+HOMEPAGE=http://www.cirt.net/code/nikto.shtml
+IUSE=ssl
+KEYWORDS=~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos
+LICENSE=GPL-2
+RDEPEND=dev-lang/perl >=net-analyzer/nmap-3.00 ssl? ( dev-libs/openssl dev-perl/Net-SSLeay )
+SLOT=0
+SRC_URI=http://www.cirt.net/source/nikto/nikto-2.03.tar.bz2
+_md5_=654e6f38702d21c3d025b805f087d018

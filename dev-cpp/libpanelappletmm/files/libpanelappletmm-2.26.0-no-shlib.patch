@@ -1,0 +1,85 @@
+Index: libpanelappletmm-2.26.0/libpanelapplet/libpanelappletmm/factory.cc
+===================================================================
+--- libpanelappletmm-2.26.0.orig/libpanelapplet/libpanelappletmm/factory.cc
++++ libpanelappletmm-2.26.0/libpanelapplet/libpanelappletmm/factory.cc
+@@ -30,11 +30,6 @@ int factory_main_closure(const Glib::ust
+   return panel_applet_factory_main_closure(iid.c_str(), Applet::get_type(), closure);
+ }
+ 
+-Bonobo_Unknown shlib_factory_closure(const Glib::ustring& iid, PortableServer_POA poa, void * impl_ptr, GClosure * closure, CORBA_Environment * ev)
+-{
+-  return panel_applet_shlib_factory_closure(iid.c_str(), Applet::get_type(), poa, impl_ptr, closure, ev);
+-}
+-
+ } // namespace Panel
+ } // namespace Gnome
+ 
+Index: libpanelappletmm-2.26.0/libpanelapplet/libpanelappletmm/factory.h
+===================================================================
+--- libpanelappletmm-2.26.0.orig/libpanelapplet/libpanelappletmm/factory.h
++++ libpanelappletmm-2.26.0/libpanelapplet/libpanelappletmm/factory.h
+@@ -83,13 +83,8 @@ bool applet_factory_callback(PanelApplet
+ template<class DerivedApplet>
+ int factory_main(const Glib::ustring& iid);
+ 
+-template<class DerivedApplet>
+-Bonobo_Unknown shlib_factory(const Glib::ustring& iid, PortableServer_POA poa, void* impl_ptr, const SlotFactory& slot, CORBA_Environment* ev);
+-
+ int factory_main_closure(const Glib::ustring& iid, GClosure *closure);
+ 
+-Bonobo_Unknown shlib_factory_closure(const Glib::ustring& iid, PortableServer_POA poa, void* impl_ptr, GClosure* closure, CORBA_Environment* ev);
+-
+ 
+ template<class DerivedApplet>
+ int factory_main(const Glib::ustring& iid)
+@@ -99,14 +94,6 @@ int factory_main(const Glib::ustring& ii
+   return panel_applet_factory_main( iid.c_str(), Applet::get_type(), SignalProxy_Factory::c_callback, &proxy);
+ }
+ 
+-template<class DerivedApplet>
+-Bonobo_Unknown shlib_factory(const Glib::ustring& iid, PortableServer_POA poa, void* impl_ptr, const SlotFactory& slot, CORBA_Environment* ev)
+-{
+-  SignalProxy_Factory proxy( sigc::ptr_fun(&applet_factory_callback<DerivedApplet>) );
+-
+-  return panel_applet_shlib_factory( iid.c_str(), Applet::get_type(), poa, impl_ptr, SignalProxy_Factory::c_callback, &proxy, ev);
+-}
+-
+ } // namespace Panel
+ } // namespace Gnome
+ 
+Index: libpanelappletmm-2.26.0/libpanelapplet/src/libpanelapplet_methods.defs
+===================================================================
+--- libpanelappletmm-2.26.0.orig/libpanelapplet/src/libpanelapplet_methods.defs
++++ libpanelappletmm-2.26.0/libpanelapplet/src/libpanelapplet_methods.defs
+@@ -371,31 +371,4 @@
+   )
+ )
+ 
+-(define-function panel_applet_shlib_factory
+-  (c-name "panel_applet_shlib_factory")
+-  (return-type "Bonobo_Unknown")
+-  (parameters
+-    '("const-char*" "iid")
+-    '("GType" "applet_type")
+-    '("PortableServer_POA" "poa")
+-    '("gpointer" "impl_ptr")
+-    '("PanelAppletFactoryCallback" "callback")
+-    '("gpointer" "user_data")
+-    '("CORBA_Environment*" "ev")
+-  )
+-)
+-
+-(define-function panel_applet_shlib_factory_closure
+-  (c-name "panel_applet_shlib_factory_closure")
+-  (return-type "Bonobo_Unknown")
+-  (parameters
+-    '("const-char*" "iid")
+-    '("GType" "applet_type")
+-    '("PortableServer_POA" "poa")
+-    '("gpointer" "impl_ptr")
+-    '("GClosure*" "closure")
+-    '("CORBA_Environment*" "ev")
+-  )
+-)
+-
+ 

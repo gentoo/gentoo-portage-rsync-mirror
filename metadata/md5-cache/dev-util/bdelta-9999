@@ -1,0 +1,9 @@
+DEFINED_PHASES=compile install unpack
+DEPEND=dev-vcs/git
+DESCRIPTION=Binary Delta - Efficient difference algorithm and format
+EAPI=4
+HOMEPAGE=http://bdelta.org
+LICENSE=GPL-2
+SLOT=0
+_eclasses_=git-2	15733ab6a6feb34af9837b41623c2bad	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=040d2c8f1305a2f92f8e4860b7da57b0

@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile configure install unpack
+DEPEND=doc? ( app-text/asciidoc ) app-arch/unzip dev-vcs/git
+DESCRIPTION=Small footprint implementation of Tcl programming language
+EAPI=4
+HOMEPAGE=http://jim.tcl.tk
+IUSE=doc static-libs
+LICENSE=LGPL-2
+SLOT=0
+_eclasses_=git-2	15733ab6a6feb34af9837b41623c2bad
+_md5_=2f8ba7fdbe839b7dfe8d19a667df279d

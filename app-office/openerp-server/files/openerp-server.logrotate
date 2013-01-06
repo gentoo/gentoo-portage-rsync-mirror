@@ -1,0 +1,10 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-server/files/openerp-server.logrotate,v 1.1 2011/01/14 10:32:36 elvanor Exp $
+
+/var/log/openerp/openerp-server.log {
+ monthly
+ create 660 openerp openerp
+ missingok
+ copytruncate
+}

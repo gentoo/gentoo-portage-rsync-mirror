@@ -1,0 +1,8 @@
+#!/bin/bash
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+# skip their stupid [ -f `which java` ] test, which will always fail on Gentoo
+export APP_SKIP_J2SE_TEST=1
+
+cd /opt/sqldeveloper/sqldeveloper/bin && bash sqldeveloper $@

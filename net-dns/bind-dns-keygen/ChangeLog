@@ -1,0 +1,23 @@
+# ChangeLog for net-dns/bind-dns-keygen
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-dns-keygen/ChangeLog,v 1.4 2012/12/06 19:59:19 ulm Exp $
+
+  06 Dec 2012; Ulrich Müller <ulm@gentoo.org> bind-dns-keygen-9.3.2.39.ebuild,
+  bind-dns-keygen-9.3.2.39-r1.ebuild:
+  Fix LICENSE, bug 446294.
+
+*bind-dns-keygen-9.3.2.39-r1 (16 Jun 2010)
+
+  16 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  +bind-dns-keygen-9.3.2.39-r1.ebuild:
+  Respect LDFLAGS wrt bug #309501. Keyworded for amd64
+
+  31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Give up maintainership; reassign to maintainer-needed.
+
+*bind-dns-keygen-9.3.2.39 (05 Sep 2006)
+
+  05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +bind-dns-keygen-9.3.2.39.ebuild:
+  A simple BIND key generator, needed for system-config-bind
+

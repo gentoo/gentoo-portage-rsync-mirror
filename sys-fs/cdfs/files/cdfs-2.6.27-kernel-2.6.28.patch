@@ -1,0 +1,11 @@
+--- cddata.c.orig	2009-02-02 16:37:43.000000000 +0100
++++ cddata.c	2009-02-02 16:38:03.000000000 +0100
+@@ -82,7 +82,7 @@
+   .mmap             = generic_file_mmap
+ #else
+   .mmap             = generic_file_readonly_mmap,
+-  .sendfile         = generic_file_sendfile
++  .splice_read      = generic_file_splice_read
+ #endif
+ };
+ 

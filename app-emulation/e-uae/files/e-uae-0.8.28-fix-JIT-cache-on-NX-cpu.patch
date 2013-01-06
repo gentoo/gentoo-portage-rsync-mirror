@@ -1,0 +1,24 @@
+diff -Naur e-uae-0.8.28.orig/src/od-generic/memory.c e-uae-0.8.28/src/od-generic/memory.c
+--- e-uae-0.8.28.orig/src/od-generic/memory.c	2005-01-07 05:25:04.000000000 +0300
++++ e-uae-0.8.28/src/od-generic/memory.c	2006-06-14 20:55:33.000000000 +0400
+@@ -14,6 +14,9 @@
+ #ifdef JIT
+ 
+ #include <sys/mman.h>
++#include <malloc.h>
++#include <stdlib.h>
++#include <unistd.h>
+ 
+ /*
+  * Allocate executable memory for JIT cache
+@@ -22,7 +25,9 @@
+ {
+    void *cache;
+ 
+-   if ((cache = malloc (size)))
++   size = size < getpagesize() ? getpagesize() : size;
++
++   if ((cache = valloc (size)))
+ 	mprotect (cache, size, PROT_READ|PROT_WRITE|PROT_EXEC);
+ 
+    return cache;

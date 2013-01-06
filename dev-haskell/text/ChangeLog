@@ -1,0 +1,88 @@
+# ChangeLog for dev-haskell/text
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.21 2012/12/10 21:53:12 slyfox Exp $
+
+  10 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> text-0.11.2.2.ebuild:
+  stable on alpha/ia64/sparc (bug #421351)
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> text-0.11.2.3.ebuild:
+  Stable for ppc, wrt bug #441158
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> text-0.11.2.2.ebuild:
+  Stable for ppc64, wrt bug #421351
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> text-0.11.2.2.ebuild:
+  Stable for ppc, wrt bug #421351
+
+  28 Oct 2012; Sergei Trofimovich <slyfox@gentoo.org> text-0.11.2.3.ebuild:
+  Restricted tests (broken due to Cabal bug). Fixes bug #436604 by Olivier
+  Huber.
+
+  25 Sep 2012; Andreas Schuerch <nativemad@gentoo.org> text-0.11.2.2.ebuild:
+  x86 stable, see bug 421351
+
+*text-0.11.2.3 (14 Sep 2012)
+
+  14 Sep 2012; Mark Wright <gienah@gentoo.org> +text-0.11.2.3.ebuild:
+  Bump text to 0.11.2.3
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> text-0.11.1.1.ebuild,
+  text-0.11.1.12.ebuild, text-0.11.1.13-r1.ebuild, text-0.11.2.0.ebuild,
+  text-0.11.2.1.ebuild, text-0.11.2.2.ebuild:
+  move dev-haskell/text/text-0.11.1.1.ebuild ebuild to mirror://hackage
+
+  07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> text-0.11.2.2.ebuild:
+  Stable for amd64, wrt bug #421351
+
+*text-0.11.2.2 (16 Jun 2012)
+
+  16 Jun 2012; Mark Wright <gienah@gentoo.org> +text-0.11.2.2.ebuild:
+  Bump text to 0.11.2.2
+
+*text-0.11.2.1 (26 May 2012)
+
+  26 May 2012; Mark Wright <gienah@gentoo.org> +text-0.11.2.1.ebuild:
+  Bump text to 0.11.2.1
+
+*text-0.11.2.0 (14 Apr 2012)
+
+  14 Apr 2012; Mark Wright <gienah@gentoo.org> +text-0.11.2.0.ebuild:
+  Bump text to 0.11.2.0
+
+  25 Mar 2012; Mark Wright <gienah@gentoo.org> text-0.11.1.13-r1.ebuild:
+  Loosen test dependency on test-framework.
+
+  18 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> text-0.11.1.13-r1.ebuild:
+  Leverage lower bound for dev-haskell/test-framework depend.
+
+*text-0.11.1.13-r1 (06 Mar 2012)
+
+  06 Mar 2012; Mark Wright <gienah@gentoo.org> +text-0.11.1.13-r1.ebuild:
+  Bump text to 0.11.1.13-r1 (as in gentoo-haskell overlay), sync keywords with
+  its reverse dependency darcs-2.5.2.
+
+  04 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> text-0.11.1.12.ebuild:
+  Keyworded ~alpha/~ia64/~ppc/~ppc64/~sparc (dev-vcs/darcs-2.5 depend)
+
+  12 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org> text-0.11.1.12.ebuild:
+  Restored accidentally dropped ~x86-fbsd ~x86-macos keywords.
+
+*text-0.11.1.12 (12 Jan 2012)
+
+  12 Jan 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/text-0.11.1.6-disable-tests-that-fail-in-non-latin1-locales.patch,
+  +text-0.11.1.12.ebuild:
+  Version bump.
+
+  13 Oct 2011; Naohiro Aota <naota@gentoo.org> text-0.11.1.1.ebuild:
+  Add ~x86-fbsd
+
+  26 Sep 2011; Fabian Groffen <grobian@gentoo.org> text-0.11.1.1.ebuild:
+  Marked ~x86-macos
+
+*text-0.11.1.1 (12 Jun 2011)
+
+  12 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> +text-0.11.1.1.ebuild,
+  +metadata.xml:
+  Initial version. New package: library for efficient packed Unicode text type
+  string representation.

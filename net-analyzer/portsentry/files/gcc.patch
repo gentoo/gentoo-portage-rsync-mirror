@@ -1,0 +1,13 @@
+diff -urN portsentry_beta-old/portsentry.c portsentry_beta/portsentry.c
+--- portsentry_beta-old/portsentry.c	2003-09-13 21:46:13.000000000 -0400
++++ portsentry_beta/portsentry.c	2003-09-13 21:46:27.000000000 -0400
+@@ -1581,8 +1581,7 @@
+ Usage (void)
+ {
+   printf ("PortSentry - Port Scan Detector.\n");
+-  printf ("Copyright 1997-2003 Craig H. Rowland <craigrowland at users dot 
+-sourceforget dot net>\n");
++  printf ("Copyright 1997-2003 Craig H. Rowland <craigrowland at users dot sourceforget dot net>\n");
+   printf ("Licensing restrictions apply. Please see documentation\n");
+   printf ("Version: %s\n\n", VERSION);
+ #ifdef SUPPORT_STEALTH

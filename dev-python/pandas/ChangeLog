@@ -1,0 +1,45 @@
+# ChangeLog for dev-python/pandas
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.9 2012/12/29 13:26:25 xarthisius Exp $
+
+*pandas-0.10.0 (29 Dec 2012)
+
+  29 Dec 2012; Kacper Kowalik <xarthisius@gentoo.org> +pandas-0.10.0.ebuild:
+  Version bump
+
+*pandas-0.9.1 (23 Nov 2012)
+
+  23 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> +pandas-0.9.1.ebuild:
+  Version bump
+
+*pandas-0.9.0 (29 Oct 2012)
+
+  29 Oct 2012; Sébastien Fabbro <bicatali@gentoo.org> +pandas-0.9.0.ebuild,
+  -pandas-0.7.3.ebuild:
+  Version bump
+
+  18 Oct 2012; Patrick Lauer <patrick@gentoo.org> pandas-0.7.3.ebuild,
+  pandas-0.8.1.ebuild:
+  Restricting CPython-3.3
+
+  09 Aug 2012; Patrick Lauer <patrick@gentoo.org> pandas-0.8.1.ebuild:
+  Restrict jython
+
+*pandas-0.8.1 (30 Jul 2012)
+
+  30 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> +pandas-0.8.1.ebuild:
+  Version bump
+
+  21 Jun 2012; Sébastien Fabbro <bicatali@gentoo.org> pandas-0.7.3.ebuild:
+  Restrict pypy
+
+  08 May 2012; Sébastien Fabbro <bicatali@gentoo.org> pandas-0.7.3.ebuild:
+  Remove scikits_statsmodels as dependency to get rid of circular dependency.
+  Allow python-3
+
+*pandas-0.7.3 (20 Apr 2012)
+
+  20 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> +pandas-0.7.3.ebuild,
+  +metadata.xml:
+  Initial import from the science overlay + version bump. Added doc, testing
+  and extra dependencies.

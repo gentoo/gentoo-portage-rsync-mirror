@@ -1,0 +1,80 @@
+# ChangeLog for dev-db/apgdiff
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/apgdiff/ChangeLog,v 1.14 2012/09/21 17:43:00 fordfrog Exp $
+
+*apgdiff-2.4 (21 Sep 2012)
+
+  21 Sep 2012; Miroslav Šulc <fordfrog@gentoo.org> +apgdiff-2.4.ebuild:
+  version bump
+
+*apgdiff-2.3 (22 Oct 2010)
+
+  22 Oct 2010; Miroslav Šulc <fordfrog@gentoo.org> +apgdiff-2.3.ebuild:
+  Version bump
+
+*apgdiff-2.2.2 (09 Oct 2010)
+
+  09 Oct 2010; Miroslav Šulc <fordfrog@gentoo.org> +apgdiff-2.2.2.ebuild:
+  Version bump
+
+*apgdiff-2.2.1 (03 Oct 2010)
+
+  03 Oct 2010; Miroslav Šulc <fordfrog@gentoo.org> -apgdiff-2.2.ebuild,
+  +apgdiff-2.2.1.ebuild:
+  Version bump
+
+*apgdiff-2.2 (02 Oct 2010)
+
+  02 Oct 2010; Miroslav Šulc <fordfrog@gentoo.org> -apgdiff-2.0.2.ebuild,
+  -apgdiff-2.1.ebuild, +apgdiff-2.2.ebuild:
+  Version bump, also removed older versions
+
+  01 Oct 2010; Miroslav Šulc <fordfrog@gentoo.org> apgdiff-2.1.ebuild:
+  Updated application homepage information
+
+*apgdiff-2.1 (30 Sep 2010)
+
+  30 Sep 2010; Miroslav Šulc <fordfrog@gentoo.org> +apgdiff-2.1.ebuild:
+  Version bump
+
+*apgdiff-2.0.2 (16 Sep 2010)
+
+  16 Sep 2010; Miroslav Šulc <fordfrog@gentoo.org> -apgdiff-2.0.1.ebuild,
+  +apgdiff-2.0.2.ebuild:
+  Version bump
+
+*apgdiff-2.0.1 (16 Sep 2010)
+
+  16 Sep 2010; Miroslav Šulc <fordfrog@gentoo.org> -apgdiff-2.0.ebuild,
+  +apgdiff-2.0.1.ebuild:
+  Version bump
+
+*apgdiff-2.0 (13 Sep 2010)
+
+  13 Sep 2010; Miroslav Šulc <fordfrog@gentoo.org>
+  -apgdiff-2.0_beta2.ebuild, +apgdiff-2.0.ebuild:
+  Version bump
+
+*apgdiff-2.0_beta2 (23 Jul 2010)
+
+  23 Jul 2010; Miroslav Šulc <fordfrog@gentoo.org>
+  -apgdiff-2.0_beta1.ebuild, +apgdiff-2.0_beta2.ebuild:
+  Version bump
+
+*apgdiff-2.0_beta1 (23 Jul 2010)
+
+  23 Jul 2010; Miroslav Šulc <fordfrog@gentoo.org> -apgdiff-1.3.ebuild,
+  +apgdiff-2.0_beta1.ebuild:
+  Version bump. Removed version 1.3
+
+*apgdiff-1.4 (22 Nov 2009)
+
+  22 Nov 2009; Miroslav Šulc <fordfrog@gentoo.org> +apgdiff-1.4.ebuild:
+  Version bump
+
+*apgdiff-1.3 (22 Oct 2008)
+
+  22 Oct 2008; Miroslav Šulc <fordfrog@gentoo.org> +metadata.xml,
+  +apgdiff-1.3.ebuild:
+  New ebuild (moved from java-overlay)
+

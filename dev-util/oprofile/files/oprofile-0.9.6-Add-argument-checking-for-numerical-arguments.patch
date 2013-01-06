@@ -1,0 +1,74 @@
+commit 96c0ac657c59609d58c47d7ff2206d85a970f20b
+Author: Maynard johnson <maynardj@us.ibm.com>
+Date:   Wed Jan 5 21:16:08 2011 +0000
+
+    Add argument checking for numerical arguments
+
+diff --git a/utils/opcontrol b/utils/opcontrol
+index dc85c53..8c64af9 100644
+--- a/utils/opcontrol
++++ b/utils/opcontrol
+@@ -49,6 +49,31 @@ error_if_empty()
+ 	fi
+ }
+ 
++# guess_number_base() checks if string is a valid octal(8), hexidecimal(16),
++# or decimal number(10). The value is returned in $?. Returns 0, if string
++# isn't a octal, hexidecimal, or decimal number.
++guess_number_base()
++{
++	if [[ "$1" =~ ^0[0-7]*$ ]] ; then 
++		return 8;
++	elif [[ "$1" =~ ^0x[0-9a-fA-F]+$ ]] ; then
++		return 16;
++	elif [[ "$1" =~ ^[1-9][0-9]*$ ]] ; then
++		return 10;
++	else
++		return 0;
++	fi
++}
++
++# check value is a valid number
++error_if_not_number()
++{
++	guess_number_base $2
++	if test "$?" -eq 0 ; then
++		echo "Argument for $1, $2, is not a valid number." >&2
++		exit 1
++	fi
++}
+ 
+ # rm_device arguments $1=file_name
+ rm_device()
+@@ -754,6 +779,7 @@ do_options()
+ 				;;
+ 			--buffer-size)
+ 				error_if_empty $arg $val
++				error_if_not_number $arg $val
+ 				BUF_SIZE=$val
+ 				DO_SETUP=yes
+ 				;;
+@@ -763,6 +789,7 @@ do_options()
+ 					exit 1
+ 				fi
+ 				error_if_empty $arg $val
++				error_if_not_number $arg $val
+ 				BUF_WATERSHED=$val
+ 				DO_SETUP=yes
+ 				;;
+@@ -772,6 +799,7 @@ do_options()
+ 					exit 1
+ 				fi
+ 				error_if_empty $arg $val
++				error_if_not_number $arg $val
+ 				CPU_BUF_SIZE=$val
+ 				DO_SETUP=yes
+ 				;;
+@@ -802,6 +830,7 @@ do_options()
+ 					echo "Call-graph profiling unsupported on this kernel/hardware" >&2
+ 					exit 1
+ 				fi
++				error_if_not_number $arg $val
+ 				CALLGRAPH=$val
+ 				DO_SETUP=yes
+ 				;;

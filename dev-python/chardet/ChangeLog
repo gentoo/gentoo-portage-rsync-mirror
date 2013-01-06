@@ -1,0 +1,74 @@
+# ChangeLog for dev-python/chardet
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.20 2010/05/11 21:04:07 ranger Exp $
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> chardet-2.0.1.ebuild:
+  stable ppc64, bug 305183
+
+  16 Apr 2010; Brent Baude <ranger@gentoo.org> chardet-2.0.1.ebuild:
+  Marking chardet-2.0.1 ~ppc64 for bug 300741
+
+  05 Apr 2010; Raúl Porcel <armin76@gentoo.org> chardet-2.0.1.ebuild:
+  sparc stable wrt #305183
+
+  15 Mar 2010; nixnut <nixnut@gentoo.org> chardet-2.0.1.ebuild:
+  ppc stable #305183
+
+  08 Mar 2010; Markos Chandras <hwoarang@gentoo.org> chardet-2.0.1.ebuild:
+  Stable on amd64 wrt bug #305183
+
+  02 Mar 2010; Jeroen Roovers <jer@gentoo.org> chardet-2.0.1.ebuild:
+  Stable for HPPA (bug #305183).
+
+  23 Feb 2010; Christian Faulhammer <fauli@gentoo.org> chardet-2.0.1.ebuild:
+  stable x86, bug 305183
+
+  13 Jan 2010; Jeroen Roovers <jer@gentoo.org> chardet-2.0.1.ebuild:
+  Marked ~hppa (bug #300741).
+
+*chardet-2.0.1 (12 Jan 2010)
+
+  12 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +chardet-2.0.1.ebuild:
+  Version bump (bug #300743).
+
+  09 Jan 2010; Raúl Porcel <armin76@gentoo.org> chardet-1.0.ebuild,
+  chardet-1.0.1.ebuild:
+  Add ~arm
+
+  05 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> chardet-1.0.1.ebuild:
+  Keywording for ppc, bug 291423
+
+  10 Oct 2009; Fabian Groffen <grobian@gentoo.org> chardet-1.0.1.ebuild:
+  Merge from Prefix
+
+  18 Sep 2009; Markus Meier <maekke@gentoo.org> chardet-1.0.1.ebuild:
+  amd64 stable, bug #284999
+
+  16 Sep 2009; Christian Faulhammer <fauli@gentoo.org> chardet-1.0.1.ebuild:
+  stable x86, bug 284999
+
+  13 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  chardet-1.0.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  17 Jul 2008; Alexis Ballier <aballier@gentoo.org> chardet-1.0.1.ebuild:
+  keyword ~x86-fbsd
+
+*chardet-1.0.1 (05 Jun 2008)
+
+  05 Jun 2008; Tiziano Müller <dev-zero@gentoo.org> +chardet-1.0.1.ebuild:
+  Version bump
+
+  06 Feb 2007; Simon Stelling <blubb@gentoo.org> chardet-1.0.ebuild:
+  stable on amd64; bug 163608
+
+  25 Jan 2007; Christian Faulhammer <opfer@gentoo.org> chardet-1.0.ebuild:
+  stable x86; bug #163608
+
+*chardet-1.0 (01 Dec 2006)
+
+  01 Dec 2006; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +chardet-1.0.ebuild:
+  Initial import, bug 138324, thanks to Zhang Le
+

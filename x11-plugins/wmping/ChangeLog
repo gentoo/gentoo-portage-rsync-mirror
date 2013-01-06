@@ -1,0 +1,13 @@
+# ChangeLog for x11-plugins/wmping
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmping/ChangeLog,v 1.2 2008/01/19 21:18:58 drac Exp $
+
+  19 Jan 2008; Samuli Suominen <drac@gentoo.org> wmping-0.2.1.ebuild:
+  USE suid is there only to warn users, but it's basically useless with it
+  disabled. Enable it by default using EAPI=1.
+
+*wmping-0.2.1 (14 Jan 2008)
+
+  14 Jan 2008; Samuli Suominen <drac@gentoo.org> +wmping-0.2.1.ebuild:
+  Initial commit.
+

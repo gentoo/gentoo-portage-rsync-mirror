@@ -1,0 +1,201 @@
+use conntrack instead of state
+https://bugs.launchpad.net/ufw/+bug/1065297
+
+This is a version for ufw 0.31.1.
+diff --git a/conf/before.rules b/conf/before.rules
+index bc11f36..9917b87 100644
+--- a/conf/before.rules
++++ b/conf/before.rules
+@@ -22,12 +22,12 @@
+ -A ufw-before-output -o lo -j ACCEPT
+ 
+ # quickly process packets for which we already have a connection
+--A ufw-before-input -m state --state RELATED,ESTABLISHED -j ACCEPT
+--A ufw-before-output -m state --state RELATED,ESTABLISHED -j ACCEPT
++-A ufw-before-input -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
++-A ufw-before-output -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+ 
+ # drop INVALID packets (logs these in loglevel medium and higher)
+--A ufw-before-input -m state --state INVALID -j ufw-logging-deny
+--A ufw-before-input -m state --state INVALID -j DROP
++-A ufw-before-input -m conntrack --ctstate INVALID -j ufw-logging-deny
++-A ufw-before-input -m conntrack --ctstate INVALID -j DROP
+ 
+ # ok icmp codes
+ -A ufw-before-input -p icmp --icmp-type destination-unreachable -j ACCEPT
+diff --git a/conf/before6.rules b/conf/before6.rules
+index fb1a8f1..8b7e4ff 100644
+--- a/conf/before6.rules
++++ b/conf/before6.rules
+@@ -34,16 +34,16 @@
+ -A ufw6-before-input -p icmpv6 --icmpv6-type router-advertisement -m hl --hl-eq 255 -j ACCEPT
+ 
+ # quickly process packets for which we already have a connection
+--A ufw6-before-input -m state --state RELATED,ESTABLISHED -j ACCEPT
+--A ufw6-before-output -m state --state RELATED,ESTABLISHED -j ACCEPT
++-A ufw6-before-input -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
++-A ufw6-before-output -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+ 
+ # for multicast ping replies from link-local addresses (these don't have an
+ # associated connection and would otherwise be marked INVALID)
+ -A ufw6-before-input -p icmpv6 --icmpv6-type echo-reply -s fe80::/10 -j ACCEPT
+ 
+ # drop INVALID packets (logs these in loglevel medium and higher)
+--A ufw6-before-input -m state --state INVALID -j ufw6-logging-deny
+--A ufw6-before-input -m state --state INVALID -j DROP
++-A ufw6-before-input -m conntrack --ctstate INVALID -j ufw6-logging-deny
++-A ufw6-before-input -m conntrack --ctstate INVALID -j DROP
+ 
+ # ok icmp codes
+ -A ufw6-before-input -p icmpv6 --icmpv6-type destination-unreachable -j ACCEPT
+diff --git a/doc/ufw-framework.8 b/doc/ufw-framework.8
+index d9e3d5a..bfc83e2 100644
+--- a/doc/ufw-framework.8
++++ b/doc/ufw-framework.8
+@@ -167,9 +167,9 @@ Edit #CONFIG_PREFIX#/ufw/sysctl.conf to have:
+  net.ipv4.ip_forward=1
+ .TP
+ Add to the *filter section of #CONFIG_PREFIX#/ufw/before.rules:
+- \-A ufw\-before\-forward \-m state \-\-state RELATED,ESTABLISHED \\
++ \-A ufw\-before\-forward \-m conntrack \-\-ctstate RELATED,ESTABLISHED \\
+    \-j ACCEPT
+- \-A ufw\-before\-forward \-m state \-\-state NEW \-i eth0 \\
++ \-A ufw\-before\-forward \-m conntrack \-\-ctstate NEW \-i eth0 \\
+    \-d 10.0.0.2 \-p tcp \-\-dport 80 \-j ACCEPT
+ .TP
+ Add to the end of #CONFIG_PREFIX#/ufw/before.rules, after the *filter section:
+@@ -209,13 +209,13 @@ Edit #CONFIG_PREFIX#/ufw/sysctl.conf to have:
+   net.ipv4.ip_forward=1
+ .TP
+ Add to the *filter section of #CONFIG_PREFIX#/ufw/before.rules:
+- \-A ufw\-before\-forward \-m state \-\-state RELATED,ESTABLISHED \\
++ \-A ufw\-before\-forward \-m conntrack \-\-ctstate RELATED,ESTABLISHED \\
+    \-j ACCEPT
+ 
+- \-A ufw\-before\-forward \-i eth1 \-s 10.0.0.0/8 \-o eth0 \-m state \\
+-   \-\-state NEW \-j ACCEPT
++ \-A ufw\-before\-forward \-i eth1 \-s 10.0.0.0/8 \-o eth0 \-m conntrack \\
++   \-\-ctstate NEW \-j ACCEPT
+ 
+- \-A ufw\-before\-forward \-m state \-\-state NEW \-i eth0 \\
++ \-A ufw\-before\-forward \-m conntrack \-\-ctstate NEW \-i eth0 \\
+    \-d 10.0.0.2 \-p tcp \-\-dport 80 \-j ACCEPT
+ 
+  \-A ufw\-before\-forward \-o eth0 \-d 10.0.0.0/8 \-j REJECT
+diff --git a/src/backend_iptables.py b/src/backend_iptables.py
+index 340beba..4459a3b 100644
+--- a/src/backend_iptables.py
++++ b/src/backend_iptables.py
+@@ -551,7 +551,7 @@ class UFWBackendIptables(ufw.backend.UFWBackend):
+                 lstr = '%s -j LOG --log-prefix "[UFW %s] "' % (limit_args, \
+                        policy)
+                 if not pat_logall.search(s):
+-                    lstr = '-m state --state NEW ' + lstr
++                    lstr = '-m conntrack --ctstate NEW ' + lstr
+                 snippets[i] = pat_log.sub(r'\1-j \2\4', s)
+                 snippets.insert(i, pat_log.sub(r'\1-j ' + prefix + \
+                                                '-user-logging-' + suffix, s))
+@@ -567,9 +567,9 @@ class UFWBackendIptables(ufw.backend.UFWBackend):
+         pat_limit = re.compile(r' -j LIMIT')
+         for i, s in enumerate(snippets):
+             if pat_limit.search(s):
+-                tmp1 = pat_limit.sub(' -m state --state NEW -m recent --set', \
++                tmp1 = pat_limit.sub(' -m conntrack --ctstate NEW -m recent --set', \
+                                      s)
+-                tmp2 = pat_limit.sub(' -m state --state NEW -m recent' + \
++                tmp2 = pat_limit.sub(' -m conntrack --ctstate NEW -m recent' + \
+                                      ' --update --seconds 30 --hitcount 6' + \
+                                      ' -j ' + prefix + '-user-limit', s)
+                 tmp3 = pat_limit.sub(' -j ' + prefix + '-user-limit-accept', s)
+@@ -1178,12 +1178,12 @@ class UFWBackendIptables(ufw.backend.UFWBackend):
+                     prefix = "[UFW BLOCK] "
+                     if self.loglevels[level] < self.loglevels["medium"]:
+                         # only log INVALID in medium and higher
+-                        rules_t.append([c, ['-I', c, '-m', 'state', \
+-                                            '--state', 'INVALID', \
++                        rules_t.append([c, ['-I', c, '-m', 'conntrack', \
++                                            '--ctstate', 'INVALID', \
+                                             '-j', 'RETURN'] + largs, ''])
+                     else:
+-                        rules_t.append([c, ['-A', c, '-m', 'state', \
+-                                            '--state', 'INVALID', \
++                        rules_t.append([c, ['-A', c, '-m', 'conntrack', \
++                                            '--ctstate', 'INVALID', \
+                                             '-j', 'LOG', \
+                                             '--log-prefix', \
+                                             "[UFW AUDIT INVALID] "] + \
+@@ -1202,7 +1202,7 @@ class UFWBackendIptables(ufw.backend.UFWBackend):
+ 
+             # loglevel medium logs all new packets with limit
+             if self.loglevels[level] < self.loglevels["high"]:
+-                largs = ['-m', 'state', '--state', 'NEW'] + limit_args
++                largs = ['-m', 'conntrack', '--ctstate', 'NEW'] + limit_args
+ 
+             prefix = "[UFW AUDIT] "
+             for c in self.chains['before']:
+diff --git a/src/ufw-init-functions b/src/ufw-init-functions
+index f4783e7..c5e0319 100755
+--- a/src/ufw-init-functions
++++ b/src/ufw-init-functions
+@@ -251,15 +251,15 @@ ufw_start() {
+             # add tracking policy
+             if [ "$DEFAULT_INPUT_POLICY" = "ACCEPT" ]; then
+                 printf "*filter\n"\
+-"-A ufw${type}-track-input -p tcp -m state --state NEW -j ACCEPT\n"\
+-"-A ufw${type}-track-input -p udp -m state --state NEW -j ACCEPT\n"\
++"-A ufw${type}-track-input -p tcp -m conntrack --ctstate NEW -j ACCEPT\n"\
++"-A ufw${type}-track-input -p udp -m conntrack --ctstate NEW -j ACCEPT\n"\
+ "COMMIT\n" | $exe-restore -n || error="yes"
+             fi
+ 
+             if [ "$DEFAULT_OUTPUT_POLICY" = "ACCEPT" ]; then
+                 printf "*filter\n"\
+-"-A ufw${type}-track-output -p tcp -m state --state NEW -j ACCEPT\n"\
+-"-A ufw${type}-track-output -p udp -m state --state NEW -j ACCEPT\n"\
++"-A ufw${type}-track-output -p tcp -m conntrack --ctstate NEW -j ACCEPT\n"\
++"-A ufw${type}-track-output -p udp -m conntrack --ctstate NEW -j ACCEPT\n"\
+ "COMMIT\n" | $exe-restore -n || error="yes"
+             fi
+ 
+diff --git a/tests/check-requirements b/tests/check-requirements
+index dbb26ec..d3ad1f8 100755
+--- a/tests/check-requirements
++++ b/tests/check-requirements
+@@ -152,32 +152,32 @@ for i in "" 6; do
+     done
+ 
+     echo -n "hashlimit: "
+-    runcmd $exe -A $c -m hashlimit -m tcp -p tcp --dport 22 --hashlimit 1/min --hashlimit-mode srcip --hashlimit-name ssh -m state --state NEW -j ACCEPT
++    runcmd $exe -A $c -m hashlimit -m tcp -p tcp --dport 22 --hashlimit 1/min --hashlimit-mode srcip --hashlimit-name ssh -m conntrack --ctstate NEW -j ACCEPT
+ 
+     echo -n "limit: "
+     runcmd $exe -A $c -m limit --limit 3/min --limit-burst 10 -j ACCEPT
+ 
+     for j in NEW RELATED ESTABLISHED INVALID; do
+         echo -n "state ($j): "
+-        runcmd $exe -A $c -m state --state $j
++        runcmd $exe -A $c -m conntrack --ctstate $j
+     done
+ 
+     echo -n "state (new, recent set): "
+     if [ "$i" = "6" ]; then
+         echo "skipped -- IPv6 'limit' not supported by ufw yet"
+     else
+-        runcmd $exe -A $c -m state --state NEW -m recent --set
++        runcmd $exe -A $c -m conntrack --ctstate NEW -m recent --set
+     fi
+ 
+     echo -n "state (new, recent update): "
+     if [ "$i" = "6" ]; then
+         echo "skipped -- IPv6 'limit' not supported by ufw yet"
+     else
+-        runcmd $exe -A $c -m state --state NEW -m recent --update --seconds 30 --hitcount 6 -j ACCEPT
++        runcmd $exe -A $c -m conntrack --ctstate NEW -m recent --update --seconds 30 --hitcount 6 -j ACCEPT
+     fi
+ 
+     echo -n "state (new, limit): "
+-    runcmd $exe -A $c -m state --state NEW -m limit --limit 3/min --limit-burst 10 -j ACCEPT
++    runcmd $exe -A $c -m conntrack --ctstate NEW -m limit --limit 3/min --limit-burst 10 -j ACCEPT
+ 
+     echo -n "interface (input): "
+     runcmd $exe -A $c -i eth0 -j ACCEPT

@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/tweepy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tweepy/ChangeLog,v 1.1 2012/11/24 17:07:47 dastergon Exp $
+
+*tweepy-1.12 (24 Nov 2012)
+
+  24 Nov 2012; Pavlos Ratis <dastergon@gentoo.org> +metadata.xml,
+  +tweepy-1.12.ebuild:
+  New ebuild.

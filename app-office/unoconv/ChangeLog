@@ -1,0 +1,48 @@
+# ChangeLog for app-office/unoconv
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/ChangeLog,v 1.9 2012/12/31 14:16:29 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> unoconv-0.6.ebuild:
+  Add ~ppc, wrt bug #449220
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> unoconv-0.6.ebuild:
+  workaround for bug 399061
+
+  01 Nov 2012; Hans de Graaff <graaff@gentoo.org> -unoconv-20120327.ebuild,
+  -unoconv-20120522.ebuild:
+  Remove old versions and force downgrade to released version.
+
+*unoconv-0.6 (31 Oct 2012)
+
+  31 Oct 2012; Hans de Graaff <graaff@gentoo.org> +unoconv-0.6.ebuild:
+  Add latest released version. Currenty overshadowed, after testing the older
+  versions will be removed, forcing a downgrade.
+
+  05 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Whitespace in metadata.xml
+
+*unoconv-20120522 (05 Jun 2012)
+
+  05 Jun 2012; Hans de Graaff <graaff@gentoo.org> +unoconv-20120522.ebuild,
+  metadata.xml:
+  Version bump, fixes bug 417719. Install additional docs. Add myself as
+  co-maintainer.
+
+  31 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> unoconv-20120327.ebuild,
+  unoconv-99999999.ebuild:
+  Add blocker on app-text/odt2txt which is different approach for the solution
+  provided here. Wrt bug#410057.
+
+*unoconv-20120327 (27 Mar 2012)
+
+  27 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> +unoconv-20120327.ebuild,
+  -unoconv-20110923.ebuild:
+  Version bump to new snapshot. Trying to solve bug#386481.
+
+*unoconv-99999999 (23 Sep 2011)
+*unoconv-20110923 (23 Sep 2011)
+
+  23 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +unoconv-20110923.ebuild, +unoconv-99999999.ebuild, +files/timeout.patch,
+  +metadata.xml:
+  Initial commit. Fixes bug #262083.

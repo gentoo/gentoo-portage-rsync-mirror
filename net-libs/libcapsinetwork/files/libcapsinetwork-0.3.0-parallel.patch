@@ -1,0 +1,12 @@
+diff -urN libcapsinetwork-0.3.0.old/src/Makefile.am libcapsinetwork-0.3.0/src/Makefile.am
+--- libcapsinetwork-0.3.0.old/src/Makefile.am	2004-07-15 05:39:28.000000000 -0400
++++ libcapsinetwork-0.3.0/src/Makefile.am	2007-10-10 07:09:59.000000000 -0400
+@@ -8,7 +8,7 @@
+ 
+ noinst_PROGRAMS = exampleserver
+ exampleserver_SOURCES = server.cpp
+-exampleserver_LDADD = -L. -lcapsinetwork
++exampleserver_LDADD = ./libcapsinetwork.la
+ exampleserverincdir = .
+ 
+ noinst_HEADERS = listenport.h server.h

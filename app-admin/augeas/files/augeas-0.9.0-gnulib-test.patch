@@ -1,0 +1,12 @@
+diff -Naur augeas-0.9.0.orig/gnulib/tests/test-readlink.h augeas-0.9.0/gnulib/tests/test-readlink.h
+--- augeas-0.9.0.orig/gnulib/tests/test-readlink.h	2011-03-04 10:08:01.000000000 +0900
++++ augeas-0.9.0/gnulib/tests/test-readlink.h	2011-08-25 01:33:00.332844641 +0900
+@@ -38,7 +38,7 @@
+   ASSERT (errno == ENOENT);
+   errno = 0;
+   ASSERT (func ("", buf, sizeof buf) == -1);
+-  ASSERT (errno == ENOENT);
++  ASSERT (errno == ENOENT || errno == EINVAL);
+   errno = 0;
+   ASSERT (func (".", buf, sizeof buf) == -1);
+   ASSERT (errno == EINVAL);

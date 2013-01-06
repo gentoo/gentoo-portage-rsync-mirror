@@ -1,0 +1,99 @@
+From 51606f299e5ee9d48096db0a5957efe26cbf7cc3 Mon Sep 17 00:00:00 2001
+From: Stef Walter <stefw@gnome.org>
+Date: Wed, 8 Aug 2012 06:06:58 +0200
+Subject: [PATCH] gpg-agent: Hook up the TTL cache option
+
+ * So that when the gsettings gpg-cache-method is 'idle' or 'timeout'
+   we use gpg-cache-ttl to control how long the passphrase is cached
+   for.
+ * This is a regression from 3.3.x
+
+https://bugzilla.gnome.org/show_bug.cgi?id=681081
+---
+ daemon/gpg-agent/gkd-gpg-agent-ops.c | 40 ++++++++++++++++++++++--------------
+ 1 file changed, 25 insertions(+), 15 deletions(-)
+
+diff --git a/daemon/gpg-agent/gkd-gpg-agent-ops.c b/daemon/gpg-agent/gkd-gpg-agent-ops.c
+index a0e8731..c8414fe 100644
+--- a/daemon/gpg-agent/gkd-gpg-agent-ops.c
++++ b/daemon/gpg-agent/gkd-gpg-agent-ops.c
+@@ -322,17 +322,6 @@ load_unlock_options (GcrPrompt *prompt)
+ 	g_free (method);
+ }
+ 
+-static void
+-save_unlock_options (GcrPrompt *prompt)
+-{
+-	GSettings *settings;
+-
+-	settings = gkd_gpg_agent_settings ();
+-
+-	if (gcr_prompt_get_choice_chosen (prompt))
+-		g_settings_set_string (settings, "gpg-cache-method", GCR_UNLOCK_OPTION_ALWAYS);
+-}
+-
+ static GcrPrompt *
+ open_password_prompt (GckSession *session,
+                       const gchar *keyid,
+@@ -405,11 +394,14 @@ do_get_password (GckSession *session, const gchar *keyid, const gchar *errmsg,
+                  const gchar *prompt_text, const gchar *description, gboolean confirm)
+ {
+ 	GckBuilder builder = GCK_BUILDER_INIT;
++	GSettings *settings;
+ 	GckAttributes *attrs;
+ 	gchar *password = NULL;
+ 	GcrPrompt *prompt;
+ 	gboolean chosen;
+ 	GError *error = NULL;
++	gint lifetime;
++	gchar *method;
+ 
+ 	g_assert (GCK_IS_SESSION (session));
+ 
+@@ -430,21 +422,39 @@ do_get_password (GckSession *session, const gchar *keyid, const gchar *errmsg,
+ 	}
+ 
+ 	if (password != NULL && keyid != NULL) {
++		settings = gkd_gpg_agent_settings ();
+ 
+ 		/* Load up the save options */
+ 		chosen = gcr_prompt_get_choice_chosen (prompt);
+ 
+-		if (chosen)
++		if (chosen) {
++			g_settings_set_string (settings, "gpg-cache-method", GCR_UNLOCK_OPTION_ALWAYS);
+ 			gck_builder_add_string (&builder, CKA_G_COLLECTION, "login");
+-		else
++
++		} else {
++			method = g_settings_get_string (settings, "gpg-cache-method");
++			lifetime = g_settings_get_int (settings, "gpg-cache-ttl");
++
++			if (g_strcmp0 (method, GCR_UNLOCK_OPTION_IDLE) == 0) {
++				gck_builder_add_boolean (&builder, CKA_GNOME_TRANSIENT, TRUE);
++				gck_builder_add_ulong (&builder, CKA_G_DESTRUCT_IDLE, lifetime);
++
++			} else if (g_strcmp0 (method, GCR_UNLOCK_OPTION_TIMEOUT) == 0) {
++				gck_builder_add_boolean (&builder, CKA_GNOME_TRANSIENT, TRUE);
++				gck_builder_add_ulong (&builder, CKA_G_DESTRUCT_AFTER, lifetime);
++
++			} else if (g_strcmp0 (method, GCR_UNLOCK_OPTION_SESSION)){
++				g_message ("Unsupported gpg-cache-method setting: %s", method);
++			}
++
+ 			gck_builder_add_string (&builder, CKA_G_COLLECTION, "session");
++			g_free (method);
++		}
+ 
+ 		/* Now actually save the password */
+ 		attrs = gck_attributes_ref_sink (gck_builder_end (&builder));
+ 		do_save_password (session, keyid, description, password, attrs);
+ 		gck_attributes_unref (attrs);
+-
+-		save_unlock_options (prompt);
+ 	}
+ 
+ 	g_clear_object (&prompt);
+-- 
+1.7.12.4
+

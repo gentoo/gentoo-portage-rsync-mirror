@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>printing</herd>
+  <use>
+    <flag name='filters'>
+      Pull in net-print/foomatic-filters for filtering by default.
+    </flag>
+    <flag name='python'>
+      Add support for the Python interpeter in the web server CGIs.
+    </flag>
+    <flag name='perl'>
+      Add support for the Perl interpeter in the web server CGIs.
+    </flag>
+    <flag name='php'>
+      Add support for the PHP interpeter in the web server CGIs.
+    </flag>
+    <flag name='java'>
+      Add support for the Java interpeter in the web server CGIs.
+    </flag>
+    <flag name='systemd'>
+      Add support for systemd socket activation.
+    </flag>
+  </use>
+</pkgmetadata>

@@ -1,0 +1,87 @@
+diff -urN guile-1.8-1.8.3+1.old/libguile/c-tokenize.c guile-1.8-1.8.3+1/libguile/c-tokenize.c
+--- guile-1.8-1.8.3+1.old/libguile/c-tokenize.c	2007-06-13 22:00:56.000000000 +0000
++++ guile-1.8-1.8.3+1/libguile/c-tokenize.c	2008-02-23 01:40:11.000000000 +0000
+@@ -579,6 +579,8 @@
+ #include <stdlib.h>
+ #include <string.h>
+   
++#define YY_NO_INPUT
++
+ int yylex(void);
+ 
+ int yyget_lineno (void);
+diff -urN guile-1.8-1.8.3+1.old/libguile/c-tokenize.lex guile-1.8-1.8.3+1/libguile/c-tokenize.lex
+--- guile-1.8-1.8.3+1.old/libguile/c-tokenize.lex	2007-05-09 20:22:03.000000000 +0000
++++ guile-1.8-1.8.3+1/libguile/c-tokenize.lex	2008-02-23 01:39:42.000000000 +0000
+@@ -18,7 +18,9 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-  
++ 
++#define YY_NO_INPUT
++ 
+ int yylex(void);
+ 
+ int yyget_lineno (void);
+diff -urN guile-1.8-1.8.3+1.old/libguile/inline.h guile-1.8-1.8.3+1/libguile/inline.h
+--- guile-1.8-1.8.3+1.old/libguile/inline.h	2007-05-09 20:22:03.000000000 +0000
++++ guile-1.8-1.8.3+1/libguile/inline.h	2008-02-23 01:43:22.000000000 +0000
+@@ -55,6 +55,12 @@
+ extern unsigned scm_newcell2_count;
+ extern unsigned scm_newcell_count;
+ 
++#ifdef __GNUC_STDC_INLINE__
++#define SCM_C_GNU_INLINE SCM_C_INLINE __attribute__((__gnu_inline__))
++#else
++#define SCM_C_GNU_INLINE SCM_C_INLINE
++#endif
++
+ #if defined SCM_C_INLINE && ! defined SCM_INLINE_C_INCLUDING_INLINE_H
+ /* definitely inlining */
+ #ifdef __GNUC__
+@@ -62,7 +68,7 @@
+ #else
+ static
+ #endif
+-SCM_C_INLINE
++SCM_C_GNU_INLINE
+ #endif
+ SCM
+ scm_cell (scm_t_bits car, scm_t_bits cdr)
+@@ -138,7 +144,7 @@
+ #else
+ static
+ #endif
+-SCM_C_INLINE
++SCM_C_GNU_INLINE
+ #endif
+ SCM
+ scm_double_cell (scm_t_bits car, scm_t_bits cbr,
+@@ -213,7 +219,7 @@
+ #else
+ static
+ #endif
+-SCM_C_INLINE
++SCM_C_GNU_INLINE
+ #endif
+ SCM
+ scm_array_handle_ref (scm_t_array_handle *h, ssize_t p)
+@@ -228,7 +234,7 @@
+ #else
+ static
+ #endif
+-SCM_C_INLINE
++SCM_C_GNU_INLINE
+ #endif
+ void
+ scm_array_handle_set (scm_t_array_handle *h, ssize_t p, SCM v)
+@@ -243,7 +249,7 @@
+ #else
+ static
+ #endif
+-SCM_C_INLINE
++SCM_C_GNU_INLINE
+ #endif
+ int
+ scm_is_pair (SCM x)

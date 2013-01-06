@@ -1,0 +1,14 @@
+# ChangeLog for app-text/jpdftweak
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jpdftweak/ChangeLog,v 1.2 2009/03/09 14:17:22 armin76 Exp $
+
+  09 Mar 2009; Raúl Porcel <armin76@gentoo.org> jpdftweak-0.9.ebuild:
+  Add ~x86 wrt #260775
+
+*jpdftweak-0.9 (21 Feb 2009)
+
+  21 Feb 2009; Serkan Kaba <serkan@gentoo.org> +metadata.xml,
+  +jpdftweak-0.9.ebuild:
+  Initial import based on ebuild by Jiri Tyr <jiri.tyr@e-learning.tul.cz>.
+  Fixes bug #251424.
+

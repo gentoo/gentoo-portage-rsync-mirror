@@ -1,0 +1,43 @@
+# ChangeLog for dev-php/pecl-drizzle
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-drizzle/ChangeLog,v 1.5 2012/08/23 15:59:13 olemarkus Exp $
+
+  23 Aug 2012; Ole Markus With <olemarkus@gentoo.org>
+  pecl-drizzle-0.4.2-r2.ebuild:
+  EAPI bump
+
+*pecl-drizzle-0.4.2-r2 (23 Aug 2012)
+
+  23 Aug 2012; Ole Markus With <olemarkus@gentoo.org>
+  +pecl-drizzle-0.4.2-r2.ebuild, -pecl-drizzle-0.4.2-r1.ebuild:
+  EAPI bump
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Update metadata, helps my own bug templating script.
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> pecl-drizzle-0.4.2-r1.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
+
+  02 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -pecl-drizzle-0.4.2.ebuild:
+  Remove the last package depending on old php eclasses.
+
+*pecl-drizzle-0.4.2-r1 (05 Jun 2011)
+
+  05 Jun 2011; <olemarkus@gentoo.org> +pecl-drizzle-0.4.2-r1.ebuild:
+  Upgraded EAPI version and php-ext eclass version to work with minor version
+  slotted PHP. Ref bug 363825
+
+  15 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  pecl-drizzle-0.4.2.ebuild:
+  Simplify dependencies (changed versioning scheme).
+
+  06 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  pecl-drizzle-0.4.2.ebuild:
+  Change dependency to use drizzle, not libdrizzle.
+
+*pecl-drizzle-0.4.2 (22 May 2010)
+
+  22 May 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +pecl-drizzle-0.4.2.ebuild, +metadata.xml:
+  Initial import of pecl-drizzle, ebuild proxy-maintained by Pavel Stratil.

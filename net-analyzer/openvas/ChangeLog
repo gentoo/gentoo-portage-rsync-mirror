@@ -1,0 +1,41 @@
+# ChangeLog for net-analyzer/openvas
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.8 2011/10/09 17:40:24 hanno Exp $
+
+*openvas-4 (09 Oct 2011)
+
+  09 Oct 2011; Hanno Boeck <hanno@gentoo.org> +openvas-4.ebuild:
+  Version bump, meta ebuild for openvas 4.
+
+  07 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> openvas-2.0.2.ebuild:
+  Keywording for ppc, bug 262366
+
+*openvas-2.0.2 (08 Sep 2009)
+
+  08 Sep 2009; Hanno Boeck <hanno@gentoo.org> +openvas-2.0.2.ebuild:
+  Version bump.
+
+*openvas-2.0.1 (08 Mar 2009)
+
+  08 Mar 2009; Hanno Boeck <hanno@gentoo.org> +openvas-2.0.1.ebuild:
+  Update openvas meta-ebuild.
+
+*openvas-2.0.0 (20 Dec 2008)
+
+  20 Dec 2008; Hanno Boeck <hanno@gentoo.org> +openvas-2.0.0.ebuild:
+  Version bump.
+
+  18 Aug 2008; Peter Volkov <pva@gentoo.org> openvas-1.0.1.ebuild:
+  Added ~amd64 keyword, thank alexxy for report.
+
+*openvas-1.0.1 (10 Jul 2008)
+
+  10 Jul 2008; Hanno Boeck <hanno@gentoo.org> +openvas-1.0.1.ebuild:
+  Version bump.
+
+*openvas-1.0.0 (08 Feb 2008)
+
+  08 Feb 2008; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
+  +openvas-1.0.0.ebuild:
+  Initial commit of openvas.
+

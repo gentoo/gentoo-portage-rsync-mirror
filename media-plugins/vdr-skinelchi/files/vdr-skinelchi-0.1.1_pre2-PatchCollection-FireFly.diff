@@ -1,0 +1,138 @@
+Downloaded from http://www.vdr-portal.de/board/thread.php?postid=503036#post503036
+
+diff -Nur skinelchi-0.1.1pre2/DisplayChannel.c skinelchi-0.1.1pre2-patched/DisplayChannel.c
+--- skinelchi-0.1.1pre2/DisplayChannel.c	2006-02-23 23:14:52.000000000 +0100
++++ skinelchi-0.1.1pre2-patched/DisplayChannel.c	2006-08-06 14:09:19.000000000 +0200
+@@ -984,6 +984,17 @@
+ 	    osd->DrawRectangle(x5, y6, x10 - 1, y9 - 1, Theme.Color(clrChannelEpgTitleBg));
+ 	    if (GetEvent->PresentTimeString()) {
+     		osd->DrawText(x1 + 4, y6, GetEvent->PresentTimeString(), Theme.Color(clrChannelEpgTimeFg), cetb, font);
++
++		if (GetEvent->Recording()) {
++		    osd->DrawBitmap(x5 + 2, y6 + (lh - bmRecording.Height())/2, bmRecording, Theme.Color(clrChannelSymbolRecFg), Theme.Color(clrChannelSymbolRecBg));
++		    EventScroll.xOff = x5 + 2 + bmRecording.Width() + 6;
++		    EventScroll.DestWidth = x10 - x5 - 2 - bmRecording.Width() - 6;
++		}
++		else {
++		    EventScroll.xOff = x5 + 2;
++		    EventScroll.DestWidth = x10 - x5 - 2;
++		}
++
+ 		if (EventScroll.SetText(GetEvent->PresentTitle())) {
+ 		    EventScroll.pos = 0;
+ 		    EventScroll.dir = -1;
+@@ -1239,6 +1250,14 @@
+     update = true;
+     Unlock();
+     Wait.Signal();
++
++    recording = false;
++    if (present) {
++        int TimerMatch = tmNone;
++        const cTimer * Timer = Timers.GetMatch(present, &TimerMatch);
++        if (Timer)
++            recording = Timer->Recording();
++    }
+ }
+ 
+ bool cGetEvent::Ready(void) {
+@@ -1249,6 +1268,14 @@
+     return r;
+ }
+ 
++bool cGetEvent::Recording(void) {
++    bool r;
++    Lock();
++    r = recording;
++    Unlock();
++    return r;
++}
++
+ void cGetEvent::Drawed(void) {
+     Lock();
+     ready = false;
+diff -Nur skinelchi-0.1.1pre2/DisplayChannel.h skinelchi-0.1.1pre2-patched/DisplayChannel.h
+--- skinelchi-0.1.1pre2/DisplayChannel.h	2005-11-26 19:08:47.000000000 +0100
++++ skinelchi-0.1.1pre2-patched/DisplayChannel.h	2006-08-06 14:09:19.000000000 +0200
+@@ -51,7 +51,7 @@
+     const char *Followingtitle;
+     const char *Followingshorttext;
+     const char *Followingtimestring;
+-    bool ready, update;
++    bool ready, update, recording;
+     cCondWait Wait;
+ public:
+     cGetEvent(void);
+@@ -66,6 +66,7 @@
+     const char *FollowingTitle(void);
+     const char *FollowingShortText(void);
+     const char *FollowingTimeString(void);
++    bool Recording(void);
+ };
+ 
+ class cSkinElchiDisplayChannel : public cSkinDisplayChannel {
+diff -Nur skinelchi-0.1.1pre2/DisplayVolume.c skinelchi-0.1.1pre2-patched/DisplayVolume.c
+--- skinelchi-0.1.1pre2/DisplayVolume.c	2005-11-20 19:24:03.000000000 +0100
++++ skinelchi-0.1.1pre2-patched/DisplayVolume.c	2006-08-06 14:09:19.000000000 +0200
+@@ -58,7 +58,7 @@
+ 	    tColor tr = Theme.Color(Transparent);
+     	    osd->DrawRectangle(0, lh, osd->Width() - 1, osd->Height() - 1, tr);
+ 	    char *Prompt;
+-    	    asprintf(&Prompt,"%03d", Current);
++    	    asprintf(&Prompt,"%3d", Current * 100 / Total);
+     	    int l = font->Width(Prompt) + lhh;
+     	    osd->DrawText(lhh + 3, lh + 1, Prompt, Theme.Color(clrBackground), tr, font);
+     	    osd->DrawText(lhh, lh - 2, Prompt, Theme.Color(clrVolumePrompt), tr, font);
+diff -Nur skinelchi-0.1.1pre2/Makefile skinelchi-0.1.1pre2-patched/Makefile
+--- skinelchi-0.1.1pre2/Makefile	2006-02-25 02:45:30.000000000 +0100
++++ skinelchi-0.1.1pre2-patched/Makefile	2006-08-06 14:09:19.000000000 +0200
+@@ -29,7 +29,6 @@
+ 
+ ### The directory environment:
+ 
+-DVBDIR = ../../../../DVB
+ VDRDIR = ../../..
+ LIBDIR = ../../lib
+ TMPDIR = /tmp
+@@ -40,7 +39,7 @@
+ 
+ ### The version number of VDR (taken from VDR's "config.h"):
+ 
+-VDRVERSION = $(shell grep 'define VDRVERSION ' $(VDRDIR)/config.h | awk '{ print $$3 }' | sed -e 's/"//g')
++APIVERSION = $(shell grep 'define APIVERSION ' $(VDRDIR)/config.h | awk '{ print $$3 }' | sed -e 's/"//g')
+ 
+ ### The name of the distribution archive:
+ 
+@@ -49,7 +48,7 @@
+ 
+ ### Includes and Defines (add further entries here):
+ 
+-INCLUDES += -I$(VDRDIR)/include -I$(DVBDIR)/include
++INCLUDES += -I$(VDRDIR)/include 
+ 
+ DEFINES += -D_GNU_SOURCE -DPLUGIN_NAME_I18N='"$(PLUGIN)"'
+ 
+@@ -107,7 +106,7 @@
+ #	$(CXX) $(CXXFLAGS) -shared $(OBJS) -lncurses -o $@
+ #	$(CXX) $(CXXFLAGS) -shared $(OBJS) -o $@
+ 	$(CXX) $(CXXFLAGS) -shared $(OBJS) $(LIBS) -o $@
+-	@cp $@ $(LIBDIR)/$@.$(VDRVERSION)
++	@cp $@ $(LIBDIR)/$@.$(APIVERSION)
+ 
+ dist: clean
+ 	@-rm -rf $(TMPDIR)/$(ARCHIVE)
+diff -Nur skinelchi-0.1.1pre2/vdrstatus.c skinelchi-0.1.1pre2-patched/vdrstatus.c
+--- skinelchi-0.1.1pre2/vdrstatus.c	2006-01-20 17:11:23.000000000 +0100
++++ skinelchi-0.1.1pre2-patched/vdrstatus.c	2006-08-06 14:30:03.000000000 +0200
+@@ -180,7 +180,11 @@
+ 
+ void cSkinElchiStatus::SetVolume(int Volume, bool Absolute) {
+     VdrStatus.VolumeChange++;
++#if APIVERSNUM < 010402
+     VdrStatus.Volume = Volume;//vdr 1.3.22 -> get volume always absolute ???
++#else
++    VdrStatus.Volume = Absolute ? Volume : VdrStatus.Volume + Volume;
++#endif
+     }
+ 
+ void cSkinElchiStatus::SetAudioTrack(int Index, const char * const *Tracks) {

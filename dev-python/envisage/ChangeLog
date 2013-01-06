@@ -1,0 +1,34 @@
+# ChangeLog for dev-python/envisage
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisage/ChangeLog,v 1.7 2012/12/06 17:32:37 bicatali Exp $
+
+  06 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> envisage-4.2.0.ebuild:
+  Keyword amd64-linux and x86-linux
+
+*envisage-4.2.0 (09 Oct 2012)
+
+  09 Oct 2012; Patrick Lauer <patrick@gentoo.org> +envisage-4.2.0.ebuild:
+  Bump
+
+  05 Mar 2012; Justin Lecher <jlec@gentoo.org> envisage-4.0.0.ebuild,
+  envisage-4.1.0.ebuild:
+  revert restriction of pypy
+
+  05 Mar 2012; Justin Lecher <jlec@gentoo.org> envisage-4.0.0.ebuild,
+  envisage-4.1.0.ebuild:
+  Restrict pypy ABI
+
+  25 Feb 2012; Patrick Lauer <patrick@gentoo.org> envisage-4.0.0.ebuild,
+  envisage-4.1.0.ebuild:
+  Restricting py 2.5
+
+*envisage-4.1.0 (17 Jan 2012)
+
+  17 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +envisage-4.1.0.ebuild:
+  Version bump
+
+*envisage-4.0.0 (03 Aug 2011)
+
+  03 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> +envisage-4.0.0.ebuild,
+  +metadata.xml:
+  Initial import

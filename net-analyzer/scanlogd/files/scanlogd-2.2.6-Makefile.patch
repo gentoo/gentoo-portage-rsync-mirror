@@ -1,0 +1,12 @@
+diff -urN ./scanlogd-2.2.6.orig/Makefile ./scanlogd-2.2.6/Makefile
+--- ./scanlogd-2.2.6.orig/Makefile	2006-03-05 11:03:15.000000000 +0100
++++ ./scanlogd-2.2.6/Makefile	2006-03-27 00:39:16.000000000 +0200
+@@ -1,8 +1,6 @@
+ CC = gcc
+ LD = $(CC)
+ RM = rm -f
+-CFLAGS = -Wall -O2 -fomit-frame-pointer
+-LDFLAGS = -s
+ 
+ PCAP_H = -I/usr/include/pcap
+ PCAP_L = -lpcap

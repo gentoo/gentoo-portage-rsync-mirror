@@ -1,0 +1,16 @@
+# ChangeLog for net-wireless/rt2870-firmware
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2870-firmware/ChangeLog,v 1.3 2012/12/11 17:42:39 axs Exp $
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> rt2870-firmware-29.ebuild:
+  virtualize udev dependency
+
+  06 Apr 2012; Markus Meier <maekke@gentoo.org> rt2870-firmware-29.ebuild:
+  add ~arm, bug #406575
+
+*rt2870-firmware-29 (29 Feb 2012)
+
+  29 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +rt2870-firmware-29.ebuild, +metadata.xml:
+  New ebuild for Ralink rt2870 wifi firmware blob.
+

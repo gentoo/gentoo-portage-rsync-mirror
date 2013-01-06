@@ -1,0 +1,9 @@
+# ChangeLog for sci-physics/siscone
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/siscone/ChangeLog,v 1.1 2012/07/24 16:55:05 bicatali Exp $
+
+*siscone-2.0.5 (24 Jul 2012)
+
+  24 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/siscone-2.0.5-headers-dir.patch, +metadata.xml, +siscone-2.0.5.ebuild:
+  initial import, dependency of fastjet

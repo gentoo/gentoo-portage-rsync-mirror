@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install
+DEPEND=idn? ( net-dns/libidn ) gnutls? ( net-libs/gnutls ) ssl? ( dev-libs/openssl ) zlib? ( sys-libs/zlib )
+DESCRIPTION=A portable high-level Jabber/XMPP library for C++
+EAPI=2
+HOMEPAGE=http://camaya.net/gloox
+IUSE=debug gnutls idn ssl zlib
+KEYWORDS=amd64 ~arm x86
+LICENSE=GPL-2
+RDEPEND=idn? ( net-dns/libidn ) gnutls? ( net-libs/gnutls ) ssl? ( dev-libs/openssl ) zlib? ( sys-libs/zlib )
+SLOT=0
+SRC_URI=http://camaya.net/download/gloox-1.0.tar.bz2
+_md5_=712b394436525f636137af43304e088d

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>desktop-misc</herd>
+	<maintainer>
+		<email>ottxor@gentoo.org</email>
+		<name>Christoph Junghans</name>
+	</maintainer>
+	<use>
+		<flag name='system-libCg'>Use system libCg instead of bundled one</flag>
+	</use>
+</pkgmetadata>

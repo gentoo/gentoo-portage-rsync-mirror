@@ -1,0 +1,16 @@
+changeset from:
+http://svn.tuxfamily.org/viewvc.cgi/ffdiaporama_ffdiaporama/trunk/ffDiaporama/src/engine/cDeviceModelDef.cpp?r1=349&r2=350
+
+wrt:
+https://bugs.gentoo.org/show_bug.cgi?id=443262
+--- src/engine/cDeviceModelDef.cpp
++++ src/engine/cDeviceModelDef.cpp
+@@ -717,7 +717,7 @@
+                 if (
+                         #if LIBAVCODEC_VERSION_INT < AV_VERSION_INT(53,35,0)
+                         (p->encode!=NULL)
+-                        #elif LIBAVCODEC_VERSION_INT < AV_VERSION_INT(54,59,0)
++                        #elif LIBAVCODEC_VERSION_INT < AV_VERSION_INT(54,27,0)
+                         (p->encode!=NULL)||(p->encode2!=NULL)
+                         #else
+                         (p->encode2!=NULL)

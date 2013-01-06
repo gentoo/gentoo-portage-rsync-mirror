@@ -1,0 +1,40 @@
+# ChangeLog for dev-perl/Test-Portability-Files
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Portability-Files/ChangeLog,v 1.7 2013/01/06 02:55:36 zmedico Exp $
+
+  06 Jan 2013; Zac Medico <zmedico@gentoo.org>
+  Test-Portability-Files-0.60.0.ebuild:
+  Update MODULE_AUTHOR, so SRC_URI will generate correctly.
+
+*Test-Portability-Files-0.60.0 (13 Nov 2012)
+
+  13 Nov 2012; Torsten Veller <tove@gentoo.org>
+  +Test-Portability-Files-0.60.0.ebuild, metadata.xml:
+  Version bump
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org>
+  -Test-Portability-Files-0.05.ebuild:
+  Cleanup
+
+*Test-Portability-Files-0.50.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +Test-Portability-Files-0.50.0.ebuild:
+  Change version scheme
+
+  18 May 2010; Torsten Veller <tove@gentoo.org>
+  Test-Portability-Files-0.05.ebuild:
+  DEPEND on Module-Build. Maintenance
+
+  01 May 2010; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +Test-Portability-Files-0.05.ebuild:
+  Import from Perl overlay, dependency of sci-visualization/circos
+
+*Test-Portability-Files-0.05 (22 Jan 2010)
+
+  22 Jan 2010; Kent Fredric <kentfredric@gmail.com>
+  +Test-Portability-Files-0.05.ebuild, +metadata.xml:
+  Added

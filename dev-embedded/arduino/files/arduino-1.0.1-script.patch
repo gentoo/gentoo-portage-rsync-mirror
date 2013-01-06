@@ -1,0 +1,22 @@
+diff --git a/build/linux/dist/arduino b/build/linux/dist/arduino
+index d371e76..eec238b 100755
+--- a/build/linux/dist/arduino
++++ b/build/linux/dist/arduino
+@@ -10,13 +10,12 @@ for LIB in \
+     lib/*.jar \
+     ;
+ do
+-    CLASSPATH="${CLASSPATH}:${LIB}"
++    CLASSPATH="${CLASSPATH+$CLASSPATH:}${LIB}"
+ done
++CLASSPATH="${CLASSPATH+$CLASSPATH:}:$(java-config -dp rxtx-2)"
+ export CLASSPATH
+ 
+-LD_LIBRARY_PATH=`pwd`/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
++LD_LIBRARY_PATH="$(java-config -di rxtx-2)${LD_LIBRARY_PATH+:$LD_LIBRARY_PATH}"
+ export LD_LIBRARY_PATH
+ 
+-export PATH="${APPDIR}/java/bin:${PATH}"
+-
+ java -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel processing.app.Base
+

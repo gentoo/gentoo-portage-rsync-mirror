@@ -1,0 +1,10 @@
+--- utils/mgl2gif.cpp.ORIG	2009-03-04 14:22:12.000000000 +0100
++++ utils/mgl2gif.cpp	2009-04-22 10:15:02.000000000 +0200
+@@ -19,6 +19,7 @@
+  ***************************************************************************/
+ #include <stdio.h>
+ #include <string.h>
++#include <cstdlib>
+ #include <locale.h>
+ #include <wchar.h>
+ #include "mgl/mgl_zb.h"

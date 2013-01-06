@@ -1,0 +1,27 @@
+# ChangeLog for sys-boot/getdvhoff
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/getdvhoff/ChangeLog,v 1.5 2011/02/06 22:23:06 leio Exp $
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> getdvhoff-0.12-r1.ebuild:
+  Drop to ~mips
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+  02 Jan 2006; Joshua Kinard <kumba@gentoo.org> -getdvhoff-0.12.ebuild,
+  getdvhoff-0.12-r1.ebuild:
+  Bump 0.12-r1 to mips stable, remove 0.12.
+
+*getdvhoff-0.12-r1 (18 Sep 2005)
+
+  18 Sep 2005; Joshua Kinard <kumba@gentoo.org> +getdvhoff-0.12-r1.ebuild:
+  Modify getdvhoff's ebuild to statically link against klibc, resulting in an
+  ~8.8kb binary. Keep 0.12 around as stable until we bump klibc to stable.
+
+*getdvhoff-0.12 (12 Sep 2005)
+
+  12 Sep 2005; Joshua Kinard <kumba@gentoo.org> +metadata.xml,
+  +getdvhoff-0.12.ebuild:
+  Initial import of getdvhoff for calculating the ext2 (rootfs) partition offset
+  on SGI LiveCDs.
+

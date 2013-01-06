@@ -1,0 +1,31 @@
+diff -uNr a/Changes b/Changes
+--- a/Changes	2002-07-02 02:10:57.000000000 +0100
++++ b/Changes	2002-07-02 02:05:37.000000000 +0100
+@@ -1,4 +1,7 @@
+ VERSION	DATE		WHAT WAS FIXED OR WHAT WAS/IS NEW
++
++	2 Jul 2002	2.4/2.5 patch
++
+ 1.05b11 7 Mar 2002	Support for multiple interfaces
+ 
+ 1.05b7	2 Apr 1998	Keeps LEDs deattached also after VT is reset if run
+diff -uNr a/tleds.c b/tleds.c
+--- a/tleds.c	2002-07-02 02:10:57.000000000 +0100
++++ b/tleds.c	2002-07-02 02:11:24.000000000 +0100
+@@ -43,16 +43,6 @@
+ #define VERSION	"1.05beta11"
+ #define MYNAME	"tleds"
+ 
+-/* Supported kernel version */
+-/* If you want to compile for Linux 2.1.x add -DKERNEL2_1 to gcc options. */
+-/* Currently kernel v2.1.97 is "tested", older v2.1.x kernels may not work */
+-#ifdef KERNEL2_1
+-#undef KERNEL2_1
+-#define KERNEL2_0 0
+-#else
+-#define KERNEL2_0 1
+-#endif
+-
+ /* If you don't want X stuff. */
+ #ifdef NO_X_SUPPORT
+ #define REMOVE_X_CODE 1

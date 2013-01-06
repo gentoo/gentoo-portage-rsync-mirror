@@ -1,0 +1,12 @@
+--- setup.py
++++ setup.py
+@@ -23,9 +23,6 @@
+         "Programming Language :: Python :: 2.7",
+         "Programming Language :: Python :: 3",
+     ],
+-    setup_requires=[
+-        'hgtools',
+-    ],
+     use_2to3=True,
+     use_2to3_exclude_fixers=[
+         'lib2to3.fixes.fix_import',

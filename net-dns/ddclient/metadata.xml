@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+  <email>titanofold@gentoo.org</email>
+  <name>Aaron W. Swenson</name>
+</maintainer>
+<use>
+  <flag name="hardened">Use iproute2 instead of ifconfig to grab an IP address</flag>
+  <flag name="ssl">Connect to the server utilizing SSL</flag>
+</use>
+</pkgmetadata>

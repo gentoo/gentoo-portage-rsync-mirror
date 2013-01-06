@@ -1,0 +1,76 @@
+# ChangeLog for dev-perl/DateTime-Format-ISO8601
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ISO8601/ChangeLog,v 1.16 2012/11/18 11:13:31 robbat2 Exp $
+
+  18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Drop duplication of myself as a maintainer where there is a herd.
+
+  02 Sep 2012; Torsten Veller <tove@gentoo.org>
+  -DateTime-Format-ISO8601-0.70.0.ebuild:
+  Cleanup
+
+  04 Aug 2012; Johannes Huber <johu@gentoo.org>
+  DateTime-Format-ISO8601-0.80.0.ebuild:
+  Stable for x86, wrt bug #418801
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org>
+  DateTime-Format-ISO8601-0.80.0.ebuild:
+  Stable for amd64, wrt bug #418801
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+*DateTime-Format-ISO8601-0.80.0 (12 Feb 2012)
+
+  12 Feb 2012; Torsten Veller <tove@gentoo.org>
+  +DateTime-Format-ISO8601-0.80.0.ebuild:
+  Version bump
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org>
+  -DateTime-Format-ISO8601-0.07.ebuild:
+  Cleanup
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org>
+  DateTime-Format-ISO8601-0.70.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
+
+*DateTime-Format-ISO8601-0.70.0 (31 Aug 2011)
+
+  31 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +DateTime-Format-ISO8601-0.70.0.ebuild:
+  Change version scheme
+
+  19 Jul 2011; Markus Meier <maekke@gentoo.org>
+  DateTime-Format-ISO8601-0.07.ebuild:
+  amd64/x86 stable, bug #374461
+
+  22 Aug 2010; Torsten Veller <tove@gentoo.org>
+  -files/fix_1_digit_year.patch:
+  Remove unused patch
+
+  09 Apr 2010; Torsten Veller <tove@gentoo.org>
+  -DateTime-Format-ISO8601-0.06-r1.ebuild:
+  Cleanup
+
+*DateTime-Format-ISO8601-0.07 (18 Jan 2010)
+
+  18 Jan 2010; Torsten Veller <tove@gentoo.org>
+  +DateTime-Format-ISO8601-0.07.ebuild:
+  Version bump
+
+*DateTime-Format-ISO8601-0.06-r1 (15 Jan 2010)
+
+  15 Jan 2010; Torsten Veller <tove@gentoo.org>
+  +files/fix_1_digit_year.patch, -DateTime-Format-ISO8601-0.06.ebuild,
+  +DateTime-Format-ISO8601-0.06-r1.ebuild:
+  Fix _fix_1_digit_year to work in 2010 (#298966). Cleanup
+
+  23 Nov 2009; Torsten Veller <tove@gentoo.org>
+  DateTime-Format-ISO8601-0.06.ebuild:
+  Depend on Module-Build (#294247). Run tests
+
+*DateTime-Format-ISO8601-0.06 (09 Dec 2008)
+
+  09 Dec 2008; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +DateTime-Format-ISO8601-0.06.ebuild:
+  Initial commit, dep for new dev-libs/OpenSRF-1.0.1

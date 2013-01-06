@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DEPEND=media-libs/alsa-lib media-sound/jack-audio-connection-kit sys-apps/dbus virtual/pkgconfig dev-lang/python
+DESCRIPTION=Daemon for exposing legacy ALSA sequencer applications in JACK MIDI system.
+HOMEPAGE=http://home.gna.org/a2jmidid/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=media-libs/alsa-lib media-sound/jack-audio-connection-kit sys-apps/dbus
+SLOT=0
+SRC_URI=http://download.gna.org/a2jmidid/a2jmidid-6.tar.bz2
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=4a62aa2d8133a65e61330d5a6e6237ea

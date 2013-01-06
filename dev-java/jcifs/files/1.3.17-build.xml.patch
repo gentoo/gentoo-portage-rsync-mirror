@@ -1,0 +1,16 @@
+diff --git a/build.xml b/build.xml
+index ad5b2b6..7820dd0 100644
+--- a/build.xml
++++ b/build.xml
+@@ -52,8 +52,6 @@ dependencies: Checks that all class dependencies are met.
+             source="1.5"
+             target="1.5"
+             fork="yes"
+-            executable="/usr/local/java5/bin/javac"
+-            compiler="javac1.5"
+             debug="on">
+ <!--
+             <compilerarg line="-Xlint:deprecation -Xlint:unchecked"/>
+diff --git a/jcifs-1.3.17.jar b/jcifs-1.3.17.jar
+index ae4c8d8..2b09fa2 100644
+Binary files a/jcifs-1.3.17.jar and b/jcifs-1.3.17.jar differ

@@ -1,0 +1,25 @@
+From dd09f546f0287cfeae587c723c98f70f3de65ab8 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Tue, 16 Oct 2012 03:03:48 -0400
+Subject: [PATCH] Gentoo's mozjs185.pc doesn't set Version:
+
+---
+ libproxy/cmake/modules/pacrunner_mozjs.cmk | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/libproxy/cmake/modules/pacrunner_mozjs.cmk b/libproxy/cmake/modules/pacrunner_mozjs.cmk
+index 636bcc1..21072db 100644
+--- a/libproxy/cmake/modules/pacrunner_mozjs.cmk
++++ b/libproxy/cmake/modules/pacrunner_mozjs.cmk
+@@ -9,7 +9,7 @@ if(WIN32)
+ elseif(NOT APPLE)
+   option(WITH_MOZJS "Search for MOZJS package" ON)
+   if (WITH_MOZJS)
+-    pkg_search_module(MOZJS mozjs185>=1.8.5)
++    pkg_search_module(MOZJS mozjs185)
+     if(MOZJS_FOUND)
+       include_directories(${MOZJS_INCLUDE_DIRS})
+       link_directories(${MOZJS_LIBRARY_DIRS})
+-- 
+1.7.12.3
+

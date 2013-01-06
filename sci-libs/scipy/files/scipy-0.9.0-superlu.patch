@@ -1,0 +1,40 @@
+--- scipy/sparse/linalg/dsolve/_superluobject.h.orig	2011-03-24 22:05:15.995923005 +1300
++++ scipy/sparse/linalg/dsolve/_superluobject.h	2011-03-24 22:06:09.638923002 +1300
+@@ -9,11 +9,10 @@
+ #define __SUPERLU_OBJECT
+ 
+ #include "Python.h"
+-#include "SuperLU/SRC/slu_zdefs.h"
++#include "superlu/slu_zdefs.h"
+ #include "numpy/arrayobject.h"
+-#include "SuperLU/SRC/slu_util.h"
+-#include "SuperLU/SRC/slu_dcomplex.h"
+-#include "SuperLU/SRC/slu_scomplex.h"
++#include "superlu/slu_util.h"
++#include "superlu/slu_dcomplex.h"
+ 
+ 
+ #define _CHECK_INTEGER(x) (PyArray_ISINTEGER(x) && (x)->descr->elsize == sizeof(int))
+ 
+--- scipy/sparse/linalg/dsolve/setup.py.orig	2011-02-20 22:58:20.000000000 +1300
++++ scipy/sparse/linalg/dsolve/setup.py	2011-03-25 11:08:02.691267018 +1300
+@@ -25,18 +25,12 @@
+         # when using MSVC + MKL, lsame is already in MKL
+         sources.remove(join(superlu_src, 'lsame.c'))
+ 
+-    config.add_library('superlu_src',
+-                       sources = sources,
+-                       macros = superlu_defs,
+-                       include_dirs=[superlu_src],
+-                       )
+-
+     # Extension
+     config.add_extension('_superlu',
+                          sources = ['_superlumodule.c',
+                                     '_superlu_utils.c',
+                                     '_superluobject.c'],
+-                         libraries = ['superlu_src'],
++                         libraries = ['superlu'],
+                          extra_info = lapack_opt,
+                          )
+ 

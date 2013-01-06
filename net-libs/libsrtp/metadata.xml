@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>voip</herd>
+	<use>
+		<flag name='aesicm'>Use AES ICM cryptographic algorithm</flag>
+		<flag name='console'>
+			Use /dev/console instead of stdout for error messages
+		</flag>
+		<flag name='syslog'>Use syslog for error messages</flag>
+	</use>
+</pkgmetadata>

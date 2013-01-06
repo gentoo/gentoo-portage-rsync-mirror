@@ -1,0 +1,13 @@
+# ChangeLog for app-i18n/uim-tomoe-gtk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-tomoe-gtk/ChangeLog,v 1.2 2012/05/03 19:24:31 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> uim-tomoe-gtk-0.6.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*uim-tomoe-gtk-0.6.0 (07 Jul 2007)
+
+  07 Jul 2007; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
+  +uim-tomoe-gtk-0.6.0.ebuild:
+  Initial import, bug #178070.
+

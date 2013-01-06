@@ -1,0 +1,22 @@
+
+  Several profiles use multiple parent directories now. ufed used
+  to read only the first, causing flags to be missed. Reported by
+  Ryan Hill and investigated by Martin Väth.
+  http://bugs.gentoo.org/221151
+
+--- ufed-0.40/Portage.pm
++++ ufed-0.40/Portage.pm
+@@ -198,10 +198,9 @@
+ 	$_ = readlink '/etc/make.profile';
+ 	die "/etc/make.profile is not a symlink\n" if not defined $_;
+ 	@profiles = norm_path '/etc', $_;
+-	PARENT: {
+-		for(noncomments "$profiles[0]/parent") {
+-			unshift @profiles, norm_path $profiles[0], $_;
+-			redo PARENT;
++	for (my $i = -1; $i >= -@profiles; $i--) {
++		for(noncomments "$profiles[$i]/parent") {
++			splice @profiles, $i, 0, norm_path $profiles[$i], $_;
+ 		}
+ 	}
+ }

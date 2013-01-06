@@ -1,0 +1,45 @@
+Index: amSynth-1.2.0/configure.in
+===================================================================
+--- amSynth-1.2.0.orig/configure.in
++++ amSynth-1.2.0/configure.in
+@@ -148,21 +148,25 @@ dnl	Set compiler options accordingly
+ dnl
+ dnl
+ 
++LIBSADDED=""
++
+ if test "$with_oss" = "yes";  then
+ 	CXXFLAGS="$CXXFLAGS -Dwith_oss"
+ fi
+ if test "$with_alsa" = "yes"; then 
+ 	CXXFLAGS="$CXXFLAGS -Dwith_alsa"
+-	LDFLAGS="$LDFLAGS -lasound"
++	LIBSADDED="$LIBSADDED -lasound"
+ fi
+ if test "$with_jack" = "yes"; then 
+ 	CXXFLAGS="$CXXFLAGS -Dwith_jack"
+ fi
+ if test "$with_sndfile" = "yes"; then
+ 	CXXFLAGS="$CXXFLAGS -Dwith_sndfile"
+-	LDFLAGS="$LDFLAGS -lsndfile"
++	LIBSADDED="$LIBSADDED -lsndfile"
+ fi
+ 
++AC_SUBST(LIBSADDED)
++
+ AC_OUTPUT([
+ Makefile
+ src/Makefile 
+Index: amSynth-1.2.0/src/Makefile.am
+===================================================================
+--- amSynth-1.2.0.orig/src/Makefile.am
++++ amSynth-1.2.0/src/Makefile.am
+@@ -16,7 +16,7 @@ amSynth_SOURCES = \
+ 
+ SUBDIRS = drivers VoiceBoard GUI Effects
+ 
+-amSynth_LDADD = drivers/libdrivers.a VoiceBoard/libVoiceBoard.a GUI/libGUI.a Effects/libEffects.a
++amSynth_LDADD = drivers/libdrivers.a VoiceBoard/libVoiceBoard.a GUI/libGUI.a Effects/libEffects.a @LIBSADDED@
+ 
+ amSynth_CFLAGS = $(CFLAGS) -DENABLE_BINRELOC
+ amSynth_CXXFLAGS = $(CXXFLAGS) -DENABLE_BINRELOC

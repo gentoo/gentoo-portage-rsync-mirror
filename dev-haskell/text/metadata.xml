@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>haskell</herd>
+	<maintainer>
+		<email>haskell@gentoo.org</email>
+	</maintainer>
+	<longdescription>
+		The 'Text' type represents Unicode character strings, in a time and
+		space-efficient manner. This package provides text processing
+		capabilities that are optimized for performance critical use, both
+		in terms of large data quantities and high speed.
+	</longdescription>
+</pkgmetadata>

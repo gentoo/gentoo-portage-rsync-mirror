@@ -1,0 +1,41 @@
+--- library/Makefile	2010-08-27 15:29:51.879773287 +0200
++++ library/Makefile.new	2010-08-27 15:33:53.960648715 +0200
+@@ -43,7 +43,7 @@
+ 
+ libpolarssl.so: libpolarssl.a
+ 	echo "  LD    $@"
+-	$(CC) -shared -Wl,-soname,$@ -o $@ $(OBJS)
++	$(CC) ${LDFLAGS} -shared -Wl,-soname,$@ -o $@ $(OBJS)
+ 
+ libpolarssl.dylib: libpolarssl.a
+ 	echo "  LD    $@"
+--- tests/Makefile	2010-06-19 00:47:29.000000000 +0200
++++ tests/Makefile.new	2010-08-27 16:09:58.269773581 +0200
+@@ -2,11 +2,11 @@
+ # To compile on SunOS: add "-lsocket -lnsl" to LDFLAGS
+ # To compile on MinGW: add "-lws2_32" to LDFLAGS
+ 
+-CFLAGS	= -I../include -D_FILE_OFFSET_BITS=64 -Wall -Wdeclaration-after-statement \
++CFLAGS	+= -I../include -D_FILE_OFFSET_BITS=64 -Wall -Wdeclaration-after-statement \
+ 			-Wno-unused-function -Wno-unused-value
+ 
+ OFLAGS	= -O
+-LDFLAGS	= -L../library -lpolarssl
++LDFLAGS	+= -L../library -lpolarssl
+ 
+ APPS =	test_suite_aes			test_suite_arc4		\
+ 		test_suite_base64		test_suite_camellia	\
+--- programs/Makefile	2010-03-18 21:11:58.000000000 +0100
++++ programs/Makefile.new	2010-08-27 16:09:44.717773482 +0200
+@@ -2,9 +2,8 @@
+ # To compile on SunOS: add "-lsocket -lnsl" to LDFLAGS
+ # To compile on MinGW: add "-lws2_32" to LDFLAGS
+ 
+-CFLAGS	= -I../include -D_FILE_OFFSET_BITS=64 -Wall -Wdeclaration-after-statement
+-OFLAGS	= -O
+-LDFLAGS	= -L../library -lpolarssl
++CFLAGS	+= -I../include -D_FILE_OFFSET_BITS=64 -Wall -Wdeclaration-after-statement
++LDFLAGS	+= -L../library -lpolarssl
+ 
+ APPS =	aes/aescrypt2		hash/hello		\
+ 	hash/md5sum			hash/sha1sum		\

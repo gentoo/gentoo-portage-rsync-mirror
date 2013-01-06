@@ -1,0 +1,48 @@
+diff -Nur mathgl-2.0_orig/include/mgl2/define.h mathgl-2.0/include/mgl2/define.h
+--- mathgl-2.0_orig/include/mgl2/define.h	2012-04-12 18:12:24.000000000 +0700
++++ mathgl-2.0/include/mgl2/define.h	2012-05-17 10:41:30.270686620 +0700
+@@ -84,7 +84,7 @@
+ #ifdef WIN32
+ #define MGL_FONT_PATH "."	// path to fonts
+ #else
+-#define MGL_FONT_PATH "/usr/local/share/mathgl/fonts"	// path to fonts
++#define MGL_FONT_PATH "/usr/share/mathgl/fonts"	// path to fonts
+ #endif
+ #endif
+ //-----------------------------------------------------------------------------
+diff -Nur mathgl-2.0_orig/udav/prop_dlg.cpp mathgl-2.0/udav/prop_dlg.cpp
+--- mathgl-2.0_orig/udav/prop_dlg.cpp	2012-04-12 18:12:43.000000000 +0700
++++ mathgl-2.0/udav/prop_dlg.cpp	2012-05-17 10:41:01.377677011 +0700
+@@ -111,7 +111,7 @@
+ 		<< QCoreApplication::applicationDirPath()+"/fonts";
+ 	filter << "*.vfm";
+ #ifndef WIN32
+-	paths << "/usr/local/share/mathgl/fonts/" << "/usr/local/mathgl/fonts/";
++	paths << "/usr/share/mathgl/fonts/" << "/usr/mathgl/fonts/";
+ #endif
+ 	QFileInfoList info;
+ 	for(int i=0;i<paths.count();i++)
+diff -Nur mathgl-2.0_orig/udav/udav_wnd.cpp mathgl-2.0/udav/udav_wnd.cpp
+--- mathgl-2.0_orig/udav/udav_wnd.cpp	2012-04-12 18:12:43.000000000 +0700
++++ mathgl-2.0/udav/udav_wnd.cpp	2012-05-17 10:41:19.438683016 +0700
+@@ -70,7 +70,7 @@
+ #ifdef WIN32
+ #define UDAV_DIR ""
+ #else
+-#define UDAV_DIR "/usr/local/share/udav/"
++#define UDAV_DIR "/usr/share/udav/"
+ #endif
+ #endif
+ //-----------------------------------------------------------------------------
+diff -Nur mathgl-2.0_orig/udav/udav_wnd.h mathgl-2.0/udav/udav_wnd.h
+--- mathgl-2.0_orig/udav/udav_wnd.h	2012-04-12 18:12:43.000000000 +0700
++++ mathgl-2.0/udav/udav_wnd.h	2012-05-17 10:41:11.863680509 +0700
+@@ -30,7 +30,7 @@
+ #ifdef WIN32
+ #define MGL_DOC_DIR ""
+ #else
+-#define MGL_DOC_DIR "/usr/local/share/doc/mathgl/"
++#define MGL_DOC_DIR "/usr/share/doc/mathgl/"
+ #endif
+ #endif
+ //-----------------------------------------------------------------------------

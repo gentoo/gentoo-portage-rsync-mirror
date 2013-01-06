@@ -1,0 +1,31 @@
+# ChangeLog for dev-util/ninja
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.6 2012/12/31 18:45:04 ottxor Exp $
+
+*ninja-1.1.0 (31 Dec 2012)
+
+  31 Dec 2012; Christoph Junghans <ottxor@gentoo.org> +ninja-1.1.0.ebuild:
+  version bump
+
+  30 Dec 2012; Christoph Junghans <ottxor@gentoo.org> ninja-1.0.0.ebuild:
+  fix collision with net-irc/ninja (bug #436804)
+
+*ninja-1.0.0 (23 Oct 2012)
+
+  23 Oct 2012; Christoph Junghans <ottxor@gentoo.org> +ninja-1.0.0.ebuild,
+  -ninja-120508.ebuild, -ninja-120715.ebuild, metadata.xml:
+  version bump
+
+  25 Aug 2012; Christoph Junghans <ottxor@gentoo.org> ninja-120715.ebuild:
+  added ~ppc-macos (bug #432692)
+
+*ninja-120715 (18 Aug 2012)
+
+  18 Aug 2012; Christoph Junghans <ottxor@gentoo.org> +ninja-120715.ebuild:
+  version bump
+
+*ninja-120508 (08 Aug 2012)
+
+  08 Aug 2012; Christoph Junghans <ottxor@gentoo.org> +metadata.xml,
+  +ninja-120508.ebuild:
+  initial commit (bug #383441)

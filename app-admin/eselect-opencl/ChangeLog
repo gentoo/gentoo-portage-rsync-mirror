@@ -1,0 +1,31 @@
+# ChangeLog for app-admin/eselect-opencl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opencl/ChangeLog,v 1.6 2012/05/16 14:43:18 aballier Exp $
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org>
+  eselect-opencl-1.1.0-r1.ebuild:
+  keyword ~amd64-fbsd
+
+  24 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  eselect-opencl-1.1.0-r1.ebuild:
+  keyword ~x86-fbsd
+
+  14 Apr 2012; Markus Meier <maekke@gentoo.org> eselect-opencl-1.1.0-r1.ebuild:
+  x86 stable, bug #409073
+
+  20 Mar 2012; Agostino Sarubbo <ago@gentoo.org>
+  eselect-opencl-1.1.0-r1.ebuild:
+  Stable for amd64, wrt bug #408905
+
+*eselect-opencl-1.1.0-r1 (17 Feb 2012)
+
+  17 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +eselect-opencl-1.1.0-r1.ebuild:
+  Revbump that properly links C++ header
+
+*eselect-opencl-1.1.0 (21 Jan 2012)
+
+  21 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +eselect-opencl-1.1.0.ebuild, +metadata.xml:
+  Initial import
+

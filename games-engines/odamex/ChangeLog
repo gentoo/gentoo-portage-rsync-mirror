@@ -1,0 +1,20 @@
+# ChangeLog for games-engines/odamex
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/odamex/ChangeLog,v 1.4 2012/12/15 23:23:42 hasufell Exp $
+
+*odamex-0.6.2 (15 Dec 2012)
+
+  15 Dec 2012; Julian Ospald <hasufell@gentoo.org> +odamex-0.6.2.ebuild,
+  +files/odamex-0.6.2-build.patch:
+  version bump
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> odamex-0.6.1.ebuild:
+  x86 stable wrt bug #432726
+
+  26 Aug 2012; Agostino Sarubbo <ago@gentoo.org> odamex-0.6.1.ebuild:
+  Stable for amd64, wrt bug #432726
+
+  20 Jul 2012; Julian Ospald <hasufell@gentoo.org>
+  +files/odamex-0.6.1-build.patch, +metadata.xml:
+  initial import with Mike Wood wrt bug #197228
+

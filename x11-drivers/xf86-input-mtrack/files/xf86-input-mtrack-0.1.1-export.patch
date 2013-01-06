@@ -1,0 +1,10 @@
+diff --git a/driver/mtrack.c b/driver/mtrack.c
+index 3b785a6..5d1f2a3 100644
+--- a/driver/mtrack.c
++++ b/driver/mtrack.c
+@@ -348,4 +348,4 @@ static pointer setup(pointer module, pointer options, int *errmaj, int *errmin)
+ 	return module;
+ }
+ 
+-XF86ModuleData mtrackModuleData = {&VERSION, &setup, NULL };
++_X_EXPORT XF86ModuleData mtrackModuleData = {&VERSION, &setup, NULL };

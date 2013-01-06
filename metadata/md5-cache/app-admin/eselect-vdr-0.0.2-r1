@@ -1,0 +1,9 @@
+DEFINED_PHASES=install
+DESCRIPTION=Manages the VDR plugins
+HOMEPAGE=http://www.gentoo.org/
+KEYWORDS=~amd64 ~ppc x86
+LICENSE=GPL-2
+RDEPEND=>=app-admin/eselect-1.0.6
+SLOT=0
+SRC_URI=mirror://gentoo/eselect-vdr-0.0.2.tar.bz2
+_md5_=24a33451d756f0104b1b69058fbca8e2

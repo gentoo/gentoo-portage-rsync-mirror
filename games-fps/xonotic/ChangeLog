@@ -1,0 +1,33 @@
+# ChangeLog for games-fps/xonotic
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/ChangeLog,v 1.8 2012/09/13 21:14:57 mr_bones_ Exp $
+
+  13 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> xonotic-0.6.0.ebuild:
+  add x11-libs/libXpm dep (bug #434934)
+
+  01 Jun 2012; Jeff Horelick <jdhore@gentoo.org> xonotic-0.6.0.ebuild:
+  marked x86 per bug 418085
+
+  29 May 2012; Agostino Sarubbo <ago@gentoo.org> xonotic-0.6.0.ebuild:
+  Stable for amd64, wrt bug #418085
+
+*xonotic-0.6.0 (09 Mar 2012)
+
+  09 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> +xonotic-0.6.0.ebuild:
+  Version bump to 0.6.0. No factical changes apart from bumped dep on
+  d0_blind_id and einfo on media-libs/libtxc_dxtn. Fixes bug#407531.
+
+  11 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xonotic-0.5.0.ebuild:
+  x86 stable wrt bug #389269
+
+  05 Nov 2011; Markos Chandras <hwoarang@gentoo.org> xonotic-0.5.0.ebuild:
+  Stable on amd64 wrt bug #389269
+
+  22 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> xonotic-0.5.0.ebuild:
+  try to work around broken Makefiles (bug #383517)
+
+*xonotic-0.5.0 (16 Sep 2011)
+
+  16 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> +xonotic-0.5.0.ebuild,
+  +metadata.xml:
+  Initial commit - ebuild based on the one submitted by Nikoli (bug #324159)

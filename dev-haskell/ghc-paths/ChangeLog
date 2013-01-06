@@ -1,0 +1,42 @@
+# ChangeLog for dev-haskell/ghc-paths
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ghc-paths/ChangeLog,v 1.8 2012/12/22 21:36:47 slyfox Exp $
+
+*ghc-paths-0.1.0.9 (22 Dec 2012)
+
+  22 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> +ghc-paths-0.1.0.9.ebuild,
+  -ghc-paths-0.1.0.8.ebuild:
+  Version bump.
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> ghc-paths-0.1.0.8.ebuild:
+  move dev-haskell/ghc-paths/ghc-paths-0.1.0.8.ebuild ebuild to mirror://hackage
+
+  03 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> ghc-paths-0.1.0.8.ebuild:
+  keyworded alpha/ia64/ppc/ppc64/sparc/x86-fbsd (set of constants for haddock)
+
+  02 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  -ghc-paths-0.1.0.6.ebuild:
+  Removed old.
+
+*ghc-paths-0.1.0.8 (02 Aug 2011)
+
+  02 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +ghc-paths-0.1.0.8.ebuild:
+  Version bump.
+
+  17 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  ghc-paths-0.1.0.6.ebuild:
+  Fixed building against newer Cabal library versions (bug #316613). Thanks
+  to Diego E. 'Flameeyes' Pettenò <flameeyes@gentoo.org> for the report.
+
+*ghc-paths-0.1.0.6 (14 Jun 2010)
+
+  14 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  +ghc-paths-0.1.0.6.ebuild:
+  Version bump.
+
+*ghc-paths-0.1.0.5 (19 Apr 2009)
+
+  19 Apr 2009; Lennart Kolmodin <kolmodin@gentoo.org> +metadata.xml,
+  +ghc-paths-0.1.0.5.ebuild:
+  Initial version.

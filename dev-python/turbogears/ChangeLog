@@ -1,0 +1,76 @@
+# ChangeLog for dev-python/turbogears
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/ChangeLog,v 1.15 2010/07/09 23:06:38 arfrever Exp $
+
+  09 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  turbogears-1.0.8.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
+
+  01 Apr 2009; Patrick Lauer <patrick@gentoo.org> turbogears-1.0.8.ebuild:
+  Fixing turbojson dep, fixes #264484
+
+*turbogears-1.0.8 (15 Feb 2009)
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> +turbogears-1.0.8.ebuild:
+  Bump to 1.0.8
+
+  09 Jan 2009; Patrick Lauer <patrick@gentoo.org>
+  -turbogears-1.0.2.2.ebuild, -turbogears-1.0.2.2-r1.ebuild:
+  Remove old
+
+*turbogears-1.0.5 (02 Jul 2008)
+
+  02 Jul 2008; Rob Cakebread <pythonhead@gentoo.org>
+  +turbogears-1.0.5.ebuild:
+  Version bump, removed amd64 until cherrypy-2.3.0 gets amd64
+
+*turbogears-1.0.3.2 (01 Aug 2007)
+
+  01 Aug 2007; Tiziano Müller <dev-zero@gentoo.org>
+  +turbogears-1.0.3.2.ebuild:
+  Version bump.
+
+*turbogears-1.0.2.2-r1 (08 Jul 2007)
+
+  08 Jul 2007; Rob Cakebread <pythonhead@gentoo.org>
+  +turbogears-1.0.2.2-r1.ebuild:
+  Make RDEPEND on setuptools-friendly versions of elementree and cheetah for
+  Python 2.4
+
+  04 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  -files/turbogears-1.0.2.2-gentoo-setuptools.diff,
+  -turbogears-1.0.1.ebuild, turbogears-1.0.2.2.ebuild:
+  Removed use_setuptools sed. Dropped old version.
+
+  04 Jul 2007; Rob Cakebread <pythonhead@gentoo.org>
+  turbogears-1.0.1.ebuild, turbogears-1.0.2.2.ebuild:
+  Removed setuptools sed. bug# 184039
+
+  03 Jul 2007; Rob Cakebread <pythonhead@gentoo.org>
+  files/turbogears-1.0.2.2-gentoo-setuptools.diff:
+  Clean up setuptools patch.
+
+  07 May 2007; Rob Cakebread <pythonhead@gentoo.org>
+  +files/turbogears-1.0.2.2-gentoo-setuptools.diff,
+  turbogears-1.0.2.2.ebuild:
+  Fixes setuptools bug #177433. Thanks Santiago Gala <sgala@apache.org>
+
+*turbogears-1.0.2.2 (06 May 2007)
+
+  06 May 2007; Rob Cakebread <pythonhead@gentoo.org>
+  -files/turbogears-1.0.1-py25.diff, turbogears-1.0.1.ebuild,
+  +turbogears-1.0.2.2.ebuild:
+  Version bump. Removed unsupported python2.5 patch from 1.0.1
+
+  02 May 2007; Rob Cakebread <pythonhead@gentoo.org>
+  turbogears-1.0.1.ebuild:
+  Fixed sqlobject dependency.
+
+  06 Apr 2007; Rob Cakebread <pythonhead@gentoo.org>
+  +files/turbogears-1.0.1-py25.diff, turbogears-1.0.1.ebuild:
+  Patch to support Python 2.5
+
+  05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org>
+  -turbogears-1.0_beta2.ebuild, +turbogears-1.0.1.ebuild, +metadata.xml:
+  Initial ebuild.
+

@@ -1,0 +1,33 @@
+# ChangeLog for media-video/mjpg-streamer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpg-streamer/ChangeLog,v 1.6 2012/06/28 07:35:44 aidecoe Exp $
+
+  28 Jun 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  -mjpg-streamer-0_pre20110522.ebuild:
+  Remove old version.
+
+  28 Jun 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  mjpg-streamer-0_pre20120421.ebuild:
+  Default USE: input_file and output_http.
+
+*mjpg-streamer-0_pre20120421 (23 Apr 2012)
+
+  23 Apr 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/0_pre20120421-make-var-instead-of-cmd.patch,
+  +mjpg-streamer-0_pre20120421.ebuild:
+  Proxy commit on behalf of Andrzej Pauli <andrzej.pauli@gmail.com>.  Version
+  bump.  Fixes bug #413021.
+
+  21 Apr 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  mjpg-streamer-0_pre20110522.ebuild:
+  Proxy commit on behalf of Andrzej Pauli <andrzej.pauli@gmail.com>. Depend
+  virtual/jpeg instead of media-libs/jpeg. Fixes bug #411931.
+
+*mjpg-streamer-0_pre20110522 (17 Nov 2011)
+
+  17 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/0_pre20110522-make-var-instead-of-cmd.patch,
+  +mjpg-streamer-0_pre20110522.ebuild, +files/mjpg-streamer.confd,
+  +files/mjpg-streamer.initd, +metadata.xml:
+  Proxy commit on behalf of Andrzej Pauli <andrzej.pauli@gmail.com>. Initial
+  ebuild. Fixes bug #260969.

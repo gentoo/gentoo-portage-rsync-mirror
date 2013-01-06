@@ -1,0 +1,110 @@
+# ChangeLog for dev-db/mariadb
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.20 2012/12/18 17:51:01 jer Exp $
+
+  18 Dec 2012; Jeroen Roovers <jer@gentoo.org> mariadb-5.5.28.ebuild:
+  Drop HPPA keywording.
+
+*mariadb-5.5.28 (02 Nov 2012)
+
+  02 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> +mariadb-5.5.28.ebuild,
+  metadata.xml:
+  Copy from overlay.
+
+  09 May 2012; Zac Medico <zmedico@gentoo.org> mariadb-5.1.62.ebuild,
+  mariadb-5.2.12.ebuild, mariadb-5.3.6.ebuild, mariadb-5.5.23.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
+
+*mariadb-5.3.6 (18 Apr 2012)
+*mariadb-5.2.12 (18 Apr 2012)
+*mariadb-5.5.23 (18 Apr 2012)
+*mariadb-5.1.62 (18 Apr 2012)
+
+  18 Apr 2012; Robin H. Johnson <robbat2@gentoo.org> +mariadb-5.1.62.ebuild,
+  +mariadb-5.2.12.ebuild, +mariadb-5.3.6.ebuild, +mariadb-5.5.23.ebuild,
+  metadata.xml:
+  Update MariaDB packages from overlay.
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> mariadb-5.1.42.ebuild,
+  mariadb-5.1.42-r1.ebuild, mariadb-5.1.50.ebuild, mariadb-5.1.55.ebuild,
+  mariadb-5.2.9.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
+
+  08 Jan 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  mariadb-5.1.42.ebuild, mariadb-5.1.42-r1.ebuild, mariadb-5.1.50.ebuild:
+  [dev-db/mariadb] Bumping EAPI to 4 on ebuilds using mysql.eclass - fixes bug
+  398025.
+
+  06 Jan 2012; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  mariadb-5.1.55.ebuild, -mariadb-5.2.7.ebuild, -mariadb-5.2.8.ebuild,
+  mariadb-5.2.9.ebuild:
+  [dev-db/mariadb] Bumped EAPI to 4 on ebuilds inheriting the mysql-v2 eclass
+  as I'm going to push the overlay eclasses with prefix support.
+  Dropped old 5.2 series versions.
+
+*mariadb-5.2.9 (30 Sep 2011)
+
+  30 Sep 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +mariadb-5.2.9.ebuild:
+  [dev-db/mariadb] Bumped to 5.2.9 release.
+
+*mariadb-5.2.8 (19 Aug 2011)
+
+  19 Aug 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +mariadb-5.2.8.ebuild:
+  [dev-db/maria] Bumped to release 5.2.8.
+
+  19 Aug 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  mariadb-5.2.7.ebuild:
+  Added patch by Diego to fix the multiple install of files - fixes bug 379059.
+
+*mariadb-5.2.7 (15 Jul 2011)
+*mariadb-5.1.55 (15 Jul 2011)
+
+  15 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +mariadb-5.1.55.ebuild, +mariadb-5.2.7.ebuild, metadata.xml:
+  [dev-db/mariadb] Add 5.1.55 and 5.2.7 bumps from the mysql overlay.
+
+  07 Oct 2010; Robin H. Johnson <robbat2@gentoo.org> mariadb-5.1.50.ebuild:
+  We need a newer libtool now, bug #339717 comment #3.
+
+*mariadb-5.1.50 (06 Oct 2010)
+
+  06 Oct 2010; Robin H. Johnson <robbat2@gentoo.org> +mariadb-5.1.50.ebuild:
+  Version bump. Amarok use of embedded libmysqld.so is supported again.
+
+  01 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> mariadb-5.1.42.ebuild,
+  mariadb-5.1.42-r1.ebuild:
+  Followup on bug #284946, #293801, #310615, #307251: In 5.0.87, the mutex
+  locking code was changed a lot again, so that while 5.0.84 required a
+  newer GCC due to the HAVE_ATOMIC_BUILTINS error, newer releases do NOT
+  need those GCC versions anymore. This also frees up ~hppa to do more
+  stabilization.
+
+*mariadb-5.1.42-r1 (24 Mar 2010)
+
+  24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> files/my.cnf-5.1,
+  +mariadb-5.1.42-r1.ebuild:
+  Missed copying back last version of the new my.cnf from my personal
+  overlay, and caused bug #311151.
+
+  24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> mariadb-5.1.42.ebuild:
+  Bug #310131: fix lineendings in mariadb specific patch that broke compile
+  on some systems.
+
+  24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> +files/my.cnf-5.1:
+  Just add new config files that gets rid of some deprecated warnings, so
+  the eclass does not break anything.
+
+  22 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> mariadb-5.1.42.ebuild:
+  Bug #224751: Fix false positive fail of the profiling tests.
+
+  16 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> Manifest:
+  Fix Manifest.
+
+*mariadb-5.1.42 (15 Mar 2010)
+
+  15 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> +files/my.cnf-4.1,
+  +mariadb-5.1.42.ebuild, +metadata.xml:
+  Add MariaDB. Bug #303130, based on the submission by Brian Evans
+  <grknight@scent-team.com>.

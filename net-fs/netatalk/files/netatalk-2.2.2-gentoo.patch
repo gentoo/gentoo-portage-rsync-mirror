@@ -1,0 +1,86 @@
+ etc/afpd/afp_avahi.c     |    2 +-
+ etc/uams/Makefile.am     |   20 ++++++++++----------
+ libatalk/Makefile.am     |    2 --
+ libatalk/dsi/Makefile.am |    1 +
+ libatalk/vfs/Makefile.am |    1 +
+ 5 files changed, 13 insertions(+), 13 deletions(-)
+
+diff --git a/etc/afpd/afp_avahi.c b/etc/afpd/afp_avahi.c
+index 351e001..6ed695f 100644
+--- a/etc/afpd/afp_avahi.c
++++ b/etc/afpd/afp_avahi.c
+@@ -177,8 +177,8 @@ static void register_stuff(void) {
+     return;
+ 
+ fail:
+-    time(NULL);
+ //    avahi_threaded_poll_quit(ctx->threaded_poll);
++    return;
+ }
+ 
+ /* Called when publishing of service data completes */
+diff --git a/etc/uams/Makefile.am b/etc/uams/Makefile.am
+index dbe304a..8570a46 100644
+--- a/etc/uams/Makefile.am
++++ b/etc/uams/Makefile.am
+@@ -97,16 +97,16 @@ uams_dhx_pam_la_CFLAGS     = @SSL_CFLAGS@ @PAM_CFLAGS@
+ uams_dhx2_pam_la_CFLAGS    = @LIBGCRYPT_CFLAGS@ @PAM_CFLAGS@
+ uams_gss_la_CFLAGS   	   = @GSSAPI_CFLAGS@
+ 
+-uams_guest_la_LDFLAGS      = -module -avoid-version
+-uams_randnum_la_LDFLAGS    = -module -avoid-version @SSL_LIBS@
+-uams_passwd_la_LDFLAGS     = -module -avoid-version @CRYPT_LIBS@
+-uams_pam_la_LDFLAGS        = -module -avoid-version @PAM_LIBS@
+-uams_pgp_la_LDFLAGS        = -module -avoid-version @SSL_LIBS@
+-uams_dhx_passwd_la_LDFLAGS = -module -avoid-version @CRYPT_LIBS@ @SSL_LIBS@
+-uams_dhx_pam_la_LDFLAGS		= -module -avoid-version @CRYPT_LIBS@ @SSL_LIBS@ @PAM_LIBS@
+-uams_dhx2_passwd_la_LDFLAGS	= -module -avoid-version @CRYPT_LIBS@ @LIBGCRYPT_LIBS@
+-uams_dhx2_pam_la_LDFLAGS	= -module -avoid-version @LIBGCRYPT_LIBS@ @PAM_LIBS@
+-uams_gss_la_LDFLAGS   	   = -module -avoid-version @GSSAPI_LIBS@ 
++uams_guest_la_LDFLAGS      = -shared -module -avoid-version
++uams_randnum_la_LDFLAGS    = -shared -module -avoid-version @SSL_LIBS@
++uams_passwd_la_LDFLAGS     = -shared -module -avoid-version @CRYPT_LIBS@
++uams_pam_la_LDFLAGS        = -shared -module -avoid-version @PAM_LIBS@
++uams_pgp_la_LDFLAGS        = -shared -module -avoid-version @SSL_LIBS@
++uams_dhx_passwd_la_LDFLAGS = -shared -module -avoid-version @CRYPT_LIBS@ @SSL_LIBS@
++uams_dhx_pam_la_LDFLAGS		= -shared -module -avoid-version @CRYPT_LIBS@ @SSL_LIBS@ @PAM_LIBS@
++uams_dhx2_passwd_la_LDFLAGS	= -shared -module -avoid-version @CRYPT_LIBS@ @LIBGCRYPT_LIBS@
++uams_dhx2_pam_la_LDFLAGS	= -shared -module -avoid-version @LIBGCRYPT_LIBS@ @PAM_LIBS@
++uams_gss_la_LDFLAGS   	   = -shared -module -avoid-version @GSSAPI_LIBS@ 
+ 
+ #
+ # module compilation
+diff --git a/libatalk/Makefile.am b/libatalk/Makefile.am
+index a241d94..513d5f6 100644
+--- a/libatalk/Makefile.am
++++ b/libatalk/Makefile.am
+@@ -29,8 +29,6 @@ libatalk_la_DEPENDENCIES = \
+ 	unicode/libunicode.la \
+ 	vfs/libvfs.la
+ 
+-libatalk_la_LDFLAGS = -static
+-
+ if USE_APPLETALK
+ SUBDIRS +=  asp atp nbp netddp
+ libatalk_la_LIBADD += \
+diff --git a/libatalk/dsi/Makefile.am b/libatalk/dsi/Makefile.am
+index d64cbed..5a07c94 100644
+--- a/libatalk/dsi/Makefile.am
++++ b/libatalk/dsi/Makefile.am
+@@ -7,5 +7,6 @@ LIBS = @LIBS@
+ noinst_LTLIBRARIES = libdsi.la
+ 
+ libdsi_la_SOURCES = dsi_attn.c dsi_close.c dsi_cmdreply.c dsi_getsess.c dsi_getstat.c dsi_init.c dsi_opensess.c dsi_read.c dsi_tcp.c dsi_tickle.c dsi_write.c dsi_stream.c
++libdsi_la_LIBADD = $(WRAP_LIBS)
+ 
+ noinst_HEADERS = dsi_private.h
+diff --git a/libatalk/vfs/Makefile.am b/libatalk/vfs/Makefile.am
+index 9b8d143..1cc83ec 100644
+--- a/libatalk/vfs/Makefile.am
++++ b/libatalk/vfs/Makefile.am
+@@ -6,4 +6,5 @@ libvfs_la_SOURCES = vfs.c unix.c ea.c sys_ea.c ea_sys.c
+ 
+ if HAVE_ACLS
+ libvfs_la_SOURCES += acl.c
++libvfs_la_LIBADD = $(ACL_LIBS)
+ endif

@@ -1,0 +1,11 @@
+--- Skype4Py-1.0.32.1/Skype4Py/api/posix_dbus.py
++++ Skype4Py-1.0.32.1/Skype4Py/api/posix_dbus.py
+@@ -176,7 +176,7 @@
+             import os
+             if os.fork() == 0: # we're child
+                 os.setsid()
+-                os.execlp('skype')
++                os.execlp('skype', 'skype')
+ 
+     def shutdown(self):
+         import os

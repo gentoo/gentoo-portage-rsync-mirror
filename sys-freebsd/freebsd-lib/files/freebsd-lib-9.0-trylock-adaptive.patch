@@ -1,0 +1,14 @@
+http://www.freebsd.org/cgi/query-pr.cgi?pr=168317
+
+Index: lib/libthr/thread/thr_mutex.c
+===================================================================
+--- lib/libthr/thread/thr_mutex.c	(revision 235924)
++++ lib/libthr/thread/thr_mutex.c	(working copy)
+@@ -538,6 +538,7 @@
+ 	switch (PMUTEX_TYPE(m->m_flags)) {
+ 	case PTHREAD_MUTEX_ERRORCHECK:
+ 	case PTHREAD_MUTEX_NORMAL:
++	case PTHREAD_MUTEX_ADAPTIVE_NP:
+ 		ret = EBUSY; 
+ 		break;
+ 

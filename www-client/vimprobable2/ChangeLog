@@ -1,0 +1,16 @@
+# ChangeLog for www-client/vimprobable2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/vimprobable2/ChangeLog,v 1.2 2012/10/15 04:33:46 radhermit Exp $
+
+*vimprobable2-1.2.0 (15 Oct 2012)
+
+  15 Oct 2012; Tim Harder <radhermit@gentoo.org> +vimprobable2-1.2.0.ebuild:
+  Version bump.
+
+*vimprobable2-9999 (21 Aug 2012)
+*vimprobable2-1.1.0 (21 Aug 2012)
+
+  21 Aug 2012; Tim Harder <radhermit@gentoo.org> +vimprobable2-1.1.0.ebuild,
+  +vimprobable2-9999.ebuild, +metadata.xml:
+  Initial import. Ebuild by me.
+

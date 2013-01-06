@@ -1,0 +1,12 @@
+diff -Naur ldns-1.6.12.orig/configure.ac ldns-1.6.12/configure.ac
+--- ldns-1.6.12.orig/configure.ac	2012-01-10 23:51:41.000000000 +0900
++++ ldns-1.6.12/configure.ac	2012-01-12 00:08:14.913432352 +0900
+@@ -63,8 +63,6 @@
+ # Checks for typedefs, structures, and compiler characteristics.
+ AC_C_CONST
+ AC_LANG_C
+-ACX_CHECK_COMPILER_FLAG(g, [CFLAGS="-g $CFLAGS"])
+-ACX_CHECK_COMPILER_FLAG(O2, [CFLAGS="-O2 $CFLAGS"])
+ ACX_CHECK_COMPILER_FLAG(Wall, [CFLAGS="-Wall $CFLAGS"])
+ ACX_CHECK_COMPILER_FLAG(W, [CFLAGS="-W $CFLAGS"])
+ ACX_CHECK_COMPILER_FLAG(Wwrite-strings, [CFLAGS="-Wwrite-strings $CFLAGS"])

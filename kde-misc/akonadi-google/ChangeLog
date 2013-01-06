@@ -1,0 +1,73 @@
+# ChangeLog for kde-misc/akonadi-google
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/ChangeLog,v 1.13 2012/06/19 20:17:18 dilfridge Exp $
+
+*akonadi-google-20120619 (19 Jun 2012)
+
+  19 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +akonadi-google-20120619.ebuild:
+  Add snapshot as there will be no releases anymore, merged into
+  kdepim-runtime-4.9
+
+  19 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  akonadi-google-0.3.1.ebuild:
+  Add blocker on kde-4.9
+
+  29 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> -akonadi-google-0.3.ebuild:
+  No issues with new verison so remove the older one.
+
+*akonadi-google-0.3.1 (27 Apr 2012)
+
+  27 Apr 2012; Johannes Huber <johu@gentoo.org> +akonadi-google-0.3.1.ebuild:
+  Version bump.
+
+*akonadi-google-0.3 (02 Apr 2012)
+
+  02 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +akonadi-google-0.3.ebuild,
+  -akonadi-google-0.2_p20111229.ebuild, -akonadi-google-0.2_p20120130.ebuild,
+  -akonadi-google-0.2_p20120222.ebuild:
+  Version bump to 0.3 release. Drop old snapshots.
+
+  26 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  akonadi-google-0.2_p20111229.ebuild, akonadi-google-0.2_p20120130.ebuild,
+  akonadi-google-0.2_p20120222.ebuild:
+  Remove dependency on libgcal, bug 405787
+
+  23 Feb 2012; Johannes Huber <johu@gentoo.org>
+  akonadi-google-0.2_p20120222.ebuild:
+  Fix SRC_URI, fixes bug #405363.
+
+*akonadi-google-0.2_p20120222 (22 Feb 2012)
+
+  22 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +akonadi-google-0.2_p20120222.ebuild:
+  New snapshot
+
+  09 Feb 2012; Johannes Huber <johu@gentoo.org>
+  -akonadi-google-0.2_p20120201.ebuild:
+  Remove seg faulting snapshot, bug #402609.
+
+*akonadi-google-0.2_p20120201 (06 Feb 2012)
+
+  06 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +akonadi-google-0.2_p20120201.ebuild:
+  Version bump with several bugfixes
+
+*akonadi-google-0.2_p20120130 (30 Jan 2012)
+
+  30 Jan 2012; Johannes Huber <johu@gentoo.org>
+  +akonadi-google-0.2_p20120130.ebuild, -akonadi-google-0.2_p20111130.ebuild:
+  New snapshot by dilfridge.
+
+*akonadi-google-0.2_p20111229 (29 Dec 2011)
+
+  29 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +akonadi-google-0.2_p20111229.ebuild:
+  Add newer snapshot
+
+*akonadi-google-0.2_p20111130 (06 Dec 2011)
+
+  06 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +akonadi-google-0.2_p20111130.ebuild, +metadata.xml:
+  New ebuild, imported from kde overlay after some testing.
+

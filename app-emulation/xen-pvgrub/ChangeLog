@@ -1,0 +1,73 @@
+# ChangeLog for app-emulation/xen-pvgrub
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.14 2012/12/04 19:24:18 scarabeus Exp $
+
+  04 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org> xen-pvgrub-4.1.1-r1.ebuild:
+  This is supposed to be stable amd64 and x86. We do not remove stable keywords
+  just for fun.
+
+*xen-pvgrub-4.2.0 (05 Dec 2012)
+
+  05 Dec 2012; Ian Delaney <idella4@gentoo.org> +files/newlib-implicits.patch,
+  +files/xen-4-fix_dotconfig-gcc.patch, +files/xen-4.2.0-externals.patch,
+  +files/xen-4.2.0-newlib.patch, +xen-pvgrub-4.2.0.ebuild,
+  xen-pvgrub-4.1.1-r1.ebuild, xen-pvgrub-4.1.2.ebuild:
+  bump, patches add dealing with building external packages, sed statements
+  replaced with patches, key QA issues from gcc msgs fixed, minor ones remain
+
+  24 Apr 2012; Michał Górny <mgorny@gentoo.org> xen-pvgrub-4.1.1-r1.ebuild,
+  xen-pvgrub-4.1.2.ebuild:
+  Update to use mirror://.
+
+  28 Nov 2011; Alexey Shvetsov <alexxy@gentoo.org> -xen-pvgrub-9999.ebuild:
+  Move xen-pvgrub-9999 to virtualization overlay
+
+  07 Nov 2011; Alexey Shvetsov <alexxy@gentoo.org> xen-pvgrub-4.1.2.ebuild:
+  Minor sytax changes; rm -j1 from install, added die statements, prepared by
+  Ian Delaney aka idella4
+
+  01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> xen-pvgrub-4.1.1-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Ian "idella4" Delaney in bug #360621.
+
+*xen-pvgrub-4.1.2 (25 Oct 2011)
+
+  25 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> +xen-pvgrub-4.1.2.ebuild:
+  [app-emulation/xen-pvgrub] Version bump prepared by Ian Delaney aka idella4
+
+  13 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> xen-pvgrub-4.1.1-r1.ebuild:
+  Use toolchain function instead of calling LD directly, copy fix from bug
+  #384359, fix to invoke correct compiler, copy from bug #383973, patches by
+  Ian Delaney aka idella4
+
+  25 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  xen-pvgrub-4.1.1-r1.ebuild:
+  x86 stable wrt bug #360621
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> xen-pvgrub-9999.ebuild:
+  Migrate to git-2. Localize git variables.
+
+*xen-pvgrub-4.1.1-r1 (17 Sep 2011)
+
+  17 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> -xen-pvgrub-4.1.0.ebuild,
+  -xen-pvgrub-4.1.1.ebuild, +xen-pvgrub-4.1.1-r1.ebuild:
+  Prevent internal downloading, also fixes bug #366125, Also sets MAKEOPTS=-j1
+  to ensure building. Thanks to Ian Delaney aka idella4
+
+*xen-pvgrub-4.1.1 (09 Aug 2011)
+
+  09 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> xen-pvgrub-4.1.0.ebuild,
+  +xen-pvgrub-4.1.1.ebuild, xen-pvgrub-9999.ebuild:
+  Version bump and fix bug #362689
+
+  12 May 2011; Jeremy Olexa <darkside@gentoo.org> xen-pvgrub-4.1.0.ebuild,
+  xen-pvgrub-9999.ebuild:
+  QA: fix SRC_URI to allow fetch
+
+*xen-pvgrub-9999 (07 Apr 2011)
+*xen-pvgrub-4.1.0 (07 Apr 2011)
+
+  07 Apr 2011; Alexey Shvetsov <alexxy@gentoo.org> +xen-pvgrub-4.1.0.ebuild,
+  +xen-pvgrub-9999.ebuild:
+  Initial import. Thanks to newtonian.
+  http://forums.gentoo.org/viewtopic-p-6642981.html

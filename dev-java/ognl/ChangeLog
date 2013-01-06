@@ -1,0 +1,48 @@
+# ChangeLog for dev-java/ognl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.10 2012/12/02 08:33:38 ulm Exp $
+
+  02 Dec 2012; Ulrich Müller <ulm@gentoo.org> ognl-2.6.9-r1.ebuild,
+  ognl-2.6.9-r2.ebuild:
+  Update LICENSE, this is identical with the Apache-1.1 license, bug 444848.
+
+*ognl-2.6.9-r2 (27 Sep 2012)
+
+  27 Sep 2012; Ralph Sennhauser <sera@gentoo.org> +ognl-2.6.9-r2.ebuild:
+  Drop all unused deps including javacc. #315557
+  EAPI bump and cleanup.
+
+  19 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org> -ognl-2.6.9.ebuild:
+  Removed older version that dep'd on slot 3.1 of javassist.
+
+*ognl-2.6.9-r1 (19 Mar 2007)
+
+  19 Mar 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  +ognl-2.6.9-r1.ebuild:
+  Relaxed dep on javassist to reflect it's new slot. Package potentially will
+  be package.masked and removed from tree.
+
+*ognl-2.6.9 (11 Sep 2006)
+
+  11 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org> -ognl-2.6.7.ebuild,
+  +ognl-2.6.9.ebuild:
+  Version bump, uses new Java build system.
+
+  19 Mar 2006; Petteri Räty <betelgeuse@gentoo.org> ognl-2.6.7.ebuild:
+  added app-arch/unzip to DEPEND
+
+  04 Mar 2006; <nichoj@gentoo.org> ognl-2.6.7.ebuild:
+  Adding missing ant-contrib dependency.
+
+  23 Jan 2006; Karl Trygve Kalleberg <karltk@gentoo.org> ognl-2.6.7.ebuild:
+  Added missing ~amd64 keyword.
+
+  22 Jan 2006; Joshua Nichols <nichoj@gentoo.org> ognl-2.6.7.ebuild:
+  Fixed dependencies.
+
+*ognl-2.6.7 (22 Jan 2006)
+
+  22 Jan 2006; Joshua Nichols <nichoj@gentoo.org> +metadata.xml,
+  +ognl-2.6.7.ebuild:
+  Initial import. Dependency to build oscore from source (bug #63282).
+

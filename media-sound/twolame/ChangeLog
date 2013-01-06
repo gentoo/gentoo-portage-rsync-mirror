@@ -1,0 +1,156 @@
+# ChangeLog for media-sound/twolame
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.46 2012/06/03 13:55:13 blueness Exp $
+
+  03 Jun 2012; Anthony G. Basile <blueness@gentoo.org> twolame-0.3.13.ebuild:
+  Keyword ~mips
+
+  29 May 2012; Alexis Ballier <aballier@gentoo.org> twolame-0.3.13.ebuild:
+  keyword ~amd64-fbsd
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> twolame-0.3.12.ebuild,
+  twolame-0.3.13.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  30 Nov 2011; Fabian Groffen <grobian@gentoo.org> twolame-0.3.13.ebuild:
+  Work around bad configure script (uses bash features) for Solaris hosts, bug
+  #388885
+
+*twolame-0.3.13 (07 Apr 2011)
+
+  07 Apr 2011; Alexis Ballier <aballier@gentoo.org> +twolame-0.3.13.ebuild:
+  version bump
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> twolame-0.3.12.ebuild:
+  arm stable
+
+  23 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> twolame-0.3.12.ebuild:
+  USE="static-libs", punt .la files, EAPI="3" and keyword for prefix.
+
+  04 Apr 2009; <solar@gentoo.org> twolame-0.3.12.ebuild:
+  - Keyword ~arm
+
+  23 Mar 2008; Raúl Porcel <armin76@gentoo.org> twolame-0.3.12.ebuild:
+  alpha/ia64/sparc stable wrt #214281
+
+  23 Mar 2008; nixnut <nixnut@gentoo.org> twolame-0.3.12.ebuild:
+  Stable on ppc wrt bug 214281
+
+  23 Mar 2008; Brent Baude <ranger@gentoo.org> twolame-0.3.12.ebuild:
+  stable ppc64, bug 214281
+
+  22 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
+  twolame-0.3.12.ebuild:
+  stable x86, bug 214281
+
+  22 Mar 2008; Jeroen Roovers <jer@gentoo.org> twolame-0.3.12.ebuild:
+  Stable for HPPA (bug #214281).
+
+  22 Mar 2008; Samuli Suominen <drac@gentoo.org> twolame-0.3.12.ebuild:
+  amd64 stable
+
+  19 Jan 2008; Samuli Suominen <drac@gentoo.org> twolame-0.3.12.ebuild:
+  Remove forced -O3 optimization from upstream configure, thanks to aballier
+  for noticing.
+
+*twolame-0.3.12 (17 Jan 2008)
+
+  17 Jan 2008; Samuli Suominen <drac@gentoo.org> +twolame-0.3.12.ebuild:
+  Version bump wrt #206309 which includes a fix to #200047 from upstream.
+  Thanks to Ryan Hill and Juan Aguado.
+
+  20 Dec 2007; Alexis Ballier <aballier@gentoo.org> twolame-0.3.10.ebuild:
+  Keyword ~x86-fbsd, working fine here, add elibtoolize to get the same .so
+  versionning as on linux
+
+  16 Nov 2007; Raúl Porcel <armin76@gentoo.org> twolame-0.3.10.ebuild:
+  alpha/ia64/sparc stable wrt #198790
+
+  13 Nov 2007; Markus Rothe <corsair@gentoo.org> twolame-0.3.10.ebuild:
+  Stable on ppc64; bug #198790
+
+  11 Nov 2007; Dawid Węgliński <cla@gentoo.org> twolame-0.3.10.ebuild:
+  Stable on x86 (bug #198790)
+
+  11 Nov 2007; nixnut <nixnut@gentoo.org> twolame-0.3.10.ebuild:
+  Stable on ppc wrt bug 198790
+
+  11 Nov 2007; Samuli Suominen <drac@gentoo.org> twolame-0.3.10.ebuild:
+  amd64 stable wrt #198790
+
+  26 Oct 2007; Jeroen Roovers <jer@gentoo.org> twolame-0.3.10.ebuild:
+  Stable for HPPA.
+
+  02 Sep 2007; Samuli Suominen <drac@gentoo.org> twolame-0.3.10.ebuild:
+  Fix documentation installation wrt #188830.
+
+  23 Apr 2007; Raúl Porcel <armin76@gentoo.org> twolame-0.3.9.ebuild:
+  ia64 + x86 stable, for real this time
+
+  22 Apr 2007; Markus Rothe <corsair@gentoo.org> twolame-0.3.9.ebuild:
+  Stable on ppc64; bug #175245
+
+  22 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> twolame-0.3.9.ebuild:
+  Stable on Alpha, bug 175245.
+
+  19 Apr 2007; Raúl Porcel <armin76@gentoo.org> ChangeLog:
+  ia64 + x86 stable wrt bug 175245
+
+  18 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> twolame-0.3.9.ebuild:
+  Stable on sparc
+
+  18 Apr 2007; Steve Dibb <beandog@gentoo.org> twolame-0.3.9.ebuild:
+  amd64 stable
+
+*twolame-0.3.10 (18 Apr 2007)
+
+  18 Apr 2007; Steve Dibb <beandog@gentoo.org> +twolame-0.3.10.ebuild:
+  Version bump
+
+  06 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
+  twolame-0.3.9.ebuild:
+  ppc stable, bug #133776
+
+  04 Apr 2007; Bryan Østergaard <kloeri@gentoo.org> twolame-0.3.9.ebuild:
+  Stable on Alpha, bug 165395.
+
+  30 Mar 2007; Raúl Porcel <armin76@gentoo.org> twolame-0.3.9.ebuild:
+  Add ~ia64 keyword wrt bug 165395
+
+  14 Feb 2007; Jeroen Roovers <jer@gentoo.org> twolame-0.3.8.ebuild:
+  Stable for HPPA (bug #133776).
+
+  13 Feb 2007; Markus Rothe <corsair@gentoo.org> twolame-0.3.9.ebuild:
+  Added ~ppc64; bug #165395
+
+  11 Feb 2007; Lars Weiler <pylon@gentoo.org> twolame-0.3.9.ebuild:
+  Added ~ppc.
+
+  07 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> twolame-0.3.8.ebuild:
+  Stable on sparc wrt #165396
+
+  06 Feb 2007; Christian Faulhammer <opfer@gentoo.org> twolame-0.3.8.ebuild:
+  stable x86; bug #165396
+
+  05 Feb 2007; Jeroen Roovers <jer@gentoo.org> twolame-0.3.9.ebuild:
+  Marked ~hppa (bug #133776).
+
+  05 Feb 2007; Jeroen Roovers <jer@gentoo.org> twolame-0.3.8.ebuild:
+  Marked ~hppa (bug #133776).
+
+*twolame-0.3.9 (04 Feb 2007)
+
+  04 Feb 2007; Steve Dibb <beandog@gentoo.org> +twolame-0.3.9.ebuild:
+  Version bump
+
+  04 Feb 2007; Steve Dibb <beandog@gentoo.org> twolame-0.3.8.ebuild:
+  amd64 stable, bug 133776
+
+  01 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org> twolame-0.3.8.ebuild:
+  Keyworded ~sparc
+
+*twolame-0.3.8 (08 Oct 2006)
+
+  08 Oct 2006; MATSUU Takuto <matsuu@gentoo.org> +twolame-0.3.8.ebuild:
+  Initial import, bug 120469.
+

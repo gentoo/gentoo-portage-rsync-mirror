@@ -1,0 +1,21 @@
+# ChangeLog for dev-python/versiontools
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/versiontools/ChangeLog,v 1.5 2012/11/13 10:23:54 idella4 Exp $
+
+  14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Updating maintainer, metadata.xml
+
+  28 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> versiontools-1.9.1.ebuild:
+  Fix DESCRIPTION wrt #413783 by James Rowe <jnrowe@gmail.com>
+
+  25 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> versiontools-1.9.1.ebuild:
+  Depend on any version of python
+
+  25 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> versiontools-1.9.1.ebuild:
+  Use sphinx to build docs, actually run the test suite using unittest
+
+*versiontools-1.9.1 (25 Apr 2012)
+
+  25 Apr 2012; Theo Chatzimichos <tampakrap@gentoo.org> +metadata.xml,
+  +versiontools-1.9.1.ebuild:
+  Initial commit, ebuild by idella4

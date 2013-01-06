@@ -1,0 +1,47 @@
+# ChangeLog for dev-perl/Lab-Measurement
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/ChangeLog,v 1.9 2012/08/05 19:52:26 dilfridge Exp $
+
+*Lab-Measurement-3.10 (05 Aug 2012)
+
+  05 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Lab-Measurement-2.96.ebuild, +Lab-Measurement-3.10.ebuild:
+  Version bump; remove old
+
+*Lab-Measurement-3.00 (12 Jul 2012)
+
+  12 Jul 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Lab-Measurement-2.94.ebuild, +Lab-Measurement-3.00.ebuild,
+  Lab-Measurement-9999.ebuild:
+  Version bump
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+*Lab-Measurement-2.96 (01 May 2012)
+
+  01 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  Lab-Measurement-2.94.ebuild, +Lab-Measurement-2.96.ebuild:
+  Version bump
+
+  01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Add missing cpan remote-id tags in metadata.xml (#406287)
+
+  19 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  Lab-Measurement-9999.ebuild:
+  Add missing dependencies Encode, TeX::Encode
+
+  30 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  Lab-Measurement-2.94.ebuild, Lab-Measurement-9999.ebuild:
+  Make this unified live/non-live ebuild actually work...
+
+  30 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  Lab-Measurement-2.94.ebuild, Lab-Measurement-9999.ebuild:
+  Remove duplicate setting of KEYWORDS
+
+*Lab-Measurement-9999 (29 Jan 2012)
+*Lab-Measurement-2.94 (29 Jan 2012)
+
+  29 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Lab-Measurement-2.94.ebuild, +Lab-Measurement-9999.ebuild, +metadata.xml:
+  New package

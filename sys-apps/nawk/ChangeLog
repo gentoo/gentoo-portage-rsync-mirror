@@ -1,0 +1,27 @@
+# ChangeLog for sys-apps/nawk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/ChangeLog,v 1.6 2012/10/12 22:04:36 naota Exp $
+
+  12 Oct 2012;  <naota@gentoo.org> nawk-20110810-r1.ebuild:
+  Add ~x86-fbsd. #419555
+
+  13 Jul 2012; Christoph Junghans <ottxor@gentoo.org> nawk-20110810-r1.ebuild:
+  fixed typos
+
+*nawk-20110810-r1 (13 Jul 2012)
+
+  13 Jul 2012; Christoph Junghans <ottxor@gentoo.org> -nawk-20110810.ebuild,
+  +nawk-20110810-r1.ebuild:
+  set nawk as awk if unset + ~amd64-linux
+
+  06 Jul 2012; Christoph Junghans <ottxor@gentoo.org> nawk-20110810.ebuild:
+  add ~x86-macos
+
+  04 Jun 2012; Agostino Sarubbo <ago@gentoo.org> nawk-20110810.ebuild:
+  Marked ~amd64, wrt to bug #419555
+
+*nawk-20110810 (04 Jun 2012)
+
+  04 Jun 2012; Christoph Junghans <ottxor@gentoo.org> +nawk-20110810.ebuild,
+  +metadata.xml:
+  initial commit

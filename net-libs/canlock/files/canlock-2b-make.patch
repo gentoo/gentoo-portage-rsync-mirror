@@ -1,0 +1,67 @@
+--- canlock2b.orig/Makefile
++++ canlock2b/Makefile
+@@ -1,5 +1,5 @@
+-CFLAGS = -Iinclude
+-LDFLAGS = -L. -lcanlock
++CFLAGS += -Iinclude
++LDFLAGS += -L. -lcanlock
+ CC = gcc
+ STATIC_LIB = libcanlock.a
+ 
+@@ -15,16 +15,17 @@
+ 	$(CC) $(CFLAGS) t/$@.c -o $@ $(LDFLAGS)
+ 
+ $(STATIC_LIB):
+-	cd src && make
++	cd src && $(MAKE) libcanlock.so.2.0.0
++	cd src && $(MAKE) libcanlock.a
+ 	ln -s src/libcanlock.a libcanlock.a
+ 
+ clean:
+ 	rm -f src/*.o t/*.o t/*.out *.gmon gmon.*
+-	cd src && make clean
++	cd src && $(MAKE) clean
+ 	rm -f *.a canlocktest hmactest sha1test *.exe *.h lib-stamp
+ 
+ install: all
+-	cd src && make install DESTDIR=$(DESTDIR)
++	cd src && $(MAKE) install DESTDIR=$(DESTDIR)
+ 	install --mode=644 include/canlock.h $(DESTDIR)/usr/include
+ 	
+ test: all
+--- canlock2b.orig/src/Makefile
++++ canlock2b/src/Makefile
+@@ -1,7 +1,7 @@
+ LIBOBJS = base64.lo canlock.lo hmac_sha1.lo sha1.lo
+ CC = gcc
+ LIBTOOL = libtool
+-CFLAGS = -I../include
++CFLAGS += -I../include
+ SOURCES = base64.c canlock.c hmac_sha1.c sha1.c
+ OBJS = base64.o canlock.o hmac_sha1.o sha1.o
+ SHARELINKFLAGS = -Wl,-soname -Wl,libcanlock.so.2
+@@ -13,20 +13,20 @@
+ 
+ libcanlock.a:
+ 	$(CC) $(CFLAGS) -c $(SOURCES)
+-	ar cru libcanlock.a $(OBJS)
+-	ranlib libcanlock.a
++	$(AR) cru libcanlock.a $(OBJS)
++	$(RANLIB) libcanlock.a
+ 	rm $(OBJS)
+ 
+ libcanlock.so.2.0.0:
+ 	$(CC) $(CFLAGS) $(SHAREDFLAGS) -c $(SOURCES)
+-	$(CC) -shared $(OBJS) $(SHARELINKFLAGS) -o libcanlock.so.2.0.0
++	$(CC) -shared $(OBJS) $(LDFLAGS) $(SHARELINKFLAGS) -o libcanlock.so.2.0.0
+ 
+ install: all
+ 	$(INSTALL) libcanlock.so.2.0.0 $(DESTDIR)/usr/lib
+ 	cd $(DESTDIR)/usr/lib && ln -s libcanlock.so.2.0.0 libcanlock.so.2
+ 	cd $(DESTDIR)/usr/lib && ln -s libcanlock.so.2.0.0 libcanlock.so
+ 	$(INSTALL) libcanlock.a $(DESTDIR)/usr/lib/libcanlock.a
+-	ranlib $(DESTDIR)/usr/lib/libcanlock.a
++	$(RANLIB) $(DESTDIR)/usr/lib/libcanlock.a
+ 	
+ clean:
+ 	rm -f $(OBJS) $(LIBS)

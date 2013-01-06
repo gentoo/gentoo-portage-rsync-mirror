@@ -1,0 +1,12 @@
+https://bugs.gentoo.org/420975
+
+--- a/src/yafraycore/threadedscene.cc
++++ b/src/yafraycore/threadedscene.cc
+@@ -44,6 +44,7 @@ __BEGIN_YAFRAY
+ 
+ #include<signal.h>
+ #include<sys/time.h>
++#include <unistd.h>
+ 
+ void blockSignals(sigset_t *origmask)
+ {

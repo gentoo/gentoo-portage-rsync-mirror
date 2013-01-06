@@ -1,0 +1,44 @@
+# ChangeLog for virtual/udev
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.11 2012/12/12 15:32:42 axs Exp $
+
+  12 Dec 2012; Ian Stakenvicius <axs@gentoo.org> udev-0.ebuild,
+  udev-171.ebuild, udev-196.ebuild:
+  dropped acl use flag as it is not needed by anything
+
+  11 Dec 2012; Patrick Lauer <patrick@gentoo.org> udev-171.ebuild,
+  udev-196.ebuild:
+  Fixing virtual to be a choice and not both at the same time
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> udev-171.ebuild,
+  udev-196.ebuild:
+  added eudev to the virtual representing libudev.so.1
+
+  10 Dec 2012; Jonathan Callen <abcd@gentoo.org> udev-0.ebuild, udev-171.ebuild,
+  udev-196.ebuild:
+  Fix it's -> its in DESCRIPTION
+
+  02 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> -udev-180.ebuild:
+  old
+
+*udev-196 (02 Dec 2012)
+
+  02 Dec 2012; William Hubbs <williamh@gentoo.org> +udev-196.ebuild,
+  metadata.xml:
+  add new virtual because of hwdb and drop the invalid udev herd
+
+  02 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> udev-180.ebuild:
+  Scale back with the sys-fs/udev version to let systemd catch up.
+
+*udev-180 (24 Nov 2012)
+*udev-171 (24 Nov 2012)
+
+  24 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> udev-0.ebuild,
+  +udev-171.ebuild, +udev-180.ebuild:
+  Introduce versioned virtual(s) to satisfy the need (see UDisks2 ebuild for
+  example)
+
+*udev-0 (24 Nov 2012)
+
+  24 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> +udev-0.ebuild:
+  Initial commit wrt #444398 by Richard Yao

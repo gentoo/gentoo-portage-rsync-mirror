@@ -1,0 +1,16 @@
+--- Makefile.in.org	2009-12-22 21:06:55.000000000 +0100
++++ Makefile.in	2009-12-22 21:09:17.000000000 +0100
+@@ -50,11 +50,11 @@
+ 	$(RANLIB) $@
+ 
+ hping3: byteorder.h $(OBJ)
+-	$(CC) -o hping3 $(CCOPT) $(DEBUG) $(OBJ) -L/usr/local/lib $(PCAP) @SOLARISLIB@ @TCL_LIB@
++	$(CC) -o hping3 $(CCOPT) $(LDFLAGS) $(DEBUG) $(OBJ) -L/usr/local/lib $(PCAP) @SOLARISLIB@ @TCL_LIB@
+ 	@echo
+ 
+ hping3-static: byteorder.h $(OBJ)
+-	$(CC) -static -o hping3-static $(CCOPT) $(DEBUG) $(OBJ) -L/usr/local/lib $(PCAP) @SOLARISLIB@ @TCL_LIB@ -ldl
++	$(CC) -static -o hping3-static $(CCOPT) $(LDFLAGS) $(DEBUG) $(OBJ) -L/usr/local/lib $(PCAP) @SOLARISLIB@ @TCL_LIB@ -ldl
+ 
+ byteorder.h:
+ 	./configure

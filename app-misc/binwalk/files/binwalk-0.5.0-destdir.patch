@@ -1,0 +1,25 @@
+--- binwalk-0.5.0/src/Makefile.in
++++ binwalk-0.5.0/src/Makefile.in
+@@ -47,15 +47,15 @@
+ 	cat $(MAGICFILES) > $(MAGIC).binwalk
+ 
+ install:
+-	mkdir -p $(ETC)
+-	mkdir -p $(BIN)
+-	cp $(MAGIC).bin* $(ETC)
+-	cp $(EXTRACT_FILE) $(ETC)
+-	cp binwalk $(BIN)/binwalk
++	mkdir -p $(DESTDIR)$(ETC)
++	mkdir -p $(DESTDIR)$(BIN)
++	cp $(MAGIC).bin* $(DESTDIR)$(ETC)
++	cp $(EXTRACT_FILE) $(DESTDIR)$(ETC)
++	cp binwalk $(DESTDIR)$(BIN)/binwalk
+ 
+ uninstall:
+-	rm -rf $(ETC)
+-	rm -f $(BIN)/binwalk
++	rm -rf $(DESTDIR)$(ETC)
++	rm -f $(DESTDIR)$(BIN)/binwalk
+ 
+ clean:
+ 	rm -f binwalk *.o

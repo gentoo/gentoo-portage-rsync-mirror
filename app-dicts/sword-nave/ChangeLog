@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/sword-nave
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-nave/ChangeLog,v 1.1 2008/05/17 02:35:13 beandog Exp $
+
+*sword-nave-1.1 (17 May 2008)
+
+  17 May 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-nave-1.1.ebuild:
+  Initial commit
+

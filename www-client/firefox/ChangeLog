@@ -1,0 +1,1043 @@
+# ChangeLog for www-client/firefox
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.198 2012/12/29 08:54:13 ago Exp $
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> firefox-10.0.11.ebuild:
+  Stable for alpha, wrt bug #389839
+
+  26 Dec 2012; Agostino Sarubbo <ago@gentoo.org> firefox-10.0.11.ebuild:
+  Stable for ia64, wrt bug #444318
+
+  10 Dec 2012; Ian Stakenvicius <axs@gentoo.org> firefox-17.0.1.ebuild:
+  restored jit flag as is required for the embedded js, esp on hardened
+
+  10 Dec 2012; Ian Stakenvicius <axs@gentoo.org> firefox-17.0.1.ebuild:
+  fixed alsa and webm dependencies for bug 444874 and part of bug 444780
+
+  10 Dec 2012; Lars Wendler <polynomial-c@gentoo.org> firefox-17.0.1.ebuild:
+  Added changes on request by Anarchy.
+
+*firefox-17.0.1 (09 Dec 2012)
+
+  09 Dec 2012; Ian Stakenvicius <axs@gentoo.org> -firefox-17.0-r1.ebuild,
+  +firefox-17.0.1.ebuild:
+  version bump for 17 series; includes fixes for various bugs
+
+  05 Dec 2012; Agostino Sarubbo <ago@gentoo.org> firefox-10.0.11.ebuild:
+  Stable for ppc64, wrt bug #444318
+
+  03 Dec 2012; Andreas Schuerch <nativemad@gentoo.org> firefox-10.0.11.ebuild:
+  x86 stable, see bug 444318
+
+  30 Nov 2012; Agostino Sarubbo <ago@gentoo.org> firefox-10.0.11.ebuild:
+  Stable for ppc, wrt bug #444318
+
+  30 Nov 2012; Ian Stakenvicius <axs@gentoo.org> firefox-17.0-r1.ebuild:
+  disabled webrtc for ppc and ppc64, bug 444780
+
+  28 Nov 2012; Lars Wendler <polynomial-c@gentoo.org> +firefox-10.0.7.ebuild:
+  Restored accidently removed 10.0.7 ebuild. Thanks to Mark Davies for
+  reporting this in bug #445079.
+
+  27 Nov 2012; Agostino Sarubbo <ago@gentoo.org> firefox-10.0.11.ebuild:
+  Stable for amd64, wrt bug #444318
+
+*firefox-17.0-r1 (25 Nov 2012)
+
+  25 Nov 2012; <anarchy@gentoo.org> -firefox-16.0.2.ebuild,
+  -firefox-17.0.ebuild, +firefox-17.0-r1.ebuild:
+  Fix about:memory use for jemalloc-3
+
+*firefox-17.0 (24 Nov 2012)
+*firefox-10.0.11 (24 Nov 2012)
+
+  24 Nov 2012; Lars Wendler <polynomial-c@gentoo.org> -firefox-10.0.4.ebuild,
+  -firefox-10.0.5.ebuild, -firefox-10.0.7.ebuild, +firefox-10.0.11.ebuild,
+  +firefox-17.0.ebuild:
+  Version bump. Removed old.
+
+  03 Nov 2012; <ago@gentoo.org> firefox-10.0.10.ebuild:
+  Stable for amd64, wrt bug #439960
+
+*firefox-10.0.10 (30 Oct 2012)
+
+  30 Oct 2012; Ian Stakenvicius <axs@gentoo.org> +firefox-10.0.10.ebuild:
+  ESR bump for security bug 439960
+
+*firefox-16.0.2 (28 Oct 2012)
+
+  28 Oct 2012; <anarchy@gentoo.org> -firefox-16.0.1.ebuild,
+  +firefox-16.0.2.ebuild:
+  Security bump fx-16, bugs #439818, 439348, #433960
+
+  23 Oct 2012; <ago@gentoo.org> firefox-10.0.9.ebuild:
+  Stable for amd64, wrt bug #437780
+
+  21 Oct 2012; <anarchy@gentoo.org> firefox-16.0.1.ebuild:
+  Bump patchset for misc jemalloc-3 fixes
+
+*firefox-16.0.1 (21 Oct 2012)
+*firefox-10.0.9 (21 Oct 2012)
+
+  21 Oct 2012; <anarchy@gentoo.org> +firefox-10.0.9.ebuild,
+  -firefox-15.0.1.ebuild, +firefox-16.0.1.ebuild:
+  Security bump, bug #437780
+
+  15 Sep 2012; Andreas Schuerch <nativemad@gentoo.org> firefox-10.0.7.ebuild:
+  x86 stable, see bug 433383
+
+  08 Sep 2012; Agostino Sarubbo <ago@gentoo.org> firefox-10.0.7.ebuild:
+  Stable for amd64, wrt bug #433383
+
+  07 Sep 2012; <anarchy@gentoo.org> firefox-10.0.7.ebuild:
+  Exclude failing resource_urls patch in esr release
+
+*firefox-15.0.1 (07 Sep 2012)
+
+  07 Sep 2012;  <anarchy@gentoo.org> +firefox-15.0.1.ebuild,
+  -firefox-14.0.1.ebuild, -firefox-15.0.ebuild:
+  Update for private browsing issues
+
+*firefox-15.0 (01 Sep 2012)
+*firefox-10.0.7 (01 Sep 2012)
+
+  01 Sep 2012; <anarchy@gentoo.org> +firefox-10.0.7.ebuild,
+  +firefox-15.0.ebuild, +files/firefox-15.0-fix-gstreamer-html5-crash.patch:
+  Security/Version Bump
+
+  25 Aug 2012; Michael Weber <xmw@gentoo.org> firefox-10.0.6.ebuild:
+  ppc stable (bug 427224)
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> firefox-10.0.6.ebuild:
+  alpha/ia64 stable wrt #427224
+
+  28 Jul 2012; Agostino Sarubbo <ago@gentoo.org> firefox-10.0.6.ebuild:
+  Stable for amd64, wrt bug #427224
+
+  24 Jul 2012; Jeff Horelick <jdhore@gentoo.org> firefox-10.0.6.ebuild:
+  marked x86 per bug 427224
+
+  18 Jul 2012; Jory A. Pratt <anarchy@gentoo.org> firefox-10.0.4.ebuild:
+  Remark alpha stable in 10.0.4
+
+  18 Jul 2012; Jory A. Pratt <anarchy@gentoo.org> +firefox-10.0.4.ebuild:
+  Revert removal for firefox-10.0.4 for alpha
+
+*firefox-14.0.1 (18 Jul 2012)
+*firefox-10.0.6 (18 Jul 2012)
+
+  18 Jul 2012; Jory A. Pratt <anarchy@gentoo.org> -firefox-10.0.4.ebuild,
+  firefox-10.0.5.ebuild, +firefox-10.0.6.ebuild, -firefox-13.0.ebuild,
+  +files/firefox-14.0_beta7-gst-aac-mp3.patch, +firefox-14.0.1.ebuild,
+  +files/firefox-14.0_beta7-gst-youtube-h264.patch:
+  Security update, modify 10.0.5 for changes to mozconfig-3.eclass
+
+  04 Jul 2012; Jory A. Pratt <anarchy@gentoo.org> firefox-10.0.4.ebuild,
+  firefox-10.0.5.ebuild, firefox-13.0.ebuild:
+  Fix license on >=firefox-10.*
+
+  02 Jul 2012; Jory A. Pratt <anarchy@gentoo.org> firefox-13.0.ebuild:
+  Update license on firefox-13 to MPL-2.0
+
+  19 Jun 2012; Andreas Schuerch <nativemad@gentoo.org> firefox-10.0.5.ebuild:
+  x86 stable, thanks Mikle Kolyada
+
+  12 Jun 2012; Lars Wendler <polynomial-c@gentoo.org> firefox-10.0.5.ebuild,
+  firefox-13.0.ebuild:
+  Fixed dependency on libpng.
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> firefox-10.0.5.ebuild:
+  Stable for amd64, wrt bug #420125
+
+  08 Jun 2012; Jory A. Pratt <anarchy@gentoo.org> firefox-13.0.ebuild:
+  Update ff patchset, bug #419801
+
+*firefox-10.0.5 (06 Jun 2012)
+
+  06 Jun 2012; Lars Wendler <polynomial-c@gentoo.org> -firefox-10.0.3.ebuild,
+  +firefox-10.0.5.ebuild:
+  Security bump. Removed old.
+
+  06 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -files/icon/firefox-1.5-unbranded.desktop, -files/icon/firefox-1.5.desktop,
+  -files/xulrunner-1.9.2-gtk+-2.21.patch, -firefox-3.6.20.ebuild,
+  -firefox-3.6.22.ebuild, -files/firefox.1, -files/firefox-default-prefs.js,
+  -files/fix-preferences-gentoo.patch, -files/gentoo-default-prefs.js:
+  old
+
+  06 Jun 2012; Jory A. Pratt <anarchy@gentoo.org> firefox-13.0.ebuild:
+  Fix nss/nspr dep
+
+*firefox-13.0 (04 Jun 2012)
+
+  04 Jun 2012; <anarchy@gentoo.org> -firefox-12.0-r2.ebuild,
+  +firefox-13.0.ebuild:
+  Bump to version 13
+
+*firefox-12.0-r2 (28 May 2012)
+
+  28 May 2012; <anarchy@gentoo.org> -firefox-12.0-r1.ebuild,
+  +firefox-12.0-r2.ebuild:
+  Revert to using system cairo
+
+  28 May 2012; <anarchy@gentoo.org> firefox-12.0-r1.ebuild:
+  Finish adding support for gcc-4.7, bug #410557
+
+  26 May 2012; Raúl Porcel <armin76@gentoo.org> firefox-10.0.4.ebuild:
+  alpha/ia64 stable
+
+  26 May 2012; Raúl Porcel <armin76@gentoo.org> firefox-10.0.3.ebuild,
+  firefox-10.0.4.ebuild, firefox-12.0-r1.ebuild:
+  Sigbuses on sparc
+
+*firefox-12.0-r1 (24 May 2012)
+
+  24 May 2012; Jory A. Pratt <anarchy@gentoo.org> -firefox-12.0.ebuild,
+  +firefox-12.0-r1.ebuild:
+  Add jit useflag fix patchset from firefox
+
+  07 May 2012; Jory A. Pratt <anarchy@gentoo.org> firefox-10.0.4.ebuild:
+  Fix bugs #412649,411101
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> firefox-3.6.20.ebuild,
+  firefox-3.6.22.ebuild, firefox-10.0.3.ebuild, firefox-10.0.4.ebuild,
+  firefox-12.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  02 May 2012; Lars Wendler <polynomial-c@gentoo.org> firefox-12.0.ebuild:
+  Fixed dependency on sqlite. Thanks to Florian Schmaus who reported this in
+  bug #414407.
+
+  02 May 2012; Andreas Schuerch <nativemad@gentoo.org> firefox-10.0.4.ebuild:
+  x86 stable, see bug 413657. Thanks Mikle Kolyada.
+
+  30 Apr 2012; Jory A. Pratt <anarchy@gentoo.org> firefox-10.0.4.ebuild,
+  -firefox-11.0-r1.ebuild:
+  Mark 10.0.4 stable as per ago, remove version 11
+
+*firefox-12.0 (30 Apr 2012)
+
+  30 Apr 2012; Lars Wendler <polynomial-c@gentoo.org> +firefox-12.0.ebuild:
+  Security bump.
+
+*firefox-10.0.4 (26 Apr 2012)
+
+  26 Apr 2012; Lars Wendler <polynomial-c@gentoo.org> -firefox-8.0.ebuild,
+  -firefox-9.0.ebuild, -firefox-10.0.ebuild, -firefox-10.0.1.ebuild,
+  -firefox-10.0.1-r1.ebuild, +firefox-10.0.4.ebuild:
+  Security bump. Removed some old versions.
+
+  28 Mar 2012; Jeroen Roovers <jer@gentoo.org> firefox-11.0-r1.ebuild:
+  Marked ~hppa (bug #409747).
+
+  28 Mar 2012; Jory A. Pratt <anarchy@gentoo.org> -firefox-11.0.ebuild,
+  firefox-11.0-r1.ebuild:
+  remove stale version, fix bug #409747
+
+  25 Mar 2012; Thomas Kahle <tomka@gentoo.org> firefox-10.0.3.ebuild:
+  marked x86 per bug 408161
+
+*firefox-11.0-r1 (24 Mar 2012)
+
+  24 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +firefox-11.0-r1.ebuild:
+  Move over Anarchy's changes from the overlay, fixes bug 408613 and bug 408799
+
+  24 Mar 2012; Jory A. Pratt <anarchy@gentoo.org> firefox-10.0.3.ebuild:
+  Fix bug #409331
+
+  22 Mar 2012; Agostino Sarubbo <ago@gentoo.org> firefox-10.0.3.ebuild:
+  Stable for amd64, wrt bug #408161
+
+*firefox-10.0.3 (21 Mar 2012)
+
+  21 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +firefox-10.0.3.ebuild,
+  firefox-11.0.ebuild:
+  Bump to 10.0.3esr, the same code is also in 11.0, and should be carried
+  forward to 15.0.1esr.
+
+*firefox-11.0 (16 Mar 2012)
+
+  16 Mar 2012; Jory A. Pratt <anarchy@gentoo.org> +firefox-11.0.ebuild:
+  Security bump, 10.0.3esr to follow for stable
+
+  06 Mar 2012; Jeroen Roovers <jer@gentoo.org> firefox-10.0.1-r1.ebuild:
+  Marked ~hppa (bug #360427).
+
+  01 Mar 2012; Agostino Sarubbo <ago@gentoo.org> firefox-10.0.1-r1.ebuild:
+  Stable for amd64, wrt bug #401985
+
+  01 Mar 2012; Jory A. Pratt <anarchy@gentoo.org> firefox-10.0.1-r1.ebuild:
+  Fix libvpx-1.0.0 support, bug #401985
+
+  01 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> firefox-10.0.1.ebuild,
+  firefox-10.0.1-r1.ebuild:
+  Temporarily require ~libvpx-0.9.7, as quick workaround for bug 401985
+
+*firefox-10.0.1-r1 (28 Feb 2012)
+
+  28 Feb 2012; Jory A. Pratt <anarchy@gentoo.org> +firefox-10.0.1-r1.ebuild:
+  Use aurora for bindist builds, bug #404999
+
+  20 Feb 2012; Thomas Kahle <tomka@gentoo.org> firefox-10.0.1.ebuild:
+  marked x86 per bug 403183
+
+  17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> firefox-10.0.1.ebuild:
+  Stable for amd64, wrt bug #403183
+
+*firefox-10.0.1 (11 Feb 2012)
+
+  11 Feb 2012; Jory A. Pratt <anarchy@gentoo.org> +firefox-10.0.1.ebuild,
+  metadata.xml:
+  Security bump
+
+  07 Feb 2012; <swift@gentoo.org> firefox-10.0.ebuild:
+  USE-depend on selinux policy for firefox (selinux-mozilla)
+
+  05 Feb 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-10.0.ebuild:
+  It seems like LIBGL_ALWAYS_INDIRECT did *not* fix the issue. Trying with
+  LIBGL_ALWAYS_SOFTWARE, bug 402227
+
+*firefox-10.0 (04 Feb 2012)
+
+  04 Feb 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +firefox-10.0.ebuild:
+  Bump to 10.0, now with more shared code! (mozlinguas.eclass)
+
+  28 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> metadata.xml:
+  Add USE=bindist description, bug 369255
+
+  28 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-8.0.ebuild,
+  firefox-9.0.ebuild:
+  RDEPEND on sqlite[threadsafe], bug 375047
+
+  28 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-9.0.ebuild:
+  Reset the GNOME/XDG environment for PGO, bug 384943
+
+  26 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-9.0.ebuild:
+  Fix access violations due to proprietary drivers + pgo (AGAIN). See bug
+  394715 .
+
+  25 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> firefox-9.0.ebuild:
+  Restore ~ppc64 keywording with USE crashreporter masked in
+  arch/powerpc/package.use.mask wrt #396565
+
+  12 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> firefox-9.0.ebuild:
+  x86 stable wrt bug #395431
+
+  11 Jan 2012; Agostino Sarubbo <ago@gentoo.org> firefox-9.0.ebuild:
+  Stable for AMD64, wrt security bug #395431
+
+  04 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-9.0.ebuild:
+  Fix xpcshell infinite loop problems on hardened, bug 396275
+
+  02 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2009:
+  Split ChangeLog.
+
+  26 Dec 2011; Mark Loeser <halcy0n@gentoo.org> firefox-8.0.ebuild:
+  Drop ppc; bug #381245
+
+  26 Dec 2011; Mark Loeser <halcy0n@gentoo.org> firefox-8.0.ebuild:
+  Stable for ppc; bug #381245
+
+  26 Dec 2011; Raúl Porcel <armin76@gentoo.org> firefox-9.0.ebuild:
+  Add ~alpha/~ia64 wrt #360427
+
+  22 Dec 2011; Lars Wendler <polynomial-c@gentoo.org> firefox-9.0.ebuild:
+  Fixed usage of check-reqs (bug #395601). Thanks to Alphat-PC for report and
+  patch.
+
+*firefox-9.0 (21 Dec 2011)
+
+  21 Dec 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +files/gentoo-default-prefs.js-1, -firefox-3.6.12.ebuild,
+  -firefox-3.6.21.ebuild, -firefox-7.0.1-r1.ebuild, +firefox-9.0.ebuild:
+  Version bump. Removed old.
+
+  11 Dec 2011; Raúl Porcel <armin76@gentoo.org> firefox-3.6.22.ebuild:
+  sparc stable
+
+  08 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> firefox-8.0.ebuild:
+  x86 stable wrt bug #389923
+
+  29 Nov 2011; Tony Vroon <chainsaw@gentoo.org> firefox-8.0.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo,
+  Elijah "Armageddon" El Lazkani, Michael "n0idx80" Harrison & Tomáš "Mepho"
+  Pružina in security bug #389923.
+
+  20 Nov 2011; Markus Meier <maekke@gentoo.org> firefox-7.0.1-r1.ebuild,
+  firefox-8.0.ebuild:
+  add ~arm, bug #360427
+
+  13 Nov 2011; Markus Meier <maekke@gentoo.org> firefox-7.0.1-r1.ebuild:
+  x86 stable, bug #381245
+
+*firefox-8.0 (11 Nov 2011)
+
+  11 Nov 2011; Jory A. Pratt <anarchy@gentoo.org> +firefox-8.0.ebuild:
+  Version bump, security bug #389923
+
+  31 Oct 2011; Jeroen Roovers <jer@gentoo.org> firefox-3.6.20.ebuild,
+  firefox-3.6.21.ebuild, firefox-3.6.22.ebuild:
+  Drop HPPA keywording.
+
+  28 Oct 2011; Tony Vroon <chainsaw@gentoo.org> firefox-7.0.1-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Agostino "ago" Sarubbo in security bug #381245.
+
+*firefox-7.0.1-r1 (02 Oct 2011)
+
+  02 Oct 2011; Jory A. Pratt <anarchy@gentoo.org> -firefox-7.0.1.ebuild,
+  +firefox-7.0.1-r1.ebuild:
+  multiple bug fixes, actually use system-libffi, add support for
+  mips,sparc,etc ...
+
+  01 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> firefox-7.0.1.ebuild:
+  Convert dev-libs/libffi to virtual/libffi again.
+
+*firefox-7.0.1 (01 Oct 2011)
+
+  01 Oct 2011; Jory A. Pratt <anarchy@gentoo.org> -firefox-6.0.ebuild,
+  -firefox-6.0.2.ebuild, +firefox-7.0.1.ebuild:
+  Security bump with addon updater fixed
+
+  28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> firefox-6.0.ebuild,
+  firefox-6.0.2.ebuild:
+  Use virtual/libffi instead of dev-libs/libffi in case we have to switch to
+  using copy from GCC in future.
+
+*firefox-6.0.2 (26 Sep 2011)
+
+  26 Sep 2011; Lars Wendler <polynomial-c@gentoo.org> -firefox-3.6.17.ebuild,
+  +firefox-6.0.2.ebuild:
+  Security bump. Removed old.
+
+  11 Sep 2011; Raúl Porcel <armin76@gentoo.org> firefox-3.6.20.ebuild:
+  alpha/ia64 stable wrt #379549
+
+*firefox-3.6.22 (08 Sep 2011)
+
+  08 Sep 2011; Lars Wendler <polynomial-c@gentoo.org> +firefox-3.6.22.ebuild:
+  Security bump.
+
+  04 Sep 2011; Markus Meier <maekke@gentoo.org> firefox-3.6.20.ebuild:
+  arm stable, bug #379549
+
+  04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> firefox-3.6.20.ebuild:
+  x86 stable wrt security bug #379549
+
+  03 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> firefox-3.6.20.ebuild:
+  ppc/ppc64 stable wrt #379549
+
+*firefox-3.6.21 (31 Aug 2011)
+
+  31 Aug 2011; Lars Wendler <polynomial-c@gentoo.org> -firefox-3.6.18.ebuild,
+  +firefox-3.6.21.ebuild:
+  Security bump. Removed old.
+
+  30 Aug 2011; Jeroen Roovers <jer@gentoo.org> firefox-3.6.20.ebuild:
+  Stable for HPPA (bug #360427).
+
+  29 Aug 2011; Markos Chandras <hwoarang@gentoo.org> firefox-3.6.20.ebuild:
+  Stable on amd64 wrt bug #380913
+
+  28 Aug 2011; Jory A. Pratt <anarchy@gentoo.org> firefox-6.0.ebuild:
+  revert target support
+
+  27 Aug 2011; Jory A. Pratt <anarchy@gentoo.org> firefox-6.0.ebuild:
+  Fix cross compiliation support, bug #380885
+
+  25 Aug 2011; Markus Meier <maekke@gentoo.org> firefox-6.0.ebuild:
+  add ~arm, bug #360427
+
+  24 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-6.0.ebuild:
+  Fix access violation, bug 380283
+
+  23 Aug 2011; Lars Wendler <polynomial-c@gentoo.org> firefox-3.6.17.ebuild,
+  firefox-3.6.18.ebuild, firefox-3.6.20.ebuild:
+  Fixed dependency on dev-db/sqlite. Thanks to John Gibson who reported this in
+  bug #375217.
+
+*firefox-6.0 (21 Aug 2011)
+
+  21 Aug 2011; Jory A. Pratt <anarchy@gentoo.org>
+  -files/mozilla-2.0_arm_respect_cflags.patch, -firefox-4.0.1-r1.ebuild,
+  -firefox-5.0-r2.ebuild, +firefox-6.0.ebuild, -files/arm-bug-644136.patch:
+  Version bump, misc bug fixes
+
+*firefox-3.6.20 (16 Aug 2011)
+
+  16 Aug 2011; Lars Wendler <polynomial-c@gentoo.org> +firefox-3.6.20.ebuild:
+  Security bump.
+
+  13 Aug 2011; Raúl Porcel <armin76@gentoo.org>
+  +files/mozilla-2.0_arm_respect_cflags.patch, firefox-5.0-r2.ebuild,
+  +files/arm-bug-644136.patch:
+  Add patches for arm to fix bug #362237
+
+  26 Jul 2011; Jory A. Pratt <anarchy@gentoo.org> firefox-5.0-r2.ebuild:
+  Fix compilation with curl-7.21.7, bug #375899
+
+  12 Jul 2011; Jeremy Olexa <darkside@gentoo.org> firefox-5.0-r2.ebuild:
+  Fix paths for Gentoo Prefix
+
+*firefox-5.0-r2 (06 Jul 2011)
+
+  06 Jul 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -files/xulrunner-1.9.2-arm-fixes.patch, -files/firefox-3.0-solaris64.patch,
+  -files/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch,
+  firefox-3.6.12.ebuild, -firefox-5.0-r1.ebuild, +firefox-5.0-r2.ebuild,
+  -files/801-enable-x86_64-tracemonkey.patch,
+  -files/fix_blocklist_support.patch, metadata.xml:
+  Always disable gconf, bug 360307, bug 373605 comment 15; add mesa dep for
+  webgl, bug 373245; update the list of locales, bug 364659; add a use-flag to
+  disable JIT, bug 367111. Refactor LINGUAS code to use bash arrays, remove
+  unused patches, drop all keywords on vulnerable 3.6.12 except 'sparc'.
+
+*firefox-5.0-r1 (27 Jun 2011)
+
+  27 Jun 2011; Jory A. Pratt <anarchy@gentoo.org> -firefox-5.0.ebuild,
+  +firefox-5.0-r1.ebuild, -files/firefox-5.0-fix-title.patch:
+  Fix system myspell dictionary dectection, add support for ppc
+
+  26 Jun 2011; Jory A. Pratt <anarchy@gentoo.org> firefox-5.0.ebuild:
+  Workaround misc hardened issues
+
+  26 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-5.0.ebuild,
+  +files/firefox-5.0-fix-title.patch:
+  Fix bug 372843, and avoid exporting XAUTHORITY as well
+
+  25 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-5.0.ebuild:
+  Fix bug 372845 (pgo needs python[sqlite]), bug 372817 (sandbox violations),
+  bug 372815 (pgo failure due to env leakage)
+
+*firefox-5.0 (24 Jun 2011)
+
+  24 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +firefox-5.0.ebuild,
+  files/gentoo-default-prefs.js, metadata.xml:
+  Bump to 5.0, major release as well as security bump. XULRunner has been
+  merged back into Firefox with this release, and there is no corresponding
+  net-libs/xulrunner release since upstream has dropped official support for
+  it. Packages that want libmozjs should use dev-lang/spidermonkey, which will
+  be updated soon.
+
+*firefox-3.6.18 (23 Jun 2011)
+
+  23 Jun 2011; Lars Wendler <polynomial-c@gentoo.org> -firefox-3.6.16-r1.ebuild, 
+  +firefox-3.6.18.ebuild:
+  Security bump. Removed old.
+
+  21 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-3.6.12.ebuild,
+  firefox-3.6.16-r1.ebuild, firefox-3.6.17.ebuild, firefox-4.0.1-r1.ebuild:
+  Fix pango dependency, bug 293368. The correct dep is set by the
+  mozconfig-3.eclass.
+
+*firefox-4.0.1-r1 (16 May 2011)
+
+  16 May 2011; Jory A. Pratt <anarchy@gentoo.org> -firefox-4.0.1.ebuild,
+  +firefox-4.0.1-r1.ebuild:
+  Use system libffi
+
+  10 May 2011; Jory A. Pratt <anarchy@gentoo.org> firefox-4.0.1.ebuild:
+  rework yasm dep, disable avx support bug #364551
+
+  07 May 2011; Raúl Porcel <armin76@gentoo.org> firefox-3.6.17.ebuild:
+  alpha/arm/ia64 stable wrt #365323
+
+*firefox-4.0.1 (02 May 2011)
+
+  02 May 2011; Jory A. Pratt <anarchy@gentoo.org> -firefox-4.0-r3.ebuild,
+  +firefox-4.0.1.ebuild:
+  Security Bump on Firefox-4.x
+
+  02 May 2011; Jeroen Roovers <jer@gentoo.org> firefox-3.6.17.ebuild:
+  Stable for HPPA (bug #365323).
+
+  01 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  firefox-3.6.17.ebuild:
+  x86 stable wrt security bug #365323
+
+  01 May 2011; Kacper Kowalik <xarthisius@gentoo.org> firefox-3.6.17.ebuild:
+  ppc/ppc64 stable wrt #365323
+
+  30 Apr 2011; Markos Chandras <hwoarang@gentoo.org> firefox-3.6.17.ebuild:
+  Stable on amd64 wrt bug #365323
+
+*firefox-3.6.17 (29 Apr 2011)
+
+  29 Apr 2011; Lars Wendler <polynomial-c@gentoo.org> -firefox-3.6.15.ebuild,
+  -firefox-3.6.16.ebuild, +firefox-3.6.17.ebuild:
+  Version bump. Removed old.
+
+*firefox-3.6.16-r1 (26 Apr 2011)
+
+  26 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
+  files/icon/firefox-1.5-unbranded.desktop, files/icon/firefox-1.5.desktop,
+  +firefox-3.6.16-r1.ebuild:
+  Append x-scheme-handler/http;x-scheme-handler/https; to MimeType line of
+  desktop entry. This will be required by glib stabilization.
+
+  17 Apr 2011; Jory A. Pratt <anarchy@gentoo.org> firefox-4.0-r3.ebuild:
+  Remove the unused gconf use_enable, bug #363865
+
+  10 Apr 2011; Raúl Porcel <armin76@gentoo.org> firefox-3.6.16.ebuild:
+  alpha/ia64 stable wrt #360055
+
+  08 Apr 2011; Thomas Kahle <tomka@gentoo.org> firefox-3.6.16.ebuild:
+  x86 stable per bug 360055
+
+  05 Apr 2011; Markus Meier <maekke@gentoo.org> firefox-3.6.16.ebuild:
+  arm stable, bug #360055
+
+*firefox-4.0-r3 (04 Apr 2011)
+
+  04 Apr 2011; Jory A. Pratt <anarchy@gentoo.org> -firefox-4.0-r2.ebuild,
+  +firefox-4.0-r3.ebuild:
+  Remove gconf dep bug #360307
+
+  03 Apr 2011; Jeroen Roovers <jer@gentoo.org> firefox-3.6.16.ebuild:
+  Stable for HPPA (bug #360055).
+
+  27 Mar 2011; Jory A. Pratt <anarchy@gentoo.org> firefox-4.0-r2.ebuild:
+  ensure cairo dep correct for FF-4
+
+*firefox-4.0-r2 (27 Mar 2011)
+
+  27 Mar 2011; Jory A. Pratt <anarchy@gentoo.org> -firefox-4.0-r1.ebuild,
+  +firefox-4.0-r2.ebuild, +files/fix-preferences-gentoo.patch:
+  Fix default gentoo preferences
+
+  26 Mar 2011; Brent Baude <ranger@gentoo.org> firefox-3.6.16.ebuild:
+  Marking firefox-3.6.16 ppc64 and ppc for bug 360055
+
+  25 Mar 2011; Christoph Mende <angelos@gentoo.org> firefox-3.6.16.ebuild:
+  Stable on amd64 wrt bug #360055
+
+*firefox-3.6.16 (25 Mar 2011)
+
+  25 Mar 2011; Lars Wendler <polynomial-c@gentoo.org> -firefox-3.6.13.ebuild,
+  +firefox-3.6.16.ebuild:
+  Security bump (bug #360055).
+
+*firefox-4.0-r1 (23 Mar 2011)
+
+  23 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -firefox-4.0.ebuild,
+  +firefox-4.0-r1.ebuild, +files/icon/firefox.desktop:
+  Install multiple hicolor icons, use one .desktop file for both branded and
+  unbranded, change codename to latest, add new .desktop mimetypes from
+  overlay
+
+*firefox-4.0 (22 Mar 2011)
+
+  22 Mar 2011; Jory A. Pratt <anarchy@gentoo.org> +firefox-4.0.ebuild:
+  Version Bump
+
+  18 Mar 2011; Raúl Porcel <armin76@gentoo.org> firefox-3.6.15.ebuild:
+  alpha/ia64 stable wrt #357057
+
+  14 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -firefox-3.6.8.ebuild,
+  -firefox-3.6.9.ebuild, -firefox-3.6.9-r1.ebuild, -firefox-3.6.11.ebuild,
+  firefox-3.6.12.ebuild, firefox-3.6.13.ebuild, firefox-3.6.15.ebuild:
+  Remove old ebuilds and duplicate gnome-use-flag related stuff to allow
+  eclass changes from overlay to be merged into tree
+
+  13 Mar 2011; Markus Meier <maekke@gentoo.org> firefox-3.6.15.ebuild:
+  arm stable, bug #357057
+
+  08 Mar 2011; Thomas Kahle <tomka@gentoo.org> firefox-3.6.15.ebuild:
+  x86 stable per bug 357057
+
+  08 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> firefox-3.6.15.ebuild:
+  ppc/ppc64 stable wrt #357057
+
+  07 Mar 2011; Jeroen Roovers <jer@gentoo.org> firefox-3.6.15.ebuild:
+  Stable for HPPA (bug #357057).
+
+  06 Mar 2011; Markos Chandras <hwoarang@gentoo.org> firefox-3.6.15.ebuild:
+  Stable on amd64 wrt bug #357057
+
+*firefox-3.6.15 (06 Mar 2011)
+
+  06 Mar 2011; Jory A. Pratt <anarchy@gentoo.org> +firefox-3.6.15.ebuild:
+  Security bump, bug #357057
+
+  01 Jan 2011; Raúl Porcel <armin76@gentoo.org> firefox-3.6.13.ebuild:
+  alpha/ia64 stable wrt #348316
+
+  11 Dec 2010; Jeroen Roovers <jer@gentoo.org> firefox-3.6.13.ebuild:
+  Stable for HPPA (bug #348316).
+
+  11 Dec 2010; Brent Baude <ranger@gentoo.org> firefox-3.6.13.ebuild:
+  Marking firefox-3.6.13 ppc64 for bug 348316
+
+  11 Dec 2010; Markus Meier <maekke@gentoo.org> firefox-3.6.13.ebuild:
+  arm stable, bug #348316
+
+  11 Dec 2010; Markus Meier <maekke@gentoo.org> firefox-3.6.13.ebuild:
+  x86 stable, bug #348316
+
+  10 Dec 2010; Markos Chandras <hwoarang@gentoo.org> firefox-3.6.13.ebuild:
+  Stable on amd64 wrt bug #348316
+
+  10 Dec 2010; Jeroen Roovers <jer@gentoo.org> firefox-3.6.13.ebuild:
+  Stable for PPC (bug #348316).
+
+*firefox-3.6.13 (10 Dec 2010)
+
+  10 Dec 2010; Jory A. Pratt <anarchy@gentoo.org> +firefox-3.6.13.ebuild:
+  Security Bump, bug #48316
+
+  14 Nov 2010; Raúl Porcel <armin76@gentoo.org> firefox-3.6.12.ebuild:
+  alpha/ia64/sparc stable wrt #342847
+
+  30 Oct 2010; Markus Meier <maekke@gentoo.org> firefox-3.6.12.ebuild:
+  arm stable, bug #342847
+
+  30 Oct 2010; Markus Meier <maekke@gentoo.org> firefox-3.6.12.ebuild:
+  x86 stable, bug #342847
+
+  30 Oct 2010; Mark Loeser <halcy0n@gentoo.org> firefox-3.6.12.ebuild:
+  Stable for ppc64; bug #342847
+
+  29 Oct 2010; Markos Chandras <hwoarang@gentoo.org> firefox-3.6.12.ebuild:
+  Stable on amd64 wrt bug #342847
+
+  29 Oct 2010; Jeroen Roovers <jer@gentoo.org> firefox-3.6.12.ebuild:
+  Stable for PPC (bug #342847).
+
+  28 Oct 2010; Jeroen Roovers <jer@gentoo.org> firefox-3.6.12.ebuild:
+  Stable for HPPA (bug #342847).
+
+  28 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +files/xulrunner-1.9.2-arm-fixes.patch,
+  +files/firefox-3.0-solaris64.patch,
+  +files/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch,
+  +firefox-3.6.8.ebuild, +files/801-enable-x86_64-tracemonkey.patch:
+  Readded latest stable sparc version which I foolishly removed from the
+  tree.
+
+*firefox-3.6.12 (28 Oct 2010)
+
+  28 Oct 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -files/000_flex-configure-LANG.patch,
+  -files/xulrunner-1.9.2-arm-fixes.patch,
+  +files/xulrunner-1.9.2-gtk+-2.21.patch,
+  -files/xulrunner-1.9.2-noalsa-fixup.patch,
+  -files/firefox-3.0-solaris64.patch,
+  -files/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch,
+  -firefox-3.6.8.ebuild, -files/1000_fix_alignment.patch,
+  +firefox-3.6.12.ebuild, -files/801-enable-x86_64-tracemonkey.patch,
+  -files/mozilla-filepicker.patch:
+  Security bump (bug #342847).
+
+  25 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
+  firefox-3.6.11.ebuild:
+  stable x86, security bug 341821
+
+  23 Oct 2010; Markos Chandras <hwoarang@gentoo.org> firefox-3.6.11.ebuild:
+  Stable on amd64 wrt bug #341821
+
+  23 Oct 2010; Jeroen Roovers <jer@gentoo.org> firefox-3.6.11.ebuild:
+  Stable for HPPA (bug #341821).
+
+  22 Oct 2010; Jory A. Pratt <anarchy@gentoo.org> firefox-3.6.11.ebuild:
+  Bump nss dep
+
+  20 Oct 2010; Lars Wendler <polynomial-c@gentoo.org> firefox-3.6.11.ebuild:
+  Fixed sqlite dependency. Thanks to Sven Koehler who reported this in bug
+  #341869.
+
+*firefox-3.6.11 (20 Oct 2010)
+
+  20 Oct 2010; Jory A. Pratt <anarchy@gentoo.org> +firefox-3.6.11.ebuild:
+  Security Bump
+
+  13 Oct 2010; Jory A. Pratt <anarchy@gentoo.org> firefox-3.6.9.ebuild,
+  firefox-3.6.9-r1.ebuild:
+  drop cups useflag/dep making printing always enabled
+
+  03 Oct 2010; Jory A. Pratt <anarchy@gentoo.org> firefox-3.6.9-r1.ebuild:
+  Fix bug #339513, thanks William Throwe
+
+*firefox-3.6.9-r1 (16 Sep 2010)
+
+  16 Sep 2010; Jory A. Pratt <anarchy@gentoo.org> +firefox-3.6.9-r1.ebuild,
+  +files/fix_blocklist_support.patch:
+  Fix blocklist for proper version
+
+  14 Sep 2010; Jeroen Roovers <jer@gentoo.org> firefox-3.6.9.ebuild:
+  Stable for HPPA (bug #336396).
+
+  14 Sep 2010; Raúl Porcel <armin76@gentoo.org> firefox-3.6.9.ebuild:
+  alpha/arm/ia64 stable wrt #336396
+
+  12 Sep 2010; Joseph Jezak <josejx@gentoo.org> firefox-3.6.9.ebuild:
+  Marked ppc ppc64 for bug #336396.
+
+  11 Sep 2010; Markos Chandras <hwoarang@gentoo.org> firefox-3.6.9.ebuild:
+  Stable on amd64 wrt bug #336396
+
+  09 Sep 2010; Christian Faulhammer <fauli@gentoo.org> firefox-3.6.9.ebuild:
+  stable x86, security bug 336396
+
+  08 Sep 2010; Jory A. Pratt <anarchy@gentoo.org> firefox-3.6.9.ebuild:
+  bump dep for dev-libs/{nss,nspr}
+
+  08 Sep 2010; Jory A. Pratt <anarchy@gentoo.org> firefox-3.6.9.ebuild:
+  Fix breakage in patchset and linguas install xpi's.
+
+*firefox-3.6.9 (08 Sep 2010)
+
+  08 Sep 2010; Jory A. Pratt <anarchy@gentoo.org> -firefox-3.6.4.ebuild,
+  -firefox-3.6.8-r1.ebuild, +firefox-3.6.9.ebuild:
+  Security bump bug 336396
+
+  10 Aug 2010; Harald van Dĳk <truedfx@gentoo.org> firefox-3.6.4.ebuild,
+  firefox-3.6.8.ebuild, firefox-3.6.8-r1.ebuild:
+  Document reason for QA_PRESTRIPPED (#332071)
+
+  10 Aug 2010; Brent Baude <ranger@gentoo.org> firefox-3.6.8.ebuild:
+  Marking firefox-3.6.8 ppc64 for bug 329279
+
+  07 Aug 2010; Raúl Porcel <armin76@gentoo.org> firefox-3.6.8.ebuild:
+  alpha/arm/ia64/sparc stable
+
+*firefox-3.6.8-r1 (01 Aug 2010)
+
+  01 Aug 2010; Jory A. Pratt <anarchy@gentoo.org> +firefox-3.6.8-r1.ebuild:
+  Fix bug #325469, new useflag to control printing support
+
+  26 Jul 2010; Markus Meier <maekke@gentoo.org> firefox-3.6.8.ebuild:
+  amd64 stable, bug #329279
+
+*firefox-3.6.8 (25 Jul 2010)
+*firefox-3.6.4 (25 Jul 2010)
+
+  25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +files/000_flex-configure-LANG.patch,
+  +files/icon/firefox-1.5-unbranded.desktop,
+  +files/1000_fix_alignment.patch, +files/icon/firefox-1.5.desktop,
+  +files/801-enable-x86_64-tracemonkey.patch,
+  +files/xulrunner-1.9.2-arm-fixes.patch,
+  +files/xulrunner-1.9.2-noalsa-fixup.patch,
+  +files/firefox-3.0-solaris64.patch, +firefox-3.6.4.ebuild,
+  +files/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch,
+  +firefox-3.6.8.ebuild, +files/firefox.1, +files/firefox-default-prefs.js,
+  +files/gentoo-default-prefs.js, +files/mozilla-filepicker.patch,
+  +metadata.xml:
+  pkgmove from mozilla-firefox -> firefox
+
+  25 Jul 2010; Jory A. Pratt <anarchy@gentoo.org>
+  -mozilla-firefox-2.0.0.19.ebuild, -mozilla-firefox-3.5.8.ebuild,
+  -mozilla-firefox-3.6.7.ebuild, metadata.xml:
+  cleanup stale builds
+
+  25 Jul 2010; Jeroen Roovers <jer@gentoo.org> mozilla-firefox-3.6.8.ebuild:
+  Stable for HPPA PPC (bug #329279).
+
+  25 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  mozilla-firefox-3.6.8.ebuild:
+  stable x86, security bug 329279
+
+  24 Jul 2010; Jeroen Roovers <jer@gentoo.org> mozilla-firefox-3.6.7.ebuild:
+  Stable for HPPA (bug #329279).
+
+*mozilla-firefox-3.6.8 (24 Jul 2010)
+
+  24 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -mozilla-firefox-3.6.6.ebuild, +mozilla-firefox-3.6.8.ebuild:
+  Version bump. Removed old.
+
+  22 Jul 2010; Jeremy Olexa <darkside@gentoo.org>
+  +files/mozilla-firefox-3.0-solaris64.patch, mozilla-firefox-3.6.7.ebuild:
+  Migrate changes from Gentoo Prefix overlay. Convert to EAPI3, add patch,
+  modify paths, etc. Approved by mozilla team in IRC.
+
+  22 Jul 2010; Jeremy Olexa <darkside@gentoo.org>
+  +files/mozilla-firefox-3.0-solaris64.patch, mozilla-firefox-3.6.7.ebuild:
+  Migrate changes from Gentoo Prefix overlay. Convert to EAPI3, add patch,
+  modify paths, etc. Approved by mozilla team in IRC.
+
+  22 Jul 2010; Jeroen Roovers <jer@gentoo.org> mozilla-firefox-3.6.7.ebuild:
+  Stable for PPC (bug #329279).
+
+  21 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  mozilla-firefox-3.6.7.ebuild:
+  stable x86, security bug 329279
+
+  21 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +files/801-enable-x86_64-tracemonkey.patch, mozilla-firefox-3.6.7.ebuild:
+  Enable tracemonkey on amd64 (bug #315997)
+
+*mozilla-firefox-3.6.7 (21 Jul 2010)
+
+  21 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  -mozilla-firefox-3.6.3.ebuild, +mozilla-firefox-3.6.7.ebuild:
+  Version bump. Removed old.
+
+  19 Jul 2010; Jory A. Pratt <anarchy@gentoo.org>
+  mozilla-firefox-3.6.4.ebuild, mozilla-firefox-3.6.6.ebuild:
+  remove lcms dep as it is not valid
+
+  11 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +files/xulrunner-1.9.2-arm-fixes.patch, mozilla-firefox-3.6.4.ebuild,
+  mozilla-firefox-3.6.6.ebuild:
+  Add patch for ARM OS detection, bug 327783
+
+  08 Jul 2010; Brent Baude <ranger@gentoo.org> mozilla-firefox-3.6.4.ebuild:
+  Marking mozilla-firefox-3.6.4 ppc64 and ppc for bug 324735
+
+*mozilla-firefox-3.6.6 (27 Jun 2010)
+
+  27 Jun 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +mozilla-firefox-3.6.6.ebuild:
+  Version bump. Thanks to tman who reported this in bug #325817.
+
+  25 Jun 2010; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-3.6.4.ebuild:
+  alpha/arm/ia64/sparc stable wrt #324735
+
+  24 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  mozilla-firefox-3.6.4.ebuild:
+  Stable on amd64 wrt bug #324735
+
+  23 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  mozilla-firefox-3.6.4.ebuild:
+  stable x86, bug 324735
+
+  23 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  mozilla-firefox-3.6.4.ebuild,
+  +files/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch:
+  Fix patch that was failing, thanks to galtgendo for reporting
+
+*mozilla-firefox-3.6.4 (22 Jun 2010)
+
+  22 Jun 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +mozilla-firefox-3.6.4.ebuild, metadata.xml:
+  Bump to 3.6.4, fixes several security issues, stability issues, and adds
+  support for out-of-process plugins (USE=+ipc)
+
+  19 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mozilla-firefox-3.6.3.ebuild:
+  Use Python 2 (bug #321669).
+
+  31 May 2010; Joseph Jezak <josejx@gentoo.org>
+  mozilla-firefox-3.6.3.ebuild:
+  Marked ppc/ppc64 stable for bug #314025.
+
+  09 May 2010; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-3.6.3.ebuild:
+  alpha/arm/ia64/sparc stable wrt #314025
+
+  20 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  mozilla-firefox-3.6.3.ebuild:
+  stable x86, bug 314025
+
+  18 Apr 2010; Pacho Ramos <pacho@gentoo.org> mozilla-firefox-3.6.3.ebuild:
+  amd64 stable, bug 314025
+
+  18 Apr 2010; Mounir Lamouri <volkmar@gentoo.org>
+  mozilla-firefox-2.0.0.19.ebuild, metadata.xml:
+  Removing noscript dep (bug 315999) and restrict-javascript USE flag.
+
+  18 Apr 2010; <anarchy@gentoo.org> mozilla-firefox-3.6.3.ebuild:
+  make use of epatch_user
+
+  10 Apr 2010; <anarchy@gentoo.org> -mozilla-firefox-3.6-r5.ebuild,
+  -mozilla-firefox-3.6.2.ebuild:
+  remove stale ebuilds
+
+*mozilla-firefox-3.6.3 (05 Apr 2010)
+
+  05 Apr 2010; <anarchy@gentoo.org> +mozilla-firefox-3.6.3.ebuild:
+  Security Bump
+
+*mozilla-firefox-3.6.2 (24 Mar 2010)
+
+  24 Mar 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +mozilla-firefox-3.6.2.ebuild:
+  Security bump to 3.6.2, bug 311021
+
+*mozilla-firefox-3.6-r5 (21 Mar 2010)
+
+  21 Mar 2010; <anarchy@gentoo.org> +files/1000_fix_alignment.patch,
+  -mozilla-firefox-3.6-r2.ebuild, -mozilla-firefox-3.6-r4.ebuild,
+  +mozilla-firefox-3.6-r5.ebuild:
+  Update for alignment issue in jemalloc, fix bug #310347
+
+  06 Mar 2010; <anarchy@gentoo.org> mozilla-firefox-3.6-r4.ebuild:
+  re-fix bindist icon installation
+
+  04 Mar 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -mozilla-firefox-3.5.6.ebuild:
+  Remove old, vulnerable 3.5.6
+
+*mozilla-firefox-3.6-r4 (04 Mar 2010)
+
+  04 Mar 2010; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +mozilla-firefox-3.6-r4.ebuild, metadata.xml:
+  Move over the latest revision from the overlay. USE=system-sqlite is used
+  for toggling usage of internal/external sqlite + minor ebuild changes
+
+  02 Mar 2010; Tobias Heinlein <keytoaster@gentoo.org>
+  mozilla-firefox-3.5.8.ebuild:
+  amd64 stable, security bug #305689
+
+  25 Feb 2010; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-3.5.8.ebuild:
+  alpha/arm/ia64/sparc stable wrt #305689
+
+  23 Feb 2010; Joseph Jezak <josejx@gentoo.org>
+  mozilla-firefox-3.5.8.ebuild:
+  Marked ppc/ppc64 stable for bug #305689.
+
+  22 Feb 2010; Jeroen Roovers <jer@gentoo.org> mozilla-firefox-3.5.8.ebuild:
+  Stable for HPPA (bug #305689).
+
+  22 Feb 2010; Jeroen Roovers <jer@gentoo.org> mozilla-firefox-3.5.8.ebuild:
+  Stable for HPPA (bug #305689).
+
+  21 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  mozilla-firefox-3.5.8.ebuild:
+  stable x86, security bug 305689
+
+  20 Feb 2010; <anarchy@gentoo.org> mozilla-firefox-3.6-r2.ebuild:
+  Fix bindist icon installation
+
+*mozilla-firefox-3.5.8 (18 Feb 2010)
+
+  18 Feb 2010; <anarchy@gentoo.org> -mozilla-firefox-3.5.7.ebuild,
+  +mozilla-firefox-3.5.8.ebuild:
+  Security Bump
+
+*mozilla-firefox-3.6-r2 (12 Feb 2010)
+
+  12 Feb 2010; <anarchy@gentoo.org> -mozilla-firefox-3.6.ebuild,
+  -mozilla-firefox-3.6-r1.ebuild, +mozilla-firefox-3.6-r2.ebuild:
+  Fix system sqlite, ensure we use secure-delete of sqlite
+
+*mozilla-firefox-3.6-r1 (29 Jan 2010)
+
+  29 Jan 2010; <anarchy@gentoo.org>
+  +files/xulrunner-1.9.2-noalsa-fixup.patch, +mozilla-firefox-3.6-r1.ebuild:
+  Fix sparc build issue thanks armin76, fix -alsa build error, change
+  networkmanager to wifi useflag
+
+*mozilla-firefox-3.6 (22 Jan 2010)
+
+  22 Jan 2010; <anarchy@gentoo.org> +mozilla-firefox-3.6.ebuild:
+  Version bump, too many changes to list.
+
+*mozilla-firefox-3.5.7 (08 Jan 2010)
+
+  08 Jan 2010; <anarchy@gentoo.org> +mozilla-firefox-3.5.7.ebuild:
+  stability bump for dns issues
+
+  02 Jan 2010; Jory A. Pratt <anarchy@gentoo.org>
+  -mozilla-firefox-3.0.11.ebuild, -mozilla-firefox-3.0.14.ebuild,
+  -mozilla-firefox-3.5.4.ebuild, -mozilla-firefox-3.5.5.ebuild:
+  remove stale ebuilds
+
+  02 Jan 2010; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-3.5.6.ebuild:
+  alpha/arm/ia64/sparc stable
+
+  For previous entries, please see ChangeLog-2009.

@@ -1,0 +1,51 @@
+From 7351d31442fcf324b7f7769911af8a98368506e2 Mon Sep 17 00:00:00 2001
+From: Justin Bronder <jsbronder@gmail.com>
+Date: Tue, 16 Nov 2010 17:03:13 -0500
+Subject: [PATCH 3/3] disable automagic doc building
+
+Instead of unconditionally building docs if doxygen is found, only build
+at the request of the user.
+---
+ configure.ac |   19 +++++++++++++------
+ 1 files changed, 13 insertions(+), 6 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 480e23e..a8182cd 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -1237,8 +1237,6 @@ dnl
+ if test "$build_drmaa" = "yes" ;then
+ AC_MSG_NOTICE([Configuring DRMAA ...])
+ AC_PATH_PROG(GPERF, "gperf")
+-AX_PROG_DOT
+-AC_PATH_PROG(DOXYGEN, "doxygen", "none")
+ AC_C_BIGENDIAN_CROSS
+ ACX_PTHREAD(,[AC_MSG_ERROR([POSIX threads library is required by DRMAA.])])
+ 
+@@ -1282,10 +1280,19 @@ AC_LINK_IFELSE([AC_LANG_PROGRAM([[#include <stdarg.h>]],
+   AC_MSG_RESULT([no])
+ ])
+ 
+- build_drmaa_docs=yes
+-else  
+-  DOXYGEN=none
+- build_drmaa_docs=no
++AC_ARG_ENABLE([apidocs],
++    AS_HELP_STRING([--enable-apidocs],[Build DRMAA documentation])
++)
++AS_IF([test "x$enable_apidocs" = "xyes"],
++    [ AX_PROG_DOT
++      AC_PATH_PROG(DOXYGEN, "doxygen", "none")
++      build_drmaa_docs=yes ],
++    [ build_drmaa_docs=no
++      DOXYGEN=none ]
++)
++else
++    DOXYGEN="none"
++    build_drmaa_docs=no
+ fi
+ AM_CONDITIONAL(DRMAA_DOCS, [test "$DOXYGEN" != "none"])
+ AC_SUBST(build_drmaa_docs)
+-- 
+1.7.2.2
+

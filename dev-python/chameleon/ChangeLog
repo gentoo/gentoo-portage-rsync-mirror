@@ -1,0 +1,86 @@
+# ChangeLog for dev-python/chameleon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.17 2012/11/29 08:40:57 patrick Exp $
+
+*chameleon-2.11 (29 Nov 2012)
+
+  29 Nov 2012; Patrick Lauer <patrick@gentoo.org> +chameleon-2.11.ebuild:
+  Bump
+
+*chameleon-2.10 (29 Oct 2012)
+
+  29 Oct 2012; Patrick Lauer <patrick@gentoo.org> +chameleon-2.10.ebuild:
+  Bump
+
+*chameleon-2.9.2 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +chameleon-2.9.2.ebuild:
+  Bump
+
+  20 May 2012; Mike Gilbert <floppym@gentoo.org> chameleon-2.8.3-r1.ebuild:
+  Replace py26.py with a stub for python 2.5.
+
+*chameleon-2.8.3-r1 (20 May 2012)
+
+  20 May 2012; Mike Gilbert <floppym@gentoo.org> +chameleon-2.8.3-r1.ebuild,
+  -chameleon-2.8.2.ebuild, -chameleon-2.8.3.ebuild:
+  Package works with all supported versions of python.
+
+*chameleon-2.8.3 (20 May 2012)
+
+  20 May 2012; Mike Gilbert <floppym@gentoo.org> +chameleon-2.8.3.ebuild:
+  Version bump.
+
+  23 Apr 2012; Patrick Lauer <patrick@gentoo.org> -chameleon-2.2-r1.ebuild,
+  -chameleon-2.4.3.ebuild, -chameleon-2.6.1.ebuild, -chameleon-2.7.0.ebuild,
+  -chameleon-2.7.3.ebuild:
+  Remove old
+
+*chameleon-2.8.2 (11 Apr 2012)
+
+  11 Apr 2012; Patrick Lauer <patrick@gentoo.org> +chameleon-2.8.2.ebuild:
+  Bump for #410791
+
+*chameleon-2.7.3 (09 Mar 2012)
+
+  09 Mar 2012; Patrick Lauer <patrick@gentoo.org> +chameleon-2.7.3.ebuild:
+  Bump for 404163
+
+*chameleon-2.7.0 (07 Feb 2012)
+
+  07 Feb 2012; Patrick Lauer <patrick@gentoo.org> +chameleon-2.7.0.ebuild:
+  Bump for #402429
+
+*chameleon-2.6.1 (30 Dec 2011)
+
+  30 Dec 2011; Patrick Lauer <patrick@gentoo.org> +chameleon-2.6.1.ebuild:
+  Bump for #393593
+
+*chameleon-2.4.3 (14 Sep 2011)
+
+  14 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +chameleon-2.4.3.ebuild:
+  Version bump to 2.4.3.
+
+  14 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> chameleon-2.2-r1.ebuild:
+  Add PyPI homepage.
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  chameleon-2.2-r1.ebuild:
+  Added setuptools dependency.
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  chameleon-2.2-r1.ebuild:
+  Re-added missing USE flag: test
+
+*chameleon-2.2-r1 (30 Jul 2011)
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -chameleon-2.2.ebuild, +chameleon-2.2-r1.ebuild:
+  Improved test handling. Removed tests dependencies, they are just needed for
+  benchmarks, that we don't support for now.
+
+*chameleon-2.2 (29 Jul 2011)
+
+  29 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +chameleon-2.2.ebuild, +metadata.xml:
+  Initial version. Thanks to Jan Matějka (bug #361629).

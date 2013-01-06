@@ -1,0 +1,72 @@
+# ChangeLog for virtual/rubygems
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.42 2012/11/06 16:47:51 jer Exp $
+
+  06 Nov 2012; Jeroen Roovers <jer@gentoo.org> rubygems-4.ebuild:
+  Stable for HPPA (bug #411507).
+
+  27 Oct 2012; Raúl Porcel <armin76@gentoo.org> rubygems-1.ebuild:
+  sh stable wrt #411507
+
+  27 Oct 2012; Raúl Porcel <armin76@gentoo.org> rubygems-4.ebuild:
+  sh stable wrt #411507
+
+  21 Oct 2012; Raúl Porcel <armin76@gentoo.org> rubygems-4.ebuild:
+  alpha/ia64/s390/sparc stable wrt #411507
+
+  25 Jul 2012; Anthony G. Basile <blueness@gentoo.org> rubygems-4.ebuild:
+  Stable ppc64, bug #411507
+
+  22 Jul 2012; <nixnut@gentoo.org> rubygems-4.ebuild:
+  ppc stable #411507
+
+  25 Jun 2012; Andreas Schuerch <nativemad@gentoo.org> rubygems-4.ebuild:
+  x86 stable, see bug 411507
+
+  27 May 2012; Markus Meier <maekke@gentoo.org> rubygems-1.ebuild:
+  arm stable, bug #411507
+
+  27 May 2012; Markus Meier <maekke@gentoo.org> rubygems-4.ebuild:
+  arm stable, bug #411507
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> rubygems-4.ebuild:
+  Stable for amd64, wrt bug #411507
+
+  08 Feb 2012; Hans de Graaff <graaff@gentoo.org> rubygems-4.ebuild:
+  Add arm keyword to match underlying implementation.
+
+  15 Jan 2012; Hans de Graaff <graaff@gentoo.org> rubygems-4.ebuild:
+  Add ~sh keyword to match underlying package.
+
+  31 Dec 2011; Fabian Groffen <grobian@gentoo.org> rubygems-4.ebuild:
+  Add Prefix keywords
+
+  29 Dec 2011; Hans de Graaff <graaff@gentoo.org> rubygems-4.ebuild:
+  Add back alpha keywords now that rubygems is keyworded.
+
+  28 Dec 2011; Hans de Graaff <graaff@gentoo.org> rubygems-4.ebuild:
+  Add missing keywords in accordance with dev-ruby/rubygems and
+  dev-lang/ruby:1.9.
+
+  21 Oct 2011; Hans de Graaff <graaff@gentoo.org> rubygems-1.ebuild:
+  Add missing stable keyword for x86.
+
+*rubygems-5 (21 Oct 2011)
+
+  21 Oct 2011; Hans de Graaff <graaff@gentoo.org> +rubygems-5.ebuild:
+  Add a virtual definition for Rubinius.
+
+  21 Oct 2011; Hans de Graaff <graaff@gentoo.org> rubygems-2.ebuild,
+  rubygems-3.ebuild:
+  $1
+
+*rubygems-4 (20 Oct 2011)
+*rubygems-3 (20 Oct 2011)
+*rubygems-2 (20 Oct 2011)
+*rubygems-1 (20 Oct 2011)
+
+  20 Oct 2011; Hans de Graaff <graaff@gentoo.org> +rubygems-1.ebuild,
+  +rubygems-2.ebuild, +rubygems-3.ebuild, +rubygems-4.ebuild, +metadata.xml:
+  Add back virtual/rubygems since we cannot support unbundled rubygems for all
+  ruby targets.
+

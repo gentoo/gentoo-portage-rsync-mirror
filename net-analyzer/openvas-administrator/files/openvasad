@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: 
+
+depend() {
+	need net openvassd
+}
+
+start() {
+	ebegin "Starting openvasad (OpenVAS administrator)"
+	start-stop-daemon --start --name openvasad \
+		--exec /usr/sbin/openvasad \
+		--pidfile /var/run/openvasad.pid
+	eend $?
+}
+
+stop() {
+	ebegin "Stop openvasmd"
+	start-stop-daemon --stop --name openvasad \
+		--pidfile /var/run/openvasad.pid
+	eend $?
+}

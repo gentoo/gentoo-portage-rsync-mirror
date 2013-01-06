@@ -1,0 +1,100 @@
+# ChangeLog for kde-base/nepomuk-core
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.21 2013/01/05 20:19:11 creffett Exp $
+
+*nepomuk-core-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +nepomuk-core-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
+
+*nepomuk-core-4.9.4 (05 Dec 2012)
+
+  05 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> +nepomuk-core-4.9.4.ebuild:
+  Version bump KDE SC 4.9.4
+
+  30 Nov 2012; <ago@gentoo.org> nepomuk-core-4.9.3.ebuild:
+  Stable for ppc, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> nepomuk-core-4.9.3.ebuild:
+  Stable for x86, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> nepomuk-core-4.9.3.ebuild:
+  Stable for amd64, wrt bug #442394
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -nepomuk-core-4.9.2-r1.ebuild:
+  Remove KDE SC 4.9.2
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -nepomuk-core-4.9.1.ebuild:
+  Remove KDE SC 4.9.1
+
+*nepomuk-core-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +nepomuk-core-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> nepomuk-core-4.9.2-r1.ebuild:
+  add ~arm, bug #430072
+
+  14 Oct 2012; Johannes Huber <johu@gentoo.org>
+  +files/nepomuk-core-4.9.2-build-fix-dirwatch-not-exists.patch,
+  nepomuk-core-4.9.2-r1.ebuild:
+  Add upstream patch to fix build when dirwatch not exists spotted by Naohiro
+  Aota <naota@gentoo.org> needed on bsd for bug #430072.
+
+*nepomuk-core-4.9.2-r1 (04 Oct 2012)
+
+  04 Oct 2012; Johannes Huber <johu@gentoo.org>
+  +files/nepomuk-core-4.9.2-dirwatch-null.patch,
+  +files/nepomuk-core-4.9.2-kinotify-delete.patch,
+  +nepomuk-core-4.9.2-r1.ebuild,
+  -files/nepomuk-core-4.9.0-kinotify-infinite-loop.patch,
+  -files/nepomuk-core-4.9.0-kinotify-memleak.patch, -nepomuk-core-4.9.2.ebuild:
+  Revision bump backports upstream patches to fix bug #435112. Remove unused
+  patches.
+
+*nepomuk-core-4.9.2 (02 Oct 2012)
+
+  02 Oct 2012; Johannes Huber <johu@gentoo.org> +nepomuk-core-4.9.2.ebuild:
+  Version bump KDE SC 4.9.2
+
+  21 Sep 2012; Johannes Huber <johu@gentoo.org> -nepomuk-core-4.9.0-r2.ebuild:
+  Remove KDE SC 4.9.0
+
+  19 Sep 2012; Alexis Ballier <aballier@gentoo.org> nepomuk-core-4.9.1.ebuild:
+  keyword ~amd64-fbsd, bug #430072
+
+  12 Sep 2012; Johannes Huber <johu@gentoo.org>
+  +files/nepomuk-core-4.9.1-gcc44.patch, nepomuk-core-4.9.1.ebuild:
+  Add upstream patch to fix build with gcc44 and clang spotted by Mr. Anderson
+  <walch.martin@web.de> and Andreas Sturmlechner
+  <andreas.sturmlechner@gmail.com> wrt bug #434340.
+
+*nepomuk-core-4.9.1 (04 Sep 2012)
+
+  04 Sep 2012; Johannes Huber <johu@gentoo.org> +nepomuk-core-4.9.1.ebuild:
+  Version bump KDE SC 4.9.1
+
+*nepomuk-core-4.9.0-r2 (08 Aug 2012)
+
+  08 Aug 2012; Johannes Huber <johu@gentoo.org>
+  +files/nepomuk-core-4.9.0-kinotify-infinite-loop.patch,
+  +nepomuk-core-4.9.0-r2.ebuild, -nepomuk-core-4.9.0-r1.ebuild:
+  Revision bump adds upstream patch which fixes an infinite loop in kinotify
+  spotted by Dennis Schridde <devurandom@gmx.net>.
+
+*nepomuk-core-4.9.0-r1 (07 Aug 2012)
+
+  07 Aug 2012; Johannes Huber <johu@gentoo.org>
+  +files/nepomuk-core-4.9.0-kinotify-memleak.patch,
+  +nepomuk-core-4.9.0-r1.ebuild, -nepomuk-core-4.9.0.ebuild:
+  Revision bump adds upstream patch which fixes memleak in knotify spotted by
+  Dennis Schridde <devurandom@gmx.net> wrt bug #430226. Remove old.
+
+  05 Aug 2012; Chris Reffett <creffett@gentoo.org> nepomuk-core-4.9.0.ebuild:
+  Remove blocker on virtuoso-6.1.5, which was removed from the tree.
+
+*nepomuk-core-4.9.0 (01 Aug 2012)
+
+  01 Aug 2012; Johannes Huber <johu@gentoo.org> +nepomuk-core-4.9.0.ebuild,
+  +metadata.xml:
+  Version bump KDE SC 4.9.0

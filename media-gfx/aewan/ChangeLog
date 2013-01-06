@@ -1,0 +1,15 @@
+# ChangeLog for media-gfx/aewan
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aewan/ChangeLog,v 1.2 2010/01/18 09:49:42 pva Exp $
+
+  18 Jan 2010; Peter Volkov <pva@gentoo.org> aewan-1.0.01.ebuild,
+  +files/aewan-1.0.01-debug_aewl-warnings.patch:
+  Fixed warnings, bug #301216, thank matt for report.
+
+*aewan-1.0.01 (15 Jan 2010)
+
+  15 Jan 2010; Peter Volkov <pva@gentoo.org> +aewan-1.0.01.ebuild,
+  +metadata.xml:
+  Initial import, bug #60731, thank Bruno T. C. de Oliveira for report and
+  Denilson for keeping that bug live.
+

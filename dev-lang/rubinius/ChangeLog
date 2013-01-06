@@ -1,0 +1,31 @@
+# ChangeLog for dev-lang/rubinius
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/ChangeLog,v 1.10 2012/10/22 16:54:56 graaff Exp $
+
+  22 Oct 2012; Hans de Graaff <graaff@gentoo.org>
+  rubinius-1.2.4.20110705.ebuild:
+  Fix version numbers to actually allow llvm 2.9 versions.
+
+  20 Oct 2012; Hans de Graaff <graaff@gentoo.org>
+  rubinius-1.2.4.20110705.ebuild, metadata.xml:
+  Add a llvm USE flag to make llvm optional since it needs an old version of
+  llvm.
+
+  23 Oct 2011; Hans de Graaff <graaff@gentoo.org>
+  rubinius-1.2.4.20110705.ebuild:
+  Use the just-compiled runtime to avoid bootstrapping problems.
+
+  21 Oct 2011; Hans de Graaff <graaff@gentoo.org>
+  rubinius-1.2.4.20110705.ebuild:
+  Remove rubygems dependency as we will use the bundled version.
+
+  21 Oct 2011; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  Remove copy-paste USE flags.
+
+*rubinius-1.2.4.20110705 (21 Oct 2011)
+
+  21 Oct 2011; Hans de Graaff <graaff@gentoo.org>
+  +rubinius-1.2.4.20110705.ebuild, +files/auto_gem.rb, +metadata.xml:
+  Add Rubinius back as a ruby target (rbx). Fixes bug 334177, many thanks for
+  Judson for creating and testing the initial package.
+

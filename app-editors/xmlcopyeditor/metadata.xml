@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>dabbott@gentoo.org</email>
+</maintainer>
+<maintainer>
+	<email>proxy-maint@gentoo.org</email>
+</maintainer>
+<longdescription>
+	Fast, free, validating XML editor.
+</longdescription>
+<use>
+	<flag name='guidexml'>Install GuideXML templates to work with Gentoo
+	official docs</flag>
+</use>
+</pkgmetadata>

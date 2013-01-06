@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Perl extension for SHA-1/224/256/384/512
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+RDEPEND=~perl-core/Digest-SHA-5.48
+SLOT=0
+_md5_=6df4b13a8331d7b38b7c677db9d32bfa

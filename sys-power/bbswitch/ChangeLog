@@ -1,0 +1,27 @@
+# ChangeLog for sys-power/bbswitch
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/bbswitch/ChangeLog,v 1.5 2012/10/27 11:56:44 pacho Exp $
+
+*bbswitch-0.5 (27 Oct 2012)
+
+  27 Oct 2012; Pacho Ramos <pacho@gentoo.org> +bbswitch-0.5.ebuild:
+  Version bump fixing kernel-3.6 regression, bug #439384 by Michele Ciacci.
+
+  04 Jun 2012; Pacho Ramos <pacho@gentoo.org> -bbswitch-0.4.1.ebuild,
+  metadata.xml:
+  Fix metadata, drop old.
+
+*bbswitch-0.4.2 (06 May 2012)
+
+  06 May 2012; Pacho Ramos <pacho@gentoo.org> +bbswitch-0.4.2.ebuild:
+  Version bump.
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> bbswitch-0.4.1.ebuild:
+  Use mirror://github.
+
+*bbswitch-0.4.1 (21 Apr 2012)
+
+  21 Apr 2012; Pacho Ramos <pacho@gentoo.org> +bbswitch-0.4.1.ebuild,
+  +files/bbswitch.modprobe, +metadata.xml:
+  Initial commit from bumblebee overlay, this fixes bug #384083. Thanks a lot to
+  mva and rei4dan for their work.

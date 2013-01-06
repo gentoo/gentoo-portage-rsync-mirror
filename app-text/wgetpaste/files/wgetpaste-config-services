@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SERVICES="${SERVICES} lugons bpaste"
+
+ENGINE_lugons=lodgeit
+URL_lugons="https://paste.lugons.org/"
+
+ENGINE_bpaste=lodgeit
+URL_bpaste="http://bpaste.net"

@@ -1,0 +1,12 @@
+# ChangeLog for profiles/prefix
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.376 2013/01/03 16:54:57 grobian Exp $
+
+  03 Jan 2013; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Extend cmake mask, bug #445308
+
+  01 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2012:
+  Split ChangeLog.
+
+  For previous entries, please see ChangeLog-2012.
+

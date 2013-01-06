@@ -1,0 +1,32 @@
+# ChangeLog for app-portage/overlint
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/overlint/ChangeLog,v 1.5 2012/06/16 12:35:17 sping Exp $
+
+*overlint-0.5.2 (16 Jun 2012)
+
+  16 Jun 2012; Sebastian Pipping <sping@gentoo.org> overlint-0.4.1.ebuild,
+  overlint-0.4.2.ebuild, overlint-0.5.ebuild, overlint-0.5.1.ebuild,
+  +overlint-0.5.2.ebuild:
+  Bump to 0.5.2, add missing runtime dependency on sed to earlier ebuilds
+
+*overlint-0.5.1 (18 May 2012)
+
+  18 May 2012; Sebastian Pipping <sping@gentoo.org> +overlint-0.5.1.ebuild:
+  Bump to 0.5.1
+
+*overlint-0.5 (08 Apr 2012)
+
+  08 Apr 2012; Sebastian Pipping <sping@gentoo.org> +overlint-0.5.ebuild:
+  Bump to 0.5
+
+*overlint-0.4.2 (08 Apr 2012)
+
+  08 Apr 2012; Sebastian Pipping <sping@gentoo.org> +overlint-0.4.2.ebuild:
+  Bump to 0.4.2 to support Python 3.2 (bug #411135)
+
+*overlint-0.4.1 (06 Apr 2012)
+
+  06 Apr 2012; Sebastian Pipping <sping@gentoo.org> +overlint-0.4.1.ebuild,
+  +metadata.xml:
+  New package
+

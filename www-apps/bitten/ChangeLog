@@ -1,0 +1,18 @@
+# ChangeLog for www-apps/bitten
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bitten/ChangeLog,v 1.2 2012/08/27 15:46:42 xarthisius Exp $
+
+*bitten-0.6-r1 (27 Aug 2012)
+
+  27 Aug 2012; Kacper Kowalik <xarthisius@gentoo.org> +bitten-0.6-r1.ebuild,
+  -bitten-0.6.ebuild:
+  Add tmpdir as home for bitten to avoid subversion going mad about non existant
+  /dev/null/.subversion
+
+*bitten-0.6 (27 Aug 2012)
+
+  27 Aug 2012; Kacper Kowalik <xarthisius@gentoo.org> +bitten-0.6.ebuild,
+  +files/bitten.confd, +files/bitten.initd, +metadata.xml:
+  Initial import, ebuild based on work of Nikolaj Sjujskij
+  <sterkrig@myopera.com>. Fixes bug #189378 by Ole Trenner
+  <ogardiner.23444071@bloglines.com>

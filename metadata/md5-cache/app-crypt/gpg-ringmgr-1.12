@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install unpack
+DEPEND=dev-lang/perl >=app-crypt/gnupg-1.2.1
+DESCRIPTION=GPG Keyring Manager to handle large GPG keyrings more easily
+HOMEPAGE=file:///dev/null
+KEYWORDS=x86 ppc sparc alpha hppa amd64
+LICENSE=GPL-2
+RDEPEND=dev-lang/perl >=app-crypt/gnupg-1.2.1
+SLOT=0
+SRC_URI=mirror://gentoo/gpg-ringmgr
+_md5_=b9d45a8b1ae345c8ef0b2a956c1a1af3

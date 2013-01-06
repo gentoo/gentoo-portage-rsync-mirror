@@ -1,0 +1,44 @@
+# ChangeLog for net-analyzer/ifstatus
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ChangeLog,v 1.7 2009/06/02 11:51:00 flameeyes Exp $
+
+  02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ifstatus-1.1.0.ebuild, +files/ifstatus-1.1.0-asneeded.patch:
+  Add patch to fix --as-needed by Kevin Pyle, close bug #247928. Remove -j1
+  from emake (builds fine at -j12), die on failed install.
+
+  29 May 2009; Steve Dibb <beandog@gentoo.org> ifstatus-1.1.0.ebuild:
+  amd64 stable
+
+  11 Sep 2008; Raúl Porcel <armin76@gentoo.org> ifstatus-1.1.0.ebuild:
+  Add ~arm wrt #236259
+
+  28 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/ifstatus-1.1.0-gcc43.patch, ifstatus-1.1.0.ebuild:
+  Fix for gcc-4.3, bug #228941. Thanks Olivier Huber <oli.huber@gmail.com>
+
+  31 Mar 2007; Marcelo Goes <vanquirius@gentoo.org> ifstatus-1.1.0.ebuild:
+  Mark 1.1.0 x86 stable. Do not set RDEPEND=DEPEND, add note about configuring
+  ifstatus in pkg_postinst.
+
+  18 Feb 2007; nixnut <nixnut@gentoo.org> ifstatus-1.1.0.ebuild:
+  Added ~ppc wrt bug 166565
+
+*ifstatus-1.1.0 (03 Feb 2007)
+
+  03 Feb 2007; Martin Jackson <mjolnir@gentoo.org> +metadata.xml,
+  +ifstatus-1.1.0.ebuild:
+  Adding to portage tree for bug #141854. Thanks to Jose DaLuz for the
+  initial ebuild and dev-zero@g.o for subsequent feedback
+
+  20 Oct 2006; Christian Faulhammer (opfer) <gentoo@faulhammer.org>
+  ifstatus-1.1.0.ebuild:
+  added trailing slash to HOMEPAGE URL
+
+  30 Jul 2006; Tiziano Müller <gentoo@dev-zero.ch> ifstatus-1.1.0.ebuild:
+  Added ~amd64, replaced dosbin with dobin, cosmetic cleanups
+
+  30 Jul 2006; Tiziano Müller <gentoo@dev-zero.ch> +ifstatus-1.1.0.ebuild,
+  +metadata.xml:
+  Ebuild for bug #141854, initial ebuild written by Jose daLuz
+

@@ -1,0 +1,51 @@
+# ChangeLog for media-gfx/colorhug-client
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/ChangeLog,v 1.8 2012/10/07 12:23:47 pacho Exp $
+
+*colorhug-client-0.1.12 (07 Oct 2012)
+
+  07 Oct 2012; Pacho Ramos <pacho@gentoo.org> +colorhug-client-0.1.12.ebuild,
+  -colorhug-client-0.1.6.ebuild, -colorhug-client-0.1.7-r1.ebuild,
+  -colorhug-client-0.1.7.ebuild, -colorhug-client-0.1.8.ebuild:
+  Version bump, also installs schemas, mimes and icons properly and pulls
+  missing libcanberra dep. Drop old.
+
+*colorhug-client-0.1.10 (11 Jun 2012)
+
+  11 Jun 2012; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +colorhug-client-0.1.10.ebuild:
+  bump to 0.1.10
+
+*colorhug-client-0.1.8 (20 Apr 2012)
+
+  20 Apr 2012; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +colorhug-client-0.1.8.ebuild:
+  version bump to 0.1.8
+
+*colorhug-client-0.1.7-r1 (21 Mar 2012)
+
+  21 Mar 2012; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +colorhug-client-0.1.7-r1.ebuild:
+  fix bug#409105 with not installing gsettings schemas properly
+
+*colorhug-client-0.1.7 (15 Mar 2012)
+
+  15 Mar 2012; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +colorhug-client-0.1.7.ebuild:
+  0.1.7 version bump
+
+  15 Mar 2012; Greg Kroah-Hartman <gregkh@gentoo.org>
+  -colorhug-client-0.1.4.ebuild:
+  removed 0.1.4 ebuild
+
+*colorhug-client-0.1.6 (09 Mar 2012)
+
+  09 Mar 2012; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +colorhug-client-0.1.6.ebuild:
+  version bump
+
+*colorhug-client-0.1.4 (09 Mar 2012)
+
+  09 Mar 2012; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +colorhug-client-0.1.4.ebuild, +metadata.xml:
+  added colorhug-client to the system

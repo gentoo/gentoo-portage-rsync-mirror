@@ -1,0 +1,13 @@
+# ChangeLog for sci-geosciences/gshhs
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gshhs/ChangeLog,v 1.2 2012/05/04 07:14:06 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gshhs-1.13.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*gshhs-1.13 (27 Dec 2011)
+
+  27 Dec 2011; Sébastien Fabbro <bicatali@gentoo.org> +gshhs-1.13.ebuild,
+  +metadata.xml:
+  Initial import
+

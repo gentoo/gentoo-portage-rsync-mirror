@@ -1,0 +1,17 @@
+Fix building with gcc-4.7
+
+https://bugs.gentoo.org/show_bug.cgi?id=419165
+signed-of-by: Joerg Bornkessel <hd_brummy@gentoo.org> 2012/06/10
+
+diff -Naur vdr-1.6.0.orig/config.h vdr-1.6.0/config.h
+--- vdr-1.6.0.orig/config.h	2012-06-10 17:41:26.000000000 +0200
++++ vdr-1.6.0/config.h	2012-06-10 17:42:19.000000000 +0200
+@@ -182,7 +182,7 @@
+ #ifdef USE_CMDSUBMENU
+                       AddConfig(l);
+ #else
+-                      Add(l);
++                      this->Add(l);
+ #endif /* CMDSUBMENU */
+                    else {
+                       esyslog("ERROR: error in %s, line %d", fileName, line);

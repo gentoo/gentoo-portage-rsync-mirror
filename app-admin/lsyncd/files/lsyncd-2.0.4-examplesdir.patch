@@ -1,0 +1,68 @@
+From 1e5d8178d56742e5a4a418f56c3a76f84a9fa2eb Mon Sep 17 00:00:00 2001
+From: axkibe <axkibe@400ab1ff-c753-0410-929a-795a28144dcc>
+Date: Tue, 19 Jul 2011 13:29:19 +0000
+Subject: [PATCH] some header changes to work with older systems. expose readdir to user scripts. write examples into doc dir
+
+git-svn-id: http://lsyncd.googlecode.com/svn/trunk@574 400ab1ff-c753-0410-929a-795a28144dcc
+---
+ Makefile.am |    2 +-
+ lsyncd.c    |    1 +
+ lsyncd.h    |    4 ++++
+ lsyncd.lua  |    1 +
+ 4 files changed, 7 insertions(+), 1 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 77bfe12..025a6ed 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -11,7 +11,7 @@ endif
+ #endif
+ 
+ lsyncd_LDADD = $(LUA_LIBS)
+-exampledir = $(datarootdir)/doc/@PACKAGE@
++exampledir = $(docdir)/
+ dist_example_DATA = \
+ 	examples/lbash.lua \
+ 	examples/lecho.lua \
+diff --git a/lsyncd.c b/lsyncd.c
+index 5132804..a591eb2 100644
+--- a/lsyncd.c
++++ b/lsyncd.c
+@@ -30,6 +30,7 @@
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <string.h>
++#include <strings.h>
+ #include <syslog.h>
+ #include <math.h>
+ #include <time.h>
+diff --git a/lsyncd.h b/lsyncd.h
+index 841a1a8..a9ab31c 100644
+--- a/lsyncd.h
++++ b/lsyncd.h
+@@ -11,6 +11,10 @@
+ #ifndef LSYNCD_H
+ #define LSYNCD_H
+ 
++/* some older machines need this to see pselect */
++#define _BSD_SOURCE 1
++#define _XOPEN_SOURCE 600
++
+ /* includes needed for headerfile */
+ #include "config.h"
+ 
+diff --git a/lsyncd.lua b/lsyncd.lua
+index b28a743..b1cc586 100644
+--- a/lsyncd.lua
++++ b/lsyncd.lua
+@@ -38,6 +38,7 @@ _l = nil
+ log       = lsyncd.log
+ terminate = lsyncd.terminate
+ now       = lsyncd.now
++readdir   = lsyncd.readdir
+ -- just to safe from userscripts changing this.
+ local log       = log
+ local terminate = terminate
+-- 
+1.7.3.4
+

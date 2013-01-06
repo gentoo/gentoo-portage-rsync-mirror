@@ -1,0 +1,30 @@
+# ChangeLog for app-dicts/stardict-freedict-tur-eng
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-freedict-tur-eng/ChangeLog,v 1.6 2010/11/30 23:52:41 xmw Exp $
+
+  30 Nov 2010; Michael Weber <xmw@gentoo.org>
+  stardict-freedict-tur-eng-2.4.2.ebuild:
+  sparc stable (bug 258485)
+
+  19 Feb 2009; nixnut <nixnut@gentoo.org>
+  stardict-freedict-tur-eng-2.4.2.ebuild:
+  ppc stable #258485
+
+  15 Feb 2009; Markus Meier <maekke@gentoo.org>
+  stardict-freedict-tur-eng-2.4.2.ebuild:
+  amd64/x86 stable, bug #258485
+
+  09 Jan 2009; Joseph Jezak <josejx@gentoo.org>
+  stardict-freedict-tur-eng-2.4.2.ebuild:
+  Marked ~ppc for bug #240736.
+
+  14 Oct 2008; Raúl Porcel <armin76@gentoo.org>
+  stardict-freedict-tur-eng-2.4.2.ebuild:
+  Add ~sparc/~x86 wrt #240736
+
+*stardict-freedict-tur-eng-2.4.2 (09 Oct 2008)
+
+  09 Oct 2008; Serkan Kaba <serkan@gentoo.org> +metadata.xml,
+  +stardict-freedict-tur-eng-2.4.2.ebuild:
+  Add Turkish to English stardict dictionary.
+

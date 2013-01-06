@@ -1,0 +1,20 @@
+# ChangeLog for app-arch/snappy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/ChangeLog,v 1.3 2012/11/25 23:26:09 radhermit Exp $
+
+*snappy-1.0.5 (25 Nov 2012)
+
+  25 Nov 2012; Tim Harder <radhermit@gentoo.org> +snappy-1.0.5.ebuild:
+  Version bump (bug #407733).
+
+*snappy-1.0.4 (21 Nov 2011)
+
+  21 Nov 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +snappy-1.0.4.ebuild:
+  Bump to 1.0.4, bug 385275
+
+*snappy-1.0.3 (14 Jun 2011)
+
+  14 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +snappy-1.0.3.ebuild,
+  +metadata.xml:
+  Add snappy-1.0.3, there seems to be demand for it
+

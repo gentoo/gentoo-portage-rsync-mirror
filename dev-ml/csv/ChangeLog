@@ -1,0 +1,15 @@
+# ChangeLog for dev-ml/csv
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/csv/ChangeLog,v 1.2 2012/09/09 19:40:05 aballier Exp $
+
+*csv-1.2.3 (09 Sep 2012)
+
+  09 Sep 2012; Alexis Ballier <aballier@gentoo.org> +csv-1.2.3.ebuild:
+  version bump, by Jacques-Pascal Deplaix, bug #433784
+
+*csv-1.2.2 (02 Aug 2012)
+
+  02 Aug 2012; Alexis Ballier <aballier@gentoo.org> +csv-1.2.2.ebuild,
+  +metadata.xml:
+  initial import, ebuild by Jacques-Pascal Deplaix, bug #425088
+

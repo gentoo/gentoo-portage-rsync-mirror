@@ -1,0 +1,23 @@
+# ChangeLog for net-libs/libgrss
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgrss/ChangeLog,v 1.5 2012/05/05 02:54:30 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libgrss-0.3.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> libgrss-0.3.0.ebuild:
+  Marked ~ppc for bug #296794.
+
+  06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> libgrss-0.3.0.ebuild:
+  Keyword ~ppc64 wrt #296794
+
+  19 May 2010; Raúl Porcel <armin76@gentoo.org> libgrss-0.3.0.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #317945
+
+*libgrss-0.3.0 (10 Apr 2010)
+
+  10 Apr 2010; Fabio Erculiani <lxnay@gentoo.org> +libgrss-0.3.0.ebuild,
+  +metadata.xml:
+  New package, thanks to people involved in #312801, in particular to
+  Tiziano Mueller (dev-zero)
+

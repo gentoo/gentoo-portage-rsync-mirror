@@ -1,0 +1,70 @@
+From b68503fb30dfed0823b1fe7d547d82c3df04d187 Mon Sep 17 00:00:00 2001
+From: Richard Yao <ryao@cs.stonybrook.edu>
+Date: Thu, 11 Oct 2012 15:51:25 -0700
+Subject: [PATCH] Remove vmem_size() consumers
+
+There are currently three vmem_size() consumers all of which are
+part of the ARC implemention.  However, since the expected behavior
+of the Linux and Solaris virtual memory subsystems are so different
+the behavior in each of these instances needs to be reevaluated.
+
+* arc_evict_needed() - This is actually dead code.  Arena support
+was never added to the SPL and zio_arena is always NULL.  This
+support isn't needed so we simply remove this dead code.
+
+* arc_memory_throttle() - On Solaris where virtual memory constitutes
+almost all of the address space we can reasonably expect there to be
+a fairly large amount free.  However, on Linux by default we only
+have about 100MB total and that's heavily used by the ARC.  So the
+expectation on Linux is that this will usually be a small value.
+Therefore we remove the vmem_size() check for i386 systems because
+the expectation is that it will be less than the zfs_write_limit_max.
+
+* arc_init() - Here vmem_size() is used to initially size the ARC.
+Since the ARC is currently backed by the virtual address space it
+makes sense to use this as a limit on the ARC for 32-bit systems.
+This code can be removed when the ARC is backed by the page cache.
+
+Signed-off-by: Brian Behlendorf <behlendorf1@llnl.gov>
+Closes #831
+---
+ module/zfs/arc.c |   16 ----------------
+ 1 file changed, 16 deletions(-)
+
+diff --git a/module/zfs/arc.c b/module/zfs/arc.c
+index 829b4d9..6ec9f04 100644
+--- a/module/zfs/arc.c
++++ b/module/zfs/arc.c
+@@ -2414,18 +2414,6 @@ struct l2arc_buf_hdr {
+ 	if (type == ARC_BUFC_METADATA && arc_meta_used >= arc_meta_limit)
+ 		return (1);
+ 
+-#ifdef _KERNEL
+-	/*
+-	 * If zio data pages are being allocated out of a separate heap segment,
+-	 * then enforce that the size of available vmem for this area remains
+-	 * above about 1/32nd free.
+-	 */
+-	if (type == ARC_BUFC_DATA && zio_arena != NULL &&
+-	    vmem_size(zio_arena, VMEM_FREE) <
+-	    (vmem_size(zio_arena, VMEM_ALLOC) >> 5))
+-		return (1);
+-#endif
+-
+ 	if (arc_no_grow)
+ 		return (1);
+ 
+@@ -3563,10 +3551,6 @@ struct l2arc_buf_hdr {
+ 
+ 	/* Easily reclaimable memory (free + inactive + arc-evictable) */
+ 	available_memory = ptob(spl_kmem_availrmem()) + arc_evictable_memory();
+-#if defined(__i386)
+-	available_memory =
+-	    MIN(available_memory, vmem_size(heap_arena, VMEM_FREE));
+-#endif
+ 
+ 	if (available_memory <= zfs_write_limit_max) {
+ 		ARCSTAT_INCR(arcstat_memory_throttle_count, 1);
+-- 
+1.7.10
+

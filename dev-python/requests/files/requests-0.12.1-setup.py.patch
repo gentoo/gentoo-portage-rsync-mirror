@@ -1,0 +1,29 @@
+certifi is not necessary: requests picks up the same ca-certificates
+bundle it gets via certifi.
+
+chardet2 is a fork of chardet that has the exact same code we're
+installing, but with the name in egg-info (not the python package
+name!) changed to chardet2. Fix that up so anyone wanting to
+pkg_resources.require requests gets it.
+
+--- setup.py
++++ setup.py
+@@ -34,15 +34,13 @@
+ # On certain supported platforms (e.g., Red Hat / Debian / FreeBSD), Requests can
+ # use the system CA bundle instead; see `requests.utils` for details.
+ # If your platform is supported, set `requires` to [] instead:
+-requires = ['certifi>=0.0.7']
++requires = []
+ 
+ # chardet is used to optimally guess the encodings of pages that don't declare one.
+ # At this time, chardet is not a required dependency. However, it's sufficiently
+ # important that pip/setuptools should install it when it's unavailable.
+-if is_py3:
+-    chardet_package = 'chardet2'
+-else:
+-    chardet_package = 'chardet>=1.0.0'
++chardet_package = 'chardet>=1.0.0'
++if not is_py3:
+     requires.append('oauthlib>=0.1.0,<0.2.0')
+ 
+ requires.append(chardet_package)

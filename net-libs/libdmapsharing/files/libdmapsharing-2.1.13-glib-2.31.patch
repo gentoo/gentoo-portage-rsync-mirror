@@ -1,0 +1,27 @@
+From 401b054f026f437d36fba06c25be9f49bee8ab00 Mon Sep 17 00:00:00 2001
+From: "W. Michael Petullo" <mike@flyn.org>
+Date: Mon, 5 Dec 2011 11:14:42 -0600
+Subject: [PATCH] Update glib includes in dpap-share.c (thanks Adam Jackson)
+
+Signed-off-by: W. Michael Petullo <mike@flyn.org>
+---
+ libdmapsharing/dpap-share.c |    3 +--
+ 1 files changed, 1 insertions(+), 2 deletions(-)
+
+diff --git a/libdmapsharing/dpap-share.c b/libdmapsharing/dpap-share.c
+index 5b5628d..6c21d68 100644
+--- a/libdmapsharing/dpap-share.c
++++ b/libdmapsharing/dpap-share.c
+@@ -27,8 +27,7 @@
+ #include <stdlib.h>
+ 
+ #include <glib/gi18n.h>
+-#include <glib/gslist.h>
+-#include <glib/gmappedfile.h>
++#include <glib.h>
+ 
+ #include <unistd.h>
+ #include <sys/types.h>
+-- 
+1.7.8.6
+

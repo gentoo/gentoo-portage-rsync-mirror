@@ -1,0 +1,30 @@
+# ChangeLog for net-analyzer/nagios-check_mysql_health
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_mysql_health/ChangeLog,v 1.5 2012/12/10 07:39:50 hollow Exp $
+
+  10 Dec 2012; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
+  remove myself from metadata
+
+*nagios-check_mysql_health-2.1.7 (19 Mar 2012)
+
+  19 Mar 2012; Benedikt Böhm <hollow@gentoo.org>
+  -nagios-check_mysql_health-2.1.1.ebuild,
+  +nagios-check_mysql_health-2.1.7.ebuild:
+  version bump wrt #407439
+
+*nagios-check_mysql_health-2.1.5 (07 Apr 2011)
+
+  07 Apr 2011; Benedikt Böhm <hollow@gentoo.org>
+  +nagios-check_mysql_health-2.1.5.ebuild:
+  version bump wrt #362421
+
+  20 May 2010; Robin H. Johnson <robbat2@gentoo.org>
+  nagios-check_mysql_health-2.1.1.ebuild:
+  Fix multilib-strict.
+
+*nagios-check_mysql_health-2.1.1 (12 May 2010)
+
+  12 May 2010; Benedikt Böhm <hollow@gentoo.org>
+  +nagios-check_mysql_health-2.1.1.ebuild, +metadata.xml:
+  initial ebuild
+

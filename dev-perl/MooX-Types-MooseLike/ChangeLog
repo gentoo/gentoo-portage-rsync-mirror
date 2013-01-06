@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/MooX-Types-MooseLike
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooX-Types-MooseLike/ChangeLog,v 1.1 2012/12/09 17:09:28 tove Exp $
+
+*MooX-Types-MooseLike-0.160.0 (09 Dec 2012)
+
+  09 Dec 2012; Torsten Veller <tove@gentoo.org>
+  +MooX-Types-MooseLike-0.160.0.ebuild, +metadata.xml:
+  Initial commit for dev-perl/Throwable
+

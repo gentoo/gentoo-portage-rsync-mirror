@@ -1,0 +1,8 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Intel (R) Wireless WiFi Link 5100/5300 ucode
+HOMEPAGE=http://intellinuxwireless.org/?p=iwlwifi
+KEYWORDS=amd64 x86
+LICENSE=ipw3945
+SLOT=1
+SRC_URI=http://intellinuxwireless.org/iwlwifi/downloads/iwlwifi-5000-ucode-8.24.2.12.tgz
+_md5_=10fd1461b30cfcd9697342cfea55ed40

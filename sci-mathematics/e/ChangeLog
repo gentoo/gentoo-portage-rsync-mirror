@@ -1,0 +1,17 @@
+# ChangeLog for sci-mathematics/e
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/e/ChangeLog,v 1.3 2012/12/05 10:21:11 gienah Exp $
+
+  05 Dec 2012; Mark Wright <gienah@gentoo.org> e-1.5.ebuild, e-1.6.ebuild:
+  EAPI=5 with subslot depends to automatically rebuild e when isabelle is
+  updated if the isabelle use flag is enabled.
+
+*e-1.6 (20 Sep 2012)
+
+  20 Sep 2012; Mark Wright <gienah@gentoo.org> +e-1.6.ebuild:
+  Bump E to 1.6 Tiger Hill
+
+*e-1.5 (30 May 2012)
+
+  30 May 2012; Mark Wright <gienah@gentoo.org> +e-1.5.ebuild, +metadata.xml:
+  Add E theorem prover, with optional Isabelle/HOL sledgehammer integration.

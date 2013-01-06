@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>cluster</herd>
+  <maintainer>
+    <email>ultrabug@ultrabug.net</email>
+    <description>maintainer</description>
+  </maintainer>
+  <maintainer>
+    <email>xarthisius@gentoo.org</email>
+    <name>Kacper Kowalik</name>
+    <description>proxy maintainer</description>
+  </maintainer>
+</pkgmetadata>

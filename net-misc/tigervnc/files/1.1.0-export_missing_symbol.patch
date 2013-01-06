@@ -1,0 +1,12 @@
+diff -Naur xorg-server-1.11.2.orig/include/input.h xorg-server-1.11.2/include/input.h
+--- xorg-server-1.11.2.orig/include/input.h	2011-07-15 17:26:40.000000000 +0400
++++ xorg-server-1.11.2/include/input.h	2011-12-22 10:38:53.581370977 +0400
+@@ -503,7 +503,7 @@
+                         DeviceIntPtr master);
+ 
+ extern _X_EXPORT DeviceIntPtr GetPairedDevice(DeviceIntPtr kbd);
+-extern DeviceIntPtr GetMaster(DeviceIntPtr dev, int type);
++extern _X_EXPORT DeviceIntPtr GetMaster(DeviceIntPtr dev, int type);
+ 
+ extern _X_EXPORT int AllocDevicePair(ClientPtr client,
+                              char* name,

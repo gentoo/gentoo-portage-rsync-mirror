@@ -1,0 +1,11 @@
+# ChangeLog for app-text/referencer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/referencer/ChangeLog,v 1.1 2012/12/23 09:53:09 hwoarang Exp $
+
+*referencer-1.2.0 (23 Dec 2012)
+
+  23 Dec 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/referencer-desktop-file-validate.patch, +metadata.xml,
+  +referencer-1.2.0.ebuild:
+  Initial commit. Bug #164750. Thanks to Dominik Kriegner
+  <dominik.kriegner+gentoo@gmail.com> for the ebuild. He will be the maintainer

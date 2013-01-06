@@ -1,0 +1,88 @@
+# ChangeLog for dev-haskell/test-framework-quickcheck2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-quickcheck2/ChangeLog,v 1.17 2012/11/25 02:58:47 gienah Exp $
+
+  25 Nov 2012; Mark Wright <gienah@gentoo.org>
+  test-framework-quickcheck2-0.2.12.3.ebuild:
+  require quickcheck in slot 2
+
+*test-framework-quickcheck2-0.2.12.3 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org>
+  +test-framework-quickcheck2-0.2.12.3.ebuild:
+  Bump test-framework-quickcheck2 to 0.2.12.3
+
+  25 Sep 2012; Andreas Schuerch <nativemad@gentoo.org>
+  test-framework-quickcheck2-0.2.12.2.ebuild:
+  x86 stable, see bug 421351
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  test-framework-quickcheck2-0.2.10.ebuild,
+  test-framework-quickcheck2-0.2.12-r1.ebuild,
+  test-framework-quickcheck2-0.2.12.1.ebuild,
+  test-framework-quickcheck2-0.2.12.2.ebuild,
+  test-framework-quickcheck2-0.2.5.ebuild:
+  move dev-haskell/test-framework-quickcheck2/test-framework-
+  quickcheck2-0.2.12.1.ebuild ebuild to mirror://hackage
+
+*test-framework-quickcheck2-0.2.12.2 (26 May 2012)
+
+  26 May 2012; Mark Wright <gienah@gentoo.org>
+  +test-framework-quickcheck2-0.2.12.2.ebuild:
+  Bump test-framework-quickcheck2 to 0.2.12.2
+
+*test-framework-quickcheck2-0.2.12.1 (14 Apr 2012)
+
+  14 Apr 2012; Mark Wright <gienah@gentoo.org>
+  +test-framework-quickcheck2-0.2.12.1.ebuild, metadata.xml:
+  Bump test-framework-quickcheck2 to 0.2.12.1
+
+*test-framework-quickcheck2-0.2.12-r1 (04 Mar 2012)
+
+  04 Mar 2012; Mark Wright <gienah@gentoo.org>
+  +test-framework-quickcheck2-0.2.12-r1.ebuild:
+  Bump test-framework-quickcheck2 to 0.2.12
+
+*test-framework-quickcheck2-0.2.10 (22 Jan 2012)
+
+  22 Jan 2012; Mark Wright <gienah@gentoo.org>
+  +test-framework-quickcheck2-0.2.10.ebuild:
+  Version bump for dev-haskell/hashable
+
+  25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  test-framework-quickcheck2-0.2.5.ebuild:
+  ppc/ppc64 stable wrt #339580
+
+  20 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  test-framework-quickcheck2-0.2.5.ebuild:
+  alpha/ia64/sparc stable (bug #339580). Marked ~x86-fbsd (bug #227677).
+
+  19 Oct 2010; Thomas Kahle <tomka@gentoo.org>
+  test-framework-quickcheck2-0.2.5.ebuild:
+  x86 stable per bug 339580
+
+  16 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  test-framework-quickcheck2-0.2.5.ebuild:
+  Stable on amd64 wrt bug #339580
+
+  09 Sep 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  test-framework-quickcheck2-0.2.5.ebuild:
+  Marked ~sparc
+
+  20 Jul 2010; Joseph Jezak <josejx@gentoo.org>
+  test-framework-quickcheck2-0.2.5.ebuild:
+  Marked ~ppc.
+
+  10 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  test-framework-quickcheck2-0.2.5.ebuild:
+  marked ~ia64
+
+  08 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  test-framework-quickcheck2-0.2.5.ebuild:
+  ~alpha keyworded
+
+*test-framework-quickcheck2-0.2.5 (28 Mar 2010)
+
+  28 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  +test-framework-quickcheck2-0.2.5.ebuild, +metadata.xml:
+  Initial version.

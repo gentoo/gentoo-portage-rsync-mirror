@@ -1,0 +1,30 @@
+# ChangeLog for dev-python/pyifp
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyifp/ChangeLog,v 1.7 2011/01/01 21:21:14 arfrever Exp $
+
+  01 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyifp-0.2.2.ebuild:
+  Fix dependencies. Set SUPPORT_PYTHON_ABIS (bug #345523).
+
+  23 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> pyifp-0.2.2.ebuild:
+  Fix DOCS variable.
+
+  10 May 2009; Samuli Suominen <ssuominen@gentoo.org> pyifp-0.2.2.ebuild:
+  Remove dev-lang/swig from rdepend, it's only a depend wrt #221475.
+
+  21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  files/digest-pyifp-0.2.2, Manifest:
+  Convert to Manifest2.
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pyifp-0.2.2.ebuild:
+  Mark 0.2.2 ~ia64
+
+  30 Jan 2006; Patrick McLean <chutzpah@gentoo.org> pyifp-0.2.2.ebuild:
+  Add missing dependency for dev-lang/swig (bug #120847).
+
+*pyifp-0.2.2 (24 Jan 2006)
+
+  24 Jan 2006; Patrick McLean <chutzpah@gentoo.org>
+  +files/pyifp-0.2.2-setup-fix.patch, +metadata.xml, +pyifp-0.2.2.ebuild:
+  Initial version.
+

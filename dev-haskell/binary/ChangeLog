@@ -1,0 +1,92 @@
+# ChangeLog for dev-haskell/binary
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.25 2012/11/18 01:02:35 gienah Exp $
+
+*binary-0.5.1.1 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> +binary-0.5.1.1.ebuild:
+  Bump binary to 0.5.1.1
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> binary-0.5.0.2.ebuild,
+  binary-0.5.1.0.ebuild:
+  move dev-haskell/binary/binary-0.5.1.0.ebuild ebuild to mirror://hackage
+
+  09 Aug 2012; Sergei Trofimovich <slyfox@gentoo.org> binary-0.5.1.0.ebuild:
+  Stable on alpha/ia64/sparc (bug #414707)
+
+  29 Jun 2012; Brent Baude <ranger@gentoo.org> binary-0.5.1.0.ebuild:
+  Marking binary-0.5.1.0 ppc for bug 414707
+
+  28 Jun 2012; Mark Wright <gienah@gentoo.org> binary-0.5.1.0.ebuild:
+  binary 0.5.1.0 is a ghc 7.4.2 core lib
+
+  22 Jun 2012; Brent Baude <ranger@gentoo.org> binary-0.5.1.0.ebuild:
+  Marking binary-0.5.1.0 ppc64 for bug 414707
+
+  19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> binary-0.5.1.0.ebuild:
+  Stable for amd64, wrt bug #414707
+
+  19 Jun 2012; Jeff Horelick <jdhore@gentoo.org> binary-0.5.1.0.ebuild:
+  marked x86 per bug 414707
+
+  20 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> binary-0.5.1.0.ebuild:
+  Fix build breakage on <ghc-7.4.
+
+*binary-0.5.1.0 (04 Mar 2012)
+
+  04 Mar 2012; Mark Wright <gienah@gentoo.org> +binary-0.5.1.0.ebuild:
+  Bump binary to 0.5.1.0 for ghc 7.4.1
+
+  04 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org> -binary-0.4.1.ebuild,
+  -binary-0.4.2.ebuild, binary-0.5.0.2.ebuild, metadata.xml:
+  Removed old. While at it extended metadata description.
+
+  01 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> binary-0.5.0.2.ebuild,
+  +files/binary-0.5.0.2-ghc-7.patch:
+  Added build fix for ghc-7.
+
+  10 Apr 2011; Fabian Groffen <grobian@gentoo.org> binary-0.5.0.2.ebuild:
+  Marked ~x86-macos
+
+  25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> binary-0.5.0.2.ebuild:
+  ppc/ppc64 stable wrt #339580
+
+  20 Nov 2010; Sergei Trofimovich <slyfox@gentoo.org> binary-0.5.0.2.ebuild:
+  alpha/ia64/sparc stable (bug #339580). Marked ~x86-fbsd (bug #227677).
+
+  19 Oct 2010; Thomas Kahle <tomka@gentoo.org> binary-0.5.0.2.ebuild:
+  x86 stable per bug 339580
+
+  16 Oct 2010; Markos Chandras <hwoarang@gentoo.org> binary-0.5.0.2.ebuild:
+  Stable on amd64 wrt bug #339580
+
+  20 Jul 2010; Joseph Jezak <josejx@gentoo.org> binary-0.5.0.2.ebuild:
+  Marked ~ppc.
+
+  10 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> binary-0.5.0.2.ebuild:
+  marked ~ia64
+
+  08 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> binary-0.5.0.2.ebuild:
+  ~alpha keyworded
+
+  01 Apr 2010; Fabian Groffen <grobian@gentoo.org> binary-0.5.0.2.ebuild:
+  Marked ~ppc-macos
+
+  28 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org> binary-0.5.0.2.ebuild:
+  Add ~ppc64 keyword, tested by trofi.
+
+*binary-0.5.0.2 (15 Dec 2009)
+
+  15 Dec 2009; <kolmodin@gentoo.org> +binary-0.5.0.2.ebuild:
+  Version bump.
+
+*binary-0.4.2 (04 May 2008)
+
+  04 May 2008; Lennart Kolmodin <kolmodin@gentoo.org> +binary-0.4.2.ebuild:
+  Version bump.
+
+*binary-0.4.1 (15 Dec 2007)
+
+  15 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> +metadata.xml,
+  +binary-0.4.1.ebuild:
+  Initial version.

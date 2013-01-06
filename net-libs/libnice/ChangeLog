@@ -1,0 +1,169 @@
+# ChangeLog for net-libs/libnice
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.44 2012/12/14 15:52:15 mgorny Exp $
+
+  14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove redundant USE=upnp description; it matches the global flag meaning.
+
+*libnice-0.1.3-r1 (08 Dec 2012)
+
+  08 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/libnice-0.0.13-darwin.patch, -libnice-0.1.0.ebuild,
+  libnice-0.1.2.ebuild, -libnice-0.1.3.ebuild, +libnice-0.1.3-r1.ebuild:
+  Split gstreamer plugin out into a separate package,
+  media-plugins/gst-plugins-libnice, to allow clean optional support for
+  gst-0.10 and/or gst-1.0. Remove 0.1.3 ebuild due to automagic gst-1.0
+  detection. Remove old. Update license.
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> libnice-0.1.2.ebuild:
+  ia64/sparc stable wrt #427544
+
+  16 Oct 2012; Matt Turner <mattst88@gentoo.org> libnice-0.1.2.ebuild:
+  Stable on alpha, bug 427544.
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> libnice-0.1.2.ebuild:
+  stable ppc, bug #427544
+
+  07 Oct 2012; Anthony G. Basile <blueness@gentoo.org> libnice-0.1.2.ebuild:
+  stable ppc64, bug #427544
+
+  06 Oct 2012; Markus Meier <maekke@gentoo.org> libnice-0.1.2.ebuild:
+  arm stable, bug #427544
+
+  04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> libnice-0.1.2.ebuild:
+  Stable for amd64, wrt bug #427544
+
+  03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libnice-0.1.2.ebuild:
+  x86 stable wrt bug #427544
+
+  02 Oct 2012; Jeroen Roovers <jer@gentoo.org> libnice-0.1.2.ebuild:
+  Stable for HPPA (bug #427544).
+
+*libnice-0.1.3 (22 Sep 2012)
+
+  22 Sep 2012; Pacho Ramos <pacho@gentoo.org> +libnice-0.1.3.ebuild:
+  Version bump
+
+*libnice-0.1.2 (30 Jun 2012)
+
+  30 Jun 2012; Pacho Ramos <pacho@gentoo.org> +libnice-0.1.2.ebuild,
+  -libnice-0.0.10.ebuild, -libnice-0.0.13.ebuild, -libnice-0.0.9.ebuild:
+  Version bump, remove old.
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libnice-0.0.9.ebuild,
+  libnice-0.0.10.ebuild, libnice-0.0.13.ebuild, libnice-0.1.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> libnice-0.1.0.ebuild:
+  ppc/ppc64 stable wrt #373393
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> libnice-0.1.0.ebuild:
+  Stable for HPPA (bug #369909).
+
+  31 Jul 2011; Raúl Porcel <armin76@gentoo.org> libnice-0.1.0.ebuild:
+  alpha/ia64/sparc stable wrt #373393
+
+  13 Jul 2011; Thomas Kahle <tomka@gentoo.org> libnice-0.1.0.ebuild:
+  x86 stable per bug 373393
+
+  30 Jun 2011; Markos Chandras <hwoarang@gentoo.org> libnice-0.1.0.ebuild:
+  Stable on amd64 wrt bug #373393
+
+  25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> libnice-0.0.13.ebuild:
+  ppc64 stable wrt #357765,#355719
+
+  09 Mar 2011; Michael Weber <xmw@gentoo.org> libnice-0.0.13.ebuild:
+  ppc stable (bug 355719)
+
+  07 Mar 2011; Jeroen Roovers <jer@gentoo.org> libnice-0.0.13.ebuild:
+  Stable for HPPA (bug #355719).
+
+  26 Feb 2011; Raúl Porcel <armin76@gentoo.org> libnice-0.0.13.ebuild:
+  alpha/ia64/sparc stable wrt #355719
+
+  22 Feb 2011; Thomas Kahle <tomka@gentoo.org> libnice-0.0.13.ebuild:
+  x86 stable per bug 355719
+
+  21 Feb 2011; Markos Chandras <hwoarang@gentoo.org> libnice-0.0.13.ebuild:
+  Stable on amd64 wrt bug #355719
+
+*libnice-0.1.0 (21 Feb 2011)
+
+  21 Feb 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +libnice-0.1.0.ebuild:
+  Bump to 0.1.0, EAPI is now 3, passes all tests
+
+  13 Feb 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Add gnome to metadata as talked between us since empathy relies on this.
+
+  20 Nov 2010; Michael Weber <xmw@gentoo.org> libnice-0.0.10.ebuild,
+  libnice-0.0.13.ebuild:
+  Added ~arm keyword (bug 343505)
+
+  13 Nov 2010; Fabian Groffen <grobian@gentoo.org> libnice-0.0.13.ebuild,
+  +files/libnice-0.0.13-darwin.patch:
+  Fixed for and marked ~ppc-macos and ~x86-macos, bug #343611
+
+*libnice-0.0.13 (29 Sep 2010)
+
+  29 Sep 2010; Pacho Ramos <pacho@gentoo.org> +libnice-0.0.13.ebuild:
+  Version bump with bugfixes and pass proper configure upnp option (bug
+  #292076 by Niko Böckerman).
+
+  19 Feb 2010; Raúl Porcel <armin76@gentoo.org> libnice-0.0.10.ebuild:
+  ia64/sparc stable
+
+  19 Feb 2010; Raúl Porcel <armin76@gentoo.org> libnice-0.0.10.ebuild:
+  Add ~ia64/~sparc
+
+  19 Feb 2010; Raúl Porcel <armin76@gentoo.org> libnice-0.0.10.ebuild:
+  Add ~ia64/~sparc
+
+  12 Feb 2010; Joseph Jezak <josejx@gentoo.org> libnice-0.0.9.ebuild,
+  libnice-0.0.10.ebuild:
+  Marked ~ppc64.
+
+  10 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  libnice-0.0.10.ebuild:
+  Transfer Prefix keywords
+
+*libnice-0.0.10 (06 Nov 2009)
+
+  06 Nov 2009; Olivier Crête <tester@gentoo.org> -libnice-0.0.6.ebuild,
+  +libnice-0.0.10.ebuild:
+  Version bump
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> libnice-0.0.9.ebuild:
+  ppc stable #289298
+
+  19 Oct 2009; Markus Meier <maekke@gentoo.org> libnice-0.0.9.ebuild:
+  amd64 stable, bug #289298
+
+  19 Oct 2009; Markus Meier <maekke@gentoo.org> libnice-0.0.9.ebuild:
+  x86 stable, bug #289298
+
+  18 Oct 2009; Jeroen Roovers <jer@gentoo.org> libnice-0.0.9.ebuild:
+  Stable for HPPA (bug #289298).
+
+  18 Oct 2009; Tobias Klausmann <klausman@gentoo.org> libnice-0.0.9.ebuild:
+  Stable on alpha, bug #289298
+
+  11 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> libnice-0.0.9.ebuild:
+  Keywording for ppc. Bug 282263
+
+  01 Sep 2009; Jeroen Roovers <jer@gentoo.org> libnice-0.0.9.ebuild:
+  Marked ~hppa (bug #282989).
+
+*libnice-0.0.9 (04 Aug 2009)
+
+  04 Aug 2009; Olivier Crête <tester@gentoo.org> +libnice-0.0.9.ebuild,
+  metadata.xml:
+  Version bump
+
+  15 May 2009; Tobias Klausmann <klausman@gentoo.org> libnice-0.0.6.ebuild:
+  Keyworded on alpha, bug #269314
+
+*libnice-0.0.6 (10 May 2009)
+
+  10 May 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  +libnice-0.0.6.ebuild, +metadata.xml:
+  Initial commit

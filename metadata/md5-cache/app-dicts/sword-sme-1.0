@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DEPEND=app-arch/unzip
+DESCRIPTION=C. H. Spurgeon's Morning and Evening: Daily Readins
+HOMEPAGE=http://crosswire.org/sword/modules/ModInfo.jsp?modName=SME
+KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd
+LICENSE=public-domain
+RDEPEND=app-text/sword
+SLOT=0
+SRC_URI=mirror://gentoo/SME-1.0.zip
+_eclasses_=sword-module	c52595ffeb9df1c705120bffa624d484
+_md5_=574875c5c884f7084da70f09012a2fd8

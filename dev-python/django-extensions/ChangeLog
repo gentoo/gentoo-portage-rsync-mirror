@@ -1,0 +1,27 @@
+# ChangeLog for dev-python/django-extensions
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-extensions/ChangeLog,v 1.5 2013/01/05 07:15:31 idella4 Exp $
+
+  05 Jan 2013; Ian Delaney <idella4@gentoo.org> django-extensions-1.0.2.ebuild:
+  Reduced testing() by use of , thanks Arfrever
+
+*django-extensions-1.0.2 (05 Jan 2013)
+
+  05 Jan 2013; Ian Delaney <idella4@gentoo.org> +django-extensions-1.0.2.ebuild:
+  bump to 1.0.2, addition of a src_test over-riding a hostile setup.py invoking
+  downloading within the testsuite
+
+*django-extensions-0.8 (09 May 2012)
+
+  09 May 2012; Jesus Rivero <neurogeek@gentoo.org>
+  +django-extensions-0.8.ebuild:
+  Version bump
+
+  25 Apr 2011; Thomas Kahle <tomka@gentoo.org> django-extensions-0.5.ebuild:
+  ~x86 per bug 357801
+
+*django-extensions-0.5 (27 Aug 2010)
+
+  27 Aug 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +django-extensions-0.5.ebuild, +metadata.xml:
+  Initial commit (bug #294084).

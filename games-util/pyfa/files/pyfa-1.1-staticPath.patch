@@ -1,0 +1,27 @@
+From 9a8411e9a6c58e5285ab3ae0a4feed05b6107acf Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Wed, 30 Nov 2011 12:50:53 -0500
+Subject: [PATCH] Make staticPath settable from configforced
+
+---
+ config.py |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+diff --git a/config.py b/config.py
+index f2844b5..1f51700 100644
+--- a/config.py
++++ b/config.py
+@@ -48,7 +48,9 @@ def defPaths():
+             savePath = unicode(os.path.expanduser(os.path.join("~", ".pyfa")), sys.getfilesystemencoding())
+ 
+     # Static EVE Data from the staticdata repository, should be in the staticdata directory in our pyfa directory
+-    staticPath = os.path.join(pyfaPath, "staticdata")
++    staticPath = getattr(configforced, "staticPath", None)
++    if staticPath is None:
++        staticPath = os.path.join(pyfaPath, "staticdata")
+ 
+     # The database where we store all the fits etc
+     saveDB = os.path.join(savePath, "saveddata.db")
+-- 
+1.7.8.rc3
+

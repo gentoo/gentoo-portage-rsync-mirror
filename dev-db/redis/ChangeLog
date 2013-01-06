@@ -1,0 +1,240 @@
+# ChangeLog for dev-db/redis
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.55 2012/12/26 11:15:46 djc Exp $
+
+*redis-2.6.7 (26 Dec 2012)
+
+  26 Dec 2012; Dirkjan Ochtman <djc@gentoo.org> redis-2.4.18.ebuild,
+  +redis-2.6.7.ebuild, +files/redis-2.6.7-config.patch,
+  +files/redis-2.6.7-shared.patch:
+  Version bump to 2.6.7 (bug 439354), fix up 2.4.18 patch name.
+
+*redis-2.4.18 (26 Dec 2012)
+
+  26 Dec 2012; Dirkjan Ochtman <djc@gentoo.org> -redis-2.4.17-r1.ebuild,
+  +redis-2.4.18.ebuild:
+  And replace 2.4.17-r1 with 2.4.18 (bug 446236).
+
+*redis-2.4.17-r1 (26 Dec 2012)
+
+  26 Dec 2012; Dirkjan Ochtman <djc@gentoo.org> +redis-2.4.17-r1.ebuild,
+  +files/redis-2.4.17-shared.patch:
+  Fix compilation against jemalloc-3.2.0 (bug 444796).
+
+  08 Oct 2012; Robin H. Johnson <robbat2@gentoo.org> redis-2.4.17.ebuild:
+  Fix verbosity issue per bus #428722 and EMAKE_EXTRA bug #437344.
+
+  30 Sep 2012; Dirkjan Ochtman <djc@gentoo.org> -redis-2.4.4-r1.ebuild:
+  Remove another old version.
+
+  30 Sep 2012; Dirkjan Ochtman <djc@gentoo.org> -redis-2.4.13.ebuild,
+  -redis-2.4.14.ebuild:
+  Remove old versions.
+
+*redis-2.4.17 (30 Sep 2012)
+
+  30 Sep 2012; Dirkjan Ochtman <djc@gentoo.org> +redis-2.4.17.ebuild:
+  Version bump to 2.4.17 (bug 433850).
+
+  12 Sep 2012; Jesus Rivero <neurogeek@gentoo.org> redis-2.4.4-r1.ebuild,
+  redis-2.4.10.ebuild, redis-2.4.13.ebuild, redis-2.4.14.ebuild,
+  redis-2.4.16.ebuild:
+  Moved tcmalloc and jemalloc to RDEPENDS
+
+  03 Aug 2012; Robin H. Johnson <robbat2@gentoo.org> redis-2.4.16.ebuild:
+  Missing fix from bug #427170.
+
+*redis-2.4.16 (02 Aug 2012)
+
+  02 Aug 2012; Robin H. Johnson <robbat2@gentoo.org> +redis-2.4.16.ebuild:
+  Bug #427170: version bump.
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> redis-2.4.10.ebuild,
+  redis-2.4.13.ebuild, redis-2.4.14.ebuild, redis-2.4.4-r1.ebuild:
+  inherit user for enewgroup and enewuser
+
+*redis-2.4.14 (31 May 2012)
+
+  31 May 2012; Dirkjan Ochtman <djc@gentoo.org> +redis-2.4.14.ebuild:
+  Version bump to 2.4.14 for bug 417449 (thanks to jbergstroem).
+
+  31 May 2012; Dirkjan Ochtman <djc@gentoo.org> -redis-2.2.12.ebuild,
+  -files/redis-2.2-as-needed.patch, -redis-2.4.7.ebuild, -redis-2.4.8.ebuild:
+  Remove old versions.
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> redis-2.4.10.ebuild:
+  x86 stable wrt bug #415893
+
+  14 May 2012; Agostino Sarubbo <ago@gentoo.org> redis-2.4.10.ebuild:
+  Stable for amd64, wrt bug #415893
+
+*redis-2.4.13 (02 May 2012)
+
+  02 May 2012; Dirkjan Ochtman <djc@gentoo.org> +redis-2.4.13.ebuild:
+  Version bump to 2.4.13 (bug 413357).
+
+  09 Apr 2012; Markus Meier <maekke@gentoo.org> redis-2.4.4-r1.ebuild:
+  x86 stable, bug #404083
+
+*redis-2.4.10 (08 Apr 2012)
+
+  08 Apr 2012; Robin H. Johnson <robbat2@gentoo.org> +redis-2.4.10.ebuild:
+  Version bump, bug #408777: fixes replication bugs.
+
+*redis-2.4.8 (02 Mar 2012)
+
+  02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +redis-2.4.8.ebuild:
+  Version bump to 2.4.8 for bug 406493 (thanks Johan Bergstroem).
+
+  16 Feb 2012; Agostino Sarubbo <ago@gentoo.org> redis-2.4.4-r1.ebuild:
+  Stable for amd64, wrt bug #404083
+
+  16 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> -redis-2.4.3.ebuild,
+  -redis-2.4.4.ebuild:
+  Remove old versions.
+
+*redis-2.4.7 (16 Feb 2012)
+
+  16 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> +redis-2.4.7.ebuild:
+  Version bump to 2.4.7 (bug 396135).
+
+  04 Feb 2012; Sven Wegener <swegener@gentoo.org> files/redis.initd:
+  use --user instead of --chuid
+
+  14 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  tcmalloc is now global
+
+  04 Dec 2011; Sven Wegener <swegener@gentoo.org> files/redis.initd:
+  drop opts from init script
+
+  01 Dec 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Add jbergstroem as a proxy maintainer.
+
+*redis-2.4.4-r1 (01 Dec 2011)
+
+  01 Dec 2011; Dirkjan Ochtman <djc@gentoo.org> +redis-2.4.4-r1.ebuild,
+  files/redis.initd:
+  Clean up for EAPI=4, fix initd script (thanks jbergstroem).
+
+  30 Nov 2011; Dirkjan Ochtman <djc@gentoo.org> -redis-2.2.2.ebuild,
+  -redis-2.2.6.ebuild, -redis-2.2.8.ebuild, -redis-2.2.11.ebuild:
+  Remove old versions.
+
+*redis-2.4.4 (30 Nov 2011)
+
+  30 Nov 2011; Dirkjan Ochtman <djc@gentoo.org> +redis-2.4.4.ebuild,
+  +files/redis-2.4.4-tcmalloc.patch:
+  Version bump to 2.4.4 (bug 378085, thanks jbergstroem).
+
+*redis-2.4.3 (26 Nov 2011)
+
+  26 Nov 2011; Luca Barbato <lu_zero@gentoo.org> +redis-2.4.3.ebuild,
+  +files/redis-2.4.3-shared.patch:
+  New version, thanks to Dirkjan Ochtman <djc@gentoo.org> and
+  Johan Bergström <bugs@bergstroem.nu> in bug #378085 for the patches
+  and the updated ebuild.
+
+  02 Nov 2011; Mike Frysinger <vapier@gentoo.org> redis-2.2.2.ebuild,
+  redis-2.2.6.ebuild, redis-2.2.8.ebuild, redis-2.2.11.ebuild,
+  redis-2.2.12.ebuild:
+  Drop "die" from enew{user,group} since these have always taken care of
+  calling it when necessary.
+
+  13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> redis-2.2.12.ebuild:
+  x86 stable wrt bug #386051
+
+  09 Oct 2011; Markos Chandras <hwoarang@gentoo.org> redis-2.2.12.ebuild:
+  Stable on amd64 wrt bug #386051
+
+*redis-2.2.12 (14 Aug 2011)
+
+  14 Aug 2011; Luca Barbato <lu_zero@gentoo.org> +redis-2.2.12.ebuild,
+  +files/redis-2.2-as-needed.patch:
+  New version
+
+*redis-2.2.11 (04 Jul 2011)
+
+  04 Jul 2011; Dirkjan Ochtman <djc@gentoo.org> +redis-2.2.11.ebuild:
+  Version bump to 2.2.11, add doc use flag (bug 373591).
+
+  12 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> redis-2.2.6.ebuild:
+  x86 stable wrt bug #370241
+
+  07 Jun 2011; Markos Chandras <hwoarang@gentoo.org> redis-2.2.6.ebuild:
+  Stable on amd64 wrt bug #370241
+
+*redis-2.2.8 (06 Jun 2011)
+
+  06 Jun 2011; Dirkjan Ochtman <djc@gentoo.org> +redis-2.2.8.ebuild:
+  Version bump to 2.2.8 (bug 368861).
+
+  24 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> redis-2.2.2.ebuild:
+  x86 stable wrt bug #366185
+
+  11 May 2011; Christoph Mende <angelos@gentoo.org> redis-2.2.2.ebuild:
+  Stable on amd64 wrt bug #366185
+
+*redis-2.2.6 (06 May 2011)
+
+  06 May 2011; Dirkjan Ochtman <djc@gentoo.org> +redis-2.2.6.ebuild:
+  Version bump to 2.2.6.
+
+  06 May 2011; Dirkjan Ochtman <djc@gentoo.org> -files/configure.ac-1.02:
+  And one more.
+
+  06 May 2011; Dirkjan Ochtman <djc@gentoo.org>
+  -files/01-dont-print-pid-on-startup.diff, -redis-1.2.6.ebuild,
+  -redis-2.2.0_rc4.ebuild:
+  Remove old versions.
+
+  07 Apr 2011; Fabian Groffen <grobian@gentoo.org> redis-2.2.2.ebuild:
+  Fix for Darwin, thanks Sven Schwyn bug #353516, marked ~x86-solaris
+
+*redis-2.2.2 (04 Apr 2011)
+
+  04 Apr 2011; Dirkjan Ochtman <djc@gentoo.org> +redis-2.2.2.ebuild:
+  Version bump to 2.2.2.
+
+  04 Apr 2011; Dirkjan Ochtman <djc@gentoo.org> -redis-1.2.5.ebuild:
+  Remove old version.
+
+  04 Apr 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Add myself as a maintainer.
+
+  26 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> redis-2.2.0_rc4.ebuild:
+  Drop some of the user changes to the ebuild and keep the code from the 1.2.x
+  series ebuild.
+
+  26 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> redis-2.2.0_rc4.ebuild:
+  QA cleanup.
+
+*redis-2.2.0_rc4 (26 Jan 2011)
+
+  26 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> redis-1.2.6.ebuild,
+  +files/configure.ac-2.2, +redis-2.2.0_rc4.ebuild, metadata.xml:
+  Bug #321487: Version bump. Bug #352266: Prefix support. Bug #335366: Respect
+  LDFLAGS.
+
+*redis-1.2.6 (17 May 2010)
+
+  17 May 2010; Luca Barbato <lu_zero@gentoo.org> redis-1.2.5.ebuild,
+  +redis-1.2.6.ebuild:
+  fix bug #318683, thanks to Mark Lewandowski <mark.e.lewandowski@gmail.com>
+  for reporting the issue and the new version
+
+  02 May 2010; Robin H. Johnson <robbat2@gentoo.org> redis-1.2.5.ebuild:
+  Bug #316767: implement a full src_test that does server setup first.
+
+  25 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Add lu_zero as another maintainer.
+
+*redis-1.2.5 (25 Mar 2010)
+
+  25 Mar 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +files/01-dont-print-pid-on-startup.diff, +files/configure.ac-1.02,
+  +redis-1.2.5.ebuild, +files/redis.confd, +files/redis.initd,
+  +metadata.xml:
+  Initial commit. Partially based on the submission in the upstream
+  bugtracker by Geoff Kassel <gkassel@users.sourceforge.net> and W-Mark
+  Kubacki <wmark.gentoo@hurrikane.de>. Proxy maintainers welcome.
+  Upstream submission was linked from bug #308243.

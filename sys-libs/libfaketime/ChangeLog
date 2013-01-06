@@ -1,0 +1,27 @@
+# ChangeLog for sys-libs/libfaketime
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfaketime/ChangeLog,v 1.4 2012/10/23 22:28:09 radhermit Exp $
+
+  23 Oct 2012; Tim Harder <radhermit@gentoo.org> -libfaketime-0.9-r1.ebuild,
+  -files/libfaketime-0.9-make.patch:
+  Remove old.
+
+*libfaketime-0.9.1 (23 Oct 2012)
+
+  23 Oct 2012; Tim Harder <radhermit@gentoo.org> +libfaketime-0.9.1.ebuild,
+  +files/libfaketime-0.9.1-makefile.patch:
+  Version bump.
+
+*libfaketime-0.9-r1 (27 Feb 2012)
+
+  27 Feb 2012; Tim Harder <radhermit@gentoo.org> -libfaketime-0.9.ebuild,
+  +libfaketime-0.9-r1.ebuild, +files/libfaketime-0.9-as-needed.patch:
+  Revbump to fix undefined symbol error at runtime when built with --as-needed
+  (bug #406041). Remove old.
+
+*libfaketime-0.9 (15 Jan 2012)
+
+  15 Jan 2012; Tim Harder <radhermit@gentoo.org> +libfaketime-0.9.ebuild,
+  +files/libfaketime-0.9-make.patch, +metadata.xml:
+  Initial import from sunrise overlay (bug #185753).
+

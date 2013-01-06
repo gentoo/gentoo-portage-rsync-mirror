@@ -1,0 +1,11 @@
+--- src/TableLog.cc.orig	2012-07-07 19:52:47.171651476 +0200
++++ src/TableLog.cc	2012-07-07 19:53:20.291525974 +0200
+@@ -41,6 +41,8 @@
+ #include "TableCommands.h"
+ #include "TableContacts.h"
+ 
++#include <cstddef>
++
+ #define CHECK_MEM_CYCLE 1000 /* Check memory every N'th new message */
+ 
+ // watch nagios' logfile rotation

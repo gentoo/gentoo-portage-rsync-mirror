@@ -1,0 +1,79 @@
+# ChangeLog for dev-vcs/fossil
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.12 2012/11/13 01:41:23 titanofold Exp $
+
+*fossil-20121022124804 (13 Nov 2012)
+
+  13 Nov 2012; <titan@gentoo.org> -files/20101101142335-gentoo.patch,
+  -fossil-20101111133638.ebuild, -fossil-20110301190432.ebuild,
+  -fossil-20111021125253.ebuild, +fossil-20121022124804.ebuild:
+  Clean out old versions. Version bump fixes bug 442412.
+
+*fossil-20111213135356 (04 Mar 2012)
+
+  04 Mar 2012; Aaron W. Swenson <titanofold@gentoo.org>
+  +fossil-20111213135356.ebuild:
+  Version bump.
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop no-herd.
+
+*fossil-20111021125253 (01 Nov 2011)
+
+  01 Nov 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  +fossil-20111021125253.ebuild, metadata.xml:
+  Version bump. Moved to EAPI4. Add myself as co-maintainer.
+
+*fossil-20110301190432 (08 Mar 2011)
+
+  08 Mar 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -files/20100318142033-gentoo.patch, -fossil-20100918155143.ebuild,
+  -fossil-20101005035549.ebuild, -fossil-20101101142335.ebuild,
+  +fossil-20110301190432.ebuild:
+  Version bump. Clean up old versions.
+
+*fossil-20101111133638 (11 Nov 2010)
+
+  11 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +fossil-20101111133638.ebuild:
+  Version bump.
+
+*fossil-20101101142335 (02 Nov 2010)
+
+  02 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +files/20101101142335-gentoo.patch, +fossil-20101101142335.ebuild:
+  Version bump.
+
+  20 Oct 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  fossil-20100918155143.ebuild, fossil-20101005035549.ebuild:
+  Fixed sqlite dependency. Thanks to Domen Kožar (bug #340245).
+
+*fossil-20101005035549 (19 Oct 2010)
+
+  19 Oct 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -fossil-20100318142033.ebuild, +fossil-20101005035549.ebuild:
+  Version bump. Removed old ebuild.
+
+*fossil-20100918155143 (27 Sep 2010)
+
+  27 Sep 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -fossil-20100124175507.ebuild, +fossil-20100918155143.ebuild,
+  metadata.xml:
+  Version bump. Removed old version.
+
+*fossil-20100318142033 (19 May 2010)
+
+  19 May 2010; Justin Lecher <jlec@gentoo.org>
+  +files/20100318142033-gentoo.patch, +fossil-20100318142033.ebuild:
+  Version Bump #319503; unbundle sqlite; link as-needed conform
+
+  07 May 2010; Ulrich Mueller <ulm@gentoo.org>
+  +fossil-20100124175507.ebuild, +metadata.xml:
+  Move package from dev-util to dev-vcs, bug 56967.
+
+*fossil-20100124175507 (24 Jan 2010)
+
+  24 Jan 2010; Mike Frysinger <vapier@gentoo.org>
+  +fossil-20100124175507.ebuild, +metadata.xml:
+  Initial ebuild.
+

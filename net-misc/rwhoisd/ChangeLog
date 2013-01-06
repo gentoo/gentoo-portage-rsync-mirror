@@ -1,0 +1,17 @@
+# ChangeLog for net-misc/rwhoisd
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rwhoisd/ChangeLog,v 1.2 2009/10/21 21:46:11 kingtaco Exp $
+
+*rwhoisd-1.5.9.5-r1 (21 Oct 2009)
+
+  21 Oct 2009; Mike Doty <kingtaco@gentoo.org> +rwhoisd-1.5.9.5-r1.ebuild,
+  +files/rwhoisd-destdir-1.5.9.5.patch:
+  change rwhoisd homedir to /var/rwhoisd and sample data to
+  /var/rwhoisd/samples
+
+*rwhoisd-1.5.9.5 (16 Oct 2009)
+
+  16 Oct 2009; Mike Doty <kingtaco@gentoo.org> +rwhoisd-1.5.9.5.ebuild,
+  +files/rwhoisd, +files/rwhoisd.conf, +files/rwhoisd-destdir.patch,
+  +metadata.xml:
+  Initial version

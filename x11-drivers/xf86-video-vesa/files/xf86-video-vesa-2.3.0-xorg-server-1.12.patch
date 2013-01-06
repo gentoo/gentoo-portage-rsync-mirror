@@ -1,0 +1,30 @@
+From 463886df688d3521afc47ec88f9aaf67e924ec7f Mon Sep 17 00:00:00 2001
+From: Jeremy Huddleston <jeremyhu@apple.com>
+Date: Wed, 19 Oct 2011 08:15:03 +0000
+Subject: Build fix for ABI Version 12
+
+ABI Version 12 removes support for multiple PCI domains.  If you need to
+use this driver on a system with more than one PCI domain, you should
+either port this driver to using libpciaccess directly or stick with an
+older server.
+
+Signed-off-by: Jeremy Huddleston <jeremyhu@apple.com>
+---
+diff --git a/src/vesa.c b/src/vesa.c
+index 61d3550..1136ac3 100644
+--- a/src/vesa.c
++++ b/src/vesa.c
+@@ -1299,7 +1299,11 @@ VESAMapVidMem(ScrnInfoPtr pScrn)
+     }
+ #endif
+ 
++#if GET_ABI_MAJOR(ABI_VIDEODRV_VERSION) < 12
+     pVesa->ioBase = pScrn->domainIOBase;
++#else
++    pVesa->ioBase = 0;
++#endif
+ 
+     xf86DrvMsgVerb(pScrn->scrnIndex, X_INFO, DEBUG_VERB,
+ 		   "virtual address = %p,\n"
+--
+cgit v0.9.0.2-2-gbebe

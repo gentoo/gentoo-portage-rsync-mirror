@@ -1,0 +1,51 @@
+# ChangeLog for dev-util/pkgconfig-openbsd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/ChangeLog,v 1.9 2012/07/13 09:32:54 ssuominen Exp $
+
+  13 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  pkgconfig-openbsd-20120710.ebuild:
+  Update pkg.m4 from pkg-config-0.26 to pkg-config-0.27 for PKG_INSTALLDIR
+  (--with-pkgconfigdir) support.
+
+  10 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -pkgconfig-openbsd-20120504.ebuild:
+  old
+
+*pkgconfig-openbsd-20120710 (10 Jul 2012)
+
+  10 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +pkgconfig-openbsd-20120710.ebuild:
+  New snapshot after upstream restructure.
+
+  04 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  pkgconfig-openbsd-20120504.ebuild:
+  Remove GPL-2 from LICENSE field because pkg.m4 file has an exception that it
+  can be redistributed under the same license as the program itself wrt #414613
+
+  04 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  -pkgconfig-openbsd-20120116.ebuild:
+  old
+
+*pkgconfig-openbsd-20120504 (04 May 2012)
+
+  04 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +pkgconfig-openbsd-20120504.ebuild, metadata.xml:
+  New snapshot with USE="pkg-config" for compability with virtual/pkgconfig.
+
+  17 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  pkgconfig-openbsd-20120116.ebuild:
+  Missing virtual/perl-Getopt-Long RDEPEND for "use Getopt::Long;" in
+  /usr/bin/pkg-config-openbsd.
+
+  17 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  pkgconfig-openbsd-20120116.ebuild:
+  Use "archname" instead of "ARCH" from Config.pm of dev-lang/perl to avoid
+  warning "Use of uninitialized value $machine_arch in string eq at
+  /usr/bin/pkg-config-openbsd line 114."
+
+*pkgconfig-openbsd-20120116 (16 Jan 2012)
+
+  16 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +pkgconfig-openbsd-20120116.ebuild:
+  Initial commit.
+

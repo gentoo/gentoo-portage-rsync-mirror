@@ -1,0 +1,12 @@
+# let autotools respect CFLAGS (bug #442762)
+--- ax25ipd/Makefile.am.orig	2012-11-11 19:30:25.000000000 +0100
++++ ax25ipd/Makefile.am	2012-11-11 19:30:33.000000000 +0100
+@@ -8,7 +8,7 @@
+ docdir = ${datadir}/doc/ax25-apps
+ doc_DATA = README.ax25ipd HISTORY.ax25ipd COPYING.ax25ipd
+ 
+-CFLAGS = -DUSE_TERMIO
++CFLAGS += -DUSE_TERMIO
+ ax25ipd_LDADD = $(AX25_LIB)
+ 
+ ax25ipd_SOURCES =	\

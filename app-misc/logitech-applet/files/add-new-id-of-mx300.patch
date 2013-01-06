@@ -1,0 +1,11 @@
+diff -Naur logitech_applet-0.4test1/logitech_applet.c logitech_applet-0.4test1-new/logitech_applet.c
+--- logitech_applet-0.4test1/logitech_applet.c	2006-06-28 23:29:04.000000000 +0100
++++ logitech_applet-0.4test1-new/logitech_applet.c	2006-06-28 23:27:55.000000000 +0100
+@@ -61,6 +61,7 @@
+     { VENDOR_LOGITECH, 0xC01B, "M-BP86", "MX310 Optical Mouse", HAS_RES },
+     { VENDOR_LOGITECH, 0xC01D, "M-BS81A", "MX510 Optical Mouse", HAS_RES | HAS_SS | HAS_SSR },
+     { VENDOR_LOGITECH, 0xC01E, "M-BS81A", "MX518 Optical Mouse", HAS_RES },
++    { VENDOR_LOGITECH, 0xC01F, "M-BS82", "MX300 Optical Mouse", HAS_RES },
+     { VENDOR_LOGITECH, 0xC024, "M-BP82", "MX300 Optical Mouse", HAS_RES },
+     { VENDOR_LOGITECH, 0xC025, "M-BP81A", "MX500 Optical Mouse", HAS_RES | HAS_SS | HAS_SSR },
+     { VENDOR_LOGITECH, 0xC031, "M-UT58A", "iFeel Mouse (silver)", HAS_RES },

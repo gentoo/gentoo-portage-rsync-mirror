@@ -1,0 +1,25 @@
+# ChangeLog for www-apps/blazeblogger
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blazeblogger/ChangeLog,v 1.4 2012/06/22 06:19:51 xmw Exp $
+
+*blazeblogger-1.2.0-r1 (22 Jun 2012)
+
+  22 Jun 2012; Michael Weber <xmw@gentoo.org> +blazeblogger-1.2.0-r1.ebuild,
+  +files/blazeblogger-1.2.0-bash-completion.patch:
+  Fix bash-completion (patch provided by poletti.marco@gmail.com on bug 417953)
+
+  22 Jun 2012; Michael Weber <xmw@gentoo.org> -blazeblogger-1.1.0.ebuild:
+  drop old.
+
+*blazeblogger-1.2.0 (29 May 2012)
+
+  29 May 2012; Michael Weber <xmw@gentoo.org> +blazeblogger-1.2.0.ebuild:
+  Version bump
+
+*blazeblogger-1.1.0 (14 Oct 2010)
+
+  14 Oct 2010; Michael Weber <xmw@gentoo.org> +blazeblogger-1.1.0.ebuild,
+  +metadata.xml:
+  Initial import, fixes bug 340853, thanks to Manu Wächter for the inital
+  ebuild.
+

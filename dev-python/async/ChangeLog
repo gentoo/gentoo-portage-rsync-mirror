@@ -1,0 +1,13 @@
+# ChangeLog for dev-python/async
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/async/ChangeLog,v 1.2 2011/08/27 20:55:38 neurogeek Exp $
+
+  27 Aug 2011; Jesus Rivero <neurogeek@gentoo.org> async-0.6.1.ebuild:
+  Added ~amd64 keyword
+
+*async-0.6.1 (27 Aug 2011)
+
+  27 Aug 2011; Jesus Rivero <neurogeek@gentoo.org> +async-0.6.1.ebuild,
+  +files/async-0.6.1_libz_link.patch, +metadata.xml:
+  Initial commit
+

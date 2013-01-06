@@ -1,0 +1,25 @@
+# ChangeLog for app-admin/syslog-summary
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-summary/ChangeLog,v 1.5 2011/12/18 17:44:35 armin76 Exp $
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> syslog-summary-1.14.ebuild:
+  Add ~sparc wrt #387631
+
+  09 Oct 2011; Markus Meier <maekke@gentoo.org> syslog-summary-1.14.ebuild:
+  amd64/x86 stable, bug #384043
+
+  08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  syslog-summary-1.14.ebuild:
+  Cleanup: use mirror://github as suggested by Agostino Sarubbo in bug #384043,
+  and also removed verbose die messages.
+
+  12 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  syslog-summary-1.14.ebuild:
+  Improve Python support wrt bug #308283.
+
+*syslog-summary-1.14 (08 Feb 2010)
+
+  08 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +syslog-summary-1.14.ebuild, +metadata.xml:
+  Initial import.
+

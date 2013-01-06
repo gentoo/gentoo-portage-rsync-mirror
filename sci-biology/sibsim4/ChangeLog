@@ -1,0 +1,21 @@
+# ChangeLog for sci-biology/sibsim4
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/sibsim4/ChangeLog,v 1.4 2010/07/16 09:31:29 fauli Exp $
+
+  16 Jul 2010; Christian Faulhammer <fauli@gentoo.org> sibsim4-0.20.ebuild:
+  stable x86, bug 328431
+
+*sibsim4-0.20 (05 May 2010)
+
+  05 May 2010; Andrey Kislyuk <weaver@gentoo.org> +sibsim4-0.20.ebuild:
+  Version bump
+
+  04 Apr 2009; Markus Meier <maekke@gentoo.org> sibsim4-0.17.ebuild:
+  amd64/x86 stable, bug #263770
+
+*sibsim4-0.17 (27 Dec 2008)
+
+  27 Dec 2008; weaver <weaver@gentoo.org> +metadata.xml,
+  +sibsim4-0.17.ebuild:
+  Import from Science overlay, bug 175143
+

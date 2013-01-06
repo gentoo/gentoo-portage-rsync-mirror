@@ -1,0 +1,14 @@
+# ChangeLog for x11-plugins/desklet-Genesis
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-Genesis/ChangeLog,v 1.2 2010/05/08 23:08:22 nixphoeni Exp $
+
+  08 May 2010; Joe Sapp <nixphoeni@gentoo.org> desklet-Genesis-0.2.ebuild:
+  Removed old variable DESKLET_NAME; keyworded ~ARCH for all gdesklets-core
+  ARCHes
+
+*desklet-Genesis-0.2 (27 Oct 2009)
+
+  27 Oct 2009; Joe Sapp <nixphoeni@gentoo.org> +desklet-Genesis-0.2.ebuild,
+  +metadata.xml:
+  Initial commit
+

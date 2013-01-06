@@ -1,0 +1,164 @@
+# ChangeLog for app-shells/mksh
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.35 2012/12/01 03:12:33 patrick Exp $
+
+*mksh-41 (01 Dec 2012)
+
+  01 Dec 2012; Patrick Lauer <patrick@gentoo.org> +mksh-41.ebuild,
+  mksh-9999.ebuild:
+  Bump
+
+  22 Sep 2012; Christoph Junghans <ottxor@gentoo.org>
+  +files/mksh-40f-etc-configurable.patch, -files/mksh-39c-urandom-write.patch,
+  mksh-40f.ebuild, mksh-9999.ebuild:
+  added prefix support (bug #432262)
+
+*mksh-40f (07 Apr 2012)
+
+  07 Apr 2012; Patrick Lauer <patrick@gentoo.org> +mksh-40f.ebuild,
+  -mksh-40e.ebuild:
+  Bump
+
+  26 Mar 2012; Patrick Lauer <patrick@gentoo.org> -mksh-40d.ebuild,
+  mksh-40e.ebuild:
+  Bump
+
+*mksh-40e (25 Mar 2012)
+
+  25 Mar 2012; Patrick Lauer <patrick@gentoo.org> +mksh-40e.ebuild,
+  -mksh-39c.ebuild, -mksh-40b.ebuild:
+  Bump
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> mksh-40d.ebuild:
+  x86 stable wrt bug #404617
+
+  02 Mar 2012; Agostino Sarubbo <ago@gentoo.org> mksh-40d.ebuild:
+  Stable for amd64, wrt bug #404617
+
+  13 Dec 2011; Patrick Lauer <patrick@gentoo.org> mksh-40d.ebuild:
+  Removing obsolete patch
+
+*mksh-40d (12 Dec 2011)
+
+  12 Dec 2011; Patrick Lauer <patrick@gentoo.org> +mksh-40d.ebuild,
+  -mksh-36b.ebuild, -mksh-38c.ebuild, -mksh-39.ebuild, -mksh-39b.ebuild,
+  -mksh-40.ebuild:
+  Bump, remove old
+
+  01 Aug 2011; Patrick Lauer <patrick@gentoo.org> mksh-40b.ebuild:
+  Adding lto and build system fix as suggested by upstream
+
+*mksh-40b (21 Jul 2011)
+
+  21 Jul 2011; Patrick Lauer <patrick@gentoo.org> +mksh-40b.ebuild:
+  Bump
+
+*mksh-40 (12 Jun 2011)
+
+  12 Jun 2011; Patrick Lauer <patrick@gentoo.org> +mksh-40.ebuild:
+  Bump
+
+  13 Feb 2011; Patrick Lauer <patrick@gentoo.org> mksh-9999.ebuild:
+  Minor cleanup of live ebuild
+
+*mksh-9999 (11 Feb 2011)
+
+  11 Feb 2011; Patrick Lauer <patrick@gentoo.org> +mksh-9999.ebuild:
+  Adding live ebuild per upstream request
+
+  10 Feb 2011; Thomas Kahle <tomka@gentoo.org> mksh-39c.ebuild:
+  x86 stable per bug 350505
+
+  28 Jan 2011; Markos Chandras <hwoarang@gentoo.org> mksh-39c.ebuild:
+  Stable on amd64 wrt bug #350505
+
+  11 Jul 2010; Patrick Lauer <patrick@gentoo.org> mksh-39c.ebuild,
+  +files/mksh-39c-urandom-write.patch:
+  Fix for #307983, thanks to Fabian Koester
+
+*mksh-39c (06 Mar 2010)
+
+  06 Mar 2010; Patrick Lauer <patrick@gentoo.org> +mksh-39c.ebuild:
+  Bump
+
+*mksh-39b (23 Feb 2010)
+
+  23 Feb 2010; Patrick Lauer <patrick@gentoo.org> +mksh-39b.ebuild:
+  Buuump
+
+*mksh-39 (26 Aug 2009)
+
+  26 Aug 2009; Patrick Lauer <patrick@gentoo.org> +mksh-39.ebuild:
+  Bump to 39 as requested by upstream
+
+*mksh-38c (26 Jun 2009)
+
+  26 Jun 2009; Hanno Boeck <hanno@gentoo.org> +mksh-38c.ebuild:
+  Version bump.
+
+*mksh-36b (21 Dec 2008)
+
+  21 Dec 2008; Hanno Boeck <hanno@gentoo.org> +mksh-36b.ebuild:
+  Version bump.
+
+*mksh-36 (25 Oct 2008)
+
+  25 Oct 2008; Hanno Boeck <hanno@gentoo.org> +mksh-36.ebuild:
+  Version bump and respect CC variable.
+
+*mksh-33d (18 Apr 2008)
+
+  18 Apr 2008; Hanno Boeck <hanno@gentoo.org> +mksh-33d.ebuild:
+  Version bump, with fix for CVE-2008-1845.
+
+*mksh-33 (26 Mar 2008)
+
+  26 Mar 2008; Hanno Boeck <hanno@gentoo.org> +mksh-33.ebuild:
+  Version bump.
+
+*mksh-31c (12 Sep 2007)
+
+  12 Sep 2007; Hanno Boeck <hanno@gentoo.org> +mksh-31c.ebuild:
+  Version bump, shells belong to /bin and add arc4 random code by request of
+  upstream.
+
+*mksh-31 (08 Sep 2007)
+
+  08 Sep 2007; Hanno Boeck <hanno@gentoo.org> +mksh-31.ebuild:
+  Version bump.
+
+*mksh-29g (12 Jul 2007)
+
+  12 Jul 2007; Hanno Boeck <hanno@gentoo.org> +mksh-29g.ebuild:
+  Version bump.
+
+*mksh-29 (05 Mar 2007)
+
+  05 Mar 2007; Hanno Boeck <hanno@gentoo.org> -mksh-23.ebuild,
+  -mksh-26c.ebuild, +mksh-29.ebuild:
+  Clean out old versions, add 29.
+
+  01 Feb 2007; Steve Dibb <beandog@gentoo.org> mksh-28.ebuild:
+  Add ~amd64, bug 164065
+
+*mksh-28 (03 Sep 2006)
+
+  03 Sep 2006; Hanno Boeck <hanno@gentoo.org> +mksh-28.ebuild:
+  Version bump.
+
+  14 Jun 2006; Hanno Boeck <hanno@gentoo.org> mksh-23.ebuild,
+  mksh-26c.ebuild:
+  Fix URL.
+
+*mksh-26c (27 Mar 2006)
+
+  27 Mar 2006; Hanno Boeck <hanno@gentoo.org> +mksh-26c.ebuild:
+  Version bump and added test.
+
+  23 Jun 2005; David Holm <dholm@gentoo.org> mksh-23.ebuild:
+  Added to ~ppc.
+
+*mksh-23 (22 Jun 2005)
+
+  22 Jun 2005; Hanno Boeck <hanno@gentoo.org> +mksh-23.ebuild:
+  Initial commit by the request of Mirabile.

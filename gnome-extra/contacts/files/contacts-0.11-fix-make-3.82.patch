@@ -1,0 +1,8 @@
+--- Makefile.am-orig	2010-08-22 16:25:24.229598412 -0500
++++ Makefile.am	2010-08-22 16:25:26.488586678 -0500
+@@ -11,4 +11,4 @@
+ MAINTAINERCLEANFILES = aclocal.m4 compile config.guess config.sub configure depcomp $(INTLTOOL_BUILT:=.in) install-sh ltmain.sh mkinstalldirs Makefile.in missing
+ 
+ snapshot:
+-        $(MAKE) dist distdir=$(PACKAGE)-snap`date +"%Y%m%d"`
++	$(MAKE) dist distdir=$(PACKAGE)-snap`date +"%Y%m%d"`

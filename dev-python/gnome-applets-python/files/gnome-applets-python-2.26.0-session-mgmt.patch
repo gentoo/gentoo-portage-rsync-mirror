@@ -1,0 +1,28 @@
+---
+ Add missing GNOME_CLIENT_PARAM_SM_CONNECT, FALSE in gnomeapplet module.  Closes #579390.
+
+ gnomeapplet/applet.override |    1 +
+ gnomeapplet/applet.override |    2 +-
+ 2 files changed, 2 insertions(+), 1 deletions(-)
+
+diff --git a/gnomeapplet/applet.override b/gnomeapplet/applet.override
+index 809da77..a203097 100644
+--- a/gnomeapplet/applet.override
++++ b/gnomeapplet/applet.override
+@@ -5,7 +5,7 @@ headers
+ #include <panel-applet.h>
+ #include <bonobo/bonobo-ui-util.h>
+ #include <libgnome/gnome-program.h>
+-#include <libgnomeui/gnome-ui-init.h>
++#include <libgnomeui/libgnomeui.h>
+ 
+ #define NO_IMPORT_PYGOBJECT
+ #include "pygobject.h"
+@@ -102,6 +102,7 @@ _wrap_panel__applet_bonobo_factory (PyGObject * self,
+ 			    LIBGNOMEUI_MODULE,             
+ 			    argc, argv,                                         
+ 			    GNOME_PARAM_NONE,
++                            GNOME_CLIENT_PARAM_SM_CONNECT, FALSE,
+ 			    NULL);            
+ 
+         pyg_begin_allow_threads;

@@ -1,0 +1,29 @@
+# ChangeLog for x11-themes/ubuntu-wallpapers
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ChangeLog,v 1.6 2012/12/25 03:49:05 jdhore Exp $
+
+  25 Dec 2012; Jeff Horelick <jdhore@gentoo.org>
+  ubuntu-wallpapers-0.35.2.ebuild:
+  marked x86 per bug 447508
+
+  16 Dec 2012; Sergey Popov <pinkbyte@gentoo.org>
+  ubuntu-wallpapers-0.35.2.ebuild:
+  Stable on amd64, keyword ~x86 wrt bug #447508
+
+  04 Dec 2012;  <ago@gentoo.org> ubuntu-wallpapers-0.34.1.ebuild:
+  Stable for x86, wrt bug #438100
+
+*ubuntu-wallpapers-0.35.2 (21 Oct 2012)
+
+  21 Oct 2012; Pacho Ramos <pacho@gentoo.org> +ubuntu-wallpapers-0.35.2.ebuild:
+  Version bump (#438158 by Sergey Popov).
+
+  12 Oct 2012; Agostino Sarubbo <ago@gentoo.org>
+  ubuntu-wallpapers-0.34.1.ebuild:
+  Stable for amd64, wrt bug #438100
+
+*ubuntu-wallpapers-0.34.1 (15 Sep 2012)
+
+  15 Sep 2012; Pacho Ramos <pacho@gentoo.org> +metadata.xml,
+  +ubuntu-wallpapers-0.34.1.ebuild:
+  Add Ubuntu wallpapers.

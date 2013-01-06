@@ -1,0 +1,38 @@
+# ChangeLog for app-dicts/aspell-fo
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fo/ChangeLog,v 1.11 2012/05/17 19:56:49 aballier Exp $
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org> aspell-fo-0.51.0.ebuild:
+  keyword ~amd64-fbsd
+
+  19 Feb 2010; Peter Volkov <pva@gentoo.org> -aspell-fo-0.50.2.ebuild,
+  aspell-fo-0.51.0.ebuild:
+  Remove old.
+
+  18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> aspell-fo-0.50.2.ebuild,
+  aspell-fo-0.51.0.ebuild:
+  QA fixes; IUSE is not defined
+
+  03 Nov 2007; Roy Marples <uberlord@gentoo.org> aspell-fo-0.51.0.ebuild:
+  Keyworded ~sparc-fbsd and ~x86-fbsd
+
+  01 Dec 2006; Kevin F. Quinn <kevquinn@gentoo.org> aspell-fo-0.50.2.ebuild,
+  aspell-fo-0.51.0.ebuild:
+  Ebuild cleanups for bug #132718
+
+*aspell-fo-0.51.0 (16 May 2004)
+
+  16 May 2004; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +aspell-fo-0.51.0.ebuild:
+  version bump
+
+*aspell-fo-0.50.2 (18 Oct 2002)
+
+  02 Dec 2002; Seemant Kulleen <seemant@gentoo.org> * :
+
+  Moved from app-i18n to app-dicts
+
+  18 Oct 2002; Seemant Kulleen <seemant@gentoo.org> aspell-fo-0.50.2.ebuild
+  files/digest-aspell-fo-0.50.2 :
+
+  Faroese aspell dictionary.

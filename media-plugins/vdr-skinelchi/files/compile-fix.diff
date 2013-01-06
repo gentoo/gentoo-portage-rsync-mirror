@@ -1,0 +1,21 @@
+diff -Naur skinelchi-0.1.1pre2.orig/DisplayChannel.c skinelchi-0.1.1pre2/DisplayChannel.c
+--- skinelchi-0.1.1pre2.orig/DisplayChannel.c	2008-03-25 23:13:26.037309537 +0100
++++ skinelchi-0.1.1pre2/DisplayChannel.c	2008-03-25 23:25:04.984510602 +0100
+@@ -1347,7 +1347,7 @@
+ 		presentshorttext = strdup(present->ShortText());
+ 	    else
+ 		presentshorttext = "";
+-	    if (present->GetTimeString())
++	    if ((const char*)present->GetTimeString())
+ 		presenttimestring = strdup(present->GetTimeString());
+ 	    else
+ 		presenttimestring = "";
+@@ -1363,7 +1363,7 @@
+ 	    	followingshorttext = strdup(following->ShortText());
+ 	    else
+ 		followingshorttext = "";
+-	    if (following->GetTimeString())
++	    if ((const char*)following->GetTimeString())
+ 		followingtimestring = strdup(following->GetTimeString());
+ 	    else
+ 		followingtimestring = "";

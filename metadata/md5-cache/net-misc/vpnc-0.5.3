@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install postinst setup
+DEPEND=>=dev-libs/libgcrypt-1.1.91 >=sys-apps/iproute2-2.6.19.20061214 !bindist? ( hybrid-auth? ( dev-libs/openssl ) )
+DESCRIPTION=Free client for Cisco VPN routing software
+HOMEPAGE=http://www.unix-ag.uni-kl.de/~massar/vpnc/
+IUSE=hybrid-auth bindist resolvconf
+KEYWORDS=amd64 ~arm ppc ppc64 ~sparc x86
+LICENSE=GPL-2 BSD
+RDEPEND=>=dev-libs/libgcrypt-1.1.91 >=sys-apps/iproute2-2.6.19.20061214 !bindist? ( hybrid-auth? ( dev-libs/openssl ) ) resolvconf? ( net-dns/openresolv )
+SLOT=0
+SRC_URI=http://www.unix-ag.uni-kl.de/~massar/vpnc/vpnc-0.5.3.tar.gz
+_md5_=3e621040ebec3b89de8f7c6c00e45dd7

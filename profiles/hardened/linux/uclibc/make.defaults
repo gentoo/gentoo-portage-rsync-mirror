@@ -1,0 +1,13 @@
+# Copyright 1999-2012 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/uclibc/make.defaults,v 1.4 2012/10/25 16:06:42 blueness Exp $
+
+PORTAGE_LIBC="uClibc"
+ELIBC=uclibc
+
+FEATURES="sandbox sfperms strict"
+
+USE="hardened nptl pax_kernel pic unicode xattr -berkdb"
+BOOTSTRAP_USE="${BOOTSTRAP_USE} hardened nptl pax_kernel pic -berkdb"
+
+SYMLINK_LIB="no"

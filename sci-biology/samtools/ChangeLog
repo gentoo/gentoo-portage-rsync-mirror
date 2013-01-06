@@ -1,0 +1,51 @@
+# ChangeLog for sci-biology/samtools
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.8 2011/09/26 15:18:39 weaver Exp $
+
+*samtools-0.1.18 (26 Sep 2011)
+
+  26 Sep 2011; Andrey Kislyuk <weaver@gentoo.org> +samtools-0.1.18.ebuild:
+  Version bump
+
+*samtools-0.1.17 (18 Jul 2011)
+
+  18 Jul 2011; Justin Lecher <jlec@gentoo.org> samtools-0.1.12.ebuild,
+  samtools-0.1.12a-r1.ebuild, samtools-0.1.16.ebuild, +samtools-0.1.17.ebuild:
+  Version Bump, #375519
+
+*samtools-0.1.16 (30 Apr 2011)
+
+  30 Apr 2011; Justin Lecher <jlec@gentoo.org> samtools-0.1.12.ebuild,
+  samtools-0.1.12a-r1.ebuild, +samtools-0.1.16.ebuild:
+  Version BUmp, #365265
+
+*samtools-0.1.12a-r1 (14 Mar 2011)
+
+  14 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> -samtools-0.1.12a.ebuild,
+  +samtools-0.1.12a-r1.ebuild:
+  Drop empty RDEP/DEP, respect CC,LDFLAGS wrt 358563. Thanks to Diego for the
+  report.
+
+*samtools-0.1.12a (18 Feb 2011)
+
+  18 Feb 2011; Andrey Kislyuk <weaver@gentoo.org> +samtools-0.1.12a.ebuild:
+  Address bug 354941, build library, correct versioning
+
+  17 Feb 2011; Thomas Kahle <tomka@gentoo.org> samtools-0.1.12.ebuild:
+  x86 stable per bug 353566
+
+  11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> samtools-0.1.12.ebuild:
+  Stable on amd64 wrt bug #353566
+
+*samtools-0.1.12 (21 Dec 2010)
+
+  21 Dec 2010; Andrey Kislyuk <weaver@gentoo.org> +samtools-0.1.12.ebuild,
+  +metadata.xml:
+  Version bump, import from Science overlay
+
+  22 Jan 2010; root <root@onyx.(none)>
+  Version bump
+
+  26 Feb 2009; Andrey Kislyuk <weaver@gentoo.org> ChangeLog:
+  New package, ebuild written by me
+

@@ -1,0 +1,16 @@
+# ChangeLog for dev-python/librharris
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/librharris/ChangeLog,v 1.2 2010/11/08 17:59:48 arfrever Exp $
+
+  08 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  librharris-0.1.14.ebuild:
+  Update EAPI. Fix dependencies. Set SUPPORT_PYTHON_ABIS. Use PyPI mirrors.
+  Set PYTHON_MODNAME.
+
+*librharris-0.1.14 (03 Feb 2009)
+
+  03 Feb 2009; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +librharris-0.1.14.ebuild:
+  Initial import. Ebuild by Fernando V. <email@missionaccomplish.com>.
+  Closes #111808
+

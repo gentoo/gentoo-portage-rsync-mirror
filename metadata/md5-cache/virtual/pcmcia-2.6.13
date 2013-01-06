@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for PCMCIA userspace tools
+KEYWORDS=amd64 arm ppc sh x86
+RDEPEND=|| ( sys-apps/pcmcia-cs sys-apps/pcmciautils )
+SLOT=0
+_md5_=9ef8d3b22cd9a1a930fe00808954a1c8

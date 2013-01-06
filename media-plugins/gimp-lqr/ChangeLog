@@ -1,0 +1,33 @@
+# ChangeLog for media-plugins/gimp-lqr
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-lqr/ChangeLog,v 1.5 2012/02/24 18:39:40 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gimp-lqr-0.7.1.ebuild,
+  +files/gimp-lqr-no-deprecated.patch:
+  Fix compile error, bug #405591 by Sorath.
+
+  28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gimp-lqr-0.7.1.ebuild:
+  x86 stable wrt bug #390269
+
+  15 Nov 2011; Markos Chandras <hwoarang@gentoo.org> gimp-lqr-0.7.1.ebuild:
+  Stable on amd64 wrt bug #390269
+
+  19 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gimp-lqr-0.7.1.ebuild:
+  Fix build after move, bug #345989 by Willard Dawson
+  <willard.dawson@sungard.com>. Modified patch submitted by Stefan Talpalaru
+  <stefantalpalaru@yahoo.com>.
+
+*gimp-lqr-0.7.1 (18 Nov 2010)
+
+  18 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +gimp-lqr-0.7.1.ebuild, +metadata.xml:
+  Move to media-plugins, bug #345919 by mgorny.
+
+*gimp-lqr-plugin-0.7.1 (10 Nov 2010)
+
+  10 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +gimp-lqr-plugin-0.7.1.ebuild, +metadata.xml:
+  Initial import, bug #194137. Ebuild imported from sunrise, where it was
+  maintained by Piotr Szymaniak <lazy_bum@o2.pl> and jlec.
+

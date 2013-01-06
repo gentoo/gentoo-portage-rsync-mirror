@@ -1,0 +1,28 @@
+# ChangeLog for dev-lua/luasocket
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/ChangeLog,v 1.5 2012/08/13 10:33:04 johu Exp $
+
+  13 Aug 2012; Johannes Huber <johu@gentoo.org> luasocket-2.0.2.ebuild:
+  Stable for x86, wrt bug #429592
+
+  07 Aug 2012; Agostino Sarubbo <ago@gentoo.org> luasocket-2.0.2.ebuild:
+  Stable for amd64, wrt bug #429592
+
+  08 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Drop myself out of metadata.
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> luasocket-2.0.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  05 Nov 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +luasocket-2.0.2.ebuild, +files/luasocket-2.0.2-unixsocket.patch,
+  +metadata.xml:
+  Moved from dev-libs to dev-lua.
+
+*luasocket-2.0.2 (28 Sep 2009)
+
+  28 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +luasocket-2.0.2.ebuild, +files/luasocket-2.0.2-unixsocket.patch,
+  +metadata.xml:
+  Initial import of luasocket (needed for ekeyd); thanks to Pierre
+  Guinoiseau in bug #239540 for the basic ebuild.

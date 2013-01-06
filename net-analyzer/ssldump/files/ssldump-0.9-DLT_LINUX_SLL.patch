@@ -1,0 +1,13 @@
+--- base/pcap-snoop.c	2007-11-06 14:22:53.000000000 +0100
++++ base/pcap-snoop_new.c	2007-11-06 14:24:05.000000000 +0100
+@@ -157,6 +157,10 @@
+           return;
+         
+         break;
++      case DLT_LINUX_SLL:
++        data+=16;
++        len-=16;
++        break;
+     }
+     network_process_packet(n,&hdr->ts,data,len);
+   }

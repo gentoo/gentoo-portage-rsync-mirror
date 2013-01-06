@@ -1,0 +1,21 @@
+# ChangeLog for dev-python/django-ldapdb
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-ldapdb/ChangeLog,v 1.4 2012/11/13 10:36:21 idella4 Exp $
+
+  14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Updating maintainer, metadata.xml
+
+  20 May 2012; Theo Chatzimichos <tampakrap@gentoo.org>
+  django-ldapdb-0.1.0_p20120424.ebuild:
+  pypy && jython restricted; django -> RDEPEND; test phase set to use use
+  django's manage.py, test examples excluded from tests
+
+  25 Apr 2012; Theo Chatzimichos <tampakrap@gentoo.org>
+  django-ldapdb-0.1.0_p20120424.ebuild:
+  Add ~x86
+
+*django-ldapdb-0.1.0_p20120424 (25 Apr 2012)
+
+  25 Apr 2012; Theo Chatzimichos <tampakrap@gentoo.org>
+  +django-ldapdb-0.1.0_p20120424.ebuild, +metadata.xml:
+  Initial commit, ebuild by idella4

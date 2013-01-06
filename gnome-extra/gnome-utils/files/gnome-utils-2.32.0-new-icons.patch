@@ -1,0 +1,169 @@
+From 440b7c685f17ab79396944c010bf4e508325e7a8 Mon Sep 17 00:00:00 2001
+From: Cosimo Cecchi <cosimoc@gnome.org>
+Date: Wed, 16 Mar 2011 15:48:49 +0000
+Subject: logview: add new high-res icon
+
+Courtesy of Lapo Calamandrei.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=643986
+---
+diff --git a/configure.ac b/configure.ac
+index ffe068f..5284219 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -376,6 +376,7 @@ AC_CONFIG_FILES([
+ 
+         logview/Makefile
+         logview/data/Makefile
++        logview/data/icons/Makefile
+         logview/tests/Makefile
+         logview/help/Makefile
+ 
+diff --git a/logview/data/Makefile.am b/logview/data/Makefile.am
+index 5507d63..efa3671 100644
+--- a/logview/data/Makefile.am
++++ b/logview/data/Makefile.am
+@@ -1,3 +1,5 @@
++SUBDIRS=icons
++
+ xmldir = $(pkgdatadir)
+ xml_DATA = logview-toolbar.xml logview-filter.ui
+ 
+diff --git a/logview/data/gnome-system-log.desktop.in.in b/logview/data/gnome-system-log.desktop.in.in
+index aafdd94..1375969 100644
+--- a/logview/data/gnome-system-log.desktop.in.in
++++ b/logview/data/gnome-system-log.desktop.in.in
+@@ -2,7 +2,7 @@
+ _Name=Log File Viewer
+ _Comment=View or monitor system log files
+ Exec=gnome-system-log
+-Icon=logviewer
++Icon=logview
+ Terminal=false
+ Type=Application
+ StartupNotify=true
+diff --git a/logview/data/icons/Makefile.am b/logview/data/icons/Makefile.am
+new file mode 100644
+index 0000000..5131cf9
+--- a/dev/null
++++ b/logview/data/icons/Makefile.am
+@@ -0,0 +1,61 @@
++NULL =
++
++public_icons_themes = \
++	hicolor	\
++	$(NULL)
++
++public_icons = \
++	hicolor_apps_16x16_logview.png \
++	hicolor_apps_22x22_logview.png \
++	hicolor_apps_32x32_logview.png \
++	hicolor_apps_48x48_logview.png \
++	hicolor_apps_256x256_logview.png \
++	$(NULL)
++
++noinst_DATA = \
++	$(NULL)
++
++EXTRA_DIST = \
++	$(public_icons)		\
++	$(noinst_DATA)		\
++	$(NULL)
++
++###############################################################################
++
++gtk_update_icon_cache = gtk-update-icon-cache -f -t
++
++update-icon-cache:
++	@-if test -z "$(DESTDIR)"; then \
++		echo "Updating Gtk icon cache."; \
++		for theme in $(public_icons_themes); do \
++			$(gtk_update_icon_cache) $(datadir)/icons/$$theme; \
++		done; \
++	else \
++		echo "*** Icon cache not updated.  After (un)install, run this:"; \
++		for theme in $(public_icons_themes); do \
++			echo "***   $(gtk_update_icon_cache) $(datadir)/icons/$$theme"; \
++		done; \
++	fi
++
++install-icons:
++	for icon in $(public_icons); do \
++		THEME=`echo $$icon | cut -d_ -f1`; \
++		CONTEXT=`echo $$icon | cut -d_ -f2`; \
++		SIZE=`echo $$icon | cut -d_ -f3`; \
++		ICONFILE=`echo $$icon | cut -d_ -f4`; \
++		mkdir -p $(DESTDIR)$(datadir)/icons/$$THEME/$$SIZE/$$CONTEXT; \
++		$(INSTALL_DATA) $(srcdir)/$$icon $(DESTDIR)$(datadir)/icons/$$THEME/$$SIZE/$$CONTEXT/$$ICONFILE; \
++	done
++
++uninstall-icons:
++	-for icon in $(public_icons); do \
++		THEME=`echo $$icon | cut -d_ -f1`; \
++		CONTEXT=`echo $$icon | cut -d_ -f2`; \
++		SIZE=`echo $$icon | cut -d_ -f3`; \
++		ICONFILE=`echo $$icon | cut -d_ -f4`; \
++		rm -f $(DESTDIR)$(datadir)/icons/$$THEME/$$SIZE/$$CONTEXT/$$ICONFILE; \
++	done
++
++install-data-local: install-icons update-icon-cache
++
++uninstall-local: uninstall-icons update-icon-cache
+diff --git a/logview/data/icons/hicolor_apps_16x16_logview.png b/logview/data/icons/hicolor_apps_16x16_logview.png
+new file mode 100644
+index 0000000..34638e0
+--- a/dev/null
++++ b/logview/data/icons/hicolor_apps_16x16_logview.png
+Binary files differ
+diff --git a/logview/data/icons/hicolor_apps_22x22_logview.png b/logview/data/icons/hicolor_apps_22x22_logview.png
+new file mode 100644
+index 0000000..ff6fad5
+--- a/dev/null
++++ b/logview/data/icons/hicolor_apps_22x22_logview.png
+Binary files differ
+diff --git a/logview/data/icons/hicolor_apps_256x256_logview.png b/logview/data/icons/hicolor_apps_256x256_logview.png
+new file mode 100644
+index 0000000..45334bf
+--- a/dev/null
++++ b/logview/data/icons/hicolor_apps_256x256_logview.png
+Binary files differ
+diff --git a/logview/data/icons/hicolor_apps_32x32_logview.png b/logview/data/icons/hicolor_apps_32x32_logview.png
+new file mode 100644
+index 0000000..943028d
+--- a/dev/null
++++ b/logview/data/icons/hicolor_apps_32x32_logview.png
+Binary files differ
+diff --git a/logview/data/icons/hicolor_apps_48x48_logview.png b/logview/data/icons/hicolor_apps_48x48_logview.png
+new file mode 100644
+index 0000000..b00429e
+--- a/dev/null
++++ b/logview/data/icons/hicolor_apps_48x48_logview.png
+Binary files differ
+diff --git a/logview/logview-app.c b/logview/logview-app.c
+index a4a5415..6ce64bb 100644
+--- a/logview/logview-app.c
++++ b/logview/logview-app.c
+@@ -75,7 +75,7 @@ logview_app_set_window (LogviewApp *app)
+     retval = TRUE;
+   }
+ 
+-  gtk_window_set_default_icon_name ("logviewer");
++  gtk_window_set_default_icon_name ("logview");
+ 
+   return retval;
+ }
+diff --git a/logview/logview-window.c b/logview/logview-window.c
+index 50eca54..9398cf8 100644
+--- a/logview/logview-window.c
++++ b/logview/logview-window.c
+@@ -768,7 +768,7 @@ logview_about (GtkWidget *widget, GtkWidget *window)
+                          "translator_credits", strcmp (logview_about_translator_credits,
+                                                        "translator-credits") != 0 ?
+                                                logview_about_translator_credits : NULL,
+-                         "logo_icon_name", "logviewer",
++                         "logo_icon_name", "logview",
+                          NULL);
+   g_free (license_trans);
+ 
+--
+cgit v0.9

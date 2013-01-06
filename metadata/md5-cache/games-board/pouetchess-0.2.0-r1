@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DEPEND=media-libs/libsdl media-libs/sdl-image[jpeg,png] virtual/glu virtual/opengl dev-util/scons
+DESCRIPTION=3D and open source chess game
+EAPI=2
+HOMEPAGE=http://pouetchess.sourceforge.net/
+IUSE=debug
+KEYWORDS=~amd64 ~ppc x86
+LICENSE=GPL-2
+RDEPEND=media-libs/libsdl media-libs/sdl-image[jpeg,png] virtual/glu virtual/opengl
+SLOT=0
+SRC_URI=mirror://sourceforge/pouetchess/pouetchess_src_0.2.0.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	games	e0a83e3f3f024b8c8ef7a8217d716cbf	multilib	9aa8a023e062fca0ba79362d9d0cc488	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=f3ffd8a9ffc7c0fd16e0a6cf4e09a6e0

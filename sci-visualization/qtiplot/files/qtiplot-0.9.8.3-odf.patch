@@ -1,0 +1,13 @@
+diff --git a/qtiplot/src/core/ApplicationWindow.cpp b/qtiplot/src/core/ApplicationWindow.cpp
+index 56c52a7..b643e50 100755
+--- a/qtiplot/src/core/ApplicationWindow.cpp
++++ b/qtiplot/src/core/ApplicationWindow.cpp
+@@ -4326,7 +4326,7 @@ Table * ApplicationWindow::importExcelCrossplatform(const QString& fn, int sheet
+ 
+ 		int rows = sh->GetTotalRows();
+ 		int cols = sh->GetTotalCols();
+-		if (rows == 1 && !cols){
++		if (!rows && !cols){
+ 			if (sheet > 0 && sheet == currentSheet){
+ 				QMessageBox::critical(this, tr("QtiPlot"), tr("Sheet %1 is empty, operation aborted!").arg(sheet));
+ 				return NULL;

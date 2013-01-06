@@ -1,0 +1,29 @@
+# ChangeLog for games-action/shootingstar
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/ChangeLog,v 1.7 2009/10/19 05:01:04 mr_bones_ Exp $
+
+  19 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  shootingstar-1.2.0.ebuild:
+  add video use dep for libsdl; tidy
+
+  03 Jun 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/shootingstar-1.2.0-gcc44.patch, shootingstar-1.2.0.ebuild:
+  Fix build with gcc-4.4.0 Bug #272374 by Diego Petteno'
+
+  14 Mar 2007; Tristan Heaven <nyhm@gentoo.org> shootingstar-1.2.0.ebuild:
+  Install menu entry, bug #159764
+
+  28 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  shootingstar-1.2.0.ebuild:
+  Remove x11 dependencies as this package does not directly depend on X.
+
+  26 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/1.2.0-gcc34.patch, shootingstar-1.2.0.ebuild:
+  Add patch from Loz Hygate to address gcc 3.4 compile (bug #58287)
+
+*shootingstar-1.2.0 (23 Feb 2004)
+
+  23 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  shootingstar-1.2.0.ebuild:
+  initial commit; ebuild submitted by Thomas Preissler via bug #42569 (modified)
+

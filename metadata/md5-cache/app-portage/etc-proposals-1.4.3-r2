@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm prepare setup
+DEPEND=gtk? ( >=dev-python/pygtk-2.10 ) qt4? ( >=dev-python/PyQt4-4.1.1[X] ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+DESCRIPTION=a set of tools for updating gentoo config files
+EAPI=3
+HOMEPAGE=http://developer.berlios.de/projects/etc-proposals/
+IUSE=gtk qt4
+KEYWORDS=amd64 ppc ~sparc x86
+LICENSE=GPL-2
+RDEPEND=gtk? ( >=dev-python/pygtk-2.10 ) qt4? ( >=dev-python/PyQt4-4.1.1[X] ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+SLOT=0
+SRC_URI=mirror://berlios/etc-proposals/etc-proposals-1.4.3.tar.gz
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=b5e8a9b55825c54d64ed63bbc2c5fcba

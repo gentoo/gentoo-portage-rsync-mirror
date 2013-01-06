@@ -1,0 +1,62 @@
+Debundle zlib
+
+https://bugs.gentoo.org/show_bug.cgi?id=422657
+
+Patch written by Kacper Kowalik <xarthisius@gentoo.org>
+--- a/astropy/io/fits/setup_package.py
++++ b/astropy/io/fits/setup_package.py
+@@ -20,6 +20,7 @@
+             [os.path.relpath(x) for x in
+              glob(os.path.join(os.path.dirname(__file__), 'src/*.c'))],
+             include_dirs=[setup_helpers.get_numpy_include_path()],
++            libraries=['z'],
+             extra_compile_args=extra_compile_args)
+     ]
+ 
+--- a/astropy/io/fits/src/compress.c
++++ b/astropy/io/fits/src/compress.c
+@@ -106,7 +106,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include "zlib.h"  
++#include <zlib.h>
+ 
+ int _astropy_uncompress2mem_from_mem(
+              char *inmemptr,     
+@@ -182,7 +182,7 @@
+         d_stream.next_out = uncompr;
+         d_stream.avail_out = uncomprLen;
+ 
+-        err = _astropy_inflate(&d_stream, Z_NO_FLUSH);
++        err = inflate(&d_stream, Z_NO_FLUSH);
+ 
+         if (err != Z_OK && err != Z_STREAM_END)
+         {
+@@ -217,7 +217,7 @@
+     *filesize = d_stream.total_out;
+ 
+     /* End the decompression */
+-    err = _astropy_inflateEnd(&d_stream);
++    err = inflateEnd(&d_stream);
+ 
+     /* free temporary output data buffer */
+     free(uncompr);
+@@ -285,7 +285,7 @@
+         c_stream.next_out = compr;
+         c_stream.avail_out = comprLen;
+ 
+-        err = _astropy_deflate(&c_stream, Z_FINISH);
++        err = deflate(&c_stream, Z_FINISH);
+ 
+         if (err != Z_OK && err != Z_STREAM_END)
+         {
+@@ -320,7 +320,7 @@
+     *filesize = c_stream.total_out;
+ 
+     /* End the compression */
+-    err = _astropy_deflateEnd(&c_stream);
++    err = deflateEnd(&c_stream);
+ 
+     /* free temporary output data buffer */
+     free(compr);

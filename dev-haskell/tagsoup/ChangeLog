@@ -1,0 +1,23 @@
+# ChangeLog for dev-haskell/tagsoup
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tagsoup/ChangeLog,v 1.4 2012/11/24 10:51:19 gienah Exp $
+
+*tagsoup-0.12.8 (24 Nov 2012)
+
+  24 Nov 2012; Mark Wright <gienah@gentoo.org> +tagsoup-0.12.8.ebuild:
+  Bump tagsoup to 0.12.8
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> tagsoup-0.12.6.ebuild,
+  tagsoup-0.12.ebuild:
+  move dev-haskell/tagsoup/tagsoup-0.12.ebuild ebuild to mirror://hackage
+
+*tagsoup-0.12.6 (10 Mar 2012)
+
+  10 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> +tagsoup-0.12.6.ebuild:
+  Version bump.
+
+*tagsoup-0.12 (23 Apr 2011)
+
+  23 Apr 2011; Sergei Trofimovich <slyfox@gentoo.org> +tagsoup-0.12.ebuild,
+  +metadata.xml:
+  Initial version. Requested by Daniel Walter long ago (bug #245151)

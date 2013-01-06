@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>sound</herd>
+	<maintainer>
+		<email>cedk@gentoo.org</email>
+		<name>Cédric Krier</name>
+	</maintainer>
+	<longdescription lang="en">
+		real-time audio visualization
+	</longdescription>
+</pkgmetadata>
+

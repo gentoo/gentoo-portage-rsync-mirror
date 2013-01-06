@@ -1,0 +1,22 @@
+# ChangeLog for dev-python/amara
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/amara/ChangeLog,v 1.3 2012/05/16 09:39:14 dev-zero Exp $
+
+*amara-2.0.0_alpha6 (16 May 2012)
+
+  16 May 2012; Tiziano Müller <dev-zero@gentoo.org>
+  +files/2.0.0_alpha6-unbundle-expat.patch,
+  +files/2.0.0_alpha6-unbundle-python-libs.patch, -amara-1.2.0.2.ebuild,
+  +amara-2.0.0_alpha6.ebuild:
+  Version bump (bug #393587, dropped old depending on 4suite for bug #250930).
+
+  22 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  amara-1.2.0.2.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+*amara-1.2.0.2 (14 Nov 2008)
+
+  14 Nov 2008; Michael Marineau <marineam@gentoo.org> +metadata.xml,
+  +amara-1.2.0.2.ebuild:
+  Initial commit of Amara, resolves bug #112117
+

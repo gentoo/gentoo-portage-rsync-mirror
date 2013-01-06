@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/gnustep-neos-theme
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnustep-neos-theme/ChangeLog,v 1.1 2011/11/08 13:24:06 voyageur Exp $
+
+*gnustep-neos-theme-0.1 (08 Nov 2011)
+
+  08 Nov 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  +gnustep-neos-theme-0.1.ebuild, +metadata.xml:
+  Initial commit
+

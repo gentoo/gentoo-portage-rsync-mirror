@@ -1,0 +1,21 @@
+Otherwise we end up with missing -I/usr/include/raptor2 for raptor.h
+
+--- configure.ac
++++ configure.ac
+@@ -742,6 +742,7 @@
+ 		AC_MSG_CHECKING(whether liblrdf version >= 0.4.0)
+ 		if `pkg-config --exists 'lrdf >= 0.4.0'`; then
+ 			AC_MSG_RESULT(yes)
++			lrdf_CFLAGS=`pkg-config --cflags lrdf`
+ 		        lrdf_LIBS=`pkg-config --libs lrdf`
+ 			AC_DEFINE([HAVE_LADSPA], [1], [Defined if compile with LADSPA plugin support])
+ 		else
+@@ -957,7 +958,7 @@
+ 
+ CFLAGS="$CFLAGS $BUILD_CFLAGS -Wall $PLATFORM_CFLAGS $AQUALUNG_SKINDIR $AQUALUNG_LOCALEDIR $AQUALUNG_DATADIR -D_GNU_SOURCE"
+ CXXFLAGS="$CFLAGS"
+-CPPFLAGS="$gtk_CFLAGS $glib_CFLAGS $xml_CFLAGS $alsa_CFLAGS $jack_CFLAGS $cdda_CFLAGS $pulse_CFLAGS"
++CPPFLAGS="$gtk_CFLAGS $glib_CFLAGS $xml_CFLAGS $alsa_CFLAGS $jack_CFLAGS $cdda_CFLAGS $pulse_CFLAGS $lrdf_CFLAGS"
+ LIBS="decoder/libdecoder.a encoder/libencoder.a $gtk_LIBS $glib_LIBS $xml_LIBS $jack_LIBS $lrdf_LIBS $src_LIBS $alsa_LIBS $sndio_LIBS $oss_LIBS $sndfile_LIBS $flac_LIBS $ogg_LIBS $wavpack_LIBS $speex_LIBS $mad_LIBS $mod_LIBS $mpc_LIBS $mac_LIBS $lavc_LIBS $vorbisenc_LIBS $lame_LIBS $cdda_LIBS $cddb_LIBS $ifp_LIBS $PLATFORM_LIBS $z_LIBS $bz2_LIBS $lua_LIBS $pulse_LIBS"
+ 
+ 

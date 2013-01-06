@@ -1,0 +1,22 @@
+ src/app/netcache/nc_memory.cpp |    8 +++++++-
+ 1 files changed, 7 insertions(+), 1 deletions(-)
+
+diff --git a/src/app/netcache/nc_memory.cpp b/src/app/netcache/nc_memory.cpp
+index bb602ee..468b44d 100644
+--- a/src/app/netcache/nc_memory.cpp
++++ b/src/app/netcache/nc_memory.cpp
+@@ -3329,7 +3329,13 @@ void s_NCInitMallocHook(void)
+     __free_hook    = s_NCFreeHook;
+ }
+ 
+-void (*__malloc_initialize_hook) (void) = s_NCInitMallocHook;
++/* GNU libc 2.14 defines this macro to declare hook variables as volatile.
++   Define it as empty for older libc versions.  */
++#ifndef __MALLOC_HOOK_VOLATILE
++# define __MALLOC_HOOK_VOLATILE
++#endif
++
++void (*__MALLOC_HOOK_VOLATILE __malloc_initialize_hook) (void) = s_NCInitMallocHook;
+ 
+ #elif !defined(NCBI_OS_MSWIN)
+ // Changing of C library allocation functions on Windows is very tricky (if

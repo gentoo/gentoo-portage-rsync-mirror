@@ -1,0 +1,25 @@
+--- include/muParserTest.h.orig
++++ include/muParserTest.h
+@@ -26,6 +26,7 @@
+ #ifndef MU_PARSER_TEST_H
+ #define MU_PARSER_TEST_H
+ 
++#include <cstdlib>
+ #include <string>
+ #include <numeric> // for accumulate
+ #include "muParser.h"
+@@ -87,12 +88,12 @@
+ 
+         static value_type Rnd(value_type v)
+         {
+-          return (value_type)(1+(v*std::rand()/(RAND_MAX+1.0)));
++          return (value_type)(1+(v*rand()/(RAND_MAX+1.0)));
+         }
+ 
+         static value_type RndWithString(const char_type*)
+         {
+-          return (value_type)( 1 + (1000.0f * std::rand() / (RAND_MAX + 1.0) ) );
++          return (value_type)( 1 + (1000.0f * rand() / (RAND_MAX + 1.0) ) );
+         }
+ 
+         static value_type Ping()

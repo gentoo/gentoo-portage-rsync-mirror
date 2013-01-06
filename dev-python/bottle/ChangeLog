@@ -1,0 +1,24 @@
+# ChangeLog for dev-python/bottle
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.4 2012/11/13 10:41:41 idella4 Exp $
+
+  14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Updating maintainer, metadata.xml
+
+*bottle-0.11.3 (04 Nov 2012)
+
+  04 Nov 2012; Ian Delaney <idella4@gentoo.org> +bottle-0.11.3.ebuild:
+  version bump to bottle-0.11.3
+
+  20 May 2012; Kacper Kowalik <xarthisius@gentoo.org> bottle-0.10.9.ebuild:
+  Don't inherit eutils.eclass since it's not used, drop unnecessary dependecy on
+  setuptools. Thanks to Arfrever for report
+
+*bottle-0.10.9 (19 May 2012)
+
+  19 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +bottle-0.10.9.ebuild,
+  +metadata.xml:
+  Initial import, fixes #415539 by Ian Delaney <johneed@hotmail.com>. Thanks to
+  Mike MacDonald (crazymykl) <crazymykl@gmail.com> and Johan Bergström
+  (jbergstroem) <bugs@bergstroem.nu> for their work on this ebuild in Sunrise
+  overlay

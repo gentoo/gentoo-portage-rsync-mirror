@@ -1,0 +1,84 @@
+# ChangeLog for media-plugins/gst-plugins-xvid
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvid/ChangeLog,v 1.15 2012/12/02 18:05:03 eva Exp $
+
+*gst-plugins-xvid-0.10.23 (02 Dec 2012)
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-xvid-0.10.23.ebuild:
+  Version bump.
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-xvid-0.10.19.ebuild, -gst-plugins-xvid-0.10.21.ebuild,
+  gst-plugins-xvid-0.10.22.ebuild:
+  Clean up old revisions. EAPI bump stable due to pending eclass changes and
+  slot pinning.
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
+  gst-plugins-xvid-0.10.22.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Tomáš "Mepho" Pružina in bug #382225.
+
+  20 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-plugins-xvid-0.10.22.ebuild:
+  x86 stable wrt bug #382225
+
+*gst-plugins-xvid-0.10.22 (30 Jul 2011)
+
+  30 Jul 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-xvid-0.10.22.ebuild:
+  Version bump. Assorted bug fixes
+
+  23 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-xvid-0.10.21.ebuild:
+  Stable on amd64 wrt bug #368281
+
+  23 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-plugins-xvid-0.10.21.ebuild:
+  x86 stable wrt bug #368281
+
+*gst-plugins-xvid-0.10.21 (13 Apr 2011)
+
+  13 Apr 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-xvid-0.10.14.ebuild, -gst-plugins-xvid-0.10.17.ebuild,
+  -gst-plugins-xvid-0.10.18.ebuild, +gst-plugins-xvid-0.10.21.ebuild:
+  Version bump. Minor bug fixes
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-xvid-0.10.19.ebuild:
+  Stable on amd64 wrt bug #317429
+
+  31 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-xvid-0.10.19.ebuild:
+  stable x86, bug 317429
+
+*gst-plugins-xvid-0.10.19 (03 Aug 2010)
+
+  03 Aug 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-xvid-0.10.19.ebuild:
+  Version bump. No noteworthy changes.
+
+*gst-plugins-xvid-0.10.18 (06 Apr 2010)
+
+  06 Apr 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-xvid-0.10.18.ebuild:
+  Version bump. Raises encoder rank from NONE to SECONDARY, allowing it to
+  be autoplugged
+
+*gst-plugins-xvid-0.10.17 (23 Jan 2010)
+
+  23 Jan 2010; Olivier Crête <tester@gentoo.org>
+  +gst-plugins-xvid-0.10.17.ebuild:
+  Version bump, bug #290084
+
+  30 Sep 2009; Olivier Crête <tester@gentoo.org>
+  gst-plugins-xvid-0.10.14.ebuild:
+  Add ~amd64
+
+*gst-plugins-xvid-0.10.14 (27 Sep 2009)
+
+  27 Sep 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  +gst-plugins-xvid-0.10.14.ebuild, +metadata.xml:
+  Add support for the xviddec/xvidenc GStreamer elements from
+  gst-plugins-bad
+

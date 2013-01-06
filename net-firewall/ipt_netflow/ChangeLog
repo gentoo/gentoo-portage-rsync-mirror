@@ -1,0 +1,10 @@
+# ChangeLog for net-firewall/ipt_netflow
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ChangeLog,v 1.1 2012/10/14 11:26:44 pinkbyte Exp $
+
+*ipt_netflow-1.8 (14 Oct 2012)
+
+  14 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +ipt_netflow-1.8.ebuild,
+  +metadata.xml:
+  Initial commit wrt bug #283578
+

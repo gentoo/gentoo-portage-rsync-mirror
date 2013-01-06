@@ -1,0 +1,29 @@
+From 1b8587d4abe24a4416628638f54e58d52287551a Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Wed, 23 Nov 2011 13:24:50 -0500
+Subject: [PATCH] Fix building with libpng15
+
+https://bugzilla.gnome.org/show_bug.cgi?id=664666
+---
+ tools/gxps-png-writer.c |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+
+diff --git a/tools/gxps-png-writer.c b/tools/gxps-png-writer.c
+index 7d78ec9..369e0e0 100644
+--- a/tools/gxps-png-writer.c
++++ b/tools/gxps-png-writer.c
+@@ -23,6 +23,11 @@
+ #include <png.h>
+ #include <stdint.h>
+ 
++/* starting with libpng15, png.h no longer #includes zlib.h */
++#ifndef Z_BEST_COMPRESSION
++#define Z_BEST_COMPRESSION 9
++#endif
++
+ struct _GXPSPngWriter {
+ 	GObject parent;
+ 
+-- 
+1.7.8.rc3
+

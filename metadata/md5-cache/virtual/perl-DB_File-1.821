@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for DB_File
+EAPI=2
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos
+RDEPEND=~perl-core/DB_File-1.821
+SLOT=0
+_md5_=a0d28d4ea3e2c542ecd90d6373f02494

@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/sword-icelandic
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-icelandic/ChangeLog,v 1.1 2008/05/13 21:28:46 beandog Exp $
+
+*sword-icelandic-1.1 (13 May 2008)
+
+  13 May 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-icelandic-1.1.ebuild:
+  Initial commit
+

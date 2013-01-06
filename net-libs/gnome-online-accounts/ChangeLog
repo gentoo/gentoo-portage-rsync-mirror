@@ -1,0 +1,48 @@
+# ChangeLog for net-libs/gnome-online-accounts
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/ChangeLog,v 1.8 2013/01/01 14:46:12 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  gnome-online-accounts-3.6.2.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  gnome-online-accounts-3.6.2.ebuild:
+  Add ~ia64, wrt bug #449220
+
+*gnome-online-accounts-3.6.2 (25 Dec 2012)
+
+  25 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-online-accounts-3.2.1.ebuild, -gnome-online-accounts-3.4.1-r1.ebuild,
+  +gnome-online-accounts-3.6.2.ebuild, metadata.xml:
+  Version bump for Gnome 3.6. Switch to EAPI=5. Clean up old revisions.
+  USE=introspection is now global.
+
+  23 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  gnome-online-accounts-3.4.2.ebuild:
+  keyword ~ppc ~ppc64, bug #379651
+
+  25 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-online-accounts-3.2.1.ebuild, gnome-online-accounts-3.4.1-r1.ebuild,
+  gnome-online-accounts-3.4.2.ebuild:
+  gnome-online-accounts support in gnome-control-center ebuilds is now
+  optional.
+
+*gnome-online-accounts-3.4.2 (20 May 2012)
+
+  20 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-online-accounts-3.4.2.ebuild:
+  Version bump with a better Facebook authorization UI.
+
+*gnome-online-accounts-3.4.1-r1 (06 May 2012)
+
+  06 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-online-accounts-3.4.1-r1.ebuild:
+  Version bump; Facebook and Windows Live authentication is now enabled since
+  it no longer requires distributing secret application keys.
+
+*gnome-online-accounts-3.2.1 (29 Oct 2011)
+
+  29 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-online-accounts-3.2.1.ebuild, +metadata.xml:
+  New ebuild from the gnome overlay, needed for gnome-3.2.

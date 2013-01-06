@@ -1,0 +1,39 @@
+# ChangeLog for dev-python/pycdio
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdio/ChangeLog,v 1.8 2012/02/22 08:30:18 patrick Exp $
+
+  22 Feb 2012; Patrick Lauer <patrick@gentoo.org> pycdio-0.17.ebuild:
+  Restricting jython
+
+*pycdio-0.17 (01 Nov 2010)
+
+  01 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pycdio-0.16.ebuild, +pycdio-0.17.ebuild:
+  Version bump.
+
+*pycdio-0.16 (25 Dec 2009)
+
+  25 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pycdio-0.16.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> pycdio-0.13.ebuild:
+  python_mod_compile is ROOT aware and can take multiple file arguments.
+
+  14 May 2008; Stefan Briesenick <sbriesen@gentoo.org> pycdio-0.13.ebuild:
+  fixed dependencies (solves bug #221473).
+
+  14 May 2008; Stefan Briesenick <sbriesen@gentoo.org> -pycdio-0.12.ebuild:
+  removed old version
+
+*pycdio-0.13 (17 Nov 2007)
+
+  17 Nov 2007; Stefan Briesenick <sbriesen@gentoo.org> +pycdio-0.13.ebuild:
+  version bump.
+
+*pycdio-0.12 (16 May 2007)
+
+  16 May 2007; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
+  +pycdio-0.12.ebuild:
+  initial commit.
+

@@ -1,0 +1,42 @@
+From 05fd00f46eb3be46d669921d11dff6fe8a5bb60b Mon Sep 17 00:00:00 2001
+From: Jeremy Huddleston <jeremyhu@apple.com>
+Date: Sat, 29 Oct 2011 23:58:41 +0000
+Subject: pciTag was removed from xorg-server, so provide it in-driver until this is updated to use libpciaccess
+
+Signed-off-by: Jeremy Huddleston <jeremyhu@apple.com>
+---
+diff --git a/src/cir_pcirename.h b/src/cir_pcirename.h
+index f0f5cf8..fa60a19 100644
+--- a/src/cir_pcirename.h
++++ b/src/cir_pcirename.h
+@@ -34,6 +34,28 @@ enum region_type {
+     REGION_IO 
+ };
+ 
++#if (defined(__alpha__) || defined(__ia64__)) && defined (linux)
++#define PCI_DOM_MASK    0x01fful
++#else
++#define PCI_DOM_MASK 0x0ffu
++#endif
++
++#ifndef PCI_DOM_MASK
++# define PCI_DOM_MASK 0x0ffu
++#endif
++#define PCI_DOMBUS_MASK (((PCI_DOM_MASK) << 8) | 0x0ffu)
++
++static inline uint32_t
++pciTag(int busnum, int devnum, int funcnum)
++{
++	uint32_t tag;
++	tag  = (busnum & (PCI_DOMBUS_MASK)) << 16;
++	tag |= (devnum & 0x00001fu) << 11;
++	tag |= (funcnum & 0x000007u) << 8;
++
++	return tag;
++}
++
+ #ifndef XSERVER_LIBPCIACCESS
+ 
+ /* pciVideoPtr */
+--
+cgit v0.9.0.2-2-gbebe

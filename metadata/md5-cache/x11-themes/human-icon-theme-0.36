@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile postinst postrm preinst prepare
+DEPEND=>=gnome-base/librsvg-2.34 >=x11-misc/icon-naming-utils-0.8.90 dev-util/intltool sys-devel/gettext >=sys-apps/sed-4
+DESCRIPTION=A nice and well polished icon theme
+EAPI=4
+HOMEPAGE=http://packages.ubuntu.com/lucid/human-icon-theme
+KEYWORDS=~amd64 ~x86
+LICENSE=CCPL-Attribution-ShareAlike-2.5
+RDEPEND=|| ( x11-themes/tangerine-icon-theme x11-themes/gnome-icon-theme )
+RESTRICT=binchecks strip
+SLOT=0
+SRC_URI=mirror://ubuntu/pool/universe/h/human-icon-theme/human-icon-theme_0.36.tar.gz http://www.gentoo.org/images/gentoo-logo.svg
+_eclasses_=gnome2-utils	794d2847b4af390a1e020924876c8297
+_md5_=450d19d8683adfcf487573861b0ecb51

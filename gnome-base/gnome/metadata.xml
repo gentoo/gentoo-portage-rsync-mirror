@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>gnome</herd>
+<use>
+  <flag name="extras">Install additional GNOME applications</flag>
+  <flag name="fallback">Install <pkg>gnome-base/gnome-panel</pkg> and
+    <pkg>x11-wm/metacity</pkg> for the GNOME 3 fallback mode</flag>
+</use>
+</pkgmetadata>

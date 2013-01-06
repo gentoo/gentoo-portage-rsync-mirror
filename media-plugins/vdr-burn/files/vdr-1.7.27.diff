@@ -1,0 +1,22 @@
+diff -Naur burn-0.2.0.orig/i18n.h burn-0.2.0/i18n.h
+--- burn-0.2.0.orig/i18n.h	2012-04-07 03:40:32.000000000 +0200
++++ burn-0.2.0/i18n.h	2012-04-07 03:41:53.000000000 +0200
+@@ -20,18 +20,7 @@
+ 	// Implemented as a Meyers-Singleton
+ 	class i18n
+ 	{
+-	private:
+-		static const tI18nPhrase m_phrases[];
+-
+-		int m_osdLanguage;
+-
+-	protected:
+-		static i18n& get();
+-
+ 	public:
+-		i18n();
+-
+-		static const tI18nPhrase* get_phrases() { return m_phrases; }
+ 
+ 		static const char* translate( const char* text );
+ 	};

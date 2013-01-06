@@ -1,0 +1,40 @@
+--- mkinitcpio-nfs-utils-0.3/nfsmount/Makefile
++++ mkinitcpio-nfs-utils-0.3/nfsmount/Makefile 
+@@ -7,7 +7,7 @@
+ prefix  ?= /usr/lib/initcpio
+ bindir  ?= $(prefix)
+ 
+-CFLAGS = -D_GNU_SOURCE -Wall -Os
++CFLAGS += -D_GNU_SOURCE
+ 
+ 
+ %.o: %.c
+@@ -17,7 +17,7 @@
+ all: ${PROGRAM}
+ 
+ $(PROGRAM): $(OBJECTS)
+-	$(CC) $(CFLAGS) -o $@ $^
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
+ 
+ .PHONY: clean
+ clean:
+--- mkinitcpio-nfs-utils-0.3/ipconfig/Makefile
++++ mkinitcpio-nfs-utils-0.3/ipconfig/Makefile
+@@ -7,7 +7,7 @@
+ prefix  ?= /usr/lib/initcpio
+ bindir  ?= $(prefix)
+ 
+-CFLAGS = -D_GNU_SOURCE -Wall -Os -fno-strict-aliasing
++CFLAGS += -D_GNU_SOURCE -fno-strict-aliasing
+ 
+ 
+ %.o: %.c
+@@ -17,7 +17,7 @@
+ all: ${PROGRAM}
+ 
+ $(PROGRAM): $(OBJECTS)
+-	$(CC) $(CFLAGS) -o $@ $^
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
+ 
+ .PHONY: clean
+ clean:

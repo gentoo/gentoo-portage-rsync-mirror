@@ -1,0 +1,15 @@
+# ChangeLog for app-admin/eselect-timezone
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-timezone/ChangeLog,v 1.2 2012/11/17 02:16:29 ottxor Exp $
+
+*eselect-timezone-0.2 (17 Nov 2012)
+
+  17 Nov 2012; Christoph Junghans <ottxor@gentoo.org>
+  +eselect-timezone-0.2.ebuild, -eselect-timezone-0.1.ebuild:
+  version bump
+
+*eselect-timezone-0.1 (04 Nov 2012)
+
+  04 Nov 2012; Christoph Junghans <ottxor@gentoo.org>
+  +eselect-timezone-0.1.ebuild, +metadata.xml:
+  initial commit (import from cj-overlay)

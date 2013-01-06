@@ -1,0 +1,123 @@
+# ChangeLog for app-office/libreoffice-bin-debug
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/ChangeLog,v 1.26 2012/12/20 11:12:24 scarabeus Exp $
+
+  20 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libreoffice-bin-debug-3.5.5.3.ebuild, -libreoffice-bin-debug-3.6.3.2.ebuild:
+  Remove older broken and sec-vuln versions.
+
+  20 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-bin-debug-3.6.4.3.ebuild:
+  Stable for x86, wrt bug #445032
+
+  20 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-bin-debug-3.6.4.3.ebuild:
+  Stable for amd64, wrt bug #445032
+
+*libreoffice-bin-debug-3.6.4.3 (13 Dec 2012)
+
+  13 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-bin-debug-3.6.4.3.ebuild:
+  Version bump because of bug 445032
+
+  24 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-bin-debug-3.6.3.2.ebuild:
+  Stable for x86, wrt bug #440922
+
+  24 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-bin-debug-3.6.3.2.ebuild:
+  Stable for amd64, wrt bug #440922
+
+*libreoffice-bin-debug-3.6.3.2 (24 Nov 2012)
+
+  24 Nov 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-bin-debug-3.6.3.2.ebuild:
+  Version bump
+
+  06 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libreoffice-bin-debug-3.5.4.2-r1.ebuild:
+  Punt older.
+
+  14 Aug 2012; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-bin-debug-3.5.5.3.ebuild:
+  Stable for amd64, wrt bug #427098
+
+  13 Aug 2012; Andreas Schuerch <nativemad@gentoo.org>
+  libreoffice-bin-debug-3.5.5.3.ebuild:
+  x86 stable, see bug 427098
+
+*libreoffice-bin-debug-3.5.5.3 (03 Aug 2012)
+
+  03 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-bin-debug-3.5.5.3.ebuild:
+  Version bump
+
+  11 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
+  -libreoffice-bin-debug-3.5.2.2-r1.ebuild:
+  Remove old (broken) version.
+
+  11 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
+  libreoffice-bin-debug-3.5.4.2-r1.ebuild:
+  marked x86 per dilfridge
+
+  04 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-bin-debug-3.5.4.2-r1.ebuild:
+  Stable for amd64, wrt bug #416457
+
+  03 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-bin-debug-3.5.4.2-r1.ebuild:
+  Added die
+
+*libreoffice-bin-debug-3.5.4.2-r1 (03 Jun 2012)
+
+  03 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libreoffice-bin-debug-3.4.5.2-r1.ebuild,
+  -libreoffice-bin-debug-3.5.2.2.ebuild,
+  +libreoffice-bin-debug-3.5.4.2-r1.ebuild:
+  Version bump; remove old
+
+  23 May 2012; Johannes Huber <johu@gentoo.org>
+  libreoffice-bin-debug-3.5.2.2-r1.ebuild:
+  Stable for x86, wrt bug #411449
+
+  19 May 2012; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-bin-debug-3.5.2.2-r1.ebuild:
+  Stable for amd64, wrt bug #411449
+
+  15 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-bin-debug-3.5.2.2-r1.ebuild:
+  Fresh amd64 binpackages for icu-49
+
+*libreoffice-bin-debug-3.5.2.2-r1 (13 May 2012)
+
+  13 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-bin-debug-3.5.2.2-r1.ebuild:
+  Fresh x86 binpackages for icu-49
+
+  06 May 2012; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-bin-debug-3.5.2.2.ebuild:
+  Stable for amd64, wrt bug #411449
+
+  28 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-bin-debug-3.5.2.2.ebuild:
+  Fresh amd64 binpackages...
+
+*libreoffice-bin-debug-3.5.2.2 (26 Apr 2012)
+
+  26 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-bin-debug-3.5.2.2.ebuild:
+  Fresh x86 binpackages...
+
+  02 Mar 2012; Agostino Sarubbo <ago@gentoo.org>
+  libreoffice-bin-debug-3.4.5.2-r1.ebuild:
+  Stable for amd64, wrt bug #398521
+
+  24 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-bin-debug-3.4.5.2-r1.ebuild:
+  Add x86 files
+
+*libreoffice-bin-debug-3.4.5.2-r1 (22 Feb 2012)
+
+  22 Feb 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-bin-debug-3.4.5.2-r1.ebuild, +metadata.xml:
+  New ebuild for split-out debug info files

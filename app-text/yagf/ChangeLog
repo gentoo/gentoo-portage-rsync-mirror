@@ -1,0 +1,69 @@
+# ChangeLog for app-text/yagf
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/ChangeLog,v 1.10 2012/09/03 13:39:11 kensington Exp $
+
+  03 Sep 2012; Michael Palimaka <kensington@gentoo.org> yagf-0.8.7.ebuild,
+  yagf-0.9.ebuild:
+  Add missing slot dependencies on Qt.
+
+*yagf-0.9 (19 Mar 2012)
+
+  19 Mar 2012; Peter Volkov <pva@gentoo.org> -yagf-0.8.4.ebuild,
+  -yagf-0.8.5.ebuild, -yagf-0.8.6.ebuild, +yagf-0.9.ebuild,
+  +files/yagf-0.9-mdv-linkage.patch, metadata.xml:
+  Version bump, bug #395509, thank yaleks for this job. Drop old.
+
+  08 Mar 2012; Aleksandr Yakimov <yaleks@gentoo.ru> +yagf-0.9.ebuild, metadata.xml:
+  Version bump to 0.9
+
+  12 Sep 2011; Peter Volkov <pva@gentoo.org> yagf-0.8.7.ebuild, metadata.xml:
+  Add tesseract/pdf support thank Yaleks for this job.
+
+*yagf-0.8.7 (07 Sep 2011)
+
+  07 Sep 2011; Peter Volkov <pva@gentoo.org> +yagf-0.8.7.ebuild:
+  Version bump, bug #381101 reported by Anton Kochkov.
+
+*yagf-0.8.6 (29 Apr 2011)
+
+  29 Apr 2011; Peter Volkov <pva@gentoo.org> +yagf-0.8.6.ebuild:
+  Version bump, thank yaleks for this job.
+
+*yagf-0.8.5 (07 Feb 2011)
+
+  07 Feb 2011; Peter Volkov <pva@gentoo.org> -yagf-0.8.0.ebuild,
+  -yagf-0.8.1.ebuild, +yagf-0.8.5.ebuild:
+  Version bump, thank yaleks. Drop old.
+
+*yagf-0.8.4 (19 Jan 2011)
+
+  19 Jan 2011; Peter Volkov <pva@gentoo.org> +yagf-0.8.4.ebuild:
+  Version bump, thank Yaleks for this job.
+
+  28 Oct 2009; Peter Volkov <pva@gentoo.org> yagf-0.8.1.ebuild,
+  metadata.xml:
+  Optional runtime deps are not nice, anyway put back scanner USE flag, bug
+  #289139, thank A.C.Heron for report.
+
+*yagf-0.8.1 (18 Aug 2009)
+
+  18 Aug 2009; Peter Volkov <pva@gentoo.org> +yagf-0.8.1.ebuild:
+  Version bump.
+
+*yagf-0.8.0 (16 Aug 2009)
+
+  16 Aug 2009; Peter Volkov <pva@gentoo.org> +yagf-0.8.0.ebuild,
+  +metadata.xml:
+  Moved from Sunrise overlay to portage tree, bug #278013.
+
+  26 Jul 2009; Aleksandr Yakimov (yaleks) <skyaleks@ya.ru>
+  -yagf-0.7.0.ebuild, +yagf-0.7.1.ebuild:
+  Version bump to 0.7.1
+
+  20 Jul 2009; Aleksandr Yakimov (yaleks) <skyaleks@ya.ru>
+  -yagf-0.6.2.ebuild, +yagf-0.7.0.ebuild:
+  Version bump to 0.7.0
+
+  18 Jul 2009; Aleksandr Yakimov (yaleks) <skyaleks@ya.ru>
+  +yagf-0.6.2.ebuild, +metadata.xml:
+  New Ebuild for bug 278013

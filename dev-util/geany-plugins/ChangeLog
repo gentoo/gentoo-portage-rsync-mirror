@@ -1,0 +1,113 @@
+# ChangeLog for dev-util/geany-plugins
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.25 2012/12/07 18:30:48 ago Exp $
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> geany-plugins-1.22-r1.ebuild:
+  Stable for ppc, wrt bug #441312
+
+  07 Dec 2012; <ago@gentoo.org> geany-plugins-1.22-r1.ebuild:
+  Stable for x86, wrt bug #441312
+
+  07 Dec 2012; <ago@gentoo.org> geany-plugins-1.22-r1.ebuild:
+  Stable for amd64, wrt bug #441312
+
+  27 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  geany-plugins-1.22.ebuild:
+  stable ppc, bug #429056
+
+*geany-plugins-1.22-r1 (26 Sep 2012)
+
+  26 Sep 2012; Nathan Phillip Brink <binki@gentoo.org>
+  +geany-plugins-1.22-r1.ebuild:
+  Restore and fix the multiterm useflag for bug #430926.
+
+  26 Sep 2012; Nathan Phillip Brink <binki@gentoo.org>
+  geany-plugins-1.22.ebuild:
+  Provisionally drop multiterm useflag which is broken due to vala misuse in
+  this ebuild, bug #430926.
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  geany-plugins-1.22.ebuild:
+  x86 stable wrt bug #429056
+
+  13 Sep 2012; Agostino Sarubbo <ago@gentoo.org> geany-plugins-1.22.ebuild:
+  Stable for amd64, wrt bug #429056
+
+*geany-plugins-1.22 (01 Aug 2012)
+
+  01 Aug 2012; Nathan Phillip Brink <binki@gentoo.org>
+  +geany-plugins-1.22.ebuild, metadata.xml:
+  Bump to geany-plugins-1.22 for bug #429056.
+
+  20 Jun 2012; Lars Wendler <polynomial-c@gentoo.org>
+  -geany-plugins-0.19.ebuild:
+  Removed old version.
+
+  14 Jun 2012; Michael Weber <xmw@gentoo.org> geany-plugins-0.21.1.ebuild:
+  ppc stable (bug 404537)
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> geany-plugins-0.20-r1.ebuild,
+  geany-plugins-0.21.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  geany-plugins-0.21.1.ebuild:
+  x86 stable wrt bug #404537
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> geany-plugins-0.21.1.ebuild:
+  Stable for amd64, wrt bug #404537
+
+*geany-plugins-0.21.1 (20 Nov 2011)
+
+  20 Nov 2011; Nathan Phillip Brink <binki@gentoo.org>
+  +geany-plugins-0.21.1.ebuild, metadata.xml:
+  Bump to geany-plugins-0.21.1, closing bug #389087.
+
+  27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  geany-plugins-0.19.ebuild, geany-plugins-0.20-r1.ebuild:
+  Re-slot gtkspell dependency to 2.
+
+  25 Oct 2011; Nathan Phillip Brink <binki@gentoo.org>
+  geany-plugins-0.19.ebuild, geany-plugins-0.20-r1.ebuild:
+  Depend on app-text/gtkspell:0 in anticipation of app-text/gtkspell:3. Fixes
+  bug #388423.
+
+  15 Oct 2011; Nathan Phillip Brink <binki@gentoo.org>
+  geany-plugins-0.20-r1.ebuild, +files/geany-plugins-0.20-config.h.patch:
+  Fix compilation of geany-plugins-0.20 against geany-0.21 with patch pulled
+  from upstream commits. Update dependency to reflect compatibility with
+  geany-0.21.
+
+  04 May 2011; Nathan Phillip Brink <binki@gentoo.org> metadata.xml:
+  Take over geany-plugins which used to be proxy maintained for me.
+
+  04 Mar 2011; Thomas Kahle <tomka@gentoo.org> geany-plugins-0.19.ebuild:
+  x86 stable per bug 352782
+
+  25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  geany-plugins-0.20-r1.ebuild:
+  Marked ~ppc wrt #331607. Thanks to Kazuyoshi Furutaka
+  <furutaka@jb3.so-net.ne.jp> for report and testing.
+
+  27 Jan 2011; Markos Chandras <hwoarang@gentoo.org> geany-plugins-0.19.ebuild:
+  Stable on amd64 wrt bug #352782
+
+*geany-plugins-0.20-r1 (21 Jan 2011)
+
+  21 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -geany-plugins-0.20.ebuild, +geany-plugins-0.20-r1.ebuild:
+  Fixed docdir (ebuild patch mailed by Nathan).
+
+*geany-plugins-0.20 (21 Jan 2011)
+
+  21 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +geany-plugins-0.20.ebuild,
+  +files/geany-plugins-0.20-geanyprj-outsrc-tests.patch, metadata.xml:
+  Version bump by Nathan (bug #352172).
+
+*geany-plugins-0.19 (08 Jul 2010)
+
+  08 Jul 2010; Lars Wendler <polynomial-c@gentoo.org>
+  +geany-plugins-0.19.ebuild, +metadata.xml:
+  Initial commit from sunrise overlay. Big thanks to Nathan who volunteered
+  to take care of this package.

@@ -1,0 +1,82 @@
+--- src/ControlSetupState.cxx
++++ src/ControlSetupState.cxx
+@@ -20,6 +20,7 @@
+ #include <config.h>
+ #endif // !HAVE_CONFIG_H
+ #include <sstream>
++#include <cstdlib>
+ #include "ControlSetupState.h"
+ #include "File.h"
+ #include "Joystick.h"
+--- src/Font.cxx
++++ src/Font.cxx
+@@ -23,6 +23,7 @@
+ #include <config.h>
+ #endif // HAVE_CONFIG_H
+ #include <numeric>
++#include <algorithm>
+ #include <SDL.h>
+ #include "Font.h"
+ 
+--- src/Joystick.cxx
++++ src/Joystick.cxx
+@@ -19,6 +19,7 @@
+ #if defined (HAVE_CONFIG_H)
+ #include <config.h>
+ #endif // !HAVE_CONFIG_H
++#include <cstdlib>
+ #include "Joystick.h"
+ 
+ using namespace Amoebax;
+--- src/MainMenuState.cxx
++++ src/MainMenuState.cxx
+@@ -19,6 +19,7 @@
+ #if defined (HAVE_CONFIG_H)
+ #include <config.h>
+ #endif // HAVE_CONFIG_H
++#include <algorithm>
+ #include <SDL.h>
+ #include "AdvancedAIPlayer.h"
+ #include "AnticipatoryAIPlayer.h"
+--- src/OptionsMenuState.cxx
++++ src/OptionsMenuState.cxx
+@@ -20,6 +20,7 @@
+ #include <config.h>
+ #endif // HAVE_CONFIG_H
+ #include <SDL.h>
++#include <algorithm>
+ #include <sstream>
+ #include "ControlSetupState.h"
+ #include "File.h"
+--- src/Sound.h
++++ src/Sound.h
+@@ -19,6 +19,7 @@
+ #if !defined (AMOEBAX_SOUND_H)
+ #define AMOEBAX_SOUND_H
+ 
++#include <string>
+ #include <SDL_mixer.h>
+ 
+ namespace Amoebax
+--- src/System.cxx
++++ src/System.cxx
+@@ -19,7 +19,8 @@
+ #if defined (HAVE_CONFIG_H)
+ #include <config.h>
+ #endif // HAVE_CONFIG_H
+-#include <assert.h>
++#include <algorithm>
++#include <cassert>
+ #include <cstdlib>
+ #include <iostream>
+ #include <limits>
+--- src/TwoPlayersState.cxx
++++ src/TwoPlayersState.cxx
+@@ -19,6 +19,7 @@
+ #if defined (HAVE_CONFIG_H)
+ #include <config.h>
+ #endif // HAVE_CONFIG_H
++#include <algorithm>
+ #include <cassert>
+ #include <SDL.h>
+ #include <sstream>

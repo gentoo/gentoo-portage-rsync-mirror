@@ -1,0 +1,46 @@
+# ChangeLog for app-vim/bash-support
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/bash-support/ChangeLog,v 1.9 2012/08/03 21:47:10 radhermit Exp $
+
+  03 Aug 2012; Tim Harder <radhermit@gentoo.org> -bash-support-3.6.ebuild,
+  -bash-support-3.7.ebuild:
+  Remove old.
+
+*bash-support-3.10 (03 Aug 2012)
+
+  03 Aug 2012; Tim Harder <radhermit@gentoo.org> +bash-support-3.10.ebuild:
+  Version bump.
+
+*bash-support-3.8 (04 Dec 2011)
+
+  04 Dec 2011; Tim Harder <radhermit@gentoo.org> +bash-support-3.8.ebuild:
+  Version bump (bug #391123).
+
+  24 Oct 2011; Tim Harder <radhermit@gentoo.org> -bash-support-3.4.ebuild,
+  -bash-support-3.5.ebuild:
+  Remove old.
+
+*bash-support-3.7 (24 Oct 2011)
+
+  24 Oct 2011; Tim Harder <radhermit@gentoo.org> +bash-support-3.7.ebuild:
+  Version bump.
+
+  17 Sep 2011; Tim Harder <radhermit@gentoo.org> bash-support-3.6.ebuild:
+  Use github mirror.
+
+*bash-support-3.6 (16 Sep 2011)
+
+  16 Sep 2011; Tim Harder <radhermit@gentoo.org> +bash-support-3.6.ebuild:
+  Version bump (bug #383021 by Roger).
+
+*bash-support-3.5 (10 Mar 2011)
+
+  10 Mar 2011; Tim Harder <radhermit@gentoo.org> +bash-support-3.5.ebuild:
+  Version bump.
+
+*bash-support-3.4 (08 Jan 2011)
+
+  08 Jan 2011; Tim Harder <radhermit@gentoo.org> +bash-support-3.4.ebuild,
+  +metadata.xml:
+  Initial ebuild (bug #345649, thanks to Gavin Pryke).
+

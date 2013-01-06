@@ -1,0 +1,20 @@
+# /etc/conf.d/chef-expander: config file for /etc/init.d/chef-expander
+
+# The configuration file to use.
+#CONFIGFILE="/etc/chef/solr.rb"
+
+# The user and group to set privilege to.
+#CHEF_USER="chef"
+#CHEF_GROUP="chef"
+
+# Log file location.
+#CHEF_EXPANDER_LOGFILE="/var/log/chef/chef-expander.log"
+
+# Any radom options you want to pass to chef-expander.
+CHEF_EXPANDER_OPTS="--node-count 1"
+
+# Path to the chef expander binary.
+#CHEF_EXPANDER_BINARY="/usr/bin/chef-expander"
+
+# PID file location.
+#CHEF_EXPANDER_PIDFILE="/var/run/chef/expander.pid"

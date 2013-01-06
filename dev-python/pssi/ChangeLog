@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pssi
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pssi/ChangeLog,v 1.1 2011/04/03 21:41:46 arfrever Exp $
+
+*pssi-1.0 (03 Apr 2011)
+
+  03 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pssi-1.0.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+

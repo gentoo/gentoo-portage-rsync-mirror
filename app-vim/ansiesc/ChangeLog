@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/ansiesc
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ansiesc/ChangeLog,v 1.1 2011/03/11 09:39:17 radhermit Exp $
+
+*ansiesc-12 (11 Mar 2011)
+
+  11 Mar 2011; Tim Harder <radhermit@gentoo.org> +ansiesc-12.ebuild,
+  +metadata.xml:
+  Initial import.
+

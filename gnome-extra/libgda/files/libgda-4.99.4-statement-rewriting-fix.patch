@@ -1,0 +1,465 @@
+From 7d7742477ad03f19a168c763b988a7807421e9ca Mon Sep 17 00:00:00 2001
+From: Vivien Malerba <malerba@gnome-db.org>
+Date: Sat, 17 Sep 2011 14:26:09 +0000
+Subject: Fixed nasty bug introduced in commit #036420a459b0bb241716cd9a14c3dd1eb2b21f63
+
+which "Improved statement rewriting for NULL parameters", and in other
+commits for each provider
+---
+diff --git a/libgda/sqlite/gda-sqlite-provider.c b/libgda/sqlite/gda-sqlite-provider.c
+index afeab3c..69ccd16 100644
+--- a/libgda/sqlite/gda-sqlite-provider.c
++++ b/libgda/sqlite/gda-sqlite-provider.c
+@@ -2935,7 +2935,33 @@ gda_sqlite_provider_statement_execute (GdaServerProvider *provider, GdaConnectio
+ 			else if (!rstmt)
+ 				return NULL;
+ 			else {
++				/* The strategy here is to execute @rstmt using the prepared
++				 * statement associcted to @stmt, but adapted to @rstmt, so all
++				 * the column names, etc remain the same.
++				 *
++				 * The adaptation consists to replace SQLite specific information
++				 * in the GdaSqlitePStmt object.
++				 *
++				 * The trick is to adapt @ps, then associate @ps with @rstmt, then
++				 * execute @rstmt, and then undo the trick */
+ 				GObject *obj;
++				GdaSqlitePStmt *tps;
++				if (!gda_sqlite_provider_statement_prepare (provider, cnc,
++									    rstmt, error))
++					return NULL;
++				tps = (GdaSqlitePStmt *)
++					gda_connection_get_prepared_statement (cnc, rstmt);
++
++				/* adapt @ps with @tps's SQLite specific information */
++				GdaSqlitePStmt hps;
++				hps.sqlite_stmt = ps->sqlite_stmt; /* save */
++				ps->sqlite_stmt = tps->sqlite_stmt; /* override */
++				hps.stmt_used = ps->stmt_used; /* save */
++				ps->stmt_used = tps->stmt_used; /* override */
++				g_object_ref (tps);
++				gda_connection_add_prepared_statement (cnc, rstmt, (GdaPStmt *) ps);
++
++				/* execute rstmt (it will use @ps) */
+ 				obj = gda_sqlite_provider_statement_execute (provider, cnc,
+ 									     rstmt, params,
+ 									     model_usage,
+@@ -2943,15 +2969,14 @@ gda_sqlite_provider_statement_execute (GdaServerProvider *provider, GdaConnectio
+ 									     last_inserted_row,
+ 									     task_id, async_cb,
+ 									     cb_data, error);
++
++				/* revert adaptations */
++				ps->sqlite_stmt = hps.sqlite_stmt;
++				ps->stmt_used = hps.stmt_used;
++				gda_connection_add_prepared_statement (cnc, rstmt, (GdaPStmt *) tps);
++				g_object_unref (tps);
+ 				g_object_unref (rstmt);
+-				if (GDA_IS_DATA_SELECT (obj)) {
+-					GdaPStmt *pstmt;
+-					g_object_get (obj, "prepared-stmt", &pstmt, NULL);
+-					if (pstmt) {
+-						gda_pstmt_set_gda_statement (pstmt, stmt);
+-						g_object_unref (pstmt);
+-					}
+-				}
++
+ 				if (new_ps)
+ 					g_object_unref (ps);
+ 				pending_blobs_free_list (blobs_list);
+diff --git a/providers/jdbc/gda-jdbc-provider.c b/providers/jdbc/gda-jdbc-provider.c
+index 164e67f..c1192fb 100644
+--- a/providers/jdbc/gda-jdbc-provider.c
++++ b/providers/jdbc/gda-jdbc-provider.c
+@@ -1429,9 +1429,49 @@ gda_jdbc_provider_statement_execute (GdaServerProvider *provider, GdaConnection
+ 			else if (!rstmt)
+ 				return NULL;
+ 			else {
+-				GObject *obj;
+-				g_object_unref (ps);
+ 				_gda_jdbc_release_jenv (jni_detach);
++
++				/* The strategy here is to execute @rstmt using the prepared
++				 * statement associcted to @stmt, but adapted to @rstmt, so all
++				 * the column names, etc remain the same.
++				 *
++				 * The adaptation consists to replace Jdbc specific information
++				 * in the GdaJdbcPStmt object.
++				 *
++				 * The trick is to adapt @ps, then associate @ps with @rstmt, then
++				 * execute @rstmt, and then undo the trick */
++				GObject *obj;
++				GdaJdbcPStmt *tps;
++				if (!gda_jdbc_provider_statement_prepare (provider, cnc,
++									    rstmt, error)) {
++					g_object_unref (ps);
++					return NULL;
++				}
++				tps = (GdaJdbcPStmt *)
++					gda_connection_get_prepared_statement (cnc, rstmt);
++
++				/* adapt @ps with @tps's Jdbc specific information */
++				GdaJdbcPStmt hps;
++				hps.pstmt_obj = ps->pstmt_obj; /* save */
++				ps->pstmt_obj = tps->pstmt_obj; /* override */
++				g_object_ref (tps);
++				gda_connection_add_prepared_statement (cnc, rstmt, (GdaPStmt *) ps);
++
++				/* execute rstmt (it will use @ps) */
++				obj = gda_jdbc_provider_statement_execute (provider, cnc,
++									     rstmt, params,
++									     model_usage,
++									     col_types,
++									     last_inserted_row,
++									     task_id, async_cb,
++									     cb_data, error);
++
++				/* revert adaptations */
++				ps->pstmt_obj = hps.pstmt_obj;
++				gda_connection_add_prepared_statement (cnc, rstmt, (GdaPStmt *) tps);
++				g_object_unref (tps);
++				g_object_unref (rstmt);
++
+ 				obj = gda_jdbc_provider_statement_execute (provider, cnc,
+ 									   rstmt, params,
+ 									   model_usage,
+@@ -1440,14 +1480,7 @@ gda_jdbc_provider_statement_execute (GdaServerProvider *provider, GdaConnection
+ 									   task_id, async_cb,
+ 									   cb_data, error);
+ 				g_object_unref (rstmt);
+-				if (GDA_IS_DATA_SELECT (obj)) {
+-					GdaPStmt *pstmt;
+-					g_object_get (obj, "prepared-stmt", &pstmt, NULL);
+-					if (pstmt) {
+-						gda_pstmt_set_gda_statement (pstmt, stmt);
+-						g_object_unref (pstmt);
+-					}
+-				}
++				g_object_unref (ps);
+ 				return obj;
+ 			}
+ 		}
+diff --git a/providers/mysql/gda-mysql-provider.c b/providers/mysql/gda-mysql-provider.c
+index d581828..8baf0a3 100644
+--- a/providers/mysql/gda-mysql-provider.c
++++ b/providers/mysql/gda-mysql-provider.c
+@@ -2304,8 +2304,35 @@ gda_mysql_provider_statement_execute (GdaServerProvider               *provider,
+ 			else if (!rstmt)
+ 				return NULL;
+ 			else {
+-				GObject *obj;
+ 				free_bind_param_data (mem_to_free);
++
++				/* The strategy here is to execute @rstmt using the prepared
++				 * statement associcted to @stmt, but adapted to @rstmt, so all
++				 * the column names, etc remain the same.
++				 *
++				 * The adaptation consists to replace MySQL specific information
++				 * in the GdaMysqlPStmt object.
++				 *
++				 * The trick is to adapt @ps, then associate @ps with @rstmt, then
++				 * execute @rstmt, and then undo the trick */
++				GObject *obj;
++				GdaMysqlPStmt *tps;
++				if (!gda_mysql_provider_statement_prepare (provider, cnc,
++									    rstmt, error))
++					return NULL;
++				tps = (GdaMysqlPStmt *)
++					gda_connection_get_prepared_statement (cnc, rstmt);
++
++				/* adapt @ps with @tps's Mysql specific information */
++				GdaMysqlPStmt hps;
++				hps.mysql_stmt = ps->mysql_stmt; /* save */
++				ps->mysql_stmt = tps->mysql_stmt; /* override */
++				hps.stmt_used = ps->stmt_used; /* save */
++				ps->stmt_used = tps->stmt_used; /* override */
++				g_object_ref (tps);
++				gda_connection_add_prepared_statement (cnc, rstmt, (GdaPStmt *) ps);
++
++				/* execute rstmt (it will use @ps) */
+ 				obj = gda_mysql_provider_statement_execute (provider, cnc,
+ 									    rstmt, params,
+ 									    model_usage,
+@@ -2313,15 +2340,13 @@ gda_mysql_provider_statement_execute (GdaServerProvider               *provider,
+ 									    last_inserted_row,
+ 									    task_id, async_cb,
+ 									    cb_data, error);
++
++				/* revert adaptations */
++				ps->mysql_stmt = hps.mysql_stmt;
++				ps->stmt_used = hps.stmt_used;
++				gda_connection_add_prepared_statement (cnc, rstmt, (GdaPStmt *) tps);
++				g_object_unref (tps);
+ 				g_object_unref (rstmt);
+-				if (GDA_IS_DATA_SELECT (obj)) {
+-					GdaPStmt *pstmt;
+-					g_object_get (obj, "prepared-stmt", &pstmt, NULL);
+-					if (pstmt) {
+-						gda_pstmt_set_gda_statement (pstmt, stmt);
+-						g_object_unref (pstmt);
+-					}
+-				}
+ 				return obj;
+ 			}
+ 		}
+diff --git a/providers/oracle/gda-oracle-provider.c b/providers/oracle/gda-oracle-provider.c
+index 1d40105..9d0f485 100644
+--- a/providers/oracle/gda-oracle-provider.c
++++ b/providers/oracle/gda-oracle-provider.c
+@@ -1931,8 +1931,35 @@ gda_oracle_provider_statement_execute (GdaServerProvider *provider, GdaConnectio
+ 			else if (!rstmt)
+ 				return NULL;
+ 			else {
++				/* The strategy here is to execute @rstmt using the prepared
++				 * statement associcted to @stmt, but adapted to @rstmt, so all
++				 * the column names, etc remain the same.
++				 *
++				 * The adaptation consists to replace Oracle specific information
++				 * in the GdaOraclePStmt object.
++				 *
++				 * The trick is to adapt @ps, then associate @ps with @rstmt, then
++				 * execute @rstmt, and then undo the trick */
+ 				GObject *obj;
+-				g_object_unref (ps);
++				GdaOraclePStmt *tps;
++				if (!gda_oracle_provider_statement_prepare (provider, cnc,
++									    rstmt, error)) {
++					g_object_unref (ps);
++					return NULL;
++				}
++				tps = (GdaOraclePStmt *)
++					gda_connection_get_prepared_statement (cnc, rstmt);
++
++				/* adapt @ps with @tps's Oracle specific information */
++				GdaOraclePStmt hps;
++				hps.hstmt = ps->hstmt; /* save */
++				ps->hstmt = tps->hstmt; /* override */
++				hps.ora_values = ps->ora_values; /* save */
++				ps->ora_values = tps->ora_values; /* override */
++				g_object_ref (tps);
++				gda_connection_add_prepared_statement (cnc, rstmt, (GdaPStmt *) ps);
++
++				/* execute rstmt (it will use @ps) */
+ 				obj = gda_oracle_provider_statement_execute (provider, cnc,
+ 									     rstmt, params,
+ 									     model_usage,
+@@ -1940,15 +1967,14 @@ gda_oracle_provider_statement_execute (GdaServerProvider *provider, GdaConnectio
+ 									     last_inserted_row,
+ 									     task_id, async_cb,
+ 									     cb_data, error);
++				
++				/* revert adaptations */
++				ps->hstmt = hps.hstmt;
++				ps->ora_values = hps.ora_values;
++				gda_connection_add_prepared_statement (cnc, rstmt, (GdaPStmt *) tps);
++				g_object_unref (tps);
+ 				g_object_unref (rstmt);
+-				if (GDA_IS_DATA_SELECT (obj)) {
+-					GdaPStmt *pstmt;
+-					g_object_get (obj, "prepared-stmt", &pstmt, NULL);
+-					if (pstmt) {
+-						gda_pstmt_set_gda_statement (pstmt, stmt);
+-						g_object_unref (pstmt);
+-					}
+-				}
++				g_object_unref (ps);
+ 				return obj;
+ 			}
+ 		}
+diff --git a/providers/postgres/gda-postgres-provider.c b/providers/postgres/gda-postgres-provider.c
+index 6adca14..85db58e 100644
+--- a/providers/postgres/gda-postgres-provider.c
++++ b/providers/postgres/gda-postgres-provider.c
+@@ -2017,13 +2017,39 @@ gda_postgres_provider_statement_execute (GdaServerProvider *provider, GdaConnect
+ 			else if (!rstmt)
+ 				return NULL;
+ 			else {
+-				GObject *obj;
+ 				params_freev (param_values, param_mem, nb_params);
+ 				g_free (param_lengths);
+ 				g_free (param_formats);
+ 				if (transaction_started)
+ 					gda_connection_rollback_transaction (cnc, NULL, NULL);
+ 
++				/* The strategy here is to execute @rstmt using the prepared
++				 * statement associcted to @stmt, but adapted to @rstmt, so all
++				 * the column names, etc remain the same.
++				 *
++				 * The adaptation consists to replace Postgresql specific information
++				 * in the GdaPostgresPStmt object.
++				 *
++				 * The trick is to adapt @ps, then associate @ps with @rstmt, then
++				 * execute @rstmt, and then undo the trick */
++				GObject *obj;
++				GdaPostgresPStmt *tps;
++				if (!gda_postgres_provider_statement_prepare (provider, cnc,
++									      rstmt, error))
++					return NULL;
++				tps = (GdaPostgresPStmt *)
++					gda_connection_get_prepared_statement (cnc, rstmt);
++
++				/* adapt @ps with @tps's SQLite specific information */
++				GdaPostgresPStmt hps;
++				hps.pconn = ps->pconn; /* save */
++				ps->pconn = tps->pconn; /* override */
++				hps.prep_name = ps->prep_name; /* save */
++				ps->prep_name = tps->prep_name; /* override */
++				g_object_ref (tps);
++				gda_connection_add_prepared_statement (cnc, rstmt, (GdaPStmt *) ps);
++
++				/* execute rstmt (it will use @ps) */
+ 				obj = gda_postgres_provider_statement_execute (provider, cnc,
+ 									       rstmt, params,
+ 									       model_usage,
+@@ -2031,15 +2057,13 @@ gda_postgres_provider_statement_execute (GdaServerProvider *provider, GdaConnect
+ 									       last_inserted_row,
+ 									       task_id, async_cb,
+ 									       cb_data, error);
++
++				/* revert adaptations */
++				ps->pconn = hps.pconn;
++				ps->prep_name = hps.prep_name;
++				gda_connection_add_prepared_statement (cnc, rstmt, (GdaPStmt *) tps);
++				g_object_unref (tps);
+ 				g_object_unref (rstmt);
+-				if (GDA_IS_DATA_SELECT (obj)) {
+-					GdaPStmt *pstmt;
+-					g_object_get (obj, "prepared-stmt", &pstmt, NULL);
+-					if (pstmt) {
+-						gda_pstmt_set_gda_statement (pstmt, stmt);
+-						g_object_unref (pstmt);
+-					}
+-				}
+ 				return obj;
+ 			}
+ 		}
+diff --git a/providers/skel-implementation/capi/gda-capi-provider.c b/providers/skel-implementation/capi/gda-capi-provider.c
+index 653f9ea..764d027 100644
+--- a/providers/skel-implementation/capi/gda-capi-provider.c
++++ b/providers/skel-implementation/capi/gda-capi-provider.c
+@@ -1181,7 +1181,31 @@ gda_capi_provider_statement_execute (GdaServerProvider *provider, GdaConnection
+ 			else if (!rstmt)
+ 				return NULL;
+ 			else {
++				/* The strategy here is to execute @rstmt using the prepared
++				 * statement associcted to @stmt, but adapted to @rstmt, so all
++				 * the column names, etc remain the same.
++				 *
++				 * The adaptation consists to replace Capi specific information
++				 * in the GdaCapiPStmt object.
++				 *
++				 * The trick is to adapt @ps, then associate @ps with @rstmt, then
++				 * execute @rstmt, and then undo the trick */
+ 				GObject *obj;
++				GdaCapiPStmt *tps;
++				if (!gda_capi_provider_statement_prepare (provider, cnc,
++									    rstmt, error))
++					return NULL;
++				tps = (GdaCapiPStmt *)
++					gda_connection_get_prepared_statement (cnc, rstmt);
++
++				/* adapt @ps with @tps's Capi specific information */
++				GdaCapiPStmt hps;
++				/* TO ADD: hps.capi_stmt = ps->capi_stmt;*/ /* save */
++				/* TO_ADD: ps->capi_stmt = tps->capi_stmt;*/ /* override */
++				g_object_ref (tps);
++				gda_connection_add_prepared_statement (cnc, rstmt, (GdaPStmt *) ps);
++
++				/* execute rstmt (it will use @ps) */
+ 				obj = gda_capi_provider_statement_execute (provider, cnc,
+ 									   rstmt, params,
+ 									   model_usage,
+@@ -1189,15 +1213,13 @@ gda_capi_provider_statement_execute (GdaServerProvider *provider, GdaConnection
+ 									   last_inserted_row,
+ 									   task_id, async_cb,
+ 									   cb_data, error);
++
++				/* revert adaptations */
++				/* TO_ADD: ps->capi_stmt = hps.capi_stmt; */
++
++				gda_connection_add_prepared_statement (cnc, rstmt, (GdaPStmt *) tps);
++				g_object_unref (tps);
+ 				g_object_unref (rstmt);
+-				if (GDA_IS_DATA_SELECT (obj)) {
+-					GdaPStmt *pstmt;
+-					g_object_get (obj, "prepared-stmt", &pstmt, NULL);
+-					if (pstmt) {
+-						gda_pstmt_set_gda_statement (pstmt, stmt);
+-						g_object_unref (pstmt);
+-					}
+-				}
+ 				return obj;
+ 			}
+ 		}
+diff --git a/providers/web/gda-web-provider.c b/providers/web/gda-web-provider.c
+index 4500f01..9061126 100644
+--- a/providers/web/gda-web-provider.c
++++ b/providers/web/gda-web-provider.c
+@@ -1572,25 +1572,49 @@ gda_web_provider_statement_execute (GdaServerProvider *provider, GdaConnection *
+ 			else if (!rstmt)
+ 				return NULL;
+ 			else {
+-				GObject *obj;
+-				g_object_unref (ps);
+ 				xmlFreeDoc (doc);
++
++				/* The strategy here is to execute @rstmt using the prepared
++				 * statement associcted to @stmt, but adapted to @rstmt, so all
++				 * the column names, etc remain the same.
++				 *
++				 * The adaptation consists to replace Web specific information
++				 * in the GdaWebPStmt object.
++				 *
++				 * The trick is to adapt @ps, then associate @ps with @rstmt, then
++				 * execute @rstmt, and then undo the trick */
++				GObject *obj;
++				GdaWebPStmt *tps;
++				if (!gda_web_provider_statement_prepare (provider, cnc,
++									 rstmt, error)) {
++					g_object_unref (ps);
++					return NULL;
++				}
++				tps = (GdaWebPStmt *)
++					gda_connection_get_prepared_statement (cnc, rstmt);
++
++				/* adapt @ps with @tps's Web specific information */
++				GdaWebPStmt hps;
++				hps.pstmt_hash = ps->pstmt_hash; /* save */
++				ps->pstmt_hash = tps->pstmt_hash; /* override */
++				g_object_ref (tps);
++				gda_connection_add_prepared_statement (cnc, rstmt, (GdaPStmt *) ps);
++
++				/* execute rstmt (it will use @ps) */
+ 				obj = gda_web_provider_statement_execute (provider, cnc,
+-									  rstmt, params,
+-									  model_usage,
+-									  col_types,
+-									  last_inserted_row,
+-									  task_id, async_cb,
+-									  cb_data, error);
++									     rstmt, params,
++									     model_usage,
++									     col_types,
++									     last_inserted_row,
++									     task_id, async_cb,
++									     cb_data, error);
++
++				/* revert adaptations */
++				ps->pstmt_hash = hps.pstmt_hash;
++				gda_connection_add_prepared_statement (cnc, rstmt, (GdaPStmt *) tps);
++				g_object_unref (tps);
+ 				g_object_unref (rstmt);
+-				if (GDA_IS_DATA_SELECT (obj)) {
+-					GdaPStmt *pstmt;
+-					g_object_get (obj, "prepared-stmt", &pstmt, NULL);
+-					if (pstmt) {
+-						gda_pstmt_set_gda_statement (pstmt, stmt);
+-						g_object_unref (pstmt);
+-					}
+-				}
++				g_object_unref (ps);
+ 				return obj;
+ 			}
+ 		}
+--
+cgit v0.9.0.2

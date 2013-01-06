@@ -1,0 +1,32 @@
+diff -ur xprobe2-0.3.orig/libs-external/USI++/src/ip.cc xprobe2-0.3/libs-external/USI++/src/ip.cc
+--- xprobe2-0.3.orig/libs-external/USI++/src/ip.cc	2005-07-27 11:38:15.000000000 +0300
++++ xprobe2-0.3/libs-external/USI++/src/ip.cc	2008-05-03 14:54:03.000000000 +0300
+@@ -13,6 +13,7 @@
+ #include "usi++/ip.h"
+ 
+ #include "config.h"
++#include <cstdlib>
+ #include <iostream>
+ #include <string.h>
+ #include <errno.h>
+diff -ur xprobe2-0.3.orig/libs-external/USI++/src/misc.cc xprobe2-0.3/libs-external/USI++/src/misc.cc
+--- xprobe2-0.3.orig/libs-external/USI++/src/misc.cc	2005-07-27 11:38:15.000000000 +0300
++++ xprobe2-0.3/libs-external/USI++/src/misc.cc	2008-05-03 14:54:03.000000000 +0300
+@@ -1,5 +1,6 @@
+ #include "usi++/usi++"
+ #include "usi++/usi-structs.h"
++#include <cstdlib>
+ #include <string.h>
+ #include <unistd.h>
+ #include <sys/ioctl.h>
+diff -ur xprobe2-0.3.orig/libs-external/USI++/usi++/tcp.h xprobe2-0.3/libs-external/USI++/usi++/tcp.h
+--- xprobe2-0.3.orig/libs-external/USI++/usi++/tcp.h	2005-07-27 11:38:14.000000000 +0300
++++ xprobe2-0.3/libs-external/USI++/usi++/tcp.h	2008-05-03 14:54:03.000000000 +0300
+@@ -15,6 +15,7 @@
+ #include "usi-structs.h"
+ #include "datalink.h"
+ #include "ip.h"
++#include <cstring>
+ 
+ namespace usipp {
+ 

@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/png2ico
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/png2ico/ChangeLog,v 1.1 2011/10/09 09:04:00 ssuominen Exp $
+
+*png2ico-2002.12.08 (09 Oct 2011)
+
+  09 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +png2ico-2002.12.08.ebuild:
+  Initial commit wrt #253323 by Erik Hahn
+

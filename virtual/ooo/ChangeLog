@@ -1,0 +1,22 @@
+# ChangeLog for virtual/ooo
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ooo/ChangeLog,v 1.5 2012/06/01 07:53:37 scarabeus Exp $
+
+  01 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> ooo-0.ebuild:
+  Add there openoffice-bin as we have that in main tree.
+
+  07 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> ooo-0.ebuild:
+  Add use for java wrt deps on extensions, preffer source build over the binary.
+
+  02 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> ooo-0.ebuild:
+  Punt openoffice as it is gone from main tree for now.
+
+  28 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> ooo-0.ebuild:
+  sparc doesn't have openoffice at all
+
+*ooo-0 (16 Mar 2011)
+
+  16 Mar 2011; Andreas Proschofsky <suka@gentoo.org> +ooo-0.ebuild,
+  +metadata.xml:
+  Initial commit, see bug #358895
+

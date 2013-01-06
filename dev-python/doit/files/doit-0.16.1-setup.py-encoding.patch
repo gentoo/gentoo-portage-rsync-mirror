@@ -1,0 +1,13 @@
+diff -r c996cf6da98a setup.py
+--- a/setup.py	Thu Jul 05 09:00:09 2012 +0800
++++ b/setup.py	Wed Aug 29 12:10:37 2012 +0200
+@@ -84,7 +84,8 @@
+       scripts = scripts,
+       cmdclass = {'test': PyTest},
+       install_requires = install_requires,
+-      long_description = open('doc/index.rst').read().split('Quick Start')[0],
++      long_description = open('doc/index.rst', 'rb'
++                              ).read().decode('utf-8').split('Quick Start')[0],
+       **extra
+       )
+ 

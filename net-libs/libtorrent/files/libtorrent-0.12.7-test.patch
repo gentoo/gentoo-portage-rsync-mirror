@@ -1,0 +1,13 @@
+diff --git a/test/rak/allocators_test.cc b/test/rak/allocators_test.cc
+index c607833..249af9a 100644
+--- a/test/rak/allocators_test.cc
++++ b/test/rak/allocators_test.cc
+@@ -6,7 +6,7 @@ CPPUNIT_TEST_SUITE_REGISTRATION(AllocatorsTest);
+ 
+ template <typename T>
+ bool is_aligned(const T& t) {
+-  return t.empty() || (reinterpret_cast<int>(&t[0]) & (LT_SMP_CACHE_BYTES - 1)) == 0x0;
++  return t.empty() || (reinterpret_cast<long>(&t[0]) & (LT_SMP_CACHE_BYTES - 1)) == 0x0;
+ }
+ 
+ void

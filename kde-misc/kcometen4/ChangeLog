@@ -1,0 +1,48 @@
+# ChangeLog for kde-misc/kcometen4
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcometen4/ChangeLog,v 1.10 2011/10/29 00:39:54 abcd Exp $
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org> kcometen4-1.0.7.ebuild:
+  Bump to EAPI=4
+
+  13 Jun 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove myself from metadata.xml
+
+  31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> kcometen4-1.0.7.ebuild:
+  slotmove to 4
+
+  30 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> kcometen4-1.0.7.ebuild:
+  Move to eapi3. Fix deps.
+
+*kcometen4-1.0.7 (14 Dec 2010)
+
+  14 Dec 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kcometen4-1.0.7.ebuild:
+  Version bump
+
+  11 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kcometen4-1.0.5.ebuild:
+  Drop no-longer required ebuild.
+
+*kcometen4-1.0.6 (09 Nov 2009)
+
+  09 Nov 2009; Markos Chandras <hwoarang@gentoo.org>
+  +kcometen4-1.0.6.ebuild:
+  Version bump
+
+  03 Nov 2009; Jonathan Callen <abcd@gentoo.org> -kcometen4-1.0.4.ebuild:
+  Drop old version
+
+*kcometen4-1.0.5 (30 Jun 2009)
+
+  30 Jun 2009; Markos Chandras <hwoarang@gentoo.org>
+  +kcometen4-1.0.5.ebuild:
+  Version bump
+
+*kcometen4-1.0.4 (12 Feb 2009)
+
+  12 Feb 2009; Markos Chandras <hwoarang@gentoo.org> +metadata.xml,
+  +kcometen4-1.0.4.ebuild:
+  Initial commit of kcometen4 screensaver ( bug #258768 ) Thanks to
+  Shaumyadeep Chaudhuri <shaumya@gmail.com>.
+

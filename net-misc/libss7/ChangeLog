@@ -1,0 +1,12 @@
+# ChangeLog for net-misc/libss7
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libss7/ChangeLog,v 1.1 2012/08/23 10:05:45 chainsaw Exp $
+
+*libss7-1.0.2 (23 Aug 2012)
+
+  23 Aug 2012; Tony Vroon <chainsaw@gentoo.org> +files/1.0.2-ldflags.patch,
+  +files/1.0.2-no-ldconfig.patch, +libss7-1.0.2.ebuild,
+  +files/1.0.2-werror-idiocy.patch, +metadata.xml:
+  Initial commit. Ebuild based on the one by Oliver Jaksch in bug #341957, with
+  some additional patching for portability & QA purposes.
+

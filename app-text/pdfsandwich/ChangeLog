@@ -1,0 +1,27 @@
+# ChangeLog for app-text/pdfsandwich
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfsandwich/ChangeLog,v 1.5 2012/10/10 18:39:04 tomka Exp $
+
+*pdfsandwich-0.0.6 (10 Oct 2012)
+
+  10 Oct 2012; Thomas Kahle <tomka@gentoo.org> +pdfsandwich-0.0.6.ebuild:
+  Bump to 0.0.6
+
+  13 Sep 2011; Thomas Kahle <tomka@gentoo.org> -pdfsandwich-0.0.2.ebuild,
+  pdfsandwich-0.0.3.ebuild:
+  update cuneiform dep, remove old, thanks Halcy0n
+
+*pdfsandwich-0.0.3 (27 Oct 2010)
+
+  27 Oct 2010; Thomas Kahle <tomka@gentoo.org> +pdfsandwich-0.0.3.ebuild:
+  bump to 0.0.3
+
+  22 Oct 2010; Thomas Kahle <tomka@gentoo.org> pdfsandwich-0.0.2.ebuild:
+  Ebuild-QA
+
+*pdfsandwich-0.0.2 (22 Oct 2010)
+
+  22 Oct 2010; Thomas Kahle <tomka@gentoo.org> +pdfsandwich-0.0.2.ebuild,
+  +metadata.xml:
+  New ebuild: app-text/pdfsandwich, fixes bug 321885, original ebuild 
+  by Tobias Elze.

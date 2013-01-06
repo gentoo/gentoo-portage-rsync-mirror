@@ -1,0 +1,36 @@
+# ChangeLog for dev-haskell/xml
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xml/ChangeLog,v 1.9 2012/12/10 21:53:14 slyfox Exp $
+
+  10 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> xml-1.3.12.ebuild:
+  stable on alpha/ia64/sparc (bug #421351)
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xml-1.3.12.ebuild:
+  Stable for ppc64, wrt bug #421351
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xml-1.3.12.ebuild:
+  Stable for ppc, wrt bug #421351
+
+  25 Sep 2012; Andreas Schuerch <nativemad@gentoo.org> xml-1.3.12.ebuild:
+  x86 stable, see bug 421351
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> xml-1.3.12.ebuild,
+  xml-1.3.8.ebuild:
+  move dev-haskell/xml/xml-1.3.8.ebuild ebuild to mirror://hackage
+
+  07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> xml-1.3.12.ebuild:
+  Stable for amd64, wrt bug #421351
+
+  18 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> xml-1.3.12.ebuild:
+  ~alpha/~ia64/~ppc/~sparc/~x86-fbsd keyworded (test-framework-0.5 rekeywording)
+
+*xml-1.3.12 (04 Mar 2012)
+
+  04 Mar 2012; Mark Wright <gienah@gentoo.org> +xml-1.3.12.ebuild:
+  Bump xml to 1.3.12
+
+*xml-1.3.8 (23 Apr 2011)
+
+  23 Apr 2011; Sergei Trofimovich <slyfox@gentoo.org> +xml-1.3.8.ebuild,
+  +metadata.xml:
+  Initial version.

@@ -1,0 +1,45 @@
+http://bugzilla.xfce.org/show_bug.cgi?id=8074
+
+--- configure.ac
++++ configure.ac
+@@ -61,9 +61,9 @@
+ dnl ***********************************
+ XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.6.0])
+ XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.6.0])
+-XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.3.90.2])
+-XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.3.90.2])
+-XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.3.99.1])
++XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-1], [4.8.0])
++XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.8.0])
++XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.8.0])
+ 
+ dnl ***********************************
+ dnl *** Check for debugging support ***
+--- panel-plugin/eyes.c
++++ panel-plugin/eyes.c
+@@ -33,7 +33,7 @@
+ #include <stdlib.h>
+ 
+ #include <libxfce4util/libxfce4util.h>
+-#include <libxfcegui4/libxfcegui4.h>
++#include <libxfce4ui/libxfce4ui.h>
+ 
+ #include "eyes.h"
+ #include "themes.h"
+--- panel-plugin/Makefile.am
++++ panel-plugin/Makefile.am
+@@ -13,12 +13,12 @@
+ 	themes.c
+ 
+ xfce4_eyes_plugin_CFLAGS =						\
+-	$(LIBXFCEGUI4_CFLAGS)						\
++	$(LIBXFCE4UI_CFLAGS)						\
+ 	$(LIBXFCE4PANEL_CFLAGS)
+ 	
+ xfce4_eyes_plugin_LDADD =						\
+ 	$(LIBXFCE4PANEL_LIBS)						\
+-	$(LIBXFCEGUI4_LIBS)
++	$(LIBXFCE4UI_LIBS)
+ 
+ desktopdir = $(datadir)/xfce4/panel-plugins
+ desktop_in_in_files = eyes.desktop.in.in

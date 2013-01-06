@@ -1,0 +1,12 @@
+--- install.py.orig	2009-06-06 19:21:00.000000000 +0200
++++ install.py	2009-06-06 19:26:28.000000000 +0200
+@@ -230,7 +230,8 @@
+     pythonBuildDir = os.path.join(buildRoot, pythonPrefixDir[1:])
+ 
+     if os.path.isdir('source'):
+-        compileall.compile_dir('source', ddir=os.path.join(prefixDir, 'source'))
++        # don't compile, let our eclass handle that
++        # compileall.compile_dir('source', ddir=os.path.join(prefixDir, 'source'))
+         print 'Installing files...'
+         print '  Copying python files to %s' % pythonBuildDir
+         removeDir(pythonBuildDir)         # remove old?

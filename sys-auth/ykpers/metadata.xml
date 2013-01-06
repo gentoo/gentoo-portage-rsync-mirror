@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>brant@gurganus.name</email>
+    <name>Brant Gurganus</name>
+    <description>Proxied co-maintainer, assign bugs to him</description>
+  </maintainer>
+  <maintainer>
+    <email>flameeyes@gentoo.org</email>
+    <name>Diego Elio Pettenò</name>
+    <description>Proxy maintainer, CC him on bugs</description>
+  </maintainer>
+  <upstream>
+    <remote-id type="google-code">yubikey-personalization</remote-id>
+  </upstream>
+  <use>
+    <flag name='consolekit'>
+      Use <pkg>sys-auth/consolekit</pkg> and <pkg>virtual/udev</pkg>
+      to allow access to the YubiKey HID device to the console user.
+    </flag>
+  </use>
+</pkgmetadata>

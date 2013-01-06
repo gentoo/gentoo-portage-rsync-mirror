@@ -1,0 +1,92 @@
+# ChangeLog for app-misc/geoclue
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.24 2012/11/02 10:37:30 armin76 Exp $
+
+  02 Nov 2012; Raúl Porcel <armin76@gentoo.org> geoclue-0.12.99.ebuild:
+  ia64 stable
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> geoclue-0.12.99.ebuild:
+  alpha/sparc stable wrt #427544
+
+  15 Oct 2012; Matt Turner <mattst88@gentoo.org> geoclue-0.12.99.ebuild:
+  Added ~alpha, bug 411761.
+
+  02 Oct 2012; Anthony G. Basile <blueness@gentoo.org> geoclue-0.12.99.ebuild:
+  stable arm, bug #427556
+
+  02 Oct 2012; Anthony G. Basile <blueness@gentoo.org> geoclue-0.12.99.ebuild:
+  stable ppc ppc64, bug #427556
+
+  01 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> geoclue-0.12.99.ebuild:
+  x86 stable wrt bug #427556
+
+  26 Sep 2012; Agostino Sarubbo <ago@gentoo.org> geoclue-0.12.99.ebuild:
+  Stable for amd64, wrt bug #427556
+
+  11 Sep 2012; Raúl Porcel <armin76@gentoo.org>
+  geoclue-0.12.0_p20110307.ebuild, geoclue-0.12.99.ebuild:
+  Add ~sparc wrt #432578
+
+  11 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> geoclue-0.12.99.ebuild:
+  Remove obsolete gnome-base/gconf dependency wrt #430994 by Andreas
+  Proschofsky
+
+  11 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> geoclue-0.12.99.ebuild:
+  Remove -g from CFLAGS to respect environment instead wrt #399177 by Maurizio
+  Camisaschi
+
+*geoclue-0.12.99 (11 Aug 2012)
+
+  11 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> +geoclue-0.12.99.ebuild,
+  +files/geoclue-0.12.99-gpsd.patch, metadata.xml:
+  Version bump with patch for new gpsd API wrt #424587 by "jannis".
+  USE="static-libs" and prune_libtool_files wrt #399173 by Maurizio Camisaschi.
+
+  08 Aug 2012; Brent Baude <ranger@gentoo.org> geoclue-0.12.0_p20110307.ebuild:
+  Marking geoclue-0.12.0_p20110307 ppc for bug 427556
+
+  06 Aug 2012; Brent Baude <ranger@gentoo.org> geoclue-0.12.0_p20110307.ebuild:
+  Marking geoclue-0.12.0_p20110307 ppc64 for bug 427556
+
+  27 May 2012; Joseph Jezak <josejx@gentoo.org>
+  geoclue-0.12.0_p20110307.ebuild:
+  Marked ~ppc/~ppc64 for bug #411761.
+
+  25 May 2012; Alexis Ballier <aballier@gentoo.org>
+  geoclue-0.12.0_p20110307.ebuild:
+  keyword ~amd64-fbsd
+
+  21 Apr 2012; Markus Meier <maekke@gentoo.org>
+  geoclue-0.12.0_p20110307.ebuild:
+  add ~arm, bug #411761
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  geoclue-0.12.0_p20110307.ebuild:
+  x86 stable wrt bug #398905
+
+  17 Jan 2012; Agostino Sarubbo <ago@gentoo.org>
+  geoclue-0.12.0_p20110307.ebuild:
+  Stable for amd64, wrt bug #398905
+
+  15 Dec 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #353461
+
+  10 Dec 2011; Markos Chandras <hwoarang@gentoo.org>
+  geoclue-0.12.0_p20110307.ebuild, metadata.xml:
+  Lower dependency for gpsd. Bug #392217
+
+  20 Nov 2011; Markos Chandras <hwoarang@gentoo.org>
+  geoclue-0.12.0_p20110307.ebuild:
+  rename gpsd to gps. Bug #390971
+
+  15 Apr 2011; Kevin McCarthy <signals@gentoo.org>
+  geoclue-0.12.0_p20110307.ebuild:
+  Remove -Werror for gcc 4.6 #363723
+
+*geoclue-0.12.0_p20110307 (07 Mar 2011)
+
+  07 Mar 2011; Kevin McCarthy <signals@gentoo.org>
+  +geoclue-0.12.0_p20110307.ebuild,
+  +files/geoclue-0.12.0_p20110307-use-fallback-mac.patch,
+  +files/geoclue-0.12.0_p20110307-use-flag.patch, +metadata.xml:
+  New ebuild for Geoclue. Ebuild by signals@gentoo.org.

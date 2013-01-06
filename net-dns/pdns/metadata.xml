@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>swegener@gentoo.org</email>
+	<name>Sven Wegener</name>
+	<description>Primary Maintainer</description>
+</maintainer>
+<longdescription>
+The PowerDNS Nameserver is a modern, advanced and high performance authoritative-
+only nameserver. It is written from scratch and conforms to all relevant DNS
+standards documents. Furthermore, PowerDNS interfaces with almost any database.
+</longdescription>
+<use>
+	<flag name='opendbx'>Enable the OpenDBX backend</flag>
+</use>
+</pkgmetadata>

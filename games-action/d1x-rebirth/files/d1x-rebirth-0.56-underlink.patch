@@ -1,0 +1,10 @@
+--- SConstruct.old	2011-06-20 11:02:18.823946260 +0200
++++ SConstruct	2011-06-20 11:02:36.356032373 +0200
+@@ -348,6 +348,7 @@
+ 	libs += env['LIBS']
+ 	ogllibs = ['GL', 'GLU']
+ 	lflags = '-L/usr/X11R6/lib' + env['LINKFLAGS']
++	libs += 'm'
+ 
+ # arm architecture?
+ if (arm == 1):

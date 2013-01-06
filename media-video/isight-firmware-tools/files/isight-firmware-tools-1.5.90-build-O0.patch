@@ -1,0 +1,36 @@
+diff -ru isight-firmware-tools-1.5.90/src/export.c isight-firmware-tools-1.5.90/src/export.c
+--- isight-firmware-tools-1.5.90/src/export.c	2008-03-24 17:52:16.000000000 +0100
++++ isight-firmware-tools-1.5.90/src/export.c	2010-02-26 12:40:07.000000000 +0100
+@@ -35,6 +35,8 @@
+ #include <glib/gi18n.h>
+ #include <glib/gstdio.h>
+ 
++#include <locale.h>
++
+ /* OPTIONS */
+ static gchar *input	= NULL;
+ static gchar *output	= "isight.ihx";
+diff -ru isight-firmware-tools-1.5.90/src/extract.c isight-firmware-tools-1.5.90/src/extract.c
+--- isight-firmware-tools-1.5.90/src/extract.c	2009-08-13 18:50:54.000000000 +0200
++++ isight-firmware-tools-1.5.90/src/extract.c	2010-02-26 12:39:42.000000000 +0100
+@@ -36,6 +36,8 @@
+ #include <glib/gi18n.h>
+ #include <glib/gstdio.h>
+ 
++#include <locale.h>
++
+ /*
+  * Foreach file identified by their sha1sum, we store the offset where
+  * the firmware begin in the file.
+Only in isight-firmware-tools-1.5.90/src: isight.rules.in
+diff -ru isight-firmware-tools-1.5.90/src/load.h isight-firmware-tools-1.5.90/src/load.h
+--- isight-firmware-tools-1.5.90/src/load.h	2009-06-18 19:31:45.000000000 +0200
++++ isight-firmware-tools-1.5.90/src/load.h	2010-02-26 12:40:41.000000000 +0100
+@@ -36,6 +36,8 @@
+ #include <glib.h>
+ #include <usb.h>
+ 
++#include <locale.h>
++
+ #ifndef _LOAD_H_
+ #define	_LOAD_H_

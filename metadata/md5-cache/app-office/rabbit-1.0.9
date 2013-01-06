@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DEPEND=emacs? ( virtual/emacs ) ruby_targets_ruby18? ( emacs? ( dev-ruby/rdtool[ruby_targets_ruby18,emacs] ) ) test? ( ruby_targets_ruby18? ( >=dev-ruby/coderay-1.0.0[ruby_targets_ruby18] >=dev-ruby/ruby-gdkpixbuf2-0.15.0[ruby_targets_ruby18] dev-ruby/ruby-gtk2[ruby_targets_ruby18] dev-ruby/ruby-poppler[ruby_targets_ruby18] >=dev-ruby/ruby-rsvg-1.0.3[ruby_targets_ruby18] dev-ruby/rdtool[ruby_targets_ruby18,emacs?] dev-ruby/haml[ruby_targets_ruby18] markdown? ( dev-ruby/kramdown[ruby_targets_ruby18] ) dev-ruby/sinatra[ruby_targets_ruby18] enscript? ( dev-ruby/nokogiri[ruby_targets_ruby18] ) emacs? ( dev-ruby/nokogiri[ruby_targets_ruby18] ) ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 )
+DESCRIPTION=An application to do presentation with RD document
+EAPI=4
+HOMEPAGE=http://rabbit-shockers.org/
+IUSE=nls migemo tgif enscript emacs markdown postscript test elibc_FreeBSD ruby_targets_ruby18
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=emacs? ( virtual/emacs ) nls? ( dev-ruby/ruby-gettext ) postscript? ( app-text/ghostscript-gpl ) migemo? ( app-text/migemo ) enscript? ( app-text/enscript ) tgif? ( media-gfx/tgif ) ruby_targets_ruby18? ( >=dev-ruby/coderay-1.0.0[ruby_targets_ruby18] >=dev-ruby/ruby-gdkpixbuf2-0.15.0[ruby_targets_ruby18] dev-ruby/ruby-gtk2[ruby_targets_ruby18] dev-ruby/ruby-poppler[ruby_targets_ruby18] >=dev-ruby/ruby-rsvg-1.0.3[ruby_targets_ruby18] dev-ruby/rdtool[ruby_targets_ruby18,emacs?] dev-ruby/haml[ruby_targets_ruby18] markdown? ( dev-ruby/kramdown[ruby_targets_ruby18] ) dev-ruby/sinatra[ruby_targets_ruby18] enscript? ( dev-ruby/nokogiri[ruby_targets_ruby18] ) emacs? ( dev-ruby/nokogiri[ruby_targets_ruby18] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 )
+REQUIRED_USE=|| ( ruby_targets_ruby18 )
+SLOT=0
+SRC_URI=http://rabbit-shockers.org/download/rabbit-1.0.9.tar.gz
+_eclasses_=elisp-common	21605c8f0b2a5ffa3233faeb3f9df309	eutils	d40dc948067bd3db1c8ebf7d51897313	java-utils-2	2d9eb3508fa5d6759e39354b74545567	multilib	9aa8a023e062fca0ba79362d9d0cc488	ruby-ng	10ca07a887e226622062d89bb959a175	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=de5ae4f9a5de7dd9a1471bc08feee8ae

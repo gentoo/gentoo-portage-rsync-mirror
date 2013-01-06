@@ -1,0 +1,48 @@
+From 29d049bf2ea710fde880f23a9613d1071de83e7e Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Fri, 19 Oct 2012 21:46:28 -0400
+Subject: [PATCH] build: explicitly check for and link to gmodule
+
+Needed to prevent underlinking failure with ld.gold and recent versions
+of libsocialweb's dependencies.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=686503
+---
+ configure.ac             | 1 +
+ libsocialweb/Makefile.am | 4 ++--
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index af23ac2..b9a8f74 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -65,6 +65,7 @@ GOBJECT_INTROSPECTION_CHECK([0.9.6])
+ PKG_CHECK_MODULES(GLIB, glib-2.0 >= 2.14)
+ PKG_CHECK_MODULES(GIO, gio-2.0)
+ PKG_CHECK_MODULES(GOBJECT, gobject-2.0 >= 2.14)
++PKG_CHECK_MODULES(GMODULE, gmodule-2.0)
+ PKG_CHECK_MODULES(GCONF, gconf-2.0)
+ PKG_CHECK_MODULES(SOUP, libsoup-2.4 gthread-2.0)
+ PKG_CHECK_MODULES(DBUS_GLIB, dbus-glib-1)
+diff --git a/libsocialweb/Makefile.am b/libsocialweb/Makefile.am
+index fa7d88b..57d0d34 100644
+--- a/libsocialweb/Makefile.am
++++ b/libsocialweb/Makefile.am
+@@ -10,12 +10,12 @@ libsocialweb_ladir = $(pkgincludedir)/libsocialweb
+ libsocialweb_la_CFLAGS = -I$(top_srcdir) -I$(top_srcdir)/interfaces \
+ 		     $(DBUS_GLIB_CFLAGS) $(SOUP_CFLAGS) $(SOUP_GNOME_CFLAGS) \
+ 		     $(NM_CFLAGS) $(GTK_CFLAGS) $(REST_CFLAGS) \
+-		     $(GCOV_CFLAGS) \
++		     $(GMODULE_CFLAGS) $(GCOV_CFLAGS) \
+ 		     -DSOCIALWEB_SERVICES_MODULES_DIR=\"$(servicesdir)\"
+ 
+ libsocialweb_la_LIBADD = $(DBUS_GLIB_LIBS) $(SOUP_LIBS) $(SOUP_GNOME_LIBS) \
+ 		      $(NM_LIBS) $(GTK_LIBS) $(REST_LIBS) \
+-		      $(GCOV_LDFLAGS) \
++		      $(GMODULE_LIBS) $(GCOV_LDFLAGS) \
+ 		      $(top_builddir)/interfaces/libsocialweb-ginterfaces.la
+ 
+ libsocialweb_la_SOURCES = sw-types.h \
+-- 
+1.7.12.3
+

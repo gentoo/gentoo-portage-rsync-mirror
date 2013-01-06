@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=Global and progressive multiple sequence alignment
+EAPI=4
+HOMEPAGE=http://msa.cgb.ki.se/
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=mirror://debian/pool/main/k/kalign/kalign_2.03.orig.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=b915c930f6e3e8b17c0513554c528bb9

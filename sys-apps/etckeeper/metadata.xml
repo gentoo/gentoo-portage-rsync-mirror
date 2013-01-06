@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>hasufell@gentoo.org</email>
+		<name>Julian Ospald</name>
+		<description>Maintainer. Assign bugs to him</description>
+	</maintainer>
+	<maintainer>
+		<email>gentoo@rueg.eu</email>
+		<name>Manuel Rüger</name>
+		<description>Proxy maintainer. CC him on bugs</description>
+	</maintainer>
+	<use>
+		<flag name='bazaar'>Support <pkg>dev-vcs/bzr</pkg> based repository</flag>
+		<flag name='cron'>Install cron script</flag>
+	</use>
+</pkgmetadata>
+

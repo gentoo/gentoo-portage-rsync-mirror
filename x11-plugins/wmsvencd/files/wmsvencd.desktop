@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=WmSvenCD
+Comment=WindowMaker dockable CD-player with CDDB
+Comment[pl]=Dokowalny CD-player dla WindowMakera z obsługą CDDB
+Exec=wmsvencd
+Type=Application
+Encoding=UTF-8
+Terminal=0
+Categories=Application;Audio;

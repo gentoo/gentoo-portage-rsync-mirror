@@ -1,0 +1,68 @@
+# ChangeLog for dev-vcs/git-annex
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.12 2012/12/16 12:42:31 slyfox Exp $
+
+*git-annex-3.20121211-r2 (16 Dec 2012)
+
+  16 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +git-annex-3.20121211-r2.ebuild, -git-annex-3.20111203.ebuild,
+  -git-annex-3.20120315.ebuild, -git-annex-3.20120522.ebuild, metadata.xml:
+  Version bump (bug #444010 by Ivan S. Titov and Manuel Rüger).
+
+  07 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  git-annex-3.20111203-r1.ebuild, git-annex-3.20111203.ebuild,
+  git-annex-3.20120315.ebuild, git-annex-3.20120522.ebuild,
+  git-annex-3.20120605.ebuild:
+  Get rid of 'dev-haskell/time' depend as it's a ghc's core library.
+
+  20 Nov 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  git-annex-3.20111203-r1.ebuild, git-annex-3.20120522.ebuild,
+  git-annex-3.20120605.ebuild:
+  Add a required json[generic] depend. Found by Moult on #gentoo-haskell.
+
+  10 Nov 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  git-annex-3.20120522.ebuild, git-annex-3.20120605.ebuild:
+  Raise lower bound up to ghc 7.5 (bug #442598 by gentoo@fholler.de)
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  git-annex-3.20111203-r1.ebuild, git-annex-3.20111203.ebuild,
+  git-annex-3.20120315.ebuild, git-annex-3.20120522.ebuild,
+  git-annex-3.20120605.ebuild:
+  move dev-vcs/git-annex/git-annex-3.20111203.ebuild ebuild to mirror://hackage
+
+*git-annex-3.20120605 (06 Jun 2012)
+
+  06 Jun 2012; Mark Wright <gienah@gentoo.org> +git-annex-3.20120605.ebuild:
+  Bump git-annex to 3.20120605
+
+  05 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  git-annex-3.20120522.ebuild:
+  add missing test to IUSE
+
+*git-annex-3.20120522 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +git-annex-3.20120522.ebuild:
+  Bump git-annex to 3.20120522
+
+*git-annex-3.20120315 (24 Mar 2012)
+
+  24 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +git-annex-3.20120315.ebuild, git-annex-3.20111203-r1.ebuild:
+  Version bump (ghc-7.4 support). Restore prefix support.
+
+*git-annex-3.20111203-r1 (09 Feb 2012)
+
+  09 Feb 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +git-annex-3.20111203-r1.ebuild:
+  Install some documentation to make this much more useful.
+
+  05 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  git-annex-3.20111203.ebuild:
+  Raise minimal required dev-haskell/mtl version to make it compile.
+
+*git-annex-3.20111203 (04 Dec 2011)
+
+  04 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +git-annex-3.20111203.ebuild, +metadata.xml:
+  Initial version. manage files with git, without checking their contents into
+  git. (requested in bug #343563 by Christoph Junghans)

@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/tvdb_api
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tvdb_api/ChangeLog,v 1.1 2012/10/23 19:42:53 thev00d00 Exp $
+
+*tvdb_api-1.8.1 (23 Oct 2012)
+
+  23 Oct 2012; Ian Whyman <thev00d00@gentoo.org> +tvdb_api-1.8.1.ebuild,
+  +metadata.xml:
+  Inital commit
+

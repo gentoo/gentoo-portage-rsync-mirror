@@ -1,0 +1,21 @@
+# ChangeLog for dev-python/anyjson
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anyjson/ChangeLog,v 1.4 2012/07/18 04:30:33 iksaif Exp $
+
+  18 Jul 2012; Corentin Chary <iksaif@gentoo.org> anyjson-0.3.3.ebuild:
+  Simplify PYTHON_DEPEND.
+
+  17 Jul 2012; Corentin Chary <iksaif@gentoo.org> -anyjson-0.3.1.ebuild,
+  anyjson-0.3.3.ebuild:
+  anyjson-0.3.3 bump.
+
+*anyjson-0.3.3 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +anyjson-0.3.3.ebuild:
+  Bump
+
+*anyjson-0.3.1 (30 May 2012)
+
+  30 May 2012; Corentin Chary <iksaif@gentoo.org> +anyjson-0.3.1.ebuild,
+  +metadata.xml:
+  New ebuild for anyjson.

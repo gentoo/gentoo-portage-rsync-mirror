@@ -1,0 +1,37 @@
+From c7e44ff0bed2c670f6b01c9ab5bc103c5ebdae1d Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Andreas=20R=C3=B6nnquist?= <gusnan@gusnan.se>
+Date: Wed, 28 Nov 2012 00:25:25 +0100
+Subject: [PATCH] Use CFLAGS in both compilation and linking invocations of
+ the compiler
+
+---
+ Makefile |    6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index ae38a46..28c3baf 100644
+--- a/Makefile
++++ b/Makefile
+@@ -4,9 +4,9 @@ OBJ=obj
+ BIN=bin
+ 
+ ifdef DEBUG
+-	STD_CFLAGS=-c -Wall -g3 -ggdb -D_DEBUG
++	STD_CFLAGS=-Wall -g3 -ggdb -D_DEBUG
+ else
+-	STD_CFLAGS=-c -Wall -Wformat -Wno-format-extra-args -Wformat-security -Wformat-nonliteral -Wformat=2
++	STD_CFLAGS=-Wall -Wformat -Wno-format-extra-args -Wformat-security -Wformat-nonliteral -Wformat=2
+ endif
+ 
+ DEPEND=Makefile.dep
+@@ -67,7 +67,7 @@ $(OBJ)/%.o: $(SRC)/%.c
+ 	$(CC) $(LOCAL_CFLAGS) $(LOCAL_CPPFLAGS) -c $< -o $@
+ 
+ $(BIN)/$(NAME): $(OBJECTS)
+-	$(CC) $(LOCAL_LDFLAGS) $(OBJECTS) -o $(PROG) $(LIBS)
++	$(CC) $(LOCAL_CFLAGS) $(LOCAL_LDFLAGS) $(OBJECTS) -o $(PROG) $(LIBS)
+ 
+ .PHONY: clean
+ clean:
+-- 
+1.7.10

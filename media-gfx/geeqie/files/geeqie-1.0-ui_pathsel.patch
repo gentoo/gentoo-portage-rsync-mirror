@@ -1,0 +1,44 @@
+From 738ed337ffaa80276901451847fa83f865b1c439 Mon Sep 17 00:00:00 2001
+From: Klaus Ethgen <Klaus@Ethgen.de>
+Date: Sat, 9 Apr 2011 19:47:30 +0100
+Subject: [PATCH] Do not delete path settings when adding new directory
+
+This patch will change the way, geeqie is mangling the path name in the
+rename (copy) dialog when creating new directory. Will fix the bugs
+Debian:529531 and SF:2795791.
+---
+ src/ui_pathsel.c |   11 +++++++++--
+ 1 files changed, 9 insertions(+), 2 deletions(-)
+
+diff --git a/src/ui_pathsel.c b/src/ui_pathsel.c
+index 6b69c05..d58c5ac 100644
+--- a/src/ui_pathsel.c
++++ b/src/ui_pathsel.c
+@@ -740,7 +740,10 @@ static void dest_new_dir_cb(GtkWidget *widget, gpointer data)
+ 	tmp = gtk_entry_get_text(GTK_ENTRY(dd->entry));
+ 	if (!isname(tmp))
+ 		{
+-		path = g_strdup(tmp);
++		buf = remove_trailing_slash(tmp);
++		path = g_strdup(buf);
++		g_free(buf);
++		buf = remove_level_from_path(path);
+ 		from_text = TRUE;
+ 		}
+ 	else
+@@ -765,7 +768,11 @@ static void dest_new_dir_cb(GtkWidget *widget, gpointer data)
+ 		GtkListStore *store;
+ 		const gchar *text;
+ 
+-		if (from_text) gtk_entry_set_text(GTK_ENTRY(dd->entry), dd->path);
++		if (from_text)
++			{
++			dest_populate(dd, buf);
++			g_free(buf);
++			}
+ 
+ 		store = GTK_LIST_STORE(gtk_tree_view_get_model(GTK_TREE_VIEW(dd->d_view)));
+ 
+-- 
+1.6.1
+

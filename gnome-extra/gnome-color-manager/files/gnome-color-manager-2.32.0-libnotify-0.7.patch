@@ -1,0 +1,27 @@
+--- src/gcm-session.c
++++ src/gcm-session.c
+@@ -28,6 +28,10 @@
+ #include <gconf/gconf-client.h>
+ #include <libnotify/notify.h>
+ 
++#ifndef NOTIFY_CHECK_VERSION
++#define NOTIFY_CHECK_VERSION(x,y,z) 0
++#endif
++
+ #include "egg-debug.h"
+ #include "gcm-dbus.h"
+ #include "gcm-client.h"
+@@ -145,7 +149,12 @@
+ 	NotifyNotification *notification;
+ 
+ 	/* show a bubble */
+-	notification = notify_notification_new (title, message, GCM_STOCK_ICON, NULL);
++	notification = notify_notification_new (title, message, GCM_STOCK_ICON
++#if NOTIFY_CHECK_VERSION (0, 7, 0)
++	);
++#else
++	, NULL);
++#endif
+ 	notify_notification_set_timeout (notification, GCM_SESSION_NOTIFY_TIMEOUT);
+ 	notify_notification_set_urgency (notification, NOTIFY_URGENCY_LOW);
+ 

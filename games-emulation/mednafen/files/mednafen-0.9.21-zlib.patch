@@ -1,0 +1,27 @@
+--- src/file.cpp.old	2012-05-06 13:20:45.762299681 +0200
++++ src/file.cpp	2012-05-06 13:21:13.634342683 +0200
+@@ -33,7 +33,7 @@
+ 
+ 
+ #include <zlib.h>
+-#include "compress/unzip.h"
++#include <minizip/unzip.h>
+ 
+ #include "file.h"
+ #include "general.h"
+--- src/compress/Makefile.am.inc.old	2012-05-06 13:19:12.625839129 +0200
++++ src/compress/Makefile.am.inc	2012-05-06 13:19:30.012618340 +0200
+@@ -1 +1 @@
+-mednafen_SOURCES	+=	compress/minilzo.c compress/quicklz.c compress/blz.cpp compress/ioapi.c compress/unzip.c
++mednafen_SOURCES	+=	compress/minilzo.c compress/quicklz.c compress/blz.cpp
+--- src/Makefile.am.old	2012-05-06 13:19:54.047930734 +0200
++++ src/Makefile.am	2012-05-06 13:20:26.888624869 +0200
+@@ -5,7 +5,7 @@
+ 
+ bin_PROGRAMS	=	mednafen
+ mednafen_SOURCES 	= 	debug.cpp error.cpp mempatcher.cpp settings.cpp endian.cpp mednafen.cpp file.cpp general.cpp md5.cpp memory.cpp netplay.cpp state.cpp movie.cpp player.cpp PSFLoader.cpp tests.cpp qtrecord.cpp cdplay.cpp okiadpcm.cpp math_ops.cpp FileWrapper.cpp Stream.cpp
+-mednafen_LDADD 		= 	trio/libtrio.a drivers/libmdfnsdl.a sexyal/libsexyal.a @SDL_LIBS@
++mednafen_LDADD 		= 	trio/libtrio.a drivers/libmdfnsdl.a sexyal/libsexyal.a @SDL_LIBS@ -lminizip
+ mednafen_DEPENDENCIES	=	trio/libtrio.a drivers/libmdfnsdl.a sexyal/libsexyal.a
+ 
+ SUBDIRS			+=	sexyal drivers

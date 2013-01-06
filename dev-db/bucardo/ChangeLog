@@ -1,0 +1,15 @@
+# ChangeLog for dev-db/bucardo
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/bucardo/ChangeLog,v 1.2 2012/08/30 03:02:46 patrick Exp $
+
+*bucardo-4.5.0-r1 (30 Aug 2012)
+
+  30 Aug 2012; Patrick Lauer <patrick@gentoo.org> +bucardo-4.5.0-r1.ebuild,
+  -bucardo-4.5.0.ebuild:
+  Little fix for install paths
+
+*bucardo-4.5.0 (28 Aug 2012)
+
+  28 Aug 2012; Patrick Lauer <patrick@gentoo.org> +bucardo-4.5.0.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me

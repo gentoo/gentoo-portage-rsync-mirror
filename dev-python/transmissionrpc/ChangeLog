@@ -1,0 +1,32 @@
+# ChangeLog for dev-python/transmissionrpc
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/ChangeLog,v 1.5 2011/10/18 02:47:39 floppym Exp $
+
+*transmissionrpc-0.8 (18 Oct 2011)
+
+  18 Oct 2011; Mike Gilbert <floppym@gentoo.org> -transmissionrpc-0.7.ebuild,
+  -transmissionrpc-0.8_pre20110920.ebuild, +transmissionrpc-0.8.ebuild,
+  transmissionrpc-9999.ebuild:
+  Version bump. Remove old.
+
+*transmissionrpc-0.8_pre20110920 (21 Sep 2011)
+
+  21 Sep 2011; Mike Gilbert <floppym@gentoo.org>
+  +transmissionrpc-0.8_pre20110920.ebuild:
+  Add snapshot with support for newer versions of transmission.
+
+  09 Sep 2011; Mike Gilbert <floppym@gentoo.org> transmissionrpc-0.7.ebuild:
+  Add x86 keyword, bug 381081. Thanks to dabbott for testing.
+
+  09 Sep 2011; Mike Gilbert <floppym@gentoo.org> transmissionrpc-0.7.ebuild:
+  Refetch distfile and mirror to my devspace to avoid bitbucket tarball
+  instability
+
+*transmissionrpc-9999 (29 Aug 2011)
+*transmissionrpc-0.7 (29 Aug 2011)
+
+  29 Aug 2011; Mike Gilbert <floppym@gentoo.org> +transmissionrpc-0.7.ebuild,
+  +transmissionrpc-9999.ebuild, +files/transmissionrpc-timestamp-test.patch,
+  +metadata.xml:
+  New package for bug 377565
+

@@ -1,0 +1,114 @@
+# ChangeLog for media-gfx/qrencode
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.29 2012/10/21 00:05:32 blueness Exp $
+
+  21 Oct 2012; Anthony G. Basile <blueness@gentoo.org> qrencode-3.3.1.ebuild:
+  stable arm, bug #429188
+
+  08 Aug 2012; Brent Baude <ranger@gentoo.org> qrencode-3.3.1.ebuild:
+  Marking qrencode-3.3.1 ppc for bug 422103
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> qrencode-3.3.1.ebuild:
+  Stable for amd64, wrt bug #422103
+
+  01 Aug 2012; Jeff Horelick <jdhore@gentoo.org> qrencode-3.3.1.ebuild:
+  marked x86 per bug 422103
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> qrencode-3.3.0.ebuild:
+  Marking qrencode-3.3.0 ppc for bug 415959
+
+  25 May 2012; Agostino Sarubbo <ago@gentoo.org> qrencode-3.3.0.ebuild:
+  Stable for amd64, wrt bug #415959
+
+  24 May 2012; Jeff Horelick <jdhore@gentoo.org> qrencode-3.3.0.ebuild:
+  marked x86 per bug 415959
+
+*qrencode-3.3.1 (07 May 2012)
+
+  07 May 2012; Justin Lecher <jlec@gentoo.org> +qrencode-3.3.1.ebuild:
+  Non-maintainer Version Bump
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> qrencode-3.1.1.ebuild,
+  qrencode-3.2.0.ebuild, qrencode-3.3.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> qrencode-3.2.0.ebuild:
+  x86 stable, bug #409403
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> qrencode-3.2.0.ebuild:
+  Stable for amd64, wrt bug #409403
+
+*qrencode-3.3.0 (01 Apr 2012)
+
+  01 Apr 2012; Christian Birchinger <joker@gentoo.org> +qrencode-3.3.0.ebuild:
+  Version bump
+
+  01 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> qrencode-3.2.0.ebuild:
+  Keyword also latest version with ~arm.
+
+  31 Mar 2012; Markus Meier <maekke@gentoo.org> qrencode-3.1.1.ebuild:
+  add ~arm, bug #402989
+
+*qrencode-3.2.0 (06 Mar 2012)
+
+  06 Mar 2012; Justin Lecher <jlec@gentoo.org> +qrencode-3.2.0.ebuild,
+  +files/qrencode-3.2.0-pngregenfix.patch:
+  Version Bump
+
+  05 Jan 2012; Michael Weber <xmw@gentoo.org> qrencode-3.1.1.ebuild:
+  ppc stable (bug 393415)
+
+  12 Dec 2011; Justin Lecher <jlec@gentoo.org> qrencode-3.1.1.ebuild:
+  Remove wrong dep on dev-python/imaging, #388359
+
+  11 Dec 2011; Christian Birchinger <joker@gentoo.org> qrencode-3.1.1.ebuild:
+  HOMEPAGE an SRC_URI updated and checksums re-verified. No bump required
+
+  15 Jul 2011; Justin Lecher <jlec@gentoo.org> qrencode-3.1.1.ebuild,
+  metadata.xml:
+  Added missing runtime dep on dev-python/imaging, #375289
+
+  31 Jan 2011; Christian Birchinger <joker@gentoo.org>
+  qrencode-3.1.1.ebuild, +files/qrencode-3.1.1-pngregenfix.patch:
+  Replace the libpng 1.4 sed fix with a patch, because autoreconf would
+  require SDL to regen the build files. No version bump because already
+  installed versions are not affected.
+
+  29 Sep 2010; Brent Baude <ranger@gentoo.org> qrencode-3.1.1.ebuild:
+  Marking qrencode-3.1.1 ~ppc for bug 338861
+
+  06 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  qrencode-3.1.1.ebuild:
+  x86 stable wrt bug #312727
+
+  04 Apr 2010; Markos Chandras <hwoarang@gentoo.org> qrencode-3.1.1.ebuild:
+  Stable on amd64 wrt bug #312727
+
+  10 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> qrencode-3.1.1.ebuild:
+  Fix libpng14 detection.
+
+*qrencode-3.1.1 (20 Feb 2010)
+
+  20 Feb 2010; Christian Birchinger <joker@gentoo.org>
+  +qrencode-3.1.1.ebuild:
+  Version bump
+
+  11 Jun 2009; Markus Meier <maekke@gentoo.org> qrencode-3.0.3.ebuild:
+  amd64 stable, bug #273069
+
+*qrencode-3.1.0 (10 Jun 2009)
+
+  10 Jun 2009; Christian Birchinger <joker@gentoo.org>
+  +qrencode-3.1.0.ebuild:
+  Version bump. Build seems now parallel safe, so the custom src_compile is no
+  longer needed. Droped the media-libs/libsdl dependency.
+
+  08 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  qrencode-3.0.3.ebuild:
+  keyworded ~arch for x86, bug 273069
+
+*qrencode-3.0.3 (05 Jul 2008)
+
+  05 Jul 2008; Christian Birchinger <joker@gentoo.org> +metadata.xml,
+  +qrencode-3.0.3.ebuild:
+  Initial import

@@ -1,0 +1,54 @@
+# ChangeLog for dev-python/cosmolopy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/ChangeLog,v 1.7 2012/10/18 01:48:04 patrick Exp $
+
+  18 Oct 2012; Patrick Lauer <patrick@gentoo.org> cosmolopy-0.1.104.ebuild:
+  Restricting CPython-2.5
+
+  02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> -cosmolopy-0.1.102.ebuild,
+  -cosmolopy-0.1.103.ebuild, cosmolopy-0.1.104.ebuild:
+  Keyword amd64-linux and x86-linux
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> cosmolopy-0.1.102.ebuild,
+  cosmolopy-0.1.103.ebuild, cosmolopy-0.1.104.ebuild:
+  Fixing SRC_URI for pypi
+
+*cosmolopy-0.1.104 (07 Feb 2012)
+
+  07 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> +cosmolopy-0.1.104.ebuild:
+  Version bump wrt bug 402495 by Ian Delaney <johneed@hotmail.com>
+
+  04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Switched herd to sci-astronomy
+
+*cosmolopy-0.1.103 (13 May 2011)
+
+  13 May 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +cosmolopy-0.1.103.ebuild:
+  Version bump
+
+*cosmolopy-0.1.102 (03 May 2011)
+
+  03 May 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +cosmolopy-0.1.102.ebuild, +metadata.xml:
+  Version bump and import to the main tree
+
+*cosmolopy-0.1.100 (14 Mar 2011)
+
+  14 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  -cosmolopy-0.1.003.ebuild, +cosmolopy-0.1.100.ebuild:
+  Version bump
+
+*cosmolopy-0.1.003 (03 Aug 2010)
+
+  03 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  -cosmolopy-0.1.001.ebuild, -files/cosmolopy-0.1.001-qa.patch,
+  +cosmolopy-0.1.003.ebuild:
+  Version bump
+
+*cosmolopy-0.1.001 (03 Aug 2010)
+
+  03 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
+  +cosmolopy-0.1.001.ebuild, +files/cosmolopy-0.1.001-qa.patch,
+  +metadata.xml:
+  Initial import

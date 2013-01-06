@@ -1,0 +1,342 @@
+# ChangeLog for sys-power/upower
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.93 2013/01/03 10:45:07 ssuominen Exp $
+
+*upower-0.9.19 (03 Jan 2013)
+
+  03 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.19.ebuild:
+  Version bump.
+
+  26 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.18.ebuild:
+  Use function systemd_with_utildir from systemd.eclass to determine correct
+  value for --with-systemdutildir=
+
+  02 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.18.ebuild:
+  Use virtual/udev instead of sys-fs/udev wrt #444398
+
+  02 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> -upower-0.9.16.ebuild:
+  old
+
+  01 Dec 2012; Raúl Porcel <armin76@gentoo.org> upower-0.9.18.ebuild:
+  alpha/ia64/sparc stable wrt #438704
+
+  19 Nov 2012; Markus Meier <maekke@gentoo.org> upower-0.9.18.ebuild:
+  arm stable, bug #438704
+
+  12 Nov 2012; Anthony G. Basile <blueness@gentoo.org> upower-0.9.18.ebuild:
+  stable ppc ppc64, bug #438704
+
+  30 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.18.ebuild:
+  Use new udev.eclass instead of duplicating the same code here.
+
+  30 Oct 2012; Agostino Sarubbo <ago@gentoo.org> upower-0.9.18.ebuild:
+  Stable for x86, wrt bug #438704
+
+  30 Oct 2012; Agostino Sarubbo <ago@gentoo.org> upower-0.9.18.ebuild:
+  Stable for amd64, wrt bug #438704
+
+  01 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> -upower-0.9.17.ebuild,
+  -upower-0.9.17-r1.ebuild:
+  old
+
+  01 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.18.ebuild:
+  Pull in app-shells/bash for the notify-upower.sh systemd script which has
+  #!/bin/bash.
+
+*upower-0.9.18 (25 Aug 2012)
+
+  25 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.18.ebuild,
+  metadata.xml:
+  Version bump wrt #432650 by "teidakankan"
+
+*upower-0.9.17-r1 (06 Aug 2012)
+
+  06 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.17-r1.ebuild:
+  Use udev.pc pkg-config file to determine udevrulesdir for compability with
+  sys-fs/udev >= 187.
+
+*upower-0.9.17 (27 Jun 2012)
+
+  27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.17.ebuild:
+  Version bump.
+
+  17 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> -upower-0.9.13-r1.ebuild,
+  -upower-0.9.15.ebuild:
+  old
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> upower-0.9.16.ebuild:
+  alpha/ia64/sparc stable wrt #416335
+
+  27 May 2012; Markus Meier <maekke@gentoo.org> upower-0.9.16.ebuild:
+  arm stable, bug #416335
+
+  21 May 2012; Jeff Horelick <jdhore@gentoo.org> upower-0.9.16.ebuild:
+  marked x86 per bug 416335
+
+  20 May 2012; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.16.ebuild:
+  ppc/ppc64 stable wrt #416335
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> upower-0.9.16.ebuild:
+  Stable for amd64, wrt bug #416335
+
+  19 May 2012; Anthony G. Basile <blueness@gentoo.org> upower-0.9.16.ebuild:
+  Keyword mips
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> upower-0.9.13-r1.ebuild,
+  upower-0.9.15.ebuild, upower-0.9.16.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*upower-0.9.16 (01 May 2012)
+
+  01 May 2012; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.16.ebuild:
+  Version bump.
+
+  16 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -upower-0.9.12.ebuild,
+  -upower-0.9.14.ebuild:
+  old
+
+  16 Jan 2012; Mark Loeser <halcy0n@gentoo.org> upower-0.9.13-r1.ebuild:
+  Stable for ppc/ppc64; bug #385233
+
+*upower-0.9.15 (05 Dec 2011)
+
+  05 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.15.ebuild:
+  Version bump.
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> upower-0.9.13-r1.ebuild:
+  alpha/ia64/sparc stable wrt #385233
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -upower-0.9.13.ebuild:
+  old
+
+  10 Oct 2011; Markus Meier <maekke@gentoo.org> upower-0.9.13-r1.ebuild:
+  arm stable, bug #385233
+
+  05 Oct 2011; Tony Vroon <chainsaw@gentoo.org> upower-0.9.13-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #385233.
+
+  04 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> upower-0.9.13-r1.ebuild:
+  x86 stable wrt bug #385233
+
+*upower-0.9.14 (04 Oct 2011)
+
+  04 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.14.ebuild:
+  Version bump.
+
+  15 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.13-r1.ebuild:
+  Remove obsolete blockers.
+
+*upower-0.9.13-r1 (15 Sep 2011)
+
+  15 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.13-r1.ebuild:
+  keepdir /var/lib/upower wrt #383091 by Marcin Mirosław
+
+*upower-0.9.13 (08 Sep 2011)
+
+  08 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.13.ebuild:
+  Version bump.
+
+  08 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> -upower-0.9.8.ebuild,
+  -upower-0.9.9.ebuild, -upower-0.9.11.ebuild, -upower-0.9.11-r1.ebuild:
+  remove old
+
+  24 Jul 2011; Raúl Porcel <armin76@gentoo.org> upower-0.9.12.ebuild:
+  alpha/ia64/sparc stable wrt #374683
+
+  23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> upower-0.9.12.ebuild:
+  ppc/ppc64 stable wrt #374683
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> upower-0.9.12.ebuild:
+  arm/x86 stable, bug #374683
+
+  10 Jul 2011; Markos Chandras <hwoarang@gentoo.org> upower-0.9.12.ebuild:
+  Stable on amd64 wrt bug #374683
+
+*upower-0.9.12 (06 Jul 2011)
+
+  06 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.12.ebuild:
+  Version bump.
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> upower-0.9.9.ebuild:
+  alpha/arm/ia64/sparc stable wrt #366941
+
+  21 Jun 2011; Pacho Ramos <pacho@gentoo.org> upower-0.9.9.ebuild:
+  amd64 stable, bug 366941
+
+*upower-0.9.11-r1 (07 Jun 2011)
+
+  07 Jun 2011; Sebastian Pipping <sping@gentoo.org> +upower-0.9.11-r1.ebuild:
+  Add >=sys-fs/udev-171[gudev] as an alternative dependency to
+  >=sys-fs/udev-151[extras] (bug #370285)
+
+*upower-0.9.11 (27 May 2011)
+
+  27 May 2011; Kacper Kowalik <xarthisius@gentoo.org> -files/0.9.10-glib.patch,
+  -upower-0.9.10.ebuild, +upower-0.9.11.ebuild:
+  Version bump, remove patch that was applied upstream, drop old.
+
+  23 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0.9.10-glib.patch, upower-0.9.10.ebuild:
+  Fix building with glib-2.28.7
+
+  23 May 2011; Joseph Jezak <josejx@gentoo.org> upower-0.9.9.ebuild:
+  Marked ppc/ppc64 stable for bug #366941.
+
+  22 May 2011; Christian Faulhammer <fauli@gentoo.org> upower-0.9.9.ebuild:
+  stable x86, bug 366941
+
+*upower-0.9.10 (15 May 2011)
+
+  15 May 2011; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.10.ebuild:
+  Version bump.
+
+  29 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  "ios" is now global USE flag.
+
+  28 Mar 2011; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Make ios USE description understandable without using google
+
+  27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.8.ebuild,
+  upower-0.9.9.ebuild:
+  Rename USE="ipod" to USE="ios" because this package is using libimobiledevice
+  instead of libgpod wrt #344763.
+
+  27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.9.ebuild:
+  Block sys-apps/hal to prevent overlapping.
+
+*upower-0.9.9 (26 Mar 2011)
+
+  26 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.9.ebuild:
+  Version bump.
+
+  22 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> upower-0.9.8.ebuild:
+  ppc/ppc64 stable wrt #354505
+
+  19 Mar 2011; Raúl Porcel <armin76@gentoo.org> upower-0.9.8.ebuild:
+  alpha/ia64/sparc stable wrt #354505
+
+  13 Mar 2011; Markus Meier <maekke@gentoo.org> upower-0.9.8.ebuild:
+  arm stable, bug #354505
+
+  04 Mar 2011; Thomas Kahle <tomka@gentoo.org> upower-0.9.8.ebuild:
+  x86 stable per bug 354505
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> upower-0.9.8.ebuild:
+  Stable on amd64 wrt bug #354505
+
+  29 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.5.ebuild,
+  +files/upower-0.9.5-linux-headers-2.6.36.patch:
+  Fix building with Linux >= 2.6.36 wrt #352335.
+
+  28 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.8.ebuild:
+  Check ACPI_SYSFS_POWER only for Linux version less than 2.6.37 wrt #352360.
+
+*upower-0.9.8 (21 Jan 2011)
+
+  21 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.8.ebuild:
+  Version bump.
+
+  11 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> -upower-0.9.4.ebuild,
+  upower-0.9.5.ebuild:
+  ppc stable wrt #338988. Drop old.
+
+  12 Dec 2010; Raúl Porcel <armin76@gentoo.org> upower-0.9.5.ebuild,
+  upower-0.9.7.ebuild:
+  sparc stable
+
+  13 Nov 2010; Raúl Porcel <armin76@gentoo.org> upower-0.9.5.ebuild,
+  upower-0.9.7.ebuild:
+  alpha/ia64 stable wrt #338988
+
+*upower-0.9.7 (08 Nov 2010)
+
+  08 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.7.ebuild,
+  +files/upower-0.9.7-linux-2.6.36.patch:
+  Version bump.
+
+  18 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.6.ebuild,
+  +files/upower-0.9.6-introspection.patch,
+  +files/upower-0.9.6-introspection-2.patch:
+  Fix building with recent gobject-introspection wrt #341549 by Mike Auty.
+
+*upower-0.9.6 (17 Oct 2010)
+
+  17 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.6.ebuild:
+  Version bump.
+
+  13 Oct 2010; Markus Meier <maekke@gentoo.org> upower-0.9.5.ebuild:
+  arm stable, bug #338988
+
+  30 Sep 2010; Markus Meier <maekke@gentoo.org> upower-0.9.5.ebuild:
+  x86 stable, bug #338988
+
+  28 Sep 2010; Markos Chandras <hwoarang@gentoo.org> upower-0.9.5.ebuild:
+  Stable on amd64 wrt bug #338988
+
+  28 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.5.ebuild:
+  ppc64 stable wrt #338988
+
+  09 Sep 2010; Joseph Jezak <josejx@gentoo.org> upower-0.9.4.ebuild:
+  Marked ppc/ppc64 stable for bug #329623.
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org> upower-0.9.4.ebuild,
+  upower-0.9.5.ebuild:
+  Marked ~ppc for bug #296548.
+
+  05 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.5.ebuild:
+  Remove USE="nls" because intltool is always required by Maciej Mrozowski.
+
+  30 Jul 2010; Markos Chandras <hwoarang@gentoo.org> upower-0.9.4.ebuild:
+  Stable on amd64 wrt bug #329623
+
+  25 Jul 2010; Christian Faulhammer <fauli@gentoo.org> upower-0.9.4.ebuild:
+  stable x86, bug 329623
+
+  24 Jul 2010; Raúl Porcel <armin76@gentoo.org> upower-0.9.5.ebuild:
+  Re-add ~arm wrt #329245
+
+  23 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.5.ebuild:
+  Keyword ~ppc64 wrt #329245.
+
+*upower-0.9.5 (21 Jul 2010)
+
+  21 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.5.ebuild:
+  Version bump.
+
+  06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.4.ebuild:
+  Keyword ~ppc64 wrt #323823. Disable testsuite because it needs running
+  instance of system dbus.
+
+  05 Jun 2010; Raúl Porcel <armin76@gentoo.org> upower-0.9.3-r1.ebuild,
+  upower-0.9.4.ebuild:
+  Add ~arm
+
+*upower-0.9.4 (15 May 2010)
+
+  15 May 2010; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.4.ebuild,
+  +files/upower-0.9.4-enumerate.patch:
+  Version bump wrt #319761 (with patch reverting upstream commit to restore
+  resume and suspend functionality by Priit Laes).
+
+*upower-0.9.3-r1 (11 May 2010)
+
+  11 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +upower-0.9.3-r1.ebuild, metadata.xml:
+  gobject-introspection support wrt #319105 by Priit Laes.
+
+*upower-0.9.3 (10 May 2010)
+
+  10 May 2010; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.3.ebuild:
+  Version bump.
+
+  17 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> upower-0.9.2.ebuild:
+  Raise pm-utils depend to 1.3.0-r2 for on_ac_power support wrt #315663.
+
+  13 Apr 2010; Alexis Ballier <aballier@gentoo.org> upower-0.9.2.ebuild:
+  Wrap pm-utils dep under kernel_linux and keyword ~x86-fbsd
+
+*upower-0.9.2 (07 Apr 2010)
+
+  07 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.2.ebuild:
+  Initial commit wrt #303701 by Marc-Antoine Perennou.

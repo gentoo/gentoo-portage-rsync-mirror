@@ -1,0 +1,20 @@
+ scipy/sparse/linalg/dsolve/_superluobject.c |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/scipy/sparse/linalg/dsolve/_superluobject.c b/scipy/sparse/linalg/dsolve/_superluobject.c
+index e9ec0bd..2fde6cc 100644
+--- a/scipy/sparse/linalg/dsolve/_superluobject.c
++++ b/scipy/sparse/linalg/dsolve/_superluobject.c
+@@ -589,9 +589,9 @@ static int iterrefine_cvt(PyObject *input, IterRefine_t *value)
+ {
+     ENUM_CHECK_INIT;
+     ENUM_CHECK(NOREFINE);
+-    ENUM_CHECK(SINGLE);
+-    ENUM_CHECK(DOUBLE);
+-    ENUM_CHECK(EXTRA);
++    ENUM_CHECK(SLU_SINGLE);
++    ENUM_CHECK(SLU_DOUBLE);
++    ENUM_CHECK(SLU_EXTRA);
+     ENUM_CHECK_FINISH("invalid value for 'IterRefine' parameter");
+ }
+ 

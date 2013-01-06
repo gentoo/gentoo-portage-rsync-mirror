@@ -1,0 +1,90 @@
+# ChangeLog for games-fps/urbanterror
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.17 2012/12/23 16:13:44 hasufell Exp $
+
+*urbanterror-4.2.009 (23 Dec 2012)
+
+  23 Dec 2012; Julian Ospald <hasufell@gentoo.org> +urbanterror-4.2.009.ebuild,
+  +files/urbanterror-4.2.009-build.patch:
+  version bump
+
+  05 Dec 2012; Julian Ospald <hasufell@gentoo.org> urbanterror-4.2.008.ebuild:
+  update SRC_URI wrt #446148
+
+*urbanterror-4.2.008 (04 Dec 2012)
+
+  04 Dec 2012; Julian Ospald <hasufell@gentoo.org> -urbanterror-4.2.006.ebuild,
+  -files/urbanterror-4.2.006-build.patch, -urbanterror-4.2.007.ebuild,
+  -files/urbanterror-4.2.007-build.patch, +urbanterror-4.2.008.ebuild,
+  +files/urbanterror-4.2.008-build.patch:
+  version bump, remove old
+
+*urbanterror-4.2.007 (18 Nov 2012)
+
+  18 Nov 2012; Julian Ospald <hasufell@gentoo.org> +urbanterror-4.2.007.ebuild,
+  +files/urbanterror-4.2.007-build.patch:
+  version bump
+
+*urbanterror-4.2.006 (10 Nov 2012)
+
+  10 Nov 2012; Julian Ospald <hasufell@gentoo.org> -urbanterror-4.2.003.ebuild,
+  -files/urbanterror-4.2.003-build.patch, -urbanterror-4.2.004.ebuild,
+  -files/urbanterror-4.2.004-build.patch, -urbanterror-4.2.005.ebuild,
+  -files/urbanterror-4.2.005-build.patch, +urbanterror-4.2.006.ebuild,
+  +files/urbanterror-4.2.006-build.patch:
+  version bump, remove old
+
+  05 Nov 2012; Julian Ospald <hasufell@gentoo.org> urbanterror-4.2.005.ebuild:
+  don't use dlopen if we can switch it off
+
+*urbanterror-4.2.005 (05 Nov 2012)
+
+  05 Nov 2012; Julian Ospald <hasufell@gentoo.org> +urbanterror-4.2.005.ebuild,
+  +files/urbanterror-4.2.005-build.patch:
+  version bump
+
+*urbanterror-4.2.004 (01 Nov 2012)
+
+  01 Nov 2012; Julian Ospald <hasufell@gentoo.org> +urbanterror-4.2.004.ebuild,
+  +files/urbanterror-4.2.004-build.patch:
+  version bump
+
+*urbanterror-4.2.003 (26 Oct 2012)
+
+  26 Oct 2012; Julian Ospald <hasufell@gentoo.org> -urbanterror-4.2.002.ebuild,
+  -files/urbanterror-4.2.002-build.patch, +urbanterror-4.2.003.ebuild,
+  +files/urbanterror-4.2.003-build.patch:
+  version bump, remove old
+
+  19 Oct 2012; Julian Ospald <hasufell@gentoo.org>
+  files/urbanterror-4.2.002-build.patch:
+  don't add aggressive optimizations to debug build
+
+*urbanterror-4.2.002 (12 Oct 2012)
+
+  12 Oct 2012; Julian Ospald <hasufell@gentoo.org> +urbanterror-4.2.002.ebuild,
+  +files/urbanterror-4.2.002-build.patch:
+  version bump
+
+  19 Jul 2012; Jeff Horelick <jdhore@gentoo.org> urbanterror-4.1.1.ebuild:
+  marked x86 per bug 425346
+
+  09 Jul 2012; Agostino Sarubbo <ago@gentoo.org> urbanterror-4.1.1.ebuild:
+  Stable for amd64, wrt bug #425346
+
+  08 Jul 2012; Julian Ospald <hasufell@gentoo.org> urbanterror-4.1.1.ebuild:
+  update icon cache
+
+  05 Jun 2012; Julian Ospald <hasufell@gentoo.org> urbanterror-4.1.1.ebuild:
+  use new doicon functionality
+
+  02 Jun 2012; Julian Ospald <hasufell@gentoo.org> urbanterror-4.1.1.ebuild:
+  bump to EAPI=4
+
+*urbanterror-4.1.1 (24 May 2012)
+
+  24 May 2012; Julian Ospald <hasufell@gentoo.org> +urbanterror-4.1.1.ebuild,
+  +files/urbanterror-4.1.1-build.patch, +files/urbanterror-4.1.1-minizip.patch,
+  +metadata.xml:
+  initial import wrt #203296 thanks to Mr_Bones_
+

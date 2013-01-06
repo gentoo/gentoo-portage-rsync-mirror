@@ -1,0 +1,39 @@
+# ChangeLog for sci-libs/lis
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lis/ChangeLog,v 1.7 2012/11/12 02:44:13 bicatali Exp $
+
+*lis-1.2.120 (12 Nov 2012)
+
+  12 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/lis-1.2.120-autotools.patch, +lis-1.2.120.ebuild, -lis-1.2.62.ebuild,
+  -lis-1.2.90.ebuild:
+  Version bump
+
+  18 Oct 2012; Justin Lecher <jlec@gentoo.org> lis-1.2.62.ebuild,
+  lis-1.2.90.ebuild, lis-1.2.91.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
+
+  14 Oct 2012; Justin Lecher <jlec@gentoo.org> lis-1.2.62.ebuild,
+  lis-1.2.90.ebuild, lis-1.2.91.ebuild, metadata.xml:
+  Correct wrong variable naming, FORTRAN_DEPEND -> FORTRAN_NEEDED
+
+  14 Oct 2012; Justin Lecher <jlec@gentoo.org> lis-1.2.62.ebuild,
+  lis-1.2.90.ebuild, lis-1.2.91.ebuild:
+  Prepare for fortran2.eclass update
+
+*lis-1.2.91 (08 Aug 2012)
+
+  08 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> +lis-1.2.91.ebuild:
+  Version bump
+
+*lis-1.2.90 (02 Aug 2012)
+
+  02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> +lis-1.2.90.ebuild:
+  Version bump
+
+*lis-1.2.62 (21 Jan 2012)
+
+  21 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +lis-1.2.62.ebuild,
+  +files/lis-1.2.62-autotools.patch, +metadata.xml:
+  Initial import

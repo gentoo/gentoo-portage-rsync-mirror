@@ -1,0 +1,10 @@
+# ChangeLog for media-video/pgcedit
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/pgcedit/ChangeLog,v 1.1 2012/12/31 00:46:07 vapier Exp $
+
+*pgcedit-0.8.6 (31 Dec 2012)
+
+  31 Dec 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/pgcedit-0.8.6-config-paths.patch, +files/pgcedit.png, +metadata.xml,
+  +pgcedit-0.8.6.ebuild:
+  Initial ebuild partially based on one in Sunrise #213937 by Juan Aguado.

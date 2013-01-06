@@ -1,0 +1,128 @@
+# ChangeLog for dev-perl/Net-Patricia
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Patricia/ChangeLog,v 1.31 2012/10/09 17:27:51 tove Exp $
+
+*Net-Patricia-1.200.0 (09 Oct 2012)
+
+  09 Oct 2012; Torsten Veller <tove@gentoo.org> +Net-Patricia-1.200.0.ebuild:
+  Version bump
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  31 Mar 2012; Torsten Veller <tove@gentoo.org> -Net-Patricia-1.16.ebuild:
+  Cleanup
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> Net-Patricia-1.16.ebuild,
+  Net-Patricia-1.190.0.ebuild:
+  Drop ia64/sparc
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Net-Patricia-1.190.0.ebuild:
+  x86 stable wrt bug #400183
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Net-Patricia-1.190.0.ebuild:
+  Stable for amd64, wrt bug #400183
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Net-Patricia-1.19.ebuild:
+  Cleanup
+
+*Net-Patricia-1.190.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +Net-Patricia-1.190.0.ebuild:
+  Change version scheme
+
+  29 Jul 2011; Torsten Veller <tove@gentoo.org> -Net-Patricia-1.18.ebuild:
+  Cleanup
+
+*Net-Patricia-1.19 (30 Nov 2010)
+
+  30 Nov 2010; Torsten Veller <tove@gentoo.org> +Net-Patricia-1.19.ebuild:
+  Version bump
+
+*Net-Patricia-1.18 (29 Oct 2010)
+
+  29 Oct 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +Net-Patricia-1.18.ebuild:
+  Version bump via perl-bump experimental tool.
+
+  15 Aug 2010; Torsten Veller <tove@gentoo.org> -Net-Patricia-1.014.ebuild,
+  -Net-Patricia-1.15.ebuild:
+  Cleanup
+
+  21 Jun 2010; Raúl Porcel <armin76@gentoo.org> Net-Patricia-1.16.ebuild:
+  ia64/sparc stable wrt #323529
+
+  15 Jun 2010; Torsten Veller <tove@gentoo.org> Net-Patricia-1.16.ebuild:
+  Stable on amd64 and x86 (#323529)
+
+*Net-Patricia-1.16 (05 Mar 2010)
+
+  05 Mar 2010; Torsten Veller <tove@gentoo.org> +Net-Patricia-1.16.ebuild:
+  Version bump
+
+  03 Jun 2009; Torsten Veller <tove@gentoo.org>
+  -Net-Patricia-1.14.52.ebuild:
+  Cleanup
+
+*Net-Patricia-1.15 (06 May 2009)
+
+  06 May 2009; Torsten Veller <tove@gentoo.org> +Net-Patricia-1.15.ebuild:
+  Version bump
+
+  02 May 2009; Torsten Veller <tove@gentoo.org> -Net-Patricia-1.010.ebuild:
+  Cleanup
+
+*Net-Patricia-1.14.52 (13 Apr 2009)
+
+  13 Apr 2009; Torsten Veller <tove@gentoo.org>
+  +Net-Patricia-1.14.52.ebuild:
+  Version bump
+
+  05 Mar 2007; Andrej Kacian <ticho@gentoo.org> Net-Patricia-1.014.ebuild:
+  Stable on x86, bug #169152.
+
+  19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Net-Patricia-1.010.ebuild, Net-Patricia-1.014.ebuild:
+  Ebuild maintenance
+
+  21 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  Net-Patricia-1.014.ebuild:
+  amd64 stable
+
+  11 Sep 2006; Michael Cummings <mcummings@gentoo.org>
+  Net-Patricia-1.014.ebuild:
+  Keywording ~amd64
+
+  05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Net-Patricia-1.010.ebuild, Net-Patricia-1.014.ebuild:
+  Adding perl dep; fixed DEPEND
+
+  10 Jul 2006; Aron Griffis <agriffis@gentoo.org> Net-Patricia-1.014.ebuild:
+  Mark 1.014 stable on ia64
+
+  12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
+  Net-Patricia-1.014.ebuild:
+  Marking sparc stable
+
+  30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Net-Patricia-1.014.ebuild:
+  Mark 1.014 ~ia64
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  Net-Patricia-1.010.ebuild:
+  Marking sparc x86 stable
+
+*Net-Patricia-1.014 (13 Jan 2006)
+
+  13 Jan 2006; Michael Cummings <mcummings@gentoo.org>
+  +Net-Patricia-1.014.ebuild:
+  Version bump upstream
+
+  12 Aug 2005; David Holm <dholm@gentoo.org> Net-Patricia-1.010.ebuild:
+  Added to ~ppc.
+
+*Net-Patricia-1.010 (06 Jun 2005)
+
+  06 Jun 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Net-Patricia-1.010.ebuild:
+  Dep for flowscan for strerror

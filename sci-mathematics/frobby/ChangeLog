@@ -1,0 +1,52 @@
+# ChangeLog for sci-mathematics/frobby
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/ChangeLog,v 1.13 2012/07/30 12:28:16 tomka Exp $
+
+  30 Jul 2012; Thomas Kahle <tomka@gentoo.org>
+  +files/frobby-cflags-no-strip-soname.patch,
+  -files/frobby-cflags-no-strip.patch, frobby-0.9.0.ebuild:
+  Fix library mess
+
+  04 Jul 2012; Justin Lecher <jlec@gentoo.org> frobby-0.9.0.ebuild,
+  +files/frobby-gcc-4.7.patch, metadata.xml:
+  Fix for build with gcc-4.7, #424663; handle static-libs
+
+  18 May 2012; Thomas Kahle <tomka@gentoo.org> -files/frobby-latex.patch,
+  -files/frobby-useless-checks.patch, -frobby-0.8.2-r1.ebuild,
+  frobby-0.9.0.ebuild:
+  Fix direct g++ calls and CXXFLAGS (bug 415975).  x86 stable.
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> frobby-0.9.0.ebuild:
+  Stable for amd64, wrt bug #415975
+
+  16 May 2012; Thomas Kahle <tomka@gentoo.org> frobby-0.9.0.ebuild:
+  Fix parallel build of docs
+
+*frobby-0.9.0 (13 Apr 2012)
+
+  13 Apr 2012; Thomas Kahle <tomka@gentoo.org> +frobby-0.9.0.ebuild:
+  Bump to 0.9.0
+
+  14 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> frobby-0.8.2-r1.ebuild:
+  QA: cxx conditional was broken, fix it.
+
+  13 Nov 2011; Mike Frysinger <vapier@gentoo.org> frobby-0.8.2-r1.ebuild:
+  Convert gmp[-nocxx] to gmp[cxx].
+
+  20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> frobby-0.8.2-r1.ebuild:
+  Stable on amd64 wrt bug #348639
+
+  16 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  frobby-0.8.2-r1.ebuild:
+  x86 stable wrt bug #348639
+
+  07 Nov 2010; Thomas Kahle <tomka@gentoo.org> frobby-0.8.2-r1.ebuild:
+  ebuild QA: missing || die statments
+
+*frobby-0.8.2-r1 (06 Nov 2010)
+
+  06 Nov 2010; Thomas Kahle <tomka@gentoo.org> +frobby-0.8.2-r1.ebuild,
+  +files/frobby-cflags-no-strip.patch, +files/frobby-latex.patch,
+  +files/frobby-useless-checks.patch, +metadata.xml:
+  New package: sci-mathematics/frobby, import from science overlay (bug
+  #294503 )

@@ -1,0 +1,11 @@
+--- initrd.splash	2008-11-13 23:49:00.000000000 +0100
++++ initrd.splash.new	2010-07-27 21:35:24.647912782 +0200
+@@ -26,7 +26,7 @@
+ 		init)
+ 			if [ -n "$2" ]; then
+ 				export BOOT_MSG="$2"
+-			elif [ "${CDROOT}" -eq '1' ]; then
++			elif [ "${CDROOT}" = '1' ]; then
+ 				export BOOT_MSG="Preparing the LiveCD environment... Press Alt+F1 for verbose mode."
+ 			else
+ 				export BOOT_MSG="Preparing the system for boot... Press Alt+F1 for verbose mode."

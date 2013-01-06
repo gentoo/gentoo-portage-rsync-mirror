@@ -1,0 +1,58 @@
+# ChangeLog for sec-policy/selinux-phpfpm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-phpfpm/ChangeLog,v 1.12 2012/12/30 19:25:36 swift Exp $
+
+*selinux-phpfpm-2.20120725-r9 (21 Dec 2012)
+
+  21 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-phpfpm-2.20120725-r9.ebuild:
+  Bumping to revision 9
+
+  17 Dec 2012; Sven Vermeulen <swift@gentoo.org> -selinux-phpfpm-2.20120215-r14.ebuild,
+  -selinux-phpfpm-2.20120215-r15.ebuild:
+  Removing older ebuilds
+
+  13 Dec 2012; Sven Vermeulen <swift@gentoo.org> selinux-phpfpm-2.20120725-r8.ebuild:
+  Stabilization
+
+*selinux-phpfpm-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-phpfpm-2.20120725-r8.ebuild:
+  Bumping to revision 8
+
+*selinux-phpfpm-2.20120725-r7 (18 Nov 2012)
+
+  18 Nov 2012; Sven Vermeulen <swift@gentoo.org> +selinux-phpfpm-2.20120725-r7.ebuild:
+  Pushing out rev 7
+
+*selinux-phpfpm-9999 (13 Oct 2012)
+
+  13 Oct 2012; Sven Vermeulen <swift@gentoo.org> +selinux-phpfpm-9999.ebuild:
+  Adding live ebuild
+
+  04 Oct 2012; Sven Vermeulen <swift@gentoo.org> selinux-phpfpm-2.20120725-r5.ebuild:
+  Stabilization
+
+*selinux-phpfpm-2.20120725-r5 (21 Sep 2012)
+
+  21 Sep 2012; Sven Vermeulen <swift@gentoo.org> +selinux-phpfpm-2.20120725-r5.ebuild:
+  Introducing policy for 2.20120725, rev5
+
+  30 Jul 2012; Sven Vermeulen <swift@gentoo.org> selinux-phpfpm-2.20120215-r14.ebuild:
+  Stabilization of revision 14 of the SELinux policy modules
+
+*selinux-phpfpm-2.20120215-r15 (26 Jul 2012)
+
+  26 Jul 2012; Sven Vermeulen <swift@gentoo.org> +selinux-phpfpm-2.20120215-r15.ebuild:
+  Bump to rev15
+
+*selinux-phpfpm-2.20120215-r14 (12 Jul 2012)
+
+  12 Jul 2012; Sven Vermeulen <swift@gentoo.org> -selinux-phpfpm-2.20120215.ebuild,
+  +selinux-phpfpm-2.20120215-r14.ebuild:
+  Bump to rev14
+
+*selinux-phpfpm-2.20120215 (24 Jun 2012)
+
+  24 Jun 2012; Sven Vermeulen <swift@gentoo.org> +selinux-phpfpm-2.20120215.ebuild,
+  +metadata.xml:
+  Introducing phpfpm module

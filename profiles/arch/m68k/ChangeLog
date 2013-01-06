@@ -1,0 +1,68 @@
+# ChangeLog for Gentoo/ia64 profile
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.22 2012/11/24 21:38:12 floppym Exp $
+
+  24 Nov 2012; Mike Gilbert <floppym@gentoo.org> use.mask:
+  Mask python_single_target values not supported on this arch.
+
+  31 Oct 2012; Michał Górny <mgorny@gentoo.org> use.mask:
+  Add a PYTHON_TARGETS mask based on keywords.
+
+  23 Aug 2012; Mike Frysinger <vapier@gentoo.org> -package.mask:
+  Drop old package.mask #423585 by Ryan Hill.
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Add clang to use.mask, needs testing
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask tk
+
+  06 May 2012; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Add systemd to use.mask, needs testing
+
+  08 Apr 2012; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Unmask pyxattr
+
+  21 Feb 2012; Zac Medico <zmedico@gentoo.org> package.use.mask:
+  Bug #402215: Mask USE=xattr for sys-apps/portage, pending ~m68k keyword for
+  dev-python/pyxattr.
+
+  18 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> use.mask:
+  Remove obsolete USE="hal" mask.
+
+  23 Jul 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask nettle
+
+  20 Jul 2011; Ryan Hill <dirtyepic@gentoo.org> package.use.mask:
+  Mask sys-devel/gcc USE graphite and lto due to unkeyworded dependencies.
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
+  Drop mask on non-existant portage version.
+
+  30 May 2010; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask latex
+
+  06 Jan 2010; Ulrich Mueller <ulm@gentoo.org> use.mask:
+  Use.mask bash-completion, bug 299051.
+
+  28 Oct 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask policykit
+
+  27 Oct 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask autotrace, lqr
+
+  06 Jul 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Add bluetooth to use.mask
+
+  12 Jun 2009; Ulrich Mueller <ulm@gentoo.org> use.mask:
+  Remove paludis from use.mask since the flag is gone.
+
+  21 May 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask paludis
+
+  10 May 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Add hal to use.mask
+
+  29 Mar 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Add nss to use.mask
+

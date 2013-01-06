@@ -1,0 +1,26 @@
+From 4050d583e8fe6c5c4bb71f0fd4ba6498cdf5a1b6 Mon Sep 17 00:00:00 2001
+From: Ryan Stonecipher <Ryan.Stonecipher.Fisher@gmail.com>
+Date: Mon, 24 Jan 2011 20:42:02 +0000
+Subject: Fix undefined type in egg-asn1x.c
+
+Mac OSX doesn't have a ulong type
+
+https://bugzilla.gnome.org/show_bug.cgi?id=640362
+---
+diff --git a/egg/egg-asn1x.c b/egg/egg-asn1x.c
+index 122cedf..10bd92c 100644
+--- a/egg/egg-asn1x.c
++++ b/egg/egg-asn1x.c
+@@ -2064,8 +2064,8 @@ anode_write_integer_ulong (gulong value, guchar *data, gsize *n_data)
+ 	guchar buf[sizeof (gulong)];
+ 	gint bytes, i, off;
+ 
+-	for (i = 0; i < sizeof (ulong); ++i) {
+-		off = sizeof (ulong) - (i + 1);
++	for (i = 0; i < sizeof (gulong); ++i) {
++		off = sizeof (gulong) - (i + 1);
+ 		buf[i] = (value >> (off * 8)) & 0xFF;
+ 	}
+ 
+--
+cgit v0.9

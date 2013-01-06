@@ -1,0 +1,110 @@
+# ChangeLog for sec-policy/selinux-networkmanager
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-networkmanager/ChangeLog,v 1.26 2012/12/30 19:25:43 swift Exp $
+
+*selinux-networkmanager-2.20120725-r9 (21 Dec 2012)
+
+  21 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-networkmanager-2.20120725-r9.ebuild:
+  Bumping to revision 9
+
+  17 Dec 2012; Sven Vermeulen <swift@gentoo.org> -selinux-networkmanager-2.20120215-r14.ebuild,
+  -selinux-networkmanager-2.20120215-r15.ebuild,
+  -selinux-networkmanager-2.20120215-r2.ebuild,
+  -selinux-networkmanager-2.20120215.ebuild:
+  Removing older ebuilds
+
+  13 Dec 2012; Sven Vermeulen <swift@gentoo.org> selinux-networkmanager-2.20120725-r8.ebuild:
+  Stabilization
+
+*selinux-networkmanager-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-networkmanager-2.20120725-r8.ebuild:
+  Bumping to revision 8
+
+*selinux-networkmanager-2.20120725-r7 (18 Nov 2012)
+
+  18 Nov 2012; Sven Vermeulen <swift@gentoo.org> +selinux-networkmanager-2.20120725-r7.ebuild:
+  Pushing out rev 7
+
+*selinux-networkmanager-9999 (13 Oct 2012)
+
+  13 Oct 2012; Sven Vermeulen <swift@gentoo.org> +selinux-networkmanager-9999.ebuild:
+  Adding live ebuild
+
+  04 Oct 2012; Sven Vermeulen <swift@gentoo.org> selinux-networkmanager-2.20120725-r5.ebuild:
+  Stabilization
+
+*selinux-networkmanager-2.20120725-r5 (21 Sep 2012)
+
+  21 Sep 2012; Sven Vermeulen <swift@gentoo.org> +selinux-networkmanager-2.20120725-r5.ebuild:
+  Introducing policy for 2.20120725, rev5
+
+  30 Jul 2012; Sven Vermeulen <swift@gentoo.org> selinux-networkmanager-2.20120215-r14.ebuild:
+  Stabilization of revision 14 of the SELinux policy modules
+
+*selinux-networkmanager-2.20120215-r15 (26 Jul 2012)
+
+  26 Jul 2012; Sven Vermeulen <swift@gentoo.org> +selinux-networkmanager-2.20120215-r15.ebuild:
+  Bump to rev15
+
+*selinux-networkmanager-2.20120215-r14 (17 Jul 2012)
+
+  17 Jul 2012; Sven Vermeulen <swift@gentoo.org>
+  +selinux-networkmanager-2.20120215-r14.ebuild:
+  Bumping to rev 14
+
+*selinux-networkmanager-2.20120215-r2 (27 Jun 2012)
+
+  27 Jun 2012; Sven Vermeulen <swift@gentoo.org> +selinux-networkmanager-2.20120215-r2.ebuild:
+  Bump to revision 13
+
+  13 May 2012; Sven Vermeulen <swift@gentoo.org> -selinux-networkmanager-2.20110726-r1.ebuild,
+  -selinux-networkmanager-2.20110726-r2.ebuild,
+  -selinux-networkmanager-2.20110726-r3.ebuild:
+  Removing deprecated ebuilds (cleanup)
+
+  29 Apr 2012; Sven Vermeulen <swift@gentoo.org> selinux-networkmanager-2.20120215.ebuild:
+  Stabilizing revision 7
+
+*selinux-networkmanager-2.20120215 (31 Mar 2012)
+
+  31 Mar 2012; Sven Vermeulen <swift@gentoo.org> +selinux-networkmanager-2.20120215.ebuild:
+  Bumping to 2.20120215 policies
+
+  23 Feb 2012; Sven Vermeulen <swift@gentoo.org> selinux-networkmanager-2.20110726-r3.ebuild:
+  Stabilizing
+
+  29 Jan 2012;  <swift@gentoo.org> Manifest:
+  Updating manifest
+
+  29 Jan 2012; Sven Vermeulen <swift@gentoo.org> selinux-networkmanager-2.20110726-r2.ebuild:
+  Stabilize
+
+*selinux-networkmanager-2.20110726-r3 (14 Jan 2012)
+
+  14 Jan 2012; Sven Vermeulen <swift@gentoo.org> +selinux-networkmanager-2.20110726-r3.ebuild:
+  Adding dontaudits
+
+*selinux-networkmanager-2.20110726-r2 (04 Dec 2011)
+
+  04 Dec 2011; Sven Vermeulen <swift@gentoo.org> +selinux-networkmanager-2.20110726-r2.ebuild:
+  Mark wpa_cli as an interactive application
+
+  12 Nov 2011; Sven Vermeulen <swift@gentoo.org> -selinux-networkmanager-2.20101213.ebuild,
+  -files/fix-networkmanager.patch:
+  Removing old policies
+
+  23 Oct 2011; Sven Vermeulen <swift@gentoo.org> selinux-networkmanager-2.20110726-r1.ebuild:
+  Stabilization (tracker #384231)
+
+*selinux-networkmanager-2.20110726-r1 (28 Aug 2011)
+
+  28 Aug 2011; Sven Vermeulen <swift@gentoo.org> +selinux-networkmanager-2.20110726-r1.ebuild:
+  Updating policy builds to refpolicy 20110726
+
+  02 Jun 2011; Anthony G. Basile <blueness@gentoo.org>
+  selinux-networkmanager-2.20101213.ebuild:
+  Stable amd64 x86
+
+  05 Feb 2011; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Initial commit to portage.

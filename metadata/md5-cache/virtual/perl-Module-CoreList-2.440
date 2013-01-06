@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Module-CoreList
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86
+RDEPEND=~perl-core/Module-CoreList-2.440
+SLOT=0
+_md5_=c68b2a9dd41a984eefe87687819a7003

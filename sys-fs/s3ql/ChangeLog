@@ -1,0 +1,51 @@
+# ChangeLog for sys-fs/s3ql
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/ChangeLog,v 1.11 2012/10/29 16:39:50 mgorny Exp $
+
+  29 Oct 2012; Michał Górny <mgorny@gentoo.org> s3ql-1.11.1.ebuild,
+  s3ql-1.12.ebuild:
+  Use virtual for argparse.
+
+*s3ql-1.12 (04 Sep 2012)
+
+  04 Sep 2012; Tim Harder <radhermit@gentoo.org> +s3ql-1.12.ebuild:
+  Version bump.
+
+  04 Jun 2012; Tim Harder <radhermit@gentoo.org> -s3ql-1.10.ebuild,
+  -s3ql-1.11.ebuild:
+  Remove old.
+
+*s3ql-1.11.1 (05 May 2012)
+
+  05 May 2012; Tim Harder <radhermit@gentoo.org> +s3ql-1.11.1.ebuild:
+  Version bump.
+
+  30 Apr 2012; Tim Harder <radhermit@gentoo.org> -s3ql-1.9.ebuild:
+  Remove old.
+
+*s3ql-1.11 (30 Apr 2012)
+
+  30 Apr 2012; Tim Harder <radhermit@gentoo.org> +s3ql-1.11.ebuild:
+  Version bump.
+
+  25 Feb 2012; Tim Harder <radhermit@gentoo.org> -s3ql-1.8.1.ebuild:
+  Remove old.
+
+*s3ql-1.10 (25 Feb 2012)
+
+  25 Feb 2012; Tim Harder <radhermit@gentoo.org> +s3ql-1.10.ebuild:
+  Version bump.
+
+*s3ql-1.9 (22 Jan 2012)
+
+  22 Jan 2012; Tim Harder <radhermit@gentoo.org> +s3ql-1.9.ebuild:
+  Version bump.
+
+  08 Dec 2011; Tim Harder <radhermit@gentoo.org> s3ql-1.8.1.ebuild:
+  Make test skipping message more descriptive.
+
+*s3ql-1.8.1 (08 Dec 2011)
+
+  08 Dec 2011; Tim Harder <radhermit@gentoo.org> +s3ql-1.8.1.ebuild,
+  +metadata.xml:
+  Initial import (bug #336283). Ebuild by me.

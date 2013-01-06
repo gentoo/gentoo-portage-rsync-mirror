@@ -1,0 +1,62 @@
+--- Makefile
++++ Makefile
+@@ -1,10 +1,11 @@
++CXX?=g++
+ PROGRAM=xfce-theme-manager
+ SOURCES=src/main.cpp src/globals.cpp src/database.cpp src/thumbnails.cpp src/gui.cpp src/callbacks.cpp
+ VERSION=0.1.20
+ LAUNCHER=Xfce-Theme-Manager.desktop
+ 
+-ifeq ($(strip $(PREFIX)),)
+-	PREFIX=/usr/local
++ifeq (${PREFIX},)
++	PREFIX=/usr
+ endif
+ 
+ TESTFORLIBXFCEUI=$(shell pkg-config --exists libxfce4ui-1 2>/dev/null;echo $$?)
+@@ -14,20 +15,14 @@
+ 	LIBXFCEUI=`pkg-config --cflags --libs libxfce4ui-1`	
+ endif
+ 
+-ifeq ($(strip $(CXXFLAGS)),)
+-	CXXFLAGS=-O3 -Wall -Wunused-result -Wunused-function -lXcursor -lgthread-2.0 `pkg-config --cflags --libs glib-2.0` `pkg-config --cflags --libs gdk-2.0` `pkg-config --cflags --libs gtk+-2.0` -DGTK_DISABLE_DEPRECATED -DGTK_DISABLE_SINGLE_INCLUDES -DGDK_DISABLE_DEPRECATED -DGSEAL_ENABLE $(LIBXFCEUI) $(USELIBXFCEUI)
+-endif
++CXXFLAGS+=-Wall -Wunused-result -Wunused-function -lXcursor -lgthread-2.0 `pkg-config --cflags --libs glib-2.0` `pkg-config --cflags --libs gdk-2.0` `pkg-config --cflags --libs gtk+-2.0` -DGTK_DISABLE_SINGLE_INCLUDES -DGSEAL_ENABLE $(LIBXFCEUI) $(USELIBXFCEUI)
+ 
+ $(PROGRAM):$(SOURCES)
+-	g++ $(SOURCES) $(CXXFLAGS) -o $(PROGRAM)
+-	strip $(PROGRAM)
++	$(CXX) $(LDFLAGS) $(SOURCES) $(CXXFLAGS) -o $(PROGRAM)
+ 
+-install:
++install: $(PROGRAM)
+ 	mkdir -p $(DESTDIR)$(PREFIX)/bin $(DESTDIR)$(PREFIX)/share/applications $(DESTDIR)$(PREFIX)/share/pixmaps $(DESTDIR)$(PREFIX)/share/man/man1
+ 	mkdir -p $(DESTDIR)$(PREFIX)/share/man/es/man1 $(DESTDIR)$(PREFIX)/share/man/de/man1
+-	rm $(PROGRAM)||true
+-	g++ $(SOURCES) $(CXXFLAGS) -o $(PROGRAM)
+-	strip $(PROGRAM)
+ 	cp -p $(PROGRAM) $(DESTDIR)$(PREFIX)/bin
+ 	cp $(LAUNCHER) $(DESTDIR)$(PREFIX)/share/applications
+ 	cp $(PROGRAM).png $(DESTDIR)$(PREFIX)/share/pixmaps
+@@ -52,5 +47,5 @@
+ 	sed -i "s/^#define VERSION.*/#define VERSION \"$(VERSION)\"/" src/globals.h
+ 
+ debug:
+-	g++ $(SOURCES) $(CXXFLAGS) -ggdb -O0 -o $(PROGRAM)-debug
++	$(CXX) $(SOURCES) $(CXXFLAGS) -ggdb -O0 -o $(PROGRAM)-debug
+ 
+--- Xfce-Theme-Manager.desktop
++++ Xfce-Theme-Manager.desktop
+@@ -1,10 +1,7 @@
+ [Desktop Entry]
+-Version=1.0
+-Encoding=UTF-8
+-Name=Xfce-Theme-Manager
+-Comment=
++Name=Xfce Theme Manager
+ Terminal=false
+ Type=Application
+-Categories=Gnome;GTK;;Settings;DesktopSettings;X-XFCE;Settings;X-XFCE-SettingsDialog;
++Categories=XFCE;GTK;Settings;DesktopSettings;X-XFCE-SettingsDialog;X-XFCE-PersonalSettings;
+ Icon=xfce-theme-manager
+ Exec=xfce-theme-manager

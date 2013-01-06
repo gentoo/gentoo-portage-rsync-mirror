@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Import-Into
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Import-Into/ChangeLog,v 1.1 2012/10/07 14:17:58 tove Exp $
+
+*Import-Into-1.1.0 (07 Oct 2012)
+
+  07 Oct 2012; Torsten Veller <tove@gentoo.org> +Import-Into-1.1.0.ebuild,
+  +metadata.xml:
+  Initial import for Package-Variant
+

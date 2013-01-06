@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Freesmee
+Type=Application
+Comment=Tool for sending SMS and sending/receiving Freesmee-Message-Service
+Exec=freesmee
+TryExec=freesmee
+Icon=freesmee
+Categories=Network;

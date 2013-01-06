@@ -1,0 +1,25 @@
+# ChangeLog for app-cdr/mybashburn
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mybashburn/ChangeLog,v 1.6 2012/12/22 21:38:29 radhermit Exp $
+
+  22 Dec 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
+
+  14 Oct 2009; Mark Loeser <halcy0n@gentoo.org> mybashburn-1.0.2.ebuild:
+  QA fixes; unquoted variables
+
+  30 Dec 2008; <tsunam@gentoo.org> mybashburn-1.0.2.ebuild:
+  fix // issue with prefix in Makefile per bug 239637 with quick fix
+
+  24 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
+
+  06 Jun 2008; Samuli Suominen <drac@gentoo.org> mybashburn-1.0.2.ebuild:
+  Add virtual/mpg123 dep. behind USE mp3 wrt #223461.
+
+*mybashburn-1.0.2 (02 Nov 2007)
+
+  02 Nov 2007; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +mybashburn-1.0.2.ebuild:
+  Initial commit, bug 182419
+

@@ -1,0 +1,38 @@
+# ChangeLog for dev-perl/Set-Object
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-Object/ChangeLog,v 1.9 2012/06/24 12:59:30 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  31 Mar 2012; Torsten Veller <tove@gentoo.org> -Set-Object-1.27.ebuild:
+  Cleanup
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Set-Object-1.280.0.ebuild:
+  x86 stable wrt bug #400217
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Set-Object-1.280.0.ebuild:
+  Stable for amd64, wrt bug #400217
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Set-Object-1.28.ebuild:
+  Cleanup
+
+*Set-Object-1.280.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Set-Object-1.280.0.ebuild:
+  Change version scheme
+
+*Set-Object-1.28 (22 Jul 2010)
+
+  22 Jul 2010; Torsten Veller <tove@gentoo.org> +Set-Object-1.28.ebuild:
+  Version bump
+
+  27 Sep 2009; Markus Meier <maekke@gentoo.org> Set-Object-1.27.ebuild:
+  amd64/x86 stable, bug #286123
+
+*Set-Object-1.27 (15 Aug 2009)
+
+  15 Aug 2009; Torsten Veller <tove@gentoo.org> +Set-Object-1.27.ebuild,
+  +metadata.xml:
+  Import from perl-experimental for bug 281254

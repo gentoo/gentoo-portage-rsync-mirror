@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface"
+	   main="AppRun">
+  <name>Thumbs</name>
+  <summary>Purge thumbnail cache</summary>
+  <description>
+This program allows you to examine your thumbnail cache and purge it
+when required.
+  </description>
+  <icon type='image/png' href='http://www.kerofin.demon.co.uk/icons/Thumbs.png'/>
+  <feed-for interface="http://www.kerofin.demon.co.uk/2005/interfaces/Thumbs"/>
+  <group>
+    <requires interface="http://rox.sourceforge.net/2005/interfaces/ROX-Lib">
+      <environment insert="ROX-Lib2/python" name="PYTHONPATH"/>
+    </requires>
+	 <implementation id="." stability="packaged" version="0.1.3" />
+  </group>
+</interface>

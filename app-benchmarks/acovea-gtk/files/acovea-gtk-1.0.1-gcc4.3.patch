@@ -1,0 +1,23 @@
+--- src/settings_window.cc	2005-10-10 06:48:29.000000000 +0200
++++ src/settings_window.cc.new	2009-03-18 18:15:12.000000000 +0100
+@@ -6,6 +6,7 @@
+ // This file is for your program, I won't touch it again!
+ 
+ #include <gtkmm.h>
++#include <cstring>
+ #include "config.h"
+ #include "settings_window.hh"
+ 
+
+--- src/main_window.cc	2009-03-18 18:16:03.000000000 +0100
++++ src/main_window.cc.new	2009-03-18 18:19:08.000000000 +0100
+@@ -9,6 +9,8 @@
+ #include <gtkmm.h>
+ #include <gtkmm/main.h>
+ #include <iomanip>
++#include <cstring>
++#include <sys/stat.h>
+ #include "config.h"
+ #include "main_window.hh"
+ 
+

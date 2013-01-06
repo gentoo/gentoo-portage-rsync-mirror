@@ -1,0 +1,32 @@
+# ChangeLog for dev-perl/Math-Vec
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Vec/ChangeLog,v 1.8 2012/06/24 13:00:34 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Math-Vec-1.01.ebuild:
+  Cleanup
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> Math-Vec-1.10.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
+
+*Math-Vec-1.10.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Math-Vec-1.10.0.ebuild:
+  Change version scheme
+
+  14 Aug 2009; Markus Meier <maekke@gentoo.org> Math-Vec-1.01.ebuild:
+  amd64/x86 stable, bug #281252
+
+  23 Nov 2008; Torsten Veller <tove@gentoo.org> Math-Vec-1.01.ebuild:
+  Move Module-Build to DEPEND only. Fix LICENSE
+
+  18 Nov 2008; Torsten Veller <tove@gentoo.org> Math-Vec-1.01.ebuild:
+  New virtuals: module-build
+
+*Math-Vec-1.01 (26 Sep 2007)
+
+  26 Sep 2007; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
+  +Math-Vec-1.01.ebuild:
+  Initial commit, vectors for perl.

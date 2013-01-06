@@ -1,0 +1,56 @@
+From 52a5f9e1756a5f69570bf694fe3e384cbef84eb9 Mon Sep 17 00:00:00 2001
+From: Aaron Ecay <aaronecay@gmail.com>
+Date: Fri, 3 Feb 2012 11:24:08 +0100
+Subject: [PATCH 2/4] emacs: quote MML tags in replies
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Emacs message-mode uses certain text strings to indicate how to attach
+files to outgoing mail.  If these are present in the text of an email,
+and a user is tricked into replying to the message, the user’s files
+could be exposed.
+
+Edited-by: Pieter Praet <pieter@praet.org>:  Rebased to release branch.
+
+Conflicts:
+
+	NEWS
+---
+ emacs/notmuch-mua.el |    7 ++++++-
+ test/emacs           |    1 -
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/emacs/notmuch-mua.el b/emacs/notmuch-mua.el
+index 8824b08..a123c71 100644
+--- a/emacs/notmuch-mua.el
++++ b/emacs/notmuch-mua.el
+@@ -109,7 +109,12 @@ list."
+     (insert body))
+   (set-buffer-modified-p nil)
+ 
+-  (message-goto-body))
++  (message-goto-body)
++  ;; Original message may contain (malicious) MML tags.  We must
++  ;; properly quote them in the reply.  Note that using `point-max'
++  ;; instead of `mark' here is wrong.  The buffer may include user's
++  ;; signature which should not be MML-quoted.
++  (mml-quote-region (point) (point-max)))
+ 
+ (defun notmuch-mua-forward-message ()
+   (message-forward)
+diff --git a/test/emacs b/test/emacs
+index a8f4be4..ad8941c 100755
+--- a/test/emacs
++++ b/test/emacs
+@@ -253,7 +253,6 @@ EOF
+ test_expect_equal_file OUTPUT EXPECTED
+ 
+ test_begin_subtest "Quote MML tags in reply"
+-test_subtest_known_broken
+ message_id='test-emacs-mml-quoting@message.id'
+ add_message [id]="$message_id" \
+ 	    "[subject]='$test_subtest_name'" \
+-- 
+1.7.8.4
+

@@ -1,0 +1,24 @@
+From ead7336eac14a4dc8f8bce842a13d59b806aa934 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Sat, 21 Jan 2012 17:02:42 -0500
+Subject: [PATCH] cdemu-client: missing paragraph break in man page
+
+---
+ cdemu-client/man/cdemu.1 |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/cdemu-client/man/cdemu.1 b/cdemu-client/man/cdemu.1
+index 1c5dfdf..31fcb5a 100644
+--- a/cdemu-client/man/cdemu.1
++++ b/cdemu-client/man/cdemu.1
+@@ -57,6 +57,7 @@ the client will prompt for it using standard input without echo.
+ Allows an encoding for text-based image format (such as CUE) to be specified. This
+ might be needed if the image descriptor file contains non-ASCII characters and does
+ not use Unicode.
++.TP
+ .B --dvd-report-css <true/false>
+ Mark the DVD image as CSS-encrypted. This influences the generation of fake
+ Disc Structure 0x01, and as such works only with images of DVD videos that do
+-- 
+1.7.8.4
+

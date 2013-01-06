@@ -1,0 +1,21 @@
+--- plug-ins/script-fu/Makefile.am	2011-11-30 00:33:18.503293635 +0100
++++ plug-ins/script-fu/Makefile.am	2011-11-30 00:36:41.479756076 +0100
+@@ -1,14 +1,16 @@
+ ## Process this file with automake to produce Makefile.in
+ 
++libm = -lm
++
+ libgimpui = $(top_builddir)/libgimp/libgimpui-$(GIMP_API_VERSION).la
+ libgimpwidgets = $(top_builddir)/libgimpwidgets/libgimpwidgets-$(GIMP_API_VERSION).la
+ libgimp = $(top_builddir)/libgimp/libgimp-$(GIMP_API_VERSION).la
+ libgimpcolor = $(top_builddir)/libgimpcolor/libgimpcolor-$(GIMP_API_VERSION).la
+ libgimpbase = $(top_builddir)/libgimpbase/libgimpbase-$(GIMP_API_VERSION).la
+ libgimpconfig = $(top_builddir)/libgimpconfig/libgimpconfig-$(GIMP_API_VERSION).la
+-libgimpmath = $(top_builddir)/libgimpmath/libgimpmath-$(GIMP_API_VERSION).la
++libgimpmath = $(top_builddir)/libgimpmath/libgimpmath-$(GIMP_API_VERSION).la $(libm)
+ 
+-libtinyscheme=tinyscheme/libtinyscheme.a
++libtinyscheme=tinyscheme/libtinyscheme.a $(libm)
+ libftx=ftx/libftx.a
+ 
+ if OS_WIN32

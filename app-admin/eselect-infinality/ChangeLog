@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/eselect-infinality
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-infinality/ChangeLog,v 1.1 2012/07/29 15:49:35 yngwin Exp $
+
+*eselect-infinality-1 (29 Jul 2012)
+
+  29 Jul 2012; Ben de Groot <yngwin@gentoo.org> +eselect-infinality-1.ebuild,
+  +metadata.xml:
+  Initial commit, to go with fontconfig-infinality

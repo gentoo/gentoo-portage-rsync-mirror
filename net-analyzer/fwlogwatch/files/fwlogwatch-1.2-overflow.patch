@@ -1,0 +1,40 @@
+--- a/response.c
++++ b/response.c
+@@ -117,32 +117,32 @@
+   }
+ 
+   snprintf(buf2, BUFSIZE, " %d %s", this_host->count, inet_ntoa(this_host->shost));
+-  strncat(buf, buf2, BUFSIZE);
++  strncat(buf, buf2, BUFSIZE -1);
+ 
+   if (opt.dst_ip) {
+     snprintf(buf2, BUFSIZE, " %s", inet_ntoa(this_host->dhost));
+-    strncat(buf, buf2, BUFSIZE);
++    strncat(buf, buf2, BUFSIZE -1);
+   } else {
+     strncat(buf, " -", BUFSIZE);
+   }
+ 
+   if (opt.proto) {
+     snprintf(buf2, BUFSIZE, " %d", this_host->protocol);
+-    strncat(buf, buf2, BUFSIZE);
++    strncat(buf, buf2, BUFSIZE -1);
+   } else {
+     strncat(buf, " -", BUFSIZE);
+   }
+ 
+   if (opt.src_port) {
+     snprintf(buf2, BUFSIZE, " %d", this_host->sport);
+-    strncat(buf, buf2, BUFSIZE);
++    strncat(buf, buf2, BUFSIZE -1);
+   } else {
+     strncat(buf, " -", BUFSIZE);
+   }
+ 
+   if (opt.dst_port) {
+     snprintf(buf2, BUFSIZE, " %d", this_host->dport);
+-    strncat(buf, buf2, BUFSIZE);
++    strncat(buf, buf2, BUFSIZE -1);
+   } else {
+     strncat(buf, " -", BUFSIZE);
+   }

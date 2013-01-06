@@ -1,0 +1,25 @@
+# ChangeLog for games-arcade/insaneodyssey
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/insaneodyssey/ChangeLog,v 1.6 2007/03/13 21:42:26 nyhm Exp $
+
+  13 Mar 2007; Tristan Heaven <nyhm@gentoo.org> insaneodyssey-000311.ebuild:
+  Install menu entry, bug #160227
+
+  06 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  insaneodyssey-000311.ebuild:
+  Removed sed-4 from *DEPEND.
+
+  07 Mar 2006; <Tupone@gentoo.org>
+  files/insaneodyssey-000311-datafiles.patch:
+  Fixed Bug #71146 (fails to find level files). Thanks Greg for report
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> insaneodyssey-000311.ebuild:
+  Added to ~ppc.
+
+*insaneodyssey-000311 (01 Jun 2004)
+
+  01 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  insaneodyssey-000311.ebuild, metadata.xml,
+  files/insaneodyssey-000311-datafiles.patch:
+  initial commit - ebuild and patch from Alexandru Toma via bug #52697
+

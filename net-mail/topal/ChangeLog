@@ -1,0 +1,47 @@
+# ChangeLog for net-mail/topal
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.11 2012/10/15 12:43:13 eras Exp $
+
+*topal-75 (15 Oct 2012)
+
+  15 Oct 2012; Eray Aslan <eras@gentoo.org> +files/75-Makefile.patch,
+  +topal-75.ebuild:
+  Version bump
+
+  13 Jun 2012; Michael Weber <xmw@gentoo.org> topal-72.ebuild:
+  ppc stable (bug 317971)
+
+  09 Oct 2011; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove tove from metadata.xml
+
+  26 Aug 2011; Markos Chandras <hwoarang@gentoo.org> topal-72.ebuild:
+  Stable on amd64 wrt bug #317971
+
+  20 Aug 2011; Thomas Kahle <tomka@gentoo.org> topal-72.ebuild:
+  x86 stable per bug 379983
+
+  09 Sep 2010; Torsten Veller <tove@gentoo.org> files/72-Makefile.patch,
+  metadata.xml:
+  Fix LDFLAGS and co-maintainer's email address (#336192)
+
+*topal-72 (05 Mar 2010)
+
+  05 Mar 2010; Torsten Veller <tove@gentoo.org> files/64-Makefile.patch,
+  +topal-72.ebuild, +files/72-Makefile.patch:
+  Version bump. Thanks to Peter Gantner (#306981)
+
+  07 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> topal-64.ebuild:
+  Keywording for ppc, bug 267299
+
+  15 May 2009; Markus Meier <maekke@gentoo.org> topal-64.ebuild:
+  add ~amd64, bug #267299
+
+  26 Apr 2009; Torsten Veller <tove@gentoo.org> topal-64.ebuild:
+  Use virtual/ada instead of virtual/gnat (#267299)
+
+*topal-64 (24 Apr 2009)
+
+  24 Apr 2009; Torsten Veller <tove@gentoo.org> +files/64-Makefile.patch,
+  +metadata.xml, +topal-64.ebuild:
+  Initial commit. Thanks to Sascha Lucas, Peter Gantner and Nils Schlupp
+  (#215881)

@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/sword-isv
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-isv/ChangeLog,v 1.1 2008/03/14 02:06:09 beandog Exp $
+
+*sword-isv-1.5 (14 Mar 2008)
+
+  14 Mar 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-isv-1.5.ebuild:
+  Initial commit
+

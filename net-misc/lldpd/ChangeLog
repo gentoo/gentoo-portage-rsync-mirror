@@ -1,0 +1,23 @@
+# ChangeLog for net-misc/lldpd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.4 2012/10/16 01:34:20 chutzpah Exp $
+
+*lldpd-0.5.7 (16 Oct 2012)
+
+  16 Oct 2012; Patrick McLean <chutzpah@gentoo.org> +lldpd-0.5.7.ebuild,
+  metadata.xml:
+  Version bump (bug #407867). Add USE flags for extra protocols supported by
+  lldpd.
+
+  08 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> lldpd-0.5.6.ebuild:
+  Fix dependency on net-snmp as the new ebuilds don't have an extensible USE
+  flag any longer; also inherit user eclass for enewuser/enewgroup.
+
+  26 Feb 2012; Ulrich Müller <ulm@gentoo.org> lldpd-0.5.6.ebuild:
+  Fix LICENSE, lldpd is the same as ISC, bug 403973.
+
+*lldpd-0.5.6 (09 Feb 2012)
+
+  09 Feb 2012; Patrick McLean <chutzpah@gentoo.org> +files/lldpd-confd-1,
+  +files/lldpd-initd-1, +lldpd-0.5.6.ebuild, +metadata.xml:
+  added new package net-misc/lldpd

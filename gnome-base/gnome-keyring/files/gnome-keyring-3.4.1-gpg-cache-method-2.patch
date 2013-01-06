@@ -1,0 +1,27 @@
+From 5dff623470b859e332dbe12afb0dc57b292832d2 Mon Sep 17 00:00:00 2001
+From: Stef Walter <stefw@gnome.org>
+Date: Wed, 8 Aug 2012 15:08:22 +0200
+Subject: [PATCH] secret-store: Mark a secret item as 'used' when accessed
+
+ * This makes the gpg-agent idle feature work correctly
+
+https://bugzilla.gnome.org/show_bug.cgi?id=681081
+---
+ pkcs11/secret-store/gkm-secret-item.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/pkcs11/secret-store/gkm-secret-item.c b/pkcs11/secret-store/gkm-secret-item.c
+index d03c4a8..15791a9 100644
+--- a/pkcs11/secret-store/gkm-secret-item.c
++++ b/pkcs11/secret-store/gkm-secret-item.c
+@@ -224,6 +224,7 @@ gkm_secret_item_real_get_attribute (GkmObject *base, GkmSession *session, CK_ATT
+ 		identifier = gkm_secret_object_get_identifier (GKM_SECRET_OBJECT (self));
+ 		secret = gkm_secret_data_get_raw (sdata, identifier, &n_secret);
+ 		rv = gkm_attribute_set_data (attr, secret, n_secret);
++		gkm_object_mark_used (base);
+ 		g_object_unref (sdata);
+ 		return rv;
+ 
+-- 
+1.7.12.4
+

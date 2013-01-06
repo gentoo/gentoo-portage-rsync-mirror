@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/embedly
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/embedly/ChangeLog,v 1.1 2012/05/15 01:20:59 rafaelmartins Exp $
+
+*embedly-0.4.3 (15 May 2012)
+
+  15 May 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +embedly-0.4.3.ebuild, +metadata.xml:
+  Initial version.
+

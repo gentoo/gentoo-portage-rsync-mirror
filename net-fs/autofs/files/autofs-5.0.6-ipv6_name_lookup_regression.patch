@@ -1,0 +1,49 @@
+--- modules/replicated.c
++++ modules/replicated.c	
+@@ -1111,7 +1111,8 @@ static int add_host_addrs(struct host **list, const char *host,
+                          unsigned int weight, unsigned int options)
+ {
+ 	struct addrinfo hints, *ni, *this;
+-	char *name = strdup(host);
++	char *n_ptr;
++	char *name = n_ptr = strdup(host);
+ 	int len;
+ 	char buf[MAX_ERR_BUF];
+ 	int rr = 0;
+@@ -1125,15 +1126,17 @@ static int add_host_addrs(struct host **list, const char *host,
+ 	}
+ 	len = strlen(name);
+ 
+-	if (name[0] == '[' && name[--len] == ']')
++	if (name[0] == '[' && name[--len] == ']') {
+ 		name[len] = '\0';
++		name++;
++	}
+ 
+ 	memset(&hints, 0, sizeof(hints));
+ 	hints.ai_flags = AI_NUMERICHOST;
+ 	hints.ai_family = AF_UNSPEC;
+ 	hints.ai_socktype = SOCK_DGRAM;
+ 
+-	ret = getaddrinfo(name + 1, NULL, &hints, &ni);
++	ret = getaddrinfo(name, NULL, &hints, &ni);
+ 	if (ret)
+ 		goto try_name;
+ 
+@@ -1153,7 +1156,7 @@ try_name:
+ 	hints.ai_family = AF_UNSPEC;
+ 	hints.ai_socktype = SOCK_DGRAM;
+ 
+-	ret = getaddrinfo(name + 1, NULL, &hints, &ni);
++	ret = getaddrinfo(name, NULL, &hints, &ni);
+ 	if (ret) {
+ 		error(LOGOPT_ANY, "hostname lookup failed: %s",
+ 			gai_strerror(ret));
+@@ -1172,7 +1175,7 @@ try_name:
+ 	}
+ 	freeaddrinfo(ni);
+ done:
+-	free(name);
++	free(n_ptr);
+ 	return ret;
+ }

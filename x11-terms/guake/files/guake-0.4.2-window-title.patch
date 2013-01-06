@@ -1,0 +1,58 @@
+from http://guake.org/ticket/164
+
+--- a/src/guake.py	2011-09-21 02:15:42.000000000 +0300
++++ b/src/guake.py.orig	2011-09-21 02:17:46.000000000 +0300
+@@ -894,6 +894,8 @@ class Guake(SimpleGladeApp):
+         """Callback to add a new tab. Called by the accel key.
+         """
+         self.add_tab()
++	page = self.notebook.get_current_page()
++	self.window.set_title(self.term_list[page].get_window_title());
+         return True
+ 
+     def accel_prev(self, *args):
+@@ -903,6 +905,8 @@ class Guake(SimpleGladeApp):
+             self.notebook.set_current_page(self.notebook.get_n_pages()-1)
+         else:
+             self.notebook.prev_page()
++	page = self.notebook.get_current_page()
++	self.window.set_title(self.term_list[page].get_window_title());
+         return True
+ 
+     def accel_next(self, *args):
+@@ -912,6 +916,8 @@ class Guake(SimpleGladeApp):
+             self.notebook.set_current_page(0)
+         else:
+             self.notebook.next_page()
++	page = self.notebook.get_current_page()
++	self.window.set_title(self.term_list[page].get_window_title());
+         return True
+ 
+     def accel_rename(self, *args):
+@@ -989,6 +995,7 @@ class Guake(SimpleGladeApp):
+             return
+         page = self.notebook.page_num(box)
+         self.tabs.get_children()[page].set_label(vte.get_window_title())
++	self.window.set_title(vte.get_window_title());
+ 
+     def on_rename_activate(self, *args):
+         """Shows a dialog to rename the current tab.
+@@ -1188,6 +1195,8 @@ class Guake(SimpleGladeApp):
+             self.hide()
+             # avoiding the delay on next Guake show request
+             self.add_tab()
++	else:
++		self.window.set_title(self.term_list[self.notebook.get_current_page()].get_window_title());
+ 
+     def delete_shell(self, pid):
+         """This function will kill the shell on a tab, trying to send
+@@ -1224,7 +1233,9 @@ class Guake(SimpleGladeApp):
+         """Grabs the focus on the current tab.
+         """
+         page = self.notebook.get_current_page()
++	self.window.set_title(self.term_list[page].get_window_title());
+         self.term_list[page].grab_focus()
++	# self.window.set_title();
+ 
+     def select_current_tab(self, notebook, user_data, page):
+         """When current self.notebook page is changed, the tab bar

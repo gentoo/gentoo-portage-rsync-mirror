@@ -1,0 +1,12 @@
+diff --git a/tests/rhbz_599924.c b/tests/rhbz_599924.c
+index 6741fd3..531043f 100644
+--- a/tests/rhbz_599924.c
++++ b/tests/rhbz_599924.c
+@@ -27,7 +27,6 @@
+ 
+ #include <unistd.h>
+ #include <glib.h>
+-#include <glib/gthread.h>
+ #include "imsettings-info.h"
+ #include "main.h"
+ 

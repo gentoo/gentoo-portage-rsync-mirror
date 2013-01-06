@@ -1,0 +1,313 @@
+# ChangeLog for net-p2p/bitcoin-qt
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.49 2013/01/04 02:42:24 blueness Exp $
+
+*bitcoin-qt-0.7.2 (04 Jan 2013)
+
+  04 Jan 2013; Anthony G. Basile <blueness@gentoo.org> +bitcoin-qt-0.7.2.ebuild:
+  Version bump
+
+  14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove redundant USE=upnp description; it matches the global flag meaning.
+
+*bitcoin-qt-0.7.2_rc2 (06 Dec 2012)
+*bitcoin-qt-0.6.4_rc4-r1 (06 Dec 2012)
+
+  06 Dec 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.6.4_rc4-r1.ebuild, +bitcoin-qt-0.7.2_rc2.ebuild,
+  -bitcoin-qt-0.6.4_rc3.ebuild, -bitcoin-qt-0.6.4_rc4.ebuild:
+  Version bumps
+
+  09 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> bitcoin-qt-0.7.1.ebuild:
+  No need to specify a boost version anymore, as boost is unslotted; also add a
+  dependency on the multithread USE flag for 1.52.0-r1 and later.
+
+  29 Oct 2012; Anthony G. Basile <blueness@gentoo.org> bitcoin-qt-0.6.3.ebuild,
+  bitcoin-qt-0.6.4_rc3.ebuild, bitcoin-qt-0.7.0.ebuild:
+  Workaround for bug #440034
+
+*bitcoin-qt-0.5.7_rc4 (29 Oct 2012)
+*bitcoin-qt-0.6.4_rc4 (29 Oct 2012)
+*bitcoin-qt-0.7.1 (29 Oct 2012)
+*bitcoin-qt-0.6.0.10_rc4 (29 Oct 2012)
+
+  29 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.5.7_rc4.ebuild, +bitcoin-qt-0.6.0.10_rc4.ebuild,
+  +bitcoin-qt-0.6.4_rc4.ebuild, +bitcoin-qt-0.7.1.ebuild:
+  Version bumps, bug #435216
+
+  21 Oct 2012; Anthony G. Basile <blueness@gentoo.org> bitcoin-qt-0.6.3.ebuild:
+  stable arm, bug #429188
+
+*bitcoin-qt-0.7.0 (08 Oct 2012)
+*bitcoin-qt-0.6.4_rc3 (08 Oct 2012)
+*bitcoin-qt-0.6.0.10_rc3 (08 Oct 2012)
+*bitcoin-qt-0.5.7_rc3 (08 Oct 2012)
+
+  08 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.5.6.ebuild, -bitcoin-qt-0.5.7_rc1.ebuild,
+  -bitcoin-qt-0.5.7_rc2.ebuild, +bitcoin-qt-0.5.7_rc3.ebuild,
+  -bitcoin-qt-0.6.0.9.ebuild, -bitcoin-qt-0.6.0.10_rc1.ebuild,
+  -bitcoin-qt-0.6.0.10_rc2.ebuild, +bitcoin-qt-0.6.0.10_rc3.ebuild,
+  -bitcoin-qt-0.6.4_rc1.ebuild, -bitcoin-qt-0.6.4_rc2.ebuild,
+  +bitcoin-qt-0.6.4_rc3.ebuild, -bitcoin-qt-0.7.0_rc1.ebuild,
+  -bitcoin-qt-0.7.0_rc2.ebuild, +bitcoin-qt-0.7.0.ebuild:
+  Version bumps to address bug #435216
+
+  18 Sep 2012; Johannes Huber <johu@gentoo.org> bitcoin-qt-0.6.3.ebuild:
+  Stable for x86, wrt bug #429188
+
+*bitcoin-qt-0.7.0_rc2 (16 Sep 2012)
+*bitcoin-qt-0.6.4_rc2 (16 Sep 2012)
+*bitcoin-qt-0.6.0.10_rc2 (16 Sep 2012)
+*bitcoin-qt-0.5.7_rc2 (16 Sep 2012)
+
+  16 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.5.7_rc2.ebuild, +bitcoin-qt-0.6.0.9.ebuild,
+  -bitcoin-qt-0.6.0.9-r1.ebuild, +bitcoin-qt-0.6.0.10_rc2.ebuild,
+  +bitcoin-qt-0.6.4_rc2.ebuild, +bitcoin-qt-0.7.0_rc2.ebuild:
+  Version bump RC's
+
+  15 Sep 2012; Agostino Sarubbo <ago@gentoo.org> bitcoin-qt-0.6.3.ebuild:
+  Stable for amd64, wrt bug #429188
+
+*bitcoin-qt-0.6.0.9-r1 (02 Sep 2012)
+
+  02 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.6.0.9.ebuild, +bitcoin-qt-0.6.0.9-r1.ebuild:
+  Fix bad tarball issue from gitorious
+
+*bitcoin-qt-0.7.0_rc1 (30 Aug 2012)
+*bitcoin-qt-0.6.4_rc1 (30 Aug 2012)
+*bitcoin-qt-0.6.0.10_rc1 (30 Aug 2012)
+*bitcoin-qt-0.5.7_rc1 (30 Aug 2012)
+
+  30 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.5.7_rc1.ebuild, +bitcoin-qt-0.6.0.10_rc1.ebuild,
+  +bitcoin-qt-0.6.4_rc1.ebuild, +bitcoin-qt-0.7.0_rc1.ebuild:
+  Add RC's for next versions
+
+*bitcoin-qt-0.5.6 (31 Jul 2012)
+
+  31 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.5.6_rc3.ebuild, +bitcoin-qt-0.5.6.ebuild:
+  Version bump and punt older RC
+
+  26 Jul 2012; Johannes Huber <johu@gentoo.org> bitcoin-qt-0.5.6_rc2.ebuild,
+  bitcoin-qt-0.5.6_rc3.ebuild, bitcoin-qt-0.6.0.9.ebuild,
+  bitcoin-qt-0.6.3.ebuild:
+  Add missing slot dependencies on Qt.
+
+*bitcoin-qt-0.6.0.9 (15 Jul 2012)
+
+  15 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.6.0.9_rc1.ebuild, +bitcoin-qt-0.6.0.9.ebuild:
+  Bump the release candidate
+
+  26 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.6.3.ebuild:
+  Version bump
+
+*bitcoin-qt-0.6.3 (26 Jun 2012)
+*bitcoin-qt-0.6.0.9_rc1 (26 Jun 2012)
+*bitcoin-qt-0.5.6_rc3 (26 Jun 2012)
+
+  26 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.5.3.ebuild, -bitcoin-qt-0.5.5.ebuild,
+  +bitcoin-qt-0.5.6_rc3.ebuild, -bitcoin-qt-0.6.0.7.ebuild,
+  -bitcoin-qt-0.6.0.8_rc1.ebuild, -bitcoin-qt-0.6.0.8_rc2.ebuild,
+  +bitcoin-qt-0.6.0.9_rc1.ebuild, -bitcoin-qt-0.6.2.ebuild:
+  Version bumps and cleanup
+
+  21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> bitcoin-qt-0.5.6_rc2.ebuild:
+  marked x86 per bug 422219
+
+  20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> bitcoin-qt-0.5.6_rc2.ebuild:
+  Stable for amd64, wrt bug #422219
+
+*bitcoin-qt-0.6.0.8_rc2 (16 Jun 2012)
+*bitcoin-qt-0.5.6_rc2 (16 Jun 2012)
+
+  16 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.5.6_rc1.ebuild, +bitcoin-qt-0.5.6_rc2.ebuild,
+  +bitcoin-qt-0.6.0.8_rc2.ebuild:
+  Removed broken 0.5.x, add fixes
+  See: https://bitcointalk.org/?topic=87660
+
+  21 May 2012; Johannes Huber <johu@gentoo.org> bitcoin-qt-0.5.5.ebuild:
+  Stable for x86, wrt bug #415973
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> bitcoin-qt-0.5.5.ebuild:
+  Stable for amd64, wrt bug #415973
+
+  15 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.5.0.4-r1.ebuild, -bitcoin-qt-0.5.0.5-r1.ebuild,
+  -bitcoin-qt-0.5.0.6.ebuild, -bitcoin-qt-0.5.1.ebuild,
+  -bitcoin-qt-0.5.3-r2.ebuild, -bitcoin-qt-0.5.4.ebuild,
+  -bitcoin-qt-0.6.0.ebuild:
+  Remove vulnerable versions, CVE-2012-2459, bug #415973
+
+*bitcoin-qt-0.6.2 (15 May 2012)
+*bitcoin-qt-0.6.0.8_rc1 (15 May 2012)
+*bitcoin-qt-0.6.0.7 (15 May 2012)
+*bitcoin-qt-0.5.6_rc1 (15 May 2012)
+*bitcoin-qt-0.5.5 (15 May 2012)
+
+  15 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.5.5.ebuild, +bitcoin-qt-0.5.6_rc1.ebuild,
+  +bitcoin-qt-0.6.0.7.ebuild, +bitcoin-qt-0.6.0.8_rc1.ebuild,
+  +bitcoin-qt-0.6.2.ebuild:
+  Add new versions that fix CVE-2012-2459, bug #415973
+
+*bitcoin-qt-0.5.4 (27 Apr 2012)
+*bitcoin-qt-0.5.0.6 (27 Apr 2012)
+
+  27 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.5.0.6_rc3.ebuild, +bitcoin-qt-0.5.0.6.ebuild,
+  -bitcoin-qt-0.5.4_rc3.ebuild, +bitcoin-qt-0.5.4.ebuild:
+  Version bump rc3's
+
+*bitcoin-qt-0.5.4_rc3 (07 Apr 2012)
+*bitcoin-qt-0.5.0.6_rc3 (07 Apr 2012)
+
+  07 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.5.0.6_rc2.ebuild, +bitcoin-qt-0.5.0.6_rc3.ebuild,
+  -bitcoin-qt-0.5.4_rc2.ebuild, +bitcoin-qt-0.5.4_rc3.ebuild:
+  Version bump rc2's to rc3's
+
+*bitcoin-qt-0.6.0 (04 Apr 2012)
+*bitcoin-qt-0.5.4_rc2 (04 Apr 2012)
+*bitcoin-qt-0.5.0.6_rc2 (04 Apr 2012)
+
+  04 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  -files/9999-eligius_sendfee.patch, -bitcoin-qt-0.5.0.6_rc1.ebuild,
+  +bitcoin-qt-0.5.0.6_rc2.ebuild, -bitcoin-qt-0.5.4_rc1.ebuild,
+  +bitcoin-qt-0.5.4_rc2.ebuild, -bitcoin-qt-0.6.0_rc5.ebuild,
+  +bitcoin-qt-0.6.0.ebuild:
+  Version bumps
+
+  02 Apr 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Update luke-jr's email address
+
+*bitcoin-qt-0.6.0_rc5 (26 Mar 2012)
+
+  26 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  files/9999-eligius_sendfee.patch, -bitcoin-qt-0.6.0_rc4.ebuild,
+  +bitcoin-qt-0.6.0_rc5.ebuild:
+  Bump 0.6.0 to rc5
+
+  25 Mar 2012; Thomas Kahle <tomka@gentoo.org> bitcoin-qt-0.5.3.ebuild:
+  marked x86 per bug 407793
+
+*bitcoin-qt-0.5.4_rc1 (25 Mar 2012)
+*bitcoin-qt-0.5.3-r2 (25 Mar 2012)
+*bitcoin-qt-0.5.0.6_rc1 (25 Mar 2012)
+*bitcoin-qt-0.5.0.5-r1 (25 Mar 2012)
+*bitcoin-qt-0.5.0.4-r1 (25 Mar 2012)
+
+  25 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  +files/0.5.0.5+bip16-eligius_sendfee.patch, -bitcoin-qt-0.5.0.4.ebuild,
+  +bitcoin-qt-0.5.0.4-r1.ebuild, +bitcoin-qt-0.5.0.5-r1.ebuild,
+  +bitcoin-qt-0.5.0.6_rc1.ebuild, bitcoin-qt-0.5.1.ebuild,
+  bitcoin-qt-0.5.3.ebuild, -bitcoin-qt-0.5.3-r1.ebuild,
+  +bitcoin-qt-0.5.3-r2.ebuild, +bitcoin-qt-0.5.4_rc1.ebuild, metadata.xml:
+  Updates to support BIP16 required by April 1, 2012
+
+  18 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  bitcoin-qt-0.6.0_rc4.ebuild:
+  Readd dropped locales: ca_ES, cs_CZ, eu_ES, fa_IR, fr_FR, ro_RO
+
+  18 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  bitcoin-qt-0.5.0.4.ebuild:
+  Backport src_test() to 0.5.0.4
+
+*bitcoin-qt-0.6.0_rc4 (17 Mar 2012)
+*bitcoin-qt-0.5.3-r1 (17 Mar 2012)
+
+  17 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  +files/9999-eligius_sendfee.patch, +bitcoin-qt-0.5.3-r1.ebuild,
+  +bitcoin-qt-0.6.0_rc4.ebuild:
+  Added src_test() to current stable and added next rc
+
+  16 Mar 2012; Johannes Huber <johu@gentoo.org> bitcoin-qt-0.5.3.ebuild:
+  amd64 stable wanted by Agostino Sarubbo <ago@gentoo.org> wrt bug #407793.
+
+*bitcoin-qt-0.5.3 (15 Mar 2012)
+*bitcoin-qt-0.5.0.4 (15 Mar 2012)
+
+  15 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.5.0.4.ebuild, +bitcoin-qt-0.5.3.ebuild:
+  Version bumps which address bug #407793
+
+  15 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.5.0.3-r2.ebuild, -bitcoin-qt-0.5.0.4_rc3.ebuild,
+  -bitcoin-qt-0.5.2-r2.ebuild, -bitcoin-qt-0.5.3_rc3.ebuild, metadata.xml:
+  Remove unstable vulnerable versions, bug #407793
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> bitcoin-qt-0.5.1.ebuild:
+  x86 stable wrt bug #405213
+
+*bitcoin-qt-0.5.3_rc3 (05 Mar 2012)
+*bitcoin-qt-0.5.0.4_rc3 (05 Mar 2012)
+
+  05 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.5.0.3.ebuild, -bitcoin-qt-0.5.0.4_rc2-r1.ebuild,
+  +bitcoin-qt-0.5.0.4_rc3.ebuild, -bitcoin-qt-0.5.2.ebuild,
+  -bitcoin-qt-0.5.3_rc2-r1.ebuild, +bitcoin-qt-0.5.3_rc3.ebuild:
+  Version bumps and removed older
+
+  29 Feb 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog, Manifest:
+  Fixed the Header for ChangeLog
+
+  25 Feb 2012; Agostino Sarubbo <ago@gentoo.org> bitcoin-qt-0.5.1.ebuild:
+  Stable for amd64, wrt bug #405213
+
+*bitcoin-qt-0.5.3_rc2-r1 (21 Feb 2012)
+*bitcoin-qt-0.5.2-r2 (21 Feb 2012)
+*bitcoin-qt-0.5.0.4_rc2-r1 (21 Feb 2012)
+*bitcoin-qt-0.5.0.3-r2 (21 Feb 2012)
+
+  21 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.5.0.3-r1.ebuild, +bitcoin-qt-0.5.0.3-r2.ebuild,
+  -bitcoin-qt-0.5.0.4_rc2.ebuild, +bitcoin-qt-0.5.0.4_rc2-r1.ebuild,
+  -bitcoin-qt-0.5.2-r1.ebuild, +bitcoin-qt-0.5.2-r2.ebuild,
+  -bitcoin-qt-0.5.3_rc2.ebuild, +bitcoin-qt-0.5.3_rc2-r1.ebuild:
+  Update BIP17 patch
+
+*bitcoin-qt-0.5.3_rc2 (16 Feb 2012)
+*bitcoin-qt-0.5.0.4_rc2 (16 Feb 2012)
+
+  16 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.5.0.4_rc2.ebuild, +bitcoin-qt-0.5.3_rc2.ebuild:
+  Moved from luke-jr's bitcoin overlay
+
+*bitcoin-qt-0.5.2-r1 (08 Feb 2012)
+*bitcoin-qt-0.5.0.3-r1 (08 Feb 2012)
+
+  08 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.5.0.3-r1.ebuild, +bitcoin-qt-0.5.2-r1.ebuild, metadata.xml:
+  Add USE=bip17 to validate new P2SH transactions
+
+*bitcoin-qt-0.5.2 (11 Jan 2012)
+*bitcoin-qt-0.5.0.3 (11 Jan 2012)
+
+  11 Jan 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoin-qt-0.5.0.3_rc1.ebuild, +bitcoin-qt-0.5.0.3.ebuild,
+  -bitcoin-qt-0.5.2_rc1.ebuild, +bitcoin-qt-0.5.2.ebuild:
+  Bumps from release candidates
+
+*bitcoin-qt-0.5.2_rc1 (06 Jan 2012)
+*bitcoin-qt-0.5.0.3_rc1 (06 Jan 2012)
+
+  06 Jan 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.5.0.3_rc1.ebuild, +bitcoin-qt-0.5.2_rc1.ebuild:
+  Moved from luke-jr's bitcoin overlay
+
+  23 Dec 2011; Anthony G. Basile <blueness@gentoo.org> bitcoin-qt-0.5.1.ebuild:
+  Added md2k7-asyouwish license for icons
+
+*bitcoin-qt-0.5.1 (23 Dec 2011)
+
+  23 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.5.1.ebuild, +metadata.xml:
+  Initial commit, proxy maintaining for Luke Dashjr, bug #328391

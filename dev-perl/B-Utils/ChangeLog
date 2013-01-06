@@ -1,0 +1,80 @@
+# ChangeLog for dev-perl/B-Utils
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Utils/ChangeLog,v 1.18 2012/11/18 11:08:30 robbat2 Exp $
+
+  18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Drop duplication of myself as a maintainer where there is a herd.
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  21 Apr 2012; Torsten Veller <tove@gentoo.org> -B-Utils-0.170.0.ebuild,
+  -B-Utils-0.190.0.ebuild:
+  Cleanup
+
+*B-Utils-0.210.0 (30 Mar 2012)
+
+  30 Mar 2012; Torsten Veller <tove@gentoo.org> +B-Utils-0.210.0.ebuild:
+  Version bump
+
+*B-Utils-0.190.0 (13 Mar 2012)
+
+  13 Mar 2012; Torsten Veller <tove@gentoo.org> +B-Utils-0.190.0.ebuild:
+  Version bump
+
+  18 Feb 2012; Torsten Veller <tove@gentoo.org> -B-Utils-0.150.0.ebuild:
+  Cleanup
+
+*B-Utils-0.170.0 (02 Dec 2011)
+
+  02 Dec 2011; Torsten Veller <tove@gentoo.org> +B-Utils-0.170.0.ebuild:
+  Version bump
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org> -B-Utils-0.140.0.ebuild:
+  Cleanup
+
+*B-Utils-0.150.0 (19 Apr 2011)
+
+  19 Apr 2011; Torsten Veller <tove@gentoo.org> +B-Utils-0.150.0.ebuild:
+  Version bump
+
+  03 Apr 2011; Torsten Veller <tove@gentoo.org> -B-Utils-0.11.ebuild,
+  -B-Utils-0.120.ebuild, -B-Utils-0.130.ebuild:
+  Cleanup
+
+*B-Utils-0.140.0 (20 Mar 2011)
+
+  20 Mar 2011; Torsten Veller <tove@gentoo.org> +B-Utils-0.140.0.ebuild:
+  Version bump. No code changes
+
+*B-Utils-0.130 (02 Feb 2011)
+
+  02 Feb 2011; Torsten Veller <tove@gentoo.org> +B-Utils-0.130.ebuild:
+  Version bump
+
+*B-Utils-0.120 (24 Jan 2011)
+
+  24 Jan 2011; Torsten Veller <tove@gentoo.org> +B-Utils-0.120.ebuild:
+  Version bump
+
+  10 Apr 2010; Torsten Veller <tove@gentoo.org> -B-Utils-0.08.ebuild:
+  Cleanup
+
+*B-Utils-0.11 (16 Jan 2010)
+
+  16 Jan 2010; Torsten Veller <tove@gentoo.org> +B-Utils-0.11.ebuild:
+  Version bump
+
+  07 Sep 2009; Torsten Veller <tove@gentoo.org> -B-Utils-0.07.ebuild:
+  Cleanup
+
+*B-Utils-0.08 (05 Sep 2009)
+
+  05 Sep 2009; Torsten Veller <tove@gentoo.org> +B-Utils-0.08.ebuild:
+  Version bump
+
+*B-Utils-0.07 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org> +B-Utils-0.07.ebuild,
+  +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.

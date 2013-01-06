@@ -1,0 +1,20 @@
+--- src/Makefile.in.org	2006-03-16 11:53:33.000000000 +0100
++++ src/Makefile.in	2012-11-05 03:45:48.854646487 +0100
+@@ -35,7 +35,7 @@
+ 
+ top_builddir = .
+ 
+-CC = @echo "    Compiling" [$@] ; @CC@
++CC = @CC@
+ PACKAGE = @PACKAGE@
+ VERSION = @VERSION@
+ 
+@@ -60,7 +60,7 @@
+ whowatch_LDFLAGS = 
+ CFLAGS = @CFLAGS@ -Wall -I. -ggdb
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-CCLD = @echo "    Creating" $@ ; @CC@
++CCLD = @CC@
+ LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
+ 
+ all: whowatch

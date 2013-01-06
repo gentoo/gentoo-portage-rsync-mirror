@@ -1,0 +1,48 @@
+# ChangeLog for app-vim/csv
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/csv/ChangeLog,v 1.9 2012/08/03 10:39:20 radhermit Exp $
+
+  03 Aug 2012; Tim Harder <radhermit@gentoo.org> -csv-0.21.ebuild:
+  Remove old.
+
+*csv-0.26 (03 Aug 2012)
+
+  03 Aug 2012; Tim Harder <radhermit@gentoo.org> +csv-0.26.ebuild:
+  Version bump.
+
+*csv-0.22 (13 Nov 2011)
+
+  13 Nov 2011; Tim Harder <radhermit@gentoo.org> -csv-0.18.ebuild,
+  -csv-0.19.ebuild, +csv-0.22.ebuild:
+  Version bump and remove old.
+
+*csv-0.21 (10 Oct 2011)
+
+  10 Oct 2011; Tim Harder <radhermit@gentoo.org> +csv-0.21.ebuild:
+  Version bump.
+
+  01 Oct 2011; Tim Harder <radhermit@gentoo.org> -csv-0.16.ebuild,
+  -csv-0.17.ebuild:
+  Remove old.
+
+*csv-0.19 (01 Oct 2011)
+
+  01 Oct 2011; Tim Harder <radhermit@gentoo.org> +csv-0.19.ebuild:
+  Version bump.
+
+*csv-0.18 (09 Sep 2011)
+
+  09 Sep 2011; Tim Harder <radhermit@gentoo.org> +csv-0.18.ebuild:
+  Version bump.
+
+*csv-0.17 (17 Aug 2011)
+
+  17 Aug 2011; Tim Harder <radhermit@gentoo.org> +csv-0.17.ebuild:
+  Version bump
+
+*csv-0.16 (30 Jul 2011)
+
+  30 Jul 2011; Tim Harder <radhermit@gentoo.org> +csv-0.16.ebuild,
+  +metadata.xml:
+  Initial import.
+

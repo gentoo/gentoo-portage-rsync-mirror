@@ -1,0 +1,14 @@
+Index: ace-1.3/games/spider.c
+===================================================================
+--- ace-1.3.orig/games/spider.c
++++ ace-1.3/games/spider.c
+@@ -20,8 +20,8 @@
+ #include <string.h>
+ #include <time.h>
+ 
++#include "imagelib.h"
+ #include "cards.h"
+-//#include "imagelib.h"
+ 
+ #define W CARD_WIDTH
+ #define H CARD_HEIGHT

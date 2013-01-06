@@ -1,0 +1,27 @@
+Fix the lowlevel test with the batteries USE flag
+
+--- a/test_pgocaml_lowlevel.ml	2012-04-10 20:45:04.000000000 +0200
++++ b/test_pgocaml_lowlevel.ml	2012-09-15 16:45:37.104790274 +0200
+@@ -22,7 +22,11 @@
+ 
+ open Printf
+ 
++IFDEF USE_BATTERIES THEN
++module List = BatList
++ELSE
+ open ExtList
++ENDIF
+ 
+ let print_row i row =
+   printf "row %d: [%s]\n" i
+--- a/Makefile	2012-07-04 19:53:31.000000000 +0200
++++ b/Makefile	2012-09-15 17:00:58.384820257 +0200
+@@ -84,7 +84,7 @@
+ #
+ 
+ test_pgocaml_lowlevel$(EXECUTABLE_SUFFIX): test_pgocaml_lowlevel.cmo pgocaml.cma
+-	ocamlfind ocamlc $(OCAMLCFLAGS) $(OCAMLCPACKAGES) $(OCAMLCLIBS) pgocaml.cma -o $@ $<
++	ocamlfind ocamlc $(OCAMLCFLAGS) $(OCAMLSYNTAX) $(OCAMLCPACKAGES) $(OCAMLCLIBS) pgocaml.cma -o $@ $<
+ 
+ test_pgocaml$(EXECUTABLE_SUFFIX): test_pgocaml.cmo pgocaml.cma
+ 	ocamlfind ocamlc $(OCAMLCFLAGS) $(OCAMLCPACKAGES) $(OCAMLCLIBS) pgocaml.cma -o $@ $<

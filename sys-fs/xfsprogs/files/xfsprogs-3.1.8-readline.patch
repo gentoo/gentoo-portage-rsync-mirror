@@ -1,0 +1,35 @@
+From 52548f087e9c5ff05c9f43c859114cf2066f133b Mon Sep 17 00:00:00 2001
+From: Mike Frysinger <vapier@gentoo.org>
+Date: Sat, 25 Aug 2012 19:06:28 -0400
+Subject: [PATCH] libxcmd: link against readline
+
+This library uses readline funcs (the input.c file), so we need to link
+this shared library against it.
+
+URL: https://bugs.gentoo.org/432644
+Reported-by: David Badia <dbadia@gmail.com>
+Signed-off-by: Mike Frysinger <vapier@gentoo.org>
+---
+ libxcmd/Makefile |    2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/libxcmd/Makefile b/libxcmd/Makefile
+index b3544f4..ce082a5 100644
+--- a/libxcmd/Makefile
++++ b/libxcmd/Makefile
+@@ -22,10 +22,12 @@ endif
+ 
+ ifeq ($(ENABLE_READLINE),yes)
+ LCFLAGS += -DENABLE_READLINE
++LTLIBS += $(LIBREADLINE) $(LIBTERMCAP)
+ endif
+ 
+ ifeq ($(ENABLE_EDITLINE),yes)
+ LCFLAGS += -DENABLE_EDITLINE
++LTLIBS += $(LIBEDITLINE) $(LIBTERMCAP)
+ endif
+ 
+ default: ltdepend $(LTLIBRARY)
+-- 
+1.7.9.7
+

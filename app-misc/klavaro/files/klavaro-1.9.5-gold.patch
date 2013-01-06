@@ -1,0 +1,16 @@
+ configure.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/configure.in b/configure.in
+index 781b9e1..3f4da1e 100644
+--- a/configure.in
++++ b/configure.in
+@@ -18,7 +18,7 @@ AC_HEADER_STDC
+ AC_CHECK_HEADERS([locale.h stdlib.h string.h unistd.h curl/curl.h gtkdatabox.h])
+ 
+ dnl For Linux:
+-pkg_modules="gtk+-2.0 >= 2.16.0"
++pkg_modules="gtk+-2.0 >= 2.16.0 gmodule-2.0"
+ dnl For Windows:
+ dnl pkg_modules="gtk+-2.0 >= 2.16.0 gtkdatabox >= 0.9.1.1"
+ PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])

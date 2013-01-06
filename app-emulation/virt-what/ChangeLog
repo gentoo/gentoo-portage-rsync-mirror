@@ -1,0 +1,22 @@
+# ChangeLog for app-emulation/virt-what
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/ChangeLog,v 1.4 2012/11/06 15:18:29 cardoe Exp $
+
+  06 Nov 2012; Doug Goldstein <cardoe@gentoo.org> virt-what-1.12.ebuild:
+  Version bump.
+
+*virt-what-1.12 (06 Nov 2012)
+
+  06 Nov 2012; Doug Goldstein <cardoe@gentoo.org> +virt-what-1.12.ebuild:
+  Version bump.
+
+*virt-what-1.11 (29 Jul 2011)
+
+  29 Jul 2011; Doug Goldstein <cardoe@gentoo.org> +virt-what-1.11.ebuild:
+  Version bump. bug #376891
+
+*virt-what-1.2 (16 Jul 2010)
+
+  16 Jul 2010; Doug Goldstein <cardoe@gentoo.org> +virt-what-1.2.ebuild,
+  +metadata.xml:
+  Add initial version to Gentoo

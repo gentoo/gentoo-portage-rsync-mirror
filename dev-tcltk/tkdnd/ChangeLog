@@ -1,0 +1,15 @@
+# ChangeLog for dev-tcltk/tkdnd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkdnd/ChangeLog,v 1.3 2012/09/07 10:50:42 xarthisius Exp $
+
+  07 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Fix herd in metadata.xml
+
+  07 Jan 2012; Justin Lecher <jlec@gentoo.org> tkdnd-2.2.ebuild:
+  Adding keywords for ~amd64 ~amd64-linux ~x86-linux
+
+*tkdnd-2.2 (06 Jan 2012)
+
+  06 Jan 2012; Justin Lecher <jlec@gentoo.org> +tkdnd-2.2.ebuild,
+  +metadata.xml:
+  Imported from sunrise

@@ -1,0 +1,13 @@
+Index: usr_sbin/Makefile
+===================================================================
+--- usr_sbin/Makefile	(revision 4670)
++++ usr_sbin/Makefile	(revision 4671)
+@@ -7,6 +7,8 @@
+ 
+ all: libccstools.so $(BUILD_FILES)
+ 
++$(BUILD_FILES): libccstools.so
++
+ /usr/include/curses.h:
+ 	@echo "/usr/include/curses.h is missing."
+ 	@echo "Run 'yum install ncurses-devel' or 'apt-get install libncurses-dev'"

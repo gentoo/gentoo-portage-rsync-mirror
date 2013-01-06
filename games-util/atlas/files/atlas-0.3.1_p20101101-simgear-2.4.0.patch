@@ -1,0 +1,12 @@
+diff -ruN atlas-0.3.1_p20101101/src/Subbucket.cxx my/src/Subbucket.cxx
+--- atlas-0.3.1_p20101101/src/Subbucket.cxx	2010-04-26 23:15:29.000000000 +0200
++++ my/src/Subbucket.cxx	2011-10-16 05:11:01.175028326 +0200
+@@ -72,7 +72,7 @@
+     // All points within the chunk are relative to the reference
+     // point.  Therefore, to place points in absolute 3D space, we
+     // need to add the reference point to all points.
+-    const SGVec3<double>& gbs_p = _chunk.get_gbs_center2();
++    const SGVec3<double>& gbs_p = _chunk.get_gbs_center();
+ 
+     // Get all the points, and use them to set our maximum elevation
+     // figure.

@@ -1,0 +1,78 @@
+# ChangeLog for app-text/qpdf
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.19 2013/01/03 06:29:37 radhermit Exp $
+
+*qpdf-4.0.0 (03 Jan 2013)
+
+  03 Jan 2013; Tim Harder <radhermit@gentoo.org> +qpdf-4.0.0.ebuild:
+  Version bump.
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> qpdf-3.0.2.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  19 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qpdf-3.0.2.ebuild:
+  Add ~ia64, wrt bug #428356
+
+  06 Nov 2012; Alexis Ballier <aballier@gentoo.org> qpdf-3.0.2.ebuild:
+  keyword ~amd64-fbsd
+
+  04 Oct 2012;  <naota@gentoo.org> qpdf-3.0.2.ebuild:
+  Add ~x86-fbsd wrt bug #428356
+
+  21 Sep 2012; Anthony G. Basile <blueness@gentoo.org> qpdf-3.0.1.ebuild,
+  qpdf-3.0.2.ebuild:
+  Keyword ~ppc64, bug #428356
+
+*qpdf-3.0.2 (07 Sep 2012)
+
+  07 Sep 2012; Tim Harder <radhermit@gentoo.org> +qpdf-3.0.2.ebuild:
+  Version bump.
+
+  01 Sep 2012; Anthony G. Basile <blueness@gentoo.org> qpdf-3.0.1.ebuild:
+  Keyword ~arm, bug #428356
+
+  01 Sep 2012; Anthony G. Basile <blueness@gentoo.org> qpdf-3.0.1.ebuild:
+  Keyword ~ppc, bug #428356
+
+  30 Aug 2012; Anthony G. Basile <blueness@gentoo.org> qpdf-3.0.1.ebuild:
+  Keyword ~mips
+
+  27 Aug 2012; Tim Harder <radhermit@gentoo.org> -qpdf-2.3.1.ebuild,
+  -files/qpdf-2.3.1-gcc47.patch, -files/qpdf-2.3.1-libpcre-8.30.patch,
+  -qpdf-3.0.0.ebuild:
+  Remove old.
+
+  23 Aug 2012; Jeroen Roovers <jer@gentoo.org> qpdf-3.0.1.ebuild:
+  Marked ~hppa (bug #428356).
+
+*qpdf-3.0.1 (19 Aug 2012)
+
+  19 Aug 2012; Tim Harder <radhermit@gentoo.org> +qpdf-3.0.1.ebuild:
+  Version bump.
+
+*qpdf-3.0.0 (06 Aug 2012)
+
+  06 Aug 2012; Tim Harder <radhermit@gentoo.org> +qpdf-3.0.0.ebuild:
+  Version bump.
+
+  23 May 2012; Tim Harder <radhermit@gentoo.org> qpdf-2.3.1.ebuild,
+  +files/qpdf-2.3.1-gcc47.patch:
+  Fix build with gcc-4.7 (bug #413935).
+
+  19 Feb 2012; Tim Harder <radhermit@gentoo.org> qpdf-2.3.1.ebuild,
+  +files/qpdf-2.3.1-libpcre-8.30.patch:
+  Fix build with libpcre-8.30 (bug #402371).
+
+  09 Jan 2012; Tim Harder <radhermit@gentoo.org> -qpdf-2.3.0.ebuild:
+  Remove old.
+
+*qpdf-2.3.1 (31 Dec 2011)
+
+  31 Dec 2011; Tim Harder <radhermit@gentoo.org> +qpdf-2.3.1.ebuild:
+  Version bump.
+
+*qpdf-2.3.0 (20 Dec 2011)
+
+  20 Dec 2011; Tim Harder <radhermit@gentoo.org> +qpdf-2.3.0.ebuild,
+  +metadata.xml:
+  Initial import (bug #394651). Ebuild by me.

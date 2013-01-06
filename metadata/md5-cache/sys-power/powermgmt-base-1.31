@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=Script to test whether computer is running on AC power
+EAPI=2
+HOMEPAGE=http://packages.debian.org/testing/utils/powermgmt-base
+IUSE=+pm-utils
+KEYWORDS=amd64 arm ia64 ppc ppc64 x86
+LICENSE=GPL-2
+RDEPEND=sys-apps/gawk sys-apps/grep virtual/modutils pm-utils? ( >=sys-power/pm-utils-1.4.1 )
+SLOT=0
+SRC_URI=mirror://debian/pool/main/p/powermgmt-base/powermgmt-base_1.31.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=b817d836615c3cbbe6a2dc6cb5434952

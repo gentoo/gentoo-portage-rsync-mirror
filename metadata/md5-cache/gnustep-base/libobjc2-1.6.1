@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=>=sys-devel/clang-2.9
+DESCRIPTION=GNUstep Objective-C runtime
+EAPI=4
+HOMEPAGE=http://www.gnustep.org
+IUSE=+boehm-gc
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=boehm-gc? ( dev-libs/boehm-gc )
+SLOT=0
+SRC_URI=http://download.gna.org/gnustep/libobjc2-1.6.1.tar.bz2 ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-make-2.6.2.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=346a843c61a270b540fe3984379f4250

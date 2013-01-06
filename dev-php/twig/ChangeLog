@@ -1,0 +1,15 @@
+# ChangeLog for dev-php/twig
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/twig/ChangeLog,v 1.2 2012/10/10 07:21:44 djc Exp $
+
+*twig-1.10.0 (10 Oct 2012)
+
+  10 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> +twig-1.10.0.ebuild,
+  metadata.xml:
+  Version bump to 1.10.0.
+
+*twig-1.0.0 (27 Mar 2011)
+
+  27 Mar 2011; <olemarkus@gentoo.org> +twig-1.0.0.ebuild, +metadata.xml:
+  Initial version
+

@@ -1,0 +1,18 @@
+From: hasufell <julian.ospald@googlemail.com>
+Date: Sun Apr 22 23:43:33 UTC 2012
+
+fix devil library variables
+
+!! applied on top of libtool.patch !!
+
+--- src/CMakeLists.txt
++++ src/CMakeLists.txt
+@@ -176,7 +176,7 @@
+ 
+ set(THIS_LIB_LINK_LIBS ${Boost_LIBRARIES} ${OPENGL_LIBRARIES} ${FREETYPE_LIBRARIES} ${LIBTOOL_LIB})
+ if (USE_DEVIL)
+-    list(APPEND THIS_LIB_LINK_LIBS ${IL_LIBRARY} ${ILUT_LIBRARY})
++	list(APPEND THIS_LIB_LINK_LIBS ${IL_LIBRARIES} ${ILU_LIBRARIES} ${ILUT_LIBRARIES})
+ else ()
+     if (JPEG_FOUND)
+         list(APPEND THIS_LIB_LINK_LIBS ${JPEG_LIBRARIES})

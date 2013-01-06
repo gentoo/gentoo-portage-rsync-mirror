@@ -1,0 +1,22 @@
+# ChangeLog for net-analyzer/raddump
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/raddump/ChangeLog,v 1.4 2007/06/17 16:39:04 opfer Exp $
+
+  17 Jun 2007; Christian Faulhammer <opfer@gentoo.org> raddump-0.3.1.ebuild:
+  stable x86, bug 181593
+
+  15 Jun 2007; Christoph Mende <angelos@gentoo.org> raddump-0.3.1.ebuild:
+  Stable on amd64 wrt bug 181593
+
+*raddump-0.3.1 (12 May 2007)
+
+  12 May 2007; Robin H. Johnson <robbat2@gentoo.org> raddump-0.2.1.ebuild,
+  +raddump-0.3.1.ebuild:
+  Version bump, per meatoo status.
+
+*raddump-0.2.1 (30 May 2006)
+
+  30 May 2006; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +raddump-0.2.1.ebuild:
+  Initial commit, based on submission from bug #82035.
+

@@ -1,0 +1,19 @@
+# ChangeLog for dev-python/python-urljr
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-urljr/ChangeLog,v 1.3 2010/07/08 16:08:43 arfrever Exp $
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-urljr-1.0.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  31 May 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  python-urljr-1.0.1.ebuild:
+  Marked ~amd64, bug #180481.
+
+*python-urljr-1.0.1 (31 May 2007)
+
+  31 May 2007; Rob Cakebread <pythonhead@gentoo.org>
+  +files/python-urljr-1.0.1-gentoo-test_fetchers.patch,
+  +python-urljr-1.0.1.ebuild:
+  Initial commit.
+

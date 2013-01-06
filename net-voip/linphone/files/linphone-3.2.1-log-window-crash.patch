@@ -1,0 +1,12 @@
+=== modified file 'gtk-glade/log.glade'
+--- gtk-glade/log.glade	2010-02-12 09:04:09 +0000
++++ gtk-glade/log.glade	2010-02-12 09:04:42 +0000
+@@ -13,6 +13,7 @@
+     <property name="deletable">False</property>
+     <property name="has_separator">False</property>
+     <signal name="response" handler="gtk_widget_hide"/>
++    <signal name="delete-event" handler="gtk_widget_hide"/>
+     <child internal-child="vbox">
+       <widget class="GtkVBox" id="dialog-vbox1">
+         <property name="visible">True</property>
+

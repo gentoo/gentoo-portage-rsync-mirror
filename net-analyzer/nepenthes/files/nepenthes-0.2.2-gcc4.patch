@@ -1,0 +1,26 @@
+=== modified file 'nepenthes-core/include/Config.hpp'
+--- nepenthes-core/include/Config.hpp	2009-02-03 09:39:19 +0000
++++ nepenthes-core/include/Config.hpp	2009-02-03 09:40:10 +0000
+@@ -32,6 +32,8 @@
+ 
+ #include <vector>
+ #include <map>
++#include <cstring>
++#include <stdlib.h>
+ 
+ // mmap()
+ #ifdef WIN32
+
+=== modified file 'nepenthes-core/include/Nepenthes.hpp'
+--- nepenthes-core/include/Nepenthes.hpp	2009-02-03 09:39:19 +0000
++++ nepenthes-core/include/Nepenthes.hpp	2009-02-03 09:40:12 +0000
+@@ -40,6 +40,8 @@
+ 
+ #include <stdint.h>
+ #include <string>
++#include <cstring>
++#include <cstdlib>
+ 
+ typedef unsigned char byte;
+ 
+

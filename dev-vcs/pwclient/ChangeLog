@@ -1,0 +1,9 @@
+# ChangeLog for dev-vcs/pwclient
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/pwclient/ChangeLog,v 1.1 2012/12/01 22:41:40 vapier Exp $
+
+*pwclient-20121105131501 (01 Dec 2012)
+
+  01 Dec 2012; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +pwclient-20121105131501.ebuild:
+  Initial ebuild for patchwork client.

@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/pecl-rrd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-rrd/ChangeLog,v 1.1 2012/02/22 22:04:03 mabi Exp $
+
+*pecl-rrd-1.0.5 (22 Feb 2012)
+
+  22 Feb 2012; Matti Bickel <mabi@gentoo.org> +metadata.xml,
+  +pecl-rrd-1.0.5.ebuild:
+  import on request from Grzegorz Chwesewicz (bug #389289)
+

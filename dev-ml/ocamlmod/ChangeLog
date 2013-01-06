@@ -1,0 +1,20 @@
+# ChangeLog for dev-ml/ocamlmod
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlmod/ChangeLog,v 1.4 2012/07/09 21:06:43 ulm Exp $
+
+  09 Jul 2012; Ulrich Müller <ulm@gentoo.org> ocamlmod-0.0.3.ebuild:
+  Update LICENSE, bug 425140.
+
+  18 May 2012; Alexis Ballier <aballier@gentoo.org> -ocamlmod-0.0.1.ebuild:
+  remove old
+
+*ocamlmod-0.0.3 (05 May 2012)
+
+  05 May 2012; Alexis Ballier <aballier@gentoo.org> +ocamlmod-0.0.3.ebuild:
+  version bump
+
+*ocamlmod-0.0.1 (28 Mar 2012)
+
+  28 Mar 2012; Alexis Ballier <aballier@gentoo.org> +ocamlmod-0.0.1.ebuild,
+  +metadata.xml:
+  initial import, ebuild by me

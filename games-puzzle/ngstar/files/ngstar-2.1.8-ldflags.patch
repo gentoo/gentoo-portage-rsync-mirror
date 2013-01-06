@@ -1,0 +1,20 @@
+--- src/Makefile.old	2010-09-10 09:22:06.000000000 +0200
++++ src/Makefile	2010-09-10 09:33:20.000000000 +0200
+@@ -56,8 +56,7 @@
+ 
+ $(BIN) : $(SOURCE) $(BIN_DEPS)
+ 	echo "Compiling $(BIN)"
+-	$(CXX) $< $(BIN_DEPS) -o $@ $(CC_LIBS) $(CC_INCLUDES) $(CPPFLAGS)
+-	strip -s $@
++	$(CXX) ${LDFLAGS} $< $(BIN_DEPS) -o $@ $(CC_LIBS) $(CC_INCLUDES) $(CPPFLAGS)
+ ifdef USE_FLTK2
+ 	-ln -s `basename $(BIN)` $(BIN_FLTK2)
+ endif
+@@ -68,7 +67,6 @@
+ $(BIN_STATIC) : $(SOURCE) $(BIN_DEPS)
+ 	echo "Compiling $(BIN)"
+ 	$(CXX) -static $< $(BIN_DEPS) -o $@ $(CC_LIBS_STATIC) $(CC_INCLUDES) $(CPPFLAGS)
+-	strip -s $@
+ ifdef USE_FLTK2
+ 	-ln -s `basename $(BIN_STATIC)` $(BIN_STATIC_FLTK2)
+ endif

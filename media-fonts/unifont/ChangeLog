@@ -1,0 +1,134 @@
+# ChangeLog for media-fonts/unifont
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.37 2012/01/08 04:30:18 dirtyepic Exp $
+
+  08 Jan 2012; Ryan Hill <dirtyepic@gentoo.org> -unifont-1.0-r4.ebuild,
+  unifont-5.1.20080914.ebuild:
+  Stabilize on ppc/ppc64 (bug #393767). Fix LICENCE (bug #395179). Remove old.
+
+  18 Dec 2011; Raúl Porcel <armin76@gentoo.org> unifont-5.1.20080914.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #393767
+
+  15 Dec 2011; Agostino Sarubbo <ago@gentoo.org> unifont-5.1.20080914.ebuild:
+  Stable for AMD64, wrt bug #393767
+
+  14 Dec 2011; Markus Meier <maekke@gentoo.org> unifont-5.1.20080914.ebuild:
+  arm stable, bug #393767
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  unifont-5.1.20080914.ebuild:
+  x86 stable wrt bug #393767
+
+  02 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  unifont-5.1.20080914.ebuild:
+  Drop removed command from ebuild.
+
+*unifont-5.1.20080914 (31 Dec 2008)
+
+  31 Dec 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/unifont-5.1.20080914-gentoo.patch, -unifont-1.0-r3.ebuild,
+  +unifont-5.1.20080914.ebuild:
+  Version bumped, bug #236101. Removed old version.
+
+  16 Jun 2008; Joseph Jezak <josejx@gentoo.org> unifont-1.0-r4.ebuild:
+  Marked ppc stable.
+
+  21 Mar 2008; Samuli Suominen <drac@gentoo.org> unifont-1.0-r4.ebuild:
+  amd64 stable
+
+  05 Feb 2008; Markus Rothe <corsair@gentoo.org> unifont-1.0-r4.ebuild:
+  Stable on ppc64
+
+  23 Jan 2008; Raúl Porcel <armin76@gentoo.org> unifont-1.0-r4.ebuild:
+  alpha/ia64/sparc/x86 stable
+
+*unifont-1.0-r4 (04 Aug 2007)
+
+  04 Aug 2007; Ryan Hill <dirtyepic@gentoo.org> +unifont-1.0-r4.ebuild:
+  Bump patchlevel.  Convert to font.elass.
+
+  22 Jul 2007; Ryan Hill <dirtyepic@gentoo.org> -unifont-1.0-r2.ebuild,
+  unifont-1.0-r3.ebuild:
+  Remove virtual/x11, old version.
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> unifont-1.0-r3.ebuild:
+  Add ~x86-fbsd keyword, restrict binchecks and strip.
+
+  26 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> unifont-1.0-r3.ebuild:
+  Add ~x86-fbsd keyword.
+
+  30 Oct 2006; Simon Stelling <blubb@gentoo.org> unifont-1.0-r3.ebuild:
+  stable on amd64
+
+  23 Oct 2006; Markus Rothe <corsair@gentoo.org> unifont-1.0-r3.ebuild:
+  Stable on ppc64; bug #152333
+
+  22 Oct 2006; Matti Bickel <mabi@gentoo.org> unifont-1.0-r3.ebuild:
+  Stable on ppc wrt bug #152333
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> unifont-1.0-r3.ebuild:
+  Stable on Alpha.
+
+  07 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> unifont-1.0-r3.ebuild:
+  Stable on sparc
+
+  12 Jul 2006; Aron Griffis <agriffis@gentoo.org> unifont-1.0-r3.ebuild:
+  Mark 1.0-r3 stable on ia64
+
+  23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  unifont-1.0-r2.ebuild:
+  Port to modular X.
+
+*unifont-1.0-r3 (11 Jan 2006)
+
+  11 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> +unifont-1.0-r3.ebuild:
+  Fix DEPEND for modular-X.
+
+  23 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org> unifont-1.0-r2.ebuild:
+  Stable on sparc
+
+  23 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> unifont-1.0-r2.ebuild:
+  Added ~sparc
+
+  15 Jul 2005; Diego Pettenò <flameeyes@gentoo.org> unifont-1.0-r2.ebuild:
+  Stable on amd64.
+
+  16 Dec 2004; Markus Rothe <corsair@gentoo.org> unifont-1.0-r2.ebuild:
+  Stable on ppc64
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org> unifont-1.0-r2.ebuild:
+  Marked ~ppc64; bug #68103
+
+  29 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> unifont-1.0-r2.ebuild:
+  Stable on alpha and ppc.
+
+  02 Aug 2004; <SeJo@gentoo.org> unifont-1.0-r2.ebuild:
+  added ~ppc keyword
+
+  26 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> unifont-1.0-r2.ebuild:
+  Changed to use Debian mirror
+
+  26 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> unifont-1.0-r1.ebuild,
+  unifont-1.0-r2.ebuild, unifont-1.0.ebuild:
+  Marked stable on x86. Added eutils for epatch. Removed old ebuilds.
+
+  03 Feb 2004; <augustus@gentoo.org> unifont-1.0-r2.ebuild:
+  Added ~amd64 keyword.
+
+*unifont-1.0-r2 (23 Jan 2004)
+
+  23 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> unifont-1.0-r2.ebuild:
+  Included split single and double width fonts. Suggested by jochen
+  <jochen.eisinger@gmx.de> in bug #39044
+
+*unifont-1.0-r1 (22 Jan 2004)
+
+  22 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> unifont-1.0-r1.ebuild:
+  Removed chkfontpath from DEPEND. See bug #36109
+
+*unifont-1.0 (03 Oct 2003)
+
+  03 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> unifont-1.0.ebuild:
+  Initial import. Ebuild submitted by Zhen Lin <lowzl@hotmail.com>
+  See Bug #27700
+

@@ -1,0 +1,11 @@
+--- ./IceE-1.3.0/cppe/Makefile.orig	2008-12-29 11:13:32.000000000 +0200
++++ ./IceE-1.3.0/cppe/Makefile	2008-12-29 11:13:39.000000000 +0200
+@@ -11,7 +11,7 @@
+ 
+ include $(top_srcdir)/config/Make.rules
+ 
+-SUBDIRS		= src include test demo
++SUBDIRS		= src include
+ 
+ INSTALL_SUBDIRS = $(install_bindir) $(install_libdir) $(install_includedir)
+ 

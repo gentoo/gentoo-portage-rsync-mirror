@@ -1,0 +1,75 @@
+# ChangeLog for dev-python/paver
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.18 2012/11/20 20:53:56 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> paver-1.1.1.ebuild:
+  Stable for x86, wrt bug #441284
+
+  06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> paver-1.1.1.ebuild:
+  Stable for amd64, wrt bug #441284
+
+*paver-1.1.1 (29 Sep 2012)
+
+  29 Sep 2012; Tim Harder <radhermit@gentoo.org> +paver-1.1.1.ebuild:
+  Version bump. Add doc use flag.
+
+  05 Apr 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Remove qt herd from metadata.
+
+*paver-1.0.5 (14 Dec 2011)
+
+  14 Dec 2011; Mike Gilbert <floppym@gentoo.org> +paver-1.0.5.ebuild:
+  Version bump. Resolves bug 393601 by Ian Delaney.
+
+*paver-1.0.4-r1 (13 Sep 2011)
+
+  13 Sep 2011; Mike Gilbert <floppym@gentoo.org> +paver-1.0.4-r1.ebuild:
+  Remove path25.py for python2.4
+
+  15 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> paver-1.0.4.ebuild:
+  x86 stable wrt bug #366661
+
+  11 May 2011; Markos Chandras <hwoarang@gentoo.org> paver-1.0.4.ebuild:
+  Stable on amd64 wrt bug #366661
+
+*paver-1.0.4 (06 Apr 2011)
+
+  06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +paver-1.0.4.ebuild:
+  Version bump.
+
+  05 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  paver-1.0.3.ebuild:
+  Fix dependencies.
+
+  08 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -paver-1.0.1.ebuild:
+  Delete.
+
+  08 Nov 2010; Markos Chandras <hwoarang@gentoo.org> paver-1.0.3.ebuild:
+  Stable on amd64 wrt bug #344527
+
+  08 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> paver-1.0.3.ebuild:
+  x86 stable wrt bug #344527
+
+  31 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  paver-1.0.3.ebuild:
+  Update EAPI. Fix dependencies. Set SUPPORT_PYTHON_ABIS. Use PyPI mirrors.
+
+*paver-1.0.3 (06 Oct 2010)
+
+  06 Oct 2010; Tomas Touceda <chiiph@gentoo.org> +paver-1.0.3.ebuild:
+  Version bump
+
+  28 Dec 2009; Markus Meier <maekke@gentoo.org> paver-1.0.1.ebuild:
+  x86 stable, bug #296639
+
+  24 Dec 2009; Pacho Ramos <pacho@gentoo.org> paver-1.0.1.ebuild:
+  amd64 stable, bug 296639
+
+*paver-1.0.1 (16 Nov 2009)
+
+  16 Nov 2009; Dror Levin <spatz@gentoo.org> +paver-1.0.1.ebuild,
+  +metadata.xml:
+  Initial import from qting-edge overlay. Fixes bug 274502.
+

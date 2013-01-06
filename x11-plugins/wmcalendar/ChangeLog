@@ -1,0 +1,85 @@
+# ChangeLog for x11-plugins/wmcalendar
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/ChangeLog,v 1.21 2012/05/05 05:12:02 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> wmcalendar-0.5.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  28 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  wmcalendar-0.5.2.ebuild:
+  Fix slot-dep on gtk+
+
+  04 Jun 2009; Tiago Cunha <tcunha@gentoo.org> wmcalendar-0.5.2.ebuild:
+  stable sparc, bug 215651
+
+  22 Jan 2009; Michele Noberasco <s4t4n@gentoo.org> wmcalendar-0.5.2.ebuild,
+  +files/wmcalendar-0.5.2-rename_kill_func.patch:
+  Added patch to rename internal 'kill' function that on some
+  setups conflicts with glibc definition. No point in creating a new
+  package revision since the change is really trivial. Closes bug #248626.
+  -files/wmcalendar-0.5.0.makefile.patch, -files/wmcalendar-0.5.0-gcc4.patch:
+  Removed old, unused, stale patches.
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/wmcalendar-0.5.0.makefile.patch:
+  Fix patch with absolute paths.
+
+  28 Jun 2008; Markus Meier <maekke@gentoo.org> wmcalendar-0.5.2.ebuild:
+  x86 stable, bug #229555
+
+  26 Jun 2008; nixnut <nixnut@gentoo.org> wmcalendar-0.5.2.ebuild:
+  Stable on ppc wrt bug 229555
+
+*wmcalendar-0.5.2 (03 May 2008)
+
+  03 May 2008; Samuli Suominen <drac@gentoo.org>
+  +files/wmcalendar-0.5.2-exit-sin-and-cos.patch,
+  wmcalendar-0.5.0-r1.ebuild, +wmcalendar-0.5.2.ebuild:
+  Version bump. Move pkgconfig to DEPEND wrt #217278 for stable version.
+
+  10 Oct 2006; Michele Noberasco <s4t4n@gentoo.org> wmcalendar-0.5.0-r1.ebuild:
+  Added missing libXpm dependancy. Closes bug #150643.
+  wmcalendar-0.5.0.ebuild:
+  Autumn clean up...
+
+  22 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
+  wmcalendar-0.5.0-r1.ebuild:
+  Stable on ppc.
+
+  20 Mar 2006; Michele Noberasco <s4t4n@gentoo.org> wmcalendar-0.5.0-r1.ebuild:
+  Stable for x86.
+
+  24 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  wmcalendar-0.5.0.ebuild, wmcalendar-0.5.0-r1.ebuild:
+  Fixed DEPEND for modular X.
+
+*wmcalendar-0.5.0-r1 (29 Nov 2005)
+
+  29 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmcalendar-0.5.0-r1.ebuild:
+  Revision bump, adding patch to fix gcc4 compilation issues. Closes bug #113489.
+
+  07 Nov 2005; Michele Noberasco <s4t4n@gentoo.org> wmcalendar-0.5.0.ebuild:
+  Removed INSTALL and COPYING from dodoc.
+
+  13 Sep 2005; Michele Noberasco <s4t4n@gentoo.org> wmcalendar-0.5.0.ebuild:
+  Added some magic sed to remove unneeded SYSTEM variable from Makefile,
+  fixing bug #105730.
+
+  23 Nov 2004; Jason Wever <weeve@gentoo.org> wmcalendar-0.5.0.ebuild:
+  Added ~sparc keyword.
+
+  23 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> metadata.xml:
+  Added missing metadata.xml file...
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> wmcalendar-0.5.0.ebuild:
+  Stable on x86.
+
+  20 Mar 2004; Markus Nigbur <pyrania@gentoo.org>
+  files/wmcalendar-0.5.0.makefile.patch:
+  Added Makefile patch. Closing bug #28951.
+
+*wmcalendar-0.5.0 (06 Mar 2004)
+
+  06 Mar 2004; Markus Nigbur <pyrania@gentoo.org> wmcalendar-0.5.0.ebuild:
+  Initial import.
+

@@ -1,0 +1,40 @@
+# ChangeLog for xfce-extra/xfce4-cpufreq-plugin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpufreq-plugin/ChangeLog,v 1.8 2012/11/28 12:24:25 ssuominen Exp $
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-cpufreq-plugin-1.0.0.ebuild:
+  EAPI5
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org>
+  xfce4-cpufreq-plugin-1.0.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  09 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-cpufreq-plugin-1.0.0.ebuild:
+  Use libdir instead of libexecdir.
+
+  22 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  xfce4-cpufreq-plugin-1.0.0.ebuild:
+  ppc/ppc64 stable wrt #358407
+
+  22 Mar 2011; Thomas Kahle <tomka@gentoo.org>
+  xfce4-cpufreq-plugin-1.0.0.ebuild:
+  x86 stable per bug 358407
+
+  13 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
+  xfce4-cpufreq-plugin-1.0.0.ebuild:
+  Stable on amd64 wrt bug #358407
+
+*xfce4-cpufreq-plugin-1.0.0 (23 Jan 2011)
+
+  23 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-cpufreq-plugin-1.0.0.ebuild:
+  Version bump.
+
+*xfce4-cpufreq-plugin-0.0.1 (24 Aug 2009)
+
+  24 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-cpufreq-plugin-0.0.1.ebuild:
+  Rename xfce4-cpu-freq to xfce4-cpufreq-plugin.
+

@@ -1,0 +1,21 @@
+# ChangeLog for games-strategy/heroes3-demo
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/ChangeLog,v 1.4 2012/02/08 21:33:00 vapier Exp $
+
+  08 Feb 2012; Mike Frysinger <vapier@gentoo.org> heroes3-demo-1.3.1a.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
+
+  11 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  heroes3-demo-1.3.1a.ebuild:
+  QA cleanup: Fix quoting.
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> ChangeLog:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
+
+*heroes3-demo-1.3.1a (05 Oct 2006)
+
+  05 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +heroes3-demo-1.3.1a.ebuild:
+  Initial import. Ebuild by Paul Bredbury <brebs@sent.com>. Closing bug
+  #141746.
+

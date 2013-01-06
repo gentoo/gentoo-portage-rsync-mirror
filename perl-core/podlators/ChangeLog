@@ -1,0 +1,38 @@
+# ChangeLog for perl-core/podlators
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/ChangeLog,v 1.8 2012/06/24 15:38:58 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  02 Jun 2012; Torsten Veller <tove@gentoo.org> podlators-2.4.2.ebuild:
+  Run tests parallel
+
+*podlators-2.4.2 (02 Jun 2012)
+
+  02 Jun 2012; Torsten Veller <tove@gentoo.org> +podlators-2.4.2.ebuild:
+  Version bump
+
+*podlators-2.4.0 (27 Jan 2011)
+
+  27 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> +podlators-2.4.0.ebuild:
+  Version bump via perl-bump experimental tool.
+
+*podlators-2.3.1 (19 Feb 2010)
+
+  19 Feb 2010; Torsten Veller <tove@gentoo.org> +podlators-2.3.1.ebuild:
+  Version bump
+
+*podlators-2.3.0 (07 Jan 2010)
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org> +podlators-2.3.0.ebuild:
+  Version bump
+
+  16 Nov 2009; Torsten Veller <tove@gentoo.org> podlators-2.2.2.ebuild:
+  Add Pod-Simple dependency
+
+*podlators-2.2.2 (16 Nov 2009)
+
+  16 Nov 2009; Torsten Veller <tove@gentoo.org> +podlators-2.2.2.ebuild,
+  +metadata.xml:
+  Initial commit (#286962)

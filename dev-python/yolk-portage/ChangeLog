@@ -1,0 +1,28 @@
+# ChangeLog for dev-python/yolk-portage
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yolk-portage/ChangeLog,v 1.6 2011/07/20 13:27:42 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #28480
+
+  30 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  yolk-portage-0.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  13 Mar 2008; Rob Cakebread <pythonhead@gentoo.org>
+  yolk-portage-0.1.ebuild:
+  Changed DEPEND to RDEPEND bug #187778
+
+  23 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  yolk-portage-0.1.ebuild:
+  Moved NEED_PYTHON above inherit.
+
+  02 Jun 2007; Christoph Mende <angelos@gentoo.org> yolk-portage-0.1.ebuild:
+  Added ~amd64 wrt bug 179059
+
+*yolk-portage-0.1 (23 Apr 2007)
+
+  23 Apr 2007; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +yolk-portage-0.1.ebuild:
+  Initial commit.
+

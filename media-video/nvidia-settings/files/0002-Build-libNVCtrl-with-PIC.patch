@@ -1,0 +1,24 @@
+From c307d4878e17be16c1dcc1a6e15231d8e984b259 Mon Sep 17 00:00:00 2001
+From: Christian Ruppert <idl0r@gentoo.org>
+Date: Fri, 17 Feb 2012 18:01:43 +0100
+Subject: [PATCH 2/2] Build libNVCtrl with PIC
+
+---
+ src/libXNVCtrl/Makefile |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/src/libXNVCtrl/Makefile b/src/libXNVCtrl/Makefile
+index 15b03cc..d40ec01 100644
+--- a/src/libXNVCtrl/Makefile
++++ b/src/libXNVCtrl/Makefile
+@@ -20,6 +20,7 @@
+ # SOFTWARE.
+ 
+ RANLIB ?= ranlib
++CFLAGS += -fPIC
+ 
+ libXNVCtrl.a : libXNVCtrl.a(NVCtrl.o)
+ 	$(RANLIB) $@
+-- 
+1.7.3.4
+

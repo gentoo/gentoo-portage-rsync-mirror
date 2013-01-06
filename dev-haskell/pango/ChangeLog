@@ -1,0 +1,53 @@
+# ChangeLog for dev-haskell/pango
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/ChangeLog,v 1.14 2013/01/01 14:08:30 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> pango-0.12.4.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> pango-0.12.4.ebuild:
+  Add ~ia64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pango-0.12.4.ebuild:
+  Add ~ppc64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pango-0.12.4.ebuild:
+  Add ~ppc, wrt bug #449220
+
+*pango-0.12.4 (25 Nov 2012)
+
+  25 Nov 2012; Mark Wright <gienah@gentoo.org> +pango-0.12.4.ebuild:
+  Bump pango to 0.12.4
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> pango-0.12.0.ebuild,
+  pango-0.12.3.ebuild:
+  move dev-haskell/pango/pango-0.12.0.ebuild ebuild to mirror://hackage
+
+  16 Aug 2012; Andreas Schuerch <nativemad@gentoo.org> pango-0.12.3.ebuild:
+  x86 stable, see bug 422025
+
+  04 Aug 2012; Markos Chandras <hwoarang@gentoo.org> pango-0.12.3.ebuild:
+  Fix build deps for dev-haskell/gtk2hs-buildtools
+
+  04 Aug 2012; Markos Chandras <hwoarang@gentoo.org> pango-0.12.3.ebuild:
+  Stable on amd64 wrt bug #422025
+
+  29 May 2012; Mark Wright <gienah@gentoo.org> pango-0.12.3.ebuild:
+  EAPI=4 on line 5
+
+*pango-0.12.3 (15 May 2012)
+
+  15 May 2012; Sergei Trofimovich <slyfox@gentoo.org> +pango-0.12.3.ebuild:
+  Version bump (bug #415921 by Takanari Hamasaki)
+
+  21 Jun 2011; Markos Chandras <hwoarang@gentoo.org> pango-0.12.0.ebuild:
+  Stable on amd64 wrt bug #314059
+
+  12 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pango-0.12.0.ebuild:
+  x86 stable wrt bug #314059
+
+*pango-0.12.0 (09 May 2011)
+
+  09 May 2011; Sergei Trofimovich <slyfox@gentoo.org> +pango-0.12.0.ebuild,
+  +metadata.xml:
+  Initial version. Haskell bindings for x11-libs/pango.

@@ -1,0 +1,60 @@
+# ChangeLog for dev-python/scrapy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.11 2012/08/09 06:22:27 patrick Exp $
+
+  09 Aug 2012; Patrick Lauer <patrick@gentoo.org> scrapy-0.14.4.ebuild:
+  Small fix for jython
+
+*scrapy-0.14.4 (27 May 2012)
+
+  27 May 2012; Maxim Koltsov <maksbotan@gentoo.org> +scrapy-0.14.4.ebuild:
+  Bump to 0.14.4, thanks to idella4. Bug #417817
+
+  20 Apr 2012; Mike Gilbert <floppym@gentoo.org> scrapy-0.14.2.ebuild,
+  scrapy-0.14.3.ebuild:
+  Consolidate DEPEND.
+
+*scrapy-0.14.3 (20 Apr 2012)
+
+  20 Apr 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/scrapy-0.14.3-runtests.patch, +scrapy-0.14.3.ebuild,
+  scrapy-0.14.2.ebuild:
+  Version bump. Unrestrict tests.
+
+  20 Apr 2012; Mike Gilbert <floppym@gentoo.org> scrapy-0.14.2.ebuild:
+  Remove pointless src_prepare function. Cleanup src_test.
+
+*scrapy-0.14.2 (19 Apr 2012)
+
+  19 Apr 2012; Patrick Lauer <patrick@gentoo.org> +scrapy-0.14.2.ebuild:
+  Bump for #412315
+
+*scrapy-0.14.1 (21 Feb 2012)
+
+  21 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> +scrapy-0.14.1.ebuild,
+  -scrapy-0.12.0.2548.ebuild, -scrapy-0.14.0.2841.ebuild:
+  Bump to 0.14.1, bugs #398641 and #405027
+
+*scrapy-0.14.0.2841 (19 Dec 2011)
+
+  19 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> -scrapy-0.12.0.2546.ebuild,
+  +scrapy-0.14.0.2841.ebuild:
+  Bumped to 0.14.0.2841, removed old version
+
+*scrapy-0.12.0.2548 (30 Oct 2011)
+
+  30 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org> -scrapy-0.12.0.2539.ebuild,
+  +scrapy-0.12.0.2548.ebuild:
+  Bump to 0.12.0.2548
+
+*scrapy-0.12.0.2546 (09 Sep 2011)
+
+  09 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org> +scrapy-0.12.0.2546.ebuild:
+  Bump to scrapy-0.12.0.2546
+
+*scrapy-0.12.0.2539 (03 Apr 2011)
+
+  03 Apr 2011; Maxim (maksbotan) <kolmax94@gmail.com>
+  +scrapy-0.12.0.2539.ebuild, +metadata.xml:
+  New ebuild for dev-python/scrapy. Ebuild is based on g-pypi generated one.
+  Fixes bug #361771.

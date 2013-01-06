@@ -1,0 +1,16 @@
+http://bugs.gentoo.org/415551
+
+--- src/kmagnetscene.cpp
++++ src/kmagnetscene.cpp
+@@ -160,9 +160,9 @@
+     uint pos=nm.getPosition();
+     if (mov==Moves::UP || mov==Moves::DOWN)
+     {
+-        dist=abs(pos-currentPosition)/COLUMNS;
++        dist=qAbs(pos-currentPosition)/COLUMNS;
+     } else {
+-        dist=abs(pos%ROWS-currentPosition%ROWS);
++        dist=qAbs(pos%ROWS-currentPosition%ROWS);
+     }
+     QTimeLine *timer = new QTimeLine (Settings::animationTime()+dist*10,this);//Settings::animationTime(), this );//better use heap?
+     signalMapper->setMapping(timer,currentPosition+pos*1000);

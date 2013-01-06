@@ -1,0 +1,116 @@
+diff -u -x '*.ko*' -x '*.o*' vpnclient/frag.c vpnclient_modified/frag.c
+--- vpnclient/frag.c	2007-08-22 15:30:31.000000000 -0400
++++ vpnclient_modified/frag.c	2008-01-11 01:41:19.000000000 -0500
+@@ -22,7 +22,11 @@
+ #include "frag.h"
+ 
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
++#ifdef NET_SKBUFF_DATA_USES_OFFSET    
++#define SKB_IPHDR(skb) ((struct iphdr*)(skb->head + skb->network_header))
++#else
+ #define SKB_IPHDR(skb) ((struct iphdr*)skb->network_header)
++#endif
+ #else
+ #define SKB_IPHDR(skb) skb->nh.iph
+ #endif
+diff -u -x '*.ko*' -x '*.o*' vpnclient/interceptor.c vpnclient_modified/interceptor.c
+--- vpnclient/interceptor.c	2007-08-22 15:30:31.000000000 -0400
++++ vpnclient_modified/interceptor.c	2008-01-11 02:04:01.000000000 -0500
+@@ -636,7 +636,11 @@
+ #endif
+     {
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
++    #ifdef NET_SKBUFF_DATA_USES_OFFSET    
++        hard_header_len = skb->data - (skb->head + skb->mac_header);
++    #else
+         hard_header_len = skb->data - skb->mac_header;
++    #endif
+ #else
+         hard_header_len = skb->data - skb->mac.raw;
+ #endif
+@@ -657,7 +661,11 @@
+     {
+     case ETH_HLEN:
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
++    #ifdef NET_SKBUFF_DATA_USES_OFFSET    
++        CniNewFragment(ETH_HLEN, skb->head + skb->mac_header, &MacHdr, CNI_USE_BUFFER);
++    #else
+         CniNewFragment(ETH_HLEN, skb->mac_header, &MacHdr, CNI_USE_BUFFER);
++    #endif
+ #else
+         CniNewFragment(ETH_HLEN, skb->mac.raw, &MacHdr, CNI_USE_BUFFER);
+ #endif
+@@ -667,7 +675,7 @@
+         MacHdr = build_ppp_fake_mac_frag(&ppp_dummy_buf);
+         break;
+     default:
+-        printk(KERN_DEBUG "unknown mac header length (%d)\n", hard_header_len);
++        printk(KERN_DEBUG "unknown mac header length (%d) CniNewFragment\n", hard_header_len);
+         dev_kfree_skb(skb);
+         skb = NULL;
+         goto exit_gracefully;
+@@ -775,7 +783,12 @@
+ #endif //LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,0)
+     reset_inject_status(&pBinding->send_stat);
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
+-    hard_header_len = skb->network_header - skb->data;
++    #ifdef NET_SKBUFF_DATA_USES_OFFSET    
++        hard_header_len = 
++          (skb->head + skb->network_header) - skb->data;
++    #else
++        hard_header_len = skb->network_header - skb->data;
++    #endif
+ #else
+     hard_header_len = skb->nh.raw - skb->data;
+ #endif
+diff -u -x '*.ko*' -x '*.o*' vpnclient/linuxcniapi.c vpnclient_modified/linuxcniapi.c
+--- vpnclient/linuxcniapi.c	2007-08-22 15:30:31.000000000 -0400
++++ vpnclient_modified/linuxcniapi.c	2008-01-11 01:41:19.000000000 -0500
+@@ -338,8 +338,13 @@
+     skb->ip_summed = CHECKSUM_UNNECESSARY;
+ 
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
+-    skb->network_header = (sk_buff_data_t) skb->data;
+-    skb->mac_header = (sk_buff_data_t)pMac;
++    #ifdef NET_SKBUFF_DATA_USES_OFFSET
++        skb->network_header = (sk_buff_data_t) (skb->data - skb->head);
++        skb->mac_header = (sk_buff_data_t) (pMac - skb->head);        
++    #else
++        skb->network_header = (sk_buff_data_t) skb->data;
++        skb->mac_header = (sk_buff_data_t)pMac;
++    #endif
+ #else
+     skb->nh.iph = (struct iphdr *) skb->data;
+     skb->mac.raw = pMac;
+@@ -478,8 +483,13 @@
+     skb->dev = pBinding->pDevice;
+ 
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
+-    skb->mac_header = (sk_buff_data_t)pMac;
+-    skb->network_header = (sk_buff_data_t)pIP;
++    #ifdef NET_SKBUFF_DATA_USES_OFFSET
++        skb->mac_header = (sk_buff_data_t)(pMac - skb->head);
++        skb->network_header = (sk_buff_data_t)(pIP - skb->head);    
++    #else
++        skb->mac_header = (sk_buff_data_t)pMac;
++        skb->network_header = (sk_buff_data_t)pIP;
++    #endif
+ #else
+     skb->mac.raw = pMac;
+     skb->nh.raw = pIP;
+@@ -487,8 +497,13 @@
+ 
+     /*ip header length is in 32bit words */
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
+-    skb->transport_header = (sk_buff_data_t)
+-      (pIP + (((struct iphdr*)(skb->network_header))->ihl * 4));
++    #ifdef NET_SKBUFF_DATA_USES_OFFSET
++        skb->transport_header = (sk_buff_data_t)
++          ((pIP + (((struct iphdr*)(skb->head + skb->network_header))->ihl * 4)) - skb->head);
++    #else
++        skb->transport_header = (sk_buff_data_t)
++          (pIP + (((struct iphdr*)(skb->network_header))->ihl * 4));
++    #endif
+ #else
+     skb->h.raw = pIP + (skb->nh.iph->ihl * 4);
+ #endif

@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Memoize
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos
+RDEPEND=~perl-core/Memoize-1.30.0
+SLOT=0
+_md5_=0cd922800ec1a820962c66442a74c967

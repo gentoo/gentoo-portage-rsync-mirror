@@ -1,0 +1,317 @@
+From 733be9d1efbd5b146ed9d48df31561dcfc1379c9 Mon Sep 17 00:00:00 2001
+From: Tristan Matthews <tristan.matthews@savoirfairelinux.com>
+Date: Fri, 9 Mar 2012 16:48:34 -0500
+Subject: [PATCH] * #9145: fix missing <glib/gi18n.h> includes
+
+---
+ gnome/src/accountlist.c                    |    1 +
+ gnome/src/actions.c                        |    1 +
+ gnome/src/callable_obj.c                   |    1 +
+ gnome/src/config/accountconfigdialog.c     |    1 +
+ gnome/src/config/accountlistconfigdialog.c |    1 +
+ gnome/src/config/addressbook-config.c      |    1 +
+ gnome/src/config/assistant.c               |    2 +-
+ gnome/src/config/audioconf.c               |    2 +-
+ gnome/src/config/hooks-config.c            |    1 +
+ gnome/src/config/preferencesdialog.c       |    1 +
+ gnome/src/config/shortcuts-config.c        |    1 +
+ gnome/src/config/tlsadvanceddialog.c       |    2 +-
+ gnome/src/config/zrtpadvanceddialog.c      |    8 ++++----
+ gnome/src/contacts/searchbar.c             |    1 +
+ gnome/src/dbus/dbus.c                      |    2 +-
+ gnome/src/eel-gconf-extensions.c           |    3 ++-
+ gnome/src/main.c                           |    1 +
+ gnome/src/mainwindow.c                     |    1 +
+ gnome/src/sflnotify.c                      |    2 ++
+ gnome/src/sliders.c                        |    1 +
+ gnome/src/statusicon.c                     |    1 +
+ gnome/src/uimanager.c                      |    3 ++-
+ 22 files changed, 28 insertions(+), 10 deletions(-)
+
+diff --git a/gnome/src/accountlist.c b/gnome/src/accountlist.c
+index 662c7bc..803e3d3 100644
+--- a/gnome/src/accountlist.c
++++ b/gnome/src/accountlist.c
+@@ -29,6 +29,7 @@
+  *  as that of the covered work.
+  */
+ 
++#include <glib/gi18n.h>
+ #include "accountlist.h"
+ #include "actions.h"
+ #include "unused.h"
+diff --git a/gnome/src/actions.c b/gnome/src/actions.c
+index abdbddd..29dca07 100644
+--- a/gnome/src/actions.c
++++ b/gnome/src/actions.c
+@@ -29,6 +29,7 @@
+  *  as that of the covered work.
+  */
+ 
++#include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+ /* Backward compatibility for gtk < 2.22.0 */
+ #if GTK_CHECK_VERSION(2,22,0)
+diff --git a/gnome/src/callable_obj.c b/gnome/src/callable_obj.c
+index 83449c6..c16d951 100644
+--- a/gnome/src/callable_obj.c
++++ b/gnome/src/callable_obj.c
+@@ -32,6 +32,7 @@
+ #include "codeclist.h"
+ #include "sflphone_const.h"
+ #include <time.h>
++#include <glib/gi18n.h>
+ #include "contacts/calltab.h"
+ #include "contacts/calltree.h"
+ #include "dbus.h"
+diff --git a/gnome/src/config/accountconfigdialog.c b/gnome/src/config/accountconfigdialog.c
+index c623595..7c2de3f 100644
+--- a/gnome/src/config/accountconfigdialog.c
++++ b/gnome/src/config/accountconfigdialog.c
+@@ -31,6 +31,7 @@
+  *  as that of the covered work.
+  */
+ 
++#include <glib/gi18n.h>
+ #include <sys/socket.h>
+ #include <sys/ioctl.h>
+ #include <net/if.h>
+diff --git a/gnome/src/config/accountlistconfigdialog.c b/gnome/src/config/accountlistconfigdialog.c
+index aa8db7a..151f067 100644
+--- a/gnome/src/config/accountlistconfigdialog.c
++++ b/gnome/src/config/accountlistconfigdialog.c
+@@ -38,6 +38,7 @@
+ #include "utils.h"
+ #include "unused.h"
+ #include "logger.h"
++#include <glib/gi18n.h>
+ #include <string.h>
+ 
+ static const int CONTEXT_ID_REGISTRATION = 0;
+diff --git a/gnome/src/config/addressbook-config.c b/gnome/src/config/addressbook-config.c
+index 4c56da2..8e9c64e 100644
+--- a/gnome/src/config/addressbook-config.c
++++ b/gnome/src/config/addressbook-config.c
+@@ -34,6 +34,7 @@
+ #include "logger.h"
+ #include "searchbar.h"
+ #include "contacts/addrbookfactory.h"
++#include <glib/gi18n.h>
+ #include <string.h>
+ #include <stdlib.h>
+ 
+diff --git a/gnome/src/config/assistant.c b/gnome/src/config/assistant.c
+index 8ca0021..202767e 100644
+--- a/gnome/src/config/assistant.c
++++ b/gnome/src/config/assistant.c
+@@ -29,7 +29,7 @@
+  */
+ 
+ #include <string.h>
+-
++#include <glib/gi18n.h>
+ #include "unused.h"
+ #include "assistant.h"
+ #include "logger.h"
+diff --git a/gnome/src/config/audioconf.c b/gnome/src/config/audioconf.c
+index c7dfe38..3bfbad9 100644
+--- a/gnome/src/config/audioconf.c
++++ b/gnome/src/config/audioconf.c
+@@ -28,7 +28,7 @@
+  *  as that of the covered work.
+  */
+ 
+-
++#include <glib/gi18n.h>
+ #include "audioconf.h"
+ #include "utils.h"
+ #include "logger.h"
+diff --git a/gnome/src/config/hooks-config.c b/gnome/src/config/hooks-config.c
+index 2b3e9e8..8a2b419 100644
+--- a/gnome/src/config/hooks-config.c
++++ b/gnome/src/config/hooks-config.c
+@@ -28,6 +28,7 @@
+  *  as that of the covered work.
+  */
+ 
++#include <glib/gi18n.h>
+ #include "hooks-config.h"
+ #include "dbus.h"
+ 
+diff --git a/gnome/src/config/preferencesdialog.c b/gnome/src/config/preferencesdialog.c
+index 3bd5057..10b11ca 100644
+--- a/gnome/src/config/preferencesdialog.c
++++ b/gnome/src/config/preferencesdialog.c
+@@ -32,6 +32,7 @@
+  *  as that of the covered work.
+  */
+ 
++#include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+ #include <stdlib.h>
+ #include <stdio.h>
+diff --git a/gnome/src/config/shortcuts-config.c b/gnome/src/config/shortcuts-config.c
+index caa354a..f77b2e0 100644
+--- a/gnome/src/config/shortcuts-config.c
++++ b/gnome/src/config/shortcuts-config.c
+@@ -28,6 +28,7 @@
+  *  as that of the covered work.
+  */
+ 
++#include <glib/gi18n.h>
+ #include <gdk/gdk.h>
+ #include "shortcuts-config.h"
+ #include "shortcuts.h"
+diff --git a/gnome/src/config/tlsadvanceddialog.c b/gnome/src/config/tlsadvanceddialog.c
+index 3d6c118..59052ea 100644
+--- a/gnome/src/config/tlsadvanceddialog.c
++++ b/gnome/src/config/tlsadvanceddialog.c
+@@ -32,7 +32,7 @@
+ #include <sflphone_const.h>
+ #include <utils.h>
+ #include <dbus.h>
+-
++#include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+ #include <math.h>
+ 
+diff --git a/gnome/src/config/zrtpadvanceddialog.c b/gnome/src/config/zrtpadvanceddialog.c
+index e50898a..fe4589b 100644
+--- a/gnome/src/config/zrtpadvanceddialog.c
++++ b/gnome/src/config/zrtpadvanceddialog.c
+@@ -28,11 +28,11 @@
+  *  as that of the covered work.
+  */
+ 
+-#include <zrtpadvanceddialog.h>
+-#include <sflphone_const.h>
+-#include <utils.h>
+-
++#include <glib/gi18n.h>
+ #include <gtk/gtk.h>
++#include <zrtpadvanceddialog.h>
++#include "sflphone_const.h"
++#include "utils.h"
+ 
+ void show_advanced_zrtp_options(GHashTable * properties)
+ {
+diff --git a/gnome/src/contacts/searchbar.c b/gnome/src/contacts/searchbar.c
+index e48efaf..1ac515b 100644
+--- a/gnome/src/contacts/searchbar.c
++++ b/gnome/src/contacts/searchbar.c
+@@ -31,6 +31,7 @@
+  *  as that of the covered work.
+  */
+ 
++#include <glib/gi18n.h>
+ #include "searchbar.h"
+ #include "calltree.h"
+ #include "calltab.h"
+diff --git a/gnome/src/dbus/dbus.c b/gnome/src/dbus/dbus.c
+index 91241f5..957ae5a 100644
+--- a/gnome/src/dbus/dbus.c
++++ b/gnome/src/dbus/dbus.c
+@@ -30,7 +30,7 @@
+  *  as that of the covered work.
+  */
+ #include "config.h"
+-
++#include <glib/gi18n.h>
+ #include "logger.h"
+ #include "calltab.h"
+ #include "callmanager-glue.h"
+diff --git a/gnome/src/eel-gconf-extensions.c b/gnome/src/eel-gconf-extensions.c
+index 4631981..c24251a 100644
+--- a/gnome/src/eel-gconf-extensions.c
++++ b/gnome/src/eel-gconf-extensions.c
+@@ -22,8 +22,9 @@
+    Authors: Ramiro Estrugo <ramiro@eazel.com>
+ */
+ 
+-#include <stdlib.h>
+ #include "config.h"
++#include <glib/gi18n.h>
++#include <stdlib.h>
+ #include "eel-gconf-extensions.h"
+ 
+ #include <gconf/gconf-client.h>
+diff --git a/gnome/src/main.c b/gnome/src/main.c
+index 7af5078..8a08c4e 100644
+--- a/gnome/src/main.c
++++ b/gnome/src/main.c
+@@ -36,6 +36,7 @@
+ #include "mainwindow.h"
+ #include "statusicon.h"
+ #include "eel-gconf-extensions.h"
++#include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+ #include <stdlib.h>
+ 
+diff --git a/gnome/src/mainwindow.c b/gnome/src/mainwindow.c
+index 3b14c6a..e41def4 100644
+--- a/gnome/src/mainwindow.c
++++ b/gnome/src/mainwindow.c
+@@ -50,6 +50,7 @@
+ 
+ #include "eel-gconf-extensions.h"
+ 
++#include <glib/gi18n.h>
+ #include <sys/stat.h>
+ #include <gtk/gtk.h>
+ 
+diff --git a/gnome/src/sflnotify.c b/gnome/src/sflnotify.c
+index 8dd5ed0..44eee7e 100644
+--- a/gnome/src/sflnotify.c
++++ b/gnome/src/sflnotify.c
+@@ -29,6 +29,8 @@
+  */
+ 
+ #include "config.h"
++#include <glib.h>
++#include <glib/gi18n.h>
+ #include "eel-gconf-extensions.h"
+ #include "sflnotify.h"
+ #include "logger.h"
+diff --git a/gnome/src/sliders.c b/gnome/src/sliders.c
+index 4a2fdd8..ab3e40f 100644
+--- a/gnome/src/sliders.c
++++ b/gnome/src/sliders.c
+@@ -28,6 +28,7 @@
+  *  as that of the covered work.
+  */
+ 
++#include <glib/gi18n.h>
+ #include "sliders.h"
+ #include "dbus/dbus.h"
+ #include "actions.h"
+diff --git a/gnome/src/statusicon.c b/gnome/src/statusicon.c
+index 2fe79ee..b94864c 100644
+--- a/gnome/src/statusicon.c
++++ b/gnome/src/statusicon.c
+@@ -29,6 +29,7 @@
+  *  as that of the covered work.
+  */
+ 
++#include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+ #include "actions.h"
+ #include "mainwindow.h"
+diff --git a/gnome/src/uimanager.c b/gnome/src/uimanager.c
+index 2953156..0ddac4b 100644
+--- a/gnome/src/uimanager.c
++++ b/gnome/src/uimanager.c
+@@ -34,9 +34,10 @@
+ #include "dbus/dbus.h"
+ #include "mainwindow.h"
+ #include "assistant.h"
++#include <glib.h>
++#include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+ #include <string.h>
+-#include <glib.h>
+ 
+ #include "uimanager.h"
+ #include "statusicon.h"
+-- 
+1.7.8.6
+

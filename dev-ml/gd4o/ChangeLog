@@ -1,0 +1,13 @@
+# ChangeLog for dev-ml/gd4o
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/gd4o/ChangeLog,v 1.2 2011/02/25 20:07:40 signals Exp $
+
+  25 Feb 2011; Kevin McCarthy <signals@gentoo.org> gd4o-1.0_alpha5.ebuild:
+  Update depends from media-libs/jpeg to virtual/jpeg
+
+*gd4o-1.0_alpha5 (08 Aug 2010)
+
+  08 Aug 2010; Alexis Ballier <aballier@gentoo.org> +gd4o-1.0_alpha5.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me
+

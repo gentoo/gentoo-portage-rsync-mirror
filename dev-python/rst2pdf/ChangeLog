@@ -1,0 +1,103 @@
+# ChangeLog for dev-python/rst2pdf
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.24 2012/09/12 12:22:31 johu Exp $
+
+  12 Sep 2012; Johannes Huber <johu@gentoo.org> rst2pdf-0.92.ebuild:
+  Stable for x86, wrt bug #429038
+
+  12 Sep 2012; Agostino Sarubbo <ago@gentoo.org> rst2pdf-0.92.ebuild:
+  Stable for amd64, wrt bug #429038
+
+*rst2pdf-0.92 (27 Jun 2012)
+
+  27 Jun 2012; Ben de Groot <yngwin@gentoo.org> +rst2pdf-0.92.ebuild:
+  Version bump. Update homepage.
+
+*rst2pdf-0.91 (12 May 2012)
+
+  12 May 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +rst2pdf-0.91.ebuild:
+  Version bump.
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> rst2pdf-0.16-r1.ebuild:
+  x86 stable wrt bug #400339
+
+  17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> rst2pdf-0.16-r1.ebuild:
+  Stable for amd64, wrt bug #400339
+
+  14 Dec 2011; Mike Gilbert <floppym@gentoo.org> rst2pdf-0.16.ebuild:
+  Drop docs from stable version so that bug 356389 will not cause breakage.
+
+  14 Dec 2011; Mike Gilbert <floppym@gentoo.org> rst2pdf-0.16-r1.ebuild:
+  Set EAPI=4 and elminate duplicate installation of montecristo example files.
+  Fixes bug 369111.
+
+*rst2pdf-0.16-r1 (30 Jul 2011)
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +rst2pdf-0.16-r1.ebuild, +files/rst2pdf-0.16_docutils-0.8.patch:
+  Revision bump. Fixed runtime errors when using >=docutils-0.8 (bug #369943).
+
+  15 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -rst2pdf-0.15.ebuild:
+  Delete.
+
+  15 Jan 2011; Markus Meier <maekke@gentoo.org> rst2pdf-0.16.ebuild:
+  x86 stable, bug #350870
+
+  07 Jan 2011; Markos Chandras <hwoarang@gentoo.org> rst2pdf-0.16.ebuild:
+  Stable on amd64 wrt bug #350870
+
+*rst2pdf-0.16 (07 Dec 2010)
+
+  07 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +rst2pdf-0.16.ebuild:
+  Version bump.
+
+  11 Jul 2010; Markus Meier <maekke@gentoo.org> rst2pdf-0.15.ebuild:
+  x86 stable, bug #325381
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org> rst2pdf-0.15.ebuild:
+  Stable on amd64 wrt bug #325381
+
+  15 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Removing myself as maintainer
+
+*rst2pdf-0.15 (25 May 2010)
+
+  25 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -rst2pdf-0.13.1.ebuild, +rst2pdf-0.15.ebuild:
+  Version bump.
+
+  24 May 2010; Pacho Ramos <pacho@gentoo.org> rst2pdf-0.14.2.ebuild:
+  stable amd64, bug 318113
+
+  20 May 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  rst2pdf-0.14.2.ebuild:
+  x86 stable wrt bug #318113
+
+  27 Apr 2010; Dirkjan Ochtman <djc@gentoo.org> rst2pdf-0.14.2.ebuild:
+  keyword x86
+
+  27 Mar 2010; Ben de Groot <yngwin@gentoo.org> rst2pdf-0.14.2.ebuild:
+  Keep doc installation in one place. Remove unneeded die messages.
+
+*rst2pdf-0.14.2 (26 Mar 2010)
+
+  26 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -rst2pdf-0.12.3.ebuild, +rst2pdf-0.14.2.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
+
+*rst2pdf-0.13.1 (21 Mar 2010)
+
+  21 Mar 2010; Ben de Groot <yngwin@gentoo.org> rst2pdf-0.12.3.ebuild,
+  +rst2pdf-0.13.1.ebuild:
+  Version bump. Specify version of reportlab dependency. Thanks to Jamie
+  Learmonth in bug #310137.
+
+*rst2pdf-0.12.3 (06 Mar 2010)
+
+  06 Mar 2010; Ben de Groot <yngwin@gentoo.org> +rst2pdf-0.12.3.ebuild,
+  +metadata.xml:
+  Initial commit. Ebuild partly based on the one contributed by Maxim
+  Treskin in bug #275474.

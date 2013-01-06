@@ -1,0 +1,14 @@
+# ChangeLog for sci-libs/bmrblib
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/bmrblib/ChangeLog,v 1.2 2012/07/19 15:18:05 jlec Exp $
+
+  19 Jul 2012; Justin Lecher <jlec@gentoo.org> bmrblib-1.0.0.ebuild:
+  Fix python dependency
+
+
+*bmrblib-1.0.0 (19 Jul 2012)
+
+  19 Jul 2012; Justin Lecher <jlec@gentoo.org> +bmrblib-1.0.0.ebuild,
+  +metadata.xml:
+  New addition
+

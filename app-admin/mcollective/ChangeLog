@@ -1,0 +1,52 @@
+# ChangeLog for app-admin/mcollective
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/ChangeLog,v 1.10 2012/12/24 08:29:38 ramereth Exp $
+
+*mcollective-2.2.0 (24 Dec 2012)
+
+  24 Dec 2012; Lance Albertson <ramereth@gentoo.org> +mcollective-2.2.0.ebuild,
+  files/mcollectived.initd:
+  Relicense init script to Apache-2.0 (#425868), version bump
+
+  12 Aug 2012; Markus Meier <maekke@gentoo.org> mcollective-2.0.0.ebuild:
+  x86 stable, bug #421981
+
+  03 Aug 2012; Markos Chandras <hwoarang@gentoo.org> mcollective-2.0.0.ebuild:
+  Stable on amd64 wrt bug #421981
+
+*mcollective-2.0.0 (18 May 2012)
+
+  18 May 2012; Lance Albertson <ramereth@gentoo.org> +mcollective-2.0.0.ebuild:
+  Version bump
+
+  09 Mar 2012; Lance Albertson <ramereth@gentoo.org> mcollective-1.0.1.ebuild,
+  mcollective-1.1.4.ebuild, mcollective-1.2.1.ebuild:
+  Update HOMEPAGE, mark stable
+
+*mcollective-1.2.1 (18 Jul 2011)
+
+  18 Jul 2011; Lance Albertson <ramereth@gentoo.org> -mcollective-1.1.3.ebuild,
+  -mcollective-1.2.0.ebuild, +mcollective-1.2.1.ebuild:
+  Version bump, ebuild cleanup
+
+*mcollective-1.2.0 (26 May 2011)
+*mcollective-1.1.4 (26 May 2011)
+
+  26 May 2011; Lance Albertson <ramereth@gentoo.org> +mcollective-1.1.4.ebuild,
+  +mcollective-1.2.0.ebuild:
+  Version bump
+
+  19 Apr 2011; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Use no-herd
+
+*mcollective-1.1.3 (09 Mar 2011)
+
+  09 Mar 2011; Lance Albertson <ramereth@gentoo.org>
+  +mcollective-1.1.3.ebuild:
+  Version bump
+
+*mcollective-1.0.1 (01 Mar 2011)
+
+  01 Mar 2011; Lance Albertson <ramereth@gentoo.org>
+  +mcollective-1.0.1.ebuild, +files/mcollectived.initd, +metadata.xml:
+  Initial commit imported from my ramereth-overlay

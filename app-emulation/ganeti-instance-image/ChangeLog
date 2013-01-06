@@ -1,0 +1,43 @@
+# ChangeLog for app-emulation/ganeti-instance-image
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-image/ChangeLog,v 1.8 2012/10/09 21:15:25 cardoe Exp $
+
+  09 Oct 2012; Doug Goldstein <cardoe@gentoo.org>
+  ganeti-instance-image-0.5.ebuild, ganeti-instance-image-0.5.1.ebuild:
+  Update to reflect app-emulation/qemu-kvm -> app-emulation/qemu move.
+
+  17 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  ganeti-instance-image-0.5.1.ebuild:
+  x86 stable wrt bug #396799
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  ganeti-instance-image-0.5.1.ebuild:
+  Stable for amd64, wrt bug #396799
+
+*ganeti-instance-image-0.5.1 (26 May 2011)
+
+  26 May 2011; Lance Albertson <ramereth@gentoo.org>
+  -ganeti-instance-image-0.4.ebuild, ganeti-instance-image-0.5.ebuild,
+  +ganeti-instance-image-0.5.1.ebuild:
+  Version bump, fix qemu dep #367565), cleanup
+
+*ganeti-instance-image-0.5 (26 Mar 2011)
+
+  26 Mar 2011; Lance Albertson <ramereth@gentoo.org>
+  +ganeti-instance-image-0.5.ebuild:
+  Version bump
+
+  22 Jan 2011; Lance Albertson <ramereth@gentoo.org>
+  ganeti-instance-image-0.4.ebuild:
+  Stable
+
+  13 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fix herd tag in metadata.xml
+
+*ganeti-instance-image-0.4 (07 Jun 2010)
+
+  07 Jun 2010; Lance Albertson <ramereth@gentoo.org>
+  +ganeti-instance-image-0.4.ebuild, +metadata.xml:
+  Initial ebuild pulled from the OSUOSL overlay
+

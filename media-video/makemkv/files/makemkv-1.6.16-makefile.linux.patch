@@ -1,0 +1,20 @@
+--- makemkv_v1.6.16_oss/makefile.linux.orig	2011-12-02 15:26:10.997323145 -0700
++++ makemkv_v1.6.16_oss/makefile.linux	2011-12-02 17:24:34.058323537 -0700
+@@ -8,7 +8,7 @@
+ MOC=moc
+ endif
+ 
+-CXXOPTS=-Os -D_GNU_SOURCE -D_linux_
++CXXOPTS=-D_GNU_SOURCE -D_linux_
+ 
+ BUILDINFO_ARCH_NAME=$(shell $(GCC) -dumpmachine)
+ BUILDINFO_BUILD_DATE=$(shell date)
+@@ -33,7 +33,7 @@
+ 	install -t $(DESTDIR)/usr/bin out/makemkv
+ 
+ out/%: out/%.full
+-	objcopy --strip-all --strip-debug --strip-unneeded --discard-all $< $@ 
++	objcopy --discard-all $< $@ 
+ 
+ out/libdriveio.so.0.full:
+ 	mkdir -p out

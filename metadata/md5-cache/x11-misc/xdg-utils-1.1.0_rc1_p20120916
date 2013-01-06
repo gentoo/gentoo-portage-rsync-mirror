@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst
+DESCRIPTION=Portland utils for cross-platform/cross-toolkit/cross-desktop interoperability
+EAPI=4
+HOMEPAGE=http://portland.freedesktop.org/
+IUSE=doc +perl
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+LICENSE=MIT
+RDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info x11-apps/xprop x11-apps/xset perl? ( dev-perl/File-MimeInfo )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~ssuominen/xdg-utils-1.1.0_rc1_p20120916.tar.xz -> xdg-utils-1.1.0_rc1_p20120916.tar.xz
+_md5_=9c487895e8d5b20e40186e8f97272e95

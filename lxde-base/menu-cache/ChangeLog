@@ -1,0 +1,110 @@
+# ChangeLog for lxde-base/menu-cache
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/ChangeLog,v 1.28 2012/12/02 15:21:01 hwoarang Exp $
+
+  02 Dec 2012; Markos Chandras <hwoarang@gentoo.org> menu-cache-0.4.1.ebuild:
+  Move it to EAPI5 so we can use sub-slot deps in reverse dependencies
+
+*menu-cache-0.4.1 (02 Dec 2012)
+
+  02 Dec 2012; Markos Chandras <hwoarang@gentoo.org> +menu-cache-0.4.1.ebuild:
+  Version bump
+
+  25 Aug 2012; Markos Chandras <hwoarang@gentoo.org> -menu-cache-0.2.6.ebuild,
+  -menu-cache-0.3.1.ebuild, -menu-cache-0.3.2.ebuild:
+  Remove old LXDE packages
+
+  20 Aug 2012; Johannes Huber <johu@gentoo.org> menu-cache-0.3.3.ebuild:
+  Stable for x86, wrt bug #429102
+
+  19 Aug 2012; Anthony G. Basile <blueness@gentoo.org> menu-cache-0.3.3.ebuild:
+  Stable arm, bug #429102
+
+  19 Aug 2012; Anthony G. Basile <blueness@gentoo.org> menu-cache-0.3.3.ebuild:
+  Stable ppc, bug #429102
+
+  16 Aug 2012; Agostino Sarubbo <ago@gentoo.org> menu-cache-0.3.3.ebuild:
+  Stable for amd64, wrt bug #429102
+
+  05 Jun 2012; Michael Weber <xmw@gentoo.org> menu-cache-0.3.2.ebuild:
+  ppc stable (bug 385189)
+
+*menu-cache-0.3.3 (23 May 2012)
+
+  23 May 2012; Markos Chandras <hwoarang@gentoo.org> +menu-cache-0.3.3.ebuild:
+  Version bump
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> menu-cache-0.2.6.ebuild,
+  menu-cache-0.3.1.ebuild, menu-cache-0.3.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  07 Mar 2011; Tobias Klausmann <klausman@gentoo.org> menu-cache-0.3.2.ebuild:
+  Keyworded on alpha, bug #330911
+
+  22 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  menu-cache-0.3.2.ebuild:
+  ppc stable wrt #349724
+
+  02 Jan 2011; Markus Meier <maekke@gentoo.org> menu-cache-0.3.2.ebuild:
+  arm stable, bug #349724
+
+  31 Jul 2010; Pacho Ramos <pacho@gentoo.org> menu-cache-0.3.2.ebuild:
+  amd64 stable, bug 327907
+
+  30 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  menu-cache-0.3.2.ebuild:
+  stable x86, bug 327907
+
+  28 Feb 2010; nixnut <nixnut@gentoo.org> menu-cache-0.3.1.ebuild:
+  ppc stable #306433
+
+*menu-cache-0.3.2 (27 Feb 2010)
+
+  27 Feb 2010; Ben de Groot <yngwin@gentoo.org> +menu-cache-0.3.2.ebuild:
+  Version bump
+
+  25 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  menu-cache-0.3.1.ebuild:
+  stable x86, bug 306433
+
+  23 Feb 2010; Raúl Porcel <armin76@gentoo.org> menu-cache-0.3.1.ebuild:
+  arm stable wrt #306433
+
+  23 Feb 2010; Markos Chandras <hwoarang@gentoo.org>
+  menu-cache-0.3.1.ebuild:
+  Stable on amd64 wrt bug #306433
+
+*menu-cache-0.3.1 (18 Feb 2010)
+
+  18 Feb 2010; Ben de Groot <yngwin@gentoo.org> +menu-cache-0.3.1.ebuild:
+  Version bump
+
+  24 Jan 2010; Raúl Porcel <armin76@gentoo.org> menu-cache-0.2.6.ebuild:
+  Add ~arm
+
+  01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  menu-cache-0.2.6.ebuild:
+  Transfer Prefix keywords
+
+  21 Nov 2009; nixnut <nixnut@gentoo.org> menu-cache-0.2.6.ebuild:
+  ppc stable #292698
+
+  20 Nov 2009; Markus Meier <maekke@gentoo.org> menu-cache-0.2.6.ebuild:
+  amd64/x86 stable, bug #292698
+
+*menu-cache-0.2.6 (08 Nov 2009)
+
+  08 Nov 2009; Ben de Groot <yngwin@gentoo.org> -menu-cache-0.2.5.ebuild,
+  +menu-cache-0.2.6.ebuild:
+  Version bump with security fixes by upstream. Removing old vulnerable
+  version.
+
+  30 Jul 2009; Mounir Lamouri <volkmar@gentoo.org> menu-cache-0.2.5.ebuild:
+  Keywording for ppc. Bug 271148
+
+*menu-cache-0.2.5 (24 May 2009)
+
+  24 May 2009; Ben de Groot <yngwin@gentoo.org> +menu-cache-0.2.5.ebuild,
+  +metadata.xml:
+  Initial commit. This is a gnome-menus replacement for LXDE, for caching
+  the applications menu.

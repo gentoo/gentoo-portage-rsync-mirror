@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install
+DEPEND=>=app-misc/ktoblzcheck-1.33 dev-libs/gmp >=sys-libs/gwenhywfar-4.2.1[gtk?] virtual/libintl ofx? ( >=dev-libs/libofx-0.9.1 ) chipcard? ( >=sys-libs/libchipcard-5.0.2 ) virtual/pkgconfig sys-devel/gettext doc? ( app-doc/doxygen )
+DESCRIPTION=Generic Online Banking Interface
+EAPI=2
+HOMEPAGE=http://www.aquamaniac.de/aqbanking/
+IUSE=+chipcard debug doc examples gtk ofx
+KEYWORDS=amd64 ppc ~ppc64 x86
+LICENSE=GPL-2
+RDEPEND=>=app-misc/ktoblzcheck-1.33 dev-libs/gmp >=sys-libs/gwenhywfar-4.2.1[gtk?] virtual/libintl ofx? ( >=dev-libs/libofx-0.9.1 ) chipcard? ( >=sys-libs/libchipcard-5.0.2 )
+SLOT=0
+SRC_URI=http://www.aquamaniac.de/sites/download/download.php?package=03&release=85&file=01&dummy=aqbanking-5.0.14.tar.gz -> aqbanking-5.0.14.tar.gz
+_md5_=5880f683c1764f9e697c1009cd28dc79

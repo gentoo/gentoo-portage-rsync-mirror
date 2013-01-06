@@ -1,0 +1,16 @@
+# ChangeLog for sci-mathematics/agda-stdlib
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda-stdlib/ChangeLog,v 1.2 2012/11/18 07:53:04 gienah Exp $
+
+*agda-stdlib-0.7_pre20121118 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org>
+  +agda-stdlib-0.7_pre20121118.ebuild:
+  Bump agda stdlib to a development snapshot, which I just name 0.7_pre20121118
+  because I have to call it something, for agda 2.3.2.
+
+*agda-stdlib-0.6 (25 Mar 2012)
+
+  25 Mar 2012; Mark Wright <gienah@gentoo.org> +agda-stdlib-0.6.ebuild,
+  +files/50agda-stdlib-gentoo.el, +metadata.xml:
+  Thanks to tomprince for adding support for agda-stdlib.

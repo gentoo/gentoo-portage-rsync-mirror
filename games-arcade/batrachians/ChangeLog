@@ -1,0 +1,34 @@
+# ChangeLog for games-arcade/batrachians
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/batrachians/ChangeLog,v 1.7 2012/05/04 04:22:28 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> batrachians-0.1.4.ebuild,
+  batrachians-0.1.5.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  31 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  batrachians-0.1.5.ebuild:
+  x86 stable wrt bug #367931
+
+  23 May 2011; Markos Chandras <hwoarang@gentoo.org> batrachians-0.1.5.ebuild:
+  Stable on amd64 wrt bug #367931
+
+*batrachians-0.1.5 (17 Apr 2011)
+
+  17 Apr 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +batrachians-0.1.5.ebuild:
+  version bump
+
+  07 Sep 2010; Tristan Heaven <nyhm@gentoo.org> batrachians-0.1.4.ebuild:
+  Add ~amd64 keyword
+
+  11 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  batrachians-0.1.4.ebuild:
+  stable x86, bug 325145
+
+*batrachians-0.1.4 (18 May 2010)
+
+  18 May 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +batrachians-0.1.4.ebuild, +metadata.xml:
+  Initial commit
+

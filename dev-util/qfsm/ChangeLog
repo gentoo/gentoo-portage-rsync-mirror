@@ -1,0 +1,16 @@
+# ChangeLog for dev-util/qfsm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qfsm/ChangeLog,v 1.2 2012/11/10 13:02:42 pinkbyte Exp $
+
+  10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> qfsm-0.53.0.ebuild:
+  Fix doc path installation, bug #130641. Thanks to haarp for reporting this
+  issue
+
+*qfsm-0.53.0 (10 Nov 2012)
+
+  10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> +qfsm-0.53.0.ebuild,
+  +metadata.xml:
+  Initial commit wrt bug #130641. Ebuild is based on work of Robert Führicht,
+  Matteo Azzali, Robert A., haarp and me. Qt herd added to metadata, permission
+  granted by yngwin
+

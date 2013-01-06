@@ -1,0 +1,106 @@
+# ChangeLog for media-sound/tomahawk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/ChangeLog,v 1.19 2012/08/10 23:09:32 johu Exp $
+
+  10 Aug 2012; Johannes Huber <johu@gentoo.org> tomahawk-0.5.5.ebuild,
+  tomahawk-9999.ebuild:
+  Remove dropped deps by upstream.
+
+*tomahawk-0.5.5 (30 Jul 2012)
+
+  30 Jul 2012; Johannes Huber <johu@gentoo.org> +tomahawk-0.5.5.ebuild,
+  -files/tomahawk-0.3.2-remove-quazip.patch, -tomahawk-0.4.2.ebuild,
+  -tomahawk-0.5.4.ebuild, metadata.xml, tomahawk-9999.ebuild:
+  Version bump. Remove old.
+
+*tomahawk-0.5.4 (13 Jul 2012)
+
+  13 Jul 2012; Johannes Huber <johu@gentoo.org> +tomahawk-0.5.4.ebuild,
+  -tomahawk-0.5.3.ebuild:
+  Version bump, remove old.
+
+*tomahawk-0.5.3 (10 Jul 2012)
+
+  10 Jul 2012; Johannes Huber <johu@gentoo.org> +tomahawk-0.5.3.ebuild,
+  -tomahawk-0.5.2.ebuild:
+  Version bump, remove old.
+
+*tomahawk-0.5.2 (02 Jul 2012)
+
+  02 Jul 2012; Johannes Huber <johu@gentoo.org> +tomahawk-0.5.2.ebuild,
+  -tomahawk-0.5.1.ebuild:
+  Version bump, remove old.
+
+*tomahawk-0.5.1 (01 Jul 2012)
+
+  01 Jul 2012; Johannes Huber <johu@gentoo.org> +tomahawk-0.5.1.ebuild,
+  -tomahawk-0.5.0.ebuild:
+  Version bump, remove old.
+
+*tomahawk-0.5.0 (30 Jun 2012)
+
+  30 Jun 2012; Johannes Huber <johu@gentoo.org> +tomahawk-0.5.0.ebuild,
+  -tomahawk-0.4.1.ebuild:
+  Version bump, remove old.
+
+  30 Jun 2012; Johannes Huber <johu@gentoo.org> tomahawk-9999.ebuild:
+  Sync live ebuild with dev overlay. Updates dependencies and build options.
+
+*tomahawk-0.4.2 (11 Apr 2012)
+
+  11 Apr 2012; Johannes Huber <johu@gentoo.org> +tomahawk-0.4.2.ebuild,
+  -tomahawk-0.4.0.ebuild:
+  Version bump, remove old.
+
+*tomahawk-0.4.1 (06 Apr 2012)
+
+  06 Apr 2012; Johannes Huber <johu@gentoo.org> +tomahawk-0.4.1.ebuild,
+  -tomahawk-0.3.3.ebuild:
+  Version bump, remove old.
+
+  06 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> tomahawk-9999.ebuild:
+  Fix mycmakeargs to be local.
+
+  19 Mar 2012; Johannes Huber <johu@gentoo.org> tomahawk-9999.ebuild:
+  Sync with overlay. Remove patch, adds dep.
+
+*tomahawk-0.4.0 (19 Mar 2012)
+
+  19 Mar 2012; Johannes Huber <johu@gentoo.org> +tomahawk-0.4.0.ebuild:
+  Version bump.
+
+  27 Jan 2012; Johannes Huber <johu@gentoo.org> metadata.xml:
+  Add myself as maintainer.
+
+  08 Dec 2011; Johannes Huber <johu@gentoo.org>
+  -files/tomahawk-0.3.2-clucene.patch, tomahawk-0.3.3.ebuild,
+  tomahawk-9999.ebuild:
+  Removed not needed patch anymore. Cause was bug #361385
+
+*tomahawk-0.3.3 (08 Dec 2011)
+
+  08 Dec 2011; Johannes Huber <johu@gentoo.org> +tomahawk-0.3.3.ebuild,
+  -files/tomahawk-0.3.0-clucene.patch,
+  -files/tomahawk-0.3.0-remove-quazip.patch, -tomahawk-0.3.0.ebuild,
+  -tomahawk-0.3.2.ebuild:
+  Version bump 0.3.3. Remove old.
+
+  01 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org> tomahawk-0.3.0.ebuild,
+  tomahawk-0.3.2.ebuild, tomahawk-9999.ebuild:
+  Can use any phonon backend
+
+*tomahawk-0.3.2 (24 Nov 2011)
+
+  24 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +tomahawk-0.3.2.ebuild, +files/tomahawk-0.3.2-clucene.patch,
+  +files/tomahawk-0.3.2-remove-quazip.patch, tomahawk-9999.ebuild:
+  Version bump, thanks johu!
+
+*tomahawk-9999 (12 Nov 2011)
+*tomahawk-0.3.0 (12 Nov 2011)
+
+  12 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +tomahawk-0.3.0.ebuild, +files/tomahawk-0.3.0-clucene.patch,
+  +files/tomahawk-0.3.0-remove-quazip.patch, +tomahawk-9999.ebuild,
+  +metadata.xml:
+  New application, bug 379385. Thanks to eliasp, johu and jmbsvicetto...

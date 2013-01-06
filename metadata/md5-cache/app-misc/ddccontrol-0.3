@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install unpack
+DEPEND=dev-libs/libxml2:2 gtk? ( >=x11-libs/gtk+-2.4:2 ) gnome? ( >=gnome-base/gnome-panel-2.10 ) sys-apps/pciutils nls? ( sys-devel/gettext ) >=app-misc/ddccontrol-db-20051114 doc? ( >=app-text/docbook-xsl-stylesheets-1.65.1 >=dev-libs/libxslt-1.1.6 app-text/htmltidy ) sys-kernel/linux-headers
+DESCRIPTION=DDCControl allows control of monitor parameters via DDC
+EAPI=1
+HOMEPAGE=http://ddccontrol.sourceforge.net/
+IUSE=gtk gnome doc nls
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/libxml2:2 gtk? ( >=x11-libs/gtk+-2.4:2 ) gnome? ( >=gnome-base/gnome-panel-2.10 ) sys-apps/pciutils nls? ( sys-devel/gettext ) >=app-misc/ddccontrol-db-20051114
+SLOT=0
+SRC_URI=mirror://sourceforge/ddccontrol/ddccontrol-0.3.tar.bz2
+_md5_=160e7d788883daaaf14efa59f8373c1c

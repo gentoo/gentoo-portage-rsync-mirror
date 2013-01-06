@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>postgresql</herd>
+  <maintainer>
+	<email>bugs@bergstroem.nu</email>
+	<name>Johan Bergström</name>
+	<description>Proxy-Maintainer, assign bugs</description>
+  </maintainer>
+  <maintainer>
+	<email>titanofold@gentoo.org</email>
+	<name>Aaron W. Swenson</name>
+  </maintainer>
+</pkgmetadata>

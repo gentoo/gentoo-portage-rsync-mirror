@@ -1,0 +1,10 @@
+--- a/src/sflowtool.c
++++ b/src/sflowtool.c
+@@ -20,6 +20,7 @@
+ #include <fcntl.h>
+ #include <time.h>
+ #include <setjmp.h>
++#include <ctype.h> /* isspace(), isalnum() */
+ 
+ #ifdef WIN32 
+ #else

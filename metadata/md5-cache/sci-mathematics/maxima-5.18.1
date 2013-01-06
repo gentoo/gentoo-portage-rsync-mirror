@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst postrm preinst prepare setup
+DEPEND=X? ( x11-misc/xdg-utils sci-visualization/gnuplot[gd] tk? ( dev-lang/tk ) ) latex? ( virtual/latex-base ) emacs? ( virtual/emacs latex? ( app-emacs/auctex ) ) xemacs? ( app-editors/xemacs latex? ( app-emacs/auctex ) ) gcl? ( >=dev-lisp/gcl-2.6.8_pre[ansi] ) clisp? ( dev-lisp/clisp ) cmucl? ( dev-lisp/cmucl ) sbcl? ( dev-lisp/sbcl ) cmucl? ( app-misc/rlwrap ) sbcl? ( app-misc/rlwrap ) !gcl? ( !clisp? ( !cmucl? ( !sbcl? ( dev-lisp/sbcl app-misc/rlwrap ) ) ) ) sys-apps/texinfo
+DESCRIPTION=Free computer algebra environment based on Macsyma
+EAPI=2
+HOMEPAGE=http://maxima.sourceforge.net/
+IUSE=latex emacs tk nls unicode xemacs X gcl clisp cmucl sbcl linguas_es linguas_pt linguas_pt_BR
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+PDEPEND=emacs? ( app-emacs/imaxima )
+RDEPEND=X? ( x11-misc/xdg-utils sci-visualization/gnuplot[gd] tk? ( dev-lang/tk ) ) latex? ( virtual/latex-base ) emacs? ( virtual/emacs latex? ( app-emacs/auctex ) ) xemacs? ( app-editors/xemacs latex? ( app-emacs/auctex ) ) gcl? ( >=dev-lisp/gcl-2.6.8_pre[ansi] ) clisp? ( dev-lisp/clisp ) cmucl? ( dev-lisp/cmucl ) sbcl? ( dev-lisp/sbcl ) cmucl? ( app-misc/rlwrap ) sbcl? ( app-misc/rlwrap ) !gcl? ( !clisp? ( !cmucl? ( !sbcl? ( dev-lisp/sbcl app-misc/rlwrap ) ) ) )
+SLOT=0
+SRC_URI=mirror://sourceforge/maxima/maxima-5.18.1.tar.gz
+_eclasses_=elisp-common	21605c8f0b2a5ffa3233faeb3f9df309	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=4138b3abe85c5702ce44b4aff5853b24

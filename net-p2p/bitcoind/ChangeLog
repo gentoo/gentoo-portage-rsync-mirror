@@ -1,0 +1,375 @@
+# ChangeLog for net-p2p/bitcoind
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.53 2013/01/04 02:26:38 blueness Exp $
+
+*bitcoind-0.7.2 (04 Jan 2013)
+
+  04 Jan 2013; Anthony G. Basile <blueness@gentoo.org> +bitcoind-0.7.2.ebuild:
+  Version bump
+
+  14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove redundant USE=upnp description; it matches the global flag meaning.
+
+*bitcoind-0.6.4_rc4-r1 (06 Dec 2012)
+*bitcoind-0.7.2_rc2 (06 Dec 2012)
+
+  06 Dec 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.6.4_rc4-r1.ebuild, +bitcoind-0.7.2_rc2.ebuild,
+  -bitcoind-0.6.4_rc3.ebuild, -bitcoind-0.6.4_rc4.ebuild:
+  Version bumps
+
+  09 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> bitcoind-0.7.1.ebuild:
+  Drop version-specific boost access (leverages boost-1.52.0-r1 which uses
+  system layout); this should also make sure that the multithread libraries are
+  used, unlike before, with the new layout.
+
+  29 Oct 2012; Anthony G. Basile <blueness@gentoo.org> bitcoind-0.6.3.ebuild,
+  bitcoind-0.6.4_rc3.ebuild, bitcoind-0.7.0.ebuild:
+  Workaround for bug #440034
+
+*bitcoind-0.4.8_rc4 (29 Oct 2012)
+*bitcoind-0.5.7_rc4 (29 Oct 2012)
+*bitcoind-0.7.1 (29 Oct 2012)
+*bitcoind-0.6.4_rc4 (29 Oct 2012)
+*bitcoind-0.6.0.10_rc4 (29 Oct 2012)
+
+  29 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.4.8_rc4.ebuild, +bitcoind-0.5.7_rc4.ebuild,
+  +bitcoind-0.6.0.10_rc4.ebuild, +bitcoind-0.6.4_rc4.ebuild,
+  +bitcoind-0.7.1.ebuild:
+  Version bumps, bug #435216
+
+  21 Oct 2012; Anthony G. Basile <blueness@gentoo.org> bitcoind-0.6.3.ebuild:
+  stable arm, bug #429188
+
+*bitcoind-0.7.0 (08 Oct 2012)
+*bitcoind-0.6.4_rc3 (08 Oct 2012)
+*bitcoind-0.6.0.10_rc3 (08 Oct 2012)
+*bitcoind-0.5.7_rc3 (08 Oct 2012)
+*bitcoind-0.4.8_rc3 (08 Oct 2012)
+
+  08 Oct 2012; Anthony G. Basile <blueness@gentoo.org> -bitcoind-0.4.7.ebuild,
+  -bitcoind-0.4.8_rc1.ebuild, -bitcoind-0.4.8_rc2.ebuild,
+  +bitcoind-0.4.8_rc3.ebuild, -bitcoind-0.5.6.ebuild,
+  -bitcoind-0.5.7_rc1.ebuild, -bitcoind-0.5.7_rc2.ebuild,
+  +bitcoind-0.5.7_rc3.ebuild, -bitcoind-0.6.0.9.ebuild,
+  -bitcoind-0.6.0.10_rc1.ebuild, -bitcoind-0.6.0.10_rc2.ebuild,
+  +bitcoind-0.6.0.10_rc3.ebuild, -bitcoind-0.6.4_rc1.ebuild,
+  -bitcoind-0.6.4_rc2.ebuild, +bitcoind-0.6.4_rc3.ebuild,
+  -bitcoind-0.7.0_rc1.ebuild, -bitcoind-0.7.0_rc2.ebuild,
+  +bitcoind-0.7.0.ebuild:
+  Version bumps to address bug #435216
+
+  18 Sep 2012; Johannes Huber <johu@gentoo.org> bitcoind-0.6.3.ebuild:
+  Stable for x86, wrt bug #429188
+
+*bitcoind-0.7.0_rc2 (16 Sep 2012)
+*bitcoind-0.6.4_rc2 (16 Sep 2012)
+*bitcoind-0.6.0.10_rc2 (16 Sep 2012)
+*bitcoind-0.5.7_rc2 (16 Sep 2012)
+*bitcoind-0.4.8_rc2 (16 Sep 2012)
+
+  16 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.4.8_rc2.ebuild, +bitcoind-0.5.7_rc2.ebuild,
+  +bitcoind-0.6.0.9.ebuild, -bitcoind-0.6.0.9-r2.ebuild,
+  +bitcoind-0.6.0.10_rc2.ebuild, +bitcoind-0.6.4_rc2.ebuild,
+  +bitcoind-0.7.0_rc2.ebuild:
+  Version bump RC's
+
+  15 Sep 2012; Agostino Sarubbo <ago@gentoo.org> bitcoind-0.6.3.ebuild:
+  Stable for amd64, wrt bug #429188
+
+*bitcoind-0.6.0.9-r2 (02 Sep 2012)
+
+  02 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.6.0.9-r1.ebuild, +bitcoind-0.6.0.9-r2.ebuild:
+  Fix tarball name, again
+
+*bitcoind-0.6.0.9-r1 (02 Sep 2012)
+
+  02 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.6.0.9.ebuild, +bitcoind-0.6.0.9-r1.ebuild:
+  Fix bad tarball issue from gitorious
+
+*bitcoind-0.7.0_rc1 (30 Aug 2012)
+*bitcoind-0.6.4_rc1 (30 Aug 2012)
+*bitcoind-0.6.0.10_rc1 (30 Aug 2012)
+*bitcoind-0.5.7_rc1 (30 Aug 2012)
+*bitcoind-0.4.8_rc1 (30 Aug 2012)
+
+  30 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.4.8_rc1.ebuild, +bitcoind-0.5.7_rc1.ebuild,
+  +bitcoind-0.6.0.10_rc1.ebuild, +bitcoind-0.6.4_rc1.ebuild,
+  +bitcoind-0.7.0_rc1.ebuild:
+  Version bump RC's
+
+*bitcoind-0.5.6 (31 Jul 2012)
+*bitcoind-0.4.7 (31 Jul 2012)
+
+  31 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.4.7_rc3.ebuild, +bitcoind-0.4.7.ebuild,
+  -bitcoind-0.5.6_rc3.ebuild, +bitcoind-0.5.6.ebuild:
+  Version bump and punt RC's
+
+*bitcoind-0.6.0.9 (15 Jul 2012)
+
+  15 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.6.0.9_rc1.ebuild, +bitcoind-0.6.0.9.ebuild:
+  Bump the release candidate
+
+  11 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  bitcoind-0.4.7_rc3.ebuild, bitcoind-0.5.6_rc2.ebuild,
+  bitcoind-0.5.6_rc3.ebuild, bitcoind-0.6.0.9_rc1.ebuild,
+  bitcoind-0.6.3.ebuild:
+  Add GPL-2 for init scripts, bug #426110
+
+  26 Jun 2012; Anthony G. Basile <blueness@gentoo.org> +bitcoind-0.6.3.ebuild:
+  Version bump
+
+*bitcoind-0.6.3 (26 Jun 2012)
+*bitcoind-0.6.0.9_rc1 (26 Jun 2012)
+*bitcoind-0.5.6_rc3 (26 Jun 2012)
+*bitcoind-0.4.7_rc3 (26 Jun 2012)
+
+  26 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
+  -files/0.4.5-reopen_log_file.patch, -bitcoind-0.4.7_rc2.ebuild,
+  +bitcoind-0.4.7_rc3.ebuild, +bitcoind-0.5.6_rc3.ebuild,
+  -bitcoind-0.6.0.7.ebuild, -bitcoind-0.6.0.8_rc2.ebuild,
+  -files/0.6.0-reopen_log_file.patch, +bitcoind-0.6.0.9_rc1.ebuild,
+  -files/0.6.1-reopen_log_file.patch, -bitcoind-0.5.5.ebuild,
+  -bitcoind-0.6.0.8_rc1.ebuild, -bitcoind-0.6.2.ebuild, 
+  -files/bitcoind-remove-debug.patch:
+  Version bumps and cleanup
+
+  21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> bitcoind-0.5.6_rc2.ebuild:
+  marked x86 per bug 422219
+
+  20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> bitcoind-0.5.6_rc2.ebuild:
+  Stable for amd64, wrt bug #422219
+
+  16 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
+  +files/0.4.7-reopen_log_file.patch, +files/0.6.0.8-reopen_log_file.patch:
+  Added missing patches
+
+*bitcoind-0.6.0.8_rc2 (16 Jun 2012)
+*bitcoind-0.5.6_rc2 (16 Jun 2012)
+*bitcoind-0.4.7_rc2 (16 Jun 2012)
+
+  16 Jun 2012; Anthony G. Basile <blueness@gentoo.org> -bitcoind-0.4.6.ebuild,
+  -bitcoind-0.4.7_rc1.ebuild, +bitcoind-0.4.7_rc2.ebuild,
+  -bitcoind-0.5.3.ebuild, -bitcoind-0.5.6_rc1.ebuild,
+  +bitcoind-0.5.6_rc2.ebuild, +bitcoind-0.6.0.8_rc2.ebuild:
+  Remove broken 0.4.x, 0.5.x and add fixes
+  See: https://bitcointalk.org/?topic=87660
+
+  21 May 2012; Johannes Huber <johu@gentoo.org> bitcoind-0.5.5.ebuild:
+  Stable for x86, wrt bug #415973
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> bitcoind-0.5.5.ebuild:
+  Stable for amd64, wrt bug #415973
+
+  14 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.4.4-r1.ebuild, -bitcoind-0.4.5.ebuild,
+  -bitcoind-0.5.0.4-r1.ebuild, -bitcoind-0.5.0.5-r1.ebuild,
+  -bitcoind-0.5.0.6.ebuild, -bitcoind-0.5.1.ebuild, -bitcoind-0.5.3-r2.ebuild,
+  -bitcoind-0.5.4.ebuild, -bitcoind-0.6.0.ebuild:
+  Remove vulnerable versions, CVE-2012-2459, bug #415973
+
+*bitcoind-0.6.2 (14 May 2012)
+*bitcoind-0.6.0.8_rc1 (14 May 2012)
+*bitcoind-0.6.0.7 (14 May 2012)
+*bitcoind-0.5.6_rc1 (14 May 2012)
+*bitcoind-0.5.5 (14 May 2012)
+*bitcoind-0.4.7_rc1 (14 May 2012)
+*bitcoind-0.4.6 (14 May 2012)
+
+  14 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  +files/0.6.1-reopen_log_file.patch, +bitcoind-0.4.6.ebuild,
+  +bitcoind-0.4.7_rc1.ebuild, +bitcoind-0.5.5.ebuild,
+  +bitcoind-0.5.6_rc1.ebuild, +bitcoind-0.6.0.7.ebuild,
+  +bitcoind-0.6.0.8_rc1.ebuild, +bitcoind-0.6.2.ebuild:
+  Add new versions that fix CVE-2012-2459, bug #415973
+
+  27 Apr 2012; Anthony G. Basile <blueness@gentoo.org> bitcoind-0.6.0.ebuild:
+  Add logrotation to 0.6.0 as well
+
+  27 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  +files/0.4.5-reopen_log_file.patch, -bitcoind-0.4.5_rc3.ebuild,
+  +bitcoind-0.4.5.ebuild, -bitcoind-0.5.0.6_rc3.ebuild,
+  +bitcoind-0.5.0.6.ebuild, -bitcoind-0.5.4_rc3.ebuild,
+  +files/0.6.0-reopen_log_file.patch, +bitcoind-0.5.4.ebuild,
+  +files/bitcoind.logrotate, metadata.xml:
+  Version bump rc3's and add log rotation
+
+*bitcoind-0.5.4 (27 Apr 2012)
+*bitcoind-0.5.0.6 (27 Apr 2012)
+*bitcoind-0.4.5 (27 Apr 2012)
+
+  07 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.4.5_rc2.ebuild, +bitcoind-0.4.5_rc3.ebuild,
+  -bitcoind-0.5.0.6_rc2.ebuild, +bitcoind-0.5.0.6_rc3.ebuild,
+  -bitcoind-0.5.4_rc2.ebuild, +bitcoind-0.5.4_rc3.ebuild:
+  Version bump rc2's to rc3's
+
+  04 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  -files/9999-eligius_sendfee.patch:
+  Removed unused patch file
+
+*bitcoind-0.6.0 (04 Apr 2012)
+*bitcoind-0.5.4_rc2 (04 Apr 2012)
+*bitcoind-0.5.0.6_rc2 (04 Apr 2012)
+*bitcoind-0.4.5_rc2 (04 Apr 2012)
+
+  04 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.4.5_rc1.ebuild, +bitcoind-0.4.5_rc2.ebuild,
+  -bitcoind-0.5.0.6_rc1.ebuild, +bitcoind-0.5.0.6_rc2.ebuild,
+  -bitcoind-0.5.4_rc1.ebuild, +bitcoind-0.5.4_rc2.ebuild,
+  -bitcoind-0.6.0_rc5.ebuild, +bitcoind-0.6.0.ebuild:
+  Version bumps
+
+  02 Apr 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Update luke-jr's email address
+
+*bitcoind-0.6.0_rc5 (26 Mar 2012)
+
+  26 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  files/9999-eligius_sendfee.patch, -bitcoind-0.6.0_rc4.ebuild,
+  +bitcoind-0.6.0_rc5.ebuild:
+  Bump 0.6.0 to rc5
+
+  25 Mar 2012; Thomas Kahle <tomka@gentoo.org> bitcoind-0.5.3.ebuild:
+  marked x86 per bug 407793
+
+*bitcoind-0.5.4_rc1 (25 Mar 2012)
+*bitcoind-0.5.3-r2 (25 Mar 2012)
+*bitcoind-0.5.0.6_rc1 (25 Mar 2012)
+*bitcoind-0.5.0.5-r1 (25 Mar 2012)
+*bitcoind-0.5.0.4-r1 (25 Mar 2012)
+*bitcoind-0.4.5_rc1 (25 Mar 2012)
+*bitcoind-0.4.4-r1 (25 Mar 2012)
+
+  25 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  +files/0.4.4+bip16-eligius_sendfee.patch, -bitcoind-0.4.4.ebuild,
+  +bitcoind-0.4.4-r1.ebuild, +bitcoind-0.4.5_rc1.ebuild,
+  -bitcoind-0.5.0.4.ebuild, +bitcoind-0.5.0.4-r1.ebuild,
+  +bitcoind-0.5.0.5-r1.ebuild, +bitcoind-0.5.0.6_rc1.ebuild,
+  +files/0.5.0.5+bip16-eligius_sendfee.patch, bitcoind-0.5.1.ebuild,
+  -bitcoind-0.5.3-r1.ebuild, +bitcoind-0.5.3-r2.ebuild,
+  +bitcoind-0.5.4_rc1.ebuild, metadata.xml:
+  Updates to support BIP16 required by April 1, 2012
+
+  17 Mar 2012; Anthony G. Basile <blueness@gentoo.org> bitcoind-0.5.0.4.ebuild:
+  Backport src_test() to 0.5.0.4
+
+*bitcoind-0.6.0_rc4 (17 Mar 2012)
+*bitcoind-0.5.3-r1 (17 Mar 2012)
+
+  17 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  +files/9999-eligius_sendfee.patch, +bitcoind-0.5.3-r1.ebuild,
+  +bitcoind-0.6.0_rc4.ebuild:
+  Added src_test() to current stable and added next rc.
+
+  16 Mar 2012; Anthony G. Basile <blueness@gentoo.org> bitcoind-0.5.3.ebuild,
+  +files/bitcoind-remove-debug.patch:
+  Remove debug flag from build, bug #408483
+
+  16 Mar 2012; Anthony G. Basile <blueness@gentoo.org> bitcoind-0.5.3.ebuild:
+  Don't call g++ directly, fixes bug #408481
+
+  16 Mar 2012; Agostino Sarubbo <ago@gentoo.org> bitcoind-0.5.3.ebuild:
+  Stable for amd64, wrt bug #407793
+
+*bitcoind-0.5.3 (15 Mar 2012)
+*bitcoind-0.5.0.4 (15 Mar 2012)
+*bitcoind-0.4.4 (15 Mar 2012)
+
+  15 Mar 2012; Anthony G. Basile <blueness@gentoo.org> +bitcoind-0.4.4.ebuild,
+  +bitcoind-0.5.0.4.ebuild, +bitcoind-0.5.3.ebuild:
+  Version bumps which address bug #407793
+
+  15 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.4.3-r2.ebuild, -bitcoind-0.5.0.3-r2.ebuild,
+  -bitcoind-0.5.0.4_rc3.ebuild, -bitcoind-0.5.2-r2.ebuild,
+  -bitcoind-0.5.3_rc3.ebuild:
+  Remove unstable vulnerable versions, bug #407793
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> bitcoind-0.5.1.ebuild:
+  x86 stable wrt bug #405211
+
+*bitcoind-0.5.3_rc3 (05 Mar 2012)
+*bitcoind-0.5.0.4_rc3 (05 Mar 2012)
+
+  05 Mar 2012; Anthony G. Basile <blueness@gentoo.org> -bitcoind-0.4.2.ebuild,
+  -bitcoind-0.4.3.ebuild, -bitcoind-0.4.4_rc2-r1.ebuild,
+  -bitcoind-0.5.0.3.ebuild, -bitcoind-0.5.0.4_rc2-r1.ebuild,
+  +bitcoind-0.5.0.4_rc3.ebuild, -bitcoind-0.5.2.ebuild,
+  -bitcoind-0.5.3_rc2-r1.ebuild, +bitcoind-0.5.3_rc3.ebuild:
+  Remove older 0.4.x versions, add newer 0.5.x
+
+  29 Feb 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fixed the Header for ChangeLog
+
+  22 Feb 2012; Agostino Sarubbo <ago@gentoo.org> bitcoind-0.5.1.ebuild:
+  Stable for amd64, wrt bug #405211
+
+*bitcoind-0.5.3_rc2-r1 (21 Feb 2012)
+*bitcoind-0.5.2-r2 (21 Feb 2012)
+*bitcoind-0.5.0.4_rc2-r1 (21 Feb 2012)
+*bitcoind-0.5.0.3-r2 (21 Feb 2012)
+*bitcoind-0.4.4_rc2-r1 (21 Feb 2012)
+*bitcoind-0.4.3-r2 (21 Feb 2012)
+
+  21 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.4.3-r1.ebuild, +bitcoind-0.4.3-r2.ebuild,
+  -bitcoind-0.4.4_rc2.ebuild, +bitcoind-0.4.4_rc2-r1.ebuild,
+  -bitcoind-0.5.0.3-r1.ebuild, +bitcoind-0.5.0.3-r2.ebuild,
+  -bitcoind-0.5.0.4_rc2.ebuild, +bitcoind-0.5.0.4_rc2-r1.ebuild,
+  -bitcoind-0.5.2-r1.ebuild, +bitcoind-0.5.2-r2.ebuild,
+  -bitcoind-0.5.3_rc2.ebuild, +bitcoind-0.5.3_rc2-r1.ebuild:
+  Update BIP17 patch
+
+*bitcoind-0.5.3_rc2 (16 Feb 2012)
+*bitcoind-0.5.0.4_rc2 (16 Feb 2012)
+*bitcoind-0.4.4_rc2 (16 Feb 2012)
+
+  16 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.4.4_rc2.ebuild, +bitcoind-0.5.0.4_rc2.ebuild,
+  +bitcoind-0.5.3_rc2.ebuild:
+  Moved from luke-jr's bitcoin overlay
+
+*bitcoind-0.5.2-r1 (08 Feb 2012)
+*bitcoind-0.5.0.3-r1 (08 Feb 2012)
+*bitcoind-0.4.3-r1 (08 Feb 2012)
+
+  08 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.4.3-r1.ebuild, +bitcoind-0.5.0.3-r1.ebuild,
+  +bitcoind-0.5.2-r1.ebuild, metadata.xml:
+  Add USE=bip17 to validate new P2SH transactions
+
+*bitcoind-0.5.2 (11 Jan 2012)
+*bitcoind-0.5.0.3 (11 Jan 2012)
+*bitcoind-0.4.3 (11 Jan 2012)
+
+  11 Jan 2012; Anthony G. Basile <blueness@gentoo.org>
+  -bitcoind-0.4.3_rc1.ebuild, +bitcoind-0.4.3.ebuild,
+  -bitcoind-0.5.0.3_rc1.ebuild, +bitcoind-0.5.0.3.ebuild,
+  -bitcoind-0.5.2_rc1.ebuild, +bitcoind-0.5.2.ebuild:
+  Bumps from release candidates
+
+*bitcoind-0.5.2_rc1 (06 Jan 2012)
+*bitcoind-0.5.0.3_rc1 (06 Jan 2012)
+*bitcoind-0.4.3_rc1 (06 Jan 2012)
+
+  06 Jan 2012; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.4.3_rc1.ebuild, +bitcoind-0.5.0.3_rc1.ebuild,
+  +bitcoind-0.5.2_rc1.ebuild:
+  Moved from luke-jr's bitcoin overlay
+
+*bitcoind-0.5.1 (23 Dec 2011)
+*bitcoind-0.4.2 (23 Dec 2011)
+
+  23 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
+  +files/0.4.2-Makefile.gentoo, +bitcoind-0.4.2.ebuild, +bitcoind-0.5.1.ebuild,
+  +files/bitcoin.conf, +files/bitcoin.confd, +files/bitcoin.initd,
+  +metadata.xml:
+  Initial commit, proxy maintaining for Luke Dashjr, bug #328391

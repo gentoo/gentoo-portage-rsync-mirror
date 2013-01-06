@@ -1,0 +1,489 @@
+ include/BALL/COMMON/global.h                       | 26 +++++------
+ include/BALL/DATATYPE/bitVector.h                  |  2 +-
+ include/BALL/DATATYPE/hashMap.h                    |  9 +---
+ include/BALL/DATATYPE/string.h                     | 11 +++--
+ include/BALL/DATATYPE/string.iC                    |  5 ++
+ include/BALL/SYSTEM/binaryFileAdaptor.h            | 53 +++++++++++-----------
+ source/COMMON/exception.C                          |  6 +--
+ source/COMMON/hash.C                               |  2 +-
+ source/COMMON/init.C                               |  4 +-
+ source/COMMON/logStream.C                          |  6 +--
+ source/COMMON/version.C                            |  2 +-
+ source/STRUCTURE/BONDORDERS/FPTBondOrderStrategy.C | 41 +++++++++--------
+ source/STRUCTURE/kekulizer.C                       |  8 ++--
+ 13 files changed, 91 insertions(+), 84 deletions(-)
+
+diff --git a/include/BALL/COMMON/global.h b/include/BALL/COMMON/global.h
+index 11d9246..02c81c6 100644
+--- a/include/BALL/COMMON/global.h
++++ b/include/BALL/COMMON/global.h
+@@ -9,7 +9,7 @@
+ #	include <BALL/CONFIG/config.h>
+ #endif
+ 
+-#include <limits.h>
++#include <limits>
+ #include <time.h>
+ 
+ #ifdef BALL_HAS_BASETSD_H
+@@ -223,28 +223,28 @@ namespace BALL
+ 		ASCII__SEMICOLON        = ';'
+ 	};
+ 
+-	static const Distance INVALID_DISTANCE = INT_MIN;
+-	static const Distance DISTANCE_MIN = (INT_MIN + 1);
+-	static const Distance DISTANCE_MAX = INT_MAX;
++	static const Distance INVALID_DISTANCE = std::numeric_limits<Distance>::max();
++	static const Distance DISTANCE_MIN = (std::numeric_limits<Distance>::min() + 1);
++	static const Distance DISTANCE_MAX = std::numeric_limits<Distance>::max();
+ 
+-	static const Handle INVALID_HANDLE = INT_MAX;
++	static const Handle INVALID_HANDLE = std::numeric_limits<Handle>::max();
+ 	static const Handle HANDLE_MIN = 0 ;
+-	static const Handle HANDLE_MAX = INT_MAX - 1;
++	static const Handle HANDLE_MAX = std::numeric_limits<Handle>::max() - 1;
+ 
+ 	static const Index INVALID_INDEX = -1;
+ 	static const Index INDEX_MIN = 0;
+-	static const Index INDEX_MAX = INT_MAX;
++	static const Index INDEX_MAX = std::numeric_limits<Index>::max();
+ 
+-	static const Position INVALID_POSITION = INT_MAX;
++	static const Position INVALID_POSITION = std::numeric_limits<Position>::max();
+ 	static const Position POSITION_MIN = 0;
+-	static const Position POSITION_MAX = INT_MAX - 1;
++	static const Position POSITION_MAX = std::numeric_limits<Position>::max() - 1;
+ 
+ #	undef SIZE_MAX
+-	static const Size INVALID_SIZE = INT_MAX;
++	static const Size INVALID_SIZE = std::numeric_limits<Size>::max();
+ 	static const Size SIZE_MIN = 0;
+-	static const Size SIZE_MAX = INT_MAX - 1;
+-	
+-	
++	static const Size SIZE_MAX = std::numeric_limits<Size>::max() - 1;
++
++
+ }
+ 
+ #endif // BALL_COMMON_GLOBAL_H
+diff --git a/include/BALL/DATATYPE/bitVector.h b/include/BALL/DATATYPE/bitVector.h
+index 991f08e..dc7ead6 100644
+--- a/include/BALL/DATATYPE/bitVector.h
++++ b/include/BALL/DATATYPE/bitVector.h
+@@ -18,7 +18,7 @@
+ #endif
+ 
+ 
+-#include <string.h>
++#include <cstring>
+ 
+ #define BALL_BLOCK_BITS 8
+ #define BALL_BLOCK_MASK (BALL_BLOCK_BITS - 1)
+diff --git a/include/BALL/DATATYPE/hashMap.h b/include/BALL/DATATYPE/hashMap.h
+index 329db2b..f185b8c 100644
+--- a/include/BALL/DATATYPE/hashMap.h
++++ b/include/BALL/DATATYPE/hashMap.h
+@@ -236,7 +236,7 @@ namespace BALL
+ 	template <class Key, class T>
+ 	const T& HashMap<Key, T>::operator [] (const Key& key) const
+ 	{
+-		ConstIterator it = find(key);
++		ConstIterator it = this->find(key);
+ 		if (it == Base::end())
+ 		{
+ 			throw IllegalKey(__FILE__, __LINE__);
+@@ -272,12 +272,7 @@ namespace BALL
+ 	T& HashMap<Key, T>::operator [] (const Key& key)
+ 		
+ 	{
+-		Iterator it = find(key);
+-		if (it == Base::end())
+-		{
+-			it = insert(ValueType(key, T())).first;
+-		}
+-		return it->second;
++		return BALL_MAP_NAME::operator[] (key);
+ 	}
+ 
+ } // namespace BALL
+diff --git a/include/BALL/DATATYPE/string.h b/include/BALL/DATATYPE/string.h
+index 1172180..aa11c35 100644
+--- a/include/BALL/DATATYPE/string.h
++++ b/include/BALL/DATATYPE/string.h
+@@ -27,10 +27,10 @@
+ #endif
+ 
+ #include <string>
+-#include <ctype.h>
+-#include <errno.h>
+-#include <stdlib.h>
+-#include <string.h>
++#include <cctype>
++#include <cerrno>
++#include <cstdlib>
++#include <cstring>
+ #include <iostream>
+ #include <vector>
+ 
+@@ -155,6 +155,9 @@ namespace BALL
+ 		/// STL string copy constructor
+ 		String(const string& string);
+ 
++		/// Copy constructor
++		String(const String& s);
++
+ #ifdef BALL_STD_STRING_HAS_RVALUE_REFERENCES
+ 		/// Move constructor
+ 		String(String&& s);
+diff --git a/include/BALL/DATATYPE/string.iC b/include/BALL/DATATYPE/string.iC
+index b255849..c347588 100644
+--- a/include/BALL/DATATYPE/string.iC
++++ b/include/BALL/DATATYPE/string.iC
+@@ -8,6 +8,11 @@ String::String()
+ {
+ }
+ 
++BALL_INLINE String::String(const String& s)
++	: string(s)
++{
++}
++
+ #ifdef BALL_STD_STRING_HAS_RVALUE_REFERENCES
+ BALL_INLINE
+ String::String(String&& s)
+diff --git a/include/BALL/SYSTEM/binaryFileAdaptor.h b/include/BALL/SYSTEM/binaryFileAdaptor.h
+index 64f0f5d..6488e18 100644
+--- a/include/BALL/SYSTEM/binaryFileAdaptor.h
++++ b/include/BALL/SYSTEM/binaryFileAdaptor.h
+@@ -10,6 +10,33 @@
+ 
+ namespace BALL
+ {
++	/** Coping with endianness. This function swaps the bytes of a variable
++			of type T if this type is of size 2n.
++	*/
++	template <typename T>
++	void swapBytes(T& t)
++	{
++		if (sizeof(T) % 2 != 0)
++		{
++			Log.error() << "Cannot swap types of uneven size." << std::endl;
++			return;
++		}
++
++		char* tmp = reinterpret_cast<char*>(&t);
++		std::reverse(tmp, tmp + sizeof(T));
++	}
++
++	//In the following some specialisations of swapBytes are provided for efficiency reasons
++	//These should also cover BALL types like Size, Position and Index
++	template<> BALL_EXPORT void swapBytes(unsigned short&);
++	template<> BALL_EXPORT void swapBytes(short&);
++	template<> BALL_EXPORT void swapBytes(unsigned int&);
++	template<> BALL_EXPORT void swapBytes(int&);
++	template<> BALL_EXPORT void swapBytes(unsigned long&);
++	template<> BALL_EXPORT void swapBytes(long&);
++	template<> BALL_EXPORT void swapBytes(float&);
++	template<> BALL_EXPORT void swapBytes(double&);
++
+ 	/**
+ 	 * Helper class for data conversion.
+ 	 * BinaryFileAdaptors are used to read and write binary data from and to
+@@ -152,32 +179,6 @@ namespace BALL
+ 		return is;
+ 	}
+ 
+-	/** Coping with endianness. This function swaps the bytes of a variable
+-			of type T if this type is of size 2n.
+-	*/
+-	template <typename T>
+-	void swapBytes(T& t)
+-	{
+-		if (sizeof(T) % 2 != 0)
+-		{
+-			Log.error() << "Cannot swap types of uneven size." << std::endl;
+-			return;
+-		}
+-
+-		char* tmp = reinterpret_cast<char*>(&t);
+-		std::reverse(tmp, tmp + sizeof(T));
+-	}
+-
+-	//In the following some specialisations of swapBytes are provided for efficiency reasons
+-	//These should also cover BALL types like Size, Position and Index
+-	template<> BALL_EXPORT void swapBytes(unsigned short&);
+-	template<> BALL_EXPORT void swapBytes(short&);
+-	template<> BALL_EXPORT void swapBytes(unsigned int&);
+-	template<> BALL_EXPORT void swapBytes(int&);
+-	template<> BALL_EXPORT void swapBytes(unsigned long&);
+-	template<> BALL_EXPORT void swapBytes(long&);
+-	template<> BALL_EXPORT void swapBytes(float&);
+-	template<> BALL_EXPORT void swapBytes(double&);
+ } //namespace BALL
+ 
+ #ifndef BALL_NO_INLINE_FUNCTIONS
+diff --git a/source/COMMON/exception.C b/source/COMMON/exception.C
+index e7855ce..464f971 100644
+--- a/source/COMMON/exception.C
++++ b/source/COMMON/exception.C
+@@ -9,10 +9,10 @@
+ #include <iostream>
+ #include <typeinfo>
+ #include <exception>
+-#include <stdio.h>
+-#include <stdlib.h>	// for getenv in terminate()
++#include <cstdio>
++#include <cstdlib>	// for getenv in terminate()
+ #include <sys/types.h>
+-#include <signal.h> // for SIGSEGV and kill
++#include <csignal> // for SIGSEGV and kill
+ 
+ #ifdef BALL_HAS_UNISTD_H
+ #	include <unistd.h> // fot getpid
+diff --git a/source/COMMON/hash.C b/source/COMMON/hash.C
+index 0d81493..ffe75de 100644
+--- a/source/COMMON/hash.C
++++ b/source/COMMON/hash.C
+@@ -72,7 +72,7 @@ namespace BALL
+ 		Index index = 0;
+ 		Index temp_index;
+ 
+-#		define BALL_BITS_IN_HASHVALUE_   (sizeof(Index) * CHAR_BIT)
++#		define BALL_BITS_IN_HASHVALUE_   (sizeof(Index) * std::numeric_limits<unsigned char>::digits)
+ #		define BALL_THREE_QUARTERS_      ((Index)((BALL_BITS_IN_HASHVALUE_ * 3) / 4))
+ #		define BALL_ONE_EIGHTH_          ((Index)(BALL_BITS_IN_HASHVALUE_ / 8))
+ #		define BALL_HIGH_BITS_           (~((Index)(~0) >> BALL_ONE_EIGHTH_))
+diff --git a/source/COMMON/init.C b/source/COMMON/init.C
+index d426756..856fe68 100644
+--- a/source/COMMON/init.C
++++ b/source/COMMON/init.C
+@@ -4,8 +4,8 @@
+ 
+ #include <BALL/COMMON/init.h>
+ 
+-#include <locale.h>
+-#include <stdlib.h>
++#include <clocale>
++#include <cstdlib>
+ 
+ namespace BALL
+ {
+diff --git a/source/COMMON/logStream.C b/source/COMMON/logStream.C
+index 12b9184..0340e24 100644
+--- a/source/COMMON/logStream.C
++++ b/source/COMMON/logStream.C
+@@ -26,9 +26,9 @@ namespace BALL
+ 	// at this point, it is not yet possible to
+ 	// include BALL/COMMON/limits.h (which were a 
+ 	// much nicer solution...). Ugly header dependencies...
+-	const int LogStreamBuf::MIN_LEVEL = INT_MIN;
+-	const int LogStreamBuf::MAX_LEVEL = INT_MAX;
+-	const Time LogStreamBuf::MAX_TIME = INT_MAX;
++	const int LogStreamBuf::MIN_LEVEL = std::numeric_limits<int>::min();
++	const int LogStreamBuf::MAX_LEVEL = std::numeric_limits<int>::max();
++	const Time LogStreamBuf::MAX_TIME = std::numeric_limits<Time>::max();
+ 
+ 	LogStreamBuf::LogStreamBuf() 
+ 		: std::streambuf(),
+diff --git a/source/COMMON/version.C b/source/COMMON/version.C
+index 1a0987b..15c9d87 100644
+--- a/source/COMMON/version.C
++++ b/source/COMMON/version.C
+@@ -12,7 +12,7 @@ namespace BALL
+ {
+ 	const char* VersionInfo::getVersion() 
+ 	{
+-		return BALL_RELEASE_STRING " ("__DATE__", " __TIME__ ")";
++		return BALL_RELEASE_STRING " (" __DATE__ ", " __TIME__ ")";
+ 	}
+ 
+ 	int VersionInfo::getMinorRevision()
+diff --git a/source/STRUCTURE/BONDORDERS/FPTBondOrderStrategy.C b/source/STRUCTURE/BONDORDERS/FPTBondOrderStrategy.C
+index 89a1f68..4f872ae 100644
+--- a/source/STRUCTURE/BONDORDERS/FPTBondOrderStrategy.C
++++ b/source/STRUCTURE/BONDORDERS/FPTBondOrderStrategy.C
+@@ -323,7 +323,7 @@ namespace BALL
+ 			}
+ 		}
+ 
+-		return *best;
++		return DPConstRow_(boost::reference_wrapper<DPConfig_ const>(best->first), best->second);
+ 	}
+ 
+ 	FPTBondOrderStrategy::Penalty FPTBondOrderStrategy::DPTable_::operator[](FPTBondOrderStrategy::DPConfig_ const& config) const
+@@ -602,6 +602,9 @@ namespace BALL
+ 
+ 		return bonds;
+ 	}
++	
++#define	convertToCRow(tmp)\
++		std::make_pair(boost::reference_wrapper<const DPConfig_>((tmp).first), (tmp).second)
+ 
+ 	void FPTBondOrderStrategy::FPTBondOrderAssignment_::computeIntroduceBag(TreeDecompositionBag& bag, DPTable_& child, 
+ 	                                                                        AdditionalBagProperties_& property)
+@@ -622,7 +625,7 @@ namespace BALL
+ 		// copy with n new bondvalue-columns with different values
+ 		for (DPTable_::const_iterator iter = child.begin(); iter != child.end(); ++iter)
+ 		{
+-			DPConstRow_ child_entry = *iter;
++			DPConstRow_ child_entry = convertToCRow(*iter);
+ 			DPConfig_ conf(num_valences, num_bonds);
+ 
+ 			Size vindex = 0;
+@@ -787,7 +790,7 @@ namespace BALL
+ 
+ 		for (DPTable_::const_iterator entry_iterator = child.begin(); entry_iterator != child.end(); ++entry_iterator)
+ 		{
+-			Penalty entry_penalty(forgetInnerVertexIn(bag, *entry_iterator, new_entry, child_property.bonds, forgotten_index));
++			Penalty entry_penalty(forgetInnerVertexIn(bag, convertToCRow(*entry_iterator), new_entry, child_property.bonds, forgotten_index));
+ 			if (entry_penalty < upper_bound_)
+ 			{
+ 				property.table->insert(new_entry, entry_penalty);
+@@ -804,7 +807,7 @@ namespace BALL
+ 		Penalty min_penalty = FPTBondOrderStrategy::infinite_penalty;
+ 		for (DPTable_::const_iterator iter = child.begin(); iter != child.end(); ++iter)
+ 		{
+-			min_penalty = std::min(min_penalty, forgetInnerVertexIn(bag, *iter, empty, empty_list, 0));
++			min_penalty = std::min(min_penalty, forgetInnerVertexIn(bag, convertToCRow(*iter), empty, empty_list, 0));
+ 
+ 			if (Maths::isEqual(0, min_penalty))
+ 			{
+@@ -830,17 +833,17 @@ namespace BALL
+ 		// insert each entry of the left child into a DPJoinMap
+ 		for (DPTable_::const_iterator left_iter = left_child.begin(); left_iter != left_child.end(); ++left_iter)
+ 		{
+-			DPConstRow_ left_entry = *left_iter;
+-			map.insert(pair<DPConfig_ const*, Penalty> (left_entry.first.get_pointer(), left_entry.second));
++			DPConstRow_ left_entry = convertToCRow(*left_iter);
++			map.insert(std::pair<DPConfig_ const*, Penalty> (left_entry.first.get_pointer(), left_entry.second));
+ 		}
+ 
+ 		// find for each entry of the right child's table appropiate entries in the DPJoinMap (which have the same bondvalues)
+ 		for (DPTable_::const_iterator r_iter = right_child.begin(); r_iter != right_child.end(); ++r_iter)
+ 		{
+-			DPConstRow_ right_entry = *r_iter;
++			DPConstRow_ right_entry = convertToCRow(*r_iter);
+ 			DPConfig_ const* right_conf = right_entry.first.get_pointer();
+ 
+-			pair<DPJoinMap_::const_iterator, DPJoinMap_::const_iterator> matching_range(map.equal_range(right_conf));
++			std::pair<DPJoinMap_::const_iterator, DPJoinMap_::const_iterator> matching_range(map.equal_range(right_conf));
+ 
+ 			for (DPJoinMap_::const_iterator match  = matching_range.first;
+ 					                            match != matching_range.second; ++match)
+@@ -1441,7 +1444,7 @@ namespace BALL
+ 			delete current_state_;
+ 		}
+ 
+-		multiset<BackTrackingState_*, StateComparator_>::iterator first = queue_.begin();
++		std::multiset<BackTrackingState_*, StateComparator_>::iterator first = queue_.begin();
+ 		current_state_ = *first;
+ 		queue_.erase(first);
+ 		--max_heap_size_;
+@@ -1598,7 +1601,7 @@ namespace BALL
+ 		// insert possible antecessors in vectors
+ 		for (DPTable_::const_iterator iter = left_table.begin(); iter != left_table.end(); ++iter)
+ 		{
+-			DPConstRow_ antecessor = *iter;
++			DPConstRow_ antecessor = convertToCRow(*iter);
+ 			if (comp.compare(&successor, antecessor.first.get_pointer()) == 0)
+ 			{
+ 				left_entries.push_back(iter);
+@@ -1607,7 +1610,7 @@ namespace BALL
+ 
+ 		for (DPTable_::const_iterator iter = right_table.begin(); iter != right_table.end(); ++iter)
+ 		{
+-			DPConstRow_ antecessor = *iter;
++			DPConstRow_ antecessor = convertToCRow(*iter);
+ 			if (comp.compare(&successor, antecessor.first.get_pointer()) == 0)
+ 			{
+ 				right_entries.push_back(iter);
+@@ -1619,10 +1622,10 @@ namespace BALL
+ 
+ 		for (std::vector<DPTable_::const_iterator>::const_iterator left = left_entries.begin(); left != left_entries.end(); ++left)
+ 		{
+-			DPConstRow_ left_entry = **left;
++			DPConstRow_ left_entry = convertToCRow(**left);
+ 			for (std::vector<DPTable_::const_iterator>::const_iterator right = right_entries.begin(); right != right_entries.end(); ++right)
+ 			{
+-				DPConstRow_ right_entry = **right;
++				DPConstRow_ right_entry = convertToCRow(**right);
+ 
+ 				// check sum of valences
+ 				bool correct_valences = true;
+@@ -1653,8 +1656,8 @@ namespace BALL
+ 
+ 		Penalty best_penalty = best.first->second + best.second->second;
+ 
+-		DPConstRow_ left  = *best.first;
+-		DPConstRow_ right = *best.second;
++		DPConstRow_ left  = convertToCRow(*best.first);
++		DPConstRow_ right = convertToCRow(*best.second);
+ 
+ 		extendState(state, left.first, 0);
+ 		++state.index;
+@@ -1664,8 +1667,8 @@ namespace BALL
+ 		{
+ 			DPPairIt_ entry = *iter;
+ 
+-			DPConstRow_ left  = *entry.first;
+-			DPConstRow_ right = *entry.second;
++			DPConstRow_ left  = convertToCRow(*entry.first);
++			DPConstRow_ right = convertToCRow(*entry.second);
+ 
+ 			Penalty add_penalty = (left.second + right.second) - best_penalty;
+ 			if (isSolutionNeeded(state.assignment.penalty + add_penalty))
+@@ -1716,7 +1719,7 @@ namespace BALL
+ 		// check for each row entry: is it a possible anteccessor?
+ 		for (DPTable_::iterator iter = table.begin(); iter != table.end(); ++iter)
+ 		{
+-			Penalty pen  = bond_assignment_->forgetInnerVertexIn(bag, *iter, test_entry, child_bonds, forgotten_index);
++			Penalty pen  = bond_assignment_->forgetInnerVertexIn(bag, convertToCRow(*iter), test_entry, child_bonds, forgotten_index);
+ 
+ 			if (pen < FPTBondOrderStrategy::infinite_penalty && test_entry == successor)
+ 			{
+@@ -1783,7 +1786,7 @@ namespace BALL
+ 		{
+ 			while (queue_.size() > max_heap_size_)
+ 			{
+-				multiset<BackTrackingState_*, StateComparator_>::iterator pos = queue_.end();
++				std::multiset<BackTrackingState_*, StateComparator_>::iterator pos = queue_.end();
+ 				--pos;
+ 				delete *pos;
+ 				queue_.erase(pos);
+diff --git a/source/STRUCTURE/kekulizer.C b/source/STRUCTURE/kekulizer.C
+index d1f4e78..c277091 100644
+--- a/source/STRUCTURE/kekulizer.C
++++ b/source/STRUCTURE/kekulizer.C
+@@ -266,7 +266,7 @@ void Kekuliser::dump()
+ 			Log.error() << partner->getName() << " ";
+ 		}
+ 		Log.error() << "  " << current_penalty_;
+-		if (lowest_penalty_ != INT_MAX) Log.error() << " + " << lowest_penalty_;
++		if (lowest_penalty_ != std::numeric_limits<int>::max()) Log.error() << " + " << lowest_penalty_;
+ 		Log.error() << std::endl;
+ 	}
+ }
+@@ -415,11 +415,11 @@ bool Kekuliser::fixAromaticRings_()
+ #endif
+ 
+ 		solutions_.clear();
+-		lowest_penalty_ = INT_MAX;
++		lowest_penalty_ = std::numeric_limits<int>::max();
+ 		current_penalty_ = 0;
+ 		fixAromaticSystem_(0);
+ 		// test could be changed to achieve at most a given max value:
+-		if (lowest_penalty_ < INT_MAX) 
++		if (lowest_penalty_ < std::numeric_limits<int>::max())
+ 		{
+ 			if (lowest_penalty_ == 0)
+ 			{
+@@ -765,7 +765,7 @@ void Kekuliser::applySolution_(Position pos)
+ // return the best solution
+ Position Kekuliser::calculateDistanceScores_()
+ {
+-	float best_score = INT_MAX;
++	float best_score = std::numeric_limits<int>::max();
+ 	Size best_solution = 0;
+ 
+ 	for (Position solp = 0; solp < solutions_.size(); solp++)

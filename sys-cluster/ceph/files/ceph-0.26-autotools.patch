@@ -1,0 +1,17 @@
+--- a/configure.ac	2011-04-26 12:17:33.318491903 +0200
++++ b/configure.ac	2011-04-26 12:19:57.822776369 +0200
+@@ -48,10 +48,12 @@
+     [PKG_CHECK_MODULES([CRYPTOPP],
+ 	    [libcrypto++],
+ 	    [have_cryptopp=yes],
+-	    [AC_SEARCH_LIBS([_ZTIN8CryptoPP14CBC_EncryptionE], [crypto++ cryptopp],
++	    [AC_LANG_PUSH([C++])
++	    AC_SEARCH_LIBS([_ZTIN8CryptoPP14CBC_EncryptionE], [crypto++ cryptopp],
+ 		    [have_cryptopp=yes],
+ 		    [true],
+-		    [-lpthread])])])
++		    [-lpthread])
++	    AC_LANG_POP([C++])])])
+ # bail out if given explicit --with-cryptopp
+ if test "x$have_cryptopp" = "xno" -a "x$with_cryptopp" != "xcheck" -a "x$with_cryptopp" != "xno"; then
+     AC_MSG_FAILURE([--with-cryptopp was given, but library was not found])

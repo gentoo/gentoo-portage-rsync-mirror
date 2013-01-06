@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst
+DESCRIPTION=NagVis is a visualization addon for the well known network managment system Nagios.
+EAPI=4
+HOMEPAGE=http://www.nagvis.org/
+IUSE=automap
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=>=net-analyzer/ndoutils-1.4_beta4 automap? ( >=media-gfx/graphviz-2.14 ) virtual/httpd-php dev-lang/php[gd,mysql,unicode]
+SLOT=0
+SRC_URI=mirror://sourceforge/nagvis/nagvis-1.4.4.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=c4e4b63c50ab893c963765a634de61cc

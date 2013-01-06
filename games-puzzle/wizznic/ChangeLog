@@ -1,0 +1,16 @@
+# ChangeLog for games-puzzle/wizznic
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wizznic/ChangeLog,v 1.3 2010/10/31 18:09:01 hwoarang Exp $
+
+  31 Oct 2010; Markos Chandras <hwoarang@gentoo.org> wizznic-0.9.ebuild:
+  Keyworded for amd64. Bug 330739
+
+  05 Sep 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> wizznic-0.9.ebuild:
+  x86 stable wrt bug #335479
+
+*wizznic-0.9 (29 Jul 2010)
+
+  29 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org> +wizznic-0.9.ebuild,
+  +metadata.xml:
+  initial commit
+

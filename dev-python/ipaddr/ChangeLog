@@ -1,0 +1,18 @@
+# ChangeLog for dev-python/ipaddr
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipaddr/ChangeLog,v 1.6 2012/03/07 21:32:28 maksbotan Exp $
+
+*ipaddr-2.1.10 (07 Mar 2012)
+
+  07 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org> +ipaddr-2.1.10.ebuild:
+  Bump to 2.1.10, thanks to slepnoga
+
+  06 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org> ipaddr-2.1.9.ebuild:
+  Fix various errors in ebuild, thanks to Arfrever.
+
+*ipaddr-2.1.9 (04 Nov 2011)
+
+  04 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org> +ipaddr-2.1.9.ebuild,
+  +metadata.xml:
+  Added dev-python/ipaddr-2.1.9, bug #388967. Thanks to slepnoga
+

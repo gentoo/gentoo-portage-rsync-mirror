@@ -1,0 +1,11 @@
+diff -Naur libcilkrts.orig/Makefile.am libcilkrts/Makefile.am
+--- libcilkrts.orig/Makefile.am	2012-07-17 20:13:45.000000000 -0600
++++ libcilkrts/Makefile.am	2012-07-17 20:13:55.000000000 -0600
+@@ -29,7 +29,6 @@
+ # POSSIBILITY OF SUCH DAMAGE.
+ 
+ AUTOMAKE_OPTIONS = foreign
+-ACLOCAL_AMFLAGS = -I ..
+ 
+ # Compiler and linker flags.
+ GENERAL_FLAGS = -I$(top_srcdir)/include -DIN_CILK_RUNTIME=1

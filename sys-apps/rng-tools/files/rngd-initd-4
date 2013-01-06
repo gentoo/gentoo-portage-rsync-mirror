@@ -1,0 +1,60 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/files/rngd-initd-4,v 1.1 2012/11/11 06:24:22 vapier Exp $
+
+depend() {
+	need localmount
+	after random
+}
+
+BINARY=/usr/sbin/rngd
+# Do NOT add /dev/tpm to this.
+DEFAULT_DEVICE="/dev/hw_random* /dev/hwrandom* /dev/i810_rng /dev/hwrng*"
+DEFAULT_TPM_DEVICE="/dev/tpm*"
+[ $DO_NOT_REMIX_URANDOM -eq 0 ] && DEFAULT_DEVICE="${DEFAULT_DEVICE} /dev/urandom"
+
+find_device() {
+	# The echo is to cause globbing
+	local d
+	for d in $* ; do
+		[ -e "${d}" ] && break
+	done
+	echo "${d:-/dev/null}"
+}
+
+find_rng_device() {
+	echo "$(find_device $(echo ${DEVICE:-${DEFAULT_DEVICE}}))"
+}
+
+find_tpm_device() {
+	echo "$(find_device $(echo ${TPM_DEVICE:-${DEFAULT_TPM_DEVICE}}))"
+}
+
+start() {
+	local d t
+	d="$(find_rng_device)"
+	[ "${NO_TPM}" = "1" ] || t="$(find_tpm_device)"
+
+	if [ "${d}" = "/dev/null" -a "${t}" = "/dev/null" ] ; then
+		eerror "No hardware RNG or feedback source available."
+		return 1
+	fi
+
+	# TODO: find a better way to handle multiple feedback devices.
+	# Notice that we only warn if TPM is not available.
+	if [ "${d}" = "/dev/urandom" -a "${t}" = "/dev/null" ] ; then
+		ewarn "No hardware RNG found, using ${d} as feedback input"
+	fi
+
+	ebegin "Starting hardware RNG daemon"
+	start-stop-daemon --start --quiet --exec ${BINARY} -- \
+		-b -s ${STEP:-64} --no-tpm=${NO_TPM:-0} -W ${WATERMARK:-2048} -r ${d}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping hardware RNG daemon"
+	start-stop-daemon --stop --quiet --exec ${BINARY}
+	eend $?
+}

@@ -1,0 +1,12 @@
+# ChangeLog for dev-python/eventlet
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/ChangeLog,v 1.2 2012/10/30 16:37:44 floppym Exp $
+
+  30 Oct 2012; Mike Gilbert <floppym@gentoo.org> eventlet-0.9.16.ebuild:
+  Add x86 keyword.
+
+*eventlet-0.9.16 (25 Oct 2012)
+
+  25 Oct 2012; Patrick Lauer <patrick@gentoo.org> +eventlet-0.9.16.ebuild,
+  +metadata.xml:
+  Initial import, borrowed from the hyves openstack-overlay

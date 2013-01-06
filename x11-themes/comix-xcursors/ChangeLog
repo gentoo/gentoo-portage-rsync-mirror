@@ -1,0 +1,24 @@
+# ChangeLog for x11-themes/comix-xcursors
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix-xcursors/ChangeLog,v 1.5 2012/12/16 19:58:41 ago Exp $
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> comix-xcursors-0.7.3.ebuild:
+  Stable for ppc, wrt bug #445460
+
+  06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  comix-xcursors-0.7.3.ebuild:
+  x86 stable wrt bug #445460
+
+  02 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> comix-xcursors-0.7.3.ebuild:
+  Stable on amd64, wrt bug #445460
+
+  05 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> comix-xcursors-0.7.3.ebuild:
+  Keyword ~ppc, wrt bug #441786
+
+*comix-xcursors-0.7.3 (01 Nov 2012)
+
+  01 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> +comix-xcursors-0.7.3.ebuild,
+  +metadata.xml:
+  Initial commit wrt bug #324299. Thanks to Vicente Olivert Riera, who wrote
+  ebuild and will maintain this package through proxy maintainers
+

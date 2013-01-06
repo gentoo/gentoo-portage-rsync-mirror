@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile configure install prepare test
+DESCRIPTION=Open-source implementation of the Secure Real-time Transport Protocol (SRTP)
+EAPI=2
+HOMEPAGE=http://srtp.sourceforge.net/srtp.html
+IUSE=aesicm console debug doc syslog
+KEYWORDS=alpha amd64 ~hppa ia64 ppc ppc64 -sparc x86 ~x86-fbsd ~ppc-macos ~x64-macos ~x86-macos
+LICENSE=BSD
+SLOT=0
+SRC_URI=mirror://sourceforge/srtp/srtp-1.4.4.tgz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=ac7cec345a4b763c1dd5290372320e53

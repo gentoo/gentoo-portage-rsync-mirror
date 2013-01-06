@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>cedk@gentoo.org</email>
+		<name>Cédric Krier</name>
+	</maintainer>
+	<longdescription lang="en">A tool written for hackers to cut file or any binary stream. A file is
+		splitted in a tree of fields where the smallest field can be just a bit.
+		There are various field types: integer, string, bits, padding, sub file,
+		etc.</longdescription>
+	<upstream>
+		<remote-id type="pypi">hachoir-core</remote-id>
+	</upstream>
+</pkgmetadata>

@@ -1,0 +1,10 @@
+diff -ruN xournal-0.4.5_p20111022.orig/src/Makefile.am xournal-0.4.5_p20111022/src/Makefile.am
+--- xournal-0.4.5_p20111022.orig/src/Makefile.am	2012-06-24 12:57:21.453958621 +0200
++++ xournal-0.4.5_p20111022/src/Makefile.am	2012-06-24 12:58:07.696957705 +0200
+@@ -30,5 +30,5 @@
+   xournal_LDFLAGS = -mwindows
+   xournal_LDADD = win32/xournal.res ttsubset/libttsubset.a @PACKAGE_LIBS@ $(INTLLIBS) -lz
+ else
+-  xournal_LDADD = ttsubset/libttsubset.a @PACKAGE_LIBS@ $(INTLLIBS) -lX11 -lz
++  xournal_LDADD = ttsubset/libttsubset.a @PACKAGE_LIBS@ $(INTLLIBS) -lX11 -lz -lm
+ endif

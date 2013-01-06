@@ -1,0 +1,11 @@
+--- a/configure.in
++++ b/configure.in
+@@ -185,7 +185,7 @@
+ 		  [use GnuTLS library @<:@default=yes@:>@]),
+   with_gnutls="$withval", with_gnutls="yes")
+ if test "x$with_gnutls" = "xyes"; then
+-  PKG_CHECK_MODULES([LIBGNUTLS], [gnutls >= 1.2.0 gnutls < 3],
++  PKG_CHECK_MODULES([LIBGNUTLS], [gnutls >= 1.2.0],
+         [
+                 echo "GnuTLS found, enabling SSL decryption"
+                 AC_DEFINE(HAVE_LIBGNUTLS, 1, [Define to use GnuTLS library])

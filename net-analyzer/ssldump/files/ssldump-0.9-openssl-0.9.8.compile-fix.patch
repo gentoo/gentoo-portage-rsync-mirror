@@ -1,0 +1,19 @@
+diff -Naur ssldump-0.9b3.orig/ssl/ssldecode.c ssldump-0.9b3/ssl/ssldecode.c
+--- ssldump-0.9b3.orig/ssl/ssldecode.c	2002-08-17 05:33:17.000000000 +0400
++++ ssldump-0.9b3/ssl/ssldecode.c	2006-09-24 11:30:58.000000000 +0400
+@@ -51,6 +51,7 @@
+ #include <openssl/ssl.h>
+ #include <openssl/hmac.h>
+ #include <openssl/evp.h>
++#include <openssl/md5.h>
+ #include <openssl/x509v3.h>
+ #endif
+ #include "ssldecode.h"
+@@ -131,6 +132,7 @@
+     ssl_decode_ctx *d=0;
+     int r,_status;
+     
++    SSL_library_init();
+     SSLeay_add_all_algorithms();
+     if(!(d=(ssl_decode_ctx *)malloc(sizeof(ssl_decode_ctx))))
+       ABORT(R_NO_MEMORY);

@@ -1,0 +1,20 @@
+Under padsp wrapper mikmod returns
+    buffinf.fragments = -1; buffinf.bytes = -65535.
+Buggy oss emulation layer in pulseaudio.
+More details in upstream report:
+
+Gentoo-bug: http://bugs.gentoo.org/300525
+Upstream-bug: https://bugs.freedesktop.org/show_bug.cgi?id=45643
+diff --git a/drivers/drv_oss.c b/drivers/drv_oss.c
+index 27766f2..74864c2 100644
+--- a/drivers/drv_oss.c
++++ b/drivers/drv_oss.c
+@@ -327,7 +327,7 @@ static void OSS_Update(void)
+ 			buffinf.fragments--;
+ 			buffinf.fragsize = buffinf.bytes = buffersize;
+ 		}
+-		if(!buffinf.fragments)
++		if(buffinf.fragments < 1)
+ 			break;
+ 		done=VC_WriteBytes(audiobuffer,buffinf.fragsize>buffinf.bytes?
+ 						   buffinf.bytes:buffinf.fragsize);

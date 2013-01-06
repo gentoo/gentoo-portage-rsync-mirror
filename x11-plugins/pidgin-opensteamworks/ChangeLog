@@ -1,0 +1,55 @@
+# ChangeLog for x11-plugins/pidgin-opensteamworks
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/ChangeLog,v 1.11 2012/12/10 18:31:29 ago Exp $
+
+  10 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  pidgin-opensteamworks-1.0_p36.ebuild:
+  Add ~ppc, wrt bug #414611
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
+  pidgin-opensteamworks-1.0_p36.ebuild:
+  Stable for x86, wrt bug #439776
+
+  01 Nov 2012; <ago@gentoo.org> pidgin-opensteamworks-1.0_p36.ebuild:
+  Stable for amd64, wrt bug #439776
+
+*pidgin-opensteamworks-1.0_p36 (24 Sep 2012)
+
+  24 Sep 2012; Julian Ospald <hasufell@gentoo.org>
+  +pidgin-opensteamworks-1.0_p36.ebuild:
+  version bump
+
+*pidgin-opensteamworks-1.0_p34 (09 Aug 2012)
+
+  09 Aug 2012; Julian Ospald <hasufell@gentoo.org>
+  +pidgin-opensteamworks-1.0_p34.ebuild:
+  version bump
+
+  09 Jul 2012; Johannes Huber <johu@gentoo.org>
+  pidgin-opensteamworks-1.0_p32.ebuild:
+  Stable for x86, wrt bug #425338
+
+  09 Jul 2012; Agostino Sarubbo <ago@gentoo.org>
+  pidgin-opensteamworks-1.0_p32.ebuild:
+  Stable for amd64, wrt bug #425338
+
+  24 May 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  fix metadata.xml
+
+*pidgin-opensteamworks-1.0_p32 (24 May 2012)
+
+  24 May 2012; Julian Ospald <hasufell@gentoo.org>
+  -pidgin-opensteamworks-1.0_p30.ebuild, +pidgin-opensteamworks-1.0_p32.ebuild,
+  -files/pidgin-opensteamworks-1.0_p30-Makefile,
+  +files/pidgin-opensteamworks-1.0_p32-Makefile:
+  version bump with Manuel Rueger
+
+  04 May 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  add net-im herd to metadata.xml
+
+*pidgin-opensteamworks-1.0_p30 (04 May 2012)
+
+  04 May 2012; Julian Ospald <hasufell@gentoo.org>
+  +pidgin-opensteamworks-1.0_p30.ebuild,
+  +files/pidgin-opensteamworks-1.0_p30-Makefile, +metadata.xml:
+  initial import by Manuel Rueger (mrueg) wrt #414171

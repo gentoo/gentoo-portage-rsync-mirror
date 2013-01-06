@@ -1,0 +1,13 @@
+diff --git a/src/ui/cairostuff/cairostuff.c b/src/ui/cairostuff/cairostuff.c
+index 3c70d99..174b67a 100644
+--- a/src/ui/cairostuff/cairostuff.c
++++ b/src/ui/cairostuff/cairostuff.c
+@@ -80,7 +80,7 @@ StringSizeWithContextReal(cairo_t * c, const char *str, int* w, int* h)
+         if (h) *h = 0;
+         return;
+     }
+-    if (!utf8_check_string(str)) {
++    if (!fcitx_utf8_check_string(str)) {
+         if (w) *w = 0;
+         if (h) *h = 0;
+ 

@@ -1,0 +1,64 @@
+# ChangeLog for dev-php5/pecl-sca_sdo
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-sca_sdo/ChangeLog,v 1.1 2011/12/14 22:46:43 mabi Exp $
+
+*pecl-sca_sdo-1.2.4-r2 (04 Nov 2010)
+
+  04 Nov 2010; Matti Bickel <mabi@gentoo.org> +pecl-sca_sdo-1.2.4-r2.ebuild:
+  add version supporting minor version slotting
+
+  19 Sep 2010; Matti Bickel <mabi@gentoo.org> pecl-sca_sdo-1.2.4-r1.ebuild,
+  +files/pecl-sca_sdo-1.2.4-php53.patch:
+  fix compilation with php-5.3 (bug #324833)
+
+*pecl-sca_sdo-1.2.4-r1 (29 May 2010)
+
+  29 May 2010; <mabi@gentoo.org> -pecl-sca_sdo-1.2.3.ebuild,
+  -pecl-sca_sdo-1.2.4.ebuild, +pecl-sca_sdo-1.2.4-r1.ebuild:
+  update for php-5.3 USE changes (bug #301159)
+
+  25 Jul 2009; Mark Loeser <halcy0n@gentoo.org> pecl-sca_sdo-1.2.4.ebuild,
+  +files/pecl-sca_sdo-1.2.4-gcc44.patch:
+  Fix compilation with gcc-4.4; bug #276742
+
+*pecl-sca_sdo-1.2.4 (17 Mar 2008)
+
+  17 Mar 2008; <jokey@gentoo.org> +pecl-sca_sdo-1.2.4.ebuild:
+  Version bump from project overlay
+
+  04 Mar 2008; Jakub Moc <jakub@gentoo.org>
+  +pecl-sca_sdo-1.2.4.ebuild:
+  Version bump - bugfix release. Fixes PECL bugs #11997, #11996, #12193,
+  #12103, #12443, #13101 and other issues.
+
+*pecl-sca_sdo-1.2.3 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> -pecl-sca_sdo-1.2.2.ebuild,
+  +pecl-sca_sdo-1.2.3.ebuild:
+  Version bump wrt bug #190404
+
+*pecl-sca_sdo-1.2.2 (20 Aug 2007)
+
+  20 Aug 2007; Markus Ullmann <jokey@gentoo.org> -pecl-sca_sdo-1.1.2.ebuild,
+  +pecl-sca_sdo-1.2.2.ebuild:
+  Porting from project overlay
+
+  17 Aug 2007; Jakub Moc <jakub@gentoo.org> pecl-sca_sdo-1.2.2.ebuild:
+  Add examples USE flag
+
+  17 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +pecl-sca_sdo-1.2.2.ebuild:
+  Version bump, Bug 187134
+
+*pecl-sca_sdo-1.1.2 (18 Mar 2007)
+
+  18 Mar 2007; Luca Longinotti <chtekk@gentoo.org>
+  -pecl-sca_sdo-1.1.0.ebuild, +pecl-sca_sdo-1.1.2.ebuild:
+  Version bump, cleanup.
+
+*pecl-sca_sdo-1.1.0 (24 Nov 2006)
+
+  24 Nov 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +pecl-sca_sdo-1.1.0.ebuild:
+  Initial ebuild.
+

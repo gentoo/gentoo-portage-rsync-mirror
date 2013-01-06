@@ -1,0 +1,7 @@
+--- Makefile.am.old	2011-06-22 18:39:27.000000000 +0200
++++ Makefile.am	2011-06-22 18:41:55.000000000 +0200
+@@ -7,3 +7,4 @@
+ jonsb.c joy.c keys.c level.c main.c menu.c modem.c motor.c movement.c object.c omega.c packets.c path.c pcx.c \
+ prim.c project.c pylon.c radar.c rotbmp.c sb_stub.c serial.c smartmem.c states.c stats.c tanks.c text.c \
+ timer.c user.c util.c voices.c
++cylindrix_LDADD = -lm

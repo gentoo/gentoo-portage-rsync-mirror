@@ -1,0 +1,29 @@
+# ChangeLog for dev-util/metro
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/metro/ChangeLog,v 1.6 2011/11/20 07:06:00 hollow Exp $
+
+  20 Nov 2011; Benedikt Böhm <hollow@gentoo.org> metro-1.4.1.ebuild,
+  metro-1.5.1.ebuild:
+  use python eclass wrt #326103
+
+  13 Jun 2010; Raúl Porcel <armin76@gentoo.org> metro-1.4.1.ebuild,
+  metro-1.5.1.ebuild:
+  Add ~arm wrt #322687
+
+*metro-1.5.1 (29 May 2010)
+
+  29 May 2010; Benedikt Böhm <hollow@gentoo.org> +metro-1.5.1.ebuild:
+  version bump wrt #313317
+
+  17 Mar 2010; Sebastian Pipping <sping@gentoo.org> metro-1.4.1.ebuild:
+  Propagate move of dev-util/git to dev-vcs/git
+
+  26 Jul 2009; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd> tag
+
+*metro-1.4.1 (22 Jul 2009)
+
+  22 Jul 2009; Benedikt Böhm <hollow@gentoo.org> +metro-1.4.1.ebuild,
+  +metadata.xml:
+  initial ebuild
+

@@ -1,0 +1,25 @@
+# ChangeLog for dev-dotnet/monocalendar
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monocalendar/ChangeLog,v 1.5 2012/06/04 07:10:44 zmedico Exp $
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> monocalendar-0.7.2.ebuild:
+  inherit multilib for get_libdir
+
+  25 Jan 2011; Pacho Ramos <pacho@gentoo.org> monocalendar-0.7.2.ebuild:
+  Add ~amd64 as it works fine for me.
+
+  22 Nov 2007; Doug Klima <cardoe@gentoo.org> metadata.xml:
+  Add DOCTYPE to metadata for validation
+
+  27 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  monocalendar-0.7.2.ebuild:
+  stable x86, bug 186688
+
+*monocalendar-0.7.2 (24 Jun 2007)
+
+  24 Jun 2007; Jurek Bartuszek <jurek@gentoo.org> +metadata.xml,
+  +monocalendar-0.7.2.ebuild:
+  Initial version (fixing bug #88921). Credit goes to Borja Sánchez
+  Zamorano <borsanza@gmail.com> and Peter Ansell <p_ansell@yahoo.com>
+  for providing the ebuilds with some modifications by yours truly.
+

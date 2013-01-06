@@ -1,0 +1,14 @@
+# ChangeLog for games-strategy/seven-kingdoms
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/seven-kingdoms/ChangeLog,v 1.2 2012/11/20 05:56:10 pinkbyte Exp $
+
+  20 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> seven-kingdoms-2.14.3.ebuild:
+  Correct libsdl dependency wrt bug #443936. Thanks to Julian Ospald for
+  discovering this issue
+
+*seven-kingdoms-2.14.3 (19 Nov 2012)
+
+  19 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
+  +seven-kingdoms-2.14.3.ebuild, +metadata.xml:
+  Initial commit wrt bug #358209. Thanks to Sven Eden for initial ebuild
+

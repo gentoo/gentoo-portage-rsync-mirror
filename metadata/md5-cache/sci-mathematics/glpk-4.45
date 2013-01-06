@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install
+DEPEND=sys-libs/zlib odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) ) gmp? ( dev-libs/gmp ) mysql? ( virtual/mysql ) virtual/pkgconfig
+DESCRIPTION=GNU Linear Programming Kit
+EAPI=2
+HOMEPAGE=http://www.gnu.org/software/glpk/
+IUSE=doc examples gmp odbc mysql static-libs
+KEYWORDS=alpha amd64 hppa ppc ppc64 sparc x86 ~ppc-aix ~x86-fbsd ~amd64-linux ~x86-linux
+LICENSE=GPL-3
+RDEPEND=sys-libs/zlib odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) ) gmp? ( dev-libs/gmp ) mysql? ( virtual/mysql )
+SLOT=0
+SRC_URI=mirror://gnu/glpk/glpk-4.45.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	61ad55e732e494378165e7dcd4744b91	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=c15bf018f3ba12949d2f8c59a3f288e9

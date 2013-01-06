@@ -1,0 +1,26 @@
+# ChangeLog for dev-perl/Lchown
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lchown/ChangeLog,v 1.6 2012/06/24 13:00:21 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Add missing cpan remote-id tags in metadata.xml (#406287)
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Lchown-1.01.ebuild:
+  Cleanup
+
+*Lchown-1.10.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Lchown-1.10.0.ebuild:
+  Change version scheme
+
+  25 Oct 2010; Justin Lecher <jlec@gentoo.org> Lchown-1.01.ebuild:
+  Added virtual/perl-Module-Build to DEPEND
+
+*Lchown-1.01 (25 Oct 2010)
+
+  25 Oct 2010; Justin Lecher <jlec@gentoo.org> +Lchown-1.01.ebuild,
+  +metadata.xml:
+  New addition

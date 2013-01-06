@@ -1,0 +1,15 @@
+Validate .desktop entry with desktop-file-utils 0.17.
+
+--- gpa.desktop
++++ gpa.desktop
+@@ -6,8 +6,7 @@
+ GenericName[sv]=GNU Integritets-hjälpreda
+ GenericName[en_US.ISO8859-1]=GNU Privacy Assistant
+ Exec=gpa
+-Icon=gpa.png
++Icon=gpa
+ Terminal=false
+-Encoding=UTF-8
+ Type=Application
+-Categories=GTK;Application;Security;Utility;
++Categories=GTK;Utility;System;Security;

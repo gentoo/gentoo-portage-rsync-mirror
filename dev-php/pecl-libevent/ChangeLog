@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/pecl-libevent
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-libevent/ChangeLog,v 1.1 2012/02/09 17:25:47 olemarkus Exp $
+
+*pecl-libevent-0.0.4 (09 Feb 2012)
+
+  09 Feb 2012; Ole Markus With <olemarkus@gentoo.org> +metadata.xml,
+  +pecl-libevent-0.0.4.ebuild:
+  Added initial ebuild for PHP libevent wrapper
+

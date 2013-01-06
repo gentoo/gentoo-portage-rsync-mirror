@@ -1,0 +1,13 @@
+diff --git a/qtiplot/qtiplot.pro b/qtiplot/qtiplot.pro
+index bf133ca..f3d0994 100755
+--- a/qtiplot/qtiplot.pro
++++ b/qtiplot/qtiplot.pro
+@@ -226,7 +226,7 @@ contains(SCRIPTING_LANGS, Python) {
+ 	DEFINES += OPJ_IMPORT
+ 	INCLUDEPATH += $$LIBORIGIN_INCLUDEPATH
+ 	INCLUDEPATH += $$BOOST_INCLUDEPATH
+-	#LIBS        += $$LIBORIGIN_LIBS
++	LIBS        += $$LIBORIGIN_LIBS
+ 	LIBS        += $$BOOST_LIBS
+ 	include(src/origin/origin.pri)
+ }

@@ -1,0 +1,13 @@
+diff -urN clipgrab-3.2.0.6.old/resources.qrc clipgrab-3.2.0.6/resources.qrc
+--- clipgrab-3.2.0.6.old/resources.qrc	2012-05-16 13:11:40.593973547 +0200
++++ clipgrab-3.2.0.6/resources.qrc	2012-05-16 13:18:46.680964145 +0200
+@@ -3,9 +3,6 @@
+         <file>splash.png</file>
+         <file>icon.png</file>
+         <file>logo.png</file>
+-        <file>logo-gpl.png</file>
+-        <file>logo-qt.png</file>
+-        <file>logo-ffmpeg.png</file>
+         <file>paypal.png</file>
+         <file>paypal-logo.png</file>
+     </qresource>

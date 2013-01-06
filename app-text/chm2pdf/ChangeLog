@@ -1,0 +1,47 @@
+# ChangeLog for app-text/chm2pdf
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/ChangeLog,v 1.12 2012/11/25 21:13:05 hasufell Exp $
+
+  25 Nov 2012; Julian Ospald <hasufell@gentoo.org> chm2pdf-0.9.1-r1.ebuild:
+  convert shebang wrt #444716
+
+  06 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
+  Add myself to metadata.xml.
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> chm2pdf-0.9.1-r1.ebuild:
+  x86 stable wrt bug #392871
+
+  03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> chm2pdf-0.9.1-r1.ebuild:
+  Stable on amd64 wrt bug #392871
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> chm2pdf-0.9.1-r1.ebuild:
+  Adjust dependencies. Thanks to Ryan Hill
+
+*chm2pdf-0.9.1-r1 (12 Jan 2011)
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> +chm2pdf-0.9.1-r1.ebuild:
+  Make it depend on dev-libs/chmlib[examples]. Bug #351321
+
+  04 May 2010; Markos Chandras <hwoarang@gentoo.org> chm2pdf-0.9.1.ebuild:
+  Inherit python eclass wrt bug #318403
+
+  22 Apr 2010; Markos Chandras <hwoarang@gentoo.org> chm2pdf-0.9.1.ebuild:
+  Refactor ebuild to use python functions correctly. Fixes bug #312097
+
+  15 Jul 2009; Christian Faulhammer <fauli@gentoo.org> chm2pdf-0.9.1.ebuild:
+  stable x86, bug 277724
+
+  15 Jul 2009; Tiago Cunha <tcunha@gentoo.org> chm2pdf-0.9.1.ebuild:
+  stable amd64, bug 277724
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed metadata.
+
+*chm2pdf-0.9.1 (26 Feb 2009)
+
+  26 Feb 2009; Markos Chandras <hwoarang@gentoo.org> +files/tempdir.patch,
+  +metadata.xml, +chm2pdf-0.9.1.ebuild:
+  Initial import of chm2pdf program. Fixes bug #205208 . Thanks to Milan
+  Nikolic <gen2brain@gmail.com> for the patch
+

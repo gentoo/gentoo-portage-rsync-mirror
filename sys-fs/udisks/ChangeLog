@@ -1,0 +1,457 @@
+# ChangeLog for sys-fs/udisks
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.114 2013/01/01 14:56:59 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> udisks-2.0.90.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> udisks-2.0.90.ebuild:
+  Add ~ia64, wrt bug #412801
+
+*udisks-2.0.90 (19 Dec 2012)
+
+  19 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> +udisks-2.0.90.ebuild:
+  Version bump.
+
+  18 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.0.4-r3.ebuild,
+  -udisks-2.0.0.ebuild, -files/udisks-2.x-ntfs-3g.patch,
+  -files/udisks-2.x-pragma.patch:
+  old
+
+*udisks-2.0.1 (17 Dec 2012)
+
+  17 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> +udisks-2.0.1.ebuild,
+  +files/udisks-2.0.1-pragma.patch:
+  Version bump.
+
+*udisks-1.0.4-r4 (15 Dec 2012)
+
+  15 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.0.4-r4.ebuild,
+  +files/udisks-1.0.4-drop-pci-db.patch:
+  Remove usage of old pci-db and rely upon >=virtual/udev-196 dependency to
+  bring us internal hwdb support wrt #447304 by "Konstantin"
+
+  09 Dec 2012; <swift@gentoo.org> udisks-1.0.4-r2.ebuild,
+  udisks-1.0.4-r3.ebuild, udisks-2.0.0.ebuild:
+  Adding dependency on SELinux devicekit policy if USE=selinux is set
+
+  24 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r3.ebuild,
+  udisks-2.0.0.ebuild:
+  Use virtual/udev.
+
+  04 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r3.ebuild,
+  +files/udisks-1.0.4-kernel-2.6.36-compat.patch:
+  Migrate to udev.eclass. Backport Linux >= 2.6.36 compability patch, as in,
+  use power/control instead of power/level when available.
+
+  03 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.99.0.ebuild,
+  -udisks-1.99.0-r1.ebuild:
+  old
+
+*udisks-2.0.0 (03 Oct 2012)
+
+  03 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> +udisks-2.0.0.ebuild:
+  Version bump.
+
+*udisks-1.99.0-r1 (06 Aug 2012)
+*udisks-1.0.4-r3 (06 Aug 2012)
+
+  06 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.0.4-r3.ebuild,
+  +udisks-1.99.0-r1.ebuild:
+  Use udev.pc pkg-config file to determine udevhelperdir and udevrulesdir.
+  Dummy revision bump for UDisks2 because it has the same logic for
+  --with-udevdir= in configure.ac.
+
+  03 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.99.0.ebuild,
+  +files/udisks-2.x-pragma.patch:
+  Revert upstream -Wformat-nonliteral pragma patch when active GCC is < 4.6 wrt
+  #428398 by Manuel Rüger
+
+  02 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.98.0.ebuild:
+  old
+
+  02 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.99.0.ebuild:
+  Force at least sys-fs/udev >= 180 for ID_PART_ENTRY_* property names wrt
+  #417629 by Pacho Ramos
+
+  29 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.0.4-r1.ebuild:
+  old
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> udisks-1.0.4-r2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #420169
+
+  28 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.99.0.ebuild:
+  Make the build verbose by disabling silent rules.
+
+*udisks-1.99.0 (27 Jul 2012)
+
+  27 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.99.0.ebuild:
+  Version bump.
+
+  10 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r2.ebuild,
+  udisks-1.98.0.ebuild:
+  Warn users if CONFIG_NLS_UTF8=y is missing wrt #425562 by Karl Tomlinson
+
+  29 Jun 2012; Jeroen Roovers <jer@gentoo.org> udisks-1.0.4-r1.ebuild,
+  udisks-1.0.4-r2.ebuild:
+  Drop HPPA keywording (bug #412801).
+
+  20 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.97.0-r1.ebuild:
+  old
+
+  12 Jun 2012; Agostino Sarubbo <ago@gentoo.org> udisks-1.0.4-r2.ebuild:
+  Stable for amd64, wrt bug #420169
+
+  09 Jun 2012; Markus Meier <maekke@gentoo.org> udisks-1.0.4-r2.ebuild:
+  arm stable, bug #420169
+
+  08 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r2.ebuild:
+  ppc/ppc64/x86 stable wrt #420169
+
+*udisks-1.98.0 (08 Jun 2012)
+
+  08 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.98.0.ebuild:
+  Version bump.
+
+  07 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r1.ebuild,
+  udisks-1.0.4-r2.ebuild, udisks-1.97.0-r1.ebuild:
+  Force USE="hwdb" enabled for sys-fs/udev wrt #418013 by "Sebastian"
+
+  02 Jun 2012; Anthony G. Basile <blueness@gentoo.org> udisks-1.0.4-r2.ebuild:
+  Keyword ~mips
+
+  19 May 2012; Anthony G. Basile <blueness@gentoo.org> udisks-1.97.0-r1.ebuild:
+  Keyword ~mips
+
+  17 May 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.97.0-r1.ebuild:
+  Check for CONFIG_SWAP wrt http://forums.gentoo.org/viewtopic-t-923640.html by
+  "Fran"
+
+  15 May 2012; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.97.0.ebuild:
+  old
+
+*udisks-1.97.0-r1 (15 May 2012)
+
+  15 May 2012; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.97.0-r1.ebuild:
+  Revision bump for last change to ensure /run is in place. Warn the user if 
+  /run is not mounted with tmpfs wrt #415987
+
+  15 May 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.97.0.ebuild:
+  Keyword ~ppc/~ppc64 wrt #412801
+
+  15 May 2012; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.94.0.ebuild,
+  -udisks-1.96.0.ebuild:
+  old
+
+  15 May 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.97.0.ebuild:
+  Remove keepdir for /media and create /run if it's missing for
+  /run/media/$user support wrt #415987
+
+  13 May 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.94.0.ebuild,
+  udisks-1.96.0.ebuild, udisks-1.97.0.ebuild:
+  Force at least >=sys-kernel/linux-headers-3.1 for linux/loop.h to gain
+  #define LOOP_CTL_GET_FREE wrt #415715 by Thomas Sachau
+
+*udisks-1.97.0 (11 May 2012)
+
+  11 May 2012; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.97.0.ebuild:
+  Version bump.
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> udisks-1.0.4-r1.ebuild,
+  udisks-1.0.4-r2.ebuild, udisks-1.94.0.ebuild, udisks-1.96.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  01 May 2012; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.94.0-r1.ebuild:
+  old
+
+*udisks-1.96.0 (01 May 2012)
+
+  01 May 2012; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.96.0.ebuild,
+  metadata.xml:
+  Version bump. Optionalize sys-apps/gptfdisk wrt #412801, Comment #1 since it
+  might not work for every arch.
+
+  20 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.93.0.ebuild:
+  old
+
+  20 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r2.ebuild,
+  udisks-1.94.0-r1.ebuild:
+  Require at least sys-apps/util-linux >= 2.20.1-r2 wrt #403073
+
+  20 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r2.ebuild,
+  udisks-1.94.0-r1.ebuild:
+  Run pkg_setup() test for kernel opts also for arm, ppc and ppc64. 
+
+*udisks-1.94.0-r1 (20 Apr 2012)
+
+  20 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.94.0-r1.ebuild:
+  Missing runtime dependencies; see inside the ebuild and
+  http://bugs.freedesktop.org/show_bug.cgi?id=48842#c5 for reference.
+
+  18 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.94.0.ebuild:
+  Missing sys-apps/acl runtime dependency for setfacl(1) command. This will
+  be replaced with libacl usage on 1.95.0. This will require kernels to be
+  built with CONFIG_TMPFS_POSIX_ACL=y option because /run is used which
+  should be on a tmpfs filesystem. See,
+  http://bugs.gentoo.org/412377
+  http://bugs.freedesktop.org/show_bug.cgi?id=48842
+  http://cgit.freedesktop.org/udisks/commit/?id=15250f35ff8770389cc579c304fbcac9beebc203
+
+*udisks-1.94.0 (11 Apr 2012)
+
+  11 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.94.0.ebuild:
+  Version bump.
+
+  28 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  udisks-1.93.0.ebuild:
+  Add gdbus-codegen build-time dep (bug #409923, thanks to Trevor Bowen).
+
+*udisks-1.93.0 (27 Mar 2012)
+
+  27 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.93.0.ebuild,
+  +files/udisks-2.x-ntfs-3g.patch, metadata.xml:
+  Version bump wrt #407723
+
+*udisks-1.0.4-r2 (23 Jan 2012)
+
+  23 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.0.4-r2.ebuild:
+  Move umount.udisks from /sbin to /usr/sbin wrt #398081 by Michał Górny
+
+  10 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.0.3-r1.ebuild,
+  -files/udisks-1.0.3-mkfs-tempdir.patch:
+  old
+
+  10 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r1.ebuild:
+  ppc64 stable wrt #385231
+
+  10 Jan 2012; Brent Baude <ranger@gentoo.org> udisks-1.0.4-r1.ebuild:
+  Marking udisks-1.0.4-r1 ppc for bug 385231
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> udisks-1.0.4-r1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #385231
+
+  17 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.0.2-r1.ebuild,
+  -files/udisks-1.0.2-CVE-2010-4661.patch:
+  old
+
+  17 Oct 2011; Jeroen Roovers <jer@gentoo.org> udisks-1.0.4-r1.ebuild:
+  Stable for HPPA (bug #385231).
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -udisks-1.0.2-r4.ebuild,
+  -files/udisks-1.0.2-missing_comma.patch, -udisks-1.0.3.ebuild,
+  -udisks-1.0.4.ebuild:
+  old
+
+  10 Oct 2011; Markus Meier <maekke@gentoo.org> udisks-1.0.4-r1.ebuild:
+  arm stable, bug #385231
+
+  04 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> udisks-1.0.4-r1.ebuild:
+  x86 stable wrt bug #385231
+
+  01 Oct 2011; Markos Chandras <hwoarang@gentoo.org> udisks-1.0.4-r1.ebuild:
+  Stable on amd64 wrt bug #385231
+
+  16 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r1.ebuild:
+  Port to bash-completion-r1.eclass wrt #383167 by David J. Cozatt
+
+  15 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r1.ebuild:
+  Remove obsolete blockers.
+
+*udisks-1.0.4-r1 (15 Sep 2011)
+
+  15 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.0.4-r1.ebuild:
+  keepdir /var/lib/udisks wrt #383091 by Marcin Mirosław
+
+*udisks-1.0.4 (28 Aug 2011)
+
+  28 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.0.4.ebuild:
+  Version bump.
+
+  23 Jul 2011; Raúl Porcel <armin76@gentoo.org> udisks-1.0.3-r1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #374685
+
+  23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> udisks-1.0.3-r1.ebuild:
+  ppc/ppc64 stable wrt #374685
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> udisks-1.0.3-r1.ebuild:
+  arm/x86 stable, bug #374685
+
+  10 Jul 2011; Markos Chandras <hwoarang@gentoo.org> udisks-1.0.3-r1.ebuild:
+  Stable on amd64 wrt bug #374685
+
+*udisks-1.0.3-r1 (05 Jul 2011)
+
+  05 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.0.3-r1.ebuild,
+  +files/udisks-1.0.3-mkfs-tempdir.patch:
+  Use /tmp instead of /var/run/udisks wrt #333893 by Diego Elio Pettenò.
+
+*udisks-1.0.3 (30 Jun 2011)
+
+  30 Jun 2011; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.0.3.ebuild:
+  Version bump.
+
+  08 Jun 2011; Sebastian Pipping <sping@gentoo.org> udisks-1.0.2-r4.ebuild:
+  Add >=sys-fs/udev-171[gudev] as an alternative dependency to
+  >=sys-fs/udev-147[extras] (bug #370283)
+
+*udisks-1.0.2-r4 (07 Jun 2011)
+
+  07 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -udisks-1.0.2-r3.ebuild,
+  +udisks-1.0.2-r4.ebuild, +files/udisks-1.0.2-ntfs-3g.patch:
+  Re-insert ntfs-3g to the filesystems list, the comma fixed a different
+  problem. Remove old.
+
+*udisks-1.0.2-r3 (09 May 2011)
+
+  09 May 2011; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.0.2-r3.ebuild,
+  +files/udisks-1.0.2-missing_comma.patch:
+  Add missing comma in fs whitelist to replace the -ntfs-3g.patch.
+
+*udisks-1.0.2-r2 (27 Apr 2011)
+
+  27 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.0.2-r2.ebuild,
+  +files/udisks-1.0.2-ntfs-3g.patch:
+  Insert ntfs-3g to the list of well known filesystems.
+
+  26 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> udisks-1.0.2-r1.ebuild:
+  ppc/ppc64 stable wrt #353343
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org> udisks-1.0.2-r1.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #353343
+
+  17 Apr 2011; Maciej Mrozowski <reavertm@gentoo.org> udisks-1.0.2.ebuild,
+  udisks-1.0.2-r1.ebuild:
+  intltool is always required
+
+  17 Apr 2011; Thomas Kahle <tomka@gentoo.org> udisks-1.0.2-r1.ebuild:
+  x86 stable per bug 353343
+
+  16 Apr 2011; Christoph Mende <angelos@gentoo.org> udisks-1.0.2-r1.ebuild:
+  Stable on amd64 wrt bug #353343
+
+  16 Apr 2011; Jeroen Roovers <jer@gentoo.org> udisks-1.0.2-r1.ebuild:
+  Stable for HPPA (bug #353343).
+
+*udisks-1.0.2-r1 (16 Apr 2011)
+
+  16 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.0.2-r1.ebuild,
+  +files/udisks-1.0.2-CVE-2010-4661.patch:
+  Upstream patch for CVE-2010-4661 wrt #353343 by Paweł Hajdan, Jr.
+
+  22 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> udisks-1.0.2.ebuild:
+  ppc/ppc64 stable wrt #354505
+
+  19 Mar 2011; Raúl Porcel <armin76@gentoo.org> udisks-1.0.1-r1.ebuild,
+  udisks-1.0.2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #354505
+
+  13 Mar 2011; Markus Meier <maekke@gentoo.org> udisks-1.0.2.ebuild:
+  arm stable, bug #354505
+
+  07 Mar 2011; Jeroen Roovers <jer@gentoo.org> udisks-1.0.2.ebuild:
+  Stable for HPPA (bug #354505).
+
+  04 Mar 2011; Thomas Kahle <tomka@gentoo.org> udisks-1.0.2.ebuild:
+  x86 stable per bug 354505
+
+  23 Feb 2011; Markos Chandras <hwoarang@gentoo.org> udisks-1.0.2.ebuild:
+  Stable on amd64 wrt bug #354505
+
+  29 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.1-r1.ebuild,
+  +files/udisks-1.0.1-linux-headers-2.6.36.patch:
+  Fix building with Linux >= 2.6.36 wrt #352335.
+
+*udisks-1.0.2 (02 Dec 2010)
+
+  02 Dec 2010; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.0.2.ebuild:
+  Version bump.
+
+  29 Oct 2010; Jeroen Roovers <jer@gentoo.org> udisks-1.0.1-r1.ebuild:
+  Stable for HPPA (bug #329621).
+
+  25 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  udisks-1.0.1-r2.ebuild:
+  Check for CONFIG_IDE wrt #319829 by Kete Tefid.
+
+  18 Oct 2010; Samuli Suominen <ssuominen@gentoo.org>
+  udisks-1.0.1-r2.ebuild:
+  Check for CONFIG_USB_SUSPEND wrt #331065 by Ian Abbott.
+
+  18 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  udisks-1.0.1-r2.ebuild:
+  Runtime virtual/eject depend wrt #331049 by Fab.
+
+  09 Sep 2010; Joseph Jezak <josejx@gentoo.org> udisks-1.0.1-r1.ebuild:
+  Marked ppc/ppc64 stable for bug #329621.
+
+  29 Aug 2010; Raúl Porcel <armin76@gentoo.org> udisks-1.0.1-r1.ebuild:
+  arm/ia64/sparc stable wrt #329621
+
+*udisks-1.0.1-r2 (21 Aug 2010)
+
+  21 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +udisks-1.0.1-r2.ebuild, +files/udisks-1.0.1-no-floppy.patch:
+  Fix long hangs on probing nonexistant floppies.
+
+  20 Aug 2010; Jeroen Roovers <jer@gentoo.org> udisks-1.0.1-r1.ebuild:
+  Move from sys-apps/parted to sys-block/parted.
+
+  30 Jul 2010; Markos Chandras <hwoarang@gentoo.org> udisks-1.0.1-r1.ebuild:
+  Stable on amd64 wrt bug #329621
+
+  25 Jul 2010; Tobias Klausmann <klausman@gentoo.org>
+  udisks-1.0.1-r1.ebuild:
+  Stable on alpha, bug #329621
+
+  25 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  udisks-1.0.1-r1.ebuild:
+  stable x86, bug 329621
+
+  20 Jul 2010; Jeroen Roovers <jer@gentoo.org> udisks-1.0.1-r1.ebuild:
+  Marked ~hppa too.
+
+  11 Jul 2010; Raúl Porcel <armin76@gentoo.org> udisks-1.0.1-r1.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #316277
+
+*udisks-1.0.1-r1 (24 Jun 2010)
+
+  24 Jun 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +udisks-1.0.1-r1.ebuild, +files/udisks-1.0.1-lvm2_api_support.patch:
+  Update to latest LVM2 API.
+
+  13 May 2010; Joseph Jezak <josejx@gentoo.org> udisks-1.0.1.ebuild:
+  Marked ~ppc64 for bug #316277.
+
+  13 May 2010; Joseph Jezak <josejx@gentoo.org> udisks-1.0.1.ebuild:
+  Marked ~ppc for bug #309783.
+
+  22 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.1.ebuild:
+  RESTRICT="test" because of requirement for running dbus (and also sudo).
+
+*udisks-1.0.1 (09 Apr 2010)
+
+  09 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.0.1.ebuild:
+  Version bump.
+
+  09 Apr 2010; Steev Klimaszewski <steev@gentoo.org> udisks-1.0.0.ebuild,
+  metadata.xml:
+  udisks: Change the autoconf flag to remote-access
+
+  The remote-access is more appropriate as this flag is regarding whether 
+  or not remote machines should be allowed to connect to you.
+
+  09 Apr 2010; Steev Klimaszewski <steev@gentoo.org> udisks-1.0.0.ebuild:
+  udisks: Add a keepdir for /media
+
+  Since HAL is going away, we need something to create /media so that 
+  people who are doing new installations who have never had HAL installed 
+  can automount.
+
+  08 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.0.ebuild:
+  Move ~arm and --enable/--disable-remote-access handling from
+  gnome-overlay.
+
+*udisks-1.0.0 (07 Apr 2010)
+
+  07 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.0.0.ebuild:
+  Initial commit wrt #309759 by Marc-Antoine Perennou.

@@ -1,0 +1,29 @@
+# ChangeLog for app-emacs/blogmax
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/blogmax/ChangeLog,v 1.6 2007/07/04 23:32:59 opfer Exp $
+
+  04 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  blogmax-20041208.ebuild:
+  removed src_compile()
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  blogmax-20041208.ebuild:
+  removed DEPEND on virtual/emacs; added some quotes; adjusted DESCRIPTION
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+  24 Oct 2005; Joseph Jezak <josejx@gentoo.org> blogmax-20041208.ebuild:
+  Marked ~ppc.
+
+  01 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  blogmax-20041208.ebuild:
+  Keywording ~amd64.
+
+*blogmax-20041208 (25 Jan 2005)
+
+  25 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +files/50blogmax-gentoo.el, +files/README.Gentoo,
+  +blogmax-20041208.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+

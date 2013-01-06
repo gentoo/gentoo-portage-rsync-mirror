@@ -1,0 +1,16 @@
+diff -Nuar acpica-unix-20110922.orig/compiler/Makefile acpica-unix-20110922/compiler/Makefile
+--- acpica-unix-20110922.orig/compiler/Makefile	2011-09-22 15:59:34.000000000 +0000
++++ acpica-unix-20110922/compiler/Makefile	2011-11-07 03:36:49.103281798 +0000
+@@ -258,10 +258,10 @@
+ #
+ # Bison/Flex configuration
+ #
+-YACC=    bison
++YACC=    LC_ALL=C bison
+ YFLAGS+= -v -d -y
+ 
+-LEX=     flex
++LEX=     LC_ALL=C flex
+ LFLAGS+= -i -s
+ 
+ #

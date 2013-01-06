@@ -1,0 +1,22 @@
+--- xxkb.c	2012-03-06 17:49:02.888079235 +0200
++++ xxkb_fixed.c	2012-03-06 17:48:58.712462301 +0200
+@@ -667,12 +667,14 @@
+ 					Window rwin, parent, *children;
+ 					int num;
+ 
+-					XQueryTree(dpy, temp_win, &rwin, &parent, &children, &num);
+-					AddWindow(temp_win, parent);
++					if (XQueryTree(dpy, temp_win, &rwin, &parent, &children, &num) != 0)
++                    {
++                        AddWindow(temp_win, parent);
+ 
+-					if (children != None) {
+-						XFree(children);
+-					}
++                        if (children != None) {
++                            XFree(children);
++                        }
++                    }
+ 				}
+ 				break;
+ 

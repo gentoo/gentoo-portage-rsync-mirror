@@ -1,0 +1,13 @@
+diff -ur BitStormLite-0.2p.orig/src/Makefile.am BitStormLite-0.2p/src/Makefile.am
+--- BitStormLite-0.2p.orig/src/Makefile.am	2007-09-20 15:01:06.000000000 +0300
++++ BitStormLite-0.2p/src/Makefile.am	2009-12-19 23:55:38.000000000 +0200
+@@ -4,8 +4,7 @@
+ localedir =  $(datadir)/locale
+ INCLUDES = $(GTK_CFLAGS) -DLOCALEDIR=\"$(localedir)\"
+ 
+-bitstormlite_LDFLAGS = -lpthread $(GTK_LIBS) `curl-config --libs`
+-bitstormlite_LDADD = $(LIBINTL)
++bitstormlite_LDADD = -lpthread $(LIBINTL) $(GTK_LIBS) -lcurl
+ 
+ bitstormlite_SOURCES = bdict.cpp\
+ 		BitSet.cpp\

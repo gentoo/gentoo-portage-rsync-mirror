@@ -1,0 +1,26 @@
+From dd41ac17a04d4689583aa5ec8b3bb467b43a24ce Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gmail.com>
+Date: Tue, 29 Mar 2011 00:11:34 -0400
+Subject: [PATCH] Add devicelist.py and hwdata.py to client Makefile
+
+Signed-off-by: Alexandre Rostovtsev <tetromino@gmail.com>
+---
+ client/Makefile |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/client/Makefile b/client/Makefile
+index 2164bf7..8bd5f1c 100644
+--- a/client/Makefile
++++ b/client/Makefile
+@@ -1,7 +1,7 @@
+ PO_FILES=$(wildcard po/*.po)
+ MO_FILES=$(patsubst %.po,%.mo,$(PO_FILES))
+ # echo PY_FILES=$(ls -1 *.py | grep -v '^\(create_monthly\|getLink\|haldump\|hammer_add\|makeuuid\|starhscale\).py$' | sort)
+-PY_FILES=config.py deleteProfile.py fs_util.py gate.py gui.py i18n.py __init__.py MultipartPostHandler.py os_detect.py privacypolicy.py scan.py sendProfile.py smolt_config.py smoltFirstBoot.py smoltGui.py smolt_mythtv.py smolt.py software.py uuiddb.py
++PY_FILES=config.py deleteProfile.py devicelist.py fs_util.py gate.py gui.py hwdata.py i18n.py __init__.py MultipartPostHandler.py os_detect.py privacypolicy.py scan.py sendProfile.py smolt_config.py smoltFirstBoot.py smoltGui.py smolt_mythtv.py smolt.py software.py uuiddb.py
+ DIRED_MO_FILES=$(patsubst po/%.mo,mo/%/LC_MESSAGES/$(NAME).mo,$(MO_FILES))
+ 
+ 
+-- 
+1.7.4.1
+

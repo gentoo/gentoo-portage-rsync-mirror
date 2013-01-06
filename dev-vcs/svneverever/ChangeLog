@@ -1,0 +1,43 @@
+# ChangeLog for dev-vcs/svneverever
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/ChangeLog,v 1.8 2012/10/29 16:38:08 mgorny Exp $
+
+  29 Oct 2012; Michał Górny <mgorny@gentoo.org> svneverever-1.1.0.ebuild,
+  svneverever-1.2.0.ebuild, svneverever-1.2.1.ebuild:
+  Use virtual for argparse.
+
+*svneverever-1.2.1 (04 Jan 2012)
+
+  04 Jan 2012; Sebastian Pipping <sping@gentoo.org> +svneverever-1.2.1.ebuild:
+  Bump to 1.2.1
+
+*svneverever-1.2.0 (06 Jul 2011)
+
+  06 Jul 2011; Sebastian Pipping <sping@gentoo.org> +svneverever-1.2.0.ebuild:
+  Bump to 1.2.0
+
+*svneverever-1.1.0 (03 Apr 2011)
+
+  03 Apr 2011; Sebastian Pipping <sping@gentoo.org> +svneverever-1.1.0.ebuild:
+  Bump to 1.1.0
+
+*svneverever-1.0.4 (19 Jan 2011)
+
+  19 Jan 2011; Sebastian Pipping <sping@gentoo.org> +svneverever-1.0.4.ebuild:
+  Bump to 1.0.4
+
+*svneverever-1.0.3 (03 Nov 2010)
+
+  03 Nov 2010; Sebastian Pipping <sping@gentoo.org>
+  +svneverever-1.0.3.ebuild:
+  Bump to 1.0.3 (supporting Python 3.x, requiring Python 2.6 or later)
+
+  27 Oct 2010; Sebastian Pipping <sping@gentoo.org>
+  svneverever-1.0.2.ebuild:
+  Drop back to Python 2.x only
+
+*svneverever-1.0.2 (27 Oct 2010)
+
+  27 Oct 2010; Sebastian Pipping <sping@gentoo.org>
+  +svneverever-1.0.2.ebuild, +metadata.xml:
+  New package

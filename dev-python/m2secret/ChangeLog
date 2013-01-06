@@ -1,0 +1,15 @@
+# ChangeLog for dev-python/m2secret
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2secret/ChangeLog,v 1.3 2012/11/09 18:32:54 ago Exp $
+
+  09 Nov 2012; Agostino Sarubbo <ago@gentoo.org> m2secret-0.1.1.ebuild:
+  Add ~amd64, wrt bug #442124
+
+  26 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> m2secret-0.1.1.ebuild:
+  Ebuild improvements, Python vars, HOMEPAGE
+
+*m2secret-0.1.1 (15 Jul 2011)
+
+  15 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> +m2secret-0.1.1.ebuild,
+  +metadata.xml:
+  Initial commit

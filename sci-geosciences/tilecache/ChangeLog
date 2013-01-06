@@ -1,0 +1,29 @@
+# ChangeLog for sci-geosciences/tilecache
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tilecache/ChangeLog,v 1.5 2011/06/01 09:53:25 scarabeus Exp $
+
+*tilecache-2.11 (01 Jun 2011)
+
+  01 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> -tilecache-2.10.ebuild,
+  +tilecache-2.11.ebuild:
+  Version bump to latest. Drop older.
+
+  27 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  tilecache-2.10.ebuild:
+  Add missing dependency per bug #313921.
+
+  27 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  tilecache-2.10.ebuild, metadata.xml:
+  Drop myself as maintainer since i am in the herd so i would get
+  doublemails. Update to new python.
+
+  06 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  tilecache-2.10.ebuild:
+  Add missing dependency.
+
+*tilecache-2.10 (09 Dec 2009)
+
+  09 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +tilecache-2.10.ebuild, +metadata.xml:
+  Initial commit.
+

@@ -1,0 +1,26 @@
+# ChangeLog for www-apps/nanoc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.5 2012/12/11 18:57:01 graaff Exp $
+
+*nanoc-3.4.3 (11 Dec 2012)
+
+  11 Dec 2012; Hans de Graaff <graaff@gentoo.org> +nanoc-3.4.3.ebuild:
+  Version bump.
+
+*nanoc-3.4.0 (13 Aug 2012)
+
+  13 Aug 2012; Hans de Graaff <graaff@gentoo.org> +nanoc-3.4.0.ebuild:
+  Version bump. Add ruby19, bug 406375.
+
+  12 May 2012; Alex Legler <a3li@gentoo.org> nanoc-3.3.1.ebuild:
+  Add doc? dependencies, fixes bug 406371 by Shunsuke Shimizu
+
+  28 Feb 2012; Alex Legler <a3li@gentoo.org> nanoc-3.3.1.ebuild:
+  always require cri
+
+*nanoc-3.3.1 (28 Feb 2012)
+
+  28 Feb 2012; Alex Legler <a3li@gentoo.org> +nanoc-3.3.1.ebuild,
+  +metadata.xml:
+  Initial import, ebuild based on graaff's version from his overlay
+

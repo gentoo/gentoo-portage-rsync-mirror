@@ -1,0 +1,28 @@
+# ChangeLog for dev-perl/Net-LDAPapi
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-LDAPapi/ChangeLog,v 1.5 2012/06/24 12:58:58 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  18 Jun 2010; Tiziano Müller <dev-zero@gentoo.org>
+  -Net-LDAPapi-3.0.3.ebuild, Net-LDAPapi-3.0.3-r1.ebuild:
+  Added sasl-dependency (thanks to tove).
+
+  16 Jun 2010; Tiziano Müller <dev-zero@gentoo.org>
+  Net-LDAPapi-3.0.3-r1.ebuild:
+  Dropped ExtUtils-MakeMaker dependency according to the Gentoo Perl Herd
+  Guide. Added ~x86 keyword.
+
+*Net-LDAPapi-3.0.3-r1 (09 Jun 2010)
+
+  09 Jun 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +files/3.0.3-ldap_result-no_error.patch, +Net-LDAPapi-3.0.3-r1.ebuild:
+  Added patch to not treat results from ldap_results as normal ldap return
+  values in 'sub error' (as in 3.0.2).
+
+*Net-LDAPapi-3.0.3 (09 Jun 2010)
+
+  09 Jun 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +Net-LDAPapi-3.0.3.ebuild, +metadata.xml:
+  Initial commit.

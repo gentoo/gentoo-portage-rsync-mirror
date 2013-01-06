@@ -1,0 +1,14 @@
+# ChangeLog for gpe-base/gpe-contacts
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-contacts/ChangeLog,v 1.2 2009/09/11 11:28:13 flameeyes Exp $
+
+  11 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  gpe-contacts-0.49.ebuild:
+  Change quoting (avoids false positive on tests).
+
+*gpe-contacts-0.49 (15 Jul 2009)
+
+  15 Jul 2009; Angelo Arrifano <miknix@gentoo.org> +metadata.xml,
+  +gpe-contacts-0.49.ebuild:
+  Initial commit, imported from GPE overlay, based on #101393
+

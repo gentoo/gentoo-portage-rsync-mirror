@@ -1,0 +1,36 @@
+# ChangeLog for dev-java/jflex
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/ChangeLog,v 1.8 2012/12/10 17:31:59 ago Exp $
+
+  10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> jflex-1.4.3.ebuild:
+  Add ~ppc, wrt bug #401145
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> jflex-1.4.3.ebuild:
+  x86 stable wrt bug #391995
+
+  02 Dec 2011; Markos Chandras <hwoarang@gentoo.org> jflex-1.4.3.ebuild:
+  Stable on amd64 wrt bug #391995
+
+*jflex-1.4.3 (08 May 2011)
+
+  08 May 2011; <elvanor@gentoo.org> +jflex-1.4.3.ebuild:
+  Version bump to 1.4.3.
+
+*jflex-1.4.1-r1 (31 Jan 2009)
+
+  31 Jan 2009; Serkan Kaba <serkan@gentoo.org>
+  files/jflex-1.4.1-build.xml.patch, -jflex-1.4.1.ebuild,
+  +jflex-1.4.1-r1.ebuild:
+  Revbump to avoid bundling of unit tests in the jar. Migrate to EAPI 1.
+
+  10 Jan 2008; Vlastimil Babka <caster@gentoo.org> jflex-1.4.1.ebuild:
+  Restrict junit dependency.
+
+  11 Jul 2007; Alistair John Bush <ali_bush@gentoo.org>
+  +files/jflex-1.4.1-build.xml.patch:
+  Added patch file which I missed when adding ebuild to portage.
+
+  02 Jul 2007; Alistair John Bush <ali_bush@gentoo.org> ChangeLog:
+  Adding jflex to tree with 2 minor fixes. Thank you to elvanor
+  <elvanor@gmail.com> for contributing the ebuild.
+

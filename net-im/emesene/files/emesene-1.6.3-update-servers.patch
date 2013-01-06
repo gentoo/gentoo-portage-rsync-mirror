@@ -1,0 +1,168 @@
+diff -ur emesene-1.6.3.old//emesenelib/ProfileManager.py emesene-1.6.3/emesenelib/ProfileManager.py
+--- emesene-1.6.3.old//emesenelib/ProfileManager.py	2010-07-13 00:13:14.000000000 +0200
++++ emesene-1.6.3/emesenelib/ProfileManager.py	2011-11-28 21:27:10.542693399 +0100
+@@ -658,7 +658,7 @@
+ 
+         soap.manager.do_request(self.proxy,\
+             'http://www.msn.com/webservices/AddressBook/ABGroupAdd',
+-            'contacts.msn.com', 443, '/abservice/abservice.asmx',
++            'local-bay.contacts.msn.com', 443, '/abservice/abservice.asmx',
+             soap.templates.addGroup % (group,),
+             self.onGroupAdded, (group,))
+ 
+@@ -690,7 +690,7 @@
+ 
+             soap.manager.do_request(self.proxy,\
+                 'http://www.msn.com/webservices/AddressBook/ABGroupDelete', \
+-                'contacts.msn.com', 443, '/abservice/abservice.asmx', \
++                'local-bay.contacts.msn.com', 443, '/abservice/abservice.asmx', \
+                 soap.templates.deleteGroup % (gid,), \
+                 self.onGroupRemoved, (gid, groupObj))
+ 
+@@ -732,7 +732,7 @@
+             self.emit('group-attr-changed', objOldGroup, group)
+             soap.manager.do_request(self.proxy,\
+                 'http://www.msn.com/webservices/AddressBook/ABGroupUpdate', \
+-                'contacts.msn.com', 443, '/abservice/abservice.asmx', \
++                'local-bay.contacts.msn.com', 443, '/abservice/abservice.asmx', \
+                 soap.templates.renameGroup % (gid, common.escape(newGroup)), \
+                 self.onGroupRenamed, (oldGroup, newGroup))
+ 
+diff -ur emesene-1.6.3.old//emesenelib/soap/requests.py emesene-1.6.3/emesenelib/soap/requests.py
+--- emesene-1.6.3.old//emesenelib/soap/requests.py	2010-07-13 00:13:14.000000000 +0200
++++ emesene-1.6.3/emesenelib/soap/requests.py	2011-11-28 21:27:10.542693399 +0100
+@@ -22,59 +22,59 @@
+     common.debug("soap.requests: membership list", "soap")
+     soap.manager.do_request(proxy,
+         'http://www.msn.com/webservices/AddressBook/FindMembership',
+-        'contacts.msn.com', 443, '/abservice/SharingService.asmx',
++        'local-bay.contacts.msn.com', 443, '/abservice/SharingService.asmx',
+         soap.templates.membershipList, callback)
+ 
+ def address_book(proxy, callback):
+     common.debug("soap.requests: address book", "soap")
+     soap.manager.do_request(proxy,
+         'http://www.msn.com/webservices/AddressBook/ABFindAll',
+-        'contacts.msn.com', 443, '/abservice/abservice.asmx',
++        'local-bay.contacts.msn.com', 443, '/abservice/abservice.asmx',
+         soap.templates.addressBook, callback)
+ 
+ def change_alias(proxy, contactID, alias, callback, *args):
+     alias = str(common.escape(alias))
+     soap.manager.do_request(proxy,
+         'http://www.msn.com/webservices/AddressBook/ABContactUpdate',
+-        'contacts.msn.com', 443, '/abservice/abservice.asmx',
++        'local-bay.contacts.msn.com', 443, '/abservice/abservice.asmx',
+         soap.templates.renameContact % (str(contactID), alias),
+         callback, args)
+ 
+ def add_contact(proxy, email, callback, *args):
+     soap.manager.do_request(proxy,
+         'http://www.msn.com/webservices/AddressBook/ABContactAdd',
+-        'contacts.msn.com', 443, '/abservice/abservice.asmx',
++        'local-bay.contacts.msn.com', 443, '/abservice/abservice.asmx',
+         soap.templates.contactAdd % (email, ), callback, args)
+ 
+ def remove_contact(proxy, contactID, callback, *args):
+     soap.manager.do_request(proxy,
+         'http://www.msn.com/webservices/AddressBook/ABContactDelete',
+-        'contacts.msn.com', 443, '/abservice/abservice.asmx',
++        'local-bay.contacts.msn.com', 443, '/abservice/abservice.asmx',
+         soap.templates.contactRemove % (contactID, ), callback, args)
+ 
+ def add_to_group(proxy, gid, contactID, callback, *args):
+     soap.manager.do_request(proxy,
+         'http://www.msn.com/webservices/AddressBook/ABGroupContactAdd',
+-        'contacts.msn.com', 443, '/abservice/abservice.asmx',
++        'local-bay.contacts.msn.com', 443, '/abservice/abservice.asmx',
+         soap.templates.moveUserToGroup % (gid, contactID), callback, args)
+ 
+ def remove_from_group(proxy, contactID, sourceGid, callback, *args):
+     soap.manager.do_request(proxy,
+         'http://www.msn.com/webservices/AddressBook/ABGroupContactDelete',
+-        'contacts.msn.com', 443, '/abservice/abservice.asmx',
++        'local-bay.contacts.msn.com', 443, '/abservice/abservice.asmx',
+         soap.templates.deleteUserFromGroup % (contactID, sourceGid),
+         callback, args)
+ 
+ def add_role(proxy, role, email, callback, *args):
+     soap.manager.do_request(proxy,
+         'http://www.msn.com/webservices/AddressBook/AddMember',
+-        'contacts.msn.com', 443, '/abservice/SharingService.asmx',
++        'local-bay.contacts.msn.com', 443, '/abservice/SharingService.asmx',
+         soap.templates.addMember % (role, email), callback, args)
+ 
+ def delete_role(proxy, role, email, callback, *args):
+     soap.manager.do_request(proxy,
+         'http://www.msn.com/webservices/AddressBook/DeleteMember',
+-        'contacts.msn.com', 443, '/abservice/SharingService.asmx',
++        'local-bay.contacts.msn.com', 443, '/abservice/SharingService.asmx',
+         soap.templates.deleteMember % (role, email), callback, args)
+ 
+ def get_profile(proxy, cid, callback):
+diff -ur emesene-1.6.3.old//emesenelib/soap/templates.py emesene-1.6.3/emesenelib/soap/templates.py
+--- emesene-1.6.3.old//emesenelib/soap/templates.py	2010-07-13 00:13:14.000000000 +0200
++++ emesene-1.6.3/emesenelib/soap/templates.py	2011-11-28 21:27:10.545693399 +0100
+@@ -68,7 +68,7 @@
+             <wst:RequestType>http://schemas.xmlsoap.org/ws/2004/04/security/trust/Issue</wst:RequestType>
+             <wsp:AppliesTo>
+                 <wsa:EndpointReference>
+-                    <wsa:Address>contacts.msn.com</wsa:Address>
++                    <wsa:Address>local-bay.contacts.msn.com</wsa:Address>
+                 </wsa:EndpointReference>
+             </wsp:AppliesTo>
+             <wsse:PolicyReference URI="MBI"></wsse:PolicyReference>
+@@ -147,7 +147,7 @@
+ # the secont parameter should specify the member by contactId
+ # POST /abservice/abservice.asmx HTTP/1.1
+ # SOAPAction: http://www.msn.com/webservices/AddressBook/ABGroupContactAdd
+-# Host: omega.contacts.msn.com
++# Host: omega.local-bay.contacts.msn.com
+ 
+ oldaddUserToGroup =  '''<?xml version="1.0" encoding="utf-8"?>
+ <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+@@ -217,7 +217,7 @@
+ # the first %s is Allow or Block, the second is the passport mail
+ # POST /abservice/SharingService.asmx HTTP/1.1
+ # SOAPAction: http://www.msn.com/webservices/AddressBook/AddMember
+-# Host: omega.contacts.msn.com
++# Host: omega.local-bay.contacts.msn.com
+ addMember='''<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+ <soap:Header><ABApplicationHeader xmlns="http://www.msn.com/webservices/AddressBook"><ApplicationId>CFE80F9D-180F-4399-82AB-413F33A1FA11</ApplicationId><IsMigration>false</IsMigration><PartnerScenario></PartnerScenario></ABApplicationHeader>
+ <ABAuthHeader xmlns="http://www.msn.com/webservices/AddressBook"><ManagedGroupRequest>false</ManagedGroupRequest><TicketToken>&tickettoken;</TicketToken></ABAuthHeader></soap:Header>
+@@ -236,7 +236,7 @@
+ # the first %s is Allow or Block, the second is the passport mail
+ # POST /abservice/SharingService.asmx HTTP/1.1
+ # SOAPAction: http://www.msn.com/webservices/AddressBook/DeleteMember
+-# Host: omega.contacts.msn.com
++# Host: omega.local-bay.contacts.msn.com
+ deleteMember='''<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+ <soap:Header><ABApplicationHeader xmlns="http://www.msn.com/webservices/AddressBook"><ApplicationId>CFE80F9D-180F-4399-82AB-413F33A1FA11</ApplicationId><IsMigration>false</IsMigration><PartnerScenario></PartnerScenario></ABApplicationHeader>
+ <ABAuthHeader xmlns="http://www.msn.com/webservices/AddressBook"><ManagedGroupRequest>false</ManagedGroupRequest><TicketToken>&tickettoken;</TicketToken></ABAuthHeader></soap:Header>
+@@ -245,7 +245,7 @@
+ # %s is the group name
+ # POST /abservice/abservice.asmx HTTP/1.1
+ # SOAPAction: http://www.msn.com/webservices/AddressBook/ABGroupAdd
+-# Host: by6.omega.contacts.msn.com
++# Host: by6.omega.local-bay.contacts.msn.com
+ 
+ addGroup='''<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+ <soap:Header><ABApplicationHeader xmlns="http://www.msn.com/webservices/AddressBook"><ApplicationId>CFE80F9D-180F-4399-82AB-413F33A1FA11</ApplicationId><IsMigration>false</IsMigration><PartnerScenario>Timer</PartnerScenario></ABApplicationHeader>
+@@ -256,7 +256,7 @@
+ # the %s is the gid
+ # POST /abservice/abservice.asmx HTTP/1.1
+ # SOAPAction: http://www.msn.com/webservices/AddressBook/ABGroupDelete
+-# Host: by6.omega.contacts.msn.com
++# Host: by6.omega.local-bay.contacts.msn.com
+ 
+ deleteGroup='''<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+ <soap:Header><ABApplicationHeader xmlns="http://www.msn.com/webservices/AddressBook"><ApplicationId>CFE80F9D-180F-4399-82AB-413F33A1FA11</ApplicationId><IsMigration>false</IsMigration><PartnerScenario>Timer</PartnerScenario></ABApplicationHeader>
+@@ -266,7 +266,7 @@
+ # gid, name
+ # POST abservice/abservice.asmx HTTP/1.1
+ # SOAPAction: http://www.msn.com/webservices/AddressBook/ABGroupUpdate
+-# Host: omega.contacts.msn.com/
++# Host: omega.local-bay.contacts.msn.com/
+ 
+ renameGroup='''<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+ <soap:Header><ABApplicationHeader xmlns="http://www.msn.com/webservices/AddressBook"><ApplicationId>CFE80F9D-180F-4399-82AB-413F33A1FA11</ApplicationId><IsMigration>false</IsMigration><PartnerScenario>Timer</PartnerScenario></ABApplicationHeader>

@@ -1,0 +1,36 @@
+https://www.midnight-commander.org/ticket/2858
+https://www.midnight-commander.org/changeset/e2f30017a04b5dc557f9d8dd2e281526eba3c97f
+
+Index: src/filemanager/usermenu.c
+===================================================================
+--- src/filemanager/usermenu.c	(revision 409e8ab5fd4c42fd122d42d3d13a455eb6aba96f)
++++ src/filemanager/usermenu.c	(revision e2f30017a04b5dc557f9d8dd2e281526eba3c97f)
+@@ -749,6 +749,7 @@
+         return g_strdup ("%");
+ 
+-    if (mc_global.mc_run_mode == MC_RUN_FULL)
+-    {
++    switch (mc_global.mc_run_mode)
++    {
++    case MC_RUN_FULL:
+         if (g_ascii_islower ((gchar) c))
+             panel = current_panel;
+@@ -760,9 +761,16 @@
+         }
+         fname = g_strdup (panel->dir.list[panel->selected].fname);
+-    }
++        break;
++
+ #ifdef USE_INTERNAL_EDIT
+-    else if (mc_global.mc_run_mode == MC_RUN_EDITOR)
++    case MC_RUN_EDITOR:
+         fname = edit_get_file_name (edit_widget);
++        break;
+ #endif
++
++    default:
++        /* other modes don't use formats */
++        return g_strdup ("");
++    }
+ 
+     if (do_quote)

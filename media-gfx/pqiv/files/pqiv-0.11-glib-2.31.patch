@@ -1,0 +1,12 @@
+http://bugs.gentoo.org/415325
+
+--- pqiv.c
++++ pqiv.c
+@@ -24,7 +24,6 @@
+ #include <stdio.h>
+ #include <gtk/gtk.h>
+ #include <glib.h>
+-#include <glib/gconvert.h>
+ #include <glib/gstdio.h>
+ #include <gdk/gdkkeysyms.h>
+ #include <sys/types.h>

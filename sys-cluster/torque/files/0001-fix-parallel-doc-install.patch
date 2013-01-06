@@ -1,0 +1,35 @@
+From d29ba6daadde49d4e2325b415f2fe614bd2cbad1 Mon Sep 17 00:00:00 2001
+From: Kacper Kowalik <xarthisius@gentoo.org>
+Date: Tue, 16 Nov 2010 16:23:14 -0500
+Subject: [PATCH 1/4] fix parallel doc install
+
+man7/pbs_resources_irix5.7 was defined twice.
+
+Thanks to Kacper Kowalik <xarthisius@gentoo.org>
+---
+ doc/Makefile.am |    2 --
+ 1 files changed, 0 insertions(+), 2 deletions(-)
+
+diff --git a/doc/Makefile.am b/doc/Makefile.am
+index 797b4d6..d4b474c 100644
+--- a/doc/Makefile.am
++++ b/doc/Makefile.am
+@@ -33,7 +33,6 @@ EXTRA_DIST = man1/qalter.1.in man1/qdel.1.in man1/qhold.1.in man1/qmove.1.in \
+ 	     man7/pbs_resources_fujitsu.7.in \
+ 	     man7/pbs_resources_hpux10.7.in man7/pbs_resources_irix5.7.in \
+ 	     man7/pbs_resources_hpux11.7.in \
+-	     man7/pbs_resources_irix5.7.in \
+ 	     man7/pbs_resources_irix6.7.in man7/pbs_resources_irix6array.7.in \
+ 	     man7/pbs_resources_linux.7.in man7/pbs_resources_netbsd.7.in \
+ 	     man7/pbs_resources_solaris5.7.in man7/pbs_resources_solaris7.7.in \
+@@ -79,7 +78,6 @@ nodist_man7_MANS = man7/pbs_job_attributes.7 man7/pbs_queue_attributes.7 \
+ 		   man7/pbs_resources_freebsd.7 man7/pbs_resources_fujitsu.7 \
+ 		   man7/pbs_resources_hpux10.7 man7/pbs_resources_irix5.7 \
+ 		   man7/pbs_resources_hpux11.7 \
+-		   man7/pbs_resources_irix5.7 \
+ 		   man7/pbs_resources_irix6.7 man7/pbs_resources_irix6array.7 \
+ 		   man7/pbs_resources_linux.7 man7/pbs_resources_netbsd.7 \
+ 		   man7/pbs_resources_solaris5.7 man7/pbs_resources_solaris7.7 \
+-- 
+1.7.2.2
+

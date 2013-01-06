@@ -1,0 +1,62 @@
+# ChangeLog for dev-php/PEAR-Image_GraphViz
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_GraphViz/ChangeLog,v 1.11 2011/03/19 11:34:48 olemarkus Exp $
+
+*PEAR-Image_GraphViz-1.3.0 (19 Mar 2011)
+
+  19 Mar 2011; <olemarkus@gentoo.org> +PEAR-Image_GraphViz-1.3.0.ebuild:
+  Version bump
+
+  05 Nov 2010; Jeroen Roovers <jer@gentoo.org>
+  PEAR-Image_GraphViz-1.3.0_rc3.ebuild:
+  Stable for HPPA (bug #336869).
+
+  15 Jul 2008; Jeroen Roovers <jer@gentoo.org>
+  PEAR-Image_GraphViz-1.3.0_rc3.ebuild:
+  Marked ~hppa too.
+
+  08 Mar 2008; <pva@gentoo.org> PEAR-Image_GraphViz-1.3.0_rc3.ebuild:
+  amd64 stable, bug #208848.
+
+*PEAR-Image_GraphViz-1.3.0_rc3 (11 Feb 2008)
+
+  11 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  +PEAR-Image_GraphViz-1.3.0_rc3.ebuild:
+  Version bump, from the php overlay
+
+  04 Feb 2008; Markus Meier <maekke@gentoo.org>
+  PEAR-Image_GraphViz-1.3.0_rc2.ebuild:
+  x86 stable, bug #208848
+
+  17 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  PEAR-Image_GraphViz-1.3.0_rc2.ebuild:
+  Add ~alpha/~ia64/~sparc
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
+  -PEAR-Image_GraphViz-1.2.1.ebuild, PEAR-Image_GraphViz-1.3.0_rc2.ebuild:
+  LICENSE fix from project overlay
+
+  02 Dec 2007; Jakub Moc <jakub@gentoo.org>
+  PEAR-Image_GraphViz-1.3.0_rc2.ebuild:
+  Fix LICENSE
+
+*PEAR-Image_GraphViz-1.3.0_rc2 (29 Nov 2007)
+
+  29 Nov 2007; Markus Ullmann <jokey@gentoo.org>
+  +PEAR-Image_GraphViz-1.3.0_rc2.ebuild:
+  Version bump from project overlay
+
+  28 Nov 2007; Jakub Moc <jakub@gentoo.org>
+  +PEAR-Image_GraphViz-1.3.0_rc2.ebuild:
+  Version bump
+
+  20 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  PEAR-Image_GraphViz-1.2.1.ebuild:
+  Added ~amd64
+
+*PEAR-Image_GraphViz-1.2.1 (19 Nov 2006)
+
+  19 Nov 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +PEAR-Image_GraphViz-1.2.1.ebuild:
+  Initial ebuild.
+

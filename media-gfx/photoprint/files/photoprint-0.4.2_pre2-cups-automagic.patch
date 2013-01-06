@@ -1,0 +1,16 @@
+--- photoprint-0.4.2-pre2/configure.ac.orig
++++ photoprint-0.4.2-pre2/configure.ac
+@@ -68,7 +68,12 @@
+ 	echo "Not using -lnsl since you are running IRIX."
+ fi)
+ 
+-AC_CHECK_LIB(cups,httpConnect)
++AC_ARG_ENABLE([cups],
++	AS_HELP_STRING([--enable-cups], [Enable cups support]))
++
++AS_IF([test "x$enable_cups" = "xyes"], [
++	AC_CHECK_LIB(cups,httpConnect)
++])
+ 
+ # Checks for header files.
+ AC_HEADER_STDC

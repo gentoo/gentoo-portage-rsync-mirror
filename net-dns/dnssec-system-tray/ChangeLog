@@ -1,0 +1,25 @@
+# ChangeLog for net-dns/dnssec-system-tray
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-system-tray/ChangeLog,v 1.5 2012/10/15 05:53:17 xmw Exp $
+
+*dnssec-system-tray-1.14 (15 Oct 2012)
+
+  15 Oct 2012; Michael Weber <xmw@gentoo.org> +dnssec-system-tray-1.14.ebuild:
+  Version bump (euscan)
+
+  28 Jul 2012; Michael Weber <xmw@gentoo.org> dnssec-system-tray-1.13.ebuild:
+  Fix qt slot dependency, thanks kensington.
+
+  09 Jul 2012; Michael Weber <xmw@gentoo.org> -dnssec-system-tray-1.12.ebuild:
+  Drop old
+
+*dnssec-system-tray-1.13 (23 Jun 2012)
+
+  23 Jun 2012; Michael Weber <xmw@gentoo.org> +dnssec-system-tray-1.13.ebuild:
+  Version bump
+
+*dnssec-system-tray-1.12 (22 May 2012)
+
+  22 May 2012; Michael Weber <xmw@gentoo.org> +dnssec-system-tray-1.12.ebuild,
+  +metadata.xml:
+  Initial import

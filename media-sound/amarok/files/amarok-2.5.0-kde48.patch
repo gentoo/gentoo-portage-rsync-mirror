@@ -1,0 +1,62 @@
+diff --git a/src/context/ToolbarView.cpp b/src/context/ToolbarView.cpp
+index f3b4916..840b99b 100644
+--- a/src/context/ToolbarView.cpp
++++ b/src/context/ToolbarView.cpp
+@@ -74,7 +74,9 @@ Context::ToolbarView::ToolbarView( Plasma::Containment* containment, QGraphicsSc
+     setVerticalScrollBarPolicy( Qt::ScrollBarAlwaysOff );
+ 
+     // now we create the toolbar
+-    m_toolbar = new AppletToolbar( containment );
++    m_toolbar = new AppletToolbar(0);
++    scene->addItem(m_toolbar.data());
++    m_toolbar.data()->setContainment( qobject_cast<Context::Containment *>(containment) );
+     m_toolbar.data()->setZValue( m_toolbar.data()->zValue() + 1000 );
+     m_toolbar.data()->setPos( TOOLBAR_X_OFFSET, 0 );
+ 
+@@ -96,7 +98,7 @@ Context::ToolbarView::ToolbarView( Plasma::Containment* containment, QGraphicsSc
+ 
+ Context::ToolbarView::~ToolbarView()
+ {
+-
++    delete m_toolbar.data();
+ }
+ 
+ void
+diff --git a/src/context/toolbar/AppletToolbar.cpp b/src/context/toolbar/AppletToolbar.cpp
+index 0e0deb5..c51762c 100644
+--- a/src/context/toolbar/AppletToolbar.cpp
++++ b/src/context/toolbar/AppletToolbar.cpp
+@@ -67,6 +67,19 @@ Context::AppletToolbar::~AppletToolbar()
+ }
+ 
+ void
++
++Context::AppletToolbar::setContainment( Containment * containment )
++{
++    m_cont = containment;
++}
++
++Context::Containment *
++Context::AppletToolbar::containment() const
++{
++    return m_cont;
++}
++
++void
+ Context::AppletToolbar::resizeEvent( QGraphicsSceneResizeEvent * event )
+ {
+     debug() << "setting layout to" << QRectF( QPointF( 0, 0 ), event->newSize() );
+diff --git a/src/context/toolbar/AppletToolbar.h b/src/context/toolbar/AppletToolbar.h
+index ee8a208..058baae 100644
+--- a/src/context/toolbar/AppletToolbar.h
++++ b/src/context/toolbar/AppletToolbar.h
+@@ -55,6 +55,9 @@ class AppletToolbar : public QGraphicsWidget
+         
+         void appletRemoved( Plasma::Applet* applet );
+ 
++        void setContainment( Containment * containment );
++        Containment* containment() const;
++
+     signals:
+         void showApplet( Plasma::Applet* );
+         void appletAddedToToolbar( Plasma::Applet* applet, int loc );

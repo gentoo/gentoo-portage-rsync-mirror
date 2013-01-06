@@ -1,0 +1,70 @@
+# ChangeLog for app-admin/webmin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.202 2012/12/05 18:57:25 hwoarang Exp $
+
+*webmin-1.610 (05 Dec 2012)
+
+  05 Dec 2012; Markos Chandras <hwoarang@gentoo.org> +webmin-1.610.ebuild,
+  metadata.xml:
+  Version bump. Thanks to PhobosK <phobosk@fastmail.fm>. Bug #446134
+
+  07 Nov 2012; Markos Chandras <hwoarang@gentoo.org> webmin-1.600-r1.ebuild:
+  The SA51201 patch does need to apply in the minimal version
+
+*webmin-1.600-r1 (05 Nov 2012)
+
+  05 Nov 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/webmin-1.600-SA51201.patch, +webmin-1.600-r1.ebuild,
+  -webmin-1.600.ebuild:
+  Revbump to fix security problem in #441840. Thanks to PhobosK
+  <phobosk@fastmail.fm>. Remove old ebuild
+
+  25 Oct 2012; Markos Chandras <hwoarang@gentoo.org> -webmin-1.560-r1.ebuild,
+  -webmin-1.570-r1.ebuild, -webmin-1.580.ebuild, -webmin-1.590.ebuild:
+  Remove old versions
+
+*webmin-1.600 (14 Oct 2012)
+
+  14 Oct 2012; Markos Chandras <hwoarang@gentoo.org> +webmin-1.600.ebuild:
+  Version bump. Thanks to PhobosK <phobosk@fastmail.fm>. Bug #438182
+
+  22 Jul 2012; Markos Chandras <hwoarang@gentoo.org> webmin-1.560-r1.ebuild,
+  webmin-1.570-r1.ebuild, webmin-1.580.ebuild, webmin-1.590.ebuild:
+  Fix LICENSE once again. BSD and GPL-2 should both be set unconditionally
+
+  22 Jul 2012; Markos Chandras <hwoarang@gentoo.org> webmin-1.560-r1.ebuild,
+  webmin-1.570-r1.ebuild, webmin-1.580.ebuild, webmin-1.590.ebuild:
+  Add GPL-2 to LICENSE for init scripts. Bug #425882
+
+*webmin-1.590 (09 Jul 2012)
+
+  09 Jul 2012; Markos Chandras <hwoarang@gentoo.org> +webmin-1.590.ebuild,
+  files/init.d.webmin:
+  Version bump. Bug #425066. Thanks to PhobosK <phobosk@fastmail.fm>
+
+*webmin-1.580 (24 Jan 2012)
+
+  24 Jan 2012; Markos Chandras <hwoarang@gentoo.org> +webmin-1.580.ebuild,
+  files/init.d.webmin:
+  Version bump. Bug #400633. Thanks to PhobosK phobosk@fastmail.fm
+
+*webmin-1.570-r1 (31 Dec 2011)
+*webmin-1.560-r1 (31 Dec 2011)
+
+  31 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -webmin-1.560.ebuild,
+  +webmin-1.560-r1.ebuild, -webmin-1.570.ebuild, +webmin-1.570-r1.ebuild,
+  files/init.d.webmin:
+  Revbump. Don't use deprecated start-stop-daemon options, bug 377843 and bug
+  381895.
+
+*webmin-1.570 (12 Oct 2011)
+
+  12 Oct 2011; Markos Chandras <hwoarang@gentoo.org> +webmin-1.570.ebuild:
+  Version bump. Bug #386063. Thanks to PhobosK <phobosk@fastmail.fm>
+
+*webmin-1.560 (18 Sep 2011)
+
+  18 Sep 2011; Markos Chandras <hwoarang@gentoo.org> +webmin-1.560.ebuild,
+  +files/gentoo-setup, +files/init.d.webmin, +metadata.xml:
+  Re-introduce webmin. Thanks to Dell'Aica Valentino <elettronik@gmail.com> and
+  PhobosK <phobosk@fastmail.fm> for the ebuilds. This fixes bug #348432

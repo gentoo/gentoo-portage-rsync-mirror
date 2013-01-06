@@ -1,0 +1,48 @@
+# ChangeLog for dev-java/hamcrest-core
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-core/ChangeLog,v 1.12 2012/04/15 18:24:20 vapier Exp $
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> hamcrest-core-1.1.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
+
+  01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> hamcrest-core-1.1.ebuild:
+  Drop ia64 support #345433
+
+  23 Jan 2010; Alexis Ballier <aballier@gentoo.org>
+  hamcrest-core-1.1.ebuild:
+  keyword ~x86-fbsd and fix find call to be bsd-compatible
+
+  03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
+  hamcrest-core-1.1.ebuild:
+  Transfer Prefix keywords
+
+  10 Sep 2008; Brent Baude <ranger@gentoo.org> hamcrest-core-1.1.ebuild:
+  stable ppc64, bug 235747
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org> hamcrest-core-1.1.ebuild:
+  stable ppc, bug 235747
+
+  29 Aug 2008; Markus Meier <maekke@gentoo.org> hamcrest-core-1.1.ebuild:
+  amd64/x86 stable, bug #235747
+
+  08 Mar 2008; Krzysiek Pawlik <nelchael@gentoo.org>
+  hamcrest-core-1.1.ebuild:
+  Add ~ppc, see bug #129773.
+
+  16 Jan 2008; Raúl Porcel <armin76@gentoo.org> hamcrest-core-1.1.ebuild:
+  Add ~ia64 wrt #129773
+
+  14 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
+  hamcrest-core-1.1.ebuild:
+  keyworded ~x86, bug 129773
+
+  12 Jan 2008; Brent Baude <ranger@gentoo.org> hamcrest-core-1.1.ebuild:
+  Marking hamcrest-core-1.1 ~ppc64 for bug 129773
+
+*hamcrest-core-1.1 (11 Jan 2008)
+
+  11 Jan 2008; Vlastimil Babka <caster@gentoo.org> +metadata.xml,
+  +hamcrest-core-1.1.ebuild:
+  Initial commit as junit-4.4 dependency, based on fordfrog's ebuild from
+  java-overlay.
+

@@ -1,0 +1,11 @@
+--- x48-0.6.3.orig/configure.ac	2011-01-30 12:35:56.960715403 -0500
++++ x48-0.6.3/configure.ac	2011-01-30 12:35:41.746142323 -0500
+@@ -82,7 +82,7 @@
+ 
+ # Checks for header files.
+ AC_HEADER_STDC
+-AC_CHECK_HEADERS([fcntl.h memory.h stdlib.h string.h sys/ioctl.h sys/time.h termios.h unistd.h])
++AC_CHECK_HEADERS([fcntl.h memory.h stdlib.h string.h sys/ioctl.h sys/time.h termios.h unistd.h stdint.h])
+ 
+ # Checks for typedefs, structures, and compiler characteristics.
+ AC_C_CONST

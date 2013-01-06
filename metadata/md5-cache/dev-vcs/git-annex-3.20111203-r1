@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prepare prerm setup test
+DEPEND=>=dev-vcs/git-1.7.7 >=dev-haskell/cabal-1.6 dev-haskell/dataenc dev-haskell/hs3 dev-haskell/hslogger dev-haskell/http dev-haskell/json[generic] dev-haskell/missingh dev-haskell/monad-control >=dev-haskell/mtl-2 dev-haskell/network dev-haskell/pcre-light dev-haskell/sha dev-haskell/utf8-string >=dev-lang/ghc-6.10.1 dev-lang/perl doc? ( www-apps/ikiwiki net-misc/rsync ) >=dev-haskell/cabal-1.1.4
+DESCRIPTION=manage files with git, without checking their contents into git
+EAPI=3
+HOMEPAGE=http://git-annex.branchable.com/
+IUSE=doc
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=dev-vcs/git-1.7.7
+SLOT=0
+SRC_URI=mirror://hackage/packages/archive/git-annex/3.20111203/git-annex-3.20111203.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	ghc-package	c50de19959be43d5c072ac4169f4dbfd	haskell-cabal	b4543046102ee4aec41502a7cb8fd6f2	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=f1384b3fc6059dd04002b53337391684

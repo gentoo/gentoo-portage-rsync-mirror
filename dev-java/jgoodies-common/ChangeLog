@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jgoodies-common
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-common/ChangeLog,v 1.1 2012/02/08 22:05:28 serkan Exp $
+
+*jgoodies-common-1.2.1 (08 Feb 2012)
+
+  08 Feb 2012; Serkan Kaba <serkan@gentoo.org> +jgoodies-common-1.2.1.ebuild,
+  +metadata.xml:
+  Initial commit. Common dependency for other jgoodies.
+

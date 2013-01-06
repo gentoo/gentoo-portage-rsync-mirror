@@ -1,0 +1,278 @@
+------------------------------------------------------------------------
+r2133 | frlan | 2011-08-13 22:09:16 +0000 (Sat, 13 Aug 2011) | 1 line
+
+GeanyLaTeX: Fix build of plugin due to not properly included config.h
+------------------------------------------------------------------------
+Index: geanylatex/src/geanylatex.c
+===================================================================
+--- geanylatex/src/geanylatex.c	(revision 2132)
++++ geanylatex/src/geanylatex.c	(revision 2133)
+@@ -25,6 +25,11 @@
+ /* LaTeX plugin */
+ /* This plugin improves the work with LaTeX and Geany.*/
+ 
++
++#ifdef HAVE_CONFIG_H
++# include "config.h" /* for the gettext domain */
++#endif
++
+ #include "geanylatex.h"
+ #include "ctype.h"
+ 
+------------------------------------------------------------------------
+r2135 | frlan | 2011-08-13 22:10:02 +0000 (Sat, 13 Aug 2011) | 1 line
+
+Fix build of geanylipsum plugin due to not properly included config.h
+------------------------------------------------------------------------
+Index: geanylipsum/src/geanylipsum.c
+===================================================================
+--- geanylipsum/src/geanylipsum.c	(revision 2134)
++++ geanylipsum/src/geanylipsum.c	(revision 2135)
+@@ -20,6 +20,10 @@
+ 
+ #include "geanyplugin.h"
+ 
++#ifdef HAVE_CONFIG_H
++	#include "config.h" /* for the gettext domain */
++#endif
++
+ #include <string.h>
+ #ifdef HAVE_LOCALE_H
+ # include <locale.h>
+------------------------------------------------------------------------
+r2136 | frlan | 2011-08-13 22:10:30 +0000 (Sat, 13 Aug 2011) | 1 line
+
+Fix build of geanysendmail plugin due to not properly included config.h
+------------------------------------------------------------------------
+Index: geanysendmail/src/geanysendmail.c
+===================================================================
+--- geanysendmail/src/geanysendmail.c	(revision 2135)
++++ geanysendmail/src/geanysendmail.c	(revision 2136)
+@@ -26,6 +26,9 @@
+ #include "geanyplugin.h"
+ #include "icon.h"
+ 
++#ifdef HAVE_CONFIG_H
++	#include "config.h" /* for the gettext domain */
++#endif
+ 
+ #ifdef HAVE_LOCALE_H
+ # include <locale.h>
+------------------------------------------------------------------------
+r2137 | frlan | 2011-08-13 22:15:21 +0000 (Sat, 13 Aug 2011) | 1 line
+
+Fix build of updatechecker and tableconvert due to not properly included config.h
+------------------------------------------------------------------------
+Index: updatechecker/src/updatechecker.c
+===================================================================
+--- updatechecker/src/updatechecker.c	(revision 2136)
++++ updatechecker/src/updatechecker.c	(revision 2137)
+@@ -24,6 +24,11 @@
+ #include "libsoup/soup.h"
+ #include "stdlib.h"
+ 
++#ifdef HAVE_CONFIG_H
++	#include "config.h" /* for the gettext domain */
++#endif
++
++
+ GeanyPlugin     *geany_plugin;
+ GeanyData       *geany_data;
+ GeanyFunctions  *geany_functions;
+------------------------------------------------------------------------
+r2138 | eht16 | 2011-08-14 10:03:52 +0000 (Sun, 14 Aug 2011) | 1 line
+
+Move include of config.h to the top
+------------------------------------------------------------------------
+Index: addons/src/addons.c
+===================================================================
+--- addons/src/addons.c	(revision 2137)
++++ addons/src/addons.c	(revision 2138)
+@@ -22,5 +22,9 @@
+  */
+ 
+ 
++#ifdef HAVE_CONFIG_H
++# include "config.h"
++#endif
++
+ #include "geanyplugin.h"
+ 
+------------------------------------------------------------------------
+r2139 | eht16 | 2011-08-14 10:19:27 +0000 (Sun, 14 Aug 2011) | 1 line
+
+Properly include config.h as needed (after the implicit has been correctly removed from Geany's core)
+------------------------------------------------------------------------
+Index: geanyprj/src/geanyprj.c
+===================================================================
+--- geanyprj/src/geanyprj.c	(revision 2138)
++++ geanyprj/src/geanyprj.c	(revision 2139)
+@@ -20,6 +20,10 @@
+  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  */
+ 
++#ifdef HAVE_CONFIG_H
++# include "config.h"
++#endif
++
+ #include <sys/time.h>
+ #include <string.h>
+ 
+===================================================================
+===================================================================
+--- treebrowser/src/treebrowser.c	(revision 2138)
++++ treebrowser/src/treebrowser.c	(revision 2139)
+@@ -4,6 +4,10 @@
+  *      Copyright 2010 Adrian Dimitrov <dimitrov.adrian@gmail.com>
+  */
+ 
++#ifdef HAVE_CONFIG_H
++# include "config.h"
++#endif
++
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <string.h>
+===================================================================
+--- geanylua/geanylua.c	(revision 2138)
++++ geanylua/geanylua.c	(revision 2139)
+@@ -30,7 +30,11 @@
+  */
+ 
+ 
++#ifdef HAVE_CONFIG_H
++# include "config.h"
++#endif
+ 
++
+ #include "geany.h"
+ #include "plugindata.h"
+ #include "keybindings.h"
+===================================================================
+--- geanylua/glspi.h	(revision 2138)
++++ geanylua/glspi.h	(revision 2139)
+@@ -6,6 +6,10 @@
+  */
+ 
+ 
++#ifdef HAVE_CONFIG_H
++# include "config.h"
++#endif
++
+ #include <lua.h>
+ #include <lualib.h>
+ #include <lauxlib.h>
+===================================================================
+--- geanyinsertnum/src/insertnum.c	(revision 2138)
++++ geanyinsertnum/src/insertnum.c	(revision 2139)
+@@ -17,6 +17,10 @@
+  *  along with this program. If not, see <http://www.gnu.org/licenses/>.
+  */
+ 
++#ifdef HAVE_CONFIG_H
++# include "config.h"
++#endif
++
+ #include <ctype.h>
+ #include <limits.h>
+ #include <stdlib.h>
+===================================================================
+===================================================================
+--- geanygdb/src/gdb-io-stack.c	(revision 2138)
++++ geanygdb/src/gdb-io-stack.c	(revision 2139)
+@@ -17,6 +17,10 @@
+  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA. *
+  */
+ 
++#ifdef HAVE_CONFIG_H
++# include "config.h"
++#endif
++
+ #include <string.h>
+ #include <glib.h>
+ 
+===================================================================
+--- geanygdb/src/geanygdb.c	(revision 2138)
++++ geanygdb/src/geanygdb.c	(revision 2139)
+@@ -20,6 +20,10 @@
+  */
+ 
+ 
++#ifdef HAVE_CONFIG_H
++# include "config.h"
++#endif
++
+ #include <glib/gstdio.h>
+ 
+ #include "geanyplugin.h"
+===================================================================
+--- geanygdb/src/gdb-ui-main.c	(revision 2138)
++++ geanygdb/src/gdb-ui-main.c	(revision 2139)
+@@ -18,6 +18,10 @@
+  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA. *
+  */
+ 
++#ifdef HAVE_CONFIG_H
++# include "config.h"
++#endif
++
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include <string.h>
+===================================================================
+===================================================================
+--- shiftcolumn/src/shiftcolumn.c	(revision 2138)
++++ shiftcolumn/src/shiftcolumn.c	(revision 2139)
+@@ -19,6 +19,10 @@
+  */
+ 
+ 
++#ifdef HAVE_CONFIG_H
++# include "config.h"
++#endif
++
+ #include "geany.h"
+ #include "support.h"
+ 
+===================================================================
+--- pretty-printer/src/PrettyPrinter.h	(revision 2138)
++++ pretty-printer/src/PrettyPrinter.h	(revision 2139)
+@@ -21,6 +21,10 @@
+ 
+ //========================================== INCLUDES ==========================================================
+ 
++#ifdef HAVE_CONFIG_H
++# include "config.h"
++#endif
++
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+===================================================================
+--- geanyextrasel/src/extrasel.c	(revision 2138)
++++ geanyextrasel/src/extrasel.c	(revision 2139)
+@@ -17,6 +17,10 @@
+  *  along with this program. If not, see <http://www.gnu.org/licenses/>.
+  */
+ 
++#ifdef HAVE_CONFIG_H
++# include "config.h"
++#endif
++
+ #include <gdk/gdkkeysyms.h>
+ 
+ #include "geanyplugin.h"
+===================================================================
+--- spellcheck/src/scplugin.c	(revision 2138)
++++ spellcheck/src/scplugin.c	(revision 2139)
+@@ -23,6 +23,10 @@
+  */
+ 
+ 
++#ifdef HAVE_CONFIG_H
++# include "config.h"
++#endif
++
+ #include "geanyplugin.h"
+ 
+ 

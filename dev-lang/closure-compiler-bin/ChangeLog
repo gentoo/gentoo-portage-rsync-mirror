@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/closure-compiler-bin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/closure-compiler-bin/ChangeLog,v 1.1 2012/04/18 15:43:04 vapier Exp $
+
+*closure-compiler-bin-20120305 (18 Apr 2012)
+
+  18 Apr 2012; Mike Frysinger <vapier@gentoo.org>
+  +closure-compiler-bin-20120305.ebuild, +metadata.xml:
+  Initial ebuild for ChromiumOS.
+

@@ -1,0 +1,45 @@
+diff -ruN qrencode-3.1.1-orig/Makefile.am qrencode-3.1.1/Makefile.am
+--- qrencode-3.1.1-orig/Makefile.am	2010-01-19 21:13:25.000000000 +0100
++++ qrencode-3.1.1/Makefile.am	2011-01-31 09:21:17.000000000 +0100
+@@ -24,7 +24,7 @@
+ pkgconfig_DATA = libqrencode.pc
+ 
+ EXTRA_DIST = libqrencode.pc.in autogen.sh configure.ac acinclude.m4 \
+-			 Makefile.am tests/Makefile.am qrencode.spec.in qrencode.spec \
++			 Makefile.am qrencode.spec.in qrencode.spec \
+ 			 qrencode.1.in Doxyfile tests/test_all.sh
+ 
+ if BUILD_TOOLS
+diff -ruN qrencode-3.1.1-orig/configure.ac qrencode-3.1.1/configure.ac
+--- qrencode-3.1.1-orig/configure.ac	2010-02-03 01:42:12.000000000 +0100
++++ qrencode-3.1.1/configure.ac	2011-01-31 09:21:17.000000000 +0100
+@@ -29,14 +29,14 @@
+ AC_PROG_LIBTOOL
+ PKG_PROG_PKG_CONFIG
+ 
+-AC_CONFIG_FILES([Makefile libqrencode.pc tests/Makefile qrencode.spec qrencode.1])
++AC_CONFIG_FILES([Makefile libqrencode.pc qrencode.spec qrencode.1])
+ 
+ dnl --with-tools
+ AC_ARG_WITH([tools], [AC_HELP_STRING([--with-tools], [build utility tools [default=yes]])],
+  [build_tools=$withval], [build_tools=yes])
+ AM_CONDITIONAL(BUILD_TOOLS, [test "x$build_tools" = "xyes" ])
+ if test x$build_tools = xyes ; then
+-	PKG_CHECK_MODULES(png, "libpng12")
++	PKG_CHECK_MODULES(png, "libpng")
+ fi
+ 
+ dnl --with-tests
+@@ -54,12 +54,6 @@
+ fi
+ 
+ 
+-if test x$build_tests = xyes ; then
+-	SDL_REQUIRED_VERSION=1.2.0
+-	AM_PATH_SDL($SDL_REQUIRED_VERSION,,AC_MSG_WARN([*** SDL $SDL_REQUIRED_VERSION or better is required.]))
+-fi
+-AM_CONDITIONAL(HAVE_SDL, [test "x$SDL_CFLAGS" != "x" ])
+-
+ 
+ dnl --enable-gprof
+ AC_ARG_ENABLE([gprof], [AC_HELP_STRING([--enable-gprof], [generate extra code to write profile information suitable for gprof [default=no]])],

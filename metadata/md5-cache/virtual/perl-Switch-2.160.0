@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Switch
+KEYWORDS=amd64 ppc x86
+RDEPEND=|| ( =dev-lang/perl-5.12* ~perl-core/Switch-2.160.0 )
+SLOT=0
+_md5_=397aa557494082f9012c7c58729852b5

@@ -1,0 +1,138 @@
+# ChangeLog for net-libs/polarssl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.35 2012/11/17 18:26:11 tommy Exp $
+
+*polarssl-1.2.0 (17 Nov 2012)
+
+  17 Nov 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +polarssl-1.2.0.ebuild, +files/polarssl-1.2.0-makefile.patch:
+  Version bump
+
+  28 Aug 2012; Raúl Porcel <armin76@gentoo.org> polarssl-1.1.3.ebuild:
+  sparc stable wrt #421479
+
+  25 Jun 2012; Markus Meier <maekke@gentoo.org> polarssl-1.1.3.ebuild:
+  arm stable, bug #421479
+
+  22 May 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -polarssl-0.14.2.ebuild, -polarssl-1.1.1.ebuild:
+  Drop old versions
+
+  21 May 2012; Johannes Huber <johu@gentoo.org> polarssl-1.1.3.ebuild:
+  Stable for x86, wrt bug #416399
+
+  21 May 2012; Jeroen Roovers <jer@gentoo.org> polarssl-1.1.3.ebuild:
+  Stable for HPPA (bug #416399).
+
+  20 May 2012; Mark Loeser <halcy0n@gentoo.org> polarssl-1.1.3.ebuild:
+  Stable for ppc/ppc64; bug #416339
+
+  19 May 2012; Agostino Sarubbo <ago@gentoo.org> polarssl-1.1.3.ebuild:
+  Stable for amd64, wrt bug #416399
+
+*polarssl-1.1.3 (17 May 2012)
+
+  17 May 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +polarssl-1.1.3.ebuild:
+  Version bump
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> polarssl-1.1.1.ebuild:
+  keyword ~amd64-fbsd
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> polarssl-1.1.1.ebuild:
+  tc-export CC to be more cross-compile friendly.
+
+*polarssl-1.1.1 (27 Jan 2012)
+
+  27 Jan 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +polarssl-1.1.1.ebuild:
+  Version bump
+
+*polarssl-1.0.0 (19 Nov 2011)
+
+  19 Nov 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -files/polarssl-0.12.0-makefile.patch, +polarssl-1.0.0.ebuild,
+  +files/polarssl-1.0.0-makefile.patch:
+  Version bump, drop unused patch
+
+  09 Oct 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -polarssl-0.14.0.ebuild:
+  Drop old version
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> polarssl-0.14.2.ebuild:
+  keyword ~x86-fbsd
+
+  11 Jun 2011; Markus Meier <maekke@gentoo.org> polarssl-0.14.2.ebuild:
+  add ~arm, bug #354467
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> polarssl-0.14.2.ebuild:
+  Stable on amd64 wrt bug #358783
+
+  20 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> polarssl-0.14.2.ebuild:
+  ppc64 stable wrt #358783
+
+  19 Mar 2011; Brent Baude <ranger@gentoo.org> polarssl-0.14.2.ebuild:
+  Marking polarssl-0.14.2 ppc for bug 358783
+
+  18 Mar 2011; Jeroen Roovers <jer@gentoo.org> polarssl-0.14.2.ebuild:
+  Stable for HPPA (bug #358783).
+
+  17 Mar 2011; Thomas Kahle <tomka@gentoo.org> polarssl-0.14.2.ebuild:
+  x86 stable per bug 358783
+
+*polarssl-0.14.2 (16 Mar 2011)
+
+  16 Mar 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -polarssl-0.12.0.ebuild, +polarssl-0.14.2.ebuild:
+  Version bump for bug 358783, drop old version
+
+  11 Oct 2010; Jeroen Roovers <jer@gentoo.org> polarssl-0.14.0.ebuild:
+  Stable for HPPA (bug #332361).
+
+  08 Oct 2010; Brent Baude <ranger@gentoo.org> polarssl-0.14.0.ebuild:
+  Marking polarssl-0.14.0 ppc for bug 332361
+
+  08 Oct 2010; Brent Baude <ranger@gentoo.org> polarssl-0.14.0.ebuild:
+  Marking polarssl-0.14.0 ppc64 for bug 332361
+
+  24 Sep 2010; Markos Chandras <hwoarang@gentoo.org> polarssl-0.14.0.ebuild:
+  Stable on amd64 wrt bug #332361
+
+  17 Sep 2010; Christian Faulhammer <fauli@gentoo.org>
+  polarssl-0.14.0.ebuild:
+  stable x86, security bug 332361
+
+  15 Sep 2010; Joseph Jezak <josejx@gentoo.org> polarssl-0.14.0.ebuild:
+  Marked ~ppc64.
+
+  30 Aug 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  polarssl-0.14.0.ebuild:
+  Fix patching
+
+*polarssl-0.14.0 (27 Aug 2010)
+
+  27 Aug 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +polarssl-0.14.0.ebuild, +files/polarssl-0.14.0-ldflags.patch,
+  +files/polarssl-0.14.0-makefile.patch:
+  Version bump, fixes bug 334803
+
+  11 Jul 2010; Jeroen Roovers <jer@gentoo.org> polarssl-0.12.0.ebuild:
+  Marked ~hppa (bug #324941).
+
+  04 May 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  polarssl-0.12.0.ebuild:
+  Fix test phase, fixes bug 318395
+
+  23 Jan 2010; Dawid Węgliński <cla@gentoo.org> polarssl-0.12.0.ebuild,
+  +files/polarssl-0.12.0-makefile.patch:
+  Respect user CFLAGS (bug #241036), fix install phase if USE="examples"
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> polarssl-0.12.0.ebuild:
+  Remove virtual/libc
+
+*polarssl-0.12.0 (18 Aug 2009)
+
+  18 Aug 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +polarssl-0.12.0.ebuild, +metadata.xml:
+  Move net-libs/xyssl -> net-libs/polarssl
+

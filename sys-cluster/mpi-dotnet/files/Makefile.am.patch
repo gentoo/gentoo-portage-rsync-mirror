@@ -1,0 +1,22 @@
+--- mpi.net-1.0.0.orig/MPI/Makefile.am	2009-02-03 23:55:47.000000000 +0100
++++ mpi.net-1.0.0/MPI/Makefile.am	2009-02-03 23:56:18.000000000 +0100
+@@ -16,8 +16,8 @@
+ endif
+ 
+ SOURCES=$(srcdir)/Attribute.cs			\
+-        $(srcdir)/CartesianCommunicator.cs	\
+-        $(srcdir)/Communicator.cs		\
++	$(srcdir)/CartesianCommunicator.cs	\
++	$(srcdir)/Communicator.cs		\
+ 	$(srcdir)/Comparison.cs			\
+ 	$(srcdir)/DatatypeCache.cs		\
+ 	$(srcdir)/Environment.cs		\
+@@ -31,7 +31,7 @@
+ 	$(srcdir)/RequestList.cs		\
+ 	$(srcdir)/Status.cs			\
+ 	$(srcdir)/TagAllocator.cs		\
+-        $(srcdir)/TopologicalCommunicator.cs	\
++	$(srcdir)/TopologicalCommunicator.cs	\
+ 	$(srcdir)/UnmanagedMemoryStream.cs
+ 
+ # We want to install directly into /lib, but we can't write lib_SCRIPTS

@@ -1,0 +1,116 @@
+# ChangeLog for sys-apps/microcode-data
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.20 2012/09/23 08:15:03 phajdan.jr Exp $
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  microcode-data-20120606.ebuild:
+  x86 stable wrt bug #429198
+
+  13 Sep 2012; Agostino Sarubbo <ago@gentoo.org>
+  microcode-data-20120606.ebuild:
+  Stable for amd64, wrt bug #429198
+
+*microcode-data-20120606 (06 Jun 2012)
+
+  06 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +microcode-data-20120606.ebuild:
+  Version bump.
+
+*microcode-data-20111110 (12 Dec 2011)
+
+  12 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +microcode-data-20111110.ebuild:
+  Version bump.
+
+*microcode-data-20110915-r1 (12 Dec 2011)
+
+  12 Dec 2011; Mike Frysinger <vapier@gentoo.org>
+  +files/intel-microcode2ucode.c, +microcode-data-20110915-r1.ebuild:
+  Split up microcode files for the kernel to autoload (using util from Fedora).
+
+*microcode-data-20110915 (22 Sep 2011)
+
+  22 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +microcode-data-20110915.ebuild:
+  Version bump.
+
+  10 May 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  microcode-data-20110428.ebuild:
+  Fix mistake (save before committing).
+
+*microcode-data-20110428 (10 May 2011)
+
+  10 May 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +microcode-data-20110428.ebuild:
+  Version bump.
+
+  24 Jan 2011; Jeremy Olexa <darkside@gentoo.org>
+  microcode-data-20101123.ebuild:
+  marking stable x86/amd64 (only provides one file, ack from base-system
+  team)
+
+  20 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -microcode-data-20090330.ebuild, microcode-data-20100209.ebuild,
+  -microcode-data-20100826.ebuild, -microcode-data-20100914.ebuild,
+  microcode-data-20101123.ebuild:
+  Remove old versions; correct wrong LICENSE value, the microcode is not
+  provided as-is but with a non-free license.
+
+*microcode-data-20101123 (17 Dec 2010)
+
+  17 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +microcode-data-20101123.ebuild:
+  Version bump.
+
+*microcode-data-20100914 (13 Oct 2010)
+
+  13 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +microcode-data-20100914.ebuild:
+  Version bump.
+
+*microcode-data-20100826 (19 Sep 2010)
+
+  19 Sep 2010; Mike Frysinger <vapier@gentoo.org>
+  +microcode-data-20100826.ebuild:
+  Version bump #337983.
+
+  19 Sep 2010; Mike Frysinger <vapier@gentoo.org>
+  microcode-data-20100209.ebuild:
+  Stabilize for amd64/x86.
+
+*microcode-data-20100209 (13 Feb 2010)
+
+  13 Feb 2010; Mike Frysinger <vapier@gentoo.org>
+  +microcode-data-20100209.ebuild:
+  Version bump #304757 by Matthew Turnbull. Block older microcode-ctl
+  versions #268586 by Vasileios P. Lourdas.
+
+*microcode-data-20090927 (06 Dec 2009)
+
+  06 Dec 2009; Mike Frysinger <vapier@gentoo.org>
+  +microcode-data-20090927.ebuild:
+  Version bump #290370 by Jochen.
+
+  10 Jun 2009; Markus Meier <maekke@gentoo.org>
+  microcode-data-20090330.ebuild:
+  amd64/x86 stable, bug #273054
+
+*microcode-data-20090330 (02 May 2009)
+
+  02 May 2009; Raúl Porcel <armin76@gentoo.org>
+  -microcode-data-20080401.ebuild, -microcode-data-20080910.ebuild,
+  +microcode-data-20090330.ebuild:
+  Version bump wrt #264498, fix installdir wrt #233141 remove old
+
+*microcode-data-20080910 (17 Sep 2008)
+
+  17 Sep 2008; Mike Frysinger <vapier@gentoo.org>
+  +microcode-data-20080910.ebuild:
+  Version bump by Philipp Psurek #237884.
+
+*microcode-data-20080401 (05 May 2008)
+
+  05 May 2008; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +microcode-data-20080401.ebuild:
+  Split microcode stuff off from microcode-ctl package as done by Mike Nerone
+  #194271.

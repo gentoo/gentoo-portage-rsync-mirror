@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+        <email>lordvan@gentoo.org</email>
+ 	<name>Thomas Raschbacher</name>
+  </maintainer>
+  <maintainer>
+        <email>bugs@bergstroem.nu</email>
+ 	<name>Johan Bergström</name>
+	<description>Proxy Maintainer. CC on bugs</description>
+  </maintainer>
+  <use>
+	<flag name="sqliteunlock">Enable SQLite unlock notification api</flag>
+  </use>
+</pkgmetadata>

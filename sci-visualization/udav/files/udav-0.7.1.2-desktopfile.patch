@@ -1,0 +1,13 @@
+--- UDAV.desktop
++++ UDAV.desktop
+@@ -1,9 +1,8 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Version=1.0
+ Type=Application
+ Terminal=false
+-Icon=udav.png
++Icon=udav
+ Name=UDAV
+ Exec=udav
+ Comment=Data handling and plotting tool

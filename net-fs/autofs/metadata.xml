@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>net-fs</herd>
+<maintainer>
+	<email>pva@gentoo.org</email>
+	<name>Peter Volkov</name>
+</maintainer>
+<maintainer>
+	<email>gentoobugsie.20.dsurawicz@spamgourmet.com</email>
+	<name>Dustin Polke</name>
+</maintainer>
+<use>
+	<flag name="hesiod">Install hesiod module</flag>
+	<flag name="ldap">Install LDAP module</flag>
+	<flag name="sasl">Enable SASL support in the LDAP module</flag>
+</use>
+</pkgmetadata>

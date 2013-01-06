@@ -1,0 +1,12 @@
+DEFINED_PHASES=prepare
+DEPEND=sys-libs/ncurses
+DESCRIPTION=Sleeplike program that counts down the number of seconds specified
+EAPI=4
+HOMEPAGE=http://onegeek.org/~tom/software/delay/
+KEYWORDS=amd64 ~mips ppc ppc64 x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos
+LICENSE=GPL-2
+RDEPEND=sys-libs/ncurses
+SLOT=0
+SRC_URI=http://onegeek.org/~tom/software/delay/dl/delay-1.6.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=3c8bdd1fb0ba70f66a326ac4f3eab9c8

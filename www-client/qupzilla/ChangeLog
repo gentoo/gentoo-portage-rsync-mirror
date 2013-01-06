@@ -1,0 +1,76 @@
+# ChangeLog for www-client/qupzilla
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.18 2012/11/01 09:37:43 ago Exp $
+
+  01 Nov 2012;  <ago@gentoo.org> qupzilla-1.3.5.ebuild:
+  Stable for x86, wrt bug #440378
+
+  31 Oct 2012; Agostino Sarubbo <ago@gentoo.org> qupzilla-1.3.5.ebuild:
+  Stable for amd64, wrt bug #440378
+
+  03 Oct 2012; Ben de Groot <yngwin@gentoo.org>
+  +files/qupzilla-1.3.5-libX11-underlinking.patch, qupzilla-1.3.5.ebuild:
+  Add libX11-underlinking.patch (applied in git upstream) from Alec Moskvin in
+  bug #436232. Add epatch_user.
+
+  19 Sep 2012; Ben de Groot <yngwin@gentoo.org> qupzilla-1.3.5.ebuild:
+  Use mirror; clean-up
+
+*qupzilla-1.3.5 (19 Sep 2012)
+
+  19 Sep 2012; Ben de Groot <yngwin@gentoo.org> +qupzilla-1.3.5.ebuild,
+  metadata.xml:
+  Version bump, with some new features. Add localization handling.
+
+  17 Sep 2012; Agostino Sarubbo <ago@gentoo.org> qupzilla-1.3.1.ebuild:
+  Fix broken SRC_URI and use mirror:// wrt to bug 435346
+
+  16 Aug 2012; Johannes Huber <johu@gentoo.org>
+  -files/qupzilla-1.3.0-desktop.patch, -qupzilla-1.2.0.ebuild,
+  -qupzilla-1.3.0.ebuild:
+  Remove old.
+
+  16 Aug 2012; Johannes Huber <johu@gentoo.org> qupzilla-1.3.1.ebuild:
+  Stable for x86, wrt bug #431130
+
+  14 Aug 2012; Agostino Sarubbo <ago@gentoo.org> qupzilla-1.3.1.ebuild:
+  Stable for amd64, wrt bug #431130
+
+*qupzilla-1.3.1 (16 Jul 2012)
+
+  16 Jul 2012; Ben de Groot <yngwin@gentoo.org> +qupzilla-1.3.1.ebuild:
+  Version bump. Drop patch which has been applied upstream.
+
+  12 Jul 2012; Ben de Groot <yngwin@gentoo.org>
+  +files/qupzilla-1.3.0-desktop.patch, qupzilla-1.3.0.ebuild:
+  Add upstream patch to correct desktop file
+
+*qupzilla-1.3.0 (12 Jul 2012)
+
+  12 Jul 2012; Davide Pesavento <pesa@gentoo.org> +qupzilla-1.3.0.ebuild:
+  Version bump, added dbus USE flag.
+
+  12 Jun 2012; Michael Palimaka <kensington@gentoo.org> qupzilla-1.2.0.ebuild:
+  Update SRC_URI, wrt bug #420843 by Corentin Chary <iksaif@gentoo.org>.
+
+  09 May 2012; Ben de Groot <yngwin@gentoo.org> qupzilla-1.2.0.ebuild:
+  Make comply with multilib-strict
+
+  09 May 2012; Agostino Sarubbo <ago@gentoo.org> -qupzilla-1.1.8.ebuild,
+  qupzilla-1.2.0.ebuild:
+  Stable for amd64/x86, wrt to bug #414683. Removed old.
+
+*qupzilla-1.2.0 (12 Apr 2012)
+
+  12 Apr 2012; Davide Pesavento <pesa@gentoo.org> +qupzilla-1.2.0.ebuild:
+  Version bump.
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> qupzilla-1.1.8.ebuild:
+  Add ~x86
+
+*qupzilla-1.1.8 (31 Mar 2012)
+
+  31 Mar 2012; Davide Pesavento <pesa@gentoo.org> +metadata.xml,
+  +qupzilla-1.1.8.ebuild:
+  Initial commit, moved from qt overlay. Ebuild by Ben de Groot
+  <yngwin@gmail.com>.

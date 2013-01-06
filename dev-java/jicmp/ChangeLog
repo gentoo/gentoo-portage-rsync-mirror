@@ -1,0 +1,24 @@
+# ChangeLog for dev-java/jicmp
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jicmp/ChangeLog,v 1.5 2009/03/02 21:49:13 serkan Exp $
+
+  02 Mar 2009; Serkan Kaba <serkan@gentoo.org> jicmp-1.0.2.ebuild:
+  Filter out -Werror from compiler flags. Reported by Diego Pettenò
+  <flameeyes@gentoo.org> in bug #260881.
+
+  08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing wltjr as a maintainer since he was retired.
+
+  12 Sep 2007; Petteri Räty <betelgeuse@gentoo.org> jicmp-1.0.2.ebuild:
+  Add doc and source use flags and cleanup ebuild.
+
+  12 Sep 2007; William L. Thomson Jr. <wltjr@gentoo.org> jicmp-1.0.2.ebuild:
+  License correction, removed commented code.
+
+*jicmp-1.0.2 (12 Sep 2007)
+
+  12 Sep 2007; William L. Thomson Jr. <wltjr@gentoo.org> +metadata.xml,
+  +jicmp-1.0.2.ebuild:
+  Intial ebuild, dependency for opennms and a useful lib :)
+

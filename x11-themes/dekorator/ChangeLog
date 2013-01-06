@@ -1,0 +1,21 @@
+# ChangeLog for x11-themes/dekorator
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/dekorator/ChangeLog,v 1.4 2011/10/28 20:40:04 abcd Exp $
+
+  28 Oct 2011; Jonathan Callen <abcd@gentoo.org> dekorator-0.5.1.ebuild:
+  Bump EAPI to 4
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> dekorator-0.5.1.ebuild:
+  EAPI3, use array for DOCS
+
+*dekorator-0.5.1 (10 Apr 2010)
+
+  10 Apr 2010; Alexey Shvetsov <alexxy@gentoo.org> +dekorator-0.5.1.ebuild:
+  Version bump
+
+*dekorator-0.4.0.4 (06 Nov 2009)
+
+  06 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +dekorator-0.4.0.4.ebuild:
+  Initial commit.
+

@@ -1,0 +1,44 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/files/mythtv.logrotate.d-r2,v 1.1 2012/07/12 02:34:03 cardoe Exp $
+
+/var/log/mythtv/mythbackend.*.log {
+    rotate 5
+    weekly
+    create 660 mythtv video
+    notifempty
+    sharedscripts
+    missingok
+    olddir /var/log/mythtv/old
+    postrotate
+        [ -f "/var/run/mythbackend.pid" ] && \
+            /bin/kill -HUP `cat /var/run/mythbackend.pid`
+    endscript
+}
+
+/var/log/mythtv/mythfrontend.*.log {
+    rotate 5
+    weekly
+    create 660 mythtv video
+    notifempty
+    sharedscripts
+    missingok
+    olddir /var/log/mythtv/old
+    postrotate
+        killall -HUP mythfrontend
+        find /var/log/mythtv/old -name 'mythfrontend*' -type f -mtime +30 -delete
+    endscript
+}
+
+/var/log/mythtv/mythpreviewgen.*.log {
+    rotate 5
+    weekly
+    create 660 mythtv video
+    notifempty
+    sharedscripts
+    missingok
+    olddir /var/log/mythtv/old
+    postrotate
+        find /var/log/mythtv/old -name 'mythpreviwgen*' -type f -mtime +30 -delete
+    endscript
+}

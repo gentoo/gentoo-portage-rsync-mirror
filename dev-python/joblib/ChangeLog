@@ -1,0 +1,31 @@
+# ChangeLog for dev-python/joblib
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/joblib/ChangeLog,v 1.6 2012/11/29 20:18:33 bicatali Exp $
+
+  29 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> joblib-0.6.5.ebuild:
+  Keyword amd64-linux and x86-linux
+
+*joblib-0.6.5 (09 Oct 2012)
+
+  09 Oct 2012; Patrick Lauer <patrick@gentoo.org> +joblib-0.6.5.ebuild:
+  Bump
+
+  08 May 2012; Dirkjan Ochtman <djc@gentoo.org> -joblib-0.6.2.ebuild:
+  Remove old version.
+
+*joblib-0.6.4 (08 May 2012)
+
+  08 May 2012; Dirkjan Ochtman <djc@gentoo.org> +joblib-0.6.4.ebuild:
+  Version bump to 0.6.4.
+
+*joblib-0.6.3 (02 Mar 2012)
+
+  02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +joblib-0.6.3.ebuild:
+  Version bump to 0.6.3.
+
+*joblib-0.6.2 (15 Feb 2012)
+
+  15 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> +joblib-0.6.2.ebuild,
+  +metadata.xml:
+  Initial version of joblib (bug 402937). Ebuild contributed by
+  nicolas.pinto@gmail.com.

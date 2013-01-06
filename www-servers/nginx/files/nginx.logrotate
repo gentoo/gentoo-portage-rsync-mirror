@@ -1,0 +1,11 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/files/nginx.logrotate,v 1.2 2011/04/08 08:32:20 hollow Exp $
+
+/var/log/nginx/*_log {
+	missingok
+	sharedscripts
+	postrotate
+		test -r /var/run/nginx.pid && kill -USR1 `cat /var/run/nginx.pid`
+	endscript
+}

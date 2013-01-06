@@ -1,0 +1,23 @@
+# ChangeLog for app-crypt/oclhashcat-lite-bin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-lite-bin/ChangeLog,v 1.4 2012/12/31 21:28:01 zerochaos Exp $
+
+*oclhashcat-lite-bin-0.13 (31 Dec 2012)
+
+  31 Dec 2012; Rick Farina <zerochaos@gentoo.org>
+  +oclhashcat-lite-bin-0.13.ebuild:
+  version bump
+
+  04 Jul 2012; Rick Farina <zerochaos@gentoo.org>
+  oclhashcat-lite-bin-0.10.ebuild:
+  minor QA with ebuild, again
+
+  04 Jul 2012; Rick Farina <zerochaos@gentoo.org>
+  oclhashcat-lite-bin-0.10.ebuild:
+  move loader and simplify ebuild with a for loop
+
+*oclhashcat-lite-bin-0.10 (02 Jul 2012)
+
+  02 Jul 2012; Rick Farina <zerochaos@gentoo.org> +metadata.xml,
+  +oclhashcat-lite-bin-0.10.ebuild:
+  initial commit of oclhashcat-lite-bin

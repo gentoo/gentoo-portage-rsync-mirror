@@ -1,0 +1,39 @@
+# ChangeLog for sci-libs/hypre
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/ChangeLog,v 1.9 2012/10/18 21:06:49 jlec Exp $
+
+  18 Oct 2012; Justin Lecher <jlec@gentoo.org> hypre-2.8.0b-r1.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
+
+  14 Oct 2012; Justin Lecher <jlec@gentoo.org> hypre-2.8.0b-r1.ebuild:
+  Prepare for fortran2.eclass update
+
+  10 Oct 2012; Justin Lecher <jlec@gentoo.org> hypre-2.8.0b-r1.ebuild:
+  Respect CC, #437848
+
+  10 Oct 2012; Justin Lecher <jlec@gentoo.org> hypre-2.8.0b-r1.ebuild:
+  Move myeconfargs to local scope
+
+  02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> hypre-2.8.0b-r1.ebuild:
+  Keyword amd64-linux x86-linux
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> hypre-2.8.0b-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  29 Jan 2012; Justin Lecher <jlec@gentoo.org> hypre-2.8.0b-r1.ebuild,
+  metadata.xml:
+  Add missing dep on sci-libs/superlu, #401385
+
+*hypre-2.8.0b-r1 (22 Jan 2012)
+
+  22 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> -hypre-2.8.0b.ebuild,
+  +hypre-2.8.0b-r1.ebuild:
+  include files in proper directory
+
+*hypre-2.8.0b (22 Jan 2012)
+
+  22 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +hypre-2.8.0b.ebuild,
+  +metadata.xml:
+  Initial import from the science overlay. Version bump, rewritten from
+  scratch.

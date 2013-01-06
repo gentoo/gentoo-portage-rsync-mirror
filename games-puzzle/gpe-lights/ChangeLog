@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/gpe-lights
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gpe-lights/ChangeLog,v 1.1 2009/09/23 00:01:31 miknix Exp $
+
+*gpe-lights-0.13 (23 Sep 2009)
+
+  23 Sep 2009; Angelo Arrifano <miknix@gentoo.org> +gpe-lights-0.13.ebuild,
+  +metadata.xml:
+  Initial commit based on code from Rene Wagner #101393 .
+

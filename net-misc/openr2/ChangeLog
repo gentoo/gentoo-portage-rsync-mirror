@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/openr2
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openr2/ChangeLog,v 1.1 2010/05/13 11:29:44 chainsaw Exp $
+
+*openr2-1.3.0 (13 May 2010)
+
+  13 May 2010; <chainsaw@gentoo.org> +files/1.3.0-respect-user-cflags.patch,
+  +openr2-1.3.0.ebuild, +metadata.xml:
+  Initial commit. Ebuild based on the submission by Eduardo Frazão in bug
+  #315189.
+

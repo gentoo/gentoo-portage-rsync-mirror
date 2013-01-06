@@ -1,0 +1,108 @@
+# ChangeLog for app-arch/lzip
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.28 2012/07/29 17:08:20 armin76 Exp $
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> lzip-1.13.ebuild:
+  alpha/sparc stable wrt #418507
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> lzip-1.13.ebuild:
+  Marking lzip-1.13 ppc for bug 418507
+
+  06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> lzip-1.13.ebuild:
+  marked x86 per bug 418507
+
+  06 Jun 2012; Jeroen Roovers <jer@gentoo.org> lzip-1.13.ebuild:
+  Stable for HPPA (bug #418507).
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> lzip-1.13.ebuild:
+  Marking lzip-1.13 ppc64 for bug 418507
+
+  03 Jun 2012; Agostino Sarubbo <ago@gentoo.org> lzip-1.13.ebuild:
+  Stable for amd64, wrt bug #418507
+
+*lzip-1.13 (19 Mar 2012)
+
+  19 Mar 2012; Tim Harder <radhermit@gentoo.org> +lzip-1.13.ebuild,
+  +files/lzip-1.13-flags.patch:
+  Version bump.
+
+  19 Mar 2012; Tim Harder <radhermit@gentoo.org> -lzip-1.10.ebuild,
+  -lzip-1.11.ebuild:
+  Remove old.
+
+  02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> lzip-1.12.ebuild:
+  ppc64 stable wrt #396761
+
+  15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> lzip-1.12.ebuild:
+  x86 stable wrt bug #396761
+
+  04 Jan 2012; Brent Baude <ranger@gentoo.org> lzip-1.12.ebuild:
+  Marking lzip-1.12 ppc for bug 396761
+
+  02 Jan 2012; Agostino Sarubbo <ago@gentoo.org> lzip-1.12.ebuild:
+  Stable for AMD64, wrt bug #396761
+
+  19 Jun 2011; Markus Meier <maekke@gentoo.org> lzip-1.11.ebuild:
+  x86 stable, bug #371683
+
+  18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> lzip-1.11.ebuild:
+  Stable on amd64 wrt bug #371683
+
+*lzip-1.12 (15 Jun 2011)
+
+  15 Jun 2011; Jeroen Roovers <jer@gentoo.org> +lzip-1.12.ebuild:
+  Version bump.
+
+*lzip-1.11 (05 Mar 2011)
+
+  05 Mar 2011; Mike Frysinger <vapier@gentoo.org> +lzip-1.11.ebuild:
+  Version bump #357481 by Tim Harder.
+
+  11 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> lzip-1.10.ebuild:
+  Marked ~ppc wrt #300562
+
+  23 Jul 2010; Peter Volkov <pva@gentoo.org> lzip-1.10.ebuild:
+  amd64 stable, bug 329319
+
+  22 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> lzip-1.10.ebuild:
+  x86 stable wrt bug #329319
+
+  21 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> lzip-1.10.ebuild:
+  Keyword ~ppc64 wrt #300562.
+
+*lzip-1.10 (20 Apr 2010)
+
+  20 Apr 2010; Mike Frysinger <vapier@gentoo.org> +lzip-1.10.ebuild:
+  Version bump #316357 by Samuli Suominen.
+
+*lzip-1.9 (06 Mar 2010)
+
+  06 Mar 2010; Dror Levin <spatz@gentoo.org> +lzip-1.9.ebuild,
+  +files/lzip-1.9-build.patch:
+  Version bump.
+
+  31 Jan 2010; Jeroen Roovers <jer@gentoo.org> lzip-1.8.ebuild:
+  Marked ~hppa too.
+
+  30 Jan 2010; Raúl Porcel <armin76@gentoo.org> lzip-1.4.ebuild,
+  lzip-1.8.ebuild:
+  Add ~alpha/~sparc wrt #300562
+
+  27 Sep 2009; Markus Meier <maekke@gentoo.org> lzip-1.4.ebuild:
+  amd64/x86 stable, bug #286328
+
+*lzip-1.8 (26 Sep 2009)
+
+  26 Sep 2009; Mike Frysinger <vapier@gentoo.org> +lzip-1.8.ebuild:
+  Version bump.
+
+  14 Mar 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/lzip-1.4-headers.patch, lzip-1.4.ebuild:
+  Add fix by Daniel J. for gcc-4.4 #262286.
+
+*lzip-1.4 (02 Feb 2009)
+
+  02 Feb 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/lzip-1.4-build.patch, +metadata.xml, +lzip-1.4.ebuild:
+  Initial package by me.
+

@@ -1,0 +1,18 @@
+Author: Stelian Ionescu <sionescu@cddr.org>
+Date: 2010-11-03
+Status: Upstream
+Description: Avoids loading the site init during build
+
+diff -ur cmucl.orig//src/tools/build.sh cmucl/src/tools/build.sh
+--- cmucl.orig//src/tools/build.sh	2010-09-02 18:16:18.000000000 +0200
++++ cmucl/src/tools/build.sh	2010-11-03 15:57:06.615611658 +0100
+@@ -126,7 +126,8 @@
+ 	fi
+ 	$TOOLDIR/load-world.sh $TARGET "$VERSION" || { echo "Failed: $TOOLDIR/load-world.sh"; exit 1; }
+ 
+-	$TARGET/lisp/lisp -batch -noinit $FPU_MODE < /dev/null || { echo "Failed: $TARGET/lisp/lisp -batch -noinit $FPU_MODE"; exit 1; }
++	$TARGET/lisp/lisp -batch -noinit -nositeinit $FPU_MODE < /dev/null || \
++            { echo "Failed: $TARGET/lisp/lisp -batch -noinit $FPU_MODE"; exit 1; }
+ 	return 0;
+     fi
+ }

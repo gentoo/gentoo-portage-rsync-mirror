@@ -1,0 +1,25 @@
+diff -Naur e-uae-0.8.28.orig/src/jd-linuxold/joystick.c e-uae-0.8.28/src/jd-linuxold/joystick.c
+--- e-uae-0.8.28.orig/src/jd-linuxold/joystick.c	2005-08-21 19:02:09.000000000 +0400
++++ e-uae-0.8.28/src/jd-linuxold/joystick.c	2006-06-14 20:54:30.000000000 +0400
+@@ -8,7 +8,7 @@
+   *
+   * Copyright 1997 Bernd Schmidt
+   * Copyright 1998 Krister Walfridsson
+-  * Copyright 2003-2005 Richard Drummond
++  * Copyright 2003-2006 Richard Drummond
+   * Copyright 2004 Nick Seow (Alternative Linux joystick device path)
+   */
+ 
+@@ -75,8 +75,10 @@
+     int fd = nr == 0 ? js0 : js1;
+     struct joy_range *r = nr == 0 ? &range0 : &range1;
+ 
+-    if (nr >= nr_joysticks)
+-	return;
++    if (currprefs.input_selected_setting == 0) {
++	if (jsem_isjoy (0, &currprefs) != (int)nr && jsem_isjoy (1, &currprefs) != (int)nr)
++	    return;
++    }
+ 
+     len = read(fd, &buffer, sizeof(buffer));
+     if (len != sizeof(buffer))

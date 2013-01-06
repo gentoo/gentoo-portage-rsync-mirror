@@ -1,0 +1,31 @@
+diff -Naur pnp4nagios-0.6.7.orig/Makefile.in pnp4nagios-0.6.7/Makefile.in
+--- pnp4nagios-0.6.7.orig/Makefile.in	2010-10-19 08:26:19.000000000 +0200
++++ pnp4nagios-0.6.7/Makefile.in	2010-10-19 08:31:51.000000000 +0200
+@@ -123,8 +123,13 @@
+ 
+ install-unstripped:
+ 	cd $(SRC_BASE) && $(MAKE) $@
+-	cd $(SRC_SHARE) && $(MAKE) $@
+-	cd $(SRC_SCRIPTS) && $(MAKE) $@
++	cd $(SRC_SHARE) && $(MAKE) install
++	if [ x$(KOHANA) = xyes ]; then \
++		cd $(SRC_LIB) && $(MAKE) install; \
++	fi
++
++	cd $(SRC_SCRIPTS) && $(MAKE) install
++	cd $(SRC_CONFIG) && $(MAKE) install
+ 	$(MAKE) install-basic
+ 
+ install-basic:
+diff -Naur pnp4nagios-0.6.7.orig/src/Makefile.in pnp4nagios-0.6.7/src/Makefile.in
+--- pnp4nagios-0.6.7.orig/src/Makefile.in	2010-10-19 08:26:19.000000000 +0200
++++ pnp4nagios-0.6.7/src/Makefile.in	2010-10-19 08:28:08.000000000 +0200
+@@ -83,7 +83,7 @@
+ #
+ ###############################
+ npcd: npcd.c $(NPCDOBJS) $(NPCDHEAD)
+-	$(CC) $(CFLAGS) -o $@ npcd.c $(NPCDOBJS) -lpthread
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ npcd.c $(NPCDOBJS) -lpthread
+ 
+ ###############################
+ #

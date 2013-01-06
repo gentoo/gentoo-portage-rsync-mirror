@@ -1,0 +1,125 @@
+# ChangeLog for sys-apps/accountsservice
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.23 2013/01/01 12:48:37 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  accountsservice-0.6.29-r1.ebuild:
+  Add ~ia64, wrt bug #449220
+
+*accountsservice-0.6.29-r1 (04 Dec 2012)
+
+  04 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -accountsservice-0.6.29.ebuild, +accountsservice-0.6.29-r1.ebuild,
+  +files/accountsservice-0.6.29-32bit-crash.patch:
+  Fix crash on 32-bit systems (bug #445894, thanks to Denny Reeh).
+
+*accountsservice-0.6.29 (30 Nov 2012)
+
+  30 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -accountsservice-0.6.24.ebuild, +accountsservice-0.6.29.ebuild:
+  Version bump. Clean up old revision.
+
+*accountsservice-0.6.25 (30 Sep 2012)
+
+  30 Sep 2012; Pacho Ramos <pacho@gentoo.org> +accountsservice-0.6.25.ebuild,
+  -accountsservice-0.6.22-r10.ebuild:
+  Version bump, drop old.
+
+  23 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  accountsservice-0.6.24.ebuild:
+  keyword ~ppc, bug #379651
+
+  23 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  accountsservice-0.6.24.ebuild:
+  keyword ~ppc64, bug #379651
+
+*accountsservice-0.6.24 (12 Sep 2012)
+
+  12 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -accountsservice-0.6.15.ebuild, -accountsservice-0.6.21.ebuild,
+  +accountsservice-0.6.24.ebuild,
+  +files/accountsservice-0.6.24-dont-delete-root.patch:
+  Version bump, drop old.
+
+  19 Jul 2012; Markus Meier <maekke@gentoo.org> accountsservice-0.6.22.ebuild:
+  arm stable, bug #424842
+
+  06 Jul 2012; Agostino Sarubbo <ago@gentoo.org> accountsservice-0.6.22.ebuild:
+  Stable for amd64, wrt bug #424842
+
+  05 Jul 2012; Jeff Horelick <jdhore@gentoo.org> accountsservice-0.6.22.ebuild:
+  marked x86 per bug 424842
+
+  05 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  accountsservice-0.6.21.ebuild, accountsservice-0.6.22.ebuild,
+  accountsservice-0.6.22-r10.ebuild:
+  USE=vala requires introspection, thanks to Jeff Horelick for noticing.
+
+*accountsservice-0.6.22-r10 (05 Jul 2012)
+*accountsservice-0.6.22 (05 Jul 2012)
+
+  05 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  accountsservice-0.6.21.ebuild, +accountsservice-0.6.22.ebuild,
+  +accountsservice-0.6.22-r10.ebuild:
+  Bump, fixes information disclosure vulnerability (CVE-2012-2737, bug
+  #424842). 0.6.22 is targeted for stabilization, and therefore has systemd
+  support disabled, while 0.6.22-r10 has optional systemd support. Lower glib
+  dependency to 2.30 (should work).
+
+  03 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  accountsservice-0.6.21.ebuild:
+  Add missing gdbus-codegen dependency (bug #423481, thanks to Ben Kohler et
+  al.)
+
+*accountsservice-0.6.21 (25 Jun 2012)
+
+  25 Jun 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -accountsservice-0.6.14.ebuild, +accountsservice-0.6.21.ebuild,
+  +files/accountsservice-0.6.21-gentoo-system-users.patch, metadata.xml:
+  Version bump with bugfixes and systemd support. Drop old.
+
+  27 May 2012; Matt Turner <mattst88@gentoo.org> accountsservice-0.6.15.ebuild:
+  Added ~alpha, bug 379651.
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> accountsservice-0.6.14.ebuild,
+  accountsservice-0.6.15.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> accountsservice-0.6.15.ebuild:
+  x86 stable, bug #410611
+
+  25 Apr 2012; Markus Meier <maekke@gentoo.org> accountsservice-0.6.15.ebuild:
+  arm stable, bug #410611
+
+  18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> accountsservice-0.6.15.ebuild:
+  Stable for amd64, wrt bug #410611
+
+*accountsservice-0.6.15 (24 Nov 2011)
+
+  24 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -accountsservice-0.6.13.ebuild,
+  -files/accountsservice-0.6.13-PATH_GDM_CUSTOM.patch,
+  -files/accountsservice-0.6.13-SetAutomaticLogin-false.patch,
+  -files/accountsservice-0.6.13-etc-passwd-timeout.patch,
+  -files/accountsservice-0.6.13-monitor-etc-gdm-custom.conf.patch,
+  +accountsservice-0.6.15.ebuild:
+  Version bump, drop old. Enable building API docs since they validate now.
+
+*accountsservice-0.6.14 (15 Sep 2011)
+
+  15 Sep 2011; Pacho Ramos <pacho@gentoo.org> +accountsservice-0.6.14.ebuild:
+  Version bump by Alexandre Rostovtsev, bug #383087
+
+  05 Sep 2011; Markus Meier <maekke@gentoo.org> accountsservice-0.6.13.ebuild:
+  add ~arm, bug #379651
+
+*accountsservice-0.6.13 (18 Aug 2011)
+
+  18 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +accountsservice-0.6.13.ebuild,
+  +files/accountsservice-0.6.13-PATH_GDM_CUSTOM.patch,
+  +files/accountsservice-0.6.13-SetAutomaticLogin-false.patch,
+  +files/accountsservice-0.6.13-etc-passwd-timeout.patch,
+  +files/accountsservice-0.6.13-monitor-etc-gdm-custom.conf.patch,
+  +metadata.xml:
+  Move from gnome overlay for GNOME 3

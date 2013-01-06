@@ -1,0 +1,34 @@
+# ChangeLog for sci-electronics/cirkuit
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/cirkuit/ChangeLog,v 1.7 2011/04/19 20:10:19 scarabeus Exp $
+
+*cirkuit-0.3.2 (19 Apr 2011)
+
+  19 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -cirkuit-0.2.2.ebuild,
+  +cirkuit-0.3.2.ebuild:
+  Version bump. Fixes bug #363427.
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> cirkuit-0.2.2.ebuild:
+  EAPI3, use array for DOCS
+
+  10 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> cirkuit-0.2.2.ebuild:
+  Fix poppler depend.
+
+  26 Dec 2009; Peter Volkov <pva@gentoo.org> cirkuit-0.2.1.ebuild,
+  cirkuit-0.2.2.ebuild:
+  virtual/ghostscript->app-text/ghostscript-gpl: ghostscript-gpl is the only
+  implementation left in the tree.
+
+*cirkuit-0.2.2 (25 Dec 2009)
+
+  25 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> +cirkuit-0.2.2.ebuild:
+  Version bump.
+
+  12 Nov 2009; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Fixed metadata.
+
+*cirkuit-0.2.1 (12 Nov 2009)
+
+  12 Nov 2009; Samuli Suominen <ssuominen@gentoo.org> +cirkuit-0.2.1.ebuild:
+  Initial commit wrt #275366, thanks to Jiri Tyr for reporting.
+

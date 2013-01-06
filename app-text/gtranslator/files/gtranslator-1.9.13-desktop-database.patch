@@ -1,0 +1,53 @@
+From e4ecdf31c9f53ea95fe803b5d25a892c5e72279d Mon Sep 17 00:00:00 2001
+From: Ignacio Casal Quinteiro <icq@gnome.org>
+Date: Sat, 06 Nov 2010 11:36:18 +0000
+Subject: Remove call to update-desktop-database. Fixes bug #628726.
+
+---
+diff --git a/data/desktop/Makefile.am b/data/desktop/Makefile.am
+index 313cb9f..3812f9a 100644
+--- a/data/desktop/Makefile.am
++++ b/data/desktop/Makefile.am
+@@ -1,34 +1,14 @@
+ SUBDIRS = icons
+ 
+-##
+-## the dirs where all the DATA should go ..
+-##
+-Applicationdir = $(datadir)/applications
+-
+-##
+-## and the DATA
+-##
+-Application_predata = gtranslator.desktop.in
+-Application_DATA = $(Application_predata:.desktop.in=.desktop)
+-
++desktopdir 	 = $(datadir)/applications
++desktop_in_files = gtranslator.desktop.in
++desktop_DATA 	 = $(desktop_in_files:.desktop.in=.desktop)
+ @INTLTOOL_DESKTOP_RULE@
+ 
+-EXTRA_DIST = $(Application_DATA) \
+-	$(Applicationicon_DATA) \
+-	$(Application_predata)
+-
+-CLEANFILES = $(Application_DATA)
++EXTRA_DIST = $(desktop_in_files)
+ 
+-UPDATE_DESKTOP = \
+-	if [ -f $(Applicationdir)/defaults.list ] ; then \
+-		if which update-desktop-database>/dev/null 2>&1 ; then \
+-			update-desktop-database $(Applicationdir); \
+-		fi \
+-	fi
++CLEANFILES = $(desktop_DATA)
+ 
+-install-data-hook:
+-	$(UPDATE_DESKTOP)
++DISTCLEANFILES = $(desktop_DATA)
+ 
+-uninstall-hook:
+-	$(UPDATE_DESKTOP) 
+ -include $(top_srcdir)/git.mk
+--
+cgit v0.8.3.1

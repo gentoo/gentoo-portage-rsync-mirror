@@ -1,0 +1,10 @@
+# ChangeLog for java-virtuals/script-api
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/script-api/ChangeLog,v 1.1 2012/07/18 09:55:44 sera Exp $
+
+*script-api-1.0 (18 Jul 2012)
+
+  18 Jul 2012; Ralph Sennhauser <sera@gentoo.org> +script-api-1.0.ebuild,
+  +metadata.xml:
+  New java virtual for scripting api (jsr223)
+

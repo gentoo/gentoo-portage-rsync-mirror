@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install unpack
+DEPEND=x11-libs/libX11 x11-libs/libXt x11-libs/libXext app-text/rman x11-misc/imake
+DESCRIPTION=Digital clock for the X window system.
+HOMEPAGE=ftp://ftp.ac-grenoble.fr/ge/Xutils/
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/libX11 x11-libs/libXt x11-libs/libXext app-text/rman
+SLOT=0
+SRC_URI=mirror://debian/pool/main/d/dclock/dclock_2.1.2.orig.tar.gz mirror://debian/pool/main/d/dclock/dclock_2.1.2-8.diff.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=b319be3a080dd8c384e886a619505958

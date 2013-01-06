@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/sword-chincvt
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-chincvt/ChangeLog,v 1.1 2008/05/17 03:09:44 beandog Exp $
+
+*sword-chincvt-1.0 (17 May 2008)
+
+  17 May 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-chincvt-1.0.ebuild:
+  Initial commit
+

@@ -1,0 +1,47 @@
+# ChangeLog for dev-python/greenlet
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.10 2012/12/06 17:35:30 bicatali Exp $
+
+  06 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> greenlet-0.4.0.ebuild:
+  Keyword amd64-linux and x86-linux
+
+  17 Jul 2012; Mike Frysinger <vapier@gentoo.org> greenlet-0.4.0.ebuild:
+  Add arm love.
+
+*greenlet-0.4.0 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +greenlet-0.4.0.ebuild:
+  Bump
+
+  15 May 2012; Kacper Kowalik <xarthisius@gentoo.org> greenlet-0.3.4-r1.ebuild:
+  Reintroduce mistakenly dropped -fno-strict-aliasing for python 2.x. Thanks to
+  Arfrever for spotting
+
+*greenlet-0.3.4-r1 (15 May 2012)
+
+  15 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +greenlet-0.3.4-r1.ebuild:
+  Bump to eapi4, install docs, drop unnecessary -fno-strict-aliasing
+
+*greenlet-0.3.4 (09 Mar 2012)
+
+  09 Mar 2012; Patrick Lauer <patrick@gentoo.org> +greenlet-0.3.4.ebuild:
+  Bump for #404421
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> greenlet-0.3.1.ebuild,
+  greenlet-0.3.3.ebuild:
+  Restricting pypy #404911
+
+*greenlet-0.3.3 (19 Jan 2012)
+
+  19 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +greenlet-0.3.3.ebuild:
+  Version bump
+
+  09 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  greenlet-0.3.1.ebuild, +files/greenlet-0.3.1-python-3.2.patch:
+  Fix building with Python 3.2 (bug #343385).
+
+*greenlet-0.3.1 (18 Oct 2010)
+
+  18 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +greenlet-0.3.1.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.

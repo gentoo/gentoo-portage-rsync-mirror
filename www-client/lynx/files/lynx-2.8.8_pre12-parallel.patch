@@ -1,0 +1,146 @@
+Index: lynx2-8-8/src/makefile.in
+===================================================================
+--- lynx2-8-8.orig/src/makefile.in
++++ lynx2-8-8/src/makefile.in
+@@ -100,7 +100,7 @@ all: lynx$x
+ 	@RULE_CC@
+ 	@ECHO_CC@$(CPP) -C $(CPP_OPTS) $< >$@
+ 
+-lynx$x:   message do_chartrans_stuff $(top_builddir)/LYHelp.h $(OBJS) $(WWWLIB)
++lynx$x:   message $(top_builddir)/LYHelp.h $(OBJS) $(WWWLIB)
+ 	@echo "Linking and creating Lynx executable"
+ 	$(CC) $(CC_OPTS) $(LDFLAGS) -o $@  $(OBJS) $(WWWLIB) $(LDFLAGS) $(LIBS) $(INTLLIB)
+ 	@echo "Copying Lynx executable into top-level directory"
+@@ -111,21 +111,12 @@ lynx$x:   message do_chartrans_stuff $(t
+ message:
+ 	@echo "Compiling Lynx sources"
+ 
+-do_chartrans_stuff:
+-	-cd chrtrans && $(MAKE) \
+-		SITE_DEFS="$(SITE_DEFS)" \
+-		BUILD_CFLAGS="$(BUILD_CFLAGS)" \
+-		BUILD_CPPFLAGS="$(BUILD_CPPFLAGS)" \
+-		BUILD_LDFLAGS="$(BUILD_LDFLAGS)" \
+-		BUILD_LIBS="$(BUILD_LIBS)" \
+-		BUILD_CC="$(BUILD_CC)" tables
+-
+ lint:
+ 	$(LINT) $(LINTOPTS) $(CPP_OPTS) $(C_SRC)  2>&1 |tee $(top_builddir)/lint.lynx
+ 
+ clean:
+ 	rm -f lynx$x core *.core *.leaks *.i *$o *.bak tags TAGS test_*
+-	cd chrtrans && $(MAKE) clean
++	$(MAKE) -C chrtrans clean
+ 
+ tags:
+ 	$(CTAGS) *.[ch]
+@@ -169,9 +160,11 @@ TABLES= \
+  $(CHRTR)cp775_uni.h \
+  $(CHRTR)cp850_uni.h \
+  $(CHRTR)cp852_uni.h \
++ $(CHRTR)cp857_uni.h \
+  $(CHRTR)cp862_uni.h \
+  $(CHRTR)cp864_uni.h \
+  $(CHRTR)cp866_uni.h \
++ $(CHRTR)cp866u_uni.h \
+  $(CHRTR)cp869_uni.h \
+  $(CHRTR)def7_uni.h \
+  $(CHRTR)dmcs_uni.h \
+@@ -186,27 +179,29 @@ TABLES= \
+  $(CHRTR)iso08_uni.h \
+  $(CHRTR)iso09_uni.h \
+  $(CHRTR)iso10_uni.h \
++ $(CHRTR)iso13_uni.h \
++ $(CHRTR)iso14_uni.h \
+  $(CHRTR)iso15_uni.h \
+  $(CHRTR)koi8r_uni.h \
++ $(CHRTR)koi8u_uni.h \
+  $(CHRTR)mac_uni.h \
+  $(CHRTR)mnem_suni.h \
+  $(CHRTR)mnem2_suni.h \
+  $(CHRTR)next_uni.h \
++ $(CHRTR)pt154_uni.h \
+  $(CHRTR)rfc_suni.h \
+  $(CHRTR)utf8_uni.h \
+  $(CHRTR)viscii_uni.h
+ 
+-$(TABLES):
+-	-cd chrtrans && $(MAKE) tables
++$(TABLES): chrtrans/makeuctb$(BUILD_EXEEXT)
++	$(MAKE) -C chrtrans `basename $@`
+ 
+ UCdomap$o :	UCdomap.c \
+ 		chrtrans/UCkd.h \
+-		chrtrans/makeuctb$(BUILD_EXEEXT) \
+-		chrtrans/makeuctb.c \
+-	UCdomap.h $(CMN)UCMap.h $(TABLES) $(top_srcdir)/userdefs.h
++		UCdomap.h $(CMN)UCMap.h $(TABLES) $(top_srcdir)/userdefs.h
+ 
+ chrtrans/makeuctb$(BUILD_EXEEXT):
+-	cd chrtrans; make makeuctb$(BUILD_EXEEXT)
++	$(MAKE) -C chrtrans makeuctb$(BUILD_EXEEXT)
+ 
+ UCAux$o : UCAux.c $(CMN)UCAux.h $(CMN)UCDefs.h
+ LYCookie$o : $(top_srcdir)/userdefs.h
+Index: lynx2-8-8/src/chrtrans/makefile.in
+===================================================================
+--- lynx2-8-8.orig/src/chrtrans/makefile.in
++++ lynx2-8-8/src/chrtrans/makefile.in
+@@ -67,57 +67,8 @@ FONTMAP_INC = iso01_uni.h# default, if n
+ 
+ MAKEUCTB = makeuctb$(BUILD_EXEEXT)
+ 
+-TABLES= \
+- cp1250_uni.h \
+- cp1251_uni.h \
+- cp1252_uni.h \
+- cp1253_uni.h \
+- cp1255_uni.h \
+- cp1256_uni.h \
+- cp1257_uni.h \
+- cp437_uni.h \
+- cp737_uni.h \
+- cp775_uni.h \
+- cp850_uni.h \
+- cp852_uni.h \
+- cp857_uni.h \
+- cp862_uni.h \
+- cp864_uni.h \
+- cp866_uni.h \
+- cp866u_uni.h \
+- cp869_uni.h \
+- def7_uni.h \
+- dmcs_uni.h \
+- hp_uni.h \
+- iso01_uni.h \
+- iso02_uni.h \
+- iso03_uni.h \
+- iso04_uni.h \
+- iso05_uni.h \
+- iso06_uni.h \
+- iso07_uni.h \
+- iso08_uni.h \
+- iso09_uni.h \
+- iso10_uni.h \
+- iso13_uni.h \
+- iso14_uni.h \
+- iso15_uni.h \
+- koi8r_uni.h \
+- koi8u_uni.h \
+- mac_uni.h \
+- mnem2_suni.h \
+- mnem_suni.h \
+- next_uni.h \
+- next_uni.h \
+- pt154_uni.h \
+- rfc_suni.h \
+- utf8_uni.h \
+- viscii_uni.h
+-
+ default: $(FONTMAP_INC)
+ 
+-tables: $(TABLES)
+-
+ OBJS		= makeuctb$o
+ C_SRC		= $(OBJS:$o=.c)
+ 

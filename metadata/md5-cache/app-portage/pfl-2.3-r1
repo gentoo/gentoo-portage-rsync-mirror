@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm prepare setup
+DEPEND==dev-lang/python-2* =dev-lang/python-2*[xml]
+DESCRIPTION=Searchable online file/package database for Gentoo
+EAPI=4
+HOMEPAGE=http://www.portagefilelist.de
+IUSE=+network-cron
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~sparc ~x86 ~amd64-fbsd ~x64-freebsd
+LICENSE=GPL-2
+RDEPEND=net-misc/curl sys-apps/portage =dev-lang/python-2* =dev-lang/python-2*[xml]
+SLOT=0
+SRC_URI=http://files.portagefilelist.de/pfl-2.3.tar.bz2
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=fb84bfd5f0d651089acd47019cdcb92b

@@ -1,0 +1,41 @@
+# ChangeLog for dev-java/fastinfoset
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastinfoset/ChangeLog,v 1.9 2012/02/16 17:59:45 phajdan.jr Exp $
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  fastinfoset-1.2.1-r1.ebuild:
+  x86 stable wrt bug #396873
+
+  03 Feb 2012; Agostino Sarubbo <ago@gentoo.org> fastinfoset-1.2.1-r1.ebuild:
+  Stable for amd64, wrt bug #396873
+
+*fastinfoset-1.2.1-r1 (05 Oct 2008)
+
+  05 Oct 2008; Serkan Kaba <serkan@gentoo.org> +fastinfoset-1.2.1-r1.ebuild:
+  Migrate to stax-api virtual.
+
+  19 Aug 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  fastinfoset-1.2.1.ebuild:
+  amd64 stable, bug #187681.
+
+  15 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  fastinfoset-1.2.1.ebuild:
+  stable x86, bug 187681
+
+  11 Aug 2007; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
+  Remove myself from <maintainer>.
+
+  23 May 2007; Diego Pettenò <flameeyes@gentoo.org>
+  fastinfoset-1.2.1.ebuild:
+  Add ~x86-fbsd keyword. Bug #176906.
+
+  01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  fastinfoset-1.2.1.ebuild:
+  Fix DEPEND.
+
+*fastinfoset-1.2.1 (01 May 2007)
+
+  01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> +files/build.xml-1.2.1,
+  +metadata.xml, +fastinfoset-1.2.1.ebuild:
+  Initial commit of fastinfoset.
+

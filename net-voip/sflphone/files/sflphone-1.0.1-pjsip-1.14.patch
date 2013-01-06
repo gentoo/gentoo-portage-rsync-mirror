@@ -1,0 +1,110 @@
+From 0d66570e26c6bd728d00d251e592a4154c0c9d1c Mon Sep 17 00:00:00 2001
+From: Alexandre Savard <alexandre.savard@savoirfairelinux.com>
+Date: Mon, 30 Jul 2012 12:12:45 -0400
+Subject: [PATCH] #13961: Fix cipher handling to be compatible with pjsip
+ 1.14.2
+
+[Alexandre Rostovtsev <tetromino@gentoo.org>: backport to 1.0.1]
+---
+ daemon/src/sip/sipaccount.cpp |   24 ++++++++++++++++++++----
+ daemon/src/sip/sipaccount.h   |    7 +++++++
+ 2 files changed, 27 insertions(+), 4 deletions(-)
+
+diff --git a/daemon/src/sip/sipaccount.cpp b/daemon/src/sip/sipaccount.cpp
+index fdd4634..44d169f 100644
+--- a/daemon/src/sip/sipaccount.cpp
++++ b/daemon/src/sip/sipaccount.cpp
+@@ -55,6 +55,7 @@ SIPAccount::SIPAccount(const std::string& accountID)
+     , transportType_(PJSIP_TRANSPORT_UNSPECIFIED)
+     , cred_(NULL)
+     , tlsSetting_()
++    , ciphers(100)
+     , stunServerName_()
+     , stunPort_(0)
+     , dtmfType_(OVERRTP)
+@@ -145,7 +146,7 @@ void SIPAccount::serialize(Conf::YamlEmitter *emitter)
+     Conf::ScalarNode tlsport(portstr.str());
+     Conf::ScalarNode certificate(tlsCertificateFile_);
+     Conf::ScalarNode calist(tlsCaListFile_);
+-    Conf::ScalarNode ciphers(tlsCiphers_);
++    Conf::ScalarNode ciphersNode(tlsCiphers_);
+     Conf::ScalarNode tlsenabled(tlsEnable_);
+     Conf::ScalarNode tlsmethod(tlsMethod_);
+     Conf::ScalarNode timeout(tlsNegotiationTimeoutSec_);
+@@ -207,7 +208,7 @@ void SIPAccount::serialize(Conf::YamlEmitter *emitter)
+     tlsmap.setKeyValue(tlsPortKey, &tlsport);
+     tlsmap.setKeyValue(certificateKey, &certificate);
+     tlsmap.setKeyValue(calistKey, &calist);
+-    tlsmap.setKeyValue(ciphersKey, &ciphers);
++    tlsmap.setKeyValue(ciphersKey, &ciphersNode);
+     tlsmap.setKeyValue(tlsEnableKey, &tlsenabled);
+     tlsmap.setKeyValue(methodKey, &tlsmethod);
+     tlsmap.setKeyValue(timeoutKey, &timeout);
+@@ -586,6 +587,18 @@ pjsip_ssl_method SIPAccount::sslMethodStringToPjEnum(const std::string& method)
+ 
+ void SIPAccount::initTlsConfiguration()
+ {
++    pj_status_t status;
++    unsigned cipherNum;
++
++    // Determine the cipher list supported on this machine
++    cipherNum = PJ_ARRAY_SIZE(ciphers);
++    status = pj_ssl_cipher_get_availables(&ciphers.front(), &cipherNum);
++    if (status != PJ_SUCCESS) {
++        ERROR("Could not determine cipher list on this system");
++    }
++
++    ciphers.resize(cipherNum);
++
+     // TLS listener is unique and should be only modified through IP2IP_PROFILE
+     tlsListenerPort_ = tlsPort_;
+ 
+@@ -596,8 +609,8 @@ void SIPAccount::initTlsConfiguration()
+     pj_cstr(&tlsSetting_.privkey_file, tlsPrivateKeyFile_.c_str());
+     pj_cstr(&tlsSetting_.password, tlsPassword_.c_str());
+     tlsSetting_.method = sslMethodStringToPjEnum(tlsMethod_);
+-    pj_cstr(&tlsSetting_.ciphers, tlsCiphers_.c_str());
+-    pj_cstr(&tlsSetting_.server_name, tlsServerName_.c_str());
++    tlsSetting_.ciphers_num = ciphers.size();
++    tlsSetting_.ciphers = &ciphers.front();
+ 
+     tlsSetting_.verify_server = tlsVerifyServer_ ? PJ_TRUE: PJ_FALSE;
+     tlsSetting_.verify_client = tlsVerifyClient_ ? PJ_TRUE: PJ_FALSE;
+@@ -605,6 +618,9 @@ void SIPAccount::initTlsConfiguration()
+ 
+     tlsSetting_.timeout.sec = atol(tlsNegotiationTimeoutSec_.c_str());
+     tlsSetting_.timeout.msec = atol(tlsNegotiationTimeoutMsec_.c_str());
++
++    tlsSetting_.qos_type = PJ_QOS_TYPE_BEST_EFFORT;
++    tlsSetting_.qos_ignore_error = PJ_TRUE;
+ }
+ 
+ void SIPAccount::initStunConfiguration()
+diff --git a/daemon/src/sip/sipaccount.h b/daemon/src/sip/sipaccount.h
+index 076fe60..7c2af13 100644
+--- a/daemon/src/sip/sipaccount.h
++++ b/daemon/src/sip/sipaccount.h
+@@ -43,6 +43,8 @@
+ #include "pjsip-ua/sip_regc.h"
+ #include "noncopyable.h"
+ 
++typedef std::vector<pj_ssl_cipher> CipherArray;
++
+ namespace Conf {
+ class YamlEmitter;
+ class MappingNode;
+@@ -478,6 +480,11 @@ class SIPAccount : public Account {
+         // a sip transport.
+         pjsip_tls_setting tlsSetting_;
+ 
++        /**
++         * Allocate a static array to be used by pjsip to store the supported ciphers on this system.
++         */
++        CipherArray ciphers;
++
+         // The STUN server name, if applicable for internal use only
+         pj_str_t stunServerName_;
+ 
+-- 
+1.7.8.6
+

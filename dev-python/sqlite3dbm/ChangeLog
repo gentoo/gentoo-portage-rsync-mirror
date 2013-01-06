@@ -1,0 +1,25 @@
+# ChangeLog for dev-python/sqlite3dbm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlite3dbm/ChangeLog,v 1.6 2012/11/13 10:48:02 idella4 Exp $
+
+  14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Updating maintainer, metadata.xml
+
+  14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Updating maintainer, metadata.xml
+
+  29 Sep 2012; Benda Xu <heroxbd@gentoo.org> sqlite3dbm-0.1.4.ebuild:
+  keyword ~x86-linux ~amd64-linux
+
+  06 Aug 2012; Patrick Lauer <patrick@gentoo.org> sqlite3dbm-0.1.4.ebuild:
+  Restricting jython
+
+  19 May 2012; Kacper Kowalik <xarthisius@gentoo.org> sqlite3dbm-0.1.4.ebuild:
+  Add ~x86 keyword
+
+*sqlite3dbm-0.1.4 (18 May 2012)
+
+  18 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +metadata.xml,
+  +sqlite3dbm-0.1.4.ebuild:
+  Initial import, fixes #415537. Ebuild written by Ian Delaney
+  <johneed@hotmail.com>

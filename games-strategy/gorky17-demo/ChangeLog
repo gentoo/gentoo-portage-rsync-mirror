@@ -1,0 +1,38 @@
+# ChangeLog for games-strategy/gorky17-demo
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/ChangeLog,v 1.7 2012/02/05 06:23:13 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org>
+  gorky17-demo-1.0.1.0.1.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
+  gorky17-demo-1.0.1.0.1.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
+
+  12 Mar 2007; Marius Mauch <genone@gentoo.org> gorky17-demo-1.0.0.ebuild,
+  gorky17-demo-1.0.1.0.1.ebuild:
+  Replacing einfo with elog
+
+  06 Dec 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  gorky17-demo-1.0.0.ebuild, gorky17-demo-1.0.1.0.1.ebuild:
+  Remove old virtual/x11 dependency.
+
+*gorky17-demo-1.0.1.0.1 (06 Sep 2006)
+
+  06 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +gorky17-demo-1.0.1.0.1.ebuild:
+  Version bump. Updated ebuild by Paul Bredbury <brebs@sent.com> and edited by
+  me. Closing bug #139131.
+
+  15 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  gorky17-demo-1.0.0.ebuild:
+  Clean up the ebuild slightly.
+
+*gorky17-demo-1.0.0 (14 Jun 2006)
+
+  14 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +gorky17-demo-1.0.0.ebuild:
+  Initial import. Ebuild by Paul Bredbury <brebs@sent.com> and modified by me.
+  Closing bug #135958.
+

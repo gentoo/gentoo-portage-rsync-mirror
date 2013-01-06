@@ -1,0 +1,61 @@
+Fix compilation on Gentoo/FreeBSD, no alloca.h here and PATH_MAX
+is defined elsewhere.
+
+See bug 254795
+
+diff -Nur a/config.c b/config.c
+--- a/config.c	2012-10-04 09:59:14.000000000 +0200
++++ b/config.c	2012-11-09 21:23:50.439863583 +0100
+@@ -1,6 +1,6 @@
+ #include <sys/queue.h>
+ /* Alloca is defined in stdlib.h in NetBSD */
+-#ifndef __NetBSD__
++#if !defined(__NetBSD__) && !defined(__FreeBSD__)
+ #include <alloca.h>
+ #endif
+ #include <limits.h>
+@@ -24,6 +24,9 @@
+ #include <fnmatch.h>
+ #include <sys/mman.h>
+ 
++#if !defined(PATH_MAX) && defined(__FreeBSD__)
++#include <sys/param.h>
++#endif
+ #include "basenames.h"
+ #include "log.h"
+ #include "logrotate.h"
+diff -Nur a/logrotate.c b/logrotate.c
+--- a/logrotate.c	2012-10-04 09:59:14.000000000 +0200
++++ b/logrotate.c	2012-11-09 21:24:37.349863321 +0100
+@@ -1,6 +1,6 @@
+ #include <sys/queue.h>
+ /* alloca() is defined in stdlib.h in NetBSD */
+-#ifndef __NetBSD__
++#if !defined(__NetBSD__) && !defined(__FreeBSD__)
+ #include <alloca.h>
+ #endif
+ #include <limits.h>
+@@ -41,6 +41,9 @@
+ 
+ static acl_type prev_acl = NULL;
+ 
++#if !defined(PATH_MAX) && defined(__FreeBSD__)
++#include <sys/param.h>
++#endif
+ #include "basenames.h"
+ #include "log.h"
+ #include "logrotate.h"
+diff -Nur a/Makefile b/Makefile
+--- a/Makefile	2012-10-04 09:59:14.000000000 +0200
++++ b/Makefile	2012-11-09 21:25:24.569863057 +0100
+@@ -17,8 +17,10 @@
+ 
+ ifeq ($(WITH_ACL),yes)
+ CFLAGS += -DWITH_ACL
++ifneq ($(OS_NAME),FreeBSD)
+ LOADLIBES += -lacl
+ endif
++endif
+ 
+ # HP-UX using GCC
+ ifeq ($(OS_NAME),HP-UX)

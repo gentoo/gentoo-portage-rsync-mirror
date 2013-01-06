@@ -1,0 +1,54 @@
+# ChangeLog for x11-misc/rodent
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rodent/ChangeLog,v 1.12 2012/11/28 12:32:59 ssuominen Exp $
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> rodent-4.8.0.ebuild:
+  EAPI5
+
+  16 Nov 2012; Andreas Schuerch <nativemad@gentoo.org> rodent-4.8.0.ebuild:
+  x86 stable, see bug 429484
+
+  27 Oct 2012; <ago@gentoo.org> rodent-4.8.0.ebuild:
+  Stable for amd64, wrt bug #429484
+
+  21 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> -rodent-4.6.4.ebuild,
+  -rodent-4.7.4.ebuild:
+  old
+
+*rodent-4.8.0 (29 Jun 2012)
+
+  29 Jun 2012;  <christoph@gentoo.org> +rodent-4.8.0.ebuild, metadata.xml:
+  Version bump (bug #423903)
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> rodent-4.6.4.ebuild,
+  rodent-4.7.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*rodent-4.7.4 (20 Feb 2012)
+
+  20 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> +rodent-4.7.4.ebuild:
+  Version bump wrt #403927 by Edscott Wilson
+
+  31 May 2011; Christoph Mende <angelos@gentoo.org> rodent-4.6.4.ebuild:
+  Update dependencies
+
+*rodent-4.6.4 (31 May 2011)
+
+  31 May 2011; Christoph Mende <angelos@gentoo.org> -rodent-4.6.2.ebuild,
+  -files/rodent-4.6.2-libs.patch, -files/rodent-4.6.2-validate.patch,
+  +rodent-4.6.4.ebuild:
+  Version bump and remove old
+
+  26 May 2011; Christoph Mende <angelos@gentoo.org> rodent-4.6.2.ebuild:
+  Fix homepage
+
+  10 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> rodent-4.6.2.ebuild,
+  +files/rodent-4.6.2-validate.patch:
+  Validate desktop entries. Update desktop, icon, and mime cache. Fix missing
+  sys-apps/file RDEPEND for libmagic.
+
+*rodent-4.6.2 (02 Apr 2011)
+
+  02 Apr 2011; Christoph Mende <angelos@gentoo.org> +rodent-4.6.2.ebuild,
+  +files/rodent-4.6.2-libs.patch, +metadata.xml:
+  Initial import

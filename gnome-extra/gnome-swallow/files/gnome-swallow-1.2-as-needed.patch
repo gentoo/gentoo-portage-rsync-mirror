@@ -1,0 +1,48 @@
+--- a/configure.ac	2009-01-31 20:18:50.000000000 +0100
++++ b/configure.ac	2009-01-31 20:20:55.000000000 +0100
+@@ -7,19 +7,10 @@
+ AC_LANG(C)
+ AC_PROG_CC
+ 
+-AC_PATH_PROG(PKG_CONFIG, pkg-config, , )
+-
+-if test -z "$PKG_CONFIG"; then 
+-	AC_MSG_ERROR([pkg-config is not installed.  I will not be able to find the GNOME headers.])
+-fi
+-
+-if ! $PKG_CONFIG --exists libpanelapplet-2.0; then
+-	AC_MSG_ERROR([pkg-config does not know about libpanelapplet-2.0.  
+-Do you have the development packages for the GNOME 2.0 Panel Applet library installed?
+-(the Debian package is 'libpanel-applet2-dev')])
+-fi
+-
+-AC_SUBST(PKG_CONFIG)
++PKG_PROG_PKG_CONFIG
++PKG_CHECK_MODULES(PANEL, [libpanelapplet-2.0])
++AC_SUBST(PANEL_CFLAGS)
++AC_SUBST(PANEL_LIBS)
+ 
+ AC_CONFIG_FILES([Makefile])
+-AC_OUTPUT
+\ Pas de fin de ligne à la fin du fichier.
++AC_OUTPUT
+--- a/Makefile.am	2009-01-31 20:21:02.000000000 +0100
++++ b/Makefile.am	2009-01-31 20:21:30.000000000 +0100
+@@ -1,15 +1,14 @@
+ paneldir = $(prefix)/lib/gnome-panel
+ serversdir = $(prefix)/lib/bonobo/servers
+-docdir = $(prefix)/share/doc/gnome-swallow
+ 
+ dist_doc_DATA = README
+ dist_servers_DATA = GNOME_Swallow.server
+ 
+ panel_PROGRAMS = gnome_swallow
+ 
+-INCLUDES = `@PKG_CONFIG@ --cflags libpanelapplet-2.0`
++INCLUDES = ${PANEL_CFLAGS}
+ 
+ gnome_swallow_SOURCES = gnome-swallow.c
+-gnome_swallow_LDFLAGS = `@PKG_CONFIG@ --libs libpanelapplet-2.0`
++gnome_swallow_LDADD = ${PANEL_LIBS} 
+ 
+ EXTRA_DIST = debian/dirs debian/control debian/changelog debian/copyright debian/install debian/rules

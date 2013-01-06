@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>dev-embedded</herd>
+	<maintainer>
+		<email>miknix@gentoo.org</email>
+	</maintainer>
+	<maintainer>
+		<email>nixphoeni@gentoo.org</email>
+	</maintainer>
+</pkgmetadata>

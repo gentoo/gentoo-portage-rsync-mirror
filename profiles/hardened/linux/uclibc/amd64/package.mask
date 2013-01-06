@@ -1,0 +1,25 @@
+# Copyright 1999-2012 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/uclibc/amd64/package.mask,v 1.1 2012/10/07 11:47:19 blueness Exp $
+
+#
+# Anthony G. Basile <blueness@gentoo.org> (07 Oct 2012)
+# profile hardened/linux/uclibc/amd64 is not mutlilib
+#
+app-emulation/emul-linux-x86-baselibs
+app-emulation/emul-linux-x86-compat
+app-emulation/emul-linux-x86-cpplibs
+app-emulation/emul-linux-x86-db
+app-emulation/emul-linux-x86-glibc-errno-compat
+app-emulation/emul-linux-x86-gstplugins
+app-emulation/emul-linux-x86-gtklibs
+app-emulation/emul-linux-x86-gtkmmlibs
+app-emulation/emul-linux-x86-java
+app-emulation/emul-linux-x86-jna
+app-emulation/emul-linux-x86-medialibs
+app-emulation/emul-linux-x86-motif
+app-emulation/emul-linux-x86-opengl
+app-emulation/emul-linux-x86-qtlibs
+app-emulation/emul-linux-x86-sdl
+app-emulation/emul-linux-x86-soundlibs
+app-emulation/emul-linux-x86-xlibs

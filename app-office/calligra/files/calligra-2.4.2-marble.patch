@@ -1,0 +1,185 @@
+From 94aa2f51a338c017339129b6c90c2d9da665e528 Mon Sep 17 00:00:00 2001
+From: "Andreas K. Huettel (dilfridge)" <dilfridge@gentoo.org>
+Date: Sun, 24 Jun 2012 00:05:21 +0200
+Subject: [PATCH] Marble includes need prefix marble/
+
+---
+ .../forms/widgets/mapbrowser/MapBrowserWidget.cpp  |    2 +-
+ .../forms/widgets/mapbrowser/MapBrowserWidget.h    |    2 +-
+ libs/main/rdf/KoRdfLocation.cpp                    |    4 ++--
+ libs/main/rdf/KoRdfLocationEditWidget.cpp          |    4 ++--
+ plugins/mapshape/MapShape.cpp                      |    2 +-
+ .../mapshape/MapShapeCommandChangeProjection.cpp   |    2 +-
+ plugins/mapshape/MapShapeCommandContentChange.cpp  |    2 +-
+ plugins/mapshape/MapShapeCommandSetMapThemeId.cpp  |    2 +-
+ plugins/mapshape/MapShapeCommandZoom.cpp           |    2 +-
+ plugins/mapshape/MapTool.cpp                       |    2 +-
+ plugins/reporting/maps/KoReportItemMaps.cpp        |    4 ++--
+ plugins/reporting/maps/KoReportItemMaps.h          |    2 +-
+ 12 files changed, 15 insertions(+), 15 deletions(-)
+
+diff --git a/kexi/plugins/forms/widgets/mapbrowser/MapBrowserWidget.cpp b/kexi/plugins/forms/widgets/mapbrowser/MapBrowserWidget.cpp
+index 0983141..bd0cf29 100644
+--- a/kexi/plugins/forms/widgets/mapbrowser/MapBrowserWidget.cpp
++++ b/kexi/plugins/forms/widgets/mapbrowser/MapBrowserWidget.cpp
+@@ -19,7 +19,7 @@
+ 
+ 
+ #include "MapBrowserWidget.h"
+-#include <MarbleWidget.h>
++#include <marble/MarbleWidget.h>
+ #include <QPointF>
+ #include <KDebug>
+ 
+diff --git a/kexi/plugins/forms/widgets/mapbrowser/MapBrowserWidget.h b/kexi/plugins/forms/widgets/mapbrowser/MapBrowserWidget.h
+index b699ca2..977eb5e 100644
+--- a/kexi/plugins/forms/widgets/mapbrowser/MapBrowserWidget.h
++++ b/kexi/plugins/forms/widgets/mapbrowser/MapBrowserWidget.h
+@@ -21,7 +21,7 @@
+ #ifndef MAPBROWSERWIDGET_H
+ #define MAPBROWSERWIDGET_H
+ 
+-#include <MarbleWidget.h>
++#include <marble/MarbleWidget.h>
+ 
+ #include "widgetfactory.h"
+ #include "container.h"
+diff --git a/libs/main/rdf/KoRdfLocation.cpp b/libs/main/rdf/KoRdfLocation.cpp
+index b51d0a2..1511806 100644
+--- a/libs/main/rdf/KoRdfLocation.cpp
++++ b/libs/main/rdf/KoRdfLocation.cpp
+@@ -32,8 +32,8 @@
+ // marble for geolocation
+ // #ifdef CAN_USE_MARBLE
+ // #include <LatLonEdit.h>
+-// #include <MarbleWidget.h>
+-// #include <MarbleWidgetInputHandler.h>
++// #include <marble/MarbleWidget.h>
++// #include <marble/MarbleWidgetInputHandler.h>
+ // #endif
+ 
+ using namespace Soprano;
+diff --git a/libs/main/rdf/KoRdfLocationEditWidget.cpp b/libs/main/rdf/KoRdfLocationEditWidget.cpp
+index 0436570..13bb23d 100644
+--- a/libs/main/rdf/KoRdfLocationEditWidget.cpp
++++ b/libs/main/rdf/KoRdfLocationEditWidget.cpp
+@@ -26,8 +26,8 @@
+ // marble for geolocation
+ // #ifdef CAN_USE_MARBLE
+ // #include <LatLonEdit.h>
+-// #include <MarbleWidget.h>
+-// #include <MarbleWidgetInputHandler.h>
++// #include <marble/MarbleWidget.h>
++// #include <marble/MarbleWidgetInputHandler.h>
+ // #endif
+ 
+ class KoRdfLocationEditWidgetPrivate
+diff --git a/plugins/mapshape/MapShape.cpp b/plugins/mapshape/MapShape.cpp
+index 06e3b0a..e8ec0c6 100644
+--- a/plugins/mapshape/MapShape.cpp
++++ b/plugins/mapshape/MapShape.cpp
+@@ -21,7 +21,7 @@
+ 
+ 
+ #include "MapShape.h"
+-#include <MarbleWidget.h>
++#include <marble/MarbleWidget.h>
+ #include <MarbleModel.h>
+ #include <KoImageData.h>
+ #include <KoXmlNS.h>
+diff --git a/plugins/mapshape/MapShapeCommandChangeProjection.cpp b/plugins/mapshape/MapShapeCommandChangeProjection.cpp
+index b41ed6b..9800725 100644
+--- a/plugins/mapshape/MapShapeCommandChangeProjection.cpp
++++ b/plugins/mapshape/MapShapeCommandChangeProjection.cpp
+@@ -21,7 +21,7 @@
+ #include "MapShapeCommandChangeProjection.h"
+ #include "MapShape.h"
+ 
+-#include <MarbleWidget.h>
++#include <marble/MarbleWidget.h>
+ 
+ MapShapeCommandChangeProjection::MapShapeCommandChangeProjection(MapShape * shape, Marble::Projection projection, KUndo2Command *parent)
+ : KUndo2Command(parent)
+diff --git a/plugins/mapshape/MapShapeCommandContentChange.cpp b/plugins/mapshape/MapShapeCommandContentChange.cpp
+index 52fc500..2ed8802 100644
+--- a/plugins/mapshape/MapShapeCommandContentChange.cpp
++++ b/plugins/mapshape/MapShapeCommandContentChange.cpp
+@@ -20,7 +20,7 @@
+ #include "MapShapeCommandContentChange.h"
+ 
+ #include "MapShape.h"
+-#include <MarbleWidget.h>
++#include <marble/MarbleWidget.h>
+ #include <QPointF>
+ 
+ 
+diff --git a/plugins/mapshape/MapShapeCommandSetMapThemeId.cpp b/plugins/mapshape/MapShapeCommandSetMapThemeId.cpp
+index 78c245a..4ca53ef 100644
+--- a/plugins/mapshape/MapShapeCommandSetMapThemeId.cpp
++++ b/plugins/mapshape/MapShapeCommandSetMapThemeId.cpp
+@@ -21,7 +21,7 @@
+ #include "MapShapeCommandSetMapThemeId.h"
+ #include "MapShape.h"
+ 
+-#include <MarbleWidget.h>
++#include <marble/MarbleWidget.h>
+ 
+ MapShapeCommandSetMapThemeId::MapShapeCommandSetMapThemeId(MapShape * shape, const QString& mapThemeId, KUndo2Command *parent)
+ : KUndo2Command(parent)
+diff --git a/plugins/mapshape/MapShapeCommandZoom.cpp b/plugins/mapshape/MapShapeCommandZoom.cpp
+index edeb6d7..6d0f897 100644
+--- a/plugins/mapshape/MapShapeCommandZoom.cpp
++++ b/plugins/mapshape/MapShapeCommandZoom.cpp
+@@ -21,7 +21,7 @@
+ #include "MapShapeCommandZoom.h"
+ #include "MapShape.h"
+ 
+-#include <MarbleWidget.h>
++#include <marble/MarbleWidget.h>
+ 
+ 
+ MapShapeCommandZoom::MapShapeCommandZoom(MapShape * shape, signed int value, KUndo2Command *parent)
+diff --git a/plugins/mapshape/MapTool.cpp b/plugins/mapshape/MapTool.cpp
+index 3733271..0f4bfca 100644
+--- a/plugins/mapshape/MapTool.cpp
++++ b/plugins/mapshape/MapTool.cpp
+@@ -42,7 +42,7 @@
+ #include <KoPointerEvent.h>
+ 
+ #include <MarbleControlBox.h>
+-#include <MarbleWidget.h>
++#include <marble/MarbleWidget.h>
+ #include <GeoDataLatLonAltBox.h>
+ 
+ 
+diff --git a/plugins/reporting/maps/KoReportItemMaps.cpp b/plugins/reporting/maps/KoReportItemMaps.cpp
+index 01969c3..ba2fa73 100644
+--- a/plugins/reporting/maps/KoReportItemMaps.cpp
++++ b/plugins/reporting/maps/KoReportItemMaps.cpp
+@@ -25,8 +25,8 @@
+ #include <QBuffer>
+ #include <kcodecs.h>
+ #include <renderobjects.h>
+-#include <MarbleWidget.h>
+-#include <MarbleModel.h>
++#include <marble/MarbleWidget.h>
++#include <marble/MarbleModel.h>
+ #include <QImage>
+ #include <QPixmap>
+ #include <sys/socket.h>
+diff --git a/plugins/reporting/maps/KoReportItemMaps.h b/plugins/reporting/maps/KoReportItemMaps.h
+index d07f2d0..a838a70 100644
+--- a/plugins/reporting/maps/KoReportItemMaps.h
++++ b/plugins/reporting/maps/KoReportItemMaps.h
+@@ -29,7 +29,7 @@
+ #include <kdebug.h>
+ #include <klocalizedstring.h>
+ #include <kglobalsettings.h>
+-#include <MarbleWidget.h>
++#include <marble/MarbleWidget.h>
+ #include <RdfForward.h>
+ #include <QMap>
+ 
+-- 
+1.7.9.2
+

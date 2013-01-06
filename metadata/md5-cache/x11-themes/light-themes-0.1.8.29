@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=GTK2/GTK3 Ambiance and Radiance themes from Ubuntu
+EAPI=3
+HOMEPAGE=https://launchpad.net/light-themes
+IUSE=gtk3
+KEYWORDS=amd64 x86
+LICENSE=CCPL-Attribution-ShareAlike-3.0
+RDEPEND=x11-themes/gtk-engines-murrine gtk3? ( x11-themes/gtk-engines-unico )
+SLOT=0
+SRC_URI=mirror://ubuntu/pool/main/l/light-themes/light-themes_0.1.8.29.tar.gz
+_md5_=62c0a352a894b93c4c263e087baccb38

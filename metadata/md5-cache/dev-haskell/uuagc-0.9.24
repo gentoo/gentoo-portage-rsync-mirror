@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst prerm setup test
+DEPEND=>=dev-haskell/cabal-1.2 >=dev-lang/ghc-6.10 dev-haskell/cabal >=dev-haskell/uulib-0.9.12 doc? ( dev-haskell/haddock ) >=dev-haskell/cabal-1.1.4
+DESCRIPTION=Attribute Grammar System of Universiteit Utrecht
+HOMEPAGE=http://www.cs.uu.nl/wiki/HUT/WebHome
+IUSE=doc profile
+KEYWORDS=amd64 ppc ppc64 sparc x86
+LICENSE=GPL-2
+RDEPEND=>=dev-lang/ghc-6.10 dev-haskell/cabal >=dev-haskell/uulib-0.9.12 dev-lang/ghc
+SLOT=0
+SRC_URI=mirror://hackage/packages/archive/uuagc/0.9.24/uuagc-0.9.24.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	ghc-package	c50de19959be43d5c072ac4169f4dbfd	haskell-cabal	b4543046102ee4aec41502a7cb8fd6f2	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=8720c0261d41fba397f78e3006f7ed50

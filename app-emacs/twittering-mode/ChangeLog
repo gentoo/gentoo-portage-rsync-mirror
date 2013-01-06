@@ -1,0 +1,17 @@
+# ChangeLog for app-emacs/twittering-mode
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/twittering-mode/ChangeLog,v 1.2 2012/03/13 14:47:58 naota Exp $
+
+  13 Mar 2012; Naohiro Aota <naota@gentoo.org>
+  -files/twittering-mode-9999-proxy-test.patch, twittering-mode-9999.ebuild:
+  Remove proxy test patch. Bug #407971
+
+*twittering-mode-9999 (07 May 2011)
+*twittering-mode-2.0.0 (07 May 2011)
+
+  07 May 2011; <naota@gentoo.org> +twittering-mode-2.0.0.ebuild,
+  +twittering-mode-9999.ebuild, +files/twittering-mode-9999-proxy-test.patch,
+  +metadata.xml:
+  New ebuild app-emacs/twittering-mode written by me. Emacs major mode for
+  Twitter.
+

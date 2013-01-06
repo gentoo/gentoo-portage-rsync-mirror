@@ -1,0 +1,28 @@
+# ChangeLog for net-proxy/cntlm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/cntlm/ChangeLog,v 1.4 2012/10/02 13:47:12 haubi Exp $
+
+*cntlm-0.93_beta5 (02 Oct 2012)
+
+  02 Oct 2012; Michael Haubenwallner <haubi@gentoo.org>
+  +cntlm-0.93_beta5.ebuild, +files/cntlm-0.93_beta5-buildsystem.patch:
+  Revbump beta version, bug#403375.
+
+*cntlm-0.92.3 (02 Oct 2012)
+
+  02 Oct 2012; Michael Haubenwallner <haubi@gentoo.org> +cntlm-0.92.3.ebuild,
+  +files/cntlm-0.92.3-buildsystem.patch:
+  Revbump. Respect CC/CFLAGS/LDFLAGS, build verbose, bug#334647.
+
+*cntlm-0.35.1-r2 (07 Nov 2011)
+
+  07 Nov 2011; Markus Duft <mduft@gentoo.org> +cntlm-0.35.1-r2.ebuild,
+  files/cntlm.initd:
+  bug#307523: fixed init script wrt stopping, and revbumped
+
+*cntlm-0.35.1-r1 (24 Feb 2010)
+
+  24 Feb 2010; Markus Duft <mduft@gentoo.org> +cntlm-0.35.1-r1.ebuild,
+  +files/cntlm.confd, +files/cntlm.initd, +metadata.xml:
+  initially added cntlm to tree
+

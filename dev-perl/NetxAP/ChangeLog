@@ -1,0 +1,23 @@
+# ChangeLog for dev-perl/NetxAP
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetxAP/ChangeLog,v 1.5 2012/06/24 12:59:35 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Add missing cpan remote-id tags in metadata.xml (#406287)
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -NetxAP-0.02.ebuild:
+  Cleanup
+
+*NetxAP-0.20.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +NetxAP-0.20.0.ebuild:
+  Change version scheme
+
+*NetxAP-0.02 (15 Aug 2011)
+
+  15 Aug 2011; Patrick Lauer <patrick@gentoo.org> +NetxAP-0.02.ebuild,
+  +metadata.xml:
+  Initial import from Rion overlay, ebuilds by the respective authors

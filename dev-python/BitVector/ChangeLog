@@ -1,0 +1,32 @@
+# ChangeLog for dev-python/BitVector
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/BitVector/ChangeLog,v 1.6 2012/03/02 09:46:42 djc Exp $
+
+*BitVector-3.1 (02 Mar 2012)
+
+  02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +BitVector-3.1.ebuild:
+  Version bump to 3.1.
+
+  05 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> BitVector-3.0-r1.ebuild:
+  Update with PyPI homepage.
+
+  05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -BitVector-2.0.ebuild:
+  Remove old ebuild. Requested by Arfrever
+
+*BitVector-3.0-r1 (05 Aug 2011)
+
+  05 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> -BitVector-3.0.ebuild,
+  +BitVector-3.0-r1.ebuild:
+  A few fixes for testing and python compats from Arfrever
+
+*BitVector-3.0 (29 Jul 2011)
+
+  29 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org> +BitVector-3.0.ebuild:
+  Version bump
+
+*BitVector-2.0 (18 Aug 2010)
+
+  18 Aug 2010; Andrey Grozin <grozin@gentoo.org> +BitVector-2.0.ebuild,
+  +metadata.xml:
+  Initial import
+

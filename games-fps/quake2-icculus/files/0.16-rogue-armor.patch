@@ -1,0 +1,12 @@
+--- src/rogue/g_local.h.orig	2006-06-24 16:50:49.000000000 +0200
++++ src/rogue/g_local.h	2006-06-24 17:44:35.000000000 +0200
+@@ -545,9 +545,6 @@
+ extern	int	sm_meat_index;
+ extern	int	snd_fry;
+ 
+-extern	int	jacket_armor_index;
+-extern	int	combat_armor_index;
+-extern	int	body_armor_index;
+ 
+ 
+ // means of death

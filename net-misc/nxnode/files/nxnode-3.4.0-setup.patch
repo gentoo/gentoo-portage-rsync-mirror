@@ -1,0 +1,61 @@
+--- scripts/setup/nxnode.orig	2009-09-24 18:12:36.000000000 +0200
++++ scripts/setup/nxnode	2009-12-15 21:22:27.000000000 +0100
+@@ -481,7 +481,7 @@
+     echo "#
+ # Specify path and name of the command to start the GNOME session.
+ #
+-CommandStartGnome=\"$DBUS_PATH --exit-with-session gnome-session\"
++CommandStartGnome=\"/etc/X11/Sessions/Gnome\"
+ " >> $CONFIG_FILE;
+   fi
+ 
+@@ -525,7 +525,7 @@
+     cmdGnome="/etc/X11/Xsession gnome-session"
+   elif [ $DBUS = "1" ] && [ "x$DBUS_PATH" != "x" ];
+   then
+-    cmdGnome="$DBUS_PATH --exit-with-session gnome-session"
++    cmdGnome="/etc/X11/Sessions/Gnome"
+   else
+     cmdGnome="gnome-session"
+   fi
+@@ -1421,6 +1421,10 @@
+       runCommand "$RMCOMMAND -f /etc/rc0.d/K01nxsensor" "Unable to remove '/etc/rc0.d/K01nxsensor'" "warn"
+       fi
+ 
++  elif [ "$system" = "gentoo" ]; then
++    # do nothing; this is handled by Gentoo ebuild
++    echo > /dev/null
++
+   else
+       if [ -h /etc/rc.d/rc3.d/S99nxsensor ];
+       then
+@@ -1465,6 +1469,10 @@
+ 
+ addNXinit () {
+ 
++ if [ "$system" = "gentoo" ] ; then
++   return;
++ fi
++
+  runCommand "cat $NODE_ROOT/scripts/init/nxsensor > /etc/init.d/nxsensor" "Unable to create: '/etc/init.d/nxsensor'" "warn"
+  runCommand "chmod +x /etc/init.d/nxsensor" "Cannot set permissions of '/etc/init.d/nxsensor' file" "warn"
+ 
+@@ -2489,6 +2497,10 @@
+   system=fedora
+ fi
+ 
++if [ -d /usr/portage ]; then
++  system=gentoo
++fi
++
+ if [ "x$system" = "x" -a -f /etc/release ];
+ then
+   system=solaris
+@@ -2523,6 +2535,7 @@
+     "fedora"             ) ;;
+     "debian"             ) ;;
+     "solaris"             ) ;;
++    "gentoo"            );;
+     ""                 ) ARGS=-1 && errMsg="$PREFIX $ERROR ERROR: Unable to autodetect the operating system type, please specify it" ;;
+     *                  ) ARGS=-1 && errMsg="$PREFIX $ERROR ERROR: Unsupported operating system '$system'" ;;
+   esac

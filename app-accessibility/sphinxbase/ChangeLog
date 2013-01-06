@@ -1,0 +1,19 @@
+# ChangeLog for app-accessibility/sphinxbase
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.4 2012/12/14 11:11:58 ulm Exp $
+
+  14 Dec 2012; Ulrich Müller <ulm@gentoo.org> sphinxbase-0.7.ebuild:
+  Fix LICENSE, see COPYING file, bug 445042.
+
+  24 Feb 2012; Patrick Lauer <patrick@gentoo.org> sphinxbase-0.7.ebuild:
+  Restricting pypy
+
+  12 Jan 2012; Michał Górny <mgorny@gentoo.org> sphinxbase-0.7.ebuild:
+  Fix invalid use of autotools-utils.eclass.
+
+*sphinxbase-0.7 (17 Nov 2011)
+
+  17 Nov 2011; Jesus Rivero <neurogeek@gentoo.org> +sphinxbase-0.7.ebuild,
+  +metadata.xml:
+  Initial commit
+

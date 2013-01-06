@@ -1,0 +1,13 @@
+# ChangeLog for net-misc/nxsadmin
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxsadmin/ChangeLog,v 1.2 2011/03/29 06:18:17 nirbheek Exp $
+
+  29 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> nxsadmin-0.2.1.ebuild:
+  Fix slot-dep on gnome-mm libs
+
+*nxsadmin-0.2.1 (07 Jan 2009)
+
+  07 Jan 2009; Bernard Cafarelli <voyageur@gentoo.org> +metadata.xml,
+  +nxsadmin-0.2.1.ebuild:
+  Initial commit
+

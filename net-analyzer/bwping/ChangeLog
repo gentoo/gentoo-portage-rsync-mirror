@@ -1,0 +1,51 @@
+# ChangeLog for net-analyzer/bwping
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/ChangeLog,v 1.9 2012/12/08 21:55:55 hwoarang Exp $
+
+*bwping-1.7 (08 Dec 2012)
+
+  08 Dec 2012; Markos Chandras <hwoarang@gentoo.org> +bwping-1.7.ebuild:
+  Version bump
+
+*bwping-1.6 (14 Oct 2012)
+
+  14 Oct 2012; Markos Chandras <hwoarang@gentoo.org> +bwping-1.6.ebuild,
+  -bwping-1.2.ebuild:
+  Version bump
+
+*bwping-1.5 (27 Sep 2012)
+
+  27 Sep 2012; Markos Chandras <hwoarang@gentoo.org> +bwping-1.5.ebuild:
+  Version bump
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> bwping-1.4.ebuild:
+  x86 stable wrt bug #400419
+
+  26 Jan 2012; Markos Chandras <hwoarang@gentoo.org> bwping-1.4.ebuild:
+  Stable on amd64 wrt bug #400419
+
+*bwping-1.4 (26 Aug 2011)
+
+  26 Aug 2011; Markos Chandras <hwoarang@gentoo.org> +bwping-1.4.ebuild:
+  Version bump
+
+  17 Jul 2010; Markos Chandras <hwoarang@gentoo.org> bwping-1.2.ebuild:
+  Stable on amd64 wrt bug #328265
+
+  17 Jul 2010; Christian Faulhammer <fauli@gentoo.org> bwping-1.2.ebuild:
+  stable x86, bug 328265
+
+*bwping-1.2 (05 Jun 2010)
+
+  05 Jun 2010; Markos Chandras <hwoarang@gentoo.org> +bwping-1.2.ebuild,
+  +metadata.xml:
+  Moved from sunrise overlay. Fixes bug #236231. Thanks to Oleg Derevenetz
+  (OlegD) <oleg@vsi.ru> for the sunrise ebuild
+
+  02 Sep 2008; Peter Volkov <pva@gentoo.org> metadata.xml:
+  Fixing metadata.xml to follow sunrise specifications: herd should be
+  maintainer-wanted and no maintainer required.
+
+  02 Sep 2008; Oleg Derevenetz (OlegD) <oleg@vsi.ru> +bwping-1.0.ebuild,
+  +metadata.xml:
+  New Ebuild for bug 236231 thanks to Peter Volkov

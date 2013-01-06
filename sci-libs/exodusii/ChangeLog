@@ -1,0 +1,39 @@
+# ChangeLog for sci-libs/exodusii
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/exodusii/ChangeLog,v 1.4 2012/12/13 14:52:24 jlec Exp $
+
+  13 Dec 2012; Justin Lecher <jlec@gentoo.org> exodusii-5.22b.ebuild,
+  metadata.xml:
+  fox long description and keyword correctly
+
+  13 Dec 2012; Justin Lecher <jlec@gentoo.org> exodusii-5.22b.ebuild:
+  readd missing USE=test
+
+  13 Dec 2012; Justin Lecher <jlec@gentoo.org> exodusii-5.22b.ebuild,
+  files/exodusii-5.22b-multilib.patch:
+  Do things the gentoo way; fix tests
+
+*exodusii-5.22b (13 Dec 2012)
+
+  13 Dec 2012; Justin Lecher <jlec@gentoo.org> +exodusii-5.22b.ebuild,
+  +files/exodusii-5.22b-multilib.patch, +metadata.xml:
+  Imported from sci overlay, #344063; needed for #433481
+
+*exodusii-5.22 (04 Sep 2012)
+
+  04 Sep 2012; Justin Lecher <jlec@gentoo.org> -exodusii-4.98.ebuild,
+  -files/exodusii-4.98-find-netcdf.patch, +exodusii-5.22.ebuild,
+  +files/exodusii-5.22-multilib.patch:
+  Version Bump
+
+  22 May 2012; Justin Lecher <jlec@gentoo.org> exodusii-4.98.ebuild,
+  metadata.xml:
+  Add missing eutils.eclass, bump to EAPI=4, remove unnecessary bits
+
+*exodusii-4.98 (15 Dec 2010)
+
+  15 Dec 2010; Nico Schlömer <nico.schloemer@gmail.com>
+  +exodusii-4.98.ebuild, +files/exodusii-4.98-find-netcdf.patch,
+  +metadata.xml:
+  Initial import.
+

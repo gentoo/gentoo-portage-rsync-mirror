@@ -1,0 +1,77 @@
+# ChangeLog for sec-policy/selinux-bacula
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bacula/ChangeLog,v 1.18 2012/12/30 19:25:46 swift Exp $
+
+*selinux-bacula-2.20120725-r9 (21 Dec 2012)
+
+  21 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-bacula-2.20120725-r9.ebuild:
+  Bumping to revision 9
+
+  17 Dec 2012; Sven Vermeulen <swift@gentoo.org> -selinux-bacula-2.20120215-r1.ebuild,
+  -selinux-bacula-2.20120215-r14.ebuild, -selinux-bacula-2.20120215-r15.ebuild,
+  -selinux-bacula-2.20120215.ebuild:
+  Removing older ebuilds
+
+  13 Dec 2012; Sven Vermeulen <swift@gentoo.org> selinux-bacula-2.20120725-r8.ebuild:
+  Stabilization
+
+*selinux-bacula-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-bacula-2.20120725-r8.ebuild:
+  Bumping to revision 8
+
+*selinux-bacula-2.20120725-r7 (18 Nov 2012)
+
+  18 Nov 2012; Sven Vermeulen <swift@gentoo.org> +selinux-bacula-2.20120725-r7.ebuild:
+  Pushing out rev 7
+
+*selinux-bacula-9999 (13 Oct 2012)
+
+  13 Oct 2012; Sven Vermeulen <swift@gentoo.org> +selinux-bacula-9999.ebuild:
+  Adding live ebuild
+
+  04 Oct 2012; Sven Vermeulen <swift@gentoo.org> selinux-bacula-2.20120725-r5.ebuild:
+  Stabilization
+
+*selinux-bacula-2.20120725-r5 (21 Sep 2012)
+
+  21 Sep 2012; Sven Vermeulen <swift@gentoo.org> +selinux-bacula-2.20120725-r5.ebuild:
+  Introducing policy for 2.20120725, rev5
+
+  30 Jul 2012; Sven Vermeulen <swift@gentoo.org> selinux-bacula-2.20120215-r14.ebuild:
+  Stabilization of revision 14 of the SELinux policy modules
+
+*selinux-bacula-2.20120215-r15 (26 Jul 2012)
+
+  26 Jul 2012; Sven Vermeulen <swift@gentoo.org> +selinux-bacula-2.20120215-r15.ebuild:
+  Bump to rev15
+
+*selinux-bacula-2.20120215-r14 (16 Jul 2012)
+
+  16 Jul 2012; Sven Vermeulen <swift@gentoo.org> +selinux-bacula-2.20120215-r14.ebuild:
+  Bumping to rev14
+
+*selinux-bacula-2.20120215-r1 (27 Jun 2012)
+
+  27 Jun 2012; Sven Vermeulen <swift@gentoo.org> +selinux-bacula-2.20120215-r1.ebuild:
+  Bump to revision 13
+
+  13 May 2012; Sven Vermeulen <swift@gentoo.org> -selinux-bacula-2.20110726.ebuild:
+  Removing deprecated ebuilds (cleanup)
+
+  29 Apr 2012; Sven Vermeulen <swift@gentoo.org> selinux-bacula-2.20120215.ebuild:
+  Stabilizing revision 7
+
+*selinux-bacula-2.20120215 (31 Mar 2012)
+
+  31 Mar 2012; Sven Vermeulen <swift@gentoo.org> +selinux-bacula-2.20120215.ebuild:
+  Bumping to 2.20120215 policies
+
+  23 Feb 2012; Sven Vermeulen <swift@gentoo.org> selinux-bacula-2.20110726.ebuild:
+  Stabilizing
+
+*selinux-bacula-2.20110726 (28 Dec 2011)
+
+  28 Dec 2011; Sven Vermeulen <swift@gentoo.org> +selinux-bacula-2.20110726.ebuild,
+  +metadata.xml:
+  Initial policy for Bacula, thanks to Stan Sander

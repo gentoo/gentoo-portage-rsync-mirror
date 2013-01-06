@@ -1,0 +1,16 @@
+# ChangeLog for app-misc/evtest
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evtest/ChangeLog,v 1.3 2012/05/03 19:41:35 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> evtest-1.29.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  27 Mar 2012; Mike Frysinger <vapier@gentoo.org> evtest-1.29.ebuild:
+  Stabilize for all.
+
+*evtest-1.29 (10 Feb 2012)
+
+  10 Feb 2012; Mike Frysinger <vapier@gentoo.org> +evtest-1.29.ebuild,
+  +metadata.xml:
+  Initial ebuild based on ChromiumOS ebuild.
+

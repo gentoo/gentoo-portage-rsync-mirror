@@ -1,0 +1,74 @@
+# ChangeLog for dev-python/jonpy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jonpy/ChangeLog,v 1.19 2012/12/01 02:05:11 radhermit Exp $
+
+  01 Dec 2012; Tim Harder <radhermit@gentoo.org> jonpy-0.10.ebuild:
+  Fix LICENSE (bug #445418 by ulm).
+
+  01 Dec 2012; Tim Harder <radhermit@gentoo.org> -jonpy-0.07.ebuild,
+  -jonpy-0.09.ebuild:
+  Remove old.
+
+  01 Jul 2012; Raúl Porcel <armin76@gentoo.org> jonpy-0.07.ebuild,
+  jonpy-0.09.ebuild, jonpy-0.10.ebuild:
+  Drop ia64 keywords
+
+  01 Jun 2012; Johannes Huber <johu@gentoo.org> jonpy-0.10.ebuild:
+  Stable for x86, wrt bug #418901
+
+  01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> jonpy-0.10.ebuild:
+  Stable for amd64, wrt bug #418901
+
+*jonpy-0.10 (26 Dec 2011)
+
+  26 Dec 2011; Patrick Lauer <patrick@gentoo.org> +jonpy-0.10.ebuild:
+  Bump for #389297
+
+  28 Aug 2010; Raúl Porcel <armin76@gentoo.org> jonpy-0.09.ebuild:
+  ia64 stable wrt #330609
+
+  31 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> jonpy-0.09.ebuild:
+  x86 stable wrt bug #330609
+
+*jonpy-0.09 (30 Jun 2010)
+
+  30 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -jonpy-0.06.ebuild, +jonpy-0.09.ebuild:
+  Version bump.
+
+  24 Nov 2009; Raúl Porcel <armin76@gentoo.org> jonpy-0.07.ebuild:
+  ia64 stable wrt #288119
+
+  20 Nov 2009; Markus Meier <maekke@gentoo.org> jonpy-0.07.ebuild:
+  x86 stable, bug #288119
+
+  09 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  jonpy-0.07.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+*jonpy-0.07 (07 Sep 2009)
+
+  07 Sep 2009; Patrick Lauer <patrick@gentoo.org> +jonpy-0.07.ebuild:
+  Bump
+
+  04 Mar 2007; Lukasz Strzygowski <lucass@gentoo.org> jonpy-0.06.ebuild:
+  Cleanup: added NEED_PYTHON, added doc/examples use-flags, keyworded ~amd64.
+
+  12 Jul 2006; Aron Griffis <agriffis@gentoo.org> jonpy-0.06.ebuild:
+  Mark 0.06 stable on ia64
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> jonpy-0.06.ebuild:
+  Mark 0.06 ~ia64
+
+  31 May 2005; Ian Leitch <port001@gentoo.org> jonpy-0.06.ebuild:
+  Stable on x86
+
+  19 Dec 2004; Ian Leitch <port001@gentoo.org> jonpy-0.06.ebuild:
+  Minor fixes
+
+*jonpy-0.06 (19 Dec 2004)
+
+  19 Dec 2004; Ian Leitch <port001@gentoo.org> +metadata.xml,
+  +jonpy-0.06.ebuild:
+  Initial commit
+

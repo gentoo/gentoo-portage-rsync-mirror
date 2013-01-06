@@ -1,0 +1,108 @@
+# ChangeLog for dev-python/icalendar
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.20 2012/11/09 13:03:46 nixphoeni Exp $
+
+  09 Nov 2012; Joe Sapp <nixphoeni@gentoo.org> -icalendar-2.1_p20100409.ebuild:
+  Remove old version
+
+*icalendar-3.1 (30 Oct 2012)
+
+  30 Oct 2012; Patrick Lauer <patrick@gentoo.org> +icalendar-3.1.ebuild:
+  Bump
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> icalendar-2.2.ebuild:
+  x86 stable wrt bug #400327
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> icalendar-2.2.ebuild:
+  Stable for amd64, wrt bug #400327
+
+  09 Dec 2011; Naohiro Aota <naota@gentoo.org> icalendar-2.2.ebuild:
+  Add ~x86-fbsd
+
+  02 Sep 2011; Joe Sapp <nixphoeni@gentoo.org> icalendar-2.2.ebuild:
+  Removed eutils inherit
+
+*icalendar-2.2 (31 Aug 2011)
+
+  31 Aug 2011; Joe Sapp <nixphoeni@gentoo.org> +icalendar-2.2.ebuild,
+  metadata.xml:
+  Version bump; added 'doc' USE flag
+
+  12 Apr 2011; Thomas Kahle <tomka@gentoo.org> icalendar-2.1_p20100409.ebuild:
+  x86 stable per bug 358713
+
+  14 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
+  icalendar-2.1_p20100409.ebuild:
+  Stable on amd64 wrt bug #358713
+
+  26 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -icalendar-2.0.1.ebuild:
+  Delete.
+
+  14 Aug 2010; Joe Sapp <nixphoeni@gentoo.org> icalendar-2.0.1.ebuild,
+  icalendar-2.1-r1.ebuild:
+  Fixed patch locations for old ebuilds (bug #332665)
+
+  04 Aug 2010; Joe Sapp <nixphoeni@gentoo.org>
+  -files/01_all_UIDGenerator-fix.patch,
+  -files/02_all_vDatetime-tzinfo-fix.patch,
+  -files/03_all_duration-fix.patch,
+  -files/04_all_date-type-test-in-vDDDTypes.patch,
+  -files/05_all_utf8-multi-octet-fix.patch,
+  -files/06_all_test.py-use-set.patch,
+  +files/2.1_p20100409/01_all_UIDGenerator-fix.patch,
+  +files/2.1_p20100409/02_all_vDatetime-tzinfo-fix.patch,
+  +files/2.1_p20100409/03_all_duration-fix.patch,
+  +files/2.1_p20100409/04_all_date-type-test-in-vDDDTypes.patch,
+  +files/2.1_p20100409/05_all_utf8-multi-octet-fix.patch,
+  +files/2.1_p20100409/06_all_test.py-use-set.patch,
+  +files/2.1_p20100409/07_all_vGeo.from_ical-test-fix.patch,
+  icalendar-2.1_p20100409.ebuild:
+  Reorganized patch directories for future expansion;
+  added a patch to fix doctests with Python 2.7 (bug #327931)
+
+  25 Apr 2010; Joe Sapp <nixphoeni@gentoo.org>
+  -files/icalendar-2.0.1-UIDGenerator-fix.patch,
+  -files/icalendar-2.1-vDatetime-tzinfo-fix.patch:
+  Renamed existing patches
+
+*icalendar-2.1_p20100409 (25 Apr 2010)
+
+  25 Apr 2010; Joe Sapp <nixphoeni@gentoo.org>
+  +files/01_all_UIDGenerator-fix.patch, icalendar-2.0.1.ebuild,
+  +files/02_all_vDatetime-tzinfo-fix.patch, icalendar-2.1-r1.ebuild,
+  +files/03_all_duration-fix.patch, +icalendar-2.1_p20100409.ebuild,
+  +files/04_all_date-type-test-in-vDDDTypes.patch,
+  +files/05_all_utf8-multi-octet-fix.patch,
+  +files/06_all_test.py-use-set.patch:
+  Added an ebuild to include patches flying across the mailing list. It's
+  unknown when upstream will release a version incorporating these fixes.
+
+  08 Feb 2010; Peter Volkov <pva@gentoo.org> icalendar-2.0.1.ebuild,
+  icalendar-2.1-r1.ebuild:
+  Add inherit eutils for epatch.
+
+  03 Feb 2010; Markus Meier <maekke@gentoo.org> icalendar-2.1-r1.ebuild:
+  amd64/x86 stable, bug #301953
+
+*icalendar-2.1-r1 (20 Dec 2009)
+
+  20 Dec 2009; Joe Sapp <nixphoeni@gentoo.org> -icalendar-2.1.ebuild,
+  +icalendar-2.1-r1.ebuild, +files/icalendar-2.1-vDatetime-tzinfo-fix.patch:
+  Added pending vDatetime.ical() patch from
+  http://codespeak.net/pipermail/icalendar-dev/2009-July/000139.html
+
+*icalendar-2.1 (19 Dec 2009)
+
+  19 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +icalendar-2.1.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
+
+  19 Sep 2009; Markus Meier <maekke@gentoo.org> icalendar-2.0.1.ebuild:
+  amd64/x86 stable, bug #285035
+
+*icalendar-2.0.1 (04 Jul 2009)
+
+  04 Jul 2009; Joe Sapp <nixphoeni@gentoo.org> +icalendar-2.0.1.ebuild,
+  +files/icalendar-2.0.1-UIDGenerator-fix.patch, +metadata.xml:
+  Initial commit - bug #111822

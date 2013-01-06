@@ -1,0 +1,10 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=Genetic Algorithm File Fitter
+EAPI=2
+HOMEPAGE=http://gaffitter.sourceforge.net/
+KEYWORDS=amd64 x86
+LICENSE=GPL-3
+SLOT=0
+SRC_URI=mirror://sourceforge/gaffitter/gaffitter-0.6.0.tar.bz2
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=fce6418bf39131f130a1c95343e2fe4d

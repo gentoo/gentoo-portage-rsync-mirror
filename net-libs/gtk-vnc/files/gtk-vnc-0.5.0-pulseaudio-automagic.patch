@@ -1,0 +1,55 @@
+From 2262cd59322d8351be5fcb67bf4229cca35c8764 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Fri, 6 Apr 2012 03:33:41 -0400
+Subject: [PATCH] configure: make pulseaudio detection non-automagic
+
+This is to allow building gtk-vnc on a system with pulseaudio and then
+deploying on a system without pulseaudio.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=673570
+---
+ configure.ac |   21 +++++++++++++++++----
+ 1 files changed, 17 insertions(+), 4 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 8eebe41..df213d5 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -216,11 +216,23 @@ AC_SUBST(VIEW_CFLAGS)
+ AC_SUBST(VIEW_LIBS)
+ 
+ 
+-PKG_CHECK_MODULES(PULSEAUDIO, libpulse-simple, WANT_PULSEAUDIO="yes", AC_MSG_NOTICE([Not building against libpulse]))
+-if test "x$WANT_PULSEAUDIO" = xyes; then
+-    AC_DEFINE_UNQUOTED([HAVE_PULSEAUDIO], 1,[Define if we have and want pulseaudio.])
++AC_ARG_WITH(pulseaudio,
++  [AS_HELP_STRING([--with-pulseaudio],
++    [use PulseAudio for audio playback @<:@default=check@:>@])],
++  [],
++  [with_pulseaudio=check])
++
++HAVE_PULSEAUDIO=no
++if test "x$with_pulseaudio" != "xno"; then
++  PULSEAUDIO_MODULES=libpulse-simple
++  if test "x$with_pulseaudio" == "xyes"; then
++    PKG_CHECK_MODULES(PULSEAUDIO, $PULSEAUDIO_MODULES, [HAVE_PULSEAUDIO=yes])
++  else
++    PKG_CHECK_MODULES(PULSEAUDIO, $PULSEAUDIO_MODULES, [HAVE_PULSEAUDIO=yes],
++      [AC_MSG_NOTICE([libpulse-simple not found, disabling PulseAudio support])])
++  fi
+ fi
+-AM_CONDITIONAL([HAVE_PULSEAUDIO], [test "x$WANT_PULSEAUDIO" = "xyes"])
++AM_CONDITIONAL([HAVE_PULSEAUDIO], [test "x$HAVE_PULSEAUDIO" = "xyes"])
+ AC_SUBST(PULSEAUDIO_CFLAGS)
+ AC_SUBST(PULSEAUDIO_LIBS)
+ 
+@@ -477,5 +489,6 @@ Configure summary:
+ 	Install example programs ...:  ${WITH_EXAMPLES}
+ 	Browser plugin .............:  ${enable_plugin}
+ 	SASL support................:  ${enable_sasl}
++	PulseAudio support..........:  ${HAVE_PULSEAUDIO}
+ 	GTK+ version................:  ${GTK_API_VERSION}
+ "
+-- 
+1.7.8.5
+

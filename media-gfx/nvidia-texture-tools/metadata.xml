@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>hasufell@gentoo.org</email>
+		<name>Julian Ospald</name>
+	</maintainer>
+	<maintainer>
+		<email>ssuominen@gentoo.org</email>
+		<name>Samuli Suominen</name>
+	</maintainer>
+	<use>
+		<flag name='cg'>Enable NVIDIA C graphics compiler toolkit plug-in</flag>
+		<flag name='cuda'>Enable NVIDIA CUDA toolkit support</flag>
+		<flag name='glew'>Enable support for The OpenGL Extension Wrangler Library (<pkg>media-libs/glew</pkg>)</flag>
+	</use>
+</pkgmetadata>

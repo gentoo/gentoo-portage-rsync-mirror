@@ -1,0 +1,151 @@
+# ChangeLog for media-sound/teamspeak-client-bin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.24 2012/11/18 10:19:18 pacho Exp $
+
+  18 Nov 2012; Pacho Ramos <pacho@gentoo.org>
+  -teamspeak-client-bin-3.0.0_rc1.ebuild, metadata.xml:
+  Drop maintainer as he is not taking care of this package. Remove old.
+
+*teamspeak-client-bin-3.0.6 (09 May 2012)
+
+  09 May 2012; Lars Wendler <polynomial-c@gentoo.org>
+  -teamspeak-client-bin-3.0.0_beta36.ebuild,
+  +teamspeak-client-bin-3.0.6.ebuild:
+  non-maintainer commit: Version bump. Removed ancient version.
+
+  14 Apr 2012; Pacho Ramos <pacho@gentoo.org>
+  teamspeak-client-bin-3.0.0_beta36.ebuild,
+  teamspeak-client-bin-3.0.0_rc1.ebuild:
+  Fix bug #411003.
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org>
+  teamspeak-client-bin-3.0.0_beta36.ebuild,
+  teamspeak-client-bin-3.0.0_rc1.ebuild:
+  Use unpack_makeself now that it supports newer versions.
+
+  21 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  teamspeak-client-bin-3.0.0_beta36.ebuild,
+  teamspeak-client-bin-3.0.0_rc1.ebuild:
+  Remove unused =media-libs/libpng-1.4* RDEPEND. The bundled copy of libQtGui
+  has NEEDED entry for libpng12.so.0 but this is not required when using the
+  system libQtGui.
+
+*teamspeak-client-bin-3.0.0_rc1 (03 Jun 2011)
+
+  03 Jun 2011; Christian Parpart <trapni@gentoo.org>
+  -teamspeak-client-bin-3.0.0_beta29.ebuild,
+  -teamspeak-client-bin-3.0.0_beta32.ebuild,
+  -teamspeak-client-bin-3.0.0_beta32-r1.ebuild,
+  -teamspeak-client-bin-3.0.0_beta32-r2.ebuild,
+  +teamspeak-client-bin-3.0.0_rc1.ebuild:
+  version bump and cleanup
+
+*teamspeak-client-bin-3.0.0_beta36 (27 Feb 2011)
+
+  27 Feb 2011; Christian Parpart <trapni@gentoo.org>
+  +teamspeak-client-bin-3.0.0_beta36.ebuild:
+  version bump
+
+*teamspeak-client-bin-3.0.0_beta32-r2 (23 Oct 2010)
+
+  23 Oct 2010; Christian Parpart <trapni@gentoo.org>
+  +teamspeak-client-bin-3.0.0_beta32-r2.ebuild:
+  adds desktop icon. fixes #330293 (thanks to David Mihalcin Jr.
+  <dmihalcin@verizon.net>)
+
+*teamspeak-client-bin-3.0.0_beta32-r1 (23 Oct 2010)
+
+  23 Oct 2010; Christian Parpart <trapni@gentoo.org>
+  +teamspeak-client-bin-3.0.0_beta32-r1.ebuild:
+  fixes #328807 - thanks to wrstwssr@yahoo.com
+
+*teamspeak-client-bin-3.0.0_beta32 (23 Oct 2010)
+
+  23 Oct 2010; Christian Parpart <trapni@gentoo.org> files/teamspeak3,
+  +teamspeak-client-bin-3.0.0_beta32.ebuild:
+  version bump
+
+*teamspeak-client-bin-3.0.0_beta29 (11 Sep 2010)
+
+  11 Sep 2010; Christian Parpart <trapni@gentoo.org>
+  -teamspeak-client-bin-3.0.0_beta15.ebuild,
+  -teamspeak-client-bin-3.0.0_beta17.ebuild,
+  -teamspeak-client-bin-3.0.0_beta20.ebuild,
+  -teamspeak-client-bin-3.0.0_beta21.ebuild,
+  -teamspeak-client-bin-3.0.0_beta22.ebuild,
+  +teamspeak-client-bin-3.0.0_beta29.ebuild:
+  version bump plus ebuild cleanup
+
+  14 Jul 2010; Christian Parpart <trapni@gentoo.org>
+  teamspeak-client-bin-3.0.0_beta22.ebuild:
+  added =media-libs/libpng-1.2* to RDEPENDS
+
+*teamspeak-client-bin-3.0.0_beta22 (20 Jun 2010)
+
+  20 Jun 2010; Christian Parpart <trapni@gentoo.org>
+  +teamspeak-client-bin-3.0.0_beta22.ebuild:
+  version bump
+
+*teamspeak-client-bin-3.0.0_beta21 (03 Jun 2010)
+
+  03 Jun 2010; Christian Parpart <trapni@gentoo.org>
+  +teamspeak-client-bin-3.0.0_beta21.ebuild:
+  version bump
+
+*teamspeak-client-bin-3.0.0_beta20 (16 May 2010)
+
+  16 May 2010; Christian Parpart <trapni@gentoo.org>
+  +teamspeak-client-bin-3.0.0_beta20.ebuild:
+  version bump
+
+  16 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Remove sound from metadata.xml.
+
+*teamspeak-client-bin-3.0.0_beta17 (15 Mar 2010)
+
+  15 Mar 2010; Christian Parpart <trapni@gentoo.org>
+  +teamspeak-client-bin-3.0.0_beta17.ebuild:
+  version bump
+
+  08 Feb 2010; Christian Parpart <trapni@gentoo.org>
+  -teamspeak-client-bin-3.0.0_beta5.ebuild,
+  -teamspeak-client-bin-3.0.0_beta9.ebuild,
+  -teamspeak-client-bin-3.0.0_beta11.ebuild,
+  -teamspeak-client-bin-3.0.0_beta12.ebuild,
+  -teamspeak-client-bin-3.0.0_beta13.ebuild:
+  cleanup
+
+  08 Feb 2010; Christian Parpart <trapni@gentoo.org>
+  +teamspeak-client-bin-3.0.0_beta15.ebuild:
+  version bump, closes #303147
+
+*teamspeak-client-bin-3.0.0_beta13 (04 Feb 2010)
+
+  04 Feb 2010; Christian Parpart <trapni@gentoo.org>
+  +teamspeak-client-bin-3.0.0_beta13.ebuild:
+  version bump
+
+*teamspeak-client-bin-3.0.0_beta12 (21 Jan 2010)
+
+  21 Jan 2010; Christian Parpart <trapni@gentoo.org>
+  +teamspeak-client-bin-3.0.0_beta12.ebuild:
+  version bump
+
+*teamspeak-client-bin-3.0.0_beta11 (20 Jan 2010)
+
+  20 Jan 2010; Christian Parpart <trapni@gentoo.org>
+  +teamspeak-client-bin-3.0.0_beta11.ebuild:
+  version bump plus license update
+
+*teamspeak-client-bin-3.0.0_beta9 (03 Jan 2010)
+
+  03 Jan 2010; Christian Parpart <trapni@gentoo.org>
+  +teamspeak-client-bin-3.0.0_beta9.ebuild:
+  version bump
+
+*teamspeak-client-bin-3.0.0_beta5 (23 Dec 2009)
+
+  23 Dec 2009; Christian Parpart <trapni@gentoo.org> +files/teamspeak3,
+  +teamspeak-client-bin-3.0.0_beta5.ebuild, +metadata.xml:
+  initial commit of TeamSpeak Client, version 3 (beta) - thanks to bug
+  #297577

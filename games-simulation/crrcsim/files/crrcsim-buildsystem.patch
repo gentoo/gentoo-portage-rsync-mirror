@@ -1,0 +1,15 @@
+--- crrcsim-0.9.11/configure.ac
++++ crrcsim-0.9.11/configure.ac
+@@ -79,8 +79,12 @@
+ dnl Default is: no portaudio present
+ portaudio=0
+ 
++AC_ARG_WITH([portaudio], AS_HELP_STRING([--without-portaudio], [Build without portaudio library (default: test)]))
++
++AS_IF([test "x$with_portaudio" != "xno"], [
+ dnl Check for the Portaudio header file
+ AC_CHECK_HEADER([portaudio.h])
++])
+ 
+ if  (test "x$ac_cv_header_portaudio_h" = "xyes"); then 
+   dnl Check for Portaudio 18

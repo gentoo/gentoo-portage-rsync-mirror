@@ -1,0 +1,32 @@
+--- setup.py.orig	2010-12-15 08:55:27.000000000 -0500
++++ setup.py	2010-12-15 09:05:32.000000000 -0500
+@@ -31,19 +31,21 @@
+     test_suite="runtests.get_test_suite",
+     packages=find_packages(),
+     scripts=['bin/desktopcouch-pair'],
+-    data_files = [('/usr/lib/desktopcouch/', ['bin/desktopcouch-service',
+-                                              'bin/desktopcouch-get-port',
+-                                              'bin/desktopcouch-stop']),
++    data_files = [
++#    data_files = [('/usr/lib/desktopcouch/', ['bin/desktopcouch-service',
++#                                              'bin/desktopcouch-get-port',
++#                                              'bin/desktopcouch-stop']),
+                   # Be sure all additions are reflected in MANIFEST.in !
+-                  ('/usr/share/doc/python-desktopcouch-records/api/',
+-                      ['desktopcouch/records/doc/records.txt',
+-                      'desktopcouch/records/doc/field_registry.txt',
+-                      'desktopcouch/contacts/schema.txt']),
++#                  ('/usr/share/doc/python-desktopcouch-records/api/',
++#                      ['desktopcouch/records/doc/records.txt',
++#                      'desktopcouch/records/doc/field_registry.txt',
++#                      'desktopcouch/contacts/schema.txt']),
+                   ('/etc/xdg/desktop-couch/',
+                       ['config/desktop-couch/compulsory-auth.ini']),
+                   ('/usr/share/desktopcouch/', ['data/couchdb.tmpl']),
+                   ('/usr/share/dbus-1/services/', ['org.desktopcouch.CouchDB.service']),
+-                  ('share/man/man1/', ['docs/man/desktopcouch-pair.1'])],
++#                  ('share/man/man1/', ['docs/man/desktopcouch-pair.1'])],
++    ],
+     cmdclass = { "build" : build_extra.build_extra,
+                  "build_i18n" :  build_i18n.build_i18n }
+ )

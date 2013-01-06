@@ -1,0 +1,54 @@
+# ChangeLog for app-misc/basenji
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/basenji/ChangeLog,v 1.12 2012/12/22 11:26:51 elvanor Exp $
+
+*basenji-1.0.0 (22 Dec 2012)
+
+  22 Dec 2012; <elvanor@gentoo.org> +basenji-1.0.0.ebuild:
+  Version bump to 1.0.0.
+
+*basenji-0.9.0 (06 Aug 2012)
+
+  06 Aug 2012; <elvanor@gentoo.org> +basenji-0.9.0.ebuild:
+  Version bump to 0.9.0.
+
+  27 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> basenji-0.7.1-r2.ebuild,
+  basenji-0.8.0.ebuild:
+  Pin to SLOT="0" of sys-fs/udisks.
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> basenji-0.8.0.ebuild:
+  x86 stable wrt bug #391997
+
+  03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> basenji-0.8.0.ebuild:
+  Stable on amd64 wrt bug #391997
+
+*basenji-0.8.0 (07 Oct 2011)
+
+  07 Oct 2011; <elvanor@gentoo.org> +basenji-0.8.0.ebuild:
+  Version bump.
+
+  12 Mar 2011; <angelos@gentoo.org> basenji-0.7.1-r2.ebuild:
+  Updated ndesk-dbus dependencies (bug 356391)
+
+  21 Dec 2010; Markos Chandras <hwoarang@gentoo.org> basenji-0.7.1-r2.ebuild:
+  Stable on amd64 wrt bug #348258
+
+*basenji-0.7.1-r2 (15 Dec 2010)
+
+  15 Dec 2010; <elvanor@gentoo.org> +basenji-0.7.1-r2.ebuild:
+  Added dependency on libextractor, bug #347999.
+
+  15 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> basenji-0.7.1.ebuild:
+  x86 stable wrt bug #348258
+
+*basenji-0.7.1-r1 (13 Dec 2010)
+
+  13 Dec 2010; <elvanor@gentoo.org> basenji-0.7.1.ebuild,
+  +basenji-0.7.1-r1.ebuild:
+  Temporary fix for #347999.
+
+*basenji-0.7.1 (07 Nov 2010)
+
+  07 Nov 2010; <elvanor@gentoo.org> +basenji-0.7.1.ebuild, +metadata.xml:
+  Initial commit.
+

@@ -1,0 +1,12 @@
+diff --git a/qxmpp.pri b/qxmpp.pri
+index 13854f8..a7353e7 100644
+--- a/qxmpp.pri
++++ b/qxmpp.pri
+@@ -37,6 +37,6 @@ symbian {
+ 
+ unix {
+ 	isEmpty(PREFIX) {
+-		PREFIX = /usr/local
++		PREFIX = /usr
+ 	}
+ }

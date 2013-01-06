@@ -1,0 +1,22 @@
+# ChangeLog for dev-util/abi-compliance-checker
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/abi-compliance-checker/ChangeLog,v 1.3 2012/12/15 12:47:24 mgorny Exp $
+
+*abi-compliance-checker-9999 (15 Dec 2012)
+
+  15 Dec 2012; Michał Górny <mgorny@gentoo.org>
+  +abi-compliance-checker-9999.ebuild:
+  Import the live ebuild.
+
+*abi-compliance-checker-1.98.4 (22 Oct 2012)
+
+  22 Oct 2012; Michał Górny <mgorny@gentoo.org>
+  +abi-compliance-checker-1.98.4.ebuild:
+  Version bump.
+
+*abi-compliance-checker-1.98.2 (17 Jul 2012)
+
+  17 Jul 2012; Michał Górny <mgorny@gentoo.org>
+  +abi-compliance-checker-1.98.2.ebuild, +metadata.xml:
+  Introduce an ebuild for abi-compliance-checker; a tool to check two library
+  versions for ABI & API compliance.

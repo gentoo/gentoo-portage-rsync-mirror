@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+  <email>nimiux@gentoo.org</email>
+  <name>José María Alonso</name>
+</maintainer>
+<longdescription lang="en">
+  conf-update is a ncurses-based config managment tool
+</longdescription>
+<use>
+  <flag name='colordiff'>Use colors when displaying diffs
+    (<pkg>app-misc/colordiff</pkg>)</flag>
+</use>
+</pkgmetadata>

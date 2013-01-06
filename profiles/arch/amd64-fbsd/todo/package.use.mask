@@ -1,0 +1,257 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.297 2012/09/20 13:05:50 aballier Exp $
+
+# Mask useflags that require deps with missing keywords.
+# Anyone is allowed and _very welcome_ to add masks there.
+# We will pick them up and keyword as time permits and prefer having a sane
+# deptree with missing features than a broken one.
+# Do *NOT* add a ChangeLog entry when modifying this file: it is intended as
+# temporary and cvs log is more than enough for getting its history.
+# 
+# Syntax is: # mising dep(s)
+#            mask
+# Keep it simple, we do not really care about the date or who masked it, we want
+# to be easily able to determine what we need to keyword.
+
+# dev-vcs/darcs
+app-portage/layman darcs
+
+# dev-python/mysql-python
+dev-vcs/mercurial bugzilla
+
+# net-libs/axtls
+net-misc/curl curl_ssl_axtls
+
+# media-libs/libmetalink -> undefined references on TEMP_FAILURE_RETRY (macro
+# provided by glibc)
+net-misc/curl metalink
+
+# net-libs/cyassl (fails to build)
+net-misc/curl curl_ssl_cyassl
+
+# sys-process/numactl
+sys-apps/hwloc numa
+
+# sys-auth/pam_krb5
+sys-auth/pambase pam_krb5
+
+# dev-lang/mono
+net-dns/libidn mono
+media-libs/libcaca mono
+dev-java/antlr mono
+
+# dev-lang/mono
+# >=dev-dotnet/gtk-sharp-2
+net-dns/avahi mono
+
+# net-misc/netkit-rsh
+x11-apps/xsm rsh
+
+# net-libs/libtirpc
+sys-apps/xinetd rpc
+
+# sci-libs/cfitsio
+media-gfx/ufraw fits
+
+# >=media-gfx/gimp-2
+media-gfx/ufraw gimp
+
+# app-crypt/heimdal
+net-nds/openldap smbkrb5passwd
+
+# app-office/lyx
+dev-tex/latex-beamer lyx
+
+# net-libs/libproxy
+net-libs/neon libproxy
+net-libs/glib-networking libproxy
+media-video/vlc libproxy
+
+# dev-libs/pakchois
+net-libs/neon pkcs11
+
+# app-text/texlive[extra]
+app-doc/doxygen latex
+
+# dev-tex/latex2html
+dev-python/pyopenssl doc
+dev-tex/chktex doc
+
+# dev-util/source-highlight
+dev-util/gtk-doc highlight
+
+# x11-misc/colord
+x11-libs/gtk+ colord
+
+# sys-auth/polkit
+sys-auth/consolekit policykit
+gnome-base/gconf policykit
+
+# media-sound/pulseaudio
+media-libs/libsdl pulseaudio
+media-libs/openal pulseaudio
+media-video/ffmpeg pulseaudio
+media-libs/libcanberra pulseaudio
+media-libs/phonon pulseaudio
+media-video/vlc pulseaudio
+
+# >=media-plugins/gst-plugins-pulse-0.10
+media-plugins/gst-plugins-meta pulseaudio
+
+# >=app-pda/libimobiledevice-1.1.0
+gnome-base/gvfs ios
+
+# >=sys-fs/fuse-2.8.0
+gnome-base/gvfs fuse
+
+# >=gnome-base/libgdu-3.0.2
+gnome-base/gvfs gdu
+
+# >=x11-libs/libva-0.32
+media-video/ffmpeg vaapi
+virtual/ffmpeg vaapi
+media-video/vlc vaapi
+
+# >=media-libs/xvid-1.1.0
+media-video/ffmpeg xvid
+
+# media-plugins/frei0r-plugins
+media-video/ffmpeg frei0r
+
+# media-libs/nas
+media-libs/libsdl nas
+x11-libs/qt-gui nas
+app-editors/xemacs nas
+
+# net-misc/openntpd
+net-misc/ntp openntpd
+
+# fails to build, need to investigate why
+net-libs/webkit-gtk introspection
+
+# virtual/mysql
+sci-mathematics/glpk mysql
+dev-libs/apr-util mysql
+x11-libs/qt-sql mysql
+dev-libs/redland mysql
+dev-libs/cyrus-sasl mysql
+dev-lang/php mysql mysqli
+net-libs/courier-authlib mysql
+
+# dev-db/freetds[mssql]
+dev-lang/php mssql
+
+# net-mail/courier-imap
+dev-libs/cyrus-sasl authdaemond
+
+# dev-db/freetds
+dev-libs/apr-util freetds
+x11-libs/qt-sql freetds
+
+# app-emulation/wine
+media-libs/mesa d3d
+
+# sys-fs/udev
+media-libs/mesa gbm
+x11-drivers/xf86-video-intel glamor
+
+# does not build
+x11-libs/libdrm libkms
+media-libs/mesa video_cards_vmware
+media-libs/mesa video_cards_r600
+media-libs/mesa video_cards_radeon
+
+# x11-libs/libdrm[libkms]
+media-libs/mesa xorg
+
+# x11-drivers/xf86-video-sis
+x11-base/xorg-drivers video_cards_sis
+
+# x11-drivers/xf86-video-tdfx
+x11-base/xorg-drivers video_cards_tdfx
+
+# x11-drivers/xf86-video-vmware
+# x11-libs/libdrm[libkms,video_cards_vmware]
+x11-base/xorg-drivers video_cards_vmware
+
+# >=media-plugins/gst-plugins-ffmpeg-0.10
+media-plugins/gst-plugins-meta ffmpeg
+
+# media-plugins/gst-plugins-taglib
+media-plugins/gst-plugins-meta taglib
+
+# >=media-libs/taglib-1.5
+media-video/vlc taglib
+
+# >=dev-cpp/clucene-0.9.21[-debug]
+app-misc/strigi clucene
+dev-libs/soprano clucene
+
+# >=sys-auth/polkit-qt-0.103.0
+# >=kde-misc/polkit-kde-kcmodules-0.98_pre20101127
+# >=sys-auth/polkit-kde-agent-0.99
+kde-base/kdelibs policykit
+
+# <=sci-geosciences/gpsd-2.95-r1
+app-misc/geoclue gps
+
+# app-misc/geoclue[networkmanager]
+app-misc/geoclue skyhook
+
+# >=sys-devel/binutils-2.22
+sys-devel/llvm gold
+
+# media-libs/liboggz
+media-libs/libkate wxwidgets
+
+# >=media-plugins/live-2011.12.23 (xlocale.h)
+media-video/vlc live
+
+# media-sound/fluidsynth
+media-video/vlc fluidsynth
+
+# media-libs/libshout
+media-video/vlc shout
+
+# sys-cluster/knem
+sys-cluster/openmpi openmpi_fabrics_knem
+
+# sys-infiniband/dapl
+sys-cluster/openmpi openmpi_fabrics_dapl
+
+# sys-infiniband/ofed
+sys-cluster/openmpi openmpi_fabrics_ofed
+
+# sys-infiniband/infinipath-psm
+sys-cluster/openmpi openmpi_fabrics_psm
+
+# sys-infiniband/librdmacm
+sys-cluster/openmpi openmpi_ofed_features_rdmacm
+
+# sys-cluster/open-mx
+sys-cluster/openmpi openmpi_fabrics_open-mx
+
+# sys-cluster/slurm
+sys-cluster/openmpi openmpi_rm_slurm
+
+# x11-libs/dnd
+app-editors/xemacs dnd
+
+# app-i18n/canna
+app-editors/xemacs canna
+
+# app-i18n/freewnn
+app-editors/xemacs freewnn
+
+# media-libs/libmtp
+media-video/vlc mtp
+
+# media-libs/devil[png,jpeg]
+media-gfx/graphviz devil
+
+# sci-libs/gts
+media-gfx/graphviz gts
+
+# sys-apps/util-linux (libuuid)
+net-misc/wget uuid

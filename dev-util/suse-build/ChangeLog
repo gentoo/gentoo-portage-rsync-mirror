@@ -1,0 +1,61 @@
+# ChangeLog for dev-util/suse-build
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.11 2012/12/17 10:02:37 scarabeus Exp $
+
+  17 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -suse-build-2012.09.27.ebuild, suse-build-2012.11.23.ebuild:
+  Stabilise on amd64 and x86, remove older.
+
+*suse-build-2012.11.23 (05 Dec 2012)
+
+  05 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +suse-build-2012.11.23.ebuild:
+  Version bump to latest.
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> suse-build-2012.09.27.ebuild:
+  workaround for bug 399061
+
+  15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  suse-build-2012.09.27.ebuild:
+  Stable on amd64 and x86 as there are no probs.
+
+  05 Nov 2012; Theo Chatzimichos <tampakrap@gentoo.org> metadata.xml:
+  Move to SUSE team
+
+*suse-build-2012.09.27 (02 Oct 2012)
+
+  02 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +suse-build-2012.09.27.ebuild, -suse-build-2011.01.20-r1.ebuild,
+  -suse-build-2011.09.26-r1.ebuild, suse-build-9999.ebuild:
+  Version bump to latest. Cleanup older. Polish the ebuild a bit.
+
+*suse-build-2011.09.26-r1 (30 Jul 2012)
+*suse-build-2011.01.20-r1 (30 Jul 2012)
+
+  30 Jul 2012; Michal Hrusecky <miska@gentoo.org>
+  -suse-build-2011.01.20.ebuild, +suse-build-2011.01.20-r1.ebuild,
+  -suse-build-2011.09.26.ebuild, +suse-build-2011.09.26-r1.ebuild,
+  suse-build-9999.ebuild:
+  Fixed sed in ebuild that was correcting paths making package work again
+
+*suse-build-2011.09.26 (07 Mar 2012)
+
+  07 Mar 2012; Michal Hrusecky <miska@gentoo.org> +suse-build-2011.09.26.ebuild,
+  metadata.xml, suse-build-2011.01.20.ebuild, suse-build-9999.ebuild:
+  * added new version 2011.09.26 * added co-maintainer * migrated to use obs-
+  download eclass
+
+  08 Jul 2011; Michal Hrusecky <miska@gentoo.org> suse-build-2011.01.20.ebuild,
+  suse-build-9999.ebuild:
+  Tested on x86, adding keyword
+
+  18 Jun 2011; Michal Hrusecky <miska@gentoo.org> metadata.xml:
+  Fixed metadata to include me as a maintainer
+
+*suse-build-9999 (17 Jun 2011)
+*suse-build-2011.01.20 (17 Jun 2011)
+
+  17 Jun 2011; Michal Hrusecky <miska@gentoo.org>
+  +suse-build-2011.01.20.ebuild, +suse-build-9999.ebuild, +metadata.xml:
+  New ebuild for suse-build. Ebuild written by me. Dependency for osc - bug
+  #350599

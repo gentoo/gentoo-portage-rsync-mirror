@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/isatapd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/isatapd/ChangeLog,v 1.1 2012/10/19 19:56:28 xmw Exp $
+
+*isatapd-0.9.6 (19 Oct 2012)
+
+  19 Oct 2012; Michael Weber <xmw@gentoo.org> +isatapd-0.9.6.ebuild,
+  +metadata.xml:
+  Initial import (bug 277506)
+

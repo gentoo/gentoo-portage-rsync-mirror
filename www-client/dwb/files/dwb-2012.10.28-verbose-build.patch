@@ -1,0 +1,55 @@
+--- dwb-2012.10.28/src/Makefile
++++ dwb-2012.10.28/src/Makefile
+@@ -7,30 +7,25 @@
+ all: $(TARGET)
+ 
+ $(TARGET): $(OBJ) 
+-	@echo "$(CC) $@"
+-	@$(CC) $(OBJ) -o $(TARGET) $(LDFLAGS) 
++	$(CC) $(OBJ) -o $(TARGET) $(LDFLAGS) 
+ 
+ -include $(OBJ:.o=.d)
+ -include $(DOBJ:.do=.dd)
+ 
+ %.o: %.c %.h config.h dwb.h tlds.h
+-	@echo "${CC} $<"
+-	@$(CC) -c -o $@ $< $(CFLAGS) $(CPPFLAGS) 
++	$(CC) -c -o $@ $< $(CFLAGS) $(CPPFLAGS) 
+ 
+ debug: $(DTARGET)
+ 
+ deps.d: %.c %.h tlds.h 
+-	@echo "$(CC) -MM $@"
+-	@$(CC) $(CFLAGS) -MM $< -o $@
++	$(CC) $(CFLAGS) -MM $< -o $@
+ 
+ 
+ %.do: %.c %.h config.h
+-	@echo "${CC} $<"
+-	@$(CC) -c -o $@ $< $(DCFLAGS) 
++	$(CC) -c -o $@ $< $(DCFLAGS) 
+ 
+ $(DTARGET): $(DOBJ) 
+-	@echo "$(CC) $@"
+-	@$(CC) $(DOBJ) -o $(DTARGET) $(LDFLAGS) 
++	$(CC) $(DOBJ) -o $(DTARGET) $(LDFLAGS) 
+ 
+ tlds.h: tlds.in 
+ 	@echo gen tlds.h
+--- dwb-2012.10.28/tools/Makefile
++++ dwb-2012.10.28/tools/Makefile
+@@ -24,12 +24,10 @@
+ all: $(TARGET)
+ 
+ $(TARGET): $(OBJ)
+-	@echo $(CC) $@
+-	@$(CC) $< -o $@ $(LDFLAGS)
++	$(CC) $< -o $@ $(LDFLAGS)
+ 
+ %.o: %.c
+-	@echo $(CC) $<
+-	@$(CC) $(CFLAGS) -c $< -o $@ $(CPPFLAGS)
++	$(CC) $(CFLAGS) -c $< -o $@ $(CPPFLAGS)
+ 
+ clean: 
+ 	rm -f $(TARGET) $(OBJ)

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=WmGragImage
+Comment=Image Grabber
+Comment[pl]=Wyłapywacz obrazów
+Exec=wmgrabimage
+Type=Application
+Encoding=UTF-8
+Terminal=0
+Categories=Application;Viewer;

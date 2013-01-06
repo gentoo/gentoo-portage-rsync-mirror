@@ -1,0 +1,30 @@
+# ChangeLog for net-analyzer/ethstatus
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethstatus/ChangeLog,v 1.9 2010/03/11 14:07:28 s4t4n Exp $
+
+  11 Mar 2010; Michele Noberasco <s4t4n@gentoo.org> ChangeLog:
+  Made package honour user LDFLAGS, see bug #290840.
+
+  24 Nov 2008; Michele Noberasco <s4t4n@gentoo.org> ChangeLog:
+  Fixed LDFLAGS ordering, see bug #247926.
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+  19 Jul 2005; David Holm <dholm@gentoo.org> ethstatus-0.4.2-r2.ebuild:
+  Added to ~ppc.
+
+  26 Jun 2005; Marcelo Goes <vanquirius@gentoo.org>
+  ethstatus-0.4.2-r2.ebuild:
+  amd64 stable.
+
+  19 Dec 2004; Jon Portnoy <avenj@gentoo.org> ethstatus-0.4.2-r2.ebuild :
+  AMD64 keywords.
+
+  13 Dec 2004; Michele Noberasco <s4t4n@gentoo.org> ethstatus-0.4.2-r2.ebuild:
+  Stable for x86.
+
+*ethstatus-0.4.2-r2 (06 Dec 2004)
+
+  06 Dec 2004; Michele Noberasco <s4t4n@gentoo.org> ethstatus-0.4.2-r2.ebuild:
+  Initial import. This is a debian-enhanced version of the package.

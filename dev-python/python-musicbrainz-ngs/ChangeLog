@@ -1,0 +1,20 @@
+# ChangeLog for dev-python/python-musicbrainz-ngs
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz-ngs/ChangeLog,v 1.3 2012/05/30 12:47:38 xarthisius Exp $
+
+  30 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  python-musicbrainz-ngs-0.2.ebuild:
+  Restrict not working ABIs, add proper PYTHON_DEPEND, enable tests, inherit
+  vcs-snapshot to avoid messing with S, use github tarball instead of gentoo
+  mirror, drop empty (R)DEPEND
+
+  28 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  python-musicbrainz-ngs-0.2.ebuild:
+  Keyword ~x86.
+
+*python-musicbrainz-ngs-0.2 (27 May 2012)
+
+  27 May 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +python-musicbrainz-ngs-0.2.ebuild, +metadata.xml:
+  New ebuild for musicbrainz-ngs python module
+

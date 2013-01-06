@@ -1,0 +1,46 @@
+http://oss.oetiker.ch/mrtg-trac/ticket/98
+
+--- Makefile.in	2010-11-09 16:25:34 +0000
++++ Makefile.in	2010-11-09 17:13:17 +0000
+@@ -21,7 +21,7 @@
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ GDFORM_EXT = @GDFORM_EXT@
+-LD_RUN_PATH = @LD_RUN_PATH@
++SET_LD_RUN_PATH = @SET_LD_RUN_PATH@
+ LIBS = @LIBS@
+ 
+ INSTALL = @INSTALL@
+@@ -30,7 +30,8 @@
+ all:	 bin/rateup subst
+ 
+ bin/rateup: bin/rateup.o
+-	LD_RUN_PATH=$(LD_RUN_PATH) $(CC) bin/rateup.o -o bin/rateup $(LDFLAGS)  $(LIBS) 
++	$(SET_LD_RUN_PATH) $(CC) bin/rateup.o -o bin/rateup $(LDFLAGS)  $(LIBS)
++
+ 
+ bin/rateup.o: $(top_srcdir)/src/rateup.c
+ 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $(top_srcdir)/src/rateup.c -o bin/rateup.o
+
+--- configure.in	2010-11-09 17:11:20 +0000
++++ configure.in	2010-11-09 17:12:49 +0000
+@@ -141,6 +141,9 @@
+ 
+ LIBS="${GLIBS} ${LIBS}" 
+ 
++if test x$LD_RUN_PATH != x; then
++	SET_LD_RUN_PATH="LD_RUN_PATH=${LD_RUN_PATH}"
++fi
+ 
+ dnl Make sure the header is here
+ AC_CHECK_HEADER( gd.h,:,[ GDFORM_EXT="" ])
+@@ -198,7 +201,7 @@
+ AC_SUBST(PERL)
+ AC_SUBST(RRD_PERL)
+ AC_SUBST(GDFORM_EXT)
+-AC_SUBST(LD_RUN_PATH)
++AC_SUBST(SET_LD_RUN_PATH)
+ AC_SUBST(LIBS)
+ AC_SUBST(CFLAGS)
+ AC_CONFIG_HEADERS(config.h)
+

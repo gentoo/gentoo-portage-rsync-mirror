@@ -1,0 +1,14 @@
+Tue Jul  3 16:21:48 CEST 2012  Jacques-Pascal Deplaix <jp.deplaix@gmail.com>
+  * Fix error on make logrotate
+diff -rN -u old-ocsigenserver.dev/Makefile new-ocsigenserver.dev/Makefile
+--- old-ocsigenserver.dev/Makefile	2012-08-07 20:23:31.171512318 +0200
++++ new-ocsigenserver.dev/Makefile	2012-08-07 20:23:31.287514234 +0200
+@@ -138,7 +138,7 @@
+ 	     | sed s%USER%$(OCSIGENUSER)%g \
+ 	     | sed s%GROUP%$(OCSIGENGROUP)%g \
+ 	     | sed s%_COMMANDPIPE_%$(COMMANDPIPE)%g \
+-	     > $(TEMPROOT)/etc/logrotate.d/$(PROJECTNAME) }
++	     > $(TEMPROOT)/etc/logrotate.d/$(PROJECTNAME)
+ 
+ ###
+ 

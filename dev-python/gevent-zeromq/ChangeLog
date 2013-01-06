@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/gevent-zeromq
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent-zeromq/ChangeLog,v 1.1 2012/08/27 13:35:44 ultrabug Exp $
+
+*gevent-zeromq-0.2.5 (27 Aug 2012)
+
+  27 Aug 2012; Ultrabug <ultrabug@gentoo.org> +gevent-zeromq-0.2.5.ebuild,
+  +metadata.xml:
+  Initial import from ultrabug overlay.
+

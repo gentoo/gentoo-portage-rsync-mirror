@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst postrm prepare test
+DEPEND==dev-lang/python-2*
+DESCRIPTION=A fully functional X client library for Python, written in Python
+EAPI=3
+HOMEPAGE=http://python-xlib.sourceforge.net/
+KEYWORDS=amd64 ~arm ppc ~ppc64 x86
+LICENSE=GPL-2
+RDEPEND==dev-lang/python-2*
+SLOT=0
+SRC_URI=mirror://sourceforge/python-xlib/python-xlib-0.15rc1.tar.gz
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=1f5c719dbd98f7dba075ccf8ad759ac4

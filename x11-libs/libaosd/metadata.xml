@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>mgorny@gentoo.org</email>
+		<name>Michał Górny</name>
+	</maintainer>
+
+	<use>
+		<flag name='pango'>Enable the textual helpers (requires pangocairo).</flag>
+		<flag name='tools'>Install the aosd_cat tool (requires glib-2.0).</flag>
+	</use>
+</pkgmetadata>

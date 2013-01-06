@@ -1,0 +1,55 @@
+# ChangeLog for sci-biology/stride
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/ChangeLog,v 1.13 2012/05/08 03:58:13 ottxor Exp $
+
+  08 May 2012; Christoph Junghans <ottxor@gentoo.org>
+  stride-20011129-r1.ebuild:
+  added ~x86-macos keyword
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #105599
+
+  29 Jun 2011; Justin Lecher <jlec@gentoo.org> stride-20011129.ebuild,
+  stride-20011129-r1.ebuild:
+  Fix sed on *FLAGS from : to |, EAPI bump
+
+  07 Mar 2010; Justin Lecher <jlec@gentoo.org>
+  stride-20011129-r1.ebuild:
+  Keyworded for prefix-linux, tested by me
+
+  06 Nov 2009; Markus Dittrich <markusle@gentoo.org> stride-20011129.ebuild,
+  stride-20011129-r1.ebuild:
+  Updated outdated homepage (fixes bug #290795).
+
+*stride-20011129-r1 (06 Nov 2009)
+
+  06 Nov 2009; Markus Dittrich <markusle@gentoo.org>
+  +stride-20011129-r1.ebuild, +files/stride-LDFLAGS.patch:
+  Added patch to respect LDFLAGS (bug #290754). Thanks much to
+  Justin Lecher <jlec@gentoo.org> for providing it.
+
+  20 Sep 2007; Santiago M. Mola <coldwind@gentoo.org>
+  stride-20011129.ebuild:
+  Change sed separator to :, now it doesn't fail if CC contains a path.
+
+  22 May 2007; Olivier Fisette <ribosome@gentoo.org> stride-20011129.ebuild:
+  Updated home page.
+
+  03 Dec 2006; Steve Dibb <beandog@gentoo.org> stride-20011129.ebuild:
+  Add ~amd64, bug 147983
+
+  01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Transfer to sci-biology herd from sci.
+
+  28 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  stride-20011129.ebuild:
+  Keyword ~ppc.
+
+*stride-20011129 (23 Jul 2006)
+
+  23 Jul 2006; Markus Dittrich <markusle@gentoo.org> +metadata.xml,
+  +stride-20011129.ebuild:
+  Initial import. Many thanks go the the author Dmitrij Frishman
+  <d.frishman@wzw.tum.de> for allowing us to distribute the source
+  and for an updated version of the code.
+

@@ -1,0 +1,90 @@
+diff -burN ./smplayer-0.8.0.orig/src/findsubtitles/findsubtitles.pro ./smplayer-0.8.0/src/findsubtitles/findsubtitles.pro
+--- ./smplayer-0.8.0.orig/src/findsubtitles/findsubtitles.pro	2012-03-31 20:46:16.000000000 +0800
++++ ./smplayer-0.8.0/src/findsubtitles/findsubtitles.pro	2012-04-07 15:27:47.114937446 +0800
+@@ -34,31 +34,15 @@
+ DEFINES += NO_SMPLAYER_SUPPORT DOWNLOAD_SUBS
+ 
+ contains( DEFINES, DOWNLOAD_SUBS ) {
+-	INCLUDEPATH += filedownloader quazip
+-	DEPENDPATH += filedownloader quazip
++	INCLUDEPATH += filedownloader
++	DEPENDPATH += filedownloader
+ 
+ 	HEADERS += filedownloader.h subchooserdialog.h
+ 	SOURCES += filedownloader.cpp subchooserdialog.cpp
+ 
+ 	FORMS += subchooserdialog.ui
+ 
+-	HEADERS += crypt.h \
+-	           ioapi.h \
+-	           quazip.h \
+-	           quazipfile.h \
+-	           quazipfileinfo.h \
+-	           quazipnewinfo.h \
+-	           unzip.h \
+-	           zip.h
+-
+-	SOURCES += ioapi.c \
+-	           quazip.cpp \
+-	           quazipfile.cpp \
+-	           quazipnewinfo.cpp \
+-	           unzip.c \
+-	           zip.c
+-
+-	LIBS += -lz
++	LIBS += -lquazip -lz
+ 	
+ 	win32 {
+ 		INCLUDEPATH += c:\development\zlib-1.2.3
+diff -burN ./smplayer-0.8.0.orig/src/findsubtitles/findsubtitleswindow.cpp ./smplayer-0.8.0/src/findsubtitles/findsubtitleswindow.cpp
+--- ./smplayer-0.8.0.orig/src/findsubtitles/findsubtitleswindow.cpp	2012-04-02 16:55:25.000000000 +0800
++++ ./smplayer-0.8.0/src/findsubtitles/findsubtitleswindow.cpp	2012-04-07 15:25:41.809593788 +0800
+@@ -37,8 +37,8 @@
+ #ifdef DOWNLOAD_SUBS
+ #include "filedownloader.h"
+ #include "subchooserdialog.h"
+-#include "quazip.h"
+-#include "quazipfile.h"
++#include <quazip/quazip.h>
++#include <quazip/quazipfile.h>
+ #include "fixsubs.h"
+ #include <QTemporaryFile>
+ #include <QBuffer>
+diff -burN ./smplayer-0.8.0.orig/src/smplayer.pro ./smplayer-0.8.0/src/smplayer.pro
+--- ./smplayer-0.8.0.orig/src/smplayer.pro	2012-04-02 17:09:38.000000000 +0800
++++ ./smplayer-0.8.0/src/smplayer.pro	2012-04-07 15:22:53.440501860 +0800
+@@ -258,31 +258,15 @@
+ 
+ # Download subtitles
+ contains( DEFINES, DOWNLOAD_SUBS ) {
+-	INCLUDEPATH += findsubtitles/filedownloader findsubtitles/quazip
+-	DEPENDPATH += findsubtitles/filedownloader findsubtitles/quazip
++	INCLUDEPATH += findsubtitles/filedownloader
++	DEPENDPATH += findsubtitles/filedownloader
+ 
+ 	HEADERS += filedownloader.h subchooserdialog.h fixsubs.h
+ 	SOURCES += filedownloader.cpp subchooserdialog.cpp fixsubs.cpp
+ 
+ 	FORMS += subchooserdialog.ui
+ 
+-	HEADERS += crypt.h \
+-	           ioapi.h \
+-	           quazip.h \
+-	           quazipfile.h \
+-	           quazipfileinfo.h \
+-	           quazipnewinfo.h \
+-	           unzip.h \
+-	           zip.h
+-
+-	SOURCES += ioapi.c \
+-	           quazip.cpp \
+-	           quazipfile.cpp \
+-	           quazipnewinfo.cpp \
+-	           unzip.c \
+-	           zip.c
+-
+-	LIBS += -lz
++	LIBS += -lquazip -lz
+ 	
+ 	win32 {
+ 		INCLUDEPATH += ..\\zlib-1.2.6

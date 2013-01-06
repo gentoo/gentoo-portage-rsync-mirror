@@ -1,0 +1,63 @@
+# ChangeLog for sys-auth/nss-pam-ldapd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.5 2012/11/19 01:01:44 prometheanfire Exp $
+
+*nss-pam-ldapd-0.8.12 (19 Nov 2012)
+
+  19 Nov 2012; Matthew Thode <prometheanfire@gentoo.org>
+  -nss-pam-ldapd-0.6.7-r1.ebuild, -nss-pam-ldapd-0.8.10-r1.ebuild,
+  +nss-pam-ldapd-0.8.12.ebuild:
+  adding nss-pam-ldapd-0.8.12 for bug 443072
+
+*nss-pam-ldapd-0.8.11-r1 (07 Nov 2012)
+
+  07 Nov 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +nss-pam-ldapd-0.8.11-r1.ebuild:
+  revbump of nss-pam-ldapd-0.8.11.ebuild to r1 for bug 442156
+
+*nss-pam-ldapd-0.8.11 (15 Oct 2012)
+
+  15 Oct 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +nss-pam-ldapd-0.8.11.ebuild:
+  adding nss-pam-ldapd-0.8.11
+
+*nss-pam-ldapd-0.8.10-r1 (24 Jul 2012)
+
+  24 Jul 2012; Matthew Thode <prometheanfire@gentoo.org>
+  -nss-pam-ldapd-0.8.10.ebuild, +nss-pam-ldapd-0.8.10-r1.ebuild:
+  revbump for pam_ldap conflict
+
+*nss-pam-ldapd-0.8.10 (24 Jul 2012)
+*nss-pam-ldapd-0.6.7-r1 (24 Jul 2012)
+
+  24 Jul 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +nss-pam-ldapd-0.6.7-r1.ebuild, +nss-pam-ldapd-0.8.10.ebuild,
+  +files/nslcd-init:
+  moving to nss-pam-ldapd, also fixes bugs #287727 #234555
+
+*nss-ldapd-0.6.7-r1 (02 Apr 2009)
+
+  02 Apr 2009; Doug Goldstein <cardoe@gentoo.org> -nss-ldapd-0.6.7.ebuild,
+  +nss-ldapd-0.6.7-r1.ebuild:
+  Remove world read from config file to fix security issue when using bindpw
+  field. bug #264574 CVE-2009-1073
+
+  08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Added no-herd to metadata.
+
+  05 Dec 2008; Doug Goldstein <cardoe@gentoo.org> files/nslcd.rc,
+  nss-ldapd-0.6.7.ebuild:
+  merge in improvements from Sunrise Overlay by Heath Caldwell
+  <hncaldwell@gentoo.org>
+
+*nss-ldapd-0.6.7 (04 Dec 2008)
+
+  04 Dec 2008; Doug Goldstein <cardoe@gentoo.org> +files/nslcd.rc,
+  +nss-ldapd-0.6.7.ebuild:
+  add new nss-ldapd package which is a fork of nss_ldap. It simplifies the
+  code base and provides a small nss library that speaks to a local daemon
+  that does all the LDAP communication. Due to the way NSS works, this will
+  improve interaction with user programs since less code is being loaded
+  into their process space.
+

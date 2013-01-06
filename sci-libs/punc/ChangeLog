@@ -1,0 +1,78 @@
+# ChangeLog for sci-libs/punc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/ChangeLog,v 1.17 2012/10/16 20:08:39 jlec Exp $
+
+  16 Oct 2012; Justin Lecher <jlec@gentoo.org> -punc-0.2_p1.ebuild,
+  -punc-1.4-r1.ebuild, punc-1.5.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> punc-0.2_p1.ebuild,
+  punc-1.4-r1.ebuild:
+  Add missing inheritance of eutils.eclass
+
+  30 Apr 2012; Justin Lecher <jlec@gentoo.org> punc-1.5.ebuild:
+  Handle static libs
+
+  24 Nov 2011; Justin Lecher <jlec@gentoo.org> files/1.5-linking.patch,
+  punc-1.5.ebuild, metadata.xml:
+  Use cleanly pkg-config to detect blas
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> punc-0.2_p1.ebuild,
+  punc-1.4-r1.ebuild, punc-1.5.ebuild:
+  Add dependency on virtual/fortran
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> punc-0.2_p1.ebuild,
+  punc-1.4-r1.ebuild, punc-1.5.ebuild:
+  Added fortran-2.eclass support
+
+  17 Apr 2011; Justin Lecher <jlec@gentoo.org> files/1.5-linking.patch,
+  punc-1.5.ebuild:
+  Corrected linking patch
+
+*punc-1.5 (16 Apr 2011)
+
+  16 Apr 2011; Justin Lecher <jlec@gentoo.org> +files/1.5-linking.patch,
+  +punc-1.5.ebuild:
+  Version Bump
+
+  13 Nov 2010; Justin Lecher <jlec@gentoo.org> punc-1.4-r1.ebuild:
+  Added missing DEP on virtual/lapack
+
+  10 Nov 2010; Justin Lecher <jlec@gentoo.org> punc-1.4-r1.ebuild:
+  Keyworded for ~-linux prefix
+
+*punc-1.4-r1 (02 Nov 2010)
+
+  02 Nov 2010; Justin Lecher <jlec@gentoo.org> +files/1.4-header.patch,
+  -punc-1.4.ebuild, +punc-1.4-r1.ebuild:
+  Fixed automagic doxygen usage
+
+  02 Nov 2010; Justin Lecher <jlec@gentoo.org> +files/1.4-doc.patch,
+  punc-1.4.ebuild:
+  Fixed automagic doxygen usage
+
+  31 Oct 2010; Justin Lecher <jlec@gentoo.org> files/1.4-linking.patch:
+  Added missing linking libs
+
+*punc-1.4 (31 Oct 2010)
+
+  31 Oct 2010; Justin Lecher <jlec@gentoo.org> +files/1.4-linking.patch,
+  +punc-1.4.ebuild:
+  Version Bump
+
+  28 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org> punc-0.2_p1.ebuild,
+  +files/punc-0.2_p1-libdir.patch:
+  Pre-patch the Makefile rather tha after econf (might fix an install
+  failure).
+
+  09 Jun 2010; Justin Lecher <jlec@gentoo.org> punc-0.2_p1.ebuild:
+  Force mpi USE to be equal with deps
+
+*punc-0.2_p1 (09 Jun 2010)
+
+  09 Jun 2010; Justin Lecher <jlec@gentoo.org>
+  +files/0.2_p1-configure.patch, +files/0.2_p1-underlinking.patch,
+  +punc-0.2_p1.ebuild, +metadata.xml:
+  New addition
+

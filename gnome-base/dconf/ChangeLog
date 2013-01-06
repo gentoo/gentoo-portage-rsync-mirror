@@ -1,0 +1,167 @@
+# ChangeLog for gnome-base/dconf
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.42 2012/11/21 23:13:39 eva Exp $
+
+*dconf-0.14.1 (21 Nov 2012)
+
+  21 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org> +dconf-0.14.1.ebuild:
+  Version bump.
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> dconf-0.12.1.ebuild:
+  ia64/sh/sparc stable wrt #427544
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org> dconf-0.12.1.ebuild:
+  stable ppc, bug #427544
+
+  15 Oct 2012; Matt Turner <mattst88@gentoo.org> dconf-0.12.1.ebuild:
+  Stable on alpha, bug 427544.
+
+  07 Oct 2012; Anthony G. Basile <blueness@gentoo.org> dconf-0.12.1.ebuild:
+  stable ppc64, bug #427544
+
+  06 Oct 2012; Markus Meier <maekke@gentoo.org> dconf-0.12.1.ebuild:
+  arm stable, bug #427544
+
+  04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> dconf-0.12.1.ebuild:
+  Stable for amd64, wrt bug #427544
+
+  03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> dconf-0.12.1.ebuild:
+  x86 stable wrt bug #427544
+
+*dconf-0.14.0 (27 Sep 2012)
+
+  27 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> dconf-0.10.0.ebuild,
+  -dconf-0.12.0.ebuild, dconf-0.12.1.ebuild, +dconf-0.14.0.ebuild:
+  Version bump for gnome-3.6; dconf-editor finally added search. Update
+  license.
+
+*dconf-0.12.1 (01 May 2012)
+
+  01 May 2012; Pacho Ramos <pacho@gentoo.org> +dconf-0.12.1.ebuild,
+  -dconf-0.8.0.ebuild:
+  Version bump, remove old.
+
+  02 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/dconf-0.11.5-automagic-vala.patch, dconf-0.12.0.ebuild:
+  Drop useless support for vala code regeneration.
+
+*dconf-0.12.0 (28 Mar 2012)
+
+  28 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -dconf-0.5.1-r2.ebuild, -files/dconf-0.5.1-automagic-vala.patch,
+  +files/dconf-0.11.5-automagic-vala.patch, +dconf-0.12.0.ebuild, metadata.xml:
+  Version bump with a much improved dconf-editor. Drop old.
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org> dconf-0.10.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #393007
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> dconf-0.10.0.ebuild:
+  Marking dconf-0.10.0 ppc stable for bug 393007
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org> dconf-0.10.0.ebuild:
+  Marking dconf-0.10.0 ppc64 stable for bug 393007
+
+  18 Jan 2012; Markus Meier <maekke@gentoo.org> dconf-0.10.0.ebuild:
+  arm stable, bug #393007
+
+  14 Jan 2012; Markus Meier <maekke@gentoo.org> dconf-0.10.0.ebuild:
+  x86 stable, bug #393007
+
+  29 Dec 2011; Pacho Ramos <pacho@gentoo.org> dconf-0.10.0.ebuild:
+  amd64 stable, bug 393007
+
+  22 Nov 2011; Naohiro Aota <naota@gentoo.org> dconf-0.10.0.ebuild:
+  Add ~x86-fbsd
+
+  16 Nov 2011; Jeremy Olexa <darkside@gentoo.org> dconf-0.8.0.ebuild:
+  add ~amd64-linux ~x86-linux, bug 384745
+
+  30 Oct 2011; Raúl Porcel <armin76@gentoo.org> dconf-0.8.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #385699
+
+  29 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  dconf-0.5.1-r2.ebuild, dconf-0.8.0.ebuild, dconf-0.10.0.ebuild:
+  Add dev-util/gtk-doc-am depend, needed for eautoreconf (bug #388751). Thanks
+  to cyberbat <cyberbat83@gmail.com> for reporting.
+
+*dconf-0.10.0 (29 Oct 2011)
+
+  29 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +dconf-0.10.0.ebuild:
+  Bump to 0.10.0 from the overlay. Update to bash-completion-r1 and kill
+  existing dconf-service processes in pkg_postinst following upstream
+  recommendation.
+  Notable changes: support for maybe types, dconf-editor and commandline tool
+  improvements.
+
+  28 Oct 2011; Markus Meier <maekke@gentoo.org> dconf-0.8.0.ebuild:
+  arm stable, bug #385699
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> dconf-0.8.0.ebuild:
+  x86 stable wrt bug #385699
+
+  16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> dconf-0.8.0.ebuild:
+  ppc/ppc64 stable wrt #385699
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> dconf-0.8.0.ebuild:
+  amd64 stable wrt #385699
+
+  05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> dconf-0.5.1-r2.ebuild:
+  ppc/ppc64 stable wrt #369909
+
+  15 Sep 2011; Gilles Dartiguelongue <eva@gentoo.org> dconf-0.5.1-r2.ebuild:
+  Pin libgee dependency to slot 0.
+
+  13 Aug 2011; Raúl Porcel <armin76@gentoo.org> dconf-0.5.1-r2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #369909
+
+  28 Jul 2011; Pacho Ramos <pacho@gentoo.org> dconf-0.8.0.ebuild:
+  Drop duplicated eautoreconf call that was included by error due some local
+  testing done before committing. Thanks a lot to Gilles for noticing.
+
+*dconf-0.8.0 (27 Jul 2011)
+
+  27 Jul 2011; Pacho Ramos <pacho@gentoo.org> -dconf-0.5.1-r1.ebuild,
+  +dconf-0.8.0.ebuild, +files/dconf-0.8.0-automagic-vala.patch:
+  Version bump, remove old.
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> dconf-0.5.1-r2.ebuild:
+  arm stable, bug #369909
+
+  14 Jul 2011; Thomas Kahle <tomka@gentoo.org> dconf-0.5.1-r2.ebuild:
+  x86 stable per bug 369909
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> dconf-0.5.1-r2.ebuild:
+  Stable on amd64 wrt bug #278255
+
+*dconf-0.5.1-r2 (07 Feb 2011)
+
+  07 Feb 2011; Pacho Ramos <pacho@gentoo.org> +dconf-0.5.1-r2.ebuild:
+  Upstream considers 'dconf' backend should be used if possible if dconf is
+  installed, setting it as default when dconf and gconf are present (thanks to
+  Gilles for remembering the issue).
+
+  06 Feb 2011; Raúl Porcel <armin76@gentoo.org> dconf-0.5.1-r1.ebuild:
+  Add ~ia64/~sh wrt #341503
+
+  26 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> dconf-0.5.1-r1.ebuild:
+  add ~ppc/~ppc64 wrt #341503
+
+  02 Jan 2011; Tobias Klausmann <klausman@gentoo.org> dconf-0.5.1-r1.ebuild:
+  Keyworded on alpha, bug #341503
+
+  11 Dec 2010; Michael Weber <xmw@gentoo.org> dconf-0.5.1-r1.ebuild:
+  Added ~arm/~sparc (bug 341503)
+
+*dconf-0.5.1-r1 (06 Nov 2010)
+
+  06 Nov 2010; Pacho Ramos <pacho@gentoo.org> -dconf-0.5.1.ebuild,
+  +dconf-0.5.1-r1.ebuild, +files/dconf-0.5.1-automagic-vala.patch:
+  Fix vala automagic support, upstream bug #634171
+
+*dconf-0.5.1 (17 Oct 2010)
+
+  17 Oct 2010; Pacho Ramos <pacho@gentoo.org> +dconf-0.5.1.ebuild,
+  +metadata.xml:
+  Adding dconf as it's required by apps relying on gsettings to store their
+  preferences.

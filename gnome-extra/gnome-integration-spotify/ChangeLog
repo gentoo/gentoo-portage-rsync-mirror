@@ -1,0 +1,22 @@
+# ChangeLog for gnome-extra/gnome-integration-spotify
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-integration-spotify/ChangeLog,v 1.3 2012/11/20 20:03:08 prometheanfire Exp $
+
+*gnome-integration-spotify-20121120 (20 Nov 2012)
+
+  20 Nov 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +gnome-integration-spotify-20121120.ebuild,
+  -gnome-integration-spotify-20121119.ebuild:
+  update for bug 443918 again, yay tabs
+
+*gnome-integration-spotify-20121119 (20 Nov 2012)
+
+  20 Nov 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +gnome-integration-spotify-20121119.ebuild:
+  adding gnome-integration-spotify-20121119 for bug 443918
+
+*gnome-integration-spotify-20121019 (11 Nov 2012)
+
+  11 Nov 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +gnome-integration-spotify-20121019.ebuild, +metadata.xml:
+  adding the initial ebuild for bug 442682

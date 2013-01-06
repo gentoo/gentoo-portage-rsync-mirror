@@ -1,0 +1,26 @@
+# ChangeLog for dev-php/PEAR-Crypt_GPG
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_GPG/ChangeLog,v 1.4 2012/01/18 18:22:08 mabi Exp $
+
+  18 Jan 2012; Matti Bickel <mabi@gentoo.org> -PEAR-Crypt_GPG-1.0.0.ebuild,
+  -PEAR-Crypt_GPG-1.1.1.ebuild:
+  remove old
+
+*PEAR-Crypt_GPG-1.3.2 (02 Oct 2011)
+
+  02 Oct 2011; Ole Markus With <olemarkus@gentoo.org>
+  +PEAR-Crypt_GPG-1.3.2.ebuild:
+  Version bump
+
+*PEAR-Crypt_GPG-1.1.1 (05 Nov 2010)
+
+  05 Nov 2010; Ole Markus With <olemarkus@gentoo.org>
+  +PEAR-Crypt_GPG-1.1.1.ebuild:
+  Version bump (Bug 343465)
+
+*PEAR-Crypt_GPG-1.0.0 (05 Jan 2010)
+
+  05 Jan 2010; Steve Dibb <beandog@gentoo.org> +PEAR-Crypt_GPG-1.0.0.ebuild,
+  +metadata.xml:
+  Initial commit, bug 298362
+

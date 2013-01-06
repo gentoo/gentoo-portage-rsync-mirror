@@ -1,0 +1,12 @@
+DEFINED_PHASES=install setup
+DESCRIPTION=Windows 32-bit binary codecs for video and audio playback support
+HOMEPAGE=http://www.mplayerhq.hu/
+IUSE=real
+KEYWORDS=-* ~amd64 x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-linux
+LICENSE=as-is
+RDEPEND=real? ( =virtual/libstdc++-3.3* )
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=mirror://mplayer/releases/codecs/all-20071007.tar.bz2
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=8846147f9e453f73da1def9383f92fb3

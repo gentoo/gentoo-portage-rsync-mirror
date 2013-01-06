@@ -1,0 +1,30 @@
+ src/Makefile.am |    2 +-
+ src/Makefile.in |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/Makefile.am b/src/Makefile.am
+index 02dd02e..b58791c 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -85,7 +85,7 @@ EXTRA_DIST = \
+  win32/nsis/easytag-install.ico \
+  win32/nsis/easytag-uninstall.bmp 
+ 
+-easytag_LDADD = $(GTK_LIBS) libmpg123/libmpg123.a libapetag/libapetag.a  id3lib/libid3bugfix.a
++easytag_LDADD = $(GTK_LIBS) libmpg123/libmpg123.a libapetag/libapetag.a  id3lib/libid3bugfix.a -lm
+ 
+ localedir = $(datadir)/locale
+ PACKAGE_DATA_DIR = $(datadir)/$(PACKAGE)
+diff --git a/src/Makefile.in b/src/Makefile.in
+index b5093c7..91bdf29 100644
+--- a/src/Makefile.in
++++ b/src/Makefile.in
+@@ -351,7 +351,7 @@ EXTRA_DIST = \
+  win32/nsis/easytag-install.ico \
+  win32/nsis/easytag-uninstall.bmp 
+ 
+-easytag_LDADD = $(GTK_LIBS) libmpg123/libmpg123.a libapetag/libapetag.a  id3lib/libid3bugfix.a
++easytag_LDADD = $(GTK_LIBS) libmpg123/libmpg123.a libapetag/libapetag.a  id3lib/libid3bugfix.a -lm
+ PACKAGE_DATA_DIR = $(datadir)/$(PACKAGE)
+ INCLUDES = -DLOCALEDIR=\"$(localedir)\" \
+            -DPACKAGE_DATA_DIR=\"$(PACKAGE_DATA_DIR)\"

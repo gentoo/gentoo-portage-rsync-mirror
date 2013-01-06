@@ -1,0 +1,20 @@
+# ChangeLog for games-misc/nyancat
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/nyancat/ChangeLog,v 1.5 2012/04/30 17:51:29 jdhore Exp $
+
+  30 Apr 2012; Jeff Horelick <jdhore@gentoo.org> nyancat-0_pre20120302.ebuild:
+  marked x86 per bug 413933
+
+  30 Apr 2012; Agostino Sarubbo <ago@gentoo.org> nyancat-0_pre20120302.ebuild:
+  Stable for amd64, wrt bug #413933
+
+  21 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  nyancat-0_pre20120302.ebuild:
+  Use gentoo mirrors.
+
+*nyancat-0_pre20120302 (02 Mar 2012)
+
+  02 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +nyancat-0_pre20120302.ebuild:
+  Initial commit.
+

@@ -1,0 +1,13 @@
+# ChangeLog for app-office/multitalk
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/multitalk/ChangeLog,v 1.2 2009/05/16 16:11:23 matsuu Exp $
+
+  16 May 2009; MATSUU Takuto <matsuu@gentoo.org> ChangeLog:
+  Added ~x86.
+
+*multitalk-1.4 (20 Nov 2008)
+
+  20 Nov 2008; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
+  +multitalk-1.4.ebuild:
+  Initial import.
+

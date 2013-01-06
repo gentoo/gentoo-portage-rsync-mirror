@@ -1,0 +1,15 @@
+# ChangeLog for app-dicts/sword-hnv
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-hnv/ChangeLog,v 1.2 2009/01/10 23:39:35 beandog Exp $
+
+*sword-hnv-1.8 (10 Jan 2009)
+
+  10 Jan 2009; Steve Dibb <beandog@gentoo.org> +sword-hnv-1.8.ebuild:
+  Version bump, bug 251642
+
+*sword-hnv-1.6 (14 Mar 2008)
+
+  14 Mar 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-hnv-1.6.ebuild:
+  Initial commit
+

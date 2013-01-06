@@ -1,0 +1,12 @@
+diff -uNrbB ibus-chewing-1.3.10-Source.bak/CMakeLists.txt ibus-chewing-1.3.10-Source/CMakeLists.txt
+--- ibus-chewing-1.3.10-Source.bak/CMakeLists.txt	2011-10-12 19:50:51.371121417 +0800
++++ ibus-chewing-1.3.10-Source/CMakeLists.txt	2011-10-24 09:24:06.189668872 +0800
+@@ -20,7 +20,7 @@
+ 
+ Chewing also support toned Hanyu pinyin input.")
+ 
+-SET(CMAKE_C_FLAGS "-Wall")
++SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
+ 
+ SET(AUTHORS "Peng Huang, Ding-Yi Chen")
+ SET(MAINTAINER "Ding-Yi Chen <dchen at redhat.com>")

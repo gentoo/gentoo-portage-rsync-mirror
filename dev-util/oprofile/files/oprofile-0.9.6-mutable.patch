@@ -1,0 +1,19 @@
+commit b18f60db60487ada38d5f04f52981628b28c6835
+Author: William Cohen <wcohen@redhat.com>
+Date:   Wed Feb 9 15:27:47 2011 -0500
+
+    Do not use mutable for reference variable.
+
+diff --git a/libpp/format_output.h b/libpp/format_output.h
+index b6c4592..8e527d5 100644
+--- a/libpp/format_output.h
++++ b/libpp/format_output.h
+@@ -91,7 +91,7 @@ protected:
+ 		symbol_entry const & symbol;
+ 		sample_entry const & sample;
+ 		size_t pclass;
+-		mutable counts_t & counts;
++		counts_t & counts;
+ 		extra_images const & extra;
+ 		double diff;
+ 	};

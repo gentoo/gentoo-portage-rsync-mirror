@@ -1,0 +1,27 @@
+# ChangeLog for dev-embedded/scratchbox-toolchain-cs2009q3-eglibc2_10
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q3-eglibc2_10/ChangeLog,v 1.4 2011/09/13 19:05:26 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #278944
+
+*scratchbox-toolchain-cs2009q3-eglibc2_10-1.0.18 (19 Sep 2010)
+
+  19 Sep 2010; Dominik Kapusta <ayoy@gentoo.org>
+  +scratchbox-toolchain-cs2009q3-eglibc2_10-1.0.18.ebuild:
+  Version bump, remove old versions. Thanks to David King
+  <amigadave@amigadave.com> for reporting (bug #338019).
+
+*scratchbox-toolchain-cs2009q3-eglibc2_10-1.0.17-r1 (08 Sep 2010)
+
+  08 Sep 2010; Dominik Kapusta <ayoy@gentoo.org>
+  -scratchbox-toolchain-cs2009q3-eglibc2_10-1.0.17.ebuild,
+  +scratchbox-toolchain-cs2009q3-eglibc2_10-1.0.17-r1.ebuild:
+  Adding arm-soft toolchain
+
+*scratchbox-toolchain-cs2009q3-eglibc2_10-1.0.17 (02 Aug 2010)
+
+  02 Aug 2010; Dominik Kapusta <ayoy@gentoo.org>
+  +scratchbox-toolchain-cs2009q3-eglibc2_10-1.0.17.ebuild, +metadata.xml:
+  Initial commit for 2009q3 scratchbox toolchain.
+

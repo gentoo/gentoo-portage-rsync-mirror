@@ -1,0 +1,38 @@
+# ChangeLog for dev-ml/core_extended
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/ChangeLog,v 1.7 2012/10/17 12:13:47 aballier Exp $
+
+  17 Oct 2012; Alexis Ballier <aballier@gentoo.org>
+  core_extended-108.07.01.ebuild:
+  Mirror the distfile, upstream one fails to fetch, bug #438610 by Nick Bowler
+
+*core_extended-108.07.01 (08 Oct 2012)
+
+  08 Oct 2012; Alexis Ballier <aballier@gentoo.org>
+  +core_extended-108.07.01.ebuild:
+  version bump
+
+  07 Aug 2012; Alexis Ballier <aballier@gentoo.org>
+  -core_extended-107.01.ebuild:
+  remove old
+
+  09 Jul 2012; Ulrich Müller <ulm@gentoo.org> core_extended-107.01.ebuild,
+  core_extended-108.00.01.ebuild:
+  Update LICENSE, bug 425140.
+
+  03 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  core_extended-108.00.01.ebuild:
+  add missing test to IUSE
+
+*core_extended-108.00.01 (30 Jun 2012)
+
+  30 Jun 2012; Alexis Ballier <aballier@gentoo.org>
+  +core_extended-108.00.01.ebuild:
+  version bump
+
+*core_extended-107.01 (28 Mar 2012)
+
+  28 Mar 2012; Alexis Ballier <aballier@gentoo.org>
+  +core_extended-107.01.ebuild, +metadata.xml:
+  initial import, based on ebuild from Vladimir Ivanov in bug #361173 and
+  converted to oasis.eclass

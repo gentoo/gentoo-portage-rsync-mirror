@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install
+DEPEND=>=dev-libs/glib-2.6:2 >=media-libs/libsndfile-1.0 sys-libs/zlib virtual/pkgconfig
+DESCRIPTION=CD and DVD image access library
+EAPI=4
+HOMEPAGE=http://cdemu.org
+IUSE=static-libs
+KEYWORDS=amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=dev-libs/glib-2.6:2 >=media-libs/libsndfile-1.0 sys-libs/zlib
+SLOT=0
+SRC_URI=mirror://sourceforge/cdemu/libmirage-1.4.0.tar.gz
+_md5_=813bd6ddac0289f6a286f1cf860026ac

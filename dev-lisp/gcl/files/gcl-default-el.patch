@@ -1,0 +1,15 @@
+--- configure~	2011-06-20 22:41:48.000000000 +0700
++++ configure	2011-12-21 16:15:49.000000000 +0700
+@@ -7359,8 +7359,2 @@
+ $as_echo_n "checking emacs default.el... " >&6; }
+-if [ "$EMACS" != "" ] ; then
+-	EMACS_DEFAULT_EL=`$EMACS -q -batch --no-site-file -l conftest.el 2>&1 | sed -e /Loading/d | sed -e /load/d `
+-else
+-	EMACS_DEFAULT_EL=""
+-fi
+-if  test -f "${EMACS_DEFAULT_EL}"  ; then true;else
+   if test -d $EMACS_SITE_LISP ; then
+@@ -7368,3 +7362,2 @@
+   fi
+-fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $EMACS_DEFAULT_EL" >&5

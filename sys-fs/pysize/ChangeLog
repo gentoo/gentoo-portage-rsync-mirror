@@ -1,0 +1,26 @@
+# ChangeLog for sys-fs/pysize
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/pysize/ChangeLog,v 1.6 2012/03/31 16:14:58 jlec Exp $
+
+  31 Mar 2012; Justin Lecher <jlec@gentoo.org> metadata.xml, pysize-0.2.ebuild:
+  Complete removal of psyco support, thanks ssuominen for heads up
+
+  31 Mar 2012; Justin Lecher <jlec@gentoo.org> pysize-0.2.ebuild, metadata.xml:
+  Drop psyco support, #410363
+
+  24 Mar 2011; Thomas Kahle <tomka@gentoo.org> pysize-0.2.ebuild:
+  x86 stable per bug 357767
+
+  08 Mar 2011; Markos Chandras <hwoarang@gentoo.org> pysize-0.2.ebuild:
+  Stable on amd64 wrt bug #357767
+
+  07 Mar 2011; Justin Lecher <jlec@gentoo.org> pysize-0.2.ebuild:
+  Correct Slots for gtk 3 introduction to tree, keyworded for prefix linux
+
+*pysize-0.2 (11 Jul 2010)
+
+  11 Jul 2010; Justin Lecher <jlec@gentoo.org>
+  +files/0.2-setuptools-automagic.patch, +pysize-0.2.ebuild,
+  +files/psyco-0.2-automagic.patch, +metadata.xml:
+  Import from sunrise
+

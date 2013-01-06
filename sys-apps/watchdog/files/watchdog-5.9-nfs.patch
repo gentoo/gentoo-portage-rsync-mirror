@@ -1,0 +1,78 @@
+https://sourceforge.net/tracker/?func=detail&aid=3314009&group_id=172030&atid=860196
+http://bugs.gentoo.org/370655
+
+--- src/nfsmount_clnt.c
++++ src/nfsmount_clnt.c
+@@ -3,6 +3,9 @@
+  * It was generated using rpcgen.
+  */
+ 
++#include "config.h"
++#if HAVE_NFS
++
+ #include "nfsmount.h"
+ /*
+  * Sun RPC is a product of Sun Microsystems, Inc. and is provided for
+@@ -279,3 +282,5 @@
+ 	}
+ 	return (&clnt_res);
+ }
++
++#endif
+--- src/nfsmount.c
++++ src/nfsmount.c
+@@ -34,6 +34,10 @@
+  * nfsmount.c,v 1.1.1.1 1993/11/18 08:40:51 jrs Exp
+  */
+ 
++#include "config.h"
++
++#if HAVE_NFS
++
+ #include <unistd.h>
+ #include <stdio.h>
+ #include <string.h>
+@@ -865,3 +869,5 @@
+         return port;
+ }
+ #endif
++
++#endif
+--- src/nfsmount_xdr.c
++++ src/nfsmount_xdr.c
+@@ -3,6 +3,9 @@
+  * It was generated using rpcgen.
+  */
+ 
++#include "config.h"
++#if HAVE_NFS
++
+ #include "nfsmount.h"
+ /*
+  * Sun RPC is a product of Sun Microsystems, Inc. and is provided for
+@@ -300,3 +303,5 @@
+ 		 return FALSE;
+ 	return TRUE;
+ }
++
++#endif
+--- src/shutdown.c
++++ src/shutdown.c
+@@ -24,7 +24,6 @@
+ #include <sys/types.h>
+ #include <unistd.h>
+ #include <time.h>
+-#include <rpc/types.h>         /* for caddr_t */
+ 
+ #include "watch_err.h"
+ #include "extern.h"
+--- src/sundries.c
++++ src/sundries.c
+@@ -12,7 +12,6 @@
+ #include <mntent.h>		/* for MNTTYPE_SWAP */
+ #include "fstab.h"
+ #include "sundries.h"
+-#include "nfsmount.h"
+ 
+ 
+ /* String list constructor.  (car() and cdr() are defined in "sundries.h").  */

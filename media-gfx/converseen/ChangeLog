@@ -1,0 +1,27 @@
+# ChangeLog for media-gfx/converseen
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/converseen/ChangeLog,v 1.5 2012/07/29 17:48:46 maksbotan Exp $
+
+*converseen-0.5.1 (29 Jul 2012)
+
+  29 Jul 2012; Maxim Koltsov <maksbotan@gentoo.org> +converseen-0.5.1.ebuild:
+  Bump to 0.5.1, thanks to Nikoli
+
+*converseen-0.5 (13 Jun 2012)
+
+  13 Jun 2012; Michael Weber <xmw@gentoo.org> +converseen-0.5.ebuild:
+  Version bump by Nikoli (bug 420219 by Sergey Popov)
+
+*converseen-0.4.9 (24 Mar 2012)
+
+  24 Mar 2012; Markos Chandras <hwoarang@gentoo.org> +converseen-0.4.9.ebuild:
+  Version bump. Bug #408309
+
+  12 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> converseen-0.4.7.ebuild:
+  Fix bug 393557, thanks to Nikoli
+
+*converseen-0.4.7 (07 Dec 2011)
+
+  07 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> +converseen-0.4.7.ebuild,
+  +metadata.xml:
+  Add media-gfx/converseen-0.4.7, bug 393543. Thanks to Nikoli

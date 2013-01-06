@@ -1,0 +1,23 @@
+From 241e288c0a9d30f9f2e8d608b0bbd950c1ac959c Mon Sep 17 00:00:00 2001
+From: Rodrigo Moya <rodrigo@gnome-db.org>
+Date: Mon, 02 May 2011 13:55:19 +0000
+Subject: clock applet: Pass the correct month to Evolution command line
+
+gtk_calendar_get_date returns the month between 0 and 11, so we need to add
+1 to the month being passed to Evolution
+---
+diff --git a/applets/clock/calendar-window.c b/applets/clock/calendar-window.c
+index c01bd6a..548b91b 100644
+--- a/applets/clock/calendar-window.c
++++ b/applets/clock/calendar-window.c
+@@ -1245,7 +1245,7 @@ calendar_day_activated (GtkCalendar    *calendar,
+ 
+ 	argument = g_strdup_printf ("calendar:///?startdate="
+ 				    "%.4d%.2d%.2d",
+-				    year, month, day);
++				    year, month + 1, day);
+ 
+ 	clock_launch_calendar_app (calwin, argument);
+ 
+--
+cgit v0.9

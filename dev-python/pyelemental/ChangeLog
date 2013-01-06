@@ -1,0 +1,26 @@
+# ChangeLog for dev-python/pyelemental
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelemental/ChangeLog,v 1.6 2012/07/08 17:42:28 jlec Exp $
+
+  08 Jul 2012; Justin Lecher <jlec@gentoo.org> pyelemental-1.2.0.ebuild,
+  +files/pyelemental-1.2.0-gcc-4.7.patch:
+  Add fix for gcc-4.7, #425246
+
+  04 May 2012; Patrick Lauer <patrick@gentoo.org> pyelemental-1.2.0.ebuild:
+  Migrating dev-util/pkgconfig -> virtual/pkgconfig
+
+  24 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyelemental-1.2.0.ebuild:
+  Restricting pypy and jython
+
+  31 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyelemental-1.2.0.ebuild:
+  Update EAPI. Fix dependencies. Set SUPPORT_PYTHON_ABIS.
+
+  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  Re-assign to sci-chemistry and python herds.
+
+*pyelemental-1.2.0 (20 Mar 2008)
+
+  20 Mar 2008; Samuli Suominen <drac@gentoo.org> +pyelemental-1.2.0.ebuild:
+  Initial commit for bug 175014, thanks to Kristian Poul Herkild.
+

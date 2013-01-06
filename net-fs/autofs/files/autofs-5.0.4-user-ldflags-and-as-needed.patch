@@ -1,0 +1,66 @@
+1/2) Patch 177057 to bug #253412: use user ldflags, don't add pthreads through ldflags
+
+diff -ru a/Makefile.rules b/Makefile.rules
+--- a/Makefile.rules	2009-01-01 21:54:02.000000000 -0600
++++ b/Makefile.rules	2009-01-01 22:17:41.000000000 -0600
+@@ -24,16 +24,16 @@
+ 
+ ifdef DEBUG
+ CFLAGS    ?= -g -Wall -DDEBUG
+-LDFLAGS   = -g
++AUTOFS_LDFLAGS   = -g
+ STRIP     = :
+ else
+ ifdef DONTSTRIP
+ CFLAGS    ?= -O2 -g
+-LDFLAGS   = -g
++AUTOFS_LDFLAGS   = -g
+ STRIP     = :
+ else
+ CFLAGS    ?= -O2 -Wall
+-LDFLAGS   = -s
++AUTOFS_LDFLAGS   = -s
+ STRIP     = strip --strip-debug
+ endif
+ endif
+@@ -45,10 +45,9 @@
+ SOLDFLAGS = -shared
+ 
+ CFLAGS += -D_REENTRANT -D_FILE_OFFSET_BITS=64
+-LDFLAGS += -lpthread
+ 
+ ifdef DMALLOCLIB
+-LDFLAGS += $(DMALLOCLIB)
++AUTOFS_LDFLAGS += $(DMALLOCLIB)
+ endif
+ 
+ # Standard rules
+diff -ru a/daemon/Makefile b/daemon/Makefile
+--- a/daemon/Makefile	2009-01-01 22:14:10.000000000 -0600
++++ b/daemon/Makefile	2009-01-01 22:24:03.000000000 -0600
+@@ -25,7 +25,7 @@
+ all: automount
+ 
+ automount: $(OBJS) $(AUTOFS_LIB)
+-	$(CC) $(LDFLAGS) $(DAEMON_LDFLAGS) -o automount $(OBJS) $(AUTOFS_LIB) $(LIBS)
++	$(CC) $(AUTOFS_LDFLAGS) $(DAEMON_LDFLAGS) $(LDFLAGS) -o automount $(OBJS) $(AUTOFS_LIB) $(LIBS)
+ 	$(STRIP) automount
+ 
+ clean:
+
+
+
+2/2) Patch 177056 to bug #247969: add -lpthread the correct way (removed from LDFLAGS in above patch)
+
+diff -ru a/daemon/Makefile b/daemon/Makefile
+--- a/daemon/Makefile	2009-01-01 22:14:10.000000000 -0600
++++ b/daemon/Makefile	2009-01-01 22:21:16.000000000 -0600
+@@ -20,7 +20,7 @@
+ CFLAGS += -DAUTOFS_FLAG_DIR=\"$(autofsflagdir)\"
+ CFLAGS += -DVERSION_STRING=\"$(version)\"
+ LDFLAGS += -rdynamic
+-LIBS = -ldl
++LIBS = -ldl -lpthread
+ 
+ all: automount
+ 

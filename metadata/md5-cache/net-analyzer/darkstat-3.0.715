@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install postinst preinst
+DEPEND=net-libs/libpcap
+DESCRIPTION=darkstat is a network traffic analyzer
+EAPI=4
+HOMEPAGE=http://unix4lyfe.org/darkstat/
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+RDEPEND=net-libs/libpcap
+SLOT=0
+SRC_URI=http://unix4lyfe.org/darkstat/darkstat-3.0.715.tar.bz2
+_eclasses_=user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=3eea40b7b8250797741fca327251f069

@@ -1,0 +1,20 @@
+# Please read the oftpd(8) man page for a more detailed explaination of these
+# variables.
+#
+# FTPUSER (user-name in the man page):
+# Set this variable to the user to run the ftp daemon as
+FTPUSER=ftp
+
+# FTPROOT (root-directory in the man page):
+# The server uses chroot(2) to change the root directory of the server to this
+# directory. When a user connects, this is the directory that they  will start
+# in, and is the top of their directory tree.
+#
+FTPROOT=/home/ftp
+
+# FTPPORT (TCP port)
+# 21 is the standard ftp port, but you can change it here to something else
+FTPPORT=21
+
+## Uncoment this line to activate oftpd service
+#OFTPD_OPTS="-p ${FTPPORT} ${FTPUSER} ${FTPROOT}"

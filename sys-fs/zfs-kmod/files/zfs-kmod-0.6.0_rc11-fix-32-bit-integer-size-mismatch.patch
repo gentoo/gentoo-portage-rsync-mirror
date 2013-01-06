@@ -1,0 +1,72 @@
+From 7df05a4266fe8549cedb9a2d71bb8bff6ab11112 Mon Sep 17 00:00:00 2001
+From: Richard Yao <ryao@cs.stonybrook.edu>
+Date: Wed, 10 Oct 2012 23:57:45 -0400
+Subject: [PATCH] Fix zfs_write_limit_max integer size mismatch on 32-bit
+ systems
+
+Commit c409e4647f221ab724a0bd10c480ac95447203c3 introduced a
+number of module parameters.  This required several types to be
+changed to accomidate the required module parameters Linux macros.
+
+Unfortunately, arc.c contained its own extern definition of the
+zfs_write_limit_max variable and its type was not updated to be
+consistent with its dsl_pool.c counterpart.  If the variable had
+been properly marked extern in a common header, then gcc would
+have generated a warning and this would not have slipped through.
+
+The result of this was that the ARC unconditionally expected
+zfs_write_limit_max to be 64-bit. Unfortunately, the largest size
+integer module parameter that Linux supports is unsigned long, which
+varies in size depending on the host system's native word size. The
+effect was that on 32-bit systems, ARC incorrectly performed 64-bit
+operations on a 32-bit value by reading the neighboring 32 bits as
+the upper 32 bits of the 64-bit value.
+
+We correct that by changing the extern declaration to use the unsigned
+long type and move these extern definitions in to the common arc.h
+header. This should make ARC correctly treat zfs_write_limit_max as a
+32-bit value on 32-bit systems.
+
+Reported-by: Jorgen Lundman <lundman@lundman.net>
+Signed-off-by: Richard Yao <ryao@cs.stonybrook.edu>
+Signed-off-by: Brian Behlendorf <behlendorf1@llnl.gov>
+Closes #749
+---
+ include/sys/arc.h |    5 +++++
+ module/zfs/arc.c  |    4 ----
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+diff --git a/include/sys/arc.h b/include/sys/arc.h
+index dd9b128..443597d 100644
+--- a/include/sys/arc.h
++++ b/include/sys/arc.h
+@@ -150,6 +150,11 @@ zio_t *arc_write(zio_t *pio, spa_t *spa, uint64_t txg,
+ void l2arc_start(void);
+ void l2arc_stop(void);
+ 
++/* Global tunings */
++extern int zfs_write_limit_shift;
++extern unsigned long zfs_write_limit_max;
++extern kmutex_t zfs_write_limit_lock;
++
+ #ifdef	__cplusplus
+ }
+ #endif
+diff --git a/module/zfs/arc.c b/module/zfs/arc.c
+index 55f1909..829b4d9 100644
+--- a/module/zfs/arc.c
++++ b/module/zfs/arc.c
+@@ -147,10 +147,6 @@
+ static kcondvar_t	arc_reclaim_thr_cv;	/* used to signal reclaim thr */
+ static uint8_t		arc_thread_exit;
+ 
+-extern int zfs_write_limit_shift;
+-extern uint64_t zfs_write_limit_max;
+-extern kmutex_t zfs_write_limit_lock;
+-
+ /* number of bytes to prune from caches when at arc_meta_limit is reached */
+ uint_t arc_meta_prune = 1048576;
+ 
+-- 
+1.7.10
+

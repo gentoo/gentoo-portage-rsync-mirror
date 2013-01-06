@@ -1,0 +1,43 @@
+# ChangeLog for dev-haskell/json
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/json/ChangeLog,v 1.9 2012/12/26 07:50:42 slyfox Exp $
+
+  26 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> json-0.4.3.ebuild,
+  json-0.4.4.ebuild, json-0.5.ebuild, json-0.7.ebuild:
+  Workaround bug #427838 where ghc-6.12.3 hangs building Text.JSON.Parsec by
+  jinleileiking@gmail.com and others.
+
+*json-0.7 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> +json-0.7.ebuild:
+  Bump json to 0.7
+
+  11 Nov 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/json-0.4.3-ghc-7.4.patch, json-0.4.3.ebuild, json-0.4.4.ebuild:
+  Fix build failure against ghc-7.4 (bug #442746 by Fabian Holler)
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> json-0.4.3.ebuild,
+  json-0.4.4.ebuild, json-0.5.ebuild:
+  move dev-haskell/json/json-0.4.3.ebuild ebuild to mirror://hackage
+
+*json-0.5 (11 Mar 2012)
+
+  11 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> +json-0.5.ebuild:
+  Version bump.
+
+*json-0.4.4 (23 Apr 2011)
+
+  23 Apr 2011; Sergei Trofimovich <slyfox@gentoo.org> +json-0.4.4.ebuild,
+  metadata.xml:
+  Version bump.
+
+  31 Jan 2011; Christian Faulhammer <fauli@gentoo.org> json-0.4.3.ebuild:
+  stable x86, bug 352436
+
+  23 Jan 2011; Markos Chandras <hwoarang@gentoo.org> json-0.4.3.ebuild:
+  Stable on amd64 wrt bug #352436
+
+*json-0.4.3 (08 Mar 2010)
+
+  08 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org> +json-0.4.3.ebuild, +metadata.xml:
+  Initial version.

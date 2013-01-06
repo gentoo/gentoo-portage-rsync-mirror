@@ -1,0 +1,34 @@
+# ChangeLog for dev-util/intel-ocl-sdk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/ChangeLog,v 1.8 2012/11/01 09:03:05 xarthisius Exp $
+
+  01 Nov 2012; Kacper Kowalik <xarthisius@gentoo.org> -intel-ocl-sdk-1.5.ebuild,
+  intel-ocl-sdk-2.0.31360.ebuild:
+  Use bundled boost due to unslotting. Fixes bug 440658 by
+  Neil Dökkalfar <neil@next-touch.com>. Drop old
+
+  03 Oct 2012; Agostino Sarubbo <ago@gentoo.org>
+  intel-ocl-sdk-2.0.31360.ebuild:
+  Stable for amd64, wrt bug #436940
+
+  02 Oct 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  intel-ocl-sdk-2.0.31360.ebuild, metadata.xml:
+  Add use flag for installing ioc64
+
+*intel-ocl-sdk-2.0.31360 (02 Oct 2012)
+
+  02 Oct 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +intel-ocl-sdk-2.0.31360.ebuild:
+  Version bump wrt #436624 by Anton Bolshakov <anton.bugs@gmail.com>
+
+  20 Mar 2012; Agostino Sarubbo <ago@gentoo.org> intel-ocl-sdk-1.5.ebuild:
+  Stable for amd64, wrt bug #408975
+
+  07 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> intel-ocl-sdk-1.5.ebuild:
+  Invoke eselect opencl during postinst to avoid intel flavour of bug 402407
+
+*intel-ocl-sdk-1.5 (04 Feb 2012)
+
+  04 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +intel-ocl-sdk-1.5.ebuild, +metadata.xml:
+  Initial import

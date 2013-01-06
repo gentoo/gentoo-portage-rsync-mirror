@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm setup
+DEPEND=media-fonts/inconsolata >=media-fonts/mix-mplus-ipa-20111002 media-gfx/fontforge X? ( x11-apps/mkfontdir media-fonts/encodings ) >=media-libs/fontconfig-2.4.0
+DESCRIPTION=A beautiful sans-serif monotype Japanese font designed for code listings
+EAPI=4
+HOMEPAGE=http://save.sys.t.u-tokyo.ac.jp/~yusa/fonts/ricty.html
+IUSE=X
+KEYWORDS=~amd64 ~x86 ~x86-fbsd
+LICENSE=public-domain
+RESTRICT=strip binchecks
+SLOT=0
+SRC_URI=https://github.com/yascentur/Ricty/tarball/3.2.0 -> Ricty-3.2.0.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	font	9aa70ebc5cefbdd9056687b550a2fdc4	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=e48d8afc7e78d49d0b9af68f277920d4

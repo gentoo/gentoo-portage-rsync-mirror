@@ -1,0 +1,19 @@
+# ChangeLog for x11-plugins/monto
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/monto/ChangeLog,v 1.4 2012/11/30 14:49:50 voyageur Exp $
+
+*monto-0.1.1-r1 (30 Nov 2012)
+
+  30 Nov 2012; Bernard Cafarelli <voyageur@gentoo.org> +monto-0.1.1-r1.ebuild:
+  Clean ebuild, respect CC, reported by ago in bug #444942
+
+  27 Nov 2012; Agostino Sarubbo <ago@gentoo.org> monto-0.1.1.ebuild:
+  Add ~amd64
+
+  15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> monto-0.1.1.ebuild:
+  Update HOMEPAGE and SRC_URI, thanks Lorenz in bug #394607
+
+*monto-0.1.1 (06 Sep 2010)
+
+  06 Sep 2010; Michele Noberasco <s4t4n@gentoo.org>; +monto-0.1.1.ebuild:
+  Initial import. Closes bug #123307.

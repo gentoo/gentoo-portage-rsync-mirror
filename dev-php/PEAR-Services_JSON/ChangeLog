@@ -1,0 +1,15 @@
+# ChangeLog for dev-php/PEAR-Services_JSON
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_JSON/ChangeLog,v 1.2 2011/04/23 15:17:00 olemarkus Exp $
+
+*PEAR-Services_JSON-1.0.3 (23 Apr 2011)
+
+  23 Apr 2011; <olemarkus@gentoo.org> +PEAR-Services_JSON-1.0.3.ebuild:
+  Version bump. Bug #364155. Thanks to Denny
+
+*PEAR-Services_JSON-1.0.2 (23 Mar 2010)
+
+  23 Mar 2010; Steve Dibb <beandog@gentoo.org>
+  +PEAR-Services_JSON-1.0.2.ebuild, +metadata.xml:
+  Initial commit
+

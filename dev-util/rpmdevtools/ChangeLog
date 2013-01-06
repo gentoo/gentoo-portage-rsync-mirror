@@ -1,0 +1,18 @@
+# ChangeLog for dev-util/rpmdevtools
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rpmdevtools/ChangeLog,v 1.3 2012/12/04 08:35:41 scarabeus Exp $
+
+*rpmdevtools-8.3 (04 Dec 2012)
+
+  04 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org> +rpmdevtools-8.3.ebuild,
+  -rpmdevtools-8.2.ebuild:
+  Version bump to latest, drop older.
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop no-herd.
+
+*rpmdevtools-8.2 (19 Feb 2012)
+
+  19 Feb 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +rpmdevtools-8.2.ebuild, +metadata.xml:
+  Adding rpmdevtoos: Collection of rpm packaging related utilities

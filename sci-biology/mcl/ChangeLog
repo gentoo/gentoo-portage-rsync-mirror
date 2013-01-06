@@ -1,0 +1,16 @@
+# ChangeLog for sci-biology/mcl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mcl/ChangeLog,v 1.2 2012/04/26 16:17:02 jlec Exp $
+
+  26 Apr 2012; Justin Lecher <jlec@gentoo.org> mcl-08.312.ebuild, metadata.xml:
+  Move to EAPI=4
+
+*mcl-08.312 (04 Apr 2009)
+
+  04 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +mcl-08.312.ebuild:
+  Import from Science overlay, version bump
+
+  07 Sep 2008; weaver <weaver@gentoo.org> +metadata.xml, +mcl-08.157.ebuild:
+  New package, bug 236954
+

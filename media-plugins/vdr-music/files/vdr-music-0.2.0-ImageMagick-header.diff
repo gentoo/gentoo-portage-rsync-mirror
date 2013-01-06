@@ -1,0 +1,25 @@
+diff -Naur music-0.2.0.orig/bitmap.c music-0.2.0/bitmap.c
+--- music-0.2.0.orig/bitmap.c	2010-12-30 00:51:40.000000000 +0100
++++ music-0.2.0/bitmap.c	2010-12-30 00:50:33.000000000 +0100
+@@ -10,7 +10,7 @@
+ #define X_DISPLAY_MISSING
+ 
+ #ifdef HAVE_MAGICK
+-#include <Magick++.h>
++#include <ImageMagick/Magick++.h>
+  using namespace Magick;
+  cBitmapCache cMP3Bitmap::mCache(MP3Setup.MaxCacheFill);
+ #else
+diff -Naur music-0.2.0.orig/Makefile music-0.2.0/Makefile
+--- music-0.2.0.orig/Makefile	2010-12-30 00:51:40.000000000 +0100
++++ music-0.2.0/Makefile	2010-12-30 00:50:17.000000000 +0100
+@@ -141,7 +141,8 @@
+ 
+ ifdef HAVE_MAGICK
+ 	DEFINES += -DHAVE_MAGICK
+-	LIBS += -lMagick -lMagick++
++	LIBS += $(shell Magick++-config --libs)
++	INCLUDES += -I/usr/include/ImageMagick
+ else
+ 	DEFINES += -DHAVE_IMLIB2
+ 	LIBS += -lImlib2

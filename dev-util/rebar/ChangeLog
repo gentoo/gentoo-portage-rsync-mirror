@@ -1,0 +1,13 @@
+# ChangeLog for dev-util/rebar
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rebar/ChangeLog,v 1.2 2012/10/05 11:59:45 djc Exp $
+
+  05 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Update proxy-maintainer information.
+
+*rebar-2.0.0 (05 Oct 2012)
+
+  05 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> +rebar-2.0.0.ebuild,
+  +metadata.xml:
+  Initial rebar ebuild (bug 437104).
+

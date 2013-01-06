@@ -1,0 +1,13 @@
+# ChangeLog for dev-util/obs-service-download_src_package
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-download_src_package/ChangeLog,v 1.2 2012/11/15 20:01:12 scarabeus Exp $
+
+  15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  obs-service-download_src_package-20111202.ebuild:
+  Stable on amd64 and x86 as it is just copying two files.
+
+*obs-service-download_src_package-20111202 (15 Nov 2012)
+
+  15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> +metadata.xml,
+  +obs-service-download_src_package-20111202.ebuild:
+  Initial commit, service for downloading src packages

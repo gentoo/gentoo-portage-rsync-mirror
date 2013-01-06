@@ -1,0 +1,19 @@
+# ChangeLog for app-benchmarks/gtkperf
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/gtkperf/ChangeLog,v 1.4 2012/05/03 02:07:43 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gtkperf-0.40.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  11 Nov 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> gtkperf-0.40.ebuild:
+  Added ~ppc keyword. Closes bug #245839
+
+  02 Nov 2008; Mart Raudsepp <leio@gentoo.org> gtkperf-0.40.ebuild:
+  Add ~x86 keyword after testing
+
+*gtkperf-0.40 (29 Oct 2008)
+
+  29 Oct 2008; Mart Raudsepp <leio@gentoo.org> +metadata.xml,
+  +gtkperf-0.40.ebuild:
+  Initial import of gtkperf. Closes bug 96034
+

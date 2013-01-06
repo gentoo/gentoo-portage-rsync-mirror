@@ -1,0 +1,29 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/files/2.0/init.d/zabbix-agentd,v 1.4 2012/12/27 02:55:43 mattm Exp $
+
+pid_file="/var/run/zabbix/zabbix_agentd.pid"
+
+depend() {
+	need net
+	provide zabbix-agent
+	use zabbix-server
+}
+
+start_pre() {
+	checkpath -d -m 0664 -o zabbix:zabbix /var/run/zabbix
+}
+
+start() {
+	ebegin "Starting Zabbix agent"
+	start-stop-daemon --start --pidfile ${pid_file} \
+		--user zabbix --group zabbix --exec /usr/sbin/zabbix_agentd -- -c /etc/zabbix/zabbix_agentd.conf
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Zabbix agent"
+	start-stop-daemon  --stop --pidfile ${pid_file}
+	eend $?
+}

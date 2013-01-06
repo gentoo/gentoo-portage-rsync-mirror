@@ -1,0 +1,67 @@
+# ChangeLog for dev-perl/Gentoo-PerlMod-Version
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gentoo-PerlMod-Version/ChangeLog,v 1.13 2012/11/04 15:19:37 tove Exp $
+
+*Gentoo-PerlMod-Version-0.6.0 (04 Nov 2012)
+
+  04 Nov 2012; Torsten Veller <tove@gentoo.org>
+  +Gentoo-PerlMod-Version-0.6.0.ebuild, metadata.xml:
+  Version bump
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+*Gentoo-PerlMod-Version-0.5.0 (09 Jun 2012)
+
+  09 Jun 2012; Torsten Veller <tove@gentoo.org>
+  +Gentoo-PerlMod-Version-0.5.0.ebuild:
+  Version bump
+
+  31 Mar 2012; Torsten Veller <tove@gentoo.org>
+  -Gentoo-PerlMod-Version-0.3.1.ebuild:
+  Cleanup
+
+*Gentoo-PerlMod-Version-0.4.0 (01 Mar 2012)
+
+  01 Mar 2012; Torsten Veller <tove@gentoo.org>
+  +Gentoo-PerlMod-Version-0.4.0.ebuild:
+  Version bump
+
+  01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Add missing cpan remote-id tags in metadata.xml (#406287)
+
+  18 Feb 2012; Torsten Veller <tove@gentoo.org>
+  -Gentoo-PerlMod-Version-0.3.0.ebuild:
+  Cleanup
+
+*Gentoo-PerlMod-Version-0.3.1 (23 Oct 2011)
+
+  23 Oct 2011; Torsten Veller <tove@gentoo.org>
+  +Gentoo-PerlMod-Version-0.3.1.ebuild:
+  Version bump
+
+  26 Feb 2011; Torsten Veller <tove@gentoo.org>
+  -Gentoo-PerlMod-Version-0.2.2.ebuild:
+  Cleanup
+
+*Gentoo-PerlMod-Version-0.3.0 (26 Feb 2011)
+
+  26 Feb 2011; Torsten Veller <tove@gentoo.org>
+  +Gentoo-PerlMod-Version-0.3.0.ebuild:
+  Version bump
+
+  14 Jan 2011; Torsten Veller <tove@gentoo.org>
+  -Gentoo-PerlMod-Version-0.2.1.ebuild:
+  Version bump
+
+*Gentoo-PerlMod-Version-0.2.2 (12 Jan 2011)
+
+  12 Jan 2011; Torsten Veller <tove@gentoo.org>
+  +Gentoo-PerlMod-Version-0.2.2.ebuild:
+  Version bump
+
+*Gentoo-PerlMod-Version-0.2.1 (11 Jan 2011)
+
+  11 Jan 2011; Torsten Veller <tove@gentoo.org>
+  +Gentoo-PerlMod-Version-0.2.1.ebuild, +metadata.xml:
+  Version bump. Move from perl-experimental to gentoo

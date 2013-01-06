@@ -1,0 +1,26 @@
+From a9f7ae46f2ea3d78cb53db4f0aad69bc7d0d163a Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Fri, 12 Oct 2012 19:15:18 -0400
+Subject: [PATCH] evince.desktop: add 2DGraphics category
+
+Needed to pass validation with desktop-file-utils-0.20
+
+https://bugzilla.gnome.org/show_bug.cgi?id=686062
+---
+ data/evince.desktop.in.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/data/evince.desktop.in.in b/data/evince.desktop.in.in
+index 7106d97..e38497e 100644
+--- a/data/evince.desktop.in.in
++++ b/data/evince.desktop.in.in
+@@ -13,5 +13,5 @@ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=evince
+ X-GNOME-Bugzilla-Component=BugBuddyBugs
+ X-GNOME-Bugzilla-Version=@VERSION@
+-Categories=GNOME;GTK;Office;Viewer;Graphics;VectorGraphics;
++Categories=GNOME;GTK;Office;Viewer;Graphics;2DGraphics;VectorGraphics;
+ MimeType=@EVINCE_MIME_TYPES@
+-- 
+1.7.12.3
+

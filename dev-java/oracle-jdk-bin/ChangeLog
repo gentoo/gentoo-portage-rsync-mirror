@@ -1,0 +1,159 @@
+# ChangeLog for dev-java/oracle-jdk-bin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.27 2012/12/19 14:36:41 sera Exp $
+
+*oracle-jdk-bin-1.7.0.10 (19 Dec 2012)
+
+  19 Dec 2012; Ralph Sennhauser <sera@gentoo.org>
+  -oracle-jdk-bin-1.7.0.5-r1.ebuild, -oracle-jdk-bin-1.7.0.5-r2.ebuild,
+  -oracle-jdk-bin-1.7.0.6.ebuild, -oracle-jdk-bin-1.7.0.7.ebuild,
+  +oracle-jdk-bin-1.7.0.10.ebuild:
+  Version bump (arm not available). #447248
+  Remove vulnerable.
+
+  23 Oct 2012; Andreas Schuerch <nativemad@gentoo.org>
+  oracle-jdk-bin-1.7.0.9.ebuild:
+  x86 stable, see bug 438706
+
+*oracle-jdk-bin-1.7.0.9 (17 Oct 2012)
+
+  17 Oct 2012; Ralph Sennhauser <sera@gentoo.org>
+  +oracle-jdk-bin-1.7.0.9.ebuild:
+  Security bump. #438706
+  Make ebuild more resistent against Oracles whims.
+  Use QA_PREBUILT instead of individual variables.
+  Fix desktop files for newer standard.
+
+  13 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  oracle-jdk-bin-1.7.0.7.ebuild:
+  x86 stable wrt bug #433094
+
+  31 Aug 2012; Vlastimil Babka <caster@gentoo.org>
+  oracle-jdk-bin-1.7.0.7.ebuild:
+  Fix download URL, bug #433553.
+
+*oracle-jdk-bin-1.7.0.7 (31 Aug 2012)
+
+  31 Aug 2012; Vlastimil Babka <caster@gentoo.org>
+  +oracle-jdk-bin-1.7.0.7.ebuild:
+  Version bump, security bug #433094.
+
+*oracle-jdk-bin-1.7.0.6 (19 Aug 2012)
+
+  19 Aug 2012; Vlastimil Babka <caster@gentoo.org>
+  -oracle-jdk-bin-1.7.0.3.ebuild, -oracle-jdk-bin-1.7.0.4.ebuild,
+  -oracle-jdk-bin-1.7.0.5.ebuild, +oracle-jdk-bin-1.7.0.6.ebuild:
+  Version bump, bug #431692. Version 1.7.0.5 is no longer officially
+  available...
+
+*oracle-jdk-bin-1.7.0.5-r2 (23 Jul 2012)
+
+  23 Jul 2012; Ralph Sennhauser <sera@gentoo.org>
+  +oracle-jdk-bin-1.7.0.5-r2.ebuild, metadata.xml:
+  Oracle also changed the distfiles of the demos. #427534.
+  Add fontconfig support.
+  Use paxctl for pax marking as the fallback won't create the headers. Thanks
+  to blueness. #427642
+  Add BSD license for examples.
+
+  14 Jul 2012; Jeff Horelick <jdhore@gentoo.org>
+  oracle-jdk-bin-1.7.0.5-r1.ebuild:
+  marked x86 per bug 421073
+
+*oracle-jdk-bin-1.7.0.5-r1 (12 Jul 2012)
+
+  12 Jul 2012; Vlastimil Babka <caster@gentoo.org>
+  +oracle-jdk-bin-1.7.0.5-r1.ebuild:
+  Revbump because upstream changed contents of the distfiles (not saying what
+  exactly). You will have to redownload them, sorry.
+
+  09 Jul 2012; Jeff Horelick <jdhore@gentoo.org> oracle-jdk-bin-1.7.0.5.ebuild:
+  marked x86 per bug 421073
+
+*oracle-jdk-bin-1.7.0.5 (14 Jun 2012)
+
+  14 Jun 2012; Ralph Sennhauser <sera@gentoo.org>
+  +oracle-jdk-bin-1.7.0.5.ebuild:
+  Security bump. #421073
+
+*oracle-jdk-bin-1.7.0.4 (05 May 2012)
+
+  05 May 2012; Ralph Sennhauser <sera@gentoo.org>
+  +oracle-jdk-bin-1.7.0.4.ebuild:
+  Version bump. #414775
+
+  05 May 2012; Ralph Sennhauser <sera@gentoo.org>
+  oracle-jdk-bin-1.7.0.3.ebuild:
+  Add QA_FLAGS_IGNORED. #405639
+
+  18 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  oracle-jdk-bin-1.7.0.3.ebuild:
+  x86 stable wrt bug #404071
+
+*oracle-jdk-bin-1.7.0.3 (16 Feb 2012)
+
+  16 Feb 2012; Ralph Sennhauser <sera@gentoo.org>
+  -oracle-jdk-bin-1.7.0.1-r1.ebuild, -oracle-jdk-bin-1.7.0.1-r2.ebuild,
+  -oracle-jdk-bin-1.7.0.2.ebuild, +oracle-jdk-bin-1.7.0.3.ebuild:
+  Security bump. #404071
+  Use relative path for desktop file icon. #403139
+  Make installation of src.zip optional as for other JDKs.
+  Unzip is build only dependency.
+  Remove vulnerable.
+
+  27 Jan 2012; Ralph Sennhauser <sera@gentoo.org>
+  oracle-jdk-bin-1.7.0.2.ebuild:
+  Add basename to dosym target
+
+  18 Dec 2011; Ralph Sennhauser <sera@gentoo.org>
+  oracle-jdk-bin-1.7.0.2.ebuild:
+  Fix USE=examples
+
+*oracle-jdk-bin-1.7.0.2 (18 Dec 2011)
+
+  18 Dec 2011; Ralph Sennhauser <sera@gentoo.org>
+  +oracle-jdk-bin-1.7.0.2.ebuild:
+  Version bump. #394581
+
+  15 Dec 2011; Fabian Groffen <grobian@gentoo.org>
+  oracle-jdk-bin-1.7.0.1-r2.ebuild:
+  Add support for Solaris, added Prefix keywords
+
+  21 Nov 2011; Ralph Sennhauser <sera@gentoo.org>
+  oracle-jdk-bin-1.7.0.1-r1.ebuild, oracle-jdk-bin-1.7.0.1-r2.ebuild:
+  Use java-vm-2.eclass to set PaX markings
+
+*oracle-jdk-bin-1.7.0.1-r2 (17 Nov 2011)
+
+  17 Nov 2011; Vlastimil Babka <caster@gentoo.org>
+  +oracle-jdk-bin-1.7.0.1-r2.ebuild, files/oracle-jdk-bin-1.7.env:
+  Revbump to make the LDPATH variable useful for building JNI libraries (as
+  used by lwjgl) instead of the bogus directories in java.library.path.
+
+  12 Nov 2011; Ralph Sennhauser <sera@gentoo.org> -oracle-jdk-bin-1.7.0.ebuild,
+  -oracle-jdk-bin-1.7.0.1.ebuild:
+  Remove old/vulnarable
+
+  12 Nov 2011; Ralph Sennhauser <sera@gentoo.org>
+  oracle-jdk-bin-1.7.0.1-r1.ebuild:
+  Use java-vm_sandbox-predict for installing the controle file
+
+*oracle-jdk-bin-1.7.0.1-r1 (04 Nov 2011)
+
+  04 Nov 2011; Vlastimil Babka <caster@gentoo.org>
+  +oracle-jdk-bin-1.7.0.1-r1.ebuild:
+  Revbump to add sandbox.d addpredict file, bug #388127.
+
+*oracle-jdk-bin-1.7.0.1 (21 Oct 2011)
+
+  21 Oct 2011; Vlastimil Babka <caster@gentoo.org>
+  +oracle-jdk-bin-1.7.0.1.ebuild:
+  Version bump, security bug #388055.
+
+*oracle-jdk-bin-1.7.0 (08 Sep 2011)
+
+  08 Sep 2011; Vlastimil Babka <caster@gentoo.org>
+  +oracle-jdk-bin-1.7.0.ebuild, +files/oracle-jdk-bin-1.7.env,
+  +files/fontconfig.Gentoo.properties, +metadata.xml:
+  New package, successor of sun-jdk for Java7. Moved from java-experimental
+  overlay, with many thanks to sera and Serkan. Bug #376779.

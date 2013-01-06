@@ -1,0 +1,36 @@
+diff --git a/usbhid-dump/lib/iface.c b/usbhid-dump/lib/iface.c
+index 7209188..a86c365 100644
+--- a/usbhid-dump/lib/iface.c
++++ b/usbhid-dump/lib/iface.c
+@@ -30,6 +30,7 @@
+ #include <assert.h>
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <stdint.h>
+ #include <string.h>
+ 
+ bool
+diff --git a/usbhid-dump/lib/iface_list.c b/usbhid-dump/lib/iface_list.c
+index 1b028b1..d947475 100644
+--- a/usbhid-dump/lib/iface_list.c
++++ b/usbhid-dump/lib/iface_list.c
+@@ -30,6 +30,7 @@
+ #include <assert.h>
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <stdint.h>
+ 
+ bool
+ uhd_iface_list_valid(const uhd_iface *list)
+diff --git a/usbhid-dump/src/usbhid-dump.c b/usbhid-dump/src/usbhid-dump.c
+index 56a2956..892ea6e 100644
+--- a/usbhid-dump/src/usbhid-dump.c
++++ b/usbhid-dump/src/usbhid-dump.c
+@@ -40,6 +40,7 @@
+ #include <unistd.h>
+ #include <getopt.h>
+ #include <stdio.h>
++#include <stdint.h>
+ 
+ /* Define LIBUSB_CALL for libusb <= 1.0.8 */
+ #ifndef LIBUSB_CALL

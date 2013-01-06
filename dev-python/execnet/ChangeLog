@@ -1,0 +1,74 @@
+# ChangeLog for dev-python/execnet
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/ChangeLog,v 1.13 2012/06/21 20:22:51 grozin Exp $
+
+*execnet-1.1 (21 Jun 2012)
+
+  21 Jun 2012; Andrey Grozin <grozin@gentoo.org> +execnet-1.1.ebuild:
+  Version bump
+
+  05 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  -files/execnet-1.0.6-test-nice.patch, -execnet-1.0.8.ebuild:
+  Remove old ebuild. Requested by Arfrever
+
+*execnet-1.0.9 (24 Dec 2010)
+
+  24 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +execnet-1.0.9.ebuild:
+  Version bump.
+
+  30 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -execnet-1.0.7.ebuild:
+  Delete.
+
+*execnet-1.0.8 (31 Jul 2010)
+
+  31 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -execnet-1.0.6.ebuild, +execnet-1.0.8.ebuild:
+  Version bump.
+
+*execnet-1.0.7 (07 Jul 2010)
+
+  07 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -execnet-1.0.5.ebuild, -files/execnet-1.0.5-test-nice.patch,
+  +execnet-1.0.7.ebuild:
+  Version bump.
+
+  03 May 2010; Andrey Grozin <grozin@gentoo.org> execnet-1.0.6.ebuild,
+  +files/execnet-1.0.6-test-nice.patch:
+  Improved test-nice patch
+
+*execnet-1.0.6 (03 May 2010)
+
+  03 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +execnet-1.0.6.ebuild:
+  Version bump.
+
+  23 Feb 2010; Andrey Grozin <grozin@gentoo.org> execnet-1.0.5.ebuild,
+  +files/execnet-1.0.5-test-nice.patch:
+  Fixed test with niceness!=0, bug #301417
+
+*execnet-1.0.5 (08 Feb 2010)
+
+  08 Feb 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +execnet-1.0.5.ebuild:
+  Version bump.
+
+*execnet-1.0.4 (23 Jan 2010)
+
+  23 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +execnet-1.0.4.ebuild:
+  Version bump.
+
+*execnet-1.0.3 (18 Jan 2010)
+
+  18 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +execnet-1.0.3.ebuild:
+  Version bump.
+
+*execnet-1.0.2 (17 Jan 2010)
+
+  17 Jan 2010; Andrey Grozin <grozin@gentoo.org> +execnet-1.0.2.ebuild,
+  +metadata.xml:
+  Initial import
+

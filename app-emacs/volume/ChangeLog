@@ -1,0 +1,43 @@
+# ChangeLog for app-emacs/volume
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/ChangeLog,v 1.10 2009/03/13 00:11:35 tcunha Exp $
+
+  13 Mar 2009; Tiago Cunha <tcunha@gentoo.org> volume-1.0.ebuild:
+  stable sparc
+
+  06 Sep 2008; Christian Faulhammer <opfer@gentoo.org> -volume-0.5.ebuild:
+  clean up
+
+  06 Sep 2008; nixnut <nixnut@gentoo.org> volume-1.0.ebuild:
+  Stable on ppc wrt bug 236020
+
+  29 Aug 2008; Markus Meier <maekke@gentoo.org> volume-1.0.ebuild:
+  amd64/x86 stable, bug #236020
+
+*volume-1.0 (27 Aug 2008)
+
+  27 Aug 2008; Ulrich Mueller <ulm@gentoo.org> +volume-1.0.ebuild,
+  -volume-20070510.ebuild:
+  Version bump, new numbered upstream release 1.0. Remove the 20070510
+  snapshot which is identical with 1.0.
+
+*volume-20070510 (27 Jun 2008)
+
+  27 Jun 2008; Ulrich Mueller <ulm@gentoo.org> +volume-20070510.ebuild:
+  Version bump. Upstream doesn't assign version numbers anymore.
+
+  25 Jun 2008; nixnut <nixnut@gentoo.org> volume-0.5.ebuild:
+  Stable on ppc wrt bug 229019
+
+  23 Jun 2008; Christian Faulhammer <opfer@gentoo.org> volume-0.5.ebuild:
+  stable x86/amd64, bug 229019
+
+  23 Jun 2008; Ulrich Mueller <ulm@gentoo.org> files/50volume-gentoo.el:
+  Set load-path in site file.
+
+*volume-0.5 (13 Mar 2006)
+
+  13 Mar 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/50volume-gentoo.el, +metadata.xml, +volume-0.5.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
+

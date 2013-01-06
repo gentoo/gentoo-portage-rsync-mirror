@@ -1,0 +1,25 @@
+diff -U 3 -dHrN polymake-2.10/Makefile polymake-2.10.fixed/Makefile
+--- polymake-2.10/Makefile	2011-06-06 18:02:18.000000000 +0100
++++ polymake-2.10.fixed/Makefile	2011-08-13 13:58:59.000000000 +0100
+@@ -134,11 +134,11 @@
+ 	@case "$$(uname -s)" in \
+ 	 *linux*|*Linux*) \
+ 	   for d in linux32 linux64; do \
+-	     ${PERL} ${INSTALL_PL} -m ${DirMask} -U external/jreality/jni/$$d ${InstallArch}/lib/jreality/jni/$$d; \
++		true; \
+ 	   done; \
+ 	   ;; \
+          Darwin*|darwin*) \
+-	   ${PERL} ${INSTALL_PL} -m ${DirMask} -U external/jreality/jni/macosx ${InstallArch}/lib/jreality/jni/macosx; \
++		true; \
+ 	   ;; \
+ 	 esac
+ 	[ -d ${InstallBin} ] || $(call _CreateDir,${InstallBin})
+@@ -166,7 +166,6 @@
+ 	@+$(call _MakeApps, install-src)
+ 	$(if ${.svn},${CallPolymake} --no-config --script filter_rules -m ${InstallTop} ${Apps})
+ 	[ ! -d java_build ] || $(call _InstallSubdir,java_build,-X de)
+-	[ ! -d java_build ] || $(call _InstallSubdirRenamed,external/jreality/lib,java_build/jreality/lib)
+ 	$(call _InstallSubdir,povray)
+ 	$(call _InstallSubdir,scripts)
+ 	$(call _InstallSubdir,xml)

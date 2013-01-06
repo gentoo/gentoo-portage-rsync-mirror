@@ -1,0 +1,27 @@
+# ChangeLog for app-crypt/md6sum
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md6sum/ChangeLog,v 1.5 2012/11/19 22:43:39 tomka Exp $
+
+  19 Nov 2012; Thomas Kahle <tomka@gentoo.org> md6sum-1.0-r1.ebuild:
+  marked x86 per bug 441954
+
+  14 Nov 2012; Agostino Sarubbo <ago@gentoo.org> md6sum-1.0-r1.ebuild:
+  Stable for amd64, wrt bug #441954
+
+*md6sum-1.0-r1 (08 Nov 2012)
+
+  08 Nov 2012; Dane Smith <c1pher@gentoo.org> -md6sum-1.0.ebuild,
+  +md6sum-1.0-r1.ebuild, +files/md6sum-1.0-cflags.patch:
+  Revision bump. Add patch to fix CFLAGS respect wrt bug 442066. Drop old.
+
+  05 Nov 2012; Dane Smith <c1pher@gentoo.org> md6sum-1.0.ebuild, metadata.xml:
+  Drop hwoarang as maintainer and leave in crypto herd at his request.
+  Small ebuild cleanups.
+
+*md6sum-1.0 (28 Mar 2011)
+
+  28 Mar 2011; Markos Chandras <hwoarang@gentoo.org> +md6sum-1.0.ebuild,
+  +files/md6sum-1.0-ldflags.patch, +metadata.xml:
+  Initial commit of md6sum package. Thanks to AlphatPC@gmail.com for the
+  original ebuild. Bug #353379
+

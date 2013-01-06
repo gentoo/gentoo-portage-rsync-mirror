@@ -1,0 +1,91 @@
+# ChangeLog for xfce-extra/thunar-archive-plugin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-archive-plugin/ChangeLog,v 1.20 2012/11/28 12:18:18 ssuominen Exp $
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  thunar-archive-plugin-0.3.0.ebuild:
+  EAPI5
+
+  04 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  thunar-archive-plugin-0.3.0.ebuild:
+  Use virtual/pkgconfig.
+
+  23 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
+  thunar-archive-plugin-0.3.0.ebuild:
+  alpha/ia64/sparc stable wrt #358407
+
+  22 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  thunar-archive-plugin-0.3.0.ebuild:
+  ppc/ppc64 stable wrt #358407
+
+  22 Mar 2011; Thomas Kahle <tomka@gentoo.org>
+  thunar-archive-plugin-0.3.0.ebuild:
+  x86 stable per bug 358407
+
+  21 Mar 2011; Markus Meier <maekke@gentoo.org>
+  thunar-archive-plugin-0.3.0.ebuild:
+  arm stable, bug #358407
+
+  13 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
+  thunar-archive-plugin-0.3.0.ebuild:
+  Stable on amd64 wrt bug #358407
+
+*thunar-archive-plugin-0.3.0 (23 Jan 2011)
+
+  23 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +thunar-archive-plugin-0.3.0.ebuild:
+  Version bump.
+
+  10 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  thunar-archive-plugin-0.2.4-r2.ebuild:
+  Port thunar-archive-plugin to thunarx-2 API wrt upstream #6093.
+
+  29 Aug 2010; Raúl Porcel <armin76@gentoo.org>
+  thunar-archive-plugin-0.2.4-r2.ebuild:
+  alpha/ia64/sparc stable wrt #323729
+
+  11 Aug 2010; Joseph Jezak <josejx@gentoo.org>
+  thunar-archive-plugin-0.2.4-r2.ebuild:
+  Marked ppc stable for bug #323729.
+
+  10 Aug 2010; Jeroen Roovers <jer@gentoo.org>
+  thunar-archive-plugin-0.2.4-r2.ebuild:
+  Stable for HPPA (bug #323729).
+
+  23 Jul 2010; Markus Meier <maekke@gentoo.org>
+  thunar-archive-plugin-0.2.4-r2.ebuild:
+  arm stable, bug #323729
+
+  09 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  thunar-archive-plugin-0.2.4-r2.ebuild:
+  ppc64 stable wrt #323729
+
+  30 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  thunar-archive-plugin-0.2.4-r2.ebuild:
+  x86 stable, bug 323729
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  thunar-archive-plugin-0.2.4-r2.ebuild:
+  Stable on amd64 wrt bug #323729
+
+*thunar-archive-plugin-0.2.4-r2 (27 May 2010)
+
+  27 May 2010; Jeremy Olexa <darkside@gentoo.org>
+  +thunar-archive-plugin-0.2.4-r2.ebuild,
+  +files/thunar-archive-plugin-0.2.4-7zlzmaxz.patch:
+  Revision bump to add patch that supports 7z/lzma/xz formats, bug 313783
+
+  15 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  thunar-archive-plugin-0.2.4-r1.ebuild:
+  Restrict deps to old xfce-base/thunar.
+
+  08 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
+  thunar-archive-plugin-0.2.4-r1.ebuild:
+  add prefix keywords - migrate from Gentoo Prefix
+
+*thunar-archive-plugin-0.2.4-r1 (24 Aug 2009)
+
+  24 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +thunar-archive-plugin-0.2.4-r1.ebuild:
+  Rename thunar-archive to thunar-archive-plugin.
+

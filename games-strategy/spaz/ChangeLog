@@ -1,0 +1,10 @@
+# ChangeLog for games-strategy/spaz
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/spaz/ChangeLog,v 1.1 2012/09/27 08:17:05 pinkbyte Exp $
+
+*spaz-1.605 (27 Sep 2012)
+
+  27 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> +spaz-1.605.ebuild,
+  +metadata.xml:
+  Initial commit
+

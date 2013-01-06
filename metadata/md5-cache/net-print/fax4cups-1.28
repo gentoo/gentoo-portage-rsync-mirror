@@ -1,0 +1,10 @@
+DEFINED_PHASES=install postinst
+DEPEND=net-print/cups
+DESCRIPTION=efax/hylafax backend for CUPS
+HOMEPAGE=http://vigna.dsi.unimi.it/fax4CUPS/
+KEYWORDS=amd64 ~ppc x86
+LICENSE=GPL-2
+RDEPEND=net-print/cups || ( net-misc/hylafaxplus net-misc/efax net-dialup/mgetty ) app-admin/sudo
+SLOT=0
+SRC_URI=http://vigna.dsi.unimi.it/fax4CUPS/fax4CUPS-1.28.tar.gz
+_md5_=e0d10b1eb4613b4b8e0db6165cca9c86

@@ -1,0 +1,20 @@
+# ChangeLog for dev-python/yenc
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yenc/ChangeLog,v 1.4 2013/01/04 01:15:59 floppym Exp $
+
+  04 Jan 2013; Mike Gilbert <floppym@gentoo.org> yenc-0.4.0-r1.ebuild:
+  Move DISTUTILS_NO_PARALLEL_BUILD to src_test.
+
+  04 Jan 2013; Mike Gilbert <floppym@gentoo.org> yenc-0.4.0-r1.ebuild:
+  Set DISTUTILS_NO_PARALLEL_BUILD to prevent race in tests.
+
+*yenc-0.4.0-r1 (04 Jan 2013)
+
+  04 Jan 2013; Tim Harder <radhermit@gentoo.org> +yenc-0.4.0-r1.ebuild:
+  Revbump to migrate to distutils-r1.
+
+*yenc-0.4.0 (03 Jan 2013)
+
+  03 Jan 2013; Justin Bronder <jsbronder@gentoo.org> +yenc-0.4.0.ebuild,
+  +files/yenc-remove-cflags.patch, +metadata.xml:
+  add dev-python/yenc

@@ -1,0 +1,63 @@
+# ChangeLog for app-arch/zpaq
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.11 2012/10/14 08:00:29 mgorny Exp $
+
+  14 Oct 2012; Michał Górny <mgorny@gentoo.org> -zpaq-2.05.ebuild,
+  -zpaq-3.01.ebuild:
+  Drop ancient.
+
+*zpaq-6.10 (14 Oct 2012)
+
+  14 Oct 2012; Michał Górny <mgorny@gentoo.org> +zpaq-6.10.ebuild:
+  Version bump, now with journaling & deduplicating.
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> zpaq-2.05.ebuild,
+  zpaq-3.01.ebuild, zpaq-4.04.ebuild:
+  Inherit eutils for epatch.
+
+  20 May 2012; Mike Frysinger <vapier@gentoo.org> zpaq-2.05.ebuild,
+  zpaq-3.01.ebuild, zpaq-4.04.ebuild:
+  Fix autotools-utils usage.
+
+*zpaq-4.04 (10 Apr 2012)
+
+  10 Apr 2012; Michał Górny <mgorny@gentoo.org> +zpaq-4.04.ebuild,
+  +files/zpaq-4-autotools.patch:
+  Version bump.
+
+  18 Sep 2011; Michał Górny <mgorny@gentoo.org> zpaq-2.05.ebuild,
+  zpaq-3.01.ebuild:
+  Fix implicit $(use_enable debug).
+
+  25 Aug 2011; Michał Górny <mgorny@gentoo.org> files/zpaq-3-autotools.patch:
+  Quickly fix zpaqopt contents.
+
+*zpaq-3.01 (25 Aug 2011)
+
+  25 Aug 2011; Michał Górny <mgorny@gentoo.org> zpaq-2.05.ebuild,
+  +zpaq-3.01.ebuild, -files/0001-Add-autotools-files.patch,
+  +files/zpaq-2-autotools.patch, +files/zpaq-3-autotools.patch:
+  Version bump. Add USE=debug. Adjust lib deps. Remove pointless lib check from
+  generated autotools.
+
+*zpaq-2.05 (06 Jan 2011)
+
+  06 Jan 2011; Michał Górny <mgorny@gentoo.org> -zpaq-2.04-r1.ebuild,
+  +zpaq-2.05.ebuild:
+  Version bump. The new version fixes a crash when unpacking an unnamed file
+  without renaming.
+
+*zpaq-2.04-r1 (05 Jan 2011)
+
+  05 Jan 2011; Michał Górny <mgorny@gentoo.org>
+  files/0001-Add-autotools-files.patch, -zpaq-2.04.ebuild,
+  +zpaq-2.04-r1.ebuild:
+  Make zpaq ebuild depend on libzpaq.
+
+*zpaq-2.04 (04 Jan 2011)
+
+  04 Jan 2011; Michał Górny <mgorny@gentoo.org>
+  +files/0001-Add-autotools-files.patch, +zpaq-2.04.ebuild, +metadata.xml:
+  Importing zpaq archiver from Sunrise as per bug #278021. The ebuild was
+  updated to install latest libzpaq & zpaq. It also patches in an
+  autotools-based build system to avoid build difficulties.

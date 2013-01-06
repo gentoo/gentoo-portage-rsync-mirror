@@ -1,0 +1,27 @@
+From b627217e3841ca7d0b8af1ed8f916436e5088cee Mon Sep 17 00:00:00 2001
+From: Bertrand Lorentz <bertrand.lorentz@gmail.com>
+Date: Sat, 24 Mar 2012 11:27:06 +0000
+Subject: UPnPServerSource: Fix crash when getting the root object (bgo#672744)
+
+Move the GetRootObject () call inside the try/catch block, so that
+exceptions from Mono.Upnp don't cause a crash.
+---
+diff --git a/src/Extensions/Banshee.UPnPClient/Banshee.UPnPClient/UPnPServerSource.cs b/src/Extensions/Banshee.UPnPClient/Banshee.UPnPClient/UPnPServerSource.cs
+index 04a743a..5412663 100644
+--- a/src/Extensions/Banshee.UPnPClient/Banshee.UPnPClient/UPnPServerSource.cs
++++ b/src/Extensions/Banshee.UPnPClient/Banshee.UPnPClient/UPnPServerSource.cs
+@@ -124,10 +124,11 @@ namespace Banshee.UPnPClient
+         {
+             RemoteContentDirectory remote_dir = new RemoteContentDirectory (content_directory);
+             DateTime begin = DateTime.Now;
+-            Container root = remote_dir.GetRootObject ();
+             bool recursive_browse = !content_directory.CanSearch;
+ 
+             try {
++                Container root = remote_dir.GetRootObject ();
++
+                 if (!recursive_browse) {
+                     try {
+                         Log.Debug ("Content directory is searchable, let's search");
+--
+cgit v0.9.0.2

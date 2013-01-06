@@ -1,0 +1,56 @@
+This patch remove the hardcoding on cblas which was assuming only ATLAS
+provides a cblas implementation.
+bicatali - apr 2012
+
+diff -Nur scikit-learn-0.10.orig/sklearn/cluster/setup.py scikit-learn-0.10/sklearn/cluster/setup.py
+--- scikit-learn-0.10.orig/sklearn/cluster/setup.py	2012-01-11 13:48:21.000000000 +0000
++++ scikit-learn-0.10/sklearn/cluster/setup.py	2012-04-23 19:59:54.000000000 +0100
+@@ -10,8 +10,7 @@
+     from numpy.distutils.system_info import get_info
+ 
+     blas_info = get_info('blas_opt', 0)
+-    if (not blas_info) or (
+-        ('NO_ATLAS_INFO', 1) in blas_info.get('define_macros', [])):
++    if (not blas_info):
+         cblas_libs = ['cblas']
+         blas_info.pop('libraries', None)
+     else:
+diff -Nur scikit-learn-0.10.orig/sklearn/linear_model/setup.py scikit-learn-0.10/sklearn/linear_model/setup.py
+--- scikit-learn-0.10.orig/sklearn/linear_model/setup.py	2012-01-11 13:48:21.000000000 +0000
++++ scikit-learn-0.10/sklearn/linear_model/setup.py	2012-04-23 20:00:44.000000000 +0100
+@@ -9,8 +9,7 @@
+ 
+     # cd fast needs CBLAS
+     blas_info = get_info('blas_opt', 0)
+-    if (not blas_info) or (
+-        ('NO_ATLAS_INFO', 1) in blas_info.get('define_macros', [])):
++    if (not blas_info):
+         cblas_libs = ['cblas']
+         blas_info.pop('libraries', None)
+     else:
+diff -Nur scikit-learn-0.10.orig/sklearn/setup.py scikit-learn-0.10/sklearn/setup.py
+--- scikit-learn-0.10.orig/sklearn/setup.py	2012-01-11 13:48:21.000000000 +0000
++++ scikit-learn-0.10/sklearn/setup.py	2012-04-23 20:39:34.000000000 +0100
+@@ -44,8 +44,7 @@
+ 
+     # some libs needs cblas, fortran-compiled BLAS will not be sufficient
+     blas_info = get_info('blas_opt', 0)
+-    if (not blas_info) or (
+-        ('NO_ATLAS_INFO', 1) in blas_info.get('define_macros', [])):
++    if (not blas_info):
+         config.add_library('cblas',
+                            sources=[join('src', 'cblas', '*.c')])
+         warnings.warn(BlasNotFoundError.__doc__)
+diff -Nur scikit-learn-0.10.orig/sklearn/utils/setup.py scikit-learn-0.10/sklearn/utils/setup.py
+--- scikit-learn-0.10.orig/sklearn/utils/setup.py	2012-01-11 13:48:21.000000000 +0000
++++ scikit-learn-0.10/sklearn/utils/setup.py	2012-04-23 20:02:13.000000000 +0100
+@@ -12,8 +12,7 @@
+ 
+     # cd fast needs CBLAS
+     blas_info = get_info('blas_opt', 0)
+-    if (not blas_info) or (
+-        ('NO_ATLAS_INFO', 1) in blas_info.get('define_macros', [])):
++    if (not blas_info):
+         cblas_libs = ['cblas']
+         blas_info.pop('libraries', None)
+     else:

@@ -1,0 +1,45 @@
+commit 3e4d6d6b760e6f7043f26ee65ba415db7e9d47b2
+Author: Sergei Trofimovich <slyfox@gentoo.org>
+Date:   Mon Feb 13 11:35:52 2012 +0300
+
+    Ticket #2732: tests/lib/vfs/Makefile.am: drop muldefs from CFLAGS
+    
+    Otherwise gcc on alpha/arm will break in gcc -c phase:
+    
+          CC     config_string.o
+        armv5tel-softfloat-linux-gnueabi-gcc <skip>  -z muldefs -c config_string.c
+        armv5tel-softfloat-linux-gnueabi-gcc: muldefs: No such file or directory
+        make[4]: *** [config_string.o] Error 1
+    
+    Gentoo-bug: http://bugs.gentoo.org/403343
+    Reported-by: Markus Meier
+    Signed-off-by: Sergei Trofimovich <slyfox@gentoo.org>
+
+diff --git a/tests/lib/mcconfig/Makefile.am b/tests/lib/mcconfig/Makefile.am
+index fba2a7b..c706003 100644
+--- a/tests/lib/mcconfig/Makefile.am
++++ b/tests/lib/mcconfig/Makefile.am
+@@ -1,7 +1,7 @@
+ AM_CFLAGS = $(GLIB_CFLAGS) -I$(top_srcdir) @CHECK_CFLAGS@ \
+-	-DWORKDIR=\"$(abs_builddir)\"  -z muldefs
++	-DWORKDIR=\"$(abs_builddir)\"
+ 
+-AM_LDFLAGS = -z muldefs
++AM_LDFLAGS = -Wl,-z,muldefs
+ 
+ LIBS=@CHECK_LIBS@  $(top_builddir)/lib/libmc.la
+ 
+diff --git a/tests/lib/vfs/Makefile.am b/tests/lib/vfs/Makefile.am
+index bf440ee..8c50d28 100644
+--- a/tests/lib/vfs/Makefile.am
++++ b/tests/lib/vfs/Makefile.am
+@@ -1,7 +1,7 @@
+ AM_CFLAGS = -I$(top_srcdir)/lib/vfs $(GLIB_CFLAGS) -I$(top_srcdir) @CHECK_CFLAGS@ \
+-	-DTEST_SHARE_DIR=\"$(abs_srcdir)\" -z muldefs
++	-DTEST_SHARE_DIR=\"$(abs_srcdir)\"
+ 
+-AM_LDFLAGS = -z muldefs
++AM_LDFLAGS = -Wl,-z,muldefs
+ 
+ EXTRA_DIST = mc.charsets
+ 

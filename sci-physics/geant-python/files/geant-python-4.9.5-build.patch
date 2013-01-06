@@ -1,0 +1,39 @@
+make configure respect --with-python-incdir
+reported upstream at http://bugzilla-geant4.kek.jp/show_bug.cgi?id=1316
+diff --git a/configure b/configure
+index 2d755b1..3db111f 100755
+--- a/configure
++++ b/configure
+@@ -330,18 +330,21 @@ echo "lib${clhep_lib}.${shlib}"
+ # ---
+ echo $ac_n "Checking for Python include dir (pyconfig.h) ... $ac_c"
+ # check version
+-if [ $with_python3 = 0 ]; then
+-  set python python2.7 python2.6 python2.5 python2.4 python2.3 python2.2
+-else
+-  set python3.1 python3.0
++if [ ! -d "$python_incdir" ]
++then
++    if [ $with_python3 = 0 ]; then
++	set python python2.7 python2.6 python2.5 python2.4 python2.3 python2.2
++    else
++	set python3.1 python3.0
++    fi
++    for aincdir in $*
++    do
++	if [ -d /usr/include/"$aincdir" ]; then
++	    python_incdir=/usr/include/$aincdir
++	    break
++	fi
++    done
+ fi
+-for aincdir in $*
+-do
+-  if [ -d /usr/include/"$aincdir" ]; then
+-    python_incdir=/usr/include/$aincdir
+-    break
+-  fi
+-done
+ 
+ if [ ! -f "$python_incdir"/pyconfig.h ]; then
+   echo "no"

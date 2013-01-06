@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install postinst
+DEPEND=>=dev-libs/bglibs-1.106
+DESCRIPTION=qmail-queue multi-filter front end
+EAPI=2
+HOMEPAGE=http://untroubled.org/qmail-qfilter/
+KEYWORDS=~amd64 ~ppc ~sparc ~x86
+LICENSE=GPL-2
+RDEPEND=>=dev-libs/bglibs-1.106 virtual/qmail
+SLOT=0
+SRC_URI=http://untroubled.org/qmail-qfilter/archive/qmail-qfilter-2.1.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=e37071febcb0cf32063c1124ab2b167a

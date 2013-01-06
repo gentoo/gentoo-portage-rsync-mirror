@@ -1,0 +1,137 @@
+From 6d1d976b2c2c6b80de75a480c998466068066846 Mon Sep 17 00:00:00 2001
+From: Brian Behlendorf <behlendorf1@llnl.gov>
+Date: Mon, 27 Aug 2012 03:38:06 +0700
+Subject: [PATCH] Modify vdev_elevator_switch() to use elevator_change()
+
+As of Linux 2.6.36 an elevator_change() interface was added.
+This commit updates vdev_elevator_switch() to use this interface
+when available, otherwise it falls back to the usermodehelper
+method.
+
+Original-patch-by: foobarz <sysop@xeon.(none)>
+Signed-off-by: Brian Behlendorf <behlendorf1@llnl.gov>
+Closes #906
+---
+ config/kernel-elevator-change.m4 |   25 +++++++++++++++++++++++
+ config/kernel.m4                 |    1 +
+ module/zfs/vdev_disk.c           |   41 +++++++++++++++++++++-----------------
+ 3 files changed, 49 insertions(+), 18 deletions(-)
+ create mode 100644 config/kernel-elevator-change.m4
+
+diff --git a/config/kernel-elevator-change.m4 b/config/kernel-elevator-change.m4
+new file mode 100644
+index 0000000..90ab51b
+--- /dev/null
++++ b/config/kernel-elevator-change.m4
+@@ -0,0 +1,25 @@
++dnl #
++dnl # 2.6.36 API change
++dnl # Verify the elevator_change() symbol is available.
++dnl #
++AC_DEFUN([ZFS_AC_KERNEL_ELEVATOR_CHANGE], [
++	AC_MSG_CHECKING([whether elevator_change() is available])
++	tmp_flags="$EXTRA_KCFLAGS"
++	EXTRA_KCFLAGS="-Wno-unused-but-set-variable"
++	ZFS_LINUX_TRY_COMPILE([
++		#include <linux/blkdev.h>
++		#include <linux/elevator.h>
++	],[
++		int ret;
++		struct request_queue *q = NULL;
++		char *elevator = NULL;
++		ret = elevator_change(q, elevator);
++	],[
++		AC_MSG_RESULT(yes)
++		AC_DEFINE(HAVE_ELEVATOR_CHANGE, 1,
++			  [elevator_change() is available])
++	],[
++		AC_MSG_RESULT(no)
++	])
++	EXTRA_KCFLAGS="$tmp_flags"
++])
+diff --git a/config/kernel.m4 b/config/kernel.m4
+index 262dc7f..89b0a98 100644
+--- a/config/kernel.m4
++++ b/config/kernel.m4
+@@ -67,6 +67,7 @@ AC_DEFUN([ZFS_AC_CONFIG_KERNEL], [
+ 	ZFS_AC_KERNEL_BDI
+ 	ZFS_AC_KERNEL_BDI_SETUP_AND_REGISTER
+ 	ZFS_AC_KERNEL_SET_NLINK
++	ZFS_AC_KERNEL_ELEVATOR_CHANGE
+ 
+ 	AS_IF([test "$LINUX_OBJ" != "$LINUX"], [
+ 		KERNELMAKE_PARAMS="$KERNELMAKE_PARAMS O=$LINUX_OBJ"
+diff --git a/module/zfs/vdev_disk.c b/module/zfs/vdev_disk.c
+index ffb2980..c562256 100644
+--- a/module/zfs/vdev_disk.c
++++ b/module/zfs/vdev_disk.c
+@@ -111,19 +111,7 @@
+  * elevator to do the maximum front/back merging allowed by the
+  * physical device.  This yields the largest possible requests for
+  * the device with the lowest total overhead.
+- *
+- * Unfortunately we cannot directly call the elevator_switch() function
+- * because it is not exported from the block layer.  This means we have
+- * to use the sysfs interface and a user space upcall.  Pools will be
+- * automatically imported on module load so we must do this at device
+- * open time from the kernel.
+  */
+-#define SET_SCHEDULER_CMD \
+-	"exec 0</dev/null " \
+-	"     1>/sys/block/%s/queue/scheduler " \
+-	"     2>/dev/null; " \
+-	"echo %s"
+-
+ static int
+ vdev_elevator_switch(vdev_t *v, char *elevator)
+ {
+@@ -131,8 +119,6 @@
+ 	struct block_device *bdev = vd->vd_bdev;
+ 	struct request_queue *q = bdev_get_queue(bdev);
+ 	char *device = bdev->bd_disk->disk_name;
+-	char *argv[] = { "/bin/sh", "-c", NULL, NULL };
+-	char *envp[] = { NULL };
+ 	int error;
+ 
+ 	/* Skip devices which are not whole disks (partitions) */
+@@ -147,14 +133,33 @@
+ 	if (!strncmp(elevator, "none", 4) && (strlen(elevator) == 4))
+ 		return (0);
+ 
+-	argv[2] = kmem_asprintf(SET_SCHEDULER_CMD, device, elevator);
+-	error = call_usermodehelper(argv[0], argv, envp, 1);
++#ifdef HAVE_ELEVATOR_CHANGE
++	error = elevator_change(q, elevator);
++#else
++	/* For pre-2.6.36 kernels elevator_change() is not available.
++	 * Therefore we fall back to using a usermodehelper to echo the
++	 * elevator into sysfs;  This requires /bin/echo and sysfs to be
++	 * mounted which may not be true early in the boot process.
++	 */
++# define SET_SCHEDULER_CMD \
++	"exec 0</dev/null " \
++	"     1>/sys/block/%s/queue/scheduler " \
++	"     2>/dev/null; " \
++	"echo %s"
++
++	{
++		char *argv[] = { "/bin/sh", "-c", NULL, NULL };
++		char *envp[] = { NULL };
++
++		argv[2] = kmem_asprintf(SET_SCHEDULER_CMD, device, elevator);
++		error = call_usermodehelper(argv[0], argv, envp, 1);
++		strfree(argv[2]);
++	}
++#endif /* HAVE_ELEVATOR_CHANGE */
+ 	if (error)
+ 		printk("ZFS: Unable to set \"%s\" scheduler for %s (%s): %d\n",
+ 		       elevator, v->vdev_path, device, error);
+ 
+-	strfree(argv[2]);
+-
+ 	return (error);
+ }
+ 
+-- 
+1.7.10
+

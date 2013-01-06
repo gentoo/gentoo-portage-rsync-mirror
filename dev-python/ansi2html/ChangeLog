@@ -1,0 +1,27 @@
+# ChangeLog for dev-python/ansi2html
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.5 2012/10/25 10:51:54 iksaif Exp $
+
+*ansi2html-0.9.3 (25 Oct 2012)
+
+  25 Oct 2012; Corentin Chary <iksaif@gentoo.org> +ansi2html-0.9.3.ebuild:
+  Bump to 0.9.3.
+
+*ansi2html-0.9.1-r1 (14 Aug 2012)
+
+  14 Aug 2012; Corentin Chary <iksaif@gentoo.org> +ansi2html-0.9.1-r1.ebuild,
+  -ansi2html-0.9.1.ebuild:
+  Always apply control code patch.
+
+  07 Aug 2012; Patrick Lauer <patrick@gentoo.org> ansi2html-0.9.1.ebuild:
+  Restricting py-2.5 and jython
+
+  22 Jul 2012; Corentin Chary <iksaif@gentoo.org> ansi2html-0.9.1.ebuild:
+  Remove useless workaround (there is a patch)
+
+*ansi2html-0.9.1 (22 Jul 2012)
+
+  22 Jul 2012; Corentin Chary <iksaif@gentoo.org> +ansi2html-0.9.1.ebuild,
+  +files/ansi2html-0.9.1-fix-0-control-code.patch,
+  +files/ansi2html-0.9.1-fix-sys-argv-in-tests.patch, +metadata.xml:
+  New ebuild for ansi2html.

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+  <email>lu_zero@gentoo.org</email>
+  <name>Luca Barbato</name>
+</maintainer>
+<maintainer>
+  <email>blueness@gentoo.org</email>
+  <name>Anthony G. Basile</name>
+</maintainer>
+<maintainer>
+  <email>klondike@gentoo.org</email>
+  <name>Francisco Izquierdo</name>
+</maintainer>
+<maintainer>
+  <email>axs@gentoo.org</email>
+  <name>Ian Stakenvicius</name>
+</maintainer>
+<maintainer>
+  <email>prometheanfire@gentoo.org</email>
+  <name>Matthew Thode</name>
+</maintainer>
+<maintainer>
+  <email>chainsaw@gentoo.org</email>
+  <name>Tony Vroon</name>
+</maintainer>
+<maintainer>
+  <email>ryao@gentoo.org</email>
+  <name>Richard Yao</name>
+</maintainer>
+<use>
+  <flag name="gudev">enable libudev gobject interface</flag>
+  <flag name="hwdb">read vendor/device string database and add it to udev database</flag>
+  <flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
+  	for introspection</flag>
+  <flag name="keymap">map custom hardware's multimedia keys</flag>
+  <flag name="kmod">enable module loading through libkmod (requires modules)</flag>
+  <flag name="modutils">enable module loading support</flag>
+  <flag name="openrc">install the OpenRC init scripts</flag>
+  <flag name="rule_generator">for eudev-0: enable persistent network and optical device rule generator</flag>
+  <flag name="floppy">for eudev-0: create historical floppy kernel device nodes (/dev/fd0h1440, ...)</flag>
+  <flag name="edd">for eudev-0: create /dev/disk/by-id/edd-* links for BIOS EDD data</flag>
+  <flag name="action_modeswitch">for eudev-0: switch Mobile Action cables into serial mode</flag>
+  <flag name="extras">for eudev-0: Compile udev-extras requiring external dependencies</flag>
+</use>
+</pkgmetadata>

@@ -1,0 +1,36 @@
+# ChangeLog for dev-db/pgbouncer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgbouncer/ChangeLog,v 1.6 2012/11/13 02:54:25 titanofold Exp $
+
+*pgbouncer-1.5.3 (13 Nov 2012)
+
+  13 Nov 2012; <titan@gentoo.org> +pgbouncer-1.5.3.ebuild:
+  Version bump. Fixes bugs 419171 and 440940.
+
+*pgbouncer-1.5.2 (18 Jun 2012)
+
+  18 Jun 2012; Patrick Lauer <patrick@gentoo.org> +pgbouncer-1.5.2.ebuild:
+  Bump
+
+  04 Jun 2012; Zac Medico <zmedico@gentoo.org> pgbouncer-1.4.2.ebuild,
+  pgbouncer-1.5.1.ebuild, pgbouncer-1.5.ebuild:
+  inherit user for enewgroup and enewuser
+
+*pgbouncer-1.5.1 (18 Apr 2012)
+
+  18 Apr 2012; Aaron W. Swenson <titanofold@gentoo.org>
+  +pgbouncer-1.5.1.ebuild:
+  Version Bump
+
+*pgbouncer-1.5 (29 Mar 2012)
+
+  29 Mar 2012; Aaron W. Swenson <titanofold@gentoo.org> +pgbouncer-1.5.ebuild:
+  Version bump. Fixes bug 405225.
+
+*pgbouncer-1.4.2 (16 Nov 2011)
+
+  16 Nov 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  +pgbouncer-1.4.2.ebuild, +files/pgbouncer.initd, +metadata.xml:
+  Initial commit. Ebuild written by Johan Bergström <bugs@bergstroem.nu>.
+  Fixes bug 243232.
+

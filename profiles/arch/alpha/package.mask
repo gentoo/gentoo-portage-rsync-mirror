@@ -1,0 +1,7 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.mask,v 1.32 2012/07/15 17:34:29 armin76 Exp $
+
+# Alexey Shvetsov <alexxy@gentoo.org> (21 May 2012)
+# Need deps pecl-apc and pecl-uploadprogress bug #416897
+>=www-apps/drupal-7.14

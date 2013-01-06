@@ -1,0 +1,73 @@
+# ChangeLog for dev-java/gcj-jdk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.9 2012/10/23 19:28:58 sera Exp $
+
+*gcj-jdk-4.6.3-r2 (23 Oct 2012)
+*gcj-jdk-4.5.4 (23 Oct 2012)
+
+  23 Oct 2012; Ralph Sennhauser <sera@gentoo.org> +gcj-jdk-4.5.4.ebuild,
+  +gcj-jdk-4.6.3-r2.ebuild:
+  Don't require corresponding gcc to be active. #439228
+  Backport various fixes to 4.5.4.
+
+*gcj-jdk-4.6.3-r1 (28 Sep 2012)
+
+  28 Sep 2012; Ralph Sennhauser <sera@gentoo.org> +gcj-jdk-4.6.3-r1.ebuild:
+  No longer install symlinks in /usr/bin to work with recent gcc-config.
+  #431930
+  Add missing dodir for server vm.
+  Use get_libdir for vm home.
+
+  16 Sep 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gcj-jdk-4.6.3.ebuild:
+  Keyword ~arm, bug #305773.
+
+*gcj-jdk-4.6.3 (05 Jun 2012)
+*gcj-jdk-4.6.2-r1 (05 Jun 2012)
+*gcj-jdk-4.6.1 (05 Jun 2012)
+*gcj-jdk-4.6.0 (05 Jun 2012)
+
+  05 Jun 2012; Ralph Sennhauser <sera@gentoo.org> +gcj-jdk-4.6.0.ebuild,
+  +gcj-jdk-4.6.1.ebuild, +gcj-jdk-4.6.2-r1.ebuild, +gcj-jdk-4.6.3.ebuild:
+  Import from java-overlay.
+  Adds Prefix support and missing use dep, thanks to XU Benda
+  <heroxbd@gentoo.org>. #416367
+  Remove JAVA_PROVIDE, old style virtuals are dead.
+
+  15 Apr 2012; Mike Frysinger <vapier@gentoo.org> gcj-jdk-4.5.3.ebuild:
+  Add back ia64 love #349020 by Dennis Schridde.
+
+*gcj-jdk-4.5.2-r1 (20 Sep 2011)
+*gcj-jdk-4.5.1-r1 (20 Sep 2011)
+*gcj-jdk-4.4.6 (20 Sep 2011)
+*gcj-jdk-4.4.5-r1 (20 Sep 2011)
+*gcj-jdk-4.4.4-r1 (20 Sep 2011)
+
+  20 Sep 2011; Vlastimil Babka <caster@gentoo.org> -gcj-jdk-4.4.4.ebuild,
+  +gcj-jdk-4.4.4-r1.ebuild, -gcj-jdk-4.4.5.ebuild, +gcj-jdk-4.4.5-r1.ebuild,
+  +gcj-jdk-4.4.6.ebuild, -gcj-jdk-4.5.1.ebuild, +gcj-jdk-4.5.1-r1.ebuild,
+  -gcj-jdk-4.5.2.ebuild, +gcj-jdk-4.5.2-r1.ebuild:
+  Add 4.4.6 variant and revbump the rest to have the same set of symlinks as
+  added for 4.5.3.
+
+*gcj-jdk-4.5.3 (10 Aug 2011)
+
+  10 Aug 2011; Vlastimil Babka <caster@gentoo.org> +gcj-jdk-4.5.3.ebuild:
+  Version bump for gcc-4.5.3, apply improvements (more tool symlinks) from
+  java-overlay.
+
+*gcj-jdk-4.5.2 (07 Jan 2011)
+
+  07 Jan 2011; Vlastimil Babka <caster@gentoo.org> +gcj-jdk-4.5.2.ebuild:
+  Version bump.
+
+*gcj-jdk-4.5.1 (14 Nov 2010)
+*gcj-jdk-4.4.5 (14 Nov 2010)
+*gcj-jdk-4.4.4 (14 Nov 2010)
+
+  14 Nov 2010; Vlastimil Babka <caster@gentoo.org> +gcj-jdk-4.4.4.ebuild,
+  +gcj-jdk-4.4.5.ebuild, +gcj-jdk-4.5.1.ebuild, +files/gcj-jdk.env,
+  +metadata.xml:
+  Initial import from java-overlay. Great thanks to Hanno Meyer-Thurow
+  (geki) <h.mth@web.de> and Andrew John Hughes <gnu_andrew@member.fsf.org>
+  for maintaining it in the overlays.

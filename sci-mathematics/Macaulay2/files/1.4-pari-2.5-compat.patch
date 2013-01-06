@@ -1,0 +1,17 @@
+Index: Macaulay2/d/pari-c.c
+===================================================================
+--- Macaulay2/d/pari-c.c	(revision 13515)
++++ Macaulay2/d/pari-c.c	(revision 13519)
+@@ -154,9 +154,11 @@
+ */
+ 
+ #define pari_examine(x) do { fputs(" " #x ": ", stdout); voir(x,-1); } while (0)
+-#define pari_display(x) do { fputs(" " #x ": ", stdout); outbeaut(x); } while (0)
++#define pari_display(x) do { fputs(" " #x ": ", stdout); output(x); } while (0)
+ #define abs(x) ((x)<0?-(x):(x))
+ 
++#define max(a,b) ((a)>(b)?(a):(b))
++
+ static void gmp_examine0(mpz_t z) {
+   int i, n = max(z->_mp_alloc,abs(z->_mp_size));
+   printf("alloc %d size %d %s {",z->_mp_alloc,z->_mp_size,z->_mp_size < 0 ? "-" : "+");

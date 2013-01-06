@@ -1,0 +1,119 @@
+--- wireless_tools.29.orig/iwlib.h	2011-03-05 16:36:55.000000000 -0500
++++ wireless_tools.29/iwlib.h	2011-03-05 16:41:32.000000000 -0500
+@@ -60,36 +60,6 @@
+ /* Private copy of Wireless extensions (in this directoty) */
+ #include "wireless.h"
+ 
+-/* Make gcc understant that when we say inline, we mean it.
+- * I really hate when the compiler is trying to be more clever than me,
+- * because in this case gcc is not able to figure out functions with a
+- * single call site, so not only I have to tag those functions inline
+- * by hand, but then it refuse to inline them properly.
+- * Total saving for iwevent : 150B = 0.7%.
+- * Fortunately, in gcc 3.4, they now automatically inline static functions
+- * with a single call site. Hurrah !
+- * Jean II */
+-#undef IW_GCC_HAS_BROKEN_INLINE
+-#if __GNUC__ == 3
+-#if __GNUC_MINOR__ >= 1 && __GNUC_MINOR__ < 4
+-#define IW_GCC_HAS_BROKEN_INLINE	1
+-#endif	/* __GNUC_MINOR__ */
+-#endif	/* __GNUC__ */
+-/* However, gcc 4.0 has introduce a new "feature", when compiling with
+- * '-Os', it does not want to inline iw_ether_cmp() and friends.
+- * So, we need to fix inline again !
+- * Jean II */
+-#if __GNUC__ == 4
+-#define IW_GCC_HAS_BROKEN_INLINE	1
+-#endif	/* __GNUC__ */
+-/* Now, really fix the inline */
+-#ifdef IW_GCC_HAS_BROKEN_INLINE
+-#ifdef inline
+-#undef inline
+-#endif	/* inline */
+-#define inline		inline		__attribute__((always_inline))
+-#endif	/* IW_GCC_HAS_BROKEN_INLINE */
+-
+ #ifdef __cplusplus
+ extern "C" {
+ #endif
+@@ -491,6 +461,7 @@
+ /************************* INLINE FUNTIONS *************************/
+ /*
+  * Functions that are so simple that it's more efficient inlining them
++ * Most inline are private because gcc is fussy about inline...
+  */
+ 
+ /*
+@@ -502,7 +473,7 @@
+ /*
+  * Wrapper to push some Wireless Parameter in the driver
+  */
+-static inline int
++static inline __attribute__((always_inline)) int
+ iw_set_ext(int			skfd,		/* Socket to the kernel */
+ 	   const char *		ifname,		/* Device name */
+ 	   int			request,	/* WE ID */
+@@ -518,7 +489,7 @@
+ /*
+  * Wrapper to extract some Wireless Parameter out of the driver
+  */
+-static inline int
++static inline __attribute__((always_inline)) int
+ iw_get_ext(int			skfd,		/* Socket to the kernel */
+ 	   const char *		ifname,		/* Device name */
+ 	   int			request,	/* WE ID */
+@@ -534,7 +505,7 @@
+ /*
+  * Close the socket used for ioctl.
+  */
+-static inline void
++static inline __attribute__((always_inline)) void
+ iw_sockets_close(int	skfd)
+ {
+   close(skfd);
+@@ -544,7 +515,7 @@
+ /*
+  * Display an Ethernet Socket Address in readable format.
+  */
+-static inline char *
++static inline __attribute__((always_inline)) char *
+ iw_saether_ntop(const struct sockaddr *sap, char* bufp)
+ {
+   iw_ether_ntop((const struct ether_addr *) sap->sa_data, bufp);
+@@ -554,7 +525,7 @@
+ /*
+  * Input an Ethernet Socket Address and convert to binary.
+  */
+-static inline int
++static inline __attribute__((always_inline)) int
+ iw_saether_aton(const char *bufp, struct sockaddr *sap)
+ {
+   sap->sa_family = ARPHRD_ETHER;
+@@ -565,7 +536,7 @@
+ /*
+  * Create an Ethernet broadcast address
+  */
+-static inline void
++static inline __attribute__((always_inline)) void
+ iw_broad_ether(struct sockaddr *sap)
+ {
+   sap->sa_family = ARPHRD_ETHER;
+@@ -576,7 +547,7 @@
+ /*
+  * Create an Ethernet NULL address
+  */
+-static inline void
++static inline __attribute__((always_inline)) void
+ iw_null_ether(struct sockaddr *sap)
+ {
+   sap->sa_family = ARPHRD_ETHER;
+@@ -587,7 +558,7 @@
+ /*
+  * Compare two ethernet addresses
+  */
+-static inline int
++static inline __attribute__((always_inline)) int
+ iw_ether_cmp(const struct ether_addr* eth1, const struct ether_addr* eth2)
+ {
+   return memcmp(eth1, eth2, sizeof(*eth1));

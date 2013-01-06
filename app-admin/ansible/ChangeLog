@@ -1,0 +1,42 @@
+# ChangeLog for app-admin/ansible
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.8 2013/01/05 13:39:27 pinkbyte Exp $
+
+  05 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> ansible-9999.ebuild:
+  Sync live ebuild, regarding previous commit
+
+*ansible-0.9 (05 Jan 2013)
+*ansible-0.8 (05 Jan 2013)
+*ansible-0.7.2 (05 Jan 2013)
+
+  05 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> -ansible-0.7.1.ebuild,
+  +ansible-0.7.2.ebuild, +ansible-0.8.ebuild, +ansible-0.9.ebuild:
+  Version bump, thanks to Georgy Kovtunov. Drop old version
+
+  21 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> ansible-0.7.1.ebuild,
+  ansible-9999.ebuild:
+  Change homepage
+
+*ansible-0.7.1 (21 Oct 2012)
+
+  21 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> -ansible-0.7.ebuild,
+  +ansible-0.7.1.ebuild:
+  Version bump, remove old
+
+  19 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Add proxy-maintainers herd
+
+  10 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> ansible-9999.ebuild:
+  add missing test to IUSE
+
+  10 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> ansible-9999.ebuild:
+  Handle tests properly in src_test instead of src_compile, remove test USE
+  flag
+
+*ansible-9999 (09 Sep 2012)
+*ansible-0.7 (09 Sep 2012)
+
+  09 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> +ansible-0.7.ebuild,
+  +ansible-9999.ebuild, +files/ansible.env, +metadata.xml:
+  Initial commit, fixes bug #434104. Ebuilds by Krzysztof Tomczyk and Georgy
+  Kovtunov. The latter will be maintainer by proxy

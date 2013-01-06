@@ -1,0 +1,30 @@
+# ChangeLog for media-gfx/zbar
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/ChangeLog,v 1.6 2012/07/28 23:07:30 xmw Exp $
+
+  28 Jul 2012; Michael Weber <xmw@gentoo.org> -zbar-0.10.ebuild:
+  Drop old
+
+  26 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> zbar-0.10-r1.ebuild:
+  Fix building when active version of Python is set to 3.x. Remove -Werror from
+  AM_INIT_AUTOMAKE for compability with sys-devel/automake >= 1.12 wrt #423581.
+  Convert to prune_libtool_files from eutils.eclass.
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop no-herd.
+
+*zbar-0.10-r1 (10 Nov 2011)
+
+  10 Nov 2011; Michael Weber <xmw@gentoo.org> +zbar-0.10-r1.ebuild,
+  +files/zbar-0.10-no-v4l1-check.patch:
+  Remove v4l1 from headers, thanks to Andrew Savchenko for the patch (bug
+  389683)
+
+  30 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> zbar-0.10.ebuild:
+  Remove usage of obsolete USE="v4l2" wrt #385241
+
+*zbar-0.10 (03 Oct 2011)
+
+  03 Oct 2011; Michael Weber <xmw@gentoo.org> +zbar-0.10.ebuild, +metadata.xml:
+  Initial import, thanks to spadix, Andrew Savchenko for the ebuilds on bug
+  288002

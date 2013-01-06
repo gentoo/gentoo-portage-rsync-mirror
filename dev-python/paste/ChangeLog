@@ -1,0 +1,76 @@
+# ChangeLog for dev-python/paste
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.17 2012/05/16 21:35:37 marienz Exp $
+
+  16 May 2012; Marien Zwart <marienz@gentoo.org>
+  +files/paste-1.7.5.1-fix-tests-for-pypy.patch, paste-1.7.5.1.ebuild:
+  Fix tests on pypy, remove test that accesses the network (bug #339252).
+
+  24 May 2011; Markus Meier <maekke@gentoo.org> paste-1.7.5.1.ebuild:
+  x86 stable, bug #365537
+
+  05 May 2011; Markos Chandras <hwoarang@gentoo.org> paste-1.7.5.1.ebuild:
+  Stable on amd64 wrt bug #365537
+
+*paste-1.7.5.1 (22 Sep 2010)
+
+  22 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -paste-1.7.5.ebuild, +paste-1.7.5.1.ebuild:
+  Version bump.
+
+*paste-1.7.5 (14 Sep 2010)
+
+  14 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -paste-1.7.4.ebuild, +paste-1.7.5.ebuild:
+  Version bump.
+
+*paste-1.7.4 (26 Jun 2010)
+
+  26 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +paste-1.7.4.ebuild:
+  Version bump. Fix building with USE="doc" (bug #318757).
+
+  26 Jun 2010; Sebastian Pipping <sping@gentoo.org> paste-1.7.2.ebuild:
+  Revert previous commit, shooting too fast, sorry
+
+  26 Jun 2010; Sebastian Pipping <sping@gentoo.org> paste-1.7.2.ebuild:
+  Make USE="doc -flup" require flup, too (bug #318757)
+
+  20 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  paste-1.7.2.ebuild:
+  Add "test" USE flag and src_test().
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org> paste-1.7.2.ebuild:
+  Merge from Prefix
+
+  01 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  paste-1.7.2.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+*paste-1.7.2 (26 Apr 2009)
+
+  26 Apr 2009; Patrick Lauer <patrick@gentoo.org> +paste-1.7.2.ebuild:
+  Bump to 1.7.2, dep for bug #260168
+
+  06 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
+
+  13 May 2008; Ali Polatel <hawking@gentoo.org> paste-1.6.ebuild:
+  Use distutils_src_unpack.
+
+*paste-1.6 (18 Apr 2008)
+
+  18 Apr 2008; Ali Polatel <hawking@gentoo.org> metadata.xml,
+  -paste-1.2.1.ebuild, +paste-1.6.ebuild:
+  Version bump, fixes bug 168715. Added long description. Drop old.
+
+  04 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> paste-1.2.1.ebuild:
+  Added ~amd64 keyword.
+
+  04 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> paste-1.2.1.ebuild:
+  Setting python-version
+
+  04 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> -paste-1.1.1.ebuild,
+  +paste-1.2.1.ebuild, +metadata.xml:
+  Version bump.
+

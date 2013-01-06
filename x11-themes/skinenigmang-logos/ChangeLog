@@ -1,0 +1,23 @@
+# ChangeLog for x11-themes/skinenigmang-logos
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/skinenigmang-logos/ChangeLog,v 1.4 2011/01/17 19:29:56 hd_brummy Exp $
+
+*skinenigmang-logos-20070214-r1 (17 Jan 2011)
+
+  17 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +skinenigmang-logos-20070214-r1.ebuild:
+  fix to support your utf-8 locale settings
+
+  27 Apr 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  skinenigmang-logos-20070214:
+  stable x86
+
+  21 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
+
+*skinenigmang-logos-20070214 (06 Mar 2007)
+
+  06 Mar 2007; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
+  +skinenigmang-logos-20070214.ebuild:
+  initial ebuild
+

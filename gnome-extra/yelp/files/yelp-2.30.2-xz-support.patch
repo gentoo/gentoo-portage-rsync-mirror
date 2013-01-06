@@ -1,0 +1,229 @@
+http://svnweb.mageia.org/packages/cauldron/yelp/releases/2.30.2/4.mga1/SOURCES/
+
+--- configure.in
++++ configure.in
+@@ -180,10 +180,10 @@
+ dnl ====================================
+ dnl = lzmadec for help converters
+ dnl ====================================
+-LZMADEC_LIBS=
+-AC_CHECK_LIB(lzmadec, lzmadec_open, [LZMADEC_LIBS=-llzmadec 
+-				     AC_DEFINE(HAVE_LIBLZMADEC, 1, [Compile with liblzmadec support])])
+-AC_SUBST(LZMADEC_LIBS)
++LZMA_LIBS=
++AC_CHECK_LIB(lzma, [lzma_code, lzma_auto_decoder, lzma_end], [LZMA_LIBS=-llzma
++				     AC_DEFINE(HAVE_LIBLZMA, 1, [Compile with liblzma support])])
++AC_SUBST(LZMA_LIBS)
+ 
+ dnl ====================================
+ dnl = Bzip2, for the help converters
+--- src/Makefile.am
++++ src/Makefile.am
+@@ -58,7 +58,7 @@
+ 	$(POPT_LIBS)			\
+ 	$(Z_LIBS)			\
+ 	$(BZ_LIBS)			\
+-	$(LZMADEC_LIBS)			\
++	$(LZMA_LIBS)			\
+ 	$(YELP_WEBKIT_LIBS)		\
+ 	$(X_LIBS)
+ 
+@@ -108,7 +108,7 @@
+ 	yelp-transform.c	yelp-transform.h	\
+ 	test-document.c
+ test_document_CFLAGS = $(YELP_CFLAGS) $(AM_CFLAGS) $(YELP_DEFINES)
+-test_document_LDADD = $(YELP_LIBS) $(Z_LIBS) $(BZ_LIBS) $(LZMADEC_LIBS)
++test_document_LDADD = $(YELP_LIBS) $(Z_LIBS) $(BZ_LIBS) $(LZMA_LIBS)
+ test_document_LDFLAGS = $(AM_LDFLAGS)
+ 
+ test_man_parser_SOURCES =					\
+@@ -119,7 +119,7 @@
+ 	test-man-parser.c
+ test_man_parser_CPPFLAGS = $(YELP_DEFINES) $(AM_CPPFLAGS)
+ test_man_parser_CFLAGS = $(YELP_CFLAGS) $(AM_CFLAGS)
+-test_man_parser_LDADD = $(YELP_LIBS) $(Z_LIBS) $(BZ_LIBS) $(LZMADEC_LIBS)
++test_man_parser_LDADD = $(YELP_LIBS) $(Z_LIBS) $(BZ_LIBS) $(LZMA_LIBS)
+ test_man_parser_LDFLAGS = $(AM_LDFLAGS)
+ 
+ test_page_SOURCES =					\
+--- src/yelp-io-channel.c
++++ src/yelp-io-channel.c
+@@ -26,6 +26,7 @@
+ 
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <glib.h>
+ #include <glib/gi18n.h>
+ 
+@@ -36,11 +37,80 @@
+ #ifdef HAVE_LIBBZ2
+ #include <bzlib.h>
+ #endif
+-#ifdef HAVE_LIBLZMADEC
+-#include <lzmadec.h>
++#ifdef HAVE_LIBLZMA
++#include <lzma.h>
+ #endif
+ #include <string.h>
+ 
++#ifdef HAVE_LIBLZMA
++typedef struct lzma_file {
++    uint8_t buf[1<<15];
++    lzma_stream strm;
++    FILE *fp;
++    lzma_bool eof;
++} lzma_FILE;
++
++static lzma_FILE *lzma_open (const char *path)
++{
++    lzma_ret ret;
++    lzma_FILE *lzma_file;
++    lzma_stream tmp = (lzma_stream)LZMA_STREAM_INIT;
++
++    lzma_file = calloc (1, sizeof (*lzma_file));
++    lzma_file->fp = fopen(path, "r");
++    lzma_file->eof = 0;
++    lzma_file->strm =  tmp;
++
++    ret = lzma_auto_decoder (&lzma_file->strm, -1, 0);
++
++    if (ret != LZMA_OK) {
++	fclose (lzma_file->fp);
++	free (lzma_file);
++	return NULL;
++    }
++    return lzma_file;
++}
++
++static ssize_t lzma_read(lzma_FILE *lzma_file, void *buf, size_t len)
++{
++    lzma_ret ret;
++    lzma_bool eof = 0;
++
++    if (!lzma_file)
++	return -1;
++    if (lzma_file->eof)
++	return 0;
++
++    lzma_file->strm.next_out = buf;
++    lzma_file->strm.avail_out = len;
++    for (;;) {
++	if (!lzma_file->strm.avail_in) {
++	    lzma_file->strm.next_in = (uint8_t *)lzma_file->buf;
++	    lzma_file->strm.avail_in = fread (lzma_file->buf, 1, sizeof (lzma_file->buf), lzma_file->fp);
++	    if (!lzma_file->strm.avail_in)
++		eof = 1;
++	}
++	ret = lzma_code(&lzma_file->strm, LZMA_RUN);
++	if (ret == LZMA_STREAM_END) {
++	    lzma_file->eof = 1;
++	    return len - lzma_file->strm.avail_out;
++	}
++	if (ret != LZMA_OK)
++	    return -1;
++	if (!lzma_file->strm.avail_out)
++	    return len;
++	if (eof)
++	    return -1;
++    }
++}
++
++static void lzma_close(lzma_FILE *lzma_file)
++{
++    lzma_end (&lzma_file->strm);
++    fclose (lzma_file->fp);
++}
++#endif
++
+ typedef struct _YelpIOChannel YelpIOChannel;
+ struct _YelpIOChannel {
+     GIOChannel  channel;
+@@ -48,8 +118,8 @@
+     BZFILE     *bzin;
+ #endif
+     gzFile      gzin;
+-#ifdef HAVE_LIBLZMADEC
+-    lzmadec_FILE *lzin;
++#ifdef HAVE_LIBLZMA
++    lzma_FILE	*lzin;
+ #endif
+ };
+ 
+@@ -99,9 +169,9 @@
+ 	channel->bzin = bzopen (file, "r");
+     else
+ #endif
+-#ifdef HAVE_LIBLZMADEC
+-    if (g_str_has_suffix (file, ".lzma"))
+-    	channel->lzin = lzmadec_open(file);
++#ifdef HAVE_LIBLZMA
++    if (g_str_has_suffix (file, ".lzma") || g_str_has_suffix (file, ".xz"))
++    	channel->lzin = lzma_open (file);
+     else
+ #endif
+ 
+@@ -111,7 +181,7 @@
+ #ifdef HAVE_LIBBZ2
+     !channel->bzin &&
+ #endif
+-#ifdef HAVE_LIBLZMADEC
++#ifdef HAVE_LIBLZMA
+     !channel->lzin &&
+ #endif
+     !channel->gzin) {
+@@ -159,9 +229,10 @@
+ 	bytes = bzread (yelp_channel->bzin, buffer, count);
+     else
+ #endif
+-#if HAVE_LIBLZMADEC
+-    if (yelp_channel->lzin)
+- 	bytes = lzmadec_read (yelp_channel->lzin, buffer, count);
++#if HAVE_LIBLZMA
++    if (yelp_channel->lzin) {
++ 	bytes = lzma_read (yelp_channel->lzin, buffer, count);
++    }
+     else
+ #endif
+ 	bytes = gzread (yelp_channel->gzin, buffer, count);
+@@ -186,9 +257,9 @@
+     if (yelp_channel->bzin)
+ 	bzclose (yelp_channel->bzin);
+ #endif
+-#ifdef HAVE_LIBLZMADEC
++#ifdef HAVE_LIBLZMA
+     if (yelp_channel->lzin)
+-        lzmadec_close (yelp_channel->lzin);
++        lzma_close (yelp_channel->lzin);
+ #endif
+     if (yelp_channel->gzin)
+ 	gzclose (yelp_channel->gzin);
+--- src/yelp-uri.c
++++ src/yelp-uri.c
+@@ -404,6 +404,13 @@
+                                         NULL);
+                 if (g_file_test (fullpath, G_FILE_TEST_IS_REGULAR))
+                     goto gotit;
++
++                fullpath = g_strconcat (langdir, "/", sectiondir,
++                                        "/", name, ".", sectiondir + 3, ".xz",
++                                        NULL);
++                if (g_file_test (fullpath, G_FILE_TEST_IS_REGULAR))
++                    goto gotit;
++
+                 g_free (fullpath);
+ 
+                 fullpath = NULL;
+@@ -532,6 +539,12 @@
+                 else if (is_man_path (basename, "lzma"))
+                     ret->priv->doctype = YELP_URI_DOCUMENT_TYPE_MAN;
+             }
++            else if (g_str_equal (mime_type, "application/x-xz")) {
++                if (g_str_has_suffix (basename, ".info.xz"))
++                    ret->priv->doctype = YELP_URI_DOCUMENT_TYPE_INFO;
++                else if (is_man_path (basename, "xz"))
++                    ret->priv->doctype = YELP_URI_DOCUMENT_TYPE_MAN;
++            }
+             else if (g_str_equal (mime_type, "application/octet-stream")) {
+                 if (g_str_has_suffix (basename, ".info"))
+                     ret->priv->doctype = YELP_URI_DOCUMENT_TYPE_INFO;

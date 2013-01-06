@@ -1,0 +1,37 @@
+http://bugs.gentoo.org/show_bug.cgi?id=255873
+diff -Naur xxvautotimer-0.1.2.orig/inifile.cpp xxvautotimer-0.1.2/inifile.cpp
+--- xxvautotimer-0.1.2.orig/inifile.cpp 2009-01-24 12:55:58.165959458 +0100
++++ xxvautotimer-0.1.2/inifile.cpp  2009-01-24 12:58:41.539432919 +0100
+@@ -43,6 +43,9 @@
+ #include <stdarg.h>
+ #include <fstream>
+ #include <float.h>
++#include <cstdlib>
++#include <cstring>
++#include <climits>
+
+ #ifdef WIN32
+ #include <windows.h>
+diff -Naur xxvautotimer-0.1.2.orig/mysqlwrapped-1.4/enum_t.h xxvautotimer-0.1.2/mysqlwrapped-1.4/enum_t.h
+--- xxvautotimer-0.1.2.orig/mysqlwrapped-1.4/enum_t.h   2009-01-24 12:55:58.165959458 +0100
++++ xxvautotimer-0.1.2/mysqlwrapped-1.4/enum_t.h    2009-01-24 12:57:48.299275050 +0100
+@@ -22,6 +22,7 @@
+
+ #include <string>
+ #include <map>
++#include <cstring>
+ #ifdef WIN32
+ #include <config-win.h>
+ #include <mysql.h>
+diff -Naur xxvautotimer-0.1.2.orig/mysqlwrapped-1.4/SysLog.cpp xxvautotimer-0.1.2/mysqlwrapped-1.4/SysLog.cpp
+--- xxvautotimer-0.1.2.orig/mysqlwrapped-1.4/SysLog.cpp 2009-01-24 12:55:58.165959458 +0100
++++ xxvautotimer-0.1.2/mysqlwrapped-1.4/SysLog.cpp  2009-01-24 12:57:14.999276857 +0100
+@@ -25,6 +25,7 @@
+
+ #include <mysql/mysql.h>
+ #include <syslog.h>
++#include <cstring>
+
+ #include "Database.h"
+ #include "Query.h"
+ 

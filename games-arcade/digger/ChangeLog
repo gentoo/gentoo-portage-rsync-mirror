@@ -1,0 +1,42 @@
+# ChangeLog for games-arcade/digger
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/digger/ChangeLog,v 1.11 2010/09/22 07:10:10 tupone Exp $
+
+  22 Sep 2010; Tupone Alfredo <tupone@gentoo.org> digger-20020314.ebuild,
+  +files/digger-20020314-ldflags.patch:
+  Respect LDFLAGS. Bug #337914 by flameeyes@gentoo.org
+
+  29 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  digger-20020314.ebuild:
+  upstream changed the file without changing the name; redigest; drop
+  the now-unnecessary patch; EAPI=2 (bug #295074)
+
+  09 Apr 2007; Peter Weller <welp@gentoo.org> digger-20020314.ebuild:
+  Keyworded ~x86-fbsd wrt bug 173405
+
+  21 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  digger-20020314.ebuild:
+  add a desktop entry for bug #170424
+
+  08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+  21 May 2006; Markus Rothe <corsair@gentoo.org> digger-20020314.ebuild:
+  Stable on ppc64
+
+  03 May 2006; Markus Rothe <corsair@gentoo.org> digger-20020314.ebuild:
+  Added ~ppc64; bug #132091
+
+  25 Sep 2003; Chuck Short <zul@gentoo.org> digger-20020314.ebuild:
+  Added sparc to keywords.
+
+  06 Dec 2003; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
+
+*digger-20020314 (28 Oct 2002)
+
+  01 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added games eclass support
+
+  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Dirk-Jan Heijs <heijs@phys.rug.nl>.

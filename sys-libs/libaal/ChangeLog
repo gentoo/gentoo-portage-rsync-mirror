@@ -1,0 +1,90 @@
+# ChangeLog for sys-libs/libaal
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/ChangeLog,v 1.20 2008/05/31 17:35:39 vapier Exp $
+
+  31 May 2008; Mike Frysinger <vapier@gentoo.org> libaal-1.0.5.ebuild:
+  Add arm love #203718 by Shvetsov Alexey.
+
+*libaal-1.0.5 (12 Aug 2005)
+
+  12 Aug 2005; Mike Frysinger <vapier@gentoo.org> +libaal-1.0.5.ebuild:
+  Version bump #102292 by Ingo Bormuth.
+
+  27 Jun 2005; Markus Rothe <corsair@gentoo.org> libaal-1.0.4.ebuild:
+  Stable on ppc64
+
+  15 May 2005; Markus Rothe <corsair@gentoo.org> libaal-1.0.4.ebuild:
+  Added ~ppc64 to KEYWORDS
+
+*libaal-1.0.4 (12 Mar 2005)
+
+  12 Mar 2005; Tony Vroon <chainsaw@gentoo.org> +libaal-1.0.4.ebuild:
+  Version bump, closes bug #82865.
+
+*libaal-1.0.3 (16 Dec 2004)
+
+  16 Dec 2004; Mike Frysinger <vapier@gentoo.org> +libaal-1.0.3.ebuild:
+  Version bump #74570 by infirit (Sander Sweers).
+
+*libaal-1.0.2 (30 Oct 2004)
+
+  30 Oct 2004; Mike Frysinger <vapier@gentoo.org> +libaal-1.0.2.ebuild,
+  -libaal-1.0.2_pre1.ebuild:
+  Version bump #69446 by Stefan Schweizer.
+
+  01 Oct 2004; Simon Stelling <blubb@gentoo.org> libaal-1.0.1.ebuild,
+  libaal-1.0.2_pre1.ebuild:
+  get_libdir-ized
+
+*libaal-1.0.2_pre1 (19 Sep 2004)
+
+  19 Sep 2004; Mike Frysinger <vapier@gentoo.org> +libaal-1.0.2_pre1.ebuild:
+  Version bump #64539 by Stefan Schweizer.
+
+*libaal-1.0.1 (24 Aug 2004)
+
+  24 Aug 2004; Mike Frysinger <vapier@gentoo.org> +libaal-1.0.1.ebuild:
+  Version bump #61563 by Daniel Webert.
+
+*libaal-1.0.0 (14 Aug 2004)
+
+  14 Aug 2004; Mike Frysinger <vapier@gentoo.org> -libaal-0.5.1.ebuild,
+  -libaal-0.5.2.ebuild, -libaal-0.5.3.ebuild, +libaal-1.0.0.ebuild:
+  Version bump #60076 by Stefan Schweizer.
+
+*libaal-0.5.3 (14 Jul 2004)
+
+  14 Jul 2004; Mike Frysinger <vapier@gentoo.org> +libaal-0.5.3.ebuild:
+  Version bump #57075 by Stefan Schweizer.
+
+*libaal-0.5.2 (17 Jun 2004)
+
+  17 Jun 2004; Mike Frysinger <vapier@gentoo.org> -libaal-0.5.0.ebuild,
+  +libaal-0.5.2.ebuild:
+  Version bump #53990 by Redeeman.
+
+*libaal-0.5.1 (17 May 2004)
+
+  17 May 2004; <coxj@gentoo.org> libaal-0.5.1.ebuild:
+  Version Bump
+
+  12 Apr 2004; Travis Tilley <lv@gentoo.org> libaal-0.5.0.ebuild:
+  added ~amd64 keyword
+
+  12 Apr 2004; David Holm <dholm@gentoo.org> libaal-0.5.0.ebuild:
+  Added to ~ppc.
+
+*libaal-0.5.0 (06 Feb 2004)
+
+  06 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*libaal-0.4.15-r1 (30 Jan 2004)
+
+  30 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Upstream released new tarballs with a few fixes #39443.
+
+*libaal-0.4.15 (10 Jan 2004)
+
+  10 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by sbh <sbh@gawab.com> #34340.

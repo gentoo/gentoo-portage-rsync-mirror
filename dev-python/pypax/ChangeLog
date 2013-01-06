@@ -1,0 +1,140 @@
+# ChangeLog for dev-python/pypax
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.36 2012/12/31 15:23:07 jer Exp $
+
+  31 Dec 2012; Jeroen Roovers <jer@gentoo.org> pypax-0.7.0.ebuild:
+  Stable for HPPA (bug #445334).
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pypax-0.7.0.ebuild:
+  Stable for alpha, wrt bug #445334
+
+  29 Dec 2012; Anthony G. Basile <blueness@gentoo.org> -pypax-0.5.2.ebuild:
+  Remove older version, bug #440018
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pypax-0.7.0.ebuild:
+  Stable for sparc, wrt bug #445334
+
+  18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pypax-0.7.0.ebuild:
+  Stable for ia64, wrt bug #445334
+
+  18 Dec 2012; Anthony G. Basile <blueness@gentoo.org> pypax-0.7.0.ebuild:
+  stable arm ppc ppc64, bug #445334
+
+  18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pypax-0.7.0.ebuild:
+  Stable for amd64, wrt bug #445334
+
+*pypax-0.7.0 (17 Dec 2012)
+
+  17 Dec 2012; Anthony G. Basile <blueness@gentoo.org> +pypax-0.7.0.ebuild:
+  Version bump: improved flag setting logic
+
+  06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pypax-0.6.0.ebuild:
+  x86 stable wrt bug #445334
+
+  02 Dec 2012; <ago@gentoo.org> pypax-0.6.0.ebuild:
+  Stable for amd64, wrt bug #445334
+
+  30 Nov 2012; Jeroen Roovers <jer@gentoo.org> pypax-0.6.0.ebuild:
+  Stable for HPPA (bug #445334).
+
+  30 Nov 2012; Anthony G. Basile <blueness@gentoo.org> pypax-0.6.0.ebuild:
+  stable arm ppc ppc64, bug #445334
+
+*pypax-0.6.0 (11 Nov 2012)
+
+  11 Nov 2012; Anthony G. Basile <blueness@gentoo.org> +pypax-0.6.0.ebuild,
+  metadata.xml:
+  Version bump: option to selectively enable/disable PT_PAX and/or XT_PAX
+
+  30 Sep 2012; Raúl Porcel <armin76@gentoo.org> pypax-0.5.2.ebuild:
+  alpha/ia64/sparc stable wrt #435114
+
+  18 Sep 2012; Jeroen Roovers <jer@gentoo.org> pypax-0.5.2.ebuild:
+  Stable for HPPA (bug #435114).
+
+  18 Sep 2012; Johannes Huber <johu@gentoo.org> pypax-0.5.2.ebuild:
+  Stable for x86, wrt bug #435114
+
+  16 Sep 2012; Agostino Sarubbo <ago@gentoo.org> pypax-0.5.2.ebuild:
+  Stable for amd64, wrt bug #435114
+
+  15 Sep 2012; Anthony G. Basile <blueness@gentoo.org> pypax-0.5.2.ebuild:
+  Stable arm ppc ppc64, bug #435114
+
+  11 Sep 2012; Raúl Porcel <armin76@gentoo.org> pypax-0.5.2.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #428558
+
+  01 Aug 2012; Jeroen Roovers <jer@gentoo.org> pypax-0.5.2.ebuild:
+  Marked ~hppa (bug #428558).
+
+  29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> pypax-0.5.2.ebuild:
+  Keyword ~mips
+
+  29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> pypax-0.5.2.ebuild:
+  Keyword ~arm
+
+  29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> pypax-0.5.2.ebuild:
+  Keyword ~ppc ~ppc64
+
+*pypax-0.5.2 (29 Jul 2012)
+
+  29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> -pypax-0.5.1.ebuild,
+  +pypax-0.5.2.ebuild:
+  Version bump, keep up with elfix parent
+
+*pypax-0.5.1 (27 Jul 2012)
+
+  27 Jul 2012; Anthony G. Basile <blueness@gentoo.org> -pypax-0.5.0.ebuild,
+  +pypax-0.5.1.ebuild:
+  Switch from yasm to gcc for assembler to support all arches
+  Drop dev-lib/libelf because ELF_C_RDWR isn't enough to update phdr
+
+*pypax-0.5.0 (24 Jul 2012)
+
+  24 Jul 2012; Anthony G. Basile <blueness@gentoo.org> -pypax-0.3.2.ebuild,
+  -pypax-0.4.0.ebuild, +pypax-0.5.0.ebuild:
+  Bump to 0.5 branch, remove older, ready for unmasking
+
+*pypax-0.3.2 (27 Nov 2011)
+
+  27 Nov 2011; Anthony G. Basile <blueness@gentoo.org> -pypax-0.2.5.ebuild,
+  -pypax-0.3.0.ebuild, +pypax-0.3.2.ebuild:
+  Remove 0.2 branch, bump 0.3 branch to latest
+
+*pypax-0.4.0 (27 Nov 2011)
+
+  27 Nov 2011; Anthony G. Basile <blueness@gentoo.org> +pypax-0.4.0.ebuild,
+  metadata.xml:
+  Version bump, makes XT_PAX support optional
+
+*pypax-0.3.0 (23 Oct 2011)
+
+  23 Oct 2011; Anthony G. Basile <blueness@gentoo.org> +pypax-0.3.0.ebuild:
+  Version bump, adds XT_PAX support
+
+*pypax-0.2.5 (17 Oct 2011)
+
+  17 Oct 2011; Anthony G. Basile <blueness@gentoo.org> -pypax-0.2.3.ebuild,
+  -pypax-0.2.4.ebuild, +pypax-0.2.5.ebuild:
+  Version bump, address bug #387459
+
+*pypax-0.2.4 (12 Oct 2011)
+
+  12 Oct 2011; Anthony G. Basile <blueness@gentoo.org> +pypax-0.2.4.ebuild:
+  Version bump
+
+  12 Oct 2011; Anthony G. Basile <blueness@gentoo.org> pypax-0.2.3.ebuild:
+  Add DEPEND on dev-libs/elfutils
+
+  09 Oct 2011; Anthony G. Basile <blueness@gentoo.org> pypax-0.2.3.ebuild:
+  Moved SUPPORT_PYTHON_ABIS and RESTRICT_PYTHON_ABIS before inherit, thanks
+  Arfrever
+
+  09 Oct 2011; Anthony G. Basile <blueness@gentoo.org> pypax-0.2.3.ebuild:
+  Add support for multiple ABIS and restrict Jython
+
+*pypax-0.2.3 (08 Oct 2011)
+
+  08 Oct 2011; Anthony G. Basile <blueness@gentoo.org> +pypax-0.2.3.ebuild,
+  +metadata.xml:
+  Initial commit

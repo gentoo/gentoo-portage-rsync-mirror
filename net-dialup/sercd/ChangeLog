@@ -1,0 +1,11 @@
+# ChangeLog for net-dialup/sercd
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/sercd/ChangeLog,v 1.1 2009/03/22 12:44:53 mrness Exp $
+
+*sercd-3.0.0 (22 Mar 2009)
+
+  22 Mar 2009; Alin Năstac <mrness@gentoo.org> +files/sercd.confd,
+  +files/sercd.initd, +files/sercd.xinetd, +metadata.xml,
+  +sercd-3.0.0.ebuild:
+  Initial import from bug 263176.
+

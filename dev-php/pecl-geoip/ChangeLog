@@ -1,0 +1,68 @@
+# ChangeLog for dev-php/pecl-geoip
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-geoip/ChangeLog,v 1.5 2012/12/04 10:57:53 ago Exp $
+
+  04 Dec 2012;  <ago@gentoo.org> pecl-geoip-1.0.8-r1.ebuild:
+  Stable for x86, wrt bug #438738
+
+  01 Dec 2012; <ago@gentoo.org> pecl-geoip-1.0.8-r1.ebuild:
+  Stable for amd64, wrt bug #438738
+
+  03 Mar 2012; Ole Markus With <olemarkus@gentoo.org> -pecl-geoip-1.0.8.ebuild:
+  Removed older versions
+
+*pecl-geoip-1.0.8-r1 (03 Mar 2012)
+
+  03 Mar 2012; Ole Markus With <olemarkus@gentoo.org>
+  +pecl-geoip-1.0.8-r1.ebuild:
+  Version bump supporting php 5.4
+
+*pecl-geoip-1.0.8 (12 Dec 2011)
+
+  12 Dec 2011; Ole Markus With <olemarkus@gentoo.org> +pecl-geoip-1.0.8.ebuild:
+  Version bump (bug 391813)
+
+  10 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  pecl-geoip-1.0.7-r1.ebuild:
+  Stable on amd64 wrt bug #351208
+
+  10 Feb 2011; Thomas Kahle <tomka@gentoo.org> pecl-geoip-1.0.7-r1.ebuild:
+  x86 stable per bug 351208
+
+*pecl-geoip-1.0.7-r1 (04 Nov 2010)
+
+  04 Nov 2010; Matti Bickel <mabi@gentoo.org> -pecl-geoip-1.0.2.ebuild,
+  +pecl-geoip-1.0.7-r1.ebuild:
+  add version that supports minor version slotting
+
+*pecl-geoip-1.0.7 (27 Jun 2009)
+
+  27 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +pecl-geoip-1.0.7.ebuild:
+  Bug #275649: version bump.
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org> -pecl-geoip-1.0.1.ebuild,
+  pecl-geoip-1.0.2.ebuild:
+  LICENSE fix from project overlay
+
+  03 Dec 2007; Jakub Moc <jakub@gentoo.org> pecl-geoip-1.0.2.ebuild:
+  Fix LICENSE
+
+*pecl-geoip-1.0.2 (29 Nov 2007)
+
+  29 Nov 2007; Markus Ullmann <jokey@gentoo.org> +pecl-geoip-1.0.2.ebuild:
+  Version bump from project overlay
+
+  22 Nov 2007; Jakub Moc <jakub@gentoo.org>
+  +pecl-geoip-1.0.2.ebuild:
+  Version bump
+
+*pecl-geoip-1.0.1 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org>
+  +pecl-geoip-1.0.1.ebuild:
+  Port from project overlay
+
+  28 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +pecl-geoip-1.0.1.ebuild:
+  New ebuild, Bug 187405

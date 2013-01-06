@@ -1,0 +1,48 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Wed Dec 12 18:33:26 UTC 2012
+Subject: use pkgconfig to locate fribidi
+
+https://sourceforge.net/apps/trac/supertuxkart/ticket/840
+
+--- cmake/FindFribidi.cmake
++++ cmake/FindFribidi.cmake
+@@ -9,19 +9,27 @@
+ # FRIBIDI_LIBRARIES
+ #     Fribidi library list
+ 
++if(UNIX)
++	include(FindPkgConfig)
++	pkg_check_modules(FRIBIDI fribidi)
++else()
++	set(FRIBIDI_FOUND 0)
++endif()
+ 
+-find_path(FRIBIDI_INCLUDE_DIR NAMES fribidi/fribidi.h PATHS /Library/Frameworks/fribidi.framework/Headers "${PROJECT_SOURCE_DIR}/dependencies/include")
+-find_library(FRIBIDI_LIBRARY NAMES fribidi PATHS /Library/Frameworks/fribidi.framework "${PROJECT_SOURCE_DIR}/dependencies/lib")
+-
+-include(FindPackageHandleStandardArgs)
+-find_package_handle_standard_args(Fribidi DEFAULT_MSG FRIBIDI_INCLUDE_DIR FRIBIDI_LIBRARY)
+-
+-
+-if(APPLE)
+-set(FRIBIDI_INCLUDE_DIR "/Library/Frameworks/fribidi.framework/Headers")
++if(NOT FRIBIDI_FOUND)
++	find_path(FRIBIDI_INCLUDE_DIR NAMES fribidi/fribidi.h PATHS /Library/Frameworks/fribidi.framework/Headers "${PROJECT_SOURCE_DIR}/dependencies/include")
++	find_library(FRIBIDI_LIBRARY NAMES fribidi PATHS /Library/Frameworks/fribidi.framework "${PROJECT_SOURCE_DIR}/dependencies/lib")
++
++	include(FindPackageHandleStandardArgs)
++	find_package_handle_standard_args(Fribidi DEFAULT_MSG FRIBIDI_INCLUDE_DIR FRIBIDI_LIBRARY)
++
++	if(APPLE)
++		set(FRIBIDI_INCLUDE_DIR "/Library/Frameworks/fribidi.framework/Headers")
++	endif()
++
++	# Publish variables
++	set(FRIBIDI_INCLUDE_DIRS ${FRIBIDI_INCLUDE_DIR})
++	set(FRIBIDI_LIBRARIES ${FRIBIDI_LIBRARY})
+ endif()
+ 
+-# Publish variables
+-set(FRIBIDI_INCLUDE_DIRS ${FRIBIDI_INCLUDE_DIR})
+-set(FRIBIDI_LIBRARIES ${FRIBIDI_LIBRARY})
+ mark_as_advanced(FRIBIDI_INCLUDE_DIR FRIBIDI_LIBRARY)

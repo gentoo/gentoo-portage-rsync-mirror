@@ -1,0 +1,141 @@
+# ChangeLog for www-apps/owncloud
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.23 2012/12/27 12:11:57 voyageur Exp $
+
+*owncloud-4.5.5 (27 Dec 2012)
+*owncloud-4.0.10 (27 Dec 2012)
+
+  27 Dec 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-4.0.9.ebuild,
+  +owncloud-4.0.10.ebuild, -owncloud-4.5.2-r1.ebuild, -owncloud-4.5.3.ebuild,
+  -owncloud-4.5.4.ebuild, +owncloud-4.5.5.ebuild:
+  Version bump, security bug #448270. Remove vulnerable versions, rename
+  USE=sqlite3 to sqlite to follow php
+
+*owncloud-4.5.4 (04 Dec 2012)
+
+  04 Dec 2012; Bernard Cafarelli <voyageur@gentoo.org> +owncloud-4.5.4.ebuild:
+  Version bump, thanks Michael Eklund <meklund@dealnews.com> in bug #445936
+
+*owncloud-4.5.3 (28 Nov 2012)
+
+  28 Nov 2012; Bernard Cafarelli <voyageur@gentoo.org> +owncloud-4.5.3.ebuild:
+  Version bump, thanks Daniel T. <dane.tschi@gmx.at> in bug #444966
+
+*owncloud-4.5.2-r1 (22 Nov 2012)
+
+  22 Nov 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-4.5.2.ebuild,
+  +owncloud-4.5.2-r1.ebuild, +files/owncloud-4.5.2-fix_sabre_connector.patch:
+  Add upstream patch to fix DoS with postgresql backend, thanks Thomas Beutin
+  <tb@laokoon.IN-Berlin.DE> in bug #444163
+
+*owncloud-4.5.2 (15 Nov 2012)
+*owncloud-4.0.9 (15 Nov 2012)
+
+  15 Nov 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-4.0.8.ebuild,
+  +owncloud-4.0.9.ebuild, -owncloud-4.5.1.ebuild, +owncloud-4.5.2.ebuild:
+  Version bumps, also fix some ownership permissions as reported by Vincent
+  Brillault <gentoo@lerya.net> in bug #440700
+
+*owncloud-4.5.1 (29 Oct 2012)
+
+  29 Oct 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-4.5.0.ebuild,
+  +owncloud-4.5.1.ebuild:
+  Version bump, bugfixes and security fixes. Remove previous vulnerable 4.5.x
+  version
+
+*owncloud-4.5.0 (10 Oct 2012)
+*owncloud-4.0.8 (10 Oct 2012)
+
+  10 Oct 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-4.0.7.ebuild,
+  +owncloud-4.0.8.ebuild, +owncloud-4.5.0.ebuild:
+  Version bump, remove previous 4.0.x for security fixes
+
+  01 Oct 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-3.0.3.ebuild:
+  Remove last 3.x version, not supported upstream anymore (and version 4 is
+  stabler now)
+
+*owncloud-4.0.7 (21 Aug 2012)
+
+  21 Aug 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-4.0.6.ebuild,
+  +owncloud-4.0.7.ebuild:
+  Version bump, bug and security fixes. Bug #431574
+
+*owncloud-4.0.6 (14 Aug 2012)
+
+  14 Aug 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-4.0.5.ebuild,
+  +owncloud-4.0.6.ebuild:
+  Version bump, bug and security fixes. Thanks hendrik@consetetur.de in bug
+  #429586
+
+*owncloud-4.0.5 (23 Jul 2012)
+
+  23 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-4.0.4.ebuild,
+  +owncloud-4.0.5.ebuild:
+  Version bump, stability and security updates
+
+*owncloud-4.0.4 (27 Jun 2012)
+
+  27 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-4.0.2.ebuild,
+  +owncloud-4.0.4.ebuild:
+  Version bump, bugfix and security update. Remove previous 4.x version
+
+  27 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org> owncloud-3.0.3.ebuild,
+  owncloud-4.0.2.ebuild:
+  Enable sqlite3 by default (to have one backend enabled by default), bug
+  #422821
+
+*owncloud-4.0.2 (15 Jun 2012)
+
+  15 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-4.0.0.ebuild,
+  -owncloud-4.0.1.ebuild, +owncloud-4.0.2.ebuild:
+  Version bump, mostly bugfixes and security updates. Removing previous 4.x
+  versions
+
+*owncloud-4.0.1 (07 Jun 2012)
+
+  07 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org> owncloud-4.0.0.ebuild,
+  +owncloud-4.0.1.ebuild:
+  Version bump, and depend on php with USE=pdo, bug #417599
+
+*owncloud-4.0.0 (24 May 2012)
+
+  24 May 2012; Alexey Shvetsov <alexxy@gentoo.org> +owncloud-4.0.0.ebuild:
+  [www-apps/owncloud] Version bump per bug #417379
+
+*owncloud-3.0.3 (11 May 2012)
+
+  11 May 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-3.0.2.ebuild,
+  +owncloud-3.0.3.ebuild:
+  Version bump, mostly security fixes, also see security bug #412899
+
+  23 Apr 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-3.0.0.ebuild:
+  Remove vulnerable version, security bug #412897
+
+  18 Apr 2012; Bernard Cafarelli <voyageur@gentoo.org> owncloud-3.0.2.ebuild:
+  Also depend on php[gd], for gallery
+
+*owncloud-3.0.2 (18 Apr 2012)
+
+  18 Apr 2012; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-1.2.ebuild,
+  +owncloud-3.0.2.ebuild:
+  Version bump, remove old branch version
+
+*owncloud-3.0.0 (02 Feb 2012)
+
+  02 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> +owncloud-3.0.0.ebuild,
+  metadata.xml:
+  Version bump, fixes bugs #348803 #381535 and #389135. Add myself to
+  maintainers just in case
+
+*owncloud-1.2 (27 Apr 2011)
+
+  27 Apr 2011; Alexey Shvetsov <alexxy@gentoo.org> -owncloud-1.1.ebuild,
+  +owncloud-1.2.ebuild:
+  Version bump & clean up
+
+*owncloud-1.1 (08 Dec 2010)
+
+  08 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> +owncloud-1.1.ebuild,
+  +metadata.xml:
+  Initial import per bug #347702
+

@@ -1,0 +1,19 @@
+commit c56cfe9e1d61a7739fe88fcb42878432e75b3680
+Author: David F. Skoll <dfs@roaringpenguin.com>
+Date:   Tue May 8 16:54:54 2012 -0400
+
+    Fix test harness failure.
+
+diff --git a/tests/test-rem b/tests/test-rem
+index 13b5ba6..bad3f49 100644
+--- a/tests/test-rem
++++ b/tests/test-rem
+@@ -68,7 +68,7 @@ echo "Sort Test" >> ../tests/test.out
+ (echo "REM AT 12:00 MSG Untimed"; echo "REM MSG Timed") | ../src/remind -q -gaaad - 1 Jan 2000 >> ../tests/test.out 2>&1
+ 
+ echo "Purge Test" >> ../tests/test.out
+-../src/remind -j999 ../tests/purge_dir/f1.rem >> ../tests/test.out 2>&1
++../src/remind -j999 ../tests/purge_dir/f1.rem 3 Feb 2012 >> ../tests/test.out 2>&1
+ echo "F1" >> ../tests/test.out
+ cat ../tests/purge_dir/f1.rem.purged >> ../tests/test.out
+ echo "F2" >> ../tests/test.out

@@ -1,0 +1,8 @@
+DEFINED_PHASES=install
+DESCRIPTION=Dictionary files for the Migemo and C/Migemo
+HOMEPAGE=http://openlab.ring.gr.jp/skk/dic.html
+KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=mirror://gentoo/migemo-dict-200309.tar.bz2
+_md5_=e348286e58b0efb955c719f50985bbfd

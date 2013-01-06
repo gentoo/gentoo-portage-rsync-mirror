@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-lang/mono || ( dev-lang/niecza-bin dev-lang/niecza )
+DESCRIPTION=A Perl 6 compiler targetting the CLR with an experimental focus on optimizations.
+EAPI=4
+HOMEPAGE=https://github.com/sorear/niecza
+KEYWORDS=~amd64 ~x86
+LICENSE=Artistic-2
+RDEPEND=dev-lang/mono
+SLOT=0
+SRC_URI=https://github.com/sorear/niecza/zipball/v19 -> niecza-19.zip
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=64b3ba68acd5afed873cb8613d143fe2

@@ -1,0 +1,65 @@
+
+++ gnome-screensaver-2.30.2/debian/patches/16_dont_crash_in_kvm.patch
+
+Description: Don't crash when the XF86VM extension doesn't allow the gamma to be set
+ On some systems where the XF86VM extension is present, the gamma value
+ can be read successfully with XF86VidModeGetGamma but attempting to
+ change the gamma value with XF86VidModeSetGamma will result in a
+ BadValue error (eg, on KVM).
+
+ Trap this error and abort the fade rather than crashing.
+Bug-Ubuntu: https://launchpad.net/bugs/581864
+Bug: https://bugzilla.gnome.org/show_bug.cgi?id=618932
+Forwarded: https://bugzilla.gnome.org/attachment.cgi?id=161276
+Author: Chris Coulson <chris.coulson@canonical.com>
+
+Index: gnome-screensaver-2.30.2/src/gs-fade.c
+===================================================================
+--- gnome-screensaver-2.30.2.orig/src/gs-fade.c	2010-11-15 16:35:43.078663002 +1100
++++ gnome-screensaver-2.30.2/src/gs-fade.c	2010-11-15 16:37:45.814662558 +1100
+@@ -208,7 +208,13 @@
+                         g2.blue = XF86_MIN_GAMMA;
+                 }
+ 
++                gdk_error_trap_push ();
+                 status = XF86VidModeSetGamma (GDK_DISPLAY (), screen, &g2);
++                gdk_flush ();
++                if (gdk_error_trap_pop ()) {
++                        gs_debug ("Failed to set gamma. Bailing out and aborting fade");
++                        return FALSE;        
++                }
+         } else {
+ 
+ # ifdef HAVE_XF86VMODE_GAMMA_RAMP
+@@ -225,7 +231,13 @@
+                         b[i] = gamma_info->b[i] * ratio;
+                 }
+ 
++                gdk_error_trap_push ();
+                 status = XF86VidModeSetGammaRamp (GDK_DISPLAY (), screen, gamma_info->size, r, g, b);
++                gdk_flush ();
++                if (gdk_error_trap_pop ()) {
++                        gs_debug ("Failed to set gamma. Bailing out and aborting fade");
++                        return FALSE;                
++                }
+ 
+                 g_free (r);
+                 g_free (g);
+@@ -236,8 +248,6 @@
+ # endif /* !HAVE_XF86VMODE_GAMMA_RAMP */
+         }
+ 
+-        gdk_flush ();
+-
+         return status;
+ }
+ 
+@@ -391,7 +401,7 @@
+         screen_priv = &fade->priv->screen_priv[screen_idx];
+         res = xf86_whack_gamma (screen_idx, screen_priv, alpha);
+ 
+-        return TRUE;
++        return res;
+ }
+ #endif /* HAVE_XF86VMODE_GAMMA */
+ 

@@ -1,0 +1,185 @@
+# ChangeLog for media-plugins/gst-plugins-modplug
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-modplug/ChangeLog,v 1.40 2012/12/05 22:52:34 eva Exp $
+
+*gst-plugins-modplug-1.0.3 (05 Dec 2012)
+
+  05 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-modplug-1.0.3.ebuild:
+  Version bump.
+
+*gst-plugins-modplug-0.10.23 (02 Dec 2012)
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-modplug-0.10.23.ebuild:
+  Version bump.
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-modplug-0.10.19.ebuild, -gst-plugins-modplug-0.10.21.ebuild,
+  gst-plugins-modplug-0.10.22.ebuild:
+  Clean up old revisions. EAPI bump stable due to pending eclass changes and
+  slot pinning.
+
+  15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-modplug-0.10.22.ebuild:
+  ppc/ppc64 stable wrt #382225
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
+  gst-plugins-modplug-0.10.22.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Tomáš "Mepho" Pružina in bug #382225.
+
+  20 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-plugins-modplug-0.10.22.ebuild:
+  x86 stable wrt bug #382225
+
+*gst-plugins-modplug-0.10.22 (29 Jul 2011)
+
+  29 Jul 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-modplug-0.10.22.ebuild:
+  Version bump to be in sync with the rest; no code changes
+
+  25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-modplug-0.10.21.ebuild:
+  ppc/ppc64 stable wrt #368281
+
+  23 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-modplug-0.10.21.ebuild:
+  Stable on amd64 wrt bug #368281
+
+  23 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-plugins-modplug-0.10.21.ebuild:
+  x86 stable wrt bug #368281
+
+*gst-plugins-modplug-0.10.21 (13 Apr 2011)
+
+  13 Apr 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-modplug-0.10.14.ebuild, -gst-plugins-modplug-0.10.17.ebuild,
+  -gst-plugins-modplug-0.10.18.ebuild, +gst-plugins-modplug-0.10.21.ebuild:
+  Version bump. No noteworthy changes.
+
+  11 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-modplug-0.10.19.ebuild:
+  ppc/ppc64 stable wrt #346981
+
+  20 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-modplug-0.10.19.ebuild:
+  Stable on amd64 wrt bug #346981
+
+  20 Dec 2010; Thomas Kahle <tomka@gentoo.org>
+  gst-plugins-modplug-0.10.19.ebuild:
+  x86 stable per bug 346981
+
+  05 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  gst-plugins-modplug-0.10.18.ebuild:
+  ppc64 stable wrt #324691
+
+*gst-plugins-modplug-0.10.19 (03 Aug 2010)
+
+  03 Aug 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-modplug-0.10.19.ebuild:
+  Version bump for a compilation warning fix regarding endianness
+
+  01 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-modplug-0.10.18.ebuild:
+  x86 stable, bug 324691
+
+  27 Jun 2010; <nixnut@gentoo.org> gst-plugins-modplug-0.10.18.ebuild:
+  ppc stable #324691
+
+  24 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-modplug-0.10.18.ebuild:
+  Stable on amd64 wrt bug #324691
+
+  18 Apr 2010; <nixnut@gentoo.org> gst-plugins-modplug-0.10.17.ebuild:
+  ppc stable #308379
+
+*gst-plugins-modplug-0.10.18 (05 Apr 2010)
+
+  05 Apr 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-modplug-0.10.18.ebuild:
+  Version bump. Adds 32-bit depth caps and allows 1-channel output for 16
+  and 32 bit depth too
+
+  24 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-modplug-0.10.17.ebuild:
+  stable x86, bug 308379
+
+  19 Mar 2010; Pacho Ramos <pacho@gentoo.org>
+  gst-plugins-modplug-0.10.17.ebuild:
+  amd64 stable, bug 308379
+
+  04 Mar 2010; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-modplug-0.10.11.ebuild:
+  Remove old
+
+*gst-plugins-modplug-0.10.17 (23 Jan 2010)
+
+  23 Jan 2010; Olivier Crête <tester@gentoo.org>
+  +gst-plugins-modplug-0.10.17.ebuild:
+  Version bump, bug #290084
+
+  05 Jan 2010; nixnut <nixnut@gentoo.org>
+  gst-plugins-modplug-0.10.14.ebuild:
+  ppc stable #290343
+
+  18 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-modplug-0.10.14.ebuild:
+  x86 stable, bug 290343
+
+  17 Nov 2009; Brent Baude <ranger@gentoo.org>
+  gst-plugins-modplug-0.10.14.ebuild:
+  Marking gst-plugins-modplug-0.10.14 ppc64 stable for bug 290343
+
+  10 Nov 2009; Olivier Crête <tester@gentoo.org>
+  gst-plugins-modplug-0.10.14.ebuild:
+  Stable on amd64, bug #290343
+
+*gst-plugins-modplug-0.10.14 (07 Sep 2009)
+
+  07 Sep 2009; Olivier Crête <tester@gentoo.org>
+  +gst-plugins-modplug-0.10.14.ebuild:
+  Version bump
+
+  21 May 2009; Brent Baude <ranger@gentoo.org>
+  gst-plugins-modplug-0.10.11.ebuild:
+  Marking gst-plugins-modplug-0.10.11 ppc64 stable for bug 266986
+
+  21 May 2009; Brent Baude <ranger@gentoo.org>
+  gst-plugins-modplug-0.10.11.ebuild:
+  Marking gst-plugins-modplug-0.10.11 ppc stable for bug 266986
+
+  20 May 2009; Brent Baude <ranger@gentoo.org>
+  gst-plugins-modplug-0.10.11.ebuild:
+  marking gst-plugins-modplug-0.10.11 ~ppc64 for bug 266927
+
+  20 May 2009; Brent Baude <ranger@gentoo.org>
+  gst-plugins-modplug-0.10.11.ebuild:
+  marking gst-plugins-modplug-0.10.11 ~ppc for bug 266927
+
+  14 May 2009; Markus Meier <maekke@gentoo.org>
+  gst-plugins-modplug-0.10.11.ebuild:
+  amd64 stable, bug #266986
+
+  12 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-modplug-0.10.11.ebuild:
+  stable x86, bug 266986
+
+  03 May 2009; Tobias Klausmann <klausman@gentoo.org>
+  gst-plugins-modplug-0.10.11.ebuild:
+  Keyworded on alpha, bug #266927
+
+  21 Apr 2009; Olivier Crête <tester@gentoo.org>
+  gst-plugins-modplug-0.10.11.ebuild:
+  Add ~amd64
+
+  20 Apr 2009; Olivier Crête <tester@gentoo.org> +metadata.xml,
+  +gst-plugins-modplug-0.10.11.ebuild:
+  Add split gst-plugins-modplug, used to be part of gst-plugins-bad
+
+*gst-plugins-modplug-0.10.11 (20 Apr 2009)
+
+  20 Apr 2009; Olivier Crête <tester@gentoo.org> +metadata.xml,
+  +gst-plugins-modplug-0.10.11.ebuild:
+  Has been split from media-libs/gst-plugins-bad
+

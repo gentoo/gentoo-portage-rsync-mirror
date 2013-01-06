@@ -1,0 +1,25 @@
+# ChangeLog for net-misc/sks
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/ChangeLog,v 1.6 2012/12/20 21:28:08 pacho Exp $
+
+  20 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as talked with him
+
+  07 Feb 2012; Mike Doty <kingtaco@gentoo.org> sks-1.1.2.ebuild:
+  fixed symlinks
+
+  07 Feb 2012; Mike Doty <kingtaco@gentoo.org> sks-1.1.2.ebuild:
+  Fixed symlinks
+
+  07 Feb 2012; Mike Doty <kingtaco@gentoo.org> sks-1.1.2.ebuild, metadata.xml:
+  Fixed formatting in metadata.xml
+  Fixed USE=optimize src_install()
+
+  06 Feb 2012; Mike Doty <kingtaco@gentoo.org> ChangeLog:
+  Signing Manifest
+
+*sks-1.1.2 (06 Feb 2012)
+
+  06 Feb 2012; Mike Doty <kingtaco@gentoo.org> +sks-1.1.2.ebuild,
+  +files/bdb_stubs-gentoo.patch, +metadata.xml:
+  Initial commit

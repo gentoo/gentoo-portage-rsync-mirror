@@ -1,0 +1,12 @@
+bug #412359
+
+--- src/lib/krb5/krb/deltat.c	2011-09-06 14:34:32.000000000 +0300
++++ src/lib/krb5/krb/deltat.c	2012-04-17 23:15:11.405005256 +0300
+@@ -77,6 +77,7 @@
+ #ifdef __GNUC__
+ #pragma GCC diagnostic push
+ #pragma GCC diagnostic ignored "-Wuninitialized"
++#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+ #endif
+ 
+ #include <ctype.h>

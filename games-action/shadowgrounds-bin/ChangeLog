@@ -1,0 +1,14 @@
+# ChangeLog for games-action/shadowgrounds-bin
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-bin/ChangeLog,v 1.2 2011/04/21 08:49:37 vapier Exp $
+
+  21 Apr 2011; Mike Frysinger <vapier@gentoo.org>
+  shadowgrounds-bin-0_beta12.ebuild:
+  Add missing dep on glade #364063 by Robert Cernansky.
+
+*shadowgrounds-bin-0_beta12 (16 Apr 2011)
+
+  16 Apr 2011; Mike Frysinger <vapier@gentoo.org>
+  +shadowgrounds-bin-0_beta12.ebuild, +metadata.xml:
+  New package.
+

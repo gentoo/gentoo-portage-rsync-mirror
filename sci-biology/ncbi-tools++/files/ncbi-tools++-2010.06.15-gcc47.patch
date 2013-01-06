@@ -1,0 +1,643 @@
+ include/algo/gnomon/gnomon_model.hpp          |    8 +-
+ include/corelib/ncbiexpt.hpp                  |    4 +-
+ include/corelib/ncbimisc.hpp                  |    2 +
+ include/corelib/ncbiobj.hpp                   |    2 +-
+ include/corelib/ncbistl.hpp                   |    2 +-
+ include/corelib/ncbistr.hpp                   |    2 +-
+ include/serial/impl/stltypes.hpp              |   14 +-
+ include/serial/iterator.hpp                   |    6 +-
+ include/util/bitset/bmfunc.h                  |  263 +++++++++++++------------
+ include/util/bitset/bmserial.h                |    6 +-
+ include/util/linkedset.hpp                    |    8 +-
+ include/util/rangemap.hpp                     |    2 +-
+ src/algo/blast/gumbel_params/njn_approx.hpp   |    1 +
+ src/algo/blast/gumbel_params/sls_alp_data.hpp |    1 +
+ src/serial/stdtypes.cpp                       |    8 +-
+ 15 files changed, 167 insertions(+), 162 deletions(-)
+
+diff --git a/include/algo/gnomon/gnomon_model.hpp b/include/algo/gnomon/gnomon_model.hpp
+index 66e7765..ca4d765 100644
+--- a/include/algo/gnomon/gnomon_model.hpp
++++ b/include/algo/gnomon/gnomon_model.hpp
+@@ -627,11 +627,11 @@ public:
+     CModelCluster(TSignedSeqRange limits) : m_limits(limits) {}
+     void Insert(const Model& a) {
+         m_limits.CombineWith(a.Limits());
+-        push_back(a);
++        this->push_back(a);
+     }
+     void Splice(CModelCluster& c) { // elements removed from c and inserted into *this
+         m_limits.CombineWith(c.Limits());
+-        splice(list<Model>::end(),c);
++        this->splice(list<Model>::end(),c);
+     }
+     TSignedSeqRange Limits() const { return m_limits; }
+     bool operator<(const CModelCluster& c) const { return Precede(m_limits, c.m_limits); }
+@@ -663,9 +663,9 @@ class NCBI_XALGOGNOMON_EXPORT CModelClusterSet : public set<Cluster> {
+         pair<Titerator,Titerator> lim = set<Cluster>::equal_range(clust);
+         for(Titerator it = lim.first; it != lim.second;) {
+             clust.Splice(const_cast<Cluster&>(*it));
+-            erase(it++);
++            this->erase(it++);
+         }
+-        const_cast<Cluster&>(*insert(lim.second,Cluster(clust.Limits()))).Splice(clust);
++        const_cast<Cluster&>(*this->insert(lim.second,Cluster(clust.Limits()))).Splice(clust);
+     }
+ };
+ 
+diff --git a/include/corelib/ncbiexpt.hpp b/include/corelib/ncbiexpt.hpp
+index 1d3cce3..1055d66 100644
+--- a/include/corelib/ncbiexpt.hpp
++++ b/include/corelib/ncbiexpt.hpp
+@@ -843,7 +843,7 @@ const TTo* UppermostCast(const TFrom& from)
+     exception_class(const exception_class& other) \
+        : base_class(other) \
+     { \
+-        x_Assign(other); \
++        this->x_Assign(other); \
+     } \
+ public: \
+     virtual ~exception_class(void) throw() {} \
+@@ -1166,7 +1166,7 @@ public:
+         : TBase( other)
+     {
+         m_Errno = other.m_Errno;
+-        x_Assign(other);
++        this->x_Assign(other);
+     }
+ 
+     /// Destructor.
+diff --git a/include/corelib/ncbimisc.hpp b/include/corelib/ncbimisc.hpp
+index 87236c7..b540038 100644
+--- a/include/corelib/ncbimisc.hpp
++++ b/include/corelib/ncbimisc.hpp
+@@ -47,6 +47,8 @@
+ #  include <ctype.h>
+ #endif
+ 
++// for free()
++#include <stdlib.h>
+ 
+ #if defined(_DEBUG)  &&  !defined(NCBI_NO_STRICT_CTYPE_ARGS)
+ #  define NCBI_STRICT_CTYPE_ARGS
+diff --git a/include/corelib/ncbiobj.hpp b/include/corelib/ncbiobj.hpp
+index de4c454..084a041 100644
+--- a/include/corelib/ncbiobj.hpp
++++ b/include/corelib/ncbiobj.hpp
+@@ -2128,7 +2128,7 @@ public:
+         CIRef<Interface, TThisType> ref(
+                    dynamic_cast<Interface*>(proxy->GetLockedObject()), *this);
+         if (ref.NotNull()) {
+-            Unlock(ref.GetPointer());
++            this->Unlock(ref.GetPointer());
+         }
+         return ref;
+     }
+diff --git a/include/corelib/ncbistl.hpp b/include/corelib/ncbistl.hpp
+index afd71d2..38768c4 100644
+--- a/include/corelib/ncbistl.hpp
++++ b/include/corelib/ncbistl.hpp
+@@ -36,7 +36,7 @@
+ 
+ 
+ #include <common/ncbi_export.h>
+-
++#include <string>
+ 
+ // Get rid of some warnings in MSVC++ 6.00
+ #if (_MSC_VER >= 1200)
+diff --git a/include/corelib/ncbistr.hpp b/include/corelib/ncbistr.hpp
+index e515dc6..5800223 100644
+--- a/include/corelib/ncbistr.hpp
++++ b/include/corelib/ncbistr.hpp
+@@ -2439,7 +2439,7 @@ public:
+         : TBase(other)
+     {
+         m_Pos = other.m_Pos;
+-        x_Assign(other);
++        this->x_Assign(other);
+     }
+ 
+     /// Destructor.
+diff --git a/include/serial/impl/stltypes.hpp b/include/serial/impl/stltypes.hpp
+index abfa8b8..28254ae 100644
+--- a/include/serial/impl/stltypes.hpp
++++ b/include/serial/impl/stltypes.hpp
+@@ -437,7 +437,7 @@ public:
+         }
+     static bool InitIterator(TTypeInfoIterator& iter)
+         {
+-            TStlIterator stl_iter = Get(iter.GetContainerPtr()).begin();
++            TStlIterator stl_iter = CStlClassInfoFunctionsIBase::Get(iter.GetContainerPtr()).begin();
+             if ( sizeof(TStlIterator) <= sizeof(iter.m_IteratorData) ) {
+                 void* data = &iter.m_IteratorData;
+                 new (data) TStlIterator(stl_iter);
+@@ -445,7 +445,7 @@ public:
+             else {
+                 iter.m_IteratorData = new TStlIterator(stl_iter);
+             }
+-            return stl_iter != Get(iter.GetContainerPtr()).end();
++            return stl_iter != CStlClassInfoFunctionsIBase::Get(iter.GetContainerPtr()).end();
+         }
+     static void ReleaseIterator(TTypeInfoIterator& iter)
+         {
+@@ -466,7 +466,7 @@ public:
+ 
+     static bool NextElement(TTypeInfoIterator& iter)
+         {
+-            return ++It(iter) != Get(iter.GetContainerPtr()).end();
++            return ++It(iter) != CStlClassInfoFunctionsIBase::Get(iter.GetContainerPtr()).end();
+         }
+     static TObjectPtr GetElementPtr(const TTypeInfoIterator& iter)
+         {
+@@ -503,7 +503,7 @@ public:
+     
+     static bool EraseElement(TTypeInfoIterator& iter)
+         {
+-            TStlIterator& it = It(iter);
++            TStlIterator& it = CStlClassInfoFunctionsI::It(iter);
+             Container* c = static_cast<Container*>(iter.GetContainerPtr());
+             it = c->erase(it);
+             return it != c->end();
+@@ -511,7 +511,7 @@ public:
+     static void EraseAllElements(TTypeInfoIterator& iter)
+         {
+             Container* c = static_cast<Container*>(iter.GetContainerPtr());
+-            c->erase(It(iter), c->end());
++            c->erase(CStlClassInfoFunctionsI::It(iter), c->end());
+         }
+ 
+     static void SetIteratorFunctions(CStlOneArgTemplate* info)
+@@ -542,7 +542,7 @@ public:
+         }
+     static bool EraseElement(TTypeInfoIterator& iter)
+         {
+-            TStlIterator& it = It(iter);
++            TStlIterator& it = CStlClassInfoFunctionsI_set::It(iter);
+             Container* c = static_cast<Container*>(iter.GetContainerPtr());
+             TStlIterator erase = it++;
+             c->erase(erase);
+@@ -551,7 +551,7 @@ public:
+     static void EraseAllElements(TTypeInfoIterator& iter)
+         {
+             Container* c = static_cast<Container*>(iter.GetContainerPtr());
+-            c->erase(It(iter), c->end());
++            c->erase(CStlClassInfoFunctionsI_set::It(iter), c->end());
+         }
+ 
+     static void SetIteratorFunctions(CStlOneArgTemplate* info)
+diff --git a/include/serial/iterator.hpp b/include/serial/iterator.hpp
+index eabb01b..402d7ac 100644
+--- a/include/serial/iterator.hpp
++++ b/include/serial/iterator.hpp
+@@ -491,13 +491,13 @@ protected:
+     CTypeIteratorBase(TTypeInfo needType, const TBeginInfo& beginInfo)
+         : m_NeedType(needType)
+         {
+-            Init(beginInfo);
++            this->Init(beginInfo);
+         }
+     CTypeIteratorBase(TTypeInfo needType, const TBeginInfo& beginInfo,
+                       const string& filter)
+         : m_NeedType(needType)
+         {
+-            Init(beginInfo, filter);
++            this->Init(beginInfo, filter);
+         }
+ 
+     virtual bool CanSelect(const CConstObjectInfo& object)
+@@ -599,7 +599,7 @@ public:
+ 
+     CTypesIteratorBase<Parent>& operator=(const TBeginInfo& beginInfo)
+         {
+-            Init(beginInfo);
++            this->Init(beginInfo);
+             return *this;
+         }
+ 
+diff --git a/include/util/bitset/bmfunc.h b/include/util/bitset/bmfunc.h
+index bf09e2d..5489213 100644
+--- a/include/util/bitset/bmfunc.h
++++ b/include/util/bitset/bmfunc.h
+@@ -1794,6 +1794,72 @@ void gap_and_to_bitset(unsigned* dest, const T*  buf)
+     }
+ }
+ 
++/*!
++	Function calculates number of 1 bits in the given array of words in
++    the range between left anf right bits (borders included)
++    Make sure the addresses are aligned.
++
++    @ingroup bitfunc
++*/
++inline 
++bm::id_t bit_block_calc_count_range(const bm::word_t* block,
++                                    bm::word_t left,
++                                    bm::word_t right)
++{
++    BM_ASSERT(left <= right);
++    unsigned nword, nbit;    
++    nbit = left & bm::set_word_mask;
++    const bm::word_t* word = 
++        block + (nword = unsigned(left >> bm::set_word_shift));
++    if (left == right)  // special case (only 1 bit to check)
++    {
++        return (*word >> nbit) & 1;
++    }
++	bm::id_t count = 0;
++
++    unsigned acc;
++    unsigned bitcount = right - left + 1;
++
++    if (nbit) // starting position is not aligned
++    {
++        unsigned right_margin = nbit + (right - left);
++
++        if (right_margin < 32)
++        {
++            unsigned mask =
++                block_set_table<true>::_right[nbit] &
++                block_set_table<true>::_left[right_margin];
++            acc = *word & mask;
++            
++            BM_INCWORD_BITCOUNT(count, acc);
++            return count;
++        }
++        else
++        {
++            acc = *word & block_set_table<true>::_right[nbit];
++            BM_INCWORD_BITCOUNT(count, acc);
++            bitcount -= 32 - nbit;
++        }
++        ++word;
++    }
++
++    // now when we are word aligned, we can count bits the usual way
++    for ( ;bitcount >= 32; bitcount -= 32)
++    {
++        acc = *word++;
++        BM_INCWORD_BITCOUNT(count, acc);
++    }
++
++    if (bitcount)  // we have a tail to count
++    {
++        acc = (*word) & block_set_table<true>::_left[bitcount-1];
++        BM_INCWORD_BITCOUNT(count, acc);
++    }
++
++    return count;
++}
++
++
+ 
+ /*!
+    \brief Compute bitcount of bit block AND masked by GAP block.
+@@ -1825,6 +1891,72 @@ bm::id_t gap_bitset_and_count(const unsigned* block, const T*  buf)
+     return count;
+ }
+ 
++/*!
++	Function calculates if there is any number of 1 bits 
++    in the given array of words in the range between left anf right bits 
++    (borders included). Make sure the addresses are aligned.
++
++    @ingroup bitfunc
++*/
++inline 
++bm::id_t bit_block_any_range(const bm::word_t* block,
++                             bm::word_t left,
++                             bm::word_t right)
++{
++    BM_ASSERT(left <= right);
++    
++    unsigned nbit  = left; // unsigned(left & bm::set_block_mask);
++    unsigned nword = unsigned(nbit >> bm::set_word_shift);
++    nbit &= bm::set_word_mask;
++
++    const bm::word_t* word = block + nword;
++
++    if (left == right)  // special case (only 1 bit to check)
++    {
++        return (*word >> nbit) & 1;
++    }
++    unsigned acc;
++    unsigned bitcount = right - left + 1;
++
++    if (nbit) // starting position is not aligned
++    {
++        unsigned right_margin = nbit + (right - left);
++        if (right_margin < 32)
++        {
++            unsigned mask =
++                block_set_table<true>::_right[nbit] &
++                block_set_table<true>::_left[right_margin];
++            acc = *word & mask;
++            return acc;
++        }
++        else
++        {
++            acc = *word & block_set_table<true>::_right[nbit];
++            if (acc) 
++                return acc;
++            bitcount -= 32 - nbit;
++        }
++        ++word;
++    }
++
++    // now when we are word aligned, we can check bits the usual way
++    for ( ;bitcount >= 32; bitcount -= 32)
++    {
++        acc = *word++;
++        if (acc) 
++            return acc;
++    }
++
++    if (bitcount)  // we have a tail to count
++    {
++        acc = (*word) & block_set_table<true>::_left[bitcount-1];
++        if (acc) 
++            return acc;
++    }
++
++    return 0;
++}
++
+ 
+ /*!
+    \brief Bitcount test of bit block AND masked by GAP block.
+@@ -2939,137 +3071,6 @@ bm::id_t bit_block_calc_count_change(const bm::word_t* block,
+ }
+ 
+ 
+-/*!
+-	Function calculates number of 1 bits in the given array of words in
+-    the range between left anf right bits (borders included)
+-    Make sure the addresses are aligned.
+-
+-    @ingroup bitfunc
+-*/
+-inline 
+-bm::id_t bit_block_calc_count_range(const bm::word_t* block,
+-                                    bm::word_t left,
+-                                    bm::word_t right)
+-{
+-    BM_ASSERT(left <= right);
+-    unsigned nword, nbit;    
+-    nbit = left & bm::set_word_mask;
+-    const bm::word_t* word = 
+-        block + (nword = unsigned(left >> bm::set_word_shift));
+-    if (left == right)  // special case (only 1 bit to check)
+-    {
+-        return (*word >> nbit) & 1;
+-    }
+-	bm::id_t count = 0;
+-
+-    unsigned acc;
+-    unsigned bitcount = right - left + 1;
+-
+-    if (nbit) // starting position is not aligned
+-    {
+-        unsigned right_margin = nbit + (right - left);
+-
+-        if (right_margin < 32)
+-        {
+-            unsigned mask =
+-                block_set_table<true>::_right[nbit] &
+-                block_set_table<true>::_left[right_margin];
+-            acc = *word & mask;
+-            
+-            BM_INCWORD_BITCOUNT(count, acc);
+-            return count;
+-        }
+-        else
+-        {
+-            acc = *word & block_set_table<true>::_right[nbit];
+-            BM_INCWORD_BITCOUNT(count, acc);
+-            bitcount -= 32 - nbit;
+-        }
+-        ++word;
+-    }
+-
+-    // now when we are word aligned, we can count bits the usual way
+-    for ( ;bitcount >= 32; bitcount -= 32)
+-    {
+-        acc = *word++;
+-        BM_INCWORD_BITCOUNT(count, acc);
+-    }
+-
+-    if (bitcount)  // we have a tail to count
+-    {
+-        acc = (*word) & block_set_table<true>::_left[bitcount-1];
+-        BM_INCWORD_BITCOUNT(count, acc);
+-    }
+-
+-    return count;
+-}
+-
+-
+-/*!
+-	Function calculates if there is any number of 1 bits 
+-    in the given array of words in the range between left anf right bits 
+-    (borders included). Make sure the addresses are aligned.
+-
+-    @ingroup bitfunc
+-*/
+-inline 
+-bm::id_t bit_block_any_range(const bm::word_t* block,
+-                             bm::word_t left,
+-                             bm::word_t right)
+-{
+-    BM_ASSERT(left <= right);
+-    
+-    unsigned nbit  = left; // unsigned(left & bm::set_block_mask);
+-    unsigned nword = unsigned(nbit >> bm::set_word_shift);
+-    nbit &= bm::set_word_mask;
+-
+-    const bm::word_t* word = block + nword;
+-
+-    if (left == right)  // special case (only 1 bit to check)
+-    {
+-        return (*word >> nbit) & 1;
+-    }
+-    unsigned acc;
+-    unsigned bitcount = right - left + 1;
+-
+-    if (nbit) // starting position is not aligned
+-    {
+-        unsigned right_margin = nbit + (right - left);
+-        if (right_margin < 32)
+-        {
+-            unsigned mask =
+-                block_set_table<true>::_right[nbit] &
+-                block_set_table<true>::_left[right_margin];
+-            acc = *word & mask;
+-            return acc;
+-        }
+-        else
+-        {
+-            acc = *word & block_set_table<true>::_right[nbit];
+-            if (acc) 
+-                return acc;
+-            bitcount -= 32 - nbit;
+-        }
+-        ++word;
+-    }
+-
+-    // now when we are word aligned, we can check bits the usual way
+-    for ( ;bitcount >= 32; bitcount -= 32)
+-    {
+-        acc = *word++;
+-        if (acc) 
+-            return acc;
+-    }
+-
+-    if (bitcount)  // we have a tail to count
+-    {
+-        acc = (*word) & block_set_table<true>::_left[bitcount-1];
+-        if (acc) 
+-            return acc;
+-    }
+-
+-    return 0;
+-}
+ 
+ 
+ 
+diff --git a/include/util/bitset/bmserial.h b/include/util/bitset/bmserial.h
+index 519cd2b..00f6c01 100644
+--- a/include/util/bitset/bmserial.h
++++ b/include/util/bitset/bmserial.h
+@@ -1381,7 +1381,7 @@ deserializer<BV, DEC>::deserialize_gap(unsigned char btype, decoder_type& dec,
+     case set_block_arrgap: 
+     case set_block_arrgap_egamma:
+         {
+-        	unsigned arr_len = read_id_list(dec, btype, this->id_array_);
++        	unsigned arr_len = this->read_id_list(dec, btype, this->id_array_);
+             gap_len = gap_set_array(gap_temp_block_, this->id_array_, arr_len);
+             break;
+         }
+@@ -1390,7 +1390,7 @@ deserializer<BV, DEC>::deserialize_gap(unsigned char btype, decoder_type& dec,
+             (sizeof(gap_word_t) == 2 ? dec.get_16() : dec.get_32());
+     case set_block_arrgap_egamma_inv:
+     case set_block_arrgap_inv:
+-        gap_len = read_gap_block(dec, btype, gap_temp_block_, gap_head);
++        gap_len = this->read_gap_block(dec, btype, gap_temp_block_, gap_head);
+         break;
+     default:
+         BM_ASSERT(0);
+@@ -2763,7 +2763,7 @@ serial_stream_iterator<DEC>::get_gap_block(bm::gap_word_t* dst_block)
+               this->block_type_ == set_block_bit_1bit);
+     BM_ASSERT(dst_block);
+ 
+-    read_gap_block(this->decoder_,
++    this->read_gap_block(this->decoder_,
+                    this->block_type_,
+                    dst_block,
+                    this->gap_head_);
+diff --git a/include/util/linkedset.hpp b/include/util/linkedset.hpp
+index 0d2cba1..1d09a28 100644
+--- a/include/util/linkedset.hpp
++++ b/include/util/linkedset.hpp
+@@ -422,10 +422,10 @@ public:
+         {
+             iterator iter = m_Container.insert(value);
+             if ( iter == begin() )
+-                insertToStart(get(iter));
++                this->insertToStart(get(iter));
+             else {
+                 iterator prev = iter;
+-                insertAfter(get(--prev), get(iter));
++                this->insertAfter(get(--prev), get(iter));
+             }
+             return iter;
+         }
+@@ -433,10 +433,10 @@ public:
+     void erase(iterator iter)
+         {
+             if ( iter == begin() )
+-                removeFromStart(get(iter));
++                this->removeFromStart(get(iter));
+             else {
+                 iterator prev = iter;
+-                removeAfter(get(--prev), get(iter));
++                this->removeAfter(get(--prev), get(iter));
+             }
+             m_Container.erase(iter);
+         }
+diff --git a/include/util/rangemap.hpp b/include/util/rangemap.hpp
+index 22cf3dd..b30b39d 100644
+--- a/include/util/rangemap.hpp
++++ b/include/util/rangemap.hpp
+@@ -640,7 +640,7 @@ public:
+             // insert element
+             iterator ret;
+             ret.m_Range = range_type::GetWhole();
+-            ret.m_SelectIter = insertLevel(selectKey);
++            ret.m_SelectIter = this->insertLevel(selectKey);
+             ret.m_SelectIterEnd = this->m_SelectMap.end();
+             ret.m_LevelIter = ret.m_SelectIter->second.insert(value);
+             return ret;
+diff --git a/src/algo/blast/gumbel_params/njn_approx.hpp b/src/algo/blast/gumbel_params/njn_approx.hpp
+index a79da93..5909cdf 100644
+--- a/src/algo/blast/gumbel_params/njn_approx.hpp
++++ b/src/algo/blast/gumbel_params/njn_approx.hpp
+@@ -38,6 +38,7 @@ Contents:
+ 
+ #include <corelib/ncbistl.hpp>
+ #include <float.h>
++#include <math.h>
+ 
+ BEGIN_NCBI_SCOPE
+ BEGIN_SCOPE(blast)
+diff --git a/src/algo/blast/gumbel_params/sls_alp_data.hpp b/src/algo/blast/gumbel_params/sls_alp_data.hpp
+index 5cee936..9ff4a4c 100644
+--- a/src/algo/blast/gumbel_params/sls_alp_data.hpp
++++ b/src/algo/blast/gumbel_params/sls_alp_data.hpp
+@@ -44,6 +44,7 @@ Contents: Contains input data
+ #include <float.h>
+ #include <ctime>
+ #include <stdlib.h>
++#include <math.h>
+ #include <limits>
+ 
+ #ifndef NCBI_OS_MSWIN
+diff --git a/src/serial/stdtypes.cpp b/src/serial/stdtypes.cpp
+index 6eb0ac3..cdf5356 100644
+--- a/src/serial/stdtypes.cpp
++++ b/src/serial/stdtypes.cpp
+@@ -720,7 +720,7 @@ public:
+             if ( IsSigned() ) {
+                 // signed -> unsigned
+                 // check for negative value
+-                if ( IsNegative(value) )
++                if ( CPrimitiveTypeInfoIntFunctions::IsNegative(value) )
+                     ThrowIntegerOverflow();
+             }
+             if ( sizeof(value) > sizeof(result) ) {
+@@ -751,7 +751,7 @@ public:
+                 // unsigned -> signed
+                 if ( sizeof(value) == sizeof(result) ) {
+                     // same size - check for sign change only
+-                    if ( IsNegative(result) )
++                    if ( CPrimitiveTypeInfoIntFunctions::IsNegative(result) )
+                         ThrowIntegerOverflow();
+                 }
+             }
+@@ -786,7 +786,7 @@ public:
+             if ( IsSigned() ) {
+                 // signed -> unsigned
+                 // check for negative value
+-                if ( IsNegative(value) )
++                if ( CPrimitiveTypeInfoIntFunctions::IsNegative(value) )
+                     ThrowIntegerOverflow();
+             }
+             if ( sizeof(value) > sizeof(result) ) {
+@@ -817,7 +817,7 @@ public:
+                 // unsigned -> signed
+                 if ( sizeof(value) == sizeof(result) ) {
+                     // same size - check for sign change only
+-                    if ( IsNegative(result) )
++                    if ( CPrimitiveTypeInfoIntFunctions::IsNegative(result) )
+                         ThrowIntegerOverflow();
+                 }
+             }

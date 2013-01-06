@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/coquillo
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/coquillo/ChangeLog,v 1.1 2012/07/06 15:45:40 yngwin Exp $
+
+*coquillo-1.12 (06 Jul 2012)
+
+  06 Jul 2012; Ben de Groot <yngwin@gentoo.org> +coquillo-1.12.ebuild,
+  +metadata.xml:
+  Initial commmit. Ebuild based on the one by sping in betagarden overlay.
+  Assign co-maintainership to both sound and qt herds.

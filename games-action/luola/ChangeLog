@@ -1,0 +1,51 @@
+# ChangeLog for games-action/luola
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/luola/ChangeLog,v 1.11 2011/06/17 10:25:17 tupone Exp $
+
+  17 Jun 2011; Tupone Alfredo <tupone@gentoo.org> luola-1.3.0-r1.ebuild,
+  +files/luola-1.3.0-underlink.patch:
+  Fix underlink. Bug #369039 by Diego Elio Pettenò
+
+  05 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  luola-1.3.0-r1.ebuild:
+  EAPI=2 and avoid using PATCHES variable
+
+  27 Nov 2006; <blubb@gentoo.org> luola-1.3.0-r1.ebuild:
+  stable on amd64
+
+*luola-1.3.0-r1 (08 Apr 2006)
+
+  08 Apr 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +luola-1.3.0-r1.ebuild:
+  rev bump to pull in two upstream patches
+
+  21 Dec 2005; Michael Sterrett <mr_bones_@gentoo.org> luola-1.3.0.ebuild:
+  upstream added version numbers to the level packs.
+
+  19 Nov 2005; Joseph Jezak <josejx@gentoo.org> luola-1.3.0.ebuild:
+  Marked ~ppc for bug #110389.
+
+*luola-1.3.0 (24 Oct 2005)
+
+  24 Oct 2005; Michael Sterrett <mr_bones_@gentoo.org> +luola-1.3.0.ebuild:
+  version bump
+
+*luola-1.2.9 (23 Aug 2005)
+
+  23 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org> +luola-1.2.9.ebuild:
+  version bump
+
+  10 Aug 2005; Carlos Silva <r3pek@gentoo.org> luola-1.2.7.ebuild:
+  marked ~amd64. closes bug #102046
+
+*luola-1.2.7 (09 May 2005)
+
+  09 May 2005; Michael Sterrett <mr_bones_@gentoo.org> +luola-1.2.7.ebuild:
+  version bump
+
+*luola-1.2.6 (26 Mar 2005)
+
+  26 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +luola-1.2.6.ebuild:
+  initial commit (bug #55063)
+

@@ -1,0 +1,8 @@
+# /etc/conf.d/ipset
+
+# Location in which ipset initscript will save set rules on 
+# service shutdown
+IPSET_SAVE="/var/lib/ipset/rules-save"
+
+# Save state on stopping ipset
+SAVE_ON_STOP="yes"

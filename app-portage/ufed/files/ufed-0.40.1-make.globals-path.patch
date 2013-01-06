@@ -1,0 +1,14 @@
+http://bugs.gentoo.org/427862
+http://bugs.gentoo.org/431064
+
+--- Portage.pm
++++ Portage.pm
+@@ -150,7 +150,7 @@
+ }
+ 
+ sub read_make_globals() {
+-	for my $dir(@profiles, '/etc') {
++	for my $dir(@profiles, '/usr/share/portage/config') {
+ 		read_sh "$dir/make.globals";
+ 	}
+ }

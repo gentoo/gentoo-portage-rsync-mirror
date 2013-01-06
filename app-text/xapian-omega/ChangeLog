@@ -1,0 +1,82 @@
+# ChangeLog for app-text/xapian-omega
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/ChangeLog,v 1.18 2012/10/02 22:48:51 blueness Exp $
+
+  02 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  -xapian-omega-1.2.10.ebuild, -xapian-omega-1.2.8.ebuild,
+  -xapian-omega-1.2.9.ebuild:
+  Remove older versions
+
+  19 Sep 2012; Johannes Huber <johu@gentoo.org> xapian-omega-1.2.12.ebuild:
+  Stable for x86, wrt bug #434564
+
+  16 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  xapian-omega-1.2.12.ebuild:
+  Stable ppc64, bug #434564
+
+  16 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  xapian-omega-1.2.12.ebuild:
+  Stable arm, bug #434564
+
+  16 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  xapian-omega-1.2.12.ebuild:
+  Stable ppc, bug #434564
+
+  15 Sep 2012; Agostino Sarubbo <ago@gentoo.org> xapian-omega-1.2.12.ebuild:
+  Stable for amd64, wrt bug #434564
+
+  18 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  xapian-omega-1.2.12.ebuild:
+  Keyword ~arm
+
+  18 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  xapian-omega-1.2.12.ebuild:
+  Keyword ~mips
+
+*xapian-omega-1.2.12 (28 Jun 2012)
+
+  28 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
+  -xapian-omega-1.2.11.ebuild, +xapian-omega-1.2.12.ebuild:
+  Version bump fixes broken SONAME in 1.2.11
+
+*xapian-omega-1.2.11 (28 Jun 2012)
+
+  28 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
+  +xapian-omega-1.2.11.ebuild:
+  Version bump
+
+*xapian-omega-1.2.10 (10 May 2012)
+
+  10 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  +xapian-omega-1.2.10.ebuild:
+  Version bump
+
+  14 Mar 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog, Manifest:
+  Fixed ChangeLog Header
+
+  14 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  xapian-omega-1.2.9.ebuild:
+  Tested on ppc/ppc64
+
+*xapian-omega-1.2.9 (13 Mar 2012)
+
+  13 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  +xapian-omega-1.2.9.ebuild:
+  Version bump
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  xapian-omega-1.2.8.ebuild:
+  x86 stable wrt bug #402189
+
+  05 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  xapian-omega-1.2.8.ebuild:
+  Removed DEPEND on sys-apps/file since its in @system
+
+  05 Feb 2012; Agostino Sarubbo <ago@gentoo.org> xapian-omega-1.2.8.ebuild:
+  Stable for amd64, wrt bug #402189
+
+*xapian-omega-1.2.8 (24 Dec 2011)
+
+  24 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
+  +xapian-omega-1.2.8.ebuild, +metadata.xml:
+  Initial commit, bug #255157

@@ -1,0 +1,16 @@
+ configure.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/configure.in b/configure.in
+index 0be7802..d19c8ec 100644
+--- a/configure.in
++++ b/configure.in
+@@ -46,7 +46,7 @@ fi
+ if test "x${REVISION}" != "xr0"
+ then
+ 	# force debug mode for a SVN working copy
+-	CFLAGS="-g -Wall"
++	CFLAGS +="-Wall"
+ else
+ 	REVISION="-1"
+ fi

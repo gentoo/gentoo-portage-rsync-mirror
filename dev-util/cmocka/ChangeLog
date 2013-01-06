@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/cmocka
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmocka/ChangeLog,v 1.1 2012/12/14 17:04:36 creffett Exp $
+
+*cmocka-0.2.0_p20121129 (14 Dec 2012)
+*cmocka-9999 (14 Dec 2012)
+
+  14 Dec 2012; Chris Reffett <creffett@gentoo.org>
+  +cmocka-0.2.0_p20121129.ebuild, +cmocka-9999.ebuild,
+  +files/cmocka-automagicness.patch, +metadata.xml:
+  New package, test dependency of csync

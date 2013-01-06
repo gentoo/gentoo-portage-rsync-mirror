@@ -1,0 +1,14 @@
+# ChangeLog for www-apps/trac-tags
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-tags/ChangeLog,v 1.2 2011/02/27 16:46:23 rafaelmartins Exp $
+
+  27 Feb 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  trac-tags-0.6.ebuild:
+  Fixed license.
+
+*trac-tags-0.6 (27 Feb 2011)
+
+  27 Feb 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +trac-tags-0.6.ebuild, +metadata.xml:
+  Initial version.
+

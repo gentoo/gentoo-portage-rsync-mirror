@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=>=dev-lang/mono-2.0.1 virtual/pkgconfig
+DESCRIPTION=Mono.Nat is a C# library used for automatic port forwarding, using either uPnP or nat-pmp.
+EAPI=4
+HOMEPAGE=http://projects.qnetp.net/projects/show/mono-nat
+KEYWORDS=amd64 x86
+LICENSE=MIT
+RDEPEND=>=dev-lang/mono-2.0.1
+SLOT=0
+SRC_URI=http://projects.qnetp.net/attachments/download/76/mono-nat-1.1.0.tar.gz mirror://gentoo/mono.snk.bz2
+_eclasses_=mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=3065b547d65683c665b6a0130ff1ceab

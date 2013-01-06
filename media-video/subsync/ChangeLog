@@ -1,0 +1,10 @@
+# ChangeLog for media-video/subsync
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/subsync/ChangeLog,v 1.1 2010/08/08 00:45:27 sbriesen Exp $
+
+*subsync-0.0.1 (08 Aug 2010)
+
+  08 Aug 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  +subsync-0.0.1.ebuild, +metadata.xml:
+  initial commit.
+

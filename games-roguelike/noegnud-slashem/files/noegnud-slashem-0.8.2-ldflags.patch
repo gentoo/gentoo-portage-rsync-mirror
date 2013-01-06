@@ -1,0 +1,11 @@
+--- slashem-0.0.7E3/sys/unix/Makefile.src.old	2010-10-14 09:33:49.000000000 +0200
++++ slashem-0.0.7E3/sys/unix/Makefile.src	2010-10-14 09:34:09.000000000 +0200
+@@ -570,7 +570,7 @@
+ 
+ Sysunix:	$(HOBJ) Makefile
+ 	@echo "Loading ..."
+-	$(CC) $(LFLAGS) -o $(GAME) $(HOBJ) $(WINLIB) $(LIBS)
++	$(CC) $(LDFLAGS) $(LFLAGS) -o $(GAME) $(HOBJ) $(WINLIB) $(LIBS)
+ 	@touch Sysunix
+ 
+ Sys3B2:	$(HOBJ) Makefile

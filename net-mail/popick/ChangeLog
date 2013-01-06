@@ -1,0 +1,23 @@
+# ChangeLog for net-mail/popick
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popick/ChangeLog,v 1.5 2007/02/08 13:34:41 flameeyes Exp $
+
+  08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org> popick-0.1.ebuild:
+  Virtuals for perl-core
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> popick-0.1.ebuild:
+  dev-perl/Getopt-Long => perl-core/Getopt-Long migration
+
+  07 Mar 2005; Andrej Kacian <ticho@gentoo.org> popick-0.1.ebuild:
+  Stable on x86.
+
+*popick-0.1 (15 Dec 2004)
+
+  15 Dec 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +popick-0.1.ebuild:
+  Initial import. Closes #73364, ebuild submitted by Mina Naguib
+  <webmaster@topfx.com>.
+

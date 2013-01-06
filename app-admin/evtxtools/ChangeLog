@@ -1,0 +1,31 @@
+# ChangeLog for app-admin/evtxtools
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/evtxtools/ChangeLog,v 1.6 2012/03/24 17:37:20 phajdan.jr Exp $
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> evtxtools-1.1.0.ebuild:
+  x86 stable wrt bug #405625
+
+  25 Feb 2012; Agostino Sarubbo <ago@gentoo.org> evtxtools-1.1.0.ebuild:
+  Stable for amd64, wrt bug #405625
+
+*evtxtools-1.1.1 (24 Feb 2012)
+
+  24 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> +evtxtools-1.1.1.ebuild,
+  -evtxtools-1.0.8.ebuild:
+  Bump to 1.1.1, bug #405629. Thanks to slepnoga
+
+  04 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Fix maintainer's email in metadata
+
+*evtxtools-1.1.0 (26 Nov 2011)
+
+  26 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org> +evtxtools-1.1.0.ebuild,
+  metadata.xml:
+  Bumped to 1.1.0. Thanks to slepnoga
+
+*evtxtools-1.0.8 (30 Oct 2011)
+
+  30 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org> +evtxtools-1.0.8.ebuild,
+  +metadata.xml:
+  Add app-admin/evtctools-1.0.8, thanks to slepnoga
+

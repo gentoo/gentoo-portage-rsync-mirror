@@ -1,0 +1,17 @@
+# ChangeLog for dev-haskell/gluraw
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gluraw/ChangeLog,v 1.3 2012/11/18 12:50:41 gienah Exp $
+
+*gluraw-1.3.0.0 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> +gluraw-1.3.0.0.ebuild:
+  Bump gluraw to 1.3.0.0
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> gluraw-1.2.0.0.ebuild:
+  move dev-haskell/gluraw/gluraw-1.2.0.0.ebuild ebuild to mirror://hackage
+
+*gluraw-1.2.0.0 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +gluraw-1.2.0.0.ebuild,
+  +metadata.xml:
+  Add gluraw, part of fix for bug #363979

@@ -1,0 +1,10 @@
+DEFINED_PHASES=install postinst postrm prerm
+DESCRIPTION=Easy to use GUI & CLI alternative for etc-update with safe automatic updating functionality
+HOMEPAGE=http://people.zeelandnet.nl/xentric/
+IUSE=gnome
+KEYWORDS=amd64 ~arm ppc x86
+LICENSE=GPL-2
+RDEPEND=gnome? ( >=x11-misc/sux-1.0 x11-apps/xhost >=dev-util/meld-0.9 )
+SLOT=0
+SRC_URI=http://people.zeelandnet.nl/xentric/cfg-update-1.8.2-r1.tar.gz
+_md5_=ba08aab35497d05bc9315fe2f4cc6d7a

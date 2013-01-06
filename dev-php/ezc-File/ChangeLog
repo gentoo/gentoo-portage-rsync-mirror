@@ -1,0 +1,55 @@
+# ChangeLog for dev-php5/ezc-File
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ezc-File/ChangeLog,v 1.1 2011/12/14 22:10:54 mabi Exp $
+
+  18 Mar 2008; Markus Ullmann <jokey@gentoo.org> -ezc-File-1.0.ebuild,
+  -ezc-File-1.0.1.ebuild, -ezc-File-1.1.1.ebuild:
+  Drop old
+
+*ezc-File-1.2 (13 Jan 2008)
+
+  13 Jan 2008; Markus Ullmann <jokey@gentoo.org> +ezc-File-1.2.ebuild:
+  Add eZ Components 2007.2 from project overlay
+
+  12 Jan 2008; Jakub Moc <jakub@gentoo.org> +ezc-File-1.2.ebuild:
+  Version bump to 2007.2
+
+  08 Oct 2007; Markus Ullmann <jokey@gentoo.org> ezc-File-1.1.1.ebuild:
+  Rekeyword sparc per bug #190787 thanks to Tiago Cunha for digging into it
+
+  31 Aug 2007; Jeroen Roovers <jer@gentoo.org> ezc-File-1.1.1.ebuild:
+  Marked ~hppa (bug #190787).
+
+*ezc-File-1.1.1 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +ezc-File-1.1.1.ebuild:
+  Version bump for eZC 2007.1.1
+
+  25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> ezc-File-1.0.1.ebuild:
+  Add ~alpha + ~ia64 keywords, bug 134717.
+
+*ezc-File-1.0.1 (09 Oct 2006)
+
+  09 Oct 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  +ezc-File-1.0.1.ebuild:
+  Version bump.
+
+  02 Oct 2006; Guy Martin <gmsoft@gentoo.org> ezc-File-1.0.ebuild:
+  Added ~hppa to KEYWORDS.
+
+  16 Sep 2006; Markus Rothe <corsair@gentoo.org> ezc-File-1.0.ebuild:
+  Added ~ppc64
+
+  24 Aug 2006; Jason Wever <weeve@gentoo.org> ezc-File-1.0.ebuild:
+  Added ~sparc keyword wrt bug #134717.
+
+  12 Jul 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  ezc-File-1.0.ebuild:
+  Keyword ~amd64.
+
+*ezc-File-1.0 (12 Jun 2006)
+
+  12 Jun 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +ezc-File-1.0.ebuild:
+  Initial ebuild.
+

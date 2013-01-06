@@ -1,0 +1,45 @@
+# ChangeLog for dev-util/plan9port
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/ChangeLog,v 1.7 2013/01/05 13:00:12 blueness Exp $
+
+*plan9port-20130103 (05 Jan 2013)
+
+  05 Jan 2013; Anthony G. Basile <blueness@gentoo.org>
+  +plan9port-20130103.ebuild, plan9port-20121219.ebuild:
+  Version bump, fix up license
+
+*plan9port-20121219 (27 Dec 2012)
+
+  27 Dec 2012; Andy Spencer <andy753421@gmail.com> -plan9port-20110320.ebuild,
+  -plan9port-no-lex.patch, +plan9port-20121219.ebuild:
+  Version bump, update noexecstack patch, remove unneeded lex patch. Changed
+  sed command to use grep instead of file to prevent spawning excess processes.
+
+*plan9port-20110320 (20 Mar 2011)
+
+  20 Mar 2011; Andy Spencer <andy753421@gmail.com> +plan9port-20110320.ebuild,
+  +plan9port-9660srv-errno.patch, +plan9port-noexecstack.patch,
+  +plan9port-no-lex.patch:
+  Version bump (bug #273890), change prefix to /opt/plan9, replace PREFIX patch
+  with sed command, change DEPEND to x11-apps/xauth, added EAPI=4 and
+  PORTAGE_DOCOMPORESS (bug #224209), patched AFLAGS with --noexecstack, convert
+  -jN to NPROC=N for mk, generate 30plan9 env file on-the-fly, Thanks to John
+  David for some work on this.
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing anant as a maintainer since he was retired.
+
+*plan9port-20080130 (11 Mar 2008)
+
+  11 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
+  plan9port-20070522.ebuild, +plan9port-20080130.ebuild:
+  Version bump, added patch to fix shebangs (bug #201404), marked ~amd64 (bug
+  #209553), use elog.
+
+*plan9port-20070522 (29 May 2007)
+
+  29 May 2007; Anant Narayanan <anant@gentoo.org> +files/30plan9,
+  +metadata.xml, +plan9port-20070522.ebuild:
+  Initial ebuild for Plan9Port, a set of Plan 9 utilities ported to POSIX
+  environments.

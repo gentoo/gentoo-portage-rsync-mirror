@@ -1,0 +1,95 @@
+# ChangeLog for app-emulation/vmware-tools
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-tools/ChangeLog,v 1.12 2012/12/09 14:31:03 vadimk Exp $
+
+*vmware-tools-9.2.2.894247 (09 Dec 2012)
+
+  09 Dec 2012; Vadim Kuznetsov vadimk@gentoo.org
+  +vmware-tools-9.2.2.894247.ebuild:
+  vmware desktop 9.0.1 version bump. bugs 432918, 443022
+
+*vmware-tools-8.8.4.744019 (17 Jun 2012)
+*vmware-tools-8.4.9.744570 (17 Jun 2012)
+
+  17 Jun 2012; Vadim Kuznetsov vadimk@gentoo.org
+  +vmware-tools-8.4.9.744570.ebuild, +vmware-tools-8.8.4.744019.ebuild,
+  -vmware-tools-8.4.8.491717.ebuild, -vmware-tools-8.8.2.703057.ebuild:
+  bump vmware desktop. bug 421269
+
+*vmware-tools-8.8.2.703057 (05 May 2012)
+
+  05 May 2012; Vadim Kuznetsov vadimk@gentoo.org
+  +vmware-tools-8.8.2.703057.ebuild, -vmware-tools-8.8.2.591240.ebuild:
+  VMware desktop build 703057
+
+  24 Mar 2012; Vadim Kuznetsov <vadimk@gentoo.org>
+  -vmware-tools-8.8.1.528992.ebuild:
+  cleanup
+
+*vmware-tools-8.8.2.591240 (10 Mar 2012)
+
+  10 Mar 2012; Vadim Kuznetsov <vadimk@gentoo.org>
+  +vmware-tools-8.8.2.591240.ebuild, vmware-tools-8.4.8.491717.ebuild,
+  vmware-tools-8.8.1.528992.ebuild:
+  vmware desktop version bump
+
+*vmware-tools-8.8.1.528992 (03 Dec 2011)
+
+  03 Dec 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  +vmware-tools-8.8.1.528992.ebuild:
+  vmware desktop version bump
+
+  22 Nov 2011; Vadim Kuznetsov <vadimk@gentoo.org> metadata.xml:
+  updated co-maintainer email.
+
+  17 Oct 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  -vmware-tools-8.4.6.385536.ebuild:
+  cleanup
+
+  08 Oct 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  -vmware-tools-8.4.5.324285.ebuild:
+  cleanup
+
+*vmware-tools-8.4.8.491717 (08 Oct 2011)
+
+  08 Oct 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  +vmware-tools-8.4.8.491717.ebuild:
+  version bump.
+
+*vmware-tools-8.4.6.385536 (15 Apr 2011)
+
+  15 Apr 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  +vmware-tools-8.4.6.385536.ebuild:
+  version bump
+
+*vmware-tools-8.4.5.324285 (27 Mar 2011)
+
+  27 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  +vmware-tools-8.4.5.324285.ebuild, +metadata.xml:
+  moved from overlay
+
+  20 Mar 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  -vmware-tools-8.4.2.261024.ebuild, -vmware-tools-8.4.4.301548.ebuild,
+  vmware-tools-8.4.5.324285.ebuild:
+  deleted old versions. QA fixes.
+
+  19 Nov 2010; Matt Whitlock (whitslack) <matt@whitlock.name>
+  +vmware-tools-8.4.5.324285.ebuild:
+  version bump
+
+  24 Sep 2010; Matt Whitlock (whitslack) <matt@whitlock.name>
+  -vmware-tools-8.4.3.282343.ebuild, +vmware-tools-8.4.4.301548.ebuild:
+  version bump
+
+  13 Aug 2010; Matt Whitlock (whitslack) <matt@whitlock.name>
+  +vmware-tools-8.4.3.282343.ebuild:
+  version bump to VMware Tools 8.4.3.282343
+
+  02 Jun 2010; Matt Whitlock (whitslack) <matt@whitlock.name>
+  vmware-tools-8.4.2.261024.ebuild:
+  added block on older versions of vmware-workstation
+  attempt install only if some guests are selected
+
+  22 May 2010; Matt Whitlock (whitslack) <matt@whitlock.name>
+  -vmware-tools-8.1.4.227600.ebuild, +vmware-tools-8.4.2.261024.ebuild:
+  new release of VMware Tools

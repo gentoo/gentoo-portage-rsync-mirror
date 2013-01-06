@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install postinst
+DEPEND=dev-cpp/gtkmm:2.4 sndfile? ( >=media-libs/libsndfile-1 ) alsa? ( media-libs/alsa-lib media-sound/alsa-utils ) jack? ( media-sound/jack-audio-connection-kit ) virtual/pkgconfig
+DESCRIPTION=Virtual analogue synthesizer.
+EAPI=2
+HOMEPAGE=http://amsynthe.sourceforge.net/
+IUSE=alsa debug jack oss sndfile
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-cpp/gtkmm:2.4 sndfile? ( >=media-libs/libsndfile-1 ) alsa? ( media-libs/alsa-lib media-sound/alsa-utils ) jack? ( media-sound/jack-audio-connection-kit )
+SLOT=0
+SRC_URI=mirror://sourceforge/amsynthe/amSynth-1.2.3.tar.gz
+_md5_=5d3d7fa3ee94541e9013cb4cdf47ea6a

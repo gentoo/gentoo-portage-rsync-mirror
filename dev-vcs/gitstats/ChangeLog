@@ -1,0 +1,18 @@
+# ChangeLog for dev-vcs/gitstats
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitstats/ChangeLog,v 1.3 2011/09/21 08:25:56 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> gitstats-9999.ebuild:
+  Migrate to git-2.
+
+  23 Jul 2010; Justin Lecher <jlec@gentoo.org> gitstats-9999.ebuild,
+  gitstats-100711.ebuild:
+  Last fix for Parhon ABIS, 329485
+
+*gitstats-100711 (11 Jul 2010)
+*gitstats-9999 (11 Jul 2010)
+
+  11 Jul 2010; Justin Lecher <jlec@gentoo.org> +gitstats-9999.ebuild,
+  +gitstats-100711.ebuild, +metadata.xml:
+  Import from sunrise
+

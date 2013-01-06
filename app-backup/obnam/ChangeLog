@@ -1,0 +1,48 @@
+# ChangeLog for app-backup/obnam
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/ChangeLog,v 1.9 2012/12/18 15:55:03 mschiff Exp $
+
+*obnam-1.3 (18 Dec 2012)
+
+  18 Dec 2012; Marc Schiffbauer <mschiff@gentoo.org> -obnam-1.1.ebuild,
+  -obnam-1.2.ebuild, +obnam-1.3.ebuild:
+  Version and dependency bump. Drop old versions.
+
+  15 Nov 2012; Marc Schiffbauer <mschiff@gentoo.org> obnam-1.2-r1.ebuild:
+  Set active python version. Fixes #443272. Thanks to Justin Keogh
+
+  11 Oct 2012; Marc Schiffbauer <mschiff@gentoo.org> obnam-1.2-r1.ebuild,
+  +files/obnam-1.2_man_diff_fix.patch:
+  Add patch to add missing description of 'diff' subcommand to man-page.
+
+*obnam-1.2-r1 (11 Oct 2012)
+
+  11 Oct 2012; Marc Schiffbauer <mschiff@gentoo.org> +obnam-1.2-r1.ebuild,
+  +files/obnam-1.2_diff_fix.patch:
+  Revbumped and added patch to fix 'diff' sub command of obnam
+
+  11 Oct 2012; Marc Schiffbauer <mschiff@gentoo.org> obnam-1.2.ebuild:
+  Create obnam log directory automatically. Thanks to Martin Dummer for
+  reporting.
+
+  07 Oct 2012; Marc Schiffbauer <mschiff@gentoo.org> files/obnam.conf,
+  obnam-1.2.ebuild:
+  Only install passive default config to be save on upgrades.
+
+*obnam-1.2 (06 Oct 2012)
+
+  06 Oct 2012; Marc Schiffbauer <mschiff@gentoo.org> -obnam-1.0.ebuild,
+  +obnam-1.2.ebuild, +files/obnam.conf:
+  Version bump. Drop old version. Added default config file.
+
+*obnam-1.1 (09 Jul 2012)
+
+  09 Jul 2012; Marc Schiffbauer <mschiff@gentoo.org> +obnam-1.1.ebuild:
+  Version bump. Refreshed deps. Added cliapp dep because we need a more recent
+  version than larch does.
+
+*obnam-1.0 (15 Jun 2012)
+
+  15 Jun 2012; Marc Schiffbauer <mschiff@gentoo.org> +obnam-1.0.ebuild,
+  +metadata.xml:
+  Initial commit of obnam.

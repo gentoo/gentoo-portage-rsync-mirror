@@ -1,0 +1,15 @@
+# ChangeLog for dev-java/sblim-cim-client
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sblim-cim-client/ChangeLog,v 1.2 2012/12/16 14:52:15 pacho Exp $
+
+  16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due retirement, #169737
+
+*sblim-cim-client-2.0.5 (12 Apr 2008)
+*sblim-cim-client-1.3.5 (12 Apr 2008)
+
+  12 Apr 2008; Alistair Bush <ali_bush@gentoo.org>
+  +files/sblim-cim-client-1.3.5-java-doc-without-clean.patch, +metadata.xml,
+  +sblim-cim-client-1.3.5.ebuild, +sblim-cim-client-2.0.5.ebuild:
+  Adding package sblim-cim-client. Proxy maintained by ali_bush for jieryn-w
+  <jieryn@gmail.com>. Thank you jieryn-w.

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>gstreamer</herd>
+<longdescription lang="en">
+	GStreamer plugin for HTTP client sources via net-libs/libsoup.
+
+	Includes the following element:
+	* souphttpsrc - Receive data as a client over the network via HTTP using SOUP
+</longdescription>
+</pkgmetadata>

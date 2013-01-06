@@ -1,0 +1,27 @@
+# ChangeLog for dev-ml/tyxml
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/ChangeLog,v 1.5 2012/08/07 16:38:14 aballier Exp $
+
+  07 Aug 2012; Alexis Ballier <aballier@gentoo.org> -tyxml-2.0.2.ebuild,
+  -tyxml-2.1.ebuild:
+  remove old
+
+  09 Jul 2012; Ulrich Müller <ulm@gentoo.org> tyxml-2.0.2.ebuild,
+  tyxml-2.1-r1.ebuild, tyxml-2.1.ebuild:
+  Update LICENSE, bug 425140.
+
+*tyxml-2.1-r1 (06 Jul 2012)
+
+  06 Jul 2012; Alexis Ballier <aballier@gentoo.org> +tyxml-2.1-r1.ebuild:
+  install duce files with USE=ocamlduce, by Jacques-Pascal Deplaix, bug #425020
+
+*tyxml-2.1 (12 Jun 2012)
+
+  12 Jun 2012; Alexis Ballier <aballier@gentoo.org> +tyxml-2.1.ebuild:
+  version bump
+
+*tyxml-2.0.2 (30 Mar 2012)
+
+  30 Mar 2012; Alexis Ballier <aballier@gentoo.org> +tyxml-2.0.2.ebuild,
+  +metadata.xml:
+  initial import, ebuild by Guillaume Horel in bug #406515

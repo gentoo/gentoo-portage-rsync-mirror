@@ -1,0 +1,65 @@
+# ChangeLog for sys-auth/libfprint
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.15 2013/01/01 14:53:59 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libfprint-0.4.0.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libfprint-0.4.0.ebuild:
+  Add ~ia64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libfprint-0.4.0.ebuild:
+  Add ~ppc64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libfprint-0.4.0.ebuild:
+  Add ~ppc, wrt bug #449220
+
+  31 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> libfprint-0.4.0.ebuild:
+  Use prune_libtool_files from eutils.eclass. Use udev_get_udevdir from
+  udev.eclass to move 60-fprint-autosuspend.rules from /etc/udev/rules.d to
+  correct directory based on udev.pc pkg-config file and the udevdir variable
+  value.
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> libfprint-0.4.0.ebuild:
+  Use virtual/libusb instead of dev-libs/libusb.
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> libfprint-0.4.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  13 Feb 2012; Michael Weber <xmw@gentoo.org> libfprint-0.4.0.ebuild:
+  Drop x11-libs/gtk+:2 and dev-libs/glib dependency. Thanks Andrei Slavoiu 
+  (bug 403189) for clarification.
+
+  14 Nov 2011; Michael Weber <xmw@gentoo.org> libfprint-0.4.0.ebuild:
+  adding ~x86 keyword
+
+  13 Nov 2011; Michael Weber <xmw@gentoo.org> -libfprint-0.3.0-r1.ebuild,
+  libfprint-0.4.0.ebuild:
+  fix .la file removal (thanks Alexander Adam, bug 374575), remove old version
+
+*libfprint-0.4.0 (16 Jun 2011)
+*libfprint-0.3.0-r1 (16 Jun 2011)
+
+  16 Jun 2011; Michael Weber <xmw@gentoo.org> -libfprint-0.3.0.ebuild,
+  +libfprint-0.3.0-r1.ebuild, +libfprint-0.4.0.ebuild:
+  Revision bump and version bump (bug 365075), remove USE=example (bug 369219)
+
+  16 Jun 2011; Michael Weber <xmw@gentoo.org> -libfprint-0.0.6.ebuild,
+  -libfprint-0.1.0_pre2.ebuild, libfprint-0.3.0.ebuild:
+  Dropping old versions
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> libfprint-0.3.0.ebuild:
+  Fix gtk+ slot deps
+
+*libfprint-0.3.0 (27 Oct 2010)
+
+  27 Oct 2010; Michael Weber <xmw@gentoo.org> +libfprint-0.3.0.ebuild:
+  Version bump to new upstream location, closing bug #341639, thanks Jan
+  Buecken <jb.faq@gmx.de>
+
+*libfprint-0.1.0_pre2 (17 Oct 2010)
+*libfprint-0.0.6 (17 Oct 2010)
+
+  17 Oct 2010; Michael Weber <xmw@gentoo.org> +libfprint-0.0.6.ebuild,
+  +libfprint-0.1.0_pre2.ebuild, +metadata.xml:
+  Initial import, fixes bug 341107 by Jan Buecken <jb.faq@gmx.de>

@@ -1,0 +1,31 @@
+Description: Fix issues with double VS qreal
+ The code was attempting to pass double* to a function expecting qreal*
+ resulting in compile errors on arm (where qreal is defined as float)
+ this patch changes a couple of variable definitions so the types match
+ up.
+Origin: http://bugs.debian.org/656943
+Author: Peter Green <plugwash@p10link.net>
+Reviewed-By: Tobias Winchen <winchen@physik.rwth-aachen.de>
+Last-Update: 2012-03-21
+
+
+--- engauge-digitizer-5.0.orig/src/digitview.cpp
++++ engauge-digitizer-5.0/src/digitview.cpp
+@@ -288,7 +288,7 @@ void DigitView::keyReleaseEvent(QKeyEven
+ 
+ QPoint DigitView::convertZoom(QPoint p, bool to)
+ {
+-  double x, y;
++  qreal x, y;
+   if (to)
+     worldMatrix().map((double) p.x(), (double) p.y(), &x, &y);
+   else
+@@ -299,7 +299,7 @@ QPoint DigitView::convertZoom(QPoint p,
+ 
+ QRect DigitView::convertZoom(QRect r, bool to)
+ {
+-  double xTL, yTL, xBR, yBR;
++  qreal xTL, yTL, xBR, yBR;
+   if (to)
+   {
+     worldMatrix().map((double) r.left(), (double) r.top(), &xTL, &yTL);

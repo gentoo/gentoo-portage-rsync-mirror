@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DEPEND=app-text/aspell
+DESCRIPTION=The Autoconf Macro Archive
+HOMEPAGE=http://ac-archive.sourceforge.net/
+KEYWORDS=amd64 ppc x86
+LICENSE=|| ( BSD GPL-2 )
+RDEPEND=dev-lang/perl
+SLOT=0
+SRC_URI=mirror://sourceforge/ac-archive/ac-archive-2007.0205.tar.bz2
+_md5_=abd8eb78df9a3b537f6d8be1d2f9ad2f

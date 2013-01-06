@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=utility to test and create .sfv files and create .par files
+EAPI=2
+HOMEPAGE=http://pure-sfv.sourceforge.net/
+KEYWORDS=amd64 ~hppa ppc x86
+LICENSE=GPL-2
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://sourceforge/pure-sfv/pure-sfv_0.3_src.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=abea47c24f01bb97ff7d7a6e46515849

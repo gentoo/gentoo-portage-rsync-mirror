@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>proxy-maintainers</herd>
+	<maintainer>
+		<email>peratu@carrosses.com</email>
+		<name>Vicente Olivert Riera</name>
+		<description>Maintainer. Assign bugs to him</description>
+	</maintainer>
+	<maintainer>
+		<email>pinkbyte@gentoo.org</email>
+		<name>Sergey Popov</name>
+		<description>Proxy maintainer. CC him on bugs</description>
+	</maintainer>
+	<use>
+		<flag name="lefthanded">Install lefthanded version of theme in addition to default one</flag>
+		<flag name="opaque">Install non-transparent version of theme in addition to default one</flag>
+	</use>
+</pkgmetadata>

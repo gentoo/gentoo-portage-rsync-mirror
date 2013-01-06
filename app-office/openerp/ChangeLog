@@ -1,0 +1,16 @@
+# ChangeLog for app-office/openerp
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/ChangeLog,v 1.2 2012/10/30 13:42:07 patrick Exp $
+
+*openerp-6.2_pre20121029 (30 Oct 2012)
+
+  30 Oct 2012; Patrick Lauer <patrick@gentoo.org>
+  +openerp-6.2_pre20121029.ebuild:
+  Adding 6.2 / 7.0 prerelease snapshot goodness
+
+*openerp-6.1.1 (30 Oct 2012)
+
+  30 Oct 2012; Patrick Lauer <patrick@gentoo.org> +files/openerp,
+  +files/openerp-6.1-setup.py.patch, +files/openerp-confd, +files/openerp.cfg,
+  +files/openerp.logrotate, +metadata.xml, +openerp-6.1.1.ebuild:
+  Initial import, based on ebuild from yarik-overlay

@@ -1,0 +1,21 @@
+
+# HG changeset patch
+# User roberto@quantal64
+# Date 1347021464 -7200
+# Node ID 4d4686fdb3ba44fd5083f61ceb27f820d7a79937
+# Parent  88dc416d99e40ddacfb7ccb4d620fe50b9d9319c
+fixed typecasting
+
+diff -r 88dc416d99e4 -r 4d4686fdb3ba plugins/router_uwsgi/router_uwsgi.c
+--- a/plugins/router_uwsgi/router_uwsgi.c	gio set 06 16:32:49 2012 +0200
++++ b/plugins/router_uwsgi/router_uwsgi.c	ven set 07 14:37:44 2012 +0200
+@@ -54,7 +54,7 @@
+ 
+ 	int post_fd = wsgi_req->poll.fd;
+ 	if (wsgi_req->async_post) {
+-		post_fd = fileno(wsgi_req->async_post);
++		post_fd = fileno((FILE *)wsgi_req->async_post);
+ 	}
+ 
+ 	if (uwsgi_send_message(uwsgi_fd, uh->modifier1, uh->modifier2, wsgi_req->buffer, wsgi_req->uh.pktsize, post_fd, wsgi_req->post_cl, 0) < 0) {
+

@@ -1,0 +1,46 @@
+# ChangeLog for net-analyzer/icinga-web
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/ChangeLog,v 1.7 2012/12/07 20:50:02 prometheanfire Exp $
+
+*icinga-web-1.8.1 (07 Dec 2012)
+
+  07 Dec 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +icinga-web-1.8.1.ebuild:
+  updating icinga-web to 1.8.1
+
+*icinga-web-1.8.0 (19 Nov 2012)
+
+  19 Nov 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +icinga-web-1.8.0.ebuild:
+  adding icinga-web-1.8.0 for bug 439430
+
+  19 Aug 2012; Matthew Thode <prometheanfire@gentoo.org> Manifest:
+  looks like the md5 on the tarball changed...
+
+*icinga-web-1.7.2 (17 Aug 2012)
+
+  17 Aug 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +icinga-web-1.7.2.ebuild:
+  update to 1.7.2 to get rid of need to patch for compression and fix crontab
+  for bug #431762
+
+  22 Jul 2012; Christian Ruppert <idl0r@gentoo.org> icinga-web-1.7.1-r1.ebuild:
+  Add missing inherits
+
+*icinga-web-1.7.1-r1 (22 Jul 2012)
+
+  22 Jul 2012; Christian Ruppert <idl0r@gentoo.org> -icinga-web-1.7.1.ebuild,
+  +icinga-web-1.7.1-r1.ebuild:
+  Use apache's IfDefine so that icinga-web is not enabled by default
+
+*icinga-web-1.7.1 (16 Jul 2012)
+
+  16 Jul 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +icinga-web-1.7.1.ebuild, +files/icinga-web-1.7.1-disable-compression.patch:
+  New ebuild for icinga-web. Ebuild written by Thomas Oettli, submitted by me.
+  bug #332369
+
+*icinga-web-1.6.1-r1 (27 Feb 2012)
+
+  27 Feb 2012; mthode <mthode@gentoo.org> +icinga-web-1.6.1-r1.ebuild:
+  initial add and test of icinga-web

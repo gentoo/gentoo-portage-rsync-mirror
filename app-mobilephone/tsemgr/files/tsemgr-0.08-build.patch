@@ -1,0 +1,43 @@
+--- configure.ac
++++ configure.ac
+@@ -16,34 +16,17 @@ AC_DEFINE(REMOTE_CTREE_FILE, ["tsemgr_re
+ AC_DEFINE(BASE_CONFIG_FILE, ["tsemgr.conf"], [Default config file.])
+ 
+ # Add flags for Gtk. 
+-AC_CHECK_PROG(GTK_CONFIG, gtk-config, yes, no, $PATH)
+-if test $GTK_CONFIG = "no" ; then
+-  AC_MSG_ERROR(gtk-config not found. Gtk is required for $PACKAGE)
+-fi
++PKG_CHECK_MODULES([GTK], [gtk+ >= 1.2])
+ 
+-CFLAGS="$CFLAGS `gtk-config --cflags`"
+-LIBS="$LIBS `gtk-config --libs`"
++CFLAGS="$CFLAGS $GTK_CFLAGS"
++LIBS="$LIBS $GTK_LIBS"
+ 
+ 
+ # Add flags for OpenObex. 
+-AC_CHECK_PROG(OPENOBEX_CONFIG, openobex-config, yes, no, $PATH)
+-if test $GTK_CONFIG = "no" ; then
+-  AC_MSG_ERROR(openobex-config not found. OpenObex is requried for $PACKAGE)
+-fi
++PKG_CHECK_MODULES([OPENOBEX], [openobex >= 1.0])
+ 
+-AC_MSG_CHECKING(OpenObex version)
+-OO_VERSION="`openobex-config --version`"
+-AC_MSG_RESULT($OO_VERSION)
+-
+-case $OO_VERSION in
+-
+-1.*.*) ;;
+-*) AC_MSG_ERROR(OpenObex library version is too old.)
+-
+-esac
+-
+-CFLAGS="$CFLAGS `openobex-config --cflags`"
+-LIBS="$LIBS `openobex-config --libs`"
++CFLAGS="$CFLAGS $OPENOBEX_CFLAGS"
++LIBS="$LIBS $OPENOBEX_LIBS"
+ 
+ 
+ # Look for the ezV24 library. 

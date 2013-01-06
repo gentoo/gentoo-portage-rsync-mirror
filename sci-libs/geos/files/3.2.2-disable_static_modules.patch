@@ -1,0 +1,29 @@
+--- swig/python/Makefile.am
++++ swig/python/Makefile.am
+@@ -18,9 +18,9 @@
+ _geos_la_SOURCES = geos_wrap.cxx 
+ 
+ # Only need to grab the capi header files
+-_geos_la_CPPFLAGS = $(SWIG_PYTHON_CPPFLAGS) -I$(top_builddir)/capi
++_geos_la_CPPFLAGS = $(SWIG_PYTHON_CPPFLAGS) -I$(top_builddir)/capi -shared
+ # Specify -module and -avoid-version so we can create a file called geos.dll/so which is what Python wants
+-_geos_la_LDFLAGS = -no-undefined -module -avoid-version
++_geos_la_LDFLAGS = -no-undefined -module -avoid-version -shared
+ _geos_la_LIBADD = $(top_builddir)/capi/libgeos_c.la $(PYTHON_LDFLAGS)
+ 
+ 
+--- swig/ruby/Makefile.am
++++ swig/ruby/Makefile.am
+@@ -22,10 +22,10 @@
+ geos_la_LIBADD =  $(top_builddir)/capi/libgeos_c.la -l$(RUBY_SO_NAME)
+ 
+ # Only need to grab the capi header files
+-geos_la_CPPFLAGS = -I$(top_builddir)/capi
++geos_la_CPPFLAGS = -I$(top_builddir)/capi -shared
+ 
+ # Specify -module and -avoid-version so we can create a file called geos.dll/so which is what Ruby wants
+-geos_la_LDFLAGS = -no-undefined  -module -avoid-version -L$(RUBY_LIB_DIR)
++geos_la_LDFLAGS = -no-undefined  -module -avoid-version -shared -L$(RUBY_LIB_DIR)
+ 
+ if ENABLE_SWIG
+ 

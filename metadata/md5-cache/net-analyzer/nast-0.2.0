@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DEPEND=>=net-libs/libnet-1.1.1 net-libs/libpcap ncurses? ( >=sys-libs/ncurses-5.4 )
+DESCRIPTION=NAST - Network Analyzer Sniffer Tool
+HOMEPAGE=http://nast.berlios.de/
+IUSE=ncurses
+KEYWORDS=~amd64 ~ppc ~ppc64 x86
+LICENSE=GPL-2
+RDEPEND=>=net-libs/libnet-1.1.1 net-libs/libpcap ncurses? ( >=sys-libs/ncurses-5.4 )
+SLOT=0
+SRC_URI=mirror://berlios/nast/nast-0.2.0.tar.gz
+_md5_=3d3d928b482b59a2efeb6c03abeb1118

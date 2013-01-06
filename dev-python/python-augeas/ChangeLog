@@ -1,0 +1,19 @@
+# ChangeLog for dev-python/python-augeas
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-augeas/ChangeLog,v 1.3 2011/05/11 16:00:41 matsuu Exp $
+
+*python-augeas-0.4.0 (11 May 2011)
+
+  11 May 2011; MATSUU Takuto <matsuu@gentoo.org> +python-augeas-0.4.0.ebuild:
+  Version bumped. Added src_test.
+
+  11 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-augeas-0.3.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #345541).
+
+*python-augeas-0.3.0 (24 Feb 2009)
+
+  24 Feb 2009; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
+  +python-augeas-0.3.0.ebuild:
+  Initial import, bug #229361.
+

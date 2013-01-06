@@ -1,0 +1,26 @@
+# ChangeLog for dev-php5/pecl-translit
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-translit/ChangeLog,v 1.1 2011/12/14 22:48:55 mabi Exp $
+
+*pecl-translit-0.6.0-r1 (04 Nov 2010)
+*pecl-translit-0.6.0 (04 Nov 2010)
+
+  04 Nov 2010; Matti Bickel <mabi@gentoo.org> -pecl-translit-0.5.ebuild,
+  +pecl-translit-0.6.0.ebuild, +pecl-translit-0.6.0-r1.ebuild:
+  add version supporting minor version slotting, version bump, remove old
+
+  06 Dec 2007; Markus Ullmann <jokey@gentoo.org> pecl-translit-0.5.ebuild:
+  LICENSE fix from project overlay
+
+  03 Dec 2007; Jakub Moc <jakub@gentoo.org> pecl-translit-0.5.ebuild:
+  Fix LICENSE
+
+  18 Mar 2007; Luca Longinotti <chtekk@gentoo.org> pecl-translit-0.5.ebuild:
+  Cleanup.
+
+*pecl-translit-0.5 (29 Sep 2006)
+
+  29 Sep 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +pecl-translit-0.5.ebuild:
+  Initial ebuild for bug #136000.
+

@@ -1,0 +1,103 @@
+# ChangeLog for dev-python/pyyaml
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyyaml/ChangeLog,v 1.28 2012/07/01 15:53:42 hattya Exp $
+
+  01 Jul 2012; Akinori Hattori <hattya@gentoo.org> pyyaml-3.10.ebuild:
+  keyword ~ia64.
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pyyaml-3.10.ebuild:
+  x86 stable wrt bug #400337
+
+  08 Mar 2012; Brent Baude <ranger@gentoo.org> pyyaml-3.10.ebuild:
+  Marking pyyaml-3.10 ppc64 for bug 400337
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> pyyaml-3.10.ebuild:
+  Marking pyyaml-3.10 ppc for bug 400337
+
+  24 Feb 2012; Agostino Sarubbo <ago@gentoo.org> pyyaml-3.10.ebuild:
+  Stable for amd64, wrt bug #400337
+
+*pyyaml-3.10 (10 Jul 2011)
+
+  10 Jul 2011; Stefan Briesenick <sbriesen@gentoo.org> +pyyaml-3.10.ebuild:
+  version bump. new version supports python 3.2. solving bug #318925.
+
+  30 Sep 2010; Fabian Groffen <grobian@gentoo.org> pyyaml-3.09.ebuild:
+  Marked ~ppc-macos, ~x86-solaris
+
+  14 Sep 2010; Jonathan Callen <abcd@gentoo.org> pyyaml-3.09.ebuild:
+  Add ~amd64-linux ~x64-macos for bug 337200
+
+  06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> pyyaml-3.09.ebuild:
+  ppc64 stable wrt #287629
+
+  30 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyyaml-3.09.ebuild:
+  Don't use NEED_PYTHON.
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> pyyaml-3.09.ebuild:
+  ppc stable #287629
+
+  15 Oct 2009; Markus Meier <maekke@gentoo.org> pyyaml-3.09.ebuild:
+  amd64/x86 stable, bug #287629
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pyyaml-3.09.ebuild:
+  Merge from Prefix
+
+  05 Sep 2009; Brent Baude <ranger@gentoo.org> pyyaml-3.08.ebuild:
+  Marking pyyaml-3.08 ppc64 for bug 277972
+
+  05 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyyaml-3.09.ebuild:
+  Fix automagic dependency on dev-libs/libyaml (bug #278004).
+
+  05 Sep 2009; Patrick Lauer <patrick@gentoo.org> -pyyaml-3.05.ebuild:
+  Really remove 3.05 now
+
+*pyyaml-3.09 (04 Sep 2009)
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org> +pyyaml-3.09.ebuild:
+  Bump to 3.09, remove 3.05
+
+*pyyaml-3.08-r1 (29 Aug 2009)
+
+  29 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pyyaml-3.08-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  09 Aug 2009; nixnut <nixnut@gentoo.org> pyyaml-3.08.ebuild:
+  ppc stable #277972
+
+  16 Jul 2009; Thomas Anderson <gentoofan23@gentoo.org> pyyaml-3.08.ebuild:
+  stable amd64, bug 277972
+
+  15 Jul 2009; Christian Faulhammer <fauli@gentoo.org> pyyaml-3.08.ebuild:
+  stable x86, bug 277861
+
+  14 May 2009; <solar@gentoo.org> pyyaml-3.08.ebuild:
+  - keyword ~arm
+
+  17 Feb 2009; Patrick Lauer <patrick@gentoo.org> pyyaml-3.08.ebuild:
+  Patch no longer needed, fixes #259374
+
+*pyyaml-3.08 (15 Feb 2009)
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> +pyyaml-3.08.ebuild:
+  Bump to 3.08
+
+  06 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
+
+  16 Oct 2007; Stefan Briesenick <sbriesen@gentoo.org> pyyaml-3.05.ebuild:
+  added NEED_PYTHON
+
+  16 Oct 2007; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/pyyaml-3.05-libyaml.diff, pyyaml-3.05.ebuild:
+  some cleanups
+
+*pyyaml-3.05 (05 Oct 2007)
+
+  05 Oct 2007; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
+  +pyyaml-3.05.ebuild:
+  initial commit.
+

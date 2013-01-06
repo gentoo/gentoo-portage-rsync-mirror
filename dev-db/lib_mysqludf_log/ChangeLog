@@ -1,0 +1,11 @@
+# ChangeLog for dev-db/lib_mysqludf_log
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lib_mysqludf_log/ChangeLog,v 1.1 2011/10/19 12:15:36 sbriesen Exp $
+
+*lib_mysqludf_log-0.0.2 (19 Oct 2011)
+
+  19 Oct 2011; Stefan Briesenick <sbriesen@gentoo.org>
+  +lib_mysqludf_log-0.0.2.ebuild, +files/lib_mysqludf_log-warnings.patch,
+  +metadata.xml:
+  initial commit
+

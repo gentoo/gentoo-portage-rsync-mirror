@@ -1,0 +1,39 @@
+diff -Naur vdr-1.6.0.orig/Makefile vdr-1.6.0/Makefile
+--- vdr-1.6.0.orig/Makefile	2010-12-29 14:58:18.000000000 +0100
++++ vdr-1.6.0/Makefile	2010-12-29 14:59:26.000000000 +0100
+@@ -53,7 +53,8 @@
+ endif
+ 
+ ifdef SETUP
+-OBJS += tinystr.o tinyxml.o tinyxmlerror.o tinyxmlparser.o submenu.o
++OBJS += submenu.o
++LIBS += -ltinyxml
+ endif
+ 
+ ifdef TTXTSUBS
+diff -Naur vdr-1.6.0.orig/submenu.c vdr-1.6.0/submenu.c
+--- vdr-1.6.0.orig/submenu.c	2010-12-29 14:58:18.000000000 +0100
++++ vdr-1.6.0/submenu.c	2010-12-29 15:00:29.000000000 +0100
+@@ -39,7 +39,7 @@
+   _currentMenu = currentMenu;
+   _level       = level;
+ 
+-  if (xml != NULL && xml->Type() == TiXmlNode::ELEMENT) {
++  if (xml != NULL && xml->Type() == TiXmlNode::TINYXML_ELEMENT) {
+      const char *tag = xml->Value();
+ 
+      if (cSubMenuNode::IsType(tag) != cSubMenuNode::UNDEFINED) {
+diff -Naur vdr-1.6.0.orig/submenu.h vdr-1.6.0/submenu.h
+--- vdr-1.6.0.orig/submenu.h	2010-12-29 14:58:18.000000000 +0100
++++ vdr-1.6.0/submenu.h	2010-12-29 15:01:50.000000000 +0100
+@@ -17,7 +17,9 @@
+ 
+ #include "thread.h"
+ #include "tools.h"
+-#include "tinystr.h"
++#define TIXML_USE_STL
++#include <tinystr.h>
++#include <tinyxml.h>
+ 
+ class cSubMenuNode;
+ class cSubMenuNodes;

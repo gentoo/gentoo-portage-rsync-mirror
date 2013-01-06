@@ -1,0 +1,14 @@
+# ChangeLog for app-emacs/yaml-mode
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yaml-mode/ChangeLog,v 1.2 2012/04/23 20:49:28 ulm Exp $
+
+  23 Apr 2012; Ulrich Müller <ulm@gentoo.org> yaml-mode-0.0.8.ebuild:
+  Fix typo.
+
+*yaml-mode-0.0.8 (23 Apr 2012)
+
+  23 Apr 2012; Ulrich Müller <ulm@gentoo.org> +files/50yaml-mode-gentoo.el,
+  +yaml-mode-0.0.8.ebuild, +metadata.xml:
+  Initial import, combined ebuild from emacs overlay and flameeyes-overlay.
+  Originally contributed by Diego E. Pettenò <flameeyes@gentoo.org>.
+

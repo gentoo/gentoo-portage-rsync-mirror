@@ -1,0 +1,31 @@
+# ChangeLog for media-video/aegisub
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/ChangeLog,v 1.6 2012/09/24 13:51:49 pinkbyte Exp $
+
+  24 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> aegisub-2.1.9.ebuild,
+  aegisub-2.1.9999.ebuild:
+  Update HOMEPAGE wrt bug #436050. Thanks to Emery Hemingway for discovering
+  this issue
+
+  21 May 2012; Jeff Horelick <jdhore@gentoo.org> aegisub-2.1.9.ebuild:
+  marked x86 per bug 416777
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> aegisub-2.1.9.ebuild:
+  Stable for amd64, wrt bug #416777
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> aegisub-2.1.9.ebuild,
+  aegisub-2.1.9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*aegisub-2.1.9999 (12 Feb 2012)
+
+  12 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> +aegisub-2.1.9999.ebuild,
+  aegisub-2.1.9.ebuild:
+  Add 2.1.9999, fix dependecies in 2.1.9. Thanks to Nikoli
+
+*aegisub-2.1.9 (02 Feb 2012)
+
+  02 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> +aegisub-2.1.9.ebuild,
+  +metadata.xml:
+  Import net-misc/aegisub from multimedia overlay, thanks to Nikoli
+

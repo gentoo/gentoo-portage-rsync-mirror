@@ -1,0 +1,42 @@
+--- hash_utils.h.old	2006-05-04 20:47:24.000000000 +0200
++++ hash_utils.h	2006-05-04 20:58:58.000000000 +0200
+@@ -26,7 +26,7 @@
+ #else
+ #if HAVE_EXT_HASH_MAP
+ #  include <ext/hash_map>
+-#  if (defined(__GNUC__) && (__GNUC__ == 3) && ( __GNUC_MINOR__ > 0))
++#  if defined(__GNUC__) && (((__GNUC__ == 3) && ( __GNUC_MINOR__ > 0)) || __GNUC__ >= 4)
+ using __gnu_cxx::hash_map;
+ #  else
+ using std::hash_map;
+@@ -44,7 +44,7 @@
+ #else
+ #if HAVE_EXT_HASH_SET
+ #  include <ext/hash_set>
+-#  if (defined(__GNUC__) && (__GNUC__ == 3) && ( __GNUC_MINOR__ > 0))
++#  if defined(__GNUC__) && (((__GNUC__ == 3) && ( __GNUC_MINOR__ > 0)) || __GNUC__ >= 4)
+ using __gnu_cxx::hash_set;
+ #  else
+ using std::hash_set;
+--- mouse.h.old	2006-05-04 21:02:49.000000000 +0200
++++ mouse.h	2006-05-04 21:03:37.000000000 +0200
+@@ -27,6 +27,8 @@
+ #include "vgafile.h"
+ #include "glshape.h"
+ 
++class Game_window;
++
+ /*
+  *	Handle custom mouse pointers.
+  */
+--- audio/midi_drivers/fmopldrv.h.old	2006-05-04 21:05:16.000000000 +0200
++++ audio/midi_drivers/fmopldrv.h	2006-05-04 21:05:29.000000000 +0200
+@@ -76,7 +76,7 @@
+ 	/* output a packed midi command to the midi stream
+ 	 * valid only if mode is MO_SIMPLE
+ 	 */
+-	void OplDriver::send(uint32 b);
++	void send(uint32 b);
+ 
+ 	/* retrieve a string representation of an error code */
+ 	static const char *get_error_name(int error_code);

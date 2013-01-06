@@ -1,0 +1,13 @@
+# ChangeLog for sci-libs/suitesparseconfig
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparseconfig/ChangeLog,v 1.2 2012/12/08 12:15:03 maekke Exp $
+
+  08 Dec 2012; Markus Meier <maekke@gentoo.org> suitesparseconfig-4.0.2.ebuild:
+  add ~arm, bug #440908
+
+*suitesparseconfig-4.0.2 (12 Nov 2012)
+
+  12 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  +suitesparseconfig-4.0.2.ebuild, +metadata.xml:
+  Initial import
+

@@ -1,0 +1,53 @@
+From 7a60464264bafb27c4bbaab39744b267d671f41b Mon Sep 17 00:00:00 2001
+From: Justin Bronder <jsbronder@gmail.com>
+Date: Tue, 16 Nov 2010 16:31:25 -0500
+Subject: [PATCH 2/3] fix implicit declaration warnings
+
+vasprintf and asprintf require _GNU_SOURCE.
+
+Thanks to Kacper Kowalik <xarthisius@gentoo.org>
+---
+ src/drmaa/src/error.c  |    1 +
+ src/drmaa/src/submit.c |    1 +
+ src/drmaa/src/wait.c   |    1 +
+ 3 files changed, 3 insertions(+), 0 deletions(-)
+
+diff --git a/src/drmaa/src/error.c b/src/drmaa/src/error.c
+index b848041..4a65b47 100644
+--- a/src/drmaa/src/error.c
++++ b/src/drmaa/src/error.c
+@@ -23,6 +23,7 @@
+ # include <pbs_config.h>
+ #endif
+ 
++#define _GNU_SOURCE // asprintf
+ #include <unistd.h>
+ 
+ #include <stdio.h>
+diff --git a/src/drmaa/src/submit.c b/src/drmaa/src/submit.c
+index e9b404c..9f06620 100644
+--- a/src/drmaa/src/submit.c
++++ b/src/drmaa/src/submit.c
+@@ -23,6 +23,7 @@
+ # include <pbs_config.h>
+ #endif
+ 
++#define _GNU_SOURCE
+ #include <sys/stat.h>
+ #include <unistd.h>
+ #include <limits.h>
+diff --git a/src/drmaa/src/wait.c b/src/drmaa/src/wait.c
+index ecb2ed4..2ef7600 100644
+--- a/src/drmaa/src/wait.c
++++ b/src/drmaa/src/wait.c
+@@ -23,6 +23,7 @@
+ # include <pbs_config.h>
+ #endif
+ 
++#define _GNU_SOURCE // vasprintf
+ #include <assert.h>
+ #include <limits.h>
+ #include <signal.h>
+-- 
+1.7.2.2
+

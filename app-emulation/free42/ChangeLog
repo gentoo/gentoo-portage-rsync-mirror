@@ -1,0 +1,47 @@
+# ChangeLog for app-emulation/free42
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/ChangeLog,v 1.12 2012/12/16 20:02:53 nimiux Exp $
+
+  16 Dec 2012; Chema Alonso <nimiux@gentoo.org> free42-1.4.75.ebuild:
+  Add missing dependencies. Thanks to Agostino Sarubbo bug #447512
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> free42-1.4.75.ebuild:
+  Stable for x86, wrt bug #447512
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> free42-1.4.75.ebuild:
+  Stable for amd64, wrt bug #447512
+
+  13 Nov 2012; Chema Alonso <nimiux@gentoo.org> free42-1.4.75.ebuild:
+  Fix bug #442908. Thanks to James Cloos for reporting and providing patch.
+
+  13 Nov 2012; Chema Alonso <nimiux@gentoo.org> free42-1.4.75.ebuild,
+  files/free42-1.4.75-fix-alsa.patch:
+  Fix strict-alias warnings in alsa code. Fix array length.
+
+*free42-1.4.75 (11 Nov 2012)
+
+  11 Nov 2012; Chema Alonso <nimiux@gentoo.org> +free42-1.4.75.ebuild,
+  +files/free42-1.4.75-fix-alsa.patch, metadata.xml:
+  Version bump
+
+  05 Jul 2012; Chema Alonso <nimiux@gentoo.org> free42-1.4.74.ebuild:
+  Remove --hash-style=both wrt bug #424503 comment #7.
+
+  05 Jul 2012; Agostino Sarubbo <ago@gentoo.org> free42-1.4.74.ebuild:
+  Stable for amd64, wrt bug #424503
+
+  05 Jul 2012; Chema Alonso <nimiux@gentoo.org> free42-1.4.74.ebuild:
+  Respect LDFLAGS wrt bug #424503.
+
+  04 Jul 2012; Chema Alonso <nimiux@gentoo.org> free42-1.4.74.ebuild:
+  Bug #424503: Depend on x11-libs/gtk+:2. Add user CXXFLAGS. Drop -g flag.
+  Add -O1 and --as-needed linker flags. Use emake in src_compile.
+
+  03 Jul 2012; Jeff Horelick <jdhore@gentoo.org> free42-1.4.74.ebuild:
+  marked x86 per bug 424503
+
+*free42-1.4.74 (29 May 2012)
+
+  29 May 2012; Chema Alonso <nimiux@gentoo.org> +free42-1.4.74.ebuild,
+  +metadata.xml:
+  Free42. Initial release

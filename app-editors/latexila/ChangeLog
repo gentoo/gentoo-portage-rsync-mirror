@@ -1,0 +1,60 @@
+# ChangeLog for app-editors/latexila
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/ChangeLog,v 1.13 2012/11/25 21:16:32 eva Exp $
+
+*latexila-2.6.2 (25 Nov 2012)
+
+  25 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org> +latexila-2.6.2.ebuild:
+  Version bump.
+
+*latexila-2.6.1 (20 Oct 2012)
+
+  20 Oct 2012; Pacho Ramos <pacho@gentoo.org> +latexila-2.6.1.ebuild,
+  -latexila-2.4.0.ebuild:
+  Version bump, drop old.
+
+  04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> latexila-2.4.1.ebuild:
+  Stable for amd64, wrt bug #427544
+
+  03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> latexila-2.4.1.ebuild:
+  x86 stable wrt bug #427544
+
+*latexila-2.4.1 (16 Jun 2012)
+
+  16 Jun 2012; Pacho Ramos <pacho@gentoo.org> +latexila-2.4.1.ebuild:
+  Version bump.
+
+  15 May 2012; Pacho Ramos <pacho@gentoo.org> -latexila-2.2.3.ebuild,
+  latexila-2.4.0.ebuild:
+  It depends on app-text/gtkspell:2, bug #415709 by Marek Bartosiewicz.
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> latexila-2.2.3.ebuild,
+  latexila-2.4.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> latexila-2.4.0.ebuild:
+  x86 stable, bug #410611
+
+  18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> latexila-2.4.0.ebuild:
+  Stable for amd64, wrt bug #410611
+
+*latexila-2.4.0 (31 Mar 2012)
+
+  31 Mar 2012; Pacho Ramos <pacho@gentoo.org> +latexila-2.4.0.ebuild,
+  -latexila-2.2.2.ebuild, metadata.xml:
+  Version bump, remove old.
+
+*latexila-2.2.3 (13 Feb 2012)
+
+  13 Feb 2012; Pacho Ramos <pacho@gentoo.org> +latexila-2.2.3.ebuild:
+  Version bump.
+
+  18 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  latexila-2.2.2.ebuild:
+  Use correct libgee slot.
+
+*latexila-2.2.2 (17 Dec 2011)
+
+  17 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +latexila-2.2.2.ebuild, +metadata.xml:
+  New ebuild for a LaTeX IDE for bug #380779, thanks to Sébastien Wilmet.

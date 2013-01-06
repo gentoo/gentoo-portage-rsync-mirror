@@ -1,0 +1,24 @@
+# ChangeLog for dev-perl/Linux-DesktopFiles
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-DesktopFiles/ChangeLog,v 1.4 2012/08/27 13:32:16 johu Exp $
+
+  27 Aug 2012; Johannes Huber <johu@gentoo.org>
+  Linux-DesktopFiles-0.60.0.ebuild:
+  Stable for x86, wrt bug #432744
+
+  26 Aug 2012; Agostino Sarubbo <ago@gentoo.org>
+  Linux-DesktopFiles-0.60.0.ebuild:
+  Stable for amd64, wrt bug #432744
+
+*Linux-DesktopFiles-0.60.0 (26 Jul 2012)
+
+  26 Jul 2012; Julian Ospald <hasufell@gentoo.org>
+  -Linux-DesktopFiles-0.06.ebuild, +Linux-DesktopFiles-0.60.0.ebuild:
+  convert to normalized version, fix LICENSE, fix RDEPEND
+
+*Linux-DesktopFiles-0.06 (26 Jul 2012)
+
+  26 Jul 2012; Julian Ospald <hasufell@gentoo.org>
+  +Linux-DesktopFiles-0.06.ebuild, +metadata.xml:
+  initial import
+

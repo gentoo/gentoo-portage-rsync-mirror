@@ -1,0 +1,212 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Sun Jul 15 10:08:51 UTC 2012
+Subject: build system
+
+a. add install rules and make paths modifiable
+b. add odamex.wad install destination to wad search path
+c. add various cmake options
+d. use CMAKE_BINDIR as default bin patch in odalauncher
+
+--- odamex-src-0.6.1/CMakeLists.txt
++++ odamex-src-0.6.1/CMakeLists.txt
+@@ -2,6 +2,26 @@
+ project(Odamex)
+ cmake_minimum_required(VERSION 2.8)
+ 
++# cmake modules
++include( CMakeDependentOption )
++include( GNUInstallDirs )
++
++# options
++option(BUILD_CLIENT "Build client target" 1)
++option(BUILD_SERVER "Build server target" 1)
++option(BUILD_MASTER "Build master server target" 1)
++cmake_dependent_option( BUILD_ODALAUNCH "Build odalaunch target" 1 BUILD_CLIENT 0 )
++cmake_dependent_option( ENABLE_PORTMIDI "Enable portmidi support" 1 BUILD_CLIENT 0 )
++
++configure_file (
++  "${PROJECT_SOURCE_DIR}/config.h.in"
++  "${PROJECT_BINARY_DIR}/config.h"
++  )
++
++include_directories(
++	${PROJECT_BINARY_DIR}
++)
++
+ set(PROJECT_VERSION 0.6.1)
+ set(PROJECT_COPYRIGHT "2006-2012")
+ 
+@@ -40,13 +60,31 @@
+ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules)
+ 
+ # Subdirectories for individual projects
+-add_subdirectory(client)
+-add_subdirectory(server)
+-add_subdirectory(master)
+-add_subdirectory(odalaunch)
++if(BUILD_CLIENT)
++	add_subdirectory(client)
++endif()
++if(BUILD_SERVER)
++	add_subdirectory(server)
++endif()
++if(BUILD_MASTER)
++	add_subdirectory(master)
++endif()
++if(BUILD_ODALAUNCH)
++	add_subdirectory(odalaunch)
++endif()
++
++if(NOT BUILD_CLIENT AND NOT BUILD_SERVER AND NOT BUILD_MASTER)
++	message(FATAL_ERROR "No target chosen, doing nothing.")
++endif()
++
+ 
+ # Disable the ag-odalaunch target completely: -DNO_AG-ODALAUNCH_TARGET
+ # This is only really useful when setting up a universal build.
+ if(NOT NO_AG-ODALAUNCH_TARGET)
+   add_subdirectory(ag-odalaunch)
+ endif()
++
++# global install rules
++if(UNIX)
++	install(FILES odamex.wad DESTINATION ${CMAKE_INSTALL_DATADIR})
++endif()
+--- odamex-src-0.6.1/client/CMakeLists.txt
++++ odamex-src-0.6.1/client/CMakeLists.txt
+@@ -52,7 +52,7 @@
+ 
+ # Portmidi configuration
+ find_package(PortMidi)
+-if(PortMidi_FOUND)
++if(PortMidi_FOUND AND ENABLE_PORTMIDI)
+   include_directories(${PortMidi_INCLUDE_DIR})
+   ADD_DEFINITIONS(-DPORTMIDI ${PortMidi_CFLAGS})
+ else()
+@@ -141,5 +141,8 @@
+         " )
+     endif()
+ 
++  # UNIX install rules
++  elseif(UNIX)
++	  install( TARGETS odamex DESTINATION ${CMAKE_INSTALL_BINDIR} )
+   endif()
+ endif()
+--- odamex-src-0.6.1/master/CMakeLists.txt
++++ odamex-src-0.6.1/master/CMakeLists.txt
+@@ -12,3 +12,9 @@
+ elseif(SOLARIS)
+   target_link_libraries(odamast socket nsl)
+ endif()
++
++# install rules
++if(UNIX)
++	install( TARGETS odamast DESTINATION ${CMAKE_INSTALL_BINDIR} )
++endif()
++
+--- odamex-src-0.6.1/odalaunch/CMakeLists.txt
++++ odamex-src-0.6.1/odalaunch/CMakeLists.txt
+@@ -61,3 +61,9 @@
+     )
+   endif()
+ endif()
++
++# install rules
++if(UNIX)
++	install( TARGETS odalaunch DESTINATION ${CMAKE_INSTALL_BINDIR} )
++endif()
++
+--- odamex-src-0.6.1/server/CMakeLists.txt
++++ odamex-src-0.6.1/server/CMakeLists.txt
+@@ -39,3 +39,8 @@
+ elseif(SOLARIS)
+   target_link_libraries(odasrv socket nsl)
+ endif()
++
++# install rules
++if(UNIX)
++	install( TARGETS odasrv DESTINATION ${CMAKE_INSTALL_BINDIR} )
++endif()
+--- /dev/null
++++ odamex-src-0.6.1/config.h.in
+@@ -0,0 +1,7 @@
++#ifndef CONFIG_H
++#define CONFIG_H
++
++#define CMAKE_WADDIR "@CMAKE_INSTALL_DATADIR@"
++#define CMAKE_BINDIR "@CMAKE_INSTALL_BINDIR@"
++
++#endif
+--- odamex-src-0.6.1/client/src/d_main.cpp
++++ odamex-src-0.6.1/client/src/d_main.cpp
+@@ -25,6 +25,7 @@
+ //-----------------------------------------------------------------------------
+ 
+ #include "version.h"
++#include "config.h"
+ 
+ #include <sstream>
+ #include <string>
+@@ -836,6 +837,7 @@
+ 	D_AddSearchDir(dirs, getenv("DOOMWADPATH"), separator);
+ 	D_AddSearchDir(dirs, getenv("HOME"), separator);
+ 	D_AddSearchDir(dirs, waddirs.cstring(), separator);
++	D_AddSearchDir(dirs, CMAKE_WADDIR, separator);
+ 
+     dirs.erase(std::unique(dirs.begin(), dirs.end()), dirs.end());
+ 
+--- odamex-src-0.6.1/server/src/d_main.cpp
++++ odamex-src-0.6.1/server/src/d_main.cpp
+@@ -25,6 +25,7 @@
+ //-----------------------------------------------------------------------------
+ 
+ #include "version.h"
++#include "config.h"
+ 
+ #include <sstream>
+ #include <string>
+@@ -628,9 +629,9 @@
+ 	D_AddSearchDir(dirs, Args.CheckValue("-waddir"), separator);
+ 	D_AddSearchDir(dirs, getenv("DOOMWADDIR"), separator);
+ 	D_AddSearchDir(dirs, getenv("DOOMWADPATH"), separator);
+-    D_AddSearchDir(dirs, getenv("HOME"), separator);
+-    D_AddSearchDir(dirs, waddirs.cstring(), separator);
+-
++	D_AddSearchDir(dirs, getenv("HOME"), separator);
++	D_AddSearchDir(dirs, waddirs.cstring(), separator);
++	D_AddSearchDir(dirs, CMAKE_WADDIR, separator);
+ 
+ 	dirs.erase(std::unique(dirs.begin(), dirs.end()), dirs.end());
+ 
+--- odamex-src-0.6.1/odalaunch/src/dlg_main.cpp
++++ odamex-src-0.6.1/odalaunch/src/dlg_main.cpp
+@@ -27,6 +27,7 @@
+ #include "str_utils.h"
+ 
+ #include "md5.h"
++#include "config.h"
+ 
+ #include <wx/settings.h>
+ #include <wx/menu.h>
+@@ -42,6 +43,7 @@
+ #include <wx/process.h>
+ #include <wx/toolbar.h>
+ #include <wx/xrc/xmlres.h>
++#include <wx/string.h>
+ 
+ #ifdef __WXMSW__
+     #include <windows.h>
+@@ -190,10 +192,12 @@
+     }
+     #endif
+ 
++    const char *cmake_bindir_str = CMAKE_BINDIR;
++    wxString cmake_bindir = wxString::FromAscii(cmake_bindir_str);
+     launchercfg_s.get_list_on_start = 1;
+     launchercfg_s.show_blocked_servers = 0;
+     launchercfg_s.wad_paths = wxGetCwd();
+-    launchercfg_s.odamex_directory = wxGetCwd();
++    launchercfg_s.odamex_directory = cmake_bindir;
+ 
+     m_LstCtrlServers = XRCCTRL(*this, "Id_LstCtrlServers", LstOdaServerList);
+     m_LstCtrlPlayers = XRCCTRL(*this, "Id_LstCtrlPlayers", LstOdaPlayerList);

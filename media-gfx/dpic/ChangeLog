@@ -1,0 +1,28 @@
+# ChangeLog for media-gfx/dpic
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dpic/ChangeLog,v 1.6 2009/09/27 12:11:59 maekke Exp $
+
+  27 Sep 2009; Markus Meier <maekke@gentoo.org> dpic-20090713.ebuild:
+  amd64/x86 stable, bug #286338
+
+  05 Aug 2009; Alexis Ballier <aballier@gentoo.org> dpic-20090713.ebuild:
+  Explicitly set empty RDEPEND
+
+  05 Aug 2009; Alexis Ballier <aballier@gentoo.org> -dpic-20080511.ebuild:
+  remove old
+
+*dpic-20090713 (05 Aug 2009)
+
+  05 Aug 2009; Alexis Ballier <aballier@gentoo.org> +dpic-20090713.ebuild:
+  version bump, by Matthias Schwarzott <zzam@gentoo.org>, bug #280357
+
+  18 Apr 2009; Matthias Schwarzott <zzam@gentoo.org> dpic-20080511.ebuild:
+  Added ~x86 keyword.
+
+*dpic-20080511 (04 Jun 2008)
+
+  04 Jun 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +dpic-20080511.ebuild:
+  initial import, thanks to Adrian Perez <the.lightman@gmail.com>, bug
+  #197668
+

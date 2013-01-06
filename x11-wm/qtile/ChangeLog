@@ -1,0 +1,11 @@
+# ChangeLog for x11-wm/qtile
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/qtile/ChangeLog,v 1.1 2012/11/13 05:03:09 radhermit Exp $
+
+*qtile-9999 (13 Nov 2012)
+*qtile-0.5 (13 Nov 2012)
+
+  13 Nov 2012; Tim Harder <radhermit@gentoo.org> +qtile-0.5.ebuild,
+  +qtile-9999.ebuild, +files/qtile-session, +metadata.xml:
+  Initial import, ebuild by me (bug #442820).
+

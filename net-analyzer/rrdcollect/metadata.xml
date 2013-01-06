@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>netmon</herd>
+<use>
+<flag name="exec">Enable exec:/// support</flag>
+<flag name="librrd">Use the librrd library from <pkg>net-analyzer/rrdtool</pkg></flag>
+</use>
+</pkgmetadata>

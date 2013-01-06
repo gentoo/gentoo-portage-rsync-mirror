@@ -1,0 +1,31 @@
+diff --git a/srcunx/unx.mak b/srcunx/unx.mak
+index 3bd1769..ee86618 100644
+--- a/srcunx/unx.mak
++++ b/srcunx/unx.mak
+@@ -39,7 +39,7 @@ GSVIEW_DOCPATH=$(GSVIEW_BASE)/share/doc
+ GSVIEW_ETCPATH=$(prefix)/etc
+ 
+ MAKE=make
+-CC=gcc
++CC ?= gcc
+ OBJ=o
+ INSTALL=install -m 644
+ INSTALL_EXE=install -m 755
+@@ -77,7 +77,7 @@ PLINK=-lpthread -lrt
+ 
+ # Other possible options are -Wtraditional
+ # Compiler flags for C and C++ files.
+-CFLAGS=-O -Wall -Wstrict-prototypes -Wmissing-declarations -Wmissing-prototypes -fno-builtin -fno-common -Wcast-qual -Wwrite-strings $(CDEBUG) -DX11 -DUNIX -DNONAG $(RPM_OPT_FLAGS) `gtk-config --cflags` $(XINCLUDE) $(PFLAGS)
++CFLAGS += $(CDEBUG) -DX11 -DUNIX -DNONAG $(RPM_OPT_FLAGS) `gtk-config --cflags` $(XINCLUDE) $(PFLAGS)
+ 
+ # Linker flags
+ LFLAGS=$(LDEBUG) $(PLINK) `gtk-config --libs`
+@@ -155,7 +155,7 @@ all: $(BD)gsview$(EXE) html
+ GSVIEW_DOCDIR=$(GSVIEW_DOCPATH)/gsview-$(GSVIEW_DOT_VERSION)
+ 
+ $(BD)gsview$(EXE): $(OBJS)
+-	$(COMP) $(CFLAGS) $(FO)$(BD)gsview$(EXE) $(OBJS) $(LFLAGS)
++	$(COMP) $(CFLAGS) $(LDFLAGS) $(FO)$(BD)gsview$(EXE) $(OBJS) $(LFLAGS)
+ 
+ install: all
+ 	-mkdir -p $(GSVIEW_BASE)

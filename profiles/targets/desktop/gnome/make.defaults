@@ -1,0 +1,5 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/make.defaults,v 1.6 2011/11/25 02:23:18 tetromino Exp $
+
+USE="colord eds evo gnome gnome-keyring gnome-online-accounts gstreamer nautilus pulseaudio socialweb"

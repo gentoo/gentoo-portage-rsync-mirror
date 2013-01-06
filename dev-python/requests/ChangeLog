@@ -1,0 +1,146 @@
+# ChangeLog for dev-python/requests
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.28 2012/12/23 11:38:19 radhermit Exp $
+
+*requests-1.0.4 (23 Dec 2012)
+
+  23 Dec 2012; Tim Harder <radhermit@gentoo.org> +requests-1.0.4.ebuild,
+  +files/requests-1.0.4-system-libs.patch:
+  Version bump.
+
+  21 Dec 2012; Tim Harder <radhermit@gentoo.org> requests-1.0.3.ebuild:
+  Use PYTHON_USEDEP to pull in proper deps.
+
+  20 Dec 2012; Tim Harder <radhermit@gentoo.org> -requests-0.13.6.ebuild,
+  -requests-0.13.9.ebuild, -requests-0.14.0.ebuild, -requests-0.14.1.ebuild,
+  -requests-1.0.0.ebuild, -files/requests-1.0.0-system-libs.patch:
+  Remove old.
+
+*requests-1.0.3 (20 Dec 2012)
+
+  20 Dec 2012; Tim Harder <radhermit@gentoo.org> +requests-1.0.3.ebuild,
+  +files/requests-1.0.3-system-libs.patch:
+  Version bump.
+
+*requests-1.0.0 (17 Dec 2012)
+
+  17 Dec 2012; Tim Harder <radhermit@gentoo.org> +requests-1.0.0.ebuild,
+  +files/requests-1.0.0-system-libs.patch:
+  Version bump. Migrate to distutils-r1 eclass.
+
+*requests-0.14.2 (30 Oct 2012)
+
+  30 Oct 2012; Patrick Lauer <patrick@gentoo.org> +requests-0.14.2.ebuild,
+  requests-0.14.1.ebuild:
+  Bump
+
+  06 Oct 2012; Anthony G. Basile <blueness@gentoo.org> requests-0.14.1.ebuild:
+  keyword ~arm, bug #437250
+
+*requests-0.14.1 (05 Oct 2012)
+
+  05 Oct 2012; Tim Harder <radhermit@gentoo.org> +requests-0.14.1.ebuild,
+  +files/requests-0.14.1-system-cacerts.patch,
+  +files/requests-0.14.1-system-libs.patch:
+  Version bump. Use system packages instead of bundled ones.
+
+*requests-0.14.0 (07 Sep 2012)
+
+  07 Sep 2012; Mike Gilbert <floppym@gentoo.org> +requests-0.14.0.ebuild:
+  Version bump.
+
+  02 Sep 2012; Tim Harder <radhermit@gentoo.org> -requests-0.10.6.ebuild,
+  -requests-0.11.1.ebuild, -requests-0.12.1.ebuild, -requests-0.12.1-r1.ebuild:
+  Remove old.
+
+*requests-0.13.9 (02 Sep 2012)
+
+  02 Sep 2012; Tim Harder <radhermit@gentoo.org> +requests-0.13.9.ebuild:
+  Version bump (bug #433487).
+
+  19 Aug 2012; Johannes Huber <johu@gentoo.org> requests-0.13.1.ebuild:
+  Stable for x86, wrt bug #431758
+
+  19 Aug 2012; Agostino Sarubbo <ago@gentoo.org> requests-0.13.1.ebuild:
+  Stable for amd64, wrt bug #431758
+
+*requests-0.13.6 (17 Aug 2012)
+
+  17 Aug 2012; Mike Gilbert <floppym@gentoo.org> +requests-0.13.6.ebuild:
+  Verson bump. Adds bundled copies chardet and oauthlib.
+
+  17 Aug 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/requests-0.13-python2.6.patch, requests-0.13.1.ebuild:
+  Restore python2.6 support.
+
+*requests-0.13.1 (17 Jul 2012)
+
+  17 Jul 2012; Michael Palimaka <kensington@gentoo.org> +requests-0.13.1.ebuild:
+  Version bump, wrt bug #423865.
+
+*requests-0.12.1-r1 (04 Jun 2012)
+
+  04 Jun 2012; Marien Zwart <marienz@gentoo.org>
+  +files/requests-0.12.1-setup.py.patch, +requests-0.12.1-r1.ebuild:
+  Remove dead code that breaks FEATURES=test, remove unnecessary certifi dep,
+  tweak python 3 chardet dep to match what gentoo installs.
+
+  28 May 2012; Markus Meier <maekke@gentoo.org> requests-0.12.1.ebuild:
+  add ~arm, bug #415187
+
+  08 May 2012; Mike Gilbert <floppym@gentoo.org> requests-0.12.1.ebuild:
+  Depend on dev-python/oauthlib for bug 415173 by candrews. Drop arm keyword due
+  to deps.
+
+*requests-0.12.1 (08 May 2012)
+
+  08 May 2012; Dirkjan Ochtman <djc@gentoo.org> +requests-0.12.1.ebuild:
+  Version bump to 0.12.1, with testing (bug 380137).
+
+  26 Apr 2012; Mike Frysinger <vapier@gentoo.org> requests-0.10.6.ebuild,
+  requests-0.11.1.ebuild:
+  Add arm love for ChromiumOS.
+
+*requests-0.11.1 (31 Mar 2012)
+
+  31 Mar 2012; Mike Gilbert <floppym@gentoo.org> +requests-0.11.1.ebuild,
+  -requests-0.10.0.ebuild, -requests-0.9.3.ebuild:
+  Version bump. Remove old.
+
+*requests-0.10.8 (29 Mar 2012)
+
+  29 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> -requests-0.9.3.ebuild,
+  -requests-0.10.0.ebuild, +requests-0.10.8.ebuild:
+  Remove old versions, bump to 0.10.8.
+
+  29 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> -requests-0.9.3.ebuild,
+  -requests-0.10.0.ebuild:
+  Remove old versions.
+
+  27 Feb 2012; Mike Gilbert <floppym@gentoo.org> requests-0.10.6.ebuild:
+  Depend on >=dev-python/certifi-0.0.7.
+
+*requests-0.10.6 (27 Feb 2012)
+
+  27 Feb 2012; Mike Gilbert <floppym@gentoo.org> +requests-0.10.6.ebuild:
+  Version bump. This version supporty Python 3.
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> requests-0.10.0.ebuild:
+  Depend on dev-python/chardet. Bug 404519 by Peter Gantner.
+
+*requests-0.10.0 (06 Feb 2012)
+
+  06 Feb 2012; Mike Gilbert <floppym@gentoo.org> +requests-0.10.0.ebuild:
+  Version bump.
+
+*requests-0.9.3 (20 Jan 2012)
+
+  20 Jan 2012; Mike Gilbert <floppym@gentoo.org> +requests-0.9.3.ebuild,
+  -requests-0.9.0.ebuild:
+  Version bump.
+
+*requests-0.9.0 (02 Jan 2012)
+
+  02 Jan 2012; Mike Gilbert <floppym@gentoo.org> +metadata.xml,
+  +requests-0.9.0.ebuild:
+  New package.

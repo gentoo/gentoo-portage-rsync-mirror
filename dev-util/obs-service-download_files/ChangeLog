@@ -1,0 +1,38 @@
+# ChangeLog for dev-util/obs-service-download_files
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-download_files/ChangeLog,v 1.7 2012/11/15 19:57:27 scarabeus Exp $
+
+  15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  obs-service-download_files-20120824.ebuild:
+  Stable on amd64 and x86.
+
+*obs-service-download_files-20120824 (15 Nov 2012)
+
+  15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +obs-service-download_files-20120824.ebuild,
+  -obs-service-download_files-9999.ebuild:
+  Use versioned download_files.
+
+  02 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  obs-service-download_files-9999.ebuild:
+  Set empty keywords.
+
+  02 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -obs-service-download_files-0.1.ebuild,
+  obs-service-download_files-9999.ebuild:
+  Provide only live version of services until we find out how to version them
+  sanely.
+
+  17 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Use suse herd.
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop no-herd.
+
+*obs-service-download_files-9999 (16 Nov 2011)
+*obs-service-download_files-0.1 (16 Nov 2011)
+
+  16 Nov 2011; Michal Hrusecky <miska@gentoo.org>
+  +obs-service-download_files-0.1.ebuild,
+  +obs-service-download_files-9999.ebuild, +metadata.xml:
+  New ebuilds for obs-service-download_files. Ebuild written by me.

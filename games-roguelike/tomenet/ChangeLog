@@ -1,0 +1,41 @@
+# ChangeLog for games-roguelike/tomenet
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/ChangeLog,v 1.8 2012/12/20 17:34:58 hasufell Exp $
+
+*tomenet-4.5.0 (20 Dec 2012)
+
+  20 Dec 2012; Julian Ospald <hasufell@gentoo.org> +tomenet-4.5.0.ebuild,
+  +files/tomenet-4.5.0-makefile.patch, +files/tomenet-wrapper, metadata.xml:
+  version bump wrt #447844 based on work from Paweł Jastrzębski
+
+  26 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  tomenet-100310.ebuild:
+  x86 stable wrt bug #315025
+
+*tomenet-100310 (11 Mar 2010)
+
+  11 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +tomenet-100310.ebuild:
+  version bump
+
+*tomenet-091102 (03 Nov 2009)
+
+  03 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +tomenet-091102.ebuild:
+  version bump
+
+  29 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  tomenet-070104.ebuild:
+  EAPI=2; respect CC
+
+  05 Nov 2007; Tupone Alfredo <tupone@gentoo.org> tomenet-070104.ebuild:
+  homepage fix
+
+  12 Mar 2007; Marius Mauch <genone@gentoo.org> tomenet-070104.ebuild:
+  Replacing einfo with elog
+
+*tomenet-070104 (05 Jan 2007)
+
+  05 Jan 2007; <tupone@gentoo.org> +metadata.xml, +tomenet-070104.ebuild:
+  New ebuild. Bug #90283 by Zedr
+

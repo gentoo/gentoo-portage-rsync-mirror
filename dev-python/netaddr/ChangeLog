@@ -1,0 +1,56 @@
+# ChangeLog for dev-python/netaddr
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netaddr/ChangeLog,v 1.13 2012/11/22 10:04:47 ago Exp $
+
+  22 Nov 2012; Agostino Sarubbo <ago@gentoo.org> netaddr-0.7.10.ebuild:
+  Stable for x86, tested by Vincent Olivert Riera <peratu@carrosses.com>, wrt
+  bug #441280
+
+  06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> netaddr-0.7.10.ebuild:
+  Stable for amd64, wrt bug #441280
+
+*netaddr-0.7.10 (22 Sep 2012)
+
+  22 Sep 2012; Maxim Koltsov <maksbotan@gentoo.org> +netaddr-0.7.10.ebuild:
+  Bump to 0.7.10, thanks to slepnoga
+
+  23 Jun 2012; Tim Harder <radhermit@gentoo.org> netaddr-0.7.7.ebuild:
+  Tests should now work for python-3 and remove obsolete workarounds for tests
+  (thanks to Arfrever).
+
+*netaddr-0.7.7 (22 Jun 2012)
+
+  22 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> +netaddr-0.7.7.ebuild:
+  Bump to 0.7.7 and add 3.* to PYTHON_TESTS_FAILURES_TOLERANT_ABIS, bug 422749.
+  Thanks to idella4
+
+  17 Jun 2012; Jeff Horelick <jdhore@gentoo.org> netaddr-0.7.6-r1.ebuild:
+  marked x86 per bug 421105
+
+  16 Jun 2012; Mike Gilbert <floppym@gentoo.org> netaddr-0.7.6-r1.ebuild:
+  Call distutils_pkg_postinst, thanks Arfrever.
+
+  15 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> netaddr-0.7.6-r1.ebuild:
+  Stable for amd64, bug 421105. Permission by Agostino Sarubbo <ago@gentoo.org>
+
+*netaddr-0.7.6-r1 (15 Jun 2012)
+
+  15 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> +netaddr-0.7.6-r1.ebuild,
+  -netaddr-0.7.6.ebuild, metadata.xml:
+  Add cli use flag with dep on ipython, thanks to slepnoga
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> netaddr-0.7.6.ebuild:
+  Use mirror://github.
+
+  04 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Fix maintainer's email in metadata
+
+  26 Nov 2011; Markos Chandras <hwoarang@gentoo.org> netaddr-0.7.6.ebuild:
+  Support Python 2.4, 2.5 and 3.*. Add src_test(). Patch by Arfrever. Backported
+  from Progress Overlay
+
+*netaddr-0.7.6 (04 Nov 2011)
+
+  04 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org> +netaddr-0.7.6.ebuild,
+  +metadata.xml:
+  Added dev-python/netaddr-0.7.6, bug #388969. Thanks to slepnoga

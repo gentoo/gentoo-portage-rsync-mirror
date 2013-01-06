@@ -1,0 +1,31 @@
+diff -ruN collectd-4.10.3.orig/Makefile.am collectd-4.10.3/Makefile.am
+--- collectd-4.10.3.orig/Makefile.am	2011-03-26 17:04:26.000000000 +0100
++++ collectd-4.10.3/Makefile.am	2011-04-24 17:48:18.013229944 +0200
+@@ -1,6 +1,6 @@
+-ACLOCAL_AMFLAGS = -I libltdl/m4
++# ACLOCAL_AMFLAGS = -I libltdl/m4
+ 
+-SUBDIRS = libltdl src bindings
++SUBDIRS = src bindings
+ 
+ INCLUDES = $(LTDLINCL)
+ 
+diff -ruN collectd-4.10.3.orig/configure.in collectd-4.10.3/configure.in
+--- collectd-4.10.3.orig/configure.in	2011-03-26 17:08:53.000000000 +0100
++++ collectd-4.10.3/configure.in	2011-04-24 17:50:06.001229943 +0200
+@@ -6,7 +6,6 @@
+ m4_ifdef([LT_PACKAGE_VERSION],
+ 	# libtool >= 2.2
+ 	[
+-	 LT_CONFIG_LTDL_DIR([libltdl])
+ 	 LT_INIT([dlopen])
+ 	 LTDL_INIT([convenience])
+ 	 AC_DEFINE(LIBTOOL_VERSION, 2, [Define to used libtool version.])
+@@ -18,7 +17,6 @@
+ 	 AC_SUBST(LTDLINCL)
+ 	 AC_SUBST(LIBLTDL)
+ 	 AC_LIBTOOL_DLOPEN
+-	 AC_CONFIG_SUBDIRS(libltdl)
+ 	 AC_DEFINE(LIBTOOL_VERSION, 1, [Define to used libtool version.])
+ 	]
+ )

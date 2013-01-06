@@ -1,0 +1,9 @@
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=qmail-lint checks your qmail configuration for common problems
+HOMEPAGE=http://www.qmail.org/
+KEYWORDS=~hppa ~ppc ~sparc ~x86
+LICENSE=as-is
+RDEPEND=virtual/qmail dev-lang/perl
+SLOT=0
+SRC_URI=mirror://qmail/qmail-lint-0.55
+_md5_=b75186db5fb684dd033823d414dd539e

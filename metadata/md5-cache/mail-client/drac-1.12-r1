@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst
+DEPEND=virtual/mta >=sys-libs/db-3.2.9 >=sys-apps/sed-4
+DESCRIPTION=A robust implementation of POP-before-SMTP.
+HOMEPAGE=http://mail.cc.umanitoba.ca/drac/
+IUSE=debug
+KEYWORDS=x86 sparc ppc hppa ~amd64 ppc64
+LICENSE=rc
+RDEPEND=virtual/mta >=sys-libs/db-3.2.9 >=sys-apps/sed-4 >=net-nds/portmap-5b-r6
+SLOT=0
+SRC_URI=ftp://ftp.cc.umanitoba.ca/src/drac.tar.Z
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=7156a53ed0b536518acd4bdb243a9a4b

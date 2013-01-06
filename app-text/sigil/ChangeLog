@@ -1,0 +1,35 @@
+# ChangeLog for app-text/sigil
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/ChangeLog,v 1.7 2012/10/31 20:42:20 flameeyes Exp $
+
+  31 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> sigil-0.6.0.ebuild:
+  QA: drop maximum boost version dep; if it fails to build, it has to be fixed.
+
+*sigil-0.6.0 (31 Oct 2012)
+
+  31 Oct 2012; Stefan Briesenick <sbriesen@gentoo.org> +sigil-0.6.0.ebuild:
+  version bump
+
+  10 Aug 2012; Michael Palimaka <kensington@gentoo.org> sigil-0.4.2.ebuild,
+  sigil-0.4.905_beta1.ebuild, sigil-0.5.0.ebuild, sigil-0.5.3.ebuild:
+  Add missing slot dependencies on Qt.
+
+*sigil-0.5.3 (19 Mar 2012)
+
+  19 Mar 2012; Stefan Briesenick <sbriesen@gentoo.org> +sigil-0.5.3.ebuild:
+  version bump. solving bug #407815.
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop no-herd.
+
+*sigil-0.5.0 (26 Jan 2012)
+
+  26 Jan 2012; Stefan Briesenick <sbriesen@gentoo.org> +sigil-0.5.0.ebuild:
+  version bump
+
+*sigil-0.4.905_beta1 (10 Jan 2012)
+*sigil-0.4.2 (10 Jan 2012)
+
+  10 Jan 2012; Stefan Briesenick <sbriesen@gentoo.org> +sigil-0.4.2.ebuild,
+  +sigil-0.4.905_beta1.ebuild, +metadata.xml:
+  initial commit. solving bug #285060.

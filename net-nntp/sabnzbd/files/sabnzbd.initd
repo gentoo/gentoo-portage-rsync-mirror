@@ -1,0 +1,41 @@
+#!/sbin/runscript
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/files/sabnzbd.initd,v 1.1 2013/01/03 20:02:32 jsbronder Exp $
+
+
+depend() {
+    need net
+}
+
+start() {
+    ebegin "Starting SABnzbd"
+
+    start-stop-daemon \
+        --quiet \
+        --start \
+        --user ${SABNZBD_USER} \
+        --group ${SABNZBD_GROUP} \
+        --name sabnzbd \
+        --exec /usr/bin/sabnzbd \
+        -- \
+        --server ${SABNZBD_SERVER}:${SABNZBD_PORT} \
+        --config-file ${SABNZBD_CONFIGFILE} \
+        --daemon
+    eend $?
+}
+
+stop() {
+    local api_key=$(awk '/^api_key =/{print $3}' ${SABNZBD_CONFIGFILE})
+    local hostname=${SABNZBD_SERVER}
+    
+    ebegin "Stopping SABnzbd"
+
+    if [ -z "${hostname}" -o "${hostname}" == "0.0.0.0" ]; then
+        hostname="localhost"
+    fi
+	/usr/bin/wget -q --delete-after \
+        "http://${SABNZBD_SERVER}:${SABNZBD_PORT}/sabnzbd/api?mode=shutdown&apikey=${api_key}"
+    eend $?
+}
+

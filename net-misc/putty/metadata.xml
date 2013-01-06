@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>jer@gentoo.org</email>
+		<name>Jeroen Roovers</name>
+	</maintainer>
+	<longdescription lang="en">
+		PuTTY is a free implementation of Telnet and SSH for Windows and Unix
+		platforms, along with an xterm terminal emulator. It supports flexible
+		terminal setup, mid-session reconfiguration using Ctrl-rightclick,
+		multiple X11 authentication protocols, and various other interesting
+		things not provided by ssh in an xterm.
+	</longdescription>
+</pkgmetadata>

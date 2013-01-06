@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install unpack
+DEPEND=fltk? ( x11-libs/fltk:1 )
+DESCRIPTION=Tool for generating eDonkey2000 links
+EAPI=1
+HOMEPAGE=http://ed2k-tools.sourceforge.net/ed2k_hash.shtml
+IUSE=fltk
+KEYWORDS=amd64 ppc ~sparc x86
+LICENSE=GPL-2
+RDEPEND=fltk? ( x11-libs/fltk:1 )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=mirror://sourceforge/ed2k-tools/ed2k_hash-0.4.0.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	61ad55e732e494378165e7dcd4744b91	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=d2176fbbf07e100de5a8633b42aaa495

@@ -1,0 +1,50 @@
+#!/bin/bash
+PF=${PN}-${PVR}
+
+die() {
+	echo "#####"
+	echo $1
+	echo "#####"
+	exit 1
+}
+
+if [ $1 = "install" ]; then
+	# fix location
+	cd ${VHOST_ROOT}/${PF}
+	sed -e "s|${MY_HOSTROOTDIR}/${PF}|${VHOST_ROOT}/${PF}|g
+		s|${MY_HTDOCSDIR}|${MY_INSTALLDIR}|g" -i bin/* lib/RT.pm sbin/* etc/RT_Config.pm || die
+
+	if [[ -e ${VHOST_ROOT}/${PF}/etc/rt_apache2.conf ]]; then
+		sed -i \
+			-e "s|RT_DIR|${VHOST_ROOT}/${PF}|g"
+			-e "s|HTDOCS|${MY_INSTALLDIR}|g" \
+			${VHOST_ROOT}/${PF}/etc/rt_apache2.conf
+	fi
+
+	if [[ -e ${VHOST_ROOT}/${PF}/etc/rt_apache2_fcgi.conf ]]; then
+		sed -i \
+			-e "s|RT_DIR|${VHOST_ROOT}/${PF}|g"
+			-e "s|HTDOCS|${MY_INSTALLDIR}|g" \
+			${VHOST_ROOT}/${PF}/etc/rt_apache2_fcgi.conf
+	fi
+
+	# check for upgrades
+	cd ${VHOST_ROOT}/${PF}/upgrade
+	echo "You may need to update your database. For each item in the output below"
+	echo "whose name is greater than your previously installed RT version,"
+	echo "run the following commands, specifying YOUR_DBA_USER:"
+	echo "${VHOST_ROOT}/${PF}/sbin/rt-setup-database --action schema --datadir ${VHOST_ROOT}/${PF}/upgrade/<version> --dba YOUR_DBA_USER --prompt-for-dba-password"
+	echo "${VHOST_ROOT}/${PF}/sbin/rt-setup-database --action acl --datadir ${VHOST_ROOT}/${PF}/upgrade/<version> --dba YOUR_DBA_USER -prompt-for-dba-password"
+	echo "${VHOST_ROOT}/${PF}/sbin/rt-setup-database --action insert --datadir ${VHOST_ROOT}/${PF}/upgrade/<version> --dba YOUR_DBA_USER --prompt-for-dba-password"
+	echo "Note that some upgrade directories don't have all 3 items (schema, acl, insert)"
+	echo "You can skip missing items safely"
+	echo "Don't forget to read the online installation guide for more details"
+	ls
+
+elif [ $1 = "clean" ]; then
+	echo "Please examine the contents of the following directories"
+	echo "and delete anything that is no longer necessary"
+	echo
+	echo ${VHOST_ROOT}/${PF}
+	echo ${MY_INSTALLDIR}
+fi

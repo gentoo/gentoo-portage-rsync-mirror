@@ -1,0 +1,9 @@
+# ChangeLog for dev-php/mockery
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mockery/ChangeLog,v 1.1 2011/03/12 21:45:19 olemarkus Exp $
+
+*mockery-0.7.0 (12 Mar 2011)
+
+  12 Mar 2011; <olemarkus@gentoo.org> +mockery-0.7.0.ebuild, +metadata.xml:
+  Initial version
+

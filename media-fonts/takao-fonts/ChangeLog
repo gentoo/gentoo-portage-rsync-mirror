@@ -1,0 +1,16 @@
+# ChangeLog for media-fonts/takao-fonts
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/takao-fonts/ChangeLog,v 1.2 2010/04/04 15:53:44 matsuu Exp $
+
+*takao-fonts-003.02.01 (04 Apr 2010)
+
+  04 Apr 2010; MATSUU Takuto <matsuu@gentoo.org> +files/66-takao-fonts.conf,
+  +takao-fonts-003.02.01.ebuild:
+  Version bumped. Added FONT_CONF.
+
+*takao-fonts-003.01.20100214.1 (16 Feb 2010)
+
+  16 Feb 2010; MATSUU Takuto <matsuu@gentoo.org>
+  +takao-fonts-003.01.20100214.1.ebuild, +metadata.xml:
+  Initial import.
+

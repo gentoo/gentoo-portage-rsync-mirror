@@ -1,0 +1,17 @@
+# ChangeLog for dev-python/biplist
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/biplist/ChangeLog,v 1.3 2012/11/13 10:53:25 idella4 Exp $
+
+  14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Updating maintainer, metadata.xml
+
+*biplist-0.5 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +biplist-0.5.ebuild:
+  Bump
+
+*biplist-0.4 (25 Apr 2012)
+
+  25 Apr 2012; Theo Chatzimichos <tampakrap@gentoo.org> +biplist-0.4.ebuild,
+  +metadata.xml:
+  Initial commit, ebuild by idella4

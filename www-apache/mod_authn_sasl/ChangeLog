@@ -1,0 +1,19 @@
+# ChangeLog for www-apache/mod_authn_sasl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_authn_sasl/ChangeLog,v 1.3 2012/11/27 19:07:27 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> -mod_authn_sasl-1.1.ebuild,
+  metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
+
+*mod_authn_sasl-1.2 (14 Oct 2011)
+
+  14 Oct 2011; Steve Dibb <beandog@gentoo.org> +mod_authn_sasl-1.2.ebuild:
+  Version bump
+
+*mod_authn_sasl-1.1 (14 Oct 2011)
+
+  14 Oct 2011; Steve Dibb <beandog@gentoo.org> +files/10_mod_authn_sasl.conf,
+  +mod_authn_sasl-1.1.ebuild:
+  Initial ebuild, bug 330781; Thanks to Phil Turmel

@@ -1,0 +1,38 @@
+# ChangeLog for media-sound/pnmixer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pnmixer/ChangeLog,v 1.5 2012/12/24 13:35:16 hasufell Exp $
+
+  24 Dec 2012; Julian Ospald <hasufell@gentoo.org>
+  files/pnmixer-0.6_pre20111213-build.patch:
+  use the right patch wrt #448380
+
+  23 Dec 2012; Julian Ospald <hasufell@gentoo.org>
+  pnmixer-0.6_pre20111213.ebuild, files/pnmixer-0.6_pre20111213-build.patch:
+  add debug useflag
+
+  22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pnmixer-0.6_pre20111213.ebuild:
+  Add ~ppc, wrt bug #448048
+
+  21 Dec 2012; Sergey Popov <pinkbyte@gentoo.org>
+  pnmixer-0.6_pre20111213.ebuild:
+  Stable on amd64, wrt bug #448038
+
+  17 Nov 2012; Julian Ospald <hasufell@gentoo.org>
+  +pnmixer-0.6_pre20111213.ebuild, +files/pnmixer-0.6_pre20111213-build.patch,
+  +files/pnmixer-0.6_pre20111213-desktopfile.patch, +metadata.xml:
+  move from category x11-misc/ to media-sound/
+
+  16 Nov 2012; Julian Ospald <hasufell@gentoo.org>
+  pnmixer-0.6_pre20111213.ebuild:
+  dep-fix, add die
+
+  16 Nov 2012; Julian Ospald <hasufell@gentoo.org>
+  pnmixer-0.6_pre20111213.ebuild:
+  clarify description
+
+*pnmixer-0.6_pre20111213 (16 Nov 2012)
+
+  16 Nov 2012; Julian Ospald <hasufell@gentoo.org>
+  +pnmixer-0.6_pre20111213.ebuild, +files/pnmixer-0.6_pre20111213-build.patch,
+  +files/pnmixer-0.6_pre20111213-desktopfile.patch:
+  initial import wrt #432460

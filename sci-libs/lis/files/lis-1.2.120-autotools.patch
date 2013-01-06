@@ -1,0 +1,246 @@
+diff -Nur lis-1.2.120.orig/src/esolver/Makefile.am lis-1.2.120/src/esolver/Makefile.am
+--- lis-1.2.120.orig/src/esolver/Makefile.am	2012-11-11 18:31:26.617593585 -0800
++++ lis-1.2.120/src/esolver/Makefile.am	2012-11-11 18:31:46.912690912 -0800
+@@ -8,16 +8,5 @@
+ lis_esolver_si.c	\
+ lis_esolver_rqi.c	
+ 
+-AM_CFLAGS = -I$(top_srcdir)/include
++AM_CPPFLAGS = -I$(top_srcdir)/include
+ CLEANFILES = *.il
+-
+-PPF77COMPILE = $(F77) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+-	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_FFLAGS) $(FFLAGS)
+-LTPPF77COMPILE = $(LIBTOOL) --mode=compile --tag=F77 $(F77) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_FFLAGS) $(FFLAGS)
+-COMPILE = $(CC) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(CC) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_CFLAGS) $(CFLAGS)
+diff -Nur lis-1.2.120.orig/src/fortran/amg/Makefile.am lis-1.2.120/src/fortran/amg/Makefile.am
+--- lis-1.2.120.orig/src/fortran/amg/Makefile.am	2012-11-11 18:31:26.616593603 -0800
++++ lis-1.2.120/src/fortran/amg/Makefile.am	2012-11-11 18:31:46.912690912 -0800
+@@ -25,25 +25,6 @@
+ 
+ CLEANFILES = *.mod
+ AM_CPPFLAGS = -I$(top_srcdir)/include
+-FCCOMPILE = $(FC) $(AMDEFS) $(AM_FCFLAGS) $(FCFLAGS)
+-LTFCCOMPILE = $(LIBTOOL) --mode=compile $(FC) $(AMDEFS) $(AM_FCFLAGS) $(FCFLAGS)
+-FCLD = $(FC)
+-FCLINK = $(LIBTOOL) --mode=link $(FCLD) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+-PPFCCOMPILE = $(FC) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+-        $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_FCFLAGS) $(FCFLAGS)
+-LTPPFCCOMPILE = $(LIBTOOL) --mode=compile $(FC) $(AMDEFS) $(DEFS) \
+-        $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-        $(AM_FCFLAGS) $(FCFLAGS)
+-PPF77COMPILE = $(F77) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+-	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_FFLAGS) $(FFLAGS)
+-LTPPF77COMPILE = $(LIBTOOL) --mode=compile --tag=F77 $(F77) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_FFLAGS) $(FFLAGS)
+-COMPILE = $(CC) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(CC) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_CFLAGS) $(CFLAGS)
+ 
+ .NOTPARALLEL:
+ .NO_PARALLEL:
+diff -Nur lis-1.2.120.orig/src/fortran/Makefile.am lis-1.2.120/src/fortran/Makefile.am
+--- lis-1.2.120.orig/src/fortran/Makefile.am	2012-11-11 18:31:26.616593603 -0800
++++ lis-1.2.120/src/fortran/Makefile.am	2012-11-11 18:31:46.912690912 -0800
+@@ -9,14 +9,3 @@
+ 
+ AM_CPPFLAGS = -I$(top_srcdir)/include
+ CLEANFILES = *.il
+-
+-PPF77COMPILE = $(F77) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+-	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_FFLAGS) $(FFLAGS)
+-LTPPF77COMPILE = $(LIBTOOL) --mode=compile --tag=F77 $(F77) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_FFLAGS) $(FFLAGS)
+-COMPILE = $(CC) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(CC) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_CFLAGS) $(CFLAGS)
+diff -Nur lis-1.2.120.orig/src/matrix/Makefile.am lis-1.2.120/src/matrix/Makefile.am
+--- lis-1.2.120.orig/src/matrix/Makefile.am	2012-11-11 18:31:26.617593585 -0800
++++ lis-1.2.120/src/matrix/Makefile.am	2012-11-11 18:31:46.912690912 -0800
+@@ -18,16 +18,6 @@
+ lis_matrix_rco.c           \
+ lis_matrix_vbr.c           
+ 
+-AM_CFLAGS = -I$(top_srcdir)/include $(ILIBS)
++AM_CPPFLAGS = -I$(top_srcdir)/include $(ILIBS)
+ CLEANFILES = *.il
+ 
+-PPF77COMPILE = $(F77) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+-	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_FFLAGS) $(FFLAGS)
+-LTPPF77COMPILE = $(LIBTOOL) --mode=compile --tag=F77 $(F77) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_FFLAGS) $(FFLAGS)
+-COMPILE = $(CC) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(CC) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_CFLAGS) $(CFLAGS)
+diff -Nur lis-1.2.120.orig/src/matvec/Makefile.am lis-1.2.120/src/matvec/Makefile.am
+--- lis-1.2.120.orig/src/matvec/Makefile.am	2012-11-11 18:31:26.615593621 -0800
++++ lis-1.2.120/src/matvec/Makefile.am	2012-11-11 18:31:46.913690864 -0800
+@@ -13,16 +13,5 @@
+ lis_matvec_vbr.c
+ 
+ 
+-AM_CFLAGS = -I$(top_srcdir)/include
++AM_CPPFLAGS = -I$(top_srcdir)/include
+ CLEANFILES = *.il
+-
+-PPF77COMPILE = $(F77) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+-	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_FFLAGS) $(FFLAGS)
+-LTPPF77COMPILE = $(LIBTOOL) --mode=compile --tag=F77 $(F77) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_FFLAGS) $(FFLAGS)
+-COMPILE = $(CC) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(CC) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_CFLAGS) $(CFLAGS)
+diff -Nur lis-1.2.120.orig/src/precision/Makefile.am lis-1.2.120/src/precision/Makefile.am
+--- lis-1.2.120.orig/src/precision/Makefile.am	2012-11-11 18:31:26.615593621 -0800
++++ lis-1.2.120/src/precision/Makefile.am	2012-11-11 18:31:46.913690864 -0800
+@@ -4,16 +4,5 @@
+ lis_precision_matvec.c    
+ 
+ 
+-AM_CFLAGS = -I$(top_srcdir)/include $(MPFLAG)
++AM_CPPFLAGS = -I$(top_srcdir)/include $(MPFLAG)
+ CLEANFILES = *.il
+-
+-PPF77COMPILE = $(F77) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+-	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_FFLAGS) $(FFLAGS)
+-LTPPF77COMPILE = $(LIBTOOL) --mode=compile --tag=F77 $(F77) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_FFLAGS) $(FFLAGS)
+-COMPILE = $(CC) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(CC) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_CFLAGS) $(CFLAGS)
+diff -Nur lis-1.2.120.orig/src/precon/Makefile.am lis-1.2.120/src/precon/Makefile.am
+--- lis-1.2.120.orig/src/precon/Makefile.am	2012-11-11 18:31:26.615593621 -0800
++++ lis-1.2.120/src/precon/Makefile.am	2012-11-11 18:31:46.913690864 -0800
+@@ -12,16 +12,5 @@
+ lis_precon_ssor.c  
+ 
+ 
+-AM_CFLAGS = -I$(top_srcdir)/include
++AM_CPPFLAGS = -I$(top_srcdir)/include
+ CLEANFILES = *.il
+-
+-PPF77COMPILE = $(F77) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+-	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_FFLAGS) $(FFLAGS)
+-LTPPF77COMPILE = $(LIBTOOL) --mode=compile --tag=F77 $(F77) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_FFLAGS) $(FFLAGS)
+-COMPILE = $(CC) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(CC) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_CFLAGS) $(CFLAGS)
+diff -Nur lis-1.2.120.orig/src/solver/Makefile.am lis-1.2.120/src/solver/Makefile.am
+--- lis-1.2.120.orig/src/solver/Makefile.am	2012-11-11 18:31:26.617593585 -0800
++++ lis-1.2.120/src/solver/Makefile.am	2012-11-11 18:31:46.913690864 -0800
+@@ -17,16 +17,5 @@
+ lis_solver_sor.c       
+ 
+ 
+-AM_CFLAGS = -I$(top_srcdir)/include
++AM_CPPFLAGS = -I$(top_srcdir)/include
+ CLEANFILES = *.il
+-
+-PPF77COMPILE = $(F77) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+-	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_FFLAGS) $(FFLAGS)
+-LTPPF77COMPILE = $(LIBTOOL) --mode=compile --tag=F77 $(F77) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_FFLAGS) $(FFLAGS)
+-COMPILE = $(CC) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(CC) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_CFLAGS) $(CFLAGS)
+diff -Nur lis-1.2.120.orig/src/system/Makefile.am lis-1.2.120/src/system/Makefile.am
+--- lis-1.2.120.orig/src/system/Makefile.am	2012-11-11 18:31:26.614593644 -0800
++++ lis-1.2.120/src/system/Makefile.am	2012-11-11 18:31:46.913690864 -0800
+@@ -13,16 +13,5 @@
+ mt19937ar.c
+ 
+ 
+-AM_CFLAGS = -I$(top_srcdir)/include
++AM_CPPFLAGS = -I$(top_srcdir)/include
+ CLEANFILES = *.il
+-
+-PPF77COMPILE = $(F77) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+-	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_FFLAGS) $(FFLAGS)
+-LTPPF77COMPILE = $(LIBTOOL) --mode=compile --tag=F77 $(F77) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_FFLAGS) $(FFLAGS)
+-COMPILE = $(CC) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(CC) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_CFLAGS) $(CFLAGS)
+diff -Nur lis-1.2.120.orig/src/vector/Makefile.am lis-1.2.120/src/vector/Makefile.am
+--- lis-1.2.120.orig/src/vector/Makefile.am	2012-11-11 18:31:26.616593603 -0800
++++ lis-1.2.120/src/vector/Makefile.am	2012-11-11 18:31:46.913690864 -0800
+@@ -4,16 +4,5 @@
+ lis_vector_opv.c
+ 
+ 
+-AM_CFLAGS = -I$(top_srcdir)/include
++AM_CPPFLAGS = -I$(top_srcdir)/include
+ CLEANFILES = *.il
+-
+-PPF77COMPILE = $(F77) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+-	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_FFLAGS) $(FFLAGS)
+-LTPPF77COMPILE = $(LIBTOOL) --mode=compile --tag=F77 $(F77) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_FFLAGS) $(FFLAGS)
+-COMPILE = $(CC) $(AMDEFS) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile --tag=CC $(CC) $(AMDEFS) $(DEFS) \
+-	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+-	$(AM_CFLAGS) $(CFLAGS)
+diff -Nur lis-1.2.120.orig/test/Makefile.am lis-1.2.120/test/Makefile.am
+--- lis-1.2.120.orig/test/Makefile.am	2012-11-11 18:31:26.608593818 -0800
++++ lis-1.2.120/test/Makefile.am	2012-11-11 18:36:56.241151118 -0800
+@@ -5,15 +5,15 @@
+ 
+ EXTRA_DIST = defs test.sh testmat.mtx matfiles.txt
+ 
+-testdir = ${prefix}/share/examples/lis
++testdir = ${prefix}/share/lis/examples
+ 
+ test_DATA = testmat.mtx matfiles.txt
+ 
+ test_SCRIPTS = defs test.sh
+ 
+-test_PROGRAMS = test1 test2 test3 test4 test5 test6 etest1 etest2 etest3 etest4 etest5 etest6 spmvtest1 spmvtest2 spmvtest3 spmvtest4 spmvtest5
++check_PROGRAMS = test1 test2 test3 test4 test5 test6 etest1 etest2 etest3 etest4 etest5 etest6 spmvtest1 spmvtest2 spmvtest3 spmvtest4 spmvtest5
+ if ENABLE_FORTRAN
+-  test_PROGRAMS += test1f test4f etest1f etest4f
++  check_PROGRAMS += test1f test4f etest1f etest4f
+ endif
+ 
+ test1_SOURCES  = test1.c
+@@ -40,7 +40,7 @@
+   etest4f_SOURCES  = etest4f.F
+ endif
+ 
+-bin_PROGRAMS = lsolve esolve spmvtest1 spmvtest2 spmvtest3 spmvtest4 spmvtest5
++noinst_PROGRAMS = lsolve esolve spmvtest1 spmvtest2 spmvtest3 spmvtest4 spmvtest5
+ 
+ lsolve_SOURCES  = test1.c
+ esolve_SOURCES  = etest5.c

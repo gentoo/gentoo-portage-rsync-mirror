@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/feedgenerator
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedgenerator/ChangeLog,v 1.1 2012/07/19 07:44:06 djc Exp $
+
+*feedgenerator-1.2.1 (19 Jul 2012)
+
+  19 Jul 2012; Dirkjan Ochtman <djc@gentoo.org> +feedgenerator-1.2.1.ebuild,
+  +metadata.xml:
+  Initial version (for pelican, bug 379671).
+

@@ -1,0 +1,69 @@
+#!/sbin/runscript
+# Copyright 2003-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.init,v 1.7 2008/12/26 16:50:15 armin76 Exp $
+
+VSFTPD_NAME=${SVCNAME##*.}
+if [ -n "${VSFTPD_NAME}" -a "${SVCNAME}" != "vsftpd" ]; then
+    VSFTPD_PID="/var/run/vsftpd.${VSFTPD_NAME}.pid"
+    VSFTPD_CONF_DEFAULT="/etc/vsftpd/${VSFTPD_NAME}.conf"
+else
+    VSFTPD_PID="/var/run/vsftpd.pid"
+    VSFTPD_CONF_DEFAULT="/etc/vsftpd/vsftpd.conf"
+fi
+VSFTPD_CONF=${VSFTPD_CONF:-${VSFTPD_CONF_DEFAULT}}
+VSFTPD_EXEC=${VSFTPD_EXEC:-/usr/sbin/vsftpd}
+
+depend() {
+	need net
+	use dns logger
+}
+
+checkconfig() {
+	if [ ! -e ${VSFTPD_CONF} ] ; then
+		eerror "Please setup ${VSFTPD_CONF} before starting vsftpd"
+		eerror "There are sample configurations in /usr/share/doc/vsftpd"
+		return 1
+	fi
+
+	if egrep -iq "^ *background *= *yes" "${VSFTPD_CONF}" ; then
+		eerror "${VSFTPD_CONF} must not set background=YES"
+		return 1
+	fi
+
+	local has_ip=false has_ipv6=false ip_error=true
+	egrep -iq "^ *listen *= *yes" "${VSFTPD_CONF}" && has_ip=true
+	egrep -iq "^ *listen_ipv6 *= *yes" "${VSFTPD_CONF}" && has_ipv6=true
+	if ${has_ip} && ! ${has_ipv6} ; then
+		ip_error=false
+	elif ! ${has_ip} && ${has_ipv6} ; then
+		ip_error=false
+	fi
+	if ${ip_error} ; then
+		eerror "${VSFTPD_CONF} must contain listen=YES or listen_ipv6=YES"
+		eerror "but not both"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting ${SVCNAME}"
+	start-stop-daemon --start --exec ${VSFTPD_EXEC} \
+		--background --make-pidfile --pidfile "${VSFTPD_PID}" \
+		-- "${VSFTPD_CONF}"
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ${SVCNAME}"
+	if [ -f ${VSFTPD_PID} ]; then
+		start-stop-daemon --stop --pidfile ${VSFTPD_PID} 
+	else
+		ewarn "Couldn't found ${VSFTPD_PID} trying to stop over the process name ${SVCNAME}"
+		start-stop-daemon --stop --name ${SVCNAME}
+	fi
+	eend $?
+}
+
+# vim: ts=4

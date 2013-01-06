@@ -1,0 +1,13 @@
+# ChangeLog for dev-db/SchemaSync
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/SchemaSync/ChangeLog,v 1.2 2012/07/04 00:44:59 blueness Exp $
+
+  04 Jul 2012; Anthony G. Basile <blueness@gentoo.org> SchemaSync-0.9.2.ebuild:
+  Works with python-2.7
+
+*SchemaSync-0.9.2 (28 Apr 2012)
+
+  28 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  +SchemaSync-0.9.2.ebuild, +metadata.xml:
+  Initial commit
+

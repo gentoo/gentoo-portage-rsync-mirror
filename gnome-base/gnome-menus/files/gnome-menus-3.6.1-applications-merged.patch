@@ -1,0 +1,102 @@
+From e047041a49ad9e857b97c534203a98aac80de8d8 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Sat, 24 Nov 2012 15:24:50 -0500
+Subject: [PATCH] libmenu: always call menu_layout_load() with
+ non_prefixed_name parameter
+
+We must ensure that when loading "${XDG_MENU_PREFIX}applications.menu",
+the root layout node's name is set to "applications", not
+"${XDG_MENU_PREFIX}applications", because the menu spec states that the
+default merge directory for "${XDG_MENU_PREFIX}applications.menu" is
+"applications-merged", not "${XDG_MENU_PREFIX}applications-merged".
+
+https://bugzilla.gnome.org/show_bug.cgi?id=688972
+---
+ libmenu/gmenu-tree.c | 31 +++++++++++++++++++++++++++++--
+ 1 file changed, 29 insertions(+), 2 deletions(-)
+
+diff --git a/libmenu/gmenu-tree.c b/libmenu/gmenu-tree.c
+index 3e59c2c..dd6c670 100644
+--- a/libmenu/gmenu-tree.c
++++ b/libmenu/gmenu-tree.c
+@@ -60,6 +60,7 @@ struct _GMenuTree
+   GObject       parent_instance;
+ 
+   char *basename;
++  char *non_prefixed_basename;
+   char *path;
+   char *canonical_path;
+ 
+@@ -524,6 +525,24 @@ gmenu_tree_constructor (GType                  type,
+ }
+ 
+ static void
++gmenu_tree_update_non_prefixed_basename (GMenuTree   *tree,
++                                         const gchar *filename)
++{
++  gchar *s, *basename;
++
++  g_free (tree->non_prefixed_basename);
++  tree->non_prefixed_basename = NULL;
++  if (filename == NULL)
++    return;
++  s = g_strdup_printf ("%sapplications.menu", g_getenv ("XDG_MENU_PREFIX"));
++  basename = g_path_get_basename (filename);
++  if (!g_strcmp0 (basename, "applications.menu") || !g_strcmp0 (basename, s))
++    tree->non_prefixed_basename = g_strdup ("applications.menu");
++  g_free (s);
++  g_free (basename);
++}
++
++static void
+ gmenu_tree_set_property (GObject         *object,
+                          guint            prop_id,
+                          const GValue    *value,
+@@ -534,10 +553,14 @@ gmenu_tree_set_property (GObject         *object,
+   switch (prop_id)
+     {
+     case PROP_MENU_BASENAME:
++      if (g_strcmp0 (self->basename, g_value_get_string (value)))
++        gmenu_tree_update_non_prefixed_basename (self, g_value_get_string (value));
+       self->basename = g_value_dup_string (value);
+       break;
+ 
+     case PROP_MENU_PATH:
++      if (g_strcmp0 (self->path, g_value_get_string (value)))
++        gmenu_tree_update_non_prefixed_basename (self, g_value_get_string (value));
+       self->path = g_value_dup_string (value);
+       break;
+ 
+@@ -587,6 +610,9 @@ gmenu_tree_finalize (GObject *object)
+     g_free (tree->basename);
+   tree->basename = NULL;
+ 
++  g_free (tree->non_prefixed_basename);
++  tree->non_prefixed_basename = NULL;
++
+   if (tree->path != NULL)
+     g_free (tree->path);
+   tree->path = NULL;
+@@ -1896,7 +1922,7 @@ load_merge_file (GMenuTree      *tree,
+ 
+   menu_verbose ("Merging file \"%s\"\n", canonical);
+ 
+-  to_merge = menu_layout_load (canonical, NULL, NULL);
++  to_merge = menu_layout_load (canonical, tree->non_prefixed_basename, NULL);
+   if (to_merge == NULL)
+     {
+       menu_verbose ("No menu for file \"%s\" found when merging\n",
+@@ -3053,8 +3079,9 @@ gmenu_tree_load_layout (GMenuTree  *tree,
+                 tree->canonical_path);
+ 
+   error = NULL;
++
+   tree->layout = menu_layout_load (tree->canonical_path,
+-                                   tree->path ? NULL : tree->basename,
++                                   tree->non_prefixed_basename,
+                                    error);
+   if (!tree->layout)
+     return FALSE;
+-- 
+1.8.0
+

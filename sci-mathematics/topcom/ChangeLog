@@ -1,0 +1,18 @@
+# ChangeLog for sci-mathematics/topcom
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/topcom/ChangeLog,v 1.2 2012/07/12 06:19:23 jlec Exp $
+
+*topcom-0.17.4 (12 Jul 2012)
+
+  12 Jul 2012; Justin Lecher <jlec@gentoo.org> topcom-0.16.2.ebuild,
+  +topcom-0.17.4.ebuild, +files/topcom-0.17.4-buildsystem.patch,
+  +files/topcom-0.17.4-no-internal-libs.patch, metadata.xml:
+  Version Bump, fix compilation with gcc-4.7, #426214
+
+*topcom-0.16.2 (09 Nov 2010)
+
+  09 Nov 2010; Thomas Kahle <tomka@gentoo.org> +topcom-0.16.2.ebuild,
+  +files/topcom-0.16.2-no-internal-libs.patch, +metadata.xml:
+  New package: sci-mathematics/topcom, revised import from sci overlay,
+  fixes bug 285619
+

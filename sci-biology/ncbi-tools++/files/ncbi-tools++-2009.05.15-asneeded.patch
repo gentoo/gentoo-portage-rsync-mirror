@@ -1,0 +1,123 @@
+--- src/build-system/Makefile.mk.in
++++ src/build-system/Makefile.mk.in
+@@ -547,7 +547,7 @@
+ #################################
+ # Useful sets of object libraries
+ # Interdependent sequence libraries + seqcode.  Does not include seqset.
+-COMPRESS_LDEP = $(CMPRS_LIB)
++COMPRESS_LDEP = $(CMPRS_LIB) xutil xncbi
+ COMPRESS_LIBS = xcompress $(COMPRESS_LDEP)
+ 
+ GENBANK_LDEP = \
+--- src/util/compress/Makefile.compress.lib
++++ src/util/compress/Makefile.compress.lib
+@@ -4,7 +4,7 @@
+ 
+ LIB = xcompress
+ 
+-DLL_LIB = 
+-#$(COMPRESS_LDEP)
++DLL_LIB = $(COMPRESS_LDEP)
++LIBS = $(CMPRS_LIBS)
+
+ CPPFLAGS = $(ORIG_CPPFLAGS) $(CMPRS_INCLUDE)
+--- src/serial/Makefile.serial.lib
++++ src/serial/Makefile.serial.lib
+@@ -17,3 +17,5 @@
+ 	objostrjson serializable serialobject pathhook
+ 
+ LIB    = xser
++
++DLL_LIB = xutil xncbi
+--- src/objtools/data_loaders/genbank/Makefile.ncbi_xreader.lib
++++ src/objtools/data_loaders/genbank/Makefile.ncbi_xreader.lib
+@@ -12,4 +12,4 @@
+ LIB_OR_DLL = both
+ 
+ # Dependencies for shared library
+-DLL_LIB = 
++DLL_LIB = xcompress
+--- src/objtools/readers/Makefile.xobjread.lib
++++ src/objtools/readers/Makefile.xobjread.lib
+@@ -8,4 +8,4 @@
+       wiggle_reader wiggle_data gff3_reader \
+       ucscid idmap idmapper idmapper_builtin idmapper_user idmapper_site \
+       idmapper_database
+-DLL_LIB = creaders
++DLL_LIB = creaders seq seqset
+--- src/objects/seq/Makefile.seq.lib
++++ src/objects/seq/Makefile.seq.lib
+@@ -10,3 +10,5 @@
+ SRC = $(ASN:%=%__) $(ASN:%=%___) seqport_util \
+       seq_id_tree seq_id_handle seq_id_mapper \
+       seq_loc_mapper_base seq_align_mapper_base
++
++DLL_LIB = biblio general pub seqcode sequtil xncbi
+--- src/objects/pub/Makefile.pub.lib
++++ src/objects/pub/Makefile.pub.lib
+@@ -1,2 +1,4 @@
+ LIB = pub
+ SRC = pub__ pub___
++
++DLL_LIB = medline
+--- src/objects/general/Makefile.general.lib
++++ src/objects/general/Makefile.general.lib
+@@ -1,2 +1,4 @@
+ LIB = general
+ SRC = general__ general___ uoconv
++
++DLL_LIB = xsoap xser
+--- src/objects/omssa/Makefile.omssa.lib
++++ src/objects/omssa/Makefile.omssa.lib
+@@ -2,3 +2,5 @@
+ 
+ LIB = omssa
+ SRC = omssa__ omssa___
++
++DLL_LIB = seq
+--- src/algo/blast/api/Makefile.xblast.lib
++++ src/algo/blast/api/Makefile.xblast.lib
+@@ -73,7 +73,8 @@
+ 
+ LIB = xblast
+ 
+-DLL_LIB = xalgodustmask xobjutil $(OBJMGR_LIBS)
++DLL_LIB = xalgodustmask xalgowinmask xobjutil xnetblast xnetblastcli blastdb composition_adjustment \
++   blast tables xalgoblastdbindex_search xalgoblastdbindex $(OBJMGR_LIBS)
+ 
+ CFLAGS   = $(FAST_CFLAGS)
+ # Strict gcc flags
+--- src/algo/blast/dbindex/Makefile.xalgoblastdbindex.lib
++++ src/algo/blast/dbindex/Makefile.xalgoblastdbindex.lib
+@@ -12,3 +12,4 @@
+ LDFLAGS  = $(FAST_LDFLAGS)
+ 
+ ASN_DEP = seqset
++DLL_LIB = xobjread
+--- src/objects/biblio/Makefile.biblio.lib
++++ src/objects/biblio/Makefile.biblio.lib
+@@ -1,2 +1,4 @@
+ LIB = biblio
+ SRC = biblio__ biblio___ label_util
++
++DLL_LIB = general
+--- src/objects/medline/Makefile.medline.lib
++++ src/objects/medline/Makefile.medline.lib
+@@ -1,2 +1,4 @@
+ LIB = medline
+ SRC = medline__ medline___
++
++DLL_LIB = biblio
+--- src/objects/Makefile.in
++++ src/objects/Makefile.in
+@@ -5,8 +5,8 @@
+ 
+ USR_PROJ = sources
+ 
+-SUB_PROJ = tinyseq omssa general biblio medline pub pubmed \
+-           featdef seqcode seqset seq genomecoll biotree \
++SUB_PROJ = tinyseq general biblio medline pub pubmed \
++           featdef seqcode seqset seq omssa genomecoll biotree \
+            id1 id2 gbseq insdseq entrez2 submit medlars mla proj mmdb \
+            cdd cn3d scoremat ncbimime access objprt docsum taxon1 mim \
+            entrezgene blast blastdb blastxml pcsubstance pcassay remap \

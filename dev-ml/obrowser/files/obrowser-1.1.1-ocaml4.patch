@@ -1,0 +1,61 @@
+Index: obrowser-1.1.1/rt/caml/pervasives.ml
+===================================================================
+--- obrowser-1.1.1.orig/rt/caml/pervasives.ml
++++ obrowser-1.1.1/rt/caml/pervasives.ml
+@@ -91,6 +90,8 @@ external acos : float -> float = "caml_a
+ external asin : float -> float = "caml_asin_float" "asin" "float"
+ external atan : float -> float = "caml_atan_float" "atan" "float"
+ external atan2 : float -> float -> float = "caml_atan2_float" "atan2" "float"
++external hypot : float -> float -> float
++               = "caml_hypot_float" "caml_hypot" "float"
+ external cos : float -> float = "caml_cos_float" "cos" "float"
+ external cosh : float -> float = "caml_cosh_float" "cosh" "float"
+ external log : float -> float = "caml_log_float" "log" "float"
+@@ -104,6 +105,8 @@ external tanh : float -> float = "caml_t
+ external ceil : float -> float = "caml_ceil_float" "ceil" "float"
+ external floor : float -> float = "caml_floor_float" "floor" "float"
+ external abs_float : float -> float = "%absfloat"
++external copysign : float -> float -> float
++                  = "caml_copysign_float" "caml_copysign" "float"
+ external mod_float : float -> float -> float = "caml_fmod_float" "fmod" "float"
+ external frexp : float -> float * int = "caml_frexp_float"
+ external ldexp : float -> int -> float = "caml_ldexp_float"
+Index: obrowser-1.1.1/rt/caml/pervasives.mli
+===================================================================
+--- obrowser-1.1.1.orig/rt/caml/pervasives.mli
++++ obrowser-1.1.1/rt/caml/pervasives.mli
+@@ -310,10 +310,18 @@ external atan : float -> float = "caml_a
+     Result is in radians and is between [-pi/2] and [pi/2]. *)
+ 
+ external atan2 : float -> float -> float = "caml_atan2_float" "atan2" "float"
+-(** [atan x y] returns the arc tangent of [y /. x].  The signs of [x]
++(** [atan2 y x] returns the arc tangent of [y /. x].  The signs of [x]
+     and [y] are used to determine the quadrant of the result.
+     Result is in radians and is between [-pi] and [pi]. *)
+ 
++external hypot : float -> float -> float
++               = "caml_hypot_float" "caml_hypot" "float"
++(** [hypot x y] returns [sqrt(x *. x + y *. y)], that is, the length
++  of the hypotenuse of a right-angled triangle with sides of length
++  [x] and [y], or, equivalently, the distance of the point [(x,y)]
++  to origin.
++  @since 4.00.0  *)
++
+ external cosh : float -> float = "caml_cosh_float" "cosh" "float"
+ (** Hyperbolic cosine.  Argument is in radians. *)
+ 
+@@ -337,6 +345,14 @@ external floor : float -> float = "caml_
+ external abs_float : float -> float = "%absfloat"
+ (** [abs_float f] returns the absolute value of [f]. *)
+ 
++external copysign : float -> float -> float
++                  = "caml_copysign_float" "caml_copysign" "float"
++(** [copysign x y] returns a float whose absolute value is that of [x]
++  and whose sign is that of [y].  If [x] is [nan], returns [nan].
++  If [y] is [nan], returns either [x] or [-. x], but it is not
++  specified which.
++  @since 4.00.0  *)
++
+ external mod_float : float -> float -> float = "caml_fmod_float" "fmod" "float"
+ (** [mod_float a b] returns the remainder of [a] with respect to
+    [b].  The returned value is [a -. n *. b], where [n]

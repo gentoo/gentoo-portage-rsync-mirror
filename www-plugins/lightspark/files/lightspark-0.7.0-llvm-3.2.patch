@@ -1,0 +1,110 @@
+From 9a9a270423820ae87d54935d60dcb35ac2bf9ea5 Mon Sep 17 00:00:00 2001
+From: Antti Ajanki <antti.ajanki@iki.fi>
+Date: Tue, 20 Nov 2012 21:50:44 +0200
+Subject: [PATCH] Fix compilation on LLVM 3.2
+
+LP #1080123
+---
+ conf/FindLLVM.cmake            |   17 +++++++++++++++++
+ src/scripting/abc.cpp          |   10 +++++++++-
+ src/scripting/abc_codesynt.cpp |   18 +++++++++++++++---
+ 3 files changed, 41 insertions(+), 4 deletions(-)
+
+diff --git a/conf/FindLLVM.cmake b/conf/FindLLVM.cmake
+index 32d32b4..7bd52e2 100644
+--- a/conf/FindLLVM.cmake
++++ b/conf/FindLLVM.cmake
+@@ -156,6 +156,23 @@ else (LLVM_INCLUDE_DIR)
+   IF(HAVE_SUPPORT_TARGETSELECT_H)
+     ADD_DEFINITIONS(-DHAVE_SUPPORT_TARGETSELECT_H)
+   ENDIF(HAVE_SUPPORT_TARGETSELECT_H)
++
++  set(CMAKE_REQUIRED_INCLUDES ${LLVM_INCLUDE_DIR})
++  set(CMAKE_REQUIRED_DEFINITIONS -D__STDC_LIMIT_MACROS=1 -D__STDC_CONSTANT_MACROS=1)
++  check_include_file_cxx("llvm/IRBuilder.h" HAVE_IRBUILDER_H)
++  unset(CMAKE_REQUIRED_INCLUDES)
++  MESSAGE(STATUS "HAVE_IRBUILDER_H: " ${HAVE_IRBUILDER_H})
++  IF(HAVE_IRBUILDER_H)
++    ADD_DEFINITIONS(-DHAVE_IRBUILDER_H)
++  ENDIF(HAVE_IRBUILDER_H)
++
++  set(CMAKE_REQUIRED_INCLUDES ${LLVM_INCLUDE_DIR})
++  check_include_file_cxx("llvm/DataLayout.h" HAVE_DATALAYOUT_H)
++  unset(CMAKE_REQUIRED_INCLUDES)
++  MESSAGE(STATUS "HAVE_DATALAYOUT_H: " ${HAVE_DATALAYOUT_H})
++  IF(HAVE_DATALAYOUT_H)
++    ADD_DEFINITIONS(-DHAVE_DATALAYOUT_H)
++  ENDIF(HAVE_DATALAYOUT_H)
+   
+   exec_program(${LLVM_CONFIG_EXECUTABLE} ARGS --cxxflags  OUTPUT_VARIABLE LLVM_COMPILE_FLAGS )
+   MESSAGE(STATUS "LLVM CXX flags: " ${LLVM_COMPILE_FLAGS})
+diff --git a/src/scripting/abc.cpp b/src/scripting/abc.cpp
+index 962cb0e..3fef0aa 100644
+--- a/src/scripting/abc.cpp
++++ b/src/scripting/abc.cpp
+@@ -28,7 +28,11 @@
+ #include <llvm/ExecutionEngine/JIT.h>
+ #include <llvm/PassManager.h>
+ #include <llvm/LLVMContext.h>
+-#include <llvm/Target/TargetData.h>
++#ifdef HAVE_DATALAYOUT_H
++#  include <llvm/DataLayout.h>
++#else
++#  include <llvm/Target/TargetData.h>
++#endif
+ #ifdef HAVE_SUPPORT_TARGETSELECT_H
+ #include <llvm/Support/TargetSelect.h>
+ #else
+@@ -1459,7 +1463,11 @@ void ABCVm::Run(ABCVm* th)
+ 		assert_and_throw(th->ex);
+ 
+ 		th->FPM=new llvm::FunctionPassManager(th->module);
++#ifdef HAVE_DATALAYOUT_H
++		th->FPM->add(new llvm::DataLayout(*th->ex->getDataLayout()));
++#else
+ 		th->FPM->add(new llvm::TargetData(*th->ex->getTargetData()));
++#endif
+ #ifdef EXPENSIVE_DEBUG
+ 		//This is pretty heavy, do not enable in release
+ 		th->FPM->add(llvm::createVerifierPass());
+diff --git a/src/scripting/abc_codesynt.cpp b/src/scripting/abc_codesynt.cpp
+index d00521b..83c1d5f 100644
+--- a/src/scripting/abc_codesynt.cpp
++++ b/src/scripting/abc_codesynt.cpp
+@@ -29,10 +29,18 @@
+ #include <llvm/DerivedTypes.h>
+ #include <llvm/ExecutionEngine/ExecutionEngine.h>
+ #include <llvm/PassManager.h>
+-#include <llvm/Constants.h> 
+-#include <llvm/Support/IRBuilder.h> 
++#include <llvm/Constants.h>
++#ifdef HAVE_IRBUILDER_H
++#  include <llvm/IRBuilder.h>
++#else
++#  include <llvm/Support/IRBuilder.h>
++#endif
+ #include <llvm/LLVMContext.h>
+-#include <llvm/Target/TargetData.h>
++#ifdef HAVE_DATALAYOUT_H
++#  include <llvm/DataLayout.h>
++#else
++#  include <llvm/Target/TargetData.h>
++#endif
+ #include <sstream>
+ #include "scripting/abc.h"
+ #include "swftypes.h"
+@@ -271,7 +279,11 @@ void ABCVm::registerFunctions()
+ 	llvm::FunctionType* FT=NULL;
+ 
+ 	//Create types
++#ifdef HAVE_DATALAYOUT_H
++	ptr_type=ex->getDataLayout()->getIntPtrType(llvm_context());
++#else
+ 	ptr_type=ex->getTargetData()->getIntPtrType(llvm_context());
++#endif
+ 	//Pointer to 8 bit type, needed for pointer arithmetic
+ 	voidptr_type=llvm::IntegerType::get(getVm()->llvm_context(),8)->getPointerTo();
+ 	number_type=llvm::Type::getDoubleTy(llvm_context());
+-- 
+1.7.10
+

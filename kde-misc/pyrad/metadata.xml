@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>arne_bab@web.de</email>
+		<name>Arne Babenhauserheide</name>
+	</maintainer>
+	<herd>kde</herd>
+	<upstream>
+		<remote-id type="pypi">pyRadKDE</remote-id>
+	</upstream>
+</pkgmetadata>

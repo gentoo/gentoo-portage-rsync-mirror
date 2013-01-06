@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure postinst postrm preinst
+DEPEND=>=media-sound/pulseaudio-1.0[glib,avahi] >=net-dns/avahi-0.6 x11-libs/gtk+:3 x11-libs/libX11 libnotify? ( >=x11-libs/libnotify-0.7 ) virtual/pkgconfig >=sys-apps/sed-4
+DESCRIPTION=A system tray for pulseaudio controls (replacement for the deprecated padevchooser)
+EAPI=4
+HOMEPAGE=http://github.com/christophgysin/pasystray
+IUSE=libnotify
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1
+RDEPEND=>=media-sound/pulseaudio-1.0[glib,avahi] >=net-dns/avahi-0.6 x11-libs/gtk+:3 x11-libs/libX11 libnotify? ( >=x11-libs/libnotify-0.7 )
+SLOT=0
+SRC_URI=mirror://github/christophgysin/pasystray/pasystray-0.2.1.tar.bz2
+_eclasses_=gnome2-utils	794d2847b4af390a1e020924876c8297
+_md5_=21905844e6afafe76df0456c219f5750

@@ -1,0 +1,12 @@
+diff --git a/qtiplot/src/origin/importOPJ.cpp b/qtiplot/src/origin/importOPJ.cpp
+index 5abb0be..b9c1408 100755
+--- a/qtiplot/src/origin/importOPJ.cpp
++++ b/qtiplot/src/origin/importOPJ.cpp
+@@ -790,7 +790,6 @@ bool ImportOPJ::importGraphs(const OriginFile& opj)
+ 					case Origin::GraphCurve::TextPlot:
+ 						style = Origin::GraphCurve::TextPlot;
+ 						break;
+-					case Origin::GraphCurve::XYZContour:
+ 					case Origin::GraphCurve::Contour:
+ 						style = Origin::GraphCurve::Contour;
+ 						break;

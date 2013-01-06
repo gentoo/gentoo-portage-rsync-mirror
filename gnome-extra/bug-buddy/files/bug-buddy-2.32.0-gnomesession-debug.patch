@@ -1,0 +1,27 @@
+From 475fa5697d0aad6883318e9c51af81f51c9030e4 Mon Sep 17 00:00:00 2001
+From: Fernando Herrera <fherrera@onirica.com>
+Date: Tue, 22 Jun 2010 20:18:23 +0000
+Subject: Do not call old log_handler if it is not glib's default
+
+See https://bugzilla.gnome.org/show_bug.cgi?id=622068
+---
+diff --git a/segv_handler/gnome-segvhanlder.c b/segv_handler/gnome-segvhanlder.c
+index de64df5..ae3196e 100644
+--- a/segv_handler/gnome-segvhanlder.c
++++ b/segv_handler/gnome-segvhanlder.c
+@@ -284,6 +284,13 @@ gtk_module_init (int *argc, char** argv[])
+                 	sigaction(SIGBUS, setptr, NULL);
+ 
+ 		old_handler = g_log_set_default_handler (bug_buddy_log_handler, NULL);
++
++		/* We cannot call previous log handlers other than glib's default
++                 * because we don't know its previous user_data and they may rely on it
++                 * See https://bugzilla.gnome.org/show_bug.cgi?id=622068 */
++		if (old_handler != g_log_default_handler) {
++			old_handler = NULL;
++		}
+ 	}
+ 	return 0;
+ }
+--
+cgit v0.8.3.1

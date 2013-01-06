@@ -1,0 +1,57 @@
+# ChangeLog for media-video/kffmpegthumbnailer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kffmpegthumbnailer/ChangeLog,v 1.11 2012/11/14 20:37:52 johu Exp $
+
+  14 Nov 2012; Johannes Huber <johu@gentoo.org>
+  -kffmpegthumbnailer-1.1.0.ebuild:
+  Remove old.
+
+  14 Nov 2012; Johannes Huber <johu@gentoo.org>
+  kffmpegthumbnailer-1.1.0-r2.ebuild:
+  Stable for x86, wrt bug #441410
+
+  06 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
+  kffmpegthumbnailer-1.1.0-r2.ebuild:
+  Stable for amd64, wrt bug #441410
+
+*kffmpegthumbnailer-1.1.0-r2 (20 Sep 2012)
+
+  20 Sep 2012; Johannes Huber <johu@gentoo.org>
+  +kffmpegthumbnailer-1.1.0-r2.ebuild, -kffmpegthumbnailer-1.1.0-r1.ebuild:
+  Fix the .desktop file regression of last revision, bug #435520.
+
+*kffmpegthumbnailer-1.1.0-r1 (25 Aug 2012)
+
+  25 Aug 2012; Chris Reffett <creffett@gentoo.org>
+  +kffmpegthumbnailer-1.1.0-r1.ebuild:
+  Bump to EAPI 4, add explicit RDEPEND, fix .desktop validation.
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  kffmpegthumbnailer-1.1.0.ebuild:
+  EAPI3, use array for DOCS
+
+  15 Jul 2010; Markus Meier <maekke@gentoo.org>
+  kffmpegthumbnailer-1.1.0.ebuild:
+  x86 stable, bug #326135
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  kffmpegthumbnailer-1.1.0.ebuild:
+  Stable on amd64 wrt bug #326135
+
+*kffmpegthumbnailer-1.1.0 (07 Jan 2010)
+
+  07 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +kffmpegthumbnailer-1.1.0.ebuild:
+  Version bump.
+
+*kffmpegthumbnailer-1.0.1 (28 Dec 2009)
+
+  28 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +kffmpegthumbnailer-1.0.1.ebuild:
+  Version bump.
+
+*kffmpegthumbnailer-1.0.0 (24 Dec 2009)
+
+  24 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +kffmpegthumbnailer-1.0.0.ebuild:
+  Initial commit.

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>games</herd>
+  <use>
+    <flag name="auth">Add authentication capability</flag>
+    <flag name="ggz">Add support for GGZ Gaming Zone</flag>
+	<flag name="sound">Add support for sound provided by <pkg>media-libs/sdl-mixer</pkg></flag>
+  </use>
+</pkgmetadata>

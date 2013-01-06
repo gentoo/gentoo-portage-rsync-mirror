@@ -1,0 +1,20 @@
+# ChangeLog for x11-plugins/pidgintex
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgintex/ChangeLog,v 1.4 2011/08/24 19:52:20 maekke Exp $
+
+  24 Aug 2011; Markus Meier <maekke@gentoo.org> pidgintex-1.1.1.ebuild:
+  x86 stable, bug #377911
+
+  07 Aug 2011; Markos Chandras <hwoarang@gentoo.org> pidgintex-1.1.1.ebuild:
+  Stable on amd64 wrt bug #377911
+
+  08 Jan 2010; Peter Volkov <pva@gentoo.org> pidgintex-1.1.1.ebuild:
+  Added elog for possible cause why this plugin may not work.
+
+*pidgintex-1.1.1 (21 Dec 2009)
+
+  21 Dec 2009; Peter Volkov <pva@gentoo.org> +pidgintex-1.1.1.ebuild,
+  +metadata.xml:
+  Initial import. Ebuild by me and Constantin Bergemann, bug #219138. Nice
+  alternative for pidgin-latex.
+

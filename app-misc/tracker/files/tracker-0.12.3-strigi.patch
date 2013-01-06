@@ -1,0 +1,26 @@
+diff --git a/src/tracker-extract/tracker-extract.c b/src/tracker-extract/tracker-extract.c
+index cff290a..aed4dc9 100644
+--- a/src/tracker-extract/tracker-extract.c
++++ b/src/tracker-extract/tracker-extract.c
+@@ -298,7 +298,7 @@ get_file_metadata (TrackerExtractTask  *task,
+ 	info = tracker_extract_info_new (file, task->mimetype, task->graph);
+ 	g_object_unref (file);
+ 
+-#ifdef HAVE_LIBSTREAMANALYZER
++#if 0 /* disabling entirely, see comment below */
+ 	/* FIXME: This entire section is completely broken,
+ 	 * it doesn't even build these days. It should be removed or fixed.
+ 	 * -mr (05/09/11)
+diff --git a/src/tracker-extract/tracker-topanalyzer.cpp b/src/tracker-extract/tracker-topanalyzer.cpp
+index 86dbda7..f749c00 100644
+--- a/src/tracker-extract/tracker-topanalyzer.cpp
++++ b/src/tracker-extract/tracker-topanalyzer.cpp
+@@ -39,7 +39,7 @@
+ 
+ #include <libtracker-common/tracker-type-utils.h>
+ #include <libtracker-common/tracker-os-dependant.h>
+-#include <libtracker-common/tracker-sparql-builder.h>
++#include <libtracker-client/tracker-sparql-builder.h>
+ #include <libtracker-common/tracker-ontologies.h>
+ 
+ #include <libtracker-extract/tracker-utils.h>

@@ -1,0 +1,34 @@
+http://code.google.com/p/libarchive/issues/detail?id=242
+http://bugs.gentoo.org/403733
+
+--- a/libarchive/archive_write_set_format_7zip.c
++++ b/libarchive/archive_write_set_format_7zip.c
+@@ -1585,7 +1585,8 @@ file_init_register_empty(struct _7zip *zip)
+ 	zip->empty_list.last = &(zip->empty_list.first);
+ }
+ 
+-#if !defined(HAVE_BZLIB_H) || !defined(BZ_CONFIG_ERROR) || !defined(HAVE_LZMA_H)
++#if !defined(HAVE_ZLIB_H) || !defined(HAVE_BZLIB_H) ||\
++	 !defined(BZ_CONFIG_ERROR) || !defined(HAVE_LZMA_H)
+ static int
+ compression_unsupported_encoder(struct archive *a,
+     struct la_zstream *lastrm, const char *name)
+
+--- a/libarchive/test/test_write_compress_program.c
++++ b/libarchive/test/test_write_compress_program.c
+@@ -40,6 +40,15 @@ DEFINE_TEST(test_write_compress_program)
+ 		skipping("Cannot run 'gzip'");
+ 		return;
+ 	}
++	/* NOTE: Setting blocksize=1024 will cause gunzip failure because
++	 * it add extra bytes that gunzip ignores with its warning and
++	 * exit code 1. So we should set blocksize=1 in order not to
++	 * yield the extra bytes when using gunzip. */
++	assert((a = archive_read_new()) != NULL);
++	r = archive_read_support_filter_gzip(a);
++	if (r != ARCHIVE_OK && canGunzip())
++		blocksize = 1;
++	assertEqualInt(ARCHIVE_OK, archive_read_free(a));
+ 
+ 	/* Create a new archive in memory. */
+ 	/* Write it through an external "gzip" program. */

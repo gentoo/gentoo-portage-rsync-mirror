@@ -1,0 +1,9 @@
+DEFINED_PHASES=install postinst unpack
+DESCRIPTION=Redirector for squid that intercepts advertising, page counters and some web bugs
+HOMEPAGE=http://adzapper.sourceforge.net/
+KEYWORDS=alpha amd64 hppa ppc sparc x86
+LICENSE=BSD
+RDEPEND=dev-lang/perl
+SLOT=0
+SRC_URI=http://adzapper.sourceforge.net/adzap-20080508.tar.gz
+_md5_=0979c0042dfad9db9c10a63141d637ff

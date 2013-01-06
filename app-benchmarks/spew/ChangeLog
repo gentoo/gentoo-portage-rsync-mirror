@@ -1,0 +1,23 @@
+
+
+  14 Jul 2012; Anthony G. Basile <blueness@gentoo.org> spew-1.0.8.ebuild:
+  Keyword ~arm ~mips
+
+  18 Sep 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Added no-herd to metadata.xml
+
+  24 Aug 2011; Markus Meier <maekke@gentoo.org> spew-1.0.8.ebuild:
+  x86 stable, bug #380097
+
+  21 Aug 2011; Anthony G. Basile <blueness@gentoo.org> spew-1.0.8.ebuild:
+  Removed die from emake
+
+  21 Aug 2011; Anthony G. Basile <blueness@gentoo.org> spew-1.0.8.ebuild:
+  Bump to EAPI=4 to avoid adding lots of dies
+
+*spew-1.0.8 (06 Apr 2011)
+
+  06 Apr 2011; Anthony G. Basile <blueness@gentoo.org> +spew-1.0.8.ebuild,
+  +files/remove-symlinks-makefile.patch, +metadata.xml:
+  Initial commit.
+

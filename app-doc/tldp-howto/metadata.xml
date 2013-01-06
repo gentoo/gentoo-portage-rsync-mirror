@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>app-doc</herd>
+	<use>
+		<flag name='html'>Install the docs in multipage HTML format (default)</flag>
+		<flag name='htmlsingle'>Install the docs in single page HTML format</flag>
+		<flag name='pdf'>Install the docs in pdf format</flag>
+		<flag name='text'>Install the docs in plain text format</flag>
+	</use>
+</pkgmetadata>

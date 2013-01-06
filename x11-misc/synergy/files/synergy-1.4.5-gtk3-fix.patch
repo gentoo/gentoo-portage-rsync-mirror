@@ -1,0 +1,193 @@
+diff -urEBwb synergy-1.4.4-Source/CMakeLists.txt synergy-1.4.4/CMakeLists.txt
+--- synergy-1.4.4-Source/CMakeLists.txt	2011-06-22 17:10:22.000000000 -0500
++++ synergy-1.4.4/CMakeLists.txt	2011-10-30 18:14:59.805858447 -0500
+@@ -169,6 +169,7 @@
+ 		check_include_files("X11/extensions/XKB.h" HAVE_XKB_EXTENSION)
+ 		check_include_files("X11/extensions/XTest.h" HAVE_X11_EXTENSIONS_XTEST_H)
+ 		check_include_files(${XKBlib} HAVE_X11_XKBLIB_H)
++		check_include_files("X11/extensions/XInput2.h" HAVE_XI2)
+ 
+ 		if (HAVE_X11_EXTENSIONS_DPMS_H)
+ 			# Assume that function prototypes declared, when include exists.
+@@ -183,6 +184,7 @@
+ 		check_library_exists("X11;Xext" DPMSQueryExtension "" HAVE_Xext)
+ 		check_library_exists("X11;Xext;Xtst" XTestQueryExtension "" HAVE_Xtst)
+ 		check_library_exists("Xinerama" XineramaQueryExtension "" HAVE_Xinerama)
++		check_library_exists("Xi" XISelectEvents "" HAVE_Xi)
+ 
+ 		if (HAVE_ICE)
+ 
+@@ -218,6 +220,10 @@
+ 
+ 	endif()
+ 
++        IF(HAVE_Xi)
++                LIST(APPEND libs Xi)
++        ENDIF()
++
+ 	# For config.h, set some static values; it may be a good idea to make
+ 	# these values dynamic for non-standard UNIX compilers.
+ 	set(ACCEPT_TYPE_ARG3 socklen_t)
+diff -urEBwb synergy-1.4.4-Source/res/config.h.in synergy-1.4.4/res/config.h.in
+--- synergy-1.4.4-Source/res/config.h.in	2009-10-26 02:54:37.000000000 -0500
++++ synergy-1.4.4/res/config.h.in	2011-10-30 17:58:25.054795783 -0500
+@@ -124,6 +124,9 @@
+ /* Define to 1 if you have the <X11/XKBlib.h> header file. */
+ #cmakedefine HAVE_X11_XKBLIB_H ${HAVE_X11_XKBLIB_H}
+ 
++/* Define to 1 if you have the <X11/extensions/XInput2.h> header file. */
++#cmakedefine HAVE_XI2 ${HAVE_XI2}
++
+ /* Define this if the XKB extension is available. */
+ #cmakedefine HAVE_XKB_EXTENSION ${HAVE_XKB_EXTENSION}
+ 
+diff -urEBwb synergy-1.4.4-Source/src/lib/platform/CMakeLists.txt synergy-1.4.4/src/lib/platform/CMakeLists.txt
+--- synergy-1.4.4-Source/src/lib/platform/CMakeLists.txt	2011-08-27 21:34:24.000000000 -0500
++++ synergy-1.4.4/src/lib/platform/CMakeLists.txt	2011-10-30 18:08:02.131234528 -0500
+@@ -172,5 +172,5 @@
+ endif()
+ 
+ if (UNIX)
+-	target_link_libraries(platform synergy)
++	target_link_libraries(platform synergy ${libs})
+ endif()
+diff -urEBwb synergy-1.4.4-Source/src/lib/platform/CXWindowsEventQueueBuffer.cpp synergy-1.4.4/src/lib/platform/CXWindowsEventQueueBuffer.cpp
+--- synergy-1.4.4-Source/src/lib/platform/CXWindowsEventQueueBuffer.cpp	2011-01-14 22:12:51.000000000 -0600
++++ synergy-1.4.4/src/lib/platform/CXWindowsEventQueueBuffer.cpp	2011-10-30 17:55:29.951274194 -0500
+@@ -177,7 +177,7 @@
+ 						SELECT_TYPE_ARG234 NULL,
+ 						SELECT_TYPE_ARG234 NULL,
+ 						SELECT_TYPE_ARG5   TIMEOUT_DELAY);
+-	if (FD_SET(m_pipefd[0], &rfds) {
++	if (FD_SET(m_pipefd[0], &rfds)) {
+ 		read(m_pipefd[0], buf, 15);
+ 	}
+ #endif
+diff -urEBwb synergy-1.4.4-Source/src/lib/platform/CXWindowsScreen.cpp synergy-1.4.4/src/lib/platform/CXWindowsScreen.cpp
+--- synergy-1.4.4-Source/src/lib/platform/CXWindowsScreen.cpp	2011-01-17 14:56:04.000000000 -0600
++++ synergy-1.4.4/src/lib/platform/CXWindowsScreen.cpp	2011-10-30 17:55:29.951274194 -0500
+@@ -59,9 +59,13 @@
+ #	if HAVE_XKB_EXTENSION
+ #		include <X11/XKBlib.h>
+ #	endif
++#	ifdef HAVE_XI2
++#		include <X11/extensions/XInput2.h>
++#	endif
+ #endif
+ #include "CArch.h"
+ 
++static int xi_opcode;
+ 
+ //
+ // CXWindowsScreen
+@@ -102,7 +106,8 @@
+ 	m_screensaverNotify(false),
+ 	m_xtestIsXineramaUnaware(true),
+ 	m_preserveFocus(false),
+-	m_xkb(false)
++	m_xkb(false),
++	m_xi2detected(false)
+ {
+ 	assert(s_screen == NULL);
+ 
+@@ -142,6 +147,15 @@
+ 	if (m_isPrimary) {
+ 		// start watching for events on other windows
+ 		selectEvents(m_root);
++		m_xi2detected = detectXI2();
++
++		if (m_xi2detected) {
++			selectXIRawMotion();
++		} else
++		{
++			// start watching for events on other windows
++			selectEvents(m_root);
++		}
+ 
+ 		// prepare to use input methods
+ 		openIM();
+@@ -1205,6 +1219,35 @@
+ 		return;
+ 	}
+ 
++	if (m_xi2detected) {
++		// Process RawMotion
++		XGenericEventCookie *cookie = (XGenericEventCookie*)&xevent->xcookie;
++			if (XGetEventData(m_display, cookie) &&
++				cookie->type == GenericEvent &&
++				cookie->extension == xi_opcode) {
++			if (cookie->evtype == XI_RawMotion) {
++				// Get current pointer's position
++				Window root, child;
++				XMotionEvent xmotion;
++				xmotion.type = MotionNotify;
++				xmotion.send_event = False; // Raw motion
++				xmotion.display = m_display;
++				xmotion.window = m_window;
++				/* xmotion's time, state and is_hint are not used */
++				unsigned int msk;
++					xmotion.same_screen = XQueryPointer(
++						m_display, m_root, &xmotion.root, &xmotion.subwindow,
++						&xmotion.x_root,
++						&xmotion.y_root,
++						&xmotion.x,
++						&xmotion.y,
++						&msk);
++					onMouseMove(xmotion);
++					return;
++			}
++		}
++	}
++
+ 	// handle the event ourself
+ 	switch (xevent->type) {
+ 	case CreateNotify:
+@@ -1954,3 +1997,27 @@
+ 	return (m_keycode < x.m_keycode ||
+ 			(m_keycode == x.m_keycode && m_mask < x.m_mask));
+ }
++
++bool
++CXWindowsScreen::detectXI2()
++{
++	int event, error;
++    return XQueryExtension(m_display,
++			"XInputExtension", &xi_opcode, &event, &error);
++}
++
++void
++CXWindowsScreen::selectXIRawMotion()
++{
++	XIEventMask mask;
++
++	mask.deviceid = XIAllDevices;
++	mask.mask_len = XIMaskLen(XI_RawMotion);
++	mask.mask = (unsigned char*)calloc(mask.mask_len, sizeof(char));
++	mask.deviceid = XIAllMasterDevices;
++	memset(mask.mask, 0, 2);
++    XISetMask(mask.mask, XI_RawKeyRelease);
++	XISetMask(mask.mask, XI_RawMotion);
++	XISelectEvents(m_display, DefaultRootWindow(m_display), &mask, 1);
++	free(mask.mask);
++}
+diff -urEBwb synergy-1.4.4-Source/src/lib/platform/CXWindowsScreen.h synergy-1.4.4/src/lib/platform/CXWindowsScreen.h
+--- synergy-1.4.4-Source/src/lib/platform/CXWindowsScreen.h	2011-08-27 13:41:23.000000000 -0500
++++ synergy-1.4.4/src/lib/platform/CXWindowsScreen.h	2011-10-30 17:55:29.952274694 -0500
+@@ -138,6 +138,8 @@
+ 	void				onMouseRelease(const XButtonEvent&);
+ 	void				onMouseMove(const XMotionEvent&);
+ 
++	bool				detectXI2();
++	void				selectXIRawMotion();
+ 	void				selectEvents(Window) const;
+ 	void				doSelectEvents(Window) const;
+ 
+@@ -235,6 +237,8 @@
+ 	bool				m_xkb;
+ 	int					m_xkbEventBase;
+ 
++	bool				m_xi2detected;
++
+ 	// pointer to (singleton) screen.  this is only needed by
+ 	// ioErrorHandler().
+ 	static CXWindowsScreen*	s_screen;

@@ -1,0 +1,107 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Sat Aug 18 13:41:33 UTC 2012
+Subject: build system
+
+fix static build
+
+--- megaglest-3.6.0.3/source/shared_lib/CMakeLists.txt
++++ megaglest-3.6.0.3/source/shared_lib/CMakeLists.txt
+@@ -240,21 +240,9 @@
+ 			streflop/libm_flt32_source)
+ 	ENDIF()
+ 
+-	IF(NOT WANT_STATIC_LIBS)
+-		MESSAGE(STATUS "*** Searching for miniupnpc since WANT_STATIC_LIBS is off ...")
+-		FIND_PACKAGE(Miniupnpc)
+-	ENDIF()
+-
+-	if(NOT MINIUPNP_FOUND)
+-		MESSAGE(STATUS "*** Using EMBEDDED miniupnpc since dev system does not have it... MINIUPNP_FOUND [${MINIUPNP_FOUND}]")
+-
+-		SET(DIRS_WITH_SRC ${DIRS_WITH_SRC} platform/miniupnpc)
+-	else()
+-		MESSAGE(STATUS "*** Using SHARED miniupnpc found in [${MINIUPNP_INCLUDE_DIR}] MINIUPNP_FOUND [${MINIUPNP_FOUND}] MINIUPNP_LIBRARY [${MINIUPNP_LIBRARY}]")
+-
+-		INCLUDE_DIRECTORIES(${MINIUPNP_INCLUDE_DIR})
+-		SET(EXTERNAL_LIBS ${EXTERNAL_LIBS} ${MINIUPNP_LIBRARY})
+-	endif()
++	FIND_PACKAGE(Miniupnpc REQUIRED)
++	INCLUDE_DIRECTORIES(${MINIUPNP_INCLUDE_DIR})
++	SET(EXTERNAL_LIBS ${EXTERNAL_LIBS} ${MINIUPNP_LIBRARY})
+ 
+ 	IF(APPLE)
+ 		SET(DIRS_WITH_SRC ${DIRS_WITH_SRC} platform/sdl)
+@@ -276,22 +264,9 @@
+ 	SET(MG_SOURCE_FILES "")
+ 	INCLUDE_DIRECTORIES( ${MG_INCLUDES_ROOT}platform/sdl )
+ 
+-	IF(NOT WANT_STATIC_LIBS)
+-		MESSAGE(STATUS "*** Searching for libircclient since WANT_STATIC_LIBS is off ...")
+-		FIND_PACKAGE(Ircclient)
+-	ENDIF()
+-
+-	if(NOT IRCCLIENT_FOUND)
+-		MESSAGE(STATUS "*** Using EMBEDDED libircclient since dev system does not have it... IRCCLIENT_FOUND [${IRCCLIENT_FOUND}]")
+-
+-		SET(MG_SOURCE_FILES ${MG_SOURCE_FILES} ${PROJECT_SOURCE_DIR}/source/shared_lib/sources/libircclient/src/libircclient.c)
+-		INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/source/shared_lib/include/libircclient/include)
+-	else()
+-		MESSAGE(STATUS "*** Using SHARED libircclient found in [${IRCCLIENT_INCLUDE_DIR}] IRCCLIENT_FOUND [${IRCCLIENT_FOUND}] IRCCLIENT_LIBRARY [${IRCCLIENT_LIBRARY}]")
+-
+-		INCLUDE_DIRECTORIES(${IRCCLIENT_INCLUDE_DIR})
+-		SET(EXTERNAL_LIBS ${EXTERNAL_LIBS} ${IRCCLIENT_LIBRARY})
+-	endif()
++	FIND_PACKAGE(Ircclient REQUIRED)
++	INCLUDE_DIRECTORIES(${IRCCLIENT_INCLUDE_DIR})
++	SET(EXTERNAL_LIBS ${EXTERNAL_LIBS} ${IRCCLIENT_LIBRARY})
+ 
+         set(CMAKE_REQUIRED_INCLUDES "${IRCCLIENT_INCLUDE_DIR}")
+         set(CMAKE_REQUIRED_LIBRARIES "${IRCCLIENT_LIBRARY}")
+@@ -415,8 +390,11 @@
+           IF(WANT_STREFLOP)
+ 	    TARGET_LINK_LIBRARIES(${TARGET_NAME} streflop)
+  	  ENDIF()
+-	  TARGET_LINK_LIBRARIES(${TARGET_NAME} ${EXTERNAL_LIBS})
+-
++          IF(WANT_STATIC_LIBS)
++	    TARGET_LINK_LIBRARIES(${TARGET_NAME} ${EXTERNAL_LIBS} dl)
++          ELSE(WANT_STATIC_LIBS)
++	    TARGET_LINK_LIBRARIES(${TARGET_NAME} ${EXTERNAL_LIBS})
++          ENDIF(WANT_STATIC_LIBS)
+ 	ENDIF()
+ 
+ 	#IF(BUILD_MEGAGLEST_UPNP_DEBUG)
+--- megaglest-3.6.0.3/mk/cmake/Modules/FindMiniupnpc.cmake
++++ megaglest-3.6.0.3/mk/cmake/Modules/FindMiniupnpc.cmake
+@@ -31,7 +31,11 @@
+ 
+ find_path(MINIUPNP_INCLUDE_DIR miniupnpc.h
+    PATH_SUFFIXES miniupnpc)
+-find_library(MINIUPNP_LIBRARY miniupnpc)
++IF(WANT_STATIC_LIBS)
++  find_library(MINIUPNP_LIBRARY libminiupnpc.a)
++ELSE(WANT_STATIC_LIBS)
++  find_library(MINIUPNP_LIBRARY libminiupnpc.so)
++ENDIF(WANT_STATIC_LIBS)
+ 
+ if (MINIUPNP_INCLUDE_DIR AND MINIUPNP_LIBRARY)
+     set (MINIUPNP_FOUND TRUE)
+--- megaglest-3.6.0.3/mk/cmake/Modules/FindOGG.cmake
++++ megaglest-3.6.0.3/mk/cmake/Modules/FindOGG.cmake
+@@ -19,11 +19,11 @@
+ 
+ FIND_PATH(OGG_INCLUDE_DIR ogg/ogg.h)
+ 
+-#IF (OGG_STATIC AND NOT OGG_LIBRARY)
+-#	FIND_LIBRARY(OGG_LIBRARY NAMES libogg.a ogg)
+-#ELSE()
+-	FIND_LIBRARY(OGG_LIBRARY NAMES ogg)
+-#ENDIF()
++IF (OGG_STATIC)
++	FIND_LIBRARY(OGG_LIBRARY NAMES libogg.a)
++ELSE()
++	FIND_LIBRARY(OGG_LIBRARY NAMES libogg.so)
++ENDIF()
+ 
+ #IF (OGG_STATIC AND NOT VORBIS_LIBRARY)
+ #	FIND_LIBRARY(VORBIS_LIBRARY NAMES libvorbis.a vorbis)

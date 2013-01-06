@@ -1,0 +1,17 @@
+# ChangeLog for app-crypt/dieharder
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dieharder/ChangeLog,v 1.2 2012/10/14 19:06:34 c1pher Exp $
+
+*dieharder-3.31.1 (14 Oct 2012)
+
+  14 Oct 2012; Dane Smith <c1pher@gentoo.org> +dieharder-3.31.1.ebuild:
+  Version bump wrt bug 411653.
+
+*dieharder-2.28.1 (21 Dec 2010)
+
+  21 Dec 2010; Dane Smith <c1pher@gentoo.org> +dieharder-2.28.1.ebuild,
+  +files/dieharder-2.28.1-qafixes.patch, +metadata.xml:
+  New ebuild for dieharder wrt bug 212674. Moved from the Sunrise overlay.
+  New
+  patch addresses some upstream QA warnings. Submitting upstream.
+

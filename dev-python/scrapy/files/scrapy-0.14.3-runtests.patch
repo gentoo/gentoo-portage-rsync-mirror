@@ -1,0 +1,13 @@
+--- bin/runtests.sh
++++ bin/runtests.sh
+@@ -42,7 +42,10 @@
+     $trial "$@"
+ fi
+ 
++exit_status=$?
++
+ # cleanup vsftpd stuff
+ [ -n "$vsftpd_pid" ] && kill $vsftpd_pid
+ [ -n "$ftproot" ] && rm -rf $ftproot $vsftpd_conf
+ 
++exit $exit_status

@@ -1,0 +1,12 @@
+diff -Naur prime-1.0.0.1.orig//src/Makefile.am prime-1.0.0.1//src/Makefile.am
+--- prime-1.0.0.1.orig//src/Makefile.am	2004-03-26 02:19:51.000000000 +0900
++++ prime-1.0.0.1//src/Makefile.am	2010-05-27 18:29:20.000000000 +0900
+@@ -23,7 +23,7 @@
+ 
+ ## FIXME: Consider other commands.
+ ## FIXME: (2004-02-05) <komatsu@taiyaki.org>
+-@PRIME_COMMAND@: $(script_sources) Makefile
++$(primelib_SCRIPTS): $(script_sources) Makefile
+ 	ruby -e " \
+ 	command_suffixes = ['', \
+                             '-userdict-update', '-userdict-convert', \

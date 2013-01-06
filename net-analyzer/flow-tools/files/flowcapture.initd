@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting flow-capture"
+	start-stop-daemon --start -c ${USER} --exec /usr/bin/flow-capture \
+		--pidfile ${PIDFILE}.${PORT} \
+		-- ${FLOW_OPTS} >/dev/null 2>&1
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping flow-capture"
+	start-stop-daemon --stop --quiet --exec /usr/bin/flow-capture \
+		--pidfile ${PIDFILE}.${PORT}
+	eend $?
+}

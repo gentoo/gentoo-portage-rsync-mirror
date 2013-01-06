@@ -1,0 +1,204 @@
+From 04434775b7f3aa55fbbcf2064cfb9f5f5c436e64 Mon Sep 17 00:00:00 2001
+From: Matthew Ahrens <mahrens@delphix.com>
+Date: Fri, 24 Aug 2012 07:12:46 -0700
+Subject: [PATCH] Illumos #3100: zvol rename fails with EBUSY when dirty.
+
+illumos/illumos-gate@2e2c135528b3edfe9aaf67d1f004dc0202fa1a54
+Illumos changeset: 13780:6da32a929222
+
+3100 zvol rename fails with EBUSY when dirty
+
+Reviewed by: Christopher Siden <chris.siden@delphix.com>
+Reviewed by: Adam H. Leventhal <ahl@delphix.com>
+Reviewed by: George Wilson <george.wilson@delphix.com>
+Reviewed by: Garrett D'Amore <garrett@damore.org>
+Approved by: Eric Schrock <eric.schrock@delphix.com>
+
+Ported-by: Etienne Dechamps <etienne.dechamps@ovh.net>
+Signed-off-by: Brian Behlendorf <behlendorf1@llnl.gov>
+Closes #995
+---
+ include/sys/dmu_objset.h    |    1 -
+ include/sys/dsl_dataset.h   |    1 +
+ lib/libzfs/libzfs_dataset.c |    2 +-
+ module/zfs/dmu_objset.c     |   11 -----------
+ module/zfs/dsl_dataset.c    |   21 +++++++++++++--------
+ module/zfs/dsl_dir.c        |    8 --------
+ module/zfs/zfs_vfsops.c     |    6 +++---
+ module/zfs/zvol.c           |   10 ++++++++++
+ 8 files changed, 28 insertions(+), 32 deletions(-)
+
+diff --git a/include/sys/dmu_objset.h b/include/sys/dmu_objset.h
+index c6d202e..013b6ec 100644
+--- a/include/sys/dmu_objset.h
++++ b/include/sys/dmu_objset.h
+@@ -161,7 +161,6 @@ int dmu_objset_find_spa(spa_t *spa, const char *name,
+ /* called from dsl */
+ void dmu_objset_sync(objset_t *os, zio_t *zio, dmu_tx_t *tx);
+ boolean_t dmu_objset_is_dirty(objset_t *os, uint64_t txg);
+-boolean_t dmu_objset_is_dirty_anywhere(objset_t *os);
+ objset_t *dmu_objset_create_impl(spa_t *spa, struct dsl_dataset *ds,
+     blkptr_t *bp, dmu_objset_type_t type, dmu_tx_t *tx);
+ int dmu_objset_open_impl(spa_t *spa, struct dsl_dataset *ds, blkptr_t *bp,
+diff --git a/include/sys/dsl_dataset.h b/include/sys/dsl_dataset.h
+index 7cff7e3..38ce3c5 100644
+--- a/include/sys/dsl_dataset.h
++++ b/include/sys/dsl_dataset.h
+@@ -258,6 +258,7 @@ int dsl_dataset_space_written(dsl_dataset_t *oldsnap, dsl_dataset_t *new,
+     uint64_t *usedp, uint64_t *compp, uint64_t *uncompp);
+ int dsl_dataset_space_wouldfree(dsl_dataset_t *firstsnap, dsl_dataset_t *last,
+     uint64_t *usedp, uint64_t *compp, uint64_t *uncompp);
++boolean_t dsl_dataset_is_dirty(dsl_dataset_t *ds);
+ 
+ int dsl_dsobj_to_dsname(char *pname, uint64_t obj, char *buf);
+ 
+diff --git a/lib/libzfs/libzfs_dataset.c b/lib/libzfs/libzfs_dataset.c
+index 7ccd941..7cf78c8 100644
+--- a/lib/libzfs/libzfs_dataset.c
++++ b/lib/libzfs/libzfs_dataset.c
+@@ -3700,7 +3700,7 @@ struct createdata {
+ 	    zhp->zfs_type == ZFS_TYPE_VOLUME);
+ 
+ 	/*
+-	 * Destroy all recent snapshots and its dependends.
++	 * Destroy all recent snapshots and their dependents.
+ 	 */
+ 	cb.cb_force = force;
+ 	cb.cb_target = snap->zfs_name;
+diff --git a/module/zfs/dmu_objset.c b/module/zfs/dmu_objset.c
+index a34584e..c1bc1de 100644
+--- a/module/zfs/dmu_objset.c
++++ b/module/zfs/dmu_objset.c
+@@ -1182,17 +1182,6 @@ struct snaparg {
+ 	    !list_is_empty(&os->os_free_dnodes[txg & TXG_MASK]));
+ }
+ 
+-boolean_t
+-dmu_objset_is_dirty_anywhere(objset_t *os)
+-{
+-	int t;
+-
+-	for (t = 0; t < TXG_SIZE; t++)
+-		if (dmu_objset_is_dirty(os, t))
+-			return (B_TRUE);
+-	return (B_FALSE);
+-}
+-
+ static objset_used_cb_t *used_cbs[DMU_OST_NUMTYPES];
+ 
+ void
+diff --git a/module/zfs/dsl_dataset.c b/module/zfs/dsl_dataset.c
+index 10e9b19..21fdd08 100644
+--- a/module/zfs/dsl_dataset.c
++++ b/module/zfs/dsl_dataset.c
+@@ -1231,6 +1231,19 @@
+ 	}
+ }
+ 
++boolean_t
++dsl_dataset_is_dirty(dsl_dataset_t *ds)
++{
++	int t;
++
++	for (t = 0; t < TXG_SIZE; t++) {
++		if (txg_list_member(&ds->ds_dir->dd_pool->dp_dirty_datasets,
++		    ds, t))
++			return (B_TRUE);
++	}
++	return (B_FALSE);
++}
++
+ /*
+  * The unique space in the head dataset can be calculated by subtracting
+  * the space used in the most recent snapshot, that is still being used
+@@ -3402,10 +3415,6 @@ struct cloneswaparg {
+ 	if (ds->ds_quota != effective_value) {
+ 		dmu_buf_will_dirty(ds->ds_dbuf, tx);
+ 		ds->ds_quota = effective_value;
+-
+-		spa_history_log_internal(LOG_DS_REFQUOTA,
+-		    ds->ds_dir->dd_pool->dp_spa, tx, "%lld dataset = %llu ",
+-		    (longlong_t)ds->ds_quota, ds->ds_object);
+ 	}
+ }
+ 
+@@ -3509,10 +3518,6 @@ struct cloneswaparg {
+ 
+ 	dsl_dir_diduse_space(ds->ds_dir, DD_USED_REFRSRV, delta, 0, 0, tx);
+ 	mutex_exit(&ds->ds_dir->dd_lock);
+-
+-	spa_history_log_internal(LOG_DS_REFRESERV,
+-	    ds->ds_dir->dd_pool->dp_spa, tx, "%lld dataset = %llu",
+-	    (longlong_t)effective_value, ds->ds_object);
+ }
+ 
+ int
+diff --git a/module/zfs/dsl_dir.c b/module/zfs/dsl_dir.c
+index 97b38d2..377df40 100644
+--- a/module/zfs/dsl_dir.c
++++ b/module/zfs/dsl_dir.c
+@@ -1066,10 +1066,6 @@ struct tempreserve {
+ 	mutex_enter(&dd->dd_lock);
+ 	dd->dd_phys->dd_quota = effective_value;
+ 	mutex_exit(&dd->dd_lock);
+-
+-	spa_history_log_internal(LOG_DS_QUOTA, dd->dd_pool->dp_spa,
+-	    tx, "%lld dataset = %llu ",
+-	    (longlong_t)effective_value, dd->dd_phys->dd_head_dataset_obj);
+ }
+ 
+ int
+@@ -1182,10 +1178,6 @@ struct tempreserve {
+ 		    delta, 0, 0, tx);
+ 	}
+ 	mutex_exit(&dd->dd_lock);
+-
+-	spa_history_log_internal(LOG_DS_RESERVATION, dd->dd_pool->dp_spa,
+-	    tx, "%lld dataset = %llu",
+-	    (longlong_t)effective_value, dd->dd_phys->dd_head_dataset_obj);
+ }
+ 
+ int
+diff --git a/module/zfs/zfs_vfsops.c b/module/zfs/zfs_vfsops.c
+index 8fe457e..90f9055 100644
+--- a/module/zfs/zfs_vfsops.c
++++ b/module/zfs/zfs_vfsops.c
+@@ -1112,9 +1112,9 @@
+ 	/*
+ 	 * Evict cached data
+ 	 */
+-	if (dmu_objset_is_dirty_anywhere(zsb->z_os))
+-		if (!zfs_is_readonly(zsb))
+-			txg_wait_synced(dmu_objset_pool(zsb->z_os), 0);
++	if (dsl_dataset_is_dirty(dmu_objset_ds(zsb->z_os)) &&
++	    !zfs_is_readonly(zsb))
++		txg_wait_synced(dmu_objset_pool(zsb->z_os), 0);
+ 	(void) dmu_objset_evict_dbufs(zsb->z_os);
+ 
+ 	return (0);
+diff --git a/module/zfs/zvol.c b/module/zfs/zvol.c
+index a182f79..5668e1d 100644
+--- a/module/zfs/zvol.c
++++ b/module/zfs/zvol.c
+@@ -901,8 +901,18 @@
+ {
+ 	zil_close(zv->zv_zilog);
+ 	zv->zv_zilog = NULL;
++
+ 	dmu_buf_rele(zv->zv_dbuf, zvol_tag);
+ 	zv->zv_dbuf = NULL;
++
++	/*
++	 * Evict cached data
++	 */
++	if (dsl_dataset_is_dirty(dmu_objset_ds(zv->zv_objset)) &&
++	    !(zv->zv_flags & ZVOL_RDONLY))
++		txg_wait_synced(dmu_objset_pool(zv->zv_objset), 0);
++	(void) dmu_objset_evict_dbufs(zv->zv_objset);
++
+ 	dmu_objset_disown(zv->zv_objset, zvol_tag);
+ 	zv->zv_objset = NULL;
+ }
+-- 
+1.7.10
+

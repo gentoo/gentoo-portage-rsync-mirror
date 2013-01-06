@@ -1,0 +1,3 @@
+# List paths to your TT-RSS instances to start their update daemons
+# Example: INSTANCE_DIRS="/some/webhost/htdocs/tt-rss /some/otherwebhost/htdocs/newsreader"
+INSTANCE_DIRS=""

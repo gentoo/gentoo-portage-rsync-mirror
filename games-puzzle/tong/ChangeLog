@@ -1,0 +1,30 @@
+# ChangeLog for games-puzzle/tong
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/ChangeLog,v 1.7 2009/04/06 21:57:42 mr_bones_ Exp $
+
+  06 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/tong-1.0-fps.patch, -files/1.0-makefile.patch,
+  +files/tong-1.0-makefile.patch, tong-1.0.ebuild:
+  add fps limiting patch from Rudi Lippert (bug #196013)
+
+  10 Feb 2009; Alfredo Tupone <tupone@gentoo.org> files/1.0-makefile.patch:
+  Fix --as-needed bug #247448 by flameeyes@gentoo.org
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> tong-1.0.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
+
+  15 Aug 2006; Thomas Cort <tcort@gentoo.org> tong-1.0.ebuild:
+  Stable on amd64 wrt Bug #143961
+
+  08 Oct 2005; Tom Martin <slarti@gentoo.org> tong-1.0.ebuild:
+  Marked ~amd64.
+
+  22 Feb 2005; David Holm <dholm@gentoo.org> tong-1.0.ebuild:
+  Added to ~ppc.
+
+*tong-1.0 (01 Feb 2005)
+
+  01 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +tong-1.0.ebuild:
+  initial commit - ebuild submitted by eGore via bug #76950
+

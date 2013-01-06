@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/sword-chamorro
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-chamorro/ChangeLog,v 1.1 2008/03/14 13:42:29 beandog Exp $
+
+*sword-chamorro-2.7 (14 Mar 2008)
+
+  14 Mar 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-chamorro-2.7.ebuild:
+  Initial commit
+

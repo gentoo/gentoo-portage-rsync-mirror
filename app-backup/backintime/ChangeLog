@@ -1,0 +1,88 @@
+# ChangeLog for app-backup/backintime
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.15 2011/11/10 23:53:47 xmw Exp $
+
+*backintime-1.0.8-r1 (10 Nov 2011)
+
+  10 Nov 2011; Michael Weber <xmw@gentoo.org> -backintime-1.0.6.ebuild,
+  -backintime-1.0.6-r1.ebuild, +backintime-1.0.8-r1.ebuild:
+  Improve python code (bug 308307)
+
+  23 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  backintime-1.0.6.ebuild, backintime-1.0.6-r1.ebuild, backintime-1.0.8.ebuild:
+  Use correct slot of pygobject.
+
+  25 Sep 2011; Michael Weber <xmw@gentoo.org> backintime-1.0.6-r1.ebuild,
+  backintime-1.0.8.ebuild:
+  Fixed typo kd4 (bug 384413, thanks to Nicolas)
+
+*backintime-1.0.8 (25 Sep 2011)
+*backintime-1.0.6-r1 (25 Sep 2011)
+
+  25 Sep 2011; Michael Weber <xmw@gentoo.org> backintime-1.0.6.ebuild,
+  +backintime-1.0.6-r1.ebuild, +files/backintime-1.0.6-wrapper.patch,
+  +backintime-1.0.8.ebuild, metadata.xml:
+  Improved python code and version bump (thanks to Milton Yates for the
+  detailed report on bug 382287), taking care of this one
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118937
+
+  17 Jul 2011; Pacho Ramos <pacho@gentoo.org> -backintime-1.0.4.ebuild:
+  Remove old, also solves bug #372161
+
+  01 Feb 2011; Thilo Bangert <bangert@gentoo.org> -backintime-0.9.26-r2.ebuild,
+  -files/backintime-0.9.26-dont-install-license.diff,
+  -files/backintime-0.9.26-information-disclosure.diff:
+  remove old
+
+*backintime-1.0.6 (01 Feb 2011)
+
+  01 Feb 2011; Thilo Bangert <bangert@gentoo.org> +backintime-1.0.6.ebuild:
+  version bump - fix dep to split gnome python deps (#352910)
+
+*backintime-1.0.4 (08 Nov 2010)
+
+  08 Nov 2010; Thilo Bangert <bangert@gentoo.org> +backintime-1.0.4.ebuild,
+  +files/backintime-1.0.4-dont-install-license.diff,
+  +files/backintime-1.0.4-fix-configure-warning.diff,
+  +files/backintime-1.0.4-kde4-root.desktop:
+  version bump (#343665)
+
+  17 Feb 2010; Thilo Bangert <bangert@gentoo.org>
+  backintime-0.9.26-r2.ebuild:
+  fix doc install location for real (#297641)
+
+*backintime-0.9.26-r2 (07 Feb 2010)
+
+  07 Feb 2010; Thilo Bangert <bangert@gentoo.org>
+  -backintime-0.9.26-r1.ebuild, +backintime-0.9.26-r2.ebuild:
+  add acl use dep to rsync (bug #303639)
+
+  13 Jan 2010; Thilo Bangert <bangert@gentoo.org>
+  backintime-0.9.26-r1.ebuild,
+  +files/backintime-0.9.26-dont-install-license.diff:
+  fix doc install location (#297641)
+
+  25 Oct 2009; Thilo Bangert <bangert@gentoo.org>
+  backintime-0.9.26-r1.ebuild:
+  die on install
+
+  18 Oct 2009; Thilo Bangert <bangert@gentoo.org>
+  backintime-0.9.26-r1.ebuild:
+  add more deps (bug #289550)
+
+*backintime-0.9.26-r1 (14 Oct 2009)
+
+  14 Oct 2009; Thilo Bangert <bangert@gentoo.org> -backintime-0.9.26.ebuild,
+  +backintime-0.9.26-r1.ebuild,
+  +files/backintime-0.9.26-information-disclosure.diff:
+  fix information disclosure bug #289047
+
+*backintime-0.9.26 (14 Oct 2009)
+
+  14 Oct 2009; Thilo Bangert <bangert@gentoo.org> +backintime-0.9.26.ebuild,
+  +metadata.xml:
+  initial commit - based in part on a work by Matija Suklje (hook) and
+  Maurice Gilden (bug #267633)
+

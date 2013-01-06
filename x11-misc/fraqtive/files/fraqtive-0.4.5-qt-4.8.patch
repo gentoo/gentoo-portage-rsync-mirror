@@ -1,0 +1,26 @@
+Description: Fix FTBFS with Qt 4.8. Include and link against GLU.
+Author: Felix Geyer <debfx-pkg@fobos.de>
+
+--- fraqtive-0.4.5.orig/src/src.pro
++++ fraqtive-0.4.5/src/src.pro
+@@ -154,6 +154,10 @@ win32 {
+     LIBS += -lshell32
+ }
+ 
++unix {
++    LIBS += -lGLU
++}
++
+ MOC_DIR = ../tmp
+ RCC_DIR = ../tmp
+ UI_DIR = ../tmp
+--- fraqtive-0.4.5.orig/src/meshview.cpp
++++ fraqtive-0.4.5/src/meshview.cpp
+@@ -19,6 +19,7 @@
+ #include <QMouseEvent>
+ #include <QWheelEvent>
+ #include <QKeyEvent>
++#include <GL/glu.h>
+ 
+ #include "fractalpresenter.h"
+ #include "datafunctions.h"

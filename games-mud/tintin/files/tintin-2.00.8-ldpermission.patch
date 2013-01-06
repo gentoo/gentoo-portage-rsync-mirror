@@ -1,0 +1,11 @@
+--- Makefile.in.old	2011-06-24 13:41:36.874647127 +0200
++++ Makefile.in	2011-06-24 13:44:40.024430170 +0200
+@@ -37,7 +37,7 @@
+ 
+ INCS = @MYINCLUDE@
+ 
+-LIBS = @MYLIB@ @LIBS@
++LIBS = @LIBS@
+ 
+ # If you prefer to be able to enter ISO latin-1 characters instead
+ # of being able to use the meta key for special emacs-like commands

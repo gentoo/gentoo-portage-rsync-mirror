@@ -1,0 +1,15 @@
+# ChangeLog for net-news/canto
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/canto/ChangeLog,v 1.2 2011/04/05 20:53:36 arfrever Exp $
+
+  05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  canto-0.7.10.ebuild:
+  Use Python 2 (bug #362225).
+
+*canto-0.7.10 (11 Aug 2010)
+
+  11 Aug 2010; Markos Chandras <hwoarang@gentoo.org> +canto-0.7.10.ebuild,
+  +metadata.xml:
+  Moved from sunrise overlay. Thanks to Jacek Sowiński (mruwek)
+  <mruwek.gentoo@vcf.pl> for maintain it so far. bug #230806
+

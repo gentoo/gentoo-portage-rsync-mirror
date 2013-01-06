@@ -1,0 +1,46 @@
+# ChangeLog for app-laptop/thinkfan
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkfan/ChangeLog,v 1.10 2012/12/04 00:31:06 xmw Exp $
+
+*thinkfan-0.8.1-r1 (04 Dec 2012)
+
+  04 Dec 2012; Michael Weber <xmw@gentoo.org> +thinkfan-0.8.1-r1.ebuild,
+  +files/thinkfan-0.8.1-openrc.patch:
+  Revbump to respect config file.
+
+*thinkfan-0.8.1 (06 Oct 2012)
+
+  06 Oct 2012; Michael Weber <xmw@gentoo.org> +thinkfan-0.8.1.ebuild:
+  Version bump (euscan), drop old patches
+
+  23 Jun 2012; Michael Weber <xmw@gentoo.org> -thinkfan-0.8_alpha2.ebuild:
+  Drop old
+
+  20 Jun 2012; Jeff Horelick <jdhore@gentoo.org> thinkfan-0.8.0.ebuild:
+  marked x86 per bug 421989
+
+  19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> thinkfan-0.8.0.ebuild:
+  Stable for amd64, wrt bug #421989
+
+*thinkfan-0.8.0 (12 May 2012)
+
+  12 May 2012; Michael Weber <xmw@gentoo.org> +thinkfan-0.8.0.ebuild:
+  Version bump
+
+  19 Apr 2012; Michael Weber <xmw@gentoo.org> -thinkfan-0.7.3.ebuild:
+  Remove old version.
+
+  19 Apr 2012; Jeff Horelick <jdhore@gentoo.org> thinkfan-0.8_alpha2.ebuild:
+  marked x86 per bug 412593
+
+  19 Apr 2012; Agostino Sarubbo <ago@gentoo.org> thinkfan-0.8_alpha2.ebuild:
+  Stable for amd64, wrt bug #412593
+
+*thinkfan-0.8_alpha2 (13 Feb 2012)
+*thinkfan-0.7.3 (13 Feb 2012)
+
+  13 Feb 2012; Michael Weber <xmw@gentoo.org> +thinkfan-0.7.3.ebuild,
+  +files/thinkfan-0.7.3-makefile.patch, +files/thinkfan-0.7.3-openrc.patch,
+  +thinkfan-0.8_alpha2.ebuild:
+  Initial import. Thanks Maxim Konyushikhin for the initial ebuild (bug 387399)
+

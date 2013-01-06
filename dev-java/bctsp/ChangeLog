@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/bctsp
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bctsp/ChangeLog,v 1.1 2012/03/26 06:59:51 sera Exp $
+
+*bctsp-1.45 (26 Mar 2012)
+
+  26 Mar 2012; Ralph Sennhauser <sera@gentoo.org> +bctsp-1.45.ebuild,
+  +metadata.xml:
+  Import from java-overlay with some changes. Ebuild by Serkan Kaba
+  <serkan@gentoo.org>. #352246
+

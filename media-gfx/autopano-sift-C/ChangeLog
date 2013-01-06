@@ -1,0 +1,60 @@
+# ChangeLog for media-gfx/autopano-sift-C
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift-C/ChangeLog,v 1.13 2010/11/08 21:56:41 maekke Exp $
+
+  08 Nov 2010; Markus Meier <maekke@gentoo.org>
+  autopano-sift-C-2.5.1.ebuild:
+  change jpeg dep to virtual/jpeg
+
+  09 Jan 2010; Markus Meier <maekke@gentoo.org>
+  -autopano-sift-C-2.5.0.ebuild:
+  old
+
+  07 Jan 2010; Brent Baude <ranger@gentoo.org> autopano-sift-C-2.5.1.ebuild:
+  Marking autopano-sift-C-2.5.1 ppc for bug 294316
+
+  20 Dec 2009; Olivier Crête <tester@gentoo.org>
+  autopano-sift-C-2.5.1.ebuild:
+  Stable on amd64, bug #294316
+
+  16 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
+  autopano-sift-C-2.5.1.ebuild:
+  stable x86, bug 294316
+
+*autopano-sift-C-2.5.1 (22 Oct 2009)
+
+  22 Oct 2009; Markus Meier <maekke@gentoo.org>
+  -autopano-sift-C-2.5.1_rc2.ebuild, +autopano-sift-C-2.5.1.ebuild:
+  bump to final release, identical to -rc2
+
+*autopano-sift-C-2.5.1_rc2 (06 Oct 2009)
+
+  06 Oct 2009; Markus Meier <maekke@gentoo.org>
+  -autopano-sift-C-2.5.1_rc1.ebuild, +autopano-sift-C-2.5.1_rc2.ebuild:
+  version bump, only difference is version string in --help
+
+*autopano-sift-C-2.5.1_rc1 (02 Oct 2009)
+
+  02 Oct 2009; Markus Meier <maekke@gentoo.org>
+  +autopano-sift-C-2.5.1_rc1.ebuild:
+  version bump to 2.5.1_rc1
+
+  18 Mar 2009; Joseph Jezak <josejx@gentoo.org>
+  autopano-sift-C-2.5.0.ebuild:
+  Marked ppc stable for bug #246827.
+
+  02 Dec 2008; <chainsaw@gentoo.org> autopano-sift-C-2.5.0.ebuild:
+  Add ~ppc keyword based on PowerBook6,7 testing by Christian "papillon81"
+  Schmitt <chrschmitt@gmail.com>. Dependency for media-gfx/hugin, bug
+  #234909.
+
+  22 Nov 2008; Markus Meier <maekke@gentoo.org>
+  autopano-sift-C-2.5.0.ebuild:
+  amd64/x86 stable, bug #246827
+
+*autopano-sift-C-2.5.0 (16 Aug 2008)
+
+  16 Aug 2008; Markus Meier <maekke@gentoo.org> +metadata.xml,
+  +autopano-sift-C-2.5.0.ebuild:
+  initial import of autopano-sift written in C
+

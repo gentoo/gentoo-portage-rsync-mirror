@@ -1,0 +1,36 @@
+--- plugins/status-icon/rb-status-icon-plugin.c
++++ plugins/status-icon/rb-status-icon-plugin.c
+@@ -394,8 +394,15 @@
+ 		icon_name = NULL;
+ 
+ 	if (plugin->priv->notification == NULL) {
++		#ifdef NOTIFY_CHECK_VERSION
++		#if NOTIFY_CHECK_VERSION (0, 7, 1)
++		plugin->priv->notification = notify_notification_new (primary, secondary, icon_name);
++		#else
+ 		plugin->priv->notification = notify_notification_new (primary, secondary, icon_name, NULL);
+-
++		#endif
++		#else
++		plugin->priv->notification = notify_notification_new (primary, secondary, icon_name, NULL);
++		#endif
+ 		g_signal_connect_object (plugin->priv->notification,
+ 					 "closed",
+ 					 G_CALLBACK (notification_closed_cb),
+--- plugins/status-icon/rb-tray-icon-gtk.c
++++ plugins/status-icon/rb-tray-icon-gtk.c
+@@ -343,7 +343,13 @@
+ void
+ rb_tray_icon_attach_notification (RBTrayIcon *tray, NotifyNotification *notification)
+ {
++	#ifndef NOTIFY_CHECK_VERSION
+ 	notify_notification_attach_to_status_icon (notification, tray->priv->icon);
++	#else
++	#if !NOTIFY_CHECK_VERSION (0, 7, 1)
++	notify_notification_attach_to_status_icon (notification, tray->priv->icon);
++	#endif
++	#endif
+ }
+ #endif
+
+

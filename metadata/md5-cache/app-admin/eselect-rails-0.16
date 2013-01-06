@@ -1,0 +1,9 @@
+DEFINED_PHASES=install
+DESCRIPTION=Manages Ruby on Rails symlinks
+HOMEPAGE=http://www.gentoo.org/
+KEYWORDS=amd64 ppc ppc64 x86 ~x86-fbsd
+LICENSE=GPL-2
+RDEPEND=>=app-admin/eselect-1.0.10
+SLOT=0
+SRC_URI=mirror://gentoo/eselect-rails-0.16.tar.bz2
+_md5_=32f1299db5e4546612cc821418c69112

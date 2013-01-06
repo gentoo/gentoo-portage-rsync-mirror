@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DEPEND=media-libs/libsndfile virtual/pkgconfig
+DESCRIPTION=Bauer stereophonic-to-binaural DSP library
+HOMEPAGE=http://bs2b.sourceforge.net/
+KEYWORDS=alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd
+LICENSE=MIT
+RDEPEND=media-libs/libsndfile
+SLOT=0
+SRC_URI=mirror://sourceforge/bs2b/libbs2b-3.1.0.tar.bz2
+_md5_=e3283a8b578cefe6f55716fc9e58af00

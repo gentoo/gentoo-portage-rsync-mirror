@@ -1,0 +1,135 @@
+# ChangeLog for app-misc/gnote
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.27 2012/12/16 19:38:00 tetromino Exp $
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gnote-3.6.1.ebuild:
+  Update license, EAPI5-ize and de-9999-ize ebuild.
+
+*gnote-3.6.1 (16 Dec 2012)
+
+  16 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> +gnote-3.6.1.ebuild:
+  Version bump for Gnome 3.6.
+
+  22 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org> -gnote-0.7.4.ebuild,
+  -gnote-0.8.3.ebuild:
+  Clean up old revisions.
+
+*gnote-0.8.4 (18 Sep 2012)
+
+  18 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gnote-0.7.4.ebuild,
+  gnote-0.8.2.ebuild, -gnote-0.8.2-r10.ebuild, gnote-0.8.3.ebuild,
+  +gnote-0.8.4.ebuild:
+  Version bump. Make license more precise. Drop old.
+
+  02 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gnote-0.8.2.ebuild,
+  gnote-0.8.2-r10.ebuild, +files/gnote-0.8.2-signal_idle-header.patch:
+  Fix build failure with gcc-4.7 due to missing include (bug #424317, thanks to
+  Diego Elio Pettenò)
+
+  22 May 2012; Agostino Sarubbo <ago@gentoo.org> gnote-0.8.2.ebuild:
+  Stable for amd64, wrt bug #414983
+
+  22 May 2012; Agostino Sarubbo <ago@gentoo.org> gnote-0.7.4.ebuild:
+  Stable for amd64, wrt bug #414983
+
+  22 May 2012; Jeff Horelick <jdhore@gentoo.org> gnote-0.7.4.ebuild,
+  gnote-0.8.2.ebuild:
+  marked x86 per bug 414983
+
+  20 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gnote-0.8.2.ebuild,
+  gnote-0.8.2-r10.ebuild, gnote-0.8.3.ebuild:
+  Add missing gsettings-desktop-schemas dependency (bug #416793, thanks to
+  theodor).
+
+*gnote-0.8.2-r10 (10 May 2012)
+
+  10 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnote-0.8.2-r10.ebuild:
+  Zero-change revbump to mask applet USE flag on gnote-0.8.2 to allow
+  stabilization (bug #414983).
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> gnote-0.7.4.ebuild,
+  gnote-0.8.2.ebuild, gnote-0.8.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*gnote-0.8.3 (15 Apr 2012)
+
+  15 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -gnote-0.8.1.ebuild,
+  +gnote-0.8.3.ebuild:
+  Version bump, fixes application quit with glib-2.32. Drop old.
+
+*gnote-0.8.2 (15 Jan 2012)
+
+  15 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -gnote-0.7.3.ebuild,
+  +gnote-0.8.2.ebuild:
+  Bump, improves toolbar for template notes, fixes various bugs. Drop old.
+
+*gnote-0.8.1 (27 Oct 2011)
+
+  27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> +gnote-0.8.1.ebuild:
+  Add gtk3-based gnote-0.8.1 from the gnome overlay.
+
+  27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> gnote-0.7.3.ebuild,
+  gnote-0.7.4.ebuild:
+  Slot gtkspell dependency to 2 in preparation for gtkspell-3.
+
+*gnote-0.7.4 (02 May 2011)
+
+  02 May 2011; Gilles Dartiguelongue <eva@gentoo.org> -gnote-0.7.2.ebuild,
+  +gnote-0.7.4.ebuild:
+  Version bump. Minor feature changes. Fix crashers and bugs, updated
+  translations.
+
+  07 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gnote-0.7.2.ebuild,
+  gnote-0.7.3.ebuild:
+  Fix slot-deps on gtk+ and other libs
+
+*gnote-0.7.3 (11 Nov 2010)
+
+  11 Nov 2010; Gilles Dartiguelongue <eva@gentoo.org> gnote-0.7.2.ebuild,
+  +gnote-0.7.3.ebuild:
+  Version bump. Fix build with gtk+-2.22, fix titles and keywords in various
+  situations. Translation updates.
+
+  20 Oct 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gnote-0.6.1-dbus-switch.patch, -gnote-0.6.3.ebuild,
+  -gnote-0.7.1.ebuild, gnote-0.7.2.ebuild:
+  Clean up old revisions.
+
+*gnote-0.7.2 (31 Mar 2010)
+
+  31 Mar 2010; Gilles Dartiguelongue <eva@gentoo.org> +gnote-0.7.2.ebuild:
+  Version bump. Fix build with recent gtk+, bug #311979. Updated
+  translations, fix a linking issue.
+
+  23 Feb 2010; Gilles Dartiguelongue <eva@gentoo.org> -gnote-0.6.2.ebuild,
+  gnote-0.6.3.ebuild, gnote-0.7.1.ebuild:
+  gnome-panel dependency is optional, bug #298932, thanks to Olaf for
+  noticing.
+
+*gnote-0.7.1 (11 Jan 2010)
+
+  11 Jan 2010; Gilles Dartiguelongue <eva@gentoo.org> +gnote-0.7.1.ebuild:
+  Version bump. Bug fixes, translation updates.
+
+*gnote-0.6.3 (13 Dec 2009)
+
+  13 Dec 2009; Gilles Dartiguelongue <eva@gentoo.org> -gnote-0.6.1.ebuild,
+  +gnote-0.6.3.ebuild:
+  Version bump. Bug fixes and translation updates.
+
+  26 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org> gnote-0.6.2.ebuild:
+  Removing useless inherits.
+
+*gnote-0.6.2 (26 Aug 2009)
+
+  26 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org> +gnote-0.6.2.ebuild:
+  Version bump. Use mnemonics for toolbar. Update spanish translation.
+
+*gnote-0.6.1 (02 Aug 2009)
+
+  02 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org> +gnote-0.6.1.ebuild,
+  +files/gnote-0.6.1-dbus-switch.patch, +metadata.xml:
+  Initial ebuild by Gilles Dartiguelongue <eva@gentoo.org>, copied and bumped
+  from gnome overlay, closes bug #268015.
+

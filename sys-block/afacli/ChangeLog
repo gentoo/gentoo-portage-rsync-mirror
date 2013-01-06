@@ -1,0 +1,10 @@
+# ChangeLog for sys-block/afacli
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/afacli/ChangeLog,v 1.1 2008/05/24 10:41:57 wschlich Exp $
+
+*afacli-4.1 (24 May 2008)
+
+  24 May 2008; Wolfram Schlich <wschlich@gentoo.org> +files/afacli,
+  +metadata.xml, +afacli-4.1.ebuild:
+  initial import
+

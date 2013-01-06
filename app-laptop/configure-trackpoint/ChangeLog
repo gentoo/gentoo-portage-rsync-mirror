@@ -1,0 +1,26 @@
+# ChangeLog for app-laptop/configure-trackpoint
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-trackpoint/ChangeLog,v 1.5 2012/05/02 20:22:39 jdhore Exp $
+
+  02 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  configure-trackpoint-0.7.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  24 Aug 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add package to proxy-maintainers herd
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  update email for proxy maintainer
+
+  30 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  configure-trackpoint-0.7.ebuild:
+  Fix website and description. Bug #373147. Thanks to Ben Sagal
+  <bensagal@gmail.com> for reporting
+
+*configure-trackpoint-0.7 (26 Jun 2011)
+
+  26 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  +configure-trackpoint-0.7.ebuild, +metadata.xml:
+  Initial commit of configure-trackpoint, a configuration utility for
+  app-laptop/tp_smapi
+

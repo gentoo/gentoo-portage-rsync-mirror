@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+<email>matsuu@gentoo.org</email>
+</maintainer>
+<longdescription lang="en">
+</longdescription>
+<use>
+  <flag name='openid'>Enable support for OpenID</flag>
+  <flag name='passenger'>Enable support for <pkg>www-apache/passenger</pkg></flag>
+</use>
+</pkgmetadata>
+

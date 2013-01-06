@@ -1,0 +1,19 @@
+# ChangeLog for sys-apps/edac-utils
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/edac-utils/ChangeLog,v 1.3 2009/12/15 14:43:36 pva Exp $
+
+  15 Dec 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
+  metadata.xml: added required herd tag.
+
+*edac-utils-0.16 (03 Aug 2009)
+
+  03 Aug 2009; Tiziano Müller <dev-zero@gentoo.org>
+  +edac-utils-0.16.ebuild:
+  Version bump.
+
+*edac-utils-0.12 (09 Apr 2008)
+
+  09 Apr 2008; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
+  +edac-utils-0.12.ebuild:
+  Initial commit.
+

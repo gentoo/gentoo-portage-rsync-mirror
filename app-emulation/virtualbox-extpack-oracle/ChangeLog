@@ -1,0 +1,228 @@
+# ChangeLog for app-emulation/virtualbox-extpack-oracle
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/ChangeLog,v 1.38 2012/12/22 12:26:14 polynomial-c Exp $
+
+*virtualbox-extpack-oracle-4.2.6 (21 Dec 2012)
+*virtualbox-extpack-oracle-4.1.24 (21 Dec 2012)
+
+  21 Dec 2012; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-extpack-oracle-4.1.24.ebuild,
+  -virtualbox-extpack-oracle-4.2.2.ebuild,
+  +virtualbox-extpack-oracle-4.2.6.ebuild:
+  Version bump. Removed old.
+
+*virtualbox-extpack-oracle-4.2.4 (10 Nov 2012)
+
+  10 Nov 2012; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.2.0.ebuild,
+  +virtualbox-extpack-oracle-4.2.4.ebuild:
+  Version bump. Removed old.
+
+*virtualbox-extpack-oracle-4.2.2 (24 Oct 2012)
+
+  24 Oct 2012; Patrick Lauer <patrick@gentoo.org>
+  +virtualbox-extpack-oracle-4.2.2.ebuild:
+  Bump #439366
+
+  18 Sep 2012; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.1.12.ebuild,
+  -virtualbox-extpack-oracle-4.1.18.ebuild:
+  Removed old versions.
+
+  17 Sep 2012; Andreas Schuerch <nativemad@gentoo.org>
+  virtualbox-extpack-oracle-4.1.22.ebuild:
+  x86 stable, see bug 434872
+
+  16 Sep 2012; Agostino Sarubbo <ago@gentoo.org>
+  virtualbox-extpack-oracle-4.1.22.ebuild:
+  Stable for amd64, wrt bug #434872
+
+*virtualbox-extpack-oracle-4.2.0 (13 Sep 2012)
+
+  13 Sep 2012; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.1.20.ebuild,
+  +virtualbox-extpack-oracle-4.2.0.ebuild:
+  Version bump. Removed old.
+
+*virtualbox-extpack-oracle-4.1.22 (09 Sep 2012)
+
+  09 Sep 2012; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-extpack-oracle-4.1.22.ebuild:
+  Version bump.
+
+*virtualbox-extpack-oracle-4.1.20 (21 Aug 2012)
+
+  21 Aug 2012; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.1.16.ebuild,
+  +virtualbox-extpack-oracle-4.1.20.ebuild:
+  Version bump. Removed old.
+
+  07 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  virtualbox-extpack-oracle-4.1.18.ebuild:
+  Stable on amd64 wrt bug #427852
+
+*virtualbox-extpack-oracle-4.1.18 (20 Jun 2012)
+
+  20 Jun 2012; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.1.14.ebuild,
+  +virtualbox-extpack-oracle-4.1.18.ebuild:
+  Version bump. Removed old.
+
+  01 Jun 2012; Zac Medico <zmedico@gentoo.org>
+  virtualbox-extpack-oracle-4.1.12.ebuild,
+  virtualbox-extpack-oracle-4.1.14.ebuild,
+  virtualbox-extpack-oracle-4.1.16.ebuild:
+  inherit multilib for get_libdir
+
+  24 May 2012; Justin Lecher <jlec@gentoo.org>
+  virtualbox-extpack-oracle-4.1.16.ebuild:
+  Don't warn about not respected FLAGS in prebuilt binary packages
+
+*virtualbox-extpack-oracle-4.1.16 (23 May 2012)
+
+  23 May 2012; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-extpack-oracle-4.1.16.ebuild:
+  Version bump.
+
+*virtualbox-extpack-oracle-4.1.14 (26 Apr 2012)
+
+  26 Apr 2012; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.1.4.ebuild,
+  -virtualbox-extpack-oracle-4.1.8.ebuild,
+  -virtualbox-extpack-oracle-4.1.10.ebuild,
+  +virtualbox-extpack-oracle-4.1.14.ebuild:
+  Version bump. Removed old.
+
+  24 Apr 2012; Agostino Sarubbo <ago@gentoo.org>
+  virtualbox-extpack-oracle-4.1.12.ebuild:
+  Stable for amd64, wrt bug #412565
+
+  22 Apr 2012; Markus Meier <maekke@gentoo.org>
+  virtualbox-extpack-oracle-4.1.12.ebuild:
+  x86 stable, bug #412565
+
+  09 Apr 2012; Markus Meier <maekke@gentoo.org>
+  virtualbox-extpack-oracle-4.1.8.ebuild:
+  x86 stable, bug #403441
+
+*virtualbox-extpack-oracle-4.1.12 (05 Apr 2012)
+
+  05 Apr 2012; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.1.6.ebuild,
+  +virtualbox-extpack-oracle-4.1.12.ebuild:
+  Version bump (bug #410811). Removed old.
+
+*virtualbox-extpack-oracle-4.1.10 (15 Mar 2012)
+
+  15 Mar 2012; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-extpack-oracle-4.1.10.ebuild:
+  Version bump.
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  virtualbox-extpack-oracle-4.1.8.ebuild:
+  Stable for amd64, wrt bug #403441
+
+*virtualbox-extpack-oracle-4.1.8 (20 Dec 2011)
+
+  20 Dec 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.0.12.ebuild,
+  +virtualbox-extpack-oracle-4.1.8.ebuild:
+  Version bump. Removed old.
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  virtualbox-extpack-oracle-4.1.4.ebuild:
+  x86 stable wrt bug #386317
+
+*virtualbox-extpack-oracle-4.1.6 (04 Nov 2011)
+
+  04 Nov 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.1.2.ebuild,
+  +virtualbox-extpack-oracle-4.1.6.ebuild:
+  Version bump. Removed old.
+
+  01 Nov 2011; Tony Vroon <chainsaw@gentoo.org>
+  virtualbox-extpack-oracle-4.1.4.ebuild:
+  Marked stable on AMD64 based on arch testing by Tomáš "Mepho" Pružina,
+  Blain "doc235" Anderson & Elijah "Armageddon" El Lazkani in security bug
+  #386317.
+
+*virtualbox-extpack-oracle-4.1.4 (04 Oct 2011)
+
+  04 Oct 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.1.0.ebuild,
+  +virtualbox-extpack-oracle-4.1.4.ebuild:
+  Version bump. Thanks to Christian Inci who reported this in bug #385577.
+  Removed old.
+
+*virtualbox-extpack-oracle-4.1.2 (17 Aug 2011)
+
+  17 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-extpack-oracle-4.1.2.ebuild:
+  Version bump.
+
+  09 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.0.10.ebuild:
+  Removed old version.
+
+  24 Jul 2011; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-extpack-oracle-4.0.12.ebuild:
+  Marked 4.0.12 version as stable on amd64 (was forgotten by the arch team) for
+  bug #371935.
+
+  22 Jul 2011; Thomas Kahle <tomka@gentoo.org>
+  virtualbox-extpack-oracle-4.0.12.ebuild:
+  x86 stable per bug 371935
+
+*virtualbox-extpack-oracle-4.1.0 (19 Jul 2011)
+
+  19 Jul 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-extpack-oracle-4.1.0.ebuild:
+  Added 4.1 version branch
+
+*virtualbox-extpack-oracle-4.0.12 (17 Jul 2011)
+
+  17 Jul 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.0.8.ebuild,
+  +virtualbox-extpack-oracle-4.0.12.ebuild:
+  Version bump. Removed old.
+
+*virtualbox-extpack-oracle-4.0.10 (28 Jun 2011)
+
+  28 Jun 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.0.6.ebuild,
+  +virtualbox-extpack-oracle-4.0.10.ebuild:
+  Version bump. Removed old.
+
+*virtualbox-extpack-oracle-4.0.8 (18 May 2011)
+
+  18 May 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.0.4.ebuild,
+  virtualbox-extpack-oracle-4.0.6.ebuild,
+  +virtualbox-extpack-oracle-4.0.8.ebuild:
+  Version bump reported by Philipp Reinkemeier in bug #367947.
+
+*virtualbox-extpack-oracle-4.0.6 (22 Apr 2011)
+
+  22 Apr 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.0.2.ebuild,
+  +virtualbox-extpack-oracle-4.0.6.ebuild:
+  Version bump. Removed old.
+
+*virtualbox-extpack-oracle-4.0.4 (18 Feb 2011)
+
+  18 Feb 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-extpack-oracle-4.0.0.ebuild,
+  +virtualbox-extpack-oracle-4.0.4.ebuild:
+  Version bump. Removed old.
+
+*virtualbox-extpack-oracle-4.0.2 (18 Jan 2011)
+
+  18 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-extpack-oracle-4.0.2.ebuild:
+  Version bump.
+
+*virtualbox-extpack-oracle-4.0.0 (06 Jan 2011)
+
+  06 Jan 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-extpack-oracle-4.0.0.ebuild, +metadata.xml:
+  Initial version.

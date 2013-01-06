@@ -1,0 +1,240 @@
+diff -Naur mydns-1.1.0.orig/src/lib/rr.c mydns-1.1.0.new/src/lib/rr.c
+--- mydns-1.1.0.orig/src/lib/rr.c	2006-10-22 18:20:08.000000000 +0000
++++ mydns-1.1.0.new/src/lib/rr.c	2006-10-22 18:20:59.000000000 +0000
+@@ -438,9 +438,9 @@
+ {
+ 	MYDNS_RR *first = NULL, *last = NULL;
+ 	size_t	querylen;
+-	uchar		query[DNS_QUERYBUFSIZ],
++	char		query[DNS_QUERYBUFSIZ],
+ 				namequery[DNS_MAXNAMELEN + DNS_MAXNAMELEN + DNS_MAXNAMELEN + 25] = "";
+-	uchar		*wheretype;
++	char		*wheretype;
+ 	register char *c, *cp;
+ 	SQL_RES	*res;
+ 	SQL_ROW	row;
+diff -Naur mydns-1.1.0.orig/src/lib/sql.c mydns-1.1.0.new/src/lib/sql.c
+--- mydns-1.1.0.orig/src/lib/sql.c	2006-10-22 18:20:08.000000000 +0000
++++ mydns-1.1.0.new/src/lib/sql.c	2006-10-22 18:20:59.000000000 +0000
+@@ -155,7 +155,7 @@
+ int
+ sql_istable(SQL *sqlConn, const char *tablename)
+ {
+-	unsigned char *xtablename;
++	char *xtablename;
+ #if !USE_PGSQL
+ 	SQL_RES *res;
+ #endif
+@@ -163,7 +163,7 @@
+ 
+ 	if (!(xtablename = calloc(strlen(tablename) * 2 + 1, sizeof(unsigned char))))
+ 		Err(_("out of memory"));
+-	sql_escstr(sqlConn, xtablename, (uchar *)tablename, strlen(tablename));
++	sql_escstr(sqlConn, xtablename, (char *)tablename, strlen(tablename));
+ 
+ #if USE_PGSQL
+ 	if (sql_count(sqlConn, "SELECT COUNT(*) FROM pg_class"
+@@ -191,7 +191,7 @@
+ int
+ sql_iscolumn(SQL *sqlConn, const char *tablename, const char *columnname)
+ {
+-	unsigned char *xtablename, *xcolumnname;
++	char *xtablename, *xcolumnname;
+ #if !USE_PGSQL
+ 	SQL_RES *res;
+ #endif
+@@ -201,8 +201,8 @@
+ 		Err(_("out of memory"));
+ 	if (!(xcolumnname = calloc(strlen(columnname) * 2 + 1, sizeof(unsigned char))))
+ 		Err(_("out of memory"));
+-	sql_escstr(sqlConn, xtablename, (uchar *)tablename, strlen(tablename));
+-	sql_escstr(sqlConn, xcolumnname, (uchar *)columnname, strlen(columnname));
++	sql_escstr(sqlConn, xtablename, (char *)tablename, strlen(tablename));
++	sql_escstr(sqlConn, xcolumnname, (char *)columnname, strlen(columnname));
+ 
+ #if USE_PGSQL
+ 	if (sql_count(sqlConn,
+diff -Naur mydns-1.1.0.orig/src/mydns/alias.c mydns-1.1.0.new/src/mydns/alias.c
+--- mydns-1.1.0.orig/src/mydns/alias.c	2006-10-22 18:20:08.000000000 +0000
++++ mydns-1.1.0.new/src/mydns/alias.c	2006-10-22 18:20:59.000000000 +0000
+@@ -67,7 +67,7 @@
+ 				of the label with `*' and check for wildcard matches. */
+ 			if (*label)
+ 			{
+-				uchar wclabel[DNS_MAXNAMELEN+1], *c;
++				char wclabel[DNS_MAXNAMELEN+1], *c;
+ 
+ 				/* Generate wildcarded label, i.e. `*.example' or maybe just `*'. */
+ 				if (!(c = strchr(label, '.')))
+diff -Naur mydns-1.1.0.orig/src/mydns/listen.c mydns-1.1.0.new/src/mydns/listen.c
+--- mydns-1.1.0.orig/src/mydns/listen.c	2006-10-22 18:20:08.000000000 +0000
++++ mydns-1.1.0.new/src/mydns/listen.c	2006-10-22 18:20:59.000000000 +0000
+@@ -264,7 +264,7 @@
+ 		if (!(buf = malloc(buflen)))
+ 			Err(_("out of memory"));
+ 		ifc.ifc_len = buflen;
+-		ifc.ifc_buf = buf;
++		ifc.ifc_buf = (char *)buf;
+ 
+ 		if ((n = ioctl(sockfd, SIOCGIFCONF, (char *)&ifc)) != -1)
+ 		{
+diff -Naur mydns-1.1.0.orig/src/mydns/named.h mydns-1.1.0.new/src/mydns/named.h
+--- mydns-1.1.0.orig/src/mydns/named.h	2006-10-22 18:20:08.000000000 +0000
++++ mydns-1.1.0.new/src/mydns/named.h	2006-10-22 18:20:59.000000000 +0000
+@@ -204,7 +204,7 @@
+ 
+ 
+ /* task.c */
+-extern int		new_task(TASK *, unsigned char *, size_t);
++extern int		new_task(TASK *, char *, size_t);
+ extern void		task_init_header(TASK *);
+ extern char		*clientaddr(TASK *);
+ extern char		*desctask(TASK *);
+diff -Naur mydns-1.1.0.orig/src/mydns/recursive.c mydns-1.1.0.new/src/mydns/recursive.c
+--- mydns-1.1.0.orig/src/mydns/recursive.c	2006-10-22 18:20:08.000000000 +0000
++++ mydns-1.1.0.new/src/mydns/recursive.c	2006-10-22 18:20:59.000000000 +0000
+@@ -143,9 +143,10 @@
+ int
+ recursive_fwd_read(TASK *t)
+ {
+-	char	reply[DNS_MAXPACKETLEN_UDP + 2], *r;
+-	int	replylen, addrlen = sizeof(struct sockaddr_in);
+-	uint16_t id, qdcount, ancount, nscount, arcount;
++	char	  reply[DNS_MAXPACKETLEN_UDP + 2], *r;
++	int	  replylen;
++	socklen_t addrlen = sizeof(struct sockaddr_in);
++	uint16_t  id, qdcount, ancount, nscount, arcount;
+ 	DNS_HEADER hdr;
+ 
+ #if DEBUG_ENABLED && DEBUG_RECURSIVE
+diff -Naur mydns-1.1.0.orig/src/mydns/task.c mydns-1.1.0.new/src/mydns/task.c
+--- mydns-1.1.0.orig/src/mydns/task.c	2006-10-22 18:20:08.000000000 +0000
++++ mydns-1.1.0.new/src/mydns/task.c	2006-10-22 18:20:59.000000000 +0000
+@@ -35,9 +35,9 @@
+ 	Returns 0 on success, -1 on error, -2 if the task is now invalid.
+ **************************************************************************************************/
+ int
+-new_task(TASK *t, unsigned char *data, size_t len)
++new_task(TASK *t, char *data, size_t len)
+ {
+-	unsigned char qname[DNS_MAXNAMELEN+1], *src, *qdtop;
++	char qname[DNS_MAXNAMELEN+1], *src, *qdtop;
+ 
+ #if DEBUG_ENABLED && DEBUG_TASK
+ 	Debug("new_task(%p, %p, %u)", t, data, len);
+diff -Naur mydns-1.1.0.orig/src/mydns/task.h mydns-1.1.0.new/src/mydns/task.h
+--- mydns-1.1.0.orig/src/mydns/task.h	2006-10-22 18:20:08.000000000 +0000
++++ mydns-1.1.0.new/src/mydns/task.h	2006-10-22 18:20:59.000000000 +0000
+@@ -44,7 +44,7 @@
+ {
+ 	dns_rrtype_t	rrtype;					/* Record type (what table this data came from) */
+ 	uint32_t			id;						/* ID associated with RR */
+-	unsigned char	name[DNS_MAXNAMELEN];/* Name to send with reply */
++	char	name[DNS_MAXNAMELEN];/* Name to send with reply */
+ 	off_t				offset;					/* The offset within the reply data (t->rdata) */
+ 	size_t			length;					/* The length of data within the reply */
+ 	uint8_t			sort_level;				/* Primary sort order */
+@@ -104,7 +104,7 @@
+ 
+ 	uint32_t			Cnames[MAX_CNAME_LEVEL];				/* Array of CNAMEs found */
+ 
+-	unsigned char	*qd;											/* Question section data */
++	char	*qd;											/* Question section data */
+ 	size_t			qdlen;										/* Size of question section */
+ 	uint16_t			qdcount;										/* "qdcount", from header */
+ 	uint16_t			ancount;										/* "ancount", from header */
+diff -Naur mydns-1.1.0.orig/src/mydns/tcp.c mydns-1.1.0.new/src/mydns/tcp.c
+--- mydns-1.1.0.orig/src/mydns/tcp.c	2006-10-22 18:20:08.000000000 +0000
++++ mydns-1.1.0.new/src/mydns/tcp.c	2006-10-22 18:20:59.000000000 +0000
+@@ -118,7 +118,7 @@
+ int
+ read_tcp_query(TASK *t)
+ {
+-	unsigned char *end;
++	char *end;
+ 	int rv;
+ 
+ 	/* Read packet length if we haven't already */
+diff -Naur mydns-1.1.0.orig/src/mydns/update.c mydns-1.1.0.new/src/mydns/update.c
+--- mydns-1.1.0.orig/src/mydns/update.c	2006-10-22 18:20:08.000000000 +0000
++++ mydns-1.1.0.new/src/mydns/update.c	2006-10-22 18:20:59.000000000 +0000
+@@ -34,7 +34,7 @@
+ 	dns_class_t		class;
+ 	uint32_t			ttl;
+ 	uint16_t			rdlength;
+-	unsigned char	rdata[DNS_MAXPACKETLEN_UDP + 1];
++	char	rdata[DNS_MAXPACKETLEN_UDP + 1];
+ } UQRR;
+ 
+ 
+diff -Naur mydns-1.1.0.orig/src/util/check.c mydns-1.1.0.new/src/util/check.c
+--- mydns-1.1.0.orig/src/util/check.c	2006-10-22 18:20:08.000000000 +0000
++++ mydns-1.1.0.new/src/util/check.c	2006-10-22 18:20:59.000000000 +0000
+@@ -386,16 +386,16 @@
+ static void
+ check_rr_cname(void)
+ {
+-	unsigned char *xname;
++	char *xname;
+ 	int found = 0;
+ 
+ 	EXPAND_DATA(data);
+ 	check_name(data, "rr.data", 1);
+ 
+ 	/* A CNAME record can't have any other type of RR data for the same name */
+-	if (!(xname = calloc(strlen(name) * 2 + 1, sizeof(unsigned char))))
++	if (!(xname = calloc(strlen(name) * 2 + 1, sizeof(char))))
+ 		Err(_("out of memory"));
+-	sql_escstr(sql, xname, (unsigned char *)name, strlen(name));
++	sql_escstr(sql, xname, (char *)name, strlen(name));
+ 	found = sql_count(sql, "SELECT COUNT(*) FROM %s WHERE zone=%u AND name='%s' AND type != 'CNAME'",
+ 								  mydns_rr_table_name, rr->zone, xname);
+ 
+@@ -404,9 +404,9 @@
+ 	{
+ 		Free(xname);
+ 		shortname(name, 1);
+-		if (!(xname = calloc(strlen(name) * 2 + 1, sizeof(unsigned char))))
++		if (!(xname = calloc(strlen(name) * 2 + 1, sizeof(char))))
+ 			Err(_("out of memory"));
+-		sql_escstr(sql, xname, (unsigned char *)name, strlen(name));
++		sql_escstr(sql, xname, (char *)name, strlen(name));
+ 		found = sql_count(sql, "SELECT COUNT(*) FROM %s WHERE zone=%u AND name='%s' AND type != 'CNAME'",
+ 									  mydns_rr_table_name, rr->zone, xname);
+ 		EXPAND_DATA(name);
+diff -Naur mydns-1.1.0.orig/src/util/export.c mydns-1.1.0.new/src/util/export.c
+--- mydns-1.1.0.orig/src/util/export.c	2006-10-22 18:20:08.000000000 +0000
++++ mydns-1.1.0.new/src/util/export.c	2006-10-22 18:20:59.000000000 +0000
+@@ -270,7 +270,7 @@
+ 		printf("%s %s\n", rr->data, rr->rp_txt);
+ 	else if (rr->type == DNS_QTYPE_TXT)
+ 	{
+-		register unsigned char *c;
++		register char *c;
+ 		putc('"', stdout);
+ 		for (c = rr->data; *c; c++)
+ 		{
+diff -Naur mydns-1.1.0.orig/src/util/import-axfr.c mydns-1.1.0.new/src/util/import-axfr.c
+--- mydns-1.1.0.orig/src/util/import-axfr.c	2006-10-22 18:20:08.000000000 +0000
++++ mydns-1.1.0.new/src/util/import-axfr.c	2006-10-22 18:20:59.000000000 +0000
+@@ -462,7 +462,7 @@
+ void
+ import_axfr(char *hostport, char *import_zone)
+ {
+-	unsigned char *reply, len[2];
++	char *reply, len[2];
+ 	int fd;
+ 	size_t replylen;
+ 
+diff -Naur mydns-1.1.0.orig/src/util/ptrconvert.c mydns-1.1.0.new/src/util/ptrconvert.c
+--- mydns-1.1.0.orig/src/util/ptrconvert.c	2006-10-22 18:20:08.000000000 +0000
++++ mydns-1.1.0.new/src/util/ptrconvert.c	2006-10-22 18:20:59.000000000 +0000
+@@ -290,7 +290,7 @@
+ 		else	/* Insert new record */
+ 		{
+ 			long	id;
+-			uchar	query[DNS_QUERYBUFSIZ];
++			char	query[DNS_QUERYBUFSIZ];
+ 			int	querylen;
+ 			char	esc_origin[DNS_MAXNAMELEN + DNS_MAXNAMELEN + 1];
+ 			char	esc_ns[520], esc_mbox[520];

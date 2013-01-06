@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/encore
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/encore/ChangeLog,v 1.1 2012/12/06 18:24:08 bicatali Exp $
+
+*encore-0.2 (06 Dec 2012)
+
+  06 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> +encore-0.2.ebuild,
+  +metadata.xml:
+  Initial import

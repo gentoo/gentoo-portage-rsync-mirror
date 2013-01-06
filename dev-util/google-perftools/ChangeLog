@@ -1,0 +1,110 @@
+# ChangeLog for dev-util/google-perftools
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.20 2012/11/02 00:48:32 blueness Exp $
+
+  02 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  google-perftools-2.0.ebuild:
+  keyword ~ppc64, bug #429710
+
+  09 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/gperftools-2.0+glibc-2.16.patch, -google-perftools-1.10.ebuild,
+  -google-perftools-1.9.ebuild, google-perftools-2.0.ebuild:
+  Remove old; add a patch to build with glibc 2.16 (bug #424992); make sure to
+  disable frame pointer omission as upstream seems to be concerned about it.
+
+*google-perftools-2.0 (06 Jul 2012)
+*google-perftools-1.10 (06 Jul 2012)
+
+  06 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +google-perftools-1.10.ebuild, +google-perftools-2.0.ebuild,
+  -files/google-perftools-1.7-syntax.patch, -google-perftools-1.6.ebuild,
+  -google-perftools-1.7.ebuild:
+  Version bump  (both 1.10 and 2.0, the latter masked). Remove old versions.
+
+  25 Jun 2012; Jeff Horelick <jdhore@gentoo.org> google-perftools-1.8.3.ebuild:
+  marked x86 per bug 418445
+
+  24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> google-perftools-1.8.3.ebuild:
+  Stable for amd64, wrt bug #418445
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> google-perftools-1.6.ebuild:
+  inherit flag-o-matic for append-cppflags
+
+*google-perftools-1.9 (24 Dec 2011)
+
+  24 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +google-perftools-1.9.ebuild:
+  Version bump; tests are enabled, but there is a failure still, which needs to
+  be identified.
+
+  28 Aug 2011; Naohiro Aota <naota@gentoo.org> google-perftools-1.8.3.ebuild:
+  Add ~x86-fbsd, bug #377199
+
+*google-perftools-1.8.3 (28 Aug 2011)
+
+  28 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -google-perftools-1.8.2.ebuild, +google-perftools-1.8.3.ebuild:
+  Version bump.
+
+*google-perftools-1.8.2 (12 Aug 2011)
+
+  12 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -google-perftools-1.8.1.ebuild, +google-perftools-1.8.2.ebuild:
+  Bump to new version (even if there should be no big changes).
+
+*google-perftools-1.8.1 (06 Aug 2011)
+
+  06 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -google-perftools-1.8.ebuild, +google-perftools-1.8.1.ebuild:
+  Version bump to fix build with gcc-4.6 (bug #377997).
+
+*google-perftools-1.8 (31 Jul 2011)
+
+  31 Jul 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +google-perftools-1.8.ebuild:
+  Version bump; thanks to Pavel Stratil in bug #376493.
+
+*google-perftools-1.7 (06 Mar 2011)
+
+  06 Mar 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +google-perftools-1.7.ebuild, +files/google-perftools-1.7-syntax.patch:
+  Version bump, thanks to Luca Longinotti in bug #357591.
+
+  09 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -google-perftools-1.5.ebuild:
+  Remove old version.
+
+  13 Oct 2010; Markus Meier <maekke@gentoo.org> google-perftools-1.6.ebuild:
+  x86 stable, bug #340130
+
+  06 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  google-perftools-1.6.ebuild:
+  Stable on amd64 wrt bug #338223
+
+*google-perftools-1.6 (05 Aug 2010)
+
+  05 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  -google-perftools-1.4.ebuild, +google-perftools-1.6.ebuild, metadata.xml:
+  Version bump; improve ebuild to not build tests; add USE flags for debug,
+  minimal and the (new) largepages option; don't even install the
+  documentation with the original build system, so that we don't have to
+  remove it; only build shared libraries, and remove .la files — build
+  time is vastly reduced this way.
+
+*google-perftools-1.5 (31 Jan 2010)
+
+  31 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  +google-perftools-1.5.ebuild:
+  Version bump.
+
+  26 Oct 2009; Sven Wegener <swegener@gentoo.org>
+  google-perftools-1.4.ebuild:
+  Add ~x86 keyword.
+
+*google-perftools-1.4 (23 Oct 2009)
+
+  23 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +google-perftools-1.4.ebuild, +metadata.xml:
+  Initial import of google's perftools package, from Sven Wegener
+  (swegener)'s overlay, upon request by Pavel Stratil. Tests restricted as
+  per bug #290249.

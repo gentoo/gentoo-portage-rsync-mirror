@@ -1,0 +1,22 @@
+# ChangeLog for dev-perl/List-AllUtils
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-AllUtils/ChangeLog,v 1.2 2012/06/24 12:58:26 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  03 May 2012; Torsten Veller <tove@gentoo.org> +List-AllUtils-0.30.0.ebuild,
+  +metadata.xml:
+  Import from ::perl-experimental for biber (#386809)
+
+*List-AllUtils-0.30.0 (27 Feb 2012)
+
+  27 Feb 2012; Kent Fredric <kentfredric@gmail.com>
+  +List-AllUtils-0.30.0.ebuild:
+  Version Bump
+
+*List-AllUtils-0.20.0 (17 Oct 2011)
+
+  17 Oct 2011; Torsten Veller <tove@gentoo.org> +List-AllUtils-0.20.0.ebuild,
+  +metadata.xml:
+  Initial commit (#386809). Thanks to Christopher Schwan

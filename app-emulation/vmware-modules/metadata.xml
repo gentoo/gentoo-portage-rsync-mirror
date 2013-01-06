@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>vmware</herd>
+	<maintainer>
+		<email>vadimk@gentoo.org</email>
+	</maintainer>
+	<longdescription>
+		VMware kernel modules.
+	</longdescription>
+	<use>
+    	<flag name="pax_kernel">Apply patch needed for pax enabled kernels</flag>
+	</use>
+</pkgmetadata>

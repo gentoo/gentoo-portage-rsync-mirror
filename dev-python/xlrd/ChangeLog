@@ -1,0 +1,34 @@
+# ChangeLog for dev-python/xlrd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.7 2012/12/03 21:26:47 bicatali Exp $
+
+  03 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> xlrd-0.8.0.ebuild:
+  Keyword amd64-linux and x86-linux
+
+*xlrd-0.8.0 (16 Oct 2012)
+
+  16 Oct 2012; Ian Whyman <thev00d00@gentoo.org> +xlrd-0.8.0.ebuild:
+  Version bump
+
+  20 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> xlrd-0.7.7.ebuild:
+  Added x86
+
+*xlrd-0.7.7 (19 Apr 2012)
+
+  19 Apr 2012; Patrick Lauer <patrick@gentoo.org> +xlrd-0.7.7.ebuild:
+  Bump
+
+*xlrd-0.7.3 (03 Mar 2012)
+
+  03 Mar 2012; Krzysztof Pawlik <nelchael@gentoo.org> +xlrd-0.7.3.ebuild:
+  Version bump.
+
+  13 Jul 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fix herd tag in metadata.xml
+
+*xlrd-0.7.1 (16 Apr 2010)
+
+  16 Apr 2010; Michael Haubenwallner <haubi@gentoo.org> +xlrd-0.7.1.ebuild,
+  +metadata.xml:
+  add dev-python/xlrd-0.7.1

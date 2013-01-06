@@ -1,0 +1,21 @@
+diff -NrU5 home.orig/torsten/gcc/duconv/duconv.cc home/torsten/gcc/duconv/duconv.cc
+--- home.orig/torsten/gcc/duconv/duconv.cc	2008-06-15 21:58:58.000000000 +0200
++++ home/torsten/gcc/duconv/duconv.cc	2008-06-15 21:59:37.000000000 +0200
+@@ -2,13 +2,14 @@
+  *      See LEGAL_NOTICE file for terms of the license.
+  *
+  *      duconv  ver. 1.2  (fill free change what you like)
+  */
+ 
+-#include <stdio.h>
+-#include <stdlib.h>
+-#include <iostream.h>
++#include <cstdio>
++#include <cstdlib>
++#include <iostream>
++using namespace std;
+ 
+ int comp[][2]={
+ #include "duconvg.tab"
+ };
+ 

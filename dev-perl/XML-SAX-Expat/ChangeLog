@@ -1,0 +1,23 @@
+# ChangeLog for dev-perl/XML-SAX-Expat
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/ChangeLog,v 1.5 2012/06/24 12:58:32 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -XML-SAX-Expat-0.40.ebuild:
+  Cleanup
+
+*XML-SAX-Expat-0.400.0 (27 Aug 2011)
+
+  27 Aug 2011; Torsten Veller <tove@gentoo.org> +XML-SAX-Expat-0.400.0.ebuild:
+  Change version scheme
+
+  17 Dec 2008; Torsten Veller <tove@gentoo.org> XML-SAX-Expat-0.40.ebuild:
+  Add ~amd64 (#250770)
+
+*XML-SAX-Expat-0.40 (23 Aug 2008)
+
+  23 Aug 2008; Torsten Veller <tove@gentoo.org> +metadata.xml,
+  +XML-SAX-Expat-0.40.ebuild:
+  Initial commit for (#168994,#230710). Thanks to Martin von Gagern

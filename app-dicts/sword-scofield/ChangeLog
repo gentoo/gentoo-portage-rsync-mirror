@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/sword-scofield
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-scofield/ChangeLog,v 1.1 2008/05/17 02:39:49 beandog Exp $
+
+*sword-scofield-1.0 (17 May 2008)
+
+  17 May 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-scofield-1.0.ebuild:
+  Initial commit
+

@@ -1,0 +1,29 @@
+# adjust paths in charmc wrapper to point to the proper include
+# and libary directories
+
+--- charm-5.9/src/scripts/charmc	2005-01-25 23:13:30.000000000 +0000
++++ charm-5.9-patched/src/scripts/charmc	2005-09-26 00:52:57.000000000 +0000
+@@ -656,20 +656,9 @@
+ 	PROG_EXT=".exe"
+ fi
+ 
+-CHARMLIB="$CHARMBIN/../lib"
+-CHARMINC="$CHARMBIN/../include"
+-CHARMLIBSO=
+-if test -d "$CHARMBIN/../lib_so" 
+-then
+-  CHARMLIBSO=`cd $CHARMBIN/../lib_so 2>/dev/null && pwd`
+-  #getting absolute path is harder than thought because of symbolic links and ..
+-  #ksh needs cd -P to resolve werid symbolic links, however -P is not portable
+-  #csh is ok too if it exists 
+-  test -z "$CHARMLIBSO" && CHARMLIBSO=`cd -P $CHARMBIN/../lib_so 2>/dev/null && pwd`
+-  test -z "$CHARMLIBSO" && CHARMLIBSO=`csh -c "cd $CHARMBIN/../lib_so >& /dev/null && pwd"`
+-  test -z "$CHARMLIBSO" && echo "$CHARMBIN/../lib_so: not found" && exit 1
+-fi
+-
++CHARMLIB="/usr/lib"
++CHARMINC="/usr/include/gentoo-include"
++CHARMLIBSO="/usr/lib"
+ 
+ 
+ ##############################################################################

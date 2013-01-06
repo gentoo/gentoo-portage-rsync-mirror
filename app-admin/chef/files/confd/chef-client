@@ -1,0 +1,19 @@
+# /etc/conf.d/chef-client: config file for /etc/init.d/chef-client
+
+# The configuration file to use.
+#CONFIGFILE="/etc/chef/client.rb"
+
+# Run chef-client periodically, in seconds.
+#INTERVAL=1800
+
+# The splay time for running at intervals, in seconds.
+#SPLAY=20
+
+# Any radom options you want to pass to chef.
+#CHEF_CLIENT_OPTS=""
+
+# Path to the chef client binary.
+#CHEF_CLIENT_BINARY="/usr/bin/chef-client"
+
+# PID file location.
+#CHEF_CLIENT_PIDFILE="/var/run/chef/client.pid"

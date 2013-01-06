@@ -1,0 +1,136 @@
+# ChangeLog for app-text/llpp
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.33 2013/01/06 03:27:27 zmedico Exp $
+
+  06 Jan 2013; Zac Medico <zmedico@gentoo.org> Manifest:
+  Update Manifest with digests for a snapshot which I've manually uploaded to
+  dev.gentoo.org:/space/distfiles-local/, since the SRC_URI returns a
+  dynamically generated file with random digests.
+
+*llpp-13_p20121123 (28 Nov 2012)
+
+  28 Nov 2012; Michael Weber <xmw@gentoo.org> +llpp-13_p20121123.ebuild:
+  Version bump to current snapshot
+
+*llpp-13 (27 Nov 2012)
+
+  27 Nov 2012; Michael Weber <xmw@gentoo.org> +llpp-13.ebuild:
+  Version bump to git tag.
+
+  09 Aug 2012; Michael Weber <xmw@gentoo.org> llpp-12.ebuild, llpp-9999.ebuild:
+  Fix mupdf dep, apply WM_CLASS patch on -9999 version.
+
+  05 Jun 2012; Michael Weber <xmw@gentoo.org> -files/llpp-WM_CLASS.patch:
+  remove old version
+
+  05 Jun 2012; Michael Weber <xmw@gentoo.org> -llpp-7.ebuild:
+  remove old version
+
+  02 Jun 2012; Michael Weber <xmw@gentoo.org> llpp-12.ebuild:
+  ppc stable (bug 417211)
+
+  23 May 2012; Agostino Sarubbo <ago@gentoo.org> llpp-12.ebuild:
+  Stable for amd64, wrt bug #417211
+
+  23 May 2012; Jeff Horelick <jdhore@gentoo.org> llpp-12.ebuild:
+  marked x86 per bug 417211
+
+  04 May 2012; Michael Weber <xmw@gentoo.org> Manifest:
+  Upload file to mirror system, fix Manifest
+
+*llpp-12 (29 Apr 2012)
+
+  29 Apr 2012; Michael Weber <xmw@gentoo.org> llpp-7.ebuild, -llpp-11.ebuild,
+  +llpp-12.ebuild, llpp-9999.ebuild:
+  Bump to new git tag.
+
+  07 Apr 2012; Michael Weber <xmw@gentoo.org> llpp-9999.ebuild:
+  Lowered dep to >=app-text/mupdf-1.0_rc1
+
+  25 Mar 2012; Michael Weber <xmw@gentoo.org> llpp-9999.ebuild:
+  Update LiveVCS ebuild.
+
+*llpp-11 (25 Mar 2012)
+
+  25 Mar 2012; Michael Weber <xmw@gentoo.org> +llpp-11.ebuild,
+  +files/llpp-11-WM_CLASS.patch:
+  Version bump (thanks Tim Harder, bug 409591)
+
+  28 Jan 2012; Michael Weber <xmw@gentoo.org> llpp-9999.ebuild:
+  fixed mupdf dep
+
+  28 Jan 2012; Michael Weber <xmw@gentoo.org> llpp-9999.ebuild:
+  Fixed -9999.ebuild, set_wm_class gone upstream.
+
+  18 Nov 2011; Michael Weber <xmw@gentoo.org> -llpp-0_p20110504.ebuild,
+  -llpp-5.ebuild, llpp-7.ebuild:
+  Fix x86 compilation bug (thanks to David Abbott for the report, bug 390823).
+  Remove old versions.
+
+  17 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> llpp-7.ebuild:
+  x86 stable wrt bug #390683
+
+  16 Nov 2011; Tony Vroon <chainsaw@gentoo.org> llpp-7.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #390683.
+
+  16 Nov 2011; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Fix email.
+
+*llpp-7 (04 Oct 2011)
+
+  04 Oct 2011; Michael Weber <xmw@gentoo.org> +llpp-7.ebuild, llpp-9999.ebuild,
+  +files/llpp-WM_CLASS.patch:
+  Version bump to v7 git tag, WM_CLASS patch, fixme ocaml[-ocamlopt]
+
+  24 Aug 2011; Markus Meier <maekke@gentoo.org> llpp-0_p20110504.ebuild:
+  x86 stable, bug #378429
+
+  10 Aug 2011; Markos Chandras <hwoarang@gentoo.org> llpp-0_p20110504.ebuild:
+  Stable on amd64 wrt bug #378429
+
+  09 Aug 2011; Michael Weber <xmw@gentoo.org> llpp-9999.ebuild:
+  add help.ml to src_compile
+
+  09 Aug 2011; Michael Weber <xmw@gentoo.org> llpp-9999.ebuild:
+  Update to git-2 eclass, fix src_compile
+
+*llpp-5 (09 Aug 2011)
+
+  09 Aug 2011; Michael Weber <xmw@gentoo.org> -llpp-0_p20110328.ebuild,
+  +llpp-5.ebuild:
+  Version bump to v5 git tag, remove old version.
+
+*llpp-0_p20110504 (12 Jun 2011)
+
+  12 Jun 2011; Michael Weber <xmw@gentoo.org> llpp-0_p20110328.ebuild,
+  +llpp-0_p20110504.ebuild, llpp-9999.ebuild:
+  New tarball, adapt to changes in mupdf
+
+  29 Mar 2011; Michael Weber <xmw@gentoo.org> -llpp-0_p20110202.ebuild,
+  +llpp-0_p20110328.ebuild:
+  New tarball to fix printf problem
+  (http://repo.or.cz/w/llpp.git/commit/c63b0e73feecab3af2f41753290e3f026668cc4a
+  ) and force upgrade to security fixed mupdf-0.8.15 (bug 358029)
+
+*llpp-0_p20110328 (29 Mar 2011)
+
+  17 Feb 2011; Michael Weber <xmw@gentoo.org> llpp-0_p20110202.ebuild:
+  Forgot SRC_URI/S
+
+*llpp-0_p20110202 (17 Feb 2011)
+
+  17 Feb 2011; Michael Weber <xmw@gentoo.org> +llpp-0_p20110202.ebuild,
+  llpp-9999.ebuild:
+  Added snapshot, adjusted mupdf dependency
+
+  01 Feb 2011; Michael Weber <xmw@gentoo.org> llpp-9999.ebuild:
+  added x11-misc/xsel for selection to x clipboard
+
+  31 Jan 2011; Michael Weber <xmw@gentoo.org> llpp-9999.ebuild:
+  added use flage dependecy glut for dev-ml/lablgl
+
+*llpp-9999 (31 Jan 2011)
+
+  31 Jan 2011; Michael Weber <xmw@gentoo.org> +llpp-9999.ebuild, +metadata.xml:
+  Initial import

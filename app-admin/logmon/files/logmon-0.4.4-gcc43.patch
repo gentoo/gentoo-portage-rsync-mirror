@@ -1,0 +1,15 @@
+diff -NrU5 LogMon-0.4.4.orig/LineManip.cc LogMon-0.4.4/LineManip.cc
+--- LogMon-0.4.4.orig/LineManip.cc	2008-12-18 23:07:40.000000000 +0100
++++ LogMon-0.4.4/LineManip.cc	2008-12-18 23:08:14.000000000 +0100
+@@ -3,10 +3,11 @@
+ // 
+ 
+ #include <unistd.h>
+ #include <ncurses.h>
+ #include <ctype.h>
++#include <cstdlib>
+ 
+ #include "LineManip.h"
+ #include "Util.h"
+ 
+ #ifdef __DEBUG__

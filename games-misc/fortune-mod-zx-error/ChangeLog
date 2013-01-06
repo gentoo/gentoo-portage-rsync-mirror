@@ -1,0 +1,34 @@
+# ChangeLog for games-misc/fortune-mod-zx-error
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-zx-error/ChangeLog,v 1.8 2010/12/11 16:19:10 grobian Exp $
+
+  11 Dec 2010; Fabian Groffen <grobian@gentoo.org>
+  fortune-mod-zx-error-1.0.ebuild:
+  Added Prefix keywords
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org>
+  fortune-mod-zx-error-1.0.ebuild:
+  Drop to ~mips
+
+  20 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  fortune-mod-zx-error-1.0.ebuild:
+  Package moved home (bug #289141)
+
+  19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  fortune-mod-zx-error-1.0.ebuild:
+  Add ~x86-fbsd keyword
+
+  27 Aug 2005; Markus Rothe <corsair@gentoo.org>
+  fortune-mod-zx-error-1.0.ebuild:
+  Stable on ppc64
+
+  31 Jul 2005; Markus Rothe <corsair@gentoo.org>
+  fortune-mod-zx-error-1.0.ebuild:
+  Added ~ppc64 (bug #100217)
+
+*fortune-mod-zx-error-1.0 (01 Feb 2004)
+
+  01 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  fortune-mod-zx-error-1.0.ebuild, metadata.xml:
+  initial commit; ebuild by Priit Laes via bug 39947
+

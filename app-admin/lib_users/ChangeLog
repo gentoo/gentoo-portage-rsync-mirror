@@ -1,0 +1,98 @@
+# ChangeLog for app-admin/lib_users
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/ChangeLog,v 1.26 2012/10/24 15:57:16 jer Exp $
+
+  24 Oct 2012; Jeroen Roovers <jer@gentoo.org> -lib_users-0.3.ebuild:
+  Old.
+
+  10 Aug 2012; Justin Lecher <jlec@gentoo.org> lib_users-0.5.ebuild:
+  Keyworded for ~-linux prefix
+
+  13 Jun 2012; Jeroen Roovers <jer@gentoo.org> lib_users-0.5.ebuild:
+  Stable for HPPA (bug #420039).
+
+  11 Jun 2012; Agostino Sarubbo <ago@gentoo.org> lib_users-0.5.ebuild:
+  Stable for amd64, wrt bug #420039
+
+  09 Jun 2012; Jeff Horelick <jdhore@gentoo.org> lib_users-0.5.ebuild:
+  marked x86 per bug 420039
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> lib_users-0.5.ebuild:
+  Marking lib_users-0.5 ppc for bug 420039
+
+  07 Jun 2012; Tobias Klausmann <klausman@gentoo.org> lib_users-0.5.ebuild:
+  Stable on alpha, bug #420039
+
+*lib_users-0.5 (07 May 2012)
+
+  07 May 2012; Tobias Klausmann <klausman@gentoo.org> -lib_users-0.4.ebuild,
+  +lib_users-0.5.ebuild:
+  Version bump
+
+*lib_users-0.4 (07 May 2012)
+
+  07 May 2012; Tobias Klausmann <klausman@gentoo.org> +lib_users-0.4.ebuild:
+  Version bump
+
+  06 Mar 2012; Brent Baude <ranger@gentoo.org> lib_users-0.3.ebuild:
+  Marking lib_users-0.3 ppc for bug 401597
+
+  02 Mar 2012; Agostino Sarubbo <ago@gentoo.org> lib_users-0.3.ebuild:
+  Stable for amd64, wrt bug #401597
+
+  25 Feb 2012; Jeroen Roovers <jer@gentoo.org> -lib_users-0.1.ebuild,
+  -lib_users-0.2.ebuild, lib_users-0.3.ebuild:
+  Stable for HPPA (bug #401597).
+
+  25 Feb 2012; Tobias Klausmann <klausman@gentoo.org> lib_users-0.3.ebuild:
+  Stable on alpha, bug #401597
+
+  14 Mar 2011; Tobias Klausmann <klausman@gentoo.org> lib_users-0.3.ebuild:
+  Add ~alpha keyword
+
+*lib_users-0.3 (08 Feb 2011)
+
+  08 Feb 2011; Tobias Klausmann <klausman@gentoo.org> +lib_users-0.3.ebuild:
+  Version bump
+
+  20 Sep 2010; Hans de Graaff <graaff@gentoo.org> lib_users-0.2.ebuild:
+  Add ~amd64 keyword. Tested on several machines and seems to work as
+  intended.
+
+  31 Jul 2010; Jeroen Roovers <jer@gentoo.org> lib_users-0.1.ebuild,
+  lib_users-0.2.ebuild:
+  Marked ~ppc too.
+
+*lib_users-0.2 (30 Jul 2010)
+
+  30 Jul 2010; Jeroen Roovers <jer@gentoo.org> lib_users-0.1.ebuild,
+  +lib_users-0.2.ebuild:
+  Version bump. Marked ~hppa too.
+
+  28 Jul 2010; Jeroen Roovers <jer@gentoo.org> lib_users-0.1.ebuild:
+  Anticipate changes to the use of the proc filesystem.
+
+  28 Jul 2010; Jeroen Roovers <jer@gentoo.org> lib_users-0.1.ebuild:
+  Set dev-lang/python-2* dependency.
+
+  28 Jul 2010; Jeroen Roovers <jer@gentoo.org> lib_users-0.1.ebuild:
+  Use dev-python/nose to run tests thanks to arfrever.
+
+  28 Jul 2010; Jeroen Roovers <jer@gentoo.org> lib_users-0.1.ebuild:
+  Hail to the python overlords (arfrever): use python.eclass to convert
+  shebangs.
+
+  28 Jul 2010; Jeroen Roovers <jer@gentoo.org> lib_users-0.1.ebuild:
+  Gah, put it in /usr/bin already, thanks to klausman.
+
+  28 Jul 2010; Jeroen Roovers <jer@gentoo.org> lib_users-0.1.ebuild:
+  Improve test phase.
+
+  28 Jul 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Add myself.
+
+*lib_users-0.1 (28 Jul 2010)
+
+  28 Jul 2010; Jeroen Roovers <jer@gentoo.org> +lib_users-0.1.ebuild,
+  +metadata.xml:
+  Initial commit.

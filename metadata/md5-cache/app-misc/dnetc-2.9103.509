@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm preinst prepare
+DESCRIPTION=distributed.net client
+EAPI=2
+HOMEPAGE=http://www.distributed.net
+KEYWORDS=~amd64 ~x86
+LICENSE=distributed.net
+RDEPEND=net-dns/bind-tools
+RESTRICT=mirror
+SLOT=0
+SRC_URI=x86? ( http://http.distributed.net/pub/dcti/v2.9103/dnetc509-linux-x86-elf-uclibc.tar.gz ) amd64? ( http://http.distributed.net/pub/dcti/v2.9103/dnetc509-linux-amd64-elf.tar.gz )
+_eclasses_=user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=4797f11e3e6ac48d311c12a3baca5abf

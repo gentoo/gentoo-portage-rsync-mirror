@@ -1,0 +1,28 @@
+# ChangeLog for app-cdr/mirage2iso
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mirage2iso/ChangeLog,v 1.6 2012/12/15 12:33:50 mgorny Exp $
+
+*mirage2iso-9999 (15 Dec 2012)
+
+  15 Dec 2012; Michał Górny <mgorny@gentoo.org> +mirage2iso-9999.ebuild:
+  Import the live ebuild.
+
+  30 Aug 2012; Michał Górny <mgorny@gentoo.org> metadata.xml,
+  mirage2iso-0.3.1.ebuild:
+  Sync to the live ebuild, and fix build issues with gold linker.
+
+  24 Apr 2012; Michał Górny <mgorny@gentoo.org> mirage2iso-0.3.1.ebuild:
+  Update to use mirror://.
+
+  05 Jan 2011; Michał Górny <mgorny@gentoo.org> mirage2iso-0.3.1.ebuild:
+  Fix needless double-unpacking of tests.
+
+  05 Jan 2011; Michał Górny <mgorny@gentoo.org> mirage2iso-0.3.1.ebuild:
+  EAPI bump.
+
+*mirage2iso-0.3.1 (02 Jan 2011)
+
+  02 Jan 2011; Michał Górny <mgorny@gentoo.org> +mirage2iso-0.3.1.ebuild,
+  +metadata.xml:
+  New ebuild for mirage2iso CD/DVD image converter, as requested in bug
+  #283565.

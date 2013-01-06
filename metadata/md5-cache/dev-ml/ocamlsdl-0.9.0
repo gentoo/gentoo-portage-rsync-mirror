@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=>=dev-lang/ocaml-3.04 >=media-libs/libsdl-1.2 opengl? ( >=dev-ml/lablgl-0.98 ) >=media-libs/sdl-mixer-1.2 >=media-libs/sdl-image-1.2 truetype? ( >=media-libs/sdl-ttf-2.0 ) >=dev-ml/findlib-1.0.4-r1
+DESCRIPTION=OCaml SDL Bindings
+HOMEPAGE=http://ocamlsdl.sourceforge.net
+IUSE=doc opengl truetype
+KEYWORDS=~amd64 ppc x86
+LICENSE=LGPL-2
+RDEPEND=>=dev-lang/ocaml-3.04 >=media-libs/libsdl-1.2 opengl? ( >=dev-ml/lablgl-0.98 ) >=media-libs/sdl-mixer-1.2 >=media-libs/sdl-image-1.2 truetype? ( >=media-libs/sdl-ttf-2.0 )
+SLOT=0
+SRC_URI=mirror://sourceforge/ocamlsdl/ocamlsdl-0.9.0.tar.gz
+_eclasses_=findlib	9cf6020ee5481f39f1aa566a323f9868
+_md5_=90a9818313f46188bfc5e6bd1c994602

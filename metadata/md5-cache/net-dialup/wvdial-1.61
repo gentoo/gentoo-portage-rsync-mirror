@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=>=net-libs/wvstreams-4.4 virtual/pkgconfig
+DESCRIPTION=Excellent program to automatically configure PPP sessions
+EAPI=3
+HOMEPAGE=http://alumnit.ca/wiki/?WvDial
+KEYWORDS=alpha amd64 hppa ppc sparc x86
+LICENSE=LGPL-2
+RDEPEND=>=net-libs/wvstreams-4.4 net-dialup/ppp
+SLOT=0
+SRC_URI=http://wvstreams.googlecode.com/files/wvdial-1.61.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=54c6bb01a6b45425f3a4f9bef3191b4c

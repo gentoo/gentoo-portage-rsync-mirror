@@ -1,0 +1,20 @@
+# ChangeLog for x11-themes/shiki-colors
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/shiki-colors/ChangeLog,v 1.4 2012/01/04 18:04:36 phajdan.jr Exp $
+
+  04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> shiki-colors-4.6.ebuild:
+  x86 stable wrt bug #394439
+
+  15 Dec 2011; Agostino Sarubbo <ago@gentoo.org> shiki-colors-4.6.ebuild:
+  Stable for AMD64, wrt bug #394439
+
+  22 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  shiki-colors-4.6.ebuild:
+  Fix slot-deps on gnome libs
+
+*shiki-colors-4.6 (14 Mar 2010)
+
+  14 Mar 2010; Pacho Ramos <pacho@gentoo.org> +shiki-colors-4.6.ebuild,
+  +metadata.xml:
+  Initial import of Shiki-Colors themes including a Gentoo one
+

@@ -1,0 +1,11 @@
+--- a/mmmix.w	2004-07-11 02:39:28.000000000 +0200
++++ b/mmmix.w	2010-09-18 03:16:39.000000000 +0200
+@@ -34,6 +34,8 @@
+ 
+ @c
+ #include <stdio.h>
++#include <stdlib.h> /* exit() */
++#include <string.h> /* strlen() */
+ #include "mmix-pipe.h"
+ @#
+ char *config_file_name, *prog_file_name;

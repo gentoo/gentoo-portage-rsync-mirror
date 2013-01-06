@@ -1,0 +1,15 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/fftools.desc,v 1.1 2012/03/22 11:31:22 aballier Exp $
+
+# This file contains descriptions of FFTOOLS USE-EXPANDED variables.
+# Keep it sorted.
+
+aviocat - cat's an URL to another one, useful for dumping streams.
+cws2fws - converts cws files (Macromedia Flash, compressed) to fws ones (Macromedia Flash, uncompressed).
+ffeval - A simple expression evalutor.
+graph2dot - A tool to convert a libavfilter graph to a dot file.
+ismindex - A tool for creating smooth streaming manifests.
+pktdumper - Dumps packets as demuxed by libavformat.
+qt-faststart - Rearranges a Quicktime file to facilitate network streaming.
+trasher - Writes burts of random data into a file. Great for testing error robustness/resilience/concealment.

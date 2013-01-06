@@ -1,0 +1,43 @@
+# ChangeLog for app-text/jist
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jist/ChangeLog,v 1.8 2013/01/04 23:34:44 hasufell Exp $
+
+*jist-1.3.1 (04 Jan 2013)
+
+  04 Jan 2013; Julian Ospald <hasufell@gentoo.org> -jist-1.0.1.ebuild,
+  -jist-1.1.0.ebuild, -jist-1.2.0.ebuild, +jist-1.3.1.ebuild:
+  version bump, remove old
+
+*jist-1.3.0 (10 Dec 2012)
+
+  10 Dec 2012; Julian Ospald <hasufell@gentoo.org> +jist-1.3.0.ebuild:
+  version bump
+
+*jist-1.2.0 (11 Nov 2012)
+
+  11 Nov 2012; Julian Ospald <hasufell@gentoo.org> +jist-1.2.0.ebuild:
+  version bump
+
+*jist-1.1.0 (19 Oct 2012)
+
+  19 Oct 2012; Julian Ospald <hasufell@gentoo.org> +jist-1.1.0.ebuild:
+  version bump
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> jist-1.0.1.ebuild:
+  x86 stable wrt bug #435898
+
+  23 Sep 2012; Agostino Sarubbo <ago@gentoo.org> jist-1.0.1.ebuild:
+  Stable for amd64, wrt bug #435898
+
+*jist-1.0.1 (20 Aug 2012)
+
+  20 Aug 2012; Julian Ospald <hasufell@gentoo.org> -jist-1.0.0.ebuild,
+  +jist-1.0.1.ebuild:
+  version bump, remove old
+
+*jist-1.0.0 (19 Aug 2012)
+
+  19 Aug 2012; Julian Ospald <hasufell@gentoo.org> +jist-1.0.0.ebuild,
+  +metadata.xml:
+  initial commit thanks to Hans de Graaff
+

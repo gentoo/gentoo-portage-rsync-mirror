@@ -1,0 +1,64 @@
+# ChangeLog for app-dicts/myspell-de-alt
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de-alt/ChangeLog,v 1.14 2012/06/17 10:50:18 scarabeus Exp $
+
+*myspell-de-alt-20061123 (17 Jun 2012)
+
+  17 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  -myspell-de-alt-20060124.ebuild, +myspell-de-alt-20061123.ebuild:
+  Pseudo version bump to use new eclass and file layout. Use the version number
+  from the web.
+
+  17 May 2012; Alexis Ballier <aballier@gentoo.org>
+  myspell-de-alt-20060124.ebuild:
+  keyword ~amd64-fbsd
+
+  26 Jun 2009; Alexis Ballier <aballier@gentoo.org>
+  myspell-de-alt-20060124.ebuild:
+  keyword ~x86-fbsd, bug #264108
+
+  20 May 2009; nixnut <nixnut@gentoo.org> myspell-de-alt-20060124.ebuild:
+  ppc stable #269564
+
+  19 May 2009; Brent Baude <ranger@gentoo.org>
+  myspell-de-alt-20060124.ebuild:
+  stable ppc64, bug 269564
+
+  19 May 2009; Jeroen Roovers <jer@gentoo.org>
+  myspell-de-alt-20060124.ebuild:
+  Stable for HPPA (bug #269564).
+
+  15 May 2009; Raúl Porcel <armin76@gentoo.org>
+  myspell-de-alt-20060124.ebuild:
+  alpha/arm/ia64/sh stable wrt #269564
+
+  14 May 2009; Tiago Cunha <tcunha@gentoo.org>
+  myspell-de-alt-20060124.ebuild:
+  stable sparc, bug 269564
+
+  14 May 2009; Markus Meier <maekke@gentoo.org>
+  myspell-de-alt-20060124.ebuild:
+  amd64/x86 stable, bug #269564
+
+  14 Apr 2009; Jeroen Roovers <jer@gentoo.org>
+  myspell-de-alt-20060124.ebuild:
+  Marked ~hppa (bug #264108).
+
+  02 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  myspell-de-alt-20060124.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #264108
+
+  01 Apr 2009; Joseph Jezak <josejx@gentoo.org>
+  myspell-de-alt-20060124.ebuild:
+  Marked ~ppc/~ppc64 for bug #264108.
+
+  30 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  myspell-de-alt-20060124.ebuild:
+  Add ~arm/~sh wrt #261064
+
+*myspell-de-alt-20060124 (28 Mar 2009)
+
+  28 Mar 2009; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
+  +myspell-de-alt-20060124.ebuild:
+  Initial import, bug 258654. Ebuild contributed by me.
+

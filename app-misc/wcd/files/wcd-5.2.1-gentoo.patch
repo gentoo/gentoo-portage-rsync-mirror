@@ -1,0 +1,60 @@
+ src/Makefile |   13 +++++++------
+ 1 files changed, 7 insertions(+), 6 deletions(-)
+
+diff --git a/src/Makefile b/src/Makefile
+index 9a37e3b..7aac6eb 100644
+--- a/src/Makefile
++++ b/src/Makefile
+@@ -46,14 +46,14 @@ endif
+ 
+ include version.mk
+ 
+-CC		= gcc
++CC		?= gcc
+ STATIC		=
+-STRIP		= strip
++STRIP		= 
+ 
+ ENABLE_NLS = 1
+ 
+ PACKAGE		= wcd
+-EXT		= .exe
++EXT		= 
+ PROGRAM         = $(PACKAGE)$(EXT)
+ BIN		= $(PROGRAM)
+ 
+@@ -310,7 +310,7 @@ endif
+ # dynamically) comment the LDFLAGS line and add the 'libncurses.a' file
+ # (often found as /usr/lib/libncurses.a) to the OBJS1 list.
+ 
+-CFLAGS	= -O2 -Wall -Wextra -Wno-unused-parameter -Wconversion $(RPM_OPT_FLAGS)
++CFLAGS	+= -Wall
+ 
+ EXTRA_CFLAGS	= -Ic3po \
+ 		  $(CFLAGS_VERSION) \
+@@ -337,7 +337,7 @@ ifdef ASCII_TREE
+ 	EXTRA_CFLAGS += -DASCII_TREE
+ endif
+ 
+-LDFLAGS		= $(RPM_OPT_FLAGS) \
++LIBS		= $(RPM_OPT_FLAGS) \
+ 	          $(LIB_CURSES) \
+ 	          $(LIB_UNISTRING) \
+ 	          $(LDFLAGS_EXTRA) \
+@@ -387,6 +387,7 @@ status:
+ 	@echo "DEFS          = $(DEFS)"
+ 	@echo "DEFS_CURSES   = $(DEFS_CURSES)"
+ 	@echo "EXTRA_DEFS    = $(EXTRA_DEFS)"
++	@echo "LIBS          = $(LIBS)"
+ 	@echo "LDFLAGS       = $(LDFLAGS)"
+ 	@echo "LDFLAGS_EXTRA = $(LDFLAGS_EXTRA)"
+ 	@echo "CFLAGS        = $(CFLAGS)"
+@@ -396,7 +397,7 @@ status:
+ 
+ $(BIN): $(OBJS1)
+ 	$(MAKE) status
+-	$(CC) $(OBJS1) $(LDFLAGS) -o $@
++	$(CC) $(OBJS1) $(LDFLAGS) -o $@ $(LIBS)
+ 
+ %.o: %.c
+ 	$(CC) $(CFLAGS) $(EXTRA_CFLAGS) $(DEFS) -c $< -o $@

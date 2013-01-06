@@ -1,0 +1,17 @@
+# ChangeLog for media-video/google2srt
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/google2srt/ChangeLog,v 1.2 2011/07/10 02:18:34 sbriesen Exp $
+
+*google2srt-0.5.3 (10 Jul 2011)
+
+  10 Jul 2011; Stefan Briesenick <sbriesen@gentoo.org> google2srt-0.5.2.ebuild,
+  +google2srt-0.5.3.ebuild, -files/icon.png:
+  version bump + icon.png moved to distfiles
+
+*google2srt-0.5.2 (02 Aug 2010)
+
+  02 Aug 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  +google2srt-0.5.2.ebuild, +files/build.xml, +files/icon.png,
+  +metadata.xml:
+  initial commit
+

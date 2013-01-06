@@ -1,0 +1,29 @@
+# ChangeLog for dev-util/xxdiff
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.58 2012/11/30 20:39:15 hwoarang Exp $
+
+  30 Nov 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/xxdiff-4.0_beta1_p20110426-gcc47.patch,
+  xxdiff-4.0_beta1_p20110426.ebuild:
+  Apply upstream patch to fix building with gcc-4.7. Bug #442302
+
+  05 Oct 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Taking over package. Adding qt@ as backup herd
+
+  28 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Push to maintainer-needed.
+
+  14 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xxdiff-4.0_beta1_p20110426.ebuild:
+  amd64/x86 stable
+
+  27 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xxdiff-4.0_beta1_p20110426.ebuild:
+  Remove usage of qPixmapFromMimeSource to avoid x11-libs/qt-qt3support:4 wrt
+  #365019 by Rafał Mużyło
+
+*xxdiff-4.0_beta1_p20110426 (26 Apr 2011)
+
+  26 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +xxdiff-4.0_beta1_p20110426.ebuild:
+  Initial commit.

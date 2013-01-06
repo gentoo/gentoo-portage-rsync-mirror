@@ -1,0 +1,13 @@
+=== modified file 'wicd/configmanager.py'
+--- wicd/configmanager.py	2011-12-08 17:56:03 +0000
++++ wicd/configmanager.py	2011-12-11 19:41:57 +0000
+@@ -37,7 +37,7 @@
+     conf = open(path)
+     newconf = ''
+     for line in conf:
+-        if '[' not in line or '=' not in line:
++        if '[' in line or '=' in line:
+             newconf += line
+     conf.close()
+     conf = open(path, 'w')
+

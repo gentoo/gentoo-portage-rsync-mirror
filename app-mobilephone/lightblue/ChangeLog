@@ -1,0 +1,15 @@
+# ChangeLog for app-mobilephone/lightblue
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/lightblue/ChangeLog,v 1.4 2010/08/08 15:04:50 jmbsvicetto Exp $
+
+  08 Aug 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removed deathwing00 from metadata as he took an extended away.
+
+  27 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  lightblue-0.4.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  02 Jun 2009; Ioannis Aslanidis <deathwing00@gentoo.org> ChangeLog:
+  Initial working version.
+

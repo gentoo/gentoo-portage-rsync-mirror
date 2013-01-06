@@ -1,0 +1,20 @@
+# ChangeLog for dev-python/python-digest
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-digest/ChangeLog,v 1.4 2012/11/13 10:30:29 idella4 Exp $
+
+  14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Updating maintainer, metadata.xml
+
+  04 May 2012; Corentin Chary <iksaif@gentoo.org> python-digest-1.7.ebuild:
+  Fix DESCRIPTION
+
+  27 Apr 2012; Theo Chatzimichos <tampakrap@gentoo.org>
+  python-digest-1.7.ebuild:
+  Add ~x86
+
+*python-digest-1.7 (27 Apr 2012)
+
+  27 Apr 2012; Theo Chatzimichos <tampakrap@gentoo.org>
+  +files/python-digest-1.7-unittest.patch, +metadata.xml,
+  +python-digest-1.7.ebuild:
+  Initial commit, ebuild by idella4

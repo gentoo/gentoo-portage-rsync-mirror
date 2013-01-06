@@ -1,0 +1,162 @@
+# ChangeLog for app-editors/adie
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.40 2012/12/22 21:46:47 mabi Exp $
+
+*adie-1.7.37 (22 Dec 2012)
+
+  22 Dec 2012; Matti Bickel <mabi@gentoo.org> +adie-1.7.37.ebuild:
+  version bump
+
+*adie-1.7.33 (04 Jul 2012)
+
+  04 Jul 2012; Matti Bickel <mabi@gentoo.org> +adie-1.7.33.ebuild:
+  version bump
+
+*adie-1.7.32 (02 Mar 2012)
+
+  02 Mar 2012; Matti Bickel <mabi@gentoo.org> +adie-1.7.32.ebuild,
+  -adie-1.6.35.ebuild:
+  version bump (bug #403977)
+
+  27 Jul 2010; Jeroen Roovers <jer@gentoo.org> adie-1.6.36.ebuild:
+  Stable for HPPA (bug #309199).
+
+  09 May 2010; Raúl Porcel <armin76@gentoo.org> adie-1.6.36.ebuild:
+  sparc stable wrt #309199
+
+  31 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> adie-1.6.36.ebuild:
+  x86 stable wrt bug #309199
+
+  29 Mar 2010; Pacho Ramos <pacho@gentoo.org> adie-1.6.36.ebuild:
+  amd64 stable, bug 309199
+
+  15 Mar 2010; nixnut <nixnut@gentoo.org> adie-1.6.36.ebuild:
+  ppc stable #309199
+
+  20 Jan 2010; Brent Baude <ranger@gentoo.org> adie-1.6.36.ebuild:
+  Marking adie-1.6.36 ppc64 for bug 276854
+
+*adie-1.6.36 (28 Jul 2009)
+
+  28 Jul 2009; Jeroen Roovers <jer@gentoo.org> +adie-1.6.36.ebuild:
+  Version bump (bug #276854).
+
+  17 Apr 2009; Matti Bickel <mabi@gentoo.org> -adie-1.6.34.ebuild:
+  cleanup
+
+  10 Apr 2009; Raúl Porcel <armin76@gentoo.org> adie-1.6.35.ebuild:
+  sparc stable wrt #263795
+
+  04 Apr 2009; Markus Meier <maekke@gentoo.org> adie-1.6.35.ebuild:
+  amd64/x86 stable, bug #263795
+
+  03 Apr 2009; Brent Baude <ranger@gentoo.org> adie-1.6.35.ebuild:
+  Marking adie-1.6.35 ppc64 stable for bug 263795
+
+  31 Mar 2009; Jeroen Roovers <jer@gentoo.org> adie-1.6.35.ebuild:
+  Stable for HPPA (bug #263795).
+
+  30 Mar 2009; Brent Baude <ranger@gentoo.org> adie-1.6.35.ebuild:
+  Marking adie-1.6.35 ppc for bug 263795
+
+*adie-1.6.35 (01 Mar 2009)
+
+  01 Mar 2009; Matti Bickel <mabi@gentoo.org> metadata.xml,
+  -adie-1.6.30.ebuild, -adie-1.6.31.ebuild, +adie-1.6.35.ebuild:
+  removed old builds, added new version using EAPI 1 slot deps, to avoid
+  bumping when nothing really changed in the fox stable api. This will be the
+  last bump for adie-1.6
+
+  05 Dec 2008; Raúl Porcel <armin76@gentoo.org> adie-1.6.34.ebuild:
+  sparc stable wrt #249286
+
+  03 Dec 2008; Markus Meier <maekke@gentoo.org> adie-1.6.34.ebuild:
+  amd64/x86 stable, bug #249286
+
+  02 Dec 2008; Jeroen Roovers <jer@gentoo.org> adie-1.6.34.ebuild:
+  Stable for HPPA (bug #249286).
+
+*adie-1.6.34 (03 Oct 2008)
+
+  03 Oct 2008; Matti Bickel <mabi@gentoo.org> +adie-1.6.34.ebuild:
+  version bump
+
+  19 Feb 2008; Ferris McCormick <fmccor@gentoo.org> adie-1.6.30.ebuild:
+  Sparc stable, part of Bug #199853.
+
+*adie-1.6.31 (17 Feb 2008)
+
+  17 Feb 2008; Matti Bickel <mabi@gentoo.org> -adie-1.6.27.ebuild,
+  -adie-1.6.29.ebuild, +adie-1.6.31.ebuild:
+  version bump. cleanups
+
+  21 Nov 2007; Jeroen Roovers <jer@gentoo.org> adie-1.6.30.ebuild:
+  Stable for HPPA (bug #199853).
+
+  21 Nov 2007; Markus Meier <maekke@gentoo.org> adie-1.6.30.ebuild:
+  x86 stable, bug #199853
+
+  21 Nov 2007; Samuli Suominen <drac@gentoo.org> adie-1.6.30.ebuild:
+  amd64 stable wrt #199853
+
+*adie-1.6.30 (20 Nov 2007)
+
+  20 Nov 2007; Matti Bickel <mabi@gentoo.org> -adie-1.6.25.ebuild,
+  +adie-1.6.30.ebuild:
+  version bump and removal
+
+  09 Oct 2007; Jeroen Roovers <jer@gentoo.org> adie-1.6.27.ebuild:
+  Stable for HPPA (bug #194813).
+
+*adie-1.6.29 (01 Oct 2007)
+
+  01 Oct 2007; Matti Bickel <mabi@gentoo.org> -adie-1.6.19.ebuild,
+  +adie-1.6.29.ebuild:
+  version bump. cleanup
+
+*adie-1.6.27 (06 Jun 2007)
+
+  06 Jun 2007; Matti Bickel <mabi@gentoo.org> +adie-1.6.27.ebuild:
+  version bump
+
+  06 Jun 2007; Jeroen Roovers <jer@gentoo.org> adie-1.6.25.ebuild:
+  Stable for HPPA (bug #181017).
+
+  25 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  corrected ChangeLog, so it conforms to our standards
+
+  13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add herd
+
+*adie-1.6.25 (28 Mar 2007)
+
+  28 Mar 2007; Matti Bickel <mabi@gentoo.org> +adie-1.6.25.ebuild:
+  Version bump
+
+  05 Jan 2007; Danny van Dyk <kugelfang@gentoo.org> -adie-1.4.12.ebuild:
+  QA: Removed unused versions.
+
+  24 Dec 2006; Matti Bickel <mabi@gentoo.org> -adie-1.2.15.ebuild,
+  -adie-1.5.4.ebuild:
+  cleanup
+
+*adie-1.6.19 (20 Dec 2006)
+
+  20 Dec 2006; Matti Bickel <mabi@gentoo.org> +adie-1.6.19.ebuild:
+  revbump (removal of -1.5.4 pending)
+
+  30 Oct 2006; Matti Bickel <mabi@gentoo.org> adie-1.2.15.ebuild,
+  adie-1.4.12.ebuild, adie-1.5.4.ebuild:
+  Killed ranged deps, set DEPEND (bug #153328)
+
+  29 Oct 2006; Matti Bickel <mabi@gentoo.org> -adie-1.0.53.ebuild:
+  Removing stale ebuild (bug #153234)
+
+*adie-1.2.15 (07 May 2005)
+*adie-1.4.12 (07 May 2005)
+*adie-1.5.4.ebuild (07 May 2005)
+	
+  07 May 2005; <rphillips@gentoo.org> +adie-1.0.53.ebuild,
+  +adie-1.2.15.ebuild, +adie-1.4.12.ebuild, +adie-1.5.4.ebuild:
+  Added Yaakov Selkowitz's eclass based fox ebuilds for testing.
+  Fixes #88924

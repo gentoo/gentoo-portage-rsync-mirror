@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/nts
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/nts/ChangeLog,v 1.1 2011/01/19 04:15:39 lack Exp $
+
+*nts-74 (19 Jan 2011)
+
+  19 Jan 2011; Jim Ramsay <lack@gentoo.org> +nts-74.ebuild, +metadata.xml:
+  New package: Note Taking made Simple, an intuitive note taking application
+

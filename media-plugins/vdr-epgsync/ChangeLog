@@ -1,0 +1,42 @@
+# ChangeLog for media-plugins/vdr-epgsync
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsync/ChangeLog,v 1.7 2011/02/14 21:04:38 hd_brummy Exp $
+
+  14 Feb 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-epgsync-0.0.4.ebuild:
+  fixed bug #354833, thanks to T.Veller to report this
+
+  28 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-epgsync-0.0.3.ebuild, vdr-epgsync-0.0.4.ebuild:
+  eapi=3; cleanup
+
+  28 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-epgsync-0.0.2.ebuild, vdr-epgsync-0.0.4.ebuild:
+  bug 349931 fixed, thx to J.Ruis; cleanup
+
+*vdr-epgsync-0.0.4 (22 Dec 2010)
+
+  22 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  files/vdr-epgsync-0.0.2-include.patch, vdr-epgsync-0.0.3.ebuild,
+  +vdr-epgsync-0.0.4.ebuild:
+  fixed wrong include, bug #320783; version bump; eapi=2
+
+*vdr-epgsync-0.0.3 (24 Feb 2009)
+
+  24 Feb 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr-epgsync-0.0.3-Makefile.diff, +vdr-epgsync-0.0.3.ebuild:
+  version bumped; also include a makefile patch to install locales; Thanks
+  to T.Reinhold
+
+  26 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-epgsync-0.0.2.ebuild:
+  Added a usefull description.
+
+*vdr-epgsync-0.0.2 (27 Sep 2006)
+
+  27 Sep 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr-epgsync-0.0.2-include.patch, +metadata.xml,
+  +vdr-epgsync-0.0.2.ebuild:
+  initial ebuild; thx to Mentox at
+  http://www.vdr-portal.de/board/thread.php?postid=498072
+

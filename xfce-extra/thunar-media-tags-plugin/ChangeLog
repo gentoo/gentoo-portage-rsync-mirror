@@ -1,0 +1,22 @@
+# ChangeLog for xfce-extra/thunar-media-tags-plugin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-media-tags-plugin/ChangeLog,v 1.11 2012/12/03 22:00:23 naota Exp $
+
+  03 Dec 2012;  <naota@gentoo.org> thunar-media-tags-plugin-0.2.0.ebuild:
+  Add ~x86-fbsd wrt #236834
+
+  28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
+  thunar-media-tags-plugin-0.2.0.ebuild:
+  EAPI5
+
+  04 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  thunar-media-tags-plugin-0.2.0.ebuild:
+  Use virtual/pkgconfig.
+
+*thunar-media-tags-plugin-0.2.0 (01 Dec 2011)
+
+  01 Dec 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +thunar-media-tags-plugin-0.2.0.ebuild,
+  +files/thunar-media-tags-plugin-0.2.0-linkorder.patch:
+  Initial commit (or rather restore the ebuild since it was only now ported to
+  Xfce 4.8.x)

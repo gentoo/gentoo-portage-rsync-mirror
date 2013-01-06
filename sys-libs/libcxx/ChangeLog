@@ -1,0 +1,46 @@
+# ChangeLog for sys-libs/libcxx
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.8 2012/11/05 12:02:01 aballier Exp $
+
+*libcxx-0.0_p20121105 (05 Nov 2012)
+
+  05 Nov 2012; Alexis Ballier <aballier@gentoo.org>
+  +libcxx-0.0_p20121105.ebuild:
+  bump a new snapshot
+
+  01 Nov 2012; Alexis Ballier <aballier@gentoo.org>
+  -libcxx-0.0_p20120528.ebuild:
+  remove old
+
+  01 Nov 2012; Alexis Ballier <aballier@gentoo.org>
+  libcxx-0.0_p20120911.ebuild, libcxx-9999.ebuild:
+  update description: C++0x -> C++11
+
+  22 Sep 2012; Alexis Ballier <aballier@gentoo.org>
+  libcxx-0.0_p20120911.ebuild, libcxx-9999.ebuild:
+  keyword ~amd64-fbsd
+
+*libcxx-0.0_p20120911 (11 Sep 2012)
+
+  11 Sep 2012; Alexis Ballier <aballier@gentoo.org>
+  +libcxx-0.0_p20120911.ebuild:
+  bump a new snapshot
+
+*libcxx-0.0_p20120528 (28 May 2012)
+
+  28 May 2012; Alexis Ballier <aballier@gentoo.org>
+  -libcxx-0.0_p20120523.ebuild, +libcxx-0.0_p20120528.ebuild:
+  new snapshot built against libcxxrt
+
+  28 May 2012; Alexis Ballier <aballier@gentoo.org> libcxx-9999.ebuild,
+  +files/cxxrt.patch:
+  build it on top of libcxxrt as done in FreeBSD
+
+*libcxx-9999 (24 May 2012)
+*libcxx-0.0_p20120523 (24 May 2012)
+
+  24 May 2012; Alexis Ballier <aballier@gentoo.org>
+  +libcxx-0.0_p20120523.ebuild, +libcxx-9999.ebuild, +files/multilib.patch,
+  +files/prepare_snapshot.sh, +metadata.xml:
+  initial import, ebuild by me
+

@@ -1,0 +1,19 @@
+commit 7cb560b4d52f27f9ccb86a9cd643d0288514335f
+Author: William Cohen <wcohen@redhat.com>
+Date:   Thu May 26 11:21:39 2011 -0400
+
+    Avoid using [[ in error_if_not_basename() to improve posix compliance.
+
+diff --git a/utils/opcontrol b/utils/opcontrol
+index f002f01..cdff19f 100644
+--- a/utils/opcontrol
++++ b/utils/opcontrol
+@@ -89,7 +89,7 @@ error_if_not_number()
+ error_if_not_basename()
+ {
+ 	bname=`basename "$2"`
+-	if [[ "x$2" !=  "x$bname" ]] ; then
++	if test "$2" !=  "$bname"; then
+ 		echo "Argument for $1, $2, is not a base filename." >&2
+ 		exit 1
+ 	fi

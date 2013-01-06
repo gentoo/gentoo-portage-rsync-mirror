@@ -1,0 +1,24 @@
+diff -Nru quagga-0.99.8.orig/lib/Makefile.am quagga-0.99.8/lib/Makefile.am
+--- quagga-0.99.8.orig/lib/Makefile.am	2006-06-27 10:48:16.000000000 +0300
++++ quagga-0.99.8/lib/Makefile.am	2007-08-13 22:09:10.000000000 +0300
+@@ -18,7 +18,7 @@
+ 
+ libzebra_la_DEPENDENCIES = @LIB_REGEX@
+ 
+-libzebra_la_LIBADD = @LIB_REGEX@
++libzebra_la_LIBADD = @LIB_REGEX@ @LIBCAP@
+ 
+ pkginclude_HEADERS = \
+ 	buffer.h checksum.h command.h filter.h getopt.h hash.h \
+diff -Nru quagga-0.99.8.orig/zebra/Makefile.am quagga-0.99.8/zebra/Makefile.am
+--- quagga-0.99.8.orig/zebra/Makefile.am	2007-05-02 18:28:33.000000000 +0300
++++ quagga-0.99.8/zebra/Makefile.am	2007-08-13 22:09:10.000000000 +0300
+@@ -36,7 +36,7 @@
+ 	connected.h ioctl.h rib.h rt.h zserv.h redistribute.h debug.h rtadv.h \
+ 	interface.h ipforward.h irdp.h router-id.h kernel_socket.h
+ 
+-zebra_LDADD = $(otherobj) $(LIBCAP) $(LIB_IPV6) ../lib/libzebra.la
++zebra_LDADD = $(otherobj) ../lib/libzebra.la $(LIBCAP) $(LIB_IPV6)
+ 
+ testzebra_LDADD = $(LIBCAP) $(LIB_IPV6) ../lib/libzebra.la
+ 

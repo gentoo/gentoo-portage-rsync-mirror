@@ -1,0 +1,39 @@
+diff -ru fluxbox-1.0.0.orig/src/FbTk/FbString.cc fluxbox-1.0.0/src/FbTk/FbString.cc
+--- fluxbox-1.0.0.orig/src/FbTk/FbString.cc	2008-03-11 10:36:10 +0100
++++ fluxbox-1.0.0/src/FbTk/FbString.cc	2008-03-11 10:39:29 +0100
+@@ -46,7 +46,16 @@
+ #ifdef HAVE_ICONV
+ #include <iconv.h>
+ #endif // HAVE_ICONV
++
++#if defined(__INTERIX)
++extern "C" {
++// interix has a broken langinfo.h without extern "C"
++#include <langinfo.h>
++}
++#else
+ #include <langinfo.h>
++#endif
++
+ #include <locale.h>
+ 
+ #include <iostream>
+diff -ru fluxbox-1.0.0.orig/src/FbTk/Font.cc fluxbox-1.0.0/src/FbTk/Font.cc
+--- fluxbox-1.0.0.orig/src/FbTk/Font.cc	2008-03-11 10:36:10 +0100
++++ fluxbox-1.0.0/src/FbTk/Font.cc	2008-03-11 10:39:44 +0100
+@@ -68,7 +68,15 @@
+ #include <list>
+ #include <map>
+ #include <typeinfo>
++
++#if defined(__INTERIX)
++extern "C" {
++// interix has a broken langinfo.h without extern "C"
++#include <langinfo.h>
++}
++#else
+ #include <langinfo.h>
++#endif
+ 
+ #include <errno.h>
+ 

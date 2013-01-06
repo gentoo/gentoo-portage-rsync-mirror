@@ -1,0 +1,10 @@
+DEFINED_PHASES=install postinst
+DESCRIPTION=simple GnuPG-encrypted password store written in perl
+EAPI=2
+HOMEPAGE=http://roland.entierement.nu/blog/2010/01/22/simple-gnupg-encrypted-password-store.html
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=app-crypt/gnupg dev-lang/perl virtual/perl-Storable virtual/perl-File-Temp virtual/perl-Getopt-Long dev-perl/Config-Simple
+SLOT=0
+SRC_URI=mirror://gentoo/sgeps-0_pre10.pl.bz2
+_md5_=3bada05d1d0ed255d424774a27bae399

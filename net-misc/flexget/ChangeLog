@@ -1,0 +1,134 @@
+# ChangeLog for net-misc/flexget
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.30 2013/01/01 18:45:01 floppym Exp $
+
+  01 Jan 2013; Mike Gilbert <floppym@gentoo.org> flexget-1.0_beta3181.ebuild,
+  flexget-9999.ebuild:
+  subversion.eclass exports src_prepare, so override it.
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> flexget-1.0_beta3181.ebuild,
+  flexget-9999.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
+
+  02 Nov 2012; Mike Gilbert <floppym@gentoo.org> flexget-1.0_beta3181.ebuild,
+  flexget-9999.ebuild:
+  Call distutils-r1_python_prepare_all from python_prepare_all.
+
+*flexget-1.0_beta3181 (01 Nov 2012)
+
+  01 Nov 2012; Mike Gilbert <floppym@gentoo.org> +flexget-1.0_beta3181.ebuild,
+  -flexget-1.0_beta2881.ebuild, -flexget-1.0_beta3085.ebuild,
+  -flexget-1.0_beta3139.ebuild, flexget-9999.ebuild, metadata.xml:
+  Version bump. Convert to distutils-r1. Remove old.
+
+  29 Oct 2012; Michał Górny <mgorny@gentoo.org> flexget-1.0_beta3085.ebuild,
+  flexget-1.0_beta3139.ebuild, flexget-9999.ebuild:
+  Use virtual for argparse.
+
+  07 Sep 2012; Mike Gilbert <floppym@gentoo.org> flexget-1.0_beta3139.ebuild,
+  flexget-9999.ebuild:
+  Don't modify upstream's requests dependency.
+
+*flexget-1.0_beta3139 (07 Sep 2012)
+
+  07 Sep 2012; Mike Gilbert <floppym@gentoo.org> +flexget-1.0_beta3139.ebuild,
+  flexget-9999.ebuild:
+  Version bump.
+
+*flexget-1.0_beta3085 (16 Aug 2012)
+
+  16 Aug 2012; Mike Gilbert <floppym@gentoo.org> +flexget-1.0_beta3085.ebuild,
+  -flexget-1.0_beta2821.ebuild, flexget-9999.ebuild:
+  Version bump.
+
+  11 Jul 2012; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
+  Update dependencies.
+
+*flexget-1.0_beta2881 (20 May 2012)
+
+  20 May 2012; Mike Gilbert <floppym@gentoo.org> +flexget-1.0_beta2881.ebuild:
+  Version bump.
+
+*flexget-1.0_beta2821 (01 Apr 2012)
+
+  01 Apr 2012; Mike Gilbert <floppym@gentoo.org> +flexget-1.0_beta2821.ebuild,
+  -flexget-1.0_beta2784.ebuild:
+  Version bump.
+
+  01 Apr 2012; Mike Gilbert <floppym@gentoo.org> flexget-1.0_beta2784.ebuild,
+  flexget-9999.ebuild:
+  python-dateutil no longer needs a slot dep.
+
+  31 Mar 2012; Mike Gilbert <floppym@gentoo.org> flexget-1.0_beta2784.ebuild,
+  flexget-9999.ebuild:
+  Remove upper bound on requests version.
+
+  06 Mar 2012; Mike Gilbert <floppym@gentoo.org> flexget-1.0_beta2784.ebuild,
+  flexget-9999.ebuild:
+  Fix KEYWORDS.
+
+*flexget-1.0_beta2784 (06 Mar 2012)
+
+  06 Mar 2012; Mike Gilbert <floppym@gentoo.org> +flexget-1.0_beta2784.ebuild,
+  -flexget-1.0_beta2484.ebuild, flexget-9999.ebuild:
+  Version bump. Merge normal and live ebuilds.
+
+  01 Mar 2012; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
+  Depend on dev-python/python-dateutil.
+
+  27 Feb 2012; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
+  Add blocker on sqlalchemy-0.7.5.
+
+  27 Feb 2012; Mike Gilbert <floppym@gentoo.org> flexget-1.0_beta2484.ebuild,
+  flexget-9999.ebuild:
+  Restrict pypy due to dependencies.
+
+  27 Feb 2012; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
+  Drop Python 2.5 support. The deps get too complex with that version.
+
+  27 Feb 2012; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
+  Fix sqlalchemy dep.
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
+  Depend on =dev-python/sqlalchemy-0.7.4 for bug 404519 by Peter Gantner. Also
+  tweak dev-python/requests dependency.
+
+  06 Feb 2012; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
+  Update requests dep again.
+
+  20 Jan 2012; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
+  Depend on >=requests-0.9.1
+
+  03 Jan 2012; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
+  Update feedparser dependency.
+
+  02 Jan 2012; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
+  Add dependency on dev-python/requests
+
+  21 Dec 2011; Mike Gilbert <floppym@gentoo.org> -flexget-1.0_beta2435.ebuild,
+  flexget-1.0_beta2484.ebuild, flexget-9999.ebuild:
+  Add slot to beautifulsoup dep.
+
+*flexget-1.0_beta2484 (03 Dec 2011)
+
+  03 Dec 2011; Mike Gilbert <floppym@gentoo.org> +flexget-1.0_beta2484.ebuild:
+  Version bump.
+
+*flexget-1.0_beta2435 (18 Oct 2011)
+
+  18 Oct 2011; Mike Gilbert <floppym@gentoo.org> -flexget-1.0_beta2323.ebuild,
+  -flexget-1.0_beta2385.ebuild, +flexget-1.0_beta2435.ebuild,
+  flexget-9999.ebuild, metadata.xml:
+  Version bump. Set EAPI=4. Add deps for deluge and transmission.
+
+*flexget-1.0_beta2385 (26 Sep 2011)
+
+  26 Sep 2011; Mike Gilbert <floppym@gentoo.org> +flexget-1.0_beta2385.ebuild:
+  Version bump.
+
+*flexget-9999 (29 Aug 2011)
+*flexget-1.0_beta2323 (29 Aug 2011)
+
+  29 Aug 2011; Mike Gilbert <floppym@gentoo.org> +flexget-1.0_beta2323.ebuild,
+  +flexget-9999.ebuild, +metadata.xml:
+  New ebuild for bug 350015; thanks to Leszek Ciesielski for testing

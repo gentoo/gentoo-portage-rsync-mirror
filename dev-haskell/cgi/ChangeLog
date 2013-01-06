@@ -1,0 +1,93 @@
+# ChangeLog for dev-haskell/cgi
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.24 2012/12/28 22:24:15 slyfox Exp $
+
+  28 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> cgi-3001.1.8.2.ebuild:
+  Rekeyworded alpha/ppc/sparc.
+
+*cgi-3001.1.8.3 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> +cgi-3001.1.8.3.ebuild:
+  Bump cgi to 3001.1.8.3
+
+*cgi-3001.1.7.4 (28 Oct 2012)
+
+  28 Oct 2012; Sergei Trofimovich <slyfox@gentoo.org> +cgi-3001.1.7.4.ebuild:
+  Version bump straight to stable (fixes build breakage in bug #413641 by
+  vitorbrandao.pt at gmail.com).
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> cgi-3001.1.5.1.ebuild,
+  cgi-3001.1.7.1.ebuild, cgi-3001.1.8.2.ebuild:
+  move dev-haskell/cgi/cgi-3001.1.7.1.ebuild ebuild to mirror://hackage
+
+*cgi-3001.1.8.2 (11 Apr 2012)
+
+  11 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org> +cgi-3001.1.8.2.ebuild:
+  Version bump. Dropped alpha/ppc/sparc due to new depend. Will rekeyword.
+
+  26 Dec 2011; Markus Meier <maekke@gentoo.org> cgi-3001.1.7.1.ebuild:
+  x86 stable, bug #394051
+
+  19 Dec 2011; Agostino Sarubbo <ago@gentoo.org> cgi-3001.1.7.1.ebuild:
+  Stable for AMD64, wrt bug #394051
+
+  18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> cgi-3001.1.7.1.ebuild:
+  Reverted for AMD64 because of bug #395187
+
+  18 Dec 2011; Agostino Sarubbo <ago@gentoo.org> cgi-3001.1.7.1.ebuild:
+  Stable for AMD64, wrt bug #394051
+
+  14 May 2011; Sergei Trofimovich <slyfox@gentoo.org> cgi-3001.1.5.1.ebuild:
+  Fixed build failure against ghc-6.12 (base-4) noticed by mekeor.
+
+*cgi-3001.1.7.1 (19 Apr 2009)
+
+  19 Apr 2009; Lennart Kolmodin <kolmodin@gentoo.org> cgi-3001.1.1.ebuild,
+  +cgi-3001.1.7.1.ebuild:
+  Version bump and QA.
+
+  04 Oct 2008; Ferris McCormick <fmccor@gentoo.org> cgi-3001.1.5.1.ebuild:
+  Sparc stable --- Bug #230919 and Bug #239368.
+
+  06 Jul 2008; Markus Meier <maekke@gentoo.org> cgi-3001.1.5.1.ebuild:
+  amd64/x86 stable, bug #230919
+
+*cgi-3001.1.5.1 (20 Dec 2007)
+
+  20 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> +cgi-3001.1.5.1.ebuild:
+  New version. Released with ghc-6.8 but works with ghc-6.6.
+
+  16 Dec 2007; Samuli Suominen <drac@gentoo.org> cgi-3001.1.1.ebuild:
+  amd64 stable wrt #201984
+
+  14 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> cgi-3001.1.1.ebuild:
+  Updates for upward compatability with cabal-1.2 and ghc-6.8
+
+  12 Dec 2007; Ferris McCormick <fmccor@gentoo.org> cgi-3001.1.1.ebuild:
+  Sparc stable --- part of Bug #201984.
+
+  12 Dec 2007; Christian Faulhammer <opfer@gentoo.org> cgi-3001.1.1.ebuild:
+  quote variable
+
+  12 Dec 2007; Christian Faulhammer <opfer@gentoo.org> cgi-3001.1.1.ebuild:
+  stable x86, bug 201984
+
+*cgi-3001.1.1 (08 Jul 2007)
+
+  08 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> +cgi-3001.1.1.ebuild:
+  New version from ghc-6.6.1 extralibs collection.
+
+  08 Jul 2007; Duncan Coutts <dcoutts@gentoo.org> cgi-2006.9.6.ebuild:
+  Use dev-lang/ghc rather than virtual/ghc.
+
+  06 Apr 2007; Chris Parrott <cparrott@gentoo.org> cgi-2006.9.6.ebuild:
+  added ~ppc and ~sparc keywords
+
+  04 Apr 2007; Chris Parrott <cparrott@gentoo.org> cgi-2006.9.6.ebuild:
+  added ~alpha keyword
+
+*cgi-2006.9.6 (17 Mar 2007)
+
+  17 Mar 2007; Lennart Kolmodin <kolmodin@gentoo.org> +metadata.xml,
+  +cgi-2006.9.6.ebuild:
+  Add modular lib to ghc 6.6. See bug 151012

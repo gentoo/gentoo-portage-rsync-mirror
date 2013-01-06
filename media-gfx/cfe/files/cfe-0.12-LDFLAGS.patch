@@ -1,0 +1,21 @@
+diff --git a/Makefile.in b/Makefile.in
+index 726d224..e65c1b5 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -12,6 +12,7 @@ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA    = @INSTALL_DATA@
+ CC              = @CC@
+ CFLAGS          = @CFLAGS@
++LDFLAGS         = @LDFLAGS@
+ 
+ OBJS = cfe.o font.o help.o keyb.o scr.o undo.o
+ 
+@@ -20,7 +21,7 @@ OBJS = cfe.o font.o help.o keyb.o scr.o undo.o
+ all: cfe
+ 
+ cfe: $(OBJS)
+-	$(CC) -o $@ $(OBJS) -l@CURSES_LIB@
++	$(CC) -o $@ $(OBJS) $(LDFLAGS) -l@CURSES_LIB@
+ 
+ install: cfe
+ 	$(INSTALL_PROGRAM) cfe $(bindir)

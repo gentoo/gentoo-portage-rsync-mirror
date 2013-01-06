@@ -1,0 +1,36 @@
+# ChangeLog for app-accessibility/perlbox-voice
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/ChangeLog,v 1.7 2012/09/20 12:53:09 radhermit Exp $
+
+  20 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
+
+  01 Apr 2009; William Hubbs <williamh@gentoo.org>
+  perlbox-voice-0.09-r1.ebuild:
+  Stable on x86.
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  perlbox-voice-0.09-r1.ebuild:
+  Marking amd64 stable
+
+  10 Sep 2006; Michael Cummings <mcummings@gentoo.org>
+  perlbox-voice-0.09-r1.ebuild:
+  Keywording ~amd64
+
+*perlbox-voice-0.09-r1 (26 Mar 2006)
+
+  26 Mar 2006; Michael Cummings <mcummings@gentoo.org>
+  -perlbox-voice-0.09.ebuild, +perlbox-voice-0.09-r1.ebuild:
+  Bug 126515 - weirdness in the functionality of this simple ebuild. Thanks
+  jszwast for helping me out.
+
+  10 Mar 2006; <mcumming@gentoo.org> perlbox-voice-0.09.ebuild:
+  Bug 125320
+
+*perlbox-voice-0.09 (05 Mar 2006)
+
+  05 Mar 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +perlbox-voice-0.09.ebuild:
+  Bug 104079, ebuild gleamed from forums by reporter at
+  http://forums.gentoo.org/viewtopic-t-320887-highlight-perlbox.html
+

@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/ckpass
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ckpass/ChangeLog,v 1.1 2011/12/13 17:33:50 joker Exp $
+
+*ckpass-0.1 (13 Dec 2011)
+
+  13 Dec 2011; Christian Birchinger <joker@gentoo.org> +ckpass-0.1.ebuild,
+  +metadata.xml:
+  Initial release
+

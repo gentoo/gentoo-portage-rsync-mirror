@@ -1,0 +1,39 @@
+# ChangeLog for dev-python/git-python
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.8 2011/08/27 21:00:30 neurogeek Exp $
+
+  27 Aug 2011; Jesus Rivero <neurogeek@gentoo.org>
+  git-python-0.3.2_rc1.ebuild:
+  Added dev-python/gitdb to DEPEND
+
+*git-python-0.3.2_rc1 (27 Aug 2011)
+
+  27 Aug 2011; Magnus Granberg <zorry@gentoo.org> +git-python-0.3.2_rc1.ebuild:
+  Newer version of git-python
+
+  15 Jul 2010; Justin Lecher <jlec@gentoo.org> git-python-0.1.7.ebuild:
+  Keyworded for *-linux prefix, tested by me
+
+*git-python-0.1.7 (24 Apr 2010)
+
+  24 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +git-python-0.1.7.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
+
+  17 Mar 2010; Sebastian Pipping <sping@gentoo.org> git-python-0.1.6.ebuild:
+  Propagate move of dev-util/git to dev-vcs/git
+
+  22 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  git-python-0.1.6.ebuild:
+  Tweak python dependency.
+
+  22 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  git-python-0.1.6.ebuild:
+  Small QA fixes.
+
+*git-python-0.1.6 (21 Jun 2009)
+
+  21 Jun 2009; Patrick Lauer <patrick@gentoo.org> +git-python-0.1.6.ebuild,
+  +metadata.xml:
+  Initial import of git-python. Ebuild by Juergen Geuter.
+

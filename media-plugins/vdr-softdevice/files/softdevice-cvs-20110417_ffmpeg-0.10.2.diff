@@ -1,0 +1,152 @@
+https://bugs.gentoo.org/show_bug.cgi?id=422605
+compile fix for newer ffmpeg headers
+Signed-of-by: Joerg Bornkessel <hd_brummy@gentoo.org> ( 2012/11/04 )
+diff -Naur softdevice-cvs-20110417.orig/mpeg2decoder.c softdevice-cvs-20110417/mpeg2decoder.c
+--- softdevice-cvs-20110417.orig/mpeg2decoder.c	2012-11-04 19:19:01.000000000 +0100
++++ softdevice-cvs-20110417/mpeg2decoder.c	2012-11-04 19:25:57.000000000 +0100
+@@ -409,6 +409,8 @@
+     uint8_t *data=pkt->data;
+     int     size=pkt->size;
+ 
++    AVPacket avpkt;
++
+   if (context->codec_id == CODEC_ID_AC3)
+   {
+     switch(setupStore->ac3Mode)
+@@ -473,8 +475,11 @@
+     BUFDEB("start decode audio. pkt size: %d \n",size);
+ #if LIBAVCODEC_VERSION_INT >= ((51<<16)+(29<<8)+0)
+     audio_size=AVCODEC_MAX_AUDIO_FRAME_SIZE;
+-    len=avcodec_decode_audio2(context, (short *)audiosamples,
+-                 &audio_size, data, size);
++    av_init_packet (&avpkt);
++    avpkt.data = data;
++    avpkt.size = size;
++    avpkt.flags = AV_PKT_FLAG_KEY;
++    len=avcodec_decode_audio3(context, (int16_t *)audiosamples, &audio_size, &avpkt);
+ #else
+     len=avcodec_decode_audio(context, (short *)audiosamples,
+                  &audio_size, data, size);
+@@ -499,8 +504,11 @@
+       if (context->codec_id == CODEC_ID_AC3) {
+ #if LIBAVCODEC_VERSION_INT >= ((51<<16)+(29<<8)+0)
+         audio_size=AVCODEC_MAX_AUDIO_FRAME_SIZE;
+-        len=avcodec_decode_audio2(context, (short *)audiosamples,
+-                                  &audio_size, data, size);
++        av_init_packet (&avpkt);
++        avpkt.data = data;
++        avpkt.size = size;
++        avpkt.flags = AV_PKT_FLAG_KEY;
++        len=avcodec_decode_audio3(context, (int16_t *)audiosamples, &audio_size, &avpkt);
+ #else
+         len=avcodec_decode_audio(context, (short *)audiosamples,
+                                  &audio_size, data, 1);
+@@ -574,11 +582,6 @@
+   int w=c->width;
+   int h=c->height;
+ 
+-#if LIBAVCODEC_BUILD >  4737
+-  if(avcodec_check_dimensions(c,w,h))
+-    return -1;
+-#endif
+-
+ #if LIBAVCODEC_BUILD >  4713
+   avcodec_align_dimensions(c, &w, &h);
+ #endif
+@@ -717,7 +720,12 @@
+     return -1;
+   };
+ 
+-  len = avcodec_decode_video(context, picture, &got_picture,data, length);
++  AVPacket avpkt;
++  av_init_packet(&avpkt);
++  avpkt.data = data;
++  avpkt.size = length;
++  avpkt.flags = AV_PKT_FLAG_KEY;
++  len = avcodec_decode_video2(context, picture, &got_picture, &avpkt);
+   if (len < 0)
+     return len;
+ 
+@@ -1311,14 +1319,14 @@
+         av_free_packet(&pkt);
+         return;
+   };
+-  int packet_type=CODEC_TYPE_UNKNOWN;
++  int packet_type=AVMEDIA_TYPE_UNKNOWN;
+ 
+ #if LIBAVFORMAT_BUILD > 4628
+   if ( ic->streams[pkt.stream_index]
+        && ic->streams[pkt.stream_index]->codec ) {
+        packet_type = ic->streams[pkt.stream_index]->codec->codec_type;
+ 
+-       if (packet_type == CODEC_TYPE_VIDEO && vout)
++       if (packet_type == AVMEDIA_TYPE_VIDEO && vout)
+          vout->repeatFrame = ic->streams[pkt.stream_index]->parser->repeat_pict;
+   }
+ #else
+@@ -1326,13 +1334,13 @@
+           packet_type = ic->streams[pkt.stream_index]->codec.codec_type;
+ #endif
+ 
+-  if ( packet_type == CODEC_TYPE_UNKNOWN ) {
++  if ( packet_type == AVMEDIA_TYPE_UNKNOWN ) {
+           BUFDEB("Unknown packet type! Return;\n");
+           return;
+   };
+ 
+   // check if there are new streams
+-  if ( AudioIdx != DONT_PLAY && packet_type == CODEC_TYPE_AUDIO
++  if ( AudioIdx != DONT_PLAY && packet_type == AVMEDIA_TYPE_AUDIO
+        && AudioIdx != pkt.stream_index) {
+     CMDDEB("new Audio stream index.. old %d new %d\n",
+       AudioIdx,pkt.stream_index);
+@@ -1352,7 +1360,7 @@
+ #endif
+     aoutMutex.Unlock();
+   } else
+-  if (VideoIdx != DONT_PLAY && packet_type == CODEC_TYPE_VIDEO
++  if (VideoIdx != DONT_PLAY && packet_type == AVMEDIA_TYPE_VIDEO
+        && VideoIdx!=pkt.stream_index) {
+     CMDDEB("new Video stream index.. old %d new %d\n",
+       VideoIdx,pkt.stream_index);
+@@ -1375,7 +1383,7 @@
+ 
+   // write streams
+   voutMutex.Lock();
+-  if ( packet_type == CODEC_TYPE_VIDEO && vout ) {
++  if ( packet_type == AVMEDIA_TYPE_VIDEO && vout ) {
+     BUFDEB("QueuePacket video stream\n");
+     while ( vout->PutPacket(pkt) == -1 && ThreadActive ) {
+       // PutPacket sleeps is necessary
+@@ -1385,7 +1393,7 @@
+   voutMutex.Unlock();
+ 
+   aoutMutex.Lock();
+-  if ( packet_type == CODEC_TYPE_AUDIO && aout ) {
++  if ( packet_type == AVMEDIA_TYPE_AUDIO && aout ) {
+     BUFDEB("QueuePacket audio stream\n");
+     while ( aout->PutPacket(pkt) == -1 && ThreadActive ) {
+       // PutPacket sleeps is necessary
+@@ -1394,7 +1402,7 @@
+   };
+   aoutMutex.Unlock();
+ 
+-  if ( packet_type != CODEC_TYPE_VIDEO && packet_type != CODEC_TYPE_AUDIO ) {
++  if ( packet_type != AVMEDIA_TYPE_VIDEO && packet_type != AVMEDIA_TYPE_AUDIO ) {
+     //printf("Unknown packet or vout or aout not init!!\n");
+     av_free_packet(&pkt);
+   }
+diff -Naur softdevice-cvs-20110417.orig/VideoFilter.h softdevice-cvs-20110417/VideoFilter.h
+--- softdevice-cvs-20110417.orig/VideoFilter.h	2012-11-04 19:19:01.000000000 +0100
++++ softdevice-cvs-20110417/VideoFilter.h	2012-11-04 19:26:54.000000000 +0100
+@@ -109,8 +109,8 @@
+ class cLibAvPostProc : public cVideoFilter {
+         int width, height;
+         PixelFormat pix_fmt;
+-        pp_mode_t *ppmode;
+-        pp_context_t *ppcontext;
++        pp_mode *ppmode;
++        pp_context *ppcontext;
+         sPicBuffer *outBuf;
+         int currentDeintMethod,currentppMethod,currentppQuality;
+ public:

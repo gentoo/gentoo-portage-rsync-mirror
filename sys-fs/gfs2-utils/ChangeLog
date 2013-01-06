@@ -1,0 +1,13 @@
+# ChangeLog for sys-fs/gfs2-utils
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs2-utils/ChangeLog,v 1.2 2012/05/04 19:09:18 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gfs2-utils-3.1.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*gfs2-utils-3.1.2 (14 Sep 2011)
+
+  14 Sep 2011; Ultrabug <ultrabug@gentoo.org> +gfs2-utils-3.1.2.ebuild,
+  +metadata.xml:
+  Initial import
+

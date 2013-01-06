@@ -1,0 +1,18 @@
+# ChangeLog for sci-chemistry/ambertools
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ambertools/ChangeLog,v 1.3 2012/10/19 07:15:43 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> ambertools-1.5-r1.ebuild,
+  metadata.xml:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
+
+  02 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> ambertools-1.5-r1.ebuild:
+  Add ~amd64-linux keyword
+
+*ambertools-1.5-r1 (28 Jul 2011)
+
+  28 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +ambertools-1.5-r1.ebuild,
+  +files/ambertools-1.5-gentoo.patch, +metadata.xml:
+  Initial import to tree
+

@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/libgcal
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgcal/ChangeLog,v 1.1 2011/01/12 14:47:59 tampakrap Exp $
+
+*libgcal-0.9.6 (12 Jan 2011)
+
+  12 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> +libgcal-0.9.6.ebuild,
+  +metadata.xml:
+  Initial commit, ebuild by James Freedman, Mieszko Ślusarczyk, Thilo Bangert
+  and P Purkayastha, bug 246121
+

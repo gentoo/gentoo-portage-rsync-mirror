@@ -1,0 +1,59 @@
+# ChangeLog for media-gfx/freecad
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.12 2012/10/19 10:43:17 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> freecad-0.12.5284-r2.ebuild,
+  metadata.xml:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
+
+  16 Sep 2012; Pacho Ramos <pacho@gentoo.org> freecad-0.12.5284-r2.ebuild:
+  Add missing virtual/glu dependency, bug #434428 by Andreas Sturmlechner.
+
+  24 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop maintainership
+
+  06 May 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  freecad-0.12.5284-r2.ebuild, +files/freecad-0.12.5284-boost148.patch:
+  Add upstream patch to fix build with boost-1.48, bug 406261
+
+  07 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -freecad-0.11.3729.ebuild, -files/freecad-0.11.3729-asneeded.patch:
+  Remove old
+
+  07 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  freecad-0.12.5284-r2.ebuild, +files/freecad-0.12.5284-qt3support.patch:
+  Remove last remnants of qt3support, thanks to Tyrok and Rafał Mużyło, bug
+  394099
+
+*freecad-0.12.5284-r2 (07 Jan 2012)
+
+  07 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +freecad-0.12.5284-r2.ebuild, +files/freecad-0.12.5284-gcc46.patch,
+  +files/freecad-0.12.5284-glu.patch, +files/freecad-0.12.5284-nodir.patch,
+  +files/freecad-0.12.5284-nopivy.patch,
+  +files/freecad-0.12.5284-removeoldswig.patch:
+  Version bump. Thanks to Maciej Szmigiero for patches.
+
+  13 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  freecad-0.11.3729.ebuild:
+  This version of freecad requires OCC-6.3
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> freecad-0.11.3729.ebuild:
+  Add dependency on virtual/fortran
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> freecad-0.11.3729.ebuild:
+  Added fortran-2.eclass support
+
+  10 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  freecad-0.11.3729.ebuild:
+  Needs PyQt4[svg], bug 362679
+
+*freecad-0.11.3729 (06 Mar 2011)
+
+  06 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +freecad-0.11.3729.ebuild, +files/freecad-0.11.3729-asneeded.patch,
+  +metadata.xml:
+  New application, fixes bug 291161; imported from the sci overlay with
+  cleanups. Thanks to Roelof Wobben, Derk W. te Bokkel, cornicx, and all the
+  other contributors from the bug report and the overlay.

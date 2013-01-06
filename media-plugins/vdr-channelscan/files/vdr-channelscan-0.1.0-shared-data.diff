@@ -1,0 +1,110 @@
+diff -ru channelscan-0.1.0-orig/channelscan.c channelscan-0.1.0/channelscan.c
+--- channelscan-0.1.0-orig/channelscan.c	2006-06-23 11:26:35.517757751 +0200
++++ channelscan-0.1.0/channelscan.c	2006-06-23 11:32:10.725870276 +0200
+@@ -86,7 +86,7 @@
+                              unsigned int &UNCChip  );
+   bool Signal(int Frequenz, char *Pol, int Symbolrate);
+   void LoadSatFile(int iPosition);
+-  void cMainMenu::ShowSatData(char cSelectedFile[100]);
++  void cMainMenu::ShowSatData(const char cSelectedFile[100]);
+ };
+ 
+ cMainMenu::cMainMenu(void) {
+@@ -105,11 +105,7 @@
+ 	osd=NULL;
+ 	// Now search a sat files
+ 	//LoadSatFile(1);
+-	const char *ConfDir = cPlugin::ConfigDirectory();	
+-	char cTranspoderDir[255];	
+-	strcpy(cTranspoderDir,ConfDir);
+-	strcat(cTranspoderDir,"//transponders//0130.ini");
+-	strcpy(cSelectedFile, cTranspoderDir);
++	strcpy(cSelectedFile, "/usr/share/vdr/channelscan-transponders/0030.ini");
+ 	iSelectedFile=0;
+ 	ShowSatData(cSelectedFile);		
+         PFilter=NULL;
+@@ -245,10 +241,7 @@
+ 
+ void cMainMenu::LoadSatFile(int iPosition) {
+ 	// Find the conf dir
+-	const char *ConfDir = cPlugin::ConfigDirectory();	
+-	char cTranspoderDir[255];	
+-	strcpy(cTranspoderDir,ConfDir);
+-	strcat(cTranspoderDir,"//transponders//");
++	const char *cTranspoderDir = "/usr/share/vdr/channelscan-transponders/";	
+ 	cTranspoders oTransp;
+ 	oTransp.LoadArrTranspoders(cTranspoderDir);
+ 	// 20050920
+@@ -261,7 +254,7 @@
+ 	}
+ }
+ 
+-void cMainMenu::ShowSatData(char cSelectedFile[100]) {
++void cMainMenu::ShowSatData(const char cSelectedFile[100]) {
+ 	cTranspoders oTransp;
+ 	oTransp.GetTranspodersData(cSelectedFile);
+ 	iTotalTranspoders=oTransp.iCount;
+diff -ru channelscan-0.1.0-orig/transponders.c channelscan-0.1.0/transponders.c
+--- channelscan-0.1.0-orig/transponders.c	2006-06-23 11:26:35.521758134 +0200
++++ channelscan-0.1.0/transponders.c	2006-06-23 11:35:03.874428429 +0200
+@@ -93,7 +93,7 @@
+ 	return atoi(cTemp);
+ }
+ 
+-string cTranspoders::ReadIni(char cFile[100], string sCategory, string sField) {
++string cTranspoders::ReadIni(const char cFile[100], string sCategory, string sField) {
+ 	string sReturn="";
+     char cTemp;
+     string sInput="";
+@@ -141,7 +141,7 @@
+ 	}
+ }
+ 
+-void cTranspoders::GetTranspodersData(char cFile[100]) {
++void cTranspoders::GetTranspodersData(const char cFile[100]) {
+ 	string sField = "";
+ 	string sTemp = "";
+ 	// Reset the class structure
+@@ -177,7 +177,7 @@
+ } 
+ 
+ 
+-int cTranspoders::openDir (char * path, char * cFilter) { 
++int cTranspoders::openDir (const char * path, char * cFilter) { 
+ 	DIR *dir=opendir(path); 
+ 	struct dirent *sDir; 
+ 	int iArrCount=0;
+@@ -208,7 +208,7 @@
+ 	return 0;
+ } 
+ 
+-void cTranspoders::LoadArrTranspoders(char * cPath) {
++void cTranspoders::LoadArrTranspoders(const char * cPath) {
+ 	openDir(cPath, "*.ini");
+ 	for (int ii=0; ii<iArrTranspodersFile; ii++) {
+ 		for (int i=0; i<iArrTranspodersFile; i++) {
+diff -ru channelscan-0.1.0-orig/transponders.h channelscan-0.1.0/transponders.h
+--- channelscan-0.1.0-orig/transponders.h	2006-06-23 11:26:35.521758134 +0200
++++ channelscan-0.1.0/transponders.h	2006-06-23 11:35:11.979201835 +0200
+@@ -24,17 +24,17 @@
+ 	int iArrTranspodersFile;
+ 	string sArrTranspodersFile[1000];
+ 	// Method
+-	string ReadIni(char cFile[1000], string sCategory, string sField);
++	string ReadIni(const char cFile[1000], string sCategory, string sField);
+ 	string IntToStr(int iValue);
+ 	string StrAfterChar(string sLine, char cFind);
+ 	string StrBeforeChar(string sLine, char cFind);
+ 	string StrTrim(string sInput);
+ 	string CharToStr(char *cInput);
+ 	int StrToInt(string sInput);
+-	void GetTranspodersData(char cFile[1000]);
++	void GetTranspodersData(const char cFile[1000]);
+ 	void Reset(void);
+-	int openDir (char * path, char * cFilter); 
+-	void LoadArrTranspoders(char * cPath);
++	int openDir (const char * path, char * cFilter); 
++	void LoadArrTranspoders(const char * cPath);
+ };
+ 
+ #endif //_TRANSPODERS__H

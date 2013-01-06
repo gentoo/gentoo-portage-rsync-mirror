@@ -1,0 +1,55 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Tue Jan  1 22:20:05 UTC 2013
+Subject: build system
+
+	make build output verbose
+	respext AR and RANLIB
+
+--- Makefile
++++ Makefile
+@@ -2,6 +2,9 @@
+ 
+ SHELL=/bin/sh
+ 
++AR ?= ar
++RANLIB ?= ranlib
++
+ default: it
+ 
+ alloc.a: \
+@@ -103,6 +106,7 @@
+ compile: \
+ warn-auto.sh conf-cc
+ 	( cat warn-auto.sh; \
++	echo echo "`head -1 conf-cc`" '-c $${1+"$$@"}'; \
+ 	echo exec "`head -1 conf-cc`" '-c $${1+"$$@"}' \
+ 	) > compile
+ 	chmod 755 compile
+@@ -306,6 +310,8 @@
+ warn-auto.sh conf-ld
+ 	( cat warn-auto.sh; \
+ 	echo 'main="$$1"; shift'; \
++	echo echo "`head -1 conf-ld`" \
++	'-o "$$main" "$$main".o $${1+"$$@"}'; \
+ 	echo exec "`head -1 conf-ld`" \
+ 	'-o "$$main" "$$main".o $${1+"$$@"}' \
+ 	) > load
+@@ -320,7 +326,8 @@
+ 	( cat warn-auto.sh; \
+ 	echo 'main="$$1"; shift'; \
+ 	echo 'rm -f "$$main"'; \
+-	echo 'ar cr "$$main" $${1+"$$@"}'; \
++	echo 'echo $(AR) cr "$$main" $${1+"$$@"}'; \
++	echo '$(AR) cr "$$main" $${1+"$$@"}'; \
+ 	case "`cat systype`" in \
+ 	sunos-5.*) ;; \
+ 	unix_sv*) ;; \
+@@ -329,7 +336,7 @@
+ 	dgux-*) ;; \
+ 	hp-ux-*) ;; \
+ 	sco*) ;; \
+-	*) echo 'ranlib "$$main"' ;; \
++	*) echo 'echo $(RANLIB) "$$main"' ; echo '$(RANLIB) "$$main"' ;; \
+ 	esac \
+ 	) > makelib
+ 	chmod 755 makelib

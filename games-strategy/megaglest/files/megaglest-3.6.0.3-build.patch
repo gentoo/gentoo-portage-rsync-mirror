@@ -1,0 +1,25 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Sat Aug 18 16:07:26 UTC 2012
+Subject: build system
+
+fixes compilation when -DBUILD_MEGAGLEST_CONFIGURATOR=OFF is set
+and when other targets are disabled
+
+configurator is deprecated/unstable and will be removed next release
+
+--- megaglest-3.6.0.3/CMakeLists.txt
++++ megaglest-3.6.0.3/CMakeLists.txt
+@@ -243,9 +243,12 @@
+ 	ADD_SUBDIRECTORY( ${PROJECT_SOURCE_DIR}/source/shared_lib )
+ 	ADD_SUBDIRECTORY( ${PROJECT_SOURCE_DIR}/source/glest_game )
+ 	#if(wxWidgets_FOUND)
++	IF(BUILD_MEGAGLEST_MAP_EDITOR)
+ 	  ADD_SUBDIRECTORY( ${PROJECT_SOURCE_DIR}/source/glest_map_editor )
++	ENDIF(BUILD_MEGAGLEST_MAP_EDITOR)
++	IF(BUILD_MEGAGLEST_MODEL_VIEWER)
+ 	  ADD_SUBDIRECTORY( ${PROJECT_SOURCE_DIR}/source/g3d_viewer )
+-	  ADD_SUBDIRECTORY( ${PROJECT_SOURCE_DIR}/source/configurator )
++	ENDIF(BUILD_MEGAGLEST_MODEL_VIEWER)
+ 	#else()
+ 	#  MESSAGE(STATUS "WARNING... the following game tools will NOT be built since we cannot find wxWidgets on this machine")
+ 	#  MESSAGE(STATUS "map editor, g3d viewer, configurator")

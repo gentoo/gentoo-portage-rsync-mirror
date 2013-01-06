@@ -1,0 +1,16 @@
+# ChangeLog for app-emacs/zenirc
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/zenirc/ChangeLog,v 1.10 2007/11/20 13:07:11 opfer Exp $
+
+  20 Nov 2007; Christian Faulhammer <opfer@gentoo.org> zenirc-2.112.ebuild:
+  amd64 stable, bug 195512
+
+  18 Oct 2007; Christian Faulhammer <opfer@gentoo.org> zenirc-2.112.ebuild:
+  keyworded ~amd64, bug 195512
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org> zenirc-2.112.ebuild:
+  removed postrm and postinst, as they are exactly like that in elisp.eclass
+  (make use of DOCS variable); killed DEPEND line on virtual/emacs; added a
+  lot of quotes; replace configure and manual make commands through function
+  equivalents; adjusted DESCRIPTION; added trailing slash to HOMEPAGE URI
+

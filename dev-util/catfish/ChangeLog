@@ -1,0 +1,28 @@
+# ChangeLog for dev-util/catfish
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catfish/ChangeLog,v 1.4 2012/10/05 17:53:01 ssuominen Exp $
+
+*catfish-0.4.0.2 (05 Oct 2012)
+
+  05 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> +catfish-0.4.0.2.ebuild,
+  +files/catfish-gentoo.patch-r1:
+  Version bump.
+
+*catfish-0.3.2-r1 (02 Aug 2012)
+
+  02 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> +catfish-0.3.2-r1.ebuild,
+  +files/catfish-0.3.2-fix_gtkiconload.patch,
+  +files/catfish-0.3.2-fix_tracker_backend.patch:
+  Import 30Fix_tracker_backend.dpatch (and 40Fix_gtkiconload.dpatch) from
+  Debian in order to be compatible with current app-misc/tracker wrt #429382 by
+  Kai Wüstermann
+
+  05 Feb 2012; Mike Gilbert <floppym@gentoo.org> catfish-0.3.2.ebuild:
+  Inherit multilib.
+
+*catfish-0.3.2 (14 Jan 2012)
+
+  14 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +catfish-0.3.2.ebuild,
+  +files/catfish-gentoo.patch:
+  Initial commit wrt #161730 by Wojciech Myrda (and others)
+

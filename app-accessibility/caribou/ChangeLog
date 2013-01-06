@@ -1,0 +1,74 @@
+# ChangeLog for app-accessibility/caribou
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/ChangeLog,v 1.16 2013/01/01 14:00:10 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> caribou-0.4.5.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> caribou-0.4.5.ebuild:
+  Add ~ia64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> caribou-0.4.5.ebuild:
+  Add ~ppc64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> caribou-0.4.5.ebuild:
+  Add ~ppc, wrt bug #449220
+
+*caribou-0.4.5 (22 Nov 2012)
+
+  22 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org> +caribou-0.4.5.ebuild:
+  Version bump.
+
+  08 Sep 2012; Nirbheek Chauhan <nirbheek@gentoo.org> -caribou-0.4.3.ebuild:
+  Remove old version with incorrect dep on pygobject
+
+*caribou-0.4.4 (08 Sep 2012)
+
+  08 Sep 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +caribou-0.4.4.ebuild:
+  Bump to 0.4.4
+
+*caribou-0.4.3 (01 Sep 2012)
+
+  01 Sep 2012; Nirbheek Chauhan <nirbheek@gentoo.org> +caribou-0.4.3.ebuild:
+  Bump to 0.4.3, bug fixes and translation updates
+
+*caribou-0.4.2 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +caribou-0.4.2.ebuild:
+  Version bump, mostly translation updates.
+
+  25 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  caribou-0.4.1-r1.ebuild:
+  Fix build failure on systems where /bin/true --version does not print to
+  stdout; thanks to Edward Hervey for reporting.
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> caribou-0.4.1-r1.ebuild,
+  caribou-0.4.1.ebuild:
+  Changing python deps in preparation for 2.4 removal
+
+  09 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  caribou-0.4.1-r1.ebuild:
+  Also, use python_clean_py-compile_files.
+
+*caribou-0.4.1-r1 (09 Feb 2012)
+
+  09 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +caribou-0.4.1-r1.ebuild:
+  Do not depend on gconf, it's not used if a recent gsettings-desktop-schemas
+  is available (bug #402821, thanks to Andreas Proschofsky). Also, do not call
+  /usr/bin/python on python2 code from installed shell scripts.
+
+  30 Jan 2012; Markos Chandras <hwoarang@gentoo.org> caribou-0.4.1.ebuild:
+  Don't call python_convert_shebangs(). This package doesn't install any Python
+  scripts. Patch by Arfrever.
+
+  01 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  caribou-0.4.1.ebuild:
+  Fix py-compile idiom for automake-1.11.2 compatibility (bug #396585).
+
+*caribou-0.4.1 (05 Nov 2011)
+
+  05 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +caribou-0.4.1.ebuild, +metadata.xml:
+  Add the new gnome-3.2 on-screen keyboard system from the gnome overlay.

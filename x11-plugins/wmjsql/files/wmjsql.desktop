@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=WmJSQL
+Comment=MySQL Monitor
+Comment[pl]=Monitor MySQLa
+Exec=wmjsql
+Type=Application
+Encoding=UTF-8
+Terminal=0
+Categories=Application;Database;

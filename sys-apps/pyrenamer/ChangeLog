@@ -1,0 +1,14 @@
+# ChangeLog for sys-apps/pyrenamer
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pyrenamer/ChangeLog,v 1.2 2010/08/05 21:06:19 hwoarang Exp $
+
+  05 Aug 2010; Markos Chandras <hwoarang@gentoo.org> pyrenamer-0.6.0.ebuild:
+  QA fixes thanks to Arfrever
+
+*pyrenamer-0.6.0 (04 Aug 2010)
+
+  04 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +pyrenamer-0.6.0.ebuild, +metadata.xml:
+  Moved from sunrise overlay. Fixed bug #210970. Thanks to Fabiano
+  Francesconi <fabiano.francesconi@gmail.com> for the sunrise ebuild.
+

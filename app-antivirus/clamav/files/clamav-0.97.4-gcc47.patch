@@ -1,0 +1,24 @@
+From bb8ab5ce7ea4e276c310f5a638cd61c0cceb47d1 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?T=C3=B6r=C3=B6k=20Edvin?= <edwin@clamav.net>
+Date: Mon, 14 May 2012 20:13:21 +0300
+Subject: [PATCH] Fix build with gcc-4.7
+
+---
+ .../c++/llvm/lib/ExecutionEngine/JIT/Intercept.cpp |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/libclamav/c++/llvm/lib/ExecutionEngine/JIT/Intercept.cpp b/libclamav/c++/llvm/lib/ExecutionEngine/JIT/Intercept.cpp
+index 274f816..a4e7eee 100644
+--- a/libclamav/c++/llvm/lib/ExecutionEngine/JIT/Intercept.cpp
++++ b/libclamav/c++/llvm/lib/ExecutionEngine/JIT/Intercept.cpp
+@@ -19,6 +19,7 @@
+ #include "llvm/Support/ErrorHandling.h"
+ #include "llvm/System/DynamicLibrary.h"
+ #include "llvm/Config/config.h"
++#include <unistd.h>
+ using namespace llvm;
+ 
+ // AtExitHandlers - List of functions to call when the program exits,
+-- 
+1.7.8.6
+

@@ -1,0 +1,30 @@
+# ChangeLog for dev-tcltk/tktray
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/ChangeLog,v 1.7 2012/12/05 08:13:18 ulm Exp $
+
+  05 Dec 2012; Ulrich Müller <ulm@gentoo.org> tktray-1.1.ebuild,
+  tktray-1.1-r1.ebuild:
+  Update LICENSE, BWidget was a duplicate of tcltk, bug 445468.
+
+  21 Mar 2011; Kevin McCarthy <signals@gentoo.org> tktray-1.1.ebuild,
+  tktray-1.1-r1.ebuild:
+  RESTRICT=test WRT bug #284919
+
+*tktray-1.1-r1 (10 Oct 2010)
+
+  10 Oct 2010; Justin Lecher <jlec@gentoo.org> +files/1.1-ldflags.patch,
+  tktray-1.1.ebuild, +tktray-1.1-r1.ebuild:
+  Respect LDFLAGS, 334621
+
+  27 Dec 2009; Joseph Jezak <josejx@gentoo.org> tktray-1.1.ebuild:
+  Marked ~ppc for bug #254377.
+
+  03 Oct 2008; Friedrich Oslage <bluebird@gentoo.org> tktray-1.1.ebuild:
+  Add ~sparc keyword, bug #236244
+
+  15 Sep 2008; Tobias Klausmann <klausman@gentoo.org> tktray-1.1.ebuild:
+  Keyworded on alpha, bug #236244
+
+  31 Aug 2008; Olivier Crête <tester@gentoo.org> ChangeLog:
+  Initial import from bug #168385
+

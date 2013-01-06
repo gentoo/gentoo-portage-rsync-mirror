@@ -1,0 +1,45 @@
+Fix build with glib 2.31
+
+Patch by Dominique Leuenberger <dimstar@opensuse.org>
+
+https://bugzilla.gnome.org/show_bug.cgi?id=666651
+
+Index: gtksourceviewmm-2.10.2/gtksourceview/gtksourceviewmm/sourceiter.cc
+===================================================================
+--- a/gtksourceviewmm-2.10.2/gtksourceview/gtksourceviewmm/sourceiter.cc
++++ b/gtksourceviewmm-2.10.2/gtksourceview/gtksourceviewmm/sourceiter.cc
+@@ -28,7 +28,7 @@
+  */
+ 
+ #include "sourceiter.h"
+-#include <glib/gmessages.h>
++#include <glib.h>
+ #include <gtksourceview/gtksourceview-typebuiltins.h>
+ namespace gtksourceview
+ {
+Index: gtksourceviewmm-2.10.2/gtksourceview/src/sourceiter.ccg
+===================================================================
+--- a/gtksourceviewmm-2.10.2/gtksourceview/src/sourceiter.ccg
++++ b/gtksourceviewmm-2.10.2/gtksourceview/src/sourceiter.ccg
+@@ -21,7 +21,7 @@
+  */
+ 
+ #include "sourceiter.h"
+-#include <glib/gmessages.h>
++#include <glib.h>
+ #include <gtksourceview/gtksourceview-typebuiltins.h>
+ namespace gtksourceview
+ {
+Index: gtksourceviewmm-2.10.2/tests/search/main.cc
+===================================================================
+--- a/gtksourceviewmm-2.10.2/tests/search/main.cc
++++ b/gtksourceviewmm-2.10.2/tests/search/main.cc
+@@ -6,7 +6,7 @@
+ #include <cstring>
+ #include <gtkmm.h>
+ #include <gtksourceviewmm.h>
+-#include <glib/gmessages.h>
++#include <glib.h>
+ 
+ using namespace std ;
+ using namespace Gtk;

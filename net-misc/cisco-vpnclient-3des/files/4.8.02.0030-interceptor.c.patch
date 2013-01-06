@@ -1,0 +1,227 @@
+--- vpnclient-orig/interceptor.c	2009-05-20 08:16:34.000000000 -0500
++++ vpnclient/interceptor.c	2009-11-12 16:54:57.323674809 -0600
+@@ -28,6 +28,10 @@
+ #include <linux/udp.h>
+ #include <net/protocol.h>
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,24)
++#include <net/net_namespace.h>
++#endif
++
+ #include "linux_os.h"
+ 
+ #include "vpn_ioctl_linux.h"
+@@ -48,7 +52,7 @@
+ unsigned long rx_bytes;
+ 
+ /*methods of the cipsec network device*/
+-static int interceptor_init(struct net_device *);
++static void interceptor_init(struct net_device *);
+ static struct net_device_stats *interceptor_stats(struct net_device *dev);
+ static int interceptor_ioctl(struct net_device *dev, struct ifreq *ifr,
+                              int cmd);
+@@ -120,26 +124,44 @@
+     .notifier_call = handle_netdev_event,
+ };
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,29)
++static const struct net_device_ops interceptor_netdev_ops = {
++    .ndo_start_xmit = interceptor_tx,
++    .ndo_get_stats = interceptor_stats,
++    .ndo_do_ioctl = interceptor_ioctl,
++};
++static const struct net_device_ops replacement_netdev_ops = {
++    .ndo_start_xmit = replacement_dev_xmit,
++    .ndo_get_stats = interceptor_stats,
++    .ndo_do_ioctl = interceptor_ioctl,
++};
++#endif
++
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
+-static int
++static void
+ #else
+-static int __init
++static void __init
+ #endif
+ interceptor_init(struct net_device *dev)
+ {
+     ether_setup(dev);
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,29)
++    /*
++     * The new netops have to be used.
++     */
++    dev->netdev_ops = &interceptor_netdev_ops;
++#else
+     dev->hard_start_xmit = interceptor_tx;
+     dev->get_stats = interceptor_stats;
+     dev->do_ioctl = interceptor_ioctl;
++#endif
+ 
+     dev->mtu = ETH_DATA_LEN-MTU_REDUCTION;
+     kernel_memcpy(dev->dev_addr, interceptor_eth_addr,ETH_ALEN);
+     dev->flags |= IFF_NOARP;
+     dev->flags &= ~(IFF_BROADCAST | IFF_MULTICAST);
+     kernel_memset(dev->broadcast, 0xFF, ETH_ALEN);
+-
+-    return 0;
+ }
+ 
+ static struct net_device_stats *
+@@ -268,8 +290,13 @@
+     Bindings[i].original_mtu = dev->mtu;
+ 
+     /*replace the original send function with our send function */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,29)
++    Bindings[i].Inject_ops = dev->netdev_ops;
++    dev->netdev_ops = &replacement_netdev_ops;
++#else
+     Bindings[i].InjectSend = dev->hard_start_xmit;
+     dev->hard_start_xmit = replacement_dev_xmit;
++#endif
+ 
+     /*copy in the ip packet handler function and packet type struct */
+     Bindings[i].InjectReceive = original_ip_handler.orig_handler_func;
+@@ -291,7 +318,12 @@
+     if (b)
+     {   
+         rc = 0;
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,29)
++        dev->netdev_ops = b->Inject_ops;
++        dev->mtu = b->original_mtu;
++#else
+         dev->hard_start_xmit = b->InjectSend;
++#endif
+         kernel_memset(b, 0, sizeof(BINDING));
+     }
+     else
+@@ -637,19 +669,31 @@
+ 
+     reset_inject_status(&pBinding->recv_stat);
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
+-    if (skb->mac_header)
++/* 2.6.22 added an inline function for 32-/64-bit usage here, so use it.
++ */
++    if (skb_mac_header_was_set(skb))
+ #else
+     if (skb->mac.raw)
+ #endif
+     {
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
+-        hard_header_len = skb->data - skb->mac_header;
++/* 2.6.22 added an inline function for 32-/64-bit usage here, so use it.
++ */
++        hard_header_len = skb->data - skb_mac_header(skb);
+ #else
+         hard_header_len = skb->data - skb->mac.raw;
+ #endif
+         if ((hard_header_len < 0) || (hard_header_len > skb_headroom(skb)))
+         {
+-            printk(KERN_DEBUG "bad hh len %d\n", hard_header_len);
++            printk(KERN_DEBUG "bad hh len %d, mac: %p, data: %p, head: %p\n",
++                hard_header_len,
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
++                skb->mac_header,    /* actualy ptr in 32-bit */
++#else
++                skb->mac.raw,
++#endif
++                skb->data,
++                skb->head);
+             hard_header_len = 0;
+         }
+     }
+@@ -664,7 +708,9 @@
+     {
+     case ETH_HLEN:
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
+-        CniNewFragment(ETH_HLEN, skb->mac_header, &MacHdr, CNI_USE_BUFFER);
++/* 2.6.22 added an inline function for 32-/64-bit usage here, so use it.
++ */
++        CniNewFragment(ETH_HLEN, skb_mac_header(skb), &MacHdr, CNI_USE_BUFFER);
+ #else
+         CniNewFragment(ETH_HLEN, skb->mac.raw, &MacHdr, CNI_USE_BUFFER);
+ #endif
+@@ -718,8 +764,13 @@
+ 
+         break;
+     case CNI_DISCARD:
+-        dev_kfree_skb(skb);
+-        rx_dropped++;
++       /* patch found on ubuntuforums.org, written by aranoyas */
++       /* override local LAN access */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,14)
++       rc2 = original_ip_handler.orig_handler_func(skb, dev, type, dev);
++#else
++       rc2 = original_ip_handler.orig_handler_func(skb, dev, type);
++#endif
+         break;
+     default:
+         printk(KERN_DEBUG "RECV: Unhandled case in %s rc was %x\n",
+@@ -782,7 +833,9 @@
+ #endif //LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,0)
+     reset_inject_status(&pBinding->send_stat);
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
+-    hard_header_len = skb->network_header - skb->data;
++/* 2.6.22 added an inline function for 32-/64-bit usage here, so use it.
++ */
++    hard_header_len = skb_network_header(skb) - skb->data;
+ #else
+     hard_header_len = skb->nh.raw - skb->data;
+ #endif
+@@ -840,12 +893,21 @@
+         /* packet dropped */
+         else
+         {
+-            dev_kfree_skb(skb);
+-            tx_dropped++;
++           /* patch found on ubuntuforums.org, originally written by aranoyas */
++           /* override local LAN access */
++           #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,29)
++               rc2 = pBinding->Inject_ops->ndo_start_xmit(skb, dev);
++           #else
++               rc2 = pBinding->InjectSend(skb, dev);
++           #endif
+         }
+         break;
+     case CNI_CHAIN:
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,29)
++        rc2 = pBinding->Inject_ops->ndo_start_xmit(skb, dev);
++#else
+         rc2 = pBinding->InjectSend(skb, dev);
++#endif
+         break;
+     default:
+         printk(KERN_DEBUG "Unhandled case in %s rc was %x\n", __FUNCTION__,
+@@ -896,7 +958,11 @@
+     //only need to handle IP packets.
+     if (skb->protocol != htons(ETH_P_IP))
+     {
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,29)
++        rc2 = pBinding->Inject_ops->ndo_start_xmit(skb, dev);
++#else
+         rc2 = pBinding->InjectSend(skb, dev);
++#endif
+         goto exit_gracefully;
+     }
+ 
+@@ -924,10 +990,17 @@
+     PCNI_CHARACTERISTICS PCNICallbackTable;
+     CNISTATUS rc = CNI_SUCCESS;
+ 
++    rc = CniPluginLoad(&pcDeviceName, &PCNICallbackTable);
++
++/* 2.6.24 needs to allocate each netdevice before registering it, otherwise
++ * the kernel BUG()s.
++ *
++ * by Alexander Griesser <work@tuxx-home.at>, 2008-01-11
++ */
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,24)
+-    interceptor_dev= alloc_netdev( 0, interceptor_name, (void *)interceptor_init);
++    if(! (interceptor_dev = alloc_netdev(sizeof(struct net_device), interceptor_name, interceptor_init)))
++      return 0;
+ #endif
+-    rc = CniPluginLoad(&pcDeviceName, &PCNICallbackTable);
+ 
+     if (CNI_IS_SUCCESS(rc))
+     {

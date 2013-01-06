@@ -1,0 +1,24 @@
+diff -Naur sc-7.16-orig/xmalloc.c sc-7.16/xmalloc.c
+--- sc-7.16-orig/xmalloc.c	2002-04-25 17:37:58.000000000 -0600
++++ sc-7.16/xmalloc.c	2008-01-17 14:41:31.000000000 -0600
+@@ -3,19 +3,12 @@
+  * $Revision: 1.2 $
+  */
+ 
++#include <stdlib.h>
+ #include <curses.h>
+ #include "sc.h"
+ 
+-extern char	*malloc();
+-extern char	*realloc();
+-extern void	free();
+ void		fatal();
+ 
+-#ifdef SYSV3
+-extern void	free();
+-extern void	exit();
+-#endif
+-
+ #define	MAGIC	(double)1234567890.12344
+ 
+ char *

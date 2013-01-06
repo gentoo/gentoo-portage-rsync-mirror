@@ -1,0 +1,137 @@
+--- rtld-elf/rtld.c.orig	2007-04-07 23:17:00 +0000
++++ rtld-elf/rtld.c	2007-04-23 09:42:32 +0000
+@@ -988,6 +988,103 @@
+     return NULL;
+ }
+ 
++#define MAX_LIBRARIES_HITS 255
++
++struct fill_library_paths_args {
++    const char  *name;
++    size_t       namelen;
++    char       **libraries;
++    size_t      *count;
++};
++
++static void *
++fill_library_paths(const char *dir, size_t dirlen, void *param)
++{
++    struct fill_library_paths_args *arg;
++    
++    arg = param;
++    if (*(arg->count) > MAX_LIBRARIES_HITS)
++	return (NULL);
++
++    if (*dir == '/' || trust) {
++	arg->libraries[*(arg->count)] = malloc(sizeof(char)*(dirlen + 1 + arg->namelen + 1));
++	strncpy(arg->libraries[*(arg->count)], dir, dirlen);
++	arg->libraries[*(arg->count)][dirlen] = '/';
++	strncpy(arg->libraries[*(arg->count)] + dirlen + 1, arg->name, arg->namelen+1);
++	
++	dbg("  Trying \"%s\"\n", arg->libraries[*(arg->count)]);
++	if (access(arg->libraries[*(arg->count)], F_OK) == 0) {
++	    *(arg->count) += 1;
++	}
++    }
++    return (NULL);
++}
++
++/**
++ * Find all libraries matching xname for the object refobj (if not null), like
++ * find_library but find all the matching libraries in the paths.
++ *
++ * The returned pointer has to be free()'d (as well as the contained strings)
++ * if it's non-NULL.
++ * The end of the array is found when the pointer gets NULL.
++ */
++static char **find_libraries(const char *xname, const Obj_Entry *refobj)
++{
++    char **libraries;
++    size_t libraries_count;
++    struct fill_library_paths_args arg;
++    char *name;
++
++    if (strchr(xname, '/') != NULL) {	/* Hard coded pathname */
++	if (xname[0] != '/' && !trust) {
++	    _rtld_error("Absolute pathname required for shared object \"%s\"",
++	      xname);
++	    return NULL;
++	}
++	libraries = malloc(sizeof(char*)*2);
++	libraries[0] = xstrdup(xname);
++	libraries[1] = NULL;
++	return libraries;
++    }
++
++    if (libmap_disable || (refobj == NULL) ||
++	(name = lm_find(refobj->path, xname)) == NULL)
++	name = (char *)xname;
++
++    dbg(" Searching for \"%s\"", name);
++
++    /* look up at maximum 255 libraries, would be crazy going over that */
++    libraries = malloc(sizeof(char*)*(MAX_LIBRARIES_HITS+1));
++    libraries_count = 0;
++    
++    arg.name = name;
++    arg.namelen = strlen(name);
++    arg.libraries = libraries;
++    arg.count = &libraries_count;
++    
++    path_enumerate(ld_library_path, fill_library_paths, &arg);
++    if(refobj != NULL)
++        path_enumerate(refobj->rpath, fill_library_paths, &arg);
++    path_enumerate(gethints(), fill_library_paths, &arg);
++    path_enumerate(STANDARD_LIBRARY_PATH, fill_library_paths, &arg);
++
++    libraries[libraries_count] = NULL;
++
++    if(libraries_count == 0) {
++        if(refobj != NULL && refobj->path != NULL) {
++            _rtld_error("Shared object \"%s\" not found, required by \"%s\"",
++	       name, basename(refobj->path));
++        } else {
++            _rtld_error("Shared object \"%s\" not found", name);
++        }
++
++	free(libraries);
++	return NULL;
++    }
++
++    return libraries;
++}
++
+ /*
+  * Given a symbol number in a referencing object, find the corresponding
+  * definition of the symbol.  Returns a pointer to the symbol, or NULL if
+@@ -1260,7 +1357,29 @@
+ 	Needed_Entry *needed;
+ 
+ 	for (needed = obj->needed;  needed != NULL;  needed = needed->next) {
+-	    needed->obj = load_object(obj->strtab + needed->name, obj);
++	    const char *name = obj->strtab + needed->name;
++	    char **paths = find_libraries(name, obj);
++	    char **curpath = paths;
++
++	    needed->obj = NULL;
++    	    if (paths == NULL) {
++	    if (ld_tracing)
++		continue;
++	    else
++		return -1;
++	    }
++
++	    while(*curpath) {
++		if (needed->obj == NULL) {
++		    needed->obj = load_object(*curpath, NULL);
++		    curpath++;
++		    continue;
++		}
++		/* Continue, so that we can free the whole lot */
++		free(*curpath);
++		curpath++;
++	    }
++	    free(paths);
+ 	    if (needed->obj == NULL && !ld_tracing)
+ 		return -1;
+ 	}

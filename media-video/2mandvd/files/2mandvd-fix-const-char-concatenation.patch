@@ -1,0 +1,14 @@
+diff -Naur 2ManDVD.orig/mainfrm.cpp 2ManDVD/mainfrm.cpp
+--- 2ManDVD.orig/mainfrm.cpp	2011-05-07 22:29:20.049000080 -0300
++++ 2ManDVD/mainfrm.cpp	2011-05-07 22:30:30.055000081 -0300
+@@ -1403,8 +1403,8 @@
+ 	outext << "growisofs" << endl;
+ 	outext << "mpeg2enc" << endl;
+         outext << "jpegtopnm /dev/null" << endl;
+-        outext << "cat " + "/usr/share/2mandvd/fake.pl" << endl;
+-        outext << "rm -f " + homeDir.path() + "/.mdvdep.sh" << endl;
++        outext << "cat " << "/usr/share/2mandvd/fake.pl" << endl;
++        outext << "rm -f " << homeDir.path() << "/.mdvdep.sh" << endl;
+ 	outext << "exit" << endl;
+ 	wmyficext.close();
+ 	QString programf = "bash";

@@ -1,0 +1,58 @@
+# ChangeLog for net-misc/minissdpd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minissdpd/ChangeLog,v 1.9 2012/12/25 21:03:11 blueness Exp $
+
+  25 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  -minissdpd-1.1.20120121.ebuild,
+  -files/minissdpd-1.1.20120121-remove-initd.patch,
+  -files/minissdpd-1.1.20120121-respect-CFLAGS.patch:
+  Remove older unstable version
+
+*minissdpd-1.2 (25 May 2012)
+
+  25 May 2012; Anthony G. Basile <blueness@gentoo.org> +minissdpd-1.2.ebuild,
+  +files/minissdpd-1.2-respect-CC.patch:
+  Version bump
+
+  10 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  -minissdpd-1.1.20111007.ebuild, -minissdpd-1.1.20111007-r1.ebuild,
+  minissdpd-1.1.20120121.ebuild,
+  +files/minissdpd-1.1.20120121-respect-CFLAGS.patch,
+  minissdpd-1.1.20120410.ebuild, -files/minissdpd.initd-r1,
+  -files/minissdpd-remove-initd.patch, -files/minissdpd-respect-CFLAGS.patch,
+  files/minissdpd.initd:
+  Remove older unstables, and sanitize file names in FILESDIR
+
+*minissdpd-1.1.20120410 (10 Apr 2012)
+
+  10 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  +minissdpd-1.1.20120410.ebuild,
+  +files/minissdpd-1.1.20120410-remove-initd.patch,
+  +files/minissdpd-1.1.20120410-respect-CFLAGS.patch:
+  Version bump
+
+*minissdpd-1.1.20120121 (22 Jan 2012)
+
+  22 Jan 2012; Anthony G. Basile <blueness@gentoo.org>
+  +minissdpd-1.1.20120121.ebuild,
+  +files/minissdpd-1.1.20120121-remove-initd.patch:
+  Version bump
+
+  08 Nov 2011; Anthony G. Basile <blueness@gentoo.org>
+  files/minissdpd.initd-r1:
+  Fixed confusion between two variable names
+
+*minissdpd-1.1.20111007-r1 (08 Nov 2011)
+
+  08 Nov 2011; Anthony G. Basile <blueness@gentoo.org>
+  +minissdpd-1.1.20111007-r1.ebuild, +files/minissdpd.confd,
+  +files/minissdpd.initd-r1:
+  Allow configuration of interfaces on which to listen
+
+*minissdpd-1.1.20111007 (14 Oct 2011)
+
+  14 Oct 2011; Anthony G. Basile <blueness@gentoo.org>
+  +minissdpd-1.1.20111007.ebuild, +files/minissdpd-respect-CFLAGS.patch,
+  +metadata.xml:
+  Initial commit
+

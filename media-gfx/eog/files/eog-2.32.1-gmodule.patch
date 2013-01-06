@@ -1,0 +1,25 @@
+From 1bb022ffc624fcf17cb36d4639d057bc040bc44f Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Sat, 27 Oct 2012 04:24:07 -0400
+Subject: [PATCH] Explicitly link to gmodule
+
+Required for building with ld.gold and glib-2.32
+---
+ configure.ac | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/configure.ac b/configure.ac
+index 886fe6b..ee875a0 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -96,6 +96,7 @@ EXEMPI_REQUIRED=1.99.5
+ EOG_MODULES="gtk+-2.0 >= $GTK_REQUIRED \
+              glib-2.0 >= $GLIB_REQUIRED \
+              gio-2.0 >= $GLIB_REQUIRED \
++             gmodule-no-export-2.0 >= $GLIB_REQUIRED \
+              gthread-2.0 >= $GLIB_REQUIRED \
+              gnome-desktop-2.0 >= $GNOME_DESKTOP_REQUIRED \
+              gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED \
+-- 
+1.7.12.4
+

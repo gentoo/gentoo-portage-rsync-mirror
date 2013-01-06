@@ -1,0 +1,39 @@
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/foomatic-filters-ppds-20070501.ebuild,v 1.17 2008/05/07 23:57:14 tgurr Exp $
+
+inherit eutils
+
+DESCRIPTION="linuxprinting.org PPD files for non-postscript printers"
+HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
+SRC_URI="http://gentooexperimental.org/~calchan/distfiles/${P}.tar.gz
+	http://linuxprinting.org/download/foomatic/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+IUSE=""
+
+RDEPEND="net-print/foomatic-filters"
+
+src_unpack() {
+	unpack ${A}
+	# Fix a symlink collision, see bug #172341
+	sed -i -e '/ln -s \$prefix\/share\/ppd \$destdir\$ppddir\/foomatic-ppds/d' "${S}"/install
+	# Fix building if /bin/sh isn't bash.  Bug #176799
+	epatch "${FILESDIR}"/${P}-remove-bashisms.patch
+}
+
+src_compile() {
+	rm -f $(find . -name "*gimp-print*")
+	rm -f $(find . -name "*hpijs*")
+	# conflicts with foomatic-filters
+	rm -f bin/{foomatic-gswrapper,foomatic-rip}
+	rm -f share/man/man1/{foomatic-gswrapper,foomatic-rip}.1
+}
+
+src_install() {
+	./install -d "${D}" -p /usr -z || die "ppds install failed"
+
+	dodoc README
+}

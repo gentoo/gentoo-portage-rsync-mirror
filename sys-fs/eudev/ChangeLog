@@ -1,0 +1,61 @@
+# ChangeLog for sys-fs/eudev
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.12 2013/01/04 21:48:47 axs Exp $
+
+*eudev-1_beta1-r2 (04 Jan 2013)
+
+  04 Jan 2013; Ian Stakenvicius <axs@gentoo.org> -eudev-1_beta1-r1.ebuild,
+  +eudev-1_beta1-r2.ebuild, +files/eudev-1_beta1-fix-modprobe-call.patch:
+  fixed module loading when USE=-kmod but kmod is installed; put keymap files
+  back in lib/udev
+
+*eudev-0-r1 (20 Dec 2012)
+
+  20 Dec 2012; Richard Yao <ryao@gentoo.org> +eudev-0-r1.ebuild:
+  Sync sys-fs/eudev-0 with sys-fs/udev-171
+
+  20 Dec 2012; Richard Yao <ryao@gentoo.org> eudev-1_beta1-r1.ebuild,
+  eudev-9999.ebuild:
+  Add app-text/docbook-xsl-stylesheets and dev-libs/libxslt to dependency list -
+  bug #446702
+
+  13 Dec 2012; Richard Yao <ryao@gentoo.org> eudev-1_beta1-r1.ebuild,
+  eudev-9999.ebuild:
+  Update homepage to point to eudev repository
+
+  13 Dec 2012; Richard Yao <ryao@gentoo.org> eudev-1_beta1-r1.ebuild,
+  eudev-9999.ebuild:
+  Lower minimum kernel requirement to 2.6.31
+
+*eudev-1_beta1-r1 (12 Dec 2012)
+
+  12 Dec 2012; Ian Stakenvicius <axs@gentoo.org> -eudev-1_beta1.ebuild,
+  +eudev-1_beta1-r1.ebuild,
+  +files/eudev-1_beta1-include-all-search-paths.patch:
+  support all udev rules dirs
+
+  12 Dec 2012; Ian Stakenvicius <axs@gentoo.org> eudev-9999.ebuild:
+  fixed typos in deps on the live ebuild
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> eudev-0.ebuild,
+  eudev-1_beta1.ebuild, eudev-9999.ebuild:
+  make PDEPEND more sane, after all other ebuilds are adjusted to use
+  virtual/udev this seems to be OK
+
+  11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> eudev-0.ebuild,
+  eudev-1_beta1.ebuild, eudev-9999.ebuild:
+  Changed PDEPEND to hopefully help resolve blocks while still ensuring proper
+  virtual/udev is installed
+
+*eudev-0 (10 Dec 2012)
+
+  10 Dec 2012; Ian Stakenvicius <axs@gentoo.org> +eudev-0.ebuild,
+  eudev-1_beta1.ebuild, eudev-9999.ebuild, metadata.xml:
+  fixed various udev dependency issues
+
+*eudev-1_beta1 (09 Dec 2012)
+*eudev-9999 (09 Dec 2012)
+
+  09 Dec 2012; Richard Yao <ryao@gentoo.org> +eudev-1_beta1.ebuild,
+  +eudev-9999.ebuild, +files/40-gentoo.rules, +metadata.xml:
+  Commit sys-fs/eudev to the tree

@@ -1,0 +1,108 @@
+# ChangeLog for dev-python/python-distutils-extra
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/ChangeLog,v 1.21 2012/11/16 02:48:41 patrick Exp $
+
+  16 Nov 2012; Patrick Lauer <patrick@gentoo.org>
+  python-distutils-extra-2.37.ebuild:
+  Adding py3 capability #442824
+
+*python-distutils-extra-2.37 (11 Nov 2012)
+
+  11 Nov 2012; Tim Harder <radhermit@gentoo.org>
+  +python-distutils-extra-2.37.ebuild:
+  Version bump.
+
+*python-distutils-extra-2.36 (30 Oct 2012)
+
+  30 Oct 2012; Patrick Lauer <patrick@gentoo.org>
+  +python-distutils-extra-2.36.ebuild:
+  Bump
+
+  12 Oct 2012; Mike Gilbert <floppym@gentoo.org>
+  python-distutils-extra-2.35.ebuild:
+  Restrict python 2.5 per Arfrever.
+
+*python-distutils-extra-2.35 (09 Oct 2012)
+
+  09 Oct 2012; Patrick Lauer <patrick@gentoo.org>
+  +python-distutils-extra-2.35.ebuild:
+  Bump
+
+  07 Oct 2012; nixnut <nixnut@gentoo.org> python-distutils-extra-2.33.ebuild:
+  ppc stable #429036
+
+  12 Sep 2012; Johannes Huber <johu@gentoo.org>
+  python-distutils-extra-2.33.ebuild:
+  Stable for x86, wrt bug #429036
+
+  12 Sep 2012; Agostino Sarubbo <ago@gentoo.org>
+  python-distutils-extra-2.33.ebuild:
+  Stable for amd64, wrt bug #429036
+
+*python-distutils-extra-2.34 (29 Aug 2012)
+
+  29 Aug 2012; Patrick Lauer <patrick@gentoo.org>
+  +python-distutils-extra-2.34.ebuild, -python-distutils-extra-2.19.ebuild,
+  -python-distutils-extra-2.29.ebuild, -python-distutils-extra-2.32.ebuild:
+  Bump
+
+*python-distutils-extra-2.33 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org>
+  +python-distutils-extra-2.33.ebuild:
+  Bump
+
+*python-distutils-extra-2.32 (11 Apr 2012)
+
+  11 Apr 2012; Patrick Lauer <patrick@gentoo.org>
+  +python-distutils-extra-2.32.ebuild:
+  Bump for #411403
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org>
+  python-distutils-extra-2.23.ebuild:
+  Marking python-distutils-extra-2.23 ppc for bug 378587
+
+*python-distutils-extra-2.29 (26 Dec 2011)
+
+  26 Dec 2011; Patrick Lauer <patrick@gentoo.org>
+  +python-distutils-extra-2.29.ebuild:
+  Bump for #387387
+
+  21 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  python-distutils-extra-2.23.ebuild:
+  x86 stable wrt bug #378587
+
+  14 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  python-distutils-extra-2.23.ebuild:
+  Stable on amd64 wrt bug #375857
+
+*python-distutils-extra-2.23 (30 Dec 2010)
+
+  30 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -python-distutils-extra-2.15.ebuild, +python-distutils-extra-2.23.ebuild:
+  Version bump.
+
+*python-distutils-extra-2.19 (15 Jul 2010)
+
+  15 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -python-distutils-extra-2.12.ebuild, +python-distutils-extra-2.19.ebuild:
+  Version bump.
+
+*python-distutils-extra-2.15 (07 Feb 2010)
+
+  07 Feb 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +python-distutils-extra-2.15.ebuild:
+  Version bump. Fix dependencies (bug #303317).
+
+*python-distutils-extra-2.12 (03 Nov 2009)
+
+  03 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +python-distutils-extra-2.12.ebuild:
+  Version bump (bug #291277). Set SUPPORT_PYTHON_ABIS.
+
+  07 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
+  python-distutils-extra-1.92_pre67.ebuild:
+  Keywording for ppc
+
+  13 Jul 2009; Jesus Rivero <neurogeek@gentoo.org> +metadata.xml:
+  Initial commit

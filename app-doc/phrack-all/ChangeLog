@@ -1,0 +1,24 @@
+# ChangeLog for app-doc/phrack-all
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack-all/ChangeLog,v 1.16 2012/06/28 16:04:30 vapier Exp $
+
+*phrack-all-68 (28 Jun 2012)
+
+  28 Jun 2012; Mike Frysinger <vapier@gentoo.org> +phrack-all-68.ebuild:
+  Version bump #423709 by Christian Inci.
+
+*phrack-all-67 (18 Aug 2011)
+
+  18 Aug 2011; Mike Frysinger <vapier@gentoo.org> +phrack-all-67.ebuild:
+  Version bump.
+
+  19 Oct 2010; Mart Raudsepp <leio@gentoo.org> phrack-all-66.ebuild:
+  Drop to ~mips
+
+  17 Dec 2009; Christian Faulhammer <fauli@gentoo.org> phrack-all-66.ebuild:
+  QA: add prefix keywords
+
+*phrack-all-* (13 Feb 2003)
+
+  13 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuilds submitted by me.

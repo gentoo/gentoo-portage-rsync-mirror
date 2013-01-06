@@ -1,0 +1,78 @@
+diff -Nurp pwauth-2.3.1.orig/config.h pwauth-2.3.1/config.h
+--- pwauth-2.3.1.orig/config.h	2004-09-29 03:07:18.000000000 +0200
++++ pwauth-2.3.1/config.h	2006-06-06 09:01:37.044516000 +0200
+@@ -106,7 +106,7 @@
+ 
+ /* #define SHADOW_NONE		/**/
+ /* #define SHADOW_BSD		/* FreeBSD, NetBSD, OpenBSD, BSDI */
+-#define SHADOW_SUN		/* Linux, Solaris, IRIX */
++/* #define SHADOW_SUN		/* Linux, Solaris, IRIX */
+ /* #define SHADOW_JFH		/**/
+ /* #define SHADOW_MDW		/**/
+ /* #define SHADOW_AIX		/* AIX */
+@@ -238,7 +238,7 @@
+  * last).
+  */
+ 
+-#define SERVER_UIDS 72		/* user "nobody" */
++/* #define SERVER_UIDS 81		/* user "nobody" */
+ 
+ 
+ /* If MIN_UNIX_UID is defined to an integer, logins with uid numbers less than
+@@ -250,7 +250,7 @@
+  * given value will be accepted).
+  */
+ 
+-#define MIN_UNIX_UID 500	/**/
++/* #define MIN_UNIX_UID 500	/**/
+ 
+ 
+ /* If IGNORE_CASE is defined, the login given is checked in two different
+@@ -278,7 +278,7 @@
+  * SLEEP_LOCK.  SLEEP_TIME defaults to 2 seconds if not defined.
+  */
+ 
+-#define SLEEP_LOCK "/var/run/pwauth.lock"
++#define SLEEP_LOCK "/var/lock/pwauth"
+ 
+ 
+ /* If ENV_METHOD is defined, pwauth expects mod_auth_external to be configured
+diff -Nurp pwauth-2.3.1.orig/Makefile pwauth-2.3.1/Makefile
+--- pwauth-2.3.1.orig/Makefile	2004-09-28 15:40:19.000000000 +0200
++++ pwauth-2.3.1/Makefile	2006-06-06 09:26:14.620858750 +0200
+@@ -2,32 +2,18 @@
+ # system.  Most of the configurable stuff is in config.h
+ #
+ #   CC=       an ansi-C compiler.  If "cc" doesn't work, try "gcc".
+-#   LIB=      libraries to link in.  -lcrypt, -lshadow, -lpam sometimes needed.
+-#   LOCALFLAGS=   compiler flags.  Usually -g, -O, and stuff like that.
+-
+-# Settings for author's system (Redhat 6.1)
+-CC=gcc
+-LIB= -lcrypt
+-LOCALFLAGS= -g 
+-
+-# For PAM on Redhat Linux
+-# LIB=-lpam -ldl
+-
+-# For PAM on Solaris
+-# LIB=-lpam
++#   LDFLAGS=  libraries to link in.  -lcrypt, -lshadow, -lpam sometimes needed.
+ 
+ # -------------------- No User Servicable Parts Below -----------------------
+ 
+-CFLAGS= $(LOCALFLAGS)
+-
+ pwauth: main.o auth_aix.o auth_bsd.o auth_hpux.o auth_mdw.o auth_openbsd.o \
+ 	auth_pam.o auth_sun.o fail_log.o lastlog.o nologin.o snooze.o
+ 	$(CC) -o pwauth $(CFLAGS) main.o auth_aix.o auth_bsd.o auth_hpux.o \
+ 		auth_mdw.o auth_openbsd.o auth_pam.o auth_sun.o fail_log.o \
+-		lastlog.o nologin.o snooze.o $(LIB)
++		lastlog.o nologin.o snooze.o $(LDFLAGS)
+ 
+ checkfaillog: checkfaillog.o fail_check.o
+-	$(CC) -o checkfaillog $(CFLAGS) checkfaillog.o fail_check.o $(LIB)
++	$(CC) -o checkfaillog $(CFLAGS) checkfaillog.o fail_check.o $(LDFLAGS)
+ 
+ main.o: main.c config.h pwauth.h fail_log.h
+ auth_aix.o: auth_aix.c config.h pwauth.h

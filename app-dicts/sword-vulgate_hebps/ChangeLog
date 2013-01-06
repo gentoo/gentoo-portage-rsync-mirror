@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/sword-vulgate_hebps
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-vulgate_hebps/ChangeLog,v 1.1 2008/05/13 21:35:45 beandog Exp $
+
+*sword-vulgate_hebps-1.1 (13 May 2008)
+
+  13 May 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-vulgate_hebps-1.1.ebuild:
+  Initial commit
+

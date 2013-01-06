@@ -1,0 +1,51 @@
+Index: src/preferences.c
+===================================================================
+--- src/preferences.c	(revision 417)
++++ src/preferences.c	(revision 420)
+@@ -205,11 +205,15 @@
+ 	purple_prefs_set_bool(data, state);
+ }
+ 
+-#define APPEND_FORMAT_MENU(name, format) \
+-	sprintf(buf, "%s - %s", name, format); \
+-	widget = gtk_menu_item_new_with_label(buf); \
+-	gtk_menu_shell_append(GTK_MENU_SHELL(format_menu), widget); \
+-	g_signal_connect(G_OBJECT(widget), "activate", G_CALLBACK(cb_format_menu), (gpointer) format);
++static void
++append_format_menu(const char *name, const char *format)
++{
++  char *buf = g_strdup_printf("%s - %s", name, format);
++  GtkWidget *widget = gtk_menu_item_new_with_label(buf);
++  g_free(buf);
++  gtk_menu_shell_append(GTK_MENU_SHELL(format_menu), widget);
++  g_signal_connect(G_OBJECT(widget), "activate", G_CALLBACK(cb_format_menu), (gpointer) format);
++}
+ 
+ #define ADD_FORMAT_ENTRY(vbox, name, type) \
+ 	hbox = gtk_hbox_new(FALSE, 5); \
+@@ -259,16 +263,15 @@
+ 
+ 	// Popup menu for format
+ 	format_menu = gtk_menu_new();
+-	char buf[100];
+-	APPEND_FORMAT_MENU(_("Artist"), "%p");
+-	APPEND_FORMAT_MENU(_("Album"), "%a");
+-	APPEND_FORMAT_MENU(_("Title"), "%t");
+-	APPEND_FORMAT_MENU(_("Track Duration"), "%d");
+-	APPEND_FORMAT_MENU(_("Elapsed Track Time"), "%c");
+-	APPEND_FORMAT_MENU(_("Progress Bar"), "%b");
+-	APPEND_FORMAT_MENU(_("Player"), "%r");
+-	APPEND_FORMAT_MENU(_("Music Symbol (may not display on some networks)"), "%m");
+-	APPEND_FORMAT_MENU(_("Status Message"), "%s");
++	append_format_menu(_("Artist"), "%p");
++	append_format_menu(_("Album"), "%a");
++	append_format_menu(_("Title"), "%t");
++	append_format_menu(_("Track Duration"), "%d");
++	append_format_menu(_("Elapsed Track Time"), "%c");
++	append_format_menu(_("Progress Bar"), "%b");
++	append_format_menu(_("Player"), "%r");
++	append_format_menu(_("Music Symbol (may not display on some networks)"), "%m");
++	append_format_menu(_("Status Message"), "%s");
+ 	gtk_widget_show_all(format_menu);
+ 
+ 	// Format selection

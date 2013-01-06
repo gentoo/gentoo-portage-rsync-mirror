@@ -1,0 +1,24 @@
+# ChangeLog for sys-auth/ykclient
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/ykclient/ChangeLog,v 1.4 2012/12/31 02:24:10 flameeyes Exp $
+
+*ykclient-2.9 (31 Dec 2012)
+
+  31 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> +ykclient-2.9.ebuild:
+  Version bump.
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> -ykclient-2.3.ebuild:
+  Remove ebuild as well.
+
+*ykclient-2.8 (24 Jun 2012)
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> +ykclient-2.8.ebuild,
+  -files/ykclient-2.3-rpath.patch:
+  Version bump yubikey-related packages. Close bugs #394565, #394563, #423289,
+  #371345, #394567. Remove old and old patch.
+
+*ykclient-2.3 (20 Nov 2010)
+
+  20 Nov 2010; Diego E. Pettenò <flameeyes@gentoo.org> +ykclient-2.3.ebuild,
+  +files/ykclient-2.3-rpath.patch, +metadata.xml:
+  Initial import of ykclient ebuild; ebuild by Brant Gurganus in bug #343551.

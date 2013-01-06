@@ -1,0 +1,11 @@
+--- ratpoison.el	2003-11-10 22:30:44.000000000 -0600
++++ ratpoison.el~	2003-11-10 22:53:30.676457808 -0600
+@@ -44,6 +44,8 @@
+ ;; - auto-completion of commands
+ ;; - probably a bunch of other things
+ 
++(require 'generic)
++
+ (defvar ratpoison-commands-0
+   (list
+    "abort"

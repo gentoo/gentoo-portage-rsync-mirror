@@ -1,0 +1,12 @@
+--- clisp-2.41.orig/modules/fastcgi/fastcgi.lisp	2006-10-13 05:02:24.000000000 +0200
++++ clisp-2.41/modules/fastcgi/fastcgi.lisp	2007-09-08 11:58:49.000000000 +0200
+@@ -147,6 +147,9 @@
+ 
+ ; --------------   "C" functions
+ ;(c-lines "#include \"fastcgi.h\"~%"); completely wrapped
++(eval-when (compile)
++  ;;NB this global affects further compilations in this session
++  (setq ffi:*output-c-functions* t))
+ 
+ ; Our wrappers
+ (def-call-out fcgi_getenv       (:arguments (var c-string))               (:return-type c-string))

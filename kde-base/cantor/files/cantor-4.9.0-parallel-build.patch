@@ -1,0 +1,13 @@
+diff --git a/src/backends/qalculate/plotassistant/qalculateplotassistant.h b/src/backends/qalculate/plotassistant/qalculateplotassistant.h
+index ac55b51cd67c1c403f28ca99eb72390a2f03a834..22f6c215d5026594d96483741e48c9c7dce97ce5 100644
+--- a/src/backends/qalculate/plotassistant/qalculateplotassistant.h
++++ b/src/backends/qalculate/plotassistant/qalculateplotassistant.h
+@@ -22,7 +22,7 @@
+ #define QALCULATE_PLOT_ASSISTANT_H
+ 
+ #include "assistant.h"
+-#include "../settings.h"
++#include "settings.h"
+ #include "ui_qalculateplotdialog.h"
+ #include <kdialog.h>
+ #include <qlist.h>

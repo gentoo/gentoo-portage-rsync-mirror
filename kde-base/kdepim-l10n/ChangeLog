@@ -1,0 +1,270 @@
+# ChangeLog for kde-base/kdepim-l10n
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.66 2013/01/05 20:19:05 creffett Exp $
+
+*kdepim-l10n-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +kdepim-l10n-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdepim-l10n-4.4.11.1-r1.ebuild:
+  Drop ppc64 as in rest of KDE
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdepim-l10n-4.8.5.ebuild:
+  Drop KDE 4.8
+
+*kdepim-l10n-4.9.4 (05 Dec 2012)
+
+  05 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> +kdepim-l10n-4.9.4.ebuild:
+  Version bump KDE SC 4.9.4
+
+  30 Nov 2012; <ago@gentoo.org> kdepim-l10n-4.9.3.ebuild:
+  Stable for ppc, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> kdepim-l10n-4.9.3.ebuild:
+  Stable for x86, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> kdepim-l10n-4.9.3.ebuild:
+  Stable for amd64, wrt bug #442394
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -kdepim-l10n-4.9.2.ebuild:
+  Remove KDE SC 4.9.2
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -kdepim-l10n-4.9.1.ebuild:
+  Remove KDE SC 4.9.1
+
+*kdepim-l10n-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +kdepim-l10n-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> kdepim-l10n-4.9.2.ebuild:
+  add ~arm, bug #430072
+
+  13 Oct 2012; Johannes Huber <johu@gentoo.org> kdepim-l10n-4.4.11.1-r1.ebuild,
+  kdepim-l10n-4.8.5.ebuild, kdepim-l10n-4.9.1.ebuild, kdepim-l10n-4.9.2.ebuild:
+  Drop HOMEPAGE + LICENSE, handled by eclass.
+
+*kdepim-l10n-4.9.2 (02 Oct 2012)
+
+  02 Oct 2012; Johannes Huber <johu@gentoo.org> +kdepim-l10n-4.9.2.ebuild:
+  Version bump KDE SC 4.9.2
+
+  21 Sep 2012; Johannes Huber <johu@gentoo.org> -kdepim-l10n-4.9.0.ebuild:
+  Remove KDE SC 4.9.0
+
+*kdepim-l10n-4.9.1 (04 Sep 2012)
+
+  04 Sep 2012; Johannes Huber <johu@gentoo.org> +kdepim-l10n-4.9.1.ebuild:
+  Version bump KDE SC 4.9.1
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -kdepim-l10n-4.7.4.ebuild,
+  -kdepim-l10n-4.7.4-r1.ebuild:
+  Remove KDE SC 4.7.4
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -kdepim-l10n-4.8.3.ebuild:
+  Remove KDE SC 4.8.3
+
+  03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  kdepim-l10n-4.8.5.ebuild:
+  Stable on ppc wrt bug#431892.
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> kdepim-l10n-4.8.5.ebuild:
+  Stable for x86, wrt bug #431892
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> kdepim-l10n-4.8.5.ebuild:
+  Stable for amd64, wrt bug #431892
+
+  17 Aug 2012; Johannes Huber <johu@gentoo.org> +files/kde-l10n-da-4.8.5.patch,
+  kdepim-l10n-4.8.5.ebuild:
+  Fix build of messed up upstream tarball for danish locale.
+
+  17 Aug 2012; Johannes Huber <johu@gentoo.org> -kdepim-l10n-4.8.4.ebuild:
+  Remove KDE SC 4.8.4
+
+*kdepim-l10n-4.8.5 (07 Aug 2012)
+
+  07 Aug 2012; Johannes Huber <johu@gentoo.org> +kdepim-l10n-4.8.5.ebuild:
+  Version bump KDE SC 4.8.5
+
+*kdepim-l10n-4.9.0 (01 Aug 2012)
+
+  01 Aug 2012; Johannes Huber <johu@gentoo.org> +kdepim-l10n-4.9.0.ebuild:
+  Version bump KDE SC 4.9.0
+
+*kdepim-l10n-4.8.4 (22 Jun 2012)
+
+  22 Jun 2012; Johannes Huber <johu@gentoo.org> +kdepim-l10n-4.8.4.ebuild:
+  Version bump.
+
+  24 May 2012; Johannes Huber <johu@gentoo.org> -kdepim-l10n-4.8.1.ebuild:
+  Remove KDE SC 4.8.1
+
+  24 May 2012; Agostino Sarubbo <ago@gentoo.org> kdepim-l10n-4.8.3.ebuild:
+  Stable for x86, wrt bug #414605
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> kdepim-l10n-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
+
+  18 May 2012; Joseph Jezak <josejx@gentoo.org> kdepim-l10n-4.8.3.ebuild:
+  Marked ~ppc ~ppc64 for bug #402989.
+
+  08 May 2012; Johannes Huber <johu@gentoo.org> -kdepim-l10n-4.8.2.ebuild:
+  Remove KDE SC 4.8.2
+
+*kdepim-l10n-4.8.3 (03 May 2012)
+
+  03 May 2012; Johannes Huber <johu@gentoo.org> +kdepim-l10n-4.8.3.ebuild:
+  Version bump KDE SC 4.8.3
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> kdepim-l10n-4.8.1.ebuild:
+  x86 stable, bug #409403
+
+*kdepim-l10n-4.8.2 (04 Apr 2012)
+
+  04 Apr 2012; Johannes Huber <johu@gentoo.org> +kdepim-l10n-4.8.2.ebuild:
+  Version bump KDE SC 4.8.2
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> kdepim-l10n-4.8.1.ebuild:
+  Stable for amd64, wrt bug #409403
+
+  31 Mar 2012; Markus Meier <maekke@gentoo.org> kdepim-l10n-4.8.1.ebuild:
+  add ~arm, bug #402989
+
+  23 Mar 2012; Johannes Huber <johu@gentoo.org> -kdepim-l10n-4.8.0.ebuild:
+  Remove KDE SC 4.8.0
+
+*kdepim-l10n-4.8.1 (06 Mar 2012)
+
+  06 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepim-l10n-4.8.1.ebuild:
+  Version bump KDE SC 4.8.1
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kdepim-l10n-4.7.4-r1.ebuild:
+  ppc stable #396359
+
+*kdepim-l10n-4.8.0 (25 Jan 2012)
+
+  25 Jan 2012; Johannes Huber <johu@gentoo.org> +kdepim-l10n-4.8.0.ebuild:
+  Version bump KDE SC 4.8.0
+
+  17 Jan 2012; Johannes Huber <johu@gentoo.org> -kdepim-l10n-4.7.3.ebuild:
+  Remove KDE SC 4.7.3
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> kdepim-l10n-4.7.4-r1.ebuild:
+  Stable for amd64, wrt bug #396359
+
+  09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kdepim-l10n-4.7.4-r1.ebuild:
+  x86 stable wrt bug #396359
+
+*kdepim-l10n-4.7.4-r1 (27 Dec 2011)
+
+  27 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepim-l10n-4.7.4-r1.ebuild:
+  Also install kdepim-runtime directory, bug 395141
+
+  12 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdepim-l10n-4.7.4.ebuild:
+  Fix SRC_URI, remove not-yet-existing si, fix manifest; bug 394495 and others
+
+*kdepim-l10n-4.7.4 (11 Dec 2011)
+
+  11 Dec 2011; Alexey Shvetsov <alexxy@gentoo.org> +kdepim-l10n-4.7.4.ebuild:
+  Version bump KDE SC 4.7.4
+
+  07 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdepim-l10n-4.7.2.ebuild:
+  Drop KDE 4.7.2
+
+  07 Dec 2011; Markos Chandras <hwoarang@gentoo.org> kdepim-l10n-4.7.3.ebuild:
+  Stable on amd64 wrt bug #388279
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kdepim-l10n-4.7.3.ebuild:
+  x86 stable wrt bug #388279
+
+*kdepim-l10n-4.7.3 (04 Nov 2011)
+
+  04 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepim-l10n-4.7.3.ebuild:
+  Version bump
+
+  28 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdepim-l10n-4.7.1.ebuild:
+  Drop KDEpim 4.6.1 and KDE 4.7.1
+
+*kdepim-l10n-4.7.2 (18 Oct 2011)
+*kdepim-l10n-4.7.1 (18 Oct 2011)
+
+  18 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepim-l10n-4.7.1.ebuild, +kdepim-l10n-4.7.2.ebuild:
+  Re-added 4.7 translations, bug 387513
+
+  15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdepim-l10n-4.7.0.ebuild:
+  Drop KDE 4.7.0
+
+*kdepim-l10n-4.7.0 (28 Jul 2011)
+
+  28 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepim-l10n-4.7.0.ebuild:
+  Split kdepim translations out again
+
+  28 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdepim-l10n-4.4.11.1.ebuild:
+  Remove old
+
+  14 Jun 2011; Jonathan Callen <abcd@gentoo.org> kdepim-l10n-4.4.11.1.ebuild,
+  kdepim-l10n-4.4.11.1-r1.ebuild:
+  Simplify blockers a bit for new version of add_blocker function and SLOT
+  changes
+
+  01 Jun 2011; Brent Baude <ranger@gentoo.org>
+  kdepim-l10n-4.4.11.1-r1.ebuild:
+  Marking kdepim-l10n-4.4.11.1-r1 ppc stable for bug 354033
+
+  09 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  kdepim-l10n-4.4.11.1-r1.ebuild:
+  Stable on amd64 wrt bug #354033
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> kdepim-l10n-4.4.11.1-r1.ebuild:
+  x86 stable per bug 354033
+
+*kdepim-l10n-4.4.11.1-r1 (01 May 2011)
+
+  01 May 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepim-l10n-4.4.11.1-r1.ebuild:
+  Fix problem with locale variants, bug 365365
+
+*kdepim-l10n-4.4.11.1 (21 Apr 2011)
+
+  21 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepim-l10n-4.4.11.1.ebuild:
+  Version bump
+
+  11 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  kdepim-l10n-4.4.10.ebuild:
+  Do not generate handbooks as whole, be happy at least translations work.
+
+  06 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdepim-l10n-4.4.10.ebuild:
+  Add code to fix docbook variant, disable french temporarily since it uses
+  old DTD features
+
+  06 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdepim-l10n-4.4.10.ebuild:
+  Fix case where LINGUAS is unset or contains no supported language
+
+  05 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdepim-l10n-4.4.10.ebuild:
+  Fix case where subdirs dont exist, bug 362245
+
+*kdepim-l10n-4.4.10 (05 Apr 2011)
+
+  05 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepim-l10n-4.4.10.ebuild, +metadata.xml:
+  New ebuild for proper localization of kdepim-4.4 packages (when installed
+  together with a newer kde release), fixes bug 336856

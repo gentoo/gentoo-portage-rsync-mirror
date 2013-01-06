@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for plugins that can show IDownloads and IJobHolders
+EAPI=4
+RDEPEND=net-misc/leechcraft-summary
+SLOT=0
+_md5_=c22fa4bb50af469a2fd17c8e806f6923

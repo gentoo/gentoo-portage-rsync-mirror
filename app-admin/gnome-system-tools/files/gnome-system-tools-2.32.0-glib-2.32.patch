@@ -1,0 +1,45 @@
+From 437d0f671a07361e79dd9ce2a1064855efba3308 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Wed, 17 Oct 2012 06:19:46 -0400
+Subject: [PATCH] Do not call g_thread_init()
+
+It's not needed with >=glib-2.34 since gst_init_tool() calls gtk_init(),
+which calls g_type_init(), which initializes the threading system
+automatically.
+
+With >=glib-2.32, using g_thread_init() is deprecated and results in a
+linking error.
+
+https://bugs.gentoo.org/show_bug.cgi?id=438474
+---
+ src/network/main.c | 1 -
+ src/shares/main.c  | 1 -
+ 2 files changed, 2 deletions(-)
+
+diff --git a/src/network/main.c b/src/network/main.c
+index 8d302b4..0438b26 100644
+--- a/src/network/main.c
++++ b/src/network/main.c
+@@ -185,7 +185,6 @@ main (int argc, gchar *argv[])
+     { NULL }
+   };
+ 
+-  g_thread_init (NULL);
+   gst_init_tool ("network-admin", argc, argv, entries);
+   tool = gst_network_tool_new ();
+ 
+diff --git a/src/shares/main.c b/src/shares/main.c
+index f859ecc..beee15a 100644
+--- a/src/shares/main.c
++++ b/src/shares/main.c
+@@ -104,7 +104,6 @@ main (int argc, char *argv[])
+ 		{ NULL }
+ 	};
+ 
+-	g_thread_init (NULL);
+ 	gst_init_tool ("shares-admin", argc, argv, entries);
+ 	tool = GST_TOOL (gst_shares_tool_new ());
+ 
+-- 
+1.7.12.3
+

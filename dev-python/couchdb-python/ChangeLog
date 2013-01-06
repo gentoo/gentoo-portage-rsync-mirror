@@ -1,0 +1,75 @@
+# ChangeLog for dev-python/couchdb-python
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.16 2012/06/12 06:17:25 jlec Exp $
+
+  12 Jun 2012; Justin Lecher <jlec@gentoo.org> couchdb-python-0.6.1.ebuild,
+  couchdb-python-0.7.ebuild, couchdb-python-0.8.ebuild:
+  Remove NonExistingDep on python:2.4
+
+  11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  couchdb-python-0.8.ebuild:
+  x86 stable wrt bug #360111
+
+  23 Mar 2011; Christoph Mende <angelos@gentoo.org> couchdb-python-0.8.ebuild:
+  Stable on amd64 wrt bug #360111
+
+  15 Aug 2010; Dirkjan Ochtman <djc@gentoo.org>
+  +couchdb-python-0.6.1.ebuild:
+  Resurrect 0.6.1 for desktopcouch (bug 332645).
+
+*couchdb-python-0.8 (13 Aug 2010)
+
+  13 Aug 2010; Dirkjan Ochtman <djc@gentoo.org>
+  -couchdb-python-0.6.1.ebuild, +couchdb-python-0.8.ebuild:
+  Version bump to 0.8.
+
+  19 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  couchdb-python-0.6.1.ebuild, couchdb-python-0.7.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  15 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  couchdb-python-0.7.ebuild:
+  x86 stable wrt bug #319891
+
+  25 May 2010; Pacho Ramos <pacho@gentoo.org> couchdb-python-0.7.ebuild:
+  stable amd64, bug 319891
+
+*couchdb-python-0.7 (15 Apr 2010)
+
+  15 Apr 2010; Dirkjan Ochtman <djc@gentoo.org> -couchdb-python-0.6.ebuild,
+  +couchdb-python-0.7.ebuild:
+  Version bump to 0.7, clean up 0.6.
+
+  03 Feb 2010; Markus Meier <maekke@gentoo.org> couchdb-python-0.6.1.ebuild:
+  amd64/x86 stable, bug #300957
+
+*couchdb-python-0.6.1 (14 Dec 2009)
+
+  14 Dec 2009; Dirkjan Ochtman <djc@gentoo.org> couchdb-python-0.6.ebuild,
+  +couchdb-python-0.6.1.ebuild, metadata.xml:
+  Version bump to 0.6.1 (just released).
+
+  19 Sep 2009; Markus Meier <maekke@gentoo.org> couchdb-python-0.6.ebuild:
+  amd64/x86 stable, bug #285177
+
+  05 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  -couchdb-python-0.5.ebuild:
+  Remove old
+
+  21 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  couchdb-python-0.6.ebuild:
+  Delete debug print (bug #278561).
+
+*couchdb-python-0.6 (16 Jul 2009)
+
+  16 Jul 2009; Patrick Lauer <patrick@gentoo.org>
+  +couchdb-python-0.6.ebuild:
+  Bump to 0.6, fixes #276242
+
+*couchdb-python-0.5 (21 Jun 2009)
+
+  21 Jun 2009; Patrick Lauer <patrick@gentoo.org>
+  +couchdb-python-0.5.ebuild, +metadata.xml:
+  Initial commit of couchdb-python-0.5. Ebuild by Juergen Geuter. Fixes
+  #273719
+

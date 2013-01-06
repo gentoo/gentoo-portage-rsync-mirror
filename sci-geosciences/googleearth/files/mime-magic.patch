@@ -1,0 +1,12 @@
+--- usr/share/mime/packages/googleearth-mimetypes.xml	2006-07-22 10:13:03.000000000 +0100
++++ usr/share/mime/packages/googleearth-mimetypes.xml	2006-07-22 10:41:14.584945382 +0100
+@@ -2,6 +2,9 @@
+ <mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+   <mime-type type="application/vnd.google-earth.kml+xml">
+     <comment>Keyhole Markup Language data</comment>
++    <magic priority="60">
++      <match value="&lt;kml xmlns=&quot;http://earth.google.com/kml/" type="string" offset="0:64"/>
++    </magic>
+     <glob pattern="*.kml"/>
+   </mime-type>
+ 

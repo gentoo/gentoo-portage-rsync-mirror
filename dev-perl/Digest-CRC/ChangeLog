@@ -1,0 +1,57 @@
+# ChangeLog for dev-perl/Digest-CRC
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.14 2012/12/16 18:19:21 armin76 Exp $
+
+  16 Dec 2012; Raúl Porcel <armin76@gentoo.org> Digest-CRC-0.180.0.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #443048
+
+  23 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  Digest-CRC-0.180.0.ebuild:
+  keyword ~mips, needed for parted tests
+
+  23 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  Digest-CRC-0.180.0.ebuild:
+  keyword ~arm ~ppc ~pp64, bug #443048
+
+  14 Nov 2012; Jeroen Roovers <jer@gentoo.org> Digest-CRC-0.180.0.ebuild:
+  Marked ~hppa (bug #443048).
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Digest-CRC-0.180.0.ebuild:
+  x86 stable wrt bug #405621
+
+  01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Add missing cpan remote-id tags in metadata.xml (#406287)
+
+  25 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Digest-CRC-0.180.0.ebuild:
+  Stable for amd64, wrt bug #405621
+
+  18 Feb 2012; Torsten Veller <tove@gentoo.org> -Digest-CRC-0.170.0.ebuild:
+  Cleanup
+
+  04 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Fix maintainer's email in metadata
+
+*Digest-CRC-0.180.0 (13 Nov 2011)
+
+  13 Nov 2011; Torsten Veller <tove@gentoo.org> +Digest-CRC-0.180.0.ebuild:
+  Version bump
+
+  06 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Fix maintainer email
+
+*Digest-CRC-0.170.0 (30 Oct 2011)
+
+  30 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org> -Digest-CRC-0.17.ebuild,
+  +Digest-CRC-0.170.0.ebuild, metadata.xml:
+  Fix version according to Gentoo-PerlMod-Version, add perl herd. Thanks to
+  tove
+
+*Digest-CRC-0.17 (30 Oct 2011)
+
+  30 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org> +Digest-CRC-0.17.ebuild,
+  +metadata.xml:
+  Add dev-perl/Digest-CRC, thanks to slepnoga

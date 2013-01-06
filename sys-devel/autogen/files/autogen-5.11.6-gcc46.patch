@@ -1,0 +1,26 @@
+Fix testsuite
+
+https://bugs.gentoo.org/362661
+https://sourceforge.net/tracker/?func=detail&atid=103593&aid=3280108&group_id=3593
+
+--- a/autoopts/test/cond.test
++++ b/autoopts/test/cond.test
+@@ -112,13 +112,11 @@ ${AG_L} ${testname}.def || \
+ 
+ ( eval `echo ${cc_cmd} | \
+   ${SED} 's/-Werror//;s/-DTEST_TEST/-DSECOND -DTEST_TEST/' ` 2>&1 ) \
+-  | ${SED} -n 's/.*# *warning:*/#warning/p' > ${testname}-cc.log
+-
+-echo '#warning undefining SECOND due to option name conflict' \
+-  > ${testname}-xx.log
+-
+-cmp -s ${testname}-??.log || \
+-  failure "warning diffs:  `diff ${testname}-??.log`"
++  | ${SED} -n '/undefining SECOND due to option name conflict/p' \
++  > ${testname}-cc.log
++ 
++test -s ${testname}-cc.log || \
++  failure "warning diffs: 'undefining SECOND' not found"
+ 
+ # # # # # # # # # # FOURTH TEST # # # # # # # # #
+ 

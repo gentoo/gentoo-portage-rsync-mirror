@@ -1,0 +1,18 @@
+# ChangeLog for dev-python/django-recaptcha
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-recaptcha/ChangeLog,v 1.3 2012/10/25 10:55:11 iksaif Exp $
+
+*django-recaptcha-0.0.5 (25 Oct 2012)
+
+  25 Oct 2012; Corentin Chary <iksaif@gentoo.org>
+  +django-recaptcha-0.0.5.ebuild:
+  Bump to 0.0.5.
+
+  30 Sep 2012; Corentin Chary <iksaif@gentoo.org> metadata.xml:
+  Update my mail.
+
+*django-recaptcha-0.0.4 (02 Aug 2012)
+
+  02 Aug 2012; Corentin Chary <iksaif@gentoo.org>
+  +django-recaptcha-0.0.4.ebuild, +metadata.xml:
+  New ebuild.

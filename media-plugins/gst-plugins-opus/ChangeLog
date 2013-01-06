@@ -1,0 +1,13 @@
+# ChangeLog for media-plugins/gst-plugins-opus
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-opus/ChangeLog,v 1.1 2012/12/09 18:21:52 tetromino Exp $
+
+*gst-plugins-opus-1.0.3 (09 Dec 2012)
+*gst-plugins-opus-0.10.23 (09 Dec 2012)
+
+  09 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gst-plugins-opus-0.10.23.ebuild, +gst-plugins-opus-1.0.3.ebuild,
+  +metadata.xml:
+  New ebuild adding GStreamer plugin for using the Opus audio codec (bug
+  #427962, thanks to Hanno Boeck).
+

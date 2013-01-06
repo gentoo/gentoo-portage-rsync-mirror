@@ -1,0 +1,33 @@
+# ChangeLog for virtual/ttf-fonts
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ttf-fonts/ChangeLog,v 1.9 2012/07/27 12:39:34 grobian Exp $
+
+  27 Jul 2012; Fabian Groffen <grobian@gentoo.org> ttf-fonts-1.ebuild:
+  Marked ~{sparc64,x64}-solaris
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> ttf-fonts-1.ebuild:
+  keyword ~amd64-fbsd
+
+  29 May 2011; Fabian Groffen <grobian@gentoo.org> ttf-fonts-1.ebuild:
+  Marked ~m68k-mint, bug #365205
+
+  06 Feb 2011; Mart Raudsepp <leio@gentoo.org> ttf-fonts-1.ebuild:
+  Drop to ~mips
+
+  15 Apr 2010; Christian Faulhammer <fauli@gentoo.org> ttf-fonts-1.ebuild:
+  add ~x86-freebsd
+
+  05 Apr 2010; Dror Levin <spatz@gentoo.org> ttf-fonts-1.ebuild:
+  Add more packages to dep list.
+
+  26 Mar 2010; Dror Levin <spatz@gentoo.org> ttf-fonts-1.ebuild:
+  Change description as per leio's request.
+
+  26 Mar 2010; Dror Levin <spatz@gentoo.org> ttf-fonts-1.ebuild:
+  Add all keywords from all deps.
+
+*ttf-fonts-1 (26 Mar 2010)
+
+  26 Mar 2010; Dror Levin <spatz@gentoo.org> +ttf-fonts-1.ebuild,
+  +metadata.xml:
+  Initial version.

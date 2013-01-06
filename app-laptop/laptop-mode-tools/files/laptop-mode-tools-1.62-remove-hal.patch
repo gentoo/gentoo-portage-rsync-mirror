@@ -1,0 +1,28 @@
+--- usr/sbin/laptop_mode.orig	2013-01-02 22:07:03.879859499 +0100
++++ usr/sbin/laptop_mode	2013-01-02 22:08:31.740888273 +0100
+@@ -670,23 +670,14 @@
+     fi
+ 
+     if [ "$ENABLE_LAPTOP_MODE_WHEN_LID_CLOSED" -ne 0 -a "$ACTIVATE" -eq 0 ] ; then
+-	    if [ -x "`which hal-find-by-property`" ] ; then
+-		    HAL_LID_BUTTON=$(hal-find-by-property --key "button.type" --string "lid")
+-	    fi
+-	    if [ "$HAL_LID_BUTTON" != "" ] ; then
+-		    HAL_LID_BUTTON_STATE=$(hal-get-property --udi $(hal-find-by-property --key "button.type" --string "lid") --key "button.state.value")
+-		    if [ "$HAL_LID_BUTTON_STATE" = "true" ] ; then
+-			    log "VERBOSE" "Setting action to \"start\" because the lid is closed (says HAL)."
+-			    ACTIVATE=1			
+-		    fi
+-	    elif [ -f /proc/acpi/button/lid/*/state ] ; then
++	    if [ -f /proc/acpi/button/lid/*/state ] ; then
+ 		    if ( grep -q "closed" /proc/acpi/button/lid/*/state ) ; then
+ 			    log "VERBOSE" 'Setting action to "start" because the lid is closed (says /proc/acpi/button/lid/*/state).'
+ 			    ACTIVATE=1
+ 		    fi
+ 	    else
+ 		    log "MSG" "Warning: ENABLE_LAPTOP_MODE_WHEN_LID_CLOSED is set, but there is no file"
+-		    log "MSG" "/proc/acpi/button/lid/.../state, and hal information is not available either!"
++		    log "MSG" "/proc/acpi/button/lid/.../state"
+ 	    fi
+     fi
+ 

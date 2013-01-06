@@ -1,0 +1,37 @@
+#!/sbin/runscript
+
+extra_started_commands="reload"
+
+if [ -d /run ] ; then
+	RUNDIR=/run/pgbouncer
+else
+	RUNDIR=/var/run/pgbouncer
+fi
+
+depend() {
+	need net
+	after postgresql
+}
+
+start() {
+	mkdir -p ${RUNDIR}
+	chown pgbouncer:pgbouncer ${RUNDIR}
+
+	ebegin "Starting pgbouncer"
+	start-stop-daemon --start --pidfile ${RUNDIR}/pgbouncer.pid \
+		--exec /usr/bin/pgbouncer -- -q -d -u pgbouncer /etc/pgbouncer.conf
+	eend $? "Failed to start pgbouncer"
+}
+
+stop() {
+	ebegin "Stopping pgbouncer"
+	start-stop-daemon --stop --quiet --pidfile ${RUNDIR}/pgbouncer.pid
+	eend $?
+}
+
+reload() {
+	ebegin "Gracefully reloading pgbouncer"
+	start-stop-daemon --stop --oknodo --signal HUP \
+		--pidfile ${RUNDIR}/pgbouncer.pid
+	eend $?
+}

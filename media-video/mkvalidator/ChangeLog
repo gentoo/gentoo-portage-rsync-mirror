@@ -1,0 +1,37 @@
+# ChangeLog for media-video/mkvalidator
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvalidator/ChangeLog,v 1.7 2012/09/25 10:54:11 radhermit Exp $
+
+  25 Sep 2012; Tim Harder <radhermit@gentoo.org> mkvalidator-0.4.1.ebuild:
+  Die on sed failure too.
+
+  25 Sep 2012; Tim Harder <radhermit@gentoo.org> mkvalidator-0.4.1.ebuild:
+  Die on configure failure.
+
+*mkvalidator-0.4.1 (25 Sep 2012)
+
+  25 Sep 2012; Tim Harder <radhermit@gentoo.org> +mkvalidator-0.4.1.ebuild:
+  Version bump.
+
+  12 Jun 2012; Stefan Briesenick <sbriesen@gentoo.org>
+  -mkvalidator-0.3.7.ebuild:
+  removed old ebuild
+
+*mkvalidator-0.4.0 (12 Jun 2012)
+
+  12 Jun 2012; Stefan Briesenick <sbriesen@gentoo.org>
+  +mkvalidator-0.4.0.ebuild:
+  version bump
+
+*mkvalidator-0.3.7-r1 (27 Jan 2012)
+
+  27 Jan 2012; Stefan Briesenick <sbriesen@gentoo.org>
+  +mkvalidator-0.3.7-r1.ebuild:
+  added mkvtree utility
+
+*mkvalidator-0.3.7 (05 Dec 2011)
+
+  05 Dec 2011; Stefan Briesenick <sbriesen@gentoo.org>
+  +mkvalidator-0.3.7.ebuild, +metadata.xml:
+  initial commit
+

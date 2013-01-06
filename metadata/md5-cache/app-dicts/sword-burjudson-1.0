@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DEPEND=app-arch/unzip
+DESCRIPTION=1835 Judson Burmese Bible
+HOMEPAGE=http://crosswire.org/sword/modules/ModInfo.jsp?modName=BurJudson
+KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd
+LICENSE=freedist
+RDEPEND=app-text/sword
+SLOT=0
+SRC_URI=mirror://gentoo/BurJudson-1.0.zip
+_eclasses_=sword-module	c52595ffeb9df1c705120bffa624d484
+_md5_=7d4fac381df9fa85846cbb585cdffdb3

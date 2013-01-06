@@ -1,0 +1,45 @@
+diff -ur ParaView3.orig/VTK/IO/vtkPNGReader.cxx ParaView3/VTK/IO/vtkPNGReader.cxx
+--- ParaView3.orig/VTK/IO/vtkPNGReader.cxx	2006-09-22 00:23:24.000000000 +0300
++++ ParaView3/VTK/IO/vtkPNGReader.cxx	2010-05-12 15:28:30.000000000 +0300
+@@ -116,7 +116,7 @@
+   // minimum of a byte per pixel
+   if (color_type == PNG_COLOR_TYPE_GRAY && bit_depth < 8) 
+     {
+-    png_set_gray_1_2_4_to_8(png_ptr);
++    png_set_expand_gray_1_2_4_to_8(png_ptr);
+     }
+ 
+   // add alpha if any alpha found
+@@ -225,7 +225,7 @@
+   // minimum of a byte per pixel
+   if (color_type == PNG_COLOR_TYPE_GRAY && bit_depth < 8) 
+     {
+-    png_set_gray_1_2_4_to_8(png_ptr);
++    png_set_expand_gray_1_2_4_to_8(png_ptr);
+     }
+ 
+   // add alpha if any alpha found
+diff -ur ParaView3.orig/VTK/Utilities/vtkpng/png.h ParaView3/VTK/Utilities/vtkpng/png.h
+--- ParaView3.orig/VTK/Utilities/vtkpng/png.h	2004-04-28 18:49:22.000000000 +0300
++++ ParaView3/VTK/Utilities/vtkpng/png.h	2010-05-12 15:28:00.000000000 +0300
+@@ -1330,7 +1330,7 @@
+ #if defined(PNG_READ_EXPAND_SUPPORTED)
+ /* Expand data to 24-bit RGB, or 8-bit grayscale, with alpha if available. */
+ extern PNG_EXPORT(void,png_set_expand) PNGARG((png_structp png_ptr));
+-extern PNG_EXPORT(void,png_set_gray_1_2_4_to_8) PNGARG((png_structp png_ptr));
++extern PNG_EXPORT(void,png_set_expand_gray_1_2_4_to_8) PNGARG((png_structp png_ptr));
+ extern PNG_EXPORT(void,png_set_palette_to_rgb) PNGARG((png_structp png_ptr));
+ extern PNG_EXPORT(void,png_set_tRNS_to_alpha) PNGARG((png_structp png_ptr));
+ #endif
+diff -ur ParaView3.orig/VTK/Utilities/vtkpng/vtk_png_mangle.h ParaView3/VTK/Utilities/vtkpng/vtk_png_mangle.h
+--- ParaView3.orig/VTK/Utilities/vtkpng/vtk_png_mangle.h	2004-10-26 19:56:45.000000000 +0300
++++ ParaView3/VTK/Utilities/vtkpng/vtk_png_mangle.h	2010-05-12 15:27:25.000000000 +0300
+@@ -229,7 +229,7 @@
+ #define png_set_gAMA vtk_png_set_gAMA
+ #define png_set_gAMA_fixed vtk_png_set_gAMA_fixed
+ #define png_set_gamma vtk_png_set_gamma
+-#define png_set_gray_1_2_4_to_8 vtk_png_set_gray_1_2_4_to_8
++#define png_set_expand_gray_1_2_4_to_8 vtk_png_set_gray_1_2_4_to_8
+ #define png_set_gray_to_rgb vtk_png_set_gray_to_rgb
+ #define png_set_hIST vtk_png_set_hIST
+ #define png_set_iCCP vtk_png_set_iCCP

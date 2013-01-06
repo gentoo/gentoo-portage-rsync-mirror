@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Business-ISMN
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Business-ISMN/ChangeLog,v 1.1 2012/09/11 03:21:08 tove Exp $
+
+*Business-ISMN-1.110.0 (11 Sep 2012)
+
+  11 Sep 2012; Torsten Veller <tove@gentoo.org> +Business-ISMN-1.110.0.ebuild,
+  +metadata.xml:
+  Initial commit for biber (#428808)
+

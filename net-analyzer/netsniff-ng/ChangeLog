@@ -1,0 +1,31 @@
+# ChangeLog for net-analyzer/netsniff-ng
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/ChangeLog,v 1.5 2012/11/07 01:21:11 xmw Exp $
+
+*netsniff-ng-0.5.7-r1 (07 Nov 2012)
+
+  07 Nov 2012; Michael Weber <xmw@gentoo.org> -netsniff-ng-0.5.6.ebuild,
+  -netsniff-ng-0.5.7.ebuild, +netsniff-ng-0.5.7-r1.ebuild:
+  Revbump to mark libnl dependency (thanks Khayyam, bug 439858), switch to
+  upstream release tarball (thanks ago), drop old.
+
+*netsniff-ng-0.5.7 (02 Jul 2012)
+
+  02 Jul 2012; Michael Weber <xmw@gentoo.org> +netsniff-ng-0.5.7.ebuild:
+  Version bump (bug 424415, thanks Khayyam)
+
+  29 May 2012; Michael Weber <xmw@gentoo.org> -netsniff-ng-0.5.5.0.ebuild,
+  netsniff-ng-0.5.6.ebuild, +files/netsniff-ng-0.5.6-man-no-compress.patch:
+  Remove manpage compression from build-system (bug 418175, thanks Jason
+  Donenfeld)
+
+*netsniff-ng-0.5.6 (07 Apr 2012)
+
+  07 Apr 2012; Michael Weber <xmw@gentoo.org> +netsniff-ng-0.5.6.ebuild:
+  Version bump
+
+*netsniff-ng-0.5.5.0 (10 Sep 2011)
+
+  10 Sep 2011; Michael Weber <xmw@gentoo.org> +netsniff-ng-0.5.5.0.ebuild,
+  +metadata.xml:
+  Initial import, thanks to epinephrine for the report (bug 299549)

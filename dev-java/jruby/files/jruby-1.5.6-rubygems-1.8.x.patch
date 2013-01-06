@@ -1,0 +1,19 @@
+Take into account that newer versions of rubygems (ca. 1.5 and newer)
+no longer have set_paths. Rescuing the error should be backward
+compatible. jruby 1.6 and newer have a newer bundled rubygems with a
+newer engine definition that should not have this problem.
+
+--- lib/ruby/site_ruby/1.8/rubygems/defaults/jruby.rb.orig	2011-10-22 12:21:04.000000000 +0200
++++ lib/ruby/site_ruby/1.8/rubygems/defaults/jruby.rb	2011-10-22 13:15:09.000000000 +0200
+@@ -14,7 +14,10 @@
+       original_ensure_gem_subdirectories(gemdir) unless jarred_path? gemdir.to_s
+     end
+ 
+-    alias_method :original_set_paths, :set_paths
++    begin
++      alias_method :original_set_paths, :set_paths
++    rescue NameError
++    end
+     def set_paths(gpaths)
+       original_set_paths(gpaths)
+       @gem_path.reject! {|p| !readable_path? p }

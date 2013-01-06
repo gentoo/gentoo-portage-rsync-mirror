@@ -1,0 +1,44 @@
+# ChangeLog for sci-mathematics/normaliz
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.9 2012/11/12 03:15:19 tomka Exp $
+
+*normaliz-2.8 (12 Nov 2012)
+
+  12 Nov 2012; Thomas Kahle <tomka@gentoo.org>
+  +files/normaliz-2.8-respect-flags.patch, +normaliz-2.8.ebuild:
+  Bump to 2.8
+
+  14 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> normaliz-2.5-r1.ebuild,
+  normaliz-2.7.ebuild:
+  QA: cxx conditional was broken, fix it.
+
+  13 Nov 2011; Mike Frysinger <vapier@gentoo.org> normaliz-2.5-r1.ebuild,
+  normaliz-2.7.ebuild:
+  Convert gmp[-nocxx] to gmp[cxx].
+
+  25 Sep 2011; Thomas Kahle <tomka@gentoo.org> normaliz-2.7.ebuild:
+  EAPI=4 and missing dep on boost
+
+*normaliz-2.7 (08 Jul 2011)
+
+  08 Jul 2011; Thomas Kahle <tomka@gentoo.org> +normaliz-2.7.ebuild,
+  +files/normaliz-2.7-respect-flags.patch:
+  Bump to 2.7
+
+  20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> normaliz-2.5-r1.ebuild:
+  Stable on amd64 wrt bug #348318
+
+  12 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  normaliz-2.5-r1.ebuild:
+  x86 stable wrt bug #348318
+
+  04 Nov 2010; Thomas Kahle <tomka@gentoo.org> normaliz-2.5-r1.ebuild,
+  -files/normaliz-2.5-makefile.patch,
+  +files/normaliz-2.5-respect-flags.patch, metadata.xml:
+  Improved metadata.xml and naming of patch
+
+*normaliz-2.5-r1 (03 Nov 2010)
+
+  03 Nov 2010; Thomas Kahle <tomka@gentoo.org> +normaliz-2.5-r1.ebuild,
+  +files/normaliz-2.5-makefile.patch, +metadata.xml:
+  Initial import of normaliz from science overlay

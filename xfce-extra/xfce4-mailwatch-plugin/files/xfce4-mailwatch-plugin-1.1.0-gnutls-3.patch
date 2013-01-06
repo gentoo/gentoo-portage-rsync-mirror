@@ -1,0 +1,16 @@
+http://bugs.gentoo.org/421407
+http://bugzilla.xfce.org/show_bug.cgi?id=7998
+
+--- libmailwatch-core/mailwatch-net-conn.c
++++ libmailwatch-core/mailwatch-net-conn.c
+@@ -621,8 +621,10 @@
+                            net_conn->gt_creds);
+     gnutls_transport_set_ptr(net_conn->gt_session,
+                              (gnutls_transport_ptr_t)net_conn->fd);
++#if GNUTLS_VERSION_MAJOR == 2 && GNUTLS_VERSION_MINOR < 12
+     if(fcntl(net_conn->fd, F_GETFL) & O_NONBLOCK)
+         gnutls_transport_set_lowat(net_conn->gt_session, 0);
++#endif
+     
+     if(!xfce_mailwatch_net_conn_tls_handshake(net_conn, error)) {
+ #if 0

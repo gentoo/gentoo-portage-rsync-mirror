@@ -1,0 +1,140 @@
+=== modified file 'Makefile.conf.in'
+--- Makefile.conf.in	2011-04-06 13:55:30 +0000
++++ Makefile.conf.in	2011-04-06 13:56:05 +0000
+@@ -58,3 +58,6 @@
+ 
+ # Location for init.d files
+ initdir = @initdir@
++
++# Use the compiler detected by configure
++CC := @CC@
+
+=== modified file 'Makefile.rules'
+--- Makefile.rules	2011-04-06 13:55:30 +0000
++++ Makefile.rules	2011-04-06 13:57:27 +0000
+@@ -11,24 +11,20 @@
+ 	   Makefile.conf.in .version .autofs-* configure.in aclocal.m4 \
+ 	   configure *.patch autofs.spec
+ 
++# Attempt to be friends with autotools
++INSTALLROOT = $(DESTDIR)
++
+ # autofs utility library
+ AUTOFS_LIB = ../lib/autofs.a
+ 
+ # Compilers, linkers and flags
+-# The STRIP defined here *must not* remove any dynamic-loading symbols
+-
+ ifdef DEBUG
+-CFLAGS    = -O2 -g -DDEBUG
+-LDFLAGS   = -g
+-STRIP     = :
++CFLAGS    ?= -O2 -g -DDEBUG
+ else
+-CFLAGS    = -O3 -fomit-frame-pointer -Wall
+-LDFLAGS   = -s
+-STRIP     = strip --strip-debug
++CFLAGS    ?= -O3 -fomit-frame-pointer -Wall
+ endif
++AUTOFS_LDFLAGS = -g
+ 
+-CC        = gcc
+-CXX       = g++
+ CXXFLAGS  = $(CFLAGS)
+ LD        = ld
+ SOLDFLAGS = -shared -Xlinker -rpath -Xlinker $(autofslibdir)
+@@ -44,5 +40,4 @@
+ 	$(CC) $(CFLAGS) -S $<
+ 
+ .c.so:
+-	$(CC) $(SOLDFLAGS) $(CFLAGS) -o $*.so $< $(AUTOFS_LIB)
+-	$(STRIP) $*.so
++	$(CC) $(LDFLAGS) $(SOLDFLAGS) $(CFLAGS) -o $*.so $< $(AUTOFS_LIB)
+
+=== modified file 'daemon/Makefile'
+--- daemon/Makefile	2011-04-06 13:55:30 +0000
++++ daemon/Makefile	2011-04-06 13:56:05 +0000
+@@ -12,14 +12,13 @@
+ version := $(shell cat ../.version)
+ 
+ CFLAGS += -rdynamic $(DAEMON_CFLAGS) -DAUTOFS_LIB_DIR=\"$(autofslibdir)\" -DVERSION_STRING=\"$(version)\" -I../include
+-LDFLAGS += -rdynamic
++AUTOFS_LDFLAGS += -rdynamic
+ LIBS = -ldl
+ 
+ all: automount
+ 
+ automount: $(OBJS) $(AUTOFS_LIB)
+-	$(CC) $(LDFLAGS) $(DAEMON_LDFLAGS) -o automount $(OBJS) $(AUTOFS_LIB) $(LIBS)
+-	$(STRIP) automount
++	$(CC) $(AUTOFS_LDFLAGS) $(DAEMON_LDFLAGS) $(LDFLAGS) -o automount $(OBJS) $(AUTOFS_LIB) $(LIBS)
+ 
+ clean:
+ 	rm -f *.o *.s *~ automount
+
+=== modified file 'lib/Makefile'
+--- lib/Makefile	2011-04-06 13:55:30 +0000
++++ lib/Makefile	2011-04-06 13:56:05 +0000
+@@ -35,18 +35,15 @@
+ 
+ mount_clnt.o: mount_clnt.c
+ 	$(CC) $(CFLAGS) -o mount_clnt.o -c mount_clnt.c
+-	$(STRIP) mount_clnt.o
+ 
+ mount_xdr.c: mount.h
+ 	$(RPCGEN) -c -o mount_xdr.c mount.x
+ 
+ mount_xdr.o: mount_xdr.c
+ 	$(CC) $(CFLAGS) -Wno-unused-variable -o mount_xdr.o -c mount_xdr.c
+-	$(STRIP) mount_xdr.o
+ 
+ listmount.o: listmount.c
+ 	$(CC) $(CFLAGS) -o listmount.o -c listmount.c
+-	$(STRIP) listmount.o
+ 
+ install: all
+ 
+
+=== modified file 'modules/Makefile'
+--- modules/Makefile	2011-04-06 13:55:30 +0000
++++ modules/Makefile	2011-04-06 13:56:42 +0000
+@@ -69,20 +69,16 @@
+ # Ad hoc compilation rules for modules which need auxilliary libraries
+ #
+ lookup_yp.so: lookup_yp.c
+-	$(CC) $(SOLDFLAGS) $(CFLAGS) -o lookup_yp.so lookup_yp.c $(AUTOFS_LIB) $(LIBNSL)
+-	$(STRIP) lookup_yp.so
++	$(CC) $(LDFLAGS) $(SOLDFLAGS) $(CFLAGS) -o lookup_yp.so lookup_yp.c $(AUTOFS_LIB) $(LIBNSL)
+ 
+ lookup_nisplus.so: lookup_nisplus.c
+-	$(CC) $(SOLDFLAGS) $(CFLAGS) -o lookup_nisplus.so lookup_nisplus.c \
++	$(CC) $(LDFLAGS) $(SOLDFLAGS) $(CFLAGS) -o lookup_nisplus.so lookup_nisplus.c \
+ 		$(AUTOFS_LIB) $(LIBNSL)
+-	$(STRIP) lookup_nisplus.so
+ 
+ lookup_hesiod.so: lookup_hesiod.c
+-	$(CC) $(SOLDFLAGS) $(CFLAGS) $(HESIOD_FLAGS) -o lookup_hesiod.so \
++	$(CC) $(LDFLAGS) $(SOLDFLAGS) $(CFLAGS) $(HESIOD_FLAGS) -o lookup_hesiod.so \
+ 		lookup_hesiod.c $(AUTOFS_LIB) $(LIBHESIOD) $(LIBRESOLV)
+-	$(STRIP) lookup_hesiod.so
+ 
+ lookup_ldap.so: lookup_ldap.c
+-	$(CC) $(SOLDFLAGS) $(CFLAGS) $(LDAP_FLAGS) -o lookup_ldap.so \
++	$(CC) $(LDFLAGS) $(SOLDFLAGS) $(CFLAGS) $(LDAP_FLAGS) -o lookup_ldap.so \
+ 		lookup_ldap.c $(AUTOFS_LIB) $(LIBLDAP)
+-	$(STRIP) lookup_ldap.so
+
+=== modified file 'samples/Makefile'
+--- samples/Makefile	2011-04-06 13:55:30 +0000
++++ samples/Makefile	2011-04-06 13:56:05 +0000
+@@ -16,8 +16,7 @@
+ all: $(BINS) rc.autofs
+ 
+ autofs-ldap-auto-master: $(OBJS)
+-	$(CC) $(LDFLAGS) -o autofs-ldap-auto-master $(OBJS) $(LIBS)
+-	$(STRIP) autofs-ldap-auto-master
++	$(CC) $(AUTOFS_LDFLAGS) $(LDFLAGS) -o autofs-ldap-auto-master $(OBJS) $(LIBS)
+ 
+ rc.autofs: rc.autofs.in
+ 	sed -e "s|@@sbindir@@|$(sbindir)|g" \
+

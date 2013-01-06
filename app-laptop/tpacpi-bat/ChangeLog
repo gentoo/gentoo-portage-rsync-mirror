@@ -1,0 +1,15 @@
+# ChangeLog for app-laptop/tpacpi-bat
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpacpi-bat/ChangeLog,v 1.2 2012/12/20 04:58:41 ottxor Exp $
+
+*tpacpi-bat-1.0 (20 Dec 2012)
+
+  20 Dec 2012; Christoph Junghans <ottxor@gentoo.org> +tpacpi-bat-1.0.ebuild,
+  metadata.xml, tpacpi-bat-9999.ebuild:
+  added release version
+
+*tpacpi-bat-9999 (09 Dec 2012)
+
+  09 Dec 2012; Christoph Junghans <ottxor@gentoo.org> +files/tpacpi-bat.confd.0,
+  +files/tpacpi-bat.initd.0, +metadata.xml, +tpacpi-bat-9999.ebuild:
+  initial commit

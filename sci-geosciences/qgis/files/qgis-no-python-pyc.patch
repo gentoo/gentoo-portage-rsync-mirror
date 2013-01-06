@@ -1,0 +1,56 @@
+diff -ur qgis-1.7.0.orig//cmake/PythonMacros.cmake qgis-1.7.0/cmake/PythonMacros.cmake
+--- qgis-1.7.0.orig//cmake/PythonMacros.cmake	2011-06-05 12:59:48.000000000 +0100
++++ qgis-1.7.0/cmake/PythonMacros.cmake	2011-09-01 20:36:09.285050896 +0100
+@@ -22,40 +22,4 @@
+   # Install the source file.
+   INSTALL(FILES ${SOURCE_FILE} DESTINATION ${DESINATION_DIR})
+ 
+-  # Byte compile and install the .pyc file.        
+-  GET_FILENAME_COMPONENT(_absfilename ${SOURCE_FILE} ABSOLUTE)
+-  GET_FILENAME_COMPONENT(_filename ${SOURCE_FILE} NAME)
+-  GET_FILENAME_COMPONENT(_filenamebase ${SOURCE_FILE} NAME_WE)
+-  GET_FILENAME_COMPONENT(_basepath ${SOURCE_FILE} PATH)
+-
+-  if(WIN32)
+-    string(REGEX REPLACE ".:/" "/" _basepath "${_basepath}")
+-  endif(WIN32)
+-
+-  SET(_bin_py ${CMAKE_CURRENT_BINARY_DIR}/${_basepath}/${_filename})
+-  SET(_bin_pyc ${CMAKE_CURRENT_BINARY_DIR}/${_basepath}/${_filenamebase}.pyc)
+-
+-  FILE(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${_basepath})
+-
+-  SET(_message "-DMESSAGE=Byte-compiling ${_bin_py}")
+-
+-  GET_FILENAME_COMPONENT(_abs_bin_py ${_bin_py} ABSOLUTE)
+-  IF(_abs_bin_py STREQUAL ${_absfilename})    # Don't copy the file onto itself.
+-    ADD_CUSTOM_COMMAND(
+-      TARGET compile_python_files
+-      COMMAND ${CMAKE_COMMAND} -E echo ${message}
+-      COMMAND ${PYTHON_EXECUTABLE} ${_python_compile_py} ${_bin_py}
+-      DEPENDS ${_absfilename}
+-    )
+-  ELSE(_abs_bin_py STREQUAL ${_absfilename})
+-    ADD_CUSTOM_COMMAND(
+-      TARGET compile_python_files
+-      COMMAND ${CMAKE_COMMAND} -E echo ${message} 
+-      COMMAND ${CMAKE_COMMAND} -E copy ${_absfilename} ${_bin_py}
+-      COMMAND ${PYTHON_EXECUTABLE} ${_python_compile_py} ${_bin_py}
+-      DEPENDS ${_absfilename}
+-    )
+-  ENDIF(_abs_bin_py STREQUAL ${_absfilename})
+-
+-  INSTALL(FILES ${_bin_pyc} DESTINATION ${DESINATION_DIR})
+ ENDMACRO(PYTHON_INSTALL)
+diff -ur qgis-1.7.0.orig//python/CMakeLists.txt qgis-1.7.0/python/CMakeLists.txt
+--- qgis-1.7.0.orig//python/CMakeLists.txt	2011-06-05 12:59:48.000000000 +0100
++++ qgis-1.7.0/python/CMakeLists.txt	2011-09-01 20:35:57.429003659 +0100
+@@ -82,8 +82,6 @@
+ 
+ SET (QGIS_PYTHON_DIR ${PYTHON_SITE_PACKAGES_DIR}/qgis)
+ 
+-ADD_CUSTOM_TARGET(compile_python_files ALL)
+-
+ PYTHON_INSTALL(__init__.py ${QGIS_PYTHON_DIR})
+ PYTHON_INSTALL(utils.py    ${QGIS_PYTHON_DIR})
+ PYTHON_INSTALL(console.py  ${QGIS_PYTHON_DIR})

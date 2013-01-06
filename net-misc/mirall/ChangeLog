@@ -1,0 +1,54 @@
+# ChangeLog for net-misc/mirall
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/ChangeLog,v 1.12 2012/12/21 13:32:30 creffett Exp $
+
+*mirall-1.1.4 (21 Dec 2012)
+
+  21 Dec 2012; Chris Reffett <creffett@gentoo.org> +mirall-1.1.4.ebuild:
+  Version bump.
+
+*mirall-1.1.2 (14 Dec 2012)
+
+  14 Dec 2012; Chris Reffett <creffett@gentoo.org> +mirall-1.1.2.ebuild,
+  -mirall-1.0.5.ebuild, -mirall-1.1.0.ebuild, -mirall-1.1.1-r1.ebuild,
+  metadata.xml:
+  Version bump, remove old.
+
+  30 Nov 2012; Chris Reffett <creffett@gentoo.org> mirall-1.1.1-r1.ebuild:
+  Make the USEs enabled by default in the csync ebuild enabled by default here
+  too.
+
+*mirall-1.1.1-r1 (30 Nov 2012)
+
+  30 Nov 2012; Chris Reffett <creffett@gentoo.org> +mirall-1.1.1-r1.ebuild,
+  -mirall-1.1.1.ebuild, metadata.xml:
+  Add USE-conditional deps on csync USE flags wrt bug 433165
+
+*mirall-1.1.1 (16 Nov 2012)
+
+  16 Nov 2012; Johannes Huber <johu@gentoo.org> +mirall-1.1.1.ebuild:
+  Version bump.
+
+  15 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> mirall-1.1.0.ebuild:
+  Fix finding csync when we are not using the internal one. Resolves bug#438290.
+
+*mirall-1.1.0 (13 Oct 2012)
+
+  13 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> +mirall-1.1.0.ebuild,
+  mirall-1.0.5.ebuild:
+  Version bump to latest.
+
+  09 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> mirall-1.0.5.ebuild:
+  Depend also on qt-test. Failed on one of my boxes without.
+
+  28 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> mirall-1.0.5.ebuild:
+  Shutup repoman.
+
+  28 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> mirall-1.0.5.ebuild:
+  Do not use kde eclass as it is just pure qt stuff.
+
+*mirall-1.0.5 (28 Aug 2012)
+
+  28 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> +metadata.xml,
+  +mirall-1.0.5.ebuild:
+  Add mirall to access owncloud services and so on. Fixes bug #412507.

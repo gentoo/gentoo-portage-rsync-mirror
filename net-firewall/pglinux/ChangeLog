@@ -1,0 +1,59 @@
+# ChangeLog for net-firewall/pglinux
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/ChangeLog,v 1.12 2012/12/26 02:09:42 jdhore Exp $
+
+  26 Dec 2012; Jeff Horelick <jdhore@gentoo.org> pglinux-2.2.2.ebuild:
+  marked x86 per bug 448032
+
+  22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pglinux-2.2.2.ebuild:
+  Stable for amd64, wrt bug #448032
+
+*pglinux-2.2.2 (25 Nov 2012)
+
+  25 Nov 2012; Julian Ospald <hasufell@gentoo.org> +pglinux-2.2.2.ebuild,
+  +files/pgl.gentoo.in:
+  version bump
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pglinux-2.2.1_p20120711.ebuild:
+  x86 stable wrt bug #429612
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org>
+  pglinux-2.2.1_p20120711.ebuild:
+  Stable for amd64, wrt bug #429612
+
+*pglinux-2.2.1_p20120711 (11 Jul 2012)
+
+  11 Jul 2012; Julian Ospald <hasufell@gentoo.org> -pglinux-2.2.0.ebuild,
+  -pglinux-2.2.1.ebuild, +pglinux-2.2.1_p20120711.ebuild:
+  use gentoo init script wrt bug #425716 and remove all old
+
+*pglinux-2.2.1 (26 Jun 2012)
+
+  26 Jun 2012; Julian Ospald <hasufell@gentoo.org> +pglinux-2.2.1.ebuild:
+  version bump
+
+*pglinux-2.2.0 (12 Jun 2012)
+
+  12 Jun 2012; Julian Ospald <hasufell@gentoo.org>
+  -pglinux-2.1.3_p20120519.ebuild, +pglinux-2.2.0.ebuild:
+  version bump, remove old
+
+  21 May 2012; Julian Ospald <hasufell@gentoo.org>
+  pglinux-2.1.3_p20120519.ebuild:
+  improve elog
+
+*pglinux-2.1.3_p20120519 (19 May 2012)
+
+  19 May 2012; Julian Ospald <hasufell@gentoo.org>
+  -pglinux-2.1.3_p20120503.ebuild, +pglinux-2.1.3_p20120519.ebuild:
+  version bump fixes broken dbus, remove old
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> pglinux-2.1.3_p20120503.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*pglinux-2.1.3_p20120503 (03 May 2012)
+
+  03 May 2012; Julian Ospald <hasufell@gentoo.org>
+  +pglinux-2.1.3_p20120503.ebuild, +metadata.xml:
+  initial commit wrt #93982

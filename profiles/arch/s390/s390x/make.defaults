@@ -1,0 +1,9 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/s390x/make.defaults,v 1.1 2012/08/27 16:36:37 vapier Exp $
+
+MULTILIB_ABIS="s390x"
+DEFAULT_ABI="s390x"
+ABI=${DEFAULT_ABI}
+
+CHOST="s390x-ibm-linux-gnu"

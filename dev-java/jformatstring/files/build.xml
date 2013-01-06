@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- author: Ralph Sennhauser -->
+<project name="jformatstring" default="jar">
+
+  <property name="junit.jar" value="lib/junit.jar"/>
+
+  <target name="clean">
+    <delete dir="build"/>
+  </target>
+
+  <target name="compile">
+    <mkdir dir="build/classes"/>
+    <javac srcdir="src/java"
+        destdir="build/classes"
+        encoding="UTF-8"
+        includeantruntime="false">
+    </javac>
+  </target>
+
+  <target name="jar" depends="compile">
+    <jar destfile="build/${ant.project.name}.jar">
+      <fileset dir="build/classes"/>
+    </jar>
+  </target>
+
+  <target name="javadoc">
+    <mkdir dir="build/javadoc"/>
+    <javadoc destdir="build/javadoc"
+        encoding="UTF-8">
+      <fileset dir="src/java"/>
+    </javadoc>
+  </target>
+
+  <target name="compile-tests" depends="jar">
+    <mkdir dir="build/test-classes"/>
+    <javac srcdir="src/junit"
+        destdir="build/test-classes"
+        encoding="UTF-8"
+        includeantruntime="false">
+      <classpath>
+        <fileset file="build/${ant.project.name}.jar"/>
+        <fileset file="${junit.jar}"/>
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="test" depends="compile-tests">
+    <mkdir dir="build/test-results"/>
+    <junit haltonfailure="true" printsummary="on">
+      <classpath>
+        <fileset file="build/${ant.project.name}.jar"/>
+        <pathelement location="build/test-classes"/>
+      </classpath>
+      <batchtest todir="build/test-results">
+        <fileset dir="build/test-classes"/>
+        <formatter type="xml"/>
+      </batchtest>
+    </junit>
+  </target>
+</project>

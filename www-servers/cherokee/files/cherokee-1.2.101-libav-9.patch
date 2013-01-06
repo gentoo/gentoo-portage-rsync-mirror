@@ -1,0 +1,29 @@
+diff -burN cherokee-1.2.101.old//cherokee/handler_streaming.c cherokee-1.2.101/cherokee/handler_streaming.c
+--- cherokee-1.2.101.old//cherokee/handler_streaming.c	2011-10-12 20:07:44.000000000 +0200
++++ cherokee-1.2.101/cherokee/handler_streaming.c	2012-11-25 18:08:05.606331619 +0100
+@@ -312,14 +312,14 @@
+ 
+ 	/* Open the media stream
+ 	 */
+-	re = av_open_input_file (&hdl->avformat, hdl->local_file.buf, NULL, 0, NULL);
++	re = avformat_open_input (&hdl->avformat, hdl->local_file.buf, NULL, NULL);
+ 	if (re != 0) {
+ 		goto error;
+ 	}
+ 
+ 	/* Read the info
+ 	 */
+-	re = av_find_stream_info (hdl->avformat);
++	re = avformat_find_stream_info (hdl->avformat, NULL);
+ 	if (re < 0) {
+ 		goto error;
+ 	}
+@@ -380,7 +380,7 @@
+ 	if (likely (secs > 0)) {
+ 		long tmp;
+ 
+-		tmp = (hdl->avformat->file_size / secs);
++		tmp = (avio_size(hdl->avformat->pb) / secs);
+ 		if (tmp > rate) {
+ 			rate = tmp;
+ 			TRACE(ENTRIES, "New rate: %d bytes/s\n", rate);

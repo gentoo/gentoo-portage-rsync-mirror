@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DEPEND=app-arch/unzip
+DESCRIPTION=Scripture Alphabet Of Animals
+HOMEPAGE=http://crosswire.org/sword/modules/ModInfo.jsp?modName=SAOA
+KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd
+LICENSE=public-domain
+RDEPEND=app-text/sword
+SLOT=0
+SRC_URI=mirror://gentoo/SAOA-1.0.zip
+_eclasses_=sword-module	c52595ffeb9df1c705120bffa624d484
+_md5_=3a68e648475f76142b729e5a3ba8f751

@@ -1,0 +1,105 @@
+diff -ur a/passwd/edit_passwd.cgi b/passwd/edit_passwd.cgi
+--- a/passwd/edit_passwd.cgi	2012-09-21 21:07:11.000000000 +0300
++++ b/passwd/edit_passwd.cgi	2012-11-01 19:00:02.000000000 +0200
+@@ -19,7 +19,7 @@
+ %uconfig = &foreign_config("useradmin");
+ $user[6] =~ s/,.*$// if ($uconfig{'extra_real'});
+ print &ui_table_row($text{'passwd_for'},
+-	$user[0].( $user[6] ? " ($user[6])" : "" ));
++	&html_escape($user[0].( $user[6] ? " ($user[6])" : "" )));
+ 
+ # Old password field
+ if ($access{'old'} == 1 ||
+diff -ur a/passwd/index.cgi b/passwd/index.cgi
+--- a/passwd/index.cgi	2012-09-21 21:07:11.000000000 +0300
++++ b/passwd/index.cgi	2012-11-01 19:00:02.000000000 +0200
+@@ -85,7 +85,7 @@
+ 	@grid = ( );
+ 	for($i=0; $i<@ulist; $i++) {
+ 		push(@grid, "<a href=\"edit_passwd.cgi?".
+-			    "user=$ulist[$i]->[0]\">".
++			    "user=".&urlize($ulist[$i]->[0])."\">".
+ 			    &html_escape($ulist[$i]->[0])."</a>");
+ 		}
+ 	print &ui_grid_table(\@grid, 4, 100, undef, undef,
+diff -ur a/passwd/module.info b/passwd/module.info
+--- a/passwd/module.info	2012-09-21 21:11:10.000000000 +0300
++++ b/passwd/module.info	2012-11-01 19:00:02.000000000 +0200
+@@ -1,48 +1,38 @@
+-desc_pt_BR=Alterar Senha
+-desc_ca=Canvi de Contrasenyes
+-desc_it=Cambio Password
+-desc_hu.UTF-8=Jelszavak
+-readonly=1
+-desc=Change Passwords
+ category=system
+-desc_ja_JP.euc=¥Ñ¥¹¥ï¡¼¥É¤ÎÊÑ¹¹
+-desc_zh_TW.Big5=ÅÜ§ó±K½X
+-desc_ko_KR.UTF-8=ì•”í˜¸ ë³€ê²½
+-desc_fi=Vaihda Salasanoja
++depends=useradmin
++desc=Change Passwords
++desc_pl=Zmiany hase³
++desc_hu=Jelszavak
+ name=Passwd
+-desc_tr=Parolaları Değiştir
+-os_support=!windows
++desc_ca=Canvi de Contrasenyes
+ desc_de=Passw&#246;rter &#228;ndern  
+-desc_af=Verander Wagwoord
+-desc_sk=Zmena hesla
+-desc_pl.UTF-8=Zmiany haseÅ‚
+-desc_cz.UTF-8=ZmÄ›na hesla
+-desc_ja_JP.UTF-8=ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã®å¤‰æ›´
+-desc_fr=Changez le Mot de Passe
+-desc_pl=Zmiany hase³
++desc_nl=Wachtwoorden Wijzigen
++desc_zh_TW.Big5=ÅÜ§ó±K½X
+ desc_es=Cambio de Contrase&#241;as
+-desc_ru_RU=Ïàğîëè
+ desc_no=Passord administrasjon
+-desc_cz=Zmìna hesla
+-desc_ms=Menukar Katalaluan
+-desc_nl=Wachtwoorden Wijzigen
+-desc_sk.UTF-8=Zmena hesla
+-desc_hu=Jelszavak
+-desc_zh_TW.UTF-8=è®Šæ›´å¯†ç¢¼
+-version=1.600
+-longdesc=Change the password of any user on the system.
++desc_af=Verander Wagwoord
++desc_it=Cambio Password
+ desc_ru_SU=ğÁÒÏÌÉ
++desc_ru_RU=Ïàğîëè
+ passwd=Change the passwords of Unix users.
++longdesc=Change the password of any user on the system.
++desc_pt_BR=Alterar Senha
++desc_ms=Menukar Katalaluan
++desc_cz=Zmìna hesla
++desc_sk=Zmena hesla
++desc_tr=Parolaları Değiştir
++readonly=1
++os_support=!windows
++desc_zh_TW.UTF-8=è®Šæ›´å¯†ç¢¼
++desc_fi=Vaihda Salasanoja
+ desc_ko_KR.euc=¾ÏÈ£ º¯°æ
++desc_ko_KR.UTF-8=ì•”í˜¸ ë³€ê²½
++desc_ja_JP.euc=¥Ñ¥¹¥ï¡¼¥É¤ÎÊÑ¹¹
++desc_ja_JP.UTF-8=ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã®å¤‰æ›´
+ desc_ru.UTF-8=ĞŸĞ°Ñ€Ğ¾Ğ»Ğ¸
+-depends=useradmin 1.600
+-desc_de.UTF-8=Passw&#246;rter &#228;ndern  
+-desc_fi.UTF-8=Vaihda Salasanoja
+-desc_af.UTF-8=Verander Wagwoord
+-desc_fr.UTF-8=Changez le Mot de Passe
+-desc_ms.UTF-8=Menukar Katalaluan
+-desc_it.UTF-8=Cambio Password
+-desc_es.UTF-8=Cambio de Contrase&#241;as
+-desc_ca.UTF-8=Canvi de Contrasenyes
+-desc_pt_BR.UTF-8=Alterar Senha
+-desc_nl.UTF-8=Wachtwoorden Wijzigen
++desc_fr=Changez le Mot de Passe
++desc_hu.UTF-8=Jelszavak
++desc_cz.UTF-8=ZmÄ›na hesla
++desc_pl.UTF-8=Zmiany haseÅ‚
++desc_sk.UTF-8=Zmena hesla
++version=1.605

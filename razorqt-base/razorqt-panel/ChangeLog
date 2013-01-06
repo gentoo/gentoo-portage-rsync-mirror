@@ -1,0 +1,20 @@
+# ChangeLog for razorqt-base/razorqt-panel
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-panel/ChangeLog,v 1.3 2012/10/29 16:07:35 yngwin Exp $
+
+*razorqt-panel-0.5.1-r1 (29 Oct 2012)
+
+  29 Oct 2012; Ben de Groot <yngwin@gentoo.org>
+  +files/razorqt-panel-0.5.1-automagic.patch, +razorqt-panel-0.5.1-r1.ebuild:
+  Fix automagic deps, bug #440136. Thanks to Enlik for patches.
+
+*razorqt-panel-0.5.1 (24 Oct 2012)
+
+  24 Oct 2012; Ben de Groot <yngwin@gentoo.org> +razorqt-panel-0.5.1.ebuild:
+  Version bump
+
+*razorqt-panel-0.5.0 (15 Oct 2012)
+
+  15 Oct 2012; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +razorqt-panel-0.5.0.ebuild:
+  Initial import from qt overlay. New razor-qt 0.5.0 release.

@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/mm-align
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mm-align/ChangeLog,v 1.1 2012/03/21 12:28:50 jlec Exp $
+
+*mm-align-20120321 (21 Mar 2012)
+
+  21 Mar 2012; Justin Lecher <jlec@gentoo.org> +mm-align-20120321.ebuild,
+  +files/CMakeLists.txt, +metadata.xml:
+  New addition, written by me
+

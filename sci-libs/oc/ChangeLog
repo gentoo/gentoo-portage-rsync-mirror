@@ -1,0 +1,14 @@
+# ChangeLog for sci-libs/oc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/oc/ChangeLog,v 1.2 2012/08/04 20:08:03 bicatali Exp $
+
+*oc-2.0 (04 Aug 2012)
+
+  04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> +oc-2.0.ebuild:
+  Version bump
+
+*oc-1.0 (12 Dec 2009)
+
+  12 Dec 2009; Sébastien Fabbro <bicatali@gentoo.org> +oc-1.0.ebuild,
+  +metadata.xml:
+  Initial import

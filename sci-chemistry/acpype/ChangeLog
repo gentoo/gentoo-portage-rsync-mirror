@@ -1,0 +1,21 @@
+# ChangeLog for sci-chemistry/acpype
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/acpype/ChangeLog,v 1.4 2012/02/15 14:11:47 xarthisius Exp $
+
+  15 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> acpype-374.ebuild:
+  Fix SRC_URI
+
+*acpype-374 (13 Feb 2012)
+
+  13 Feb 2012; Justin Lecher <jlec@gentoo.org> +acpype-374.ebuild:
+  Version Bump
+
+  02 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> acpype-366.ebuild:
+  Add ~amd64-linux keyword
+
+*acpype-366 (29 Jul 2011)
+
+  29 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +acpype-366.ebuild,
+  +files/acpype.patch, +metadata.xml:
+  Initial import
+

@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install postinst postrm prepare
+DEPEND=>=app-i18n/libhangul-0.0.12 x11-libs/gtk+:3 virtual/libintl virtual/pkgconfig sys-devel/gettext
+DESCRIPTION=Gtk+-3.0 Hangul Input Modules
+EAPI=3
+HOMEPAGE=http://kldp.net/projects/imhangul/
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-3
+RDEPEND=>=app-i18n/libhangul-0.0.12 x11-libs/gtk+:3 virtual/libintl
+SLOT=3
+SRC_URI=http://kldp.net/frs/download.php/5925/imhangul-3.0.0.tar.bz2
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=c8d9cff51d0150a68934a861a334f17b

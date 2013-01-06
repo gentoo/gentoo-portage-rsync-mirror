@@ -1,0 +1,17 @@
+# ChangeLog for dev-python/functest
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/functest/ChangeLog,v 1.3 2010/07/22 16:17:58 arfrever Exp $
+
+  22 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  functest-0.8.8.ebuild:
+  Set SUPPORT_PYTHON_ABIS. Fix tests (bug #321985).
+
+  25 Jul 2009; Jesus Rivero <neurogeek@gentoo.org> functest-0.8.8.ebuild:
+  Fixed typo in ebuild
+
+*functest-0.8.8 (25 Jul 2009)
+
+  25 Jul 2009; Jesus Rivero <neurogeek@gentoo.org> +functest-0.8.8.ebuild,
+  +metadata.xml:
+  Initial commit. Thanks to Almad (bugs@almad.net). Closes bug #238899.
+

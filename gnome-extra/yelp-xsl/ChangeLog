@@ -1,0 +1,73 @@
+# ChangeLog for gnome-extra/yelp-xsl
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp-xsl/ChangeLog,v 1.17 2013/01/01 14:34:55 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> yelp-xsl-3.6.1.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> yelp-xsl-3.6.1.ebuild:
+  Add ~ia64, wrt bug #449220
+
+  19 Dec 2012; Jeroen Roovers <jer@gentoo.org> yelp-xsl-3.4.2.ebuild,
+  yelp-xsl-3.6.1.ebuild:
+  Marked ~hppa (bug #447432).
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> yelp-xsl-3.6.1.ebuild:
+  Add ~ppc, wrt bug #447432
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> yelp-xsl-3.6.1.ebuild:
+  Add ~ppc64, wrt bug #447432
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> yelp-xsl-3.4.2.ebuild:
+  Add ~ppc64, wrt bug #447432
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> yelp-xsl-3.4.2.ebuild:
+  Add ~ppc, wrt bug #447432
+
+*yelp-xsl-3.6.1 (16 Dec 2012)
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  yelp-xsl-3.2.1.ebuild, -yelp-xsl-3.4.1.ebuild, yelp-xsl-3.4.2.ebuild,
+  +yelp-xsl-3.6.1.ebuild:
+  Version bump for gnome-3.6. Update license. Drop old.
+
+  04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> yelp-xsl-3.4.2.ebuild:
+  Stable for amd64, wrt bug #427544
+
+  03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> yelp-xsl-3.4.2.ebuild:
+  x86 stable wrt bug #427544
+
+*yelp-xsl-3.4.2 (20 May 2012)
+
+  20 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +yelp-xsl-3.4.2.ebuild:
+  Version bump.
+
+*yelp-xsl-3.4.1 (06 May 2012)
+
+  06 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +yelp-xsl-3.4.1.ebuild:
+  Version bump, improves HTML output and DocBook handling.
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> yelp-xsl-3.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> yelp-xsl-3.2.1.ebuild:
+  x86 stable, bug #410611
+
+  18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> yelp-xsl-3.2.1.ebuild:
+  Stable for amd64, wrt bug #410611
+
+*yelp-xsl-3.2.1 (04 Nov 2011)
+
+  04 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -yelp-xsl-3.0.2.ebuild, +yelp-xsl-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay. Drop old. Notable changes: JavaScript
+  and CSS updates, DocBook fixes, peformance improvements. Drop alpha, arm,
+  hppa, ia64, ppc, ppc64, sparc keywords for itstool dependency.
+
+*yelp-xsl-3.0.2 (19 Aug 2011)
+
+  19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +yelp-xsl-3.0.2.ebuild,
+  +metadata.xml:
+  Bump to 3.0.2, from gnome overlay for GNOME 3

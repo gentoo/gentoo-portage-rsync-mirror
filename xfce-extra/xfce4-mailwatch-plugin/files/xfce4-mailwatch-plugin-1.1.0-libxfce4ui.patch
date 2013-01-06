@@ -1,0 +1,347 @@
+http://bugzilla.xfce.org/show_bug.cgi?id=9032
+http://cvs.pld-linux.org/cgi-bin/viewvc.cgi/cvs/packages/xfce4-mailwatch-plugin/xfce4-mailwatch-plugin-ui.patch?view=log
+
+--- config.h.in
++++ config.h.in
+@@ -139,12 +139,37 @@
+ /* Define to the one symbol short name of this package. */
+ #undef PACKAGE_TARNAME
+ 
++/* Define to the home page for this package. */
++#undef PACKAGE_URL
++
+ /* Define to the version of this package. */
+ #undef PACKAGE_VERSION
+ 
+ /* Define to 1 if you have the ANSI C header files. */
+ #undef STDC_HEADERS
+ 
++/* Enable extensions on AIX 3, Interix.  */
++#ifndef _ALL_SOURCE
++# undef _ALL_SOURCE
++#endif
++/* Enable GNU extensions on systems that have them.  */
++#ifndef _GNU_SOURCE
++# undef _GNU_SOURCE
++#endif
++/* Enable threading extensions on Solaris.  */
++#ifndef _POSIX_PTHREAD_SEMANTICS
++# undef _POSIX_PTHREAD_SEMANTICS
++#endif
++/* Enable extensions on HP NonStop.  */
++#ifndef _TANDEM_SOURCE
++# undef _TANDEM_SOURCE
++#endif
++/* Enable general extensions on Solaris.  */
++#ifndef __EXTENSIONS__
++# undef __EXTENSIONS__
++#endif
++
++
+ /* Version number of package */
+ #undef VERSION
+ 
+@@ -154,13 +179,6 @@
+ /* Define to 1 if the X Window System is missing or not being used. */
+ #undef X_DISPLAY_MISSING
+ 
+-/* Define to 1 if on AIX 3.
+-   System headers sometimes define this.
+-   We just want to avoid a redefinition error message.  */
+-#ifndef _ALL_SOURCE
+-# undef _ALL_SOURCE
+-#endif
+-
+ /* Define to 1 if on MINIX. */
+ #undef _MINIX
+ 
+--- configure.ac
++++ configure.ac
+@@ -57,7 +57,7 @@
+ XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.4.0])
+ XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.6.0])
+ XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.2.0])
+-XDT_CHECK_PACKAGE([LIBXFCEGUI4], [libxfcegui4-1.0], [4.2.0])
++XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-1], [4.8.0])
+ 
+ XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-1.0], [4.3.20],
+                   [have_44_panel=yes], [
+--- libmailwatch-core/mailwatch.c
++++ libmailwatch-core/mailwatch.c
+@@ -41,7 +41,7 @@
+ #include <gtk/gtk.h>
+ 
+ #include <libxfce4util/libxfce4util.h>
+-#include <libxfcegui4/libxfcegui4.h>
++#include <libxfce4ui/libxfce4ui.h>
+ 
+ #include "mailwatch.h"
+ #include "mailwatch-utils.h"
+--- libmailwatch-core/mailwatch-mailbox-gmail.c
++++ libmailwatch-core/mailwatch-mailbox-gmail.c
+@@ -74,7 +74,7 @@
+ #include <gtk/gtk.h>
+ 
+ #include <libxfce4util/libxfce4util.h>
+-#include <libxfcegui4/libxfcegui4.h>
++#include <libxfce4ui/libxfce4ui.h>
+ 
+ #include "mailwatch-utils.h"
+ #include "mailwatch.h"
+--- libmailwatch-core/mailwatch-mailbox-imap.c
++++ libmailwatch-core/mailwatch-mailbox-imap.c
+@@ -58,7 +58,7 @@
+ #include <gtk/gtk.h>
+ 
+ #include <libxfce4util/libxfce4util.h>
+-#include <libxfcegui4/libxfcegui4.h>
++#include <libxfce4ui/libxfce4ui.h>
+ 
+ #include "mailwatch-net-conn.h"
+ #include "mailwatch-utils.h"
+--- libmailwatch-core/mailwatch-mailbox-maildir.c
++++ libmailwatch-core/mailwatch-mailbox-maildir.c
+@@ -48,7 +48,7 @@
+ #include <gtk/gtk.h>
+ 
+ #include <libxfce4util/libxfce4util.h>
+-#include <libxfcegui4/libxfcegui4.h>
++#include <libxfce4ui/libxfce4ui.h>
+ 
+ #include "mailwatch.h"
+ 
+--- libmailwatch-core/mailwatch-mailbox-mbox.c
++++ libmailwatch-core/mailwatch-mailbox-mbox.c
+@@ -48,7 +48,7 @@
+ #include <gtk/gtk.h>
+ 
+ #include <libxfce4util/libxfce4util.h>
+-#include <libxfcegui4/libxfcegui4.h>
++#include <libxfce4ui/libxfce4ui.h>
+ 
+ #include "mailwatch.h"
+ 
+--- libmailwatch-core/mailwatch-mailbox-mh.c
++++ libmailwatch-core/mailwatch-mailbox-mh.c
+@@ -48,7 +48,7 @@
+ #include <gtk/gtk.h>
+ 
+ #include <libxfce4util/libxfce4util.h>
+-#include <libxfcegui4/libxfcegui4.h>
++#include <libxfce4ui/libxfce4ui.h>
+ 
+ #include "mailwatch.h"
+ 
+--- libmailwatch-core/mailwatch-mailbox-pop3.c
++++ libmailwatch-core/mailwatch-mailbox-pop3.c
+@@ -42,7 +42,7 @@
+ #include <gtk/gtk.h>
+ 
+ #include <libxfce4util/libxfce4util.h>
+-#include <libxfcegui4/libxfcegui4.h>
++#include <libxfce4ui/libxfce4ui.h>
+ 
+ #include "mailwatch-utils.h"
+ #include "mailwatch.h"
+--- libmailwatch-core/mailwatch-utils.c
++++ libmailwatch-core/mailwatch-utils.c
+@@ -52,7 +52,7 @@
+ 
+ #include <gtk/gtk.h>
+ 
+-#include <libxfcegui4/libxfcegui4.h>
++#include <libxfce4ui/libxfce4ui.h>
+ 
+ #include "mailwatch-utils.h"
+ #include "mailwatch-common.h"
+@@ -78,7 +78,7 @@
+         img = gtk_image_new_from_stock(icon, GTK_ICON_SIZE_BUTTON);
+         if(!img || gtk_image_get_storage_type(GTK_IMAGE(img)) == GTK_IMAGE_EMPTY) {
+             gtk_icon_size_lookup(GTK_ICON_SIZE_BUTTON, &iw, &ih);
+-            pix = xfce_themed_icon_load(icon, iw);
++	    pix = gtk_icon_theme_load_icon ( gtk_icon_theme_get_default(), icon, iw, GTK_ICON_LOOKUP_GENERIC_FALLBACK, NULL);
+             if(pix) {
+                 if(img)
+                     gtk_image_set_from_pixbuf(GTK_IMAGE(img), pix);
+@@ -106,13 +106,7 @@
+ GtkWidget *
+ xfce_mailwatch_create_framebox(const gchar *title, GtkWidget **frame_bin)
+ {
+-#if LIBXFCEGUI4_CHECK_VERSION(4, 3, 4)
+-    return xfce_create_framebox(title, frame_bin);
+-#else
+-    GtkWidget *frame = xfce_framebox_new(title, TRUE);
+-    *frame_bin = XFCE_FRAMEBOX(frame)->hbox;
+-    return frame;
+-#endif
++    return xfce_gtk_frame_box_new(title, frame_bin);
+ }
+ 
+ #ifdef HAVE_SSL_SUPPORT
+--- libmailwatch-core/Makefile.am
++++ libmailwatch-core/Makefile.am
+@@ -27,7 +27,7 @@
+ libmailwatch_core_la_CFLAGS = \
+ 	@GTHREAD_CFLAGS@ \
+ 	@GTK_CFLAGS@ \
+-	@LIBXFCEGUI4_CFLAGS@ \
++	@LIBXFCE4UI_CFLAGS@ \
+ 	@GNUTLS_CFLAGS@ \
+ 	-DDATADIR=\"$(datadir)\" \
+ 	-DLOCALEDIR=\"$(localedir)\"
+--- panel-plugin/mailwatch-plugin-4.2.c
++++ panel-plugin/mailwatch-plugin-4.2.c
+@@ -23,7 +23,7 @@
+ #include <gtk/gtk.h>
+ 
+ #include <libxfce4util/libxfce4util.h>
+-#include <libxfcegui4/libxfcegui4.h>
++#include <libxfce4ui/libxfce4ui.h>
+ #include <libxfcegui4/xfce_scaled_image.h>
+ 
+ #include <panel/plugins.h>
+--- panel-plugin/mailwatch-plugin.c
++++ panel-plugin/mailwatch-plugin.c
+@@ -30,9 +30,8 @@
+ #include <gtk/gtk.h>
+ 
+ #include <libxfce4util/libxfce4util.h>
+-#include <libxfcegui4/libxfcegui4.h>
+-#include <libxfce4panel/xfce-panel-plugin.h>
+-#include <libxfce4panel/xfce-panel-convenience.h>
++#include <libxfce4ui/libxfce4ui.h>
++#include <libxfce4panel/libxfce4panel.h>
+ 
+ #include "mailwatch.h"
+ #include "mailwatch-mailbox.h"
+@@ -145,7 +144,7 @@
+             g_string_free(ttip_str, TRUE);
+             
+             if(mwp->new_messages_command)
+-                xfce_exec(mwp->new_messages_command, FALSE, FALSE, NULL);
++                xfce_spawn_command_line_on_screen(gdk_screen_get_default(), mwp->new_messages_command, FALSE, FALSE, NULL);
+         }
+     }
+ }
+@@ -175,7 +174,7 @@
+         switch(evt->button) {
+             case 1:  /* left */
+                 if(mwp->click_command && *mwp->click_command)
+-                    xfce_exec(mwp->click_command, FALSE, FALSE, NULL);
++                    xfce_spawn_command_line_on_screen(gdk_screen_get_default(), mwp->click_command, FALSE, FALSE, NULL);
+                 break;
+         
+             case 2:  /* middle */
+@@ -809,7 +808,7 @@
+ {
+     GError *err = NULL;
+     
+-    if(!xfce_exec("xfhelp4 xfce4-mailwatch-plugin.html", FALSE, FALSE, &err)) {
++    if(!xfce_spawn_command_line_on_screen(gdk_screen_get_default(), "xfhelp4 xfce4-mailwatch-plugin.html", FALSE, FALSE, &err)) {
+         gchar *secondary = g_strdup_printf(_("Help is unavailable because 'xfhelp4' could not be run: %s"),
+                                            err->message);
+         xfce_message_dialog(NULL, _("Help Unavailable"), GTK_STOCK_DIALOG_ERROR,
+@@ -1025,35 +1024,28 @@
+                      gpointer user_data)
+ {
+     XfceMailwatchPlugin *mwp = user_data;
+-    XfceAboutInfo *ainfo;
+     GdkPixbuf *icon;
+-
+-    if(G_UNLIKELY(mwp->about_dialog)) {
+-        gtk_window_present(GTK_WINDOW(mwp->about_dialog));
+-        return;
+-    }
+-
+-    ainfo = xfce_about_info_new(_("Xfce4 Mailwatch Plugin"),
+-                                VERSION,
+-                                _("A featureful mail-checker applet for the Xfce Panel"),
+-                                _("Copyright (c) 2005-2008 Brian Tarricone\n"
+-                                  "Copyright (c) 2005 Pasi Orovuo"),
+-                                  XFCE_LICENSE_GPL);
+-    xfce_about_info_set_homepage(ainfo, WEBSITE);
+-    xfce_about_info_add_credit(ainfo, "Brian J. Tarricone",
+-                               "bjt23@cornell.edu",
+-                               _("Maintainer, Original Author"));
+-    xfce_about_info_add_credit(ainfo, "Pasi Orovuo", "pasi.ov@gmail.com",
+-                               _("Developer"));
+-    
+-    icon = xfce_themed_icon_load("xfce-mail", 32);
+-    
+-    mwp->about_dialog = xfce_about_dialog_new_with_values(NULL, ainfo, icon);
+-    g_object_add_weak_pointer(G_OBJECT(mwp->about_dialog),
+-                              (gpointer)&mwp->about_dialog);
+-    gtk_widget_show_all(mwp->about_dialog);
+-    g_signal_connect(G_OBJECT(mwp->about_dialog), "response",
+-                     G_CALLBACK(gtk_widget_destroy), NULL);
++    const gchar *auth[] = { "Brian J. Tarricone bjt23@cornell.edu Maintainer, Original Author",
++                            "Pasi Orovuo pasi.ov@gmail.com Developer",
++			    NULL };
++
++    icon = xfce_panel_pixbuf_from_source("xfce-mail", NULL, 32);
++    
++#if !GTK_CHECK_VERSION (2, 18, 0)
++    gtk_about_dialog_set_email_hook (exo_gtk_url_about_dialog_hook, NULL, NULL);
++    gtk_about_dialog_set_url_hook (exo_gtk_url_about_dialog_hook, NULL, NULL);
++#endif
++    gtk_show_about_dialog(NULL,
++                          "logo", icon,
++                          "program-name", _("Xfce4 Mailwatch Plugin"),
++                          "license", xfce_get_license_text (XFCE_LICENSE_TEXT_GPL),
++                          "version", VERSION,
++                          "comments", _("A featureful mail-checker applet for the Xfce Panel"),
++                          "website", WEBSITE,
++                          "copyright", _("Copyright (c) 2005-2008 Brian Tarricone\n"
++                                         "Copyright (c) 2005 Pasi Orovuo"),
++                          "authors", auth, 
++                          NULL);
+ 
+     if(icon)
+         g_object_unref(G_OBJECT(icon));
+--- panel-plugin/Makefile.am
++++ panel-plugin/Makefile.am
+@@ -26,6 +26,7 @@
+ 	-I$(top_srcdir)/libmailwatch-core \
+ 	@GTHREAD_CFLAGS@ \
+ 	@XFCE4_PANEL_CFLAGS@ \
++	@LIBXFCE4UI_CFLAGS@ \
+ 	-DDATADIR=\"$(datadir)\" \
+ 	-DLOCALEDIR=\"$(localedir)\"
+ 
+@@ -36,6 +37,7 @@
+ 	$(top_builddir)/libmailwatch-core/libmailwatch-core.la \
+ 	@GTHREAD_LIBS@ \
+ 	@XFCE4_PANEL_LIBS@ \
++	@LIBXFCE4UI_LIBS@ \
+ 	@GNUTLS_LIBS@
+ 
+ else
+@@ -50,16 +52,18 @@
+ 	-I$(top_srcdir)/libmailwatch-core \
+ 	@GTHREAD_CFLAGS@ \
+ 	@LIBXFCE4PANEL_CFLAGS@ \
++	@LIBXFCE4UI_CFLAGS@ \
+ 	-DDATADIR=\"$(datadir)\" \
+ 	-DLOCALEDIR=\"$(localedir)\"
+ 
+ xfce4_mailwatch_plugin_DEPENDENCIES = \
+ 	$(top_builddir)/libmailwatch-core/libmailwatch-core.la
+ 
+-xfce4_mailwatch_plugin_LDFLAGS = \
++xfce4_mailwatch_plugin_LDADD = \
+ 	$(top_builddir)/libmailwatch-core/libmailwatch-core.la \
+ 	@GTHREAD_LIBS@ \
+ 	@LIBXFCE4PANEL_LIBS@ \
++	@LIBXFCE4UI_LIBS@ \
+ 	@GNUTLS_LIBS@
+ 
+ if HAVE_CYGWIN
+@@ -67,7 +67,7 @@
+ 	@GNUTLS_LIBS@
+ 
+ if HAVE_CYGWIN
+-  xfce4_mailwatch_plugin_LDFLAGS += \
++  xfce4_mailwatch_plugin_LDFLAGS = \
+ 	-no-undefined
+ endif
+ 

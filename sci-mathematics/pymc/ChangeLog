@@ -1,0 +1,15 @@
+# ChangeLog for sci-mathematics/pymc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pymc/ChangeLog,v 1.2 2012/09/26 17:22:56 heroxbd Exp $
+
+  27 Sep 2012; Benda Xu <heroxbd@gentoo.org> metadata.xml, pymc-2.2.ebuild,
+  pymc-9999.ebuild:
+  fix URI_SRC and manifest
+
+*pymc-2.2 (27 Sep 2012)
+*pymc-9999 (27 Sep 2012)
+
+  27 Sep 2012; Benda Xu <heroxbd@gentoo.org> +metadata.xml, +pymc-2.2.ebuild,
+  +pymc-9999.ebuild:
+  new ebuild
+

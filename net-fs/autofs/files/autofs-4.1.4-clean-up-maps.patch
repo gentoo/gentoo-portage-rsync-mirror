@@ -1,0 +1,68 @@
+--- samples/auto.net.old	2010-06-20 22:13:27.049079018 +0200
++++ samples/auto.net	2010-06-20 22:15:31.729124132 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ # $Id: autofs-4.1.4-clean-up-maps.patch,v 1.1 2011/04/06 14:10:32 pva Exp $
+ 
+@@ -11,7 +11,7 @@ key="$1"
+ 
+ # add "nosymlink" here if you want to suppress symlinking local filesystems
+ # add "nonstrict" to make it OK for some filesystems to not mount
+-opts="-fstype=nfs,hard,intr,nodev,nosuid"
++opts="-fstype=nfs,hard,intr,nodev,nosuid,nonstrict"
+ 
+ # Showmount comes in a number of names and varieties.  "showmount" is
+ # typically an older version which accepts the '--no-headers' flag
+@@ -20,24 +20,14 @@ opts="-fstype=nfs,hard,intr,nodev,nosuid
+ #SHOWMOUNT="kshowmount --no-headers -e $key"
+ #SHOWMOUNT="showmount -e $key | tail -n +2"
+ 
+-for P in /bin /sbin /usr/bin /usr/sbin
+-do
+-	for M in showmount kshowmount
+-	do
+-		if [ -x $P/$M ]
+-		then
+-			SMNT=$P/$M
+-			break
+-		fi
+-	done
+-done
++SMNT=/usr/sbin/showmount
+ 
+ [ -x $SMNT ] || exit 1
+ 
+ # Newer distributions get this right
+ SHOWMOUNT="$SMNT --no-headers -e $key"
+ 
+-$SHOWMOUNT | LC_ALL=C sort +0 | \
++$SHOWMOUNT | LC_ALL=C sort -k 1 | \
+ 	awk -v key="$key" -v opts="$opts" -- '
+ 	BEGIN	{ ORS=""; first=1 }
+ 		{ if (first) { print opts; first=0 }; print " \\\n\t" $1, key ":" $1 }
+--- samples/auto.smb.old	2010-06-20 22:10:17.507329273 +0200
++++ samples/auto.smb	2010-06-20 22:15:58.884079957 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ 
+ # $Id: autofs-4.1.4-clean-up-maps.patch,v 1.1 2011/04/06 14:10:32 pva Exp $
+ 
+@@ -7,14 +7,7 @@
+ key="$1"
+ opts="-fstype=cifs"
+ 
+-for P in /bin /sbin /usr/bin /usr/sbin
+-do
+-	if [ -x $P/smbclient ]
+-	then
+-		SMBCLIENT=$P/smbclient
+-		break
+-	fi
+-done
++SMBCLIENT="/usr/bin/smbclient"
+
+ [ -x $SMBCLIENT ] || exit 1
+ 

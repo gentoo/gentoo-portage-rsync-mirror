@@ -1,0 +1,38 @@
+# ChangeLog for dev-haskell/lifted-base
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-base/ChangeLog,v 1.6 2012/12/23 20:06:36 slyfox Exp $
+
+*lifted-base-0.2.0.2 (23 Dec 2012)
+
+  23 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +lifted-base-0.2.0.2.ebuild:
+  Version bump.
+
+*lifted-base-0.2 (24 Nov 2012)
+
+  24 Nov 2012; Mark Wright <gienah@gentoo.org>
+  +files/lifted-base-0.2-ghc-7.7.patch, +lifted-base-0.2.ebuild:
+  Bump lifted-base to 0.2
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  lifted-base-0.1.0.3-r1.ebuild, lifted-base-0.1.1.ebuild:
+  move dev-haskell/lifted-base/lifted-base-0.1.0.3-r1.ebuild ebuild to
+  mirror://hackage
+
+*lifted-base-0.1.1 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org>
+  +files/lifted-base-0.1.1-test-ghc-6.12.patch, +lifted-base-0.1.1.ebuild,
+  lifted-base-0.1.0.3-r1.ebuild:
+  Bump lifted-base to 0.1.1. Loosen transformers dep in lifted-base-0.1.0.3-r1.
+
+  29 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/lifted-base-0.1.0.1-test-ghc-6.12.patch:
+  Added missing patch. Found by Julien Sanchez in bug #410135.
+
+*lifted-base-0.1.0.3-r1 (24 Mar 2012)
+
+  24 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +lifted-base-0.1.0.3-r1.ebuild, +metadata.xml:
+  Initial version. lifted IO operations from the base library. A depend of
+  >=dev-vcs/git-annex-3.20120315.

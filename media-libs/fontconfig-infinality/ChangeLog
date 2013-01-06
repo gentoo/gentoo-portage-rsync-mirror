@@ -1,0 +1,13 @@
+# ChangeLog for media-libs/fontconfig-infinality
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig-infinality/ChangeLog,v 1.2 2012/07/30 05:37:57 yngwin Exp $
+
+  30 Jul 2012; Ben de Groot <yngwin@gentoo.org>
+  fontconfig-infinality-20120619.ebuild, metadata.xml:
+  Change lcdfilter useflag to more precise infinality useflag (bug #428548)
+
+*fontconfig-infinality-20120619 (29 Jul 2012)
+
+  29 Jul 2012; Ben de Groot <yngwin@gentoo.org> +files/Xresources,
+  +fontconfig-infinality-20120619.ebuild, +metadata.xml:
+  Initial commit. Ebuild based on the one in infinality-overlay.

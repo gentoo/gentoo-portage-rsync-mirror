@@ -1,0 +1,191 @@
+# ChangeLog for net-misc/freerdp
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.41 2012/12/04 15:36:53 ago Exp $
+
+  04 Dec 2012; <ago@gentoo.org> freerdp-1.1.0_pre20121004-r1.ebuild:
+  Stable for x86, wrt bug #442212
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  freerdp-1.1.0_pre20121004-r1.ebuild, freerdp-9999.1.ebuild:
+  Pin gstreamer dependencies.
+
+  29 Nov 2012; Mike Gilbert <floppym@gentoo.org>
+  -freerdp-1.0.1_p20120726.ebuild, -freerdp-1.1.0_pre20121004.ebuild,
+  freerdp-1.0.1_p20120318.ebuild, freerdp-1.1.0_pre20121004-r1.ebuild,
+  freerdp-9999.1.ebuild:
+  Drop broken cunit tests and add ctest support to live ebuild.
+
+  14 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
+  freerdp-1.1.0_pre20121004-r1.ebuild:
+  Stable for amd64, wrt bug #442212
+
+  11 Oct 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/freerdp-1.1.0_pre20121004-debug.patch,
+  freerdp-1.1.0_pre20121004-r1.ebuild:
+  Fix build with USE=debug, bug 437864 by Ben Kohler.
+
+*freerdp-1.1.0_pre20121004-r1 (11 Oct 2012)
+
+  11 Oct 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/freerdp-1.1.0_pre20121004-argb.patch,
+  +freerdp-1.1.0_pre20121004-r1.ebuild:
+  Fix white artifacts in remmina, bug 437918 by Ben Kohler.
+
+*freerdp-1.1.0_pre20121004 (07 Oct 2012)
+
+  07 Oct 2012; Mike Gilbert <floppym@gentoo.org>
+  +freerdp-1.1.0_pre20121004.ebuild:
+  Add a new snapshot.
+
+  23 Sep 2012; Mike Gilbert <floppym@gentoo.org> freerdp-9999.1.ebuild,
+  metadata.xml:
+  Update use flags and dependencies to match upstream.
+
+*freerdp-1.0.1_p20120726 (28 Jul 2012)
+
+  28 Jul 2012; Mike Gilbert <floppym@gentoo.org>
+  +freerdp-1.0.1_p20120726.ebuild, freerdp-1.0.1_p20120318.ebuild,
+  freerdp-9999.1.ebuild, metadata.xml:
+  Add a new snapshot. This one doesn't segfault. Drop debug use flags; set
+  MYCMAKEARGS if you want debug messages.
+
+  08 Jul 2012; Mike Gilbert <floppym@gentoo.org>
+  -freerdp-1.0.1_p20120704.ebuild:
+  Remove version bump; should have tested first.
+
+  08 Jul 2012; Mike Gilbert <floppym@gentoo.org> -freerdp-0.8.2.ebuild,
+  -freerdp-0.9999.ebuild, -freerdp-1.0.0.ebuild, -freerdp-1.0.1.ebuild:
+  Remove old.
+
+*freerdp-1.0.1_p20120704 (08 Jul 2012)
+
+  08 Jul 2012; Mike Gilbert <floppym@gentoo.org>
+  +freerdp-1.0.1_p20120704.ebuild, freerdp-9999.1.ebuild:
+  Version bump.
+
+  14 May 2012; Mike Gilbert <floppym@gentoo.org> freerdp-9999.1.ebuild:
+  Unrestrict tests.
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> freerdp-1.0.0.ebuild,
+  freerdp-1.0.1.ebuild, freerdp-1.0.1_p20120318.ebuild, freerdp-9999.1.ebuild:
+  Use mirror://github.
+
+*freerdp-1.0.1_p20120318 (19 Mar 2012)
+
+  19 Mar 2012; Mike Gilbert <floppym@gentoo.org>
+  +freerdp-1.0.1_p20120318.ebuild, freerdp-9999.1.ebuild:
+  Add a snapshot.
+
+  29 Feb 2012; Mike Gilbert <floppym@gentoo.org> freerdp-1.0.0.ebuild,
+  freerdp-1.0.1.ebuild:
+  Use new standardized tarballs.
+
+  29 Feb 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove myself from metadata
+
+*freerdp-0.9999 (15 Feb 2012)
+
+  15 Feb 2012; Mike Gilbert <floppym@gentoo.org> +freerdp-0.9999.ebuild,
+  -freerdp-9999.ebuild:
+  Rename old live ebuild to freerdp-0.9999.
+
+*freerdp-1.0.1 (10 Feb 2012)
+
+  10 Feb 2012; Mike Gilbert <floppym@gentoo.org> +freerdp-1.0.1.ebuild:
+  Version bump.
+
+  16 Jan 2012; Mike Gilbert <floppym@gentoo.org> freerdp-1.0.0.ebuild,
+  freerdp-9999.1.ebuild:
+  Tweak description.
+
+*freerdp-1.0.0 (16 Jan 2012)
+
+  16 Jan 2012; Mike Gilbert <floppym@gentoo.org> +freerdp-1.0.0.ebuild,
+  -freerdp-1.0_beta4.ebuild, -freerdp-1.0_beta5.ebuild:
+  Version bump. Remove beta ebuilds.
+
+*freerdp-1.0_beta5 (07 Jan 2012)
+
+  07 Jan 2012; Mike Gilbert <floppym@gentoo.org> +freerdp-1.0_beta5.ebuild,
+  -freerdp-1.0_beta1.ebuild, -freerdp-1.0_beta2.ebuild,
+  -freerdp-1.0_beta3.ebuild:
+  Version bump. Remove old betas.
+
+*freerdp-1.0_beta4 (24 Dec 2011)
+
+  24 Dec 2011; Mike Gilbert <floppym@gentoo.org> +freerdp-1.0_beta4.ebuild:
+  Version bump.
+
+*freerdp-1.0_beta3 (09 Dec 2011)
+
+  09 Dec 2011; Mike Gilbert <floppym@gentoo.org> +freerdp-1.0_beta3.ebuild:
+  Version bump.
+
+  04 Dec 2011; Mike Gilbert <floppym@gentoo.org> freerdp-1.0_beta1.ebuild,
+  freerdp-1.0_beta2.ebuild, freerdp-9999.1.ebuild, metadata.xml:
+  Add missing dependency on docbook-xml-dtd, bug 392707. Consolidate X-related
+  use flags, and don't enable alsa cups, and X by default.
+
+  04 Dec 2011; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Reorder maintainers.
+
+*freerdp-1.0_beta2 (28 Nov 2011)
+
+  28 Nov 2011; Mike Gilbert <floppym@gentoo.org> +freerdp-1.0_beta2.ebuild:
+  Version bump.
+
+  14 Nov 2011; Mike Gilbert <floppym@gentoo.org> freerdp-1.0_beta1.ebuild:
+  Add missing debug options.
+
+  14 Nov 2011; Mike Gilbert <floppym@gentoo.org> freerdp-1.0_beta1.ebuild,
+  freerdp-9999.1.ebuild, metadata.xml:
+  Add optional ffmpeg, smartcard, and xv support, and a few more debug options.
+  Make build output verbose. Misc cleanup.
+
+*freerdp-1.0_beta1 (11 Nov 2011)
+
+  11 Nov 2011; Mike Gilbert <floppym@gentoo.org> +freerdp-1.0_beta1.ebuild:
+  1.0 is in beta. This is a complete rewrite.
+
+  01 Oct 2011; Peter Volkov <pva@gentoo.org> freerdp-9999.1.ebuild,
+  metadata.xml:
+  Add debug-* and sse2 USE flags, bug #381409.
+
+  07 Sep 2011; Mike Gilbert <floppym@gentoo.org> freerdp-9999.1.ebuild:
+  Install README.
+
+*freerdp-9999.1 (07 Sep 2011)
+
+  07 Sep 2011; Mike Gilbert <floppym@gentoo.org> +freerdp-9999.1.ebuild,
+  metadata.xml:
+  Add live ebuild for the 1.0 rewrite
+
+  04 Sep 2011; Mike Gilbert <floppym@gentoo.org> freerdp-9999.ebuild,
+  metadata.xml:
+  Rewrite the live ebuild; point it at the old (working) git repo. Thanks
+  to Ferry on bug 381409 for reporting.
+
+  03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop unused local desc.
+
+  15 Mar 2011; Markos Chandras <hwoarang@gentoo.org> freerdp-9999.ebuild:
+  Change git repository for the new one located on github. Bug #358747
+
+  12 Mar 2011; Markos Chandras <hwoarang@gentoo.org> freerdp-0.8.2.ebuild,
+  freerdp-9999.ebuild:
+  Remove largefile useflag per bug #358283
+
+  22 Feb 2011; Markos Chandras <hwoarang@gentoo.org> freerdp-0.8.2.ebuild,
+  freerdp-9999.ebuild:
+  Add x11-apps/setxkbmap on RDEPEND. Bug #353529
+
+  08 Feb 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Fix addy.
+
+*freerdp-9999 (21 Jan 2011)
+*freerdp-0.8.2 (21 Jan 2011)
+
+  21 Jan 2011; Markos Chandras <hwoarang@gentoo.org> +freerdp-0.8.2.ebuild,
+  +freerdp-9999.ebuild, +metadata.xml:
+  Moved from sunrise overlay. Thanks to Nils Andresen (nils)
+  <andresen.nils@googlemail.com> for the original ebuild. Bug #322967

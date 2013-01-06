@@ -1,0 +1,23 @@
+--- media/Texture_Image.cc
++++ media/Texture_Image.cc
+@@ -162,15 +162,15 @@
+ 
+   png_bytep* row_pointers = png_get_rows (png_ptr, info_ptr);
+ 
+-  m_width_pixels = info_ptr->width;
+-  m_height_pixels = info_ptr->height;
+-  m_channels = info_ptr->channels;
+-  size_t row_size = info_ptr->width * info_ptr->channels;
++  m_width_pixels = png_get_image_width(png_ptr, info_ptr);
++  m_height_pixels = png_get_image_height(png_ptr, info_ptr);
++  m_channels = png_get_channels(png_ptr, info_ptr);
++  size_t row_size = png_get_image_width(png_ptr, info_ptr) * png_get_channels(png_ptr, info_ptr);
+ 
+   size_t data_size = row_size * m_height_pixels;
+   unsigned char* data = new unsigned char [data_size];
+ 
+-  for (size_t i = 0; i < info_ptr->height; i++)
++  for (size_t i = 0; i < png_get_image_height(png_ptr, info_ptr); i++)
+ 	{
+ 	  for (size_t j = 0; j < row_size; j++)
+ 		{

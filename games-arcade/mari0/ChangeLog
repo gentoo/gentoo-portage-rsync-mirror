@@ -1,0 +1,31 @@
+# ChangeLog for games-arcade/mari0
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/ChangeLog,v 1.8 2012/12/20 20:26:09 hasufell Exp $
+
+  20 Dec 2012; Julian Ospald <hasufell@gentoo.org> mari0-1.6.ebuild:
+  stable x86 wrt #435896
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> mari0-1.6.ebuild:
+  revert, it was a keywordreq for ppc
+
+  26 Sep 2012; Julian Ospald <hasufell@gentoo.org> mari0-1.6.ebuild:
+  stable for amd64 wrt #435896 tested by Agostino Sarubbo
+
+  17 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> mari0-1.6.ebuild:
+  Use doicon -s scalable instead of doins -s scalable wrt #421553 by Jaakko
+  Perttilä
+
+  05 Jun 2012; Julian Ospald <hasufell@gentoo.org> mari0-1.6.ebuild:
+  use new doicon functionality
+
+  02 Jun 2012; Julian Ospald <hasufell@gentoo.org> mari0-1.6.ebuild:
+  bump to EAPI=4
+
+  21 May 2012; Julian Ospald <hasufell@gentoo.org> mari0-1.6.ebuild:
+  relocate and enforce standard for .love files
+
+*mari0-1.6 (17 May 2012)
+
+  17 May 2012; Julian Ospald <hasufell@gentoo.org> +files/mari0.svg,
+  +mari0-1.6.ebuild, +metadata.xml:
+  initial commit wrt #407105

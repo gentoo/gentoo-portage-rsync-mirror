@@ -1,0 +1,55 @@
+diff -Nur a/config.c b/config.c
+--- a/config.c	2012-10-04 09:59:14.000000000 +0200
++++ b/config.c	2012-11-09 21:08:09.099868866 +0100
+@@ -45,39 +45,6 @@
+ #include "asprintf.c"
+ #endif
+ 
+-#if !defined(asprintf)
+-#include <stdarg.h>
+-
+-int asprintf(char **string_ptr, const char *format, ...)
+-{
+-	va_list arg;
+-	char *str;
+-	int size;
+-	int rv;
+-
+-	va_start(arg, format);
+-	size = vsnprintf(NULL, 0, format, arg);
+-	size++;
+-	va_start(arg, format);
+-	str = malloc(size);
+-	if (str == NULL) {
+-		va_end(arg);
+-		/*
+-		 * Strictly speaking, GNU asprintf doesn't do this,
+-		 * but the caller isn't checking the return value.
+-		 */
+-		fprintf(stderr, "failed to allocate memory\\n");
+-		exit(1);
+-	}
+-	rv = vsnprintf(str, size, format, arg);
+-	va_end(arg);
+-
+-	*string_ptr = str;
+-	return (rv);
+-}
+-
+-#endif
+-
+ #if !defined(strndup)
+ char *strndup(const char *s, size_t n)
+ {
+diff -Nur a/logrotate.h b/logrotate.h
+--- a/logrotate.h	2012-10-04 09:59:14.000000000 +0200
++++ b/logrotate.h	2012-11-09 21:08:29.829868750 +0100
+@@ -67,8 +67,5 @@
+ extern int debug;
+ 
+ int readAllConfigPaths(const char **paths);
+-#if !defined(asprintf)
+-int asprintf(char **string_ptr, const char *format, ...);
+-#endif
+ 
+ #endif

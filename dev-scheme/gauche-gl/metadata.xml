@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>hattya@gentoo.org</email>
+  </maintainer>
+  <longdescription>
+    OpenGL binding of Gauche
+  </longdescription>
+  <use>
+    <flag name="cg">Enable NVidia Cg binding</flag>
+  </use>
+</pkgmetadata>

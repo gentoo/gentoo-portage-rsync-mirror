@@ -1,0 +1,9 @@
+# ChangeLog for kde-misc/nvdevmon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/nvdevmon/ChangeLog,v 1.1 2012/11/27 04:55:16 creffett Exp $
+
+*nvdevmon-0.1.2 (27 Nov 2012)
+
+  27 Nov 2012; Chris Reffett <creffett@gentoo.org> +metadata.xml,
+  +nvdevmon-0.1.2.ebuild:
+  New package wrt bug 442088

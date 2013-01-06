@@ -1,0 +1,25 @@
+From d2da04f6e412b1c115ceb8c2fb857c724de1faa7 Mon Sep 17 00:00:00 2001
+From: Christian Ruppert <idl0r@gentoo.org>
+Date: Sat, 28 Jul 2012 21:42:36 +0200
+Subject: [PATCH] Detect libxml2-2.8.x
+
+---
+ configure.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/configure.in b/configure.in
+index 2c3f1f2..b0d5ff7 100644
+--- a/configure.in
++++ b/configure.in
+@@ -1222,7 +1222,7 @@ case "$use_libxml2" in
+ 		;;
+ 	auto|yes)
+ 		case X`(xml2-config --version) 2>/dev/null` in
+-		X2.[[67]].*)
++		X2.[[678]].*)
+ 			libxml2_libs=`xml2-config --libs`
+ 			libxml2_cflags=`xml2-config --cflags`
+ 			;;
+-- 
+1.7.3.4
+

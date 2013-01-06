@@ -1,0 +1,102 @@
+From f33a7b7c5d0690a916908bc033a3ae2f53c1d022 Mon Sep 17 00:00:00 2001
+From: Felix Riemann <friemann@gnome.org>
+Date: Fri, 7 Sep 2012 18:57:15 +0200
+Subject: [PATCH] Raise librsvg dependency to 2.36.2
+
+The old minimum version (2.26.0) is pretty old and behind with
+bugfixes and features. Raising the minimum librsvg version to 2.36.2
+allows dropping some compatibility ifdefs and code. It also fixes
+several compiler warnings when compiling against newer librsvgs.
+---
+ configure.ac          | 2 +-
+ src/eog-image.c       | 1 -
+ src/eog-print.c       | 2 +-
+ src/eog-scroll-view.c | 1 -
+ src/main.c            | 7 -------
+ 5 files changed, 2 insertions(+), 11 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 07520f3..c4aed8b 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -269,7 +269,7 @@ PKG_CHECK_MODULES(LIBXML2, [libxml-2.0 >= $LIBXML2_REQUIRED])
+ # RSVG (optional for scaling svg image)
+ # ***************
+ 
+-LIBRSVG_REQUIRED=2.26.0
++LIBRSVG_REQUIRED=2.36.2
+ 
+ AC_ARG_WITH([librsvg], AC_HELP_STRING([--without-librsvg], [disable RSVG support]))
+ have_rsvg=no
+diff --git a/src/eog-image.c b/src/eog-image.c
+index f813c2b..9098802 100644
+--- a/src/eog-image.c
++++ b/src/eog-image.c
+@@ -67,7 +67,6 @@
+ 
+ #ifdef HAVE_RSVG
+ #include <librsvg/rsvg.h>
+-#include <librsvg/librsvg-features.h>
+ #endif
+ 
+ #define EOG_IMAGE_GET_PRIVATE(object) \
+diff --git a/src/eog-print.c b/src/eog-print.c
+index 6a68c5b..527a7e7 100644
+--- a/src/eog-print.c
++++ b/src/eog-print.c
+@@ -30,7 +30,7 @@
+ #include "eog-debug.h"
+ 
+ #ifdef HAVE_RSVG
+-#include <librsvg/rsvg-cairo.h>
++#include <librsvg/rsvg.h>
+ #endif
+ 
+ #define EOG_PRINT_SETTINGS_FILE "eog-print-settings.ini"
+diff --git a/src/eog-scroll-view.c b/src/eog-scroll-view.c
+index 85b14f0..d63ef25 100644
+--- a/src/eog-scroll-view.c
++++ b/src/eog-scroll-view.c
+@@ -8,7 +8,6 @@
+ #include <gdk/gdkkeysyms.h>
+ #ifdef HAVE_RSVG
+ #include <librsvg/rsvg.h>
+-#include <librsvg/rsvg-cairo.h>
+ #endif
+ 
+ #include "eog-config-keys.h"
+diff --git a/src/main.c b/src/main.c
+index 2d09d2e..5cdf002 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -49,7 +49,6 @@
+ 
+ #if HAVE_RSVG
+ #include <librsvg/rsvg.h>
+-#include <librsvg/librsvg-features.h>
+ #endif
+ 
+ #define EOG_CSS_FILE_PATH EOG_DATA_DIR G_DIR_SEPARATOR_S "eog.css"
+@@ -145,9 +144,6 @@ main (int argc, char **argv)
+ #ifdef HAVE_EXEMPI
+  	xmp_init();
+ #endif
+-#if defined (HAVE_RSVG) && !LIBRSVG_CHECK_VERSION(2, 35, 1)
+-	rsvg_init();
+-#endif
+ 	eog_debug_init ();
+ 	eog_job_queue_init ();
+ 	gdk_threads_init ();
+@@ -194,9 +190,6 @@ main (int argc, char **argv)
+   	if (startup_files)
+ 		g_strfreev (startup_files);
+ 
+-#if defined (HAVE_RSVG) && !LIBRSVG_CHECK_VERSION(2, 35, 1)
+-	rsvg_term();
+-#endif
+ #ifdef HAVE_EXEMPI
+ 	xmp_terminate();
+ #endif
+-- 
+1.7.12
+

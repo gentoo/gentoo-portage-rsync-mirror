@@ -1,0 +1,16 @@
+# ChangeLog for app-emacs/rudel
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rudel/ChangeLog,v 1.3 2011/12/26 14:09:04 ulm Exp $
+
+  26 Dec 2011; Ulrich Mueller <ulm@gentoo.org> rudel-0.3_pre20110721.ebuild:
+  Add app-arch/xz-utils to DEPEND.
+
+  23 Aug 2011; Ulrich Mueller <ulm@gentoo.org> rudel-0.3_pre20110721.ebuild:
+  Remove redundant entry from SRC_URI.
+
+*rudel-0.3_pre20110721 (22 Jul 2011)
+
+  22 Jul 2011; Ulrich Mueller <ulm@gentoo.org> +files/60rudel-gentoo.el,
+  +rudel-0.3_pre20110721.ebuild, +metadata.xml:
+  Initial import, from Emacs overlay. Ebuild contributed by me.
+

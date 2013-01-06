@@ -1,0 +1,137 @@
+# ChangeLog for virtual/perl-Attribute-Handlers
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Attribute-Handlers/ChangeLog,v 1.31 2012/09/01 12:11:40 grobian Exp $
+
+  01 Sep 2012; Fabian Groffen <grobian@gentoo.org>
+  perl-Attribute-Handlers-0.930.0-r1.ebuild:
+  Marked ~ppc-aix, bug #432288
+
+*perl-Attribute-Handlers-0.930.0-r1 (21 May 2012)
+
+  21 May 2012; Torsten Veller <tove@gentoo.org>
+  -perl-Attribute-Handlers-0.930.0.ebuild,
+  +perl-Attribute-Handlers-0.930.0-r1.ebuild:
+  Add perl-5.16 as provider
+
+  24 Mar 2012; Fabian Groffen <grobian@gentoo.org>
+  perl-Attribute-Handlers-0.930.0.ebuild:
+  Add Prefix keywords, bug #403413
+
+  07 Mar 2012; Brent Baude <ranger@gentoo.org>
+  perl-Attribute-Handlers-0.910.0.ebuild:
+  Marking perl-Attribute-Handlers-0.910.0 ppc64 for bug 394039
+
+  02 Feb 2012; Brent Baude <ranger@gentoo.org>
+  perl-Attribute-Handlers-0.910.0.ebuild:
+  Marking perl-Attribute-Handlers-0.910.0 ppc for bug 394039
+
+  01 Jan 2012; Raúl Porcel <armin76@gentoo.org>
+  perl-Attribute-Handlers-0.910.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #394039
+
+  22 Dec 2011; Markus Meier <maekke@gentoo.org>
+  perl-Attribute-Handlers-0.910.0.ebuild:
+  x86 stable, bug #394039
+
+  21 Dec 2011; Markus Meier <maekke@gentoo.org>
+  perl-Attribute-Handlers-0.910.0.ebuild:
+  arm stable, bug #394039
+
+  20 Dec 2011; Jeroen Roovers <jer@gentoo.org>
+  perl-Attribute-Handlers-0.910.0.ebuild:
+  Stable for HPPA (bug #394039).
+
+*perl-Attribute-Handlers-0.930.0 (19 Dec 2011)
+
+  19 Dec 2011; Torsten Veller <tove@gentoo.org>
+  +perl-Attribute-Handlers-0.930.0.ebuild:
+  Version bump
+
+  17 Dec 2011; Agostino Sarubbo <ago@gentoo.org>
+  perl-Attribute-Handlers-0.910.0.ebuild:
+  Stable for AMD64, wrt bug #394039
+
+  29 May 2011; Fabian Groffen <grobian@gentoo.org>
+  perl-Attribute-Handlers-0.910.0.ebuild:
+  Marked ~x64-macos, bug #368557
+
+*perl-Attribute-Handlers-0.910.0 (21 May 2011)
+
+  21 May 2011; Torsten Veller <tove@gentoo.org>
+  +perl-Attribute-Handlers-0.910.0.ebuild:
+  Version bump
+
+  17 Jan 2011; Torsten Veller <tove@gentoo.org>
+  -perl-Attribute-Handlers-0.87.ebuild:
+  Cleanup
+
+  08 Jan 2011; Jeroen Roovers <jer@gentoo.org>
+  perl-Attribute-Handlers-0.88.ebuild:
+  Stable for HPPA (bug #350877).
+
+  08 Jan 2011; Raúl Porcel <armin76@gentoo.org>
+  perl-Attribute-Handlers-0.88.ebuild:
+  arm/s390/sh stable
+
+  03 Dec 2010; Michael Weber <xmw@gentoo.org>
+  perl-Attribute-Handlers-0.87.ebuild, perl-Attribute-Handlers-0.88.ebuild:
+  add ~arm (bug 302981)
+
+  15 Nov 2010; Fabian Groffen <grobian@gentoo.org>
+  perl-Attribute-Handlers-0.88.ebuild:
+  Marked ~ppc-macos and ~x86-solaris, bug #345435
+
+  07 Sep 2010; Torsten Veller <tove@gentoo.org>
+  perl-Attribute-Handlers-0.87.ebuild:
+  Add perl-5.12.2 as provider
+
+  14 Jul 2010; Torsten Veller <tove@gentoo.org>
+  perl-Attribute-Handlers-0.87.ebuild:
+  Add perl-5.12 as provider
+
+  27 Jun 2010; <nixnut@gentoo.org> perl-Attribute-Handlers-0.88.ebuild:
+  ppc stable #323529
+
+  21 Jun 2010; Raúl Porcel <armin76@gentoo.org>
+  perl-Attribute-Handlers-0.88.ebuild:
+  alpha/ia64/sparc stable
+
+  15 Jun 2010; Torsten Veller <tove@gentoo.org>
+  perl-Attribute-Handlers-0.88.ebuild:
+  Stable on amd64 and x86 (#323529)
+
+*perl-Attribute-Handlers-0.88 (07 Apr 2010)
+
+  07 Apr 2010; Torsten Veller <tove@gentoo.org>
+  +perl-Attribute-Handlers-0.88.ebuild:
+  Version bump
+
+  07 Jan 2010; Joseph Jezak <josejx@gentoo.org>
+  perl-Attribute-Handlers-0.87.ebuild:
+  Marked ~ppc for bug #294206.
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org>
+  perl-Attribute-Handlers-0.87.ebuild:
+  Add mandatory SRC_URI
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org>
+  perl-Attribute-Handlers-0.87.ebuild:
+  Empty HOMEPAGE and LICENSE
+
+  02 Jan 2010; Brent Baude <ranger@gentoo.org>
+  perl-Attribute-Handlers-0.87.ebuild:
+  Marking ~ppc64 for bug 294206
+
+  26 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  perl-Attribute-Handlers-0.87.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #294206
+
+  24 Nov 2009; Alexis Ballier <aballier@gentoo.org>
+  perl-Attribute-Handlers-0.87.ebuild:
+  keyword ~x86-fbsd, bug #294206
+
+*perl-Attribute-Handlers-0.87 (23 Nov 2009)
+
+  23 Nov 2009; Torsten Veller <tove@gentoo.org>
+  +perl-Attribute-Handlers-0.87.ebuild, +metadata.xml:
+  Initial commit (#294206)

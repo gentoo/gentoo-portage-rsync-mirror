@@ -1,0 +1,10 @@
+--- lib/notQt.h.orig	2012-06-18 17:15:02.139055813 +0200
++++ lib/notQt.h	2012-06-18 17:15:23.424070974 +0200
+@@ -34,6 +34,7 @@
+ #include <fstream>
+ extern "C" {
+ #include <sys/poll.h>
++#include <unistd.h>
+ }
+ #define NOTQTPROCESS_MAIN_APP 0
+ #define NOTQTPROCESS_FAILURE -1

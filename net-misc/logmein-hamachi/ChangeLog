@@ -1,0 +1,72 @@
+# ChangeLog for net-misc/logmein-hamachi
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.10 2013/01/02 09:23:53 pinkbyte Exp $
+
+*logmein-hamachi-2.1.0.86 (02 Jan 2013)
+
+  02 Jan 2013; Sergey Popov <pinkbyte@gentoo.org>
+  -logmein-hamachi-2.1.0.76.ebuild, -logmein-hamachi-2.1.0.76-r1.ebuild,
+  +logmein-hamachi-2.1.0.86.ebuild:
+  Version bump, wrt bug #449712. Drop old versions, cause they are not
+  available anymore, thanks to Matthias Blümel for discovering this issue
+
+*logmein-hamachi-2.1.0.81 (22 Nov 2012)
+
+  22 Nov 2012; Markos Chandras <hwoarang@gentoo.org>
+  +logmein-hamachi-2.1.0.81.ebuild:
+  Version bump. Bug #444052
+
+*logmein-hamachi-2.1.0.76-r1 (15 Oct 2012)
+
+  15 Oct 2012; Markos Chandras <hwoarang@gentoo.org>
+  +logmein-hamachi-2.1.0.76-r1.ebuild, -logmein-hamachi-2.1.0.17.ebuild,
+  -logmein-hamachi-2.1.0.68-r1.ebuild, -logmein-hamachi-2.1.0.68.ebuild,
+  files/logmein-hamachi.initd:
+  New initd file. Thanks to Simone Scanzoni <nonno.cicala@libero.it>. Fixes bug
+  #438336. Remove old ebuilds
+
+*logmein-hamachi-2.1.0.76 (03 Oct 2012)
+
+  03 Oct 2012; Markos Chandras <hwoarang@gentoo.org>
+  +logmein-hamachi-2.1.0.76.ebuild, metadata.xml:
+  Version bump. Thanks to Simone Scanzoni <nonno.cicala@libero.it>
+
+*logmein-hamachi-2.1.0.68-r1 (17 Aug 2012)
+
+  17 Aug 2012; Aaron W. Swenson <titanofold@gentoo.org>
+  +logmein-hamachi-2.1.0.68-r1.ebuild:
+  Fixes bug 430234. Per Simone Scanzoni.
+
+*logmein-hamachi-2.1.0.68 (29 Jun 2012)
+
+  29 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +logmein-hamachi-2.1.0.68.ebuild, metadata.xml:
+  Bump to 2.1.0.68, thanks to Simone Scanzoni. Clean up metadata
+
+  24 Aug 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Assign package to proxy-maintainers team
+
+*logmein-hamachi-2.1.0.17 (24 Aug 2011)
+
+  24 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  -logmein-hamachi-2.0.1.13.ebuild, -logmein-hamachi-2.0.1.15.ebuild,
+  +logmein-hamachi-2.1.0.17.ebuild, files/logmein-hamachi.initd:
+  Version bump. Bug #378969. Thanks to Simone Scanzoni <nonno.cicala@libero.it>
+  for the new initd file
+
+*logmein-hamachi-2.0.1.15 (13 Jun 2011)
+
+  13 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  +logmein-hamachi-2.0.1.15.ebuild:
+  Version bump thanks to Simone Scanzoni <nonno.cicala@libero.it>
+
+*logmein-hamachi-2.0.1.13 (15 Jan 2011)
+
+  15 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  +logmein-hamachi-2.0.1.13.ebuild, +files/logmein-hamachi.confd,
+  +files/logmein-hamachi.initd, +metadata.xml:
+  Initial commit of new hamachi client. Bug #350172. The original hamachi
+  client has been renamed to logmein-hamachi which is more a replacement rather
+  than a new version. Thanks to Simone Scanzoni <nonno.cicala@libero.it> for
+  the ebuilds and scripts. He will proxy maintain it. The old client will be
+  removed in 30 days

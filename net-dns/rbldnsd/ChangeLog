@@ -1,0 +1,82 @@
+# ChangeLog for net-dns/rbldnsd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.20 2012/10/09 11:58:31 naota Exp $
+
+  09 Oct 2012;  <naota@gentoo.org> rbldnsd-0.996b.ebuild:
+  Add ~x86-fbsd. #237130
+
+  14 Jun 2012; Zac Medico <zmedico@gentoo.org> rbldnsd-0.996b.ebuild:
+  inherit user for enewgroup and enewuser
+
+  04 Apr 2011; Dane Smith <c1pher@gentoo.org> metadata.xml:
+  Update metadata to reflect Michael Orlitzky as maintainer w/ me as his
+  proxy
+  committer.
+
+  14 Jan 2010; Jeroen Roovers <jer@gentoo.org> rbldnsd-0.996b.ebuild:
+  Stable for HPPA (bug #282366).
+
+  06 Sep 2009; Markus Meier <maekke@gentoo.org> rbldnsd-0.996b.ebuild:
+  amd64/x86 stable, bug #282366
+
+  15 May 2009; Mark Loeser <halcy0n@gentoo.org> rbldnsd-0.996b.ebuild:
+  Fix elog statement for bug #260789
+
+  04 Jan 2009; Christoph Mende <angelos@gentoo.org>
+  +files/rbldnsd-0.996b-asneeded.patch, -rbldnsd-0.996a.ebuild,
+  rbldnsd-0.996b.ebuild:
+  QA: Fixed compilation with --as-needed (bug 247960), respect CC, die on
+  dosbin
+
+  29 Jun 2008; Torsten Veller <tove@gentoo.org> rbldnsd-0.996a.ebuild,
+  rbldnsd-0.996b.ebuild:
+  Add missing die: || "..." -> || die "..."
+
+  27 May 2008; Jeroen Roovers <jer@gentoo.org> rbldnsd-0.996b.ebuild:
+  Marked ~hppa too.
+
+*rbldnsd-0.996b (27 May 2008)
+
+  27 May 2008; Jeroen Roovers <jer@gentoo.org> +rbldnsd-0.996b.ebuild:
+  Version bump (bug #223789).
+
+*rbldnsd-0.996a (28 Dec 2007)
+
+  28 Dec 2007; Raúl Porcel <armin76@gentoo.org> -rbldnsd-0.995.ebuild,
+  -rbldnsd-0.996.ebuild, +rbldnsd-0.996a.ebuild:
+  Version bump wrt #145180, cleanup
+
+  17 Oct 2007; Chris Gianelloni <wolf31o2@gentoo.org> rbldnsd-0.996.ebuild:
+  Marking ~amd64 wrt bug #194160.
+
+  14 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Assigning net-dns/rbldnsd to m-needed, as chriswhite has been retired (#56211).
+
+  06 May 2007; Marius Mauch <genone@gentoo.org> rbldnsd-0.995.ebuild,
+  rbldnsd-0.996.ebuild:
+  Replacing einfo with elog
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
+
+  27 Aug 2006; Jason Wever <weeve@gentoo.org> rbldnsd-0.996.ebuild:
+  Added ~sparc keyword wrt bug #145181.
+
+*rbldnsd-0.996 (07 May 2006)
+
+  07 May 2006; Chris White <chriswhite@gentoo.org> +rbldnsd-0.996.ebuild:
+  Version bump for bug #124787.
+
+  26 Aug 2005; Chris White <chriswhite@gentoo.org> rbldnsd-0.995.ebuild:
+  Fixed /bin/false for bug #103421.
+
+  15 Aug 2005; Chris White <chriswhite@gentoo.org> files/confd,
+  rbldnsd-0.995.ebuild:
+  Misc fixes after the commit.  Details in #39975.
+
+*rbldnsd-0.995 (15 Aug 2005)
+
+  15 Aug 2005; Chris White <chriswhite@gentoo.org> +files/confd,
+  +files/example, +files/initd, +metadata.xml, +rbldnsd-0.995.ebuild:
+  Initial commit to the tree. This closes bug #39975. Thanks to Martin
+  Hierling for the initial ebuild.

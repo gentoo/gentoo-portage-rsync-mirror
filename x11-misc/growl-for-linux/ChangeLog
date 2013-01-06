@@ -1,0 +1,23 @@
+# ChangeLog for x11-misc/growl-for-linux
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/growl-for-linux/ChangeLog,v 1.4 2012/05/05 04:53:48 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> growl-for-linux-0.1.ebuild,
+  growl-for-linux-0.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> growl-for-linux-0.1.ebuild,
+  growl-for-linux-0.2.ebuild:
+  Use mirror://github.
+
+*growl-for-linux-0.2 (01 May 2011)
+
+  01 May 2011; MATSUU Takuto <matsuu@gentoo.org> +growl-for-linux-0.2.ebuild:
+  Version bumped.
+
+*growl-for-linux-0.1 (27 Apr 2011)
+
+  27 Apr 2011; MATSUU Takuto <matsuu@gentoo.org> +growl-for-linux-0.1.ebuild,
+  +metadata.xml:
+  Initial import.
+

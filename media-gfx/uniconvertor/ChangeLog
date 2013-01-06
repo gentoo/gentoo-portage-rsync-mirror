@@ -1,0 +1,67 @@
+# ChangeLog for media-gfx/uniconvertor
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/ChangeLog,v 1.16 2012/09/11 03:13:22 ottxor Exp $
+
+  11 Sep 2012; Christoph Junghans <ottxor@gentoo.org> uniconvertor-1.1.5.ebuild:
+  added ~x86-linux
+
+  26 Feb 2012; Patrick Lauer <patrick@gentoo.org> uniconvertor-1.1.5.ebuild:
+  Restricting pypy and jython
+
+  01 Jan 2012; Fabian Groffen <grobian@gentoo.org> uniconvertor-1.1.5.ebuild:
+  Marked ~x86-solaris
+
+  21 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -uniconvertor-1.1.4.ebuild:
+  old
+
+  21 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  uniconvertor-1.1.5.ebuild:
+  x86 stable wrt #387199
+
+  18 Oct 2011; Jeroen Roovers <jer@gentoo.org> uniconvertor-1.1.5.ebuild:
+  Stable for HPPA (bug #387199).
+
+  16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  uniconvertor-1.1.5.ebuild:
+  ppc/ppc64 stable wrt #387199
+
+  15 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  uniconvertor-1.1.5.ebuild:
+  amd64 stable wrt #387199
+
+  02 Sep 2011; Fabian Groffen <grobian@gentoo.org> uniconvertor-1.1.5.ebuild:
+  Marked ~amd64-linux, ~x64-macos, bug #359693
+
+  26 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  uniconvertor-1.1.5.ebuild:
+  Marked ~ppc64 wrt #356243
+
+  24 Jun 2011; Brent Baude <ranger@gentoo.org> uniconvertor-1.1.5.ebuild:
+  Marking uniconvertor-1.1.5 ~ppc for bug 356243
+
+  01 Mar 2011; Jeroen Roovers <jer@gentoo.org> uniconvertor-1.1.4.ebuild,
+  uniconvertor-1.1.5.ebuild:
+  Marked ~hppa (bug #356243).
+
+  07 Aug 2010; Justin Lecher <jlec@gentoo.org> uniconvertor-1.1.5.ebuild,
+  +files/uniconvertor-1.1.5_export_raster.py_fix_import.patch:
+  Added missing deps and patches, thanks to Nikoli
+
+*uniconvertor-1.1.5 (06 Aug 2010)
+
+  06 Aug 2010; Justin Lecher <jlec@gentoo.org> uniconvertor-1.1.4.ebuild,
+  +uniconvertor-1.1.5.ebuild:
+  Version Bump, fix for python ABIS, 326189 &313517
+
+*uniconvertor-1.1.4 (10 Jan 2010)
+
+  10 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +uniconvertor-1.1.4.ebuild:
+  Version bump.
+
+*uniconvertor-1.1.0 (10 Jan 2010)
+
+  10 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +uniconvertor-1.1.0.ebuild:
+  Initial commit wrt #199280, thanks to Tomáš Chvátal for ebuild.

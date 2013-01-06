@@ -1,0 +1,35 @@
+From 23a61ccc1b89fa5b89b5d8383d57cf5152406cfc Mon Sep 17 00:00:00 2001
+From: Chris Wedgwood <cw@f00f.org>
+Date: Mon, 24 Sep 2012 10:30:18 -0700
+Subject: [PATCH] zvol_probe should return NULL when the device isn't found.
+
+Previously we returned ERR_PTR(-ENOENT) which the rest of the kernel
+doesn't expect and as such we can oops.
+
+Signed-off-by: Chris Wedgwood <cw@f00f.org>
+Signed-off-by: Brian Behlendorf <behlendorf1@llnl.gov>
+Closes #949
+Closes #931
+Closes #789
+Closes #743
+Closes #730
+---
+ module/zfs/zvol.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/module/zfs/zvol.c b/module/zfs/zvol.c
+index 22f14a0..a182f79 100644
+--- a/module/zfs/zvol.c
++++ b/module/zfs/zvol.c
+@@ -1065,7 +1065,7 @@ static int zvol_revalidate_disk(struct gendisk *disk)
+ 
+ 	mutex_enter(&zvol_state_lock);
+ 	zv = zvol_find_by_dev(dev);
+-	kobj = zv ? get_disk(zv->zv_disk) : ERR_PTR(-ENOENT);
++	kobj = zv ? get_disk(zv->zv_disk) : NULL;
+ 	mutex_exit(&zvol_state_lock);
+ 
+ 	return kobj;
+-- 
+1.7.10
+

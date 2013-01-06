@@ -1,0 +1,10 @@
+# ChangeLog for gnome-extra/gnome-clocks
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-clocks/ChangeLog,v 1.1 2012/12/27 07:11:25 tetromino Exp $
+
+*gnome-clocks-0.1.5 (27 Dec 2012)
+
+  27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-clocks-0.1.5.ebuild, +metadata.xml:
+  New ebuild for a simple world clock/alarm/timer application for gnome 3.
+

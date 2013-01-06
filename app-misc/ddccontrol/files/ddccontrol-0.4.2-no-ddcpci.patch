@@ -1,0 +1,14 @@
+fix building when ddcpci is disabled.  just a hack while we sort
+out the real fix upstream.
+
+--- a/src/gddccontrol/main.c
++++ b/src/gddccontrol/main.c
+@@ -24,7 +24,7 @@
+ #include <stdio.h>
+ #include <unistd.h>
+ 
+-#include "ddcpci-ipc.h"
++#define IDLE_TIMEOUT 60
+ 
+ #include "notebook.h"
+ 

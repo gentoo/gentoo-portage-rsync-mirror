@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/nemesis
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nemesis/ChangeLog,v 1.1 2012/12/13 14:51:07 jlec Exp $
+
+*nemesis-5.22b (13 Dec 2012)
+
+  13 Dec 2012; Justin Lecher <jlec@gentoo.org> +nemesis-5.22b.ebuild,
+  +files/nemesis-5.22b-multilib.patch, +metadata.xml:
+  New addition
+

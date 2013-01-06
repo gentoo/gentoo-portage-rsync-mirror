@@ -1,0 +1,68 @@
+# ChangeLog for dev-php/ffmpeg-php
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ChangeLog,v 1.3 2012/01/09 15:26:53 aballier Exp $
+
+  09 Jan 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-php-0.6.0-r1.ebuild,
+  files/ffmpeg-php-0.6.0-ffmpeg.patch, +files/ffmpeg-php-0.6.0-log.patch:
+  look for metadata closer to what the test suite expects, disable logging
+  outside of php so that most of the testsuite passes now
+
+  09 Jan 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-php-0.6.0-r1.ebuild,
+  +files/ffmpeg-php-0.6.0-ffmpeg.patch:
+  attempt to fix build and compatibility with latest ffmpeg releases, bug
+  #395563
+
+  31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -ffmpeg-php-0.6.0.ebuild, ffmpeg-php-0.6.0-r1.ebuild:
+  Depend on virtual/ffmpeg instead of media-video/ffmpeg. Drop older
+  overshadowed ebuild.
+
+  11 Jan 2011; Markus Meier <maekke@gentoo.org> ffmpeg-php-0.6.0-r1.ebuild:
+  x86 stable, bug #345891
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  ffmpeg-php-0.6.0-r1.ebuild:
+  Stable on amd64 wrt bug #345891
+
+  04 Jan 2011; Ole Markus With <olemarkus@gentoo.org>
+  ffmpeg-php-0.6.0-r1.ebuild:
+  The test movie seems corrupt, so skipping tests
+
+*ffmpeg-php-0.6.0-r1 (03 Nov 2010)
+
+  03 Nov 2010; Matti Bickel <mabi@gentoo.org> +ffmpeg-php-0.6.0-r1.ebuild:
+  create minor slotting compatible version
+
+  22 Sep 2009; Alexis Ballier <aballier@gentoo.org> ffmpeg-php-0.6.0.ebuild,
+  +files/ffmpeg-php-0.6.0-avutil50.patch:
+  Fix build with latest ffmpeg, by Thomas Scheiblauer
+  <thomas.scheiblauer@hauptversammlung.at>, bug #283998
+
+*ffmpeg-php-0.6.0 (11 Dec 2008)
+
+  11 Dec 2008; <ssuominen@gentoo.org> +ffmpeg-php-0.6.0.ebuild:
+  Version bump wrt #250636 and #242050, thanks to enyawix at yahoo.com and
+  b3hzat at gmail.com.
+
+*ffmpeg-php-0.5.3 (03 Jun 2008)
+
+  03 Jun 2008; Luca Longinotti <chtekk@gentoo.org> -ffmpeg-php-0.5.1.ebuild,
+  +ffmpeg-php-0.5.3.ebuild:
+  Version bump.
+
+*ffmpeg-php-0.5.2.1 (09 May 2008)
+
+  09 May 2008; Christian Hoffmann <hoffie@gentoo.org>
+  +ffmpeg-php-0.5.2.1.ebuild:
+  version bump to allow to compile against newer ffmpeg (bug 218097)
+
+*ffmpeg-php-0.5.1 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +ffmpeg-php-0.5.1.ebuild:
+  Port from project overlay
+
+  15 Aug 2007; Jakub Moc <jakub@gentoo.org> -ffmpeg-php-0.5.0.ebuild,
+  +ffmpeg-php-0.5.0.ebuild:
+  Version bump, check for gd support in PHP
+

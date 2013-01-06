@@ -1,0 +1,36 @@
+# ChangeLog for net-libs/libosmocore
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosmocore/ChangeLog,v 1.6 2012/08/11 05:34:26 chithanh Exp $
+
+  11 Aug 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -files/libosmocore-0.5.2-gcc-4.6.patch:
+  Drop unneeded patch.
+
+*libosmocore-0.5.3 (11 Aug 2012)
+
+  11 Aug 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libosmocore-0.5.3.ebuild, -libosmocore-0.5.2-r1.ebuild:
+  Version bump.
+
+*libosmocore-0.5.2-r1 (01 Aug 2012)
+
+  01 Aug 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/libosmocore-0.5.2-gcc-4.6.patch, +libosmocore-0.5.2-r1.ebuild,
+  -libosmocore-0.4.2.ebuild, -libosmocore-0.5.2.ebuild, libosmocore-9999.ebuild:
+  Build and pkgconfig files fixes. Drop old.
+
+*libosmocore-0.5.2 (05 Jul 2012)
+
+  05 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libosmocore-0.5.2.ebuild, libosmocore-9999.ebuild:
+  Version bump.
+
+  05 Jul 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> metadata.xml:
+  Assign maintainership to radio herd.
+
+*libosmocore-0.4.2 (15 Jun 2012)
+*libosmocore-9999 (15 Jun 2012)
+
+  15 Jun 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libosmocore-0.4.2.ebuild, +libosmocore-9999.ebuild, +metadata.xml:
+  Initial commit, based in part on ebuild by Peter Stuge.

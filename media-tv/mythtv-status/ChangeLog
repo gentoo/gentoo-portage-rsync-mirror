@@ -1,0 +1,13 @@
+# ChangeLog for media-tv/mythtv-status
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv-status/ChangeLog,v 1.2 2012/06/24 00:15:31 cardoe Exp $
+
+  23 Jun 2012; Doug Goldstein <cardoe@gentoo.org> mythtv-status-0.10.1.ebuild:
+  Add missing depend on dev-perl/Config-Auto.
+
+*mythtv-status-0.10.1 (22 Jun 2012)
+
+  22 Jun 2012; Doug Goldstein <cardoe@gentoo.org> +mythtv-status-0.10.1.ebuild,
+  +metadata.xml:
+  Add initial version of mythtv-status script
+

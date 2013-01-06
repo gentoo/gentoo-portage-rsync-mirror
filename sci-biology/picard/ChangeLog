@@ -1,0 +1,15 @@
+# ChangeLog for sci-biology/picard
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/picard/ChangeLog,v 1.2 2012/02/28 05:27:53 weaver Exp $
+
+*picard-1.63 (28 Feb 2012)
+
+  28 Feb 2012; Andrey Kislyuk <weaver@gentoo.org> +picard-1.63.ebuild:
+  Version bump
+
+*picard-1.58 (04 Jan 2012)
+
+  04 Jan 2012; Andrey Kislyuk <weaver@gentoo.org> +picard-1.58.ebuild,
+  +metadata.xml:
+  New package, ebuild written by me
+

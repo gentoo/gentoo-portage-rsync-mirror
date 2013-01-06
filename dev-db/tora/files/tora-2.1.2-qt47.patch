@@ -1,0 +1,15 @@
+Index: tora-2.1.2/src/tobrowserbasewidget.cpp
+===================================================================
+--- tora-2.1.2.orig/src/tobrowserbasewidget.cpp
++++ tora-2.1.2/src/tobrowserbasewidget.cpp
+@@ -48,8 +48,8 @@
+ 
+ toBrowserBaseWidget::toBrowserBaseWidget(QWidget * parent)
+     : QTabWidget(parent),
+-    m_schema(0),
+-    m_object(0)
++    m_schema(QString()),
++    m_object(QString())
+ {
+     setObjectName("toBrowserBaseWidget");
+ 

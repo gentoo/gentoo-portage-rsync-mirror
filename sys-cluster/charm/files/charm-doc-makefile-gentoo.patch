@@ -1,0 +1,35 @@
+# patch to properly build the docs as pdf and html
+
+--- charm-5.9/doc/Makefile	2004-10-14 06:12:10.000000000 +0000
++++ charm-5.9-patched/doc/Makefile	2005-09-24 22:55:53.000000000 +0000
+@@ -1,4 +1,4 @@
+-IDIR=../../doc
++IDIR=./doc
+ LNCMD=test ! -f pplmanual.sty && ln -f -s ../pplmanual.sty .
+ RMCMD=rm -f ./pplmanual.sty
+ DIRS=install converse convext charm++ libraries f90charm pose \
+--- charm-5.9/doc/Makefile.common	2005-04-19 17:21:52.000000000 +0000
++++ charm-5.9-patched/doc/Makefile.common	2005-09-24 22:56:30.000000000 +0000
+@@ -10,7 +10,7 @@
+ # (optional) PROJECT_LINK: HTML to include at bottom of page
+ 
+ # Destination directory for local copy of files (e.g., on user machine)
+-DOCDIR=..
++DOCDIR=../doc
+ 
+ # Destination directory for web-accessible copy of files (e.g., on PPL machines)
+ WEBDIR=/www/ppl_manuals
+@@ -71,12 +71,10 @@
+ 	-rm -fr index.tex $(FIG_CLEAN)
+ 
+ # Build local copy of documentation:
+-doc: all
++doc: pdf html
+ 	if [ ! -d $(DOCDIR) ] ; then mkdir $(DOCDIR) ; fi
+-	if [ ! -d $(DOCDIR)/ps ] ; then mkdir $(DOCDIR)/ps ; fi
+ 	if [ ! -d $(DOCDIR)/pdf ] ; then mkdir $(DOCDIR)/pdf ; fi
+ 	if [ ! -d $(DOCDIR)/html ] ; then mkdir $(DOCDIR)/html ; fi
+-	/bin/cp $(FILE).ps $(DOCDIR)/ps/$(DEST).ps
+ 	/bin/cp $(FILE).pdf $(DOCDIR)/pdf/$(DEST).pdf
+ 	/bin/rm -rf $(DOCDIR)/html/$(DEST)
+ 	/bin/cp -R $(FILE) $(DOCDIR)/html/$(DEST)

@@ -1,0 +1,12 @@
+# ChangeLog for net-misc/elliptics-eblob
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/elliptics-eblob/ChangeLog,v 1.2 2012/10/24 09:38:19 patrick Exp $
+
+  24 Oct 2012; Patrick Lauer <patrick@gentoo.org> elliptics-eblob-0.0.1.ebuild:
+  Fixing header
+
+*elliptics-eblob-0.0.1 (24 Oct 2012)
+
+  24 Oct 2012; Patrick Lauer <patrick@gentoo.org> +elliptics-eblob-0.0.1.ebuild,
+  +metadata.xml:
+  Initial commit, updated versions to follow

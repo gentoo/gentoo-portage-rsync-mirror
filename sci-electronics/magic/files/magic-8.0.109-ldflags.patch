@@ -1,0 +1,27 @@
+--- magic-8.0.109/scripts/defs.mak.in
++++ magic-8.0.109/scripts/defs.mak.in
+@@ -53,7 +53,7 @@
+ M4		       = @M4@
+ RANLIB                 = @RANLIB@
+ SHDLIB_EXT             = @SHDLIB_EXT@
+-LDDL_FLAGS             = @LDDL_FLAGS@
++LDDL_FLAGS             = ${LDFLAGS} @LDDL_FLAGS@
+ LD_RUN_PATH	       = @LD_RUN_PATH@
+ LIB_SPECS	       = @LIB_SPECS@
+ WISH_EXE	       = @WISH_EXE@
+--- magic-8.0.109/tcltk/Makefile
++++ magic-8.0.109/tcltk/Makefile
+@@ -43,11 +43,11 @@
+ 	(cd $(DESTDIR)${TCLDIR}; chmod 0755 tkcon.tcl tkshell.tcl)
+ 
+ magicexec: magicexec.c ${MAGICDIR}/defs.mak
+-	${CC} ${CFLAGS} -pg ${CPPFLAGS} ${DFLAGS} magicexec.c -o magicexec \
++	${CC} ${CFLAGS} -pg ${CPPFLAGS} ${DFLAGS} ${LDFLAGS} magicexec.c -o magicexec \
+ 		${LD_RUN_PATH} ${LIBS} ${LIB_SPECS}
+ 
+ magicdnull: magicdnull.c ${MAGICDIR}/defs.mak
+-	${CC} ${CFLAGS} ${CPPFLAGS} ${DFLAGS} magicdnull.c -o magicdnull \
++	${CC} ${CFLAGS} ${CPPFLAGS} ${DFLAGS} ${LDFLAGS} magicdnull.c -o magicdnull \
+ 		${LD_RUN_PATH} ${LIBS} ${LIB_SPECS}
+ 
+ magic.tcl: magic.tcl.in ${MAGICDIR}/defs.mak

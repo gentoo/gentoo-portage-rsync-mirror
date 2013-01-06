@@ -1,0 +1,9 @@
+# ChangeLog for kde-misc/plasma-lionmail
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-lionmail/ChangeLog,v 1.1 2012/10/21 01:29:45 creffett Exp $
+
+*plasma-lionmail-0_p20121020 (21 Oct 2012)
+
+  21 Oct 2012; Chris Reffett <creffett@gentoo.org> +metadata.xml,
+  +plasma-lionmail-0_p20121020.ebuild:
+  Add snapshot to tree from live ebuild.

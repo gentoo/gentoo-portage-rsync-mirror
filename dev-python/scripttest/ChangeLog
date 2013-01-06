@@ -1,0 +1,15 @@
+# ChangeLog for dev-python/scripttest
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scripttest/ChangeLog,v 1.2 2012/03/09 09:13:24 patrick Exp $
+
+*scripttest-1.2 (09 Mar 2012)
+
+  09 Mar 2012; Patrick Lauer <patrick@gentoo.org> +scripttest-1.2.ebuild:
+  Bump
+
+*scripttest-1.1.1 (03 Sep 2011)
+
+  03 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +scripttest-1.1.1.ebuild,
+  +metadata.xml:
+  Initial version 1.1.1 (for testing sqlalchemy-migrate).
+

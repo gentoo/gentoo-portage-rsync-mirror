@@ -1,0 +1,10 @@
+# ChangeLog for app-officeext/sun-templates
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/sun-templates/ChangeLog,v 1.1 2012/05/31 10:06:18 scarabeus Exp $
+
+*sun-templates-1.0.0 (31 May 2012)
+
+  31 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +metadata.xml,
+  +sun-templates-1.0.0.ebuild:
+  Initial commit, split out from l10n.
+

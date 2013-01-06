@@ -1,0 +1,47 @@
+# ChangeLog for dev-perl/Class-Load-XS
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load-XS/ChangeLog,v 1.11 2012/12/25 18:27:17 blueness Exp $
+
+  25 Dec 2012; Anthony G. Basile <blueness@gentoo.org>
+  Class-Load-XS-0.40.0.ebuild:
+  stable ppc, bug #448520, thanks peratu
+
+*Class-Load-XS-0.60.0 (09 Oct 2012)
+
+  09 Oct 2012; Torsten Veller <tove@gentoo.org> +Class-Load-XS-0.60.0.ebuild:
+  Version bump
+
+  23 Aug 2012; Michael Weber <xmw@gentoo.org> Class-Load-XS-0.40.0.ebuild:
+  add ~ppc keyword (bug 379451)
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  21 Apr 2012; Torsten Veller <tove@gentoo.org> -Class-Load-XS-0.20.0.ebuild,
+  -Class-Load-XS-0.30.0.ebuild:
+  Cleanup
+
+  07 Apr 2012; Markus Meier <maekke@gentoo.org> Class-Load-XS-0.40.0.ebuild:
+  x86 stable, bug #395297
+
+  06 Apr 2012; Agostino Sarubbo <ago@gentoo.org> Class-Load-XS-0.40.0.ebuild:
+  Stable for amd64, wrt bug #395297
+
+*Class-Load-XS-0.40.0 (19 Mar 2012)
+
+  19 Mar 2012; Torsten Veller <tove@gentoo.org> +Class-Load-XS-0.40.0.ebuild:
+  Version bump
+
+  20 Nov 2011; Fabian Groffen <grobian@gentoo.org> Class-Load-XS-0.30.0.ebuild:
+  Marked ~x64-macos
+
+*Class-Load-XS-0.30.0 (19 Nov 2011)
+
+  19 Nov 2011; Torsten Veller <tove@gentoo.org> +Class-Load-XS-0.30.0.ebuild:
+  Version bump
+
+*Class-Load-XS-0.20.0 (18 Nov 2011)
+
+  18 Nov 2011; Torsten Veller <tove@gentoo.org> +Class-Load-XS-0.20.0.ebuild,
+  +metadata.xml:
+  Initial commit for Moose

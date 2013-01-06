@@ -1,0 +1,88 @@
+# ChangeLog for net-voip/gnugk
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/ChangeLog,v 1.9 2010/06/17 20:58:55 patrick Exp $
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> gnugk-2.2.5.ebuild,
+  gnugk-2.2.7.ebuild, gnugk-2.2.8.ebuild:
+  Migrating away from deprecated postgres virtuals
+
+*gnugk-2.2.8 (08 Apr 2009)
+
+  08 Apr 2009; Mounir Lamouri <volkmar@gentoo.org>
+  +files/gnugk-2.2.8-firebird-2.1.patch, +gnugk-2.2.8.ebuild:
+  version bump to 2.2.8 see bug 258518
+
+  08 Apr 2009; Mounir Lamouri <volkmar@gentoo.org>
+  +files/gnugk-2.2.7-configure.patch, +files/gnugk-2.2.7-firebird-2.1.patch,
+  gnugk-2.2.7.ebuild:
+  adding missing patches and fix parallel build
+
+*gnugk-2.2.7 (12 Feb 2009)
+
+  12 Feb 2009; Jeremy Olexa <darkside@gentoo.org> +gnugk-2.2.7.ebuild:
+  version bump by Mounir Lamouri, bug 251571
+
+  16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove stkn from metadata.xml (#27693)
+
+  21 May 2008; Tiziano Müller <dev-zero@gentoo.org> gnugk-2.2.5.ebuild:
+  Changed dependency for postgresql from dev-db/postgresql to
+  virtual/postgresql-server
+
+  14 Apr 2007; Stefan Schweizer <genstef@gentoo.org> gnugk-2.2.5.ebuild:
+  Add large fdset support, bug 128102 thanks to Vladyslav Bakayev
+  <vbakayev@gmail.com>
+
+*gnugk-2.2.5 (14 Apr 2007)
+
+  14 Apr 2007; Stefan Schweizer <genstef@gentoo.org> +files/gnugk.confd,
+  +files/gnugk.rc6, +metadata.xml, +gnugk-2.2.5.ebuild:
+  version bump, move to net-voip
+
+  23 Nov 2006; Francesco Riosa <vivo@gentoo.org> ChangeLog:
+  dev-db/mysql => virtual/mysql
+
+*gnugk-2.2.4-r1 (27 Sep 2006)
+
+  27 Sep 2006; Alin Nastac <mrness@gentoo.org> -gnugk-2.2.4.ebuild,
+  +gnugk-2.2.4-r1.ebuild:
+  Correct dosbin calls.
+
+*gnugk-2.2.4 (13 Sep 2006)
+
+  13 Sep 2006; Stefan Schweizer <genstef@gentoo.org> +gnugk-2.2.4.ebuild:
+  version bump, fixes gcc4 problems in bug 146760
+
+*gnugk-2.2.3_p2 (05 Sep 2005)
+
+  05 Sep 2005; Stefan Knoblich <stkn@gentoo.org> +gnugk-2.2.3_p2.ebuild:
+  Version bump.
+
+  30 Jul 2005; <stkn@gentoo.org> -files/gnugk-2.0.6-gentoo.diff,
+  -gnugk-2.0.6.ebuild:
+  Removing old version.
+
+*gnugk-2.2.2 (30 Jul 2005)
+
+  30 Jul 2005; <stkn@gentoo.org> gnugk-2.2.1.ebuild, +gnugk-2.2.2.ebuild:
+  Version bump, cleanups, gnugk-2.2.x doesn't support ldap at the moment, ldap
+  flag removed. Fixes bug #48565 and #92976. Readded ~x86 flag.
+
+*gnukg-2.2.1 (24 Mar 2005)
+
+  24 Mar 2005; Pieter Van den Abeele <pvdabeel@gentoo.org> gnugk-2.2.1.ebuild:
+  Version bump.
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> gnugk-2.0.6.ebuild:
+  Switch to use epause and ebeep, bug #62950
+
+  09 Jun 2004; Aron Griffis <agriffis@gentoo.org> gnugk-2.0.6.ebuild:
+  Fix use invocation
+
+*gnugk-2.0.6 (26 Oct 2003)
+
+  26 Oct 2003; Stefan Knoblich <stkn@gentoo.org> gnugk-2.0.6.ebuild,
+  metadata.xml, files/gnugk-2.0.6-gentoo.diff, files/gnugk.confd,
+  files/gnugk.rc6:
+  initial import.
+

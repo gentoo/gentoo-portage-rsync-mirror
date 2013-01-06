@@ -1,0 +1,9 @@
+# ChangeLog for app-vim/puppet-syntax
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/puppet-syntax/ChangeLog,v 1.1 2012/11/06 22:42:02 tampakrap Exp $
+
+*puppet-syntax-3.0.1 (06 Nov 2012)
+
+  06 Nov 2012; Theo Chatzimichos <tampakrap@gentoo.org> +metadata.xml,
+  +puppet-syntax-3.0.1.ebuild:
+  Initial commit

@@ -1,0 +1,20 @@
+# ChangeLog for sci-chemistry/ball
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ChangeLog,v 1.3 2012/12/13 10:58:27 jlec Exp $
+
+  13 Dec 2012; Justin Lecher <jlec@gentoo.org> ball-1.4.1.ebuild,
+  +files/ball-1.4.1-gcc-4.7.patch, +files/ball-1.4.1-missing-signed.patch,
+  metadata.xml:
+  Fix for gcc-4.7, backported from upstream and stolen from debian; thanks for
+  their contribution, #425424
+
+  26 Jul 2012; Michael Palimaka <kensington@gentoo.org> ball-1.4.1.ebuild:
+  Add missing slot dependencies on Qt.
+
+*ball-1.4.1 (25 Mar 2012)
+
+  25 Mar 2012; Justin Lecher <jlec@gentoo.org> +ball-1.4.1.ebuild,
+  +files/ball-1.4.1-libsvm.patch, +files/ball-1.4.1-multilib.patch,
+  +files/ball-1.4.1-pthread.patch, +files/ball-1.4.1-python.patch,
+  +metadata.xml:
+  New addition, written by me, #406401

@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install postinst postrm prepare
+DEPEND=virtual/emacs app-emacs/haskell-mode dev-lang/ghc dev-haskell/mtl
+DESCRIPTION=Proof assistant in Haskell
+EAPI=2
+HOMEPAGE=http://unit.aist.go.jp/cvs/Agda/
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=virtual/emacs app-emacs/haskell-mode
+SLOT=0
+SRC_URI=mirror://sourceforge/agda/Agda-1.0.2.tar.gz
+_eclasses_=elisp-common	21605c8f0b2a5ffa3233faeb3f9df309	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=217bdb3bd7feba4be810c683d93f2cad

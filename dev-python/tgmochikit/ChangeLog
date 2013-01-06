@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/tgmochikit
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tgmochikit/ChangeLog,v 1.1 2010/07/09 15:37:08 arfrever Exp $
+
+*tgmochikit-1.4.2 (09 Jul 2010)
+
+  09 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +tgmochikit-1.4.2.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+

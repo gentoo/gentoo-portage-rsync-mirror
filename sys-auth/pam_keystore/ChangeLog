@@ -1,0 +1,11 @@
+# ChangeLog for sys-auth/pam_keystore
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_keystore/ChangeLog,v 1.1 2009/10/09 14:23:21 flameeyes Exp $
+
+*pam_keystore-0.1.3 (09 Oct 2009)
+
+  09 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +pam_keystore-0.1.3.ebuild, +metadata.xml:
+  Initial import, thanks to Alexander Tratsevskiy in bug #285765. Masked
+  missing some documentation on how to actually make use of this.
+

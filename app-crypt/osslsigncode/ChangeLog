@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/osslsigncode
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/osslsigncode/ChangeLog,v 1.1 2012/11/22 21:58:13 vapier Exp $
+
+*osslsigncode-1.4 (22 Nov 2012)
+
+  22 Nov 2012; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +osslsigncode-1.4.ebuild:
+  Initial import based on ebuild by Michael Palimaka #374541 by Bertrand
+  Jacquin.

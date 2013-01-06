@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install
+DEPEND=>=dev-libs/glib-2.26 x11-libs/gtk+:3 x11-libs/libX11 alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) dev-util/intltool virtual/pkgconfig sys-devel/gettext
+DESCRIPTION=GTK+ widget and function libraries for gnome-mplayer
+EAPI=4
+HOMEPAGE=http://code.google.com/p/gmtk/
+IUSE=alsa +dconf pulseaudio
+KEYWORDS=~alpha amd64 ~ppc ~ppc64 x86
+LICENSE=GPL-2
+RDEPEND=>=dev-libs/glib-2.26 x11-libs/gtk+:3 x11-libs/libX11 alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) dconf? ( gnome-base/dconf )
+SLOT=0
+SRC_URI=http://gmtk.googlecode.com/files/gmtk-1.0.6.tar.gz
+_md5_=a48d0ef3fd3968273bd9f3a21c2cb216

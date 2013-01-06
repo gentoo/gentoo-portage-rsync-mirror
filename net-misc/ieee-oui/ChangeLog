@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/ieee-oui
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ieee-oui/ChangeLog,v 1.1 2012/09/05 20:56:58 axs Exp $
+
+*ieee-oui-0 (05 Sep 2012)
+
+  05 Sep 2012; Ian Stakenvicius <axs@gentoo.org> +ieee-oui-0.ebuild,
+  +files/ieee-oui-0.sh, +metadata.xml:
+  initial commit
+

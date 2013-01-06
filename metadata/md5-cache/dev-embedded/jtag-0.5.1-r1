@@ -1,0 +1,11 @@
+DEFINED_PHASES=install unpack
+DEPEND=dev-embedded/include sys-apps/gawk sys-apps/grep sys-apps/sed sys-devel/gcc sys-devel/gettext
+DESCRIPTION=software package for working with JTAG-aware (IEEE 1149.1) hardware devices (parts) and boards through JTAG adapter
+HOMEPAGE=http://openwince.sourceforge.net/jtag/
+KEYWORDS=x86 sparc ~ppc
+LICENSE=GPL-2
+RDEPEND=!dev-embedded/urjtag dev-embedded/include
+SLOT=0
+SRC_URI=mirror://sourceforge/openwince/jtag-0.5.1.tar.bz2
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=46ba11cdb6d63acd6c2ebdd3c1cc5541

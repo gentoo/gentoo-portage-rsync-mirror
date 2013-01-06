@@ -1,0 +1,38 @@
+# ChangeLog for dev-python/twill
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.9 2012/02/01 22:02:32 ranger Exp $
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> twill-0.9.ebuild:
+  Marking twill-0.9 ppc for bug 386727
+
+  11 Dec 2011; Markus Meier <maekke@gentoo.org> twill-0.9.ebuild:
+  x86 stable, bug #386727
+
+  16 Nov 2011; Tony Vroon <chainsaw@gentoo.org> twill-0.9.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
+  Agostino "ago" Sarubbo in bug #386727.
+
+  08 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> twill-0.9.ebuild:
+  Marked ~ppc wrt #366541
+
+  30 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  twill-0.9.ebuild:
+  Fix dependencies. Set SUPPORT_PYTHON_ABIS.
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -twill-0.9_beta1.ebuild:
+  Remove old
+
+*twill-0.9 (15 Feb 2009)
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> +twill-0.9.ebuild:
+  Bump to 0.9
+
+  23 Jan 2008; Steve Dibb <beandog@gentoo.org> twill-0.9_beta1.ebuild:
+  Add ~amd64, bug 202397
+
+*twill-0.9_beta1 (24 Apr 2007)
+
+  24 Apr 2007; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +twill-0.9_beta1.ebuild:
+  Initial commit.
+

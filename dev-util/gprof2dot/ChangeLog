@@ -1,0 +1,22 @@
+# ChangeLog for dev-util/gprof2dot
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gprof2dot/ChangeLog,v 1.4 2012/03/15 20:16:55 sping Exp $
+
+  15 Mar 2012; Sebastian Pipping <sping@gentoo.org>
+  gprof2dot-0_p20100216.ebuild, +files/gprof2dot-0_p20100216-python3.patch:
+  Support Python 3.x (bug #341687)
+
+  21 Oct 2010; Sebastian Pipping <sping@gentoo.org>
+  gprof2dot-0_p20100216.ebuild:
+  Migrate from mercurial checkout to snapshot tarball (bug #337088)
+
+  10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gprof2dot-0_p20100216.ebuild:
+  Update EAPI. Delete needless call to die().
+
+*gprof2dot-0_p20100216 (17 Mar 2010)
+
+  17 Mar 2010; Sebastian Pipping <sping@gentoo.org>
+  +gprof2dot-0_p20100216.ebuild, +metadata.xml:
+  New package
+

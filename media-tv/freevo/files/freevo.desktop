@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Freevo
+Comment=Freevo
+TryExec=/usr/bin/freevo
+Exec=/usr/bin/freevo
+Icon=
+Type=Application

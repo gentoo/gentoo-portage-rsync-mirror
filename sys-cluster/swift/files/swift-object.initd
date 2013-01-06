@@ -1,0 +1,36 @@
+#!/sbin/runscript
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/files/swift-object.initd,v 1.1 2013/01/02 20:03:40 prometheanfire Exp $
+
+COMMAND=/usr/bin/swift-init
+PIDFILE=/var/run/swift/swift-object.pid
+
+depend() {
+    after net
+}
+
+checkconfig() {
+    if [ ! -r /etc/swift/swift.conf ]; then
+        eerror "Missing required config file: /etc/swift/swift.conf"
+        return 1
+    fi
+    if [ ! -r /etc/swift/object-server.conf ]; then
+        eerror "Missing required config file: /etc/swift/object-server.conf"
+        return 1
+    fi
+    return 0
+}
+
+start() {
+    checkconfig || return $?
+    ebegin "Starting ${SVCNAME}"
+    start-stop-daemon --start --quiet -i --pidfile ${PIDFILE} ${COMMAND} -- object start
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping ${SVCNAME}"
+    start-stop-daemon --stop --quiet -i --pidfile ${PIDFILE} ${COMMAND} -- object stop
+    eend $?
+}

@@ -1,0 +1,29 @@
+# ChangeLog for sci-biology/mammoth
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mammoth/ChangeLog,v 1.6 2012/10/19 10:46:56 jlec Exp $
+
+  19 Oct 2012; Justin Lecher <jlec@gentoo.org> mammoth-1.0.ebuild,
+  metadata.xml:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> mammoth-1.0.ebuild:
+  Add dependency on virtual/fortran
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> mammoth-1.0.ebuild:
+  Added fortran-2.eclass support
+
+  16 Dec 2010; Justin Lecher <jlec@gentoo.org> mammoth-1.0.ebuild:
+  Removal of fortran.eclass, #348851
+
+  13 Sep 2010; Markos Chandras <hwoarang@gentoo.org> mammoth-1.0.ebuild:
+  Keyworded for amd64. Bug #335605
+
+*mammoth-1.0 (10 Dec 2007)
+
+  10 Dec 2007; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.0-consistent-system-intrinsic.patch, +metadata.xml,
+  +mammoth-1.0.ebuild:
+  Add mammoth, a nice structural alignment program. It contains the MaxSub
+  algorithm, which is used by lots of people.
+

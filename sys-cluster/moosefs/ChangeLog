@@ -1,0 +1,22 @@
+# ChangeLog for sys-cluster/moosefs
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/moosefs/ChangeLog,v 1.4 2012/07/02 13:51:07 ultrabug Exp $
+
+*moosefs-1.6.25 (02 Jul 2012)
+
+  02 Jul 2012; Ultrabug <ultrabug@gentoo.org> +moosefs-1.6.25.ebuild:
+  version bump
+
+*moosefs-1.6.20-r2 (02 Aug 2011)
+
+  02 Aug 2011; Ultrabug <ultrabug@gentoo.org> -moosefs-1.6.20-r1.ebuild,
+  +moosefs-1.6.20-r2.ebuild, +files/mfscgiserver.confd,
+  +files/mfscgiserver.initd:
+  Add mfs CGI server init script. drop old.
+
+*moosefs-1.6.20-r1 (08 Jul 2011)
+
+  08 Jul 2011; Ultrabug <ultrabug@gentoo.org> -moosefs-1.6.20.ebuild,
+  +moosefs-1.6.20-r1.ebuild, files/mfs.confd, files/mfs.initd:
+  Enhanced init script, add an autorestore functionnality. Drop old.
+

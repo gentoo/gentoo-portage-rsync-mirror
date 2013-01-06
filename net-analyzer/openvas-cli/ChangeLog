@@ -1,0 +1,13 @@
+# ChangeLog for net-analyzer/openvas-cli
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-cli/ChangeLog,v 1.2 2012/05/04 06:08:09 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> openvas-cli-1.1.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*openvas-cli-1.1.2 (09 Oct 2011)
+
+  09 Oct 2011; Hanno Boeck <hanno@gentoo.org> +openvas-cli-1.1.2.ebuild,
+  +metadata.xml:
+  Initial commit of openvas-cli, part of openvas 4.
+

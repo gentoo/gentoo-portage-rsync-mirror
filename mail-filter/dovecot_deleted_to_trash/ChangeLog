@@ -1,0 +1,31 @@
+# ChangeLog for mail-filter/dovecot_deleted_to_trash
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot_deleted_to_trash/ChangeLog,v 1.6 2012/12/22 17:48:02 ulm Exp $
+
+  22 Dec 2012; Ulrich Müller <ulm@gentoo.org>
+  dovecot_deleted_to_trash-0.3.ebuild:
+  Fix LICENSE, bug 445314.
+
+  27 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
+  dovecot_deleted_to_trash-0.3.ebuild:
+  Stable on amd64, wrt bug #444824
+
+  27 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
+  dovecot_deleted_to_trash-0.3.ebuild, -files/fix_names_and_destdir.patch:
+  Set proper path for libs, reorganize patch into sed expressions, wrt bug
+  #444840. Thanks to Agostino Sarubbo and Andreis Vinogradovs
+
+  10 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  dovecot_deleted_to_trash-0.3.ebuild:
+  keyword ~arm, bug #442040
+
+  10 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  dovecot_deleted_to_trash-0.3.ebuild:
+  keyword ~ppc ~ppc64, bug #442040
+
+*dovecot_deleted_to_trash-0.3 (06 Sep 2012)
+
+  06 Sep 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +dovecot_deleted_to_trash-0.3.ebuild, +files/29-delete-to-trash.conf,
+  +files/fix_names_and_destdir.patch, +metadata.xml:
+  Add mail-filter/dovecot_deleted_to_trash, thanks to slepnoga. Bug 273435

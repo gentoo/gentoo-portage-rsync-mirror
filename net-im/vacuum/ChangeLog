@@ -1,0 +1,46 @@
+# ChangeLog for net-im/vacuum
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/ChangeLog,v 1.8 2012/10/08 17:44:54 pinkbyte Exp $
+
+  08 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> vacuum-9999.ebuild,
+  metadata.xml:
+  Adding some USE-flags to live ebuild. Thanks to Nikoli
+
+*vacuum-1.2.0 (01 Aug 2012)
+
+  01 Aug 2012; Maxim Koltsov <maksbotan@gentoo.org> +vacuum-1.2.0.ebuild,
+  metadata.xml, vacuum-9999.ebuild:
+  Bump to 1.2.0, bug #429084. Thanks to Nikoli
+
+  10 Mar 2012; Mike Frysinger <vapier@gentoo.org> vacuum-1.1.2.ebuild,
+  vacuum-9999.ebuild:
+  Make sure we use zlib/minizip from the system #387837 by Diego Elio Pettenò.
+
+*vacuum-1.1.2 (29 Dec 2011)
+
+  29 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> -vacuum-1.1.0.ebuild,
+  +vacuum-1.1.2.ebuild:
+  Bump to 1.1.2, bug #396385. Remove old version
+
+  04 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> vacuum-1.1.1.ebuild,
+  +files/vacuum-1.1.1-minizip.patch, +files/vacuum-1.1.1-zlib.patch,
+  vacuum-9999.ebuild:
+  Fix bug with zlib, #387837. Thanks to Nikoli
+
+  18 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Fix herd to be proxy-maintainers
+
+*vacuum-1.1.1 (03 Sep 2011)
+
+  03 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org> vacuum-1.1.0.ebuild,
+  +vacuum-1.1.1.ebuild, vacuum-9999.ebuild, metadata.xml:
+  Add vacuum-1.1.1, add 'birthdayreminder' plugin to vacuum-9999
+
+*vacuum-9999 (29 Apr 2011)
+*vacuum-1.1.0 (29 Apr 2011)
+
+  29 Apr 2011; Maxim Koltsov (maksbotan) <maksbotan@gentoo.org>
+  +vacuum-1.1.0.ebuild, +vacuum-9999.ebuild, +metadata.xml:
+  Add net-im/vacuum-1.1.0 and 9999, thanks to Nikoli(nikoli@lavabit.com),
+  fixes
+  bug #296004

@@ -1,0 +1,54 @@
+From 95b2e4c8cecc4ea469d4fd5cfe6927d631aade3a Mon Sep 17 00:00:00 2001
+From: Alphat <AlphatPC@gmail.com>
+Date: Sun, 9 Oct 2011 08:11:36 +0800
+Subject: [PATCH 1/2] iasl-20110922-parallelmake-001
+
+---
+ compiler/Makefile |   16 ++++++++--------
+ 1 files changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/compiler/Makefile b/compiler/Makefile
+index e08941a..c831064 100644
+--- a/compiler/Makefile
++++ b/compiler/Makefile
+@@ -276,14 +276,14 @@ $(PROG) : $(INTERMEDIATES) $(MISC) $(OBJECTS)
+ aslcompilerlex.c :   $(ASL_COMPILER)/aslcompiler.l
+ 	${LEX} ${LFLAGS} -PAslCompiler -o$@ $?
+ 
+-aslcompilerparse.c aslcompilerparse.h : $(ASL_COMPILER)/aslcompiler.y
+-	${YACC} ${YFLAGS} -pAslCompiler -o$@ $?
++aslcompilerparse.c aslcompilerparse.h aslcompilerparse.output : $(ASL_COMPILER)/aslcompiler.y
++	${YACC} ${YFLAGS} -pAslCompiler -oaslcompilerparse.c $?
+ 
+ dtparserlex.c :      $(ASL_COMPILER)/dtparser.l
+ 	${LEX} ${LFLAGS} -PDtParser -o$@ $?
+ 
+-dtparserparse.c dtparserparse.h : $(ASL_COMPILER)/dtparser.y
+-	${YACC} ${YFLAGS} -pDtParser -o$@ $?
++dtparserparse.c dtparserparse.h dtparserparse.output : $(ASL_COMPILER)/dtparser.y
++	${YACC} ${YFLAGS} -pDtParser -odtparserparse.c $?
+ 
+ # Rename headers produced by bison/yacc
+ 
+@@ -302,14 +302,14 @@ aslcompiler.y.h : aslcompilerparse.h
+ # Cannot use the common compile warning flags since the C files are created
+ # by the utilities above and they are not necessarily ANSI C, etc.
+ #
+-aslcompilerlex.o :   aslcompilerlex.c
+-	$(CC) -c $(CFLAGS) -Wall -Werror -Wstrict-aliasing=0 -o$@ $?
++aslcompilerlex.o :   aslcompilerlex.c aslcompilerparse.h
++	$(CC) -c $(CFLAGS) -Wall -Werror -Wstrict-aliasing=0 -o$@ $<
+ 
+ aslcompilerparse.o : aslcompilerparse.c
+ 	$(CC) -c $(CFLAGS) -Wall -Werror -Wstrict-aliasing=0 -o$@ $?
+ 
+-dtparserlex.o :      dtparserlex.c
+-	$(CC) -c $(CFLAGS) -Wall -Werror -Wstrict-aliasing=0 -o$@ $?
++dtparserlex.o :      dtparserlex.c dtparserparse.h
++	$(CC) -c $(CFLAGS) -Wall -Werror -Wstrict-aliasing=0 -o$@ $<
+ 
+ dtparserparse.o :    dtparserparse.c
+ 	$(CC) -c $(CFLAGS) -Wall -Werror -Wstrict-aliasing=0 -o$@ $?
+-- 
+1.7.7
+

@@ -1,0 +1,16 @@
+# ChangeLog for app-benchmarks/ioping
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ioping/ChangeLog,v 1.2 2012/01/20 18:08:09 jer Exp $
+
+*ioping-0.6-r1 (20 Jan 2012)
+
+  20 Jan 2012; Jeroen Roovers <jer@gentoo.org> -ioping-0.6.ebuild,
+  +ioping-0.6-r1.ebuild:
+  Add src_install() to install to /usr by Jan Psota (bug #399441).
+
+*ioping-0.6 (13 Jan 2012)
+
+  13 Jan 2012; Justin Lecher <jlec@gentoo.org> +ioping-0.6.ebuild,
+  +files/ioping-0.6-makefile.patch, +metadata.xml:
+  New inclusion, #398735; thanks Vladimir Berezhnoy for the initial ebuild
+

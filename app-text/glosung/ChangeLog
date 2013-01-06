@@ -1,0 +1,59 @@
+# ChangeLog for app-text/glosung
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/ChangeLog,v 1.12 2012/05/04 03:33:17 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> glosung-2.1.3.ebuild,
+  glosung-3.2.2.ebuild, glosung-3.4.2.ebuild, glosung-3.5.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> glosung-2.1.3.ebuild,
+  glosung-3.2.2.ebuild, glosung-3.4.2.ebuild, glosung-3.5.2.ebuild:
+  Fix slot-dep on gtk+
+
+*glosung-3.5.2 (16 May 2010)
+
+  16 May 2010; Steve Dibb <beandog@gentoo.org> +glosung-3.5.2.ebuild:
+  Version bump
+
+*glosung-3.4.2 (24 Jul 2009)
+*glosung-3.4.1 (24 Jul 2009)
+
+  24 Jul 2009; Steve Dibb <beandog@gentoo.org> +glosung-3.4.1.ebuild,
+  +glosung-3.4.2.ebuild:
+  Version bumps
+
+  26 Jun 2008; Steve Dibb <beandog@gentoo.org> glosung-2.1.3.ebuild,
+  glosung-3.2.1.ebuild, glosung-3.2.2.ebuild:
+  Cleanup ebuilds
+
+  05 May 2008; Samuli Suominen <drac@gentoo.org> glosung-3.2.2.ebuild:
+  Remove scons, pkgconfig and intltool from runtime deps.
+
+*glosung-3.2.2 (19 Feb 2008)
+
+  19 Feb 2008; Steve Dibb <beandog@gentoo.org> +glosung-3.2.2.ebuild:
+  Version bump, bug 158162
+
+*glosung-3.2.1 (05 Jan 2008)
+
+  05 Jan 2008; Steve Dibb <beandog@gentoo.org> metadata.xml,
+  +glosung-3.2.1.ebuild:
+  Assume maintainership, version bump, bug 158162
+
+  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove squinky86 from metadata.xml due to retirement.
+
+  28 Jun 2006; Joshua Jackson <tsunam@gentoo.org> glosung-2.1.3.ebuild:
+  Stable x86; bug #138291
+
+  28 Jun 2006; Jon Hood <squinky86@gentoo.org> glosung-2.1.3.ebuild:
+  Stable on amd64, allow compiling with newer libraries.
+
+*glosung-2.1.3 (27 Apr 2006)
+
+  27 Apr 2006; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +glosung-2.1.3.ebuild:
+  Initial commit. This is a gnome2 program for displaying words from the
+  Bible, different random ones every day. Thanks to Eicke Godehardt
+  <eicke_godehardt@web.de> for this package.
+

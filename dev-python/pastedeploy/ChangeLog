@@ -1,0 +1,53 @@
+# ChangeLog for dev-python/pastedeploy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/ChangeLog,v 1.12 2012/02/24 14:19:13 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  pastedeploy-1.5.0.ebuild:
+  x86 stable wrt bug #405085
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> pastedeploy-1.5.0.ebuild:
+  Stable for amd64, wrt bug #405085
+
+*pastedeploy-1.5.0 (16 Sep 2011)
+
+  16 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +pastedeploy-1.5.0.ebuild:
+  Version bump to 1.5.0 (fixes bug 382917, thanks jbergstroem).
+
+  26 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pastedeploy-1.3.3.ebuild:
+  Fix building with USE="doc" (bug #318759).
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pastedeploy-1.3.3.ebuild:
+  Merge from Prefix
+
+  01 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pastedeploy-1.3.3.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  04 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pastedeploy-1.3.3.ebuild:
+  Remove dependency on dev-python/paste (bug #276313).
+
+*pastedeploy-1.3.3 (26 Apr 2009)
+
+  26 Apr 2009; Patrick Lauer <patrick@gentoo.org> +pastedeploy-1.3.3.ebuild:
+  Bump to 1.3.3, dep for bug #260168
+
+  13 May 2008; Ali Polatel <hawking@gentoo.org> pastedeploy-1.3.1.ebuild:
+  Added pygments to DEPEND when doc USE is set, thanks to Jan-Matthias
+  Braun, #219991. Added RESTRICT="test" until someone finds a neat way to
+  fix them.
+
+*pastedeploy-1.3.1 (18 Apr 2008)
+
+  18 Apr 2008; Ali Polatel <hawking@gentoo.org> metadata.xml,
+  -pastedeploy-1.1.ebuild, +pastedeploy-1.3.1.ebuild:
+  Version bump. Fixed tests. Added long description. Drop old.
+
+  04 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> pastedeploy-1.1.ebuild:
+  Removed setuptools sed. bug# 184039
+
+  04 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> pastedeploy-1.1.ebuild:
+  Added ~amd64 keyword.
+

@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure prepare
+DEPEND=sys-apps/file
+DESCRIPTION=A tool for identifying files embedded inside firmware images
+EAPI=5
+HOMEPAGE=http://code.google.com/p/binwalk/
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=sys-apps/file
+SLOT=0
+SRC_URI=http://binwalk.googlecode.com/files/binwalk-0.5.0.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=a6b2f5c379cccb1a70168cb0b3044b6f

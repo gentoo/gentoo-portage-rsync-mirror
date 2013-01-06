@@ -1,0 +1,15 @@
+# ChangeLog for dev-python/python-gnupg
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gnupg/ChangeLog,v 1.2 2012/09/29 22:47:04 radhermit Exp $
+
+*python-gnupg-0.3.1 (29 Sep 2012)
+
+  29 Sep 2012; Tim Harder <radhermit@gentoo.org> +python-gnupg-0.3.1.ebuild:
+  Version bump.
+
+*python-gnupg-0.3.0 (10 Jun 2012)
+
+  10 Jun 2012; Mike Gilbert <floppym@gentoo.org> +metadata.xml,
+  +python-gnupg-0.3.0.ebuild:
+  New package requested by hwoarang.
+

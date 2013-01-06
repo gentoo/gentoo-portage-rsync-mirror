@@ -1,0 +1,11 @@
+# ChangeLog for x11-libs/libaosd
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/ChangeLog,v 1.1 2011/01/15 19:43:53 mgorny Exp $
+
+*libaosd-0.2.7 (15 Jan 2011)
+
+  15 Jan 2011; Michał Górny <mgorny@gentoo.org> +libaosd-0.2.7.ebuild,
+  +metadata.xml:
+  Add a new ebuild for libaosd, as requested per bug #351741. Thanks to Erik
+  McNellis for the initial ebuild.
+

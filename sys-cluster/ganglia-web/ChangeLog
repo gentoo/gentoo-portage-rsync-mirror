@@ -1,0 +1,21 @@
+# ChangeLog for sys-cluster/ganglia-web
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-web/ChangeLog,v 1.4 2012/09/22 13:50:30 blueness Exp $
+
+  22 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  ganglia-web-3.5.2.ebuild:
+  stable ppc, bug #428776
+
+  22 Sep 2012; Agostino Sarubbo <ago@gentoo.org> ganglia-web-3.5.2.ebuild:
+  Stable for amd64, wrt bug #428776
+
+  19 Sep 2012; Andreas Schuerch <nativemad@gentoo.org>
+  ganglia-web-3.5.2.ebuild:
+  x86 stable, see bug 428776
+
+*ganglia-web-3.5.2 (04 Sep 2012)
+
+  04 Sep 2012; Justin Bronder <jsbronder@gentoo.org> +ganglia-web-3.5.2.ebuild,
+  +metadata.xml:
+  Add sys-cluster/ganglia-web to match upstream development. Resolves #428776
+

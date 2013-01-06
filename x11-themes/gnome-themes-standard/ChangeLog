@@ -1,0 +1,176 @@
+# ChangeLog for x11-themes/gnome-themes-standard
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.35 2012/12/27 17:37:50 tetromino Exp $
+
+  27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-themes-standard-3.4.2.ebuild:
+  Require gtk+-3.4, since gnome-themes-standard-3.4 + gtk+-3.6 = crashes
+  (thanks to ibqn for reporting).
+
+  27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-themes-standard-3.6.1.ebuild, gnome-themes-standard-3.6.2.ebuild:
+  Drop sparc keyword, needs gtk+-3.6 to be keyworded. Update to EAPI5. Drop
+  old.
+
+*gnome-themes-standard-3.6.2 (21 Nov 2012)
+
+  21 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-themes-standard-3.0.2.ebuild, -gnome-themes-standard-3.2.1.ebuild,
+  +gnome-themes-standard-3.6.2.ebuild:
+  Version bump. Clean up old revisions.
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org>
+  gnome-themes-standard-3.4.2.ebuild:
+  ia64/sh/sparc stable wrt #427544
+
+*gnome-themes-standard-3.6.1 (17 Oct 2012)
+
+  17 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-themes-standard-3.6.0.1.ebuild, -gnome-themes-standard-3.6.0.2.ebuild,
+  +gnome-themes-standard-3.6.1.ebuild, metadata.xml:
+  Version bump with gnome-3.6 visual fixes. Use a single flag for gtk2 and gtk3
+  engines for simplicity. Drop old.
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  gnome-themes-standard-3.4.2.ebuild:
+  stable ppc, bug #427544
+
+  14 Oct 2012; Matt Turner <mattst88@gentoo.org>
+  gnome-themes-standard-3.4.2.ebuild:
+  Stable on alpha, bug 427544.
+
+  14 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  gnome-themes-standard-3.4.2.ebuild:
+  stable ppc64, bug #427544
+
+  06 Oct 2012; Markus Meier <maekke@gentoo.org>
+  gnome-themes-standard-3.4.2.ebuild:
+  arm stable, bug #427544
+
+  04 Oct 2012; Agostino Sarubbo <ago@gentoo.org>
+  gnome-themes-standard-3.4.2.ebuild:
+  Stable for amd64, wrt bug #427544
+
+  04 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnome-themes-standard-3.4.2.ebuild:
+  x86 stable wrt bug #427544
+
+*gnome-themes-standard-3.6.0.2 (25 Sep 2012)
+
+  25 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-themes-standard-3.6.0.2.ebuild:
+  Bump.
+
+*gnome-themes-standard-3.6.0.1 (25 Sep 2012)
+
+  25 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-themes-standard-3.0.2.ebuild, gnome-themes-standard-3.2.1.ebuild,
+  -gnome-themes-standard-3.4.1.ebuild, gnome-themes-standard-3.4.2.ebuild,
+  +gnome-themes-standard-3.6.0.1.ebuild, metadata.xml:
+  Version bump for gtk+-3.6; high contrast and low contrast themes are no
+  longer provided. Drop old. Make license more precise.
+
+  20 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-themes-standard-3.2.1.ebuild:
+  ppc stable wrt #407643
+
+*gnome-themes-standard-3.4.2 (19 May 2012)
+
+  19 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-themes-standard-3.4.0.ebuild, +gnome-themes-standard-3.4.2.ebuild:
+  Version bump, minor visual fixes. Drop old.
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  gnome-themes-standard-3.0.2.ebuild, gnome-themes-standard-3.2.1.ebuild,
+  gnome-themes-standard-3.4.0.ebuild, gnome-themes-standard-3.4.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*gnome-themes-standard-3.4.1 (17 Apr 2012)
+
+  17 Apr 2012; Olivier Crête <tester@gentoo.org>
+  +gnome-themes-standard-3.4.1.ebuild:
+  Version bump
+
+  15 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-themes-standard-3.4.0.ebuild:
+  Depend on gsettings-desktop-schemas-3.4 to ensure gnome-3.2 users can use the
+  new background image.
+
+  01 Apr 2012; Raúl Porcel <armin76@gentoo.org>
+  gnome-themes-standard-3.2.1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #407643
+
+*gnome-themes-standard-3.4.0 (27 Mar 2012)
+
+  27 Mar 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-themes-standard-3.4.0.ebuild:
+  Version bump with updates for gtk+-3.4.
+
+  25 Mar 2012; Markus Meier <maekke@gentoo.org>
+  gnome-themes-standard-3.2.1.ebuild:
+  arm stable, bug #407643
+
+  16 Mar 2012; Jeff Horelick <jdhore@gentoo.org>
+  gnome-themes-standard-3.2.1.ebuild:
+  marked x86 per bug 407643
+
+  13 Mar 2012; Agostino Sarubbo <ago@gentoo.org>
+  gnome-themes-standard-3.2.1.ebuild:
+  Stable for amd64, wrt bug #407643
+
+  12 Mar 2012; Brent Baude <ranger@gentoo.org>
+  gnome-themes-standard-3.2.1.ebuild:
+  Marking gnome-themes-standard-3.2.1 ppc64 stable for bug 407643
+
+  09 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-themes-standard-3.0.2.ebuild, gnome-themes-standard-3.2.1.ebuild:
+  icon-naming-utils not needed (bug #393545, thanks to Cedric for reporting).
+
+  30 Oct 2011; Raúl Porcel <armin76@gentoo.org>
+  gnome-themes-standard-3.0.2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #385699
+
+  28 Oct 2011; Markus Meier <maekke@gentoo.org>
+  gnome-themes-standard-3.0.2.ebuild:
+  arm stable, bug #385699
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnome-themes-standard-3.0.2.ebuild:
+  x86 stable wrt bug #385699
+
+  20 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  gnome-themes-standard-3.0.2.ebuild, gnome-themes-standard-3.2.1.ebuild:
+  QA: these ebuilds install a theme engine, remove restrictions.
+
+*gnome-themes-standard-3.2.1 (19 Oct 2011)
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-themes-standard-3.2.1.ebuild:
+  Add gnome-themes-standard-3.2.1 from the gnome overlay.
+
+  Notable changes: looks better and now includes a dark variant.
+
+  16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gnome-themes-standard-3.0.2.ebuild:
+  ppc/ppc64 stable wrt #385699
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-themes-standard-3.0.2.ebuild:
+  amd64 stable wrt #385699
+
+  07 Jul 2011; Pacho Ramos <pacho@gentoo.org>
+  -gnome-themes-standard-3.0.1.ebuild, gnome-themes-standard-3.0.2.ebuild:
+  This can coexist with gnome-themes-extras and gnome-themes-2.32.1-r1. Remove
+  old.
+
+*gnome-themes-standard-3.0.2 (02 Jun 2011)
+
+  02 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gnome-themes-standard-3.0.2.ebuild:
+  Bump to 3.0.2
+
+*gnome-themes-standard-3.0.1 (01 May 2011)
+
+  01 May 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gnome-themes-standard-3.0.1.ebuild, +metadata.xml:
+  Move gnome-themes-standard from the overlay to the tree

@@ -1,0 +1,21 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.10 2012/12/27 06:14:18 tetromino Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
+# remove mask when >=app-editors/gedit-3.6 is keyworded here
+dev-util/devhelp gedit
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
+# remove mask when app-crypt/libsecret is keyworded here
+>=gnome-base/gvfs-1.14 gnome-keyring
+
+# nvidia-driver uses acpid
+x11-drivers/nvidia-drivers acpi
+
+# Needs emul libs and the package isnt multilib at all for FreeBSD x86_64
+x11-drivers/nvidia-drivers multilib
+
+# requires nvidia-cg-toolkit which is not available on bsd
+# see http://developer.nvidia.com/cg-toolkit-download
+media-libs/libprojectm video_cards_nvidia

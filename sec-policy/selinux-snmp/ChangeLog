@@ -1,0 +1,86 @@
+# ChangeLog for sec-policy/selinux-snmp
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-snmp/ChangeLog,v 1.19 2012/12/30 19:25:51 swift Exp $
+
+*selinux-snmp-2.20120725-r9 (21 Dec 2012)
+
+  21 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-snmp-2.20120725-r9.ebuild:
+  Bumping to revision 9
+
+  17 Dec 2012; Sven Vermeulen <swift@gentoo.org> -selinux-snmp-2.20120215-r1.ebuild,
+  -selinux-snmp-2.20120215-r14.ebuild, -selinux-snmp-2.20120215-r15.ebuild,
+  -selinux-snmp-2.20120215-r2.ebuild, -selinux-snmp-2.20120215.ebuild:
+  Removing older ebuilds
+
+  13 Dec 2012; Sven Vermeulen <swift@gentoo.org> selinux-snmp-2.20120725-r8.ebuild:
+  Stabilization
+
+*selinux-snmp-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-snmp-2.20120725-r8.ebuild:
+  Bumping to revision 8
+
+*selinux-snmp-2.20120725-r7 (18 Nov 2012)
+
+  18 Nov 2012; Sven Vermeulen <swift@gentoo.org> +selinux-snmp-2.20120725-r7.ebuild:
+  Pushing out rev 7
+
+*selinux-snmp-9999 (13 Oct 2012)
+
+  13 Oct 2012; Sven Vermeulen <swift@gentoo.org> +selinux-snmp-9999.ebuild:
+  Adding live ebuild
+
+  04 Oct 2012; Sven Vermeulen <swift@gentoo.org> selinux-snmp-2.20120725-r5.ebuild:
+  Stabilization
+
+*selinux-snmp-2.20120725-r5 (21 Sep 2012)
+
+  21 Sep 2012; Sven Vermeulen <swift@gentoo.org> +selinux-snmp-2.20120725-r5.ebuild:
+  Introducing policy for 2.20120725, rev5
+
+  30 Jul 2012; Sven Vermeulen <swift@gentoo.org> selinux-snmp-2.20120215-r14.ebuild:
+  Stabilization of revision 14 of the SELinux policy modules
+
+*selinux-snmp-2.20120215-r15 (26 Jul 2012)
+
+  26 Jul 2012; Sven Vermeulen <swift@gentoo.org> +selinux-snmp-2.20120215-r15.ebuild:
+  Bump to rev15
+
+*selinux-snmp-2.20120215-r14 (16 Jul 2012)
+
+  16 Jul 2012; Sven Vermeulen <swift@gentoo.org> +selinux-snmp-2.20120215-r14.ebuild:
+  Bumping to rev14
+
+*selinux-snmp-2.20120215-r2 (27 Jun 2012)
+
+  27 Jun 2012; Sven Vermeulen <swift@gentoo.org> +selinux-snmp-2.20120215-r2.ebuild:
+  Bump to revision 13
+
+*selinux-snmp-2.20120215-r1 (20 May 2012)
+
+  20 May 2012; Sven Vermeulen <swift@gentoo.org> +selinux-snmp-2.20120215-r1.ebuild:
+  Bumping to rev 9
+
+  13 May 2012; Sven Vermeulen <swift@gentoo.org> -selinux-snmp-2.20110726.ebuild:
+  Removing deprecated ebuilds (cleanup)
+
+  29 Apr 2012; Sven Vermeulen <swift@gentoo.org> selinux-snmp-2.20120215.ebuild:
+  Stabilizing revision 7
+
+  31 Mar 2012; Sven Vermeulen <swift@gentoo.org> selinux-snmp-2.20110726.ebuild,
+  +selinux-snmp-2.20120215.ebuild:
+  Remove deprecated dependency
+
+*selinux-snmp-2.20120215 (31 Mar 2012)
+
+  31 Mar 2012; Sven Vermeulen <swift@gentoo.org> +selinux-snmp-2.20120215.ebuild:
+  Bumping to 2.20120215 policies
+
+  23 Oct 2011; Sven Vermeulen <swift@gentoo.org> selinux-snmp-2.20110726.ebuild:
+  Stabilization (tracker #384231)
+
+*selinux-snmp-2.20110726 (28 Aug 2011)
+
+  28 Aug 2011; Sven Vermeulen <swift@gentoo.org> +selinux-snmp-2.20110726.ebuild,
+  +metadata.xml:
+  New policy based on refpolicy 20110726 sources

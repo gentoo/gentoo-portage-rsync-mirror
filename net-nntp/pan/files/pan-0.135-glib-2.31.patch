@@ -1,0 +1,180 @@
+Author: Dominique Leuenberger <dominique-gnomezilla@leuenberger.net>
+
+glib 2.31 only allows #include'ing glib.h (and a few exceptions to this).
+
+https://bugzilla.gnome.org/show_bug.cgi?id=665289
+
+Index: pan-0.135/pan/data-impl/data-impl.cc
+===================================================================
+--- pan-0.135.orig/pan/data-impl/data-impl.cc
++++ pan-0.135/pan/data-impl/data-impl.cc
+@@ -24,7 +24,7 @@
+ #include <config.h>
+ extern "C" {
+   #include <glib/gi18n.h>
+-  #include <glib/gfileutils.h> // for g_build_filename
++  #include <glib.h> // for g_build_filename
+ }
+ #include <pan/general/debug.h>
+ #include <pan/general/file-util.h>
+Index: pan-0.135/pan/data/article-cache.h
+===================================================================
+--- pan-0.135.orig/pan/data/article-cache.h
++++ pan-0.135/pan/data/article-cache.h
+@@ -23,7 +23,7 @@
+ #include <map>
+ #include <vector>
+ extern "C" {
+-  #include <glib/gtypes.h> // for guint64
++  #include <glib.h> // for guint64
+ }
+ #include <pan/general/string-view.h>
+ #include <pan/general/quark.h>
+Index: pan-0.135/pan/general/file-util.h
+===================================================================
+--- pan-0.135.orig/pan/general/file-util.h
++++ pan-0.135/pan/general/file-util.h
+@@ -25,7 +25,7 @@
+ extern "C" {
+   #include <stddef.h>
+   #include <stdio.h>
+-  #include <glib/gtypes.h>
++  #include <glib.h>
+   #include <glib/gstdio.h>
+ }
+ #include <pan/general/string-view.h>
+Index: pan-0.135/pan/general/locking.h
+===================================================================
+--- pan-0.135.orig/pan/general/locking.h
++++ pan-0.135/pan/general/locking.h
+@@ -22,7 +22,7 @@
+ #ifndef _Mutex_h_
+ #define _Mutex_h_
+ 
+-#include <glib/gthread.h>
++#include <glib.h>
+ 
+ namespace pan
+ {
+Index: pan-0.135/pan/general/macros.h
+===================================================================
+--- pan-0.135.orig/pan/general/macros.h
++++ pan-0.135/pan/general/macros.h
+@@ -62,12 +62,11 @@
+ 
+ extern "C"
+ {
+-  #include <glibconfig.h> // get the version
+-  #include <glib/gutils.h> // get GLIB_CHECK_VERSION
++  #include <glib.h>
+ 
+   // pick up g_assert()
+   #if GLIB_CHECK_VERSION(2,16,0)
+-    #include <glib/gtestutils.h>
++    #include <glib.h>
+   #else
+     #include <glib/gmessages.h>
+   #endif
+Index: pan-0.135/pan/general/time-elapsed.h
+===================================================================
+--- pan-0.135.orig/pan/general/time-elapsed.h
++++ pan-0.135/pan/general/time-elapsed.h
+@@ -1,9 +1,7 @@
+ #ifndef __Time_Elapsed_h__
+ #define __Time_Elapsed_h__
+ 
+-#include <glib/gtypes.h> // for GTimeVal
+-#include <glib/gmain.h> // for g_get_current_time
+-#include <glib/gtimer.h> // for GUSEC_PER_SEC
++#include <glib.h>
+ 
+ namespace pan
+ {
+Index: pan-0.135/pan/general/worker-pool.cc
+===================================================================
+--- pan-0.135.orig/pan/general/worker-pool.cc
++++ pan-0.135/pan/general/worker-pool.cc
+@@ -21,7 +21,7 @@
+  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  */
+ #include <cassert>
+-#include <glib/gmain.h> // for g_idle_add
++#include <glib.h> // for g_idle_add
+ #include <pan/general/debug.h>
+ #include <pan/general/macros.h>
+ #include "worker-pool.h"
+Index: pan-0.135/pan/general/worker-pool.h
+===================================================================
+--- pan-0.135.orig/pan/general/worker-pool.h
++++ pan-0.135/pan/general/worker-pool.h
+@@ -24,8 +24,7 @@
+ #define _Worker_Pool_H_
+ 
+ #include <set>
+-#include <glib/gtypes.h>
+-#include <glib/gthreadpool.h>
++#include <glib.h>
+ 
+ namespace pan
+ {
+Index: pan-0.135/pan/gui/render-bytes.cc
+===================================================================
+--- pan-0.135.orig/pan/gui/render-bytes.cc
++++ pan-0.135/pan/gui/render-bytes.cc
+@@ -1,4 +1,4 @@
+-#include <glib/gutils.h> // g_snprintf
++#include <glib.h> // g_snprintf
+ #include "render-bytes.h"
+ 
+ namespace pan
+Index: pan-0.135/pan/gui/render-bytes.h
+===================================================================
+--- pan-0.135.orig/pan/gui/render-bytes.h
++++ pan-0.135/pan/gui/render-bytes.h
+@@ -1,6 +1,6 @@
+ #ifndef RENDER_BYTES_H
+ #define RENDER_BYTES_H
+-#include <glib/gtypes.h>
++#include <glib.h>
+ namespace pan {
+   extern char* render_bytes (guint64);
+ }
+Index: pan-0.135/pan/tasks/socket-impl-gio.h
+===================================================================
+--- pan-0.135.orig/pan/tasks/socket-impl-gio.h
++++ pan-0.135/pan/tasks/socket-impl-gio.h
+@@ -21,8 +21,7 @@
+ #define __SocketGIO_h__
+ 
+ #include <string>
+-#include <glib/giochannel.h>
+-#include <glib/gstring.h>
++#include <glib.h>
+ #include <pan/tasks/socket.h>
+ 
+ namespace pan
+Index: pan-0.135/pan/usenet-utils/mime-utils.h
+===================================================================
+--- pan-0.135.orig/pan/usenet-utils/mime-utils.h
++++ pan-0.135/pan/usenet-utils/mime-utils.h
+@@ -21,7 +21,7 @@
+ #define _UtilMime_h_
+ 
+ #include <vector>
+-#include <glib/gtypes.h>
++#include <glib.h>
+ #include <gmime/gmime-filter.h>
+ #include <gmime/gmime-stream.h>
+ #include <gmime/gmime-message.h>
+Index: pan-0.135/pan/usenet-utils/text-massager.cc
+===================================================================
+--- pan-0.135.orig/pan/usenet-utils/text-massager.cc
++++ pan-0.135/pan/usenet-utils/text-massager.cc
+@@ -25,7 +25,6 @@
+ extern "C" {
+ #include <glib/gi18n.h>
+ }
+-#include <glib/gunicode.h>
+ #include "text-massager.h"
+ #include <pan/general/log.h>
+ using namespace pan;

@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/sword-chiun
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-chiun/ChangeLog,v 1.1 2008/05/17 03:11:45 beandog Exp $
+
+*sword-chiun-2.0 (17 May 2008)
+
+  17 May 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-chiun-2.0.ebuild:
+  Initial commit
+

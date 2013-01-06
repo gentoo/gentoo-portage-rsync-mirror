@@ -1,0 +1,16 @@
+# ChangeLog for www-servers/servefile
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/servefile/ChangeLog,v 1.3 2012/10/29 16:41:25 mgorny Exp $
+
+  29 Oct 2012; Michał Górny <mgorny@gentoo.org> servefile-0.4.2.ebuild:
+  Use virtual for argparse.
+
+  27 Jun 2012; Sebastian Pipping <sping@gentoo.org> servefile-0.4.2.ebuild:
+  Update download URL, support fallback from ip to ifconfig, add missing
+  dependency on argparse (all suggested by Sebastian Lohff)
+
+*servefile-0.4.2 (27 Jun 2012)
+
+  27 Jun 2012; Sebastian Pipping <sping@gentoo.org> +servefile-0.4.2.ebuild,
+  +metadata.xml:
+  New package, check it out

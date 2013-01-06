@@ -1,0 +1,9 @@
+DEFINED_PHASES=compile install nofetch
+DESCRIPTION=Phrap, swat, cross_match: Shotgun assembly and alignment utilities
+HOMEPAGE=http://www.phrap.org/
+KEYWORDS=~amd64 ~x86
+LICENSE=phrap
+RESTRICT=fetch
+SLOT=0
+SRC_URI=phrap-1.080812-distrib.tar.gz
+_md5_=7ae390b07238cbb8b9b4e603ddccc893

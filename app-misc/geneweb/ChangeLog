@@ -1,0 +1,91 @@
+# ChangeLog for app-misc/geneweb
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.20 2012/06/01 01:56:55 zmedico Exp $
+
+  01 Jun 2012; Zac Medico <zmedico@gentoo.org> geneweb-5.02.ebuild:
+  inherit user for enewuser
+
+  05 Oct 2011; Tupone Alfredo <tupone@gentoo.org> -geneweb-5.01-r1.ebuild,
+  -files/geneweb-5.01-gentoo.patch:
+  Removing old version affected by Bug #357977 by flameeyes@gentoo.org
+
+  04 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> geneweb-5.02.ebuild:
+  x86 stable, bug 384751
+
+  04 Oct 2011; Tony Vroon <chainsaw@gentoo.org> geneweb-5.02.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney, Elijah
+  "Armageddon" El Lazkani & Tomáš "Mepho" Pružina in bug #384751.
+
+  29 Sep 2011; Alfredo Tupone <tupone@gentoo.org> geneweb-5.02.ebuild,
+  +files/geneweb-5.02-amd64.patch:
+  Fix a runtime error on amd64
+
+  28 Sep 2011; Alfredo Tupone <tupone@gentoo.org> files/geneweb.initd:
+  Updated the initd file, avoiding warning at startup
+
+  24 Mar 2011; Alfredo Tupone <tupone@gentoo.org> geneweb-5.02.ebuild:
+  contrib/templ is no more shipped. Fix bug #358527 by Adrian Bassett
+
+*geneweb-5.02 (11 Mar 2011)
+
+  11 Mar 2011; Alfredo Tupone <tupone@gentoo.org> +geneweb-5.02.ebuild,
+  +files/geneweb-5.02-gentoo.patch,
+  +files/geneweb-5.02-parallellbuild.patch:
+  Version bump to 5.02
+
+  11 Nov 2010; Alfredo Tupone <tupone@gentoo.org>
+  files/geneweb-5.01-gentoo.patch:
+  Removing -warn-error A to fix build. Bug #299756 by flameeyes@gentoo.org
+
+  15 Dec 2008; Alfredo Tupone <tupone@gentoo.org>
+  -files/geneweb-5.00-gentoo.patch, -geneweb-5.00.ebuild,
+  -geneweb-5.01.ebuild:
+  Remove old versions
+
+  01 Dec 2008; Alfredo Tupone <tupone@gentoo.org> geneweb-5.01-r1.ebuild,
+  -geneweb-5.01-r2.ebuild:
+  Don't create a new version just for a blocking
+
+*geneweb-5.01-r2 (25 Nov 2008)
+
+  25 Nov 2008; Alfredo Tupone <tupone@gentoo.org> +geneweb-5.01-r2.ebuild:
+  Block conflicting package net-p2p/ghostwhitecrab.
+  Bug #248154 by <flameeyes@gentoo.org>
+
+  22 Nov 2008; Markus Meier <maekke@gentoo.org> geneweb-5.01-r1.ebuild:
+  x86 stable, bug #247170
+
+  18 Nov 2008; Jeremy Olexa <darkside@gentoo.org> geneweb-5.01-r1.ebuild:
+  amd64 stable, bug #247170
+
+  31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Add USE flag description to metadata wrt GLEP 56.
+
+  25 Apr 2008; Tupone Alfredo <tupone@gentoo.org> geneweb-5.01-r1.ebuild:
+  Do not try to remove . and .. directories
+
+*geneweb-5.01-r1 (23 Apr 2008)
+
+  23 Apr 2008; <atupone@gentoo.org> files/geneweb-5.01-gentoo.patch,
+  +geneweb-5.01-r1.ebuild:
+  Respect nostrip
+  Add additional gwc2, contrib/gwdiff.
+  Put html doc in the appropriate place
+
+*geneweb-5.01 (03 Jan 2008)
+
+  03 Jan 2008; Tupone Alfredo <tupone@gentoo.org>
+  +files/geneweb-5.01-gentoo.patch, +geneweb-5.01.ebuild:
+  Version bump to 5.01 plus optional ocamlopt support.
+  Bug #204110 by Alexis Ballier <aballier@gentoo.org>
+
+  26 Aug 2007; Tupone Alfredo <tupone@gentoo.org> geneweb-5.00.ebuild:
+  Added ~x86 keyword
+
+*geneweb-5.00 (18 Aug 2007)
+
+  18 Aug 2007; Tupone Alfredo <tupone@gentoo.org>
+  +files/geneweb-5.00-gentoo.patch, +files/geneweb.confd,
+  +files/geneweb.initd, +metadata.xml, +geneweb-5.00.ebuild:
+  New ebuild. Based on bug #22239 by David Grant
+

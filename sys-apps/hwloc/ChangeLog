@@ -1,0 +1,126 @@
+# ChangeLog for sys-apps/hwloc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.27 2012/12/06 19:52:10 xarthisius Exp $
+
+*hwloc-1.6 (06 Dec 2012)
+
+  06 Dec 2012; Kacper Kowalik <xarthisius@gentoo.org> +hwloc-1.6.ebuild,
+  metadata.xml:
+  Version bump
+
+*hwloc-1.5 (07 Oct 2012)
+
+  07 Oct 2012; Alexey Shvetsov <alexxy@gentoo.org> +hwloc-1.5.ebuild:
+  [sys-apps/hwloc] Version bump
+
+  30 May 2012; Alexis Ballier <aballier@gentoo.org> hwloc-1.4.2.ebuild:
+  keyword ~amd64-fbsd
+
+*hwloc-1.4.2 (11 May 2012)
+
+  11 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +hwloc-1.4.2.ebuild,
+  -hwloc-1.4.ebuild:
+  Version bump, drop old
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> hwloc-1.3.1.ebuild,
+  hwloc-1.3.2.ebuild, hwloc-1.4.ebuild, hwloc-1.4.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*hwloc-1.3.2 (05 Mar 2012)
+*hwloc-1.4.1 (05 Mar 2012)
+
+  05 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> +hwloc-1.3.2.ebuild,
+  +hwloc-1.4.1.ebuild:
+  Version bump
+
+  10 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> hwloc-1.4.ebuild:
+  Add actual use_enable for numa
+
+*hwloc-1.4 (26 Jan 2012)
+
+  26 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> +hwloc-1.4.ebuild:
+  Version bump
+
+  13 Jan 2012; Mike Frysinger <vapier@gentoo.org> hwloc-1.3.1.ebuild:
+  Use common tc-getPKG_CONFIG helper.
+
+*hwloc-1.3.1 (21 Dec 2011)
+
+  21 Dec 2011; Kacper Kowalik <xarthisius@gentoo.org> -hwloc-1.2.1.ebuild,
+  -hwloc-1.3.ebuild, +hwloc-1.3.1.ebuild:
+  Version bump, drop old
+
+  07 Dec 2011; Nathan Phillip Brink <binki@gentoo.org> hwloc-1.2.1.ebuild,
+  hwloc-1.3.ebuild:
+  Force hwloc's ./configure to respect PKG_CONFIG, fixes bug #393467 and some
+  portage-multilib compat.
+
+*hwloc-1.3 (20 Nov 2011)
+
+  20 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> +hwloc-1.3.ebuild,
+  -hwloc-1.1.1-r1.ebuild, -hwloc-1.2-r1.ebuild, -hwloc-1.2.ebuild, metadata.xml:
+  Version bump, drop old
+
+  01 Sep 2011; Jeroen Roovers <jer@gentoo.org> hwloc-1.2-r1.ebuild,
+  hwloc-1.2.1.ebuild:
+  Marked ~hppa (bug #381313).
+
+*hwloc-1.2.1 (31 Aug 2011)
+
+  31 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> +hwloc-1.2.1.ebuild:
+  version bump
+
+  31 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> hwloc-1.2-r1.ebuild:
+  drop hppa keyword as requested by rej
+
+*hwloc-1.2-r1 (31 Aug 2011)
+
+  31 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> +hwloc-1.2-r1.ebuild:
+  Update deps
+
+  02 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> hwloc-1.2.ebuild:
+  Fix sandbox violation wrt bug 377375 by Vasileios Lourdas
+  <bugzilla@lourdas.name>
+
+*hwloc-1.2 (02 Aug 2011)
+
+  02 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> -hwloc-1.0.3.ebuild,
+  -hwloc-1.1.1.ebuild, +hwloc-1.2.ebuild:
+  Version bump, drop old
+
+  10 Jul 2011; Alexis Ballier <aballier@gentoo.org> hwloc-1.1.1-r1.ebuild:
+  keyword ~x86-fbsd, bug #372885
+
+*hwloc-1.1.1-r1 (02 Jul 2011)
+
+  02 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +hwloc-1.1.1-r1.ebuild:
+  Enable prefix support for ~amd64-linux =D
+
+*hwloc-1.1.1 (26 Jan 2011)
+
+  26 Jan 2011; Justin Bronder <jsbronder@gentoo.org> +hwloc-1.1.1.ebuild:
+  Version bump, fix tests, push docs to correct directory
+
+  24 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> hwloc-1.0.3.ebuild:
+  Mark ~ppc64 wrt #345231
+
+  18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> -hwloc-1.0.2.ebuild:
+  Drop old.
+
+*hwloc-1.0.3 (16 Dec 2010)
+
+  16 Dec 2010; Kacper Kowalik <xarthisius@gentoo.org> +hwloc-1.0.3.ebuild:
+  Version bump, add USE static-libs, migrate to autotools-utils.eclass
+
+  27 Nov 2010; Raúl Porcel <armin76@gentoo.org> hwloc-1.0.2.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #345231
+
+  13 Nov 2010; Jeroen Roovers <jer@gentoo.org> hwloc-1.0.2.ebuild:
+  Marked ~hppa ~ppc (bug #345231).
+
+*hwloc-1.0.2 (11 Sep 2010)
+
+  11 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org> +hwloc-1.0.2.ebuild,
+  +metadata.xml:
+  Initial import wrt bug 299818. Ebuild written by Ruggero Morsucci
+  <mors_1tflops@yahoo.it>

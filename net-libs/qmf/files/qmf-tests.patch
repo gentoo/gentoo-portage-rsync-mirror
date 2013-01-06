@@ -1,0 +1,18 @@
+diff -Naur qmf-9999.orig/tests/tests.pri qmf-9999/tests/tests.pri
+--- qmf-9999.orig/tests/tests.pri	2012-04-04 01:56:41.220535387 +0200
++++ qmf-9999/tests/tests.pri	2012-04-04 01:57:11.031162699 +0200
+@@ -11,7 +11,7 @@
+ INCLUDEPATH += . $$QMFPATH $$QMFPATH/support
+ LIBS += -L$$QMFPATH/build
+ macx:LIBS += -F$$QMFPATH/build
+-!symbian:QMAKE_LFLAGS += -Wl,-rpath,$$QMFPATH
++!symbian:QMAKE_LFLAGS += -Wl,-rpath,\\\$$ORIGIN/$$QMFPATH/build
+ 
+ symbian {
+     TARGET.CAPABILITY = ReadUserData WriteUserData ReadDeviceData WriteDeviceData
+@@ -19,3 +19,5 @@
+ 
+ include(../common.pri)
+ 
++DESTDIR =
++

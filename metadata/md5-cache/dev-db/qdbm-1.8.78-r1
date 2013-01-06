@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install preinst prepare setup test
+DEPEND=java? ( >=virtual/jre-1.4 ) perl? ( dev-lang/perl ) ruby? ( dev-lang/ruby:1.8 ) zlib? ( sys-libs/zlib ) java? ( >=virtual/jdk-1.4 ) java? ( >=dev-java/java-config-2.1.9-r1 )
+DESCRIPTION=Quick Database Manager
+EAPI=4
+HOMEPAGE=http://fallabs.com/qdbm/
+IUSE=cxx debug java perl ruby zlib elibc_FreeBSD java
+KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd
+LICENSE=LGPL-2.1
+RDEPEND=java? ( >=virtual/jre-1.4 ) perl? ( dev-lang/perl ) ruby? ( dev-lang/ruby:1.8 ) zlib? ( sys-libs/zlib ) java? ( >=dev-java/java-config-2.1.9-r1 )
+SLOT=0
+SRC_URI=http://fallabs.com/qdbm/qdbm-1.8.78.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	2d9eb3508fa5d6759e39354b74545567	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=0c698ac707b1829413ae525813130f2a

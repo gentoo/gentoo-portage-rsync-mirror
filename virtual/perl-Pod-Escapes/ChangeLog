@@ -1,0 +1,71 @@
+# ChangeLog for virtual/perl-Pod-Escapes
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Escapes/ChangeLog,v 1.16 2012/05/21 11:50:39 tove Exp $
+
+*perl-Pod-Escapes-1.40.0-r2 (21 May 2012)
+
+  21 May 2012; Torsten Veller <tove@gentoo.org>
+  -perl-Pod-Escapes-1.40.0-r1.ebuild, +perl-Pod-Escapes-1.40.0-r2.ebuild:
+  Add perl-5.16 as provider
+
+  28 Apr 2012; Alexis Ballier <aballier@gentoo.org>
+  perl-Pod-Escapes-1.40.0-r1.ebuild:
+  keyword ~amd64-fbsd
+
+  06 Nov 2011; Fabian Groffen <grobian@gentoo.org>
+  perl-Pod-Escapes-1.40.0-r1.ebuild:
+  Marked ~sparc-solaris, bug #355385
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org>
+  perl-Pod-Escapes-1.40.0-r1.ebuild:
+  Drop ~sparc-fbsd KEYWORD
+
+  28 Jun 2011; Torsten Veller <tove@gentoo.org>
+  perl-Pod-Escapes-1.40.0-r1.ebuild:
+  Add perl-5.12.4 virtual
+
+*perl-Pod-Escapes-1.40.0-r1 (18 Jun 2011)
+
+  18 Jun 2011; Torsten Veller <tove@gentoo.org>
+  -perl-Pod-Escapes-1.40.0.ebuild, +perl-Pod-Escapes-1.40.0-r1.ebuild:
+  Add perl-5.14 as provider
+
+*perl-Pod-Escapes-1.40.0 (20 May 2011)
+
+  20 May 2011; Torsten Veller <tove@gentoo.org> -perl-Pod-Escapes-1.04.ebuild,
+  +perl-Pod-Escapes-1.40.0.ebuild:
+  Add perl-5.14.0 as provider. Change version scheme
+
+  22 Jan 2011; Torsten Veller <tove@gentoo.org> perl-Pod-Escapes-1.04.ebuild:
+  Add perl-5.12.3 as provider
+
+  15 Nov 2010; Fabian Groffen <grobian@gentoo.org>
+  perl-Pod-Escapes-1.04.ebuild:
+  Marked ~x86-solaris, bug #345435
+
+  07 Sep 2010; Torsten Veller <tove@gentoo.org>
+  perl-Pod-Escapes-1.04.ebuild:
+  Add perl-5.12.2 as provider
+
+  14 Jul 2010; Torsten Veller <tove@gentoo.org>
+  perl-Pod-Escapes-1.04.ebuild:
+  Add perl-5.12 as provider
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org>
+  perl-Pod-Escapes-1.04.ebuild:
+  Set empty HOMEPAGE and LICENSE
+
+  15 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  perl-Pod-Escapes-1.04.ebuild:
+  QA: Add prefix keywords
+
+  25 Aug 2009; Torsten Veller <tove@gentoo.org>
+  perl-Pod-Escapes-1.04.ebuild:
+  Add support for perl-5.10.1
+
+*perl-Pod-Escapes-1.04 (01 Nov 2008)
+
+  01 Nov 2008; Yuval Yaari <yuval@gentoo.org> +metadata.xml,
+  +perl-Pod-Escapes-1.04.ebuild:
+  Adding virtuals for dual-lifed modules that come with perl-5.10
+

@@ -1,0 +1,21 @@
+
+
+*libnatpmp-20120821 (27 Aug 2012)
+
+  27 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
+  +libnatpmp-20120821.ebuild:
+  Version bump
+
+*libnatpmp-20110808 (09 Aug 2011)
+
+  09 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  +libnatpmp-20110808.ebuild:
+  Version bump
+
+*libnatpmp-20110715 (07 Aug 2011)
+
+  07 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  +libnatpmp-20110715.ebuild, +files/link-against-system-lib.patch,
+  +metadata.xml:
+  Initial commit
+

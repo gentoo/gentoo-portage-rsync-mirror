@@ -1,0 +1,42 @@
+# ChangeLog for dev-python/pymountboot
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymountboot/ChangeLog,v 1.8 2012/12/17 19:59:50 mgorny Exp $
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> pymountboot-0.2.1.ebuild,
+  pymountboot-0.2.2.ebuild, pymountboot-9999.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
+
+*pymountboot-9999 (15 Dec 2012)
+
+  15 Dec 2012; Michał Górny <mgorny@gentoo.org> +pymountboot-9999.ebuild:
+  Import the live ebuild.
+
+*pymountboot-0.2.2 (10 Dec 2012)
+
+  10 Dec 2012; Michał Górny <mgorny@gentoo.org> +pymountboot-0.2.2.ebuild:
+  Version bump. The new version fixes bug with refcounting, therefore making the
+  package suitable for PyPy as well.
+
+  09 Dec 2012; Michał Górny <mgorny@gentoo.org> pymountboot-0.2.1.ebuild:
+  Enable python3.3.
+
+  29 Nov 2012; Michał Górny <mgorny@gentoo.org> -pymountboot-0.2.ebuild:
+  Remove old.
+
+*pymountboot-0.2.1 (15 Oct 2012)
+
+  15 Oct 2012; Michał Górny <mgorny@gentoo.org> +pymountboot-0.2.1.ebuild,
+  -pymountboot-0.1.ebuild:
+  Version bump with Python 3 support.
+
+*pymountboot-0.2 (16 May 2012)
+
+  16 May 2012; Michał Górny <mgorny@gentoo.org> +pymountboot-0.2.ebuild:
+  Version bump. The new version is written in plain C.
+
+*pymountboot-0.1 (11 May 2012)
+
+  11 May 2012; Michał Górny <mgorny@gentoo.org> +pymountboot-0.1.ebuild,
+  +metadata.xml:
+  Initial commit: a Python module for /boot mount handling. Used by
+  eclean-kernel.

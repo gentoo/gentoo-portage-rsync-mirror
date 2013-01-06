@@ -1,0 +1,11 @@
+--- server/Makefile.in.old      2009-02-11 12:45:10.000000000 +0100
++++ server/Makefile.in  2009-02-11 12:45:18.000000000 +0100
+@@ -10,7 +10,7 @@
+ 
+ DEFS = @DEFS@
+ CPPFLAGS = -I$(srcdir)/../lib -I$(srcdir) -I$(srcdir)/.. @CPPFLAGS@
+-LIBS = ../lib/libsenken.a @LIBS@ @LIBINTL@
++LIBS = ../lib/libsenken.a @LIBS@ @LIBINTL@ -lm
+ 
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@

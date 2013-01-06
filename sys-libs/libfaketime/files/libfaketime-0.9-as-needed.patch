@@ -1,0 +1,11 @@
+--- libfaketime-0.9/src/Makefile.orig
++++ libfaketime-0.9/src/Makefile
+@@ -69,7 +69,7 @@
+ 	${CC} -o $@ -c ${CFLAGS} ${EXTRA_FLAGS} $<
+ 
+ lib%.so.${SONAME}: %.o
+-	${CC} -o $@ -Wl,-soname,$@ ${LDFLAGS} $<
++	${CC} -o $@ -Wl,-soname,$@ $< ${LDFLAGS}
+ 
+ clean: 
+ 	@rm -f ${OBJ} ${LIBS}

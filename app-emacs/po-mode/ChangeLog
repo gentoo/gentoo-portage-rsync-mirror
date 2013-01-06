@@ -1,0 +1,93 @@
+# ChangeLog for app-emacs/po-mode
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.26 2012/05/09 01:46:29 aballier Exp $
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> po-mode-0.18.1.1.ebuild:
+  keyword ~amd64-fbsd
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> po-mode-0.18.1.1.ebuild:
+  ppc64 stable wrt #361635
+
+  26 May 2011; Brent Baude <ranger@gentoo.org> po-mode-0.18.1.1.ebuild:
+  Marking po-mode-0.18.1.1 ppc for bug 361635
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org> po-mode-0.18.1.1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #361635
+
+  12 Apr 2011; Markus Meier <maekke@gentoo.org> po-mode-0.18.1.1.ebuild:
+  arm stable, bug #361635
+
+  11 Apr 2011; Jeroen Roovers <jer@gentoo.org> po-mode-0.18.1.1.ebuild:
+  Stable for HPPA (bug #361635).
+
+  10 Apr 2011; Christian Faulhammer <fauli@gentoo.org>
+  po-mode-0.18.1.1.ebuild:
+  stable x86, bug 361635
+
+  02 Apr 2011; Christoph Mende <angelos@gentoo.org> po-mode-0.18.1.1.ebuild:
+  Stable on amd64 wrt bug #361635
+
+*po-mode-0.18.1.1 (18 Jan 2011)
+
+  18 Jan 2011; Ulrich Mueller <ulm@gentoo.org> +files/50po-mode-gentoo.el,
+  +po-mode-0.18.1.1.ebuild:
+  Version bump, fixes bug 351930.
+
+  24 Nov 2009; Christian Faulhammer <fauli@gentoo.org> po-mode-0.17.ebuild:
+  import changes from Prefix overlay
+
+  17 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  -po-mode-0.16.1.ebuild:
+  clean up
+
+  17 Dec 2007; Christian Faulhammer <opfer@gentoo.org> po-mode-0.17.ebuild:
+  stable x86, bug 202168
+
+  17 Dec 2007; Jeroen Roovers <jer@gentoo.org> po-mode-0.17.ebuild:
+  Stable for HPPA (bug #202168).
+
+  16 Dec 2007; Markus Rothe <corsair@gentoo.org> po-mode-0.17.ebuild:
+  Stable on ppc64; bug #202168
+
+  16 Dec 2007; Raúl Porcel <armin76@gentoo.org> po-mode-0.17.ebuild:
+  alpha/ia64/sparc stable wrt #202168
+
+  15 Dec 2007; Samuli Suominen <drac@gentoo.org> po-mode-0.17.ebuild:
+  amd64 stable wrt #202168
+
+  14 Dec 2007; nixnut <nixnut@gentoo.org> po-mode-0.17.ebuild:
+  Stable on ppc wrt bug 202168
+
+*po-mode-0.17 (13 Nov 2007)
+
+  13 Nov 2007; Ulrich Mueller <ulm@gentoo.org> +po-mode-0.17.ebuild:
+  Version bump.
+
+  06 Oct 2007; Tom Gall <tgall@gentoo.org> po-mode-0.16.1.ebuild:
+  stable on ppc64
+
+  31 Aug 2007; Christoph Mende <angelos@gentoo.org> po-mode-0.16.1.ebuild:
+  Stable on amd64 wrt bug #189031
+
+  24 Aug 2007; Raúl Porcel <armin76@gentoo.org> po-mode-0.16.1.ebuild:
+  alpha/ia64 stable wrt #189031
+
+  19 Aug 2007; Jeroen Roovers <jer@gentoo.org> po-mode-0.16.1.ebuild:
+  Stable for HPPA (bug #189031).
+
+  18 Aug 2007; nixnut <nixnut@gentoo.org> po-mode-0.16.1.ebuild:
+  Stable on ppc wrt bug 189031
+
+  16 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
+  po-mode-0.16.1.ebuild:
+  stable x86, bug 189031
+
+  15 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> po-mode-0.16.1.ebuild:
+  Stable on sparc wrt #189031
+
+*po-mode-0.16.1 (06 Jul 2007)
+
+  06 Jul 2007; Ulrich Mueller <ulm@gentoo.org> +files/51po-mode-gentoo.el,
+  +metadata.xml, +po-mode-0.16.1.ebuild:
+  Initial import. Split off Emacs support from sys-devel/gettext, bug #149431.
+

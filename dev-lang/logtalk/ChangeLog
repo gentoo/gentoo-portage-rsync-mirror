@@ -1,0 +1,48 @@
+# ChangeLog for dev-lang/logtalk
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/ChangeLog,v 1.9 2011/01/27 23:40:36 miknix Exp $
+
+*logtalk-2.42.2 (27 Jan 2011)
+
+  27 Jan 2011; Angelo Arrifano <miknix@gentoo.org> +logtalk-2.42.2.ebuild:
+  Version bump.
+
+*logtalk-2.41.0 (03 Oct 2010)
+
+  03 Oct 2010; Angelo Arrifano <miknix@gentoo.org> +logtalk-2.41.0.ebuild:
+  Version bump
+
+  Users should now set the LOGTALKUSER environment variable according to
+  their wishes.
+  This version features man pages and a freedesktop mime definition.
+
+*logtalk-2.37.4 (23 Sep 2009)
+
+  23 Sep 2009; Angelo Arrifano <miknix@gentoo.org> +logtalk-2.37.4.ebuild:
+  Version bump.
+
+*logtalk-2.37.1 (03 Jun 2009)
+
+  03 Jun 2009; Angelo Arrifano <miknix@gentoo.org> +logtalk-2.37.1.ebuild:
+  Version bump.
+
+*logtalk-2.35.1 (01 Mar 2009)
+
+  01 Mar 2009; <miknix@gentoo.org> metadata.xml, +logtalk-2.35.1.ebuild:
+  Version bump. Add support for bundled doc generation scripts.
+
+  17 Jan 2009; <keri@gentoo.org> logtalk-2.34.1.ebuild:
+  Use doenvd function rather than doins function for /etc/env.d/99logtalk file
+
+  13 Jan 2009; <keri@gentoo.org> logtalk-2.34.1.ebuild:
+  Fix up local USE flag typo.
+
+  10 Jan 2009; <miknix@gentoo.org> metadata.xml:
+  Add myself as maintainer with Keri permission.
+
+*logtalk-2.34.1 (10 Jan 2009)
+
+  10 Jan 2009; <keri@gentoo.org> +metadata.xml, +logtalk-2.34.1.ebuild:
+  Initial port. Ebuild contributed by Angelo Arrifano <miknix@gentoo.org>.
+  Closes #248791
+

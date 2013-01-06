@@ -1,0 +1,15 @@
+# ChangeLog for dev-scheme/jscheme
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/jscheme/ChangeLog,v 1.3 2012/11/09 18:59:59 ago Exp $
+
+  09 Nov 2012; Agostino Sarubbo <ago@gentoo.org> jscheme-7.2.ebuild:
+  Add ~amd64, wrt bug #442136
+
+  24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #290906
+
+*jscheme-7.2 (02 Jul 2010)
+
+  02 Jul 2010; Tomas Touceda <chiiph@gentoo.org> +jscheme-7.2.ebuild,
+  +metadata.xml:
+  JScheme initial commit

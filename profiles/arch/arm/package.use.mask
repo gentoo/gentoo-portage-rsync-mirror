@@ -1,0 +1,239 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.114 2013/01/04 19:24:58 armin76 Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
+# requires app-office/unoconv, which requires virtual/ooo, which is not
+# keyworded here. Remove mask if this situation changes.
+gnome-extra/sushi office
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (30 Dec 2012)
+# sys-apps/systemd works on this arch (masked in base)
+sys-kernel/dracut -dracut_modules_systemd
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (30 Dec 2012)
+# requires dev-util/bustle, which is written in haskell
+# remove mask if/when dev-lang/ghc is keywoded for arm
+dev-util/dbus-test-runner test
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
+# remove mask when app-text/yelp-tools is keyworded here
+>=gnome-extra/zenity-3.6 test
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
+# remove mask when >=app-editors/gedit-3.6 is keyworded here
+dev-util/devhelp gedit
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
+# remove mask when app-crypt/libsecret is keyworded here
+>=gnome-base/gvfs-1.14 gnome-keyring
+
+# Markus Meier <maekke@gentoo.org> (25 Dez 2012)
+# unkeyworded deps for app-accessibility/speech-dispatcher
+app-accessibility/speech-dispatcher espeak flite
+
+# Markus Meier <maekke@gentoo.org> (23 Dec 2012)
+# mask kde-base/* flags due to unkeyworded dependencies
+kde-base/kalzium editor solver
+kde-base/krdc rdesktop
+kde-base/kopete jingle msn sms
+kde-base/kdeplasma-addons fcitx oauth qwt scim
+kde-base/okular ebook chm
+kde-base/kstars indi
+kde-base/kdeutils-meta floppy
+kde-base/kdenetwork-meta ppp
+kde-base/kdesdk-misc extras
+kde-base/smokeqt qscintilla qwt
+kde-base/qtruby qscintilla qwt
+kde-base/perlqt qscintilla qwt
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (15 Dec 2012)
+# media-video/coherence not keyworded
+=media-video/totem-2* upnp-av
+
+# Markus Meier <maekke@gentoo.org> (08 Dec 2012)
+# mask app-office/libreoffice java extensions
+app-office/libreoffice libreoffice_extensions_scripting-beanshell libreoffice_extensions_scripting-javascript libreoffice_extensions_wiki-publisher
+
+# Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
+# MySQL 5.5 wants systemtap, tcmalloc & jemalloc
+>=dev-db/mysql-5.5 systemtap tcmalloc
+>=dev-db/mariadb-5.5 systemtap tcmalloc
+
+# Markus Meier <maekke@gentoo.org> (17 Oct 2012)
+# spidermonkey is broken on arm see bug #420471
+=net-libs/libproxy-0.4.10 spidermonkey
+
+# Steev Klimaszewski <steev@gentoo.org> (03 Aug 2012)
+# No java on ARM
+net-analyzer/wireshark doc-pdf
+
+# Markus Meier <maekke@gentoo.org> (25 Jul 2012)
+# no stable media-video/vlc yet, bug #401313
+media-libs/phonon vlc
+
+# Anthony G. Basile <blueness@gentoo.org> (17 Jul 2012)
+# Only work on amd64/x86
+net-libs/cyassl aes-ni
+
+# Rick Farina <zerochaos@gentoo.org> (09 July 2012)
+# limited testing of net-libs/libbtbb is all this mask is needed for                   
+net-analyzer/wireshark -btbb
+
+# Chí-Thanh Christopher Nguyen <chithanh@gentoo.org> (02 Jun 2012)
+# Mask udis86 flag for llvm, which is of limited use outside x86/amd64.
+sys-devel/llvm udis86
+
+# Robert Piasek <dagger@gentoo.org> (26 Apr 2012)          
+# Packages with optional systemd support. Masked in base and unmasked on arches
+# where sys-apps/systemd is available.
+# Samuli Suominen <ssuominen@gentoo.org> (07 Sep 2012)
+# Masked again because this was never allowed before systemd is marked stable.
+#sys-auth/polkit -systemd
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (13 Apr 2012)
+# Packages with optional systemd support. Masked in base and unmasked on arches
+# where sys-apps/systemd is available.
+gnome-extra/gnome-screensaver -systemd
+gnome-extra/gnome-system-monitor -systemd
+net-misc/networkmanager -systemd
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (12 Apr 2012)
+# Temporary mask-in-base, unmask-in-arch for dev-python/mako keywording for
+# gobject-introspection[doctool], bug #411761
+dev-libs/gobject-introspection -doctool
+
+# Michael Sterrett <mr_bones_@gentoo.org> (04 Mar 2012)
+# arm is missing keywords for >=dev-libs/json-glib-0.12
+app-admin/syslog-ng json
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (09 Jan 2012)
+# jsc JIT compilation is supported only on amd64/arm/x86 and their prefixes, so
+# it's masked in base profile and unmasked here (bug #396313).
+net-libs/webkit-gtk -jit
+www-client/epiphany -jit
+
+# Anthony G. Basile <blueness@gentoo.org> (Dec 21, 2011)
+# Mask the vde flag on tinc because net-misc/vde is not
+# keyworded for arm 
+net-misc/tinc vde
+
+# Davide Pesavento <pesa@gentoo.org> (30 Nov 2011)
+# JavaScriptCore JIT is supported only on amd64/arm/x86,
+# so it's masked in base profile and unmasked here.
+x11-libs/qt-script -jit
+x11-libs/qt-webkit -jit
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Nov 2011)
+# Missing keywords on dev-libs/libgusb, bug #392057
+=x11-misc/colord-0.1.15 gusb
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
+# Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
+# bug #390345
+app-text/evince xps
+>=gnome-base/gdm-3 accessibility fprint gnome-shell smartcard
+>=gnome-base/gnome-menus-3.2 test
+>=gnome-base/gnome-panel-3 eds
+>=gnome-base/nautilus-3 previewer sendto
+
+# Patrick McLean <chutzpah@gentoo.org> (08 Nov 2011)
+# mask conntrack USE flag for dnsmasq as dep is not keyworded
+net-dns/dnsmasq conntrack
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (03 Nov 2011)
+# Missing keywords in gst-plugins-{faac,lame,speex,twolame}, bug #389433
+gnome-extra/gnome-media aac mp3 speex twolame
+
+# Markus Meier <maekke@gentoo.org> (05 Sep 2011)
+# unkeyworded deps for bug 379657 and bug 379651
+gnome-base/gnome-control-center cheese socialweb
+app-admin/packagekit-base entropy
+
+# Robin H. Johnson <robbat2@gentoo.org> (03 Sep 2011)
+# Remove this for your arch after you keyword dev-utils/google-perftools and virtual/gsasl (bug #381737
+dev-libs/libmemcached tcmalloc sasl
+
+# Pacho Ramos <pacho@gentoo.org> (19 Jul 2011)
+# Missing keywords on dependencies
+app-cdr/brasero vcd
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (08 Apr 2011)
+# x11-libs/qscintilla still needs arm keywords, so...
+kde-base/pykde4 qscintilla
+
+# Pacho Ramos <pacho@gentoo.org> (02 Apr 2011)
+# quvi support is needed to play youtube files now
+media-video/totem flash youtube
+
+# Markus Meier <maekke@gentoo.org> (13 Mar 2011)
+# needs stable kde stuff
+sys-auth/polkit kde
+
+# Alexey Shvetsov <alexxy@gentoo.org> (04 Mar 2011)
+# Mask unsatisfied kde-deps bug #357403
+=kde-base/kdelibs-4.6* policykit
+=kde-base/solid-4.6* bluetooth
+
+# Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
+# No media-sound/lilypond here, yet (bug #356069)
+app-text/asciidoc test
+
+# Michael Weber <xmw@gentoo.org> (10 Feb 2011)
+# kde-base/kdelibs is not stable for arm
+net-libs/libproxy kde
+
+# Justin Lecher <jlec@gentoo.org> (14 Jen 2011)
+# x11-libs/fltk is not keyworded for arm
+app-misc/nut X
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (26 Jun 2010)
+# Inter-process communication doesn't work on anything except x86/amd64/arm
+# due to lack of atomic ops, bug 325185
+www-client/firefox -ipc
+
+# Pacho Ramos <pacho@gentoo.org> (13 Jun 2010)
+# Needs app-mobilephone/obex-data-server keyworded, bug 305913
+gnome-base/gvfs bluetooth
+
+# Jeremy Olexa <darkside@gentoo.org> (04 Apr 2010)
+# mask net-misc/mediatomb[lastfm] as lastfmlib isn't keyworded
+net-misc/mediatomb lastfm
+
+# Raúl Porcel <armin76@gentoo.org> (28 Mar 2010)
+# Needs kde-4 stable
+dev-vcs/subversion kde
+
+# Raúl Porcel <armin76@gentoo.org> (20 Jan 2010)
+# Needs mplayer
+kde-base/dolphin thumbnail
+kde-base/konqueror thumbnail
+
+# Markus Meier <maekke@gentoo.org> (27 Sep 2009)
+# mask media-gfx/imagemagick[autotrace] as autotrace is not keyworded
+media-gfx/imagemagick autotrace
+
+# Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
+# app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
+app-admin/gkrellm ntlm
+
+# Gilles Dartiguelongue <eva@gentoo.org> (23 Oct 2007)
+# gdm depends on zenity which is not keyworded
+>=media-video/totem-2.20 galago
+
+# Masking this so repoman shuts up about paludis
+sys-apps/paludis ruby-bindings
+
+# missing keyword for sys-cluster/openmpi sys-cluster/mpich2
+dev-libs/boost mpi
+
+# missing keywords
+media-sound/sox ladspa
+media-plugins/gst-plugins-meta aac dts dv lame libvisual taglib vcd wavpack
+
+# projectm not keyworded, bug #314969
+media-video/vlc projectm
+
+# Ultrabug <ultrabug@gentoo.org) (05 Sept 2011)
+# missing keyword for net-libs/zeromq
+app-admin/rsyslog zeromq

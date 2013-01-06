@@ -1,0 +1,61 @@
+From c0afec5b46eb3508fd3b1449e37b7e550f7d35e2 Mon Sep 17 00:00:00 2001
+From: Gergely Nagy <algernon@balabit.hu>
+Date: Fri, 08 Jun 2012 15:28:33 +0200
+Subject: dnscache: Fix a memory corruption when destroying the DNS cache
+
+The DNS cache gets destroyed every time a worker thread quits, which
+is fine, as most of the dns cache variables are thread local.
+
+However, dns_cache_hosts is not, it's a global static, and
+dns_cache_destroy() was freeing that aswell.
+
+The solution is to not free dns_cache_hosts when a worker stops, but
+do so when syslog-ng stops. This patch introduces dns_cache_deinit()
+which does just that, and removes the same thing from
+dns_cache_destroy(), which now only touches thread-local variables.
+
+Reported-by: EgonB <egon@local.ee>
+Signed-off-by: Gergely Nagy <algernon@balabit.hu>
+---
+diff --git a/lib/dnscache.c b/lib/dnscache.c
+index 49102b7..9cdc2c0 100644
+--- a/lib/dnscache.c
++++ b/lib/dnscache.c
+@@ -361,6 +361,12 @@ dns_cache_destroy(void)
+   cache_last.prev = NULL;
+   persist_first.next = NULL;
+   persist_last.prev = NULL;
++}
++
++void
++dns_cache_deinit(void)
++{
+   if (dns_cache_hosts)
+     g_free(dns_cache_hosts);
++  dns_cache_hosts = NULL;
+ }
+diff --git a/lib/dnscache.h b/lib/dnscache.h
+index 8bae5f1..647ba19 100644
+--- a/lib/dnscache.h
++++ b/lib/dnscache.h
+@@ -34,5 +34,6 @@ void dns_cache_store(gboolean persistent, gint family, void *addr, const gchar *
+ void dns_cache_set_params(gint cache_size, gint expire, gint expire_failed, const gchar *hosts);
+ void dns_cache_init(void);
+ void dns_cache_destroy(void);
++void dns_cache_deinit(void);
+ 
+ #endif
+diff --git a/lib/mainloop.c b/lib/mainloop.c
+index 1203098..e294fa3 100644
+--- a/lib/mainloop.c
++++ b/lib/mainloop.c
+@@ -585,6 +585,7 @@ main_loop_exit_finish(void)
+   /* deinit the current configuration, as at this point we _know_ that no
+    * threads are running.  This will unregister ivykis tasks and timers
+    * that could fire while the configuration is being destructed */
++  dns_cache_deinit();
+   cfg_deinit(current_configuration);
+   iv_quit();
+ }
+--
+cgit v0.8.3.4-1-gaabc

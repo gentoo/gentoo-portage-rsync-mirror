@@ -1,0 +1,284 @@
+# ChangeLog for net-libs/serf
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.84 2013/01/01 19:08:09 armin76 Exp $
+
+  01 Jan 2013; Raúl Porcel <armin76@gentoo.org> serf-1.1.1.ebuild:
+  s390/sh stable wrt #446524
+
+  30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> serf-1.1.1.ebuild:
+  Stable for alpha, wrt bug #446524
+
+  29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> serf-1.1.1.ebuild:
+  Stable for sparc, wrt bug #446524
+
+  19 Dec 2012; Jeroen Roovers <jer@gentoo.org> serf-1.1.1.ebuild:
+  Stable for HPPA (bug #446524).
+
+  18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> serf-1.1.1.ebuild:
+  Stable for ia64, wrt bug #446524
+
+  12 Dec 2012; Anthony G. Basile <blueness@gentoo.org> serf-1.1.1.ebuild:
+  stable arm ppc, bug #446524
+
+  12 Dec 2012; Agostino Sarubbo <ago@gentoo.org> serf-1.1.1.ebuild:
+  Stable for x86, wrt bug #446524
+
+  11 Dec 2012; Agostino Sarubbo <ago@gentoo.org> serf-1.1.1.ebuild:
+  Stable for amd64, wrt bug #446524
+
+  10 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> serf-1.1.1.ebuild:
+  Add static-libs USE flag, wrt bug #446722
+
+  10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> serf-1.1.1.ebuild:
+  Stable for ppc64, wrt bug #446524
+
+*serf-1.1.1 (06 Oct 2012)
+
+  06 Oct 2012; Mike Gilbert <floppym@gentoo.org> +serf-1.1.1.ebuild:
+  Version bump. Ebuild by Arfrever.
+
+  02 Sep 2012; Raúl Porcel <armin76@gentoo.org> serf-1.1.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #428076
+
+  04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> serf-1.1.0.ebuild:
+  Stable for amd64, wrt bug #428076
+
+  30 Jul 2012; Anthony G. Basile <blueness@gentoo.org> serf-1.1.0.ebuild:
+  Stable arm, bug #428076
+
+  29 Jul 2012; Anthony G. Basile <blueness@gentoo.org> serf-1.1.0.ebuild:
+  Stable ppc ppc64, bug #428076
+
+  27 Jul 2012; Jeroen Roovers <jer@gentoo.org> serf-1.1.0.ebuild:
+  Stable for HPPA (bug #428076).
+
+  25 Jul 2012; Jeff Horelick <jdhore@gentoo.org> serf-1.1.0.ebuild:
+  marked x86 per bug 428076
+
+*serf-1.1.0 (11 Jun 2012)
+
+  11 Jun 2012; Mike Gilbert <floppym@gentoo.org> +serf-1.1.0.ebuild:
+  Version bump. Ebuild by Arfrever.
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> serf-1.0.3.ebuild:
+  keyword ~amd64-fbsd
+
+*serf-1.0.3 (24 Mar 2012)
+
+  24 Mar 2012; Markos Chandras <hwoarang@gentoo.org> +serf-1.0.3.ebuild:
+  Version bump
+
+*serf-1.0.1 (13 Mar 2012)
+
+  13 Mar 2012; Mike Gilbert <floppym@gentoo.org> +serf-1.0.1.ebuild:
+  Version bump. Ebuild by Arfrever.
+
+*serf-1.0.0 (24 Oct 2011)
+
+  24 Oct 2011; Markos Chandras <hwoarang@gentoo.org> +serf-1.0.0.ebuild:
+  Version bump. Ebuild by Arfrever
+
+  18 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Add Arfrever as proxy maintainer with proxy-maintainers as herd.
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #246793
+
+  05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -serf-0.7.0.ebuild,
+  -serf-0.7.1.ebuild:
+  Remove old ebuild. Requested by Arfrever
+
+  17 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> serf-0.7.2.ebuild:
+  ppc64 stable wrt #364417
+
+  29 May 2011; Raúl Porcel <armin76@gentoo.org> serf-0.7.2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #364417
+
+  24 May 2011; Brent Baude <ranger@gentoo.org> serf-0.7.2.ebuild:
+  Marking serf-0.7.2 ppc for bug 364417
+
+  22 May 2011; Thomas Kahle <tomka@gentoo.org> serf-0.7.2.ebuild:
+  x86 stable per bug 364417
+
+  15 May 2011; Markus Meier <maekke@gentoo.org> serf-0.7.2.ebuild:
+  arm stable, bug #364417
+
+  26 Apr 2011; Jeroen Roovers <jer@gentoo.org> serf-0.7.2.ebuild:
+  Stable for HPPA (bug #364417).
+
+  26 Apr 2011; Markos Chandras <hwoarang@gentoo.org> serf-0.7.2.ebuild:
+  Stable on amd64 wrt bug #364417
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org> serf-0.7.2.ebuild:
+  Marked ~ppc-macos and ~x64-macos, bug #293901
+
+  25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> serf-0.7.1.ebuild:
+  ppc/ppc64 stable wrt #357277
+
+*serf-0.7.2 (23 Mar 2011)
+
+  23 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +serf-0.7.2.ebuild:
+  Version bump.
+
+  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> serf-0.7.1.ebuild:
+  ia64/s390/sh/sparc stable wrt #357277
+
+  14 Mar 2011; Markus Meier <maekke@gentoo.org> serf-0.7.1.ebuild:
+  arm stable, bug #357277
+
+  12 Mar 2011; Tobias Klausmann <klausman@gentoo.org> serf-0.7.1.ebuild:
+  Stable on alpha, bug #357277
+
+  08 Mar 2011; Jeroen Roovers <jer@gentoo.org> serf-0.7.1.ebuild:
+  Stable for HPPA (bug #357277).
+
+  06 Mar 2011; Christian Faulhammer <fauli@gentoo.org> serf-0.7.1.ebuild:
+  stable x86, bug 357277
+
+  04 Mar 2011; Markos Chandras <hwoarang@gentoo.org> serf-0.7.1.ebuild:
+  Stable on amd64 wrt bug #357277
+
+*serf-0.7.1 (28 Jan 2011)
+
+  28 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +serf-0.7.1.ebuild:
+  Version bump.
+
+  27 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -serf-0.3.1.ebuild:
+  Delete.
+
+  27 Dec 2010; Brent Baude <ranger@gentoo.org> serf-0.7.0.ebuild:
+  stable ppc64, bug 343757
+
+  13 Dec 2010; Brent Baude <ranger@gentoo.org> serf-0.7.0.ebuild:
+  stable ppc, bug 343757
+
+  06 Dec 2010; Raúl Porcel <armin76@gentoo.org> serf-0.7.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #343757
+
+  26 Nov 2010; Jeroen Roovers <jer@gentoo.org> serf-0.7.0.ebuild:
+  Stable for HPPA (bug #343757).
+
+  06 Nov 2010; Markus Meier <maekke@gentoo.org> serf-0.7.0.ebuild:
+  arm stable, bug #343757
+
+  05 Nov 2010; Dane Smith <c1pher@gentoo.org> serf-0.7.0.ebuild:
+  Stable x86 wrt bug 343757.
+
+  03 Nov 2010; Markos Chandras <hwoarang@gentoo.org> serf-0.7.0.ebuild:
+  Stable on amd64 wrt bug #343757
+
+*serf-0.7.0 (01 Oct 2010)
+
+  01 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -serf-0.3.0.ebuild, -files/serf-0.3.0-disable-unneeded-linking.patch,
+  +serf-0.7.0.ebuild:
+  Version bump.
+
+  30 Sep 2010; Brent Baude <ranger@gentoo.org> serf-0.3.1.ebuild:
+  stable ppc64, bug 325423
+
+  10 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  metadata.xml:
+  Restore previous maintainer.
+
+  19 Aug 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove arfrever.
+
+  14 Jul 2010; Jeroen Roovers <jer@gentoo.org> serf-0.3.1.ebuild:
+  Stable for HPPA (bug #325423).
+
+  11 Jul 2010; Raúl Porcel <armin76@gentoo.org> serf-0.3.1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #325423
+
+  28 Jun 2010; Christian Faulhammer <fauli@gentoo.org> serf-0.3.1.ebuild:
+  stable x86, bug 325423
+
+  27 Jun 2010; <nixnut@gentoo.org> serf-0.3.1.ebuild:
+  ppc stable #325423
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org> serf-0.3.1.ebuild:
+  Stable on amd64 wrt bug #325423
+
+*serf-0.3.1 (26 May 2010)
+
+  26 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +serf-0.3.1.ebuild, +files/serf-0.3.1-disable-unneeded-linking.patch:
+  Version bump (bug #305859).
+
+  28 Apr 2009; Raúl Porcel <armin76@gentoo.org> serf-0.3.0.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #267269
+
+  27 Apr 2009; Markus Meier <maekke@gentoo.org> serf-0.3.0.ebuild:
+  amd64/x86 stable, bug #267269
+
+  24 Apr 2009; Brent Baude <ranger@gentoo.org> serf-0.3.0.ebuild:
+  stable ppc, bug 267269
+
+  24 Apr 2009; Brent Baude <ranger@gentoo.org> serf-0.3.0.ebuild:
+  stable ppc64, bug 267269
+
+  24 Apr 2009; Jeroen Roovers <jer@gentoo.org> serf-0.3.0:
+  Stable for HPPA (bug #267269).
+
+*serf-0.3.0 (21 Mar 2009)
+
+  21 Mar 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +files/serf-0.3.0-disable-unneeded-linking.patch, +serf-0.3.0.ebuild:
+  Version bump (bug #260631).
+
+  12 Nov 2008; Peter Volkov <pva@gentoo.org> serf-0.2.0.ebuild:
+  Added ~mips, bug #212056.
+
+  04 Nov 2008; Mike Frysinger <vapier@gentoo.org> serf-0.2.0.ebuild:
+  Add arm/s390/sh love.
+
+  08 Sep 2008; Guy Martin <gmsoft@gentoo.org> serf-0.2.0.ebuild:
+  hppa stable, #236130
+
+  31 Aug 2008; Raúl Porcel <armin76@gentoo.org> serf-0.2.0.ebuild:
+  alpha/ia64/sparc stable wrt #236130
+
+  31 Aug 2008; Brent Baude <ranger@gentoo.org> serf-0.2.0.ebuild:
+  stable ppc64, bug 236130
+
+  30 Aug 2008; Brent Baude <ranger@gentoo.org> serf-0.2.0.ebuild:
+  stable ppc, bug 236130
+
+  29 Aug 2008; Markus Meier <maekke@gentoo.org> serf-0.2.0.ebuild:
+  amd64/x86 stable, bug #236130
+
+*serf-0.2.0 (01 Jul 2008)
+
+  01 Jul 2008; Benedikt Böhm <hollow@gentoo.org> +serf-0.2.0.ebuild:
+  version bump wrt #229367
+
+  14 Jun 2008; nixnut <nixnut@gentoo.org> serf-0.1.2.ebuild:
+  Added ~ppc
+
+  07 Jun 2008; Alexis Ballier <aballier@gentoo.org> serf-0.1.2.ebuild:
+  keyword ~sparc-fbsd
+
+  07 Jun 2008; Alexis Ballier <aballier@gentoo.org> serf-0.1.2.ebuild:
+  keyword ~x86-fbsd
+
+  17 May 2008; Jeroen Roovers <jer@gentoo.org> serf-0.1.2.ebuild:
+  Marked ~hppa (bug #219882).
+
+  12 May 2008; Raúl Porcel <armin76@gentoo.org> serf-0.1.2.ebuild:
+  Add ~alpha/~ia64 wrt #219882
+
+  11 May 2008; Markus Rothe <corsair@gentoo.org> serf-0.1.2.ebuild:
+  Added ~ppc64; bug #219882
+
+  02 May 2008; Ferris McCormick <fmccor@gentoo.org> serf-0.1.2.ebuild:
+  Add ~sparc, part of Bug #219882.  Test suite runs as expected.
+
+*serf-0.1.2 (30 Apr 2008)
+
+  30 Apr 2008; Benedikt Böhm <hollow@gentoo.org>
+  +files/0.1.2-disable-unneeded-linking.patch, +metadata.xml,
+  +serf-0.1.2.ebuild:
+  initial ebuild, bug #219391

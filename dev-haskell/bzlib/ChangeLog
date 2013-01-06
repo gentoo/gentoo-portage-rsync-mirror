@@ -1,0 +1,44 @@
+# ChangeLog for dev-haskell/bzlib
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bzlib/ChangeLog,v 1.8 2012/12/22 21:16:27 slyfox Exp $
+
+*bzlib-0.5.0.4 (22 Dec 2012)
+
+  22 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> +bzlib-0.5.0.4.ebuild,
+  -bzlib-0.5.0.1.ebuild, -bzlib-0.5.0.2.ebuild:
+  Version bump.
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> bzlib-0.5.0.1.ebuild,
+  bzlib-0.5.0.2.ebuild, bzlib-0.5.0.3.ebuild:
+  move dev-haskell/bzlib/bzlib-0.5.0.3.ebuild ebuild to mirror://hackage
+
+*bzlib-0.5.0.3 (13 May 2012)
+
+  13 May 2012; Sergei Trofimovich <slyfox@gentoo.org> +bzlib-0.5.0.3.ebuild,
+  metadata.xml:
+  Version bump.
+
+*bzlib-0.5.0.2 (23 Jan 2012)
+
+  23 Jan 2012; Mark Wright <gienah@gentoo.org> +bzlib-0.5.0.2.ebuild:
+  Bump bzlib to 0.5.0.2.
+
+  01 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> -bzlib-0.4.0.1.ebuild,
+  -bzlib-0.5.0.0.ebuild:
+  Removed old.
+
+*bzlib-0.5.0.1 (01 Aug 2011)
+
+  01 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> +bzlib-0.5.0.1.ebuild:
+  Version bump.
+
+*bzlib-0.5.0.0 (15 Dec 2009)
+
+  15 Dec 2009; <kolmodin@gentoo.org> +bzlib-0.5.0.0.ebuild:
+  Version bump.
+
+*bzlib-0.4.0.1 (15 Dec 2007)
+
+  15 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> +metadata.xml,
+  +bzlib-0.4.0.1.ebuild:
+  Initial version.

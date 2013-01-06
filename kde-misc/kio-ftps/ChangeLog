@@ -1,0 +1,20 @@
+# ChangeLog for kde-misc/kio-ftps
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-ftps/ChangeLog,v 1.4 2012/07/20 16:43:21 johu Exp $
+
+  20 Jul 2012; Johannes Huber <johu@gentoo.org> kio-ftps-0.2.ebuild:
+  Move from SLOT 0 to 4. Add debug use flag.
+
+  31 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> kio-ftps-0.2.ebuild,
+  metadata.xml:
+  Update to eapi4. Drop maintainership in favour of whole kde team.
+
+  28 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> kio-ftps-0.2.ebuild:
+  Move to eapi3 update deps to use new syntax.
+
+*kio-ftps-0.2 (30 May 2009)
+
+  30 May 2009; Tomáš Chvátal <scarabeus@gentoo.org> +kio-ftps-0.2.ebuild,
+  +metadata.xml:
+  Initial commit. Per bug #125314. Thanks to Krzysztof Głowiński for basic
+  ebuild.

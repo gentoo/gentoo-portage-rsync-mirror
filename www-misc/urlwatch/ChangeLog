@@ -1,0 +1,19 @@
+# ChangeLog for www-misc/urlwatch
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/urlwatch/ChangeLog,v 1.3 2012/09/03 19:10:43 radhermit Exp $
+
+*urlwatch-1.15 (03 Sep 2012)
+
+  03 Sep 2012; Tim Harder <radhermit@gentoo.org> +urlwatch-1.15.ebuild:
+  Version bump.
+
+  23 Mar 2012; Tim Harder <radhermit@gentoo.org> urlwatch-1.14.ebuild:
+  Drop conditional dependency until there's a way to specify them correctly
+  (fixes bug #409401).
+
+*urlwatch-1.14 (22 Mar 2012)
+
+  22 Mar 2012; Tim Harder <radhermit@gentoo.org> +urlwatch-1.14.ebuild,
+  +files/urlwatch-xmpp.patch, +metadata.xml:
+  Initial import. Ebuild by me.
+

@@ -1,0 +1,28 @@
+From be82bbc05e3f31d52f45561125e02d764cce7e7f Mon Sep 17 00:00:00 2001
+From: gdvl <gdvl@gentp>
+Date: Sat, 21 Apr 2012 12:14:03 +0200
+Subject: [PATCH] Use of undefined variable in sync()
+
+The variable 'warnings' in sync() is undefined if esync is called
+without --layman-sync. This causes esync to fail when executing the
+'if warnings ...' statement.
+---
+ esearch/sync.py |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+diff --git a/esearch/sync.py b/esearch/sync.py
+index 5748698..a147ac1 100755
+--- a/esearch/sync.py
++++ b/esearch/sync.py
+@@ -192,6 +192,8 @@ def layman_sync(config):
+ 
+ def sync(config):
+ 
++    warnings = None
++
+     tree_old = gettree("old", config)
+ 
+     if config['layman-sync']:
+-- 
+1.7.8.5
+

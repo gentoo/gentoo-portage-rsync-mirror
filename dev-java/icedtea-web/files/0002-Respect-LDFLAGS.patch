@@ -1,0 +1,11 @@
+--- Makefile.am.orig	2011-09-18 23:35:31.396740781 +0200
++++ Makefile.am	2011-09-18 23:35:44.284392366 +0200
+@@ -216,7 +216,7 @@
+ 
+ $(PLUGIN_DIR)/IcedTeaPlugin.so: $(addprefix $(PLUGIN_DIR)/,$(PLUGIN_OBJECTS))
+ 	cd $(PLUGIN_DIR) && \
+-	$(CXX) $(CXXFLAGS) \
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) \
+ 	  $(PLUGIN_OBJECTS) \
+ 	  $(GLIB_LIBS) \
+ 	  $(GTK_LIBS) \

@@ -1,0 +1,16 @@
+# ChangeLog for dev-perl/Class-Accessor-Lite
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Lite/ChangeLog,v 1.2 2012/06/24 12:58:30 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  02 Feb 2012; Torsten Veller <tove@gentoo.org>
+  +Class-Accessor-Lite-0.50.0.ebuild, +metadata.xml:
+  Import from perl-experimental for Parallel-Prefork (#381857)
+
+*Class-Accessor-Lite-0.50.0 (17 Oct 2011)
+
+  17 Oct 2011; Torsten Veller <tove@gentoo.org>
+  +Class-Accessor-Lite-0.50.0.ebuild, +metadata.xml:
+  Initial commit

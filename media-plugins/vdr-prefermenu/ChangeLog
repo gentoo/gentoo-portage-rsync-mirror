@@ -1,0 +1,44 @@
+# ChangeLog for media-plugins/vdr-prefermenu
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-prefermenu/ChangeLog,v 1.8 2009/03/12 20:49:50 zzam Exp $
+
+  12 Mar 2009; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-prefermenu-0.6.6-r1.ebuild:
+  Marked stable on x86.
+
+  28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-prefermenu-0.6.4.ebuild, vdr-prefermenu-0.6.6.ebuild,
+  vdr-prefermenu-0.6.6-r1.ebuild:
+  Fixed quoting.
+
+*vdr-prefermenu-0.6.6-r1 (05 Jul 2007)
+
+  05 Jul 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-prefermenu-0.6.6-no-static-getfont.diff,
+  +vdr-prefermenu-0.6.6-r1.ebuild:
+  Added vdr-1.5 patch from Thomas Günther.
+
+  30 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-prefermenu-0.6.6.ebuild:
+  Marked stable on x86.
+
+  15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Assigned to Gentoo VDR Project.
+
+*vdr-prefermenu-0.6.6 (07 May 2006)
+
+  07 May 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +vdr-prefermenu-0.6.6.ebuild:
+  Version bumped.
+
+  17 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-prefermenu-0.6.4.ebuild:
+  Marked stable on x86
+
+*vdr-prefermenu-0.6.4 (05 Mar 2006)
+
+  05 Mar 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-prefermenu-0.6.4-includes.diff, +metadata.xml,
+  +vdr-prefermenu-0.6.4.ebuild:
+  imported ebuild from gentoo.de
+

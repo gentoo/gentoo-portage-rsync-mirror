@@ -1,0 +1,15 @@
+# ChangeLog for dev-python/pyGPG
+# Copyright 2012-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyGPG/ChangeLog,v 1.3 2012/12/17 19:36:18 mgorny Exp $
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> pyGPG-9999.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
+
+  19 Nov 2012; Brian Dolbec <dolsen@gentoo.org> pyGPG-9999.ebuild:
+  fix an errant space in the ebuild.
+
+*pyGPG-9999 (18 Nov 2012)
+
+  18 Nov 2012; Brian Dolbec <dolsen@gentoo.org> +pyGPG-9999.ebuild,
+  +metadata.xml:
+  Initial ebuild for pyGPG, written by me.

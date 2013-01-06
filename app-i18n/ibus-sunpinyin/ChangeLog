@@ -1,0 +1,20 @@
+# ChangeLog for app-i18n/ibus-sunpinyin
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-sunpinyin/ChangeLog,v 1.7 2011/04/17 09:11:23 qiaomuf Exp $
+
+  17 Apr 2011; Mu Qiao <qiaomuf@gentoo.org> -ibus-sunpinyin-2.0.3.ebuild,
+  ibus-sunpinyin-2.0.3-r1.ebuild:
+  Fix bug #363759, remove old version
+
+*ibus-sunpinyin-2.0.3-r1 (26 Feb 2011)
+
+  26 Feb 2011; Mu Qiao <qiaomuf@gentoo.org> +ibus-sunpinyin-2.0.3-r1.ebuild,
+  +files/ibus-sunpinyin-2.0.3-force-switch.patch:
+  Include upstream patch.
+
+*ibus-sunpinyin-2.0.3 (20 Feb 2011)
+
+  20 Feb 2011; Mu Qiao <qiaomuf@gentoo.org> +ibus-sunpinyin-2.0.3.ebuild,
+  +metadata.xml:
+  New ebuild for ibus-sunpinyin.
+

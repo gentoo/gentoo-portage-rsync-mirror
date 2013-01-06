@@ -1,0 +1,22 @@
+--- mkfiles.pl
++++ mkfiles.pl
+@@ -1117,8 +1117,8 @@
+     "\n".
+     &splitline("CFLAGS := -O2 -Wall -Werror -ansi -pedantic -g " .
+ 	       (join " ", map {"-I$dirpfx$_"} @srcdirs) .
+-	       " `\$(GTK_CONFIG) --cflags` \$(CFLAGS)")."\n".
+-    "XLIBS = `\$(GTK_CONFIG) --libs`\n".
++	       " `pkg-config gtk+-2.0 --cflags` \$(CFLAGS)")."\n".
++    "XLIBS = `pkg-config gtk+-2.0 --libs` -lm\n".
+     "ULIBS =#\n".
+     "INSTALL=install\n",
+     "INSTALL_PROGRAM=\$(INSTALL)\n",
+@@ -1137,7 +1137,7 @@
+       $objstr = &objects($p, "X.o", undef, undef);
+       print &splitline($prog . ": " . $objstr), "\n";
+       $libstr = &objects($p, undef, undef, "-lX");
+-      print &splitline("\t\$(CC) -o \$@ $objstr $libstr \$(XLFLAGS) \$(${type}LIBS)", 69),
++      print &splitline("\t\$(CC) \$(LDFLAGS) -o \$@ $objstr $libstr \$(XLFLAGS) \$(${type}LIBS)", 69),
+ 	  "\n\n";
+     }
+     foreach $d (&deps("X.o", undef, $dirpfx, "/")) {

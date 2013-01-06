@@ -1,0 +1,60 @@
+# ChangeLog for dev-python/pythondialog
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/ChangeLog,v 1.17 2011/01/01 19:56:22 arfrever Exp $
+
+  01 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pythondialog-2.7.ebuild:
+  Fix dependencies. Set SUPPORT_PYTHON_ABIS.
+
+  21 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  pythondialog-2.7.ebuild:
+  Stable on ppc for the Gentoo Linux Installer.
+
+  28 Jan 2006; Lukasz Strzygowski <lucass@gentoo.org>
+  -files/00_all_setup.py.patch.bz2, -pythondialog-1.0.ebuild:
+  Removed old version. Closed bug #120644.
+
+  02 Oct 2005; Aron Griffis <agriffis@gentoo.org> pythondialog-2.7.ebuild:
+  Mark 2.7 stable on ia64
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> pythondialog-2.7.ebuild:
+  add ~ia64
+
+  08 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  pythondialog-2.7.ebuild:
+  Stable on sparc
+
+  21 Jan 2005; Marcus D. Hanwell <cryos@gentoo.org> pythondialog-2.7.ebuild:
+  Marked stable on amd64.
+
+  04 Jan 2005; Bryan Østergaard <kloeri@gentoo.org>
+  pythondialog-2.7.ebuild:
+  Stable on x86 and alpha.
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  14 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
+  pythondialog-2.7.ebuild:
+  Fix keywords dropped by mistake.
+
+  13 Nov 2004; Jason Wever <weeve@gentoo.org> pythondialog-2.7.ebuild:
+  Added ~sparc keyword.
+
+*pythondialog-2.7 (06 Nov 2004)
+
+  06 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
+  +pythondialog-2.7.ebuild:
+  Version bump, bug 69857.
+
+  03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> pythondialog-1.0.ebuild:
+  Stable on alpha.
+
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pythondialog-1.0.ebuild:
+  Add missing IUSE.
+
+*pythondialog-1.0 (07 Feb 2003)
+  07 Feb 2003; Mark Guertin <gerk@gentoo.org> pythondialog-1.0.ebuild :
+  Initial build entry.  Set as ~ for all arches, should work fine.  Thanks
+  to Matt Tucker for the new ebuild, bug # 15238.
+

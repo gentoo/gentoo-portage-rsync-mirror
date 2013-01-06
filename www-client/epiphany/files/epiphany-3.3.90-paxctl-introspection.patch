@@ -1,0 +1,24 @@
+From 1eee9260eba23a7fc17df49c5a0e24a99f88482a Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Sun, 4 Mar 2012 21:55:20 -0500
+Subject: [PATCH] Add PaX marking to allow building introspection under PaX
+
+---
+ src/Makefile.am |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/src/Makefile.am b/src/Makefile.am
+index d6bf77f..ce52591 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -277,6 +277,7 @@ EPHY_GIR_C_FILES = \
+ 
+ Epiphany-$(EPIPHANY_API_VERSION).gir: $(INTROSPECTION_SCANNER) $(EPHY_GIR_H_FILES) \
+                                       $(EPHY_GIR_C_FILES) epiphany
++	bash $(top_srcdir)/paxctl.sh -m ./epiphany
+ 	$(AM_V_GEN) PKG_CONFIG_PATH=$(top_builddir)/data:$$PKG_CONFIG_PATH \
+ 	$(INTROSPECTION_SCANNER) -v --warn-all \
+ 		--identifier-prefix=Ephy \
+-- 
+1.7.8.5
+

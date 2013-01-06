@@ -1,0 +1,62 @@
+# ChangeLog for media-sound/mpdas
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdas/ChangeLog,v 1.13 2012/05/05 08:39:20 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> mpdas-0.3.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  30 Apr 2011; Christoph Mende <angelos@gentoo.org>
+  -files/mpdas-0.2.5-ldflags.patch:
+  Removed old files
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> -mpdas-0.2.4.ebuild,
+  -mpdas-0.2.5.ebuild:
+  Remove old
+
+  19 Mar 2011; Thomas Kahle <tomka@gentoo.org> mpdas-0.3.0.ebuild:
+  x86 stable per bug 357139
+
+  04 Mar 2011; Markos Chandras <hwoarang@gentoo.org> mpdas-0.3.0.ebuild:
+  Stable on amd64 wrt bug #357139
+
+*mpdas-0.3.0 (14 Dec 2010)
+
+  14 Dec 2010; Christoph Mende <angelos@gentoo.org> +mpdas-0.3.0.ebuild:
+  Version bump
+
+*mpdas-0.2.5 (03 Jun 2010)
+
+  03 Jun 2010; Christoph Mende <angelos@gentoo.org> +mpdas-0.2.5.ebuild,
+  +files/mpdas-0.2.5-ldflags.patch, metadata.xml:
+  Take over maintainership, version bump and respect LDFLAGS
+
+  20 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -mpdas-0.2.3-r1.ebuild, mpdas-0.2.4.ebuild:
+  amd64/x86 stable, latest version is more likely to work with new libmpd
+
+  04 Jan 2009; Markus Meier <maekke@gentoo.org> mpdas-0.2.3-r1.ebuild:
+  amd64/x86 stable, bug #253166
+
+*mpdas-0.2.4 (30 Dec 2008)
+
+  30 Dec 2008; Ben de Groot <yngwin@gentoo.org> +mpdas-0.2.4.ebuild:
+  Version bump, bug 252605
+
+*mpdas-0.2.3-r1 (30 Nov 2008)
+
+  30 Nov 2008; Samuli Suominen <ssuominen@gentoo.org> -mpdas-0.2.2.ebuild,
+  -mpdas-0.2.3.ebuild, +mpdas-0.2.3-r1.ebuild:
+  Fix config directory.
+
+*mpdas-0.2.3 (30 Nov 2008)
+
+  30 Nov 2008; Samuli Suominen <ssuominen@gentoo.org> +mpdas-0.2.3.ebuild:
+  Version bump; install manpage, example, respect CXX target. Thanks to
+  Sebastian Mair for reporting wrt #249179.
+
+*mpdas-0.2.2 (24 Nov 2008)
+
+  24 Nov 2008; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +mpdas-0.2.2.ebuild:
+  Initial commit. Ebuild contributed by Sebastian Mair in bug 247216.
+

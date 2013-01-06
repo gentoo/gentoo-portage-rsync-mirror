@@ -1,0 +1,32 @@
+# ChangeLog for media-plugins/mediastreamer-amr
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-amr/ChangeLog,v 1.7 2012/11/19 20:54:52 mgorny Exp $
+
+  19 Nov 2012; Michał Górny <mgorny@gentoo.org>
+  +files/mediastreamer-amr-0.0.1-include.patch, mediastreamer-amr-0.0.1.ebuild:
+  Fix compile error wrt bug #412605, thanks to Andrew Savchenko for the patch.
+  Also do not repeat defaults (dodoc, libdir).
+
+  24 Apr 2012; Michał Górny <mgorny@gentoo.org>
+  mediastreamer-amr-0.0.1.ebuild:
+  Update to use mirror://.
+
+  06 Jan 2012; Brent Baude <ranger@gentoo.org> mediastreamer-amr-0.0.1.ebuild:
+  Marking mediastreamer-amr-0.0.1 ppc for bug 363311
+
+  16 May 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  mediastreamer-amr-0.0.1.ebuild:
+  Marked ~ppc/~ppc64 wrt #362691
+
+  14 May 2011; Thomas Kahle <tomka@gentoo.org> mediastreamer-amr-0.0.1.ebuild:
+  x86 stable per bug 363311
+
+  01 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  mediastreamer-amr-0.0.1.ebuild:
+  Stable on amd64 wrt bug #363311
+
+*mediastreamer-amr-0.0.1 (09 Apr 2011)
+
+  09 Apr 2011; Peter Volkov <pva@gentoo.org> +mediastreamer-amr-0.0.1.ebuild,
+  +metadata.xml:
+  Initial bump, bug #356987 thank Andrew Savchenko for report and work.

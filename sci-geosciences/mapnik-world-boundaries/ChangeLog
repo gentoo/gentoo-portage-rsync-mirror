@@ -1,0 +1,13 @@
+# ChangeLog for sci-geosciences/mapnik-world-boundaries
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik-world-boundaries/ChangeLog,v 1.2 2012/02/27 09:30:41 tupone Exp $
+
+  27 Feb 2012; Tupone Alfredo <tupone@gentoo.org> metadata.xml:
+  Removing me as a maintainer
+
+*mapnik-world-boundaries-20090514 (23 Jun 2009)
+
+  23 Jun 2009; Alfredo Tupone <tupone@gentoo.org>
+  +mapnik-world-boundaries-20090514.ebuild:
+  World Boundaries data for mapnik
+

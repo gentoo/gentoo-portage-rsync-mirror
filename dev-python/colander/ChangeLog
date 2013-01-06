@@ -1,0 +1,39 @@
+# ChangeLog for dev-python/colander
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colander/ChangeLog,v 1.8 2012/10/09 09:17:59 patrick Exp $
+
+*colander-0.9.9 (09 Oct 2012)
+
+  09 Oct 2012; Patrick Lauer <patrick@gentoo.org> +colander-0.9.9.ebuild:
+  Bump
+
+  08 May 2012; Kacper Kowalik <xarthisius@gentoo.org> colander-0.9.8.ebuild:
+  Don't install sphinx's cache
+
+*colander-0.9.8 (08 May 2012)
+
+  08 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +colander-0.9.8.ebuild,
+  -colander-0.9.3.ebuild, -colander-0.9.4.ebuild, -colander-0.9.6.ebuild:
+  Version bump, fixes #415113. Thanks to Ian Delaney <johneed@hotmail.com> for
+  report and testing. Drop old
+
+*colander-0.9.7 (08 Apr 2012)
+
+  08 Apr 2012; Mike Gilbert <floppym@gentoo.org> +colander-0.9.7.ebuild:
+  Version bump, #411049 by Ian Delaney.
+
+*colander-0.9.6 (22 Feb 2012)
+
+  22 Feb 2012; Marien Zwart <marienz@gentoo.org> +colander-0.9.6.ebuild:
+  Version bump, fixes bug #404171. Add Python 3 support.
+
+*colander-0.9.4 (07 Feb 2012)
+
+  07 Feb 2012; Patrick Lauer <patrick@gentoo.org> +colander-0.9.4.ebuild:
+  Bump for #402445
+
+*colander-0.9.3 (30 Jul 2011)
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +colander-0.9.3.ebuild, +metadata.xml:
+  Initial version. Based on ebuild by Jan Matějka (bug #368019).

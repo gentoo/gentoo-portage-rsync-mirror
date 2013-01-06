@@ -1,0 +1,31 @@
+# ChangeLog for x11-wm/stumpwm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/ChangeLog,v 1.7 2012/11/17 16:58:54 ago Exp $
+
+  17 Nov 2012; Agostino Sarubbo <ago@gentoo.org> stumpwm-0.9.7.ebuild:
+  fix doinfo, wrt bug #442922
+
+  21 Jun 2011; Michael Weber <xmw@gentoo.org> -stumpwm-0.9.2.ebuild:
+  Dropping old version
+
+*stumpwm-0.9.7 (11 May 2011)
+
+  11 May 2011; Michael Weber <xmw@gentoo.org> +stumpwm-0.9.7.ebuild:
+  Version bump (thanks to drg, bug 366769)
+
+  07 Sep 2009; Petteri Räty <betelgeuse@gentoo.org> stumpwm-0.9.2.ebuild:
+  Migrate to EAPI 2 in order to get rid of built_with_use.
+
+  26 Jul 2009; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd> tag
+
+  02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing jmglov as a maintainer since he was retired.
+
+*stumpwm-0.9.2 (03 May 2008)
+
+  03 May 2008; Josh Glover <jmglov@gentoo.org> +files/README.Gentoo,
+  +metadata.xml, +stumpwm-0.9.2.ebuild:
+  This package was submitted by Nguyen Thai Ngoc Duy <pclouds@gentoo.org> in
+  bug #219832

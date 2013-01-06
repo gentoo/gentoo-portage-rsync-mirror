@@ -1,0 +1,11 @@
+--- a/Makefile
++++ b/Makefile
+@@ -102,6 +102,8 @@
+ # Rules for core library.
+ #
+ 
++pa_pgsql.ml4: $(OBJS)
++
+ pa_pgsql.cmo: pa_pgsql.ml4
+ 	ocamlfind ocamlc $(OCAMLCFLAGS) $(OCAMLCPACKAGES) \
+ 	  -pp "camlp4o pa_extend.cmo q_MLast.cmo $(P4_PARAMS) -impl" \

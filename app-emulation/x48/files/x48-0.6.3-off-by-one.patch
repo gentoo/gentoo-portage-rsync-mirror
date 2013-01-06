@@ -1,0 +1,25 @@
+--- x48-0.6.3.orig/src/debugger.c	2011-01-29 12:58:24.432244663 -0500
++++ x48-0.6.3/src/debugger.c	2011-01-29 13:06:46.750769284 -0500
+@@ -1919,10 +1919,7 @@
+ 	      free (cl);
+               cl = (char *) 0;
+             }
+-	  if (old_line)
+-	    cl = strcpy ((char *) malloc (strlen (old_line)), old_line);
+-	  else
+-	    cl = strcpy ((char *) malloc (strlen ("(null)")), "(null)");
++	  cl = strdup (old_line == NULL ? "(null)" : old_line);
+ 	}
+       else
+ 	{
+@@ -1936,8 +1933,8 @@
+ 	      free (old_line);
+               old_line = (char *) 0;
+ 	    }
+-	  cl = strcpy ((char *) malloc (strlen (rl)), rl);
+-	  old_line = strcpy ((char *) malloc (strlen (rl)), rl);
++	  cl = strdup (rl);
++	  old_line = strdup (rl);
+ #ifdef HAVE_READLINE
+ 	  add_history (rl);
+ #endif

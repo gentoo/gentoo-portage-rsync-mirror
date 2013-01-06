@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>nirbheek@gentoo.org</email>
+		<name>Nirbheek Chauhan</name>
+	</maintainer>
+	<maintainer>
+		<email>qiaomuf@gentoo.org</email>
+		<name>Mu Qiao</name>
+	</maintainer>
+	<maintainer>
+		<email>tetromino@gentoo.org</email>
+		<name>Alexandre Rostovtsev</name>
+	</maintainer>
+	<use>
+		<flag name="gconf">Build tool for migrating gconf settings from
+			nm-applet-0.8.x</flag>
+	</use>
+</pkgmetadata>

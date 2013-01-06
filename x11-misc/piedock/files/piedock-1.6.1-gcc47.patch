@@ -1,0 +1,25 @@
+From 4476dcbaece4a1160304b4ea64656e36eaa870df Mon Sep 17 00:00:00 2001
+From: Markus Fisch <mf@markusfisch.de>
+Date: Tue, 3 Jul 2012 11:09:55 +0200
+Subject: [PATCH] included unistd.h because of compilation problems with GCC
+ 4.7.1 on Gentoo
+
+---
+ src/Application.cpp |    1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/Application.cpp b/src/Application.cpp
+index de6299d..9d819cc 100644
+--- a/src/Application.cpp
++++ b/src/Application.cpp
+@@ -21,6 +21,7 @@
+ #include <sys/un.h>
+ #include <libgen.h>
+ #include <stdlib.h>
++#include <unistd.h>
+ 
+ #include <sstream>
+ 
+-- 
+1.7.10
+

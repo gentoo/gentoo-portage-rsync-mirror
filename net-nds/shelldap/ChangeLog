@@ -1,0 +1,19 @@
+# ChangeLog for net-nds/shelldap
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/shelldap/ChangeLog,v 1.2 2011/04/30 20:36:04 pva Exp $
+
+*shelldap-0.4 (30 Apr 2011)
+
+  30 Apr 2011; Peter Volkov <pva@gentoo.org> +shelldap-0.4.ebuild:
+  Version bump, bug #356961 thank Azamat H. Hackimov for this work.
+
+  29 Dec 2010; Peter Volkov <pva@gentoo.org> +shelldap-0.2_p20100615.ebuild,
+  +metadata.xml:
+  Move from net-dns, bug #347643, thank Azamat Hackimov for report.
+
+*shelldap-0.2_p20100615 (24 Dec 2010)
+
+  24 Dec 2010; Peter Volkov <pva@gentoo.org> +shelldap-0.2_p20100615.ebuild,
+  +metadata.xml:
+  Initial import, bug #347643, thank Azamat H. Hackimov for report.
+

@@ -1,0 +1,45 @@
+# ChangeLog for dev-python/diff-match-patch
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/diff-match-patch/ChangeLog,v 1.10 2013/01/05 19:43:03 pinkbyte Exp $
+
+  05 Jan 2013; Sergey Popov <pinkbyte@gentoo.org>
+  diff-match-patch-20120106.ebuild:
+  Stable on amd64, wrt bug #450170
+
+*diff-match-patch-20120106 (24 Nov 2012)
+
+  24 Nov 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +diff-match-patch-20120106.ebuild:
+  Version bump.
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  diff-match-patch-20110725.1.ebuild:
+  x86 stable wrt bug #406533
+
+  20 Mar 2012; Agostino Sarubbo <ago@gentoo.org>
+  diff-match-patch-20110725.1.ebuild:
+  Stable for amd64, wrt bug #406533
+
+  02 Mar 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> metadata.xml:
+  Added python herd.
+
+  23 Feb 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  diff-match-patch-20110725.1.ebuild:
+  Tested on x86 and added ~x86 keyword.
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop no-herd.
+
+  27 Dec 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  diff-match-patch-20110725.1.ebuild:
+  Ebuild clean up wrt test phase.
+
+  distutils eclass src_test() is used instead of custom one. Also distutils
+  eclass src_prepare() is called at the beginning of custom one.
+
+*diff-match-patch-20110725.1 (27 Dec 2011)
+
+  27 Dec 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +diff-match-patch-20110725.1.ebuild, +metadata.xml:
+  Initial ebuild.
+

@@ -1,0 +1,109 @@
+# ChangeLog for dev-python/whoosh
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.8 2012/12/16 16:20:10 ago Exp $
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> whoosh-2.4.1.ebuild:
+  Stable for x86, wrt bug #446082
+
+  09 Dec 2012; <ago@gentoo.org> whoosh-2.4.1.ebuild:
+  Stable for amd64, wrt bug #446082
+
+  13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> whoosh-2.4.0.ebuild,
+  whoosh-2.4.1.ebuild:
+  Update license info, bug #433371
+
+  07 Aug 2012; Patrick Lauer <patrick@gentoo.org> whoosh-2.4.1.ebuild:
+  Restricting py-2.5 and jython
+
+  03 Jul 2012; Mike Gilbert <floppym@gentoo.org> whoosh-2.4.1.ebuild:
+  Simplify PYTHON_DEPEND per Arfrever.
+
+  29 Jun 2012; Anthony G. Basile <blueness@gentoo.org> whoosh-2.4.1.ebuild:
+  Correct PYTHON_DEPEND
+
+*whoosh-2.4.1 (29 Jun 2012)
+
+  29 Jun 2012; Anthony G. Basile <blueness@gentoo.org> +whoosh-2.4.1.ebuild:
+  Version bump
+
+*whoosh-2.4.0 (22 May 2012)
+
+  22 May 2012; Anthony G. Basile <blueness@gentoo.org> +whoosh-2.4.0.ebuild,
+  +metadata.xml:
+  Version bump and punt dev-python/Whoosh-2.3.2 with renaming, bug #281095
+
+*Whoosh-2.3.2 (21 May 2012)
+
+  21 May 2012; Anthony G. Basile <blueness@gentoo.org> +Whoosh-2.3.2.ebuild,
+  +files/Whoosh-2.3.2-py25.patch, +metadata.xml:
+  Added from sunrise overlay. I will proxy for Johan, bug #281095.
+
+  26 Dec 2011; Johan Bergström (jbergstroem) <bugs@bergstroem.nu>
+  -Whoosh-2.3.0.ebuild, +Whoosh-2.3.2.ebuild,
+  +files/Whoosh-2.3.2-py25.patch:
+  Version bump. Add patch for failing test
+
+  25 Nov 2011; Johan Bergström (jbergstroem) <bugs@bergstroem.nu>
+  Whoosh-2.3.0.ebuild:
+  Specify versions in depend
+
+  24 Nov 2011; Johan Bergström (jbergstroem) <bugs@bergstroem.nu>
+  -Whoosh-1.8.2.ebuild, +Whoosh-2.3.0.ebuild:
+  Version bump. Thanks to Tommy[D] for reviewing
+
+  29 Apr 2011; Justin Lecher <jlec@gentoo.org> -Whoosh-0.3.18.ebuild,
+  +Whoosh-1.8.2.ebuild:
+  Corrected for multiple PyABI installation
+
+  13 Aug 2010; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  Whoosh-0.3.18.ebuild:
+  Switch to pypi mirror list
+
+  15 May 2010; Michał Górny (sedzimir) <gentoo@mgorny.alt.pl>
+  Whoosh-0.3.18.ebuild:
+  Add explicit python inherit.
+
+  08 Apr 2010; Michał Górny (sedzimir) <gentoo@mgorny.alt.pl>
+  Whoosh-0.3.18.ebuild:
+  Add support for Python ABIs and adjust the Python depend.
+
+  07 Apr 2010; Michał Górny (sedzimir) <gentoo@mgorny.alt.pl>
+  -Whoosh-0.3.15.ebuild, +Whoosh-0.3.18.ebuild:
+  Version bump.
+
+  08 Feb 2010; Michał Górny (sedzimir) <gentoo@mgorny.alt.pl>
+  -Whoosh-0.3.12.ebuild, +Whoosh-0.3.15.ebuild:
+  Version bump.
+
+  22 Jan 2010; Michał Górny (sedzimir) <gentoo@mgorny.alt.pl>
+  -Whoosh-0.3.9.ebuild, +Whoosh-0.3.12.ebuild:
+  Version bump.
+
+  25 Dec 2009; Michał Górny (sedzimir) <gentoo@mgorny.alt.pl>
+  -Whoosh-0.3.0_beta24.ebuild, +Whoosh-0.3.9.ebuild:
+  Version bump, tested on x86.
+
+  20 Sep 2009; Michał Górny (sedzimir) <gentoo@mgorny.alt.pl>
+  -Whoosh-0.1.24.ebuild:
+  Old version no longer used by anything.
+
+  07 Sep 2009; Michał Górny (sedzimir) <gentoo@mgorny.alt.pl>
+  -Whoosh-0.3.0_beta6.ebuild, +Whoosh-0.3.0_beta24.ebuild:
+  Version bump.
+
+  25 Aug 2009; Michał Górny (sedzimir) <gentoo@mgorny.alt.pl>
+  -Whoosh-0.3.0_beta5.ebuild, +Whoosh-0.3.0_beta6.ebuild:
+  Version bump.
+
+  20 Aug 2009; Michał Górny (sedzimir) <gentoo@mgorny.alt.pl>
+  -Whoosh-0.3.0_beta3.ebuild, +Whoosh-0.3.0_beta5.ebuild:
+  Version bump.
+
+  19 Aug 2009; Michał Górny (sedzimir) <gentoo@mgorny.alt.pl>
+  -Whoosh-0.2.6.ebuild, +Whoosh-0.3.0_beta3.ebuild:
+  Version bump. If anyone still needs 0.2, please let me know.
+
+  16 Aug 2009; Michał Górny (sedzimir) <gentoo@mgorny.alt.pl>
+  +Whoosh-0.1.24.ebuild, +Whoosh-0.2.6.ebuild, +metadata.xml:
+  New ebuilds for dev-python/Whoosh (bug #281095), one for current version
+  and the other for 0.1 branch required by django-haystack.

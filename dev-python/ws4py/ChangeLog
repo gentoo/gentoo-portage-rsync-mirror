@@ -1,0 +1,38 @@
+# ChangeLog for dev-python/ws4py
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ChangeLog,v 1.6 2012/10/31 06:51:09 patrick Exp $
+
+*ws4py-0.2.3 (31 Oct 2012)
+
+  31 Oct 2012; Patrick Lauer <patrick@gentoo.org> +ws4py-0.2.3.ebuild:
+  Bump
+
+*ws4py-0.2.2 (17 Jul 2012)
+
+  17 Jul 2012; Mike Frysinger <vapier@gentoo.org> +ws4py-0.2.2.ebuild,
+  ws4py-9999.ebuild:
+  Version bump #424135 by Ian Delaney.
+
+  11 Jun 2012; Michał Górny <mgorny@gentoo.org> ws4py-0.2.1-r1.ebuild,
+  ws4py-0.2.1-r2.ebuild, ws4py-0.2.1.ebuild, ws4py-9999.ebuild:
+  Use matching name for download & S to make the ebuilds forward-proof to vcs-
+  snapshot API.
+
+*ws4py-0.2.1-r2 (24 Apr 2012)
+
+  24 Apr 2012; Mike Frysinger <vapier@gentoo.org> +ws4py-0.2.1-r2.ebuild,
+  metadata.xml, ws4py-9999.ebuild:
+  Further refine client/server install and gevent requirement.
+
+*ws4py-0.2.1-r1 (20 Apr 2012)
+
+  20 Apr 2012; Mike Frysinger <vapier@gentoo.org> +ws4py-0.2.1-r1.ebuild,
+  +files/ws4py-0.2.1-process-data.patch:
+  Add fix from Jon Salz for partial data transfers.
+
+*ws4py-9999 (17 Apr 2012)
+*ws4py-0.2.1 (17 Apr 2012)
+
+  17 Apr 2012; Mike Frysinger <vapier@gentoo.org> +ws4py-0.2.1.ebuild,
+  +ws4py-9999.ebuild, +metadata.xml:
+  Initial ebuild import for ChromiumOS.

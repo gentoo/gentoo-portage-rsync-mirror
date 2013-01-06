@@ -1,0 +1,38 @@
+# ChangeLog for dev-perl/Test-Distribution
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Distribution/ChangeLog,v 1.9 2012/11/18 11:38:39 robbat2 Exp $
+
+  18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Drop duplication of myself as a maintainer where there is a herd.
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Test-Distribution-2.00.ebuild:
+  Cleanup
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> Test-Distribution-2.0.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
+
+*Test-Distribution-2.0.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +Test-Distribution-2.0.0.ebuild:
+  Change version scheme
+
+  19 Jul 2011; Markus Meier <maekke@gentoo.org> Test-Distribution-2.00.ebuild:
+  amd64/x86 stable, bug #374479
+
+  16 Jul 2009; Torsten Veller <tove@gentoo.org>
+  Test-Distribution-2.00.ebuild:
+  Depend on Module-Build. Run tests
+
+  23 Jun 2009; Torsten Veller <tove@gentoo.org>
+  Test-Distribution-2.00.ebuild:
+  New virtual: dev-perl/Module-CoreList to virtual
+
+*Test-Distribution-2.00 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +Test-Distribution-2.00.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.

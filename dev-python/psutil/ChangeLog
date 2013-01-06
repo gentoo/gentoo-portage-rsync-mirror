@@ -1,0 +1,66 @@
+# ChangeLog for dev-python/psutil
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/ChangeLog,v 1.15 2012/11/20 20:54:11 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> psutil-0.6.1.ebuild:
+  Stable for x86, wrt bug #441286
+
+  06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> psutil-0.6.1.ebuild:
+  Stable for amd64, wrt bug #441286
+
+*psutil-0.6.1 (24 Aug 2012)
+
+  24 Aug 2012; Patrick Lauer <patrick@gentoo.org> +psutil-0.6.1.ebuild:
+  Bump
+
+*psutil-0.5.1 (11 Jul 2012)
+
+  11 Jul 2012; Tim Harder <radhermit@gentoo.org> +psutil-0.5.1.ebuild:
+  Version bump.
+
+  12 Mar 2012; Marien Zwart <marienz@gentoo.org> psutil-0.3.0.ebuild,
+  psutil-0.4.0.ebuild, psutil-0.4.1.ebuild:
+  Fix typo (s/PYTHON_RESTRICT_ABIS/RESTRICT_PYTHON_ABIS/)
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> psutil-0.3.0.ebuild,
+  psutil-0.4.0.ebuild, psutil-0.4.1.ebuild:
+  Restricting jython properly
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> psutil-0.3.0.ebuild,
+  psutil-0.4.0.ebuild, psutil-0.4.1.ebuild:
+  Restricting jython
+
+*psutil-0.4.1 (14 Feb 2012)
+
+  14 Feb 2012; Patrick Lauer <patrick@gentoo.org> +psutil-0.4.1.ebuild:
+  Bump for #402851
+
+*psutil-0.4.0 (25 Dec 2011)
+
+  25 Dec 2011; Patrick Lauer <patrick@gentoo.org> +psutil-0.4.0.ebuild:
+  Bump for #393603
+
+  25 Oct 2011; Tim Harder <radhermit@gentoo.org> -psutil-0.2.1.ebuild:
+  Remove old.
+
+  24 Oct 2011; Markus Meier <maekke@gentoo.org> psutil-0.3.0.ebuild:
+  x86 stable, bug #387455
+
+  18 Oct 2011; Tony Vroon <chainsaw@gentoo.org> psutil-0.3.0.ebuild:
+  Marked stable on AMD64 as a dependency of app-vim/automatictexplugin, based
+  on arch testing by Ian "idella4" Delaney & Agostino "ago" Sarubbo in bug
+  #387455.
+
+*psutil-0.3.0 (04 Sep 2011)
+
+  04 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +psutil-0.3.0.ebuild:
+  Version bump to 0.3.0 (bug 379427).
+
+  26 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> psutil-0.2.1.ebuild:
+  HOMEPAGE and tests fix
+
+*psutil-0.2.1 (30 May 2011)
+
+  30 May 2011; Tim Harder <radhermit@gentoo.org> +psutil-0.2.1.ebuild,
+  +metadata.xml:
+  Initial import from sunrise thanks to Michał Górny (bug #322977).

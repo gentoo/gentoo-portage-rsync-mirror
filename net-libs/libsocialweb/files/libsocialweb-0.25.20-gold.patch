@@ -1,0 +1,89 @@
+ src/Makefile.am   |    2 +-
+ src/Makefile.in   |    2 +-
+ tests/Makefile.am |    8 ++++----
+ tests/Makefile.in |    8 ++++----
+ 4 files changed, 10 insertions(+), 10 deletions(-)
+
+diff --git a/src/Makefile.am b/src/Makefile.am
+index fe1e9ba..9e2f40d 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -2,7 +2,7 @@ libexec_PROGRAMS = libsocialweb-core
+ 
+ libsocialweb_core_CFLAGS = -I$(top_srcdir) $(DBUS_GLIB_CFLAGS) $(SOUP_CFLAGS) $(GCOV_CFLAGS)
+ libsocialweb_core_SOURCES = main.c poll.h poll.c
+-libsocialweb_core_LDADD = ../libsocialweb/libsocialweb.la $(DBUS_GLIB_LIBS) $(SOUP_LIBS) $(GCOV_LDFLAGS)
++libsocialweb_core_LDADD = ../libsocialweb/libsocialweb.la $(DBUS_GLIB_LIBS) $(SOUP_LIBS) $(GCOV_LDFLAGS) $(GLIB_LIBS)
+ 
+ %.service: %.service.in ../config.log
+ 	$(AM_V_GEN)sed -e "s|\@dir\@|$(libexecdir)|" $< > $@
+diff --git a/src/Makefile.in b/src/Makefile.in
+index 4d06f31..a029caf 100644
+--- a/src/Makefile.in
++++ b/src/Makefile.in
+@@ -314,7 +314,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ libsocialweb_core_CFLAGS = -I$(top_srcdir) $(DBUS_GLIB_CFLAGS) $(SOUP_CFLAGS) $(GCOV_CFLAGS)
+ libsocialweb_core_SOURCES = main.c poll.h poll.c
+-libsocialweb_core_LDADD = ../libsocialweb/libsocialweb.la $(DBUS_GLIB_LIBS) $(SOUP_LIBS) $(GCOV_LDFLAGS)
++libsocialweb_core_LDADD = ../libsocialweb/libsocialweb.la $(DBUS_GLIB_LIBS) $(SOUP_LIBS) $(GCOV_LDFLAGS) $(GLIB_LIBS)
+ servicedir = $(datadir)/dbus-1/services/
+ service_in_files = libsocialweb.service.in
+ service_DATA = libsocialweb.service
+diff --git a/tests/Makefile.am b/tests/Makefile.am
+index e40cafd..59aa612 100644
+--- a/tests/Makefile.am
++++ b/tests/Makefile.am
+@@ -2,7 +2,7 @@ noinst_PROGRAMS = test-online test-client-online test-download test-download-asy
+ 
+ test_online_SOURCES = test-online.c
+ test_online_CFLAGS = -I$(top_srcdir) $(GOBJECT_CFLAGS)
+-test_online_LDADD = $(GOBJECT_LIBS) ../libsocialweb/libsocialweb.la
++test_online_LDADD = $(GOBJECT_LIBS) ../libsocialweb/libsocialweb.la $(GLIB_LIBS)
+ 
+ test_client_online_SOURCES = test-client-online.c
+ test_client_online_CFLAGS = -I$(top_srcdir) $(GOBJECT_CFLAGS)
+@@ -10,12 +10,12 @@ test_client_online_LDADD = $(GOBJECT_LIBS) ../libsocialweb-client/libsocialweb-c
+ 
+ test_download_SOURCES = test-download.c
+ test_download_CFLAGS = -I$(top_srcdir) $(GOBJECT_CFLAGS) $(SOUP_CFLAGS) $(DBUS_GLIB_CFLAGS)
+-test_download_LDADD = $(GOBJECT_LIBS) $(SOUP_LIBS) ../libsocialweb/libsocialweb.la
++test_download_LDADD = $(GOBJECT_LIBS) $(SOUP_LIBS) ../libsocialweb/libsocialweb.la $(GLIB_LIBS)
+ 
+ test_download_async_SOURCES = test-download-async.c
+ test_download_async_CFLAGS = -I$(top_srcdir) $(GOBJECT_CFLAGS) $(SOUP_CFLAGS) $(DBUS_GLIB_CFLAGS)
+-test_download_async_LDADD = $(GOBJECT_LIBS) $(SOUP_LIBS) ../libsocialweb/libsocialweb.la
++test_download_async_LDADD = $(GOBJECT_LIBS) $(SOUP_LIBS) ../libsocialweb/libsocialweb.la $(GLIB_LIBS)
+ 
+ test_upload_SOURCES = test-upload.c
+ test_upload_CFLAGS = -I$(top_srcdir) $(GOBJECT_CFLAGS) $(SOUP_CFLAGS) $(DBUS_GLIB_CFLAGS)
+-test_upload_LDADD = $(GOBJECT_LIBS) $(SOUP_LIBS) ../libsocialweb/libsocialweb.la ../libsocialweb-client/libsocialweb-client.la
++test_upload_LDADD = $(GOBJECT_LIBS) $(SOUP_LIBS) ../libsocialweb/libsocialweb.la ../libsocialweb-client/libsocialweb-client.la $(GLIB_LIBS)
+diff --git a/tests/Makefile.in b/tests/Makefile.in
+index 9a7bb5b..77feaa3 100644
+--- a/tests/Makefile.in
++++ b/tests/Makefile.in
+@@ -326,19 +326,19 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ test_online_SOURCES = test-online.c
+ test_online_CFLAGS = -I$(top_srcdir) $(GOBJECT_CFLAGS)
+-test_online_LDADD = $(GOBJECT_LIBS) ../libsocialweb/libsocialweb.la
++test_online_LDADD = $(GOBJECT_LIBS) ../libsocialweb/libsocialweb.la $(GLIB_LIBS)
+ test_client_online_SOURCES = test-client-online.c
+ test_client_online_CFLAGS = -I$(top_srcdir) $(GOBJECT_CFLAGS)
+ test_client_online_LDADD = $(GOBJECT_LIBS) ../libsocialweb-client/libsocialweb-client.la
+ test_download_SOURCES = test-download.c
+ test_download_CFLAGS = -I$(top_srcdir) $(GOBJECT_CFLAGS) $(SOUP_CFLAGS) $(DBUS_GLIB_CFLAGS)
+-test_download_LDADD = $(GOBJECT_LIBS) $(SOUP_LIBS) ../libsocialweb/libsocialweb.la
++test_download_LDADD = $(GOBJECT_LIBS) $(SOUP_LIBS) ../libsocialweb/libsocialweb.la $(GLIB_LIBS)
+ test_download_async_SOURCES = test-download-async.c
+ test_download_async_CFLAGS = -I$(top_srcdir) $(GOBJECT_CFLAGS) $(SOUP_CFLAGS) $(DBUS_GLIB_CFLAGS)
+-test_download_async_LDADD = $(GOBJECT_LIBS) $(SOUP_LIBS) ../libsocialweb/libsocialweb.la
++test_download_async_LDADD = $(GOBJECT_LIBS) $(SOUP_LIBS) ../libsocialweb/libsocialweb.la $(GLIB_LIBS)
+ test_upload_SOURCES = test-upload.c
+ test_upload_CFLAGS = -I$(top_srcdir) $(GOBJECT_CFLAGS) $(SOUP_CFLAGS) $(DBUS_GLIB_CFLAGS)
+-test_upload_LDADD = $(GOBJECT_LIBS) $(SOUP_LIBS) ../libsocialweb/libsocialweb.la ../libsocialweb-client/libsocialweb-client.la
++test_upload_LDADD = $(GOBJECT_LIBS) $(SOUP_LIBS) ../libsocialweb/libsocialweb.la ../libsocialweb-client/libsocialweb-client.la $(GLIB_LIBS)
+ all: all-am
+ 
+ .SUFFIXES:

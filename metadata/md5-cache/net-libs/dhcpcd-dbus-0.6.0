@@ -1,0 +1,11 @@
+DEFINED_PHASES=configure
+DEPEND=sys-apps/dbus
+DESCRIPTION=DBus bindings for dhcpcd
+EAPI=4
+HOMEPAGE=http://roy.marples.name/projects/dhcpcd-dbus/
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD-2
+RDEPEND=sys-apps/dbus >=net-misc/dhcpcd-5.0
+SLOT=0
+SRC_URI=http://roy.marples.name/downloads/dhcpcd/dhcpcd-dbus-0.6.0.tar.bz2
+_md5_=3b32aaf868c2709f7d3fee2b0afbe55c

@@ -1,0 +1,126 @@
+# ChangeLog for sec-policy/selinux-gpg
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gpg/ChangeLog,v 1.26 2012/12/30 19:25:43 swift Exp $
+
+*selinux-gpg-2.20120725-r9 (21 Dec 2012)
+
+  21 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-gpg-2.20120725-r9.ebuild:
+  Bumping to revision 9
+
+  17 Dec 2012; Sven Vermeulen <swift@gentoo.org> -selinux-gpg-2.20120215-r1.ebuild,
+  -selinux-gpg-2.20120215-r14.ebuild, -selinux-gpg-2.20120215-r15.ebuild,
+  -selinux-gpg-2.20120215-r2.ebuild, -selinux-gpg-2.20120215.ebuild:
+  Removing older ebuilds
+
+  13 Dec 2012; Sven Vermeulen <swift@gentoo.org> selinux-gpg-2.20120725-r8.ebuild:
+  Stabilization
+
+*selinux-gpg-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-gpg-2.20120725-r8.ebuild:
+  Bumping to revision 8
+
+*selinux-gpg-2.20120725-r7 (18 Nov 2012)
+
+  18 Nov 2012; Sven Vermeulen <swift@gentoo.org> +selinux-gpg-2.20120725-r7.ebuild:
+  Pushing out rev 7
+
+*selinux-gpg-9999 (13 Oct 2012)
+
+  13 Oct 2012; Sven Vermeulen <swift@gentoo.org> +selinux-gpg-9999.ebuild:
+  Adding live ebuild
+
+  04 Oct 2012; Sven Vermeulen <swift@gentoo.org> selinux-gpg-2.20120725-r5.ebuild:
+  Stabilization
+
+*selinux-gpg-2.20120725-r5 (21 Sep 2012)
+
+  21 Sep 2012; Sven Vermeulen <swift@gentoo.org> +selinux-gpg-2.20120725-r5.ebuild:
+  Introducing policy for 2.20120725, rev5
+
+  30 Jul 2012; Sven Vermeulen <swift@gentoo.org> selinux-gpg-2.20120215-r14.ebuild:
+  Stabilization of revision 14 of the SELinux policy modules
+
+*selinux-gpg-2.20120215-r15 (26 Jul 2012)
+
+  26 Jul 2012; Sven Vermeulen <swift@gentoo.org> +selinux-gpg-2.20120215-r15.ebuild:
+  Bump to rev15
+
+*selinux-gpg-2.20120215-r14 (16 Jul 2012)
+
+  16 Jul 2012; Sven Vermeulen <swift@gentoo.org> +selinux-gpg-2.20120215-r14.ebuild:
+  Bumping to rev14
+
+*selinux-gpg-2.20120215-r2 (27 Jun 2012)
+
+  27 Jun 2012; Sven Vermeulen <swift@gentoo.org> +selinux-gpg-2.20120215-r2.ebuild:
+  Bump to revision 13
+
+*selinux-gpg-2.20120215-r1 (20 May 2012)
+
+  20 May 2012; Sven Vermeulen <swift@gentoo.org> +selinux-gpg-2.20120215-r1.ebuild:
+  Bumping to rev 9
+
+  13 May 2012; Sven Vermeulen <swift@gentoo.org> -selinux-gpg-2.20110726-r2.ebuild,
+  -selinux-gpg-2.20110726-r3.ebuild:
+  Removing deprecated ebuilds (cleanup)
+
+  29 Apr 2012; Sven Vermeulen <swift@gentoo.org> selinux-gpg-2.20120215.ebuild:
+  Stabilizing revision 7
+
+  31 Mar 2012; Sven Vermeulen <swift@gentoo.org> selinux-gpg-2.20110726-r3.ebuild:
+  Stabilizing
+
+  31 Mar 2012; Sven Vermeulen <swift@gentoo.org> selinux-gpg-2.20110726-r2.ebuild,
+  selinux-gpg-2.20110726-r3.ebuild, +selinux-gpg-2.20120215.ebuild:
+  Remove deprecated dependency
+
+*selinux-gpg-2.20120215 (31 Mar 2012)
+
+  31 Mar 2012; Sven Vermeulen <swift@gentoo.org> +selinux-gpg-2.20120215.ebuild:
+  Bumping to 2.20120215 policies
+
+*selinux-gpg-2.20110726-r3 (23 Feb 2012)
+
+  23 Feb 2012; Sven Vermeulen <swift@gentoo.org> +selinux-gpg-2.20110726-r3.ebuild:
+  Support reading of mutt_home_t files for accessing mutt cache
+
+  12 Nov 2011; Sven Vermeulen <swift@gentoo.org> -files/0021-gpg-fix-mutt-call-r4.patch,
+  -files/fix-apps-gpg-r2.patch, -selinux-gpg-2.20101213-r2.ebuild,
+  -selinux-gpg-2.20110726-r1.ebuild:
+  Removing old policies
+
+  12 Nov 2011; Sven Vermeulen <swift@gentoo.org> selinux-gpg-2.20110726-r1.ebuild,
+  selinux-gpg-2.20110726-r2.ebuild:
+  Add minor block on selinux-gnupg to ensure that collisions do not occur
+
+  23 Oct 2011; Sven Vermeulen <swift@gentoo.org> selinux-gpg-2.20110726-r2.ebuild:
+  Stabilization (tracker #384231)
+
+*selinux-gpg-2.20110726-r2 (17 Sep 2011)
+
+  17 Sep 2011; Sven Vermeulen <swift@gentoo.org> +selinux-gpg-2.20110726-r2.ebuild:
+  Add gpg_exec interface, used by portage domain (signed tree support)
+
+  09 Sep 2011; Sven Vermeulen <swift@gentoo.org> +files/0021-gpg-fix-mutt-call-r4.patch,
+  selinux-gpg-2.20110726-r1.ebuild:
+  Fix build failure due to wrong call (#382143)
+
+*selinux-gpg-2.20110726-r1 (28 Aug 2011)
+
+  28 Aug 2011; Sven Vermeulen <swift@gentoo.org> +selinux-gpg-2.20110726-r1.ebuild:
+  Updating policy builds to refpolicy 20110726
+
+  25 Jul 2011; Anthony G. Basile <blueness@gentoo.org>
+  +files/fix-apps-gpg-r2.patch, +selinux-gpg-2.20101213-r2.ebuild,
+  +metadata.xml:
+  Initial commit to tree
+
+  22 Jul 2011; Sven Vermeulen <swift@gentoo.org> selinux-gpg-2.20101213-r2.ebuild:
+  Add proper blocker to automatically switch from gnupg to gpg
+
+*selinux-gpg-2.20101213-r2 (22 Jul 2011)
+
+  22 Jul 2011; Sven Vermeulen <swift@gentoo.org> +selinux-gpg-2.20101213-r2.ebuild,
+  +metadata.xml:
+  Use module-based naming as per Gentoo Hardened SELinux guidelines

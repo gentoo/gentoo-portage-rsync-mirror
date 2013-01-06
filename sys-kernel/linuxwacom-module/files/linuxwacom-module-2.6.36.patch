@@ -1,0 +1,30 @@
+=== modified file 'src/2.6.30/wacom_wac.c'
+--- src/2.6.30/wacom_wac.c	2010-10-29 07:30:39 +0000
++++ src/2.6.30/wacom_wac.c	2010-10-29 07:31:29 +0000
+@@ -202,10 +202,10 @@
+ 	y = get_unaligned_be16(&data[5 + (idx * 9)]) & 0x7ff;
+ 
+ 	if (wacom->last_finger != finger) {
+-		if (x == input->abs[ABS_X])
++		if (x == input->absinfo[ABS_X].value)
+ 			x++;
+ 
+-		if (y ==  input->abs[ABS_Y])
++		if (y ==  input->absinfo[ABS_X].value)
+ 			y++;
+ 	}
+ 
+@@ -843,10 +843,10 @@
+ 	int y = le16_to_cpup((__le16 *)&data[4 + finger * 2]) & 0x7fff;
+ 
+ 	if (wacom->last_finger != finger) {
+-		if (x == input->abs[ABS_X])
++		if (x == input->absinfo[ABS_X].value)
+ 			x++;
+ 
+-		if (y == input->abs[ABS_Y])
++		if (y == input->absinfo[ABS_X].value)
+ 			y++;
+ 	}
+ 
+

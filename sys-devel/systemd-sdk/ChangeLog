@@ -1,0 +1,9 @@
+# ChangeLog for sys-devel/systemd-sdk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/systemd-sdk/ChangeLog,v 1.1 2012/12/15 12:53:48 mgorny Exp $
+
+*systemd-sdk-9999 (15 Dec 2012)
+
+  15 Dec 2012; Michał Górny <mgorny@gentoo.org> +metadata.xml,
+  +systemd-sdk-9999.ebuild:
+  Import the live ebuild for systemd-sdk, a bunch of systemd-related M4 macros.

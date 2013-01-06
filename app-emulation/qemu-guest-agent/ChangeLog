@@ -1,0 +1,34 @@
+# ChangeLog for app-emulation/qemu-guest-agent
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.6 2012/12/13 20:06:02 ssuominen Exp $
+
+  13 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
+  qemu-guest-agent-1.1.1.ebuild, qemu-guest-agent-1.2.0.ebuild:
+  Use udev_newrules to install udev rules into correct path wrt #447116 by
+  Alexander Tsoy
+
+  30 Oct 2012; Doug Goldstein <cardoe@gentoo.org> files/qemu-ga.init:
+  Remove empty depend to fix bug #436310
+
+*qemu-guest-agent-1.2.0 (29 Oct 2012)
+
+  29 Oct 2012; Doug Goldstein <cardoe@gentoo.org>
+  +qemu-guest-agent-1.2.0.ebuild:
+  Version bump. Always install systemd files.
+
+  09 Oct 2012; Doug Goldstein <cardoe@gentoo.org>
+  qemu-guest-agent-1.1.1.ebuild:
+  Update qemu blocker to reflect app-emulation/qemu-kvm -> app-emulation/qemu.
+
+  28 Jul 2012; Doug Goldstein <cardoe@gentoo.org> qemu-guest-agent-1.1.1.ebuild:
+  Remove trailing whitespace
+
+*qemu-guest-agent-1.1.1 (28 Jul 2012)
+
+  28 Jul 2012; Doug Goldstein <cardoe@gentoo.org>
+  +qemu-guest-agent-1.1.1.ebuild, +files/qemu-ga.conf, +files/qemu-ga.init,
+  +files/qemu-ga.logrotate, +files/qemu-ga-systemd.service,
+  +files/qemu-ga-systemd.udev, +metadata.xml:
+  Add separate ebuild for the QEMU guest agent so it can be used when Gentoo is
+  a guest instead of installing the all of QEMU for just the guest.
+

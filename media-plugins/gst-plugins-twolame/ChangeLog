@@ -1,0 +1,194 @@
+# ChangeLog for media-plugins/gst-plugins-twolame
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-twolame/ChangeLog,v 1.43 2013/01/01 17:54:33 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-twolame-0.10.18.ebuild, gst-plugins-twolame-0.10.19.ebuild,
+  gst-plugins-twolame-1.0.3.ebuild:
+  Add ~ia64, wrt bug #389433
+
+  09 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-plugins-twolame-0.10.19.ebuild, gst-plugins-twolame-1.0.3.ebuild:
+  Restore accidentally dropped keywords.
+
+*gst-plugins-twolame-1.0.3 (05 Dec 2012)
+
+  05 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  gst-plugins-twolame-0.10.19.ebuild, +gst-plugins-twolame-1.0.3.ebuild:
+  Version bump.
+
+*gst-plugins-twolame-0.10.19 (02 Dec 2012)
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-twolame-0.10.19.ebuild:
+  Version bump.
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-twolame-0.10.16.ebuild, -gst-plugins-twolame-0.10.17.ebuild,
+  gst-plugins-twolame-0.10.18.ebuild:
+  Clean up old revisions. EAPI bump stable due to pending eclass changes and
+  slot pinning.
+
+  21 Oct 2012; Markus Meier <maekke@gentoo.org>
+  gst-plugins-twolame-0.10.18.ebuild:
+  add ~arm, bug #389433
+
+  15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-twolame-0.10.18.ebuild:
+  ppc/ppc64 stable wrt #382225
+
+  09 Oct 2011; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-twolame-0.10.18.ebuild:
+  alpha/sparc stable wrt #382225
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
+  gst-plugins-twolame-0.10.18.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Tomáš "Mepho" Pružina in bug #382225.
+
+  20 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-plugins-twolame-0.10.18.ebuild:
+  x86 stable wrt bug #382225
+
+*gst-plugins-twolame-0.10.18 (06 Aug 2011)
+
+  06 Aug 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-twolame-0.10.18.ebuild:
+  Version bump to be in sync with the rest; no code changes
+
+  25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-twolame-0.10.17.ebuild:
+  ppc/ppc64 stable wrt #368281
+
+  05 Jun 2011; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-twolame-0.10.17.ebuild:
+  alpha/sparc stable wrt #368281
+
+  23 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-twolame-0.10.17.ebuild:
+  Stable on amd64 wrt bug #368281
+
+  23 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-plugins-twolame-0.10.17.ebuild:
+  x86 stable wrt bug #368281
+
+  04 May 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-twolame-0.10.13.ebuild:
+  Remove old
+
+  23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-twolame-0.10.16.ebuild:
+  ppc/ppc64 stable wrt #353264
+
+*gst-plugins-twolame-0.10.17 (17 Mar 2011)
+
+  17 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gst-plugins-twolame-0.10.17.ebuild:
+  Bump to 0.10.17: no major changes
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-twolame-0.10.16.ebuild:
+  alpha/sparc stable wrt #353264
+
+  05 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-plugins-twolame-0.10.16.ebuild:
+  x86 stable wrt bug #353264
+
+  31 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-twolame-0.10.16.ebuild:
+  Stable on amd64 wrt bug #353264
+
+*gst-plugins-twolame-0.10.16 (27 Dec 2010)
+
+  27 Dec 2010; Mart Raudsepp <leio@gentoo.org> metadata.xml,
+  -gst-plugins-twolame-0.10.12.ebuild, +gst-plugins-twolame-0.10.16.ebuild:
+  Version bump to be in sync with the rest; no code changes
+
+  05 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  gst-plugins-twolame-0.10.13.ebuild:
+  ppc64 stable wrt #324691
+
+  18 Apr 2010; <nixnut@gentoo.org> gst-plugins-twolame-0.10.13.ebuild:
+  ppc stable #308379
+
+  05 Apr 2010; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-twolame-0.10.13.ebuild:
+  alpha/sparc stable wrt #308379
+
+  24 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-twolame-0.10.13.ebuild:
+  stable x86, bug 308379
+
+  19 Mar 2010; Pacho Ramos <pacho@gentoo.org>
+  gst-plugins-twolame-0.10.13.ebuild:
+  amd64 stable, bug 308379
+
+  15 Feb 2010; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-twolame-0.10.11.ebuild:
+  Remove old
+
+  05 Jan 2010; nixnut <nixnut@gentoo.org>
+  gst-plugins-twolame-0.10.12.ebuild:
+  ppc stable #290343
+
+  29 Dec 2009; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-twolame-0.10.12.ebuild:
+  sparc stable wrt #290343
+
+  29 Nov 2009; Tobias Klausmann <klausman@gentoo.org>
+  gst-plugins-twolame-0.10.12.ebuild:
+  Stable on alpha, bug #290343
+
+  18 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-twolame-0.10.12.ebuild:
+  x86 stable, bug 290343
+
+  17 Nov 2009; Brent Baude <ranger@gentoo.org>
+  gst-plugins-twolame-0.10.12.ebuild:
+  Marking gst-plugins-twolame-0.10.12 ppc64 stable for bug 290343
+
+*gst-plugins-twolame-0.10.13 (16 Nov 2009)
+
+  16 Nov 2009; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-twolame-0.10.13.ebuild:
+  Version bump to be in sync with the rest; no code changes
+
+  10 Nov 2009; Olivier Crête <tester@gentoo.org>
+  gst-plugins-twolame-0.10.12.ebuild:
+  Stable on amd64, bug #290343
+
+*gst-plugins-twolame-0.10.12 (07 Sep 2009)
+
+  07 Sep 2009; Olivier Crête <tester@gentoo.org>
+  +gst-plugins-twolame-0.10.12.ebuild:
+  Version bump
+
+  01 Jul 2009; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-twolame-0.10.11.ebuild:
+  sparc stable wrt #266986
+
+  21 May 2009; Brent Baude <ranger@gentoo.org>
+  gst-plugins-twolame-0.10.11.ebuild:
+  Marking gst-plugins-twolame-0.10.11 ppc64 stable for bug 266986
+
+  21 May 2009; Brent Baude <ranger@gentoo.org>
+  gst-plugins-twolame-0.10.11.ebuild:
+  Marking gst-plugins-twolame-0.10.11 ppc stable for bug 266986
+
+  14 May 2009; Markus Meier <maekke@gentoo.org>
+  gst-plugins-twolame-0.10.11.ebuild:
+  amd64 stable, bug #266986
+
+  12 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-twolame-0.10.11.ebuild:
+  stable x86, bug 266986
+
+  03 May 2009; Tobias Klausmann <klausman@gentoo.org>
+  gst-plugins-twolame-0.10.11.ebuild:
+  Stable on alpha, bug #266986
+
+*gst-plugins-twolame-0.10.11 (30 Mar 2009)
+
+  30 Mar 2009; Olivier Crête <tester@gentoo.org> +metadata.xml,
+  +gst-plugins-twolame-0.10.11.ebuild:
+  Added twolame plugin from ugly

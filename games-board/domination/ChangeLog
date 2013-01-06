@@ -1,0 +1,55 @@
+# ChangeLog for games-board/domination
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/domination/ChangeLog,v 1.12 2013/01/03 11:00:26 ago Exp $
+
+  03 Jan 2013; Agostino Sarubbo <ago@gentoo.org> domination-1.1.1.2.ebuild:
+  Stable for amd64, wrt bug #449910
+
+  03 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -domination-1.1.1.0.ebuild:
+  old
+
+  04 Dec 2012;  <ago@gentoo.org> domination-1.1.1.1.ebuild:
+  Stable for x86, wrt bug #439212
+
+*domination-1.1.1.2 (20 Nov 2012)
+
+  20 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +domination-1.1.1.2.ebuild:
+  version bump
+
+  30 Oct 2012; <ago@gentoo.org> domination-1.1.1.1.ebuild:
+  Stable for amd64, wrt bug #439212
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  domination-1.1.1.0.ebuild:
+  x86 stable wrt bug #432070
+
+  21 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  -domination-1.1.0.9.ebuild:
+  old
+
+*domination-1.1.1.1 (14 Sep 2012)
+
+  14 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +domination-1.1.1.1.ebuild:
+  version bump
+
+  21 Aug 2012; Agostino Sarubbo <ago@gentoo.org> domination-1.1.1.0.ebuild:
+  Stable for amd64, wrt bug #432070
+
+*domination-1.1.1.0 (19 Jul 2012)
+
+  19 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +domination-1.1.1.0.ebuild:
+  version bump
+
+  28 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  domination-1.1.0.9.ebuild:
+  tidy
+
+*domination-1.1.0.9 (28 Jun 2012)
+
+  28 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  +domination-1.1.0.9.ebuild, +metadata.xml:
+  initial commit; package renamed from jrisk

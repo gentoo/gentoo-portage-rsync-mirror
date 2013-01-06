@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>x11</herd>
+	<maintainer>
+		<email>jkarlson@cc.hut.fi</email>
+		<description>Proxy maintainer. Assign to herd and CC him on bugs</description>
+	</maintainer>
+	<use>
+		<flag name='qt4'>
+			Install qt4 dependent optional tools (e.g Catalyst Control Panel)
+		</flag>
+	</use>
+	<use>
+		<flag name='modules'>Build the kernel modules</flag>
+	</use>
+	<use>
+		<flag name='pax_kernel'>
+			Enable if the user plans to run the package under a pax enabled hardened kernel
+		</flag>
+	</use>
+	<use>
+		<flag name='disable-watermark'>Do a potentially dangerous binary search and replace to disable watermark</flag>
+	</use>
+</pkgmetadata>

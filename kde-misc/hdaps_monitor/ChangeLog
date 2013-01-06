@@ -1,0 +1,20 @@
+# ChangeLog for kde-misc/hdaps_monitor
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/hdaps_monitor/ChangeLog,v 1.4 2012/03/26 07:24:43 scarabeus Exp $
+
+  26 Mar 2012; Tomáš Chvátal <scarabeus@gentoo.org> hdaps_monitor-0.3.ebuild:
+  Stabilise 0.3 on amd64 and x86.
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org> hdaps_monitor-0.3.ebuild:
+  Bump to EAPI=4
+
+  23 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  hdaps_monitor-0.3.ebuild:
+  Add hdapsd as rdep. Since without that it wont do anything.
+
+*hdaps_monitor-0.3 (18 Nov 2009)
+
+  18 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +hdaps_monitor-0.3.ebuild:
+  Initial commit wrt #293319, thanks to Andreas Thalhammer for reporting.
+

@@ -1,0 +1,25 @@
+# ChangeLog for dev-python/apipkg
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apipkg/ChangeLog,v 1.4 2012/06/19 17:44:19 xarthisius Exp $
+
+  19 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> apipkg-1.2.ebuild:
+  Drop MY_P, bump to eapi4, add missing dependency on app-arch/unzip, drop test
+  fixes as they're no longer necessary. Thanks to Arfrever for the patch
+
+*apipkg-1.2 (19 Jun 2012)
+
+  19 Jun 2012; Patrick Lauer <patrick@gentoo.org> +apipkg-1.2.ebuild:
+  Bump, fixes #341673 #421793
+
+*apipkg-1.0 (16 Oct 2010)
+
+  16 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -apipkg-1.0_beta6.ebuild, +apipkg-1.0.ebuild:
+  Version bump.
+
+*apipkg-1.0_beta6 (02 Oct 2010)
+
+  02 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +apipkg-1.0_beta6.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+

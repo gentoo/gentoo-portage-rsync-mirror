@@ -1,0 +1,429 @@
+# ChangeLog for www-servers/apache
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.203 2012/11/27 18:46:57 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
+
+  20 Oct 2012; Raúl Porcel <armin76@gentoo.org> apache-2.2.23.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #432284
+
+  16 Oct 2012; Andreas Schuerch <nativemad@gentoo.org> apache-2.2.23.ebuild:
+  x86 stable, see bug 432284
+
+  15 Oct 2012; Anthony G. Basile <blueness@gentoo.org> apache-2.2.23.ebuild:
+  stable arm, bug #432284
+
+  14 Oct 2012; Jeroen Roovers <jer@gentoo.org> apache-2.2.23.ebuild:
+  Stable for HPPA (bug #432284).
+
+  13 Oct 2012; Anthony G. Basile <blueness@gentoo.org> apache-2.2.23.ebuild:
+  stable ppc ppc64, bug #432284
+
+  13 Oct 2012; Agostino Sarubbo <ago@gentoo.org> apache-2.2.23.ebuild:
+  Stable for amd64, wrt bug #432284
+
+*apache-2.4.3 (12 Oct 2012)
+
+  12 Oct 2012; Patrick Lauer <patrick@gentoo.org> +apache-2.4.3.ebuild,
+  -apache-2.4.2.ebuild, metadata.xml:
+  Bump with fixes from #410607 #411433 #433736
+
+*apache-2.2.23 (12 Oct 2012)
+
+  12 Oct 2012; Patrick Lauer <patrick@gentoo.org> +apache-2.2.23.ebuild:
+  Bump for #432284
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> apache-2.2.22-r1.ebuild:
+  keyword ~amd64-fbsd
+
+  20 Apr 2012; Patrick Lauer <patrick@gentoo.org> -apache-2.2.21-r1.ebuild,
+  -apache-2.2.21-r2.ebuild, -apache-2.2.22.ebuild, -apache-2.4.1-r2.ebuild:
+  Cleanup
+
+*apache-2.2.22-r1 (20 Apr 2012)
+
+  20 Apr 2012; Patrick Lauer <patrick@gentoo.org> +apache-2.2.22-r1.ebuild,
+  +files/2.2.22-envvars-std.in:
+  Fix for #412481
+
+*apache-2.4.2 (20 Apr 2012)
+
+  20 Apr 2012; Patrick Lauer <patrick@gentoo.org> +apache-2.4.2.ebuild:
+  Bump (but leave masked) for #412481
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> apache-2.2.22.ebuild:
+  Marking apache-2.2.22 ppc64 for bug 401761
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> apache-2.2.22.ebuild:
+  Marking apache-2.2.22 ppc for bug 401761
+
+  08 Apr 2012; Raúl Porcel <armin76@gentoo.org> apache-2.2.22.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #401761
+
+  07 Apr 2012; Jeff Horelick <jdhore@gentoo.org> apache-2.2.22.ebuild:
+  marked x86 per bug 401761
+
+  06 Apr 2012; Markus Meier <maekke@gentoo.org> apache-2.2.22.ebuild:
+  arm stable, bug #401761
+
+  04 Apr 2012; Jeroen Roovers <jer@gentoo.org> apache-2.4.1-r2.ebuild:
+  Fix quoting issues.
+
+  04 Apr 2012; Jeroen Roovers <jer@gentoo.org> apache-2.2.22.ebuild:
+  Stable for HPPA (bug #401761).
+
+*apache-2.4.1-r2 (01 Apr 2012)
+
+  01 Apr 2012; Patrick Lauer <patrick@gentoo.org> +apache-2.4.1-r2.ebuild,
+  -apache-2.4.1-r1.ebuild:
+  And making apxs actually executable helps ...
+
+*apache-2.4.1-r1 (01 Apr 2012)
+
+  01 Apr 2012; Patrick Lauer <patrick@gentoo.org> +apache-2.4.1-r1.ebuild,
+  -apache-2.4.1.ebuild:
+  Actually installing apxs, #407327
+
+*apache-2.4.1 (01 Apr 2012)
+
+  01 Apr 2012; Patrick Lauer <patrick@gentoo.org> +apache-2.4.1.ebuild:
+  Bump for #405767
+
+  29 Mar 2012; Agostino Sarubbo <ago@gentoo.org> apache-2.2.22.ebuild:
+  Stable for amd64, wrt bug #401761
+
+  28 Mar 2012; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Adding Gerrit as proxy-maintainer
+
+*apache-2.2.22 (28 Mar 2012)
+
+  28 Mar 2012; Patrick Lauer <patrick@gentoo.org> +apache-2.2.22.ebuild:
+  Bump for #401761. init script fix for #389965
+
+  05 Mar 2012; Patrick Lauer <patrick@gentoo.org> apache-2.2.21-r1.ebuild,
+  apache-2.2.21-r2.ebuild:
+  Setting EAPI explicitly, #405911
+
+*apache-2.2.21-r2 (12 Feb 2012)
+
+  12 Feb 2012; <jmbsvicetto@gentoo.org> +apache-2.2.21-r2.ebuild:
+  Add patch to fix the build with libpcre-8.30. Fixes bug #402351.
+  Thanks to John Keeping <john.keeping@lineone.net> for the patch.
+
+  01 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2008:
+  Split ChangeLog.
+
+  02 Dec 2011; Steve Dibb <beandog@gentoo.org> -apache-2.2.14-r1.ebuild,
+  -apache-2.2.15.ebuild, -apache-2.2.16.ebuild, -apache-2.2.16-r1.ebuild,
+  -apache-2.2.17.ebuild, -apache-2.2.20.ebuild, -apache-2.2.21.ebuild:
+  Remove old versions with security vulns.
+
+  29 Oct 2011; Raúl Porcel <armin76@gentoo.org> apache-2.2.21-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #385859
+
+  24 Oct 2011; Markus Meier <maekke@gentoo.org> apache-2.2.21-r1.ebuild:
+  x86 stable, bug #385859
+
+  23 Oct 2011; Markus Meier <maekke@gentoo.org> apache-2.2.21-r1.ebuild:
+  arm stable, bug #385859
+
+  22 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> apache-2.2.21-r1.ebuild:
+  ppc/ppc64 stable wrt #385859
+
+  19 Oct 2011; Jeroen Roovers <jer@gentoo.org> apache-2.2.21-r1.ebuild:
+  Stable for HPPA (bug #385859).
+
+  19 Oct 2011; Tony Vroon <chainsaw@gentoo.org> apache-2.2.21-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in security bug #385859.
+
+*apache-2.2.21-r1 (18 Oct 2011)
+
+  18 Oct 2011; Peter Volkov <pva@gentoo.org> +apache-2.2.21-r1.ebuild:
+  Fix Reverse Proxy Mode Security Bypass (CVE-2011-3368), bug #385859 by
+  Agostino Sarubbo. Init script fixes: 1. use extra_{,started}commands, bug
+  #385637 by Martin von Gagern; 2. check config during restart, bug #384997 wrt
+  Christian Ruppert (idl0r); 3. don't use pidof to check for running instances
+  to make it more ConTainer friendly, bug #384267 by Stef Simoens. Updated
+  defaults in 00_default_settings.conf to better match upstream intentions, bug
+  #387157 by Steve Dibb.
+
+  27 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> apache-2.2.21.ebuild:
+  ppc/ppc64 stable wrt #382971
+
+  17 Sep 2011; Raúl Porcel <armin76@gentoo.org> apache-2.2.21.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #382971
+
+  16 Sep 2011; Jeroen Roovers <jer@gentoo.org> apache-2.2.21.ebuild:
+  Stable for HPPA (bug #382971).
+
+  16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> apache-2.2.21.ebuild:
+  Marked stable on AMD64 based on arch testing by Tomáš "Mepho" Pružina,
+  Agostino "ago" Sarubbo, Ian "idella4" Delaney & Elijah "Armageddon" El
+  Lazkani in bug #382971.
+
+  16 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> apache-2.2.21.ebuild:
+  x86 stable, thanks JD, bug 382971
+
+*apache-2.2.21 (15 Sep 2011)
+
+  15 Sep 2011; Peter Volkov <pva@gentoo.org> +apache-2.2.21.ebuild,
+  metadata.xml:
+  Version bump, fixes security issue in mod_proxy_ajp #382971 and regression
+  for CVE-2011-3192, thank Agostino Sarubbo for report. Add local description
+  for USE static, bug 333885 wrt Diego Elio Pettenò. Use start-stop-daemon to
+  start apache and use system limits, bug #347301 wrt Diego Elio Pettenò.
+  Don't install cruft into /etc/apache2, bug #382997 by Remy Blank.
+
+  03 Sep 2011; Raúl Porcel <armin76@gentoo.org> apache-2.2.20.ebuild:
+  arm/ia64/s390/sh/sparc/x86 stable wrt #380475
+
+  02 Sep 2011; Jeroen Roovers <jer@gentoo.org> apache-2.2.20.ebuild:
+  Stable for HPPA (bug #380475).
+
+  02 Sep 2011; Tobias Klausmann <klausman@gentoo.org> apache-2.2.20.ebuild:
+  Stable on alpha, bug #380475
+
+  02 Sep 2011; Tony Vroon <chainsaw@gentoo.org> apache-2.2.20.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Agostino "ago" Sarubbo in security bug #380475 filed by Alex "a3li"
+  Legler.
+
+*apache-2.2.20 (01 Sep 2011)
+
+  01 Sep 2011; Peter Volkov <pva@gentoo.org> +apache-2.2.20.ebuild:
+  Version bump, fixes security bug #380475 thank Alex Legler for report and
+  Denis Kaganovich for help in bug 368743. Fixes init script, bug 357585 wrt
+  Robert Trace.
+
+  22 Jul 2011; Jeroen Roovers <jer@gentoo.org> apache-2.2.17.ebuild:
+  Stable for HPPA (bug #360625).
+
+  22 Jul 2011; Jeroen Roovers <jer@gentoo.org> apache-2.2.17.ebuild:
+  Stable for HPPA (bug #360625).
+
+  20 May 2011; Kacper Kowalik <xarthisius@gentoo.org> apache-2.2.17.ebuild:
+  ppc64 stable wrt #360625
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org> apache-2.2.17.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #360625
+
+  11 Apr 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> apache-2.2.17.ebuild:
+  x86 stable wrt bug #360625
+
+  10 Apr 2011; Markus Meier <maekke@gentoo.org> apache-2.2.17.ebuild:
+  arm stable, bug #360625
+
+  04 Apr 2011; Brent Baude <ranger@gentoo.org> apache-2.2.17.ebuild:
+  Marking apache-2.2.17 ppc for bug 360625
+
+  26 Mar 2011; Christoph Mende <angelos@gentoo.org> apache-2.2.17.ebuild:
+  Stable on amd64 wrt bug #360625
+
+*apache-2.2.17 (18 Feb 2011)
+
+  18 Feb 2011; Benedikt Böhm <hollow@gentoo.org> +apache-2.2.17.ebuild:
+  version bump
+
+*apache-2.2.16-r1 (02 Dec 2010)
+
+  02 Dec 2010; Robin H. Johnson <robbat2@gentoo.org> +apache-2.2.16-r1.ebuild:
+  Bug #347227: add in mod_reqtimeout (for use on Gentoo Infra). Also add
+  mod_proxy_scgi and document all other modules that are not included.
+
+  19 Sep 2010; Guy Martin <gmsoft@gentoo.org> apache-2.2.16.ebuild:
+  hppa stable wrt #330195
+
+  06 Sep 2010; Brent Baude <ranger@gentoo.org> apache-2.2.16.ebuild:
+  Marking apache-2.2.16 ppc64 for bug 330195
+
+  04 Sep 2010; Raúl Porcel <armin76@gentoo.org> apache-2.2.16.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #330195
+
+  31 Aug 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> apache-2.2.16.ebuild:
+  x86 stable wrt security bug #330195
+
+  30 Aug 2010; Jeroen Roovers <jer@gentoo.org> apache-2.2.16.ebuild:
+  Stable for PPC (bug #330195).
+
+  30 Aug 2010; Markos Chandras <hwoarang@gentoo.org> apache-2.2.16.ebuild:
+  Stable on amd64 wrt bug #330195
+
+*apache-2.2.16 (28 Aug 2010)
+
+  28 Aug 2010; Benedikt Böhm <hollow@gentoo.org> +apache-2.2.16.ebuild:
+  version bump wrt security #330195
+
+  11 Jul 2010; Fabio Erculiani <lxnay@gentoo.org> apache-2.2.14-r1.ebuild,
+  apache-2.2.15.ebuild:
+  make mod_cgi and mod_cgid modular and handled via USE flags
+
+  04 Apr 2010; Guy Martin <gmsoft@gentoo.org> apache-2.2.15.ebuild:
+  hppa stable, #308049
+
+  31 Mar 2010; Raúl Porcel <armin76@gentoo.org> apache-2.2.15.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #308049
+
+  31 Mar 2010; Brent Baude <ranger@gentoo.org> apache-2.2.15.ebuild:
+  Marking apache-2.2.15 ppc64 for bug 308049
+
+  31 Mar 2010; Brent Baude <ranger@gentoo.org> apache-2.2.15.ebuild:
+  Marking apache-2.2.15 ppc for bug 308049
+
+  29 Mar 2010; Markus Meier <maekke@gentoo.org> apache-2.2.15.ebuild:
+  amd64/arm stable, bug #308049
+
+  29 Mar 2010; Christian Faulhammer <fauli@gentoo.org> apache-2.2.15.ebuild:
+  stable x86, security bug 308049
+
+  07 Mar 2010; Benedikt Böhm <hollow@gentoo.org> apache-2.2.15.ebuild:
+  fix openssl DEPEND wrt #308049
+
+*apache-2.2.15 (07 Mar 2010)
+
+  07 Mar 2010; Benedikt Böhm <hollow@gentoo.org> +apache-2.2.15.ebuild:
+  version bump. fixes #293783, #294098, #295916 and #308049
+
+  11 Jan 2010; Benedikt Böhm <hollow@gentoo.org> -apache-2.2.11-r2.ebuild,
+  metadata.xml:
+  cleanup
+
+  01 Jan 2010; Tobias Klausmann <klausman@gentoo.org>
+  apache-2.2.14-r1.ebuild:
+  Stable on alpha, bug #291810
+
+  18 Dec 2009; Raúl Porcel <armin76@gentoo.org> apache-2.2.14-r1.ebuild:
+  ia64/s390/sh/sprc stable wrt #291810
+
+  18 Nov 2009; Brent Baude <ranger@gentoo.org> apache-2.2.14-r1.ebuild:
+  Marking apache-2.2.14-r1 ppc64 for bug 291810
+
+  11 Nov 2009; Jeroen Roovers <jer@gentoo.org> apache-2.2.14-r1.ebuild:
+  Stable for HPPA (bug #291810).
+
+  08 Nov 2009; nixnut <nixnut@gentoo.org> apache-2.2.14-r1.ebuild:
+  ppc stable #291810
+
+  04 Nov 2009; Markus Meier <maekke@gentoo.org> apache-2.2.14-r1.ebuild:
+  amd64/arm/x86 stable, bug #291810
+
+  04 Nov 2009; Benedikt Böhm <hollow@gentoo.org> -apache-2.2.13.ebuild,
+  -apache-2.2.13-r1.ebuild, -apache-2.2.14.ebuild:
+  remove old versions
+
+*apache-2.2.14-r1 (08 Oct 2009)
+
+  08 Oct 2009; Benedikt Böhm <hollow@gentoo.org> +apache-2.2.14-r1.ebuild:
+  update peruser patch to 0.4.0b1
+
+*apache-2.2.14 (06 Oct 2009)
+
+  06 Oct 2009; Benedikt Böhm <hollow@gentoo.org> +apache-2.2.14.ebuild:
+  version bump wrt #283729
+
+*apache-2.2.13-r1 (20 Sep 2009)
+
+  20 Sep 2009; Benedikt Böhm <hollow@gentoo.org> apache-2.2.11-r2.ebuild,
+  -apache-2.2.11-r3.ebuild, -apache-2.2.12.ebuild, apache-2.2.13.ebuild,
+  +apache-2.2.13-r1.ebuild:
+  fix #285449, #277297 and #277298; convert to EAPI2
+
+*apache-2.2.13 (26 Aug 2009)
+
+  26 Aug 2009; Benedikt Böhm <hollow@gentoo.org> +apache-2.2.13.ebuild:
+  version bump
+
+*apache-2.2.12 (29 Jul 2009)
+
+  29 Jul 2009; Benedikt Böhm <hollow@gentoo.org> +apache-2.2.12.ebuild:
+  version bump
+
+*apache-2.2.11-r3 (24 Jul 2009)
+
+  24 Jul 2009; Benedikt Böhm <hollow@gentoo.org> -apache-2.2.10.ebuild,
+  -apache-2.2.11.ebuild, -apache-2.2.11-r1.ebuild, +apache-2.2.11-r3.ebuild,
+  metadata.xml:
+  add support for perusers dc branch; breaks old peruser configuration!
+
+  11 Jul 2009; Raúl Porcel <armin76@gentoo.org> apache-2.2.11-r2.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #276589
+
+  08 Jul 2009; Markus Meier <maekke@gentoo.org> apache-2.2.11-r2.ebuild:
+  amd64 stable, bug #276589
+
+  08 Jul 2009; Brent Baude <ranger@gentoo.org> apache-2.2.11-r2.ebuild:
+  Marking apache-2.2.11-r2 ppc64 and ppc for bug 276589
+
+  07 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  apache-2.2.11-r2.ebuild:
+  stable x86, security bug 276589
+
+  07 Jul 2009; Jeroen Roovers <jer@gentoo.org> apache-2.2.11-r2.ebuild:
+  Stable for HPPA (bug #276589).
+
+*apache-2.2.11-r2 (07 Jul 2009)
+
+  07 Jul 2009; Benedikt Böhm <hollow@gentoo.org> +apache-2.2.11-r2.ebuild:
+  fix #276707, #276792
+
+  07 Jul 2009; Richard Freeman <rich0@gentoo.org> apache-2.2.11-r1.ebuild:
+  amd64 stable - 276589
+
+  06 Jul 2009; Brent Baude <ranger@gentoo.org> apache-2.2.11-r1.ebuild:
+  Marking apache-2.2.11-r1 ppc64 and ppc for bug 276589
+
+  06 Jul 2009; Jeroen Roovers <jer@gentoo.org> apache-2.2.11-r1.ebuild:
+  Stable for HPPA (bug #276589).
+
+*apache-2.2.11-r1 (05 Jul 2009)
+
+  05 Jul 2009; Benedikt Böhm <hollow@gentoo.org> -apache-2.2.9-r1.ebuild,
+  +apache-2.2.11-r1.ebuild:
+  fix #263588, #265547, #231913, #268154, #271470, #272951, #276426
+
+  02 May 2009; Jeroen Roovers <jer@gentoo.org> apache-2.2.11.ebuild:
+  Stable for HPPA (bug #265705).
+
+  26 Apr 2009; Raúl Porcel <armin76@gentoo.org> apache-2.2.11.ebuild:
+  arm/ia64/s390/sh/sparc stable wrt #265705
+
+  26 Apr 2009; Brent Baude <ranger@gentoo.org> apache-2.2.11.ebuild:
+  Marking apache-2.2.11 ppc for bug 265705
+
+  23 Apr 2009; Markus Meier <maekke@gentoo.org> apache-2.2.11:
+  amd64/x86 stable, bug #265705
+
+  23 Apr 2009; Tobias Klausmann <klausman@gentoo.org> apache-2.2.11:
+  Stable on alpha, bug #265705
+
+  21 Apr 2009; Brent Baude <ranger@gentoo.org> apache-2.2.11.ebuild:
+  Marking apache-2.2.11 ppc64 for bug 265705
+
+  23 Jan 2009; Raúl Porcel <armin76@gentoo.org> apache-2.2.10.ebuild:
+  alpha/arm/ia64/s390/sh stable wrt #252432
+
+  09 Jan 2009; Brent Baude <ranger@gentoo.org> apache-2.2.10.ebuild:
+  Marking apache-2.2.10 ppc for bug 252432
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> apache-2.2.10.ebuild:
+  Marking apache-2.2.10 ppc64 for bug 253432
+
+  04 Jan 2009; Markus Meier <maekke@gentoo.org> apache-2.2.10.ebuild:
+  amd64/x86 stable, bug #252432
+
+  04 Jan 2009; Friedrich Oslage <bluebird@gentoo.org> apache-2.2.10.ebuild:
+  Stable on sparc, bug #252432
+
+  01 Jan 2009; Guy Martin <gmsoft@gentoo.org> apache-2.2.10.ebuild:
+  hppa stable, #252432
+
+*apache-2.2.11 (01 Jan 2009)
+
+  01 Jan 2009; Benedikt Böhm <hollow@gentoo.org> -apache-2.2.8.ebuild,
+  -apache-2.2.8-r3.ebuild, -apache-2.2.8-r4.ebuild, -apache-2.2.9.ebuild,
+  +apache-2.2.11.ebuild:
+  version bump wrt #251342; also fixes #252363, #252194
+
+  For previous entries, please see ChangeLog-2008.

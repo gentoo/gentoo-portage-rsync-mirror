@@ -1,0 +1,91 @@
+# ChangeLog for net-dns/knot
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/ChangeLog,v 1.17 2013/01/04 13:27:28 scarabeus Exp $
+
+  04 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> knot-1.1.3.ebuild:
+  We can actually be eapi5.
+
+*knot-1.1.3 (04 Jan 2013)
+
+  04 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> +knot-1.1.3.ebuild,
+  -knot-1.1.2.ebuild:
+  Version bump to latest. Drop older.
+
+*knot-1.1.2 (22 Nov 2012)
+
+  22 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> +knot-1.1.2.ebuild,
+  -knot-1.1.0.ebuild, -knot-1.1.1.ebuild:
+  Version bump to latest
+
+*knot-1.1.1 (19 Nov 2012)
+
+  19 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> +knot-1.1.1.ebuild:
+  Version bump to latest release, drop older.
+
+  21 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> knot-1.1.0.ebuild:
+  Use elog instead of einfo.
+
+*knot-1.1.0 (04 Sep 2012)
+
+  04 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> +knot-1.1.0.ebuild,
+  -files/knot-1.0.6-userpriv.patch, -files/knot-braindead-lto.patch,
+  -knot-1.0.6-r1.ebuild, -knot-1.1.0_rc1.ebuild:
+  Version bump to release.
+
+*knot-1.1.0_rc1 (20 Aug 2012)
+
+  20 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> +knot-1.1.0_rc1.ebuild:
+  Version bump to 1.1_rc1. Ebuild by Ondrej Caletka.
+
+*knot-1.0.6-r1 (26 Jul 2012)
+
+  26 Jul 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/knot-1.0.6-userpriv.patch, +knot-1.0.6-r1.ebuild, -knot-1.0.6.ebuild:
+  Revision bump to fix non-root runs. Thanks to Ondrej Caletka for the patch and
+  info about the issue.
+
+*knot-1.0.6 (21 Jun 2012)
+
+  21 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +knot-1.0.6.ebuild,
+  -knot-1.0.5.ebuild:
+  Bumpity. Note that until some user opens stabilisation request this package
+  stays testing-only.
+
+  12 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Add highly-nonrelevant me as maintainer, but don't expect magic.
+
+*knot-1.0.5 (12 Jun 2012)
+
+  12 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/knot-braindead-lto.patch, +files/knot-move-pidfile-to-var.patch,
+  +knot-1.0.5.ebuild, -knot-1.0.0.ebuild:
+  Version bump to latest version. Fixes bug#420741.
+
+  22 May 2012; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
+  Remove bind herd.. It's "empty" for years anyway, bug 417001.
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> knot-1.0.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*knot-1.0.0 (29 Feb 2012)
+
+  29 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> +knot-1.0.0.ebuild,
+  -knot-0.9.ebuild:
+  Version bump to 1.0.0 final.
+
+*knot-0.9 (16 Jan 2012)
+
+  16 Jan 2012; Tomáš Chvátal <scarabeus@gentoo.org> -knot-0.8.1.ebuild,
+  +knot-0.9.ebuild:
+  Version bump to latest.
+
+  29 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org> knot-0.8.1.ebuild:
+  Also want pkgconfig.
+
+*knot-0.8.1 (29 Dec 2011)
+
+  29 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org> +knot-0.8.1.ebuild,
+  +files/knot.init, +metadata.xml:
+  Initial commit of knot dns authoritative server used by NIC.cz. Added to herd
+  bind as it is closest herd. Can't do much runtime testing on gentoo but
+  possibly can fix packaging errors.

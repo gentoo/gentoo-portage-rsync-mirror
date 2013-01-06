@@ -1,0 +1,83 @@
+# ChangeLog for mail-client/trojita
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.17 2012/12/10 19:13:02 ago Exp $
+
+  10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> -trojita-0.2.9.4.ebuild,
+  -trojita-0.3.ebuild, trojita-0.3.90.ebuild:
+  Add ~ppc and remove old
+
+*trojita-0.3.90 (08 Dec 2012)
+
+  08 Dec 2012; Markos Chandras <hwoarang@gentoo.org> +trojita-0.3.90.ebuild:
+  Version bump. Bug #446287
+
+  28 Nov 2012; Ben de Groot <yngwin@gentoo.org> trojita-0.3.ebuild,
+  trojita-9999.ebuild:
+  Apply changes from bug #444062
+
+*trojita-0.3 (30 Mar 2012)
+
+  30 Mar 2012; Johannes Huber <johu@gentoo.org> +trojita-0.3.ebuild,
+  trojita-0.2.9.4.ebuild, trojita-9999.ebuild:
+  Version bump wrt #410221.
+
+  11 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop me from maint.
+
+*trojita-0.2.9.4 (20 Jun 2011)
+
+  20 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> -trojita-0.2.9.3.ebuild,
+  +trojita-0.2.9.4.ebuild:
+  Version bump to 0.2.9.4 as requested by jkt on bug #372403. Remove older
+  release.
+
+  03 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> trojita-9999.ebuild:
+  Bump eapi to 4 and migrate to git-2 eclass.
+
+*trojita-0.2.9.3 (18 Feb 2011)
+
+  18 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -trojita-0.2.9.ebuild,
+  +trojita-0.2.9.3.ebuild:
+  Version bump to latest. Remove older. Per jkt's request.
+
+  11 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> trojita-0.2.9.ebuild,
+  trojita-9999.ebuild:
+  Fix tiny QA warnings.
+
+*trojita-0.2.9 (11 Jan 2011)
+
+  11 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> -trojita-0.2.ebuild,
+  +trojita-0.2.9.ebuild, trojita-9999.ebuild:
+  Version bump per bug #351396. Proxy commit for Jan Kundrát (jkt).
+
+  12 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> trojita-9999.ebuild:
+  Drop now not required virtualx eclass.
+
+  12 Nov 2010; Tomáš Chvátal <scarabeus@gentoo.org> trojita-9999.ebuild:
+  Update ebuild to reflect tests change. Fix license specification. Per jkt's
+  request.
+
+*trojita-0.2 (04 Aug 2010)
+
+  04 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> +trojita-0.2.ebuild:
+  Version bump.
+
+  06 Jun 2010; Lars Wendler <polynomial-c@gentoo.org> trojita-9999.ebuild:
+  Added qt-sql dependency (proxy commit for jkt)
+
+  17 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org> trojita-9999.ebuild:
+  Commit jkt's change for the build sytem.
+
+  06 Sep 2009; Alex Alexander <wired@gentoo.org> trojita-9999.ebuild:
+  fixed typo in RDEPEND
+
+  05 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org> +trojita-9999.ebuild,
+  +metadata.xml:
+  Move from net-mail to mail-client.
+
+*trojita-9999 (05 Sep 2009)
+
+  05 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org> +trojita-9999.ebuild,
+  +metadata.xml:
+  Initial commit. I am proxying it for jkt. All credit for ebuild goes for
+  him. Per bug #283372.

@@ -1,0 +1,22 @@
+--- src/utils/endian.h.old	2012-10-26 09:07:24.000000000 +0200
++++ src/utils/endian.h	2012-10-26 09:08:25.000000000 +0200
+@@ -93,19 +93,6 @@
+ 	}
+ }
+ 
+-template<typename T>
+-int writele(T *Bufo, EMUFILE*os)
+-{
+-	CTASSERT(sizeof(T)==1||sizeof(T)==2||sizeof(T)==4||sizeof(T)==8);
+-	switch(sizeof(T)) {
+-		case 1: return write8le((uint8*)Bufo,os);
+-		case 2: return write16le((uint16*)Bufo,os);
+-		case 4: return write32le((uint32*)Bufo,os);
+-		case 8: return write64le((uint64*)Bufo,os);
+-		default:
+-			return 0;
+-	}
+-}
+ 
+ #endif //__FCEU_ENDIAN
+ 

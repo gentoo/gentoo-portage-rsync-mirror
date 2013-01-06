@@ -1,0 +1,24 @@
+--- lanmap/src/Makefile.in	2006-03-07 15:44:32.000000000 +0100
++++ lanmap/src/Makefile.in.new	2008-12-02 16:08:13.000000000 +0100
+@@ -2,8 +2,8 @@
+ # $Id: makefile.patch,v 1.1 2009/12/25 05:56:25 darkside Exp $
+ 
+ # complation
+-CFLAGS = -W -Wall -Wno-unused -DLINUX -DLANMAP_DATADIR=$(LANMAP_DATADIR)
+-LDFLAGS = -lpcap -lm
++CFLAGS += -DLINUX -DLANMAP_DATADIR=$(LANMAP_DATADIR)
++LDFLAGS += -lpcap -lm
+ CFLAGS_DEBUG = -D_DEBUG -ggdb
+ LDFLAGS_DEBUG = -pg
+ BINARY = lanmap
+--- lanmap/Makefile.in	2008-12-03 14:40:22.000000000 +0100
++++ lanmap/Makefile.in.new	2008-12-03 14:40:33.000000000 +0100
+@@ -13,7 +13,7 @@
+ 	cd ./src && make LANMAP_DATADIR="$(DATADEST)"
+ 
+ install:
+-	install -m 0755 ./src/$(BINARY) $(BINDEST)
++	install -m 0755 -D ./src/$(BINARY) $(BINDEST)/$(BINARY)
+ 	install -m 0755 -d $(DATADEST)
+ 	install -m 0755 -d $(DATADEST)data/
+ 	install -m 0755 -d $(DATADEST)data/graph/

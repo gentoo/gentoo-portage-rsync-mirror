@@ -1,0 +1,16 @@
+# ChangeLog for media-plugins/vdr-sndctl
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sndctl/ChangeLog,v 1.2 2011/01/18 14:51:22 hd_brummy Exp $
+
+*vdr-sndctl-0.1.5.1 (18 Jan 2011)
+
+  18 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-sndctl-0.1.3.ebuild, +vdr-sndctl-0.1.5.1.ebuild:
+  version bump
+
+*vdr-sndctl-0.1.3 (02 Dec 2007)
+
+  02 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
+  +vdr-sndctl-0.1.3.ebuild:
+  initial ebuild; fixed bug 201012
+

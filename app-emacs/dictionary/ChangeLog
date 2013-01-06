@@ -1,0 +1,45 @@
+# ChangeLog for app-emacs/dictionary
+# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dictionary/ChangeLog,v 1.13 2007/12/14 05:25:08 opfer Exp $
+
+  14 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
+  dictionary-1.8.7.ebuild:
+  amd64 stable
+
+  03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
+  dictionary-1.8.7.ebuild:
+  removed src_install(); changed location of IUSE; manual make call to emake
+
+  07 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  files/50dictionary-gentoo.el:
+  add load path correctly, fixes bug 169588, reported by Ulrich Mueller
+  <ulm@kph.uni-mainz.de>
+
+  06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+  16 Jul 2005; Joseph Jezak <josejx@gentoo.org> dictionary-1.8.7.ebuild:
+  Marked ppc stable for bug #99186.
+
+  01 Jul 2005; David Holm <dholm@gentoo.org> dictionary-1.8.7.ebuild:
+  Added to ~ppc.
+
+*dictionary-1.8.7 (29 Jun 2005)
+
+  29 Jun 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -dictionary-1.8.3.ebuild, -dictionary-1.8.5.ebuild,
+  +dictionary-1.8.7.ebuild:
+  Keywording ~amd64; New upstream version; Removed old ebuilds.
+
+*dictionary-1.8.5 (28 Dec 2003)
+
+  28 Dec 2003; Jeremy Maitin-Shepard <jbms@gentoo.org>
+  dictionary-1.8.5.ebuild :
+
+  Version bump.  Resolves bug 36573.
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  dictionary-1.8.3.ebuild, files/50dictionary-gentoo.el, 
+  files/digest-dictionary-1.8.3 :
+
+  Initial import.

@@ -1,0 +1,29 @@
+# ChangeLog for dev-perl/Test-MockModule
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-MockModule/ChangeLog,v 1.6 2012/11/23 13:24:36 blueness Exp $
+
+  23 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  Test-MockModule-0.50.0.ebuild:
+  keyword ~arm, bug #442816
+
+  05 Oct 2012; Brent Baude <ranger@gentoo.org> Test-MockModule-0.50.0.ebuild:
+  Marking Test-MockModule-0.50.0 ppc for bug 412881
+
+  13 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Test-MockModule-0.50.0.ebuild:
+  x86 stable wrt bug #412881
+
+  07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> Test-MockModule-0.50.0.ebuild:
+  Stable for amd64, wrt bug #412881
+
+*Test-MockModule-0.50.0 (16 Jul 2012)
+
+  16 Jul 2012; Torsten Veller <tove@gentoo.org> -Test-MockModule-0.05.ebuild,
+  +Test-MockModule-0.50.0.ebuild:
+  Change version scheme. Add ~x86 and pod testing dependencies
+
+*Test-MockModule-0.05 (16 Jul 2012)
+
+  16 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +Test-MockModule-0.05.ebuild, +metadata.xml:
+  Initial import of Test-MockModule required by munin-2's tests.

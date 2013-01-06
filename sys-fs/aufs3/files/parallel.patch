@@ -1,0 +1,25 @@
+ Makefile |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 9031813..94329c0 100644
+--- a/Makefile
++++ b/Makefile
+@@ -18,7 +18,7 @@ export CONFIG_AUFS_FS
+ EXTRA_CFLAGS := -I${CURDIR}/include
+ EXTRA_CFLAGS += ${AUFS_DEF_CONFIG}
+ 
+-MakeMod = ${MAKE} -C ${KDIR} M=${CURDIR}/fs/aufs EXTRA_CFLAGS="${EXTRA_CFLAGS}"
++MakeMod = -C ${KDIR} M=${CURDIR}/fs/aufs EXTRA_CFLAGS="${EXTRA_CFLAGS}"
+ 
+ all: aufs.ko usr/include/linux/aufs_type.h
+ 
+@@ -39,7 +39,7 @@ aufs.ko: fs/aufs/aufs.ko
+ 
+ fs/aufs/aufs.ko:
+ 	@echo ${EXTRA_CFLAGS}
+-	${MakeMod} modules
++	${MAKE} ${MakeMod} modules
+ 
+ usr/include/linux/aufs_type.h: d = $(shell echo ${CURDIR} | cut -c2-)
+ usr/include/linux/aufs_type.h:

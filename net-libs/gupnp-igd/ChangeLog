@@ -1,0 +1,171 @@
+# ChangeLog for net-libs/gupnp-igd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.43 2012/12/01 17:59:08 armin76 Exp $
+
+  01 Dec 2012; Raúl Porcel <armin76@gentoo.org> gupnp-igd-0.2.1.ebuild:
+  alpha/ia64/sparc stable wrt #434300
+
+  25 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org> gupnp-igd-0.2.1.ebuild,
+  gupnp-igd-0.2.2.ebuild:
+  Switch back code from 0.2.1 and 0.2.2 ebuilds, what a mess did I do...
+
+  25 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org> gupnp-igd-0.2.1.ebuild,
+  gupnp-igd-0.2.2.ebuild:
+  Move some python related code behind USE=python. Drop makeopts changes as it
+  should be fixed per changelog.
+
+*gupnp-igd-0.2.2 (25 Nov 2012)
+
+  25 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org> +gupnp-igd-0.2.2.ebuild:
+  Version bump.
+
+  01 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gupnp-igd-0.2.1.ebuild:
+  x86 stable wrt bug #434300
+
+  19 Sep 2012; Jeroen Roovers <jer@gentoo.org> gupnp-igd-0.2.1.ebuild:
+  Stable for HPPA (bug #434300).
+
+  18 Sep 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix failed manifest signing
+
+  18 Sep 2012; Anthony G. Basile <blueness@gentoo.org> gupnp-igd-0.2.1.ebuild:
+  stable ppc ppc64, bug #434300
+
+  15 Sep 2012; Agostino Sarubbo <ago@gentoo.org> gupnp-igd-0.2.1.ebuild:
+  Stable for amd64, wrt bug #434300
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gupnp-igd-0.1.7.ebuild,
+  gupnp-igd-0.1.11.ebuild, gupnp-igd-0.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*gupnp-igd-0.2.1 (07 Jan 2012)
+
+  07 Jan 2012; Olivier Crête <tester@gentoo.org> gupnp-igd-0.1.7.ebuild,
+  gupnp-igd-0.1.11.ebuild, -gupnp-igd-0.2.0.ebuild, +gupnp-igd-0.2.1.ebuild:
+  Update gupnp-igd and add blocks for the older versions
+
+*gupnp-igd-0.2.0 (13 Nov 2011)
+
+  13 Nov 2011; Gilles Dartiguelongue <eva@gentoo.org> -gupnp-igd-0.1.10.ebuild,
+  +gupnp-igd-0.2.0.ebuild:
+  Version bump. Make it work with gupnp-0.18. Clean up old revision.
+
+  24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gupnp-igd-0.1.7.ebuild, gupnp-igd-0.1.10.ebuild, gupnp-igd-0.1.11.ebuild:
+  Depend on correct slot of pygobject.
+
+*gupnp-igd-0.1.11 (21 Oct 2011)
+
+  21 Oct 2011; Gilles Dartiguelongue <eva@gentoo.org> +gupnp-igd-0.1.11.ebuild,
+  +files/gupnp-igd-0.1.11-disable_static_modules.patch:
+  Version bump. Fix build with USE=-introspection, bug #383561.
+
+*gupnp-igd-0.1.10 (15 Sep 2011)
+
+  15 Sep 2011; Gilles Dartiguelongue <eva@gentoo.org> +gupnp-igd-0.1.10.ebuild,
+  metadata.xml:
+  Version bump. Add introspection support.
+
+  26 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gupnp-igd-0.1.7.ebuild, +files/gupnp-igd-0.1.7-disable_static_modules.patch:
+  Set SUPPORT_PYTHON_ABIS, don't install .a, .la, .pyc and .pyo files in Python
+  site-packages directories, call python_mod_optimize() and
+  python_mod_cleanup() (bug #356611).
+
+  26 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gupnp-igd-0.1.7.ebuild:
+  Use Python 2 (bug #356579).
+
+  26 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -gupnp-igd-0.1.3.ebuild, -gupnp-igd-0.1.6.ebuild:
+  Delete.
+
+  26 Feb 2011; Raúl Porcel <armin76@gentoo.org> gupnp-igd-0.1.7.ebuild:
+  alpha stable wrt #355719
+
+  20 Nov 2010; Michael Weber <xmw@gentoo.org> gupnp-igd-0.1.7.ebuild:
+  Added ~arm keyword (bug 343505)
+
+  29 Oct 2010; Jeroen Roovers <jer@gentoo.org> gupnp-igd-0.1.7.ebuild:
+  Stable for HPPA (bug #330657).
+
+  23 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
+  gupnp-igd-0.1.7.ebuild, +files/gupnp-igd-0.1.7-make-382.patch:
+  Fix building with make >= 3.82 wrt #334353 by Diego E. Pettenò.
+
+  14 Sep 2010; Tobias Klausmann <klausman@gentoo.org>
+  gupnp-igd-0.1.6.ebuild:
+  Stable on alpha, bug #327379
+
+  14 Sep 2010; Joseph Jezak <josejx@gentoo.org> gupnp-igd-0.1.7.ebuild:
+  Marked ppc/ppc64 stable for bug #330657.
+
+  29 Aug 2010; Raúl Porcel <armin76@gentoo.org> gupnp-igd-0.1.7.ebuild:
+  ia64/sparc stable wrt #330657
+
+  01 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
+  gupnp-igd-0.1.7.ebuild:
+  stable x86, bug 330657
+
+  01 Aug 2010; Pacho Ramos <pacho@gentoo.org> gupnp-igd-0.1.7.ebuild:
+  amd64 stable, bug 330657 (needed due gupnp-0.13 stabilization, stabilizing
+  this since only includes bugfixes over 0.1.6 and their tests pass,
+  opposite to the first).
+
+*gupnp-igd-0.1.7 (01 Aug 2010)
+
+  01 Aug 2010; Pacho Ramos <pacho@gentoo.org> +gupnp-igd-0.1.7.ebuild:
+  Version bump with simple bug fixes and also letting tests to work.
+
+  19 Feb 2010; Raúl Porcel <armin76@gentoo.org> gupnp-igd-0.1.3.ebuild:
+  ia64/sparc stable
+
+  19 Feb 2010; Raúl Porcel <armin76@gentoo.org> gupnp-igd-0.1.3.ebuild,
+  gupnp-igd-0.1.6.ebuild:
+  Add ~ia64/~sparc
+
+  12 Feb 2010; Joseph Jezak <josejx@gentoo.org> gupnp-igd-0.1.3.ebuild,
+  gupnp-igd-0.1.6.ebuild:
+  Marked ~ppc64.
+
+*gupnp-igd-0.1.6 (10 Jan 2010)
+
+  10 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +gupnp-igd-0.1.6.ebuild:
+  Version bump.
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> gupnp-igd-0.1.3.ebuild:
+  ppc stable #289298
+
+  19 Oct 2009; Markus Meier <maekke@gentoo.org> gupnp-igd-0.1.3.ebuild:
+  amd64 stable, bug #289298
+
+  19 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  gupnp-igd-0.1.3.ebuild:
+  RESTRICT="test" wrt #277956.
+
+  19 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  gupnp-igd-0.1.3.ebuild:
+  stable x86, bug 289298
+
+  18 Oct 2009; Jeroen Roovers <jer@gentoo.org> gupnp-igd-0.1.3.ebuild:
+  Stable for HPPA (bug #289298).
+
+  18 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
+  gupnp-igd-0.1.3.ebuild:
+  Keyworded on alpha, bug #282989
+
+  10 Oct 2009; Olivier Crête <tester@gentoo.org> gupnp-igd-0.1.3.ebuild:
+  Require gupnp =0.12*, 0.13 breaks the API
+
+  11 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> gupnp-igd-0.1.3.ebuild:
+  Keywording for ppc. Bug 282263.
+
+  01 Sep 2009; Jeroen Roovers <jer@gentoo.org> gupnp-igd-0.1.3.ebuild:
+  Marked ~hppa (bug #282989).
+
+*gupnp-igd-0.1.3 (19 Jun 2009)
+
+  19 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +gupnp-igd-0.1.3.ebuild:
+  Initial commit wrt #262427, thanks to Olivier Crete and Florian Steinel.

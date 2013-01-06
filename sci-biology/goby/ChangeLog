@@ -1,0 +1,15 @@
+# ChangeLog for sci-biology/goby
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/goby/ChangeLog,v 1.2 2012/01/05 23:00:11 weaver Exp $
+
+*goby-1.9.8.1 (05 Jan 2012)
+
+  05 Jan 2012; Andrey Kislyuk <weaver@gentoo.org> +goby-1.9.8.1.ebuild:
+  Version bump
+
+*goby-1.9.7.3 (25 Sep 2011)
+
+  25 Sep 2011; Andrey Kislyuk <weaver@gentoo.org> +goby-1.9.7.3.ebuild,
+  +metadata.xml:
+  New package, ebuild written by me
+

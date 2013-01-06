@@ -1,0 +1,57 @@
+# ChangeLog for dev-python/xlwt
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.14 2012/12/03 21:24:39 bicatali Exp $
+
+  03 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> xlwt-0.7.4.ebuild:
+  Keyword amd64-linux and x86-linux
+
+*xlwt-0.7.4 (19 Apr 2012)
+
+  19 Apr 2012; Patrick Lauer <patrick@gentoo.org> +xlwt-0.7.4.ebuild:
+  Bump
+
+*xlwt-0.7.3 (02 Mar 2012)
+
+  02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +xlwt-0.7.3.ebuild:
+  Version bump to 0.7.3.
+
+  23 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> xlwt-0.7.2.ebuild:
+  Keyword ~ppc64 wrt #341699
+
+  19 Jul 2010; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Removing myself as maintainer
+
+  06 Feb 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  xlwt-0.7.2.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  08 Nov 2009; nixnut <nixnut@gentoo.org> xlwt-0.7.2.ebuild:
+  ppc stable #290607
+
+  04 Nov 2009; Markus Meier <maekke@gentoo.org> xlwt-0.7.2.ebuild:
+  amd64/x86 stable, bug #290607
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -xlwt-0.7.1.ebuild:
+  Remove old
+
+*xlwt-0.7.2 (26 Jun 2009)
+
+  26 Jun 2009; Sébastien Fabbro <bicatali@gentoo.org> +xlwt-0.7.2.ebuild:
+  Version bump
+
+  24 Apr 2009; Patrick Lauer <patrick@gentoo.org> -xlwt-0.7.0.ebuild:
+  Remove old
+
+*xlwt-0.7.1 (27 Mar 2009)
+
+  27 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org> +xlwt-0.7.1.ebuild:
+  Version bump
+
+  19 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org> xlwt-0.7.0.ebuild:
+  added ~ppc, thanks to Pierre Martin for testing
+
+*xlwt-0.7.0 (19 Dec 2008)
+
+  19 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +xlwt-0.7.0.ebuild:
+  Initial import

@@ -1,0 +1,36 @@
+# ChangeLog for app-emulation/dynamips
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.6 2012/05/05 02:58:28 pva Exp $
+
+  05 May 2012; Peter Volkov <pva@gentoo.org> dynamips-0.2.8_rc3.ebuild:
+  Update HOMEPAGE.
+
+*dynamips-0.2.8_rc3 (17 May 2011)
+
+  17 May 2011; Tony Vroon <chainsaw@gentoo.org> +dynamips-0.2.8_rc3.ebuild,
+  +files/dynamips-0.2.8_rc3-makefile.patch:
+  Version bump to the GNS3 community release. All the hard patching work done
+  by Jan Bednar in bug #365049; ported to EAPI=3.
+
+  17 Oct 2010; <chainsaw@gentoo.org>
+  files/dynamips-0.2.8_rc2-makefile.patch:
+  Patch rediffed as per feedback by Samuli Suominen.
+
+*dynamips-0.2.8_rc2-r1 (17 Oct 2010)
+
+  17 Oct 2010; <chainsaw@gentoo.org> -dynamips-0.2.8_rc2.ebuild,
+  +dynamips-0.2.8_rc2-r1.ebuild, files/dynamips-0.2.8_rc2-makefile.patch:
+  Instill LDFLAGS respect into upstream Makefile. Closes bug #338169 by
+  Diego Elio "Flameeyes" Pettenò.
+
+  25 Aug 2009; Raúl Porcel <armin76@gentoo.org> dynamips-0.2.8_rc2.ebuild:
+  Add ~x86 wrt #281315
+
+*dynamips-0.2.8_rc2 (07 Aug 2009)
+
+  07 Aug 2009; <chainsaw@gentoo.org> +dynamips-0.2.8_rc2.ebuild,
+  +files/dynamips-0.2.8_rc2-makefile.patch, +metadata.xml:
+  Initial commit, ebuild sourced from Sunrise overlay but modified slightly.
+  With a warm thank you to Sergey Khalavchuck, Chad A. Simmons, Duncan
+  Lockwood, Mark Silinio and "haad". Closes bug #154491.
+

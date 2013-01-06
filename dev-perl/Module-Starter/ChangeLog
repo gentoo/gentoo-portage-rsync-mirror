@@ -1,0 +1,53 @@
+# ChangeLog for dev-perl/Module-Starter
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Starter/ChangeLog,v 1.9 2012/11/04 14:13:21 tove Exp $
+
+*Module-Starter-1.600.0 (04 Nov 2012)
+
+  04 Nov 2012; Torsten Veller <tove@gentoo.org> +Module-Starter-1.600.0.ebuild:
+  Version bump
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  22 Apr 2012; Markus Meier <maekke@gentoo.org> Module-Starter-1.580.0.ebuild:
+  x86 stable, bug #398539
+
+  22 Apr 2012; Agostino Sarubbo <ago@gentoo.org> Module-Starter-1.580.0.ebuild:
+  Stable for amd64, wrt bug #398539
+
+  29 Jul 2011; Torsten Veller <tove@gentoo.org> -Module-Starter-1.54.ebuild,
+  -Module-Starter-1.560.0.ebuild, -Module-Starter-1.570.0.ebuild:
+  Cleanup
+
+*Module-Starter-1.580.0 (06 Jul 2011)
+
+  06 Jul 2011; Torsten Veller <tove@gentoo.org> +Module-Starter-1.580.0.ebuild:
+  Version bump
+
+*Module-Starter-1.570.0 (12 Apr 2011)
+
+  12 Apr 2011; Torsten Veller <tove@gentoo.org> +Module-Starter-1.570.0.ebuild:
+  Version bump
+
+*Module-Starter-1.560.0 (08 Apr 2011)
+
+  08 Apr 2011; Torsten Veller <tove@gentoo.org> +Module-Starter-1.560.0.ebuild:
+  Version bump
+
+  15 Feb 2010; Torsten Veller <tove@gentoo.org> +Module-Starter-1.54.ebuild,
+  +metadata.xml:
+  Import to gentoo from perl-experimental
+
+*Module-Starter-1.54 (10 Dec 2009)
+
+  10 Dec 2009; Kent Fredric <kentfredric@gmail.com>
+  +Module-Starter-1.54.ebuild:
+  Bumped
+
+*Module-Starter-1.52 (13 Aug 2009)
+
+  13 Aug 2009; Kent Fredric <kentfredric@gmail.com>
+  Module-Starter-1.42.ebuild, -Module-Starter-1.46.ebuild,
+  Module-Starter-1.50.ebuild, +Module-Starter-1.52.ebuild:
+  Bumped to 1.52. Deleted Upstream-absent,EAPI=2, SRC_TEST=do

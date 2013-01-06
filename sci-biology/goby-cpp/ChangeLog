@@ -1,0 +1,20 @@
+# ChangeLog for sci-biology/goby-cpp
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/goby-cpp/ChangeLog,v 1.3 2012/07/19 10:46:06 jlec Exp $
+
+*goby-cpp-2.0.1 (19 Jul 2012)
+
+  19 Jul 2012; Justin Lecher <jlec@gentoo.org> +goby-cpp-2.0.1.ebuild:
+  Version Bump, handle static-libs
+
+*goby-cpp-1.9.8.1 (05 Jan 2012)
+
+  05 Jan 2012; Andrey Kislyuk <weaver@gentoo.org> +goby-cpp-1.9.8.1.ebuild:
+  Version bump
+
+*goby-cpp-1.9.7.3 (25 Sep 2011)
+
+  25 Sep 2011; Andrey Kislyuk <weaver@gentoo.org> +goby-cpp-1.9.7.3.ebuild,
+  +metadata.xml:
+  New package, ebuild written by me
+

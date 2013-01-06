@@ -1,0 +1,22 @@
+# ChangeLog for media-tv/tvheadend
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvheadend/ChangeLog,v 1.4 2012/10/27 06:09:17 yngwin Exp $
+
+*tvheadend-3.2 (27 Oct 2012)
+
+  27 Oct 2012; Ben de Groot <yngwin@gentoo.org> +tvheadend-3.2.ebuild:
+  Version bump from bug #433024
+
+  16 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> tvheadend-2.12.ebuild:
+  Remove '-Werror' from compiler flags wrt bug #438424. Thanks to Diego
+  Elio Pettenò for discovering this issue.
+
+  15 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> tvheadend-2.12.ebuild:
+  Use proper compiler instead of direct cc invokation wrt bug #438426
+
+*tvheadend-2.12 (25 Aug 2012)
+
+  25 Aug 2012; Ben de Groot <yngwin@gentoo.org> +files/tvheadend.confd,
+  +files/tvheadend.initd, +metadata.xml, +tvheadend-2.12.ebuild:
+  Initial commit. Ebuild developed by users in bug #288022. Will be proxy-
+  maintained by Leho Kraav.

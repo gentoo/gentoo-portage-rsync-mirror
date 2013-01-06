@@ -1,0 +1,56 @@
+# ChangeLog for media-plugins/vdr-vcd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vcd/ChangeLog,v 1.12 2012/11/02 19:14:44 hd_brummy Exp $
+
+*vdr-vcd-0.9-r1 (02 Nov 2012)
+
+  02 Nov 2012; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-vcd-0.7.ebuild,
+  -vdr-vcd-0.8.ebuild, vdr-vcd-0.9.ebuild, +vdr-vcd-0.9-r1.ebuild,
+  +files/vdr-vcd-0.9_xgettext.diff:
+  clean up; eapi=4; vdr-plugin-2.eclass; missing xgettext handling added,
+  thanks to E.Seifert on bug 414247
+
+  07 May 2009; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-vcd-0.9.ebuild,
+  +files/vdr-vcd-0.9_vdr-1.7.2.diff:
+  compile fix for >=vdr-1.7.2
+
+  12 Mar 2009; Matthias Schwarzott <zzam@gentoo.org> vdr-vcd-0.9.ebuild:
+  Marked stable on x86.
+
+  23 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> vdr-vcd-0.7.ebuild,
+  vdr-vcd-0.9.ebuild:
+  Fix compiling with newer eclass. Fixed quoting of version 0.7.
+
+*vdr-vcd-0.9 (27 Jan 2008)
+
+  27 Jan 2008; Joerg Bornkessel <hd_brummy@gentoo.org> +vdr-vcd-0.9.ebuild:
+  version bump
+
+*vdr-vcd-0.8 (16 Dec 2007)
+
+  16 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-vcd-0.7.ebuild,
+  +vdr-vcd-0.8.ebuild:
+  version bump; vdr-vcd-0.7 fixed broken DL URI
+
+  17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-vcd-0.7-vdr-1.5.diff, vdr-vcd-0.7.ebuild:
+  Make it compile with vdr-1.5
+
+  17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> files/rc-addon.sh:
+  Removed bash specific stuff.
+
+  15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Assigned to Gentoo VDR Project.
+
+  17 Apr 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-vcd-0.7.ebuild:
+  Marked stable on x86
+
+  05 Mar 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-vcd-0.7.ebuild:
+  removed nomirror
+
+*vdr-vcd-0.7 (05 Mar 2006)
+
+  05 Mar 2006; Matthias Schwarzott <zzam@gentoo.org> +files/confd,
+  +files/rc-addon.sh, +metadata.xml, +vdr-vcd-0.7.ebuild:
+  imported ebuild from gentoo.de
+

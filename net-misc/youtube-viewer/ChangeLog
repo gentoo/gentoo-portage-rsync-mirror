@@ -1,0 +1,87 @@
+# ChangeLog for net-misc/youtube-viewer
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.17 2013/01/01 23:16:09 hasufell Exp $
+
+*youtube-viewer-3.0.5 (01 Jan 2013)
+
+  01 Jan 2013; Julian Ospald <hasufell@gentoo.org>
+  +youtube-viewer-3.0.5.ebuild:
+  version bump
+
+*youtube-viewer-3.0.4 (20 Nov 2012)
+
+  20 Nov 2012; Julian Ospald <hasufell@gentoo.org>
+  +youtube-viewer-3.0.4.ebuild:
+  version bump
+
+  20 Nov 2012; Julian Ospald <hasufell@gentoo.org> youtube-viewer-2.5.9.ebuild,
+  youtube-viewer-3.0.2.ebuild, youtube-viewer-3.0.3.ebuild:
+  clarify dependencies
+
+  20 Nov 2012; Julian Ospald <hasufell@gentoo.org> youtube-viewer-9999.ebuild:
+  update live ebuild
+
+*youtube-viewer-3.0.3 (16 Oct 2012)
+
+  16 Oct 2012; Julian Ospald <hasufell@gentoo.org>
+  +youtube-viewer-3.0.3.ebuild:
+  version bump
+
+*youtube-viewer-3.0.2 (05 Oct 2012)
+
+  05 Oct 2012; Julian Ospald <hasufell@gentoo.org>
+  -youtube-viewer-3.0.0_p20120820.ebuild,
+  -youtube-viewer-3.0.1_p20120924.ebuild, +youtube-viewer-3.0.2.ebuild:
+  version bump, remove old
+
+*youtube-viewer-3.0.1_p20120924 (24 Sep 2012)
+
+  24 Sep 2012; Julian Ospald <hasufell@gentoo.org>
+  +youtube-viewer-3.0.1_p20120924.ebuild,
+  +files/youtube-viewer-3.0.1_p20120924-desktopfile.patch:
+  version bump
+
+*youtube-viewer-3.0.0_p20120820 (20 Aug 2012)
+
+  20 Aug 2012; Julian Ospald <hasufell@gentoo.org>
+  +youtube-viewer-3.0.0_p20120820.ebuild, youtube-viewer-9999.ebuild:
+  version bump, sync live-ebuild
+
+  19 Aug 2012; Julian Ospald <hasufell@gentoo.org> youtube-viewer-9999.ebuild:
+  sync with head
+
+  04 Jul 2012; Jeff Horelick <jdhore@gentoo.org> youtube-viewer-2.5.9.ebuild:
+  marked x86 per bug 422473
+
+  20 Jun 2012; Julian Ospald <hasufell@gentoo.org> youtube-viewer-2.5.9.ebuild:
+  stable for amd64 wrt bug #422473
+
+*youtube-viewer-2.5.9 (21 May 2012)
+
+  21 May 2012; Julian Ospald <hasufell@gentoo.org>
+  -youtube-viewer-2.5.8_p20120415.ebuild, +youtube-viewer-2.5.9.ebuild,
+  youtube-viewer-9999.ebuild:
+  version bump, remove old, Scalar-List-Utils no longer needed
+
+  07 May 2012; Julian Ospald <hasufell@gentoo.org>
+  youtube-viewer-2.5.8_p20120415.ebuild, youtube-viewer-9999.ebuild:
+  fix dependencies wrt #414931
+
+  01 May 2012; Julian Ospald <hasufell@gentoo.org>
+  youtube-viewer-2.5.8_p20120415.ebuild, youtube-viewer-9999.ebuild:
+  fix dependencies, add mplayer
+
+  01 May 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Julian is a dev now, he can take care of this.
+
+*youtube-viewer-9999 (22 Apr 2012)
+
+  22 Apr 2012; Mike Gilbert <floppym@gentoo.org> +youtube-viewer-9999.ebuild:
+  Add live ebuild.
+
+*youtube-viewer-2.5.8_p20120415 (22 Apr 2012)
+
+  22 Apr 2012; Mike Gilbert <floppym@gentoo.org> +metadata.xml,
+  +youtube-viewer-2.5.8_p20120415.ebuild:
+  New ebuild for #388921 by Ralf Mayer. Ebuild by Julian Ospald.
+

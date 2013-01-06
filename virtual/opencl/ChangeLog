@@ -1,0 +1,42 @@
+# ChangeLog for virtual/opencl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/ChangeLog,v 1.8 2012/07/14 19:43:11 ulm Exp $
+
+  14 Jul 2012; Ulrich Müller <ulm@gentoo.org> opencl-0.ebuild,
+  opencl-0-r2.ebuild:
+  QA: Define mandatory ebuild variables, bug 425848.
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> opencl-0-r2.ebuild:
+  x86 stable wrt bug #408979
+
+  24 Mar 2012; Agostino Sarubbo <ago@gentoo.org> opencl-0-r2.ebuild:
+  Stable for amd64, wrt bug #408979
+
+*opencl-0-r2 (06 Mar 2012)
+
+  06 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> +opencl-0-r2.ebuild,
+  -opencl-0-r1.ebuild:
+  Fix deps to include proper revbumps for graphics drivers. Thanks to neurogeek
+  for spotting
+
+  15 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> opencl-0-r1.ebuild:
+  Remove dependency on opencl useflag since it was dropped in ati-drivers. Fixes
+  bug 403409 by Paolo Pedroni <paolo.pedroni@iol.it>
+
+*opencl-0-r1 (04 Feb 2012)
+
+  04 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> +opencl-0-r1.ebuild,
+  metadata.xml:
+  Utilize new app-admin/eselect-opencl and the fact that we now have 3 viable
+  providers, use flags are no longer mutually exclusive
+
+  20 Dec 2011; Mike Frysinger <vapier@gentoo.org> opencl-0.ebuild:
+  Drop ATI from dep list for now since that only provides the libraries and not
+  the required headers #392179#2 by Emil Karlson.
+
+*opencl-0 (20 Dec 2011)
+
+  20 Dec 2011; Mike Frysinger <vapier@gentoo.org> +opencl-0.ebuild,
+  +metadata.xml:
+  Initial ebuild by me for #392179 by Michal Pytasz.
+

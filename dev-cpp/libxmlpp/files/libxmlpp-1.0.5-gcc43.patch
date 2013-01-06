@@ -1,0 +1,11 @@
+--- libxml++-1.0.4.orig/libxml++/parsers/parser.cc
++++ libxml++-1.0.4/libxml++/parsers/parser.cc
+@@ -9,6 +9,7 @@
+ #include <libxml/parser.h>
+ 
+ #include <cstdarg> //For va_list.
++#include <memory> //For auto_ptr
+ 
+ namespace xmlpp {
+ 
+

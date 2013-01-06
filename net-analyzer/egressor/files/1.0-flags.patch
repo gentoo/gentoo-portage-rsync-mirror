@@ -1,0 +1,23 @@
+diff -Naur a/client/Makefile b/client/Makefile
+--- a/client/Makefile	2010-09-15 03:38:45.000000000 +0200
++++ b/client/Makefile	2010-09-15 03:43:57.000000000 +0200
+@@ -5,8 +5,8 @@
+ #----------------------------------------------------------------------
+ 
+ 
+-CC          =   gcc
+-CFLAGS      =   -O3 -funroll-loops -fomit-frame-pointer -Wall -DMD=5
++CC          ?=   gcc
++CFLAGS      +=   -Wall -DMD=5
+ #CFLAGS2	    =   -O -DMD=5
+ OBJECTS     =   egressor.o md5c.o      \
+                 
+@@ -21,7 +21,7 @@
+ 
+ 
+ egressor:  egressor.o md5c.o
+-	$(CC) egressor.o $(LIBS) -o ./egressor
++	$(CC) $(CFLAGS) $(LDFLAGS) egressor.o $(LIBS) -o ./egressor
+ 
+ md5c.o: global.h md5.h
+ 	$(CC) -c $(CFLAGS) md5c.c

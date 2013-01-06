@@ -1,0 +1,11 @@
+--- cflow-1.2-orig/doc/cflow.texi	2007-06-27 16:16:46.000000000 +0200
++++ cflow-1.2/doc/cflow.texi	2008-11-28 15:51:36.000000000 +0100
+@@ -22,7 +22,7 @@
+ @end direntry
+ @dircategory Emacs
+ @direntry
+-* cflow mode: (cflow)cflow mode. Major mode for visiting cflow charts.
++* cflow mode: (cflow)Emacs.     Major mode for visiting cflow charts.
+ @end direntry
+ @end ifinfo
+ 

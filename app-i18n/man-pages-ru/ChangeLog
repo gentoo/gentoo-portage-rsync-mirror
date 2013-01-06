@@ -1,0 +1,61 @@
+# ChangeLog for app-i18n/man-pages-ru
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.12 2011/09/27 19:29:05 alexxy Exp $
+
+  27 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  man-pages-ru-3.27.2066.1435.20101003.ebuild:
+  Add ~x86-linux
+
+  02 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  man-pages-ru-3.27.2066.1435.20101003.ebuild:
+  Add ~amd64-linux keyword
+
+  24 Jan 2011; Jeroen Roovers <jer@gentoo.org>
+  man-pages-ru-3.27.2066.1435.20101003.ebuild:
+  Stable for HPPA PPC (bug #349381).
+
+  09 Jan 2011; Raúl Porcel <armin76@gentoo.org>
+  man-pages-ru-3.27.2066.1435.20101003.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #349381
+
+  05 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  man-pages-ru-3.27.2066.1435.20101003.ebuild:
+  Stable on amd64 wrt bug #349381
+
+  31 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  man-pages-ru-3.27.2066.1435.20101003.ebuild:
+  x86 stable wrt bug #349381
+
+  29 Dec 2010; Markus Meier <maekke@gentoo.org>
+  man-pages-ru-3.27.2066.1435.20101003.ebuild:
+  arm stable, bug #349381
+
+  29 Dec 2010; Brent Baude <ranger@gentoo.org>
+  man-pages-ru-3.27.2066.1435.20101003.ebuild:
+  stable ppc64, bug 349381
+
+*man-pages-ru-3.27.2066.1435.20101003 (14 Oct 2010)
+
+  14 Oct 2010; Peter Volkov <pva@gentoo.org>
+  +man-pages-ru-3.27.2066.1435.20101003.ebuild:
+  Version bump, thank Azamat H. Hackimov for report in bug #339690.
+
+*man-pages-ru-3.24.2059.1262.20100523 (24 May 2010)
+
+  24 May 2010; Peter Volkov <pva@gentoo.org> man-pages-ru-0.98.ebuild,
+  +man-pages-ru-3.24.2059.1262.20100523.ebuild:
+  Version bump, bug #321273, thank Azamat H. Hackimov for this job. Finally
+  new active upstream!
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
+
+*man-pages-ru-0.98 (02 Sep 2005)
+
+  02 Sep 2005; Mike Frysinger <vapier@gentoo.org>:
+  Version bump by EdiG #98513.
+
+*man-pages-ru-0.7 (02 Nov 2002)
+
+  02 Nov 2002; Arcady Genkin <agenkin@gentoo.org> man-pages-ru-0.7.ebuild :
+  Initial version, submitted by R.a E <raer@mail.ru>.

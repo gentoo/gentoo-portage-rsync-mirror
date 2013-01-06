@@ -1,0 +1,36 @@
+From c5468fb6cf6341205c15603eb96130fa26bfaea3 Mon Sep 17 00:00:00 2001
+From: Dana Jansens <danakj@orodu.net>
+Date: Sun, 30 Sep 2012 23:24:45 -0400
+Subject: [PATCH] Get the window's title in the fake-managed case since we
+ apply app rule matching (Fix bug 5277)
+
+---
+ openbox/client.c |   10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/openbox/client.c b/openbox/client.c
+index da1650a..970377d 100644
+--- a/openbox/client.c
++++ b/openbox/client.c
+@@ -1210,12 +1210,14 @@
+        from per-app settings */
+     client_get_session_ids(self);
+ 
+-    /* now we got everything that can affect the decorations */
++    /* get this early so we have it for debugging, also this can be used
++     by app rule matching */
++    client_update_title(self);
++
++    /* now we got everything that can affect the decorations or app rule
++       matching */
+     if (!real)
+         return;
+-
+-    /* get this early so we have it for debugging */
+-    client_update_title(self);
+ 
+     /* save the values of the variables used for app rule matching */
+     client_save_app_rule_values(self);
+-- 
+1.7.10
+

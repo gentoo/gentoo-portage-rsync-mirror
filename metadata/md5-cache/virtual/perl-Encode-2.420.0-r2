@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Encode
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~m68k ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
+RDEPEND=|| ( =dev-lang/perl-5.14* ~perl-core/Encode-2.420.0 )
+SLOT=0
+_md5_=8b3413e9627627cb09e167c187df76cf

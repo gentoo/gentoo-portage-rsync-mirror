@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/sword-mhc
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-mhc/ChangeLog,v 1.1 2008/05/17 02:34:22 beandog Exp $
+
+*sword-mhc-1.6 (17 May 2008)
+
+  17 May 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-mhc-1.6.ebuild:
+  Initial commit
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>common-lisp</herd>
+  <longdescription>
+    GCL is the official Common Lisp for the GNU project. Its design
+    makes use of the system's C compiler to compile to native object
+    code, providing for both good performance and facile portability.
+  </longdescription>
+  <use>
+  <flag name='ansi'>Build a GCL with ANSI support (else build a traditional
+  CLtL1 image)</flag>
+  <flag name='custreloc'>Build a GCL which uses custom GCL code for linking</flag>
+  <flag name='dlopen'>Build a GCL which uses dlopen for linking</flag>
+  <flag name='gprof'>Build a GCL with profiling support</flag>
+  </use>
+</pkgmetadata>

@@ -1,0 +1,21 @@
+# ChangeLog for app-dicts/gnome-dictionary
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gnome-dictionary/ChangeLog,v 1.3 2012/12/16 19:29:28 tetromino Exp $
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-dictionary-3.4.0.ebuild, gnome-dictionary-3.6.0.ebuild:
+  Update license, EAPI5-ize and de-9999-ize ebuild.
+
+*gnome-dictionary-3.6.0 (16 Dec 2012)
+
+  16 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-dictionary-3.6.0.ebuild:
+  Version bump for Gnome 3.6.
+
+*gnome-dictionary-3.4.0 (05 May 2012)
+
+  05 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-dictionary-3.4.0.ebuild, +metadata.xml:
+  New separate gnome dictionary utility package, formerly part of
+  gnome-extra/gnome-utils.
+

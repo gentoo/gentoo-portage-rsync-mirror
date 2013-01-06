@@ -1,0 +1,11 @@
+--- Makefile.in.old	2009-02-10 12:54:35.000000000 +0100
++++ Makefile.in	2009-02-10 12:55:16.000000000 +0100
+@@ -11,7 +11,7 @@
+ 	parse.o readcfg.o
+ 
+ seatris: $(OBJS)
+-	$(CC) $(LFLAGS) $(LIBS) -o seatris $(OBJS)
++	$(CC) $(LDFLAGS) -o seatris $(OBJS) $(LIBS)
+ 
+ clean:
+ 	rm -f *.o seatris

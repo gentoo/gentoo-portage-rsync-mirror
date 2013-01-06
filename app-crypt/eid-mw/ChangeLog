@@ -1,0 +1,24 @@
+# ChangeLog for app-crypt/eid-mw
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/ChangeLog,v 1.5 2012/06/24 20:01:52 flameeyes Exp $
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/eid-mw-4.0.2_p1188+gcc-4.7.patch:
+  Fix patch to always include unistd.h without conditions for now. Thanks
+  Xavier.
+
+  24 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/eid-mw-4.0.2_p1188+gcc-4.7.patch, eid-mw-4.0.2_p1188.ebuild:
+  Add patch to build with GCC 4.7 (fixes bug #422873).
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> eid-mw-4.0.2_p1188.ebuild:
+  inherit multilib for get_libdir
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> eid-mw-4.0.2_p1188.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*eid-mw-4.0.2_p1188 (07 Apr 2012)
+
+  07 Apr 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +eid-mw-4.0.2_p1188.ebuild, +metadata.xml:
+  Initial import of eid-mw by Vincent Hardy.

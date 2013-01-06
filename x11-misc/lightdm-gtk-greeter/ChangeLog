@@ -1,0 +1,57 @@
+# ChangeLog for x11-misc/lightdm-gtk-greeter
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/ChangeLog,v 1.10 2012/10/04 18:28:57 hwoarang Exp $
+
+*lightdm-gtk-greeter-1.3.1-r1 (04 Oct 2012)
+  04 Oct 2012; Markos Chandras <hwoarang@gentoo.org>:
+  +lightdm-gtk-greeter-1.3.1-r1
+  Add new background for lightdm-gtk-greeter. Thanks to Markellos Orfanos
+  <m4rk@silverarrow.org>
+
+*lightdm-gtk-greeter-1.3.1 (11 Sep 2012)
+
+  11 Sep 2012; Markos Chandras <hwoarang@gentoo.org>
+  +lightdm-gtk-greeter-1.3.1.ebuild:
+  Version bump
+
+*lightdm-gtk-greeter-1.1.6 (19 Jul 2012)
+
+  19 Jul 2012; Markos Chandras <hwoarang@gentoo.org>
+  +lightdm-gtk-greeter-1.1.6.ebuild:
+  Version bump
+
+  27 Jun 2012; Steev Klimaszewski <steev@gentoo.org>
+  lightdm-gtk-greeter-1.1.5.ebuild:
+  Keyword lightdm-gtk-greeter 1.1.5 ~arm, tested on an EfikaMX Smarttop (armv7)
+
+*lightdm-gtk-greeter-1.1.5 (28 Apr 2012)
+
+  28 Apr 2012; Markos Chandras <hwoarang@gentoo.org>
+  +lightdm-gtk-greeter-1.1.5.ebuild:
+  version bump
+
+  27 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
+  lightdm-gtk-greeter-1.1.4-r1.ebuild:
+  Add lightdm to build dependencies. Bug #405971
+
+*lightdm-gtk-greeter-1.1.4-r1 (23 Feb 2012)
+
+  23 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
+  +lightdm-gtk-greeter-1.1.4-r1.ebuild, -lightdm-gtk-greeter-1.1.4.ebuild:
+  Fix typo in Gentoo's gtk greeter. Bug #404467
+
+  19 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
+  lightdm-gtk-greeter-1.1.4.ebuild:
+  Fix installed location for lightdm-gtk-greeter config file when branding is
+  enabled
+
+  18 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
+  lightdm-gtk-greeter-1.1.4.ebuild:
+  Add missing .conf extension when branding is enabled
+
+*lightdm-gtk-greeter-1.1.4 (18 Feb 2012)
+
+  18 Feb 2012; Markos Chandras <hwoarang@gentoo.org>
+  +lightdm-gtk-greeter-1.1.4.ebuild, +metadata.xml:
+  Initial commit for lightdm-gtk-greeter. Thanks to Ben Kohler
+  <bkohler@gmail.com> for the ebuild. Bug #399719

@@ -1,0 +1,17 @@
+# ChangeLog for sys-libs/libseccomp
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libseccomp/ChangeLog,v 1.4 2012/11/12 21:21:36 vapier Exp $
+
+  12 Nov 2012; Mike Frysinger <vapier@gentoo.org> libseccomp-1.0.0.ebuild:
+  Setup correct AR/CC values #442864 by Alphat-PC.
+
+*libseccomp-1.0.0 (29 Oct 2012)
+
+  29 Oct 2012; Mike Frysinger <vapier@gentoo.org> +libseccomp-1.0.0.ebuild:
+  Version bump #440166 by Doug Goldstein.
+
+*libseccomp-0.1.0 (11 Jun 2012)
+
+  11 Jun 2012; Mike Frysinger <vapier@gentoo.org> +libseccomp-0.1.0.ebuild,
+  +metadata.xml:
+  Initial ebuild based on Kees Cook's work #420323.

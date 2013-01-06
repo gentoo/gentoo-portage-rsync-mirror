@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>armin76@gentoo.org</email>
+  </maintainer>
+  <use>
+    <flag name="server">Build vncserver. Allows us to only build server on one machine if set, build only viewer otherwise.</flag>
+  </use>
+</pkgmetadata>

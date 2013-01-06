@@ -1,0 +1,68 @@
+commit 817cc738815542a1435d98c557954fad91fc9451
+Author: jjw <jjw@0b3c7260-62b7-4bd3-8502-661595b7e89c>
+Date:   Wed Dec 7 15:53:20 2011 +0000
+
+    Use heap allocation to prevent the stack from overflowing on large diffs.
+    
+    git-svn-id: svn://deltup.org/bdelta@41 0b3c7260-62b7-4bd3-8502-661595b7e89c
+
+Upstream: yes
+Reported-by: Artem S. Tashkinov
+Gentoo-bug: https://bugs.gentoo.org/show_bug.cgi?id=338327
+
+diff --git a/trunk/src/bdelta.cpp b/trunk/src/bdelta.cpp
+index 4eaaec7..8460451 100644
+--- a/trunk/src/bdelta.cpp
++++ b/trunk/src/bdelta.cpp
+@@ -45,9 +45,9 @@ int main(int argc, char **argv) {
+ 	for (int i = 512; i >= 16; i /= 2)
+ 		nummatches = bdelta_pass(b, i);
+ 
+-	STACK_ALLOC(copyloc1, unsigned, nummatches + 1);
+-	STACK_ALLOC(copyloc2, unsigned, nummatches + 1);
+-	STACK_ALLOC(copynum, unsigned, nummatches + 1);
++	unsigned * copyloc1 = new unsigned[nummatches + 1];
++	unsigned * copyloc2 = new unsigned[nummatches + 1];
++	unsigned *  copynum = new unsigned[nummatches + 1];
+ 
+ 	FILE *fout = fopen(argv[3], "wb");
+ 	if (!fout) {
+@@ -114,4 +114,10 @@ int main(int argc, char **argv) {
+ 
+ 	fclose(f1);
+ 	fclose(f2);
++
++	delete [] copynum;
++	delete [] copyloc2;
++	delete [] copyloc1;
++
++	return 0;
+ }
+diff --git a/trunk/src/bpatch.cpp b/trunk/src/bpatch.cpp
+index 0da02a8..8d6706b 100644
+--- a/trunk/src/bpatch.cpp
++++ b/trunk/src/bpatch.cpp
+@@ -67,9 +67,9 @@ int main(int argc, char **argv) {
+ 
+ 	unsigned nummatches = read_dword(patchfile);
+ 
+-	STACK_ALLOC(copyloc1, unsigned, nummatches + 1);
+-	STACK_ALLOC(copyloc2, unsigned, nummatches + 1);
+-	STACK_ALLOC(copynum, unsigned, nummatches + 1);
++	unsigned * copyloc1 = new unsigned[nummatches + 1];
++	unsigned * copyloc2 = new unsigned[nummatches + 1];
++	unsigned *  copynum = new unsigned[nummatches + 1];
+ 
+ 	for (unsigned i = 0; i < nummatches; ++i) {
+ 		copyloc1[i] = read_dword(patchfile);
+@@ -100,5 +100,10 @@ int main(int argc, char **argv) {
+ 			return -1;
+ 		}
+ 	}
++
++	delete [] copynum;
++	delete [] copyloc2;
++	delete [] copyloc1;
++
+ 	return 0;  
+ }

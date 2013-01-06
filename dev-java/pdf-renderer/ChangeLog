@@ -1,0 +1,41 @@
+# ChangeLog for dev-java/pdf-renderer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdf-renderer/ChangeLog,v 1.8 2012/03/29 11:32:19 sera Exp $
+
+*pdf-renderer-0.9.1 (27 Mar 2012)
+*pdf-renderer-0_pre20090523 (27 Mar 2012)
+
+  29 Mar 2012; Ralph Sennhauser <sera@gentoo.org>
+  +pdf-renderer-0_pre20090523.ebuild, +pdf-renderer-0.9.1.ebuild,
+  -pdf-renderer-0.20090523.ebuild:
+  Version bump to 0.9.1. #404309
+  Move version 0.20090523 to 0_pre20090523, this is not a downgrade but
+  required for 0.9.1 to be treated as an update over 0.20090523. Sorry for the
+  possible confusion this may cause.
+
+  11 May 2010; Joseph Jezak <josejx@gentoo.org>
+  pdf-renderer-0.20090523.ebuild:
+  Marked ppc/ppc64 stable.
+
+  25 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
+  pdf-renderer-0.20090523.ebuild:
+  Keyworded for ppc, bug 270906
+
+  04 Jul 2009; Brent Baude <ranger@gentoo.org>
+  pdf-renderer-0.20090523.ebuild:
+  Marking pdf-renderer-0.20090523 ~ppc64 for bug 270906
+
+  29 Jun 2009; Markus Meier <maekke@gentoo.org>
+  pdf-renderer-0.20090523.ebuild:
+  amd64/x86 stable, bug #275176
+
+  31 May 2009; Markus Meier <maekke@gentoo.org>
+  pdf-renderer-0.20090523.ebuild:
+  add ~amd64, bug #270906
+
+*pdf-renderer-0.20090523 (22 May 2009)
+
+  22 May 2009; Petteri Räty <betelgeuse@gentoo.org>
+  +pdf-renderer-0.20090523.ebuild, +metadata.xml:
+  Add pdf-renderer need for itext rups use flag. Ebuild written by me.
+

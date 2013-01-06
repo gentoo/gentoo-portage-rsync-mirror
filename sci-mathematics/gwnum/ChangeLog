@@ -1,0 +1,12 @@
+# ChangeLog for sci-mathematics/gwnum
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gwnum/ChangeLog,v 1.2 2012/11/28 08:19:45 patrick Exp $
+
+  28 Nov 2012; Patrick Lauer <patrick@gentoo.org> gwnum-277.ebuild:
+  Fix SRC_URI
+
+*gwnum-277 (28 Nov 2012)
+
+  28 Nov 2012; Patrick Lauer <patrick@gentoo.org> +gwnum-277.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me

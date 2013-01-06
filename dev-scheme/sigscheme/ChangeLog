@@ -1,0 +1,16 @@
+# ChangeLog for dev-scheme/sigscheme
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/sigscheme/ChangeLog,v 1.2 2010/10/06 03:20:55 chiiph Exp $
+
+*sigscheme-0.8.5 (06 Oct 2010)
+
+  06 Oct 2010; Tomas Touceda <chiiph@gentoo.org> sigscheme-0.8.3.ebuild,
+  +sigscheme-0.8.5.ebuild, metadata.xml:
+  Version bump and ebuild cleanup
+
+*sigscheme-0.8.3 (02 May 2008)
+
+  02 May 2008; Marijn Schouten <hkBst@gentoo.org> +metadata.xml,
+  +sigscheme-0.8.3.ebuild:
+  Initial ebuild, bug 203863, thanks to Austen Dicken <cvpcsm@gmail.com>
+

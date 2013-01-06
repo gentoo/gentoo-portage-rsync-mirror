@@ -1,0 +1,13 @@
+# ChangeLog for gnome-extra/connman-gnome
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/connman-gnome/ChangeLog,v 1.3 2011/03/29 12:20:45 angelos Exp $
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> connman-gnome-0.5.ebuild:
+  Fixed slot deps
+
+*connman-gnome-0.5 (13 Aug 2009)
+
+  13 Aug 2009; Robert Piasek <dagger@gentoo.org> +connman-gnome-0.5.ebuild,
+  +metadata.xml:
+  Initial ebuild of connman-gnome
+

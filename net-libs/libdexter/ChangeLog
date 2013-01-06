@@ -1,0 +1,18 @@
+# ChangeLog for net-libs/libdexter
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdexter/ChangeLog,v 1.4 2012/05/05 02:54:25 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> libdexter-0.1.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
+
+  18 Jul 2010; Daniel Black <dragonheart@gentoo.org> libdexter-0.1.4.ebuild:
+  fix homepage as per bug #325027. Thanks John Keeping
+
+*libdexter-0.1.4 (13 Apr 2007)
+
+  13 Apr 2007; <dragonheart@gentoo.org> +metadata.xml, +libdexter-0.1.4.ebuild:
+  initial import thanks to Philip Kovacs as per bug #159668
+

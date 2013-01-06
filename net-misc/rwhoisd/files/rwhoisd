@@ -1,0 +1,18 @@
+#!/sbin/runscript
+
+depend() {
+	use logger
+	need net
+}
+
+start() {
+	ebegin "Starting rwhoisd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/rwhoisd ${RWHOISD_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping tftpd"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/rwhoisd
+	eend $?
+}

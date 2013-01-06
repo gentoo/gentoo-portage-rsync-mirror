@@ -1,0 +1,12 @@
+# ChangeLog for dev-python/ecdsa
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.2 2012/09/18 04:28:48 mr_bones_ Exp $
+
+  18 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> ecdsa-0.8.ebuild:
+  add missing test to IUSE
+
+*ecdsa-0.8 (16 Sep 2012)
+
+  16 Sep 2012; Anthony G. Basile <blueness@gentoo.org> +ecdsa-0.8.ebuild,
+  +metadata.xml:
+  Initial commit, needed for net-misc/electrum

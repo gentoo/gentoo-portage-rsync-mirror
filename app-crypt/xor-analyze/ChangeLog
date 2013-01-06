@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/xor-analyze
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xor-analyze/ChangeLog,v 1.1 2009/11/27 08:55:35 vapier Exp $
+
+*xor-analyze-0.5 (27 Nov 2009)
+
+  27 Nov 2009; Mike Frysinger <vapier@gentoo.org> +xor-analyze-0.5.ebuild,
+  +metadata.xml:
+  Initial ebuild by me.
+

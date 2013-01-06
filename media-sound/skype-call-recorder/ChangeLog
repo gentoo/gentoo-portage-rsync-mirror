@@ -1,0 +1,15 @@
+# ChangeLog for media-sound/skype-call-recorder
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/skype-call-recorder/ChangeLog,v 1.2 2012/12/04 22:06:32 reavertm Exp $
+
+  04 Dec 2012; Maciej Mrozowski <reavertm@gentoo.org>
+  skype-call-recorder-0.8.ebuild:
+  Add IUSE default (-) on recently removed qt-static USE flag from skype, bug
+  445922
+
+*skype-call-recorder-0.8 (23 Jul 2011)
+
+  23 Jul 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  +skype-call-recorder-0.8.ebuild, +files/skype-call-recorder-0.8-cmake.patch,
+  +metadata.xml:
+  Add new package, ebuild by myself with some ideas from bug 233523

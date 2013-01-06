@@ -1,0 +1,20 @@
+Description: Don't add hot-added battery to device list, because libupower-glib
+ already does that (LP: #616443)
+Author: Maxim Levitsky <maximlevitsky@gmail.com>
+Bug-Ubuntu: https://launchpad.net/bugs/616443
+Forwarded: no
+Last-Update: <2011-06-13>
+
+--- gnome-power-manager-2.32.0.orig/src/gpm-engine.c
++++ gnome-power-manager-2.32.0/src/gpm-engine.c
+@@ -886,10 +886,7 @@ out:
+ static void
+ gpm_engine_device_added_cb (UpClient *client, UpDevice *device, GpmEngine *engine)
+ {
+-	/* add to list */
+-	g_ptr_array_add (engine->priv->array, g_object_ref (device));
+ 	gpm_engine_check_recall (engine, device);
+-
+ 	gpm_engine_recalculate_state (engine);
+ }
+ 

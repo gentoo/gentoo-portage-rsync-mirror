@@ -1,0 +1,21 @@
+--- configure.in	(révision 2054)
++++ configure.in	(copie de travail)
+@@ -80,7 +80,7 @@ 
+ AC_SUBST(LIBXML_CFLAGS)
+ AC_SUBST(LIBXML_LIBS)
+ 
+-PKG_CHECK_MODULES(LIBPNG, "libpng", [have_png_support=yes], [have_png_support=no])
++PKG_CHECK_MODULES(LIBPNG, "libpng zlib", [have_png_support=yes], [have_png_support=no])
+ AC_SUBST(LIBPNG_CFLAGS)
+ AC_SUBST(LIBPNG_LIBS)
+ 
+--- subrip/subp2pgm.c	(révision 2054)
++++ subrip/subp2pgm.c	(copie de travail)
+@@ -44,6 +44,7 @@ 
+ 
+ #ifdef HAVE_PNG_SUPPORT
+ #include <png.h>
++#include <zlib.h>
+ #endif
+ 
+ #ifdef HAVE_TIFF_SUPPORT

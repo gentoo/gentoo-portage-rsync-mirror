@@ -1,0 +1,12 @@
+diff -urN ./ytree-1.92.orig/Makefile ./ytree-1.92/Makefile
+--- ./ytree-1.92.orig/Makefile	2009-01-31 20:57:46.000000000 +0100
++++ ./ytree-1.92/Makefile	2009-01-31 20:58:11.000000000 +0100
+@@ -32,7 +32,7 @@
+ COLOR       = -DCOLOR_SUPPORT 
+ CLOCK	    = -DCLOCK_SUPPORT # Experimental!
+ READLINE    = -DREADLINE_SUPPORT
+-CFLAGS      = -D_GNU_SOURCE $(ADD_CFLAGS) $(COLOR) $(CLOCK) $(READLINE)
++CFLAGS      += -D_GNU_SOURCE $(ADD_CFLAGS) $(COLOR) $(CLOCK) $(READLINE)
+ LDFLAGS     = -lncurses -lreadline
+ 
+ ###########################

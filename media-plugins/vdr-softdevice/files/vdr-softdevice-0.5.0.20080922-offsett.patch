@@ -1,0 +1,35 @@
+Index: softdevice-cvs-20080922/mpeg2decoder.c
+===================================================================
+--- softdevice-cvs-20080922.orig/mpeg2decoder.c
++++ softdevice-cvs-20080922/mpeg2decoder.c
+@@ -1016,7 +1016,7 @@ static int read_packet_RingBuffer(void *
+ };
+ 
+ #if LIBAVFORMAT_BUILD >4625
+-static offset_t seek_RingBuffer(void *opaque, offset_t offset, int whence)
++static int64_t seek_RingBuffer(void *opaque, int64_t offset, int whence)
+ #else
+ static int seek_RingBuffer(void *opaque, offset_t offset, int whence)
+ #endif
+@@ -1135,7 +1135,7 @@ start:
+     return 0;
+ };
+ 
+-int cMpeg2Decoder::seek(offset_t offset, int whence) {
++int cMpeg2Decoder::seek(int64_t offset, int whence) {
+    printf("unimplemented: seek offset %lld whence %d\n", (long long int)offset, whence);
+    return -EINVAL;
+ };
+Index: softdevice-cvs-20080922/mpeg2decoder.h
+===================================================================
+--- softdevice-cvs-20080922.orig/mpeg2decoder.h
++++ softdevice-cvs-20080922/mpeg2decoder.h
+@@ -312,7 +312,7 @@ private:
+     bool          packetMode;
+ public:
+     int read_packet(uint8_t *buf, int buf_size);
+-    int seek(offset_t offset, int whence);
++    int seek(int64_t offset, int whence);
+ 
+ public:
+     cMpeg2Decoder(cAudioOut *AudioOut, cVideoOut *VideoOut);

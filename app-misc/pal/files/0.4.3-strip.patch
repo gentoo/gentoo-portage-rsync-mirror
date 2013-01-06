@@ -1,0 +1,17 @@
+--- pal-0.4.2/src/Makefile
++++ pal-0.4.2/src/Makefile
+@@ -21,10 +21,10 @@
+ $(NAME): $(OBJ)
+ 	@echo " [gcc] $(NAME)"
+ 	@$(CC) $(CFLAGS) $(OBJ) $(LDFLAGS) -o $(NAME)
+-ifneq ($(DEBUG),1)
+-	@echo " [strip] $(NAME)"
+-	@strip $(NAME)
+-endif
++#ifneq ($(DEBUG),1)
++#	@echo " [strip] $(NAME)"
++#	@strip $(NAME)
++#endif
+ 
+ 
+ 

@@ -1,0 +1,65 @@
+# ChangeLog for www-client/dwb
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/ChangeLog,v 1.14 2013/01/02 21:16:50 radhermit Exp $
+
+  02 Jan 2013; Tim Harder <radhermit@gentoo.org> dwb-9999.ebuild:
+  Update live ebuild deps, simplify sed line, and bump EAPI.
+
+*dwb-2012.12.03 (02 Jan 2013)
+
+  02 Jan 2013; Tim Harder <radhermit@gentoo.org> +dwb-2012.12.03.ebuild:
+  Version bump (bug #449346).
+
+  14 Dec 2012; Tim Harder <radhermit@gentoo.org> dwb-9999.ebuild:
+  Fix install location.
+
+  01 Nov 2012; Tim Harder <radhermit@gentoo.org> -dwb-2012.05.11.ebuild,
+  -dwb-2012.10.28.ebuild:
+  Remove old.
+
+*dwb-2012.10.28-r1 (01 Nov 2012)
+
+  01 Nov 2012; Tim Harder <radhermit@gentoo.org> +dwb-2012.10.28-r1.ebuild,
+  +files/dwb-2012.10.28-search-engine.patch:
+  Revision bump. Apply fix for search engine adding issue (bug #440692 by John
+  Brendler).
+
+  28 Oct 2012; Tim Harder <radhermit@gentoo.org> dwb-2012.10.28.ebuild:
+  LDFLAGS are now respected.
+
+*dwb-2012.10.28 (28 Oct 2012)
+
+  28 Oct 2012; Tim Harder <radhermit@gentoo.org> +dwb-2012.10.28.ebuild,
+  +files/dwb-2012.10.28-verbose-build.patch:
+  Version bump.
+
+*dwb-2012.08.22 (26 Aug 2012)
+
+  26 Aug 2012; Tim Harder <radhermit@gentoo.org> +dwb-2012.08.22.ebuild:
+  Version bump. Respect LDFLAGS (bug #432676 by xmw).
+
+  19 Aug 2012; Anthony G. Basile <blueness@gentoo.org> dwb-2012.05.11.ebuild:
+  Keyword ~ppc, bug #431822
+
+  10 Jun 2012; Tim Harder <radhermit@gentoo.org> -dwb-2012.02.01.ebuild:
+  Remove old.
+
+*dwb-2012.05.11 (12 May 2012)
+
+  12 May 2012; Tim Harder <radhermit@gentoo.org> +dwb-2012.05.11.ebuild:
+  Version bump.
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> dwb-2012.02.01.ebuild,
+  dwb-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  17 Apr 2012; Michał Górny <mgorny@gentoo.org> dwb-2012.02.01.ebuild:
+  Use mirror://bitbucket.
+
+*dwb-9999 (18 Feb 2012)
+*dwb-2012.02.01 (18 Feb 2012)
+
+  18 Feb 2012; Tim Harder <radhermit@gentoo.org> +dwb-2012.02.01.ebuild,
+  +dwb-9999.ebuild, +metadata.xml:
+  Initial import. Ebuild by me.
+

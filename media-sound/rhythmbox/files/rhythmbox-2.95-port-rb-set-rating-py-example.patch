@@ -1,0 +1,42 @@
+From a9e3286eec99cdd9d229aa0d9bcab925cc381889 Mon Sep 17 00:00:00 2001
+From: Nirbheek Chauhan <nirbheek@gentoo.org>
+Date: Mon, 16 Jan 2012 06:56:21 +0530
+Subject: [PATCH 2/2] Port the rb-set-rating.py example script to PyGI/GDBus
+
+---
+ remote/dbus/rb-set-rating.py |   19 ++++++++++++++-----
+ 1 files changed, 14 insertions(+), 5 deletions(-)
+
+diff --git a/remote/dbus/rb-set-rating.py b/remote/dbus/rb-set-rating.py
+index 82264d5..9fdd0d5 100755
+--- a/remote/dbus/rb-set-rating.py
++++ b/remote/dbus/rb-set-rating.py
+@@ -1,11 +1,20 @@
+ #!/usr/bin/python
++# vim: set sts=2 sw=2 et :
+ # Set the rating for a URI
+ 
+-import dbus, sys
++import sys
+ 
+-bus = dbus.SessionBus()
+-rbshellobj = bus.get_object('org.gnome.Rhythmbox', '/org/gnome/Rhythmbox/Shell')
+-rbshell = dbus.Interface(rbshellobj, 'org.gnome.Rhythmbox.Shell')
++from gi.repository import GLib, Gio
+ 
+-rbshell.setSongProperty(sys.argv[1], "rating", dbus.Double(float(sys.argv[2])))
++bus_type = Gio.BusType.SESSION
++flags = 0
++iface_info = None
++proxy = Gio.DBusProxy.new_for_bus_sync(bus_type, flags, iface_info,
++                                       "org.gnome.Rhythmbox3",
++                                       "/org/gnome/Rhythmbox3/RhythmDB",
++                                       "org.gnome.Rhythmbox3.RhythmDB", None)
+ 
++entry_uri = sys.argv[1]
++rating = float(sys.argv[2])
++vrating = GLib.Variant("u", rating)
++proxy.SetEntryProperties("(sa{sv})", entry_uri, {"rating": vrating})
+-- 
+1.7.3.4
+

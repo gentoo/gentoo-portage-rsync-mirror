@@ -1,0 +1,58 @@
+--- a/configure.ac
++++ b/configure.ac
+@@ -24,6 +24,7 @@
+ 
+ AC_C_CONST
+ AC_PROG_INSTALL
++AC_PROG_MKDIR_P
+ 
+ dnl Checks for libraries.
+ 
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -31,6 +31,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
++MKDIR_P = @MKDIR_P@
+ MAKEINFO = makeinfo
+ TEXI2DVI = texi2dvi
+ TEXI2PDF = texi2pdf
+@@ -84,24 +85,24 @@
+ 	sed -e "s:outfile = 'currency.units':outfile='@UDAT@currency.units':" units_cur > units_cur_inst
+ 
+ install-support: definitions.units currency.units units_cur_inst
+-	$(srcdir)/mkinstalldirs $(DESTDIR)@UDAT@ $(DESTDIR)$(bindir) 
++	$(MKDIR_P) $(DESTDIR)@UDAT@ $(DESTDIR)$(bindir) 
+ 	$(INSTALL_DATA) $(srcdir)/definitions.units $(DESTDIR)@UDAT@definitions.units
+ 	$(INSTALL_DATA) $(srcdir)/currency.units $(DESTDIR)@UDAT@currency.units
+ 	$(INSTALL_DATA) $(srcdir)/locale.map $(DESTDIR)@UDAT@locale.map
+ 	$(INSTALL_PROGRAM) units_cur_inst $(DESTDIR)$(bindir)/`echo units_cur|sed '$(transform)'`
+ 
+ install: units@EXEEXT@ install-doc install-support
+-	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir) 
++	$(MKDIR_P) $(DESTDIR)$(bindir) 
+ 	$(INSTALL_PROGRAM) units@EXEEXT@ $(DESTDIR)$(bindir)/`echo units@EXEEXT@|sed '$(transform)'`
+ 
+ install-strip: units@EXEEXT@ install-doc install-support
+-	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
++	$(MKDIR_P) $(DESTDIR)$(bindir)
+ 	$(INSTALL_PROGRAM) -s units@EXEEXT@ $(DESTDIR)$(bindir)/`echo units@EXEEXT@|sed '$(transform)'`
+ 
+ install-doc: install-man install-info
+ 
+ install-man: units.1
+-	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/man1
++	$(MKDIR_P) $(DESTDIR)$(mandir)/man1
+ 	$(INSTALL_DATA) units.1 $(DESTDIR)$(mandir)/man1/`echo units|sed '$(transform)'`.1
+ 
+ units.man: units.texinfo texi2man
+@@ -114,7 +115,7 @@
+ 
+ $(DESTDIR)$(infodir)/units.info: units.info
+ 	$(POST_INSTALL)
+-	$(srcdir)/mkinstalldirs $(DESTDIR)$(infodir)
++	$(MKDIR_P) $(DESTDIR)$(infodir)
+ # There may be a newer info file in . than in srcdir.
+ 	-if test -f units.info; then d=.; \
+ 	    else d=$(srcdir); fi; \

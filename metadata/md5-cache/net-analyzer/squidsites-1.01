@@ -1,0 +1,9 @@
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=Squidsites is a tool that parses Squid access log file and generates a report of the most visited sites.
+HOMEPAGE=http://www.stefanopassiglia.com/misc.htm
+KEYWORDS=~amd64 ppc x86
+LICENSE=GPL-2
+SLOT=1
+SRC_URI=http://www.stefanopassiglia.com/downloads/squidsites-1.01.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=8f74e91f79fee1bf7a95ffdf262d508c

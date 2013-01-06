@@ -1,0 +1,14 @@
+# ChangeLog for media-gfx/photivo
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/ChangeLog,v 1.2 2012/12/27 18:54:06 ottxor Exp $
+
+  27 Dec 2012; Christoph Junghans <ottxor@gentoo.org> photivo-9999.ebuild:
+  mercurial.eclass respects  now
+
+*photivo-0_pre20121006 (09 Dec 2012)
+*photivo-9999 (09 Dec 2012)
+
+  09 Dec 2012; Markos Chandras <hwoarang@gentoo.org> +metadata.xml,
+  +photivo-0_pre20121006.ebuild, +photivo-9999.ebuild:
+  Initial commit for photivo. Move live ebuild from qt overlay. Bug #347707.
+  Thanks to Marios Andreopoulos <opensource@andmarios.com>

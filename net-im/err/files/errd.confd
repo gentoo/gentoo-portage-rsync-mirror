@@ -1,0 +1,4 @@
+ERR_CONFIG_PATH=/etc/err
+ERR_PID_FILE=/var/run/err/err.pid
+ERR_USER=err
+ERR_GROUP=err

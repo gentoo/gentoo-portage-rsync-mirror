@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare setup
+DEPEND=dev-lang/perl >=sys-devel/make-3.79 >=sys-devel/flex-2.5.4 >=sys-devel/bison-1.875d || ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1 ) || ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 ) libffi? ( virtual/pkgconfig virtual/libffi ) ocaml? ( dev-lang/ocaml ) udis86? ( dev-libs/udis86[pic(+)] )
+DESCRIPTION=Low Level Virtual Machine
+EAPI=4
+HOMEPAGE=http://llvm.org/
+IUSE=debug +libffi llvm-gcc multitarget ocaml test udis86 vim-syntax
+KEYWORDS=amd64 ~ppc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos
+LICENSE=UoI-NCSA
+RDEPEND=dev-lang/perl libffi? ( virtual/libffi ) vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
+SLOT=0
+SRC_URI=http://llvm.org/releases/2.9/llvm-2.9.tgz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	61ad55e732e494378165e7dcd4744b91	multilib	9aa8a023e062fca0ba79362d9d0cc488	pax-utils	0ace932c4045349c7fc1af0fe7091acf	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=8da1c91c46a185ac27225c0126fe8275

@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=virtual/latex-base media-gfx/imagemagick doc? ( virtual/texi2dvi ) test? ( dev-texlive/texlive-langgerman dev-texlive/texlive-fontsrecommended dev-tex/latex2html )
+DESCRIPTION=LaTeX to RTF converter
+HOMEPAGE=http://latex2rtf.sourceforge.net/
+IUSE=doc test
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=GPL-2
+RDEPEND=virtual/latex-base media-gfx/imagemagick
+SLOT=0
+SRC_URI=mirror://sourceforge/latex2rtf/latex2rtf-2.1.0.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=f74099204c9cb25383ee69670d2a45fc

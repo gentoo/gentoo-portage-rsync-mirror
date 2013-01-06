@@ -1,0 +1,182 @@
+# ChangeLog for dev-perl/Inline
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.55 2012/11/04 14:43:10 tove Exp $
+
+*Inline-0.510.0 (04 Nov 2012)
+
+  04 Nov 2012; Torsten Veller <tove@gentoo.org> +Inline-0.510.0.ebuild:
+  Version bump
+
+  22 Sep 2012; Anthony G. Basile <blueness@gentoo.org> Inline-0.500.0.ebuild:
+  keyword ~ppc64, bug #384677
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  17 Jun 2012; Raúl Porcel <armin76@gentoo.org> Inline-0.500.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #412985
+
+  06 May 2012; Brent Baude <ranger@gentoo.org> Inline-0.500.0.ebuild:
+  Marking Inline-0.500.0 ppc for bug 412985
+
+  26 Apr 2012; Jeroen Roovers <jer@gentoo.org> Inline-0.500.0.ebuild:
+  Stable for HPPA (bug #412985).
+
+  25 Apr 2012; Markus Meier <maekke@gentoo.org> Inline-0.500.0.ebuild:
+  arm stable, bug #412985
+
+  22 Apr 2012; Agostino Sarubbo <ago@gentoo.org> Inline-0.500.0.ebuild:
+  Stable for amd64, wrt bug #412985
+
+  21 Apr 2012; Jeff Horelick <jdhore@gentoo.org> Inline-0.500.0.ebuild:
+  marked x86 per bug 412985
+
+*Inline-0.500.0 (21 Feb 2012)
+
+  21 Feb 2012; Torsten Veller <tove@gentoo.org> +Inline-0.500.0.ebuild:
+  Version bump
+
+  11 Oct 2011; Matt Turner <mattst88@gentoo.org> Inline-0.480.0.ebuild:
+  Added ~mips, bug 384677
+
+  10 Oct 2011; Jeroen Roovers <jer@gentoo.org> Inline-0.480.0.ebuild:
+  Marked ~hppa (bug #384677).
+
+  09 Oct 2011; Raúl Porcel <armin76@gentoo.org> Inline-0.480.0.ebuild:
+  Add ~alpha/~arm/~ia64/~s390/~sh wrt #384677
+
+*Inline-0.480.0 (27 Sep 2011)
+
+  27 Sep 2011; Torsten Veller <tove@gentoo.org> +Inline-0.480.0.ebuild:
+  Version bump. Don't run the tests of Inline and Inline::C parallel (#384137)
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Inline-0.470.ebuild:
+  Cleanup
+
+*Inline-0.470.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Inline-0.470.0.ebuild:
+  Change version scheme
+
+  29 Jul 2011; Torsten Veller <tove@gentoo.org> -Inline-0.45.ebuild,
+  -Inline-0.46.ebuild:
+  Cleanup
+
+*Inline-0.470 (21 Jan 2011)
+
+  21 Jan 2011; Torsten Veller <tove@gentoo.org> +Inline-0.470.ebuild:
+  Version bump
+
+*Inline-0.46 (05 Mar 2010)
+
+  05 Mar 2010; Torsten Veller <tove@gentoo.org> +Inline-0.46.ebuild:
+  Version bump
+
+  21 Jan 2010; Torsten Veller <tove@gentoo.org> Inline-0.44-r1.ebuild:
+  mips -> ~mips
+
+  18 Dec 2009; Torsten Veller <tove@gentoo.org> Inline-0.45.ebuild:
+  Ebuild maintenance (#297133)
+
+*Inline-0.45 (08 Dec 2008)
+
+  08 Dec 2008; Robin H. Johnson <robbat2@gentoo.org> +Inline-0.45.ebuild:
+  Version bump.
+
+  01 May 2007; Markus Rothe <corsair@gentoo.org> Inline-0.44-r1.ebuild:
+  Stable on ppc64; bug #175120
+
+  15 Jan 2007; Michael Cummings <mcummings@gentoo.org>
+  Inline-0.44-r1.ebuild:
+  Ebuild maintenance
+
+  10 Dec 2006; Yuval Yaari <yuval@gentoo.org> Inline-0.44-r1.ebuild:
+  Changed perl-core/Test-Harness to virtual/perl-Test-Harness (bug #157685)
+
+  14 Oct 2006; Markus Rothe <corsair@gentoo.org> Inline-0.44-r1.ebuild:
+  Added ~ppc64; bug #150934
+
+  13 Oct 2006; Yuval Yaari <yuval@gentoo.org> Inline-0.44-r1.ebuild:
+  using File-Spec's and Digest-MD5's virtuals; bug #151201
+
+  05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Inline-0.44-r1.ebuild:
+  Adding perl dep; fixed DEPEND
+
+  04 Jul 2006; Christian Hartmann <ian@gentoo.org> Inline-0.44-r1.ebuild:
+  Fixed RDEPEND wrt bug #134781; fixed header
+
+  17 Nov 2005; <mcumming@gentoo.org> Inline-0.44-r1.ebuild:
+  Bug 106560, changing use flag from gtk2 to gtk
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> Inline-0.44-r1.ebuild:
+  dev-perl/Test-Harness => perl-core/Test-Harness migration
+
+  25 May 2005; Michael Cummings <mcummings@gentoo.org> Inline-0.44-r1.ebuild:
+  dev-perl/File-Spec => perl-core/File-Spec migration
+
+  24 May 2005; Michael Cummings <mcummings@gentoo.org> Inline-0.44-r1.ebuild:
+  dev-perl/Digest-MD5 => perl-core/Digest-MD5
+
+  27 Apr 2005; Michael Cummings <mcummings@gentoo.org> -Inline-0.43-r1.ebuild,
+  -Inline-0.43.ebuild, Inline-0.44-r1.ebuild:
+  Cleaning
+
+  01 Feb 2005; Michael Cummings <mcummings@gentoo.org> -Inline-0.44.ebuild:
+  Removing old 0.44 ebuild
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> Inline-0.44-r1.ebuild:
+  Stable on amd64.
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> Inline-0.44-r1.ebuild:
+  Fix use invocation
+
+  14 Apr 2004; Stephen P. Becker <geoman@gentoo.org> Inline-0.44-r1.ebuild:
+  Marked stable on mips.
+
+  07 Mar 2004; Stephen P. Becker <geoman@gentoo.org> Inline-0.44-r1.ebuild:
+  Added ~mips keyword.
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org> Inline-0.44-r1.ebuild:
+  Masked for 240 days; unmasking
+
+  07 Jan 2004; <gustavoz@gentoo.org> Inline-0.44-r1.ebuild:
+  sparc stable bump
+
+*Inline-0.44-r1 (02 Jul 2003)
+
+  03 Jul 2003; Guy Martin <gmsoft@gentoo.org> Inline-0.44-r1.ebuild :
+  Added hppa to KEYWORDS.
+
+  02 Jul 2003; Michael Cummings <mcummings@gentoo.org> Inline-0.44-r1.ebuild,
+  files/gtk2-patch.diff:
+  Addresses bug 17223, patch submitted by Kfir Ozer <ufk2k@yahoo.com>
+
+  24 Jun 2003; Aron Griffis <agriffis@gentoo.org> Inline-0.44.ebuild:
+  Mark stable on alpha
+
+*Inline-0.44 (31 May 2003)
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org> Inline-0.44.ebuild:
+  New version, corrects missing deps
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
+  forced version bump to install into correct locations
+
+*Inline-0.43-r1 (21 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*Inline-0.43 (16 Jul 2002)
+
+  31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> Inline-0.43.ebuild :
+
+  Added ppc to KEYWORDS.
+
+  16 Jul 2002; Seemant Kulleen <seemant@gentoo.org> Inline-0.43.ebuild
+  ChangeLog files/digest-Inline-0.43 :
+
+  New package.  Needed by grepmail eclass.

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>gnome</herd>
+<use>
+	<flag name="ldap">Build backend which enables default mail accounts,
+	addressbooks and calendars for Evolution to be configured using each
+	user's LDAP entry."</flag>
+	<flag name="orbit">Use <pkg>gnome-base/orbit</pkg> for IPC, same as in
+	gconf-2.x</flag>
+</use>
+</pkgmetadata>

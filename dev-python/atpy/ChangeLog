@@ -1,0 +1,64 @@
+# ChangeLog for dev-python/atpy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/ChangeLog,v 1.7 2012/08/02 17:31:55 bicatali Exp $
+
+*atpy-0.9.6 (02 Aug 2012)
+
+  02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> +atpy-0.9.6.ebuild,
+  -atpy-0.9.5.1.ebuild:
+  Version bump
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> atpy-0.9.5.1.ebuild,
+  atpy-0.9.5.3.ebuild:
+  Use mirror://github.
+
+  04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Switched herd to sci-astronomy
+
+*atpy-0.9.5.3 (29 Jul 2011)
+
+  29 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org> -atpy-0.9.4.ebuild,
+  +atpy-0.9.5.3.ebuild:
+  Version bump
+
+*atpy-0.9.5.1 (04 May 2011)
+
+  04 May 2011; Sébastien Fabbro <bicatali@gentoo.org> +atpy-0.9.5.1.ebuild:
+  Version bump
+
+  10 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  atpy-0.9.4.ebuild:
+  Enable tests.
+
+*atpy-0.9.4 (02 Sep 2010)
+
+  02 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org> +atpy-0.9.4.ebuild,
+  +metadata.xml:
+  Version bump and moved to the main tree
+
+*atpy-0.9.3 (02 Aug 2010)
+
+  02 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org> -atpy-0.9.2.ebuild,
+  +atpy-0.9.3.ebuild:
+  Version bump
+
+  25 Jun 2010; Justin Lecher <jlec@gentoo.org> atpy-0.9.2.ebuild:
+  Fix PYTHON ABI Stuff
+
+*atpy-0.9.2 (12 Feb 2010)
+
+  12 Feb 2010; Sébastien Fabbro <bicatali@gentoo.org> -atpy-0.9.1.ebuild,
+  +atpy-0.9.2.ebuild:
+  Bump
+
+*atpy-0.9.1 (08 Oct 2009)
+
+  08 Oct 2009; Sébastien Fabbro <bicatali@gentoo.org> -atpy-0.9.0.ebuild,
+  +atpy-0.9.1.ebuild, metadata.xml:
+  Version bump
+
+*atpy-0.9.0 (21 Jul 2009)
+
+  21 Jul 2009; Sébastien Fabbro <bicatali@gentoo.org> +atpy-0.9.0.ebuild,
+  +metadata.xml:
+  Initial import

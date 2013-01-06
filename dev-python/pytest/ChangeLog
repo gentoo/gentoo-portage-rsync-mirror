@@ -1,0 +1,178 @@
+# ChangeLog for dev-python/pytest
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.45 2013/01/02 04:32:07 floppym Exp $
+
+  02 Jan 2013; Mike Gilbert <floppym@gentoo.org> pytest-2.3.4.ebuild:
+  Add pypy2_0.
+
+*pytest-2.3.4 (23 Dec 2012)
+
+  23 Dec 2012; Tim Harder <radhermit@gentoo.org> +pytest-2.3.4.ebuild:
+  Version bump.
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> pytest-2.3.3-r1.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
+
+*pytest-2.3.3-r1 (07 Dec 2012)
+
+  07 Dec 2012; Michał Górny <mgorny@gentoo.org> +pytest-2.3.3-r1.ebuild:
+  Migrate to distutils-r1.
+
+  23 Nov 2012; Mike Gilbert <floppym@gentoo.org> -pytest-2.3.2.ebuild,
+  pytest-2.3.2-r1.ebuild, pytest-2.3.3.ebuild:
+  Update dependency on dev-python/py and add a safety check. Thanks to Arfrever
+  for pointing out the problem.
+
+*pytest-2.3.3 (11 Nov 2012)
+
+  11 Nov 2012; Tim Harder <radhermit@gentoo.org> +pytest-2.3.3.ebuild:
+  Version bump.
+
+*pytest-2.3.2-r1 (07 Nov 2012)
+
+  07 Nov 2012; Ian Delaney <idella4@gentoo.org> +pytest-2.3.2-r1.ebuild,
+  pytest-2.3.2.ebuild:
+  rev bump, doc flag added, building of docs added, minor update to test phase
+
+*pytest-2.3.2 (30 Oct 2012)
+
+  30 Oct 2012; Patrick Lauer <patrick@gentoo.org> +pytest-2.3.2.ebuild:
+  Bump
+
+*pytest-2.2.4 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +pytest-2.2.4.ebuild:
+  Bump
+
+  12 May 2012; Alexis Ballier <aballier@gentoo.org> pytest-2.2.3.ebuild:
+  keyword ~amd64-fbsd
+
+*pytest-2.2.3 (15 Feb 2012)
+
+  15 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> +pytest-2.2.3.ebuild:
+  Version bump to 2.2.3.
+
+  06 Oct 2011; Jeroen Roovers <jer@gentoo.org> pytest-2.0.3.ebuild:
+  Stable for HPPA (bug #373363).
+
+*pytest-2.1.1 (11 Sep 2011)
+
+  11 Sep 2011; Mike Gilbert <floppym@gentoo.org> +pytest-2.1.1.ebuild:
+  Version bump. Clean out pyc files; bug 380275. Thanks to David Leverton for
+  the suggestion.
+
+  24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> pytest-2.0.3.ebuild:
+  ppc/ppc64 stable wrt #373363
+
+  23 Jul 2011; Raúl Porcel <armin76@gentoo.org> pytest-2.0.3.ebuild:
+  alpha/ia64/sh/sparc stable wrt #373363
+
+  15 Jul 2011; Markus Meier <maekke@gentoo.org> pytest-2.0.3.ebuild:
+  x86 stable, bug #373363
+
+  12 Jul 2011; Markus Meier <maekke@gentoo.org> pytest-2.0.3.ebuild:
+  arm stable, bug #373363
+
+  07 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
+  -files/pytest-2.0.0-nose-1.0+python-3.patch:
+  Remove unneeded files. Requested by Arfrever
+
+  03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> pytest-2.0.3.ebuild:
+  Stable on amd64 wrt bug #373363
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> -pytest-2.0.0.ebuild,
+  -pytest-2.0.1.ebuild:
+  Remove old ebuilds. Requested by Arfrever
+
+  27 Jun 2011; Brent Baude <ranger@gentoo.org> pytest-2.0.2.ebuild:
+  Marking pytest-2.0.2 ppc for bug 372595
+
+  29 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> pytest-2.0.2.ebuild:
+  ppc64 stable wrt #362773
+
+  23 Apr 2011; Raúl Porcel <armin76@gentoo.org> pytest-2.0.2.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #362773
+
+*pytest-2.0.3 (18 Apr 2011)
+
+  18 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pytest-2.0.3.ebuild:
+  Version bump.
+
+  18 Apr 2011; Thomas Kahle <tomka@gentoo.org> pytest-2.0.2.ebuild:
+  x86 stable per bug 362773
+
+  15 Apr 2011; Christoph Mende <angelos@gentoo.org> pytest-2.0.2.ebuild:
+  Stable on amd64 wrt bug #362773
+
+  12 Apr 2011; Jeroen Roovers <jer@gentoo.org> pytest-2.0.2.ebuild:
+  Stable for HPPA (bug #362773).
+
+  31 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> pytest-2.0.1.ebuild:
+  ppc64 stable wrt #358137
+
+  30 Mar 2011; Jeroen Roovers <jer@gentoo.org> pytest-2.0.1.ebuild:
+  Stable for HPPA (bug #358137).
+
+  27 Mar 2011; Brent Baude <ranger@gentoo.org> pytest-2.0.1.ebuild:
+  Marking pytest-2.0.1 ppc for bug 358137
+
+  27 Mar 2011; Tobias Klausmann <klausman@gentoo.org> pytest-2.0.1.ebuild:
+  Stable on alpha, bug #358137
+
+  21 Mar 2011; Markus Meier <maekke@gentoo.org> pytest-2.0.1.ebuild:
+  arm stable, bug #358137
+
+  13 Mar 2011; Markos Chandras <hwoarang@gentoo.org> pytest-2.0.1.ebuild:
+  Stable on amd64 wrt bug #358137
+
+*pytest-2.0.2 (09 Mar 2011)
+
+  09 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pytest-2.0.2.ebuild:
+  Version bump.
+
+*pytest-2.0.1 (09 Feb 2011)
+
+  09 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pytest-2.0.1.ebuild:
+  Version bump.
+
+  30 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pytest-1.3.ebuild:
+  Delete.
+
+  30 Jan 2011; Raúl Porcel <armin76@gentoo.org> pytest-2.0.0.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #351493
+
+  29 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pytest-2.0.0.ebuild:
+  x86 stable wrt bug #351493
+
+  25 Jan 2011; Jeroen Roovers <jer@gentoo.org> pytest-2.0.0.ebuild:
+  Stable for HPPA (bug #351493).
+
+  20 Jan 2011; Markos Chandras <hwoarang@gentoo.org> pytest-2.0.0.ebuild:
+  Stable on amd64 wrt bug #351493
+
+  18 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> pytest-2.0.0.ebuild:
+  ppc64 stable wrt #351493
+
+  17 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pytest-2.0.0.ebuild, +files/pytest-2.0.0-nose-1.0+python-3.patch:
+  Fix test failures with nose 1.0 and Python 3.
+
+  14 Jan 2011; Brent Baude <ranger@gentoo.org> pytest-2.0.0.ebuild:
+  Marking pytest-2.0.0 ppc for bug 351493
+
+*pytest-1.3 (13 Dec 2010)
+
+  13 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pytest-1.3.ebuild:
+  Add wrapper 1.3 ebuild, which doesn't install anything and allows transition
+  from dev-python/py to dev-python/pytest.
+
+*pytest-2.0.0 (13 Dec 2010)
+
+  13 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pytest-2.0.0.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.

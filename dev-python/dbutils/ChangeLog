@@ -1,0 +1,31 @@
+# ChangeLog for dev-python/dbutils
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbutils/ChangeLog,v 1.6 2011/09/20 23:35:41 floppym Exp $
+
+  20 Sep 2011; Mike Gilbert <floppym@gentoo.org> dbutils-1.1.ebuild:
+  Simplify src_test(). Patch by Arfrever.
+
+*dbutils-1.1 (10 Sep 2011)
+
+  10 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +dbutils-1.1.ebuild:
+  Version bump to 1.1 (bug 381987; thanks to jbergstroem for testing).
+
+  30 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  dbutils-1.0.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
+
+  08 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  dbutils-1.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+*dbutils-1.0 (07 Sep 2009)
+
+  07 Sep 2009; Patrick Lauer <patrick@gentoo.org> +dbutils-1.0.ebuild:
+  Bump
+
+*dbutils-0.9.4 (21 Oct 2007)
+
+  21 Oct 2007; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +dbutils-0.9.4.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

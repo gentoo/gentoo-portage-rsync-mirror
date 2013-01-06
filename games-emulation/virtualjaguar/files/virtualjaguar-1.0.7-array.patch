@@ -1,0 +1,17 @@
+--- virtualjaguar-1.0.7-src/src/m68k_in.c.orig	2010-10-13 13:46:25.248611132 -0400
++++ virtualjaguar-1.0.7-src/src/m68k_in.c	2010-10-13 13:47:09.783059297 -0400
+@@ -193,10 +193,11 @@
+ 			{
+ 				instr = ostruct->match | (i << 9) | j;
+ 				m68ki_instruction_jump_table[instr] = ostruct->opcode_handler;
+-				for(k=0;k<NUM_CPU_TYPES;k++)
++				for(k=0;k<NUM_CPU_TYPES;k++) {
+ 					m68ki_cycles[k][instr] = ostruct->cycles[k];
+-				if((instr & 0xf000) == 0xe000 && (!(instr & 0x20)))
+-					m68ki_cycles[0][instr] = m68ki_cycles[1][instr] = ostruct->cycles[k] + ((((j-1)&7)+1)<<1);
++					if((instr & 0xf000) == 0xe000 && (!(instr & 0x20)))
++						m68ki_cycles[0][instr] = m68ki_cycles[1][instr] = ostruct->cycles[k] + ((((j-1)&7)+1)<<1);
++				}
+ 			}
+ 		}
+ 		ostruct++;

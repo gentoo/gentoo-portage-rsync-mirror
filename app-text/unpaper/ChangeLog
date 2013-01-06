@@ -1,0 +1,51 @@
+# ChangeLog for app-text/unpaper
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/ChangeLog,v 1.10 2012/06/22 21:30:51 flameeyes Exp $
+
+*unpaper-0.4.2 (22 Jun 2012)
+
+  22 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> +unpaper-0.4.2.ebuild,
+  -unpaper-0.4.1.ebuild:
+  Version bump.
+
+*unpaper-0.4.1 (20 Jun 2012)
+
+  20 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org> +unpaper-0.4.1.ebuild:
+  Version bump.
+
+  31 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> -unpaper-0.3.ebuild:
+  Remove 0.3 version as it relies on berlios mirrors (I have a copy of it
+  anyway).
+
+  10 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> unpaper-0.4.ebuild,
+  unpaper-9999.ebuild:
+  Really make keywords visible.
+
+  08 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> unpaper-0.4.ebuild:
+  Whoops, forgot the keywords.
+
+*unpaper-0.4 (08 Oct 2011)
+
+  08 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> +unpaper-0.4.ebuild,
+  unpaper-9999.ebuild:
+  Update live ebuild with new homepage URL, and bump to 0.4 version that use my
+  new fork package.
+
+  06 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> unpaper-9999.ebuild:
+  Drop src_install (leave default); add dependencies for man page generation.
+
+*unpaper-9999 (15 Aug 2011)
+
+  15 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> +unpaper-9999.ebuild:
+  Add a live ebuild based on my own fork of unpaper, using autotools and
+  supporting self-tests.
+
+  16 Nov 2010; Christian Faulhammer <fauli@gentoo.org> unpaper-0.3.ebuild:
+  keyworded ~arch for x86, bug 344443
+
+*unpaper-0.3 (05 Sep 2009)
+
+  05 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> +unpaper-0.3.ebuild,
+  +metadata.xml:
+  Initial import of unpaper; ebuild from my overlay; closes bug #172958.
+

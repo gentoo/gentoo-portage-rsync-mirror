@@ -1,0 +1,92 @@
+--- requests-0.14.1/requests/compat.py
++++ requests-0.14.1/requests/compat.py
+@@ -92,8 +92,8 @@
+     try:
+         import cchardet as chardet
+     except ImportError:
+-        from .packages import chardet
+-    from .packages.urllib3.packages.ordered_dict import OrderedDict
++        import chardet
++    from urllib3.packages.ordered_dict import OrderedDict
+ 
+     builtin_str = str
+     bytes = str
+@@ -109,7 +109,7 @@
+     from http import cookiejar as cookielib
+     from http.cookies import Morsel
+     from io import StringIO
+-    from .packages import chardet2 as chardet
++    import chardet
+     from collections import OrderedDict
+ 
+     builtin_str = str
+--- requests-0.14.1/requests/models.py
++++ requests-0.14.1/requests/models.py
+@@ -18,12 +18,12 @@
+ 
+ from .auth import HTTPBasicAuth, HTTPProxyAuth
+ from .cookies import cookiejar_from_dict, extract_cookies_to_jar, get_cookie_header
+-from .packages.urllib3.exceptions import MaxRetryError, LocationParseError
+-from .packages.urllib3.exceptions import TimeoutError
+-from .packages.urllib3.exceptions import SSLError as _SSLError
+-from .packages.urllib3.exceptions import HTTPError as _HTTPError
+-from .packages.urllib3 import connectionpool, poolmanager
+-from .packages.urllib3.filepost import encode_multipart_formdata
++from urllib3.exceptions import MaxRetryError, LocationParseError
++from urllib3.exceptions import TimeoutError
++from urllib3.exceptions import SSLError as _SSLError
++from urllib3.exceptions import HTTPError as _HTTPError
++from urllib3 import connectionpool, poolmanager
++from urllib3.filepost import encode_multipart_formdata
+ from .defaults import SCHEMAS
+ from .exceptions import (
+     ConnectionError, HTTPError, RequestException, Timeout, TooManyRedirects,
+--- requests-0.14.1/requests/safe_mode.py
++++ requests-0.14.1/requests/safe_mode.py
+@@ -12,7 +12,7 @@
+ """
+ 
+ from .models import Response
+-from .packages.urllib3.response import HTTPResponse
++from urllib3.response import HTTPResponse
+ from .exceptions import RequestException, ConnectionError, HTTPError
+ import socket
+ 
+--- requests-0.14.1/requests/sessions.py
++++ requests-0.14.1/requests/sessions.py
+@@ -16,7 +16,7 @@
+ from .models import Request
+ from .hooks import dispatch_hook
+ from .utils import header_expand, from_key_val_list
+-from .packages.urllib3.poolmanager import PoolManager
++from urllib3.poolmanager import PoolManager
+ 
+ 
+ def merge_kwargs(local_kwarg, default_kwarg):
+--- requests-0.14.1/setup.py
++++ requests-0.14.1/setup.py
+@@ -19,24 +19,8 @@
+ 
+ packages = [
+     'requests',
+-    'requests.packages',
+-    'requests.packages.urllib3',
+-    'requests.packages.urllib3.packages',
+-    'requests.packages.urllib3.packages.ssl_match_hostname'
+ ]
+ 
+-if is_py2:
+-    packages.extend([
+-        'requests.packages.oauthlib',
+-        'requests.packages.oauthlib.oauth1',
+-        'requests.packages.oauthlib.oauth1.rfc5849',
+-        'requests.packages.oauthlib.oauth2',
+-        'requests.packages.oauthlib.oauth2.draft25',
+-        'requests.packages.chardet',
+-    ])
+-else:
+-    packages.append('requests.packages.chardet2')
+-
+ requires = []
+ 
+ setup(

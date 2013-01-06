@@ -1,0 +1,73 @@
+# ChangeLog for dev-python/flask
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/ChangeLog,v 1.16 2012/08/20 17:23:44 floppym Exp $
+
+  20 Aug 2012; Mike Gilbert <floppym@gentoo.org> flask-0.9.ebuild:
+  Drop unused sed statement; applied upstream. Thanks to Arfrever.
+
+*flask-0.9 (17 Aug 2012)
+
+  17 Aug 2012; Patrick Lauer <patrick@gentoo.org> +flask-0.9.ebuild:
+  Bump for #425186
+
+*flask-9999 (10 Apr 2012)
+
+  10 Apr 2012; Rafael G. Martins <rafaelmartins@gentoo.org> +flask-9999.ebuild:
+  Added live ebuild.
+
+  08 Oct 2011; Mike Gilbert <floppym@gentoo.org> flask-0.8.ebuild:
+  Fix compilation with py2.5; thanks to Arfrever catching this.
+
+  08 Oct 2011; Mike Gilbert <floppym@gentoo.org> flask-0.7.2.ebuild,
+  flask-0.8.ebuild:
+  Drop support for python 2.4. Bug 382765.
+
+*flask-0.8 (08 Oct 2011)
+
+  08 Oct 2011; Rafael G. Martins <rafaelmartins@gentoo.org> +flask-0.8.ebuild:
+  Version bump.
+
+*flask-0.7.2 (06 Jul 2011)
+
+  06 Jul 2011; Dirkjan Ochtman <djc@gentoo.org> +flask-0.7.2.ebuild:
+  Version bump to 0.7.2.
+
+  12 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  flask-0.6.1.ebuild:
+  Fix dependencies.
+
+*flask-0.6.1 (31 Dec 2010)
+
+  31 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -flask-0.6.ebuild, +flask-0.6.1.ebuild:
+  Version bump.
+
+*flask-0.6 (27 Jul 2010)
+
+  27 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -flask-0.5.2.ebuild, +flask-0.6.ebuild:
+  Version bump (bug #330077).
+
+*flask-0.5.2 (15 Jul 2010)
+
+  15 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -flask-0.4.ebuild, -flask-0.5.1.ebuild, +flask-0.5.2.ebuild:
+  Version bump.
+
+*flask-0.5.1 (06 Jul 2010)
+
+  06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +flask-0.5.1.ebuild:
+  Version bump.
+
+*flask-0.4 (18 Jun 2010)
+
+  18 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -flask-0.3.1.ebuild, +flask-0.4.ebuild:
+  Version bump.
+
+*flask-0.3.1 (30 May 2010)
+
+  30 May 2010; Dirkjan Ochtman <djc@gentoo.org> +flask-0.3.1.ebuild,
+  +metadata.xml:
+  Initial version, contributed by plaes@plaes.org.

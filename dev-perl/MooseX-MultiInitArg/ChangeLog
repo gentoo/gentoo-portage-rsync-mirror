@@ -1,0 +1,26 @@
+# ChangeLog for dev-perl/MooseX-MultiInitArg
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-MultiInitArg/ChangeLog,v 1.5 2012/06/24 13:00:12 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org>
+  MooseX-MultiInitArg-0.10.0.ebuild:
+  Marked ~x64-macos
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org>
+  -MooseX-MultiInitArg-0.01.ebuild:
+  Cleanup
+
+*MooseX-MultiInitArg-0.10.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +MooseX-MultiInitArg-0.10.0.ebuild:
+  Change version scheme
+
+*MooseX-MultiInitArg-0.01 (10 Oct 2009)
+
+  10 Oct 2009; Torsten Veller <tove@gentoo.org>
+  +MooseX-MultiInitArg-0.01.ebuild, +metadata.xml:
+  Initial commit (#288327)

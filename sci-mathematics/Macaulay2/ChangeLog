@@ -1,0 +1,39 @@
+# ChangeLog for sci-mathematics/Macaulay2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.27 2011/12/14 08:44:52 phajdan.jr Exp $
+
+  14 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> Macaulay2-1.4-r1.ebuild:
+  x86 stable wrt bug #394157
+
+  13 Dec 2011; Thomas Kahle <tomka@gentoo.org> Macaulay2-1.4-r1.ebuild:
+  Restrict tests as per bug 366711
+
+  09 Dec 2011; Thomas Kahle <tomka@gentoo.org> Macaulay2-1.4-r1.ebuild:
+  correct dep on normaliz, amd64 stable per bug 394157
+
+*Macaulay2-1.4-r1 (25 Sep 2011)
+
+  25 Sep 2011; Thomas Kahle <tomka@gentoo.org>
+  +files/1.4-comint-use-fields.patch, +files/1.4-fix-emacs-syntax-table.patch,
+  +Macaulay2-1.4-r1.ebuild, +files/1.4-pari-2.5-compat.patch:
+  Fix pari-2.5 compatibility (Bug 381347) and two emacs-improvements
+
+  14 May 2011; Thomas Kahle <tomka@gentoo.org> Macaulay2-1.4.ebuild:
+  x86 stable per bug 366379
+
+  10 May 2011; Markos Chandras <hwoarang@gentoo.org> Macaulay2-1.4.ebuild:
+  Stable on amd64 wrt bug #366379
+
+  02 Mar 2011; Justin Lecher <jlec@gentoo.org> Macaulay2-1.4.ebuild:
+  Correct Slots for gtk 3 introduction to tree
+
+  15 Nov 2010; Thomas Kahle <tomka@gentoo.org> Macaulay2-1.4.ebuild:
+  Fixing a build failure if user had libatomic and boehm_gc installed
+
+*Macaulay2-1.4 (12 Nov 2010)
+
+  12 Nov 2010; Thomas Kahle <tomka@gentoo.org>
+  +files/1.4-paths-of-external-programs.patch, +files/70Macaulay2-gentoo.el,
+  +Macaulay2-1.4.ebuild, +metadata.xml:
+  Macaulay2 is back! Was removed in bug #248365, readd fixes bug #246095.
+

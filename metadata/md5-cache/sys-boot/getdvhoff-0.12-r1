@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DEPEND=dev-libs/klibc
+DESCRIPTION=Utility for use on LiveCDs to calculate offset of the ext2 partition for losetup
+HOMEPAGE=ftp://ftp.linux-mips.org/pub/linux/mips/people/skylark/
+KEYWORDS=-* ~mips
+LICENSE=as-is
+RDEPEND=dev-libs/klibc
+SLOT=0
+SRC_URI=ftp://ftp.linux-mips.org/pub/linux/mips/people/skylark/sgibootcd-0.12.tar.bz2
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=cc31b3a0c1d7e55c676f14ec83d21572

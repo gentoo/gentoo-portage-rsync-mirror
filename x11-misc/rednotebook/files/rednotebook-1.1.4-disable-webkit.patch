@@ -1,0 +1,18 @@
+Index: rednotebook-1.1.4/rednotebook/gui/browser.py
+===================================================================
+--- rednotebook-1.1.4.orig/rednotebook/gui/browser.py
++++ rednotebook-1.1.4/rednotebook/gui/browser.py
+@@ -40,13 +40,6 @@ from rednotebook.util import filesystem
+ 
+ 
+ webkit = None
+-try:
+-    import webkit
+-except ImportError:
+-    logging.error('Webkit was not found. It can be found in a package '
+-                  'with the name python-webkit or pywebkitgtk. ')
+-    sys.exit(1)
+-
+ 
+ def can_print_pdf():
+     if not webkit:

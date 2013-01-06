@@ -1,0 +1,29 @@
+# ChangeLog for dev-python/oct2py
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oct2py/ChangeLog,v 1.6 2012/12/11 18:25:34 bicatali Exp $
+
+  11 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> -oct2py-0.3.2.ebuild,
+  -oct2py-0.3.4.ebuild:
+  Removed old
+
+*oct2py-0.3.6 (29 Nov 2012)
+
+  29 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> +oct2py-0.3.6.ebuild:
+  Version bump
+
+*oct2py-0.3.4 (20 Aug 2012)
+
+  20 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> +oct2py-0.3.4.ebuild:
+  version bump
+
+  09 Aug 2012; Patrick Lauer <patrick@gentoo.org> oct2py-0.3.2.ebuild:
+  Restrict python 2.5
+
+  01 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> oct2py-0.3.2.ebuild:
+  fixed license, thanks arfrever
+
+*oct2py-0.3.2 (17 Jul 2012)
+
+  17 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +oct2py-0.3.2.ebuild:
+  Initial import

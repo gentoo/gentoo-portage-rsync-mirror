@@ -1,0 +1,14 @@
+# ChangeLog for media-libs/raspberrypi-userland
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raspberrypi-userland/ChangeLog,v 1.2 2012/10/25 01:10:45 chithanh Exp $
+
+  25 Oct 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  raspberrypi-userland-0_pre20121024.ebuild:
+  Make description more precise.
+
+*raspberrypi-userland-0_pre20121024 (25 Oct 2012)
+
+  25 Oct 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/04raspberrypi-userland, +metadata.xml,
+  +raspberrypi-userland-0_pre20121024.ebuild:
+  Initial commit. Thanks to xmw for the env.d file.

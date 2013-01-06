@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>sci</herd>
+	<use>
+		<flag name='plugins'>Build and install additional plugins</flag>
+		<flag name='boost'>Enable the usage of dev-libs/boost</flag>
+		<flag name='gui'>Build paraview's gui not just the server</flag>
+		<flag name='cg'>Add support for nvidia's cg shaders</flag>
+		<flag name='streaming'>Enable streaming paraview application</flag>
+		<flag name='overview'>Enable the OverView plugin framework</flag>
+	</use>
+</pkgmetadata>

@@ -1,0 +1,17 @@
+# ChangeLog for kde-misc/pyrad
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pyrad/ChangeLog,v 1.3 2012/12/05 08:49:13 kensington Exp $
+
+*pyrad-0.6.1 (05 Dec 2012)
+
+  05 Dec 2012; Michael Palimaka <kensington@gentoo.org> +pyrad-0.6.1.ebuild:
+  Version bump, wrt bug #445028.
+
+  11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop maintainership
+
+*pyrad-0.5.3-r1 (17 Jul 2011)
+
+  17 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +pyrad-0.5.3-r1.ebuild, +metadata.xml:
+  New package, bug 298675. Thanks to Arne Babenhauserheide for the ebuild.

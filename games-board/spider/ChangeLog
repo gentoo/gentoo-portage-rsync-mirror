@@ -1,0 +1,26 @@
+# ChangeLog for games-board/spider
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/spider/ChangeLog,v 1.6 2012/12/11 06:34:02 ulm Exp $
+
+  11 Dec 2012; Ulrich Müller <ulm@gentoo.org> spider-1.2_p4.ebuild:
+  Update LICENSE, see copyright.h file.
+
+  09 Apr 2010; Michael Sterrett <mr_bones_@gentoo.org> spider-1.2_p4.ebuild,
+  metadata.xml:
+  change xaw use flag to athena for consistency (bug #314153)
+
+  03 Dec 2009; Markus Meier <maekke@gentoo.org> spider-1.2_p4.ebuild:
+  add ~amd64, bug #295147
+
+  26 Nov 2009; Markus Meier <maekke@gentoo.org> spider-1.2_p4.ebuild:
+  x86 stable, bug #294132
+
+  13 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> spider-1.2_p4.ebuild:
+  /usr/bin/X11 went away (bug #273568)
+
+*spider-1.2_p4 (16 Feb 2009)
+
+  16 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +spider-1.2_p4.ebuild:
+  initial commit - ebuild submitted by Michaĩ Wiernowolski via bug #96822
+

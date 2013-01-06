@@ -1,0 +1,106 @@
+# ChangeLog for app-emulation/emul-linux-x86-gtkmmlibs
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtkmmlibs/ChangeLog,v 1.18 2012/12/25 19:04:31 pacho Exp $
+
+  25 Dec 2012; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-gtkmmlibs-20121202.ebuild:
+  amd64 stable, bug #447506
+
+*emul-linux-x86-gtkmmlibs-20121202 (02 Dec 2012)
+
+  02 Dec 2012; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-gtkmmlibs-20121202.ebuild,
+  -emul-linux-x86-gtkmmlibs-20120520.ebuild:
+  Version bump, drop old.
+
+  25 Nov 2012; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-gtkmmlibs-20121028.ebuild:
+  amd64 stable, bug #442436
+
+*emul-linux-x86-gtkmmlibs-20121028 (28 Oct 2012)
+
+  28 Oct 2012; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-gtkmmlibs-20121028.ebuild,
+  -emul-linux-x86-gtkmmlibs-20120127.ebuild:
+  Version bump, drop old.
+
+  25 Jul 2012; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-gtkmmlibs-20120520.ebuild:
+  amd64 stable, bug #427444
+
+*emul-linux-x86-gtkmmlibs-20120520 (20 May 2012)
+
+  20 May 2012; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-gtkmmlibs-20120520.ebuild,
+  -emul-linux-x86-gtkmmlibs-20110928.ebuild:
+  Version bump, drop old.
+
+  09 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  emul-linux-x86-gtkmmlibs-20120127.ebuild:
+  amd64 stable wrt #405779
+
+*emul-linux-x86-gtkmmlibs-20120127 (27 Jan 2012)
+
+  27 Jan 2012; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-gtkmmlibs-20120127.ebuild,
+  -emul-linux-x86-gtkmmlibs-20110129.ebuild,
+  -emul-linux-x86-gtkmmlibs-20110722.ebuild:
+  Version bump, remove old.
+
+  16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  emul-linux-x86-gtkmmlibs-20110928.ebuild:
+  amd64 stable wrt #387209
+
+  15 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
+  emul-linux-x86-gtkmmlibs-20110928.ebuild:
+  Revert keywords per bug #387209. We are not ready yet
+
+  15 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
+  emul-linux-x86-gtkmmlibs-20110928.ebuild:
+  Stable on amd64 wrt bug #387209
+
+*emul-linux-x86-gtkmmlibs-20110928 (28 Sep 2011)
+
+  28 Sep 2011; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-gtkmmlibs-20110928.ebuild:
+  Version bump.
+
+*emul-linux-x86-gtkmmlibs-20110722 (22 Jul 2011)
+
+  22 Jul 2011; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-gtkmmlibs-20110722.ebuild:
+  Version bump.
+
+*emul-linux-x86-gtkmmlibs-20110129 (30 Jan 2011)
+
+  30 Jan 2011; Pacho Ramos <pacho@gentoo.org>
+  -emul-linux-x86-gtkmmlibs-20100915.ebuild,
+  +emul-linux-x86-gtkmmlibs-20110129.ebuild, metadata.xml:
+  Version bump, remove old.
+
+*emul-linux-x86-gtkmmlibs-20100915 (15 Sep 2010)
+
+  15 Sep 2010; Pacho Ramos <pacho@gentoo.org>
+  -emul-linux-x86-gtkmmlibs-20100611.ebuild,
+  +emul-linux-x86-gtkmmlibs-20100915.ebuild:
+  Version bump, remove old.
+
+*emul-linux-x86-gtkmmlibs-20100611 (11 Jun 2010)
+
+  11 Jun 2010; Pacho Ramos <pacho@gentoo.org>
+  -emul-linux-x86-gtkmmlibs-20100409.ebuild,
+  +emul-linux-x86-gtkmmlibs-20100611.ebuild:
+  Version bump, remove old.
+
+*emul-linux-x86-gtkmmlibs-20100409 (09 Apr 2010)
+
+  09 Apr 2010; Pacho Ramos <pacho@gentoo.org>
+  -emul-linux-x86-gtkmmlibs-20100220.ebuild,
+  +emul-linux-x86-gtkmmlibs-20100409.ebuild:
+  Version bump and remove old.
+
+*emul-linux-x86-gtkmmlibs-20100220 (20 Feb 2010)
+
+  20 Feb 2010; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-gtkmmlibs-20100220.ebuild, +metadata.xml:
+  New package including gtkmm stuff, see bug 298719

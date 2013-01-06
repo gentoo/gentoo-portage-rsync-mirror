@@ -1,0 +1,4 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/package.mask,v 1.7 2012/12/27 12:20:28 pinkbyte Exp $
+

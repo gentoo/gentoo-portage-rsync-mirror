@@ -1,0 +1,62 @@
+# ChangeLog for app-vim/easytags
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/easytags/ChangeLog,v 1.12 2012/08/03 22:06:49 radhermit Exp $
+
+  03 Aug 2012; Tim Harder <radhermit@gentoo.org> -easytags-2.5.8.ebuild:
+  Remove old.
+
+*easytags-2.8.1 (03 Aug 2012)
+
+  03 Aug 2012; Tim Harder <radhermit@gentoo.org> +easytags-2.8.1.ebuild:
+  Version bump.
+
+*easytags-2.7.2 (13 Nov 2011)
+
+  13 Nov 2011; Tim Harder <radhermit@gentoo.org> -easytags-2.5.4.ebuild,
+  -easytags-2.5.7.ebuild, +easytags-2.7.2.ebuild:
+  Version bump and remove old.
+
+*easytags-2.5.8 (19 Sep 2011)
+
+  19 Sep 2011; Tim Harder <radhermit@gentoo.org> +easytags-2.5.8.ebuild:
+  Version bump.
+
+  14 Sep 2011; Tim Harder <radhermit@gentoo.org> -easytags-2.4.12.ebuild,
+  -easytags-2.5.ebuild:
+  Remove old.
+
+*easytags-2.5.7 (14 Sep 2011)
+
+  14 Sep 2011; Tim Harder <radhermit@gentoo.org> +easytags-2.5.7.ebuild:
+  Version bump.
+
+*easytags-2.5.4 (05 Sep 2011)
+
+  05 Sep 2011; Tim Harder <radhermit@gentoo.org> +easytags-2.5.4.ebuild:
+  Version bump.
+
+*easytags-2.5 (02 Sep 2011)
+
+  02 Sep 2011; Tim Harder <radhermit@gentoo.org> +easytags-2.5.ebuild:
+  Version bump.
+
+  31 Aug 2011; Tim Harder <radhermit@gentoo.org> -easytags-2.4.9.ebuild,
+  -easytags-2.4.11.ebuild:
+  Remove old.
+
+*easytags-2.4.12 (31 Aug 2011)
+
+  31 Aug 2011; Tim Harder <radhermit@gentoo.org> +easytags-2.4.12.ebuild:
+  Version bump. Add dependency on external xolox-misc scripts.
+
+*easytags-2.4.11 (12 Jul 2011)
+
+  12 Jul 2011; Tim Harder <radhermit@gentoo.org> +easytags-2.4.11.ebuild:
+  Version bump.
+
+*easytags-2.4.9 (29 Jun 2011)
+
+  29 Jun 2011; Tim Harder <radhermit@gentoo.org> +easytags-2.4.9.ebuild,
+  +metadata.xml:
+  Initial import.
+

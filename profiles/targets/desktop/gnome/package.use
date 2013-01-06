@@ -1,0 +1,43 @@
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.14 2012/12/29 17:37:33 tetromino Exp $
+
+# REQUIRED_USE="?? ( pulseaudio gstreamer )", and we want pulse in gnome
+net-misc/spice-gtk -gstreamer
+
+# Required by app-accessibility/orca-3
+app-accessibility/speech-dispatcher python
+
+# gtk3 input method plugins required for gnome3
+app-i18n/ibus gtk3
+app-i18n/uim gtk3
+
+# incompatible with >=evolution-data-server-3.6, bug #449138
+dev-vcs/giggle -eds
+
+# Pulled in by net-im/telepathy-connection-managers[msn] (via dev-python/papyon
+# and net-voip/telepathy-butterfly)
+net-libs/farsight2 python
+net-libs/libproxy python
+
+# Required by net-misc/vinagre-3
+net-libs/gtk-vnc gtk3
+
+# Required by dev-libs/folks[libsocialweb]
+net-libs/libsocialweb vala
+
+# The following are required by ekiga-3
+net-libs/opal sip
+net-libs/ptlib wav
+
+# For net-misc/vinagre-3.4 and gnome-boxes
+net-misc/spice-gtk gtk3
+
+# liboauth (required by evolution-data-server[gnome-online-accounts] and
+# gnome-documents in gnome-3.2) has +nss in IUSE, pulls in curl[-gnutls,nss]
+# In >=curl-7.25.0-r1, need CURL_SSL="-gnutls nss -openssl"
+net-misc/curl -curl_ssl_gnutls curl_ssl_nss -curl_ssl_openssl -gnutls nss
+dev-python/pycurl -curl_ssl_gnutls curl_ssl_nss -curl_ssl_openssl
+
+# Required by app-admin/sabayon
+x11-base/xorg-server kdrive

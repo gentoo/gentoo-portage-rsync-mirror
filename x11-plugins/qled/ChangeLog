@@ -1,0 +1,16 @@
+# ChangeLog for x11-plugins/qled
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/qled/ChangeLog,v 1.3 2011/07/02 20:14:33 hwoarang Exp $
+
+  02 Jul 2011; Markos Chandras <hwoarang@gentoo.org> qled-0.6.2.ebuild:
+  Stable on amd64/x86
+
+  02 Jul 2011; Markos Chandras <hwoarang@gentoo.org> qled-0.6.2.ebuild:
+  Add x11-libs/qt-svg to dependencies. Bug #373055
+
+*qled-0.6.2 (01 Mar 2011)
+
+  01 Mar 2011; Markos Chandras <hwoarang@gentoo.org> +qled-0.6.2.ebuild,
+  +metadata.xml:
+  Initial commit of qled plugin for Qt-Designer
+

@@ -1,0 +1,263 @@
+# ChangeLog for dev-util/scons
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.126 2012/10/07 14:40:20 grobian Exp $
+
+  07 Oct 2012; Fabian Groffen <grobian@gentoo.org> scons-2.2.0.ebuild:
+  Setup a valid path, EPREFIX does NOT end in /
+
+  29 Sep 2012; Raúl Porcel <armin76@gentoo.org> scons-2.2.0.ebuild:
+  alpha/ia64/sparc stable wrt #434294
+
+  19 Sep 2012; Jeroen Roovers <jer@gentoo.org> scons-2.2.0.ebuild:
+  Stable for HPPA (bug #434294).
+
+  18 Sep 2012; Johannes Huber <johu@gentoo.org> scons-2.2.0.ebuild:
+  Stable for x86, wrt bug #434294
+
+  13 Sep 2012; Agostino Sarubbo <ago@gentoo.org> scons-2.2.0.ebuild:
+  Stable for amd64, wrt bug #434294
+
+  13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> scons-2.2.0.ebuild:
+  stable arm, bug #434294
+
+  12 Sep 2012; Anthony G. Basile <blueness@gentoo.org> scons-2.2.0.ebuild:
+  stable ppc ppc64, bug #434294
+
+  08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
+
+  08 Aug 2012; Tim Harder <radhermit@gentoo.org> scons-2.2.0.ebuild:
+  Simplify documentation installation.
+
+*scons-2.2.0 (08 Aug 2012)
+
+  08 Aug 2012; Tim Harder <radhermit@gentoo.org> +scons-2.2.0.ebuild:
+  Version bump.
+
+  06 Aug 2012; Patrick Lauer <patrick@gentoo.org> scons-2.1.0.ebuild:
+  Fixing jython for 2.1.0 too
+
+  02 Aug 2012; Jesus Rivero <neurogeek@gentoo.org> scons-2.0.1.ebuild,
+  scons-2.0.1-r1.ebuild:
+  Bumped to EAPI 4 and added threads(+) to PYTHON_USE_WITH
+
+  02 Aug 2012; Patrick Lauer <patrick@gentoo.org> scons-2.1.0.ebuild:
+  Restricting jython
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> scons-2.1.0.ebuild:
+  alpha/ia64/sparc stable wrt #401831
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> scons-2.0.1-r1.ebuild,
+  scons-2.0.1.ebuild, scons-2.1.0.ebuild:
+  Restricting pypy #403805
+
+  13 Feb 2012; Markus Meier <maekke@gentoo.org> scons-2.1.0.ebuild:
+  arm stable, bug #401831
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> scons-2.1.0.ebuild:
+  ppc64 stable wrt #401831
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> scons-2.1.0.ebuild:
+  Changing python deps in preparation for 2.4 removal
+
+  08 Feb 2012; Jeff Horelick <jdhore@gentoo.org> scons-2.1.0.ebuild:
+  x86 stable per bug 401831
+
+  08 Feb 2012; Jeroen Roovers <jer@gentoo.org> scons-2.1.0.ebuild:
+  Stable for HPPA (bug #401831).
+
+  05 Feb 2012; Mike Gilbert <floppym@gentoo.org> scons-2.0.1.ebuild:
+  Inherit multilib.
+
+  04 Feb 2012; Agostino Sarubbo <ago@gentoo.org> scons-2.1.0.ebuild:
+  Stable for amd64, wrt bug #401831
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> scons-2.1.0.ebuild:
+  Marking scons-2.1.0 ppc for bug 401831
+
+  21 Nov 2011; Mike Frysinger <vapier@gentoo.org> scons-2.0.1.ebuild:
+  Mark arm stable.
+
+  11 Nov 2011; Markos Chandras <hwoarang@gentoo.org>
+  +files/scons-2.1.0-jython.patch, scons-2.1.0.ebuild:
+  Fix building with Jython. Patch by Arfrever.
+
+*scons-2.1.0 (02 Oct 2011)
+
+  02 Oct 2011; Tim Harder <radhermit@gentoo.org> +scons-2.1.0.ebuild:
+  Version bump (fixes bug #361413).
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org> scons-2.0.1-r1.ebuild:
+  Prevent the buildsystem from forcing installation into /usr/local on Darwin
+
+  29 Aug 2011; Fabian Groffen <grobian@gentoo.org> scons-2.0.1-r1.ebuild:
+  Fix hardcoded paths to refer to those from the Prefix first, by Asfand Yar
+  Qazi, bug #361061
+
+  24 Aug 2011; Markos Chandras <hwoarang@gentoo.org> scons-2.0.1-r1.ebuild:
+  Set PYTHON_MODNAME. Patch by Arfrever.
+
+  20 Jul 2011; Jeremy Olexa <darkside@gentoo.org> scons-2.0.1-r1.ebuild:
+  Fix paths for Gentoo Prefix, bug 375735
+
+*scons-2.0.1-r1 (19 Jul 2011)
+
+  19 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> +scons-2.0.1-r1.ebuild:
+  Python related improvements. Closes bug #367049. Thanks to Mike Gilbert
+
+  29 Jan 2011; Fabian Groffen <grobian@gentoo.org> scons-2.0.1.ebuild:
+  Transfer Prefix keywords
+
+  27 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -scons-1.3.0_p20100501.ebuild:
+  Delete.
+
+  27 Dec 2010; Brent Baude <ranger@gentoo.org> scons-2.0.1.ebuild:
+  Marking scons-2.0.1 ppc64 for bug 339531
+
+  19 Nov 2010; Markus Meier <maekke@gentoo.org> scons-2.0.1.ebuild:
+  add ~arm, bug #343791
+
+  24 Oct 2010; Raúl Porcel <armin76@gentoo.org> scons-2.0.1.ebuild:
+  alpha/ia64/sparc stable wrt #339531
+
+  21 Oct 2010; Jeroen Roovers <jer@gentoo.org> scons-2.0.1.ebuild:
+  Stable for HPPA (bug #339531).
+
+  20 Oct 2010; Brent Baude <ranger@gentoo.org> scons-2.0.1.ebuild:
+  stable ppc, bug 339531
+
+  10 Oct 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> scons-2.0.1.ebuild:
+  x86 stable wrt bug #339531
+
+  06 Oct 2010; Markos Chandras <hwoarang@gentoo.org> scons-2.0.1.ebuild:
+  Stable on amd64 wrt bug #339531
+
+  13 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -scons-1.2.0-r1.ebuild, -scons-1.2.0_p20091224.ebuild,
+  -files/scons-1.2.0-links.patch:
+  Delete.
+
+*scons-2.0.1 (29 Aug 2010)
+
+  29 Aug 2010; Jesus Rivero <neurogeek@gentoo.org> +scons-2.0.1.ebuild:
+  Version bump. Thanks again to Johan. Closes bug #326867
+
+  22 Aug 2010; Jeroen Roovers <jer@gentoo.org> scons-1.3.0_p20100501.ebuild:
+  Stable for HPPA (bug #326241).
+
+  13 Aug 2010; Joseph Jezak <josejx@gentoo.org>
+  scons-1.3.0_p20100501.ebuild:
+  Marked ppc stable for bug #326241.
+
+  18 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  scons-1.3.0_p20100501.ebuild:
+  ppc64 stable wrt #326241
+
+  18 Jul 2010; Raúl Porcel <armin76@gentoo.org>
+  scons-1.3.0_p20100501.ebuild:
+  alpha/ia64/sparc stable wrt #326241
+
+  10 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  scons-1.3.0_p20100501.ebuild:
+  stable x86, bug 326241
+
+  06 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  scons-1.3.0_p20100501.ebuild:
+  Stable on amd64 wrt bug #326241
+
+  25 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  scons-1.3.0_p20100501.ebuild:
+  Use Python 2.
+
+*scons-1.3.0_p20100501 (19 May 2010)
+
+  19 May 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +scons-1.3.0_p20100501.ebuild:
+  Version bump.
+
+  08 Feb 2010; Peter Volkov <pva@gentoo.org> scons-1.2.0-r1.ebuild,
+  scons-1.2.0_p20091224.ebuild:
+  Add inherit eutils for epatch.
+
+  08 Jan 2010; Dirkjan Ochtman <djc@gentoo.org>
+  scons-1.2.0_p20091224.ebuild:
+  Replace incorrect usage of P by PN-PV (bug 300076).
+
+*scons-1.2.0_p20091224 (04 Jan 2010)
+
+  04 Jan 2010; Dirkjan Ochtman <djc@gentoo.org>
+  +scons-1.2.0_p20091224.ebuild:
+  Bump to 1.2.0.d20091224. Thanks to Johan Bergstroem for the patch.
+
+  12 Apr 2009; Brent Baude <ranger@gentoo.org> scons-1.2.0-r1.ebuild:
+  stable ppc64, bug 264537
+
+  11 Apr 2009; nixnut <nixnut@gentoo.org> scons-1.2.0-r1.ebuild:
+  ppc stable #264537
+
+  10 Apr 2009; Raúl Porcel <armin76@gentoo.org> scons-1.2.0-r1.ebuild:
+  ia64/sparc stable wrt #264537
+
+  08 Apr 2009; Jeroen Roovers <jer@gentoo.org> scons-1.2.0-r1.ebuild:
+  Stable for HPPA (bug #264537).
+
+  07 Apr 2009; Tobias Klausmann <klausman@gentoo.org> scons-1.2.0-r1.ebuild:
+  Stable on alpha, bug #264537
+
+  05 Apr 2009; Markus Meier <maekke@gentoo.org> scons-1.2.0-r1.ebuild:
+  amd64/x86 stable, bug #264537
+
+*scons-1.2.0-r1 (07 Mar 2009)
+
+  07 Mar 2009; Jesus Rivero <neurogeek@gentoo.org> -scons-1.2.0.ebuild,
+  +scons-1.2.0-r1.ebuild:
+  Version bump. Added threads use dep. Close bug #261156. Removed old
+  version.
+
+*scons-1.2.0 (15 Jan 2009)
+
+  15 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/scons-1.2.0-links.patch, +files/scons-1.2.0-popen.patch,
+  metadata.xml, +scons-1.2.0.ebuild:
+  Version bump and updated description
+
+  02 Dec 2008; Brent Baude <ranger@gentoo.org> scons-1.0.0.ebuild:
+  stable ppc64, bug 242766
+
+  27 Oct 2008; Jeroen Roovers <jer@gentoo.org> scons-1.0.0.ebuild:
+  Stable for HPPA (bug #242766).
+
+  25 Oct 2008; nixnut <nixnut@gentoo.org> scons-1.0.0.ebuild:
+  Stable on ppc wrt bug 242766
+
+  21 Oct 2008; Raúl Porcel <armin76@gentoo.org> scons-1.0.0.ebuild:
+  alpha/ia64/sparc stable wrt #242766
+
+  19 Oct 2008; Markus Meier <maekke@gentoo.org> scons-1.0.0.ebuild:
+  amd64/x86 stable, bug #242766
+
+*scons-1.0.0 (19 Aug 2008)
+
+  19 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> scons-0.97.ebuild,
+  -scons-0.98.3.ebuild, -scons-0.98.4.ebuild, -scons-0.98.5.ebuild,
+  +scons-1.0.0.ebuild:
+  Version bump. Removed old versions. Fixed 0.97 ebuild and this closes bug
+  #107013
+
+*scons-0.98.5 (19 Jul 2008)
+
+  19 Jul 2008; Ali Polatel <hawking@gentoo.org> +scons-0.98.5.ebuild:
+  Version bump.
+
+  14 Jun 2008; Zac Medico <zmedico@gentoo.org> scons-0.97.ebuild,
+  scons-0.98.3.ebuild, scons-0.98.4.ebuild:
+  Bug #226505 - For compatibity with phase execution order in
+  >=portage-2.1.5, call has_version inside pkg_preinst instead of
+  pkg_postinst.
+
+*scons-0.98.4 (29 May 2008)
+
+  29 May 2008; Ali Polatel <hawking@gentoo.org> -scons-0.96.1.ebuild,
+  -scons-0.96.94.ebuild, +scons-0.98.4.ebuild:
+  Version bump. Drop old.

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+  <email>cardoe@gentoo.org</email>
+  <description>General maintainer and POC with NVIDIA</description>
+</maintainer>
+<maintainer>
+  <email>jer@gentoo.org</email>
+</maintainer>
+<maintainer>
+  <email>spock@gentoo.org</email>
+  <description>Focused on CUDA and new kernel support</description>
+</maintainer>
+<maintainer>
+  <email>xarthisius@gentoo.org</email>
+  <description>Blame me on all OpenCL issues</description>
+</maintainer>
+<longdescription>NVIDIA X11 driver and GLX libraries</longdescription>
+<use>
+	<flag name='tools'>Installs additional tools such as nvidia-settings</flag>
+	<flag name='X'>Controls whether the X.org driver, OpenGL libraries,
+		XvMC libraries, and VDPAU libraries are installed</flag>
+	<flag name='pax_kernel'>PaX patches from the PaX project</flag> 
+</use>
+</pkgmetadata>

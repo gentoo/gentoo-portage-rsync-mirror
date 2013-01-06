@@ -1,0 +1,100 @@
+From 0e051e8655c1d68d748d4b6976261aee7d2c248a Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Sat, 21 Apr 2012 14:16:59 -0400
+Subject: [PATCH] VHBA: 2-argument k[un]map_atomic is deprecated in >=3.4-rc1
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+The 1-argument form of k[un]map_atomic was introduced in 2.6.37-rc1, and
+the old 2-argument form is deprecated in 3.4-rc1 and higher. As a
+result, building vhba for a 3.4-rc* kernel that has
+CONFIG_ENABLE_WARN_DEPRECATED fails:
+
+/tmp/cdemu/vhba-module/vhba.c: In function ‘do_request’:
+/tmp/cdemu/vhba-module/vhba.c:487:33: error: ‘kmap_atomic_deprecated’ is
+deprecated (declared at include/linux/highmem.h:125)
+[-Werror=deprecated-declarations]
+/tmp/cdemu/vhba-module/vhba.c:492:1: error: ‘__kunmap_atomic_deprecated’
+is deprecated (declared at include/linux/highmem.h:135)
+[-Werror=deprecated-declarations]
+/tmp/cdemu/vhba-module/vhba.c: In function ‘do_response’:
+/tmp/cdemu/vhba-module/vhba.c:570:33: error: ‘kmap_atomic_deprecated’ is
+deprecated (declared at include/linux/highmem.h:125)
+[-Werror=deprecated-declarations]
+/tmp/cdemu/vhba-module/vhba.c:575:1: error: ‘__kunmap_atomic_deprecated’
+is deprecated (declared at include/linux/highmem.h:135)
+[-Werror=deprecated-declarations]
+cc1: all warnings being treated as errors
+
+To work around this problem, add vhba_k[un]map_atomic wrappers that
+default to the 1-argument form of k[un]map_atomic for 2.6.37 and newer,
+and to the old 2-argument form for older kernels.
+---
+ vhba-module/vhba.c |   23 +++++++++++++++++------
+ 1 files changed, 17 insertions(+), 6 deletions(-)
+
+diff --git a/vhba-module/vhba.c b/vhba-module/vhba.c
+index 8937b94..a36fd59 100644
+--- a/vhba-module/vhba.c
++++ b/vhba-module/vhba.c
+@@ -27,6 +27,7 @@
+ #include <linux/miscdevice.h>
+ #include <linux/poll.h>
+ #include <linux/slab.h>
++#include <linux/version.h>
+ #ifdef CONFIG_COMPAT
+ #include <linux/compat.h>
+ #endif
+@@ -64,6 +65,16 @@ MODULE_LICENSE("GPL");
+ #define DATA_TO_DEVICE(dir) ((dir) == DMA_TO_DEVICE || (dir) == DMA_BIDIRECTIONAL)
+ #define DATA_FROM_DEVICE(dir) ((dir) == DMA_FROM_DEVICE || (dir) == DMA_BIDIRECTIONAL)
+ 
++/* 1-argument form of k[un]map_atomic was introduced in 2.6.37-rc1;
++   2-argument form was deprecated in 3.4-rc1 */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2, 6, 37)
++#define vhba_kmap_atomic kmap_atomic
++#define vhba_kunmap_atomic kunmap_atomic
++#else
++#define vhba_kmap_atomic(page) kmap_atomic(page, KM_USER0)
++#define vhba_kunmap_atomic(page) kunmap_atomic(page, KM_USER0)
++#endif
++
+ enum vhba_req_state {
+         VHBA_REQ_FREE,
+         VHBA_REQ_PENDING,
+@@ -473,12 +484,12 @@ static ssize_t do_request(struct scsi_cmnd *cmd, char __user *buf, size_t buf_le
+                                 size_t len = sg[i].length;
+ 
+ #ifdef KAT_SCATTERLIST_HAS_PAGE_LINK
+-                                kaddr = kmap_atomic(sg_page(&sg[i]), KM_USER0);
++                                kaddr = vhba_kmap_atomic(sg_page(&sg[i]));
+ #else
+-                                kaddr = kmap_atomic(sg[i].page, KM_USER0);
++                                kaddr = vhba_kmap_atomic(sg[i].page);
+ #endif
+                                 memcpy(kbuf, kaddr + sg[i].offset, len);
+-                                kunmap_atomic(kaddr, KM_USER0);
++                                vhba_kunmap_atomic(kaddr);
+ 
+                                 if (copy_to_user(uaddr, kbuf, len)) {
+                                         if (kbuf != buf_stack)
+@@ -556,12 +567,12 @@ static ssize_t do_response(struct scsi_cmnd *cmd, const char __user *buf, size_t
+                                 uaddr += len;
+ 
+ #ifdef KAT_SCATTERLIST_HAS_PAGE_LINK
+-                                kaddr = kmap_atomic(sg_page(&sg[i]), KM_USER0);
++                                kaddr = vhba_kmap_atomic(sg_page(&sg[i]));
+ #else
+-                                kaddr = kmap_atomic(sg[i].page, KM_USER0);
++                                kaddr = vhba_kmap_atomic(sg[i].page);
+ #endif
+                                 memcpy(kaddr + sg[i].offset, kbuf, len);
+-                                kunmap_atomic(kaddr, KM_USER0);
++                                vhba_kunmap_atomic(kaddr);
+ 
+                                 to_read -= len;
+                                 if (to_read == 0)
+-- 
+1.7.8.5
+

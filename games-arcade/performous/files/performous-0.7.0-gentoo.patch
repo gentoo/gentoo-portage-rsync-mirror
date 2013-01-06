@@ -1,0 +1,29 @@
+--- game/CMakeLists.txt.old	2012-02-20 13:19:35.219635192 +0100
++++ game/CMakeLists.txt	2012-02-20 13:20:06.025469808 +0100
+@@ -149,5 +149,5 @@
+ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/config.cmake.hh" "${CMAKE_CURRENT_BINARY_DIR}/config.hh" @ONLY)
+ include_directories("${CMAKE_CURRENT_BINARY_DIR}")
+ 
+-install(TARGETS performous DESTINATION bin)
++install(TARGETS performous DESTINATION @GENTOO_BINDIR@)
+ 
+--- game/fs.cc.old	2012-02-20 20:09:48.171892171 +0100
++++ game/fs.cc	2012-02-20 20:16:14.197400202 +0100
+@@ -195,6 +195,7 @@
+ 	if (root) config_list.push_back(std::string(root) + "/" SHARED_DATA_DIR + configFile.string());
+ 	fs::path exec = plugin::execname();
+ 	if (!exec.empty()) config_list.push_back(exec.parent_path().string() + "/../" SHARED_DATA_DIR + configFile.string());
++	config_list.push_back(SHARED_DATA_DIR + configFile.string());
+ 	ConfigList::const_iterator it = std::find_if(config_list.begin(), config_list.end(), static_cast<bool(&)(fs::path const&)>(fs::exists));
+ 	if (it == config_list.end()) {
+ 		throw std::runtime_error("Could not find default config file " + configFile.string());
+--- game/fs.cc.old	2012-02-20 20:49:35.610728056 +0100
++++ game/fs.cc	2012-02-20 20:57:03.117084432 +0100
+@@ -167,6 +167,7 @@
+ 
+ 		// Adding relative path from executable
+ 		dirs.push_back(plugin::execname().parent_path().parent_path() / shareDir);
++		dirs.push_back(shareDir);
+ #ifndef _WIN32
+ 		// Adding XDG_DATA_DIRS
+ 		{

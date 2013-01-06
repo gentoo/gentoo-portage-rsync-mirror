@@ -1,0 +1,45 @@
+# ChangeLog for dev-perl/Test-Object
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Object/ChangeLog,v 1.11 2012/06/24 13:00:23 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Test-Object-0.07.ebuild:
+  Cleanup
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> Test-Object-0.70.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
+
+*Test-Object-0.70.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Test-Object-0.70.0.ebuild:
+  Change version scheme
+
+  14 Jan 2010; Fabian Groffen <grobian@gentoo.org> Test-Object-0.07.ebuild:
+  Transfer Prefix keywords
+
+  20 Feb 2008; nixnut <nixnut@gentoo.org> Test-Object-0.07.ebuild:
+  Added ~ppc wrt bug 207343
+
+  27 Dec 2007; Andrej Kacian <ticho@gentoo.org> Test-Object-0.07.ebuild:
+  Stable on x86.
+
+  14 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  -Test-Object-0.06.ebuild, Test-Object-0.07.ebuild:
+  Marking amd64, sparc stable; cleaning stale ebuilds
+
+*Test-Object-0.07 (08 Sep 2006)
+
+  08 Sep 2006; Yuval Yaari <yuval@gentoo.org> +Test-Object-0.07.ebuild:
+  Version bump
+
+  07 Sep 2006; Michael Cummings <mcummings@gentoo.org>
+  Test-Object-0.06.ebuild:
+  Bug 146678, keywording ~sparc and ~amd64
+
+*Test-Object-0.06 (07 Sep 2006)
+
+  07 Sep 2006; Yuval Yaari <yuval@gentoo.org> +metadata.xml,
+  +Test-Object-0.06.ebuild:
+  Adding Test-Object to the tree, dependency of dev-perl/PPI-1.117

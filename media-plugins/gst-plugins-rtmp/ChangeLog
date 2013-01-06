@@ -1,0 +1,30 @@
+# ChangeLog for media-plugins/gst-plugins-rtmp
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-rtmp/ChangeLog,v 1.5 2012/12/05 22:56:05 eva Exp $
+
+*gst-plugins-rtmp-1.0.3 (05 Dec 2012)
+
+  05 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-rtmp-1.0.3.ebuild:
+  Version bump.
+
+*gst-plugins-rtmp-0.10.23 (02 Dec 2012)
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-rtmp-0.10.23.ebuild:
+  Version bump.
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  gst-plugins-rtmp-0.10.22.ebuild:
+  EAPI bump, gstreamer slot pinning.
+
+  15 Feb 2012; Arun Raghavan <ford_prefect@gentoo.org>
+  gst-plugins-rtmp-0.10.22.ebuild, metadata.xml:
+  Add a DESCRIPTION and a long description in metadata.xml.
+
+*gst-plugins-rtmp-0.10.22 (15 Feb 2012)
+
+  15 Feb 2012; Arun Raghavan <ford_prefect@gentoo.org>
+  +gst-plugins-rtmp-0.10.22.ebuild, +metadata.xml:
+  Initial commit of rtmpsrc plugin.
+

@@ -1,0 +1,12 @@
+Index: gearmand-0.33/util/logfile.cc
+===================================================================
+--- gearmand-0.33.orig/util/logfile.cc
++++ gearmand-0.33/util/logfile.cc
+@@ -49,6 +49,7 @@
+ #include <sstream>
+ #include <sys/stat.h>
+ #include <sys/types.h>
++#include <unistd.h>
+ 
+ namespace datadifferential {
+ namespace util {

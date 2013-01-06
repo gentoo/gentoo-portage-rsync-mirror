@@ -1,0 +1,30 @@
+From d16876d804d028153f37f4f8aff770469edf6997 Mon Sep 17 00:00:00 2001
+From: Benjamin Jemlich <pcgod@users.sourceforge.net>
+Date: Sun, 19 Feb 2012 08:55:06 +0100
+Subject: [PATCH] Fix certificate validation with QT 4.8
+
+Changed from setDefaultCaCertificates to addDefaultCaCertificates because
+Murmur adds CA certificates in sslCert before calling MumbleSSL::addSystemCA.
+
+Original patch written by Marc Deslauriers <marc.deslauriers@canonical.com>
+---
+ src/SSL.cpp |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+
+diff --git a/src/SSL.cpp b/src/SSL.cpp
+index f94d528..2ba3d27 100644
+--- a/src/SSL.cpp
++++ b/src/SSL.cpp
+@@ -142,4 +142,9 @@ void MumbleSSL::addSystemCA() {
+ 	}
+ 	QSslSocket::setDefaultCaCertificates(ql);
+ #endif // NO_SYSTEM_CA_OVERRIDE
++
++#if QT_VERSION >= 0x040800
++	// Don't perform on-demand loading of root certificates
++	QSslSocket::addDefaultCaCertificates(QSslSocket::systemCaCertificates());
++#endif
+ }
+-- 
+1.7.5.4
+

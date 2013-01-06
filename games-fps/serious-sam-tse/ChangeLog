@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/serious-sam-tse
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/serious-sam-tse/ChangeLog,v 1.1 2012/09/19 17:41:37 pinkbyte Exp $
+
+*serious-sam-tse-1_beta1 (19 Sep 2012)
+
+  19 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
+  +serious-sam-tse-1_beta1.ebuild, +metadata.xml:
+  New ebuild wrt bug #71481. Thanks for all those people who helps making this
+  ebuild
+

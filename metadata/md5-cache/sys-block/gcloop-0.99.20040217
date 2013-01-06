@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install postinst
+DEPEND=dev-libs/ucl
+DESCRIPTION=Compressed loopback userspace tools and kernel patches
+HOMEPAGE=http://www.gentoo.org/proj/en/releng/gcloop
+KEYWORDS=alpha amd64 ppc64 ~hppa ppc ~sparc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/ucl
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~lu_zero/gcloop/gcloop-0.99.20040217.tar.bz2
+_md5_=7928aec2e23d0042e9ab820a5c488d79

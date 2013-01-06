@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/ocamlpam
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlpam/ChangeLog,v 1.1 2012/09/15 14:31:18 aballier Exp $
+
+*ocamlpam-1.1 (15 Sep 2012)
+
+  15 Sep 2012; Alexis Ballier <aballier@gentoo.org> +ocamlpam-1.1.ebuild,
+  +files/ocamlpam-1.1-makefile.patch, +metadata.xml:
+  initial import, ebuild by Jacques-Pascal Deplaix, bug #425094
+

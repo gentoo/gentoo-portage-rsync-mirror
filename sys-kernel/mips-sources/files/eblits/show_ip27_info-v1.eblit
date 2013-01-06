@@ -1,0 +1,17 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/files/eblits/show_ip27_info-v1.eblit,v 1.1 2009/03/16 06:39:10 kumba Exp $
+
+# Eblit with information/warnings for IP27 (Origin 200/2000/Onyx2) users.
+#
+# If you need to add whitespace for formatting in 'einfo', 'ewarn', or 'eerror', use
+# \040 for a space instead of the standard space.  These functions will strip
+# redundant white space.
+
+show_ip27_info() {
+	echo -e ""
+	ewarn "IP27 support can be considered a game of Russian Roulette.  It'll work"
+	ewarn "great for some but not for others.  We don't get a chance to test this"
+	ewarn "machine very often with each new kernel, so your mileage may vary."
+	echo -e ""
+}

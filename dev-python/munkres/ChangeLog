@@ -1,0 +1,19 @@
+# ChangeLog for dev-python/munkres
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/munkres/ChangeLog,v 1.3 2012/05/30 12:44:32 xarthisius Exp $
+
+*munkres-1.0.5.4-r1 (30 May 2012)
+
+  30 May 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +munkres-1.0.5.4-r1.ebuild, -munkres-1.0.5.4.ebuild:
+  Enable tests, install documentation, drop empty (R)DEPEND
+
+  28 May 2012; Jeff Horelick <jdhore@gentoo.org> munkres-1.0.5.4.ebuild:
+  Keyword ~x86.
+
+*munkres-1.0.5.4 (27 May 2012)
+
+  27 May 2012; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +munkres-1.0.5.4.ebuild, +metadata.xml:
+  New munkres python module ebuild
+

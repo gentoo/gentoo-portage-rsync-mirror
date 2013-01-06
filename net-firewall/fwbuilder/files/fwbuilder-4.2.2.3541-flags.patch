@@ -1,0 +1,27 @@
+diff -ruN fwbuilder-4.2.2.3541.orig/qmake.inc.in fwbuilder-4.2.2.3541/qmake.inc.in
+--- fwbuilder-4.2.2.3541.orig/qmake.inc.in	2011-05-11 23:02:03.000000000 +0200
++++ fwbuilder-4.2.2.3541/qmake.inc.in	2011-08-21 11:22:11.550158618 +0200
+@@ -16,8 +16,8 @@
+ CPPUNIT_LIBS = @CPPUNIT_LIBS@
+ 
+ # CONFIG -= nostrip
+-# CONFIG += release
+-CONFIG += debug
++CONFIG += release nostrip
++# CONFIG += debug
+ 
+ unix {
+     PREFIX = @PREFIX@
+@@ -36,9 +36,10 @@
+     OBJECTS_DIR = .obj
+ 
+     QMAKE_CFLAGS_DEBUG += -Wno-unused-parameter
+-    QMAKE_CFLAGS_RELEASE += -Wno-unused-parameter
++    QMAKE_CFLAGS_RELEASE += @CFLAGS@ -Wno-unused-parameter
+     QMAKE_CXXFLAGS_DEBUG += -Wno-unused-parameter
+-    QMAKE_CXXFLAGS_RELEASE += -Wno-unused-parameter
++    QMAKE_CXXFLAGS_RELEASE += @CXXFLAGS@ -Wno-unused-parameter
++    QMAKE_LFLAGS = @LDFLAGS@
+ 
+     !macx {
+ 

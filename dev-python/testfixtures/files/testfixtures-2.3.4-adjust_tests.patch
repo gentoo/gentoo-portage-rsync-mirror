@@ -1,0 +1,130 @@
+diff -ur testfixtures-2.3.4.orig/testfixtures/tests/test_comparison.py testfixtures-2.3.4/testfixtures/tests/test_comparison.py
+--- testfixtures/tests/test_comparison.py	2012-01-26 18:00:05.000000000 +0800
++++ testfixtures/tests/test_comparison.py	2012-04-13 19:00:15.856224293 +0800
+@@ -5,7 +5,7 @@
+ from testfixtures.tests.sample1 import TestClassA,a_function
+ from unittest import TestCase,TestSuite,makeSuite
+ 
+-from .compat import py_27_plus
++from compat import py_27_plus
+ 
+ class AClass:
+ 
+diff -ur testfixtures-2.3.4.orig/tests/test_components.py testfixtures-2.3.4/testfixtures/tests/test_components.py
+--- testfixtures/tests/test_components.py	2012-01-27 02:41:51.000000000 +0800
++++ testfixtures/tests/test_components.py	2012-04-13 19:08:44.434220585 +0800
+@@ -14,7 +14,7 @@
+ from testfixtures import compare
+ from unittest import TestCase
+ 
+-from .compat import catch_warnings
++from compat import catch_warnings
+ 
+ class ComponentsTests(TestCase):
+ 
+diff -ur testfixtures-2.3.4.orig/testfixtures/tests/test_docs.py testfixtures-2.3.4/testfixtures/tests/test_docs.py
+--- testfixtures/tests/test_docs.py	2012-01-28 16:07:57.000000000 +0800
++++ testfixtures/tests/test_docs.py	2012-04-13 19:03:36.649223003 +0800
+@@ -11,7 +11,7 @@
+ 
+ import os
+ 
+-from . import compat
++import compat
+ 
+ workspace = os.environ.get('WORKSPACE', join(dirname(__file__), pardir, pardir))
+ tests = glob(join(workspace,'docs', '*.txt'))
+diff -ur testfixtures-2.3.4.orig/testfixtures/tests/test_logcapture.py testfixtures-2.3.4/testfixtures/tests/test_logcapture.py
+--- testfixtures/tests/test_logcapture.py	2012-01-27 02:41:26.000000000 +0800
++++ testfixtures/tests/test_logcapture.py	2012-04-13 19:09:02.930220838 +0800
+@@ -10,7 +10,7 @@
+ 
+ from logging import getLogger
+ 
+-from .compat import catch_warnings
++from compat import catch_warnings
+ 
+ root = getLogger()
+ one = getLogger('one')
+diff -ur testfixtures-2.3.4.orig/testfixtures/tests/test_replace.py testfixtures-2.3.4/testfixtures/tests/test_replace.py
+--- testfixtures/tests/test_replace.py	2012-01-27 02:34:12.000000000 +0800
++++ testfixtures/tests/test_replace.py	2012-04-13 19:09:18.842220416 +0800
+@@ -17,7 +17,7 @@
+ import sample1
+ import sample2
+ 
+-from .compat import catch_warnings
++from compat import catch_warnings
+ 
+ class TestReplace(TestCase):
+ 
+diff -ur testfixtures-2.3.4.orig/testfixtures/tests/test_should_raise.py testfixtures-2.3.4/testfixtures/tests/test_should_raise.py
+--- testfixtures/tests/test_should_raise.py	2012-01-27 02:43:51.000000000 +0800
++++ testfixtures/tests/test_should_raise.py	2012-04-13 19:09:36.235220628 +0800
+@@ -5,7 +5,7 @@
+ from testfixtures import should_raise,ShouldRaise,Comparison as C
+ from unittest import TestCase,TestSuite,makeSuite
+ 
+-from .compat import py_27_plus
++from compat import py_27_plus
+ 
+ class TestShouldRaise(TestCase):
+ 
+diff -ur testfixtures-2.3.4.orig/testfixtures/tests/test_tempdirectory.py testfixtures-2.3.4/testfixtures/tests/test_tempdirectory.py
+--- testfixtures/tests/test_tempdirectory.py	2012-01-27 02:25:43.000000000 +0800
++++ testfixtures/tests/test_tempdirectory.py	2012-04-13 19:09:54.971220623 +0800
+@@ -13,7 +13,7 @@
+ 
+ from logging import getLogger
+ 
+-from .compat import catch_warnings
++from compat import catch_warnings
+ 
+ class DemoTempDirectory:
+ 
+diff -ur testfixtures-2.3.4.orig/testfixtures/tests/test_manuel_examples.py testfixtures-2.3.4/testfixtures/tests/test_manuel_examples.py
+--- testfixtures/tests/test_manuel_examples.py	2012-01-26 04:31:12.000000000 +0800
++++ testfixtures/tests/test_manuel_examples.py	2012-04-13 21:14:05.390172684 +0800
+@@ -11,7 +11,7 @@
+ from testfixtures import TempDirectory
+ from testfixtures.manuel import Files
+ 
+-from . import compat
++import compat
+ 
+ def setUp(test):
+     test.globs['tempdir']=TempDirectory()
+diff -ur testfixtures-2.3.4.orig/testfixtures/components.py testfixtures-2.3.4/testfixtures/components.py
+--- testfixtures/components.py	2011-10-12 00:21:45.000000000 +0800
++++ testfixtures/components.py	2012-04-29 18:12:41.891588669 +0800
+@@ -4,8 +4,8 @@
+ import atexit
+ import warnings
+ 
+-from zope.component import getSiteManager
+-from zope.component.registry import Components
++#from zope.component import getSiteManager
++#from zope.component.registry import Components
+ 
+ class TestComponents:
+     """
+@@ -20,11 +20,8 @@
+     atexit_setup = False
+     
+     def __init__(self):
+-        self.registry = Components('Testing')
+-        self.old = getSiteManager.sethook(lambda:self.registry)
+         self.instances.add(self)
+         if not self.__class__.atexit_setup:
+-            atexit.register(self.atexit)
+             self.__class__.atexit_setup = True
+ 
+     def uninstall(self):
+@@ -33,7 +30,6 @@
+         was in place before this :class:`TestComponents` was
+         instantiated.
+         """
+-        getSiteManager.sethook(self.old)
+         self.instances.remove(self)
+         
+     @classmethod

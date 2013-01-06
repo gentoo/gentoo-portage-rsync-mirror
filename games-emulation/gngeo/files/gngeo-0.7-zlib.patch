@@ -1,0 +1,45 @@
+--- src/Makefile.am.old	2012-09-04 06:43:21.415398601 +0200
++++ src/Makefile.am	2012-09-04 06:43:37.227461006 +0200
+@@ -58,8 +58,8 @@
+ 		blitter.h        font.h           memory.h          raze_interf.c   \
+ 		timer.c          effect.h         frame_skip.c      messages.c      \
+ 		screen.c         timer.h          emu.c             frame_skip.h    \
+-		messages.h       screen.h         unzip.c           emu.h           \
+-		neocrypt.c       sound.c          unzip.h           generator68k_interf.c \
++		messages.h       screen.h         emu.h           \
++		neocrypt.c       sound.c          generator68k_interf.c \
+ 		debug.c          debug.h          neocrypt.h	    state.c         \
+ 		state.h          video_template.h conf.c            conf.h          \
+ 		transpack.h      transpack.c      pbar.h            pbar.c          \
+--- src/fileio.c.old	2012-09-04 06:42:03.956194155 +0200
++++ src/fileio.c	2012-09-04 06:42:32.299098500 +0200
+@@ -30,7 +30,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <zlib.h>
+-#include "unzip.h"
++#include <minizip/unzip.h>
+ #include "memory.h"
+ #include "video.h"
+ #include "emu.h"
+--- src/driver.c.old	2012-09-04 06:49:28.418057327 +0200
++++ src/driver.c	2012-09-04 06:49:58.161055744 +0200
+@@ -29,7 +29,7 @@
+ #include <sys/stat.h>
+ #include <unistd.h>
+ #include <zlib.h>
+-#include "unzip.h"
++#include <minizip/unzip.h>
+ #include "driver.h"
+ #include "conf.h"
+ #include "pbar.h"
+--- configure.in.old	2012-09-04 06:55:46.998493962 +0200
++++ configure.in	2012-09-04 06:56:23.705960317 +0200
+@@ -66,6 +66,7 @@
+ fi
+ 
+ AC_CHECK_LIB([SDL_image], [IMG_Load])
++AC_CHECK_LIB([minizip], [unzReadCurrentFile])
+ 
+ AC_CHECK_FUNCS(getopt_long , , [ AC_LIBOBJ(getopt) AC_LIBOBJ(getopt1) ])
+ AC_CHECK_FUNCS(scandir)

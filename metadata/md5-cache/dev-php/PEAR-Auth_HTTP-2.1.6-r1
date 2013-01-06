@@ -1,0 +1,12 @@
+DEFINED_PHASES=install
+DEPEND=dev-lang/php >=dev-php/pear-1.8.1
+DESCRIPTION=Create HTTP authentication systems similar to Apache's realm-based .htaccess mechanism.
+EAPI=4
+HOMEPAGE=http://pear.php.net/Auth_HTTP
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=PHP-3.01
+RDEPEND=dev-php/PEAR-Auth dev-lang/php >=dev-php/pear-1.8.1
+SLOT=0
+SRC_URI=http://pear.php.net/get/Auth_HTTP-2.1.6.tgz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=0698d339bfaf13936fcc10c9f76cd5c0

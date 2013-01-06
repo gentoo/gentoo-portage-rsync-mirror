@@ -1,0 +1,12 @@
+paloio.c:64: warning: implicit declaration of function ‘memcmp’
+
+--- a/palo/paloio.c	2007-09-12 18:12:03.000000000 +0200
++++ b/palo/paloio.c	2011-04-21 22:35:10.000000000 +0200
+@@ -7,6 +7,7 @@
+  */
+ #include <unistd.h>
+ #include <stdio.h>
++#include <string.h>
+ #include <errno.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>

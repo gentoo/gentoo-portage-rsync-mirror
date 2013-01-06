@@ -1,0 +1,44 @@
+# ChangeLog for sys-fs/ext4magic
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext4magic/ChangeLog,v 1.9 2013/01/05 21:58:06 pinkbyte Exp $
+
+*ext4magic-0.3.1-r1 (05 Jan 2013)
+
+  05 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> -ext4magic-0.3.1.ebuild,
+  +ext4magic-0.3.1-r1.ebuild, metadata.xml:
+  Revision bump: EAPI 5, add file attribute recovery and debug magic-scan
+  engine support through USE-flags, thanks to Gokturk Yuksek. Fix for proper
+  USE-flag handling, drop old revision
+
+  19 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> ext4magic-0.3.1.ebuild,
+  metadata.xml:
+  Add support for debugging and 'expert mode' through USE-flags, thanks to
+  gokturk
+
+  24 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Package will be maintained by gokturk through proxy maintainers
+
+*ext4magic-0.3.1 (24 Sep 2012)
+
+  24 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> +ext4magic-0.3.1.ebuild:
+  Version bump.
+
+  04 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> ext4magic-0.3.0.ebuild:
+  amd64/x86 stable
+
+  03 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Move to maintainer-needed@ since I don't care about this package anymore.
+
+  04 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> -ext4magic-0.2.4.ebuild:
+  old
+
+*ext4magic-0.3.0 (04 Mar 2012)
+
+  04 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +ext4magic-0.3.0.ebuild:
+  Version bump.
+
+*ext4magic-0.2.4 (30 Dec 2011)
+
+  30 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> +ext4magic-0.2.4.ebuild:
+  Initial commit wrt #374741 by Marcel Partap
+

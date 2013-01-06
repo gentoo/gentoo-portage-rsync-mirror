@@ -1,0 +1,29 @@
+# ChangeLog for games-board/gnome-hearts
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-hearts/ChangeLog,v 1.6 2012/05/04 04:30:11 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-hearts-0.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  22 May 2010; Pacho Ramos <pacho@gentoo.org> gnome-hearts-0.3.ebuild:
+  stable amd64, bug 304635
+
+  30 Apr 2010; Tupone Alfredo <tupone@gentoo.org> gnome-hearts-0.3.ebuild:
+  Force python2 fixing bug #312237 by arfrever@gentoo.org
+
+  16 Mar 2010; Christian Faulhammer <fauli@gentoo.org>
+  gnome-hearts-0.3.ebuild:
+  stable x86, bug 304635
+
+  15 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  gnome-hearts-0.3.ebuild:
+  work around broken make check
+
+*gnome-hearts-0.3 (12 Jan 2010)
+
+  12 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  +gnome-hearts-0.3.ebuild, +files/gnome-hearts-0.3-python.patch,
+  +metadata.xml:
+  initial commit - ebuild work from Luca Marturana and Samuli Suominen via
+  bug #155104
+

@@ -1,0 +1,111 @@
+# ChangeLog for x11-drivers/radeon-ucode
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/ChangeLog,v 1.24 2012/06/24 18:59:27 ago Exp $
+
+  24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> radeon-ucode-20120320.ebuild:
+  Stable for x86, wrt bug #419473
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> radeon-ucode-20120320.ebuild:
+  Stable for amd64, wrt bug #419473
+
+*radeon-ucode-20120320 (20 Mar 2012)
+
+  20 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +radeon-ucode-20120320.ebuild:
+  Add newly released Southern Islands and Trinity ucode.
+
+  04 Sep 2011; Markus Meier <maekke@gentoo.org> radeon-ucode-20110531.ebuild:
+  x86 stable, bug #380421
+
+  30 Aug 2011; Tony Vroon <chainsaw@gentoo.org> radeon-ucode-20110531.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #380421 filed by Chí-Thanh Christopher Nguyễn.
+
+  03 Jun 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  radeon-ucode-20110531.ebuild:
+  Update description.
+
+*radeon-ucode-20110531 (01 Jun 2011)
+
+  01 Jun 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +radeon-ucode-20110531.ebuild:
+  Add new Llano firmware.
+
+  01 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -radeon-ucode-20110106.ebuild:
+  old
+
+  26 Mar 2011; Christian Faulhammer <fauli@gentoo.org>
+  radeon-ucode-20110302.ebuild:
+  x86 stable, bug 359059
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org>
+  radeon-ucode-20110302.ebuild:
+  Stable on amd64 wrt bug #359059
+
+*radeon-ucode-20110302 (03 Mar 2011)
+
+  03 Mar 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +radeon-ucode-20110302.ebuild:
+  Add newly released cayman ucode
+
+  13 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -radeon-ucode-20101122.ebuild:
+  old
+
+  12 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
+  radeon-ucode-20110106.ebuild:
+  stable x86, bug 354237
+
+  12 Feb 2011; Markos Chandras <hwoarang@gentoo.org>
+  radeon-ucode-20110106.ebuild:
+  Stable on amd64 wrt bug #354237
+
+*radeon-ucode-20110106 (08 Jan 2011)
+
+  08 Jan 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +radeon-ucode-20110106.ebuild, metadata.xml:
+  Add new microcode, bug #351058
+
+  06 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -radeon-ucode-20100408.ebuild:
+  old
+
+  25 Dec 2010; Christian Faulhammer <fauli@gentoo.org>
+  radeon-ucode-20101122.ebuild:
+  x86 stable, bug 344827
+
+  23 Dec 2010; Samuli Suominen <ssuominen@gentoo.org>
+  radeon-ucode-20101122.ebuild:
+  amd64 stable wrt #344827
+
+*radeon-ucode-20101122 (23 Nov 2010)
+
+  23 Nov 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +radeon-ucode-20101122.ebuild:
+  add new Bobcat microcode
+
+  15 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  radeon-ucode-20100408.ebuild:
+  stable x86, bug 325339
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  radeon-ucode-20100408.ebuild:
+  Stable on amd64 wrt bug #325339
+
+  27 May 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -radeon-ucode-20091209.ebuild:
+  Drop older ucode.
+
+*radeon-ucode-20100408 (08 Apr 2010)
+
+  08 Apr 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +radeon-ucode-20100408.ebuild:
+  add new Evergreen microcode
+
+*radeon-ucode-20091209 (15 Feb 2010)
+
+  15 Feb 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +radeon-ucode-20091209.ebuild, +metadata.xml:
+  Initial import, based on an ebuild by scarabeus
+

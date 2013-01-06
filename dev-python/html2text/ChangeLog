@@ -1,0 +1,42 @@
+# ChangeLog for dev-python/html2text
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/ChangeLog,v 1.9 2012/06/08 11:33:53 phajdan.jr Exp $
+
+  08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  html2text-3.200.3.ebuild:
+  x86 stable wrt bug #418899
+
+  02 Jun 2012; Agostino Sarubbo <ago@gentoo.org> html2text-3.200.3.ebuild:
+  Stable for amd64, wrt bug #418899
+
+  13 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> html2text-3.200.3.ebuild:
+  Make html2text rdepend on setuptools since the installed scripts are importing
+  pkg_resources. Thanks to Arfrever for clarification
+
+*html2text-3.200.3 (13 Apr 2012)
+
+  13 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> +html2text-3.200.3.ebuild:
+  Version bump wrt #410795 by Ian Delaney <johneed@hotmail.com>
+
+  24 May 2011; Markus Meier <maekke@gentoo.org> html2text-3.02.ebuild:
+  x86 stable, bug #365465
+
+  01 May 2011; Markos Chandras <hwoarang@gentoo.org> html2text-3.02.ebuild:
+  Stable on amd64 wrt bug #365465
+
+*html2text-3.02 (09 Mar 2011)
+
+  09 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -html2text-2.39.ebuild, +html2text-3.02.ebuild:
+  Version bump.
+
+  20 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  html2text-2.39.ebuild:
+  Restrict Jython ABIs. Call python_mod_optimize() / python_mod_cleanup().
+
+*html2text-2.39 (25 Nov 2010)
+
+  25 Nov 2010; Sebastian Pipping <sping@gentoo.org> +html2text-2.39.ebuild,
+  +metadata.xml:
+  New package
+

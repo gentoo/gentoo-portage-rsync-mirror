@@ -1,0 +1,37 @@
+diff -Naur xxvautotimer-0.1.2.orig/setup.h xxvautotimer-0.1.2/setup.h
+--- xxvautotimer-0.1.2.orig/setup.h 2009-01-24 13:24:34.245788686 +0100
++++ xxvautotimer-0.1.2/setup.h  2009-01-24 13:25:52.750838304 +0100
+@@ -22,19 +22,19 @@
+ class cXxvAutotimerSetup
+ {
+ public:
+-    char *allowed;
+-    char *strHost;
+-    char *strTelnetPort;
+-    char *strDatabase;
+-    char *strDatabasePort;
+-    char *strDatabaseUser;
+-    char *strDatabasePasswd;
+-    char *strLifetime;
+-    char *strPriority;
+-    char *strPrevMinutes;
+-    char *strAfterMinutes;
+-    char *strXXV020;
+-    char *strDefaultDone;
++    const char *allowed;
++    const char *strHost;
++    const char *strTelnetPort;
++    const char *strDatabase;
++    const char *strDatabasePort;
++    const char *strDatabaseUser;
++    const char *strDatabasePasswd;
++    const char *strLifetime;
++    const char *strPriority;
++    const char *strPrevMinutes;
++    const char *strAfterMinutes;
++    const char *strXXV020;
++    const char *strDefaultDone;
+
+     char host[50];
+     int  telnetPort;
+

@@ -1,0 +1,15 @@
+# ChangeLog for dev-cpp/pficommon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pficommon/ChangeLog,v 1.2 2012/07/08 19:56:24 naota Exp $
+
+  08 Jul 2012; Naohiro Aota <naota@gentoo.org>
+  +files/pficommon-1.3.1.0-gcc-4.7.patch, pficommon-1.3.1.0.ebuild:
+  Add upstream patch to build on gcc-4.7. #422761
+
+*pficommon-1.3.1.0 (12 Nov 2011)
+
+  12 Nov 2011; Naohiro Aota <naota@gentoo.org> +pficommon-1.3.1.0.ebuild,
+  +files/pficommon-1.3.1.0-libdir.patch,
+  +files/pficommon-1.3.1.0-postgresql.patch,
+  +files/pficommon-1.3.1.0-soname.patch, +metadata.xml:
+  New package dev-cpp/pficommon. ebuild written by me.

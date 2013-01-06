@@ -1,0 +1,21 @@
+--- exult.cc
++++ exult.cc
+@@ -350,7 +350,7 @@
+ 			add_system_path("<DATA>", "data");
+ 			if(!U7exists("<DATA>/exult.flx"))
+ 			{
+-				char *sep = std::strrchr(runpath,'/');
++				const char *sep = std::strrchr(runpath,'/');
+ 				if (!sep) sep = std::strrchr(runpath,'\\');
+ 				int plen = sep-runpath;
+ 				char *dpath = new char[plen+10];
+--- files/utils.h
++++ files/utils.h
+@@ -24,6 +24,7 @@
+ 
+ #include <iostream>
+ #include <string>
++#include <cstdio>
+ #ifndef ALPHA_LINUX_CXX
+ #  include <iosfwd>
+ #endif

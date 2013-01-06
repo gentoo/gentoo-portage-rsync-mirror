@@ -1,0 +1,22 @@
+# ChangeLog for dev-java/httpunit
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/ChangeLog,v 1.4 2012/11/27 19:50:16 sera Exp $
+
+  27 Nov 2012; <sera@gentoo.org> httpunit-1.6.2-r3.ebuild:
+  Fix LICENSE - MIT - thanks to ulm in #444862
+
+  11 Sep 2009; Markus Meier <maekke@gentoo.org> httpunit-1.6.2-r3.ebuild:
+  amd64/x86 stable, bug #284302
+
+*httpunit-1.6.2-r3 (22 Nov 2008)
+
+  22 Nov 2008; Miroslav Šulc <fordfrog@gentoo.org>
+  -httpunit-1.6.2-r2.ebuild, +httpunit-1.6.2-r3.ebuild:
+  httpunit now depends on the latest rhino (slot 1.6)
+
+*httpunit-1.6.2-r2 (16 Nov 2008)
+
+  16 Nov 2008; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/rhino-fix-1.6.2.diff, +metadata.xml, +httpunit-1.6.2-r2.ebuild:
+  Added ebuild from java-overlay
+

@@ -1,0 +1,46 @@
+http://bugs.gentoo.org/336200
+
+--- kernel/Makefile.in
++++ kernel/Makefile.in
+@@ -176,8 +176,8 @@
+ realclean: distclean
+ 
+ Makefile: Makefile.in $(host_makefile_frag) $(target_makefile_frag)
+-        cd .. \
+-	  && CONFIG_FILES=kernel/$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	cd .. \
++	&& CONFIG_FILES=kernel/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+ 
+ # All the .h dependencies.
+ 
+--- tcltk/Makefile.in
++++ tcltk/Makefile.in
+@@ -140,8 +140,8 @@
+ realclean: distclean
+ 
+ Makefile: $(srcdir)/Makefile.in
+-        cd .. \
+-          && CONFIG_FILES=tcltk/$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	cd .. \
++	&& CONFIG_FILES=tcltk/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+ 
+ # All the .h dependencies.
+ 
+--- x11/Makefile.in
++++ x11/Makefile.in
+@@ -240,11 +240,11 @@
+ realclean: distclean
+ 
+ Makefile: Makefile.in $(host_makefile_frag) $(target_makefile_frag)
+-        cd .. \
+-          && CONFIG_FILES=x11/$@ CONFIG_HEADERS= $(SHELL) ./config.status
++	cd .. \
++	&& CONFIG_FILES=x11/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+ 
+ # Dependencies.
+ 
+ xconq.o:	$(ALL_H) $(krnsrcdir)/cmdline.h $(srcdir)/../tcltk/tkconq.h
+ 
+-ximfapp.o:	$(LOW_H) $(krnsrcdir)/imf.h
+\ No newline at end of file
++ximfapp.o:	$(LOW_H) $(krnsrcdir)/imf.h

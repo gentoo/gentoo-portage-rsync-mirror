@@ -1,0 +1,30 @@
+# ChangeLog for sys-devel/native-cctools
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/native-cctools/ChangeLog,v 1.3 2011/06/07 12:41:30 haubi Exp $
+
+*native-cctools-2 (07 Jun 2011)
+
+  07 Jun 2011; Michael Haubenwallner <haubi@gentoo.org> +files/ld-aix-2,
+  +native-cctools-2.ebuild:
+  (AIX Import File) need to list symbols with type 'SECdef' too
+
+  28 Feb 2011; Michael Haubenwallner <haubi@gentoo.org> files/ld-aix-1:
+  use /bin/ksh via /usr/bin/env, for bug#282539
+
+  09 Feb 2011; Michael Haubenwallner <haubi@gentoo.org> +files/ld-aix-1,
+  +native-cctools-1.ebuild, +metadata.xml:
+  On AIX, wrap ld to support '-soname' flag (#213277).
+  Moved from prefix-overlay to gentoo-x86.
+
+  17 Dec 2008; Fabian Groffen <grobian@gentoo.org> native-cctools-1.ebuild:
+  On Darwin, make sure we never link gnu-libtool as libtool, or br0rk4ge will
+  be guaranteed
+
+*native-cctools-1 (09 Feb 2011)
+
+  21 Mar 2007; Fabian Groffen <grobian@gentoo.org> +files/ld-aix-1,
+  +native-cctools-1.ebuild, +metadata.xml:
+  Initial commit of native-cctools, a wrapper package around native installed
+  cctools (ld, as, ar, etc) for operating systems where GNU binutils doesn't
+  work, or the linker sources are unavailable.
+

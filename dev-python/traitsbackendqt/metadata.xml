@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>sci</herd>
+  <herd>python</herd>
+  <longdescription lang="en">
+    The TraitsBackendQt project contains an implementation of TraitsGUI using
+    PyQt4. It provides Qt-based support for visualization and editing of
+    Traits-based objects.
+  </longdescription>
+</pkgmetadata>

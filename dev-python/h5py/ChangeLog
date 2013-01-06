@@ -1,0 +1,84 @@
+# ChangeLog for dev-python/h5py
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.11 2012/10/17 09:30:09 patrick Exp $
+
+  17 Oct 2012; Patrick Lauer <patrick@gentoo.org> h5py-2.0.1.ebuild,
+  h5py-2.1.0.ebuild:
+  Restricting py 3.3
+
+*h5py-2.1.0 (04 Oct 2012)
+
+  04 Oct 2012; Kacper Kowalik <xarthisius@gentoo.org> +h5py-2.1.0.ebuild:
+  Version bump
+
+  23 Feb 2012; Patrick Lauer <patrick@gentoo.org> h5py-2.0.1.ebuild:
+  Restricting pypy and jython
+
+  17 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> h5py-2.0.1.ebuild:
+  Add prefix love
+
+*h5py-2.0.1 (05 Oct 2011)
+
+  05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> -h5py-2.0.0.ebuild,
+  +h5py-2.0.1.ebuild:
+  Version bump, drop old.
+
+*h5py-2.0.0 (17 Jul 2011)
+
+  17 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> -h5py-1.3.0.ebuild,
+  -files/h5py-1.3.0-python-2.7.patch, -h5py-1.3.1.ebuild, +h5py-2.0.0.ebuild,
+  metadata.xml:
+  Version bump, drop old. Fixes bug #297997. Add sci to metadata
+
+*h5py-1.3.1 (03 May 2011)
+
+  03 May 2011; Sébastien Fabbro <bicatali@gentoo.org> +h5py-1.3.1.ebuild:
+  Version bump
+
+  23 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  h5py-1.3.0.ebuild, +files/h5py-1.3.0-python-2.7.patch:
+  Fix building with Python 2.7 (bug #327859).
+
+  23 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  h5py-1.3.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+*h5py-1.3.0 (09 May 2010)
+
+  09 May 2010; Andrey Kislyuk <weaver@gentoo.org> +h5py-1.3.0.ebuild:
+  Version bump
+
+  21 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org> +h5py-1.2.1.ebuild,
+  +metadata.xml:
+  Initial import to the main tree
+
+*h5py-1.2.1 (20 Sep 2009)
+
+  20 Sep 2009; Tim Cera <timcera@earthlink.net> +h5py-1.2.1.ebuild:
+  Version bump.
+
+*h5py-1.2.0 (10 Jul 2009)
+
+  10 Jul 2009; Sébastien Fabbro <bicatali@gentoo.org> -h5py-1.0.0.ebuild,
+  +h5py-1.2.0.ebuild:
+  Version bump. Changed dependency and added test
+
+  19 Jun 2009; Justin Bronder <jsbronder@gentoo.org> h5py-1.1.0.ebuild:
+  Fix SRC_URI and digest.
+
+*h5py-1.1.0 (10 Jun 2009)
+
+  10 Jun 2009; Tim Cera <timcera@earthlink.net> -h5py-0.3.1.ebuild,
+  +h5py-1.1.0.ebuild:
+  Version bump.
+
+  19 Jan 2009; Tim Cera <timcera@earthlink.net> +h5py-1.0.0.ebuild:
+  Bumped version to 1.0.0.
+
+  05 Nov 2008; Tim Cera <timcera@earthlink.net> +h5py-0.3.1.ebuild,
+  +metadata.xml:
+  Added license info.
+
+  04 Nov 2008; Tim Cera <timcera@earthlink.net> +h5py-0.3.1.ebuild,
+  +metadata.xml:
+  Initial ebuild.

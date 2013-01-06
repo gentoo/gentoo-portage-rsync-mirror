@@ -1,0 +1,13 @@
+--- setup.py    2012-10-25 07:13:20.000000000 +0800
++++ setup.py    2012-10-30 14:26:37.433324607 +0800
+@@ -29,10 +29,6 @@
+     ],
+     install_requires=[
+     ] + importlib_req,
+-    setup_requires=[
+-        'hgtools',
+-        'pytest-runner',
+-    ],
+     tests_require=[
+         'pytest',
+     ],

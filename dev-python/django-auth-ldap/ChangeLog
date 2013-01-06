@@ -1,0 +1,27 @@
+# ChangeLog for dev-python/django-auth-ldap
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/ChangeLog,v 1.5 2012/11/13 10:40:04 idella4 Exp $
+
+  14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Updating maintainer, metadata.xml
+
+*django-auth-ldap-1.1 (19 May 2012)
+
+  19 May 2012; Theo Chatzimichos <tampakrap@gentoo.org>
+  +django-auth-ldap-1.1.ebuild:
+  Version bump, build & install of docs simplified, test phase cleanup. All done
+  by idella4
+
+  04 May 2012; Corentin Chary <iksaif@gentoo.org>
+  django-auth-ldap-1.0.19.ebuild:
+  Fix DESCRIPTION
+
+  25 Apr 2012; Theo Chatzimichos <tampakrap@gentoo.org>
+  django-auth-ldap-1.0.19.ebuild:
+  Added condition to report effective testing()
+
+*django-auth-ldap-1.0.19 (18 Apr 2012)
+
+  18 Apr 2012; Theo Chatzimichos <tampakrap@gentoo.org>
+  +django-auth-ldap-1.0.19.ebuild, +metadata.xml:
+  Initial commit, ebuild by idella4

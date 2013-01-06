@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>cedk@gentoo.org</email>
+		<name>Cédric Krier</name>
+	</maintainer>
+	<use>
+		<flag name="video">Add video support</flag>
+	</use>
+	<longdescription lang="en">
+		an IRC gateway to IM networks
+	</longdescription>
+</pkgmetadata>
+

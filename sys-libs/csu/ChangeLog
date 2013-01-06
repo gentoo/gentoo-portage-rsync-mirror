@@ -1,0 +1,31 @@
+# ChangeLog for sys-libs/csu
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/csu/ChangeLog,v 1.7 2011/09/04 13:20:29 grobian Exp $
+
+  04 Sep 2011; Fabian Groffen <grobian@gentoo.org> csu-79.ebuild:
+  Fix build on case-sensitive volumes, bug #381779
+
+  03 Sep 2011; Fabian Groffen <grobian@gentoo.org> csu-79.ebuild:
+  Fetch restriction seems to have been removed, fix installation failing,
+  marked ~x86-macos and ~x64-macos
+
+*csu-79 (15 Mar 2011)
+
+  15 Mar 2011; Fabian Groffen <grobian@gentoo.org> +csu-79.ebuild,
+  +metadata.xml:
+  Version bump. Bring back csu for Darwin. This contains crt1.o and friends for
+  Darwin/Mac OS X systems
+
+  14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove kito from metadata.xml due to retiring.
+
+*csu-57 (19 May 2005)
+
+  19 May 2005; Kito <kito@gentoo.org> +csu-57.ebuild:
+  version bump. Go ferral tabbey!
+
+*csu-46 (15 Nov 2004)
+
+  15 Nov 2004; Kito <kito@gentoo.org> +csu-46.ebuild:
+  initial import. added ~ppc-macos
+

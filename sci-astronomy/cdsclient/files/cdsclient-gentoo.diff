@@ -1,0 +1,92 @@
+Respect LDFLAGS,CFLAGS, fix install
+
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -35,10 +35,10 @@
+ #################################################################
+ 
+ INCDIR  = $(PREFIX)/include
+-LIBDIR  = $(PREFIX)/lib
++LIBDIR  = $(PREFIX)/@libdir@
+ BINDIR  = $(PREFIX)/bin
+ SHSDIR  = $(PREFIX)/bin
+-MANDIR  = $(PREFIX)/man
++MANDIR  = $(PREFIX)/share/man
+ ###########
+ # NOTE: The definition below is required only on SOLARIS
+ #       Comment the following line if required
+@@ -59,7 +59,6 @@
+ DEBUG = 
+ C_OPT = -O
+ SYS = 
+-CFLAGS = $(C_OPT) $(DEBUG) $(SYS) -I.
+ 
+ # FILES		--------------------------------
+ VERFILE = $(PREFIX)/versions
+@@ -94,7 +93,7 @@
+ # RULES		--------------------------------
+ .SUFFIXES: .o .c 
+ .c.o:
+-	$(CC) $(CFLAGS) -c $<
++	$(CC) $(CFLAGS) -I. -c $<
+ 
+ # DEPENDENCIES	--------------------------------
+ 
+@@ -113,43 +112,41 @@
+ #		rm -f $$f; ln finducac2 $$f; done
+ 
+ aclient: aclient.o $(OBJ)
+-	$(CC) $@.o $(OBJ) $(LIBSYS) -o $@
+-	$(STRIP) $@
++	$(CC) $(LDFLAGS) $@.o $(OBJ) $(LIBSYS) -o $@
+ 
+ wwwget: wwwget.c
+-	$(CC) wwwget.c $(LIBSYS) -o $@
+-	$(STRIP) $@
++	$(CC) $(LDFLAGS) wwwget.c $(LIBSYS) -o $@
+ 
+ doc: sk.tex man.tex aclient.tex
+ 	latex man.tex
+ 
+-install: $(EXPORT_INSTALL) install_shs install_info
++install: $(EXPORT_INSTALL) install_shs
+ 	rm -rf *.cache
+ 
+ export_install: install_bin install_man 
+ 
+ install_man: $(MAN)
+-	if [ -d $(MANDIR) ]; then echo $(MANDIR) exists; \
+-	else mkdir $(MANDIR); fi 
++	if [ -d $(DESTDIR)$(MANDIR) ]; then echo $(DESTDIR)$(MANDIR) exists; \
++	else mkdir -p $(DESTDIR)$(MANDIR); fi 
+ 	for f in $(MAN); do \
+ 	    e=`echo $$f | cut -d. -f2`;  \
+-	    if [ -d $(MANDIR)/man$$e ] ; then echo $(MANDIR)/man$$e exists ; \
+-	    else mkdir $(MANDIR)/man$$e ; fi ; \
+-	    $(COPY) $$f $(MANDIR)/man$$e ;  \
++	    if [ -d $(DESTDIR)$(MANDIR)/man$$e ] ; then echo $(DESTDIR)$(MANDIR)/man$$e exists ; \
++	    else mkdir -p $(DESTDIR)$(MANDIR)/man$$e ; fi ; \
++	    $(COPY) $$f $(DESTDIR)$(MANDIR)/man$$e ;  \
+ 	done
+ 
+ install_h: $(INC)
+-	test -d $(INCDIR) || mkdir $(INCDIR)
+-	$(COPY) $(INC) $(INCDIR)
++	test -d $(DESTDIR)$(INCDIR) || mkdir -p $(DESTDIR)$(INCDIR)
++	$(COPY) $(INC) $(DESTDIR)$(INCDIR)
+ 
+ install_bin: $(BIN)
+-	test -d $(BINDIR) || mkdir $(BINDIR)
+-	$(COPY) $(BIN) $(BINDIR)
++	test -d $(DESTDIR)$(BINDIR) || mkdir -p $(DESTDIR)$(BINDIR)
++	$(COPY) $(BIN) $(DESTDIR)$(BINDIR)
+ 
+ install_shs: Makefile
+-	test -d $(SHSDIR) || mkdir $(SHSDIR)
++	test -d $(DESTDIR)$(SHSDIR) || mkdir -p $(DESTDIR)$(SHSDIR)
+ 	cdsutil="$(SHSatCDS)"; test -z "$(atCDS)" && cdsutil=""; \
+-	cp -p $(SHS) $$cdsutil $(SHSDIR)
++	cp -p $(SHS) $$cdsutil $(DESTDIR)$(SHSDIR)
+ 
+ install_info:
+ 	touch $(VERFILE)

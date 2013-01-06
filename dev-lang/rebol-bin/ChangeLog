@@ -1,0 +1,9 @@
+# ChangeLog for dev-lang/rebol-bin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rebol-bin/ChangeLog,v 1.1 2012/12/23 10:55:09 patrick Exp $
+
+*rebol-bin-3_pre111 (23 Dec 2012)
+
+  23 Dec 2012; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +rebol-bin-3_pre111.ebuild:
+  Initial import, ebuild by me

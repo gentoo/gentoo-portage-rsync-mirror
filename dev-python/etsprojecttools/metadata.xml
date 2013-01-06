@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>python</herd>
+  <longdescription lang="en">
+    Enthought Tool Suite ProjectTools provides commands to make it
+    easier for developers to work on projects that have a large number
+    of dependencies, such as the ETS project itself. These commands
+    are all predicated on a concept we call a "checkout", which is the
+    coherent set of projects and versions that are required to satisfy
+    all documented dependencies for the user-requested project(s).
+  </longdescription>
+</pkgmetadata>

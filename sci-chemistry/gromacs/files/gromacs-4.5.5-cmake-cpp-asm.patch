@@ -1,0 +1,46 @@
+diff --git a/cmake/CMakeASM-ATTInformation.cmake b/cmake/CMakeASM-ATTInformation.cmake
+new file mode 100644
+index 0000000..05e9457
+--- /dev/null
++++ b/cmake/CMakeASM-ATTInformation.cmake
+@@ -0,0 +1,13 @@
++
++# This a modified version of CMakeASMInformation.cmake coming with cmake 2.8.6, which
++# supports .S files
++
++# support for AT&T syntax assemblers, e.g. GNU as
++
++SET(ASM_DIALECT "-ATT")
++SET(CMAKE_ASM${ASM_DIALECT}_SOURCE_FILE_EXTENSIONS S;s;asm)
++
++SET(CMAKE_ASM${ASM_DIALECT}_COMPILE_OBJECT "<CMAKE_ASM${ASM_DIALECT}_COMPILER> <FLAGS> -o <OBJECT> <SOURCE>")
++
++INCLUDE(CMakeASMInformation)
++SET(ASM_DIALECT)
+diff --git a/src/gmxlib/CMakeLists.txt b/src/gmxlib/CMakeLists.txt
+index 021ed19..c3e7b79 100644
+--- a/src/gmxlib/CMakeLists.txt
++++ b/src/gmxlib/CMakeLists.txt
+@@ -47,18 +47,18 @@ endif()
+ if(GMX_IA32_ASM)
+   file(GLOB GMX_SSEKERNEL_C_SRC   nonbonded/nb_kernel_ia32_${SSETYPE}/*.c)
+   if(GMX_ASM_USEASM-NASM)
+-    file(GLOB GMX_SSEKERNEL_ASM_SRC nonbonded/nb_kernel_ia32_${SSETYPE}/*intel_syntax*.s)    
++    file(GLOB GMX_SSEKERNEL_ASM_SRC nonbonded/nb_kernel_ia32_${SSETYPE}/*intel_syntax*.S)    
+   else()
+-    file(GLOB GMX_SSEKERNEL_ASM_SRC nonbonded/nb_kernel_ia32_${SSETYPE}/*${SSETYPE}.s nonbonded/nb_kernel_ia32_${SSETYPE}/*asm.s)
++    file(GLOB GMX_SSEKERNEL_ASM_SRC nonbonded/nb_kernel_ia32_${SSETYPE}/*${SSETYPE}.S nonbonded/nb_kernel_ia32_${SSETYPE}/*asm.S)
+   endif()
+ endif(GMX_IA32_ASM)
+ 
+ if(GMX_X86_64_ASM)
+   file(GLOB GMX_SSEKERNEL_C_SRC   nonbonded/nb_kernel_x86_64_${SSETYPE}/*.c)
+   if(GMX_ASM_USEASM-NASM)
+-    file(GLOB GMX_SSEKERNEL_ASM_SRC nonbonded/nb_kernel_x86_64_${SSETYPE}/*intel_syntax*.s)
++    file(GLOB GMX_SSEKERNEL_ASM_SRC nonbonded/nb_kernel_x86_64_${SSETYPE}/*intel_syntax*.S)
+   else()
+-    file(GLOB GMX_SSEKERNEL_ASM_SRC nonbonded/nb_kernel_x86_64_${SSETYPE}/*${SSETYPE}.s nonbonded/nb_kernel_x86_64_${SSETYPE}/*asm.s)
++    file(GLOB GMX_SSEKERNEL_ASM_SRC nonbonded/nb_kernel_x86_64_${SSETYPE}/*${SSETYPE}.S nonbonded/nb_kernel_x86_64_${SSETYPE}/*asm.S)
+   endif()
+ endif(GMX_X86_64_ASM)
+ 

@@ -1,0 +1,96 @@
+# ChangeLog for dev-cpp/libcmis
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/ChangeLog,v 1.22 2012/12/20 11:19:11 scarabeus Exp $
+
+  20 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org> -libcmis-0.1.0-r1.ebuild:
+  Remove oldest, unused.
+
+  08 Dec 2012; Markus Meier <maekke@gentoo.org> libcmis-0.2.3-r1.ebuild:
+  add ~arm, bug #440908
+
+  17 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> libcmis-0.2.3-r1.ebuild:
+  Stable on ppc and x86 wrt bug#440922.
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> libcmis-0.1.0-r1.ebuild,
+  libcmis-0.2.3-r1.ebuild, libcmis-0.3.0.ebuild:
+  workaround for bug 399061
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> libcmis-0.2.3-r1.ebuild:
+  really stable
+
+  06 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> libcmis-0.3.0.ebuild,
+  libcmis-9999.ebuild:
+  Fix dep over xslt.
+
+  03 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> libcmis-0.3.0.ebuild:
+  Stable on amd64 x86 and ppc wrt bug#441138.
+
+  15 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> libcmis-0.1.0-r1.ebuild,
+  libcmis-0.2.3-r1.ebuild:
+  Inherit alternatives eclass. Thanks to Sascha Cunz for the notice.
+
+*libcmis-0.2.3-r1 (13 Sep 2012)
+*libcmis-0.3.0 (13 Sep 2012)
+*libcmis-0.1.0-r1 (13 Sep 2012)
+
+  13 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libcmis-0.1.0-r1.ebuild,
+  +libcmis-0.2.3-r1.ebuild, +libcmis-0.3.0.ebuild, -libcmis-0.1.0.ebuild,
+  -libcmis-0.2.3.ebuild, libcmis-9999.ebuild:
+  Slot cmis as 0.3 is not compatible with 3.6 again. Revbumps are needed for
+  proper blockers. 0.1 and 0.2 sadly use same 0.2 soname, stupid.
+
+  09 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/libcmis-0.2.3-do-not-override-phases.patch, libcmis-0.2.3.ebuild:
+  Do not override phases. Fixes bug#430480.
+
+  02 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> libcmis-0.1.0.ebuild:
+  Hard require old curl to please ricers. Fixes bug#428790
+
+  21 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> libcmis-0.1.0.ebuild,
+  libcmis-0.2.3.ebuild, libcmis-9999.ebuild:
+  Depend on pkgconfig. Fixes bug#422691.
+
+*libcmis-0.2.3 (14 Jun 2012)
+
+  14 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +libcmis-0.2.3.ebuild,
+  -files/libcmis-0.2.2-docbook.patch, -libcmis-0.2.2.ebuild,
+  libcmis-9999.ebuild, metadata.xml:
+  Bump to latest and use the switches i added upstream. Remove broken one.
+
+*libcmis-0.2.2 (05 Jun 2012)
+
+  05 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/libcmis-0.2.2-docbook.patch, +libcmis-0.2.2.ebuild:
+  Version bump for the 3.6.
+
+  26 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> libcmis-0.1.0.ebuild:
+  ppc stable wrt bug#411449.
+
+  17 Feb 2012; Tomáš Chvátal <scarabeus@gentoo.org> libcmis-0.1.0.ebuild:
+  Stable 0.1.0 on amd64 and x86.
+
+  18 Dec 2011; Mark Loeser <halcy0n@gentoo.org> libcmis-0.1.0.ebuild:
+  Mark ~ppc; bug #394467
+
+  09 Dec 2011; Tomáš Chvátal <scarabeus@gentoo.org> libcmis-0.1.0.ebuild,
+  libcmis-9999.ebuild:
+  Project moved to sf.net.
+
+  30 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> libcmis-0.1.0.ebuild:
+  Marked ~ppc wrt #392585
+
+  03 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> libcmis-0.1.0.ebuild,
+  libcmis-9999.ebuild:
+  Update tarball, repacked by upstream. Manage all configure switches.
+
+*libcmis-0.1.0 (03 Oct 2011)
+
+  03 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> +libcmis-0.1.0.ebuild,
+  libcmis-9999.ebuild:
+  Add release version.
+
+*libcmis-9999 (03 Oct 2011)
+
+  03 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> +libcmis-9999.ebuild,
+  +metadata.xml:
+  Initial commit, required for libreoffice.

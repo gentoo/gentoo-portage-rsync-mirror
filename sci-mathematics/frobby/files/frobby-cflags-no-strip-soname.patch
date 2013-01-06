@@ -1,0 +1,29 @@
+diff -U 3 -dHrN frobby_v0.9.0-orig/Makefile frobby_v0.9.0/Makefile
+--- frobby_v0.9.0-orig/Makefile	2012-07-30 14:19:58.161584356 +0200
++++ frobby_v0.9.0/Makefile	2012-07-30 14:21:36.796558990 +0200
+@@ -87,7 +87,6 @@
+ MATCH=false
+ ifeq ($(MODE), release)
+   outdir = bin/release/
+-  cflags += -O2
+   MATCH=true
+ endif
+ ifeq ($(MODE), debug)
+@@ -204,16 +203,13 @@
+       mv -f $@.exe $@; \
+ 	fi
+ endif
+-ifeq ($(MODE), release)
+-	strip $@
+-endif
+ 
+ # Link object files into library
+ library: bin/$(library)
+ bin/$(library): $(objs) | bin/
+ 	rm -f bin/$(library)
+ ifeq ($(MODE), shared)
+-	$(CXX) -shared -o bin/$(library) $(ldflags) \
++	$(CXX) -shared -Wl,-soname,libfrobby.so.0 -o bin/$(library) $(ldflags) \
+ 	  $(patsubst $(outdir)main.o,,$(objs))
+ else
+ 	ar crs bin/$(library) $(patsubst $(outdir)main.o,,$(objs))

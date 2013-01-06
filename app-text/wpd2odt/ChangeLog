@@ -1,0 +1,35 @@
+# ChangeLog for app-text/wpd2odt
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2odt/ChangeLog,v 1.8 2012/05/04 03:33:16 jdhore Exp $
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> wpd2odt-0.8.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  29 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> wpd2odt-0.8.1.ebuild:
+  ppc stable wrt bug#411449. I forgot to commit the keyword previously :)
+
+  22 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> wpd2odt-0.8.1.ebuild:
+  x86 stable wrt bug #411449
+
+  26 Oct 2011; Tony Vroon <chainsaw@gentoo.org> wpd2odt-0.8.1.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
+  Agostino "ago" Sarubbo in bug #387187.
+
+  28 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> wpd2odt-0.8.1.ebuild:
+  Use xz instead of bz2.
+
+*wpd2odt-0.8.1 (28 Sep 2011)
+
+  28 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> -wpd2odt-0.8.0.ebuild,
+  +wpd2odt-0.8.1.ebuild, metadata.xml:
+  Version bump to latest. Drop older. This compiles with gcc-4.6.
+
+  04 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> wpd2odt-0.8.0.ebuild:
+  media-libs/libwpg app-text/libwpg
+
+*wpd2odt-0.8.0 (27 Jul 2011)
+
+  27 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> +wpd2odt-0.8.0.ebuild,
+  +metadata.xml:
+  Initial commit of wpd2od{gt} tool replacing wpd2sxw. Fixes bug #363695.
+

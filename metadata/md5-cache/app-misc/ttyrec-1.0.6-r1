@@ -1,0 +1,8 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=tty recorder
+HOMEPAGE=http://namazu.org/~satoru/ttyrec/
+KEYWORDS=~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=BSD
+SLOT=0
+SRC_URI=http://namazu.org/~satoru/ttyrec/ttyrec-1.0.6.tar.gz
+_md5_=cf742402c3323d15b620cf34b8ce162a

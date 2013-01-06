@@ -1,0 +1,151 @@
+
+
+  03 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> cgminer-2.3.4.ebuild,
+  cgminer-2.3.5.ebuild, cgminer-2.3.6.ebuild, cgminer-2.4.0.ebuild,
+  cgminer-2.4.1.ebuild, cgminer-2.4.2-r1.ebuild, cgminer-2.4.3-r1.ebuild,
+  cgminer-2.4.4.ebuild, cgminer-2.5.0.ebuild, cgminer-2.6.3.ebuild,
+  cgminer-2.6.4.ebuild, cgminer-2.7.1.ebuild, cgminer-2.7.4.ebuild:
+  Use virtual/udev instead of sys-fs/udev wrt #444398
+
+*cgminer-2.7.4 (30 Aug 2012)
+
+  30 Aug 2012; Anthony G. Basile <blueness@gentoo.org> +cgminer-2.7.4.ebuild:
+  Version bump
+
+  22 Aug 2012; Anthony G. Basile <blueness@gentoo.org> -cgminer-2.4.3.ebuild:
+  Remove older unstable
+
+  21 Aug 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog, Manifest:
+  Correct previous changelog entry
+
+*cgminer-2.7.1 (21 Aug 2012)
+*cgminer-2.6.4 (21 Aug 2012)
+
+  21 Aug 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.6.3.ebuild,
+  +cgminer-2.6.4.ebuild, +cgminer-2.7.1.ebuild:
+  Version bumps
+
+*cgminer-2.6.3 (06 Aug 2012)
+
+  06 Aug 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.5.0.ebuild,
+  +cgminer-2.6.3.ebuild, metadata.xml:
+  Version bump
+
+*cgminer-2.5.0 (06 Jul 2012)
+
+  06 Jul 2012; Anthony G. Basile <blueness@gentoo.org> +cgminer-2.5.0.ebuild:
+  Yet another version bump
+
+*cgminer-2.4.4 (06 Jul 2012)
+
+  06 Jul 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.4.3-r1.ebuild,
+  +cgminer-2.4.4.ebuild:
+  Version bump
+
+*cgminer-2.4.3-r1 (26 Jun 2012)
+
+  26 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
+  +cgminer-2.4.3-r1.ebuild, metadata.xml:
+  Add support for ModMiner FPGAs
+
+  16 Jun 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.4.2-r1.ebuild:
+  Fix SRC_URI
+
+  16 Jun 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.3.4.ebuild,
+  cgminer-2.3.5.ebuild, cgminer-2.3.6.ebuild, cgminer-2.4.0.ebuild,
+  cgminer-2.4.1.ebuild, cgminer-2.4.2-r1.ebuild, cgminer-2.4.3.ebuild:
+  Add needed ncurses dep for opencl
+
+*cgminer-2.4.3 (16 Jun 2012)
+
+  16 Jun 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.4.2-r1.ebuild,
+  +cgminer-2.4.3.ebuild:
+  Version bump
+
+  04 Jun 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.4.1.ebuild:
+  Upstream moved tarball for 2.4.1
+
+*cgminer-2.4.2-r1 (04 Jun 2012)
+
+  04 Jun 2012; Anthony G. Basile <blueness@gentoo.org> -cgminer-2.4.2.ebuild,
+  +cgminer-2.4.2-r1.ebuild:
+  Add missing docs
+
+  03 Jun 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.4.2.ebuild:
+  Use virtual/libusb instead of dev-libs/libusb for last ebuild
+
+*cgminer-2.4.2 (03 Jun 2012)
+
+  03 Jun 2012; Anthony G. Basile <blueness@gentoo.org> +cgminer-2.4.2.ebuild:
+  Version bump
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> cgminer-2.3.4.ebuild,
+  cgminer-2.3.5.ebuild, cgminer-2.3.6.ebuild, cgminer-2.4.0.ebuild,
+  cgminer-2.4.1.ebuild:
+  Use virtual/libusb instead of dev-libs/libusb.
+
+*cgminer-2.4.1 (15 May 2012)
+
+  15 May 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.4.0.ebuild,
+  +cgminer-2.4.1.ebuild:
+  Version bump
+
+*cgminer-2.4.0 (05 May 2012)
+
+  05 May 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.3.6.ebuild,
+  +cgminer-2.4.0.ebuild:
+  Version bump
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> cgminer-2.3.4.ebuild,
+  cgminer-2.3.5.ebuild, cgminer-2.3.6.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*cgminer-2.3.6 (29 Apr 2012)
+
+  29 Apr 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.3.5.ebuild,
+  +cgminer-2.3.6.ebuild:
+  Version bump
+
+  28 Apr 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.3.4.ebuild:
+  Upstream moved the src tarball
+
+*cgminer-2.3.5 (28 Apr 2012)
+
+  28 Apr 2012; Anthony G. Basile <blueness@gentoo.org> +cgminer-2.3.5.ebuild:
+  Version bump
+
+*cgminer-2.3.4 (27 Apr 2012)
+
+  27 Apr 2012; Anthony G. Basile <blueness@gentoo.org> -cgminer-2.3.0.ebuild,
+  -cgminer-2.3.1.2.ebuild, -cgminer-2.3.2.ebuild, -cgminer-2.3.3.ebuild,
+  +cgminer-2.3.4.ebuild, metadata.xml:
+  Version bump, remove older unstable
+
+*cgminer-2.3.3 (15 Apr 2012)
+
+  15 Apr 2012; Anthony G. Basile <blueness@gentoo.org> +cgminer-2.3.3.ebuild:
+  Version bump
+
+  02 Apr 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Update luke-jr's email address
+
+*cgminer-2.3.2 (02 Apr 2012)
+
+  02 Apr 2012; Anthony G. Basile <blueness@gentoo.org> +cgminer-2.3.2.ebuild:
+  Version bump
+
+*cgminer-2.3.1.2 (24 Feb 2012)
+
+  24 Feb 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.3.0.ebuild,
+  +cgminer-2.3.1.2.ebuild:
+  Version bump
+
+  23 Feb 2012; Anthony G. Basile <blueness@gentoo.org> cgminer-2.3.0.ebuild:
+  Add -nopie to CFLAGS for hardened because of PIC unfriendly asm
+
+*cgminer-2.3.0 (23 Feb 2012)
+
+  23 Feb 2012; Anthony G. Basile <blueness@gentoo.org> +cgminer-2.3.0.ebuild,
+  +metadata.xml:
+  Initial commit, moved from luke-jr's bitcoin overlay
+

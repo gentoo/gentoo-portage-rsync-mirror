@@ -1,0 +1,32 @@
+# ChangeLog for app-emacs/undo-tree
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/undo-tree/ChangeLog,v 1.5 2012/07/15 18:02:26 ulm Exp $
+
+*undo-tree-0.5.2 (15 Jul 2012)
+
+  15 Jul 2012; Ulrich Müller <ulm@gentoo.org> +undo-tree-0.5.2.ebuild,
+  metadata.xml:
+  Version bump. Amend longdescription in metadata.
+
+*undo-tree-0.1.7 (01 Dec 2010)
+
+  01 Dec 2010; Thomas Kahle <tomka@gentoo.org>
+  -undo-tree-0.1.7_pre20101117-r1.ebuild, +undo-tree-0.1.7.ebuild:
+  bump to 0.1.7 release, remove prerelease
+
+  25 Nov 2010; Ulrich Mueller <ulm@gentoo.org>
+  undo-tree-0.1.7_pre20101117-r1.ebuild:
+  Use elog instead of einfo.
+
+*undo-tree-0.1.7_pre20101117-r1 (17 Nov 2010)
+
+  17 Nov 2010; Thomas Kahle <tomka@gentoo.org> files/50undo-tree-gentoo.el,
+  -undo-tree-0.1.7_pre20101117.ebuild, +undo-tree-0.1.7_pre20101117-r1.ebuild:
+  -r1 added, dropped old. Sitefile improvements thanks to ulm.
+
+*undo-tree-0.1.7_pre20101117 (17 Nov 2010)
+
+  17 Nov 2010; Thomas Kahle <tomka@gentoo.org> +files/50undo-tree-gentoo.el,
+  +undo-tree-0.1.7_pre20101117.ebuild, +metadata.xml:
+  initial import.
+

@@ -1,0 +1,14 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/files/opendnssec.confd,v 1.3 2012/11/14 21:11:00 mschiff Exp $
+
+# Variables containing default binaries used in the opendnssec
+# initscript. You can alter them to another applications/paths
+# if required.
+
+CHECKCONFIG_BIN=/usr/bin/ods-kaspcheck
+CONTROL_BIN=/usr/sbin/ods-control
+ENFORCER_BIN=/usr/sbin/ods-enforcerd
+SIGNER_BIN=/usr/sbin/ods-signerd
+EPPCLIENT_BIN=/usr/sbin/eppclientd
+EPPCLIENT_PIDFILE=/var/run/opendnssec/eppclientd.pid

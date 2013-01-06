@@ -1,0 +1,34 @@
+--- src/Makefile.am.orig	2012-01-19 03:18:12.240607766 -0500
++++ src/Makefile.am	2012-01-19 03:19:24.833598014 -0500
+@@ -9,11 +9,6 @@
+ # use $(top_srcdir); $(top_builddir) would fail during "make distcheck"
+ include $(top_srcdir)/Makefile.cdw.am
+ 
+-
+-# define common linker flags
+-AM_LDFLAGS = -lmenuw -lformw -lpanelw -lncursesw -lpthread -lcdio -liso9660 -lm -lburn
+-
+-
+ # list source files
+ cdw_source_files = cddb.c main.c
+ 
+@@ -58,7 +53,8 @@
+ 	$(top_builddir)/src/user_interface/libcdwuserinterface.a \
+ 	$(top_builddir)/gnulib/lib/libgnulib.a \
+ 	$(top_builddir)/src/external_tools/libcdwexternaltools.a \
+-	$(top_builddir)/src/tasks/libcdwtasks.a
++	$(top_builddir)/src/tasks/libcdwtasks.a \
++	-lmenuw -lformw -lpanelw -lncursesw -lpthread -lcdio -liso9660 -lm -lburn
+ 
+ cdw_SOURCES = $(cdw_source_files)
+ 
+@@ -81,7 +77,8 @@
+ 	$(top_builddir)/src/user_interface/libcdwuserinterface_check.a \
+ 	$(top_builddir)/gnulib/lib/libgnulib.a \
+ 	$(top_builddir)/src/external_tools/libcdwexternaltools_check.a \
+-	$(top_builddir)/src/tasks/libcdwtasks_check.a
++	$(top_builddir)/src/tasks/libcdwtasks_check.a \
++	-lmenuw -lformw -lpanelw -lncursesw -lpthread -lcdio -liso9660 -lm -lburn
+ 
+ cdw_tests_SOURCES = $(cdw_source_files)
+ 

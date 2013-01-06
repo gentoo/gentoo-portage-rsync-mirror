@@ -1,0 +1,383 @@
+diff -Nur vpnclient.orig/frag.c vpnclient/frag.c
+--- vpnclient.orig/frag.c	2005-11-22 10:52:00.000000000 +0100
++++ vpnclient/frag.c	2007-05-29 16:03:42.000000000 +0200
+@@ -1,4 +1,18 @@
+-#include <linux/config.h>
++/**************************************************************************
++ *           Copyright (c) 2001, Cisco Systems, All Rights Reserved
++ ***************************************************************************
++ *
++ *  File:    frag.c
++ *  Date:    22/03/01
++ *
++ *  Updated to work with Linux kernels >=2.6.19 (including 2.6.22) by
++ *  Alexander Griesser 29/05/07 <cisco@tuxx-home.at>
++ *
++ ***************************************************************************
++ * This module does some really cool stuff only Cisco knows about
++ ***************************************************************************/
++
++#include <linux/autoconf.h>
+ #include <linux/version.h>
+ #include <linux/netdevice.h>
+ #include <linux/etherdevice.h>
+@@ -37,9 +51,10 @@
+     int ret=FALSE;
+     struct frag_queue_entry *cur=NULL,*n=NULL,*prev=NULL;
+ 
+-    id = ntohs(skb->nh.iph->id);
++    id = ntohs(CISCOVPN_SKB_NH_ID(skb));
++
+     /* look for an entry with the same id as this packet*/
+-    if (frag_queue_head && id != ntohs(frag_queue_head->skb->nh.iph->id))
++    if (frag_queue_head && id != ntohs(CISCOVPN_SKB_NH_ID(frag_queue_head->skb)))
+     {
+         printk(KERN_INFO "%s: incomplete fragment set destroyed",__FUNCTION__);
+         cleanup_frag_queue();
+@@ -57,10 +72,13 @@
+     cur = frag_queue_head;
+ 
+     prev = NULL;
+-    skb_offset = ntohs(skb->nh.iph->frag_off) & IP_OFFSET;
++
++    skb_offset = ntohs(CISCOVPN_SKB_NH_FRAGOFF(skb)) & IP_OFFSET;
++
+     while (cur)
+     {
+-        cur_offset = ntohs(cur->skb->nh.iph->frag_off) & IP_OFFSET;
++        cur_offset = ntohs(CISCOVPN_SKB_NH_FRAGOFF(cur->skb)) & IP_OFFSET;
++
+         /*sanity check*/
+         if (cur_offset < prev_offset)
+         {
+@@ -112,8 +130,9 @@
+         goto done_with_tests;
+     }
+     cur = frag_queue_head;
++
+     /*first in queue must be first frag.*/
+-    if ((ntohs(cur->skb->nh.iph->frag_off) & IP_OFFSET) != 0)
++    if ((ntohs(CISCOVPN_SKB_NH_FRAGOFF(cur->skb)) & IP_OFFSET) != 0)
+     {
+         goto done_with_tests;
+     }
+@@ -121,19 +140,22 @@
+        by comparing adjacent offset values and packet lengths*/
+     while (cur)
+     {
+-        cur_offset = (ntohs(cur->skb->nh.iph->frag_off) & IP_OFFSET)*8;
+-        if (cur_offset != prev_end_offset)
++	cur_offset = (ntohs(CISCOVPN_SKB_NH_FRAGOFF(cur->skb)) & IP_OFFSET)*8;
++
++	if (cur_offset != prev_end_offset)
+         { 
+             goto done_with_tests;
+         }
+         prev = cur;
+         prev_offset = cur_offset;
+-        prev_end_offset = prev_offset + ntohs(prev->skb->nh.iph->tot_len)
+-                          - (prev->skb->nh.iph->ihl*4);
++
++        prev_end_offset = prev_offset + ntohs(CISCOVPN_SKB_NH_TOTLEN(prev->skb))
++	                  - (CISCOVPN_SKB_NH_IHL(prev->skb)*4);
+         cur = cur->next;
+     } 
+     /*last in queue must not have more frags set*/
+-    if (ntohs(prev->skb->nh.iph->frag_off) & IP_MF)
++
++    if (ntohs(CISCOVPN_SKB_NH_FRAGOFF(prev->skb)) & IP_MF)
+     {
+         goto done_with_tests;
+     }
+@@ -185,10 +207,12 @@
+         /*not an IP packet*/
+         goto done_with_tests;
+     }
+-    iph = skb->nh.iph;
++
++    iph = CISCOVPN_SKB_IPHEADER(skb);
++
+     if (!iph)
+     {
+-        printk(KERN_DEBUG "%s: skb->nh is NULL.", __FUNCTION__);
++        printk(KERN_DEBUG "%s: iph (IP Header) is NULL.", __FUNCTION__);
+         goto done_with_tests;
+     }
+     offset = ntohs(iph->frag_off);
+diff -Nur vpnclient.orig/interceptor.c vpnclient/interceptor.c
+--- vpnclient.orig/interceptor.c	2005-11-22 10:52:00.000000000 +0100
++++ vpnclient/interceptor.c	2007-05-29 16:08:57.000000000 +0200
+@@ -5,10 +5,13 @@
+ *  File:    interceptor.c
+ *  Date:    04/10/2001
+ *
++*  Updated to work with Linux kernels >=2.6.19 (including 2.6.22) by
++*  Alexander Griesser 29/05/07 <cisco@tuxx-home.at>
++*
+ ***************************************************************************
+ * This module implements the linux driver.
+ ***************************************************************************/
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/version.h>
+ #include <linux/module.h>
+ #include <linux/init.h>
+@@ -339,13 +342,18 @@
+ 
+     dp = NULL;
+     num_target_devices = 0;
+-    for (dp = dev_base; dp != NULL; dp = dp->next)
+-    {
++
++    #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
++      for_each_netdev(dp)
++    #else
++      for (dp = dev_base; dp != NULL; dp = dp->next)
++    #endif
++      {
+         if (add_netdev(dp) == 0)
+         {
+             num_target_devices++;
+         }
+-    }
++      }
+ 
+     if (num_target_devices == 0)
+     {
+@@ -550,13 +558,13 @@
+         goto exit_gracefully;
+     }
+ 
+-    if (skb->ip_summed == CHECKSUM_HW)
++    if (CHECK_IP_SUMMED(skb->ip_summed))
+     {
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,7)
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,10)
+-       if (skb_checksum_help(skb,1))
++       if (SKB_CHECKSUM_HELP(skb,1))
+ #else
+-       if (skb_checksum_help(&skb,1))
++       if (SKB_CHECKSUM_HELP(&skb,1))
+ #endif // LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,10)
+        {
+            dev_kfree_skb(skb);
+@@ -569,9 +577,10 @@
+     }
+ 
+     reset_inject_status(&pBinding->recv_stat);
+-    if (skb->mac.raw)
++
++    if (CISCOVPN_SKB_MACHEADER(skb))
+     {
+-        hard_header_len = skb->data - skb->mac.raw;
++        hard_header_len = skb->data - CISCOVPN_SKB_MACHEADER(skb);
+         if ((hard_header_len < 0) || (hard_header_len > skb_headroom(skb)))
+         {
+             printk(KERN_DEBUG "bad hh len %d\n", hard_header_len);
+@@ -588,7 +597,7 @@
+     switch (hard_header_len)
+     {
+     case ETH_HLEN:
+-        CniNewFragment(ETH_HLEN, skb->mac.raw, &MacHdr, CNI_USE_BUFFER);
++        CniNewFragment(ETH_HLEN, CISCOVPN_SKB_MACHEADER(skb), &MacHdr, CNI_USE_BUFFER);
+         break;
+     case IPPP_MAX_HEADER:
+     case 0:
+@@ -677,14 +686,14 @@
+     tmp_InjectSend = NULL;
+ 
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,0)
+-    if (skb->ip_summed == CHECKSUM_HW)
++    if (CHECK_IP_SUMMED(skb->ip_summed))
+     {
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,10)
+-       if (skb_checksum_help(skb,0))
++       if (SKB_CHECKSUM_HELP(skb,0))
+ #elif LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,7)
+-       if (skb_checksum_help(&skb,0))
++       if (SKB_CHECKSUM_HELP(&skb,0))
+ #else
+-       if ((skb = skb_checksum_help(skb)) == NULL)
++       if ((skb = SKB_CHECKSUM_HELP(skb)) == NULL)
+ #endif //LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,7)
+        {
+            goto exit_gracefully;
+@@ -692,7 +701,8 @@
+     }
+ #endif //LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,0)
+     reset_inject_status(&pBinding->send_stat);
+-    hard_header_len = skb->nh.raw - skb->data;
++
++    hard_header_len = CISCOVPN_SKB_NETWORKHEADER(skb) - skb->data;
+     pBinding->send_real_hh_len = hard_header_len;
+     switch (hard_header_len)
+     {
+diff -Nur vpnclient.orig/IPSecDrvOS_linux.c vpnclient/IPSecDrvOS_linux.c
+--- vpnclient.orig/IPSecDrvOS_linux.c	2005-11-22 10:52:00.000000000 +0100
++++ vpnclient/IPSecDrvOS_linux.c	2007-05-29 13:42:39.000000000 +0200
+@@ -11,7 +11,7 @@
+ *   
+ *
+ ***************************************************************************/
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/version.h>
+ #include <linux/vmalloc.h>
+ #include <linux/sched.h>
+diff -Nur vpnclient.orig/linuxcniapi.c vpnclient/linuxcniapi.c
+--- vpnclient.orig/linuxcniapi.c	2005-11-22 10:52:00.000000000 +0100
++++ vpnclient/linuxcniapi.c	2007-05-29 13:56:57.000000000 +0200
+@@ -5,11 +5,14 @@
+  *  File:    linuxcniapi.c
+  *  Date:    22/03/01
+  *
++ *  Updated to work with Linux kernels >=2.6.19 (including 2.6.22) by
++ *  Alexander Griesser 29/05/07 <cisco@tuxx-home.at>
++ *
+  ***************************************************************************
+  * This module implements a translation layer between the CNI API and the
+  * Linux Interceptor driver.
+  ***************************************************************************/
+-#include <linux/config.h>
++#include <linux/autoconf.h>
+ #include <linux/version.h>
+ #include <linux/netdevice.h>
+ #include <linux/if.h>
+@@ -292,9 +295,19 @@
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,14)
+     {
+         struct timeval timestamp;
+-
+         do_gettimeofday(&timestamp);
+-        skb_set_timestamp(skb,&timestamp);
++	/* With Linux 2.6.22 skb_set_timestamp has been dropped.
++	 * Additionally, the attribute tstamp now is in ktime_t
++	 * where it prior to 2.6.22 was in skb_timeval.
++	 *
++	 * As a proprietary module, we may not use ktime_get_real,
++	 * so we need to do it this way
++	 */
++	#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
++          skb->tstamp = timeval_to_ktime(timestamp);
++	#else
++          skb_set_timestamp(skb,&timestamp);
++	#endif
+     }
+ #else
+     do_gettimeofday(&skb->stamp);
+@@ -328,8 +341,13 @@
+ 
+     skb->ip_summed = CHECKSUM_UNNECESSARY;
+ 
+-    skb->nh.iph = (struct iphdr *) skb->data;
+-    skb->mac.raw = pMac;
++    #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
++      skb_reset_network_header(skb);
++      skb_reset_mac_header(skb);
++    #else
++      skb->nh.iph = (struct iphdr *) skb->data;
++      skb->mac.raw = pMac;
++    #endif
+ 
+     pBinding->recv_stat.called = TRUE;
+ 
+@@ -441,9 +459,19 @@
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,14)
+     {
+         struct timeval timestamp;
+-
+         do_gettimeofday(&timestamp);
+-        skb_set_timestamp(skb,&timestamp);
++        /* With Linux 2.6.22 skb_set_timestamp has been dropped.
++         * Additionally, the attribute tstamp now is in ktime_t
++         * where it prior to 2.6.22 was in skb_timeval.
++         *
++         * As a proprietary module, we may not use ktime_get_real,
++         * so we need to do it this way
++         */
++        #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
++          skb->tstamp = timeval_to_ktime(timestamp);
++        #else
++          skb_set_timestamp(skb,&timestamp);
++        #endif
+     }
+ #else
+     do_gettimeofday(&skb->stamp);
+@@ -451,11 +479,21 @@
+ 
+     skb->dev = pBinding->pDevice;
+ 
+-    skb->mac.raw = pMac;
+-    skb->nh.raw = pIP;
++    #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
++      skb_reset_mac_header(skb);
++      skb_reset_network_header(skb);
++    #else
++      skb->mac.raw = pMac;
++      skb->nh.raw = pIP;
++    #endif
+ 
+     /*ip header length is in 32bit words */
+-    skb->h.raw = pIP + (skb->nh.iph->ihl * 4);
++    #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
++      skb->transport_header = skb->network_header + (ip_hdr(skb)->ihl * 4);
++    #else
++      skb->h.raw = pIP + (skb->nh.iph->ihl * 4);
++    #endif
++
+     skb->protocol = htons(ETH_P_IP);
+ 
+     /* send this packet up the NIC driver */
+diff -Nur vpnclient.orig/linux_os.h vpnclient/linux_os.h
+--- vpnclient.orig/linux_os.h	2005-11-22 10:52:00.000000000 +0100
++++ vpnclient/linux_os.h	2007-05-29 16:05:44.000000000 +0200
+@@ -5,6 +5,9 @@
+ *  File:    linux_os.h
+ *  Date:    04/25/2001
+ *
++*  Updated to work with Linux kernels >=2.6.19 (including 2.6.22) by
++*  Alexander Griesser 29/05/07 <cisco@tuxx-home.at>
++*
+ ***************************************************************************
+ *
+ * Macros for handling differences in the linux kernel api.
+@@ -30,6 +33,39 @@
+ #define PACKET_TYPE_NEXT(pt) ((pt)->next)
+ #endif
+ 
++/* With linux 2.6.19, CHECKSUM_HW was split into CHECKSUM_COMPLETE
++ * and CHECKSUM_PARTIAL
++ */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,19)
++  #define CHECK_IP_SUMMED(n) \
++    (((n) == CHECKSUM_COMPLETE) || ((n) == CHECKSUM_PARTIAL))
++  #define SKB_CHECKSUM_HELP(a,b)        skb_checksum_help((a))
++#else
++  #define CHECK_IP_SUMMED(n) ((n) == CHECKSUM_HW)
++  #define SKB_CHECKSUM_HELP(a,b)        skb_checksum_help((a),(b))
++#endif
++
++
++/* With linux 2.6.22, the sk_buff struct has changed
++ */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
++  #define CISCOVPN_SKB_NH_ID(a)           (ip_hdr(a)->id)
++  #define CISCOVPN_SKB_NH_FRAGOFF(a)      (ip_hdr(a)->frag_off)
++  #define CISCOVPN_SKB_NH_TOTLEN(a)       (ip_hdr(a)->tot_len)
++  #define CISCOVPN_SKB_NH_IHL(a)          (ip_hdr(a)->ihl)
++  #define CISCOVPN_SKB_IPHEADER(a)        (ip_hdr(a))
++  #define CISCOVPN_SKB_MACHEADER(a)       (skb_mac_header(a))
++  #define CISCOVPN_SKB_NETWORKHEADER(a)   (skb_network_header(a))
++#else
++  #define CISCOVPN_SKB_NH_ID(a)           (a->nh.iph->id)
++  #define CISCOVPN_SKB_NH_FRAGOFF(a)      (a->nh.iph->frag_off)
++  #define CISCOVPN_SKB_NH_TOTLEN(a)       (a->nh.iph->tot_len)
++  #define CISCOVPN_SKB_NH_IHL(a)          (a->nh.iph->ihl)
++  #define CISCOVPN_SKB_IPHEADER(a)        (a->nh.iph)
++  #define CISCOVPN_SKB_MACHEADER(a)       (a->mac.raw)
++  #define CISCOVPN_SKB_NETWORKHEADER(a)   (a->nh.raw)
++#endif
++
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,1,5)
+ #include <asm/uaccess.h>
+ #else

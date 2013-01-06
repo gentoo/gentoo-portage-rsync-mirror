@@ -1,0 +1,44 @@
+# ChangeLog for dev-php/libvirt-php
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/libvirt-php/ChangeLog,v 1.5 2012/11/05 06:13:37 dev-zero Exp $
+
+  05 Nov 2012; Tiziano Müller <dev-zero@gentoo.org> libvirt-php-0.4.2.ebuild,
+  libvirt-php-0.4.6.ebuild, libvirt-php-9999.ebuild:
+  configure fails without xsltproc, add dev-libs/libxslt to DEPEND. Fix a small
+  bug in DEPEND assignment.
+
+*libvirt-php-0.4.6 (11 Sep 2012)
+
+  11 Sep 2012; Doug Goldstein <cardoe@gentoo.org> +libvirt-php-0.4.6.ebuild:
+  Version bump
+
+  19 Jul 2012; Tiziano Müller <dev-zero@gentoo.org> libvirt-php-9999.ebuild:
+  Update live ebuild for proper multi-slot building.
+
+  15 Jan 2012; Ole Markus With <olemarkus@gentoo.org> libvirt-php-0.4.1.ebuild,
+  libvirt-php-9999.ebuild:
+  Remove PHP_USE.
+
+  13 Jul 2011; Tiziano Müller <dev-zero@gentoo.org> libvirt-php-9999.ebuild:
+  Migrated to new git-2.eclass.
+
+*libvirt-php-0.4.2 (10 Jul 2011)
+
+  10 Jul 2011; Tiziano Müller <dev-zero@gentoo.org> +libvirt-php-0.4.2.ebuild,
+  libvirt-php-9999.ebuild:
+  Version bump.
+
+  06 Jun 2011; Mark Loeser <halcy0n@gentoo.org> libvirt-php-9999.ebuild:
+  Live ebuilds don't get keywords; bug #370235
+
+  11 Apr 2011; Tiziano Müller <dev-zero@gentoo.org> libvirt-php-0.4.1.ebuild,
+  libvirt-php-9999.ebuild:
+  Removed examples USE flag.
+
+*libvirt-php-9999 (11 Apr 2011)
+*libvirt-php-0.4.1 (11 Apr 2011)
+
+  11 Apr 2011; Tiziano Müller <dev-zero@gentoo.org> +libvirt-php-0.4.1.ebuild,
+  +libvirt-php-9999.ebuild, +metadata.xml:
+  Initial commit (ebuild written by me). Added php as herd as discussed with
+  Ole Markus.

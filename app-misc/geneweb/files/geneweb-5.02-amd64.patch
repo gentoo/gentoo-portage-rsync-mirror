@@ -1,0 +1,11 @@
+--- src/iovalue.ml.old	2011-09-29 08:55:02.000000000 +0200
++++ src/iovalue.ml	2011-09-29 08:55:42.000000000 +0200
+@@ -10,7 +10,7 @@
+    read inside a value output by output_value (no headers) must
+    match OCaml's input_value system (intern.c) *)
+ 
+-value sizeof_long = Sys.word_size / 8;
++value sizeof_long = 32 / 8;
+ value sign_extend_shift = (sizeof_long - 1) * 8 - 1;
+ value sign_extend x = (x lsl sign_extend_shift) asr sign_extend_shift;
+ 

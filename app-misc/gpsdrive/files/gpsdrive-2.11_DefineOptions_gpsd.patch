@@ -1,0 +1,9 @@
+--- DefineOptions.cmake_orig	2010-06-24 21:53:32.000000000 +0200
++++ DefineOptions.cmake	2010-10-10 18:23:33.000000000 +0200
+@@ -10,5 +10,5 @@
+ option(WITH_KISMET "Build with kismet support" ON)
+ option(DEBUG "Build with debug -D support" ON)
+ option(WITH_NAVIGATION "Build with routing support" OFF)
+-option(LIBGPS_OLD "Build with old libgps version (<2.90)" ON)
++option(LIBGPS_OLD "Build with old libgps version (<2.90)" OFF)
+ 

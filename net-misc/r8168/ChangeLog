@@ -1,0 +1,64 @@
+# ChangeLog for net-misc/r8168
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/ChangeLog,v 1.13 2012/08/25 18:20:28 joker Exp $
+
+*r8168-8.032.00 (25 Aug 2012)
+
+  25 Aug 2012; Christian Birchinger <joker@gentoo.org> +r8168-8.032.00.ebuild:
+  Version bump
+
+*r8168-8.031.00 (02 Jun 2012)
+
+  02 Jun 2012; Christian Birchinger <joker@gentoo.org> +r8168-8.031.00.ebuild:
+  Version bump
+
+*r8168-8.030.00 (18 May 2012)
+
+  18 May 2012; Christian Birchinger <joker@gentoo.org> +r8168-8.030.00.ebuild:
+  Version bump
+
+*r8168-8.029.00 (05 May 2012)
+
+  05 May 2012; Christian Birchinger <joker@gentoo.org> +r8168-8.029.00.ebuild,
+  +files/r8168-8.029.00-linux-3.3-compat.patch:
+  Version bump with a new kernel 3.3 support patch from Richard Yao
+  <ryao@cs.stonybrook.edu>
+
+  16 Apr 2012; Christian Birchinger <joker@gentoo.org>
+  files/r8168-8.028.00-linux-3.3-compat.patch:
+  Remove whitespace glitch from patch. This would make it apply to 8.029.00 as
+  well.
+
+  05 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> r8168-8.028.00.ebuild:
+  x86 stable wrt bug #404311
+
+  04 Apr 2012; Christian Birchinger <joker@gentoo.org> r8168-8.028.00.ebuild:
+  Adding a patch to support Linux 3.3 kernels. This wont affect current users
+  with 3.2 kernels, so it's not required to bump the revision
+
+  31 Mar 2012; Markos Chandras <hwoarang@gentoo.org> r8168-8.028.00.ebuild:
+  Stable on amd64 wrt bug #404311
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop no-herd.
+
+*r8168-8.028.00 (15 Feb 2012)
+
+  15 Feb 2012; Christian Birchinger <joker@gentoo.org> +r8168-8.028.00.ebuild:
+  Version Bump. Compatible with linux 3.2.x
+
+*r8168-8.027.00 (08 Jan 2012)
+
+  08 Jan 2012; Christian Birchinger <joker@gentoo.org> +r8168-8.027.00.ebuild:
+  Version bump
+
+  12 Dec 2011; Christian Birchinger <joker@gentoo.org> r8168-8.026.00.ebuild:
+  Fix typo make it use the /usr/src/linux kernel and not the current running
+  one
+
+*r8168-8.026.00 (13 Nov 2011)
+
+  13 Nov 2011; Christian Birchinger <joker@gentoo.org> +r8168-8.026.00.ebuild,
+  +metadata.xml:
+  Initial import. Based on the ebuild by thegryghost@gmail.com
+

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install nofetch prepare setup
+DEPEND=virtual/cblas virtual/lapack sci-libs/clapack sci-libs/arpack sci-libs/cifparse-obj sci-chemistry/mopac7 sci-libs/netcdf sci-libs/fftw:2.1 sci-chemistry/reduce dev-util/byacc dev-libs/libf2c sys-devel/ucpp virtual/fortran
+DESCRIPTION=A suite for carrying out complete molecular mechanics investigations
+EAPI=4
+HOMEPAGE=http://ambermd.org/#AmberTools
+IUSE=mpi openmp static-libs X
+KEYWORDS=~amd64 ~x86 ~amd64-linux
+LICENSE=GPL-2
+RDEPEND=virtual/cblas virtual/lapack sci-libs/clapack sci-libs/arpack sci-libs/cifparse-obj sci-chemistry/mopac7 sci-libs/netcdf sci-libs/fftw:2.1 sci-chemistry/reduce virtual/fortran
+RESTRICT=fetch
+SLOT=0
+SRC_URI=AmberTools-1.5.tar.bz2 mirror://gentoo/ambertools-1.5-bugfix_1-10.patch.xz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fortran-2	19652e219ec9b62d7d89735821d7afb6	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=df5fc84f8493539e3a3601e6f97f0e77

@@ -1,0 +1,16 @@
+--- sys/cddl/compat/opensolaris/rpc/xdr.h.orig	2007-04-05 22:09:06 -0300
++++ sys/cddl/compat/opensolaris/rpc/xdr.h	2008-06-22 09:46:28 -0300
+@@ -55,13 +55,6 @@
+ 
+ #define	XDR_GET_BYTES_AVAIL 1
+ 
+-struct xdr_bytesrec {
+-	bool_t xc_is_last_record;
+-	size_t xc_num_avail;
+-};
+-
+-typedef struct xdr_bytesrec xdr_bytesrec;
+-
+ /*
+  * These are the request arguments to XDR_CONTROL.
+  *

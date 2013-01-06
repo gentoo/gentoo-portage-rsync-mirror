@@ -1,0 +1,64 @@
+--- /usr/bin/unp	2008-05-18 03:15:15.000000000 +0200
++++ unp	2009-01-09 02:17:04.000000000 +0100
+@@ -38,20 +38,22 @@
+ }
+ 
+ %pkgmap = (
+-   cpio, "afio $or cpio",
+-   afio, "afio $or cpio",
+-   rpm2cpio, "rpm, afio $or cpio",
+-   unshar, sharutils,
+-   uudecode, sharutils,
+-   PPMd, ppmd,
+-   rar, "rar $or unrar $or unrar-free",
+-   ar, binutils,
+-   unarj, "unarj $or arj", 
+-   hexbin, macutils,
++   "lzma", "lzma",
++   "7z", "p7zip $or p7zip-full",
++   "cpio", "afio $or cpio",
++   "afio", "afio $or cpio",
++   "rpm2cpio", "rpm, afio $or cpio",
++   "unshar", "sharutils",
++   "uudecode", "sharutils",
++   "PPMd", "ppmd",
++   "rar", "rar $or unrar $or unrar-free",
++   "ar", "binutils",
++   "unarj", "unarj $or arj",
++   "hexbin", "macutils",
+    #macunpack, macunpack,
+-   gunzip, gzip,
+-   bunzip2, bzip2,
+-   formail, "formail, mpack"
++   "gunzip", "gzip",
++   "bunzip2", "bzip2",
++   "formail", "formail, mpack"
+ );
+ 
+ &print_usage if ($#ARGV<0 || $ARGV[0] eq "-h");
+@@ -153,6 +155,7 @@
+    if ($UNP_FILEstr =~ /CAB file/i) { set_command 'cabextract $UNP_FILE'; }
+    if ($UNP_FILEstr =~ /cpio/i) { set_command('afio -Z -v -i $UNP_FILE','cpio -i -d	--verbose  $UNP_ARGS < $UNP_FILE'); }
+    if ($UNP_FILEstr =~ /Zip.*archive/i) { set_command 'unzip $UNP_ARGS $UNP_FILE'; }
++   if ($UNP_FILEstr =~ /7-zip.*archive/i) { set_command '7z x $UNP_ARGS $UNP_FILE'; }
+    if ($UNP_FILEstr =~ /Zoo.*archive/i) { set_command 'unzoo -x $UNP_ARGS $UNP_FILE'; }
+    if ($UNP_FILEstr =~ /shell.*archive/i) { set_command 'unshar $UNP_ARGS $UNP_FILE'; }
+    if ($UNP_FILEstr =~ /Transport Neutral Encapsulation Format/i) { set_command 'tnef -v $UNP_ARGS $UNP_FILE'; }
+@@ -214,12 +217,12 @@
+ 	
+ 	# check also for _tar, because of broken filenames
+   if ($UNP_FILE =~ /(\.|_)tar$/i) { set_command 'tar -xvf $UNP_FILE $UNP_ARGS'; }
+-	if ($UNP_FILE =~ /(\.|_)rpm$/i) { set_command 'rpm2cpio < $UNP_FILE | cpio -i -d	--verbose $UNP_ARGS';}
+-	if ($UNP_FILE =~ /(\.|_)tar\.gz$/i) { set_command 'tar -xvzf $UNP_FILE $UNP_ARGS'; }
++  if ($UNP_FILE =~ /(\.|_)rpm$/i) { set_command 'rpm2cpio < $UNP_FILE | cpio -i -d	--verbose $UNP_ARGS';}
++  if ($UNP_FILE =~ /(\.|_)tar\.gz$/i) { set_command 'tar -xvzf $UNP_FILE $UNP_ARGS'; }
+   if ($UNP_FILE =~ /(\.|_)tar\.bz2$/i) { set_command 'bunzip2 -c $UNP_FILE | tar -xvf - $UNP_ARGS'; }
+-	
+-	if ($UNP_FILE =~ /\.tgz$/i) { set_command 'tar -xvzf $UNP_FILE $UNP_ARGS'; }
+-	if ($UNP_FILE =~ /\.(tzo|tar\.lzop)$/i) { set_command 'lzop -v -d $UNP_FILE | tar -xv $UNP_ARGS'; }
++  if ($UNP_FILE =~ /\.tgz$/i) { set_command 'tar -xvzf $UNP_FILE $UNP_ARGS'; }
++  if ($UNP_FILE =~ /\.(tzo|tar\.lzop)$/i) { set_command 'lzop -v -d $UNP_FILE | tar -xv $UNP_ARGS'; }
++  if ($UNP_FILE =~ /(\.|_)tar\.lzma$/i) { set_command 'lzma -cd $UNP_FILE | tar -xvf - $UNP_ARGS'; }
+   if ($UNP_FILE =~ /\.rar$/i) { set_command('rar x $UNP_ARGS $UNP_FILE || rar x -av- $UNP_ARGS $UNP_FILE','unrar x $UNP_ARGS $UNP_FILE || unrar x -av- $UNP_ARGS $UNP_FILE'); }
+   if ($UNP_FILE =~ /\.(ar|deb)$/i) { set_command 'ar -x -v $UNP_FILE $UNP_ARGS'; }
+   if ($UNP_FILE =~ /\.l(ha|zh)$/i) { set_command 'lha x $UNP_ARGS $UNP_FILE'; }

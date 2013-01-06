@@ -1,0 +1,13 @@
+# ChangeLog for app-officeext/ct2n
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/ct2n/ChangeLog,v 1.2 2012/05/23 08:54:32 scarabeus Exp $
+
+  23 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> ct2n-1.4.0.ebuild:
+  Stable on amd64 and x86.
+
+*ct2n-1.4.0 (09 May 2012)
+
+  09 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +ct2n-1.4.0.ebuild,
+  +metadata.xml:
+  Initial commit. Part of the lo build file.
+

@@ -1,0 +1,14 @@
+# ChangeLog for x11-misc/wmname
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmname/ChangeLog,v 1.2 2011/06/01 09:09:30 xmw Exp $
+
+  01 Jun 2011; Michael Weber <xmw@gentoo.org> wmname-0.1.ebuild:
+  Updated description, added arm/sparc/ppc/x86 keywords
+
+*wmname-0.1 (31 May 2011)
+
+  31 May 2011; Michael Weber <xmw@gentoo.org> +wmname-0.1.ebuild,
+  +files/wmname-0.1-buildsystem.patch, +metadata.xml:
+  Initial import, thanks to Kaleb Elwert (belak) for the initial ebuild (bug
+  350306)
+

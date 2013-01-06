@@ -1,0 +1,23 @@
+# ChangeLog for sci-libs/pycifrw
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pycifrw/ChangeLog,v 1.4 2012/02/25 03:13:32 patrick Exp $
+
+  25 Feb 2012; Patrick Lauer <patrick@gentoo.org> pycifrw-3.3-r1.ebuild:
+  Restricting pypy and jython
+
+  10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pycifrw-3.3-r1.ebuild:
+  Update EAPI. Fix dependencies.
+
+*pycifrw-3.3-r1 (29 Apr 2010)
+
+  29 Apr 2010; Justin Lecher <jlec@gentoo.org> -pycifrw-3.3.ebuild,
+  +pycifrw-3.3-r1.ebuild:
+  Corrected usage of PYTHON_MODNAME, restrict to <python-3
+
+*pycifrw-3.3 (28 Apr 2010)
+
+  28 Apr 2010; Justin Lecher <jlec@gentoo.org> +pycifrw-3.3.ebuild,
+  +metadata.xml:
+  Initial commit
+

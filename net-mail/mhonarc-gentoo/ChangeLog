@@ -1,0 +1,16 @@
+# ChangeLog for net-mail/mhonarc-gentoo
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc-gentoo/ChangeLog,v 1.2 2011/05/02 22:37:34 tampakrap Exp $
+
+  02 May 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  mhonarc-gentoo-2.6.18.ebuild:
+  Cleanup: EAPI 4, use perl-module instead of perl-app eclass, introduce a MY_P
+  var, remove prepalldocs, move the patch to a PATCHES array
+
+*mhonarc-gentoo-2.6.18 (02 May 2011)
+
+  02 May 2011; Theo Chatzimichos <tampakrap@gentoo.org>
+  +mhonarc-gentoo-2.6.18.ebuild,
+  +files/mhonarc-gentoo-2.6.18-archives-gentoo.patch, +metadata.xml:
+  Initial commit of the MHonArc's Gentoo fork
+

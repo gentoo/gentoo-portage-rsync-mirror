@@ -1,0 +1,32 @@
+# ChangeLog for media-plugins/vdr-devstatus
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-devstatus/ChangeLog,v 1.5 2012/07/05 19:52:56 hd_brummy Exp $
+
+  05 Jul 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-devstatus-0.4.1.ebuild:
+  eapi=4; vdr-plugin-2.eclass; fixed compile on >=vdr-1.7.28; thanks to negril
+  @ IRC #gentoo-vdr
+
+  28 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-devstatus-0.2.0.ebuild, -vdr-devstatus-0.4.0.ebuild,
+  vdr-devstatus-0.4.1.ebuild:
+  eapi=3; cleanup
+
+*vdr-devstatus-0.4.1 (19 Feb 2009)
+
+  19 Feb 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-devstatus-0.4.1.ebuild:
+  version bump
+
+*vdr-devstatus-0.4.0 (15 Feb 2009)
+
+  15 Feb 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-devstatus-0.2.0.ebuild, +vdr-devstatus-0.4.0.ebuild:
+  keyword ~amd64, homepage fixed, versions bump
+
+*vdr-devstatus-0.2.0 (18 Nov 2008)
+
+  18 Nov 2008; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +vdr-devstatus-0.2.0.ebuild:
+  Initial import of ebuild.
+

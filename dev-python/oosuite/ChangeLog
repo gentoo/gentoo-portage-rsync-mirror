@@ -1,0 +1,33 @@
+# ChangeLog for dev-python/oosuite
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/ChangeLog,v 1.6 2012/11/01 19:30:56 bicatali Exp $
+
+*oosuite-0.42 (01 Nov 2012)
+
+  01 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> +oosuite-0.42.ebuild:
+  Version bump
+
+  19 Oct 2012; Patrick Lauer <patrick@gentoo.org> oosuite-0.38.ebuild,
+  oosuite-0.39.ebuild:
+  Restricting pythons
+
+  09 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/oosuite-0.37-no-init-msg.patch, oosuite-0.39.ebuild:
+  more cleaning of obsolete
+
+*oosuite-0.39 (09 Jul 2012)
+
+  09 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> +oosuite-0.39.ebuild,
+  -oosuite-0.37.ebuild:
+  Version bump. Keyword amd64-linux and x86-linux
+
+*oosuite-0.38 (20 Apr 2012)
+
+  20 Apr 2012; Sébastien Fabbro <bicatali@gentoo.org> +oosuite-0.38.ebuild:
+  Version bump
+
+*oosuite-0.37 (07 Jan 2012)
+
+  07 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +oosuite-0.37.ebuild,
+  +files/oosuite-0.37-no-init-msg.patch, +metadata.xml:
+  Initial import to the main tree

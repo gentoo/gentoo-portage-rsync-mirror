@@ -1,0 +1,29 @@
+--- configure	2010-08-29 04:28:32.000000000 -0400
++++ configure.mine	2010-11-07 13:08:58.000000000 -0500
+@@ -101,15 +101,17 @@
+ # check for libs
+ search_lib() {
+   for dir in ${DIRS};  do
+-    for dbn in $@; do
+-      for suffix in so dylib obj a; do
+-        for lib in lib lib64 lib32 out; do
+-          if test -r "${dir}/${lib}/lib${dbn}.${suffix}"; then
+-            add_lib "${dir}/${lib}" "${dbn}" "${suffix}"
+-	    echo "Found: lib${dbn}.${suffix} at ${dir}/${lib}"
+-            return 0
+-	  fi
+-	done
++    for subdir in "" ${subdirs}; do
++      for dbn in $@; do
++        for suffix in so dylib obj a; do
++          for lib in lib out; do
++            if test -r "${dir}/${lib}/${subdir}/lib${dbn}.${suffix}"; then
++              add_lib "${dir}/${lib}/${subdir}" "${dbn}" "${suffix}"
++              echo "Found: lib${dbn}.${suffix} at ${dir}/${lib}/${subdir}"
++              return 0
++            fi
++          done
++        done
+       done
+     done
+   done

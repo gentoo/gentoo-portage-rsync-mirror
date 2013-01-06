@@ -1,0 +1,22 @@
+# ChangeLog for media-fonts/anonymous-pro
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/anonymous-pro/ChangeLog,v 1.4 2011/01/18 23:10:46 spatz Exp $
+
+*anonymous-pro-1.002 (18 Jan 2011)
+
+  18 Jan 2011; Dror Levin <spatz@gentoo.org> +anonymous-pro-1.002.ebuild:
+  Version bump.
+
+  11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Removing myself as maintainer
+
+  02 Feb 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  anonymous-pro-1.001.ebuild:
+  Fix issues with future font.eclass. Installing non-existant docs.
+
+*anonymous-pro-1.001 (17 Jan 2010)
+
+  17 Jan 2010; Ben de Groot <yngwin@gentoo.org> +anonymous-pro-1.001.ebuild,
+  +metadata.xml:
+  Initial import. Ebuild by me.
+

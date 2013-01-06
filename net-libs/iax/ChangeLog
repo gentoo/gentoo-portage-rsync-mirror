@@ -1,0 +1,40 @@
+# ChangeLog for net-libs/iax
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/iax/ChangeLog,v 1.11 2010/11/04 17:32:53 fauli Exp $
+
+  04 Nov 2010; Christian Faulhammer <fauli@gentoo.org> iax-0.2.2-r1.ebuild:
+  stable x86, bug 342757
+
+  28 Oct 2010; Markos Chandras <hwoarang@gentoo.org> iax-0.2.2-r1.ebuild:
+  Keyworded for amd64. Bug 342757
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> iax-0.2.2.ebuild:
+  Remove virtual/libc
+
+*iax-0.2.2-r1 (30 May 2009)
+
+  30 May 2009; Mounir Lamouri <volkmar@gentoo.org> metadata.xml,
+  +iax-0.2.2-r1.ebuild:
+  Fix major QA issues and add IUSE. Basically a rewrite.
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> iax-0.2.2.ebuild:
+  Stable on ppc.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> iax-0.2.2.ebuild:
+  virtual/glibc -> virtual/libc
+
+  10 May 2004; David Holm <dholm@gentoo.org> iax-0.2.2.ebuild:
+  Added to ~ppc.
+
+*iax-0.2.2 (27 Jul 2002)
+
+  02 Nov 2002; Nick Hadaway <raker@gentoo.org> iax-0.2.2.ebuild :
+  Added KEYWORDS, IUSE, and made changes to allow user CFLAGS during
+  compile.
+
+  27 Jul 2002; Sean Summers <ebuild@generalprotectionfault.com> iax-0.2.2.ebuild :
+  Initial package
+

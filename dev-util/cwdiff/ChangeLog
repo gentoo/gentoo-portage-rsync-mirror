@@ -1,0 +1,14 @@
+# ChangeLog for dev-util/cwdiff
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cwdiff/ChangeLog,v 1.2 2012/12/22 00:29:07 ottxor Exp $
+
+*cwdiff-0.2.3 (22 Dec 2012)
+
+  22 Dec 2012; Christoph Junghans <ottxor@gentoo.org> +cwdiff-0.2.3.ebuild:
+  version bump
+
+*cwdiff-0.2.2 (09 Dec 2012)
+
+  09 Dec 2012; Christoph Junghans <ottxor@gentoo.org> +cwdiff-0.2.2.ebuild,
+  +metadata.xml:
+  initial commit

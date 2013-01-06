@@ -1,0 +1,42 @@
+# ChangeLog for games-action/heretic2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/ChangeLog,v 1.11 2012/02/05 05:00:48 vapier Exp $
+
+  05 Feb 2012; Mike Frysinger <vapier@gentoo.org> heretic2-1.06c.ebuild:
+  Move to new unpacker eclass for unpack_makeself.
+
+  16 Jan 2012; Ulrich Müller <ulm@gentoo.org> heretic2-1.06c.ebuild:
+  Migrate to cdrom.eclass, bug 398809.
+
+  14 Dec 2011; Mike Frysinger <vapier@gentoo.org> heretic2-1.06c.ebuild:
+  The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now
+  has ACCEPT_LICENSE), so drop it here too.
+
+  17 Nov 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Change developer's email
+
+  18 May 2011; Michael Sterrett <mr_bones_@gentoo.org> heretic2-1.06c.ebuild:
+  opengl fix with sed patch from Jared via bug #367841
+
+  02 Nov 2009; Markus Meier <maekke@gentoo.org> heretic2-1.06c.ebuild:
+  amd64/x86 stable, bug #290685
+
+  24 Sep 2009; Tristan Heaven <nyhm@gentoo.org> heretic2-1.06c.ebuild:
+  Fix gl_driver path in default.cfg on x86
+
+  05 May 2008; Tristan Heaven <nyhm@gentoo.org> heretic2-1.06c.ebuild:
+  Add ~amd64 keyword
+
+  29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> heretic2-1.06c.ebuild:
+  Remove icon extension from desktop entry to match Icon Theme Specification.
+
+  24 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> heretic2-1.06c.ebuild:
+  Moved cdrom_get_cds to src_unpack since binary packages don't require the
+  original media to install as well as some general cleanup.
+
+*heretic2-1.06c (03 Oct 2006)
+
+  03 Oct 2006; Tristan Heaven <nyhm@gentoo.org> +metadata.xml,
+  +heretic2-1.06c.ebuild:
+  Initial commit. Modified ebuild from bug #136869 by Anton Romanov.
+

@@ -1,0 +1,23 @@
+# ChangeLog for sys-apps/baobab
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baobab/ChangeLog,v 1.4 2012/12/27 08:02:40 tetromino Exp $
+
+  27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> baobab-3.6.3.ebuild:
+  Drop sparc keyword, need to have gtk+-3.6 keyworded.
+
+*baobab-3.6.3 (23 Dec 2012)
+
+  23 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> +baobab-3.6.3.ebuild:
+  Version bump for Gnome 3.6.
+
+  06 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> baobab-3.4.1.ebuild:
+  Don't require itstool at build time (thanks to Michael Sterrett for
+  noticing). Update to EAPI5. Update license.
+
+*baobab-3.4.1 (05 May 2012)
+
+  05 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +baobab-3.4.1.ebuild, +metadata.xml:
+  New separate gnome disk usage viewer package, formerly part of
+  gnome-extra/gnome-utils.
+

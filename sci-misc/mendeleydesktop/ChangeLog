@@ -1,0 +1,52 @@
+# ChangeLog for sci-misc/mendeleydesktop
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.8 2012/11/28 22:50:12 miknix Exp $
+
+*mendeleydesktop-1.7.1 (28 Nov 2012)
+
+  28 Nov 2012; Angelo Arrifano <miknix@gentoo.org> -mendeleydesktop-1.6.ebuild,
+  +mendeleydesktop-1.7.1.ebuild:
+  Version bump. #444890
+
+  11 Sep 2012; Angelo Arrifano <miknix@gentoo.org> mendeleydesktop-1.6.ebuild:
+  Fix 'use' function invocation on global ebuild scope. #434634
+
+*mendeleydesktop-1.6 (10 Sep 2012)
+
+  10 Sep 2012; Angelo Arrifano <miknix@gentoo.org>
+  -mendeleydesktop-1.5.2.ebuild, +mendeleydesktop-1.6.ebuild:
+  Version bump. #432134
+
+  29 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  mendeleydesktop-1.5.2.ebuild:
+  Add missing slot dependencies on Qt.
+
+*mendeleydesktop-1.5.2 (26 May 2012)
+
+  26 May 2012; Angelo Arrifano <miknix@gentoo.org>
+  -mendeleydesktop-1.5.1.ebuild, +mendeleydesktop-1.5.2.ebuild:
+  Version bump
+
+*mendeleydesktop-1.5.1 (23 Apr 2012)
+
+  23 Apr 2012; Angelo Arrifano <miknix@gentoo.org>
+  -mendeleydesktop-1.3.2.ebuild, +mendeleydesktop-1.5.1.ebuild:
+  Version bump
+
+*mendeleydesktop-1.3.2 (23 Feb 2012)
+
+  23 Feb 2012; Angelo Arrifano <miknix@gentoo.org>
+  -mendeleydesktop-1.3.1.ebuild, +mendeleydesktop-1.3.2.ebuild:
+  Version bump
+
+*mendeleydesktop-1.3.1 (11 Feb 2012)
+
+  11 Feb 2012; Angelo Arrifano <miknix@gentoo.org>
+  +mendeleydesktop-1.3.1.ebuild, +metadata.xml:
+  Initial ebuild.
+
+  Ebuild copied from http://gentoo-overlays.zugaina.org/funtoo
+  Credits due to Jean-Francis Roy <jeanfrancisroy@gmail.com>
+
+  No changes other than forcing the user to download the tarball
+  were made.

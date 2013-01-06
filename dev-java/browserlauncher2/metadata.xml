@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>java</herd>
+	<maintainer>
+		<email>sbriesen@gentoo.org</email>
+		<name>Stefan Briesenick</name>
+	</maintainer>
+	<longdescription lang="en">
+		BrowserLauncher2, a continuation of the BrowserLauncher project, is a
+		library that facilitates opening a browser from a Java application and
+		directing the browser to a supplied url. In most cases the browser
+		opened will be the user's default browser.
+	</longdescription>
+</pkgmetadata>

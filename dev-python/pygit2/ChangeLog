@@ -1,0 +1,71 @@
+# ChangeLog for dev-python/pygit2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygit2/ChangeLog,v 1.15 2012/10/04 22:40:50 radhermit Exp $
+
+  04 Oct 2012; Tim Harder <radhermit@gentoo.org> -pygit2-0.17.2.ebuild:
+  Remove old.
+
+  04 Oct 2012; Tim Harder <radhermit@gentoo.org> pygit2-0.16.2.ebuild,
+  pygit2-0.17.3.ebuild:
+  Restrict pypy ABIs (bug #430298).
+
+*pygit2-0.17.3 (27 Sep 2012)
+
+  27 Sep 2012; Tim Harder <radhermit@gentoo.org> +pygit2-0.17.3.ebuild:
+  Version bump.
+
+  20 Aug 2012; Tim Harder <radhermit@gentoo.org> -pygit2-0.17.0.ebuild:
+  Remove old.
+
+*pygit2-0.17.2 (07 Aug 2012)
+
+  07 Aug 2012; Tim Harder <radhermit@gentoo.org> +pygit2-0.17.2.ebuild:
+  Version bump.
+
+  23 May 2012; Tim Harder <radhermit@gentoo.org> -pygit2-0.15.1.ebuild,
+  -pygit2-0.16.0.ebuild, -pygit2-0.16.1.ebuild:
+  Remove old.
+
+*pygit2-0.17.0 (23 May 2012)
+
+  23 May 2012; Tim Harder <radhermit@gentoo.org> +pygit2-0.17.0.ebuild:
+  Version bump.
+
+*pygit2-0.16.2 (23 May 2012)
+
+  23 May 2012; Tim Harder <radhermit@gentoo.org> +pygit2-0.16.2.ebuild:
+  Version bump (bug #416379).
+
+*pygit2-0.16.1 (31 Mar 2012)
+
+  31 Mar 2012; Tim Harder <radhermit@gentoo.org> +pygit2-0.16.1.ebuild:
+  Version bump.
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> pygit2-0.16.0.ebuild:
+  Restricting py2.5
+
+  13 Feb 2012; Tim Harder <radhermit@gentoo.org> -pygit2-0.14.0.ebuild,
+  -files/pygit2-0.14.0-fix-write.patch, -pygit2-0.15.0.ebuild:
+  Remove old.
+
+*pygit2-0.16.0 (13 Feb 2012)
+
+  13 Feb 2012; Tim Harder <radhermit@gentoo.org> +pygit2-0.16.0.ebuild:
+  Version bump.
+
+*pygit2-0.15.1 (15 Dec 2011)
+
+  15 Dec 2011; Tim Harder <radhermit@gentoo.org> +pygit2-0.15.1.ebuild:
+  Version bump.
+
+*pygit2-0.15.0 (07 Oct 2011)
+
+  07 Oct 2011; Tim Harder <radhermit@gentoo.org> +pygit2-0.15.0.ebuild:
+  Version bump.
+
+*pygit2-0.14.0 (18 Aug 2011)
+
+  18 Aug 2011; Tim Harder <radhermit@gentoo.org> +pygit2-0.14.0.ebuild,
+  +files/pygit2-0.14.0-fix-write.patch, +metadata.xml:
+  Initial import
+

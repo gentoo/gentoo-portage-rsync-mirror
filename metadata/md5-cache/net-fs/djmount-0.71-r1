@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install prepare test unpack
+DEPEND=sys-fs/fuse net-libs/libupnp test? ( sys-libs/readline )
+DESCRIPTION=Mount UPnP audio/video servers as a filesystem
+EAPI=2
+HOMEPAGE=http://djmount.sf.net/
+IUSE=debug test
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=sys-fs/fuse net-libs/libupnp
+SLOT=0
+SRC_URI=mirror://sourceforge/djmount/djmount-0.71.tar.gz
+_md5_=2b23000fad2790804bf9b242e6a663ef

@@ -1,0 +1,19 @@
+commit 3d2712d56a22f2a86fb80da94c3e55be8d26a330
+Author: Alexis Ballier <aballier@gentoo.org>
+Date:   Fri Sep 21 08:22:54 2012 -0300
+
+    cairo-fdr: protect -ldl link with CAIRO_HAS_DL like in cairo-trace.
+    
+    Signed-off-by: Uli Schlachter <psychon@znc.in>
+
+diff --git a/util/cairo-fdr/Makefile.am b/util/cairo-fdr/Makefile.am
+index 5cd5798..34215a6 100644
+--- a/util/cairo-fdr/Makefile.am
++++ b/util/cairo-fdr/Makefile.am
+@@ -10,4 +10,6 @@ cairo_fdr_la_SOURCES = fdr.c
+ cairo_fdr_la_CPPFLAGS = $(AM_CPPFLAGS)
+ cairo_fdr_la_CFLAGS = $(CAIRO_CFLAGS)
+ cairo_fdr_la_LDFLAGS = -module -no-undefined
++if CAIRO_HAS_DL
+ cairo_fdr_la_LIBADD = -ldl
++endif

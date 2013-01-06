@@ -1,0 +1,32 @@
+# ChangeLog for sys-auth/polkit-kde-agent
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/ChangeLog,v 1.7 2012/04/25 16:51:10 scarabeus Exp $
+
+  25 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  polkit-kde-agent-0.99.0.ebuild:
+  Stable on ppc. Required by simple -NDu @world on desktop/kde profile.
+
+  05 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  polkit-kde-agent-0.99.0.ebuild:
+  Marked ~ppc64 wrt #379471
+
+  20 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  polkit-kde-agent-0.99.0.ebuild:
+  Marked ~ppc wrt #387683, ATed by Massimo Burcheri <massimo.burcheri@gmx.de>
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org> polkit-kde-agent-0.99.0.ebuild:
+  add ~arm, bug #376613
+
+  09 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  polkit-kde-agent-0.99.0.ebuild:
+  Stable on amd64 wrt bug #354033
+
+  09 May 2011; Thomas Kahle <tomka@gentoo.org> polkit-kde-agent-0.99.0.ebuild:
+  x86 stable per bug 354033
+
+*polkit-kde-agent-0.99.0 (26 Jan 2011)
+
+  26 Jan 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  +polkit-kde-agent-0.99.0.ebuild, +metadata.xml:
+  Version bump for kde sc 4.6.0
+

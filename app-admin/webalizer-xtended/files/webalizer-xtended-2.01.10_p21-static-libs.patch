@@ -1,0 +1,29 @@
+--- a/configure.in
++++ b/configure.in
+@@ -40,7 +40,7 @@
+ AC_ARG_WITH(etcdir,--with-etcdir=DIR         Where to look for default config file [[/etc]],
+ ETCDIR="${withval}",CACHE_ETC="yes")
+ 
+-AC_ARG_WITH(gdlib,--with-gdlib=DIR          Where to additionally look for libgd.a,
++AC_ARG_WITH(gdlib,--with-gdlib=DIR          Where to additionally look for libgd.so,
+ EXTRA_GDLIB="${withval}", EXTRA_GDLIB="")
+ AC_ARG_WITH(gd,--with-gd=DIR             Where to additionally look for gd headers,
+ EXTRA_GD="${withval}"; CFLAGS="-I${withval} ${CFLAGS}", EXTRA_GD="")
+@@ -137,7 +137,7 @@
+ fi
+ 
+ if test "$HAVE_LIBGD" = ""; then
+- AC_FIND_PATH(GDLOC,libgd.a,"", ${PREFIX}/lib ${PREFIX}/lib/gd /usr/local/lib /usr/local/lib/gd /usr/local/gd /usr/local/include /usr/local/include/gd /usr/lib/gd /usr/lib /lib ./ ./gd ../gd ${EXTRA_GDLIB} ${EXTRA_GD})
++ AC_FIND_PATH(GDLOC,libgd.so,"", ${PREFIX}/lib ${PREFIX}/lib/gd /usr/local/lib /usr/local/lib/gd /usr/local/gd /usr/local/include /usr/local/include/gd /usr/lib/gd /usr/lib /lib ./ ./gd ../gd ${EXTRA_GDLIB} ${EXTRA_GD})
+  if test "$GDLOC" = ""; then
+    AC_FIND_PATH(GDLOC,libgd.so,"", ${PREFIX}/lib ${PREFIX}/lib/gd /usr/local/lib /usr/local/lib/gd /usr/local/gd /usr/local/include /usr/local/include/gd /usr/lib/gd /usr/lib /lib ./ ./gd ../gd ${EXTRA_GDLIB} ${EXTRA_GD})
+  fi
+@@ -167,7 +167,7 @@
+  fi
+ 
+  dnl Check for GeoIP library
+- AC_FIND_PATH(GEOIPLIB,libGeoIP.a,"", ${PREFIX}/lib /usr/local/lib /usr/lib /lib ${prefix}/lib ./ ${EXTRA_GEOIPLIB})
++ AC_FIND_PATH(GEOIPLIB,libGeoIP.so,"", ${PREFIX}/lib /usr/local/lib /usr/lib /lib ${prefix}/lib ./ ${EXTRA_GEOIPLIB})
+  if test "$GEOIPLIB" = ""; then
+   AC_MSG_ERROR(GeoIP library not found... please install GeoIP.)
+  else

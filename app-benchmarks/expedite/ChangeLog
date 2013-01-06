@@ -1,0 +1,10 @@
+# ChangeLog for app-benchmarks/expedite
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/expedite/ChangeLog,v 1.1 2012/12/21 21:08:52 tommy Exp $
+
+*expedite-1.7.4 (21 Dec 2012)
+
+  21 Dec 2012; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +expedite-1.7.4.ebuild, +metadata.xml:
+  Initial commit
+

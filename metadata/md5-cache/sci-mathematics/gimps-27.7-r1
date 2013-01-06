@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst postrm
+DESCRIPTION=The Great Internet Mersenne Prime Search
+EAPI=4
+HOMEPAGE=http://mersenne.org/
+KEYWORDS=-* amd64 x86
+LICENSE=as-is
+RDEPEND=net-misc/curl
+RESTRICT=binchecks
+SLOT=0
+SRC_URI=amd64? ( ftp://mersenne.org/gimps/p95v277.linux64.tar.gz ) x86? ( ftp://mersenne.org/gimps/p95v277.linux32.tar.gz )
+_md5_=1abf8048b02ef21571bee1f43a0f2070

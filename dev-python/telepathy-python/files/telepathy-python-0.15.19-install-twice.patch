@@ -1,0 +1,34 @@
+From 0c4e6e9f41b24bbb7ea33653b8a81ff79c0ea032 Mon Sep 17 00:00:00 2001
+From: Reimundo Heluani <rheluani@gmail.com>
+Date: Tue, 21 Dec 2010 12:25:22 +0000
+Subject: [PATCH] src: don't install _generated/errors.py twice
+
+Fixes: fd.o#32526
+
+Signed-off-by: Jonny Lamb <jonny.lamb@collabora.co.uk>
+---
+ NEWS            |    5 +++++
+ src/Makefile.am |    4 +++-
+ 2 files changed, 8 insertions(+), 1 deletions(-)
+
+diff --git a/src/Makefile.am b/src/Makefile.am
+index 135f2f0..ede1fc3 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -13,10 +13,12 @@ telepathy_PYTHON = \
+ spec_dir = $(top_srcdir)/spec
+ spec_files := $(patsubst $(spec_dir)%.xml,_generated%.py,$(wildcard $(spec_dir)/*.xml))
+ 
++# We leave _generated/errors.py out of here because there exists a
++# spec/errors.xml file, so that means there'll be a
++# _generated/errors.py in $(spec_files). See fd.o#32526
+ BUILT_SOURCES = \
+ 	_generated/interfaces.py \
+ 	_generated/constants.py \
+-	_generated/errors.py \
+ 	_generated/__init__.py \
+ 	$(spec_files)
+ 
+-- 
+1.7.2.3
+

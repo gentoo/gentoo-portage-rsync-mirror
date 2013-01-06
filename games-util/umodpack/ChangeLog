@@ -1,0 +1,51 @@
+# ChangeLog for games-util/umodpack
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/ChangeLog,v 1.12 2012/10/05 20:39:51 mr_bones_ Exp $
+
+  05 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org>
+  umodpack-0.5_beta16-r1.ebuild:
+  upstream went away (bug #420839)
+
+  19 Jul 2009; Torsten Veller <tove@gentoo.org>
+  umodpack-0.5_beta16-r1.ebuild:
+  IO-Compress replaces Compress-Zlib
+
+  18 Nov 2008; Torsten Veller <tove@gentoo.org>
+  umodpack-0.5_beta16-r1.ebuild:
+  New virtuals: Compress-Zlib
+
+  24 Apr 2007; Tristan Heaven <nyhm@gentoo.org>
+  umodpack-0.5_beta16-r1.ebuild:
+  Add missing dev-perl/Compress-Zlib dependency, bug #175815
+
+  05 Nov 2006; Tristan Heaven <nyhm@gentoo.org>
+  umodpack-0.5_beta16-r1.ebuild:
+  Change "tcltk" USE flag to "tk", bug #17808
+
+  09 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  umodpack-0.5_beta16-r1.ebuild:
+  Fixed up IUSE and closing bug #135977.
+
+*umodpack-0.5_beta16-r1 (09 May 2005)
+
+  09 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +umodpack-0.5_beta16-r1.ebuild:
+  Fix by Olivier Crete to install the gui when USE=X #78035 by Joel
+  Konkle-Parker.
+
+  27 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  umodpack-0.5_beta16.ebuild:
+  Added to ~amd64.
+
+  12 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  umodpack-0.5_beta16.ebuild:
+  Added blank IUSE.
+
+  02 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  umodpack-0.5_beta16.ebuild:
+  Fixed to use mirror://sourceforge
+
+*umodpack-0.5_beta16 (23 Oct 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import. Ebuild submitted by me.

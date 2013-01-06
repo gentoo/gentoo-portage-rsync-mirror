@@ -1,0 +1,10 @@
+DEFINED_PHASES=install unpack
+DEPEND=>=net-dialup/misdnuser-0.1_pre20060307 >=net-misc/asterisk-1.2
+DESCRIPTION=Asterisk channel plugin for mISDN
+HOMEPAGE=http://www.beronet.com/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=net-dialup/misdnuser-0.1_pre20060307 >=net-misc/asterisk-1.2
+SLOT=0
+SRC_URI=http://www.beronet.com/downloads/chan_misdn/releases/V0.3/chan_misdn-0.3.0.tar.gz
+_md5_=f53e2da4a17bceb2a3ec496bf3be413d

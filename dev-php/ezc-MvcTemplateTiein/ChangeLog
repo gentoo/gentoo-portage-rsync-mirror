@@ -1,0 +1,10 @@
+# ChangeLog for dev-php5/ezc-MvcTemplateTiein
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ezc-MvcTemplateTiein/ChangeLog,v 1.1 2011/12/14 22:16:17 mabi Exp $
+
+*ezc-MvcTemplateTiein-1.0 (20 May 2010)
+
+  20 May 2010; Peter Volkov <pva@gentoo.org>
+  +ezc-MvcTemplateTiein-1.0.ebuild, +metadata.xml:
+  New component for ezc-eZcomponents 2009.2.1, bug #320547
+

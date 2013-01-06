@@ -1,0 +1,15 @@
+# ChangeLog for sci-biology/fasttree
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasttree/ChangeLog,v 1.2 2010/06/20 18:20:40 xarthisius Exp $
+
+  20 Jun 2010; Kacper Kowalik <xarthisius@gentoo.org> fasttree-2.0.1.ebuild,
+  +files/fasttree-2.0.1-asneeded.patch:
+  Respect FLAGS and fix as-needed issues wrt bug 295199. Thanks Diego for
+  reporting.
+
+*fasttree-2.0.1 (10 Sep 2009)
+
+  10 Sep 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +fasttree-2.0.1.ebuild:
+  New package, ebuild written by me
+

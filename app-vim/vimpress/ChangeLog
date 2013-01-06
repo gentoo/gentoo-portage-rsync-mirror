@@ -1,0 +1,35 @@
+# ChangeLog for app-vim/vimpress
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpress/ChangeLog,v 1.8 2012/12/04 11:23:31 ago Exp $
+
+  04 Dec 2012; <ago@gentoo.org> vimpress-3.2.0.ebuild:
+  Stable for x86, wrt bug #441132
+
+  03 Dec 2012; <ago@gentoo.org> vimpress-3.2.0.ebuild:
+  Stable for amd64, wrt bug #441132
+
+  04 Aug 2012; Johannes Huber <johu@gentoo.org> vimpress-2.1.5.ebuild:
+  Stable for x86, wrt bug #415239
+
+  03 Aug 2012; Agostino Sarubbo <ago@gentoo.org> vimpress-2.1.5.ebuild:
+  Stable for amd64, wrt bug #415239
+
+  03 Aug 2012; Tim Harder <radhermit@gentoo.org> -vimpress-2.1.0.ebuild:
+  Remove old.
+
+*vimpress-3.2.0 (03 Aug 2012)
+
+  03 Aug 2012; Tim Harder <radhermit@gentoo.org> +vimpress-3.2.0.ebuild:
+  Version bump.
+
+*vimpress-2.1.5 (09 Sep 2011)
+
+  09 Sep 2011; Tim Harder <radhermit@gentoo.org> +vimpress-2.1.5.ebuild:
+  Version bump. Use github mirror.
+
+*vimpress-2.1.0 (10 Jun 2011)
+
+  10 Jun 2011; Tim Harder <radhermit@gentoo.org> +vimpress-2.1.0.ebuild,
+  +metadata.xml:
+  Initial import.
+

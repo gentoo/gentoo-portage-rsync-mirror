@@ -1,0 +1,11 @@
+Index: trunk/pdns/pdns/nameserver.cc
+===================================================================
+--- trunk/pdns/pdns/nameserver.cc	(revision 2230)
++++ trunk/pdns/pdns/nameserver.cc	(revision 2259)
+@@ -180,5 +180,5 @@
+ {
+   const string& buffer=p->getString();
+-  DLOG(L<<Logger::Notice<<"Sending a packet to "<< p->remote.toString() <<" ("<< buffer.length()<<" octets)"<<endl);
++  DLOG(L<<Logger::Notice<<"Sending a packet to "<< p->getRemote() <<" ("<< buffer.length()<<" octets)"<<endl);
+   if(buffer.length() > p->getMaxReplyLen()) {
+     cerr<<"Weird, trying to send a message that needs truncation, "<< buffer.length()<<" > "<<p->getMaxReplyLen()<<endl;

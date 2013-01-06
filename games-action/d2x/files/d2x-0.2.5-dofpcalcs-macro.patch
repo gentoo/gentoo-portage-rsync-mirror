@@ -1,0 +1,12 @@
+diff -ur d2x-0.2.5.org/texmap/tmapppro.S d2x-0.2.5/texmap/tmapppro.S
+--- d2x-0.2.5.org/texmap/tmapppro.S	2005-07-12 15:29:34.526000439 -0500
++++ d2x-0.2.5/texmap/tmapppro.S	2005-07-12 15:29:57.245237920 -0500
+@@ -122,7 +122,7 @@
+ // dzdx to z, and finally puts 64 back onto the stack. At the end of
+ // the macro, the stack contains: 64, z, u, v.
+ 
+-.macro DoFPCalcs 0		// The FP stack after each instruction:
++.macro DoFPCalcs		// The FP stack after each instruction:
+ 				//		 64/z  z    u    v
+ 	fst	%st(4)		//		 64/z  z    u    v  64/z
+ 	fxch	%st(2)		//		   u   z  64/z   v  64/z

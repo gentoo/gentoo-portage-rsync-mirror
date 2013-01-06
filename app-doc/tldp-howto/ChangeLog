@@ -1,0 +1,41 @@
+# ChangeLog for app-doc/tldp-howto
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/ChangeLog,v 1.7 2012/07/01 22:34:47 dirtyepic Exp $
+
+  01 Jul 2012; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
+  Maintainer -> app-doc.
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> tldp-howto-20100101.ebuild,
+  tldp-howto-20100701.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
+
+  26 Oct 2010; Ryan Hill <dirtyepic@gentoo.org> tldp-howto-20100101.ebuild,
+  tldp-howto-20100701.ebuild:
+  Stabilize for all.
+
+*tldp-howto-20100701 (01 Jul 2010)
+
+  01 Jul 2010; Ryan Hill <dirtyepic@gentoo.org> +tldp-howto-20100701.ebuild:
+  Version bump. The following HOWTOs have seen updates:
+
+  - The Unix and Internet Fundamentals HOWTO
+  - Text Terminal HOWTO
+  - Quake HOWTO
+  - The Software-RAID HOWTO
+  - Software Release Practise HOWTO
+  - The Unix Hardware Buyer HOWTO
+  - Linux User Group HOWTO
+
+  21 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  tldp-howto-20100101.ebuild:
+  add ~x86 for bug 305693
+
+  19 Jan 2010; Ryan Hill <dirtyepic@gentoo.org> tldp-howto-20100101.ebuild:
+  Drop LDP license, bug #301030.
+
+*tldp-howto-20100101 (01 Jan 2010)
+
+  01 Jan 2010; Ryan Hill <dirtyepic@gentoo.org> +tldp-howto-20100101.ebuild,
+  +metadata.xml:
+  New ebuild consolidating all the app-doc/howto-* ebuilds.
+

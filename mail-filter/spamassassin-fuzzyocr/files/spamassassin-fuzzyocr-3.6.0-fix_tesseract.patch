@@ -1,0 +1,27 @@
+--- FuzzyOcr-3.5.1-orig/Preprocessor.pm.ORIG   2008-05-15 18:24:22.000000000 +0200
++++ FuzzyOcr/Preprocessor.pm   2008-05-15 18:51:03.000000000 +0200
+@@ -15,6 +15,9 @@ sub run {
+     my $tmpdir = FuzzyOcr::Config::get_tmpdir();
+     my $label = $self->{label};
+     my $output = "$tmpdir/prep.$label.out";
++    if ($label =~ /maketiff/) {
++        $output = "$tmpdir/prep.$label.tif";
++    }
+     my $stderr = ">$tmpdir/prep.$label.err";
+
+     my $stdin = undef;
+--- FuzzyOcr-3.5.1-orig/Scanset.pm.ORIG   2008-05-15 18:56:11.000000000 +0200
++++ FuzzyOcr/Scanset.pm   2008-05-15 19:03:26.000000000 +0200
+@@ -63,7 +63,12 @@ sub run {
+                 return ($retcode,@result);
+             }
+             # Input of next processor is output of last
+-            $input = "$tmpdir/prep.$plabel.out";
++            # Output name of maketiff is special!
++            if ($plabel =~ /maketiff/) {
++                $input = "$tmpdir/prep.$plabel.tif";
++            } else {
++                $input = "$tmpdir/prep.$plabel.out";
++            }
+         }
+     }

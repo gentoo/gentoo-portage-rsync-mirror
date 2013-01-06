@@ -1,0 +1,15 @@
+# ChangeLog for dev-ml/ocaml-sha
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sha/ChangeLog,v 1.2 2012/10/30 11:42:23 aballier Exp $
+
+*ocaml-sha-1.8 (30 Oct 2012)
+
+  30 Oct 2012; Alexis Ballier <aballier@gentoo.org> +ocaml-sha-1.8.ebuild:
+  version bump
+
+*ocaml-sha-1.7 (02 Aug 2012)
+
+  02 Aug 2012; Alexis Ballier <aballier@gentoo.org> +ocaml-sha-1.7.ebuild,
+  +metadata.xml:
+  initial import, ebuild by Jacques-Pascal Deplaix, bug #427002
+

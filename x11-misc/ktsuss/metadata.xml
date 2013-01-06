@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>proxy-maintainers</herd>
+	<maintainer>
+		<email>hypnos75@gmail.com</email>
+		<name>Hypnos</name>
+		<description>Proxy maintainer. Assign bugs to him</description>
+	</maintainer>
+	<maintainer>
+		<email>hwoarang@gentoo.org</email>
+		<name>Markos Chandras</name>
+		<description>CC him on bugs</description>
+	</maintainer>
+	<longdescription lang="en">
+	</longdescription>
+	<upstream>
+		<remote-id type="google-code">ktsuss</remote-id>
+	</upstream>
+</pkgmetadata>

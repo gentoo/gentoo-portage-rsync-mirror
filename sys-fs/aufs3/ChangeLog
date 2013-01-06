@@ -1,0 +1,285 @@
+# ChangeLog for sys-fs/aufs3
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.41 2012/12/17 08:15:06 jlec Exp $
+
+  17 Dec 2012; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20120430.ebuild:
+  Drop old
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> aufs3-3_p20120813-r1.ebuild:
+  Stable for x86, wrt bug #444846
+
+  13 Dec 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20121210.ebuild,
+  metadata.xml:
+  Linux-3.7 is not supported yet
+
+*aufs3-3_p20121210 (10 Dec 2012)
+
+  10 Dec 2012; Justin Lecher <jlec@gentoo.org>
+  +files/3_p20121210/aufs3-base-0.patch,
+  +files/3_p20121210/aufs3-standalone-0.patch,
+  +files/3_p20121210/aufs3-base-1.patch,
+  +files/3_p20121210/aufs3-standalone-1.patch,
+  +files/3_p20121210/aufs3-base-2.patch,
+  +files/3_p20121210/aufs3-standalone-2.patch, +aufs3-3_p20121210.ebuild,
+  +files/3_p20121210/aufs3-base-3.patch,
+  +files/3_p20121210/aufs3-standalone-3.patch,
+  +files/3_p20121210/aufs3-base-4.patch,
+  +files/3_p20121210/aufs3-standalone-4.patch,
+  +files/3_p20121210/aufs3-base-x-rcN.patch,
+  +files/3_p20121210/aufs3-base-5.patch,
+  +files/3_p20121210/aufs3-standalone-x-rcN.patch,
+  +files/3_p20121210/aufs3-standalone-5.patch,
+  +files/3_p20121210/aufs3-base-6.patch,
+  +files/3_p20121210/aufs3-standalone-6.patch:
+  Version BUmp
+
+  05 Dec 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20121129.ebuild:
+  Check for PAX when using USE=pax_kernel, #445272
+
+  04 Dec 2012;  <ago@gentoo.org> aufs3-3_p20120813-r1.ebuild:
+  Stable for amd64, wrt bug #444846
+
+  30 Nov 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20121129.ebuild:
+  Fix new offset, thanks Iván for the patch
+
+*aufs3-3_p20121129 (29 Nov 2012)
+
+  29 Nov 2012; Justin Lecher <jlec@gentoo.org>
+  +files/3_p20121129/aufs3-base-0.patch,
+  +files/3_p20121129/aufs3-standalone-0.patch,
+  +files/3_p20121129/aufs3-base-1.patch,
+  +files/3_p20121129/aufs3-standalone-1.patch,
+  +files/3_p20121129/aufs3-base-2.patch,
+  +files/3_p20121129/aufs3-standalone-2.patch, +aufs3-3_p20121129.ebuild,
+  +files/3_p20121129/aufs3-base-3.patch,
+  +files/3_p20121129/aufs3-standalone-3.patch,
+  +files/3_p20121129/aufs3-base-4.patch,
+  +files/3_p20121129/aufs3-standalone-4.patch,
+  +files/3_p20121129/aufs3-base-x-rcN.patch,
+  +files/3_p20121129/aufs3-base-5.patch,
+  +files/3_p20121129/aufs3-standalone-x-rcN.patch,
+  +files/3_p20121129/aufs3-standalone-5.patch,
+  +files/3_p20121129/aufs3-base-6.patch,
+  +files/3_p20121129/aufs3-standalone-6.patch:
+  Version BUmp
+
+  26 Nov 2012; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20120109.ebuild,
+  aufs3-3_p20120430.ebuild, -aufs3-3_p20120523.ebuild,
+  -aufs3-3_p20120531.ebuild, -aufs3-3_p20120619.ebuild,
+  -aufs3-3_p20120730.ebuild, -aufs3-3_p20120813.ebuild,
+  aufs3-3_p20120813-r1.ebuild, aufs3-3_p20121015.ebuild,
+  aufs3-3_p20121015-r1.ebuild, aufs3-3_p20121112.ebuild:
+  Dropped old; block AUFS_FS kernel option
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> aufs3-3_p20120430.ebuild:
+  Stable for x86, wrt bug #422879
+
+  14 Nov 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20121015-r1.ebuild,
+  aufs3-3_p20121112.ebuild:
+  Do not apply the old hardened patch
+
+*aufs3-3_p20121112 (12 Nov 2012)
+
+  12 Nov 2012; Justin Lecher <jlec@gentoo.org>
+  +files/3_p20121112/aufs3-base-0.patch, +files/3_p20121112/aufs3-base-1.patch,
+  +files/3_p20121112/aufs3-standalone-1.patch,
+  +files/3_p20121112/aufs3-base-2.patch,
+  +files/3_p20121112/aufs3-standalone-2.patch,
+  +files/3_p20121112/aufs3-base-3.patch,
+  +files/3_p20121112/aufs3-standalone-3.patch,
+  +files/3_p20121112/aufs3-base-4.patch,
+  +files/3_p20121112/aufs3-standalone-4.patch,
+  +files/3_p20121112/aufs3-base-5.patch,
+  +files/3_p20121112/aufs3-standalone-5.patch,
+  +files/3_p20121112/aufs3-base-x-rcN.patch,
+  +files/3_p20121112/aufs3-standalone-x-rcN.patch,
+  +files/3_p20121112/aufs3-standalone-0.patch, +aufs3-3_p20121112.ebuild,
+  +files/3_p20121112/aufs3-base-6.patch,
+  +files/3_p20121112/aufs3-standalone-6.patch, metadata.xml:
+  Version Bump; correct kernel-patch USE description; drop tommy as maintainer
+
+*aufs3-3_p20121015-r1 (25 Oct 2012)
+
+  25 Oct 2012; Justin Lecher <jlec@gentoo.org> +files/pax-2.patch,
+  +aufs3-3_p20121015-r1.ebuild:
+  Add Arch linux patch for hardened kernels, #393559
+
+  18 Oct 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20120813-r1.ebuild,
+  aufs3-3_p20121015.ebuild:
+  Change las KV_DIR to KV_OUT_DIR
+
+  18 Oct 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20120813-r1.ebuild,
+  aufs3-3_p20121015.ebuild:
+  Merge changes related bugs 432346 432392 432398 into newest version
+
+*aufs3-3_p20121015 (15 Oct 2012)
+
+  15 Oct 2012; Justin Lecher <jlec@gentoo.org> +aufs3-3_p20121015.ebuild,
+  files/aufs3-standalone-x-rcN.patch, +files/aufs3-base-6.patch,
+  +files/aufs3-standalone-6.patch, files/aufs3-base-x-rcN.patch:
+  Version Bump
+
+  08 Oct 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20120813-r1.ebuild:
+  Fix compilation if USE=-nfs, #432392
+
+  07 Oct 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20120813.ebuild:
+  Pass raw ldflags if ld is called directly, #432398; use KV_OUT_DIR instead of
+  KV_DIR, #432346 thanks Dennis Schride for the patches
+
+*aufs3-3_p20120813-r1 (07 Oct 2012)
+
+  07 Oct 2012; Justin Lecher <jlec@gentoo.org> +aufs3-3_p20120813-r1.ebuild:
+  Included patch to make the package compatible with non x86 & amd64 arches,
+  #432392
+
+*aufs3-3_p20120813 (13 Aug 2012)
+
+  13 Aug 2012; Justin Lecher <jlec@gentoo.org> files/aufs3-base-x-rcN.patch,
+  files/aufs3-standalone-x-rcN.patch, +aufs3-3_p20120813.ebuild:
+  Version Bump
+
+*aufs3-3_p20120730 (30 Jul 2012)
+
+  30 Jul 2012; Justin Lecher <jlec@gentoo.org> +aufs3-3_p20120730.ebuild,
+  files/aufs3-standalone-x-rcN.patch, +files/aufs3-base-5.patch,
+  +files/aufs3-standalone-5.patch, files/aufs3-base-x-rcN.patch:
+  Version Bump
+
+  22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> aufs3-3_p20120430.ebuild:
+  Stable for amd64, wrt bug #422879
+
+*aufs3-3_p20120619 (19 Jun 2012)
+
+  19 Jun 2012; Justin Lecher <jlec@gentoo.org> files/aufs3-base-x-rcN.patch,
+  files/aufs3-standalone-x-rcN.patch, +aufs3-3_p20120619.ebuild:
+  Version BUmp
+
+*aufs3-3_p20120531 (31 May 2012)
+
+  31 May 2012; Justin Lecher <jlec@gentoo.org> +aufs3-3_p20120531.ebuild:
+  Version Bump, add comments on version handling
+
+  24 May 2012; Mike Frysinger <vapier@gentoo.org> aufs3-3_p20120109.ebuild,
+  aufs3-3_p20120430.ebuild, aufs3-3_p20120523.ebuild:
+  Inherit eutils for epatch.
+
+  23 May 2012; Justin Lecher <jlec@gentoo.org> +files/aufs3-base-4.patch,
+  +files/aufs3-standalone-4.patch:
+  Add missing patches
+
+*aufs3-3_p20120523 (23 May 2012)
+
+  23 May 2012; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20110815.ebuild,
+  -aufs3-3_p20111031.ebuild, -aufs3-3_p20111114.ebuild,
+  -aufs3-3_p20111205-r1.ebuild, -aufs3-3_p20120319.ebuild,
+  -aufs3-3_p20120329.ebuild, -aufs3-3_p20120402.ebuild,
+  +aufs3-3_p20120523.ebuild:
+  Version Bump, drop old
+
+*aufs3-3_p20120526 (23 May 2012)
+
+  23 May 2012; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20110815.ebuild,
+  -aufs3-3_p20111031.ebuild, -aufs3-3_p20111114.ebuild,
+  -aufs3-3_p20111205-r1.ebuild, -aufs3-3_p20120319.ebuild,
+  -aufs3-3_p20120329.ebuild, -aufs3-3_p20120402.ebuild,
+  +aufs3-3_p20120526.ebuild:
+  Version Bump, drop old
+
+  22 May 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20120430.ebuild:
+  dodoc doesn't follow symlinks, so install the file directly
+
+  05 May 2012; Markus Meier <maekke@gentoo.org> aufs3-3_p20120109.ebuild:
+  x86 stable, bug #407991
+
+*aufs3-3_p20120430 (30 Apr 2012)
+
+  30 Apr 2012; Justin Lecher <jlec@gentoo.org> files/aufs3-base-x-rcN.patch,
+  files/aufs3-standalone-x-rcN.patch, +aufs3-3_p20120430.ebuild:
+  Version Bump
+
+  28 Apr 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20120402.ebuild,
+  +files/parallel.patch:
+  Allow parallel build, patch sent upstream
+
+  23 Apr 2012; Agostino Sarubbo <ago@gentoo.org> aufs3-3_p20120109.ebuild:
+  Stable for amd64, wrt bug #407991
+
+*aufs3-3_p20120402 (02 Apr 2012)
+
+  02 Apr 2012; Justin Lecher <jlec@gentoo.org> files/aufs3-base-x-rcN.patch,
+  files/aufs3-standalone-x-rcN.patch, +aufs3-3_p20120402.ebuild:
+  Version BUmp
+
+*aufs3-3_p20120329 (29 Mar 2012)
+
+  29 Mar 2012; Justin Lecher <jlec@gentoo.org> +aufs3-3_p20120329.ebuild,
+  +files/aufs3-base-3.patch, +files/aufs3-standalone-3.patch:
+  Version Bump, #408181
+
+*aufs3-3_p20120319 (19 Mar 2012)
+
+  19 Mar 2012; Justin Lecher <jlec@gentoo.org> files/aufs3-base-x-rcN.patch,
+  files/aufs3-standalone-x-rcN.patch, +aufs3-3_p20120319.ebuild:
+  Version Bump
+
+*aufs3-3_p20120109 (09 Jan 2012)
+
+  09 Jan 2012; Justin Lecher <jlec@gentoo.org> files/aufs3-standalone-0.patch,
+  +files/aufs3-base-2.patch, +files/aufs3-standalone-2.patch,
+  +aufs3-3_p20120109.ebuild:
+  Version Bump
+
+*aufs3-3_p20111205-r1 (08 Jan 2012)
+
+  08 Jan 2012; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20111205.ebuild,
+  +aufs3-3_p20111205-r1.ebuild:
+  Restructure patching, #398139
+
+*aufs3-3_p20111205 (05 Jan 2012)
+
+  05 Jan 2012; Justin Lecher <jlec@gentoo.org> +files/aufs3-base-x-rcN.patch,
+  +files/aufs3-fix-export-__devcgroup_inode_permission.patch,
+  +files/aufs3-standalone-x-rcN.patch, +aufs3-3_p20111205.ebuild:
+  Version Bump
+
+*aufs3-3_p20111114 (14 Nov 2011)
+
+  14 Nov 2011; Justin Lecher <jlec@gentoo.org> +aufs3-3_p20111114.ebuild:
+  Version Bump
+
+*aufs3-3_p20111031 (31 Oct 2011)
+
+  31 Oct 2011; Justin Lecher <jlec@gentoo.org> files/aufs3-standalone-0.patch,
+  +files/aufs3-base-1.patch, +files/aufs3-standalone-1.patch,
+  +aufs3-3_p20111031.ebuild, +files/aufs-util-31.patch:
+  Version Bump
+
+  28 Aug 2011; Justin Lecher <jlec@gentoo.org> +files/aufs3-base-0.patch,
+  +files/aufs3-standalone-0.patch, +aufs3-3_p20110815.ebuild, +files/pax.patch,
+  +metadata.xml:
+  Moved to tree, fixes bug 376175
+
+  27 Aug 2011; Justin Lecher <jlec@gentoo.org> aufs3-3_p20110815.ebuild:
+  Make CONFIG check for EXPORTFS matadory for USE=nfs
+
+  19 Aug 2011; Justin Lecher <jlec@gentoo.org> files/aufs3-standalone-0.patch,
+  -files/aufs3-base-1.patch, -files/aufs3-standalone-1.patch,
+  aufs3-3_p20110815.ebuild:
+  Cleaned some USE=doc problems
+
+  18 Aug 2011; Justin Lecher <jlec@gentoo.org> aufs3-3_p20110815.ebuild:
+  Corrected to new kernel versioning scheme
+
+  16 Aug 2011; Justin Lecher <jlec@gentoo.org> files/aufs3-standalone-1.patch:
+  Fix missing upstream export of symbols
+
+  15 Aug 2011; Justin Lecher <jlec@gentoo.org> aufs3-3_p20110815.ebuild,
+  metadata.xml:
+  Changed USE hardened to pax_kernel, #375811
+
+*aufs3-3_p20110815 (15 Aug 2011)
+
+  15 Aug 2011; Justin Lecher <jlec@gentoo.org> +files/aufs3-base-0.patch,
+  +files/aufs3-standalone-0.patch, +files/aufs3-base-1.patch,
+  +files/aufs3-standalone-1.patch, +aufs3-3_p20110815.ebuild, +metadata.xml:
+  Initial commit

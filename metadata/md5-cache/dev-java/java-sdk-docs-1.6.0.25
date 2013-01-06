@@ -1,0 +1,10 @@
+DEFINED_PHASES=install nofetch
+DEPEND=app-arch/unzip
+DESCRIPTION=Sun's documentation bundle (including API) for Java SE
+HOMEPAGE=http://download.oracle.com/javase/6/docs/index.html
+KEYWORDS=amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux
+LICENSE=oracle-java-documentation
+RESTRICT=fetch
+SLOT=1.6.0
+SRC_URI=jdk-6u25-fcs-bin-b04-apidocs-04_Apr_2011.zip
+_md5_=0e4ef92952bbdc3e5c65d16c24335f6e

@@ -1,0 +1,25 @@
+changeset:   55567:146ddf82a279
+user:        Armin Rigo <arigo@tunes.org>
+date:        Mon Jun 11 10:33:19 2012 +0200
+summary:     More ignored ops
+
+diff -r 04ea518e5b71 -r 146ddf82a279 pypy/translator/c/gcc/trackgcroot.py
+--- a/pypy/translator/c/gcc/trackgcroot.py	Mon Jun 11 10:28:26 2012 +0200
++++ b/pypy/translator/c/gcc/trackgcroot.py	Mon Jun 11 10:33:19 2012 +0200
+@@ -476,13 +476,13 @@
+         # floating-point operations cannot produce GC pointers
+         'f',
+         'cvt', 'ucomi', 'comi', 'subs', 'subp' , 'adds', 'addp', 'xorp',
+-        'movap', 'movd', 'movlp', 'sqrtsd', 'movhpd',
++        'movap', 'movd', 'movlp', 'sqrt', 'rsqrt', 'movhpd',
+         'mins', 'minp', 'maxs', 'maxp', 'unpck', 'pxor', 'por', # sse2
+         'shufps', 'shufpd',
+         # arithmetic operations should not produce GC pointers
+         'inc', 'dec', 'not', 'neg', 'or', 'and', 'sbb', 'adc',
+         'shl', 'shr', 'sal', 'sar', 'rol', 'ror', 'mul', 'imul', 'div', 'idiv',
+-        'bswap', 'bt', 'rdtsc',
++        'bswap', 'bt', 'rdtsc', 'rounds',
+         'pabs', 'pack', 'padd', 'palign', 'pand', 'pavg', 'pcmp', 'pextr',
+         'phadd', 'phsub', 'pinsr', 'pmadd', 'pmax', 'pmin', 'pmovmsk',
+         'pmul', 'por', 'psadb', 'pshuf', 'psign', 'psll', 'psra', 'psrl',
+

@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/pyvtk
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvtk/ChangeLog,v 1.1 2010/05/26 07:35:31 jlec Exp $
+
+*pyvtk-0.4.74 (26 May 2010)
+
+  26 May 2010; Justin Lecher <jlec@gentoo.org> +pyvtk-0.4.74.ebuild,
+  +files/pyvtk-0.4.74.patch, +metadata.xml:
+  Imported from sunrise
+
+

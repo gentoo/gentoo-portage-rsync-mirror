@@ -1,0 +1,11 @@
+--- Makefile.orig	2010-08-19 19:55:32.592363028 +0100
++++ Makefile	2010-08-19 19:55:45.162140354 +0100
+@@ -94,7 +94,7 @@
+ # The main program:
+ 
+ vdr: $(OBJS) $(SILIB)
+-	$(CXX) $(CXXFLAGS) -rdynamic $(OBJS) $(NCURSESLIB) $(LIBS) $(LIBDIRS) $(SILIB) -o vdr
++	$(CXX) $(CXXFLAGS) -rdynamic $(LDFLAGS) $(OBJS) $(NCURSESLIB) $(LIBS) $(LIBDIRS) $(SILIB) -o vdr
+ 
+ # The libsi library:
+ 

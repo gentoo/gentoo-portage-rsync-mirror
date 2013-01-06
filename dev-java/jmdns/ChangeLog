@@ -1,0 +1,47 @@
+# ChangeLog for dev-java/jmdns
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/ChangeLog,v 1.13 2009/05/23 21:10:26 ali_bush Exp $
+
+  23 May 2009; Alistair Bush <ali_bush@gentoo.org> jmdns-1.0.ebuild:
+  Fix build failure when source use flag enabled. See #268346
+
+  15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> -jmdns-0.2.ebuild:
+  Delete old version.
+
+  02 Nov 2007; William L. Thomson Jr. <wltjr@gentoo.org> jmdns-1.0.ebuild:
+  amd64 stable, bug #197480.
+
+  31 Oct 2007; Christian Faulhammer <opfer@gentoo.org> jmdns-1.0.ebuild:
+  quote variables
+
+  31 Oct 2007; Christian Faulhammer <opfer@gentoo.org> jmdns-1.0.ebuild:
+  stable x86, bug 197480
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
+
+*jmdns-1.0 (21 Oct 2006)
+
+  21 Oct 2006; Petteri Räty <betelgeuse@gentoo.org> +jmdns-1.0.ebuild:
+  Version bump. Resolves bug #120982. This ebuild uses generation 2 and add
+  support for the source and examples use flags.
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> jmdns-0.2.ebuild:
+  stable on amd64
+
+  22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> :
+  Keywords ~amd64.
+
+  16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jmdns-0.2.ebuild:
+  use java-pkg_dohtml instead of dohtml to also install the package-list in
+  case of api docs: #50740
+
+  31 Aug 2004; Chris Aniszczyk <zx@gentoo.org> jmdns-0.2.ebuild:
+  Marking x86
+
+*jmdns-0.2 (18 Apr 2004)
+
+  18 Apr 2004; Chris Aniszczyk <zx@gentoo.org> jmdns-0.2.ebuild, metadata.xml:
+  Initial Import. Closes #48047
+  Thanks to Guy de Pourtales <guy@gadp.ch> for the initial ebuild.
+

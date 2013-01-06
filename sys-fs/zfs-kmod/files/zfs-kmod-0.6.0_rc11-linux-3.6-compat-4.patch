@@ -1,0 +1,87 @@
+From 558ef6d0805457654938dbe56c9a19b0121a712d Mon Sep 17 00:00:00 2001
+From: Yuxuan Shui <yshuiv7@gmail.com>
+Date: Fri, 12 Oct 2012 23:20:58 +0800
+Subject: [PATCH] Linux 3.6 compat, iops->create()
+
+As of Linux commit ebfc3b49a7ac25920cb5be5445f602e51d2ea559 the
+struct nameidata is no longer passed to iops->create.  Instead
+only the result of (inamedata->flags & LOOKUP_EXCL) is passed.
+
+ZFS like almost all Linux fileystems never made use of this so
+only the prototype needs to be wrapped for compatibility.
+
+Signed-off-by: Yuxuan Shui <yshuiv7@gmail.com>
+Signed-off-by: Brian Behlendorf <behlendorf1@llnl.gov>
+Issue #873
+---
+ config/kernel-create-nameidata.m4 |   26 ++++++++++++++++++++++++++
+ config/kernel.m4                  |    1 +
+ module/zfs/zpl_inode.c            |    5 +++++
+ 3 files changed, 32 insertions(+)
+ create mode 100644 config/kernel-create-nameidata.m4
+
+diff --git a/config/kernel-create-nameidata.m4 b/config/kernel-create-nameidata.m4
+new file mode 100644
+index 0000000..100f077
+--- /dev/null
++++ b/config/kernel-create-nameidata.m4
+@@ -0,0 +1,26 @@
++dnl #
++dnl # 3.6 API change
++dnl #
++AC_DEFUN([ZFS_AC_KERNEL_CREATE_NAMEIDATA], [
++	AC_MSG_CHECKING([whether iops->create() takes struct nameidata])
++	ZFS_LINUX_TRY_COMPILE([
++		#include <linux/fs.h>
++	],[
++		#ifdef HAVE_MKDIR_UMODE_T
++		int (*inode_create) (struct inode *,struct dentry *,
++		                     umode_t, struct nameidata *) = NULL;
++		#else
++		int (*inode_create) (struct inode *,struct dentry *,
++		                     int, struct nameidata *) = NULL;
++		#endif
++		struct inode_operations iops __attribute__ ((unused)) = {
++			.create		= inode_create,
++		};
++	],[
++		AC_MSG_RESULT(yes)
++		AC_DEFINE(HAVE_CREATE_NAMEIDATA, 1,
++		          [iops->create() operation takes nameidata])
++	],[
++		AC_MSG_RESULT(no)
++	])
++])
+diff --git a/config/kernel.m4 b/config/kernel.m4
+index 8d8cd6b..dd01fb2 100644
+--- a/config/kernel.m4
++++ b/config/kernel.m4
+@@ -50,6 +50,7 @@ AC_DEFUN([ZFS_AC_CONFIG_KERNEL], [
+ 	ZFS_AC_KERNEL_FREE_CACHED_OBJECTS
+ 	ZFS_AC_KERNEL_FALLOCATE
+ 	ZFS_AC_KERNEL_LOOKUP_NAMEIDATA
++	ZFS_AC_KERNEL_CREATE_NAMEIDATA
+ 	ZFS_AC_KERNEL_TRUNCATE_RANGE
+ 	ZFS_AC_KERNEL_CREATE_UMODE_T
+ 	ZFS_AC_KERNEL_AUTOMOUNT
+diff --git a/module/zfs/zpl_inode.c b/module/zfs/zpl_inode.c
+index 5b31c12..bb389f8 100644
+--- a/module/zfs/zpl_inode.c
++++ b/module/zfs/zpl_inode.c
+@@ -75,8 +75,13 @@
+ }
+ 
+ static int
++#ifdef HAVE_CREATE_NAMEIDATA
+ zpl_create(struct inode *dir, struct dentry *dentry, zpl_umode_t mode,
+     struct nameidata *nd)
++#else
++zpl_create(struct inode *dir, struct dentry *dentry, zpl_umode_t mode,
++    bool flag)
++#endif
+ {
+ 	cred_t *cr = CRED();
+ 	struct inode *ip;
+-- 
+1.7.10
+

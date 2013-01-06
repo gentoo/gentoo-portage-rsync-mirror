@@ -1,0 +1,20 @@
+# ChangeLog for games-emulation/gfceux
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/ChangeLog,v 1.4 2011/04/06 20:02:40 arfrever Exp $
+
+  06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gfceux-2.1.1.ebuild:
+  Fix deprecation warning.
+
+  28 Apr 2010; Tupone Alfredo <tupone@gentoo.org> gfceux-2.1.1.ebuild:
+  Force python2 fixing bug #312245 by arfrever@gentoo.org
+
+  02 Nov 2009; Markus Meier <maekke@gentoo.org> gfceux-2.1.1.ebuild:
+  amd64/x86 stable, bug #291227
+
+*gfceux-2.1.1 (29 Sep 2009)
+
+  29 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org> +gfceux-2.1.1.ebuild,
+  +files/gfceux-2.1.1-gentoo.patch, +metadata.xml:
+  intial commit
+

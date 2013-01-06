@@ -1,0 +1,55 @@
+# ChangeLog for dev-python/skype4py
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.11 2012/12/22 06:37:57 radhermit Exp $
+
+*skype4py-1.0.32.1-r1 (22 Dec 2012)
+
+  22 Dec 2012; Tim Harder <radhermit@gentoo.org> +skype4py-1.0.32.1-r1.ebuild:
+  Revbump to migrate to distutils-r1.
+
+  26 Nov 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Add pypi upstream metadata.
+
+*skype4py-1.0.32.1 (25 Nov 2012)
+
+  25 Nov 2012; Tim Harder <radhermit@gentoo.org> +skype4py-1.0.32.1.ebuild,
+  +files/skype4py-1.0.32.1-python.patch, metadata.xml:
+  Version bump. Add myself as maintainer.
+
+  17 Mar 2012; Tim Harder <radhermit@gentoo.org> skype4py-1.0.32.0.ebuild:
+  Add ~x86 keyword.
+
+  26 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  skype4py-1.0.32.0.ebuild:
+  Fix dependencies. Set SUPPORT_PYTHON_ABIS.
+
+  26 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -skype4py-1.0.31.0.ebuild, -files/skype4py-1.0.31.0-automagic-cython.patch:
+  Delete.
+
+*skype4py-1.0.32.0 (13 Sep 2010)
+
+  13 Sep 2010; Michael Weber <xmw@gentoo.org> +skype4py-1.0.32.0.ebuild:
+  Version bump wrt bug #303239.
+
+  28 Mar 2010; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  Drop myself from metadata, add maintainer-needed
+
+  20 Aug 2009; Jeremy Olexa <darkside@gentoo.org> skype4py-1.0.31.0.ebuild,
+  +files/skype4py-1.0.31.0-automagic-cython.patch:
+  build fix for automagic cython dep, bug 280488. patch by Arfrever
+
+  20 Aug 2009; Jeremy Olexa <darkside@gentoo.org> skype4py-1.0.31.0.ebuild,
+  +files/skype4py-1.0.31.0-automagic-cython.patch:
+  build fix for automagic cython dep, bug 280488. patch by Arfrever
+
+  21 Mar 2009; Jeremy Olexa <darkside@gentoo.org> skype4py-1.0.31.0.ebuild:
+  skype4py is pretty useless if skype is not installed - listed on the
+  homepage as a requirement
+
+*skype4py-1.0.31.0 (21 Mar 2009)
+
+  21 Mar 2009; Jeremy Olexa <darkside@gentoo.org> +metadata.xml,
+  +skype4py-1.0.31.0.ebuild:
+  New package. Initial ebuild by Michal Slonina, modified by me. bug 257481
+

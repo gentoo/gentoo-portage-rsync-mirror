@@ -1,0 +1,242 @@
+# ChangeLog for dev-python/urwid
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.59 2012/11/24 02:04:27 radhermit Exp $
+
+*urwid-1.1.1 (24 Nov 2012)
+
+  24 Nov 2012; Tim Harder <radhermit@gentoo.org> urwid-1.1.0.ebuild,
+  +urwid-1.1.1.ebuild:
+  Version bump. Fix html docs build with python-3.
+
+  05 Nov 2012; Tim Harder <radhermit@gentoo.org> urwid-0.9.9.1.ebuild,
+  urwid-1.0.2.ebuild, urwid-1.1.0.ebuild:
+  Add testing dep on twisted (bug #441942).
+
+*urwid-1.1.0 (24 Oct 2012)
+
+  24 Oct 2012; Tim Harder <radhermit@gentoo.org> +urwid-1.1.0.ebuild,
+  +files/urwid-1.1.0-sphinx.patch:
+  Version bump. Add doc use flag to build sphinx docs.
+
+  22 Oct 2012; Tim Harder <radhermit@gentoo.org> -urwid-1.0.0.ebuild,
+  -urwid-1.0.1.ebuild:
+  Remove old.
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> urwid-1.0.2.ebuild:
+  x86 stable wrt bug #433275
+
+  12 Sep 2012; Anthony G. Basile <blueness@gentoo.org> urwid-1.0.2.ebuild:
+  Stable ppc ppc64, bug #433275
+
+  08 Sep 2012; Agostino Sarubbo <ago@gentoo.org> urwid-1.0.2.ebuild:
+  Stable for amd64, wrt bug #433275
+
+  05 Aug 2012; Anthony G. Basile <blueness@gentoo.org> urwid-1.0.2.ebuild:
+  Keyword ~arm
+
+*urwid-1.0.2 (14 Jul 2012)
+
+  14 Jul 2012; Tim Harder <radhermit@gentoo.org> +urwid-1.0.2.ebuild:
+  Version bump.
+
+  31 May 2012; Anthony G. Basile <blueness@gentoo.org> urwid-1.0.1.ebuild:
+  Keyword ~mips
+
+  20 May 2012; Mark Loeser <halcy0n@gentoo.org> urwid-1.0.1.ebuild:
+  Stable for ppc/ppc64; bug #404719
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> urwid-1.0.1.ebuild:
+  x86 stable wrt bug #404719
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> urwid-1.0.1.ebuild:
+  Stable for amd64, wrt bug #404719
+
+*urwid-1.0.1 (02 Dec 2011)
+
+  02 Dec 2011; Tim Harder <radhermit@gentoo.org> +urwid-1.0.1.ebuild:
+  Version bump.
+
+  04 Nov 2011; Markos Chandras <hwoarang@gentoo.org> urwid-1.0.0.ebuild:
+  Fix dependencies. Restrict Jython ABIs. Ignore tests failures with Python 3.1.
+  Avoid breaking strict-aliasing rules with Python 2. Patch by Arfrever
+
+*urwid-1.0.0 (22 Sep 2011)
+
+  22 Sep 2011; Tim Harder <radhermit@gentoo.org> +urwid-1.0.0.ebuild:
+  Version bump.
+
+  23 May 2010; Pacho Ramos <pacho@gentoo.org> urwid-0.9.9.1.ebuild:
+  stable amd64, bug 307259
+
+  16 Mar 2010; Christian Faulhammer <fauli@gentoo.org> urwid-0.9.9.1.ebuild:
+  stable x86, bug 307259
+
+  10 Mar 2010; Joseph Jezak <josejx@gentoo.org> urwid-0.9.9.1.ebuild:
+  Marked ppc/ppc64 stable for bug #307259.
+
+*urwid-0.9.9.1 (28 Jan 2010)
+
+  28 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +urwid-0.9.9.1.ebuild:
+  Version bump.
+
+  07 Jan 2010; Joseph Jezak <josejx@gentoo.org> urwid-0.9.9.ebuild:
+  Marked ppc stable for bug #297715.
+
+  03 Jan 2010; Markus Meier <maekke@gentoo.org> urwid-0.9.9.ebuild:
+  x86 stable, bug #297715
+
+  24 Dec 2009; Pacho Ramos <pacho@gentoo.org> urwid-0.9.9.ebuild:
+  amd64 stable, bug 297715
+
+  22 Dec 2009; Brent Baude <ranger@gentoo.org> urwid-0.9.9.ebuild:
+  Marking urwid-0.9.9 ppc64 for bug 297715
+
+  20 Dec 2009; Fabian Groffen <grobian@gentoo.org> urwid-0.9.9.ebuild:
+  Merged keywords from Prefix
+
+  30 Nov 2009; Joseph Jezak <josejx@gentoo.org> urwid-0.9.8.4.ebuild:
+  Marked ppc64 stable.
+
+*urwid-0.9.9 (20 Nov 2009)
+
+  20 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +urwid-0.9.9.ebuild:
+  Version bump.
+
+  08 Nov 2009; Joseph Jezak <josejx@gentoo.org> urwid-0.9.8.4.ebuild:
+  Marked ~ppc64.
+
+  23 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  urwid-0.9.8.4.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  06 Sep 2009; Christian Ruppert <idl0r@gentoo.org>
+  -files/urwid-0.9.6-nosetuptools.diff:
+  Remove unused patch.
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -urwid-0.9.7.1.ebuild,
+  -urwid-0.9.8.1.ebuild, -urwid-0.9.8.3.ebuild:
+  Remove old
+
+  23 Aug 2009; Jeremy Olexa <darkside@gentoo.org> urwid-0.9.8.4.ebuild:
+  amd64 stable, tested on stable host using ~arch wicd for months. bug
+  277356
+
+  15 Jul 2009; Christian Faulhammer <fauli@gentoo.org> urwid-0.9.8.4.ebuild:
+  stable x86, bug 277356
+
+  26 Apr 2009; Brent Baude <ranger@gentoo.org> urwid-0.9.8.4.ebuild:
+  stable ppc, bug 267052
+
+*urwid-0.9.8.4 (21 Mar 2009)
+
+  21 Mar 2009; Patrick Lauer <patrick@gentoo.org> +urwid-0.9.8.4.ebuild:
+  Bump to 0.9.8.4, closes #262612
+
+*urwid-0.9.8.3 (15 Feb 2009)
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> +urwid-0.9.8.3.ebuild:
+  Bump to 0.9.8.3
+
+*urwid-0.9.8.1 (24 Jun 2007)
+
+  24 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  -files/urwid-0.9.8-nosetuptools.diff, -urwid-0.9.8.ebuild,
+  +urwid-0.9.8.1.ebuild:
+  Version bump, added dep on setuptools. Dropped old version.
+
+*urwid-0.9.8 (26 Mar 2007)
+
+  26 Mar 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  +files/urwid-0.9.8-nosetuptools.diff, -urwid-0.9.7.2.ebuild,
+  +urwid-0.9.8.ebuild:
+  Version bump: added NEED_PYTHON. Dropped 0.9.7.2.
+
+  23 Jan 2007; nixnut <nixnut@gentoo.org> urwid-0.9.7.1.ebuild:
+  Stable on ppc wrt bug 154198
+
+  23 Jan 2007; Steve Dibb <beandog@gentoo.org> urwid-0.9.7.1.ebuild:
+  amd64 stable, bug 154198
+
+  18 Jan 2007; Raúl Porcel <armin76@gentoo.org> urwid-0.9.7.1.ebuild:
+  x86 stable wrt bug 154198
+
+*urwid-0.9.7.2 (05 Jan 2007)
+
+  05 Jan 2007; Lukasz Strzygowski <lucass@gentoo.org> -urwid-0.9.4.ebuild,
+  -urwid-0.9.5.ebuild, -urwid-0.9.6.ebuild, +urwid-0.9.7.2.ebuild:
+  Version bump. Removed older releases.
+
+*urwid-0.9.7.1 (04 Oct 2006)
+
+  04 Oct 2006; Lukasz Strzygowski <lucass@gentoo.org> +urwid-0.9.7.1.ebuild:
+  Version bump.
+
+*urwid-0.9.6 (23 Aug 2006)
+
+  23 Aug 2006; Lukasz Strzygowski <lucass@gentoo.org>
+  +files/urwid-0.9.6-nosetuptools.diff, +urwid-0.9.6.ebuild:
+  Version bump. Added patch to disable support for setuptools.
+
+  17 Jul 2006; Lukasz Strzygowski <lucass@gentoo.org>
+  -files/urwid-0.8.7-input.diff, -urwid-0.8.6.ebuild,
+  -urwid-0.8.7-r1.ebuild, -urwid-0.9.2.ebuild:
+  Removed old versions.
+
+*urwid-0.9.5 (17 Jul 2006)
+
+  17 Jul 2006; Lukasz Strzygowski <lucass@gentoo.org> +urwid-0.9.5.ebuild:
+  Version bump.
+
+*urwid-0.9.4 (20 May 2006)
+
+  20 May 2006; Lukasz Strzygowski <lucass@gentoo.org> +urwid-0.9.4.ebuild:
+  Version bump. Marked ~amd64.
+
+  30 Apr 2006; Sven Blumenstein <bazik@gentoo.org> urwid-0.9.2.ebuild:
+  Added ~sparc keyword.
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> urwid-0.9.2.ebuild:
+  Mark 0.9.2 ~ia64
+
+*urwid-0.9.2 (28 Mar 2006)
+
+  28 Mar 2006; Lukasz Strzygowski <lucass@gentoo.org> metadata.xml,
+  +urwid-0.9.2.ebuild:
+  Version bump. Updated description in metadata.
+
+  28 Nov 2005; Marien Zwart <marienz@gentoo.org> urwid-0.8.7-r1.ebuild:
+  Add missing eutils inherit.
+
+*urwid-0.8.7-r1 (15 May 2005)
+
+  15 May 2005; Rob Cakebread <pythonhead@gentoo.org>
+  files/urwid-0.8.7-input.diff, -urwid-0.8.7.ebuild, +urwid-0.8.7-r1.ebuild:
+  Revised patch. bug# 92081
+
+  10 May 2005; Rob Cakebread <pythonhead@gentoo.org>
+  +files/urwid-0.8.7-input.diff, urwid-0.8.7.ebuild:
+  Added down key patch from upstream. bug# 91338
+
+*urwid-0.8.7 (10 May 2005)
+
+  10 May 2005; Rob Cakebread <pythonhead@gentoo.org> +urwid-0.8.7.ebuild:
+  Version bump - Thanks Daniel Feliciano Branco <danielblues@yahoo.com>
+
+  27 Feb 2005; Lukasz Strzygowski <lucass@gentoo.org> metadata.xml,
+  urwid-0.8.6.ebuild:
+  Some cleanup. Added description to metadata.
+
+  21 Feb 2005; David Holm <dholm@gentoo.org> urwid-0.8.6.ebuild:
+  Added to ~ppc.
+
+  20 Jan 2005; Rob Cakebread <pythonhead@gentoo.org> urwid-0.8.6.ebuild:
+  License changed to LGPL-2.1
+
+*urwid-0.8.6 (16 Jan 2005)
+
+  16 Jan 2005; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +urwid-0.8.6.ebuild:
+  Initial commit.
+

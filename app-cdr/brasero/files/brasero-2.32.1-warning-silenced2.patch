@@ -1,0 +1,20 @@
+From af1abd9dc9fd85074c9866195f1fb767e16a9a29 Mon Sep 17 00:00:00 2001
+From: Philippe Rouquier <bonfire-app@wanadoo.fr>
+Date: Wed, 24 Nov 2010 14:33:09 +0000
+Subject: Silenced a warning when unhibiting
+
+---
+diff --git a/libbrasero-burn/burn-dbus.c b/libbrasero-burn/burn-dbus.c
+index fe5dea0..a6d77cc 100644
+--- a/libbrasero-burn/burn-dbus.c
++++ b/libbrasero-burn/burn-dbus.c
+@@ -81,7 +81,6 @@ brasero_uninhibit_suspend (guint cookie)
+ 			    error->message);
+ 		g_error_free (error);
+ 	} else {
+-                g_variant_get (res, "(u)", &cookie);
+                 g_variant_unref (res);
+         }
+ 
+--
+cgit v0.9

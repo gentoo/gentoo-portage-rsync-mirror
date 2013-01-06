@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>gnome</herd>
+<longdescription lang="C">
+    Flash support for GNOME via media-libs/swfdec
+</longdescription>
+</pkgmetadata>

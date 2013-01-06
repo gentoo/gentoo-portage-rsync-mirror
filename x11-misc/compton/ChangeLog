@@ -1,0 +1,52 @@
+# ChangeLog for x11-misc/compton
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/ChangeLog,v 1.10 2012/12/23 15:56:31 hasufell Exp $
+
+  23 Dec 2012; Julian Ospald <hasufell@gentoo.org> compton-9999.ebuild:
+  update live ebuild
+
+*compton-0_pre20121114 (17 Nov 2012)
+
+  17 Nov 2012; Julian Ospald <hasufell@gentoo.org>
+  +compton-0_pre20121114.ebuild, compton-9999.ebuild:
+  version bump, update live ebuild
+
+  26 Sep 2012; Julian Ospald <hasufell@gentoo.org> compton-9999.ebuild:
+  fix live-ebuild
+
+*compton-0_pre20120913 (24 Sep 2012)
+
+  24 Sep 2012; Julian Ospald <hasufell@gentoo.org>
+  +compton-0_pre20120913.ebuild:
+  version bump wrt #436042
+
+  06 May 2012; Julian Ospald <hasufell@gentoo.org>
+  compton-0_pre20120330.ebuild:
+  update SRC_URI
+
+  06 May 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  update to metadata.xml
+
+*compton-9999 (06 May 2012)
+
+  06 May 2012; Julian Ospald <hasufell@gentoo.org>
+  -compton-0_pre20120316.ebuild, compton-0_pre20120330.ebuild,
+  +compton-9999.ebuild:
+  add live-ebuild, reorganize global scope, remove old
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> compton-0_pre20120316.ebuild,
+  compton-0_pre20120330.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*compton-0_pre20120330 (30 Mar 2012)
+
+  30 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +compton-0_pre20120330.ebuild:
+  New snapshot with ebuild created by Julian Ospald
+
+*compton-0_pre20120316 (15 Mar 2012)
+
+  15 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +compton-0_pre20120316.ebuild:
+  Initial commit with ebuild created by Julian Ospald.
+

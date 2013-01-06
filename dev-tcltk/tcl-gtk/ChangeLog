@@ -1,0 +1,27 @@
+# ChangeLog for dev-tcltk/tcl-gtk
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-gtk/ChangeLog,v 1.7 2011/03/23 06:26:30 ssuominen Exp $
+
+  23 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> tcl-gtk-0.08.ebuild:
+  Use SLOT dependencies for x11-libs/gtk+ and x11-libs/vte.
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+  29 Aug 2005; <dang@gentoo.org> tcl-gtk-0.08.ebuild:
+  Marked ~amd64
+
+  15 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> tcl-gtk-0.08.ebuild:
+  tidy
+
+  26 Aug 2004; Doug Goldstein <cardoe@gentoo.org> tcl-gtk-0.08.ebuild:
+  Added depend on vte-0.11.11 to make it build properly on some systems
+
+  25 Aug 2004; Doug Goldstein <cardoe@gentoo.org> tcl-gtk-0.08.ebuild:
+  meant emake not make
+
+*tcl-gtk-0.08 (25 Aug 2004)
+
+  25 Aug 2004; Doug Goldstein <cardoe@gentoo.org> +tcl-gtk-0.08.ebuild:
+  new ebuild based on submitted ebuild from bug #60935 by Niklas Bolander
+

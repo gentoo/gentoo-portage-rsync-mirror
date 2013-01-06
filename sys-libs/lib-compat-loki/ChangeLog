@@ -1,0 +1,36 @@
+# ChangeLog for sys-libs/lib-compat-loki
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat-loki/ChangeLog,v 1.6 2007/08/21 23:34:28 wolf31o2 Exp $
+
+  21 Aug 2007; Chris Gianelloni <wolf31o2@gentoo.org>
+  lib-compat-loki-0.2.ebuild:
+  Added a dependency on the sdl emulation libs. Thanks to Simon Cooper
+  <thecoop@runbox.com> for pointing it out. Closing bug #188720.
+
+  11 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml,
+  -lib-compat-loki-0.1.ebuild, lib-compat-loki-0.2.ebuild:
+  Remove preplib for bug #102297 and clean up older versions.
+
+  20 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  lib-compat-loki-0.2.ebuild:
+  Marking stable on amd64 for games-action/descent3 stabilization.
+
+  16 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  lib-compat-loki-0.2.ebuild:
+  Added dependencies on lib-compat for x86 and emul-linux-x86-compat for amd64
+  and closing bug #119021.
+
+*lib-compat-loki-0.2 (12 Nov 2005)
+
+  12 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +lib-compat-loki-0.2.ebuild:
+  Added libsmpeg compiled against older glibc for descent3 compatibility on
+  amd64.
+
+*lib-compat-loki-0.1 (22 Feb 2005)
+
+  22 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +lib-compat-loki-0.1.ebuild:
+  Initial import. Ebuild by Alex Linke <incubation.11@freenet.de> and
+  submitted to bug #71044.
+

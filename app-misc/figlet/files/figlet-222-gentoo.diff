@@ -1,0 +1,37 @@
+--- Makefile.org        2003-07-17 23:56:17.000000000 +0200
++++ Makefile    2003-07-17 23:57:57.000000000 +0200
+@@ -15,21 +15,29 @@
+ CFLAGS = -g
+ 
+ # Where the executables should be put
+-DESTDIR = /usr/local/bin
++ifndef DESTDIR
++  DESTDIR = /usr/bin
++endif
+ 
+ # Where the man page should be put
+-MANDIR = /usr/local/man/man6
++ifndef MANDIR
++  MANDIR = /usr/share/man/man6
++endif
+ 
+ # Where figlet will search first for fonts (the ".flf" files).
+-DEFAULTFONTDIR = /usr/local/share/figlet
++ifndef DEFAULTFONTDIR
++  DEFAULTFONTDIR = /usr/share/figlet
++endif
+ # Use this definition if you can't put things in /usr/local/share/figlet
+-DEFAULTFONTDIR = fonts
++#DEFAULTFONTDIR = fonts
+ 
+ # The filename of the font to be used if no other is specified
+ #   (standard.flf is recommended, but any other can be used).
+ #   This font file should reside in the directory specified by
+ #   DEFAULTFONTDIR.
+-DEFAULTFONTFILE = standard.flf
++ifndef DEFAULTFONTFILE
++  DEFAULTFONTFILE = standard.flf
++endif
+ 
+ ##
+ ##  END OF CONFIGURATION SECTION

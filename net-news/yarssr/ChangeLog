@@ -1,0 +1,27 @@
+# ChangeLog for net-news/yarssr
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/yarssr/ChangeLog,v 1.6 2008/10/27 05:27:48 tove Exp $
+
+*yarssr-0.2.2-r1 (04 Nov 2007)
+
+  25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> yassr-0.2.2-r1.ebuild:
+  Keyworded ~ppc. Closes bug #216365
+
+  04 Nov 2007; Wulf C. Krueger <philantrop@gentoo.org> metadata.xml,
+  +files/yarssr-0.2.2-code_injection_197660.patch, -yarssr-0.2.2.ebuild,
+  +yarssr-0.2.2-r1.ebuild:
+  Added a patch to fix plain 0.2.2's code injection vulnerability. cf. bug
+  197660.
+
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> yarssr-0.2.2.ebuild:
+  (QA) RESTRICT clean up.
+
+  15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  add <herd>no-herd</herd>
+
+*yarssr-0.2.2 (25 Oct 2006)
+
+  25 Oct 2006; Steve Dibb <beandog@gentoo.org>
+  +files/yarssr-0.2.2-makefile.patch, +metadata.xml, +yarssr-0.2.2.ebuild:
+  Initial import, see bug 74644
+

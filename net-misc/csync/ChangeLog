@@ -1,0 +1,51 @@
+# ChangeLog for net-misc/csync
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/ChangeLog,v 1.10 2012/12/21 13:23:42 creffett Exp $
+
+*csync-0.60.4 (21 Dec 2012)
+
+  21 Dec 2012; Chris Reffett <creffett@gentoo.org> +csync-0.60.4.ebuild,
+  +files/csync-0.60.4-automagicness.patch:
+  Version bump.
+
+*csync-0.60.3 (14 Dec 2012)
+
+  14 Dec 2012; Chris Reffett <creffett@gentoo.org> +csync-0.60.3.ebuild,
+  +files/csync-0.60.2-automagicness.patch,
+  +files/csync-0.60.2-removebadtest.patch, -csync-0.50.8.ebuild,
+  -csync-0.60.0-r1.ebuild:
+  Version bump, remove old.
+
+*csync-0.60.1 (16 Nov 2012)
+
+  16 Nov 2012; Johannes Huber <johu@gentoo.org> +csync-0.60.1.ebuild:
+  Version bump.
+
+*csync-0.60.0-r1 (17 Oct 2012)
+
+  17 Oct 2012; Michael Palimaka <kensington@gentoo.org> +csync-0.60.0-r1.ebuild,
+  -csync-0.60.0.ebuild:
+  Install docs into the correct directory.
+
+  15 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> csync-0.60.0.ebuild:
+  Respect docdir.
+
+*csync-0.60.0 (13 Oct 2012)
+
+  13 Oct 2012; Tomáš Chvátal <scarabeus@gentoo.org> +csync-0.60.0.ebuild:
+  Bump to latest.
+
+  28 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> csync-0.50.8.ebuild:
+  Raise the dep over iniparser.
+
+  28 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> csync-0.50.8.ebuild:
+  Enable external logging.
+
+  28 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> csync-0.50.8.ebuild:
+  Mark testing on x86.
+
+*csync-0.50.8 (28 Aug 2012)
+
+  28 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> +csync-0.50.8.ebuild,
+  +files/csync-automagicness.patch, +metadata.xml:
+  Add csync package required for miral owncloud service.

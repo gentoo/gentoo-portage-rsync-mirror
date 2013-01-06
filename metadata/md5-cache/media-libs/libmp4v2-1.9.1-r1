@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=!<=media-libs/libmp4v2-1.9.1:0 sys-apps/sed
+DESCRIPTION=Functions for accessing ISO-IEC:14496-1:2001 MPEG-4 standard
+EAPI=4
+HOMEPAGE=http://code.google.com/p/mp4v2/
+KEYWORDS=~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris
+LICENSE=MPL-1.1
+RDEPEND=!<=media-libs/libmp4v2-1.9.1:0
+RESTRICT=test
+SLOT=1
+SRC_URI=http://mp4v2.googlecode.com/files/mp4v2-1.9.1.tar.bz2
+_eclasses_=libtool	2b273eea1976cfaed3449345d94331ac	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=790e687b1482925b38dba7154c2c0b8e

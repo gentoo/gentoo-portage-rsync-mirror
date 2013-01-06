@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>web-apps</herd>
+ 	<maintainer>
+		<email>eric.joshua.martin@gmail.com</email>
+		<name>Eric Martin</name>
+	</maintainer>
+ 	<maintainer>
+		<email>pva@gentoo.org</email>
+		<name>Peter Volkov</name>
+	</maintainer>
+	<use>
+		<flag name="lighttpd">Add <pkg>www-servers/lighttpd</pkg> support</flag>
+	</use>
+	<longdescription>RT is an enterprise-grade ticketing system</longdescription>
+</pkgmetadata>

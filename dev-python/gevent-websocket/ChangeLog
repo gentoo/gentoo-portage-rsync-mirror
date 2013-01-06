@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/gevent-websocket
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent-websocket/ChangeLog,v 1.1 2012/08/27 13:46:14 ultrabug Exp $
+
+*gevent-websocket-0.3.6 (27 Aug 2012)
+
+  27 Aug 2012; Ultrabug <ultrabug@gentoo.org> +gevent-websocket-0.3.6.ebuild,
+  +metadata.xml:
+  Initial import from ultrabug overlay.
+

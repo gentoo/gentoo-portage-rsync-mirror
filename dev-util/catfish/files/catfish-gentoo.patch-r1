@@ -1,0 +1,48 @@
+--- Makefile.in
++++ Makefile.in
+@@ -3,9 +3,9 @@
+ PYTHON=`which python`
+ LANGUAGE_FILES=$(patsubst po/%.po, locale/%/LC_MESSAGES/$(APPNAME).mo, $(wildcard po/*.po))
+ DESTDIR=
++LIBDIR=lib
+ 
+ all: $(LANGUAGE_FILES)
+-	$(PYTHON) ./build.py build $(APPNAME)
+ 	sed -e s,%prefix%,$(PREFIX), $(APPNAME).in > $(APPNAME)
+ 	chmod +x $(APPNAME)
+ 
+@@ -14,29 +14,19 @@
+ 	msgfmt $< -o $@
+ 
+ install: all
+-	install -d $(DESTDIR)/$(PREFIX)/bin
+-	install $(APPNAME) $(DESTDIR)/$(PREFIX)/bin
+-
+-	install -d $(DESTDIR)/$(PREFIX)/share/$(APPNAME)
+-	install $(APPNAME).pyc $(DESTDIR)/$(PREFIX)/share/$(APPNAME)
+-	install $(APPNAME).glade $(DESTDIR)/$(PREFIX)/share/$(APPNAME)
++	install -d $(DESTDIR)/$(PREFIX)/$(LIBDIR)/$(APPNAME)
++	install $(APPNAME).py $(DESTDIR)/$(PREFIX)/$(LIBDIR)/$(APPNAME)
++	install $(APPNAME).glade $(DESTDIR)/$(PREFIX)/$(LIBDIR)/$(APPNAME)
+ 
+ 	install -d $(DESTDIR)/$(PREFIX)/share/icons/hicolor/scalable/apps
+ 	install $(APPNAME).svg $(DESTDIR)/$(PREFIX)/share/icons/hicolor/scalable/apps
+-	ln -sf $(DESTDIR)/$(PREFIX)/share/icons/hicolor/scalable/apps/$(APPNAME).svg $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/$(APPNAME).svg
+-
+-	install -d $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
+-	install AUTHORS $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
+-	install COPYING $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
+-	install ChangeLog $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
+-	install INSTALL $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
+-	install README $(DESTDIR)/$(PREFIX)/share/doc/$(APPNAME)
++	ln -sf $(DESTDIR)/$(PREFIX)/share/icons/hicolor/scalable/apps/$(APPNAME).svg $(DESTDIR)/$(PREFIX)/$(LIBDIR)/$(APPNAME)/$(APPNAME).svg
+ 
+ 	install -d $(DESTDIR)/$(PREFIX)/share/applications
+ 	install --mode=644 $(APPNAME).desktop $(DESTDIR)/$(PREFIX)/share/applications
+ 
+ 	cp -rf locale $(DESTDIR)/$(PREFIX)/share
+-	ln -sf $(DESTDIR)/$(PREFIX)/share/locale $(DESTDIR)/$(PREFIX)/share/$(APPNAME)/locale
++	ln -sf $(DESTDIR)/$(PREFIX)/share/locale $(DESTDIR)/$(PREFIX)/$(LIBDIR)/$(APPNAME)/locale
+ 
+ uninstall:
+ 	rm -f $(DESTDIR)/$(PREFIX)/share/applications/$(APPNAME).desktop

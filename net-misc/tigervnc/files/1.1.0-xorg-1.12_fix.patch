@@ -1,0 +1,20 @@
+# Fix building with xorg-1.12.1
+# From upstream: http://tigervnc.svn.sourceforge.net/viewvc/tigervnc?view=revision&revision=4899
+
+--- trunk/unix/xserver/hw/vnc/Makefile.am	2011/10/31 08:14:40	4745
++++ trunk/unix/xserver/hw/vnc/Makefile.am	2012/04/25 15:10:38	4899
+@@ -63,7 +63,7 @@
+ BUILT_SOURCES = $(nodist_Xvnc_SOURCES)
+ 
+ fb.h: $(top_srcdir)/fb/fb.h
+-	cat $(top_srcdir)/fb/fb.h | sed -e 's,and,c_and,' -e 's,xor,c_xor,' > $(srcdir)/fb.h
++	cat $(top_srcdir)/fb/fb.h | sed -e 's,and,c_and,g' -e 's,xor,c_xor,g' > $(srcdir)/fb.h
+ 
+ pixman.h:
+ 	for i in ${XSERVERLIBS_CFLAGS}; do \
+@@ -78,4 +78,4 @@
+ 	fi
+ 
+ fbrop.h: $(top_srcdir)/fb/fbrop.h
+-	cat $(top_srcdir)/fb/fbrop.h | sed -e 's,and,c_and,' -e 's,xor,c_xor,' > $(srcdir)/fbrop.h
++	cat $(top_srcdir)/fb/fbrop.h | sed -e 's,and,c_and,g' -e 's,xor,c_xor,g' > $(srcdir)/fbrop.h

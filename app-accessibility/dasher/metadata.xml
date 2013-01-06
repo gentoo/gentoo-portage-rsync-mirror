@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>gnome-accessibility</herd>
+  <longdescription lang="en">
+    Dasher is an information-efficient text-entry interface, driven by
+    natural continuous pointing gestures. Dasher is a competitive
+    text-entry system wherever a full-size keyboard cannot be used.
+  </longdescription>
+  <longdescription lang="ja">
+    Dasherは天為と継続的なポインティングカーソルで使う
+	テキストエントリインタフェースです。Dasherは普通な
+	キーボードが使えない競争なテキストエントリシステムです。
+  </longdescription>
+</pkgmetadata>

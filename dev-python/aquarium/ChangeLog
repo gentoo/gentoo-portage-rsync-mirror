@@ -1,0 +1,14 @@
+# ChangeLog for dev-python/aquarium
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aquarium/ChangeLog,v 1.2 2010/07/23 23:42:31 arfrever Exp $
+
+  23 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  aquarium-2.3.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+*aquarium-2.3 (03 Feb 2009)
+
+  03 Feb 2009; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +aquarium-2.3.ebuild:
+  Initial import of aquarium. Ebuild by Mike Pirnat, closes #104075
+

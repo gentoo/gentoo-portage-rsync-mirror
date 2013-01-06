@@ -1,0 +1,22 @@
+# ChangeLog for dev-php/pecl-oauth
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-oauth/ChangeLog,v 1.3 2012/03/06 08:59:47 olemarkus Exp $
+
+*pecl-oauth-1.2.2-r1 (06 Mar 2012)
+
+  06 Mar 2012; Ole Markus With <olemarkus@gentoo.org>
+  +pecl-oauth-1.2.2-r1.ebuild:
+  Revbump supporting php 5.4
+
+  25 Sep 2011; Ole Markus With <olemarkus@gentoo.org> metadata.xml:
+  Fixed herd information
+
+  05 Sep 2011; Ole Markus With <olemarkus@gentoo.org> +pecl-oauth-1.2.2.ebuild,
+  +metadata.xml:
+  Added metadata.xml
+
+*pecl-oauth-1.2.2 (05 Sep 2011)
+
+  05 Sep 2011; Ole Markus With <olemarkus@gentoo.org> +pecl-oauth-1.2.2.ebuild:
+  Added ebuild for pecl-oauth. Thanks to Rob Bruce (bug 381511)
+

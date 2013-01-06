@@ -1,0 +1,184 @@
+# ChangeLog for net-misc/remmina
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.44 2012/12/04 15:37:05 ago Exp $
+
+  04 Dec 2012; <ago@gentoo.org> remmina-1.0.0_p20121004.ebuild:
+  Stable for x86, wrt bug #442212
+
+  22 Nov 2012; Mike Gilbert <floppym@gentoo.org> remmina-1.0.0_p20121004.ebuild,
+  remmina-9999.ebuild:
+  Pass WITH_GETTEXT=x to cmake.
+
+  14 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
+  remmina-1.0.0_p20121004.ebuild:
+  Stable for amd64, wrt bug #442212
+
+  12 Oct 2012; Mike Gilbert <floppym@gentoo.org>
+  -files/remmina-1.0.0-desktop-file.patch,
+  -files/remmina-1.0.0-fix-desktop-file.patch,
+  -files/remmina-1.0.0-optional-gnome-keyring.patch:
+  Remove old patches.
+
+  12 Oct 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/remmina-1.0.0_p20121004-avahi.patch, remmina-1.0.0_p20121004.ebuild:
+  Fix avahi underlinking, bug 438060 by tetromino.
+
+*remmina-1.0.0_p20121004 (07 Oct 2012)
+
+  07 Oct 2012; Mike Gilbert <floppym@gentoo.org>
+  +remmina-1.0.0_p20121004.ebuild, metadata.xml, remmina-9999.ebuild:
+  Add a new snaphot. Resolves bug 428826.
+
+  27 Aug 2012; Mike Gilbert <floppym@gentoo.org> remmina-9999.ebuild:
+  Add https fallback for git.
+
+  28 Jul 2012; Mike Gilbert <floppym@gentoo.org> remmina-1.0.0_p20120309.ebuild:
+  Adjust freerdp dependency.
+
+  08 Jul 2012; Mike Gilbert <floppym@gentoo.org>
+  -remmina-1.0.0_p20120529.ebuild:
+  Remove version bump; freerdp master has issues.
+
+*remmina-1.0.0_p20120529 (08 Jul 2012)
+
+  08 Jul 2012; Mike Gilbert <floppym@gentoo.org>
+  +remmina-1.0.0_p20120529.ebuild, -remmina-0.7.5.ebuild, -remmina-0.9.3.ebuild,
+  -remmina-1.0.0-r1.ebuild, remmina-9999.ebuild:
+  Version bump. Should resolve bug 423841. Remove old.
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> remmina-0.7.5.ebuild,
+  remmina-0.9.3.ebuild, remmina-1.0.0-r1.ebuild,
+  remmina-1.0.0_p20120309.ebuild, remmina-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  23 Apr 2012; Michał Górny <mgorny@gentoo.org> remmina-1.0.0-r1.ebuild,
+  remmina-1.0.0_p20120309.ebuild, remmina-9999.ebuild:
+  Use mirror://github.
+
+  19 Mar 2012; Mike Gilbert <floppym@gentoo.org> remmina-1.0.0_p20120309.ebuild,
+  remmina-9999.ebuild:
+  Update freerdp dep for #408809 by Rion.
+
+  18 Mar 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Reorder mainainters.
+
+*remmina-1.0.0_p20120309 (18 Mar 2012)
+
+  18 Mar 2012; Mike Gilbert <floppym@gentoo.org>
+  +remmina-1.0.0_p20120309.ebuild, remmina-9999.ebuild:
+  Add a snapshot to resolve #406025.
+
+  08 Mar 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml,
+  remmina-9999.ebuild:
+  Finish removing gtk3 use flag.
+
+  08 Mar 2012; Mike Gilbert <floppym@gentoo.org> remmina-1.0.0-r1.ebuild,
+  remmina-9999.ebuild:
+  Remove gtk3 use flag per ssuominen. Bug 404579.
+
+  21 Feb 2012; Mike Gilbert <floppym@gentoo.org> remmina-1.0.0-r1.ebuild,
+  remmina-9999.ebuild:
+  Fix dependencies for gtk3 use flag. Thanks to Daniel M. Weeks in bug 404579.
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> remmina-1.0.0-r1.ebuild,
+  remmina-9999.ebuild:
+  We only use libappindicator if building against gtk3.
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml,
+  remmina-1.0.0-r1.ebuild, remmina-9999.ebuild:
+  Add gtk3 use flag, bug 404579. Live ebuild is currently broken with USE=-gtk3.
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> -remmina-1.0.0.ebuild,
+  remmina-1.0.0-r1.ebuild, remmina-9999.ebuild:
+  Drop unique use flag. Bug 404579 by Daniel M. Weeks.
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> remmina-9999.ebuild:
+  Drop libdir sed in live ebuild; fixed upstream.
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> remmina-1.0.0-r1.ebuild:
+  Restore sed statement for bug 404587.
+
+  17 Feb 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  remove myself from metadata
+
+*remmina-1.0.0-r1 (17 Feb 2012)
+
+  17 Feb 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/remmina-1.0.0-desktop-file.patch,
+  +files/remmina-1.0.0-fix-desktop-file.patch,
+  +files/remmina-1.0.0-optional-gnome-keyring.patch, +remmina-1.0.0-r1.ebuild:
+  Backport patches for desktop file and optional gnome-keyring.Bugs 403879 and
+  404235.
+
+  17 Feb 2012; Mike Gilbert <floppym@gentoo.org> remmina-9999.ebuild:
+  Make gnome-keyring optional for bug 403879 by haarp.
+
+  17 Feb 2012; Mike Gilbert <floppym@gentoo.org> remmina-1.0.0.ebuild,
+  remmina-9999.ebuild:
+  Adjust avahi and vte dependencies for bug 404211. Thanks to CFuga for
+  reporting.
+
+*remmina-1.0.0 (15 Feb 2012)
+
+  15 Feb 2012; Mike Gilbert <floppym@gentoo.org> +remmina-1.0.0.ebuild:
+  Add official release.
+
+  15 Feb 2012; Mike Gilbert <floppym@gentoo.org> remmina-9999.ebuild:
+  Depend on GTK3 since the build system prefers that.
+
+  15 Feb 2012; Mike Gilbert <floppym@gentoo.org> remmina-9999.ebuild:
+  Remove invalid elog message.
+
+  15 Feb 2012; Mike Gilbert <floppym@gentoo.org> remmina-9999.ebuild:
+  Adjust freerdp dep.
+
+  15 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml,
+  remmina-9999.ebuild:
+  Add several dependencies and clean up cmake bits.
+
+  14 Feb 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  ayatana is now global per http://archives.gentoo.org/gentoo-
+  dev/msg_f2eb26947d0c86020625a9aeca6f25e4.xml
+
+  12 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Add myself to the maintainer list.
+
+  12 Feb 2012; Markos Chandras <hwoarang@gentoo.org> remmina-9999.ebuild:
+  fix ayatana build. Bug #392437
+
+  12 Feb 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml,
+  remmina-9999.ebuild:
+  Build system moved from autotools to cmake. Bug #392437
+
+  23 Nov 2011; Markos Chandras <hwoarang@gentoo.org> remmina-9999.ebuild:
+  Replace https with git protocol. Bug #391719
+
+  18 Nov 2011; Markos Chandras <hwoarang@gentoo.org> remmina-9999.ebuild:
+  Update git repo. Bug #390755 thanks to William Keaney <keaneyw@gmail.com>
+
+  17 Nov 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Change developer's nickname
+
+*remmina-9999 (24 Jun 2011)
+
+  24 Jun 2011; Markos Chandras <hwoarang@gentoo.org> +remmina-9999.ebuild:
+  Live ebuild thanks to Dan Weeks <dan@danweeks.net>. Bug #372443
+
+  21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> remmina-0.7.5.ebuild,
+  remmina-0.9.3.ebuild:
+  Fix slot-deps on gnome libs
+
+*remmina-0.9.3 (22 Jan 2011)
+
+  22 Jan 2011; Markos Chandras <hwoarang@gentoo.org> +remmina-0.9.3.ebuild:
+  Version bump. Bug #329377. Thanks to Rion <rion4ik@gmail.com> for the ebuild
+
+  27 May 2010; Tristan Heaven <nyhm@gentoo.org> remmina-0.7.5.ebuild,
+  metadata.xml:
+  Add xdmcp USE flag for x11-base/xorg-server[kdrive] dep
+
+*remmina-0.7.5 (26 May 2010)
+
+  26 May 2010; Tristan Heaven <nyhm@gentoo.org> +remmina-0.7.5.ebuild,
+  +metadata.xml:
+  Initial commit, based on Anthony Low's ebuild from bug #301069

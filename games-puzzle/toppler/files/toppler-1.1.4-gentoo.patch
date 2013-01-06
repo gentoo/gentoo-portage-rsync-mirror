@@ -1,0 +1,192 @@
+Only in toppler-1.1.4.orig: .txtsys.cc.swp
+diff -ru toppler-1.1.4.orig/Makefile.in toppler-1.1.4/Makefile.in
+--- toppler-1.1.4.orig/Makefile.in	2009-10-10 21:18:21.000000000 -0400
++++ toppler-1.1.4/Makefile.in	2010-11-02 12:49:48.345213363 -0400
+@@ -300,8 +300,8 @@
+   event.cc	   event.h	   \
+   qnxicon.c
+ 
+-pixmapsdir = $(datadir)/pixmaps
+-applicationsdir = $(datadir)/applications
++pixmapsdir = /usr/share/pixmaps
++applicationsdir = /usr/share/applications
+ pkgdocdir = $(docdir)/$(PACKAGE)
+ pkglocalstatedir = $(localstatedir)/$(PACKAGE)
+ dist_pixmaps_DATA = $(PACKAGE).xpm
+@@ -959,7 +959,7 @@
+ info-am:
+ 
+ install-data-am: install-applicationsDATA install-dist_pixmapsDATA \
+-	install-dist_pkgdataDATA install-dist_pkgdocDATA \
++	install-dist_pkgdataDATA \
+ 	install-dist_pkglocalstateDATA install-man
+ 	@$(NORMAL_INSTALL)
+ 	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+@@ -1022,7 +1022,7 @@
+ 	dvi-am html html-am info info-am install install-am \
+ 	install-applicationsDATA install-binPROGRAMS install-data \
+ 	install-data-am install-data-hook install-dist_pixmapsDATA \
+-	install-dist_pkgdataDATA install-dist_pkgdocDATA \
++	install-dist_pkgdataDATA \
+ 	install-dist_pkglocalstateDATA install-dvi install-dvi-am \
+ 	install-exec install-exec-am install-exec-hook install-html \
+ 	install-html-am install-info install-info-am install-man \
+diff -ru toppler-1.1.4.orig/decl.cc toppler-1.1.4/decl.cc
+--- toppler-1.1.4.orig/decl.cc	2009-10-10 19:46:06.000000000 -0400
++++ toppler-1.1.4/decl.cc	2010-11-02 12:49:48.345213363 -0400
+@@ -156,7 +156,7 @@
+ #ifndef WIN32
+   // look into actual directory
+   if (dcl_fileexists(name)) {
+-    snprintf(f, len, name);
++    snprintf(f, len, "%s", name);
+     return true;
+   }
+ 
+@@ -165,7 +165,7 @@
+ 
+   snprintf(n, 200, TOP_DATADIR"/%s", name);
+   if (dcl_fileexists(n)) {
+-    snprintf(f, len, n);
++    snprintf(f, len, "%s", n);
+     return true;
+   }
+ 
+diff -ru toppler-1.1.4.orig/highscore.cc toppler-1.1.4/highscore.cc
+--- toppler-1.1.4.orig/highscore.cc	2009-10-10 19:46:06.000000000 -0400
++++ toppler-1.1.4/highscore.cc	2010-11-02 12:49:48.346213175 -0400
+@@ -139,7 +139,7 @@
+     setegid(GameGroupID);
+     int lockfd;
+     
+-    while ((lockfd = open(HISCOREDIR "/" SCOREFNAME ".lck", O_CREAT | O_RDWR | O_EXCL, S_IRUSR | S_IWUSR)) == -1) {
++    while ((lockfd = open(HISCOREDIR "/" SCOREFNAME ".lck", O_CREAT | O_RDWR | O_EXCL, 0660)) == -1) {
+       dcl_wait();
+       scr_swap();
+     }
+diff -ru toppler-1.1.4.orig/level.cc toppler-1.1.4/level.cc
+--- toppler-1.1.4.orig/level.cc	2009-10-10 19:46:06.000000000 -0400
++++ toppler-1.1.4/level.cc	2010-11-02 12:49:48.346213175 -0400
+@@ -533,8 +533,8 @@
+   } while ((towersection)section != TSS_END);
+ }
+ 
+-char *
+-gen_passwd(int pwlen, char *allowed, int buflen, char *buf)
++static char *
++gen_passwd(int pwlen, const char *allowed, int buflen, char *buf)
+ {
+   static char passwd[PASSWORD_LEN + 1];
+   int len = buflen;
+@@ -1405,7 +1405,7 @@
+   Uint32 section_len;
+   int idx;
+ 
+-  if (!tower) return;
++  if (!name) return;
+ 
+   missionidx[nmission] = ftell(fmission);
+   nmission++;
+diff -ru toppler-1.1.4.orig/leveledit.cc toppler-1.1.4/leveledit.cc
+--- toppler-1.1.4.orig/leveledit.cc	2009-10-10 19:46:06.000000000 -0400
++++ toppler-1.1.4/leveledit.cc	2010-11-02 12:55:02.937193701 -0400
+@@ -307,7 +307,7 @@
+     r = row;
+     c = -col;
+ 
+-    static char *problemstr[NUM_TPROBLEMS] = {
++    static const char *problemstr[NUM_TPROBLEMS] = {
+ 	_("No problems found"),
+ 	_("No starting step"),
+ 	_("Start is blocked"),
+diff -ru toppler-1.1.4.orig/menu.cc toppler-1.1.4/menu.cc
+--- toppler-1.1.4.orig/menu.cc	2009-10-10 19:46:06.000000000 -0400
++++ toppler-1.1.4/menu.cc	2010-11-02 12:49:48.347212987 -0400
+@@ -1002,7 +1002,7 @@
+ }
+ 
+ 
+-unsigned char men_yn(char* s, bool defchoice, menuopt_callback_proc pr) {
++unsigned char men_yn(const char* s, bool defchoice, menuopt_callback_proc pr) {
+   Menusystem ms(s, pr, 0, SCREENHEI / 5);
+   ms.add_option(NULL,men_yn_option_no,SDLK_n);
+   ms.add_option(NULL,men_yn_option_yes,SDLK_y);
+diff -ru toppler-1.1.4.orig/menu.h toppler-1.1.4/menu.h
+--- toppler-1.1.4.orig/menu.h	2009-10-10 19:46:06.000000000 -0400
++++ toppler-1.1.4/menu.h	2010-11-02 12:49:48.347212987 -0400
+@@ -44,7 +44,7 @@
+ 
+ /* asks a yes/no question; return 0 if "no",
+    1 if "yes" */
+-unsigned char men_yn(char *s, bool defchoice, menuopt_callback_proc pr = 0);
++unsigned char men_yn(const char *s, bool defchoice, menuopt_callback_proc pr = 0);
+ 
+ 
+ /* shows string s, waits a certain time, (-1 = indefinitely),
+diff -ru toppler-1.1.4.orig/po/Makefile.in.in toppler-1.1.4/po/Makefile.in.in
+--- toppler-1.1.4.orig/po/Makefile.in.in	2007-07-19 10:27:04.000000000 -0400
++++ toppler-1.1.4/po/Makefile.in.in	2010-11-02 12:49:48.348212800 -0400
+@@ -21,7 +21,7 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = @datadir@
+-localedir = $(datadir)/locale
++localedir = /usr/share/locale
+ gettextsrcdir = $(datadir)/gettext/po
+ 
+ INSTALL = @INSTALL@
+diff -ru toppler-1.1.4.orig/toppler.desktop.in toppler-1.1.4/toppler.desktop.in
+--- toppler-1.1.4.orig/toppler.desktop.in	2009-10-10 19:46:06.000000000 -0400
++++ toppler-1.1.4/toppler.desktop.in	2010-11-02 12:49:48.348212800 -0400
+@@ -1,12 +1,11 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+-Categories=Application;Game;ArcadeGame;
++Categories=Game;ArcadeGame;
+ X-Desktop-File-Install-Version=0.2
+ Name=@FULLNAME@
+ Comment=A clone of the 'Nebulus' game on old 8 and 16 bit machines.
+ Comment[de]=Klon des alten Spiels 'Nebulus'
+ Comment[cs]=Klon hry 'Nebulus' z dob 8 a 16 bitovÃœch poÄÃ­taÄÅ¯.
+-Icon=@prefix@/pixmaps/@PACKAGE@.xpm
++Icon=@PACKAGE@
+ Exec=@prefix@/bin/toppler
+-Terminal=0
++Terminal=false
+ Type=Application
+diff -ru toppler-1.1.4.orig/txtsys.cc toppler-1.1.4/txtsys.cc
+--- toppler-1.1.4.orig/txtsys.cc	2009-10-10 19:46:06.000000000 -0400
++++ toppler-1.1.4/txtsys.cc	2010-11-02 12:57:19.306613950 -0400
+@@ -23,7 +23,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ 
+-textsystem::textsystem(char *title, menuopt_callback_proc pr)
++textsystem::textsystem(const char *title, menuopt_callback_proc pr)
+ {
+   if (title) {
+     this->title = new char[strlen(title)+1];
+@@ -52,7 +52,7 @@
+   if (title) delete [] title;
+ }
+ 
+-void textsystem::addline(char *line)
++void textsystem::addline(const char *line)
+ {
+   int olen;
+ 
+diff -ru toppler-1.1.4.orig/txtsys.h toppler-1.1.4/txtsys.h
+--- toppler-1.1.4.orig/txtsys.h	2009-10-10 19:46:06.000000000 -0400
++++ toppler-1.1.4/txtsys.h	2010-11-02 12:57:30.410531216 -0400
+@@ -25,9 +25,9 @@
+ class textsystem {
+ 
+ public:
+-  textsystem(char *title, menuopt_callback_proc pr);
++  textsystem(const char *title, menuopt_callback_proc pr);
+   ~textsystem();
+-  void addline(char *line);
++  void addline(const char *line);
+   void run();
+ 
+ private:

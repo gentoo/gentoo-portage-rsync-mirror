@@ -1,0 +1,18 @@
+# ChangeLog for net-voip/telepathy-rakia
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-rakia/ChangeLog,v 1.3 2012/12/31 15:54:22 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> telepathy-rakia-0.7.4.ebuild:
+  Add ~ppc64, wrt bug #449220
+
+*telepathy-rakia-0.7.4 (18 Jul 2012)
+*telepathy-rakia-0.6.8 (18 Jul 2012)
+*telepathy-rakia-0.6.6 (18 Jul 2012)
+
+  18 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +telepathy-rakia-0.6.6.ebuild, +telepathy-rakia-0.6.8.ebuild,
+  +telepathy-rakia-0.7.4.ebuild,
+  +files/telepathy-rakia-0.7.4-gio-linking.patch, +metadata.xml:
+  Rename net-voip/telepathy-sofiasip to net-voip/telepathy-rakia, and add 0.7.4
+  for empathy-3.4 (bug #403861, thanks to Olivier Crete for clarifying the
+  issue).

@@ -1,0 +1,12 @@
+Index: camlimages-3.0.2/configure.ac
+===================================================================
+--- camlimages-3.0.2.orig/configure.ac
++++ camlimages-3.0.2/configure.ac
+@@ -5,7 +5,6 @@ AM_INIT_AUTOMAKE([foreign])
+ 
+ # Check ocaml
+ AC_PROG_OCAML([3.08])
+-AC_PROG_OCAML_TOOL(OCAMLMKLIB, ocamlmklib)
+ AC_SUBST(OCAMLLIB)
+ 
+ # Check versions to build

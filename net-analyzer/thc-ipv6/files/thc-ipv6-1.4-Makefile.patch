@@ -1,0 +1,11 @@
+--- thc-ipv6-1.4/Makefile
++++ thc-ipv6-1.4/Makefile
+@@ -19,7 +19,7 @@
+ strip:	all
+ 	strip $(PROGRAMS) dnsdict6
+ 
+-install: all strip
++install: all
+ 	install -m0755 -d ${DESTDIR}${PREFIX}/bin
+ 	install -m0755 $(PROGRAMS) dnsdict6 ${DESTDIR}${PREFIX}/bin
+ 	install -m0755 -d ${DESTDIR}${MANPREFIX}/man8

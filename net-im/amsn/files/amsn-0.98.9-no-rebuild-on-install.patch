@@ -1,0 +1,22 @@
+--- trunk/amsn/Makefile.in	2012/05/18 19:28:05	12371
++++ trunk/amsn/Makefile.in	2012/05/28 19:41:51	12400
+@@ -259,7 +259,9 @@
+ 
+ 	ln -sf $(dstdir)/$(PACKAGE)/desktop-icons/48x48/apps/amsn.png $(DESTDIR)$(dstdir)/pixmaps/
+ 
+-install_libs:: rebuild_libs do_install_libs
++install_libs:: clean_libs
++	$(MAKE) rebuild_libs
++	$(MAKE) do_install_libs
+ 
+ do_install_libs:: $(LIBS_TO_INSTALL)
+ 	rm -Rf $(DESTDIR)$(libdir)/$(PACKAGE)
+@@ -276,7 +278,7 @@
+ 
+ rebuild_libs: RPATH+=$(libdir)/$(PACKAGE)
+ rebuild_libs: LIBDIR=$(libdir)/$(PACKAGE)
+-rebuild_libs: clean_libs $(LIBS_WITH_RPATH)
++rebuild_libs: $(LIBS_WITH_RPATH)
+ 
+ uninstall::
+ 	rm -Rf $(dstdir)/$(PACKAGE)

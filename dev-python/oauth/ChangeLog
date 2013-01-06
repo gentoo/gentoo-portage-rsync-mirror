@@ -1,0 +1,20 @@
+# ChangeLog for dev-python/oauth
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth/ChangeLog,v 1.4 2011/08/21 03:27:37 phajdan.jr Exp $
+
+  21 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> oauth-1.0.1.ebuild:
+  x86 stable wrt bug #378589
+
+  14 Aug 2011; Markos Chandras <hwoarang@gentoo.org> oauth-1.0.1.ebuild:
+  Stable on amd64 wrt bug #378589
+
+  14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  oauth-1.0.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+*oauth-1.0.1 (02 Mar 2010)
+
+  02 Mar 2010; Jesus Rivero <neurogeek@gentoo.org> +oauth-1.0.1.ebuild,
+  +metadata.xml:
+  Initial commit. Closes bug #290159. Thanks to Ravi for the report
+

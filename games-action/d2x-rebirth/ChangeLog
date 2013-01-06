@@ -1,0 +1,21 @@
+# ChangeLog for games-action/d2x-rebirth
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/ChangeLog,v 1.4 2012/04/25 16:25:14 jlec Exp $
+
+  25 Apr 2012; Justin Lecher <jlec@gentoo.org> d2x-rebirth-0.50.ebuild:
+  Drop unnessecary die
+
+  06 Jun 2011; Michael Sterrett <mr_bones_@gentoo.org> d2x-rebirth-0.50.ebuild:
+  EAPI=2; add use deps for physfs (bug #370187)
+
+  06 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
+  d2x-rebirth-0.50.ebuild:
+  Removing COPYING from dodoc to shut up repoman.
+
+*d2x-rebirth-0.50 (09 Jan 2007)
+
+  09 Jan 2007; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +d2x-rebirth-0.50.ebuild:
+  Initial import. Ebuild by Paul Bredbury <brebs@sent.com>. Closing bug
+  #137309.
+

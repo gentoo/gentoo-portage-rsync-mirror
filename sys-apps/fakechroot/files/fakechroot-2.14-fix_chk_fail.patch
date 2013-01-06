@@ -1,0 +1,25 @@
+# This patch fix the availablity of __chk_fail function.
+# patch from blueness@gentoo.org
+
+diff -ur fakechroot-2.14.orig//src/__realpath_chk.c fakechroot-2.14/src/__realpath_chk.c
+--- fakechroot-2.14.orig//src/__realpath_chk.c	2011-07-04 16:59:16.176441002 +0200
++++ fakechroot-2.14/src/__realpath_chk.c	2011-07-04 17:00:23.718441000 +0200
+@@ -24,10 +24,18 @@
+ 
+ #define _FORTIFY_SOURCE 2
+ #include <stddef.h>
++#include <stdlib.h>
+ #include "libfakechroot.h"
+ 
+ 
++#ifdef HAVE___CHK_FAIL
+ extern void __chk_fail (void) __attribute__((__noreturn__));
++#else
++__attribute__((__noreturn__)) void __chk_fail (void)
++{
++	exit(-1);
++}
++#endif
+ 
+ wrapper(__realpath_chk, char *, (const char * path, char * resolved, size_t resolvedlen))
+ {

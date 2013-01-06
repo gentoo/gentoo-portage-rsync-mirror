@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Data-HexDump
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-HexDump/ChangeLog,v 1.1 2012/10/29 08:02:39 patrick Exp $
+
+*Data-HexDump-0.02 (29 Oct 2012)
+
+  29 Oct 2012; Patrick Lauer <patrick@gentoo.org> +Data-HexDump-0.02.ebuild,
+  +metadata.xml:
+  Initial import, ebuilds borrowed from entoo / smokeping-overlay on github

@@ -1,0 +1,58 @@
+# ChangeLog for dev-python/pep8
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/ChangeLog,v 1.12 2012/12/23 09:54:01 radhermit Exp $
+
+*pep8-1.4 (23 Dec 2012)
+
+  23 Dec 2012; Tim Harder <radhermit@gentoo.org> +pep8-1.4.ebuild:
+  Version bump. Migrate to distutils-r1.
+
+  11 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pep8-1.3.3.ebuild:
+  Add ~ppc, wrt bug #416677
+
+  11 Dec 2012; Agostino Sarubbo <ago@gentoo.org> pep8-1.3.3.ebuild:
+  Add ~ppc64, wrt bug #416677
+
+*pep8-1.3.3 (13 Jul 2012)
+
+  13 Jul 2012; Patrick Lauer <patrick@gentoo.org> +pep8-1.3.3.ebuild,
+  -pep8-0.6.1.ebuild, -pep8-1.0.1.ebuild, -pep8-1.1.ebuild:
+  Bump for #426278
+
+*pep8-1.3 (16 Jun 2012)
+*pep8-1.2 (16 Jun 2012)
+
+  16 Jun 2012; Sebastian Pipping <sping@gentoo.org> +pep8-1.2.ebuild,
+  +pep8-1.3.ebuild:
+  Bump to 1.2 and 1.3
+
+  02 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> pep8-1.0.1.ebuild,
+  pep8-1.1.ebuild:
+  Fix various ebuild errors. Thanks to Arfrever for reporting
+
+*pep8-1.1 (29 May 2012)
+
+  29 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +pep8-1.1.ebuild:
+  Version bump wrt #418143 by Ian Delaney <johneed@hotmail.com>. Drop redundant
+  PYTHON_DEPEND, bump to eapi4, add missing DOCS, enable additional tests, use
+  github in SRC_URI
+
+  29 May 2012; Justin Lecher <jlec@gentoo.org> pep8-1.0.1.ebuild:
+  Added ~-linux keywords, tested by me
+
+  12 Apr 2012; Mike Gilbert <floppym@gentoo.org> pep8-1.0.1.ebuild:
+  Remove test from IUSE.
+
+*pep8-1.0.1 (11 Apr 2012)
+
+  11 Apr 2012; Jesus Rivero <neurogeek@gentoo.org> +pep8-1.0.1.ebuild:
+  Version bump
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> pep8-0.6.1.ebuild:
+  Changing python deps in preparation for 2.4 removal
+
+*pep8-0.6.1 (10 Jun 2011)
+
+  10 Jun 2011; Rafael G. Martins <rafaelmartins@gentoo.org> +pep8-0.6.1.ebuild,
+  +metadata.xml:
+  Initial commit.

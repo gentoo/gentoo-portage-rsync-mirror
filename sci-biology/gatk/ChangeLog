@@ -1,0 +1,33 @@
+# ChangeLog for sci-biology/gatk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gatk/ChangeLog,v 1.5 2012/09/30 17:17:21 weaver Exp $
+
+*gatk-1.6 (30 Sep 2012)
+
+  30 Sep 2012; Andrey Kislyuk <weaver@gentoo.org> -gatk-1.4.ebuild,
+  -gatk-1.5.ebuild, +gatk-1.6.ebuild:
+  Version bump, remove old, add git dep
+
+*gatk-1.5 (07 Apr 2012)
+
+  07 Apr 2012; Andrey Kislyuk <weaver@gentoo.org> -gatk-1.2.ebuild,
+  -gatk-1.3.ebuild, +gatk-1.5.ebuild:
+  Version bump, drop old
+
+*gatk-1.4 (29 Jan 2012)
+
+  29 Jan 2012; Andrey Kislyuk <weaver@gentoo.org> +gatk-1.4.ebuild:
+  Version bump, resolves bug 400885
+
+*gatk-1.3 (26 Dec 2011)
+
+  26 Dec 2011; Andrey Kislyuk <weaver@gentoo.org> +gatk-1.3.ebuild:
+  Version bump
+
+*gatk-9999 (31 Oct 2011)
+*gatk-1.2 (31 Oct 2011)
+
+  31 Oct 2011; Andrey Kislyuk <weaver@gentoo.org> +gatk-1.2.ebuild,
+  +gatk-9999.ebuild, +metadata.xml:
+  New package, ebuild written by me
+

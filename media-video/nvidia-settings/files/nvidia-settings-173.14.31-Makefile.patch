@@ -1,0 +1,100 @@
+diff --git a/Makefile b/Makefile
+index 5df7ea5..c183e25 100644
+--- a/Makefile
++++ b/Makefile
+@@ -102,10 +102,10 @@ LD_RUN_FLAG=-R/usr/X11R6/lib
+ else
+ ECHO=echo
+ define INSTALL_RULE
++	mkdir -p $(bindir)
+ 	$(INSTALL) -m 755 $(NVIDIA_SETTINGS) $(bindir)/$(NVIDIA_SETTINGS)
+ 	mkdir -p $(mandir)
+ 	$(INSTALL) -m 644 doc/$(MANPAGE) $(mandir)
+-	gzip -9f $(mandir)/$(MANPAGE)
+ endef
+ endif
+ 
+@@ -116,7 +116,7 @@ mandir = $(exec_prefix)/share/man/man1
+ X11_CFLAGS = $(X11_INC_DIRS)
+ 
+ GTK_CFLAGS := $(shell $(PKG_CONFIG) --cflags gtk+-2.0)
+-GTK_LDFLAGS := $(shell $(PKG_CONFIG) --libs gtk+-2.0)
++GTK_LIBS := $(shell $(PKG_CONFIG) --libs gtk+-2.0)
+ 
+ X11_LIBS := $(X11_LIB_DIRS) -Wl,-Bstatic -lXxf86vm -Wl,-Bdynamic -lX11 -lXext
+ 
+@@ -136,16 +136,16 @@ RELATIVE_SRCDIRS = \
+ 	src/gtk+-2.x \
+ 	src/libXNVCtrl \
+ 	src/libXNVCtrlAttributes \
+-	src/XF86Config-parser \
+-	samples
++	src/XF86Config-parser
+ 
+ 
+ SRCDIRS := $(addprefix $(CURDIR)/, $(RELATIVE_SRCDIRS))
+ 
+ INC_FLAGS := $(addprefix -I , $(RELATIVE_SRCDIRS))
+ 
+-ALL_CFLAGS = $(CFLAGS) $(LOCAL_CFLAGS) $(X11_CFLAGS) $(GTK_CFLAGS) $(INC_FLAGS)
+-ALL_LDFLAGS = $(LD_RUN_FLAG) $(LDFLAGS) $(GTK_LDFLAGS) $(X11_LIBS) -lm
++ALL_CFLAGS = -fPIC $(CFLAGS) $(LOCAL_CFLAGS) $(X11_CFLAGS) $(GTK_CFLAGS) $(INC_FLAGS)
++ALL_LDFLAGS = -fPIC $(LD_RUN_FLAG) $(LDFLAGS)
++ALL_LIBS = $(X11_LIBS) $(GTK_LIBS) -lm
+ 
+ CPPFLAGS = $(ALL_CFLAGS)
+ 
+@@ -236,10 +236,10 @@ $(XF86PARSER_LIB):
+ 	$(MAKE) NV_CFLAGS='$(NV_CFLAGS)' -C $(XF86PARSER_DIR)
+ 
+ $(XNVCTRL_LIB):
+-	$(MAKE) CFLAGS='$(ALL_CFLAGS)' LDFLAGS='$(ALL_LDFLAGS)' -C $(XNVCTRL_DIR)
++	$(MAKE) CFLAGS='$(ALL_CFLAGS)' LDFLAGS='$(ALL_LDFLAGS)' LIBS='$(ALL_LIBS)' -C $(XNVCTRL_DIR)
+ 
+ $(NVIDIA_SETTINGS): $(OBJS) $(XNVCTRL_LIB) $(XF86PARSER_LIB)
+-	$(CC) $(OBJS) $(ALL_CFLAGS) $(ALL_LDFLAGS) $(XNVCTRL_LIB) $(XF86PARSER_LIB) -o $@
++	$(CC) $(ALL_CFLAGS) $(ALL_LDFLAGS) $(OBJS) $(XNVCTRL_LIB) $(XF86PARSER_LIB) $(ALL_LIBS) -o $@
+ 
+ .PHONY: $(XF86PARSER_LIB) dist clean clobber
+ 
+diff --git a/src/XF86Config-parser/Makefile b/src/XF86Config-parser/Makefile
+index 721945d..49e4ac2 100644
+--- a/src/XF86Config-parser/Makefile
++++ b/src/XF86Config-parser/Makefile
+@@ -27,7 +27,8 @@ ifndef CC
+   CC = gcc
+ endif
+ 
+-CFLAGS = -Wall -g
++CFLAGS += -Wall
++CFLAGS ?= -g
+ 
+ ifdef NV_CFLAGS
+   CFLAGS += $(NV_CFLAGS)
+diff --git a/src/libXNVCtrl/Makefile b/src/libXNVCtrl/Makefile
+index 49ea8b2..b6eaf3f 100644
+--- a/src/libXNVCtrl/Makefile
++++ b/src/libXNVCtrl/Makefile
+@@ -1,4 +1,5 @@
+ RANLIB ?= ranlib
++CFLAGS += -fPIC
+ 
+ libXNVCtrl.a : libXNVCtrl.a(NVCtrl.o)
+ 	$(RANLIB) $@
+diff --git a/src/libXNVCtrlAttributes/NvCtrlAttributesVidMode.c b/src/libXNVCtrlAttributes/NvCtrlAttributesVidMode.c
+index 633c078..a65a8b4 100644
+--- a/src/libXNVCtrlAttributes/NvCtrlAttributesVidMode.c
++++ b/src/libXNVCtrlAttributes/NvCtrlAttributesVidMode.c
+@@ -211,10 +211,12 @@ NvCtrlInitVidModeAttributes(NvCtrlAttributePrivateHandle *h)
+ 
+     /* restore the original error handler, if we overrode it */
+ 
++#if defined(X_XF86VidModeGetGammaRampSize)
+     if (prev_error_handler) {
+         XSetErrorHandler(prev_error_handler);
+         prev_error_handler = NULL;
+     }
++#endif
+ 
+     return NULL;
+ 

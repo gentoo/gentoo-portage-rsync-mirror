@@ -1,0 +1,9 @@
+# ChangeLog for kde-misc/kover
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kover/ChangeLog,v 1.1 2012/12/10 16:10:30 creffett Exp $
+
+*kover-5 (10 Dec 2012)
+
+  10 Dec 2012; Chris Reffett <creffett@gentoo.org> +files/kover-4-cflags.patch,
+  +kover-5.ebuild, +metadata.xml:
+  New package wrt bug 249232

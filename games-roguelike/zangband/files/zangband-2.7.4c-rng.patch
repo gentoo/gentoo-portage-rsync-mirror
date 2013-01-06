@@ -1,0 +1,11 @@
+--- zangband/src/z-rand.c	2004-08-01 05:23:42.000000000 -0400
++++ zangband/src/z-rand.c	2008-03-29 22:47:41.188013957 -0400
+@@ -168,7 +168,7 @@
+ 			r = (Rand_state[j] += Rand_state[Rand_place]);
+ 
+ 			/* Hack -- extract a 28-bit "random" number */
+-			r = (r >> 4) / n;
++			r = ((r >> 4) & 0x0FFFFFFF) / n;
+ 
+ 			/* Advance the index */
+ 			Rand_place = j;

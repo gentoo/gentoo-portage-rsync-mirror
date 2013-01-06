@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/sword-family
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-family/ChangeLog,v 1.1 2009/01/11 00:13:35 beandog Exp $
+
+*sword-family-1.1 (11 Jan 2009)
+
+  11 Jan 2009; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-family-1.1.ebuild:
+  Initial commit
+

@@ -1,0 +1,76 @@
+# ChangeLog for net-misc/s3cmd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.17 2012/02/02 10:55:31 titanofold Exp $
+
+*s3cmd-1.0.1 (02 Feb 2012)
+
+  02 Feb 2012; Aaron W. Swenson <titanofold@gentoo.org> +s3cmd-1.0.1.ebuild,
+  metadata.xml:
+  New maintainer: Igor Testen. Version bump.
+
+  22 Dec 2011; Markus Meier <maekke@gentoo.org> s3cmd-1.0.0.ebuild:
+  x86 stable, bug #394047
+
+  16 Dec 2011; Richard Freeman <rich0@gentoo.org> s3cmd-1.0.0.ebuild:
+  amd64 stable - 394047
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118937
+
+  05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  s3cmd-0.9.9.91.ebuild, s3cmd-1.0.0.ebuild:
+  Fix dependencies, use Python 2 (bug #315841).
+
+*s3cmd-1.0.0 (14 Jan 2011)
+
+  14 Jan 2011; Thilo Bangert <bangert@gentoo.org> -s3cmd-0.9.8.4.ebuild,
+  -s3cmd-0.9.9.ebuild, +s3cmd-1.0.0.ebuild:
+  version bump - remove old
+
+  16 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  s3cmd-0.9.9.91.ebuild:
+  stable x86, bug 326641
+
+  06 Jul 2010; Markos Chandras <hwoarang@gentoo.org> s3cmd-0.9.9.91.ebuild:
+  Stable on amd64 wrt bug #326641
+
+*s3cmd-0.9.9.91 (25 Jan 2010)
+
+  25 Jan 2010; Thilo Bangert <bangert@gentoo.org> +s3cmd-0.9.9.91.ebuild:
+  version bump (#302113)
+
+  23 Feb 2009; Jeremy Olexa <darkside@gentoo.org> s3cmd-0.9.9.ebuild:
+  add ~amd64 kw, bug 259739
+
+*s3cmd-0.9.9 (19 Feb 2009)
+
+  19 Feb 2009; Thilo Bangert <bangert@gentoo.org> +s3cmd-0.9.9.ebuild:
+  version bump
+
+  02 Feb 2009; Thilo Bangert <bangert@gentoo.org> -s3cmd-0.9.4.ebuild,
+  -s3cmd-0.9.7.ebuild:
+  remove old/buggy versions
+
+*s3cmd-0.9.8.4 (30 Jan 2009)
+
+  30 Jan 2009; Thilo Bangert <bangert@gentoo.org> metadata.xml,
+  +s3cmd-0.9.8.4.ebuild:
+  version bump - fixes bug #241304 - assume maintainership
+
+*s3cmd-0.9.7 (22 Jun 2008)
+
+  22 Jun 2008; Jeremy Olexa <darkside@gentoo.org> +s3cmd-0.9.7.ebuild:
+  Version bump. bug #212010
+
+  12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Removing Josh Glover (jmglov, #206782) from metadata.xml.
+
+  13 Feb 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
+  add no-herd
+
+*s3cmd-0.9.4 (23 Sep 2007)
+
+  23 Sep 2007; Josh Glover <jmglov@gentoo.org> +metadata.xml,
+  +s3cmd-0.9.4.ebuild:
+  This package was submitted by Josh Glover in bug #193380
+

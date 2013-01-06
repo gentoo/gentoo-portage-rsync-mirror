@@ -1,0 +1,24 @@
+--- chironfs-1.1.1.orig/src/Makefile.am	2008-06-21 07:39:46.000000000 +0200
++++ chironfs-1.1.1/src/Makefile.am	2009-10-23 21:42:55.511789469 +0200
+@@ -4,7 +4,9 @@
+ chironfs_SOURCES = chironfs.c chiron-conf.c chirondbg.c chironfs.h chiron-types.h chironfn.c chironfn.h chironoper.h
+ chirctl_SOURCES = chirctl.c chirondbg.c chirctl.h chironfs.h chiron-types.h chironfn.c chironfn.h
+ if FREEBSD
+-OSLD=-pthread -liconv -lfuse -L/usr/local/lib
++OSLD=-liconv -lfuse -L/usr/local/lib
++chironfs_LDFLAGS = -pthread
++chirctl_LDFLAGS = -pthread
+ else
+ if NETBSD
+ OSLD=-lrefuse
+@@ -12,7 +14,8 @@
+ OSLD=-lfuse
+ endif
+ endif
+-chironfs_LDFLAGS = -lm ${OSLD}
++chironfs_LDADD = -lm ${OSLD}
+ chironfs_OBJSS = chironfs.o chiron-conf.o chirondbg.o chironfn.o
+-chirctl_LDFLAGS = -lm ${OSLD}
++chirctl_LDADD = -lm ${OSLD}
+ chirctl_OBJSS = chirctl.o chirondbg.o chironfn.o
++

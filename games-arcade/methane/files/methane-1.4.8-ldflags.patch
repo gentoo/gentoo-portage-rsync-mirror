@@ -1,0 +1,11 @@
+--- source/linux/makefile.old	2010-10-01 06:52:19.000000000 +0200
++++ source/linux/makefile	2010-10-01 06:52:51.000000000 +0200
+@@ -18,7 +18,7 @@
+ 	MainSource/misc.o MainSource/objlist.o MainSource/player.o MainSource/power.o MainSource/target.o \
+ 	MainSource/suck.o MainSource/weapon.o MainSource/sound.o MainData/snddata.o MainData/gfxdata.o MainData/gfxdata2.o \
+ 	MainData/gfxdata3.o MainData/mapdata.o MainLinux/font32.o MainLinux/doc.o MainLinux/main.o MainMikMod/audiodrv.o
+-	g++ ${CXXFLAGS} MainSource/gfxoff.o MainSource/baddie.o MainSource/bitdraw.o MainSource/bitgroup.o MainSource/bititem.o \
++	g++ $(LDFLAGS) ${CXXFLAGS} MainSource/gfxoff.o MainSource/baddie.o MainSource/bitdraw.o MainSource/bitgroup.o MainSource/bititem.o \
+ 	MainSource/boss.o MainSource/game.o MainSource/gasobj.o MainSource/global.o MainSource/goodie.o MainSource/maps.o \
+ 	MainSource/misc.o MainSource/objlist.o MainSource/player.o MainSource/power.o MainSource/target.o \
+ 	MainSource/suck.o MainSource/weapon.o MainSource/sound.o MainData/snddata.o MainData/gfxdata.o MainData/gfxdata2.o \

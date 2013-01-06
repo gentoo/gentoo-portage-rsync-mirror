@@ -1,0 +1,44 @@
+# ChangeLog for dev-python/iconvcodec
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iconvcodec/ChangeLog,v 1.12 2012/02/25 22:25:30 marienz Exp $
+
+  25 Feb 2012; Marien Zwart <marienz@gentoo.org> iconvcodec-1.1.2.ebuild:
+  Restrict pypy, see comment in the ebuild.
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> iconvcodec-1.1.2.ebuild:
+  Restricting jython
+
+  29 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  iconvcodec-1.1.2.ebuild:
+  Update EAPI. Fix dependencies. Support installation for multiple Python ABIs.
+
+  29 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -iconvcodec-1.1.1.ebuild:
+  Delete.
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> iconvcodec-1.1.2.ebuild:
+  Adding ~amd64 keyword
+
+  02 May 2008; Rob Cakebread <pythonhead@gentoo.org>
+  iconvcodec-1.1.2.ebuild:
+  Use berlios mirror. bug #218657
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
+
+  12 Jul 2006; Aron Griffis <agriffis@gentoo.org> iconvcodec-1.1.2.ebuild:
+  Mark 1.1.2 stable on ia64
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> iconvcodec-1.1.2.ebuild:
+  Mark 1.1.2 ~ia64
+
+*iconvcodec-1.1.2 (05 Dec 2003)
+
+  05 Dec 2003; Alastair Tse <liquidx@gentoo.org> iconvcodec-1.1.2.ebuild:
+  version bump
+
+*iconvcodec-1.1.1 (28 Jun 2003)
+
+  28 Jun 2003; Alastair Tse <liquidx@gentoo.org> iconvcodec-1.1.1.ebuild:
+  iconv codecs for python
+

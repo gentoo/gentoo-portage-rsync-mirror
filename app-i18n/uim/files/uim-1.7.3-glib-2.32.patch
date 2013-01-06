@@ -1,0 +1,21 @@
+commit d9c316e49a03dcd5736eb04396657cc369eb6215
+Author: Muneyuki Noguchi <nogu.dev@gmail.com>
+Date:   Sat Apr 21 14:49:18 2012 +0900
+
+    Fix compile error with glib 2.32.
+    
+    * notify/uim-libnotify.c
+      - Don't include glib/gconvert.h directly.
+
+diff --git a/notify/uim-libnotify.c b/notify/uim-libnotify.c
+index 414e74c..a6578a1 100644
+--- a/notify/uim-libnotify.c
++++ b/notify/uim-libnotify.c
+@@ -37,7 +37,6 @@
+ #include <stdarg.h>
+ #include <string.h>
+ #include <glib.h>
+-#include <glib/gconvert.h>
+ #include <libnotify/notify.h>
+ 
+ #include "uim.h"  /* for uim_bool */

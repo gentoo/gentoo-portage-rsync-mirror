@@ -1,0 +1,23 @@
+# ChangeLog for games-arcade/snake3d
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/snake3d/ChangeLog,v 1.5 2010/09/16 16:52:45 scarabeus Exp $
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> snake3d-0.9.ebuild:
+  virtual/glut -> media-libs/glut
+
+  24 Jul 2008; Kenneth Prugh <ken69267@gentoo.org> snake3d-0.9.ebuild:
+  amd64 stable, bug #232708
+
+  24 Jul 2008; Raúl Porcel <armin76@gentoo.org> snake3d-0.9.ebuild:
+  x86 stable wrt #232708
+
+  02 Apr 2007; Tristan Heaven <nyhm@gentoo.org>
+  +files/snake3d-0.9-build.patch, snake3d-0.9.ebuild:
+  keyword ~x86, bug #173092
+
+*snake3d-0.9 (31 Mar 2007)
+
+  31 Mar 2007; <tupone@gentoo.org> +files/snake3d-0.9-amd64.patch,
+  +metadata.xml, +snake3d-0.9.ebuild:
+  New package. Bug #117079 by roma1390
+

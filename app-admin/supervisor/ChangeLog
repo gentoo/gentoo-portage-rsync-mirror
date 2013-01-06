@@ -1,0 +1,48 @@
+# ChangeLog for app-admin/supervisor
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/supervisor/ChangeLog,v 1.9 2012/12/07 19:10:36 ulm Exp $
+
+  07 Dec 2012; Ulrich Müller <ulm@gentoo.org> supervisor-3.0_alpha10.ebuild,
+  supervisor-3.0_alpha12.ebuild, supervisor-3.0_beta1.ebuild:
+  Fix LICENSE, bugs 425876 and 444378.
+
+*supervisor-3.0_beta1 (13 Nov 2012)
+
+  13 Nov 2012; Patrick Lauer <patrick@gentoo.org> +supervisor-3.0_beta1.ebuild:
+  Bump
+
+  02 Aug 2012; Jesus Rivero <neurogeek@gentoo.org>
+  supervisor-3.0_alpha10.ebuild, supervisor-3.0_alpha12.ebuild:
+  Bumped to EAPI 4 and added xml(+)
+
+*supervisor-3.0_alpha12 (23 Apr 2012)
+
+  23 Apr 2012; Patrick Lauer <patrick@gentoo.org>
+  +supervisor-3.0_alpha12.ebuild:
+  Bump
+
+  01 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove myself as a maintainer.
+
+*supervisor-3.0_alpha10 (11 Sep 2011)
+
+  11 Sep 2011; Mike Gilbert <floppym@gentoo.org> -supervisor-3.0_alpha9.ebuild,
+  +supervisor-3.0_alpha10.ebuild:
+  Version bump.
+
+*supervisor-3.0_alpha9 (23 Sep 2010)
+
+  23 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -supervisor-3.0_alpha8.ebuild, +supervisor-3.0_alpha9.ebuild:
+  Version bump.
+
+  07 Jun 2010; Dirkjan Ochtman <djc@gentoo.org>
+  +files/3.0_alpha8-no-docs.patch, supervisor-3.0_alpha8.ebuild:
+  Prevent installation of doc files in /usr/share/doc directly (bug 315981).
+
+*supervisor-3.0_alpha8 (09 Mar 2010)
+
+  09 Mar 2010; Dirkjan Ochtman <djc@gentoo.org>
+  +supervisor-3.0_alpha8.ebuild, +files/conf.d, +files/init.d,
+  +metadata.xml:
+  Initial version of the package.

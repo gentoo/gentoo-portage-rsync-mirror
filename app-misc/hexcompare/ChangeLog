@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/hexcompare
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hexcompare/ChangeLog,v 1.1 2010/11/10 23:01:05 xmw Exp $
+
+*hexcompare-1.0.1 (10 Nov 2010)
+
+  10 Nov 2010; Michael Weber <xmw@gentoo.org> +hexcompare-1.0.1.ebuild,
+  +files/hexcompare-1.0.1.patch, +metadata.xml:
+  Initial import, fixes bug #344981, thanks to Alec Moskvin for the report.
+

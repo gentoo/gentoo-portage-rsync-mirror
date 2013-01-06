@@ -1,0 +1,21 @@
+# /etc/conf.d/vdr.softdevice:
+
+# Configuration for vdrplugin softdevice
+
+# Video-Device to use
+#   allowed values: dummy shm dfb fb xv vidix ...
+SOFTDEVICE_VIDEO_OUT="shm"
+
+# Video-Suboptions
+# read vdr -P softdevice --help
+#SOFTDEVICE_VIDEO_OUT_SUBOPTS=""
+
+
+# Audio-Device to use
+#   allowed values: dummy alsa ...
+#SOFTDEVICE_AUDIO_OUT="alsa"
+
+# Audio-Suboptions
+# read vdr -P softdevice --help
+#SOFTDEVICE_AUDIO_OUT_SUBOPTS=""
+

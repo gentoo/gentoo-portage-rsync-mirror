@@ -1,0 +1,86 @@
+# ChangeLog for dev-haskell/gtk2hs-buildtools
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/ChangeLog,v 1.17 2013/01/01 14:07:19 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  gtk2hs-buildtools-0.12.4-r1.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  gtk2hs-buildtools-0.12.4-r1.ebuild:
+  Add ~ia64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  gtk2hs-buildtools-0.12.4-r1.ebuild:
+  Add ~ppc64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  gtk2hs-buildtools-0.12.4-r1.ebuild:
+  Add ~ppc, wrt bug #449220
+
+*gtk2hs-buildtools-0.12.4-r1 (22 Dec 2012)
+
+  22 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/gtk2hs-buildtools-0.12.4-hashtables.patch,
+  +gtk2hs-buildtools-0.12.4-r1.ebuild:
+  Added ghc-7.6 compatibility
+
+*gtk2hs-buildtools-0.12.4 (25 Nov 2012)
+
+  25 Nov 2012; Mark Wright <gienah@gentoo.org> +gtk2hs-buildtools-0.12.4.ebuild:
+  Bump gtk2hs-buildtools to 0.12.4
+
+  25 Nov 2012; Mark Wright <gienah@gentoo.org>
+  +files/gtk2hs-buildtools-0.12.3.1-ghc-7.5.patch, +files/gtk2hs-buildtools-0.12
+  .3.1-remove-conditional-compilation-as-it-is-ignored-ghc-7.6.patch,
+  gtk2hs-buildtools-0.12.3.1.ebuild:
+  Patch gtk2hs-buildtools-0.12.3.1 for ghc 7.6.1
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gtk2hs-buildtools-0.12.3.1.ebuild:
+  x86 stable wrt bug #428932
+
+  13 Sep 2012; Agostino Sarubbo <ago@gentoo.org>
+  gtk2hs-buildtools-0.12.3.1.ebuild:
+  Stable for amd64, wrt bug #428932
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  gtk2hs-buildtools-0.12.0.ebuild, gtk2hs-buildtools-0.12.3-r3.ebuild,
+  gtk2hs-buildtools-0.12.3.1.ebuild:
+  move dev-haskell/gtk2hs-buildtools/gtk2hs-buildtools-0.12.0.ebuild ebuild to
+  mirror://hackage
+
+  16 Aug 2012; Andreas Schuerch <nativemad@gentoo.org>
+  gtk2hs-buildtools-0.12.3-r3.ebuild:
+  x86 stable, see bug 422025
+
+  04 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
+  gtk2hs-buildtools-0.12.3-r3.ebuild:
+  Stable on amd64 wrt bug #422025
+
+*gtk2hs-buildtools-0.12.3.1 (29 May 2012)
+
+  29 May 2012; Mark Wright <gienah@gentoo.org>
+  +gtk2hs-buildtools-0.12.3.1.ebuild:
+  Bump gtk2hs-buildtools to 0.12.3.1
+
+*gtk2hs-buildtools-0.12.3-r3 (13 May 2012)
+
+  13 May 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/gtk2hs-buildtools-0.12.3-workaround-UName.patch,
+  +gtk2hs-buildtools-0.12.3-r3.ebuild:
+  Version bump (ghc-7.4 support)
+
+  21 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  gtk2hs-buildtools-0.12.0.ebuild:
+  Stable on amd64 wrt bug #314059
+
+  12 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gtk2hs-buildtools-0.12.0.ebuild:
+  x86 stable wrt bug #314059
+
+*gtk2hs-buildtools-0.12.0 (09 May 2011)
+
+  09 May 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +gtk2hs-buildtools-0.12.0.ebuild, +metadata.xml:
+  Initial version. A helper to autogenerate haskell bindings for gtk.

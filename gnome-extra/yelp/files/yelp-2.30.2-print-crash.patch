@@ -1,0 +1,38 @@
+commit b1b83204de2eef17e746c82138325b997d1684fd
+Author: Vincent Untz <vuntz@gnome.org>
+Date:   Sun Feb 20 14:48:40 2011 +0100
+
+    Fix crash when printing a whole document
+    
+    We use g_strfreev() on an array with const strings. That's bad :-)
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=642808
+
+diff --git a/src/yelp-db-print.c b/src/yelp-db-print.c
+index b85eea6..6a48f84 100644
+--- a/src/yelp-db-print.c
++++ b/src/yelp-db-print.c
+@@ -477,17 +477,17 @@ dbprint_process (YelpDbprint *dbprint)
+ 	params_max += 20;
+ 	params = g_renew (gchar *, params, params_max);
+     }
+-    params[params_i++] = "db.chunk.extension";
++    params[params_i++] = g_strdup ("db.chunk.extension");
+     params[params_i++] = g_strdup ("\"\"");
+-    params[params_i++] = "db.chunk.info_basename";
++    params[params_i++] = g_strdup ("db.chunk.info_basename");
+     params[params_i++] = g_strdup ("\"index\"");
+-    params[params_i++] = "db.chunk.max_depth";
++    params[params_i++] = g_strdup ("db.chunk.max_depth");
+     params[params_i++] = g_strdup ("0");
+-    params[params_i++] = "db2html.navbar.top";
++    params[params_i++] = g_strdup ("db2html.navbar.top");
+     params[params_i++] = g_strdup ("0");
+-    params[params_i++] = "db2html.navbar.bottom";
++    params[params_i++] = g_strdup ("db2html.navbar.bottom");
+     params[params_i++] = g_strdup ("0");
+-    params[params_i++] = "db2html.sidenav";
++    params[params_i++] = g_strdup ("db2html.sidenav");
+     params[params_i++] = g_strdup ("0");
+ 
+     params[params_i] = NULL;

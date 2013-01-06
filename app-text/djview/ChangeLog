@@ -1,0 +1,65 @@
+# ChangeLog for app-text/djview
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.17 2012/10/11 07:42:04 blueness Exp $
+
+  11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> djview-4.8.ebuild:
+  stable ppc64, bug #414369
+
+  30 Sep 2012; Raúl Porcel <armin76@gentoo.org> djview-4.7.ebuild:
+  Move to ~alpha
+
+*djview-4.9 (20 Aug 2012)
+
+  20 Aug 2012; Jeroen Roovers <jer@gentoo.org> djview-4.8.ebuild,
+  +djview-4.9.ebuild:
+  Version bump. Set proper depend on x11-libs/qt-gui[dbus] (bug #420907).
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> djview-4.8.ebuild:
+  Marking djview-4.8 ppc for bug 414369
+
+  19 May 2012; Agostino Sarubbo <ago@gentoo.org> djview-4.8.ebuild:
+  Stable for x86, wrt bug #414369
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> djview-4.8.ebuild:
+  Stable for HPPA (bug #414369).
+
+  07 May 2012; Agostino Sarubbo <ago@gentoo.org> djview-4.8.ebuild:
+  Stable for amd64, wrt bug #414369
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> djview-4.7.ebuild,
+  djview-4.8.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  21 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> djview-4.7.ebuild,
+  djview-4.8.ebuild, +files/djview-4.8-qt48.patch:
+  Remove unnecessary djview4 blockers wrt updates/2Q-2012. Fix building with Qt
+  4.8 (upstream patch) wrt #401517 by Rafał Mużyło.
+
+  16 Jan 2012; Tobias Klausmann <klausman@gentoo.org> djview-4.7.ebuild:
+  Stable on alpha, bug #372589
+
+*djview-4.8 (12 Dec 2011)
+
+  12 Dec 2011; Peter Volkov <pva@gentoo.org> +djview-4.8.ebuild:
+  Version bump, bug #391117 wrt pavel sanda.
+
+  30 Aug 2011; Jeroen Roovers <jer@gentoo.org> djview-4.7.ebuild:
+  Stable for HPPA (bug #372589).
+
+  23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> djview-4.7.ebuild:
+  ppc/ppc64 stable wrt #372589
+
+  15 Jul 2011; Markus Meier <maekke@gentoo.org> djview-4.7.ebuild:
+  x86 stable, bug #372589
+
+  02 Jul 2011; Markos Chandras <hwoarang@gentoo.org> djview-4.7.ebuild:
+  Stable on amd64 wrt bug #372589
+
+  13 May 2011; Peter Volkov <pva@gentoo.org> djview-4.7.ebuild:
+  Require higher autoconf version, bug 357817#c3 wrt pavel sanda.
+
+*djview-4.7 (30 Apr 2011)
+
+  30 Apr 2011; Peter Volkov <pva@gentoo.org> +djview-4.7.ebuild, +metadata.xml:
+  New name for djview4. Version bump. Fixes bug #357817 thank pavel sanda for
+  report.

@@ -1,0 +1,18 @@
+# ChangeLog for net-analyzer/prelude-nessus
+# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nessus/ChangeLog,v 1.5 2012/10/07 13:07:33 ago Exp $
+
+  07 Oct 2012; Agostino Sarubbo <ago@gentoo.org> prelude-nessus-20021107.ebuild:
+  EAPI4 - ~amd64
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> prelude-nessus-20021107.ebuild:
+  Added to ~ppc.
+
+*prelude-nessus-20021107 (13 Aug 2003)
+
+  13 Aug 2003; Patrick Kursawe <phosphan@gentoo.org>
+  prelude-nessus-20021107.ebuild:
+  Initial import, suggested in bug 19673

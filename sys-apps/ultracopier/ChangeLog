@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/ultracopier
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ultracopier/ChangeLog,v 1.1 2011/01/06 00:24:33 hwoarang Exp $
+
+*ultracopier-0.2.0.16 (06 Jan 2011)
+
+  06 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  +ultracopier-0.2.0.16.ebuild, +metadata.xml:
+  Moved from sunrise overlay. Thanks to BRULE Herman
+  <alpha_one_x86@first-world.info> for the initial ebuild. Bug #292390
+

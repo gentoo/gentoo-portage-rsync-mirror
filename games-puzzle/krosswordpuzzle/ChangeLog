@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/krosswordpuzzle
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krosswordpuzzle/ChangeLog,v 1.1 2011/10/17 21:17:54 dilfridge Exp $
+
+*krosswordpuzzle-0.15.6.2.1259326 (17 Oct 2011)
+
+  17 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +krosswordpuzzle-0.15.6.2.1259326.ebuild, +metadata.xml:
+  New game, bug 381145.
+

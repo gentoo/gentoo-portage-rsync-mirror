@@ -1,0 +1,25 @@
+# ChangeLog for media-gfx/replicatorg
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/replicatorg/ChangeLog,v 1.3 2013/01/02 04:47:51 mattm Exp $
+
+*replicatorg-40 (02 Jan 2013)
+
+  02 Jan 2013; Matthew Marlowe <mattm@gentoo.org> +replicatorg-40.ebuild,
+  -replicatorg-37.ebuild:
+  Bump to replicatorg--0040 Note that this is the MBI version of replicatorg--
+  0040. Will provide sailfish version via useflag later when I have a full patch
+  for the sailfish changes. Removed obsolete ebuilds.
+
+*replicatorg-37-r1 (03 Aug 2012)
+
+  03 Aug 2012; Matthew Marlowe <mattm@gentoo.org> +replicatorg-37-r1.ebuild:
+  Fixes for some minor permissions issues.
+
+*replicatorg-37 (02 Aug 2012)
+
+  02 Aug 2012; Matthew Marlowe <mattm@gentoo.org> +replicatorg-37.ebuild,
+  +files/replicatorg, +metadata.xml:
+  Initial Commit - replicatorg is open source software and a required tool when
+  working with common 3d printers such as the makerbot replicator.
+  Unfortunately it is based on java and focused on cross platform binaries. But
+  the initial install here does work and isnt that bad for what it is. 

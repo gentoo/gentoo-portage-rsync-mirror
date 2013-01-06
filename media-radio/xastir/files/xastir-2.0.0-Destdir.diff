@@ -1,0 +1,24 @@
+--- config/Makefile.am.orig	2008-06-12 21:30:44.000000000 +0200
++++ config/Makefile.am	2009-06-06 18:03:32.000000000 +0200
+@@ -93,5 +93,5 @@
+ config_DATA = ${EXTRA_DIST}
+ 
+ install-exec-hook:
+-	rm -f \$(configdir)/nwsfz_ddmmyy.dbfawk
++	rm -f $(DESTDIR)$(configdir)/nwsfz_ddmmyy.dbfawk
+ 
+--- Makefile.am.old	2010-11-19 06:06:16.000000000 +0000
++++ Makefile.am	2010-11-19 06:07:34.000000000 +0000
+@@ -72,10 +72,10 @@
+ # documentation is FHS compliant.
+ 
+ install-exec-hook:
+-	-rm -rf ${pkgdatadir}/doc
++	-rm -rf ${DESTDIR}${pkgdatadir}/doc
+ 
+ install-data-hook:
+-	cd $(mapdir) && \
++	cd ${DESTDIR}$(mapdir) && \
+ 	rm -f CC_OpenStreetMap.png && \
+ 	$(LN_S) CC_OpenStreetMap_logo.png CC_OpenStreetMap.png
+  

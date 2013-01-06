@@ -1,0 +1,12 @@
+# ChangeLog for virtual/fam
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/fam/ChangeLog,v 1.2 2012/04/26 17:35:10 aballier Exp $
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> fam-0.ebuild:
+  keyword ~amd64-fbsd
+
+*fam-0 (06 Jan 2011)
+
+  06 Jan 2011; Samuli Suominen <ssuominen@gentoo.org> +fam-0.ebuild:
+  Moving old-style virtual to new-style.
+

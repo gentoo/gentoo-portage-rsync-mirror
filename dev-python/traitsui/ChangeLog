@@ -1,0 +1,26 @@
+# ChangeLog for dev-python/traitsui
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsui/ChangeLog,v 1.5 2012/12/06 17:39:31 bicatali Exp $
+
+  06 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> traitsui-4.2.0.ebuild:
+  Keyword amd64-linux and x86-linux
+
+*traitsui-4.2.0 (09 Oct 2012)
+
+  09 Oct 2012; Patrick Lauer <patrick@gentoo.org> +traitsui-4.2.0.ebuild:
+  Bump
+
+  22 Feb 2012; Patrick Lauer <patrick@gentoo.org> traitsui-4.0.1.ebuild,
+  traitsui-4.1.0.ebuild:
+  Restricting py 2.5
+
+*traitsui-4.1.0 (17 Jan 2012)
+
+  17 Jan 2012; Sébastien Fabbro <bicatali@gentoo.org> +traitsui-4.1.0.ebuild:
+  Version bump
+
+*traitsui-4.0.1 (03 Aug 2011)
+
+  03 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> +traitsui-4.0.1.ebuild,
+  +metadata.xml:
+  Initial import

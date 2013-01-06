@@ -1,0 +1,51 @@
+From eb3752eed13473c4db20aedec14eb28de914abf0 Mon Sep 17 00:00:00 2001
+From: Huzaifa Sidhpurwala <huzaifas@redhat.com>
+Date: Mon, 17 Dec 2012 22:11:46 +0000
+Subject: [PATCH] Do not leak clipboard to unauthenticated clients
+
+vino_server_clipboard_cb() in vino-server.c is the callback which is
+triggered when a clipboard copy event is fired.
+
+After doing some initial checks, (1. If there are any connected clients,
+2. If the server is on hold etc), it converts the text to UTF-8 and then
+passes it on to rfbSendServerCutText(). Here data is pasted to each
+client, without verifying if the client is authenticated.
+
+The patch checks if the client is authenticated and only then it allows
+the clipboard text to be sent to it.
+
+Fixes bug 678434. This is a security issue, and has been assigned
+CVE-2012-4429:
+http://www.openwall.com/lists/oss-security/2012/09/14/1
+---
+ server/libvncserver/rfbserver.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/server/libvncserver/rfbserver.c b/server/libvncserver/rfbserver.c
+index 2d143fa..7dfbff9 100644
+--- a/server/libvncserver/rfbserver.c
++++ b/server/libvncserver/rfbserver.c
+@@ -1522,7 +1522,8 @@ rfbSendBell(rfbScreenInfoPtr rfbScreen)
+ 
+ 
+ /*
+- * rfbSendServerCutText sends a ServerCutText message to all the clients.
++ * rfbSendServerCutText sends a ServerCutText message to all the authenticated
++ * clients.
+  */
+ 
+ void
+@@ -1534,6 +1535,10 @@ rfbSendServerCutText(rfbScreenInfoPtr rfbScreen,char *str, int len)
+ 
+     iterator = rfbGetClientIterator(rfbScreen);
+     while ((cl = rfbClientIteratorNext(iterator)) != NULL) {
++        /* Client is not authenticated, ignore. See GNOME bug 678434. */
++        if (cl->state != RFB_NORMAL)
++            continue;
++
+         sct.type = rfbServerCutText;
+         sct.length = Swap32IfLE(len);
+         if (WriteExact(cl, (char *)&sct,
+-- 
+1.8.0.2
+

@@ -1,0 +1,9 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Logic Analyzer and I/O Probe for the Microchip PICkit2
+HOMEPAGE=http://sourceforge.net/projects/pk2-la
+KEYWORDS=~ppc
+LICENSE=GPL-2
+RDEPEND=dev-python/pyusb dev-python/pygtk
+SLOT=0
+SRC_URI=mirror://sourceforge/pk2-la/pk2-la-1.0.tar.bz2
+_md5_=40790fc9f78029f3169250e3715f5f3f

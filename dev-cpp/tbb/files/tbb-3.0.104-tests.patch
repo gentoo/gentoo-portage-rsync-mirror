@@ -1,0 +1,11 @@
+--- build/Makefile.test.orig	2010-10-26 10:22:22.058506834 +1100
++++ build/Makefile.test	2010-10-26 10:22:38.370427924 +1100
+@@ -159,7 +159,7 @@
+ # If a component Y uses component X, then tests for Y should come after tests for X.
+ # Note that usually run_cmd is empty, and tests run directly
+ test_tbb_plain: $(TEST_PREREQUISITE) $(TASK_CPP_DIRECTLY_INCLUDED) $(TEST_TBB_PLAIN.EXE)
+-	$(run_cmd) ./test_tbb_version.$(TEST_EXT) $(args)
++	#$(run_cmd) ./test_tbb_version.$(TEST_EXT) $(args)
+         # Checking TBB version first to make sure the following testing has anything in it
+ 	$(run_cmd) ./test_assembly.$(TEST_EXT) $(args)
+ 	$(run_cmd) ./test_atomic.$(TEST_EXT) $(args)

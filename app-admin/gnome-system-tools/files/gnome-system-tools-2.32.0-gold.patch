@@ -1,0 +1,30 @@
+ src/time/Makefile.am |    2 +-
+ src/time/Makefile.in |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/time/Makefile.am b/src/time/Makefile.am
+index e9adaf4..eacd0d6 100644
+--- a/src/time/Makefile.am
++++ b/src/time/Makefile.am
+@@ -15,7 +15,7 @@ INCLUDES += $(GST_TOOL_CFLAGS) $(DBUS_CFLAGS)
+ CLEANFILES = $(GST_TOOL_CLEANFILES)
+ EXTRA_DIST = $(GST_TOOL_EXTRA_DIST)
+ 
+-time_admin_LDADD = $(GST_TOOL_LIBS) $(DBUS_LIBS) ./e-map/libemap.a
++time_admin_LDADD = $(GST_TOOL_LIBS) $(DBUS_LIBS) ./e-map/libemap.a -lm
+ time_admin_DEPENDENCIES = $(GST_TOOL_DEPENDENCIES) ./e-map/libemap.a
+ time_admin_SOURCES = \
+ 	time-tool.c	time-tool.h \
+diff --git a/src/time/Makefile.in b/src/time/Makefile.in
+index b6d917a..99dfb68 100644
+--- a/src/time/Makefile.in
++++ b/src/time/Makefile.in
+@@ -339,7 +339,7 @@ toolname = time
+ SUBDIRS = e-map
+ CLEANFILES = $(GST_TOOL_CLEANFILES)
+ EXTRA_DIST = $(GST_TOOL_EXTRA_DIST)
+-time_admin_LDADD = $(GST_TOOL_LIBS) $(DBUS_LIBS) ./e-map/libemap.a
++time_admin_LDADD = $(GST_TOOL_LIBS) $(DBUS_LIBS) ./e-map/libemap.a -lm
+ time_admin_DEPENDENCIES = $(GST_TOOL_DEPENDENCIES) ./e-map/libemap.a
+ time_admin_SOURCES = \
+ 	time-tool.c	time-tool.h \

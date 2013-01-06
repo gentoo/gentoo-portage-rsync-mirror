@@ -1,0 +1,21 @@
+#!/bin/bash
+# gcj-jdk installs /usr/bin/gcj-jdk symlink, depending on it would be circular
+# so we fallback to gcc-config discovery
+GIJ_BIN="/usr/bin/gij"
+if [[ ! -f ${GIJ_BIN} ]]; then
+	GIJ_BIN="$(gcc-config -B)/gij"
+fi
+if [[ ! -f ${GIJ_BIN} ]]; then
+	echo "gij not found! check that gcc is compiled with gcj flag"
+	exit 1
+fi
+# calling java-config would be an unnecessary slowdown here
+
+# we need to append user CLASSPATH otherwise it will be overriden by the -classpath parameter
+# this breaks e.g. bootstrap of ant-core
+ecj_cp="/usr/share/ecj-gcj-3.6/lib/ecj.jar"
+if [[ -n "${CLASSPATH}" ]]; then
+	ecj_cp="${ecj_cp}:${CLASSPATH}"
+fi
+
+${GIJ_BIN} -classpath "${ecj_cp}" org.eclipse.jdt.internal.compiler.batch.Main "${@}"

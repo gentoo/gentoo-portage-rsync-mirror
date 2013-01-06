@@ -1,0 +1,69 @@
+# ChangeLog for net-misc/dibbler
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.16 2012/07/12 18:54:58 hwoarang Exp $
+
+  12 Jul 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/dibbler-0.8.2-gcc47.patch, dibbler-0.8.2.ebuild:
+  Add gcc-4.7 patch. Bug #426342
+
+*dibbler-0.8.2 (15 May 2012)
+
+  15 May 2012; Markos Chandras <hwoarang@gentoo.org> +dibbler-0.8.2.ebuild:
+  version bump
+
+  15 May 2012; Markos Chandras <hwoarang@gentoo.org> dibbler-0.8.0.ebuild:
+  Fix doc useflag. Bug #395593
+
+  15 May 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add myself as maintainer
+
+  14 May 2012; Pacho Ramos <pacho@gentoo.org> -dibbler-0.4.1.ebuild,
+  -dibbler-0.6.1.ebuild, metadata.xml:
+  Drop maintainer as he will not take care of this stuff in the near future as
+  talked with him via mail. Drop old.
+
+*dibbler-0.8.0 (04 Dec 2011)
+
+  04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> +dibbler-0.8.0.ebuild:
+  non-maintainer version bump. Bug #382173
+
+  21 Sep 2011; Jeroen Roovers <jer@gentoo.org> dibbler-0.7.3.ebuild:
+  Stable for HPPA (bug #375539).
+
+  11 Sep 2011; Markus Meier <maekke@gentoo.org> dibbler-0.7.3.ebuild:
+  x86 stable, bug #375539
+
+  07 Sep 2011; Tony Vroon <chainsaw@gentoo.org> dibbler-0.7.3.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #375539 filed by Markos "hwoarang" Chandras.
+
+*dibbler-0.7.3 (25 Apr 2009)
+
+  25 Apr 2009; Patrick Lauer <patrick@gentoo.org> +dibbler-0.7.3.ebuild:
+  Bump to 0.7.3. Fixes #230173. Ebuild modifications by Petr Pisar.
+
+  14 Jan 2009; Mike Frysinger <vapier@gentoo.org> dibbler-0.6.1.ebuild:
+  Cleanup ebuild and fix building with newer glibc #240916 by Diego E.
+  Pettenò.
+
+*dibbler-0.6.1 (26 Sep 2007)
+
+  26 Sep 2007; Guy Martin <gmsoft@gentoo.org> +dibbler-0.6.1.ebuild:
+  Version bump. Fix #166013.
+
+  28 Apr 2007; Torsten Veller <tove@gentoo.org> dibbler-0.4.1.ebuild:
+  Fix *initd, *confd and *envd calls (#173884, #174266)
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+  16 May 2006; Guy Martin <gmsoft@gentoo.org> +files/dibbler-gcc-4.1.patch,
+  dibbler-0.4.1.ebuild:
+  Added fix for gcc-4.1 (#133322).
+
+*dibbler-0.4.1 (20 Sep 2005)
+
+  20 Sep 2005; Guy Martin <gmsoft@gentoo.org> +files/dibbler-client,
+  +files/dibbler-relay, +files/dibbler-server, +metadata.xml,
+  +dibbler-0.4.1.ebuild:
+  Initial import. Ebuild made by Tomasz Mrugalski <thomson@klub.com.pl>.

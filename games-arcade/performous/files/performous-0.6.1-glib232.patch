@@ -1,0 +1,10 @@
+--- game/unicode.cc.old	2012-06-27 13:34:43.485706157 +0200
++++ game/unicode.cc	2012-06-27 13:34:56.825769500 +0200
+@@ -2,7 +2,6 @@
+ 
+ #include <boost/scoped_ptr.hpp>
+ #include <glibmm/ustring.h>
+-#include <glib/gconvert.h>
+ #include <sstream>
+ #include <stdexcept>
+ 

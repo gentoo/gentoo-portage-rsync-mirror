@@ -1,0 +1,21 @@
+# /etc/conf.d/ocsigen : config file for /etc/init.d/ocsigen
+
+# Path for the ocsigen binary
+
+DAEMON=/usr/bin/ocsigen
+
+# Name for ocsigen daemon
+
+NAME=ocsigen
+
+# Locstion of Ocsigen config file
+
+CONF=/etc/$NAME/ocsigen.conf
+
+# PID file location
+
+PIDFILE=/var/run/$NAME.pid
+
+# Add here any additional aptions for ocsigen
+
+OCSIGEN_OPTS=""

@@ -1,0 +1,44 @@
+Make sure we ask alsa what libraries it needs rather than assuming.
+
+http://bugs.gentoo.org/97628
+
+Changes for configure.ac:
+	--------------------------------------
+	 		[snd_pcm_open],
+	 		[ac_lib_alsa=yes],
+	 		[ac_lib_alsa=no],
+	-		[-lm]
+	+		[`pkg-config alsa --libs`]
+	 	)
+	 	if test $ac_lib_alsa = yes; then
+	 		AC_MSG_CHECKING([for ALSA])
+	--------------------------------------
+	 		[snd_pcm_open],
+	 		[],
+	 		[AC_MSG_ERROR([the ALSA library is missing])],
+	-		[-lm]
+	+		[`pkg-config alsa --libs`]
+	 	)
+	 	AC_MSG_CHECKING([for ALSA version])
+	 	AC_TRY_COMPILE([
+
+--- configure
++++ configure
+@@ -8298,7 +8298,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lasound -lm
++LIBS="-lasound `pkg-config alsa --libs`
+ 	 $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+@@ -8428,7 +8428,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lasound -lm
++LIBS="-lasound `pkg-config alsa --libs`
+ 	 $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */

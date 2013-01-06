@@ -1,0 +1,15 @@
+# abrtd command-line options
+# Default: ""
+ABRTD_OPTS=""
+
+# Run abrt-harvest-vmcore to make new kdump dumps available for abrtd
+START_VMCORE="yes"
+
+# Install abrt-ccpp hook to watch for segfaults
+START_CCPP="yes"
+
+# Start abrt-dump-oops to watch for kernel oops
+START_OOPS="yes"
+# abrt-dump-oops command-line options
+# Default: "-rwxD /var/log/messages"
+OOPS_OPTS="-rwxD /var/log/messages"

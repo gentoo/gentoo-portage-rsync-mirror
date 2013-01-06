@@ -1,0 +1,46 @@
+# ChangeLog for sci-mathematics/msieve
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/ChangeLog,v 1.9 2012/11/30 09:23:26 patrick Exp $
+
+  30 Nov 2012; Patrick Lauer <patrick@gentoo.org> +files/reduce-printf2.patch,
+  +files/reduce-printf3.patch, msieve-1.50-r4.ebuild:
+  Reducing output verbosity some more
+
+*msieve-1.50-r4 (30 Nov 2012)
+
+  30 Nov 2012; Patrick Lauer <patrick@gentoo.org> +files/fix-version.patch,
+  +files/fix-version2.patch, +msieve-1.50-r4.ebuild, -msieve-1.50-r1.ebuild,
+  -msieve-1.50-r2.ebuild, -msieve-1.50-r3.ebuild, -msieve-1.50.ebuild:
+  Fix displayed versioning
+
+  28 Nov 2012; Patrick Lauer <patrick@gentoo.org> msieve-1.50-r3.ebuild:
+  Removing erroneous dep
+
+*msieve-1.50-r3 (27 Nov 2012)
+
+  27 Nov 2012; Patrick Lauer <patrick@gentoo.org> +files/reduce-printf.patch,
+  +msieve-1.50-r3.ebuild:
+  More improvements, quiet output for nfs
+
+*msieve-1.50-r2 (25 Nov 2012)
+
+  25 Nov 2012; Patrick Lauer <patrick@gentoo.org> +msieve-1.50-r2.ebuild:
+  Build system improvements
+
+*msieve-1.50-r1 (19 Nov 2012)
+
+  19 Nov 2012; Patrick Lauer <patrick@gentoo.org> +msieve-1.50-r1.ebuild:
+  Moving headers to fix build failures in other apps #443870
+
+  16 Nov 2012; Patrick Lauer <patrick@gentoo.org> msieve-1.50.ebuild:
+  Adding mpi support
+
+  16 Nov 2012; Patrick Lauer <patrick@gentoo.org> metadata.xml,
+  msieve-1.50.ebuild:
+  Adding ecm support
+
+*msieve-1.50 (16 Nov 2012)
+
+  16 Nov 2012; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +msieve-1.50.ebuild:
+  Initial import, ebuild by me

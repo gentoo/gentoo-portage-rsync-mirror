@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm prepare
+DEPEND=>=x11-libs/xosd-2.2.4 =dev-lang/python-2*
+DESCRIPTION=PyOSD is a python module for displaying text on your X display, much like the 'On Screen Displays' used on TVs and some monitors.
+EAPI=3
+HOMEPAGE=http://ichi2.net/pyosd/
+IUSE=examples
+KEYWORDS=amd64 ~ia64 ppc x86
+LICENSE=GPL-2
+RDEPEND=>=x11-libs/xosd-2.2.4 =dev-lang/python-2*
+SLOT=0
+SRC_URI=http://ichi2.net/pyosd/pyosd-0.2.14.tar.gz
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=52a352f5741164ec0c1844f5320673fd

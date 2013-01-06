@@ -1,0 +1,65 @@
+# ChangeLog for net-analyzer/sinfo
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/ChangeLog,v 1.14 2012/10/08 20:21:44 radhermit Exp $
+
+  08 Oct 2012; Tim Harder <radhermit@gentoo.org> sinfo-0.0.47.ebuild:
+  Add blocker against sys-cluster/slurm (bug #437476 by Diego Elio Pettenò).
+
+  08 Oct 2012; Tim Harder <radhermit@gentoo.org> -sinfo-0.0.46.ebuild:
+  Remove old.
+
+  16 Jul 2012; Tim Harder <radhermit@gentoo.org> -sinfo-0.0.45.ebuild:
+  Remove old.
+
+*sinfo-0.0.47 (16 Jul 2012)
+
+  16 Jul 2012; Tim Harder <radhermit@gentoo.org> +sinfo-0.0.47.ebuild:
+  Version bump.
+
+  14 May 2012; Tim Harder <radhermit@gentoo.org> -sinfo-0.0.44.ebuild:
+  Remove old.
+
+*sinfo-0.0.46 (14 May 2012)
+
+  14 May 2012; Tim Harder <radhermit@gentoo.org> +sinfo-0.0.46.ebuild:
+  Version bump.
+
+*sinfo-0.0.45 (16 Mar 2012)
+
+  16 Mar 2012; Tim Harder <radhermit@gentoo.org> +sinfo-0.0.45.ebuild:
+  Version bump.
+
+  13 Dec 2011; Tim Harder <radhermit@gentoo.org> -sinfo-0.0.43-r1.ebuild,
+  -files/sinfo-0.0.43-librpc-linking.patch,
+  -files/sinfo-0.0.43-ncurses-m4.patch:
+  Remove old.
+
+*sinfo-0.0.44 (13 Dec 2011)
+
+  13 Dec 2011; Tim Harder <radhermit@gentoo.org> +sinfo-0.0.44.ebuild:
+  Version bump.
+
+*sinfo-0.0.43-r1 (28 Nov 2011)
+
+  28 Nov 2011; Tim Harder <radhermit@gentoo.org> -sinfo-0.0.43.ebuild,
+  +sinfo-0.0.43-r1.ebuild, +files/sinfod.confd, +files/sinfod.initd,
+  -files/sinfo.confd, -files/sinfo.initd:
+  Revbump and remove old. Update and rename init script.
+
+  27 Nov 2011; Tim Harder <radhermit@gentoo.org> sinfo-0.0.43.ebuild:
+  Remove multiple static-libs settings.
+
+  27 Nov 2011; Tim Harder <radhermit@gentoo.org> sinfo-0.0.43.ebuild:
+  Remove forgotten in source build setting.
+
+  27 Nov 2011; Tim Harder <radhermit@gentoo.org> sinfo-0.0.43.ebuild:
+  Fix usage of autotool-utils (bug #392157).
+
+*sinfo-0.0.43 (26 Nov 2011)
+
+  26 Nov 2011; Tim Harder <radhermit@gentoo.org> +sinfo-0.0.43.ebuild,
+  +files/sinfo-0.0.43-librpc-linking.patch,
+  +files/sinfo-0.0.43-ncurses-m4.patch, +files/sinfo.confd, +files/sinfo.initd,
+  +metadata.xml:
+  Initial import.
+

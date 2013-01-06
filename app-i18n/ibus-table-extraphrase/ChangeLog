@@ -1,0 +1,56 @@
+# ChangeLog for app-i18n/ibus-table-extraphrase
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-extraphrase/ChangeLog,v 1.9 2012/05/03 19:24:28 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org>
+  ibus-table-extraphrase-1.1.0.20090415.ebuild,
+  ibus-table-extraphrase-1.2.0.20100305.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*ibus-table-extraphrase-1.2.0.20100305 (13 Mar 2010)
+
+  13 Mar 2010; MATSUU Takuto <matsuu@gentoo.org>
+  -ibus-table-extraphrase-1.1.0.20090327.ebuild,
+  -ibus-table-extraphrase-1.1.0.20090406.ebuild,
+  +ibus-table-extraphrase-1.2.0.20100305.ebuild:
+  Version bumped. Removed old versions.
+
+*ibus-table-extraphrase-1.1.0.20090415 (23 Apr 2009)
+
+  23 Apr 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-table-extraphrase-1.1.0.20090415.ebuild:
+  Version bumped.
+
+*ibus-table-extraphrase-1.1.0.20090406 (12 Apr 2009)
+
+  12 Apr 2009; MATSUU Takuto <matsuu@gentoo.org>
+  -ibus-table-extraphrase-1.1.0.20090219.ebuild,
+  +ibus-table-extraphrase-1.1.0.20090406.ebuild:
+  Version bumped. Removed old versions.
+
+*ibus-table-extraphrase-1.1.0.20090327 (02 Apr 2009)
+
+  02 Apr 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-table-extraphrase-1.1.0.20090327.ebuild:
+  Version bumped.
+
+  31 Mar 2009; MATSUU Takuto <matsuu@gentoo.org>
+  -ibus-table-extraphrase-0.1.2.20090102.ebuild:
+  Removed old version.
+
+*ibus-table-extraphrase-1.1.0.20090219 (25 Feb 2009)
+
+  25 Feb 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-table-extraphrase-1.1.0.20090219.ebuild:
+  Version bumped.
+
+  05 Feb 2009; MATSUU Takuto <matsuu@gentoo.org>
+  ibus-table-extraphrase-0.1.2.20090102.ebuild:
+  Fixed dependency.
+
+*ibus-table-extraphrase-0.1.2.20090102 (02 Jan 2009)
+
+  02 Jan 2009; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
+  +ibus-table-extraphrase-0.1.2.20090102.ebuild:
+  Initial import.
+

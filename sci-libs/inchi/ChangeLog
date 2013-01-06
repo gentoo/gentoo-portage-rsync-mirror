@@ -1,0 +1,26 @@
+# ChangeLog for sci-libs/inchi
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/inchi/ChangeLog,v 1.5 2012/12/11 17:47:40 ago Exp $
+
+  11 Dec 2012; Agostino Sarubbo <ago@gentoo.org> inchi-1.04.ebuild:
+  Add ~ppc, wrt bug #360573
+
+  11 Dec 2012; Agostino Sarubbo <ago@gentoo.org> inchi-1.04.ebuild:
+  Add ~ppc64, wrt bug #360573
+
+  24 Oct 2012; Justin Lecher <jlec@gentoo.org> inchi-1.04.ebuild,
+  +files/inchi-1.04-static.patch:
+  Imported bug fix for #439440 (Add USE=static-libs), kindly prepared by Reinis
+  Danne
+
+*inchi-1.04 (04 Mar 2012)
+
+  04 Mar 2012; Justin Lecher <jlec@gentoo.org> +inchi-1.04.ebuild,
+  metadata.xml:
+  Import Version Bump from sci overlay prepared by Reinis Danne
+
+*inchi-1.03 (26 Mar 2011)
+
+  26 Mar 2011; Justin Lecher <jlec@gentoo.org> +inchi-1.03.ebuild,
+  +files/inchi-1.03-shared.patch, +metadata.xml:
+  New addition, mainly written by rei4dan

@@ -1,0 +1,26 @@
+#Index: ChangeLog
+#===================================================================
+#--- ChangeLog	(revision 4594)
+#+++ ChangeLog	(revision 4595)
+#@@ -1,3 +1,7 @@
+#+2012-03-11  Jean-Louis Martineau <martineau@zmanda.com>
+#+	* common-src/glib-util.c: g_thread_supported always return TRUE on 
+#+	  newer version.
+#+
+# 2012-03-10  Jean-Louis Martineau <martineau@zmanda.com>
+# 	* common-src/glib-util.c, common-src/glib-util.h: Remove
+# 	  g_queue_free_full.
+Index: common-src/glib-util.c
+===================================================================
+--- common-src/glib-util.c	(revision 4594)
++++ common-src/glib-util.c	(revision 4595)
+@@ -42,7 +42,9 @@
+      * is initialized) */
+ #ifdef HAVE_LIBCURL
+ # ifdef G_THREADS_ENABLED
++#  if (GLIB_MAJOR_VERSION < 2 || (GLIB_MAJOR_VERSION == 2 && GLIB_MINOR_VERSION < 31))
+     g_assert(!g_thread_supported()); /* assert threads aren't initialized yet */
++#  endif
+ # endif
+     g_assert(curl_global_init(CURL_GLOBAL_ALL) == 0);
+ #endif

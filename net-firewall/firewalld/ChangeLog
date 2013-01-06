@@ -1,0 +1,42 @@
+# ChangeLog for net-firewall/firewalld
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.10 2012/12/17 19:33:23 mgorny Exp $
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> firewalld-0.2.9-r1.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
+
+  21 Nov 2012; Doug Goldstein <cardoe@gentoo.org> -firewalld-0.2.9.ebuild,
+  -files/firewalld.module:
+  Remove older version now that we've got a newer OpenRC released.
+
+*firewalld-0.2.9-r1 (18 Nov 2012)
+
+  18 Nov 2012; Doug Goldstein <cardoe@gentoo.org> firewalld-0.2.9.ebuild,
+  +firewalld-0.2.9-r1.ebuild:
+  OpenRC now carries support for FirewallD, handle it.
+
+  10 Nov 2012; Doug Goldstein <cardoe@gentoo.org> files/firewalld.module:
+  Fix the OpenRC module.
+
+  08 Nov 2012; Doug Goldstein <cardoe@gentoo.org> firewalld-0.2.9.ebuild:
+  Fix the icon path yet again.
+
+  07 Nov 2012; Doug Goldstein <cardoe@gentoo.org> firewalld-0.2.9.ebuild:
+  Rebased patchset to fix icon and systemd issues.
+
+  07 Nov 2012; Doug Goldstein <cardoe@gentoo.org> firewalld-0.2.9.ebuild,
+  +files/firewalld.module, files/firewalld.init:
+  Simplify init script and depend on D-Bus being started. Add the network
+  module that newer OpenRC's will ship with for older OpenRC support.
+
+  06 Nov 2012; Doug Goldstein <cardoe@gentoo.org> firewalld-0.2.9.ebuild:
+  Fix GSettings schema not being installed.
+
+  04 Nov 2012; Doug Goldstein <cardoe@gentoo.org> firewalld-0.2.9.ebuild:
+  Keyword for ~x86
+
+*firewalld-0.2.9 (02 Nov 2012)
+
+  02 Nov 2012; Doug Goldstein <cardoe@gentoo.org> +firewalld-0.2.9.ebuild,
+  +files/firewalld.init, +metadata.xml:
+  Initial version of firewalld. Let's see how this works out.

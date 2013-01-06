@@ -1,0 +1,22 @@
+diff -u a/panel.h b/panel.h
+--- a/panel.h	2012-02-07 05:11:48.000000000 +0100
++++ b/panel.h	2012-07-16 17:36:40.951304995 +0200
+@@ -21,6 +21,7 @@
+ #include <stdlib.h>
+ #include <signal.h>
+ #include <iostream>
++#include <unistd.h>
+ #include <string>
+ 
+ #ifdef NEEDS_BASENAME
+diff -u a/slimlock.cpp b/slimlock.cpp
+--- a/slimlock.cpp	2012-02-07 05:11:48.000000000 +0100
++++ b/slimlock.cpp	2012-07-16 17:36:23.796304587 +0200
+@@ -21,6 +21,7 @@
+ #include <pthread.h>
+ #include <err.h>
+ #include <signal.h>
++#include <unistd.h>
+ 
+ #include "cfg.h"
+ #include "util.h"

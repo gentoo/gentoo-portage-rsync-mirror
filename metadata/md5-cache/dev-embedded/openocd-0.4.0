@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install setup unpack
+DEPEND=usb? ( =virtual/libusb-0* ) presto? ( dev-embedded/libftd2xx ) ftd2xx? ( dev-embedded/libftd2xx ) ftdi? ( dev-embedded/libftdi )
+DESCRIPTION=OpenOCD - Open On-Chip Debugger
+HOMEPAGE=http://openocd.sourceforge.net
+IUSE=ftd2xx ftdi parport presto usb
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=usb? ( =virtual/libusb-0* ) presto? ( dev-embedded/libftd2xx ) ftd2xx? ( dev-embedded/libftd2xx ) ftdi? ( dev-embedded/libftdi )
+RESTRICT=strip
+SLOT=0
+SRC_URI=mirror://berlios/openocd/openocd-0.4.0.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=5baf129926570ace2d58bd3617e7e2d9

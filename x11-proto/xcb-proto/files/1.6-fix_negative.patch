@@ -1,0 +1,14 @@
+diff -Naur src/xproto.xml src/xproto.xml
+--- src/xproto.xml	2009-12-02 10:06:59.000000000 +0100
++++ src/xproto.xml	2010-10-21 19:35:57.938000001 +0200
+@@ -1296,8 +1296,8 @@
+     <reply>
+       <field type="BOOL" name="same_screen" />
+       <field type="WINDOW" name="child" altenum="Window" />
+-      <field type="CARD16" name="dst_x" />
+-      <field type="CARD16" name="dst_y" />
++      <field type="INT16" name="dst_x" />
++      <field type="INT16" name="dst_y" />
+     </reply>
+   </request>
+ 

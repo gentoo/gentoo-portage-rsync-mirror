@@ -1,0 +1,59 @@
+# ChangeLog for app-office/texstudio
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.8 2012/11/05 18:57:07 jlec Exp $
+
+*texstudio-2.5 (05 Nov 2012)
+
+  05 Nov 2012; Justin Lecher <jlec@gentoo.org> +texstudio-2.5.ebuild,
+  +files/texstudio-2.5-hunspell.patch, +files/texstudio-2.5-qtsingle.patch,
+  +files/texstudio-2.5-viewers-use-xdg-open.patch:
+  Version Bump, #439816
+
+*texstudio-2.4 (05 Sep 2012)
+
+  05 Sep 2012; Justin Lecher <jlec@gentoo.org> -texstudio-2.2.ebuild,
+  -texstudio-2.3.ebuild, texstudio-2.3-r1.ebuild, +texstudio-2.4.ebuild,
+  +files/texstudio-2.4-desktop.patch, +files/texstudio-2.4-hunspell.patch:
+  Version Bump; Update desktop mime db; drop old
+
+  18 Jul 2012; Justin Lecher <jlec@gentoo.org> texstudio-2.3.ebuild:
+  Drop patch for gcc-4.7 from all but last revision
+
+*texstudio-2.3-r1 (15 Jul 2012)
+
+  15 Jul 2012; Justin Lecher <jlec@gentoo.org> +texstudio-2.3-r1.ebuild,
+  files/texstudio-2.3-gcc47.patch, +files/texstudio-2.3-test.patch,
+  +files/texstudio-2.3-xdg-open.patch:
+  Fix compilation with gg-4.6 whichw as broken by gcc-4.7 patch, #422619;
+  imported a couple of patches form fedora including support of xdg-open and
+  desktop file installation
+
+  20 Jun 2012; Justin Lecher <jlec@gentoo.org> texstudio-2.3.ebuild,
+  +files/texstudio-2.3-gcc47.patch:
+  Fix for gcc-4.7, #422619
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> texstudio-2.2.ebuild,
+  texstudio-2.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*texstudio-2.3 (13 Feb 2012)
+
+  13 Feb 2012; Justin Lecher <jlec@gentoo.org> +texstudio-2.3.ebuild,
+  +files/texstudio-2.3-hunspell.patch:
+  Version Bump
+
+*texstudio-2.2 (07 Sep 2011)
+
+  07 Sep 2011; Justin Lecher <jlec@gentoo.org> +texstudio-2.2.ebuild,
+  +files/texstudio-2.2-hunspell.patch, +metadata.xml:
+  Version Bump of app-office/texmakerx with rename to texstudio, #377947
+
+  17 Jun 2011; Justin Lecher <jlec@gentoo.org> texmakerx-2.1.ebuild:
+  Add missing deps, #371739
+
+*texmakerx-2.1 (12 Jun 2011)
+
+  12 Jun 2011; Justin Lecher <jlec@gentoo.org> +texmakerx-2.1.ebuild,
+  +files/texmakerx-2.1-hunspell.patch, +metadata.xml:
+  Addition, #338436
+

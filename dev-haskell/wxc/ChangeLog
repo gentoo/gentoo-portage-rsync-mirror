@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/wxc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxc/ChangeLog,v 1.1 2012/12/27 02:21:09 gienah Exp $
+
+*wxc-0.90.0.4 (27 Dec 2012)
+
+  27 Dec 2012; Mark Wright <gienah@gentoo.org>
+  +files/wxc-0.90.0.4-wxGTK-2.9.4.1.patch, +metadata.xml, +wxc-0.90.0.4.ebuild:
+  Add wxc

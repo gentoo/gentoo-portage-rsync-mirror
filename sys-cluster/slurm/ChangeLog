@@ -1,0 +1,94 @@
+# ChangeLog for sys-cluster/slurm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.20 2012/12/18 04:32:28 alexxy Exp $
+
+  18 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> slurm-2.4.5.ebuild:
+  [sys-cluster/slurm] Drop legacy patch
+
+  18 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org>
+  +files/slurm-2.5.0-nogtk.patch, slurm-2.5.0.ebuild:
+  [sys-cluster/slurm] Fix hard dep for gtk+ O_o
+
+  18 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> slurm-2.4.5.ebuild,
+  slurm-2.5.0.ebuild:
+  [sys-cluster/slurm] Fix build
+
+*slurm-2.4.5 (17 Dec 2012)
+*slurm-2.5.0 (17 Dec 2012)
+
+  17 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> +slurm-2.4.5.ebuild,
+  +slurm-2.5.0.ebuild, metadata.xml:
+  [sys-cluster/slurm] Version bump per bug #431664
+
+  14 Oct 2012; Alexey Shvetsov <alexxy@gentoo.org> slurm-2.4.3.ebuild:
+  [sys-cluster/slurm] Add missing rdep
+
+*slurm-2.4.3 (07 Oct 2012)
+
+  07 Oct 2012; Alexey Shvetsov <alexxy@gentoo.org> +slurm-2.4.3.ebuild:
+  [sys-cluster/slurm] Version bump
+
+  07 Oct 2012; Kacper Kowalik <xarthisius@gentoo.org> slurm-2.3.4.ebuild:
+  Add blocker against net-analyzer/sinfo wrt #437476 by Diego Elio Pettenò
+  <flameeyes@gentoo.org>
+
+  23 Aug 2012; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/slurm-2.3.4-glibc2.16.patch, slurm-2.3.4.ebuild:
+  Add missing inherit of user.eclass for enew{group,user}. Fix building with
+  glibc-2.16 wrt #430252 by Diego Elio Pettenò <flameeyes@gentoo.org>
+
+  09 May 2012; Zac Medico <zmedico@gentoo.org> slurm-2.3.4.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
+
+  18 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> slurm-2.3.4.ebuild:
+  [sys-cluster/slurm] Fix install in case no torque use flag set
+
+*slurm-2.3.4 (18 Apr 2012)
+
+  18 Apr 2012; Alexey Shvetsov <alexxy@gentoo.org> +files/logrotate,
+  +slurm-2.3.4.ebuild, -slurm-2.2.7-r1.ebuild, -slurm-2.2.7-r2.ebuild,
+  -slurm-2.3.3.ebuild, files/slurm.confd, files/slurmctld.initd,
+  files/slurmd.initd, files/slurmdbd.initd, metadata.xml:
+  [sys-cluster/slurm] Version bump. Fix bug #410087 Thanks to Daniel M. Weeks.
+  Also incorporate changes from bug #385871. Thanks to Nicolas Bigaouette
+
+  15 Mar 2012; Alexey Shvetsov <alexxy@gentoo.org> slurm-2.3.3.ebuild:
+  Add missing dep
+
+*slurm-2.3.3 (09 Feb 2012)
+
+  09 Feb 2012; Alexey Shvetsov <alexxy@gentoo.org> +slurm-2.3.3.ebuild:
+  Version bump
+
+  26 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> slurm-2.2.7-r2.ebuild:
+  Fix build if no previos slurm was insatlled
+
+*slurm-2.2.7-r2 (26 Oct 2011)
+
+  26 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> +slurm-2.2.7-r2.ebuild,
+  metadata.xml:
+  Added torque pbs compatibility layer
+
+*slurm-2.2.7-r1 (31 Aug 2011)
+
+  31 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> -slurm-2.2.7.ebuild,
+  +slurm-2.2.7-r1.ebuild:
+  Version bump
+
+  04 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> slurm-2.2.7.ebuild:
+  Slurm should have same id on all nodes
+
+  04 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> files/slurmctld.initd,
+  files/slurmd.initd, files/slurmdbd.initd:
+  Update init.d reload stuff
+
+  04 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> slurm-2.2.7.ebuild,
+  files/slurmd.initd:
+  Slurmd should be run as root
+
+*slurm-2.2.7 (03 Jul 2011)
+
+  03 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +slurm-2.2.7.ebuild,
+  +files/slurm.confd, +files/slurmctld.initd, +files/slurmd.initd,
+  +files/slurmdbd.initd, +metadata.xml:
+  Initial import

@@ -1,0 +1,32 @@
+--- ./IceE-1.3.0/cppe/config/Make.rules.orig	2008-12-29 10:37:03.000000000 +0200
++++ ./IceE-1.3.0/cppe/config/Make.rules	2008-12-29 10:40:16.000000000 +0200
+@@ -12,8 +12,7 @@
+ # if it does not exist.
+ #
+ 
+-prefix			= /opt/IceE-$(VERSION)
+-
++prefix			= DESTDIR_PLACE_HOLDER
+ #
+ # Define OPTIMIZE_SIZE as yes if you want to build with minimal size.
+ # Define OPTIMIZE_SPEED as yes if you want to build with maximum speed.
+@@ -21,7 +20,7 @@
+ # If neither is set, IceE is built with debug information.
+ #
+ 
+-#OPTIMIZE_SIZE		= yes
++OPTIMIZE_SIZE		= yes
+ #OPTIMIZE_SPEED		= yes
+ 
+ #
+--- ./IceE-1.3.0/cppe/config/Make.rules.Linux.orig	2008-12-29 10:39:52.000000000 +0200
++++ ./IceE-1.3.0/cppe/config/Make.rules.Linux	2008-12-29 10:40:02.000000000 +0200
+@@ -65,7 +65,7 @@
+    lp64suffix	= 64
+ endif
+ 
+-CXXFLAGS		= $(CXXARCHFLAGS) -ftemplate-depth-128 -Wall -D_REENTRANT
++CXXFLAGS		+= $(CXXARCHFLAGS) -ftemplate-depth-128 -Wall -D_REENTRANT
+ 
+ ifneq ($(GUMSTIX),yes)
+ CXXFLAGS		+= -I/usr/include/nptl

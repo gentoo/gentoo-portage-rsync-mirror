@@ -1,0 +1,22 @@
+=== modified file 'doc/Makefile.am'
+--- doc/Makefile.am	2012-06-02 13:33:57 +0000
++++ doc/Makefile.am	2012-06-02 13:35:03 +0000
+@@ -2,9 +2,6 @@
+ 
+ helpdir = @htmldir@
+ 
+-# empty help_DATA just installs the directory
+-help_DATA = 
+-
+ EXTRA_DIST = docbook2html.sh docbook
+ 
+ html/GuideIndex.html: docbook/GuideIndex.xml
+@@ -19,6 +16,7 @@
+ 
+ install-data-hook: html
+ 	if [ -x "$(GNOME_DOC_TOOL)" ]; then \
++		$(MKDIR_P) "$(DESTDIR)$(helpdir)" || exit 1; \
+ 		cd html; for f in * ; do $(INSTALL_DATA) "$$f" "$(DESTDIR)$(helpdir)/$$f" ; done; \
+ 		ln -s GuideIndex.html "$(DESTDIR)$(helpdir)/index.html" ; \
+ 	fi
+

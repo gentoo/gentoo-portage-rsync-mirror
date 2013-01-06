@@ -1,0 +1,75 @@
+diff -ru a/work/vmblock-only/Makefile b/work/vmblock-only/Makefile
+--- a/work/vmblock-only/Makefile	2011-01-22 08:59:15.907152002 -0500
++++ b/work/vmblock-only/Makefile	2011-01-22 09:13:55.894938002 -0500
+@@ -123,9 +123,9 @@
+ postbuild:: ;
+ 
+ $(DRIVER_KO): prebuild
+-	make -C $(BUILD_DIR) SUBDIRS=$$PWD SRCROOT=$$PWD/$(SRCROOT) \
++	$(MAKE) -C $(BUILD_DIR) SUBDIRS=$$PWD SRCROOT=$$PWD/$(SRCROOT) \
+ 	  MODULEBUILDDIR=$(MODULEBUILDDIR) modules
+-	make -C $$PWD SRCROOT=$$PWD/$(SRCROOT) \
++	$(MAKE) -C $$PWD SRCROOT=$$PWD/$(SRCROOT) \
+ 	  MODULEBUILDDIR=$(MODULEBUILDDIR) postbuild
+ endif
+ 
+diff -ru a/work/vmci-only/Makefile b/work/vmci-only/Makefile
+--- a/work/vmci-only/Makefile	2011-01-22 08:59:15.907152002 -0500
++++ b/work/vmci-only/Makefile	2011-01-22 09:13:55.898936002 -0500
+@@ -123,9 +123,9 @@
+ postbuild:: ;
+ 
+ $(DRIVER_KO): prebuild
+-	make -C $(BUILD_DIR) SUBDIRS=$$PWD SRCROOT=$$PWD/$(SRCROOT) \
++	$(MAKE) -C $(BUILD_DIR) SUBDIRS=$$PWD SRCROOT=$$PWD/$(SRCROOT) \
+ 	  MODULEBUILDDIR=$(MODULEBUILDDIR) modules
+-	make -C $$PWD SRCROOT=$$PWD/$(SRCROOT) \
++	$(MAKE) -C $$PWD SRCROOT=$$PWD/$(SRCROOT) \
+ 	  MODULEBUILDDIR=$(MODULEBUILDDIR) postbuild
+ endif
+ 
+diff -ru a/work/vmmon-only/Makefile b/work/vmmon-only/Makefile
+--- a/work/vmmon-only/Makefile	2011-01-22 08:59:15.907152002 -0500
++++ b/work/vmmon-only/Makefile	2011-01-22 09:13:55.894938002 -0500
+@@ -123,9 +123,9 @@
+ postbuild:: ;
+ 
+ $(DRIVER_KO): prebuild
+-	make -C $(BUILD_DIR) SUBDIRS=$$PWD SRCROOT=$$PWD/$(SRCROOT) \
++	$(MAKE) -C $(BUILD_DIR) SUBDIRS=$$PWD SRCROOT=$$PWD/$(SRCROOT) \
+ 	  MODULEBUILDDIR=$(MODULEBUILDDIR) modules
+-	make -C $$PWD SRCROOT=$$PWD/$(SRCROOT) \
++	$(MAKE) -C $$PWD SRCROOT=$$PWD/$(SRCROOT) \
+ 	  MODULEBUILDDIR=$(MODULEBUILDDIR) postbuild
+ endif
+ 
+diff -ru a/work/vmnet-only/Makefile b/work/vmnet-only/Makefile
+--- a/work/vmnet-only/Makefile	2011-01-22 08:59:15.911150002 -0500
++++ b/work/vmnet-only/Makefile	2011-01-22 09:13:55.898936002 -0500
+@@ -123,9 +123,9 @@
+ postbuild:: ;
+ 
+ $(DRIVER_KO): prebuild
+-	make -C $(BUILD_DIR) SUBDIRS=$$PWD SRCROOT=$$PWD/$(SRCROOT) \
++	$(MAKE) -C $(BUILD_DIR) SUBDIRS=$$PWD SRCROOT=$$PWD/$(SRCROOT) \
+ 	  MODULEBUILDDIR=$(MODULEBUILDDIR) modules
+-	make -C $$PWD SRCROOT=$$PWD/$(SRCROOT) \
++	$(MAKE) -C $$PWD SRCROOT=$$PWD/$(SRCROOT) \
+ 	  MODULEBUILDDIR=$(MODULEBUILDDIR) postbuild
+ endif
+ 
+diff -ru a/work/vsock-only/Makefile b/work/vsock-only/Makefile
+--- a/work/vsock-only/Makefile	2011-01-22 08:59:15.911150002 -0500
++++ b/work/vsock-only/Makefile	2011-01-22 09:13:55.894938002 -0500
+@@ -123,9 +123,9 @@
+ postbuild:: ;
+ 
+ $(DRIVER_KO): prebuild
+-	make -C $(BUILD_DIR) SUBDIRS=$$PWD SRCROOT=$$PWD/$(SRCROOT) \
++	$(MAKE) -C $(BUILD_DIR) SUBDIRS=$$PWD SRCROOT=$$PWD/$(SRCROOT) \
+ 	  MODULEBUILDDIR=$(MODULEBUILDDIR) modules
+-	make -C $$PWD SRCROOT=$$PWD/$(SRCROOT) \
++	$(MAKE) -C $$PWD SRCROOT=$$PWD/$(SRCROOT) \
+ 	  MODULEBUILDDIR=$(MODULEBUILDDIR) postbuild
+ endif
+ 

@@ -1,0 +1,24 @@
+From 7364a6fd55c46db5c5dbae6df6ac377d48919fa9 Mon Sep 17 00:00:00 2001
+From: Hub Figuiere <hub@figuiere.net>
+Date: Thu, 5 Jan 2012 21:19:49 -0800
+Subject: [PATCH] Fix missing header for Glib::signal_idle. Closes #667349
+
+---
+ src/notebuffer.cpp |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/src/notebuffer.cpp b/src/notebuffer.cpp
+index 48bca2d..df223f3 100644
+--- a/src/notebuffer.cpp
++++ b/src/notebuffer.cpp
+@@ -23,6 +23,7 @@
+ #include <algorithm>
+ #include <tr1/array>
+ 
++#include <glibmm/main.h>
+ 
+ #include "debug.hpp"
+ #include "notebuffer.hpp"
+-- 
+1.7.8.6
+

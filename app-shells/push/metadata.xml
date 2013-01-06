@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>vaeth@mathematik.uni-wuerzburg.de</email>
+		<name>Martin Väth</name>
+		<description>Upstream developer, assign bugs</description>
+	</maintainer>
+	<maintainer>
+		<email>axs@gentoo.org</email>
+		<description>Proxy committer, CC bugs</description>
+	</maintainer>
+	<upstream>
+		<maintainer>
+			<email>vaeth@mathematik.uni-wuerzburg.de</email>
+			<name>Martin Väth</name>
+		</maintainer>
+		<bugs-to>mailto:vaeth@mathematik.uni-wuerzburg.de</bugs-to>
+	</upstream>
+</pkgmetadata>

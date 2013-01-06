@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/perl-mozldap
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-mozldap/ChangeLog,v 1.1 2010/07/07 13:59:42 lxnay Exp $
+
+*perl-mozldap-1.5.2 (07 Jul 2010)
+
+  07 Jul 2010; Fabio Erculiani <lxnay@gentoo.org>
+  +perl-mozldap-1.5.2.ebuild, +metadata.xml:
+  new ebuild, Perl bindings to Mozilla LDAP C SDK
+

@@ -1,0 +1,126 @@
+From 8f195a908ffaa8faf8f4c8a0e701e44ae3859e33 Mon Sep 17 00:00:00 2001
+From: Yuxuan Shui <yshuiv7@gmail.com>
+Date: Fri, 12 Oct 2012 22:41:06 +0800
+Subject: [PATCH] Linux 3.6 compat, iops->lookup()
+
+As of Linux commit 00cd8dd3bf95f2cc8435b4cac01d9995635c6d0b the
+struct nameidata is no longer passed to iops->lookup.  Instead
+only the inamedata->flags are passed.
+
+ZFS like almost all Linux fileystems never made use of this so
+only the prototype needs to be wrapped for compatibility.
+
+Signed-off-by: Yuxuan Shui <yshuiv7@gmail.com>
+Signed-off-by: Brian Behlendorf <behlendorf1@llnl.gov>
+Issue #873
+---
+ config/kernel-lookup-nameidata.m4 |   21 +++++++++++++++++++++
+ config/kernel.m4                  |    1 +
+ module/zfs/zpl_ctldir.c           |   15 +++++++++++++++
+ module/zfs/zpl_inode.c            |    4 ++++
+ 4 files changed, 41 insertions(+)
+ create mode 100644 config/kernel-lookup-nameidata.m4
+
+diff --git a/config/kernel-lookup-nameidata.m4 b/config/kernel-lookup-nameidata.m4
+new file mode 100644
+index 0000000..5e30be4
+--- /dev/null
++++ b/config/kernel-lookup-nameidata.m4
+@@ -0,0 +1,21 @@
++dnl #
++dnl # 3.6 API change
++dnl #
++AC_DEFUN([ZFS_AC_KERNEL_LOOKUP_NAMEIDATA], [
++	AC_MSG_CHECKING([whether iops->lookup() takes struct nameidata])
++	ZFS_LINUX_TRY_COMPILE([
++		#include <linux/fs.h>
++	],[
++		struct dentry * (*inode_lookup) (struct inode *,struct dentry *,
++		                     struct nameidata *) = NULL;
++		struct inode_operations iops __attribute__ ((unused)) = {
++			.lookup		= inode_lookup,
++		};
++	],[
++		AC_MSG_RESULT(yes)
++		AC_DEFINE(HAVE_LOOKUP_NAMEIDATA, 1,
++		          [iops->lookup() operation takes nameidata])
++	],[
++		AC_MSG_RESULT(no)
++	])
++])
+diff --git a/config/kernel.m4 b/config/kernel.m4
+index 3a144a3..8d8cd6b 100644
+--- a/config/kernel.m4
++++ b/config/kernel.m4
+@@ -49,6 +49,7 @@ AC_DEFUN([ZFS_AC_CONFIG_KERNEL], [
+ 	ZFS_AC_KERNEL_NR_CACHED_OBJECTS
+ 	ZFS_AC_KERNEL_FREE_CACHED_OBJECTS
+ 	ZFS_AC_KERNEL_FALLOCATE
++	ZFS_AC_KERNEL_LOOKUP_NAMEIDATA
+ 	ZFS_AC_KERNEL_TRUNCATE_RANGE
+ 	ZFS_AC_KERNEL_CREATE_UMODE_T
+ 	ZFS_AC_KERNEL_AUTOMOUNT
+diff --git a/module/zfs/zpl_ctldir.c b/module/zfs/zpl_ctldir.c
+index c680e54..7dfaf6e 100644
+--- a/module/zfs/zpl_ctldir.c
++++ b/module/zfs/zpl_ctldir.c
+@@ -143,7 +143,11 @@
+ }
+ 
+ static struct dentry *
++#ifdef HAVE_LOOKUP_NAMEIDATA
+ zpl_root_lookup(struct inode *dip, struct dentry *dentry, struct nameidata *nd)
++#else
++zpl_root_lookup(struct inode *dip, struct dentry *dentry, unsigned int flags)
++#endif
+ {
+ 	cred_t *cr = CRED();
+ 	struct inode *ip;
+@@ -180,8 +184,14 @@
+ };
+ 
+ static struct dentry *
++#ifdef HAVE_LOOKUP_NAMEIDATA
+ zpl_snapdir_lookup(struct inode *dip, struct dentry *dentry,
+     struct nameidata *nd)
++#else
++zpl_snapdir_lookup(struct inode *dip, struct dentry *dentry,
++    unsigned int flags)
++#endif
++
+ {
+ 	cred_t *cr = CRED();
+ 	struct inode *ip;
+@@ -410,8 +420,13 @@
+ #endif /* HAVE_AUTOMOUNT */
+ 
+ static struct dentry *
++#ifdef HAVE_LOOKUP_NAMEIDATA
+ zpl_shares_lookup(struct inode *dip, struct dentry *dentry,
+     struct nameidata *nd)
++#else
++zpl_shares_lookup(struct inode *dip, struct dentry *dentry,
++    unsigned int flags)
++#endif
+ {
+ 	cred_t *cr = CRED();
+ 	struct inode *ip = NULL;
+diff --git a/module/zfs/zpl_inode.c b/module/zfs/zpl_inode.c
+index 0dab82c..5b31c12 100644
+--- a/module/zfs/zpl_inode.c
++++ b/module/zfs/zpl_inode.c
+@@ -31,7 +31,11 @@
+ 
+ 
+ static struct dentry *
++#ifdef HAVE_LOOKUP_NAMEIDATA
+ zpl_lookup(struct inode *dir, struct dentry *dentry, struct nameidata *nd)
++#else
++zpl_lookup(struct inode *dir, struct dentry *dentry, unsigned int flags)
++#endif
+ {
+ 	cred_t *cr = CRED();
+ 	struct inode *ip;
+-- 
+1.7.10
+

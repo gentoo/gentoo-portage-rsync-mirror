@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>sbriesen@gentoo.org</email>
+		<name>Stefan Briesenick</name>
+	</maintainer>
+	<longdescription lang="en">Sigil is a multi-platform WYSIWYG ebook editor.
+		It is designed to edit books in ePub format.</longdescription>
+	<upstream>
+		<remote-id type="google-code">sigil</remote-id>
+	</upstream>
+</pkgmetadata>

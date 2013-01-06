@@ -1,0 +1,31 @@
+diff --git a/Makefile.am b/Makefile.am
+index 49d8bc4..85ac971 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -277,7 +277,9 @@ ICEDTEA_PATCHES += patches/nss-not-enabled-config.patch
+ endif
+ 
+ if WITH_PAX
+-ICEDTEA_PATCHES += patches/test_gamma.patch
++ICEDTEA_PATCHES += \
++	patches/test_gamma.patch \
++	patches/pax-mark-rmic-java.patch
+ endif
+ 
+ ICEDTEA_PATCHES += $(DISTRIBUTION_PATCHES)
+diff --git a/patches/pax-mark-rmic-java.patch b/patches/pax-mark-rmic-java.patch
+new file mode 100644
+index 0000000..ad80f3a
+--- /dev/null
++++ b/patches/pax-mark-rmic-java.patch
+@@ -0,0 +1,10 @@
++--- openjdk/jdk/make/com/sun/jmx/Makefile
+++++ openjdk/jdk/make/com/sun/jmx/Makefile
++@@ -119,6 +119,7 @@
++ 
++ $(CLASSDESTDIR)/%_Stub.class: $(CLASSDESTDIR)/%.class
++ 	$(prep-target)
+++	"$(TOPDIR)"/../../pax-mark-vm "$(OUTPUTDIR)"
++ 	$(RMIC) -classpath "$(CLASSDESTDIR)"    \
++                 -d $(CLASSDESTDIR)              \
++                 -v1.2                           \

@@ -1,0 +1,24 @@
+# ChangeLog for sys-apps/rigo-daemon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rigo-daemon/ChangeLog,v 1.4 2012/09/27 11:01:26 lxnay Exp $
+
+*rigo-daemon-144 (27 Sep 2012)
+
+  27 Sep 2012; Fabio Erculiani <lxnay@gentoo.org> +rigo-daemon-144.ebuild:
+  version bump
+
+  24 Aug 2012; Fabio Erculiani <lxnay@gentoo.org>
+  -rigo-daemon-1.0_rc124.ebuild:
+  drop older version
+
+*rigo-daemon-136 (24 Aug 2012)
+
+  24 Aug 2012; Fabio Erculiani <lxnay@gentoo.org> +rigo-daemon-136.ebuild:
+  version bump
+
+*rigo-daemon-1.0_rc124 (11 Jul 2012)
+
+  11 Jul 2012; Fabio Erculiani <lxnay@gentoo.org>
+  +rigo-daemon-1.0_rc124.ebuild, +metadata.xml:
+  new ebuild
+

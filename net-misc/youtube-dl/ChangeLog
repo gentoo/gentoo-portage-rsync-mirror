@@ -1,0 +1,579 @@
+# ChangeLog for net-misc/youtube-dl
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.130 2013/01/04 13:14:35 ago Exp $
+
+  04 Jan 2013; Agostino Sarubbo <ago@gentoo.org> youtube-dl-2012.11.17.ebuild:
+  Stable for ppc64, wrt bug #449342
+
+  02 Jan 2013; Agostino Sarubbo <ago@gentoo.org> youtube-dl-2012.11.17.ebuild:
+  Stable for amd64, wrt bug #449342
+
+  02 Jan 2013; Jeroen Roovers <jer@gentoo.org> youtube-dl-2012.11.17.ebuild:
+  Stable for HPPA (bug #449342).
+
+  31 Dec 2012; Jeff Horelick <jdhore@gentoo.org> youtube-dl-2012.11.17.ebuild:
+  marked x86 per bug 449342
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> youtube-dl-2012.11.17.ebuild:
+  Stable for ppc, wrt bug #449342
+
+  30 Dec 2012; Jeroen Roovers <jer@gentoo.org> youtube-dl-2012.12.11.ebuild:
+  Add more build time dependencies (bug #449318 by LeeL).
+
+*youtube-dl-2012.12.11 (25 Dec 2012)
+
+  25 Dec 2012; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +youtube-dl-2012.12.11.ebuild:
+  Update to 2012.12.11, and add manpage + doc + bash-completion file + port to
+  new eclass + tests
+
+*youtube-dl-2012.11.17 (26 Nov 2012)
+
+  26 Nov 2012; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2012.11.17.ebuild:
+  Version bump by jospezial (bug #444750).
+
+  21 Nov 2012; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2012.02.27.ebuild:
+  Old.
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> youtube-dl-2012.09.27.ebuild:
+  Stable for x86, wrt bug #436464
+
+  03 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> youtube-dl-2012.09.27.ebuild:
+  Stable for amd64 wrt bug #436464
+
+  02 Oct 2012; Jeroen Roovers <jer@gentoo.org> youtube-dl-2012.09.27.ebuild:
+  Stable for HPPA (bug #436464).
+
+  02 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  youtube-dl-2012.09.27.ebuild:
+  stable ppc ppc64, bug #436464
+
+*youtube-dl-2012.09.27 (28 Sep 2012)
+
+  28 Sep 2012; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2012.09.27.ebuild:
+  Version bump by Andrew Savchenko (bug #436464).
+
+  23 May 2012; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2012.01.08.ebuild:
+  Old.
+
+  05 May 2012; Brent Baude <ranger@gentoo.org> youtube-dl-2012.02.27.ebuild:
+  Marking youtube-dl-2012.02.27 ppc for bug 412413
+
+  19 Apr 2012; Jeroen Roovers <jer@gentoo.org> youtube-dl-2012.02.27.ebuild:
+  Stable for HPPA (bug #412413).
+
+  19 Apr 2012; Brent Baude <ranger@gentoo.org> youtube-dl-2012.02.27.ebuild:
+  Marking youtube-dl-2012.02.27 ppc64 for bug 412413
+
+  18 Apr 2012; Jeff Horelick <jdhore@gentoo.org> youtube-dl-2012.02.27.ebuild:
+  marked x86 per bug 412413
+
+  18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> youtube-dl-2012.02.27.ebuild:
+  Stable for amd64, wrt bug #412413
+
+  17 Apr 2012; Jeroen Roovers <jer@gentoo.org> youtube-dl-2012.01.08.ebuild,
+  youtube-dl-2012.02.27.ebuild:
+  Fix HOMEPAGE.
+
+  17 Apr 2012; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2011.08.04.ebuild:
+  Old.
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> youtube-dl-2012.01.08.ebuild:
+  Marking youtube-dl-2012.01.08 ppc64 for bug 409753
+
+  17 Apr 2012; Brent Baude <ranger@gentoo.org> youtube-dl-2012.01.08.ebuild:
+  Marking youtube-dl-2012.01.08 ppc for bug 409753
+
+  04 Apr 2012; Jeff Horelick <jdhore@gentoo.org> youtube-dl-2012.01.08.ebuild:
+  marked x86 per bug 409753
+
+  29 Mar 2012; Jeroen Roovers <jer@gentoo.org> youtube-dl-2012.01.08.ebuild:
+  Stable for HPPA (bug #409753).
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> youtube-dl-2012.01.08.ebuild:
+  Stable for AMD64, wrt bug #409753
+
+  26 Mar 2012; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2011.08.04.ebuild:
+  Reinstate stable ebuild by Boris (bug #409723).
+
+*youtube-dl-2012.02.27 (21 Mar 2012)
+
+  21 Mar 2012; Patrick Lauer <patrick@gentoo.org> +youtube-dl-2012.02.27.ebuild,
+  -youtube-dl-2011.08.04.ebuild, -youtube-dl-2011.11.23.ebuild,
+  -youtube-dl-2011.12.18.ebuild:
+  Bump
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> youtube-dl-2011.08.04.ebuild:
+  Changing python deps in preparation for 2.4 removal
+
+*youtube-dl-2012.01.08 (09 Jan 2012)
+
+  09 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -youtube-dl-2011.09.30.ebuild, -youtube-dl-2011.11.22.ebuild,
+  +youtube-dl-2012.01.08.ebuild:
+  Bump, remove some old
+
+*youtube-dl-2011.12.18 (03 Jan 2012)
+
+  03 Jan 2012; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +youtube-dl-2011.12.18.ebuild:
+  Bump to latest, use https for SRC_URI which saves one redirect; also dodoc
+  README.md
+
+  11 Dec 2011; Mike Gilbert <floppym@gentoo.org> youtube-dl-2011.08.04.ebuild,
+  youtube-dl-2011.09.30.ebuild, youtube-dl-2011.11.22.ebuild,
+  youtube-dl-2011.11.23.ebuild:
+  Update license to match reality (public-domain).
+
+*youtube-dl-2011.11.23 (29 Nov 2011)
+
+  29 Nov 2011; Jeroen Roovers <jer@gentoo.org> +youtube-dl-2011.11.23.ebuild:
+  Version bump.
+
+  22 Nov 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  youtube-dl-2011.11.22.ebuild, metadata.xml:
+  As per discussion with rej, add myself to metadata.xml, and bump Python dep
+  to 2.5
+
+  22 Nov 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Adopt package.
+
+  22 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #195316
+
+*youtube-dl-2011.11.22 (22 Nov 2011)
+
+  22 Nov 2011; Hanno Boeck <hanno@gentoo.org> +youtube-dl-2011.11.22.ebuild:
+  Version bump.
+
+*youtube-dl-2011.09.30 (07 Oct 2011)
+
+  07 Oct 2011; Zac Medico <zmedico@gentoo.org> +youtube-dl-2011.09.30.ebuild:
+  2011.09.30 version bump (bug #385187).
+
+  07 Oct 2011; Zac Medico <zmedico@gentoo.org> youtube-dl-2011.08.04.ebuild:
+  Add ~arm keyword for bug #366789 (it's pure python so it should work fine on
+  any architecture where python works).
+
+  07 Oct 2011; Zac Medico <zmedico@gentoo.org> -youtube-dl-2010.12.09.ebuild,
+  -youtube-dl-2011.01.30.ebuild, -youtube-dl-2011.03.29.ebuild:
+  Remove obsolete versions (see bug #384163).
+
+  04 Oct 2011; Jeroen Roovers <jer@gentoo.org> youtube-dl-2011.08.04.ebuild:
+  Stable for HPPA (bug #384163).
+
+  03 Oct 2011; Joseph Jezak <josejx@gentoo.org> youtube-dl-2011.08.04.ebuild:
+  Marked ppc/ppc64 stable for bug #384163.
+
+  01 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  youtube-dl-2011.08.04.ebuild:
+  x86 stable wrt bug #384163
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> youtube-dl-2011.08.04.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Agostino "ago" Sarubbo in bug #384163.
+
+  05 Aug 2011; <ricmm@gentoo.org> -youtube-dl-2010.10.03.ebuild,
+  -youtube-dl-2010.10.24.ebuild, -youtube-dl-2010.11.19.ebuild:
+  Remove old versions.
+
+*youtube-dl-2011.08.04 (05 Aug 2011)
+
+  05 Aug 2011; Hanno Boeck <hanno@gentoo.org> +youtube-dl-2011.08.04.ebuild:
+  Version bump, old versions no longer work.
+
+*youtube-dl-2011.03.29 (01 Aug 2011)
+
+  01 Aug 2011; Patrick Lauer <patrick@gentoo.org>
+  +youtube-dl-2011.03.29.ebuild:
+  Bump
+
+*youtube-dl-2011.01.30 (06 Feb 2011)
+
+  06 Feb 2011; Ricardo Mendoza <ricmm@gentoo.org>
+  +youtube-dl-2011.01.30.ebuild:
+  Version bump.
+
+  22 Jan 2011; Ricardo Mendoza <ricmm@gentoo.org>
+  -youtube-dl-2009.09.13.ebuild, -youtube-dl-2010.06.06.ebuild,
+  -youtube-dl-2010.08.04.ebuild:
+  Remove old versions.
+
+  22 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  youtube-dl-2010.12.09.ebuild:
+  ppc64 stable wrt #351586
+
+  22 Jan 2011; Christian Faulhammer <fauli@gentoo.org>
+  youtube-dl-2010.12.09.ebuild:
+  stable x86, bug 351586
+
+  21 Jan 2011; Jeroen Roovers <jer@gentoo.org> youtube-dl-2010.12.09.ebuild:
+  Stable for HPPA (bug #351586).
+
+  15 Jan 2011; Brent Baude <ranger@gentoo.org> youtube-dl-2010.12.09.ebuild:
+  stable ppc, bug 351586
+
+  15 Jan 2011; Brent Baude <ranger@gentoo.org> youtube-dl-2010.10.03.ebuild:
+  stable ppc, bug 344697
+
+  15 Jan 2011; Brent Baude <ranger@gentoo.org> youtube-dl-2010.08.04.ebuild:
+  stable ppc, bug 332019
+
+  14 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  youtube-dl-2010.12.09.ebuild:
+  Stable on amd64 wrt bug #351586
+
+*youtube-dl-2010.12.09 (10 Dec 2010)
+
+  10 Dec 2010; Zac Medico <zmedico@gentoo.org> +youtube-dl-2010.12.09.ebuild:
+  Version bump.
+
+*youtube-dl-2010.11.19 (22 Nov 2010)
+
+  22 Nov 2010; Zac Medico <zmedico@gentoo.org> +youtube-dl-2010.11.19.ebuild:
+  Version bump.
+
+  10 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  youtube-dl-2010.10.03.ebuild:
+  x86 stable wrt bug #344697
+
+  10 Nov 2010; Jeroen Roovers <jer@gentoo.org> youtube-dl-2010.10.03.ebuild:
+  Stable for HPPA (bug #344697).
+
+  09 Nov 2010; Zac Medico <zmedico@gentoo.org> youtube-dl-2010.10.24.ebuild:
+  Update homepage.
+
+  08 Nov 2010; Markos Chandras <hwoarang@gentoo.org>
+  youtube-dl-2010.10.03.ebuild:
+  Stable on amd64 wrt bug #344697
+
+*youtube-dl-2010.10.24 (08 Nov 2010)
+
+  08 Nov 2010; Ricardo Mendoza <ricmm@gentoo.org>
+  +youtube-dl-2010.10.24.ebuild:
+  Version bump.
+
+  17 Oct 2010; Jeroen Roovers <jer@gentoo.org> youtube-dl-2010.08.04.ebuild:
+  Stable for HPPA (bug #332019).
+
+  06 Oct 2010; Markus Meier <maekke@gentoo.org>
+  youtube-dl-2010.08.04.ebuild:
+  amd64/x86 stable, bug #332019
+
+*youtube-dl-2010.10.03 (04 Oct 2010)
+
+  04 Oct 2010; Ricardo Mendoza <ricmm@gentoo.org>
+  +youtube-dl-2010.10.03.ebuild:
+  Version bump.
+
+*youtube-dl-2010.08.04 (07 Aug 2010)
+
+  07 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  -youtube-dl-2010.01.19.ebuild, -youtube-dl-2010.02.13.ebuild,
+  -youtube-dl-2010.04.04.ebuild, -youtube-dl-2010.07.22.ebuild,
+  -youtube-dl-2010.07.24.ebuild, +youtube-dl-2010.08.04.ebuild:
+  Version bump. Drop older.
+
+*youtube-dl-2010.07.24 (29 Jul 2010)
+
+  29 Jul 2010; Zac Medico <zmedico@gentoo.org>
+  +youtube-dl-2010.07.24.ebuild:
+  2010.07.24 version bump.
+
+*youtube-dl-2010.07.22 (22 Jul 2010)
+
+  22 Jul 2010; Zac Medico <zmedico@gentoo.org>
+  +youtube-dl-2010.07.22.ebuild:
+  2010.07.22 version bump.
+
+*youtube-dl-2010.06.06 (10 Jun 2010)
+
+  10 Jun 2010; Zac Medico <zmedico@gentoo.org>
+  +youtube-dl-2010.06.06.ebuild:
+  2010.06.06 version bump. This version supports WebM video formats 43 and
+  45 (upstream issue #139). Also add ebuild fixes for bug #315849, including
+  shebang specifying python2.
+
+*youtube-dl-2010.04.04 (08 Apr 2010)
+
+  08 Apr 2010; <ricmm@gentoo.org> +youtube-dl-2010.04.04.ebuild:
+  Version bump. Works with the new layout.
+
+  19 Feb 2010; Jeroen Roovers <jer@gentoo.org> youtube-dl-2009.09.13.ebuild:
+  Stable for HPPA too.
+
+*youtube-dl-2010.02.13 (19 Feb 2010)
+
+  19 Feb 2010; Patrick Lauer <patrick@gentoo.org>
+  +youtube-dl-2010.02.13.ebuild:
+  Bump for #299598
+
+*youtube-dl-2010.01.19 (19 Feb 2010)
+
+  19 Feb 2010; Patrick Lauer <patrick@gentoo.org>
+  +youtube-dl-2010.01.19.ebuild:
+  Bump for #303683
+
+  19 Feb 2010; <ricmm@gentoo.org> -youtube-dl-2008.03.22.ebuild:
+  Remove old version.
+
+  16 Feb 2010; Jonathan Callen <abcd@gentoo.org>
+  youtube-dl-2009.09.13.ebuild:
+  Add ~x64-macos for bug 305355
+
+  10 Jan 2010; Jonathan Callen <abcd@gentoo.org>
+  youtube-dl-2009.09.13.ebuild:
+  Add prefix keywords
+
+  26 Nov 2009; Joseph Jezak <josejx@gentoo.org>
+  youtube-dl-2009.09.13.ebuild:
+  Marked ppc/ppc64 stable for bug #292989.
+
+  23 Nov 2009; Markus Meier <maekke@gentoo.org>
+  youtube-dl-2009.09.13.ebuild:
+  amd64/x86 stable, bug #292989
+
+  23 Nov 2009; Patrick Lauer <patrick@gentoo.org>
+  -youtube-dl-2009.08.08.ebuild, -youtube-dl-2009.09.08.ebuild:
+  Remove old
+
+*youtube-dl-2009.09.13 (27 Sep 2009)
+
+  27 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  +youtube-dl-2009.09.13.ebuild:
+  bump, fixes #286364
+
+*youtube-dl-2009.09.08 (12 Sep 2009)
+
+  12 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  -youtube-dl-2009.05.23.ebuild, -youtube-dl-2009.05.30.ebuild,
+  +youtube-dl-2009.09.08.ebuild:
+  Bump, remove old
+
+*youtube-dl-2009.08.08 (17 Aug 2009)
+
+  17 Aug 2009; Patrick Lauer <patrick@gentoo.org>
+  +youtube-dl-2009.08.08.ebuild:
+  Bump to 2009.08.08, fixes #281234
+
+  22 Jun 2009; Patrick Lauer <patrick@gentoo.org>
+  -youtube-dl-2008.01.24.ebuild, -youtube-dl-2009.03.03.ebuild,
+  -youtube-dl-2009.04.06.ebuild:
+  Removing old
+
+*youtube-dl-2009.05.30 (22 Jun 2009)
+
+  22 Jun 2009; Patrick Lauer <patrick@gentoo.org>
+  +youtube-dl-2009.05.30.ebuild:
+  Bump to 2009.05.30, fixes #273243
+
+*youtube-dl-2009.05.23 (23 May 2009)
+
+  23 May 2009; Hanno Boeck <hanno@gentoo.org> +youtube-dl-2009.05.23.ebuild:
+  Version bump.
+
+  23 Apr 2009; Patrick Lauer <patrick@gentoo.org> youtube-dl-2009.04.06:
+  Ok, unpacking things makes them work better. Sorry for the screwup, closes
+  #266152 again
+
+*youtube-dl-2009.04.06 (23 Apr 2009)
+
+  23 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +youtube-dl-2009.04.06.ebuild:
+  Bump to 2009.04.06. Small SRC_URI fix, thanks to Michael. Closes #266152
+
+  23 Mar 2009; <ricmm@gentoo.org> metadata.xml:
+  Added myself to metadata.
+
+  20 Mar 2009; Thilo Bangert <bangert@gentoo.org>
+  -youtube-dl-2008.03.08.ebuild, -youtube-dl-2008.04.07.ebuild,
+  -youtube-dl-2008.04.20.ebuild, -youtube-dl-2008.06.08.ebuild,
+  -youtube-dl-2008.07.26.ebuild, -youtube-dl-2008.08.09.ebuild,
+  -youtube-dl-2008.09.20.ebuild, -youtube-dl-2008.10.16.ebuild:
+  remove old versions
+
+*youtube-dl-2009.03.03 (20 Mar 2009)
+
+  20 Mar 2009; Thilo Bangert <bangert@gentoo.org>
+  +youtube-dl-2009.03.03.ebuild:
+  version bump - bug #246674
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing agorf as a maintainer since he was retired.
+
+*youtube-dl-2008.10.16 (25 Oct 2008)
+
+  25 Oct 2008; Aggelos Orfanakos <agorf@gentoo.org>
+  +youtube-dl-2008.10.16.ebuild:
+  Version bump to 2008.10.16.
+
+*youtube-dl-2008.09.20 (28 Sep 2008)
+
+  28 Sep 2008; Aggelos Orfanakos <agorf@gentoo.org>
+  +youtube-dl-2008.09.20.ebuild:
+  Version bump to 2008.09.20.
+
+*youtube-dl-2008.08.09 (31 Aug 2008)
+
+  31 Aug 2008; Aggelos Orfanakos <agorf@gentoo.org>
+  +youtube-dl-2008.08.09.ebuild:
+  Version bump to 2008.08.09.
+
+*youtube-dl-2008.07.26 (29 Jul 2008)
+
+  29 Jul 2008; Ben de Groot <yngwin@gentoo.org>
+  +youtube-dl-2008.07.26.ebuild:
+  As agorf is away, I've taken the liberty to version bump.
+
+*youtube-dl-2008.06.08 (12 Jun 2008)
+
+  12 Jun 2008; <agorf@gentoo.org> +youtube-dl-2008.06.08.ebuild:
+  Version bump to 2008.06.08.
+
+  27 May 2008; Jeroen Roovers <jer@gentoo.org> youtube-dl-2008.04.20.ebuild:
+  Marked ~hppa too.
+
+  01 May 2008; Markus Meier <maekke@gentoo.org>
+  youtube-dl-2008.03.22.ebuild:
+  x86 stable, bug #219513
+
+  01 May 2008; Santiago M. Mola <coldwind@gentoo.org>
+  youtube-dl-2008.03.22.ebuild:
+  amd64 stable wrt bug #219513
+
+  28 Apr 2008; nixnut <nixnut@gentoo.org> youtube-dl-2008.03.22.ebuild:
+  Stable on ppc wrt bug 219513
+
+  27 Apr 2008; Markus Rothe <corsair@gentoo.org>
+  youtube-dl-2008.03.22.ebuild:
+  Stable on ppc64; bug #219513
+
+*youtube-dl-2008.04.20 (26 Apr 2008)
+
+  26 Apr 2008; Aggelos Orfanakos <agorf@gentoo.org>
+  +youtube-dl-2008.04.20.ebuild:
+  Version bump to 2008.04.20.
+
+*youtube-dl-2008.04.07 (09 Apr 2008)
+
+  09 Apr 2008; Aggelos Orfanakos <agorf@gentoo.org>
+  +youtube-dl-2008.04.07.ebuild:
+  Version bump to 2008.04.07.
+
+*youtube-dl-2008.03.22 (26 Mar 2008)
+
+  26 Mar 2008; Aggelos Orfanakos <agorf@gentoo.org>
+  +youtube-dl-2008.03.22.ebuild:
+  Version bump to 2008.03.22.
+
+*youtube-dl-2008.03.08 (12 Mar 2008)
+
+  12 Mar 2008; Aggelos Orfanakos <agorf@gentoo.org>
+  +youtube-dl-2008.03.08.ebuild:
+  Version bump to 2008.03.08.
+
+  01 Mar 2008; nixnut <nixnut@gentoo.org> youtube-dl-2008.01.24.ebuild:
+  Stable on ppc wrt bug 211843
+
+  29 Feb 2008; <cla@gentoo.org> youtube-dl-2008.01.24.ebuild:
+  Stable on x86 (bug #211843)
+
+  29 Feb 2008; Brent Baude <ranger@gentoo.org> youtube-dl-2008.01.24.ebuild:
+  stable ppc64, bug 211843
+
+  28 Feb 2008; Santiago M. Mola <coldwind@gentoo.org>
+  youtube-dl-2008.01.24.ebuild:
+  amd64 stable wrt bug #211843
+
+*youtube-dl-2008.01.24 (24 Jan 2008)
+
+  24 Jan 2008; Aggelos Orfanakos <agorf@gentoo.org>
+  -youtube-dl-2007.08.24.ebuild, -youtube-dl-2007.10.09.ebuild,
+  -youtube-dl-2007.10.12.ebuild, +youtube-dl-2008.01.24.ebuild:
+  Version bump to 2008.01.24. Removing all previous versions since they were
+  broken after the recent YouTube.com updates.
+
+  28 Nov 2007; Markus Rothe <corsair@gentoo.org>
+  youtube-dl-2007.10.12.ebuild:
+  Stable on amd64
+
+  23 Nov 2007; Markus Rothe <corsair@gentoo.org>
+  youtube-dl-2007.10.12.ebuild:
+  Stable on ppc64; bug #199921
+
+  22 Nov 2007; nixnut <nixnut@gentoo.org> youtube-dl-2007.10.12.ebuild:
+  Stable on ppc wrt bug 199921
+
+  22 Nov 2007; Dawid Węgliński <cla@gentoo.org>
+  youtube-dl-2007.10.12.ebuild:
+  Stable on x86 (bug #199921)
+
+*youtube-dl-2007.10.12 (13 Oct 2007)
+
+  13 Oct 2007; Aggelos Orfanakos <agorf@gentoo.org>
+  +youtube-dl-2007.10.12.ebuild:
+  Version bump.
+
+*youtube-dl-2007.10.09 (09 Oct 2007)
+
+  09 Oct 2007; Aggelos Orfanakos <agorf@gentoo.org>
+  +youtube-dl-2007.10.09.ebuild:
+  Version bump.
+
+  14 Sep 2007; Markus Rothe <corsair@gentoo.org>
+  youtube-dl-2007.08.24.ebuild:
+  Stable on ppc/ppc64
+
+*youtube-dl-2007.08.24 (30 Aug 2007)
+
+  30 Aug 2007; Aggelos Orfanakos <agorf@gentoo.org>
+  -youtube-dl-2007.03.27.ebuild, -youtube-dl-2007.06.06.ebuild,
+  -youtube-dl-2007.06.22.ebuild, +youtube-dl-2007.08.24.ebuild:
+  Version bump to 2007.08.24. Removing all previous versions since they were
+  broken after the recent YouTube.com updates.
+
+  11 Aug 2007; Markus Rothe <corsair@gentoo.org>
+  youtube-dl-2007.03.27.ebuild:
+  Stable on ppc
+
+*youtube-dl-2007.06.22 (23 Jun 2007)
+
+  23 Jun 2007; Aggelos Orfanakos <agorf@gentoo.org>
+  +youtube-dl-2007.06.22.ebuild:
+  Version bump.
+
+  13 Jun 2007; Christoph Mende <angelos@gentoo.org>
+  youtube-dl-2007.03.27.ebuild:
+  Stable on amd64 wrt bug 181734
+
+  13 Jun 2007; Markus Rothe <corsair@gentoo.org>
+  youtube-dl-2007.03.27.ebuild:
+  Stable on ppc64; bug #181734
+
+  12 Jun 2007; Markus Ullmann <jokey@gentoo.org>
+  youtube-dl-2007.03.27.ebuild:
+  Stable on x86 wrt bug #181734
+
+*youtube-dl-2007.06.06 (07 Jun 2007)
+
+  07 Jun 2007; Aggelos Orfanakos <agorf@gentoo.org>
+  +youtube-dl-2007.06.06.ebuild:
+  Version bump.
+
+  29 May 2007; Luca Barbato <lu_zero@gentoo.org>
+  youtube-dl-2007.03.27.ebuild:
+  Marked ~ppc
+
+  20 May 2007; Markus Rothe <corsair@gentoo.org>
+  youtube-dl-2007.03.27.ebuild:
+  Added ~ppc64
+
+  22 Apr 2007; Konstantin V. Arkhipov <voxus@gentoo.org>
+  youtube-dl-2007.03.27.ebuild:
+  Added ~amd64 keyword, wrt bug #175537.
+
+*youtube-dl-2007.03.27 (15 Apr 2007)
+
+  15 Apr 2007; <agorf@gentoo.org> +youtube-dl-2007.03.27.ebuild:
+  Initial ebuild, bug #144478

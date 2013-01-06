@@ -1,0 +1,243 @@
+diff --git a/vmblock-only/linux/dentry.c b/vmblock-only/linux/dentry.c
+index 66537c8..05ea95a 100644
+--- a/vmblock-only/linux/dentry.c
++++ b/vmblock-only/linux/dentry.c
+@@ -104,7 +104,7 @@ DentryOpRevalidate(struct dentry *dentry,  // IN: dentry revalidating
+       return actualDentry->d_op->d_revalidate(actualDentry, nd);
+    }
+ 
+-   if (path_lookup(iinfo->name, 0, &actualNd)) {
++   if (compat_path_lookup(iinfo->name, 0, &actualNd)) {
+       LOG(4, "DentryOpRevalidate: [%s] no longer exists\n", iinfo->name);
+       return 0;
+    }
+diff --git a/vmblock-only/linux/filesystem.c b/vmblock-only/linux/filesystem.c
+index 53840fd..bc117c5 100644
+--- a/vmblock-only/linux/filesystem.c
++++ b/vmblock-only/linux/filesystem.c
+@@ -66,7 +66,6 @@ static size_t fsRootLen;
+ static struct file_system_type fsType = {
+    .owner = THIS_MODULE,
+    .name = VMBLOCK_FS_NAME,
+-   .get_sb = FsOpGetSb,
+    .kill_sb = kill_anon_super,
+ };
+ 
+@@ -553,7 +552,7 @@ FsOpReadSuper(struct super_block *sb, // OUT: Superblock object
+  *-----------------------------------------------------------------------------
+  */
+ 
+-static int
++/*static int
+ FsOpGetSb(struct file_system_type *fs_type, // IN: file system type of mount
+           int flags,                        // IN: mount flags
+           const char *dev_name,             // IN: device mounting on
+@@ -561,7 +560,7 @@ FsOpGetSb(struct file_system_type *fs_type, // IN: file system type of mount
+           struct vfsmount *mnt)             // IN: vfs mount
+ {
+    return get_sb_nodev(fs_type, flags, rawData, FsOpReadSuper, mnt);
+-}
++}*/
+ #else
+ /*
+  *-----------------------------------------------------------------------------
+diff --git a/vmblock-only/shared/compat_namei.h b/vmblock-only/shared/compat_namei.h
+index 28d72c8..4214247 100644
+--- a/vmblock-only/shared/compat_namei.h
++++ b/vmblock-only/shared/compat_namei.h
+@@ -40,8 +40,11 @@
+ #define compat_path_release(nd) path_release(nd)
+ #endif
+ 
++/* path_lookup was removed in 2.6.39 merge window VFS merge */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2, 6, 39)
++#define compat_path_lookup(name, flags, nd)     kern_path(name, flags, &((nd)->path))
+ /* path_lookup was exported in 2.4.25 */
+-#if LINUX_VERSION_CODE >= KERNEL_VERSION(2, 4, 25)
++#elif LINUX_VERSION_CODE >= KERNEL_VERSION(2, 4, 25)
+ #define compat_path_lookup(path, flags, nd)     path_lookup(path, flags, nd)
+ #else
+ #define compat_path_lookup(path, flags, nd)     \
+diff --git a/vmci-only/linux/driver.c b/vmci-only/linux/driver.c
+index a0f5498..49795e1 100644
+--- a/vmci-only/linux/driver.c
++++ b/vmci-only/linux/driver.c
+@@ -42,7 +42,6 @@ sys_ioctl(unsigned int fd, unsigned int cmd, unsigned long arg);
+ #include <linux/miscdevice.h>
+ #include <linux/poll.h>
+ #include <linux/smp.h>
+-#include <linux/smp_lock.h>
+ 
+ #include "compat_file.h"
+ #include "compat_highmem.h"
+diff --git a/vmmon-only/linux/driver.c b/vmmon-only/linux/driver.c
+index a33c983..89f8827 100644
+--- a/vmmon-only/linux/driver.c
++++ b/vmmon-only/linux/driver.c
+@@ -781,7 +781,7 @@ LinuxDriver_Close(struct inode *inode, // IN
+ 
+ 
+ #define POLLQUEUE_MAX_TASK 1000
+-static spinlock_t pollQueueLock __attribute__((unused)) = SPIN_LOCK_UNLOCKED;
++static DEFINE_SPINLOCK(pollQueueLock);
+ static void *pollQueue[POLLQUEUE_MAX_TASK];
+ static unsigned int pollQueueCount = 0;
+ 
+@@ -1042,7 +1042,8 @@ LinuxDriverPoll(struct file *filp,
+ 		* but unfortunately there is no way how to detect that
+ 		* we are building for RedHat's kernel...
+ 		*/
+-	       static spinlock_t timerLock = SPIN_LOCK_UNLOCKED;
++
++	       static DEFINE_SPINLOCK(timerLock);
+ 
+ 	       spin_lock(&timerLock);
+ 	       mod_timer(&linuxState.pollTimer, jiffies + 1);
+diff --git a/vmmon-only/linux/hostif.c b/vmmon-only/linux/hostif.c
+index 6c7b34d..fabb44d 100644
+--- a/vmmon-only/linux/hostif.c
++++ b/vmmon-only/linux/hostif.c
+@@ -46,7 +46,6 @@
+ #include <linux/mman.h>
+ 
+ #include <linux/smp.h>
+-#include <linux/smp_lock.h>
+ 
+ #include <asm/io.h>
+ #include <linux/mc146818rtc.h>
+diff --git a/vmmon-only/linux/iommu.c b/vmmon-only/linux/iommu.c
+index f64e80a..b0ee013 100644
+--- a/vmmon-only/linux/iommu.c
++++ b/vmmon-only/linux/iommu.c
+@@ -44,7 +44,7 @@ typedef struct PassthruDevice {
+ 
+ 
+ static LIST_HEAD(passthruDeviceList);
+-static spinlock_t passthruDeviceListLock = SPIN_LOCK_UNLOCKED;
++static DEFINE_SPINLOCK(passthruDeviceListLock);
+ static void *pciHolePage = NULL;
+ 
+ /*
+diff --git a/vmnet-only/driver.c b/vmnet-only/driver.c
+index c91a1dc..4c195e1 100644
+--- a/vmnet-only/driver.c
++++ b/vmnet-only/driver.c
+@@ -28,7 +28,6 @@
+ #include <linux/poll.h>
+ 
+ #include <linux/smp.h>
+-#include <linux/smp_lock.h>
+ 
+ #include <linux/netdevice.h>
+ #include <linux/etherdevice.h>
+@@ -105,7 +104,7 @@ const uint8 broadcast[ETH_ALEN] = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
+  * not have vnetStructureMutex already acquired,
+  * it is most certainly a bug.
+  */
+-static rwlock_t vnetPeerLock = RW_LOCK_UNLOCKED;
++static DEFINE_RWLOCK(vnetPeerLock);
+ 
+ /*
+  * All concurrent changes to the network structure are
+@@ -115,6 +114,7 @@ static rwlock_t vnetPeerLock = RW_LOCK_UNLOCKED;
+  * vnetStructureMutex and vnetPeerLock for write.
+  */
+ compat_define_mutex(vnetStructureMutex);
++compat_define_mutex(vnetMutex);
+ 
+ #if defined(VM_X86_64) && !defined(HAVE_COMPAT_IOCTL)
+ /*
+@@ -264,11 +264,11 @@ LinuxDriver_Ioctl32_Handler(unsigned int fd,     // IN: (unused)
+ 			    struct file * filp)  // IN:
+ {
+    int ret = -ENOTTY;
+-   lock_kernel();
++   compat_mutex_lock(&vnetMutex);
+    if (filp && filp->f_op && filp->f_op->ioctl == VNetFileOpIoctl) {
+       ret = VNetFileOpIoctl(filp->f_dentry->d_inode, filp, iocmd, ioarg);
+    }
+-   unlock_kernel();
++   compat_mutex_unlock(&vnetMutex);
+    return ret;
+ }
+ 
+@@ -1134,9 +1134,9 @@ VNetFileOpUnlockedIoctl(struct file    *filp,  // IN:
+    if (filp && filp->f_dentry) {
+       inode = filp->f_dentry->d_inode;
+    }
+-   lock_kernel();
++   compat_mutex_lock(&vnetMutex);
+    err = VNetFileOpIoctl(inode, filp, iocmd, ioarg);
+-   unlock_kernel();
++   compat_mutex_unlock(&vnetMutex);
+    return err;
+ }
+ #endif
+diff --git a/vmnet-only/filter.c b/vmnet-only/filter.c
+index 34b7d3d..b0017d7 100644
+--- a/vmnet-only/filter.c
++++ b/vmnet-only/filter.c
+@@ -85,7 +85,7 @@ static compat_define_mutex(filterIoctlMutex); /* serialize ioctl()s from user sp
+  * callbacks can be concurrently executing on multiple threads on multiple
+  * CPUs, so we should revisit locking for allowing for that in the future.
+  */
+-spinlock_t activeRuleLock = SPIN_LOCK_UNLOCKED;
++DEFINE_SPINLOCK(activeRuleLock);
+ 
+ /*
+  * Logging.
+diff --git a/vmnet-only/hub.c b/vmnet-only/hub.c
+index b05efea..38d9aef 100644
+--- a/vmnet-only/hub.c
++++ b/vmnet-only/hub.c
+@@ -81,7 +81,7 @@ static VNetHub *vnetHub = NULL;
+  * so we use __attribute__((unused)) to quiet the compiler.
+  */
+ 
+-static spinlock_t vnetHubLock __attribute__((unused)) = SPIN_LOCK_UNLOCKED;
++static DEFINE_SPINLOCK(vnetHubLock);
+ 
+ 
+ /*
+diff --git a/vsock-only/linux/af_vsock.c b/vsock-only/linux/af_vsock.c
+index ecd057e..d565ec0 100644
+--- a/vsock-only/linux/af_vsock.c
++++ b/vsock-only/linux/af_vsock.c
+@@ -102,7 +102,6 @@
+ #include <linux/miscdevice.h>
+ #include <linux/poll.h>
+ #include <linux/smp.h>
+-#include <linux/smp_lock.h>
+ #include <asm/io.h>
+ #if defined(__x86_64__) && LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 12)
+ #   if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 0)
+diff --git a/vsock-only/linux/util.c b/vsock-only/linux/util.c
+index 53f2edb..32a7da7 100644
+--- a/vsock-only/linux/util.c
++++ b/vsock-only/linux/util.c
+@@ -34,7 +34,7 @@
+ struct list_head vsockBindTable[VSOCK_HASH_SIZE + 1];
+ struct list_head vsockConnectedTable[VSOCK_HASH_SIZE];
+ 
+-spinlock_t vsockTableLock = SPIN_LOCK_UNLOCKED;
++DEFINE_SPINLOCK(vsockTableLock);
+ 
+ /*
+  * snprintf() wasn't exported until 2.4.10: fall back on sprintf in those
+diff --git a/vsock-only/shared/compat_namei.h b/vsock-only/shared/compat_namei.h
+index 28d72c8..4214247 100644
+--- a/vsock-only/shared/compat_namei.h
++++ b/vsock-only/shared/compat_namei.h
+@@ -40,8 +40,11 @@
+ #define compat_path_release(nd) path_release(nd)
+ #endif
+ 
++/* path_lookup was removed in 2.6.39 merge window VFS merge */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2, 6, 39)
++#define compat_path_lookup(name, flags, nd)     kern_path(name, flags, &((nd)->path))
+ /* path_lookup was exported in 2.4.25 */
+-#if LINUX_VERSION_CODE >= KERNEL_VERSION(2, 4, 25)
++#elif LINUX_VERSION_CODE >= KERNEL_VERSION(2, 4, 25)
+ #define compat_path_lookup(path, flags, nd)     path_lookup(path, flags, nd)
+ #else
+ #define compat_path_lookup(path, flags, nd)     \

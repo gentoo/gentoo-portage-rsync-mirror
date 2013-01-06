@@ -1,0 +1,22 @@
+--- stedolan-jq-bf61e95/Makefile
++++ stedolan-jq-bf61e95/Makefile
+@@ -1,4 +1,5 @@
+-CC=gcc -Wextra -Wall -Wno-missing-field-initializers -Wno-unused-parameter -std=gnu99 -ggdb -Wno-unused-function
++CC?=gcc
++CFLAGS+=-Wextra -Wall -Wno-missing-field-initializers -Wno-unused-parameter -std=gnu99 -Wno-unused-function
+ prefix=/usr/local
+ 
+ .PHONY: all clean releasedep tarball install uninstall test releasetag
+@@ -30,10 +31,10 @@
+ 
+ 
+ jq_test: $(JQ_SRC) jq_test.c
+-	$(CC) -DJQ_DEBUG=1 -o $@ $^
++	$(CC) $(CFLAGS) $(LDFLAGS) -DJQ_DEBUG=1 -o $@ $^
+ 
+ jq: $(JQ_SRC) main.c
+-	$(CC) -O -DJQ_DEBUG=0 -o $@ $^
++	$(CC) $(CFLAGS) $(LDFLAGS) -DJQ_DEBUG=0 -o $@ $^
+ 
+ test: jq_test
+ 	valgrind --error-exitcode=1 -q --leak-check=full ./jq_test >/dev/null

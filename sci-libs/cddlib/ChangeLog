@@ -1,0 +1,23 @@
+# ChangeLog for sci-libs/cddlib
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cddlib/ChangeLog,v 1.4 2011/08/13 07:12:13 xarthisius Exp $
+
+  13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> cddlib-094f-r2.ebuild:
+  Dropped ppc keywords wrt #349167
+
+  02 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  cddlib-094f-r2.ebuild:
+  x86 stable wrt bug #349167
+
+  29 Dec 2010; Markos Chandras <hwoarang@gentoo.org> cddlib-094f-r2.ebuild:
+  Stable on amd64 wrt bug #349167
+
+*cddlib-094f-r2 (08 Nov 2010)
+
+  08 Nov 2010; Thomas Kahle <tomka@gentoo.org> +cddlib-094f-r2.ebuild,
+  +files/cddlib-094f-add-cdd_both_reps-binary.patch,
+  +files/cddlib-094f-use-libtool.patch, +files/cdd_both_reps.c,
+  +metadata.xml:
+  new package imported from science overlay. Fixes bug #230423
+  Thanks to everyone on {sage,science}@g.o for contributions to this ebuild.
+

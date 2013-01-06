@@ -1,0 +1,108 @@
+diff -ur policycoreutils-extra.orig/scripts/rlpkg policycoreutils-extra/scripts/rlpkg
+--- policycoreutils-extra.orig/scripts/rlpkg	2012-05-01 16:01:43.321023704 +0200
++++ policycoreutils-extra/scripts/rlpkg	2012-05-01 16:01:53.192023725 +0200
+@@ -86,7 +86,7 @@
+ 		t = portage.db["/"]["vartree"].dbapi.match(search_key)
+ 	# catch the "amgigous package" Exception
+ 	except ValueError as e:
+-		if type(e[0]) == types.ListType:
++		if type(e[0]) == list:
+ 			t = []
+ 			for cp in e[0]:
+ 				t += portage.db["/"]["vartree"].dbapi.match(cp)
+@@ -112,7 +112,7 @@
+ 
+ def find_xattr_mounts():
+ 	"""Find mounted xattr filesystems"""
+-	print("Relabeling filesystem types: "+" ".join(xattrfs))
++	print(("Relabeling filesystem types: "+" ".join(xattrfs)))
+ 	mounts=open("/etc/mtab", "r")
+ 
+ 	fs_matches=[]
+@@ -158,29 +158,29 @@
+ 
+ 		(ret,context) = selinux.getfilecon(filename)
+ 		if ret < 0:
+-			print("Error getting context of "+filename)
++			print(("Error getting context of "+filename))
+ 			continue
+ 
+ 		ctx = string.split(context,":")
+ 
+ 		if len(ctx) < 3:
+-			print("Debug: getfilecon on \""+filename+"\" returned a context of \""+context+"\" which split incorrectly ("+ctx+").")
++			print(("Debug: getfilecon on \""+filename+"\" returned a context of \""+context+"\" which split incorrectly ("+ctx+")."))
+ 			continue
+ 
+ 		if ctx[2] in textrel_ok_relabelfrom:
+ 			if verbose:
+-				print("Relabeling "+filename+" to "+textrel_type+".")
++				print(("Relabeling "+filename+" to "+textrel_type+"."))
+ 			ctx[2] = textrel_type
+ 			if selinux.setfilecon(filename,string.join(ctx,":")) < 0:
+-				print("Failed to relabel "+filename)
++				print(("Failed to relabel "+filename))
+ 		elif ctx[2] == textrel_type:
+ 			if verbose:
+-				print("Skipping "+filename+" because it is already "+textrel_type+".")
++				print(("Skipping "+filename+" because it is already "+textrel_type+"."))
+ 		else:
+-			print("Not relabeling "+filename+" because it is "+ctx[2]+".")
++			print(("Not relabeling "+filename+" because it is "+ctx[2]+"."))
+ 			notok += 1
+ 
+-	print("%(a)d libraries with text relocations, %(b)d not relabeled." % {"a":textrel_libs, "b":notok})
++	print(("%(a)d libraries with text relocations, %(b)d not relabeled." % {"a":textrel_libs, "b":notok}))
+ 
+ 	if notok > 0:
+ 		print("\nSome files were not relabeled!  This is not necessarily bad,")
+@@ -197,10 +197,10 @@
+ 
+ 	textrel_bins = 0
+ 	for line in tb.stdout.readline():
+-		print("PIE executable "+line.split()[1]+" has text relocations!")
++		print(("PIE executable "+line.split()[1]+" has text relocations!"))
+ 		textrel_bins += 1
+ 
+-	print("%d binaries with text relocations detected." % (textrel_bins))
++	print(("%d binaries with text relocations detected." % (textrel_bins)))
+ 
+ 	if textrel_bins > 0:
+ 		print("\nPIE binaries with text relocations have been detected!")
+@@ -234,8 +234,8 @@
+ 	childin = os.popen(string.join(cmdline),'w')
+ 
+ 	for i in pkglist:
+-		print("Relabeling: "+i.get_cpv())
+-		for j in i.get_contents().keys():
++		print(("Relabeling: "+i.get_cpv()))
++		for j in list(i.get_contents().keys()):
+ 			childin.write(j+'\n')
+ 
+ 	rc = childin.close()
+@@ -245,14 +245,14 @@
+ 	if rc == None:
+ 		rc = 0
+ 	else:
+-		print("Error relabeling: %d" % (rc))
++		print(("Error relabeling: %d" % (rc)))
+ 
+ 	return rc
+ 
+ def usage(message=""):
+ 	pgmname = os.path.basename(sys.argv[0])
+ 
+-	print("Usage: %s [OPTIONS] {<pkg1> [<pkg2> ...]}" % (pgmname))
++	print(("Usage: %s [OPTIONS] {<pkg1> [<pkg2> ...]}" % (pgmname)))
+ 	print("\n\
+   -a, --all	 Relabel the entire filesystem instead of individual packages.\n\
+   -r, --reset	 Force reset of context if the file's selinux identity is\n\
+@@ -266,7 +266,7 @@
+ \"policycoreutils\" or \">=sys-apps/policycoreutils-1.30\".\n\
+ ")
+ 	if message != "":
+-		print(pgmname+": "+message)
++		print((pgmname+": "+message))
+ 		sys.exit(1)
+ 	else:
+ 		sys.exit(0)

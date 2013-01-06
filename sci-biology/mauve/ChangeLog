@@ -1,0 +1,14 @@
+# ChangeLog for sci-biology/mauve
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mauve/ChangeLog,v 1.2 2010/03/09 13:04:57 abcd Exp $
+
+  09 Mar 2010; Jonathan Callen <abcd@gentoo.org> mauve-9999.ebuild:
+  QA: Do not use absolute path to icon when in standard dirs (in
+  make_desktop_entry())
+
+*mauve-9999 (09 Dec 2009)
+
+  09 Dec 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +mauve-9999.ebuild:
+  New package, ebuild written by me. Stable snapshot pending.
+

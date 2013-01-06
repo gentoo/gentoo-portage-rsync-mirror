@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+CHEF_EXPANDER_LOGFILE=${CHEF_EXPANDER_LOGFILE:-/var/log/chef/expander.log}
+CONFIGFILE=${CONFIGFILE:-/etc/chef/solr.rb}
+
+pidfile=${CHEF_EXPANDER_PIDFILE:-/var/run/chef/expander.pid}
+command=${CHEF_EXPANDER_BINARY:-/usr/bin/chef-expander}
+command_args="-d -P ${pidfile} -L ${CHEF_EXPANDER_LOGFILE} -c ${CONFIGFILE} ${CHEF_EXPANDER_OPTS}"
+
+user=${CHEF_USER:-chef}
+group=${CHEF_GROUP:-chef}
+
+depend() {
+	need net chef-solr
+}
+
+start_pre() {
+	checkpath -q -d -m 0750 -o ${user}:${group} /etc/chef /var/{lib,log,run}/chef
+	checkpath -q -f -m 0600 ${CONFIGFILE}
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>wired@gentoo.org</email>
+		<name>Alex Alexander</name>
+	</maintainer>
+	<use>
+		<flag name="browser">Install the uzbl-browser script</flag>
+		<flag name="experimental">Enable experimental branch</flag>
+		<flag name="helpers">Optional tools used by uzbl scripts</flag>
+		<flag name="gtk3">Use x11-libs/gtk+:3 instead of x11-libs/gtk+:2</flag>
+		<flag name="tabbed">Install the uzbl-tabbed script</flag>
+	</use>
+</pkgmetadata>
+

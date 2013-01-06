@@ -1,0 +1,25 @@
+# ChangeLog for dev-python/pykerberos
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykerberos/ChangeLog,v 1.5 2012/02/21 07:57:16 patrick Exp $
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> pykerberos-1.1-r1.ebuild:
+  Restricting jython
+
+  04 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Fix maintainer's email in metadata
+
+*pykerberos-1.1-r1 (25 Jan 2012)
+
+  25 Jan 2012; Jeroen Roovers <jer@gentoo.org> -pykerberos-1.1.ebuild,
+  +pykerberos-1.1-r1.ebuild:
+  Bump the ebuild so everyone can enjoy.
+
+  25 Jan 2012; Jeroen Roovers <jer@gentoo.org> pykerberos-1.1.ebuild:
+  Inherit eutils by William Throwe (bug #400683).
+
+*pykerberos-1.1 (04 Nov 2011)
+
+  04 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org> +pykerberos-1.1.ebuild,
+  +files/PyKerberos-delegation.patch, +metadata.xml:
+  Add dev-python/pykerberos-1.1, bug #388965. Thanks to slepnoga.
+

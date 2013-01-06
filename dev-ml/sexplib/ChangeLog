@@ -1,0 +1,96 @@
+# ChangeLog for dev-ml/sexplib
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/ChangeLog,v 1.20 2012/10/17 12:15:21 aballier Exp $
+
+  17 Oct 2012; Alexis Ballier <aballier@gentoo.org> sexplib-108.07.01.ebuild:
+  Mirror the distfile, upstream one fails to fetch, bug #438610 by Nick Bowler
+
+*sexplib-108.07.01 (08 Oct 2012)
+
+  08 Oct 2012; Alexis Ballier <aballier@gentoo.org> +sexplib-108.07.01.ebuild:
+  version bump
+
+  07 Aug 2012; Alexis Ballier <aballier@gentoo.org> -sexplib-7.0.4.ebuild,
+  -sexplib-7.0.5.ebuild:
+  remove old
+
+*sexplib-108.00.01 (30 Jun 2012)
+
+  30 Jun 2012; Alexis Ballier <aballier@gentoo.org> +sexplib-108.00.01.ebuild:
+  bump to janestreet version
+
+*sexplib-7.0.5 (30 Jun 2012)
+
+  30 Jun 2012; Alexis Ballier <aballier@gentoo.org> +sexplib-7.0.5.ebuild:
+  version bump
+
+  27 Mar 2012; Alexis Ballier <aballier@gentoo.org> sexplib-7.0.4.ebuild:
+  convert to oasis.eclass
+
+  23 Feb 2012; Alexis Ballier <aballier@gentoo.org> -sexplib-5.2.1.ebuild:
+  remove old
+
+  06 Oct 2011; Alexis Ballier <aballier@gentoo.org> -sexplib-7.0.3.ebuild:
+  remove old
+
+*sexplib-7.0.4 (06 Oct 2011)
+
+  06 Oct 2011; Alexis Ballier <aballier@gentoo.org> +sexplib-7.0.4.ebuild:
+  version bump
+
+*sexplib-7.0.3 (07 Sep 2011)
+
+  07 Sep 2011; Alexis Ballier <aballier@gentoo.org> -sexplib-7.0.1.ebuild,
+  +sexplib-7.0.3.ebuild:
+  version bump
+
+*sexplib-7.0.1 (07 Sep 2011)
+
+  07 Sep 2011; Alexis Ballier <aballier@gentoo.org> +sexplib-7.0.1.ebuild:
+  version bump
+
+  23 Jul 2011; Thomas Kahle <tomka@gentoo.org> sexplib-5.2.1.ebuild:
+  ~x86 per bug 373149
+
+  06 Jul 2011; Alexis Ballier <aballier@gentoo.org> -sexplib-4.2.17.ebuild,
+  -sexplib-5.2.0.ebuild:
+  remove old
+
+*sexplib-5.2.1 (25 Jun 2011)
+
+  25 Jun 2011; Alexis Ballier <aballier@gentoo.org> +sexplib-5.2.1.ebuild:
+  version bump, by Vladimir Ivanov, bug #361161
+
+*sexplib-5.2.0 (24 Feb 2011)
+
+  24 Feb 2011; Alexis Ballier <aballier@gentoo.org> +sexplib-5.2.0.ebuild:
+  version bump by Vladimir Ivanov <v.ivanov@ymail.com>, bug #355519, with
+  improvements by me
+
+  12 Apr 2010; Alexis Ballier <aballier@gentoo.org> -sexplib-4.2.16.ebuild:
+  remove old
+
+*sexplib-4.2.17 (03 Jan 2010)
+
+  03 Jan 2010; Alexis Ballier <aballier@gentoo.org> +sexplib-4.2.17.ebuild:
+  version bump
+
+*sexplib-4.2.16 (13 Oct 2009)
+
+  13 Oct 2009; Alexis Ballier <aballier@gentoo.org> -sexplib-4.2.15.ebuild,
+  +sexplib-4.2.16.ebuild:
+  version bump
+
+*sexplib-4.2.15 (26 Sep 2009)
+
+  26 Sep 2009; Alexis Ballier <aballier@gentoo.org> -sexplib-4.2.13.ebuild,
+  +sexplib-4.2.15.ebuild:
+  version bump
+
+*sexplib-4.2.13 (19 Sep 2009)
+
+  19 Sep 2009; Alexis Ballier <aballier@gentoo.org> +sexplib-4.2.13.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by Guillaume Horel <guillaume.horel@gmail.com>, bug
+  #281274
+

@@ -1,0 +1,21 @@
+# ChangeLog for app-i18n/fcitx-cloudpinyin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-cloudpinyin/ChangeLog,v 1.3 2012/07/19 08:17:06 yngwin Exp $
+
+*fcitx-cloudpinyin-0.2.3 (19 Jul 2012)
+
+  19 Jul 2012; Ben de Groot <yngwin@gentoo.org> +fcitx-cloudpinyin-0.2.3.ebuild:
+  Version bump. Make description more useful.
+
+*fcitx-cloudpinyin-0.2.2 (07 Jun 2012)
+
+  07 Jun 2012; Mu Qiao <qiaomuf@gentoo.org> +fcitx-cloudpinyin-0.2.2.ebuild:
+  Version bump for fcitx-cloudpinyin-0.2.2
+
+*fcitx-cloudpinyin-0.2.1 (18 May 2012)
+
+  18 May 2012; Mu Qiao <qiaomuf@gentoo.org> +fcitx-cloudpinyin-0.2.1.ebuild,
+  +metadata.xml:
+  Initial commit for fcitx-cloudpinyin
+
+  Thanks to Amesists Wong's help.

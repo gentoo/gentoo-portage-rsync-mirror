@@ -1,0 +1,14 @@
+# ChangeLog for dev-db/lib_mysqludf_ta
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lib_mysqludf_ta/ChangeLog,v 1.2 2011/10/19 12:32:13 sbriesen Exp $
+
+  19 Oct 2011; Stefan Briesenick <sbriesen@gentoo.org>
+  lib_mysqludf_ta-0.1.ebuild:
+  moved econf to src_configure
+
+*lib_mysqludf_ta-0.1 (19 Oct 2011)
+
+  19 Oct 2011; Stefan Briesenick <sbriesen@gentoo.org>
+  +lib_mysqludf_ta-0.1.ebuild, +metadata.xml:
+  initial commit
+

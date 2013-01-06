@@ -1,0 +1,37 @@
+# ChangeLog for dev-python/virtualenvwrapper
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenvwrapper/ChangeLog,v 1.7 2012/11/29 17:42:57 idella4 Exp $
+
+  30 Nov 2012; Ian Delaney <idella4@gentoo.org> virtualenvwrapper-3.6.ebuild:
+  tests set to restrict consequent to persistently accessing the internet,
+  downloading, fixes Bug #443868 by flameeyes
+
+  05 Nov 2012; Patrick Lauer <patrick@gentoo.org> virtualenvwrapper-3.6.ebuild:
+  Fixed dependencies #440806
+
+*virtualenvwrapper-3.6 (01 Nov 2012)
+
+  01 Nov 2012; Patrick Lauer <patrick@gentoo.org> +virtualenvwrapper-3.6.ebuild:
+  Bump
+
+*virtualenvwrapper-3.2 (15 Apr 2012)
+
+  15 Apr 2012; Patrick Lauer <patrick@gentoo.org> +virtualenvwrapper-3.2.ebuild:
+  Bump for #411985
+
+  15 Mar 2012; Patrick Lauer <patrick@gentoo.org>
+  virtualenvwrapper-3.0.1.ebuild:
+  Bump for #408373
+
+*virtualenvwrapper-3.0.1 (09 Mar 2012)
+
+  09 Mar 2012; Patrick Lauer <patrick@gentoo.org>
+  +virtualenvwrapper-3.0.1.ebuild:
+  Bump
+
+*virtualenvwrapper-3.0 (14 Feb 2012)
+
+  14 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> +virtualenvwrapper-3.0.ebuild,
+  +files/tox.ini, +metadata.xml:
+  Initial version of virtualenvwrapper. Ebuild contributed by
+  nicolas.pinto@gmail.com.

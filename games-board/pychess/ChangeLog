@@ -1,0 +1,76 @@
+# ChangeLog for games-board/pychess
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.18 2012/08/07 09:54:44 radhermit Exp $
+
+  07 Aug 2012; Tim Harder <radhermit@gentoo.org> -pychess-0.10.ebuild:
+  Remove old.
+
+  01 Jul 2012; Agostino Sarubbo <ago@gentoo.org> pychess-0.10.1.ebuild:
+  Stable for amd64, wrt bug #424249
+
+  30 Jun 2012; Jeff Horelick <jdhore@gentoo.org> pychess-0.10.1.ebuild:
+  marked x86 per bug 424249
+
+*pychess-0.10.1 (31 May 2012)
+
+  31 May 2012; Tim Harder <radhermit@gentoo.org> +pychess-0.10.1.ebuild:
+  Version bump (bug #412083).
+
+  13 Apr 2012; Ulrich Müller <ulm@gentoo.org> pychess-0.10.ebuild:
+  Move EAPI assignment to top of ebuild, bug 411875.
+
+  20 Oct 2011; Tim Harder <radhermit@gentoo.org> pychess-0.10.ebuild:
+  Use slot dep for pygobject.
+
+  13 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> pychess-0.10.ebuild:
+  add dev-python/pygtksourceview dep (bug #375105)
+
+  12 Apr 2011; Thomas Kahle <tomka@gentoo.org> pychess-0.10.ebuild:
+  x86 stable per bug 361623
+
+  06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pychess-0.8.4.ebuild, pychess-0.10.ebuild:
+  Fix deprecation warnings.
+
+  02 Apr 2011; Christoph Mende <angelos@gentoo.org> pychess-0.10.ebuild:
+  Stable on amd64 wrt bug #361623
+
+*pychess-0.10 (21 Mar 2011)
+
+  21 Mar 2011; Michael Sterrett <mr_bones_@gentoo.org> +pychess-0.10.ebuild:
+  version bump
+
+  29 Apr 2010; Tupone Alfredo <tupone@gentoo.org> pychess-0.8.4.ebuild:
+  Force python2 fixing bug #312241 by arfrever@gentoo.org
+
+  16 Nov 2009; Markus Meier <maekke@gentoo.org> pychess-0.8.4.ebuild:
+  amd64/x86 stable, bug #292687
+
+*pychess-0.8.4 (11 Oct 2009)
+
+  11 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +pychess-0.8.4.ebuild:
+  version bump
+
+  01 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  -pychess-0.8.1.ebuild, pychess-0.8.2.ebuild:
+  version bump; clean old
+
+*pychess-0.8.2 (31 Aug 2008)
+
+  31 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +pychess-0.8.2.ebuild:
+  version bump
+
+*pychess-0.8.1 (28 Mar 2008)
+
+  28 Mar 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +pychess-0.8.1.ebuild:
+  version bump
+
+*pychess-0.8 (21 Feb 2008)
+
+  21 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +pychess-0.8.ebuild:
+  initial commit - ebuild submitted by Tim Harder via bug #161494
+

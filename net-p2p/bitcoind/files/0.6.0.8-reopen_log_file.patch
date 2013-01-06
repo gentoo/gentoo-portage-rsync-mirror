@@ -1,0 +1,94 @@
+diff --git a/src/init.cpp b/src/init.cpp
+index 586e3da..da695f4 100644
+--- a/src/init.cpp
++++ b/src/init.cpp
+@@ -97,6 +97,10 @@ void HandleSIGTERM(int)
+     fRequestShutdown = true;
+ }
+ 
++void HandleSIGHUP(int)
++{
++    fReopenDebugLog = true;
++}
+ 
+ 
+ 
+@@ -158,7 +162,13 @@ bool AppInit2(int argc, char* argv[])
+     sa.sa_flags = 0;
+     sigaction(SIGTERM, &sa, NULL);
+     sigaction(SIGINT, &sa, NULL);
+-    sigaction(SIGHUP, &sa, NULL);
++
++    // Reopen debug.log on SIGHUP
++    struct sigaction sa_hup;
++    sa_hup.sa_handler = HandleSIGHUP;
++    sigemptyset(&sa_hup.sa_mask);
++    sa_hup.sa_flags = 0;
++    sigaction(SIGHUP, &sa_hup, NULL);
+ #endif
+ 
+     //
+diff --git a/src/util.cpp b/src/util.cpp
+index 94bdba6..5718f41 100644
+--- a/src/util.cpp
++++ b/src/util.cpp
+@@ -44,6 +44,7 @@ bool fTestNet = false;
+ bool fNoListen = false;
+ bool fLogTimestamps = false;
+ CMedianFilter<int64> vTimeOffsets(200,0);
++bool fReopenDebugLog = false;
+ 
+ 
+ 
+@@ -167,6 +168,13 @@ int GetRandInt(int nMax)
+ 
+ 
+ 
++string GetDebugLogName()
++{
++    char pszFile[MAX_PATH+100];
++    GetDataDir(pszFile);
++    strlcat(pszFile, "/debug.log", sizeof(pszFile));
++    return pszFile;
++}
+ 
+ inline int OutputDebugStringF(const char* pszFormat, ...)
+ {
+@@ -186,10 +194,7 @@ inline int OutputDebugStringF(const char* pszFormat, ...)
+ 
+         if (!fileout)
+         {
+-            char pszFile[MAX_PATH+100];
+-            GetDataDir(pszFile);
+-            strlcat(pszFile, "/debug.log", sizeof(pszFile));
+-            fileout = fopen(pszFile, "a");
++            fileout = fopen(GetDebugLogName().c_str(), "a");
+             if (fileout) setbuf(fileout, NULL); // unbuffered
+         }
+         if (fileout)
+@@ -198,6 +203,13 @@ inline int OutputDebugStringF(const char* pszFormat, ...)
+             static boost::mutex mutexDebugLog;
+             boost::mutex::scoped_lock scoped_lock(mutexDebugLog);
+ 
++            // reopen the log file, if requested
++            if (fReopenDebugLog) {
++                fReopenDebugLog = false;
++                if (freopen(GetDebugLogName().c_str(), "a", fileout) != NULL)
++                    setbuf(fileout, NULL); // unbuffered
++            }
++
+             // Debug print useful for profiling
+             if (fLogTimestamps && fStartedNewLine)
+                 fprintf(fileout, "%s ", DateTimeStrFormat("%x %H:%M:%S", GetTime()).c_str());
+diff --git a/src/util.h b/src/util.h
+index e0821cc..737f239 100644
+--- a/src/util.h
++++ b/src/util.h
+@@ -123,6 +123,7 @@ extern std::string strMiscWarning;
+ extern bool fTestNet;
+ extern bool fNoListen;
+ extern bool fLogTimestamps;
++extern bool fReopenDebugLog;
+ 
+ void RandAddSeed();
+ void RandAddSeedPerfmon();

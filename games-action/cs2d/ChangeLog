@@ -1,0 +1,28 @@
+# ChangeLog for games-action/cs2d
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/cs2d/ChangeLog,v 1.5 2012/09/07 15:14:46 maksbotan Exp $
+
+*cs2d-0121 (07 Sep 2012)
+
+  07 Sep 2012; Maxim Koltsov <maksbotan@gentoo.org> +cs2d-0121.ebuild:
+  Bump to 0121
+
+*cs2d-0120-r1 (30 May 2012)
+
+  30 May 2012; Maxim Koltsov <maksbotan@gentoo.org> +cs2d-0120-r1.ebuild,
+  -cs2d-0119.ebuild, -cs2d-0120.ebuild, -files/cs2d.png, metadata.xml:
+  Move cs2d.png to mirrors, bug 417117. Cosmetic clean-ups, add games herd
+
+*cs2d-0120 (07 Mar 2012)
+
+  07 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org> +cs2d-0120.ebuild:
+  Bump tp 0120, thanks to oleg@kaa.org.ua
+
+  03 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org> cs2d-0119.ebuild:
+  Add app-arch/unzip DEPEND, bug #406677. Thanks to szarpaj@grubelek.pl
+
+*cs2d-0119 (18 Sep 2011)
+
+  18 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org> +files/cs2d.png,
+  +cs2d-0119.ebuild, +metadata.xml:
+  Add games-action/cs2d, thanks to oleg@kaa.org.ua

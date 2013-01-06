@@ -1,0 +1,10 @@
+--- ./lib/scratch-buffers.c.orig	2012-01-20 17:44:43.871103296 -0500
++++ ./lib/scratch-buffers.c	2012-01-20 17:44:56.313552034 -0500
+@@ -24,6 +24,7 @@
+ 
+ #include "tls-support.h"
+ #include "scratch-buffers.h"
++#include "misc.h"
+ 
+ TLS_BLOCK_START
+ {

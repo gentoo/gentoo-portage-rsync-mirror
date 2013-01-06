@@ -1,0 +1,32 @@
+# ChangeLog for x11-misc/winswitch
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/winswitch/ChangeLog,v 1.5 2013/01/05 13:35:04 xmw Exp $
+
+*winswitch-0.12.18 (05 Jan 2013)
+
+  05 Jan 2013; Michael Weber <xmw@gentoo.org> -winswitch-0.12.14.ebuild,
+  -winswitch-0.12.16.ebuild, +winswitch-0.12.18.ebuild:
+  Version bump (thanks euscan), drop old
+
+*winswitch-0.12.17 (15 Oct 2012)
+
+  15 Oct 2012; Michael Weber <xmw@gentoo.org> +winswitch-0.12.17.ebuild:
+  Version bump (euscan)
+
+*winswitch-0.12.16 (06 Oct 2012)
+
+  06 Oct 2012; Michael Weber <xmw@gentoo.org> -winswitch-0.12.13.ebuild,
+  winswitch-0.12.14.ebuild, +winswitch-0.12.16.ebuild:
+  Version bump (euscan), drop old.
+
+*winswitch-0.12.14 (22 Jun 2012)
+
+  22 Jun 2012; Michael Weber <xmw@gentoo.org> +winswitch-0.12.14.ebuild:
+  Version bump (thanks euscan).
+
+*winswitch-0.12.13 (22 May 2012)
+
+  22 May 2012; Michael Weber <xmw@gentoo.org> +winswitch-0.12.13.ebuild,
+  +metadata.xml:
+  Initial import (bug 353662)
+

@@ -1,0 +1,13 @@
+# ChangeLog for media-sound/qarecord
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qarecord/ChangeLog,v 1.2 2012/05/05 08:47:44 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> qarecord-0.5.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*qarecord-0.5.0 (28 Dec 2009)
+
+  28 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +qarecord-0.5.0.ebuild:
+  Initial commit.
+

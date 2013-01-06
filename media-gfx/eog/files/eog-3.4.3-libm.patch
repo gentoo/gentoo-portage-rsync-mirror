@@ -1,0 +1,46 @@
+From 749437a34ddc2857f88168fc75f8ac585d5b8ea7 Mon Sep 17 00:00:00 2001
+From: Kalev Lember <kalevlember@gmail.com>
+Date: Wed, 19 Sep 2012 21:50:08 +0200
+Subject: [PATCH] Explicitly link against libm
+
+https://bugzilla.gnome.org/show_bug.cgi?id=684401
+---
+ configure.ac    | 7 +++++++
+ src/Makefile.am | 3 ++-
+ 2 files changed, 9 insertions(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index d13dbc5..8da1759 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -119,6 +119,13 @@ else
+ fi
+ 
+ # ***************
++# libm (required)
++# ***************
++
++AC_CHECK_LIBM
++AC_SUBST(LIBM)
++
++# ***************
+ # ZLIB (required)
+ # ***************
+ 
+diff --git a/src/Makefile.am b/src/Makefile.am
+index 569cad8..2273bdf 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -150,7 +150,8 @@ libeog_la_CFLAGS =						\
+ 	$(WARN_CFLAGS)
+ 
+ libeog_la_LIBADD = \
+-	$(EOG_LIBS)
++	$(EOG_LIBS) \
++	$(LIBM)
+ 
+ if HAVE_LCMS
+ libeog_la_CFLAGS += 	\
+-- 
+1.7.12
+

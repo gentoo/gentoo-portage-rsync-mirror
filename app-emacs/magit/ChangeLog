@@ -1,0 +1,42 @@
+# ChangeLog for app-emacs/magit
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/ChangeLog,v 1.8 2012/11/26 11:31:15 ulm Exp $
+
+*magit-1.2.0 (26 Nov 2012)
+
+  26 Nov 2012; Ulrich Müller <ulm@gentoo.org> magit-1.0.0.ebuild,
+  magit-1.1.1.ebuild, +magit-1.2.0.ebuild:
+  Version bump, bug 444776. Specify LICENSE more precisely.
+
+*magit-1.1.1 (02 Apr 2012)
+
+  02 Apr 2012; Ulrich Müller <ulm@gentoo.org> -magit-0.8.1.ebuild,
+  -magit-0.8.2.ebuild, magit-1.0.0.ebuild, +magit-1.1.1.ebuild, metadata.xml:
+  Version bump, update HOMEPAGE and SRC_URI, bug 410521. Add contrib USE flag.
+  Remove old.
+
+*magit-1.0.0 (17 Apr 2011)
+
+  17 Apr 2011; Ulrich Mueller <ulm@gentoo.org> +magit-1.0.0.ebuild:
+  Version bump, bug 363923.
+
+  18 Jul 2010; Christian Faulhammer <fauli@gentoo.org> -magit-0.7.ebuild:
+  clean up
+
+*magit-0.8.2 (18 Jul 2010)
+
+  18 Jul 2010; Christian Faulhammer <fauli@gentoo.org> +magit-0.8.2.ebuild:
+  version bump for bug 328345 by f <zhixun.lin AT gmail DOT com>
+
+*magit-0.8.1 (13 Jun 2010)
+
+  13 Jun 2010; Christian Faulhammer <fauli@gentoo.org> +magit-0.8.1.ebuild:
+  version bump and new homepage, as reported by f <zhixun DOT lin AT gmail
+  DOT com> in bug 322899
+
+*magit-0.7 (10 Oct 2009)
+
+  10 Oct 2009; Ulrich Mueller <ulm@gentoo.org> +files/50magit-gentoo.el,
+  +magit-0.7.ebuild, +metadata.xml:
+  Initial import from Emacs overlay, bug 254531. Ebuild contributed by me.
+

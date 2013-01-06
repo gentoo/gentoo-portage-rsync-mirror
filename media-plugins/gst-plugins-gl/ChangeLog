@@ -1,0 +1,23 @@
+# ChangeLog for media-plugins/gst-plugins-gl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gl/ChangeLog,v 1.4 2012/05/05 08:27:18 jdhore Exp $
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gst-plugins-gl-0.10.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*gst-plugins-gl-0.10.2 (02 Nov 2010)
+
+  02 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +gst-plugins-gl-0.10.2.ebuild:
+  Version bump.
+
+  10 May 2010; Samuli Suominen <ssuominen@gentoo.org>
+  gst-plugins-gl-0.10.1.ebuild, +files/gst-plugins-gl-0.10.1-libpng14.patch:
+  Fix building with libpng14 wrt #319159 by Xavier Parizet.
+
+*gst-plugins-gl-0.10.1 (30 Oct 2009)
+
+  30 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +gst-plugins-gl-0.10.1.ebuild:
+  Initial commit wrt #291166.
+

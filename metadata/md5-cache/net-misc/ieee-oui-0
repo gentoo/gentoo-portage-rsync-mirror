@@ -1,0 +1,9 @@
+DEFINED_PHASES=install postinst prerm
+DESCRIPTION=Getter via cron for oui.txt from standards.ieee.org
+EAPI=4
+HOMEPAGE=http://standards.ieee.org/regauth/oui/
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=sys-apps/util-linux net-misc/wget virtual/cron
+SLOT=0
+_md5_=91ff5f4dff3661e62d6e0ac09afcd508

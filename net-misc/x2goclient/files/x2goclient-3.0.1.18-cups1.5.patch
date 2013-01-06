@@ -1,0 +1,10 @@
+--- cupsprint.h.orig	2012-03-15 11:43:34.426485061 +0100
++++ cupsprint.h	2012-03-15 11:43:52.533812925 +0100
+@@ -15,6 +15,7 @@
+ #ifndef Q_OS_WIN
+ #include <QStringList>
+ #include <cups/cups.h>
++#include <cups/ppd.h>
+ /**
+ 	@author Oleksandr Shneyder <oleksandr.shneyder@obviously-nice.de>
+ */

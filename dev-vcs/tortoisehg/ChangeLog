@@ -1,0 +1,148 @@
+# ChangeLog for dev-vcs/tortoisehg
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.29 2013/01/04 08:23:56 polynomial-c Exp $
+
+  04 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> tortoisehg-2.6.2.ebuild:
+  Use official upstream tarball.
+
+*tortoisehg-2.6.2 (03 Jan 2013)
+
+  03 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> -tortoisehg-2.6.ebuild,
+  +tortoisehg-2.6.2.ebuild:
+  Version bump. Removed old.
+
+*tortoisehg-2.6.1 (20 Dec 2012)
+
+  20 Dec 2012; Lars Wendler <polynomial-c@gentoo.org> +tortoisehg-2.6.1.ebuild,
+  metadata.xml:
+  Version bump. Added myself as maintainer.
+
+  24 Nov 2012; Mike Gilbert <floppym@gentoo.org> tortoisehg-2.6.ebuild,
+  tortoisehg-9999.ebuild:
+  Raise minimum mercurial version to 2.3.
+
+*tortoisehg-2.6 (24 Nov 2012)
+
+  24 Nov 2012; Lars Wendler <polynomial-c@gentoo.org> -tortoisehg-2.4.2.ebuild,
+  -tortoisehg-2.5.ebuild, +tortoisehg-2.6.ebuild:
+  non-maintainer commit: Version bump. Removed old.
+
+*tortoisehg-2.5.1 (04 Oct 2012)
+
+  04 Oct 2012; Lars Wendler <polynomial-c@gentoo.org> +tortoisehg-2.5.1.ebuild:
+  non-maintainer commit: Version bump.
+
+  10 Sep 2012; Mike Gilbert <floppym@gentoo.org> tortoisehg-2.5.ebuild,
+  tortoisehg-9999.ebuild:
+  Drop multilib.
+
+*tortoisehg-2.5 (10 Sep 2012)
+
+  10 Sep 2012; Mike Gilbert <floppym@gentoo.org> +tortoisehg-2.5.ebuild,
+  tortoisehg-9999.ebuild:
+  Version bump for bug 434562.
+
+*tortoisehg-2.4.3 (21 Aug 2012)
+
+  21 Aug 2012; Mike Gilbert <floppym@gentoo.org> +tortoisehg-2.4.3.ebuild,
+  -files/tortoisehg-2.2.2-hgversion.patch, tortoisehg-9999.ebuild:
+  Version bump for bug 432156 by polynomial-c.
+
+  20 Jul 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop nautilus use flag from metadata.
+
+*tortoisehg-2.4.2 (20 Jul 2012)
+
+  20 Jul 2012; Mike Gilbert <floppym@gentoo.org> +tortoisehg-2.4.2.ebuild,
+  -tortoisehg-2.3.1.ebuild, -tortoisehg-2.4.ebuild, tortoisehg-9999.ebuild:
+  Version bump. Drop nautilus use flag for bug 427174.
+
+  07 May 2012; Mike Gilbert <floppym@gentoo.org> tortoisehg-2.4.ebuild,
+  tortoisehg-9999.ebuild:
+  Sync live ebuild.
+
+*tortoisehg-2.4 (07 May 2012)
+
+  07 May 2012; Mike Gilbert <floppym@gentoo.org> +tortoisehg-2.4.ebuild,
+  tortoisehg-9999.ebuild:
+  Version bump.
+
+  03 May 2012; Mike Gilbert <floppym@gentoo.org> -tortoisehg-2.3.ebuild,
+  tortoisehg-2.3.1.ebuild:
+  Put upper bound on mercurial dep.
+
+  17 Apr 2012; Michał Górny <mgorny@gentoo.org> tortoisehg-2.3.ebuild,
+  tortoisehg-2.3.1.ebuild, tortoisehg-9999.ebuild:
+  Use mirror://bitbucket.
+
+  14 Apr 2012; Mike Gilbert <floppym@gentoo.org> tortoisehg-2.3.1.ebuild:
+  Make keep local.
+
+*tortoisehg-2.3.1 (14 Apr 2012)
+
+  14 Apr 2012; Mike Gilbert <floppym@gentoo.org> +tortoisehg-2.3.1.ebuild:
+  Version bump. Add LINGUAS support.
+
+  15 Mar 2012; Mike Gilbert <floppym@gentoo.org> -tortoisehg-2.2.2-r1.ebuild,
+  -tortoisehg-2.2.2.ebuild, tortoisehg-2.3.ebuild, tortoisehg-9999.ebuild:
+  Restrict pypy.
+
+*tortoisehg-2.3 (24 Feb 2012)
+
+  24 Feb 2012; Mike Gilbert <floppym@gentoo.org> +tortoisehg-2.3.ebuild:
+  Version bump.
+
+  12 Feb 2012; Mike Gilbert <floppym@gentoo.org>
+  -files/tortoisehg-2.1.4-mercurial-2.patch, tortoisehg-9999.ebuild:
+  Bump mercurial dep on live ebuild. Drop unused patch.
+
+*tortoisehg-2.2.2-r1 (12 Feb 2012)
+
+  12 Feb 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/tortoisehg-2.2.2-hgversion.patch, +tortoisehg-2.2.2-r1.ebuild,
+  -tortoisehg-2.2.1.ebuild, -tortoisehg-2.2.ebuild:
+  Add patch for mercurial-2.1 compat.
+
+*tortoisehg-2.2.2 (28 Jan 2012)
+
+  28 Jan 2012; Mike Gilbert <floppym@gentoo.org> +tortoisehg-2.2.2.ebuild:
+  Version bump.
+
+  10 Dec 2011; Mike Gilbert <floppym@gentoo.org> tortoisehg-9999.ebuild:
+  Update live ebuild.
+
+*tortoisehg-2.2.1 (10 Dec 2011)
+
+  10 Dec 2011; Mike Gilbert <floppym@gentoo.org> +tortoisehg-2.2.1.ebuild,
+  -tortoisehg-2.1.3.ebuild, -tortoisehg-2.1.4-r1.ebuild,
+  -tortoisehg-2.1.4.ebuild:
+  Version bump. Remove old.
+
+*tortoisehg-2.2 (07 Nov 2011)
+
+  07 Nov 2011; Mike Gilbert <floppym@gentoo.org> +tortoisehg-2.2.ebuild,
+  tortoisehg-9999.ebuild:
+  Version bump. Merge with live ebuild.
+
+*tortoisehg-9999 (04 Nov 2011)
+
+  04 Nov 2011; Mike Gilbert <floppym@gentoo.org> +tortoisehg-9999.ebuild:
+  Add live ebuild.
+
+*tortoisehg-2.1.4-r1 (04 Nov 2011)
+
+  04 Nov 2011; Mike Gilbert <floppym@gentoo.org>
+  +files/tortoisehg-2.1.4-mercurial-2.patch, +tortoisehg-2.1.4-r1.ebuild:
+  Add patch for Mercurial 2 compat, bug 389513 by polynomial-c. EAPI=4.
+
+*tortoisehg-2.1.4 (11 Oct 2011)
+
+  11 Oct 2011; Mike Gilbert <floppym@gentoo.org> +tortoisehg-2.1.4.ebuild:
+  Version bump.
+
+*tortoisehg-2.1.3 (07 Sep 2011)
+
+  07 Sep 2011; Mike Gilbert <floppym@gentoo.org> +tortoisehg-2.1.3.ebuild,
+  +metadata.xml:
+  New package, resolves bug 277383 by manny15. Thanks also to Arne
+  Babenhauserheide, Denilson Sá, and Alphat-PC.

@@ -1,0 +1,20 @@
+--- a/chkfont.c	1998-03-06 01:00:00.000000000 +0100
++++ b/chkfont.c	2010-10-20 06:47:20.000000000 +0200
+@@ -1,6 +1,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <ctype.h>
++#include <stdlib.h> /* exit() */
+ 
+ #define DATE "20 Feb 1996"
+ #define VERSION "2.2"
+--- a/figlet.c	2005-07-05 11:50:49.000000000 +0200
++++ b/figlet.c	2010-10-20 06:48:42.000000000 +0200
+@@ -59,6 +59,7 @@
+ #endif
+ #include <string.h>
+ #include <ctype.h>
++#include <unistd.h> /* close() getopt() */
+ #include <fcntl.h>     /* Needed for get_columns */
+ 
+ #ifdef unix

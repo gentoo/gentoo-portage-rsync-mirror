@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>games</herd>
+<maintainer>
+	<email>reavertm@gentoo.org</email>
+	<name>Maciej Mrozowski</name>
+</maintainer>
+<longdescription>
+SimGear is a set of open-source libraries designed to be used as building blocks for 
+quickly assembling 3d simulations, games, and visualization applications.
+
+The purpose of this project is to develop open-source libraries and
+building blocks to assist with rapid construction/prototyping of 3d
+simulation, game, and visualization software.
+</longdescription>
+</pkgmetadata>

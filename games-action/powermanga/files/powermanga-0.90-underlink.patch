@@ -1,0 +1,28 @@
+--- configure.ac.old	2011-05-19 07:52:47.862129502 +0200
++++ configure.ac	2011-05-19 07:52:59.780877256 +0200
+@@ -31,14 +31,11 @@
+ 
+ 
+ dnl  Check for SDL_mixer
+-LDFLAGS_save="${LDFLAGS} ${SDL_LIBS}"
+-LDFLAGS="${LDFLAGS} ${SDL_LIBS}"
+ AC_CHECK_LIB(SDL_mixer, Mix_GetChunk, [
+   SDL_LIBS="-lSDL_mixer ${SDL_LIBS}"
+ ],[
+   AC_MSG_ERROR(Could not find -lSDL_mixer)
+ ])
+-LDFLAGS_="${LDFLAGS_save}"
+ 
+ dnl ttf and sdl_image for shareware version only
+ dnl AC_CHECK_LIB(SDL_ttf,TTF_Init,,[AC_MSG_ERROR([SDL_ttf])])
+--- src/Makefile.am.old	2011-05-19 07:58:50.128783975 +0200
++++ src/Makefile.am	2011-05-19 07:58:55.639128359 +0200
+@@ -7,7 +7,7 @@
+ powermanga_SOURCES = $(SOURCES_MAIN) $(SOURCES_EXTRA)
+ #powermanga_CXXFLAGS = -DPREFIX=\"$(prefix)\" -DSCOREFILE=\"$(scoredir)/$(score)\" @XLIB_CFLAGS@ @SDL_CFLAGS@
+ powermanga_CFLAGS = -DPREFIX=\"$(prefix)\" -DSCOREFILE=\"$(scoredir)/$(score)\" @XLIB_CFLAGS@ @SDL_CFLAGS@
+-powermanga_LDADD = @XLIB_LIBS@ @SDL_LIBS@
++powermanga_LDADD = @XLIB_LIBS@ @SDL_LIBS@ -lm
+ 
+ install-data-hook:
+ 	-chown root:games "$(DESTDIR)/$(gamesdir)/powermanga"

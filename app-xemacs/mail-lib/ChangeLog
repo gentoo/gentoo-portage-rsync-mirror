@@ -1,0 +1,98 @@
+# ChangeLog for app-xemacs/mail-lib
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/ChangeLog,v 1.28 2011/07/22 11:24:57 xarthisius Exp $
+
+  22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> mail-lib-1.80.ebuild:
+  ppc64 stable wrt #369897
+
+  03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> mail-lib-1.80.ebuild:
+  Stable on amd64 wrt bug #369897
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> mail-lib-1.80.ebuild:
+  Marking mail-lib-1.80 ppc stable for bug 369897
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> mail-lib-1.80.ebuild:
+  alpha/sparc stable wrt #369897
+
+  12 Jun 2011; Thomas Kahle <tomka@gentoo.org> mail-lib-1.80.ebuild:
+  x86 stable per bug 369897
+
+*mail-lib-1.80 (22 Feb 2009)
+
+  22 Feb 2009; Hans de Graaff <graaff@gentoo.org> +mail-lib-1.80.ebuild:
+  Version bump with minor bug fix.
+
+  20 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
+  -mail-lib-1.78.ebuild:
+  clean up
+
+  19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  A herd should not be listed as maintainer
+
+  25 Nov 2007; Hans de Graaff <graaff@gentoo.org> mail-lib-1.79.ebuild:
+  Marked amd64 stable per kingtaco's email to -core
+
+  29 Oct 2007; Raúl Porcel <armin76@gentoo.org> mail-lib-1.79.ebuild:
+  alpha/sparc stable wrt #197046
+
+  28 Oct 2007; Markus Rothe <corsair@gentoo.org> mail-lib-1.79.ebuild:
+  Stable on ppc64; bug #197046
+
+  26 Oct 2007; Christian Faulhammer <opfer@gentoo.org> mail-lib-1.79.ebuild:
+  stable x86, bug 197046
+
+  26 Oct 2007; nixnut <nixnut@gentoo.org> mail-lib-1.79.ebuild:
+  Stable on ppc wrt bug 197046
+
+  25 Oct 2007; Hans de Graaff <graaff@gentoo.org> -mail-lib-1.56.ebuild:
+  Remove old version
+
+  03 Jun 2007; Hans de Graaff <graaff@gentoo.org> mail-lib-1.78.ebuild:
+  Stable on amd64, ppc, ppc64, sparc, x86 as per #175560
+
+  29 May 2007; Raúl Porcel <armin76@gentoo.org> mail-lib-1.78.ebuild:
+  alpha stable wrt #175560
+
+*mail-lib-1.79 (05 May 2007)
+
+  05 May 2007; Hans de Graaff <graaff@gentoo.org> -mail-lib-1.76.ebuild,
+  +mail-lib-1.79.ebuild:
+  Version bump: bug fixes for browser support
+  Remove older version
+
+*mail-lib-1.78 (22 Dec 2006)
+
+  22 Dec 2006; Hans de Graaff <graaff@gentoo.org> +mail-lib-1.78.ebuild:
+  Version bump.
+
+*mail-lib-1.76 (12 Nov 2006)
+
+  12 Nov 2006; Hans de Graaff <graaff@gentoo.org> -mail-lib-1.54.ebuild,
+  +mail-lib-1.76.ebuild:
+  Version bump; remove old version.
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> mail-lib-1.56.ebuild:
+  Stable on ppc.
+
+  02 Oct 2004; Robert Coie <rac@gentoo.org> +metadata.xml,
+  mail-lib-1.54.ebuild, mail-lib-1.56.ebuild:
+  eterm -> xemacs-eterm renaming
+
+  09 Aug 2004; Tom Gall <tgall@gentoo.org> mail-lib-1.56.ebuild:
+  stable on ppc64, bug #57174
+ 
+  02 Oct 2003; Aron Griffis <agriffis@gentoo.org> mail-lib-1.56.ebuild:
+  Stable on alpha
+
+*mail-lib-1.56 (22 Feb 2003)
+
+  22 Feb 2003;  <rendhalver@gentoo.org> mail-lib-1.54.ebuild mail-lib-1.56.ebuild files/digest-mail-lib-1.56 :
+  Add ~alpha to KEYWORDS
+
+  22 Feb 2003; Rendhalver <rendhalver@gentoo.org> :
+  new stable ebuild
+
+*mail-lib-1.54 (16 Dec 2002)
+
+  16 Dec 2002; Rendhalver [Peter Brown] <rendhalver@gentoo.org> :
+  Initial import.

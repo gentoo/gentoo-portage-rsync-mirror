@@ -1,0 +1,68 @@
+# ChangeLog for media-sound/patchage
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.14 2012/05/05 08:45:11 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> patchage-0.4.2.ebuild,
+  patchage-0.4.4.ebuild, patchage-0.4.5.ebuild, patchage-0.5.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  29 Mar 2011; Alexis Ballier <aballier@gentoo.org> patchage-0.5.0.ebuild:
+  bump raul dep, by Jyrki Launonen, bug #359983
+
+  28 Mar 2011; Christoph Mende <angelos@gentoo.org> patchage-0.4.2.ebuild,
+  patchage-0.4.4.ebuild, patchage-0.4.5.ebuild, patchage-0.5.0.ebuild:
+  Fixed slot deps
+
+*patchage-0.5.0 (13 Jan 2011)
+
+  13 Jan 2011; Alexis Ballier <aballier@gentoo.org> +patchage-0.5.0.ebuild:
+  version bump
+
+*patchage-0.4.5 (09 Oct 2010)
+
+  09 Oct 2010; Alexis Ballier <aballier@gentoo.org> +patchage-0.4.5.ebuild:
+  version bump
+
+*patchage-0.4.4 (12 Dec 2009)
+
+  12 Dec 2009; Alexis Ballier <aballier@gentoo.org> +patchage-0.4.4.ebuild,
+  +files/ldconfig.patch:
+  version bump
+
+  02 Aug 2009; <chainsaw@gentoo.org> patchage-0.4.2.ebuild:
+  Marked stable on AMD64 as requested by Alexis Ballier
+  <aballier@gentoo.org> in bug #278595. Compile-tested on a dual hex-core
+  Opteron with USE="alsa dbus -debug -jack".
+
+  22 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  patchage-0.4.2.ebuild:
+  stable x86, bug 278595
+
+  17 Sep 2008; Alexis Ballier <aballier@gentoo.org> patchage-0.4.2.ebuild:
+  oops, forgot to bump raul/flowcanvas deps
+
+  17 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  -files/patchage-0.4.1-gcc43.patch, -patchage-0.4.1.ebuild:
+  remove old
+
+*patchage-0.4.2 (17 Sep 2008)
+
+  17 Sep 2008; Alexis Ballier <aballier@gentoo.org> +patchage-0.4.2.ebuild:
+  version bump
+
+  24 Jul 2008; Raúl Porcel <armin76@gentoo.org> patchage-0.4.1.ebuild:
+  Add ~x86 wrt #232865
+
+*patchage-0.4.1 (09 Jul 2008)
+
+  09 Jul 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/patchage-0.4.1-gcc43.patch, -patchage-0.4.0.ebuild,
+  +patchage-0.4.1.ebuild:
+  version bump
+
+*patchage-0.4.0 (29 May 2008)
+
+  29 May 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +patchage-0.4.0.ebuild:
+  initial import
+

@@ -1,0 +1,89 @@
+# ChangeLog for dev-python/pyquery
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.24 2012/10/13 18:45:57 armin76 Exp $
+
+  13 Oct 2012; Raúl Porcel <armin76@gentoo.org> pyquery-0.6.1.ebuild,
+  pyquery-1.0.ebuild, pyquery-1.1.1.ebuild, pyquery-1.2.1.ebuild:
+  ia64/s390/sh/sparc stable wrt #427546
+
+  05 Aug 2012; Anthony G. Basile <blueness@gentoo.org> pyquery-1.1.1.ebuild:
+  Stable arm, bug #427546
+
+  31 Jul 2012; Anthony G. Basile <blueness@gentoo.org> pyquery-1.2.1.ebuild:
+  Keyword ~ppc bug #416099
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> pyquery-1.2.1.ebuild:
+  Add ~alpha/~sparc wrt #416099
+
+  24 Jul 2012; Anthony G. Basile <blueness@gentoo.org> pyquery-1.1.1.ebuild,
+  pyquery-1.2.1.ebuild:
+  Keyword ~ppc64
+
+  27 Jun 2012; Markus Meier <maekke@gentoo.org> pyquery-1.2.1.ebuild:
+  add ~arm, bug #416099
+
+  27 May 2012; Naohiro Aota <naota@gentoo.org> pyquery-1.2.1.ebuild:
+  Add ~x86-fbsd. #416099
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> pyquery-1.1.1.ebuild:
+  Stable for amd64, wrt bug #415779
+
+  18 May 2012; Jeff Horelick <jdhore@gentoo.org> pyquery-1.1.1.ebuild:
+  marked x86 per bug 415783
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> pyquery-1.2.1.ebuild:
+  Marked ~hppa (bug #416099).
+
+*pyquery-1.2.1 (15 May 2012)
+
+  15 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +pyquery-1.2.1.ebuild:
+  Version bump
+
+  16 Apr 2012; Jeroen Roovers <jer@gentoo.org> pyquery-1.1.1.ebuild:
+  Marked ~hppa (bug #411761).
+
+  02 Apr 2012; Naohiro Aota <naota@gentoo.org> pyquery-1.1.1.ebuild:
+  Add ~x86-fbsd
+
+  18 Mar 2012; Raúl Porcel <armin76@gentoo.org> pyquery-1.0.ebuild,
+  pyquery-1.1.1.ebuild:
+  Add ~sparc wrt #383195
+
+  25 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyquery-1.0.ebuild,
+  pyquery-1.1.1.ebuild:
+  Fixing accidental double asterisk
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyquery-0.6.1.ebuild,
+  pyquery-1.0.ebuild, pyquery-1.1.1.ebuild:
+  Fixing pypy restricts to actually work
+
+*pyquery-1.1.1 (08 Feb 2012)
+
+  08 Feb 2012; Patrick Lauer <patrick@gentoo.org> +pyquery-1.1.1.ebuild:
+  Bump for #401979
+
+  01 Feb 2012; Brent Baude <ranger@gentoo.org> pyquery-1.0.ebuild:
+  Marking pyquery-1.0 ~ppc for bug 383195
+
+  19 Jan 2012; Tobias Klausmann <klausman@gentoo.org> pyquery-1.0.ebuild:
+  Keyworded on alpha, bug #383195
+
+  20 Sep 2011; Mike Gilbert <floppym@gentoo.org> pyquery-1.0.ebuild:
+  Fix RESTRICT_PYTHON_ABIS. Patch by Arfrever.
+
+  19 Sep 2011; Markus Meier <maekke@gentoo.org> pyquery-1.0.ebuild:
+  add ~arm, bug #383195
+
+  16 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> pyquery-1.0.ebuild:
+  Restrict 2.4, jython, pypy, allow 3.x (thanks Arfrever).
+
+*pyquery-1.0 (13 Sep 2011)
+
+  13 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +pyquery-1.0.ebuild:
+  Version bump to 1.0.
+
+*pyquery-0.6.1 (19 Oct 2010)
+
+  19 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> +pyquery-0.6.1.ebuild:
+  Initial commit wrt #339489 by Stefan Talpalaru.
+

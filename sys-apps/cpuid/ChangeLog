@@ -1,0 +1,27 @@
+# ChangeLog for sys-apps/cpuid
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuid/ChangeLog,v 1.5 2012/07/19 21:45:46 hwoarang Exp $
+
+*cpuid-20120601 (19 Jul 2012)
+
+  19 Jul 2012; Markos Chandras <hwoarang@gentoo.org> +cpuid-20120601.ebuild,
+  -cpuid-20110305.ebuild:
+  Version bump. Remove old
+
+*cpuid-20120225 (10 Mar 2012)
+
+  10 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> +cpuid-20120225.ebuild:
+  Version bump.
+
+  06 Mar 2012; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
+  Add myself to metadata.xml.
+
+  23 Jul 2011; Thomas Kahle <tomka@gentoo.org> cpuid-20110305.ebuild:
+  ~x86 per bug 371755
+
+*cpuid-20110305 (15 Jun 2011)
+
+  15 Jun 2011; Markos Chandras <hwoarang@gentoo.org> +cpuid-20110305.ebuild,
+  +files/cpuid-20110305-Makefile.patch, +metadata.xml:
+  Initial commit of cpuid. Thanks to Ivan Yosifov <iyosifov@gmail.com> for the
+  initial ebuild. Bug #179805

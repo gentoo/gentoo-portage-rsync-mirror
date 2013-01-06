@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst postrm preinst
+DEPEND=>=x11-libs/gtk+-2.18:2 dev-libs/dbus-glib sys-fs/udisks:0 gnome-keyring? ( gnome-base/libgnome-keyring ) libnotify? ( >=x11-libs/libnotify-0.7 ) virtual/pkgconfig || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) >=sys-apps/sed-4
+DESCRIPTION=A filesystem mounter that uses udisks to handle notification and mounting
+EAPI=4
+HOMEPAGE=http://sourceforge.net/projects/wmudmount/
+IUSE=gnome-keyring libnotify
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=>=x11-libs/gtk+-2.18:2 dev-libs/dbus-glib sys-fs/udisks:0 gnome-keyring? ( gnome-base/libgnome-keyring ) libnotify? ( >=x11-libs/libnotify-0.7 )
+SLOT=0
+SRC_URI=mirror://sourceforge/wmudmount/wmudmount-1.11.tar.gz
+_eclasses_=gnome2-utils	794d2847b4af390a1e020924876c8297
+_md5_=a05a454e2abafb6e793a59899e145abf

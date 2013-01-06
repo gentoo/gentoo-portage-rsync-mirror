@@ -1,0 +1,35 @@
+# ChangeLog for sci-electronics/espresso-ab
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/espresso-ab/ChangeLog,v 1.4 2009/09/23 20:00:35 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> espresso-ab-1.0.ebuild:
+  Remove virtual/libc
+
+  02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Adjusted metadata, see bug #138062.
+
+*espresso-ab-1.0 (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +espresso-ab-1.0.ebuild:
+  Moved from app-sci/espresso-ab to sci-electronics/espresso-ab.
+
+  20 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> espresso-ab-1.0.ebuild:
+  Updated ${HOMEPAGE} (bug #74577)
+
+  10 Oct 2004; Simon Stelling <blubb@gentoo.org> espresso-ab-1.0.ebuild:
+  added ~amd64
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  espresso-ab-1.0.ebuild:
+  virtual/glibc -> virtual/libc
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> espresso-ab-1.0.ebuild:
+  Add die following econf for bug 48950
+
+*espresso-ab-1.0 (23 Apr 2003)
+
+  23 Apr 2003; George Shapovalov <george@gentoo.org> espresso-ab-1.0.ebuild, files/{digest-espresso-ab-1.0} :
+  initial release (#17700)
+  POSIX compliant version of the espresso logic minimization tool
+  ebuild submitted by Chris Bainbridge <chrb@dcs.ed.ac.uk>

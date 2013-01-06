@@ -1,0 +1,21 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Wed May 30 13:45:46 UTC 2012
+Subject: build system
+
+remove pre-set flags
+
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -97,12 +97,6 @@
+   if (OGRE_GCC_HAS_SSE)
+     add_definitions(-msse)
+   endif ()
+-  # This is a set of sensible warnings that provide meaningful output
+-  set(OGRE_WARNING_FLAGS "-Wno-deprecated -Wall -Wctor-dtor-privacy -Winit-self -Wno-overloaded-virtual -Wcast-qual -Wwrite-strings -Wextra -Wno-unused-parameter -pedantic -Wshadow -Wno-missing-field-initializers -Wno-long-long")
+-  if (NOT APPLE)
+-      set(OGRE_WARNING_FLAGS "${OGRE_WARNING_FLAGS} -Wno-unused-but-set-parameter")
+-  endif ()
+-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OGRE_WARNING_FLAGS}")
+ endif ()
+ if (MSVC)
+   if (CMAKE_BUILD_TOOL STREQUAL "nmake")

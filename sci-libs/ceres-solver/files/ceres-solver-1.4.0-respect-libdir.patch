@@ -1,0 +1,41 @@
+patch from ceres-solver issue ticket
+http://code.google.com/p/ceres-solver/issues/detail?id=75
+
+
+Index: ceres-solver-1.4.0/internal/ceres/CMakeLists.txt
+===================================================================
+--- ceres-solver-1.4.0.orig/internal/ceres/CMakeLists.txt
++++ ceres-solver-1.4.0/internal/ceres/CMakeLists.txt
+@@ -118,8 +118,8 @@ IF (${BUILD_ANDROID})
+ 
+   INSTALL(TARGETS miniglog
+           RUNTIME DESTINATION bin
+-          LIBRARY DESTINATION lib
+-          ARCHIVE DESTINATION lib)
++          LIBRARY DESTINATION lib${LIB_SUFFIX}
++          ARCHIVE DESTINATION lib${LIB_SUFFIX})
+ ENDIF (${BUILD_ANDROID})
+ 
+ SET(CERES_LIBRARY_DEPENDENCIES ${GLOG_LIB})
+@@ -175,8 +175,8 @@ TARGET_LINK_LIBRARIES(ceres ${CERES_LIBR
+ 
+ INSTALL(TARGETS ceres
+         RUNTIME DESTINATION bin
+-        LIBRARY DESTINATION lib
+-        ARCHIVE DESTINATION lib)
++        LIBRARY DESTINATION lib${LIB_SUFFIX}
++        ARCHIVE DESTINATION lib${LIB_SUFFIX})
+ 
+ # Don't build a DLL on MSVC. Supporting Ceres as a DLL on Windows involves
+ # nontrivial changes that we haven't made yet.
+@@ -189,8 +189,8 @@ IF (NOT MSVC AND NOT ${BUILD_ANDROID})
+ 
+   INSTALL(TARGETS ceres_shared
+           RUNTIME DESTINATION bin
+-          LIBRARY DESTINATION lib
+-          ARCHIVE DESTINATION lib)
++          LIBRARY DESTINATION lib${LIB_SUFFIX}
++          ARCHIVE DESTINATION lib${LIB_SUFFIX})
+ 
+ ENDIF (NOT MSVC AND NOT ${BUILD_ANDROID})
+ 

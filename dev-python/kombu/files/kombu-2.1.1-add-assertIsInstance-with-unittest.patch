@@ -1,0 +1,11 @@
+--- a/kombu/tests/utils.py	2012-02-07 17:57:27.000000000 +0100
++++ b/kombu/tests/utils.py	2012-02-28 16:09:43.687489572 +0100
+@@ -23,6 +23,8 @@
+ 
+     if not hasattr(unittest.TestCase, "assertItemsEqual"):
+         assertItemsEqual = unittest.TestCase.assertSameElements
++    if not hasattr(unittest.TestCase, "assertIsInstance"):
++        assertIsInstance = lambda inst, obj, cls: unittest.TestCase.assertTrue(inst, isinstance(obj, cls))
+ 
+ 
+ class Mock(mock.Mock):

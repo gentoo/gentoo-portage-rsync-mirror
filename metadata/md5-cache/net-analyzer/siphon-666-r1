@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=net-libs/libpcap
+DESCRIPTION=A portable passive network mapping suite
+EAPI=2
+HOMEPAGE=http://siphon.datanerds.net/
+KEYWORDS=~amd64 ~ppc x86
+LICENSE=BSD
+RDEPEND=net-libs/libpcap
+SLOT=0
+SRC_URI=http://siphon.datanerds.net/siphon-v.666.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=4a38325ca77deb5322cb48fa3b89cb74

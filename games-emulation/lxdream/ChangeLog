@@ -1,0 +1,28 @@
+# ChangeLog for games-emulation/lxdream
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/lxdream/ChangeLog,v 1.5 2012/09/11 19:41:33 pacho Exp $
+
+  11 Sep 2012; Pacho Ramos <pacho@gentoo.org>
+  +files/lxdream-0.9.1-glib-single-include.patch, lxdream-0.9.1-r2.ebuild:
+  Fix compilation against glib-2.32, bug #423443.
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> lxdream-0.9.1-r2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*lxdream-0.9.1-r2 (28 Jul 2011)
+
+  28 Jul 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -lxdream-0.9.1-r1.ebuild, +lxdream-0.9.1-r2.ebuild:
+  Fix automagic dependency on lirc.
+
+*lxdream-0.9.1-r1 (14 Feb 2010)
+
+  14 Feb 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -lxdream-0.9.1.ebuild, +lxdream-0.9.1-r1.ebuild:
+  commit improved version thanks to mr_bones_ and abcd
+
+*lxdream-0.9.1 (13 Feb 2010)
+
+  13 Feb 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +lxdream-0.9.1.ebuild, +metadata.xml:
+  Initial import for bug #202989

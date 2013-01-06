@@ -1,0 +1,28 @@
+# ChangeLog for games-arcade/barbarian-bin
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/ChangeLog,v 1.6 2007/01/14 08:39:20 mr_bones_ Exp $
+
+  14 Jan 2007; Michael Sterrett <mr_bones_@gentoo.org>
+  barbarian-bin-1.01.ebuild:
+  fix HOMEPAGE - patch from Pacho Ramos via bug #159847
+
+  19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  barbarian-bin-1.01.ebuild:
+  Adding strip to RESTRICT for bug #137819.
+
+  21 Oct 2005; Simon Stelling <blubb@gentoo.org> barbarian-bin-1.01.ebuild:
+  fix dependencies for amd64 and mark stable
+
+  11 Aug 2005; Olivier Crête <tester@gentoo.org> barbarian-bin-1.01.ebuild:
+  Marked ~amd64, closes bug #102160, thanks to meetra for testing
+
+  15 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  barbarian-bin-1.01.ebuild:
+  Changed HOMEPAGE and closing bug #89168.
+
+*barbarian-bin-1.01 (13 Dec 2004)
+
+  13 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +barbarian-bin-1.01.ebuild:
+  initial commit - ebuild by Alexandru Toma via bug #60524
+

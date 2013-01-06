@@ -1,0 +1,20 @@
+--- src/sj-play.c
++++ src/sj-play.c
+@@ -96,7 +96,7 @@
+  * Pause
+  */
+ static void
+-pause (void)
++do_pause (void)
+ {
+   gst_element_set_state (pipeline, GST_STATE_PAUSED);
+ }
+@@ -440,7 +440,7 @@
+   GError *err = NULL;
+ 
+   if (is_playing ()) {
+-    pause ();
++    do_pause ();
+     gtk_list_store_set (track_store, &current_iter,
+                         COLUMN_STATE, STATE_PAUSED, -1);
+  } else if (pipeline && GST_STATE (pipeline) == GST_STATE_PAUSED && 

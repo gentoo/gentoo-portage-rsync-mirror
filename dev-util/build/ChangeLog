@@ -1,0 +1,30 @@
+# ChangeLog for dev-util/build
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/build/ChangeLog,v 1.7 2012/11/30 15:09:44 ago Exp $
+
+  30 Nov 2012; <ago@gentoo.org> build-0.3.9.ebuild:
+  Stable for ppc, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> build-0.3.9.ebuild:
+  Stable for x86, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> build-0.3.9.ebuild:
+  Stable for amd64, wrt bug #442394
+
+  22 Nov 2012; Tiziano Müller <dev-zero@gentoo.org> -build-0.3.8.ebuild:
+  Drop old.
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> build-0.3.9.ebuild:
+  add ~arm, bug #430072
+
+*build-0.3.9 (01 Jun 2012)
+
+  01 Jun 2012; Tiziano Müller <dev-zero@gentoo.org> +build-0.3.9.ebuild:
+  Version bump.
+
+*build-0.3.8 (20 Oct 2010)
+
+  20 Oct 2010; Tiziano Müller <dev-zero@gentoo.org> +build-0.3.8.ebuild,
+  +metadata.xml:
+  Initial commit (ebuild written by me), needed for xsd and the required
+  libraries.

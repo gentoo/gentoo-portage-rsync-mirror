@@ -1,0 +1,22 @@
+commit 628faec2651f6f20a438f61fc9c861c0d5eab0f8
+Author: Andras Mantia <amantia@kde.org>
+Date:   Sat Aug 25 11:52:45 2012 +0300
+
+    Now fix for real the mail loss on spam filtering. The previous fix's idea was good, just that unfortunately the default value is "setCacheOnly(true)" set in AgentBasePrivate, so we have to explicitely set the cacheonly to false, otherwise mail content is not fetched from the mail server when passing through a filter that needs a content.
+    
+    FIXED-IN: 4.8.6
+    
+    BUG: 295484
+
+diff --git a/mailfilteragent/mailfilteragent.cpp b/mailfilteragent/mailfilteragent.cpp
+index 5f66e74..4e37ac7 100644
+--- a/mailfilteragent/mailfilteragent.cpp
++++ b/mailfilteragent/mailfilteragent.cpp
+@@ -111,6 +111,7 @@ void MailFilterAgent::initialCollectionFetchingDone( KJob *job )
+ 
+   changeRecorder()->itemFetchScope().setAncestorRetrieval( Akonadi::ItemFetchScope::Parent );
+   if (m_filterManager->requiresFullMailBody()) {
++    changeRecorder()->itemFetchScope().setCacheOnly(false);
+     changeRecorder()->itemFetchScope().fetchFullPayload();
+   } else {
+     changeRecorder()->itemFetchScope().fetchPayloadPart( Akonadi::MessagePart::Header, true );

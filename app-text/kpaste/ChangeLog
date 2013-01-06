@@ -1,0 +1,10 @@
+# ChangeLog for app-text/kpaste
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/kpaste/ChangeLog,v 1.1 2011/12/31 04:57:04 floppym Exp $
+
+*kpaste-0.1 (31 Dec 2011)
+
+  31 Dec 2011; Mike Gilbert <floppym@gentoo.org> +kpaste-0.1.ebuild,
+  +metadata.xml:
+  New package.
+

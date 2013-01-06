@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install
+DEPEND=>=dev-libs/libxml2-2.4.0:2 gtk? ( >=x11-libs/gtk+-2.6:2 ) gnome? ( || ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 ) >=gnome-base/libgnomeui-2.0 ) virtual/pkgconfig
+DESCRIPTION=French conjugation system
+EAPI=2
+HOMEPAGE=http://sarrazip.com/dev/verbiste.html
+IUSE=gnome gtk
+KEYWORDS=amd64 ppc x86
+LICENSE=GPL-2
+RDEPEND=>=dev-libs/libxml2-2.4.0:2 gtk? ( >=x11-libs/gtk+-2.6:2 ) gnome? ( || ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 ) >=gnome-base/libgnomeui-2.0 )
+SLOT=0
+SRC_URI=http://sarrazip.com/dev/verbiste-0.1.23.tar.gz
+_md5_=8d50bd030648776126bfeb2018433355

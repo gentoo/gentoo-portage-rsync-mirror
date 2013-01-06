@@ -1,0 +1,14 @@
+# ChangeLog for app-text/mht-rip
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mht-rip/ChangeLog,v 1.2 2010/12/17 18:01:21 c1pher Exp $
+
+*mht-rip-0.8 (17 Dec 2010)
+
+  17 Dec 2010; Dane Smith <c1pher@gentoo.org> +mht-rip-0.8.ebuild,
+  metadata.xml:
+  Version bump wrt bug 348957. Added myself to metadata.
+
+*mht-rip-0.4 (19 Jan 2009)
+
+  19 Jan 2009; Mike Frysinger <vapier@gentoo.org> +mht-rip-0.4.ebuild:
+  Initial ebuild by me.

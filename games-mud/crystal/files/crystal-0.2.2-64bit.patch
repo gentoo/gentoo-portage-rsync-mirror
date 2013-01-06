@@ -1,0 +1,11 @@
+--- Socket.cc
++++ Socket.cc
+@@ -212,7 +212,7 @@
+ int Socket::read(char *data, int size) {
+   if (pending) {
+     int opt = 0;
+-    size_t osz = sizeof(int);
++    socklen_t osz = sizeof(int);
+     getsockopt(fd, SOL_SOCKET, SO_ERROR, &opt, &osz);
+     pending = 0;
+     if (opt != 0)

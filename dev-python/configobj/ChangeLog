@@ -1,0 +1,120 @@
+# ChangeLog for dev-python/configobj
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.28 2011/03/04 20:55:40 xarthisius Exp $
+
+  04 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  configobj-4.7.2.ebuild:
+  ppc64 stable wrt #354797
+
+  16 Jan 2011; Raúl Porcel <armin76@gentoo.org> configobj-4.7.2.ebuild:
+  sparc stable and add ~ia64
+
+  07 Jan 2011; Michael Weber <xmw@gentoo.org> configobj-4.7.2.ebuild:
+  added ~sparc keyword (bug 311825)
+
+  06 Jul 2010; Samuli Suominen <ssuominen@gentoo.org>
+  configobj-4.7.2.ebuild:
+  Keyword ~ppc64 wrt #311825
+
+  21 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  configobj-4.7.2.ebuild:
+  stable x86, bug 313151
+
+  11 Apr 2010; <nixnut@gentoo.org> configobj-4.7.2.ebuild:
+  ppc stable #313151
+
+  10 Apr 2010; Markos Chandras <hwoarang@gentoo.org> configobj-4.7.2.ebuild:
+  Stable on amd64 wrt bug #313151
+
+*configobj-4.7.2 (04 Mar 2010)
+
+  04 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +configobj-4.7.2.ebuild, +files/configobj-4.7.2-fix_tests.patch:
+  Version bump.
+
+  27 Feb 2010; Fabian Groffen <grobian@gentoo.org> configobj-4.7.1.ebuild:
+  Marked ~x64-macos, thanks Ramon van Alteren in bug #306705
+
+  25 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  configobj-4.7.0.ebuild:
+  stable x86, bug 305187
+
+*configobj-4.7.1 (08 Feb 2010)
+
+  08 Feb 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +configobj-4.7.1.ebuild:
+  Version bump.
+
+*configobj-4.7.0 (11 Jan 2010)
+
+  11 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +configobj-4.7.0.ebuild:
+  Version bump.
+
+  08 Nov 2009; nixnut <nixnut@gentoo.org> configobj-4.6.0.ebuild:
+  ppc stable #290607
+
+  04 Nov 2009; Markus Meier <maekke@gentoo.org> configobj-4.6.0.ebuild:
+  amd64/x86 stable, bug #290607
+
+  04 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  configobj-4.6.0.ebuild, +files/configobj-4.6.0-bad-tests.patch:
+  Removed some bad tests (bug #277921)
+
+  10 Oct 2009; Fabian Groffen <grobian@gentoo.org> configobj-4.6.0.ebuild:
+  Merge from Prefix
+
+  05 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> configobj-4.6.0.ebuild:
+  Keywording for ppc, bug 280023
+
+  05 Sep 2009; Patrick Lauer <patrick@gentoo.org> -configobj-4.5.3.ebuild:
+  Remove old
+
+  31 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  configobj-4.6.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+*configobj-4.6.0 (04 Jul 2009)
+
+  04 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +configobj-4.6.0.ebuild:
+  Version bump (bug #276328).
+
+  30 Apr 2009; Patrick Lauer <patrick@gentoo.org> -configobj-4.5.2.ebuild:
+  Remove old
+
+*configobj-4.5.3 (14 Jan 2009)
+
+  14 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  +configobj-4.5.3.ebuild:
+  Version bump, removed old versions, added longdescription
+
+*configobj-4.5.2 (13 May 2008)
+
+  13 May 2008; Ali Polatel <hawking@gentoo.org> configobj-4.4.0-r1.ebuild,
+  +configobj-4.5.2.ebuild:
+  Version bump. Quoting.
+
+  05 Jul 2007; Rob Cakebread <pythonhead@gentoo.org>
+  configobj-4.4.0-r1.ebuild:
+  Add setuptools depend
+
+*configobj-4.4.0-r1 (05 Jul 2007)
+
+  05 Jul 2007; Rob Cakebread <pythonhead@gentoo.org>
+  +configobj-4.4.0-r1.ebuild:
+  Change setup.py to use setuptools setup
+
+*configobj-4.4.0 (10 Mar 2007)
+
+  10 Mar 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  -configobj-4.3.2.ebuild, +configobj-4.4.0.ebuild:
+  Version bump: added src_test. Removed 4.3.2.
+
+  05 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> configobj-4.3.2.ebuild:
+  Added ~amd64 keyword
+
+  03 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> configobj-4.3.2.ebuild,
+  +metadata.xml:
+  Initial ebuild.
+

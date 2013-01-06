@@ -1,0 +1,18 @@
+# ChangeLog for net-proxy/mitmproxy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/mitmproxy/ChangeLog,v 1.3 2012/04/09 21:55:08 radhermit Exp $
+
+*mitmproxy-0.8 (09 Apr 2012)
+
+  09 Apr 2012; Tim Harder <radhermit@gentoo.org> +mitmproxy-0.8.ebuild:
+  Version bump (bug #411359).
+
+  24 Mar 2012; Tim Harder <radhermit@gentoo.org> mitmproxy-0.7.ebuild:
+  Add test support using pry.
+
+*mitmproxy-0.7 (21 Mar 2012)
+
+  21 Mar 2012; Tim Harder <radhermit@gentoo.org> +mitmproxy-0.7.ebuild,
+  +metadata.xml:
+  Initial import. Ebuild by me.
+

@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/socketpool
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/ChangeLog,v 1.1 2012/11/16 02:39:07 idella4 Exp $
+
+*socketpool-0.5.2 (16 Nov 2012)
+
+  16 Nov 2012; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +socketpool-0.5.2.ebuild:
+  New ebuild written by me, required as a dep to restkit in test suite wrt Bug
+  #41665

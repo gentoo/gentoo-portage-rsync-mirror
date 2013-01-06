@@ -1,0 +1,12 @@
+# ChangeLog for app-emacs/actionscript-mode
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/actionscript-mode/ChangeLog,v 1.1 2012/04/23 21:01:07 ulm Exp $
+
+*actionscript-mode-7.2.2_p20120405 (23 Apr 2012)
+
+  23 Apr 2012; Ulrich Müller <ulm@gentoo.org>
+  +files/50actionscript-mode-gentoo.el,
+  +actionscript-mode-7.2.2_p20120405.ebuild, +metadata.xml:
+  Initial import, from flameeyes-overlay. Ebuild contributed by
+  Diego E. Pettenò <flameeyes@gentoo.org> with changes by me.
+

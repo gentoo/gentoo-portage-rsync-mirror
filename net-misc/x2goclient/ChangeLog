@@ -1,0 +1,77 @@
+# ChangeLog for net-misc/x2goclient
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.15 2012/12/16 16:29:13 ago Exp $
+
+  16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> x2goclient-3.99.2.2.ebuild:
+  Stable for x86, wrt bug #445766
+
+  03 Dec 2012; <ago@gentoo.org> x2goclient-3.99.2.2.ebuild:
+  Stable for amd64, wrt bug #445766
+
+*x2goclient-3.99.3.0 (15 Nov 2012)
+
+  15 Nov 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  +x2goclient-3.99.3.0.ebuild:
+  Version bump
+
+*x2goclient-3.99.2.2 (21 Aug 2012)
+
+  21 Aug 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  +x2goclient-3.99.2.2.ebuild:
+  Version bump
+
+*x2goclient-3.99.2.1 (10 Jul 2012)
+
+  10 Jul 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  +x2goclient-3.99.2.1.ebuild:
+  Version bump
+
+  08 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  x2goclient-3.0.1.18.ebuild:
+  This needs qt-core with USE=ssl, reported by fauli in bug #416713
+
+  21 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  x2goclient-3.0.1.18.ebuild:
+  inherit eutils for make_desktop_entry
+
+  15 Mar 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  x2goclient-3.0.1.18.ebuild, +files/x2goclient-3.0.1.18-cups1.5.patch:
+  Support both cups 1.4 and 1.5, reported by luis in bug #408105
+
+*x2goclient-3.0.1.18 (14 Mar 2012)
+
+  14 Mar 2012; Bernard Cafarelli <voyageur@gentoo.org>
+  +x2goclient-3.0.1.18.ebuild, -x2goclient-3.01.5.ebuild,
+  -files/x2goclient-3.01.5-noldap.patch:
+  Version bump, new homepage and source, clean ebuild, new versioning. Bug
+  #408105
+
+  19 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  x2goclient-3.01.5.ebuild:
+  cups is mandatory, patch welcome to make it optional (and not colliding with
+  no-ldap patch). Bug #372631
+
+*x2goclient-3.01.5 (29 Apr 2010)
+
+  29 Apr 2010; Bernard Cafarelli <voyageur@gentoo.org>
+  -x2goclient-2.0.1.24.ebuild, -files/x2goclient-2.0.1-noldap.patch,
+  -x2goclient-2.99.3.ebuild, +x2goclient-3.01.5.ebuild,
+  +files/x2goclient-3.01.5-noldap.patch:
+  Version bump from NX overlay, update to qt4-r2, drop 2.x versions
+
+  06 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> x2goclient-2.99.3.ebuild:
+  Removed alternative dependency on Qt metapackage also from 2.99.3
+
+  06 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> x2goclient-2.0.1.24.ebuild:
+  Removed alternative dependency on Qt metapackage
+
+  16 Apr 2009; Bernard Cafarelli <voyageur@gentoo.org> Manifest:
+  Upstream modified source tarball, bug #266141
+
+*x2goclient-2.99.3 (13 Mar 2009)
+*x2goclient-2.0.1.24 (13 Mar 2009)
+
+  13 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/x2goclient-2.0.1-noldap.patch, +metadata.xml,
+  +x2goclient-2.0.1.24.ebuild, +x2goclient-2.99.3.ebuild:
+  Initial portage commit, from the NX overlay

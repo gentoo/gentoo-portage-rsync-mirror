@@ -1,0 +1,26 @@
+# ChangeLog for net-dialup/dtrace
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dtrace/ChangeLog,v 1.4 2010/05/07 12:17:02 sbriesen Exp $
+
+  07 May 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  dtrace-2.01-r1.ebuild:
+  moved pre-compiled binary into /opt.
+
+*dtrace-2.01-r1 (07 May 2010)
+
+  07 May 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  +dtrace-2.01-r1.ebuild:
+  resolved name clash (executable renamed to dtrace-avm), added amd64
+  keyword (it's 32-Bit, but works on amd64). solving bug #297945.
+
+  27 Dec 2005; Stefan Briesenick <sbriesen@gentoo.org> dtrace-2.01.ebuild:
+  stable on x86.
+
+*dtrace-2.01 (04 Nov 2005)
+
+  04 Nov 2005; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
+  +dtrace-2.01.ebuild:
+  initial commit. Archive created from the contents of
+  ftp://ftp.avm.de/develper/d3trace/linux/ and then uploaded to
+  gentoo-mirrors.
+

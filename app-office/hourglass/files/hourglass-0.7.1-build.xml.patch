@@ -1,0 +1,13 @@
+--- build.xml.old	2009-01-02 13:22:01.000000000 +1300
++++ build.xml	2009-01-02 13:23:52.000000000 +1300
+@@ -105,7 +105,9 @@
+   </target>
+   
+   <target name="taskdef" depends="init">
+-    <ant inheritall="false" antfile="${dir.tools}/build/build.xml" target="export" />
++    <ant inheritall="false" antfile="${dir.tools}/build/build.xml" target="export" >
++	<property name="jar.ant" value="${jar.ant}" />
++    </ant>
+     <taskdef classpathref="classpath.taskdef"
+     	resource="net/sourceforge/hourglass/build/hourglass-ant.properties" />
+   </target>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+<email>matsuu@gentoo.org</email>
+<name>MATSUU Takuto</name>
+</maintainer>
+<use>
+  <flag name='lha'>Enable LHA archive support</flag>
+  <flag name='rpm'>Enable rpm support</flag>
+  <flag name='zip'>Enable ZIP archive support</flag>
+</use>
+</pkgmetadata>
+

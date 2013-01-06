@@ -1,0 +1,13 @@
+# ChangeLog for net-dns/fpdns
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/fpdns/ChangeLog,v 1.2 2010/02/05 22:40:58 ulm Exp $
+
+  05 Feb 2010; Ulrich Mueller <ulm@gentoo.org> fpdns-0.9.1.ebuild:
+  Fix LICENSE, bug 301123.
+
+*fpdns-0.9.1 (16 Apr 2008)
+
+  16 Apr 2008; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
+  +fpdns-0.9.1.ebuild:
+  initial import
+

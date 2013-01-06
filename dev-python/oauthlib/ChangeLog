@@ -1,0 +1,77 @@
+# ChangeLog for dev-python/oauthlib
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/ChangeLog,v 1.19 2012/11/20 20:38:35 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> oauthlib-0.3.0.ebuild:
+  Stable for x86, wrt bug #441282
+
+  19 Nov 2012; Mike Gilbert <floppym@gentoo.org> oauthlib-0.3.4.ebuild:
+  Drop eutils.
+
+  19 Nov 2012; Mike Gilbert <floppym@gentoo.org>
+  -files/oauthlib-0.3.3-exclude-tests.patch:
+  Drop unused patch.
+
+*oauthlib-0.3.4 (19 Nov 2012)
+
+  19 Nov 2012; Mike Gilbert <floppym@gentoo.org> +oauthlib-0.3.4.ebuild,
+  -oauthlib-0.3.3-r1.ebuild:
+  Version bump. Enable python3, and fix test dependencies.
+
+  18 Nov 2012; Mike Gilbert <floppym@gentoo.org>
+  +files/oauthlib-0.3.3-exclude-tests.patch, oauthlib-0.3.3-r1.ebuild:
+  Patch setup.py to prevent tests installation.
+
+*oauthlib-0.3.3-r1 (17 Nov 2012)
+
+  17 Nov 2012; Mike Gilbert <floppym@gentoo.org> +oauthlib-0.3.3-r1.ebuild,
+  -oauthlib-0.3.3.ebuild:
+  Don't install tests package. Bug 443658 by flameeyes.
+
+  14 Nov 2012; Mike Gilbert <floppym@gentoo.org> oauthlib-0.3.3.ebuild:
+  Unrestrict tests for pypy.
+
+*oauthlib-0.3.3 (13 Nov 2012)
+
+  13 Nov 2012; Patrick Lauer <patrick@gentoo.org> +oauthlib-0.3.3.ebuild:
+  Bump
+
+  06 Nov 2012; Agostino Sarubbo <ago@gentoo.org> oauthlib-0.3.0.ebuild:
+  Stable for amd64, wrt bug #441282
+
+  27 Aug 2012; Mike Gilbert <floppym@gentoo.org> oauthlib-0.1.3.ebuild,
+  oauthlib-0.3.0.ebuild:
+  Fix dependencies and HOMEPAGE. Thanks Arfrever.
+
+*oauthlib-0.3.0 (24 Aug 2012)
+
+  24 Aug 2012; Patrick Lauer <patrick@gentoo.org> +oauthlib-0.3.0.ebuild:
+  Bump
+
+  19 Aug 2012; Johannes Huber <johu@gentoo.org> oauthlib-0.1.3.ebuild:
+  Stable for x86, wrt bug #431758
+
+  19 Aug 2012; Agostino Sarubbo <ago@gentoo.org> oauthlib-0.1.3.ebuild:
+  Stable for amd64, wrt bug #431758
+
+  03 Jun 2012; Marien Zwart <marienz@gentoo.org> oauthlib-0.1.3.ebuild:
+  Restrict tests for pypy, as they make assumptions about dict order.
+
+  28 May 2012; Markus Meier <maekke@gentoo.org> oauthlib-0.1.3.ebuild:
+  add ~arm, bug #415187
+
+  09 May 2012; Mike Gilbert <floppym@gentoo.org> oauthlib-0.1.3.ebuild:
+  Remove tests/__init__.py in src_install in case test-fail-continue is enabled.
+  Thanks to Arfrever for catching this.
+
+  09 May 2012; Mike Gilbert <floppym@gentoo.org> oauthlib-0.1.3.ebuild:
+  Implement alternate solution to avoid installing tests.
+
+  09 May 2012; Mike Gilbert <floppym@gentoo.org> oauthlib-0.1.3.ebuild:
+  Remove tests directory from sitedir.
+
+*oauthlib-0.1.3 (08 May 2012)
+
+  08 May 2012; Mike Gilbert <floppym@gentoo.org> +metadata.xml,
+  +oauthlib-0.1.3.ebuild:
+  New ebuild; dependency for bug 415173.

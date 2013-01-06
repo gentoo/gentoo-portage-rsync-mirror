@@ -1,0 +1,134 @@
+# ChangeLog for kde-base/analitza
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/analitza/ChangeLog,v 1.34 2013/01/05 20:18:20 creffett Exp $
+
+*analitza-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +analitza-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
+
+  23 Dec 2012; Markus Meier <maekke@gentoo.org> analitza-4.9.4.ebuild:
+  add ~arm
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -analitza-4.8.5.ebuild:
+  Drop KDE 4.8
+
+*analitza-4.9.4 (05 Dec 2012)
+
+  05 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> +analitza-4.9.4.ebuild:
+  Version bump KDE SC 4.9.4
+
+  30 Nov 2012; <ago@gentoo.org> analitza-4.9.3.ebuild:
+  Stable for ppc, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> analitza-4.9.3.ebuild:
+  Stable for x86, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> analitza-4.9.3.ebuild:
+  Stable for amd64, wrt bug #442394
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -analitza-4.9.2.ebuild:
+  Remove KDE SC 4.9.2
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -analitza-4.9.1.ebuild:
+  Remove KDE SC 4.9.1
+
+*analitza-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +analitza-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
+
+*analitza-4.9.2 (02 Oct 2012)
+
+  02 Oct 2012; Johannes Huber <johu@gentoo.org> +analitza-4.9.2.ebuild:
+  Version bump KDE SC 4.9.2
+
+  21 Sep 2012; Johannes Huber <johu@gentoo.org> -analitza-4.9.0.ebuild:
+  Remove KDE SC 4.9.0
+
+*analitza-4.9.1 (04 Sep 2012)
+
+  04 Sep 2012; Johannes Huber <johu@gentoo.org> +analitza-4.9.1.ebuild:
+  Version bump KDE SC 4.9.1
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -analitza-4.8.3.ebuild:
+  Remove KDE SC 4.8.3
+
+  03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> analitza-4.8.5.ebuild:
+  Stable on ppc wrt bug#431892.
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> analitza-4.8.5.ebuild:
+  Stable for x86, wrt bug #431892
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> analitza-4.8.5.ebuild:
+  Stable for amd64, wrt bug #431892
+
+  17 Aug 2012; Johannes Huber <johu@gentoo.org> -analitza-4.8.4.ebuild:
+  Remove KDE SC 4.8.4
+
+*analitza-4.8.5 (07 Aug 2012)
+
+  07 Aug 2012; Johannes Huber <johu@gentoo.org> +analitza-4.8.5.ebuild:
+  Version bump KDE SC 4.8.5
+
+*analitza-4.9.0 (01 Aug 2012)
+
+  01 Aug 2012; Johannes Huber <johu@gentoo.org> +analitza-4.9.0.ebuild:
+  Version bump KDE SC 4.9.0
+
+*analitza-4.8.4 (21 Jun 2012)
+
+  21 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +analitza-4.8.4.ebuild:
+  Version bump KDE SC 4.8.4
+
+  24 May 2012; Johannes Huber <johu@gentoo.org> -analitza-4.8.1.ebuild:
+  Remove KDE SC 4.8.1
+
+  24 May 2012; Agostino Sarubbo <ago@gentoo.org> analitza-4.8.3.ebuild:
+  Stable for x86, wrt bug #414605
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> analitza-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
+
+  18 May 2012; Joseph Jezak <josejx@gentoo.org> analitza-4.8.3.ebuild:
+  Marked ~ppc ~ppc64 for bug #402989.
+
+  08 May 2012; Johannes Huber <johu@gentoo.org> -analitza-4.8.2.ebuild:
+  Remove KDE SC 4.8.2
+
+*analitza-4.8.3 (03 May 2012)
+
+  03 May 2012; Johannes Huber <johu@gentoo.org>
+  +files/analitza-solaris-graph2d.patch, +analitza-4.8.3.ebuild:
+  Version bump KDE SC 4.8.3
+
+  18 Apr 2012; Markus Meier <maekke@gentoo.org> analitza-4.8.1.ebuild:
+  x86 stable, bug #409403
+
+*analitza-4.8.2 (04 Apr 2012)
+
+  04 Apr 2012; Johannes Huber <johu@gentoo.org> +analitza-4.8.2.ebuild:
+  Version bump KDE SC 4.8.2
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> analitza-4.8.1.ebuild:
+  Stable for amd64, wrt bug #409403
+
+  23 Mar 2012; Johannes Huber <johu@gentoo.org> -analitza-4.8.0.ebuild:
+  Remove KDE SC 4.8.0
+
+*analitza-4.8.1 (06 Mar 2012)
+
+  06 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +analitza-4.8.1.ebuild:
+  Version bump KDE SC 4.8.1
+
+  25 Jan 2012; Johannes Huber <johu@gentoo.org> Manifest:
+  Fix manifest.
+
+*analitza-4.8.0 (25 Jan 2012)
+
+  25 Jan 2012; Johannes Huber <johu@gentoo.org> +analitza-4.8.0.ebuild:
+  Version bump KDE SC 4.8.0
+

@@ -1,0 +1,182 @@
+commit 8452e6c3f01a65953705087e0d7ada87e2cc6997
+Author: Martin Gräßlin <mgraesslin@kde.org>
+Date:   Wed Sep 5 20:55:07 2012 +0200
+
+    Ensure that the start Client to build up the ClientModel is in the Focus Chain
+    
+    If the start Client is not part of the focus chain the call to
+    nextClientFocusChain() cannot return the Client again. So the loop break
+    condition is never reached and as the focus chain is not empty the call
+    always returns a not null Client which means KWin is caught in an endless
+    loop.
+    
+    This change checks that the starting Client is in the focus chain and if
+    not the first Client of the focus chain is used.
+    
+    BUG: 306260
+    BUG: 306275
+    FIXED-IN: 4.9.2
+
+diff --git a/kwin/tabbox/clientmodel.cpp b/kwin/tabbox/clientmodel.cpp
+index 9591bab..a67d979 100644
+--- a/kwin/tabbox/clientmodel.cpp
++++ b/kwin/tabbox/clientmodel.cpp
+@@ -188,7 +188,7 @@ void ClientModel::createClientList(int desktop, bool partialReset)
+     switch(tabBox->config().clientSwitchingMode()) {
+     case TabBoxConfig::FocusChainSwitching: {
+         TabBoxClient* c = start;
+-        if (!c) {
++        if (!tabBox->isInFocusChain(c)) {
+             QSharedPointer<TabBoxClient> firstClient = tabBox->firstClientFocusChain().toStrongRef();
+             if (firstClient) {
+                 c = firstClient.data();
+diff --git a/kwin/tabbox/tabbox.cpp b/kwin/tabbox/tabbox.cpp
+index d96d0bd..7a08d37 100644
+--- a/kwin/tabbox/tabbox.cpp
++++ b/kwin/tabbox/tabbox.cpp
+@@ -112,6 +112,14 @@ QWeakPointer< TabBoxClient > TabBoxHandlerImpl::firstClientFocusChain() const
+     }
+ }
+ 
++bool TabBoxHandlerImpl::isInFocusChain(TabBoxClient *client) const
++{
++    if (TabBoxClientImpl *c = static_cast<TabBoxClientImpl*>(client)) {
++        return Workspace::self()->globalFocusChain().contains(c->client());
++    }
++    return false;
++}
++
+ int TabBoxHandlerImpl::nextDesktopFocusChain(int desktop) const
+ {
+     return m_tabBox->nextDesktopFocusChain(desktop);
+diff --git a/kwin/tabbox/tabbox.h b/kwin/tabbox/tabbox.h
+index 6652f93..bba0b39 100644
+--- a/kwin/tabbox/tabbox.h
++++ b/kwin/tabbox/tabbox.h
+@@ -52,6 +52,7 @@ public:
+     virtual QString desktopName(int desktop) const;
+     virtual QWeakPointer< TabBoxClient > nextClientFocusChain(TabBoxClient* client) const;
+     virtual QWeakPointer< TabBoxClient > firstClientFocusChain() const;
++    virtual bool isInFocusChain (TabBoxClient* client) const;
+     virtual int nextDesktopFocusChain(int desktop) const;
+     virtual int numberOfDesktops() const;
+     virtual TabBoxClientList stackingOrder() const;
+diff --git a/kwin/tabbox/tabboxhandler.h b/kwin/tabbox/tabboxhandler.h
+index 7abddfc..2af65b2 100644
+--- a/kwin/tabbox/tabboxhandler.h
++++ b/kwin/tabbox/tabboxhandler.h
+@@ -120,6 +120,20 @@ public:
+      **/
+     virtual QWeakPointer<TabBoxClient> firstClientFocusChain() const = 0;
+     /**
++     * Checks whether the given @p client is part of the focus chain at all.
++     * This is useful to figure out whether the currently active Client can be used
++     * as a starting point to construct the recently used list.
++     *
++     * In case the @p client is not in the focus chain it is recommended to use the
++     * Client returned by @link firstClientFocusChain.
++     *
++     * The method accepts a @c null Client and in that case @c false is returned.
++     * @param client The Client to check whether it is in the Focus Chain
++     * @return @c true in case the Client is part of the focus chain, @c false otherwise.
++     * @since 4.9.2
++     **/
++    virtual bool isInFocusChain(TabBoxClient* client) const = 0;
++    /**
+     * @param client The client whose desktop name should be retrieved
+     * @return The desktop name of the given TabBoxClient. If the client is
+     * on all desktops the name of current desktop will be returned.
+diff --git a/kwin/tabbox/tests/mock_tabboxhandler.cpp b/kwin/tabbox/tests/mock_tabboxhandler.cpp
+index c3ad7a9..20fe8e8 100644
+--- a/kwin/tabbox/tests/mock_tabboxhandler.cpp
++++ b/kwin/tabbox/tests/mock_tabboxhandler.cpp
+@@ -72,6 +72,9 @@ QWeakPointer< TabBox::TabBoxClient > MockTabBoxHandler::nextClientFocusChain(Tab
+             }
+         }
+     }
++    if (!m_windows.isEmpty()) {
++        return QWeakPointer< TabBox::TabBoxClient >(m_windows.last());
++    }
+     return QWeakPointer< TabBox::TabBoxClient >();
+ }
+ 
+@@ -83,6 +86,20 @@ QWeakPointer< TabBox::TabBoxClient > MockTabBoxHandler::firstClientFocusChain()
+     return m_windows.first();
+ }
+ 
++bool MockTabBoxHandler::isInFocusChain(TabBox::TabBoxClient *client) const
++{
++    if (!client) {
++        return false;
++    }
++    QList< QSharedPointer< TabBox::TabBoxClient > >::const_iterator it = m_windows.constBegin();
++    for (; it != m_windows.constEnd(); ++it) {
++        if ((*it).data() == client) {
++            return true;
++        }
++    }
++    return false;
++}
++
+ QWeakPointer< TabBox::TabBoxClient > MockTabBoxHandler::createMockWindow(const QString &caption, WId id)
+ {
+     QSharedPointer< TabBox::TabBoxClient > client(new MockTabBoxClient(caption, id));
+diff --git a/kwin/tabbox/tests/mock_tabboxhandler.h b/kwin/tabbox/tests/mock_tabboxhandler.h
+index a223648..5578001 100644
+--- a/kwin/tabbox/tests/mock_tabboxhandler.h
++++ b/kwin/tabbox/tests/mock_tabboxhandler.h
+@@ -60,6 +60,7 @@ public:
+     }
+     virtual QWeakPointer< TabBox::TabBoxClient > nextClientFocusChain(TabBox::TabBoxClient *client) const;
+     virtual QWeakPointer<TabBox::TabBoxClient> firstClientFocusChain() const;
++    virtual bool isInFocusChain (TabBox::TabBoxClient* client) const;
+     virtual int nextDesktopFocusChain(int desktop) const {
+         Q_UNUSED(desktop)
+         return 1;
+diff --git a/kwin/tabbox/tests/test_tabbox_clientmodel.cpp b/kwin/tabbox/tests/test_tabbox_clientmodel.cpp
+index 79d0253..cee9860 100644
+--- a/kwin/tabbox/tests/test_tabbox_clientmodel.cpp
++++ b/kwin/tabbox/tests/test_tabbox_clientmodel.cpp
+@@ -63,4 +63,24 @@ void TestTabBoxClientModel::testCreateClientListNoActiveClient()
+     QCOMPARE(clientModel->rowCount(), 2);
+ }
+ 
++void TestTabBoxClientModel::testCreateClientListActiveClientNotInFocusChain()
++{
++    MockTabBoxHandler tabboxhandler;
++    tabboxhandler.setConfig(TabBox::TabBoxConfig());
++    TabBox::ClientModel *clientModel = new TabBox::ClientModel(&tabboxhandler);
++    // create two windows, rowCount() should go to two
++    QWeakPointer<TabBox::TabBoxClient> client = tabboxhandler.createMockWindow(QString("test"), 1);
++    client = tabboxhandler.createMockWindow(QString("test2"), 2);
++    clientModel->createClientList();
++    QCOMPARE(clientModel->rowCount(), 2);
++
++    // simulate that the active client is not in the focus chain
++    // for that we use the closeWindow of the MockTabBoxHandler which
++    // removes the Client from the Focus Chain but leaves the active window as it is
++    QSharedPointer<TabBox::TabBoxClient> clientOwner = client.toStrongRef();
++    tabboxhandler.closeWindow(client.data());
++    clientModel->createClientList();
++    QCOMPARE(clientModel->rowCount(), 1);
++}
++
+ QTEST_MAIN(TestTabBoxClientModel)
+diff --git a/kwin/tabbox/tests/test_tabbox_clientmodel.h b/kwin/tabbox/tests/test_tabbox_clientmodel.h
+index 2ec6608..fad7987 100644
+--- a/kwin/tabbox/tests/test_tabbox_clientmodel.h
++++ b/kwin/tabbox/tests/test_tabbox_clientmodel.h
+@@ -40,6 +40,13 @@ private slots:
+      * See BUG: 305449
+      **/
+     void testCreateClientListNoActiveClient();
++    /**
++     * Tests the creation of the Client list for the case that
++     * the active Client is not in the Focus chain.
++     *
++     * See BUG: 306260
++     **/
++    void testCreateClientListActiveClientNotInFocusChain();
+ };
+ 
+ #endif

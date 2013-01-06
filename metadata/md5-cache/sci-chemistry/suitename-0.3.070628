@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=The ROC RNA Ontology Consortium consensus RNA backbone nomenclature and conformer-list development
+EAPI=4
+HOMEPAGE=http://kinemage.biochem.duke.edu/software/suitename.php
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=richardson
+SLOT=0
+SRC_URI=http://kinemage.biochem.duke.edu/downloads/software/suitename/suitename.0.3.070628.src.tgz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=1ad13b4af17c9e393028e0cb1a9572de

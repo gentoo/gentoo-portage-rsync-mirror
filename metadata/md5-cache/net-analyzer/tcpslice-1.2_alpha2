@@ -1,0 +1,11 @@
+DEFINED_PHASES=install unpack
+DEPEND=net-libs/libpcap >=sys-apps/sed-4
+DESCRIPTION=Tcpslice is a program for extracting portions of packet-trace files generated using tcpdump's -w flag. It can also be used to glue together pcap dump files.
+HOMEPAGE=http://www.tcpdump.org/
+KEYWORDS=~amd64 ~ppc x86
+LICENSE=BSD
+RDEPEND=net-libs/libpcap
+SLOT=0
+SRC_URI=mirror://gentoo/tcpslice_1.2a2.orig.tar.gz mirror://gentoo/tcpslice_1.2a2-4.diff.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=39846629a38739c85016fff1f281781c

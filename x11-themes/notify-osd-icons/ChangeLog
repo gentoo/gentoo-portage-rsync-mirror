@@ -1,0 +1,13 @@
+# ChangeLog for x11-themes/notify-osd-icons
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/notify-osd-icons/ChangeLog,v 1.2 2011/11/24 20:12:35 ssuominen Exp $
+
+  24 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Move to ayatana herd.
+
+*notify-osd-icons-0.7 (27 Mar 2011)
+
+  27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +notify-osd-icons-0.7.ebuild:
+  Initial commit.
+

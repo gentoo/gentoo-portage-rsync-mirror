@@ -1,0 +1,54 @@
+# ChangeLog for net-libs/rest
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.12 2013/01/01 12:43:45 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> rest-0.7.90.ebuild:
+  Add ~ia64, wrt bug #449220
+
+*rest-0.7.90 (24 Dec 2012)
+
+  24 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> +rest-0.7.90.ebuild,
+  metadata.xml:
+  Version bump for Gnome 3.6.
+
+  23 Sep 2012; Anthony G. Basile <blueness@gentoo.org> rest-0.7.12.ebuild:
+  keyword ~ppc, bug #379651
+
+  23 Sep 2012; Anthony G. Basile <blueness@gentoo.org> rest-0.7.12.ebuild:
+  keyword ~ppc64, bug #379651
+
+  27 May 2012; Matt Turner <mattst88@gentoo.org> rest-0.7.12.ebuild:
+  Added ~alpha, bug 379651.
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> rest-0.7.11.ebuild,
+  rest-0.7.12.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  14 Jan 2012; Markus Meier <maekke@gentoo.org> rest-0.7.12.ebuild:
+  x86 stable, bug #393007
+
+  29 Dec 2011; Pacho Ramos <pacho@gentoo.org> rest-0.7.12.ebuild:
+  amd64 stable, bug 393007
+
+*rest-0.7.12 (13 Nov 2011)
+
+  13 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> -rest-0.7.10.ebuild,
+  +rest-0.7.12.ebuild:
+  Bump, drop old. Notable changes: by default (i.e. when
+  SOUP_SESSION_SSL_STRICT is used) rest-0.7.12 will reject self-signed ssl
+  certificates.
+
+*rest-0.7.11 (01 Nov 2011)
+
+  01 Nov 2011; Pacho Ramos <pacho@gentoo.org> +rest-0.7.11.ebuild:
+  Version bump.
+
+  28 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> rest-0.7.10.ebuild,
+  -files/rest-0.7.10-disable-broken-test.patch:
+  Remove incorrect disabling of test, it seems to pass now
+
+*rest-0.7.10 (24 Apr 2011)
+
+  24 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +rest-0.7.10.ebuild,
+  +files/rest-0.7.10-disable-broken-test.patch, +metadata.xml:
+  Move librest from the gnome overlay to tree

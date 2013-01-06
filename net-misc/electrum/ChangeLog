@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/electrum
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/ChangeLog,v 1.1 2012/09/16 20:45:21 blueness Exp $
+
+*electrum-1.0 (16 Sep 2012)
+
+  16 Sep 2012; Anthony G. Basile <blueness@gentoo.org> +electrum-1.0.ebuild,
+  +metadata.xml:
+  Initial commit
+

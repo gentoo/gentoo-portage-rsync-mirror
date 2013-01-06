@@ -1,0 +1,8 @@
+# ChangeLog for app-doc/linux-gazette-all
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-all/ChangeLog,v 1.16 2011/03/09 07:17:04 vapier Exp $
+
+*linux-gazette-all-* (21 Aug 2003)
+
+  21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuilds written by Radek Podgorny <radek@podgorny.cz> #26862.

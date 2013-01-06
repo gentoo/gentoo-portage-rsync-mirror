@@ -1,0 +1,12 @@
+# ChangeLog for dev-util/dropwatch
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dropwatch/ChangeLog,v 1.1 2012/10/24 09:46:02 pinkbyte Exp $
+
+*dropwatch-1.4 (24 Oct 2012)
+
+  24 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> +dropwatch-1.4.ebuild,
+  +files/dropwatch-1.4-makefile.patch, +metadata.xml:
+  Initial commit wrt bug #438360. Ebuild by Andrew Savchenko with some changes
+  from me, patch is also adapted to respect compiler. Package will be
+  maintained by Andrew Savchenko through proxy maintainers
+

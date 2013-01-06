@@ -1,0 +1,24 @@
+--- doc/aiccu.init.gentoo.old	2010-06-28 21:28:21.527614775 +0200
++++ doc/aiccu.init.gentoo	2010-06-28 21:36:49.651781540 +0200
+@@ -23,14 +23,19 @@ checkconfig() {
+ start() {
+ 	checkconfig || return 1
+ 	ebegin "Starting aiccu"
+-	start-stop-daemon --start --oknodo --quiet --exec /usr/sbin/aiccu -- start
++	start-stop-daemon --start --quiet --exec /usr/sbin/aiccu -- start
+ 	eend $?
+ }
+ 
+ 
+ stop() {
+ 	ebegin "Stopping aiccu"
+-	start-stop-daemon --stop --oknodo --quiet --exec /usr/sbin/aiccu -- stop
++	start-stop-daemon --stop --pidfile /var/run/aiccu.pid --quiet --exec /usr/sbin/aiccu -- stop
+ 	eend $?
+ }
+ 
++restart() {
++	stop
++	sleep 3
++	start
++}

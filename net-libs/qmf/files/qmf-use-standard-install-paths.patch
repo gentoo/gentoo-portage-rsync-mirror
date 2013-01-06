@@ -1,0 +1,275 @@
+diff -Naur qmf-9999.orig/benchmarks/tst_messageserver/tst_messageserver.pro qmf-9999/benchmarks/tst_messageserver/tst_messageserver.pro
+--- qmf-9999.orig/benchmarks/tst_messageserver/tst_messageserver.pro	2011-10-28 00:16:42.818798066 +0200
++++ qmf-9999/benchmarks/tst_messageserver/tst_messageserver.pro	2011-10-28 00:16:58.461602502 +0200
+@@ -3,7 +3,7 @@
+ CONFIG += qmfmessageserver qmfclient
+ 
+ TARGET = tst_messageserver 
+-target.path += $$QMF_INSTALL_ROOT/tests
++target.path += $$[QT_INSTALL_DATA]/tests
+ 
+ BASE=../../
+ include($$BASE/common.pri)
+diff -Naur qmf-9999.orig/examples/listfilterplugin/listfilterplugin.pro qmf-9999/examples/listfilterplugin/listfilterplugin.pro
+--- qmf-9999.orig/examples/listfilterplugin/listfilterplugin.pro	2011-10-28 00:16:42.863797501 +0200
++++ qmf-9999/examples/listfilterplugin/listfilterplugin.pro	2011-10-28 00:16:58.461602503 +0200
+@@ -3,7 +3,7 @@
+ CONFIG += qmfclient plugin
+ QT = core
+ 
+-target.path += $$QMF_INSTALL_ROOT/plugins/contentmanagers
++target.path += $$[QT_INSTALL_PLUGINS]/contentmanagers
+ 
+ DEFINES += PLUGIN_INTERNAL
+ 
+diff -Naur qmf-9999.orig/examples/messagingaccounts/messagingaccounts.pro qmf-9999/examples/messagingaccounts/messagingaccounts.pro
+--- qmf-9999.orig/examples/messagingaccounts/messagingaccounts.pro	2011-10-28 00:16:42.907796951 +0200
++++ qmf-9999/examples/messagingaccounts/messagingaccounts.pro	2011-10-28 00:16:58.461602503 +0200
+@@ -1,6 +1,6 @@
+ TEMPLATE = app
+ TARGET = messagingaccounts
+-target.path += $$QMF_INSTALL_ROOT/bin
++target.path += $$[QT_INSTALL_BINS]
+ CONFIG += qmfclient qmfmessageserver
+ 
+ DEPENDPATH += .
+diff -Naur qmf-9999.orig/examples/qtmail/app/app.pro qmf-9999/examples/qtmail/app/app.pro
+--- qmf-9999.orig/examples/qtmail/app/app.pro	2011-10-28 00:16:42.875797352 +0200
++++ qmf-9999/examples/qtmail/app/app.pro	2011-10-28 00:16:58.461602503 +0200
+@@ -1,7 +1,7 @@
+ TEMPLATE = app
+ TARGET = qtmail 
+ CONFIG += qmfutil qmfclient qmfmessageserver
+-target.path += $$QMF_INSTALL_ROOT/bin
++target.path += $$[QT_INSTALL_BINS]
+ 
+ DEPENDPATH += . 
+ 
+diff -Naur qmf-9999.orig/examples/qtmail/libs/qmfutil/qmfutil.pro qmf-9999/examples/qtmail/libs/qmfutil/qmfutil.pro
+--- qmf-9999.orig/examples/qtmail/libs/qmfutil/qmfutil.pro	2011-10-28 00:16:42.905796975 +0200
++++ qmf-9999/examples/qtmail/libs/qmfutil/qmfutil.pro	2011-10-28 00:16:58.461602503 +0200
+@@ -3,7 +3,7 @@
+ CONFIG += qmfclient
+ TARGET = qmfutil 
+ 
+-target.path += $$QMF_INSTALL_ROOT/lib
++target.path += $$[QT_INSTALL_LIBS]
+ 
+ DEFINES += QMFUTIL_INTERNAL
+ 
+diff -Naur qmf-9999.orig/examples/qtmail/plugins/composers/email/email.pro qmf-9999/examples/qtmail/plugins/composers/email/email.pro
+--- qmf-9999.orig/examples/qtmail/plugins/composers/email/email.pro	2011-10-28 00:16:42.865797477 +0200
++++ qmf-9999/examples/qtmail/plugins/composers/email/email.pro	2011-10-28 00:16:58.462602491 +0200
+@@ -2,7 +2,7 @@
+ TARGET = emailcomposer 
+ CONFIG += qmfclient qmfutil plugin
+ 
+-target.path += $$QMF_INSTALL_ROOT/plugins/composers
++target.path += $$[QT_INSTALL_PLUGINS]/composers
+ 
+ DEFINES += PLUGIN_INTERNAL
+ 
+diff -Naur qmf-9999.orig/examples/qtmail/plugins/viewers/generic/generic.pro qmf-9999/examples/qtmail/plugins/viewers/generic/generic.pro
+--- qmf-9999.orig/examples/qtmail/plugins/viewers/generic/generic.pro	2011-10-28 00:16:42.866797465 +0200
++++ qmf-9999/examples/qtmail/plugins/viewers/generic/generic.pro	2011-10-28 00:16:58.462602491 +0200
+@@ -2,7 +2,7 @@
+ TARGET = genericviewer 
+ CONFIG += qmfclient qmfutil plugin
+ 
+-target.path += $$QMF_INSTALL_ROOT/plugins/viewers
++target.path += $$[QT_INSTALL_PLUGINS]/viewers
+ 
+ # Use webkit to render mail if available
+ contains(QT_CONFIG,webkit){
+diff -Naur qmf-9999.orig/examples/serverobserver/serverobserver.pro qmf-9999/examples/serverobserver/serverobserver.pro
+--- qmf-9999.orig/examples/serverobserver/serverobserver.pro	2011-10-28 00:16:42.863797501 +0200
++++ qmf-9999/examples/serverobserver/serverobserver.pro	2011-10-28 00:16:58.462602491 +0200
+@@ -1,6 +1,6 @@
+ TEMPLATE = app
+ TARGET = serverobserver
+-target.path += $$QMF_INSTALL_ROOT/bin
++target.path += $$[QT_INSTALL_BINS]
+ CONFIG += qmfclient qmfmessageserver
+ 
+ DEPENDPATH += .
+diff -Naur qmf-9999.orig/src/libraries/qmfclient/qmfclient.pro qmf-9999/src/libraries/qmfclient/qmfclient.pro
+--- qmf-9999.orig/src/libraries/qmfclient/qmfclient.pro	2011-10-28 00:16:42.839797803 +0200
++++ qmf-9999/src/libraries/qmfclient/qmfclient.pro	2011-10-28 00:16:58.463602479 +0200
+@@ -4,8 +4,7 @@
+ INSTALLS += target
+ CONFIG += link_pkgconfig
+ 
+-simulator:macx:target.path += $$QMF_INSTALL_ROOT/Library/Frameworks
+-else:target.path += $$QMF_INSTALL_ROOT/lib
++target.path += $$[QT_INSTALL_LIBS]
+ 
+ DEFINES += QT_BUILD_QCOP_LIB QMF_INTERNAL
+ win32: {
+@@ -221,7 +220,7 @@
+                 libqtopiamail-zh_CN.ts \
+                 libqtopiamail-zh_TW.ts
+ 
+-header_files.path=$$QMF_INSTALL_ROOT/include/qmfclient
++header_files.path=$$[QT_INSTALL_HEADERS]/qmfclient
+ header_files.files=$$PUBLIC_HEADERS
+ 
+ INSTALLS += header_files
+@@ -236,7 +235,7 @@
+ 	CONFIG += create_pc create_prl
+ 	QMAKE_PKGCONFIG_LIBDIR  = $$target.path
+ 	QMAKE_PKGCONFIG_INCDIR  = $$header_files.path
+-	QMAKE_PKGCONFIG_DESTDIR = pkgconfig
++	QMAKE_PKGCONFIG_DESTDIR = ../pkgconfig
+         LIBS += -licui18n -licuuc -licudata
+         PRIVATE_HEADERS += support/qcharsetdetector_p.h \
+                            support/qcharsetdetector.h
+diff -Naur qmf-9999.orig/src/libraries/qmfmessageserver/qmfmessageserver.pro qmf-9999/src/libraries/qmfmessageserver/qmfmessageserver.pro
+--- qmf-9999.orig/src/libraries/qmfmessageserver/qmfmessageserver.pro	2011-10-28 00:16:42.862797514 +0200
++++ qmf-9999/src/libraries/qmfmessageserver/qmfmessageserver.pro	2011-10-28 00:16:58.463602479 +0200
+@@ -3,7 +3,7 @@
+ CONFIG += qmfclient
+ TARGET = qmfmessageserver
+ 
+-target.path += $$QMF_INSTALL_ROOT/lib
++target.path += $$[QT_INSTALL_LIBS]
+ 
+ QT = core network
+ !contains(DEFINES,QMF_NO_MESSAGE_SERVICE_EDITOR):QT += gui
+@@ -48,7 +48,7 @@
+            qmailtransport.cpp \
+            qmailheartbeattimer_qtimer.cpp # NB: There are multiple implementations
+ 
+-header_files.path=$$QMF_INSTALL_ROOT/include/qmfmessageserver
++header_files.path=$$[QT_INSTALL_HEADERS]/qmfmessageserver
+ header_files.files=$$PUBLIC_HEADERS
+ 
+ INSTALLS += header_files
+@@ -57,6 +57,6 @@
+ 	CONFIG += create_pc create_prl
+ 	QMAKE_PKGCONFIG_LIBDIR  = $$target.path
+ 	QMAKE_PKGCONFIG_INCDIR  = $$header_files.path
+-	QMAKE_PKGCONFIG_DESTDIR = pkgconfig
++	QMAKE_PKGCONFIG_DESTDIR = ../pkgconfig
+ }
+ include(../../../common.pri)
+diff -Naur qmf-9999.orig/src/plugins/contentmanagers/qmfstoragemanager/qmfstoragemanager.pro qmf-9999/src/plugins/contentmanagers/qmfstoragemanager/qmfstoragemanager.pro
+--- qmf-9999.orig/src/plugins/contentmanagers/qmfstoragemanager/qmfstoragemanager.pro	2011-10-28 00:16:42.831797902 +0200
++++ qmf-9999/src/plugins/contentmanagers/qmfstoragemanager/qmfstoragemanager.pro	2011-10-28 00:16:58.463602479 +0200
+@@ -3,7 +3,7 @@
+ CONFIG += qmfclient plugin
+ QT = core
+ 
+-target.path += $$QMF_INSTALL_ROOT/plugins/contentmanagers
++target.path += $$[QT_INSTALL_PLUGINS]/contentmanagers
+ 
+ DEFINES += PLUGIN_INTERNAL
+ 
+diff -Naur qmf-9999.orig/src/plugins/messageservices/imap/imap.pro qmf-9999/src/plugins/messageservices/imap/imap.pro
+--- qmf-9999.orig/src/plugins/messageservices/imap/imap.pro	2011-10-28 00:16:42.824797989 +0200
++++ qmf-9999/src/plugins/messageservices/imap/imap.pro	2011-10-28 00:16:58.463602479 +0200
+@@ -2,7 +2,7 @@
+ TARGET = imap 
+ CONFIG += qmfmessageserver qmfclient plugin
+ 
+-target.path += $$QMF_INSTALL_ROOT/plugins/messageservices
++target.path += $$[QT_INSTALL_PLUGINS]/messageservices
+ 
+ QT += core network
+ 
+diff -Naur qmf-9999.orig/src/plugins/messageservices/pop/pop.pro qmf-9999/src/plugins/messageservices/pop/pop.pro
+--- qmf-9999.orig/src/plugins/messageservices/pop/pop.pro	2011-10-28 00:16:42.829797928 +0200
++++ qmf-9999/src/plugins/messageservices/pop/pop.pro	2011-10-28 00:16:58.464602466 +0200
+@@ -2,7 +2,7 @@
+ TARGET = pop 
+ CONFIG += qmfclient qmfmessageserver plugin
+ 
+-target.path = $$QMF_INSTALL_ROOT/plugins/messageservices
++target.path = $$[QT_INSTALL_PLUGINS]/messageservices
+ 
+ QT = core network
+ 
+diff -Naur qmf-9999.orig/src/plugins/messageservices/qmfsettings/qmfsettings.pro qmf-9999/src/plugins/messageservices/qmfsettings/qmfsettings.pro
+--- qmf-9999.orig/src/plugins/messageservices/qmfsettings/qmfsettings.pro	2011-10-28 00:16:42.827797953 +0200
++++ qmf-9999/src/plugins/messageservices/qmfsettings/qmfsettings.pro	2011-10-28 00:16:58.464602466 +0200
+@@ -2,7 +2,7 @@
+ TARGET = qmfsettings
+ CONFIG += qmfclient qmfmessageserver plugin
+ 
+-target.path += $$QMF_INSTALL_ROOT/plugins/messageservices
++target.path += $$[QT_INSTALL_PLUGINS]/messageservices
+ 
+ QT = core network
+ 
+diff -Naur qmf-9999.orig/src/plugins/messageservices/smtp/smtp.pro qmf-9999/src/plugins/messageservices/smtp/smtp.pro
+--- qmf-9999.orig/src/plugins/messageservices/smtp/smtp.pro	2011-10-28 00:16:42.826797965 +0200
++++ qmf-9999/src/plugins/messageservices/smtp/smtp.pro	2011-10-28 00:16:58.464602466 +0200
+@@ -3,7 +3,7 @@
+ 
+ CONFIG += qmfclient qmfmessageserver plugin
+ 
+-target.path += $$QMF_INSTALL_ROOT/plugins/messageservices
++target.path += $$[QT_INSTALL_PLUGINS]/messageservices
+ 
+ QT = core network
+ 
+diff -Naur qmf-9999.orig/src/tools/messageserver/messageserver.pro qmf-9999/src/tools/messageserver/messageserver.pro
+--- qmf-9999.orig/src/tools/messageserver/messageserver.pro	2011-10-28 00:16:42.832797889 +0200
++++ qmf-9999/src/tools/messageserver/messageserver.pro	2011-10-28 00:16:58.464602466 +0200
+@@ -14,7 +14,7 @@
+ QT = core
+ !contains(DEFINES,QMF_NO_MESSAGE_SERVICE_EDITOR):QT += gui
+ 
+-target.path += $$QMF_INSTALL_ROOT/bin
++target.path += $$[QT_INSTALL_BINS]
+ 
+ DEPENDPATH += . 
+ 
+diff -Naur qmf-9999.orig/tests/tests.pri qmf-9999/tests/tests.pri
+--- qmf-9999.orig/tests/tests.pri	2011-10-28 00:16:42.804798239 +0200
++++ qmf-9999/tests/tests.pri	2011-10-28 00:17:11.873434831 +0200
+@@ -4,14 +4,14 @@
+     QMAKE_MACOSX_DEPLOYMENT_TARGET=10.5
+ }
+ 
+-target.path+=$$QMF_INSTALL_ROOT/tests
++target.path+=$$[QT_INSTALL_DATA]/tests
+ 
+ QMFPATH=../../src/libraries/qmfclient
+ DEPENDPATH += .
+ INCLUDEPATH += . $$QMFPATH $$QMFPATH/support
+ LIBS += -L$$QMFPATH/build
+ macx:LIBS += -F$$QMFPATH/build
+-!symbian:QMAKE_LFLAGS += -Wl,-rpath,$$QMFPATH
++!symbian:QMAKE_LFLAGS += -Wl,-rpath,\\\$$ORIGIN/$$QMFPATH/build
+ 
+ symbian {
+     TARGET.CAPABILITY = ReadUserData WriteUserData ReadDeviceData WriteDeviceData
+@@ -19,3 +19,5 @@
+ 
+ include(../common.pri)
+ 
++DESTDIR =
++
+diff -Naur qmf-9999.orig/tests/tests.pro qmf-9999/tests/tests.pro
+--- qmf-9999.orig/tests/tests.pro	2011-10-28 00:16:42.807798203 +0200
++++ qmf-9999/tests/tests.pro	2011-10-28 00:16:58.465602453 +0200
+@@ -31,6 +31,6 @@
+ 
+ # Install test file description
+ test_description.files = tests.xml
+-test_description.path  = $$QMF_INSTALL_ROOT/tests
++test_description.path  = $$[QT_INSTALL_DATA]/tests
+ 
+ INSTALLS += test_description
+diff -Naur qmf-9999.orig/tests/tst_python_email/tst_python_email.pro qmf-9999/tests/tst_python_email/tst_python_email.pro
+--- qmf-9999.orig/tests/tst_python_email/tst_python_email.pro	2011-10-28 00:16:42.812798139 +0200
++++ qmf-9999/tests/tst_python_email/tst_python_email.pro	2011-10-28 00:16:58.476602315 +0200
+@@ -5,7 +5,7 @@
+ !symbian {
+     DEFINES += SRCDIR=\\\"$$_PRO_FILE_PWD_\\\"
+ 
+-    testdata.path = $$QMF_INSTALL_ROOT/tests/testdata
++    testdata.path = $$[QT_INSTALL_DATA]/tests/testdata
+     testdata.files = testdata/*
+ 
+     INSTALLS += testdata

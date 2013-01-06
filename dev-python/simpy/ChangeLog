@@ -1,0 +1,30 @@
+# ChangeLog for dev-python/simpy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpy/ChangeLog,v 1.7 2012/08/26 09:09:27 jlec Exp $
+
+*simpy-2.3.1 (26 Aug 2012)
+
+  26 Aug 2012; Justin Lecher <jlec@gentoo.org> +simpy-2.3.1.ebuild:
+  Version BUmp
+
+  21 Mar 2012; Justin Lecher <jlec@gentoo.org> simpy-2.3.ebuild:
+  Remove version restriction from dev-python/sphinx DEP, #409021
+
+  28 Feb 2012; Justin Lecher <jlec@gentoo.org> simpy-2.3.ebuild:
+  Fix building of man pages, patch provided by Ian Delaney, #398165
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> simpy-2.3.ebuild:
+  Restricting py2.5
+
+  20 Feb 2012; Patrick Lauer <patrick@gentoo.org> simpy-2.3.ebuild:
+  Restricting pypy #404007
+
+  10 Jan 2012; Justin Lecher <jlec@gentoo.org> simpy-2.3.ebuild:
+  Drop USE=doc, because doc building fails, #398165
+
+*simpy-2.3 (06 Jan 2012)
+
+  06 Jan 2012; Justin Lecher <jlec@gentoo.org> +simpy-2.3.ebuild,
+  +metadata.xml:
+  Moved from sci overlay to tree
+

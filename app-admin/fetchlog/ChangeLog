@@ -1,0 +1,41 @@
+# ChangeLog for app-admin/fetchlog
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.12 2009/05/09 19:48:26 pvdabeel Exp $
+
+  09 May 2009; Pieter Van den Abeele <pvdabeel@gentoo.org> fetchlog-1.0.ebuild:
+  Added ppc64 testing keyword
+
+  23 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> fetchlog-1.0.ebuild:
+  Respect CFLAGS, LDFLAGS, CC. Fixed DEPEND.
+
+  24 Jan 2007; Marius Mauch <genone@gentoo.org> fetchlog-0.94.ebuild,
+  fetchlog-1.0.ebuild:
+  Replacing einfo with elog
+
+  07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> fetchlog-1.0.ebuild:
+  Marked stable on amd64 for bug #146729
+
+  02 Aug 2005; Simon Stelling <blubb@gentoo.org> fetchlog-1.0.ebuild:
+  added ~amd64 keyword
+
+  27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> fetchlog-1.0.ebuild:
+  Stable on ppc.
+
+*fetchlog-1.0 (26 Dec 2004)
+
+  26 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> +fetchlog-1.0.ebuild:
+  Version bump
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  fetchlog-0.94.ebuild:
+  Masked fetchlog-0.94.ebuild stable for ppc
+
+  24 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> fetchlog-0.94.ebuild:
+  Removing unnecessary S=...
+
+*fetchlog-0.94 (15 Aug 2003)
+
+  15 Aug 2003; Patrick Kursawe <phosphan@gentoo.org> fetchlog-0.94.ebuild:
+  Initial import, closing bug 25029. Ebuild committed by
+  Jasmine Chua <jasmine.chua@securecirt.com>
+

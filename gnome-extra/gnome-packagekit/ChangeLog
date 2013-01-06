@@ -1,0 +1,51 @@
+# ChangeLog for gnome-extra/gnome-packagekit
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/ChangeLog,v 1.9 2012/12/24 00:20:41 eva Exp $
+
+*gnome-packagekit-3.6.1-r1 (24 Dec 2012)
+
+  24 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-packagekit-3.2.1.ebuild, +gnome-packagekit-3.6.1-r1.ebuild,
+  metadata.xml:
+  Version bump for Gnome 3.6. Switch to EAPI=5 and python-r1.eclass.
+
+  11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-packagekit-3.2.1.ebuild, gnome-packagekit-3.4.2.ebuild:
+  Use virtual/udev instead of sys-fs/udev
+
+*gnome-packagekit-3.4.2 (19 May 2012)
+
+  19 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-packagekit-3.4.2.ebuild, metadata.xml:
+  Version bump for gnome-3.4 (bug #416313), now with optional systemd support.
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-packagekit-3.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  15 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-packagekit-3.2.1.ebuild:
+  Empty py-compile script instead of symlinking it to /path/to/true for
+  automake-1.11.2 compability.
+
+  31 Dec 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-packagekit-3.2.1.ebuild:
+  Fix USE=udev dependency.
+
+*gnome-packagekit-3.2.1 (22 Nov 2011)
+
+  22 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-packagekit-3.0.3.ebuild, +files/gnome-packagekit-3.1.90-tests.patch,
+  +gnome-packagekit-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay; drop old. Notable changes: UI
+  improvements. Enable tests that can be reasonably run on a gentoo system.
+
+  28 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-packagekit-3.0.3.ebuild:
+  Slot gnome-menus dependency to 0 in preparation for gnome-menus-3.2.
+
+*gnome-packagekit-3.0.3 (01 Oct 2011)
+
+  01 Oct 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gnome-packagekit-3.0.3.ebuild, +metadata.xml:
+  Move from gnome overlay for GNOME 3
+

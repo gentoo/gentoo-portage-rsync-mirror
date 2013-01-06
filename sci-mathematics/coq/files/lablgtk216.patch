@@ -1,0 +1,45 @@
+Fix build with lablgtk 2.16.
+Apply conditionally because it uses new types introduced in this version.
+
+
+Index: coq-8.3pl4/ide/preferences.ml
+===================================================================
+--- coq-8.3pl4.orig/ide/preferences.ml
++++ coq-8.3pl4/ide/preferences.ml
+@@ -31,6 +31,10 @@ let mod_to_str (m:Gdk.Tags.modifier) =
+     | `CONTROL -> "CONTROL"
+     | `LOCK -> "LOCK"
+     | `SHIFT -> "SHIFT"
++    | `HYPER -> "HYPER"
++    | `META -> "META"
++    | `RELEASE -> "RELEASE"
++    | `SUPER -> "SUPER"
+ 
+ let (str_to_mod:string -> Gdk.Tags.modifier) =
+   function
+@@ -47,6 +51,10 @@ let (str_to_mod:string -> Gdk.Tags.modif
+     | "CONTROL" -> `CONTROL
+     | "LOCK" -> `LOCK
+     | "SHIFT" -> `SHIFT
++    | "HYPER" -> `HYPER
++    | "META" -> `META
++    | "RELEASE" -> `RELEASE
++    | "SUPER" -> `SUPER
+     | s -> `MOD1
+ 
+ type pref =
+Index: coq-8.3pl4/ide/utils/okey.ml
+===================================================================
+--- coq-8.3pl4.orig/ide/utils/okey.ml
++++ coq-8.3pl4/ide/utils/okey.ml
+@@ -47,6 +47,10 @@ let int_of_modifier = function
+   | `BUTTON3 -> 1024
+   | `BUTTON4 -> 2048
+   | `BUTTON5 -> 4096
++  | `HYPER -> 8192
++  | `META -> 16384
++  | `RELEASE -> 32768
++  | `SUPER -> 65536
+ 
+ let print_modifier l =
+   List.iter

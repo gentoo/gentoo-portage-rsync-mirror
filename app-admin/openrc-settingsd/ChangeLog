@@ -1,0 +1,32 @@
+# ChangeLog for app-admin/openrc-settingsd
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/openrc-settingsd/ChangeLog,v 1.7 2013/01/01 14:00:49 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> openrc-settingsd-1.0.1.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> openrc-settingsd-1.0.1.ebuild:
+  Add ~ia64, wrt bug #449220
+
+  23 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  openrc-settingsd-1.0.1.ebuild:
+  keyword ~ppc, bug #379651
+
+  23 Sep 2012; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  fix manifest signiture
+
+  23 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  openrc-settingsd-1.0.1.ebuild:
+  keyword ~ppc64, bug #379651
+
+*openrc-settingsd-1.0.1 (08 Sep 2012)
+
+  08 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +openrc-settingsd-1.0.1.ebuild:
+  Bump with bugfixes.
+
+*openrc-settingsd-1.0 (07 Sep 2012)
+
+  07 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +openrc-settingsd-1.0.ebuild, +metadata.xml:
+  New package, needed for gnome-control-center-3.4.

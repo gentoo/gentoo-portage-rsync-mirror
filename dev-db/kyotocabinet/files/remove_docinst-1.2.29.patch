@@ -1,0 +1,13 @@
+diff --git a/Makefile.in b/Makefile.in
+index 1bf1946..f229fe6 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -121,8 +121,6 @@ install :
+ 	cp -Rf $(COMMANDFILES) $(DESTDIR)$(BINDIR)
+ 	mkdir -p $(DESTDIR)$(MAN1DIR)
+ 	cd man && cp -Rf $(MAN1FILES) $(DESTDIR)$(MAN1DIR)
+-	mkdir -p $(DESTDIR)$(DOCDIR)
+-	cp -Rf $(DOCUMENTFILES) $(DESTDIR)$(DOCDIR)
+ 	mkdir -p $(DESTDIR)$(PCDIR)
+ 	cp -Rf $(PCFILES) $(DESTDIR)$(PCDIR)
+ 	-[ "$$UID" = 0 ] && PATH=/sbin:/usr/sbin:$(PATH) ldconfig 2>/dev/null || true

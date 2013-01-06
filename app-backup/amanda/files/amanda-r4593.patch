@@ -1,0 +1,44 @@
+#Index: ChangeLog
+#===================================================================
+#--- ChangeLog	(revision 4592)
+#+++ ChangeLog	(revision 4593)
+#@@ -1,3 +1,7 @@
+#+2012-03-10  Jean-Louis Martineau <martineau@zmanda.com>
+#+	* common-src/glib-util.c, common-src/glib-util.h: Remove
+#+	  g_queue_free_full.
+#+
+# 2012-03-09  Jean-Louis Martineau <martineau@zmanda.com>
+# 	* client-src/client_util.c, common-src/Makefile.am, common-src/am_sl.c,
+# 	  common-src/amxml.c: typo.
+Index: common-src/glib-util.c
+===================================================================
+--- common-src/glib-util.c	(revision 4592)
++++ common-src/glib-util.c	(revision 4593)
+@@ -120,15 +120,6 @@
+ }
+ #endif
+ 
+-void g_queue_free_full(GQueue * queue) {
+-    while (!g_queue_is_empty(queue)) {
+-        gpointer data;
+-        data = g_queue_pop_head(queue);
+-        amfree(data);
+-    }
+-    g_queue_free(queue);
+-}
+-
+ void g_ptr_array_free_full(GPtrArray * array) {
+     size_t i;
+ 
+Index: common-src/glib-util.h
+===================================================================
+--- common-src/glib-util.h	(revision 4592)
++++ common-src/glib-util.h	(revision 4593)
+@@ -72,7 +72,6 @@
+ 
+ /* These functions all take a GLib container, and call free() on all the
+  * pointers in the container before free()ing the container itself. */
+-void g_queue_free_full(GQueue * queue);
+ void g_ptr_array_free_full(GPtrArray * array);
+ 
+ /* g_value_compare() does what you expect. It returns TRUE if and

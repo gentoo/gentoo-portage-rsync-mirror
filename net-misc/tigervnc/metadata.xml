@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>armin76@gentoo.org</email>
+  </maintainer>
+  <use>
+    <flag name="internal-fltk">Build+link internal and enhanced fltk library</flag>
+    <flag name="server">Build TigerVNC server</flag>
+    <flag name="xorgmodule">Build the Xorg module</flag>
+  </use>
+</pkgmetadata>

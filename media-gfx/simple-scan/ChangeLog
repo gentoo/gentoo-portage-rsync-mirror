@@ -1,0 +1,116 @@
+# ChangeLog for media-gfx/simple-scan
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/ChangeLog,v 1.22 2012/12/20 05:29:52 tetromino Exp $
+
+  20 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -simple-scan-3.2.1.ebuild, simple-scan-3.4.2.ebuild,
+  simple-scan-3.6.0.ebuild:
+  >=colord-0.1.24 supports scanners via udev. Add some subslot operators. Drop
+  old.
+
+*simple-scan-3.6.0 (16 Dec 2012)
+
+  16 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +simple-scan-3.6.0.ebuild, metadata.xml:
+  Version bump for Gnome 3.6. Add longdescription/upstream to metadata.xml.
+
+  11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
+  simple-scan-2.32.0.2.ebuild, simple-scan-3.2.1.ebuild,
+  simple-scan-3.4.2.ebuild:
+  Use virtual/udev instead of sys-fs/udev.
+
+  04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> simple-scan-3.4.2.ebuild:
+  Stable for amd64, wrt bug #427544
+
+  03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  simple-scan-3.4.2.ebuild:
+  x86 stable wrt bug #427544
+
+*simple-scan-3.4.2 (17 Jul 2012)
+
+  17 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  simple-scan-3.2.1.ebuild, +simple-scan-3.4.2.ebuild:
+  Version bump with various bugfixes.
+
+  17 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/simple-scan-2.31.90.2-support-non-pkgconfig-zlib.patch,
+  simple-scan-2.32.0.2.ebuild, simple-scan-3.2.1.ebuild:
+  Drop useless support for ancient zlib to avoid autoreconf. As a side effect,
+  fixes bug #423705.
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> simple-scan-2.32.0.2.ebuild,
+  simple-scan-3.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  14 Jan 2012; Markus Meier <maekke@gentoo.org> simple-scan-3.2.1.ebuild:
+  x86 stable, bug #393007
+
+  29 Dec 2011; Pacho Ramos <pacho@gentoo.org> simple-scan-3.2.1.ebuild:
+  amd64 stable, bug 393007
+
+*simple-scan-3.2.1 (16 Nov 2011)
+
+  16 Nov 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  +simple-scan-3.2.1.ebuild:
+  Version bump. Port to gnome3 stack.
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  simple-scan-2.32.0.2.ebuild:
+  x86 stable wrt bug #385699
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  simple-scan-2.32.0.2.ebuild:
+  amd64 stable wrt #385699
+
+  14 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> metadata.xml:
+  Now maintained by gnome team, not just me.
+
+  13 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> metadata.xml:
+  Add myself as maintainer in accordance with Markos's mail to gentoo-dev. No
+  oustanding bugs found for reassignment.
+
+  10 Jun 2011; Christoph Mende <angelos@gentoo.org> simple-scan-2.31.1.ebuild,
+  simple-scan-2.31.91.ebuild, simple-scan-2.32.0.1.ebuild,
+  simple-scan-2.32.0.2.ebuild:
+  Fix udev dependency (bug #370377)
+
+*simple-scan-2.32.0.2 (26 Apr 2011)
+
+  26 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  +simple-scan-2.32.0.2.ebuild:
+  Version bump.
+
+  26 Feb 2011; Kevin McCarthy <signals@gentoo.org> simple-scan-2.31.91.ebuild:
+  Updated depends from media-libs/jpeg to virtual/jpeg
+
+*simple-scan-2.32.0.1 (07 Dec 2010)
+
+  07 Dec 2010; Gilles Dartiguelongue <eva@gentoo.org>
+  +simple-scan-2.32.0.1.ebuild:
+  Version bump for Gnome 2.32.
+
+*simple-scan-2.31.91 (14 Sep 2010)
+
+  14 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
+  +files/simple-scan-2.31.90.2-support-non-pkgconfig-zlib.patch,
+  +simple-scan-2.31.91.ebuild:
+  Version bump. Bug #336900. Patch to configure with old zlib versions as
+  well. Thanks to David King <amigadave@amigadave.com> for the ebuild and
+  the patch.
+
+  03 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  simple-scan-2.31.1.ebuild:
+  Add missing udev[extras] dependency ( bug #328145 ) and
+  >=media-gfx/sane-backends-1.0.20 dependency ( bug #328149 )
+
+*simple-scan-2.31.1 (04 Jun 2010)
+
+  04 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  +simple-scan-2.31.1.ebuild, +metadata.xml:
+  Moved from sunrise overlay. Fixes bug #320737. Thanks to Fabian Köster
+  <koesterreich@gmx.net> for the initial ebuild
+
+  26 May 2010; Fabian Köster (maestro_alubia) <f.koester@tarent.de>
+  +simple-scan-2.31.1.ebuild, +metadata.xml:
+  New Ebuild for bug 320737 thanks to sedzimir, BiNkl and Tommy[D]
+

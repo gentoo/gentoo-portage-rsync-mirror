@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst prerm setup
+DEPEND=>=app-admin/webapp-config-1.50.15
+DESCRIPTION=A Bookmark management system to store your Bookmarks, Favorites and Links.
+EAPI=4
+HOMEPAGE=http://www.frech.ch/online-bookmarks/index.php
+IUSE=vhosts
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=virtual/httpd-php dev-lang/php[mysql] dev-php/PEAR-Auth dev-php/PEAR-DB >=app-admin/webapp-config-1.50.15
+SLOT=0.8.14_beta
+SRC_URI=http://www.frech.ch/online-bookmarks/download/online-bookmarks-0.8.14_beta.tar.gz
+_eclasses_=webapp	25b9b1696f5e698711f47d45c3d45e3e
+_md5_=7fc3e95e5b3a9f6cdeb2bf01294cfa73

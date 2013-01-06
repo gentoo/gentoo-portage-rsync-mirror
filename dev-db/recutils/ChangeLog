@@ -1,0 +1,17 @@
+# ChangeLog for dev-db/recutils
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/recutils/ChangeLog,v 1.3 2012/11/02 03:36:52 radhermit Exp $
+
+  02 Nov 2012; Tim Harder <radhermit@gentoo.org> recutils-1.5.ebuild,
+  +files/recutils-1.5-glibc-2.16.patch:
+  Fix build with glibc-2.16 (bug #426922).
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> recutils-1.5.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*recutils-1.5 (15 Jan 2012)
+
+  15 Jan 2012; Tim Harder <radhermit@gentoo.org> +files/50recutils-gentoo.el,
+  +recutils-1.5.ebuild, +files/recutils-1.5-automagic.patch, +metadata.xml:
+  Initial import (bug #350991).
+

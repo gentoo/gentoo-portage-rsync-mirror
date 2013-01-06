@@ -1,0 +1,8 @@
+diff -r -U1 fricas-1.1.7.orig/src/graph/view3D/smoothShade3d.c fricas-1.1.7/src/graph/view3D/smoothShade3d.c
+--- fricas-1.1.7.orig/src/graph/view3D/smoothShade3d.c	2012-06-19 08:17:01.000000000 +0700
++++ fricas-1.1.7/src/graph/view3D/smoothShade3d.c	2012-06-22 13:38:49.000000000 +0700
+@@ -753,3 +753,3 @@
+   /* axes label for X */
+-  if ((int)axesZ[0][0] >= (int)axesZ[0][2]) {
++  if ((int)axesZ[0][0] >= (int)axesZ[0][1]) {
+     if (axesXY[0][2] < axesXY[0][0]) xcoord2 = axesXY[0][2]-5;

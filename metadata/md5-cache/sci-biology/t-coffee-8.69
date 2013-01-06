@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare test
+DEPEND=test? ( dev-lang/perl )
+DESCRIPTION=A multiple sequence alignment package
+EAPI=2
+HOMEPAGE=http://www.tcoffee.org/Projects_home_page/t_coffee_home_page.html
+IUSE=examples test
+KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=sci-biology/clustalw
+SLOT=0
+SRC_URI=http://www.tcoffee.org/Packages/T-COFFEE_distribution_Version_8.69.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	61ad55e732e494378165e7dcd4744b91	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=f3f2fb56a6e32370185568c399952a4c

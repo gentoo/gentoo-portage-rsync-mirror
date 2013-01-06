@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=dev-libs/glib:2 x11-libs/gtk+:2 x11-libs/pango judy? ( dev-libs/judy ) tcl? ( dev-lang/tcl dev-lang/tk ) lzma? ( app-arch/xz-utils ) virtual/pkgconfig dev-util/gperf
+DESCRIPTION=A wave viewer for LXT, LXT2, VZT, GHW and standard Verilog VCD/EVCD files
+EAPI=2
+HOMEPAGE=http://gtkwave.sourceforge.net/
+IUSE=doc examples fasttree fatlines judy lzma tcl
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2 MIT
+RDEPEND=dev-libs/glib:2 x11-libs/gtk+:2 x11-libs/pango judy? ( dev-libs/judy ) tcl? ( dev-lang/tcl dev-lang/tk ) lzma? ( app-arch/xz-utils )
+SLOT=0
+SRC_URI=mirror://sourceforge/gtkwave/gtkwave-3.3.23.tar.gz
+_md5_=c6c1ad373d378df735a2d1a6c95f4a9d

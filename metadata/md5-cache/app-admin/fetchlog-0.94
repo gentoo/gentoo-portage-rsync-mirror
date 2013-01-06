@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install preinst
+DEPEND=snmp? ( >=dev-perl/Net-SNMP-4.0.1-r2 >=net-analyzer/net-snmp-5.0.6 )
+DESCRIPTION=Displays the last new messages of a logfile
+HOMEPAGE=http://fetchlog.sourceforge.net/
+IUSE=snmp
+KEYWORDS=x86 ppc
+LICENSE=GPL-2
+RDEPEND=snmp? ( >=dev-perl/Net-SNMP-4.0.1-r2 >=net-analyzer/net-snmp-5.0.6 )
+SLOT=0
+SRC_URI=mirror://sourceforge/fetchlog/fetchlog-0.94.tar.gz
+_md5_=d3bcb4505d8c5824d89806f27ff0a42f

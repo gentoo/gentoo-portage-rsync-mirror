@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>xfce</herd>
+  <use>
+    <flag name='glyr'>Enable music metadata searchengine support using <pkg>media-libs/glyr</pkg></flag>
+    <flag name='lastfm'>Enable last.fm support using <pkg>media-libs/libclastfm</pkg></flag>
+  </use>
+</pkgmetadata>

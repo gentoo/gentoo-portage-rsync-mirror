@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install
+DEPEND=sys-libs/zlib ssl? ( dev-libs/openssl ) sqlite? ( dev-db/sqlite:3 ) tcl? ( dev-lang/tcl )
+DESCRIPTION=Simple, high-reliability, distributed software configuration management
+EAPI=4
+HOMEPAGE=http://www.fossil-scm.org/
+IUSE=sqlite +ssl tcl
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD-2
+RDEPEND=sys-libs/zlib ssl? ( dev-libs/openssl ) sqlite? ( dev-db/sqlite:3 ) tcl? ( dev-lang/tcl )
+SLOT=0
+SRC_URI=http://www.fossil-scm.org/download/fossil-src-20121022124804.tar.gz
+_md5_=fe86eb66533f9be558d51da22e208835

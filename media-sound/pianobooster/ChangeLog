@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/pianobooster
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobooster/ChangeLog,v 1.1 2011/05/18 17:08:44 radhermit Exp $
+
+*pianobooster-0.6.4b (18 May 2011)
+
+  18 May 2011; Tim Harder <radhermit@gentoo.org> +pianobooster-0.6.4b.ebuild,
+  +files/pianobooster-0.6.4b-cmake.patch, +metadata.xml:
+  Initial import. Ebuild based on work by Nao Nakashima (bug #316449).
+

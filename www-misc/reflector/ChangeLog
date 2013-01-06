@@ -1,0 +1,17 @@
+# ChangeLog for www-misc/reflector
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/reflector/ChangeLog,v 1.3 2012/10/29 16:39:49 mgorny Exp $
+
+  29 Oct 2012; Michał Górny <mgorny@gentoo.org> reflector-2011.05.13.1.ebuild:
+  Use virtual for argparse.
+
+  20 May 2011; Nathan Phillip Brink <binki@gentoo.org>
+  reflector-2011.05.13.1.ebuild:
+  Fix python eclass usage: reflector doesn't work on <=python-2.5 and the
+  Reflector class was not being optimized. Bug #367259.
+
+*reflector-2011.05.13.1 (13 May 2011)
+
+  13 May 2011; Nathan Phillip Brink <binki@gentoo.org>
+  +reflector-2011.05.13.1.ebuild, +metadata.xml:
+  Add new ebuild for www-misc/reflector-2011.05.13.1 fixing bug 317831.

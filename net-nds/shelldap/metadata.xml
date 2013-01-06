@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+<email>pva@gentoo.org</email>
+<name>Peter Volkov</name>
+</maintainer>
+<maintainer>
+<email>azamat.hackimov@gmail.com</email>
+<name>Azamat Hackimov</name>
+</maintainer>
+<longdescription lang="en">
+A handy shell-like interface for browsing LDAP servers and editing their
+content. It keeps command history, has sane autocompletes, credential caching,
+site-wide and individual configs, and it's fun to say.
+</longdescription>
+</pkgmetadata>
+

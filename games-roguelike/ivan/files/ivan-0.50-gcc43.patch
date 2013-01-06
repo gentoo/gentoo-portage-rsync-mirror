@@ -1,0 +1,12 @@
+--- FeLib/Source/festring.cpp.orig	2008-06-15 14:30:51.000000000 +0000
++++ FeLib/Source/festring.cpp	2008-06-15 14:31:01.000000000 +0000
+@@ -11,6 +11,8 @@
+  */
+ 
+ #include <cctype>
++#include <cstdlib>
++
+ 
+ #include "festring.h"
+ #include "allocate.h"
+

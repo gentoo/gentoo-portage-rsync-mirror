@@ -1,0 +1,13 @@
+--- src/linux/rw_x11.c.old	2012-04-06 20:51:11.545642465 +0200
++++ src/linux/rw_x11.c	2012-04-06 20:55:48.159425787 +0200
+@@ -989,8 +989,8 @@
+ 	} 
+ 	else 
+ 	  {
+-	    mx -= ((int)event.xmotion.x + mwx)*2;
+-	    my -= ((int)event.xmotion.y + mwy)*2;
++	    mx += ((int)event.xmotion.x - mwx)*2;
++	    my += ((int)event.xmotion.y - mwy)*2;
+ 	    mwx = event.xmotion.x;
+ 	    mwy = event.xmotion.y;
+ 	    

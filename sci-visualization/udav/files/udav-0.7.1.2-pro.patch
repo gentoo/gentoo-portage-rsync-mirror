@@ -1,0 +1,15 @@
+diff -r -U2 udav-0.7.1.2.orig/src/src.pro udav-0.7.1.2/src/src.pro
+--- udav-0.7.1.2.orig/src/src.pro	2011-05-30 19:04:17.000000000 +0700
++++ udav-0.7.1.2/src/src.pro	2011-06-05 03:05:07.000000000 +0700
+@@ -62,7 +62,7 @@
+ icon.files += udav.png
+ data.files += udav_ru.qm
+-target.path = /usr/local/bin/
+-data.path = /usr/local/share/udav/
+-icon.path = /usr/local/share/pixmaps/
+-desc.path = /usr/local/share/applications/
++target.path = /usr/bin/
++data.path = /usr/share/udav/
++icon.path = /usr/share/icons/hicolor/64x64/apps/
++desc.path = /usr/share/applications/
+ OTHER_FILES += ReadMe

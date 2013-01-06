@@ -1,0 +1,24 @@
+diff --git a/src/SConscript b/src/SConscript
+index 6447851..85094b2 100644
+--- a/src/SConscript
++++ b/src/SConscript
+@@ -1,4 +1,5 @@
+ import os, sys
++import SCons.Util
+ 
+ media_env = Environment()
+ conf = Configure(media_env)
+@@ -19,6 +20,13 @@ for l in appinfo:
+         vstring = l.replace('<Version>', '').replace('</Version>', '')
+         break
+ 
++if os.environ.has_key('CC'):
++    media_env['CC'] = os.environ['CC']
++if os.environ.has_key('CFLAGS'):
++    media_env.Append(CFLAGS = SCons.Util.CLVar(os.environ['CFLAGS']))
++if os.environ.has_key('LDFLAGS'):
++    media_env.Append(LINKFLAGS = SCons.Util.CLVar(os.environ['LDFLAGS']))
++
+ media_env.ParseConfig('pkg-config --cflags --libs ' \
+         'gconf-2.0 gdu gtk+-2.0 gdk-pixbuf-2.0')
+ media_env.Append(CFLAGS = ['-DGDU_API_IS_SUBJECT_TO_CHANGE',

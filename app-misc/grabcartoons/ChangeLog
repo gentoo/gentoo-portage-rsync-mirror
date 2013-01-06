@@ -1,0 +1,33 @@
+# ChangeLog for app-misc/grabcartoons
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grabcartoons/ChangeLog,v 1.7 2012/10/29 08:27:51 ago Exp $
+
+  29 Oct 2012; Agostino Sarubbo <ago@gentoo.org> grabcartoons-2.1.ebuild:
+  EAPI4, add rdepend, add ~amd64
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -grabcartoons-1.11.ebuild:
+  Remove old
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
+
+*grabcartoons-2.1 (15 Oct 2007)
+
+  15 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
+  +grabcartoons-2.1.ebuild:
+  version bump (bug 190713)
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> grabcartoons-1.11.ebuild:
+  fix date in ebuild
+
+  11 May 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml:
+  add metadata.xml
+
+  05 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+*grabcartoons-1.11 (20 Aug 2005)
+
+  20 Aug 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Grzegorz Artur Daszuta #68777.

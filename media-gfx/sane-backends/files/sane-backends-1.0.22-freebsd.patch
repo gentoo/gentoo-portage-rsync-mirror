@@ -1,0 +1,84 @@
+--- sanei/sanei_usb.c.orig	2009-07-26 21:29:33.000000000 +0200
++++ sanei/sanei_usb.c	2009-07-26 21:31:42.000000000 +0200
+@@ -96,7 +96,8 @@
+ }
+ #endif /* HAVE_USBCALLS */
+ 
+-#if defined (__FreeBSD__) 
++#if (defined (__FreeBSD__) && (__FreeBSD_version < 800064))
++#include <sys/param.h>
+ #include <dev/usb/usb.h>
+ #endif /* __FreeBSD__ */
+ #if defined (__DragonFly__)
+@@ -273,7 +274,7 @@
+     *vendorID = vendor;
+     *productID = product;
+   }
+-#elif defined (__FreeBSD__) || defined (__DragonFly__)
++#elif (defined (__FreeBSD__) && __FreeBSD_version < 800064) || defined (__DragonFly__)
+   {
+     int controller;
+     int ctrl_fd;
+--- backend/epson2.c.orig	2010-04-05 22:18:04.000000000 +0900
++++ backend/epson2.c	2010-05-10 22:18:47.000000000 +0900
+@@ -57,6 +57,10 @@
+ #include <unistd.h>
+ #include <errno.h>
+ #include <sys/time.h>
++#ifdef __FreeBSD__
++#include <sys/types.h>
++#include <sys/socket.h>
++#endif
+ 
+ #include "sane/saneopts.h"
+ #include "sane/sanei_scsi.h"
+--- include/sane/sanei_tcp.h.orig	2006-11-30 14:23:19.000000000 -0900
++++ include/sane/sanei_tcp.h	2009-01-16 05:02:42.000000000 -0900
+@@ -20,6 +20,9 @@
+ 
+ #include <sane/sane.h>
+ 
++#ifdef __FreeBSD__
++#include <sys/types.h>
++#endif
+ #include <netinet/in.h>
+ #include <netdb.h>
+ 
+--- backend/epson2-commands.c.orig	2010-04-05 22:18:04.000000000 +0900
++++ backend/epson2-commands.c	2010-05-10 22:24:33.000000000 +0900
+@@ -21,6 +21,9 @@
+ 
+ #include <byteorder.h>
+ #include <math.h>
++#ifdef __FreeBSD__
++#include <sys/types.h>
++#endif
+ 
+ #include "epson2.h"
+ #include "epson2-io.h"
+--- backend/magicolor.c.orig	2011-01-31 03:49:46.000000000 +0900
++++ backend/magicolor.c	2011-08-02 02:38:15.000000000 +0900
+@@ -50,6 +50,10 @@
+ #include <unistd.h>
+ #include <errno.h>
+ #include <sys/time.h>
++#ifdef __FreeBSD__
++#include <sys/types.h>
++#include <sys/socket.h>
++#endif
+ #include <math.h>
+ #include <poll.h>
+ 
+--- backend/xerox_mfp-tcp.c.orig	2010-12-02 08:49:58.000000000 +0900
++++ backend/xerox_mfp-tcp.c	2011-08-02 02:37:27.000000000 +0900
+@@ -27,6 +27,10 @@
+ #include <unistd.h>
+ #include <errno.h>
+ #include <sys/time.h>
++#ifdef __FreeBSD__
++#include <sys/types.h>
++#include <sys/socket.h>
++#endif
+ 
+ #include "sane/saneopts.h"
+ #include "sane/sanei_scsi.h"

@@ -1,0 +1,20 @@
+# ChangeLog for dev-php5/PHPonTrax
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PHPonTrax/ChangeLog,v 1.2 2012/01/19 12:02:12 mabi Exp $
+
+*PHPonTrax-0.17.0 (19 Jan 2012)
+
+  19 Jan 2012; Matti Bickel <mabi@gentoo.org> +PHPonTrax-0.17.0.ebuild,
+  -PHPonTrax-0.14.0.ebuild:
+  version bump & remove apache2 dep (use any php capable webserver) & remove old
+
+*PHPonTrax-0.14.0 (29 Nov 2007)
+
+  29 Nov 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +PHPonTrax-0.14.0.ebuild:
+  Initial import from project overlay
+
+  17 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +PHPonTrax-0.14.0.ebuild:
+  New ebuild, Bug 139514.
+

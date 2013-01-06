@@ -1,0 +1,13 @@
+# ChangeLog for sys-cluster/crmsh
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/ChangeLog,v 1.2 2012/11/14 17:22:45 jer Exp $
+
+  14 Nov 2012; Jeroen Roovers <jer@gentoo.org> crmsh-1.2.1.ebuild:
+  Marked ~hppa (bug #442408).
+
+*crmsh-1.2.1 (29 Oct 2012)
+
+  29 Oct 2012; Ultrabug <ultrabug@gentoo.org> +crmsh-1.2.1.ebuild,
+  +metadata.xml:
+  Initial commit
+

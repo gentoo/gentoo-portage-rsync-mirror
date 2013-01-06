@@ -1,0 +1,16 @@
+# ChangeLog for app-emacs/emhacks
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emhacks/ChangeLog,v 1.3 2008/08/27 07:32:44 ulm Exp $
+
+  27 Aug 2008; Ulrich Mueller <ulm@gentoo.org> emhacks-20070920.ebuild:
+  Do not set EMACSFLAGS since the value is now the eclass default.
+
+  28 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Sync description of jde USE flag from use.local.desc.
+
+*emhacks-20070920 (23 Mar 2008)
+
+  23 Mar 2008; Ulrich Mueller <ulm@gentoo.org> +files/50emhacks-gentoo.el,
+  +metadata.xml, +emhacks-20070920.ebuild:
+  Initial import, from Emacs overlay. Ebuild contributed by me.
+

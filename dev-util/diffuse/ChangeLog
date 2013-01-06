@@ -1,0 +1,71 @@
+# ChangeLog for dev-util/diffuse
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/ChangeLog,v 1.16 2012/02/24 14:42:27 phajdan.jr Exp $
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> diffuse-0.4.6.ebuild:
+  x86 stable wrt bug #404731
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> diffuse-0.4.6.ebuild:
+  Stable for amd64, wrt bug #404731
+
+*diffuse-0.4.6 (04 Nov 2011)
+
+  04 Nov 2011; Andrey Grozin <grozin@gentoo.org> +diffuse-0.4.6.ebuild:
+  Version bump
+
+*diffuse-0.4.4 (03 Nov 2010)
+
+  03 Nov 2010; Andrey Grozin <grozin@gentoo.org> +diffuse-0.4.4.ebuild:
+  Version bump
+
+  05 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> diffuse-0.4.3.ebuild:
+  x86 stable wrt bug #320031
+
+  25 May 2010; Pacho Ramos <pacho@gentoo.org> diffuse-0.4.3.ebuild:
+  stable amd64, bug 320031
+
+*diffuse-0.4.3 (16 Apr 2010)
+
+  16 Apr 2010; Andrey Grozin <grozin@gentoo.org> -diffuse-0.4.2.ebuild,
+  +diffuse-0.4.3.ebuild:
+  Version bump
+
+*diffuse-0.4.2 (13 Apr 2010)
+
+  13 Apr 2010; Andrey Grozin <grozin@gentoo.org> +diffuse-0.4.2.ebuild:
+  Version bump
+
+  02 Mar 2010; Christian Faulhammer <fauli@gentoo.org> diffuse-0.4.1.ebuild:
+  stable x86, bug 303871
+
+  23 Feb 2010; Markos Chandras <hwoarang@gentoo.org> diffuse-0.4.1.ebuild:
+  Stable on amd64 wrt bug #303871
+
+*diffuse-0.4.1 (13 Oct 2009)
+
+  13 Oct 2009; Andrey Grozin <grozin@gentoo.org> +diffuse-0.4.1.ebuild:
+  Version bump
+
+*diffuse-0.4.0 (17 Aug 2009)
+
+  17 Aug 2009; Andrey Grozin <grozin@gentoo.org> -diffuse-0.3.4.ebuild,
+  +diffuse-0.4.0.ebuild:
+  Version bump
+
+  26 Jul 2009; Andrey Grozin <grozin@gentoo.org> diffuse-0.3.4.ebuild:
+  Blocking sci-chemistry/tinker (file collision, bug #279018)
+
+  22 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  diffuse-0.3.4.ebuild:
+  Add ~amd64 keyword (bug #278733).
+
+  21 Jul 2009; Jeroen Roovers <jer@gentoo.org> diffuse-0.3.4.ebuild,
+  metadata.xml:
+  Fix spelling.
+
+*diffuse-0.3.4 (19 Jul 2009)
+
+  19 Jul 2009; Andrey Grozin <grozin@gentoo.org> +diffuse-0.3.4.ebuild,
+  +metadata.xml:
+  Initial import
+

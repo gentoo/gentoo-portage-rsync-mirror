@@ -1,0 +1,15 @@
+# ChangeLog for x11-plugins/leechcraft-lhtr
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/leechcraft-lhtr/ChangeLog,v 1.2 2012/12/25 17:01:06 maksbotan Exp $
+
+*leechcraft-lhtr-0.5.90 (25 Dec 2012)
+
+  25 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-lhtr-0.5.90.ebuild:
+  Bump LeechCraft to 0.5.90, thanks to 0xd34df00d
+
+*leechcraft-lhtr-9999 (22 Dec 2012)
+
+  22 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-lhtr-9999.ebuild, +metadata.xml:
+  Add x11-plugins/leechcraft-lhtr-9999, thanks to 0xd34df00d

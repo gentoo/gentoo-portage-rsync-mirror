@@ -1,0 +1,20 @@
+--- libcapsinetwork-0.3.0.old/src/socket.cpp	2004-07-15 05:39:28.000000000 -0400
++++ libcapsinetwork-0.3.0/src/socket.cpp	2007-10-10 07:36:41.000000000 -0400
+@@ -49,7 +49,7 @@
+ const bool Socket::hasReadLine()
+ {
+ 	static std::string newLine = "\r\n";
+-	unsigned int pos = m_ioBuf.find_first_of(newLine);
++	std::string::size_type pos = m_ioBuf.find_first_of(newLine);
+ 
+ 	return (!(pos == std::string::npos));
+ }
+@@ -57,7 +57,7 @@
+ const std::string Socket::readLine()
+ {
+ 	static std::string newLine = "\r\n";
+-	unsigned int pos = m_ioBuf.find_first_of(newLine);
++	std::string::size_type pos = m_ioBuf.find_first_of(newLine);
+ 
+ 	if (pos != std::string::npos)
+ 	{

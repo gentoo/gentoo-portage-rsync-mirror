@@ -1,0 +1,13 @@
+# ChangeLog for app-crypt/elettra
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/elettra/ChangeLog,v 1.2 2011/08/28 10:56:33 hwoarang Exp $
+
+  28 Aug 2011; Markos Chandras <hwoarang@gentoo.org> elettra-1.0.ebuild:
+  Respect LDFLAGs. Bug #379287. QA improvements
+
+*elettra-1.0 (20 Apr 2008)
+
+  20 Apr 2008; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
+  +elettra-1.0.ebuild:
+  First commit
+

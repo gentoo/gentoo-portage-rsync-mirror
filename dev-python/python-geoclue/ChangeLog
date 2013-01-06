@@ -1,0 +1,30 @@
+# ChangeLog for dev-python/python-geoclue
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-geoclue/ChangeLog,v 1.8 2013/01/01 14:16:12 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> python-geoclue-0.1.0.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> python-geoclue-0.1.0.ebuild:
+  Add ~ia64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> python-geoclue-0.1.0.ebuild:
+  Add ~ppc64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> python-geoclue-0.1.0.ebuild:
+  Add ~ppc, wrt bug #449220
+
+  19 Jun 2012; Justin Lecher <jlec@gentoo.org> python-geoclue-0.1.0.ebuild:
+  Use virtualx for during src_test, #421911
+
+  24 Feb 2012; Patrick Lauer <patrick@gentoo.org> python-geoclue-0.1.0.ebuild:
+  Restricting pypy and jython
+
+  24 Feb 2012; Patrick Lauer <patrick@gentoo.org> python-geoclue-0.1.0.ebuild:
+  Restricting py 2.5
+
+*python-geoclue-0.1.0 (15 Feb 2012)
+
+  15 Feb 2012; Justin Lecher <jlec@gentoo.org> +python-geoclue-0.1.0.ebuild,
+  +metadata.xml:
+  Initial commit, added by me

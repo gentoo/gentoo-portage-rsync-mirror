@@ -1,0 +1,159 @@
+diff -ur a/src/backends/netutils.cpp b/src/backends/netutils.cpp
+--- a/src/backends/netutils.cpp	2012-10-28 16:49:04.000000000 +0100
++++ b/src/backends/netutils.cpp	2012-10-30 01:05:26.947904601 +0100
+@@ -18,13 +18,13 @@
+     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ **************************************************************************/
+ 
++#include "backends/security.h"
+ #include "scripting/abc.h"
+ #include "swf.h"
+ #include "backends/config.h"
+ #include "backends/netutils.h"
+ #include "backends/rtmputils.h"
+ #include "compat.h"
+-#include "backends/security.h"
+ #include <string>
+ #include <algorithm>
+ #include <cctype>
+diff -ur a/src/main.cpp b/src/main.cpp
+--- a/src/main.cpp	2012-10-28 16:49:04.000000000 +0100
++++ b/src/main.cpp	2012-10-30 01:29:12.446786100 +0100
+@@ -18,9 +18,9 @@
+ **************************************************************************/
+ 
+ #include "version.h"
++#include "backends/security.h"
+ #include "swf.h"
+ #include "logger.h"
+-#include "backends/security.h"
+ #include "platforms/engineutils.h"
+ #ifndef _WIN32
+ #	include <sys/resource.h>
+diff -ur a/src/plugin/plugin.cpp b/src/plugin/plugin.cpp
+--- a/src/plugin/plugin.cpp	2012-10-28 16:49:04.000000000 +0100
++++ b/src/plugin/plugin.cpp	2012-10-30 01:29:26.328790120 +0100
+@@ -19,6 +19,7 @@
+ **************************************************************************/
+ 
+ #include "version.h"
++#include "backends/security.h"
+ #include "plugin/plugin.h"
+ #include "logger.h"
+ #include "compat.h"
+@@ -28,7 +29,6 @@
+ #	include <gdk/gdkwin32.h>
+ #endif
+ #include "backends/urlutils.h"
+-#include "backends/security.h"
+ 
+ #include "plugin/npscriptobject.h"
+ 
+diff -ur a/src/scripting/flash/display/flashdisplay.cpp b/src/scripting/flash/display/flashdisplay.cpp
+--- a/src/scripting/flash/display/flashdisplay.cpp	2012-10-28 16:49:04.000000000 +0100
++++ b/src/scripting/flash/display/flashdisplay.cpp	2012-10-30 01:12:42.780140945 +0100
+@@ -19,6 +19,7 @@
+ 
+ #include <list>
+ 
++#include "backends/security.h"
+ #include "scripting/abc.h"
+ #include "scripting/flash/display/flashdisplay.h"
+ #include "swf.h"
+@@ -33,7 +34,6 @@
+ #include "scripting/flash/display/BitmapData.h"
+ #include "scripting/argconv.h"
+ #include "scripting/toplevel/Vector.h"
+-#include "backends/security.h"
+ 
+ using namespace std;
+ using namespace lightspark;
+diff -ur a/src/scripting/flash/net/flashnet.cpp b/src/scripting/flash/net/flashnet.cpp
+--- a/src/scripting/flash/net/flashnet.cpp	2012-10-28 16:49:04.000000000 +0100
++++ b/src/scripting/flash/net/flashnet.cpp	2012-10-30 01:15:37.158273078 +0100
+@@ -18,6 +18,7 @@
+ **************************************************************************/
+ 
+ #include <map>
++#include "backends/security.h"
+ #include "scripting/abc.h"
+ #include "scripting/flash/net/flashnet.h"
+ #include "scripting/flash/net/URLRequestHeader.h"
+@@ -27,7 +28,6 @@
+ #include "backends/audio.h"
+ #include "backends/builtindecoder.h"
+ #include "backends/rendering.h"
+-#include "backends/security.h"
+ #include "scripting/argconv.h"
+ 
+ using namespace std;
+diff -ur a/src/scripting/flash/net/URLStream.cpp b/src/scripting/flash/net/URLStream.cpp
+--- a/src/scripting/flash/net/URLStream.cpp	2012-10-28 16:49:04.000000000 +0100
++++ b/src/scripting/flash/net/URLStream.cpp	2012-10-30 01:20:27.202448798 +0100
+@@ -18,10 +18,10 @@
+ **************************************************************************/
+ 
+ #include <map>
++#include "backends/security.h"
+ #include "scripting/abc.h"
+ #include "scripting/flash/net/URLStream.h"
+ #include "scripting/flash/net/flashnet.h"
+-#include "backends/security.h"
+ #include "scripting/argconv.h"
+ 
+ /**
+diff -ur a/src/scripting/flash/net/XMLSocket.cpp b/src/scripting/flash/net/XMLSocket.cpp
+--- a/src/scripting/flash/net/XMLSocket.cpp	2012-10-28 16:49:04.000000000 +0100
++++ b/src/scripting/flash/net/XMLSocket.cpp	2012-10-30 01:23:19.454574585 +0100
+@@ -18,13 +18,13 @@
+ **************************************************************************/
+ 
+ #include "XMLSocket.h"
++#include "backends/security.h"
+ #include "abc.h"
+ #include "toplevel/Error.h"
+ #include "class.h"
+ #include "argconv.h"
+ #include "swf.h"
+ #include "flash/errors/flasherrors.h"
+-#include "backends/security.h"
+ #include <sys/types.h>
+ #ifdef _WIN32
+ #	define _WIN32_WINNT 0x0501
+diff -ur a/src/scripting/flash/sensors/flashsensors.cpp b/src/scripting/flash/sensors/flashsensors.cpp
+--- a/src/scripting/flash/sensors/flashsensors.cpp	2012-10-28 16:49:04.000000000 +0100
++++ b/src/scripting/flash/sensors/flashsensors.cpp	2012-10-30 01:20:46.299454329 +0100
+@@ -18,13 +18,13 @@
+ **************************************************************************/
+ 
+ #include <map>
++#include "backends/security.h"
+ #include "scripting/abc.h"
+ #include "scripting/flash/sensors/flashsensors.h"
+ #include "scripting/class.h"
+ #include "scripting/flash/system/flashsystem.h"
+ #include "compat.h"
+ #include "backends/audio.h"
+-#include "backends/security.h"
+ 
+ using namespace std;
+ using namespace lightspark;
+diff -ur a/src/swf.cpp b/src/swf.cpp
+--- a/src/swf.cpp	2012-10-28 16:49:04.000000000 +0100
++++ b/src/swf.cpp	2012-10-30 01:02:34.015821784 +0100
+@@ -19,6 +19,7 @@
+ 
+ #include <string>
+ #include <algorithm>
++#include "backends/security.h"
+ #include "scripting/abc.h"
+ #include "scripting/flash/events/flashevents.h"
+ #include "scripting/flash/utils/flashutils.h"
+@@ -31,7 +32,6 @@
+ #include "backends/config.h"
+ #include "backends/pluginmanager.h"
+ #include "backends/rendering.h"
+-#include "backends/security.h"
+ #include "backends/image.h"
+ #include "backends/extscriptobject.h"
+ #include "memory_support.h"

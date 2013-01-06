@@ -1,0 +1,14 @@
+https://code.google.com/p/clementine-player/source/detail?r=5e685b2b1425
+https://bugs.gentoo.org/show_bug.cgi?id=420871
+
+--- src/CMakeLists.txt
++++ src/CMakeLists.txt
+@@ -634,7 +634,7 @@
+   if (NOT LINGUAS OR LINGUAS STREQUAL "None")
+     set (LANGUAGES "")
+   else (NOT LINGUAS OR LINGUAS STREQUAL "None")
+-    string(REGEX MATCHALL [a-zA-Z_]+
++    string(REGEX MATCHALL [a-zA-Z_@]+
+            LANGUAGES ${LINGUAS})
+   endif (NOT LINGUAS OR LINGUAS STREQUAL "None")
+ endif (LINGUAS STREQUAL "All")

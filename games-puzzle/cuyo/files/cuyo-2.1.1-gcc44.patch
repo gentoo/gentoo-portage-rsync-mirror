@@ -1,0 +1,12 @@
+diff -ur cuyo-2.~-1.1.orig/src/stringzeug.h cuyo-2.~-1.1/src/stringzeug.h
+--- cuyo-2.~-1.1.orig/src/stringzeug.h	2006-07-03 20:26:23.000000000 +0300
++++ cuyo-2.~-1.1/src/stringzeug.h	2009-12-29 16:17:18.000000000 +0200
+@@ -20,7 +20,7 @@
+ 
+ #include <config.h>
+ #include <string>
+-
++#include <stdio.h>
+ 
+ 
+ 

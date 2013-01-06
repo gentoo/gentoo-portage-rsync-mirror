@@ -1,0 +1,15 @@
+# ChangeLog for app-admin/eselect-lcdfilter
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lcdfilter/ChangeLog,v 1.3 2012/07/31 06:42:05 yngwin Exp $
+
+  31 Jul 2012; Ben de Groot <yngwin@gentoo.org> eselect-lcdfilter-1.ebuild:
+  Use correct variable, bug #428710
+
+  30 Jul 2012; Ben de Groot <yngwin@gentoo.org> eselect-lcdfilter-1.ebuild:
+  Improve description, add freetype[infinality] as PDEPEND
+
+*eselect-lcdfilter-1 (29 Jul 2012)
+
+  29 Jul 2012; Ben de Groot <yngwin@gentoo.org> +eselect-lcdfilter-1.ebuild,
+  +metadata.xml:
+  Initial commit, to go with fontconfig-infinality

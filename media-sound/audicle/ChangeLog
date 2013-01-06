@@ -1,0 +1,46 @@
+# ChangeLog for media-sound/audicle
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/ChangeLog,v 1.9 2012/05/05 08:11:27 mgorny Exp $
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> audicle-1.0.0.6-r1.ebuild,
+  audicle-1.0.0.7.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*audicle-1.0.0.7 (17 Mar 2012)
+
+  17 Mar 2012; Cédric Krier <cedk@gentoo.org> +audicle-1.0.0.7.ebuild,
+  +files/audicle-1.0.0.7-const.patch, +files/audicle-1.0.0.7-gcc43.patch,
+  +files/audicle-1.0.0.7-hid-smc.patch:
+  Version bump
+
+  29 Mar 2011; Christoph Mende <angelos@gentoo.org> audicle-1.0.0.6-r1.ebuild:
+  Fix gtk+ slot deps
+
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  audicle-1.0.0.6-r1.ebuild:
+  virtual/glut -> media-libs/glut
+
+  13 Aug 2009; Cédric Krier <cedk@gentoo.org> -audicle-1.0.0.6.ebuild:
+  Remove old
+
+*audicle-1.0.0.6-r1 (13 Aug 2009)
+
+  13 Aug 2009; Cédric Krier <cedk@gentoo.org> +audicle-1.0.0.6-r1.ebuild:
+  Add multi-backend support, add default USE flag for bug #254738 and fix
+  CFLAGS and cross-compile
+
+  27 Jun 2009; Mark Loeser <halcy0n@gentoo.org> audicle-1.0.0.6.ebuild,
+  +files/audicle-1.0.0.6-gcc43.patch:
+  Fix building with gcc-4.3 (and 4.4). Patch by Tyler Cordrey <tcordrey AT
+  umd DOT edu>; bug #251217
+
+  27 Apr 2008; Cédric Krier <cedk@gentoo.org> audicle-1.0.0.6.ebuild:
+  Add LEX, YACC variable and missing pkg-config DEPEND for bug #218614
+
+*audicle-1.0.0.6 (30 Mar 2008)
+
+  30 Mar 2008; Cédric Krier <cedk@gentoo.org>
+  +files/audicle-1.0.0.6-font.patch, +files/audicle-1.0.0.6-hid-smc.patch,
+  +metadata.xml, +audicle-1.0.0.6.ebuild:
+  New ebuild for bug #144667
+

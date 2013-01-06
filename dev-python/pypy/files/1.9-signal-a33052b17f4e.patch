@@ -1,0 +1,65 @@
+changeset:   55595:a33052b17f4e
+parent:      55589:4f58f2db96c0
+user:        Armin Rigo <arigo@tunes.org>
+date:        Mon Jun 11 18:06:35 2012 +0200
+summary:     issue1167: changed the test (according to py.test -A on Linux), and fix
+
+diff -r 4f58f2db96c0 -r a33052b17f4e pypy/module/signal/interp_signal.py
+--- a/pypy/module/signal/interp_signal.py	Mon Jun 11 17:05:01 2012 +0200
++++ b/pypy/module/signal/interp_signal.py	Mon Jun 11 18:06:35 2012 +0200
+@@ -227,7 +227,7 @@
+     None -- if an unknown handler is in effect (XXX UNIMPLEMENTED)
+     anything else -- the callable Python object used as a handler
+     """
+-    check_signum(space, signum)
++    check_signum_in_range(space, signum)
+     action = space.check_signal_action
+     if signum in action.handlers_w:
+         return action.handlers_w[signum]
+@@ -253,12 +253,18 @@
+     c_pause()
+     return space.w_None
+ 
+-def check_signum(space, signum):
++def check_signum_exists(space, signum):
+     if signum in signal_values:
+         return
+     raise OperationError(space.w_ValueError,
+                          space.wrap("invalid signal value"))
+ 
++def check_signum_in_range(space, signum):
++    if 1 <= signum < NSIG:
++        return
++    raise OperationError(space.w_ValueError,
++                         space.wrap("signal number out of range"))
++
+ 
+ @jit.dont_look_inside
+ @unwrap_spec(signum=int)
+@@ -319,7 +325,7 @@
+ 
+ @unwrap_spec(signum=int, flag=int)
+ def siginterrupt(space, signum, flag):
+-    check_signum(space, signum)
++    check_signum_exists(space, signum)
+     if rffi.cast(lltype.Signed, c_siginterrupt(signum, flag)) < 0:
+         errno = rposix.get_errno()
+         raise OperationError(space.w_RuntimeError, space.wrap(errno))
+diff -r 4f58f2db96c0 -r a33052b17f4e pypy/module/signal/test/test_signal.py
+--- a/pypy/module/signal/test/test_signal.py	Mon Jun 11 17:05:01 2012 +0200
++++ b/pypy/module/signal/test/test_signal.py	Mon Jun 11 18:06:35 2012 +0200
+@@ -154,7 +154,12 @@
+ 
+         raises(ValueError, getsignal, 4444)
+         raises(ValueError, signal, 4444, lambda *args: None)
+-        raises(ValueError, signal, 42, lambda *args: None)
++        import sys
++        if sys.platform == 'win32':
++            raises(ValueError, signal, 42, lambda *args: None)
++        else:
++            signal(42, lambda *args: None)
++            signal(42, SIG_DFL)
+ 
+     def test_alarm(self):
+         try:
+

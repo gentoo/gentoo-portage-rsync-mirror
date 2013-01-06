@@ -1,0 +1,99 @@
+# ChangeLog for sys-apps/udevil
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.22 2012/12/26 01:51:03 jdhore Exp $
+
+  26 Dec 2012; Jeff Horelick <jdhore@gentoo.org> udevil-0.3.6.ebuild:
+  marked x86 per bug 448034
+
+  25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> udevil-0.3.6.ebuild:
+  Stable for amd64, wrt bug #448034
+
+*udevil-0.3.6 (17 Dec 2012)
+
+  17 Dec 2012; Julian Ospald <hasufell@gentoo.org>
+  -files/udevil-0.2.8-flags.patch, -udevil-0.3.1.ebuild, -udevil-0.3.2.ebuild,
+  +udevil-0.3.6.ebuild, +files/udevil-0.3.6-flags.patch:
+  version bump, remove old
+
+  29 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> udevil-0.3.1.ebuild,
+  udevil-0.3.2.ebuild, udevil-0.3.3-r1.ebuild, udevil-0.3.4.ebuild,
+  udevil-0.3.5.ebuild:
+  Use virtual/udev instead of sys-fs/udev wrt #444398
+
+*udevil-0.3.5 (25 Nov 2012)
+
+  25 Nov 2012; Julian Ospald <hasufell@gentoo.org> +udevil-0.3.5.ebuild,
+  +files/udevil-0.3.5-flags.patch:
+  version bump
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> udevil-0.3.3-r1.ebuild:
+  Stable for x86, wrt bug #439416
+
+  28 Oct 2012; Markos Chandras <hwoarang@gentoo.org> udevil-0.3.3-r1.ebuild:
+  Stable on amd64 wrt bug #439416
+
+  22 Oct 2012; Julian Ospald <hasufell@gentoo.org>
+  +files/udevil-0.3.4-flags.patch:
+  add missing patch wrt #439238
+
+*udevil-0.3.4 (21 Oct 2012)
+
+  21 Oct 2012; Julian Ospald <hasufell@gentoo.org> +udevil-0.3.4.ebuild:
+  version bump
+
+*udevil-0.3.3-r1 (07 Oct 2012)
+
+  07 Oct 2012; Julian Ospald <hasufell@gentoo.org> -udevil-0.3.3.ebuild,
+  +udevil-0.3.3-r1.ebuild, +files/udevil-0.3.3-flags.patch:
+  leave -Bsymbolic-functions untouched
+
+*udevil-0.3.3 (23 Sep 2012)
+
+  23 Sep 2012; Julian Ospald <hasufell@gentoo.org> +udevil-0.3.3.ebuild:
+  version bump
+
+  27 Aug 2012; Johannes Huber <johu@gentoo.org> udevil-0.3.1.ebuild:
+  Stable for x86, wrt bug #432752
+
+  26 Aug 2012; Agostino Sarubbo <ago@gentoo.org> udevil-0.3.1.ebuild:
+  Stable for amd64, wrt bug #432752
+
+  26 Aug 2012; Julian Ospald <hasufell@gentoo.org> -udevil-0.2.8.ebuild,
+  -udevil-0.2.9.ebuild, -udevil-0.3.0.ebuild, udevil-0.3.1.ebuild,
+  udevil-0.3.2.ebuild:
+  add missing glib dependency, remove old
+
+*udevil-0.3.2 (15 Aug 2012)
+
+  15 Aug 2012; Julian Ospald <hasufell@gentoo.org> +udevil-0.3.2.ebuild:
+  version bump
+
+*udevil-0.3.1 (25 Jul 2012)
+
+  25 Jul 2012; Julian Ospald <hasufell@gentoo.org> +udevil-0.3.1.ebuild:
+  version bump
+
+  21 Jul 2012; Julian Ospald <hasufell@gentoo.org> udevil-0.3.0.ebuild:
+  fix bug 427424
+
+*udevil-0.3.0 (13 Jul 2012)
+
+  13 Jul 2012; Julian Ospald <hasufell@gentoo.org> +udevil-0.3.0.ebuild:
+  version bump
+
+*udevil-0.2.9 (29 Jun 2012)
+
+  29 Jun 2012; Julian Ospald <hasufell@gentoo.org> +udevil-0.2.9.ebuild:
+  version bump by Elijah El Lazkani
+
+  29 Jun 2012; Julian Ospald <hasufell@gentoo.org> udevil-0.2.8.ebuild:
+  https -> http
+
+  17 Jun 2012; Julian Ospald <hasufell@gentoo.org> udevil-0.2.8.ebuild:
+  remove virtual/libc and fix --with-setfacl-prog
+
+*udevil-0.2.8 (17 Jun 2012)
+
+  17 Jun 2012; Julian Ospald <hasufell@gentoo.org> +udevil-0.2.8.ebuild,
+  +files/udevil-0.2.8-flags.patch, +metadata.xml:
+  initial import with Elijah El Lazkani

@@ -1,0 +1,15 @@
+# ChangeLog for dev-python/peppercorn
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/peppercorn/ChangeLog,v 1.2 2012/02/22 23:56:14 marienz Exp $
+
+*peppercorn-0.4 (22 Feb 2012)
+
+  22 Feb 2012; Marien Zwart <marienz@gentoo.org> +peppercorn-0.4.ebuild:
+  Version bump, adding Python 3 support.
+
+*peppercorn-0.3 (30 Jul 2011)
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +peppercorn-0.3.ebuild, +metadata.xml:
+  Initial version. Based on ebuild by Jan Matějka (bug #368013).
+

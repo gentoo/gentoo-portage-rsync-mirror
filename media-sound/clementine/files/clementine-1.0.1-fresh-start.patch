@@ -1,0 +1,12 @@
+http://bugs.gentoo.org/401713
+http://code.google.com/p/clementine-player/source/detail?r=3ade9217d73b
+http://pkgs.fedoraproject.org/gitweb/?p=clementine.git;a=blob_plain;f=clementine-fresh-start.patch;hb=HEAD
+
+--- data/schema/schema.sql
++++ data/schema/schema.sql
+@@ -35,4 +35,5 @@ CREATE TABLE songs (
+ CREATE TABLE schema_version (
+   version INTEGER NOT NULL
+ );
++
+ INSERT INTO schema_version (version) VALUES (0);

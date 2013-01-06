@@ -1,0 +1,46 @@
+# ChangeLog for net-libs/telepathy-logger-qt
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-logger-qt/ChangeLog,v 1.8 2012/11/22 02:40:35 dastergon Exp $
+
+*telepathy-logger-qt-0.5.1 (22 Nov 2012)
+
+  22 Nov 2012; Pavlos Ratis <dastergon@gentoo.org>
+  +telepathy-logger-qt-0.5.1.ebuild:
+  Version bump KDE Telepathy 0.5.1
+
+*telepathy-logger-qt-0.5.0-r1 (30 Aug 2012)
+
+  30 Aug 2012; Michael Palimaka <kensington@gentoo.org>
+  +telepathy-logger-qt-0.5.0-r1.ebuild:
+  Ensure that the library is built as shared, not static.
+
+  28 Aug 2012; Johannes Huber <johu@gentoo.org>
+  -telepathy-logger-qt-0.4.0.ebuild:
+  Remove old.
+
+  27 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  telepathy-logger-qt-0.5.0.ebuild:
+  Fix homepage.
+
+*telepathy-logger-qt-0.5.0 (25 Aug 2012)
+
+  25 Aug 2012; Johannes Huber <johu@gentoo.org>
+  +telepathy-logger-qt-0.5.0.ebuild:
+  Version bump, fixes bug #428202.
+
+  09 Aug 2012; Johannes Huber <johu@gentoo.org>
+  telepathy-logger-qt-0.4.0.ebuild, telepathy-logger-qt-0.4.1.ebuild:
+  Add missing build deps, restrict sys-devel/bison to <2.6 wrt bug #428202.
+  Update homepage.
+
+*telepathy-logger-qt-0.4.1 (26 Jul 2012)
+
+  26 Jul 2012; Johannes Huber <johu@gentoo.org>
+  +telepathy-logger-qt-0.4.1.ebuild, telepathy-logger-qt-0.4.0.ebuild:
+  Version bump.
+
+*telepathy-logger-qt-0.4.0 (12 Jul 2012)
+
+  12 Jul 2012; Johannes Huber <johu@gentoo.org> +metadata.xml,
+  +telepathy-logger-qt-0.4.0.ebuild:
+  New package, initial commit. Import from kde overlay.

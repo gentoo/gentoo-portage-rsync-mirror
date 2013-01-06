@@ -1,0 +1,134 @@
+# Changes to adapt to new unixcw-3 package thanks to AAPI changes in libcw
+# Taken from debians patches from Kamil Ignacak, the maintainer of unixcw
+--- cwdaemon.c.orig	2012-06-25 20:00:23.000000000 +0200
++++ cwdaemon.c	2012-06-25 20:00:30.000000000 +0200
+@@ -89,7 +89,7 @@
+ #endif
+ #include <limits.h>
+ 
+-#include <cwlib.h>
++#include <libcw.h>
+ #include "cwdaemon.h"
+ 
+ /* network vars */
+@@ -165,6 +165,9 @@
+ cwdevice *cwdev;
+ static void playmorsestring (char *x);
+ 
++static int set_libcw_output (void);
++static void close_libcw (void);
++
+ /* catch ^C when running in foreground */
+ static RETSIGTYPE
+ catchint (int signal)
+@@ -299,17 +302,59 @@
+ 	}
+ }
+ 
+-/* initialize unixcw */
++/* (re)set initial parameters of libcw */
+ static void
+-initmorse (void)
++reset_libcw (void)
+ {
++	/* just in case if an old generator exists */
++	close_libcw ();
++
++	set_libcw_output ();
++
+ 	cw_set_frequency (morse_tone);	
+ 	cw_set_send_speed (morse_speed);
+-	cw_set_soundcard_sound (soundcard_sound);
+-	cw_set_console_sound (console_sound);
+ 	cw_set_volume (morse_volume);
+ 	cw_set_gap (0);
+ }
++ 
++static void
++close_libcw (void)
++{
++	cw_generator_stop ();
++	cw_generator_delete ();
++}
++
++/* set up output of libcw */
++static int
++set_libcw_output (void)
++{
++	int rv = 0;
++	if (soundcard_sound && !console_sound)
++	{
++		rv = cw_generator_new (CW_AUDIO_ALSA, NULL);
++		if (rv != CW_FAILURE)
++		{
++			rv = cw_generator_start();
++                }
++	}
++	else if (!soundcard_sound && console_sound)
++	{
++		rv = cw_generator_new (CW_AUDIO_CONSOLE, NULL);
++		if (rv != CW_FAILURE)
++		{
++			rv = cw_generator_start();
++                }
++	}
++	else
++	{
++		/* libcw can't do both soundcard and console,
++		   and it has to have one and only one sound
++		   system specified */
++		errmsg ("Sound output specified incorrectly");
++	        rv = CW_FAILURE;
++	}
++	return rv == CW_FAILURE ? -1 : 0;
++}
+ 
+ /* properly parse a 'long' integer */
+ static int
+@@ -320,7 +365,7 @@
+ 
+ 	errno = 0;
+ 	lv = strtol(buf, &ep, 10);
+-	if (buf[0] == '\0' || *ep != '\0')
++	if (buf[0] == '\0' || (*ep != '\0' && *ep != '\n'))
+ 		return (-1);
+ 	if (errno == ERANGE && (lv == LONG_MAX || lv == LONG_MIN))
+ 		return (-1);
+@@ -371,7 +416,7 @@
+ 				morse_volume = 70;
+ 				console_sound = 1;
+ 				soundcard_sound = 0;
+-				initmorse ();
++				reset_libcw ();
+ 				wordmode = 0;
+ 				async_abort = 0;
+ 				cwdev->reset (cwdev);
+@@ -559,8 +604,7 @@
+ 				if (valid_sdevice == 1)
+ 				{
+ 					debug ("Sound device: %s", message + 2);
+-					cw_set_soundcard_sound (soundcard_sound);
+-					cw_set_console_sound (console_sound);
++					set_libcw_output ();
+ 				}
+ 				break;
+ 			case 'g':	/* volume */
+@@ -640,6 +684,7 @@
+ 			debug ("Morse = %c", c);
+ 			cw_send_character (c);
+ 			if (cw_get_gap () == 2) cw_set_gap (0);
++			cw_wait_for_tone_queue();
+ 		}
+ 		x++;
+ 		i++;
+@@ -858,7 +903,9 @@
+ 	}
+ 	cwdev->desc = keydev;
+ 
+-	initmorse ();
++	reset_libcw ();
++	atexit (close_libcw);
++
+ 	cw_register_keying_callback (keyingevent, NULL);
+ 
+ 	debug ("Device used: %s", cwdev->desc);

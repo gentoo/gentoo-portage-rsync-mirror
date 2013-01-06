@@ -1,0 +1,12 @@
+--- setup.py.old	2010-04-13 14:18:52.000000000 +0200
++++ setup.py	2010-12-25 21:00:50.410330044 +0100
+@@ -99,9 +99,6 @@
+     package_data.update(find_package_data(where='locales', exclude=('*.po',), only_in_packages=False))
+ 
+ data_files = []
+-for name in ('config', 'scripts', 'doc'):
+-    data = find_package_data(where=name, package=name, exclude=('*~',), only_in_packages=False)
+-    data_files += [(name, [name + '/' + f for f in data[name]])]
+ 
+ setup(
+     name = "openerp-web",

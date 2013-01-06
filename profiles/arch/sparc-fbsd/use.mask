@@ -1,0 +1,43 @@
+# Copyright 1999-2012 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc-fbsd/use.mask,v 1.8 2012/11/24 21:38:13 floppym Exp $
+
+# Unmask the flag which corresponds to ARCH.
+-sparc-fbsd
+
+acpi
+
+# guile fails to build on sparc
+# Even with the patch from FreeBSD Ports it core dumps :/
+guile
+
+# valgrind hasn't been ported to sparc-fbsd yet
+valgrind
+
+# These should work one day
+avahi
+cairo
+dbus
+gnome
+gnome-keyring
+gtk
+mono
+opengl
+php
+qt4
+tk
+xpm
+X
+
+# Ryan Hill <dirtyepic@gentoo.org>
+# Needs sci-mathematics/glpk
+lpsol
+
+# Michał Górny <mgorny@gentoo.org> (31 Oct 2012)
+# Mask PYTHON_TARGETS for implementations not keyworded on this arch.
+python_targets_pypy1_8
+python_targets_pypy1_9
+python_targets_jython2_5
+python_single_target_pypy1_8
+python_single_target_pypy1_9
+python_single_target_jython2_5

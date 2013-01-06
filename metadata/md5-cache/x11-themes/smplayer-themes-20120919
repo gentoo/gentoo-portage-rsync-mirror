@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Icon themes for smplayer
+EAPI=4
+HOMEPAGE=http://smplayer.sourceforge.net/
+KEYWORDS=~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd
+LICENSE=CCPL-Attribution-2.5 CCPL-Attribution-ShareAlike-2.5 CCPL-Attribution-ShareAlike-3.0 GPL-2 LGPL-3
+RDEPEND=media-video/smplayer
+SLOT=0
+SRC_URI=mirror://sourceforge/smplayer/smplayer-themes-20120919.tar.bz2
+_md5_=0b920ebeec34935f11e2b68b95bb7395

@@ -1,0 +1,238 @@
+diff -Naur gonzui-1.2.orig/Makefile.am gonzui-1.2/Makefile.am
+--- gonzui-1.2.orig/Makefile.am	2005-03-25 18:00:20.000000000 +0900
++++ gonzui-1.2/Makefile.am	2011-01-14 11:51:36.207687824 +0900
+@@ -28,7 +28,7 @@
+ 		gonzui.rb.in > gonzui.rb
+ 	chmod -w gonzui.rb
+ 
+-gonzuirc.sample.in: gonzuirc.sample.in.in
++gonzuirc.sample.in: gonzui.rb gonzuirc.sample.in.in
+ 	ruby gonzui-db --gonzuirc gonzuirc.sample.in.in --dump-config \
+ 		> gonzuirc.sample.in
+ 
+diff -Naur gonzui-1.2.orig/acinclude.m4 gonzui-1.2/acinclude.m4
+--- gonzui-1.2.orig/acinclude.m4	2005-02-16 23:11:11.000000000 +0900
++++ gonzui-1.2/acinclude.m4	2011-01-14 15:52:41.631014210 +0900
+@@ -54,7 +54,8 @@
+   RUBY_CFLAGS="`ruby -rmkmf -e 'puts Config::MAKEFILE_CONFIG["CFLAGS"]'`"
+   RUBY_DLEXT="`ruby -rmkmf -e 'puts Config::MAKEFILE_CONFIG["DLEXT"]'`"
+   RUBY_DLDFLAGS="`ruby -rmkmf -e 'puts Config::MAKEFILE_CONFIG["DLDFLAGS"]'`"
+-  RUBY_LIBS="`ruby -rmkmf -e 'puts Config::MAKEFILE_CONFIG["LIBS"]'`"
++  RUBY_SO_NAME="`ruby -rmkmf -e 'puts Config::MAKEFILE_CONFIG["RUBY_SO_NAME"]'`"
++  RUBY_LIBS="`ruby -rmkmf -e 'puts Config::MAKEFILE_CONFIG["LIBRUBYARG_SHARED"]+" "+Config::MAKEFILE_CONFIG["LIBS"]'`"
+   RUBY_HDRHDIR="`ruby -rmkmf -e 'puts Config::CONFIG["archdir"]'`"
+   RUBY_CPPFLAGS='-I. -I$(RUBY_HDRHDIR)'
+   changequote([, ])
+@@ -64,6 +65,7 @@
+   AC_SUBST(RUBY_CFLAGS)
+   AC_SUBST(RUBY_DLEXT)
+   AC_SUBST(RUBY_DLDFLAGS)
++  AC_SUBST(RUBY_SO_NAME)
+   AC_SUBST(RUBY_LIBS)
+   AC_SUBST(RUBY_HDRHDIR)
+   AC_SUBST(RUBY_CPPFLAGS)
+diff -Naur gonzui-1.2.orig/configure.ac gonzui-1.2/configure.ac
+--- gonzui-1.2.orig/configure.ac	2005-07-05 00:07:52.000000000 +0900
++++ gonzui-1.2/configure.ac	2011-01-14 11:51:36.207687824 +0900
+@@ -9,7 +9,6 @@
+ AC_PROG_CC
+ AC_PROG_INSTALL
+ AC_PROG_MAKE_SET
+-AM_MAINTAINER_MODE
+ AM_PATH_RUBY
+ AM_RUN_LOG_DIRS
+ AM_USER_GROUP
+diff -Naur gonzui-1.2.orig/gonzui/Makefile.am gonzui-1.2/gonzui/Makefile.am
+--- gonzui-1.2.orig/gonzui/Makefile.am	2005-03-17 15:48:44.000000000 +0900
++++ gonzui-1.2/gonzui/Makefile.am	2011-01-14 17:58:12.112150295 +0900
+@@ -51,16 +51,16 @@
+ 
+ SUFFIXES = .c .o # for automake 1.4-p6
+ .c.o:
+-	$(RUBY_CC) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
++	$(RUBY_CC) $(CFLAGS) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
+ 
+ $(TEXTTOKENIZER_DLLIB): $(TEXTTOKENIZER_OBJS)
+ 	rm -f $@
+-	$(RUBY_LDSHARED) $(RUBY_DLDFLAGS) -o $@ $(TEXTTOKENIZER_OBJS) $(RUBY_LIBS)
++	$(RUBY_LDSHARED) $(LDFLAGS) $(RUBY_DLDFLAGS) -o $@ $(TEXTTOKENIZER_OBJS) $(RUBY_LIBS)
+ 
+ $(DELTA_DLLIB): $(DELTA_OBJS)
+ 	rm -f $@
+-	$(RUBY_LDSHARED) $(RUBY_DLDFLAGS) -o $@ $(DELTA_OBJS) $(RUBY_LIBS)
++	$(RUBY_LDSHARED) $(LDFLAGS) $(RUBY_DLDFLAGS) -o $@ $(DELTA_OBJS) $(RUBY_LIBS)
+ 
+ $(AUTOPACK_DLLIB): $(AUTOPACK_OBJS)
+ 	rm -f $@
+-	$(RUBY_LDSHARED) $(RUBY_DLDFLAGS) -o $@ $(AUTOPACK_OBJS) $(RUBY_LIBS)
++	$(RUBY_LDSHARED) $(LDFLAGS) $(RUBY_DLDFLAGS) -o $@ $(AUTOPACK_OBJS) $(RUBY_LIBS)
+diff -Naur gonzui-1.2.orig/gonzui/webapp/Makefile.am gonzui-1.2/gonzui/webapp/Makefile.am
+--- gonzui-1.2.orig/gonzui/webapp/Makefile.am	2005-03-14 18:24:17.000000000 +0900
++++ gonzui-1.2/gonzui/webapp/Makefile.am	2011-01-14 17:58:36.352009521 +0900
+@@ -24,8 +24,8 @@
+ 
+ SUFFIXES = .c .o # for automake 1.4-p6
+ .c.o:
+-	$(RUBY_CC) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
++	$(RUBY_CC) $(CFLAGS) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
+ 
+ $(XMLFORMATTER_DLLIB): $(XMLFORMATTER_OBJS)
+ 	rm -f $@
+-	$(RUBY_LDSHARED) $(RUBY_DLDFLAGS) -o $@ $(XMLFORMATTER_OBJS) $(RUBY_LIBS)
++	$(RUBY_LDSHARED) $(LDFLAGS) $(RUBY_DLDFLAGS) -o $@ $(XMLFORMATTER_OBJS) $(RUBY_LIBS)
+diff -Naur gonzui-1.2.orig/langscan/Makefile.am gonzui-1.2/langscan/Makefile.am
+--- gonzui-1.2.orig/langscan/Makefile.am	2005-07-05 00:07:57.000000000 +0900
++++ gonzui-1.2/langscan/Makefile.am	2011-01-14 11:51:36.207687824 +0900
+@@ -26,6 +26,7 @@
+ 		brainfuck.rb \
+ 		c.rb \
+ 		css.rb \
++		ebuild.rb \
+ 		elisp.rb \
+ 		java.rb \
+ 		javascript.rb \
+diff -Naur gonzui-1.2.orig/langscan/c/Makefile.am gonzui-1.2/langscan/c/Makefile.am
+--- gonzui-1.2.orig/langscan/c/Makefile.am	2005-03-20 21:08:25.000000000 +0900
++++ gonzui-1.2/langscan/c/Makefile.am	2011-01-14 18:00:08.163475904 +0900
+@@ -35,9 +35,9 @@
+ 
+ SUFFIXES = .c .o # for automake 1.4-p6
+ .c.o:
+-	$(RUBY_CC) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
++	$(RUBY_CC) $(CFLAGS) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
+ 
+ $(LANGSCAN_C_DLLIB): $(LANGSCAN_C_OBJS)
+ 	rm -f $@
+-	$(RUBY_LDSHARED) $(RUBY_DLDFLAGS) -o $@ $(LANGSCAN_C_OBJS) $(RUBY_LIBS)
++	$(RUBY_LDSHARED) $(LDFLAGS) $(RUBY_DLDFLAGS) -o $@ $(LANGSCAN_C_OBJS) $(RUBY_LIBS)
+ 
+diff -Naur gonzui-1.2.orig/langscan/java/Makefile.am gonzui-1.2/langscan/java/Makefile.am
+--- gonzui-1.2.orig/langscan/java/Makefile.am	2005-03-20 21:08:39.000000000 +0900
++++ gonzui-1.2/langscan/java/Makefile.am	2011-01-14 18:00:22.287393757 +0900
+@@ -27,7 +27,7 @@
+ 
+ # We do this to workaround flex 2.5.4 issue because our .l
+ # file could not be processed with flex 2.5.4.
+-javatok.c: javatok.l
++javatok.c: javatok.l java.h
+ 	flex -d -ojavatok.c javatok.l || cp javatok.c.dist javatok.c
+ 	cmp -s javatok.c javatok.c.dist || cp javatok.c javatok.c.dist
+ 
+@@ -35,8 +35,8 @@
+ 
+ SUFFIXES = .c .o # for automake 1.4-p6
+ .c.o:
+-	$(RUBY_CC) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
++	$(RUBY_CC) $(CFLAGS) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
+ 
+ $(LANGSCAN_JAVA_DLLIB): $(LANGSCAN_JAVA_OBJS)
+ 	rm -f $@
+-	$(RUBY_LDSHARED) $(RUBY_DLDFLAGS) -o $@ $(LANGSCAN_JAVA_OBJS) $(RUBY_LIBS)
++	$(RUBY_LDSHARED) $(LDFLAGS) $(RUBY_DLDFLAGS) -o $@ $(LANGSCAN_JAVA_OBJS) $(RUBY_LIBS)
+diff -Naur gonzui-1.2.orig/langscan/javascript/Makefile.am gonzui-1.2/langscan/javascript/Makefile.am
+--- gonzui-1.2.orig/langscan/javascript/Makefile.am	2005-03-22 01:09:55.000000000 +0900
++++ gonzui-1.2/langscan/javascript/Makefile.am	2011-01-14 18:00:41.683280922 +0900
+@@ -27,7 +27,7 @@
+ 
+ # We do this to workaround flex 2.5.4 issue because our .l
+ # file could not be processed with flex 2.5.4.
+-javascripttok.c: javascripttok.l
++javascripttok.c: javascripttok.l javascript.h
+ 	flex -d -ojavascripttok.c javascripttok.l || cp javascripttok.c.dist javascripttok.c
+ 	cmp -s javascripttok.c javascripttok.c.dist || cp javascripttok.c javascripttok.c.dist
+ 
+@@ -35,8 +35,8 @@
+ 
+ SUFFIXES = .c .o # for automake 1.4-p6
+ .c.o:
+-	$(RUBY_CC) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
++	$(RUBY_CC) $(CFLAGS) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
+ 
+ $(LANGSCAN_JAVASCRIPT_DLLIB): $(LANGSCAN_JAVASCRIPT_OBJS)
+ 	rm -f $@
+-	$(RUBY_LDSHARED) $(RUBY_DLDFLAGS) -o $@ $(LANGSCAN_JAVASCRIPT_OBJS) $(RUBY_LIBS)
++	$(RUBY_LDSHARED) $(LDFLAGS) $(RUBY_DLDFLAGS) -o $@ $(LANGSCAN_JAVASCRIPT_OBJS) $(RUBY_LIBS)
+diff -Naur gonzui-1.2.orig/langscan/pairmatcher/Makefile.am gonzui-1.2/langscan/pairmatcher/Makefile.am
+--- gonzui-1.2.orig/langscan/pairmatcher/Makefile.am	2005-03-20 20:42:22.000000000 +0900
++++ gonzui-1.2/langscan/pairmatcher/Makefile.am	2011-01-14 18:01:22.883041149 +0900
+@@ -21,9 +21,9 @@
+ 
+ SUFFIXES = .c .o # for automake 1.4-p6
+ .c.o:
+-	$(RUBY_CC) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
++	$(RUBY_CC) $(CFLAGS) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
+ 
+ $(PAIRMATCHER_C_DLLIB): $(PAIRMATCHER_C_OBJS)
+ 	rm -f $@
+-	$(RUBY_LDSHARED) $(RUBY_DLDFLAGS) -o $@ $(PAIRMATCHER_C_OBJS) $(RUBY_LIBS)
++	$(RUBY_LDSHARED) $(LDFLAGS) $(RUBY_DLDFLAGS) -o $@ $(PAIRMATCHER_C_OBJS) $(RUBY_LIBS)
+ 
+diff -Naur gonzui-1.2.orig/langscan/php/Makefile.am gonzui-1.2/langscan/php/Makefile.am
+--- gonzui-1.2.orig/langscan/php/Makefile.am	2005-03-20 21:08:45.000000000 +0900
++++ gonzui-1.2/langscan/php/Makefile.am	2011-01-14 18:01:41.290933978 +0900
+@@ -27,7 +27,7 @@
+ 
+ # We do this to workaround flex 2.5.4 issue because our .l
+ # file could not be processed with flex 2.5.4.
+-phptok.c: phptok.l
++phptok.c: phptok.l php.h
+ 	flex -F -8 -d -ophptok.c phptok.l || cp phptok.c.dist phptok.c
+ 	cmp -s phptok.c phptok.c.dist || cp phptok.c phptok.c.dist
+ 
+@@ -35,8 +35,8 @@
+ 
+ SUFFIXES = .c .o # for automake 1.4-p6
+ .c.o:
+-	$(RUBY_CC) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
++	$(RUBY_CC) $(CFLAGS) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
+ 
+ $(LANGSCAN_PHP_DLLIB): $(LANGSCAN_PHP_OBJS)
+ 	rm -f $@
+-	$(RUBY_LDSHARED) $(RUBY_DLDFLAGS) -o $@ $(LANGSCAN_PHP_OBJS) $(RUBY_LIBS)
++	$(RUBY_LDSHARED) $(LDFLAGS) $(RUBY_DLDFLAGS) -o $@ $(LANGSCAN_PHP_OBJS) $(RUBY_LIBS)
+diff -Naur gonzui-1.2.orig/langscan/python/Makefile.am gonzui-1.2/langscan/python/Makefile.am
+--- gonzui-1.2.orig/langscan/python/Makefile.am	2005-03-20 21:08:58.000000000 +0900
++++ gonzui-1.2/langscan/python/Makefile.am	2011-01-14 18:01:57.318840641 +0900
+@@ -27,7 +27,7 @@
+ 
+ # We do this to workaround flex 2.5.4 issue because our .l
+ # file could not be processed with flex 2.5.4.
+-pythontok.c: pythontok.l
++pythontok.c: pythontok.l python.h
+ 	flex -d -opythontok.c pythontok.l || cp pythontok.c.dist pythontok.c
+ 	cmp -s pythontok.c pythontok.c.dist || cp pythontok.c pythontok.c.dist
+ 
+@@ -35,8 +35,8 @@
+ 
+ SUFFIXES = .c .o # for automake 1.4-p6
+ .c.o:
+-	$(RUBY_CC) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
++	$(RUBY_CC) $(CFLAGS) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
+ 
+ $(LANGSCAN_PYTHON_DLLIB): $(LANGSCAN_PYTHON_OBJS)
+ 	rm -f $@
+-	$(RUBY_LDSHARED) $(RUBY_DLDFLAGS) -o $@ $(LANGSCAN_PYTHON_OBJS) $(RUBY_LIBS)
++	$(RUBY_LDSHARED) $(LDFLAGS) $(RUBY_DLDFLAGS) -o $@ $(LANGSCAN_PYTHON_OBJS) $(RUBY_LIBS)
+diff -Naur gonzui-1.2.orig/langscan/sh/Makefile.am gonzui-1.2/langscan/sh/Makefile.am
+--- gonzui-1.2.orig/langscan/sh/Makefile.am	2005-04-08 21:42:40.000000000 +0900
++++ gonzui-1.2/langscan/sh/Makefile.am	2011-01-14 17:59:52.227568573 +0900
+@@ -27,7 +27,7 @@
+ 
+ # We do this to workaround flex 2.5.4 issue because our .l
+ # file could not be processed with flex 2.5.4.
+-shtok.c: shtok.l
++shtok.c: shtok.l sh.h
+ 	flex -d -oshtok.c shtok.l || cp shtok.c.dist shtok.c
+ 	cmp -s shtok.c shtok.c.dist || cp shtok.c shtok.c.dist
+ 
+@@ -35,8 +35,8 @@
+ 
+ SUFFIXES = .c .o # for automake 1.4-p6
+ .c.o:
+-	$(RUBY_CC) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
++	$(RUBY_CC) $(CFLAGS) $(RUBY_CFLAGS) $(RUBY_CPPFLAGS) -c $<
+ 
+ $(LANGSCAN_SH_DLLIB): $(LANGSCAN_SH_OBJS)
+ 	rm -f $@
+-	$(RUBY_LDSHARED) $(RUBY_DLDFLAGS) -o $@ $(LANGSCAN_SH_OBJS) $(RUBY_LIBS)
++	$(RUBY_LDSHARED) $(LDFLAGS) $(RUBY_DLDFLAGS) -o $@ $(LANGSCAN_SH_OBJS) $(RUBY_LIBS)

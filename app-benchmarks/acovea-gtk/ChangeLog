@@ -1,0 +1,16 @@
+# ChangeLog for app-benchmarks/acovea-gtk
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea-gtk/ChangeLog,v 1.2 2010/04/25 11:17:32 jlec Exp $
+
+*acovea-gtk-1.0.1 (23 Apr 2009)
+
+  23 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/acovea-gtk-1.0.1-gcc4.3.patch,
+  +files/acovea-gtk-1.0.1-libsigc.patch,
+  +files/acovea-gtk-1.0.1-unicode.patch, +metadata.xml,
+  +acovea-gtk-1.0.1.ebuild:
+  Initial import from sunrise, fixes #91403
+
+  18 Mar 2009; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Initial checkin
+

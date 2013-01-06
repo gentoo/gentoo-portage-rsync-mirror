@@ -1,0 +1,17 @@
+# ChangeLog for dev-python/PyZilla
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyZilla/ChangeLog,v 1.3 2011/04/07 18:25:56 arfrever Exp $
+
+  07 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  PyZilla-0.1.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS (bug #362481).
+
+  07 Apr 2011; William Hubbs <williamh@gentoo.org> metadata.xml:
+  add myself as maintainer
+
+*PyZilla-0.1.0 (26 Mar 2011)
+
+  26 Mar 2011; Mike Frysinger <vapier@gentoo.org> +PyZilla-0.1.0.ebuild,
+  +metadata.xml:
+  Initial ebuild.
+

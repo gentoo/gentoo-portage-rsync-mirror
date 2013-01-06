@@ -1,0 +1,52 @@
+# ChangeLog for app-admin/elektra
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/ChangeLog,v 1.10 2012/11/04 12:01:55 xmw Exp $
+
+  04 Nov 2012; Michael Weber <xmw@gentoo.org> elektra-0.7.1-r2.ebuild,
+  elektra-0.8.3.ebuild:
+  Update HOMEPAGE
+
+*elektra-0.7.1-r2 (04 Nov 2012)
+
+  04 Nov 2012; Michael Weber <xmw@gentoo.org> -elektra-0.7.1.ebuild,
+  -elektra-0.7.1-r1.ebuild, +elektra-0.7.1-r2.ebuild:
+  Fix includes of renamed headers, drop old
+
+*elektra-0.8.3 (04 Nov 2012)
+
+  04 Nov 2012; Michael Weber <xmw@gentoo.org> +elektra-0.8.3.ebuild,
+  +files/elektra-0.8.3-fix-yajl-if-user-config.patch,
+  +files/elektra-0.8.3-introduce-attributes.patch:
+  Version bump, big thanks to Andreas Sturmlechner doing all the work on bug
+  429722.
+
+*elektra-0.7.1-r1 (04 Nov 2012)
+
+  04 Nov 2012; Michael Weber <xmw@gentoo.org> +elektra-0.7.1-r1.ebuild,
+  metadata.xml:
+  Revbump to make gcov optional (bug 436812 by Alexander E. Patrakov), avoid
+  collision with allegro (bug 409305, Chris Reffett), avoid collision with
+  mit-krb5 (bug 403025, Marios Andreopoulos)
+
+  23 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> elektra-0.7.1.ebuild,
+  +files/elektra-0.7.1-automake-1.12.patch:
+  Fix building with sys-devel/automake >= 1.12 wrt #421589
+
+  09 Feb 2012; Michael Weber <xmw@gentoo.org> elektra-0.7.1.ebuild:
+  remove debugging lines from src_prepare
+
+  09 Feb 2012; Michael Weber <xmw@gentoo.org> elektra-0.7.1.ebuild,
+  files/elektra-0.7.1-ltdl.patch:
+  Fix patch file, got scrambled during upload (bug 402785)
+
+  08 Feb 2012; Michael Weber <xmw@gentoo.org> elektra-0.7.1.ebuild,
+  +files/elektra-0.7.1-ltdl.patch, +files/elektra-0.7.1-test.patch:
+  Fix tests, disable test_backendhelpers test (bug 402619).
+
+*elektra-0.7.1 (05 Feb 2012)
+
+  05 Feb 2012; Michael Weber <xmw@gentoo.org> +elektra-0.7.1.ebuild,
+  +metadata.xml:
+  Initial import, thanks to all contributors (Piotr Szymaniak from sunrise,
+  everybody on bug 63417)
+

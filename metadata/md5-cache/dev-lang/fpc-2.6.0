@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst prepare unpack
+DESCRIPTION=Free Pascal Compiler
+EAPI=4
+HOMEPAGE=http://www.freepascal.org/
+IUSE=doc ide source
+KEYWORDS=~amd64 ~arm ~ppc ~sparc ~x86
+LICENSE=GPL-2 LGPL-2.1-with-linking-exception
+RDEPEND=ide? ( !dev-lang/fpc-ide )
+RESTRICT=strip
+SLOT=0
+SRC_URI=mirror://sourceforge/freepascal/fpcbuild-2.6.0.tar.gz amd64? ( mirror://sourceforge/freepascal/fpc-2.6.0.x86_64-linux.tar ) arm? ( mirror://sourceforge/freepascal/fpc-2.6.0.arm-linux.tar ) ppc? ( mirror://sourceforge/freepascal/fpc-2.6.0.powerpc-linux.tar ) ppc64? ( mirror://sourceforge/freepascal/fpc-2.6.0.powerpc64-linux.tar ) sparc? ( mirror://sourceforge/freepascal/fpc-2.2.4.sparc-linux.tar ) x86? ( mirror://sourceforge/freepascal/fpc-2.6.0.i386-linux.tar ) doc? ( mirror://sourceforge/freepascal/Documentation/2.6.0/doc-html.tar.gz -> fpc-2.6.0-doc-html.tar.gz http://dev.gentoo.org/~radhermit/distfiles/fpc-2.6.0-fpctoc.htx.bz2 )
+_md5_=716d43752522fe2c7cfed93eb14a3bcd

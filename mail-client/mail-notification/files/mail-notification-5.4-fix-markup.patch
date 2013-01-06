@@ -1,0 +1,34 @@
+Fix markup to a format that is also supported by newer
+notification-daemon versions, e.g. the one used in Gnome 3.
+
+https://bugs.gentoo.org/show_bug.cgi?id=392599
+
+diff -urp mail-notification-5.4.orig/src/mn-popup.gob mail-notification-5.4/src/mn-popup.gob
+--- mail-notification-5.4.orig/src/mn-popup.gob	2008-05-22 16:45:36.000000000 +0100
++++ mail-notification-5.4/src/mn-popup.gob	2011-11-30 13:34:40.000000000 +0000
+@@ -136,7 +136,7 @@ class MN:Popup from Notify:Notification
+       if (*body->str)
+ 	g_string_append_c(body, '\n');
+ 
+-      g_string_append_printf(body, "<span weight=\"bold\">%s</span>", name);
++      g_string_append_printf(body, "<b>%s</b>", name);
+ 
+       escaped = g_markup_escape_text(value, -1);
+       g_string_append_printf(body, " %s", escaped);
+diff -urp mail-notification-5.4.orig/build/src/mn-popup.c mail-notification-5.4/build/src/mn-popup.c
+--- mail-notification-5.4.orig/build/src/mn-popup.c	2008-05-22 16:47:49.000000000 +0100
++++ mail-notification-5.4/build/src/mn-popup.c	2011-11-30 13:35:37.000000000 +0000
+@@ -434,7 +434,7 @@ mn_popup_append_row (GString * body, con
+       if (*body->str)
+ 	g_string_append_c(body, '\n');
+ 
+-      g_string_append_printf(body, "<span weight=\"bold\">%s</span>", name);
++      g_string_append_printf(body, "<b>%s</b>", name);
+ 
+       escaped = g_markup_escape_text(value, -1);
+       g_string_append_printf(body, " %s", escaped);
+diff -urp mail-notification-5.4.orig/build/src/mn-popup.gob.stamp mail-notification-5.4/build/src/mn-popup.gob.stamp
+--- mail-notification-5.4.orig/build/src/mn-popup.gob.stamp	2008-05-22 16:47:49.000000000 +0100
++++ mail-notification-5.4/build/src/mn-popup.gob.stamp	2011-11-30 13:38:09.000000000 +0000
+@@ -0,0 +1 @@
++

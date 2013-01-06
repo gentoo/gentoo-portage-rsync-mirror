@@ -1,0 +1,24 @@
+# ChangeLog for kde-misc/plasma-widget-menubar
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-widget-menubar/ChangeLog,v 1.4 2012/12/20 17:08:33 kensington Exp $
+
+  20 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  -plasma-widget-menubar-0.1.17.ebuild:
+  Remove old.
+
+  15 Jun 2012; Michael Palimaka <kensington@gentoo.org>
+  plasma-widget-menubar-0.1.17.ebuild, plasma-widget-menubar-0.1.18.ebuild:
+  Add missing RDEPEND on x11-misc/appmenu-qt, wrt bug #420909 by Kirill Elagin
+  <kirelagin@gmail.com>.
+
+*plasma-widget-menubar-0.1.18 (14 Jun 2012)
+
+  14 Jun 2012; Michael Palimaka <kensington@gentoo.org>
+  +plasma-widget-menubar-0.1.18.ebuild:
+  Version bump.
+
+*plasma-widget-menubar-0.1.17 (09 May 2012)
+
+  09 May 2012; Johannes Huber <johu@gentoo.org> +metadata.xml,
+  +plasma-widget-menubar-0.1.17.ebuild:
+  Initial import from kde overlay.

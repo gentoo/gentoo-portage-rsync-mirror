@@ -1,0 +1,62 @@
+# ChangeLog for app-misc/recoll
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.13 2012/11/20 20:38:56 ago Exp $
+
+  20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> recoll-1.17.3-r1.ebuild:
+  Stable for x86, wrt bug #432782
+
+  31 Oct 2012; Agostino Sarubbo <ago@gentoo.org> recoll-1.17.3-r1.ebuild:
+  Stable for amd64, wrt bug #432782
+
+*recoll-1.17.3-r1 (30 Oct 2012)
+
+  30 Oct 2012; Markos Chandras <hwoarang@gentoo.org> +recoll-1.17.3-r1.ebuild:
+  Respect LDFLAGS. #435050. Respect AR and call eqmake4 instead of qmake. Bug
+  #435052
+
+  08 Sep 2012; Markos Chandras <hwoarang@gentoo.org> recoll-1.17.3.ebuild:
+  Restrict python to version 2. Bug #425492
+
+  31 Jul 2012; Markos Chandras <hwoarang@gentoo.org> recoll-1.17.3.ebuild:
+  Add missing qt-webkit dependency. Bug #428720
+
+*recoll-1.17.3 (08 Jul 2012)
+
+  08 Jul 2012; Markos Chandras <hwoarang@gentoo.org> +recoll-1.17.3.ebuild,
+  -recoll-1.16.1.ebuild:
+  Version bump. Fixes bug #425266
+
+  16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> recoll-1.16.1.ebuild,
+  recoll-1.16.2.ebuild, metadata.xml:
+  Use global USE flag "postscript" instead of local USE flag "ps" for
+  PostScript support
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> recoll-1.16.2.ebuild:
+  x86 stable wrt bug #414823
+
+  07 May 2012; Markos Chandras <hwoarang@gentoo.org> recoll-1.16.2.ebuild:
+  Stable on amd64 wrt bug #414823
+
+*recoll-1.16.2 (09 Feb 2012)
+
+  09 Feb 2012; Markos Chandras <hwoarang@gentoo.org> +recoll-1.16.2.ebuild:
+  version bump. bug #402799
+
+*recoll-1.16.1 (10 Dec 2011)
+
+  10 Dec 2011; Markos Chandras <hwoarang@gentoo.org> +recoll-1.16.1.ebuild,
+  -recoll-1.16.0.ebuild:
+  Version bump. Raise libwpd dependency to slot 0.9 per bug #393249
+
+  14 Nov 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml,
+  recoll-1.16.0.ebuild:
+  Fix use flag descriptions. Replace gs with ps use flag. Allow neither fam and
+  inotify to be enabled. Bug #389595. Thanks to Israel G. Lugo
+  <israel.lugo@lugosys.com>
+
+*recoll-1.16.0 (26 Sep 2011)
+
+  26 Sep 2011; Markos Chandras <hwoarang@gentoo.org> +recoll-1.16.0.ebuild,
+  +metadata.xml:
+  Initial commit. Ebuild based on the one attached by Israel G. Lugo
+  <israel.lugo@lugosys.com>. Bug #171271

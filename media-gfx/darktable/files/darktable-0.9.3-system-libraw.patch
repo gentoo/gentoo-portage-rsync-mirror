@@ -1,0 +1,85 @@
+--- darktable-0.9.3.orig/cmake/modules/FindLibraw.cmake
++++ darktable-0.9.3/cmake/modules/FindLibraw.cmake
+@@ -0,0 +1,29 @@
++# - Try to find libraw
++# Once done, this will define
++#
++#  Libraw_FOUND - system has Libraw
++#  Libraw_INCLUDE_DIRS - the Libraw include directories
++#  Libraw_LIBRARIES - link these to use Libraw
++
++include(LibFindMacros)
++
++# Use pkg-config to get hints about paths
++libfind_pkg_check_modules(Libraw_PKGCONF libraw)
++
++# Include dir
++find_path(Libraw_INCLUDE_DIR
++  NAMES libraw.h
++  PATHS ${Libraw_PKGCONF_INCLUDE_DIRS}
++)
++
++# Finally the library itself
++find_library(Libraw_LIBRARY
++  NAMES raw_r
++  PATHS ${Libraw_PKGCONF_LIBRARY_DIRS}
++)
++
++# Set the include dir variables and the libraries and let libfind_process do the rest.
++# NOTE: Singular variables for this library, plural for libraries this this lib depends on.
++set(Libraw_PROCESS_INCLUDES Libraw_INCLUDE_DIR Libraw_INCLUDE_DIRS)
++set(Libraw_PROCESS_LIBS Libraw_LIBRARY Libraw_LIBRARIES)
++libfind_process(Libraw)
+--- darktable-0.9.3.orig/src/CMakeLists.txt
++++ darktable-0.9.3/src/CMakeLists.txt
+@@ -70,7 +70,6 @@
+ 
+ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external)
+-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/LibRaw)
+ 
+ # initial compiler flags
+ add_definitions("-DHAVE_CONFIG_H")
+@@ -122,7 +121,7 @@
+ endif(USE_CAMERA_SUPPORT)
+ 
+ # Find all the libs that don't require extra parameters
+-foreach(lib ${OUR_LIBS} LensFun GIO GThread GModule Cairo PangoCairo PThread Rsvg2 GDK-PixBuf LibXml2 INotify Sqlite3 Exiv2  CURL PNG JPEG TIFF OpenEXR LCMS2)
++foreach(lib ${OUR_LIBS} LensFun Libraw GIO GThread GModule Cairo PangoCairo PThread Rsvg2 GDK-PixBuf LibXml2 INotify Sqlite3 Exiv2  CURL PNG JPEG TIFF OpenEXR LCMS2)
+   find_package(${lib} REQUIRED)
+   include_directories(${${lib}_INCLUDE_DIRS})
+   list(APPEND LIBS ${${lib}_LIBRARIES})
+@@ -306,23 +305,6 @@
+ set_target_properties(lib_darktable PROPERTIES LINKER_LANGUAGE C)
+ 
+ 
+-#
+-# the libraw part is a bit of a hack:
+-# the static linking didn't work since it was pulling -lstdc++ and -lm into linker flags.
+-# so we do a custom dependency and pretend an imported liblibraw_r.a so no other -l are
+-# appended.
+-#
+-add_dependencies(lib_darktable libraw_r)
+-add_library(libraw_static STATIC IMPORTED)
+-set_target_properties(libraw_static PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_BINARY_DIR}/external/LibRaw/liblibraw_r.a)
+-if(APPLE)
+-  set(LIBRAW_STATIC_LIBS libraw_static stdc++)
+-else(APPLE)
+-  set(LIBRAW_STATIC_LIBS libraw_static)
+-endif(APPLE)
+-
+-target_link_libraries(lib_darktable ${LIBS} ${LIBRAW_STATIC_LIBS})
+-
+ # same for librawspeed (can switch it off with -DDONT_USE_RAWSPEED, for macs):
+ if(NOT DONT_USE_RAWSPEED)
+   add_definitions("-DHAVE_RAWSPEED")
+@@ -337,9 +319,6 @@
+ install(TARGETS lib_darktable DESTINATION ${LIB_INSTALL}/darktable)
+ list(APPEND LIBS lib_darktable)
+ 
+-# Compile libraw modules
+-add_subdirectory(external/LibRaw)
+-
+ # Compile views modules
+ add_subdirectory(views)
+ 

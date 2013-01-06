@@ -1,0 +1,19 @@
+# ChangeLog for mail-filter/libdkim
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libdkim/ChangeLog,v 1.3 2012/09/01 11:30:39 qnikst Exp $
+
+  01 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> metadata.xml:
+  add herd and description to metadata.xml
+
+  01 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> metadata.xml:
+  fixing maintainer in metadata
+
+*libdkim-1.0.21-r1 (31 Aug 2012)
+
+  31 Aug 2012; Alexander Vershilov <qnikst@gentoo.org>
+  +libdkim-1.0.21-r1.ebuild, +files/debianize/Makefile.in,
+  +files/debianize/aclocal.m4, +files/debianize/configure.ac,
+  +files/debianize/libdkim.pc.in, +files/debianize/libdkim.ver,
+  +files/libdkim-extra-options.patch, +files/patches/fix_warnings.patch,
+  +files/patches/series, +files/patches/strtok_r.patch, +metadata.xml:
+  libdkim-1.0.21-r1 from rion overlay, thanks to slepnoga #262919

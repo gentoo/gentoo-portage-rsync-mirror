@@ -1,0 +1,36 @@
+# ChangeLog for media-radio/qsstv
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/ChangeLog,v 1.13 2012/08/01 06:49:00 tomjbe Exp $
+
+  01 Aug 2012; Thomas Beierlein <tomjbe@gentoo.org> qsstv-7.1.7.ebuild,
+  +files/qsstv-7.1.7-gcc-47.patch:
+  Add missing #includes for gcc47 (bug 427486). Thanks Diego. Also add slot
+  deps to qt-*:4
+
+  19 Jun 2012; Jeff Horelick <jdhore@gentoo.org> qsstv-7.1.7.ebuild:
+  marked x86 per bug 421711
+
+  18 Jun 2012; Agostino Sarubbo <ago@gentoo.org> qsstv-7.1.7.ebuild:
+  Stable for amd64, wrt bug #421711
+
+  18 Jun 2012; Agostino Sarubbo <ago@gentoo.org> -qsstv-7.1.6.ebuild:
+  Remove old
+
+  15 Apr 2012; Thomas Beierlein <tomjbe@gentoo.org> qsstv-7.1.6.ebuild,
+  qsstv-7.1.7.ebuild:
+  add missing RDEPEND
+
+*qsstv-7.1.7 (12 Feb 2012)
+
+  12 Feb 2012; Thomas Beierlein <tomjbe@gentoo.org> +qsstv-7.1.7.ebuild:
+  Minor bug fix release
+
+  09 Jan 2012; Thomas Beierlein <tomjbe@gentoo.org> qsstv-7.1.6.ebuild:
+  Add missing built with USE=qt3support dep
+
+*qsstv-7.1.6 (03 Jan 2012)
+
+  03 Jan 2012; Thomas Beierlein <tomjbe@gentoo.org> +qsstv-7.1.6.ebuild,
+  +metadata.xml:
+  Initial commit of new version working with Qt4
+

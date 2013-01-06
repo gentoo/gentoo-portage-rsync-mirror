@@ -1,0 +1,97 @@
+
+
+*selinux-pan-2.20120725-r9 (21 Dec 2012)
+
+  21 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-pan-2.20120725-r9.ebuild:
+  Bumping to revision 9
+
+  17 Dec 2012; Sven Vermeulen <swift@gentoo.org> -selinux-pan-2.20120215-r1.ebuild,
+  -selinux-pan-2.20120215-r14.ebuild, -selinux-pan-2.20120215-r15.ebuild,
+  -selinux-pan-2.20120215.ebuild:
+  Removing older ebuilds
+
+  13 Dec 2012; Sven Vermeulen <swift@gentoo.org> selinux-pan-2.20120725-r8.ebuild:
+  Stabilization
+
+*selinux-pan-2.20120725-r8 (03 Dec 2012)
+
+  03 Dec 2012; Sven Vermeulen <swift@gentoo.org> +selinux-pan-2.20120725-r8.ebuild:
+  Bumping to revision 8
+
+*selinux-pan-2.20120725-r7 (18 Nov 2012)
+
+  18 Nov 2012; Sven Vermeulen <swift@gentoo.org> +selinux-pan-2.20120725-r7.ebuild:
+  Pushing out rev 7
+
+*selinux-pan-9999 (13 Oct 2012)
+
+  13 Oct 2012; Sven Vermeulen <swift@gentoo.org> +selinux-pan-9999.ebuild:
+  Adding live ebuild
+
+  04 Oct 2012; Sven Vermeulen <swift@gentoo.org> selinux-pan-2.20120725-r5.ebuild:
+  Stabilization
+
+*selinux-pan-2.20120725-r5 (21 Sep 2012)
+
+  21 Sep 2012; Sven Vermeulen <swift@gentoo.org> +selinux-pan-2.20120725-r5.ebuild:
+  Introducing policy for 2.20120725, rev5
+
+  30 Jul 2012; Sven Vermeulen <swift@gentoo.org> selinux-pan-2.20120215-r14.ebuild:
+  Stabilization of revision 14 of the SELinux policy modules
+
+*selinux-pan-2.20120215-r15 (26 Jul 2012)
+
+  26 Jul 2012; Sven Vermeulen <swift@gentoo.org> +selinux-pan-2.20120215-r15.ebuild:
+  Bump to rev15
+
+*selinux-pan-2.20120215-r14 (17 Jul 2012)
+
+  17 Jul 2012; Sven Vermeulen <swift@gentoo.org> +selinux-pan-2.20120215-r14.ebuild:
+  Bumping to rev 14
+
+*selinux-pan-2.20120215-r1 (27 Jun 2012)
+
+  27 Jun 2012; Sven Vermeulen <swift@gentoo.org> +selinux-pan-2.20120215-r1.ebuild:
+  Bump to revision 13
+
+  01 Jun 2012; Sven Vermeulen <swift@gentoo.org> selinux-pan-2.20120215.ebuild:
+  Add dependency on selinux-xserver, fixes build failure
+
+  13 May 2012; Sven Vermeulen <swift@gentoo.org> -selinux-pan-2.20110726-r1.ebuild,
+  -selinux-pan-2.20110726-r2.ebuild:
+  Removing deprecated ebuilds (cleanup)
+
+  29 Apr 2012; Sven Vermeulen <swift@gentoo.org> selinux-pan-2.20120215.ebuild:
+  Stabilizing revision 7
+
+*selinux-pan-2.20120215 (31 Mar 2012)
+
+  31 Mar 2012; Sven Vermeulen <swift@gentoo.org> +selinux-pan-2.20120215.ebuild:
+  Bumping to 2.20120215 policies
+
+  27 Nov 2011; Sven Vermeulen <swift@gentoo.org> selinux-pan-2.20110726-r2.ebuild:
+  Stable on x86/amd64
+
+  12 Nov 2011; Sven Vermeulen <swift@gentoo.org> -files/fix-apps-pan-r1.patch,
+  -selinux-pan-2.20101213-r1.ebuild:
+  Removing old policies
+
+  23 Oct 2011; Sven Vermeulen <swift@gentoo.org> selinux-pan-2.20110726-r1.ebuild:
+  Stabilization (tracker #384231)
+
+*selinux-pan-2.20110726-r2 (23 Oct 2011)
+
+  23 Oct 2011; Sven Vermeulen <swift@gentoo.org> +selinux-pan-2.20110726-r2.ebuild:
+  Add support for XDG
+
+*selinux-pan-2.20110726-r1 (28 Aug 2011)
+
+  28 Aug 2011; Sven Vermeulen <swift@gentoo.org> +selinux-pan-2.20110726-r1.ebuild:
+  Updating policy builds to refpolicy 20110726
+
+*selinux-pan-2.20101213-r1 (07 Aug 2011)
+
+  07 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  +files/fix-apps-pan-r1.patch, +selinux-pan-2.20101213-r1.ebuild,
+  +metadata.xml:
+  Initial commit policy for pan

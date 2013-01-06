@@ -1,0 +1,36 @@
+Include kpathsea/version.h when available. Fixes a build failure with TeX Live
+2010.
+
+Index: cjk-4.8.2/utils/hbf2gf/configure.ac
+===================================================================
+--- cjk-4.8.2.orig/utils/hbf2gf/configure.ac
++++ cjk-4.8.2/utils/hbf2gf/configure.ac
+@@ -79,6 +79,7 @@ if test -n "$kpathsea_include" -o -n "$k
+ 
+   AC_CHECK_HEADER(kpathsea/c-auto.h, ,[
+                   AC_MSG_ERROR([Can't find kpathsea include files! Use --with-kpathsea-include option.])])
++  AC_CHECK_HEADERS([kpathsea/version.h])
+ else
+   CPPFLAGS="$CPPFLAGS -I$srcdir"
+ fi
+Index: cjk-4.8.2/utils/hbf2gf/hbf2gf.w
+===================================================================
+--- cjk-4.8.2.orig/utils/hbf2gf/hbf2gf.w
++++ cjk-4.8.2/utils/hbf2gf/hbf2gf.w
+@@ -2500,12 +2500,16 @@ be used instead.
+ @
+ @<Global variables@>=
+ #if defined(HAVE_LIBKPATHSEA)
++#if defined(HAVE_KPATHSEA_VERSION_H)
++#include <kpathsea/version.h>
++#else
+ #ifdef KPSEDLL
+ /* this is kpathsea 3.3 and newer */
+ extern KPSEDLL char *kpathsea_version_string;
+ #else
+ extern DllImport char *kpathsea_version_string;
+ #endif
++#endif
+ #elif defined(HAVE_EMTEXDIR)
+ char emtex_version_string[] = "emTeXdir";
+ #elif !defined(HAVE_MIKTEX)

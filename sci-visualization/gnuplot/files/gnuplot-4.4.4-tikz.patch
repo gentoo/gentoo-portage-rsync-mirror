@@ -1,0 +1,13 @@
+https://bugs.gentoo.org/396251
+http://sourceforge.net/tracker/?func=detail&aid=3441899&group_id=2055&atid=102055
+
+--- gnuplot-4.4.4-orig/term/lua/gnuplot-tikz.lua
++++ gnuplot-4.4.4/term/lua/gnuplot-tikz.lua
+@@ -251,6 +251,7 @@
+   gp.write(string.format("\\begin{tikzpicture}[gnuplot%s]\n",global_opt))
+   gp.write(string.format("%%%% generated with GNUPLOT %sp%s (%s; terminal rev. %s, script rev. %s)\n%%%% %s\n",
+       term.gp_version, term.gp_patchlevel,
++      _VERSION,
+       string.sub(term.lua_term_revision,7,-3),
+       pgf.REVISION,os.date()))
+   if font ~= "" then

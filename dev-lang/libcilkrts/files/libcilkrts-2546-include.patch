@@ -1,0 +1,26 @@
+diff -Naur libcilkrts.orig/runtime/cilk-abi-cilk-for.cpp libcilkrts/runtime/cilk-abi-cilk-for.cpp
+--- libcilkrts.orig/runtime/cilk-abi-cilk-for.cpp	2012-06-14 12:25:49.000000000 -0700
++++ libcilkrts/runtime/cilk-abi-cilk-for.cpp	2012-06-14 12:26:36.000000000 -0700
+@@ -40,6 +40,9 @@
+  * from within the body of the cilk_for loop
+  */
+ 
++#include <cilk/cilk.h>
++#include <cilk/cilk_stub.h>
++
+ #include "internal/abi.h"
+ #include "metacall_impl.h"
+ #include "global_state.h"
+diff -Naur libcilkrts.orig/runtime/symbol_test.c libcilkrts/runtime/symbol_test.c
+--- libcilkrts.orig/runtime/symbol_test.c	2012-06-14 12:25:49.000000000 -0700
++++ libcilkrts/runtime/symbol_test.c	2012-06-14 12:26:30.000000000 -0700
+@@ -38,6 +38,9 @@
+  * will cause a linker error.
+  */
+ 
++#include <cilk/cilk.h>
++#include <cilk/cilk_stub.h>
++
+ extern void* __cilkrts_global_state;
+ void *volatile p;
+ 

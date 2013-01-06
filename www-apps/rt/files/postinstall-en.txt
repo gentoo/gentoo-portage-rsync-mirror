@@ -1,0 +1,19 @@
+
+***********************************************************
+Now you need to configure your RT installation.
+Please follow the Gentoo install guide found at
+http://wiki.bestpractical.com/index.cgi?GentooInstallGuide
+
+Your local config files are located here:
+${VHOST_ROOT}/${PN}-${PVR}/etc/RT_Config.pm
+${VHOST_ROOT}/${PN}-${PVR}/etc/RT_SiteConfig.pm
+
+If you need more help, consider searching the mailing list (Google site:lists.fsck.com )
+
+***********************************************************
+
+NOTE:
+
+Some file locations have changed. Everything is now installed into
+${VHOST_ROOT}. RT executables are no longer in /usr/bin
+You may need to modify your existing configuration files accordingly.

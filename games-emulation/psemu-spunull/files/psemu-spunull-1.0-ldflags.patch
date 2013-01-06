@@ -1,0 +1,11 @@
+--- src/Makefile.old	2010-10-16 22:03:40.000000000 +0200
++++ src/Makefile	2010-10-16 22:04:23.000000000 +0200
+@@ -8,7 +8,7 @@
+ 
+ plugin: ${OBJECTS}
+ 	rm -f ${PLUGIN}
+-	$(CC) -shared -Wl,-soname,${PLUGIN} ${CFLAGS} ${OBJECTS} -o ${PLUGIN} ${LIBS}
++	$(CC) -shared -Wl,-soname,${PLUGIN} $(LDFLAGS) ${CFLAGS} ${OBJECTS} -o ${PLUGIN} ${LIBS}
+ 	strip --strip-unneeded --strip-debug ${PLUGIN}
+ 
+ clean: 

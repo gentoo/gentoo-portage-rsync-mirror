@@ -1,0 +1,9 @@
+# ChangeLog for sci-mathematics/flint
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/ChangeLog,v 1.1 2012/11/26 08:06:33 patrick Exp $
+
+*flint-2.3 (26 Nov 2012)
+
+  26 Nov 2012; Patrick Lauer <patrick@gentoo.org> +flint-2.3.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me, fixes #230437

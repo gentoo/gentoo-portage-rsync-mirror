@@ -1,0 +1,10 @@
+--- chrome/chrome_browser.gypi.orig	2012-05-22 16:38:09.000000000 +0200
++++ chrome/chrome_browser.gypi	2012-05-22 16:39:56.000000000 +0200
+@@ -54,6 +54,7 @@
+         '../third_party/libphonenumber/libphonenumber.gyp:libphonenumber',
+         '../third_party/libxml/libxml.gyp:libxml',
+         '../third_party/npapi/npapi.gyp:npapi',
++        '../third_party/zlib/zlib.gyp:zlib',
+         '../ui/base/strings/ui_strings.gyp:ui_strings',
+         '../ui/surface/surface.gyp:surface',
+         '../ui/ui.gyp:ui',

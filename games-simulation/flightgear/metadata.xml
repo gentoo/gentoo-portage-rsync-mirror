@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>games</herd>
+<maintainer>
+	<email>reavertm@gentoo.org</email>
+	<name>Maciej Mrozowski</name>
+</maintainer>
+<use>
+	<flag name="fgpanel">Enables standalone lightweight 2D-panel rendering utility</flag>
+	<flag name="jsbsim">Enables JSBSim Flight Dynamics Model (default)</flag>
+	<flag name="oldfdm">Enables deprecated Flight Dynamics Models (LaRCsim, UIUC)</flag>
+	<flag name="subversion">Enables terrasync scenery downloader</flag>
+	<flag name="udev">Enables event-based Input devices through <pkg>virtual/udev</pkg></flag>
+	<flag name="yasim">Enables YASim Flight Dynamics Model</flag>
+</use>
+</pkgmetadata>

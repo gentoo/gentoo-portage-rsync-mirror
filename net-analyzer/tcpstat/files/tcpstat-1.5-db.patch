@@ -1,0 +1,171 @@
+diff -NrU5 tcpstat-1.5.orig/configure.in tcpstat-1.5/configure.in
+--- tcpstat-1.5.orig/configure.in	2002-07-27 02:50:46.000000000 +0200
++++ tcpstat-1.5/configure.in	2008-05-12 13:01:52.000000000 +0200
+@@ -84,15 +84,26 @@
+ dnl #######################
+ dnl Checks for header files
+ dnl #######################
+ AC_HEADER_STDC
+ AC_HEADER_SYS_WAIT
+-AC_CHECK_HEADERS(sys/time.h sys/stat.h unistd.h strings.h fcntl.h netinet/ip6.h)
++AC_CHECK_HEADERS(sys/time.h sys/stat.h unistd.h strings.h fcntl.h)
+ 
+ dnl BSD/OS Seems to not have a good ethernet header, so we gotta wing it
+ AC_CHECK_HEADERS(net/if.h net/ethernet.h netinet/if_ether.h net/ppp_defs.h)
+ 
++AC_ARG_ENABLE( ipv6, [ AC_HELP_STRING([--enable-ipv6], [s use IPv6?]) ], ip6=$enableval )
++if test "$ip6" = "yes"
++then
++	AC_CHECK_HEADER(netinet/ip6.h, , [AC_MSG_ERROR([I couldn't find netinet/ip6.h though you asked for ipv6 support.])] )
++elif test "$ip6" != "no"
++then
++	AC_CHECK_HEADER(netinet/ip6.h)
++
++fi
++
++
+ dnl #############################################################
+ dnl Checks for typedefs, structures, and compiler characteristics
+ dnl #############################################################
+ AC_C_CONST
+ AC_TYPE_SIZE_T
+@@ -147,34 +158,11 @@
+   If you already have... then please rerun configure with the option
+     --with-pcap-lib=DIR
+   with "DIR" being where libpcap is found.])
+ ])
+ 
+-dnl look for dbopen for tcpprof
+-TCPPROF=""
+-LD_TCPPROF=""
+-AC_CHECK_LIB(c, dbopen, [ TCPPROF=tcpprof ], [
+- AC_CHECK_LIB(db1, dbopen, [
+-  TCPPROF=tcpprof
+-  LD_TCPPROF="-ldb1"
+-  AC_DEFINE(USE_DB1_LIBRARY, 1, [ Use the sleepycat DB library. ])
+-  ], [
+-  AC_MSG_WARN([
+-
+-  *** WARNING ***
+-  I couldn't locate the Berkeley DB library.  The extra utility
+-  "tcpprof" will not be built.  THIS IS OK!!!  "tcpstat" will
+-  continue to be built as if this never happened.
+-
+-  If you wish to use the extra "tcpprof" program, please install
+-  the Berkeley DB library from:
+-      ftp://ftp.cs.berkeley.edu/ucb/4bsd/db.tar.gz
+-    ])
+-  ])
+-])
+ AC_SUBST(TCPPROF)
+-AC_SUBST(LD_TCPPROF)
+ AC_SUBST(MATHLIB)
+ 
+ AC_CONFIG_FILES([
+ Makefile
+ doc/Makefile
+diff -NrU5 tcpstat-1.5.orig/lib/process.c tcpstat-1.5/lib/process.c
+--- tcpstat-1.5.orig/lib/process.c	2002-06-01 08:42:09.000000000 +0200
++++ tcpstat-1.5/lib/process.c	2008-05-12 12:09:21.000000000 +0200
+@@ -230,12 +230,12 @@
+  *   calls a user function pointing to the data
+  *
+  * XXX: filter is not used.  capture_seconds also isn't, but snoop is
+  *	always read from a file.
+  */
+-int get_snoop_data(char *fname, char *filter, int flags,
+-	Double capture_seconds, void (*hook)(packet_data *, void **),
++int get_snoop_data(char *fname,  char *filter __attribute__((unused)), int flags,
++	Double capture_seconds __attribute__((unused)), void (*hook)(packet_data *, void **),
+ 	void **args) {
+ 
+ 	u_char *packet;
+ 	int fd, len, blen, ret = 0;
+ 	struct snoop_file_header	fh;
+diff -NrU5 tcpstat-1.5.orig/lib/tcpseq.c tcpstat-1.5/lib/tcpseq.c
+--- tcpstat-1.5.orig/lib/tcpseq.c	2002-01-02 22:05:55.000000000 +0100
++++ tcpstat-1.5/lib/tcpseq.c	2008-05-12 12:19:40.000000000 +0200
+@@ -54,11 +54,10 @@
+ 	u_char	flags;
+ 	struct tcpseq_ha test_ha;
+ 	struct tcphdr *tp = NULL;
+ 	struct ip *ip;
+ #ifdef INET6
+-	int is_ip6 = 0;
+ 	struct ip6_hdr *ip6;
+ 
+ 	ip6 = (struct ip6_hdr *) &pd->data.ip6.hdr;
+ 	if (is_ip6_packet(pd))
+ 		tp= &(pd->data.ip6.body.tcphdr);
+diff -NrU5 tcpstat-1.5.orig/src/catpcap.c tcpstat-1.5/src/catpcap.c
+--- tcpstat-1.5.orig/src/catpcap.c	2002-09-18 23:00:29.000000000 +0200
++++ tcpstat-1.5/src/catpcap.c	2008-05-12 12:15:33.000000000 +0200
+@@ -50,11 +50,11 @@
+ 	if (c == ' ') return c;
+ 	if ((u_char)c > 0xa1 && SHOW_HIGH_BIT) return c;
+ 	return '.';
+ }
+ 
+-void proc_pcap(u_char *user, const struct pcap_pkthdr *h, const u_char *p) {
++void proc_pcap(u_char *user __attribute__((unused)), const struct pcap_pkthdr *h, const u_char *p) {
+ 	u_int length = h->caplen, i, j, k, step;
+ 	u_char *r, *s;
+ 	char c;
+ 
+ 	r = (u_char *)p;
+@@ -90,11 +90,11 @@
+ }
+ /*
+  * process_file() takes the output of tcpdump, saves packets, and displays
+  * statistics
+  */
+-void process_file(char *fname, u_int unused) {
++void process_file(char *fname, u_int unused __attribute__((unused))) {
+ 	int run = 1, i;
+ 	pcap_t	*pd;
+ 	char	ebuf[PCAP_ERRBUF_SIZE];
+ 	struct bpf_program	bpf_prog;
+ 
+diff -NrU5 tcpstat-1.5.orig/src/dump.c tcpstat-1.5/src/dump.c
+--- tcpstat-1.5.orig/src/dump.c	2002-09-18 23:00:29.000000000 +0200
++++ tcpstat-1.5/src/dump.c	2008-05-12 12:13:53.000000000 +0200
+@@ -37,21 +37,21 @@
+ char filterexpr[BUF_SIZ]	= "";
+ int	get_tcp_flags		= 0;
+ int	what_to_show		= 0;
+ int	packet_number		= 0;
+ 
+-void my_hook(packet_data *pd, void **args) {
++void my_hook(packet_data *pd) {
+ 	printf("PACKET NUMBER: %d\n", ++packet_number);
+ 	print_packet(pd, what_to_show);
+ 	printf("-------------------\n");
+ }
+ 
+ /*
+  * process_file() takes the output of tcpdump, saves packets, and displays
+  * statistics
+  */
+-void process_file(char *fname, u_int unused) {
++void process_file(char *fname, u_int unused __attribute__((unused))) {
+         get_dump_data(fname, filterexpr, get_tcp_flags,
+ 		-1.0, my_hook, NULL);
+ }
+ 
+ int parse_show_types(char *in) {
+diff -NrU5 tcpstat-1.5.orig/src/tcpstat.c tcpstat-1.5/src/tcpstat.c
+--- tcpstat-1.5.orig/src/tcpstat.c	2002-07-27 02:42:05.000000000 +0200
++++ tcpstat-1.5/src/tcpstat.c	2008-05-12 12:16:00.000000000 +0200
+@@ -421,11 +421,11 @@
+ }
+ 
+ /*
+  * process_file() gets the data, and then displays the statistics
+  */
+-void process_file(char *fname, u_int unused) {
++void process_file(char *fname, u_int unused __attribute__((unused))) {
+ 	void		*argv[2];
+ 	statistics	stats;
+ 	Double		x;
+ 
+ 	signal(SIGUSR1, catch_signal);

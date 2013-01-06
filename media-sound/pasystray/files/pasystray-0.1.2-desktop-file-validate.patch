@@ -1,0 +1,17 @@
+http://github.com/christophgysin/pasystray/issues/3
+
+--- data/pasystray.desktop
++++ data/pasystray.desktop
+@@ -1,6 +1,5 @@
+ [Desktop Entry]
+ Version=1.0
+-Encoding=UTF-8
+ Name=PulseAudio System Tray
+ GenericName=
+ Comment=An Applet for PulseAudio
+@@ -8,4 +7,4 @@
+ Icon=pasystray
+ StartupNotify=true
+ Type=Application
+-Categories=Application;AudioVideo;Audio;
++Categories=AudioVideo;Audio;

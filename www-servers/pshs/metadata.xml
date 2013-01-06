@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>mgorny@gentoo.org</email>
+		<name>Michał Górny</name>
+	</maintainer>
+	<use>
+		<flag name='magic'>Enable automatic detection of Content-Type
+			using libmagic (<pkg>sys-apps/file</pkg>)</flag>
+		<flag name='netlink'>Use libnetlink (<pkg>sys-apps/iproute2</pkg>) to
+			get network interface addresses</flag>
+	</use>
+	<upstream>
+		<maintainer status="active">
+			<email>mgorny@gentoo.org</email>
+			<name>Michał Górny</name>
+		</maintainer>
+		<bugs-to>https://bitbucket.org/mgorny/pshs/issues/</bugs-to>
+	</upstream>
+</pkgmetadata>

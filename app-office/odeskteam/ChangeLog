@@ -1,0 +1,10 @@
+# ChangeLog for app-office/odeskteam
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/ChangeLog,v 1.1 2012/04/01 16:47:39 titanofold Exp $
+
+*odeskteam-3.2.13 (01 Apr 2012)
+
+  01 Apr 2012; Aaron W. Swenson <titanofold@gentoo.org>
+  +odeskteam-3.2.13.ebuild, +metadata.xml:
+  Initial commit.
+

@@ -1,0 +1,111 @@
+diff -urN ../tmp-orig/xsim-0.3.9.4/plugins/IMs/jianpin/dict/char2db.cpp ./plugins/IMs/jianpin/dict/char2db.cpp
+--- ../tmp-orig/xsim-0.3.9.4/plugins/IMs/jianpin/dict/char2db.cpp	2002-09-23 06:22:39.000000000 +0200
++++ ./plugins/IMs/jianpin/dict/char2db.cpp	2004-08-07 16:18:49.654735809 +0200
+@@ -74,11 +74,7 @@
+ {
+         filebuf f;
+ 
+-#ifdef _CPP_BITS_IOSBASE_H
+ 	f.open(filename, ios_base::in);
+-#else
+-	f.open(filename, "r");
+-#endif
+ 	istream in(&f);
+ 
+ 	char cbuf[10];
+@@ -154,11 +150,7 @@
+ 
+         filebuf f;
+ 
+-#ifdef _CPP_BITS_IOSBASE_H
+ 	f.open(argv[1], ios_base::in);
+-#else
+-	f.open(argv[1], "r");
+-#endif
+ 	istream in(&f);
+ 
+ 	char mark;
+diff -urN ../tmp-orig/xsim-0.3.9.4/plugins/IMs/jianpin/dict/word2db.cpp ./plugins/IMs/jianpin/dict/word2db.cpp
+--- ../tmp-orig/xsim-0.3.9.4/plugins/IMs/jianpin/dict/word2db.cpp	2002-09-23 06:24:17.000000000 +0200
++++ ./plugins/IMs/jianpin/dict/word2db.cpp	2004-08-07 16:19:16.271589168 +0200
+@@ -83,11 +83,7 @@
+ 
+         filebuf f;
+ 
+-#ifdef _CPP_BITS_IOSBASE_H
+ 	f.open(argv[1], ios_base::in);
+-#else
+-	f.open(argv[1], "r");
+-#endif
+ 	istream in(&f);
+ 
+ 	char mark;
+diff -urN ../tmp-orig/xsim-0.3.9.4/plugins/IMs/table/dict/word2db.cpp ./plugins/IMs/table/dict/word2db.cpp
+--- ../tmp-orig/xsim-0.3.9.4/plugins/IMs/table/dict/word2db.cpp	2002-09-23 06:34:06.000000000 +0200
++++ ./plugins/IMs/table/dict/word2db.cpp	2004-08-07 16:23:56.841264376 +0200
+@@ -90,11 +90,7 @@
+ 
+         filebuf f;
+ 
+-#ifdef _CPP_BITS_IOSBASE_H
+ 	f.open(argv[1], ios_base::in);
+-#else
+-	f.open(argv[1], "r");
+-#endif
+ 	istream in(&f);
+ 
+ 	char mark;
+diff -urN ../tmp-orig/xsim-0.3.9.4/plugins/IMs/wubi/dict/word2db.cpp ./plugins/IMs/wubi/dict/word2db.cpp
+--- ../tmp-orig/xsim-0.3.9.4/plugins/IMs/wubi/dict/word2db.cpp	2002-09-23 06:28:45.000000000 +0200
++++ ./plugins/IMs/wubi/dict/word2db.cpp	2004-08-07 16:23:35.738361690 +0200
+@@ -81,11 +81,7 @@
+ 
+         filebuf f;
+ 
+-#ifdef _CPP_BITS_IOSBASE_H
+ 	f.open(argv[1], ios_base::in);
+-#else
+-	f.open(argv[1], "r");
+-#endif
+ 	istream in(&f);
+ 
+ 	char mark;
+diff -urN ../tmp-orig/xsim-0.3.9.4/xsim/conf.cpp ./xsim/conf.cpp
+--- ../tmp-orig/xsim-0.3.9.4/xsim/conf.cpp	2002-09-17 09:53:37.000000000 +0200
++++ ./xsim/conf.cpp	2004-08-07 16:22:35.792001180 +0200
+@@ -133,11 +133,7 @@
+         filebuf f;
+ 
+ 	char dummy[MAX_PATH_LEN + 1];
+-#ifdef _CPP_BITS_IOSBASE_H
+ 	if (!f.open(config_path.tombs(dummy, MAX_PATH_LEN), ios_base::in)){
+-#else
+-	if (!f.open(config_path.tombs(dummy, MAX_PATH_LEN), "r")){
+-#endif
+ 		cerr << "XSIM: failed opening config file" << endl;
+ 		return 1;
+ 		}
+@@ -340,11 +336,7 @@
+ 
+         filebuf f;
+ 
+-#ifdef _CPP_BITS_IOSBASE_H
+ 	if (f.open(path.tombs(dummy, MAX_PATH_LEN), ios_base::out)){
+-#else
+-	if (f.open(path.tombs(dummy, MAX_PATH_LEN), "w")){
+-#endif
+ 		ostream out(&f);
+ 		for (size_t i = 0; i < name.size(); i++){
+ 			out << name[i].tombs(dummy, MAX_PATH_LEN) << '\t';
+@@ -372,11 +364,7 @@
+ 
+         filebuf f;
+ 
+-#ifdef _CPP_BITS_IOSBASE_H
+ 	if (f.open(path.tombs(dummy, MAX_PATH_LEN), ios_base::in)){
+-#else
+-	if (f.open(path.tombs(dummy, MAX_PATH_LEN), "r")){
+-#endif
+ 		istream in(&f);
+ 		char n[MAX_PATH_LEN + 1];
+ 		char v[MAX_PATH_LEN + 1];

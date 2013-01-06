@@ -1,0 +1,12 @@
+--- a/lib/ivykis/modules/iv_event_raw.c 2012-01-29 13:15:33.000000000 +0100
++++ b/lib/ivykis/modules/iv_event_raw.c 2012-04-30 16:01:17.480317290 +0200
+@@ -37,6 +37,8 @@
+ #endif
+ #endif
+ 
++#include <sys/eventfd.h>
++
+ #ifndef EFD_NONBLOCK
+ #define EFD_NONBLOCK   04000
+ #endif
+

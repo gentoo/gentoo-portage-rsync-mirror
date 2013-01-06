@@ -1,0 +1,13 @@
+# ChangeLog for kde-misc/takeoff
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/takeoff/ChangeLog,v 1.2 2012/05/09 19:17:02 scarabeus Exp $
+
+  09 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> takeoff-1.0.ebuild:
+  Set base kde_minimal to 4.8.
+
+*takeoff-1.0 (09 May 2012)
+
+  09 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> +metadata.xml,
+  +takeoff-1.0.ebuild:
+  Initial commit. Per Joost Ruis irc request.
+

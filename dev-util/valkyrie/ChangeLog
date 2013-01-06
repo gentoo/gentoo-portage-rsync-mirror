@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/valkyrie
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/ChangeLog,v 1.15 2010/11/11 01:28:22 xmw Exp $
+
+*valkyrie-2.0.0 (11 Nov 2010)
+
+  11 Nov 2010; Michael Weber <xmw@gentoo.org> +valkyrie-2.0.0.ebuild,
+  +files/valkyrie-2.0.0-prefix.patch, +metadata.xml:
+  Re-added new upstream major release, fixes bug #344895.
+

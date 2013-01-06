@@ -1,0 +1,21 @@
+# ChangeLog for dev-python/sphinxcontrib-googleanalytics
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-googleanalytics/ChangeLog,v 1.4 2012/10/12 07:04:45 patrick Exp $
+
+  12 Oct 2012; Patrick Lauer <patrick@gentoo.org>
+  sphinxcontrib-googleanalytics-0.1.ebuild:
+  Restricting CPython-2.5
+
+  28 Aug 2012; Mike Gilbert <floppym@gentoo.org>
+  sphinxcontrib-googleanalytics-0.1.ebuild:
+  Restrict python 3.
+
+  05 Aug 2012; Mike Gilbert <floppym@gentoo.org> +files/setup.py.utf-8.patch,
+  sphinxcontrib-googleanalytics-0.1.ebuild:
+  Fix unicode issue in setup.py for bug 429914.
+
+*sphinxcontrib-googleanalytics-0.1 (28 Jun 2012)
+
+  28 Jun 2012; Mike Gilbert <floppym@gentoo.org> +metadata.xml,
+  +sphinxcontrib-googleanalytics-0.1.ebuild:
+  New ebuild for g-pypi dependency.

@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare setup
+DEPEND=>=sys-apps/sed-4
+DESCRIPTION=AIM transport proxy over NAT firewalls
+EAPI=4
+HOMEPAGE=http://reaim.sourceforge.net/
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=net-firewall/iptables
+SLOT=0
+SRC_URI=mirror://sourceforge/reaim/reaim-0.8.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=e76e05875012f42b2bdd825cdc4cc414

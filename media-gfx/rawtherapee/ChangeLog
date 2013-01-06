@@ -1,0 +1,47 @@
+# ChangeLog for media-gfx/rawtherapee
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/ChangeLog,v 1.9 2012/06/04 10:34:43 radhermit Exp $
+
+  04 Jun 2012; Tim Harder <radhermit@gentoo.org>
+  -files/rawtherapee-4.0.4-nohg.patch, -rawtherapee-4.0.6.ebuild:
+  Remove old.
+
+*rawtherapee-4.0.9 (04 Jun 2012)
+
+  04 Jun 2012; Tim Harder <radhermit@gentoo.org> +rawtherapee-4.0.9.ebuild,
+  +files/rawtherapee-4.0.9-no-hg.patch:
+  Version bump.
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> rawtherapee-4.0.6.ebuild,
+  rawtherapee-4.0.8.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  01 May 2012; Tim Harder <radhermit@gentoo.org> -rawtherapee-4.0.4.ebuild,
+  -rawtherapee-4.0.5.ebuild:
+  Remove old.
+
+*rawtherapee-4.0.8 (01 May 2012)
+
+  01 May 2012; Tim Harder <radhermit@gentoo.org> +rawtherapee-4.0.8.ebuild,
+  +files/rawtherapee-4.0.8-nohg.patch:
+  Version bump (bug #401683).
+
+*rawtherapee-4.0.6 (07 Dec 2011)
+
+  07 Dec 2011; Tim Harder <radhermit@gentoo.org> +rawtherapee-4.0.6.ebuild:
+  Version bump.
+
+*rawtherapee-4.0.5 (11 Nov 2011)
+
+  11 Nov 2011; Tim Harder <radhermit@gentoo.org> +rawtherapee-4.0.5.ebuild:
+  Version bump.
+
+  28 Oct 2011; Tim Harder <radhermit@gentoo.org> rawtherapee-4.0.4.ebuild:
+  Use lcms slot dep and fix check for openmp support (thanks to ssuominen).
+
+*rawtherapee-4.0.4 (28 Oct 2011)
+
+  28 Oct 2011; Tim Harder <radhermit@gentoo.org> +rawtherapee-4.0.4.ebuild,
+  +files/rawtherapee-4.0.4-nohg.patch, +metadata.xml:
+  Initial import (bug #316589).
+

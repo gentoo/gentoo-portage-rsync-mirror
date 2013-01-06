@@ -1,0 +1,144 @@
+ Makefile.am              |  8 +-------
+ etc/afpd/afp_avahi.c     |  2 +-
+ etc/netatalk/Makefile.am |  4 +++-
+ etc/uams/Makefile.am     | 20 ++++++++++----------
+ libatalk/dsi/Makefile.am |  1 +
+ libatalk/vfs/Makefile.am |  1 +
+ macros/netatalk.m4       | 16 ++++++++--------
+ 7 files changed, 25 insertions(+), 27 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 448375a..67ea35f 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -1,6 +1,6 @@
+ # Makefile.am for top level of netatalk package
+ 
+-SUBDIRS = libatalk libevent bin config etc man contrib distrib include doc macros test
++SUBDIRS = libatalk bin config etc man contrib distrib include doc macros test
+ 
+ EXTRA_DIST = CONTRIBUTORS COPYRIGHT COPYING NEWS VERSION
+ 
+@@ -11,9 +11,3 @@ if USE_BUILTIN_LIBEVENT
+ 	SUBDIRS += libevent
+ endif
+ 
+-if RUN_LDCONFIG
+-install-exec-hook:
+-	@printf "Running ldconfig to ensure libraries installed in system library directories are added to the dynamic linker cache ... "
+-	@-@NETA_LDCONFIG@
+-	@printf "done\n"
+-endif
+diff --git a/etc/afpd/afp_avahi.c b/etc/afpd/afp_avahi.c
+index 5218d51..b68c266 100644
+--- a/etc/afpd/afp_avahi.c
++++ b/etc/afpd/afp_avahi.c
+@@ -174,8 +174,8 @@ static void register_stuff(void) {
+     return;
+ 
+ fail:
+-    time(NULL);
+ //    avahi_threaded_poll_quit(ctx->threaded_poll);
++    return;
+ }
+ 
+ /* Called when publishing of service data completes */
+diff --git a/etc/netatalk/Makefile.am b/etc/netatalk/Makefile.am
+index 10f90ce..e524602 100644
+--- a/etc/netatalk/Makefile.am
++++ b/etc/netatalk/Makefile.am
+@@ -20,4 +20,6 @@ netatalk_CFLAGS += \
+ 
+ netatalk_LDADD += \
+ 	$(top_builddir)/libevent/libevent.la
+-endif
+\ No newline at end of file
++else
++netatalk_LDADD += $(LIBEVENT_LIBS)
++endif
+diff --git a/etc/uams/Makefile.am b/etc/uams/Makefile.am
+index 3a02b83..70a2f76 100644
+--- a/etc/uams/Makefile.am
++++ b/etc/uams/Makefile.am
+@@ -95,16 +95,16 @@ uams_dhx_pam_la_CFLAGS     = @SSL_CFLAGS@ @PAM_CFLAGS@
+ uams_dhx2_pam_la_CFLAGS    = @LIBGCRYPT_CFLAGS@ @PAM_CFLAGS@
+ uams_gss_la_CFLAGS   	   = @GSSAPI_CFLAGS@
+ 
+-uams_guest_la_LDFLAGS      = -module -avoid-version
+-uams_randnum_la_LDFLAGS    = -module -avoid-version @SSL_LIBS@
+-uams_passwd_la_LDFLAGS     = -module -avoid-version @CRYPT_LIBS@
+-uams_pam_la_LDFLAGS        = -module -avoid-version @PAM_LIBS@
+-uams_pgp_la_LDFLAGS        = -module -avoid-version @SSL_LIBS@
+-uams_dhx_passwd_la_LDFLAGS = -module -avoid-version @CRYPT_LIBS@ @SSL_LIBS@
+-uams_dhx_pam_la_LDFLAGS		= -module -avoid-version @CRYPT_LIBS@ @SSL_LIBS@ @PAM_LIBS@
+-uams_dhx2_passwd_la_LDFLAGS	= -module -avoid-version @CRYPT_LIBS@ @LIBGCRYPT_LIBS@
+-uams_dhx2_pam_la_LDFLAGS	= -module -avoid-version @LIBGCRYPT_LIBS@ @PAM_LIBS@
+-uams_gss_la_LDFLAGS   	   = -module -avoid-version @GSSAPI_LIBS@ 
++uams_guest_la_LDFLAGS      = -shared -module -avoid-version
++uams_randnum_la_LDFLAGS    = -shared -module -avoid-version @SSL_LIBS@
++uams_passwd_la_LDFLAGS     = -shared -module -avoid-version @CRYPT_LIBS@
++uams_pam_la_LDFLAGS        = -shared -module -avoid-version @PAM_LIBS@
++uams_pgp_la_LDFLAGS        = -shared -module -avoid-version @SSL_LIBS@
++uams_dhx_passwd_la_LDFLAGS = -shared -module -avoid-version @CRYPT_LIBS@ @SSL_LIBS@
++uams_dhx_pam_la_LDFLAGS		= -shared -module -avoid-version @CRYPT_LIBS@ @SSL_LIBS@ @PAM_LIBS@
++uams_dhx2_passwd_la_LDFLAGS	= -shared -module -avoid-version @CRYPT_LIBS@ @LIBGCRYPT_LIBS@
++uams_dhx2_pam_la_LDFLAGS	= -shared -module -avoid-version @LIBGCRYPT_LIBS@ @PAM_LIBS@
++uams_gss_la_LDFLAGS   	   = -shared -module -avoid-version @GSSAPI_LIBS@ 
+ 
+ #
+ # module compilation
+diff --git a/libatalk/dsi/Makefile.am b/libatalk/dsi/Makefile.am
+index 34fa76e..757c458 100644
+--- a/libatalk/dsi/Makefile.am
++++ b/libatalk/dsi/Makefile.am
+@@ -7,3 +7,4 @@ LIBS = @LIBS@
+ noinst_LTLIBRARIES = libdsi.la
+ 
+ libdsi_la_SOURCES = dsi_attn.c dsi_close.c dsi_cmdreply.c dsi_getsess.c dsi_getstat.c dsi_init.c dsi_opensess.c dsi_read.c dsi_tcp.c dsi_tickle.c dsi_write.c dsi_stream.c
++libdsi_la_LIBADD = $(WRAP_LIBS)
+diff --git a/libatalk/vfs/Makefile.am b/libatalk/vfs/Makefile.am
+index aa62aeb..8ac2045 100644
+--- a/libatalk/vfs/Makefile.am
++++ b/libatalk/vfs/Makefile.am
+@@ -6,4 +6,5 @@ libvfs_la_SOURCES = vfs.c unix.c ea_ad.c ea_sys.c extattr.c
+ 
+ if HAVE_ACLS
+ libvfs_la_SOURCES += acl.c
++libvfs_la_LIBADD = $(ACL_LIBS)
+ endif
+diff --git a/macros/netatalk.m4 b/macros/netatalk.m4
+index 3e57077..c02d750 100644
+--- a/macros/netatalk.m4
++++ b/macros/netatalk.m4
+@@ -19,15 +19,16 @@ AC_DEFUN([AC_NETATALK_LIBEVENT], [
+     AC_ARG_ENABLE(
+         bundled-libevent,
+         [AS_HELP_STRING([--disable-bundled-libevent],[whether the bundled version of libevent shall not be used (define CPPFLAGS and LDFLAGS otherwise appropiately to pick up installed version)
+-        ])],
+-        use_bundled_libevent=$enableval,
+-        use_bundled_libevent=yes
++        ])]
+     )
+ 
+-    if test x"$use_bundled_libevent" = x"yes" ; then
+-        AC_CONFIG_SUBDIRS([libevent])
+-    fi
+-    AM_CONDITIONAL(USE_BUILTIN_LIBEVENT, test x"$use_bundled_libevent" = x"yes")
++    AS_IF([test x"$enable_bundled_libevent" != x"no"],
++        [AC_CONFIG_SUBDIRS([libevent])
++        AC_MSG_RESULT([no])],
++        [AC_MSG_RESULT([yes])
++        PKG_CHECK_MODULES([LIBEVENT], [libevent])])
++
++    AM_CONDITIONAL(USE_BUILTIN_LIBEVENT, test x"$enable_bundled_libevent" != x"no")
+ ])
+ 
+ dnl Filesystem Hierarchy Standard (FHS) compatibility
+@@ -605,7 +606,6 @@ save_CFLAGS="$CFLAGS"
+ save_LDFLAGS="$LDFLAGS"
+ save_LIBS="$LIBS"
+ CFLAGS=""
+-LDFLAGS=""
+ LIBS=""
+ LDAP_CFLAGS=""
+ LDAP_LDFLAGS=""

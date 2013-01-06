@@ -1,0 +1,25 @@
+# ChangeLog for net-fs/libnfs
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/ChangeLog,v 1.4 2012/12/04 03:54:39 vapier Exp $
+
+*libnfs-1.5.0 (04 Dec 2012)
+
+  04 Dec 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/libnfs-1.5.0-headers.patch, +libnfs-1.5.0.ebuild, libnfs-9999.ebuild:
+  Version bump.  Disable libtirpc as upstream has deprecated it #442588 by
+  Torsten Kurbad.
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> libnfs-1.3.0.ebuild,
+  libnfs-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*libnfs-1.3.0 (13 Mar 2012)
+
+  13 Mar 2012; Mike Frysinger <vapier@gentoo.org> +libnfs-1.3.0.ebuild:
+  Version bump #407981 by hal.
+
+*libnfs-9999 (06 Nov 2011)
+
+  06 Nov 2011; Mike Frysinger <vapier@gentoo.org> +libnfs-9999.ebuild,
+  +metadata.xml:
+  Initial ebuild #382751 by hal.

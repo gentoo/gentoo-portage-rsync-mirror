@@ -1,0 +1,62 @@
+diff --git a/speechd-braille.el b/speechd-braille.el
+index a79b24e..dfbae4b 100644
+--- a/speechd-braille.el
++++ b/speechd-braille.el
+@@ -116,9 +116,14 @@
+ 
+ (defclass speechd-braille-emu-driver (speechd-driver)
+   ((name :initform 'braille-emu)
+-   (manager :initform (lambda () (speechd-braille--create-manager
+-                                  #'speechd-braille--display)))
+-   (priority :initform (lambda () speechd-default-text-priority))))
++  (manager)
++  (priority)))
++
++(defmethod initialize-instance :after
++    ((this speechd-braille-emu-driver) slots)
++  (progn
++    (oset this priority speechd-default-text-priority)
++    (oset this manager (speechd-braille--create-manager #'speechd-braille--display))))
+ 
+ (defmethod speechd-braille--make-message
+     ((driver speechd-braille-emu-driver) text cursor)
+diff --git a/speechd-brltty.el b/speechd-brltty.el
+index f6bf353..ec89d04 100644
+--- a/speechd-brltty.el
++++ b/speechd-brltty.el
+@@ -237,10 +237,14 @@ is not recommended to assign or call user commands here."
+ 
+ (defclass speechd-brltty-driver (speechd-braille-emu-driver)
+   ((name :initform 'brltty)
+-   (manager :initform (lambda () (speechd-brltty--create-manager)))
++   (manager)
+    (brltty-connection :initform 'uninitialized)
+    (brltty-last-try-time :initform 0)))
+ 
++(defmethod initialize-instance :after
++    ((this speechd-brltty-driver) slots)
++  (oset this manager (speechd-brltty--create-manager)))
++
+ (defmethod speechd-braille--make-message
+     ((driver speechd-brltty-driver) text message)
+   (list (speechd-brltty--connection driver) text message))
+diff --git a/speechd-out.el b/speechd-out.el
+index aa82f10..0a484e3 100644
+--- a/speechd-out.el
++++ b/speechd-out.el
+@@ -87,9 +87,14 @@
+ 
+ 
+ (defclass speechd-driver ()
+-  ((name :initform (error "Driver name not given") :initarg :name
++  ((name :initarg :name
+          :reader speechd-driver.name)))
+ 
++(defmethod initialize-instance :after
++    ((this speechd-driver) slots)
++  (if (not (slot-boundp this 'name))
++    (error "Driver name not given")))
++
+ (defun speechd-out-register-driver (driver)
+   (let ((class (class-of driver)))
+     (labels ((replace (list)

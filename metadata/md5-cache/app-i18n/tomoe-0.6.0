@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=virtual/pkgconfig doc? ( dev-util/gtk-doc )
+DESCRIPTION=Japanese handwriting recognition engine
+HOMEPAGE=http://tomoe.sourceforge.jp/
+IUSE=doc hyperestraier mysql ruby subversion
+KEYWORDS=~amd64 x86
+LICENSE=LGPL-2.1
+RDEPEND=>=dev-libs/glib-2.4 ruby? ( dev-ruby/ruby-glib2 ) hyperestraier? ( app-text/hyperestraier ) subversion? ( >=dev-libs/apr-1 dev-vcs/subversion ) mysql? ( dev-db/mysql )
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://sourceforge/tomoe/tomoe-0.6.0.tar.gz
+_md5_=39bfc7f532e69e59affe8d2778dae9ce

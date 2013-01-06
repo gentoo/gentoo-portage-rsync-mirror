@@ -1,0 +1,39 @@
+# ChangeLog for dev-cpp/xsd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/xsd/ChangeLog,v 1.9 2012/11/30 15:12:16 ago Exp $
+
+  30 Nov 2012; <ago@gentoo.org> xsd-3.3.0.ebuild:
+  Stable for ppc, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> xsd-3.3.0.ebuild:
+  Stable for x86, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> xsd-3.3.0.ebuild:
+  Stable for amd64, wrt bug #442394
+
+*xsd-3.3.0-r1 (09 Nov 2012)
+
+  09 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> +xsd-3.3.0-r1.ebuild:
+  Add a masked revision bump to leverage the layout changes in boost-1.52.0-r1.
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> xsd-3.3.0.ebuild:
+  add ~arm, bug #430072
+
+  23 Aug 2012; Tiziano Müller <dev-zero@gentoo.org>
+  +files/3.3.0-boost-filesystem-v2-deprecation.patch, xsd-3.3.0.ebuild:
+  Fix compatibility with boost >=1.49.0 (filesystem v2 gone), bug #425426.
+
+  01 Jun 2012; Tiziano Müller <dev-zero@gentoo.org> xsd-3.3.0.ebuild:
+  Fix bug #372925 by adding -DBOOST_FILESYSTEM_VERSION=2 to
+  cxx_pp_extra_options.
+
+  21 Oct 2010; Tiziano Müller <dev-zero@gentoo.org> xsd-3.3.0.ebuild:
+  Added example xsd file to docs.
+
+*xsd-3.3.0 (20 Oct 2010)
+
+  20 Oct 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +files/3.3.0-disable_examples_and_tests.patch,
+  +files/3.3.0-fix_include.patch, +files/3.3.0-fix_tests.patch,
+  +files/3.3.0-xsdcxx-rename.patch, +xsd-3.3.0.ebuild, +metadata.xml:
+  Initial commit (ebuild written by me).

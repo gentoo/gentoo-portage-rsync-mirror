@@ -1,0 +1,30 @@
+# ChangeLog for dev-haskell/sha
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/sha/ChangeLog,v 1.6 2012/12/23 20:04:07 slyfox Exp $
+
+*sha-1.6.1 (23 Dec 2012)
+
+  23 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> +sha-1.6.1.ebuild:
+  Version bump.
+
+  21 Nov 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/sha-1.6.0-no-tests.patch, sha-1.6.0.ebuild:
+  Fix .cabal depends for -f-test mode (bug #444124 by Dennis Lissov)
+
+*sha-1.6.0 (19 Nov 2012)
+
+  19 Nov 2012; Mark Wright <gienah@gentoo.org> +sha-1.6.0.ebuild:
+  Bump sha to 1.6.0
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> sha-1.5.0.0.ebuild:
+  move dev-haskell/sha/sha-1.5.0.0.ebuild ebuild to mirror://hackage
+
+  15 Feb 2012; Sergei Trofimovich <slyfox@gentoo.org> sha-1.5.0.0.ebuild:
+  Fixed HOMEPAGE (hackage is case sensitive). Noticed by David in bug #403511.
+
+*sha-1.5.0.0 (04 Dec 2011)
+
+  04 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org> +metadata.xml,
+  +sha-1.5.0.0.ebuild:
+  Initian version. Implementations of the SHA suite of message digest functions
+  (dev-vcs/git-annex depend)

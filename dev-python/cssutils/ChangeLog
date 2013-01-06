@@ -1,0 +1,139 @@
+# ChangeLog for dev-python/cssutils
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.26 2012/09/12 23:10:41 floppym Exp $
+
+  12 Sep 2012; Mike Gilbert <floppym@gentoo.org> cssutils-0.9.10_beta1.ebuild:
+  Remove obsolete sed. Thanks Arfrever.
+
+ 05 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> cssutils-0.9.9.ebuild,
+ -cssutils-0.9.7.ebuild:
+ Stable on amd64 x86 and ppc wrt bug#414633.
+
+*cssutils-0.9.10_beta1 (07 Sep 2012)
+
+  07 Sep 2012; <lordvan@gentoo.org> +cssutils-0.9.10_beta1.ebuild:
+  new version. fixes bug #416513
+
+*cssutils-0.9.9 (02 Mar 2012)
+
+  02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> +cssutils-0.9.9.ebuild:
+  Version bump to 0.9.9 for bug 381983 (thanks to Johan Bergstroem).
+
+  05 Feb 2012; Brent Baude <ranger@gentoo.org> cssutils-0.9.7.ebuild:
+  Marking cssutils-0.9.7 ppc for bug 386729
+
+  22 Dec 2011; Mike Gilbert <floppym@gentoo.org>
+  +files/cssutils-0.9.7-test.patch, cssutils-0.9.7.ebuild:
+  Fix test failures. Patch by Ian Delaney. Bug 386807.
+
+  11 Dec 2011; Markus Meier <maekke@gentoo.org> cssutils-0.9.7.ebuild:
+  x86 stable, bug #386729
+
+  19 Nov 2011; Markos Chandras <hwoarang@gentoo.org> cssutils-0.9.7.ebuild:
+  Restrict test. Bug #386807. Stable on amd64 wrt bug 386729
+
+  08 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  cssutils-0.9.7.ebuild:
+  Skip tests failing with dev-python/pyxml installed (bug #299170).
+
+*cssutils-0.9.7 (07 Dec 2010)
+
+  07 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cssutils-0.9.7_beta4.ebuild, +cssutils-0.9.7.ebuild:
+  Version bump.
+
+*cssutils-0.9.7_beta4 (07 Nov 2010)
+
+  07 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cssutils-0.9.7_beta3.ebuild, +cssutils-0.9.7_beta4.ebuild:
+  Version bump.
+
+*cssutils-0.9.7_beta3 (21 Jun 2010)
+
+  21 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cssutils-0.9.7_beta2.ebuild, +cssutils-0.9.7_beta3.ebuild:
+  Version bump.
+
+*cssutils-0.9.7_beta2 (06 Jun 2010)
+
+  06 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cssutils-0.9.7_beta1.ebuild, +cssutils-0.9.7_beta2.ebuild:
+  Version bump.
+
+*cssutils-0.9.7_beta1 (30 May 2010)
+
+  30 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cssutils-0.9.7_alpha6.ebuild, +cssutils-0.9.7_beta1.ebuild:
+  Version bump.
+
+*cssutils-0.9.7_alpha6 (26 May 2010)
+
+  26 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cssutils-0.9.7_alpha4.ebuild, +cssutils-0.9.7_alpha6.ebuild:
+  Version bump.
+
+*cssutils-0.9.7_alpha4 (13 May 2010)
+
+  13 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cssutils-0.9.7_alpha3.ebuild, +cssutils-0.9.7_alpha4.ebuild:
+  Version bump.
+
+*cssutils-0.9.7_alpha3 (15 Mar 2010)
+
+  15 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cssutils-0.9.6.ebuild, -cssutils-0.9.7_alpha2.ebuild,
+  +cssutils-0.9.7_alpha3.ebuild:
+  Version bump.
+
+*cssutils-0.9.7_alpha2 (01 Jan 2010)
+
+  01 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +cssutils-0.9.7_alpha2.ebuild:
+  Version bump.
+
+*cssutils-0.9.6 (07 Oct 2009)
+
+  07 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cssutils-0.9.6_beta5.ebuild, +cssutils-0.9.6.ebuild:
+  Version bump.
+
+  11 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  cssutils-0.9.6_beta5.ebuild:
+  Add "test" USE flag.
+
+  05 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  -cssutils-0.9.6_alpha4.ebuild, -cssutils-0.9.6_beta4.ebuild:
+  Remove old
+
+*cssutils-0.9.6_beta5 (30 Aug 2009)
+
+  30 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +cssutils-0.9.6_beta5.ebuild:
+  Version bump.
+
+*cssutils-0.9.6_beta4 (29 Aug 2009)
+
+  29 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -cssutils-0.9.5.1.ebuild, -cssutils-0.9.6_alpha1-r1.ebuild,
+  +cssutils-0.9.6_beta4.ebuild,
+  +files/cssutils-0.9.6_beta4-fix_setup.py.patch:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
+
+*cssutils-0.9.6_alpha4 (17 May 2009)
+
+  17 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +cssutils-0.9.6_alpha4.ebuild:
+  Version bump.
+
+*cssutils-0.9.6_alpha1-r1 (21 Mar 2009)
+
+  21 Mar 2009; Jesus Rivero <neurogeek@gentoo.org>
+  -cssutils-0.9.6_alpha1.ebuild, +cssutils-0.9.6_alpha1-r1.ebuild:
+  Added setuptools to DEPEND. Removed old version.
+
+*cssutils-0.9.6_alpha1 (10 Feb 2009)
+*cssutils-0.9.5.1 (10 Feb 2009)
+
+  10 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org>
+  +cssutils-0.9.5.1.ebuild, +cssutils-0.9.6_alpha1.ebuild:
+  initial version

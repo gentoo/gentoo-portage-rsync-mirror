@@ -1,0 +1,22 @@
+--- avp/win95/gadgets/conscmnd.hpp.old	2007-09-06 20:42:31.000000000 +0200
++++ avp/win95/gadgets/conscmnd.hpp	2007-09-06 20:42:43.000000000 +0200
+@@ -36,7 +36,7 @@
+ 		(
+ 			ProjChar* pProjCh_ToUse,
+ 			ProjChar* pProjCh_Description_ToUse,
+-			void (&f) (void),
++			void (*f) (void),
+ 			OurBool Cheat = FALSE
+ 		);
+ 		static void Make
+--- avp/win95/gadgets/conscmnd.cpp.old	2007-09-06 20:44:24.000000000 +0200
++++ avp/win95/gadgets/conscmnd.cpp	2007-09-06 20:43:49.000000000 +0200
+@@ -138,7 +138,7 @@
+ (
+ 	ProjChar* pProjCh_ToUse,
+ 	ProjChar* pProjCh_Description_ToUse,
+-	void (&f) (void),
++	void (*f) (void),
+ 	OurBool Cheat
+ )
+ {

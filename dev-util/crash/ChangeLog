@@ -1,0 +1,23 @@
+# ChangeLog for dev-util/crash
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crash/ChangeLog,v 1.4 2012/07/14 20:07:25 cardoe Exp $
+
+*crash-6.0.8 (14 Jul 2012)
+
+  14 Jul 2012; Doug Goldstein <cardoe@gentoo.org> +crash-6.0.8.ebuild:
+  Version bump. bug #390343
+
+  17 Aug 2011; Doug Goldstein <cardoe@gentoo.org> crash-5.1.7.ebuild:
+  Compile fix
+
+*crash-5.1.7 (16 Aug 2011)
+
+  16 Aug 2011; Doug Goldstein <cardoe@gentoo.org> +crash-5.1.7.ebuild:
+  Version bump
+
+*crash-5.1.1 (26 Jan 2011)
+
+  26 Jan 2011; Doug Goldstein <cardoe@gentoo.org> +crash-5.1.1.ebuild,
+  +files/crash-5.1.1-install-fix.patch:
+  Add the Red Hat crash analyzer utility
+

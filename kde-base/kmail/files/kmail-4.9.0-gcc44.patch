@@ -1,0 +1,21 @@
+commit 92bface95453799620cd2368a7c0771c4304bbf3
+Author: David Faure <faure@kde.org>
+Date:   Thu Aug 9 11:58:30 2012 +0200
+
+    Fix compilation with gcc-4.4.7, a gentoo user reported this fixed the issue.
+    
+    (Message::Foo was ambiguous due to KMime::Message and namespace Message in
+    messagecomposer/util.h)
+
+diff --git a/kmail/kmreaderwin.cpp b/kmail/kmreaderwin.cpp
+index 92593f2..c4bcd86 100644
+--- a/kmail/kmreaderwin.cpp
++++ b/kmail/kmreaderwin.cpp
+@@ -45,7 +45,6 @@ using MessageViewer::CSSHelper;
+ #include "stringutil.h"
+ 
+ #include <kmime/kmime_mdn.h>
+-using namespace KMime;
+ 
+ #include "messageviewer/viewer.h"
+ using namespace MessageViewer;

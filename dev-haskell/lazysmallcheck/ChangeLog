@@ -1,0 +1,20 @@
+# ChangeLog for dev-haskell/lazysmallcheck
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lazysmallcheck/ChangeLog,v 1.4 2012/09/12 15:12:06 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  lazysmallcheck-0.6.ebuild:
+  move dev-haskell/lazysmallcheck/lazysmallcheck-0.6.ebuild ebuild to
+  mirror://hackage
+
+  09 Aug 2012; Sergei Trofimovich <slyfox@gentoo.org> lazysmallcheck-0.6.ebuild:
+  Stable on alpha/ia64/sparc (bug #418681)
+
+  08 Aug 2012; Brent Baude <ranger@gentoo.org> lazysmallcheck-0.6.ebuild:
+  Marking lazysmallcheck-0.6 ppc for bug 418681
+
+*lazysmallcheck-0.6 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +lazysmallcheck-0.6.ebuild,
+  +metadata.xml:
+  Add lazysmallcheck

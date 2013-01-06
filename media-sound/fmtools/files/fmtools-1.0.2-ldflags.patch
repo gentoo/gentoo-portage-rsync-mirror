@@ -1,0 +1,16 @@
+diff -uNr fmtools-1.0.2.ORIG//Makefile fmtools-1.0.2/Makefile
+--- fmtools-1.0.2.ORIG//Makefile	2010-10-19 20:57:24.000000000 +0100
++++ fmtools-1.0.2/Makefile	2010-10-19 20:58:52.000000000 +0100
+@@ -18,10 +18,10 @@
+ all: $(TARGETS)
+ 
+ fm: fm.c
+-	$(CC) $(CFLAGS) -o fm fm.c -lm
++	$(CC) $(LDFLAGS) $(CFLAGS) -o fm fm.c -lm
+ 
+ fmscan: fmscan.c
+-	$(CC) $(CFLAGS) -o fmscan fmscan.c -lm
++	$(CC) $(LDFLAGS) $(CFLAGS) -o fmscan fmscan.c -lm
+ 
+ clean: 
+ 	rm -f *~ *.o $(TARGETS)

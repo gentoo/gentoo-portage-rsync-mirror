@@ -1,0 +1,111 @@
+Index: cups/thread-private.h
+===================================================================
+--- cups/thread-private.h	(Revision 10434)
++++ cups/thread-private.h	(Revision 10435)
+@@ -3,7 +3,7 @@
+  *
+  *   Private threading definitions for CUPS.
+  *
+- *   Copyright 2009-2010 by Apple Inc.
++ *   Copyright 2009-2012 by Apple Inc.
+  *
+  *   These coded instructions, statements, and computer programs are the
+  *   property of Apple Inc. and are protected by Federal copyright
+Index: cups/thread.c
+===================================================================
+--- cups/thread.c	(Revision 10434)
++++ cups/thread.c	(Revision 10435)
+@@ -3,7 +3,7 @@
+  *
+  *   Threading primitives for CUPS.
+  *
+- *   Copyright 2009-2010 by Apple Inc.
++ *   Copyright 2009-2012 by Apple Inc.
+  *
+  *   These coded instructions, statements, and computer programs are the
+  *   property of Apple Inc. and are protected by Federal copyright
+@@ -113,7 +113,7 @@
+  * '_cupsThreadCreate()' - Create a thread.
+  */
+ 
+-int					/* O - 0 on failure, 1 on success */	
++int					/* O - 0 on failure, 1 on success */
+ _cupsThreadCreate(
+     _cups_thread_func_t func,		/* I - Entry point */
+     void                *arg)		/* I - Entry point context */
+@@ -223,7 +223,7 @@
+  * '_cupsThreadCreate()' - Create a thread.
+  */
+ 
+-int					/* O - 0 on failure, 1 on success */	
++int					/* O - 0 on failure, 1 on success */
+ _cupsThreadCreate(
+     _cups_thread_func_t func,		/* I - Entry point */
+     void                *arg)		/* I - Entry point context */
+@@ -309,6 +309,25 @@
+ {
+   (void)rwlock;
+ }
++
++
++/*
++ * '_cupsThreadCreate()' - Create a thread.
++ */
++
++int					/* O - 0 on failure, 1 on success */
++_cupsThreadCreate(
++    _cups_thread_func_t func,		/* I - Entry point */
++    void                *arg)		/* I - Entry point context */
++{
++  fputs("DEBUG: CUPS was compiled without threading support, no thread "
++        "created.\n", stderr);
++
++  (void)func;
++  (void)arg;
++
++  return (0);
++}
+ #endif /* HAVE_PTHREAD_H */
+ 
+ 
+Index: cups/globals.c
+===================================================================
+--- cups/globals.c	(Revision 10434)
++++ cups/globals.c	(Revision 10435)
+@@ -44,8 +44,10 @@
+ static pthread_once_t	cups_globals_key_once = PTHREAD_ONCE_INIT;
+ 					/* One-time initialization object */
+ #endif /* HAVE_PTHREAD_H */
++#if defined(HAVE_PTHREAD_H) || defined(WIN32)
+ static _cups_mutex_t	cups_global_mutex = _CUPS_MUTEX_INITIALIZER;
+ 					/* Global critical section */
++#endif /* HAVE_PTHREAD_H || WIN32 */
+ 
+ 
+ /*
+@@ -56,7 +58,9 @@
+ static void		cups_fix_path(char *path);
+ #endif /* WIN32 */
+ static _cups_globals_t	*cups_globals_alloc(void);
++#if defined(HAVE_PTHREAD_H) || defined(WIN32)
+ static void		cups_globals_free(_cups_globals_t *g);
++#endif /* HAVE_PTHREAD_H || WIN32 */
+ #ifdef HAVE_PTHREAD_H
+ static void		cups_globals_init(void);
+ #endif /* HAVE_PTHREAD_H */
+@@ -322,6 +326,7 @@
+  * 'cups_globals_free()' - Free global data.
+  */
+ 
++#if defined(HAVE_PTHREAD_H) || defined(WIN32)
+ static void
+ cups_globals_free(_cups_globals_t *cg)	/* I - Pointer to global data */
+ {
+@@ -354,6 +359,7 @@
+ 
+   free(cg);
+ }
++#endif /* HAVE_PTHREAD_H || WIN32 */
+ 
+ 
+ #ifdef HAVE_PTHREAD_H

@@ -1,0 +1,61 @@
+# ChangeLog for virtual/ruby-ffi
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.16 2012/10/28 17:18:57 armin76 Exp $
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> ruby-ffi-0.ebuild,
+  ruby-ffi-1.ebuild:
+  alpha stable
+
+  08 Jul 2012; Jeroen Roovers <jer@gentoo.org> ruby-ffi-1.ebuild:
+  Marked ~hppa (bug #417573).
+
+  06 May 2012; Kacper Kowalik <xarthisius@gentoo.org> ruby-ffi-0.ebuild:
+  ppc64 stable wrt #369573
+
+  17 Dec 2011; Raúl Porcel <armin76@gentoo.org> ruby-ffi-0.ebuild,
+  ruby-ffi-1.ebuild:
+  Add ~ia64
+
+  02 Oct 2011; Raúl Porcel <armin76@gentoo.org> ruby-ffi-0.ebuild:
+  sparc stable
+
+  02 Aug 2011; Markos Chandras <hwoarang@gentoo.org> ruby-ffi-0.ebuild:
+  Stable on amd64 wrt bug #348510
+
+  23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> ruby-ffi-0.ebuild:
+  ppc stable wrt #348510
+
+  20 Jul 2011; Thomas Kahle <tomka@gentoo.org> ruby-ffi-0.ebuild:
+  x86 stable per bug 348510
+
+*ruby-ffi-1 (09 Jul 2011)
+
+  09 Jul 2011; Hans de Graaff <graaff@gentoo.org> ruby-ffi-0.ebuild,
+  +ruby-ffi-1.ebuild:
+  Revision bump to create stable candidate without ruby19.
+
+  03 Dec 2010; Fabian Groffen <grobian@gentoo.org> ruby-ffi-0.ebuild:
+  Added Prefix keywords
+
+  30 Sep 2010; Brent Baude <ranger@gentoo.org> ruby-ffi-0.ebuild:
+  Marking ruby-ffi-0 ~ppc64 for bug 330283
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> ruby-ffi-0.ebuild:
+  Marking ruby-ffi-0 ~ppc for bug 330283
+
+  18 Sep 2010; Raúl Porcel <armin76@gentoo.org> ruby-ffi-0.ebuild:
+  Add ~sparc wrt #330283
+
+  12 Sep 2010; Hans de Graaff <graaff@gentoo.org> ruby-ffi-0.ebuild:
+  Add ree18.
+
+  29 Jul 2010; Christian Faulhammer <fauli@gentoo.org> ruby-ffi-0.ebuild:
+  add ~x86, bug 330283
+
+*ruby-ffi-0 (31 Jan 2010)
+
+  31 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> +ruby-ffi-0.ebuild,
+  +metadata.xml:
+  Add a virtual for the Ruby FFI implementation to have an easy way to
+  handle FFI-based extensions.
+

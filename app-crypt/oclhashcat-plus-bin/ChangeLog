@@ -1,0 +1,34 @@
+# ChangeLog for app-crypt/oclhashcat-plus-bin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-plus-bin/ChangeLog,v 1.6 2012/12/31 21:20:04 zerochaos Exp $
+
+*oclhashcat-plus-bin-0.12 (31 Dec 2012)
+
+  31 Dec 2012; Rick Farina <zerochaos@gentoo.org>
+  +oclhashcat-plus-bin-0.12.ebuild:
+  version bump
+
+  30 Oct 2012; Rick Farina <zerochaos@gentoo.org>
+  oclhashcat-plus-bin-0.09.ebuild:
+  seems the rm was unneeded in this release and didn't error on amd64 but does
+  on x86. removing.
+
+*oclhashcat-plus-bin-0.09 (10 Sep 2012)
+
+  10 Sep 2012; Rick Farina <zerochaos@gentoo.org>
+  +oclhashcat-plus-bin-0.09.ebuild:
+  version bump
+
+  04 Jul 2012; Rick Farina <zerochaos@gentoo.org>
+  oclhashcat-plus-bin-0.081.ebuild:
+  minor ebuild QA
+
+  04 Jul 2012; Rick Farina <zerochaos@gentoo.org>
+  oclhashcat-plus-bin-0.081.ebuild:
+  move loader, cleanup ebuild in oclhashcat-lite-bin style
+
+*oclhashcat-plus-bin-0.081 (02 Jul 2012)
+
+  02 Jul 2012; Rick Farina <zerochaos@gentoo.org> +metadata.xml,
+  +oclhashcat-plus-bin-0.081.ebuild:
+  initial commit of oclhashcat-plus-bin

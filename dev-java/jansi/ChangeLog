@@ -1,0 +1,19 @@
+# ChangeLog for dev-java/jansi
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jansi/ChangeLog,v 1.4 2011/08/13 07:07:41 xarthisius Exp $
+
+  13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> jansi-1.1.ebuild:
+  ppc stable wrt #348255
+
+  29 Dec 2010; Markos Chandras <hwoarang@gentoo.org> jansi-1.1.ebuild:
+  Stable on amd64 wrt bug #348255
+
+  15 Dec 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> jansi-1.1.ebuild:
+  x86 stable wrt bug #348255
+
+*jansi-1.1 (24 May 2010)
+
+  24 May 2010; Jean-Noël Rivasseau <elvanor@gentoo.org> +jansi-1.1.ebuild,
+  +metadata.xml:
+  Initial import.
+

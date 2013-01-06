@@ -1,0 +1,18 @@
+# ChangeLog for net-libs/libnetfilter_cttimeout
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_cttimeout/ChangeLog,v 1.3 2012/12/29 18:41:38 jer Exp $
+
+  29 Dec 2012; Jeroen Roovers <jer@gentoo.org>
+  libnetfilter_cttimeout-1.0.0.ebuild:
+  Verbose build.
+
+  24 Aug 2012; Jeroen Roovers <jer@gentoo.org>
+  libnetfilter_cttimeout-1.0.0.ebuild:
+  Marked ~hppa (bug #432380).
+
+*libnetfilter_cttimeout-1.0.0 (23 Aug 2012)
+
+  23 Aug 2012; Jeroen Roovers <jer@gentoo.org>
+  +libnetfilter_cttimeout-1.0.0.ebuild, +metadata.xml:
+  Initial commit for net-firewall/conntrack-tools-1.2 (bug #417939).
+

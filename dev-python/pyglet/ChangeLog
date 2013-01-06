@@ -1,0 +1,31 @@
+# ChangeLog for dev-python/pyglet
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyglet/ChangeLog,v 1.7 2012/04/11 00:03:31 floppym Exp $
+
+  11 Apr 2012; Mike Gilbert <floppym@gentoo.org> pyglet-1.1.4-r1.ebuild,
+  pyglet-1.1.4.ebuild:
+  Fix typo: REDEPEND -> RDEPEND.
+
+*pyglet-1.1.4-r1 (10 Apr 2012)
+
+  10 Apr 2012; Mike Gilbert <floppym@gentoo.org> +pyglet-1.1.4-r1.ebuild:
+  Fix html installation path and move examples to doc directory.
+
+  23 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyglet-1.1.4.ebuild:
+  Restricting pypy and jython
+
+  21 Dec 2010; Markos Chandras <hwoarang@gentoo.org> pyglet-1.1.4.ebuild:
+  Stable on amd64 wrt bug #348439
+
+  13 Dec 2010; Thomas Kahle <tomka@gentoo.org> pyglet-1.1.4.ebuild:
+  x86 stable per bug 348439
+
+  14 Nov 2010; Justin Lecher <jlec@gentoo.org> pyglet-1.1.4.ebuild:
+  Keyworded for ~-linux prefix
+
+*pyglet-1.1.4 (23 Sep 2010)
+
+  23 Sep 2010; Justin Lecher <jlec@gentoo.org> +pyglet-1.1.4.ebuild,
+  +metadata.xml:
+  Imported from sci overlay
+

@@ -1,0 +1,13 @@
+# ChangeLog for app-cdr/mkcdtoc
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mkcdtoc/ChangeLog,v 1.2 2010/09/05 13:58:13 sbriesen Exp $
+
+  05 Sep 2010; Stefan Briesenick <sbriesen@gentoo.org> mkcdtoc-1.0.ebuild:
+  install man-page to correct place.
+
+*mkcdtoc-1.0 (22 Jul 2010)
+
+  22 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org> +mkcdtoc-1.0.ebuild,
+  +metadata.xml:
+  initial commit
+

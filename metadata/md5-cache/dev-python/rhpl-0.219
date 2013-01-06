@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst postrm prepare unpack
+DEPEND=!<sys-libs/libkudzu-1.2 !s390? ( >=net-wireless/wireless-tools-28 ) sys-devel/gettext =dev-lang/python-2* >=app-arch/rpm2targz-9.0.0.3g
+DESCRIPTION=Library of python code used by Red Hat Linux programs
+EAPI=3
+HOMEPAGE=http://fedoraproject.org/wiki/SystemConfig
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=!<sys-libs/libkudzu-1.2 =dev-lang/python-2*
+SLOT=0
+SRC_URI=mirror://fedora-dev/development/source/SRPMS/rhpl-0.219-2.src.rpm
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=31e2a2b7b4188cf0f47eadce4dcbc55d

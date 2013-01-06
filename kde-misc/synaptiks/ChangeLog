@@ -1,0 +1,163 @@
+# ChangeLog for kde-misc/synaptiks
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.35 2012/10/29 16:38:10 mgorny Exp $
+
+  29 Oct 2012; Michał Górny <mgorny@gentoo.org> synaptiks-0.8.1.ebuild:
+  Use virtual for argparse.
+
+  21 May 2012; Johannes Huber <johu@gentoo.org> -synaptiks-0.8.0.ebuild:
+  Remove old.
+
+  21 May 2012; Johannes Huber <johu@gentoo.org> synaptiks-0.8.1.ebuild:
+  Stable for x86, wrt bug #415781
+
+  20 May 2012; Agostino Sarubbo <ago@gentoo.org> synaptiks-0.8.1.ebuild:
+  Stable for amd64, wrt bug #415781
+
+  06 May 2012; Johannes Huber <johu@gentoo.org>
+  -files/synaptiks-0.4.0-kcmdesktop.patch, -synaptiks-0.4.0-r1.ebuild:
+  Remove old.
+
+  05 May 2012; Markus Meier <maekke@gentoo.org> synaptiks-0.8.0.ebuild:
+  x86 stable, bug #401131
+
+  30 Apr 2012; Agostino Sarubbo <ago@gentoo.org> synaptiks-0.8.0.ebuild:
+  Stable for amd64, wrt bug #401131
+
+  17 Apr 2012; Michał Górny <mgorny@gentoo.org> synaptiks-0.4.0-r1.ebuild:
+  Use mirror://bitbucket.
+
+  27 Mar 2012; Johannes Huber <johu@gentoo.org> synaptiks-0.8.1.ebuild:
+  Set python 2 interpreter, bug #387533.
+
+*synaptiks-0.8.1 (26 Mar 2012)
+
+  26 Mar 2012; Johannes Huber <johu@gentoo.org>
+  +files/synaptiks-0.8.1-templatesfix.patch, +synaptiks-0.8.1.ebuild:
+  Version bump by Chris Reffett <geekboy72@gmail.com> wrt bug #409703.
+
+  26 Mar 2012; Johannes Huber <johu@gentoo.org> synaptiks-0.4.0-r1.ebuild,
+  synaptiks-0.8.0.ebuild:
+  Update homepage.
+
+  15 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  synaptiks-0.8.0.ebuild:
+  setuptools is also DEPEND, thx abcd \& arfrever
+
+  15 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  synaptiks-0.8.0.ebuild:
+  Add missing setuptools dependency
+
+  15 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  synaptiks-0.8.0.ebuild:
+  Removing --single-version-externally-managed, thx arfrever
+
+  15 Dec 2011; Johannes Huber <johu@gentoo.org> synaptiks-0.8.0.ebuild:
+  Use python 2, fixes bug #387533 thanks floppym. Use appropiate eclass for
+  test, fixes bug #394575. Fix SRC_URI, uses now mirror, thanks repoman.
+
+  04 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  synaptiks-0.8.0.ebuild:
+  Use kde4-base.eclass to automatically handle handbook useflag, bug 387421
+
+  18 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  synaptiks-0.8.0.ebuild:
+  Does not work with python-3, bug 387533
+
+*synaptiks-0.8.0 (16 Oct 2011)
+
+  16 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -synaptiks-0.6.2.ebuild, -synaptiks-0.7.ebuild, +synaptiks-0.8.0.ebuild:
+  Version bump; remove old
+
+*synaptiks-0.7 (21 Jul 2011)
+*synaptiks-0.6.2 (21 Jul 2011)
+
+  21 Jul 2011; Marc Schiffbauer <mschiff@gentoo.org> +synaptiks-0.6.2.ebuild,
+  +synaptiks-0.7.ebuild:
+  Version bump: 0.6.2 and 0.7. Drop 0.6.1. Thanks to Corentin Chary. Fixes bug
+  #375859
+
+*synaptiks-0.6.1 (28 May 2011)
+
+  28 May 2011; Andreas K. Hüttel <dilfridge@gentoo.org> 
+  +synaptiks-0.6.1.ebuild, metadata.xml:
+  Version bump, bug 353887
+
+  29 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  synaptiks-0.4.0-r1.ebuild:
+  Fix repoman warning.
+
+  29 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -synaptiks-0.3.2-r1.ebuild, synaptiks-0.4.0-r1.ebuild:
+  Stable latest per bug #351596 on amd64 and x86. Remove older.
+
+*synaptiks-0.4.0-r1 (03 Jan 2011)
+
+  03 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -synaptiks-0.4.0.ebuild, +synaptiks-0.4.0-r1.ebuild,
+  +files/synaptiks-0.4.0-kcmdesktop.patch:
+  Add upstream patch to fix type of kcm module (bug 342623)
+
+  21 Jul 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  synaptiks-0.4.0.ebuild:
+  Update linguas per bug #329337.
+
+  11 Apr 2010; Dror Levin <spatz@gentoo.org> synaptiks-0.4.0.ebuild:
+  Remove DOCS as they don't exist in newer version, bug 314745.
+
+*synaptiks-0.4.0 (11 Apr 2010)
+
+  11 Apr 2010; Tomáš Chvátal <scarabeus@gentoo.org>
+  +synaptiks-0.4.0.ebuild:
+  Version bump.
+
+*synaptiks-0.3.2-r1 (27 Feb 2010)
+
+  27 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +synaptiks-0.3.2-r1.ebuild:
+  Change SLOT from 0 to 4.
+
+*synaptiks-0.3.2 (04 Feb 2010)
+
+  04 Feb 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +synaptiks-0.3.2.ebuild:
+  Version bump.
+
+*synaptiks-0.3.0 (30 Jan 2010)
+
+  30 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +synaptiks-0.3.0.ebuild:
+  Version bump.
+
+*synaptiks-0.2.1 (05 Jan 2010)
+
+  05 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
+  +synaptiks-0.2.1.ebuild:
+  Version bump.
+
+  12 Dec 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/synaptiks-0.1.0-Xi.patch:
+  Drop old patch
+
+  11 Dec 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -synaptiks-0.1.0.ebuild, -synaptiks-0.1.0-r1.ebuild:
+  Drop no-longer required ebuild.
+
+*synaptiks-0.2.0 (25 Nov 2009)
+
+  25 Nov 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +synaptiks-0.2.0.ebuild:
+  Version bump.
+
+*synaptiks-0.1.0-r1 (30 Oct 2009)
+
+  30 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +synaptiks-0.1.0-r1.ebuild, +files/synaptiks-0.1.0-Xi.patch:
+  Port to libXi >= 1.3 wrt #291181, thanks to DaggyStyle for reporting.
+
+*synaptiks-0.1.0 (28 Oct 2009)
+
+  28 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +synaptiks-0.1.0.ebuild:
+  Initial commit (alternative ksynaptics replacement).

@@ -1,0 +1,27 @@
+# ChangeLog for net-analyzer/barnyard2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard2/ChangeLog,v 1.5 2011/04/02 12:54:23 ssuominen Exp $
+
+  02 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> barnyard2-1.8.ebuild,
+  barnyard2-1.9.ebuild:
+  Use net-libs/libpcap instead of virtual/libpcap wrt #358835.
+
+*barnyard2-1.9 (15 Feb 2011)
+
+  15 Feb 2011; Patrick Lauer <patrick@gentoo.org> +barnyard2-1.9.ebuild,
+  metadata.xml:
+  Bump for #354915, thanks to Jason Wallace
+
+  17 Jun 2010; Patrick Lauer <patrick@gentoo.org> barnyard2-1.8.ebuild:
+  Migrating away from deprecated postgres virtuals
+
+  17 Mar 2010; Patrick Lauer <patrick@gentoo.org> barnyard2-1.8.ebuild:
+  Removing incomplete sguil support for now
+
+*barnyard2-1.8 (16 Mar 2010)
+
+  16 Mar 2010; Patrick Lauer <patrick@gentoo.org> +files/barnyard2.confd,
+  +files/barnyard2.initd, +barnyard2-1.8.ebuild, +metadata.xml:
+  Initial import. Ebuild by Jason Wallace based on work by Fabio
+  Scaccabarozzi and Han Boetes . Closes #279019 and #307783
+

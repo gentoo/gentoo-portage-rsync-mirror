@@ -1,0 +1,65 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+depend() {
+	need net
+	use clamd \
+		squid apache2 bfilter mman junkbuster oops polipo privoxy tinyproxy wwwoffled
+	#havp could be used in conjuction with any parent proxies enumerated above
+}
+
+get_havp_opt() {
+	eval HAVP_$1=`awk '/^[ \t]*'$1'[ \t]+/ { print $2; }' < /etc/havp/havp.config`
+}
+
+checkconfig() {
+	if [ ! -d /var/run/havp ] && ! mkdir /var/run/havp; then
+		eeror "Failed to create /var/run/havp"
+		return 1
+	fi
+	if [ ! -d /var/tmp/havp ] && ! mkdir /var/tmp/havp; then
+		eeror "Failed to create /var/tmp/havp"
+		return 1
+	fi
+	
+	if [ ! -f /etc/havp/havp.config ] ; then
+		eerror "No /etc/havp/havp.config file exists!"
+		return 1
+	fi
+
+	local HAVP_USER
+	get_havp_opt USER
+	if [ -n "${HAVP_USER}" ] && ! getent passwd ${HAVP_USER} > /dev/null ; then
+		eerror "${HAVP_USER} user is missing!"
+		return 1
+	fi
+	local HAVP_GROUP
+	get_havp_opt GROUP
+	if [ -n "${HAVP_GROUP}" ] && ! getent group ${HAVP_GROUP} > /dev/null ; then
+		eerror "${HAVP_GROUP} group is missing!"
+		return 1
+	fi
+
+	chown -R "${HAVP_USER:-havp}:${HAVP_GROUP:-havp}" /var/run/havp /var/tmp/havp /var/log/havp && \
+		chmod -R 0755 /var/run/havp &&
+		chmod -R 0750 /var/tmp/havp
+}
+
+
+start() {
+	checkconfig || return 1
+	
+	ebegin "Starting HTTP AntiVirus proxy"
+	start-stop-daemon --start --exec /usr/sbin/havp > /dev/null
+	eend $?
+}
+
+stop() {
+	local HAVP_PIDFILE
+	get_havp_opt PIDFILE
+
+	ebegin "Stopping HTTP AntiVirus proxy"
+	start-stop-daemon --stop --pidfile=${HAVD_PIDFILE:-/var/run/havp/havp.pid}
+	eend $?
+}

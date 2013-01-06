@@ -1,0 +1,47 @@
+diff --git a/qtiplot/src/core/ApplicationWindow.cpp b/qtiplot/src/core/ApplicationWindow.cpp
+index 56c52a7..5422c0a 100755
+--- a/qtiplot/src/core/ApplicationWindow.cpp
++++ b/qtiplot/src/core/ApplicationWindow.cpp
+@@ -15912,6 +15912,7 @@ void ApplicationWindow::showBugTracker()
+ 	QDesktopServices::openUrl(QUrl("https://developer.berlios.de/bugs/?group_id=6626"));
+ }
+ 
++#ifdef QTIPLOT_SUPPORT
+ void ApplicationWindow::showDonationDialog()
+ {
+ 	QString s = tr("<font size=+2, color = darkBlue><b>QtiPlot is open-source software and its development required hundreds of hours of work.<br><br>\
+@@ -15927,6 +15928,7 @@ void ApplicationWindow::showDonationDialog()
+ 	if (msg->clickedButton() == btn)
+ 		showDonationsPage();
+ }
++#endif
+ 
+ void ApplicationWindow::parseCommandLineArguments(const QStringList& args)
+ {
+diff --git a/qtiplot/src/core/ApplicationWindow.h b/qtiplot/src/core/ApplicationWindow.h
+index 5c479f9..f973557 100755
+--- a/qtiplot/src/core/ApplicationWindow.h
++++ b/qtiplot/src/core/ApplicationWindow.h
+@@ -908,7 +908,9 @@ public slots:
+ 	void receivedVersionFile(bool error);
+ 	//!  called when the user presses the actionCheckUpdates
+ 	void searchForUpdates();
++#ifdef QTIPLOT_SUPPORT
+ 	void showDonationDialog();
++#endif
+ 	//! Open support page in external browser
+ 	void showSupportPage();
+ 	//! Open donation page in external browser
+diff --git a/qtiplot/src/core/QtiPlotApplication.cpp b/qtiplot/src/core/QtiPlotApplication.cpp
+index 69a5b0f..8c3637a 100755
+--- a/qtiplot/src/core/QtiPlotApplication.cpp
++++ b/qtiplot/src/core/QtiPlotApplication.cpp
+@@ -57,7 +57,7 @@ QtiPlotApplication::QtiPlotApplication( int & argc, char ** argv) : QApplication
+ 
+ 		ApplicationWindow *mw = new ApplicationWindow(factorySettings);
+ 		mw->restoreApplicationGeometry();
+-	#ifndef QTIPLOT_PRO
++	#ifdef QTIPLOT_SUPPORT
+ 		mw->showDonationDialog();
+ 	#endif
+ 		if (mw->autoSearchUpdates){

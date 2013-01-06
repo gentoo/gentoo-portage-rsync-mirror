@@ -1,0 +1,33 @@
+# ChangeLog for dev-haskell/texmath
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/texmath/ChangeLog,v 1.6 2012/11/25 06:09:58 gienah Exp $
+
+*texmath-0.6.1.1 (25 Nov 2012)
+
+  25 Nov 2012; Mark Wright <gienah@gentoo.org> +texmath-0.6.1.1.ebuild:
+  Bump texmath to 0.6.1.1
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> texmath-0.5.0.1.ebuild,
+  texmath-0.6.0.3.ebuild, texmath-0.6.0.4.ebuild, texmath-0.6.0.6.ebuild:
+  move dev-haskell/texmath/texmath-0.6.0.3.ebuild ebuild to mirror://hackage
+
+*texmath-0.6.0.6 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +texmath-0.6.0.6.ebuild:
+  Bump texmath to 0.6.0.6
+
+*texmath-0.6.0.4 (07 Apr 2012)
+
+  07 Apr 2012; Mark Wright <gienah@gentoo.org> +texmath-0.6.0.4.ebuild:
+  Bump texmath to 0.6.0.4
+
+*texmath-0.6.0.3 (10 Mar 2012)
+
+  10 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> +texmath-0.6.0.3.ebuild:
+  Version bump.
+
+*texmath-0.5.0.1 (23 Apr 2011)
+
+  23 Apr 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +texmath-0.5.0.1.ebuild, +metadata.xml:
+  Initial version.

@@ -1,0 +1,27 @@
+# ChangeLog for dev-java/higlayout
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/higlayout/ChangeLog,v 1.5 2007/10/27 14:01:14 angelos Exp $
+
+  27 Oct 2007; Christoph Mende <angelos@gentoo.org> higlayout-1.0-r1.ebuild:
+  Stable on amd64 wrt bug #190643
+
+  03 Feb 2007; Krzysiek Pawlik <nelchael@gentoo.org>
+  higlayout-1.0-r1.ebuild:
+  Added ~ppc, see bug #160773.
+
+  03 Feb 2007; William L. Thomson Jr. <wltjr@gentoo.org>
+  higlayout-1.0-r1.ebuild:
+  Added ~amd64
+
+*higlayout-1.0-r1 (09 Jan 2007)
+
+  09 Jan 2007; Vlastimil Babka <caster@gentoo.org> -higlayout-1.0.ebuild,
+  +higlayout-1.0-r1.ebuild:
+  Fix jar command.
+
+*higlayout-1.0 (07 Jan 2007)
+
+  07 Jan 2007; Vlastimil Babka <caster@gentoo.org> +metadata.xml,
+  +higlayout-1.0.ebuild:
+  New package, as Heaven requested in bug #160773.
+

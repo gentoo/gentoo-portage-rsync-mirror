@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=sys-devel/bison httppower? ( net-misc/curl ) !app-accessibility/speech-tools
+DESCRIPTION=RPC/PDU control and monitoring service for data center or compute cluster power management
+EAPI=1
+HOMEPAGE=http://powerman.sourceforge.net/
+IUSE=+httppower +genders
+KEYWORDS=amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=sys-libs/freeipmi-0.2.3
+SLOT=0
+SRC_URI=mirror://sourceforge/powerman/powerman-2.3.4.tar.bz2
+_md5_=ab911b437787f024aee3745ad78d7c2f

@@ -1,0 +1,35 @@
+--- libsmbios-2.2.26/Makefile.am
++++ libsmbios-2.2.26/Makefile.am
+@@ -18,8 +18,8 @@
+ TESTS=
+ 
+ AM_CPPFLAGS = -I$(top_builddir)/out/include -I$(top_srcdir)/src/include -DLIBSMBIOS_LOCALEDIR=\"$(localedir)\"
+-AM_CFLAGS = -Werror -Wall
+-AM_CXXFLAGS = -Werror -Wall
++AM_CFLAGS = -Wall
++AM_CXXFLAGS = -Wall
+ AM_LDADD = $(LIBINTL)
+ AM_LDFLAGS = -L$(top_builddir)/out/ -Wl,--no-undefined @LDFLAG_AS_NEEDED@
+ 
+--- libsmbios-2.2.26/src/include/smbios/config/compiler/gcc.hpp
++++ libsmbios-2.2.26/src/include/smbios/config/compiler/gcc.hpp
+@@ -113,7 +113,7 @@
+ #  error "Compiler not configured - please reconfigure"
+ #endif
+ //
+-#if (__GNUC__ > 4) || ((__GNUC__ == 4) && (__GNUC_MINOR__ > 5))
++#if (__GNUC__ > 4) || ((__GNUC__ == 4) && (__GNUC_MINOR__ > 6))
+ #  if defined(LIBSMBIOS_ASSERT_CONFIG)
+ #     error "Unknown compiler version - please run the configure tests and report the results"
+ #  else
+--- libsmbios-2.2.26/src/include/smbios_c/config/compiler/gcc.h
++++ libsmbios-2.2.26/src/include/smbios_c/config/compiler/gcc.h
+@@ -24,7 +24,7 @@
+ #  error "GCC versions < 2.90 not supported"
+ #endif
+ //
+-#if (__GNUC__ > 4) || ((__GNUC__ == 4) && (__GNUC_MINOR__ > 5))
++#if (__GNUC__ > 4) || ((__GNUC__ == 4) && (__GNUC_MINOR__ > 6))
+ #  if defined(LIBSMBIOS_C_ASSERT_CONFIG)
+ #     error "Unknown compiler version - please run the configure tests and report the results"
+ #  else

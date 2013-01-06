@@ -1,0 +1,36 @@
+# ChangeLog for dev-perl/XML-DOM-XPath
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM-XPath/ChangeLog,v 1.9 2012/06/24 13:00:12 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -XML-DOM-XPath-0.14.ebuild:
+  Cleanup
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> XML-DOM-XPath-0.140.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
+
+*XML-DOM-XPath-0.140.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +XML-DOM-XPath-0.140.0.ebuild:
+  Change version scheme
+
+  14 May 2009; Kenneth Prugh <ken69267@gentoo.org>
+  XML-DOM-XPath-0.14.ebuild:
+  amd64 stable, bug #269579
+
+  12 May 2009; Torsten Veller <tove@gentoo.org> XML-DOM-XPath-0.14.ebuild:
+  Stable on x86 (#269579)
+
+  16 Mar 2009; Torsten Veller <tove@gentoo.org> XML-DOM-XPath-0.14.ebuild:
+  Add test dependencies. EAPI=2
+
+  15 Mar 2009; Andrey Kislyuk <weaver@gentoo.org> XML-DOM-XPath-0.14.ebuild:
+  fix typo
+
+*XML-DOM-XPath-0.14 (15 Mar 2009)
+
+  15 Mar 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +XML-DOM-XPath-0.14.ebuild:
+  New package, dependency for sci-biology/bioperl. Ebuild written by me.

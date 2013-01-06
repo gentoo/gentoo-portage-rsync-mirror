@@ -1,0 +1,14 @@
+# ChangeLog for dev-python/pytest-runner
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-runner/ChangeLog,v 1.2 2012/12/28 06:06:22 prometheanfire Exp $
+
+  28 Dec 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +files/pytest-runner-1.1_setup.patch:
+  adding patch to remove setup_requires from setup.py
+
+*pytest-runner-1.1 (28 Dec 2012)
+
+  28 Dec 2012; Matthew Thode <prometheanfire@gentoo.org>
+  +pytest-runner-1.1.ebuild, +metadata.xml:
+  initial add of pytest-runner (needed for dev-python/keyring)
+

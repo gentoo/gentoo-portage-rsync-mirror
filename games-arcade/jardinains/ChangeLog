@@ -1,0 +1,31 @@
+# ChangeLog for games-arcade/jardinains
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/ChangeLog,v 1.7 2012/12/28 16:43:28 tupone Exp $
+
+  28 Dec 2012; Tupone Alfredo <tupone@gentoo.org> jardinains-2.0.ebuild:
+  Use QA_PREBUILT. Bug #442636 by Diego Elio Pettenò
+
+  22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove humpback from metadata.xml (#34793)
+
+  27 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  jardinains-2.0.ebuild:
+  x86 stable wrt bug #303607
+
+  05 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org>
+  jardinains-2.0.ebuild:
+  skip installing OSX fork files (bug #295782)
+
+  29 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  jardinains-2.0.ebuild:
+  EAPI=2; fix deps (bug #204228)
+
+  12 Mar 2007; Marius Mauch <genone@gentoo.org> jardinains-2.0.ebuild:
+  Replacing einfo with elog
+
+*jardinains-2.0 (02 Feb 2007)
+
+  02 Feb 2007; Gustavo Felisberto <humpback@gentoo.org>; +files/strings-pt.patch,
+  +metadata.xml, +jardinains-2.0.ebuild:
+  Initial import. Will clean it up VERY SOON!
+

@@ -1,0 +1,20 @@
+# ChangeLog for x11-misc/qxkb
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qxkb/ChangeLog,v 1.3 2012/12/25 10:07:36 pesa Exp $
+
+*qxkb-0.4.5 (25 Dec 2012)
+
+  25 Dec 2012; Davide Pesavento <pesa@gentoo.org> +qxkb-0.4.5.ebuild:
+  Version bump.
+
+*qxkb-0.4.4-r1 (13 Sep 2012)
+
+  13 Sep 2012; Ben de Groot <yngwin@gentoo.org> +qxkb-0.4.4-r1.ebuild,
+  -qxkb-0.4.4.ebuild:
+  Add setxkbmap as needed runtime dependency
+
+*qxkb-0.4.4 (29 Apr 2012)
+
+  29 Apr 2012; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +qxkb-0.4.4.ebuild:
+  Initial commit

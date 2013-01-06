@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+<email>xmw@gentoo.org</email>
+<name>Michael Weber</name>
+</maintainer>
+<use>
+	<flag name="cryptsetup">Add cryptsetup support</flag>
+	<flag name="device-mapper">Add device-mapper support</flag>
+	<flag name="dmraid">Add dmraid support</flag>
+	<flag name="mdadm">Add mdadm support</flag>
+</use>
+</pkgmetadata>
+

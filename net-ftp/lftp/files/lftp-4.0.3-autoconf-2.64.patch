@@ -1,0 +1,11 @@
+--- configure.ac-old	2009-10-16 18:44:26.000000000 +0200
++++ configure.ac	2009-11-21 15:09:58.000000000 +0100
+@@ -255,7 +255,7 @@
+ AC_ARG_WITH(gnutls, AS_HELP_STRING([--without-gnutls], [don't use GNUTLS library]),
+       [with_gnutls=$withval], [with_gnutls=yes])
+ AC_ARG_WITH(openssl,
+-AS_HELP_STRING([--with-openssl[[=/path]]], [use OpenSSL [at /path]])
++AS_HELP_STRING([--with-openssl@<:@=/path@:>@], [use OpenSSL @<:@at /path@:>@])
+ AS_HELP_STRING([--without-openssl], [don't use OpenSSL (default)]),
+       [with_openssl=$withval], [with_openssl=no])
+ case "$with_openssl" in

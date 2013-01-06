@@ -1,0 +1,20 @@
+# ChangeLog for app-office/pinpoint
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/pinpoint/ChangeLog,v 1.3 2012/05/03 20:00:41 jdhore Exp $
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> pinpoint-0.1.2.ebuild,
+  pinpoint-0.1.4.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*pinpoint-0.1.4 (01 Dec 2011)
+
+  01 Dec 2011; Mart Raudsepp <leio@gentoo.org> +pinpoint-0.1.4.ebuild:
+  Version bump. Start of speaker screen support, camera based background
+  support, screensaver inhibiting when fullscreen, etc
+
+*pinpoint-0.1.2 (24 Aug 2011)
+
+  24 Aug 2011; Arun Raghavan <ford_prefect@gentoo.org> +pinpoint-0.1.2.ebuild,
+  +metadata.xml:
+  Initial version of the handly little presentation tool.
+

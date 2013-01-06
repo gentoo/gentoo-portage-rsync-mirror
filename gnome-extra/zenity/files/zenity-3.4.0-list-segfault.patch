@@ -1,0 +1,41 @@
+From 4a30be17b3adfd7b8383f5c23fae71e31933326b Mon Sep 17 00:00:00 2001
+From: Arx Cruz <arxcruz@gnome.org>
+Date: Tue, 17 Apr 2012 16:50:52 -0300
+Subject: [PATCH] Bug #673529 Fix segmentation fault in --list option
+
+---
+ src/tree.c |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/tree.c b/src/tree.c
+index ad4a6d1..721817e 100644
+--- a/src/tree.c
++++ b/src/tree.c
+@@ -120,13 +120,13 @@ zenity_tree_handle_stdin (GIOChannel  *channel,
+ 
+     string = g_string_new (NULL);
+ 
+-    while (channel->is_readable != TRUE)
++    while (g_io_channel_get_flags(channel) != G_IO_FLAG_IS_READABLE)
+       ;
+     do {
+       gint status;
+ 
+       do {
+-        if (channel->is_readable == TRUE)
++        if (g_io_channel_get_flags(channel) == G_IO_FLAG_IS_READABLE)
+           status = g_io_channel_read_line_string (channel, string, NULL, &error);
+         else
+           return FALSE;
+@@ -645,7 +645,7 @@ zenity_tree_dialog_response (GtkWidget *widget, int response, gpointer data)
+       zen_data->exit_code = zenity_util_return_exit_code (ZENITY_ESC);
+       break;
+   }
+-  if (channel->is_readable == TRUE)
++  if (channel != NULL && g_io_channel_get_flags (channel) == G_IO_FLAG_IS_READABLE)
+     g_io_channel_shutdown (channel, TRUE, NULL);
+ 
+   gtk_main_quit ();
+-- 
+1.7.8.6
+

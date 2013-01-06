@@ -1,0 +1,30 @@
+diff -NrU5 ITVal-1.0.orig/FDDL/mdd.h ITVal-1.0/FDDL/mdd.h
+--- ITVal-1.0.orig/FDDL/mdd.h	2009-06-13 14:21:51.000000000 -0600
++++ ITVal-1.0/FDDL/mdd.h	2009-06-13 14:25:07.000000000 -0600
+@@ -29,10 +29,11 @@
+ //#define BRIEF_DEBUG
+ 
+ #ifndef FDDL_MDD_H
+ #   define FDDL_MDD_H 1
+ 
++#   include <cstdio>
+ #   include <iostream>
+ #   include <assert.h>
+ 
+ #   include <FDDL/mddtypes.h>
+ #   include <FDDL/caches.h>
+diff -NrU5 ITVal-1.0.orig/src/structures.h ITVal-1.0/src/structures.h
+--- ITVal-1.0.orig/src/structures.h	2009-06-13 14:21:51.000000000 -0600
++++ ITVal-1.0/src/structures.h	2009-06-13 14:32:40.000000000 -0600
+@@ -28,10 +28,11 @@
+ 
+ #ifndef __STRUCTURES_H
+ #define __STRUCTURES_H
+ 
+ #include <stdlib.h>
++#include <cstdio>
+ 
+ //Linked list of IP addresses
+ class address
+ {
+ public:

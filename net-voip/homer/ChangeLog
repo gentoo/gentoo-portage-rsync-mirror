@@ -1,0 +1,11 @@
+# ChangeLog for net-voip/homer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/ChangeLog,v 1.1 2012/12/23 17:50:07 hwoarang Exp $
+
+*homer-9999 (23 Dec 2012)
+*homer-0.24.1 (23 Dec 2012)
+
+  23 Dec 2012; Markos Chandras <hwoarang@gentoo.org> +homer-0.24.1.ebuild,
+  +homer-9999.ebuild, +metadata.xml:
+  Initial commit of the homer application. Bug #411977. Thanks to Marcel
+  Pennewiß <gentoo@pennewiss.de> who will maintain it

@@ -1,0 +1,43 @@
+# ChangeLog for sys-fs/safecopy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/ChangeLog,v 1.9 2012/04/26 10:58:20 scarabeus Exp $
+
+*safecopy-1.7 (26 Apr 2012)
+
+  26 Apr 2012; Tomáš Chvátal <scarabeus@gentoo.org> +safecopy-1.7.ebuild:
+  Version bump to latest.
+
+  11 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop me from maint.
+
+  31 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> safecopy-1.6.ebuild:
+  EAPI=4. Stabilise on amd64 and x86.
+
+*safecopy-1.6 (05 Jan 2011)
+
+  05 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org> -safecopy-1.5.ebuild,
+  +safecopy-1.6.ebuild:
+  Version bump. Drop old. Fixes bug 338068.
+
+*safecopy-1.5 (29 Jul 2009)
+
+  29 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org> -safecopy-1.3.ebuild,
+  -files/safecopy-1.3-sandbox.patch, -safecopy-1.4.ebuild,
+  +safecopy-1.5.ebuild:
+  Version bump. Remove old.
+
+*safecopy-1.4 (16 Jul 2009)
+
+  16 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> +safecopy-1.4.ebuild:
+  Version bump wrt #277418, thanks to Diego E. Pettenò and Corvus Corax.
+
+  27 May 2009; Tomáš Chvátal <scarabeus@gentoo.org> safecopy-1.3.ebuild:
+  Modify the test handling. Fixes QA issues. Thx to nirbheek for pointing
+  out.
+
+*safecopy-1.3 (27 May 2009)
+
+  27 May 2009; Tomáš Chvátal <scarabeus@gentoo.org> +safecopy-1.3.ebuild,
+  +files/safecopy-1.3-sandbox.patch, +metadata.xml:
+  Intial commit. Per bug #257714. Thanks to Corvus Corax for ebuild.
+

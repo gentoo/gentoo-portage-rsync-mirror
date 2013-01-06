@@ -1,0 +1,17 @@
+diff -NrU5 lxpanel-0.5.10.original/configure.ac lxpanel-0.5.10/configure.ac
+--- lxpanel-0.5.10.original/configure.ac	2012-06-10 15:22:21.000000000 -0600
++++ lxpanel-0.5.10/configure.ac	2012-08-10 20:52:10.101918339 -0600
+@@ -38,11 +38,12 @@
+ fi
+ 
+ pkg_modules="$pkg_modules \
+              gio-unix-2.0 \
+              gthread-2.0 \
+-             libmenu-cache"
++             libmenu-cache \
++	     gmodule-2.0"
+ #             libstartup-notification-1.0"
+ PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])
+ AC_SUBST(PACKAGE_CFLAGS)
+ AC_SUBST(PACKAGE_LIBS)
+ 

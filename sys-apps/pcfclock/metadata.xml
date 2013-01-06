@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>sbriesen@gentoo.org</email>
+		<name>Stefan Briesenick</name>
+	</maintainer>
+	<longdescription lang="en">
+		The pcfclock driver for GNU/Linux supports the parallel port radio
+		clock sold by Conrad Electronic under order number 967602. The radio
+		clock, which is put between your parallel port and your printer,
+		receives the legal German time, i.e. CET or CEST, from the DCF77
+		transmitter and uses it to set its internal quartz clock.
+	</longdescription>
+</pkgmetadata>

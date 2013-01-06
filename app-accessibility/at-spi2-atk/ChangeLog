@@ -1,0 +1,83 @@
+# ChangeLog for app-accessibility/at-spi2-atk
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.16 2012/12/29 16:03:22 blueness Exp $
+
+  29 Dec 2012; Anthony G. Basile <blueness@gentoo.org> at-spi2-atk-2.6.2.ebuild:
+  Keyword ~mips
+
+  18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> at-spi2-atk-2.4.0.ebuild,
+  at-spi2-atk-2.6.1.ebuild, at-spi2-atk-2.6.2.ebuild:
+  Add ~ia64, wrt to bug #441962
+
+*at-spi2-atk-2.6.2 (22 Nov 2012)
+
+  22 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -at-spi2-atk-2.6.0.ebuild, +at-spi2-atk-2.6.2.ebuild:
+  Version bump. Drop old revision.
+
+  12 Nov 2012; Anthony G. Basile <blueness@gentoo.org> at-spi2-atk-2.6.0.ebuild,
+  at-spi2-atk-2.6.1.ebuild:
+  keyword ~ppc ~ppc64, bug #441692
+
+  12 Nov 2012; Anthony G. Basile <blueness@gentoo.org> at-spi2-atk-2.4.0.ebuild:
+  keyword ~ppc ~ppc64, bug #441692
+
+*at-spi2-atk-2.6.1 (28 Oct 2012)
+
+  28 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -at-spi2-atk-2.2.2.ebuild, +at-spi2-atk-2.6.1.ebuild:
+  Version bump.
+
+  17 Oct 2012; Matt Turner <mattst88@gentoo.org> at-spi2-atk-2.6.0.ebuild:
+  Added ~alpha.
+
+  27 Sep 2012; Matt Turner <mattst88@gentoo.org> at-spi2-atk-2.4.0.ebuild,
+  at-spi2-atk-2.6.0.ebuild:
+  Added ~alpha, bug 411761.
+
+*at-spi2-atk-2.6.0 (25 Sep 2012)
+
+  25 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  at-spi2-atk-2.2.2.ebuild, at-spi2-atk-2.4.0.ebuild,
+  +at-spi2-atk-2.6.0.ebuild:
+  Version bump for gtk+-3.6 and with various bugfixes. Now uses
+  XDG_RUNTIME_DIR. Make license more precise.
+
+*at-spi2-atk-2.4.0 (14 May 2012)
+
+  14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -at-spi2-atk-2.0.2.ebuild, -at-spi2-atk-2.2.1-r1.ebuild,
+  -files/at-spi2-atk-2.2.1-socket_ref_state_set-NULL.patch,
+  +at-spi2-atk-2.4.0.ebuild:
+  Version bump for gnome-3.4. Drop old.
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> at-spi2-atk-2.0.2.ebuild,
+  at-spi2-atk-2.2.1-r1.ebuild, at-spi2-atk-2.2.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  21 Apr 2012; Markus Meier <maekke@gentoo.org> at-spi2-atk-2.2.2.ebuild:
+  add ~arm, bug #411761
+
+  18 Apr 2012; Jeroen Roovers <jer@gentoo.org> at-spi2-atk-2.2.2.ebuild:
+  Marked ~hppa (bug #411761).
+
+*at-spi2-atk-2.2.2 (20 Nov 2011)
+
+  20 Nov 2011; Pacho Ramos <pacho@gentoo.org> +at-spi2-atk-2.2.2.ebuild:
+  Version bump, also try to not skip broken test as it passes for me (if still
+  valid, please report a bug to try to investigate the problem a bit more).
+
+*at-spi2-atk-2.2.1-r1 (05 Nov 2011)
+
+  05 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +at-spi2-atk-2.2.1-r1.ebuild,
+  +files/at-spi2-atk-2.2.1-socket_ref_state_set-NULL.patch:
+  Bump to 2.2.1 from the gnome overlay. Notable changes: updates for atk-2.2
+  API, stability improvements.
+
+*at-spi2-atk-2.0.2 (14 Aug 2011)
+
+  14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +at-spi2-atk-2.0.2.ebuild,
+  +files/at-spi2-atk-2.0.2-disable-teamspaces-test.patch, +metadata.xml:
+  Move from gnome overlay for GNOME 3

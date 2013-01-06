@@ -1,0 +1,6 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.use.mask,v 1.1 2011/08/23 19:40:04 halcy0n Exp $
+
+# Intel Integrated Primitive (sci-libs/ipp) support
+media-libs/opencv ipp

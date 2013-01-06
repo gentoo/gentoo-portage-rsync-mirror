@@ -1,0 +1,31 @@
+# ChangeLog for dev-vcs/bzr-fastimport
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/ChangeLog,v 1.6 2012/08/11 09:29:58 ago Exp $
+
+  11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> bzr-fastimport-0.13.0.ebuild:
+  Stable for amd64, wrt bug #427522
+
+  21 Jul 2012; Jeff Horelick <jdhore@gentoo.org> bzr-fastimport-0.13.0.ebuild:
+  marked x86 per bug 427522
+
+*bzr-fastimport-0.13.0 (16 Mar 2012)
+
+  16 Mar 2012; Christian Faulhammer <fauli@gentoo.org>
+  -bzr-fastimport-0.11.0.ebuild, +bzr-fastimport-0.13.0.ebuild:
+  version bump and clean up
+
+*bzr-fastimport-0.12.0 (25 Feb 2012)
+
+  25 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +bzr-fastimport-0.12.0.ebuild:
+  Version bump.
+
+  13 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
+  Add to bazaar herd, acked by fauli.
+
+*bzr-fastimport-0.11.0 (13 Feb 2012)
+
+  13 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +bzr-fastimport-0.11.0.ebuild, +metadata.xml:
+  New ebuild for a fastimport plugin for bzr.
+

@@ -1,0 +1,9 @@
+# ChangeLog for sci-libs/cmpfit
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cmpfit/ChangeLog,v 1.1 2012/11/19 23:57:56 bicatali Exp $
+
+*cmpfit-1.2 (19 Nov 2012)
+
+  19 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> +cmpfit-1.2.ebuild,
+  +metadata.xml:
+  Initial import

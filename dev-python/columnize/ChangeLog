@@ -1,0 +1,21 @@
+# ChangeLog for dev-python/columnize
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/columnize/ChangeLog,v 1.4 2012/10/31 10:00:54 patrick Exp $
+
+  31 Oct 2012; Patrick Lauer <patrick@gentoo.org> columnize-0.3.3.ebuild:
+  Adding ~x86 keyword
+
+  04 Dec 2011; Markos Chandras <hwoarang@gentoo.org> columnize-0.3.3.ebuild:
+  Update LICENSE. Patch by Arfrever.
+
+*columnize-0.3.3 (07 Nov 2010)
+
+  07 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -columnize-0.3.2.ebuild, +columnize-0.3.3.ebuild:
+  Version bump.
+
+*columnize-0.3.2 (25 Dec 2009)
+
+  25 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +columnize-0.3.2.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.

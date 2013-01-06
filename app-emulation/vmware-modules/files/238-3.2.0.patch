@@ -1,0 +1,103 @@
+diff --git a/vmmon-only/linux/iommu.c b/vmmon-only/linux/iommu.c
+index b0ee013..f0f5c9a 100644
+--- a/vmmon-only/linux/iommu.c
++++ b/vmmon-only/linux/iommu.c
+@@ -36,6 +36,12 @@
+ #define PCI_BDF_SLOTFUNC(bdf) PCI_DEVFN(PCI_SLOT(bdf), PCI_FUNC(bdf))
+ #define PCI_BDF_BUS(bdf)      (((bdf) >> 8) & 0xff)
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 2, 0)
++#include <linux/pci.h>
++#define iommu_found() iommu_present(&pci_bus_type)
++#define iommu_domain_alloc() iommu_domain_alloc(&pci_bus_type)
++#endif
++
+ typedef struct PassthruDevice {
+    struct pci_dev *pdev;
+    VMLinux *vmLinux;
+diff --git a/vmnet-only/filter.c b/vmnet-only/filter.c
+index b0017d7..6c0687f 100644
+--- a/vmnet-only/filter.c
++++ b/vmnet-only/filter.c
+@@ -41,6 +41,10 @@
+ #include "vnetInt.h"
+ #include "vmnetInt.h"
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 2, 0)
++#include <linux/export.h>
++#endif
++
+ // VNet_FilterLogPacket.action for dropped packets
+ #define VNET_FILTER_ACTION_DRP         (1)
+ #define VNET_FILTER_ACTION_DRP_SHORT   (2)
+diff --git a/vmnet-only/netif.c b/vmnet-only/netif.c
+index b3c752b..79d4896 100644
+--- a/vmnet-only/netif.c
++++ b/vmnet-only/netif.c
+@@ -62,7 +62,9 @@ static int  VNetNetifClose(struct net_device *dev);
+ static int  VNetNetifStartXmit(struct sk_buff *skb, struct net_device *dev);
+ static struct net_device_stats *VNetNetifGetStats(struct net_device *dev);
+ static int  VNetNetifSetMAC(struct net_device *dev, void *addr);
++#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 2, 0)
+ static void VNetNetifSetMulticast(struct net_device *dev);
++#endif
+ #if 0
+ static void VNetNetifTxTimeout(struct net_device *dev);
+ #endif
+@@ -131,7 +133,9 @@ VNetNetIfSetup(struct net_device *dev)  // IN:
+       .ndo_stop = VNetNetifClose,
+       .ndo_get_stats = VNetNetifGetStats,
+       .ndo_set_mac_address = VNetNetifSetMAC,
++#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 2, 0)
+       .ndo_set_multicast_list = VNetNetifSetMulticast,
++#endif
+       /*
+        * We cannot stuck... If someone will report problems under
+        * low memory conditions or some such, we should enable it.
+@@ -152,7 +156,9 @@ VNetNetIfSetup(struct net_device *dev)  // IN:
+    dev->stop = VNetNetifClose;
+    dev->get_stats = VNetNetifGetStats;
+    dev->set_mac_address = VNetNetifSetMAC;
++#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 2, 0)
+    dev->set_multicast_list = VNetNetifSetMulticast;
++#endif
+    /*
+     * We cannot stuck... If someone will report problems under
+     * low memory conditions or some such, we should enable it.
+@@ -621,11 +627,12 @@ VNetNetifSetMAC(struct net_device *dev, // IN:
+  *----------------------------------------------------------------------
+  */
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 2, 0)
+ void
+ VNetNetifSetMulticast(struct net_device *dev) // IN: unused
+ {
+ }
+-
++#endif
+ 
+ /*
+  *----------------------------------------------------------------------
+diff --git a/vmnet-only/userif.c b/vmnet-only/userif.c
+index 4e65c76..fd12aa9 100644
+--- a/vmnet-only/userif.c
++++ b/vmnet-only/userif.c
+@@ -572,10 +572,18 @@ VNetCsumCopyDatagram(const struct sk_buff *skb,	// IN: skb to copy
+ 	 unsigned int tmpCsum;
+ 	 const void *vaddr;
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 2, 0)
++	 vaddr = kmap(skb_frag_page(frag));
++#else
+ 	 vaddr = kmap(frag->page);
++#endif
+ 	 tmpCsum = csum_and_copy_to_user(vaddr + frag->page_offset,
+ 					 curr, frag->size, 0, &err);
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 2, 0)
++	 kunmap(skb_frag_page(frag));
++#else
+ 	 kunmap(frag->page);
++#endif
+ 	 if (err) {
+ 	    return err;
+ 	 }

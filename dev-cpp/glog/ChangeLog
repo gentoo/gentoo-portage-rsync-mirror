@@ -1,0 +1,33 @@
+# ChangeLog for dev-cpp/glog
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/ChangeLog,v 1.7 2012/11/19 18:34:06 bicatali Exp $
+
+  19 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> glog-0.3.2.ebuild:
+  Keyworded amd64-linux and x86-linux
+
+  10 Sep 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/glog-0.3.2-avoid-inline-asm.patch, glog-0.3.2.ebuild:
+  Make unittest a bit more portable.
+
+  23 Jul 2012; Markus Meier <maekke@gentoo.org> glog-0.3.2.ebuild:
+  add ~arm, bug #426430
+
+*glog-0.3.2 (13 Jul 2012)
+
+  13 Jul 2012; Tiziano Müller <dev-zero@gentoo.org> +glog-0.3.2.ebuild,
+  metadata.xml:
+  Version bump, correct doc installation, do not install .la files if static-
+  libs is not requested, add unwind USE flag for explicit libunwind usage, add
+  cpp-herd.
+
+  20 Feb 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop no-herd.
+
+  12 Nov 2011; Mike Frysinger <vapier@gentoo.org> glog-0.3.1.ebuild:
+  do not actually need versionator
+
+*glog-0.3.1 (11 Nov 2011)
+
+  11 Nov 2011; Mike Frysinger <vapier@gentoo.org> +glog-0.3.1.ebuild,
+  +metadata.xml:
+  Initial import based on ChromeOS's ebuild.

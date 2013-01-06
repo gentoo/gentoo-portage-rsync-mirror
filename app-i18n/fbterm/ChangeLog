@@ -1,0 +1,12 @@
+# ChangeLog for app-i18n/fbterm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbterm/ChangeLog,v 1.2 2012/07/07 07:49:23 yngwin Exp $
+
+  07 Jul 2012; Ben de Groot <yngwin@gentoo.org> fbterm-1.7.ebuild:
+  Fix typo (bug #425136). Minor ebuild cleanup.
+
+*fbterm-1.7 (21 Jun 2012)
+
+  21 Jun 2012; Naohiro Aota <naota@gentoo.org> +fbterm-1.7.ebuild,
+  +metadata.xml:
+  New package app-i18n/fbterm. #252155

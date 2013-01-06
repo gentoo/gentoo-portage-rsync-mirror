@@ -1,0 +1,56 @@
+# ChangeLog for dev-haskell/glib
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glib/ChangeLog,v 1.14 2013/01/01 14:06:43 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> glib-0.12.4.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> glib-0.12.4.ebuild:
+  Add ~ia64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> glib-0.12.4.ebuild:
+  Add ~ppc64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> glib-0.12.4.ebuild:
+  Add ~ppc, wrt bug #449220
+
+*glib-0.12.4 (25 Nov 2012)
+
+  25 Nov 2012; Mark Wright <gienah@gentoo.org> +glib-0.12.4.ebuild:
+  Bump glib to 0.12.4
+
+  25 Nov 2012; Mark Wright <gienah@gentoo.org>
+  +files/glib-0.12.3.1-ghc-7.6.patch, glib-0.12.3.1.ebuild:
+  Patch glib-0.12.3.1 for ghc 7.6.1
+
+  23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> glib-0.12.3.1.ebuild:
+  x86 stable wrt bug #428930
+
+  13 Sep 2012; Agostino Sarubbo <ago@gentoo.org> glib-0.12.3.1.ebuild:
+  Stable for amd64, wrt bug #428930
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> glib-0.12.0.ebuild,
+  glib-0.12.3.1.ebuild, glib-0.12.3.ebuild:
+  move dev-haskell/glib/glib-0.12.0.ebuild ebuild to mirror://hackage
+
+*glib-0.12.3.1 (29 May 2012)
+
+  29 May 2012; Mark Wright <gienah@gentoo.org> +glib-0.12.3.1.ebuild:
+  Bump glib to 0.13.3.1
+
+*glib-0.12.3 (13 May 2012)
+
+  13 May 2012; Sergei Trofimovich <slyfox@gentoo.org> +glib-0.12.3.ebuild:
+  Version bump (ghc-7.4 support)
+
+  21 Jun 2011; Markos Chandras <hwoarang@gentoo.org> glib-0.12.0.ebuild:
+  Stable on amd64 wrt bug #314059
+
+  12 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> glib-0.12.0.ebuild:
+  x86 stable wrt bug #314059
+
+*glib-0.12.0 (09 May 2011)
+
+  09 May 2011; Sergei Trofimovich <slyfox@gentoo.org> +glib-0.12.0.ebuild,
+  +metadata.xml:
+  Initial version. Haskell bindings for dev-libs/glib

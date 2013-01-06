@@ -1,0 +1,37 @@
+--- configure.ac	2012-11-14 18:08:45.000000000 +0000
++++ configure.ac	2012-11-20 11:12:58.482147975 +0000
+@@ -186,18 +186,22 @@
+ libstrl_found="no"
+ AC_CHECK_FUNCS([strlcat strlcpy], [strl_found="yes"],
+                [
+-		saved_LIBS="$LIBS"
+-		LIBS=""
+-		AC_SEARCH_LIBS([strlcat],
+-		               [strl],
+-		               [libstrl_found="yes"],
+-		               [strl_found="no"])
+-		AC_SEARCH_LIBS([strlcpy],
+-		               [strl],
+-		               [libstrl_found="yes"],
+-		               [strl_found="no"])
+-		STRL_LIBS="$LIBS"
+-		LIBS="$saved_LIBS"
++	        AC_CHECK_HEADERS([strl.h],
++		    [
++		    saved_LIBS="$LIBS"
++		    LIBS=""
++		    AC_SEARCH_LIBS([strlcat],
++		                   [strl],
++		                   [libstrl_found="yes"],
++		                   [strl_found="no"])
++		    AC_SEARCH_LIBS([strlcpy],
++		                   [strl],
++		                   [libstrl_found="yes"],
++		                   [strl_found="no"])
++		    STRL_LIBS="$LIBS"
++		    LIBS="$saved_LIBS"
++		    ],
++		    [strl_found="no"])
+                ])
+ AM_CONDITIONAL([STRL],
+                [test x"$strl_found" != x"yes" -a x"$libstrl_found" != x"yes"])

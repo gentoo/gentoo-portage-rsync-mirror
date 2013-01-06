@@ -1,0 +1,11 @@
+--- src/wtmp.c
++++ src/wtmp.c
+@@ -42,7 +42,7 @@
+     !(defined(LINUX) || defined(__hpux) || defined (_AIX))
+   /* This "auxilliary" utmp doesn't exist under linux. */
+ 
+-#if defined(__sparcv9) && !defined(__NetBSD__)
++#if defined(__sparcv9) && !defined(__NetBSD__) && !defined(__FreeBSD__)
+   struct futmpx utx;
+   time_t t;
+ 

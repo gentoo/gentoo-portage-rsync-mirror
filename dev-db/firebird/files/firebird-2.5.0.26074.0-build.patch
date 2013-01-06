@@ -1,0 +1,228 @@
+diff -Naur '--exclude=.svn' Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.client.util B2_5_Release/builds/posix/Makefile.in.client.util
+--- Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.client.util	2010-11-09 12:42:45.000000000 -0500
++++ B2_5_Release/builds/posix/Makefile.in.client.util	2011-03-09 23:35:01.000000000 -0500
+@@ -53,11 +53,6 @@
+ $(CLUMPLETS_Objects) $(FBCONFIG_Objects)
+ 
+ 
+-CREATEDB_Files= create_db.cpp
+-CREATEDB_Sources = $(addprefix utilities/, $(CREATEDB_Files))
+-CREATEDB_Objects = $(addprefix $(OBJ)/, $(addsuffix .o, $(basename $(CREATEDB_Sources))))
+-
+-
+ DROP_Other_Sources = common/utils.cpp lock/lock.cpp jrd/isc_sync.cpp jrd/isc.cpp \
+ common/config/config.cpp common/config/config_file.cpp $(OS_SPECIFIC_Sources)
+ 
+@@ -133,7 +128,7 @@
+ RELAY_Sources = $(addprefix utilities/, $(RELAY_Files))
+ RELAY_Objects = $(addprefix $(OBJ)/, $(addsuffix .o, $(basename $(RELAY_Sources))))
+ 
+-AllObjects = $(CREATEDB_Object) $(DROP_Object) $(GSTAT_Object) $(FBGUARD_Objects) \
++AllObjects = $(DROP_Object) $(GSTAT_Object) $(FBGUARD_Objects) \
+ 			 $(FBMGR_Objects) $(REBUILD_Objects) $(RELAY_Objects) $(FBSVCMGR_Objects) \
+ 			  $(FBTRACEMGR_Objects)
+ 
+@@ -141,17 +136,11 @@
+ Dependencies = $(AllObjects:.o=.d) 
+ 
+ 
+-.PHONY: all gstat gsec fbguard fbmgr_bin nbackup gds_drop gds_relay create_db fb_lock_print \
++.PHONY: all gstat gsec fbguard fbmgr_bin nbackup gds_drop gds_relay fb_lock_print \
+ 	fbsvcmgr fbtracemgr
+ 
+ all: $(CLIENT_UTIL_TARGETS)
+ 
+-create_db: $(CREATE_DB)
+-
+-$(CREATE_DB):	$(CREATEDB_Objects) 
+-	$(STATICEXE_LINK) $(LINK_OPTS) $(CREATEDB_Objects) -o $@ -L$(LIB) -lfbclient $(LINK_LIBS)
+-
+-
+ nbackup: $(LIBFBCLIENT_SO) $(NBACKUP)
+ 
+ $(NBACKUP):	$(NBACKUP_Objects) $(CLUMPLETS_Objects) $(COMMON_Objects)
+diff -Naur '--exclude=.svn' Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.codes B2_5_Release/builds/posix/Makefile.in.codes
+--- Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.codes	2010-11-09 12:42:45.000000000 -0500
++++ B2_5_Release/builds/posix/Makefile.in.codes	2011-03-09 23:35:01.000000000 -0500
+@@ -22,7 +22,8 @@
+ # 
+ #
+ ROOT=..
+-ObjModuleType=std
++ObjModuleType=boot
++CXXFLAGS+= -DBOOT_BUILD
+ 
+ include     $(ROOT)/gen/make.defaults
+ include     $(ROOT)/gen/make.platform
+diff -Naur '--exclude=.svn' Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.embed.util B2_5_Release/builds/posix/Makefile.in.embed.util
+--- Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.embed.util	2010-11-09 12:42:45.000000000 -0500
++++ B2_5_Release/builds/posix/Makefile.in.embed.util	2011-03-09 23:35:01.000000000 -0500
+@@ -56,11 +56,6 @@
+ $(FBCONFIG_Objects)
+ 
+ 
+-CREATEDB_Files= create_db.cpp
+-CREATEDB_Sources = $(addprefix utilities/, $(CREATEDB_Files))
+-CREATEDB_Objects = $(addprefix $(OBJ)/, $(addsuffix .o, $(basename $(CREATEDB_Sources))))
+-
+-
+ DROP_Other_Sources += common/utils.cpp jrd/isc_sync.cpp jrd/isc.cpp \
+ common/config/config.cpp common/config/config_file.cpp $(OS_SPECIFIC_Sources)
+ 
+@@ -128,30 +123,19 @@
+ RELAY_Sources = $(addprefix utilities/, $(RELAY_Files))
+ RELAY_Objects = $(addprefix $(OBJ)/, $(addsuffix .o, $(basename $(RELAY_Sources))))
+ 
+-AllObjects = $(CREATEDB_Object) $(DROP_Object) $(FBSVCMGR_Objects) \
++AllObjects = $(DROP_Object) $(FBSVCMGR_Objects) \
+ 			 $(GSEC_Objects) $(GSTAT_Object) $(FBGUARD_Objects) \
+ 			 $(IBMGR_Objects) $(REBUILD_Objects) $(RELAY_Objects) $(CLUMPLETS_Objects)
+ 
+ Dependencies = $(AllObjects:.o=.d) 
+ 
+ 
+-.PHONY: create_db gstat gds_drop gds_relay gsec fbguard ibmgr_bin nbackup fb_lock_print \
++.PHONY: gstat gds_drop gds_relay gsec fbguard ibmgr_bin nbackup fb_lock_print \
+ 	fbsvcmgr fbtracemgr
+ 
+ all: $(EMBED_UTIL_TARGETS)
+ 
+ 
+-# it's important to note here that create_db is linked against the static
+-# 'boot' libraries rather than the later embedded shared library.  The
+-# other utilities are released but create_db is used in construction.
+-# MOD 29-July-2002
+-
+-create_db: $(CREATE_DB)
+-
+-$(CREATE_DB):	$(CREATEDB_Objects) $(COMMON_Objects) $(LIBFBSTATIC_A)
+-	$(STATICEXE_LINK) $(LINK_OPTS) $^ -o $@ -L$(LIB) $(LINK_LIBS) $(ICU_LIBS)
+-
+-
+ nbackup: $(LIBFBEMBED_SO) $(NBACKUP)
+ 
+ $(NBACKUP):	$(NBACKUP_Objects) $(CLUMPLETS_Objects) $(COMMON_Objects)
+diff -Naur '--exclude=.svn' Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.examples B2_5_Release/builds/posix/Makefile.in.examples
+--- Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.examples	2010-11-09 12:42:45.000000000 -0500
++++ B2_5_Release/builds/posix/Makefile.in.examples	2011-03-09 23:35:01.000000000 -0500
+@@ -29,7 +29,8 @@
+ #
+ #
+ ROOT=../..
+-ObjModuleType=std
++ObjModuleType=boot
++CXXFLAGS+= -DBOOT_BUILD
+ 
+ # Add the install include directory to the search path since the
+ # examples need to build using those headers values.
+diff -Naur '--exclude=.svn' Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.fbtrace B2_5_Release/builds/posix/Makefile.in.fbtrace
+--- Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.fbtrace	2010-11-09 12:42:45.000000000 -0500
++++ B2_5_Release/builds/posix/Makefile.in.fbtrace	2011-03-21 16:00:40.000000000 -0400
+@@ -71,6 +71,12 @@
+ 
+ fbtrace: $(FBTRACE)
+ 
++ifeq (@FIREBIRD_ARCH_TYPE@,classic)
++  LINK_TRACE_LIBS += -lfbembed
++else
++  FBTRACE_Objects += $(addprefix $(OBJ)/, $(addsuffix .o, $(basename jrd/gds.cpp)))
++endif
++
+ $(FBTRACE):	$(FBTRACE_Objects)
+ 	$(LINK_TRACE) -o $@ $^ $(LINK_TRACE_LIBS)
+ 
+diff -Naur '--exclude=.svn' Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.firebird B2_5_Release/builds/posix/Makefile.in.firebird
+--- Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.firebird	2010-11-09 12:42:45.000000000 -0500
++++ B2_5_Release/builds/posix/Makefile.in.firebird	2011-03-09 23:35:01.000000000 -0500
+@@ -263,7 +263,7 @@
+ $(ISC_GDB): create_db empty_db gbak_static isql_static ref_databases
+ 
+ create_db:
+-	$(MAKE) -f $(GEN_ROOT)/Makefile.embed.util $(CREATE_DB)
++	$(MAKE) -f $(GEN_ROOT)/Makefile.static.createdb
+ 
+ gbak_static:
+ 	$(MAKE) $(CPU_OPTION) -f $(GEN_ROOT)/Makefile.static.gbak
+@@ -286,8 +286,7 @@
+ 
+ #--------------------------------------------------------------------------
+ #Phase3: Now we start building the tools we are actually going to use
+-#  against the shared library.
+-#  an empty database (lock manager and create_db).  Then we rebuild all the
++#  against the shared library. Then we rebuild all the
+ #  items we have built in the static library into a dynamic library.
+ #  (It's probably possible to directly build the dynamic library - but thats
+ #  for another day). We still don't have the security database stuff.
+diff -Naur '--exclude=.svn' Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.msgs B2_5_Release/builds/posix/Makefile.in.msgs
+--- Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.msgs	2010-11-09 12:42:45.000000000 -0500
++++ B2_5_Release/builds/posix/Makefile.in.msgs	2011-03-09 23:35:01.000000000 -0500
+@@ -28,7 +28,8 @@
+ # 
+ #
+ ROOT=..
+-ObjModuleType=std
++ObjModuleType=boot
++CXXFLAGS+= -DBOOT_BUILD
+ 
+ include     $(ROOT)/gen/make.defaults
+ include     $(ROOT)/gen/make.platform
+diff -Naur '--exclude=.svn' Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.refDatabases B2_5_Release/builds/posix/Makefile.in.refDatabases
+--- Firebird-2.5.0.26074-0_orig/builds/posix/Makefile.in.refDatabases	2010-11-09 12:42:45.000000000 -0500
++++ B2_5_Release/builds/posix/Makefile.in.refDatabases	2011-03-09 23:35:01.000000000 -0500
+@@ -29,7 +29,8 @@
+ #
+ #
+ ROOT=..
+-ObjModuleType=std
++ObjModuleType=boot
++CXXFLAGS+= -DBOOT_BUILD
+ 
+ include     $(ROOT)/gen/make.defaults
+ include     $(ROOT)/gen/make.platform
+@@ -53,8 +54,8 @@
+ 
+ .PHONY: empty_db refDatabases
+ 
+-# This is where you are going to have trouble if there is one, at creating 
+-# the first empty database.  Things to watch out for, $INTERBASE variable 
++# This is where you are going to have trouble if there is one, at creating
++# the first empty database.  Things to watch out for, $INTERBASE variable
+ # pointing in the wrong place, shared library path LD_LIBRARY_PATH
+ # not pointing to new stuff (mind you this point it should be creating
+ # using create_db statically linked).
+@@ -62,7 +63,7 @@
+ empty_db : empty.fdb yachts.lnk
+ 
+ empty.fdb : $(CREATE_DB)
+-	$(MAKE) -f $(GEN_ROOT)/Makefile.embed.util $(BIN)/create_db
++	$(MAKE) -f $(GEN_ROOT)/Makefile.static.createdb
+ 	-$(RM) $@
+ 	$(BIN)/create_db $@
+ 	$(TOUCH) $@
+diff -Naur '--exclude=.svn' Firebird-2.5.0.26074-0_orig/builds/posix/make.defaults B2_5_Release/builds/posix/make.defaults
+--- Firebird-2.5.0.26074-0_orig/builds/posix/make.defaults	2010-11-09 12:42:45.000000000 -0500
++++ B2_5_Release/builds/posix/make.defaults	2011-03-09 23:35:01.000000000 -0500
+@@ -49,9 +49,11 @@
+ 
+ FIREBIRD=$(GEN_ROOT)/firebird
+ INTERBASE=$(FIREBIRD)
++FIREBIRD_LOCK=$(shell cd $(FIREBIRD); pwd)
+ 
+ export INTERBASE
+ export FIREBIRD
++export FIREBIRD_LOCK
+ 
+ LIB=$(FIREBIRD)/lib
+ BIN=$(FIREBIRD)/bin
+diff -Naur Firebird-2.5.0.26074-0_orig/configure.in B2_5_Release/configure.in
+--- Firebird-2.5.0.26074-0_orig/configure.in    2010-11-09 12:42:45.000000000 -0500
++++ B2_5_Release/configure.in   2011-06-13 17:10:35.412587676 -0400
+@@ -1359,6 +1389,7 @@
+ gen/Makefile.static.gpre:${MAKE_SRC_DIR}/Makefile.in.static.gpre
+ gen/Makefile.static.gbak:${MAKE_SRC_DIR}/Makefile.in.static.gbak
+ gen/Makefile.static.isql:${MAKE_SRC_DIR}/Makefile.in.static.isql
++gen/Makefile.static.createdb:${MAKE_SRC_DIR}/Makefile.in.static.createdb
+ gen/Makefile.refDatabases:${MAKE_SRC_DIR}/Makefile.in.refDatabases
+ gen/Makefile.fbserver:${MAKE_SRC_DIR}/Makefile.in.fbserver
+ gen/Makefile.smp_server:${MAKE_SRC_DIR}/Makefile.in.smp_server
+

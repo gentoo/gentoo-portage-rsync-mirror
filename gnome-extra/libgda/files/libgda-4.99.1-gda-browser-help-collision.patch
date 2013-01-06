@@ -1,0 +1,38 @@
+From 01b13e22b215647c2343ec5f633b51d3c2b37824 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gmail.com>
+Date: Sat, 4 Jun 2011 01:59:14 -0400
+Subject: [PATCH] Prevent file collision with gda-browser-4.0's help files
+
+---
+ tools/browser/help/Makefile.am |    2 +-
+ tools/browser/support.c        |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/tools/browser/help/Makefile.am b/tools/browser/help/Makefile.am
+index 93acaf8..48fcdc4 100644
+--- a/tools/browser/help/Makefile.am
++++ b/tools/browser/help/Makefile.am
+@@ -1,6 +1,6 @@
+ include $(top_srcdir)/gnome-doc-utils.make
+ 
+-DOC_ID = gda-browser
++DOC_ID = gda-browser-5.0
+ 
+ DOC_INCLUDES = legal.xml
+ DOC_FIGURES = \
+diff --git a/tools/browser/support.c b/tools/browser/support.c
+index 5b1b4e6..f462efc 100644
+--- a/tools/browser/support.c
++++ b/tools/browser/support.c
+@@ -223,7 +223,7 @@ browser_show_help (GtkWindow *parent, const gchar *topic)
+ 		if (strchr (lang, '.'))
+ 			continue;
+ 
+-		uri = gda_gbr_get_file_path (GDA_DATA_DIR, "gnome", "help", "gda-browser", lang, NULL);
++		uri = gda_gbr_get_file_path (GDA_DATA_DIR, "gnome", "help", "gda-browser-5.0", lang, NULL);
+ 
+ 		/*g_print ("TST URI [%s]\n", uri);*/
+ 		if (g_file_test (uri, G_FILE_TEST_EXISTS)) {
+-- 
+1.7.5.3
+

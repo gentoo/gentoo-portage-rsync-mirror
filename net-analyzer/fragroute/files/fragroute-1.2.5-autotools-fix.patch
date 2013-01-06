@@ -1,0 +1,81 @@
+--- configure.in.orig	2012-10-11 16:36:43.000000000 +0400
++++ configure.in	2012-10-11 16:36:49.356097356 +0400
+@@ -43,7 +43,6 @@
+ else
+ dnl XXX - BEGIN !CYGWIN
+ 
+-AC_LBL_LIBRARY_NET
+ 
+ dnl Checks for libevent
+ AC_MSG_CHECKING(for libevent)
+@@ -55,30 +54,30 @@
+      ;;
+   *)
+      AC_MSG_RESULT($withval)
+-     if test -f $withval/include/event.h -a -f $withval/lib/libevent.a; then
++     if test -f $withval/include/event.h -a -f $withval/lib/libevent.so; then
+         owd=`pwd`
+         if cd $withval; then withval=`pwd`; cd $owd; fi
+         EVENTINC="-I$withval/include"
+         EVENTLIB="-L$withval/lib -levent"
+-     elif test -f $withval/include/event.h -a -f $withval/lib64/libevent.a; then
++     elif test -f $withval/include/event.h -a -f $withval/lib64/libevent.so; then
+         owd=`pwd`
+         if cd $withval; then withval=`pwd`; cd $owd; fi
+         EVENTINC="-I$withval/include"
+         EVENTLIB="-L$withval/lib64 -levent"
+-     elif test -f $withval/event.h -a -f $withval/libevent.a; then
++     elif test -f $withval/event.h -a -f $withval/libevent.so; then
+         owd=`pwd`
+         if cd $withval; then withval=`pwd`; cd $owd; fi
+         EVENTINC="-I$withval"
+         EVENTLIB="-L$withval -levent"
+      else
+-        AC_ERROR(event.h or libevent.a not found in $withval)
++        AC_ERROR(event.h or libevent.so not found in $withval)
+      fi
+      ;;
+   esac ],
+-[ if test -f ${prefix}/include/event.h -a -f ${prefix}/lib/libevent.a; then
++[ if test -f ${prefix}/include/event.h -a -f ${prefix}/lib/libevent.so; then
+      EVENTINC="-I${prefix}/include"
+      EVENTLIB="-L${prefix}/lib -levent"
+-  elif test -f ${prefix}/include/event.h -a -f ${prefix}/lib64/libevent.a; then
++  elif test -f ${prefix}/include/event.h -a -f ${prefix}/lib64/libevent.so; then
+      EVENTINC="-I${prefix}/include"
+      EVENTLIB="-L${prefix}/lib64 -levent"
+   else
+@@ -103,13 +102,13 @@
+      ;;
+   *)
+      AC_MSG_RESULT($withval)
+-     if test -f $withval/pcap.h -a -f $withval/libpcap.a; then
++     if test -f $withval/pcap.h -a -f $withval/libpcap.so; then
+         owd=`pwd`
+         if cd $withval; then withval=`pwd`; cd $owd; fi
+ 	PCAPINC="-I$withval -I$withval/bpf"
+ 	PCAPLIB="-L$withval -lpcap"
+      elif test -f $withval/include/pcap.h -a \
+-	       -f $withval/include/net/bpf.h; then
++	       -f $withval/include/pcap-bpf.h; then
+ 	owd=`pwd`
+ 	if cd $withval; then withval=`pwd`; cd $owd; fi
+ 	PCAPINC="-I$withval/include"
+@@ -119,7 +118,7 @@
+ 	   PCAPLIB="-L$withval/lib -lpcap"
+         fi
+      else
+-        AC_ERROR(pcap.h, net/bpf.h, or libpcap.a not found in $withval)
++        AC_ERROR(pcap.h, pcap-bpf.h, or libpcap.so not found in $withval)
+      fi
+      ;;
+   esac ],
+@@ -154,7 +153,7 @@
+      ;;
+   *)
+      AC_MSG_RESULT($withval)
+-     if test -f $withval/src/libdnet.a; then
++     if test -f $withval/src/libdnet.so; then
+ 	DNETINC="-I$withval/include"
+ 	DNETLIB="-L$withval/src -ldnet `$withval/dnet-config --libs`"
+      elif test -x $withval/bin/dnet-config; then

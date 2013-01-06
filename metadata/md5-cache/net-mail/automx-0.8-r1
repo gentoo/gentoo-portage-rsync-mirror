@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=|| ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+DESCRIPTION=A mail user agent auto configuration service
+EAPI=4
+HOMEPAGE=http://www.automx.org
+IUSE=doc sql +tools
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-python/lxml || ( www-apache/mod_wsgi www-servers/uwsgi ) sql? ( dev-python/sqlalchemy ) tools? ( net-dns/bind-tools ) tools? ( net-misc/wget ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+SLOT=0
+SRC_URI=http://www.automx.org/download/automx-0.8.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=a9b820010ee2d3b927b3181d46df66c5

@@ -1,0 +1,14 @@
+# ChangeLog for games-action/shadowgrounds-survivor-bin
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-survivor-bin/ChangeLog,v 1.2 2011/04/21 08:50:11 vapier Exp $
+
+  21 Apr 2011; Mike Frysinger <vapier@gentoo.org>
+  shadowgrounds-survivor-bin-0_beta11.ebuild:
+  Add missing dep on glade #364063 by Robert Cernansky.
+
+*shadowgrounds-survivor-bin-0_beta11 (16 Apr 2011)
+
+  16 Apr 2011; Mike Frysinger <vapier@gentoo.org>
+  +shadowgrounds-survivor-bin-0_beta11.ebuild, +metadata.xml:
+  New package.
+

@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/sword-latvian
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-latvian/ChangeLog,v 1.1 2008/05/13 21:30:18 beandog Exp $
+
+*sword-latvian-1.1 (13 May 2008)
+
+  13 May 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-latvian-1.1.ebuild:
+  Initial commit
+

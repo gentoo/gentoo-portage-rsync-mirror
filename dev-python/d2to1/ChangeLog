@@ -1,0 +1,19 @@
+# ChangeLog for dev-python/d2to1
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/d2to1/ChangeLog,v 1.3 2012/06/26 23:57:20 bicatali Exp $
+
+  26 Jun 2012; Sebastien Fabbro <fabbros@gentoo.org> d2to1-0.2.7.ebuild:
+  keyword ~amd64-linux ~x86-linux
+
+*d2to1-0.2.7 (02 Mar 2012)
+
+  02 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> +d2to1-0.2.7.ebuild,
+  -d2to1-0.2.5.ebuild:
+  Version bump, drop old
+
+*d2to1-0.2.5 (30 Jan 2012)
+
+  30 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org> +d2to1-0.2.5.ebuild,
+  +metadata.xml:
+  Initial import, ebuild written by me
+

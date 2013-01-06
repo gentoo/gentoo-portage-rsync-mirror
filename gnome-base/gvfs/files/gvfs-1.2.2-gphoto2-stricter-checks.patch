@@ -1,0 +1,28 @@
+Gentoo bug 264941
+Upstream: http://bugzilla.gnome.org/show_bug.cgi?id=578027
+---
+diff -urNp gvfs-1.2.2/configure.ac gvfs-1.2.2-new/configure.ac
+--- gvfs-1.2.2/configure.ac	2009-04-03 13:00:54.000000000 +0530
++++ gvfs-1.2.2-new/configure.ac	2009-05-04 22:53:24.000000000 +0530
+@@ -307,12 +307,20 @@ if test "x$enable_gphoto2" != "xno" -a "
+       ;;
+   esac
+ 
++  if test "x$enable_gphoto2" = "xyes" -a "x$msg_gphoto2" != "xyes"; then
++    AC_MSG_ERROR([gphoto2 support requested but not available])
++  fi
++
+   if test "x$msg_gphoto2" = "xyes"; then
+     if test "x$use_gphoto2" = "xyes"; then
+       PKG_CHECK_MODULES(GPHOTO2, libgphoto2 >= 2.4.0)
+       AC_DEFINE(HAVE_GPHOTO2, 1, [Define to 1 if gphoto2 is available])
+     else
+-      AC_MSG_WARN([Not building with gphoto2 support. Need OS tweaks in hal volume monitor.])
++      if test "x$enable_gphoto2" = "xyes"; then
++        AC_MSG_ERROR([Cannot build with gphoto2 support. Need OS tweaks in hal volume monitor.])
++      else
++        AC_MSG_WARN([Not building with gphoto2 support. Need OS tweaks in hal volume monitor.])
++      fi
+       msg_gphoto2=no
+     fi
+   fi

@@ -1,0 +1,92 @@
+--- configure
++++ configure
+@@ -33211,6 +33211,21 @@
+ 
+ rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
+       conftest$ac_exeext conftest.$ac_ext
++
++  if test x"$openssl_cmdline" != xno; then
++    if `$openssl_cmdline version 2>/dev/null 1>&2`; then
++      openssl_cflags=`$openssl_cmdline version -f 2>/dev/null`
++      if test ! -z "$openssl_cflags"; then
++        # Look for the -pthread flag, indicating that this OpenSSL was built
++        # with threads support (see Bug#3795)
++        for openssl_cflag in $openssl_cflags; do
++          if test x"$openssl_cflag" = x"-pthread"; then
++            LIBS="$LIBS -pthread"
++          fi
++        done
++      fi
++    fi
++  fi
+ fi
+ 
+ if test x"$pr_use_postgres" = xyes; then
+@@ -33303,21 +33318,6 @@
+   CPPFLAGS="$saved_cppflags"
+   LDFLAGS="$saved_ldflags"
+   LIBS="$saved_libs"
+-
+-  if test x"$openssl_cmdline" != xno; then
+-    if `$openssl_cmdline version 2>/dev/null 1>&2`; then
+-      openssl_cflags=`$openssl_cmdline version -f 2>/dev/null`
+-      if test ! -z "$openssl_cflags"; then
+-        # Look for the -pthread flag, indicating that this OpenSSL was built
+-        # with threads support (see Bug#3795)
+-        for openssl_cflag in $openssl_cflags; do
+-          if test x"$openssl_cflag" = x"-pthread"; then
+-            LIBS="$LIBS -pthread"
+-          fi
+-        done
+-      fi
+-    fi
+-  fi
+ fi
+ 
+ for module in $ac_shared_modules ; do
+--- configure.in
++++ configure.in
+@@ -2473,6 +2473,21 @@
+       )
+     ]
+   )
++
++  if test x"$openssl_cmdline" != xno; then
++    if `$openssl_cmdline version 2>/dev/null 1>&2`; then
++      openssl_cflags=`$openssl_cmdline version -f 2>/dev/null`
++      if test ! -z "$openssl_cflags"; then
++        # Look for the -pthread flag, indicating that this OpenSSL was built
++        # with threads support (see Bug#3795)
++        for openssl_cflag in $openssl_cflags; do
++          if test x"$openssl_cflag" = x"-pthread"; then
++            LIBS="$LIBS -pthread"
++          fi
++        done
++      fi
++    fi
++  fi
+ fi
+ 
+ if test x"$pr_use_postgres" = xyes; then
+@@ -2521,21 +2536,6 @@
+   CPPFLAGS="$saved_cppflags"
+   LDFLAGS="$saved_ldflags"
+   LIBS="$saved_libs"
+-
+-  if test x"$openssl_cmdline" != xno; then
+-    if `$openssl_cmdline version 2>/dev/null 1>&2`; then
+-      openssl_cflags=`$openssl_cmdline version -f 2>/dev/null`
+-      if test ! -z "$openssl_cflags"; then
+-        # Look for the -pthread flag, indicating that this OpenSSL was built
+-        # with threads support (see Bug#3795)
+-        for openssl_cflag in $openssl_cflags; do 
+-          if test x"$openssl_cflag" = x"-pthread"; then
+-            LIBS="$LIBS -pthread"
+-          fi
+-        done
+-      fi
+-    fi
+-  fi
+ fi
+ 
+ for module in $ac_shared_modules ; do

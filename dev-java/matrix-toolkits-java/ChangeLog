@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/matrix-toolkits-java
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/matrix-toolkits-java/ChangeLog,v 1.1 2009/09/21 04:57:20 weaver Exp $
+
+*matrix-toolkits-java-0.9.12 (20 Sep 2009)
+
+  20 Sep 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +matrix-toolkits-java-0.9.12.ebuild:
+  New package, dependency of sci-biology/beast-mcmc, import from java overlay,
+  ebuild written by me
+

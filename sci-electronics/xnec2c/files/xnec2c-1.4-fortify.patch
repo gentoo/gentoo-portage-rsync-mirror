@@ -1,0 +1,11 @@
+--- src/draw_structure.c.orig	2010-09-27 15:29:42.000000000 +0000
++++ src/draw_structure.c	2010-09-27 15:29:48.000000000 +0000
+@@ -792,7 +792,7 @@
+ 	  isFlagSet(DRAW_CHARGES)  ||
+ 	  isFlagSet(DRAW_GAIN) )
+   {
+-	char txt[8];
++	char txt[9];
+ 
+ 	if( isFlagSet(ENABLE_RDPAT) && (calc_data.fstep >=0) )
+ 	  snprintf( txt, 8, "%7.2f",

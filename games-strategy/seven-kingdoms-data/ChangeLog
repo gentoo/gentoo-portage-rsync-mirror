@@ -1,0 +1,10 @@
+# ChangeLog for games-strategy/seven-kingdoms-data
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/seven-kingdoms-data/ChangeLog,v 1.1 2012/11/19 14:39:43 pinkbyte Exp $
+
+*seven-kingdoms-data-2.13 (19 Nov 2012)
+
+  19 Nov 2012; Sergey Popov <pinkbyte@gentoo.org>
+  +seven-kingdoms-data-2.13.ebuild, +metadata.xml:
+  Initial commit wrt bug #358209. Thanks to Sven Eden for initial ebuild
+

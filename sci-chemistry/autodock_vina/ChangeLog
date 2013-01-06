@@ -1,0 +1,38 @@
+# ChangeLog for sci-chemistry/autodock_vina
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock_vina/ChangeLog,v 1.7 2012/11/07 21:56:30 jlec Exp $
+
+  07 Nov 2012; Justin Lecher <jlec@gentoo.org> autodock_vina-1.1.2.ebuild,
+  +files/autodock_vina-1.1.2-boost-filesystem.patch:
+  Fix for boost >1.50, #425458
+
+  28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  autodock_vina-1.1.1-r1.ebuild:
+  x86 stable wrt bug #399625
+
+  22 Jan 2012; Agostino Sarubbo <ago@gentoo.org> autodock_vina-1.1.1-r1.ebuild:
+  Stable for amd64, wrt bug #399625
+
+*autodock_vina-1.1.2 (21 Jan 2012)
+
+  21 Jan 2012; Justin Lecher <jlec@gentoo.org> +files/1.1.2-gentoo.patch,
+  +autodock_vina-1.1.2.ebuild, metadata.xml:
+  Version Bump, #399289
+
+  06 Apr 2011; Justin Lecher <jlec@gentoo.org> autodock_vina-1.1.1-r1.ebuild:
+  Fix compilation problem with =dev-libs/boost-1.46, #362243; thanks few and
+  xarthisius
+
+*autodock_vina-1.1.1-r1 (11 Aug 2010)
+
+  11 Aug 2010; Justin Lecher <jlec@gentoo.org> files/1.1.1-gentoo.patch,
+  -autodock_vina-1.1.1.ebuild, +autodock_vina-1.1.1-r1.ebuild:
+  Stop mixing CFLAGS and CXXFLAGS, stop using upstream flags, thanks
+  dberkholz pointing this out
+
+*autodock_vina-1.1.1 (18 May 2010)
+
+  18 May 2010; Justin Lecher <jlec@gentoo.org> +files/1.1.1-gentoo.patch,
+  +autodock_vina-1.1.1.ebuild, +metadata.xml:
+  Initial addition
+

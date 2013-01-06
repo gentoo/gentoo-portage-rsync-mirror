@@ -1,0 +1,17 @@
+# ChangeLog for dev-haskell/dlist
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dlist/ChangeLog,v 1.3 2012/12/22 21:27:49 slyfox Exp $
+
+*dlist-0.5-r1 (22 Dec 2012)
+
+  22 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> +dlist-0.5-r1.ebuild:
+  Switch to EAPI=5
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> dlist-0.5.ebuild:
+  move dev-haskell/dlist/dlist-0.5.ebuild ebuild to mirror://hackage
+
+*dlist-0.5 (23 Apr 2011)
+
+  23 Apr 2011; Sergei Trofimovich <slyfox@gentoo.org> +dlist-0.5.ebuild,
+  +metadata.xml:
+  Initial version.

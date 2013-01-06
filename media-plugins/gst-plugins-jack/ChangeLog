@@ -1,0 +1,69 @@
+# ChangeLog for media-plugins/gst-plugins-jack
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jack/ChangeLog,v 1.15 2012/12/03 23:46:20 eva Exp $
+
+*gst-plugins-jack-1.0.3 (03 Dec 2012)
+
+  03 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-jack-1.0.3.ebuild:
+  Version bump.
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  gst-plugins-jack-0.10.31.ebuild:
+  Update with ebuild from gnome overlay.
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-jack-0.10.28.ebuild, gst-plugins-jack-0.10.30.ebuild:
+  Clean up old revision. EAPI bump stable due to pending eclass changes and
+  slot pinning.
+
+*gst-plugins-jack-0.10.31 (23 Oct 2012)
+
+  23 Oct 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gst-plugins-jack-0.10.31.ebuild:
+  Bump with minor fixes.
+
+  08 Feb 2012; Angelo Arrifano <miknix@gentoo.org>
+  gst-plugins-jack-0.10.30.ebuild:
+  Keyword for x86, #395237
+
+  08 Feb 2012; Angelo Arrifano <miknix@gentoo.org>
+  -gst-plugins-jack-0.10.19.ebuild:
+  Remove old version depending on non-existing =gst-plugins-base-0.10.29
+
+  07 Feb 2012; Angelo Arrifano <miknix@gentoo.org> metadata.xml:
+  Make maintainership more clear to me and bug wranglers..
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
+  gst-plugins-jack-0.10.30.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Tomáš "Mepho" Pružina in bug #382225.
+
+*gst-plugins-jack-0.10.30 (31 Jul 2011)
+
+  31 Jul 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-jack-0.10.30.ebuild:
+  Version bump. Compatibility with jack 0.120.2. Also some jack2 readiness.
+
+  23 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-jack-0.10.28.ebuild:
+  Stable on amd64 wrt bug #368281
+
+*gst-plugins-jack-0.10.28 (20 Mar 2011)
+
+  20 Mar 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-jack-0.10.28.ebuild:
+  Version bump. Now part of the gst-plugins-good set (considered good code
+  quality)
+
+  20 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-jack-0.10.19.ebuild:
+  Stable on amd64 wrt bug #349204
+
+*gst-plugins-jack-0.10.19 (03 Aug 2010)
+
+  03 Aug 2010; Mart Raudsepp <leio@gentoo.org> +metadata.xml,
+  +gst-plugins-jack-0.10.19.ebuild:
+  Initial package for the GStreamer plugin to transfer audio data with JACK
+  ports, bug 324711
+

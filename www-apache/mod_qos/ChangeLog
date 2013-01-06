@@ -1,0 +1,16 @@
+# ChangeLog for www-apache/mod_qos
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_qos/ChangeLog,v 1.3 2012/11/27 19:29:00 pacho Exp $
+
+  27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop apache herd as discussed in http://www.gossamer-
+  threads.com/lists/gentoo/dev/262834
+
+  12 Oct 2012; Patrick Lauer <patrick@gentoo.org> mod_qos-8.18.ebuild:
+  Restricting to apache 2.2
+
+*mod_qos-8.18 (18 Sep 2009)
+
+  18 Sep 2009; Benedikt Böhm <hollow@gentoo.org> +files/10_mod_qos.conf,
+  +mod_qos-8.18.ebuild, +metadata.xml:
+  initial ebuild wrt #236049

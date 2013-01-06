@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/wsgilog
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgilog/ChangeLog,v 1.1 2012/12/22 11:56:52 hwoarang Exp $
+
+*wsgilog-0.3 (22 Dec 2012)
+
+  22 Dec 2012; Markos Chandras <hwoarang@gentoo.org> +metadata.xml,
+  +wsgilog-0.3.ebuild:
+  Initial commit. Bug #441642. Thanks to Jens Ott <jo@opteamax.de> who will be
+  the maintainer

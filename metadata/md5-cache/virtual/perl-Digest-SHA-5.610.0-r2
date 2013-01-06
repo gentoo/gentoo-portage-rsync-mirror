@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Digest-SHA
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris
+RDEPEND=|| ( =dev-lang/perl-5.14* ~perl-core/Digest-SHA-5.610.0 )
+SLOT=0
+_md5_=556f7af6243980aa5360a45ed8e002b6

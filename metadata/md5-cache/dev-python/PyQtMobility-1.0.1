@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=>=dev-python/sip-4.12.2 >=dev-python/PyQt4-4.8.4[X] >=x11-libs/qt-mobility-1.2.0[contacts?,feedback?,gallery?,location?,messaging?,multimedia?,organizer?,publishsubscribe?,sensors?,serviceframework?,systeminfo?,versit?] dev-lang/python
+DESCRIPTION=Python bindings for Nokia's QtMobility libraries
+EAPI=4
+HOMEPAGE=http://www.riverbankcomputing.co.uk/software/pyqtmobility/intro
+IUSE=debug +contacts feedback gallery location messaging multimedia organizer publishsubscribe sensors serviceframework systeminfo versit
+KEYWORDS=~amd64
+LICENSE=|| ( GPL-2 GPL-3 )
+RDEPEND=>=dev-python/sip-4.12.2 >=dev-python/PyQt4-4.8.4[X] >=x11-libs/qt-mobility-1.2.0[contacts?,feedback?,gallery?,location?,messaging?,multimedia?,organizer?,publishsubscribe?,sensors?,serviceframework?,systeminfo?,versit?] dev-lang/python
+REQUIRED_USE=|| ( contacts feedback gallery location messaging multimedia organizer publishsubscribe sensors serviceframework systeminfo versit ) versit? ( contacts )
+SLOT=0
+SRC_URI=http://www.riverbankcomputing.co.uk/static/Downloads/PyQtMobility/PyQtMobility-gpl-1.0.1.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=219f9113892556a8e5bb1984c4b8447b

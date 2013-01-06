@@ -1,0 +1,45 @@
+# ChangeLog for dev-python/flask-sqlalchemy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-sqlalchemy/ChangeLog,v 1.8 2012/11/15 14:23:34 idella4 Exp $
+
+*flask-sqlalchemy-0.16 (16 Nov 2012)
+
+  16 Nov 2012; Ian Delaney <idella4@gentoo.org> +flask-sqlalchemy-0.16.ebuild:
+  Bump, -0.16, thanks to patch from J. Bergstrom, closes Bug #415123
+
+*flask-sqlalchemy-0.15 (08 Sep 2011)
+
+  08 Sep 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -flask-sqlalchemy-0.11.ebuild, +flask-sqlalchemy-0.15.ebuild:
+  Version bump. Thanks to Johan Bergström (bug #381997).
+
+*flask-sqlalchemy-0.11 (17 Feb 2011)
+
+  17 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -flask-sqlalchemy-0.10.ebuild, +flask-sqlalchemy-0.11.ebuild:
+  Version bump.
+
+*flask-sqlalchemy-0.10 (12 Feb 2011)
+
+  12 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -flask-sqlalchemy-0.9.1.ebuild, +flask-sqlalchemy-0.10.ebuild:
+  Version bump.
+
+*flask-sqlalchemy-0.9.1 (25 Jul 2010)
+
+  25 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -flask-sqlalchemy-0.9.ebuild, +flask-sqlalchemy-0.9.1.ebuild:
+  Version bump.
+
+*flask-sqlalchemy-0.9 (25 Jul 2010)
+
+  25 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -flask-sqlalchemy-0.6.ebuild, +flask-sqlalchemy-0.9.ebuild:
+  Version bump.
+
+*flask-sqlalchemy-0.6 (15 Jul 2010)
+
+  15 Jul 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +flask-sqlalchemy-0.6.ebuild, +metadata.xml:
+  Package needed for grumpy SoC project. Ebuild by Priit Laes
+  <plaes@plaes.org>.

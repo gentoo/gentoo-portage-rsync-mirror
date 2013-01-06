@@ -1,0 +1,89 @@
+# ChangeLog for x11-themes/light-themes
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/ChangeLog,v 1.15 2012/10/04 15:07:37 ago Exp $
+
+  04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> light-themes-0.1.8.32.ebuild:
+  Stable for amd64, wrt bug #427544
+
+  03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  light-themes-0.1.8.32.ebuild:
+  x86 stable wrt bug #427544
+
+*light-themes-0.1.93 (29 Sep 2012)
+
+  29 Sep 2012; Sebastian Pipping <sping@gentoo.org>
+  +light-themes-0.1.93.ebuild:
+  Bump to 0.1.93
+
+*light-themes-0.1.11 (29 Jun 2012)
+
+  29 Jun 2012; Sebastian Pipping <sping@gentoo.org>
+  +light-themes-0.1.11.ebuild:
+  Bump to 0.1.11
+
+*light-themes-0.1.9.2 (16 Jun 2012)
+
+  16 Jun 2012; Sebastian Pipping <sping@gentoo.org>
+  +light-themes-0.1.9.2.ebuild:
+  Bump to 0.1.9.2
+
+*light-themes-0.1.9.1-r1 (10 Jun 2012)
+
+  10 Jun 2012; Sebastian Pipping <sping@gentoo.org>
+  +light-themes-0.1.9.1-r1.ebuild:
+  No longer install gtk-3.0 files for USE=-gtk3 (bug #420569)
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> light-themes-0.1.8.29.ebuild:
+  x86 stable, bug #410611
+
+  18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> light-themes-0.1.8.29.ebuild:
+  Stable for amd64, wrt bug #410611
+
+*light-themes-0.1.9.1 (15 Apr 2012)
+
+  15 Apr 2012; Sebastian Pipping <sping@gentoo.org>
+  +light-themes-0.1.9.1.ebuild:
+  Bump to 0.1.9.1
+
+*light-themes-0.1.8.32 (03 Apr 2012)
+
+  03 Apr 2012; Pacho Ramos <pacho@gentoo.org> +light-themes-0.1.8.32.ebuild,
+  -light-themes-0.1.8.25.ebuild, -light-themes-0.1.8.26.ebuild,
+  -light-themes-0.1.8.27.2.ebuild, metadata.xml:
+  Version bump including themes with Gentoo colors (#409613), add me as co-
+  maintainer. Remove old.
+
+  17 Feb 2012; Sebastian Pipping <sping@gentoo.org>
+  light-themes-0.1.8.25.ebuild, light-themes-0.1.8.26.ebuild,
+  light-themes-0.1.8.27.2.ebuild, +light-themes-0.1.8.29.ebuild:
+  Use third-party mirror "ubuntu"
+
+*light-themes-0.1.8.29 (17 Feb 2012)
+
+  17 Feb 2012; Sebastian Pipping <sping@gentoo.org>
+  +light-themes-0.1.8.29.ebuild:
+  Bump to 0.1.8.29
+
+  08 Feb 2012; Sebastian Pipping <sping@gentoo.org>
+  light-themes-0.1.8.25.ebuild, light-themes-0.1.8.26.ebuild,
+  light-themes-0.1.8.27.2.ebuild:
+  Mention GTK 2.x and 3.x in description
+
+*light-themes-0.1.8.27.2 (07 Feb 2012)
+
+  07 Feb 2012; Sebastian Pipping <sping@gentoo.org>
+  +light-themes-0.1.8.27.2.ebuild:
+  Bump to 0.1.8.27.2
+
+*light-themes-0.1.8.26 (23 Jan 2012)
+
+  23 Jan 2012; Sebastian Pipping <sping@gentoo.org>
+  +light-themes-0.1.8.26.ebuild:
+  Bump to 0.1.8.26
+
+*light-themes-0.1.8.25 (13 Nov 2011)
+
+  13 Nov 2011; Sebastian Pipping <sping@gentoo.org>
+  +light-themes-0.1.8.25.ebuild, +metadata.xml:
+  New package
+

@@ -1,0 +1,105 @@
+# ChangeLog for net-misc/apt-cacher-ng
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/ChangeLog,v 1.19 2012/12/08 16:25:28 jer Exp $
+
+  08 Dec 2012; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.7.7-r1.ebuild,
+  apt-cacher-ng-0.7.10.ebuild:
+  Fix LICENSE, by Ulrich Müller (bug #446492).
+
+*apt-cacher-ng-0.7.10 (08 Nov 2012)
+
+  08 Nov 2012; Jeroen Roovers <jer@gentoo.org> +apt-cacher-ng-0.7.10.ebuild:
+  Version bump.
+
+  12 Sep 2012; Jeroen Roovers <jer@gentoo.org> apt-cacher-ng-0.7.7-r1.ebuild:
+  Add GPL-2 to LICENSE for init.d script by Ian Stakenvicius (bug #426050).
+
+  20 Aug 2012; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.7.6.ebuild:
+  Old.
+
+*apt-cacher-ng-0.7.7-r1 (20 Aug 2012)
+
+  20 Aug 2012; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.7.7.ebuild,
+  +apt-cacher-ng-0.7.7-r1.ebuild, files/initd:
+  Do not keep /var/run subdirectory but create it as needed, and replace
+  --chuid with --user, by Marien Zwart (bug #431980).
+
+*apt-cacher-ng-0.7.7 (06 Aug 2012)
+
+  06 Aug 2012; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.7.3.ebuild,
+  +apt-cacher-ng-0.7.7.ebuild:
+  Version bump.
+
+*apt-cacher-ng-0.7.6 (19 Jun 2012)
+
+  19 Jun 2012; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.7.1.ebuild,
+  -apt-cacher-ng-0.7.2.ebuild, apt-cacher-ng-0.7.3.ebuild,
+  +apt-cacher-ng-0.7.6.ebuild:
+  Version bump. Inherit user instead of eutils.
+
+*apt-cacher-ng-0.7.3 (25 Apr 2012)
+
+  25 Apr 2012; Jeroen Roovers <jer@gentoo.org> +apt-cacher-ng-0.7.3.ebuild:
+  Version bump.
+
+*apt-cacher-ng-0.7.2 (06 Mar 2012)
+
+  06 Mar 2012; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.7.ebuild,
+  +apt-cacher-ng-0.7.2.ebuild:
+  Version bump.
+
+*apt-cacher-ng-0.7.1 (23 Feb 2012)
+
+  23 Feb 2012; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.6.10.ebuild,
+  -apt-cacher-ng-0.6.11.ebuild, -apt-cacher-ng-0.6.12.ebuild,
+  +apt-cacher-ng-0.7.1.ebuild:
+  Version bump.
+
+*apt-cacher-ng-0.7 (06 Feb 2012)
+
+  06 Feb 2012; Jeroen Roovers <jer@gentoo.org> +apt-cacher-ng-0.7.ebuild:
+  Version bump.
+
+*apt-cacher-ng-0.6.12 (17 Jan 2012)
+
+  17 Jan 2012; Jeroen Roovers <jer@gentoo.org> +apt-cacher-ng-0.6.12.ebuild:
+  Version bump.
+
+*apt-cacher-ng-0.6.11 (07 Jan 2012)
+
+  07 Jan 2012; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.6.5.ebuild,
+  -apt-cacher-ng-0.6.8.ebuild, +apt-cacher-ng-0.6.11.ebuild:
+  Version bump. Install more files into /etc/apt-cacher-ng by Bruce Guenter
+  (bug #396535).
+
+*apt-cacher-ng-0.6.10 (06 Dec 2011)
+
+  06 Dec 2011; Jeroen Roovers <jer@gentoo.org> +apt-cacher-ng-0.6.10.ebuild:
+  Version bump.
+
+  17 Oct 2011; Jeroen Roovers <jer@gentoo.org> -apt-cacher-ng-0.6.2.ebuild,
+  -apt-cacher-ng-0.6.3.ebuild:
+  ^
+
+*apt-cacher-ng-0.6.8 (17 Oct 2011)
+
+  17 Oct 2011; Jeroen Roovers <jer@gentoo.org> +apt-cacher-ng-0.6.8.ebuild:
+  Version bump.
+
+*apt-cacher-ng-0.6.5 (16 Aug 2011)
+
+  16 Aug 2011; Jeroen Roovers <jer@gentoo.org> +apt-cacher-ng-0.6.5.ebuild:
+  Version bump.
+
+*apt-cacher-ng-0.6.3 (24 Jun 2011)
+
+  24 Jun 2011; Jeroen Roovers <jer@gentoo.org> +apt-cacher-ng-0.6.3.ebuild:
+  Version bump.
+
+*apt-cacher-ng-0.6.2 (24 May 2011)
+
+  24 May 2011; Jeroen Roovers <jer@gentoo.org> +apt-cacher-ng-0.6.2.ebuild,
+  +files/confd, +files/cron.daily, +files/initd, +files/logrotate,
+  +metadata.xml:
+  Initial commit (bug #265840).
+

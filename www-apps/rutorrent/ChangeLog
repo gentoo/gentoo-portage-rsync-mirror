@@ -1,0 +1,29 @@
+# ChangeLog for www-apps/rutorrent
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rutorrent/ChangeLog,v 1.5 2012/06/11 10:21:46 maksbotan Exp $
+
+*rutorrent-3.4-r1 (11 Jun 2012)
+
+  11 Jun 2012; Maxim Koltsov <maksbotan@gentoo.org> +rutorrent-3.4-r1.ebuild:
+  Make bash scripts in htdocs +x
+
+*rutorrent-3.4 (24 May 2012)
+
+  24 May 2012; Alexey Shvetsov <alexxy@gentoo.org> +rutorrent-3.4.ebuild:
+  [www-apps/rutorrent] Version bump per bug #411273
+
+  01 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> rutorrent-3.3.ebuild:
+  Fix bug #378747 and #379249
+
+*rutorrent-3.3 (09 Aug 2011)
+
+  09 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> -rutorrent-3.2.ebuild,
+  +rutorrent-3.3.ebuild:
+  Version bump
+
+*rutorrent-3.2 (08 Dec 2010)
+
+  08 Dec 2010; Alexey Shvetsov <alexxy@gentoo.org> +rutorrent-3.2.ebuild,
+  +metadata.xml:
+  Initial import
+

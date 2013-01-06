@@ -1,0 +1,8 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=Nagios imagepacks - Icons and pictures for Nagios
+HOMEPAGE=http://www.nagios.org
+KEYWORDS=alpha amd64 hppa ppc ppc64 sparc x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=mirror://sourceforge/nagios//imagepak-andrade.tar.gz mirror://sourceforge/nagios//imagepak-base.tar.gz mirror://sourceforge/nagios//imagepak-bernhard.tar.gz mirror://sourceforge/nagios//imagepak-didier.tar.gz mirror://sourceforge/nagios//imagepak-remus.tar.gz mirror://sourceforge/nagios//imagepak-satrapa.tar.gz mirror://sourceforge/nagios//imagepak-werschler.tar.gz http://dev.gentoo.org/~eldad/distfiles/imagepak-gentoo.tar.bz2
+_md5_=331888fcd42c8993c35298a8f6073a24

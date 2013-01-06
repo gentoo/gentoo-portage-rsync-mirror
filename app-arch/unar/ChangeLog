@@ -1,0 +1,27 @@
+# ChangeLog for app-arch/unar
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unar/ChangeLog,v 1.2 2012/09/17 11:12:15 hanno Exp $
+
+*unar-1.2 (17 Sep 2012)
+
+  17 Sep 2012; Hanno Boeck <hanno@gentoo.org> +unar-1.2.ebuild:
+  Version bump.
+
+*unar-1.1 (03 Sep 2012)
+
+  03 Sep 2012; Hanno Boeck <hanno@gentoo.org> +unar-1.1.ebuild, +metadata.xml:
+  Bump, move to upstream-preferred name and versioning scheme.
+
+  09 Oct 2011; Hanno Boeck <hanno@gentoo.org> TheUnarchiver-2.7.1.ebuild:
+  Add missing dep to icu.
+
+  09 Oct 2011; Hanno Boeck <hanno@gentoo.org> TheUnarchiver-2.7.1.ebuild:
+  Raise dependency for gnustep-make, versions before 2.6.0 use incompatible
+  paths.
+
+*TheUnarchiver-2.7.1 (08 Oct 2011)
+
+  08 Oct 2011; Hanno Boeck <hanno@gentoo.org> +TheUnarchiver-2.7.1.ebuild,
+  +metadata.xml:
+  Initial commit, unpacker for various archiving formats including rar v3.
+

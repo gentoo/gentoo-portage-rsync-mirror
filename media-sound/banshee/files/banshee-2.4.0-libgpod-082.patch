@@ -1,0 +1,32 @@
+From 623695e51ffd7faf3ff5b12754f4e3547d066f34 Mon Sep 17 00:00:00 2001
+From: Bertrand Lorentz <bertrand.lorentz@gmail.com>
+Date: Sat, 24 Mar 2012 15:38:18 +0000
+Subject: AppleDeviceTrackInfo: Fix build against libgpod-sharp 0.8.2
+
+In libgpod 0.8.2, released in July 2011, the type of the Track.Size
+field was changed, so it is reflected in the C# bindings and breaks the
+API.
+
+We have currently no way of checking which version of the libgpod-sharp
+bindings are available, so this breaks compilation against older version
+of libgpod-sharp. But people shipping Banshee 2.5.x and later should
+really ship libgpod-sharp 0.8.2.
+
+See this bug for details and attempts to fix this correctly:
+https://bugzilla.gnome.org/show_bug.cgi?id=655660
+---
+diff --git a/src/Dap/Banshee.Dap.AppleDevice/Banshee.Dap.AppleDevice/AppleDeviceTrackInfo.cs b/src/Dap/Banshee.Dap.AppleDevice/Banshee.Dap.AppleDevice/AppleDeviceTrackInfo.cs
+index 178266d..b8549f7 100644
+--- a/src/Dap/Banshee.Dap.AppleDevice/Banshee.Dap.AppleDevice/AppleDeviceTrackInfo.cs
++++ b/src/Dap/Banshee.Dap.AppleDevice/Banshee.Dap.AppleDevice/AppleDeviceTrackInfo.cs
+@@ -215,7 +215,7 @@ namespace Banshee.Dap.AppleDevice
+             track.CDs = DiscCount;
+             track.CDNumber = DiscNumber;
+             track.TrackLength = (int) Duration.TotalMilliseconds;
+-            track.Size = (int)FileSize;
++            track.Size = (uint)FileSize;
+             track.Grouping = Grouping;
+             try {
+                 track.TimePlayed = LastPlayed;
+--
+cgit v0.9.0.2

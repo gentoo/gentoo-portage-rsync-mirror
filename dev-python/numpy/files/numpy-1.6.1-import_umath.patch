@@ -1,0 +1,67 @@
+http://projects.scipy.org/numpy/ticket/1919
+https://github.com/numpy/numpy/commit/4dac50bf1faf2c8189c277ec8f11ead506c243b1
+https://github.com/numpy/numpy/commit/418f070fc67d1ea2b6eae3259e9dcf7a980bbaaf
+
+--- numpy/core/code_generators/generate_ufunc_api.py
++++ numpy/core/code_generators/generate_ufunc_api.py
+@@ -75,14 +75,53 @@
+   return 0;
+ }
+ 
+-#define import_umath() { UFUNC_NOFPE if (_import_umath() < 0) {PyErr_Print(); PyErr_SetString(PyExc_ImportError, "numpy.core.umath failed to import"); return; }}
+-
+-#define import_umath1(ret) { UFUNC_NOFPE if (_import_umath() < 0) {PyErr_Print(); PyErr_SetString(PyExc_ImportError, "numpy.core.umath failed to import"); return ret; }}
+-
+-#define import_umath2(msg, ret) { UFUNC_NOFPE if (_import_umath() < 0) {PyErr_Print(); PyErr_SetString(PyExc_ImportError, msg); return ret; }}
+-
+-#define import_ufunc() { UFUNC_NOFPE if (_import_umath() < 0) {PyErr_Print(); PyErr_SetString(PyExc_ImportError, "numpy.core.umath failed to import"); }}
++#if PY_VERSION_HEX >= 0x03000000
++#define NUMPY_IMPORT_UMATH_RETVAL NULL
++#else
++#define NUMPY_IMPORT_UMATH_RETVAL
++#endif
+ 
++#define import_umath() \
++    do {\
++        UFUNC_NOFPE\
++        if (_import_umath() < 0) {\
++            PyErr_Print();\
++            PyErr_SetString(PyExc_ImportError,\
++                    "numpy.core.umath failed to import");\
++            return NUMPY_IMPORT_UMATH_RETVAL;\
++        }\
++    } while(0)
++
++#define import_umath1(ret) \
++    do {\
++        UFUNC_NOFPE\
++        if (_import_umath() < 0) {\
++            PyErr_Print();\
++            PyErr_SetString(PyExc_ImportError,\
++                    "numpy.core.umath failed to import");\
++            return ret;\
++        }\
++    } while(0)
++
++#define import_umath2(ret, msg) \
++    do {\
++        UFUNC_NOFPE\
++        if (_import_umath() < 0) {\
++            PyErr_Print();\
++            PyErr_SetString(PyExc_ImportError, msg);\
++            return ret;\
++        }\
++    } while(0)
++
++#define import_ufunc() \
++    do {\
++        UFUNC_NOFPE\
++        if (_import_umath() < 0) {\
++            PyErr_Print();\
++            PyErr_SetString(PyExc_ImportError,\
++                    "numpy.core.umath failed to import");\
++        }\
++    } while(0)
+ 
+ #endif
+ """

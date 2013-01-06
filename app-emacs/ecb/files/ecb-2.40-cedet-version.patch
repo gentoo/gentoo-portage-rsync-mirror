@@ -1,0 +1,11 @@
+--- ecb-2.40-orig/ecb-upgrade.el
++++ ecb-2.40/ecb-upgrade.el
+@@ -1143,7 +1143,7 @@
+ 
+ ;; TODO: Klaus Berndl <klaus.berndl@sdm.de>: maybe we should set this to pre6
+ (defconst ecb-required-cedet-version-min '(1 0 2 6))
+-(defconst ecb-required-cedet-version-max '(1 0 4 9))
++(defconst ecb-required-cedet-version-max '(1 1 4 0))
+ 
+ (defvar ecb-all-requirements-available nil)
+ 

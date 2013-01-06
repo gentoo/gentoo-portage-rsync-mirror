@@ -1,0 +1,22 @@
+# ChangeLog for media-video/imagination
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/imagination/ChangeLog,v 1.3 2012/03/14 08:41:06 hwoarang Exp $
+
+  14 Mar 2012; Markos Chandras <hwoarang@gentoo.org> imagination-3.0-r1.ebuild,
+  imagination-3.0.ebuild:
+  Add ~x86 keyword. Bug #408111
+
+*imagination-3.0-r1 (27 Aug 2011)
+
+  27 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  +imagination-3.0-r1.ebuild:
+  Refactor LINGUAS logic and patch for loading plugins. Bug #380011. Thanks to
+  rj rooke <rjrooke@earthlink.net> for reporting and testing
+
+*imagination-3.0 (23 Jun 2011)
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> +imagination-3.0.ebuild,
+  +files/imagination-3.0-cflags.patch, +metadata.xml:
+  Moved from sunrise. Thanks to Alexander van der Mey for the ebuild. Bug
+  #282517
+

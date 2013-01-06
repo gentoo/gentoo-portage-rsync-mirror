@@ -1,0 +1,19 @@
+Check only for the .so: it spits out 'No such file or directory' warnings if the .so.MAJOR isnt found and tries the .so anyway, so this avoids the warnings.
+
+--- lib/openpam_dynamic.c.old	2012-04-21 17:03:28.000000000 +0000
++++ lib/openpam_dynamic.c	2012-04-21 17:05:11.000000000 +0000
+@@ -94,12 +94,9 @@
+ 		prefix = "";
+ 
+ 	/* try versioned module first, then unversioned module */
+-	if (asprintf(&vpath, "%s%s.%d", prefix, path, LIB_MAJ) < 0)
++	if (asprintf(&vpath, "%s%s", prefix, path) < 0)
+ 		goto err;
+-	if ((dlh = try_dlopen(vpath)) == NULL && errno == ENOENT) {
+-		*strrchr(vpath, '.') = '\0';
+-		dlh = try_dlopen(vpath);
+-	}
++	dlh = try_dlopen(vpath);
+ 	serrno = errno;
+ 	FREE(vpath);
+ 	errno = serrno;

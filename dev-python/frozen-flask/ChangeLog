@@ -1,0 +1,25 @@
+# ChangeLog for dev-python/frozen-flask
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/frozen-flask/ChangeLog,v 1.4 2012/03/19 23:10:27 rafaelmartins Exp $
+
+*frozen-flask-0.9 (19 Mar 2012)
+
+  19 Mar 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +frozen-flask-0.9.ebuild:
+  Version bump. bug #408559
+
+*frozen-flask-0.8 (09 Mar 2012)
+
+  09 Mar 2012; Patrick Lauer <patrick@gentoo.org> +frozen-flask-0.8.ebuild:
+  Bump for #404415
+
+  27 Nov 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  frozen-flask-0.7.ebuild:
+  this package supports python 2.5
+
+*frozen-flask-0.7 (27 Nov 2011)
+
+  27 Nov 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +frozen-flask-0.7.ebuild, +metadata.xml:
+  Initial commit.
+

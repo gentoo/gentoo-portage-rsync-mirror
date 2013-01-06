@@ -1,0 +1,7 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for LeechCraft plugins providing WYSIWYG text editor
+EAPI=4
+KEYWORDS=~amd64 ~x86
+RDEPEND=~x11-plugins/leechcraft-lhtr-0.5.90
+SLOT=0
+_md5_=4fcb5e9d83b415b52d0c795b5c5bc7f5

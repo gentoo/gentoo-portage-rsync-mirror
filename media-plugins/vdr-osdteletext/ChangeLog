@@ -1,0 +1,122 @@
+# ChangeLog for media-plugins/vdr-osdteletext
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/ChangeLog,v 1.24 2012/04/26 20:44:07 hd_brummy Exp $
+
+  26 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org> -files/confd-v2,
+  -files/rc-addon-v2.sh, -vdr-osdteletext-0.9.3.ebuild:
+  moved to vdr-devel overlay; need vdr-1.7.27
+
+  23 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-osdteletext-0.9.3.ebuild:
+  src_uri fixed; thanks to E.Seifert on bug #412893
+
+  23 Apr 2012; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  English.
+
+*vdr-osdteletext-0.9.3 (18 Apr 2012)
+
+  18 Apr 2012; Joerg Bornkessel <hd_brummy@gentoo.org> +files/confd-v2,
+  +files/rc-addon-v2.sh, +vdr-osdteletext-0.9.3.ebuild:
+  version bump; thx to M.Dummer
+
+  07 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-osdteletext-0.8.3.ebuild, -vdr-osdteletext-0.9.0.ebuild,
+  vdr-osdteletext-0.9.1.ebuild:
+  cleanup, thirdpartymirror, stable amd64 x86; bug 400393
+
+*vdr-osdteletext-0.9.1 (16 Sep 2011)
+
+  16 Sep 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-osdteletext-0.9.1.ebuild:
+  version bump
+
+*vdr-osdteletext-0.9.0 (01 Dec 2010)
+
+  01 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -files/i18n_german_lang.diff, -vdr-osdteletext-0.5.1-r2.ebuild,
+  -files/vdr-osdteletext-0.5.1-actdevice.diff,
+  -files/vdr-osdteletext-0.5.1-vdr-1.5.patch, -vdr-osdteletext-0.7.0.ebuild,
+  -vdr-osdteletext-0.8.1.ebuild, -vdr-osdteletext-0.8.2.ebuild,
+  vdr-osdteletext-0.8.3.ebuild, +vdr-osdteletext-0.9.0.ebuild:
+  cleanup; stable x86; version bump
+
+*vdr-osdteletext-0.8.3 (03 Jun 2009)
+
+  03 Jun 2009; Matthias Schwarzott <zzam@gentoo.org>
+  +vdr-osdteletext-0.8.3.ebuild:
+  Version bumped.
+
+*vdr-osdteletext-0.8.2 (26 May 2009)
+
+  26 May 2009; Matthias Schwarzott <zzam@gentoo.org>
+  +vdr-osdteletext-0.8.2.ebuild:
+  Version bumped.
+
+*vdr-osdteletext-0.8.1 (11 Jan 2009)
+
+  11 Jan 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-osdteletext-0.8.1.ebuild:
+  version bump
+
+*vdr-osdteletext-0.7.0 (06 Jan 2009)
+
+  06 Jan 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-osdteletext-0.5.1.ebuild, -vdr-osdteletext-0.5.1-r1.ebuild,
+  +vdr-osdteletext-0.7.0.ebuild:
+  version bump; cleanup old versions
+
+  10 Jul 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-osdteletext-0.5.1-r2.ebuild:
+  Marked stable on x86.
+
+*vdr-osdteletext-0.5.1-r2 (04 Jun 2008)
+
+  04 Jun 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-osdteletext-0.5.1-actdevice.diff,
+  +vdr-osdteletext-0.5.1-r2.ebuild:
+  Added patch to solve zapping problem from
+  http://vdr-portal.de/board/thread.php?threadid=70372. Thanks to
+  hampelratte for noticing.
+
+  28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-osdteletext-0.5.1.ebuild, vdr-osdteletext-0.5.1-r1.ebuild:
+  Fixed quoting.
+
+  15 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-osdteletext-0.5.1-r1.ebuild:
+  Marked stable on x86.
+
+  17 Apr 2007; Matthias Schwarzott <zzam@gentoo.org> files/rc-addon.sh:
+  Removed bash specific stuff.
+
+*vdr-osdteletext-0.5.1-r1 (02 Apr 2007)
+
+  02 Apr 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-osdteletext-0.5.1-vdr-1.5.patch,
+  +vdr-osdteletext-0.5.1-r1.ebuild:
+  Added vdr-1.5 patch.
+
+  28 Sep 2006; Joerg Bornkessel <hd_brummy@gentoo.org> files/rc-addon.sh:
+  correct PATH handling
+
+  15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Assigned to Gentoo VDR Project.
+
+  06 Jul 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-osdteletext-0.5.1.ebuild:
+  Fixed patch-filename.
+
+  04 Jul 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/i18n_german_lang.diff, vdr-osdteletext-0.5.1.ebuild:
+  add lang fix, fix errors in logfile -> no translation found for...
+
+  24 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-osdteletext-0.5.1.ebuild:
+  marked stable on x86
+
+*vdr-osdteletext-0.5.1 (21 Mar 2006)
+
+  21 Mar 2006; Joerg Bornkessel <hd_brummy@gentoo.org> +files/confd,
+  +files/rc-addon.sh, +metadata.xml, +vdr-osdteletext-0.5.1.ebuild:
+  ebuild imported from gentoo.de overlay cvs
+

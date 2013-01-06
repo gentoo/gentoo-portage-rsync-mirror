@@ -1,0 +1,74 @@
+diff -up cdcollect-0.6.0/src/CDIcon.cs.sqlite cdcollect-0.6.0/src/CDIcon.cs
+--- cdcollect-0.6.0/src/CDIcon.cs.sqlite	2006-11-24 18:12:13.000000000 +0100
++++ cdcollect-0.6.0/src/CDIcon.cs	2011-01-01 12:15:13.000000000 +0100
+@@ -23,7 +23,7 @@ using System.IO;
+ using System.Xml;
+ using Gtk;
+ using Gdk;
+-using Mono.Data.SqliteClient;
++using Mono.Data.Sqlite;
+ using Mono.Unix;
+ 
+ 
+diff -up cdcollect-0.6.0/src/CDItem.cs.sqlite cdcollect-0.6.0/src/CDItem.cs
+--- cdcollect-0.6.0/src/CDItem.cs.sqlite	2006-11-24 18:12:13.000000000 +0100
++++ cdcollect-0.6.0/src/CDItem.cs	2011-01-01 12:15:13.000000000 +0100
+@@ -24,7 +24,7 @@ using System.Xml;
+ using System.Text.RegularExpressions;
+ using Gtk;
+ using Gdk;
+-using Mono.Data.SqliteClient;
++using Mono.Data.Sqlite;
+ using Mono.Unix;
+ 
+ public enum CDItemFind : int {
+diff -up cdcollect-0.6.0/src/DBsql.cs.sqlite cdcollect-0.6.0/src/DBsql.cs
+--- cdcollect-0.6.0/src/DBsql.cs.sqlite	2006-11-24 18:12:13.000000000 +0100
++++ cdcollect-0.6.0/src/DBsql.cs	2011-01-01 12:26:53.000000000 +0100
+@@ -27,7 +27,7 @@ using System.Text;
+ using System.Threading;
+ using System.Text.RegularExpressions;
+ 
+-using Mono.Data.SqliteClient;
++using Mono.Data.Sqlite;
+ using Mono.Unix;
+ 
+ 
+@@ -958,10 +958,10 @@ public class CDDatabaseSql
+ 	private int sql_command_id (string comm)
+ 	{	
+ 		IDbCommand command = sqlite_connection.CreateCommand ();
+-		command.CommandText = comm;
+-		command.ExecuteScalar ();
++		command.CommandText = comm + "; SELECT last_insert_rowid();";
++		int rowid = (int)command.ExecuteScalar ();
+ 		command.Dispose ();
+-		return (((SqliteConnection)sqlite_connection).LastInsertRowId);
++		return (rowid);
+ 	}
+ 	
+ 	private void sql_command (string comm)
+diff -up cdcollect-0.6.0/src/Makefile.am.sqlite cdcollect-0.6.0/src/Makefile.am
+--- cdcollect-0.6.0/src/Makefile.am.sqlite	2011-01-01 12:15:13.000000000 +0100
++++ cdcollect-0.6.0/src/Makefile.am	2011-01-01 12:15:13.000000000 +0100
+@@ -42,7 +42,7 @@ Defines.cs: Defines.cs.in
+ 
+ ASSEMBLIES =                    \
+ 	/r:System.Data				\
+-	/r:Mono.Data.SqliteClient	\
++	/r:Mono.Data.Sqlite	\
+ 	/r:Mono.Posix		        \
+ 	-pkg:gtk-sharp-2.0			\
+ 	-pkg:glade-sharp-2.0		\
+diff -up cdcollect-0.6.0/src/Makefile.in.sqlite cdcollect-0.6.0/src/Makefile.in
+--- cdcollect-0.6.0/src/Makefile.in.sqlite	2011-01-01 12:15:13.000000000 +0100
++++ cdcollect-0.6.0/src/Makefile.in	2011-01-01 12:15:13.000000000 +0100
+@@ -254,7 +254,7 @@ GENERATED_CSFILES = \
+ 
+ ASSEMBLIES = \
+ 	/r:System.Data				\
+-	/r:Mono.Data.SqliteClient	\
++	/r:Mono.Data.Sqlite	\
+ 	/r:Mono.Posix		        \
+ 	-pkg:gtk-sharp-2.0			\
+ 	-pkg:glade-sharp-2.0		\

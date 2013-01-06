@@ -1,0 +1,320 @@
+diff -Naur quickplot-0.8.13/Graph.cpp quickplot-0.8.13.new/Graph.cpp
+--- quickplot-0.8.13/Graph.cpp	2006-08-05 11:45:34.000000000 -0400
++++ quickplot-0.8.13.new/Graph.cpp	2008-05-06 09:58:18.000000000 -0400
+@@ -1180,31 +1180,31 @@
+ 
+ 
+ 
+-SigC::Signal1<void, Graph *> Graph::signal_addedPlot(void)
++sigc::signal1<void, Graph *> Graph::signal_addedPlot(void)
+ {
+   return m_signal_addedPlot;
+ }
+ 
+-SigC::Signal2<void, Graph *, Plot *> Graph::signal_removedPlot(void)
++sigc::signal2<void, Graph *, Plot *> Graph::signal_removedPlot(void)
+ {
+   return m_signal_removedPlot;
+ }
+ 
+-SigC::Signal1<void, Graph *> Graph::m_signal_addedPlot;
++sigc::signal1<void, Graph *> Graph::m_signal_addedPlot;
+ 
+-SigC::Signal2<void, Graph *, Plot *> Graph::m_signal_removedPlot;
++sigc::signal2<void, Graph *, Plot *> Graph::m_signal_removedPlot;
+ 
+ 
+ 
+-SigC::Signal1<void, Graph *> Graph::signal_changedSameScale(void)
++sigc::signal1<void, Graph *> Graph::signal_changedSameScale(void)
+ {
+   return m_signal_changedSameScale;
+ }
+ 
+-SigC::Signal1<void, Graph *> Graph::m_signal_changedSameScale;
++sigc::signal1<void, Graph *> Graph::m_signal_changedSameScale;
+ 
+ 
+-SigC::Signal0<void> Graph::signal_backgroundColorChanged(void)
++sigc::signal0<void> Graph::signal_backgroundColorChanged(void)
+ {
+   return m_signal_backgroundColorChanged;
+ }
+diff -Naur quickplot-0.8.13/Graph.h quickplot-0.8.13.new/Graph.h
+--- quickplot-0.8.13/Graph.h	2006-08-03 16:56:56.000000000 -0400
++++ quickplot-0.8.13.new/Graph.h	2008-05-06 09:58:18.000000000 -0400
+@@ -68,10 +68,10 @@
+   inline bool isShowingGrid() { return (showAutoGrid && isSameScale); }
+   /************************************************************/
+ 
+-  static SigC::Signal1<void, Graph *> signal_changedSameScale(void);
+-  static SigC::Signal1<void, Graph *> signal_addedPlot(void);
+-  static SigC::Signal2<void, Graph *, Plot *> signal_removedPlot(void);
+-  SigC::Signal0<void> signal_backgroundColorChanged(void);
++  static sigc::signal1<void, Graph *> signal_changedSameScale(void);
++  static sigc::signal1<void, Graph *> signal_addedPlot(void);
++  static sigc::signal2<void, Graph *, Plot *> signal_removedPlot(void);
++  sigc::signal0<void> signal_backgroundColorChanged(void);
+ 
+   
+   Gdk::Color gridColor, backgroundColor;
+@@ -105,12 +105,12 @@
+ 
+   void setStatusXYValues(gdouble x, gdouble y);
+   
+-  static SigC::Signal1<void, Graph *> m_signal_changedSameScale;
++  static sigc::signal1<void, Graph *> m_signal_changedSameScale;
+   
+-  static SigC::Signal1<void, Graph *> m_signal_addedPlot;
+-  static SigC::Signal2<void, Graph *, Plot *> m_signal_removedPlot;
++  static sigc::signal1<void, Graph *> m_signal_addedPlot;
++  static sigc::signal2<void, Graph *, Plot *> m_signal_removedPlot;
+ 
+-  SigC::Signal0<void> m_signal_backgroundColorChanged;
++  sigc::signal0<void> m_signal_backgroundColorChanged;
+ 
+   
+   // used by createPlot(Field *x, Field *y) 
+diff -Naur quickplot-0.8.13/MainWindow.cpp quickplot-0.8.13.new/MainWindow.cpp
+--- quickplot-0.8.13/MainWindow.cpp	2006-08-07 14:12:11.000000000 -0400
++++ quickplot-0.8.13.new/MainWindow.cpp	2008-05-06 09:58:18.000000000 -0400
+@@ -760,7 +760,7 @@
+   gtk_idle_add(copyGraphNotebooks, d);
+ }
+ 
+-SigC::Signal1<void, Graph *> GraphsNotebook::signal_tabLabelChanged(void)
++sigc::signal1<void, Graph *> GraphsNotebook::signal_tabLabelChanged(void)
+ {
+   return m_signal_tabLabelChanged;
+ }
+diff -Naur quickplot-0.8.13/MainWindow.h quickplot-0.8.13.new/MainWindow.h
+--- quickplot-0.8.13/MainWindow.h	2006-08-03 16:56:56.000000000 -0400
++++ quickplot-0.8.13.new/MainWindow.h	2008-05-06 09:58:18.000000000 -0400
+@@ -19,8 +19,8 @@
+   // method???  It's not listed.
+   void set_show_tabs(bool show_tabs = true);
+ 
+-  SigC::Signal1<void, Graph *> signal_tabLabelChanged(void);
+-  SigC::Signal1<void, Graph *> m_signal_tabLabelChanged;
++  sigc::signal1<void, Graph *> signal_tabLabelChanged(void);
++  sigc::signal1<void, Graph *> m_signal_tabLabelChanged;
+   
+ private:
+   MainWindow *mainWindow;
+diff -Naur quickplot-0.8.13/Plot.cpp quickplot-0.8.13.new/Plot.cpp
+--- quickplot-0.8.13/Plot.cpp	2006-08-03 16:56:56.000000000 -0400
++++ quickplot-0.8.13.new/Plot.cpp	2008-05-06 09:58:18.000000000 -0400
+@@ -503,7 +503,7 @@
+ 
+ // Emitted when the lineColor, pointColor, lineWidth or pointSize
+ // changes.
+-SigC::Signal0<void> Plot::signal_changed(void)
++sigc::signal0<void> Plot::signal_changed(void)
+ {
+   return m_signal_changed;
+ }
+@@ -663,7 +663,7 @@
+   m_signal_valueDisplay.emit(xpick, ypick);           
+ }
+ 
+-SigC::Signal2<void, value_t, value_t> Plot::signal_valueDisplay(void)
++sigc::signal2<void, value_t, value_t> Plot::signal_valueDisplay(void)
+ {
+   return m_signal_valueDisplay;
+ }
+diff -Naur quickplot-0.8.13/Plot.h quickplot-0.8.13.new/Plot.h
+--- quickplot-0.8.13/Plot.h	2006-08-03 16:56:56.000000000 -0400
++++ quickplot-0.8.13.new/Plot.h	2008-05-06 09:58:18.000000000 -0400
+@@ -101,14 +101,14 @@
+ 
+   // Emitted when the lineColor, pointColor, lineWidth, pointSize,
+   // showLines and showPoints.
+-  SigC::Signal0<void> signal_changed(void);
++  sigc::signal0<void> signal_changed(void);
+ 
+   
+   int emitDisplayValues(int X);
+   void emitInterpolatedDisplayValues(int X);
+   void emitDisplayValues(int X, int Y);
+ 
+-  SigC::Signal2<void, value_t, value_t> signal_valueDisplay(void);
++  sigc::signal2<void, value_t, value_t> signal_valueDisplay(void);
+   
+   value_t xpick, ypick;
+ 
+@@ -118,9 +118,9 @@
+ 
+   bool showPoints, showLines;
+   
+-  SigC::Signal0<void> m_signal_changed;
++  sigc::signal0<void> m_signal_changed;
+ 
+-  SigC::Signal2<void, value_t, value_t> m_signal_valueDisplay;
++  sigc::signal2<void, value_t, value_t> m_signal_valueDisplay;
+ 
+   Gdk::Color lineColor, pointColor;
+ 
+diff -Naur quickplot-0.8.13/PlotConfig.h quickplot-0.8.13.new/PlotConfig.h
+--- quickplot-0.8.13/PlotConfig.h	2006-08-03 16:56:56.000000000 -0400
++++ quickplot-0.8.13.new/PlotConfig.h	2008-05-06 09:58:18.000000000 -0400
+@@ -52,7 +52,7 @@
+   ValueSlider pointSizeVS;
+   // RadioButton style1, style2 etc ...
+ 
+-  SigC::Connection plotChanged_connection;
++  sigc::connection plotChanged_connection;
+ 
+   void setValues(void);
+   
+diff -Naur quickplot-0.8.13/PlotLister.h quickplot-0.8.13.new/PlotLister.h
+--- quickplot-0.8.13/PlotLister.h	2006-08-03 16:56:56.000000000 -0400
++++ quickplot-0.8.13.new/PlotLister.h	2008-05-06 09:58:18.000000000 -0400
+@@ -24,7 +24,7 @@
+   Glib::RefPtr<Gdk::Window> win;
+   Glib::RefPtr<Gdk::GC> gc;
+ 
+-  SigC::Connection plotChangeConnection, bgConnection;
++  sigc::connection plotChangeConnection, bgConnection;
+ };
+ 
+ 
+@@ -52,14 +52,14 @@
+   Table *table;
+   MainWindow *mainWindow;
+   Plot *plot;
+-  SigC::Connection valueDisplay_connection, makePlotConfig_connection;
++  sigc::connection valueDisplay_connection, makePlotConfig_connection;
+   
+   void add(Widget &w, int col);
+   void makePlotConfig(void);
+   //void setLabelSize(Entry &l);
+   //void afterRealize(void);
+ 
+-  //SigC::Connection afterRealizeConnection;
++  //sigc::connection afterRealizeConnection;
+ };
+ 
+ 
+diff -Naur quickplot-0.8.13/Source.cpp quickplot-0.8.13.new/Source.cpp
+--- quickplot-0.8.13/Source.cpp	2006-08-03 16:56:56.000000000 -0400
++++ quickplot-0.8.13.new/Source.cpp	2008-05-06 09:58:18.000000000 -0400
+@@ -207,18 +207,18 @@
+ }
+ 
+ 
+-SigC::Signal1<void, Source *> Source::signal_addedSource()
++sigc::signal1<void, Source *> Source::signal_addedSource()
+ {
+   return m_signal_addedSource;
+ }
+ 
+-SigC::Signal1<void, Source *> Source::m_signal_addedSource;
++sigc::signal1<void, Source *> Source::m_signal_addedSource;
+ 
+ 
+-SigC::Signal1<void, Source *> Source::signal_removedSource()
++sigc::signal1<void, Source *> Source::signal_removedSource()
+ {
+   return m_signal_removedSource;
+ }
+ 
+-SigC::Signal1<void, Source *> Source::m_signal_removedSource;
++sigc::signal1<void, Source *> Source::m_signal_removedSource;
+ 
+diff -Naur quickplot-0.8.13/Source.h quickplot-0.8.13.new/Source.h
+--- quickplot-0.8.13/Source.h	2006-08-03 16:56:56.000000000 -0400
++++ quickplot-0.8.13.new/Source.h	2008-05-06 09:58:18.000000000 -0400
+@@ -50,8 +50,8 @@
+   inline const enum  TYPE getType(void){ return type; }
+   inline const char *getTypeString(void){ return TYPE_STRING[type]; }
+ 
+-  static SigC::Signal1<void, Source *> signal_addedSource();
+-  static SigC::Signal1<void, Source *> signal_removedSource();
++  static sigc::signal1<void, Source *> signal_addedSource();
++  static sigc::signal1<void, Source *> signal_removedSource();
+ 
+   // Delete this object later.
+   void deleteLater(void);
+@@ -61,8 +61,8 @@
+   
+ protected:
+   
+-  static SigC::Signal1<void, Source *> m_signal_addedSource;
+-  static SigC::Signal1<void, Source *> m_signal_removedSource;
++  static sigc::signal1<void, Source *> m_signal_addedSource;
++  static sigc::signal1<void, Source *> m_signal_removedSource;
+ 
+   inline void setType(enum TYPE t) { type = t; }
+   char *fileName, *baseFileName;
+diff -Naur quickplot-0.8.13/ValueSlider.cpp quickplot-0.8.13.new/ValueSlider.cpp
+--- quickplot-0.8.13/ValueSlider.cpp	2006-08-03 16:56:56.000000000 -0400
++++ quickplot-0.8.13.new/ValueSlider.cpp	2008-05-06 09:58:18.000000000 -0400
+@@ -175,7 +175,7 @@
+   }
+ }
+ 
+-SigC::Signal0<void> ValueSlider::signal_valueChanged()
++sigc::signal0<void> ValueSlider::signal_valueChanged()
+ {
+   return m_signal_valueChanged;
+ }
+@@ -329,7 +329,7 @@
+   }
+ }
+ 
+-SigC::Signal0<void> DoubleValueSlider::signal_valueChanged()
++sigc::signal0<void> DoubleValueSlider::signal_valueChanged()
+ {
+   return m_signal_valueChanged;
+ }
+@@ -479,7 +479,7 @@
+   return (int) pow(10.0, value);
+ }
+ 
+-SigC::Signal0<void> LogValueSlider::signal_valueChanged()
++sigc::signal0<void> LogValueSlider::signal_valueChanged()
+ {
+   return m_signal_valueChanged;
+ }
+diff -Naur quickplot-0.8.13/ValueSlider.h quickplot-0.8.13.new/ValueSlider.h
+--- quickplot-0.8.13/ValueSlider.h	2006-08-03 16:56:56.000000000 -0400
++++ quickplot-0.8.13.new/ValueSlider.h	2008-05-06 09:58:18.000000000 -0400
+@@ -20,10 +20,10 @@
+   double maxmax;
+ 
+ public:
+-  SigC::Signal0<void> signal_valueChanged();
++  sigc::signal0<void> signal_valueChanged();
+ 
+ private:
+-  SigC::Signal0<void> m_signal_valueChanged;
++  sigc::signal0<void> m_signal_valueChanged;
+ 
+   bool setScaleToEntry(void);
+ 
+@@ -53,10 +53,10 @@
+   double value, maxmax;
+ 
+ public:
+-  SigC::Signal0<void> signal_valueChanged();
++  sigc::signal0<void> signal_valueChanged();
+ 
+ private:
+-  SigC::Signal0<void> m_signal_valueChanged;
++  sigc::signal0<void> m_signal_valueChanged;
+ 
+   bool setScaleToEntry(void);
+ 
+@@ -88,10 +88,10 @@
+   double value;
+ 
+ public:
+-  SigC::Signal0<void> signal_valueChanged();
++  sigc::signal0<void> signal_valueChanged();
+ 
+ private:
+-  SigC::Signal0<void> m_signal_valueChanged;
++  sigc::signal0<void> m_signal_valueChanged;
+ 
+   bool setScaleToEntry(void);
+ 

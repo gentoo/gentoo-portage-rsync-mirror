@@ -1,0 +1,244 @@
+# ChangeLog for net-libs/glib-networking
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.55 2012/12/10 11:58:10 tetromino Exp $
+
+  10 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -glib-networking-2.34.0.ebuild, glib-networking-2.34.2.ebuild:
+  Update to EAPI5, drop old.
+
+*glib-networking-2.34.2 (22 Nov 2012)
+
+  22 Nov 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +glib-networking-2.34.2.ebuild:
+  Version bump.
+
+  28 Oct 2012; Raúl Porcel <armin76@gentoo.org> glib-networking-2.32.3.ebuild:
+  ia64/sh/sparc stable wrt #427544
+
+  16 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  glib-networking-2.32.3.ebuild:
+  stable ppc, bug #427544
+
+  14 Oct 2012; Matt Turner <mattst88@gentoo.org> glib-networking-2.32.3.ebuild:
+  Stable on alpha, bug 427544.
+
+  07 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  glib-networking-2.32.3.ebuild:
+  stable ppc64, bug #427544
+
+  06 Oct 2012; Markus Meier <maekke@gentoo.org> glib-networking-2.32.3.ebuild:
+  arm stable, bug #427544
+
+  04 Oct 2012; Agostino Sarubbo <ago@gentoo.org> glib-networking-2.32.3.ebuild:
+  Stable for amd64, wrt bug #427544
+
+  03 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  glib-networking-2.32.3.ebuild:
+  x86 stable wrt bug #427544
+
+  02 Oct 2012; Jeroen Roovers <jer@gentoo.org> glib-networking-2.32.3.ebuild:
+  Stable for HPPA (bug #427544).
+
+*glib-networking-2.34.0 (25 Sep 2012)
+
+  25 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -glib-networking-2.28.7.ebuild,
+  -files/glib-networking-2.28.7-gnome-proxy-AC_ARG_WITH.patch,
+  -glib-networking-2.30.1-r1.ebuild,
+  -files/glib-networking-2.30.1-gnome-proxy-test.patch,
+  glib-networking-2.30.2.ebuild, -glib-networking-2.32.0.ebuild,
+  -glib-networking-2.32.1.ebuild, glib-networking-2.32.3.ebuild,
+  +glib-networking-2.34.0.ebuild:
+  Version bump for glib-2.34. Drop old. Make license more precise.
+
+  15 Jul 2012; Raúl Porcel <armin76@gentoo.org> glib-networking-2.30.2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #410611
+
+  24 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  glib-networking-2.30.2.ebuild:
+  ppc stable wrt #410611
+
+*glib-networking-2.32.3 (17 May 2012)
+
+  17 May 2012; Samuli Suominen <ssuominen@gentoo.org>
+  +glib-networking-2.32.3.ebuild:
+  Version bump.
+
+  16 May 2012; Jeroen Roovers <jer@gentoo.org> glib-networking-2.30.2.ebuild:
+  Stable for HPPA (bug #410611).
+
+  16 May 2012; Alexis Ballier <aballier@gentoo.org>
+  glib-networking-2.32.1.ebuild:
+  keyword ~amd64-fbsd
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> glib-networking-2.28.7.ebuild,
+  glib-networking-2.30.1-r1.ebuild, glib-networking-2.30.2.ebuild,
+  glib-networking-2.32.0.ebuild, glib-networking-2.32.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  29 Apr 2012; Markus Meier <maekke@gentoo.org> glib-networking-2.30.2.ebuild:
+  x86 stable, bug #410611
+
+  25 Apr 2012; Markus Meier <maekke@gentoo.org> glib-networking-2.30.2.ebuild:
+  arm stable, bug #410611
+
+*glib-networking-2.32.1 (20 Apr 2012)
+
+  20 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +glib-networking-2.32.1.ebuild:
+  Version bump.
+
+  19 Apr 2012; Brent Baude <ranger@gentoo.org> glib-networking-2.30.2.ebuild:
+  Marking glib-networking-2.30.2 ppc64 stable for bug 410611
+
+  18 Apr 2012; Agostino Sarubbo <ago@gentoo.org> glib-networking-2.30.2.ebuild:
+  Stable for amd64, wrt bug #410611
+
+  08 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  glib-networking-2.28.7.ebuild, glib-networking-2.30.1-r1.ebuild,
+  glib-networking-2.30.2.ebuild:
+  Add missing libgcrypt dependency when USE=ssl, and fix build with USE=-ssl
+  when libgcrypt is not installed (bug #411139, thanks to Marvin Vek for
+  reporting).
+
+*glib-networking-2.32.0 (31 Mar 2012)
+
+  31 Mar 2012; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +glib-networking-2.32.0.ebuild:
+  Bump to 2.32.0, masked with glib-2.32
+
+  25 Mar 2012; Raúl Porcel <armin76@gentoo.org>
+  glib-networking-2.30.1-r1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #393007
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org>
+  glib-networking-2.30.1-r1.ebuild:
+  Marking glib-networking-2.30.1-r1 ppc stable for bug 393007
+
+  05 Mar 2012; Brent Baude <ranger@gentoo.org>
+  glib-networking-2.30.1-r1.ebuild:
+  Marking glib-networking-2.30.1-r1 ppc64 stable for bug 393007
+
+  18 Jan 2012; Markus Meier <maekke@gentoo.org>
+  glib-networking-2.30.1-r1.ebuild:
+  arm stable, bug #393007
+
+  18 Jan 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  glib-networking-2.30.1-r1.ebuild, glib-networking-2.30.2.ebuild:
+  eautoreconf requires >=autoconf-2.65 (bug #398993, thanks to MageSlayer for
+  reporting).
+
+  14 Jan 2012; Markus Meier <maekke@gentoo.org>
+  glib-networking-2.30.1-r1.ebuild:
+  x86 stable, bug #393007
+
+*glib-networking-2.30.2 (04 Jan 2012)
+
+  04 Jan 2012; Pacho Ramos <pacho@gentoo.org> +glib-networking-2.30.2.ebuild,
+  -glib-networking-2.28.7-r1.ebuild, -glib-networking-2.30.0-r1.ebuild:
+  Version bump, remove old.
+
+  29 Dec 2011; Pacho Ramos <pacho@gentoo.org> glib-networking-2.30.1-r1.ebuild:
+  amd64 stable, bug 393007
+
+  20 Dec 2011; Jeroen Roovers <jer@gentoo.org>
+  glib-networking-2.30.1-r1.ebuild:
+  Stable for HPPA (bug #393007).
+
+*glib-networking-2.30.1-r1 (19 Oct 2011)
+*glib-networking-2.30.0-r1 (19 Oct 2011)
+*glib-networking-2.28.7-r1 (19 Oct 2011)
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +glib-networking-2.28.7-r1.ebuild,
+  +files/glib-networking-2.28.7-gnome-proxy-AC_ARG_WITH.patch,
+  -glib-networking-2.30.0.ebuild, +glib-networking-2.30.0-r1.ebuild,
+  -glib-networking-2.30.1.ebuild, +glib-networking-2.30.1-r1.ebuild,
+  +files/glib-networking-2.30.1-gnome-proxy-test.patch:
+  Fix configure to respect --without-gnome-proxy (bug #387597) and drop ~arch
+  versions with broken configure. For 2.30.1, apply patch to not build
+  gnome-proxy test when USE=-gnome, and restrict tests (they appear to fail
+  ~50% of the time, need to investigate).
+  Note that the gnome-proxy patches have been applied in upstream git master.
+
+*glib-networking-2.30.1 (18 Oct 2011)
+
+  18 Oct 2011; Pacho Ramos <pacho@gentoo.org> +glib-networking-2.30.1.ebuild:
+  Version bump.
+
+*glib-networking-2.30.0 (27 Sep 2011)
+
+  27 Sep 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +glib-networking-2.30.0.ebuild:
+  Bump to 2.30, from the GNOME overlay. Ebuild updates by tetromino.
+
+  18 Sep 2011; Raúl Porcel <armin76@gentoo.org> glib-networking-2.28.7.ebuild:
+  alpha/ia64/sh/sparc stable wrt #376793
+
+  12 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  glib-networking-2.28.7.ebuild:
+  ppc/ppc64 stable wrt #376793
+
+  09 Sep 2011; Jeroen Roovers <jer@gentoo.org> glib-networking-2.28.7.ebuild:
+  Stable for HPPA (bug #376793).
+
+  04 Sep 2011; Markus Meier <maekke@gentoo.org> glib-networking-2.28.7.ebuild:
+  arm/x86 stable, bug #376793
+
+  04 Sep 2011; Tony Vroon <chainsaw@gentoo.org> glib-networking-2.28.7.ebuild:
+  Marked stable as a dependency of net-libs/libsoup-2.34.3 based on arch
+  testing by Agostino "ago" Sarubbo in bug #376793 filed by Pacho Ramos.
+
+  28 Jul 2011; Pacho Ramos <pacho@gentoo.org> -glib-networking-2.28.5.ebuild,
+  -glib-networking-2.28.6.1.ebuild, glib-networking-2.28.7.ebuild:
+  Remove old and RDEPEND on a fixed libproxy version to prevent errors with
+  buggy xulrunner and webkit backends.
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  glib-networking-2.28.7.ebuild:
+  Marked ~ppc/~ppc64 wrt #365331
+
+  10 Jul 2011; Matt Turner <mattst88@gentoo.org> glib-networking-2.28.7.ebuild:
+  Added ~mips, bug 365331
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  glib-networking-2.28.7.ebuild:
+  keyword ~x86-fbsd, bug #365331
+
+  11 Jun 2011; Raúl Porcel <armin76@gentoo.org> glib-networking-2.28.5.ebuild,
+  glib-networking-2.28.6.1.ebuild, glib-networking-2.28.7.ebuild:
+  Add ~alpha/~ia64/~sh/~sparc wrt #365331
+
+  27 May 2011; Jeroen Roovers <jer@gentoo.org> glib-networking-2.28.6.1.ebuild,
+  glib-networking-2.28.7.ebuild:
+  Marked ~hppa (bug #365331).
+
+  26 May 2011; Markus Meier <maekke@gentoo.org>
+  glib-networking-2.28.6.1.ebuild, glib-networking-2.28.7.ebuild:
+  add ~arm, bug #365331
+
+*glib-networking-2.28.7 (25 May 2011)
+
+  25 May 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  +glib-networking-2.28.7.ebuild:
+  Version bump, thread-safety fixes.
+
+  03 May 2011; Jeremy Olexa <darkside@gentoo.org>
+  glib-networking-2.28.6.1.ebuild:
+  better align keywords with libsoup, tested by myself
+
+  03 May 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  glib-networking-2.28.5.ebuild, glib-networking-2.28.6.1.ebuild:
+  Fix ca-certificates path, pointed out by Jeremy on IRC
+
+*glib-networking-2.28.6.1 (29 Apr 2011)
+
+  29 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +glib-networking-2.28.6.1.ebuild:
+  Bump to 2.28.6.1
+
+*glib-networking-2.28.5 (24 Apr 2011)
+
+  24 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +glib-networking-2.28.5.ebuild, +metadata.xml:
+  Move glib-networking from the gnome overlay to tree

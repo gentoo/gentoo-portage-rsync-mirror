@@ -1,0 +1,33 @@
+--- nsat/src/mod/xp_icmp_echo.c.orig	2002-02-07 20:14:20.000000000 +0300
++++ nsat/src/mod/xp_icmp_echo.c	2011-11-07 00:57:48.885372644 +0400
+@@ -90,7 +90,7 @@
+    fprintf(stderr,"[%d bytes] sent, waiting for reponse.\n", res);
+ #endif
+ 
+-   recv_pack = read_icmp(&res, ICMP_ECHOREPLY, -1);
++   recv_pack = read_icmp((ssize_t *)&res, ICMP_ECHOREPLY, -1);
+ 
+    if (recv_pack == NULL || (unsigned)res < sizeof(ip) + 8) {
+ #ifdef EBUG
+--- nsat/src/mod/xp_icmp_infr.c.orig	2002-02-07 20:14:20.000000000 +0300
++++ nsat/src/mod/xp_icmp_infr.c	2011-11-07 01:09:43.192287799 +0400
+@@ -83,7 +83,7 @@
+    fprintf(stderr,"[%d bytes] sent, waiting for reponse.\n", res);
+ #endif
+    
+-   recv_pack = read_icmp(&res, ICMP_IREQREPLY, -1);
++   recv_pack = read_icmp((ssize_t *)&res, ICMP_IREQREPLY, -1);
+ 
+    if (recv_pack == NULL || (unsigned)res < sizeof(ip) + 8) {
+ #ifdef EBUG
+--- nsat/src/mod/xp_udp_probe.c.orig	2011-11-07 01:05:26.000000000 +0400
++++ nsat/src/mod/xp_udp_probe.c	2011-11-07 01:05:48.403407231 +0400
+@@ -92,7 +92,7 @@
+ #ifdef EBUG
+    fprintf(stderr,"[%d bytes] sent, waiting for reponse.\n", res);
+ #endif
+-   recv_pack = read_icmp(&res, ICMP_UNREACH, -1);
++   recv_pack = read_icmp((ssize_t *)&res, ICMP_UNREACH, -1);
+ 
+    if (recv_pack == NULL || (unsigned)res < sizeof(ip) + 8) {
+ #ifdef EBUG

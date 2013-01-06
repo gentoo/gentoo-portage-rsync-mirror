@@ -1,0 +1,35 @@
+diff -ruN fwbuilder-4.2.2.3541.orig/configure.in fwbuilder-4.2.2.3541/configure.in
+--- fwbuilder-4.2.2.3541.orig/configure.in	2011-05-11 23:02:03.000000000 +0200
++++ fwbuilder-4.2.2.3541/configure.in	2011-05-29 18:53:06.624998022 +0200
+@@ -638,12 +638,27 @@
+ AC_SUBST(MANDIR)
+ AC_SUBST(ICONSDIR)
+ 
+-AC_PATH_PROG(CCACHE, ccache, , )
+-AC_SUBST(CCACHE)
++AC_ARG_WITH(ccache,[  --with-ccache=yes      Use ccache to speed up repeated compilation])
+ 
+-if test -n "$CCACHE"
+-then
++if test -n "$with_ccache"; then
++  if test "x$with_ccache" != "xno"; then
++    AC_PATH_PROG(CCACHE, ccache, , )
++    AC_SUBST(CCACHE)
++    if test -n "$CCACHE"
++    then
++      ccache -s
++    fi
++  else
++    CCACHE=""
++    AC_SUBST(CCACHE)
++  fi
++else
++  AC_PATH_PROG(CCACHE, ccache, , )
++  AC_SUBST(CCACHE)
++  if test -n "$CCACHE"
++  then
+         ccache -s
++  fi
+ fi
+ 
+ AC_ARG_WITH(distcc,[  --with-distcc=N        Use distcc with N parallel make count])

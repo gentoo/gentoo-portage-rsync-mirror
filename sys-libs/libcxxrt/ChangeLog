@@ -1,0 +1,36 @@
+# ChangeLog for sys-libs/libcxxrt
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/ChangeLog,v 1.5 2012/11/01 17:40:49 aballier Exp $
+
+  01 Nov 2012; Alexis Ballier <aballier@gentoo.org>
+  -files/0001-Link-to-libdl-where-needed-for-dladdr-exception.cc.patch,
+  -libcxxrt-0.0_p20120528.ebuild:
+  remove old
+
+  11 Sep 2012; Alexis Ballier <aballier@gentoo.org>
+  libcxxrt-0.0_p20120911.ebuild, libcxxrt-9999.ebuild:
+  keyword ~amd64-fbsd
+
+*libcxxrt-0.0_p20120911 (11 Sep 2012)
+
+  11 Sep 2012; Alexis Ballier <aballier@gentoo.org>
+  +libcxxrt-0.0_p20120911.ebuild:
+  bump a new snapshot with the accumulated improvements from -9999
+
+  31 May 2012; Alexis Ballier <aballier@gentoo.org> libcxxrt-9999.ebuild,
+  +files/Makefile, +files/Makefile.test, +files/unwind.h:
+  Use our own makefiles, its so simple that we do not need to rely on cmake for
+  this. Build it on top of libunwind instead of using libgcc_s for unwinding.
+  Remove their libunwind bundled headers and ship a reduced one with only the
+  added macros libcxxrt needs. Build with -nodefaultlibs to ensure we do not
+  link to gcc libs. Add static-libs useflag. Give it a src_test.
+
+*libcxxrt-9999 (28 May 2012)
+*libcxxrt-0.0_p20120528 (28 May 2012)
+
+  28 May 2012; Alexis Ballier <aballier@gentoo.org>
+  +files/0001-Link-to-libdl-where-needed-for-dladdr-exception.cc.patch,
+  +libcxxrt-0.0_p20120528.ebuild, +libcxxrt-9999.ebuild,
+  +files/prepare_snapshot.sh, +metadata.xml:
+  Initial import, ebuild by me
+

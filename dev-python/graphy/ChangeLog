@@ -1,0 +1,16 @@
+# ChangeLog for dev-python/graphy
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/graphy/ChangeLog,v 1.3 2012/06/16 07:43:36 pacho Exp $
+
+  16 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer as he is not able to maintain this anymore.
+
+  25 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Add python as a herd.
+
+*graphy-1.0 (24 Dec 2009)
+
+  24 Dec 2009; Mounir Lamouri <volkmar@gentoo.org> +graphy-1.0.ebuild,
+  +metadata.xml:
+  Initial commit
+

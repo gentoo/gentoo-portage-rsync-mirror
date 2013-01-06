@@ -1,0 +1,21 @@
+Index: Bindings/Caml/Makefile.in
+===================================================================
+--- Bindings/Caml/Makefile.in	(revision 5474)
++++ Bindings/Caml/Makefile.in	(working copy)
+@@ -31,6 +31,7 @@
+ OCAMLFIND = @OCAMLFIND@
+ OCAML_INSTALL_TARGET = @OCAML_INSTALL_TARGET@
+ OCAML_UNINSTALL_TARGET = @OCAML_UNINSTALL_TARGET@
++OCAML_LDCONF = -ldconf "$(OCAML_DESTDIR)/ld.conf"
+ 
+ OCAML_LIB = $(API_NAME)
+ OCAML_BCLIB = $(OCAML_LIB).cma
+@@ -102,7 +103,7 @@
+ install-with-findlib:
+ 	$(INSTALL_DIRECTORY) $(OCAML_DESTDIR)
+ 	$(OCAMLFIND) remove -destdir "$(OCAML_DESTDIR)" $(OCAML_LIB)
+-	$(OCAMLFIND) install -destdir "$(OCAML_DESTDIR)" -ldconf "$(OCAML_DESTDIR)/ld.conf" $(OCAML_LIB) $(OCAML_FILES) 
++	$(OCAMLFIND) install -destdir "$(OCAML_DESTDIR)" $(OCAML_LDCONF) $(OCAML_LIB) $(OCAML_FILES) 
+ 
+ uninstall: $(OCAML_UNINSTALL_TARGET)
+ 

@@ -1,0 +1,24 @@
+diff -Naurp splashutils-1.5.4.3-orig//scripts/splash-functions.sh.in splashutils-1.5.4.3/scripts/splash-functions.sh.in
+--- splashutils-1.5.4.3-orig//scripts/splash-functions.sh.in	2010-10-09 21:44:39.127691474 +0200
++++ splashutils-1.5.4.3/scripts/splash-functions.sh.in	2010-10-09 21:44:54.678690080 +0200
+@@ -26,7 +26,7 @@ export spl_cachedir="@libdir@/splash/cac
+ export spl_tmpdir="@libdir@/splash/tmp"
+ export spl_fifo="${spl_cachedir}/.splash"
+ export spl_pidfile="${spl_cachedir}/daemon.pid"
+-export spl_util="@bindir@/splash_util.static"
++export spl_util="@sbindir@/splash_util.static"
+ export spl_daemon="@sbindir@/fbsplashd.static"
+ export spl_decor="@sbindir@/fbcondecor_ctl.static"
+ export spl_bindir="@libdir@/splash/bin"
+diff -Naurp splashutils-1.5.4.3-orig//src/Makefile.am splashutils-1.5.4.3/src/Makefile.am
+--- splashutils-1.5.4.3-orig//src/Makefile.am	2010-10-09 21:44:39.121691920 +0200
++++ splashutils-1.5.4.3/src/Makefile.am	2010-10-09 21:45:10.934689775 +0200
+@@ -166,7 +166,7 @@ if CONFIG_FBCON_DECOR
+ sbin_PROGRAMS += fbcondecor_ctl
+ endif
+ sbin_PROGRAMS += fbsplashd
+-bin_PROGRAMS  += splash_util
++sbin_PROGRAMS += fbsplashd splash_util
+ eexecsbin_PROGRAMS += fbsplashctl
+ 
+ fbcondecor_ctl_SOURCES      = fbcon_decor_ctl.c fbcon_decor.h ../include/console_decor.h ../include/fbcondecor.h common.h fbsplash.h

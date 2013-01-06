@@ -1,0 +1,88 @@
+# ChangeLog for dev-perl/Search-Xapian
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/ChangeLog,v 1.19 2012/10/02 22:49:48 blueness Exp $
+
+  02 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
+  -Search-Xapian-1.2.10.0.ebuild, -Search-Xapian-1.2.8.ebuild,
+  -Search-Xapian-1.2.9.ebuild:
+  Remove older versions
+
+  19 Sep 2012; Johannes Huber <johu@gentoo.org> Search-Xapian-1.2.12.0.ebuild:
+  Stable for x86, wrt bug #434564
+
+  16 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  Search-Xapian-1.2.12.0.ebuild:
+  Stable ppc64, bug #434564
+
+  16 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  Search-Xapian-1.2.12.0.ebuild:
+  Stable arm, bug #434564
+
+  16 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
+  Search-Xapian-1.2.12.0.ebuild:
+  Stable ppc, bug #434564
+
+  15 Sep 2012; Agostino Sarubbo <ago@gentoo.org> Search-Xapian-1.2.12.0.ebuild:
+  Stable for amd64, wrt bug #434564
+
+  18 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  Search-Xapian-1.2.12.0.ebuild:
+  Keyword ~arm
+
+  18 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  Search-Xapian-1.2.12.0.ebuild:
+  Keyword ~mips
+
+  17 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
+  Search-Xapian-1.2.12.0.ebuild:
+  Keyword ~ppc ~ppc64
+
+*Search-Xapian-1.2.12.0 (28 Jun 2012)
+
+  28 Jun 2012; Anthony G. Basile <blueness@gentoo.org>
+  +Search-Xapian-1.2.12.0.ebuild:
+  Version bump fixes broken SONAME in 1.2.11
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+*Search-Xapian-1.2.10.0 (10 May 2012)
+
+  10 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  -Search-Xapian-1.2.10.ebuild, +Search-Xapian-1.2.10.0.ebuild:
+  Remove MODULE_VERSION and switch to PV, thanks tove
+
+*Search-Xapian-1.2.10 (10 May 2012)
+
+  10 May 2012; Anthony G. Basile <blueness@gentoo.org>
+  +Search-Xapian-1.2.10.ebuild:
+  Version bump
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Search-Xapian-1.2.8.ebuild:
+  x86 stable wrt bug #402191
+
+*Search-Xapian-1.2.9 (17 Mar 2012)
+
+  17 Mar 2012; Anthony G. Basile <blueness@gentoo.org>
+  +Search-Xapian-1.2.9.ebuild:
+  Version bump
+
+  01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Add missing cpan remote-id tags in metadata.xml (#406287)
+
+  07 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Search-Xapian-1.2.8.ebuild:
+  Stable for amd64, wrt bug #402191
+
+  07 Feb 2012; Anthony G. Basile <blueness@gentoo.org>
+  Search-Xapian-1.2.8.ebuild:
+  Address, bugs #402241, #402239, #402237
+
+  15 Jan 2012; Torsten Veller <tove@gentoo.org> Search-Xapian-1.2.8.ebuild:
+  Fix cvs keyword in the header (#398773). Add ChangeLog header
+
+*Search-Xapian-1.2.8 (25 Dec 2011)
+
+  25 Dec 2011; Anthony G. Basile <blueness@gentoo.org>
+  +Search-Xapian-1.2.8.ebuild, +metadata.xml:
+  Initial commit

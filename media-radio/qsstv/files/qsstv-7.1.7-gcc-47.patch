@@ -1,0 +1,11 @@
+--- src/wavio.cpp.new	2012-08-01 06:34:43.000000000 +0000
++++ src/wavio.cpp	2012-08-01 06:36:05.000000000 +0000
+@@ -30,6 +30,8 @@
+  ***************************************************************************/
+ 
+ #include "wavio.h"
++#include <sys/types.h>
++#include <unistd.h>
+ #include "global.h"
+ #include <qfiledialog.h>
+ #include "configparams.h"

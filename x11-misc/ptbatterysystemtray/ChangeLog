@@ -1,0 +1,13 @@
+# ChangeLog for x11-misc/ptbatterysystemtray
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ptbatterysystemtray/ChangeLog,v 1.2 2012/11/15 10:26:58 pesa Exp $
+
+  15 Nov 2012; Davide Pesavento <pesa@gentoo.org>
+  ptbatterysystemtray-1.0.0_rc2.ebuild:
+  Keyworded ~x86 wrt bug 443150. Added missing dep.
+
+*ptbatterysystemtray-1.0.0_rc2 (11 May 2012)
+
+  11 May 2012; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +ptbatterysystemtray-1.0.0_rc2.ebuild:
+  Initial commit. Ebuild based on live ebuild in qt overlay.

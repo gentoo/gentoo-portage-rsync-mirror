@@ -1,0 +1,59 @@
+diff -ur autofs-5.0.4-old/Makefile.rules autofs-5.0.4/Makefile.rules
+--- autofs-5.0.4-old/Makefile.rules	2009-04-27 10:54:19.000000000 +0200
++++ autofs-5.0.4/Makefile.rules	2009-04-27 10:55:55.000000000 +0200
+@@ -24,16 +24,16 @@
+ 
+ ifdef DEBUG
+ CFLAGS    ?= -g -Wall -DDEBUG
+-LDFLAGS   = -g
++AUTOFS_LDFLAGS   = -g
+ STRIP     = :
+ else
+ ifdef DONTSTRIP
+ CFLAGS    ?= -O2 -g
+-LDFLAGS   = -g
++AUTOFS_LDFLAGS   = -g
+ STRIP     = :
+ else
+ CFLAGS    ?= -O2 -Wall
+-LDFLAGS   = -s
++AUTOFS_LDFLAGS   = -s
+ STRIP     = strip --strip-debug
+ endif
+ endif
+@@ -45,15 +45,14 @@
+ SOLDFLAGS = -shared
+ 
+ CFLAGS += -D_REENTRANT -D_FILE_OFFSET_BITS=64
+-LDFLAGS += -lpthread
+ 
+ ifdef TIRPCLIB
+ CFLAGS += -I/usr/include/tirpc
+-LDFLAGS += $(TIRPCLIB)
++AUTOFS_LDFLAGS += $(TIRPCLIB)
+ endif
+ 
+ ifdef DMALLOCLIB
+-LDFLAGS += $(DMALLOCLIB)
++AUTOFS_LDFLAGS += $(DMALLOCLIB)
+ endif
+ 
+ # Standard rules
+diff -ur autofs-5.0.4-old/daemon/Makefile autofs-5.0.4/daemon/Makefile
+--- autofs-5.0.4-old/daemon/Makefile	2009-04-27 10:54:19.000000000 +0200
++++ autofs-5.0.4/daemon/Makefile	2009-04-27 10:54:37.000000000 +0200
+@@ -20,12 +20,12 @@
+ CFLAGS += -DAUTOFS_FLAG_DIR=\"$(autofsflagdir)\"
+ CFLAGS += -DVERSION_STRING=\"$(version)\"
+ LDFLAGS += -rdynamic
+-LIBS = -ldl
++LIBS = -ldl -lpthread
+ 
+ all: automount
+ 
+ automount: $(OBJS) $(AUTOFS_LIB)
+-	$(CC) $(LDFLAGS) $(DAEMON_LDFLAGS) -o automount $(OBJS) $(AUTOFS_LIB) $(LIBS)
++	$(CC) $(AUTOFS_LDFLAGS) $(DAEMON_LDFLAGS) $(LDFLAGS) -o automount $(OBJS) $(AUTOFS_LIB) $(LIBS)
+ 	$(STRIP) automount
+ 
+ clean:

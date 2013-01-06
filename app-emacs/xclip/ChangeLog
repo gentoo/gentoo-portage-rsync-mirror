@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/xclip
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xclip/ChangeLog,v 1.1 2012/07/15 18:03:56 ulm Exp $
+
+*xclip-1.0 (15 Jul 2012)
+
+  15 Jul 2012; Ulrich Müller <ulm@gentoo.org> +files/50xclip-gentoo.el,
+  +xclip-1.0.ebuild, +metadata.xml:
+  Initial import. Ebuild contributed by me.
+

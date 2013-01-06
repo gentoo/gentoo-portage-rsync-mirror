@@ -1,0 +1,21 @@
+--- Makefile.orig	2010-07-01 14:59:30.432241553 +0200
++++ Makefile	2010-07-01 14:59:22.070994314 +0200
+@@ -22,7 +22,7 @@
+ ELC = $(addsuffix .elc, $(ELR))
+ 
+ INSTALL_RM_R = $(RM)
+-INSTALL_MKDIR = mkdir
++INSTALL_MKDIR = mkdir -p
+ INSTALL_CP = $(CP)
+ 
+ all : elc
+@@ -54,9 +54,6 @@
+ endif
+ endif
+ 
+-$(VERSION_FILE) : force
+-	$(MAKE_VERSION_FILE)
+-
+ install : $(ELC) $(VERSION_FILE)
+ 	fgrep `cat $(VERSION_FILE)` tuareg.elc >/dev/null 2>&1 || \
+ 	 ($(RM) tuareg.elc; $(MAKE) tuareg.elc)

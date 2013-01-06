@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DEPEND=games-util/loki_patch
+DESCRIPTION=Serious Sam: The First Encounter
+EAPI=4
+HOMEPAGE=http://www.croteam.com/ http://www.seriouszone.com/ http://icculus.org/betas/ssam/
+IUSE=alsa
+KEYWORDS=-* ~amd64 ~x86
+LICENSE=LOKI-EULA
+PROPERTIES=interactive
+RDEPEND=amd64? ( app-emulation/emul-linux-x86-opengl app-emulation/emul-linux-x86-sdl app-emulation/emul-linux-x86-soundlibs ) x86? ( alsa? ( media-libs/libogg media-libs/libsdl[alsa,audio] media-libs/libvorbis ) media-libs/libsdl[X,joystick,opengl,video] )
+RESTRICT=strip
+SLOT=0
+SRC_URI=http://icculus.org/betas/ssam/ssam-tfe-lnx-beta1a.run http://icculus.org/updates/ssam/ssamtfe-beta1b.sh.bin http://icculus.org/updates/ssam/ssamtfe-beta2.sh.bin http://icculus.org/updates/ssam/ssamtfe-beta3.sh.bin
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cdrom	415b847346ef9001a89e5c7da6711215	eutils	d40dc948067bd3db1c8ebf7d51897313	games	e0a83e3f3f024b8c8ef7a8217d716cbf	multilib	9aa8a023e062fca0ba79362d9d0cc488	portability	536c5e70c5fb252ed3b769e04aa3f05b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	unpacker	50e1227854e96469a19a63f053496328	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=13161530bedffc6871725e0e90bd316e

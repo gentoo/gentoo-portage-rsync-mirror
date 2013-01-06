@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>andreis.vinogradovs@gmail.com</email>
+	<name>Andreis Vinogradovs</name>
+</maintainer>
+<maintainer>
+	<email>maksbotan@gentoo.org</email>
+	<name>Maxim Koltsov</name>
+</maintainer>
+<use>
+	<flag name="locator">Install sssd's Kerberos plugin</flag>
+	<flag name="logrotate">Install logrotate.d file</flag>
+	<flag name="glib">Use <pkg>dev-libs/glib</pkg> as UTF-8 string library</flag>
+	<flag name="libunistring">Use <pkg>dev-libs/libunistring</pkg> as UTF-8 string library</flag>
+	<flag name='netlink'>Add support for netlink protocol via <pkg>dev-libs/libnl</pkg></flag>
+	<flag name='manpages'>Build man pages with <pkg>dev-libs/libxslt</pkg></flag>
+	<flag name='autofs'>Build helper to let <pkg>net-fs/autofs</pkg> use sssd provided information</flag>
+	<flag name='ssh'>Build helper to let <pkg>net-misc/openssh</pkg> use sssd provided information</flag>
+	<flag name='sudo'>Build helper to let <pkg>app-admin/sudo</pkg> use sssd provided information</flag>
+</use>
+</pkgmetadata>

@@ -1,0 +1,99 @@
+# ChangeLog for dev-python/python-mpd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.26 2012/09/07 21:20:29 johu Exp $
+
+  07 Sep 2012; Johannes Huber <johu@gentoo.org> python-mpd-0.4.3.ebuild:
+  Stable for x86, wrt bug #433271
+
+  07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> python-mpd-0.4.3.ebuild:
+  Stable for amd64, wrt bug #433271
+
+*python-mpd-0.4.3 (21 Jul 2012)
+
+  21 Jul 2012; Christoph Mende <angelos@gentoo.org> +python-mpd-0.4.3.ebuild:
+  Version bump
+
+*python-mpd-0.4.2 (12 Jul 2012)
+
+  12 Jul 2012; Christoph Mende <angelos@gentoo.org> +python-mpd-0.4.2.ebuild:
+  Version bump, switch to python-mpd2 fork
+
+  10 Feb 2012; Patrick Lauer <patrick@gentoo.org> python-mpd-0.3.0.ebuild:
+  Changing python deps in preparation for 2.4 removal
+
+  30 Apr 2011; Christoph Mende <angelos@gentoo.org> -python-mpd-0.2.1.ebuild:
+  Remove old
+
+  25 Apr 2011; Raúl Porcel <armin76@gentoo.org> python-mpd-0.2.1.ebuild,
+  python-mpd-0.3.0.ebuild:
+  Drop sparc keywords
+
+  13 Apr 2011; Thomas Kahle <tomka@gentoo.org> python-mpd-0.3.0.ebuild:
+  x86 stable per bug 359471
+
+  23 Mar 2011; Christoph Mende <angelos@gentoo.org> python-mpd-0.3.0.ebuild:
+  Optimize python module (bug #360113 by Laurent Bachelier)
+
+  21 Mar 2011; Markos Chandras <hwoarang@gentoo.org> python-mpd-0.3.0.ebuild:
+  Stable on amd64 wrt bug #359471
+
+  15 Dec 2010; Christoph Mende <angelos@gentoo.org> python-mpd-0.2.1.ebuild,
+  python-mpd-0.3.0.ebuild:
+  Restrict python-3.*
+
+  15 Dec 2010; Christoph Mende <angelos@gentoo.org> python-mpd-0.2.1.ebuild,
+  python-mpd-0.3.0.ebuild:
+  Dropped python3 from PYTHON_DEPEND, fixed homepage, fixed license for 0.3.0
+  and dropped pkgconfig from DEPEND
+
+*python-mpd-0.3.0 (14 Dec 2010)
+
+  14 Dec 2010; Christoph Mende <angelos@gentoo.org> +python-mpd-0.3.0.ebuild:
+  Version bump
+
+  10 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-mpd-0.2.1.ebuild:
+  Update EAPI.
+
+  25 May 2010; Christoph Mende <angelos@gentoo.org> python-mpd-0.2.1.ebuild:
+  Enable support for multiple python ABIs
+
+  13 Mar 2009; Tiago Cunha <tcunha@gentoo.org> python-mpd-0.2.1.ebuild:
+  stable sparc
+
+  24 Feb 2009; Joseph Jezak <josejx@gentoo.org> python-mpd-0.2.1.ebuild:
+  Marked ~ppc for bug #222011.
+
+  21 Feb 2009; Christoph Mende <angelos@gentoo.org>
+  -python-mpd-0.2.0.ebuild:
+  Removed old
+
+  20 Dec 2008; Markus Meier <maekke@gentoo.org> python-mpd-0.2.1.ebuild:
+  amd64/x86 stable, bug #251770
+
+*python-mpd-0.2.1 (25 Sep 2008)
+
+  25 Sep 2008; Christoph Mende <angelos@gentoo.org>
+  +python-mpd-0.2.1.ebuild:
+  Version bump
+
+  15 Jul 2008; Raúl Porcel <armin76@gentoo.org> python-mpd-0.2.0.ebuild:
+  x86 stable wrt #226183
+
+  13 Jul 2008; Christoph Mende <angelos@gentoo.org> python-mpd-0.2.0.ebuild:
+  Stable on amd64, bug #226183
+
+  15 May 2008; Markus Meier <maekke@gentoo.org> python-mpd-0.2.0.ebuild:
+  add ~x86, bug #222011
+
+  14 May 2008; Markus Rothe <corsair@gentoo.org> python-mpd-0.2.0.ebuild:
+  Added ~ppc64; bug #222011
+
+  14 May 2008; Ferris McCormick <fmccor@gentoo.org> python-mpd-0.2.0.ebuild:
+  Add ~sparc keyword as part of Bug #222011.
+
+*python-mpd-0.2.0 (13 May 2008)
+
+  13 May 2008; Christoph Mende <angelos@gentoo.org>
+  +python-mpd-0.2.0.ebuild:
+  Initial import, bug 222007

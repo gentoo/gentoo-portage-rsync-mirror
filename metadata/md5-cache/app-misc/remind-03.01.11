@@ -1,0 +1,10 @@
+DEFINED_PHASES=install test unpack
+DESCRIPTION=Ridiculously functional reminder program
+HOMEPAGE=http://www.roaringpenguin.com/products/remind
+IUSE=tk
+KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd
+LICENSE=GPL-2
+RDEPEND=tk? ( dev-lang/tk dev-tcltk/tcllib )
+SLOT=0
+SRC_URI=http://www.roaringpenguin.com/files/download/remind-03.01.11.tar.gz
+_md5_=41537db61122054b70a5fa42d6241fbb

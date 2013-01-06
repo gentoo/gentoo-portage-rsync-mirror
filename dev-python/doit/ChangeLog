@@ -1,0 +1,14 @@
+# ChangeLog for dev-python/doit
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/doit/ChangeLog,v 1.2 2012/08/29 10:22:38 marienz Exp $
+
+  29 Aug 2012; Marien Zwart <marienz@gentoo.org>
+  +files/doit-0.16.1-setup.py-encoding.patch, doit-0.16.1.ebuild:
+  Make setup.py work in a non-utf8 locale (bug #430034, thanks to Flameeyes for
+  reporting).
+
+*doit-0.16.1 (27 Jun 2012)
+
+  27 Jun 2012; Ben de Groot <yngwin@gentoo.org> +doit-0.16.1.ebuild,
+  +metadata.xml:
+  Initial commit. Needed as dep for www-apps/nikola.

@@ -1,0 +1,11 @@
+# ChangeLog for rox-base/rox-autostart
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-autostart/ChangeLog,v 1.1 2007/11/28 21:15:30 lack Exp $
+
+*rox-autostart-1.1 (28 Nov 2007)
+
+  28 Nov 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +rox-autostart-1.1.ebuild:
+  New application: Autostart manages FreeDesktop.org startup files for the ROX
+  desktop.
+

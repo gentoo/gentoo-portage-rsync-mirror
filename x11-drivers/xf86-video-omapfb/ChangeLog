@@ -1,0 +1,18 @@
+# ChangeLog for x11-drivers/xf86-video-omapfb
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-omapfb/ChangeLog,v 1.3 2010/12/26 16:53:13 armin76 Exp $
+
+  26 Dec 2010; Raúl Porcel <armin76@gentoo.org>
+  xf86-video-omapfb-0.1.1_p3.ebuild:
+  arm stable
+
+  08 Dec 2010; Raúl Porcel <armin76@gentoo.org>
+  xf86-video-omapfb-0.1.1_p3.ebuild:
+  Use xorg-2 eclass
+
+*xf86-video-omapfb-0.1.1_p3 (08 Dec 2010)
+
+  08 Dec 2010; Raúl Porcel <armin76@gentoo.org>
+  +xf86-video-omapfb-0.1.1_p3.ebuild, +metadata.xml:
+  Add new package, ebuild by me, bug #302101
+

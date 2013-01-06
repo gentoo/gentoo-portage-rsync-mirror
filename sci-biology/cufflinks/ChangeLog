@@ -1,0 +1,19 @@
+# ChangeLog for sci-biology/cufflinks
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cufflinks/ChangeLog,v 1.4 2012/11/10 11:00:40 jlec Exp $
+
+  10 Nov 2012; Justin Lecher <jlec@gentoo.org> cufflinks-1.3.0.ebuild,
+  +files/cufflinks-1.3.0-autotools.patch, +files/cufflinks-1.3.0-boost.patch,
+  +files/cufflinks-1.3.0-gcc-4.7.patch:
+  Drop hard version dep for boost, #440630, and fix compatibility with version
+  1.5*; Fix gcc-4.7 problems; Fix underlinking problem
+
+  31 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> cufflinks-1.3.0.ebuild:
+  Avoid using a slot depend since now boost is unslotted; remove pointless
+  filter-ldflags for --as-needed.
+
+*cufflinks-1.3.0 (05 Feb 2012)
+
+  05 Feb 2012; Andrey Kislyuk <weaver@gentoo.org> +cufflinks-1.3.0.ebuild,
+  +metadata.xml:
+  New package, ebuild written by me

@@ -1,0 +1,15 @@
+# ChangeLog for dev-perl/Net-SFTP-Foreign
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SFTP-Foreign/ChangeLog,v 1.2 2012/11/04 13:13:08 tove Exp $
+
+*Net-SFTP-Foreign-1.730.0 (04 Nov 2012)
+
+  04 Nov 2012; Torsten Veller <tove@gentoo.org>
+  +Net-SFTP-Foreign-1.730.0.ebuild, metadata.xml:
+  Version bump
+
+*Net-SFTP-Foreign-1.67 (29 Oct 2012)
+
+  29 Oct 2012; Patrick Lauer <patrick@gentoo.org> +Net-SFTP-Foreign-1.67.ebuild,
+  +metadata.xml:
+  Initial import, ebuilds borrowed from entoo / smokeping-overlay on github

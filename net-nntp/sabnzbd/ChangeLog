@@ -1,0 +1,15 @@
+# ChangeLog for net-nntp/sabnzbd
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/ChangeLog,v 1.2 2013/01/03 23:05:32 jsbronder Exp $
+
+  03 Jan 2013; Justin Bronder <jsbronder@gentoo.org> sabnzbd-0.7.7.ebuild,
+  metadata.xml:
+  Add support for using yenc
+
+*sabnzbd-0.7.7 (03 Jan 2013)
+
+  03 Jan 2013; Justin Bronder <jsbronder@gentoo.org> +sabnzbd-0.7.7.ebuild,
+  +files/sabnzbd, +files/sabnzbd.confd, +files/sabnzbd.initd,
+  +files/use-system-configobj-and-feedparser.patch, +metadata.xml:
+  add net-nntp/sabnzbd
+

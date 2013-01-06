@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>video</herd>
+	<maintainer>
+		<email>sbriesen@gentoo.org</email>
+		<name>Stefan Briesenick</name>
+	</maintainer>
+	<longdescription lang="en">
+		Google2SRT allows you to convert subtitles from Google Video and YouTube
+		to SubRip (.srt) format, which is recognized by most video players. You
+		can download XML subtitles or simply type video's URL, Google2SRT will
+		do the rest.
+	</longdescription>
+	<use>
+		<flag name='html'>Install HTML documentation</flag>
+	</use>
+</pkgmetadata>

@@ -1,0 +1,41 @@
+# ChangeLog for net-libs/libkolabxml
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/ChangeLog,v 1.9 2012/12/07 19:36:36 creffett Exp $
+
+  07 Dec 2012; Chris Reffett <creffett@gentoo.org> -libkolabxml-0.6.0.ebuild,
+  -libkolabxml-0.8.0.ebuild, libkolabxml-0.8.1.ebuild:
+  Update LICENSE per bug 446382. Remove old.
+
+  30 Nov 2012; <ago@gentoo.org> libkolabxml-0.8.1.ebuild:
+  Stable for ppc, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> libkolabxml-0.8.1.ebuild:
+  Stable for x86, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> libkolabxml-0.8.1.ebuild:
+  Stable for amd64, wrt bug #442394
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> libkolabxml-0.8.1.ebuild:
+  add ~arm, bug #430072
+
+*libkolabxml-0.8.1 (26 Sep 2012)
+
+  26 Sep 2012; Chris Reffett <creffett@gentoo.org> +libkolabxml-0.8.1.ebuild:
+  Version bump to 0.8.1
+
+  26 Sep 2012; Chris Reffett <creffett@gentoo.org> libkolabxml-0.8.0.ebuild:
+  License fix.
+
+*libkolabxml-0.8.0 (10 Aug 2012)
+
+  10 Aug 2012; Chris Reffett <creffett@gentoo.org> +libkolabxml-0.8.0.ebuild,
+  libkolabxml-0.6.0.ebuild:
+  Increase swig dependency to 2.0.7 wrt bug 430314, thanks to alexander haensch
+  <alexander.haensch@gmail.com> for the catch. Add language dependencies. Add
+  version bump to 0.8.0.
+
+*libkolabxml-0.6.0 (01 Aug 2012)
+
+  01 Aug 2012; Johannes Huber <johu@gentoo.org> +libkolabxml-0.6.0.ebuild,
+  +metadata.xml:
+  Initial commit. Import from kde overlay. Needed for KDE SC 4.9.0.

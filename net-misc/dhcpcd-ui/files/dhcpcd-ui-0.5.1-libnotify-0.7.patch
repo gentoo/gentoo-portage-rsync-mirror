@@ -1,0 +1,28 @@
+--- src/dhcpcd-gtk/main.c
++++ src/dhcpcd-gtk/main.c
+@@ -31,6 +31,9 @@
+ 
+ #ifdef NOTIFY
+ #  include <libnotify/notify.h>
++#ifndef NOTIFY_CHECK_VERSION
++#define NOTIFY_CHECK_VERSION(x,y,z) 0
++#endif
+ static NotifyNotification *nn;
+ #endif
+ 
+@@ -194,11 +197,15 @@
+ 	g_strfreev(msgs);
+ 	if (nn != NULL)
+ 		notify_notification_close(nn, NULL);
++#if NOTIFY_CHECK_VERSION (0, 7, 0)
++	nn = notify_notification_new(title, msg, icon);
++#else
+ 	if (gtk_status_icon_get_visible(status_icon))
+ 		nn = notify_notification_new_with_status_icon(title,
+ 		    msg, icon, status_icon);
+ 	else
+ 		nn = notify_notification_new(title, msg, icon, NULL);
++#endif
+ 	notify_notification_set_timeout(nn, 5000);
+ 	g_signal_connect(nn, "closed", G_CALLBACK(notify_closed), NULL);
+ 	notify_notification_show(nn, NULL);

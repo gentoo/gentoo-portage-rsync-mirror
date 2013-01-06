@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>php</herd>
+	<maintainer>
+		<email>tomk@gentoo.org</email>
+		<name>Tom Knight</name>
+	</maintainer>
+	<use>
+		<flag name="html">Install the documentation in HTML format</flag>
+		<flag name="pdf">Install the documentation in PDF format</flag>
+	</use>
+</pkgmetadata>

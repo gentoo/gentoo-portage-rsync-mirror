@@ -1,0 +1,10 @@
+# ChangeLog for sci-mathematics/diagrtb
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/diagrtb/ChangeLog,v 1.1 2012/03/21 13:57:18 jlec Exp $
+
+*diagrtb-2.64 (21 Mar 2012)
+
+  21 Mar 2012; Justin Lecher <jlec@gentoo.org> +diagrtb-2.64.ebuild,
+  +files/CMakeLists.txt, +metadata.xml:
+  New addition, written by me
+

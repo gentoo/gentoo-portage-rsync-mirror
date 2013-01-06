@@ -1,0 +1,34 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+if [ "${SVCNAME}" = "puppetmaster" ] ; then
+	PUPPETMASTER_PID="master"
+else
+	PUPPETMASTER_PID="${SVCNAME#*.}"
+fi
+pidfile="${PUPPETMASTER_PID_DIR}/${PUPPETMASTER_PID}.pid"
+
+command_args="--pidfile ${pidfile}"
+if [ -n "${PUPPETMASTER_PORT}" ] ; then
+	command_args="${command_args} --masterport ${PUPPETMASTER_PORT}"
+fi
+command_args="${command_args} ${PUPPETMASTER_EXTRA_OPTS}"
+
+command="/usr/bin/puppetmasterd"
+extra_started_commands="reload"
+
+depend() {
+	need localmount net
+	use dns logger slapd netmount nfsmount
+}
+
+start_pre() {
+	checkpath --directory --owner puppet:puppet "${PUPPETMASTER_PID_DIR}"
+}
+
+reload() {
+	ebegin "Reloading ${SVCNAME}"
+	start-stop-daemon --signal HUP --pidfile "${pidfile}"
+	eend $? "Failed to stop ${SVCNAME}"
+}

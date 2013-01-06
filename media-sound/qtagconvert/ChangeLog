@@ -1,0 +1,16 @@
+# ChangeLog for media-sound/qtagconvert
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtagconvert/ChangeLog,v 1.2 2010/06/13 10:35:40 hwoarang Exp $
+
+*qtagconvert-2.0.0-r1 (13 Jun 2010)
+
+  13 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  -qtagconvert-2.0.0.ebuild, +qtagconvert-2.0.0-r1.ebuild:
+  Fix documentation path installation wrt bug #323051
+
+*qtagconvert-2.0.0 (20 May 2010)
+
+  20 May 2010; Markos Chandras <hwoarang@gentoo.org>
+  +qtagconvert-2.0.0.ebuild, +metadata.xml:
+  Initial commit of qtagconvert application. Moved from qting-edge overlay
+

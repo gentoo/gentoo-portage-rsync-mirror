@@ -1,0 +1,27 @@
+# ChangeLog for x11-misc/ktsuss
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ChangeLog,v 1.18 2012/12/10 18:04:23 ago Exp $
+
+  10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> ktsuss-2.ebuild:
+  Add ~ppc64, wrt bug #401833
+
+  10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> ktsuss-2.ebuild:
+  Add ~ppc, wrt bug #401833
+
+  09 Jul 2012; Agostino Sarubbo <ago@gentoo.org> ktsuss-2.ebuild:
+  Stable for amd64, wrt bug #423913
+
+  09 Jul 2012; Jeff Horelick <jdhore@gentoo.org> ktsuss-2.ebuild:
+  x86 stable wrt bug 423913
+
+  02 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ktsuss-2.ebuild:
+  Fix HOMEPAGE wrt bug #416283 by df.
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> ktsuss-2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*ktsuss-2 (29 Jan 2012)
+
+  29 Jan 2012; Markos Chandras <hwoarang@gentoo.org> +ktsuss-2.ebuild,
+  +metadata.xml:
+  Initial commit. Bug #401123. Thanks to Hypnos <hypnos75@gmail.com>

@@ -1,0 +1,40 @@
+diff -Nuar a/logrotate.c b/logrotate.c
+--- a/logrotate.c	2012-08-01 12:56:47.000000000 +0200
++++ b/logrotate.c	2012-08-02 18:01:20.960383277 +0200
+@@ -293,13 +293,19 @@
+ {
+     int fd;
+ 	struct stat sb_create;
++    char template[PATH_MAX + 1];
++    char *fname;
++    mode_t umask_value;
++    snprintf(template, PATH_MAX, "%s/logrotate_temp.XXXXXX", ourDirName(fileName));
+ 
+-	fd = open(fileName, (flags | O_EXCL | O_NOFOLLOW),
+-		(S_IRUSR | S_IWUSR) & sb->st_mode);
++    umask_value = umask(0000);
++    fname = mktemp(template);
++    fd = open(fname, (flags | O_EXCL | O_NOFOLLOW), (S_IRUSR | S_IWUSR) & sb->st_mode);
++    umask(umask_value);
+ 
+     if (fd < 0) {
+-	message(MESS_ERROR, "error creating output file %s: %s\n",
+-		fileName, strerror(errno));
++	message(MESS_ERROR, "error creating unique temp file: %s\n",
++		strerror(errno));
+ 	return -1;
+     }
+     if (fchmod(fd, (S_IRUSR | S_IWUSR) & sb->st_mode)) {
+@@ -328,6 +334,12 @@
+ 	close(fd);
+ 	return -1;
+     }
++    if (rename(template, fileName)) {
++            message(MESS_ERROR, "error renaming temp file to %s: %s\n",
++            fileName, strerror(errno));
++            close(fd);
++            return -1;
++    }
+     return fd;
+ }
+ 

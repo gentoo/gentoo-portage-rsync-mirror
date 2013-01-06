@@ -1,0 +1,20 @@
+# ChangeLog for games-emulation/handy
+# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/handy/ChangeLog,v 1.6 2007/02/21 23:21:41 peper Exp $
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
+
+  19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> handy-0.82.ebuild:
+  Adding strip to RESTRICT for bug #137819.
+
+  15 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> handy-0.82.ebuild:
+  Change hard-coded /opt to GAMES_PREFIX_OPT.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> handy-0.82.ebuild:
+  virtual/glibc -> virtual/libc
+
+*handy-0.82 (18 Jan 2004)
+
+  18 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Chris Aniszczyk <zx@mea-culpa.net> #38026.

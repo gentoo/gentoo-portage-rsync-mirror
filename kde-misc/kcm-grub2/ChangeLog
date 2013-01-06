@@ -1,0 +1,36 @@
+# ChangeLog for kde-misc/kcm-grub2
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/ChangeLog,v 1.7 2012/06/18 16:19:08 scarabeus Exp $
+
+*kcm-grub2-0.5.8 (18 Jun 2012)
+
+  18 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> +kcm-grub2-0.5.8.ebuild,
+  -files/kcm-grub2-use-gentoo-grub-commands.patch, -kcm-grub2-0.5.5.ebuild:
+  Version bump to latest.
+
+  15 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -kcm-grub2-0.5.0.ebuild:
+  Remove old.
+
+  14 Feb 2012; Johannes Huber <johu@gentoo.org> kcm-grub2-0.5.0.ebuild,
+  kcm-grub2-0.5.5.ebuild, metadata.xml:
+  Add kde herd as fallback. Fix header wrt bug #403699.
+
+  10 Jan 2012; Johannes Huber <johu@gentoo.org> kcm-grub2-0.5.5.ebuild:
+  Add missing linguas.
+
+  10 Jan 2012; Johannes Huber <johu@gentoo.org> kcm-grub2-0.5.0.ebuild,
+  kcm-grub2-0.5.5.ebuild:
+  Move slot from 0 to 4.
+
+*kcm-grub2-0.5.5 (10 Jan 2012)
+
+  10 Jan 2012; Johannes Huber <johu@gentoo.org> +kcm-grub2-0.5.5.ebuild:
+  Version bump.
+
+*kcm-grub2-0.5.0 (28 Aug 2011)
+
+  28 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/kcm-grub2-use-gentoo-grub-commands.patch, +kcm-grub2-0.5.0.ebuild,
+  +metadata.xml:
+  Add grub2 kcm module for in-kde configuration.
+

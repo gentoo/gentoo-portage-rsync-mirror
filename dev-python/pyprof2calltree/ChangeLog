@@ -1,0 +1,14 @@
+# ChangeLog for dev-python/pyprof2calltree
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprof2calltree/ChangeLog,v 1.2 2012/12/15 08:02:55 ulm Exp $
+
+  15 Dec 2012; Ulrich Müller <ulm@gentoo.org> pyprof2calltree-1.1.0.ebuild:
+  Fix LICENSE, MIT (Expat) according to license notice in pyprof2calltree.py,
+  bug 445422.
+
+*pyprof2calltree-1.1.0 (02 Jan 2011)
+
+  02 Jan 2011; Brian Harring <ferringb@gentoo.org>
+  +pyprof2calltree-1.1.0.ebuild:
+  Initial import.
+

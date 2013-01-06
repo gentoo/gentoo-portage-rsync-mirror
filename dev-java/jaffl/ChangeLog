@@ -1,0 +1,31 @@
+# ChangeLog for dev-java/jaffl
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/ChangeLog,v 1.7 2011/01/23 16:33:53 xarthisius Exp $
+
+  23 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> jaffl-0.3.ebuild:
+  Mark ~ppc wrt #299160
+
+  30 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> jaffl-0.5.1.ebuild:
+  x86 stable wrt bug #325669
+
+  26 Jun 2010; Christoph Mende <angelos@gentoo.org> jaffl-0.5.1.ebuild:
+  Stable on amd64 wrt bug #325669
+
+  26 Jun 2010; Petteri Räty <betelgeuse@gentoo.org> jaffl-0.5.1.ebuild:
+  Fix test suite to find hamcrest-core. Fixes bug #320347.
+
+*jaffl-0.5.1 (03 Jun 2010)
+
+  03 Jun 2010; Alistair Bush <ali_bush@gentoo.org> +jaffl-0.5.1.ebuild,
+  +files/library-path-0.5.1.patch:
+  Version Bump.
+
+  16 Jan 2010; Petteri Räty <betelgeuse@gentoo.org> jaffl-0.3.ebuild:
+  Keyword ~x86.
+
+*jaffl-0.3 (31 Dec 2009)
+
+  31 Dec 2009; Alistair Bush <ali_bush@gentoo.org> +jaffl-0.3.ebuild,
+  +files/library-path.patch, +metadata.xml:
+  Add package as dependency of jruby
+

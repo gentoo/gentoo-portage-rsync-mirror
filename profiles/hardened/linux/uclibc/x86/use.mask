@@ -1,0 +1,19 @@
+# Copyright 1999-2012 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/uclibc/x86/use.mask,v 1.1 2012/11/20 16:24:59 blueness Exp $
+
+# Unmask the flag which corresponds to ARCH.
+-x86
+
+# unmask all SIMD assembler flags
+-mmx
+-mmxext
+-sse
+-sse2
+-sse3
+-sse4
+-sse4a
+-sse5
+-ssse3
+-3dnow
+-3dnowext

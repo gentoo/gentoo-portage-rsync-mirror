@@ -1,0 +1,72 @@
+# ChangeLog for sys-fs/zfs-kmod
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.11 2012/12/23 05:44:22 ryao Exp $
+
+*zfs-kmod-0.6.0_rc13 (23 Dec 2012)
+
+  23 Dec 2012; Richard Yao <ryao@gentoo.org> +zfs-kmod-0.6.0_rc13.ebuild:
+  Bump sys-fs/zfs-kmod to 0.6.0_rc13
+
+*zfs-kmod-0.6.0_rc12-r1 (11 Dec 2012)
+
+  11 Dec 2012; Richard Yao <ryao@gentoo.org> +zfs-kmod-0.6.0_rc12-r1.ebuild,
+  zfs-kmod-0.6.0_rc10.ebuild, zfs-kmod-0.6.0_rc11-r1.ebuild,
+  zfs-kmod-0.6.0_rc11.ebuild, zfs-kmod-0.6.0_rc12.ebuild, zfs-kmod-9999.ebuild:
+  Linux 3.7 Support; Stability Fixes; Performance Regression Fix; Fix bug
+  #411555
+
+*zfs-kmod-0.6.0_rc12 (14 Nov 2012)
+
+  14 Nov 2012; Richard Yao <ryao@gentoo.org> +zfs-kmod-0.6.0_rc12.ebuild:
+  Bump sys-fs/zfs-kmod to 0.6.0_rc12
+
+*zfs-kmod-0.6.0_rc11-r1 (17 Oct 2012)
+
+  17 Oct 2012; Richard Yao <ryao@gentoo.org>
+  +files/zfs-kmod-0.6.0_rc11-fix-32-bit-integer-size-mismatch.patch,
+  +files/zfs-kmod-0.6.0_rc11-fix-i386-infinite-loop.patch,
+  +files/zfs-kmod-0.6.0_rc11-fix-rename-failure.patch,
+  +files/zfs-kmod-0.6.0_rc11-fix-zvol_probe-null.patch,
+  +files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-0-elevator-change.patch,
+  +files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-1.patch,
+  +files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-2.patch,
+  +files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-3.patch,
+  +files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-4.patch,
+  +files/zfs-kmod-0.6.0_rc11-linux-3.6-compat-5.patch,
+  +files/zfs-kmod-0.6.0_rc11-return-positive-error.patch,
+  +zfs-kmod-0.6.0_rc11-r1.ebuild:
+  Linux 3.6 support and stability fixes
+
+*zfs-kmod-0.6.0_rc11 (18 Sep 2012)
+
+  18 Sep 2012; Richard Yao <ryao@gentoo.org> +zfs-kmod-0.6.0_rc11.ebuild:
+  Add sys-fs/zfs-kmod-0.6.0-rc11
+
+  31 Aug 2012; Richard Yao <ryao@gentoo.org> zfs-kmod-9999.ebuild:
+  Remove CONFIG_PREEMPT restriction: Preemption support has been merged upstream
+
+  26 Aug 2012; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.0_rc10.ebuild,
+  zfs-kmod-9999.ebuild:
+  Adjust LICENSE to reflect the fact that all kernel code is under the CDDL
+
+  24 Aug 2012; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.0_rc10.ebuild,
+  zfs-kmod-9999.ebuild:
+  Linux 3.6 and later are not currently supported
+
+  24 Aug 2012; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.0_rc10.ebuild,
+  zfs-kmod-9999.ebuild:
+  Add check for CONFIG_IOSCHED_NOOP.
+
+  22 Aug 2012; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.0_rc10.ebuild,
+  zfs-kmod-9999.ebuild:
+  Remove obsolete code from src_prepare() and src_test()
+
+*zfs-kmod-9999 (22 Aug 2012)
+*zfs-kmod-0.6.0_rc10 (22 Aug 2012)
+
+  22 Aug 2012; Richard Yao <ryao@gentoo.org>
+  +files/zfs-kmod-0.6.0_rc9-remove-pfmalloc-1-of-3.patch,
+  +files/zfs-kmod-0.6.0_rc9-remove-pfmalloc-2-of-3.patch,
+  +files/zfs-kmod-0.6.0_rc9-remove-pfmalloc-3-of-3.patch, +metadata.xml,
+  +zfs-kmod-0.6.0_rc10.ebuild, +zfs-kmod-9999.ebuild:
+  Ebuild to provide kernel module for sys-fs/zfs

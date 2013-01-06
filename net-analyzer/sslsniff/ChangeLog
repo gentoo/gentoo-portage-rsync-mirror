@@ -1,0 +1,38 @@
+# ChangeLog for net-analyzer/sslsniff
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslsniff/ChangeLog,v 1.7 2012/12/07 16:01:19 jer Exp $
+
+  07 Dec 2012; Jeroen Roovers <jer@gentoo.org> sslsniff-0.8-r1.ebuild,
+  +files/sslsniff-0.8-underlinking.patch:
+  Fix underlinking against openssl/boost (bug #370105).
+
+  07 Dec 2012; Rick Farina <zerochaos@gentoo.org> sslsniff-0.6.ebuild,
+  sslsniff-0.8-r1.ebuild:
+  RDEPEND should have been equal to DEPEND, missed fix when that was no longer
+  implicit
+
+  31 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> -sslsniff-0.8.ebuild:
+  Remove version that requires a specific boost version.
+
+*sslsniff-0.8-r1 (28 Aug 2012)
+
+  28 Aug 2012; Rick Farina <zerochaos@gentoo.org>
+  +files/sslsniff-0.8-fix-compatibility-with-boost-1.47-and-higher.patch,
+  +sslsniff-0.8-r1.ebuild, metadata.xml, sslsniff-0.8.ebuild:
+  fix for bug #378629 from debian
+
+*sslsniff-0.8 (02 Oct 2011)
+
+  02 Oct 2011; Robin H. Johnson <robbat2@gentoo.org> +sslsniff-0.8.ebuild:
+  Bug 385301, version bump.
+
+  21 Dec 2009; Samuli Suominen <ssuominen@gentoo.org> sslsniff-0.6.ebuild,
+  +files/sslsniff-0.6-asneeded.patch:
+  Fix building with -Wl,--as-needed wrt #294885 by Kacper Kowalik.
+
+*sslsniff-0.6 (01 Oct 2009)
+
+  01 Oct 2009; Robin H. Johnson <robbat2@gentoo.org> +sslsniff-0.6.ebuild,
+  +metadata.xml:
+  Initial commit, ebuild by Robin H. Johnson <robbat2@gentoo.org>. *waves hi
+  to ioerror*.

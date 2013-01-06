@@ -1,0 +1,43 @@
+# ChangeLog for kde-misc/semantik
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.8 2012/12/20 17:12:32 kensington Exp $
+
+  20 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  -files/semantik-0.7.3_p20091013-wscript_ldconfig.patch,
+  -files/semantik-0.7.3_p20091013-wscript_libstr.patch,
+  -semantik-0.7.3_p20091013.ebuild:
+  Remove old.
+
+*semantik-0.8.3 (24 Oct 2012)
+
+  24 Oct 2012; Michael Palimaka <kensington@gentoo.org>
+  +files/semantik-0.8.3-wscript_ldconfig.patch, +semantik-0.8.3.ebuild:
+  Version bump, wrt bug #435484. Thanks to Pavlos Ratis <dastergon@gmail.com>.
+
+  25 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  semantik-0.7.3_p20091013.ebuild:
+  Fix test phase failure. Respect CXXFLAGS wrt bug #427950.
+
+  21 Jul 2012; Johannes Huber <johu@gentoo.org> semantik-0.7.3_p20091013.ebuild:
+  Move from SLOT 0 to 4.
+
+  15 Jul 2012; Michael Palimaka <kensington@gentoo.org>
+  semantik-0.7.3_p20091013.ebuild:
+  Add missing slot dependencies on Qt.
+
+  13 Jul 2011; Marc Schiffbauer <mschiff@gentoo.org>
+  semantik-0.7.3_p20091013.ebuild,
+  +files/semantik-0.7.3_p20091013-wscript_libstr.patch:
+  Fix bug #372379. Ocaml only provides str.a instead of libstr.a
+
+  13 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  semantik-0.7.3_p20091013.ebuild:
+  Fixed license
+
+*semantik-0.7.3_p20091013 (13 Jun 2011)
+
+  13 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +semantik-0.7.3_p20091013.ebuild,
+  +files/semantik-0.7.3_p20091013-wscript_ldconfig.patch, +metadata.xml:
+  New package, bug 185523. Thanks to Harry.TX, Julien Cynober, and all the
+  other people who contributed.

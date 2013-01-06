@@ -1,0 +1,29 @@
+# ChangeLog for net-misc/openvswitch
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/ChangeLog,v 1.4 2012/07/18 08:41:29 dev-zero Exp $
+
+*openvswitch-1.6.1-r2 (18 Jul 2012)
+
+  18 Jul 2012; Tiziano Müller <dev-zero@gentoo.org> +files/ovs-controller,
+  +files/ovs-controller_conf, +openvswitch-1.6.1-r2.ebuild,
+  -openvswitch-1.6.1-r1.ebuild, files/ovs-vswitchd:
+  Add init.d-script for ovs-controller
+
+  18 Jul 2012; Tiziano Müller <dev-zero@gentoo.org> openvswitch-1.6.1-r1.ebuild:
+  Add GPL-2 to LICENSE for init.d files (bug #426086).
+
+*openvswitch-1.6.1-r1 (11 Jul 2012)
+
+  11 Jul 2012; Tiziano Müller <dev-zero@gentoo.org>
+  +openvswitch-1.6.1-r1.ebuild, -openvswitch-1.6.1.ebuild:
+  Fix python-tools installation, correct dependency (need twisted-web as well)
+  and do schema migration in pkg_config if database already exists (bug
+  #424013).
+
+*openvswitch-1.6.1 (27 Jun 2012)
+
+  27 Jun 2012; Tiziano Müller <dev-zero@gentoo.org> +files/ovs-vswitchd,
+  +files/ovs-vswitchd_conf, +files/ovsdb-server, +files/ovsdb-server_conf,
+  +metadata.xml, +openvswitch-1.6.1.ebuild:
+  Initial commit (bug #324589). Thanks to all the people on the bug and
+  especially Oliver Roeschke and Florian Manschwetus for testing and comments.

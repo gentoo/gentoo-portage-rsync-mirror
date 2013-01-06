@@ -1,0 +1,19 @@
+# ChangeLog for sci-chemistry/pdbmat
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdbmat/ChangeLog,v 1.4 2012/10/18 17:40:00 jlec Exp $
+
+  18 Oct 2012; Justin Lecher <jlec@gentoo.org> pdbmat-3.89.ebuild:
+  Drop virtual/fortran from DEP as it is provided by the fortran-2.eclass
+
+  07 Oct 2012; Justin Lecher <jlec@gentoo.org> pdbmat-3.89.ebuild:
+  Depend on virtual/fortran, #435948
+
+  21 Mar 2012; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Fix metadata.xml
+
+*pdbmat-3.89 (21 Mar 2012)
+
+  21 Mar 2012; Justin Lecher <jlec@gentoo.org> +pdbmat-3.89.ebuild,
+  +files/CMakeLists.txt, +metadata.xml:
+  New addition, written by me
+

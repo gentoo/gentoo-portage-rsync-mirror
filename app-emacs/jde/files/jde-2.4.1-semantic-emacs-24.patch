@@ -1,0 +1,36 @@
+semantic-add-minor-mode accepts two arguments only.
+http://bzr.savannah.gnu.org/lh/emacs/trunk/revision/100114
+
+--- jdee-orig/lisp/jde-bug.el
++++ jdee/lisp/jde-bug.el
+@@ -570,7 +570,7 @@
+ 
+   (run-hook-with-args 'jde-bug-minor-mode-hook jde-bug-minor-mode))
+ 
+-(semantic-add-minor-mode 'jde-bug-minor-mode " JDEbug" jde-bug-mode-map)
++(semantic-add-minor-mode 'jde-bug-minor-mode " JDEbug")
+ 
+ ;; (fmakunbound 'jde-bug-key-bindings)
+ (defcustom jde-bug-key-bindings
+--- jdee-orig/lisp/jde-jdb.el
++++ jdee/lisp/jde-jdb.el
+@@ -1830,7 +1830,7 @@
+     (if (featurep 'xemacs)
+       (easy-menu-remove jde-jdb-xemacs-menu-spec))))
+ 
+-(semantic-add-minor-mode 'jde-jdb-minor-mode " jdb" jde-jdb-mode-map)
++(semantic-add-minor-mode 'jde-jdb-minor-mode " jdb")
+ 
+ 
+ ;; (fmakunbound 'jde-jdb-key-bindings)
+--- jdee-orig/lisp/jde-plugins.el
++++ jdee/lisp/jde-plugins.el
+@@ -194,7 +194,7 @@
+ 		(easy-menu-add menu-spec jde-plugin-mode-map)
+ 	      (easy-menu-remove menu-spec))))))
+ 
+-(semantic-add-minor-mode 'jde-plugin-minor-mode " plugin" jde-plugin-mode-map)
++(semantic-add-minor-mode 'jde-plugin-minor-mode " plugin")
+ 
+ 
+ (provide 'jde-plugins)

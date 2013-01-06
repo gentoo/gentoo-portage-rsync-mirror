@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>ottxor@gentoo.org</email>
+		<name>Christoph Junghans</name>
+	</maintainer>
+	<longdescription>IBM ThinkPad Harddrive Active Protection disk head parking	daemon</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">hdapsd</remote-id>
+	</upstream>
+</pkgmetadata>

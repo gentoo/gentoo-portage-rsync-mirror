@@ -1,0 +1,15 @@
+# ChangeLog for media-sound/opus-tools
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opus-tools/ChangeLog,v 1.2 2012/09/09 10:01:40 lu_zero Exp $
+
+*opus-tools-0.1.5 (09 Sep 2012)
+
+  09 Sep 2012; Luca Barbato <lu_zero@gentoo.org> +opus-tools-0.1.5.ebuild:
+  New version
+
+*opus-tools-0.1.2 (14 Jun 2012)
+
+  14 Jun 2012; Luca Barbato <lu_zero@gentoo.org> +opus-tools-0.1.2.ebuild,
+  +metadata.xml:
+  Initial commit
+

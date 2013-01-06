@@ -1,0 +1,21 @@
+--- setupext.py.orig	2011-08-09 06:33:33.000000000 +0100
++++ setupext.py	2011-08-09 06:34:26.000000000 +0100
+@@ -54,6 +54,7 @@
+     'linux2-mips' : ['/usr/local', '/usr'],
+     'linux2-sparc' : ['/usr/local', '/usr'],
+     'linux2' : ['/usr/local', '/usr'],
++    'linux3' : ['/usr/local', '/usr'],
+     'linux'  : ['/usr/local', '/usr',],
+     'cygwin' : ['/usr/local', '/usr',],
+     '_darwin' : ['/sw/lib/freetype2', '/sw/lib/freetype219', '/usr/local',
+--- examples/api/font_file.py.orig	2011-08-09 06:30:37.000000000 +0100
++++ examples/api/font_file.py	2011-08-09 06:31:12.000000000 +0100
+@@ -17,7 +17,7 @@
+ 
+ if sys.platform == 'win32':
+     fpath = 'C:\\Windows\\Fonts\\Tahoma.ttf'
+-elif sys.platform == 'linux2':
++elif sys.platform.startswith('linux'):
+     fonts = ['/usr/share/fonts/truetype/freefont/FreeSansBoldOblique.ttf',
+       '/usr/share/fonts/truetype/ttf-liberation/LiberationSans-BoldItalic.ttf',
+       '/usr/share/fonts/truetype/msttcorefonts/Comic_Sans_MS.ttf',

@@ -1,0 +1,29 @@
+http://oss.oetiker.ch/mrtg-trac/ticket/97
+
+--- configure.in	2010-11-09 16:25:34 +0000
++++ configure.in	2010-11-09 16:35:39 +0000
+@@ -98,6 +98,8 @@
+ AC_ARG_WITH(png-inc,[  --with-png-inc=DIR      location of the libpng include files],
+ 		[CPPFLAGS="${CPPFLAGS} -I${withval}"])
+ 
++AC_ARG_ENABLE(static,[  --disable-static        avoid rateup static linkage with gd],
++		[AVOID_STATIC="${enableval}"],[AVOID_STATIC="no"])
+ 
+ LIBS="${LIBS} ${MATHLIBS}"
+ 
+@@ -127,9 +129,11 @@
+   CPPFLAGS="$CPPFLAGS -DGFORM_GD=gdImageGif"
+ fi
+ 
+-AC_CHECK_LIB(gd,gdImageGd,[
+-   GLIBS="-Wl,-Bstatic ${GLIBS} -Wl,-Bdynamic"
+-        ],:,[-Wl,-Bstatic ${GLIBS} -Wl,-Bdynamic])
++if test x$AVOID_STATIC = xyes; then
++  AC_CHECK_LIB(gd,gdImageGd,[
++    GLIBS="-Wl,-Bstatic ${GLIBS} -Wl,-Bdynamic"
++      ],:,[-Wl,-Bstatic ${GLIBS} -Wl,-Bdynamic])
++fi
+ 
+ if test x$GDFORM_EXT = xpng; then
+   CPPFLAGS="$CPPFLAGS -DGFORM_GD=gdImagePng"
+

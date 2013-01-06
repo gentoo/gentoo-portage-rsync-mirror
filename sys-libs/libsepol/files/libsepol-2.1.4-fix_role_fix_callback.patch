@@ -1,0 +1,15 @@
+diff -uNr libsepol-2.1.4.orig/src/expand.c libsepol-2.1.4-fix_role_fix_callback/src/expand.c
+--- libsepol-2.1.4.orig/src/expand.c	2012-02-25 14:34:37.408341044 +0100
++++ libsepol-2.1.4-fix_role_fix_callback/src/expand.c	2012-02-25 14:35:58.345341216 +0100
+@@ -688,6 +688,11 @@
+ 		return 0;
+ 	}
+ 
++	if (!is_id_enabled(id, state->base, SYM_ROLES)) {
++		/* Identifiers scope is not enabled */
++		return 0;
++	}
++
+ 	if (role->flavor != ROLE_ATTRIB)
+ 		return 0;
+ 

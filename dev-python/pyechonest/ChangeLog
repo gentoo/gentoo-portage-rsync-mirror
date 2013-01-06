@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pyechonest
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyechonest/ChangeLog,v 1.1 2013/01/02 23:16:27 sochotnicky Exp $
+
+*pyechonest-7.1.0 (02 Jan 2013)
+
+  02 Jan 2013; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  +pyechonest-7.1.0.ebuild, +metadata.xml:
+  New ebuild for pyechonest (dependency of media-sound/beets)
+

@@ -1,0 +1,124 @@
+# ChangeLog for dev-python/redis-py
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.30 2012/12/31 22:45:41 ago Exp $
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> redis-py-2.7.1.ebuild:
+  Stable for x86, wrt bug #449414
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> redis-py-2.7.1.ebuild:
+  Stable for amd64, wrt bug #449414
+
+*redis-py-2.7.2 (31 Dec 2012)
+
+  31 Dec 2012; Dirkjan Ochtman <djc@gentoo.org> +redis-py-2.7.2.ebuild:
+  Version bump to 2.7.2.
+
+  11 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> redis-py-2.7.1.ebuild:
+  add missing test to IUSE
+
+  10 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> -redis-py-2.4.10.ebuild,
+  -redis-py-2.4.11.ebuild:
+  Remove old versions.
+
+*redis-py-2.7.1 (10 Oct 2012)
+
+  10 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> +redis-py-2.7.1.ebuild:
+  Version bump to 2.7.1 (bug 437030, thanks to Johan Bergström).
+
+*redis-py-2.4.13 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +redis-py-2.4.13.ebuild:
+  Bump
+
+  21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> redis-py-2.4.12.ebuild:
+  marked x86 per bug 422069
+
+  20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> redis-py-2.4.12.ebuild:
+  Stable for amd64, wrt bug #422069
+
+  21 May 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> redis-py-2.4.11.ebuild:
+  x86 stable wrt bug #415877
+
+  14 May 2012; Agostino Sarubbo <ago@gentoo.org> redis-py-2.4.11.ebuild:
+  Stable for amd64, wrt bug #415877
+
+  08 May 2012; Dirkjan Ochtman <djc@gentoo.org> -redis-py-2.4.9.ebuild:
+  Remove old version.
+
+*redis-py-2.4.12 (08 May 2012)
+
+  08 May 2012; Dirkjan Ochtman <djc@gentoo.org> +redis-py-2.4.12.ebuild:
+  Version bump to 2.4.12.
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> redis-py-2.4.10.ebuild:
+  x86 stable wrt bug #404107
+
+  17 Feb 2012; Agostino Sarubbo <ago@gentoo.org> redis-py-2.4.10.ebuild:
+  Stable for amd64, wrt bug #404107
+
+  16 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove myself as a maintainer.
+
+*redis-py-2.4.11 (16 Feb 2012)
+
+  16 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> +redis-py-2.4.11.ebuild:
+  Version bump to 2.4.11.
+
+  04 Feb 2012; Sven Wegener <swegener@gentoo.org> redis-py-2.4.9.ebuild,
+  redis-py-2.4.10.ebuild:
+  Require at least python 2.5.
+
+*redis-py-2.4.10 (30 Nov 2011)
+
+  30 Nov 2011; Dirkjan Ochtman <djc@gentoo.org> -redis-py-2.2.4.ebuild,
+  -redis-py-2.4.1.ebuild, -redis-py-2.4.5.ebuild, +redis-py-2.4.10.ebuild:
+  Remove old versions, bump to 2.4.10.
+
+  30 Nov 2011; Dirkjan Ochtman <djc@gentoo.org> -redis-py-2.2.4.ebuild,
+  -redis-py-2.4.1.ebuild, -redis-py-2.4.5.ebuild:
+  Remove old versions.
+
+  13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> redis-py-2.4.9.ebuild:
+  x86 stable wrt bug #386045
+
+  09 Oct 2011; Markos Chandras <hwoarang@gentoo.org> redis-py-2.4.9.ebuild:
+  Stable on amd64 wrt bug #386045
+
+*redis-py-2.4.9 (05 Sep 2011)
+
+  05 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +redis-py-2.4.9.ebuild:
+  Version bump to 2.4.9.
+
+*redis-py-2.4.5 (04 Jul 2011)
+
+  04 Jul 2011; Dirkjan Ochtman <djc@gentoo.org> +redis-py-2.4.5.ebuild:
+  Version bump to 2.4.5.
+
+*redis-py-2.4.1 (06 Jun 2011)
+
+  06 Jun 2011; Dirkjan Ochtman <djc@gentoo.org> +redis-py-2.4.1.ebuild:
+  Version bump to 2.4.1.
+
+  06 Jun 2011; Dirkjan Ochtman <djc@gentoo.org> -redis-py-2.2.2.ebuild:
+  Remove old version.
+
+  24 May 2011; Markus Meier <maekke@gentoo.org> redis-py-2.2.4.ebuild:
+  x86 stable, bug #365535
+
+  02 May 2011; Markos Chandras <hwoarang@gentoo.org> redis-py-2.2.4.ebuild:
+  Stable on amd64 wrt bug #365535
+
+  26 Mar 2011; Dirkjan Ochtman <djc@gentoo.org> redis-py-2.2.2.ebuild,
+  redis-py-2.2.4.ebuild:
+  Prevent collision with redis tarball (bug 360495).
+
+*redis-py-2.2.4 (17 Mar 2011)
+
+  17 Mar 2011; Dirkjan Ochtman <djc@gentoo.org> +redis-py-2.2.4.ebuild:
+  Version bump to 2.2.4.
+
+*redis-py-2.2.2 (04 Mar 2011)
+
+  04 Mar 2011; Dirkjan Ochtman <djc@gentoo.org> +redis-py-2.2.2.ebuild,
+  +metadata.xml:
+  Initial version of redis-py.

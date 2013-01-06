@@ -1,0 +1,16 @@
+Respect LDFLAGS, CFLAGS and CC when building amsnplus/snapshot
+
+Patch by Kevin McCarthy <signals@gentoo.org>
+
+--- plugins/amsnplus/Makefile
++++ plugins/amsnplus/Makefile
+@@ -1,6 +1,6 @@
+ snapshot:
+-	gcc snapshot.c -o snapshot `imlib-config --cflags` `imlib-config --libs`
++	$(CC) $(CFLAGS) $(LDFLAGS)  snapshot.c -o snapshot `imlib-config --cflags` `imlib-config --libs`
+ 
+ all: snapshot
+ clean:
+-	rm snapshot
+\ No newline at end of file
++	rm snapshot

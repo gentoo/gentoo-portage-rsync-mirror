@@ -1,0 +1,77 @@
+# ChangeLog for virtual/perl-XSLoader
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-XSLoader/ChangeLog,v 1.19 2012/12/17 18:29:16 ago Exp $
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> perl-XSLoader-0.160.0.ebuild:
+  Add ~ppc64, wrt bug #442188
+
+*perl-XSLoader-0.160.0 (08 Sep 2012)
+
+  08 Sep 2012; Torsten Veller <tove@gentoo.org> +perl-XSLoader-0.160.0.ebuild:
+  Version bump
+
+  01 Sep 2012; Fabian Groffen <grobian@gentoo.org> perl-XSLoader-0.150.0.ebuild:
+  Marked ~ppc-aix, bug #432288
+
+  26 Apr 2012; Jeroen Roovers <jer@gentoo.org> perl-XSLoader-0.150.0.ebuild:
+  Stable for HPPA (bug #412973).
+
+  07 Nov 2011; Fabian Groffen <grobian@gentoo.org> perl-XSLoader-0.150.0.ebuild:
+  Added Prefix keywords, bug #389001
+
+  28 Jun 2011; Torsten Veller <tove@gentoo.org> perl-XSLoader-0.10.ebuild:
+  Add perl-5.12.4 virtual
+
+  24 Apr 2011; Fabian Groffen <grobian@gentoo.org> ChangeLog:
+  Marked ~x86-solaris, bug #296509
+
+*perl-XSLoader-0.150.0 (19 Apr 2011)
+
+  19 Apr 2011; Torsten Veller <tove@gentoo.org> +perl-XSLoader-0.150.0.ebuild:
+  Version bump
+
+*perl-XSLoader-0.140.0 (17 Apr 2011)
+
+  17 Apr 2011; Torsten Veller <tove@gentoo.org> +perl-XSLoader-0.140.0.ebuild:
+  Version bump
+
+  11 Feb 2011; Torsten Veller <tove@gentoo.org> perl-XSLoader-0.10.ebuild:
+  Add ~s390 ~sh (#345605)
+
+  22 Jan 2011; Torsten Veller <tove@gentoo.org> perl-XSLoader-0.10.ebuild:
+  Add perl-5.12.3 as provider
+
+  07 Dec 2010; Matt Turner <mattst88@gentoo.org> perl-XSLoader-0.10.ebuild:
+  Added ~mips, bug 345605.
+
+  28 Nov 2010; Raúl Porcel <armin76@gentoo.org> perl-XSLoader-0.10.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #345607
+
+  20 Nov 2010; Jeroen Roovers <jer@gentoo.org> perl-XSLoader-0.10.ebuild:
+  Marked ~hppa ~ppc (bug #345605).
+
+  18 Nov 2010; Markus Meier <maekke@gentoo.org> perl-XSLoader-0.10.ebuild:
+  add ~arm, bug #345605
+
+  28 Oct 2010; Fabian Groffen <grobian@gentoo.org>
+  perl-XSLoader-0.10.ebuild:
+  Marked ~ppc-macos
+
+  07 Sep 2010; Torsten Veller <tove@gentoo.org> perl-XSLoader-0.10.ebuild:
+  Add perl-5.12.2 as provider
+
+  29 Jul 2010; Torsten Veller <tove@gentoo.org> perl-XSLoader-0.10.ebuild:
+  perl-5.12.1 is a provider of XSLoader-0.10
+
+  29 Jul 2010; Torsten Veller <tove@gentoo.org> +perl-XSLoader-0.10.ebuild,
+  +metadata.xml:
+  Initial import from perl-experimental for Mouse
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org> perl-XSLoader-0.10.ebuild:
+  Add empty HOMEPAGE and LICENSE. Add mandatory SRC_URI
+
+*perl-XSLoader-0.10 (18 Dec 2009)
+
+  18 Dec 2009; Torsten Veller <tove@gentoo.org> +perl-XSLoader-0.10.ebuild,
+  +metadata.xml:
+  Initial commit

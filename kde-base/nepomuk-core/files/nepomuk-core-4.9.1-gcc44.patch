@@ -1,0 +1,29 @@
+commit c910021ee37ff0356eddbc3df725f8f3f598d019
+Author: Raphael Kubo da Costa <rakuco@FreeBSD.org>
+Date:   Mon Sep 3 18:23:59 2012 -0300
+
+    Fix the build with gcc 4.2 and clang.
+    
+    The Nepomuk2 and Nepomuk2::Query namespaces are included, which causes some
+    ambiguity in the `query' argument of intiWatcherForQuery(), which can be
+    expanded as both Nepomuk2::Query::Query (from libnepomukcore/query/query.h)
+    or Nepomuk2::Query (from libnepomukcore/query/negationterm.h).
+    
+    Meanwhile, this was fixed in master by someone else who didn't fix the
+    KDE/4.9 branch (see eaeae8d).
+    
+    CCMAIL: nepomuk@kde.org
+
+diff --git a/services/queryservice/folder.cpp b/services/queryservice/folder.cpp
+index b7125cb..b4ab5c6 100644
+--- a/services/queryservice/folder.cpp
++++ b/services/queryservice/folder.cpp
+@@ -101,7 +101,7 @@ namespace {
+         }
+     }
+ 
+-    void intiWatcherForQuery(ResourceWatcher* watcher, const Query::Query& query) {
++    void intiWatcherForQuery(ResourceWatcher* watcher, const Nepomuk2::Query::Query& query) {
+         // The empty property is for comparison terms which do not have a property
+         // in that case we want to monitor all properties
+         bool emptyProperty = false;

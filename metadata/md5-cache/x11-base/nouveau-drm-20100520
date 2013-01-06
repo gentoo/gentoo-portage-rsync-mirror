@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm preinst setup
+DEPEND=kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
+DESCRIPTION=Nouveau DRM Kernel Modules for X11
+EAPI=2
+HOMEPAGE=http://nouveau.freedesktop.org/
+IUSE=kernel_linux
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=kernel_linux? ( virtual/modutils )
+SLOT=0
+SRC_URI=mirror://gentoo/nouveau-drm-20100520.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	linux-info	f01ffb28843e2de3ea571f80f07e5078	linux-mod	dbc722ed035721476f23ab7b0572985e	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=b3c220e498e7b0779ac3b5c854638777

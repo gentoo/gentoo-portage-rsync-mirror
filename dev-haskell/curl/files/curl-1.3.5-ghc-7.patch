@@ -1,0 +1,64 @@
+https://bugs.gentoo.org/show_bug.cgi?id=397565
+-fvia-C is deprecated (and broken on ghc-6.12 + binutils-22.1)
+diff --git a/Network/Curl/Code.hs b/Network/Curl/Code.hs
+index ffb2531..0949438 100644
+--- a/Network/Curl/Code.hs
++++ b/Network/Curl/Code.hs
+@@ -1,5 +1,5 @@
+ {-# LANGUAGE ForeignFunctionInterface #-}
+-{-# OPTIONS -fvia-C -#include "curl/curl.h" #-}
++{-# OPTIONS -#include "curl/curl.h" #-}
+ --------------------------------------------------------------------
+ -- |
+ -- Module    : Network.Curl.Code
+diff --git a/Network/Curl/Easy.hs b/Network/Curl/Easy.hs
+index 46fe480..c2d2bc5 100644
+--- a/Network/Curl/Easy.hs
++++ b/Network/Curl/Easy.hs
+@@ -1,5 +1,5 @@
+ {-# LANGUAGE ForeignFunctionInterface #-}
+-{-# OPTIONS -fvia-C -#include "curl/curl.h" #-}
++{-# OPTIONS -#include "curl/curl.h" #-}
+ --------------------------------------------------------------------
+ -- |
+ -- Module    : Network.Curl.Easy
+diff --git a/Network/Curl/Info.hs b/Network/Curl/Info.hs
+index 2f31808..4a69938 100644
+--- a/Network/Curl/Info.hs
++++ b/Network/Curl/Info.hs
+@@ -1,5 +1,5 @@
+ {-# LANGUAGE ForeignFunctionInterface #-}
+-{-# OPTIONS -fvia-C -#include "curl/curl.h" #-}
++{-# OPTIONS -#include "curl/curl.h" #-}
+ --------------------------------------------------------------------
+ -- |
+ -- Module    : Network.Curl.Info
+diff --git a/Network/Curl/Post.hs b/Network/Curl/Post.hs
+index 0822fbb..c51c8aa 100644
+--- a/Network/Curl/Post.hs
++++ b/Network/Curl/Post.hs
+@@ -1,5 +1,5 @@
+ {-# LANGUAGE ForeignFunctionInterface #-}
+-{-# OPTIONS -fvia-C -#include "curl/curl.h" #-}
++{-# OPTIONS -#include "curl/curl.h" #-}
+ --------------------------------------------------------------------
+ -- |
+ -- Module    : Network.Curl.Post
+diff --git a/curl.cabal b/curl.cabal
+index 491161d..330ff18 100644
+--- a/curl.cabal
++++ b/curl.cabal
+@@ -37,11 +37,11 @@ library
+   c-sources: curlc.c
+   Extra-libraries: curl
+   Extensions:      CPP, ForeignFunctionInterface
+-  Ghc-options:     -Wall -fvia-C
++  Ghc-options:     -Wall
+ 
+   Build-Depends: base
+   if flag(new-base)
+-    Build-depends: base >= 3 && < 4, containers
++    Build-depends: base >= 3 && < 5, containers
+   else
+     Build-depends: base < 3
+ 

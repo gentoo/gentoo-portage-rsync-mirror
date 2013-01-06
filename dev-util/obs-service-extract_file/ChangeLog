@@ -1,0 +1,13 @@
+# ChangeLog for dev-util/obs-service-extract_file
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-extract_file/ChangeLog,v 1.2 2012/11/15 21:03:21 scarabeus Exp $
+
+  15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  obs-service-extract_file-20110510.ebuild:
+  Stable on amd64 and x86 as we just copy two files around.
+
+*obs-service-extract_file-20110510 (15 Nov 2012)
+
+  15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> +metadata.xml,
+  +obs-service-extract_file-20110510.ebuild:
+  Initial commit, service for downloading urls.

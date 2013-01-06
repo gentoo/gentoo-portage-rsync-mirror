@@ -1,0 +1,10 @@
+# ChangeLog for sys-fs/dfc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dfc/ChangeLog,v 1.1 2012/06/01 07:19:05 iksaif Exp $
+
+*dfc-3.0.0 (01 Jun 2012)
+
+  01 Jun 2012; Corentin Chary <iksaif@gentoo.org> +dfc-3.0.0.ebuild,
+  +metadata.xml:
+  New ebuild for dfc. Original ebuild from Laurent Bachelier.
+

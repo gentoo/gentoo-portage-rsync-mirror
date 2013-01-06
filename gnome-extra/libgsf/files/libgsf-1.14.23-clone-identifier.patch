@@ -1,0 +1,133 @@
+From 7a4a9d62e0efa8510a9c8aa957233327d11f355b Mon Sep 17 00:00:00 2001
+From: Morten Welinder <terra@gnome.org>
+Date: Fri, 20 Apr 2012 13:54:54 +0000
+Subject: compilation: avoid identifier "clone".
+
+It clashes with the clone syscall when the wrong headers get included.
+---
+diff --git a/tests/test-cp-msole.c b/tests/test-cp-msole.c
+index e076bb4..4ed3246 100644
+--- a/tests/test-cp-msole.c
++++ b/tests/test-cp-msole.c
+@@ -34,7 +34,7 @@
+ static void clone_dir (GsfInfile *in, GsfOutfile *out);
+ 
+ static void
+-clone (GsfInput *input, GsfOutput *output)
++clone_ (GsfInput *input, GsfOutput *output)
+ {
+ 	if (gsf_input_size (input) > 0) {
+ 		guint8 const *data;
+@@ -87,7 +87,7 @@ clone_dir (GsfInfile *in, GsfOutfile *out)
+ 				gsf_infile_name_by_index  (in, i),
+ 				is_dir);
+ 
+-		clone (new_input, new_output);
++		clone_ (new_input, new_output);
+ 	}
+ 	/* An observation: when you think about the explanation to is_dir
+ 	 * above, you realize that clone_dir is called even for regular files.
+@@ -137,7 +137,7 @@ test (char *argv[])
+ 
+ 	outfile = gsf_outfile_msole_new (output);
+ 	g_object_unref (G_OBJECT (output));
+-	clone (GSF_INPUT (infile), GSF_OUTPUT (outfile));
++	clone_ (GSF_INPUT (infile), GSF_OUTPUT (outfile));
+ 
+ 	return 0;
+ }
+diff --git a/tests/test-cp-zip.c b/tests/test-cp-zip.c
+index 5523f33..3263c02 100644
+--- a/tests/test-cp-zip.c
++++ b/tests/test-cp-zip.c
+@@ -32,7 +32,7 @@
+ #include <stdio.h>
+ 
+ static void
+-clone (GsfInfile *in, GsfOutfile *out)
++clone_ (GsfInfile *in, GsfOutfile *out)
+ {
+ 	GsfInput *input = GSF_INPUT (in);
+ 	GsfOutput *output = GSF_OUTPUT (out);
+@@ -85,7 +85,7 @@ clone (GsfInfile *in, GsfOutfile *out)
+ 			output = gsf_outfile_new_child_full  (out, name, is_dir,
+ 							      "compression-level", level,
+ 							      NULL);
+-			clone (GSF_INFILE (input), GSF_OUTFILE (output));
++			clone_ (GSF_INFILE (input), GSF_OUTFILE (output));
+ 		}
+ 	}
+ 	gsf_output_close (GSF_OUTPUT (out));
+@@ -137,7 +137,7 @@ test (char *argv[])
+ 
+ 	outfile = gsf_outfile_zip_new (output, &err);
+ 	g_object_unref (G_OBJECT (output));
+-	clone (infile, outfile);
++	clone_ (infile, outfile);
+ 
+ 	return 0;
+ }
+diff --git a/tests/test-dump-msole.c b/tests/test-dump-msole.c
+index 3837394..b6ef5ce 100644
+--- a/tests/test-dump-msole.c
++++ b/tests/test-dump-msole.c
+@@ -32,7 +32,7 @@
+ #include <stdio.h>
+ 
+ static void
+-clone (GsfInput *input, GsfOutput *output)
++clone_ (GsfInput *input, GsfOutput *output)
+ {
+ 	guint8 const *data;
+ 	size_t len;
+@@ -72,7 +72,7 @@ clone (GsfInput *input, GsfOutput *output)
+ 			dst = gsf_outfile_new_child  (out,
+ 				gsf_infile_name_by_index  (in, i),
+ 				is_dir);
+-			clone (src, dst);
++			clone_ (src, dst);
+ 		}
+ 	}
+ 
+@@ -118,7 +118,7 @@ test (char *argv[])
+ 		g_error_free (err);
+ 		return 1;
+ 	}
+-	clone (GSF_INPUT (infile), GSF_OUTPUT (outfile));
++	clone_ (GSF_INPUT (infile), GSF_OUTPUT (outfile));
+ 
+ 	return 0;
+ }
+diff --git a/tests/test-restore-msole.c b/tests/test-restore-msole.c
+index cfd1d68..b9c54b5 100644
+--- a/tests/test-restore-msole.c
++++ b/tests/test-restore-msole.c
+@@ -32,7 +32,7 @@
+ #include <stdio.h>
+ 
+ static void
+-clone (GsfInput *input, GsfOutput *output)
++clone_ (GsfInput *input, GsfOutput *output)
+ {
+ 	guint8 const *data;
+ 	size_t len;
+@@ -72,7 +72,7 @@ clone (GsfInput *input, GsfOutput *output)
+ 			dst = gsf_outfile_new_child  (out,
+ 				gsf_infile_name_by_index (in, i),
+ 				is_dir);
+-			clone (src, dst);
++			clone_ (src, dst);
+ 		}
+ 	}
+ 
+@@ -111,7 +111,7 @@ test (char *argv[])
+ 
+ 	outfile = gsf_outfile_msole_new (output);
+ 	g_object_unref (G_OBJECT (output));
+-	clone (GSF_INPUT (infile), GSF_OUTPUT (outfile));
++	clone_ (GSF_INPUT (infile), GSF_OUTPUT (outfile));
+ 
+ 	return 0;
+ }
+--
+cgit v0.9.0.2

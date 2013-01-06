@@ -1,0 +1,13 @@
+Index: reelchannelscan-0.4.3/transponders.c
+===================================================================
+--- reelchannelscan-0.4.3.orig/transponders.c
++++ reelchannelscan-0.4.3/transponders.c
+@@ -536,7 +536,7 @@ string cTransponders::SetPosition(const 
+ 
+ string cTransponders::TplFileName(int satCodec)
+ {
+-  string tmp = cPlugin::ConfigDirectory();
++  string tmp = "/usr/share/vdr/reelchannelscan";
+   tmp += "/transponders/";
+   if (satCodec == 0)
+   {

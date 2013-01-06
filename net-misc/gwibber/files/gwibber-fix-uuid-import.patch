@@ -1,0 +1,22 @@
+# workaround bug #351897 for gwibber
+--- gwibber/accounts.py_old	2011-07-06 15:02:46.843404291 +0200
++++ gwibber/accounts.py	2011-07-06 15:02:57.894782684 +0200
+@@ -29,7 +29,7 @@
+   gettext.bind_textdomain_codeset('gwibber','UTF-8')
+ gettext.textdomain('gwibber')
+ 
+-import gtk, pango, gconf, os, json, uuid
++import uuid, gtk, pango, gconf, os, json
+ from gwibber.lib import GwibberPublic
+ import util
+ from microblog.util import resources
+--- bin/gwibber-accounts_old	2011-07-07 09:48:01.786740055 +0200
++++ bin/gwibber-accounts	2011-07-07 09:48:13.957633450 +0200
+@@ -19,6 +19,7 @@
+ # Launch script for Gwibber Accounts
+ #
+ 
++import uuid
+ import sys
+ from os.path import join, dirname, exists, realpath, abspath
+ import gtk, gobject, wnck

@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/oxygen-fonts
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/oxygen-fonts/ChangeLog,v 1.1 2012/09/18 07:22:02 johu Exp $
+
+*oxygen-fonts-0_p20120917 (18 Sep 2012)
+
+  18 Sep 2012; Johannes Huber <johu@gentoo.org>
+  +oxygen-fonts-0_p20120917.ebuild, +metadata.xml:
+  New package, initial commit. Import from kde overlay.
+

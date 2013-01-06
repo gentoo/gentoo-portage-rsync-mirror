@@ -1,0 +1,18 @@
+# ChangeLog for media-gfx/kgrab
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kgrab/ChangeLog,v 1.4 2011/10/29 00:01:09 abcd Exp $
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org> kgrab-0.1.1.ebuild:
+  Bump to EAPI=4
+
+  02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> kgrab-0.1.1.ebuild:
+  EAPI3
+
+  09 Aug 2010; Maciej Mrozowski <reavertm@gentoo.org> kgrab-0.1.1.ebuild:
+  Remove unnecessary KDE_MINIMAL, QA
+
+*kgrab-0.1.1 (21 Feb 2010)
+
+  21 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> +kgrab-0.1.1.ebuild:
+  Initial commit.
+

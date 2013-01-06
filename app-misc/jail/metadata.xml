@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+		<description>This package lacks a primary herd or maintainer.</description>
+	</maintainer>
+	<longdescription>
+Jail Chroot Project is an attempt of write a tool that builds a chrooted environment. 
+The main goal of Jail is to be as simple as possible, and highly portable. The most 
+difficult step when building a chrooted environment is to set up the right libraries and 
+files. Here, Jail comes to the rescue with a tool to automagically configures and builds 
+all the required files, directories and libraries.</longdescription>
+</pkgmetadata>

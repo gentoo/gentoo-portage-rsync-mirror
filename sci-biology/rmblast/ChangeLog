@@ -1,0 +1,15 @@
+# ChangeLog for sci-biology/rmblast
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rmblast/ChangeLog,v 1.3 2012/10/31 20:41:32 flameeyes Exp $
+
+  31 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> rmblast-1.2.ebuild:
+  QA: drop maximum boost version dep; if it fails to build, it has to be fixed.
+
+  02 May 2011; Justin Lecher <jlec@gentoo.org> rmblast-1.2.ebuild:
+  Removed redundant src_install
+
+*rmblast-1.2 (06 Nov 2010)
+
+  06 Nov 2010; Andrey Kislyuk <weaver@gentoo.org> +rmblast-1.2.ebuild,
+  +metadata.xml:
+  New package, dependency of sci-biology/repeatmasker. Ebuild written by me

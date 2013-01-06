@@ -1,0 +1,43 @@
+# ChangeLog for media-gfx/iscan-data
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-data/ChangeLog,v 1.8 2012/06/04 21:12:18 flameeyes Exp $
+
+*iscan-data-1.13.0.1 (04 Jun 2012)
+
+  04 Jun 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +iscan-data-1.13.0.1.ebuild:
+  Version bump.
+
+  16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -iscan-data-1.0.1.ebuild,
+  -iscan-data-1.8.0.ebuild:
+  old
+
+  15 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  iscan-data-1.9.0.1.ebuild:
+  amd64 stable wrt #386021
+
+  15 Oct 2011; Markus Meier <maekke@gentoo.org> iscan-data-1.9.0.1.ebuild:
+  x86 stable, bug #386021
+
+*iscan-data-1.9.0.1 (27 Jul 2011)
+
+  27 Jul 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +iscan-data-1.9.0.1.ebuild:
+  Version bump, and use the full four-components version for future-proofing.
+
+  03 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> iscan-data-1.0.1.ebuild,
+  iscan-data-1.8.0.ebuild:
+  Install 99-iscan.rules to /lib/udev instead of /etc/udev.
+
+*iscan-data-1.8.0 (03 Apr 2011)
+
+  03 Apr 2011; Stefan Briesenick <sbriesen@gentoo.org>
+  +iscan-data-1.8.0.ebuild:
+  version bump (bug #359597)
+
+*iscan-data-1.0.1 (21 Jul 2010)
+
+  21 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  +iscan-data-1.0.1.ebuild, +metadata.xml:
+  initial commit.
+

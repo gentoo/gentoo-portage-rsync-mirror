@@ -1,0 +1,16 @@
+# ChangeLog for x11-misc/idesk-extras
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk-extras/ChangeLog,v 1.3 2012/06/20 19:04:15 ago Exp $
+
+  20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> idesk-extras-1.37.ebuild:
+  Stable for amd64, wrt bug #422475
+
+  20 Jun 2012; Jeff Horelick <jdhore@gentoo.org> idesk-extras-1.37.ebuild:
+  marked x86 per bug 422475
+
+*idesk-extras-1.37 (03 May 2012)
+
+  03 May 2012; Julian Ospald <hasufell@gentoo.org> +idesk-extras-1.37.ebuild,
+  +metadata.xml:
+  initial commit wrt #406675
+

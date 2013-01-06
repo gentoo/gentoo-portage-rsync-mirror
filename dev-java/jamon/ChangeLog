@@ -1,0 +1,20 @@
+# ChangeLog for dev-java/jamon
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamon/ChangeLog,v 1.3 2008/03/22 20:09:59 wltjr Exp $
+
+*jamon-1.01-r2 (22 Mar 2008)
+
+  22 Mar 2008; William L. Thomson Jr. <wltjr@gentoo.org> metadata.xml,
+  -jamon-1.01-r1.ebuild, +jamon-1.01-r2.ebuild:
+  Switched to java-virtuals/servlet-api, EAPI=1 slots, and removed previous
+  revision. Shrank description, added longdescription to metadata
+
+  28 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> jamon-1.01-r1.ebuild:
+  Add missing dev-java/servletapi to RDEPEND and use java-pkg_dojavadoc.
+
+*jamon-1.01-r1 (13 Oct 2006)
+
+  13 Oct 2006; Joshua Nichols <nichoj@gentoo.org> +files/build-1.0.xml,
+  +files/jamon-1.01-java1.5.patch, +metadata.xml, +jamon-1.01-r1.ebuild:
+  Initial import, bug #97009.
+

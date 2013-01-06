@@ -1,0 +1,23 @@
+diff -ru channelscan-0.1.0-orig/channelscan.c channelscan-0.1.0/channelscan.c
+--- channelscan-0.1.0-orig/channelscan.c	2006-06-23 11:44:55.058954108 +0200
++++ channelscan-0.1.0/channelscan.c	2006-06-23 11:49:54.563646537 +0200
+@@ -399,15 +399,10 @@
+ 		// Sat file
+ 		sprintf(cTemp, tr("Current file:"));
+ 		osd->DrawText(10,iTop+30,cTemp,clrWhite,clrBackwindow,cFont::GetFont(fontOsd));
+-		int a=0;
+-		for (int i=0; i<100; i++) {
+-			if ((cSelectedFile[i] == '/') && (cSelectedFile[i+1] == '/')) {
+-				i++;
+-			}
+-			cTemp[a] = cSelectedFile[i];
+-			cTemp[a+1] = '\0';
+-			a++;
+-		}
++		int basename_start=strlen(cSelectedFile);
++		while (basename_start > 0 && cSelectedFile[basename_start-1] != '/')
++			basename_start--;
++		sprintf(cTemp, "%s", cSelectedFile + basename_start);
+ 		osd->DrawText(150,iTop+30,cTemp,clrWhite,clrBackwindow,cFont::GetFont(fontOsd));
+ 
+ 		iTop = 120;

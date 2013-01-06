@@ -1,0 +1,10 @@
+# ChangeLog for app-arch/zpipe
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpipe/ChangeLog,v 1.1 2011/01/05 16:17:30 mgorny Exp $
+
+*zpipe-2.01 (05 Jan 2011)
+
+  05 Jan 2011; Michał Górny <mgorny@gentoo.org> +zpipe-2.01.ebuild,
+  +metadata.xml:
+  New ebuild for zpipe (ZPAQ pipe compressor) per bug #350631.
+

@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install
+DEPEND=x11-libs/gtk+:2 dev-libs/libxml2:2 virtual/pkgconfig rox-base/zeroinstall-injector
+DESCRIPTION=A library for ROX applications written in C.
+EAPI=1
+HOMEPAGE=http://rox.sourceforge.net/
+KEYWORDS=amd64 ppc sparc x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/gtk+:2 dev-libs/libxml2:2
+SLOT=0
+SRC_URI=http://www.kerofin.demon.co.uk/rox/ROX-CLib-2.1.10.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=420b08c4a4d448fabb5bd430ba63f3ed

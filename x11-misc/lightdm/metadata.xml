@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>hwoarang@gentoo.org</email>
+	<name>Markos Chandras</name>
+</maintainer>
+<maintainer>
+	<email>yngwin@gentoo.org</email>
+	<name>Ben de Groot</name>
+</maintainer>
+<use>
+	<flag name="branding">Replace original gnome background with one from Gentoo ten project</flag>
+	<flag name="introspection">Use dev-libs/gobject-introspection for introspection</flag>
+</use>
+<longdescription lang="en">
+</longdescription>
+</pkgmetadata>

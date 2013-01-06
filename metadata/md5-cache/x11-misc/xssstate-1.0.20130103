@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DEPEND=x11-libs/libX11 x11-libs/libXScrnSaver app-arch/xz-utils x11-proto/scrnsaverproto x11-proto/xproto
+DESCRIPTION=A simple tool to retrieve the X screensaver state
+EAPI=5
+HOMEPAGE=http://tools.suckless.org/xssstate
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=x11-libs/libX11 x11-libs/libXScrnSaver
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~jer/xssstate-1.0.20130103.tar.xz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=fa96354e6c32f88601fae6f094eee04c

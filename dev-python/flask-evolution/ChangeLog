@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/flask-evolution
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-evolution/ChangeLog,v 1.1 2012/06/10 02:11:12 rafaelmartins Exp $
+
+*flask-evolution-0.5 (10 Jun 2012)
+
+  10 Jun 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +flask-evolution-0.5.ebuild, +metadata.xml:
+  Initial version.
+

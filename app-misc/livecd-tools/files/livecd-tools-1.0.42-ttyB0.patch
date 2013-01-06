@@ -1,0 +1,14 @@
+# Comment out the ttyB0 line in inittab, by gmsoft
+
+diff --git a/livecd-functions.sh b/livecd-functions.sh
+index d51dd9e..cfc1a57 100755
+--- a/livecd-functions.sh
++++ b/livecd-functions.sh
+@@ -551,6 +551,7 @@ livecd_fix_inittab() {
+ 	# Comment out current getty settings
+ 	sed -i -e '/^c[0-9]/ s/^/#/' /etc/inittab
+ 	sed -i -e '/^s[01]/ s/^/#/' /etc/inittab
++	sed -i -e '/^b0/ s/^/#/' /etc/inittab
+ 
+ 	# SPARC & HPPA console magic
+ 	if [ "${HOSTTYPE}" = "sparc" -o "${HOSTTYPE}" = "hppa" -o "${HOSTTYPE}" = "ppc64" ]

@@ -1,0 +1,38 @@
+diff -u -r QtCurve-KDE4-1.6.4-old/CMakeLists.txt QtCurve-KDE4-1.6.4/CMakeLists.txt
+--- QtCurve-KDE4-1.6.4-old/CMakeLists.txt	2010-10-19 12:24:18.725632000 +0300
++++ QtCurve-KDE4-1.6.4/CMakeLists.txt	2010-10-19 12:26:30.469632000 +0300
+@@ -88,14 +88,16 @@
+     add_subdirectory(colors)
+     add_subdirectory(po)
+ 
+-    find_file(KWINGLOBALS_H kwinglobals.h ${KDE4_INCLUDES}) # kwinglobals.h is new for KDE4
++    if (QTC_KWIN)
++	find_file(KWINGLOBALS_H kwinglobals.h ${KDE4_INCLUDES}) # kwinglobals.h is new for KDE4
+ 
+-    if (KWINGLOBALS_H)
+-        add_subdirectory(kwin)
+-        add_subdirectory(kwinconfig)
+-    else (KWINGLOBALS_H)
+-        message("** KWin headers not found - KWin decoration will not be built")
+-    endif (KWINGLOBALS_H)
++	if (KWINGLOBALS_H)
++	    add_subdirectory(kwin)
++	    add_subdirectory(kwinconfig)
++	else (KWINGLOBALS_H)
++	    message("** KWin headers not found - KWin decoration will not be built")
++	endif (KWINGLOBALS_H)
++    endif (QTC_KWIN)
+ else (NOT QTC_QT_ONLY)
+     set(CMAKE_INSTALL_PREFIX ${OLD_CMAKE_INSTALL_PREFIX})
+     add_definitions(${QT_DEFINITIONS})
+diff -u -r QtCurve-KDE4-1.6.4-old/config.h.cmake QtCurve-KDE4-1.6.4/config.h.cmake
+--- QtCurve-KDE4-1.6.4-old/config.h.cmake	2010-10-19 12:24:18.725632000 +0300
++++ QtCurve-KDE4-1.6.4/config.h.cmake	2010-10-19 12:24:42.264632000 +0300
+@@ -6,6 +6,7 @@
+ #define KDE4PREFIX        "@KDE4PREFIX@"
+ 
+ #cmakedefine QTC_QT_ONLY
++#cmakedefine QTC_KWIN
+ #cmakedefine QTC_OLD_NVIDIA_ARROW_FIX
+ #cmakedefine QTC_STYLE_SUPPORT
+ #cmakedefine QTC_KWIN_MAX_BUTTON_HACK

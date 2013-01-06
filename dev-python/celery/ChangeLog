@@ -1,0 +1,73 @@
+# ChangeLog for dev-python/celery
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.13 2012/12/31 12:58:43 mgorny Exp $
+
+  31 Dec 2012; Michał Górny <mgorny@gentoo.org> celery-3.0.11-r1.ebuild,
+  celery-3.0.12.ebuild, celery-3.0.9.ebuild:
+  Use virtual/pyparsing.
+
+  15 Nov 2012; Patrick Lauer <patrick@gentoo.org>
+  +files/celery-3.0.12-require-python-dateutil-2.1.patch, celery-3.0.12.ebuild:
+  Fixing patch #443082
+
+*celery-3.0.12 (13 Nov 2012)
+
+  13 Nov 2012; Patrick Lauer <patrick@gentoo.org> +celery-3.0.12.ebuild:
+  Bump
+
+*celery-3.0.11-r1 (25 Oct 2012)
+
+  25 Oct 2012; Corentin Chary <iksaif@gentoo.org> +celery-3.0.11-r1.ebuild,
+  +files/celery-3.0.11-require-python-dateutil-2.1.patch, -celery-3.0.11.ebuild:
+  Fix #439284. Allow usage of dev-python/python-dateutil-2.1.
+
+*celery-3.0.11 (28 Sep 2012)
+
+  28 Sep 2012; Corentin Chary <iksaif@gentoo.org> +celery-3.0.11.ebuild,
+  -celery-3.0.5-r1.ebuild:
+  Bump to 3.0.11.
+
+*celery-3.0.9 (31 Aug 2012)
+
+  31 Aug 2012; Corentin Chary <iksaif@gentoo.org> +celery-3.0.9.ebuild,
+  -celery-3.0.4.ebuild:
+  Bump to 3.0.9.
+
+*celery-3.0.5-r1 (15 Aug 2012)
+
+  15 Aug 2012; Corentin Chary <iksaif@gentoo.org> +celery-3.0.5-r1.ebuild,
+  -celery-3.0.5.ebuild, files/celery.confd, files/celery.initd:
+  Enhance init script.
+
+  14 Aug 2012; Corentin Chary <iksaif@gentoo.org> -celery-2.5.5.ebuild:
+  Remove old version.
+
+*celery-3.0.5 (14 Aug 2012)
+
+  14 Aug 2012; Corentin Chary <iksaif@gentoo.org> +celery-3.0.5.ebuild,
+  celery-3.0.4.ebuild:
+  Bump to 3.0.5.
+
+*celery-3.0.4 (29 Jul 2012)
+
+  29 Jul 2012; Corentin Chary <iksaif@gentoo.org> +celery-3.0.4.ebuild,
+  -celery-3.0.1.ebuild, -files/celery-3.0.1-fix-setuptools-import.patch:
+  Bump to 3.0.4.
+
+*celery-2.5.5 (17 Jul 2012)
+*celery-3.0.1 (17 Jul 2012)
+
+  17 Jul 2012; Corentin Chary <iksaif@gentoo.org> +celery-2.5.5.ebuild,
+  +celery-3.0.1.ebuild, +files/celery-3.0.1-fix-setuptools-import.patch,
+  -celery-2.5.3.ebuild:
+  Bump to 2.5.5 and 3.0.1. Add examples and doc thanks to idella4. Closes
+  #425794 and #422661.
+
+  16 Jul 2012; Corentin Chary <iksaif@gentoo.org> files/celery.initd:
+  LICENSE variable does not reflect init script. Closes #425934.
+
+*celery-2.5.3 (30 May 2012)
+
+  30 May 2012; Corentin Chary <iksaif@gentoo.org> +celery-2.5.3.ebuild,
+  +files/celery.confd, +files/celery.initd, +metadata.xml:
+  New ebuild for celery. Closes bug #342041.

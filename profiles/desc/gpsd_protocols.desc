@@ -1,0 +1,33 @@
+# Copyright 1999-2010 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/gpsd_protocols.desc,v 1.1 2010/09/26 12:51:22 scarabeus Exp $
+
+# This file contains descriptions of possible protocols for gpsd package.
+# Keep it sorted. :)
+
+ashtech - Ashtech protocol support
+aivdm - AIVDM protocol support
+clientdebug - Client debugging protocol support
+earthmate - Earthmate protocol support
+evermore - EverMore protocol support
+fv18 - FV-18 protocol support
+garmin - Garmin protocol support
+garmintxt - Garmin Simple Text protocol support
+gpsclock - GPSclock protocol support
+itrax - iTrax protocol support
+mtk3301 - MTK-3301 protocol support
+nmea - NMEA protocol support
+ntrip - NTRIP protocol support
+navcom - Navcom protocol support
+oceanserver - OceanServer protocol support
+oldstyle - Oldstyle (pre-JSON) protocol support
+oncore - OnCore protocol support
+rtcm104v2 - RTCM104V2 protocol support
+rtcm104v3 - RTCM104V3 protocol support
+sirf - SiRF protocol support
+superstar2 - SuperStarII protocol support
+timing - Timing protocol support
+tsip - Trimble TSIP protocol support
+tripmate - Tripmate protocol support
+tnt - True North protocol support
+ubx - UBX protocol support

@@ -1,0 +1,96 @@
+https://bugs.gentoo.org/373665
+
+  use system udis86
+  respect flags
+  fix parallel build
+
+--- a/hashlibpp/src/Makefile
++++ b/hashlibpp/src/Makefile
+@@ -50,7 +50,7 @@ INCLUDE_PATH = /usr/include/hashlib++
+ LIB_PATH = /usr/local/lib/
+ 
+ # Compiler to use
+-COMPILER = g++
++COMPILER = ${CXX}
+ 
+ # Global options for the compiler
+ COPTIONS = -ansi -Wall -Wextra
+@@ -62,7 +62,7 @@ COPTIONS = -ansi -Wall -Wextra
+ ifdef DEBUG
+ 	COPTIONS += -g
+ else
+-	COPTIONS += -O3 -fomit-frame-pointer
++	COPTIONS += ${CXXFLAGS}
+ endif
+ 
+ GCC = $(COMPILER) $(COPTIONS)
+@@ -149,7 +149,7 @@ hl_sha512wrapper.o:	hl_sha512wrapper.cpp hl_sha512wrapper.h
+ #----------------------------------------------------------------------- 
+ # Creating a static lib using ar
+ 
+-LIB:		MD5 SHA1 SHA256			
++LIB:		MD5 SHA1 SHA256 SHA2EXT
+ 		ar rs libhl++.a $(MD5) $(SHA1) $(SHA256) $(SHA2EXT)
+ 
+ #----------------------------------------------------------------------- 
+--- a/makefile
++++ b/makefile
+@@ -1,7 +1,7 @@
+ WXCONFIG = wx-config
+ CPP = `$(WXCONFIG) --cxx`
+-CXXFLAGS= `$(WXCONFIG) --cxxflags` -Iudis86 -MMD -c ${OPTFLAGS}
+-LDFLAGS = `$(WXCONFIG) --libs`
++WXCXXFLAGS= `$(WXCONFIG) --cxxflags` -MMD -c ${OPTFLAGS}
++WXLDFLAGS = `$(WXCONFIG) --libs` ${LDFLAGS}
+ RC = `$(WXCONFIG) --rescomp`
+ #RC = x86_64-w64-mingw32-windres --define WX_CPU_AMD64
+ RCFLAGS = `$(WXCONFIG) --cxxflags | sed s/' '-m.*//g;`
+@@ -17,7 +17,7 @@ SOURCES= src/HexEditorGui.cpp \
+ 			src/HexEditorCtrl/wxHexCtrl/Tag.cpp\
+ 			src/HexEditorCtrl/HexEditorCtrlGui.cpp\
+ 			src/HexEditorFrame.cpp
+-LIBS = udis86/libudis86/.libs/libudis86.a hashlibpp/src/libhl++.a
++LIBS = hashlibpp/src/libhl++.a
+ OBJECTS=$(SOURCES:.cpp=.o)
+ DEPENDS=$(OBJECTS:.o=.d)
+ RESOURCES= resources/resource.rc
+@@ -39,19 +39,19 @@ all: prepare $(EXECUTABLE)
+ prepare: $(LIBS) $(SOURCES)
+ 
+ $(EXECUTABLE): $(OBJECTS) $(LIBS)
+-	$(CPP) $(OBJECTS) $(LIBS) $(LDFLAGS) -o $@
++	$(CPP) $(OBJECTS) $(LIBS) -ludis86 $(WXLDFLAGS) ${LDFLAGS} -o $@
+ 
+ .cpp.o:
+-	$(CPP) $(CXXFLAGS) $< -o $@
++	$(CPP) $(WXCXXFLAGS) ${CXXFLAGS} $< -o $@
+ 
+ %.o : %.rc
+ 	$(RC) $(RCFLAGS) $< -o $@
+ 
+-udis86/libudis86/.libs/libudis86.a:
+-	echo Please make sure if libudis86 build for your host to avoid link time errors!
+-	cd udis86;./autogen.sh
+-	cd udis86;./configure
+-	cd udis86/libudis86; $(MAKE) $(MFLAGS)
++#udis86/libudis86/.libs/libudis86.a:
++#	echo Please make sure if libudis86 build for your host to avoid link time errors!
++#	cd udis86;./autogen.sh
++#	cd udis86;./configure
++#	cd udis86/libudis86; $(MAKE) $(MFLAGS)
+ 
+ hashlibpp/src/libhl++.a:
+ 	echo "Please make sure if libudis86 build for your host to avoid link time errors!"
+@@ -61,10 +61,10 @@ win: prepare $(RESOURCES) $(EXECUTABLE_WIN)
+ 
+ #Stack override required for file comparison function...
+ $(EXECUTABLE_WIN): $(OBJECTS) $(RESOURCE_OBJ)
+-	$(CPP) $(OBJECTS) $(RESOURCE_OBJ) $(LIBS) $(LDFLAGS) -static-libgcc -static-libstdc++ -Wl,--stack,5242880 -o $@
++	$(CPP) $(OBJECTS) $(RESOURCE_OBJ) $(LIBS) $(WXLDFLAGS) -static-libgcc -static-libstdc++ -Wl,--stack,5242880 ${LDFLAGS} -o $@
+ 
+ maclink: $(OBJECTS)
+-	$(CPP) $(OBJECTS) $(LIBS) $(LDFLAGS) -lexpat -o $(EXECUTABLE)
++	$(CPP) $(OBJECTS) $(LIBS) $(WXLDFLAGS) -lexpat ${LDFLAGS} -o $(EXECUTABLE)
+ 
+ mac: prepare maclink
+ 	mkdir -p $(EXECUTABLE_DIR_MAC)/Contents

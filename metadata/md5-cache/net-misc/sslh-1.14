@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install
+DEPEND=tcpd? ( sys-apps/tcp-wrappers ) dev-libs/libconfig dev-lang/perl
+DESCRIPTION=Port multiplexer - accept both HTTPS and SSH connections on the same port
+EAPI=5
+HOMEPAGE=http://www.rutschle.net/tech/sslh.shtml
+IUSE=tcpd
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=tcpd? ( sys-apps/tcp-wrappers ) dev-libs/libconfig
+RESTRICT=test
+SLOT=0
+SRC_URI=http://www.rutschle.net/tech/sslh-1.14.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=ff2773a4755ce2a988342810a0e0a87f

@@ -1,0 +1,59 @@
+Fix compilation on Gentoo/FreeBSD, no alloca.h here and PATH_MAX
+is defined elsewhere.
+
+See bug 254795
+
+--- logrotate-3.8.2.orig/config.c
++++ logrotate-3.8.2/config.c
+@@ -1,6 +1,6 @@
+ #include <sys/queue.h>
+ /* Alloca is defined in stdlib.h in NetBSD */
+-#ifndef __NetBSD__
++#if !defined(__NetBSD__) && !defined(__FreeBSD__)
+ #include <alloca.h>
+ #endif
+ #include <limits.h>
+@@ -21,6 +21,9 @@
+ #include <wctype.h>
+ #include <fnmatch.h>
+ 
++#if !defined(PATH_MAX) && defined(__FreeBSD__)
++#include <sys/param.h>
++#endif
+ #include "basenames.h"
+ #include "log.h"
+ #include "logrotate.h"
+--- logrotate-3.8.2.orig/logrotate.c
++++ logrotate-3.8.2/logrotate.c
+@@ -1,6 +1,6 @@
+ #include <sys/queue.h>
+ /* alloca() is defined in stdlib.h in NetBSD */
+-#ifndef __NetBSD__
++#if !defined(__NetBSD__) && !defined(__FreeBSD__)
+ #include <alloca.h>
+ #endif
+ #include <limits.h>
+@@ -24,6 +24,9 @@
+ int selinux_enforce = 0;
+ #endif
+ 
++#if !defined(PATH_MAX) && defined(__FreeBSD__)
++#include <sys/param.h>
++#endif
+ #include "basenames.h"
+ #include "log.h"
+ #include "logrotate.h"
+
+--- logrotate-3.8.2.orig/Makefile
++++ logrotate-3.8.2/Makefile
+@@ -17,8 +17,10 @@
+ 
+ ifeq ($(WITH_ACL),yes)
+ CFLAGS += -DWITH_ACL
++ifneq ($(OS_NAME),FreeBSD)
+ LOADLIBES += -lacl
+ endif
++endif
+ 
+ # HP-UX using GCC
+ ifeq ($(OS_NAME),HP-UX)

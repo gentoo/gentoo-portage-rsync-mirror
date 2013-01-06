@@ -1,0 +1,49 @@
+Use libgif instead of libungif
+
+Patch by Kevin McCarthy <signals@gentoo.org>
+
+--- configure.in
++++ configure.in
+@@ -286,20 +286,20 @@
+ fi
+ 
+ dnl
+-dnl  Sprawdzamy libungif.so i <gif_lib.h>
++dnl  Sprawdzamy libgif.so i <gif_lib.h>
+ dnl
+   
+-AC_ARG_WITH(libungif,
+-	[  --without-libungif      Compile without GIF token support])
++AC_ARG_WITH(libgif,
++	[  --without-libgif      Compile without GIF token support])
+ 
+-if test "x$with_libungif" != "xno"; then
+-	AC_CHECK_LIB(ungif, DGifSlurp,
++if test "x$with_libgif" != "xno"; then
++	AC_CHECK_LIB(gif, DGifSlurp,
+ 	[ 
+ 		AC_CHECK_HEADERS(gif_lib.h,
+ 		[
+-			AC_DEFINE(HAVE_LIBUNGIF, 1, [define if you have libungif])
+-			LIBS="$LIBS -lungif"
+-			have_libungif=yes
++			AC_DEFINE(HAVE_LIBUNGIF, 1, [define if you have libgif])
++			LIBS="$LIBS -lgif"
++			have_libgif=yes
+ 		])
+ 	])
+ fi
+@@ -478,10 +478,10 @@
+ 	echo " - zlib: disabled"
+ fi
+ 
+-if test "x$have_libungif" = "xyes"; then
+-	echo " - libungif: enabled"
++if test "x$have_libgif" = "xyes"; then
++	echo " - libgif: enabled"
+ else
+-	echo " - libungif: disabled"
++	echo " - libgif: disabled"
+ fi
+ 
+ if test "x$have_libjpeg" = "xyes"; then

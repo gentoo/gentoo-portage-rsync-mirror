@@ -1,0 +1,42 @@
+https://bugs.launchpad.net/do-plugins/+bug/634564
+
+--- Evolution/src/ContactItemSource.cs	2010-11-04 16:32:32.000000000 -0600
++++ Evolution/src/ContactItemSource.cs	2010-11-04 16:34:25.000000000 -0600
+@@ -35,7 +35,7 @@
+ 		public string Detail { get; set; }
+ 		public string Key { get; set; }
+ 		
+-		public ContactAttribute (string key, string detail)
++		public ContactAttribute (string key, string detail) : this ()
+ 		{
+ 			Key = key;
+ 			Detail = detail;
+--- File/src/Do/Do.FilesAndFolders/IndexedFolder.cs	2009-10-12 14:30:04.000000000 -0600
++++ File/src/Do/Do.FilesAndFolders/IndexedFolder.cs	2010-11-04 16:34:45.000000000 -0600
+@@ -33,7 +33,7 @@
+ 		public uint Level { get; private set; }
+ 		public FolderStatus Status { get; private set; }
+ 		
+-		public IndexedFolder (string path, uint level, FolderStatus status)
++		public IndexedFolder (string path, uint level, FolderStatus status) : this ()
+ 		{
+ 			if (path == null) throw new ArgumentNullException ("path");
+ 			
+--- Pidgin/src/PidginContactItemSource.cs	2009-10-12 14:30:04.000000000 -0600
++++ Pidgin/src/PidginContactItemSource.cs	2010-09-01 16:41:10.000000000 -0600
+@@ -241,7 +241,7 @@
+ 					}
+ 					//if the alias is still null, let's try to get the server alias
+ 					if (string.IsNullOrEmpty (alias))
+-					    alias = Pidgin.GetBuddyServerAlias (protos[proto]) ?? null;
++					    alias = (string) Pidgin.GetBuddyServerAlias (protos[proto]) ?? null;
+ 					break;
+ 				//let's pick up the custom icon as the metacontact's icon
+ 				case "setting":
+@@ -278,4 +278,4 @@
+ 			return buddy;
+ 		}
+ 	}
+-}
+\ No newline at end of file
++}

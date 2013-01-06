@@ -1,0 +1,25 @@
+diff -Nuar libdbi-drivers-0.8.3-1.orig/acinclude.m4 libdbi-drivers-0.8.3-1/acinclude.m4
+--- libdbi-drivers-0.8.3-1.orig/acinclude.m4	2007-12-30 11:05:40.000000000 +0000
++++ libdbi-drivers-0.8.3-1/acinclude.m4	2009-10-26 06:50:49.823477194 +0000
+@@ -450,8 +450,8 @@
+ 		firebird_incdirs="/opt/firebird/include /usr/include /usr/local/include /usr/include/firebird /usr/local/include/firebird /usr/local/firebird/include /opt/firebird/include"
+ 		AC_FIND_FILE(ibase.h, $firebird_incdirs, ac_firebird_incdir)
+ 		firebird_libdirs="/opt/firebird/lib /usr/lib /usr/local/lib /usr/lib/firebird /usr/local/lib/firebird /usr/local/firebird/lib /opt/firebird/lib"
+-dnl		AC_FIND_FILE(libfbclient.so, $firebird_libdirs, ac_firebird_libdir)
+-		AC_FIND_FILE(libfbembed.so, $firebird_libdirs, ac_firebird_libdir)
++		AC_FIND_FILE(libfbclient.so, $firebird_libdirs, ac_firebird_libdir)
++dnl		AC_FIND_FILE(libfbembed.so, $firebird_libdirs, ac_firebird_libdir)
+ 		if test "$ac_firebird_incdir" = "no"; then
+ 			AC_MSG_RESULT(no)
+ 			AC_MSG_ERROR([Invalid Firebird/Interbase directory - include files not found.])
+@@ -479,8 +479,8 @@
+ 	[SCHAR_MSG="no"])
+ 	AC_MSG_RESULT([$SCHAR_MSG])
+ 
+-dnl	FIREBIRD_LIBS="-lfbclient"
+-	FIREBIRD_LIBS="-lfbembed"
++	FIREBIRD_LIBS="-lfbclient"
++dnl	FIREBIRD_LIBS="-lfbembed"
+ 	FIREBIRD_INCLUDE="-I$ac_firebird_incdir"
+ 	FIREBIRD_LDFLAGS="-L$ac_firebird_libdir"
+ 	

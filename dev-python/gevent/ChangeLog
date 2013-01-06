@@ -1,0 +1,33 @@
+# ChangeLog for dev-python/gevent
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.8 2012/11/13 10:50:41 idella4 Exp $
+
+  14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Updating maintainer, metadata.xml
+
+  17 Jul 2012; Mike Frysinger <vapier@gentoo.org> gevent-0.13.7.ebuild,
+  gevent-1.0_beta2.ebuild:
+  Add arm love.
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> gevent-0.13.7.ebuild,
+  gevent-1.0_beta2.ebuild:
+  Add missing PYTHON_DEPEND, thanks to Arfrever for reporting
+
+  20 May 2012; Kacper Kowalik <xarthisius@gentoo.org> gevent-0.13.7.ebuild:
+  Add (commented out) tests' dependencies for the daredevil that would want to
+  fix them
+
+*gevent-1.0_beta2 (19 May 2012)
+
+  19 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +gevent-1.0_beta2.ebuild:
+  Version bump with beta release (masked)
+
+  18 May 2012; Kacper Kowalik <xarthisius@gentoo.org> gevent-0.13.7.ebuild:
+  Fix vars order
+
+*gevent-0.13.7 (18 May 2012)
+
+  18 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +gevent-0.13.7.ebuild,
+  +metadata.xml:
+  Initial import, fixes #415589. Ebuild written by Ian Delaney
+  <johneed@hotmail.com>

@@ -1,0 +1,43 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+}
+
+check_config() {
+	# we need to ensure that var is created for runtime
+	if [ ! -d /var/lib/knot/ ]; then
+		mkdir -p /var/lib/knot/
+	fi
+	# without config dns is kinda useless
+	if [ ! -f /etc/knot/knot.conf ]; then
+		eerror "This script requires configured knot-dns at /etc/knot/knot.conf."
+		return 1
+	fi
+}
+
+start() {
+	check_config || return 1
+
+	ebegin "Starting knot-dns"
+	/usr/sbin/knotc start
+	eend $?
+}
+
+stop() {
+	ebegin "Stoping knot-dns"
+	/usr/sbin/knotc stop
+	eend $?
+}
+
+restart() {
+	ebegin "Restarting knot-dns"
+	/usr/sbin/knotc restart
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading knot-dns"
+	/usr/sbin/knotc reload
+	eend $?
+}

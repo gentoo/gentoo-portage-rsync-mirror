@@ -1,0 +1,22 @@
+--- x2goserver/Makefile.orig	2012-10-31 15:03:35.734483627 +0100
++++ x2goserver/Makefile	2012-10-31 15:05:55.505918654 +0100
+@@ -3,6 +3,10 @@
+ SRC_DIR=$(CURDIR)
+ SHELL=/bin/bash
+ 
++CC?=gcc
++CFLAGS+=-fPIE -pie
++LDFLAGS+=
++
+ INSTALL_DIR=install -d -o root -g root -m 755
+ INSTALL_FILE=install -o root -g root -m 644
+ INSTALL_PROGRAM=install -o root -g root -m 755
+@@ -37,7 +41,7 @@
+ build-arch: build_setgidwrappers
+ 
+ build_setgidwrappers:
+-	gcc -fPIE -pie -o x2gosqlitewrapper x2gosqlitewrapper.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -o x2gosqlitewrapper x2gosqlitewrapper.c
+ 
+ build-indep: build_man2html
+ 

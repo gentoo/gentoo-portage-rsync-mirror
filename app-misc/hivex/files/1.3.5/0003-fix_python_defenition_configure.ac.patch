@@ -1,0 +1,16 @@
+diff --git a/configure.ac b/configure.ac
+--- a/configure.ac
++++ b/configure.ac
+@@ -336,8 +336,11 @@
+ AC_SUBST(PYTHON_INCLUDEDIR)
+ AC_SUBST(PYTHON_INSTALLDIR)
+ 
++AC_ARG_ENABLE([python],
++       AS_HELP_STRING([--with-python],[build Python binding]))
++
+ AM_CONDITIONAL([HAVE_PYTHON],
+-    [test "x$PYTHON" != "xno" && test "x$PYTHON_INCLUDEDIR" != "x" && test "x$PYTHON_INSTALLDIR" != "x"])
++ [test "x$PYTHON_INCLUDEDIR" != "x" -a  "x$PYTHON_SITE_PACKAGES" != "x" -a "x$enable_python" = "xyes"])
+ 
+ dnl Check for Ruby and rake (optional, for Ruby bindings).
+ AC_ARG_ENABLE([ruby],

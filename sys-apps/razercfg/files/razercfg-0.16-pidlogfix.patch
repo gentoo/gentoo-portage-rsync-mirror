@@ -1,0 +1,11 @@
+diff -ruN razercfg-0.16.orig/razerd/razerd.c razercfg-0.16/razerd/razerd.c
+--- razercfg-0.16.orig/razerd/razerd.c	2011-07-11 13:13:43.000000000 +0200
++++ razercfg-0.16/razerd/razerd.c	2011-08-15 09:41:03.390109196 +0200
+@@ -505,7 +505,6 @@
+ {
+ 	cleanup_var_run();
+ 	razer_exit();
+-	remove_pidfile();
+ }
+ 
+ static void signal_handler(int signum)

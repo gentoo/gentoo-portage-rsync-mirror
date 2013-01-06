@@ -1,0 +1,56 @@
+# ChangeLog for media-sound/cantata
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/ChangeLog,v 1.10 2012/12/23 16:19:47 dastergon Exp $
+
+*cantata-0.9.1 (23 Dec 2012)
+
+  23 Dec 2012; Pavlos Ratis <dastergon@gentoo.org> +cantata-0.9.1.ebuild:
+  Version bump, wrt bug 448230
+
+  27 Oct 2012; Ben de Groot <yngwin@gentoo.org> cantata-0.8.3.1.ebuild,
+  metadata.xml:
+  Some useflag and deps adjustments. Bump to eapi-5. Add to qt herd.
+
+*cantata-0.8.3.1 (27 Oct 2012)
+
+  27 Oct 2012; Michael Palimaka <kensington@gentoo.org> +cantata-0.8.3.1.ebuild,
+  metadata.xml:
+  Version bump. Fixes build problems (bug #428400) and automagic dependencies
+  (bug #428524).
+
+  01 Aug 2012; Johannes Huber <johu@gentoo.org> cantata-0.8.2.ebuild,
+  metadata.xml:
+  Fix automagic dependencies by Pavlos Ratis <dastergon@gmail.com>, bug #428524.
+
+*cantata-0.8.2 (27 Jul 2012)
+
+  27 Jul 2012; Johannes Huber <johu@gentoo.org> +cantata-0.8.2.ebuild,
+  -cantata-0.7.1.ebuild:
+  Version bump wrt bug #427918, remove old.
+
+*cantata-0.8.1 (26 Jul 2012)
+
+  26 Jul 2012; Johannes Huber <johu@gentoo.org> +cantata-0.8.1.ebuild,
+  -cantata-0.6.1.ebuild:
+  Version bump wrt bug #427918, remove old.
+
+  08 Jul 2012; Ian Whyman <thev00d00@gentoo.org> cantata-0.6.1.ebuild,
+  cantata-0.7.1.ebuild:
+  Make KDE dependencies optional, fixes bug #425150
+
+*cantata-0.7.1 (08 Jun 2012)
+
+  08 Jun 2012; Johannes Huber <johu@gentoo.org> +cantata-0.7.1.ebuild,
+  -cantata-0.5.1.ebuild:
+  Version bump wrt bug #419881. Remove old.
+
+*cantata-0.6.1 (15 Apr 2012)
+
+  15 Apr 2012; Johannes Huber <johu@gentoo.org> +cantata-0.6.1.ebuild:
+  Version bump.
+
+*cantata-0.5.1 (25 Mar 2012)
+
+  25 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org> +cantata-0.5.1.ebuild,
+  +metadata.xml:
+  New application, bug 408051. Ebuild by Pavlos Ratis.

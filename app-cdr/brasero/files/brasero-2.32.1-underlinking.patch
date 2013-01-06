@@ -1,0 +1,40 @@
+Author: hasufell <hasufell@gentoo.org>
+Date:   Sat Aug 4 11:21:07 2012 +0200
+
+    fix underlinking wrt #429280
+
+--- configure.in
++++ configure.in
+@@ -269,6 +269,10 @@ esac
+ AC_SUBST(BRASERO_CANBERRA_CFLAGS)
+ AC_SUBST(BRASERO_CANBERRA_LIBS)
+ 
++PKG_CHECK_MODULES([BRASERO_ICE], [ice])
++AC_SUBST(BRASERO_ICE_CFLAGS)
++AC_SUBST(BRASERO_ICE_LIBS)
++
+ dnl ****************Nautilus**********************************
+ # Note: the extension is built against gtk+-2.0 so we cannot build extension with gtk+-3.0
+ NAUTILUS_REQUIRED=2.22.2
+--- src/Makefile.am
++++ src/Makefile.am
+@@ -24,7 +24,8 @@ INCLUDES = \
+ 	$(BRASERO_LIBUNIQUE_CFLAGS) 					\
+ 	$(BRASERO_SEARCH_CFLAGS)					\
+ 	$(BRASERO_PL_PARSER_CFLAGS)					\
+-	$(BRASERO_SM_CFLAGS)
++	$(BRASERO_SM_CFLAGS)						\
++	$(BRASERO_ICE_CFLAGS)
+ 
+ GLIB_GENMARSHAL=`pkg-config --variable=glib_genmarshal glib-2.0`
+ RECMARSHALFILES = brasero-marshal.h brasero-marshal.c
+@@ -171,7 +172,8 @@ brasero_LDADD =						\
+ 	$(BRASERO_LIBUNIQUE_LIBS) 	\
+ 	$(BRASERO_SEARCH_LIBS)		\
+ 	$(BRASERO_PL_PARSER_LIBS)	\
+-	$(BRASERO_SM_LIBS)
++	$(BRASERO_SM_LIBS)		\
++	$(BRASERO_ICE_LIBS)
+ 
+ EXTRA_DIST =			\
+ 	brasero-marshal.list

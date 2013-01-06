@@ -1,0 +1,24 @@
+# ChangeLog for dev-db/barman
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/barman/ChangeLog,v 1.4 2012/12/18 12:27:08 patrick Exp $
+
+*barman-1.1.2 (18 Dec 2012)
+
+  18 Dec 2012; Patrick Lauer <patrick@gentoo.org> +barman-1.1.2.ebuild:
+  Bump
+
+*barman-1.1.1 (29 Oct 2012)
+
+  29 Oct 2012; Patrick Lauer <patrick@gentoo.org> +barman-1.1.1.ebuild:
+  Bump
+
+*barman-1.1.0 (17 Oct 2012)
+
+  17 Oct 2012; Patrick Lauer <patrick@gentoo.org> +barman-1.1.0.ebuild:
+  Bump
+
+*barman-1.0.0 (27 Aug 2012)
+
+  27 Aug 2012; Patrick Lauer <patrick@gentoo.org> +barman-1.0.0.ebuild,
+  +metadata.xml:
+  Initial import; ebuild by me

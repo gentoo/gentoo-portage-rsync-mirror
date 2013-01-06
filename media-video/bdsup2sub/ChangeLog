@@ -1,0 +1,30 @@
+# ChangeLog for media-video/bdsup2sub
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/bdsup2sub/ChangeLog,v 1.5 2010/08/14 02:59:32 sbriesen Exp $
+
+  14 Aug 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  -bdsup2sub-4.0.0.ebuild:
+  removed old revision
+
+  14 Aug 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  bdsup2sub-4.0.0-r1.ebuild:
+  added app-arch/xz-utils dependency, solving bug #332513.
+
+*bdsup2sub-4.0.0-r1 (01 Aug 2010)
+
+  01 Aug 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  +bdsup2sub-4.0.0-r1.ebuild, +files/bdsup2sub-4.0.0-xdg.patch,
+  metadata.xml:
+  made a better XDG patch
+
+  29 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  bdsup2sub-4.0.0.ebuild:
+  removed subversion download
+
+*bdsup2sub-4.0.0 (28 Jul 2010)
+
+  28 Jul 2010; Stefan Briesenick <sbriesen@gentoo.org>
+  +bdsup2sub-4.0.0.ebuild, +files/bdsup2sub-4.0.0-xdg.diff,
+  +files/build-4.0.0.xml, +metadata.xml:
+  initial commit.
+

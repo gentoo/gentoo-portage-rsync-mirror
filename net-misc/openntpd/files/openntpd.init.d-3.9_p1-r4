@@ -1,0 +1,37 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/files/openntpd.init.d-3.9_p1-r4,v 1.1 2011/08/13 15:38:31 nelchael Exp $
+
+name="OpenNTPD"
+command="/usr/sbin/ntpd"
+command_args="${NTPD_OPTS}"
+
+depend() {
+	need net
+	after ntp-client
+	use dns logger
+}
+
+start_pre() {
+	if [ ! -f /etc/ntpd.conf ] ; then
+		eerror "Could not find /etc/ntpd.conf!"
+		return 1
+	fi
+
+	if [ -x /usr/bin/getent ] ; then
+		if [ "`getent passwd ntp | cut -d: -f 6`" != "${NTPD_HOME}" ] ; then
+			eerror "Home directory of ntp needs to be ${NTPD_HOME}"
+			eerror "Please run 'usermod -d ${NTPD_HOME} ntp'"
+			return 1
+		fi
+	fi
+
+	checkpath -d -o 0:0 "${NTPD_HOME}"
+
+	# prepare chroot
+	mkdir -p "${NTPD_HOME}/etc"
+	cp /etc/localtime "${NTPD_HOME}/etc"
+
+	return 0
+}

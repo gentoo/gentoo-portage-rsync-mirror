@@ -1,0 +1,9 @@
+# ChangeLog for dev-db/textsearch_ja
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/textsearch_ja/ChangeLog,v 1.1 2012/07/06 22:45:57 naota Exp $
+
+*textsearch_ja-8.4.2 (06 Jul 2012)
+
+  06 Jul 2012; Naohiro Aota <naota@gentoo.org> +metadata.xml,
+  +textsearch_ja-8.4.2.ebuild:
+  New package dev-db/textsearch_ja. #425038

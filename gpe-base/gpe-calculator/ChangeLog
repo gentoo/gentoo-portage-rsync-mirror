@@ -1,0 +1,11 @@
+# ChangeLog for gpe-base/gpe-calculator
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-calculator/ChangeLog,v 1.1 2009/07/06 19:31:03 miknix Exp $
+
+*gpe-calculator-0.2 (06 Jul 2009)
+
+  06 Jul 2009; Angelo Arrifano <miknix@gentoo.org>
+  +files/gpe-calculator-0.2-makefile-fix.patch, +metadata.xml,
+  +gpe-calculator-0.2.ebuild:
+  Initial commit, imported from GPE overlay and based on #101393 .
+

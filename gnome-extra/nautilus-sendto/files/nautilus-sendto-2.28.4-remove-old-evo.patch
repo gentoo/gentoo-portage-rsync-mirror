@@ -1,0 +1,273 @@
+From 6756a352ce9560a343aa4f31c96ab9247ee20b83 Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Wed, 09 Jun 2010 16:36:38 +0000
+Subject: Remove plugin to use sendto from Evolution
+
+And not the plugin to use evolution-data-server in nautilus-sendto.
+---
+diff --git a/Makefile.am b/Makefile.am
+index a814bb1..be84bf5 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -1,10 +1,4 @@
+-if HAVE_EVOLUTION
+-EVOLUTION_PLUGIN_DIR=evolution
+-endif
+-
+-SUBDIRS = src $(EVOLUTION_PLUGIN_DIR) docs po
+-
+-DIST_SUBDIRS = evolution src docs po
++SUBDIRS = src docs po
+ 
+ DISTCHECK_CONFIGURE_FLAGS = --disable-schemas-install --enable-gtk-doc --with-nautilusdir='$${libdir}/nautilus/extensions-2.0-distcheck'
+ 
+diff --git a/configure.in b/configure.in
+index 214be7c..d7318d9 100644
+--- a/configure.in
++++ b/configure.in
+@@ -81,18 +81,6 @@ fi
+ AC_MSG_NOTICE([installing nautilus plugin in ${ac_with_nautilusdir}])
+ AC_SUBST([NAUTILUS_EXTENSION_DIR],[${ac_with_nautilusdir}])
+ 
+-dnl Get details about evolution
+-
+-PKG_CHECK_MODULES(EVOLUTION, evolution-plugin < 2.27.1,
+-		  enable_evo=yes, enable_evo=no)
+-AM_CONDITIONAL(HAVE_EVOLUTION, test "x$enable_evo" = "xyes")
+-
+-plugindir=`$PKG_CONFIG --variable=plugindir evolution-plugin`
+-AC_SUBST(plugindir)
+-
+-EVO_PLUGIN_RULE=$srcdir/evolution/plugin.mk
+-AC_SUBST_FILE(EVO_PLUGIN_RULE)
+-
+ # The full list of plugins
+ allowed_plugins="bluetooth empathy evolution gajim nautilus-burn pidgin removable-devices upnp"
+ 
+@@ -291,7 +279,6 @@ src/plugins/upnp/Makefile
+ docs/Makefile
+ docs/nautilus-sendto/Makefile
+ docs/nautilus-sendto/version.xml
+-evolution/Makefile
+ po/Makefile.in
+ ])
+ 
+@@ -315,11 +302,5 @@ else
+ 	AC_MSG_NOTICE([   No nautilus-sendto plugins enabled])
+ fi
+ 
+-if test "x$enable_evo" = "xyes"; then
+-	AC_MSG_NOTICE([** Evolution send-to plugin ( < 2.27.1) enabled])
+-else
+-	AC_MSG_NOTICE([   Evolution send-to plugin ( < 2.27.1) disabled])
+-fi
+-
+ echo "                                                       "
+ echo "-------------------------------------------------------"
+diff --git a/evolution/Makefile.am b/evolution/Makefile.am
+deleted file mode 100644
+index a216ed0..0000000
+--- a/evolution/Makefile.am
++++ b/dev/null
+@@ -1,17 +0,0 @@
+-INCLUDES =						\
+-	$(EVOLUTION_CFLAGS)				\
+-	$(WARN_CFLAGS)
+-
+-@EVO_PLUGIN_RULE@
+-
+-plugin_DATA = org-gnome-evolution-send-attachments-to.eplug
+-plugin_LTLIBRARIES = liborg-gnome-evolution-send-attachments-to.la
+-
+-liborg_gnome_evolution_send_attachments_to_la_SOURCES = nautilus-sendto.c
+-liborg_gnome_evolution_send_attachments_to_la_LDFLAGS = -module -avoid-version $(NO_UNDEFINED)
+-liborg_gnome_evolution_send_attachments_to_la_LIBADD = $(EVOLUTION_LIBS)
+-
+-EXTRA_DIST = org-gnome-evolution-send-attachments-to.eplug.xml plugin.mk
+-
+-BUILT_SOURCES = $(plugin_DATA)
+-CLEANFILES = $(BUILT_SOURCES)
+diff --git a/evolution/nautilus-sendto.c b/evolution/nautilus-sendto.c
+deleted file mode 100644
+index 01728ae..0000000
+--- a/evolution/nautilus-sendto.c
++++ b/dev/null
+@@ -1,112 +0,0 @@
+-/*
+- * This program is free software; you can redistribute it and/or
+- * modify it under the terms of the GNU Lesser General Public
+- * License as published by the Free Software Foundation; either
+- * version 2 of the License, or (at your option) version 3.
+- *
+- * This program is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+- * Lesser General Public License for more details.
+- *
+- * You should have received a copy of the GNU Lesser General Public
+- * License along with the program; if not, see <http://www.gnu.org/licenses/>  
+- *
+- *
+- * Authors:
+- *		Johnny Jacob <johnnyjacob@gmail.com>
+- *
+- * Copyright (C) 1999-2008 Novell, Inc. (www.novell.com)
+- *
+- */
+-
+-#include <config.h>
+-
+-#include <glib.h>
+-#include <gtk/gtk.h>
+-#include <glib/gi18n-lib.h>
+-#include <e-util/e-config.h>
+-#include <e-util/e-popup.h>
+-#include <mail/em-popup.h>
+-#include <mail/em-menu.h>
+-#include <mail/em-utils.h>
+-#include <misc/e-attachment.h>
+-
+-static void send_file (EPlugin *ep, EPopupTarget *t, void *data);
+-void org_gnome_evolution_send_file_attachments (EPlugin *ep, EMPopupTargetAttachments *t);
+-void org_gnome_evolution_send_file_part (EPlugin *ep, EMPopupTargetPart *t);
+-
+-static void
+-popup_free (EPopup *ep, GSList *items, void *data)
+-{
+-	g_slist_free (items);
+-}
+-
+-static EPopupItem popup_attachment_items[] = {
+-	{ E_POPUP_BAR, "25.display.00"},
+-	{ E_POPUP_ITEM, "25.display.01", N_("_Send to..."), (EPopupActivateFunc)send_file, NULL, "document-send"}
+-};
+-
+-void org_gnome_evolution_send_file_attachments (EPlugin *ep, EMPopupTargetAttachments *t)
+-{
+-	GSList *menus = NULL;
+-	int len = 0;
+-
+-	g_message ("org_gnome_evolution_send_file_attachments called");
+-
+-	len = g_slist_length(t->attachments);
+-
+-	if (len != 1)
+-		return;
+-
+-	menus = g_slist_prepend (menus, &popup_attachment_items[0]);
+-	menus = g_slist_prepend (menus, &popup_attachment_items[1]);
+-	e_popup_add_items (t->target.popup, menus, GETTEXT_PACKAGE, popup_free, t);
+-}
+-
+-void org_gnome_evolution_send_file_part (EPlugin *ep, EMPopupTargetPart *t)
+-{
+-	GSList *menus = NULL;
+-
+-	g_message ("org_gnome_evolution_send_file_attachments called");
+-
+-	menus = g_slist_prepend (menus, &popup_attachment_items[0]);
+-	menus = g_slist_prepend (menus, &popup_attachment_items[1]);
+-	e_popup_add_items (t->target.popup, menus, GETTEXT_PACKAGE, popup_free, t);
+-}
+-
+-static void
+-send_file (EPlugin *ep, EPopupTarget *t, void *data)
+-{
+-	CamelMimePart *part;
+-	char *path;
+-	EPopupTarget *target = (EPopupTarget *) data;
+-	GPtrArray *argv;
+-	gboolean ret;
+-	GError *err = NULL;
+-
+-	if (target->type == EM_POPUP_TARGET_ATTACHMENTS)
+-		part = ((EAttachment *) ((EMPopupTargetAttachments *) target)->attachments->data)->body;
+-	else
+-		part = ((EMPopupTargetPart *) target)->part;
+-
+-	path = em_utils_temp_save_part (NULL, part, FALSE);
+-	g_message ("saved part as %s", path);
+-
+-	argv = g_ptr_array_new ();
+-	g_ptr_array_add (argv, "nautilus-sendto");
+-	g_ptr_array_add (argv, path);
+-	g_ptr_array_add (argv, NULL);
+-
+-	ret = g_spawn_async (NULL, (gchar **) argv->pdata,
+-			     NULL, G_SPAWN_SEARCH_PATH, NULL, NULL, NULL, &err);
+-	g_ptr_array_free (argv, TRUE);
+-
+-	if (ret == FALSE) {
+-		g_warning ("Couldn't send the attachment: %s", err->message);
+-		g_error_free (err);
+-	}
+-
+-	g_free (path);
+-}
+-
+diff --git a/evolution/org-gnome-evolution-send-attachments-to.eplug.xml b/evolution/org-gnome-evolution-send-attachments-to.eplug.xml
+deleted file mode 100644
+index b6f7f27..0000000
+--- a/evolution/org-gnome-evolution-send-attachments-to.eplug.xml
++++ b/dev/null
+@@ -1,28 +0,0 @@
+-<?xml version="1.0"?>
+-<e-plugin-list>
+-  <!-- the path to the shared library -->
+-  <e-plugin
+-    id="org-gnome-evolution-send-attachments-to"
+-    type="shlib"
+-    location="@PLUGINDIR@/liborg-gnome-evolution-send-attachments-to@SOEXT@"
+-    _name="Send to..."
+-    domain="@GETTEXT_PACKAGE@">
+-    
+-    <author name="Bastien Nocera" email="hadess@hadess.net"/>
+-    <_description>Send files to remote devices, or people</_description>
+-        <!-- Attachment to received e-mail -->
+-	<hook class="org.gnome.evolution.mail.popup:1.0">
+-		<menu id="org.gnome.evolution.mail.formathtmldisplay.popup" target="part" factory="org_gnome_evolution_send_file_part">
+-		</menu>
+-	</hook>
+-	<hook class="org.gnome.evolution.mail.popup:1.0">
+-		<menu id="org.gnome.evolution.mail.attachments.popup" target="attachments" factory="org_gnome_evolution_send_file_attachments">
+-		</menu>
+-	</hook>
+-	<!-- Right-click in the attachment bar when creating a new mail -->
+-	<hook class="org.gnome.evolution.mail.popup:1.0">
+-		<menu id="org.gnome.evolution.mail.composer.attachmentbar.popup" target="attachments" factory="org_gnome_evolution_send_file_attachments">
+-		</menu>
+-	</hook>
+-  </e-plugin>
+-</e-plugin-list>
+diff --git a/evolution/plugin.mk b/evolution/plugin.mk
+deleted file mode 100644
+index a98aaf6..0000000
+--- a/evolution/plugin.mk
++++ b/dev/null
+@@ -1,11 +0,0 @@
+-%.eplug: %.eplug.in
+-	sed -e 's|\@PLUGINDIR\@|$(plugindir)|'		\
+-	-e 's|\@SOEXT\@|$(SOEXT)|'			\
+-	-e 's|\@GETTEXT_PACKAGE\@|$(GETTEXT_PACKAGE)|'	\
+-	-e 's|\@LOCALEDIR\@|$(localedir)|' $< > $@
+-
+-%.eplug.in: %.eplug.xml
+-	LC_ALL=C $(INTLTOOL_MERGE) -x -u /tmp $< $@
+-
+-%.error: %.error.xml
+-	LC_ALL=C $(INTLTOOL_MERGE) -x -u /tmp $< $@
+diff --git a/po/POTFILES.in b/po/POTFILES.in
+index 69ca4ea..a66fef3 100644
+--- a/po/POTFILES.in
++++ b/po/POTFILES.in
+@@ -1,8 +1,6 @@
+ # List of source files containing translatable strings.
+ # Please keep this file sorted alphabetically.
+ nst.schemas.in
+-evolution/nautilus-sendto.c
+-evolution/org-gnome-evolution-send-attachments-to.eplug.xml
+ src/nautilus-nste.c
+ src/nautilus-nste.h
+ src/nautilus-sendto-command.c
+--
+cgit v0.8.3.1

@@ -1,0 +1,35 @@
+# ChangeLog for app-text/zathura-ps
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/ChangeLog,v 1.9 2012/09/21 02:12:49 heroxbd Exp $
+
+  21 Sep 2012; Benda Xu <heroxbd@gentoo.org> zathura-ps-0.2.0.ebuild:
+  trivial modification for prefix support and keyword ~amd64-linux ~x86-linux
+
+  11 Jul 2012; Samuli Suominen <ssuominen@gentoo.org> -zathura-ps-0.1.0.ebuild:
+  old
+
+  11 Jul 2012; Jeff Horelick <jdhore@gentoo.org> zathura-ps-0.2.0.ebuild:
+  marked x86 per bug 425674
+
+  10 Jul 2012; Agostino Sarubbo <ago@gentoo.org> zathura-ps-0.2.0.ebuild:
+  Stable for amd64, wrt bug #425674
+
+*zathura-ps-0.2.0 (15 Jun 2012)
+
+  15 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> +zathura-ps-0.2.0.ebuild:
+  Version bump.
+
+  22 May 2012; Jeff Horelick <jdhore@gentoo.org> zathura-ps-0.1.0.ebuild:
+  marked x86 per bug 414985
+
+  07 May 2012; Agostino Sarubbo <ago@gentoo.org> zathura-ps-0.1.0.ebuild:
+  Stable for amd64, wrt bug #414985
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> zathura-ps-0.1.0.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*zathura-ps-0.1.0 (11 Mar 2012)
+
+  11 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +zathura-ps-0.1.0.ebuild:
+  Initial commit.
+

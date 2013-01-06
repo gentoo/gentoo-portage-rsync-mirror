@@ -1,0 +1,37 @@
+# ChangeLog for dev-php5/ezc-Workflow
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ezc-Workflow/ChangeLog,v 1.1 2011/12/14 22:27:21 mabi Exp $
+
+*ezc-Workflow-1.4.1 (20 May 2010)
+
+  20 May 2010; Peter Volkov <pva@gentoo.org> +ezc-Workflow-1.4.1.ebuild:
+  Version bump, bug #320547
+
+  19 Mar 2008; Markus Ullmann <jokey@gentoo.org> -ezc-Workflow-1.0.1.ebuild:
+  Drop old
+
+*ezc-Workflow-1.1 (13 Jan 2008)
+
+  13 Jan 2008; Markus Ullmann <jokey@gentoo.org> +ezc-Workflow-1.1.ebuild:
+  Add eZ Components 2007.2 from project overlay
+
+  12 Jan 2008; Jakub Moc <jakub@gentoo.org>
+  +ezc-Workflow-1.1.ebuild:
+  Version bump to 2007.2
+
+  08 Oct 2007; Markus Ullmann <jokey@gentoo.org> ezc-Workflow-1.0.1.ebuild:
+  Rekeyword sparc per bug #190787 thanks to Tiago Cunha for digging into it
+
+  31 Aug 2007; Jeroen Roovers <jer@gentoo.org> ezc-Workflow-1.0.1.ebuild:
+  Marked ~hppa (bug #190787).
+
+*ezc-Workflow-1.0.1 (30 Aug 2007)
+
+  30 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +ezc-Workflow-1.0.1.ebuild:
+  Version bump for eZC 2007.1.1
+
+  30 Aug 2007; Jakub Moc <jakub@gentoo.org> +metadata.xml,
+  +ezc-Workflow-1.0.1.ebuild:
+  New ebuild for eZC 2007.1.1
+

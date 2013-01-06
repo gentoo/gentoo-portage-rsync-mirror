@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>desktop-wm</herd>
+<maintainer>
+  <email>lordvan@gentoo.org</email>
+  <name>Thomas Raschbacher</name> 
+</maintainer>
+ <longdescription>WindowManager that arranges the windows in a tree not a list</longdescription>
+</pkgmetadata>

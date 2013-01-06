@@ -1,0 +1,26 @@
+# ChangeLog for games-fps/duke3d-data
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/ChangeLog,v 1.6 2012/01/16 19:14:34 ulm Exp $
+
+  16 Jan 2012; Ulrich Müller <ulm@gentoo.org> duke3d-data-1.0.ebuild:
+  Migrate to cdrom.eclass, bug 398809.
+
+  26 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  duke3d-data-1.0.ebuild:
+  stable x86, bug 309703
+
+  25 Mar 2010; Jeroen Roovers <jer@gentoo.org> duke3d-data-1.0.ebuild:
+  Stable for PPC (bug #309703).
+
+  25 Mar 2010; Jeroen Roovers <jer@gentoo.org> duke3d-data-1.0.ebuild:
+  Stable for HPPA (bug #309703).
+
+  15 Apr 2009; Tristan Heaven <nyhm@gentoo.org> duke3d-data-1.0.ebuild:
+  Allow installation from a binary package without requiring the CD
+
+*duke3d-data-1.0 (20 Jan 2009)
+
+  20 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +duke3d-data-1.0.ebuild:
+  initial commit - ebuild submitted by Brandon Captain via bug #162261
+

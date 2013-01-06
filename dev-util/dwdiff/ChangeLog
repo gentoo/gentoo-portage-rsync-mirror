@@ -1,0 +1,31 @@
+# ChangeLog for dev-util/dwdiff
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwdiff/ChangeLog,v 1.6 2012/06/17 09:34:33 ssuominen Exp $
+
+*dwdiff-2.0.4 (17 Jun 2012)
+
+  17 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> +dwdiff-2.0.4.ebuild:
+  Version bump.
+
+  03 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -dwdiff-1.9.ebuild:
+  old
+
+*dwdiff-2.0.2 (03 Jan 2012)
+
+  03 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +dwdiff-2.0.2.ebuild:
+  Version bump.
+
+  05 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> dwdiff-1.9.ebuild:
+  Bump to EAPI4, drop no longer necessary prepalldocs
+
+*dwdiff-1.9 (05 Jun 2011)
+
+  05 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> -dwdiff-1.8.ebuild,
+  +dwdiff-1.9.ebuild:
+  Version bump, drop old. Mark ~ppc wrt #368759
+
+*dwdiff-1.8 (07 Jul 2010)
+
+  07 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> +dwdiff-1.8.ebuild:
+  Initial commit.
+

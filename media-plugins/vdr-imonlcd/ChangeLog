@@ -1,0 +1,23 @@
+# ChangeLog for media-plugins/vdr-imonlcd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-imonlcd/ChangeLog,v 1.4 2012/04/24 10:18:06 mgorny Exp $
+
+  24 Apr 2012; Michał Górny <mgorny@gentoo.org> vdr-imonlcd-0.0.5-r1.ebuild:
+  Update to use mirror://.
+
+  29 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-imonlcd-0.0.5-r1.ebuild:
+  fixed Description
+
+*vdr-imonlcd-0.0.5-r1 (28 Jan 2011)
+
+  28 Jan 2011; Christian Ruppert <idl0r@gentoo.org> -vdr-imonlcd-0.0.5.ebuild,
+  +vdr-imonlcd-0.0.5-r1.ebuild, files/confd, files/rc-addon.sh:
+  Fix mode/protocol switch.
+
+*vdr-imonlcd-0.0.5 (28 Jan 2011)
+
+  28 Jan 2011; Christian Ruppert <idl0r@gentoo.org> +files/99-imonlcd.rules,
+  +vdr-imonlcd-0.0.5.ebuild, +files/confd, +files/rc-addon.sh, +metadata.xml:
+  Initial commit for vdr-imonlcd-0.0.5.
+

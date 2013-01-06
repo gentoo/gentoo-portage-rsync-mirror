@@ -1,0 +1,11 @@
+--- lib/alexandria/ui/dialogs/new_book_dialog.rb.orig
++++ lib/alexandria/ui/dialogs/new_book_dialog.rb
+@@ -574,7 +574,7 @@
+           log.debug { "update message : #{message}" }
+ 
+           # @parent.appbar.status = message
+-          MainApp.instance.appbar.status = message # HACKish
++          MainApp.instance.ui_manager.set_status_label( message )
+           #false
+         end
+       end

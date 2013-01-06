@@ -1,0 +1,24 @@
+# /etc/conf.d/rngd
+
+# Please see "/usr/sbin/rngd --help" and "man rngd" for more information
+
+# If a single device is preferred, then specify it here, otherwise we will
+# search for suitable devices. TPM is specified via a later option, not this
+# one.
+#DEVICE=
+#TPM_DEVICE=
+
+# Random step (Number of bytes written to random-device at a time):
+STEP=64
+
+# Should TPM be avoided?
+NO_TPM=0
+
+# Fill watermark
+# 0 <= n <= 4096
+WATERMARK=2048
+
+# Bug #292239: Remixing /dev/urandom back into /dev/random is considered a
+# security vulnerability in some cases where not enough entropy is present on
+# systems.
+DO_NOT_REMIX_URANDOM=0

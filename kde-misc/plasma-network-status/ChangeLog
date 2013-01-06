@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/plasma-network-status
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-network-status/ChangeLog,v 1.1 2012/03/16 10:27:00 johu Exp $
+
+*plasma-network-status-0.1.1 (16 Mar 2012)
+
+  16 Mar 2012; Johannes Huber <johu@gentoo.org> +metadata.xml,
+  +plasma-network-status-0.1.1.ebuild:
+  New ebuild wrt bug #407203. Imported from kde overlay and written by Pavlos
+  Ratis <dastergon@gmail.com>.
+

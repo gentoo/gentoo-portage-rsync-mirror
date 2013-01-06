@@ -1,0 +1,22 @@
+# ChangeLog for games-board/cockatrice
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/ChangeLog,v 1.4 2012/11/19 19:14:12 hasufell Exp $
+
+  19 Nov 2012; Julian Ospald <hasufell@gentoo.org> cockatrice-20120702.ebuild,
+  files/cockatrice-20120702-build.patch:
+  improve gamesdirs handling
+
+  17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  cockatrice-20120702.ebuild:
+  x86 stable wrt bug #435884
+
+  03 Oct 2012; Agostino Sarubbo <ago@gentoo.org> cockatrice-20120702.ebuild:
+  Stable for amd64, wrt bug #435884
+
+*cockatrice-20120702 (04 Aug 2012)
+
+  04 Aug 2012; Julian Ospald <hasufell@gentoo.org> +cockatrice-20120702.ebuild,
+  +files/cockatrice-20120702-build.patch,
+  +files/cockatrice-20120702-underlinking.patch, +metadata.xml:
+  initial commit based on ebuild of Alexander Berntsen
+

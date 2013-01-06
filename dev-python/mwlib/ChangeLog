@@ -1,0 +1,89 @@
+# ChangeLog for dev-python/mwlib
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.19 2012/12/31 13:02:18 mgorny Exp $
+
+  31 Dec 2012; Michał Górny <mgorny@gentoo.org> mwlib-0.13.5.ebuild,
+  mwlib-0.13.6.ebuild, mwlib-0.13.7.ebuild, mwlib-0.13.8.ebuild,
+  mwlib-0.14.0.ebuild, mwlib-0.14.1.ebuild:
+  Use virtual/pyparsing.
+
+*mwlib-0.14.1 (30 Oct 2012)
+
+  30 Oct 2012; Patrick Lauer <patrick@gentoo.org> +mwlib-0.14.1.ebuild:
+  Bump
+
+*mwlib-0.14.0 (29 Aug 2012)
+
+  29 Aug 2012; Patrick Lauer <patrick@gentoo.org> +mwlib-0.14.0.ebuild:
+  Bump
+
+*mwlib-0.13.8 (28 Jun 2012)
+
+  28 Jun 2012; Patrick Lauer <patrick@gentoo.org> +mwlib-0.13.8.ebuild:
+  Bump
+
+*mwlib-0.13.7 (19 May 2012)
+
+  19 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +mwlib-0.13.7.ebuild:
+  Version bump, fixes #416479 by Ian Delaney <johneed@hotmail.com>. Thanks to
+  Arfrever for fixing test_odfwriter.py
+
+*mwlib-0.13.6 (19 Apr 2012)
+
+  19 Apr 2012; Patrick Lauer <patrick@gentoo.org> +mwlib-0.13.6.ebuild:
+  Bump
+
+*mwlib-0.13.5 (06 Mar 2012)
+
+  06 Mar 2012; Patrick Lauer <patrick@gentoo.org> +mwlib-0.13.5.ebuild,
+  -mwlib-0.12.13.ebuild, -mwlib-0.12.17.ebuild, -mwlib-0.13.3.ebuild:
+  Bump for #407005
+
+  23 Feb 2012; Patrick Lauer <patrick@gentoo.org> mwlib-0.13.3.ebuild:
+  Restricting python some more
+
+  23 Feb 2012; Patrick Lauer <patrick@gentoo.org> mwlib-0.12.13.ebuild,
+  mwlib-0.12.17.ebuild, mwlib-0.13.3.ebuild:
+  Restricting python
+
+*mwlib-0.13.3 (14 Feb 2012)
+
+  14 Feb 2012; Patrick Lauer <patrick@gentoo.org> +mwlib-0.13.3.ebuild:
+  Bump for #402827
+
+*mwlib-0.12.17 (26 Dec 2011)
+
+  26 Dec 2011; Patrick Lauer <patrick@gentoo.org> +mwlib-0.12.17.ebuild:
+  Bump for #389639
+
+  30 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mwlib-0.12.13.ebuild:
+  Use PyPI mirrors. Fix dependencies.
+
+*mwlib-0.12.13 (20 Jul 2010)
+
+  20 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -mwlib-0.12.12.ebuild, +mwlib-0.12.13.ebuild:
+  Version bump. Fixed dependency on odfpy in setup.py (bug #299740).
+
+  03 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mwlib-0.12.12.ebuild:
+  Use PYTHON_DEPEND instead of NEED_PYTHON.
+
+  12 Jan 2010; Christian Faulhammer <fauli@gentoo.org> mwlib-0.12.12.ebuild:
+  raise twisted dependency, see bug 297725
+
+  12 Jan 2010; Christian Faulhammer <fauli@gentoo.org> mwlib-0.12.12.ebuild:
+  add ~x86, bug 297725
+
+*mwlib-0.12.12 (21 Dec 2009)
+
+  21 Dec 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +mwlib-0.12.12.ebuild:
+  Version bump (bug #294164). Set SUPPORT_PYTHON_ABIS.
+
+*mwlib-0.10.1 (18 Apr 2009)
+
+  18 Apr 2009; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +mwlib-0.10.1.ebuild:
+  Initial import. Ebuild by Richard Ash. Fixes #266163

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=>=dev-lang/mono-2.0
+DESCRIPTION=C# bindings for the Google GData API
+EAPI=3
+HOMEPAGE=http://code.google.com/p/google-gdata/
+KEYWORDS=amd64 x86
+LICENSE=Apache-2.0
+RDEPEND=>=dev-lang/mono-2.0
+RESTRICT=test
+SLOT=0
+SRC_URI=http://google-gdata.googlecode.com/files/libgoogle-data-mono-1.4.0.2.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=6bbc2e5c346b8d125a37356589356f87

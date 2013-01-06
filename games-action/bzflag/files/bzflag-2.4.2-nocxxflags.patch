@@ -1,0 +1,25 @@
+--- configure.ac.old	2012-10-22 13:58:27.000000000 +0200
++++ configure.ac	2012-10-22 14:01:37.000000000 +0200
+@@ -689,13 +689,9 @@
+ 	       else
+ 		 FLAGS="$FLAGS=$host_cpu"
+ 	       fi
+-	       CONF_CFLAGS="$CONF_CFLAGS $FLAGS";
+-	       CONF_CXXFLAGS="$CONF_CXXFLAGS $FLAGS";
+ 	       CONF_CXXFLAGS="$CONF_CXXFLAGS -fsigned-char";;
+ 	     ppc)
+ 	       FLAGS="-mcpu=$host_cpu"
+-	       CONF_CFLAGS="$CONF_CFLAGS $FLAGS";
+-	       CONF_CXXFLAGS="$CONF_CXXFLAGS $FLAGS";;
+ 	esac;;
+      cygwin)
+ 	AC_DEFINE(HALF_RATE_AUDIO, 1, [Half rate Audio])
+@@ -755,8 +751,6 @@
+ else
+     if test "$GCC" = yes ; then
+ 	OPTIMIZE="-fexpensive-optimizations"
+-	CONF_CFLAGS="$CONF_CFLAGS $OPTIMIZE"
+-	CONF_CXXFLAGS="$CONF_CXXFLAGS $OPTIMIZE"
+     fi
+     AC_DEFINE(NDEBUG, 1, [Debugging disabled])
+ fi

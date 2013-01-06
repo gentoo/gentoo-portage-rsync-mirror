@@ -1,0 +1,12 @@
+# ChangeLog for dev-java/pat
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pat/ChangeLog,v 1.2 2012/11/03 13:29:16 ago Exp $
+
+  03 Nov 2012; Agostino Sarubbo <ago@gentoo.org> pat-1.5.3.ebuild:
+  Add ~amd64, wrt bug #440784
+
+*pat-1.5.3 (15 Dec 2007)
+
+  15 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
+  +pat-1.5.3.ebuild:
+  Initial addition as a dependency of app-misc/jbidwatcher. Ebuild written by me.

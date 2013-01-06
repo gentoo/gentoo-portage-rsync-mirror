@@ -1,0 +1,22 @@
+# ChangeLog for dev-ruby/coffee-rails
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-rails/ChangeLog,v 1.4 2012/05/17 10:53:55 tomka Exp $
+
+  17 May 2012; Thomas Kahle <tomka@gentoo.org> coffee-rails-3.1.1.ebuild,
+  coffee-rails-3.2.2.ebuild:
+  marked ~x86 per bug 396547
+
+*coffee-rails-3.2.2 (05 Apr 2012)
+
+  05 Apr 2012; Hans de Graaff <graaff@gentoo.org> +coffee-rails-3.2.2.ebuild:
+  Version bump.
+
+  01 Mar 2012; Fabian Groffen <grobian@gentoo.org> coffee-rails-3.1.1.ebuild:
+  Marked ~x64-macos
+
+*coffee-rails-3.1.1 (30 Dec 2011)
+
+  30 Dec 2011; Hans de Graaff <graaff@gentoo.org> +coffee-rails-3.1.1.ebuild,
+  +metadata.xml:
+  Initial import. Dependency of the default Rails 3.1 asset pipeline.
+

@@ -1,0 +1,10 @@
+# ChangeLog for dev-lua/lgi
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/ChangeLog,v 1.1 2012/11/27 20:20:48 robbat2 Exp $
+
+*lgi-0.6.2 (27 Nov 2012)
+
+  27 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> +lgi-0.6.2.ebuild,
+  +metadata.xml:
+  Initial commit. Ebuild by Robin H Johnson <robbat2@gentoo.org>, based on
+  submission by Arvydas Sidorenko <asido4@gmail.com>.

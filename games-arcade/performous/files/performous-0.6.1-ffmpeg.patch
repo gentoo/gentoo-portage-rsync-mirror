@@ -1,0 +1,13 @@
+--- game/ffmpeg.cc.old	2012-02-19 09:01:01.086108323 +0100
++++ game/ffmpeg.cc	2012-02-19 09:02:27.157984673 +0100
+@@ -60,8 +60,8 @@
+ 	for (unsigned int i=0; i<pFormatCtx->nb_streams; i++) {
+ 		AVCodecContext* cc = pFormatCtx->streams[i]->codec;
+ 		cc->workaround_bugs = FF_BUG_AUTODETECT;
+-		if (videoStream == -1 && cc->codec_type==CODEC_TYPE_VIDEO) videoStream = i;
+-		if (audioStream == -1 && cc->codec_type==CODEC_TYPE_AUDIO) audioStream = i;
++		if (videoStream == -1 && cc->codec_type==AVMEDIA_TYPE_VIDEO) videoStream = i;
++		if (audioStream == -1 && cc->codec_type==AVMEDIA_TYPE_AUDIO) audioStream = i;
+ 	}
+ 	if (videoStream == -1 && decodeVideo) throw std::runtime_error("No video stream found");
+ 	if (audioStream == -1 && decodeAudio) throw std::runtime_error("No audio stream found");

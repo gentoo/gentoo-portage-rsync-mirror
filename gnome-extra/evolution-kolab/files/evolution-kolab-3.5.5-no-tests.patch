@@ -1,0 +1,51 @@
+From f0e43e8a098da3291d5870f55688faf7865ab775 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Mon, 13 Aug 2012 01:40:01 -0400
+Subject: [PATCH] Disable test suite
+
+---
+ configure.ac                  |    1 -
+ src/Makefile.am               |    3 +--
+ src/libekolabconv/Makefile.am |    2 +-
+ 3 files changed, 2 insertions(+), 4 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 2f8f72b..bdb4a2e 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -76,7 +76,6 @@ PKG_CHECK_MODULES(GTK, gtk+-3.0)
+ PKG_CHECK_MODULES(SOUP, libsoup-2.4 libsoup-gnome-2.4)
+ PKG_CHECK_MODULES(CURL, libcurl)
+ PKG_CHECK_MODULES(ICAL, libical)
+-PKG_CHECK_MODULES(GMIME, gmime-2.4,,[PKG_CHECK_MODULES(GMIME, gmime-2.6)]) dnl TODO make tests optional
+ PKG_CHECK_MODULES(EVOLUTION, evolution-mail-3.0 libebook-1.2 libecal-1.2)
+ 
+ dnl ***********
+diff --git a/src/Makefile.am b/src/Makefile.am
+index 2bf873e..5c7e7c4 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -9,8 +9,7 @@ SUBDIRS =		\
+ 	calendar	\
+ 	collection	\
+ 	configuration	\
+-	eplugin		\
+-	tests
++	eplugin
+ 
+ 
+ AM_CPPFLAGS = 					\
+diff --git a/src/libekolabconv/Makefile.am b/src/libekolabconv/Makefile.am
+index 2de4832..dbb6411 100644
+--- a/src/libekolabconv/Makefile.am
++++ b/src/libekolabconv/Makefile.am
+@@ -1,5 +1,5 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-SUBDIRS = main test
++SUBDIRS = main
+ 
+ -include $(top_srcdir)/git.mk
+-- 
+1.7.8.6
+

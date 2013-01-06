@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for LeechCraft plugins providing UI for search plugins.
+EAPI=4
+RDEPEND=net-misc/leechcraft-summary
+SLOT=0
+_md5_=8ca35ed4d39b5450a37fe730e29d1253

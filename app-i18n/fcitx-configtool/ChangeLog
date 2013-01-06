@@ -1,0 +1,67 @@
+# ChangeLog for app-i18n/fcitx-configtool
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/ChangeLog,v 1.14 2012/10/29 06:59:12 yngwin Exp $
+
+  29 Oct 2012; Ben de Groot <yngwin@gentoo.org> -fcitx-configtool-0.1.4.ebuild,
+  -fcitx-configtool-0.4.4.ebuild:
+  Remove old
+
+*fcitx-configtool-0.4.4-r1 (19 Jul 2012)
+
+  19 Jul 2012; Ben de Groot <yngwin@gentoo.org>
+  +fcitx-configtool-0.4.4-r1.ebuild:
+  Revbump to make it work with fcitx-4.2.5. Upgrade to EAPI=4. Add REQUIRED_USE.
+
+*fcitx-configtool-0.4.4 (07 Jun 2012)
+
+  07 Jun 2012; Mu Qiao <qiaomuf@gentoo.org> +fcitx-configtool-0.4.4.ebuild:
+  Version bump for fcitx-configtool-0.4.4
+
+  01 Jun 2012; Zac Medico <zmedico@gentoo.org> fcitx-configtool-0.2.0.ebuild:
+  inherit eutils for epatch
+
+*fcitx-configtool-0.4.3 (15 May 2012)
+
+  15 May 2012; Mu Qiao <qiaomuf@gentoo.org> +fcitx-configtool-0.4.3.ebuild:
+  Version bump for fcitx-configtool-0.4.3
+
+  03 May 2012; Jeff Horelick <jdhore@gentoo.org> fcitx-configtool-0.1.4.ebuild,
+  fcitx-configtool-0.2.0.ebuild, fcitx-configtool-0.4.1.ebuild,
+  fcitx-configtool-0.4.2.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*fcitx-configtool-0.4.2 (23 Apr 2012)
+
+  23 Apr 2012; Mu Qiao <qiaomuf@gentoo.org> +fcitx-configtool-0.4.2.ebuild:
+  Version bump for fcitx-configtool-0.4.2
+
+*fcitx-configtool-0.4.1 (13 Mar 2012)
+
+  13 Mar 2012; Mu Qiao <qiaomuf@gentoo.org> -fcitx-configtool-0.3.1.ebuild,
+  +fcitx-configtool-0.4.1.ebuild:
+  Version bump and remove old version
+
+*fcitx-configtool-0.4.0 (20 Feb 2012)
+
+  20 Feb 2012; Mu Qiao <qiaomuf@gentoo.org> +fcitx-configtool-0.4.0.ebuild:
+  Version bump
+
+*fcitx-configtool-0.3.1 (02 Nov 2011)
+
+  02 Nov 2011; Mu Qiao <qiaomuf@gentoo.org> +fcitx-configtool-0.3.1.ebuild:
+  Version bump for fcitx-configtool-0.3.1
+
+  02 Sep 2011; Mu Qiao <qiaomuf@gentoo.org> fcitx-configtool-0.2.0.ebuild:
+  Add slot dependency for libunique
+
+*fcitx-configtool-0.2.0 (18 Dec 2010)
+
+  18 Dec 2010; Mu Qiao <qiaomuf@gentoo.org> +fcitx-configtool-0.2.0.ebuild,
+  +files/fcitx-configtool-0.2.0-fix-gtk.patch:
+  Version bumped. Thanks for Havanna's help.
+
+*fcitx-configtool-0.1.4 (28 Nov 2010)
+
+  28 Nov 2010; <qiaomuf@gentoo.org> +fcitx-configtool-0.1.4.ebuild,
+  +metadata.xml:
+  Initial commit.

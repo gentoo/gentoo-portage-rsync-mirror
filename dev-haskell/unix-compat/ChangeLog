@@ -1,0 +1,46 @@
+# ChangeLog for dev-haskell/unix-compat
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unix-compat/ChangeLog,v 1.10 2012/12/23 20:05:05 slyfox Exp $
+
+*unix-compat-0.4.1.0 (23 Dec 2012)
+
+  23 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +unix-compat-0.4.1.0.ebuild:
+  Version bump.
+
+  10 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  unix-compat-0.3.0.1.ebuild:
+  stable on alpha/ia64/sparc (bug #421351)
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> unix-compat-0.3.0.1.ebuild:
+  Stable for ppc64, wrt bug #421351
+
+  07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> unix-compat-0.3.0.1.ebuild:
+  Stable for ppc, wrt bug #421351
+
+*unix-compat-0.4.0.0 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> +unix-compat-0.4.0.0.ebuild:
+  Bump unix-compat to 0.4.0.0
+
+  25 Sep 2012; Andreas Schuerch <nativemad@gentoo.org>
+  unix-compat-0.3.0.1.ebuild:
+  x86 stable, see bug 421351
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  unix-compat-0.3.0.1.ebuild:
+  move dev-haskell/unix-compat/unix-compat-0.3.0.1.ebuild ebuild to
+  mirror://hackage
+
+  07 Sep 2012; Agostino Sarubbo <ago@gentoo.org> unix-compat-0.3.0.1.ebuild:
+  Stable for amd64, wrt bug #421351
+
+  09 Aug 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  unix-compat-0.3.0.1.ebuild:
+  Keyworded ~alpha/~ia64/~ppc/~ppc64/~sparc for darcs-2.8
+
+*unix-compat-0.3.0.1 (05 May 2012)
+
+  05 May 2012; Mark Wright <gienah@gentoo.org> +unix-compat-0.3.0.1.ebuild,
+  +metadata.xml:
+  Add unix-compat for darcs-2.8.0 tests

@@ -1,0 +1,13 @@
+--- usr/bin/SpiderOak.orig	2012-08-15 17:03:09.697548990 +0200
++++ usr/bin/SpiderOak	2012-08-15 17:03:54.637356071 +0200
+@@ -1,8 +1,8 @@
+ #!/bin/sh
+ 
+-LD_LIBRARY_PATH="/usr/lib/SpiderOak:$LD_LIBRARY_PATH"
++LD_LIBRARY_PATH="/opt/SpiderOak:$LD_LIBRARY_PATH"
+ export LD_LIBRARY_PATH
+ QT_PLUGIN_PATH= ; export QT_PLUGIN_PATH
+ SpiderOak_EXEC_SCRIPT=$(cd `dirname $0` ; pwd)/SpiderOak
+ export SpiderOak_EXEC_SCRIPT
+-exec "/usr/lib/SpiderOak/SpiderOak" "$@"
++exec "/opt/SpiderOak/SpiderOak" "$@"

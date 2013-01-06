@@ -1,0 +1,23 @@
+# ChangeLog for dev-perl/XML-Fast
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Fast/ChangeLog,v 1.5 2012/07/04 06:22:40 jdhore Exp $
+
+  04 Jul 2012; Jeff Horelick <jdhore@gentoo.org> XML-Fast-0.110.0.ebuild:
+  marked x86 per bug 422473
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  20 Jun 2012; Julian Ospald <hasufell@gentoo.org> XML-Fast-0.110.0.ebuild:
+  stable for amd64 wrt bug #422473
+
+*XML-Fast-0.110.0 (03 Apr 2012)
+
+  03 Apr 2012; Torsten Veller <tove@gentoo.org> -XML-Fast-0.11.ebuild,
+  +XML-Fast-0.110.0.ebuild, metadata.xml:
+  Change version scheme. Add remote-id to metadata.xml
+
+*XML-Fast-0.11 (03 Apr 2012)
+
+  03 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> +XML-Fast-0.11.ebuild:
+  Initial commit wrt #410507 by Julian Ospald

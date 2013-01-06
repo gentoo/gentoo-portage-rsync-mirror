@@ -1,0 +1,82 @@
+# ChangeLog for dev-haskell/cabal-install
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.15 2012/12/06 22:54:57 slyfox Exp $
+
+  06 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  cabal-install-0.10.2-r2.ebuild, cabal-install-0.14.0.ebuild,
+  cabal-install-1.16.0.2.ebuild:
+  Get rid of 'dev-haskell/time' depend as it's a ghc's core library.
+
+*cabal-install-1.16.0.2 (18 Nov 2012)
+
+  18 Nov 2012; Mark Wright <gienah@gentoo.org> +cabal-install-1.16.0.2.ebuild:
+  Bump cabal-install to 1.16.0.2
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  cabal-install-0.10.2-r2.ebuild, cabal-install-0.14.0.ebuild:
+  move dev-haskell/cabal-install/cabal-install-0.14.0.ebuild ebuild to
+  mirror://hackage
+
+*cabal-install-0.14.0 (17 Apr 2012)
+
+  17 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +cabal-install-0.14.0.ebuild, -cabal-install-0.13.3.ebuild:
+  Version bump. Removed snapshot version.
+
+  03 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  cabal-install-0.10.2-r2.ebuild, cabal-install-0.13.3.ebuild:
+  Added missing 'dev-haskell/random' (diagnosed by ARJANEN Loïc Jean David).
+
+*cabal-install-0.10.2-r2 (20 Mar 2012)
+
+  20 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +cabal-install-0.10.2-r2.ebuild, +files/cabal-install-0.10-ghc-7.2.patch,
+  -cabal-install-0.10.2-r1.ebuild, -cabal-install-0.8.2.ebuild,
+  cabal-install-0.13.3.ebuild:
+  Migrated to bash-completion-r1 eclass. Fixed build failure against ghc-7.2.
+  Removed old.
+
+*cabal-install-0.13.3 (10 Mar 2012)
+
+  10 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +cabal-install-0.13.3.ebuild, +files/cabal-install-0.13.3-nopref.patch:
+  Version bump.
+
+*cabal-install-0.10.2-r1 (01 Aug 2011)
+
+  01 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +cabal-install-0.10.2-r1.ebuild:
+  Version bump.
+
+  05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  -cabal-install-0.6.2.ebuild, -cabal-install-0.6.4.ebuild,
+  -cabal-install-0.8.0.ebuild:
+  Removed old.
+
+*cabal-install-0.8.2 (05 Jun 2011)
+
+  05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +cabal-install-0.8.2.ebuild, +files/cabal-install-0.8-nopref.patch,
+  metadata.xml:
+  Version bump.
+
+  02 Oct 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  cabal-install-0.8.0.ebuild:
+  Marked ~alpha and ~ia64
+
+  16 Jun 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  cabal-install-0.6.2.ebuild, cabal-install-0.6.4.ebuild:
+  Remove unneded dep dev-haskell/filepath. See bug #324411.
+
+*cabal-install-0.8.0 (26 Jan 2010)
+
+  26 Jan 2010; <kolmodin@gentoo.org> +cabal-install-0.8.0.ebuild:
+  Version bump.
+
+*cabal-install-0.6.4 (16 Dec 2009)
+
+  16 Dec 2009; <kolmodin@gentoo.org> +cabal-install-0.6.4.ebuild:
+  Version bump.
+
+  19 Apr 2009; Lennart Kolmodin <kolmodin@gentoo.org> ChangeLog:
+  Initial version.

@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Thread-Queue
+KEYWORDS=~amd64 ~x86
+RDEPEND=|| ( =dev-lang/perl-5.16* =dev-lang/perl-5.14* ~perl-core/Thread-Queue-2.120.0 )
+SLOT=0
+_md5_=bf2ce8b2c82c3ff21d4a966122a92fde

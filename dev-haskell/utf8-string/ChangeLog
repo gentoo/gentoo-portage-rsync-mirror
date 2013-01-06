@@ -1,0 +1,72 @@
+# ChangeLog for dev-haskell/utf8-string
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/utf8-string/ChangeLog,v 1.17 2012/09/12 15:29:18 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> utf8-string-0.3.6.ebuild,
+  utf8-string-0.3.7.ebuild:
+  move dev-haskell/utf8-string/utf8-string-0.3.6.ebuild ebuild to
+  mirror://hackage
+
+  05 May 2012; Sergei Trofimovich <slyfox@gentoo.org> utf8-string-0.3.7.ebuild:
+  alpha/ia64/ppc64/sparc stable (bug #404641)
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> utf8-string-0.3.7.ebuild:
+  Marking utf8-string-0.3.7 ppc for bug 404643
+
+  05 Apr 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  utf8-string-0.3.7.ebuild:
+  x86 stable wrt bug #404643
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> utf8-string-0.3.7.ebuild:
+  Stable for amd64, wrt bug #404643
+
+*utf8-string-0.3.7 (04 Dec 2011)
+
+  04 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +utf8-string-0.3.7.ebuild:
+  Version bump.
+
+  10 Apr 2011; Fabian Groffen <grobian@gentoo.org> utf8-string-0.3.6.ebuild:
+  Marked ~x86-macos
+
+  25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  utf8-string-0.3.6.ebuild:
+  ppc/ppc64 stable wrt #339580
+
+  19 Oct 2010; Thomas Kahle <tomka@gentoo.org> utf8-string-0.3.6.ebuild:
+  x86 stable per bug 339580
+
+  16 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  utf8-string-0.3.6.ebuild:
+  Stable on amd64 wrt bug #339580
+
+  20 Jul 2010; Joseph Jezak <josejx@gentoo.org> utf8-string-0.3.6.ebuild:
+  Marked ~ppc.
+
+  10 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  utf8-string-0.3.6.ebuild:
+  marked ~ia64
+
+  08 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org>
+  utf8-string-0.3.6.ebuild:
+  ~alpha keyworded
+
+  01 Apr 2010; Fabian Groffen <grobian@gentoo.org> utf8-string-0.3.6.ebuild:
+  Marked ~ppc-macos
+
+*utf8-string-0.3.6 (28 Mar 2010)
+
+  28 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  -utf8-string-0.3.5.ebuild, +utf8-string-0.3.6.ebuild:
+  Version bump.
+
+  28 Mar 2010; Lennart Kolmodin <kolmodin@gentoo.org>
+  utf8-string-0.3.5.ebuild:
+  Added ~ppc64 keyword, tested by trofi.
+
+*utf8-string-0.3.5 (27 Oct 2009)
+
+  27 Oct 2009; <kolmodin@gentoo.org> +utf8-string-0.3.5.ebuild,
+  +metadata.xml:
+  Initial version of utf8-string, a UTF8 layer for IO and Strings for
+  Haskell.

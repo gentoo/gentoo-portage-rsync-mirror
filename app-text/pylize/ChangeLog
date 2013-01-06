@@ -1,0 +1,45 @@
+# ChangeLog for app-text/pylize
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.13 2010/03/29 20:50:03 arfrever Exp $
+
+  29 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pylize-1.3b.ebuild:
+  Fix collision with dev-python/docutils (bug #247424). Set Python 2 as
+  active version of Python.
+
+  17 Jan 2010; Christian Faulhammer <fauli@gentoo.org> pylize-1.3b.ebuild:
+  stable x86, bug 299383
+
+  14 Jan 2010; Brent Baude <ranger@gentoo.org> pylize-1.3b.ebuild:
+  Marking pylize-1.3b ppc for bug 299383
+
+  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+*pylize-1.3b (18 Dec 2005)
+
+  18 Dec 2005; Lukasz Strzygowski <lucass@gentoo.org> metadata.xml,
+  +pylize-1.3b.ebuild:
+  Cleanup and version bump. Added description to metadata.
+
+  16 Jul 2005; Joseph Jezak <josejx@gentoo.org> pylize-1.1b.ebuild:
+  Marked ppc stable for bug #99218.
+
+  31 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  pylize-1.1b.ebuild:
+  mark ~ppc, install README file
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> pylize-1.1b.ebuild:
+  dev-python/Imaging renamed to dev-python/imaging.
+
+  07 Jul 2003; Alastair Tse <liquidx@gentoo.org> pylize-1.1b.ebuild:
+  about time we bumped to stable
+
+*pylize-1.1b (08 Mar 2003)
+
+  08 Mar 2003; Alastair Tse <liquidx@gentoo.org> pylize-1.1b.ebuild:
+  intial import. bug #10655.
+

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare setup test
+DEPEND=>=dev-libs/boost-1.41.0 dev-libs/openssl[-bindist] logrotate? ( app-admin/logrotate ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx] >=app-shells/bash-4.1
+DESCRIPTION=Original Bitcoin crypto-currency wallet for automated services
+EAPI=4
+HOMEPAGE=http://bitcoin.org/
+IUSE=+eligius examples ipv6 logrotate upnp
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=MIT ISC GPL-2
+RDEPEND=>=dev-libs/boost-1.41.0 dev-libs/openssl[-bindist] logrotate? ( app-admin/logrotate ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx]
+SLOT=0
+SRC_URI=http://gitorious.org/bitcoin/bitcoind-stable/archive-tarball/v0.7.2 -> bitcoin-v0.7.2.tgz eligius? ( http://luke.dashjr.org/programs/bitcoin/files/bitcoind/eligius/sendfee/0.7.1-eligius_sendfee.patch.xz )
+_eclasses_=db-use	2f5d6a2718559b90a51648d8ff58be83	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=ffb2cf6936b7cb58fc0e81481b270c72

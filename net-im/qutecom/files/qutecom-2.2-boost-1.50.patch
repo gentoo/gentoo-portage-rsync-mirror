@@ -1,0 +1,23 @@
+diff -ur a/libs/owutil/thread/src/Thread.cpp b/libs/owutil/thread/src/Thread.cpp
+--- a/libs/owutil/thread/src/Thread.cpp	2011-02-10 11:03:43.000000000 +0100
++++ b/libs/owutil/thread/src/Thread.cpp	2012-10-03 14:58:00.000000000 +0200
+@@ -24,6 +24,7 @@
+ #include <cutil/global.h>
+ #include <util/SafeDelete.h>
+ 
++#include <boost/version.hpp>
+ #include <boost/thread/thread.hpp>
+ #include <boost/thread/xtime.hpp>
+ 
+@@ -105,7 +106,11 @@
+ 	}
+ 
+ 	boost::xtime xt;
++#if BOOST_VERSION >= 105000
++	boost::xtime_get(&xt, boost::TIME_UTC_);
++#else
+ 	boost::xtime_get(&xt, boost::TIME_UTC);
++#endif /* BOOST_VERSION >= 105000 */
+ 	xt.sec += seconds;
+ 	boost::thread::sleep(xt);
+ }

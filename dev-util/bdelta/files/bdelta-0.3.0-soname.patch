@@ -1,0 +1,24 @@
+Gentoo-bug: https://bugs.gentoo.org/show_bug.cgi?id=436990
+Reported-by: lya Gordeev
+
+Assign simple soname to library.
+diff --git a/src/Makefile b/src/Makefile
+index 18a28e8..1b16203 100644
+--- a/src/Makefile
++++ b/src/Makefile
+@@ -3,13 +3,14 @@ PREFIX   ?= /usr
+ BINDIR   ?= $(PREFIX)/bin
+ LIBDIR   ?= ${PREFIX}/lib
+ CXXFLAGS += -O2
++DYLIB_LDFLAGS ?= -Wl,-soname,libbdelta.so
+ 
+ ALL_TARGETS = bpatch libbdelta.so bdelta
+ 
+ all: $(ALL_TARGETS)
+ 
+ libbdelta.so: libbdelta.cpp compatibility.h checksum.h file.h
+-	$(CXX) -shared -fPIC $(CXXFLAGS) $(LDFLAGS) $< -o $@
++	$(CXX) -shared -fPIC $(CXXFLAGS) $(LDFLAGS) $(DYLIB_LDFLAGS) $< -o $@
+ 
+ bdelta: bdelta.cpp bdelta.h compatibility.h file.h libbdelta.so
+ 	$(CXX) $< -o $@ $(CXXFLAGS) $(LDFLAGS) -L. -lbdelta

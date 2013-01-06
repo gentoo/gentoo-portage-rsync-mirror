@@ -1,0 +1,12 @@
+Index: mysql-workbench-gpl-5.2.44-src/modules/db.mysql.sqlparser/Makefile.am
+===================================================================
+--- mysql-workbench-gpl-5.2.44-src.orig/modules/db.mysql.sqlparser/Makefile.am
++++ mysql-workbench-gpl-5.2.44-src/modules/db.mysql.sqlparser/Makefile.am
+@@ -64,6 +64,7 @@ db_mysql_sqlparser_grt_la_SOURCES=\
+ 	$(top_srcdir)/library/sql-parser/source/myx_statement_parser.cpp\
+ 	$(top_srcdir)/library/sql-parser/source/myx_unicode_scanner.cpp\
+ 	$(top_srcdir)/library/sql-parser/source/sql_parser_symbols.cpp\
++	$(top_srcdir)/library/sql-parser/source/my_lib.cpp\
+ 	$(top_srcdir)/library/sql-parser/source/my_messnc.cpp\
+ 	$(top_srcdir)/library/sql-parser/source/my_static.cpp\
+ 	$(top_srcdir)/library/sql-parser/source/my_strtoll10.cpp\

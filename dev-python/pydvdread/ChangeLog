@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pydvdread
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydvdread/ChangeLog,v 1.1 2012/12/31 08:30:05 vapier Exp $
+
+*pydvdread-1.0 (31 Dec 2012)
+
+  31 Dec 2012; Mike Frysinger <vapier@gentoo.org>
+  +files/pydvdread-1.0-api-update.patch, +files/pydvdread-1.0-py3k.patch,
+  +metadata.xml, +pydvdread-1.0.ebuild:
+  Initial ebuild by me.

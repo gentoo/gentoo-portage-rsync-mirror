@@ -1,0 +1,12 @@
+diff -Nru gnokii-0.6.27.orig/xgnokii/xgnokii.desktop.in gnokii-0.6.27/xgnokii/xgnokii.desktop.in
+--- gnokii-0.6.27.orig/xgnokii/xgnokii.desktop.in	2008-10-05 10:14:32.000000000 +0000
++++ gnokii-0.6.27/xgnokii/xgnokii.desktop.in	2009-01-11 17:11:02.000000000 +0000
+@@ -2,7 +2,7 @@
+ _Name=Xgnokii
+ _GenericName=Mobile Phone Suite
+ _Comment=Manage your mobile phone
+-Icon=cellphone
++Icon=xgnokii
+ Exec=xgnokii
+ Terminal=false
+ Type=Application

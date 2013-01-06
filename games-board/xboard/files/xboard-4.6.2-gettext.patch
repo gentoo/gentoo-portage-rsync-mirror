@@ -1,0 +1,14 @@
+xboard-4.6.0 bundles files from a different version of gettext than it claims to in configure.ac
+Bug 418267: https://bugs.gentoo.org/show_bug.cgi?id=418267
+
+--- configure.ac.orig
++++ configure.ac
+@@ -76,7 +76,7 @@
+ AC_PROG_INSTALL
+ 
+ dnl| add gettext support
+-AM_GNU_GETTEXT_VERSION(0.17)
++AM_GNU_GETTEXT_VERSION(0.18)
+ AM_GNU_GETTEXT([external])
+ 
+ AC_CHECK_PROGS(RSH, remsh rsh, rsh)

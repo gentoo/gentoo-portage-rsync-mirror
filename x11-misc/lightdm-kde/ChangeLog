@@ -1,0 +1,31 @@
+# ChangeLog for x11-misc/lightdm-kde
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-kde/ChangeLog,v 1.5 2012/12/26 14:32:09 kensington Exp $
+
+*lightdm-kde-0.3.1 (26 Dec 2012)
+
+  26 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  +lightdm-kde-0.3.1.ebuild:
+  Version bump, wrt bug #447824.
+
+  20 Dec 2012; Michael Palimaka <kensington@gentoo.org>
+  -lightdm-kde-0.2.1.ebuild:
+  Remove old.
+
+*lightdm-kde-0.3.0 (20 Aug 2012)
+
+  20 Aug 2012; Johannes Huber <johu@gentoo.org> +lightdm-kde-0.3.0.ebuild,
+  -lightdm-kde-0.1.1.ebuild:
+  Version bump.
+
+*lightdm-kde-0.2.1 (22 Jul 2012)
+
+  22 Jul 2012; Johannes Huber <johu@gentoo.org> +lightdm-kde-0.2.1.ebuild:
+  Version bump.
+
+*lightdm-kde-0.1.1 (02 Jun 2012)
+
+  02 Jun 2012; Johannes Huber <johu@gentoo.org> +lightdm-kde-0.1.1.ebuild,
+  +metadata.xml:
+  Initial commit from kde overlay. First version by dagger. Additions by yngwin
+  and me.

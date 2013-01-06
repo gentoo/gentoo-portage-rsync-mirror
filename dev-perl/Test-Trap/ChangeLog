@@ -1,0 +1,36 @@
+# ChangeLog for dev-perl/Test-Trap
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Trap/ChangeLog,v 1.9 2012/12/25 16:34:52 ago Exp $
+
+  25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> Test-Trap-0.2.2.ebuild:
+  Stable for x86, wrt bug #447672
+
+  25 Dec 2012; Agostino Sarubbo <ago@gentoo.org> Test-Trap-0.2.2.ebuild:
+  Stable for amd64, wrt bug #447672
+
+  29 Jul 2012; Torsten Veller <tove@gentoo.org> -Test-Trap-0.2.1.ebuild:
+  Cleanup
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  22 Apr 2012; Torsten Veller <tove@gentoo.org> Test-Trap-0.2.2.ebuild:
+  dev-perl/Test-Tester is only used for tests
+
+*Test-Trap-0.2.2 (06 Mar 2012)
+
+  06 Mar 2012; Justin Lecher <jlec@gentoo.org> +Test-Trap-0.2.2.ebuild,
+  metadata.xml:
+  Version Bump
+
+  01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Add missing cpan remote-id tags in metadata.xml (#406287)
+
+  25 Sep 2011; Torsten Veller <tove@gentoo.org> Test-Trap-0.2.1.ebuild:
+  Set MODULE_VERSION and drop MY_P, SRC_URI, S
+
+*Test-Trap-0.2.1 (20 Nov 2010)
+
+  20 Nov 2010; Justin Lecher <jlec@gentoo.org> +Test-Trap-0.2.1.ebuild,
+  +metadata.xml:
+  Initial commit

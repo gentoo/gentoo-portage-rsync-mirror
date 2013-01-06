@@ -1,0 +1,13 @@
+http://bugs.gentoo.org/126080
+
+--- src/Makefile
++++ src/Makefile
+@@ -220,7 +220,7 @@
+ # build targets
+ # -----------------------------------------------------------------------------
+ 
+-all: libgame_dir game_em_dir game_sp_dir $(PROGNAME)
++all: $(PROGNAME)
+ 
+ $(PROGNAME): $(RNDLIBS) $(TIMESTAMP_FILE) $(OBJS) $(ICON)
+ 	$(CC) $(PROFILING) $(OBJS) $(ICON) $(RNDLIBS) $(LDFLAGS) -o $(PROGNAME)

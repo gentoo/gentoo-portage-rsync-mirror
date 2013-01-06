@@ -1,0 +1,11 @@
+--- file.h
++++ file.h
+@@ -11,6 +11,8 @@
+  *
+  * Author: John Whitney <jjw@deltup.org>
+  */
++#include <cstring>
++#include <cstdlib>
+ 
+ class IStream {
+ public:

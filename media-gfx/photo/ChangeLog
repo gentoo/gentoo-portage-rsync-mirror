@@ -1,0 +1,15 @@
+# ChangeLog for media-gfx/photo
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photo/ChangeLog,v 1.2 2012/10/15 07:28:30 yngwin Exp $
+
+*photo-0.8 (15 Oct 2012)
+
+  15 Oct 2012; Ben de Groot <yngwin@gentoo.org> +photo-0.8.ebuild:
+  Version bump. Updated homepage and src_uri, bug #438440.
+
+*photo-0.7.1.1 (11 May 2012)
+
+  11 May 2012; Ben de Groot <yngwin@gentoo.org>
+  +files/photo-0.7.1.1-install-desktop.patch, +metadata.xml,
+  +photo-0.7.1.1.ebuild:
+  Initial import from qt overlay

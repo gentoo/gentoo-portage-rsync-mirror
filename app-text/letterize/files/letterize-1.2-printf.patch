@@ -1,0 +1,13 @@
+diff -ur letterize-1.2.orig/letterize.c letterize-1.2/letterize.c
+--- letterize-1.2.orig/letterize.c	1994-10-25 04:29:21.000000000 +0200
++++ letterize-1.2/letterize.c	2008-05-24 13:54:18.000000000 +0300
+@@ -18,6 +18,9 @@
+ 
+ 		The table is 30 percent populated.
+ */
++
++#include <stdio.h>
++
+ long obvtab[27][27] =
+ {
+     {	0X00100001, 0X00040000, 0X00040000, 0X00009000, 0X00808020, 0X00140000, 

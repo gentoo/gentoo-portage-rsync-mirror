@@ -1,0 +1,14 @@
+# ChangeLog for dev-java/jcommander
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommander/ChangeLog,v 1.2 2012/12/31 02:37:45 flameeyes Exp $
+
+*jcommander-1.30 (31 Dec 2012)
+
+  31 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> +jcommander-1.30.ebuild:
+  Version bump.
+
+*jcommander-1.29 (10 Aug 2012)
+
+  10 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> +jcommander-1.29.ebuild,
+  +metadata.xml:
+  Initial import of jcommander required for jmx2munin.

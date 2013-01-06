@@ -1,0 +1,29 @@
+# ChangeLog for dev-lang/nqc
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.21 2012/08/21 18:33:20 hasufell Exp $
+
+  21 Aug 2012; Julian Ospald <hasufell@gentoo.org> nqc-3.1_p6.ebuild,
+  +files/nqc-3.1_p6-flags.patch:
+  respect flags wrt #432200
+
+  04 Jul 2012; Justin Lecher <jlec@gentoo.org> nqc-3.1_p6.ebuild,
+  +files/nqc-3.1_p6-gcc-4.7.patch:
+  Fix for gcc-4.7, #424661
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -nqc-3.1_p4.ebuild:
+  Remove old
+
+  10 Jan 2011; Jeroen Roovers <jer@gentoo.org> nqc-3.1_p6.ebuild:
+  Fix a && b || die error (bug #351028).
+
+  31 Dec 2010; Jeroen Roovers <jer@gentoo.org> nqc-3.1_p6.ebuild:
+  Replace patches (that should have been applied unconditionally anyway and do
+  not apply to this version).
+
+*nqc-3.1_p6 (30 Dec 2010)
+
+  30 Dec 2010; Jeroen Roovers <jer@gentoo.org> nqc-3.1_p4.ebuild,
+  +nqc-3.1_p6.ebuild:
+  Version bump. Respect LDFLAGS (bug #338168), CXX. Marked ~ppc again. Set
+  RDEPEND.
+

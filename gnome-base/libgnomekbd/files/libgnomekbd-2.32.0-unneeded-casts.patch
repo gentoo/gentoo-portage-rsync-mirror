@@ -1,0 +1,41 @@
+From b1079544e9585ee01b31b6e882afceb4aac938da Mon Sep 17 00:00:00 2001
+From: Sergey V. Udaltsov <svu@gnome.org>
+Date: Thu, 30 Sep 2010 07:21:27 +0000
+Subject: Unneeded casts removed
+
+---
+diff --git a/capplet/gkbd-indicator-plugins-capplet.c b/capplet/gkbd-indicator-plugins-capplet.c
+index 9058fbc..c232c98 100644
+--- a/capplet/gkbd-indicator-plugins-capplet.c
++++ b/capplet/gkbd-indicator-plugins-capplet.c
+@@ -305,13 +305,13 @@ CappletSetup (GkbdIndicatorPluginsCapplet * gipc)
+ 	gtk_builder_connect_signals (builder, NULL);
+ 
+ 	g_object_set_data (G_OBJECT (capplet), "uiData", builder);
+-	g_signal_connect_swapped (GTK_OBJECT (capplet),
++	g_signal_connect_swapped (capplet,
+ 				  "destroy", G_CALLBACK (g_object_unref),
+ 				  builder);
+ 	g_signal_connect_swapped (G_OBJECT (capplet), "unrealize",
+ 				  G_CALLBACK (g_main_loop_quit), loop);
+ 
+-	g_signal_connect (GTK_OBJECT (capplet),
++	g_signal_connect (capplet,
+ 			  "response", G_CALLBACK (CappletResponse), NULL);
+ 
+ 	button = GTK_WIDGET (gtk_builder_get_object (builder, "btnUp"));
+diff --git a/libgnomekbd/gkbd-keyboard-drawing.c b/libgnomekbd/gkbd-keyboard-drawing.c
+index 909930b..7e3c3e8 100644
+--- a/libgnomekbd/gkbd-keyboard-drawing.c
++++ b/libgnomekbd/gkbd-keyboard-drawing.c
+@@ -2614,7 +2614,7 @@ gkbd_keyboard_drawing_new_dialog (gint group, gchar * group_name)
+ 
+ 	g_object_set_data (G_OBJECT (dialog), "kbdraw", kbdraw);
+ 
+-	g_signal_connect_swapped (GTK_OBJECT (dialog), "destroy",
++	g_signal_connect_swapped (dialog, "destroy",
+ 				  G_CALLBACK (g_object_unref),
+ 				  g_object_get_data (G_OBJECT (dialog),
+ 						     "builderData"));
+--
+cgit v0.9.0.2

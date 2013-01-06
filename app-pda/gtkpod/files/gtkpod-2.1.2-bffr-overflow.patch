@@ -1,0 +1,16 @@
+ libs/atomic-parsley/AtomicParsley.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/libs/atomic-parsley/AtomicParsley.cpp b/libs/atomic-parsley/AtomicParsley.cpp
+index 8603885..9190df3 100644
+--- a/libs/atomic-parsley/AtomicParsley.cpp
++++ b/libs/atomic-parsley/AtomicParsley.cpp
+@@ -1887,7 +1887,7 @@ char* APar_ExtractDataAtom(int this_atom_number) {
+ 
+             }
+             else { //purl & egid would end up here too, but Apple switched it to a text string (0x00), so gets taken care above explicitly
+-                char* result = (char*) malloc(sizeof(char) * 6);
++                char* result = (char*) malloc(sizeof(char) * 6 + 1);
+                 sprintf(result, "hex 0x");
+ 
+                 for (int hexx = 1; hexx <= (int) (thisAtom->AtomicLength - atom_header_size); ++hexx) {

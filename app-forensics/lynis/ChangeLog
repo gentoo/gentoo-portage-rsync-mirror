@@ -1,0 +1,105 @@
+# ChangeLog for app-forensics/lynis
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/ChangeLog,v 1.24 2012/10/30 20:15:13 idl0r Exp $
+
+  30 Oct 2012; Christian Ruppert <idl0r@gentoo.org> -lynis-1.2.9.ebuild,
+  -files/lynis.cron:
+  Cleanup
+
+  29 Jul 2012; Raúl Porcel <armin76@gentoo.org> lynis-1.2.9.ebuild,
+  lynis-1.3.0.ebuild:
+  Drop sparc keywords
+
+  22 May 2012; Jeff Horelick <jdhore@gentoo.org> lynis-1.3.0.ebuild:
+  marked x86 per bug 416561
+
+  19 May 2012; Agostino Sarubbo <ago@gentoo.org> lynis-1.3.0.ebuild:
+  Stable for amd64, wrt bug #416561
+
+  18 May 2012; Christian Ruppert <idl0r@gentoo.org> files/lynis.cron-new:
+  Minor: Use long options for -c (--checkall), bug 412061
+
+*lynis-1.3.0 (26 Dec 2011)
+
+  26 Dec 2011; Christian Ruppert <idl0r@gentoo.org> -lynis-1.2.1.ebuild,
+  -lynis-1.2.5.ebuild, -lynis-1.2.6.ebuild, +lynis-1.3.0.ebuild:
+  Version bump and cleanup.
+
+  07 May 2010; Raúl Porcel <armin76@gentoo.org> lynis-1.2.9.ebuild:
+  sparc stable wrt #312633
+
+  06 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> lynis-1.2.9.ebuild:
+  x86 stable wrt bug #312633
+
+  04 Apr 2010; Markos Chandras <hwoarang@gentoo.org> lynis-1.2.9.ebuild:
+  Stable on amd64 wrt bug #312633
+
+*lynis-1.2.9 (19 Dec 2009)
+
+  19 Dec 2009; <idl0r@gentoo.org> -lynis-1.2.7.ebuild, -lynis-1.2.8.ebuild,
+  +lynis-1.2.9.ebuild:
+  Version bump to 1.2.9. Clean up.
+
+  10 Dec 2009; Christian Ruppert <idl0r@gentoo.org> lynis-1.2.8.ebuild:
+  Fix plugin installation.
+
+*lynis-1.2.8 (10 Dec 2009)
+
+  10 Dec 2009; Christian Ruppert <idl0r@gentoo.org> +lynis-1.2.8.ebuild:
+  Version bump to 1.2.8.
+
+*lynis-1.2.7 (03 Nov 2009)
+
+  03 Nov 2009; Christian Ruppert <idl0r@gentoo.org> +lynis-1.2.7.ebuild:
+  Version bump to 1.2.7.
+
+  29 Jul 2009; Steve Dibb <beandog@gentoo.org> lynis-1.2.5.ebuild,
+  lynis-1.2.6.ebuild:
+  amd64 stable
+
+*lynis-1.2.6 (02 Jun 2009)
+
+  02 Jun 2009; Christian Ruppert <idl0r@gentoo.org> +lynis-1.2.6.ebuild:
+  Version bump, bug 272253, thanks to Zak Kipling <zak.kipling@cantab.net>.
+
+  30 Apr 2009; Patrick Lauer <patrick@gentoo.org> -lynis-1.2.3-r1.ebuild:
+  Remove old
+
+*lynis-1.2.5 (28 Mar 2009)
+
+  28 Mar 2009; Christian Ruppert <idl0r@gentoo.org> -lynis-1.2.4.ebuild,
+  +lynis-1.2.5.ebuild:
+  Version bump to 1.2.5, removed 1.2.4.
+
+*lynis-1.2.4 (24 Mar 2009)
+
+  24 Mar 2009; Christian Ruppert <idl0r@gentoo.org> +lynis-1.2.4.ebuild:
+  Version bump to 1.2.4, using einfo instead of elog.
+
+*lynis-1.2.3-r1 (10 Mar 2009)
+
+  10 Mar 2009; Christian Ruppert <idl0r@gentoo.org> +files/lynis.cron-new,
+  metadata.xml, -lynis-1.2.3.ebuild, +lynis-1.2.3-r1.ebuild:
+  Revision bump to 1.2.3-r1, removed old. metadata.xml updated. Lynis requires
+  to be root so moved to /usr/sbin, fixed cron file. Some improvements.
+
+*lynis-1.2.3 (07 Mar 2009)
+
+  07 Mar 2009; Friedrich Oslage <bluebird@gentoo.org> +lynis-1.2.3.ebuild:
+  Version bump
+
+  11 Oct 2008; Friedrich Oslage <bluebird@gentoo.org> lynis-1.2.1.ebuild:
+  Stable on sparc, bug #240102
+
+  09 Oct 2008; Markus Meier <maekke@gentoo.org> lynis-1.2.1.ebuild:
+  x86 stable, bug #240102
+
+  08 Oct 2008; Richard Freeman <rich0@gentoo.org> lynis-1.2.1.ebuild:
+  amd64 stable - 240102
+
+*lynis-1.2.1 (07 Sep 2008)
+
+  07 Sep 2008; Friedrich Oslage <bluebird@gentoo.org> +files/lynis.cron,
+  +metadata.xml, +lynis-1.2.1.ebuild:
+  Inital import, thanks to Christian Ruppert, bug #232353
+

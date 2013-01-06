@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install postinst postrm
+DEPEND=>=x11-libs/gtk+-2.2.0:2 virtual/pkgconfig
+DESCRIPTION=Gtk+-2.0 Hangul Input Modules
+EAPI=1
+HOMEPAGE=http://imhangul.kldp.net/
+KEYWORDS=~amd64 ppc x86
+LICENSE=GPL-2
+RDEPEND=>=x11-libs/gtk+-2.2.0:2
+SLOT=0
+SRC_URI=http://kldp.net/frs/download.php/2570/imhangul-0.9.12.tar.bz2
+_md5_=3377286ad18bfd97a2d2cd3971493c96

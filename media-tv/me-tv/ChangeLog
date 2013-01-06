@@ -1,0 +1,10 @@
+# ChangeLog for media-tv/me-tv
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/me-tv/ChangeLog,v 1.1 2012/10/21 15:30:03 lordvan Exp $
+
+*me-tv-1.4.0.10 (21 Oct 2012)
+
+  21 Oct 2012; <lordvan@gentoo.org> +me-tv-1.4.0.10.ebuild, +metadata.xml:
+  new ebuild. import from my dev-overlay. Closes Bug #196991
+  Thanks to all contributors and testers (see bug)
+

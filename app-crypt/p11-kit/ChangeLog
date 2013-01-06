@@ -1,0 +1,140 @@
+# ChangeLog for app-crypt/p11-kit
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.37 2012/09/29 17:01:30 armin76 Exp $
+
+  29 Sep 2012; Raúl Porcel <armin76@gentoo.org> p11-kit-0.13.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #434288
+
+  18 Sep 2012; Johannes Huber <johu@gentoo.org> p11-kit-0.13.ebuild:
+  Stable for x86, wrt bug #434288
+
+  13 Sep 2012; Jeroen Roovers <jer@gentoo.org> p11-kit-0.13.ebuild:
+  Stable for HPPA (bug #434288).
+
+  13 Sep 2012; Anthony G. Basile <blueness@gentoo.org> p11-kit-0.13.ebuild:
+  Stable arm, bug #434288
+
+  12 Sep 2012; Anthony G. Basile <blueness@gentoo.org> p11-kit-0.13.ebuild:
+  stable ppc ppc64, bug #434288
+
+  08 Sep 2012; Agostino Sarubbo <ago@gentoo.org> p11-kit-0.13.ebuild:
+  Stable for amd64, wrt bug #434288
+
+*p11-kit-0.14 (08 Sep 2012)
+
+  08 Sep 2012; Tim Harder <radhermit@gentoo.org> +p11-kit-0.14.ebuild:
+  Version bump.
+
+  26 Aug 2012; Tim Harder <radhermit@gentoo.org> p11-kit-0.12.ebuild,
+  p11-kit-0.13.ebuild:
+  Add dep on pkgconfig for prune_libtool_files (bug #432800).
+
+*p11-kit-0.13 (19 Jul 2012)
+
+  19 Jul 2012; Tim Harder <radhermit@gentoo.org> +p11-kit-0.13.ebuild:
+  Version bump.
+
+  10 May 2012; Tim Harder <radhermit@gentoo.org> -p11-kit-0.11.ebuild:
+  Remove old.
+
+  10 May 2012; Tim Harder <radhermit@gentoo.org> p11-kit-0.12.ebuild:
+  Stabilize latest version for ppc.
+
+  09 May 2012; Matt Turner <mattst88@gentoo.org> p11-kit-0.12.ebuild:
+  Added ~mips, bug 383453.
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> p11-kit-0.12.ebuild:
+  keyword ~amd64-fbsd
+
+  16 Apr 2012; Brent Baude <ranger@gentoo.org> p11-kit-0.11.ebuild:
+  Marking p11-kit-0.11 ppc for bug 409287
+
+  08 Apr 2012; Raúl Porcel <armin76@gentoo.org> p11-kit-0.12.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #409287
+
+  31 Mar 2012; Markus Meier <maekke@gentoo.org> p11-kit-0.12.ebuild:
+  arm stable, bug #409287
+
+  28 Mar 2012; Brent Baude <ranger@gentoo.org> p11-kit-0.12.ebuild:
+  Marking p11-kit-0.12 ppc64 for bug 409287
+
+  28 Mar 2012; Jeroen Roovers <jer@gentoo.org> p11-kit-0.12.ebuild:
+  Stable for HPPA (bug #409287).
+
+  28 Mar 2012; Agostino Sarubbo <ago@gentoo.org> p11-kit-0.12.ebuild:
+  Stable for amd64, wrt bug #409287
+
+  27 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> p11-kit-0.12.ebuild:
+  x86 stable wrt bug #409287
+
+  13 Mar 2012; Tim Harder <radhermit@gentoo.org> -p11-kit-0.9.ebuild,
+  -p11-kit-0.10.ebuild:
+  Remove old.
+
+*p11-kit-0.12 (13 Mar 2012)
+
+  13 Mar 2012; Tim Harder <radhermit@gentoo.org> +p11-kit-0.12.ebuild:
+  Version bump.
+
+  08 Mar 2012; Naohiro Aota <naota@gentoo.org> p11-kit-0.11.ebuild:
+  Add ~x86-fbsd wrt #402959
+
+  13 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> p11-kit-0.11.ebuild:
+  Marked ~ppc/~ppc64 wrt #383453
+
+*p11-kit-0.11 (09 Feb 2012)
+
+  09 Feb 2012; Tim Harder <radhermit@gentoo.org> +p11-kit-0.11.ebuild:
+  Version bump.
+
+  19 Jan 2012; Tobias Klausmann <klausman@gentoo.org> p11-kit-0.10.ebuild:
+  Keyworded on alpha, bug #383453
+
+  13 Jan 2012; Tim Harder <radhermit@gentoo.org> -p11-kit-0.7.ebuild,
+  -p11-kit-0.8.ebuild:
+  Remove old.
+
+*p11-kit-0.10 (13 Jan 2012)
+
+  13 Jan 2012; Tim Harder <radhermit@gentoo.org> +p11-kit-0.10.ebuild:
+  Version bump.
+
+  28 Nov 2011; Tim Harder <radhermit@gentoo.org> p11-kit-0.8.ebuild,
+  p11-kit-0.9.ebuild:
+  Fix autotools-utils usage (bug #392171).
+
+  26 Nov 2011; Tim Harder <radhermit@gentoo.org> p11-kit-0.8.ebuild,
+  p11-kit-0.9.ebuild:
+  Build in the source tree.
+
+*p11-kit-0.9 (19 Nov 2011)
+
+  19 Nov 2011; Tim Harder <radhermit@gentoo.org> -p11-kit-0.6.ebuild,
+  +p11-kit-0.9.ebuild:
+  Version bump and remove old.
+
+*p11-kit-0.8 (03 Nov 2011)
+
+  03 Nov 2011; Tim Harder <radhermit@gentoo.org> +p11-kit-0.8.ebuild:
+  Version bump.
+
+  01 Nov 2011; Markus Meier <maekke@gentoo.org> p11-kit-0.7.ebuild:
+  add ~arm, bug #383453
+
+*p11-kit-0.7 (01 Oct 2011)
+
+  01 Oct 2011; Tim Harder <radhermit@gentoo.org> +p11-kit-0.7.ebuild:
+  Version bump.
+
+  20 Sep 2011; Jeroen Roovers <jer@gentoo.org> p11-kit-0.6.ebuild:
+  Marked ~hppa (bug #383453).
+
+  18 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Fixup herd.
+
+*p11-kit-0.6 (18 Sep 2011)
+
+  18 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> +p11-kit-0.6.ebuild,
+  +metadata.xml:
+  Initial commit, package required by gnutls.
+

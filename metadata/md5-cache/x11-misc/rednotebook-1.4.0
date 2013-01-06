@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm prepare setup
+DEPEND==dev-lang/python-2*
+DESCRIPTION=A graphical journal with calendar, templates, tags, keyword searching, and export functionality
+EAPI=3
+HOMEPAGE=http://rednotebook.sourceforge.net
+IUSE=libyaml spell linguas_ar linguas_ast linguas_be linguas_bg linguas_bs linguas_ca linguas_cs linguas_cy linguas_da linguas_de linguas_el linguas_en_GB linguas_eo linguas_es linguas_eu linguas_fi linguas_fo linguas_fr linguas_gl linguas_he linguas_hr linguas_hu linguas_hy linguas_id linguas_it linguas_ja linguas_ka linguas_kk linguas_ko linguas_lt linguas_mn linguas_ms linguas_nb linguas_nds linguas_nl linguas_nn linguas_oc linguas_pl linguas_pt linguas_pt_BR linguas_ro linguas_ru linguas_si linguas_sk linguas_sr linguas_sv linguas_ta linguas_te linguas_tl linguas_tr linguas_ug linguas_uk linguas_uz linguas_vi linguas_wa linguas_zh_CN linguas_zh_HK linguas_zh_TW
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=dev-python/pyyaml[libyaml?] >=dev-python/pygtk-2.13 dev-python/pywebkitgtk spell? ( dev-python/gtkspell-python ) =dev-lang/python-2*
+SLOT=0
+SRC_URI=mirror://sourceforge/rednotebook/rednotebook-1.4.0.tar.gz
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=a4ff2515f19b6ee2a510ad35498c5259

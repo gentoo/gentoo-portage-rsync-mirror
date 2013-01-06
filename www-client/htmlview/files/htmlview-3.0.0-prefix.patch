@@ -1,0 +1,63 @@
+--- htmlview.orig	2007-10-01 20:46:02 +0200
++++ htmlview	2007-10-01 20:45:51 +0200
+@@ -31,8 +31,8 @@
+ 
+ error_dialog() {
+     echo "$1"
+-    if [ -x /usr/bin/zenity ]; then
+-        /usr/bin/zenity --error --text="$1"
++    if [ -x "@GENTOO_PORTAGE_EPREFIX@"/usr/bin/zenity ]; then
++        "@GENTOO_PORTAGE_EPREFIX@"/usr/bin/zenity --error --text="$1"
+     else
+         xmessage "$1"
+     fi
+@@ -47,7 +47,7 @@
+         # Check if terminal exists
+         if ! exists "$PREFTERM"; then
+             error_dialog "ERROR: The terminal $PREFTERM does not exist.  Please reconfigure."
+-            [ -x /usr/bin/gnome-default-applications-properties ] && exec /usr/bin/gnome-default-applications-properties
++            [ -x "@GENTOO_PORTAGE_EPREFIX@"/usr/bin/gnome-default-applications-properties ] && exec "@GENTOO_PORTAGE_EPREFIX@"/usr/bin/gnome-default-applications-properties
+             exit 1
+         fi
+         # Special case: w3m
+@@ -63,7 +63,7 @@
+     # Check if GUI browser exists
+     if ! exists "$GCONF"; then
+         error_dialog "ERROR: The browser $GCONF does not exist.  Please reconfigure."
+-        [ -x /usr/bin/gnome-default-applications-properties ] && exec /usr/bin/gnome-default-applications-properties
++        [ -x "@GENTOO_PORTAGE_EPREFIX@"/usr/bin/gnome-default-applications-properties ] && exec "@GENTOO_PORTAGE_EPREFIX@"/usr/bin/gnome-default-applications-properties
+         exit 1
+     fi
+     # Special case: konqueror without arguments
+@@ -85,7 +85,7 @@
+ 	echo "$1" | grep -q "gnome-open" && INVALID="yes"
+ 	if [ "$INVALID" == "yes" ]; then
+ 		error_dialog "$1 is an invalid browser.  Please reconfigure."
+-		[ -x /usr/bin/gnome-default-applications-properties ] && exec /usr/bin/gnome-default-applications-properties
++		[ -x "@GENTOO_PORTAGE_EPREFIX@"/usr/bin/gnome-default-applications-properties ] && exec "@GENTOO_PORTAGE_EPREFIX@"/usr/bin/gnome-default-applications-properties
+ 		exit 1
+ 	fi
+ }
+@@ -118,16 +118,16 @@
+ 
+ # Fallback to old htmlview
+ unset BROWSER CONSOLE TERMS_KDE TERMS_GNOME TERMS_GENERIC
+-[ -e /etc/htmlview.conf ] && source /etc/htmlview.conf
++[ -e "@GENTOO_PORTAGE_EPREFIX@"/etc/htmlview.conf ] && source "@GENTOO_PORTAGE_EPREFIX@"/etc/htmlview.conf
+ [ -e ~/.htmlviewrc ] && source ~/.htmlviewrc
+ 
+ TERMS_KDE="konsole kvt"
+-TERMS_GNOME="/usr/bin/gnome-terminal"
+-TERMS_GENERIC="/usr/bin/rxvt /usr/bin/xterm /usr/bin/Eterm /usr/bin/aterm /usr/bin/hanterm /usr/bin/kterm /usr/bin/mlterm /usr/bin/mrxvt /usr/bin/urxvt"
+-TTYBROWSERS="/usr/bin/links /usr/bin/lynx /usr/bin/w3m /usr/bin/elinks"
++TERMS_GNOME="@GENTOO_PORTAGE_EPREFIX@/usr/bin/gnome-terminal"
++TERMS_GENERIC="@GENTOO_PORTAGE_EPREFIX@/usr/bin/rxvt @GENTOO_PORTAGE_EPREFIX@/usr/bin/xterm @GENTOO_PORTAGE_EPREFIX@/usr/bin/Eterm @GENTOO_PORTAGE_EPREFIX@/usr/bin/aterm @GENTOO_PORTAGE_EPREFIX@/usr/bin/hanterm @GENTOO_PORTAGE_EPREFIX@/usr/bin/kterm @GENTOO_PORTAGE_EPREFIX@/usr/bin/mlterm @GENTOO_PORTAGE_EPREFIX@/usr/bin/mrxvt @GENTOO_PORTAGE_EPREFIX@/usr/bin/urxvt"
++TTYBROWSERS="@GENTOO_PORTAGE_EPREFIX@/usr/bin/links @GENTOO_PORTAGE_EPREFIX@/usr/bin/lynx @GENTOO_PORTAGE_EPREFIX@/usr/bin/w3m @GENTOO_PORTAGE_EPREFIX@/usr/bin/elinks"
+ X11BROWSERS_KDE="konqueror kfmbrowser"
+-X11BROWSERS_GNOME="/usr/bin/mozilla /usr/bin/epiphany /usr/bin/galeon /usr/bin/kazehakase"
+-X11BROWSERS_GENERIC="/usr/bin/mozilla /usr/bin/netscape /usr/bin/firefox"
++X11BROWSERS_GNOME="@GENTOO_PORTAGE_EPREFIX@/usr/bin/mozilla @GENTOO_PORTAGE_EPREFIX@/usr/bin/epiphany @GENTOO_PORTAGE_EPREFIX@/usr/bin/galeon @GENTOO_PORTAGE_EPREFIX@/usr/bin/kazehakase"
++X11BROWSERS_GENERIC="@GENTOO_PORTAGE_EPREFIX@/usr/bin/mozilla @GENTOO_PORTAGE_EPREFIX@/usr/bin/netscape @GENTOO_PORTAGE_EPREFIX@/usr/bin/firefox"
+ 
+ if [ "x`pidof gnome-session`" != "x" ]; then
+ 	X11BROWSERS="$GCONF $X11BROWSERS_GENERIC $X11BROWSERS_GNOME $X11BROWSERS_KDE"

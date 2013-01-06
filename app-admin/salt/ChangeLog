@@ -1,0 +1,30 @@
+# ChangeLog for app-admin/salt
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.6 2012/12/19 00:40:55 chutzpah Exp $
+
+  19 Dec 2012; Patrick McLean <chutzpah@gentoo.org> salt-0.11.0.ebuild,
+  salt-9999.ebuild:
+  Use the develop branch for the 9999 ebuild rather than master.
+
+*salt-9999 (18 Dec 2012)
+*salt-0.11.0 (18 Dec 2012)
+
+  18 Dec 2012; Patrick McLean <chutzpah@gentoo.org> +salt-0.11.0.ebuild,
+  +salt-9999.ebuild, -salt-0.10.0.ebuild, -salt-0.9.8.ebuild:
+  Version bump, port to distutils-r1 from python-distutils-ng. Add a 9999 live
+  ebuild.
+
+  29 Nov 2012; Michał Górny <mgorny@gentoo.org> salt-0.10.0.ebuild,
+  salt-0.10.5.ebuild, salt-0.9.8.ebuild:
+  Restrict tests due to bug #437268 (dangerous to system files).
+
+*salt-0.10.5 (16 Nov 2012)
+
+  16 Nov 2012; Patrick McLean <chutzpah@gentoo.org> +salt-0.10.5.ebuild,
+  metadata.xml:
+  Version bump.
+
+*salt-0.10.0 (06 Jul 2012)
+
+  06 Jul 2012; Patrick McLean <chutzpah@gentoo.org> +salt-0.10.0.ebuild:
+  Version bump.

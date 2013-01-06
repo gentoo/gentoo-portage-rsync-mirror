@@ -1,0 +1,7 @@
+diff -r -U1 TeXmacs-1.0.7.15-src.orig/TeXmacs/progs/texmacs/texmacs/tm-files.scm TeXmacs-1.0.7.15-src/TeXmacs/progs/texmacs/texmacs/tm-files.scm
+--- TeXmacs-1.0.7.15-src.orig/TeXmacs/progs/texmacs/texmacs/tm-files.scm	2012-03-18 16:12:44.000000000 +0700
++++ TeXmacs-1.0.7.15-src/TeXmacs/progs/texmacs/texmacs/tm-files.scm	2012-05-02 22:39:52.000000000 +0700
+@@ -206,2 +206,2 @@
+   (deprecated-function "get-name-buffer-path" "path->buffer")
+-  (path->buffer name))
++  (path->buffer p))

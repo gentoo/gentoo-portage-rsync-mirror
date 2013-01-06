@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+  <email>maintainer-needed@gentoo.org</email>
+</maintainer>
+<longdescription>
+  Stumpwm is a tiling, keyboard driven X11 Window Manager written entirely in Common Lisp.
+
+  If you're tired of flipping through themes like channel-surfing, and going from one perfect-except-for-just-one-thing
+  window manager to another even-more-broken-in-some-other-way then perhaps Stumpwm can help.
+
+  Stumpwm attempts to be customizable yet visually minimal. There are no window decorations, no icons, and no buttons.
+  It does have various hooks to attach your personal customizations, and variables to tweak.
+
+    * Hack the good hack
+    * debug your good hack
+    * customize your window manager 
+
+  while it's running. That's right. With a 100% Common Lisp window manager there's no stopping the hacks. Just re-eval and GO!
+</longdescription>
+<use>
+  <flag name="clisp">Use CLISP for the runtime</flag>
+  <flag name="sbcl">Use SBCL for the runtime</flag>
+</use>
+</pkgmetadata>

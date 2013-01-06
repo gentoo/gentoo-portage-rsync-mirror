@@ -1,0 +1,46 @@
+# ChangeLog for media-sound/projectm-jack
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/projectm-jack/ChangeLog,v 1.9 2012/06/11 13:31:15 aballier Exp $
+
+*projectm-jack-2.1.0 (11 Jun 2012)
+
+  11 Jun 2012; Alexis Ballier <aballier@gentoo.org>
+  +projectm-jack-2.1.0.ebuild:
+  version bump
+
+  08 May 2012; Andreas Schuerch <nativemad@gentoo.org>
+  projectm-jack-2.0.1.ebuild:
+  x86 stable, see bug 408487
+
+  07 May 2012; Agostino Sarubbo <ago@gentoo.org> projectm-jack-2.0.1.ebuild:
+  Stable for amd64, wrt bug #408487
+
+  05 May 2012; Michał Górny <mgorny@gentoo.org> projectm-jack-1.2.0.ebuild,
+  projectm-jack-2.0.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*projectm-jack-2.0.1 (10 Dec 2009)
+
+  10 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +projectm-jack-2.0.1.ebuild:
+  Version bump.
+
+  01 Dec 2008; <ssuominen@gentoo.org> projectm-jack-1.2.0.ebuild:
+  Keyword ~x86.
+
+  17 Jul 2008; Alexis Ballier <aballier@gentoo.org>
+  -projectm-jack-1.1.ebuild:
+  remove old
+
+*projectm-jack-1.2.0 (17 Jul 2008)
+
+  17 Jul 2008; Alexis Ballier <aballier@gentoo.org>
+  +projectm-jack-1.2.0.ebuild:
+  version bump
+
+*projectm-jack-1.1 (25 May 2008)
+
+  25 May 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +projectm-jack-1.1.ebuild:
+  Initial import, thanks to drac for the initial ebuild
+

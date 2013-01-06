@@ -1,0 +1,116 @@
+commit fd70739a133053042360d14fd7e6bc9db884e021
+Author: Vincent Untz <vuntz@gnome.org>
+Date:   Sun Feb 20 16:00:00 2011 +0100
+
+    Fix small freezes when moving window
+    
+    This is similar to ce9025ff: we only save the window size after a
+    timeout, to stop always saving a file which calls fsync() and is
+    therefore slow.
+    
+    We also don't save the size if it hasn't changed.
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=642813
+
+diff --git a/src/yelp-window.c b/src/yelp-window.c
+index abad787..ea57576 100644
+--- a/src/yelp-window.c
++++ b/src/yelp-window.c
+@@ -284,6 +284,10 @@ struct _YelpWindowPriv {
+     gulong          cancel_handler;
+     gulong          finish_handler;
+ 
++    guint           resize_timeout;
++    gint            saved_width;
++    gint            saved_height;
++
+     gint            toc_pause;
+ 
+     GtkActionGroup *action_group;
+@@ -510,8 +514,12 @@ window_init (YelpWindow *window)
+ 	    width = YELP_CONFIG_WIDTH_DEFAULT;
+ 	if (height == 0)
+ 	    height = YELP_CONFIG_HEIGHT_DEFAULT;
++
+     }
+ 
++    window->priv->saved_width = width;
++    window->priv->saved_height = height;
++
+     g_free (config_path);
+     g_key_file_free (keyfile);
+ 
+@@ -538,6 +546,10 @@ window_finalize (GObject *object)
+     YelpWindow *window = YELP_WINDOW (object);
+     YelpWindowPriv *priv = window->priv;
+ 
++    if (window->priv->resize_timeout)
++        g_source_remove (window->priv->resize_timeout);
++    window->priv->resize_timeout = 0;
++
+     g_object_unref (priv->action_group);
+     g_object_unref (priv->ui_manager);
+ 
+@@ -1810,26 +1822,22 @@ window_set_loading (YelpWindow *window)
+ /** Window Callbacks **********************************************************/
+ 
+ static gboolean
+-window_configure_cb (GtkWidget         *widget,
+-		     GdkEventConfigure *event,
+-		     gpointer           data)
++save_window_size (YelpWindow *window,
++		  gpointer    data)
+ {
+-    gint width, height;
+     GKeyFile *keyfile;
+     GError *config_error = NULL;
+     gchar *sdata, *config_path;
+     gsize config_size;
+ 
+-    gtk_window_get_size (GTK_WINDOW (widget), &width, &height);
+-
+     keyfile = g_key_file_new();
+ 
+     config_path = g_strconcat (g_get_home_dir(), YELP_CONFIG_PATH, NULL);
+ 
+     g_key_file_set_integer (keyfile, YELP_CONFIG_GEOMETRY_GROUP,
+-			    YELP_CONFIG_WIDTH, width);
++			    YELP_CONFIG_WIDTH, window->priv->saved_width);
+     g_key_file_set_integer (keyfile, YELP_CONFIG_GEOMETRY_GROUP,
+-			    YELP_CONFIG_HEIGHT, height);
++			    YELP_CONFIG_HEIGHT, window->priv->saved_height);
+ 
+     sdata = g_key_file_to_data (keyfile, &config_size, NULL);
+ 
+@@ -1846,6 +1854,31 @@ window_configure_cb (GtkWidget         *widget,
+     return FALSE;
+ }
+ 
++static gboolean
++window_configure_cb (GtkWidget         *widget,
++		     GdkEventConfigure *event,
++		     gpointer           data)
++{
++    gint width, height;
++    YelpWindow *window = YELP_WINDOW (widget);
++
++    gtk_window_get_size (GTK_WINDOW (widget), &width, &height);
++
++    if (width == window->priv->saved_width &&
++        height == window->priv->saved_height)
++        return FALSE;
++
++    window->priv->saved_width = width;
++    window->priv->saved_height = height;
++
++    if (window->priv->resize_timeout)
++        g_source_remove (window->priv->resize_timeout);
++
++    window->priv->resize_timeout = g_timeout_add (200, (GSourceFunc) save_window_size, widget);
++
++    return FALSE;
++}
++
+ /** Gecko Callbacks ***********************************************************/
+ 
+ static void

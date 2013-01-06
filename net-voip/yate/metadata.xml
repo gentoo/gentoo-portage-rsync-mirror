@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>voip</herd>
+	<use>
+		<flag name='h323'>Build H.323 Channel plugin</flag>
+		<flag name='ilbc'>Build ILBC codec plugin</flag>
+		<flag name='sctp'>
+			Support for Stream Control Transmission Protocol
+		</flag>
+		<flag name='spandsp'>Enable support for the spandsp codec</flag>
+	</use>
+</pkgmetadata>

@@ -1,0 +1,63 @@
+# ChangeLog for app-crypt/gcr
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.15 2012/12/29 18:09:38 armin76 Exp $
+
+  29 Dec 2012; Raúl Porcel <armin76@gentoo.org> gcr-3.4.1-r2.ebuild:
+  alpha/sh/sparc stable wrt #439152
+
+  17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gcr-3.4.1-r2.ebuild:
+  Stable for ia64, wrt bug #439152
+
+  16 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> gcr-3.6.2.ebuild:
+  Drop last live ebuild chunk.
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gcr-3.6.2.ebuild:
+  Restore clean EAPI5 ebuild.
+
+  16 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> gcr-3.6.2.ebuild:
+  Version bump for Gnome 3.6.
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gcr-3.6.2.ebuild:
+  Use a better subslot.
+
+*gcr-3.6.2 (16 Dec 2012)
+
+  16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gcr-3.4.1-r2.ebuild,
+  +gcr-3.6.2.ebuild, metadata.xml:
+  Version bump for gnome-3.6. Update license. Drop useless doc USE flag. Switch
+  to global introspection USE flag.
+
+  21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> gcr-3.4.1-r2.ebuild:
+  Stable for x86, wrt bug #439152
+
+  29 Oct 2012; Anthony G. Basile <blueness@gentoo.org> gcr-3.4.1-r2.ebuild:
+  stable arm, bug #439152
+
+  29 Oct 2012; Anthony G. Basile <blueness@gentoo.org> gcr-3.4.1-r2.ebuild:
+  stable ppc ppc64, bug #439152
+
+  24 Oct 2012; Agostino Sarubbo <ago@gentoo.org> gcr-3.4.1-r2.ebuild:
+  Stable for amd64, wrt bug #439152
+
+*gcr-3.4.1-r2 (10 Sep 2012)
+
+  10 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org> -gcr-3.4.1.ebuild,
+  -gcr-3.4.1-r1.ebuild, +gcr-3.4.1-r2.ebuild:
+  Respect USE=-introspection (bug #434412, thanks to Sergey Golubev and Ben
+  Longbons). Drop revisions that didn't.
+
+*gcr-3.4.1-r1 (10 Sep 2012)
+
+  10 Sep 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gcr-3.4.1-r1.ebuild, +files/gcr-3.4.1-invalid-whitespace.patch:
+  Fix whitespace removal in secret exchange, bug #434422, thanks to Hans de
+  Graaff.
+
+  16 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org> gcr-3.4.1.ebuild:
+  Add missing gdbus-codegen dependency (bug #425390, thanks to cyrillic).
+
+*gcr-3.4.1 (13 May 2012)
+
+  13 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org> +gcr-3.4.1.ebuild,
+  +metadata.xml:
+  New ebuild for Gcr and Gck libraries, formerly part of gnome-keyring.

@@ -1,0 +1,19 @@
+# ChangeLog for games-fps/quake1-killer
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-killer/ChangeLog,v 1.5 2008/10/17 16:26:37 mr_bones_ Exp $
+
+  17 Oct 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  quake1-killer-2.2z.ebuild:
+  fix HOMEPAGE (bug #242370)
+
+  21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
+
+  26 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake1-killer-2.2z.ebuild:
+  Making games last on inherit line.
+
+*quake1-killer-2.2z (16 Jan 2005)
+
+  16 Jan 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.

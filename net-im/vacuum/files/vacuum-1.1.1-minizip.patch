@@ -1,0 +1,38 @@
+From 433b646f92e629fae235f23ebbfbec6ea5ff72a5 Mon Sep 17 00:00:00 2001
+From: Maxim Ignatenko <gelraen.ua@gmail.com>
+Date: Sun, 4 Dec 2011 20:00:14 +0000
+Subject: [PATCH] =?UTF-8?q?=D0=94=D0=BE=D0=B1=D0=B0=D0=B2=D0=BB=D0=B5=D0=BD=D0=B0=20=D0=BE=D0=BF=D1=86=D0=B8=D1=8F=20FORCE=5FBUNDLED=5FMINIZIP=20=D0=B4=D0=BB=D1=8F=20cmake,=20=D0=BF=D0=BE=D0=B7=D0=B2=D0=BE=D0=BB=D1=8F=D1=8E=D1=89=D0=B0=D1=8F=20=D0=B8=D0=B3=D0=BD=D0=BE=D1=80=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D1=82=D1=8C=20=D0=BD=D0=B0=D0=BB=D0=B8=D1=87=D0=B8=D0=B5=20=D0=B2=20=D1=81=D0=B8=D1=81=D1=82=D0=B5=D0=BC=D0=B5=20=D0=B1=D0=B8=D0=B1=D0=BB=D0=B8=D0=BE=D1=82=D0=B5=D0=BA=D0=B8=20minizip.?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+git-svn-id: http://vacuum-im.googlecode.com/svn/trunk@1670 8ee3b2d0-dc07-11de-995a-ab19b33c1a40
+---
+ CMakeLists.txt |    6 ++++++
+ 1 files changed, 6 insertions(+), 0 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 06da875..bfb33ca 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -20,11 +20,17 @@ set(LANGS "" CACHE STRING "List of languages to build localization for (this var
+ set(USED_LANGS "" CACHE INTERNAL "List of languages actually used for generating targets")
+ add_lang_options()
+ 
++set(FORCE_BUNDLED_MINIZIP NO CACHE BOOL "Use bundled minizip even if local system have one")
++
+ find_library(SYSTEM_ZLIB_FOUND z)
+ find_library(SYSTEM_IDN_FOUND idn)
+ find_library(SYSTEM_MINIZIP_FOUND minizip)
+ find_library(SYSTEM_QTLOCKEDFILE_FOUND QtSolutions_LockedFile-2.4)
+ 
++if (FORCE_BUNDLED_MINIZIP)
++	set(SYSTEM_MINIZIP_FOUND NO)
++endif (FORCE_BUNDLED_MINIZIP)
++
+ if (SYSTEM_ZLIB_FOUND)
+ 	add_definitions(-DUSE_SYSTEM_ZLIB)
+ endif (SYSTEM_ZLIB_FOUND)
+-- 
+1.7.3.4
+

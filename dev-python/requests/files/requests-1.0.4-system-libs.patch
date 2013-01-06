@@ -1,0 +1,68 @@
+--- requests-1.0.4/requests/adapters.py
++++ requests-1.0.4/requests/adapters.py
+@@ -11,15 +11,15 @@
+ import socket
+ 
+ from .models import Response
+-from .packages.urllib3.poolmanager import PoolManager, proxy_from_url
++from urllib3.poolmanager import PoolManager, proxy_from_url
+ from .hooks import dispatch_hook
+ from .compat import urlparse, basestring
+ from .utils import DEFAULT_CA_BUNDLE_PATH, get_encoding_from_headers
+ from .structures import CaseInsensitiveDict
+-from .packages.urllib3.exceptions import MaxRetryError
+-from .packages.urllib3.exceptions import TimeoutError
+-from .packages.urllib3.exceptions import SSLError as _SSLError
+-from .packages.urllib3.exceptions import HTTPError as _HTTPError
++from urllib3.exceptions import MaxRetryError
++from urllib3.exceptions import TimeoutError
++from urllib3.exceptions import SSLError as _SSLError
++from urllib3.exceptions import HTTPError as _HTTPError
+ from .cookies import extract_cookies_to_jar
+ from .exceptions import ConnectionError, Timeout, SSLError
+ 
+--- requests-1.0.4/requests/compat.py
++++ requests-1.0.4/requests/compat.py
+@@ -4,7 +4,7 @@
+ pythoncompat
+ """
+ 
+-from .packages import charade as chardet
++import charade as chardet
+ 
+ import sys
+ 
+@@ -89,7 +89,7 @@
+     import cookielib
+     from Cookie import Morsel
+     from StringIO import StringIO
+-    from .packages.urllib3.packages.ordered_dict import OrderedDict
++    from urllib3.packages.ordered_dict import OrderedDict
+ 
+     builtin_str = str
+     bytes = str
+--- requests-1.0.4/requests/models.py
++++ requests-1.0.4/requests/models.py
+@@ -17,7 +17,7 @@
+ 
+ from .auth import HTTPBasicAuth
+ from .cookies import cookiejar_from_dict, get_cookie_header
+-from .packages.urllib3.filepost import encode_multipart_formdata
++from urllib3.filepost import encode_multipart_formdata
+ from .exceptions import HTTPError, RequestException, MissingSchema, InvalidURL
+ from .utils import (
+     stream_untransfer, guess_filename, requote_uri,
+--- requests-1.0.4/setup.py
++++ requests-1.0.4/setup.py
+@@ -16,11 +16,6 @@
+ 
+ packages = [
+     'requests',
+-    'requests.packages',
+-	'requests.packages.charade',
+-    'requests.packages.urllib3',
+-    'requests.packages.urllib3.packages',
+-    'requests.packages.urllib3.packages.ssl_match_hostname'
+ ]
+ 
+ requires = []

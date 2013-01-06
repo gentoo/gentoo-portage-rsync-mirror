@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>proxy-maintainers</herd>
+<maintainer>
+<email>corentin.labbe@geomatys.fr</email>
+<name>LABBE Corentin (Montjoie)</name>
+<description>Maintainer</description>
+</maintainer>
+<use>
+<flag name="nss">Prefer NSS over libgcrypt as the crypto engine</flag>
+<flag name="rpm">Compiles the RPM probes</flag>
+<flag name="sql">Build the sql independant probes</flag>
+</use>
+<longdescription lang="en">
+</longdescription>
+</pkgmetadata>
+

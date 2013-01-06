@@ -1,0 +1,125 @@
+Index: qtiplot/src/plot2D/dialogs/PlotDialog.cpp
+===================================================================
+--- qtiplot/src/plot2D/dialogs/PlotDialog.cpp	(revision 1728)
++++ qtiplot/src/plot2D/dialogs/PlotDialog.cpp	(revision 1729)
+@@ -503,15 +503,19 @@
+ 	gl2->addWidget(new QLabel( tr("width= ")), 0, 0);
+ 	gl2->addWidget(boxPlotWidth, 0, 1);
+ 
+-	gl2->addWidget(new QLabel(tr("height= ")), 2, 0);
+-	gl2->addWidget(boxPlotHeight, 2, 1);
++	gl2->addWidget(new QLabel(tr("height= ")), 1, 0);
++	gl2->addWidget(boxPlotHeight, 1, 1);
+ 
+ 	keepPlotRatioBox = new QCheckBox(tr("Keep aspect ratio"));
+ 	keepPlotRatioBox->setChecked(app->d_keep_aspect_ration);
+-	gl2->addWidget(keepRatioBox, 3, 1);
+ 
+-	gl2->setRowStretch(4, 1);
++	connect(keepPlotRatioBox, SIGNAL(clicked (bool)), keepRatioBox, SLOT(setChecked(bool)));
++	connect(keepRatioBox, SIGNAL(clicked (bool)), keepPlotRatioBox, SLOT(setChecked(bool)));
+ 
++	gl2->addWidget(keepPlotRatioBox, 2, 1);
++
++	gl2->setRowStretch(3, 1);
++
+ 	QHBoxLayout *bl2 = new QHBoxLayout();
+ 	bl2->addWidget(gb1);
+ 	bl2->addWidget(gb2);
+@@ -582,25 +586,25 @@
+ 	gl2->addWidget(new QLabel( tr("width= ")), 0, 0);
+ 	gl2->addWidget(boxLayerWidth, 0, 1);
+ 
+-	gl2->addWidget(new QLabel(tr("height= ")), 2, 0);
+-	gl2->addWidget(boxLayerHeight, 2, 1);
++	gl2->addWidget(new QLabel(tr("height= ")), 1, 0);
++	gl2->addWidget(boxLayerHeight, 1, 1);
+ 
+ 	keepRatioBox = new QCheckBox(tr("Keep aspect ratio"));
+ 	keepRatioBox->setChecked(app->d_keep_aspect_ration);
+-	gl2->addWidget(keepRatioBox, 3, 1);
++	gl2->addWidget(keepRatioBox, 2, 1);
+ 
+ 	QLabel *l = new QLabel(tr("Apply &to..."));
+-	gl2->addWidget(l, 4, 0);
++	gl2->addWidget(l, 3, 0);
+ 
+ 	sizeApplyToBox = new QComboBox();
+ 	sizeApplyToBox->insertItem(tr("Layer"));
+ 	sizeApplyToBox->insertItem(tr("Window"));
+ 	sizeApplyToBox->insertItem(tr("All Windows"));
+-	gl2->addWidget(sizeApplyToBox, 4, 1);
++	gl2->addWidget(sizeApplyToBox, 3, 1);
+ 
+ 	l->setBuddy(sizeApplyToBox);
+ 
+-	gl2->setRowStretch(5, 1);
++	gl2->setRowStretch(4, 1);
+ 
+ 	QBoxLayout *bl2 = new QBoxLayout (QBoxLayout::LeftToRight);
+ 	bl2->addWidget(gb1);
+Index: qtiplot/src/plot2D/dialogs/ImageExportDialog.cpp
+===================================================================
+--- qtiplot/src/plot2D/dialogs/ImageExportDialog.cpp	(revision 1728)
++++ qtiplot/src/plot2D/dialogs/ImageExportDialog.cpp	(revision 1729)
+@@ -240,7 +240,7 @@
+ 	size_layout->addWidget(scaleFontsBox, 3, 1);
+ 
+ 	keepRatioBox = new QCheckBox(tr("&Keep aspect ratio"));
+-	keepRatioBox->setChecked(true);
++	keepRatioBox->setChecked(app->d_keep_aspect_ration);
+     size_layout->addWidget(keepRatioBox, 4, 1);
+ 
+ 	vert_layout->addWidget(d_custom_size_box);
+@@ -340,6 +340,7 @@
+ 
+ 		app->d_3D_export_text_mode = d_3D_text_export_mode->currentIndex();
+ 		app->d_3D_export_sort = d_3D_export_sort->currentIndex();
++		app->d_keep_aspect_ration = keepRatioBox->isChecked();
+ 	}
+ 
+ 	e->accept();
+Index: qtiplot/src/plot2D/dialogs/EnrichmentDialog.cpp
+===================================================================
+--- qtiplot/src/plot2D/dialogs/EnrichmentDialog.cpp	(revision 1728)
++++ qtiplot/src/plot2D/dialogs/EnrichmentDialog.cpp	(revision 1729)
+@@ -460,6 +460,7 @@
+     gl2->addWidget(heightBox, 1, 1);
+ 
+ 	keepAspectBox = new QCheckBox(tr("&Keep aspect ratio"));
++	keepAspectBox->setChecked(app->d_keep_aspect_ration);
+ 	gl2->addWidget(keepAspectBox, 2, 1);
+ 
+ 	bestSizeButton = new QPushButton(tr("&Best size"));
+@@ -646,6 +647,10 @@
+ 		FrameWidget *fw = qobject_cast<FrameWidget *>(d_widget);
+         if (fw)
+             fw->setAttachPolicy((FrameWidget::AttachPolicy)attachToBox->currentIndex());
++
++		ApplicationWindow *app = (ApplicationWindow *)this->parent();
++		if (app)
++			app->d_keep_aspect_ration = keepAspectBox->isChecked();
+ 	} else if (patternPage && tabWidget->currentPage() == patternPage)
+ 		patternApplyTo();
+ 	else if (textPage && tabWidget->currentPage() == textPage){
+Index: qtiplot/src/core/ConfigDialog.cpp
+===================================================================
+--- qtiplot/src/core/ConfigDialog.cpp	(revision 1728)
++++ qtiplot/src/core/ConfigDialog.cpp	(revision 1729)
+@@ -1023,7 +1023,7 @@
+ 	gl->addWidget(boxCanvasHeight, 2, 1);
+ 
+ 	keepRatioBox = new QCheckBox(tr("&Keep aspect ratio"));
+-	keepRatioBox->setChecked(true);
++	keepRatioBox->setChecked(app->d_keep_aspect_ration);
+ 	gl->addWidget(keepRatioBox, 3, 1);
+ 
+ 	gl->setRowStretch(4, 1);
+@@ -2097,6 +2097,7 @@
+ 		FrameWidget::Unit unit = (FrameWidget::Unit)unitBox->currentIndex();
+ 		app->d_layer_canvas_width = convertToPixels(boxCanvasWidth->value(), unit, 0);
+ 		app->d_layer_canvas_height = convertToPixels(boxCanvasHeight->value(), unit, 1);
++		app->d_keep_aspect_ration = keepRatioBox->isChecked();
+ 	}
+ 
+ 	// 2D plots page: ticks tab

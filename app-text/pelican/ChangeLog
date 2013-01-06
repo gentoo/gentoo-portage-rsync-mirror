@@ -1,0 +1,23 @@
+# ChangeLog for app-text/pelican
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/ChangeLog,v 1.4 2012/12/10 05:32:17 patrick Exp $
+
+*pelican-3.0.1 (10 Dec 2012)
+
+  10 Dec 2012; Patrick Lauer <patrick@gentoo.org> +pelican-3.0.1.ebuild:
+  Bump
+
+  29 Oct 2012; Michał Górny <mgorny@gentoo.org> pelican-2.8.1.ebuild,
+  pelican-3.0.ebuild:
+  Use virtual for argparse.
+
+*pelican-3.0 (24 Aug 2012)
+
+  24 Aug 2012; Patrick Lauer <patrick@gentoo.org> +pelican-3.0.ebuild:
+  Bump
+
+*pelican-2.8.1 (19 Jul 2012)
+
+  19 Jul 2012; Dirkjan Ochtman <djc@gentoo.org> +pelican-2.8.1.ebuild,
+  +metadata.xml:
+  Initial version of pelican (bug 379671).

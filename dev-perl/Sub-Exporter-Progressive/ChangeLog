@@ -1,0 +1,42 @@
+# ChangeLog for dev-perl/Sub-Exporter-Progressive
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter-Progressive/ChangeLog,v 1.7 2012/12/10 19:14:07 ago Exp $
+
+  10 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
+  Sub-Exporter-Progressive-0.1.6.ebuild:
+  Add ~ppc, wrt bug #446444
+
+  17 Sep 2012; Fabian Groffen <grobian@gentoo.org>
+  Sub-Exporter-Progressive-0.1.6.ebuild:
+  Marked ~x86-solaris
+
+  02 Sep 2012; Torsten Veller <tove@gentoo.org>
+  -Sub-Exporter-Progressive-0.1.3.ebuild,
+  -Sub-Exporter-Progressive-0.1.4.ebuild,
+  -Sub-Exporter-Progressive-0.1.5.ebuild:
+  Cleanup
+
+*Sub-Exporter-Progressive-0.1.6 (30 Aug 2012)
+
+  30 Aug 2012; Torsten Veller <tove@gentoo.org>
+  +Sub-Exporter-Progressive-0.1.6.ebuild:
+  Version bump
+
+*Sub-Exporter-Progressive-0.1.5 (25 Aug 2012)
+
+  25 Aug 2012; Torsten Veller <tove@gentoo.org>
+  +Sub-Exporter-Progressive-0.1.5.ebuild:
+  Version bump
+
+*Sub-Exporter-Progressive-0.1.4 (09 Aug 2012)
+
+  09 Aug 2012; Torsten Veller <tove@gentoo.org>
+  +Sub-Exporter-Progressive-0.1.4.ebuild:
+  Version bump
+
+*Sub-Exporter-Progressive-0.1.3 (06 Aug 2012)
+
+  06 Aug 2012; Torsten Veller <tove@gentoo.org>
+  +Sub-Exporter-Progressive-0.1.3.ebuild, +metadata.xml:
+  Initial commit for Devel-GlobalDestruction. The ebuild depends on
+  Sub-Exporter for now

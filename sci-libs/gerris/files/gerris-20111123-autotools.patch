@@ -1,0 +1,96 @@
+--- Makefile.am.orig	2012-01-20 19:59:56.000000000 +0000
++++ Makefile.am	2012-01-21 04:35:19.000000000 +0000
+@@ -28,7 +28,7 @@
+ DARCS_CHANGELOG = 
+ endif
+ 
+-pkglib_SCRIPTS = build_function libtool
++noinst_SCRIPTS = build_function libtool
+ 
+ ChangeLog: $(DARCS_CHANGELOG)
+ 
+--- src/Makefile.am.orig	2012-01-20 19:59:56.000000000 +0000
++++ src/Makefile.am	2012-01-21 05:13:31.000000000 +0000
+@@ -1,10 +1,9 @@
+-## Process this file with automake to produce Makefile.in
++## Process this file with automake to produce Makefile.in
+ 
+ AUTOMAKE_OPTIONS = 1.6
+ 
+-AM_CPPFLAGS = -DGFS_MODULES_DIR=\"$(libdir)/gerris\"
+-
+-INCLUDES = -I$(top_srcdir) -I$(includedir) \
++AM_CPPFLAGS = -DGFS_MODULES_DIR=\"$(libdir)/gerris\" \
++	 -I$(top_srcdir) -I$(includedir) \
+            -DG_LOG_DOMAIN=\"Gfs\" $(GTS_CFLAGS)
+ 
+ bin_SCRIPTS = gfs-config
+@@ -15,7 +14,8 @@
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = gerris2D.pc gerris3D.pc
+-pkglib_DATA = m4.awk
++pkgawkdir = $(datadir)/gerris
++pkgawk_DATA = m4.awk
+ 
+ lib_LTLIBRARIES = libgfs2D.la libgfs3D.la
+ 
+@@ -119,7 +119,7 @@
+         -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)\
+ 	-release $(LT_RELEASE) -export-dynamic
+ libgfs2D_la_SOURCES = $(SRC)
+-libgfs2D_la_CFLAGS = $(AM_CFLAGS) -DFTT_2D=1
++libgfs2D_la_CPPFLAGS = $(AM_CPPFLAGS) -DFTT_2D=1
+ libgfs2D_la_LIBADD = $(GTS_LIBS)
+ 
+ CLEANFILES = $(BUILT_SOURCES)
+@@ -132,13 +132,11 @@
+ bin_PROGRAMS = gerris2D gerris3D
+ 
+ gerris2D_SOURCES = gerris.c
+-gerris2D_CFLAGS = $(AM_CFLAGS) -DFTT_2D=1
+-gerris2D_LDADD = $(GFS2D_LIBS)
+-gerris2D_DEPENDENCIES = libgfs2D.la
++gerris2D_CPPFLAGS = $(AM_CPPFLAGS) -DFTT_2D=1
++gerris2D_LDADD = libgfs2D.la
+ 
+ gerris3D_SOURCES = gerris.c
+-gerris3D_LDADD = $(GFS3D_LIBS)
+-gerris3D_DEPENDENCIES = libgfs3D.la
++gerris3D_LDADD = libgfs3D.la
+ 
+ if DARCS_CONTROLLED
+ DARCS_VERSION = darcsversion
+--- configure.in.orig	2012-01-20 19:59:56.000000000 +0000
++++ configure.in	2012-01-23 01:10:36.000000000 +0000
+@@ -348,10 +350,14 @@
+ 
+ # AGMG module requires the gfortran compiler and lapack/blas
+ if test x$with_agmg != xno; then
+-   AC_PROG_FC([gfortran f90 xlf90],90)
+-   AC_CHECK_LIB(lapack, sorg2l_, lapack="true", lapack="false", [-lblas -lm])
++   AC_PROG_FC
++   if [ -z "$LAPACK_LIBS" ]; then
++      AC_CHECK_LIB(lapack, sorg2l_,lapack="true", lapack="false", [-lblas -lm])
++   else
++      LIBS="${LIBS} ${LAPACK_LIBS}"
++   fi
+ fi
+-AM_CONDITIONAL(BUILD_AGMG, test x$FC = xgfortran -a x$lapack = xtrue -a x$with_agmg != xno)
++AM_CONDITIONAL(BUILD_AGMG, test x$with_agmg != xno)
+ 
+ # Build wavewatch module if wavewatch is installed
+ AM_CONDITIONAL(BUILD_WAVEWATCH, test -r $HOME/.wwatch3.env)
+--- doc/examples/Makefile.am.orig	2012-01-20 19:59:56.000000000 +0000
++++ doc/examples/Makefile.am	2012-01-23 02:02:38.000000000 +0000
+@@ -48,7 +48,6 @@
+ 
+ CLEANFILES = $(BUILT_SOURCES) Makefile.deps
+ 
+-pkglib_DATA = gfs2tex.py
+-pkgdata_DATA = gfs.lang gerris.dic gfs-keywords.el gfs-mode.el gfs.sty gfs.hva kaltura.sh gfs.php
++pkgdata_DATA = gfs2tex.py gfs.lang gerris.dic gfs-keywords.el gfs-mode.el gfs.sty gfs.hva kaltura.sh gfs.php
+ 
+ gerris.dic: classes modulesyms.sh $(top_srcdir)/modules/Makefile.am modules.list
+	($(srcdir)/classes && sh $(srcdir)/modulesyms.sh $(top_srcdir)/modules $(pkglibdir)) | sort > gerris.dic
+ 

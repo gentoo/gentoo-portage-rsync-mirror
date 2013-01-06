@@ -1,0 +1,52 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Tue Jul 24 15:08:47 UTC 2012
+Subject: build system
+
+--- openbox-menu-0.3.6.7/Makefile
++++ openbox-menu-0.3.6.7/Makefile
+@@ -1,13 +1,16 @@
+-LIBS= `pkg-config --libs glib-2.0 gtk+-2.0 libmenu-cache`
+-CFLAGS+= -g -Wall -g `pkg-config --cflags glib-2.0 gtk+-2.0 libmenu-cache`
++LIBS = $(shell pkg-config --libs glib-2.0 gtk+-2.0 libmenu-cache)
++CFLAGS += -Wall $(shell pkg-config --cflags glib-2.0 gtk+-2.0 libmenu-cache)
+ #-DG_DISABLE_DEPRECATED
+ 
+-# Comment this line if you don't want icons to appear in menu
+-CFLAGS+=-DWITH_ICONS
++# set to 0 to turn off icons in menus
++ICONS=1
+ 
+-prefix= /usr/local
+-DESTDIR ?= $(prefix)
+-BINDIR= ${DESTDIR}/bin
++ifeq ($(ICONS),1)
++CPPFLAGS += -DWITH_ICONS
++endif
++
++prefix = /usr
++BINDIR = ${prefix}/bin
+ 
+ SRC= $(shell ls *.c 2> /dev/null)
+ OBJ= $(SRC:.c=.o)
+@@ -15,10 +18,10 @@
+ all: $(OBJ) openbox-menu
+ 
+ %.o: %.c
+-	$(CC) $(CFLAGS) -c $< -o $@
++	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+ 
+ openbox-menu: $(OBJ)
+-	$(CC) $(OBJ) -o openbox-menu $(LDFLAGS) $(LIBS)
++	$(CC) $(CFLAGS) $(OBJ) -o openbox-menu $(LDFLAGS) $(LIBS)
+ 
+ .PHONY: clean install doc changelog
+ 
+@@ -27,7 +30,7 @@
+ 	@rm -rf doc
+ 
+ install:
+-	@install -Dm 755 openbox-menu $(BINDIR)/openbox-menu
++	@install -Dm 755 openbox-menu $(DESTDIR)$(BINDIR)/openbox-menu
+ 
+ doc:
+ 	robodoc --src . --doc doc/ --multidoc --index --html --cmode

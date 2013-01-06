@@ -1,0 +1,25 @@
+# ChangeLog for sci-biology/plink
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/ChangeLog,v 1.12 2012/07/04 09:31:26 jlec Exp $
+
+  04 Jul 2012; Justin Lecher <jlec@gentoo.org> plink-1.07-r1.ebuild,
+  +files/plink-1.07-gcc47.patch:
+  Moved to EAPI=4, add fix for building with gcc-4.7, #424709
+
+  13 Dec 2011; Agostino Sarubbo <ago@gentoo.org> plink-1.07-r1.ebuild:
+  Stable for AMD64, wrt bug #392783
+
+  11 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> plink-1.07-r1.ebuild:
+  x86 stable wrt bug #392783
+
+  07 Dec 2011; Justin Lecher <jlec@gentoo.org> plink-1.07-r1.ebuild,
+  metadata.xml:
+  Added missing sys-libs/zlib to RDEPEND noted by ago, #392783
+
+*plink-1.07-r1 (26 Nov 2010)
+
+  26 Nov 2010; Justin Lecher <jlec@gentoo.org> +files/1.07-flags.patch,
+  -plink-1.06.ebuild, +plink-1.07-r1.ebuild, metadata.xml:
+  Fixes for #335975, respecting LDFLAGS/CXXFLAGS, supporting lapack, making R
+  support optional
+

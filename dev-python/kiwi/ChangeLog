@@ -1,0 +1,96 @@
+# ChangeLog for dev-python/kiwi
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.21 2012/12/11 17:06:30 ago Exp $
+
+  11 Dec 2012; Agostino Sarubbo <ago@gentoo.org> kiwi-1.9.36.ebuild:
+  Add ~ppc, wrt bug #416677
+
+  11 Dec 2012; Agostino Sarubbo <ago@gentoo.org> kiwi-1.9.36.ebuild:
+  Add ~ppc64, wrt bug #416677
+
+*kiwi-1.9.36 (13 Nov 2012)
+
+  13 Nov 2012; Patrick Lauer <patrick@gentoo.org> +kiwi-1.9.36.ebuild:
+  Bump
+
+*kiwi-1.9.35 (09 Oct 2012)
+
+  09 Oct 2012; Patrick Lauer <patrick@gentoo.org> +kiwi-1.9.35.ebuild:
+  Bump
+
+  20 May 2012; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Add remote-id.
+
+*kiwi-1.9.34 (20 May 2012)
+
+  20 May 2012; Mike Gilbert <floppym@gentoo.org> +kiwi-1.9.34.ebuild:
+  Version bump for #390109. Thanks to Ian Delaney for pointing out the test
+  suite. Drop ppc and ppc64 keywords due to new deps.
+
+  24 Feb 2012; Patrick Lauer <patrick@gentoo.org> kiwi-1.9.26.ebuild:
+  Restricting pypy
+
+  08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  kiwi-1.9.26.ebuild:
+  Restrict CPython-{2.4,2.5} and Jython ABIs.
+
+  10 Oct 2009; Fabian Groffen <grobian@gentoo.org> kiwi-1.9.26.ebuild:
+  Merge from Prefix
+
+*kiwi-1.9.26 (04 Aug 2009)
+
+  04 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -kiwi-1.9.19.ebuild, -kiwi-1.9.21.ebuild, +kiwi-1.9.26.ebuild:
+  Version bump (bug #279578). Set SUPPORT_PYTHON_ABIS.
+
+*kiwi-1.9.22 (25 Jun 2008)
+
+  25 Jun 2008; Ali Polatel <hawking@gentoo.org> +kiwi-1.9.22.ebuild:
+  Version bump.
+
+*kiwi-1.9.21 (28 Mar 2008)
+
+  28 Mar 2008; Ali Polatel <hawking@gentoo.org> +kiwi-1.9.21.ebuild:
+  Version bump.
+
+*kiwi-1.9.19 (11 Nov 2007)
+
+  11 Nov 2007; Lukasz Strzygowski <lucass@gentoo.org> -kiwi-1.9.15.ebuild,
+  +kiwi-1.9.19.ebuild:
+  Version bump (bug #198782): dropped doc use-flag because the pre-generated
+  docs are missing. Dropped old version.
+
+  07 Sep 2007; Luca Barbato <lu_zero@gentoo.org> kiwi-1.9.15.ebuild:
+  Marked ~ppc
+
+  07 Jul 2007; Markus Rothe <corsair@gentoo.org> kiwi-1.9.15.ebuild:
+  Added ~ppc64
+
+*kiwi-1.9.15 (05 Jul 2007)
+
+  05 Jul 2007; Rob Cakebread <pythonhead@gentoo.org> -kiwi-1.9.14.ebuild,
+  +kiwi-1.9.15.ebuild:
+  Version bump, removed old version.
+
+*kiwi-1.9.14 (04 Apr 2007)
+
+  04 Apr 2007; Lukasz Strzygowski <lucass@gentoo.org> -kiwi-1.9.11.ebuild,
+  -kiwi-1.9.13.ebuild, +kiwi-1.9.14.ebuild:
+  Version bump. Removed old versions.
+
+*kiwi-1.9.13 (16 Feb 2007)
+
+  16 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> +kiwi-1.9.13.ebuild:
+  Version bump. Small cleanups, added doc and examples USE-flags.
+
+  07 Feb 2007; Rob Cakebread <pythonhead@gentoo.org> kiwi-1.9.11.ebuild:
+  Move docs to proper directory. Thanks Chris Mayo <mayo@clara.co.uk> bug# 165143
+
+  03 Feb 2007; Steve Dibb <beandog@gentoo.org> kiwi-1.9.11.ebuild:
+  add ~amd64, bug 162948
+
+*kiwi-1.9.11 (19 Oct 2006)
+
+  19 Oct 2006; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +kiwi-1.9.11.ebuild:
+  Initial commit. Thank you Jason Pepas <j.pepas@mail.utexas.edu> bug# 137441

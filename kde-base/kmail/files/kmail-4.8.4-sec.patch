@@ -1,0 +1,29 @@
+From dbb2f72f4745e00f53031965a9c10b2d6862bd54 Mon Sep 17 00:00:00 2001
+From: Montel Laurent <montel@kde.org>
+Date: Mon, 2 Jul 2012 07:00:53 +0200
+Subject: [PATCH] Security fix found by David yesterday during debug (cherry
+ picked from commit
+ b6a46407d83ad9368a9825c687fa44e660f7104a)
+
+---
+ messageviewer/htmlquotecolorer.cpp |    4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/messageviewer/htmlquotecolorer.cpp b/messageviewer/htmlquotecolorer.cpp
+index b54e989..67c3062 100644
+--- a/messageviewer/htmlquotecolorer.cpp
++++ b/messageviewer/htmlquotecolorer.cpp
+@@ -40,6 +40,10 @@ QString HTMLQuoteColorer::process( const QString &htmlSource )
+ #ifndef KDEPIM_NO_WEBKIT
+   // Create a DOM Document from the HTML source
+   QWebPage page(0);
++  page.settings()->setAttribute( QWebSettings::JavascriptEnabled, false );
++  page.settings()->setAttribute( QWebSettings::JavaEnabled, false );
++  page.settings()->setAttribute( QWebSettings::PluginsEnabled, false );
++
+   QWebFrame *frame = page.mainFrame();
+   frame->setHtml( htmlSource );
+   
+-- 
+1.7.9.2
+

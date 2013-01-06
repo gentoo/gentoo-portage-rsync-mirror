@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/sword-bulveren
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-bulveren/ChangeLog,v 1.1 2008/03/14 13:42:08 beandog Exp $
+
+*sword-bulveren-1.0 (14 Mar 2008)
+
+  14 Mar 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-bulveren-1.0.ebuild:
+  Initial commit
+

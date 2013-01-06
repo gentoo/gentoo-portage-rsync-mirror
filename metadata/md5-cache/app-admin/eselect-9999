@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install postinst unpack
+DEPEND=sys-apps/sed || ( sys-apps/coreutils sys-freebsd/freebsd-bin app-misc/realpath ) doc? ( dev-python/docutils ) dev-vcs/git
+DESCRIPTION=Gentoo's multi-purpose configuration and management tool
+EAPI=4
+HOMEPAGE=http://www.gentoo.org/proj/en/eselect/
+IUSE=doc
+LICENSE=GPL-2
+RDEPEND=!app-admin/eselect-news sys-apps/sed || ( sys-apps/coreutils sys-freebsd/freebsd-bin app-misc/realpath ) sys-apps/file sys-libs/ncurses
+SLOT=0
+_eclasses_=bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6	git-2	15733ab6a6feb34af9837b41623c2bad
+_md5_=f3cdc6cb8ae6b9b4d5a927eff1545134

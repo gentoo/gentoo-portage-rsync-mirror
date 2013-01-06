@@ -1,0 +1,28 @@
+diff --git a/Makefile b/Makefile
+index 5e7c1be..c183b3d 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,9 +1,10 @@
+ #
+ # KBUILD build parameters.
+ #
+-KERNEL_SOURCES  ?= /lib/modules/$(shell uname -r)/build
++MODULE_DIR = /lib/modules/$(shell uname -r)
++KERNEL_SOURCES  ?= $(MODULE_DIR)/build
+ KERNEL_HEADERS  := -I$(KERNEL_SOURCES)/include
+-MODULE_ROOT     ?= /lib/modules/$(shell uname -r)/CiscoVPN
++MODULE_ROOT     ?= $(MODULE_DIR)/CiscoVPN
+ SUBARCH         := $(shell uname -m)
+ 
+ 
+@@ -12,7 +13,9 @@ MODULE_NAME := cisco_ipsec
+ SOURCE_OBJS := linuxcniapi.o frag.o IPSecDrvOS_linux.o interceptor.o linuxkernelapi.o
+ 
+ ifeq ($(SUBARCH),x86_64)
+-CFLAGS += -mcmodel=kernel -mno-red-zone
++# Must NOT fiddle with CFLAGS
++# CFLAGS += -mcmodel=kernel -mno-red-zone
++EXTRA_CFLAGS += -mcmodel=kernel -mno-red-zone
+ NO_SOURCE_OBJS := libdriver64.so
+ else
+ NO_SOURCE_OBJS := libdriver.so

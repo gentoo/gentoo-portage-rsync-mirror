@@ -1,0 +1,345 @@
+# ChangeLog for dev-python/pygments
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.90 2012/12/17 19:58:40 mgorny Exp $
+
+  17 Dec 2012; Michał Górny <mgorny@gentoo.org> pygments-1.5-r1.ebuild:
+  Bump to EAPI=5 to make Paludis happy, bug #447524.
+
+  16 Dec 2012; Michał Górny <mgorny@gentoo.org> pygments-1.5-r1.ebuild:
+  Re-enable python2.5, seems that the test failure was my fault somehow.
+
+*pygments-1.5-r1 (13 Dec 2012)
+
+  13 Dec 2012; Michał Górny <mgorny@gentoo.org> +pygments-1.5-r1.ebuild:
+  Migrate to distutils-r1.
+
+  10 Nov 2012; Ian Delaney <idella4@gentoo.org> pygments-1.5.ebuild:
+  Added missing dep dev-texlive/texlive-latexrecommended under test?, fixes Bug
+  #432440
+
+  19 Aug 2012; Raúl Porcel <armin76@gentoo.org> pygments-1.5.ebuild:
+  alpha/s390/sh/sparc stable wrt #418909
+
+  12 Jul 2012; Akinori Hattori <hattya@gentoo.org> pygments-1.5.ebuild:
+  ia64 stable wrt bug #418909
+
+  29 Jun 2012; Jeroen Roovers <jer@gentoo.org> pygments-1.5.ebuild:
+  Stable for HPPA (bug #418909).
+
+  07 Jun 2012; Brent Baude <ranger@gentoo.org> pygments-1.5.ebuild:
+  Marking pygments-1.5 ppc for bug 418909
+
+  06 Jun 2012; Markus Meier <maekke@gentoo.org> pygments-1.5.ebuild:
+  arm stable, bug #418909
+
+  06 Jun 2012; Jeff Horelick <jdhore@gentoo.org> pygments-1.5.ebuild:
+  marked x86 per bug 418909
+
+  05 Jun 2012; Brent Baude <ranger@gentoo.org> pygments-1.5.ebuild:
+  Marking pygments-1.5 ppc64 for bug 418909
+
+  01 Jun 2012; Agostino Sarubbo <ago@gentoo.org> pygments-1.5.ebuild:
+  Stable for amd64, wrt bug #418909
+
+  09 May 2012; Alexis Ballier <aballier@gentoo.org> pygments-1.5.ebuild:
+  keyword ~amd64-fbsd
+
+  24 Mar 2012; Mike Gilbert <floppym@gentoo.org> pygments-1.5.ebuild:
+  Per Arfrever, add setuptools dependency.
+
+*pygments-1.5 (19 Mar 2012)
+
+  19 Mar 2012; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +pygments-1.5.ebuild:
+  Version bump.
+
+  02 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pygments-1.3.1.ebuild:
+  Delete.
+
+  02 Mar 2011; Brent Baude <ranger@gentoo.org> pygments-1.4.ebuild:
+  stable ppc64, bug 353715
+
+  27 Feb 2011; Brent Baude <ranger@gentoo.org> pygments-1.4.ebuild:
+  stable ppc, bug 353715
+
+  18 Feb 2011; Jeroen Roovers <jer@gentoo.org> pygments-1.4.ebuild:
+  Stable for HPPA (bug #353715).
+
+  13 Feb 2011; Raúl Porcel <armin76@gentoo.org> pygments-1.4.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #353715
+
+  11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> pygments-1.4.ebuild:
+  Stable on amd64 wrt bug #353715
+
+  09 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pygments-1.4.ebuild:
+  x86 stable wrt bug #353715
+
+  04 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pygments-1.4.ebuild, +files/pygments-1.4-fix_tests.patch:
+  Fix tests.
+
+*pygments-1.4 (04 Jan 2011)
+
+  04 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pygments-1.4.ebuild:
+  Version bump.
+
+  18 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pygments-1.3.1.ebuild:
+  Update EAPI. Run tests with Python 3.
+
+  08 Oct 2010; Mart Raudsepp <leio@gentoo.org> pygments-1.3.1.ebuild:
+  Marked ~mips for bug #198989
+
+  30 May 2010; Fabian Groffen <grobian@gentoo.org> pygments-1.3.1.ebuild:
+  Marked ~*-solaris
+
+  23 May 2010; <nixnut@gentoo.org> pygments-1.3.1.ebuild:
+  ppc stable #313773
+
+  11 May 2010; Brent Baude <ranger@gentoo.org> pygments-1.3.1.ebuild:
+  stable ppc64, bug 313773
+
+  09 May 2010; Raúl Porcel <armin76@gentoo.org> pygments-1.3.1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #313773
+
+  04 May 2010; Jeroen Roovers <jer@gentoo.org> pygments-1.3.1.ebuild:
+  Stable for HPPA (bug #313773).
+
+  26 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  pygments-1.3.1.ebuild:
+  stable x86, bug 313773
+
+  09 Apr 2010; Markos Chandras <hwoarang@gentoo.org> pygments-1.3.1.ebuild:
+  Stable on amd64 wrt bug #313773
+
+  26 Mar 2010; Dror Levin <spatz@gentoo.org> pygments-1.1.1.ebuild,
+  pygments-1.2.2.ebuild, pygments-1.3.ebuild, pygments-1.3.1.ebuild:
+  Convert font deps to virtual/ttf-fonts wrt bug 282754.
+
+  16 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> pygments-1.2.2.ebuild:
+  amd64 stable, bug 303191
+
+*pygments-1.3.1 (07 Mar 2010)
+
+  07 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pygments-1.3.1.ebuild:
+  Version bump.
+
+  04 Mar 2010; Raúl Porcel <armin76@gentoo.org> pygments-1.2.2.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #303191
+
+*pygments-1.3 (01 Mar 2010)
+
+  01 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> +pygments-1.3.ebuild:
+  Version bump to 1.3.
+
+  23 Feb 2010; Christian Faulhammer <fauli@gentoo.org>
+  pygments-1.2.2.ebuild:
+  stable x86, bug 303191
+
+  15 Feb 2010; Joseph Jezak <josejx@gentoo.org> pygments-1.2.2.ebuild:
+  Marked ppc/ppc64 stable for bug #303191.
+
+  10 Feb 2010; Jeroen Roovers <jer@gentoo.org> pygments-1.2.2.ebuild:
+  Stable for HPPA (bug #303191).
+
+*pygments-1.2.2 (02 Jan 2010)
+
+  02 Jan 2010; Dirkjan Ochtman <djc@gentoo.org> -pygments-1.2.1.ebuild,
+  +pygments-1.2.2.ebuild:
+  Version bump to 1.2.2.
+
+*pygments-1.2.1 (02 Jan 2010)
+
+  02 Jan 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pygments-1.2.1.ebuild:
+  Version bump.
+
+*pygments-1.2 (01 Jan 2010)
+
+  01 Jan 2010; Dirkjan Ochtman <djc@gentoo.org> +pygments-1.2.ebuild:
+  Version bump to 1.2.
+
+  14 Nov 2009; Raúl Porcel <armin76@gentoo.org> pygments-1.1.1.ebuild:
+  arm/ia64/s390/sh/sparc stable wrt #289434
+
+  11 Nov 2009; Brent Baude <ranger@gentoo.org> pygments-1.1.1.ebuild:
+  Marking pygments-1.1.1 ppc64 for bug 289434
+
+  29 Oct 2009; Markus Meier <maekke@gentoo.org> pygments-1.1.1.ebuild:
+  amd64/x86 stable, bug #289434
+
+  24 Oct 2009; Tobias Klausmann <klausman@gentoo.org> pygments-1.1.1.ebuild:
+  Stable on alpha, bug #289434
+
+  24 Oct 2009; nixnut <nixnut@gentoo.org> pygments-1.1.1.ebuild:
+  ppc stable #289434
+
+  18 Oct 2009; Jeroen Roovers <jer@gentoo.org> pygments-1.1.1.ebuild:
+  Stable for HPPA (bug #289434).
+
+  13 Oct 2009; Fabian Groffen <grobian@gentoo.org> pygments-1.1.1.ebuild:
+  Marked ~x64-macos, bug #287289
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pygments-1.1.1.ebuild:
+  Merge from Prefix
+
+*pygments-1.1.1 (15 Sep 2009)
+
+  15 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pygments-1.0-r1.ebuild, -pygments-1.1.ebuild, +pygments-1.1.1.ebuild:
+  Version bump.
+
+*pygments-1.1 (12 Sep 2009)
+
+  12 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pygments-1.1.ebuild:
+  Version bump.
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -pygments-0.9.ebuild,
+  -pygments-0.10.ebuild, -pygments-0.11.1.ebuild:
+  Remove old
+
+*pygments-1.0-r1 (10 Aug 2009)
+
+  10 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pygments-1.0-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  09 Aug 2009; Raúl Porcel <armin76@gentoo.org> pygments-1.0.ebuild:
+  arm/s390/sh stable
+
+  21 May 2009; Raúl Porcel <armin76@gentoo.org> pygments-0.9.ebuild,
+  pygments-0.10.ebuild, pygments-0.11.1.ebuild, pygments-1.0.ebuild:
+  Add ~arm/~sh
+
+  17 May 2009; Raúl Porcel <armin76@gentoo.org> pygments-1.0.ebuild:
+  Add ~s390
+
+  13 Apr 2009; Thomas Anderson <gentoofan23@gentoo.org> pygments-1.0.ebuild:
+  stable amd64, bug 265308
+
+  12 Apr 2009; Brent Baude <ranger@gentoo.org> pygments-1.0.ebuild:
+  stable ppc64, bug 265308
+
+  11 Apr 2009; nixnut <nixnut@gentoo.org> pygments-1.0.ebuild:
+  ppc stable #265308
+
+  10 Apr 2009; Raúl Porcel <armin76@gentoo.org> pygments-1.0.ebuild:
+  ia64/x86 stable wrt #265308
+
+  09 Apr 2009; Jeroen Roovers <jer@gentoo.org> pygments-1.0.ebuild:
+  Stable for HPPA (bug #265308).
+
+  08 Apr 2009; Tobias Klausmann <klausman@gentoo.org> pygments-1.0.ebuild:
+  Stable on alpha, bug #265308
+
+  07 Apr 2009; Ferris McCormick <fmccor@gentoo.org> pygments-1.0.ebuild:
+  Sparc stable, bug #265308.
+
+  04 Jan 2009; Patrick Lauer <patrick@gentoo.org> pygments-1.0.ebuild:
+  Fixing deps of pygments-1.0 for bug #250498
+
+*pygments-1.0 (09 Dec 2008)
+
+  09 Dec 2008; Caleb Tennis <caleb@gentoo.org> +pygments-1.0.ebuild:
+  Version bump
+
+*pygments-0.11.1 (07 Oct 2008)
+
+  07 Oct 2008; Caleb Tennis <caleb@gentoo.org> +pygments-0.11.1.ebuild:
+  Version bump
+
+  04 Oct 2008; Raúl Porcel <armin76@gentoo.org> pygments-0.10.ebuild:
+  alpha/ia64/sparc stable wrt #239537
+
+  04 Oct 2008; Markus Meier <maekke@gentoo.org> pygments-0.10.ebuild:
+  x86 stable, bug #239537
+
+  04 Oct 2008; Brent Baude <ranger@gentoo.org> pygments-0.10.ebuild:
+  stable ppc64, bug 239537
+
+  04 Oct 2008; Brent Baude <ranger@gentoo.org> pygments-0.10.ebuild:
+  stable ppc, bug 239537
+
+  04 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  pygments-0.10.ebuild:
+  amd64 stable, bug 239537
+
+  22 Jul 2008; Rob Cakebread <pythonhead@gentoo.org> pygments-0.9.ebuild,
+  pygments-0.10.ebuild:
+  Change setuptools to RDEPEND, tests were importing installed version,
+  added eclass highlighting and test DEPEND on ttf-bitstream-vera bug
+  #232356 and #232359, thanks Bernhard Frauendienst <gentoo@obeliks.de>,
+  remove patches and use sed instead.
+
+  16 Jul 2008; Alexis Ballier <aballier@gentoo.org> pygments-0.10.ebuild:
+  keyword ~x86-fbsd
+
+  27 May 2008; Ali Polatel <hawking@gentoo.org> pygments-0.10.ebuild:
+  Drop inherit eutils, not needed anymore.
+
+*pygments-0.10 (27 May 2008)
+
+  27 May 2008; Ali Polatel <hawking@gentoo.org> +pygments-0.10.ebuild:
+  Version bump.
+
+  25 May 2008; Markus Rothe <corsair@gentoo.org> pygments-0.9.ebuild:
+  Stable on ppc64
+
+  22 Dec 2007; nixnut <nixnut@gentoo.org> pygments-0.9.ebuild:
+  Added ~ppc wrt bug 198989
+
+  13 Nov 2007; Lukasz Strzygowski <lucass@gentoo.org>
+  -pygments-0.8.1.ebuild, pygments-0.9.ebuild:
+  Added setuptools dep and call to distutils_src_unpack (bug #199060),
+  cleanup. Dropped old version.
+
+  13 Nov 2007; Raúl Porcel <armin76@gentoo.org> pygments-0.9.ebuild:
+  Add ~alpha/~ia64 wrt #198989
+
+  13 Nov 2007; Jeroen Roovers <jer@gentoo.org> pygments-0.9.ebuild:
+  Marked ~hppa (bug #198989).
+
+  13 Nov 2007; Ferris McCormick <fmccor@gentoo.org> pygments-0.9.ebuild:
+  Add ~sparc, Bug #198989, but see comments in bugzilla.
+
+*pygments-0.9 (14 Oct 2007)
+
+  14 Oct 2007; Rob Cakebread <pythonhead@gentoo.org> pygments-0.8.1.ebuild,
+  +pygments-0.9.ebuild:
+  Version bump. Removed superfluous PYTHON_MODULE
+
+*pygments-0.8.1 (28 Jun 2007)
+
+  28 Jun 2007; Rob Cakebread <pythonhead@gentoo.org> -pygments-0.8.ebuild,
+  +pygments-0.8.1.ebuild:
+  Version bump, removed old version.
+
+  18 Jun 2007; Markus Rothe <corsair@gentoo.org> pygments-0.8.ebuild:
+  Added ~ppc64
+
+*pygments-0.8 (30 May 2007)
+
+  30 May 2007; Rob Cakebread <pythonhead@gentoo.org>
+  -files/pygments-0.7.1-_mapping.py-ebuild.patch,
+  -files/pygments-0.7.1-html_formatter.patch,
+  -files/pygments-0.7.1-other.py-ebuild.patch,
+  +files/pygments-0.8-_mapping.py-ebuild.patch,
+  +files/pygments-0.8-other.py-ebuild.patch, -pygments-0.7.1.ebuild,
+  +pygments-0.8.ebuild:
+  Version bump, removed old version.
+
+  05 May 2007; Lukasz Strzygowski <lucass@gentoo.org> pygments-0.7.1.ebuild:
+  Minor cleanup. Keyworded ~amd64 (bug #176459).
+
+*pygments-0.7.1 (14 Apr 2007)
+
+  14 Apr 2007; Rob Cakebread <pythonhead@gentoo.org>
+  +files/pygments-0.7.1-_mapping.py-ebuild.patch,
+  +files/pygments-0.7.1-html_formatter.patch,
+  +files/pygments-0.7.1-other.py-ebuild.patch, +metadata.xml,
+  +pygments-0.7.1.ebuild:
+  Initial commit. Thanks Georg Brandl <g.brandl@gmx.net> bug #167115

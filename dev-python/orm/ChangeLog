@@ -1,0 +1,35 @@
+# ChangeLog for dev-python/orm
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/ChangeLog,v 1.9 2010/07/23 23:36:00 arfrever Exp $
+
+  23 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  orm-1.0.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  03 Feb 2009; Patrick Lauer <patrick@gentoo.org> orm-1.0.1.ebuild:
+  Adding ~amd64 keyword, fixing default IUSE for bug #254759
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
+
+  28 Jul 2006; Alastair Tse <liquidx@gentoo.org> orm-0.15.ebuild,
+  orm-1.0.1.ebuild:
+  Preparing psycopg deps for slotted psycopg-2.0.2 (#125719)
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+*orm-1.0.1 (14 Oct 2004)
+
+  14 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +orm-1.0.1.ebuild:
+  version bump
+
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> orm-0.15.ebuild:
+  Don't use  in SRC_URI..
+
+*orm-0.15 (02 May 2004)
+
+  02 May 2004; Bryan Østergaard <kloeri@gentoo.org> +metadata.xml,
+  +orm-0.15.ebuild:
+  Initial import, bug #47255.
+

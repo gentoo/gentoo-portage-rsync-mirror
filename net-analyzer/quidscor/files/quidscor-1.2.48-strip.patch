@@ -1,0 +1,10 @@
+--- quidscor-1.2.48/Makefile.orig	2009-01-22 20:51:23.000000000 +0100
++++ quidscor-1.2.48/Makefile	2009-01-22 20:52:29.000000000 +0100
+@@ -69,7 +69,6 @@
+ 
+ $(PNAME): $(PNAME).debug	 
+ 	$(CP) $(PNAME).debug $@
+-	$(STRIP) $@	 
+ 
+ $(PNAME).debug: libqg/libqg.a $(OFILES) Makefile
+ 	$(CC) $(LDFLAGS) $(CFLAGS) -o $@ $(OFILES) $(LIBS)

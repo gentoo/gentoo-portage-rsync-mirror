@@ -1,0 +1,92 @@
+# ChangeLog for sys-kernel/rt-sources
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/ChangeLog,v 1.15 2012/04/11 14:42:39 psomas Exp $
+
+*rt-sources-3.0.27_p46 (11 Apr 2012)
+
+  11 Apr 2012; <psomas@gentoo.org> -rt-sources-3.0.8_p23.ebuild,
+  -rt-sources-3.0.9_p25.ebuild, -rt-sources-3.0.10_p27.ebuild,
+  -rt-sources-3.0.12_p29.ebuild, -rt-sources-3.0.12_p30.ebuild,
+  +rt-sources-3.0.27_p46.ebuild:
+  Version bump and cleanup for 3.0.x
+
+*rt-sources-3.2.14_p24 (11 Apr 2012)
+
+  11 Apr 2012; <psomas@gentoo.org> +rt-sources-3.2.14_p24.ebuild:
+  Version bump
+
+  15 Jan 2012; Torsten Veller <tove@gentoo.org> rt-sources-3.0.8_p23.ebuild,
+  rt-sources-3.0.9_p25.ebuild, rt-sources-3.0.10_p27.ebuild,
+  rt-sources-3.0.12_p29.ebuild, rt-sources-3.0.12_p30.ebuild,
+  rt-sources-3.0.14_p31.ebuild:
+  Fix cvs keyword in the header (#398773)
+
+*rt-sources-3.0.14_p31 (22 Dec 2011)
+
+  22 Dec 2011; Stratos Psomadakis <psomas@gentoo.org>
+  +rt-sources-3.0.14_p31.ebuild:
+  Version bump
+
+*rt-sources-3.0.12_p30 (08 Dec 2011)
+
+  08 Dec 2011; Stratos Psomadakis <psomas@gentoo.org>
+  +rt-sources-3.0.12_p30.ebuild:
+  Version bump
+
+*rt-sources-3.0.12_p29 (02 Dec 2011)
+
+  02 Dec 2011; Stratos Psomadakis <psomas@gentoo.org>
+  +rt-sources-3.0.12_p29.ebuild:
+  Version bump
+
+  27 Nov 2011; Stratos Psomadakis <psomas@gentoo.org>
+  -rt-sources-3.0.3_p12-r1.ebuild, -rt-sources-3.0.8_p22.ebuild:
+  Old version cleanup
+
+*rt-sources-3.0.10_p27 (27 Nov 2011)
+
+  27 Nov 2011; Stratos Psomadakis <psomas@gentoo.org>
+  +rt-sources-3.0.10_p27.ebuild:
+  Version bump
+
+*rt-sources-3.0.9_p25 (12 Nov 2011)
+
+  12 Nov 2011; Stratos Psomadakis <psomas@gentoo.org>
+  +rt-sources-3.0.9_p25.ebuild:
+  Version bump
+
+*rt-sources-3.0.8_p23 (09 Nov 2011)
+
+  09 Nov 2011; Stratos Psomadakis <psomas@gentoo.org>
+  +rt-sources-3.0.8_p23.ebuild:
+  Version bump
+
+*rt-sources-3.0.8_p22 (08 Nov 2011)
+
+  08 Nov 2011; Stratos Psomadakis <psomas@gentoo.org>
+  -rt-sources-3.0.1_p11.ebuild, -rt-sources-3.0.3_p12.ebuild,
+  +rt-sources-3.0.8_p22.ebuild:
+  Version bump, and cleanup
+
+*rt-sources-3.0.3_p12-r1 (31 Aug 2011)
+
+  31 Aug 2011; Stratos Psomadakis <psomas@gentoo.org>
+  +rt-sources-3.0.3_p12-r1.ebuild, metadata.xml:
+  Add deblob support
+
+*rt-sources-3.0.3_p12 (27 Aug 2011)
+
+  27 Aug 2011; Stratos Psomadakis <psomas@gentoo.org>
+  +rt-sources-3.0.3_p12.ebuild:
+  Version bump
+
+  19 Aug 2011; Stratos Psomadakis <psomas@gentoo.org>
+  rt-sources-3.0.1_p11.ebuild, metadata.xml:
+  Correct SRC_URI for the rt patch
+
+*rt-sources-3.0.1_p11 (17 Aug 2011)
+
+  17 Aug 2011; Stratos Psomadakis <psomas@gentoo.org>
+  +rt-sources-3.0.1_p11.ebuild, +metadata.xml:
+  New package and ebuild for the real-time kernel patchset
+

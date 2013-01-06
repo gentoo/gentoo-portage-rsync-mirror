@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/clustal-omega
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustal-omega/ChangeLog,v 1.1 2011/09/25 22:35:59 weaver Exp $
+
+*clustal-omega-1.0.3 (25 Sep 2011)
+
+  25 Sep 2011; Andrey Kislyuk <weaver@gentoo.org>
+  +clustal-omega-1.0.3.ebuild, +metadata.xml:
+  New package, ebuild written by me
+

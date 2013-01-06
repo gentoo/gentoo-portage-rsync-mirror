@@ -1,0 +1,42 @@
+diff -ur gcl-2.6.7.orig/configure.in gcl-2.6.7/configure.in
+--- gcl-2.6.7.orig/configure.in	2005-01-15 13:17:17.000000000 -0600
++++ gcl-2.6.7/configure.in	2006-01-12 15:10:46.000000000 -0600
+@@ -526,26 +526,26 @@
+ AC_CHECK_PROGS(MAKEINFO,makeinfo,"false")
+ AC_SUBST(MAKEINFO)
+ 
+-if test -f /usr/lib/NextStep/software_version; then
+-    system=NEXTSTEP-`${AWK} '/3/,/3/' /usr/lib/NextStep/software_version`
+-else
++dnl if test -f /usr/lib/NextStep/software_version; then
++dnl     system=NEXTSTEP-`${AWK} '/3/,/3/' /usr/lib/NextStep/software_version`
++dnl else
+     system=`uname -s`-`uname -r`
+     if test "$?" -ne 0 ; then
+ 	AC_MSG_RESULT([unknown (can't find uname command)])
+ 	system=unknown
+     else
+-	# Special check for weird MP-RAS system (uname returns weird
+-	# results, and the version is kept in special file).
++dnl 	# Special check for weird MP-RAS system (uname returns weird
++dnl 	# results, and the version is kept in special file).
+     
+-	if test -r /etc/.relid -a "X`uname -n`" = "X`uname -s`" ; then
+-	    system=MP-RAS-`${AWK} '{print $3}' /etc/.relid'`
+-	fi
+-	if test "`uname -s`" = "AIX" ; then
+-	    system=AIX-`uname -v`.`uname -r`
+-	fi
++dnl 	if test -r /etc/.relid -a "X`uname -n`" = "X`uname -s`" ; then
++dnl 	    system=MP-RAS-`${AWK} '{print $3}' /etc/.relid'`
++dnl 	fi
++dnl 	if test "`uname -s`" = "AIX" ; then
++dnl 	    system=AIX-`uname -v`.`uname -r`
++dnl 	fi
+ 	AC_MSG_RESULT($system)
+     fi
+-fi
++dnl fi
+ 
+ # sysconf
+ 

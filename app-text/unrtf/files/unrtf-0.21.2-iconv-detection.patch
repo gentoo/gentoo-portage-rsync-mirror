@@ -1,0 +1,11 @@
+--- a/configure.ac
++++ b/configure.ac
+@@ -45,6 +45,8 @@
+ case $host in
+     *-*-cygwin*)	AC_SUBST(LIBS, ["-liconv"]);;
+     *aix*)		AC_SUBST(LIBS, ["-liconv"]);;
++    *-*-darwin*)	AC_SUBST(LIBS, ["-liconv"]);;
++    *-*-solaris*)	AC_SUBST(LIBS, ["-liconv"]);;
+ esac
+ 
+ AC_CONFIG_FILES([Makefile

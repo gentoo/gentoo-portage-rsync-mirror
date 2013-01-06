@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/docutils-glep
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils-glep/ChangeLog,v 1.1 2012/12/31 12:15:59 mgorny Exp $
+
+*docutils-glep-0.4-r1 (31 Dec 2012)
+
+  31 Dec 2012; Michał Górny <mgorny@gentoo.org> +docutils-glep-0.4-r1.ebuild,
+  +metadata.xml:
+  Introduce a split ebuild for GLEP support for docutils.

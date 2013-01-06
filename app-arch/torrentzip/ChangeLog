@@ -1,0 +1,24 @@
+# ChangeLog for app-arch/torrentzip
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/torrentzip/ChangeLog,v 1.4 2009/10/12 16:51:50 halcy0n Exp $
+
+  12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> torrentzip-0.2-r1.ebuild:
+  QA fixes; unquoted variables
+
+  04 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
+  torrentzip-0.2-r1.ebuild:
+  Use eautoreconf, not the bootstrap script.
+
+*torrentzip-0.2-r1 (23 Jul 2007)
+
+  23 Jul 2007; Raúl Porcel <armin76@gentoo.org> +files/fix-perms.patch,
+  -torrentzip-0.2.ebuild, +torrentzip-0.2-r1.ebuild:
+  Fix permissions, bug #182628
+
+*torrentzip-0.2 (18 Jun 2006)
+
+  18 Jun 2006; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +torrentzip-0.2.ebuild:
+  Initial import. Thanks to Avuton Olrich <avuton@gmail.com> and Timothy
+  Redaelli <drizzt@gufi.org> for this package, #91493.
+

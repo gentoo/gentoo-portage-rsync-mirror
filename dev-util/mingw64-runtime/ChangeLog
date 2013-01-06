@@ -1,0 +1,59 @@
+# ChangeLog for dev-util/mingw64-runtime
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/ChangeLog,v 1.10 2012/06/06 19:58:24 vapier Exp $
+
+  06 Jun 2012; Mike Frysinger <vapier@gentoo.org> mingw64-runtime-2.0.1.ebuild:
+  Always provide mingw symlink in sysroot for gcc #419601 by Alon Bar-Lev.
+
+*mingw64-runtime-2.0.1 (12 Mar 2012)
+
+  12 Mar 2012; Mike Frysinger <vapier@gentoo.org>
+  +mingw64-runtime-2.0.1.ebuild, -mingw64-runtime-20100730.ebuild,
+  -mingw64-runtime-20101003.ebuild, -mingw64-runtime-20110523.ebuild:
+  Version bump #388263 by Sven & Alon Bar-Lev.
+
+*mingw64-runtime-20110523 (14 Jul 2011)
+
+  14 Jul 2011; Mike Frysinger <vapier@gentoo.org>
+  +mingw64-runtime-20110523.ebuild:
+  Version bump.
+
+*mingw64-runtime-20101003 (19 Nov 2010)
+
+  19 Nov 2010; Mike Frysinger <vapier@gentoo.org>
+  +mingw64-runtime-20101003.ebuild:
+  Version bump.
+
+*mingw64-runtime-20100730 (14 Aug 2010)
+
+  14 Aug 2010; Mike Frysinger <vapier@gentoo.org>
+  +mingw64-runtime-20100730.ebuild:
+  Version bump #332053 by Alon Bar-Lev.
+
+*mingw64-runtime-20100604 (22 Jun 2010)
+
+  22 Jun 2010; Mike Frysinger <vapier@gentoo.org>
+  +mingw64-runtime-20100604.ebuild:
+  Version bump #323583 by Alon Bar-Lev.
+
+  12 Jan 2010; Mike Frysinger <vapier@gentoo.org>
+  mingw64-runtime-20091222.ebuild:
+  Drop dir changing to fix patch application #300719 by Thomas Axelsson.
+
+  24 Dec 2009; Mike Frysinger <vapier@gentoo.org>
+  mingw64-runtime-20091222.ebuild,
+  +files/mingw64-runtime-20091222-mm_shuffle_ps-x86.patch:
+  Add fix from upstream for 32bit toolchains #298087 by Alon Bar-Lev.
+
+*mingw64-runtime-20091222 (22 Dec 2009)
+
+  22 Dec 2009; Mike Frysinger <vapier@gentoo.org>
+  +mingw64-runtime-20091222.ebuild:
+  Version bump #297819 by Alon Bar-Lev.
+
+*mingw64-runtime-20090419 (09 Dec 2009)
+
+  09 Dec 2009; Mike Frysinger <vapier@gentoo.org>
+  +mingw64-runtime-20090419.ebuild, +metadata.xml:
+  Initial ebuild based on mingw-runtime by Suertreus #271197.
+

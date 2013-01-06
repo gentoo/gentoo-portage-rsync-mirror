@@ -1,0 +1,35 @@
+# ChangeLog for dev-perl/POE-Component-IKC
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-Component-IKC/ChangeLog,v 1.7 2012/11/18 11:32:20 robbat2 Exp $
+
+  18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Drop duplication of myself as a maintainer where there is a herd.
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  21 Apr 2012; Torsten Veller <tove@gentoo.org>
+  -POE-Component-IKC-0.220.0.ebuild:
+  Cleanup
+
+*POE-Component-IKC-0.230.2 (11 Sep 2011)
+
+  11 Sep 2011; Robin H. Johnson <robbat2@gentoo.org>
+  +POE-Component-IKC-0.230.2.ebuild:
+  Version bump via perl-bump experimental tool.
+
+*POE-Component-IKC-0.220.0 (26 Feb 2011)
+
+  26 Feb 2011; Torsten Veller <tove@gentoo.org>
+  +POE-Component-IKC-0.220.0.ebuild, -POE-Component-IKC-0.2200.ebuild:
+  Change version scheme. Looks like a downgrade
+
+  23 Jun 2009; Torsten Veller <tove@gentoo.org>
+  POE-Component-IKC-0.2200.ebuild:
+  Add description
+
+*POE-Component-IKC-0.2200 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +POE-Component-IKC-0.2200.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.

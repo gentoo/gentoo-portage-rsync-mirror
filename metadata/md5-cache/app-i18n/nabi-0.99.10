@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install postinst
+DEPEND=>=x11-libs/gtk+-2.4:2 >=app-i18n/libhangul-0.1.0 virtual/libintl virtual/pkgconfig sys-devel/gettext
+DESCRIPTION=Simple Hanguk X Input Method
+EAPI=3
+HOMEPAGE=http://nabi.kldp.net/
+IUSE=debug nls
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=>=x11-libs/gtk+-2.4:2 >=app-i18n/libhangul-0.1.0 virtual/libintl
+SLOT=0
+SRC_URI=http://kldp.net/frs/download.php/6003/nabi-0.99.10.tar.gz
+_md5_=5dae7c5713f4b9a207c2dd637b0a60bc

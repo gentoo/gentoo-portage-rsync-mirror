@@ -1,0 +1,15 @@
+http://bugs.gentoo.org/show_bug.cgi?id=423155#c3
+http://libiphone.lighthouseapp.com/projects/27916-libiphone/tickets/265
+
+--- src/userpref.c
++++ src/userpref.c
+@@ -125,6 +125,9 @@
+	const char *cdir = getenv("XDG_CONFIG_HOME");
+	if (!cdir) {
+		cdir = getenv("HOME");
++		if (!cdir) {
++			cdir="/root";
++		}
+		strcpy(__config_dir, cdir);
+		strcat(__config_dir, DIR_SEP_S);
+		strcat(__config_dir, ".config");

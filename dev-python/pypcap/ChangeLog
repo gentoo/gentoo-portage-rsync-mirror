@@ -1,0 +1,48 @@
+# ChangeLog for dev-python/pypcap
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/ChangeLog,v 1.12 2012/04/02 10:21:13 naota Exp $
+
+  02 Apr 2012; Naohiro Aota <naota@gentoo.org> pypcap-1.1-r1.ebuild:
+  Add ~x86-fbsd
+
+  22 Feb 2012; Patrick Lauer <patrick@gentoo.org> pypcap-1.1-r1.ebuild:
+  Restricting jython
+
+  08 Jan 2012; Markos Chandras <hwoarang@gentoo.org> pypcap-1.1-r1.ebuild:
+  Fix building with net-libs/libpcap[-static-libs] (bug #397647). Patch by
+  Arfrever
+
+  02 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> pypcap-1.1-r1.ebuild:
+  Use net-libs/libpcap instead of virtual/libpcap wrt #358835.
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pypcap-1.1-r1.ebuild:
+  Fix tests (bug #318401).
+
+  08 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pypcap-1.1-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  07 Feb 2010; Peter Volkov <pva@gentoo.org> pypcap-1.1-r1.ebuild:
+  Add inherit eutils: epatch is defined there.
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -pypcap-1.1.ebuild:
+  Remove old
+
+*pypcap-1.1-r1 (18 Apr 2009)
+
+  18 Apr 2009; Patrick Lauer <patrick@gentoo.org> +files/include_path.patch,
+  +pypcap-1.1-r1.ebuild:
+  Small patch to fix compilation issues, thanks to Mike Kazantsev. Closes
+  #247145
+
+  23 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org> pypcap-1.1.ebuild:
+  Marked ~amd64.
+
+  22 Jun 2007; Ali Polatel <hawking@gentoo.org> pypcap-1.1.ebuild:
+  use pyrex to regenerate pcap.c. bug #180039 (thanks to Santiago M. Mola
+  Velasco)
+
+  06 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> +pypcap-1.1.ebuild:
+  New ebuild for bug #165531 (thanks to Santiago M. Mola Velasco).
+

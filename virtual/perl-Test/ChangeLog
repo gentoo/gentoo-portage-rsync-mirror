@@ -1,0 +1,44 @@
+# ChangeLog for virtual/perl-Test
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test/ChangeLog,v 1.10 2012/05/21 11:50:36 tove Exp $
+
+*perl-Test-1.250.200_rc-r1 (21 May 2012)
+
+  21 May 2012; Torsten Veller <tove@gentoo.org> -perl-Test-1.250.200_rc.ebuild,
+  +perl-Test-1.250.200_rc-r1.ebuild:
+  Add perl-5.16 as provider
+
+*perl-Test-1.250.200_rc (21 Apr 2012)
+
+  21 Apr 2012; Torsten Veller <tove@gentoo.org> +perl-Test-1.250.200_rc.ebuild:
+  Version bump
+
+  21 Jan 2010; Torsten Veller <tove@gentoo.org> perl-Test-1.25.ebuild:
+  mips -> ~mips
+
+  07 Jan 2010; Torsten Veller <tove@gentoo.org> perl-Test-1.25.ebuild:
+  Set empty HOMEPAGE and LICENSE
+
+  30 Jan 2009; Torsten Veller <tove@gentoo.org> metadata.xml,
+  -perl-Test-1.24.ebuild:
+  Cleanup
+
+  26 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  perl-Test-1.25.ebuild:
+  Updating deps
+
+  27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-perl-Test-1.24,
+  files/digest-perl-Test-1.25, Manifest:
+  Fixing SHA256 digest, pass four
+
+  13 Feb 2006; Michael Cummings <mcummings@gentoo.org>
+  perl-Test-1.25.ebuild:
+  Updated RDEPS
+
+*perl-Test-1.25 (07 Feb 2006)
+*perl-Test-1.24 (07 Feb 2006)
+
+  07 Feb 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +perl-Test-1.24.ebuild, +perl-Test-1.25.ebuild:
+  New virtual for perl-core/Test
+

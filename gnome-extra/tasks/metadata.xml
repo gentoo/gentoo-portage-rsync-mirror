@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>eva@gentoo.org</email>
+		<name>Gilles Dartiguelongue</name>
+	</maintainer>
+	<herd>gnome</herd>
+	<longdescription lang="en">
+		Tasks is a simple To Do list application that eschews complicated
+		features for a lean interface and functionality that just does the right
+		thing. It has a simple interface with little cruft around the list of
+		tasks, and is ported to the OpenMoko and Maemo frameworks.
+	</longdescription>
+</pkgmetadata>
+

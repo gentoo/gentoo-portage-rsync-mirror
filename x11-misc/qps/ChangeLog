@@ -1,0 +1,18 @@
+# ChangeLog for x11-misc/qps
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qps/ChangeLog,v 1.2 2012/02/02 13:16:24 johu Exp $
+
+*qps-1.10.16 (02 Feb 2012)
+
+  02 Feb 2012; Johannes Huber <johu@gentoo.org> +qps-1.10.16.ebuild,
+  qps-1.10.12.1.ebuild:
+  Version bump wrt bug #401775. Fixes bug #369317. Thanks to kensington
+  <gentoo@scribeofthenile.com>.
+
+*qps-1.10.12.1 (17 Dec 2009)
+
+  17 Dec 2009; Dror Levin <spatz@gentoo.org> +qps-1.10.12.1.ebuild,
+  +metadata.xml:
+  Moved from qting-edge overlay, bug 173935. Thanks to Thomas Loeber, Davide
+  Pesavento and ayoy.
+

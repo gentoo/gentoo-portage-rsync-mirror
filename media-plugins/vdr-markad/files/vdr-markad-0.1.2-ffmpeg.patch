@@ -1,0 +1,40 @@
+Index: markad-0.1.2/command/decoder.cpp
+===================================================================
+--- markad-0.1.2.orig/command/decoder.cpp
++++ markad-0.1.2/command/decoder.cpp
+@@ -163,7 +163,7 @@ cMarkAdDecoder::cMarkAdDecoder(bool useH
+             if (mp2_context)
+             {
+                 mp2_context->codec_id = mp2_codecid;
+-                mp2_context->codec_type = CODEC_TYPE_AUDIO;
++                mp2_context->codec_type = AVMEDIA_TYPE_AUDIO;
+                 if (avcodec_open(mp2_context, mp2_codec) < 0)
+                 {
+                     esyslog("could not open codec for MP2");
+@@ -198,7 +198,7 @@ cMarkAdDecoder::cMarkAdDecoder(bool useH
+             if (ac3_context)
+             {
+                 ac3_context->codec_id = ac3_codecid;
+-                ac3_context->codec_type = CODEC_TYPE_AUDIO;
++                ac3_context->codec_type = AVMEDIA_TYPE_AUDIO;
+                 if (avcodec_open(ac3_context, ac3_codec) < 0)
+                 {
+                     esyslog("could not open codec for AC3");
+@@ -265,7 +265,7 @@ cMarkAdDecoder::cMarkAdDecoder(bool useH
+                 video_context->skip_frame=AVDISCARD_NONKEY; // just I-frames
+             }
+             video_context->codec_id = video_codecid;
+-            video_context->codec_type = CODEC_TYPE_VIDEO;
++            video_context->codec_type = AVMEDIA_TYPE_VIDEO;
+             int ret=avcodec_open(video_context, video_codec);
+             if ((ret < 0) && (video_codecid==CODEC_ID_MPEG2VIDEO_XVMC))
+             {
+@@ -274,7 +274,7 @@ cMarkAdDecoder::cMarkAdDecoder(bool useH
+                 video_codec=avcodec_find_decoder(video_codecid);
+                 if (video_codec)
+                 {
+-                    video_context->codec_type=CODEC_TYPE_UNKNOWN;
++                    video_context->codec_type=AVMEDIA_TYPE_UNKNOWN;
+                     video_context->codec_id=CODEC_ID_NONE;
+                     video_context->codec_tag=0;
+                     memset(video_context->codec_name,0,sizeof(video_context->codec_name));

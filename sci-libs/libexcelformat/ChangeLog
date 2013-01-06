@@ -1,0 +1,13 @@
+# ChangeLog for sci-libs/libexcelformat
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libexcelformat/ChangeLog,v 1.2 2010/10/18 09:53:11 jlec Exp $
+
+  18 Oct 2010; Justin Lecher <jlec@gentoo.org> libexcelformat-101016.ebuild:
+  Keywoprded ~-linux prefix
+
+*libexcelformat-101016 (17 Oct 2010)
+
+  17 Oct 2010; Justin Lecher <jlec@gentoo.org>
+  +libexcelformat-101016.ebuild, +metadata.xml:
+  Initial Commit
+

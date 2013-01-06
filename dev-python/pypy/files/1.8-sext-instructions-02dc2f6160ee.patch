@@ -1,0 +1,22 @@
+--- pypy/translator/c/gcc/trackgcroot.py.old	2012-02-15 14:11:38.551479431 -0800
++++ pypy/translator/c/gcc/trackgcroot.py	2012-02-15 00:55:20.082136135 -0800
+@@ -471,8 +471,8 @@
+         return []
+ 
+     IGNORE_OPS_WITH_PREFIXES = dict.fromkeys([
+-        'cmp', 'test', 'set', 'sahf', 'lahf', 'cltd', 'cld', 'std',
+-        'rep', 'movs', 'lods', 'stos', 'scas', 'cwtl', 'cwde', 'prefetch',
++        'cmp', 'test', 'set', 'sahf', 'lahf', 'cld', 'std',
++        'rep', 'movs', 'lods', 'stos', 'scas', 'cwde', 'prefetch',
+         # floating-point operations cannot produce GC pointers
+         'f',
+         'cvt', 'ucomi', 'comi', 'subs', 'subp' , 'adds', 'addp', 'xorp',
+@@ -485,6 +485,8 @@
+         'bswap', 'bt', 'rdtsc',
+         'punpck', 'pshufd', 'pcmp', 'pand', 'psllw', 'pslld', 'psllq',
+         'paddq', 'pinsr',
++        # sign-extending moves should not produce GC pointers
++        'cbtw', 'cwtl', 'cwtd', 'cltd', 'cltq', 'cqto',
+         # zero-extending moves should not produce GC pointers
+         'movz', 
+         # locked operations should not move GC pointers, at least so far

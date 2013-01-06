@@ -1,0 +1,21 @@
+# ChangeLog for dev-haskell/libmpd
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/libmpd/ChangeLog,v 1.4 2013/01/01 23:55:17 slyfox Exp $
+
+*libmpd-0.8.0.1-r1 (01 Jan 2013)
+
+  01 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org> +libmpd-0.8.0.1-r1.ebuild:
+  Version bump.
+
+  06 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> libmpd-0.7.2.ebuild:
+  Get rid of 'dev-haskell/time' depend as it's a ghc's core library.
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org> libmpd-0.7.2.ebuild:
+  move dev-haskell/libmpd/libmpd-0.7.2.ebuild ebuild to mirror://hackage
+
+*libmpd-0.7.2 (13 Apr 2012)
+
+  13 Apr 2012; Sergei Trofimovich <slyfox@gentoo.org> +libmpd-0.7.2.ebuild,
+  +metadata.xml:
+  Initial version. An MPD client library for haskell. Depend for
+  x11-misc/xmobar-0.14

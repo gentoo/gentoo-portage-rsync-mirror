@@ -1,0 +1,11 @@
+--- Makefile.old	2009-04-23 11:43:02.000000000 +0000
++++ Makefile	2009-04-23 11:43:16.000000000 +0000
+@@ -59,6 +59,8 @@ LIBS = $(IPTABLESPATH)/libiptc/libiptc.a
+ endif
+ endif
+ 
++CFLAGS := $(CFLAGS) -DIPTABLES_143
++
+ TESTUPNPDESCGENOBJS = testupnpdescgen.o upnpdescgen.o
+ 
+ EXECUTABLES = miniupnpd testupnpdescgen testgetifstats \

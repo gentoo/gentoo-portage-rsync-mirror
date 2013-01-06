@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=sys-libs/ncurses kerberos? ( virtual/krb5 ) ssl? ( dev-libs/openssl ) tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) sys-apps/sed
+DESCRIPTION=Proxy IMAP transactions between an IMAP client and an IMAP server.
+EAPI=4
+HOMEPAGE=http://www.imapproxy.org/
+IUSE=kerberos ssl +tcpd
+KEYWORDS=amd64 ~ppc x86
+LICENSE=GPL-2
+RDEPEND=sys-libs/ncurses kerberos? ( virtual/krb5 ) ssl? ( dev-libs/openssl ) tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
+SLOT=0
+SRC_URI=mirror://sourceforge/squirrelmail/squirrelmail-imap_proxy-1.2.7.tar.bz2
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=4ecf31328133f5c1dbfd35ad1163b25b

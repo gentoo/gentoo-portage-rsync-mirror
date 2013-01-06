@@ -1,0 +1,30 @@
+--- a/Makefile.in	2011-03-03 14:40:49.000000000 -0700
++++ b/Makefile.in	2011-05-09 11:34:55.000000000 -0600
+@@ -152,17 +152,16 @@
+ 	make localinstall BROWSERDIR=.opera
+ 
+ install:
+-	-@$(MKDIR) @bindir@
+-	-@$(MKDIR) $(prefix)$(libprefix)/mozilla/plugins
+-	-@$(MKDIR) @mandir@/man7
+-	-@$(MKDIR) @sysconfdir@
+-	cp mozplugger-helper     @bindir@
+-	cp mozplugger-controller @bindir@
+-	cp mozplugger-linker     @bindir@
+-	for target in ${PLUGINDIRS}; do cp mozplugger.so $${target}; done
+-#	cp mozplugger.so $(prefix)$(libprefix)/mozilla/plugins/
+-	cp $(srcdir)/mozpluggerrc  @sysconfdir@
+-	cp $(srcdir)/mozplugger.7  @mandir@/man7/
++	-@$(MKDIR) ${root}@bindir@
++	-@$(MKDIR) $(root)$(prefix)$(libprefix)/nsbrowser/plugins
++	-@$(MKDIR) ${root}@mandir@/man7
++	-@$(MKDIR) ${root}@sysconfdir@
++	cp mozplugger-helper     ${root}@bindir@
++	cp mozplugger-controller ${root}@bindir@
++	cp mozplugger-linker     ${root}@bindir@
++	cp mozplugger.so ${root}$(prefix)$(libprefix)/nsbrowser/plugins/
++	cp $(srcdir)/mozpluggerrc  ${root}@sysconfdir@
++	cp $(srcdir)/mozplugger.7  ${root}@mandir@/man7/
+ 
+ mozplugger.tar.gz: $(SOURCE_FILES)
+ 	@( DIR=`pwd`;\

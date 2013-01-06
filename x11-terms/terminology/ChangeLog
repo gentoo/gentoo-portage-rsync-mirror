@@ -1,0 +1,10 @@
+# ChangeLog for x11-terms/terminology
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminology/ChangeLog,v 1.1 2012/12/19 16:35:13 sera Exp $
+
+*terminology-0.2.0 (19 Dec 2012)
+
+  19 Dec 2012; Ralph Sennhauser <sera@gentoo.org> +terminology-0.2.0.ebuild,
+  +metadata.xml:
+  New package.
+

@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DEPEND=nls? ( sys-devel/gettext )
+DESCRIPTION=DDCControl monitor database
+HOMEPAGE=http://ddccontrol.sourceforge.net/
+IUSE=nls
+KEYWORDS=~x86
+LICENSE=GPL-2
+RDEPEND=nls? ( sys-devel/gettext )
+SLOT=0
+SRC_URI=mirror://sourceforge/ddccontrol/ddccontrol-db-20050715.tar.gz
+_md5_=95a2a970946dd5ce77b2a942ecba3c5f

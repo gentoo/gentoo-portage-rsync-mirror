@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>printing</herd>
+	<use>
+		<flag name="bindist">Disable dejavu support for binary distribution because of licensing issue</flag>
+	</use>
+</pkgmetadata>

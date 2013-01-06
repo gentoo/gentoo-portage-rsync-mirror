@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/sword-tfg
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-tfg/ChangeLog,v 1.1 2008/05/17 02:43:10 beandog Exp $
+
+*sword-tfg-1.5 (17 May 2008)
+
+  17 May 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +sword-tfg-1.5.ebuild:
+  Initial commit
+

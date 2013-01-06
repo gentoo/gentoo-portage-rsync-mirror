@@ -1,0 +1,11 @@
+--- ropemacs-orig/setup.py
++++ ropemacs/setup.py
+@@ -23,7 +23,7 @@
+       version='0.6',
+       description='An emacs mode for using rope python refactoring library',
+       long_description=get_long_description(),
+-      packages=['ropemode', 'ropemacs'],
++      packages=['ropemacs'],
+       author='Ali Gholami Rudi',
+       author_email='aligrudi@users.sourceforge.net',
+       url='http://rope.sf.net/ropemacs.html',

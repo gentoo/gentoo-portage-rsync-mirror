@@ -1,0 +1,13 @@
+Index: openpam-20050616/lib/Makefile.am
+===================================================================
+--- openpam-20050616.orig/lib/Makefile.am
++++ openpam-20050616/lib/Makefile.am
+@@ -50,8 +50,6 @@ libpam_la_SOURCES = \
+ 	pam_vprompt.c \
+ 	$(NULL)
+ 
+-libpam_la_CFLAGS = -DOPENPAM_MODULES_DIR='"@OPENPAM_MODULES_DIR@/"'
+-
+ libpam_la_LDFLAGS = -no-undefined -version-info @LIB_MAJ@ @DL_LIBS@
+ 
+ # Not implemented yet:

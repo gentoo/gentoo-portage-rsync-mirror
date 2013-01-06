@@ -1,0 +1,16 @@
+# ChangeLog for sci-biology/yass
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/yass/ChangeLog,v 1.2 2010/06/21 15:31:15 jlec Exp $
+
+*yass-1.14-r1 (21 Jun 2010)
+
+  21 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/1.14-as-needed.patch,
+  +yass-1.14-r1.ebuild:
+  As-needed fix 324945, added threads and lowmem USE
+
+*yass-1.14 (18 Jun 2010)
+
+  18 Jun 2010; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +yass-1.14.ebuild:
+  New package, ebuild written by me
+

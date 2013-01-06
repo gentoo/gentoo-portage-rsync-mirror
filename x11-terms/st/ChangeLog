@@ -1,0 +1,43 @@
+# ChangeLog for x11-terms/st
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.9 2012/12/17 21:56:50 xmw Exp $
+
+  17 Dec 2012; Michael Weber <xmw@gentoo.org> st-9999.ebuild:
+  Update live ebuild from mercurial to git (thanks Andreas Wiese, bug 447564)
+
+  07 Nov 2012; Jeroen Roovers <jer@gentoo.org> st-0.3.ebuild:
+  Show elog messages only on first install.
+
+  07 Nov 2012; Jeroen Roovers <jer@gentoo.org> st-0.3.ebuild:
+  Add more deps.
+
+*st-0.3 (07 Nov 2012)
+
+  07 Nov 2012; Jeroen Roovers <jer@gentoo.org> +st-0.3.ebuild:
+  Version bump.
+
+  07 Mar 2012; Jeroen Roovers <jer@gentoo.org> st-0.1.1.ebuild,
+  st-0.2.1.ebuild, st-9999.ebuild:
+  Do not install installation instructions (README).
+
+*st-0.2.1 (07 Mar 2012)
+
+  07 Mar 2012; Jeroen Roovers <jer@gentoo.org> st-0.1.1.ebuild,
+  +st-0.2.1.ebuild, st-9999.ebuild:
+  Do not hard-code version in SRC_URI. Use SRC_URI arrows. Do not set SRC_URI
+  in 9999 ebuild. Version bump.
+
+  04 Jan 2012; Mike Frysinger <vapier@gentoo.org> st-0.1.1.ebuild,
+  st-9999.ebuild:
+  Drop `use savedconfig` logic that the savedconfig eclass handles itself.
+
+  04 Nov 2011; Michael Weber <xmw@gentoo.org> st-0.1.1.ebuild, st-9999.ebuild:
+  Added font warning (bug 369621)
+
+*st-9999 (31 May 2011)
+*st-0.1.1 (31 May 2011)
+
+  31 May 2011; Michael Weber <xmw@gentoo.org> +st-0.1.1.ebuild,
+  +st-9999.ebuild, +metadata.xml:
+  Initial import
+

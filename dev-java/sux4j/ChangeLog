@@ -1,0 +1,15 @@
+# ChangeLog for dev-java/sux4j
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sux4j/ChangeLog,v 1.2 2009/07/11 07:33:37 ali_bush Exp $
+
+*sux4j-2.0 (11 Jul 2009)
+
+  11 Jul 2009; Alistair Bush <ali_bush@gentoo.org> +sux4j-2.0.ebuild:
+  Version Bump.
+
+*sux4j-1.0.1 (15 Apr 2008)
+
+  15 Apr 2008; Alistair Bush <ali_bush@gentoo.org> +metadata.xml,
+  +sux4j-1.0.1.ebuild:
+  New Package.
+

@@ -1,0 +1,75 @@
+# ChangeLog for dev-php/pecl-memcached
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcached/ChangeLog,v 1.8 2012/10/21 09:13:49 maekke Exp $
+
+  21 Oct 2012; Markus Meier <maekke@gentoo.org> pecl-memcached-2.0.1.ebuild:
+  x86 stable, bug #427024
+
+*pecl-memcached-2.1.0-r1 (05 Sep 2012)
+
+  05 Sep 2012; Ole Markus With <olemarkus@gentoo.org>
+  +pecl-memcached-2.1.0-r1.ebuild:
+  Revbump to fix libmemcached dependency. Bug 430344
+
+  22 Aug 2012; Agostino Sarubbo <ago@gentoo.org> pecl-memcached-2.0.1.ebuild:
+  Stable for amd64, wrt bug #427024
+
+*pecl-memcached-2.1.0 (07 Aug 2012)
+
+  07 Aug 2012; Ole Markus With <olemarkus@gentoo.org>
+  +pecl-memcached-2.1.0.ebuild:
+  Version bump
+
+*pecl-memcached-2.0.1 (03 Mar 2012)
+
+  03 Mar 2012; Ole Markus With <olemarkus@gentoo.org>
+  +pecl-memcached-2.0.1.ebuild, -pecl-memcached-2.0.0.ebuild,
+  -pecl-memcached-2.0.0_beta2.ebuild:
+  Version bump
+
+*pecl-memcached-2.0.0 (03 Mar 2012)
+
+  03 Mar 2012; Ole Markus With <olemarkus@gentoo.org>
+  +pecl-memcached-2.0.0.ebuild:
+  Version bump
+
+  15 Jan 2012; Ole Markus With <olemarkus@gentoo.org>
+  pecl-memcached-1.0.2-r1.ebuild, pecl-memcached-2.0.0_beta2.ebuild:
+  Remove PHP_USE.
+
+*pecl-memcached-2.0.0_beta2 (19 Aug 2011)
+
+  19 Aug 2011; Ole Markus With <olemarkus@gentoo.org>
+  +pecl-memcached-2.0.0_beta2.ebuild, metadata.xml:
+  Added 2.0.0 beta2. Bug 365707
+
+  10 Apr 2011; Christian Faulhammer <fauli@gentoo.org>
+  pecl-memcached-1.0.2-r1.ebuild:
+  stable x86, bug 349898
+
+  01 Jan 2011; Markos Chandras <hwoarang@gentoo.org>
+  pecl-memcached-1.0.2-r1.ebuild:
+  Stable on amd64 wrt bug #349898
+
+*pecl-memcached-1.0.2-r1 (05 Nov 2010)
+
+  05 Nov 2010; <olemarkus@gentoo.org> +pecl-memcached-1.0.2-r1.ebuild:
+  Revbump supporting minor version slotting
+
+*pecl-memcached-1.0.2 (18 Jun 2010)
+
+  18 Jun 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +pecl-memcached-1.0.2.ebuild:
+  Bug #324049: version bump.
+
+*pecl-memcached-1.0.1 (24 Mar 2010)
+
+  24 Mar 2010; Robin H. Johnson <robbat2@gentoo.org>
+  +pecl-memcached-1.0.1.ebuild:
+  Bug #309837: version bump.
+
+*pecl-memcached-1.0.0 (30 Nov 2009)
+
+  30 Nov 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +pecl-memcached-1.0.0.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.

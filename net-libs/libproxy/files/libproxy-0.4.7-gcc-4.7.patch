@@ -1,0 +1,80 @@
+From 8dbcf9b358f50f7a7c1f1368d167999c31b1e86b Mon Sep 17 00:00:00 2001
+From: "dominique.leuenberger@gmail.com"
+ <dominique.leuenberger@gmail.com@c587cffe-e639-0410-9787-d7902ae8ed56>
+Date: Fri, 9 Mar 2012 17:47:15 +0000
+Subject: [PATCH] Fix build with gcc 4.7. Fixes issue 173
+
+git-svn-id: http://libproxy.googlecode.com/svn/trunk@833 c587cffe-e639-0410-9787-d7902ae8ed56
+---
+ libproxy/modules/config_sysconfig.cpp |    3 +++
+ libproxy/modules/pacrunner_mozjs.cpp  |    1 +
+ libproxy/modules/pacrunner_natus.cpp  |    1 +
+ libproxy/modules/pacrunner_webkit.cpp |    1 +
+ libproxy/url.cpp                      |    1 +
+ 5 files changed, 7 insertions(+), 0 deletions(-)
+
+diff --git a/libproxy/modules/config_sysconfig.cpp b/libproxy/modules/config_sysconfig.cpp
+index 616585a..6e97ae8 100644
+--- a/libproxy/modules/config_sysconfig.cpp
++++ b/libproxy/modules/config_sysconfig.cpp
+@@ -21,6 +21,9 @@
+ #include <cstdlib>
+ #include <map>
+ #include <fstream>
++#include <unistd.h>
++#include <sys/types.h>
++
+ 
+ #include "../extension_config.hpp"
+ using namespace libproxy;
+diff --git a/libproxy/modules/pacrunner_mozjs.cpp b/libproxy/modules/pacrunner_mozjs.cpp
+index 3283e91..abb4b9d 100644
+--- a/libproxy/modules/pacrunner_mozjs.cpp
++++ b/libproxy/modules/pacrunner_mozjs.cpp
+@@ -18,6 +18,7 @@
+  ******************************************************************************/
+ 
+ #include <cstring> // ?
++#include <unistd.h> // gethostname
+ 
+ #include "../extension_pacrunner.hpp"
+ using namespace libproxy;
+diff --git a/libproxy/modules/pacrunner_natus.cpp b/libproxy/modules/pacrunner_natus.cpp
+index f7bd4fc..ce79943 100644
+--- a/libproxy/modules/pacrunner_natus.cpp
++++ b/libproxy/modules/pacrunner_natus.cpp
+@@ -18,6 +18,7 @@
+  ******************************************************************************/
+ 
+ #include "../extension_pacrunner.hpp"
++#include <unistd.h> // gethostname
+ using namespace libproxy;
+ 
+ #define I_ACKNOWLEDGE_THAT_NATUS_IS_NOT_STABLE
+diff --git a/libproxy/modules/pacrunner_webkit.cpp b/libproxy/modules/pacrunner_webkit.cpp
+index b9abf34..c51b869 100644
+--- a/libproxy/modules/pacrunner_webkit.cpp
++++ b/libproxy/modules/pacrunner_webkit.cpp
+@@ -18,6 +18,7 @@
+  ******************************************************************************/
+ 
+ #include "../extension_pacrunner.hpp"
++#include <unistd.h> // gethostname
+ using namespace libproxy;
+ 
+ #ifdef __APPLE__
+diff --git a/libproxy/url.cpp b/libproxy/url.cpp
+index df75022..cd781df 100644
+--- a/libproxy/url.cpp
++++ b/libproxy/url.cpp
+@@ -33,6 +33,7 @@
+ #include <cstdlib>    // For atoi()
+ #include <sys/stat.h> // For stat()
+ #include <algorithm> // For transform()
++#include <unistd.h>  // For read() close()
+ 
+ #ifdef WIN32
+ #include <io.h>
+-- 
+1.7.8.6
+

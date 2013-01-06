@@ -1,0 +1,28 @@
+# ChangeLog for net-news/quiterss
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.4 2012/10/29 11:59:57 yngwin Exp $
+
+*quiterss-0.10.3 (29 Oct 2012)
+
+  29 Oct 2012; Ben de Groot <yngwin@gentoo.org> +quiterss-0.10.3.ebuild:
+  Version bump, but unbundle-sqlite patch needs updating
+
+*quiterss-0.10.2 (03 Oct 2012)
+
+  03 Oct 2012; Ben de Groot <yngwin@gentoo.org>
+  +files/quiterss-unbundle-sqlite.patch, +quiterss-0.10.2.ebuild,
+  -quiterss-0.10.1.ebuild, metadata.xml:
+  Version bump. Unbundle sqlite with patch by Alec Moskvin in bug #436230.
+  Remove old.
+
+*quiterss-0.10.1 (02 Sep 2012)
+
+  02 Sep 2012; Davide Pesavento <pesa@gentoo.org> +quiterss-0.10.1.ebuild,
+  -quiterss-0.9.1.ebuild:
+  Version bump.
+
+*quiterss-0.9.1 (30 Jun 2012)
+
+  30 Jun 2012; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +quiterss-0.9.1.ebuild:
+  Initial commit. Ebuild by Miguel Tavares in bug #420697.

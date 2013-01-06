@@ -1,0 +1,87 @@
+From d099c36a98110f201195392a8de0aaf289110107 Mon Sep 17 00:00:00 2001
+From: Andrew Borodin <aborodin@vmail.ru>
+Date: Sat, 21 Jul 2012 15:21:54 +0400
+Subject: [PATCH] Ticket #2851: fixes of ext.d scripts:
+
+  * cleanup of undefined variables;
+  * use proper variables instead of udefine ones.
+
+Signed-off-by: Andrew Borodin <aborodin@vmail.ru>
+---
+ misc/ext.d/misc.sh.in |    1 -
+ misc/ext.d/package.sh |    3 +--
+ misc/ext.d/text.sh.in |    9 ++++-----
+ 3 files changed, 5 insertions(+), 8 deletions(-)
+
+diff --git a/misc/ext.d/misc.sh.in b/misc/ext.d/misc.sh.in
+index 53b4821..ea80ced 100644
+--- a/misc/ext.d/misc.sh.in
++++ b/misc/ext.d/misc.sh.in
+@@ -8,7 +8,6 @@ filetype=$2
+ 
+ do_view_action() {
+     filetype=$1
+-    filename=$2
+ 
+     case "${filetype}" in
+     iso9660)
+diff --git a/misc/ext.d/package.sh b/misc/ext.d/package.sh
+index 0369d9b..0a28cb7 100644
+--- a/misc/ext.d/package.sh
++++ b/misc/ext.d/package.sh
+@@ -9,7 +9,6 @@ filetype=$2
+ 
+ do_view_action() {
+     filetype=$1
+-    filename=$2
+ 
+     case "${filetype}" in
+     trpm)
+@@ -24,7 +23,7 @@ do_view_action() {
+         $RPM -qivlp --scripts "${MC_EXT_FILENAME}"
+         ;;
+     deb)
+-        dpkg-deb -I "${filename}" && echo && dpkg-deb -c "${MC_EXT_FILENAME}"
++        dpkg-deb -I "${MC_EXT_FILENAME}" && echo && dpkg-deb -c "${MC_EXT_FILENAME}"
+         ;;
+     debd)
+         dpkg -s `echo "${MC_EXT_BASENAME}" | sed 's/\([0-9a-z.-]*\).*/\1/'`
+diff --git a/misc/ext.d/text.sh.in b/misc/ext.d/text.sh.in
+index 176cf09..5efd04b 100644
+--- a/misc/ext.d/text.sh.in
++++ b/misc/ext.d/text.sh.in
+@@ -33,7 +33,6 @@ get_unpacker() {
+ 
+ do_view_action() {
+     filetype=$1
+-    pager=$2
+ 
+     unpacker=`get_unpacker ${filetype}`
+ 
+@@ -60,11 +59,11 @@ do_view_action() {
+     man.gz|man.bz|man.bz2|man.lzma|man.xz)
+         case "${MC_EXT_CURRENTDIR}"/"${MC_EXT_FILENAME}" in
+         */log/*|*/logs/*)
+-            ${unpacker} %f
++            ${unpacker} "${MC_EXT_FILENAME}"
+             ;;
+         *)
+-             ${unpacker} ${filename} | nroff @MAN_FLAGS@ @MANDOC@
+-             ;;
++            ${unpacker} "${MC_EXT_FILENAME}" | nroff @MAN_FLAGS@ @MANDOC@
++            ;;
+         esac
+         ;;
+     *)
+@@ -122,7 +121,7 @@ do_open_action() {
+ 
+ case "${action}" in
+ view)
+-    do_view_action "${filetype}" "${pager}"
++    do_view_action "${filetype}"
+     ;;
+ open)
+     xdg-open "${MC_EXT_FILENAME}" 2>/dev/null || \
+-- 
+1.7.8.6
+

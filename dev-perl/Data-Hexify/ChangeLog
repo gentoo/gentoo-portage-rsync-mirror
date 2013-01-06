@@ -1,0 +1,35 @@
+# ChangeLog for dev-perl/Data-Hexify
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hexify/ChangeLog,v 1.8 2012/06/24 12:59:05 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Data-Hexify-1.0.0.ebuild:
+  x86 stable wrt bug #405623
+
+  01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Add missing cpan remote-id tags in metadata.xml (#406287)
+
+  25 Feb 2012; Agostino Sarubbo <ago@gentoo.org> Data-Hexify-1.0.0.ebuild:
+  Stable for amd64, wrt bug #405623
+
+  04 Feb 2012; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Fix maintainer's email in metadata
+
+  06 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Fix maintainer email
+
+*Data-Hexify-1.0.0 (30 Oct 2011)
+
+  30 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org> -Data-Hexify-1.00.ebuild,
+  +Data-Hexify-1.0.0.ebuild, metadata.xml:
+  Fix version according to Gentoo-PerlMod-Version, add perl herd. Thanks to
+  tove
+
+*Data-Hexify-1.00 (30 Oct 2011)
+
+  30 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org> +Data-Hexify-1.00.ebuild,
+  +metadata.xml:
+  Add dev-perl/Data-Hexify-1.00, thanks to slepnoga

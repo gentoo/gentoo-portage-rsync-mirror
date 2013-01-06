@@ -1,0 +1,8 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=A small library to interface to the Ident protocol server
+HOMEPAGE=ftp://ftp.lysator.liu.se/pub/ident/libs
+KEYWORDS=alpha amd64 ~hppa ia64 ~mips ppc s390 ~sparc x86
+LICENSE=public-domain
+SLOT=0
+SRC_URI=ftp://ftp.lysator.liu.se/pub/ident/libs/libident-0.22.tar.gz
+_md5_=43e6a6d24caf7d3c3c9ff1678d0956df

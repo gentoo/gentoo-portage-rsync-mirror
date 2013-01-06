@@ -1,0 +1,12 @@
+--- configure	2011-12-30 21:52:15.000000000 +0100
++++ configure	2012-07-08 17:00:37.000000000 +0200
+@@ -13920,7 +13920,8 @@
+ # Check whether --with-ofx was given.
+ if test "${with_ofx+set}" = set; then :
+   withval=$with_ofx; build_ofx=$withval
+-	build_ofx=no
++else
++  build_ofx=auto
+ fi
+ 
+ 

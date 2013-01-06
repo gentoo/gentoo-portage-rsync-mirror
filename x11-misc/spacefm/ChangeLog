@@ -1,0 +1,202 @@
+# ChangeLog for x11-misc/spacefm
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.44 2012/12/25 02:58:42 jdhore Exp $
+
+  25 Dec 2012; Jeff Horelick <jdhore@gentoo.org> spacefm-0.8.3.ebuild:
+  marked x86 per bug 448040
+
+*spacefm-0.8.4 (23 Dec 2012)
+
+  23 Dec 2012; Julian Ospald <hasufell@gentoo.org> +spacefm-0.8.4.ebuild:
+  version bump
+
+  21 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> spacefm-0.8.3.ebuild:
+  Stable on amd64, wrt bug #448040
+
+  18 Dec 2012; Julian Ospald <hasufell@gentoo.org> spacefm-0.8.3.ebuild,
+  spacefm-9999.ebuild:
+  fix dependencies wrt #445430
+
+  02 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> spacefm-0.8.0.ebuild,
+  spacefm-0.8.2.ebuild, spacefm-0.8.3.ebuild, spacefm-9999.ebuild:
+  Use virtual/udev instead of sys-fs/udev wrt #444398
+
+*spacefm-0.8.3 (25 Nov 2012)
+
+  25 Nov 2012; Julian Ospald <hasufell@gentoo.org> +spacefm-0.8.3.ebuild:
+  version bump
+
+*spacefm-0.8.2 (27 Oct 2012)
+
+  27 Oct 2012; Julian Ospald <hasufell@gentoo.org> -spacefm-0.7.10.ebuild,
+  -files/spacefm-0.7.10-desktopfiles.patch, -spacefm-0.7.11.ebuild,
+  -spacefm-0.8.1.ebuild, +spacefm-0.8.2.ebuild:
+  version bump, remove old
+
+  27 Oct 2012; Julian Ospald <hasufell@gentoo.org> spacefm-0.8.0.ebuild:
+  x86 stable wrt #438346
+
+*spacefm-0.8.1 (21 Oct 2012)
+
+  21 Oct 2012; Julian Ospald <hasufell@gentoo.org> +spacefm-0.8.1.ebuild,
+  spacefm-9999.ebuild:
+  version bump, update live-ebuild
+
+  18 Oct 2012; Julian Ospald <hasufell@gentoo.org> spacefm-0.7.10.ebuild,
+  spacefm-0.7.11.ebuild, spacefm-0.8.0.ebuild, spacefm-9999.ebuild:
+  clarify dependencies
+
+  15 Oct 2012; Agostino Sarubbo <ago@gentoo.org> spacefm-0.8.0.ebuild:
+  Stable for amd64, wrt bug #438346
+
+*spacefm-0.8.0 (15 Sep 2012)
+
+  15 Sep 2012; Julian Ospald <hasufell@gentoo.org> +spacefm-0.8.0.ebuild:
+  version bump
+
+  22 Aug 2012; Johannes Huber <johu@gentoo.org> spacefm-0.7.10.ebuild:
+  Stable for x86, wrt bug #432240
+
+  22 Aug 2012; Agostino Sarubbo <ago@gentoo.org> spacefm-0.7.10.ebuild:
+  Stable for amd64, wrt bug #432240
+
+*spacefm-0.7.11 (16 Aug 2012)
+
+  16 Aug 2012; Julian Ospald <hasufell@gentoo.org> -spacefm-0.7.6.ebuild,
+  -spacefm-0.7.7.ebuild, -spacefm-0.7.8.ebuild, -spacefm-0.7.9.ebuild,
+  spacefm-0.7.10.ebuild, +files/spacefm-0.7.10-desktopfiles.patch,
+  +spacefm-0.7.11.ebuild:
+  fix .desktop files, version bump, remove old
+
+*spacefm-0.7.10 (25 Jul 2012)
+
+  25 Jul 2012; Julian Ospald <hasufell@gentoo.org> +spacefm-0.7.10.ebuild,
+  spacefm-9999.ebuild:
+  version bump, sync live-ebuild
+
+*spacefm-0.7.9 (13 Jul 2012)
+
+  13 Jul 2012; Julian Ospald <hasufell@gentoo.org> +spacefm-0.7.9.ebuild:
+  version bump
+
+  17 Jun 2012; Julian Ospald <hasufell@gentoo.org> spacefm-0.7.8.ebuild,
+  spacefm-9999.ebuild:
+  add udevil to optional dependencies
+
+*spacefm-0.7.8 (16 Jun 2012)
+
+  16 Jun 2012; Julian Ospald <hasufell@gentoo.org> +spacefm-0.7.8.ebuild:
+  version bump
+
+*spacefm-0.7.7 (28 May 2012)
+
+  28 May 2012; Julian Ospald <hasufell@gentoo.org> +spacefm-0.7.7.ebuild:
+  version bump, remove old
+
+  05 May 2012; Julian Ospald <hasufell@gentoo.org> ChangeLog:
+  set myself as maintainer
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> spacefm-0.7.4.ebuild,
+  spacefm-0.7.5.ebuild, spacefm-0.7.6.ebuild, spacefm-9999.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+*spacefm-0.7.6 (21 Apr 2012)
+
+  21 Apr 2012; Michael Weber <xmw@gentoo.org> +spacefm-0.7.6.ebuild,
+  spacefm-9999.ebuild:
+  Version bump w/ changed udev handling by Julian Ospald
+
+  17 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> -spacefm-0.7.1.ebuild,
+  -spacefm-0.7.2.ebuild, -spacefm-0.7.3.ebuild, metadata.xml:
+  old
+
+  17 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> spacefm-0.7.4.ebuild,
+  spacefm-0.7.5.ebuild, spacefm-9999.ebuild:
+  Because upstream is now forcing sys-fs/udev we can assume SpaceFM is for
+  Linux only and always enable INOTIFY support.
+
+*spacefm-0.7.5 (17 Apr 2012)
+
+  17 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> +spacefm-0.7.5.ebuild,
+  spacefm-9999.ebuild, metadata.xml:
+  Version bump by Julian Ospald.
+
+*spacefm-9999 (10 Apr 2012)
+
+  10 Apr 2012; Michael Weber <xmw@gentoo.org> +spacefm-9999.ebuild:
+  Add liveVCS ebuild by Julian Ospald.
+
+*spacefm-0.7.4 (03 Apr 2012)
+
+  03 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> +spacefm-0.7.4.ebuild:
+  Version bump by Julian Ospald.
+
+*spacefm-0.7.3 (29 Mar 2012)
+
+  29 Mar 2012; Michael Weber <xmw@gentoo.org> -spacefm-0.6.3.ebuild,
+  +spacefm-0.7.3.ebuild:
+  Version bump by Julian Ospald, remove old version
+
+  27 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> spacefm-0.6.3.ebuild,
+  spacefm-0.7.1.ebuild, spacefm-0.7.2.ebuild:
+  Pin to SLOT="0" of sys-fs/udisks.
+
+*spacefm-0.7.2 (05 Mar 2012)
+
+  05 Mar 2012; Michael Weber <xmw@gentoo.org> +spacefm-0.7.2.ebuild:
+  Version bump by Julian Ospald
+
+*spacefm-0.7.1 (22 Feb 2012)
+
+  22 Feb 2012; Mike Gilbert <floppym@gentoo.org> +spacefm-0.7.1.ebuild,
+  -spacefm-0.7.0.ebuild:
+  Version bump by request of Julian.
+
+*spacefm-0.7.0 (14 Feb 2012)
+
+  14 Feb 2012; Michael Weber <xmw@gentoo.org> +spacefm-0.7.0.ebuild:
+  Version bump by Julian Ospald
+
+*spacefm-0.6.3 (09 Feb 2012)
+
+  09 Feb 2012; Michael Weber <xmw@gentoo.org> -spacefm-0.6.1.ebuild,
+  -spacefm-0.6.2.ebuild, +spacefm-0.6.3.ebuild:
+  Version bump, resolve license issue (bug 402243) by removing all previous
+  versions.
+
+*spacefm-0.6.2 (07 Feb 2012)
+
+  07 Feb 2012; Michael Weber <xmw@gentoo.org> +spacefm-0.6.2.ebuild,
+  metadata.xml:
+  Version bump
+
+  05 Feb 2012; Michael Weber <xmw@gentoo.org> spacefm-0.6.1.ebuild:
+  Fix gksu/kdesu/ktsuss deps as pointed out by Julian Ospald, (bug 402135
+  reported by Samuel BAUER)
+
+  02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> spacefm-0.6.1.ebuild:
+  src/ptk/ptk-location-view.c is using lsof to determine if mountpoint is used
+  or not
+
+  02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> -spacefm-0.6.0.ebuild:
+  old
+
+  02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> spacefm-0.6.1.ebuild:
+  Missing LGPL-2 license for internal copy of xfce-base/exo. Missing
+  IgnorantGuru license from DISCLAIMER.TXT.
+
+  02 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> spacefm-0.6.1.ebuild:
+  Enable inotify for kernel_linux users by default. Use thirdpartymirrors for
+  sourceforge. Missing call to fdo-mime_mime_database_update.
+
+*spacefm-0.6.1 (02 Feb 2012)
+
+  02 Feb 2012; Michael Weber <xmw@gentoo.org> +spacefm-0.6.1.ebuild:
+  Version bump, thanks Julian Ospald
+
+*spacefm-0.6.0 (31 Jan 2012)
+
+  31 Jan 2012; Michael Weber <xmw@gentoo.org> +spacefm-0.6.0.ebuild,
+  +metadata.xml:
+  Initial import, thanks to Julian Ospald for the ebuild and maintainership
+

@@ -1,0 +1,9 @@
+--- Makefile
++++ Makefile
+@@ -1,5 +1,5 @@
+ all:
+-	g++ -O3 -Wall -o clockywock clockywock.cpp -lncurses -lpthread
++	${CXX} ${CXXFLAGS} ${LDFLAGS} -o clockywock clockywock.cpp -lncurses -lpthread
+ 
+ # install is done completely lazily
+ install:

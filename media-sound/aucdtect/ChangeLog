@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/aucdtect
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aucdtect/ChangeLog,v 1.1 2012/10/29 14:17:43 yngwin Exp $
+
+*aucdtect-0.8.2 (29 Oct 2012)
+
+  29 Oct 2012; Ben de Groot <yngwin@gentoo.org> +aucdtect-0.8.2.ebuild,
+  +metadata.xml:
+  Initial commit from bug #320291 and #437554

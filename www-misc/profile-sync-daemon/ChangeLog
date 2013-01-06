@@ -1,0 +1,49 @@
+# ChangeLog for www-misc/profile-sync-daemon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/ChangeLog,v 1.7 2012/11/29 12:51:04 hasufell Exp $
+
+*profile-sync-daemon-5.06 (29 Nov 2012)
+
+  29 Nov 2012; Julian Ospald <hasufell@gentoo.org>
+  -profile-sync-daemon-3.15.ebuild, -profile-sync-daemon-3.16.ebuild,
+  -profile-sync-daemon-4.02.ebuild, -profile-sync-daemon-5.04.ebuild,
+  +profile-sync-daemon-5.06.ebuild:
+  version bump, remove old
+
+*profile-sync-daemon-5.04 (28 Nov 2012)
+
+  28 Nov 2012; Julian Ospald <hasufell@gentoo.org>
+  +profile-sync-daemon-5.04.ebuild:
+  version bump
+
+*profile-sync-daemon-4.02 (29 Oct 2012)
+
+  29 Oct 2012; Julian Ospald <hasufell@gentoo.org>
+  +profile-sync-daemon-4.02.ebuild:
+  version bump
+
+*profile-sync-daemon-3.16 (16 Oct 2012)
+
+  16 Oct 2012; Julian Ospald <hasufell@gentoo.org>
+  +profile-sync-daemon-3.16.ebuild:
+  version bump, check this out bro
+
+*profile-sync-daemon-3.15 (25 Sep 2012)
+
+  25 Sep 2012; Julian Ospald <hasufell@gentoo.org>
+  -profile-sync-daemon-3.13.ebuild, -profile-sync-daemon-3.14.ebuild,
+  +profile-sync-daemon-3.15.ebuild:
+  version bump, remove old
+
+*profile-sync-daemon-3.14 (24 Sep 2012)
+
+  24 Sep 2012; Julian Ospald <hasufell@gentoo.org>
+  +profile-sync-daemon-3.14.ebuild:
+  version bump
+
+*profile-sync-daemon-3.13 (19 Sep 2012)
+
+  19 Sep 2012; Julian Ospald <hasufell@gentoo.org>
+  +profile-sync-daemon-3.13.ebuild, +metadata.xml:
+  initial import wrt #398431
+

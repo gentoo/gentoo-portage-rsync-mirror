@@ -1,0 +1,38 @@
+From 1f9807874036b6dbedb0fd44c02c836046d99cbe Mon Sep 17 00:00:00 2001
+From: Vincent Untz <vuntz@gnome.org>
+Date: Thu, 17 Feb 2011 20:23:50 +0000
+Subject: Do not use g-p-m in XFCE
+
+XFCE now comes with xfce4-power-manager, so g-p-m is just duplicating
+the work.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=642616
+---
+diff --git a/data/gnome-power-manager.desktop.in.in b/data/gnome-power-manager.desktop.in.in
+index 726e156..3e7b821 100644
+--- a/data/gnome-power-manager.desktop.in.in
++++ b/data/gnome-power-manager.desktop.in.in
+@@ -6,7 +6,7 @@ Exec=gnome-power-manager
+ Terminal=false
+ Type=Application
+ Categories=
+-OnlyShowIn=GNOME;XFCE;
++OnlyShowIn=GNOME;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=gnome-power-manager
+ X-GNOME-Bugzilla-Component=gnome-power-manager
+diff --git a/data/gnome-power-statistics.desktop.in.in b/data/gnome-power-statistics.desktop.in.in
+index 1f9f9c3..8328cea 100644
+--- a/data/gnome-power-statistics.desktop.in.in
++++ b/data/gnome-power-statistics.desktop.in.in
+@@ -6,7 +6,7 @@ Exec=gnome-power-statistics
+ Terminal=false
+ Type=Application
+ Categories=GNOME;GTK;System;Monitor;
+-OnlyShowIn=GNOME;XFCE;
++OnlyShowIn=GNOME;
+ NoDisplay=true
+ StartupNotify=true
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+--
+cgit v0.9

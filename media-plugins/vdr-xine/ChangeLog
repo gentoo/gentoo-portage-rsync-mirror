@@ -1,0 +1,14 @@
+# ChangeLog for media-plugins/vdr-xine
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xine/ChangeLog,v 1.2 2012/01/10 21:50:41 idl0r Exp $
+
+  10 Jan 2012; Christian Ruppert <idl0r@gentoo.org> vdr-xine-0.9.4.ebuild:
+  Install MANUAL
+
+*vdr-xine-0.9.4 (10 Jan 2012)
+
+  10 Jan 2012; Christian Ruppert <idl0r@gentoo.org> +vdr-xine-0.9.4.ebuild,
+  +files/vdr-xine-0.9.4-build-system.patch, +files/vdr-xine-0.9.4-gentoo.diff,
+  +files/confd, +metadata.xml:
+  Initial import.
+

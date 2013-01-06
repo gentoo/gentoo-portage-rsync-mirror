@@ -1,0 +1,13 @@
+# ChangeLog for net-analyzer/goaccess
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/goaccess/ChangeLog,v 1.2 2012/10/23 12:50:07 pinkbyte Exp $
+
+  23 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Fix proxy maintainers herd name in metadata
+
+*goaccess-0.5 (27 Jul 2012)
+
+  27 Jul 2012; Ben de Groot <yngwin@gentoo.org> +goaccess-0.5.ebuild,
+  +metadata.xml:
+  Initial commit. Ebuild by proxy maintainer Nikoli, with a few edits by me,
+  from bug #348855.

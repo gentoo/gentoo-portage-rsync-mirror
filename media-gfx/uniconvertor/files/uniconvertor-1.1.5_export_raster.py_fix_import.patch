@@ -1,0 +1,11 @@
+--- UniConvertor/trunk/uniconvertor/src/app/scripts/export_raster.py	2010/06/19 10:26:44	216
++++ UniConvertor/trunk/uniconvertor/src/app/scripts/export_raster.py	2010/06/28 01:15:30	283
+@@ -37,7 +37,7 @@
+ 
+ import os, tempfile
+ 
+-from sk1libs import imaging.Image, imaging.ImageChops
++from sk1libs.imaging import Image, ImageChops
+ 
+ import app.Scripting
+ from app import _, PostScriptDevice

@@ -1,0 +1,96 @@
+# ChangeLog for sci-libs/superlu
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.20 2012/12/12 20:31:31 jlec Exp $
+
+  12 Dec 2012; Justin Lecher <jlec@gentoo.org> superlu-4.3.ebuild:
+  Respect AR and RANLIB
+
+  12 Dec 2012; Justin Lecher <jlec@gentoo.org> superlu-4.1-r1.ebuild,
+  metadata.xml:
+  Respect AR and RANLIB; fix test failure, #430444
+
+  11 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> -files/4.0-test.patch,
+  -files/superlu-4.0-autotools.patch, -files/superlu-4.2-autotools.patch,
+  -files/superlu-examples.patch, -superlu-4.0-r2.ebuild, -superlu-4.2.ebuild,
+  metadata.xml, superlu-4.3.ebuild:
+  Removed old. Do not install built examples
+
+  16 Oct 2012; Justin Lecher <jlec@gentoo.org> superlu-4.0-r2.ebuild,
+  superlu-4.1-r1.ebuild, superlu-4.2.ebuild, superlu-4.3.ebuild:
+  Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the
+  updated fortran-2.eclass
+
+  24 Jun 2012; Justin Lecher <jlec@gentoo.org> superlu-4.3.ebuild:
+  Unset VERBOSE, because it is used internally, #423259
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> superlu-4.0-r2.ebuild,
+  superlu-4.1-r1.ebuild, superlu-4.2.ebuild, superlu-4.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  28 Feb 2012; Justin Lecher <jlec@gentoo.org> superlu-4.3.ebuild,
+  +files/superlu-4.3-autotools.patch, metadata.xml:
+  Moved to autotools-utils, EAPI=4, fix blas/lapack detection and add
+  USE=static-libs
+
+*superlu-4.3 (27 Nov 2011)
+
+  27 Nov 2011; Sébastien Fabbro <bicatali@gentoo.org> +superlu-4.3.ebuild:
+  Version bump
+
+*superlu-4.2 (01 Sep 2011)
+
+  01 Sep 2011; Sébastien Fabbro <bicatali@gentoo.org> +superlu-4.2.ebuild,
+  +files/superlu-4.2-autotools.patch:
+  Version bump
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> superlu-4.0-r2.ebuild,
+  superlu-4.1-r1.ebuild:
+  Add dependency on virtual/fortran
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> superlu-4.0-r2.ebuild,
+  superlu-4.1-r1.ebuild:
+  Added fortran-2.eclass support
+
+  23 May 2011; Thomas Kahle <tomka@gentoo.org> superlu-4.1-r1.ebuild:
+  x86 stable per bug 364863
+
+  11 May 2011; Christoph Mende <angelos@gentoo.org> superlu-4.1-r1.ebuild:
+  Stable on amd64 wrt bug #364863
+
+  07 Apr 2011; Fabian Groffen <grobian@gentoo.org> superlu-4.1-r1.ebuild:
+  Fixed for Darwin, marked ~ppc-macos
+
+  26 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> superlu-4.1-r1.ebuild:
+  Marked ~ppc/~ppc64 per Arfrever's request
+
+  21 Mar 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  files/superlu-4.1-autotools.patch:
+  New upstream tar ball, adjusting the autotools patch
+
+*superlu-4.1-r1 (28 Dec 2010)
+
+  28 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> -superlu-4.1.ebuild,
+  +superlu-4.1-r1.ebuild, files/superlu-4.1-autotools.patch:
+  Fixed patch for missing includes bug #349783. Changed the pkg-config cflags
+  value.
+
+*superlu-4.1 (12 Dec 2010)
+
+  12 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> +superlu-4.1.ebuild,
+  +files/superlu-4.1-autotools.patch, files/superlu-examples.patch:
+  Version bump
+
+*superlu-4.0-r2 (27 Sep 2010)
+
+  27 Sep 2010; Sébastien Fabbro <bicatali@gentoo.org>
+  -superlu-4.0-r1.ebuild, +superlu-4.0-r2.ebuild,
+  files/superlu-4.0-autotools.patch:
+  Fixed autotools patch: added missing files to the library, updated ax_blas
+  macro, pushed version to 4 instead of 3. Fixed tests
+
+*superlu-4.0-r1 (09 Jun 2010)
+
+  09 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/4.0-test.patch,
+  +superlu-4.0-r1.ebuild, +files/superlu-4.0-autotools.patch,
+  +files/superlu-examples.patch, +metadata.xml:
+  Moved from sci overlay to tree

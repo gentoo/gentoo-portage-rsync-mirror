@@ -1,0 +1,62 @@
+Index: camlimages-3.0.2/src/pngread.c
+===================================================================
+--- camlimages-3.0.2.orig/src/pngread.c
++++ camlimages-3.0.2/src/pngread.c
+@@ -69,7 +69,7 @@ value read_png_file_as_rgb24( name )
+   }
+ 
+   /* error handling */
+-  if (setjmp(png_ptr->jmpbuf)) {
++  if (setjmp(png_jmpbuf(png_ptr))) {
+     /* Free all of the memory associated with the png_ptr and info_ptr */
+     png_destroy_read_struct(&png_ptr, &info_ptr, (png_infopp)NULL);
+     fclose(fp);
+@@ -134,7 +134,7 @@ value read_png_file_as_rgb24( name )
+     png_set_rows(png_ptr, info_ptr, row_pointers);
+ 
+     /* Later, we can return something */
+-    if (setjmp(png_ptr->jmpbuf)) {
++    if (setjmp(png_jmpbuf(png_ptr))) {
+       /* Free all of the memory associated with the png_ptr and info_ptr */
+       png_destroy_read_struct(&png_ptr, &info_ptr, (png_infopp)NULL);
+       fclose(fp);
+@@ -243,7 +243,7 @@ value read_png_file( name )
+   }
+ 
+   /* error handling */
+-  if (setjmp(png_ptr->jmpbuf)) {
++  if (setjmp(png_jmpbuf(png_ptr))) {
+     /* Free all of the memory associated with the png_ptr and info_ptr */
+     png_destroy_read_struct(&png_ptr, &info_ptr, (png_infopp)NULL);
+     fclose(fp);
+@@ -302,7 +302,7 @@ value read_png_file( name )
+     png_set_rows(png_ptr, info_ptr, row_pointers);
+ 
+     /* Later, we can return something */
+-    if (setjmp(png_ptr->jmpbuf)) {
++    if (setjmp(png_jmpbuf(png_ptr))) {
+       /* Free all of the memory associated with the png_ptr and info_ptr */
+       png_destroy_read_struct(&png_ptr, &info_ptr, (png_infopp)NULL);
+       fclose(fp);
+Index: camlimages-3.0.2/src/pngwrite.c
+===================================================================
+--- camlimages-3.0.2.orig/src/pngwrite.c
++++ camlimages-3.0.2/src/pngwrite.c
+@@ -62,7 +62,7 @@ value write_png_file_rgb( name, buffer,
+   }
+ 
+   /* error handling */
+-  if (setjmp(png_ptr->jmpbuf)) {
++  if (setjmp(png_jmpbuf(png_ptr))) {
+     /* Free all of the memory associated with the png_ptr and info_ptr */
+     png_destroy_write_struct(&png_ptr, &info_ptr);
+     fclose(fp);
+@@ -171,7 +171,7 @@ value write_png_file_index( name, buffer
+   }
+ 
+   /* error handling */
+-  if (setjmp(png_ptr->jmpbuf)) {
++  if (setjmp(png_jmpbuf(png_ptr))) {
+     /* Free all of the memory associated with the png_ptr and info_ptr */
+     png_destroy_write_struct(&png_ptr, &info_ptr);
+     fclose(fp);

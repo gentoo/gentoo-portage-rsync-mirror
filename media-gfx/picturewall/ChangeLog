@@ -1,0 +1,35 @@
+# ChangeLog for media-gfx/picturewall
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picturewall/ChangeLog,v 1.7 2012/02/18 15:23:55 pesa Exp $
+
+  18 Feb 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml,
+  picturewall-1.0-r1.ebuild:
+  Add missing qt-webkit dependency, add doc USE flag, migrate to EAPI 4. Patch
+  by Michael (kensington) in bug #369297.
+
+  23 Oct 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove myself from metadata
+
+  27 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  -picturewall-1.0.ebuild:
+  Remove old ebuild
+
+  14 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  picturewall-1.0-r1.ebuild:
+  stable x86, bug 322693
+
+  24 Jun 2010; Pacho Ramos <pacho@gentoo.org> picturewall-1.0-r1.ebuild:
+  stable amd64, bug 322693
+
+*picturewall-1.0-r1 (24 Jun 2010)
+
+  24 Jun 2010; Markos Chandras <hwoarang@gentoo.org>
+  +picturewall-1.0-r1.ebuild:
+  Add menu entry to fix bug #322693
+
+*picturewall-1.0 (04 May 2010)
+
+  04 May 2010; Markos Chandras <hwoarang@gentoo.org>
+  +picturewall-1.0.ebuild, +metadata.xml:
+  Initial commit of picturewall application
+

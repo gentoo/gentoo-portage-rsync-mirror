@@ -1,0 +1,75 @@
+--- smp_utils-0.96.orig/Makefile
++++ smp_utils-0.96/Makefile
+@@ -39,15 +39,11 @@
+ 
+ INCLUDES = -I include
+ 
+-# may be overridden by 'make -e'
+-CFLAGS = -g -O2
+-
+ MY_CFLAGS = -Wall -W $(EXTRA_FLAGS)
+ # MY_CFLAGS = -Wall -W -pedantic -std=c99 $(EXTRA_FLAGS)
+ 
+ CFLAGS_PTHREADS = -D_REENTRANT
+ 
+-LDFLAGS = 
+ # LDFLAGS = -v -lm
+ 
+ # $(SDIRS):
+@@ -65,8 +61,8 @@
+ sub_sgv4:
+ 	cd sgv4 && $(MAKE)
+ 
+-libsmp.a : sub_mpt sub_sgv4 smp_lib.o smp_interface_sel.o
+-	ar r libsmp.a smp_lib.o smp_interface_sel.o mpt/smp_mptctl_io.o  \
++libsmp.a: sub_mpt sub_sgv4 smp_lib.o smp_interface_sel.o
++	$(AR) $(ARFLAGS) libsmp.a smp_lib.o smp_interface_sel.o mpt/smp_mptctl_io.o  \
+ 	sgv4/smp_sgv4_io.o
+ 
+ depend dep:
+@@ -167,15 +163,14 @@
+ smp_rep_self_conf_stat: smp_rep_self_conf_stat.o libsmp.a
+ 	$(LD) -o $@ $(LDFLAGS) $^
+ 
+-install: $(EXECS)
++install:
+ 	install -d $(INSTDIR)
+-	for name in $^; \
++	for name in $(EXECS); \
+ 	 do install -m 755 $$name $(INSTDIR); \
+ 	done
+ 	install -d $(MANDIR)/$(MAN_PREF)
+ 	for mp in $(MAN_PGS); \
+ 	 do install -m 644 doc/$$mp $(MANDIR)/$(MAN_PREF); \
+-	 gzip -9f $(MANDIR)/$(MAN_PREF)/$$mp; \
+ 	done
+ 
+ uninstall:
+--- smp_utils-0.96.orig/mpt/Makefile
++++ smp_utils-0.96/mpt/Makefile
+@@ -18,10 +18,9 @@
+ INCLUDES = -I ../include
+ 
+ # CFLAGS = -O2 -Wall -W $(EXTRA_FLAGS)
+-CFLAGS = -g -O2 -Wall -W $(EXTRA_FLAGS)
++CFLAGS += -Wall -W $(EXTRA_FLAGS)
+ # CFLAGS = -g -O2 -Wall -W -pedantic -std=c99 $(EXTRA_FLAGS)
+ 
+-LDFLAGS = 
+ # LDFLAGS = -v -lm
+ 
+ .c.o:
+--- smp_utils-0.96.orig/sgv4/Makefile
++++ smp_utils-0.96/sgv4/Makefile
+@@ -21,10 +21,9 @@
+ # INCLUDES = -I ../include -idirafter ../include/dummy
+ 
+ # CFLAGS =  -O2 -Wall -W $(EXTRA_FLAGS)
+-CFLAGS = -g -O2 -Wall -W $(EXTRA_FLAGS)
++CFLAGS += -Wall -W $(EXTRA_FLAGS)
+ # CFLAGS = -O2 -Wall -W -pedantic -std=c99 $(EXTRA_FLAGS)
+ 
+-LDFLAGS = 
+ # LDFLAGS = -v -lm
+ 
+ .c.o:

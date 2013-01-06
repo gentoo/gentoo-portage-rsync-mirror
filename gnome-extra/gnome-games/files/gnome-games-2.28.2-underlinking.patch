@@ -1,0 +1,52 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Sat Jul  7 13:14:09 UTC 2012
+Subject: build system
+
+fix underlinking
+
+--- configure.in
++++ configure.in
+@@ -566,6 +566,9 @@
+ 
+ # Check for common modules
+ 
++PKG_CHECK_MODULES([X11],[x11])
++AC_SUBST([X11_LIBS])
++
+ need_gthread=no
+ PKG_CHECK_MODULES([GTHREAD],[gthread-2.0])
+ AC_SUBST([GTHREAD_CFLAGS])
+--- gnect/src/Makefile.am
++++ gnect/src/Makefile.am
+@@ -64,6 +64,7 @@
+ 
+ gnect_LDADD = \
+ 	$(top_builddir)/libgames-support/libgames-support.la \
++	$(X11_LIBS) \
+ 	$(GTK_LIBS) \
+ 	$(INTLLIBS) \
+ 	$(LIB_GGZMOD) \
+--- iagno/Makefile.am
++++ iagno/Makefile.am
+@@ -56,6 +56,7 @@
+ 
+ iagno_LDADD = \
+ 	$(top_builddir)/libgames-support/libgames-support.la \
++	$(X11_LIBS) \
+ 	$(GTK_LIBS) \
+ 	$(INTLLIBS) \
+ 	$(LIB_GGZMOD) \
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Sat Jul  7 13:43:03 UTC 2012
+Subject: 
+
+--- gnibbles/Makefile.am
++++ gnibbles/Makefile.am
+@@ -42,6 +42,7 @@
+ 
+ gnibbles_LDADD = \
+ 	$(top_builddir)/libgames-support/libgames-support.la \
++	$(X11_LIBS) \
+ 	$(GTK_LIBS) \
+ 	$(INTLLIBS)
+ 

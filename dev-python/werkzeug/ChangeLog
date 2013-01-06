@@ -1,0 +1,164 @@
+# ChangeLog for dev-python/werkzeug
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.36 2012/09/25 11:16:45 blueness Exp $
+
+  25 Sep 2012; Anthony G. Basile <blueness@gentoo.org> werkzeug-0.8.3.ebuild:
+  stable ppc, bug #433898
+
+  22 Sep 2012; Anthony G. Basile <blueness@gentoo.org> werkzeug-0.8.3.ebuild:
+  keyword ~arm, bug #433978
+
+  21 Sep 2012; Anthony G. Basile <blueness@gentoo.org> werkzeug-0.8.3.ebuild:
+  Keyword ~ppc, bug #433978
+
+  13 Mar 2012; Mike Gilbert <floppym@gentoo.org> werkzeug-0.8.3.ebuild:
+  Don't inherit unused eclass. Patch by Arfrever.
+
+*werkzeug-0.8.3 (02 Mar 2012)
+
+  02 Mar 2012; Dirkjan Ochtman <djc@gentoo.org> -werkzeug-0.6.2.ebuild,
+  +werkzeug-0.8.3.ebuild:
+  Version bump to 0.8.3, remove old version.
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> werkzeug-0.8.2.ebuild:
+  x86 stable wrt bug #404721
+
+  21 Feb 2012; Agostino Sarubbo <ago@gentoo.org> werkzeug-0.8.2.ebuild:
+  Stable for amd64, wrt bug #404721
+
+  20 Feb 2012; Dirkjan Ochtman <djc@gentoo.org> -werkzeug-0.7.1-r1.ebuild,
+  -files/werkzeug-0.7.1-py24.patch:
+  Remove old versions.
+
+*werkzeug-0.8.2 (16 Dec 2011)
+
+  16 Dec 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -werkzeug-0.8.1.ebuild, +werkzeug-0.8.2.ebuild:
+  Version bump.
+
+*werkzeug-0.8.1 (03 Dec 2011)
+
+  03 Dec 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +werkzeug-0.8.1.ebuild:
+  Version bump. Thanks to Johan Bergström (bug #392903) and Arfrever.
+
+*werkzeug-0.7.1-r1 (13 Sep 2011)
+
+  13 Sep 2011; Mike Gilbert <floppym@gentoo.org> -werkzeug-0.7.1.ebuild,
+  +werkzeug-0.7.1-r1.ebuild, +files/werkzeug-0.7.1-py24.patch:
+  Fix syntax error with python2.4, bug 382761
+
+*werkzeug-0.7.1 (28 Jul 2011)
+
+  28 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -werkzeug-0.7.ebuild, +werkzeug-0.7.1.ebuild:
+  Version bump. Fixed broken test, thanks to Arfrever.
+
+*werkzeug-0.7 (24 Jul 2011)
+
+  24 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +werkzeug-0.7.ebuild:
+  Version bump.
+
+  13 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  werkzeug-0.6.2.ebuild:
+  dev-python/py -> dev-python/pytest.
+
+  11 Jun 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  werkzeug-0.6.2.ebuild:
+  x86 stable wrt bug #321347
+
+  26 May 2010; Pacho Ramos <pacho@gentoo.org> werkzeug-0.6.2.ebuild:
+  stable amd64, bug 321347
+
+  26 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> werkzeug-0.6.ebuild:
+  x86 stable wrt bug #314937
+
+  25 Apr 2010; Javier Villavicencio <the_paya@gentoo.org>
+  werkzeug-0.6.2.ebuild:
+  Keyworded ~x86-fbsd.
+
+*werkzeug-0.6.2 (24 Apr 2010)
+
+  24 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +werkzeug-0.6.2.ebuild:
+  Version bump.
+
+  16 Apr 2010; Markos Chandras <hwoarang@gentoo.org> werkzeug-0.6.ebuild:
+  Stable on amd64 wrt bug #314937
+
+*werkzeug-0.6.1 (13 Apr 2010)
+
+  13 Apr 2010; Dirkjan Ochtman <djc@gentoo.org> +werkzeug-0.6.1.ebuild:
+  Version bump to 0.6.1.
+
+  10 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  werkzeug-0.6.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+*werkzeug-0.6 (21 Feb 2010)
+
+  21 Feb 2010; Patrick Lauer <patrick@gentoo.org> +werkzeug-0.6.ebuild:
+  Bump
+
+  20 Dec 2009; Fabian Groffen <grobian@gentoo.org> werkzeug-0.5.1.ebuild:
+  Merged keywords from Prefix
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -werkzeug-0.4.1.ebuild,
+  -werkzeug-0.5.ebuild:
+  Remove old
+
+  01 Sep 2009; Patrick Lauer <patrick@gentoo.org> werkzeug-0.4.1.ebuild,
+  werkzeug-0.5.ebuild, werkzeug-0.5.1.ebuild:
+  Fixing missing unzip dep, closes #283209
+
+*werkzeug-0.5.1 (25 Jul 2009)
+
+  25 Jul 2009; Patrick Lauer <patrick@gentoo.org> +werkzeug-0.5.1.ebuild:
+  Bump to 0.5.1, fixes #278349
+
+*werkzeug-0.5 (25 Apr 2009)
+
+  25 Apr 2009; Patrick Lauer <patrick@gentoo.org> +werkzeug-0.5.ebuild:
+  Bump to 0.5. Added nose dep to tests, small build and test fixes from
+  Priit Laes
+
+  24 Apr 2009; Patrick Lauer <patrick@gentoo.org> -werkzeug-0.4.ebuild:
+  Remove old
+
+*werkzeug-0.4.1 (24 Jan 2009)
+
+  24 Jan 2009; Patrick Lauer <patrick@gentoo.org> +werkzeug-0.4.1.ebuild:
+  Bump to 0.4.1, fixes #255443
+
+  08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -werkzeug-0.3.1-r1.ebuild:
+  Removing old
+
+*werkzeug-0.4 (06 Dec 2008)
+
+  06 Dec 2008; Patrick Lauer <patrick@gentoo.org> +werkzeug-0.4.ebuild:
+  Bumping to 0.4, closing 249442
+
+*werkzeug-0.3.1-r1 (04 Aug 2008)
+
+  04 Aug 2008; Christian Hoffmann <hoffie@gentoo.org> -werkzeug-0.2.ebuild,
+  -werkzeug-0.3.1.ebuild, +werkzeug-0.3.1-r1.ebuild:
+  Fixing installation of docs (they went to /usr/docs/ directly), cleaning
+  old
+
+*werkzeug-0.3.1 (20 Jul 2008)
+
+  20 Jul 2008; Christian Hoffmann <hoffie@gentoo.org>
+  +werkzeug-0.3.1.ebuild:
+  version bump
+
+  15 Mar 2008; Tiziano Müller <dev-zero@gentoo.org> werkzeug-0.2.ebuild:
+  Added various fixes, added src_test together with dependencies.
+
+*werkzeug-0.2 (15 Mar 2008)
+
+  15 Mar 2008; Christian Hoffmann <hoffie@gentoo.org> +metadata.xml,
+  +werkzeug-0.2.ebuild:
+  Initial commit, ebuild by me (hoffie@gentoo.org), Adrian Perez
+  <the.lightman@gmail.com> suggested a very similar one in bug 209631
+

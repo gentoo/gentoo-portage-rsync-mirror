@@ -1,0 +1,25 @@
+# ChangeLog for dev-tcltk/tkcon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkcon/ChangeLog,v 1.5 2012/06/07 20:45:32 zmedico Exp $
+
+  07 Jun 2012; Zac Medico <zmedico@gentoo.org> tkcon-2.5.ebuild:
+  inherit multilib for get_libdir
+
+  19 Jul 2010; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Removing myself as maintainer
+
+*tkcon-2.5 (01 Aug 2009)
+
+  01 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> +tkcon-2.5.ebuild,
+  -tkcon-20081103.ebuild, metadata.xml:
+  Version bump
+
+  09 Jan 2009; Joseph Jezak <josejx@gentoo.org> tkcon-20081103.ebuild:
+  Marked ~ppc for bug #253299.
+
+*tkcon-20081103 (05 Nov 2008)
+
+  05 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +tkcon-20081103.ebuild:
+  Initial import
+

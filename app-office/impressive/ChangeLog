@@ -1,0 +1,27 @@
+# ChangeLog for app-office/impressive
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/ChangeLog,v 1.5 2012/09/11 10:44:55 dilfridge Exp $
+
+  11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop maintainership
+
+  29 Jun 2011; Markus Meier <maekke@gentoo.org> impressive-0.10.3-r1.ebuild:
+  x86 stable, bug #371973
+
+  18 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  impressive-0.10.3-r1.ebuild:
+  Stable on amd64 wrt bug #371973
+
+*impressive-0.10.3-r1 (19 Mar 2011)
+
+  19 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -impressive-0.10.3.ebuild, +impressive-0.10.3-r1.ebuild:
+  Added compatibility and convenience symlinks
+
+*impressive-0.10.3 (17 Mar 2011)
+
+  17 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +impressive-0.10.3.ebuild, +metadata.xml:
+  New application. Thanks to Maarten Wegewijs for the tip and to marienz and
+  rafaelmartins for reviewing.
+

@@ -1,0 +1,13 @@
+--- pry-0.2.1/pry
++++ pry-0.2.1/pry
+@@ -108,6 +108,10 @@
+     else:
+         r._run(output, options.benchmark)
+         output.final(r)
++        if r.allErrors():
++            sys.exit(1)
++        else:
++            sys.exit()
+     
+ 
+ if __name__ == "__main__":

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>php</herd>
+  <maintainer>
+    <email>olemarkus@gentoo.org</email>
+  </maintainer>
+  <maintainer>
+	  <email>pavel@senbonzakura.eu</email>
+    <description>Proxied co-maintainer, CC on all bugs</description>
+  </maintainer>
+</pkgmetadata>

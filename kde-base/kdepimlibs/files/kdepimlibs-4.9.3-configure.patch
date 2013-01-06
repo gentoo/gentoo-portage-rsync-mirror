@@ -1,0 +1,27 @@
+From 9d7e2f01702a7c713184a2f3434a5b92563375c3 Mon Sep 17 00:00:00 2001
+From: Stephen Kelly <steveire@gmail.com>
+Date: Sun, 12 Feb 2012 17:16:51 +0100
+Subject: [PATCH] Remove include which only generates errors because it is
+ obsolete.
+
+REVIEW: 107255
+---
+ gpgme++/CMakeLists.txt | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/gpgme++/CMakeLists.txt b/gpgme++/CMakeLists.txt
+index 00c51a2..674d5d3 100644
+--- a/gpgme++/CMakeLists.txt
++++ b/gpgme++/CMakeLists.txt
+@@ -117,8 +117,6 @@ if ( GPGME_PTH_FOUND )
+    install(TARGETS gpgmepp-pth EXPORT kdepimlibsLibraryTargets ${INSTALL_TARGETS_DEFAULT_ARGS} )
+ endif()
+ 
+-
+-include( CMakeExportBuildSettings )
+ # this writes way too much, but do we care?
+ EXPORT_LIBRARY_DEPENDENCIES( ${CMAKE_CURRENT_BINARY_DIR}/GpgmeppLibraryDepends.cmake )
+ 
+-- 
+1.8.0
+

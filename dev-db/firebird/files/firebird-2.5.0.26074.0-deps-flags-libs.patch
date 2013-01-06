@@ -1,0 +1,155 @@
+diff -Naur Firebird-2.5.0.26074-0_orig//builds/posix/Makefile.in.firebird Firebird-2.5.0.26074-0/builds/posix/Makefile.in.firebird
+--- Firebird-2.5.0.26074-0_orig//builds/posix/Makefile.in.firebird	2010-11-09 12:42:45.000000000 -0500
++++ Firebird-2.5.0.26074-0/builds/posix/Makefile.in.firebird	2010-11-12 15:45:04.000000000 -0500
+@@ -158,7 +158,7 @@
+ # some complications particularly for super in needing to start the server
+ # that you are currently building. MOD 28-July-2002
+ 
+-firebird_basic: btyacc_binary external_libraries firebird_boot basic_targets
++firebird_basic: firebird_boot basic_targets
+ 
+ firebird_boot: updateBuildNum boot_phase1 boot_phase2 
+ 
+@@ -189,14 +189,6 @@
+ # 
+ 
+ external_libraries:
+-ifeq ($(STD_ICU),false)
+-	$(MAKE) CFLAGS="@CFLAGS@" -f $(GEN_ROOT)/Makefile.extern.icu
+-endif
+-ifeq ($(STD_EDITLINE),false)
+-ifeq ($(EDITLINE_FLG),Y)
+-	$(MAKE) CFLAGS="@CFLAGS@" $(CPU_OPTION) -f $(GEN_ROOT)/Makefile.extern.editline
+-endif
+-endif
+ 
+ btyacc_binary: $(BTYACC)
+ 
+@@ -373,7 +365,7 @@
+ .PHONY: fbserver 
+ .PHONY: libfbclient client_gfix client_gbak client_isql client_gpre client_util client_fbudf
+ 
+-super_targets: $(PLAT_SUPER_PRE_TARGET) fbserver libfbclient client_gfix client_gbak client_gsec\
++super_targets: $(PLAT_SUPER_PRE_TARGET) fbserver libfbclient libfbembed fb_smp_server client_gfix client_gbak client_gsec\
+ 			client_isql client_gpre client_util client_fbudf client_gdef client_qli $(PLAT_SUPER_POST_TRAGET) 
+ 
+ fbserver:
+diff -Naur Firebird-2.5.0.26074-0_orig//builds/posix/make.defaults Firebird-2.5.0.26074-0/builds/posix/make.defaults
+--- Firebird-2.5.0.26074-0_orig//builds/posix/make.defaults	2010-11-09 12:42:45.000000000 -0500
++++ Firebird-2.5.0.26074-0/builds/posix/make.defaults	2010-11-12 15:42:03.000000000 -0500
+@@ -138,7 +138,7 @@
+ AR=			ar @AR_OPTIONS@ crsu
+ LN=			@LN_S@
+ RANLIB=			@RANLIB@
+-BTYACC=$(ROOT)/extern/btyacc/btyacc
++BTYACC=/usr/bin/btyacc
+ 
+ CC =	@CC@
+ CXX =	@CXX@
+@@ -222,13 +222,7 @@
+ 
+ LIBFBSTATIC_A = $(LIB)/libfbstatic.a
+ 
+-ifeq ($(EDITLINE_FLG),Y)
+-  ifeq ($(STD_EDITLINE), true)
+-	LIBEDITLINE := -l$(READLINE)
+-  else
+-	LIBEDITLINE := $(LIB)/libedit.a
+-  endif
+-endif
++LIBEDITLINE := -ledit
+ 
+ LIBICU_SO = $(LIB)/$(LIB_PREFIX)icuuc*.$(SHRLIB_FOREIGN_EXT) \
+ 			$(LIB)/$(LIB_PREFIX)icudata*.$(SHRLIB_FOREIGN_EXT) \
+diff -Naur Firebird-2.5.0.26074-0_orig//builds/posix/make.rules Firebird-2.5.0.26074-0/builds/posix/make.rules
+--- Firebird-2.5.0.26074-0_orig//builds/posix/make.rules	2010-11-09 12:42:45.000000000 -0500
++++ Firebird-2.5.0.26074-0/builds/posix/make.rules	2010-11-12 15:06:43.000000000 -0500
+@@ -35,10 +35,6 @@
+ WFLAGS:=-I$(SRC_ROOT)/include/gen -I$(SRC_ROOT)/include -I$(SRC_ROOT)/vulcan \
+ 	-DNAMESPACE=Vulcan
+ 
+-ifeq ($(STD_ICU),false)
+-  WFLAGS:= $(WFLAGS) -I$(ROOT)/extern/icu/source/common -I$(ROOT)/extern/icu/source/i18n
+-endif
+-
+ ifeq ($(IsProdTypeBuild),Y)
+   WFLAGS:= $(WFLAGS) $(PROD_FLAGS)
+ else
+@@ -72,7 +68,7 @@
+ 
+ .SUFFIXES: .c .e .epp .cpp
+ 
+-.e.c:
++.e.c: $(GPRE_CURRENT)
+ 	$(GPRE_CURRENT) $(GPRE_FLAGS) $< $@
+ 
+ 
+diff -Naur Firebird-2.5.0.26074-0_orig//builds/posix/make.shared.targets Firebird-2.5.0.26074-0/builds/posix/make.shared.targets
+--- Firebird-2.5.0.26074-0_orig//builds/posix/make.shared.targets	2010-11-09 12:42:45.000000000 -0500
++++ Firebird-2.5.0.26074-0/builds/posix/make.shared.targets	2010-11-12 15:06:43.000000000 -0500
+@@ -49,7 +49,7 @@
+ 
+ # gpre_meta needs a special boot build since there is no database.
+ 
+-$(SRC_ROOT)/gpre/gpre_meta.cpp:  $(SRC_ROOT)/gpre/gpre_meta.epp
++$(SRC_ROOT)/gpre/gpre_meta.cpp:  $(SRC_ROOT)/gpre/gpre_meta.epp $(GPRE_BOOT)
+ 	$(GPRE_BOOT) -lang_internal $(GPRE_FLAGS) $< $@
+ 
+ 
+diff -Naur Firebird-2.5.0.26074-0_orig//builds/posix/prefix.linux Firebird-2.5.0.26074-0/builds/posix/prefix.linux
+--- Firebird-2.5.0.26074-0_orig//builds/posix/prefix.linux	2010-11-09 12:42:45.000000000 -0500
++++ Firebird-2.5.0.26074-0/builds/posix/prefix.linux	2010-11-12 15:06:43.000000000 -0500
+@@ -18,11 +18,10 @@
+ #
+ # 2 Oct 2002, Nickolay Samofatov - Major cleanup
+ 
+-COMMON_FLAGS=-ggdb -DFB_SEND_FLAGS=MSG_NOSIGNAL -DLINUX -pipe -MMD -fPIC -fmessage-length=0
+-OPTIMIZE_FLAGS=-O3 -march=i586 -mtune=i686 -fno-omit-frame-pointer
++COMMON_FLAGS=-DLINUX -MMD -fPIC -fmessage-length=0
+ WARN_FLAGS=-Wall -Wno-switch -Wno-parentheses -Wno-unknown-pragmas -Wno-unused-variable
+ 
+-PROD_FLAGS=-DNDEBUG $(COMMON_FLAGS) $(OPTIMIZE_FLAGS)
++PROD_FLAGS=$(COMMON_FLAGS)
+ #DEV_FLAGS=-DUSE_VALGRIND -p $(COMMON_FLAGS) $(WARN_FLAGS)
+ DEV_FLAGS=-p $(COMMON_FLAGS) $(WARN_FLAGS)
+ 
+diff -Naur Firebird-2.5.0.26074-0_orig//builds/posix/prefix.linux_amd64 Firebird-2.5.0.26074-0/builds/posix/prefix.linux_amd64
+--- Firebird-2.5.0.26074-0_orig//builds/posix/prefix.linux_amd64	2010-11-09 12:42:45.000000000 -0500
++++ Firebird-2.5.0.26074-0/builds/posix/prefix.linux_amd64	2010-11-12 15:06:43.000000000 -0500
+@@ -18,12 +18,11 @@
+ #
+ # 2 Oct 2002, Nickolay Samofatov - Major cleanup
+ 
+-COMMON_FLAGS=-ggdb -DFB_SEND_FLAGS=MSG_NOSIGNAL -DLINUX -DAMD64 -pipe -MMD -fPIC -fmessage-length=0
+-OPTIMIZE_FLAGS=-O3 -fno-omit-frame-pointer 
++COMMON_FLAGS=-DLINUX -DAMD64 -MMD -fPIC -fmessage-length=0
+ WARN_FLAGS=-Wall -Wno-switch -Wno-parentheses -Wno-unknown-pragmas -Wno-unused-variable
+ CXXFLAGS:= $(CXXFLAGS) -fno-rtti
+ 
+-PROD_FLAGS=-DNDEBUG $(COMMON_FLAGS) $(OPTIMIZE_FLAGS)
++PROD_FLAGS=$(COMMON_FLAGS)
+ #DEV_FLAGS=-DUSE_VALGRIND $(COMMON_FLAGS) $(WARN_FLAGS)
+ DEV_FLAGS=$(COMMON_FLAGS) $(WARN_FLAGS)
+ 
+diff -Naur Firebird-2.5.0.26074-0_orig//configure Firebird-2.5.0.26074-0/configure
+--- Firebird-2.5.0.26074-0_orig//configure	2010-11-09 12:42:45.000000000 -0500
++++ Firebird-2.5.0.26074-0/configure	2010-11-12 15:06:44.000000000 -0500
+@@ -4585,13 +4585,15 @@
+ if test "x$ac_cv_lib_edit_readline" = x""yes; then
+   READLINE=edit EDITLINE_FLG=Y
+ else
+-  { $as_echo "$as_me:$LINENO: checking for readline in -leditline" >&5
+-$as_echo_n "checking for readline in -leditline... " >&6; }
++  { $as_echo "$as_me:$LINENO: checking for readline in -ledit" >&5
++$as_echo_n "checking for readline in -ledit... " >&6; }
++
++
+ if test "${ac_cv_lib_editline_readline+set}" = set; then
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-leditline  $LIBS"
++LIBS="-ledit  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF

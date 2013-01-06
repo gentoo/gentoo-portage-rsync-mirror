@@ -1,0 +1,13 @@
+# ChangeLog for sci-geosciences/gpx-viewer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpx-viewer/ChangeLog,v 1.2 2012/10/07 10:02:10 jlec Exp $
+
+  07 Oct 2012; Justin Lecher <jlec@gentoo.org> gpx-viewer-0.3.0.ebuild:
+  Remove last bit from old naming
+
+*gpx-viewer-0.3.0 (06 Oct 2012)
+
+  06 Oct 2012; Justin Lecher <jlec@gentoo.org> +gpx-viewer-0.3.0.ebuild,
+  +metadata.xml:
+  Copied over from sci-geosciences/gpxviewer to fit upstream name
+

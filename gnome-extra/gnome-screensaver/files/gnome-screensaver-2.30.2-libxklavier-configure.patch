@@ -1,0 +1,22 @@
+From 1b4c2717763275375967f2279e065a65852967cb Mon Sep 17 00:00:00 2001
+From: Robert Ancell <robert.ancell@canonical.com>
+Date: Tue, 16 Nov 2010 22:01:41 +0000
+Subject: The dialog uses libxklavier directly, so link against it
+
+https://bugzilla.gnome.org/show_bug.cgi?id=634949
+---
+diff --git a/configure.ac b/configure.ac
+index a2379f2..a80b92a 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -643,7 +643,7 @@ have_libgnomekbdui=no
+ AC_ARG_WITH(kbd-layout-indicator,[  --without-kbd-layout-indicator         disable keyboard layout indicator],
+             [with_kbd_layout_indicator="$withval"],[with_kbd_layout_indicator=yes])
+ if test x$with_kbd_layout_indicator != xno; then
+-  PKG_CHECK_MODULES(LIBGNOMEKBDUI, libgnomekbdui >= $LIBGNOMEKBDUI_REQUIRED_VERSION, have_libgnomekbdui=yes, have_libgnomekbdui=no)
++  PKG_CHECK_MODULES(LIBGNOMEKBDUI, libgnomekbdui >= $LIBGNOMEKBDUI_REQUIRED_VERSION libxklavier, have_libgnomekbdui=yes, have_libgnomekbdui=no)
+ fi
+ if test "x$have_libgnomekbdui" = "xyes"; then
+   AC_SUBST(LIBGNOMEKBDUI_CFLAGS)
+--
+cgit v0.8.3.4

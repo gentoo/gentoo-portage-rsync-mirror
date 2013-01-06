@@ -1,0 +1,22 @@
+From 6375ebd3361a02e6c996140b33979fc1061ef734 Mon Sep 17 00:00:00 2001
+From: Diego Escalante Urrelo <descalante@igalia.com>
+Date: Sun, 10 Oct 2010 19:28:24 -0500
+Subject: [PATCH] epiphany.desktop: declare ability to handle http and https
+
+Bug #631450
+---
+ data/epiphany.desktop.in.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/data/epiphany.desktop.in.in b/data/epiphany.desktop.in.in
+index 1c93f4c..fdf5ffe 100644
+--- a/data/epiphany.desktop.in.in
++++ b/data/epiphany.desktop.in.in
+@@ -13,4 +13,4 @@ X-GNOME-Bugzilla-Product=epiphany
+ X-GNOME-Bugzilla-Component=BugBuddyBugs
+ X-GNOME-Bugzilla-Version=@VERSION@
+ Categories=Network;GNOME;GTK;WebBrowser;
+-MimeType=text/html;text/xml;application/xhtml+xml;
++MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
+-- 
+1.7.1

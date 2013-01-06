@@ -1,0 +1,13 @@
+# ChangeLog for dev-python/gitdb
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gitdb/ChangeLog,v 1.2 2011/08/27 20:57:27 neurogeek Exp $
+
+  27 Aug 2011; Jesus Rivero <neurogeek@gentoo.org> gitdb-0.5.4.ebuild:
+  Added ~amd64 keyword
+
+*gitdb-0.5.4 (27 Aug 2011)
+
+  27 Aug 2011; Jesus Rivero <neurogeek@gentoo.org> +gitdb-0.5.4.ebuild,
+  +metadata.xml:
+  Initial commit
+

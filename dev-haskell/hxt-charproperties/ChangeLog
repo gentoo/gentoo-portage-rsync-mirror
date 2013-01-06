@@ -1,0 +1,20 @@
+# ChangeLog for dev-haskell/hxt-charproperties
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-charproperties/ChangeLog,v 1.3 2012/09/12 16:01:17 qnikst Exp $
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  hxt-charproperties-9.1.0.ebuild, hxt-charproperties-9.1.1.ebuild:
+  move dev-haskell/hxt-charproperties/hxt-charproperties-9.1.1.ebuild ebuild to
+  mirror://hackage
+
+*hxt-charproperties-9.1.1 (02 Jun 2012)
+
+  02 Jun 2012; Mark Wright <gienah@gentoo.org> +hxt-charproperties-9.1.1.ebuild:
+  Bump hxt-charproperties to 9.1.1
+
+*hxt-charproperties-9.1.0 (04 Dec 2011)
+
+  04 Dec 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +hxt-charproperties-9.1.0.ebuild, +metadata.xml:
+  Initial version. Character properties and classes for XML and Unicode
+  (dev-haskell/hxt depend)

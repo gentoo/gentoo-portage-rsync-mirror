@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=uk.co.demon.kerofin.DownloadManager
+Exec=/usr/lib/rox/DownloadManager/AppRun

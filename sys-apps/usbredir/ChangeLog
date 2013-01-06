@@ -1,0 +1,99 @@
+# ChangeLog for sys-apps/usbredir
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.24 2013/01/01 14:53:07 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> usbredir-0.6.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> usbredir-0.6.ebuild:
+  Add ~ia64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> usbredir-0.6.ebuild:
+  Add ~ppc64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> usbredir-0.6.ebuild:
+  Add ~ppc, wrt bug #449220
+
+*usbredir-0.6 (17 Dec 2012)
+
+  17 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> +usbredir-0.6.ebuild:
+  Version bump.
+
+*usbredir-0.5.1 (25 Sep 2012)
+
+  25 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> +usbredir-0.5.1.ebuild:
+  Version bump.
+
+  08 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> usbredir-0.5.ebuild:
+  Set CFLAGS to have at least -Wno-error because upstream refused to fix the
+  broken configure.ac logic wrt
+  http://bugs.freedesktop.org/show_bug.cgi?id=54643
+
+*usbredir-0.5 (08 Sep 2012)
+
+  08 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> +usbredir-0.5.ebuild:
+  Version bump.
+
+  07 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> -usbredir-0.3.3.ebuild:
+  old
+
+  20 Jun 2012; Jeff Horelick <jdhore@gentoo.org> usbredir-0.4.3.ebuild:
+  marked x86 per bug 422195
+
+  19 Jun 2012; Agostino Sarubbo <ago@gentoo.org> usbredir-0.4.3.ebuild:
+  Stable for amd64, wrt bug #422195
+
+  22 May 2012; Samuli Suominen <ssuominen@gentoo.org> usbredir-0.3.3.ebuild:
+  Use virtual/libusb instead of dev-libs/libusb.
+
+  04 May 2012; Jeff Horelick <jdhore@gentoo.org> usbredir-0.3.3.ebuild,
+  usbredir-0.4.3.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  16 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> -usbredir-0.4.1.ebuild,
+  -usbredir-0.4.2.ebuild:
+  old
+
+  16 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Remove myself from metadata.xml and leave qemu (as primary consumer of
+  usbredir) as backup.
+
+*usbredir-0.4.3 (16 Apr 2012)
+
+  16 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> +usbredir-0.4.3.ebuild:
+  Version bump.
+
+*usbredir-0.4.2 (06 Mar 2012)
+
+  06 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> +usbredir-0.4.2.ebuild:
+  Version bump.
+
+  26 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> -usbredir-0.3.2.ebuild,
+  -usbredir-0.4.ebuild:
+  old
+
+*usbredir-0.4.1 (26 Feb 2012)
+
+  26 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> +usbredir-0.4.1.ebuild:
+  Version bump.
+
+*usbredir-0.4 (22 Feb 2012)
+
+  22 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> +usbredir-0.4.ebuild:
+  Version bump.
+
+  16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> usbredir-0.3.3.ebuild:
+  x86 stable wrt bug #399705
+
+  23 Jan 2012; Agostino Sarubbo <ago@gentoo.org> usbredir-0.3.3.ebuild:
+  Stable for amd64, wrt bug #399705
+
+*usbredir-0.3.3 (14 Jan 2012)
+
+  14 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +usbredir-0.3.3.ebuild:
+  Version bump.
+
+*usbredir-0.3.2 (09 Jan 2012)
+
+  09 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +usbredir-0.3.2.ebuild:
+  Initial commit.

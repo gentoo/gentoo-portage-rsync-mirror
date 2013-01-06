@@ -1,0 +1,35 @@
+diff -Nru gnokii-0.6.27.orig/configure.in gnokii-0.6.27/configure.in
+--- gnokii-0.6.27.orig/configure.in	2008-10-06 06:56:15.000000000 +0000
++++ gnokii-0.6.27/configure.in	2009-01-11 17:06:22.000000000 +0000
+@@ -685,9 +685,14 @@
+ 
+ dnl ======================== Checks for databases support for smsd
+ 
++AC_ARG_ENABLE(postgres,
++	AC_HELP_STRING([--disable-postgres],
++	[disable PostgresSQL support (default is autodetected)]),
++	[enable_postgres=$enableval],
++	[enable_postgres=yes])
+ have_postgres=no
+ AC_PATH_PROG(PGCONFIG, pg_config, no)
+-if test x$PGCONFIG != xno ; then
++if test x$enable_postgres != xno && test x$PGCONFIG != xno ; then
+ 	have_postgres=yes
+ 	pg_libdir=`$PGCONFIG --libdir`
+ 	POSTGRES_LIBS="-L$pg_libdir -lpq"
+@@ -699,9 +704,14 @@
+ 
+ AM_CONDITIONAL(HAVE_POSTGRES, test "x$have_postgres" = "xyes")
+ 
++AC_ARG_ENABLE(mysql,
++	AC_HELP_STRING([--disable-mysql],
++	[disable MySQL support (default is autodetected)]),
++	[enable_mysql=$enableval],
++	[enable_mysql=yes])
+ have_mysql=no
+ AC_PATH_PROG(MYSQLCONFIG, mysql_config, no)
+-if test x$MYSQLCONFIG != xno ; then
++if test x$enable_mysql != xno && test x$MYSQLCONFIG != xno ; then
+ 	have_mysql=yes
+ 	MYSQL_LIBS=`$MYSQLCONFIG --libs`
+ 	MYSQL_CFLAGS=`$MYSQLCONFIG --cflags`

@@ -1,0 +1,23 @@
+# ChangeLog for media-plugins/gst-plugins-libav
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/ChangeLog,v 1.4 2012/12/20 03:40:18 tetromino Exp $
+
+  20 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
+  Switch to global orc USE flag.
+
+  09 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-plugins-libav-1.0.3.ebuild:
+  Restore accidentally dropped keywords (should have been copied from
+  gst-plugins-ffmpeg).
+
+  05 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  gst-plugins-libav-1.0.3.ebuild:
+  Drop direct ffmpeg and libav dependency, virtual should now provide minimum
+  required versions.
+
+*gst-plugins-libav-1.0.3 (05 Dec 2012)
+
+  05 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-libav-1.0.3.ebuild, +metadata.xml:
+  Initial ebuild, upstream renamed gst-ffmpeg.
+

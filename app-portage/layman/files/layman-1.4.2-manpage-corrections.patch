@@ -1,0 +1,271 @@
+diff -u layman-1.4.2/doc/layman.8 layman/doc/layman.8
+--- layman-1.4.2/doc/layman.8	2011-02-07 19:38:22.000000000 -0800
++++ layman/doc/layman.8	2012-03-10 16:40:31.000000000 -0800
+@@ -1,13 +1,13 @@
+ '\" t
+ .\"     Title: layman
+ .\"    Author: Gunnar Wrobel <wrobel@gentoo.org>
+-.\" Generator: DocBook XSL Stylesheets v1.76.0 <http://docbook.sf.net/>
+-.\"      Date: 02/08/2011
++.\" Generator: DocBook XSL Stylesheets v1.76.1 <http://docbook.sf.net/>
++.\"      Date: 03/10/2012
+ .\"    Manual: layman 1.4.2
+ .\"    Source: layman 1.4.2
+ .\"  Language: English
+ .\"
+-.TH "LAYMAN" "8" "02/08/2011" "layman 1\&.4\&.2" "layman 1\&.4\&.2"
++.TH "LAYMAN" "8" "03/10/2012" "layman 1\&.4\&.2" "layman 1\&.4\&.2"
+ .\" -----------------------------------------------------------------
+ .\" * Define some portability stuff
+ .\" -----------------------------------------------------------------
+@@ -226,10 +226,10 @@
+ 
+ \fBlayman\fR
+ will store the downloaded global list of overlays here\&. The default is
+-\fI%(storage)s/cache\&.xml\fR\&.
++\fI%(storage)s/cache_XXX\&.xml\fR\&. The xxx is determined by creating a hash of the filename or url\&.
+ .RE
+ .PP
+-overlays
++local_list
+ .RS 4
+ 
+ \fBlayman\fR
+@@ -348,18 +348,18 @@
+ <!DOCTYPE repositories SYSTEM "/dtd/repositories\&.dtd">
+ <repositories xmlns="" version="1\&.0">
+ <repo quality="experimental" status="official">
+-        <name>gnome</name>
+-        <description>experimental gnome ebuilds</description>
+-        <homepage>http://git\&.overlays\&.gentoo\&.org/gitweb/?p=proj/gnome\&.git;a=summary</homepage>
+-        <owner type="project">
+-                <email>gnome@gentoo\&.org</email>
+-                <name>GNOME herd</name>
+-        </owner>
+-        <source type="git">git://git\&.overlays\&.gentoo\&.org/proj/gnome\&.git</source>
+-        <source type="git">http://git\&.overlays\&.gentoo\&.org/gitroot/proj/gnome\&.git</source>
+-        <source type="git">git+ssh://git@git\&.overlays\&.gentoo\&.org/proj/gnome\&.git</source>
+-        <feed>http://git\&.overlays\&.gentoo\&.org/gitweb/?p=proj/gnome\&.git;a=atom</feed>
+-        <feed>http://git\&.overlays\&.gentoo\&.org/gitweb/?p=proj/gnome\&.git;a=rss</feed>
++    <name>gnome</name>
++    <description>experimental gnome ebuilds</description>
++    <homepage>http://git\&.overlays\&.gentoo\&.org/gitweb/?p=proj/gnome\&.git;a=summary</homepage>
++    <owner type="project">
++        <email>gnome@gentoo\&.org</email>
++        <name>GNOME herd</name>
++    </owner>
++    <source type="git">git://git\&.overlays\&.gentoo\&.org/proj/gnome\&.git</source>
++    <source type="git">http://git\&.overlays\&.gentoo\&.org/gitroot/proj/gnome\&.git</source>
++    <source type="git">git+ssh://git@git\&.overlays\&.gentoo\&.org/proj/gnome\&.git</source>
++    <feed>http://git\&.overlays\&.gentoo\&.org/gitweb/?p=proj/gnome\&.git;a=atom</feed>
++    <feed>http://git\&.overlays\&.gentoo\&.org/gitweb/?p=proj/gnome\&.git;a=rss</feed>
+ </repo>
+ </repositories>
+ .fi
+diff -u layman-1.4.2/doc/layman.8.html layman/doc/layman.8.html
+--- layman-1.4.2/doc/layman.8.html	2011-02-07 19:38:23.000000000 -0800
++++ layman/doc/layman.8.html	2012-03-10 16:40:33.000000000 -0800
+@@ -1,14 +1,14 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>LAYMAN(8)</title><link rel="stylesheet" type="text/css" href="docbook-xsl.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.0" /></head><body><div xml:lang="en" class="article" title="LAYMAN(8)" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="id445982"></a>LAYMAN(8)</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Gunnar</span> <span class="surname">Wrobel</span></h3><code class="email">&lt;<a class="email" href="mailto:wrobel@gentoo.org">wrobel@gentoo.org</a>&gt;</code></div></div></div><hr /></div><div class="toc"><p>Table of Contents</p><dl><dt><span class="section"><a href="#_name">1. NAME</a></span></dt><dt><span class="section"><a href="#_synopsis">2. SYNOPSIS</a></span></dt><dt><span class="section"><a href="#_description">3. DESCRIPTION</a></span></dt><dd><dl><dt><span class="section"><a href="#_warning">3.1. WARNING</a></span></dt></dl></dd><dt><span class="section"><a href="#_options">4. OPTIONS</a></span></dt><dd><dl><dt><span class="section"><a href="#_actions">4.1. ACTIONS</a></span></dt><dt><span class="section"><a href="#_other_options">4.2. OTHER OPTIONS</a></span></dt></dl></dd><dt><span class="section"><a href="#_configuration">5. CONFIGURATION</a></span></dt><dt><span class="section"><a href="#_handling_overlays">6. HANDLING OVERLAYS</a></span></dt><dd><dl><dt><span class="section"><a href="#_overlay_lists">6.1. OVERLAY LISTS</a></span></dt><dt><span class="section"><a href="#_local_cache">6.2. LOCAL CACHE</a></span></dt><dt><span class="section"><a href="#_handling_etc_make_conf">6.3. HANDLING /ETC/MAKE.CONF</a></span></dt><dt><span class="section"><a href="#_adding_removing_and_updating_overlays">6.4. ADDING, REMOVING AND UPDATING OVERLAYS</a></span></dt><dt><span class="section"><a href="#_list_overlays">6.5. LIST OVERLAYS</a></span></dt><dt><span class="section"><a href="#_searching_ebuilds_in_overlays">6.6. SEARCHING EBUILDS IN OVERLAYS</a></span></dt><dt><span class="section"><a href="#_overlay_types">6.7. OVERLAY TYPES</a></span></dt></dl></dd><dt><span class="section"><a href="#_overlay_lists_2">7. OVERLAY LISTS</a></span></dt><dd><dl><dt><span class="section"><a href="#_overlay_list_format">7.1. OVERLAY LIST FORMAT</a></span></dt><dt><span class="section"><a href="#_adding_an_overlay_locally">7.2. ADDING AN OVERLAY LOCALLY</a></span></dt><dt><span class="section"><a href="#_adding_an_overlay_globally">7.3. ADDING AN OVERLAY GLOBALLY</a></span></dt></dl></dd><dt><span class="section"><a href="#_examples">8. EXAMPLES</a></span></dt><dd><dl><dt><span class="section"><a href="#_installing_an_overlay">8.1. INSTALLING AN OVERLAY</a></span></dt><dt><span class="section"><a href="#_syncing_your_overlays">8.2. SYNCING YOUR OVERLAYS</a></span></dt><dt><span class="section"><a href="#_performing_several_actions_at_the_same_time">8.3. PERFORMING SEVERAL ACTIONS AT THE SAME TIME</a></span></dt></dl></dd><dt><span class="section"><a href="#_files">9. FILES</a></span></dt><dt><span class="section"><a href="#_authors">10. AUTHORS</a></span></dt><dt><span class="section"><a href="#_reporting_bugs">11. REPORTING BUGS</a></span></dt><dt><span class="section"><a href="#_see_also">12. SEE ALSO</a></span></dt></dl></div><div class="section" title="NAME"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_name"></a>NAME</h2></div></div></div><p>layman - manage your local repository of Gentoo overlays</p></div><div class="section" title="SYNOPSIS"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_synopsis"></a>SYNOPSIS</h2></div></div></div><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-a</strong></span>|<span class="strong"><strong>--add</strong></span>) (<span class="strong"><strong>ALL</strong></span>|<span class="emphasis"><em>OVERLAY</em></span>)</p><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-d</strong></span>|<span class="strong"><strong>--delete</strong></span>) (<span class="strong"><strong>ALL</strong></span>|<span class="emphasis"><em>OVERLAY</em></span>)</p><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-s</strong></span>|<span class="strong"><strong>--sync</strong></span>) (<span class="strong"><strong>ALL</strong></span>|<span class="emphasis"><em>OVERLAY</em></span>)</p><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-i</strong></span>|<span class="strong"><strong>--info</strong></span>) (<span class="strong"><strong>ALL</strong></span>|<span class="emphasis"><em>OVERLAY</em></span>)</p><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-S</strong></span>|<span class="strong"><strong>--sync-all</strong></span>)</p><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-L</strong></span>|<span class="strong"><strong>--list</strong></span>)</p><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-l</strong></span>|<span class="strong"><strong>--list-local</strong></span>)</p><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-f</strong></span>|<span class="strong"><strong>--fetch</strong></span>)</p></div><div class="section" title="DESCRIPTION"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_description"></a>DESCRIPTION</h2></div></div></div><p><span class="strong"><strong>layman</strong></span> is a script that allows you to add, remove and update
+-Gentoo overlays from a variety of sources.</p><div class="section" title="WARNING"><div class="titlepage"><div><div><h3 class="title"><a id="_warning"></a>WARNING</h3></div></div></div><p><span class="strong"><strong>layman</strong></span> makes it easy to retrieve and update overlays for Gentoo.
++<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>LAYMAN(8)</title><link rel="stylesheet" type="text/css" href="docbook-xsl.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.76.1" /></head><body><div xml:lang="en" class="article" title="LAYMAN(8)" lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="idp25119248"></a>LAYMAN(8)</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Gunnar</span> <span class="surname">Wrobel</span></h3><code class="email">&lt;<a class="email" href="mailto:wrobel@gentoo.org">wrobel@gentoo.org</a>&gt;</code></div></div></div><hr /></div><div class="toc"><p><strong>Table of Contents</strong></p><dl><dt><span class="section"><a href="#_name">1. NAME</a></span></dt><dt><span class="section"><a href="#_synopsis">2. SYNOPSIS</a></span></dt><dt><span class="section"><a href="#_description">3. DESCRIPTION</a></span></dt><dd><dl><dt><span class="section"><a href="#_warning">3.1. WARNING</a></span></dt></dl></dd><dt><span class="section"><a href="#_options">4. OPTIONS</a></span></dt><dd><dl><dt><span class="section"><a href="#_actions">4.1. ACTIONS</a></span></dt><dt><span class="section"><a href="#_other_options">4.2. OTHER OPTIONS</a></span></dt></dl></dd><dt><span class="section"><a href="#_configuration">5. CONFIGURATION</a></span></dt><dt><span class="section"><a href="#_handling_overlays">6. HANDLING OVERLAYS</a></span></dt><dd><dl><dt><span class="section"><a href="#_overlay_lists">6.1. OVERLAY LISTS</a></span></dt><dt><span class="section"><a href="#_local_cache">6.2. LOCAL CACHE</a></span></dt><dt><span class="section"><a href="#_handling_etc_make_conf">6.3. HANDLING /ETC/MAKE.CONF</a></span></dt><dt><span class="section"><a href="#_adding_removing_and_updating_overlays">6.4. ADDING, REMOVING AND UPDATING OVERLAYS</a></span></dt><dt><span class="section"><a href="#_list_overlays">6.5. LIST OVERLAYS</a></span></dt><dt><span class="section"><a href="#_searching_ebuilds_in_overlays">6.6. SEARCHING EBUILDS IN OVERLAYS</a></span></dt><dt><span class="section"><a href="#_overlay_types">6.7. OVERLAY TYPES</a></span></dt></dl></dd><dt><span class="section"><a href="#_overlay_lists_2">7. OVERLAY LISTS</a></span></dt><dd><dl><dt><span class="section"><a href="#_overlay_list_format">7.1. OVERLAY LIST FORMAT</a></span></dt><dt><span class="section"><a href="#_adding_an_overlay_locally">7.2. ADDING AN OVERLAY LOCALLY</a></span></dt><dt><span class="section"><a href="#_adding_an_overlay_globally">7.3. ADDING AN OVERLAY GLOBALLY</a></span></dt></dl></dd><dt><span class="section"><a href="#_examples">8. EXAMPLES</a></span></dt><dd><dl><dt><span class="section"><a href="#_installing_an_overlay">8.1. INSTALLING AN OVERLAY</a></span></dt><dt><span class="section"><a href="#_syncing_your_overlays">8.2. SYNCING YOUR OVERLAYS</a></span></dt><dt><span class="section"><a href="#_performing_several_actions_at_the_same_time">8.3. PERFORMING SEVERAL ACTIONS AT THE SAME TIME</a></span></dt></dl></dd><dt><span class="section"><a href="#_files">9. FILES</a></span></dt><dt><span class="section"><a href="#_authors">10. AUTHORS</a></span></dt><dt><span class="section"><a href="#_reporting_bugs">11. REPORTING BUGS</a></span></dt><dt><span class="section"><a href="#_see_also">12. SEE ALSO</a></span></dt></dl></div><div class="section" title="1. NAME"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_name"></a>1. NAME</h2></div></div></div><p>layman - manage your local repository of Gentoo overlays</p></div><div class="section" title="2. SYNOPSIS"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_synopsis"></a>2. SYNOPSIS</h2></div></div></div><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-a</strong></span>|<span class="strong"><strong>--add</strong></span>) (<span class="strong"><strong>ALL</strong></span>|<span class="emphasis"><em>OVERLAY</em></span>)</p><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-d</strong></span>|<span class="strong"><strong>--delete</strong></span>) (<span class="strong"><strong>ALL</strong></span>|<span class="emphasis"><em>OVERLAY</em></span>)</p><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-s</strong></span>|<span class="strong"><strong>--sync</strong></span>) (<span class="strong"><strong>ALL</strong></span>|<span class="emphasis"><em>OVERLAY</em></span>)</p><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-i</strong></span>|<span class="strong"><strong>--info</strong></span>) (<span class="strong"><strong>ALL</strong></span>|<span class="emphasis"><em>OVERLAY</em></span>)</p><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-S</strong></span>|<span class="strong"><strong>--sync-all</strong></span>)</p><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-L</strong></span>|<span class="strong"><strong>--list</strong></span>)</p><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-l</strong></span>|<span class="strong"><strong>--list-local</strong></span>)</p><p><span class="strong"><strong>layman</strong></span> (<span class="strong"><strong>-f</strong></span>|<span class="strong"><strong>--fetch</strong></span>)</p></div><div class="section" title="3. DESCRIPTION"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_description"></a>3. DESCRIPTION</h2></div></div></div><p><span class="strong"><strong>layman</strong></span> is a script that allows you to add, remove and update
++Gentoo overlays from a variety of sources.</p><div class="section" title="3.1. WARNING"><div class="titlepage"><div><div><h3 class="title"><a id="_warning"></a>3.1. WARNING</h3></div></div></div><p><span class="strong"><strong>layman</strong></span> makes it easy to retrieve and update overlays for Gentoo.
+ In addition it makes it TRIVIAL to break your system.</p><p>The Gentoo main tree provides you with high quality ebuilds that
+ are all maintained by Gentoo developers. This will not be the case
+ for most of the overlays you can get by using <span class="strong"><strong>layman</strong></span>. Thus you
+ are removing the security shield that the standard tree provides
+ for you. You should keep that in mind when installing ebuilds from
+ an overlay.</p><p>To ensure the security of your system you MUST read the source of
+-the ebuild you are about to install.</p></div></div><div class="section" title="OPTIONS"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_options"></a>OPTIONS</h2></div></div></div><div class="section" title="ACTIONS"><div class="titlepage"><div><div><h3 class="title"><a id="_actions"></a>ACTIONS</h3></div></div></div><p>List of possible <span class="strong"><strong>layman</strong></span> actions.</p><div class="variablelist"><dl><dt><span class="term">
++the ebuild you are about to install.</p></div></div><div class="section" title="4. OPTIONS"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_options"></a>4. OPTIONS</h2></div></div></div><div class="section" title="4.1. ACTIONS"><div class="titlepage"><div><div><h3 class="title"><a id="_actions"></a>4.1. ACTIONS</h3></div></div></div><p>List of possible <span class="strong"><strong>layman</strong></span> actions.</p><div class="variablelist"><dl><dt><span class="term">
+ <span class="strong"><strong>-f</strong></span>, <span class="strong"><strong>--fetch</strong></span>
+ </span></dt><dd>
+     Fetches the remote list of overlays. You will usually NOT need
+@@ -47,7 +47,7 @@
+ <span class="strong"><strong>-l</strong></span>, <span class="strong"><strong>--list-local</strong></span>
+ </span></dt><dd>
+     List the locally installed overlays.
+-</dd></dl></div></div><div class="section" title="OTHER OPTIONS"><div class="titlepage"><div><div><h3 class="title"><a id="_other_options"></a>OTHER OPTIONS</h3></div></div></div><p>List of other available <span class="strong"><strong>layman</strong></span> options.</p><div class="variablelist"><dl><dt><span class="term">
++</dd></dl></div></div><div class="section" title="4.2. OTHER OPTIONS"><div class="titlepage"><div><div><h3 class="title"><a id="_other_options"></a>4.2. OTHER OPTIONS</h3></div></div></div><p>List of other available <span class="strong"><strong>layman</strong></span> options.</p><div class="variablelist"><dl><dt><span class="term">
+ <span class="strong"><strong>-c</strong></span> <span class="emphasis"><em>PATH</em></span>, <span class="strong"><strong>--config</strong></span>=<span class="emphasis"><em>PATH</em></span>
+ </span></dt><dd>
+     Path to an alternative configuration file.
+@@ -111,7 +111,7 @@
+     of entries in the make.conf file. The lower the priority,
+     the earlier in the list the entry will be mentioned. Use a value
+     between 0 and 100. The default value is 50.
+-</dd></dl></div></div></div><div class="section" title="CONFIGURATION"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_configuration"></a>CONFIGURATION</h2></div></div></div><p><span class="strong"><strong>layman</strong></span> reads configuration parameters from the file
++</dd></dl></div></div></div><div class="section" title="5. CONFIGURATION"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_configuration"></a>5. CONFIGURATION</h2></div></div></div><p><span class="strong"><strong>layman</strong></span> reads configuration parameters from the file
+ <span class="emphasis"><em>/etc/layman/layman.cfg</em></span> by default. This file provides seven possible
+ settings.</p><div class="variablelist"><dl><dt><span class="term">
+ storage
+@@ -130,9 +130,10 @@
+ cache
+ </span></dt><dd>
+     <span class="strong"><strong>layman</strong></span> will store the downloaded global list of overlays here.
+-    The default is <span class="emphasis"><em>%(storage)s/cache.xml</em></span>.
++    The default is <span class="emphasis"><em>%(storage)s/cache_XXX.xml</em></span>.  The xxx is
++    determined by creating a hash of the filename or url.
+ </dd><dt><span class="term">
+-overlays
++local_list
+ </span></dt><dd>
+     <span class="strong"><strong>layman</strong></span> will store the list of installed overlays here.
+     The default is <span class="emphasis"><em>%(storage)s/overlays.xml</em></span>.
+@@ -168,8 +169,8 @@
+ </span></dt><dd>
+     Set to "yes" if <span class="strong"><strong>layman</strong></span> should stop worrying about overlays
+     with missing a contact address or the description.
+-</dd></dl></div></div><div class="section" title="HANDLING OVERLAYS"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_handling_overlays"></a>HANDLING OVERLAYS</h2></div></div></div><p><span class="strong"><strong>layman</strong></span> intends to provide easy maintenance of Gentoo overlays
+-while not requiring any configuration.</p><div class="section" title="OVERLAY LISTS"><div class="titlepage"><div><div><h3 class="title"><a id="_overlay_lists"></a>OVERLAY LISTS</h3></div></div></div><p><span class="strong"><strong>layman</strong></span> allows you to fetch an overlay without the need to modify
++</dd></dl></div></div><div class="section" title="6. HANDLING OVERLAYS"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_handling_overlays"></a>6. HANDLING OVERLAYS</h2></div></div></div><p><span class="strong"><strong>layman</strong></span> intends to provide easy maintenance of Gentoo overlays
++while not requiring any configuration.</p><div class="section" title="6.1. OVERLAY LISTS"><div class="titlepage"><div><div><h3 class="title"><a id="_overlay_lists"></a>6.1. OVERLAY LISTS</h3></div></div></div><p><span class="strong"><strong>layman</strong></span> allows you to fetch an overlay without the need to modify
+ any configuration files. In order for this to be possible the script
+ needs an external list of possible overlay sources. There is a
+ centralized list available at
+@@ -184,10 +185,10 @@
+ will merge the contents of all lists.</p><p><span class="strong"><strong>layman</strong></span> also allows you to define local files in this list.
+ Just make sure you prepend these path names in standard URL notation with <span class="emphasis"><em>file://</em></span>.</p><p>If you need to use a proxy for access to the Internet, you can use
+ the corresponding variable in the <span class="strong"><strong>layman</strong></span> configuration file.
+-<span class="strong"><strong>layman</strong></span> will also respect the <span class="strong"><strong>http_proxy</strong></span> environment variable in case you set it.</p></div><div class="section" title="LOCAL CACHE"><div class="titlepage"><div><div><h3 class="title"><a id="_local_cache"></a>LOCAL CACHE</h3></div></div></div><p><span class="strong"><strong>layman</strong></span> stores a local copy of the fetched remote list.
++<span class="strong"><strong>layman</strong></span> will also respect the <span class="strong"><strong>http_proxy</strong></span> environment variable in case you set it.</p></div><div class="section" title="6.2. LOCAL CACHE"><div class="titlepage"><div><div><h3 class="title"><a id="_local_cache"></a>6.2. LOCAL CACHE</h3></div></div></div><p><span class="strong"><strong>layman</strong></span> stores a local copy of the fetched remote list.
+ It will be stored in <span class="emphasis"><em>/var/lib/layman/cache.xml</em></span> by default.
+ There exists only one such cache file and it will be overwritten
+-every time you run <span class="strong"><strong>layman</strong></span>.</p></div><div class="section" title="HANDLING /ETC/MAKE.CONF"><div class="titlepage"><div><div><h3 class="title"><a id="_handling_etc_make_conf"></a>HANDLING /ETC/MAKE.CONF</h3></div></div></div><p>Since <span class="strong"><strong>layman</strong></span> is designed to automatically handle the inclusion of
++every time you run <span class="strong"><strong>layman</strong></span>.</p></div><div class="section" title="6.3. HANDLING /ETC/MAKE.CONF"><div class="titlepage"><div><div><h3 class="title"><a id="_handling_etc_make_conf"></a>6.3. HANDLING /ETC/MAKE.CONF</h3></div></div></div><p>Since <span class="strong"><strong>layman</strong></span> is designed to automatically handle the inclusion of
+ overlays into your system it needs to be able to modify the
+ <span class="strong"><strong>PORTDIR_OVERLAY</strong></span> variable in your <span class="emphasis"><em>/etc/make.conf</em></span> file.
+ But <span class="emphasis"><em>/etc/make.conf</em></span> is a very central and essential configuration
+@@ -203,14 +204,14 @@
+ it somewhere else.</p><p>The file does not necessarily need to exist at the beginning.
+ If it is missing, <span class="strong"><strong>layman</strong></span> will create it for you.</p><p>There is also no need to remove the original <span class="strong"><strong>PORTDIR_OVERLAY</strong></span>
+ variable from the make.conf file. Layman will simply add new overlays
+-to this variable and all your old entries will remain in there.</p></div><div class="section" title="ADDING, REMOVING AND UPDATING OVERLAYS"><div class="titlepage"><div><div><h3 class="title"><a id="_adding_removing_and_updating_overlays"></a>ADDING, REMOVING AND UPDATING OVERLAYS</h3></div></div></div><p>Once a remote list of overlays has been fetched, <span class="strong"><strong>layman</strong></span> allows
++to this variable and all your old entries will remain in there.</p></div><div class="section" title="6.4. ADDING, REMOVING AND UPDATING OVERLAYS"><div class="titlepage"><div><div><h3 class="title"><a id="_adding_removing_and_updating_overlays"></a>6.4. ADDING, REMOVING AND UPDATING OVERLAYS</h3></div></div></div><p>Once a remote list of overlays has been fetched, <span class="strong"><strong>layman</strong></span> allows
+ to add overlays from the remote list to your system. The script
+ will try to fetch the overlay. If this is successful the overlay
+ information will be copied from the cache to the list of locally
+ installed overlays. In addition <span class="strong"><strong>layman</strong></span> will modify the
+ <span class="strong"><strong>PORTDIR_OVERLAY</strong></span> variable to include the new overlay path.</p><p>Removing the overlay with <span class="strong"><strong>layman</strong></span> will delete the overlay without
+ leaving any traces behind.</p><p>In order to update all overlays managed by <span class="strong"><strong>layman</strong></span> you can run
+-the script with the <span class="strong"><strong>--sync ALL</strong></span> option or the <span class="strong"><strong>--sync-all</strong></span> flag.</p></div><div class="section" title="LIST OVERLAYS"><div class="titlepage"><div><div><h3 class="title"><a id="_list_overlays"></a>LIST OVERLAYS</h3></div></div></div><p><span class="strong"><strong>layman</strong></span> provides the <span class="strong"><strong>--list</strong></span> and <span class="strong"><strong>--list-local</strong></span> options to print
++the script with the <span class="strong"><strong>--sync ALL</strong></span> option or the <span class="strong"><strong>--sync-all</strong></span> flag.</p></div><div class="section" title="6.5. LIST OVERLAYS"><div class="titlepage"><div><div><h3 class="title"><a id="_list_overlays"></a>6.5. LIST OVERLAYS</h3></div></div></div><p><span class="strong"><strong>layman</strong></span> provides the <span class="strong"><strong>--list</strong></span> and <span class="strong"><strong>--list-local</strong></span> options to print
+ a list of available respectively installed overlays.</p><p>Listing will prepend all fully supported overlays with a green
+ asterisk, all non-official overlays with a yellow asterisk and
+ all overlays that you will not be able to use since you do not
+@@ -220,43 +221,43 @@
+ a description field or a contact attribute. This type of behavior
+ has been added with <span class="strong"><strong>layman</strong></span> 1.0.7 and if you’d like to return to
+ the old behavior you may use the k option flag or set the nocheck
+-option in the configuration file.</p></div><div class="section" title="SEARCHING EBUILDS IN OVERLAYS"><div class="titlepage"><div><div><h3 class="title"><a id="_searching_ebuilds_in_overlays"></a>SEARCHING EBUILDS IN OVERLAYS</h3></div></div></div><p>You can search through the ebuilds available in the overlays on
++option in the configuration file.</p></div><div class="section" title="6.6. SEARCHING EBUILDS IN OVERLAYS"><div class="titlepage"><div><div><h3 class="title"><a id="_searching_ebuilds_in_overlays"></a>6.6. SEARCHING EBUILDS IN OVERLAYS</h3></div></div></div><p>You can search through the ebuilds available in the overlays on
+ <span class="emphasis"><em>http://overlays.gentoo.org/</em></span> by using <span class="strong"><strong>eix</strong></span>. Emerge the package and
+ run <code class="literal">update-eix-remote update</code>.</p><p>Alternatively, you can browse overlays that you have not installed
+-on <span class="emphasis"><em>http://gpo.zugaina.org/</em></span>.</p></div><div class="section" title="OVERLAY TYPES"><div class="titlepage"><div><div><h3 class="title"><a id="_overlay_types"></a>OVERLAY TYPES</h3></div></div></div><p>Currently <span class="strong"><strong>layman</strong></span> supports overlays that are exported via <span class="strong"><strong>rsync</strong></span>,
++on <span class="emphasis"><em>http://gpo.zugaina.org/</em></span>.</p></div><div class="section" title="6.7. OVERLAY TYPES"><div class="titlepage"><div><div><h3 class="title"><a id="_overlay_types"></a>6.7. OVERLAY TYPES</h3></div></div></div><p>Currently <span class="strong"><strong>layman</strong></span> supports overlays that are exported via <span class="strong"><strong>rsync</strong></span>,
+ <span class="strong"><strong>subversion</strong></span>, <span class="strong"><strong>bzr</strong></span>, <span class="strong"><strong>darcs</strong></span>, <span class="strong"><strong>git</strong></span>, <span class="strong"><strong>mercurial</strong></span> or provided as tar
+-packages.</p></div></div><div class="section" title="OVERLAY LISTS"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_overlay_lists_2"></a>OVERLAY LISTS</h2></div></div></div><div class="section" title="OVERLAY LIST FORMAT"><div class="titlepage"><div><div><h3 class="title"><a id="_overlay_list_format"></a>OVERLAY LIST FORMAT</h3></div></div></div><p>Layman uses a central list of overlays in XML format. The file looks
++packages.</p></div></div><div class="section" title="7. OVERLAY LISTS"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_overlay_lists_2"></a>7. OVERLAY LISTS</h2></div></div></div><div class="section" title="7.1. OVERLAY LIST FORMAT"><div class="titlepage"><div><div><h3 class="title"><a id="_overlay_list_format"></a>7.1. OVERLAY LIST FORMAT</h3></div></div></div><p>Layman uses a central list of overlays in XML format. The file looks
+ like this:</p><p>Example 1. An example overlays.xml file</p><pre class="screen">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+ &lt;!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd"&gt;
+ &lt;repositories xmlns="" version="1.0"&gt;
+ &lt;repo quality="experimental" status="official"&gt;
+-        &lt;name&gt;gnome&lt;/name&gt;
+-        &lt;description&gt;experimental gnome ebuilds&lt;/description&gt;
+-        &lt;homepage&gt;http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=summary&lt;/homepage&gt;
+-        &lt;owner type="project"&gt;
+-                &lt;email&gt;gnome@gentoo.org&lt;/email&gt;
+-                &lt;name&gt;GNOME herd&lt;/name&gt;
+-        &lt;/owner&gt;
+-        &lt;source type="git"&gt;git://git.overlays.gentoo.org/proj/gnome.git&lt;/source&gt;
+-        &lt;source type="git"&gt;http://git.overlays.gentoo.org/gitroot/proj/gnome.git&lt;/source&gt;
+-        &lt;source type="git"&gt;git+ssh://git@git.overlays.gentoo.org/proj/gnome.git&lt;/source&gt;
+-        &lt;feed&gt;http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=atom&lt;/feed&gt;
+-        &lt;feed&gt;http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=rss&lt;/feed&gt;
++    &lt;name&gt;gnome&lt;/name&gt;
++    &lt;description&gt;experimental gnome ebuilds&lt;/description&gt;
++    &lt;homepage&gt;http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=summary&lt;/homepage&gt;
++    &lt;owner type="project"&gt;
++        &lt;email&gt;gnome@gentoo.org&lt;/email&gt;
++        &lt;name&gt;GNOME herd&lt;/name&gt;
++    &lt;/owner&gt;
++    &lt;source type="git"&gt;git://git.overlays.gentoo.org/proj/gnome.git&lt;/source&gt;
++    &lt;source type="git"&gt;http://git.overlays.gentoo.org/gitroot/proj/gnome.git&lt;/source&gt;
++    &lt;source type="git"&gt;git+ssh://git@git.overlays.gentoo.org/proj/gnome.git&lt;/source&gt;
++    &lt;feed&gt;http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=atom&lt;/feed&gt;
++    &lt;feed&gt;http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=rss&lt;/feed&gt;
+ &lt;/repo&gt;
+-&lt;/repositories&gt;</pre></div><div class="section" title="ADDING AN OVERLAY LOCALLY"><div class="titlepage"><div><div><h3 class="title"><a id="_adding_an_overlay_locally"></a>ADDING AN OVERLAY LOCALLY</h3></div></div></div><p>Simply create an overlay list in the format described above and run
++&lt;/repositories&gt;</pre></div><div class="section" title="7.2. ADDING AN OVERLAY LOCALLY"><div class="titlepage"><div><div><h3 class="title"><a id="_adding_an_overlay_locally"></a>7.2. ADDING AN OVERLAY LOCALLY</h3></div></div></div><p>Simply create an overlay list in the format described above and run
+ <span class="strong"><strong>layman</strong></span> with the -o switch. You need to prepend local file URLs
+-with <span class="emphasis"><em>file://</em></span>.</p></div><div class="section" title="ADDING AN OVERLAY GLOBALLY"><div class="titlepage"><div><div><h3 class="title"><a id="_adding_an_overlay_globally"></a>ADDING AN OVERLAY GLOBALLY</h3></div></div></div><p>The global list of overlays used by <span class="strong"><strong>layman</strong></span> lies at
++with <span class="emphasis"><em>file://</em></span>.</p></div><div class="section" title="7.3. ADDING AN OVERLAY GLOBALLY"><div class="titlepage"><div><div><h3 class="title"><a id="_adding_an_overlay_globally"></a>7.3. ADDING AN OVERLAY GLOBALLY</h3></div></div></div><p>The global list of overlays used by <span class="strong"><strong>layman</strong></span> lies at
+ <span class="emphasis"><em>http://www.gentoo.org/proj/en/overlays/repositories.xml</em></span>.</p><p>All Gentoo developers have access to this location via CVS and
+ can modify the list of overlays.</p><p>If you are not a Gentoo developer but wish to get your overlay
+ listed you should contact the Gentoo Overlays team at
+ &lt;<a class="ulink" href="mailto:overlays@gentoo.org" target="_top">overlays@gentoo.org</a>&gt;. You can also join <span class="strong"><strong>#gentoo-overlays</strong></span> on
+-irc.freenode.net.</p></div></div><div class="section" title="EXAMPLES"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_examples"></a>EXAMPLES</h2></div></div></div><div class="section" title="INSTALLING AN OVERLAY"><div class="titlepage"><div><div><h3 class="title"><a id="_installing_an_overlay"></a>INSTALLING AN OVERLAY</h3></div></div></div><pre class="screen">layman -f -a wrobel</pre><p>This would add the overlay with the id wrobel to your list of
+-installed overlays.</p></div><div class="section" title="SYNCING YOUR OVERLAYS"><div class="titlepage"><div><div><h3 class="title"><a id="_syncing_your_overlays"></a>SYNCING YOUR OVERLAYS</h3></div></div></div><pre class="screen">layman -s ALL</pre><p>This updates all overlays</p></div><div class="section" title="PERFORMING SEVERAL ACTIONS AT THE SAME TIME"><div class="titlepage"><div><div><h3 class="title"><a id="_performing_several_actions_at_the_same_time"></a>PERFORMING SEVERAL ACTIONS AT THE SAME TIME</h3></div></div></div><pre class="screen">layman -f -a wrobel -a webapps-experimental</pre><p>This fetches the remote list and immediately adds two overlays</p></div></div><div class="section" title="FILES"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_files"></a>FILES</h2></div></div></div><div class="variablelist"><dl><dt><span class="term">
++irc.freenode.net.</p></div></div><div class="section" title="8. EXAMPLES"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_examples"></a>8. EXAMPLES</h2></div></div></div><div class="section" title="8.1. INSTALLING AN OVERLAY"><div class="titlepage"><div><div><h3 class="title"><a id="_installing_an_overlay"></a>8.1. INSTALLING AN OVERLAY</h3></div></div></div><pre class="screen">layman -f -a wrobel</pre><p>This would add the overlay with the id wrobel to your list of
++installed overlays.</p></div><div class="section" title="8.2. SYNCING YOUR OVERLAYS"><div class="titlepage"><div><div><h3 class="title"><a id="_syncing_your_overlays"></a>8.2. SYNCING YOUR OVERLAYS</h3></div></div></div><pre class="screen">layman -s ALL</pre><p>This updates all overlays</p></div><div class="section" title="8.3. PERFORMING SEVERAL ACTIONS AT THE SAME TIME"><div class="titlepage"><div><div><h3 class="title"><a id="_performing_several_actions_at_the_same_time"></a>8.3. PERFORMING SEVERAL ACTIONS AT THE SAME TIME</h3></div></div></div><pre class="screen">layman -f -a wrobel -a webapps-experimental</pre><p>This fetches the remote list and immediately adds two overlays</p></div></div><div class="section" title="9. FILES"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_files"></a>9. FILES</h2></div></div></div><div class="variablelist"><dl><dt><span class="term">
+ <span class="emphasis"><em>/etc/layman/layman.cfg</em></span>
+ </span></dt><dd>
+     Configuration file, holding the defaults for <span class="strong"><strong>layman</strong></span>
+-</dd></dl></div></div><div class="section" title="AUTHORS"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_authors"></a>AUTHORS</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
++</dd></dl></div></div><div class="section" title="10. AUTHORS"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_authors"></a>10. AUTHORS</h2></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+ Gunnar Wrobel &lt;<a class="ulink" href="mailto:wrobel@gentoo.org" target="_top">wrobel@gentoo.org</a>&gt;
+ </li><li class="listitem">
+ Sebastian Pipping &lt;<a class="ulink" href="mailto:sping@gentoo.org" target="_top">sping@gentoo.org</a>&gt;
+-</li></ul></div></div><div class="section" title="REPORTING BUGS"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_reporting_bugs"></a>REPORTING BUGS</h2></div></div></div><p>Please report bugs you might find at <span class="emphasis"><em>http://bugs.gentoo.org/</em></span>.  Thank you!</p></div><div class="section" title="SEE ALSO"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_see_also"></a>SEE ALSO</h2></div></div></div><p>make.conf(5), eix(1)</p></div></div></body></html>
++</li></ul></div></div><div class="section" title="11. REPORTING BUGS"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_reporting_bugs"></a>11. REPORTING BUGS</h2></div></div></div><p>Please report bugs you might find at <span class="emphasis"><em>http://bugs.gentoo.org/</em></span>.  Thank you!</p></div><div class="section" title="12. SEE ALSO"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_see_also"></a>12. SEE ALSO</h2></div></div></div><p>make.conf(5), eix(1)</p></div></div></body></html>
+diff -u layman-1.4.2/doc/layman.8.txt layman/doc/layman.8.txt
+--- layman-1.4.2/doc/layman.8.txt	2011-02-07 18:57:23.000000000 -0800
++++ layman/doc/layman.8.txt	2012-03-10 16:39:55.000000000 -0800
+@@ -170,9 +170,10 @@
+ 
+ cache::
+     *layman* will store the downloaded global list of overlays here.
+-    The default is '%(storage)s/cache.xml'.
++    The default is '%(storage)s/cache_XXX.xml'.  The xxx is
++    determined by creating a hash of the filename or url.
+ 
+-overlays::
++local_list::
+     *layman* will store the list of installed overlays here.
+     The default is '%(storage)s/overlays.xml'.
+ 
+@@ -347,18 +348,18 @@
+ <!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+ <repositories xmlns="" version="1.0">
+ <repo quality="experimental" status="official">
+-	<name>gnome</name>
+-	<description>experimental gnome ebuilds</description>
+-	<homepage>http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=summary</homepage>
+-	<owner type="project">
+-		<email>gnome@gentoo.org</email>
+-		<name>GNOME herd</name>
+-	</owner>
+-	<source type="git">git://git.overlays.gentoo.org/proj/gnome.git</source>
+-	<source type="git">http://git.overlays.gentoo.org/gitroot/proj/gnome.git</source>
+-	<source type="git">git+ssh://git@git.overlays.gentoo.org/proj/gnome.git</source>
+-	<feed>http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=atom</feed>
+-	<feed>http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=rss</feed>
++    <name>gnome</name>
++    <description>experimental gnome ebuilds</description>
++    <homepage>http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=summary</homepage>
++    <owner type="project">
++        <email>gnome@gentoo.org</email>
++        <name>GNOME herd</name>
++    </owner>
++    <source type="git">git://git.overlays.gentoo.org/proj/gnome.git</source>
++    <source type="git">http://git.overlays.gentoo.org/gitroot/proj/gnome.git</source>
++    <source type="git">git+ssh://git@git.overlays.gentoo.org/proj/gnome.git</source>
++    <feed>http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=atom</feed>
++    <feed>http://git.overlays.gentoo.org/gitweb/?p=proj/gnome.git;a=rss</feed>
+ </repo>
+ </repositories>
+ -------------------------------------------
+Only in layman/doc: Makefile
+Only in layman/doc: .svn.ignore

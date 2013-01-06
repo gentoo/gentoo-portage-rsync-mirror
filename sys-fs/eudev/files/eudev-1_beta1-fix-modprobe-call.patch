@@ -1,0 +1,26 @@
+diff --git a/src/libudev/util.c b/src/libudev/util.c
+index d8c5bb2..92fd227 100644
+--- a/src/libudev/util.c
++++ b/src/libudev/util.c
+@@ -4312,7 +4312,7 @@ int execute_command(const char *command, char *const argv[])
+ 
+         if (pid == 0) {
+ 
+-                execv(command, argv);
++                execvp(command, argv);
+ 
+                 log_error("Failed to execute %s: %m", command);
+                 _exit(EXIT_FAILURE);
+diff --git a/src/udev/udev-builtin-kmod.c b/src/udev/udev-builtin-kmod.c
+index 89c7ab0..300090a 100644
+--- a/src/udev/udev-builtin-kmod.c
++++ b/src/udev/udev-builtin-kmod.c
+@@ -68,7 +68,7 @@ static int load_module(struct udev *udev, char *const alias)
+         kmod_module_unref_list(list);
+         return err;
+ #else
+-	char * const argv[] = { "-bq", alias, 0 };
++	char * const argv[] = { MODPROBE, "-bq", alias, 0 };
+ 	return execute_command(MODPROBE, argv);
+ #endif
+ }

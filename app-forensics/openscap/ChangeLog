@@ -1,0 +1,102 @@
+# ChangeLog for app-forensics/openscap
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.20 2013/01/04 22:48:07 hwoarang Exp $
+
+*openscap-0.9.3 (04 Jan 2013)
+
+  04 Jan 2013; Markos Chandras <hwoarang@gentoo.org> +openscap-0.9.3.ebuild,
+  +openscap-0.9.3.patch, -openscap-0.8.3.ebuild:
+  Version bump thanks to corentin.labbe <corentin.labbe@geomatys.fr>
+
+*openscap-0.9.1 (25 Oct 2012)
+
+  25 Oct 2012; Markos Chandras <hwoarang@gentoo.org> +openscap-0.9.1.ebuild,
+  -openscap-0.8.0.ebuild, -openscap-0.8.2.ebuild,
+  files/test_probes_process.patch, metadata.xml:
+  Version bump. Thanks to LABBE Corentin (Montjoie)
+
+*openscap-0.8.3 (01 Aug 2012)
+
+  01 Aug 2012; Markos Chandras <hwoarang@gentoo.org> +openscap-0.8.3.ebuild:
+  Version bump thanks to LABBE Corentin <corentin.labbe@geomatys.fr>
+
+  26 Jul 2012; Markos Chandras <hwoarang@gentoo.org>
+  files/test_probes_process.patch:
+  Improved test_probes_process.patch for bug #423057.Thanks to
+  corentin.labbe@geomatys.fr
+
+*openscap-0.8.2 (22 May 2012)
+
+  22 May 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/test_probes_interface.patch, +files/test_probes_process.patch,
+  +openscap-0.8.2.ebuild, -openscap-0.7.3.ebuild, -openscap-0.7.4.ebuild:
+  Version bump. Remove old thanks to LABBE Corentin <corentin.labbe@geomatys.fr>
+
+  28 Dec 2011; <swift@gentoo.org> openscap-0.8.0.ebuild, metadata.xml:
+  Fix build failure with RPM probes (bug #396263) by Corentin Labbe
+
+  28 Dec 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Fix maintainer tag order.
+
+*openscap-0.8.0 (26 Dec 2011)
+
+  26 Dec 2011; <swift@gentoo.org> +openscap-0.8.0.ebuild:
+  Bumping to 0.8.0
+
+  24 Aug 2011; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Fix typo
+
+  24 Aug 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Assign package to proxy-maintainers team
+
+  21 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> openscap-0.7.3.ebuild:
+  x86 stable wrt bug #379681
+
+*openscap-0.7.4 (19 Aug 2011)
+
+  19 Aug 2011; Markos Chandras <hwoarang@gentoo.org> +openscap-0.7.4.ebuild:
+  Version bump
+
+  19 Aug 2011; Markos Chandras <hwoarang@gentoo.org> openscap-0.7.3.ebuild:
+  Stable on amd64 wrt bug #379681
+
+  19 Aug 2011; Markos Chandras <hwoarang@gentoo.org> openscap-0.7.3.ebuild:
+  Remove la files #379707 and restrict tests #379705
+
+*openscap-0.7.3 (05 Jul 2011)
+
+  05 Jul 2011; Markos Chandras <hwoarang@gentoo.org> -openscap-0.7.1-r1.ebuild,
+  -openscap-0.7.2.ebuild, +openscap-0.7.3.ebuild:
+  Version bump. Add missing dev-libs/libxslt dependency. Bug #373037. Thanks to
+  LABBE Corentin (Montjoie)
+
+*openscap-0.7.2 (27 Apr 2011)
+
+  27 Apr 2011; Markos Chandras <hwoarang@gentoo.org> +openscap-0.7.2.ebuild:
+  Version bump
+
+*openscap-0.7.1-r1 (27 Apr 2011)
+
+  27 Apr 2011; Markos Chandras <hwoarang@gentoo.org> -openscap-0.7.1.ebuild,
+  +openscap-0.7.1-r1.ebuild:
+  Remove obsolete patch. FIx pkgconfig file. Thanks to
+  corentin.labbe@geomatys.fr. Bug #365071
+
+*openscap-0.7.1 (24 Mar 2011)
+
+  24 Mar 2011; Markos Chandras <hwoarang@gentoo.org> -openscap-0.6.4.ebuild,
+  -openscap-0.6.7.ebuild, +openscap-0.7.1.ebuild,
+  +files/openscap-0.7.1-sql-fix.patch:
+  Version bump. Remove old ebuilds. Security bug #359769
+
+*openscap-0.6.7 (30 Jan 2011)
+
+  30 Jan 2011; Markos Chandras <hwoarang@gentoo.org> +openscap-0.6.7.ebuild,
+  metadata.xml:
+  Version bump
+
+*openscap-0.6.4 (05 Nov 2010)
+
+  05 Nov 2010; Markos Chandras <hwoarang@gentoo.org> +openscap-0.6.4.ebuild,
+  +metadata.xml:
+  Moved from sunrise overlay. Bug #334455. Thanks to Montjoie for the ebuild

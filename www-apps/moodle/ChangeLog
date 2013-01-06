@@ -1,0 +1,218 @@
+# ChangeLog for www-apps/moodle
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/ChangeLog,v 1.35 2012/12/07 04:52:09 blueness Exp $
+
+*moodle-2.4 (07 Dec 2012)
+
+  07 Dec 2012; Anthony G. Basile <blueness@gentoo.org> +moodle-2.4.ebuild:
+  Version bump to new branch
+
+  15 Nov 2012; Anthony G. Basile <blueness@gentoo.org> -moodle-2.1.8.ebuild,
+  -moodle-2.2.5.ebuild, -moodle-2.3.2.ebuild:
+  Remove vulnerable versions, bug #443102
+
+  10 Nov 2012; Anthony G. Basile <blueness@gentoo.org> -moodle-1.9.19.ebuild,
+  -moodle-2.0.10.ebuild:
+  Remove older unsupported versions
+
+*moodle-2.1.9 (10 Nov 2012)
+*moodle-2.3.3 (10 Nov 2012)
+*moodle-2.2.6 (10 Nov 2012)
+
+  10 Nov 2012; Anthony G. Basile <blueness@gentoo.org> +moodle-2.1.9.ebuild,
+  +moodle-2.2.6.ebuild, +moodle-2.3.3.ebuild:
+  Version bumps
+
+  17 Sep 2012; Anthony G. Basile <blueness@gentoo.org> -moodle-2.1.7.ebuild,
+  -moodle-2.2.4.ebuild, -moodle-2.3.1.ebuild:
+  Drop vulnerable versions, bug #435364
+
+*moodle-2.3.2 (12 Sep 2012)
+*moodle-2.2.5 (12 Sep 2012)
+*moodle-2.1.8 (12 Sep 2012)
+
+  12 Sep 2012; Anthony G. Basile <blueness@gentoo.org> +moodle-2.1.8.ebuild,
+  +moodle-2.2.5.ebuild, +moodle-2.3.2.ebuild:
+  Version bumps
+
+  24 Aug 2012; Anthony G. Basile <blueness@gentoo.org> moodle-1.9.19.ebuild,
+  moodle-2.0.10.ebuild, moodle-2.1.7.ebuild, moodle-2.2.4.ebuild,
+  moodle-2.3.1.ebuild:
+  Use REQUIRED_USE so at least one backend db is provided, bug #432354
+
+  11 Jul 2012; Anthony G. Basile <blueness@gentoo.org> moodle-1.9.19.ebuild,
+  moodle-2.0.10.ebuild, moodle-2.1.7.ebuild, moodle-2.2.4.ebuild,
+  moodle-2.3.1.ebuild:
+  Keyword ~mips
+
+  11 Jul 2012; Anthony G. Basile <blueness@gentoo.org> -moodle-1.9.18.ebuild,
+  -moodle-2.0.9.ebuild, -moodle-2.1.6.ebuild, -moodle-2.2.3.ebuild,
+  -moodle-2.3.ebuild:
+  Punt older versions
+
+*moodle-2.3.1 (06 Jul 2012)
+*moodle-2.2.4 (06 Jul 2012)
+*moodle-2.1.7 (06 Jul 2012)
+*moodle-2.0.10 (06 Jul 2012)
+*moodle-1.9.19 (06 Jul 2012)
+
+  06 Jul 2012; Anthony G. Basile <blueness@gentoo.org> +moodle-1.9.19.ebuild,
+  +moodle-2.0.10.ebuild, +moodle-2.1.7.ebuild, +moodle-2.2.4.ebuild,
+  +moodle-2.3.1.ebuild:
+  Version bump
+
+*moodle-2.3 (26 Jun 2012)
+
+  26 Jun 2012; Anthony G. Basile <blueness@gentoo.org> +moodle-2.3.ebuild:
+  Version bump
+
+  23 May 2012; Anthony G. Basile <blueness@gentoo.org> -moodle-1.9.17.ebuild,
+  -moodle-2.0.8.ebuild, -moodle-2.1.5.ebuild, -moodle-2.2.2.ebuild:
+  Punt vulnerable versions, bug #417217
+
+*moodle-2.2.3 (16 May 2012)
+*moodle-2.1.6 (16 May 2012)
+*moodle-2.0.9 (16 May 2012)
+*moodle-1.9.18 (16 May 2012)
+
+  16 May 2012; Anthony G. Basile <blueness@gentoo.org> +moodle-1.9.18.ebuild,
+  +moodle-2.0.9.ebuild, +moodle-2.1.6.ebuild, +moodle-2.2.3.ebuild:
+  Version bump all branches
+
+  04 Apr 2012; Anthony G. Basile <blueness@gentoo.org>
+  -moodle-1.9.16-r1.ebuild, -moodle-2.0.7-r1.ebuild, -moodle-2.1.4-r1.ebuild,
+  -moodle-2.2.1-r1.ebuild:
+  Remove older vulnerable versions
+
+*moodle-2.2.2 (12 Mar 2012)
+*moodle-2.1.5 (12 Mar 2012)
+*moodle-2.0.8 (12 Mar 2012)
+*moodle-1.9.17 (12 Mar 2012)
+
+  12 Mar 2012; Anthony G. Basile <blueness@gentoo.org> +moodle-1.9.17.ebuild,
+  +moodle-2.0.8.ebuild, +moodle-2.1.5.ebuild, +moodle-2.2.2.ebuild:
+  Version bumps
+
+  07 Mar 2012; Anthony G. Basile <blueness@gentoo.org> -moodle-1.9.16.ebuild,
+  moodle-1.9.16-r1.ebuild, -moodle-2.0.7.ebuild, moodle-2.0.7-r1.ebuild,
+  -moodle-2.1.4.ebuild, moodle-2.1.4-r1.ebuild, -moodle-2.2.1.ebuild,
+  moodle-2.2.1-r1.ebuild:
+  Remove older versions depending on php with gd-external
+
+*moodle-2.2.1-r1 (29 Jan 2012)
+*moodle-2.1.4-r1 (29 Jan 2012)
+*moodle-2.0.7-r1 (29 Jan 2012)
+*moodle-1.9.16-r1 (29 Jan 2012)
+
+  29 Jan 2012; Anthony G. Basile <blueness@gentoo.org>
+  +moodle-1.9.16-r1.ebuild, +moodle-2.0.7-r1.ebuild, +moodle-2.1.4-r1.ebuild,
+  +moodle-2.2.1-r1.ebuild:
+  Remove gd-external, fix depend on >=php5.3* for moodle 2.1* and 2.2*,
+  add session to PHP_REQUIRED_FLAGS_*, bug #400853
+
+  14 Jan 2012; Anthony G. Basile <blueness@gentoo.org> -moodle-1.9.15.ebuild,
+  -moodle-2.0.6.ebuild, -moodle-2.1.3.ebuild:
+  Removed vulnerable versions
+
+*moodle-2.2.1 (08 Jan 2012)
+
+  08 Jan 2012; Anthony G. Basile <blueness@gentoo.org> +moodle-2.2.1.ebuild:
+  Added ebuild for the 2.2 branch
+
+*moodle-2.1.4 (08 Jan 2012)
+*moodle-2.0.7 (08 Jan 2012)
+*moodle-1.9.16 (08 Jan 2012)
+
+  08 Jan 2012; Anthony G. Basile <blueness@gentoo.org> +moodle-1.9.16.ebuild,
+  +moodle-2.0.7.ebuild, +moodle-2.1.4.ebuild:
+  Version bumps
+
+  07 Dec 2011; Anthony G. Basile <blueness@gentoo.org> -moodle-1.9.14.ebuild,
+  -moodle-2.0.5.ebuild, -moodle-2.1.2.ebuild:
+  Removed vulnerable versions, bug #393475
+
+*moodle-2.1.3 (29 Nov 2011)
+*moodle-2.0.6 (29 Nov 2011)
+*moodle-1.9.15 (29 Nov 2011)
+
+  29 Nov 2011; Anthony G. Basile <blueness@gentoo.org> +moodle-1.9.15.ebuild,
+  +moodle-2.0.6.ebuild, +moodle-2.1.3.ebuild:
+  Version bumps
+
+  19 Oct 2011; Anthony G. Basile <blueness@gentoo.org> -moodle-1.9.13.ebuild,
+  -moodle-2.0.4.ebuild, -moodle-2.1.1.ebuild:
+  Remove deprecated versions
+
+*moodle-2.1.2 (09 Oct 2011)
+*moodle-2.0.5 (09 Oct 2011)
+*moodle-1.9.14 (09 Oct 2011)
+
+  09 Oct 2011; Anthony G. Basile <blueness@gentoo.org> +moodle-1.9.14.ebuild,
+  +moodle-2.0.5.ebuild, +moodle-2.1.2.ebuild:
+  Version bumps
+
+  18 Aug 2011; Anthony G. Basile <blueness@gentoo.org> -moodle-1.9.12.ebuild,
+  -moodle-2.0.3.ebuild, -moodle-2.1.ebuild:
+  Removed decprecated versions
+
+*moodle-2.1.1 (02 Aug 2011)
+*moodle-2.0.4 (02 Aug 2011)
+*moodle-1.9.13 (02 Aug 2011)
+
+  02 Aug 2011; Anthony G. Basile <blueness@gentoo.org> +moodle-1.9.13.ebuild,
+  +moodle-2.0.4.ebuild, +moodle-2.1.1.ebuild:
+  Version bumps
+
+  12 Jul 2011; Anthony G. Basile <blueness@gentoo.org> moodle-1.9.12.ebuild,
+  moodle-2.0.3.ebuild, moodle-2.1.ebuild:
+  Make moodle depend on either php[gd] or php[gd-external], bug #374605
+
+*moodle-2.1 (09 Jul 2011)
+
+  09 Jul 2011; Anthony G. Basile <blueness@gentoo.org> -moodle-1.9.11.ebuild,
+  -moodle-2.0.2.ebuild, +moodle-2.1.ebuild:
+  Version bump, removed depcreated
+
+*moodle-2.0.3 (11 May 2011)
+*moodle-1.9.12 (11 May 2011)
+
+  11 May 2011; Anthony G. Basile <blueness@gentoo.org> +moodle-1.9.12.ebuild,
+  +moodle-2.0.3.ebuild:
+  Version bumps address several security issues.
+  See http://docs.moodle.org/en/Moodle_1.9.12_release_notes
+  and http://docs.moodle.org/en/Moodle_2.0.3_release_notes
+
+  10 Mar 2011; Anthony G. Basile <blueness@gentoo.org> -moodle-1.9.9.ebuild,
+  -moodle-1.9.9-r1.ebuild, -moodle-1.9.10.ebuild, -moodle-2.0.1.ebuild:
+  Removed decprecated versions, bug #353431
+
+*moodle-2.0.2 (22 Feb 2011)
+*moodle-1.9.11 (22 Feb 2011)
+
+  22 Feb 2011; Anthony G. Basile <blueness@gentoo.org>
+  +moodle-1.9.11.ebuild, +moodle-2.0.2.ebuild, files/postinstall-en.txt:
+  Version bumps.
+
+*moodle-2.0.1 (08 Jan 2011)
+
+  08 Jan 2011; Anthony G. Basile <blueness@gentoo.org> +moodle-2.0.1.ebuild:
+  Version bump
+
+*moodle-1.9.10 (29 Oct 2010)
+
+  29 Oct 2010; Anthony G. Basile <blueness@gentoo.org>
+  +moodle-1.9.10.ebuild:
+  Version bump
+
+*moodle-1.9.9-r1 (13 Aug 2010)
+
+  13 Aug 2010; Anthony G. Basile <blueness@gentoo.org>
+  +moodle-1.9.9-r1.ebuild, files/postinstall-en.txt:
+  Ported to EAPI 2 USE deps. Bug #332165
+
+*moodle-1.9.9 (19 Jul 2010)
+
+  19 Jul 2010; Anthony G. Basile <blueness@gentoo.org> +moodle-1.9.9.ebuild,
+  +files/config.php, +files/postinstall-en.txt,
+  +files/postinstall-nodb-en.txt, +metadata.xml:
+  New ebuild by Anthony G. Basile. Bug #104275

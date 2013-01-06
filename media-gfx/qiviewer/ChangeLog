@@ -1,0 +1,13 @@
+# ChangeLog for media-gfx/qiviewer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiviewer/ChangeLog,v 1.2 2012/09/23 09:35:49 pinkbyte Exp $
+
+  23 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Add qt herd to metadata. Permission granted by yngwin
+
+*qiviewer-0.5.0 (07 Sep 2012)
+
+  07 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> +qiviewer-0.5.0.ebuild,
+  +files/qiviewer-use-system-webp.patch, +metadata.xml:
+  New ebuild, fixes bug #432584
+

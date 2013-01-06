@@ -1,0 +1,51 @@
+From 306cf3ae850af238dc8ef79e9cb8cf8f84e2418f Mon Sep 17 00:00:00 2001
+From: Dustin Polke <DuPol@gmx.de>
+Date: Thu, 19 Apr 2012 15:58:25 +0000
+Subject: Fix XML validation.
+
+This fixes the following validation failures:
+./de/nemiver.xml:82: element releaseinfo: validity error : Element
+application is not declared in releaseinfo list of possible children
+./fr/nemiver.xml:38: element publishername: validity error : Element
+application is not declared in publishername list of possible children
+./fr/nemiver.xml:82: element releaseinfo: validity error : Element
+application is not declared in releaseinfo list of possible children
+---
+diff --git a/help/de/de.po b/help/de/de.po
+index a8b3794..6e4c0e9 100644
+--- a/help/de/de.po
++++ b/help/de/de.po
+@@ -274,8 +274,7 @@ msgstr "Aktualisierung für die Version 0.5.0"
+ #: C/nemiver.xml:82(releaseinfo)
+ msgid "This manual describes version 0.5.0 of Nemiver."
+ msgstr ""
+-"Dieses Handbuch beschreibt Version 0.5.0 von <application>Nemiver</"
+-"application>."
++"Dieses Handbuch beschreibt Version 0.5.0 von Nemiver."
+ 
+ #: C/nemiver.xml:85(title)
+ msgid "Feedback"
+diff --git a/help/fr/fr.po b/help/fr/fr.po
+index eadcfdb..a28e12d 100644
+--- a/help/fr/fr.po
++++ b/help/fr/fr.po
+@@ -258,7 +258,7 @@ msgstr "Jonathon Jongsma"
+ 
+ #: C/nemiver.xml:38(publishername)
+ msgid "Nemiver Project"
+-msgstr "Projet <application>Nemiver</application>"
++msgstr "Projet Nemiver"
+ 
+ #: C/nemiver.xml:43(firstname)
+ msgid "Jonathon"
+@@ -296,7 +296,7 @@ msgstr "Mise à jour pour la version 0.5.0"
+ msgid "This manual describes version 0.5.0 of Nemiver."
+ msgstr ""
+ "Le présent manuel décrit le fonctionnement de la version 0.5.0 de "
+-"<application>Nemiver</application>."
++"Nemiver."
+ 
+ #: C/nemiver.xml:85(title)
+ msgid "Feedback"
+--
+cgit v0.9.0.2

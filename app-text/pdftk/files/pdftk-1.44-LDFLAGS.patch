@@ -1,0 +1,11 @@
+--- pdftk-1.44-dist/pdftk/Makefile.Base
++++ pdftk-1.44-dist/pdftk/Makefile.Base
+@@ -44,7 +44,7 @@
+ 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I$(JAVALIBPATH) pdftk.cc -c
+ 
+ pdftk : pdftk.o attachments.o report.o $(JAVALIB) $(GCJ_LOCAL_LIB_FULL)
+-	$(CXX) $(CXXFLAGS) attachments.o report.o pdftk.o $(JAVALIB) $(GCJ_LOCAL_LIB_FULL) $(LDLIBS) -o pdftk
++	$(CXX) $(CXXFLAGS) attachments.o report.o pdftk.o $(JAVALIB) $(GCJ_LOCAL_LIB_FULL) $(LDLIBS) $(LDFLAGS) -o pdftk
+ 
+ install:
+ 	/usr/bin/install pdftk /usr/local/bin 

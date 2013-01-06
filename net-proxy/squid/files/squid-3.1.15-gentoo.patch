@@ -1,0 +1,289 @@
+diff --git a/configure.ac b/configure.ac
+index 23922c0..f359a00 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -16,9 +16,9 @@ PRESET_CFLAGS="$CFLAGS"
+ PRESET_LDFLAGS="$LDFLAGS"
+ 
+ dnl Set default LDFLAGS
+-if test -z "$LDFLAGS"; then
+-        LDFLAGS="-g"
+-fi
++dnl if test -z "$LDFLAGS"; then
++dnl         LDFLAGS="-g"
++dnl fi
+ 
+ dnl Check for GNU cc
+ AC_PROG_CC
+diff --git a/helpers/basic_auth/MSNT/confload.c b/helpers/basic_auth/MSNT/confload.c
+index e04365e..7241b3f 100644
+--- a/helpers/basic_auth/MSNT/confload.c
++++ b/helpers/basic_auth/MSNT/confload.c
+@@ -27,7 +27,7 @@
+ 
+ /* Path to configuration file */
+ #ifndef SYSCONFDIR
+-#define SYSCONFDIR "/usr/local/squid/etc"
++#define SYSCONFDIR "/etc/squid"
+ #endif
+ #define CONFIGFILE   SYSCONFDIR "/msntauth.conf"
+ 
+diff --git a/helpers/basic_auth/MSNT/msntauth.conf.default b/helpers/basic_auth/MSNT/msntauth.conf.default
+index 323bc1c..c3d7d21 100644
+--- a/helpers/basic_auth/MSNT/msntauth.conf.default
++++ b/helpers/basic_auth/MSNT/msntauth.conf.default
+@@ -8,6 +8,6 @@ server my_PDC		my_BDC		my_NTdomain
+ server other_PDC	other_BDC	otherdomain
+ 
+ # Denied and allowed users. Comment these if not needed.
+-#denyusers	/usr/local/squid/etc/msntauth.denyusers
+-#allowusers	/usr/local/squid/etc/msntauth.allowusers
++#denyusers	/etc/squid/msntauth.denyusers
++#allowusers	/etc/squid/msntauth.allowusers
+ 
+diff --git a/helpers/basic_auth/SMB/smb_auth.sh b/helpers/basic_auth/SMB/smb_auth.sh
+index 2a1abb3..b3ebb7a 100755
+--- a/helpers/basic_auth/SMB/smb_auth.sh
++++ b/helpers/basic_auth/SMB/smb_auth.sh
+@@ -24,7 +24,7 @@ read NMBCAST
+ read AUTHSHARE
+ read AUTHFILE
+ read SMBUSER
+-read SMBPASS
++read -r SMBPASS
+ 
+ # Find domain controller
+ echo "Domain name: $DOMAINNAME"
+@@ -47,7 +47,7 @@ else
+   addropt=""
+ fi
+ echo "Query address options: $addropt"
+-dcip=`nmblookup $addropt "$PASSTHROUGH#1c" | awk '/^[0-9.]+ / { print $1 ; exit }'`
++dcip=`nmblookup $addropt "$PASSTHROUGH#1c" | awk '/^[0-9.]+\..+ / { print $1 ; exit }'`
+ echo "Domain controller IP address: $dcip"
+ [ -n "$dcip" ] || exit 1
+ 
+diff --git a/helpers/external_acl/session/squid_session.8 b/helpers/external_acl/session/squid_session.8
+index 7808f41..d86e320 100644
+--- a/helpers/external_acl/session/squid_session.8
++++ b/helpers/external_acl/session/squid_session.8
+@@ -35,7 +35,7 @@ the first request.
+ .P
+ Configuration example using the default automatic mode
+ .IP
+-external_acl_type session ttl=300 negative_ttl=0 children=1 concurrency=200 %LOGIN /usr/local/squid/libexec/squid_session
++external_acl_type session ttl=300 negative_ttl=0 children=1 concurrency=200 %LOGIN /usr/libexec/squid/squid_session
+ .IP
+ acl session external session
+ .IP
+diff --git a/helpers/external_acl/unix_group/squid_unix_group.8 b/helpers/external_acl/unix_group/squid_unix_group.8
+index 72aa1a3..cde5f20 100644
+--- a/helpers/external_acl/unix_group/squid_unix_group.8
++++ b/helpers/external_acl/unix_group/squid_unix_group.8
+@@ -27,7 +27,7 @@ Strip NT domain name component from user names (/ or \\ separated)
+ This squid.conf example defines two Squid acls. usergroup1 matches users in group1, and usergroup2
+ matches users in group2 or group3
+ .IP
+-external_acl_type unix_group %LOGIN /usr/local/squid/libexec/squid_unix_group -p
++external_acl_type unix_group %LOGIN /usr/libexec/squid/squid_unix_group -p
+ .IP
+ acl usergroup1 external unix_group group1
+ .IP
+diff --git a/helpers/negotiate_auth/squid_kerb_auth/configure.ac b/helpers/negotiate_auth/squid_kerb_auth/configure.ac
+index e78f61e..ca6c0c2 100644
+--- a/helpers/negotiate_auth/squid_kerb_auth/configure.ac
++++ b/helpers/negotiate_auth/squid_kerb_auth/configure.ac
+@@ -17,6 +17,7 @@ dnl Process this file with autoconf to produce a configure script.
+ 
+ AC_INIT([squid_kerb_auth],[1.0.5],[markus_moeller@compuserve.com])
+ AM_INIT_AUTOMAKE(squid_kerb_auth,1.0.5)
++AM_MAINTAINER_MODE
+ AC_CONFIG_SRCDIR([squid_kerb_auth.c])
+ 
+ AC_PROG_CC
+diff --git a/src/Makefile.am b/src/Makefile.am
+index e1c0be4..423553e 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -639,7 +639,6 @@ BUILT_SOURCES = \
+ 
+ sysconf_DATA = \
+ 	squid.conf.default \
+-	squid.conf.documented \
+ 	mime.conf.default
+ 
+ data_DATA = \
+@@ -724,9 +724,9 @@
+ DEFAULT_ACCESS_LOG      = $(DEFAULT_LOG_PREFIX)/access.log
+ DEFAULT_STORE_LOG       = $(DEFAULT_LOG_PREFIX)/store.log
+ DEFAULT_PID_FILE        = $(DEFAULT_PIDFILE)
+-DEFAULT_NETDB_FILE      = $(DEFAULT_LOG_PREFIX)/netdb.state
+-DEFAULT_SWAP_DIR        = $(localstatedir)/cache
+-DEFAULT_SSL_DB_DIR	= $(localstatedir)/lib/ssl_db
++DEFAULT_NETDB_FILE      = $(localstatedir)/run//netdb.state
++DEFAULT_SWAP_DIR        = $(localstatedir)/cache/squid
++DEFAULT_SSL_DB_DIR	= $(localstatedir)/lib/squid/ssl_db
+ DEFAULT_PINGER		= $(libexecdir)/`echo pinger | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_UNLINKD		= $(libexecdir)/`echo unlinkd | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_DISKD		= $(libexecdir)/`echo diskd | sed '$(transform);s/$$/$(EXEEXT)/'`
+@@ -802,13 +801,11 @@ install-data-local: install-sysconfDATA install-dataDATA
+ 	@if test -f $(DESTDIR)$(DEFAULT_CONFIG_FILE) ; then \
+ 	        echo "$@ will not overwrite existing $(DESTDIR)$(DEFAULT_CONFIG_FILE)" ; \
+ 	else \
+-	        echo "$(INSTALL_DATA) squid.conf.default $(DESTDIR)$(DEFAULT_CONFIG_FILE)"; \
+-	        $(INSTALL_DATA) squid.conf.default $(DESTDIR)$(DEFAULT_CONFIG_FILE); \
++	        echo "$(INSTALL_DATA) squid.conf.documented $(DESTDIR)$(DEFAULT_CONFIG_FILE)"; \
++	        $(INSTALL_DATA) squid.conf.documented $(DESTDIR)$(DEFAULT_CONFIG_FILE); \
+ 	fi
+-	echo "$(INSTALL_DATA) squid.conf.default $(DESTDIR)$(DEFAULT_CONFIG_FILE).default"; \
+-	$(INSTALL_DATA) squid.conf.default $(DESTDIR)$(DEFAULT_CONFIG_FILE).default; \
+-	echo "$(INSTALL_DATA) squid.conf.documented $(DESTDIR)$(DEFAULT_CONFIG_FILE).documented"; \
+-	$(INSTALL_DATA) squid.conf.documented $(DESTDIR)$(DEFAULT_CONFIG_FILE).documented; \
++	echo "$(INSTALL_DATA) squid.conf.documented $(DESTDIR)$(DEFAULT_CONFIG_FILE).default"; \
++	$(INSTALL_DATA) squid.conf.documented $(DESTDIR)$(DEFAULT_CONFIG_FILE).default; \
+ 	$(mkinstalldirs) $(DESTDIR)$(DEFAULT_LOG_PREFIX); \
+ 	$(mkinstalldirs) $(DESTDIR)$(DEFAULT_SWAP_DIR); \
+ 	$(mkinstalldirs) $(DESTDIR)`dirname $(DEFAULT_PID_FILE)`
+diff --git a/src/cf.data.pre b/src/cf.data.pre
+index b504918..56928c4 100644
+--- a/src/cf.data.pre
++++ b/src/cf.data.pre
+@@ -768,6 +768,7 @@ acl Safe_ports port 280		# http-mgmt
+ acl Safe_ports port 488		# gss-http
+ acl Safe_ports port 591		# filemaker
+ acl Safe_ports port 777		# multiling http
++acl Safe_ports port 901		# SWAT
+ acl CONNECT method CONNECT
+ NOCOMMENT_END
+ DOC_END
+@@ -917,6 +918,9 @@ http_access deny CONNECT !SSL_ports
+ http_access allow localnet
+ http_access allow localhost
+ 
++# Allow the localhost to have access by default
++http_access allow localhost
++
+ # And finally deny all other access to this proxy
+ http_access deny all
+ NOCOMMENT_END
+@@ -4138,11 +4142,11 @@ COMMENT_END
+ 
+ NAME: cache_mgr
+ TYPE: string
+-DEFAULT: webmaster
++DEFAULT: root
+ LOC: Config.adminEmail
+ DOC_START
+ 	Email-address of local cache manager who will receive
+-	mail if the cache dies.  The default is "webmaster."
++	mail if the cache dies.  The default is "root."
+ DOC_END
+ 
+ NAME: mail_from
+@@ -6456,7 +6460,7 @@ DOC_END
+ NAME: forwarded_for
+ COMMENT: on|off|transparent|truncate|delete
+ TYPE: string
+-DEFAULT: on
++DEFAULT: delete
+ LOC: opt_forwarded_for
+ DOC_START
+ 	If set to "on", Squid will append your client's IP address
+diff --git a/src/debug.cc b/src/debug.cc
+index 32813bf..6de334a 100644
+--- a/src/debug.cc
++++ b/src/debug.cc
+@@ -452,7 +452,7 @@ _db_init(const char *logfile, const char *options)
+ #if HAVE_SYSLOG && defined(LOG_LOCAL4)
+ 
+     if (Debug::log_syslog)
+-        openlog(APP_SHORTNAME, LOG_PID | LOG_NDELAY | LOG_CONS, syslog_facility);
++        openlog(APP_SHORTNAME, LOG_PID | LOG_NDELAY, syslog_facility);
+ 
+ #endif /* HAVE_SYSLOG */
+ 
+diff --git a/src/main.cc b/src/main.cc
+index 941126d..71f3c3b 100644
+--- a/src/main.cc
++++ b/src/main.cc
+@@ -1555,7 +1555,7 @@ watch_child(char *argv[])
+     if (*(argv[0]) == '(')
+         return;
+ 
+-    openlog(APP_SHORTNAME, LOG_PID | LOG_NDELAY | LOG_CONS, LOG_LOCAL4);
++    openlog(APP_SHORTNAME, LOG_PID | LOG_NDELAY, LOG_DAEMON);
+ 
+     if ((pid = fork()) < 0)
+         syslog(LOG_ALERT, "fork failed: %s", xstrerror());
+@@ -1599,7 +1599,7 @@ watch_child(char *argv[])
+ 
+         if ((pid = fork()) == 0) {
+             /* child */
+-            openlog(APP_SHORTNAME, LOG_PID | LOG_NDELAY | LOG_CONS, LOG_LOCAL4);
++            openlog(APP_SHORTNAME, LOG_PID | LOG_NDELAY, LOG_DAEMON);
+             prog = xstrdup(argv[0]);
+             argv[0] = xstrdup("(squid)");
+             execvp(prog, argv);
+@@ -1607,7 +1607,7 @@ watch_child(char *argv[])
+         }
+ 
+         /* parent */
+-        openlog(APP_SHORTNAME, LOG_PID | LOG_NDELAY | LOG_CONS, LOG_LOCAL4);
++        openlog(APP_SHORTNAME, LOG_PID | LOG_NDELAY, LOG_DAEMON);
+ 
+         syslog(LOG_NOTICE, "Squid Parent: child process %d started", pid);
+ 
+commit e3f6cc6438869766751556f2d9747669b4c51fe1
+Author: Eray Aslan <eras@gentoo.org>
+Date:   Fri Apr 29 10:55:17 2011 +0000
+
+    Do not auto detect kerberos.
+    
+    No need for automagic dependencies.  We already give the necessary flags
+    to the configure script.
+
+diff --git a/helpers/negotiate_auth/squid_kerb_auth/configure.ac b/helpers/negotiate_auth/squid_kerb_auth/configure.ac
+index e78f61e..dc739b2 100644
+--- a/helpers/negotiate_auth/squid_kerb_auth/configure.ac
++++ b/helpers/negotiate_auth/squid_kerb_auth/configure.ac
+@@ -279,40 +279,6 @@ AC_ARG_ENABLE(seam-64,
+        check_seam_64
+     fi ])
+ 
+-dnl Define system default
+-if test "$enable_arg" = "no"; then
+-  dnl Autodetect system
+-  dnl Check krb5-config first
+-  AC_CHECK_PROG(ac_krb5_config,krb5-config,yes,no)
+-  case $sys in
+-           Linux) rpm -q heimdal-lib >/dev/null 2>&1
+-                  if test $? = 0 ; then
+-                    check_heimdal
+-		  else 
+-		    check_mit
+-                  fi 
+-                  ;;
+-           AIX)   lslpp -L krb5.client.rte >/dev/null 2>&1
+-                  if test $? = 0 ; then
+-                    check_nas
+-		  else 
+-		    check_mit
+-                  fi
+-                  ;;
+-           SunOS) pkginfo SUNWgss >/dev/null 2>&1
+-                  if test $? = 0 ; then
+-                    check_seam
+-		  else 
+-		    check_mit
+-                  fi
+-                  ;;
+-           FreeBSD) check_heimdal
+-                    ;;
+-           *) check_mit
+-              ;;
+-  esac
+-fi
+-
+ AC_C_BIGENDIAN
+ 
+ AC_CHECK_HEADERS( \

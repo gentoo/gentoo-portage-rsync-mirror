@@ -1,0 +1,17 @@
+# ChangeLog for dev-python/pysfml
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysfml/ChangeLog,v 1.3 2012/12/01 00:05:10 radhermit Exp $
+
+  01 Dec 2012; Tim Harder <radhermit@gentoo.org> pysfml-1.6.ebuild:
+  Fix LICENSE (bug #445426 by ulm).
+
+  10 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pysfml-1.6.ebuild:
+  Set SUPPORT_PYTHON_ABIS. Avoid breaking strict-aliasing rules.
+
+*pysfml-1.6 (07 Feb 2011)
+
+  07 Feb 2011; Tim Harder <radhermit@gentoo.org> +pysfml-1.6.ebuild,
+  +metadata.xml:
+  Initial import. Split from media-libs/libsfml.
+

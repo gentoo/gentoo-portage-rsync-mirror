@@ -1,0 +1,11 @@
+--- configure.in	2012-10-17 08:50:00.387963153 +0000
++++ configure.in	2012-10-17 08:50:21.121706830 +0000
+@@ -635,7 +635,7 @@
+ 	LIBS="$saveLIBS"
+ fi
+ 
+-if test "$doauthmysql" != "yes"
++if test "$doauthsqlite" != "yes"
+ then
+ 	SQLITE_LIBS=""
+ 	SQLITE_CFLAGS=""

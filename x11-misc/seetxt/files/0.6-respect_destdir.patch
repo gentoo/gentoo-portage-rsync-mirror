@@ -1,0 +1,51 @@
+diff --git a/Makefile.am b/Makefile.am
+index d3ce419..9983d6a 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -2,23 +2,12 @@ SUBDIRS = src
+ buildextra = @builddir@/extra
+ pkgdatadir = $(datadir)/seetxt-runtime
+ 
+-install-data-am:
+-	-cp -f $(buildextra)/seetxt.1 $(mandir)/man1/
+-	-ln -s $(mandir)/man1/seetxt.1 $(mandir)/man1/seeman.1
+-	-ln -s $(bindir)/seetxt $(bindir)/seeman
+-	@echo "            - enjoy see -"
+-	@echo "  Installing some additional files in $(pkgdatadir)..."
+-	-mkdir $(pkgdatadir)
+-	-cp -f $(buildextra)/seeon.png $(buildextra)/seeoff.png $(buildextra)/.seeconfig $(pkgdatadir)
+-	-cp $(buildextra)/filelist $(pkgdatadir)
+-	-chmod 666 $(pkgdatadir)/filelist
+-	-strip --strip-all $(bindir)/seetxt
++dist_man_MANS = $(buildextra)/seetxt.1
++pkgdata_DATA = $(buildextra)/seeon.png $(buildextra)/seeoff.png $(buildextra)/.seeconfig $(buildextra)/filelist
++
++install-data-hook:
++	$(LN_S) seetxt.1 "$(DESTDIR)$(mandir)/man1/seeman.1"
++
++uninstall-hook:
++	$(RM) "$(DESTDIR)$(mandir)/man1/seeman.1"
+ 
+-uninstall: uninstall-recursive
+-	@echo "Thanks for trying SEE!"
+-	-rm $(pkgdatadir)/* 
+-	-rm $(pkgdatadir)/.seeconfig 
+-	-rm $(mandir)/man1/seetxt.1 
+-	-rm $(mandir)/man1/seeman.1 
+-	-rm $(bindir)/seeman 
+-	-rmdir $(pkgdatadir)
+diff --git a/src/Makefile.am b/src/Makefile.am
+index 5181bf2..0d952db 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -3,3 +3,10 @@ seetxt_CFLAGS = -D SDIR=\"$(datadir)/seetxt-runtime\"
+ seetxt_LDFLAGS = `pkg-config --libs gtk+-2.0`
+ INCLUDES = `pkg-config --cflags gtk+-2.0`
+ seetxt_SOURCES = see.c see.h
++
++install-exec-hook:
++	$(LN_S) seetxt "$(DESTDIR)$(bindir)/seeman"
++
++uninstall-hook:
++	$(RM) "$(DESTDIR)$(bindir)/seeman"
++

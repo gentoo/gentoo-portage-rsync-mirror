@@ -1,0 +1,15 @@
+--- Makefile.old	2007-01-05 23:21:33.000000000 +0100
++++ Makefile	2007-01-05 23:22:02.000000000 +0100
+@@ -52,10 +52,10 @@
+ doc: mp3info.txt
+ 
+ mp3info: $(OBJS)
+-	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
+ 
+ gmp3info: $(XSRC) $(XOBJ) 
+-	$(CC) $(XSRC) $(CFLAGS) -o $@ $(XOBJ) `pkg-config --cflags --libs gtk+-2.0`
++	$(CC) $(XSRC) $(CFLAGS) $(LDFLAGS) -o $@ $(XOBJ) `pkg-config --cflags --libs gtk+-2.0`
+ 
+ mp3info.txt: mp3info.1
+ 	groff -t -e -mandoc -Tascii mp3info.1 | col -bx > mp3info.txt

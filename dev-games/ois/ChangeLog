@@ -1,0 +1,42 @@
+# ChangeLog for dev-games/ois
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ois/ChangeLog,v 1.10 2012/07/17 06:59:31 tupone Exp $
+
+  17 Jul 2012; Tupone Alfredo <tupone@gentoo.org> ois-1.3.ebuild,
+  +files/ois-1.3-gcc47.patch:
+  Build with gcc-4.7 Bug #426442 by flameeyes@gentoo.org
+
+  21 Jun 2012; Jeff Horelick <jdhore@gentoo.org> ois-1.3.ebuild:
+  marked x86 per bug 422153
+
+  20 Jun 2012; Agostino Sarubbo <ago@gentoo.org> ois-1.3.ebuild:
+  Stable for amd64, wrt bug #422153
+
+*ois-1.3 (21 Feb 2012)
+
+  21 Feb 2012; Michael Sterrett <mr_bones_@gentoo.org> +ois-1.3.ebuild:
+  version bump (bug #405179)
+
+  22 May 2010; Pacho Ramos <pacho@gentoo.org> ois-1.2.0.ebuild:
+  stable amd64, bug 303471
+
+  02 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> ois-1.2.0.ebuild:
+  x86 stable wrt bug #303471
+
+  15 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> ois-1.2.0.ebuild:
+  EAPI=2
+
+*ois-1.2.0 (06 Apr 2008)
+
+  06 Apr 2008; Tristan Heaven <nyhm@gentoo.org> +ois-1.2.0.ebuild:
+  Version bump
+
+  22 Sep 2007; Christoph Mende <angelos@gentoo.org> ois-1.0.ebuild:
+  Added ~amd64 wrt bug #193247
+
+*ois-1.0 (24 Aug 2007)
+
+  24 Aug 2007; Tristan Heaven <nyhm@gentoo.org> +metadata.xml,
+  +ois-1.0.ebuild:
+  Initial commit, bug #129365
+

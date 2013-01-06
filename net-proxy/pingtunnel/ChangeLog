@@ -1,0 +1,34 @@
+# ChangeLog for net-proxy/pingtunnel
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/pingtunnel/ChangeLog,v 1.7 2012/12/10 21:52:31 dastergon Exp $
+
+  10 Dec 2012; Pavlos Ratis <dastergon@gentoo.org>
+  +files/pingtunnel-0.72_makefile.patch, pingtunnel-0.72.ebuild:
+  fixed automagic deps and updated to eapi 5
+
+  06 Mar 2012; Tim Harder <radhermit@gentoo.org> -pingtunnel-0.61.ebuild,
+  -pingtunnel-0.71.ebuild:
+  Remove old.
+
+*pingtunnel-0.72 (05 Sep 2011)
+
+  05 Sep 2011; Tim Harder <radhermit@gentoo.org> +pingtunnel-0.72.ebuild:
+  Version bump. Respect CC and update to EAPI 4.
+
+*pingtunnel-0.71 (16 Sep 2009)
+
+  16 Sep 2009; Alin Năstac <mrness@gentoo.org> +pingtunnel-0.71.ebuild:
+  Version bump (#284845). Migrate to EAPI 2. Add -fno-strict-aliasing for
+  fixing type punned compiler warnings.
+
+  06 Jan 2006; Alin Nastac <mrness@gentoo.org> pingtunnel-0.61.ebuild:
+  Add suplementary documentation depending on doc useflag (#117528).
+
+  17 Jul 2005; David Holm <dholm@gentoo.org> pingtunnel-0.61.ebuild:
+  Added to ~ppc.
+
+*pingtunnel-0.61 (16 Jul 2005)
+
+  16 Jul 2005; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +pingtunnel-0.61.ebuild:
+  Initial import from bug #98294.

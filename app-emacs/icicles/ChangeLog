@@ -1,0 +1,26 @@
+# ChangeLog for app-emacs/icicles
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/icicles/ChangeLog,v 1.5 2009/03/29 22:30:30 ulm Exp $
+
+  29 Mar 2009; Ulrich Mueller <ulm@gentoo.org> icicles-20081210.ebuild:
+  Use autopatch feature of elisp.eclass.
+
+  29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
+  -icicles-20071205.ebuild:
+  clean up
+
+*icicles-20081210 (14 Dec 2008)
+
+  14 Dec 2008; Ulrich Mueller <ulm@gentoo.org> +icicles-20081210.ebuild:
+  Version bump, new snapshot.
+
+  27 Aug 2008; Ulrich Mueller <ulm@gentoo.org> icicles-20071205.ebuild:
+  Use eclass default instead of elisp-comp, bug 235442.
+
+*icicles-20071205 (23 Jan 2008)
+
+  23 Jan 2008; Ulrich Mueller <ulm@gentoo.org> +files/50icicles-gentoo.el,
+  +files/icicles-byte-compile-without-x.patch, +metadata.xml,
+  +icicles-20071205.ebuild:
+  Initial import. Ebuild contributed by me.
+

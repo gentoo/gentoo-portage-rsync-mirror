@@ -1,0 +1,20 @@
+--- neoengine/logstream.h.old	2006-04-15 02:04:46.000000000 +0200
++++ neoengine/logstream.h	2006-04-15 02:06:19.000000000 +0200
+@@ -259,6 +259,7 @@
+ 		virtual void                                Write( const std::string &rstrMsg );
+ };
+ 
++class NEOENGINE_API LogSource;
+ 
+ /**
+   * \brief Stream buffer for the log source
+--- neoengine/font.h.old	2006-04-15 02:10:55.000000000 +0200
++++ neoengine/font.h	2006-04-15 02:11:13.000000000 +0200
+@@ -85,6 +85,7 @@
+ 
+ 
+ 
++class NEOENGINE_API FontManager;
+ 
+ /**
+   * \brief Font abstraction. Loads, prints and other methods.

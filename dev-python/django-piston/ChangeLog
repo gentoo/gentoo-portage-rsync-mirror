@@ -1,0 +1,23 @@
+# ChangeLog for dev-python/django-piston
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-piston/ChangeLog,v 1.4 2012/04/17 15:00:34 mgorny Exp $
+
+  17 Apr 2012; Michał Górny <mgorny@gentoo.org> django-piston-0.2.2.ebuild:
+  Use mirror://bitbucket.
+
+  11 Dec 2011; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Add python herd.
+
+*django-piston-0.2.3 (11 Dec 2011)
+
+  11 Dec 2011; Mike Gilbert <floppym@gentoo.org> +django-piston-0.2.3.ebuild:
+  Version bump for security bug 389317. Use pypi tarballs, and drop examples
+  support.
+
+*django-piston-9999 (27 Aug 2010)
+*django-piston-0.2.2 (27 Aug 2010)
+
+  27 Aug 2010; Tiziano Müller <dev-zero@gentoo.org>
+  +django-piston-0.2.2.ebuild, +django-piston-9999.ebuild, +metadata.xml:
+  Initial commit.
+

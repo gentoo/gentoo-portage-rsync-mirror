@@ -1,0 +1,14 @@
+# ChangeLog for razorqt-base/razorqt-libs
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-libs/ChangeLog,v 1.2 2012/10/24 11:35:42 yngwin Exp $
+
+*razorqt-libs-0.5.1 (24 Oct 2012)
+
+  24 Oct 2012; Ben de Groot <yngwin@gentoo.org> +razorqt-libs-0.5.1.ebuild:
+  Version bump
+
+*razorqt-libs-0.5.0 (15 Oct 2012)
+
+  15 Oct 2012; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +razorqt-libs-0.5.0.ebuild:
+  Initial import from qt overlay. New razor-qt 0.5.0 release.

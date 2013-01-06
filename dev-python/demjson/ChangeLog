@@ -1,0 +1,60 @@
+# ChangeLog for dev-python/demjson
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.16 2011/06/23 14:46:54 hwoarang Exp $
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -demjson-1.5.ebuild:
+  Remove old ebuilds. Requested by Arfrever
+
+  27 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> demjson-1.6.ebuild:
+  x86 stable wrt bug #365881
+
+  10 May 2011; Markos Chandras <hwoarang@gentoo.org> demjson-1.6.ebuild:
+  Stable on amd64 wrt bug #365881
+
+*demjson-1.6 (03 Apr 2011)
+
+  03 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +demjson-1.6.ebuild:
+  Version bump.
+
+  28 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -demjson-1.4.ebuild:
+  Delete.
+
+  19 Nov 2010; Markos Chandras <hwoarang@gentoo.org> demjson-1.5.ebuild:
+  Stable on amd64 wrt bug #345501
+
+  16 Nov 2010; Thomas Kahle <tomka@gentoo.org> demjson-1.5.ebuild:
+  x86 stable per bug 345501
+
+*demjson-1.5 (17 Oct 2010)
+
+  17 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +demjson-1.5.ebuild:
+  Version bump.
+
+  29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  demjson-1.4.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  25 Nov 2009; Markus Meier <maekke@gentoo.org> demjson-1.4.ebuild:
+  amd64 stable, bug #281571
+
+  12 Sep 2009; Christian Faulhammer <fauli@gentoo.org> demjson-1.4.ebuild:
+  stable x86, bug 281571
+
+  05 Sep 2009; Patrick Lauer <patrick@gentoo.org> -demjson-1.1.ebuild:
+  Remove old
+
+*demjson-1.4 (23 Apr 2009)
+
+  23 Apr 2009; Jesus Rivero <neurogeek@gentoo.org> +demjson-1.4.ebuild:
+  Version bump. Closes bug #266771. Thanks to Lukas.
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> demjson-1.1.ebuild:
+  Adding ~amd64 keyword
+
+*demjson-1.1 (21 Nov 2007)
+
+  21 Nov 2007; Michael Hanselmann <hansmi@gentoo.org> +demjson-1.1.ebuild:
+  Added to portage, ebuild by me.

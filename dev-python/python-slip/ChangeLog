@@ -1,0 +1,18 @@
+# ChangeLog for dev-python/python-slip
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/ChangeLog,v 1.2 2012/11/08 04:28:44 tetromino Exp $
+
+*python-slip-0.2.21 (08 Nov 2012)
+
+  08 Nov 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  python-slip-0.2.20.ebuild, +python-slip-0.2.21.ebuild:
+  Version bump.
+
+*python-slip-0.2.20 (19 Jul 2012)
+
+  19 Jul 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +python-slip-0.2.20.ebuild, +files/python-slip-0.2.20-no-selinux.patch,
+  +metadata.xml:
+  New ebuild for a Python convenience library used by some Fedora-oriented
+  projects.
+

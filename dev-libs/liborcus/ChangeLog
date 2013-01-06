@@ -1,0 +1,41 @@
+# ChangeLog for dev-libs/liborcus
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.9 2012/12/20 11:18:24 scarabeus Exp $
+
+  20 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org> -liborcus-0.1.0.ebuild:
+  Drop unused oldest version.
+
+  30 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> liborcus-0.3.0.ebuild:
+  Seems like part of the commit was not included in the branch. Fixes
+  bug#445240.
+
+*liborcus-0.3.0 (28 Nov 2012)
+
+  28 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> +liborcus-0.3.0.ebuild,
+  liborcus-9999.ebuild:
+  Version bump to latest liborcus release.
+
+  16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> liborcus-0.1.0.ebuild:
+  workaround for bug 399061
+
+  09 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> liborcus-0.1.0.ebuild,
+  liborcus-9999.ebuild:
+  Fix building with latest boost. Wrt bug#442262.
+
+  27 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> liborcus-0.1.0.ebuild:
+  Disable spreadsheet model on 0.1 as it aint working there.
+
+*liborcus-0.1.0 (25 Sep 2012)
+
+  25 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> +liborcus-0.1.0.ebuild:
+  Add liborcus 0.1.0 without keywords as the live changed soname and lo wont be
+  ported for a while.
+
+  17 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> liborcus-9999.ebuild:
+  Depend on mdds and boost.
+
+*liborcus-9999 (10 Sep 2012)
+
+  10 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org> +liborcus-9999.ebuild,
+  +metadata.xml:
+  Initial commit. Required by libreoffice-3.7.

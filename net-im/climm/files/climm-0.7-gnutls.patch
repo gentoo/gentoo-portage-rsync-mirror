@@ -1,0 +1,13 @@
+=== modified file 'configure.ac'
+--- configure.ac	2009-12-26 14:00:17 +0000
++++ configure.ac	2009-12-26 14:02:41 +0000
+@@ -97,7 +97,7 @@
+   if test "x$ac_arg_use_ssl" != "xno"; then
+     ac_use_ssl=no
+     if test "x$ac_arg_use_ssl" != "xopenssl"; then
+-      AM_PATH_LIBGNUTLS(0.8.8, ac_use_ssl=gnutls)
++      PKG_CHECK_MODULES(LIBGNUTLS, gnutls, ac_use_ssl=gnutls)
+       AM_PATH_LIBGCRYPT(, , ac_use_ssl=no)
+       AC_CHECK_HEADERS([gcrypt.h], , ac_use_ssl=no)
+       if test "x$ac_use_ssl" = "xgnutls"; then
+

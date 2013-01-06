@@ -1,0 +1,41 @@
+# ChangeLog for sci-biology/eugene
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/ChangeLog,v 1.9 2011/02/11 19:51:04 hwoarang Exp $
+
+  11 Feb 2011; Markos Chandras <hwoarang@gentoo.org> eugene-3.6-r1.ebuild:
+  Stable on amd64 wrt bug #353575
+
+  07 Feb 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> eugene-3.6-r1.ebuild:
+  x86 stable wrt bug #353575
+
+*eugene-3.6-r1 (10 Sep 2010)
+
+  10 Sep 2010; Kacper Kowalik <xarthisius@gentoo.org> -eugene-3.6.ebuild,
+  +eugene-3.6-r1.ebuild, +files/eugene-3.6-overflow.patch,
+  +files/eugene-3.6-plugins.patch:
+  Fix overflows wrt bug 336607 and install path wrt bug 297536. Thanks to
+  Diego for the reports.
+
+*eugene-3.6 (07 May 2010)
+
+  07 May 2010; Andrey Kislyuk <weaver@gentoo.org> -eugene-3.5d.ebuild,
+  +eugene-3.6.ebuild:
+  Version bump
+
+  31 Oct 2009; Markus Meier <maekke@gentoo.org> eugene-3.5g.ebuild:
+  amd64/x86 stable, bug #290937
+
+*eugene-3.5g (09 Sep 2009)
+
+  09 Sep 2009; Andrey Kislyuk <weaver@gentoo.org> eugene-3.5d.ebuild,
+  +eugene-3.5g.ebuild:
+  Version bump and address bug 277226
+
+  18 Apr 2009; Markus Meier <maekke@gentoo.org> eugene-3.5d:
+  amd64/x86 stable, bug #263041
+
+*eugene-3.5d (04 Jan 2009)
+
+  04 Jan 2009; weaver <weaver@gentoo.org> +eugene-3.5d.ebuild:
+  Initial commit, ebuild written by me
+

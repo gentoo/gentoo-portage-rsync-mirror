@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/brewtarget
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/ChangeLog,v 1.1 2012/03/14 00:16:53 pesa Exp $
+
+*brewtarget-1.2.4 (14 Mar 2012)
+
+  14 Mar 2012; Davide Pesavento <pesa@gentoo.org> +brewtarget-1.2.4.ebuild,
+  +files/1.2.4-find-phonon.patch, +metadata.xml:
+  Initial commit, ebuild and patch by me.
+

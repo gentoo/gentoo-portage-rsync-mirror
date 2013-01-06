@@ -1,0 +1,20 @@
+diff -ru guile-1.8.6.orig/libguile/iselect.h guile-1.8.6/libguile/iselect.h
+--- guile-1.8.6.orig/libguile/iselect.h	2009-09-25 13:44:23 +0200
++++ guile-1.8.6/libguile/iselect.h	2009-09-25 13:45:36 +0200
+@@ -38,7 +38,16 @@
+ #ifdef FD_SET
+ 
+ #define SELECT_TYPE fd_set
++#ifdef __INTERIX
++// interix' FD_SETSIZE should be == OPEN_MAX, but it seems
++// that there is an error in the headers, which makes it
++// four times as big, and thus causes errno 22 on select
++// (invalid argument).
++#include <limits.h>
++#define SELECT_SET_SIZE OPEN_MAX
++#else
+ #define SELECT_SET_SIZE FD_SETSIZE
++#endif
+ 
+ #else /* no FD_SET */
+ 

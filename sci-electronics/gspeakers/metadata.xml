@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>sci-electronics</herd>
+  <longdescription>
+    GSpeakers is a GTK based loudspeaker and crossovernetwork design program.
+  </longdescription>
+</pkgmetadata>

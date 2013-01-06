@@ -1,0 +1,72 @@
+diff -Nur matplotlib-1.0.1.orig/doc/api/api_changes.rst matplotlib-1.0.1/doc/api/api_changes.rst
+--- matplotlib-1.0.1.orig/doc/api/api_changes.rst	2011-02-23 23:41:55.000000000 +0000
++++ matplotlib-1.0.1/doc/api/api_changes.rst	2011-02-23 23:42:24.000000000 +0000
+@@ -540,7 +540,7 @@
+ 
+   * :meth:`draw_markers(self, gc, marker_path, marker_trans, path,
+     trans, rgbFace)
+-    <matplotlib.backend_bases.RendererBase.draw_markers`
++    <matplotlib.backend_bases.RendererBase.draw_markers>`
+ 
+   * :meth:`draw_path_collection(self, master_transform, cliprect,
+     clippath, clippath_trans, paths, all_transforms, offsets,
+diff -Nur matplotlib-1.0.1.orig/lib/matplotlib/sphinxext/plot_directive.py matplotlib-1.0.1/lib/matplotlib/sphinxext/plot_directive.py
+--- matplotlib-1.0.1.orig/lib/matplotlib/sphinxext/plot_directive.py	2011-02-23 23:41:55.000000000 +0000
++++ matplotlib-1.0.1/lib/matplotlib/sphinxext/plot_directive.py	2011-02-23 23:42:37.000000000 +0000
+@@ -346,7 +346,7 @@
+         del options['nofigs']
+ 
+     formats = setup.config.plot_formats
+-    if type(formats) == str:
++    if isinstance(formats, basestring):
+         formats = eval(formats)
+ 
+     fname = os.path.basename(plot_path)
+diff -Nur matplotlib-1.0.1.orig/lib/mpl_toolkits/axes_grid1/axes_divider.py matplotlib-1.0.1/lib/mpl_toolkits/axes_grid1/axes_divider.py
+--- matplotlib-1.0.1.orig/lib/mpl_toolkits/axes_grid1/axes_divider.py	2011-02-23 23:41:55.000000000 +0000
++++ matplotlib-1.0.1/lib/mpl_toolkits/axes_grid1/axes_divider.py	2011-02-23 23:42:31.000000000 +0000
+@@ -172,12 +172,12 @@
+     def locate(self, nx, ny, nx1=None, ny1=None, renderer=None):
+         """
+ 
+-        :param nx, nx1: Integers specifying the column-position of the
++        :param nx,nx1: Integers specifying the column-position of the
+           cell. When nx1 is None, a single nx-th column is
+           specified. Otherwise location of columns spanning between nx
+           to nx1 (but excluding nx1-th column) is specified.
+ 
+-        :param ny, ny1: same as nx and nx1, but for row positions.
++        :param ny,ny1: same as nx and nx1, but for row positions.
+         """
+ 
+ 
+@@ -222,12 +222,12 @@
+         (:class:`mpl_toolkits.axes_grid.axes_divider.AxesLocator`) for
+         specified cell.
+ 
+-        :param nx, nx1: Integers specifying the column-position of the
++        :param nx,nx1: Integers specifying the column-position of the
+           cell. When nx1 is None, a single nx-th column is
+           specified. Otherwise location of columns spanning between nx
+           to nx1 (but excluding nx1-th column) is specified.
+ 
+-        :param ny, ny1: same as nx and nx1, but for row positions.
++        :param ny,ny1: same as nx and nx1, but for row positions.
+         """
+         return AxesLocator(self, nx, ny, nx1, ny1)
+ 
+@@ -242,12 +242,12 @@
+         """
+         :param axes_divider: An instance of AxesDivider class.
+ 
+-        :param nx, nx1: Integers specifying the column-position of the
++        :param nx,nx1: Integers specifying the column-position of the
+           cell. When nx1 is None, a single nx-th column is
+           specified. Otherwise location of columns spanning between nx
+           to nx1 (but excluding nx1-th column) is is specified.
+ 
+-        :param ny, ny1: same as nx and nx1, but for row positions.
++        :param ny,ny1: same as nx and nx1, but for row positions.
+         """
+         self._axes_divider = axes_divider
+ 

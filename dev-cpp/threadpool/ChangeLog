@@ -1,0 +1,10 @@
+# ChangeLog for dev-cpp/threadpool
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/threadpool/ChangeLog,v 1.1 2012/09/29 23:14:37 robbat2 Exp $
+
+*threadpool-0.2.5 (29 Sep 2012)
+
+  29 Sep 2012; Robin H. Johnson <robbat2@gentoo.org>
+  +files/threadpool-0.2.5-memleak.patch, +metadata.xml,
+  +threadpool-0.2.5.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.

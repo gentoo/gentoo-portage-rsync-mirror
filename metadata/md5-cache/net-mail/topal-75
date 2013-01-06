@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=>=app-crypt/gnupg-2.0.7-r1 || ( net-mail/metamail app-misc/run-mailcap ) || ( app-text/dos2unix app-text/hd2u ) sys-libs/ncurses sys-libs/readline virtual/ada doc? ( app-text/texlive )
+DESCRIPTION=Topal is a 'glue' program that links GnuPG and Pine/Alpine.
+EAPI=4
+HOMEPAGE=http://homepage.ntlworld.com/phil.brooke/topal/
+IUSE=doc
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-3
+RDEPEND=>=app-crypt/gnupg-2.0.7-r1 || ( net-mail/metamail app-misc/run-mailcap ) || ( app-text/dos2unix app-text/hd2u ) sys-libs/ncurses sys-libs/readline
+SLOT=0
+SRC_URI=http://homepage.ntlworld.com/phil.brooke/topal/rel-75/topal-package-75.tgz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=e8c5a333effb3c66601e2c61d2e473fa

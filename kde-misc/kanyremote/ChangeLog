@@ -1,0 +1,136 @@
+# ChangeLog for kde-misc/kanyremote
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.33 2013/01/05 09:16:49 ago Exp $
+
+  05 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kanyremote-6.1.ebuild:
+  Stable for x86, wrt bug #449634
+
+  05 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kanyremote-6.1.ebuild:
+  Stable for amd64, wrt bug #449634
+
+*kanyremote-6.1 (23 Oct 2012)
+
+  23 Oct 2012; Markos Chandras <hwoarang@gentoo.org> +kanyremote-6.1.ebuild:
+  Version bump
+
+  10 Sep 2012; Johannes Huber <johu@gentoo.org> -kanyremote-5.13.ebuild,
+  -kanyremote-6.0.ebuild:
+  Remove old.
+
+  10 Sep 2012; Johannes Huber <johu@gentoo.org> kanyremote-6.0.1.ebuild:
+  Stable for x86, wrt bug #432896
+
+  09 Sep 2012; Agostino Sarubbo <ago@gentoo.org> kanyremote-6.0.1.ebuild:
+  Stable for amd64, wrt bug #432896
+
+  26 Aug 2012; Chris Reffett <creffett@gentoo.org> kanyremote-6.0.1.ebuild:
+  Bump 6.0.1 to EAPI 4, fix the most problematic .desktop validation issue.
+
+*kanyremote-6.0.1 (17 Aug 2012)
+
+  17 Aug 2012; Markos Chandras <hwoarang@gentoo.org> +kanyremote-6.0.1.ebuild:
+  Version bump
+
+  21 Jul 2012; Johannes Huber <johu@gentoo.org> kanyremote-5.13.ebuild,
+  kanyremote-6.0.ebuild:
+  Move from SLOT 0 to 4.
+
+*kanyremote-6.0 (09 Jun 2012)
+
+  09 Jun 2012; Markos Chandras <hwoarang@gentoo.org> +kanyremote-6.0.ebuild:
+  Version bump. Bug #420229
+
+  25 Mar 2012; Johannes Huber <johu@gentoo.org> -kanyremote-5.11.9.ebuild,
+  -kanyremote-5.12.ebuild:
+  Remove old.
+
+  24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> kanyremote-5.13.ebuild:
+  x86 stable wrt bug #404771
+
+  11 Mar 2012; Agostino Sarubbo <ago@gentoo.org> kanyremote-5.13.ebuild:
+  Stable for amd64, wrt bug #404771
+
+*kanyremote-5.13 (10 Dec 2011)
+
+  10 Dec 2011; Markos Chandras <hwoarang@gentoo.org> +kanyremote-5.13.ebuild:
+  version bump
+
+*kanyremote-5.12 (24 Mar 2011)
+
+  24 Mar 2011; Markos Chandras <hwoarang@gentoo.org> +kanyremote-5.12.ebuild:
+  Version bump
+
+  13 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -kanyremote-5.11.ebuild:
+  old
+
+  24 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kanyremote-5.11.9.ebuild:
+  x86 stable wrt bug #351802
+
+  17 Jan 2011; Markos Chandras <hwoarang@gentoo.org> kanyremote-5.11.9.ebuild:
+  Stable on amd64 wrt bug #351802
+
+*kanyremote-5.11.9 (19 Sep 2010)
+
+  19 Sep 2010; Markos Chandras <hwoarang@gentoo.org>
+  -kanyremote-5.11.7.ebuild, -kanyremote-5.11.8.ebuild,
+  +kanyremote-5.11.9.ebuild:
+  Version bump. Remove old ebuilds
+
+*kanyremote-5.11.8 (14 Aug 2010)
+
+  14 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +kanyremote-5.11.8.ebuild:
+  Version bump
+
+*kanyremote-5.11.7 (10 Aug 2010)
+
+  10 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
+  +kanyremote-5.11.7.ebuild:
+  Version bump
+
+  02 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  -kanyremote-5.10.ebuild:
+  Remove old ebuilds
+
+  29 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
+  kanyremote-5.11.ebuild:
+  stable x86, bug 325717
+
+  27 Jun 2010; Christoph Mende <angelos@gentoo.org> kanyremote-5.11.ebuild:
+  Stable on amd64 wrt bug #325717
+
+  19 Apr 2010; Markos Chandras <hwoarang@gentoo.org> kanyremote-5.10.ebuild,
+  kanyremote-5.11.ebuild:
+  Fix documentation directory wrt bug #316087
+
+  21 Mar 2010; Serkan Kaba <serkan@gentoo.org> kanyremote-5.10.ebuild,
+  kanyremote-5.11.ebuild:
+  anyremote moved to app-mobilephone.
+
+*kanyremote-5.11 (23 Jan 2010)
+
+  23 Jan 2010; <hwoarang@gentoo.org> +kanyremote-5.11.ebuild:
+  Version bump
+
+  11 Aug 2009; Markos Chandras <hwoarang@gentoo.org>
+  -kanyremote-5.8.2.ebuild:
+  Remove old ebuild
+
+  26 Jul 2009; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add kde herd on metadata.xml. Fixes bug 279156
+
+*kanyremote-5.10 (06 Jul 2009)
+
+  06 Jul 2009; Markos Chandras <hwoarang@gentoo.org>
+  +kanyremote-5.10.ebuild, +files/disable_bluetooth.patch:
+  Version bump. First PyQt4 release
+
+  26 Apr 2009; Markos Chandras <hwoarang@gentoo.org> kanyremote-5.8.2:
+  Add dev-python/pybluez dependency. Fixes bug #267499
+
+*kanyremote-5.8.2 (21 Apr 2009)
+
+  21 Apr 2009; Markos Chandras <hwoarang@gentoo.org> +metadata.xml,
+  +kanyremote-5.8.2.ebuild:
+  Initial commit of kanyremote program. Fixes bug #209689

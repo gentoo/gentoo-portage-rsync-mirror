@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Filesys-SmbClient
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-SmbClient/ChangeLog,v 1.1 2012/11/26 02:15:55 flameeyes Exp $
+
+*Filesys-SmbClient-3.100.0 (26 Nov 2012)
+
+  26 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org>
+  +Filesys-SmbClient-3.100.0.ebuild, +metadata.xml:
+  Initial import of Filesys::SmbClient, which I'm using for a nagios check.

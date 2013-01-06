@@ -1,0 +1,13 @@
+DEFINED_PHASES=install unpack
+DEPEND=html? ( app-arch/unzip )
+DESCRIPTION=Documentation for Smarty, a template engine for PHP.
+EAPI=4
+HOMEPAGE=http://www.smarty.net/documentation
+IUSE=pdf html linguas_de linguas_en linguas_es linguas_fr linguas_it linguas_ja linguas_pt_BR linguas_ru
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=LGPL-2.1
+RDEPEND=html? ( app-arch/unzip )
+REQUIRED_USE=|| ( html pdf )
+SLOT=0
+SRC_URI=html? ( http://www.smarty.net/files/docs/manual-en-2.6.zip -> smarty-docs-2.6-en.zip ) pdf? ( http://www.smarty.net/files/docs/manual-en-2.6.pdf -> smarty-docs-2.6-en.pdf ) linguas_de? ( html? ( http://www.smarty.net/files/docs/manual-de-2.6.zip -> smarty-docs-2.6-de.zip ) pdf? ( http://www.smarty.net/files/docs/manual-de-2.6.pdf -> smarty-docs-2.6-de.pdf ) ) linguas_es? ( html? ( http://www.smarty.net/files/docs/manual-es-2.6.zip -> smarty-docs-2.6-es.zip ) pdf? ( http://www.smarty.net/files/docs/manual-es-2.6.pdf -> smarty-docs-2.6-es.pdf ) ) linguas_fr? ( html? ( http://www.smarty.net/files/docs/manual-fr-2.6.zip -> smarty-docs-2.6-fr.zip ) pdf? ( http://www.smarty.net/files/docs/manual-fr-2.6.pdf -> smarty-docs-2.6-fr.pdf ) ) linguas_it? ( html? ( http://www.smarty.net/files/docs/manual-it-2.6.zip -> smarty-docs-2.6-it.zip ) pdf? ( http://www.smarty.net/files/docs/manual-it-2.6.pdf -> smarty-docs-2.6-it.pdf ) ) linguas_ja? ( html? ( http://www.smarty.net/files/docs/manual-ja-2.6.zip -> smarty-docs-2.6-ja.zip ) pdf? ( http://www.smarty.net/files/docs/manual-ja-2.6.pdf -> smarty-docs-2.6-ja.pdf ) ) linguas_pt_BR? ( html? ( http://www.smarty.net/files/docs/manual-pt_BR-2.6.zip -> smarty-docs-2.6-pt_BR.zip ) pdf? ( http://www.smarty.net/files/docs/manual-pt_BR-2.6.pdf -> smarty-docs-2.6-pt_BR.pdf ) ) linguas_ru? ( html? ( http://www.smarty.net/files/docs/manual-ru-2.6.zip -> smarty-docs-2.6-ru.zip ) pdf? ( http://www.smarty.net/files/docs/manual-ru-2.6.pdf -> smarty-docs-2.6-ru.pdf ) )
+_md5_=ad8718b7b9d4e88382f88738f2286d15

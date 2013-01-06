@@ -1,0 +1,32 @@
+# ChangeLog for x11-misc/obmenu-generator
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obmenu-generator/ChangeLog,v 1.6 2013/01/01 23:12:18 hasufell Exp $
+
+*obmenu-generator-0.54 (01 Jan 2013)
+
+  01 Jan 2013; Julian Ospald <hasufell@gentoo.org>
+  +obmenu-generator-0.54.ebuild:
+  version bump
+
+  26 Oct 2012; Julian Ospald <hasufell@gentoo.org>
+  obmenu-generator-0.53.ebuild:
+  fix dependencies thanks to o11c
+
+  27 Aug 2012; Johannes Huber <johu@gentoo.org> obmenu-generator-0.53.ebuild:
+  Stable for x86, wrt bug #432744
+
+  26 Aug 2012; Agostino Sarubbo <ago@gentoo.org> obmenu-generator-0.53.ebuild:
+  Stable for amd64, wrt bug #432744
+
+*obmenu-generator-0.53 (26 Jul 2012)
+
+  26 Jul 2012; Julian Ospald <hasufell@gentoo.org>
+  +obmenu-generator-0.53.ebuild:
+  version bump
+
+*obmenu-generator-0.5.1 (01 May 2012)
+
+  01 May 2012; Julian Ospald <hasufell@gentoo.org>
+  +obmenu-generator-0.5.1.ebuild, +metadata.xml:
+  initial commit
+

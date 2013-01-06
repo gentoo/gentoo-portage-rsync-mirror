@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prepare prerm setup test unpack
+DEPEND=>=dev-haskell/polyparse-1.5[profile?] >=dev-lang/ghc-6.8.2 >=dev-haskell/cabal-1.2 doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
+DESCRIPTION=Utilities for manipulating XML documents
+EAPI=4
+HOMEPAGE=http://www.cs.york.ac.uk/fp/HaXml/
+IUSE=doc hscolour profile
+KEYWORDS=~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=LGPL-2.1
+RDEPEND=>=dev-haskell/polyparse-1.5[profile?] >=dev-lang/ghc-6.8.2 dev-lang/ghc
+SLOT=0
+SRC_URI=mirror://hackage/packages/archive/HaXml/1.23/HaXml-1.23.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	ghc-package	c50de19959be43d5c072ac4169f4dbfd	haskell-cabal	b4543046102ee4aec41502a7cb8fd6f2	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=e59cff54123b5d2a95f30787b19558bb

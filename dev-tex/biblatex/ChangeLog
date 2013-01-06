@@ -1,0 +1,33 @@
+# ChangeLog for dev-tex/biblatex
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/ChangeLog,v 1.6 2012/08/02 13:35:51 aballier Exp $
+
+*biblatex-2.1-r1 (02 Aug 2012)
+
+  02 Aug 2012; Alexis Ballier <aballier@gentoo.org> +biblatex-2.1-r1.ebuild:
+  switch to the .tds tarball as they have changed upstream, fixing bug #429344
+
+*biblatex-2.1 (31 Jul 2012)
+
+  31 Jul 2012; Alexis Ballier <aballier@gentoo.org> +biblatex-2.1.ebuild:
+  version bump
+
+*biblatex-1.7 (15 May 2012)
+
+  15 May 2012; Johannes Huber <johu@gentoo.org> +biblatex-1.7.ebuild:
+  Version bump by Michael Schindhelm <mschindhelm@gmx.de> and me wrt bug
+  #403601.
+
+  15 May 2012; Johannes Huber <johu@gentoo.org> biblatex-1.6.ebuild:
+  Add ~x86 keyword.
+
+  20 Feb 2012; Alexis Ballier <aballier@gentoo.org> biblatex-1.6.ebuild:
+  add missing dep on dev-texlive/texlive-bibtexextra, bug #404585 by Dennis
+  Schridde
+
+*biblatex-1.6 (11 Oct 2011)
+
+  11 Oct 2011; Alexis Ballier <aballier@gentoo.org> +biblatex-1.6.ebuild,
+  +metadata.xml:
+  initial import, ebuild by me, for bug #383613
+

@@ -1,0 +1,21 @@
+commit 7077483874a842c607d6e877696891ba4d5f1dd7
+Author: Michał Januszewski <spock@gentoo.org>
+Date:   Sat Oct 9 21:07:37 2010 +0200
+
+    Fix a bug in splash-functions.sh.
+    
+    This problem was reported in Gentoo bug #339767.
+
+diff --git a/core/scripts/splash-functions.sh.in b/core/scripts/splash-functions.sh.in
+index 1a89486..2c39c6a 100644
+--- a/core/scripts/splash-functions.sh.in
++++ b/core/scripts/splash-functions.sh.in
+@@ -341,7 +341,7 @@ splash_comm_send() {
+ 
+ # Returns the current splash mode.
+ splash_get_mode() {
+-	local ctty="${spl_bindir}/fgconsole"
++	local ctty="$({spl_bindir}/fgconsole)"
+ 	local mode="$(${spl_util})"
+ 
+ 	if [ "${mode}" = "silent" ]; then

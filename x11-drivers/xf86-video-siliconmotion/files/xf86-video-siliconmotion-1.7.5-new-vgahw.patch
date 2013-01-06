@@ -1,0 +1,21 @@
+From 0e7e9cd639196cb42b0a79b2671f6bacc558035f Mon Sep 17 00:00:00 2001
+From: Adam Jackson <ajax@redhat.com>
+Date: Mon, 19 Dec 2011 22:26:34 +0000
+Subject: Fix for new vgaHW ABI
+
+Signed-off-by: Adam Jackson <ajax@redhat.com>
+---
+diff --git a/src/smi_driver.c b/src/smi_driver.c
+index a344921..25eb742 100644
+--- a/src/smi_driver.c
++++ b/src/smi_driver.c
+@@ -442,6 +442,7 @@ SMI_PreInit(ScrnInfoPtr pScrn, int flags)
+ 	    LEAVE(FALSE);
+ 
+ 	hwp = VGAHWPTR(pScrn);
++	vgaHWSetStdFuncs(hwp);
+ #if GET_ABI_MAJOR(ABI_VIDEODRV_VERSION) < 12
+ 	pSmi->PIOBase = hwp->PIOOffset;
+ #else
+--
+cgit v0.9.0.2-2-gbebe

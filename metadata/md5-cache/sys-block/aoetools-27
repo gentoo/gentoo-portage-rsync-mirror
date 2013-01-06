@@ -1,0 +1,9 @@
+DEFINED_PHASES=compile install unpack
+DESCRIPTION=aoetools are programs for users of the ATA over Ethernet (AoE) network storage protocol
+HOMEPAGE=http://sf.net/projects/aoetools/
+KEYWORDS=amd64 ppc ppc64 ~sparc x86
+LICENSE=GPL-2
+RDEPEND=sys-apps/util-linux
+SLOT=0
+SRC_URI=mirror://sourceforge/aoetools/aoetools-27.tar.gz
+_md5_=a4e9666a1d462b1ba5740a9ac39c9888

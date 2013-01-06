@@ -1,0 +1,9 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=Utility to control digital cameras based on Sierra Imaging firmware
+HOMEPAGE=http://photopc.sourceforge.net
+KEYWORDS=ppc x86
+LICENSE=|| ( BSD as-is )
+SLOT=0
+SRC_URI=mirror://sourceforge/photopc/photopc-3.05.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=27d2d43d3aaeb58ec6e135dd41d3a200

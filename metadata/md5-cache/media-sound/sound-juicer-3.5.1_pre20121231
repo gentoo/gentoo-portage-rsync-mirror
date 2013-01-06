@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
+DEPEND=>=dev-libs/glib-2.32:2 >=x11-libs/gtk+-2.90:3 media-libs/libcanberra[gtk3] >=app-cdr/brasero-2.90 >=gnome-base/gconf-2:2 sys-apps/dbus media-libs/libdiscid >=media-libs/musicbrainz-5.0.1:5 media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0[vorbis?] flac? ( media-plugins/gst-plugins-flac:1.0 ) >=dev-util/intltool-0.40 >=app-text/scrollkeeper-0.3.5 app-text/gnome-doc-utils virtual/pkgconfig test? ( ~app-text/docbook-xml-dtd-4.3 ) app-arch/xz-utils >=sys-apps/sed-4
+DESCRIPTION=CD ripper for GNOME
+EAPI=5
+HOMEPAGE=http://www.burtonini.com/blog/computers/sound-juicer/
+IUSE=flac test vorbis debug
+KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+LICENSE=GPL-2+
+RDEPEND=>=dev-libs/glib-2.32:2 >=x11-libs/gtk+-2.90:3 media-libs/libcanberra[gtk3] >=app-cdr/brasero-2.90 >=gnome-base/gconf-2:2 sys-apps/dbus media-libs/libdiscid >=media-libs/musicbrainz-5.0.1:5 media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0[vorbis?] flac? ( media-plugins/gst-plugins-flac:1.0 ) gnome-base/gvfs[cdda,udev] || ( media-plugins/gst-plugins-cdparanoia:1.0 media-plugins/gst-plugins-cdio:1.0 ) media-plugins/gst-plugins-meta:1.0
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~eva/distfiles/sound-juicer/sound-juicer-3.5.1_pre20121231.tar.bz2
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	18cda077fa5f661f96aa70c192b4b4a5	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=e824dff720d6edff7a70304f0911c660

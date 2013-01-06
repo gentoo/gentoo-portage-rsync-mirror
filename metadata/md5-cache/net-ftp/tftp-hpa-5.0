@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DEPEND=selinux? ( sec-policy/selinux-tftp ) !net-ftp/atftp !net-ftp/netkit-tftp readline? ( sys-libs/readline ) tcpd? ( sys-apps/tcp-wrappers )
+DESCRIPTION=port of the OpenBSD TFTP server
+HOMEPAGE=http://www.kernel.org/pub/software/network/tftp/
+IUSE=ipv6 readline selinux tcpd
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd
+LICENSE=BSD
+RDEPEND=selinux? ( sec-policy/selinux-tftp ) !net-ftp/atftp !net-ftp/netkit-tftp
+SLOT=0
+SRC_URI=mirror://kernel/software/network/tftp/tftp-hpa-5.0.tar.bz2
+_md5_=ab81314b6578479e16b6bdd46a334c53

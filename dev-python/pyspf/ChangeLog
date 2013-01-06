@@ -1,0 +1,67 @@
+# ChangeLog for dev-python/pyspf
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.19 2012/05/09 03:20:55 floppym Exp $
+
+  09 May 2012; Mike Gilbert <floppym@gentoo.org> pyspf-2.0.5.ebuild,
+  pyspf-2.0.6.ebuild, pyspf-2.0.7.ebuild:
+  Restrict python 2.5; bug 404919.
+
+*pyspf-2.0.7 (24 Apr 2012)
+
+  24 Apr 2012; Kacper Kowalik <xarthisius@gentoo.org> +pyspf-2.0.7.ebuild:
+  Version bump wrt #410875 by Ian Delaney <johneed@hotmail.com>
+
+  08 Apr 2012; Mike Gilbert <floppym@gentoo.org> pyspf-2.0.5.ebuild,
+  pyspf-2.0.6.ebuild:
+  Add slot to dev-python/pydns dependency. #411035 by Lutz Schildt.
+
+  08 Feb 2012; Patrick Lauer <patrick@gentoo.org> Manifest:
+  Manifest fix
+
+*pyspf-2.0.6 (08 Feb 2012)
+
+  08 Feb 2012; Patrick Lauer <patrick@gentoo.org> +pyspf-2.0.6.ebuild:
+  Bump for #401971
+
+  04 Nov 2011; Markos Chandras <hwoarang@gentoo.org> pyspf-2.0.5.ebuild:
+  Update LICENSE. Patch by Arfrever.
+
+  22 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
+  Changed herd to python
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
+
+  19 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyspf-2.0.5.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  19 Nov 2009; Markus Meier <maekke@gentoo.org> pyspf-2.0.5.ebuild:
+  amd64/x86 stable, bug #293032
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -pyspf-2.0.4.ebuild:
+  Remove old
+
+*pyspf-2.0.5 (09 Aug 2008)
+
+  09 Aug 2008; Daniel Black <dragonheart@gentoo.org> -pyspf-2.0.3.ebuild,
+  +pyspf-2.0.5.ebuild:
+  version bump + old version removal
+
+*pyspf-2.0.4 (26 Jun 2008)
+
+  26 Jun 2008; Daniel Black <dragonheart@gentoo.org> +pyspf-2.0.4.ebuild:
+  version bump
+
+  07 Dec 2007; Christian Faulhammer <opfer@gentoo.org> pyspf-2.0.3.ebuild:
+  keywording ~x86, bug 201487
+
+  15 Oct 2007; Daniel Black <dragonheart@gentoo.org> pyspf-2.0.3.ebuild:
+  fix license + remove python dependency thanks to dev-zero
+
+*pyspf-2.0.3 (06 Oct 2007)
+
+  06 Oct 2007; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +pyspf-2.0.3.ebuild:
+  initial version as per bug #185839 thanks to Frittella Laurento
+

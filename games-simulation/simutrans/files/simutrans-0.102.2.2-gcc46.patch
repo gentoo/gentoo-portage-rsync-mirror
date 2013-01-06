@@ -1,0 +1,10 @@
+--- tpl/slist_tpl.h.old	2011-05-09 14:01:02.299244745 +0200
++++ tpl/slist_tpl.h	2011-05-09 14:01:39.973619614 +0200
+@@ -8,6 +8,7 @@
+ #ifndef tpl_slist_tpl_h
+ #define tpl_slist_tpl_h
+ 
++#include <cstddef>
+ #include <iterator>
+ #include <typeinfo>
+ #include "../dataobj/freelist.h"

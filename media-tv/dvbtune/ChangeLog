@@ -1,0 +1,31 @@
+# ChangeLog for media-tv/dvbtune
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbtune/ChangeLog,v 1.8 2012/02/15 18:29:37 hd_brummy Exp $
+
+  15 Feb 2012; Joerg Bornkessel <hd_brummy@gentoo.org> dvbtune-0.5.ebuild:
+  move media-tv to virtual/linuxtv-dvb-headers, bug #403929
+
+  27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> dvbtune-0.5.ebuild:
+  Fixed quoting.
+
+  18 May 2007; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Make it media-tv herd assigned only.
+
+  27 Apr 2007; Steve Dibb <beandog@gentoo.org> dvbtune-0.5.ebuild:
+  amd64 stable, bug 175162
+
+  13 Mar 2007; Matthias Schwarzott <zzam@gentoo.org> dvbtune-0.5.ebuild:
+  Marked stable on x86.
+
+  03 Dec 2006; Steve Dibb <beandog@gentoo.org> dvbtune-0.5.ebuild:
+  Add ~amd64, bug 142917
+
+  05 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org> dvbtune-0.5.ebuild:
+  xml2 use flag changed to xml
+
+*dvbtune-0.5 (06 Jan 2006)
+
+  06 Jan 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/dvbtune-0.5-gentoo.diff, +metadata.xml, +dvbtune-0.5.ebuild:
+  Initial import of ebuild, thanks to Ben De luca <bedel@allmail.net>, Bug #48741
+

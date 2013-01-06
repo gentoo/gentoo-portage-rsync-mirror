@@ -1,0 +1,40 @@
+# ChangeLog for dev-python/django-celery
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/ChangeLog,v 1.7 2012/10/25 10:59:48 iksaif Exp $
+
+*django-celery-3.0.11 (25 Oct 2012)
+
+  25 Oct 2012; Corentin Chary <iksaif@gentoo.org> +django-celery-3.0.11.ebuild:
+  Bump to 3.0.11.
+
+*django-celery-3.0.10 (28 Sep 2012)
+
+  28 Sep 2012; Corentin Chary <iksaif@gentoo.org> +django-celery-3.0.10.ebuild,
+  -django-celery-3.0.4.ebuild:
+  Bump to 3.0.10.
+
+*django-celery-3.0.9 (31 Aug 2012)
+
+  31 Aug 2012; Corentin Chary <iksaif@gentoo.org> +django-celery-3.0.9.ebuild:
+  Bump to 3.0.9.
+
+  14 Aug 2012; Corentin Chary <iksaif@gentoo.org> -django-celery-2.5.5.ebuild:
+  Remove old version.
+
+*django-celery-3.0.4 (29 Jul 2012)
+
+  29 Jul 2012; Corentin Chary <iksaif@gentoo.org> +django-celery-3.0.4.ebuild,
+  -django-celery-3.0.1.ebuild:
+  Bump to 3.0.4.
+
+*django-celery-3.0.1 (17 Jul 2012)
+
+  17 Jul 2012; Corentin Chary <iksaif@gentoo.org> +django-celery-3.0.1.ebuild,
+  metadata.xml:
+  Bump to 3.0.1.
+
+*django-celery-2.5.5 (30 May 2012)
+
+  30 May 2012; Corentin Chary <iksaif@gentoo.org> +django-celery-2.5.5.ebuild,
+  +metadata.xml:
+  New ebuild for celery. Closes bug #342043.

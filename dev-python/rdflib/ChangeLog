@@ -1,0 +1,94 @@
+# ChangeLog for dev-python/rdflib
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.22 2013/01/01 14:16:47 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> rdflib-3.2.3.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> rdflib-3.2.3.ebuild:
+  Add ~ia64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> rdflib-3.2.3.ebuild:
+  Add ~ppc64, wrt bug #449220
+
+  11 Dec 2012; Agostino Sarubbo <ago@gentoo.org> rdflib-3.2.3.ebuild:
+  Add ~ppc, wrt bug #421061
+
+  27 Nov 2012; Ian Delaney <idella4@gentoo.org> rdflib-3.2.3.ebuild:
+  Again revised consequent to re-prompt from Arfrever, rm of nuisance .pyc files
+  from source that broke distutils_src_test, initial test phase now viable,
+  tested, restored
+
+  26 Nov 2012; Ian Delaney <idella4@gentoo.org> rdflib-3.2.3.ebuild:
+  removed initial broken src_test subsequent to a prompt from Afrever wrt Bug
+  #440230, not previously cited Bug #406567
+
+*rdflib-3.2.3 (17 Nov 2012)
+
+  17 Nov 2012; Ian Delaney <idella4@gentoo.org> +rdflib-3.2.3.ebuild:
+  bump; 3.2.3; test suite 'fixed' to fix trawling of non tests files, fixes Bug
+  #406567
+
+  07 Oct 2012; Mike Gilbert <floppym@gentoo.org> rdflib-3.1.0.ebuild,
+  rdflib-3.2.1.ebuild, rdflib-3.2.2.ebuild:
+  Update HOMEPAGE as suggested by Arfrever.
+
+*rdflib-3.2.2 (29 Sep 2012)
+
+  29 Sep 2012; Tim Harder <radhermit@gentoo.org> +rdflib-3.2.2.ebuild:
+  Version bump.
+
+*rdflib-3.2.1 (04 May 2012)
+
+  04 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +rdflib-3.2.1.ebuild:
+  Version bump, fixes #401657 by Justin Lecher <jlec@gentoo.org>. Thanks to Ian
+  Delaney <johneed@hotmail.com> for help
+
+  02 Apr 2012; Justin Lecher <jlec@gentoo.org> rdflib-3.1.0.ebuild,
+  +files/rdflib-3.1.0-test.patch:
+  backport latest fix for tests, #410555
+
+  12 Sep 2011; Jesus Rivero <neurogeek@gentoo.org> rdflib-3.1.0.ebuild:
+  Delete "zodb" USE flag. Patch by Arfrever.
+
+*rdflib-3.1.0 (27 Mar 2011)
+
+  27 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +rdflib-3.1.0.ebuild:
+  Version bump.
+
+  25 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  rdflib-3.0.0.ebuild:
+  Fix LICENSE (bug #335582). Fix dependencies. Use PyPI mirrors.
+
+*rdflib-3.0.0 (13 May 2010)
+
+  13 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +rdflib-3.0.0.ebuild:
+  Version bump.
+
+  26 Jan 2010; Jeremy Olexa <darkside@gentoo.org> rdflib-2.4.1.ebuild:
+  Add ~x86-linux as tested in bug 302359
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -rdflib-2.4.0.ebuild:
+  Remove old
+
+*rdflib-2.4.1 (10 Aug 2009)
+
+  10 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  rdflib-2.4.0.ebuild, +rdflib-2.4.1.ebuild:
+  Version bump. Restrict tests. Set SUPPORT_PYTHON_ABIS.
+
+  23 Dec 2008; Markus Meier <maekke@gentoo.org> rdflib-2.4.0.ebuild:
+  add ~amd64, bug #252185
+
+  06 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
+
+*rdflib-2.4.0 (25 Mar 2008)
+
+  25 Mar 2008; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +rdflib-2.4.0.ebuild:
+  Initial commit. Closes #161492. Thank you Mikael Lammentausta
+  <mikael.lammentausta@savonia-amk.fi>, Sam Jacobson <sam@eversoft.co.nz>,
+  Sunrise.

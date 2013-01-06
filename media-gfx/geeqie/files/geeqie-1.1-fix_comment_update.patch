@@ -1,0 +1,129 @@
+From 085be43cb79e04341102a9922e0e0f531454089a Mon Sep 17 00:00:00 2001
+From: Vladimir Nadvornik <nadvornik@suse.cz>
+Date: Tue, 21 Aug 2012 20:39:03 +0200
+Subject: [PATCH] fixed updating of comment and keyword pane
+
+- temporary disabling of notifications does no longer work because
+the notification is called later, in idle cb.
+- regression introduced in 78cde6934008f79fe498e4adc64d187b0ed47417
+- now the update function checks if the new value is really different
+---
+ src/bar_comment.c  |   20 ++++++++++++--------
+ src/bar_keywords.c |   37 +++++++++++++++++++++++--------------
+ 2 files changed, 35 insertions(+), 22 deletions(-)
+
+diff --git a/src/bar_comment.c b/src/bar_comment.c
+index e63695b..156ab6e 100644
+--- a/src/bar_comment.c
++++ b/src/bar_comment.c
+@@ -60,16 +60,22 @@ static void bar_pane_comment_write(PaneCommentData *pcd)
+ static void bar_pane_comment_update(PaneCommentData *pcd)
+ {
+ 	gchar *comment = NULL;
++	gchar *orig_comment = NULL;
++	gchar *comment_not_null;
+ 	GtkTextBuffer *comment_buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(pcd->comment_view));
+ 
+-	g_signal_handlers_block_by_func(comment_buffer, bar_pane_comment_changed, pcd);
+-
++	orig_comment = text_widget_text_pull(pcd->comment_view);
+ 	comment = metadata_read_string(pcd->fd, pcd->key, METADATA_PLAIN);
+-	gtk_text_buffer_set_text(comment_buffer,
+-				 (comment) ? comment : "", -1);
+-	g_free(comment);
++	comment_not_null = (comment) ? comment : "";
+ 	
+-	g_signal_handlers_unblock_by_func(comment_buffer, bar_pane_comment_changed, pcd);
++	if (strcmp(orig_comment, comment_not_null) != 0)
++		{
++		g_signal_handlers_block_by_func(comment_buffer, bar_pane_comment_changed, pcd);
++		gtk_text_buffer_set_text(comment_buffer, comment_not_null, -1);
++		g_signal_handlers_unblock_by_func(comment_buffer, bar_pane_comment_changed, pcd);
++		}
++	g_free(comment);
++	g_free(orig_comment);
+ 
+ 	gtk_widget_set_sensitive(pcd->comment_view, (pcd->fd != NULL));
+ }
+@@ -177,9 +183,7 @@ static void bar_pane_comment_changed(GtkTextBuffer *buffer, gpointer data)
+ {
+ 	PaneCommentData *pcd = data;
+ 
+-	file_data_unregister_notify_func(bar_pane_comment_notify_cb, pcd);
+ 	bar_pane_comment_write(pcd);
+-	file_data_register_notify_func(bar_pane_comment_notify_cb, pcd, NOTIFY_PRIORITY_LOW);
+ }
+ 
+ 
+diff --git a/src/bar_keywords.c b/src/bar_keywords.c
+index df70fda..257915e 100644
+--- a/src/bar_keywords.c
++++ b/src/bar_keywords.c
+@@ -216,17 +216,33 @@ static void bar_pane_keywords_keyword_update_all(void)
+ static void bar_pane_keywords_update(PaneKeywordsData *pkd)
+ {
+ 	GList *keywords = NULL;
++	GList *orig_keywords = NULL;
++	GList *work1, *work2;
+ 	GtkTextBuffer *keyword_buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(pkd->keyword_view));
+ 
+-	g_signal_handlers_block_by_func(keyword_buffer, bar_pane_keywords_changed, pkd);
+-
+ 	keywords = metadata_read_list(pkd->fd, KEYWORD_KEY, METADATA_PLAIN);
+-	keyword_list_push(pkd->keyword_view, keywords);
+-	bar_keyword_tree_sync(pkd);
+-	string_list_free(keywords);
+-	
+-	g_signal_handlers_unblock_by_func(keyword_buffer, bar_pane_keywords_changed, pkd);
++	orig_keywords = keyword_list_pull(pkd->keyword_view);
+ 
++	/* compare the lists */
++	work1 = keywords;
++	work2 = orig_keywords;
++	
++	while (work1 && work2)
++		{
++		if (strcmp(work1->data, work2->data) != 0) break;
++		work1 = work1->next;
++		work2 = work2->next;
++		}
++	
++	if (work1 || work2) /* lists differs */
++		{
++		g_signal_handlers_block_by_func(keyword_buffer, bar_pane_keywords_changed, pkd);
++		keyword_list_push(pkd->keyword_view, keywords);
++		bar_keyword_tree_sync(pkd);
++		g_signal_handlers_unblock_by_func(keyword_buffer, bar_pane_keywords_changed, pkd);
++		}
++	string_list_free(keywords);
++	string_list_free(orig_keywords);
+ }
+ 
+ void bar_pane_keywords_set_fd(GtkWidget *pane, FileData *fd)
+@@ -426,10 +442,8 @@ static gboolean bar_pane_keywords_changed_idle_cb(gpointer data)
+ {
+ 	PaneKeywordsData *pkd = data;
+ 
+-	file_data_unregister_notify_func(bar_pane_keywords_notify_cb, pkd);
+ 	bar_pane_keywords_write(pkd);
+ 	bar_keyword_tree_sync(pkd);
+-	file_data_register_notify_func(bar_pane_keywords_notify_cb, pkd, NOTIFY_PRIORITY_LOW);
+ 	pkd->idle_id = 0;
+ 	return FALSE;
+ }
+@@ -962,12 +976,7 @@ static void bar_pane_keywords_connect_mark_cb(GtkWidget *menu_widget, gpointer d
+ 
+ 	gtk_tree_model_filter_convert_iter_to_child_iter(GTK_TREE_MODEL_FILTER(model), &kw_iter, &iter);
+ 
+-	file_data_unregister_notify_func(bar_pane_keywords_notify_cb, pkd);
+-
+ 	meta_data_connect_mark_with_keyword(keyword_tree, &kw_iter, mark);
+-
+-	file_data_register_notify_func(bar_pane_keywords_notify_cb, pkd, NOTIFY_PRIORITY_LOW);
+-//	bar_pane_keywords_update(pkd);
+ }
+ 
+ 
+-- 
+1.7.10
+

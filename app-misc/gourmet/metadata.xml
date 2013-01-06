@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>nixphoeni@gentoo.org</email>
+		<name>Joe Sapp</name>
+	</maintainer>
+	<longdescription>
+		Gourmet Recipe Manager is an application to store, organize
+		and search recipes. Gourmet also makes it easy to create
+		shopping lists from recipes. Gourmet imports recipes from a
+		number of sources, including MealMaster and MasterCook
+		archives and several popular websites. Gourmet can export
+		recipes as text, MealMaster files, HTML web pages, PDF, and
+		a custom XML format for exchange with other Gourmet users.
+		Gourmet supports linking images with recipes.
+	</longdescription>
+	<upstream>
+		<maintainer>
+			<email>Thomas_Hinkle@alumni.brown.edu</email>
+			<name>Thomas Mills Hinkle</name>
+		</maintainer>
+	</upstream>
+	<use>
+		<flag name='rtf'>Enable export to RTF</flag>
+		<flag name='gnome-print'>Enable pretty Python printing with
+			gnome-print</flag>
+	</use>
+</pkgmetadata>

@@ -1,0 +1,52 @@
+# ChangeLog for dev-python/python-ptrace
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ptrace/ChangeLog,v 1.10 2012/03/09 09:24:15 patrick Exp $
+
+*python-ptrace-0.6.4 (09 Mar 2012)
+
+  09 Mar 2012; Patrick Lauer <patrick@gentoo.org> +python-ptrace-0.6.4.ebuild:
+  Bump
+
+  22 Nov 2011; Jesus Rivero <neurogeek@gentoo.org>
+  python-ptrace-0.6.3.ebuild, -python-ptrace-0.6.3-r1.ebuild:
+  Reverted the revbump and applied changes to 0.6.3
+
+*python-ptrace-0.6.3-r1 (22 Nov 2011)
+
+  22 Nov 2011; Jesus Rivero <neurogeek@gentoo.org>
+  +python-ptrace-0.6.3-r1.ebuild:
+  Revbump to take care of examples. Closes bug #291838
+
+*python-ptrace-0.6.3 (28 Jul 2011)
+
+  28 Jul 2011; Patrick Lauer <patrick@gentoo.org> +python-ptrace-0.6.3.ebuild:
+  Bump for #375895
+
+  08 Feb 2010; Peter Volkov <pva@gentoo.org> python-ptrace-0.6.ebuild,
+  python-ptrace-0.6.2.ebuild:
+  Add inherit eutils for epatch.
+
+*python-ptrace-0.6.2 (15 Nov 2009)
+
+  15 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +python-ptrace-0.6.2.ebuild:
+  Version bump.
+
+  18 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-ptrace-0.6.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -python-ptrace-0.5.ebuild:
+  Remove old
+
+*python-ptrace-0.6 (28 Feb 2009)
+
+  28 Feb 2009; Patrick Lauer <patrick@gentoo.org> +python-ptrace-0.6.ebuild:
+  Bump to 0.6. Really closes #247892 now.
+
+*python-ptrace-0.5 (03 Feb 2009)
+
+  03 Feb 2009; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +python-ptrace-0.5.ebuild:
+  Initial import. Ebuild from Tuna <tuna@lyua.org>. Closes #247892
+

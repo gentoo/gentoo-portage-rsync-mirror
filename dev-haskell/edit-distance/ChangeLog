@@ -1,0 +1,20 @@
+# ChangeLog for dev-haskell/edit-distance
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/edit-distance/ChangeLog,v 1.3 2012/12/22 21:29:26 slyfox Exp $
+
+*edit-distance-0.2.1.1-r1 (22 Dec 2012)
+
+  22 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
+  +edit-distance-0.2.1.1-r1.ebuild:
+  Version bump.
+
+  12 Sep 2012; Alexander Vershilov <qnikst@gentoo.org>
+  edit-distance-0.2.1.ebuild:
+  move dev-haskell/edit-distance/edit-distance-0.2.1.ebuild ebuild to
+  mirror://hackage
+
+*edit-distance-0.2.1 (03 Jun 2012)
+
+  03 Jun 2012; Mark Wright <gienah@gentoo.org> +edit-distance-0.2.1.ebuild,
+  +metadata.xml:
+  Add edit-distance

@@ -1,0 +1,307 @@
+# ChangeLog for sys-kernel/ck-sources
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.213 2012/12/19 17:14:13 hwoarang Exp $
+
+*ck-sources-3.6.11 (19 Dec 2012)
+
+  19 Dec 2012; Markos Chandras <hwoarang@gentoo.org> +ck-sources-3.6.11.ebuild:
+  Version bump. Bug 447718 thanks to Eric F. GARIOUD <eric-f.garioud@wanadoo.fr>
+
+*ck-sources-3.4.23 (13 Dec 2012)
+
+  13 Dec 2012; Markos Chandras <hwoarang@gentoo.org> +ck-sources-3.4.23.ebuild,
+  metadata.xml:
+  Version bump. Bug 447008 thanks to Eric F. GARIOUD <eric-f.garioud@wanadoo.fr>
+
+*ck-sources-3.4.18 (17 Nov 2012)
+
+  17 Nov 2012; Markos Chandras <hwoarang@gentoo.org> +ck-sources-3.4.18.ebuild,
+  metadata.xml:
+  Version bump. Bug #443566. Drop maintainer. Thanks to Eric F. GARIOUD
+  <eric-f.garioud@wanadoo.fr>
+
+*ck-sources-3.6.2 (29 Oct 2012)
+
+  29 Oct 2012; Markos Chandras <hwoarang@gentoo.org> +ck-sources-3.6.2.ebuild,
+  +files/ck-sources-3.6-Fix_Boot_Issue_On_Kvm-aCOSwt_P6.patch, metadata.xml:
+  Version bump. Bug #440116. Thanks to Eric F. GARIOUD
+  <eric-f.garioud@wanadoo.fr>
+
+*ck-sources-3.5.7-r1 (29 Oct 2012)
+*ck-sources-3.4.9-r1 (29 Oct 2012)
+
+  29 Oct 2012; Markos Chandras <hwoarang@gentoo.org>
+  +ck-sources-3.4.9-r1.ebuild, +ck-sources-3.5.7-r1.ebuild,
+  -ck-sources-2.6.39-r2.ebuild, -ck-sources-3.0.4.ebuild,
+  -ck-sources-3.1.4.ebuild, -ck-sources-3.2.6.ebuild, -ck-sources-3.4.9.ebuild,
+  -ck-sources-3.5.3.ebuild, -ck-sources-3.5.7.ebuild:
+  Ensure freedist compliance. Drop old ebuilds. Bug #440052
+
+*ck-sources-3.5.7 (26 Oct 2012)
+
+  26 Oct 2012; Markos Chandras <hwoarang@gentoo.org>
+  +files/ck-sources-3.4-3.5-PostCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P5.patch
+  ,
+  +files/ck-sources-3.4-3.5-PreCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P4.patch,
+  +ck-sources-3.5.7.ebuild, metadata.xml:
+  Version bump. Thanks to Eric F. GARIOUD <eric-f.garioud@wanadoo.fr>.
+  Fixes bug #438910
+
+*ck-sources-3.4.9 (22 Sep 2012)
+
+  22 Sep 2012; Markos Chandras <hwoarang@gentoo.org> +ck-sources-3.4.9.ebuild,
+  +files/ck-sources-3.4.9-calc_load_idle-aCOSwt_P3.patch,
+  -ck-sources-3.2.1.ebuild, -ck-sources-3.2.5.ebuild, -ck-sources-3.3.1.ebuild,
+  -ck-sources-3.3.4.ebuild:
+  Bump to 3.4.9. Remove old ebuilds. Bug #434106
+
+*ck-sources-3.5.3 (22 Sep 2012)
+
+  22 Sep 2012; Markos Chandras <hwoarang@gentoo.org> +ck-sources-3.5.3.ebuild,
+  metadata.xml:
+  Version bump thanks to Eric F. GARIOUD <eric-f.garioud@wanadoo.fr>. Bug
+  #432320. He will maintain it while Krzysztof is away
+
+*ck-sources-3.3.4 (30 Apr 2012)
+*ck-sources-3.3.1 (30 Apr 2012)
+
+  30 Apr 2012; Krzysztof Pawlik <nelchael@gentoo.org> +ck-sources-3.3.1.ebuild,
+  +ck-sources-3.3.4.ebuild:
+  Version bump.
+
+*ck-sources-3.2.6 (19 Feb 2012)
+
+  19 Feb 2012; Krzysztof Pawlik <nelchael@gentoo.org> +ck-sources-3.2.6.ebuild:
+  Version bump.
+
+*ck-sources-3.2.5 (11 Feb 2012)
+
+  11 Feb 2012; Krzysztof Pawlik <nelchael@gentoo.org> +ck-sources-3.2.5.ebuild:
+  Version bump.
+
+*ck-sources-3.2.1 (30 Jan 2012)
+
+  30 Jan 2012; Krzysztof Pawlik <nelchael@gentoo.org> +ck-sources-3.2.1.ebuild,
+  -ck-sources-3.2.2.ebuild:
+  Add proper 3.2.1, remove incorrectly versioned 3.2.2.
+
+*ck-sources-3.2.2 (27 Jan 2012)
+
+  27 Jan 2012; Krzysztof Pawlik <nelchael@gentoo.org> +ck-sources-3.2.2.ebuild:
+  Version bump.
+
+*ck-sources-3.1.4 (30 Nov 2011)
+
+  30 Nov 2011; Krzysztof Pawlik <nelchael@gentoo.org> +ck-sources-3.1.4.ebuild:
+  Version bump.
+
+*ck-sources-3.0.4 (01 Sep 2011)
+
+  01 Sep 2011; Krzysztof Pawlik <nelchael@gentoo.org> +ck-sources-3.0.4.ebuild:
+  Version bump.
+
+*ck-sources-2.6.39-r2 (30 Jul 2011)
+
+  30 Jul 2011; Krzysztof Pawlik <nelchael@gentoo.org>
+  -ck-sources-2.6.38.ebuild, -ck-sources-2.6.38-r1.ebuild,
+  -ck-sources-2.6.38-r2.ebuild, -ck-sources-2.6.39.ebuild,
+  -ck-sources-2.6.39-r1.ebuild, +ck-sources-2.6.39-r2.ebuild:
+  Revision bump to CK2, remove old versions.
+
+*ck-sources-2.6.39-r1 (29 Jun 2011)
+*ck-sources-2.6.38-r3 (29 Jun 2011)
+
+  29 Jun 2011; Krzysztof Pawlik <nelchael@gentoo.org>
+  -ck-sources-2.6.37.ebuild, +ck-sources-2.6.38-r3.ebuild,
+  +ck-sources-2.6.39-r1.ebuild:
+  Revision bumps for new genpatches, remove old version.
+
+*ck-sources-2.6.38-r2 (24 May 2011)
+
+  24 May 2011; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.38-r2.ebuild:
+  Revision bump for latest genpatches.
+
+*ck-sources-2.6.39 (24 May 2011)
+
+  24 May 2011; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.39.ebuild:
+  Version bump.
+
+*ck-sources-2.6.38-r1 (07 May 2011)
+
+  07 May 2011; Krzysztof Pawlik <nelchael@gentoo.org>
+  -ck-sources-2.6.35-r7.ebuild, -ck-sources-2.6.35-r8.ebuild,
+  -ck-sources-2.6.35-r9.ebuild, -ck-sources-2.6.36-r3.ebuild,
+  -ck-sources-2.6.36-r4.ebuild, -ck-sources-2.6.36-r5.ebuild,
+  +ck-sources-2.6.38-r1.ebuild:
+  Version bump, remove old.
+
+*ck-sources-2.6.38 (06 Apr 2011)
+
+  06 Apr 2011; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.38.ebuild:
+  Version bump.
+
+*ck-sources-2.6.37 (08 Jan 2011)
+
+  08 Jan 2011; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.37.ebuild:
+  Version bump.
+
+*ck-sources-2.6.36-r5 (28 Dec 2010)
+
+  28 Dec 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  -ck-sources-2.6.34-r1.ebuild, -ck-sources-2.6.34-r2.ebuild,
+  -ck-sources-2.6.34-r3.ebuild, -ck-sources-2.6.34-r4.ebuild,
+  -ck-sources-2.6.34-r5.ebuild, -ck-sources-2.6.35-r1.ebuild,
+  -ck-sources-2.6.35-r2.ebuild, -ck-sources-2.6.35-r3.ebuild,
+  -ck-sources-2.6.35-r4.ebuild, -ck-sources-2.6.35-r5.ebuild,
+  -ck-sources-2.6.35-r6.ebuild, -ck-sources-2.6.36.ebuild,
+  -ck-sources-2.6.36-r1.ebuild, -ck-sources-2.6.36-r2.ebuild,
+  +ck-sources-2.6.36-r5.ebuild:
+  Revision bump for new genpatches, remove old versions.
+
+*ck-sources-2.6.35-r9 (18 Dec 2010)
+
+  18 Dec 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.35-r9.ebuild:
+  Revision bump for new genpatches.
+
+*ck-sources-2.6.36-r4 (12 Dec 2010)
+*ck-sources-2.6.35-r8 (12 Dec 2010)
+
+  12 Dec 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.35-r8.ebuild, +ck-sources-2.6.36-r4.ebuild:
+  Revision bumps for new genpatches.
+
+*ck-sources-2.6.35-r7 (23 Nov 2010)
+
+  23 Nov 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.35-r7.ebuild:
+  Revision bump for new genpatches.
+
+*ck-sources-2.6.36-r3 (23 Nov 2010)
+
+  23 Nov 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.36-r3.ebuild:
+  Revision bump for new genpatches.
+
+*ck-sources-2.6.36-r2 (14 Nov 2010)
+
+  14 Nov 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.36-r2.ebuild:
+  Revision bump for new version of CK patch.
+
+*ck-sources-2.6.36-r1 (14 Nov 2010)
+
+  14 Nov 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.36-r1.ebuild:
+  Revision bump for new genpatches.
+
+*ck-sources-2.6.35-r6 (04 Nov 2010)
+
+  04 Nov 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.35-r6.ebuild:
+  Revision bump for new genpatches.
+
+*ck-sources-2.6.36 (22 Oct 2010)
+*ck-sources-2.6.35-r5 (22 Oct 2010)
+*ck-sources-2.6.34-r5 (22 Oct 2010)
+
+  22 Oct 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.34-r5.ebuild, +ck-sources-2.6.35-r5.ebuild,
+  +ck-sources-2.6.36.ebuild:
+  Revision bump for new genpatches, version bump.
+
+*ck-sources-2.6.35-r4 (08 Oct 2010)
+
+  08 Oct 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.35-r4.ebuild:
+  Revision bump for new genpatches.
+
+*ck-sources-2.6.35-r3 (30 Sep 2010)
+*ck-sources-2.6.34-r4 (30 Sep 2010)
+
+  30 Sep 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.34-r4.ebuild, +ck-sources-2.6.35-r3.ebuild:
+  Revision bumps for new genpatches.
+
+*ck-sources-2.6.34-r3 (31 Aug 2010)
+
+  31 Aug 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.34-r3.ebuild:
+  Revision bump for new genpatches.
+
+*ck-sources-2.6.35-r2 (31 Aug 2010)
+
+  31 Aug 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  -ck-sources-2.6.33.ebuild, -ck-sources-2.6.33-r1.ebuild,
+  -ck-sources-2.6.34.ebuild, ck-sources-2.6.34-r1.ebuild,
+  +ck-sources-2.6.34-r2.ebuild, -ck-sources-2.6.35.ebuild,
+  ck-sources-2.6.35-r1.ebuild, +ck-sources-2.6.35-r2.ebuild:
+  Revision bump for new genpatches, add easy way to use resynced version of
+  ck patch for given kernel. ck1-r1 for 2.6.34-r2 and 2.6.35-r2 is the same
+  version as for base kernel with a small update so it applies cleanly on
+  stable kernels (2.6.34.6 and 2.6.35.4).
+
+*ck-sources-2.6.35-r1 (19 Aug 2010)
+*ck-sources-2.6.35 (19 Aug 2010)
+
+  19 Aug 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.35.ebuild, +ck-sources-2.6.35-r1.ebuild:
+  Version bump.
+
+  03 Aug 2010; Robin H. Johnson <robbat2@gentoo.org> Manifest:
+  kernel-2 deblob support for 2.6.35; bug #324505: deblob-check usage.
+
+  13 Jul 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  -ck-sources-2.6.34-r2.ebuild:
+  Remove until -ck2 is out, -ck1 does not apply on 2.6.34.1.
+
+*ck-sources-2.6.34-r2 (13 Jul 2010)
+
+  13 Jul 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.34-r2.ebuild:
+  Revision bump for new genpatches.
+
+*ck-sources-2.6.34-r1 (23 Jun 2010)
+
+  23 Jun 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.34-r1.ebuild:
+  Revision bump for new genpatches.
+
+  01 Jun 2010; Robin H. Johnson <robbat2@gentoo.org> Manifest:
+  Bug #322327: deblob-2.6.34 missing from Manifest
+
+*ck-sources-2.6.34 (26 May 2010)
+
+  26 May 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  ck-sources-2.6.33.ebuild, ck-sources-2.6.33-r1.ebuild,
+  +ck-sources-2.6.34.ebuild:
+  Version bump, fix home page for genpatches.
+
+*ck-sources-2.6.33-r1 (03 May 2010)
+
+  03 May 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.33-r1.ebuild:
+  Revision bump for new genpatches.
+
+  26 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  -ck-sources-2.6.32.ebuild:
+  Remove 2.6.32 as it fails to apply the patch.
+
+  26 Apr 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Update Manifest for deblob support in kernel-2 eclass.
+
+  18 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  ck-sources-2.6.32.ebuild, ck-sources-2.6.33.ebuild:
+  Add K_SECURITY_UNSUPPORTED to mark this kernels as not supported by
+  security team.
+
+*ck-sources-2.6.33 (17 Apr 2010)
+*ck-sources-2.6.32 (17 Apr 2010)
+
+  17 Apr 2010; Krzysztof Pawlik <nelchael@gentoo.org>
+  +ck-sources-2.6.32.ebuild, +ck-sources-2.6.33.ebuild, +metadata.xml:
+  Initial commit of new ck-sources, see bug #297169.

@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/shnflacverify
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shnflacverify/ChangeLog,v 1.1 2011/10/23 19:32:23 sbriesen Exp $
+
+*shnflacverify-0.3 (23 Oct 2011)
+
+  23 Oct 2011; Stefan Briesenick <sbriesen@gentoo.org>
+  +shnflacverify-0.3.ebuild, +metadata.xml:
+  initial commit
+

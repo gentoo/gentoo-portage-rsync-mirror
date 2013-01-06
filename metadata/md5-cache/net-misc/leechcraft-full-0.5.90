@@ -1,0 +1,10 @@
+DEFINED_PHASES=-
+DESCRIPTION=Metapackage containing all ready-to-use LeechCraft plugins
+EAPI=4
+HOMEPAGE=http://leechcraft.org/
+IUSE=kde
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=~app-editors/leechcraft-popishu-0.5.90 ~app-text/leechcraft-monocle-0.5.90 ~media-sound/leechcraft-hotstreams-0.5.90 ~media-sound/leechcraft-lmp-0.5.90 ~media-sound/leechcraft-lastfmscrobble-0.5.90 ~media-sound/leechcraft-musiczombie-0.5.90 ~media-sound/leechcraft-touchstreams-0.5.90 ~net-analyzer/leechcraft-networkmonitor-0.5.90 ~net-im/leechcraft-azoth-0.5.90 ~net-misc/leechcraft-advancednotifications-0.5.90 kde? ( ~net-misc/leechcraft-anhero-0.5.90 ) ~net-misc/leechcraft-auscrie-0.5.90 ~net-misc/leechcraft-core-0.5.90 ~net-misc/leechcraft-cstp-0.5.90 ~net-misc/leechcraft-dbusmanager-0.5.90 ~net-misc/leechcraft-gacts-0.5.90 ~net-misc/leechcraft-glance-0.5.90 ~net-misc/leechcraft-historyholder-0.5.90 ~net-misc/leechcraft-kinotify-0.5.90 ~net-misc/leechcraft-knowhow-0.5.90 ~net-misc/leechcraft-lackman-0.5.90 ~net-misc/leechcraft-launchy-0.5.90 ~net-misc/leechcraft-lemon-0.5.90 ~net-misc/leechcraft-liznoo-0.5.90 ~net-misc/leechcraft-newlife-0.5.90 ~net-misc/leechcraft-netstoremanager-0.5.90 ~net-misc/leechcraft-otlozhu-0.5.90 ~net-misc/leechcraft-qrosp-0.5.90 ~net-misc/leechcraft-pintab-0.5.90 ~net-misc/leechcraft-secman-0.5.90 ~net-misc/leechcraft-summary-0.5.90 ~net-misc/leechcraft-tabpp-0.5.90 ~net-misc/leechcraft-tabslist-0.5.90 ~net-misc/leechcraft-tabsessmanager-0.5.90 ~net-news/leechcraft-aggregator-0.5.90 ~net-p2p/leechcraft-bittorrent-0.5.90 ~net-proxy/leechcraft-xproxy-0.5.90 ~sys-fs/leechcraft-vrooby-0.5.90 ~virtual/leechcraft-trayarea-0.5.90 ~www-client/leechcraft-deadlyrics-0.5.90 ~www-client/leechcraft-dolozhee-0.5.90 ~www-client/leechcraft-poshuku-0.5.90 ~www-client/leechcraft-vgrabber-0.5.90 ~www-misc/leechcraft-pogooglue-0.5.90 ~www-misc/leechcraft-seekthru-0.5.90 ~x11-plugins/leechcraft-tpi-0.5.90
+SLOT=0
+_md5_=4146fd958d19ef3fee66d4748939d8dc

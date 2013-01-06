@@ -1,0 +1,22 @@
+# ChangeLog for app-misc/wcd
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/ChangeLog,v 1.4 2012/03/13 13:04:06 jlec Exp $
+
+*wcd-5.2.1 (13 Mar 2012)
+
+  13 Mar 2012; Justin Lecher <jlec@gentoo.org> wcd-5.1.4.ebuild,
+  +wcd-5.2.1.ebuild, +files/wcd-5.2.1-gentoo.patch:
+  Version Bump
+
+  02 Nov 2011; Justin Lecher <jlec@gentoo.org> wcd-5.1.4.ebuild, metadata.xml:
+  Added missing build dep, #389227
+
+  03 Mar 2011; Justin Lecher <jlec@gentoo.org> files/5.1.4-gentoo.patch:
+  Install in correct location not in /usr/local
+
+*wcd-5.1.4 (03 Mar 2011)
+
+  03 Mar 2011; Justin Lecher <jlec@gentoo.org> +files/5.1.4-gentoo.patch,
+  +wcd-5.1.4.ebuild, +metadata.xml:
+  New addition, written by me
+

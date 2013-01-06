@@ -1,0 +1,55 @@
+From 52a1a4433dd5087baed79f948aec96aab409e3d2 Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Mon, 16 Aug 2010 15:21:05 +0000
+Subject: Fix a few memory leaks
+
+On startup, and when sending packed files
+
+https://bugzilla.gnome.org/show_bug.cgi?id=626754
+---
+diff --git a/src/nautilus-sendto-command.c b/src/nautilus-sendto-command.c
+index 92b96bb..4dcbb1a 100644
+--- a/src/nautilus-sendto-command.c
++++ b/src/nautilus-sendto-command.c
+@@ -265,7 +265,7 @@ status_label_clear (gpointer data)
+ static void
+ send_button_cb (GtkWidget *widget, NS_ui *ui)
+ {
+-	char *f, *error;
++	char *error;
+ 	NstPlugin *p;
+ 	GtkWidget *w;
+ 
+@@ -305,11 +305,14 @@ send_button_cb (GtkWidget *widget, NS_ui *ui)
+ 				NAUTILUS_SENDTO_LAST_MEDIUM, p->info->id, NULL);
+ 
+ 	if (gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(ui->pack_checkbutton))){
++		char *f;
++
+ 		f = pack_files (ui);
+ 		if (f != NULL) {
+ 			GList *packed_file = NULL;		
+ 			packed_file = g_list_append (packed_file, f);
+ 			if (!p->info->send_files (p, w, packed_file)) {
++				g_free (f);
+ 				g_list_free (packed_file);
+ 				return;
+ 			}
+@@ -318,6 +321,7 @@ send_button_cb (GtkWidget *widget, NS_ui *ui)
+ 			gtk_widget_set_sensitive (ui->dialog, TRUE);
+ 			return;
+ 		}
++		g_free (f);
+ 	} else {
+ 		if (!p->info->send_files (p, w, file_list)) {
+ 			g_list_foreach (file_list, (GFunc) g_free, NULL);
+@@ -763,6 +767,7 @@ nautilus_sendto_init (void)
+ 
+ 		file = g_file_new_for_commandline_arg (filenames[i]);
+ 		filename = g_file_get_path (file);
++		g_object_unref (file);
+ 		if (filename == NULL)
+ 			continue;
+ 
+--
+cgit v0.8.3.1

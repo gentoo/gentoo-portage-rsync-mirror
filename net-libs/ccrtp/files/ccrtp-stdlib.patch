@@ -1,0 +1,10 @@
+--- src/control.cpp.orig	2008-05-01 23:14:09.000000000 +1000
++++ src/control.cpp	2008-05-01 23:14:21.000000000 +1000
+@@ -43,6 +43,7 @@
+ 
+ #include "private.h"
+ #include <ccrtp/cqueue.h>
++#include <stdlib.h>
+ 
+ #ifdef  CCXX_NAMESPACES
+ namespace ost {

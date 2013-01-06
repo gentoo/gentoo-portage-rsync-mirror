@@ -1,0 +1,74 @@
+# ChangeLog for dev-python/subunit
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.19 2012/07/28 13:07:59 blueness Exp $
+
+  28 Jul 2012; Anthony G. Basile <blueness@gentoo.org> subunit-0.0.8.ebuild:
+  Keyword ~mips, bug #428356
+
+  24 Jun 2012; Mike Gilbert <floppym@gentoo.org> subunit-0.0.8.ebuild:
+  Improve comment explaining pypy restriction.
+
+  20 May 2012; Mike Gilbert <floppym@gentoo.org> subunit-0.0.8.ebuild:
+  Remove PYTHON_DEPEND.
+
+*subunit-0.0.8 (19 May 2012)
+
+  19 May 2012; Mike Gilbert <floppym@gentoo.org> +subunit-0.0.8.ebuild:
+  Version bump for bug 415233. Enable python 3. Thanks to Ian Delaney for the
+  heads-up on missing files.
+
+  04 May 2012; Patrick Lauer <patrick@gentoo.org> subunit-0.0.6.ebuild,
+  subunit-0.0.7.ebuild:
+  Migrating dev-util/pkgconfig -> virtual/pkgconfig
+
+  26 Apr 2012; Alexis Ballier <aballier@gentoo.org> subunit-0.0.7.ebuild:
+  keyword ~amd64-fbsd
+
+*subunit-0.0.7 (08 Feb 2012)
+
+  08 Feb 2012; Patrick Lauer <patrick@gentoo.org> +subunit-0.0.7.ebuild:
+  Bump for #401959
+
+  16 Apr 2011; Raúl Porcel <armin76@gentoo.org> subunit-0.0.6.ebuild:
+  ia64 stable wrt #343309
+
+  10 Apr 2011; Tobias Klausmann <klausman@gentoo.org> subunit-0.0.6.ebuild:
+  Stable on alpha, bug #343309
+
+  25 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
+  -subunit-0.0.5.ebuild:
+  clean up
+
+  25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> subunit-0.0.6.ebuild:
+  ppc/ppc64 stable wrt #346985
+
+  05 Feb 2011; Markus Meier <maekke@gentoo.org> subunit-0.0.6.ebuild:
+  arm stable, bug #346985
+
+  22 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> subunit-0.0.6.ebuild:
+  x86 stable wrt bug #346985
+
+  13 Jan 2011; Jeroen Roovers <jer@gentoo.org> subunit-0.0.6.ebuild:
+  Stable for HPPA (bug #346985).
+
+  12 Jan 2011; Markos Chandras <hwoarang@gentoo.org> subunit-0.0.6.ebuild:
+  Stable on amd64 wrt bug #346985
+
+  04 Jan 2011; Michael Weber <xmw@gentoo.org> subunit-0.0.6.ebuild:
+  sparc stable (bug 346985)
+
+*subunit-0.0.6 (18 Jul 2010)
+
+  18 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  +subunit-0.0.6.ebuild:
+  version bump for bug 327185 by LiuCougar <liucougar AT gmail DOT com>
+
+  08 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  subunit-0.0.5.ebuild:
+  Set SUPPORT_PYTHON_ABIS. Fix dependencies.
+
+*subunit-0.0.5 (08 Apr 2010)
+
+  08 Apr 2010; Christian Faulhammer <fauli@gentoo.org>
+  +subunit-0.0.5.ebuild, +metadata.xml:
+  initial commit by me

@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/pdbcat
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdbcat/ChangeLog,v 1.1 2012/10/12 11:32:58 jlec Exp $
+
+*pdbcat-1.3 (12 Oct 2012)
+
+  12 Oct 2012; Justin Lecher <jlec@gentoo.org> +pdbcat-1.3.ebuild,
+  +files/pdbcat-1.3-gcc.patch, +files/CMakeLists.txt, +metadata.xml:
+  New addition
+

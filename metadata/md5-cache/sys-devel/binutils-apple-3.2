@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst prepare test
+DEPEND=sys-devel/binutils-config test? ( >=dev-lang/perl-5.8.8 )
+DESCRIPTION=Darwin assembler as(1) and static linker ld(1), Xcode Tools 3.2
+EAPI=3
+HOMEPAGE=http://www.opensource.apple.com/darwinsource/
+IUSE=test
+KEYWORDS=~ppc-macos ~x64-macos ~x86-macos
+LICENSE=APSL-2
+RDEPEND=sys-devel/binutils-config test? ( >=dev-lang/perl-5.8.8 )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://www.gentoo.org/~grobian/distfiles/ld64-85.2.1.tar.gz http://www.gentoo.org/~grobian/distfiles/cctools-750.tar.gz http://www.gentoo.org/~grobian/distfiles/binutils-apple-LP64-patches-1.tar.bz2
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	61ad55e732e494378165e7dcd4744b91	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=831d8d3b338cd05858c6076c2d69157d

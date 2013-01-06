@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst prerm setup unpack
+DEPEND=|| ( virtual/httpd-cgi virtual/httpd-fastcgi ) >=app-admin/webapp-config-1.50.15
+DESCRIPTION=drraw is a simple web based presentation front-end for RRDtool
+HOMEPAGE=http://web.taranis.org/drraw
+IUSE=vhosts
+KEYWORDS=~x86 ppc
+LICENSE=GPL-2
+RDEPEND=>=dev-lang/perl-5.6 virtual/perl-CGI >=net-analyzer/rrdtool-1.0.47 >=app-admin/webapp-config-1.50.15
+SLOT=2.0.1
+SRC_URI=http://web.taranis.org/drraw/dist/drraw-2.0.1.tgz
+_eclasses_=webapp	25b9b1696f5e698711f47d45c3d45e3e
+_md5_=6edf6621bf8581f2d4cfa6ac98b63c19

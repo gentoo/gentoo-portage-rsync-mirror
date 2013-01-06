@@ -1,0 +1,55 @@
+# ChangeLog for sys-apps/fxload
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/ChangeLog,v 1.19 2010/08/03 16:38:34 ssuominen Exp $
+
+  03 Aug 2010; Samuli Suominen <ssuominen@gentoo.org>
+  fxload-20081013.ebuild:
+  Respect CC and LDFLAGS wrt #331057 by Olivier Huber.
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> fxload-20020411.ebuild,
+  fxload-20081013.ebuild:
+  Remove virtual/libc
+
+*fxload-20081013 (04 Apr 2009)
+
+  04 Apr 2009; Thilo Bangert <bangert@gentoo.org> +fxload-20081013.ebuild:
+  version bump - bug #252846
+
+  21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Fix up metadata.xml. If there's no maintainer for the package, the metadata
+  also needs to contain m-needed@g.o.
+
+  14 May 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/fxload-20020411-linux-headers-2.6.21.patch, fxload-20020411.ebuild:
+  Fix compiling with linux-headers-2.6.21, Bug #178474.
+
+  01 May 2007; Markus Rothe <corsair@gentoo.org> fxload-20020411.ebuild:
+  Stable on ppc64; bug #175141
+
+  17 Feb 2007; Markus Rothe <corsair@gentoo.org> fxload-20020411.ebuild:
+  Added ~ppc64; bug #167294
+
+  24 Jan 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/fxload-20020411-linux-headers-2.6.19.patch, fxload-20020411.ebuild:
+  Fixed compilation with linux-headers-2.6.19, removed dependency to
+  sys-apps/hotplug, solving Bug #159931.
+
+  22 Feb 2005; Aron Griffis <agriffis@gentoo.org> fxload-20020411.ebuild:
+  stable on ia64
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*fxload-20020411 (14 July 2002)
+
+  25 Mar 2003; Guy Martin <gmsoft@gentoo.org> fxload-20020411.ebuild :
+  Fixed build using MY_P instead of modifying P. Added ~hppa to KEYWORDS.
+
+  21 Jul 2002; Mark Guertin <gerk@gentoo.org>:
+  updated keywords (ppc)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> fxload-20020411.ebuild :
+  Added KEYWORDS, SLOT.
+
+*fxload-20020114 (5 May 2002)
+
+	Initial release

@@ -1,0 +1,18 @@
+# ChangeLog for media-plugins/vdr-solitaire
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-solitaire/ChangeLog,v 1.2 2008/04/28 08:55:14 zzam Exp $
+
+*vdr-solitaire-0.0.3 (28 Apr 2008)
+
+  28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-solitaire-0.0.2.ebuild, +vdr-solitaire-0.0.3.ebuild:
+  Version bumped. Fixed quoting.
+
+*vdr-solitaire-0.0.2 (26 Jun 2007)
+
+  26 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-solitaire-0.0.2-vdr-1.5.5.diff,
+  +files/vdr-solitaire-0.0.2.patch, +metadata.xml,
+  +vdr-solitaire-0.0.2.ebuild:
+  Initial import of ebuild, based on vdr-spider ebuild.
+

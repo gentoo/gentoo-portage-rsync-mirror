@@ -1,0 +1,31 @@
+From 8bbc2f64bc2115178d5e1de170c1c1882eaf2799 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Andreas=20R=C3=B6nnquist?= <gusnan@gusnan.se>
+Date: Tue, 27 Nov 2012 23:30:47 +0100
+Subject: [PATCH] Fix building on systems with pc-config using name lua
+ instead of lua5.1
+
+
+from hasufell: THANKS FOR MESSING UP PKGCONFIG FILES @ DEBIAN MAINTAINERS
+
+---
+ Makefile |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 1d03165..ae38a46 100644
+--- a/Makefile
++++ b/Makefile
+@@ -37,9 +37,9 @@ else
+ 	PKG_WNCK=libwnck-3.0
+ endif
+ 
+-LIB_CFLAGS=`pkg-config --cflags $(PKG_GTK) $(PKG_WNCK) lua5.1`
++LIB_CFLAGS=$(shell pkg-config --cflags --silence-errors $(PKG_GTK) $(PKG_WNCK) lua5.1 || pkg-config --cflags $(PKG_GTK) $(PKG_WNCK) lua)
+ STD_LDFLAGS=
+-LIBS=-lX11 `pkg-config --libs $(PKG_GTK) $(PKG_WNCK) lua5.1`
++LIBS=-lX11 $(shell pkg-config --libs --silence-errors $(PKG_GTK) $(PKG_WNCK) lua5.1 || pkg-config --libs $(PKG_GTK) $(PKG_WNCK) lua)
+ 
+ LOCAL_CFLAGS=$(STD_CFLAGS) $(DEPRECATED) $(CFLAGS) $(LIB_CFLAGS)
+ LOCAL_LDFLAGS=$(LDFLAGS) $(STD_LDFLAGS)
+-- 
+1.7.10

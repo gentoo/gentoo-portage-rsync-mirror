@@ -1,0 +1,183 @@
+# ChangeLog for media-plugins/gst-plugins-mimic
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mimic/ChangeLog,v 1.43 2012/12/05 22:52:16 eva Exp $
+
+*gst-plugins-mimic-1.0.3 (05 Dec 2012)
+
+  05 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-mimic-1.0.3.ebuild:
+  Version bump.
+
+*gst-plugins-mimic-0.10.23 (02 Dec 2012)
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-mimic-0.10.23.ebuild:
+  Version bump.
+
+  02 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  gst-plugins-mimic-0.10.19.ebuild, -gst-plugins-mimic-0.10.21.ebuild,
+  gst-plugins-mimic-0.10.22.ebuild:
+  Clean up old revisions. EAPI bump stable due to pending eclass changes and
+  slot pinning.
+
+  02 Oct 2012; Markus Meier <maekke@gentoo.org>
+  gst-plugins-mimic-0.10.19.ebuild:
+  arm stable, bug #427554
+
+  15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-mimic-0.10.22.ebuild:
+  ppc/ppc64 stable wrt #382225
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org>
+  gst-plugins-mimic-0.10.22.ebuild:
+  Stable for HPPA (bug #382225).
+
+  09 Oct 2011; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-mimic-0.10.22.ebuild:
+  alpha/ia64/sparc stable wrt #382225
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
+  gst-plugins-mimic-0.10.22.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Tomáš "Mepho" Pružina in bug #382225.
+
+  20 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-plugins-mimic-0.10.22.ebuild:
+  x86 stable wrt bug #382225
+
+*gst-plugins-mimic-0.10.22 (29 Jul 2011)
+
+  29 Jul 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-mimic-0.10.22.ebuild:
+  Version bump to be in sync with the rest; no code changes
+
+  25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-mimic-0.10.21.ebuild:
+  ppc/ppc64 stable wrt #368281
+
+  09 Jun 2011; Jeroen Roovers <jer@gentoo.org>
+  gst-plugins-mimic-0.10.21.ebuild:
+  Stable for HPPA (bug #368281).
+
+  05 Jun 2011; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-mimic-0.10.21.ebuild:
+  alpha/ia64/sparc stable wrt #368281
+
+  23 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-mimic-0.10.21.ebuild:
+  Stable on amd64 wrt bug #368281
+
+  23 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-plugins-mimic-0.10.21.ebuild:
+  x86 stable wrt bug #368281
+
+*gst-plugins-mimic-0.10.21 (13 Apr 2011)
+
+  13 Apr 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-mimic-0.10.14.ebuild, -gst-plugins-mimic-0.10.17.ebuild,
+  -gst-plugins-mimic-0.10.18.ebuild, +gst-plugins-mimic-0.10.21.ebuild:
+  Version bump. Lots of bug fixes and clean-ups
+
+  25 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-mimic-0.10.19.ebuild:
+  ppc64 stable wrt #357765,#355719
+
+  09 Mar 2011; Michael Weber <xmw@gentoo.org> gst-plugins-mimic-0.10.19.ebuild:
+  ppc stable (bug 355719)
+
+  18 Jan 2011; Jeroen Roovers <jer@gentoo.org>
+  gst-plugins-mimic-0.10.19.ebuild:
+  Stable for HPPA (bug #346981).
+
+  06 Jan 2011; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-mimic-0.10.19.ebuild:
+  alpha/ia64/sparc stable wrt #346981
+
+  20 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-mimic-0.10.19.ebuild:
+  Stable on amd64 wrt bug #346981
+
+  20 Dec 2010; Thomas Kahle <tomka@gentoo.org>
+  gst-plugins-mimic-0.10.19.ebuild:
+  x86 stable per bug 346981
+
+  20 Nov 2010; Michael Weber <xmw@gentoo.org> gst-plugins-mimic-0.10.18.ebuild,
+  gst-plugins-mimic-0.10.19.ebuild:
+  Added ~arm keyword (bug 343505)
+
+  04 Sep 2010; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-mimic-0.10.18.ebuild:
+  alpha/ia64/sparc stable wrt #324691
+
+  10 Aug 2010; Jeroen Roovers <jer@gentoo.org>
+  gst-plugins-mimic-0.10.18.ebuild:
+  Stable for HPPA (bug #329703).
+
+*gst-plugins-mimic-0.10.19 (03 Aug 2010)
+
+  03 Aug 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-mimic-0.10.19.ebuild:
+  Version bump for a few bug fixes
+
+  14 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  gst-plugins-mimic-0.10.18.ebuild:
+  Stable on amd64 wrt bug #320205
+
+  01 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-mimic-0.10.18.ebuild:
+  stable x86, bug 320205
+
+  29 Jun 2010; Christoph Mende <angelos@gentoo.org>
+  gst-plugins-mimic-0.10.17.ebuild:
+  Stable on amd64 wrt bug #320205
+
+*gst-plugins-mimic-0.10.18 (05 Apr 2010)
+
+  05 Apr 2010; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-mimic-0.10.18.ebuild:
+  Version bump. Only build system fixes
+
+  05 Apr 2010; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-mimic-0.10.17.ebuild:
+  ia64/sparc stable wrt #308379
+
+  19 Feb 2010; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-mimic-0.10.14.ebuild:
+  ia64/sparc stable
+
+  19 Feb 2010; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-mimic-0.10.14.ebuild, gst-plugins-mimic-0.10.17.ebuild:
+  Add ~ia64/~sparc
+
+  12 Feb 2010; Joseph Jezak <josejx@gentoo.org>
+  gst-plugins-mimic-0.10.14.ebuild, gst-plugins-mimic-0.10.17.ebuild:
+  Marked ~ppc64.
+
+*gst-plugins-mimic-0.10.17 (23 Jan 2010)
+
+  23 Jan 2010; Olivier Crête <tester@gentoo.org>
+  +gst-plugins-mimic-0.10.17.ebuild:
+  Version bump, bug #290084
+
+  18 Jan 2010; Jeroen Roovers <jer@gentoo.org>
+  gst-plugins-mimic-0.10.14.ebuild:
+  Marked ~hppa (bug #289662).
+
+  27 Oct 2009; Alexis Ballier <aballier@gentoo.org>
+  gst-plugins-mimic-0.10.14.ebuild:
+  keyword ~x86-fbsd
+
+  26 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
+  gst-plugins-mimic-0.10.14.ebuild:
+  Keyworded on alpha, bug #289662
+
+  11 Sep 2009; Mounir Lamouri <volkmar@gentoo.org>
+  gst-plugins-mimic-0.10.14.ebuild:
+  Keywording for ppc. Bug 282263
+
+*gst-plugins-mimic-0.10.14 (07 Sep 2009)
+
+  07 Sep 2009; Olivier Crête <tester@gentoo.org>
+  +gst-plugins-mimic-0.10.14.ebuild, +metadata.xml:
+  New plugin from -bad
+

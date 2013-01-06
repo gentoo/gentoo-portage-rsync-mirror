@@ -1,0 +1,199 @@
+# ChangeLog for kde-base/kactivities
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kactivities/ChangeLog,v 1.50 2013/01/05 20:19:04 creffett Exp $
+
+*kactivities-4.9.5 (05 Jan 2013)
+
+  05 Jan 2013; <creffett@gentoo.org> +kactivities-4.9.5.ebuild:
+  Version bump KDE SC 4.9.5
+
+  08 Dec 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kactivities-4.8.5.ebuild:
+  Drop KDE 4.8
+
+*kactivities-4.9.4 (05 Dec 2012)
+
+  05 Dec 2012; Alexey Shvetsov <alexxy@gentoo.org> +kactivities-4.9.4.ebuild:
+  Version bump KDE SC 4.9.4
+
+  30 Nov 2012; <ago@gentoo.org> kactivities-4.9.3.ebuild:
+  Stable for ppc, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> kactivities-4.9.3.ebuild:
+  Stable for x86, wrt bug #442394
+
+  23 Nov 2012; Agostino Sarubbo <ago@gentoo.org> kactivities-4.9.3.ebuild:
+  Stable for amd64, wrt bug #442394
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -kactivities-4.9.2.ebuild:
+  Remove KDE SC 4.9.2
+
+  13 Nov 2012; Johannes Huber <johu@gentoo.org> -kactivities-4.9.1.ebuild:
+  Remove KDE SC 4.9.1
+
+*kactivities-4.9.3 (08 Nov 2012)
+
+  08 Nov 2012; <creffett@gentoo.org> +kactivities-4.9.3.ebuild:
+  Version bump KDE SC 4.9.3
+
+  17 Oct 2012; Markus Meier <maekke@gentoo.org> kactivities-4.9.2.ebuild:
+  add ~arm, bug #430072
+
+*kactivities-4.9.2 (02 Oct 2012)
+
+  02 Oct 2012; Johannes Huber <johu@gentoo.org> +kactivities-4.9.2.ebuild:
+  Version bump KDE SC 4.9.2
+
+  21 Sep 2012; Johannes Huber <johu@gentoo.org> -kactivities-4.9.0.ebuild:
+  Remove KDE SC 4.9.0
+
+*kactivities-4.9.1 (04 Sep 2012)
+
+  04 Sep 2012; Johannes Huber <johu@gentoo.org> +kactivities-4.9.1.ebuild:
+  Version bump KDE SC 4.9.1
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org>
+  -files/kactivities-4.8.1-nepomuk.patch:
+  Remove old.
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -kactivities-4.7.4.ebuild:
+  Remove KDE SC 4.7.4
+
+  03 Sep 2012; Johannes Huber <johu@gentoo.org> -kactivities-4.8.3.ebuild:
+  Remove KDE SC 4.8.3
+
+  03 Sep 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  kactivities-4.8.5.ebuild:
+  Stable on ppc wrt bug#431892.
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> kactivities-4.8.5.ebuild:
+  Stable for x86, wrt bug #431892
+
+  02 Sep 2012; Agostino Sarubbo <ago@gentoo.org> kactivities-4.8.5.ebuild:
+  Stable for amd64, wrt bug #431892
+
+  17 Aug 2012; Johannes Huber <johu@gentoo.org> -kactivities-4.8.4.ebuild:
+  Remove KDE SC 4.8.4
+
+*kactivities-4.8.5 (07 Aug 2012)
+
+  07 Aug 2012; Johannes Huber <johu@gentoo.org> +kactivities-4.8.5.ebuild:
+  Version bump KDE SC 4.8.5
+
+*kactivities-4.9.0 (01 Aug 2012)
+
+  01 Aug 2012; Johannes Huber <johu@gentoo.org> +kactivities-4.9.0.ebuild:
+  Version bump KDE SC 4.9.0
+
+*kactivities-4.8.4 (21 Jun 2012)
+
+  21 Jun 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kactivities-4.8.4.ebuild:
+  Version bump KDE SC 4.8.4
+
+  24 May 2012; Johannes Huber <johu@gentoo.org> -kactivities-4.8.1.ebuild,
+  -kactivities-4.8.1-r1.ebuild:
+  Remove KDE SC 4.8.1
+
+  24 May 2012; Agostino Sarubbo <ago@gentoo.org> kactivities-4.8.3.ebuild:
+  Stable for x86, wrt bug #414605
+
+  18 May 2012; Agostino Sarubbo <ago@gentoo.org> kactivities-4.8.3.ebuild:
+  Stable for amd64, wrt bug #414605
+
+  18 May 2012; Joseph Jezak <josejx@gentoo.org> kactivities-4.8.3.ebuild:
+  Marked ~ppc ~ppc64 for bug #402989.
+
+  08 May 2012; Johannes Huber <johu@gentoo.org> -kactivities-4.8.2.ebuild:
+  Remove KDE SC 4.8.2
+
+*kactivities-4.8.3 (03 May 2012)
+
+  03 May 2012; Johannes Huber <johu@gentoo.org> +kactivities-4.8.3.ebuild:
+  Version bump KDE SC 4.8.3
+
+  19 Apr 2012; Markus Meier <maekke@gentoo.org> kactivities-4.8.1.ebuild:
+  x86 stable, bug #409403
+
+*kactivities-4.8.1-r1 (08 Apr 2012)
+
+  08 Apr 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kactivities-4.8.1-r1.ebuild, +files/kactivities-4.8.1-nepomuk.patch:
+  Manually patch kactivities-4.8.1 to kde-4.8.2 state, to prevent (most of the)
+  crashes as in bug 411279
+
+*kactivities-4.8.2 (04 Apr 2012)
+
+  04 Apr 2012; Johannes Huber <johu@gentoo.org> +kactivities-4.8.2.ebuild:
+  Version bump KDE SC 4.8.2
+
+  04 Apr 2012; Agostino Sarubbo <ago@gentoo.org> kactivities-4.8.1.ebuild:
+  Stable for amd64, wrt bug #409403
+
+  31 Mar 2012; Markus Meier <maekke@gentoo.org> kactivities-4.8.1.ebuild:
+  add ~arm, bug #402989
+
+  23 Mar 2012; Johannes Huber <johu@gentoo.org> kactivities-4.8.1.ebuild:
+  Restore ~x86-fbsd.
+
+  23 Mar 2012; Johannes Huber <johu@gentoo.org> -kactivities-4.8.0.ebuild:
+  Remove KDE SC 4.8.0
+
+*kactivities-4.8.1 (06 Mar 2012)
+
+  06 Mar 2012; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kactivities-4.8.1.ebuild:
+  Version bump KDE SC 4.8.1
+
+  18 Feb 2012; nixnut <nixnut@gentoo.org> kactivities-4.7.4.ebuild:
+  ppc stable #396359
+
+*kactivities-4.8.0 (25 Jan 2012)
+
+  25 Jan 2012; Johannes Huber <johu@gentoo.org> +kactivities-4.8.0.ebuild:
+  Version bump KDE SC 4.8.0
+
+  17 Jan 2012; Johannes Huber <johu@gentoo.org> -kactivities-4.7.3.ebuild:
+  Remove KDE SC 4.7.3
+
+  16 Jan 2012; Agostino Sarubbo <ago@gentoo.org> kactivities-4.7.4.ebuild:
+  Stable for amd64, wrt bug #396359
+
+  09 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kactivities-4.7.4.ebuild:
+  x86 stable wrt bug #396359
+
+*kactivities-4.7.4 (11 Dec 2011)
+
+  11 Dec 2011; Alexey Shvetsov <alexxy@gentoo.org> +kactivities-4.7.4.ebuild:
+  Version bump KDE SC 4.7.4
+
+  07 Dec 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kactivities-4.7.2.ebuild:
+  Drop KDE 4.7.2
+
+  07 Dec 2011; Markos Chandras <hwoarang@gentoo.org> kactivities-4.7.3.ebuild:
+  Stable on amd64 wrt bug #388279
+
+  07 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  kactivities-4.7.3.ebuild:
+  x86 stable wrt bug #388279
+
+*kactivities-4.7.3 (02 Nov 2011)
+
+  02 Nov 2011; Alexey Shvetsov <alexxy@gentoo.org> +kactivities-4.7.3.ebuild:
+  Version bump KDE SC 4.7.3
+
+  28 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kactivities-4.7.1.ebuild:
+  Drop KDEpim 4.6.1 and KDE 4.7.1
+
+*kactivities-4.7.2 (06 Oct 2011)
+
+  06 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> +kactivities-4.7.2.ebuild:
+  Version bump KDE SC 4.7.2
+
+*kactivities-4.7.1 (27 Sep 2011)
+
+  27 Sep 2011; Jonathan Callen <abcd@gentoo.org> +kactivities-4.7.1.ebuild:
+  Split off from kde-base/kdelibs (will be completely separate in KDE 4.8+)

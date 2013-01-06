@@ -1,0 +1,42 @@
+# ChangeLog for kde-misc/basket
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/ChangeLog,v 1.13 2011/10/29 00:52:51 abcd Exp $
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org> basket-1.81.ebuild:
+  Bump to EAPI=4
+
+  04 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/basket-1.80-crypt.patch:
+  old
+
+  10 Mar 2011; <angelos@gentoo.org> basket-1.81.ebuild:
+  QA: Fixed VIRTUALX_REQUIRED
+
+  10 Mar 2011; <angelos@gentoo.org> basket-1.81.ebuild:
+  QA: Removed unneeded VIRTUALX_REQUIRED
+
+  30 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org> -basket-1.80.ebuild:
+  Remove old
+
+  14 Jan 2011; Andreas K. Huettel <dilfridge@gentoo.org> basket-1.81.ebuild:
+  Fix tests; bump EAPI; general cleanup
+
+*basket-1.81 (21 Oct 2010)
+
+  21 Oct 2010; Andreas K. Huettel <dilfridge@gentoo.org>
+  +basket-1.81.ebuild, +files/basket-1.81-crypt.patch:
+  Version bump
+
+  09 Aug 2010; Maciej Mrozowski <reavertm@gentoo.org> basket-1.80.ebuild:
+  Remove unnecessary KDE_MINIMAL
+
+  15 May 2010; Maciej Mrozowski <reavertm@gentoo.org> basket-1.80.ebuild:
+  Update qimageblitz category, dependencies cleanup
+
+*basket-1.80 (22 Apr 2010)
+
+  22 Apr 2010; Dror Levin <spatz@gentoo.org> +basket-1.80.ebuild,
+  +files/basket-1.80-crypt.patch, +metadata.xml:
+  Import from kde overlay, bug 310827. Thanks to Scott Stubbs, Maciej Grela
+  and Andreas K. Huettel.
+

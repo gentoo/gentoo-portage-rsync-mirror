@@ -1,0 +1,49 @@
+--- varnish-3.0.2/configure.ac.orig
++++ varnish-3.0.2/configure.ac
+@@ -87,15 +87,20 @@
+ 
+ save_LIBS="${LIBS}"
+ LIBS=""
+-AC_SEARCH_LIBS(initscr, [curses ncurses],
+-	[have_curses=yes], [have_curses=no])
+-CURSES_LIBS="${LIBS}"
+-LIBS="${save_LIBS}"
+-AC_SUBST(CURSES_LIBS)
+-if test "$have_curses" = no; then
+-	AC_MSG_WARN([curses not found; some tools will not be built])
+-fi
+-AC_CHECK_HEADERS([ncurses/curses.h curses.h])
++AC_ARG_WITH([tools], AS_HELP_STRING([--without-tools],
++            [Don't build additional tools: varnishhist, varnishstat, varnishtop, varnishsizes (default: test)]))
++
++AS_IF([test "x$with_tools" != "xno"], [
++  AC_SEARCH_LIBS(initscr, [curses ncurses],
++    [have_curses=yes], [have_curses=no])
++  CURSES_LIBS="${LIBS}"
++  LIBS="${save_LIBS}"
++  AC_SUBST(CURSES_LIBS)
++  if test "$have_curses" = no; then
++    AC_MSG_ERROR([curses not found, required to build additional tools])
++  fi
++  AC_CHECK_HEADERS([ncurses/curses.h curses.h])
++])
+ AM_CONDITIONAL([HAVE_CURSES], [test x$have_curses = xyes])
+ 
+ save_LIBS="${LIBS}"
+@@ -147,9 +152,13 @@
+ AC_SUBST(PCRE_CFLAGS)
+ AC_SUBST(PCRE_LIBS)
+ 
+-PKG_CHECK_MODULES([LIBEDIT], [libedit], 
+-	[AC_DEFINE([HAVE_LIBEDIT], [1], [Define we have libedit])],
+-	[AC_MSG_WARN([libedit not found, disabling libedit support])])
++AC_ARG_WITH([libedit], AS_HELP_STRING([--with-libedit],
++            [Enable support for libedit in varnishadm (default: disabled)]))
++AS_IF([test "x$with_libedit" = "xyes"], [
++	PKG_CHECK_MODULES([LIBEDIT], [libedit],
++		[AC_DEFINE([HAVE_LIBEDIT], [1], [Define we have libedit])],
++		[AC_MSG_ERROR([libedit not found])])
++])
+ 
+ # Checks for header files.
+ AC_HEADER_STDC

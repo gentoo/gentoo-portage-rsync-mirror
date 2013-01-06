@@ -1,0 +1,45 @@
+# ChangeLog for app-mobilephone/smsclient
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smsclient/ChangeLog,v 1.8 2008/11/02 18:57:14 mrness Exp $
+
+  02 Nov 2008; Alin Năstac <mrness@gentoo.org> smsclient-2.0.9a-r1.ebuild:
+  Respect CC env variable (#243688).
+
+  26 Mar 2007; Alin Năstac <mrness@gentoo.org> -smsclient-2.0.9a.ebuild:
+  Remove obsolete revision.
+
+*smsclient-2.0.9a-r1 (03 Feb 2007)
+
+  03 Feb 2007; Alin Năstac <mrness@gentoo.org>
+  +files/smsclient-2.0.9a-sender.patch, +smsclient-2.0.9a-r1.ebuild:
+  Add optional sender number, thanks to Andreas Bollhalder <bolle at geodb dot
+  org> (#164954). Add ~amd64 keyword.
+
+  24 Sep 2006; Alin Nastac <mrness@gentoo.org>
+  files/smsclient-2.0.9a-gentoo.patch:
+  Avoid pre-stripped binaries QA warning.
+
+  13 Apr 2006; Alin Nastac <mrness@gentoo.org>
+  -files/smsclient-2.0.8y_client-makefile.patch,
+  -files/smsclient-2.0.8y_docs-makefile.patch,
+  -files/smsclient-2.0.8y_logfile-makefile.patch,
+  -files/smsclient-2.0.8y_sms-makefile.patch, -smsclient-2.0.8y.ebuild:
+  Remove obsolete version.
+
+*smsclient-2.0.9a (25 Feb 2006)
+
+  25 Feb 2006; Alin Nastac <mrness@gentoo.org>
+  +files/smsclient-2.0.9a-gentoo.patch, metadata.xml,
+  +smsclient-2.0.9a.ebuild:
+  Version bump. The new version could be used by dialout group members (#119566).
+
+*smsclient-2.0.8y (18 Oct 2005)
+
+  18 Oct 2005; Carlos Silva <r3pek@gentoo.org>
+  +files/smsclient-2.0.8y_client-makefile.patch,
+  +files/smsclient-2.0.8y_docs-makefile.patch,
+  +files/smsclient-2.0.8y_logfile-makefile.patch,
+  +files/smsclient-2.0.8y_sms-makefile.patch, +metadata.xml,
+  +smsclient-2.0.8y.ebuild:
+  Initial commit. Closes bug #109195
+

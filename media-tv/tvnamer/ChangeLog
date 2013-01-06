@@ -1,0 +1,10 @@
+# ChangeLog for media-tv/tvnamer
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvnamer/ChangeLog,v 1.1 2012/10/23 19:57:58 thev00d00 Exp $
+
+*tvnamer-2.2.1 (23 Oct 2012)
+
+  23 Oct 2012; Ian Whyman <thev00d00@gentoo.org> +tvnamer-2.2.1.ebuild,
+  +metadata.xml:
+  Inital commit
+

@@ -1,0 +1,22 @@
+# ChangeLog for app-i18n/kde-l10n-scripts
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-l10n-scripts/ChangeLog,v 1.4 2012/08/08 11:09:19 scarabeus Exp $
+
+  08 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  kde-l10n-scripts-9999.ebuild:
+  More deps.
+
+  08 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  kde-l10n-scripts-9999.ebuild:
+  More deps.
+
+  06 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  kde-l10n-scripts-9999.ebuild:
+  Use proper path and not /usr/local/
+
+*kde-l10n-scripts-9999 (03 Aug 2012)
+
+  03 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
+  +kde-l10n-scripts-9999.ebuild, +metadata.xml:
+  Initial commit of the l10n toolkit we are using to manage czech translations.
+  WIP.

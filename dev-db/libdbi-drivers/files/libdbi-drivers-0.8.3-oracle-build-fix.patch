@@ -1,0 +1,12 @@
+diff -urN libdbi-drivers-0.8.3-1.orig/drivers/oracle/dbd_oracle.c libdbi-drivers-0.8.3-1/drivers/oracle/dbd_oracle.c
+--- libdbi-drivers-0.8.3-1.orig/drivers/oracle/dbd_oracle.c	2009-01-26 16:31:42.000000000 +0300
++++ libdbi-drivers-0.8.3-1/drivers/oracle/dbd_oracle.c	2009-01-26 16:32:38.000000000 +0300
+@@ -841,7 +841,7 @@
+ {
+   struct  tm tmt;
+ /*  char    stime[101], *cp = NULL; */
+-/*  time_t  loct = 0L; */
++  time_t  loct = 0L;
+ 
+ /*    memset(stime, 0, sizeof(stime)); */
+    

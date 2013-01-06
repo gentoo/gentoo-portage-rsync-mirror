@@ -1,0 +1,168 @@
+# ChangeLog for sys-kernel/spl
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.37 2012/12/29 17:01:12 ryao Exp $
+
+  29 Dec 2012; Richard Yao <ryao@gentoo.org> spl-0.6.0_rc10.ebuild,
+  spl-0.6.0_rc11-r2.ebuild, spl-0.6.0_rc11.ebuild, spl-0.6.0_rc12-r1.ebuild,
+  spl-0.6.0_rc12.ebuild, spl-0.6.0_rc13.ebuild, spl-9999.ebuild:
+  Fix sys-kernel/spl-0.6.0_rc10 ebuild; provide USE=debug-log to 0.6.0_rc10 and
+  0.6.0_rc11
+
+  27 Dec 2012; Richard Yao <ryao@gentoo.org> spl-0.6.0_rc10.ebuild,
+  spl-0.6.0_rc11-r2.ebuild, spl-0.6.0_rc11.ebuild, spl-0.6.0_rc12-r1.ebuild,
+  spl-0.6.0_rc12.ebuild, spl-0.6.0_rc13.ebuild, spl-9999.ebuild:
+  The fact that the code is technically GPLv2+ does not mean that we need to
+  specify GPL-3 in LICENSE. Change LICENSE to GPL-2. Thanks init_6 for pointing
+  this out.
+
+*spl-0.6.0_rc13 (23 Dec 2012)
+
+  23 Dec 2012; Richard Yao <ryao@gentoo.org> +spl-0.6.0_rc13.ebuild:
+  Bump sys-kernel/spl to 0.6.0_rc13
+
+  12 Dec 2012; Richard Yao <ryao@gentoo.org> metadata.xml,
+  spl-0.6.0_rc10.ebuild, spl-0.6.0_rc11-r2.ebuild, spl-0.6.0_rc11.ebuild,
+  spl-0.6.0_rc12-r1.ebuild, spl-0.6.0_rc12.ebuild:
+  Add USE=debug-log
+
+*spl-0.6.0_rc12-r1 (11 Dec 2012)
+*spl-0.6.0_rc11-r2 (11 Dec 2012)
+
+  11 Dec 2012; Richard Yao <ryao@gentoo.org>
+  +files/spl-0.6.0_rc12-fix-3.6-compat-regression.patch,
+  +files/spl-0.6.0_rc12-fix-race-in-slabs.patch,
+  +files/spl-0.6.0_rc12-linux-3.7-compat.patch, +spl-0.6.0_rc11-r2.ebuild,
+  +spl-0.6.0_rc12-r1.ebuild, -spl-0.6.0_rc11-r1.ebuild:
+  Linux 3.7 Support; Linux 3.6 Stability Fix
+
+*spl-0.6.0_rc12 (14 Nov 2012)
+
+  14 Nov 2012; Richard Yao <ryao@gentoo.org> +spl-0.6.0_rc12.ebuild:
+  Bump sys-kernel/spl to 0.6.0_rc12
+
+*spl-0.6.0_rc11-r1 (17 Oct 2012)
+
+  17 Oct 2012; Richard Yao <ryao@gentoo.org>
+  +files/spl-0.6.0_rc11-linux-3.6-compat.patch, +spl-0.6.0_rc11-r1.ebuild:
+  Linux 3.6 support
+
+  03 Oct 2012; Richard Yao <ryao@gentoo.org> spl-9999.ebuild:
+  Sync spl-9999.ebuild with spl-0.6.0_rc11.ebuild - thanks prometheanfire
+
+*spl-0.6.0_rc11 (18 Sep 2012)
+
+  18 Sep 2012; Richard Yao <ryao@gentoo.org>
+  +files/spl-0.6.0_rc9-alias-km-sleep-with-km-pushpage.patch,
+  +spl-0.6.0_rc11.ebuild:
+  Add sys-kernel/spl-0.6.0_rc11 and reintroduce a patch that 0.6.0_rc10 needed
+
+  18 Sep 2012; Richard Yao <ryao@gentoo.org>
+  -files/spl-0.6.0_rc9-alias-km-sleep-with-km-pushpage.patch,
+  -files/spl-0.6.0_rc9-constify-free-functions.patch,
+  -files/spl-0.6.0_rc9-detect-kernel-honors-gfp-flags.patch:
+  Remove sys-kernel/spl-0.6.0_rc9-r2 patch files
+
+  18 Sep 2012; Richard Yao <ryao@gentoo.org> -spl-0.6.0_rc9-r2.ebuild:
+  Remove sys-kernel/spl-0.6.0_rc9-r2
+
+  31 Aug 2012; Richard Yao <ryao@gentoo.org> spl-0.6.0_rc10.ebuild,
+  spl-0.6.0_rc9-r2.ebuild, spl-9999.ebuild:
+  RESTRICT=test
+
+  24 Aug 2012; Richard Yao <ryao@gentoo.org> spl-0.6.0_rc10.ebuild,
+  spl-0.6.0_rc9-r2.ebuild, spl-9999.ebuild:
+  Linux 3.6 and later are not currently supported.
+
+*spl-0.6.0_rc10 (15 Aug 2012)
+
+  15 Aug 2012; Richard Yao <ryao@gentoo.org> +spl-0.6.0_rc10.ebuild,
+  spl-9999.ebuild:
+  Add 0.6.0-rc10 release
+
+  28 Jul 2012; Richard Yao <ryao@gentoo.org> -spl-0.6.0_rc9-r1.ebuild,
+  spl-0.6.0_rc9-r2.ebuild, spl-9999.ebuild:
+  Remove CONFIG_PREEMPT_VOLUNTARY restriction
+
+*spl-0.6.0_rc9-r2 (10 Jul 2012)
+
+  10 Jul 2012; Richard Yao <ryao@gentoo.org>
+  +files/spl-0.6.0_rc9-alias-km-sleep-with-km-pushpage.patch,
+  +spl-0.6.0_rc9-r2.ebuild, spl-9999.ebuild:
+  Make KM_SLEEP an alias of KM_PUSHPAGE like it is in FreeBSD
+
+*spl-0.6.0_rc9-r1 (25 Jun 2012)
+
+  25 Jun 2012; Richard Yao <ryao@gentoo.org>
+  +files/spl-0.6.0_rc9-constify-free-functions.patch, +spl-0.6.0_rc9-r1.ebuild,
+  -spl-0.6.0_rc9.ebuild, spl-9999.ebuild:
+  Constify functions to prevent USE=debug build failure in sys-fs/zfs
+
+  18 Jun 2012; Richard Yao <ryao@gentoo.org> spl-9999.ebuild:
+  Keep spl-0.6.0_rc9.ebuild and spl-9999.ebuild in sync
+
+  18 Jun 2012; Richard Yao <ryao@gentoo.org> spl-0.6.0_rc9.ebuild:
+  Keyword ~amd64
+
+  17 Jun 2012; Richard Yao <ryao@gentoo.org>
+  +files/spl-0.6.0_rc9-detect-kernel-honors-gfp-flags.patch,
+  spl-0.6.0_rc9.ebuild, spl-9999.ebuild:
+  Add patch to take advantage of kernel change from bug #416685
+
+  17 Jun 2012; Richard Yao <ryao@gentoo.org> spl-0.6.0_rc9.ebuild,
+  spl-9999.ebuild:
+  Assert !GRKERNSEC_HIDESYM in kernel .config
+
+*spl-0.6.0_rc9 (16 Jun 2012)
+
+  16 Jun 2012; Richard Yao <ryao@gentoo.org> +spl-0.6.0_rc9.ebuild,
+  spl-9999.ebuild:
+  Introduce SPL 0.6.0-rc9 without keywords
+
+  17 May 2012;  <richard@gentoo.org> metadata.xml:
+  Changed maintainer from floppym to ryao to reflect change in ryao's dev status
+
+  21 Apr 2012; Mike Gilbert <floppym@gentoo.org> spl-9999.ebuild:
+  Set AUTOTOOLS_AUTORECONF before inherit to generate proper dependencies.
+
+  11 Apr 2012; Mike Gilbert <floppym@gentoo.org> spl-9999.ebuild:
+  Quote EPREFIX.
+
+  04 Apr 2012; Mike Gilbert <floppym@gentoo.org> spl-9999.ebuild:
+  Implement fix for ZFSOnLinux upstream issue #631 and make improvements toward
+  prefix support. Patch by Richard Yao.
+
+  05 Mar 2012; Mike Gilbert <floppym@gentoo.org> spl-9999.ebuild:
+  Add check for KALLSYSMS.
+
+  27 Feb 2012; Mike Gilbert <floppym@gentoo.org> spl-9999.ebuild:
+  Use --[s]bindir instead of --[s]bin.
+
+  27 Feb 2012; Mike Gilbert <floppym@gentoo.org> spl-9999.ebuild:
+  Inherit flag-o-matic for strip-flags.
+
+  27 Feb 2012; Mike Gilbert <floppym@gentoo.org> spl-9999.ebuild:
+  Updates by Richard to resolve bug 405795. Add custom-cflags USE flag.
+
+  24 Feb 2012; Mike Gilbert <floppym@gentoo.org> spl-9999.ebuild:
+  Updates from Richard Yao for bug 405201.
+
+  14 Feb 2012; Mike Gilbert <floppym@gentoo.org> spl-9999.ebuild:
+  Per Richard, add debug USE flag.
+
+  04 Feb 2012; Mike Gilbert <floppym@gentoo.org> spl-9999.ebuild:
+  Pass --exec-prefix= to configure; Requested by Richard Yao.
+
+  31 Jan 2012; Mike Gilbert <floppym@gentoo.org> spl-9999.ebuild:
+  Replace KV_OUT with KV_OUT_DIR.
+
+  28 Jan 2012; Mike Gilbert <floppym@gentoo.org> spl-9999.ebuild:
+  Use autotools-utils for the hell of it.
+
+  27 Jan 2012; Mike Gilbert <floppym@gentoo.org> spl-9999.ebuild:
+  Call default phase functions for src_compile and src_install.
+
+*spl-9999 (27 Jan 2012)
+
+  27 Jan 2012; Mike Gilbert <floppym@gentoo.org> +metadata.xml,
+  +spl-9999.ebuild:
+  New pacakge.

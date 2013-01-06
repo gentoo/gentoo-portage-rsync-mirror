@@ -1,0 +1,12 @@
+diff -ur xen-4.2.0.orig/stubdom/Makefile xen-4.2.0/stubdom/Makefile
+--- stubdom/Makefile	2012-12-05 08:01:01.480241322 +0800
++++ stubdom/Makefile	2012-12-05 08:01:37.432238026 +0800
+@@ -101,6 +101,7 @@
+ 	tar xzf $<
+ 	patch -d $@ -p0 < newlib.patch
+ 	patch -d $@ -p0 < newlib-chk.patch
++	patch -d $@ -p0 < newlib-implicits.patch
+ 	patch -d $@ -p1 < newlib-stdint-size_max-fix-from-1.17.0.patch
+ 	find $@ -type f | xargs perl -i.bak \
+ 		-pe 's/\b_(tzname|daylight|timezone)\b/$$1/g'
+

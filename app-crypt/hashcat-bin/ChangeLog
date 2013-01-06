@@ -1,0 +1,32 @@
+# ChangeLog for app-crypt/hashcat-bin
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/ChangeLog,v 1.7 2012/09/26 02:53:50 zerochaos Exp $
+
+*hashcat-bin-0.41 (26 Sep 2012)
+
+  26 Sep 2012; Rick Farina <zerochaos@gentoo.org> +hashcat-bin-0.41.ebuild:
+  bump
+
+  25 Aug 2012; Rick Farina <zerochaos@gentoo.org> hashcat-bin-0.39.ebuild,
+  hashcat-bin-0.40.ebuild:
+  fix loader re bug #432740
+
+*hashcat-bin-0.40 (06 Aug 2012)
+
+  06 Aug 2012; Rick Farina <zerochaos@gentoo.org> +hashcat-bin-0.40.ebuild:
+  version bump to 0.40 and MacOSX (prefix) support
+
+  04 Jul 2012; Rick Farina <zerochaos@gentoo.org> hashcat-bin-0.39.ebuild:
+  minor QA for ebuild
+
+  03 Jul 2012; Rick Farina <zerochaos@gentoo.org> hashcat-bin-0.39.ebuild:
+  fix loader location and minor ebuild style improvements
+
+  02 Jul 2012; Rick Farina <zerochaos@gentoo.org> hashcat-bin-0.39.ebuild:
+  trade RESTRICT=binchecks for QA_PREBUILT
+
+*hashcat-bin-0.39 (01 Jul 2012)
+
+  01 Jul 2012; Rick Farina <zerochaos@gentoo.org> +hashcat-bin-0.39.ebuild,
+  +metadata.xml:
+  initial

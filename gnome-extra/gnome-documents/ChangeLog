@@ -1,0 +1,40 @@
+# ChangeLog for gnome-extra/gnome-documents
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/ChangeLog,v 1.9 2013/01/01 14:31:57 ago Exp $
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gnome-documents-3.6.2.ebuild:
+  Add ~alpha, wrt bug #449220
+
+  01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gnome-documents-3.6.2.ebuild:
+  Add ~ia64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gnome-documents-3.6.2.ebuild:
+  Add ~ppc64, wrt bug #449220
+
+  31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> gnome-documents-3.6.2.ebuild:
+  Add ~ppc, wrt bug #449220
+
+*gnome-documents-3.6.2 (25 Dec 2012)
+
+  25 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-documents-0.2.1.ebuild, +gnome-documents-3.6.2.ebuild:
+  Version bump for Gnome 3.6. Switch to EAPI=5.
+
+*gnome-documents-0.4.2 (19 May 2012)
+
+  19 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-documents-0.4.2.ebuild:
+  Version bump for gnome-3.4 with collections support and UI improvements.
+
+  05 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-documents-0.2.1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  14 Feb 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-documents-0.2.1.ebuild:
+  Add missing dependency on gnome-icon-theme-symbolic (bug #403503).
+
+*gnome-documents-0.2.1 (07 Nov 2011)
+
+  07 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-documents-0.2.1.ebuild, +metadata.xml:
+  Add new gnome-3.2 document browser and manager from the gnome overlay.

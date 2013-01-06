@@ -1,0 +1,60 @@
+# ChangeLog for app-admin/chef
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/ChangeLog,v 1.18 2012/12/27 07:13:11 hollow Exp $
+
+  27 Dec 2012; Benedikt Böhm <hollow@gentoo.org> chef-10.16.4.ebuild:
+  restrict to moneta < 0.7 due to API incompatibilities
+
+*chef-10.16.4 (27 Dec 2012)
+
+  27 Dec 2012; Benedikt Böhm <hollow@gentoo.org> -chef-10.16.2.ebuild,
+  +chef-10.16.4.ebuild:
+  version bump
+
+  20 Dec 2012; Benedikt Böhm <hollow@gentoo.org> files/initd/chef-client:
+  improve init script
+
+  18 Dec 2012; Benedikt Böhm <hollow@gentoo.org> chef-10.16.2.ebuild:
+  fix gem dependency issues
+
+*chef-10.16.2 (17 Dec 2012)
+
+  17 Dec 2012; Benedikt Böhm <hollow@gentoo.org> -chef-0.10.10.ebuild,
+  +chef-10.16.2.ebuild:
+  version bump
+
+*chef-10.12.0 (11 Aug 2012)
+
+  11 Aug 2012; Benedikt Böhm <hollow@gentoo.org> -chef-0.10.2.ebuild,
+  -chef-0.10.8.ebuild, -chef-0.10.10_beta1.ebuild, +chef-10.12.0.ebuild:
+  version bump + ruby 19 support + remove old versions
+
+*chef-0.10.10 (17 Jun 2012)
+
+  17 Jun 2012; Benedikt Böhm <hollow@gentoo.org> +chef-0.10.10.ebuild:
+  version bump
+
+  31 May 2012; Zac Medico <zmedico@gentoo.org> chef-0.10.10_beta1.ebuild,
+  chef-0.10.2.ebuild, chef-0.10.8.ebuild:
+  inherit user for enewgroup and enewuser
+
+*chef-0.10.10_beta1 (29 Apr 2012)
+
+  29 Apr 2012; Benedikt Böhm <hollow@gentoo.org> +chef-0.10.10_beta1.ebuild:
+  version bump to resolve dependency conflicts (see #410385)
+
+  21 Feb 2012; Benedikt Böhm <hollow@gentoo.org> chef-0.10.8.ebuild:
+  "fix" dependencies wrt #403047
+
+*chef-0.10.8 (29 Jan 2012)
+
+  29 Jan 2012; Benedikt Böhm <hollow@gentoo.org> -chef-0.9.12.ebuild,
+  +chef-0.10.8.ebuild, files/initd/chef-client:
+  version bump wrt #396693
+
+*chef-0.10.2 (25 Jul 2011)
+
+  25 Jul 2011; Benedikt Böhm <hollow@gentoo.org> -chef-0.9.6.ebuild,
+  -chef-0.9.8.ebuild, +chef-0.10.2.ebuild, metadata.xml:
+  version bump wrt #369391
+

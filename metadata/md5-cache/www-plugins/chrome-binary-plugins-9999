@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst unpack
+DEPEND=www-client/chromium
+DESCRIPTION=Binary plugins from Google Chrome for use in Chromium.
+EAPI=4
+HOMEPAGE=http://www.google.com/chrome
+IUSE=+flash +pdf
+LICENSE=google-chrome
+RDEPEND=www-client/chromium
+RESTRICT=bindist mirror strip
+SLOT=0
+_eclasses_=unpacker	50e1227854e96469a19a63f053496328
+_md5_=1f802d07b88b4a85cfa5bc9395316957

@@ -1,0 +1,108 @@
+# ChangeLog for dev-python/geoip-python
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.27 2012/05/29 19:56:43 ranger Exp $
+
+  29 May 2012; Brent Baude <ranger@gentoo.org> geoip-python-1.2.7.ebuild:
+  Marking geoip-python-1.2.7 ppc for bug 415867
+
+  18 May 2012; Jeff Horelick <jdhore@gentoo.org> geoip-python-1.2.7.ebuild:
+  marked x86 per bug 415867
+
+  14 May 2012; Agostino Sarubbo <ago@gentoo.org> geoip-python-1.2.7.ebuild:
+  Stable for amd64, wrt bug #415867
+
+  21 Feb 2012; Patrick Lauer <patrick@gentoo.org> geoip-python-1.2.4.ebuild,
+  geoip-python-1.2.5.ebuild, geoip-python-1.2.7.ebuild:
+  Restricting jython
+
+*geoip-python-1.2.7 (16 Sep 2011)
+
+  16 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +geoip-python-1.2.7.ebuild:
+  Version bump to 1.2.7 (fixes bug 382945, thanks jbergstroem).
+
+*geoip-python-1.2.5 (29 Jul 2011)
+
+  29 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +geoip-python-1.2.5.ebuild:
+  Version bump
+
+  28 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -geoip-python-0.2.0.ebuild, -geoip-python-1.2.0.ebuild,
+  -geoip-python-1.2.1.ebuild:
+  Delete.
+
+  28 Sep 2010; Brent Baude <ranger@gentoo.org> geoip-python-1.2.4.ebuild:
+  stable ppc, bug 329431
+
+  30 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
+  geoip-python-1.2.4.ebuild:
+  Stable on amd64 wrt bug #329431
+
+  23 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
+  geoip-python-1.2.4.ebuild:
+  stable x86, bug 329431
+
+  22 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  geoip-python-1.2.4.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
+
+*geoip-python-1.2.4 (24 Jan 2009)
+
+  24 Jan 2009; Patrick Lauer <patrick@gentoo.org> geoip-python-1.2.0.ebuild,
+  geoip-python-1.2.1.ebuild, +geoip-python-1.2.4.ebuild:
+  Bump to 1.2.4. Fixing Licenses of 1.x ebuilds. Fixes #254665
+
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  Transition to Manifest2.
+
+  30 Oct 2006; Javier Villavicencio <the_paya@gentoo.org>
+  geoip-python-1.2.1.ebuild:
+  Keyworded ~x86-fbsd.
+
+  17 Aug 2006; Thomas Cort <tcort@gentoo.org> geoip-python-1.2.0.ebuild:
+  Stable on amd64 wrt Bug #139664.
+
+  01 Apr 2006; Aron Griffis <agriffis@gentoo.org> geoip-python-1.2.1.ebuild:
+  Mark 1.2.1 ~ia64
+
+  05 Sep 2005; Jason Wever <weeve@gentoo.org> geoip-python-1.2.0.ebuild:
+  Stable on SPARC.
+
+  17 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  geoip-python-1.2.0.ebuild:
+  ppc stable
+
+*geoip-python-1.2.1 (03 Jul 2005)
+
+  03 Jul 2005; Fernando Serboncini <fserb@gentoo.org>
+  geoip-python-1.2.0.ebuild, +geoip-python-1.2.1.ebuild:
+  Version bump
+  1.2.0 stable on x86
+
+  24 Apr 2005; Simon Stelling <blubb@gentoo.org> geoip-python-0.2.0.ebuild:
+  stable on amd64
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  geoip-python-0.2.0.ebuild:
+  Stable on ppc.
+
+*geoip-python-1.2.0 (17 Dec 2004)
+
+  17 Dec 2004; Rob Cakebread <pythonhead@gentoo.org>
+  +geoip-python-1.2.0.ebuild:
+  Version bump, added docs.
+
+  11 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> geoip-python-0.2.0.ebuild:
+  Marked ~amd64.
+
+  24 Jan 2004; David Holm <dholm@gentoo.org> geoip-python-0.2.0.ebuild:
+  Added to ~ppc
+
+  01 Nov 2003; Jason Wever <weeve@gentoo.org> geoip-python-0.2.0.ebuild:
+  Added ~sparc keyword.
+
+*geoip-python-0.2.0 (30 Aug 2003)
+
+  30 Aug 2003; Alastair Tse <liquidx@gentoo.org> geoip-python-0.2.0.ebuild:
+  initial ebuild for python bindings to GeoIP.
+

@@ -1,0 +1,25 @@
+From 4b2081ef5b35c3b8c5ababe53d56a5959fea3f82 Mon Sep 17 00:00:00 2001
+From: Alec Moskvin <alecm@gmx.com>
+Date: Thu, 20 Sep 2012 20:11:50 -0400
+Subject: [PATCH] Link to libX11 explicitly to prevent underlinking
+
+---
+ src/lib/lib.pro | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git src/lib/lib.pro src/lib/lib.pro
+index 82845f8..28d3b18 100644
+--- src/lib/lib.pro
++++ src/lib/lib.pro
+@@ -401,6 +401,8 @@ RESOURCES += \
+     target.path = $$library_folder
+ 
+     INSTALLS += target
++
++    LIBS += -lX11
+ }
+ 
+ message(===========================================)
+-- 
+1.7.12
+

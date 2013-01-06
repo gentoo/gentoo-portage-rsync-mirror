@@ -1,0 +1,21 @@
+# ChangeLog for app-misc/cstream
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cstream/ChangeLog,v 1.4 2012/05/10 15:10:34 ago Exp $
+
+  10 May 2012; Agostino Sarubbo <ago@gentoo.org> -cstream-2.7.6.ebuild:
+  Remove old
+
+*cstream-3.0.0 (14 Mar 2012)
+
+  14 Mar 2012; Patrick Lauer <patrick@gentoo.org> +cstream-3.0.0.ebuild:
+  Bump
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118937
+
+*cstream-2.7.6 (16 Mar 2009)
+
+  16 Mar 2009; Thilo Bangert <bangert@gentoo.org> +metadata.xml,
+  +cstream-2.7.6.ebuild:
+  cstream is a general-purpose stream-handling tool like UNIX dd - bug #215545
+

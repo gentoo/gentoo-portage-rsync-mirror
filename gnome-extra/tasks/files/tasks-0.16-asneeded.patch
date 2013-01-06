@@ -1,0 +1,42 @@
+--- libkoto/Makefile.am
++++ libkoto/Makefile.am
+@@ -1,6 +1,8 @@
++ALL_LIBS = $(GTK_LIBS) $(ECAL_LIBS) $(SEXY_LIBS)
++ALL_CFLAGS = $(GTK_CFLAGS) $(ECAL_CFLAGS) $(SEXY_CFLAGS)
++
+ localedir = $(datadir)/locale
+-AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -DPKGDATADIR=\"$(pkgdatadir)\" $(WARN_CFLAGS) $(GTK_CFLAGS) $(ECAL_CFLAGS) $(SEXY_CFLAGS)
+-AM_LDFLAGS = $(GTK_LIBS) $(ECAL_LIBS) $(SEXY_LIBS)
++AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -DPKGDATADIR=\"$(pkgdatadir)\" $(WARN_CFLAGS) $(ALL_CFLAGS)
+ 
+ # Really nasty, but I don't want to check for this every time I want to use
+ # g_date_set_time_t.
+@@ -8,6 +10,8 @@
+ AM_CPPFLAGS += -D'g_date_set_time_t(d,t)=g_date_set_time(d,t)'
+ endif
+ 
++LINK = $(CCLD) $(ALL_CFLAGS) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@ $(ALL_LIBS)
++
+ noinst_LIBRARIES = libkoto.a
+ libkoto_a_SOURCES = \
+ 	ical-util.h ical-util.c \
+@@ -38,13 +42,18 @@
+ 	koto-utils.h koto-utils.c \
+ 	koto-platform.h
+ 
+-
+ TESTS = test-group-store test-ical-util test-date-parser
+ check_PROGRAMS = test-group-store test-ical-util test-date-parser
+ 
+ test_group_store_SOURCES = test-koto-group-store.c koto-group-store.c koto-category-group.c koto-group.c ical-util.c
++test_group_store_LDADD = $(ALL_LIBS)
++test_group_store_CFLAGS = $(ALL_CFLAGS)
+ 
+ test_ical_util_SOURCES = test-ical-util.c ical-util.c
++test_ical_util_LDADD = $(ALL_LIBS)
++test_ical_util_CFLAGS = $(ALL_CFLAGS)
+ 
+ test_date_parser_SOURCES = koto-date-parser.c
+ test_date_parser_CPPFLAGS = $(AM_CPPFLAGS) -DBUILD_TESTS=1
++test_date_parser_LDADD = $(ALL_LIBS)
++test_date_parser_CFLAGS = $(ALL_CFLAGS)

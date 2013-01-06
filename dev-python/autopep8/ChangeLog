@@ -1,0 +1,129 @@
+# ChangeLog for dev-python/autopep8
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.24 2013/01/04 21:46:27 xarthisius Exp $
+
+*autopep8-0.8.5 (04 Jan 2013)
+
+  04 Jan 2013; Kacper Kowalik <xarthisius@gentoo.org> +autopep8-0.8.5.ebuild:
+  Version bump
+
+*autopep8-0.8.4 (07 Dec 2012)
+
+  07 Dec 2012; Kacper Kowalik <xarthisius@gentoo.org> +autopep8-0.8.4.ebuild,
+  -autopep8-0.8.1.ebuild, -autopep8-0.8.2.ebuild, -autopep8-0.8.3.ebuild,
+  -autopep8-0.8.ebuild:
+  Version bump, drop old
+
+*autopep8-0.8.3 (29 Nov 2012)
+
+  29 Nov 2012; Patrick Lauer <patrick@gentoo.org> +autopep8-0.8.3.ebuild:
+  Bump
+
+*autopep8-0.8.2 (13 Nov 2012)
+
+  13 Nov 2012; Patrick Lauer <patrick@gentoo.org> +autopep8-0.8.2.ebuild:
+  Bump
+
+  27 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> autopep8-0.8.1.ebuild:
+  Update dependency on dev-python/pep8. Thanks to Arfrever for reporting
+
+*autopep8-0.8.1 (26 Sep 2012)
+
+  26 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> +autopep8-0.8.1.ebuild:
+  Version bump
+
+*autopep8-0.8 (07 Sep 2012)
+
+  07 Sep 2012; Kacper Kowalik <xarthisius@gentoo.org> +autopep8-0.8.ebuild,
+  -autopep8-0.7.2.ebuild, -autopep8-0.7.3.ebuild:
+  Version bump, drop old
+
+*autopep8-0.7.3 (03 Aug 2012)
+
+  03 Aug 2012; Kacper Kowalik <xarthisius@gentoo.org> +autopep8-0.7.3.ebuild:
+  Version bump
+
+  13 Jul 2012; Mike Gilbert <floppym@gentoo.org> autopep8-0.7.2.ebuild:
+  Call distutils_pkg_postinst.
+
+*autopep8-0.7.2 (13 Jul 2012)
+
+  13 Jul 2012; Ben de Groot <yngwin@gentoo.org> +autopep8-0.7.2.ebuild,
+  -autopep8-0.7.ebuild:
+  Version bump. Add warning to make sure people know what they are getting into
+  with this version.
+
+  16 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> -autopep8-0.5.2.ebuild,
+  -autopep8-0.5.ebuild, -autopep8-0.6.2.ebuild, -autopep8-0.6.3.ebuild,
+  -autopep8-0.6.ebuild:
+  Drop old leaving last version unaffected by issue #12 and latest masked
+
+*autopep8-0.7 (16 Jun 2012)
+
+  16 Jun 2012; Sebastian Pipping <sping@gentoo.org> +autopep8-0.7.ebuild,
+  autopep8-9999.ebuild:
+  Bump to 0.7
+
+*autopep8-0.6.3 (16 Jun 2012)
+
+  16 Jun 2012; Sebastian Pipping <sping@gentoo.org> autopep8-0.5.ebuild,
+  autopep8-0.5.2.ebuild, autopep8-0.5.2-r1.ebuild, autopep8-0.6.ebuild,
+  autopep8-0.6.2.ebuild, +autopep8-0.6.3.ebuild, autopep8-9999.ebuild:
+  Bump to 0.6.3, fix dependency on pep8 to <pep8-1.3
+
+*autopep8-0.6.2 (29 May 2012)
+
+  29 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +autopep8-0.6.2.ebuild:
+  Version bump wrt #418151 by Ian Delaney <johneed@hotmail.com>. Use github as
+  SRC_URI
+
+  29 May 2012; Justin Lecher <jlec@gentoo.org> autopep8-0.6.ebuild:
+  Added ~-linux keywords, tested by me
+
+*autopep8-0.6 (09 May 2012)
+
+  09 May 2012; Sebastian Pipping <sping@gentoo.org> +autopep8-0.6.ebuild:
+  Bump to 0.6
+
+*autopep8-0.5.2-r1 (05 May 2012)
+
+  05 May 2012; Kacper Kowalik <xarthisius@gentoo.org> +autopep8-0.5.2-r1.ebuild,
+  -autopep8-0.5.2_p1.ebuild, metadata.xml:
+  Remove unnecessary _p1 version and do a simple revbump instead. Add python
+  herd to metadata
+
+*autopep8-0.5.2_p1 (04 May 2012)
+
+  04 May 2012; Sebastian Pipping <sping@gentoo.org> +autopep8-0.5.2_p1.ebuild,
+  +files/autopep8-0.5.2-issue-10.patch, metadata.xml:
+  Add upstream patch for issue 10 (runtime exception), add myself as backup
+  maintainer
+
+  31 Mar 2012; Mike Gilbert <floppym@gentoo.org> autopep8-0.5.2.ebuild,
+  autopep8-0.5.ebuild, autopep8-9999.ebuild:
+  Only restrict 2.5-cpython.
+
+  31 Mar 2012; Mike Gilbert <floppym@gentoo.org> autopep8-0.5.2.ebuild,
+  autopep8-0.5.ebuild, autopep8-9999.ebuild:
+  Make setuptools a runtime dep, and restrict python-2.5.
+
+*autopep8-0.5.2 (12 Mar 2012)
+
+  12 Mar 2012; Kacper Kowalik <xarthisius@gentoo.org> +autopep8-0.5.2.ebuild:
+  Version bump
+
+*autopep8-9999 (27 Feb 2012)
+
+  27 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> +autopep8-9999.ebuild:
+  Add live ebuild
+
+  15 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> autopep8-0.5.ebuild:
+  Add src_test and missing dependency on dev-python/pep8. Fixes bug 403663 by
+  Nicolas Pinto <nicolas.pinto@gmail.com>
+
+*autopep8-0.5 (11 Feb 2012)
+
+  11 Feb 2012; Kacper Kowalik <xarthisius@gentoo.org> +autopep8-0.5.ebuild,
+  +metadata.xml:
+  Initial import, ebuild written by Nicolas Pinto <nicolas.pinto@gmail.com> and
+  modified by me. Fixes bug 402511

@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DEPEND=dev-lang/tk
+DESCRIPTION=A GNU Netlist Manipulation Library
+EAPI=4
+HOMEPAGE=http://www.viasic.com/opensource/
+KEYWORDS=ppc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-lang/tk
+SLOT=0
+SRC_URI=http://www.viasic.com/opensource/gnetman-22Dec04.tar.gz
+_md5_=a66760084f4eb357d1f1ae902bc6cb87

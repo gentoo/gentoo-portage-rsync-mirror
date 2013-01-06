@@ -1,0 +1,24 @@
+# ChangeLog for gnustep-apps/batmon
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/batmon/ChangeLog,v 1.4 2012/06/18 15:04:02 voyageur Exp $
+
+  18 Jun 2012; Bernard Cafarelli <voyageur@gentoo.org> -batmon-0.4.ebuild,
+  -batmon-0.5.ebuild, batmon-0.6.ebuild:
+  Drop old versions, bump EAPI in testing version
+
+*batmon-0.6 (05 Aug 2011)
+
+  05 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org> +batmon-0.6.ebuild:
+  Version bump, bug fixes
+
+*batmon-0.5 (15 Jun 2010)
+
+  15 Jun 2010; Bernard Cafarelli <voyageur@gentoo.org> +batmon-0.5.ebuild:
+  Version bump, now support reading information from /sys instead of /proc
+
+*batmon-0.4 (06 Jan 2010)
+
+  06 Jan 2010; Bernard Cafarelli <voyageur@gentoo.org> +batmon-0.4.ebuild,
+  +metadata.xml:
+  Initial commit
+

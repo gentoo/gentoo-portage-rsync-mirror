@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/cmdtest
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmdtest/ChangeLog,v 1.1 2012/10/07 00:35:56 mschiff Exp $
+
+*cmdtest-0.5 (07 Oct 2012)
+
+  07 Oct 2012; Marc Schiffbauer <mschiff@gentoo.org> +cmdtest-0.5.ebuild,
+  +metadata.xml:
+  Initial commit of cmdtest
+

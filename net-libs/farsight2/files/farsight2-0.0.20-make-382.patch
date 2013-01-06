@@ -1,0 +1,31 @@
+http://bugs.gentoo.org/339534
+
+--- farsight2-0.0.20/common/gtk-doc.mak
++++ farsight2-0.0.20/common/gtk-doc.mak
+@@ -232,6 +232,6 @@
+ 	-cp $(srcdir)/$(DOC_MODULE).types $(distdir)/
+ 	-cp $(srcdir)/$(DOC_MODULE)-sections.txt $(distdir)/
+ 	cd $(distdir) && rm -f $(DISTCLEANFILES)
+-        -gtkdoc-rebase --online --relative --html-dir=$(distdir)/html
++	-gtkdoc-rebase --online --relative --html-dir=$(distdir)/html
+ 
+ .PHONY : dist-hook-local docs
+--- farsight2-0.0.20/common/gtk-doc-plugins.mak
++++ farsight2-0.0.20/common/gtk-doc-plugins.mak
+@@ -352,7 +352,7 @@
+ 	-cp $(srcdir)/$(DOC_MODULE).types $(distdir)/
+ 	-cp $(srcdir)/$(DOC_MODULE)-sections.txt $(distdir)/
+ 	cd $(distdir) && rm -f $(DISTCLEANFILES)
+-        -gtkdoc-rebase --online --relative --html-dir=$(distdir)/html
++	-gtkdoc-rebase --online --relative --html-dir=$(distdir)/html
+ 
+ .PHONY : dist-hook-local docs
+ 
+--- farsight2-0.0.20/python/Makefile.am
++++ farsight2-0.0.20/python/Makefile.am
+@@ -1,5 +1,4 @@
+ PYDEFS=`pkg-config --variable=defsdir pygobject-2.0`
+-[ -z "$PYDEFS" && PYDEFS=`pkg-config --variable=defsdir pygtk-2.0`]
+ GSTPYDEFS=`pkg-config --variable=defsdir gst-python-0.10`
+ 
+ AM_CPPFLAGS =						\

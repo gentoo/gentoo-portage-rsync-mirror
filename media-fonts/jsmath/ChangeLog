@@ -1,0 +1,13 @@
+# ChangeLog for media-fonts/jsmath
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/jsmath/ChangeLog,v 1.2 2009/11/17 06:42:38 bicatali Exp $
+
+  17 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org> jsmath-1.0.ebuild:
+  Added FONT_S, thanks Simone Scanzoni, bug #293314
+
+*jsmath-1.0 (12 Nov 2009)
+
+  12 Nov 2009; Sébastien Fabbro <bicatali@gentoo.org> +jsmath-1.0.ebuild,
+  +metadata.xml:
+  Initial import, needed fro wxMaxima
+

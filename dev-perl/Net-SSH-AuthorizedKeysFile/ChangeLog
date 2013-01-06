@@ -1,0 +1,72 @@
+# ChangeLog for dev-perl/Net-SSH-AuthorizedKeysFile
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSH-AuthorizedKeysFile/ChangeLog,v 1.14 2012/06/24 12:58:26 tove Exp $
+
+  24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Update CPAN upstream info
+
+  31 Mar 2012; Torsten Veller <tove@gentoo.org>
+  -Net-SSH-AuthorizedKeysFile-0.13.ebuild,
+  -Net-SSH-AuthorizedKeysFile-0.150.0.ebuild:
+  Cleanup
+
+  24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Net-SSH-AuthorizedKeysFile-0.160.0.ebuild:
+  x86 stable wrt bug #400185
+
+  17 Feb 2012; Agostino Sarubbo <ago@gentoo.org>
+  Net-SSH-AuthorizedKeysFile-0.160.0.ebuild:
+  Stable for amd64, wrt bug #400185
+
+*Net-SSH-AuthorizedKeysFile-0.160.0 (01 Feb 2012)
+
+  01 Feb 2012; Torsten Veller <tove@gentoo.org>
+  +Net-SSH-AuthorizedKeysFile-0.160.0.ebuild:
+  Version bump
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org>
+  -Net-SSH-AuthorizedKeysFile-0.140.ebuild,
+  -Net-SSH-AuthorizedKeysFile-0.150.ebuild:
+  Cleanup
+
+*Net-SSH-AuthorizedKeysFile-0.150.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +Net-SSH-AuthorizedKeysFile-0.150.0.ebuild:
+  Change version scheme
+
+*Net-SSH-AuthorizedKeysFile-0.150 (17 Feb 2011)
+
+  17 Feb 2011; Torsten Veller <tove@gentoo.org>
+  +Net-SSH-AuthorizedKeysFile-0.150.ebuild:
+  Version bump
+
+*Net-SSH-AuthorizedKeysFile-0.140 (12 Jan 2011)
+
+  12 Jan 2011; Torsten Veller <tove@gentoo.org>
+  +Net-SSH-AuthorizedKeysFile-0.140.ebuild:
+  Version bump
+
+  01 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Net-SSH-AuthorizedKeysFile-0.13.ebuild:
+  x86 stable wrt bug #342765
+
+  27 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
+  Net-SSH-AuthorizedKeysFile-0.13.ebuild:
+  Stable on amd64 wrt bug #342765
+
+  11 Jun 2010; Torsten Veller <tove@gentoo.org>
+  -Net-SSH-AuthorizedKeysFile-0.12.ebuild:
+  Cleanup
+
+*Net-SSH-AuthorizedKeysFile-0.13 (29 Apr 2010)
+
+  29 Apr 2010; Torsten Veller <tove@gentoo.org>
+  +Net-SSH-AuthorizedKeysFile-0.13.ebuild:
+  Version bump
+
+*Net-SSH-AuthorizedKeysFile-0.12 (14 Apr 2010)
+
+  14 Apr 2010; Christian Ruppert <idl0r@gentoo.org>
+  +Net-SSH-AuthorizedKeysFile-0.12.ebuild, +metadata.xml:
+  New ebuild dev-perl/Net-SSH-AuthorizedKeysFile.

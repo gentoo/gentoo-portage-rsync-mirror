@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=ASDF is Another System Definition Facility for Common Lisp
+EAPI=4
+HOMEPAGE=http://common-lisp.net/project/asdf/
+KEYWORDS=~amd64 ~ppc ~sparc ~x86
+LICENSE=MIT
+RDEPEND=!dev-lisp/cl-asdf !dev-lisp/asdf-binary-locations
+SLOT=0
+SRC_URI=http://common-lisp.net/project/asdf/archives/asdf-2.26.tar.gz
+_md5_=1f0df6410177f7a2da591e7041e35c88

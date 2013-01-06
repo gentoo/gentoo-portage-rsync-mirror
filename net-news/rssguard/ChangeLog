@@ -1,0 +1,14 @@
+# ChangeLog for net-news/rssguard
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/rssguard/ChangeLog,v 1.2 2012/10/29 12:21:42 yngwin Exp $
+
+*rssguard-1.1.2 (29 Oct 2012)
+
+  29 Oct 2012; Ben de Groot <yngwin@gentoo.org> +rssguard-1.1.2.ebuild:
+  Version bump. Make desktop file validate. Add epatch_user.
+
+*rssguard-1.1.1 (30 Jun 2012)
+
+  30 Jun 2012; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +rssguard-1.1.1.ebuild:
+  Initial commit. Fixes bug #401411.

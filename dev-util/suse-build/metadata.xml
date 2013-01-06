@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>suse</herd>
+<longdescription lang="en">
+Script for building RPMs for SUSE Linux in a chroot environment.
+</longdescription>
+</pkgmetadata>
+

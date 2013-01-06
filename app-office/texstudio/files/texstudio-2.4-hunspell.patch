@@ -1,0 +1,70 @@
+ texstudio.pro | 35 +++--------------------------------
+ 1 file changed, 3 insertions(+), 32 deletions(-)
+
+diff --git a/texstudio.pro b/texstudio.pro
+index ee28d78..4ba31c0 100644
+--- a/texstudio.pro
++++ b/texstudio.pro
+@@ -1,7 +1,9 @@
+ TEMPLATE = app
+ LANGUAGE = C++
+ DESTDIR = ./
+-CONFIG += qt precompile_header uitools
++CONFIG += qt precompile_header uitools link_pkgconfig
++PKGCONFIG = hunspell
++PHONON=
+ exists(texmakerx_my.pri):include(texmakerx_my.pri)
+ QT += network \
+     xml \
+@@ -52,24 +54,6 @@ HEADERS += texmaker.h \
+     debughelper.h \
+     thesaurusdialog.h \
+     xmltagslistwidget.h \
+-    hunspell/affentry.hxx \
+-    hunspell/affixmgr.hxx \
+-    hunspell/atypes.hxx \
+-    hunspell/baseaffix.hxx \
+-    hunspell/csutil.hxx \
+-    hunspell/dictmgr.hxx \
+-    hunspell/hashmgr.hxx \
+-    hunspell/htypes.hxx \
+-    hunspell/hunspell.hxx \
+-    hunspell/hunspell.h \
+-    hunspell/langnum.hxx \
+-    hunspell/license.hunspell \
+-    hunspell/phonet.hxx \
+-    hunspell/suggestmgr.hxx \
+-    hunspell/license.myspell \
+-    hunspell/filemgr.hxx \
+-    hunspell/hunzip.hxx \
+-    hunspell/w_char.hxx \
+     qcodeedit/lib/qeditorinputbinding.h \
+     qcodeedit/lib/qeditorinputbindinginterface.h \
+     randomtextgenerator.h \
+@@ -85,7 +69,6 @@ HEADERS += texmaker.h \
+     latexdocument.h \
+     unicodeinsertion.h \
+     universalinputdialog.h \
+-    hunspell/replist.hxx \
+     scriptengine.h \
+     insertgraphics.h \
+     txstabwidget.h \
+@@ -154,18 +137,6 @@ SOURCES += main.cpp \
+     codesnippet.cpp \
+     thesaurusdialog.cpp \
+     xmltagslistwidget.cpp \
+-    hunspell/affentry.cxx \
+-    hunspell/affixmgr.cxx \
+-    hunspell/csutil.cxx \
+-    hunspell/dictmgr.cxx \
+-    hunspell/hashmgr.cxx \
+-    hunspell/hunspell.cxx \
+-    hunspell/phonet.cxx \
+-    hunspell/replist.cxx \
+-    hunspell/suggestmgr.cxx \
+-    hunspell/utf_info.cxx \
+-    hunspell/filemgr.cxx \
+-    hunspell/hunzip.cxx \
+     encodingdialog.cpp \
+     qcodeedit/lib/qeditorinputbinding.cpp \
+     randomtextgenerator.cpp \

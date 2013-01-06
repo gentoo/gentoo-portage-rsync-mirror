@@ -1,0 +1,49 @@
+From 5ca9f35a955b9c7cd6bd0479d40cb8b4aabef2c8 Mon Sep 17 00:00:00 2001
+From: Giovanni Campagna <gcampagna@src.gnome.org>
+Date: Sat, 14 Apr 2012 00:41:12 +0200
+Subject: [PATCH] places-menu: fix allocation of the icon
+
+Because the popup-menu min-width imposed by the theme was bigger
+than the natural size of the menu, and because core shell code
+cannot deal with that, the icon was not right aligned unless
+"Removable devices" was showing.
+Hack around that by setting span: -1, which pushes it to end of
+the menu item.
+---
+ extensions/places-menu/extension.js |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/extensions/places-menu/extension.js b/extensions/places-menu/extension.js
+index 418d249..dcb724a 100644
+--- a/extensions/places-menu/extension.js
++++ b/extensions/places-menu/extension.js
+@@ -65,7 +65,7 @@ const PlacesMenu = new Lang.Class({
+         for (let placeid = 0; placeid < this.defaultPlaces.length; placeid++) {
+             this.defaultItems[placeid] = new PopupMenu.PopupMenuItem(this.defaultPlaces[placeid].name);
+             let icon = this.defaultPlaces[placeid].iconFactory(PLACE_ICON_SIZE);
+-            this.defaultItems[placeid].addActor(icon, { align: St.Align.END });
++            this.defaultItems[placeid].addActor(icon, { align: St.Align.END, span: -1 });
+             this.defaultItems[placeid].place = this.defaultPlaces[placeid];
+             this.menu.addMenuItem(this.defaultItems[placeid]);
+             this.defaultItems[placeid].connect('activate', function(actor,event) {
+@@ -81,7 +81,7 @@ const PlacesMenu = new Lang.Class({
+         for (let bookmarkid = 0; bookmarkid < this.bookmarks.length; bookmarkid++) {
+             this.bookmarkItems[bookmarkid] = new PopupMenu.PopupMenuItem(this.bookmarks[bookmarkid].name);
+             let icon = this.bookmarks[bookmarkid].iconFactory(PLACE_ICON_SIZE);
+-            this.bookmarkItems[bookmarkid].addActor(icon, { align: St.Align.END });
++            this.bookmarkItems[bookmarkid].addActor(icon, { align: St.Align.END, span: -1 });
+             this.bookmarkItems[bookmarkid].place = this.bookmarks[bookmarkid];
+             this._bookmarksSection.addMenuItem(this.bookmarkItems[bookmarkid]);
+             this.bookmarkItems[bookmarkid].connect('activate', function(actor,event) {
+@@ -96,7 +96,7 @@ const PlacesMenu = new Lang.Class({
+         for (let devid = 0; devid < this.devices.length; devid++) {
+             this.deviceItems[devid] = new PopupMenu.PopupMenuItem(this.devices[devid].name);
+             let icon = this.devices[devid].iconFactory(PLACE_ICON_SIZE);
+-            this.deviceItems[devid].addActor(icon, { align: St.Align.END });
++            this.deviceItems[devid].addActor(icon, { align: St.Align.END, span: -1 });
+             this.deviceItems[devid].place = this.devices[devid];
+             this._devicesMenuItem.menu.addMenuItem(this.deviceItems[devid]);
+             this.deviceItems[devid].connect('activate', function(actor,event) {
+-- 
+1.7.8.6
+

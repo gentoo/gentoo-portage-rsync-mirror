@@ -1,0 +1,50 @@
+# ChangeLog for sci-chemistry/votca-csgapps
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csgapps/ChangeLog,v 1.12 2012/12/26 23:25:25 ottxor Exp $
+
+  26 Dec 2012; Christoph Junghans <ottxor@gentoo.org>
+  votca-csgapps-1.2.2.ebuild, votca-csgapps-1.2.3.ebuild:
+  use new mercurial.eclass defaults
+
+*votca-csgapps-1.2.3 (17 Aug 2012)
+
+  17 Aug 2012; Christoph Junghans <ottxor@gentoo.org>
+  +votca-csgapps-1.2.3.ebuild:
+  version bump
+
+  05 Feb 2012; Christoph Junghans <ottxor@gentoo.org>
+  -votca-csgapps-1.2.1.ebuild:
+  remove old
+
+  25 Jan 2012; Thomas Kahle <tomka@gentoo.org> Manifest:
+  fix manifest
+
+  25 Jan 2012; Thomas Kahle <tomka@gentoo.org> votca-csgapps-1.2.2.ebuild:
+  x86 stable per bug 389681
+
+  25 Jan 2012; Christoph Junghans <ottxor@gentoo.org>
+  votca-csgapps-1.2.2.ebuild:
+  keyword ~x86-macos
+
+  17 Jan 2012; Agostino Sarubbo <ago@gentoo.org> votca-csgapps-1.2.2.ebuild:
+  Stable for amd64, wrt bug #389681
+
+  14 Jan 2012; Christoph Junghans <ottxor@gentoo.org>
+  votca-csgapps-1.2.2.ebuild:
+  keyword ~amd64-linux
+
+  13 Jan 2012; Christoph Junghans <ottxor@gentoo.org>
+  votca-csgapps-1.2.2.ebuild, +files/votca-csgapps-1.2.2-dso.patch:
+  fixes for amd64-linux
+
+*votca-csgapps-1.2.2 (11 Jan 2012)
+
+  11 Jan 2012; Christoph Junghans <ottxor@gentoo.org>
+  +votca-csgapps-1.2.2.ebuild:
+  version bump
+
+  14 Dec 2011; Agostino Sarubbo <ago@gentoo.org> votca-csgapps-1.2.1.ebuild:
+  Stable for AMD64, wrt bug #389681
+
+  25 Aug 2011; Christoph Junghans <ottxor@gentoo.org> +metadata.xml:
+  initial commit

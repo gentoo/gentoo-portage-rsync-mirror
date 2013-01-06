@@ -1,0 +1,21 @@
+--- makefile	2010-10-05 18:01:14.000000000 +0200
++++ /tmp/makefile	2010-10-28 00:29:30.704714980 +0200
+@@ -1,7 +1,7 @@
+-CC = gcc
++CC ?= gcc
+ 
+-CFLAGS  = `pkg-config --cflags gtk+-2.0 gmodule-2.0`
+-LDFLAGS = `pkg-config --libs   gtk+-2.0 gmodule-2.0`
++CFLAGS  += `pkg-config --cflags gtk+-2.0 gmodule-2.0`
++LDFLAGS += `pkg-config --libs   gtk+-2.0 gmodule-2.0`
+ 
+ OBJECTS = sunlight.o callbacks.o
+ PROG    = gtk-sunlight
+@@ -10,7 +10,8 @@
+ 	$(CC) -o $@ $(OBJECTS) $(LDFLAGS)
+ 
+ install:
++	install -d -m 0755 $(DESTDIR)/usr/bin $(DESTDIR)/usr/share/icons
+	cp $(PROG) $(DESTDIR)/usr/bin/
+	cp -r sunlight $(DESTDIR)/usr/share/
+	cp -r applications $(DESTDIR)/usr/share/

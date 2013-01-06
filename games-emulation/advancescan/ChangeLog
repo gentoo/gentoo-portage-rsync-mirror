@@ -1,0 +1,27 @@
+# ChangeLog for games-emulation/advancescan
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancescan/ChangeLog,v 1.6 2012/10/24 10:57:46 ago Exp $
+
+  24 Oct 2012; Agostino Sarubbo <ago@gentoo.org> advancescan-1.14.ebuild:
+  Add ~amd64, wrt bug #439330
+
+  21 Nov 2009; Markus Meier <maekke@gentoo.org> advancescan-1.14.ebuild:
+  x86 stable, bug #288966
+
+*advancescan-1.14 (27 May 2009)
+
+  27 May 2009; Tristan Heaven <nyhm@gentoo.org> +advancescan-1.14.ebuild,
+  +files/advancescan-1.14-sys-expat.patch:
+  Version bump
+
+  10 Jun 2007; Tristan Heaven <nyhm@gentoo.org> advancescan-1.13.ebuild:
+  Fix collision with sys-apps/coreutils
+
+  08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
+  Regenerate digest in Manifest2 format.
+
+*advancescan-1.13 (25 Mar 2005)
+
+  25 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +advancescan-1.13.ebuild:
+  initial commit for bug #68430

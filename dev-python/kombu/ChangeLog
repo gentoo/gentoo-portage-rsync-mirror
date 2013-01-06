@@ -1,0 +1,73 @@
+# ChangeLog for dev-python/kombu
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.13 2012/12/10 12:20:04 idella4 Exp $
+
+  11 Dec 2012; Ian Delaney <idella4@gentoo.org> kombu-2.4.10.ebuild:
+  Improved 'variation on the theme' to build docs avoiding use of die with
+  python3, prompted by Arfrever wrt initial Bug #445688
+
+  09 Dec 2012; Ian Delaney <idella4@gentoo.org> kombu-2.4.10.ebuild:
+  USE doc with python3 set to die due to inability of py3 to build docs, fixed
+  build of docs with py2, fixes bug #No. 445688 by flameeyes
+
+*kombu-2.4.10 (29 Nov 2012)
+
+  29 Nov 2012; Patrick Lauer <patrick@gentoo.org> +kombu-2.4.10.ebuild:
+  Bump
+
+*kombu-2.4.9 (26 Nov 2012)
+
+  26 Nov 2012; Corentin Chary <iksaif@gentoo.org> +kombu-2.4.9.ebuild,
+  -kombu-2.4.5.ebuild, -kombu-2.4.7.ebuild:
+  bump to 2.4.9
+
+*kombu-2.4.8 (13 Nov 2012)
+
+  13 Nov 2012; Patrick Lauer <patrick@gentoo.org> +kombu-2.4.8.ebuild:
+  Bump
+
+*kombu-2.4.7 (28 Sep 2012)
+
+  28 Sep 2012; Corentin Chary <iksaif@gentoo.org> +kombu-2.4.7.ebuild,
+  -kombu-2.3.2.ebuild, -kombu-2.4.3.ebuild:
+  Bump to 2.4.7.
+
+*kombu-2.4.5 (31 Aug 2012)
+
+  31 Aug 2012; Corentin Chary <iksaif@gentoo.org> +kombu-2.4.5.ebuild:
+  Bump to 2.4.5.
+
+*kombu-2.4.3 (30 Aug 2012)
+
+  30 Aug 2012; Corentin Chary <iksaif@gentoo.org> +kombu-2.4.3.ebuild,
+  -kombu-2.3.0.ebuild:
+  Bump to 2.4.3.
+
+*kombu-2.3.2 (14 Aug 2012)
+
+  14 Aug 2012; Corentin Chary <iksaif@gentoo.org> +kombu-2.3.2.ebuild,
+  -kombu-2.2.0.ebuild, -kombu-2.2.6.ebuild:
+  Bump to 2.3.2, remove old versions.
+
+*kombu-2.3.0 (29 Jul 2012)
+
+  29 Jul 2012; Corentin Chary <iksaif@gentoo.org> +kombu-2.3.0.ebuild:
+  Bump to 2.3.0
+
+*kombu-2.2.6 (17 Jul 2012)
+
+  17 Jul 2012; Corentin Chary <iksaif@gentoo.org> +kombu-2.2.6.ebuild,
+  -kombu-2.1.8.ebuild, metadata.xml:
+  kombu 2.2.6 version bump.
+
+*kombu-2.2.0 (29 Jun 2012)
+
+  29 Jun 2012; Corentin Chary <iksaif@gentoo.org> +kombu-2.2.0.ebuild:
+  Bump to 2.2.0. Closes #422723. Patch from Ian Delaney.
+
+*kombu-2.1.8 (30 May 2012)
+
+  30 May 2012; Corentin Chary <iksaif@gentoo.org>
+  +files/kombu-2.1.1-add-assertIsInstance-with-unittest.patch,
+  +kombu-2.1.8.ebuild, +metadata.xml:
+  New ebuild for kombu.

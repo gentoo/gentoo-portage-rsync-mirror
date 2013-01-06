@@ -1,0 +1,240 @@
+# ChangeLog for www-servers/varnish
+# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.53 2012/11/22 20:54:53 blueness Exp $
+
+  22 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
+  +files/varnish-3.0.3-pthread-uclibc.patch, varnish-3.0.3.ebuild:
+  Fix build on uclibc, bug #444294
+
+*varnish-3.0.3 (23 Aug 2012)
+
+  23 Aug 2012; Anthony G. Basile <blueness@gentoo.org> +varnish-3.0.3.ebuild,
+  +files/varnish-3.0.3-automagic.patch:
+  Version bump
+
+  11 Jul 2012; Anthony G. Basile <blueness@gentoo.org> varnish-2.0.4-r1.ebuild,
+  varnish-3.0.2-r1.ebuild:
+  Add GPL-2 for init scripts, bug #426184
+
+  11 Jul 2012; Anthony G. Basile <blueness@gentoo.org> varnish-3.0.2-r1.ebuild:
+  Keyword ~mips
+
+  15 Jun 2012; Agostino Sarubbo <ago@gentoo.org> varnish-3.0.2-r1.ebuild:
+  Stable for amd64, wrt bug #421205
+
+  15 Jun 2012; Jeff Horelick <jdhore@gentoo.org> varnish-3.0.2-r1.ebuild:
+  marked x86 per bug 421205
+
+  21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> varnish-2.0.4-r1.ebuild:
+  Add missing inheritance of eutils.eclass
+
+  02 May 2012; Jeff Horelick <jdhore@gentoo.org> varnish-3.0.2-r1.ebuild:
+  dev-util/pkgconfig -> virtual/pkgconfig
+
+  24 Mar 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Adopt package
+
+  21 Mar 2012; Pacho Ramos <pacho@gentoo.org> -varnish-2.1.5.ebuild,
+  -varnish-3.0.1.ebuild, -varnish-3.0.2.ebuild, metadata.xml:
+  Drop www-server herd as discussed in gentoo-dev ML. Drop old.
+
+*varnish-3.0.2-r1 (14 Dec 2011)
+
+  14 Dec 2011; Tim Harder <radhermit@gentoo.org> +varnish-3.0.2-r1.ebuild,
+  +files/varnish-3.0.2-automagic.patch, metadata.xml:
+  Revbump to fix automagic dependencies. Add libedit and tools use flags.
+
+  14 Dec 2011; Tim Harder <radhermit@gentoo.org> varnish-2.1.5.ebuild,
+  varnish-3.0.1.ebuild, varnish-3.0.2.ebuild:
+  Add missing libpcre rdep.
+
+  14 Dec 2011; Tim Harder <radhermit@gentoo.org> varnish-2.1.5.ebuild,
+  varnish-3.0.1.ebuild, varnish-3.0.2.ebuild:
+  Add pkgconfig build dep (bug #394713).
+
+  14 Dec 2011; Tim Harder <radhermit@gentoo.org> -varnish-2.0.6.ebuild,
+  -varnish-2.1.3.ebuild, -varnish-2.1.4.ebuild, -varnish-3.0.0.ebuild:
+  Remove old.
+
+  28 Nov 2011; Tim Harder <radhermit@gentoo.org> varnish-3.0.2.ebuild:
+  Fix autotools-utils usage (bug #392131).
+
+*varnish-3.0.2 (05 Nov 2011)
+
+  05 Nov 2011; Tim Harder <radhermit@gentoo.org> +varnish-3.0.2.ebuild:
+  Version bump.
+
+*varnish-3.0.1 (02 Sep 2011)
+
+  02 Sep 2011; Tim Harder <radhermit@gentoo.org> +varnish-3.0.1.ebuild:
+  Version bump. Add static-libs USE flag.
+
+*varnish-3.0.0 (30 Jul 2011)
+
+  30 Jul 2011; Patrick Lauer <patrick@gentoo.org> +varnish-3.0.0.ebuild:
+  Bump for #372281
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118937
+
+*varnish-2.1.5 (28 Jan 2011)
+
+  28 Jan 2011; Thilo Bangert <bangert@gentoo.org> +varnish-2.1.5.ebuild:
+  version bump
+
+*varnish-2.1.4 (21 Oct 2010)
+
+  21 Oct 2010; Thilo Bangert <bangert@gentoo.org> +varnish-2.1.4.ebuild,
+  +files/varnish-2.1.4-find-rst2man.py.patch,
+  +files/varnish-2.1.4-virtual-ncsa.patch:
+  version bump (#313377)
+
+*varnish-2.1.3 (21 Oct 2010)
+
+  21 Oct 2010; Thilo Bangert <bangert@gentoo.org> +varnish-2.1.3.ebuild:
+  version bump (#313377)
+
+  09 Aug 2010; Thilo Bangert <bangert@gentoo.org> -varnish-2.0.4.ebuild,
+  varnish-2.0.4-r1.ebuild, -varnish-2.0.5.ebuild, varnish-2.0.6.ebuild:
+  remove old ebuilds - RESTRICT=test (#315725)
+
+*varnish-2.0.6 (13 Apr 2010)
+
+  13 Apr 2010; Thilo Bangert <bangert@gentoo.org> +varnish-2.0.6.ebuild:
+  version bump
+
+*varnish-2.0.5 (20 Nov 2009)
+
+  20 Nov 2009; Thilo Bangert <bangert@gentoo.org> +varnish-2.0.5.ebuild:
+  version bump
+
+  07 Oct 2009; Benedikt Böhm <hollow@gentoo.org> varnish-2.0.4-r1.ebuild:
+  stable on amd64
+
+  06 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  varnish-2.0.4-r1.ebuild:
+  stable x86, bug 283211
+
+  30 Aug 2009; Benedikt Böhm <hollow@gentoo.org> varnish-2.0.4-r1.ebuild,
+  files/varnishd.initd:
+  make HTTP_HDR_MAX_VAL configurable in case broken webapps set more than 32
+  headers; only start varnishncsa logging if desired
+
+*varnish-2.0.4-r1 (12 Jul 2009)
+
+  12 Jul 2009; Thilo Bangert <bangert@gentoo.org> +varnish-2.0.4-r1.ebuild,
+  files/varnishd.confd, files/varnishd.initd, +files/varnishd.logrotate:
+  implement logging (bug #270597)
+
+  11 Jun 2009; Benedikt Böhm <hollow@gentoo.org>
+  +files/varnish-2.0.4-virtual-ncsa.patch, varnish-2.0.4.ebuild:
+  support virtual host log format in varnishncsa (upstream #485)
+
+  18 Apr 2009; Thilo Bangert <bangert@gentoo.org> -varnish-2.0.2.ebuild,
+  -varnish-2.0.3.ebuild:
+  remove old versions
+
+*varnish-2.0.4 (13 Apr 2009)
+
+  13 Apr 2009; Thilo Bangert <bangert@gentoo.org>
+  +files/varnish-2.0.4-link-order.patch, +varnish-2.0.4.ebuild:
+  version bump - fix build with --as-needed (bug #248488)
+
+  19 Feb 2009; Dawid Węgliński <cla@gentoo.org> varnish-2.0.3.ebuild:
+  Keywording ~amd64
+  
+  > Hi, i'm using www-servers/varnish for some time in a production
+  > environment here, and it works fine. Can i keyword it ~amd64?
+  
+  sure! thanks for your feedback.
+
+*varnish-2.0.3 (12 Feb 2009)
+
+  12 Feb 2009; Thilo Bangert <bangert@gentoo.org> +varnish-2.0.3.ebuild:
+  version bump
+
+  27 Jan 2009; Thilo Bangert <bangert@gentoo.org>
+  -files/varnish-2.0.1-fix-ESI-coredump.diff, -varnish-1.1.2.ebuild,
+  -varnish-2.0.1-r1.ebuild:
+  remove old versions
+
+*varnish-2.0.2 (14 Nov 2008)
+
+  14 Nov 2008; Thilo Bangert <bangert@gentoo.org> +varnish-2.0.2.ebuild:
+  version bump
+
+  23 Oct 2008; Thilo Bangert <bangert@gentoo.org> -varnish-1.0.4.ebuild,
+  -varnish-1.1.1.ebuild:
+  remove old versions
+
+*varnish-2.0.1-r1 (23 Oct 2008)
+
+  23 Oct 2008; Thilo Bangert <bangert@gentoo.org>
+  +files/varnish-2.0.1-fix-ESI-coredump.diff, -varnish-2.0.1.ebuild,
+  +varnish-2.0.1-r1.ebuild:
+  add ESI core dump fix - dont use default src_compile
+
+*varnish-2.0.1 (22 Oct 2008)
+
+  22 Oct 2008; Thilo Bangert <bangert@gentoo.org> +varnish-2.0.1.ebuild:
+  version bump
+
+  10 Mar 2008; Thilo Bangert <bangert@gentoo.org> files/varnishd.initd:
+  allow varnish to lock the logfile to memory - the next version of varnish
+  will require this. Add RDEPEND on gcc - varnish compiles vcl into c code. 
+
+  21 Dec 2007; Thilo Bangert <bangert@gentoo.org>
+  -files/varnish-1.1-build-DESTDIR.patch, varnish-1.0.4.ebuild,
+  -varnish-1.1.ebuild, varnish-1.1.1.ebuild:
+  remove old version - fix quoting
+
+*varnish-1.1.2 (21 Dec 2007)
+
+  21 Dec 2007; Thilo Bangert <bangert@gentoo.org> +varnish-1.1.2.ebuild:
+  version bump
+
+*varnish-1.1.1 (21 Aug 2007)
+
+  21 Aug 2007; Thilo Bangert <bangert@gentoo.org> +varnish-1.1.1.ebuild:
+  version bump
+
+*varnish-1.1 (02 Aug 2007)
+
+  02 Aug 2007; Thilo Bangert <bangert@gentoo.org>
+  +files/varnish-1.1-build-DESTDIR.patch, +varnish-1.1.ebuild:
+  version bump
+
+  11 Jun 2007; Thilo Bangert <bangert@gentoo.org> files/varnishd.initd,
+  -varnish-1.0.3.ebuild:
+  remove old version - init script creates a pidfile
+
+*varnish-1.0.4 (21 May 2007)
+
+  21 May 2007; Thilo Bangert <bangert@gentoo.org> +varnish-1.0.4.ebuild:
+  version bump
+
+  19 May 2007; Thilo Bangert <bangert@gentoo.org> files/varnishd.initd:
+  fix stop in init script
+
+  02 Mar 2007; Thilo Bangert <bangert@gentoo.org> files/varnishd.initd:
+  fix path to varnishd (moved to sbin)
+
+  22 Feb 2007; Thilo Bangert <bangert@gentoo.org> -varnish-1.0.1.ebuild:
+  punt old version
+
+  22 Feb 2007; Thilo Bangert <bangert@gentoo.org> varnish-1.0.3.ebuild:
+  einfo -> elog
+
+*varnish-1.0.3 (20 Feb 2007)
+
+  20 Feb 2007; Thilo Bangert <bangert@gentoo.org> +varnish-1.0.3.ebuild:
+  version bump
+
+  10 Dec 2006; Elfyn McBratney <beu@gentoo.org> varnish-1.0.1.ebuild:
+  Kill redundant *DEPEND on sys-libs/ncurses.
+
+*varnish-1.0.1 (19 Oct 2006)
+
+  19 Oct 2006; Thilo Bangert <bangert@gentoo.org> +files/varnishd.confd,
+  +files/varnishd.initd, +metadata.xml, +varnish-1.0.1.ebuild:
+  varnish - Varnish is an HTTP accelerator. aka a better squid
