@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.0.ebuild,v 1.15 2012/12/31 13:01:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.1.0.ebuild,v 1.16 2013/01/06 19:20:12 idella4 Exp $
 
 EAPI="3"
 

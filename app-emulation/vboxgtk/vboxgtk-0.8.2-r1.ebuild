@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/vboxgtk-0.8.2-r1.ebuild,v 1.3 2013/01/06 18:13:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vboxgtk/vboxgtk-0.8.2-r1.ebuild,v 1.4 2013/01/06 19:03:54 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -20,8 +20,7 @@ RDEPEND="
 	|| ( >=app-emulation/virtualbox-4.2.0[-headless,python,sdk]
 		>=app-emulation/virtualbox-bin-4.2.0[python] )
 	dev-python/pygobject:3
-	x11-libs/gtk+:3[introspection]
-	virtual/python-argparse[${PYTHON_USEDEP}]"
+	x11-libs/gtk+:3[introspection]"
 DEPEND="dev-util/intltool
 	sys-devel/gettext"
 

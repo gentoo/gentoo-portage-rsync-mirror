@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libnova
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/ChangeLog,v 1.17 2012/08/03 19:30:14 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/ChangeLog,v 1.18 2013/01/06 19:10:18 bicatali Exp $
+
+  06 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org> libnova-0.15.0.ebuild:
+  fixed for doc building, bug #450542
 
   03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> libnova-0.15.0.ebuild:
   Keyword amd64-linux x86-linux

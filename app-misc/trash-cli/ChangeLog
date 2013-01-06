@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/trash-cli
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/ChangeLog,v 1.14 2013/01/06 18:14:22 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/ChangeLog,v 1.15 2013/01/06 19:04:26 hasufell Exp $
+
+  06 Jan 2013; Julian Ospald <hasufell@gentoo.org>
+  trash-cli-0.12.9.14-r2.ebuild:
+  remove obsolete deps
 
   06 Jan 2013; Julian Ospald <hasufell@gentoo.org>
   trash-cli-0.12.9.14-r2.ebuild:
@@ -59,4 +63,3 @@
   10 May 2012; Julian Ospald <hasufell@gentoo.org> +trash-cli-0.12.4.ebuild,
   +metadata.xml:
   initial import wrt #238831
-

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14350 2013/01/06 18:45:21 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14351 2013/01/06 19:24:01 maksbotan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexander Vershilov <qnikst@gentoo.org> (06 Jan 2013)
+# Requires >=net-fs/samba-4 (bug #450226)
+>=sys-auth/sssd-1.9.3
 
 # Jeroen Roovers <jer@gentoo.org> (06 Jan 2013)
 # bug #450504
@@ -758,10 +762,6 @@ app-crypt/hmaccalc
 # Patrick Lauer <patrick@gentoo.org> (07 Apr 2010)
 # Keeping samba-4 masked until release.
 >net-fs/samba-4
-
-# Alexander Vershilov <qnikst@gentoo.org> (06 Jan 2013)
-# Require samba:4 (bug #450226)
->=sys-auth/sssd-1.9.3
 
 # Mike Frysinger <vapier@gentoo.org> (07 Mar 2010)
 # Very old packages that people should have upgraded away from

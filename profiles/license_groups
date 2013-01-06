@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.166 2013/01/05 07:35:39 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.167 2013/01/06 19:20:20 ulm Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -30,7 +30,7 @@ OSI-APPROVED AFL-3.0 AGPL-3 Apache-1.1 Apache-2.0 APL-1.0 APSL-2 Artistic Artist
 # TODO: maybe add a category for BSD-alike MISC-FREE licenses for easy
 # separation?
 # BSD-4 alikes: dom4j FastCGI icu JDOM
-MISC-FREE Allegro ANTLR bea.ri.jsr173 BEER-WARE boehm-gc BSD-1 BSD-with-attribution bufexplorer.vim BZIP2 CDDL-Schily CeCILL-C CMake CPL-0.5 CRACKLIB cryptopp czyborra DES docbook dom4j eGenixPublic-1.1 ElementTree Emacs ErlPL-1.1 FastCGI feh FLEX FLTK freemarker FVWM gd gnuplot gsm HTML-Tidy htmlc iASL IBPP-1.1 icu IDPL IJG imagemagick Info-ZIP inner-net ipadic Ispell JasPer2.0 JDOM JNIC JOVE libmng libpng libtiff LLGPL-2.1 LPPL-1.3 LPPL-1.3b lsof matplotlib md2k7-asyouwish MIT-with-advertising NCSA-HDF noweb openafs-krb5-a OpenSoftware Openwall otter PCRE perforce PHP-2.02 Princeton psutils pysqlite rc regexp-UofT RSA Scintilla Sendmail skype-4.0.0.7-third-party_attributions.txt SMAIL SNIA SSLeay Subversion SVFL tcltk tcp_wrappers_license TeX TeX-other-free w3m wxWinLL-3 x2x xboing Xdebug xtrs YaTeX zpaq ZSH
+MISC-FREE Allegro ANTLR bea.ri.jsr173 BEER-WARE boehm-gc BSD-1 BSD-with-attribution bufexplorer.vim BZIP2 CDDL-Schily CeCILL-C CMake CPL-0.5 CRACKLIB cryptopp czyborra DES docbook dom4j eGenixPublic-1.1 ElementTree Emacs ErlPL-1.1 FastCGI feh FLEX FLTK freemarker FVWM gd gnuplot gsm HTML-Tidy htmlc iASL IBPP-1.1 icu IDPL IJG imagemagick Info-ZIP inner-net ipadic Ispell JasPer2.0 JDOM JNIC JOVE libmng libpng libtiff LLGPL-2.1 LPPL-1.3 LPPL-1.3b lsof matplotlib md2k7-asyouwish MIT-with-advertising mpich2 NCSA-HDF noweb openafs-krb5-a OpenSoftware Openwall otter PCRE perforce PHP-2.02 Princeton psutils pysqlite rc regexp-UofT RSA Scintilla Sendmail skype-4.0.0.7-third-party_attributions.txt SMAIL SNIA SSLeay Subversion SVFL tcltk tcp_wrappers_license TeX TeX-other-free w3m wxWinLL-3 x2x xboing Xdebug xtrs YaTeX zpaq ZSH
 # The following are NOT valid in @MISC-FREE:
 # arj - usage restrictions
 # freedist - Doesn't grant the right to do modifications.

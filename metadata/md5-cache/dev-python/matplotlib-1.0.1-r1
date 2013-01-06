@@ -10,4 +10,4 @@ RDEPEND=dev-python/numpy dev-python/python-dateutil dev-python/pytz media-libs/f
 SLOT=0
 SRC_URI=mirror://sourceforge/matplotlib/matplotlib-1.0.1.tar.gz doc? ( mirror://gentoo/matplotlib-sampledata.tar.bz2 ) examples? ( mirror://gentoo/matplotlib-sampledata.tar.bz2 )
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=cc31d12fbd3293677d197d02f6f71f60
+_md5_=245f6c4aa9f34067a469504017e48757

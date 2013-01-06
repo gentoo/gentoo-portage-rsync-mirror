@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbox-cli
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox-cli/ChangeLog,v 1.6 2013/01/06 18:17:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox-cli/ChangeLog,v 1.7 2013/01/06 19:05:29 hasufell Exp $
+
+  06 Jan 2013; Julian Ospald <hasufell@gentoo.org> dropbox-cli-1-r1.ebuild:
+  remove obsolete deps
 
   06 Jan 2013; Julian Ospald <hasufell@gentoo.org> dropbox-cli-1-r1.ebuild:
   fix argparse dep
@@ -24,4 +27,3 @@
   09 Jun 2012; Julian Ospald <hasufell@gentoo.org> +dropbox-cli-1.ebuild,
   +metadata.xml:
   initial import
-

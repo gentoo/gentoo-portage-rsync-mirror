@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.12.ebuild,v 1.3 2012/12/31 12:58:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.12.ebuild,v 1.4 2013/01/06 19:26:45 mgorny Exp $
 
 EAPI="4"
 
@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-python/gevent
 		>=dev-python/mock-0.7.0
-		>=dev-python/unittest2-0.4.0
+		virtual/python-unittest2
 		dev-python/pyopenssl
 		dev-python/nose-cover3
 		dev-python/sqlalchemy

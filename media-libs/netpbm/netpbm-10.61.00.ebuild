@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.61.00.ebuild,v 1.1 2013/01/06 02:00:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.61.00.ebuild,v 1.2 2013/01/06 19:16:58 vapier Exp $
 
 EAPI="4"
 
@@ -60,6 +60,21 @@ src_prepare() {
 	sed -i '/SUPPORT_SUBDIRS/s:urt::' GNUmakefile || die
 	rm -rf urt
 
+	# disable certain tests based on active USE flags
+	local del=(
+		$(usex rle '' utahrle-roundtrip)
+	)
+	if [[ ${#del[@]} -gt 0 ]] ; then
+		sed -i -r $(printf -- ' -e /%s.test/d' "${del[@]}") test/Test-Order || die
+	fi
+	del=(
+		pnmtofiasco # We always disable fiasco
+		$(usex rle '' 'pnmtorle rletopnm')
+	)
+	if [[ ${#del[@]} -gt 0 ]] ; then
+		sed -i -r $(printf -- ' -e s/\<%s\>(:.ok)?//' "${del[@]}") test/all-in-place.{ok,test} || die
+	fi
+
 	# take care of the importinc stuff ourselves by only doing it once
 	# at the top level and having all subdirs use that one set #149843
 	sed -i \
@@ -79,6 +94,10 @@ src_configure() {
 	# Misc crap
 	BUILD_FIASCO = N
 	SYMLINK = ln -sf
+
+	# These vars let src_test work by default
+	PKGDIR_DEFAULT = ${T}/netpbm
+	RESULTDIR_DEFAULT = ${T}/netpbm-test
 
 	# Toolchain options
 	CC = $(tc-getCC) -Wall
@@ -125,6 +144,12 @@ src_configure() {
 src_compile() {
 	emake -j1 pm_config.h version.h manual_importinc #149843
 	emake
+}
+
+src_test() {
+	# The code wants to install everything first and then test the result.
+	emake install.bin
+	emake check
 }
 
 src_install() {

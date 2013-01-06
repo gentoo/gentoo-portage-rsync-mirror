@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r1.ebuild,v 1.2 2012/12/31 13:01:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r1.ebuild,v 1.3 2013/01/06 19:20:12 idella4 Exp $
 
 EAPI="3"
 
@@ -106,7 +106,6 @@ src_prepare() {
 		$(use_setup wxwidgets wx)
 	EOF
 	distutils_src_prepare
-
 	SetSetup() {
 		if [[ "$(python_get_version  --major)" == '3' ]]; then
 			sed -e 's:^gtk = True:gtk = False:' \
@@ -114,10 +113,8 @@ src_prepare() {
 				-e 's:^wx = True:wx = False:' \
 				-e 's:^wxagg = True:wxagg = False:' \
 				-e 's:^six = False:six = True:' \
-				-i setup.cfg || die "deaded"
+				-i setup.cfg || die 
 		fi
-	}
-	python_execute_function -q -s SetSetup
 
 	# avoid checks needing a X display
 	epatch "${FILESDIR}"/${P}-setup.patch
@@ -131,40 +128,35 @@ src_prepare() {
 		lib/matplotlib/{mathtext,fontconfig_pattern}.py \
 		|| die "sed pyparsing failed"
 
-	DocCheck() {
-	if [[ "$(python_get_version  --major)" == '3' ]] && use doc; then
-		eerror ""
-		eerror "Building of docs with python3 currently **FAILS**"
-		eerror "Docs can be built effectively with python2."
-		eerror "eselect python2 and recommence emerge "
-		eerror ""
-		die
-	fi
 	}
-	python_execute_function DocCheck
+	python_execute_function -q -s SetSetup
 }
 
 src_compile() {
 	unset DISPLAY # bug #278524
 	distutils_src_compile
-	if use doc; then
-		pushd doc > /dev/null
-		VARTEXFONTS="${T}"/fonts \
-			PYTHONPATH=$(ls -d "${S}"/build-$(PYTHON -f --ABI)/lib*) \
-			./make.py --small all
-		[[ -e build/latex/Matplotlib.pdf ]] || die "doc generation failed"
-		popd > /dev/null
-	fi
+	buildDocs() {
+		if [[ "$(python_get_version  --major)" == '2' ]]; then
+			pushd doc > /dev/null
+			VARTEXFONTS="${T}"/fonts \
+				PYTHONPATH=$(ls -d "${WORKDIR}"/${P}-${PYTHON_ABI}/build/lib.linux*-${PYTHON_ABI}/) \
+				$(PYTHON) ./make.py --small all
+			[[ -e build/latex/Matplotlib.pdf ]] || die "doc generation failed"
+			popd > /dev/null
+		fi
+	}
+	use doc && python_execute_function buildDocs
 }
 
 src_test() {
 	# if doc was enabled, all examples were built and tested
 	use doc && return
 	testing() {
+		mkdir test-${PYTHON_ABI}
 		"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install \
-			--home="${S}/test-${PYTHON_ABI}" --no-compile \
+			--home="./test-${PYTHON_ABI}" --no-compile \
 			|| die "install test failed"
-		pushd "${S}/test-${PYTHON_ABI}/"lib* > /dev/null
+		pushd test-${PYTHON_ABI}/lib/ > /dev/null
 		PYTHONPATH=python \
 			"$(PYTHON)" -c "import matplotlib as m; m.test(verbosity=2)" \
 			2>&1 | tee test.log
@@ -172,7 +164,7 @@ src_test() {
 		popd > /dev/null
 		rm -r test-${PYTHON_ABI}
 	}
-	python_execute_function testing
+	python_execute_function -s testing
 }
 
 src_install() {

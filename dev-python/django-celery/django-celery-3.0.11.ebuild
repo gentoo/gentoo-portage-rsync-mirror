@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/django-celery-3.0.11.ebuild,v 1.1 2012/10/25 10:59:48 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-celery/django-celery-3.0.11.ebuild,v 1.2 2013/01/06 19:28:37 mgorny Exp $
 
 EAPI="4"
 PYTHON_COMPAT="python2_7"
@@ -21,7 +21,7 @@ RDEPEND=">=dev-python/celery-3.0.11
 	dev-python/pytz"
 DEPEND="${RDEPEND}
 	test? (
-		>=dev-python/unittest2-0.4.0
+		virtual/python-unittest2
 		dev-python/django-nose
 		dev-python/nose-cover3
 		dev-python/python-memcached
