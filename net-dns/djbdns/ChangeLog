@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.136 2013/01/05 23:03:04 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.137 2013/01/06 09:32:03 pinkbyte Exp $
+
+  06 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Correct maintainer's order, add description, wrt bug #413787
 
   05 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> djbdns-1.05-r23.ebuild,
   djbdns-1.05-r24.ebuild, djbdns-1.05-r25.ebuild, djbdns-1.05-r26.ebuild:

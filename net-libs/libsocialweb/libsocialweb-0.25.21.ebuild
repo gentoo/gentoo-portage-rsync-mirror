@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.21.ebuild,v 1.6 2013/01/01 14:47:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.21.ebuild,v 1.7 2013/01/06 10:00:42 ago Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ HOMEPAGE="http://git.gnome.org/browse/libsocialweb"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="connman +gnome +introspection +networkmanager vala"
 
 # NOTE: coverage testing should not be enabled

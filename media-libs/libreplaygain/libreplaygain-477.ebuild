@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/libreplaygain-477.ebuild,v 1.9 2013/01/01 12:24:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/libreplaygain-477.ebuild,v 1.10 2013/01/06 09:51:00 ago Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 src_prepare() {

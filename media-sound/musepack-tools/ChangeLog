@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.63 2013/01/01 12:30:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.64 2013/01/06 09:56:37 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> musepack-tools-465.ebuild:
+  Add ~sparc, wrt bug #449220
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> musepack-tools-465.ebuild:
   Add ~ia64, wrt bug #449220

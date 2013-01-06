@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/liboauth-0.9.7.ebuild,v 1.5 2013/01/01 14:47:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/liboauth-0.9.7.ebuild,v 1.6 2013/01/06 10:00:22 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="|| ( GPL-2 MIT )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x64-macos"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x64-macos"
 IUSE="curl doc bindist +nss"
 
 REQUIRED_USE="bindist? ( nss )"

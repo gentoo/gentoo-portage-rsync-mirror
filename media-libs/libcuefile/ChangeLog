@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcuefile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.34 2013/01/01 12:22:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.35 2013/01/06 09:49:41 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libcuefile-477.ebuild:
+  Add ~sparc, wrt bug #449220
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libcuefile-477.ebuild:
   Add ~ia64, wrt bug #449220

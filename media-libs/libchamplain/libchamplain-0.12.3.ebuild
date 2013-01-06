@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.3.ebuild,v 1.9 2013/01/01 14:39:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.3.ebuild,v 1.10 2013/01/06 09:49:21 ago Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -13,7 +13,7 @@ HOMEPAGE="http://projects.gnome.org/libchamplain/"
 
 SLOT="0.12"
 LICENSE="LGPL-2"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="debug +gtk +introspection vala"
 
 REQUIRED_USE="vala? ( introspection )"

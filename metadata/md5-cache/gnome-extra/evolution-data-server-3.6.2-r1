@@ -4,7 +4,7 @@ DESCRIPTION=Evolution groupware backend
 EAPI=5
 HOMEPAGE=http://projects.gnome.org/evolution/
 IUSE=api-doc-extras +gnome-online-accounts +introspection ipv6 ldap kerberos vala +weather test
-KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris
+KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris
 LICENSE=|| ( LGPL-2 LGPL-3 ) BSD Sleepycat
 RDEPEND=>=dev-libs/glib-2.32:2 >=x11-libs/gtk+-3.2:3 >=dev-db/sqlite-3.5:= >=dev-libs/libgdata-0.10:= >=gnome-base/gnome-keyring-2.20.1 >=dev-libs/libical-0.43:= >=net-libs/libsoup-2.38.1:2.4 >=dev-libs/libxml2-2 >=sys-libs/db-4:= >=dev-libs/nspr-4.4:= >=dev-libs/nss-3.9:= >=app-crypt/gcr-3.4 sys-libs/zlib:= virtual/libiconv gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.2 >=net-libs/liboauth-0.9.4 ) introspection? ( >=dev-libs/gobject-introspection-0.9.12 ) kerberos? ( virtual/krb5:= ) ldap? ( >=net-nds/openldap-2:= ) weather? ( >=dev-libs/libgweather-3.5:2= )
 REQUIRED_USE=vala? ( introspection )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0/40
 SRC_URI=mirror://gnome/sources/evolution-data-server/3.6/evolution-data-server-3.6.2.tar.xz http://dev.gentoo.org/~tetromino/distfiles/evolution-data-server/evolution-data-server-3.6.2-gentoo-patches.tar.xz
 _eclasses_=db-use	2f5d6a2718559b90a51648d8ff58be83	eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	61ad55e732e494378165e7dcd4744b91	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	18cda077fa5f661f96aa70c192b4b4a5	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vala	ad1e7234faa2244a7e10f1c864371475	versionator	6601b4c5b3f019a993db59a50e1854e4	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=048545abb827d8523fc90fbc06fc7a5a
+_md5_=fffc19bcb90cc715593b900d3448d60d

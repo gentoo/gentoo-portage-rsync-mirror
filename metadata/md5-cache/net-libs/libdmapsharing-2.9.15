@@ -3,9 +3,9 @@ DEPEND=dev-libs/glib:2 x11-libs/gdk-pixbuf:2 >=net-dns/avahi-0.6 >=net-libs/libs
 DESCRIPTION=A library that implements the DMAP family of protocols
 EAPI=4
 HOMEPAGE=http://www.flyn.org/projects/libdmapsharing
-KEYWORDS=~alpha amd64 ~ia64 ~ppc ~ppc64 x86
+KEYWORDS=~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86
 LICENSE=LGPL-2.1
 RDEPEND=dev-libs/glib:2 x11-libs/gdk-pixbuf:2 >=net-dns/avahi-0.6 >=net-libs/libsoup-2.32:2.4 >=media-libs/gstreamer-0.10:0.10 >=media-libs/gst-plugins-base-0.10.24:0.10 sys-libs/zlib
 SLOT=3.0
 SRC_URI=http://www.flyn.org/projects/libdmapsharing/libdmapsharing-2.9.15.tar.gz
-_md5_=9677e8398edc46ede2b89fffacc9f698
+_md5_=264021f613245aff4e0d44e9ff2786fe

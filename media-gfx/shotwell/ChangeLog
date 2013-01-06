@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.45 2013/01/01 14:37:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.46 2013/01/06 09:45:24 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> shotwell-0.13.1.ebuild:
+  Add ~sparc, wrt bug #449220
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> shotwell-0.13.1.ebuild:
   Add ~alpha, wrt bug #449220

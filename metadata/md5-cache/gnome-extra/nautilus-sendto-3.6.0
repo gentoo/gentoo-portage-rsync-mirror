@@ -4,10 +4,10 @@ DESCRIPTION=A nautilus extension for sending files to locations
 EAPI=5
 HOMEPAGE=http://www.gnome.org
 IUSE=cdr gajim +mail pidgin upnp-av debug
-KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86
+KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2+
 RDEPEND=>=x11-libs/gtk+-2.90.3:3[X(+)] >=dev-libs/glib-2.25.9:2 cdr? ( >=app-cdr/brasero-2.26[nautilus] ) gajim? ( net-im/gajim >=dev-libs/dbus-glib-0.60 ) mail? ( >=gnome-extra/evolution-data-server-3.5.3:= ) pidgin? ( >=net-im/pidgin-2 >=dev-libs/dbus-glib-0.60 ) upnp-av? ( >=net-libs/gupnp-0.13 ) >=gnome-base/nautilus-2.91.1[sendto]
 SLOT=0
 SRC_URI=mirror://gnome/sources/nautilus-sendto/3.6/nautilus-sendto-3.6.0.tar.xz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	18cda077fa5f661f96aa70c192b4b4a5	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=454e7583dbe51df6c0c1566d7e155302
+_md5_=1d1ac40748d171a7840ba2174dfe2931

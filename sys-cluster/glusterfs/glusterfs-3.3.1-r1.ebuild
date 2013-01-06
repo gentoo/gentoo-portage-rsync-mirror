@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.3.1.ebuild,v 1.2 2012/11/19 16:10:26 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.3.1-r1.ebuild,v 1.1 2013/01/06 09:52:54 xarthisius Exp $
 
 EAPI=4
 
@@ -45,6 +45,8 @@ pkg_setup() {
 src_prepare() {
 	sed -e "s/ -ggdb3//g" \
 		-i argp-standalone/configure.ac || die
+	sed -e "s:\$(PYTHON):${PREFIX}/usr/bin/python2:g" \
+		-i xlators/features/marker/utils/src/Makefile.am || die #446330
 	autotools-utils_src_prepare
 	cd argp-standalone && eautoreconf
 }

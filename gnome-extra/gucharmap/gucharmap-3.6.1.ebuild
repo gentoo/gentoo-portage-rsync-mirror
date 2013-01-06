@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-3.6.1.ebuild,v 1.4 2013/01/01 14:33:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-3.6.1.ebuild,v 1.5 2013/01/06 09:40:27 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -15,7 +15,7 @@ HOMEPAGE="http://live.gnome.org/Gucharmap"
 
 LICENSE="GPL-3"
 SLOT="2.90"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sh ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="cjk +introspection test vala"
 REQUIRED_USE="vala? ( introspection )"
 

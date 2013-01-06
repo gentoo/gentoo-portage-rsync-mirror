@@ -4,10 +4,10 @@ DESCRIPTION=Extensions to the engine such as Teamgeist, Relevancy Providers and 
 EAPI=4
 HOMEPAGE=https://launchpad.net/zeitgeist-extensions/
 IUSE=fts geolocation memprofile sqldebug tracker
-KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-3
 RDEPEND=fts? ( !gnome-extra/zeitgeist[fts] dev-libs/xapian-bindings[python] dev-python/dbus-python dev-python/pygobject dev-python/pyxdg ) geolocation? ( dev-python/dbus-python dev-python/python-geoclue ) memprofile? ( dev-python/dbus-python dev-python/pympler ) sqldebug? ( dev-python/python-sqlparse ) tracker? ( app-misc/tracker dev-python/pygobject dev-python/dbus-python ) =dev-lang/python-2* =dev-lang/python-2*[sqlite]
 SLOT=0
 SRC_URI=http://launchpad.net/zeitgeist-extensions/trunk/fts-0.0.13/+download/zeitgeist-extensions-0.0.13.tar.gz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=bae7195d38c5f5b6dbf88f85708f5184
+_md5_=a609afa076def7f7ed885a50e327dc70

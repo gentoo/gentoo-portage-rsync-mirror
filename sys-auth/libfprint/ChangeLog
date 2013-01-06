@@ -1,6 +1,15 @@
 # ChangeLog for sys-auth/libfprint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.15 2013/01/01 14:53:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.17 2013/01/06 09:51:45 xmw Exp $
+
+  06 Jan 2013; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Add bugs-to in metadata
+
+*libfprint-0.5.0 (06 Jan 2013)
+
+  06 Jan 2013; Michael Weber <xmw@gentoo.org> +libfprint-0.5.0.ebuild:
+  Version bump (thanks Matthias Blümel, bug 450274), new drivers aes1660,
+  aes2550, aes2660, vfs301. vcs-snapshot eclass.
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libfprint-0.4.0.ebuild:
   Add ~alpha, wrt bug #449220

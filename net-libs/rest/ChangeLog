@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.12 2013/01/01 12:43:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.13 2013/01/06 10:01:21 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> rest-0.7.90.ebuild:
+  Add ~sparc, wrt bug #449220
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> rest-0.7.90.ebuild:
   Add ~ia64, wrt bug #449220

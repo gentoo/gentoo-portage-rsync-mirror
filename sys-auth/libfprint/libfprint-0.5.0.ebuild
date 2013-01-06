@@ -1,0 +1,44 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.5.0.ebuild,v 1.1 2013/01/06 09:41:47 xmw Exp $
+
+EAPI=4
+
+inherit autotools udev vcs-snapshot
+
+MY_PV="v_${PV//./_}"
+DESCRIPTION="library to add support for consumer fingerprint readers"
+HOMEPAGE="http://cgit.freedesktop.org/libfprint/libfprint/"
+SRC_URI="http://cgit.freedesktop.org/${PN}/${PN}/snapshot/${MY_PV}.tar.bz2 -> ${P}.tar.bz2"
+
+LICENSE="LGPL-2.1"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+IUSE="debug static-libs"
+
+RDEPEND="virtual/libusb:1
+	dev-libs/nss
+	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] x11-libs/gdk-pixbuf )"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
+
+src_prepare() {
+	eautoreconf
+}
+
+src_configure() {
+	econf \
+		--with-drivers=all \
+		$(use_enable debug debug-log) \
+		$(use_enable static-libs static) \
+		--with-udev-rules \
+		--with-udev-rules-dir=$(udev_get_udevdir)/rules.d
+}
+
+src_install() {
+	emake DESTDIR="${D}" install
+
+	prune_libtool_files
+
+	dodoc AUTHORS HACKING NEWS README THANKS TODO
+}
