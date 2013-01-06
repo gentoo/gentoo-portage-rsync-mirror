@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/percona-toolkit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-toolkit/ChangeLog,v 1.2 2012/04/19 20:07:08 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-toolkit/ChangeLog,v 1.3 2013/01/06 21:33:36 robbat2 Exp $
+
+*percona-toolkit-2.1.7 (06 Jan 2013)
+
+  06 Jan 2013; Robin H. Johnson <robbat2@gentoo.org>
+  +percona-toolkit-2.1.7.ebuild:
+  Bump.
 
   19 Apr 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop idl0r from maintainers per request.
@@ -12,4 +18,3 @@
   Initial commit. Based on the maatkit package. The names of all of the binaries
   have changed, and the FNV/Murmur UDFs are no longer included by upstream. Due
   to these changes by upstream, this is not being done as a pkgmove.
-
