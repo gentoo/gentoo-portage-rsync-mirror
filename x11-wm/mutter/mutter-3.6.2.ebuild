@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.6.2.ebuild,v 1.6 2013/01/01 14:59:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.6.2.ebuild,v 1.7 2013/01/06 11:24:45 ago Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://git.gnome.org/browse/mutter/"
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE="+introspection test"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 COMMON_DEPEND=">=x11-libs/pango-1.2[X,introspection?]
 	>=x11-libs/cairo-1.10[X]

@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.48 2013/01/01 14:55:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.49 2013/01/06 11:10:30 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> open-iscsi-2.0.872-r1.ebuild:
+  Add ~sparc, wrt bug #449220
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> open-iscsi-2.0.872-r1.ebuild:
   Add ~alpha, wrt bug #449220

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.2.2.ebuild,v 1.5 2013/01/01 14:57:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.2.2.ebuild,v 1.6 2013/01/06 11:13:20 ago Exp $
 
 EAPI=4
 VALA_MIN_API_VERSION="0.16"
@@ -14,7 +14,7 @@ SRC_URI="http://fedorahosted.org/releases/${PN:0:1}/${PN:1:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+introspection +vala test"
 
 REQUIRED_USE="vala? ( introspection )"

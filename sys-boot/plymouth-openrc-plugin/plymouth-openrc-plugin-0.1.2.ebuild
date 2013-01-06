@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth-openrc-plugin/plymouth-openrc-plugin-0.1.2.ebuild,v 1.6 2013/01/01 14:55:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth-openrc-plugin/plymouth-openrc-plugin-0.1.2.ebuild,v 1.7 2013/01/06 11:11:09 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="
 http://dev.gentoo.org/~aidecoe/distfiles/${CATEGORY}/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 DEPEND=">=sys-apps/openrc-0.8.2-r1
 	!sys-apps/systemd

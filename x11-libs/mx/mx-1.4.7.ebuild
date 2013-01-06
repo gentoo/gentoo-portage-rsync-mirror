@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/mx-1.4.7.ebuild,v 1.3 2013/01/01 12:54:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/mx-1.4.7.ebuild,v 1.4 2013/01/06 11:20:31 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/downloads/clutter-project/${PN}/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="1.0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbus debug doc glade +gtk +introspection startup-notification"
 
 RDEPEND="
