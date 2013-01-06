@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbredir
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.24 2013/01/01 14:53:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.25 2013/01/06 10:08:56 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> usbredir-0.6.ebuild:
+  Add ~sparc, wrt bug #449220
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> usbredir-0.6.ebuild:
   Add ~alpha, wrt bug #449220

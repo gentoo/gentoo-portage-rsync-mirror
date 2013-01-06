@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.15.1.ebuild,v 1.8 2013/01/05 17:30:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.15.1.ebuild,v 1.9 2013/01/06 10:17:05 maekke Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -13,7 +13,7 @@ SRC_URI="http://kcat.strangesoft.net/openal-releases/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="alsa alstream coreaudio debug neon oss portaudio pulseaudio sse"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )

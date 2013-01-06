@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.5.0.ebuild,v 1.1 2013/01/06 09:41:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.5.0.ebuild,v 1.2 2013/01/06 10:04:42 xmw Exp $
 
 EAPI=4
 
-inherit autotools udev vcs-snapshot
+inherit autotools eutils udev vcs-snapshot
 
 MY_PV="v_${PV//./_}"
 DESCRIPTION="library to add support for consumer fingerprint readers"
@@ -31,8 +31,10 @@ src_configure() {
 		--with-drivers=all \
 		$(use_enable debug debug-log) \
 		$(use_enable static-libs static) \
-		--with-udev-rules \
+		-enable-udev-rules \
 		--with-udev-rules-dir=$(udev_get_udevdir)/rules.d
+	# --disable-udev-rules fails https://bugs.freedesktop.org/show_bug.cgi?id=59076	
+	# $(use_enable udev udev-rules) \
 }
 
 src_install() {

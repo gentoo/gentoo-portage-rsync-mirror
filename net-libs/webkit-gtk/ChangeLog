@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/webkit-gtk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.191 2013/01/01 19:45:08 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.192 2013/01/06 10:02:11 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> webkit-gtk-1.10.2-r300.ebuild:
+  Add ~sparc, wrt bug #449220
 
   01 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   webkit-gtk-1.8.3-r200.ebuild, webkit-gtk-1.8.3-r300.ebuild:

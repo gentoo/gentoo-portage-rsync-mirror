@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/wimax-1.5.2-r1.ebuild,v 1.10 2013/01/01 14:51:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/wimax-1.5.2-r1.ebuild,v 1.11 2013/01/06 10:06:14 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.linuxwimax.org/Download?action=AttachFile&do=get&target=${P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc x86"
 IUSE="static-libs"
 
 DEPEND="dev-libs/libnl:1.1

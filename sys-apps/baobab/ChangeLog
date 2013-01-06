@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/baobab
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baobab/ChangeLog,v 1.4 2012/12/27 08:02:40 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baobab/ChangeLog,v 1.5 2013/01/06 10:08:17 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> baobab-3.6.3.ebuild:
+  Add ~sparc, wrt bug #449220
 
   27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org> baobab-3.6.3.ebuild:
   Drop sparc keyword, need to have gtk+-3.6 keyworded.
@@ -20,4 +23,3 @@
   +baobab-3.4.1.ebuild, +metadata.xml:
   New separate gnome disk usage viewer package, formerly part of
   gnome-extra/gnome-utils.
-

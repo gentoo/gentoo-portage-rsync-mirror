@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.156 2013/01/01 14:48:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.157 2013/01/06 10:03:19 ago Exp $
+
+  06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> networkmanager-0.9.6.4.ebuild:
+  Add ~sparc, wrt bug #449220
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> networkmanager-0.9.6.4.ebuild:
   Add ~alpha, wrt bug #449220
