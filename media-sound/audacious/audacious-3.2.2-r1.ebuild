@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.2.2-r1.ebuild,v 1.8 2012/08/22 14:37:14 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.2.2-r1.ebuild,v 1.9 2013/01/06 20:53:19 jdhore Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	chardet? ( >=app-i18n/libguess-1.1 )
 	nls? ( dev-util/intltool )"
 
-PDEPEND=">=media-plugins/audacious-plugins-3.2.2-r1"
+PDEPEND="~media-plugins/audacious-plugins-3.2.2"
 REQUIRED_USE="^^ ( gtk gtk3 )"
 
 src_prepare() {

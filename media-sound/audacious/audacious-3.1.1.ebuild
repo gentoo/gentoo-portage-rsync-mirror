@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.1.1.ebuild,v 1.5 2012/05/05 08:11:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.1.1.ebuild,v 1.6 2013/01/06 20:53:19 jdhore Exp $
 
 EAPI=4
 inherit eutils
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 	chardet? ( >=app-i18n/libguess-1.1 )
 	nls? ( dev-util/intltool )"
 
-PDEPEND=">=media-plugins/audacious-plugins-3.1.1"
+PDEPEND="~media-plugins/audacious-plugins-3.1.1"
 
 src_configure() {
 	# Some gccs don't like "-z defs" on their command line. Explicitly make it a

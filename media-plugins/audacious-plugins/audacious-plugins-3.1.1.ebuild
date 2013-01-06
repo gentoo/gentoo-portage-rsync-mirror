@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.1.1.ebuild,v 1.5 2012/05/16 13:05:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.1.1.ebuild,v 1.6 2013/01/06 20:54:46 jdhore Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2:2
 	media-libs/libmodplug
-	>=media-sound/audacious-3.1.1
+	~media-sound/audacious-3.1.1
 	>=net-libs/neon-0.26.4
 	x11-libs/gtk+:3
 	aac? ( >=media-libs/faad2-2.7 )

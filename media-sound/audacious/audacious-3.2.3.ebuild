@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.2.3.ebuild,v 1.3 2012/06/10 18:40:59 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.2.3.ebuild,v 1.4 2013/01/06 20:53:19 jdhore Exp $
 
 EAPI=4
 inherit eutils
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	chardet? ( >=app-i18n/libguess-1.1 )
 	nls? ( dev-util/intltool )"
 
-PDEPEND=">=media-plugins/audacious-plugins-3.2.3"
+PDEPEND="~media-plugins/audacious-plugins-3.2.3"
 
 src_prepare() {
 	epatch "$FILESDIR"/${P}-fix-mutex.patch
