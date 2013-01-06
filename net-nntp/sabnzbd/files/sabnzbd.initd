@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/files/sabnzbd.initd,v 1.1 2013/01/03 20:02:32 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/files/sabnzbd.initd,v 1.2 2013/01/06 19:44:49 jsbronder Exp $
 
 
 depend() {
@@ -21,6 +21,7 @@ start() {
         -- \
         --server ${SABNZBD_SERVER}:${SABNZBD_PORT} \
         --config-file ${SABNZBD_CONFIGFILE} \
+        --logging ${SABNZBD_LOGGING} \
         --daemon
     eend $?
 }

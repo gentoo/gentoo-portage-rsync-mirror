@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.8.6.ebuild,v 1.1 2012/11/13 08:27:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.8.6.ebuild,v 1.2 2013/01/06 19:31:54 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-ma
 IUSE=""
 
 DEPEND="dev-python/setuptools
-	test? ( || ( dev-lang/python:2.7 dev-python/unittest2 ) )"
+	test? ( virtual/python-unittest2 )"
 RDEPEND=""
 
 src_prepare() {

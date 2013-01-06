@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.3.4.ebuild,v 1.2 2012/11/19 20:33:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/oauthlib-0.3.4.ebuild,v 1.3 2013/01/06 19:43:52 mgorny Exp $
 
 EAPI="4"
 
@@ -27,6 +27,6 @@ RDEPEND=">=dev-python/pycrypto-2.6-r1"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	test? (
-		dev-python/unittest2
+		virtual/python-unittest2
 		dev-python/mock
 	)"

@@ -1,6 +1,13 @@
 # ChangeLog for net-nntp/sabnzbd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/ChangeLog,v 1.2 2013/01/03 23:05:32 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/ChangeLog,v 1.3 2013/01/06 19:44:48 jsbronder Exp $
+
+*sabnzbd-0.7.8 (06 Jan 2013)
+
+  06 Jan 2013; Justin Bronder <jsbronder@gentoo.org> +sabnzbd-0.7.8.ebuild,
+  files/sabnzbd.initd:
+  Bump (#450208), use system cherrypy-3.2* (#450242), respect logging settings
+  from conf.d
 
   03 Jan 2013; Justin Bronder <jsbronder@gentoo.org> sabnzbd-0.7.7.ebuild,
   metadata.xml:

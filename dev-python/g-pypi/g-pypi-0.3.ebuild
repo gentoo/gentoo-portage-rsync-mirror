@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/g-pypi/g-pypi-0.3.ebuild,v 1.3 2012/10/29 16:33:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/g-pypi/g-pypi-0.3.ebuild,v 1.4 2013/01/06 19:58:49 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -39,7 +39,7 @@ RDEPEND="
 	dev-python/jinja
 	dev-python/pygments
 	dev-python/sphinxcontrib-googleanalytics
-	dev-python/unittest2
+	virtual/python-unittest2
 	dev-python/yolk
 	virtual/python-argparse
 "

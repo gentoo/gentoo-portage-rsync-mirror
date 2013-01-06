@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-novaclient/python-novaclient-9999.ebuild,v 1.2 2013/01/01 06:45:42 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-novaclient/python-novaclient-9999.ebuild,v 1.3 2013/01/06 19:47:46 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
@@ -28,7 +28,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				dev-python/pytest-runner
 				dev-python/requests
 				dev-python/simplejson
-				dev-python/unittest2 )"
+				virtual/python-unittest2 )"
 RDEPEND="virtual/python-argparse
 		dev-python/httplib2
 		dev-python/prettytable

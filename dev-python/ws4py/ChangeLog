@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ws4py
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ChangeLog,v 1.6 2012/10/31 06:51:09 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ChangeLog,v 1.7 2013/01/06 19:56:07 mgorny Exp $
+
+  06 Jan 2013; Michał Górny <mgorny@gentoo.org> ws4py-0.2.3.ebuild:
+  Use virtual/python-unittest2.
 
 *ws4py-0.2.3 (31 Oct 2012)
 
