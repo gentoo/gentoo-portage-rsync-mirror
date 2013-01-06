@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Server-Coro
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Server-Coro/ChangeLog,v 1.9 2012/11/12 20:15:34 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Server-Coro/ChangeLog,v 1.10 2013/01/06 15:47:01 tove Exp $
+
+  06 Jan 2013; Torsten Veller <tove@gentoo.org>
+  -Net-Server-Coro-1.200.0.ebuild:
+  Cleanup
 
 *Net-Server-Coro-1.300.0 (12 Nov 2012)
 

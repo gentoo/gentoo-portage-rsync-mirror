@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yafu/yafu-9999.ebuild,v 1.1 2013/01/06 14:24:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yafu/yafu-9999.ebuild,v 1.2 2013/01/06 15:39:41 patrick Exp $
 
 EAPI=4
 DESCRIPTION="Yet another factoring utility"
@@ -31,6 +31,9 @@ src_prepare() {
 	sed -i -e 's:\"config.h\":<gmp-ecm/config.h>:g' top/driver.c	|| die "Failed to rectify things"
 	sed -i -e 's:# LIBS += -L../msieve/lib/linux/x86_64:LIBS += -lmsieve -lz -ldl:' Makefile	|| die "Failed to rectify things"
 	sed -i -e 's:CFLAGS = -g:#CFLAGS = -g:' Makefile	|| die "Failed to rectify things"
+
+	# proper ggnfs default path
+	sed -i -e 's~strcpy(fobj->nfs_obj.ggnfs_dir,"./");~strcpy(fobj->nfs_obj.ggnfs_dir,"/usr/bin/");~' factor/factor_common.c || die "Failed to rectify things"
 }
 
 src_compile() {
