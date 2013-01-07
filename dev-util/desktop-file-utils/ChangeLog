@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/desktop-file-utils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.131 2012/12/01 19:19:30 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.132 2013/01/07 19:26:20 ssuominen Exp $
+
+  07 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -desktop-file-utils-0.20-r1.ebuild,
+  -files/desktop-file-utils-0.20-validate_Categories_XFCE.patch:
+  old
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org>
   desktop-file-utils-0.21.ebuild:
