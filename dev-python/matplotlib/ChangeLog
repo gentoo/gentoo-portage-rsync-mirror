@@ -1,13 +1,13 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.133 2013/01/06 19:20:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.134 2013/01/07 05:45:54 idella4 Exp $
 
   07 Jan 2013; Ian Delaney <idella4@gentoo.org> matplotlib-1.0.1-r1.ebuild,
   matplotlib-1.1.0.ebuild, matplotlib-1.1.1.ebuild, matplotlib-1.2.0-r1.ebuild,
   matplotlib-1.2.0.ebuild:
   all updated to 2013 in header, in 1.2.0-r1; SetSetup updated to encapsulate
   all patches, DocCheck dropped in src_prepare, replaced with buildDocs to
-  ensure docs are built by py2, test phase likewise updated
+  ensure docs are built by py2, test phase likewise updated, closes Bug 449454
 
   31 Dec 2012; Michał Górny <mgorny@gentoo.org> matplotlib-1.0.1-r1.ebuild,
   matplotlib-1.1.0.ebuild, matplotlib-1.1.1.ebuild, matplotlib-1.2.0-r1.ebuild,
