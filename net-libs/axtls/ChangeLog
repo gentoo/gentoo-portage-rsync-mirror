@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/axtls
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.17 2013/01/07 00:01:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.18 2013/01/07 00:03:50 blueness Exp $
+
+  07 Jan 2013; Anthony G. Basile <blueness@gentoo.org> -axtls-1.4.6-r1.ebuild,
+  -files/bigint_impl.h-add-missing-include.patch:
+  Remove older unstable
 
 *axtls-1.4.9 (07 Jan 2013)
 

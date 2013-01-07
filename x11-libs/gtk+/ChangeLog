@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.630 2013/01/06 11:20:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.631 2013/01/07 00:21:30 tetromino Exp $
+
+*gtk+-3.6.3-r2 (07 Jan 2013)
+
+  07 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> -gtk+-3.6.3.ebuild,
+  gtk+-3.6.3-r1.ebuild, +gtk+-3.6.3-r2.ebuild,
+  +files/gtk+-3.6.3-stylecontext-font-crash.patch:
+  Add upstream fix for print and other dialog window crash. Propagate ~sparc
+  keyword to 3.6.3-rx ebuilds.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gtk+-3.6.2.ebuild:
   Add ~sparc, wrt bug #449220

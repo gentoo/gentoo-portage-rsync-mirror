@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7334 2013/01/06 22:04:10 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7335 2013/01/07 00:02:32 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Jan 2013; Mike Frysinger <vapier@gentoo.org> profiles.desc:
+  Mark s390 profiles stable.
 
   06 Jan 2013; Justin Bronder <jsbronder@gentoo.org> package.mask:
   Remove net-nntp/sabnzbd mask, fix already released and updated in tree.

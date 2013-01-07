@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.ebuild,v 1.1 2013/01/06 16:48:01 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.ebuild,v 1.2 2013/01/07 00:14:08 lu_zero Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ else # Official release
 	SRC_URI="http://${PN}.org/releases/${P}.tar.xz"
 fi
 
-SRC_URI+=" test? ( http://dev.gentoo.org/~lu_zero/libav/fate-9_beta2.tar.xz )"
+SRC_URI+=" test? ( http://dev.gentoo.org/~lu_zero/libav/fate-9.tar.xz )"
 
 LICENSE="LGPL-2.1  gpl? ( GPL-3 )"
 SLOT="0"
