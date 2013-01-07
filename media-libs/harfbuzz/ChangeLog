@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.21 2013/01/06 09:49:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.22 2013/01/07 22:28:11 eva Exp $
+
+*harfbuzz-0.9.10 (07 Jan 2013)
+
+  07 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> +harfbuzz-0.9.10.ebuild,
+  harfbuzz-9999.ebuild:
+  Version bump, testsuite now pass, bug #448838.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> harfbuzz-0.9.9.ebuild:
   Add ~sparc, wrt bug #449220

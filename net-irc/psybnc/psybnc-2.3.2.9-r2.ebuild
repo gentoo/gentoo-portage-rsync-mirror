@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9-r2.ebuild,v 1.5 2010/10/10 18:30:09 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9-r2.ebuild,v 1.6 2013/01/07 22:31:16 pinkbyte Exp $
 
 EAPI="2"
 
@@ -146,7 +146,7 @@ pkg_postinst() {
 		elog
 		elog "You have enabled oidentd-support. You will need to set"
 		elog "up your /etc/oident.conf file before running psybnc. An example"
-		elog "for psyBNC can be found under /etc/oident.conf.psybnc."
+		elog "for psyBNC can be found under /etc/oidentd.conf.psybnc"
 	fi
 	elog
 	elog "You can connect to psyBNC on port 23998 with user gentoo and password gentoo."

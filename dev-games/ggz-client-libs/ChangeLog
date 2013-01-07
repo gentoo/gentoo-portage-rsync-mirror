@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ggz-client-libs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ChangeLog,v 1.46 2013/01/07 03:05:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ChangeLog,v 1.47 2013/01/07 22:22:31 ago Exp $
+
+  07 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  ggz-client-libs-0.0.14.1-r1.ebuild:
+  Stable for alpha, wrt bug #449894
 
   07 Jan 2013; Jeroen Roovers <jer@gentoo.org>
   ggz-client-libs-0.0.14.1-r1.ebuild:

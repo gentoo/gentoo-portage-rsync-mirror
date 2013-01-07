@@ -4,11 +4,11 @@ DESCRIPTION=An integrated VNC server for GNOME
 EAPI=5
 HOMEPAGE=http://live.gnome.org/Vino
 IUSE=avahi crypt ipv6 jpeg gnome-keyring libnotify networkmanager ssl +telepathy zlib debug
-KEYWORDS=~alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd
+KEYWORDS=alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd
 LICENSE=GPL-2+
 RDEPEND=>=dev-libs/glib-2.17:2 >=x11-libs/gtk+-2.20:2 >=gnome-base/gconf-2:2 >=sys-apps/dbus-1.2.3 >=net-libs/libsoup-2.24:2.4 dev-libs/libunique:1 dev-libs/dbus-glib x11-libs/libXext x11-libs/libXtst avahi? ( >=net-dns/avahi-0.6:=[dbus] ) crypt? ( >=dev-libs/libgcrypt-1.1.90:= ) gnome-keyring? ( || ( gnome-base/libgnome-keyring <gnome-base/gnome-keyring-2.29.4 ) ) jpeg? ( virtual/jpeg:0= ) libnotify? ( >=x11-libs/libnotify-0.4.4:= ) networkmanager? ( >=net-misc/networkmanager-0.7 ) ssl? ( >=net-libs/gnutls-1:= ) telepathy? ( >=net-libs/telepathy-glib-0.11.6 ) zlib? ( sys-libs/zlib:= )
 REQUIRED_USE=jpeg? ( zlib )
 SLOT=0
 SRC_URI=mirror://gnome/sources/vino/2.32/vino-2.32.2.tar.bz2
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	18cda077fa5f661f96aa70c192b4b4a5	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=84e42217338c67509f971bba15fc8121
+_md5_=1c51308c5576cdc82f6a0737f279a119

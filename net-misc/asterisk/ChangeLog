@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.436 2013/01/04 14:34:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.437 2013/01/07 22:08:00 chainsaw Exp $
+
+*asterisk-11.1.2 (07 Jan 2013)
+
+  07 Jan 2013; Tony Vroon <chainsaw@gentoo.org> -asterisk-11.1.1.ebuild,
+  +asterisk-11.1.2.ebuild:
+  One final unsafe use of TCP reads onto the stack in res_xmpp; also stops
+  caching taking place where unnecessary. This completes the DoS protection
+  intended for 11.1.1; removing unsafe ebuild from tree.
 
   04 Jan 2013; Tony Vroon <chainsaw@gentoo.org> asterisk-1.8.19.1.ebuild,
   asterisk-11.1.1.ebuild:

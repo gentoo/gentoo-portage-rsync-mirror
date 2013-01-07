@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.13 2013/01/06 09:57:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.14 2013/01/07 22:18:09 calchan Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -52,7 +52,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 		>=net-libs/libdmapsharing-2.9.11:3.0
 		>=net-dns/avahi-0.6 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-0.4.9 )
-	html? ( >=net-libs/webkit-gtk-1.3.9:3 )
+	html? ( <net-libs/webkit-gtk-1.10:3 )
 	libnotify? ( >=x11-libs/libnotify-0.7.0 )
 	lirc? ( app-misc/lirc )
 	musicbrainz? (
@@ -90,7 +90,7 @@ RDEPEND="${COMMON_DEPEND}
 		gnome-keyring? ( dev-python/gnome-keyring-python )
 		webkit? (
 			dev-python/mako
-			>=net-libs/webkit-gtk-1.3.9:3[introspection] ) )
+			<net-libs/webkit-gtk-1.10:3[introspection] ) )
 "
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
