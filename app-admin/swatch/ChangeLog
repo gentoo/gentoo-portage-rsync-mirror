@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/swatch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.28 2013/01/05 18:51:20 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.29 2013/01/07 16:42:42 nimiux Exp $
+
+*swatch-3.2.3-r2 (07 Jan 2013)
+
+  07 Jan 2013; Chema Alonso <nimiux@gentoo.org> +swatch-3.2.3-r2.ebuild,
+  +files/swatch-init, +files/swatchrc:
+  Revision bump to fix keepdir /var/run wrt bug #449986 and include sample
+  swatchrc file.
 
   05 Jan 2013; Chema Alonso <nimiux@gentoo.org> metadata.xml:
   Add longdescription to metadata

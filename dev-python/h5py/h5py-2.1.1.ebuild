@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.0.1.ebuild,v 1.5 2013/01/06 18:40:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.1.1.ebuild,v 1.1 2013/01/07 16:46:24 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
