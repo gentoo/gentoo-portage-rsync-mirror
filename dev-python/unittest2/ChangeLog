@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/unittest2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.23 2011/09/12 08:27:02 djc Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.24 2013/01/07 21:59:41 mgorny Exp $
+
+*unittest2-0.5.1-r1 (07 Jan 2013)
+
+  07 Jan 2013; Michał Górny <mgorny@gentoo.org> +unittest2-0.5.1-r1.ebuild:
+  Migrate to distutils-r1.
 
   12 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Remove myself as a maintainer.
@@ -93,4 +98,3 @@
   16 Mar 2010; Dirkjan Ochtman <djc@gentoo.org> +unittest2-0.2.0.ebuild,
   +metadata.xml:
   Initial version 0.2.0.
-
