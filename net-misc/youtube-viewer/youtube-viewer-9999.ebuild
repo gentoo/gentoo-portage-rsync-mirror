@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-9999.ebuild,v 1.8 2012/11/20 18:40:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-9999.ebuild,v 1.9 2013/01/07 19:33:20 hasufell Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ EGIT_REPO_URI="git://github.com/trizen/${PN}.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="gtk"
 
 RDEPEND="
 	>=dev-lang/perl-5.16.0
@@ -26,13 +26,30 @@ RDEPEND="
 	virtual/perl-File-Spec
 	virtual/perl-Getopt-Long
 	virtual/perl-Scalar-List-Utils
-	virtual/perl-Term-ANSIColor"
+	virtual/perl-Term-ANSIColor
+	gtk? (
+		>=dev-perl/gtk2-perl-1.244.0
+		!net-misc/gtk-youtube-viewer
+		virtual/freedesktop-icon-theme
+		x11-libs/gdk-pixbuf:2[X,jpeg]
+	)"
 DEPEND="virtual/perl-Module-Build"
 
 EGIT_SOURCEDIR="${WORKDIR}"
 S=${WORKDIR}/WWW-YoutubeViewer
 
 SRC_TEST="do"
+
+# build system installs files on "perl Build.PL" too
+# do all the work in src_install
+src_configure() { :; }
+src_compile() { :; }
+
+src_install() {
+	use gtk && local myconf="--gtk-youtube-viewer"
+	perl-module_src_configure
+	perl-module_src_install
+}
 
 pkg_postinst() {
 	perl-module_pkg_postinst
