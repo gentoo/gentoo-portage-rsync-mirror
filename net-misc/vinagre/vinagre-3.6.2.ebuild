@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.6.2.ebuild,v 1.6 2013/01/06 10:04:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.6.2.ebuild,v 1.7 2013/01/07 13:44:54 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GNOME2_LA_PUNT="yes"
 
 inherit gnome2
 
-DESCRIPTION="VNC Client for the GNOME Desktop"
+DESCRIPTION="VNC client for the GNOME desktop"
 HOMEPAGE="http://live.gnome.org/Vinagre"
 
 LICENSE="GPL-3+"
@@ -45,14 +45,14 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	DOCS="AUTHORS ChangeLog ChangeLog.pre-git NEWS README"
-	G2CONF="${G2CONF}
-		VALAC=$(type -P valac-0.18)
-		$(use_with avahi)
-		$(use_enable rdp)
-		$(use_enable ssh)
-		$(use_enable spice)
-		$(use_with telepathy)"
-	gnome2_src_configure
+	G2CONF="${G2CONF} ITSTOOL=$(type -P true)"
+	gnome2_src_configure \
+		VALAC=$(type -P valac-0.18) \
+		$(use_with avahi) \
+		$(use_enable rdp) \
+		$(use_enable ssh) \
+		$(use_enable spice) \
+		$(use_with telepathy)
 }
 
 src_install() {

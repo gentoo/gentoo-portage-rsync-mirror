@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.4.2.ebuild,v 1.2 2012/10/25 21:39:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-3.4.2.ebuild,v 1.3 2013/01/07 13:44:54 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -8,10 +8,10 @@ GNOME2_LA_PUNT="yes"
 
 inherit gnome2
 
-DESCRIPTION="VNC Client for the GNOME Desktop"
+DESCRIPTION="VNC client for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/projects/vinagre/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="avahi rdp +ssh spice +telepathy test"

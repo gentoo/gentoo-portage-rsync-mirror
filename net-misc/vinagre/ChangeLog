@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.86 2013/01/06 10:04:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.87 2013/01/07 13:44:54 tetromino Exp $
+
+  07 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  vinagre-2.30.3.ebuild, vinagre-3.4.2.ebuild, vinagre-3.6.2.ebuild:
+  Do not require itstool (bug #450700, thanks to Peter Wilmott). Update
+  license.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> vinagre-3.6.2.ebuild:
   Add ~sparc, wrt bug #449220
