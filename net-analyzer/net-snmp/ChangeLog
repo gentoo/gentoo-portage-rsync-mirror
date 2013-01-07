@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/net-snmp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.245 2012/10/22 02:57:05 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.247 2013/01/07 04:09:58 jer Exp $
+
+  07 Jan 2013; Jeroen Roovers <jer@gentoo.org> net-snmp-5.7.2_rc1.ebuild:
+  Fix LICENSE (bug #437172).
+
+  07 Jan 2013; Jeroen Roovers <jer@gentoo.org> net-snmp-5.7.2_rc1.ebuild,
+  net-snmp-5.7.2.ebuild:
+  Remove runtime dependency on sys-apps/openrc (bug #450564 by Geaaru).
 
   22 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> files/snmpd.init.2,
   files/snmptrapd.init.2:

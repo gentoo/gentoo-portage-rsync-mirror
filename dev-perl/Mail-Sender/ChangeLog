@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-Sender
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/ChangeLog,v 1.26 2013/01/06 18:54:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/ChangeLog,v 1.27 2013/01/07 04:06:30 tove Exp $
+
+  07 Jan 2013; Torsten Veller <tove@gentoo.org> +Mail-Sender-0.8.21.ebuild:
+  Readd erroneously dropped version
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> -Mail-Sender-0.8.16.ebuild,
   -Mail-Sender-0.8.21.ebuild:
