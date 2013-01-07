@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-9.0.1.894247.ebuild,v 1.3 2013/01/07 21:00:19 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-8.0.5.893925.ebuild,v 1.1 2013/01/07 20:52:58 vadimk Exp $
 
 EAPI="4"
 
@@ -31,6 +31,7 @@ RDEPEND="dev-cpp/cairomm
 	dev-cpp/glibmm:2
 	dev-cpp/gtkmm:2.4
 	dev-cpp/libgnomecanvasmm
+	dev-cpp/libsexymm
 	dev-cpp/pangomm
 	dev-libs/atk
 	dev-libs/glib:2
@@ -60,6 +61,7 @@ RDEPEND="dev-cpp/cairomm
 	x11-libs/gtk+:2
 	x11-libs/libgksu
 	x11-libs/libICE
+	x11-libs/libsexy
 	x11-libs/libSM
 	x11-libs/libX11
 	x11-libs/libXau
@@ -80,7 +82,7 @@ RDEPEND="dev-cpp/cairomm
 	x11-libs/startup-notification
 	x11-themes/hicolor-icon-theme
 	!app-emulation/vmware-player"
-PDEPEND="~app-emulation/vmware-modules-271.${PV_MINOR}
+PDEPEND="~app-emulation/vmware-modules-264.${PV_MINOR}
 	vmware-tools? ( app-emulation/vmware-tools )"
 
 S=${WORKDIR}
@@ -98,8 +100,7 @@ src_unpack() {
 		vmware-workstation \
 		vmware-network-editor \
 		vmware-network-editor-ui \
-		vmware-usbarbitrator \
-		vmware-vprobe
+		vmware-usbarbitrator
 	do
 		vmware-bundle_extract-bundle-component "${bundle}" "${component}" "${S}"
 	done
@@ -110,7 +111,7 @@ src_unpack() {
 
 	if use vix; then
 		vmware-bundle_extract-bundle-component "${bundle}" vmware-vix-core vmware-vix
-		vmware-bundle_extract-bundle-component "${bundle}" vmware-vix-lib-Workstation900andvSphere510 vmware-vix
+		vmware-bundle_extract-bundle-component "${bundle}" vmware-vix-lib-Workstation800andvSphere500 vmware-vix
 	fi
 	if use ovftool; then
 		vmware-bundle_extract-bundle-component "${bundle}" vmware-ovftool
@@ -154,12 +155,6 @@ src_install() {
 	# install the libraries
 	insinto "${VM_INSTALL_DIR}"/lib/vmware
 	doins -r lib/*
-
-	# Bug 432918
-	dosym "${VM_INSTALL_DIR}"/lib/vmware/lib/libcrypto.so.0.9.8/libcrypto.so.0.9.8 \
-		"${VM_INSTALL_DIR}"/lib/vmware/lib/libvmwarebase.so.0/libcrypto.so.0.9.8
-	dosym "${VM_INSTALL_DIR}"/lib/vmware/lib/libssl.so.0.9.8/libssl.so.0.9.8 \
-		"${VM_INSTALL_DIR}"/lib/vmware/lib/libvmwarebase.so.0/libssl.so.0.9.8
 
 	# install the ancillaries
 	insinto /usr
@@ -205,7 +200,7 @@ src_install() {
 		doins -r lib/*
 
 		into "${VM_INSTALL_DIR}"
-		for tool in  vmware-{hostd,wssc-adminTool} ; do
+		for tool in  vmware-{hostd,vim-cmd,wssc-adminTool} ; do
 			cat > "${T}/${tool}" <<-EOF
 				#!/usr/bin/env bash
 				set -e
@@ -289,7 +284,7 @@ src_install() {
 	fperms 4711 "${VM_INSTALL_DIR}"/bin/vmware-mount
 	fperms 4711 "${VM_INSTALL_DIR}"/lib/vmware/bin/vmware-vmx{,-debug,-stats}
 	if use server; then
-		fperms 0755 "${VM_INSTALL_DIR}"/lib/vmware/bin/vmware-{hostd,wssc-adminTool}
+		fperms 0755 "${VM_INSTALL_DIR}"/lib/vmware/bin/vmware-{hostd,vim-cmd,wssc-adminTool}
 		fperms 4711 "${VM_INSTALL_DIR}"/sbin/vmware-authd
 		fperms 1777 "${VM_DATA_STORE_DIR}"
 	fi
@@ -359,7 +354,7 @@ src_install() {
 			-e "s:@@PREFIX@@:${VM_INSTALL_DIR}:g" \
 			-e "s:@@BINDIR@@:${VM_INSTALL_DIR}/bin:g" \
 			-e "s:@@LIBDIR@@:${VM_INSTALL_DIR}/lib/vmware:g" \
-			"${FILESDIR}/vmware-server-${major_minor}.rc" > ${initscript}
+			"${FILESDIR}/vmware-server-8.0.rc" > ${initscript}
 		newinitd "${initscript}" vmware-workstation-server
 	fi
 
@@ -367,13 +362,10 @@ src_install() {
 	sed -e "s:@@LIBCONF_DIR@@:${VM_INSTALL_DIR}/lib/vmware/libconf:g" \
 		-i "${D}${VM_INSTALL_DIR}"/lib/vmware/libconf/etc/{gtk-2.0/{gdk-pixbuf.loaders,gtk.immodules},pango/pango{.modules,rc}}
 	sed -e "s:@@BINARY@@:${VM_INSTALL_DIR}/bin/vmware:g" \
-		-e "/^Encoding/d" \
 		-i "${D}/usr/share/applications/${PN}.desktop"
 	sed -e "s:@@BINARY@@:${VM_INSTALL_DIR}/bin/vmplayer:g" \
-		-e "/^Encoding/d" \
 		-i "${D}/usr/share/applications/vmware-player.desktop"
 	sed -e "s:@@BINARY@@:${VM_INSTALL_DIR}/bin/vmware-netcfg:g" \
-		-e "/^Encoding/d" \
 		-i "${D}/usr/share/applications/vmware-netcfg.desktop"
 
 	if use server; then

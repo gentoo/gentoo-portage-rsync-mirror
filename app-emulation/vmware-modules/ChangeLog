@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-modules
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.101 2012/12/22 11:53:25 vadimk Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.102 2013/01/07 20:51:20 vadimk Exp $
+
+*vmware-modules-264.5 (07 Jan 2013)
+
+  07 Jan 2013; Vadim Kuznetsov vadimk@gentoo.org +files/264-putname.patch,
+  +vmware-modules-264.5.ebuild:
+  vmware desktop 8.0.5 version bump
 
   22 Dec 2012; Vadim Kuznetsov vadimk@gentoo.org vmware-modules-271.1-r1.ebuild:
   apply patch to kernel gte 3.7.0

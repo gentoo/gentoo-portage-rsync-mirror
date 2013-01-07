@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.41 2013/01/03 11:09:58 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.42 2013/01/07 20:54:52 ryao Exp $
+
+  07 Jan 2013; Richard Yao <ryao@gentoo.org>
+  +files/iscsitarget-1.4.20.2-respect-flags-v2.patch,
+  iscsitarget-1.4.20.2_p20130103.ebuild:
+  Add missing patch file
 
 *iscsitarget-9999 (03 Jan 2013)
 *iscsitarget-1.4.20.2_p20130103 (03 Jan 2013)
