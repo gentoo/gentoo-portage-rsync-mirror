@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.26.0.ebuild,v 1.3 2013/01/01 14:15:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.26.0.ebuild,v 1.4 2013/01/07 07:30:38 idella4 Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="*:2.5"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4"
+RESTRICT_PYTHON_ABIS="2.7-pypy-*"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Python code static checker"
 HOMEPAGE="http://www.logilab.org/project/pylint http://pypi.python.org/pypi/pylint"
@@ -26,6 +26,11 @@ DEPEND="${RDEPEND}
 
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 DOCS="doc/*.txt"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gtktest.patch
+	distutils_src_prepare
+}
 
 src_test() {
 	testing() {
