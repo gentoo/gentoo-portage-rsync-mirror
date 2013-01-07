@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.37 2013/01/03 23:29:51 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.38 2013/01/07 20:22:12 voyageur Exp $
 
 EAPI=5
 PYTHON_DEPEND="2"
@@ -90,6 +90,10 @@ src_prepare() {
 			-i tools/gold/Makefile || die "gold rpath sed failed"
 	fi
 
+	# FileCheck is needed at least for dragonegg tests
+	sed -e "/NO_INSTALL = 1/s/^/#/" -i utils/FileCheck/Makefile \
+		|| die "FileCheck Makefile sed failed"
+
 	# Specify python version
 	python_convert_shebangs -r 2 test/Scripts
 
@@ -149,6 +153,8 @@ src_compile() {
 	pax-mark m Release/bin/lli
 	if use test; then
 		pax-mark m unittests/ExecutionEngine/JIT/Release/JITTests
+		pax-mark m unittests/ExecutionEngine/MCJIT/Release/MCJITTests
+		pax-mark m unittests/Support/Release/SupportTests
 	fi
 }
 
@@ -188,6 +194,4 @@ src_install() {
 			eend $?
 		done
 	fi
-#
-#	doman docs/CommandGuide/*.1
 }
