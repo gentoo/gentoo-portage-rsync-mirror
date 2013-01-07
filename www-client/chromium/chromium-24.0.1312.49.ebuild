@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-24.0.1312.40.ebuild,v 1.2 2012/12/13 17:06:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-24.0.1312.49.ebuild,v 1.1 2013/01/07 22:56:54 floppym Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -59,8 +59,11 @@ RDEPEND="app-arch/bzip2
 		sys-libs/libselinux
 	)"
 DEPEND="${RDEPEND}
+	!arm? (
+		>=dev-lang/nacl-toolchain-newlib-0_p9093
+		dev-lang/yasm
+	)
 	dev-lang/perl
-	dev-lang/yasm
 	dev-python/ply
 	dev-python/simplejson
 	>=dev-util/gperf-3.0.3
@@ -105,16 +108,16 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# if ! use arm; then
-	#	ebegin "Preparing NaCl newlib toolchain"
-	#	pushd "${T}" >/dev/null || die
-	#	mkdir sdk || die
-	#	cp -a /usr/$(get_libdir)/nacl-toolchain-newlib sdk/nacl-sdk || die
-	#	mkdir -p "${S}"/native_client/toolchain/.tars || die
-	#	tar czf "${S}"/native_client/toolchain/.tars/naclsdk_linux_x86.tgz sdk || die
-	#	popd >/dev/null || die
-	#	eend $?
-	# fi
+	if ! use arm; then
+		ebegin "Preparing NaCl newlib toolchain"
+		pushd "${T}" >/dev/null || die
+		mkdir sdk || die
+		cp -a /usr/$(get_libdir)/nacl-toolchain-newlib sdk/nacl-sdk || die
+		mkdir -p "${S}"/native_client/toolchain/.tars || die
+		tar czf "${S}"/native_client/toolchain/.tars/naclsdk_linux_x86.tgz sdk || die
+		popd >/dev/null || die
+		eend $?
+	fi
 
 	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
 	# sed -i '1i#define OF(x) x' \
@@ -123,25 +126,28 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-arm-r0.patch"
 
 	# Fix build without NaCl glibc toolchain.
-	# epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
+	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
+
+	# Fix build without NaCl pnacl toolchain.
+	epatch "${FILESDIR}/${PN}-no-pnacl-r0.patch"
 
 	# Missing gyp files in tarball.
 	# https://code.google.com/p/chromium/issues/detail?id=144823
-	# if [[ -e chrome/test/data/nacl/nacl_test_data.gyp ]]; then
-	#	die "tarball fixed, please remove workaround"
-	# fi
+	if [[ -e chrome/test/data/nacl/nacl_test_data.gyp ]]; then
+		die "tarball fixed, please remove workaround"
+	fi
 
-	# mkdir -p chrome/test/data/nacl
-	# cat > chrome/test/data/nacl/nacl_test_data.gyp <<-EOF
-	# {
-	#   'targets': [
-	#     {
-	#       'target_name': 'nacl_tests',
-	#       'type': 'none',
-	#     },
-	#   ],
-	# }
-	# EOF
+	mkdir -p chrome/test/data/nacl
+	cat > chrome/test/data/nacl/nacl_test_data.gyp <<-EOF
+	{
+	  'targets': [
+	    {
+	      'target_name': 'nacl_tests',
+	      'type': 'none',
+	    },
+	  ],
+	}
+	EOF
 
 	epatch_user
 
@@ -229,15 +235,11 @@ src_configure() {
 	# drivers, bug #413637.
 	myconf+=" $(gyp_use tcmalloc linux_use_tcmalloc)"
 
-	# TODO: build with NaCl (pnacl is sort of required).
-	myconf+=" -Ddisable_nacl=1"
-
 	# Disable glibc Native Client toolchain, we don't need it (bug #417019).
-	# myconf+=" -Ddisable_glibc=1"
+	myconf+=" -Ddisable_glibc=1"
 
 	# TODO: also build with pnacl
-	# myconf+=" -Ddisable_pnacl=1
-	#	-Dbuild_pnacl_newlib=0"
+	myconf+=" -Ddisable_pnacl=1"
 
 	# Make it possible to remove third_party/adobe.
 	echo > "${T}/flapper_version.h" || die
@@ -433,12 +435,12 @@ src_install() {
 
 	doexe out/Release/chromedriver || die
 
-	# if ! use arm; then
-	#	doexe out/Release/nacl_helper{,_bootstrap} || die
-	#	insinto "${CHROMIUM_HOME}"
-	#	doins out/Release/nacl_irt_*.nexe || die
-	#	doins out/Release/libppGoogleNaClPluginChrome.so || die
-	# fi
+	if ! use arm; then
+		doexe out/Release/nacl_helper{,_bootstrap} || die
+		insinto "${CHROMIUM_HOME}"
+		doins out/Release/nacl_irt_*.nexe || die
+		doins out/Release/libppGoogleNaClPluginChrome.so || die
+	fi
 
 	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
 	if [[ "${CHROMIUM_SUFFIX}" != "" ]]; then

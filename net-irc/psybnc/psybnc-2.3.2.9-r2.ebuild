@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9-r2.ebuild,v 1.6 2013/01/07 22:31:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9-r2.ebuild,v 1.7 2013/01/07 22:32:18 pinkbyte Exp $
 
 EAPI="2"
 
-inherit eutils versionator toolchain-funcs flag-o-matic
+inherit eutils versionator toolchain-funcs flag-o-matic user
 MY_PV="$(replace_version_separator 3 -)"
 PSYBNC_HOME="/var/lib/psybnc"
 
