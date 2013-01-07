@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.10.2-r1.ebuild,v 1.1 2013/01/01 19:25:58 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.10.2-r1.ebuild,v 1.2 2013/01/07 12:12:35 kensington Exp $
 
 EAPI=4
 
@@ -57,6 +57,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.8.10-libform.patch
 	"${FILESDIR}"/${PN}-2.8.10-more-no_host_paths.patch
 	"${FILESDIR}"/${PN}-2.8.10.2-implicit-include.patch
+	"${FILESDIR}"/${PN}-2.8.10.2-qt5.patch
 )
 
 cmake_src_bootstrap() {
