@@ -2826,6 +2826,7 @@ media-plugins/grilo-plugins:youtube - Build support for YouTube content discover
 media-plugins/gst-plugins-a52dec:orc - Use dev-lang/orc for runtime detection of CPU MMX/MMXEXT/3dNow! capabilities to pass down to a52dec library.
 media-plugins/gst-plugins-meta:http - Enable http streaming via net-libs/libsoup
 media-plugins/gst-plugins-meta:libvisual - Enable visualization effects via media-libs/libvisual
+media-plugins/gst-plugins-meta:opus - Enable Opus audio codec support
 media-plugins/gst-plugins-meta:vpx - Enables vp8 codec support using libvpx, required to play some HTML5 videos
 media-plugins/kipi-plugins:expoblending - Build the expoblending plugin, which requires media-gfx/hugin
 media-plugins/kipi-plugins:gpssync - Build the gpssync plugin, which requires media-lib/libkgeomap and thereby marble

@@ -9,4 +9,4 @@ RDEPEND=dev-lang/perl dev-perl/yaml >=virtual/perl-Archive-Tar-1.09 >=virtual/pe
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DA/DAGOLDEN/Module-Build-0.340201.tar.gz
 _eclasses_=alternatives	7a734a903498a04a0722152a124aa3a5	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	825d3d7654c88c5c4dec7400d3612578	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=c4b13fca9f3b169e3f24a8b2323f4886
+_md5_=e3549d768cf89fa179e65ad21a6b9bfe

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Script
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/ChangeLog,v 1.32 2012/06/24 13:00:38 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/ChangeLog,v 1.33 2013/01/06 23:48:48 vapier Exp $
+
+  06 Jan 2013; Mike Frysinger <vapier@gentoo.org> Test-Script-1.70.0.ebuild:
+  Mark s390/sh stable.
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

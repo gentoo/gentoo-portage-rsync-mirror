@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/Module-Build-0.362.400.ebuild,v 1.5 2011/02/27 12:09:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/Module-Build-0.362.400.ebuild,v 1.6 2013/01/06 23:41:51 vapier Exp $
 
 EAPI=3
 

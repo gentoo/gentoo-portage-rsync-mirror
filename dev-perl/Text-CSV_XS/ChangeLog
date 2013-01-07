@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-CSV_XS
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV_XS/ChangeLog,v 1.123 2013/01/06 14:54:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV_XS/ChangeLog,v 1.124 2013/01/06 23:51:12 vapier Exp $
+
+  06 Jan 2013; Mike Frysinger <vapier@gentoo.org> Text-CSV_XS-0.910.0.ebuild,
+  Text-CSV_XS-0.940.0.ebuild:
+  Fix arm/hppa/s390/sh keywords.
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> -Text-CSV_XS-0.860.0.ebuild,
   -Text-CSV_XS-0.900.0.ebuild, -Text-CSV_XS-0.920.0.ebuild,
