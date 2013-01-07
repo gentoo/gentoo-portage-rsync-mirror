@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.194 2013/01/06 09:03:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.195 2013/01/07 01:23:58 tetromino Exp $
+
+  07 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask,
+  use.mask:
+  Remove obsolete mask entries. Since media-libs/libquvi is now ~sparc, mask
+  USE=quvi only for stable ebuilds depending on it.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask, use.mask:
   Add -zeitgeist. Remove eds/telepathy from folks and sendto from nautilus

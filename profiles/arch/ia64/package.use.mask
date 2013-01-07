@@ -1,6 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.111 2013/01/05 14:11:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.112 2013/01/07 01:10:37 tetromino Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (07 Jan 2012)
+# remove when media-libs/libquvi is stable on ia64
+=dev-libs/totem-pl-parser-2.32.6-r1 quvi
+=media-video/mplayer2-2.0_p20120828 quvi
+=media-video/totem-2.32.0-r2 youtube
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
 # remove mask if/when mail-client/thunderbird is keyworded here
@@ -12,21 +18,8 @@ app-misc/tracker thunderbird
 gnome-extra/sushi office
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when app-text/yelp-tools is keyworded here
->=gnome-extra/zenity-3.6 test
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
 # remove mask when dev-java/fop is keyworded here
 gnome-extra/libgda reports
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when >=app-editors/gedit-3.6 is keyworded here
-dev-util/devhelp gedit
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when app-crypt/libsecret is keyworded here
->=gnome-base/gvfs-1.14 gnome-keyring
->=gnome-extra/libgda-5.1 gnome-keyring
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (26 Dec 2012)
 # remove when app-accessibility/at-spi2-core is stable for ia64
@@ -45,10 +38,6 @@ media-libs/phonon gstreamer vlc
 >=dev-db/mysql-5.5 systemtap tcmalloc jemalloc
 >=dev-db/mariadb-5.5 systemtap tcmalloc jemalloc
 
-# Alexandre Rostovtsev <tetromino@gentoo.org> (16 Oct 2012)
-# Missing keywords for spidermonkey
-net-libs/libproxy spidermonkey
-
 # Raúl Porcel <armin76@gentoo.org> (11 Sep 2012)
 # Upstream drops support on ia64 from 4.0 onwards, bug #430352
 >=dev-lang/ocaml-4 ocamlopt
@@ -56,10 +45,6 @@ net-libs/libproxy spidermonkey
 # Raúl Porcel <armin76@gentoo.org> (28 May 2012)
 # Needs x11-misc/lightdm(which also requires some other deps)
 x11-misc/xscreensaver new-login
-
-# Samuli Suominen <ssuominen@gentoo.org> (15 May 2012)
-# UDisks2 untested wrt http://bugs.gentoo.org/412801
-gnome-base/gvfs udisks
 
 # Mike Frysinger <vapier@gentoo.org> (10 May 2012)
 # We only want java available for unstable ebuilds, but we can't do that
@@ -99,16 +84,6 @@ net-analyzer/wireshark doc-pdf
 # Mask use numa for openmpi
 sys-cluster/openmpi openmpi_fabrics_psm openmpi_fabrics_knem openmpi_fabrics_open-mx openmpi_fabrics_ofed openmpi_fabrics_dapl openmpi_rm_slurm openmpi_fabrics_sctp openmpi_ofed_features_rdmacm
 
-# Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
-# Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
-# bug #390345
->=app-cdr/brasero-3 tracker
-app-text/evince xps
->=dev-libs/folks-0.6 socialweb tracker
->=gnome-base/gnome-menus-3.2 test
->=gnome-base/gnome-panel-3 eds
->=gnome-base/nautilus-3 previewer tracker
-
 # Raúl Porcel <armin76@gentoo.org> (05 Nov 2011)
 # jit not supported on ia64
 dev-libs/libpcre jit
@@ -116,10 +91,6 @@ dev-libs/libpcre jit
 # Alexandre Rostovtsev <tetromino@gentoo.org> (03 Nov 2011)
 # Missing keywords in gst-plugins-{faac,lame,twolame}, bug #389433
 gnome-extra/gnome-media aac mp3 twolame
-
-# Pacho Ramos <pacho@gentoo.org> (24 Oct 2011)
-# Missing keywords in needed packages, bug #388367
-net-im/empathy map
 
 # Robin H. Johnson <robbat2@gentoo.org> (03 Sep 2011)
 # Remove this for your arch after you keyword dev-utils/google-perftools (bug #381737
@@ -136,10 +107,6 @@ app-cdr/brasero vcd
 # Tomáš Chvátal <scarabeus@gentoo.org> (4 Apr 2011)
 # Needs sci-libs/umfpack keyworded. Bug #361947.
 media-libs/gegl umfpack
-
-# Pacho Ramos <pacho@gentoo.org> (02 Apr 2011)
-# quvi support is needed to play youtube files now
-media-video/totem flash youtube
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No media-sound/lilypond here, yet (bug #356069)

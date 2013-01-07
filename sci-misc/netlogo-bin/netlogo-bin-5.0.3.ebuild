@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/netlogo-bin-4.0.4.ebuild,v 1.5 2013/01/07 01:08:51 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/netlogo-bin-5.0.3.ebuild,v 1.1 2013/01/07 01:08:51 creffett Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils java-pkg-2
 
@@ -14,9 +14,9 @@ HOMEPAGE="http://ccl.northwestern.edu/netlogo/"
 SRC_URI="
 	http://dev.gentoo.org/~jlec/distfiles/${PN/-bin}.gif.tar
 	http://ccl.northwestern.edu/netlogo/${PV}/${MY_P}.tar.gz"
-LICENSE="netlogo"
+LICENSE="netlogo GPL-2 LGPL-2.1 LGPL-3 BSD Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
@@ -24,15 +24,16 @@ RDEPEND=">=virtual/jre-1.5"
 
 S="${WORKDIR}"/${MY_P}
 
-QA_PREBUILT="/usr/share/"${PN}"/lib/*.so"
+QA_PREBUILT="/usr/share/"${PN}"/lib/Linux-*/*.so"
 
 src_install() {
-	java-pkg_dojar *.jar
+	insinto /usr/share/"${PN}"/
+	doins *.jar
 	java-pkg_dojar extensions/sound/*.jar
 	java-pkg_dojar extensions/profiler/*.jar
 	java-pkg_dojar extensions/array/*.jar
 	java-pkg_dojar extensions/gogo/*.jar
-	java-pkg_dojar extensions/sample/*.jar
+	java-pkg_dojar extensions/bitmap/*.jar
 	java-pkg_dojar extensions/table/*.jar
 	java-pkg_dojar extensions/gis/*.jar
 	java-pkg_dojar lib/*.jar
@@ -42,14 +43,17 @@ src_install() {
 	doins -r models/*
 
 	insinto /usr/share/pixmaps
-	doins  "${WORKDIR}"/netlogo.gif
+	newins  "${S}"/icon.ico netlogo.ico
 
 	exeinto /opt/bin
-	newexe "${FILESDIR}"/netlogo.sh netlogo
-
-	make_desktop_entry netlogo "NetLogo" /usr/share/pixmaps/netlogo.gif
+	newexe "${FILESDIR}"/netlogo-5.0.3.sh netlogo
+	newexe "${FILESDIR}"/netlogo-3d.sh netlogo-3d
+	newexe "${FILESDIR}"/hubnet.sh hubnet
+	make_desktop_entry netlogo "NetLogo" /usr/share/pixmaps/netlogo.ico
+	make_desktop_entry netlogo-3d "NetLogo 2D" /usr/share/pixmaps/netlogo.ico
+	make_desktop_entry hubnet "NetLogo Hubnet" /usr/share/pixmaps/netlogo.ico
 
 	#3D Libs right now only for x86
 	insinto /usr/share/"${PN}"/lib
-	doins lib/*.so
+	doins -r lib/Linux-*
 }

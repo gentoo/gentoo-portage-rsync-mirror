@@ -1,6 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.129 2013/01/06 09:03:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.130 2013/01/07 01:23:58 tetromino Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (07 Jan 2012)
+# remove when media-libs/libquvi is stable on sparc
+=dev-libs/totem-pl-parser-2.32.6-r1 quvi
+=media-video/mplayer2-2.0_p20120828 quvi
+=media-video/totem-2.32.0-r2 youtube
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
 # requires firefox, which is not keyworded on sparc
@@ -16,21 +22,8 @@ gnome-extra/sushi office
 media-libs/phonon gstreamer vlc
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when app-text/yelp-tools is keyworded here
->=gnome-extra/zenity-3.6 test
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
 # remove mask when dev-java/fop is keyworded here
 gnome-extra/libgda reports
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when >=app-editors/gedit-3.6 is keyworded here
-dev-util/devhelp gedit
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when app-crypt/libsecret is keyworded here
->=gnome-base/gvfs-1.14 gnome-keyring
->=gnome-extra/libgda-5.1 gnome-keyring
 
 # Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
 # MySQL 5.5 wants systemtap, tcmalloc & jemalloc
@@ -89,16 +82,6 @@ net-libs/glib-networking smartcard
 # Mask use numa for openmpi
 sys-cluster/openmpi openmpi_fabrics_psm openmpi_fabrics_knem openmpi_fabrics_open-mx openmpi_fabrics_ofed openmpi_fabrics_dapl openmpi_rm_slurm openmpi_ofed_features_rdmacm
 
-# Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
-# Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
-# bug #390345
->=app-cdr/brasero-3 tracker
-app-text/evince xps
->=dev-libs/folks-0.6 socialweb tracker
->=gnome-base/gnome-menus-3.2 test
->=gnome-base/gnome-panel-3 eds
->=gnome-base/nautilus-3 previewer tracker
-
 # Raúl Porcel <armin76@gentoo.org> (05 Nov 2011)
 # jit not supported on sparc
 dev-libs/libpcre jit
@@ -106,10 +89,6 @@ dev-libs/libpcre jit
 # Alexandre Rostovtsev <tetromino@gentoo.org> (03 Nov 2011)
 # Missing keywords in gst-plugins-faac, bug #389433
 gnome-extra/gnome-media aac
-
-# Pacho Ramos <pacho@gentoo.org> (24 Oct 2011)
-# Missing keywords in needed packages, bug #388367
-net-im/empathy map
 
 # Raúl Porcel <armin76@gentoo.org> (08 Oct 2011)
 # Needs media-sound/lilypond
@@ -138,10 +117,6 @@ net-analyzer/metasploit gui
 # Pacho Ramos <pacho@gentoo.org> (19 Jul 2011)
 # Missing keywords on dependencies
 app-cdr/brasero vcd
-
-# Pacho Ramos <pacho@gentoo.org> (02 Apr 2011)
-# quvi support is needed to play youtube files now
-media-video/totem flash youtube
 
 # Pacho Ramos <pacho@gentoo.org> (27 Jan 2011)
 # missing keywords on needed plugins

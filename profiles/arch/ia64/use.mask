@@ -48,7 +48,6 @@ capi
 lensfun
 kde
 metalink
-quvi
 upnp
 systemd
 webm
