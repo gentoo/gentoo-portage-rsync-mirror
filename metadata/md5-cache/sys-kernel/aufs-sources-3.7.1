@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 )
+DESCRIPTION=Full sources including the Gentoo patchset for the 3.7 kernel tree and aufs3 support
+EAPI=5
+HOMEPAGE=http://dev.gentoo.org/~mpagano/genpatches http://aufs.sourceforge.net/
+IUSE=deblob module symlink build deblob
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 !deblob? ( freedist )
+PDEPEND=sys-fs/aufs-util !build? ( virtual/dev-manager )
+RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl )
+RESTRICT=binchecks strip
+SLOT=3.7.1
+SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.7.tar.bz2 deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.7.N/deblob-3.7 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.7.N/deblob-check -> deblob-check-3.7 ) mirror://gentoo/genpatches-3.7-2.base.tar.bz2 http://dev.gentoo.org/~jlec/distfiles/aufs-sources-3.7.1.tar.xz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	kernel-2	dd451098928ff900df7c254820871c00	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=c678e07a8fbfa4c63a4fc68dce49ad04
