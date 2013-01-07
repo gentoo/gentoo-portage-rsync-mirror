@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/cinnamon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.20 2012/12/30 02:39:06 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.21 2013/01/07 05:13:34 tetromino Exp $
+
+*cinnamon-1.6.7-r1 (07 Jan 2013)
+
+  07 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +cinnamon-1.6.7-r1.ebuild:
+  Convert shebangs in cinnamon-settings.py (bug #450442, thanks to Antoine
+  Lemoine).
 
 *cinnamon-1.6.7 (30 Dec 2012)
 
