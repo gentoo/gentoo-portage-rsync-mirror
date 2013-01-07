@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-ru/fortune-mod-gentoo-ru-9999.ebuild,v 1.2 2013/01/05 21:15:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-ru/fortune-mod-gentoo-ru-9999.ebuild,v 1.3 2013/01/07 08:36:02 qnikst Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://fortunes.gentoo.ru"
 SRC_URI=""
 EHG_REPO_URI="https://gentoo-ru-fortunes.slepnoga.googlecode.com/hg"
 
-LICENSE="as-is"
+LICENSE="fairuse"
 SLOT="0"
 KEYWORDS=""
 IUSE=""

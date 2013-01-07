@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-ru
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-ru/ChangeLog,v 1.13 2013/01/05 21:15:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-ru/ChangeLog,v 1.14 2013/01/07 08:36:02 qnikst Exp $
+
+  07 Jan 2013;  <qnikst@gentoo.org> fortune-mod-gentoo-ru-0.25.ebuild,
+  fortune-mod-gentoo-ru-0.26.ebuild, fortune-mod-gentoo-ru-9999.ebuild,
+  metadata.xml:
+  games-misc/fortune-mod-gentoo-ru license fixed
 
   05 Jan 2013; Sergey Popov <pinkbyte@gentoo.org>
   fortune-mod-gentoo-ru-0.25.ebuild, fortune-mod-gentoo-ru-0.26.ebuild,
@@ -211,4 +216,3 @@
   08 Aug 2009; A. Vinogradov <spamslepnoga@inbox.ru>
   +fortune-mod-gentoo-ru-0.04.ebuild, +metadata.xml:
   initial commit,tnx MarSoft for works
-

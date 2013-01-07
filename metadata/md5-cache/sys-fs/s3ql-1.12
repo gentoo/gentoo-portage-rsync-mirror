@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup test
-DEPEND=dev-python/setuptools >=dev-python/apsw-3.7.0 >=dev-python/llfuse-0.37 dev-python/pycryptopp dev-python/pyliblzma sys-fs/fuse virtual/python-argparse test? ( net-misc/rsync[xattr] dev-python/unittest2 ) =dev-lang/python-2*
+DEPEND=dev-python/setuptools >=dev-python/apsw-3.7.0 >=dev-python/llfuse-0.37 dev-python/pycryptopp dev-python/pyliblzma sys-fs/fuse virtual/python-argparse test? ( net-misc/rsync[xattr] virtual/python-unittest2 ) =dev-lang/python-2*
 DESCRIPTION=A full-featured file system for online data storage
 EAPI=4
 HOMEPAGE=http://code.google.com/p/s3ql/
@@ -10,4 +10,4 @@ RDEPEND=dev-python/setuptools >=dev-python/apsw-3.7.0 >=dev-python/llfuse-0.37 d
 SLOT=0
 SRC_URI=http://s3ql.googlecode.com/files/s3ql-1.12.tar.bz2
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=d6ba7177e54192482cf37a8d816d7858
+_md5_=09b8bf5ce0cb81b53ca03ff71448e9d9

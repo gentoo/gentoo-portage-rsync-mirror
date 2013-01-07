@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/python-unittest2-0.ebuild,v 1.1 2013/01/06 18:40:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/python-unittest2-0.ebuild,v 1.2 2013/01/07 08:50:35 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} pypy{1_9,2_0} )
@@ -15,4 +15,4 @@ LICENSE=""
 SLOT="0"
 IUSE=""
 
-RDEPEND="$(python_gen_cond_dep 'dev-python/unittest2' python{2_5,2_6,3_1})"
+RDEPEND="dev-python/unittest2"

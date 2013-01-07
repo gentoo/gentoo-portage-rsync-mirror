@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/subvertpy-0.8.9.ebuild,v 1.9 2012/09/30 18:05:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/subvertpy-0.8.9.ebuild,v 1.10 2013/01/07 08:51:58 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -23,7 +23,7 @@ RDEPEND=">=dev-vcs/subversion-1.4"
 DEPEND="${RDEPEND}
 	test? ( || (
 		dev-lang/python:2.7
-		dev-python/unittest2
+		virtual/python-unittest2
 		dev-python/testtools
 	) )"
 

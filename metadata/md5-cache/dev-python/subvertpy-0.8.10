@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare test
-DEPEND=>=dev-vcs/subversion-1.4 test? ( || ( dev-lang/python:2.7 dev-python/unittest2 dev-python/testtools ) ) =dev-lang/python-2* test? ( dev-python/nose )
+DEPEND=>=dev-vcs/subversion-1.4 test? ( || ( dev-lang/python:2.7 virtual/python-unittest2 dev-python/testtools ) ) =dev-lang/python-2* test? ( dev-python/nose )
 DESCRIPTION=Alternative Python bindings for Subversion
 EAPI=3
 HOMEPAGE=http://samba.org/~jelmer/subvertpy/ http://pypi.python.org/pypi/subvertpy
@@ -10,4 +10,4 @@ RDEPEND=>=dev-vcs/subversion-1.4 =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://samba.org/~jelmer/subvertpy/subvertpy-0.8.10.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=0537d124fe49568e2d899d47255a3b38
+_md5_=de330b8ee804f21e43197e27c196f819

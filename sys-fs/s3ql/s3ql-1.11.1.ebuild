@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/s3ql-1.11.1.ebuild,v 1.2 2012/10/29 16:39:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/s3ql-1.11.1.ebuild,v 1.3 2013/01/07 08:54:18 mgorny Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ RDEPEND="dev-python/setuptools
 DEPEND="${RDEPEND}
 	test? (
 		net-misc/rsync[xattr]
-		dev-python/unittest2
+		virtual/python-unittest2
 	)"
 
 src_test() {
