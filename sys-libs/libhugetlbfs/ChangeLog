@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libhugetlbfs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhugetlbfs/ChangeLog,v 1.7 2012/03/07 07:10:59 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhugetlbfs/ChangeLog,v 1.8 2013/01/06 23:04:18 vapier Exp $
+
+*libhugetlbfs-2.15 (06 Jan 2013)
+
+  06 Jan 2013; Mike Frysinger <vapier@gentoo.org> +libhugetlbfs-2.15.ebuild:
+  Version bump #450618 by Agostino Sarubbo.
 
   07 Mar 2012; Tim Harder <radhermit@gentoo.org> libhugetlbfs-2.6.ebuild,
   libhugetlbfs-2.9.ebuild:
