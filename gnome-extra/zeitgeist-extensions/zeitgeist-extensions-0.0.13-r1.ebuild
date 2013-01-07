@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-extensions/zeitgeist-extensions-0.0.13-r1.ebuild,v 1.8 2013/01/06 09:43:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-extensions/zeitgeist-extensions-0.0.13-r1.ebuild,v 1.9 2013/01/07 21:11:38 jlec Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ PYTHON_USE_WITH="sqlite"
 
 inherit eutils python
 
-DESCRIPTION="Extensions to the engine such as Teamgeist, Relevancy Providers and Machine Learning Algorithms"
+DESCRIPTION="Allow manipulating events before/after insertion as well as before fetching"
 HOMEPAGE="https://launchpad.net/zeitgeist-extensions/"
 SRC_URI="http://launchpad.net/${PN}/trunk/fts-${PV}/+download/${P}.tar.gz"
 
