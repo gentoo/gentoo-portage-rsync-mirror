@@ -1,6 +1,12 @@
 # ChangeLog for app-office/texstudio
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.8 2012/11/05 18:57:07 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.9 2013/01/07 16:08:09 jlec Exp $
+
+*texstudio-2.5.2 (07 Jan 2013)
+
+  07 Jan 2013; Justin Lecher <jlec@gentoo.org> +texstudio-2.5.2.ebuild,
+  metadata.xml:
+  Version Bump
 
 *texstudio-2.5 (05 Nov 2012)
 
