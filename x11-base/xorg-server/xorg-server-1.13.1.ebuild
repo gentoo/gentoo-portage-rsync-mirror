@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.13.1.ebuild,v 1.12 2013/01/06 10:38:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.13.1.ebuild,v 1.13 2013/01/07 09:40:45 chithanh Exp $
 
 EAPI=4
 
@@ -71,7 +71,7 @@ DEPEND="${RDEPEND}
 	>=x11-proto/randrproto-1.4.0
 	>=x11-proto/recordproto-1.13.99.1
 	>=x11-proto/renderproto-0.11
-	>=x11-proto/resourceproto-1.0.2
+	>=x11-proto/resourceproto-1.2.0
 	>=x11-proto/scrnsaverproto-1.1
 	>=x11-proto/trapproto-3.4.3
 	>=x11-proto/videoproto-2.2.2
