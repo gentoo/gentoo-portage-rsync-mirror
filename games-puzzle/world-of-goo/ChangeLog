@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/world-of-goo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo/ChangeLog,v 1.5 2012/02/01 00:04:59 tristan Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo/ChangeLog,v 1.6 2013/01/07 18:52:19 nimiux Exp $
+
+  07 Jan 2013; Chema Alonso <nimiux@gentoo.org> world-of-goo-1.41-r1.ebuild:
+  Marked stable for amd64 wrt bug #450070
 
 *world-of-goo-1.41-r1 (01 Feb 2012)
 

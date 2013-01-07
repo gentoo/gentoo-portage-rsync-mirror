@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.105 2013/01/06 11:13:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.106 2013/01/07 18:37:42 aidecoe Exp $
+
+*dracut-024-r4 (07 Jan 2013)
+
+  07 Jan 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/024-0002-dracut-functions.sh-fixed-inst_rules-s.patch,
+  -files/024-0002-dracut-functions.sh-support-for-altern.patch,
+  +files/024-0003-dracut-functions.sh-support-for-altern.patch,
+  -files/024-0003-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +files/024-0004-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +dracut-024-r4.ebuild:
+  Use alternative dirs to search for udev rules, but install in udevdir. Fixes
+  bug #447088. Thanks to Alexander Tsoy <alexander@tsoy.me> for a patch.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> dracut-024-r3.ebuild:
   Add ~sparc, wrt bug #449220
