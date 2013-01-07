@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/accountsservice-0.6.22.ebuild,v 1.5 2012/07/19 20:22:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/accountsservice-0.6.22.ebuild,v 1.6 2013/01/07 00:39:40 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ DESCRIPTION="D-Bus interfaces for querying and manipulating user account informa
 HOMEPAGE="http://www.fedoraproject.org/wiki/Features/UserAccountDialog"
 SRC_URI="http://www.freedesktop.org/software/${PN}/${P}.tar.xz"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm x86"
 IUSE="doc +introspection vala" # systemd
