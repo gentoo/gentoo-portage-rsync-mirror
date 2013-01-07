@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xchm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.23 2012/12/30 19:58:55 dirtyepic Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.24 2013/01/07 12:42:58 nimiux Exp $
+
+  07 Jan 2013; Chema Alonso <nimiux@gentoo.org> xchm-1.21.ebuild:
+  Marked stable for amd64 wrt bug #449230
 
   30 Dec 2012; Ryan Hill <dirtyepic@gentoo.org> -xchm-1.18.ebuild:
   Drop old.

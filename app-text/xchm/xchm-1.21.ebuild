@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/xchm-1.21.ebuild,v 1.1 2012/09/09 07:08:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/xchm-1.21.ebuild,v 1.2 2013/01/07 12:42:58 nimiux Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/xchm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 IUSE="nls"
 DEPEND=">=dev-libs/chmlib-0.36
