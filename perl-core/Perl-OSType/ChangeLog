@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Perl-OSType
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Perl-OSType/ChangeLog,v 1.18 2012/06/24 15:38:59 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Perl-OSType/ChangeLog,v 1.19 2013/01/07 17:25:27 vapier Exp $
+
+  07 Jan 2013; Mike Frysinger <vapier@gentoo.org> Perl-OSType-1.2.0.ebuild:
+  Add m68k love.
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

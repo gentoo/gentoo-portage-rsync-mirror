@@ -1,6 +1,14 @@
 # ChangeLog for perl-core/CPAN-Meta
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta/ChangeLog,v 1.29 2012/06/24 15:39:00 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta/ChangeLog,v 1.30 2013/01/07 17:24:33 vapier Exp $
+
+  07 Jan 2013; Mike Frysinger <vapier@gentoo.org> CPAN-Meta-2.110.440.ebuild,
+  CPAN-Meta-2.110.580.ebuild, CPAN-Meta-2.110.910.ebuild,
+  CPAN-Meta-2.110.930.ebuild, CPAN-Meta-2.112.150.ebuild,
+  CPAN-Meta-2.112.621.ebuild, CPAN-Meta-2.113.640.ebuild,
+  CPAN-Meta-2.120.351.ebuild, CPAN-Meta-2.120.630.ebuild,
+  CPAN-Meta-2.120.900.ebuild, CPAN-Meta-2.120.921.ebuild:
+  Add m68k love.
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

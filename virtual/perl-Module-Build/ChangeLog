@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Module-Build
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.69 2012/08/22 17:12:03 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.70 2013/01/07 17:21:44 vapier Exp $
+
+  07 Jan 2013; Mike Frysinger <vapier@gentoo.org>
+  perl-Module-Build-0.34.0201.ebuild, perl-Module-Build-0.36.07.ebuild,
+  perl-Module-Build-0.362.400.ebuild, perl-Module-Build-0.380.0-r2.ebuild,
+  perl-Module-Build-0.400.0.ebuild, perl-Module-Build-0.400.100.ebuild,
+  perl-Module-Build-0.400.200.ebuild, perl-Module-Build-0.400.300.ebuild:
+  Add m68k love.
 
 *perl-Module-Build-0.400.300 (22 Aug 2012)
 
@@ -324,4 +331,3 @@
   +perl-Module-Build-0.28-r1.ebuild, +perl-Module-Build-0.28.08.ebuild,
   +perl-Module-Build-0.30.ebuild:
   Adding virtuals for dual-lifed modules that come with perl-5.10
-

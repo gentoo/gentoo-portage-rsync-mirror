@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Metadata/Module-Metadata-1.0.4.ebuild,v 1.6 2011/07/06 03:47:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Metadata/Module-Metadata-1.0.4.ebuild,v 1.7 2013/01/07 17:25:02 vapier Exp $
 
 EAPI=3
 

@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Module-Metadata
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Metadata/ChangeLog,v 1.24 2012/08/22 17:07:02 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Metadata/ChangeLog,v 1.25 2013/01/07 17:25:02 vapier Exp $
+
+  07 Jan 2013; Mike Frysinger <vapier@gentoo.org> Module-Metadata-1.0.10.ebuild,
+  Module-Metadata-1.0.11.ebuild, Module-Metadata-1.0.3.ebuild,
+  Module-Metadata-1.0.4.ebuild, Module-Metadata-1.0.5.ebuild,
+  Module-Metadata-1.0.6.ebuild, Module-Metadata-1.0.9.ebuild:
+  Add m68k love.
 
 *Module-Metadata-1.0.11 (22 Aug 2012)
 

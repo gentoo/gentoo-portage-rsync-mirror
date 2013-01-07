@@ -1,6 +1,10 @@
 # ChangeLog for virtual/python-argparse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/ChangeLog,v 1.6 2013/01/06 01:23:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/ChangeLog,v 1.7 2013/01/07 17:23:03 vapier Exp $
+
+  07 Jan 2013; Mike Frysinger <vapier@gentoo.org> python-argparse-0.ebuild,
+  python-argparse-1.ebuild:
+  Add m68k love.
 
   06 Jan 2013; Mike Gilbert <floppym@gentoo.org> python-argparse-0.ebuild,
   python-argparse-1.ebuild:
