@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jupp/jupp-3.1_p24.ebuild,v 1.1 2013/01/06 02:46:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jupp/jupp-3.1_p24.ebuild,v 1.2 2013/01/07 02:37:49 jdhore Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="https://www.mirbsd.org/MirOS/dist/${PN}/joe-${PV/_p/${PN}}.tgz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="ncurses"
 
 RDEPEND="ncurses? ( sys-libs/ncurses )
