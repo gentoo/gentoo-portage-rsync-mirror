@@ -1,6 +1,25 @@
 # ChangeLog for sys-fs/aufs3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.41 2012/12/17 08:15:06 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.42 2013/01/07 11:59:34 jlec Exp $
+
+*aufs3-3_p20130107 (07 Jan 2013)
+
+  07 Jan 2013; Justin Lecher <jlec@gentoo.org>
+  +files/3_p20130107/aufs3-base-0.patch, +files/3_p20130107/aufs3-base-1.patch,
+  +files/3_p20130107/aufs3-base-2.patch, +files/3_p20130107/aufs3-base-3.patch,
+  +files/3_p20130107/aufs3-base-4.patch, +files/3_p20130107/aufs3-base-5.patch,
+  +files/3_p20130107/aufs3-base-6.patch, +files/3_p20130107/aufs3-base-7.patch,
+  +files/3_p20130107/aufs3-base-x-rcN.patch,
+  +files/3_p20130107/aufs3-standalone-0.patch,
+  +files/3_p20130107/aufs3-standalone-1.patch,
+  +files/3_p20130107/aufs3-standalone-2.patch,
+  +files/3_p20130107/aufs3-standalone-3.patch,
+  +files/3_p20130107/aufs3-standalone-4.patch,
+  +files/3_p20130107/aufs3-standalone-5.patch,
+  +files/3_p20130107/aufs3-standalone-6.patch,
+  +files/3_p20130107/aufs3-standalone-7.patch,
+  +files/3_p20130107/aufs3-standalone-x-rcN.patch, +aufs3-3_p20130107.ebuild:
+  Version Bump
 
   17 Dec 2012; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20120430.ebuild:
   Drop old
