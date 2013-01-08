@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-0.18.0.ebuild,v 1.1 2013/01/07 00:28:01 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-0.18.0.ebuild,v 1.2 2013/01/08 21:45:10 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ DOCS=( README )
 
 src_prepare() {
 	# m4/ax_create_pkgconfig_info.m4 includes LDFLAGS
-	# sed to avoid eautoreconf 
+	# sed to avoid eautoreconf
 	sed -i -e '/Libs:/s:@LDFLAGS@ ::' configure || die
 }
 

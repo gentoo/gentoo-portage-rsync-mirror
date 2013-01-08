@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.3.2.ebuild,v 1.10 2013/01/08 21:32:50 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.3.3.ebuild,v 1.1 2013/01/08 21:32:50 lack Exp $
 
 EAPI=4
 inherit eutils flag-o-matic toolchain-funcs prefix
@@ -9,7 +9,7 @@ IUSE="nls xinerama bidi +truetype +imlib +slit +toolbar vim-syntax"
 
 DESCRIPTION="Fluxbox is an X11 window manager featuring tabs and an iconbar"
 
-SRC_URI="mirror://sourceforge/fluxbox/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/fluxbox/${P}.tar.lzma"
 HOMEPAGE="http://www.fluxbox.org"
 
 RDEPEND="x11-libs/libXpm
@@ -33,7 +33,7 @@ DEPEND="bidi? ( virtual/pkgconfig )
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux"
 
 src_prepare() {
 	# We need to be able to include directories rather than just plain

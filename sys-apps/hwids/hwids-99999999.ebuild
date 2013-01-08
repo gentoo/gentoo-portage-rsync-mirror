@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-99999999.ebuild,v 1.14 2013/01/08 13:28:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-99999999.ebuild,v 1.15 2013/01/08 21:45:50 mr_bones_ Exp $
 
 EAPI=5
 inherit udev eutils git-2
@@ -22,7 +22,6 @@ RDEPEND="!<sys-apps/pciutils-3.1.9-r2
 src_prepare() {
 	emake fetch
 }
-
 
 src_compile() {
 	emake UDEV=$(usex udev)

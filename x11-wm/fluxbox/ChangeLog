@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/fluxbox
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.305 2012/08/30 09:56:44 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.306 2013/01/08 21:32:50 lack Exp $
+
+*fluxbox-1.3.3 (08 Jan 2013)
+
+  08 Jan 2013; Jim Ramsay <jim_ramsay@gentoo.org> +fluxbox-1.3.3.ebuild,
+  fluxbox-1.3.2.ebuild, fluxbox-9999.ebuild:
+  Bug #449722 -> s/gkmessage/gxmessage/g.  Also version bump now that v1.3.3 is
+  released
 
   30 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> fluxbox-1.3.2.ebuild,
   fluxbox-9999.ebuild:
