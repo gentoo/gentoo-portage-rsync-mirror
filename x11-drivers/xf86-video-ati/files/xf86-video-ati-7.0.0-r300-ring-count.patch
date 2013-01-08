@@ -1,0 +1,34 @@
+From 793e1b0ea579cce7489aee57a95f20384d6ecce8 Mon Sep 17 00:00:00 2001
+From: Alex Deucher <alexdeucher@gmail.com>
+Date: Thu, 06 Dec 2012 14:21:19 +0000
+Subject: radeon: fix ring count in R300PrepareTexturedVideo
+
+Fixes:
+https://bugs.freedesktop.org/show_bug.cgi?id=31364
+
+Signed-off-by: Alex Deucher <alexdeucher@gmail.com>
+---
+diff --git a/src/radeon_textured_videofuncs.c b/src/radeon_textured_videofuncs.c
+index d30f734..c1bdc65 100644
+--- a/src/radeon_textured_videofuncs.c
++++ b/src/radeon_textured_videofuncs.c
+@@ -1686,7 +1686,7 @@ R300PrepareTexturedVideo(ScrnInfoPtr pScrn, RADEONPortPrivPtr pPriv)
+ 	}
+ 
+ 	if (pPriv->is_planar) {
+-	    BEGIN_RING(2*needgamma ? 28 + 33 : 33);
++	    BEGIN_RING(2 * (needgamma ? (28 + 33) : 33));
+ 	    /* 2 components: same 2 for tex0/1/2 */
+ 	    OUT_RING_REG(R300_RS_COUNT,
+ 			  ((2 << R300_RS_COUNT_IT_COUNT_SHIFT) |
+@@ -1910,7 +1910,7 @@ R300PrepareTexturedVideo(ScrnInfoPtr pScrn, RADEONPortPrivPtr pPriv)
+ 							  R300_ALU_ALPHA_SEL_C(R300_ALU_ALPHA_0_0)));
+ 	    }
+ 	} else {
+-	    BEGIN_RING(2*needgamma ? 28 + 31 : 31);
++	    BEGIN_RING(2 * (needgamma ? (28 + 31) : 31));
+ 	    /* 2 components */
+ 	    OUT_RING_REG(R300_RS_COUNT,
+ 			  ((2 << R300_RS_COUNT_IT_COUNT_SHIFT) |
+--
+cgit v0.9.0.2-2-gbebe

@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/havp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.35 2013/01/08 17:06:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.36 2013/01/08 17:39:10 jer Exp $
+
+  08 Jan 2013; Jeroen Roovers <jer@gentoo.org> -havp-0.91.ebuild:
+  Old.
 
   08 Jan 2013; Jeroen Roovers <jer@gentoo.org> havp-0.92a.ebuild:
   Do not install havp.config.in.

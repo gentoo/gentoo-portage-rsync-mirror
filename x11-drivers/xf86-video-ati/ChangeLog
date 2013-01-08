@@ -1,6 +1,22 @@
 # ChangeLog for x11-drivers/xf86-video-ati
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.195 2012/12/30 15:15:46 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.196 2013/01/08 17:33:58 chithanh Exp $
+
+*xf86-video-ati-7.0.0-r1 (08 Jan 2013)
+
+  08 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xf86-video-ati-7.0.0-r300-ring-count.patch,
+  +xf86-video-ati-7.0.0-r1.ebuild,
+  -files/xf86-video-ati-6.14.0-xorg-server-1.10.patch,
+  -files/xf86-video-ati-6.14.4-exa-solid-accel-evergreen.patch,
+  -files/xf86-video-ati-6.14.4-exa-solid-accel-r100.patch,
+  -files/xf86-video-ati-6.14.4-exa-solid-accel-r200.patch,
+  -files/xf86-video-ati-6.14.4-exa-solid-accel-r300.patch,
+  -xf86-video-ati-6.14.0.ebuild, -xf86-video-ati-6.14.1.ebuild,
+  -xf86-video-ati-6.14.2.ebuild, -xf86-video-ati-6.14.3.ebuild,
+  -xf86-video-ati-6.14.4-r1.ebuild, -xf86-video-ati-6.14.4.ebuild,
+  -xf86-video-ati-6.14.5.ebuild, -xf86-video-ati-6.14.6.ebuild:
+  Add patch to fix r300 xv issues, bug #446285.
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   xf86-video-ati-6.14.6-r1.ebuild:
