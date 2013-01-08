@@ -8,4 +8,4 @@ RDEPEND=net-misc/curl
 RESTRICT=binchecks
 SLOT=0
 SRC_URI=amd64? ( ftp://mersenne.org/gimps/p95v277.linux64.tar.gz ) x86? ( ftp://mersenne.org/gimps/p95v277.linux32.tar.gz )
-_md5_=1abf8048b02ef21571bee1f43a0f2070
+_md5_=8e2a62f76cd9083f24e4fe02a2b88ce7

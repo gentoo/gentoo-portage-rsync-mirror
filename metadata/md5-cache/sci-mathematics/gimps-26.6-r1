@@ -8,4 +8,4 @@ RDEPEND=net-misc/curl
 RESTRICT=binchecks
 SLOT=0
 SRC_URI=amd64? ( ftp://mersenne.org/gimps/mprime266-linux64.tar.gz ) x86? ( ftp://mersenne.org/gimps/mprime266.tar.gz )
-_md5_=b5c7a79322c7a7d78f33162717d7eba4
+_md5_=b30a8cc3af93d566ce2595c8a28ed0d1

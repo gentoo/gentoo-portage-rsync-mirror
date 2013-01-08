@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/gimps
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.55 2012/07/06 07:28:54 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.56 2013/01/08 11:29:06 tomka Exp $
+
+*gimps-27.9 (08 Jan 2013)
+
+  08 Jan 2013; Thomas Kahle <tomka@gentoo.org> +gimps-27.9.ebuild,
+  -gimps-27.4.ebuild, -gimps-27.6-r1.ebuild, gimps-26.6-r1.ebuild,
+  gimps-27.7-r1.ebuild:
+  bump to 27.9, remove old.  (bug 450804)
 
   06 Jul 2012; Jeff Horelick <jdhore@gentoo.org> gimps-27.7-r1.ebuild:
   marked x86 per bug 423987
@@ -268,4 +275,3 @@
   23 Jan 2004; Michal Januszewski <spock@gentoo.org>
   gimps-23.5.ebuild, metadata.xml:
   Initial commit, closes bug #38010.
-
