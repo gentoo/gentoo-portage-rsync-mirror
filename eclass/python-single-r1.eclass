@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.12 2013/01/08 16:36:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.13 2013/01/08 20:18:38 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -197,13 +197,15 @@ python-single-r1_pkg_setup() {
 		fi
 	done
 
-	eerror "No Python implementation selected for the build. Please set"
-	eerror "the PYTHON_SINGLE_TARGET variable in your make.conf to one"
-	eerror "of the following values:"
-	eerror
-	eerror "${PYTHON_COMPAT[@]}"
-	echo
-	die "No supported Python implementation in PYTHON_SINGLE_TARGET."
+	if [[ ! ${EPYTHON} ]]; then
+		eerror "No Python implementation selected for the build. Please set"
+		eerror "the PYTHON_SINGLE_TARGET variable in your make.conf to one"
+		eerror "of the following values:"
+		eerror
+		eerror "${PYTHON_COMPAT[@]}"
+		echo
+		die "No supported Python implementation in PYTHON_SINGLE_TARGET."
+	fi
 }
 
 # @FUNCTION: python_fix_shebang
