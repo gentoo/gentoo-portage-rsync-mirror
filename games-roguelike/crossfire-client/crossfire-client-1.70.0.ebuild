@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.70.0.ebuild,v 1.1 2012/07/30 21:43:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.70.0.ebuild,v 1.2 2013/01/08 07:54:51 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit gnome2-utils games
 
 DESCRIPTION="Client for the nethack-style but more in the line of UO"
@@ -46,15 +46,15 @@ src_configure() {
 src_compile() {
 	# bug 139785
 	if use alsa || use oss ; then
-		emake -j1 -C sound-src || die
+		emake -j1 -C sound-src
 	fi
-	emake || die
+	emake
 }
 
 src_install() {
 	local s
 
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog README TODO
 	domenu gtk-v2/crossfire-client.desktop
 	for s in 16 32 48
