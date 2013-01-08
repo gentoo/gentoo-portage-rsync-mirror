@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.124 2013/01/01 12:23:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.125 2013/01/08 09:14:54 radhermit Exp $
+
+  08 Jan 2013; Tim Harder <radhermit@gentoo.org> libmtp-9999.ebuild:
+  Update git repo uri for live ebuild.
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libmtp-1.1.5.ebuild:
   Add ~ia64, wrt bug #449220

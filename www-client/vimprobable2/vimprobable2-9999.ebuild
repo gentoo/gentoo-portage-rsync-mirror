@@ -1,12 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/vimprobable2/vimprobable2-9999.ebuild,v 1.1 2012/08/21 18:59:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/vimprobable2/vimprobable2-9999.ebuild,v 1.2 2013/01/08 09:21:51 radhermit Exp $
 
 EAPI=4
 
 inherit toolchain-funcs git-2
 
 EGIT_REPO_URI="git://git.code.sf.net/p/vimprobable/code"
+EGIT_PROJECT="vimprobable"
 
 DESCRIPTION="A minimal web browser that behaves like the Vimperator plugin for Firefox"
 HOMEPAGE="http://www.vimprobable.org/"

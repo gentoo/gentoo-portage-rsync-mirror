@@ -1,13 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-9999.ebuild,v 1.6 2012/12/11 16:29:23 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-9999.ebuild,v 1.7 2013/01/08 09:14:54 radhermit Exp $
 
 EAPI=4
 
 inherit autotools eutils udev user toolchain-funcs
 
 if [[ ${PV} == *9999* ]]; then
-	EGIT_REPO_URI="git://${PN}.git.sourceforge.net/gitroot/${PN}/${PN}"
+	EGIT_REPO_URI="git://git.code.sf.net/p/libmtp/code"
+	EGIT_PROJECT="libmtp"
 	inherit git-2
 else
 	KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"

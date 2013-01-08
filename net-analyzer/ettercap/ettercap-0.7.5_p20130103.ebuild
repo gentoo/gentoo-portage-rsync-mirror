@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.5_p20130103.ebuild,v 1.1 2013/01/03 13:18:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.5_p20130103.ebuild,v 1.2 2013/01/08 09:13:37 ago Exp $
 
 EAPI=4
 
@@ -54,6 +54,7 @@ src_configure() {
 		$(cmake-utils_use_enable ssl)
 		$(cmake-utils_use_enable plugins)
 		$(cmake-utils_use_enable ipv6)
+		-DINSTALL_SYSCONFDIR="${EROOT}"etc
 	)
 	cmake-utils_src_configure
 }
