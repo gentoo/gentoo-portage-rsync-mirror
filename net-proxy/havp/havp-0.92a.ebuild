@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.92a.ebuild,v 1.1 2013/01/08 16:45:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.92a.ebuild,v 1.2 2013/01/08 17:06:10 jer Exp $
 
 EAPI=4
 inherit eutils user
@@ -18,8 +18,8 @@ DEPEND="clamav? ( app-antivirus/clamav )"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	enewgroup havp
-	enewuser havp -1 -1 /etc/havp havp
+	enewgroup ${PN}
+	enewuser ${PN} -1 -1 /etc/${PN} ${PN}
 }
 
 src_configure() {
@@ -31,20 +31,22 @@ src_configure() {
 
 src_install() {
 	exeinto /usr/sbin
-	doexe havp/havp
+	doexe ${PN}/${PN}
 
-	newinitd "${FILESDIR}/havp.initd" havp
+	newinitd "${FILESDIR}/${PN}.initd" ${PN}
+
 	insinto /etc
-	doins -r etc/havp
+	rm -r etc/${PN}/${PN}.config.in
+	doins -r etc/${PN}
 
-	diropts -m 0700 -o havp -g havp
-	keepdir /var/log/havp
+	diropts -m 0700 -o ${PN} -g ${PN}
+	keepdir /var/log/${PN}
 
 	dodoc ChangeLog
 }
 
 pkg_postinst() {
-	ewarn "/var/tmp/havp must be on a filesystem with mandatory locks!"
+	ewarn "/var/tmp/${PN} must be on a filesystem with mandatory locks!"
 	ewarn "You should add  \"mand\" to the mount options on the relevant line in /etc/fstab."
 
 	if use ssl; then
@@ -58,7 +60,7 @@ pkg_postinst() {
 	if use clamav; then
 		echo
 		ewarn "If you plan to use clamav daemon, you should make sure clamav user can read"
-		ewarn "/var/tmp/havp content. This can be accomplished by enabling AllowSupplementaryGroups"
-		ewarn "in /etc/clamd.conf and adding clamav user to the havp group."
+		ewarn "/var/tmp/${PN} content. This can be accomplished by enabling AllowSupplementaryGroups"
+		ewarn "in /etc/clamd.conf and adding clamav user to the ${PN} group."
 	fi
 }
