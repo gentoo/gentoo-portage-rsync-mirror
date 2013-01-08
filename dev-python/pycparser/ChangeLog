@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycparser
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.2 2012/08/29 05:47:15 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.3 2013/01/08 02:51:30 radhermit Exp $
+
+*pycparser-2.09.1 (08 Jan 2013)
+
+  08 Jan 2013; Tim Harder <radhermit@gentoo.org> +pycparser-2.09.1.ebuild:
+  Version bump. Migrate to distutils-r1.
 
 *pycparser-2.08 (29 Aug 2012)
 
