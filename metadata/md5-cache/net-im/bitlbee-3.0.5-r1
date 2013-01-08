@@ -11,4 +11,4 @@ REQUIRED_USE=^^ ( purple || ( jabber msn oscar yahoo ) ) msn? ( || ( gnutls nss 
 SLOT=0
 SRC_URI=http://get.bitlbee.org/src/bitlbee-3.0.5.tar.gz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=fc80e29b8a9beab48924d6b0dadee760
+_md5_=e102b69fb148ace943097625da6719e0

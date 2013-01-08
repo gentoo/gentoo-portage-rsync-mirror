@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.6.ebuild,v 1.1 2012/10/19 09:20:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.6.ebuild,v 1.2 2013/01/08 14:25:21 cedk Exp $
 
 EAPI="4"
 PYTHON_DEPEND="skype? 2:2.5"
@@ -163,9 +163,6 @@ src_install() {
 
 	newinitd "${FILESDIR}"/bitlbee.initd bitlbee
 	newconfd "${FILESDIR}"/bitlbee.confd bitlbee
-
-	keepdir /var/run/bitlbee
-	fowners bitlbee:bitlbee /var/run/bitlbee
 
 	exeinto /usr/share/bitlbee
 	cd utils
