@@ -1,6 +1,6 @@
-# Copyright 2010-2012 Gentoo Foundation
+# Copyright 2010-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.7.2_rc2.ebuild,v 1.1 2012/12/06 13:21:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.7.2_rc2.ebuild,v 1.2 2013/01/08 02:13:58 blueness Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="+eligius examples ipv6 logrotate upnp"
 
 RDEPEND="
-	>=dev-libs/boost-1.41.0
+	>=dev-libs/boost-1.41.0[threads(+)]
 	dev-libs/openssl[-bindist]
 	logrotate? (
 		app-admin/logrotate
@@ -48,7 +48,6 @@ src_prepare() {
 
 src_compile() {
 	OPTS=()
-	local BOOST_PKG BOOST_VER BOOST_INC
 
 	OPTS+=("DEBUGFLAGS=")
 	OPTS+=("CXXFLAGS=${CXXFLAGS}")
@@ -56,13 +55,6 @@ src_compile() {
 
 	OPTS+=("BDB_INCLUDE_PATH=$(db_includedir "${DB_VER}")")
 	OPTS+=("BDB_LIB_SUFFIX=-${DB_VER}")
-
-	BOOST_PKG="$(best_version 'dev-libs/boost')"
-	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
-	BOOST_VER="$(replace_all_version_separators _ "${BOOST_VER}")"
-	BOOST_INC="/usr/include/boost-${BOOST_VER}"
-	OPTS+=("BOOST_INCLUDE_PATH=${BOOST_INC}")
-	OPTS+=("BOOST_LIB_SUFFIX=-${BOOST_VER}")
 
 	if use upnp; then
 		OPTS+=(USE_UPNP=1)
