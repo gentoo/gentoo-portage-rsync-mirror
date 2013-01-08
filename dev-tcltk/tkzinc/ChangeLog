@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tkzinc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/ChangeLog,v 1.7 2010/12/07 18:36:10 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/ChangeLog,v 1.8 2013/01/08 16:04:05 jlec Exp $
+
+  08 Jan 2013; Justin Lecher <jlec@gentoo.org> tkzinc-3.3.4.ebuild,
+  +files/tkzinc-3.3.4-latex.patch, tkzinc-3.3.6.ebuild, metadata.xml:
+  Add fix for doc building, #450874; move to autotools_utils.eclass
 
 *tkzinc-3.3.6 (07 Dec 2010)
 

@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-3.1.3.ebuild,v 1.4 2013/01/08 16:19:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-3.3.0.ebuild,v 1.1 2013/01/08 16:19:56 jer Exp $
 
 EAPI=4
-inherit autotools eutils user
+inherit user
 
 DESCRIPTION="A forwarding, non-caching, compressing web proxy server"
 HOMEPAGE="http://ziproxy.sourceforge.net/"
@@ -12,15 +12,20 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="jpeg2k xinetd"
+IUSE="jpeg2k sasl xinetd"
 
-DEPEND="media-libs/giflib
+DEPEND="
+	media-libs/giflib
 	media-libs/libpng
 	virtual/jpeg
 	sys-libs/zlib
-	jpeg2k? ( media-libs/jasper )"
-RDEPEND="${DEPEND}
-	xinetd? ( virtual/inetd )"
+	jpeg2k? ( media-libs/jasper )
+	sasl? ( dev-libs/cyrus-sasl )
+"
+RDEPEND="
+	${DEPEND}
+	xinetd? ( virtual/inetd )
+"
 
 pkg_setup() {
 	enewgroup ziproxy
@@ -28,8 +33,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libpng15.patch
-
 	# fix sample config file
 	sed -i \
 		-e "s:/var/ziproxy/:/var/lib/ziproxy/:g" \
@@ -42,17 +45,13 @@ src_prepare() {
 		-e "s:\(.*port.*\):\1\n\ttype\t\t\t= UNLISTED:g" \
 		-e "s:root:ziproxy:g" \
 		etc/xinetd.d/ziproxy || die
-
-	AT_M4DIR="config" eautoreconf
 }
 
 src_configure() {
-	local myconf
-	use jpeg2k && myconf="--with-jasper"  # use_with doesn't work
-
 	econf \
-		--with-cfgfile=/etc/ziproxy/ziproxy.conf \
-		${myconf}
+		$(use_with jpeg2k jasper) \
+		$(use_with sasl sasl2) \
+		--with-cfgfile=/etc/ziproxy/ziproxy.conf
 }
 
 src_install() {

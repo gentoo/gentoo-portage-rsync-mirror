@@ -1,10 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/tkzinc-3.3.6.ebuild,v 1.1 2010/12/07 18:36:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/tkzinc-3.3.6.ebuild,v 1.2 2013/01/08 16:04:05 jlec Exp $
 
-EAPI="3"
+EAPI=5
 
-inherit autotools eutils
+AUTOTOOLS_AUTORECONF=yes
+
+inherit autotools-utils
 
 DESCRIPTION="A Tk widget library."
 HOMEPAGE="http://www.tkzinc.org"
@@ -24,30 +26,33 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/Tkzinc-${PV//.}+"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PV}-ldflags.patch
-	eautoreconf
-}
+PATCHES=(
+	"${FILESDIR}"/${PV}-ldflags.patch
+	"${FILESDIR}"/${PN}-3.3.4-latex.patch
+	)
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
+
+DOCS=( BUGS )
 
 src_configure() {
-	econf \
-		--enable-shared \
-		--enable-gl=damage \
-		$(use_enable debug symbols) \
+	local myeconfargs=(
+		--enable-shared
+		--enable-gl=damage
+		$(use_enable debug symbols)
 		$(use_enable threads)
+	)
+	autotools-utils_src_configure
 }
 
 src_compile() {
-	emake || die "make failed"
-	if use doc ; then
-		emake pdf || die "make pdf files failed"
-	fi
+	autotools-utils_src_compile
+	use doc && emake pdf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	autotools-utils_src_install
 
-	dodoc BUGS README || die
-	dohtml -r doc/* || die
+	dohtml -r doc/*
 	use doc && dodoc doc/refman.pdf
 }

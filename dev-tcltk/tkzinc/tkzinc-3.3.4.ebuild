@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/tkzinc-3.3.4.ebuild,v 1.4 2010/12/07 18:36:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkzinc/tkzinc-3.3.4.ebuild,v 1.5 2013/01/08 16:04:05 jlec Exp $
 
 EAPI="3"
 
@@ -25,7 +25,9 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/Tkzinc"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-ldflags.patch
+	epatch \
+		"${FILESDIR}"/${PV}-ldflags.patch \
+		"${FILESDIR}"/${P}-latex.patch
 	eautoreconf
 }
 
