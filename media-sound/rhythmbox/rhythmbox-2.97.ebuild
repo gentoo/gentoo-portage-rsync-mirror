@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.14 2013/01/07 22:18:09 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.97.ebuild,v 1.15 2013/01/08 03:27:22 calchan Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -47,7 +47,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 		>=media-libs/clutter-gst-1.0:1.0
 		>=media-libs/clutter-gtk-1.0:1.0
 		>=x11-libs/mx-1.0.1:1.0 )
-	cdr? ( >=app-cdr/brasero-2.91.90 )
+	cdr? ( =app-cdr/brasero-3.4* )
 	daap? (
 		>=net-libs/libdmapsharing-2.9.11:3.0
 		>=net-dns/avahi-0.6 )
