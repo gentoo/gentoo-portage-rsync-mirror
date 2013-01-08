@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ispc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ispc/ChangeLog,v 1.7 2012/09/10 00:07:30 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ispc/ChangeLog,v 1.8 2013/01/08 05:43:51 ottxor Exp $
+
+  08 Jan 2013; Christoph Junghans <ottxor@gentoo.org> -ispc-1.2.2.ebuild,
+  ispc-1.3.0.ebuild:
+  fix llvm deps (bug #450786), python dep, remove old
 
   10 Sep 2012; Christoph Junghans <ottxor@gentoo.org> metadata.xml:
   updated metadata.xml

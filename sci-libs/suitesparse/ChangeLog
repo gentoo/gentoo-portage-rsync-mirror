@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/suitesparse
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparse/ChangeLog,v 1.8 2012/11/22 15:18:00 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparse/ChangeLog,v 1.9 2013/01/08 06:00:27 bicatali Exp $
+
+  08 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org> suitesparse-4.0.2.ebuild:
+  Changed flag from supernodal to lapack to match cholmod, bug #450726
 
   22 Nov 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
   suitesparse-4.0.2.ebuild:
