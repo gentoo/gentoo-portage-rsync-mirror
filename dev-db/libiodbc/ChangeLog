@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/libiodbc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.57 2012/07/11 23:02:36 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.58 2013/01/08 22:17:03 mabi Exp $
+
+*libiodbc-3.52.8 (08 Jan 2013)
+
+  08 Jan 2013; Matti Bickel <mabi@gentoo.org>
+  +files/libiodbc-3.52.8-gtk-parallel-make.patch,
+  +files/libiodbc-3.52.8-runtime-failures.patch, +libiodbc-3.52.8.ebuild:
+  version bump thanks to mschultz on bug #450782
 
   11 Jul 2012; Anthony G. Basile <blueness@gentoo.org>
   libiodbc-3.52.7-r1.ebuild:
@@ -208,4 +215,3 @@
 
   01 Dec 2003; Michael Imhof <tantive@gentoo.org> libiodbc-3.51.1.ebuild:
   Initial release.
-
