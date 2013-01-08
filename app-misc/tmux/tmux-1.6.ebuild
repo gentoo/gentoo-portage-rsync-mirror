@@ -1,8 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.6.ebuild,v 1.9 2012/10/13 17:23:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.6.ebuild,v 1.10 2013/01/08 15:12:29 jlec Exp $
 
 EAPI=4
+
+inherit bash-completion-r1
 
 DESCRIPTION="Terminal multiplexer"
 HOMEPAGE="http://tmux.sourceforge.net"
@@ -57,6 +59,8 @@ src_prepare() {
 
 src_install() {
 	default
+
+	newbashcomp examples/bash_completion_tmux.sh ${PN}
 
 	docinto examples
 	dodoc examples/*.conf
