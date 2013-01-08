@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/at-spi2-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.29 2013/01/06 09:10:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.30 2013/01/08 04:09:19 tetromino Exp $
+
+*at-spi2-core-2.6.3 (08 Jan 2013)
+
+  08 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -at-spi2-core-2.6.2-r1.ebuild, +at-spi2-core-2.6.3.ebuild:
+  Version bump; drop old.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> at-spi2-core-2.6.2-r2.ebuild:
   Add ~sparc, wrt bug #449220

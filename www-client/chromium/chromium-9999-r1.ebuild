@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.156 2012/12/20 16:50:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.157 2013/01/08 04:22:16 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -190,9 +190,6 @@ src_prepare() {
 
 	# Fix build without NaCl glibc toolchain.
 	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
-
-	# Fix build without NaCl pnacl toolchain.
-	epatch "${FILESDIR}/${PN}-no-pnacl-r0.patch"
 
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r0.patch"
 
