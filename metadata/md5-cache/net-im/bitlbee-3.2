@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst prepare setup
+DEPEND=purple? ( net-im/pidgin ) libevent? ( dev-libs/libevent ) !libevent? ( >=dev-libs/glib-2.4 ) otr? ( net-libs/libotr ) gnutls? ( net-libs/gnutls ) !gnutls? ( nss? ( dev-libs/nss ) !nss? ( ssl? ( dev-libs/openssl ) ) ) virtual/pkgconfig skype? ( app-text/asciidoc ) test? ( dev-libs/check )
+DESCRIPTION=irc to IM gateway that support multiple IM protocols
+EAPI=5
+HOMEPAGE=http://www.bitlbee.org/
+IUSE=debug gnutls ipv6 +jabber libevent msn nss +oscar otr +plugins purple skype ssl test twitter +yahoo xinetd python_targets_python2_5 python_targets_python2_6 python_targets_python2_7 python_single_target_python2_5 python_single_target_python2_6 python_single_target_python2_7
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd
+LICENSE=GPL-2
+RDEPEND=purple? ( net-im/pidgin ) libevent? ( dev-libs/libevent ) !libevent? ( >=dev-libs/glib-2.4 ) otr? ( net-libs/libotr ) gnutls? ( net-libs/gnutls ) !gnutls? ( nss? ( dev-libs/nss ) !nss? ( ssl? ( dev-libs/openssl ) ) ) virtual/logger skype? ( dev-python/skype4py[python_targets_python2_5?,python_targets_python2_6?,python_targets_python2_7?,python_single_target_python2_5(+)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] net-im/skype ) xinetd? ( sys-apps/xinetd )
+REQUIRED_USE=^^ ( purple || ( jabber msn oscar yahoo ) ) msn? ( || ( gnutls nss ssl ) ) jabber? ( !nss ) || ( python_targets_python2_5 python_targets_python2_6 python_targets_python2_7 ) ^^ ( python_single_target_python2_5 python_single_target_python2_6 python_single_target_python2_7 ) python_single_target_python2_5? ( python_targets_python2_5 ) python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=http://get.bitlbee.org/src/bitlbee-3.2.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	python-single-r1	c0f2c86f46d4434401a2e04a08c2ce9b	python-utils-r1	069a968fde0ceb8a9cd5c6a89d77cbc2	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=673c4b1d8fdb20a83fad8ee68e91398a
