@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-l10n
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.66 2013/01/05 20:19:05 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.67 2013/01/08 12:11:21 kensington Exp $
+
+  08 Jan 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/kde-l10n-da-4.8.5.patch:
+  Remove unused patches.
 
 *kdepim-l10n-4.9.5 (05 Jan 2013)
 
