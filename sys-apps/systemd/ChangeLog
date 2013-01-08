@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.66 2013/01/08 16:44:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.67 2013/01/08 21:20:30 mgorny Exp $
+
+  08 Jan 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
+  Remove unnecessary enewuser/enewgroup -- spotted by WilliamH.
 
   08 Jan 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
   Update the journald catalogs when rebuilding systemd.

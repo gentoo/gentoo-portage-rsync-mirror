@@ -1,10 +1,15 @@
 # ChangeLog for dev-python/django-picklefield
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-picklefield/ChangeLog,v 1.1 2012/05/30 06:32:59 iksaif Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-picklefield/ChangeLog,v 1.2 2013/01/08 21:03:58 iksaif Exp $
+
+*django-picklefield-0.3.0 (08 Jan 2013)
+
+  08 Jan 2013; Corentin Chary <iksaif@gentoo.org>
+  +django-picklefield-0.3.0.ebuild:
+  Add 0.3.0 and move to distutils-r1
 
 *django-picklefield-0.2.1 (30 May 2012)
 
   30 May 2012; Corentin Chary <iksaif@gentoo.org>
   +django-picklefield-0.2.1.ebuild, +metadata.xml:
   New ebuild for django-picklefield.
-

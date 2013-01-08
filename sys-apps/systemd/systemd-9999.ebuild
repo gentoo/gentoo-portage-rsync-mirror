@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.3 2013/01/08 16:44:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.4 2013/01/08 21:20:30 mgorny Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ inherit git-2
 
 PYTHON_COMPAT=( python2_7 )
 inherit autotools-utils bash-completion-r1 linux-info pam \
-	python-single-r1 systemd user
+	python-single-r1 systemd
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
@@ -76,9 +76,6 @@ DEPEND="dev-libs/gobject-introspection
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
-	enewgroup lock # used by var-lock.mount
-	enewgroup tty 5 # used by mount-setup for /dev/pts
-
 	use python && python-single-r1_pkg_setup
 }
 
