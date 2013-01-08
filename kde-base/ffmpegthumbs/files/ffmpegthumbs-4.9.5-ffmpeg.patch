@@ -1,0 +1,85 @@
+From: Martin Sandsmark <martin.sandsmark@kde.org>
+Date: Thu, 09 Aug 2012 00:53:55 +0000
+Subject: Fix all warnings.
+X-Git-Tag: v4.9.80
+X-Git-Url: http://quickgit.kde.org/?p=ffmpegthumbs.git&a=commitdiff&h=42c7bacb5b98336de07882e0b04b44ea38d081db
+---
+Fix all warnings.
+
+Port away from deprecated ffmpeg API and normalize data types.
+---
+
+
+--- a/ffmpegthumbnailer/imagewriter.cpp
++++ b/ffmpegthumbnailer/imagewriter.cpp
+@@ -31,7 +31,7 @@
+ void ImageWriter::writeFrame(VideoFrame& frame,  QImage& image)
+ {
+     QImage previewImage(frame.width, frame.height, QImage::Format_RGB888);
+-    for (int y = 0; y < frame.height; y++) {
++    for (quint32 y = 0; y < frame.height; y++) {
+         // Copy each line ..
+         memcpy(previewImage.scanLine(y), &frame.frameData[y*frame.lineSize], frame.width*3);
+     }
+
+--- a/ffmpegthumbnailer/moviedecoder.cpp
++++ b/ffmpegthumbnailer/moviedecoder.cpp
+@@ -61,7 +61,7 @@
+         return;
+     }
+ 
+-    if (av_find_stream_info(m_pFormatContext) < 0) {
++    if (avformat_find_stream_info(m_pFormatContext, 0) < 0) {
+         kDebug() << "Could not find stream information";
+         return;
+     }
+@@ -88,7 +88,7 @@
+     }
+ 
+     if ((!m_FormatContextWasGiven) && m_pFormatContext) {
+-        av_close_input_file(m_pFormatContext);
++        avformat_close_input(&m_pFormatContext);
+         m_pFormatContext = NULL;
+     }
+ 
+@@ -145,7 +145,7 @@
+ 
+     m_pVideoCodecContext->workaround_bugs = 1;
+ 
+-    if (avcodec_open(m_pVideoCodecContext, m_pVideoCodec) < 0) {
++    if (avcodec_open2(m_pVideoCodecContext, m_pVideoCodec, 0) < 0) {
+         kDebug() << "Could not open video codec";
+     }
+ }
+
+--- a/ffmpegthumbnailer/videoframe.h
++++ b/ffmpegthumbnailer/videoframe.h
+@@ -31,9 +31,9 @@
+     VideoFrame(int width, int height, int lineSize)
+             : width(width), height(height), lineSize(lineSize) {}
+ 
+-    int width;
+-    int height;
+-    int lineSize;
++    quint32 width;
++    quint32 height;
++    quint32 lineSize;
+ 
+     std::vector<quint8> frameData;
+ };
+
+--- a/ffmpegthumbnailer/videothumbnailer.cpp
++++ b/ffmpegthumbnailer/videothumbnailer.cpp
+@@ -175,9 +175,9 @@
+ 
+ void VideoThumbnailer::generateHistogram(const VideoFrame& videoFrame, Histogram<int>& histogram)
+ {
+-    for (int i = 0; i < videoFrame.height; ++i) {
++    for (quint32 i = 0; i < videoFrame.height; ++i) {
+         int pixelIndex = i * videoFrame.lineSize;
+-        for (int j = 0; j < videoFrame.width * 3; j += 3) {
++        for (quint32 j = 0; j < videoFrame.width * 3; j += 3) {
+             ++histogram.r[videoFrame.frameData[pixelIndex + j]];
+             ++histogram.g[videoFrame.frameData[pixelIndex + j + 1]];
+             ++histogram.b[videoFrame.frameData[pixelIndex + j + 2]];
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.22.1.ebuild,v 1.1 2013/01/08 04:21:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.22.1.ebuild,v 1.2 2013/01/08 11:42:33 vapier Exp $
 
 EAPI="3"
 
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.19.2-man-unicode-dashes.patch #16108 #17580 #121502
+	epatch "${FILESDIR}"/${P}-pdf-{symlink,subdir}.patch #450798
 
 	# Make sure we can cross-compile this puppy
 	if tc-is-cross-compiler ; then

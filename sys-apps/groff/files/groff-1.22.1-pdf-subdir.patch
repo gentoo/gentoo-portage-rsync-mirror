@@ -1,0 +1,30 @@
+https://bugs.gentoo.org/450798
+
+From aca061e723e26d1815536c69e5691818aea260c7 Mon Sep 17 00:00:00 2001
+From: wl <wl>
+Date: Fri, 4 Jan 2013 07:19:51 +0000
+Subject: [PATCH] o Makefile.sub (install_data): Create directory for PDF
+ documentation.   This is necesssary in case GhostScript is not available, and
+ no other   PDF files have been created yet.
+
+---
+ contrib/mom/ChangeLog    | 8 +++++++-
+ contrib/mom/Makefile.sub | 4 +++-
+ 2 files changed, 10 insertions(+), 2 deletions(-)
+
+diff --git a/contrib/mom/Makefile.sub b/contrib/mom/Makefile.sub
+index 6dd7020..e956346 100644
+--- a/contrib/mom/Makefile.sub
++++ b/contrib/mom/Makefile.sub
+@@ -158,6 +158,8 @@ install_data: stamp-strip $(NORMALFILES) $(HTMLDOCFILES) \
+ 	  rm -f $(DESTDIR)$(exampledir)/mom/$$f; \
+ 	  $(INSTALL_DATA) examples/$$f $(DESTDIR)$(exampledir)/mom/$$f; \
+ 	done
++	-test -d $(DESTDIR)$(pdfdocdir) \
++	  || $(mkinstalldirs) $(DESTDIR)$(pdfdocdir)
+ 	for f in $(PDFDOCFILE); do \
+ 	  rm -f $(DESTDIR)$(pdfdocdir)/$$f; \
+ 	  ln -s $(exampledir)/mom/$$f $(DESTDIR)$(pdfdocdir)/$$f; \
+-- 
+1.8.0.2
+

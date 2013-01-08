@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcalc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.239 2013/01/05 20:18:36 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.240 2013/01/08 11:58:05 kensington Exp $
+
+  08 Jan 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/kcalc-4.3.2-solaris-knumber_priv.patch:
+  Remove unused patches.
 
 *kcalc-4.9.5 (05 Jan 2013)
 

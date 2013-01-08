@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kamera
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kamera/ChangeLog,v 1.228 2013/01/05 20:18:36 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kamera/ChangeLog,v 1.229 2013/01/08 11:55:01 kensington Exp $
+
+  08 Jan 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/kamera-4.8.5-libgphoto2-2.5.patch:
+  Remove unused patches.
 
 *kamera-4.9.5 (05 Jan 2013)
 
@@ -862,4 +866,3 @@
   +kamera-3.4.0_beta1.ebuild:
   Adding the split ebuilds to portage. For KDE 3.4, we've created separate
   ebuilds for all the KDE apps.
-
