@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/seven-kingdoms/seven-kingdoms-2.14.4.ebuild,v 1.1 2013/01/08 00:00:49 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/seven-kingdoms/seven-kingdoms-2.14.4.ebuild,v 1.2 2013/01/08 00:17:20 pinkbyte Exp $
 
 EAPI=5
 
@@ -20,11 +20,11 @@ SRC_URI="mirror://sourceforge/skfans/${MY_PN}-source-${PV}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="network"
 
 DEPEND="media-libs/libsdl[X,video]
-	media-libs/sdl-net
-	media-libs/openal"
+	media-libs/openal
+	network? ( media-libs/sdl-net )"
 RDEPEND="${DEPEND}"
 PDEPEND="games-strategy/seven-kingdoms-data"
 
@@ -32,9 +32,16 @@ S="${WORKDIR}/${MY_P}"
 
 DOCS=( README )
 
+src_prepare() {
+	sed -i -e '/#include <player_desc.h>/a\#include <string.h>' src/multiplayer/common/player_desc.cpp || die 'sed failed'
+
+	autotools-utils_src_prepare
+}
+
 src_configure() {
 	# In current state debugging works only on Windows :-/
 	egamesconf \
+		$(use_enable network)
 		--disable-debug \
 		--without-directx \
 		--without-wine \
