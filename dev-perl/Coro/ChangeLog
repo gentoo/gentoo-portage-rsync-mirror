@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Coro
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Coro/ChangeLog,v 1.14 2012/12/08 14:52:47 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Coro/ChangeLog,v 1.15 2013/01/08 18:28:04 tove Exp $
+
+  08 Jan 2013; Torsten Veller <tove@gentoo.org> -Coro-6.80.0.ebuild,
+  -Coro-6.100.0.ebuild:
+  Cleanup
 
 *Coro-6.230.0 (08 Dec 2012)
 

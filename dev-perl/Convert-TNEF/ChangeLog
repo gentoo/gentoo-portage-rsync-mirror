@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-TNEF
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.31 2012/10/28 19:36:32 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.32 2013/01/08 18:28:52 tove Exp $
+
+  08 Jan 2013; Torsten Veller <tove@gentoo.org> -Convert-TNEF-0.170.0.ebuild:
+  Cleanup
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> Convert-TNEF-0.180.0.ebuild:
   Restore alpha/sparc keywords

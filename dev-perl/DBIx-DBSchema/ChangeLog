@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBIx-DBSchema
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-DBSchema/ChangeLog,v 1.52 2012/09/30 18:19:50 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-DBSchema/ChangeLog,v 1.53 2013/01/08 18:24:09 tove Exp $
+
+  08 Jan 2013; Torsten Veller <tove@gentoo.org> -DBIx-DBSchema-0.390.0.ebuild:
+  Cleanup
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> DBIx-DBSchema-0.390.0.ebuild,
   DBIx-DBSchema-0.400.0.ebuild:

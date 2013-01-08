@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/daa2iso/daa2iso-0.1.7e.ebuild,v 1.2 2011/07/02 21:49:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/daa2iso/daa2iso-0.1.7e.ebuild,v 1.3 2013/01/08 18:14:12 nimiux Exp $
 
 EAPI="2"
 inherit base toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://aluigi.org/mytoolz/${PN}.zip -> ${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
