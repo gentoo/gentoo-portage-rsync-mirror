@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.175 2013/01/05 20:18:47 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.176 2013/01/08 12:57:09 kensington Exp $
+
+  08 Jan 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/systemsettings-4.9.0-parallel-build.patch:
+  Remove unused patches.
 
 *systemsettings-4.9.5 (05 Jan 2013)
 

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/files/init.d-nullmailer-r2,v 1.1 2013/01/08 11:37:07 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/files/init.d-nullmailer-r2,v 1.2 2013/01/08 12:44:00 eras Exp $
 
 DAEMON="/usr/sbin/nullmailer-send"
 ARGS="--daemon"
@@ -10,7 +10,6 @@ GROUP=nullmail
 
 depend() {
 	use net logger
-	provide mta
 }
 
 checkconfig() {

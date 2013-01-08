@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/step
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.132 2013/01/05 20:18:49 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.133 2013/01/08 12:54:50 kensington Exp $
+
+  08 Jan 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/step-4.3.2-solaris.patch:
+  Remove unused patches.
 
 *step-4.9.5 (05 Jan 2013)
 
@@ -511,4 +515,3 @@
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   +metadata.xml, +step-4.1.2.ebuild:
   Add kde-4.1.2 into the tree from the kde-testing overlay.
-

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.169 2013/01/05 20:19:13 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.170 2013/01/08 12:46:04 kensington Exp $
+
+  08 Jan 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/marble-4.9.1-shapelib.patch:
+  Remove unused patches.
 
 *marble-4.9.5 (05 Jan 2013)
 

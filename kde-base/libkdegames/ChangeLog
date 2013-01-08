@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdegames
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.238 2013/01/05 20:18:33 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.239 2013/01/08 12:42:19 kensington Exp $
+
+  08 Jan 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/libkdegames-4.2.0-darwin.patch:
+  Remove unused patches.
 
 *libkdegames-4.9.5 (05 Jan 2013)
 

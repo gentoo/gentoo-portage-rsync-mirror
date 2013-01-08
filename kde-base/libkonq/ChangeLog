@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkonq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.243 2013/01/05 20:18:31 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.244 2013/01/08 12:44:17 kensington Exp $
+
+  08 Jan 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/libkonq-4.8.3-cmake.patch:
+  Remove unused patches.
 
 *libkonq-4.9.5 (05 Jan 2013)
 
