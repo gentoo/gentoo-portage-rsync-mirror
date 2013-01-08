@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.35 2013/01/04 01:26:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.36 2013/01/08 16:36:16 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -145,7 +145,7 @@ _python_set_globals() {
 	optflags+=,${flags_st[@]/%/(-)}
 
 	IUSE=${flags[*]}
-	REQUIRED_USE="|| ( ${flags[*]} )"
+	#REQUIRED_USE="|| ( ${flags[*]} )"
 	PYTHON_USEDEP=${optflags// /,}
 
 	# 1) well, python-exec would suffice as an RDEP
@@ -160,6 +160,27 @@ _python_set_globals() {
 	done
 }
 _python_set_globals
+
+# @FUNCTION: _python_validate_useflags
+# @INTERNAL
+# @DESCRIPTION:
+# Enforce the proper setting of PYTHON_TARGETS.
+_python_validate_useflags() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local i
+
+	for i in "${PYTHON_COMPAT[@]}"; do
+		use "python_targets_${i}" && return 0
+	done
+
+	eerror "No Python implementation selected for the build. Please add one"
+	eerror "of the following values to your PYTHON_TARGETS (in make.conf):"
+	eerror
+	eerror "${PYTHON_COMPAT[@]}"
+	echo
+	die "No supported Python implementation in PYTHON_TARGETS."
+}
 
 # @FUNCTION: python_gen_usedep
 # @USAGE: <pattern> [...]
@@ -306,6 +327,8 @@ python_gen_cond_dep() {
 # directories respecting BUILD_DIR.
 python_copy_sources() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	_python_validate_useflags
 
 	local impl
 	local bdir=${BUILD_DIR:-${S}}
@@ -542,6 +565,7 @@ _python_check_USE_PYTHON() {
 python_foreach_impl() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	_python_validate_useflags
 	_python_check_USE_PYTHON
 
 	local impl
@@ -571,6 +595,8 @@ python_foreach_impl() {
 python_export_best() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	_python_validate_useflags
+
 	[[ ${#} -gt 0 ]] || set -- EPYTHON PYTHON
 
 	local impl best
@@ -597,6 +623,8 @@ python_export_best() {
 # having a matching shebang will be refused.
 python_replicate_script() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	_python_validate_useflags
 
 	local suffixes=()
 

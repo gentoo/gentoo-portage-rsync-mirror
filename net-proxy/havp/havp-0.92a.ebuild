@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.90-r1.ebuild,v 1.2 2013/01/08 16:45:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.92a.ebuild,v 1.1 2013/01/08 16:45:38 jer Exp $
 
-EAPI="2"
-
+EAPI=4
 inherit eutils user
 
 DESCRIPTION="HTTP AntiVirus Proxy"
@@ -12,7 +11,7 @@ SRC_URI="http://www.server-side.de/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="clamav ssl"
 
 DEPEND="clamav? ( app-antivirus/clamav )"
@@ -23,14 +22,11 @@ pkg_setup() {
 	enewuser havp -1 -1 /etc/havp havp
 }
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc44.patch
-}
-
 src_configure() {
-	econf --localstatedir=/var \
+	econf \
 		$(use_enable clamav) \
-		$(use_enable ssl ssl-tunnel) || die "configure failed"
+		$(use_enable ssl ssl-tunnel) \
+		--localstatedir=/var
 }
 
 src_install() {
@@ -43,9 +39,6 @@ src_install() {
 
 	diropts -m 0700 -o havp -g havp
 	keepdir /var/log/havp
-
-	diropts -m 0750
-	dodir /var/run/havp /var/tmp/havp
 
 	dodoc ChangeLog
 }

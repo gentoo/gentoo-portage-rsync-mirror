@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.11 2013/01/02 21:12:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.12 2013/01/08 16:36:16 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -140,7 +140,7 @@ _python_single_set_globals() {
 	optflags+=,${flags[@]/%/(+)?}
 
 	IUSE="${flags_mt[*]} ${flags[*]}"
-	REQUIRED_USE="|| ( ${flags_mt[*]} ) ^^ ( ${flags[*]} )"
+	#REQUIRED_USE="|| ( ${flags_mt[*]} ) ^^ ( ${flags[*]} )"
 	PYTHON_USEDEP=${optflags// /,}
 
 	# 1) well, python-exec would suffice as an RDEP
@@ -153,7 +153,7 @@ _python_single_set_globals() {
 		# The chosen targets need to be in PYTHON_TARGETS as well.
 		# This is in order to enforce correct dependencies on packages
 		# supporting multiple implementations.
-		REQUIRED_USE+=" python_single_target_${i}? ( python_targets_${i} )"
+		#REQUIRED_USE+=" python_single_target_${i}? ( python_targets_${i} )"
 
 		python_export "${i}" PYTHON_PKG_DEP
 		PYTHON_DEPS+=" python_single_target_${i}? ( ${PYTHON_PKG_DEP} )"
@@ -168,15 +168,42 @@ _python_single_set_globals
 python-single-r1_pkg_setup() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	unset EPYTHON
+
 	local impl
 	for impl in "${_PYTHON_ALL_IMPLS[@]}"; do
 		if has "${impl}" "${PYTHON_COMPAT[@]}" \
 			&& use "python_single_target_${impl}"
 		then
+			if [[ ${EPYTHON} ]]; then
+				eerror "Your PYTHON_SINGLE_TARGET setting lists more than a single Python"
+				eerror "implementation. Please set it to just one value. If you need"
+				eerror "to override the value for a single package, please use package.env"
+				eerror "or an equivalent solution (man 5 portage)."
+				echo
+				die "More than one implementation in PYTHON_SINGLE_TARGET."
+			fi
+
+			if ! use "python_targets_${impl}"; then
+				eerror "The implementation chosen as PYTHON_SINGLE_TARGET must be added"
+				eerror "to PYTHON_TARGETS as well. This is in order to ensure that"
+				eerror "dependencies are satisfied correctly. We're sorry"
+				eerror "for the inconvenience."
+				echo
+				die "Build target (${impl}) not in PYTHON_TARGETS."
+			fi
+
 			python_export "${impl}" EPYTHON PYTHON
-			break
 		fi
 	done
+
+	eerror "No Python implementation selected for the build. Please set"
+	eerror "the PYTHON_SINGLE_TARGET variable in your make.conf to one"
+	eerror "of the following values:"
+	eerror
+	eerror "${PYTHON_COMPAT[@]}"
+	echo
+	die "No supported Python implementation in PYTHON_SINGLE_TARGET."
 }
 
 # @FUNCTION: python_fix_shebang

@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 depend() {
@@ -14,7 +14,7 @@ get_havp_opt() {
 }
 
 checkconfig() {
-	if [ ! -d /var/run/havp ] && ! mkdir /var/run/havp; then
+	if [ ! -d /var/run/havp ] && ! mkdir -p /var/run/havp; then
 		eeror "Failed to create /var/run/havp"
 		return 1
 	fi
