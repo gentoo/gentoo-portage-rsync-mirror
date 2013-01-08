@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.74 2012/12/16 16:29:05 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.75 2013/01/08 10:47:02 voyageur Exp $
+
+*nx-3.5.0.17 (08 Jan 2013)
+
+  08 Jan 2013; Bernard Cafarelli <voyageur@gentoo.org> +nx-3.5.0.17.ebuild:
+  Version bump, includes new system to define NX keystrokes
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> nx-3.5.0.15.ebuild:
   Stable for x86, wrt bug #445766

@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/x2goclient
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.15 2012/12/16 16:29:13 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.16 2013/01/08 10:53:53 voyageur Exp $
+
+*x2goclient-4.0.0.1 (08 Jan 2013)
+
+  08 Jan 2013; Bernard Cafarelli <voyageur@gentoo.org>
+  -x2goclient-3.0.1.18.ebuild, -files/x2goclient-3.0.1.18-cups1.5.patch,
+  -x2goclient-3.99.2.1.ebuild, +x2goclient-4.0.0.1.ebuild:
+  Version bump, drop some old versions
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> x2goclient-3.99.2.2.ebuild:
   Stable for x86, wrt bug #445766

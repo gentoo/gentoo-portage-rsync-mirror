@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-3.99.2.1.ebuild,v 1.1 2012/07/10 14:19:01 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-4.0.0.1.ebuild,v 1.1 2013/01/08 10:53:53 voyageur Exp $
 
 EAPI=4
 inherit eutils qt4-r2
@@ -22,8 +22,6 @@ DEPEND="net-libs/libssh
 	ldap? ( net-nds/openldap )"
 RDEPEND="${DEPEND}
 	net-misc/nx"
-
-S=${WORKDIR}/${P/-/_}
 
 src_prepare() {
 	if ! use ldap; then
