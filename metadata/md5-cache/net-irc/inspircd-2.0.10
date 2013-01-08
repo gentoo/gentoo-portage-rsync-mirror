@@ -10,4 +10,4 @@ RDEPEND=dev-lang/perl ssl? ( dev-libs/openssl ) geoip? ( dev-libs/geoip ) gnutls
 SLOT=0
 SRC_URI=http://www.github.com/inspircd/inspircd/archive/v2.0.10.tar.gz -> inspircd-2.0.10.tar.gz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=2f7382256740b69e0e5c5e43c5e55883
+_md5_=d53fded3a1f7935994fe99959cb56b54
