@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7336 2013/01/07 20:21:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7337 2013/01/08 10:28:16 grozin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Jan 2013; Andrey Grozin <grozin@gentoo.org> package.mask:
+  Masking >=dev-lisp/gentoo-init-1.0, >=dev-lisp/asdf-2.26, >=dev-lisp/sbcl-1.1.2
 
   07 Jan 2013; Michał Górny <mgorny@gentoo.org> thirdpartymirrors:
   Fix github mirror to use the regular URI.
