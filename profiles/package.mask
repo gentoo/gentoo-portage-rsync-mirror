@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14354 2013/01/08 10:28:17 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14355 2013/01/08 14:33:42 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,10 +34,6 @@
 # Alexander Vershilov <qnikst@gentoo.org> (06 Jan 2013)
 # Requires >=net-fs/samba-4 (bug #450226)
 >=sys-auth/sssd-1.9.3
-
-# Jeroen Roovers <jer@gentoo.org> (06 Jan 2013)
-# bug #450504
-=dev-libs/libnl-3.2.17
 
 # Sergei Trofimovich <slyfox@gentoo.org> (05 Jan 2013)
 # Masked for testing. Known to hang on large repos,
