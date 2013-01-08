@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7338 2013/01/08 14:33:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7339 2013/01/08 19:10:12 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Jan 2013; Torsten Veller <tove@gentoo.org> package.mask:
+  Mask dev-perl/Class-MOP for removal (#350612)
 
   08 Jan 2013; Jeroen Roovers <jer@gentoo.org> package.mask:
   Remove dev-libs/libnl-3.2.17 mask (bug #450504) now that it is gone.

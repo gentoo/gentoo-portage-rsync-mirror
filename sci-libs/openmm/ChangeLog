@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/openmm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openmm/ChangeLog,v 1.3 2013/01/04 14:55:16 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openmm/ChangeLog,v 1.4 2013/01/08 19:22:39 ottxor Exp $
+
+  08 Jan 2013; Christoph Junghans <ottxor@gentoo.org> openmm-4.1.1.ebuild:
+  removed fetch restriction as license allows redistribution
 
   04 Jan 2013; Christoph Junghans <ottxor@gentoo.org> openmm-4.1.1.ebuild:
   fixed license (thx to ulm)

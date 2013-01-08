@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14355 2013/01/08 14:33:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14356 2013/01/08 19:10:11 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (08 Jan 2013)
+# Mask dev-perl/Class-MOP. It was merge with dev-perl/Moose-2.
+# Now as the last arch stabilized Moose-2, dev-perl/Class-MOP will be removed.
+# bug #350612
+dev-perl/Class-MOP
 
 # Alexander Vershilov <qnikst@gentoo.org> (06 Jan 2013)
 # Requires >=net-fs/samba-4 (bug #450226)
