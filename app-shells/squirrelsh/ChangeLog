@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/squirrelsh
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/squirrelsh/ChangeLog,v 1.9 2012/06/29 13:37:38 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/squirrelsh/ChangeLog,v 1.10 2013/01/08 03:52:04 blueness Exp $
+
+*squirrelsh-1.2.7 (08 Jan 2013)
+
+  08 Jan 2013; Anthony G. Basile <blueness@gentoo.org> +squirrelsh-1.2.7.ebuild:
+  Version bump
 
   29 Jun 2012; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Removing eplumlee@yahoo.com as maintainer until he gets back to me
@@ -44,4 +49,3 @@
   +squirrelsh-1.2.3.ebuild:
   Initial commit. Ebuild written by Evan Plumlee <ed-209@hellburner.com>.
   Proxied maintainer.
-
