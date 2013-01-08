@@ -5,7 +5,7 @@ depend() {
 }
 
 start() {
-	if [[ -z "${TWISTD_OPTS}" ]]; then
+	if [ -z "${TWISTD_OPTS}" ]; then
 		eerror "TWISTD_OPTS is not set!"
 		eerror "You need to configure twistd in /etc/conf.d/twistd."
 		return 1

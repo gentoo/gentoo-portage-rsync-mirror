@@ -1,6 +1,12 @@
 # ChangeLog for net-nntp/nzbget
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.53 2012/12/16 21:26:36 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.54 2013/01/08 18:33:58 radhermit Exp $
+
+*nzbget-9.1_pre538 (08 Jan 2013)
+
+  08 Jan 2013; Tim Harder <radhermit@gentoo.org> nzbget-9.0.ebuild,
+  +nzbget-9.1_pre538.ebuild, files/nzbget.initd:
+  Version bump. Use checkpath in the init script (bug #436642).
 
   16 Dec 2012; Tim Harder <radhermit@gentoo.org> -nzbget-9.0_pre511.ebuild,
   -nzbget-9.0_pre518.ebuild:

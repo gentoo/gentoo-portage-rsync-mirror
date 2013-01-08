@@ -1,6 +1,15 @@
 # ChangeLog for net-proxy/wwwoffle
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.56 2012/12/29 14:25:49 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.58 2013/01/08 18:43:16 jer Exp $
+
+  08 Jan 2013; Jeroen Roovers <jer@gentoo.org> wwwoffle-2.9i.ebuild:
+  Update HOMEPAGE and SRC_URI.
+
+*wwwoffle-2.9i (08 Jan 2013)
+
+  08 Jan 2013; Jeroen Roovers <jer@gentoo.org> -wwwoffle-2.9e.ebuild,
+  +wwwoffle-2.9i.ebuild, +files/wwwoffle-2.9i-define.patch:
+  Version bump.
 
   29 Dec 2012; Agostino Sarubbo <ago@gentoo.org> wwwoffle-2.9h.ebuild:
   Stable for sparc, wrt bug #441498

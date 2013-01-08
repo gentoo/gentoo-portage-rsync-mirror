@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.158 2012/10/08 13:49:11 marienz Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.159 2013/01/08 18:45:38 floppym Exp $
+
+  08 Jan 2013; Mike Gilbert <floppym@gentoo.org> files/twistd.init:
+  Remove bashism, #450806 by kensington.
 
   08 Oct 2012; Marien Zwart <marienz@gentoo.org> twisted-12.2.0.ebuild:
   Tighten python version dependency (spotted by Arfrever).

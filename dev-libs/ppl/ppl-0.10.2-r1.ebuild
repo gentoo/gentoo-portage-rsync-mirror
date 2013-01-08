@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.10.2-r1.ebuild,v 1.13 2011/11/14 11:18:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.10.2-r1.ebuild,v 1.14 2013/01/08 18:45:31 vapier Exp $
 
 EAPI=2
 
@@ -25,7 +25,6 @@ pkg_setup() {
 	if use test; then
 		ewarn "The PPL testsuite will be run."
 		ewarn "Note that this can take several hours to complete on a fast machine."
-		epause 3
 	fi
 }
 

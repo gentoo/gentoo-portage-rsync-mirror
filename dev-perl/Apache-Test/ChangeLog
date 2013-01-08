@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-Test
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.98 2012/12/27 11:03:54 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.99 2013/01/08 18:42:47 tove Exp $
+
+  08 Jan 2013; Torsten Veller <tove@gentoo.org> -Apache-Test-1.360.0.ebuild,
+  -Apache-Test-1.370.0.ebuild:
+  Cleanup
 
   27 Dec 2012; Raúl Porcel <armin76@gentoo.org> Apache-Test-1.380.0.ebuild:
   alpha/sparc stable wrt #441208

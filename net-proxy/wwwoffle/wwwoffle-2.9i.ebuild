@@ -1,16 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9e.ebuild,v 1.6 2012/08/01 19:49:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9i.ebuild,v 1.2 2013/01/08 18:43:16 jer Exp $
 
-EAPI="2"
-
-inherit user
+EAPI=4
+inherit eutils user
 
 DESCRIPTION="Web caching proxy suitable for non-permanent Internet connections"
-SRC_URI="http://www.gedanken.demon.co.uk/download-wwwoffle/${P}.tgz"
-HOMEPAGE="http://www.gedanken.demon.co.uk/wwwoffle"
+HOMEPAGE="http://www.gedanken.org.uk/software/wwwoffle/"
+SRC_URI="http://www.gedanken.org.uk/software/${PN}/download/${P}.tgz"
 
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="gnutls ipv6 zlib"
@@ -24,25 +23,28 @@ DEPEND="dev-lang/perl
 # Unsure whether to depend on >=www-misc/htdig-3.1.6-r4 or not
 
 src_prepare() {
-	sed -i -e 's#$(TAR) xpf #$(TAR) --no-same-owner -xpf #' \
-		"${S}/cache/Makefile.in"
+	epatch "${FILESDIR}"/${PN}-2.9i-define.patch
+	sed -i cache/Makefile.in \
+		-e 's#$(TAR) xpf #$(TAR) --no-same-owner -xpf #' \
+		|| die
 }
 
 src_configure() {
-	econf $(use_with zlib) \
+	econf \
 		$(use_with gnutls) \
-		$(use_with ipv6) || die "econf failed"
+		$(use_with ipv6) \
+		$(use_with zlib)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 
 	# documentation fix
 	# del empty doc dirs
-	rmdir "${D}/usr/doc/${PN}"/{it,nl,ru}
+	rmdir "${D}/usr/doc/${PN}"/{it,nl,ru} || die
 	dodir /usr/share/doc
-	mv "${D}/usr/doc/wwwoffle" "${D}/usr/share/doc/${PF}"
-	rmdir "${D}/usr/doc"
+	mv "${D}/usr/doc/${PN}" "${D}/usr/share/doc/${PF}" || die
+	rmdir "${D}/usr/doc" || die
 
 	# install the wwwoffled init script
 	newinitd "${FILESDIR}/${PN}.initd" wwwoffled
@@ -80,18 +82,6 @@ pkg_preinst() {
 	sed -i -e 's/^[# \t]\(run-[gu]id[ \t]*=[ \t]*\)[a-zA-Z0-9]*[ \t]*$/ \1wwwoffle/g' \
 		"${D}/etc/wwwoffle/wwwoffle.conf"
 
-	# Stop the service if it is started
-	if [ "${ROOT}" = "/" ] ; then
-		source /etc/init.d/functions.sh
-		if [ -L "${svcdir}/started/wwwoffled" ]; then
-			einfo "The wwwoffled init script is running. I'll stop it, merge the new files and
-			restart the script."
-			/etc/init.d/wwwoffled stop
-			# Just to be sure...
-			start-stop-daemon --stop --quiet --name wwwoffled
-			touch "${T}/stopped"
-		fi
-	fi
 }
 
 pkg_postinst() {
@@ -114,12 +104,4 @@ pkg_postinst() {
 	einfo "This is for your own security. Otherwise wwwoffle is run as root which is relay bad if"
 	einfo "there is an exploit in this program that allows remote/local users to execute arbitary"
 	einfo "commands as the root user."
-
-	if [ -f "${ROOT}/etc/wwwoffle.conf" ]; then
-		ewarn "Configuration file is /etc/wwwoffle/wwwoffle.conf now"
-		ewarn "Suggest you move ${ROOT}etc/wwwoffle.conf"
-	fi
-
-	# if htdig - run script for full database index
-	# TODO
 }
