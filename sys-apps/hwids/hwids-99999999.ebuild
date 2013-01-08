@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-99999999.ebuild,v 1.13 2012/12/09 16:02:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-99999999.ebuild,v 1.14 2013/01/08 13:28:13 flameeyes Exp $
 
 EAPI=5
-inherit udev git-2
+inherit udev eutils git-2
 
 DESCRIPTION="Hardware (PCI, USB, OUI, IAB) IDs databases"
 HOMEPAGE="https://github.com/gentoo/hwids"
@@ -23,15 +23,26 @@ src_prepare() {
 	emake fetch
 }
 
-src_configure() {
-	MAKEOPTS+=" UDEV=$(usex udev)"
-	MAKEOPTS+=" DOCDIR=${EPREFIX}/usr/share/doc/${PF}"
-	MAKEOPTS+=" MISCDIR=${EPREFIX}/usr/share/misc"
-	MAKEOPTS+=" HWDBDIR=${EPREFIX}$(udev_get_udevdir)/hwdb.d"
-	MAKEOPTS+=" DESTDIR=${D}"
+
+src_compile() {
+	emake UDEV=$(usex udev)
+}
+
+src_install() {
+	emake UDEV=$(usex udev) install \
+		DOCDIR="${EPREFIX}/usr/share/doc/${PF}" \
+		MISCDIR="${EPREFIX}/usr/share/misc" \
+		HWDBDIR="${EPREFIX}$(udev_get_udevdir)/hwdb.d" \
+		DESTDIR="${D}"
 }
 
 pkg_postinst() {
+	# until udev introduces a way to compile the database at a given
+	# location, rather than just /, we can't do much on offset root.
+	if [[ ${ROOT} != "" ]] && [[ ${ROOT} != "/" ]]; then
+		return 0
+	fi
+
 	if use udev && [[ $(udevadm --help 2>&1) == *hwdb* ]]; then
 		udevadm hwdb --update
 	fi

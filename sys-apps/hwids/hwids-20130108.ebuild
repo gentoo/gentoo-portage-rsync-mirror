@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20130102.ebuild,v 1.1 2013/01/03 11:35:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20130108.ebuild,v 1.2 2013/01/08 13:28:13 flameeyes Exp $
 
 EAPI=5
-inherit udev
+inherit udev eutils
 
 DESCRIPTION="Hardware (PCI, USB, OUI, IAB) IDs databases"
 HOMEPAGE="https://github.com/gentoo/hwids"

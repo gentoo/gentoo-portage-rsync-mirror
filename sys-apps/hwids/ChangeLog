@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.62 2013/01/03 11:35:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.64 2013/01/08 13:28:13 flameeyes Exp $
+
+  08 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org> hwids-20130108.ebuild,
+  hwids-99999999.ebuild:
+  Add missing eutils inherit and update live ebuild to follow the release one.
+
+*hwids-20130108 (08 Jan 2013)
+
+  08 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org> +hwids-20130108.ebuild,
+  -hwids-20121202.ebuild, -hwids-20121227.ebuild, -hwids-20130102.ebuild:
+  Version bump; remove old.
 
 *hwids-20130102 (03 Jan 2013)
 
