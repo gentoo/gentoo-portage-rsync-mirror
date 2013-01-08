@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.52 2013/01/08 05:48:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.53 2013/01/08 14:00:08 jer Exp $
+
+  08 Jan 2013; Jeroen Roovers <jer@gentoo.org> ppl-0.12.1-r1.ebuild:
+  Fix typo by Alphat-PC (bug #447928 comment #27).
 
 *ppl-0.12.1-r1 (08 Jan 2013)
 

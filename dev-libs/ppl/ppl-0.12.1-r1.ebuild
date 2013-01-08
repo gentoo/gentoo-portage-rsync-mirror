@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.12.1-r1.ebuild,v 1.1 2013/01/08 05:48:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.12.1-r1.ebuild,v 1.2 2013/01/08 14:00:08 jer Exp $
 
 EAPI="3"
 
@@ -30,7 +30,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/ppl-fix-gmp-5.1.0.patch" || dir "Failed to patch"
+	epatch "${FILESDIR}/ppl-fix-gmp-5.1.0.patch" || die "Failed to patch"
 }
 
 src_configure() {
