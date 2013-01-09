@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/icc_examin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/icc_examin/ChangeLog,v 1.3 2012/11/04 17:17:18 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/icc_examin/ChangeLog,v 1.4 2013/01/09 08:26:34 xmw Exp $
+
+*icc_examin-0.53 (09 Jan 2013)
+
+  09 Jan 2013; Michael Weber <xmw@gentoo.org> +icc_examin-0.53.ebuild:
+  Version bump (thanks euscan)
 
 *icc_examin-0.52 (04 Nov 2012)
 
