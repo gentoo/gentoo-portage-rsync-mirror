@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-9999.ebuild,v 1.10 2012/12/18 05:38:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-9999.ebuild,v 1.11 2013/01/09 03:22:25 ottxor Exp $
 
 EAPI=4
 
@@ -26,8 +26,8 @@ IUSE="libnotify +system-libCg video_cards_fglrx video_cards_radeon"
 SLOT="0"
 
 KEYWORDS="-* ~amd64 ~x86"
-#GoogleTalkPlugin binary contains openssl
-LICENSE="Google-TOS openssl"
+#GoogleTalkPlugin binary contains openssl and celt
+LICENSE="Google-TOS openssl BSD"
 RESTRICT="strip mirror"
 
 RDEPEND="|| ( media-sound/pulseaudio media-libs/alsa-lib )
@@ -57,9 +57,9 @@ INSTALL_BASE="opt/google/talkplugin"
 
 QA_EXECSTACK="${INSTALL_BASE}/GoogleTalkPlugin"
 
-QA_TEXTRELS="${INSTALL_BASE}/libnpg*.so"
+QA_TEXTRELS="${INSTALL_BASE}/lib*.so"
 
-QA_FLAGS_IGNORED="${INSTALL_BASE}/libnpg.*so
+QA_FLAGS_IGNORED="${INSTALL_BASE}/lib.*so
 	${INSTALL_BASE}/lib/libCg.*so
 	${INSTALL_BASE}/GoogleTalkPlugin"
 
@@ -96,9 +96,9 @@ src_install() {
 
 	exeinto "/${INSTALL_BASE}"
 	doexe "${INSTALL_BASE}"/GoogleTalkPlugin
-	for i in "${INSTALL_BASE}"/libnpg*.so; do
+	for i in "${INSTALL_BASE}"/lib*.so; do
 		doexe "${i}"
-		inst_plugin "/${i}"
+		[[ ${i##*/} = libnp* ]] && inst_plugin "/${i}"
 	done
 
 	#install screen-sharing stuff - bug #397463
