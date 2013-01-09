@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r10.ebuild,v 1.16 2013/01/09 21:27:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r11.ebuild,v 1.1 2013/01/09 21:27:59 jlec Exp $
 
-EAPI="3"
+EAPI=5
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -19,7 +19,7 @@ SRC_URI="
 IUSE="jpeg static-libs X"
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
 DEPEND="
 	dev-lang/tk
@@ -28,6 +28,8 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}${PV}${MY_V_SUFFIX}"
+
+MAKEOPTS+=" -j1"
 
 src_prepare() {
 	epatch "${FILESDIR}/blt-2.4z-r4-fix-makefile.patch"
@@ -54,15 +56,16 @@ src_prepare() {
 		-e "/AR/s:ar:$(tc-getAR):g" \
 		-i src/Makefile.in || die
 
-	epatch "${FILESDIR}"/${P}-linking.patch
-	epatch "${FILESDIR}"/${P}-darwin.patch
-	epatch "${FILESDIR}"/${P}-gbsd.patch
+	epatch \
+		"${FILESDIR}"/${P}-linking.patch \
+		"${FILESDIR}"/${P}-darwin.patch \
+		"${FILESDIR}"/${P}-gbsd.patch \
+		"${FILESDIR}"/${P}-tk8.6.patch
+
+	append-cflags -DUSE_INTERP_RESULT -fPIC
 }
 
 src_configure() {
-	# bug 167934
-	append-flags -fPIC
-
 	LC_ALL=C \
 	econf \
 		--x-includes="${EPREFIX}/usr/include" \
@@ -83,7 +86,7 @@ src_configure() {
 
 src_compile() {
 	# parallel borks
-	emake -j1 LDFLAGS="${LDFLAGS}" || die "emake failed"
+	emake LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
@@ -97,9 +100,9 @@ src_install() {
 	dodir /usr/bin \
 		/usr/$(get_libdir)/blt2.4/demos/bitmaps \
 		/usr/share/man/mann \
-		/usr/include \
-			|| die "dodir failed"
-	emake -j1 INSTALL_ROOT="${D}" install || die "make install failed"
+		/usr/include
+
+	emake INSTALL_ROOT="${D}" install || die "make install failed"
 
 	dodoc NEWS PROBLEMS README
 	dohtml html/*.html
@@ -111,8 +114,8 @@ src_install() {
 	cp "${FILESDIR}"/pkgIndex.tcl "${ED}"/usr/$(get_libdir)/blt2.4/pkgIndex.tcl
 
 	# fix for linking against shared lib with -lBLT or -lBLTlite
-	dosym libBLT24$(get_libname) /usr/$(get_libdir)/libBLT$(get_libname) || die
-	dosym libBLTlite24$(get_libname) /usr/$(get_libdir)/libBLTlite$(get_libname) || die
+	dosym libBLT24$(get_libname) /usr/$(get_libdir)/libBLT$(get_libname)
+	dosym libBLTlite24$(get_libname) /usr/$(get_libdir)/libBLTlite$(get_libname)
 
 	use static-libs || \
 		find "${ED}"/usr/$(get_libdir) -name "*.a" -print0 | \
