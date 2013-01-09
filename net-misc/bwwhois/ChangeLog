@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bwwhois
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.32 2013/01/09 11:55:25 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.33 2013/01/09 12:31:08 pinkbyte Exp $
+
+  09 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Package will now be maintained through proxy maintainers
 
   09 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> bwwhois-5.5.2-r1.ebuild:
   Stable on amd64, wrt bug #451036
