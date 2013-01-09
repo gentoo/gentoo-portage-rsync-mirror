@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0.ebuild,v 1.5 2013/01/06 19:20:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0.ebuild,v 1.6 2013/01/09 22:10:03 jlec Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="*:2.6"
 PYTHON_USE_WITH="tk"
 PYTHON_USE_WITH_OPT="tk"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="3.3 *-jython 2.7-pypy-*"
 PYTHON_TESTS_RESTRICTED_ABIS="2.[56] 3.1"
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing" "3.* + -fno-strict-aliasing")
 PYTHON_CXXFLAGS=("2.* + -fno-strict-aliasing" "3.* + -fno-strict-aliasing")
@@ -20,7 +20,7 @@ inherit distutils eutils
 
 DESCRIPTION="Pure python plotting library with matlab like syntax"
 HOMEPAGE="http://matplotlib.org/ http://pypi.python.org/pypi/matplotlib"
-SRC_URI="https://github.com/downloads/${PN}/${PN}/${P}.tar.gz"
+SRC_URI="mirror://github/${PN}/${PN}/${P}.tar.gz"
 
 IUSE="cairo doc excel examples fltk gtk latex qt4 test tk wxwidgets"
 SLOT="0"
