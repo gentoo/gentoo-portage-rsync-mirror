@@ -1,6 +1,16 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.550 2013/01/01 09:03:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.551 2013/01/09 11:42:30 polynomial-c Exp $
+
+*samba-3.5.20 (09 Jan 2013)
+
+  09 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> samba-3.5.15.ebuild,
+  +samba-3.5.20.ebuild, samba-3.6.9.ebuild, samba-3.6.10.ebuild,
+  -samba-4.0.0_rc5.ebuild, samba-4.0.0.ebuild, metadata.xml:
+  Non-maintainer commit: Fixed cups dependency in samba-3.5.15.ebuild (bug
+  #451026). Added latest 3.5 version. Adjusted SRC_URI so source packages can
+  still be found when they got superseded by newer versions. Removed obsolete
+  version. Removed unused USE flag description from metadata.xml file.
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> samba-3.6.10.ebuild:
   Add ~ia64, wrt bug #444688

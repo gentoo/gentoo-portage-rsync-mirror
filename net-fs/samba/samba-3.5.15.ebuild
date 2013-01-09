@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.15.ebuild,v 1.9 2012/10/19 08:10:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.15.ebuild,v 1.10 2013/01/09 11:42:30 polynomial-c Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Library bits of the samba network filesystem"
 HOMEPAGE="http://www.samba.org/"
-SRC_URI="mirror://samba/${P}.tar.gz
+SRC_URI="mirror://samba/stable/${P}.tar.gz
 	http://dev.gentoo.org/~dagger/files/smb_traffic_analyzer_v2.diff.bz2"
 LICENSE="GPL-3"
 SLOT="0"
@@ -20,6 +20,7 @@ IUSE="acl addns ads +aio avahi caps +client cluster cups debug doc examples fam
 	ldap ldb +netapi pam quota +readline selinux +server +smbclient smbsharemodes smbtav2
 	swat syslog winbind"
 
+# upstream doesn't support cups 1.6 for samba 3.5
 DEPEND="dev-libs/popt
 	!net-fs/samba-client
 	!net-fs/samba-libs
@@ -35,7 +36,7 @@ DEPEND="dev-libs/popt
 	client? ( !net-fs/mount-cifs
 		dev-libs/iniparser )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
-	cups? ( net-print/cups )
+	cups? ( <net-print/cups-1.6 )
 	fam? ( virtual/fam )
 	ldap? ( net-nds/openldap )
 	pam? ( virtual/pam

@@ -25,7 +25,6 @@ Samba is an Open Source/Free Software suite that provides seamless file and prin
 	<flag name="smbclient">Enable smbclient tool</flag>
 	<flag name="smbsharemodes">Enable special smb share modes (?) </flag>
 	<flag name="smbtav2">Enable Samba Traffic Analyzer version 2 </flag>
-	<flag name="fulltest">Enabling extra tests in test phase </flag>
 	<flag name="iprint">Enabling iPrint technology by Novell</flag>
 </use>
 </pkgmetadata>

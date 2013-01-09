@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-5.5.2-r1.ebuild,v 1.1 2012/12/02 08:48:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-5.5.2-r1.ebuild,v 1.2 2013/01/09 11:55:25 pinkbyte Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://whois.bw.org/"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"

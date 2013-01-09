@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.10.ebuild,v 1.5 2013/01/09 11:42:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.20.ebuild,v 1.1 2013/01/09 11:42:30 polynomial-c Exp $
 
 EAPI=4
 
@@ -11,33 +11,34 @@ MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Library bits of the samba network filesystem"
 HOMEPAGE="http://www.samba.org/"
-SRC_URI="mirror://samba/stable/${MY_P}.tar.gz"
+SRC_URI="mirror://samba/stable/${P}.tar.gz
+	http://dev.gentoo.org/~dagger/files/smb_traffic_analyzer_v2.diff.bz2"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="acl addns ads +aio avahi caps +client cluster cups debug dmapi doc examples fam
-	ldap ldb +netapi pam quota +readline selinux +server +smbclient smbsharemodes
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="acl addns ads +aio avahi caps +client cluster cups debug doc examples fam
+	ldap ldb +netapi pam quota +readline selinux +server +smbclient smbsharemodes smbtav2
 	swat syslog winbind"
 
+# upstream doesn't support cups 1.6 for samba 3.5
 DEPEND="dev-libs/popt
-	>=sys-libs/talloc-2.0.5
-	>=sys-libs/tdb-1.2.9
+	!net-fs/samba-client
+	!net-fs/samba-libs
+	!net-fs/samba-server
+	!net-fs/cifs-utils
+	sys-libs/talloc
+	sys-libs/tdb
 	virtual/libiconv
 	ads? ( virtual/krb5 sys-fs/e2fsprogs
-		client? ( sys-apps/keyutils
-			kernel_linux? ( net-fs/cifs-utils[ads] ) ) )
+		client? ( sys-apps/keyutils ) )
 	avahi? ( net-dns/avahi[dbus] )
 	caps? ( sys-libs/libcap )
 	client? ( !net-fs/mount-cifs
-		dev-libs/iniparser
-		kernel_linux? ( net-fs/cifs-utils ) )
-	cluster? ( >=dev-db/ctdb-1.13 )
-	cups? ( net-print/cups )
-	debug? ( dev-libs/dmalloc )
-	dmapi? ( sys-apps/dmapi )
+		dev-libs/iniparser )
+	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
+	cups? ( <net-print/cups-1.6 )
 	fam? ( virtual/fam )
 	ldap? ( net-nds/openldap )
-	ldb? ( sys-libs/ldb )
 	pam? ( virtual/pam
 		winbind? ( dev-libs/iniparser )
 	)
@@ -70,26 +71,13 @@ REQUIRED_USE="
 	swat? ( server )
 "
 
-pkg_pretend() {
-	if [[ ${MERGE_TYPE} != binary ]]; then
-		if use winbind &&
-			[[ $(tc-getCC)$ == *gcc* ]] &&
-			[[ $(gcc-major-version)$(gcc-minor-version) -lt 43 ]]
-		then
-			eerror "It is a known issue that ${P} will not build with "
-			eerror "winbind use flag enabled when using gcc < 4.3 ."
-			eerror "Please use at least the latest stable gcc version."
-			die "Using sys-devel/gcc < 4.3 with winbind use flag."
-		fi
-	fi
-}
-
 pkg_setup() {
 	if use server ; then
 		SBINPROGS="${SBINPROGS} bin/smbd bin/nmbd"
 		BINPROGS="${BINPROGS} bin/testparm bin/smbstatus bin/smbcontrol bin/pdbedit
-			bin/profiles bin/sharesec bin/eventlogadm bin/smbta-util"
+			bin/profiles bin/sharesec bin/eventlogadm"
 
+		use smbtav2 && BINPROGS="${BINPROGS} bin/smbta-util"
 		use swat && SBINPROGS="${SBINPROGS} bin/swat"
 		use winbind && SBINPROGS="${SBINPROGS} bin/winbindd"
 		use ads && use winbind && KRBPLUGIN="${KRBPLUGIN} bin/winbind_krb5_locator"
@@ -100,17 +88,27 @@ pkg_setup() {
 			bin/nmblookup bin/smbpasswd bin/rpcclient bin/smbcacls bin/smbcquotas
 			bin/ntlm_auth"
 
+		use ads && SBINPROGS="${SBINPROGS} bin/cifs.upcall"
 	fi
 
 	use cups && BINPROGS="${BINPROGS} bin/smbspool"
-#	use ldb && BINPROGS="${BINPROGS} bin/ldbedit bin/ldbsearch bin/ldbadd bin/ldbdel bin/ldbmodify bin/ldbrename";
+	use ldb && BINPROGS="${BINPROGS} bin/ldbedit bin/ldbsearch bin/ldbadd bin/ldbdel bin/ldbmodify bin/ldbrename";
 
 	if use winbind ; then
 		BINPROGS="${BINPROGS} bin/wbinfo"
 		SHAREDMODS="${SHAREDMODS}idmap_rid,idmap_hash"
 		use ads && SHAREDMODS="${SHAREDMODS},idmap_ad"
-		use cluster && SHAREDMODS="${SHAREDMODS},idmap_tdb2"
 		use ldap && SHAREDMODS="${SHAREDMODS},idmap_ldap,idmap_adex"
+	fi
+
+	if use winbind &&
+		[[ $(tc-getCC)$ == *gcc* ]] &&
+		[[ $(gcc-major-version)$(gcc-minor-version) -lt 43 ]]
+	then
+		eerror "It is a known issue that ${P} will not build with "
+		eerror "winbind use flag enabled when using gcc < 4.3 ."
+		eerror "Please use at least the latest stable gcc version."
+		die "Using sys-devel/gcc < 4.3 with winbind use flag."
 	fi
 }
 
@@ -121,7 +119,11 @@ src_prepare() {
 	sed -i \
 		-e 's|LDSHFLAGS="|LDSHFLAGS="\\${LDFLAGS} |g' \
 		configure || die "sed failed"
-	cd "${WORKDIR}/${MY_P}" && epatch "${CONFDIR}"/smb.conf.default.patch
+
+	epatch "${CONFDIR}"/${PN}-3.5.6-kerberos-dummy.patch
+	use smbtav2 && cd "${WORKDIR}/${P}" && epatch "${WORKDIR}"/smb_traffic_analyzer_v2.diff
+	cd "${WORKDIR}/${MY_P}" && epatch "${CONFDIR}"/${PN}-3.5.8-uclib-build.patch
+	epatch "${CONFDIR}"/smb.conf.default.patch
 }
 
 src_configure() {
@@ -130,11 +132,21 @@ src_configure() {
 	# Filter out -fPIE
 	[[ ${CHOST} == *-*bsd* ]] && myconf+=" --disable-pie"
 
-	# http://wiki.samba.org/index.php/CTDB_Setup
-	use cluster && myconf+=" --disable-pie"
-
 	# Upstream refuses to make this configurable
 	use caps && export ac_cv_header_sys_capability_h=yes || export ac_cv_header_sys_capability_h=no
+
+	# use_with doesn't accept 2 USE-flags
+	if use client && use ads ; then
+		myconf+=" --with-cifsupcall"
+	else
+		myconf+=" --without-cifsupcall"
+	fi
+
+	if use client && use kernel_linux ; then
+		myconf+=" --with-cifsmount --with-cifsumount"
+	else
+		myconf+=" --without-cifsmount --without-cifsumount"
+	fi
 
 	#bug #399141 wrap newer iniparser version
 	has_version ">=dev-libs/iniparser-3.0.0" && \
@@ -153,7 +165,6 @@ src_configure() {
 		--enable-socket-wrapper \
 		--enable-nss-wrapper \
 		$(use_enable swat) \
-		$(use_enable debug dmalloc) \
 		$(use_enable cups) \
 		--disable-iprint \
 		$(use_enable fam) \
@@ -168,7 +179,6 @@ src_configure() {
 		--with-configdir=/etc/samba \
 		--with-logfilebase=/var/log/samba \
 		--with-pammodulesdir=$(getpam_mod_dir) \
-		$(use_with dmapi) \
 		--without-afs \
 		--without-fake-kaserver \
 		--without-vfs-afsacl \
@@ -248,6 +258,10 @@ src_compile() {
 		emake ${KRBPLUGIN}${PLUGINEXT}
 	fi
 
+	if use client && use kernel_linux; then
+		einfo "make {,u}mount.cifs"
+		emake bin/{,u}mount.cifs
+	fi
 }
 
 src_install() {
@@ -320,12 +334,6 @@ src_install() {
 		doman ../docs/manpages/${prog/bin\/}*
 	done
 
-	# install scripts
-	if use client ; then
-		dobin script/findsmb
-		doman ../docs/manpages/findsmb.1
-	fi
-
 	# install krbplugin
 	if [ -n "${KRBPLUGIN}" ] ; then
 		if has_version app-crypt/mit-krb5 ; then
@@ -374,7 +382,14 @@ src_install() {
 			script/installswat.sh "${D}" "${ROOT}/usr/share/doc/${PF}/swat" "${S}"
 		fi
 
-		dodoc ../MAINTAINERS.txt ../README* ../Roadmap ../WHATSNEW.txt ../docs/THANKS
+		dodoc ../MAINTAINERS ../README* ../Roadmap ../WHATSNEW.txt ../docs/THANKS
+	fi
+
+	# install client files ({u,}mount.cifs into /)
+	if use client && use kernel_linux ; then
+		into /
+		dosbin bin/{u,}mount.cifs
+		doman ../docs/manpages/{u,}mount.cifs.8
 	fi
 
 	# install the spooler to cups
@@ -426,17 +441,16 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Samba 3.6 has adopted a number of improved security defaults that"
-	elog "will impact on existing users of Samba."
-	elog "			client ntlmv2 auth = yes"
-	elog "			client use spnego principal = no"
-	elog "			send spnego principal = no"
+	elog "The default value of 'wide links' has been changed to 'no' in samba 3.5"
+	elog "to avoid an insecure default configuration"
+	elog "('wide links = yes' and 'unix extensions = yes'). For more details,"
+	elog "please see http://www.samba.org/samba/news/symlink_attack.html ."
 	elog ""
-	elog "SMB2 protocol support in 3.6.0 is fully functional and can be "
-	elog "enabled by setting 'max protocol = smb2'. SMB2 is a new "
+	elog "An EXPERIMENTAL implementation of the SMB2 protocol has been added."
+	elog "SMB2 can be enabled by setting 'max protocol = smb2'. SMB2 is a new "
 	elog "implementation of the SMB protocol used by Windows Vista and higher"
 	elog ""
 	elog "For further information make sure to read the release notes at"
 	elog "http://samba.org/samba/history/${P}.html and "
-	elog "http://samba.org/samba/history/${PN}-3.6.0.html"
+	elog "http://samba.org/samba/history/${PN}-3.5.0.html"
 }
