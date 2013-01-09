@@ -1,6 +1,13 @@
 # ChangeLog for games-util/xboxdrv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.26 2012/11/29 02:07:15 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.27 2013/01/09 14:19:22 pinkbyte Exp $
+
+*xboxdrv-0.8.4-r1 (09 Jan 2013)
+
+  09 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> +xboxdrv-0.8.4-r1.ebuild,
+  +files/xboxdrv-0.8.4-libusbx-1.0.13-fix.patch:
+  Revision bump: EAPI 5, use base eclass, add compatibility fix for libusbx,
+  wrt bug #435832
 
   29 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> -xboxdrv-0.8.2.ebuild:
   old

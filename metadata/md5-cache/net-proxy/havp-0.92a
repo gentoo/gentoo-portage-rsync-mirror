@@ -1,4 +1,4 @@
-DEFINED_PHASES=configure install postinst setup
+DEFINED_PHASES=configure install postinst prepare setup
 DEPEND=clamav? ( app-antivirus/clamav )
 DESCRIPTION=HTTP AntiVirus Proxy
 EAPI=4
@@ -10,4 +10,4 @@ RDEPEND=clamav? ( app-antivirus/clamav )
 SLOT=0
 SRC_URI=http://www.server-side.de/download/havp-0.92a.tar.gz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=95466a76b60aa719ee47e49eece2d90a
+_md5_=15a04d270bb2e69c588ee63f541160fd

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.92a.ebuild,v 1.2 2013/01/08 17:06:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.92a.ebuild,v 1.3 2013/01/09 14:03:37 jer Exp $
 
 EAPI=4
 inherit eutils user
@@ -22,6 +22,10 @@ pkg_setup() {
 	enewuser ${PN} -1 -1 /etc/${PN} ${PN}
 }
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.92a-run.patch
+}
+
 src_configure() {
 	econf \
 		$(use_enable clamav) \
@@ -38,9 +42,6 @@ src_install() {
 	insinto /etc
 	rm -r etc/${PN}/${PN}.config.in
 	doins -r etc/${PN}
-
-	diropts -m 0700 -o ${PN} -g ${PN}
-	keepdir /var/log/${PN}
 
 	dodoc ChangeLog
 }
