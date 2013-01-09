@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.222 2013/01/06 09:57:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.223 2013/01/09 07:48:02 graaff Exp $
+
+  09 Jan 2013; Hans de Graaff <graaff@gentoo.org> +actionpack-2.3.15.ebuild:
+  Version bump for security bug 450974.
+
+*actionpack-2.3.15 (09 Jan 2013)
+
+  09 Jan 2013; Hans de Graaff <graaff@gentoo.org> +actionpack-2.3.15.ebuild:
+  Version bump for security bug 450974.
 
   06 Jan 2013; Hans de Graaff <graaff@gentoo.org> -actionpack-3.0.17.ebuild,
   -actionpack-3.1.8.ebuild, -actionpack-3.2.8.ebuild, -actionpack-3.2.9.ebuild:
