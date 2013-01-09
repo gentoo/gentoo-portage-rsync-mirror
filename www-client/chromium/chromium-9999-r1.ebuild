@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.157 2013/01/08 04:22:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.158 2013/01/09 04:17:29 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -45,6 +45,7 @@ RDEPEND="app-accessibility/speech-dispatcher
 	media-libs/libpng
 	media-libs/libvpx
 	>=media-libs/libwebp-0.2.0_rc1
+	media-libs/opus
 	media-libs/speex
 	pulseaudio? ( media-sound/pulseaudio )
 	system-ffmpeg? ( >=media-video/ffmpeg-1.0 )
@@ -184,10 +185,6 @@ src_prepare() {
 		eend $?
 	fi
 
-	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
-	# sed -i '1i#define OF(x) x' \
-	#	third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.h || die
-
 	# Fix build without NaCl glibc toolchain.
 	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
 
@@ -226,7 +223,6 @@ src_prepare() {
 		\! -path 'third_party/mt19937ar/*' \
 		\! -path 'third_party/npapi/*' \
 		\! -path 'third_party/openmax/*' \
-		\! -path 'third_party/opus/*' \
 		\! -path 'third_party/ots/*' \
 		\! -path 'third_party/pywebsocket/*' \
 		\! -path 'third_party/qcms/*' \
@@ -287,7 +283,6 @@ src_configure() {
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg
 	# TODO: use_system_hunspell (upstream changes needed).
-	# TODO: use_system_opus (bug #439884).
 	# TODO: use_system_ssl (http://crbug.com/58087).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	myconf+="
@@ -304,6 +299,7 @@ src_configure() {
 		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
 		-Duse_system_minizip=1
+		-Duse_system_opus=1
 		-Duse_system_protobuf=1
 		-Duse_system_speex=1
 		-Duse_system_v8=1
