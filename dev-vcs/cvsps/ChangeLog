@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/cvsps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.16 2013/01/05 18:20:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.17 2013/01/09 18:13:41 slyfox Exp $
+
+*cvsps-3.7 (09 Jan 2013)
+
+  09 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org> +cvsps-3.7.ebuild,
+  -cvsps-3.5.ebuild:
+  Version bump.
 
 *cvsps-3.5 (05 Jan 2013)
 

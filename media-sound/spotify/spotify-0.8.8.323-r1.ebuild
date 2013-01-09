@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.8.8.323-r1.ebuild,v 1.1 2013/01/09 14:42:33 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.8.8.323-r1.ebuild,v 1.2 2013/01/09 18:28:00 prometheanfire Exp $
 
 EAPI=4
 inherit eutils pax-utils
@@ -123,16 +123,11 @@ src_install() {
 		SEARCH_DIRS_MASK="${SPOTIFY_HOME}"
 	EOF
 
+	for size in 16 22 24 32 48 64 128 256; do
+		newicon -s ${size} "${SPOTIFY_HOME}/Icons/spotify-linux-${size}.png" \
+			"spotify-client.png"
+	done
 	domenu "${SPOTIFY_HOME}/spotify.desktop"
-	doicon -s 16 "${SPOTIFY_HOME}/Icons/spotify-linux-16.png"
-	doicon -s 22 "${SPOTIFY_HOME}/Icons/spotify-linux-22.png"
-	doicon -s 24 "${SPOTIFY_HOME}/Icons/spotify-linux-24.png"
-	doicon -s 32 "${SPOTIFY_HOME}/Icons/spotify-linux-32.png"
-	doicon -s 48 "${SPOTIFY_HOME}/Icons/spotify-linux-48.png"
-	doicon -s 64 "${SPOTIFY_HOME}/Icons/spotify-linux-64.png"
-	doicon -s 128 "${SPOTIFY_HOME}/Icons/spotify-linux-128.png"
-	doicon -s 256 "${SPOTIFY_HOME}/Icons/spotify-linux-256.png"
-	doicon -s 512 "${SPOTIFY_HOME}/Icons/spotify-linux-512.png"
 
 	if use pax_kernel; then
 		#create the headers, reset them to default, then paxmark -m them

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/cvsps-3.5.ebuild,v 1.1 2013/01/05 18:20:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/cvsps-3.7.ebuild,v 1.1 2013/01/09 18:13:41 slyfox Exp $
 
 EAPI="4"
 
@@ -20,10 +20,8 @@ DEPEND="${RDEPEND}
 	app-text/asciidoc"
 
 src_prepare() {
-	sed -i 's/ -lz/& $(LDFLAGS)/' Makefile || die
-
 	tc-export CC
-	export prefix=${D}/usr
+	export prefix=/usr
 }
 
 src_install() {
