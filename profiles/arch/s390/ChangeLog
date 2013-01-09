@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/s390 profile directory
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.56 2012/11/24 21:38:13 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.57 2013/01/09 16:54:31 jlec Exp $
+
+  09 Jan 2013; Justin Lecher <jlec@gentoo.org> package.use.mask:
+  Mask test for dev-lang/tk, x11-base/xorg-server[xvfb] is not keyworded
 
   24 Nov 2012; Mike Gilbert <floppym@gentoo.org> use.mask:
   Mask python_single_target values not supported on this arch.

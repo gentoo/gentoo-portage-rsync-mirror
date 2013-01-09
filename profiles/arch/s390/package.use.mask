@@ -1,6 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/package.use.mask,v 1.21 2012/10/21 17:28:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/package.use.mask,v 1.22 2013/01/09 16:54:31 jlec Exp $
+
+# Justin Lecher <jlec@gentoo.org> (09 Jan 2013)
+# x11-base/xorg-server[xvfb] is not keyworded
+dev-lang/tk test
 
 # Raúl Porcel <armin76@gentoo.org> (05 Nov 2011)
 # jit not supported on s390
