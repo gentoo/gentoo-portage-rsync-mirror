@@ -1,6 +1,16 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.238 2013/01/09 07:49:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.240 2013/01/09 08:59:24 graaff Exp $
+
+*rails-3.1.10 (09 Jan 2013)
+
+  09 Jan 2013; Hans de Graaff <graaff@gentoo.org> +rails-3.1.10.ebuild:
+  Version bump for bug 450974.
+
+*rails-3.2.11 (09 Jan 2013)
+
+  09 Jan 2013; Hans de Graaff <graaff@gentoo.org> +rails-3.2.11.ebuild:
+  Version bump for bug 450974.
 
 *rails-2.3.15 (09 Jan 2013)
 
