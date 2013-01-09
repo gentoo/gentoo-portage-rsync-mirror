@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14358 2013/01/09 15:34:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14359 2013/01/09 17:32:00 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeroen Roovers <jer@gentoo.org> (09 Jan 2013)
+# Testing branch, unstable upstream
+>net-nntp/tin-2.1
 
 # Torsten Veller <tove@gentoo.org> (08 Jan 2013)
 # Mask dev-perl/Class-MOP. It was merge with dev-perl/Moose-2.
