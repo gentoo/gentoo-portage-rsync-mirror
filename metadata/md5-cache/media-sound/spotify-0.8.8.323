@@ -10,4 +10,4 @@ RESTRICT=mirror strip
 SLOT=0
 SRC_URI=x86? ( http://repository.spotify.com/pool/non-free/s/spotify/spotify-client_0.8.8.323.gd143501.250-1_i386.deb ) amd64? ( http://repository.spotify.com/pool/non-free/s/spotify/spotify-client_0.8.8.323.gd143501.250-1_amd64.deb )
 _eclasses_=pax-utils	0ace932c4045349c7fc1af0fe7091acf
-_md5_=ac8528ce848c07f3ffec007f72178a37
+_md5_=5cb2222a7d23f089dc31587876d37d2f

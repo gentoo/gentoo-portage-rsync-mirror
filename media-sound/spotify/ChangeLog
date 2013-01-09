@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/spotify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.6 2013/01/08 18:22:37 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.7 2013/01/09 00:52:09 prometheanfire Exp $
+
+  09 Jan 2013; Matthew Thode <prometheanfire@gentoo.org>
+  spotify-0.8.8.323.ebuild:
+  spelling fix for spotify
 
   08 Jan 2013; Matthew Thode <prometheanfire@gentoo.org>
   spotify-0.8.8.323.ebuild:
