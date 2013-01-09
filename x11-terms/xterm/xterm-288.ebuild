@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-279.ebuild,v 1.8 2012/08/26 20:16:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-288.ebuild,v 1.1 2013/01/09 16:22:27 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils multilib
 
 DESCRIPTION="Terminal Emulator for X Windows"
@@ -11,7 +11,7 @@ SRC_URI="ftp://invisible-island.net/${PN}/${P}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="toolbar truetype unicode Xaw3d"
 
 COMMON_DEPEND="kernel_linux? ( sys-libs/libutempter )
@@ -39,14 +39,10 @@ pkg_setup() {
 }
 
 src_configure() {
-	# looking for reason why crosscompile failed? try restoring this:
-	# --x-libraries="${ROOT}usr/$(get_libdir)"
-	# -ssuominen, 2011
-
 	econf \
 		--libdir="${EPREFIX}"/etc \
 		--disable-full-tgetent \
-		--with-app-defaults=${DEFAULTS_DIR} \
+		--with-app-defaults="${DEFAULTS_DIR}" \
 		--disable-setuid \
 		--disable-setgid \
 		--with-utempter \
@@ -82,5 +78,5 @@ src_install() {
 	fperms 0755 /usr/bin/xterm
 
 	# restore the navy blue
-	sed -i -e "s:blue2$:blue:" "${ED}"${DEFAULTS_DIR}/XTerm-color
+	sed -i -e "s:blue2$:blue:" "${ED}${DEFAULTS_DIR}"/XTerm-color
 }

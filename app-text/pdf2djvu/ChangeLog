@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pdf2djvu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/ChangeLog,v 1.15 2012/10/25 11:26:30 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/ChangeLog,v 1.16 2013/01/09 16:30:04 ssuominen Exp $
+
+*pdf2djvu-0.7.16 (09 Jan 2013)
+
+  09 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> +pdf2djvu-0.7.16.ebuild:
+  Version bump.
 
 *pdf2djvu-0.7.15 (25 Oct 2012)
 
