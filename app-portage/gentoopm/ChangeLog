@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoopm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.36 2012/12/17 20:02:38 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.37 2013/01/09 21:38:33 zerochaos Exp $
+
+  09 Jan 2013; Rick Farina <zerochaos@gentoo.org> gentoopm-0.2.6.ebuild,
+  gentoopm-0.2.7.ebuild, gentoopm-9999.ebuild:
+  adding ~arm keywords
 
   17 Dec 2012; Michał Górny <mgorny@gentoo.org> gentoopm-0.2.6.ebuild,
   gentoopm-0.2.7.ebuild, gentoopm-9999.ebuild:

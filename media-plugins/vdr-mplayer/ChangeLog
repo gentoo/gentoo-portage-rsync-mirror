@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-mplayer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.28 2011/03/31 15:25:50 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.29 2013/01/09 21:48:55 hd_brummy Exp $
+
+  09 Jan 2013; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-mplayer-0.10.2.ebuild:
+  vdr-plugin-2.eclass; eapi=5
 
   31 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
   vdr-mplayer-0.10.0.ebuild, vdr-mplayer-0.10.1.ebuild,
