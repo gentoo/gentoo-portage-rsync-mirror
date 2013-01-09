@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.163 2013/01/09 16:11:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.164 2013/01/09 20:10:24 jlec Exp $
+
+*tcl-8.6.0 (09 Jan 2013)
+
+  09 Jan 2013; Justin Lecher <jlec@gentoo.org> +tcl-8.6.0.ebuild:
+  Version Bump, #448602
 
 *tcl-8.5.13-r1 (09 Jan 2013)
 
