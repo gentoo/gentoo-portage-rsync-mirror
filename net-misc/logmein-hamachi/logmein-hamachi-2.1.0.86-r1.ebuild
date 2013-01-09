@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/logmein-hamachi-2.1.0.86.ebuild,v 1.1 2013/01/02 09:23:53 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/logmein-hamachi-2.1.0.86-r1.ebuild,v 1.1 2013/01/09 10:47:19 pinkbyte Exp $
+
+EAPI=5
 
 inherit eutils linux-info
 
@@ -20,6 +22,7 @@ RESTRICT="mirror"
 
 QA_PREBUILT="/opt/${PN}/bin/hamachid"
 QA_PRESTRIPPED="/opt/${PN}/bin/hamachid"
+QA_WX_LOAD="/opt/${PN}/bin/hamachid"
 
 pkg_setup() {
 	einfo "Checking your kernel configuration for TUN/TAP support."
@@ -29,23 +32,21 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	mv ${P}-$(use x86 && echo x86 || echo x64) "${S}" || die
+	mv "${P}-$(use x86 && echo x86 || echo x64)" "${S}" || die
 }
 
 src_install() {
 	into /opt/${PN}
-	dobin hamachid dnsup dnsdown || die
-	dosym /opt/${PN}/bin/hamachid /usr/bin/hamachi || die "Couldn't create hamachi symlink"
-
-	dodir /var/run/${PN} || die
+	dobin hamachid dnsup dnsdown
+	dosym /opt/${PN}/bin/hamachid /usr/bin/hamachi
 
 	# Config and log directory
-	dodir /var/lib/${PN} || die
+	dodir /var/lib/${PN}
 
-	newconfd "${FILESDIR}"/${PN}.confd ${PN} || die
-	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
+	newconfd "${FILESDIR}"/${PN}.confd ${PN}
+	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 
-	dodoc CHANGES README || die
+	dodoc CHANGES README
 }
 
 pkg_postinst() {

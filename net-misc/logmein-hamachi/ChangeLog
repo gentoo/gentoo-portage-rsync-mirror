@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/logmein-hamachi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.10 2013/01/02 09:23:53 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.11 2013/01/09 10:47:19 pinkbyte Exp $
+
+*logmein-hamachi-2.1.0.86-r1 (09 Jan 2013)
+
+  09 Jan 2013; Sergey Popov <pinkbyte@gentoo.org>
+  -logmein-hamachi-2.1.0.81.ebuild, -logmein-hamachi-2.1.0.86.ebuild,
+  +logmein-hamachi-2.1.0.86-r1.ebuild, files/logmein-hamachi.initd:
+  Properly create /var/run/... directory in initscript, wrt bug #450872. Drop
+  old versions
 
 *logmein-hamachi-2.1.0.86 (02 Jan 2013)
 

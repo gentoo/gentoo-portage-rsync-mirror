@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.669 2013/01/01 19:38:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.670 2013/01/09 10:44:02 olemarkus Exp $
+
+  09 Jan 2013; Ole Markus With <olemarkus@gentoo.org> -php-5.3.15.ebuild,
+  -php-5.3.19.ebuild, -php-5.4.5.ebuild, -php-5.4.6.ebuild, -php-5.4.9.ebuild,
+  -php-5.5.0_alpha1.ebuild:
+  Cleanup of php versions
 
   01 Jan 2013; Raúl Porcel <armin76@gentoo.org> php-5.3.18.ebuild:
   s390/sh stable wrt #447012
