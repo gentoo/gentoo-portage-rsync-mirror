@@ -20,4 +20,7 @@
 		<flag name="quad">Build quadruple precision lib</flag>
 		<flag name="zbus">Adds support for ZBus cycle-counter of mips</flag>
 	</use>
+	<upstream>
+		<remote-id type="freecode">fftw</remote-id>
+	</upstream>
 </pkgmetadata>
