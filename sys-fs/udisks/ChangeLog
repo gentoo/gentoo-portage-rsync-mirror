@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.115 2013/01/06 11:12:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.116 2013/01/09 18:32:05 ssuominen Exp $
+
+*udisks-2.0.91 (09 Jan 2013)
+
+  09 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> +udisks-2.0.91.ebuild:
+  Version bump.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> udisks-2.0.90.ebuild:
   Add ~sparc, wrt bug #449220
