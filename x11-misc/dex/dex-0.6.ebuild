@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dex/dex-0.6.ebuild,v 1.1 2013/01/07 23:10:55 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dex/dex-0.6.ebuild,v 1.2 2013/01/09 13:03:37 pinkbyte Exp $
 
 EAPI=5
 
@@ -18,8 +18,8 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE=""
 
 RDEPEND="${PYTHON_DEPS}
-	virtual/python-argparse"
-DEPEND="${DEPEND}"
+	virtual/python-argparse[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch_user

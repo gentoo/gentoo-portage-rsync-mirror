@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.129 2012/11/15 07:19:11 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.130 2013/01/09 13:11:07 jer Exp $
+
+  09 Jan 2013; Jeroen Roovers <jer@gentoo.org> rspec-2.12.0.ebuild:
+  Stable for HPPA (bug #450532).
 
 *rspec-2.12.0 (15 Nov 2012)
 

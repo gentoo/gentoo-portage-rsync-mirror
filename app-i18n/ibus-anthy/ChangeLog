@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus-anthy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.39 2012/08/20 21:49:51 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.40 2013/01/09 13:05:12 naota Exp $
+
+  09 Jan 2013;  <naota@gentoo.org> ibus-anthy-1.2.6.ebuild,
+  ibus-anthy-1.2.7-r1.ebuild, ibus-anthy-1.2.7.ebuild:
+  Block >=ibus-1.4.99. #449550
 
   20 Aug 2012; Johannes Huber <johu@gentoo.org> ibus-anthy-1.2.7-r1.ebuild:
   Stable for x86, wrt bug #428870
@@ -203,4 +207,3 @@
   06 Sep 2008; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
   +ibus-anthy-0.1.1.20080901.ebuild:
   Initial import. Submitted by Hong Hao, bug 236368.
-
