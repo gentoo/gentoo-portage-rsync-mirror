@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.211 2013/01/09 09:18:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.212 2013/01/09 15:01:00 ago Exp $
+
+  09 Jan 2013; Agostino Sarubbo <ago@gentoo.org> activerecord-2.3.15.ebuild:
+  Stable for amd64, wrt bug #450974
 
 *activerecord-3.0.19 (09 Jan 2013)
 

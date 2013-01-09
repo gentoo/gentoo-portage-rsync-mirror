@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/spotify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.7 2013/01/09 00:52:09 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.8 2013/01/09 14:42:33 prometheanfire Exp $
+
+*spotify-0.8.8.323-r1 (09 Jan 2013)
+
+  09 Jan 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +spotify-0.8.8.323-r1.ebuild:
+  r1 for removing the script used by spotify to register desktop and icon files
 
   09 Jan 2013; Matthew Thode <prometheanfire@gentoo.org>
   spotify-0.8.8.323.ebuild:

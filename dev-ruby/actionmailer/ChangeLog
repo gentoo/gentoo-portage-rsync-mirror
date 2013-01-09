@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.208 2013/01/09 09:17:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.209 2013/01/09 15:00:45 ago Exp $
+
+  09 Jan 2013; Agostino Sarubbo <ago@gentoo.org> actionmailer-2.3.15.ebuild:
+  Stable for amd64, wrt bug #450974
 
 *actionmailer-3.0.19 (09 Jan 2013)
 
@@ -888,4 +891,3 @@
   15 Feb 2005; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
   +actionmailer-0.6.1.ebuild:
   Initial commit.
-

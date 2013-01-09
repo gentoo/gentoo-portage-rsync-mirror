@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.130 2013/01/09 09:16:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.131 2013/01/09 15:00:16 ago Exp $
+
+  09 Jan 2013; Agostino Sarubbo <ago@gentoo.org> activeresource-2.3.15.ebuild:
+  Stable for amd64, wrt bug #450974
 
 *activeresource-3.0.19 (09 Jan 2013)
 
@@ -578,4 +581,3 @@
   18 Dec 2007; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
   +activeresource-2.0.2.ebuild:
   Initial import for Rails 2.0.2
-
