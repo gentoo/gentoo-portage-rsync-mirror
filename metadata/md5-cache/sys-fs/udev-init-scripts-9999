@@ -1,5 +1,5 @@
 DEFINED_PHASES=postinst unpack
-DEPEND=dev-vcs/git
+DEPEND=virtual/pkgconfig dev-vcs/git
 DESCRIPTION=udev startup scripts for openrc
 EAPI=4
 HOMEPAGE=http://www.gentoo.org
@@ -8,4 +8,4 @@ RDEPEND=>=virtual/udev-180 sys-apps/openrc !<sys-fs/udev-186
 RESTRICT=test
 SLOT=0
 _eclasses_=git-2	15733ab6a6feb34af9837b41623c2bad
-_md5_=fc7042b72109d51f404d7b03e31e8981
+_md5_=904e95bfa8c999be131b2db8a4bdc215
