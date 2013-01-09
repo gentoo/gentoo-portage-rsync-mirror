@@ -7,5 +7,5 @@ IUSE=doc examples test
 LICENSE=BSD
 RDEPEND=dev-python/blinker >=dev-python/jinja-2.4 dev-python/setuptools >=dev-python/werkzeug-0.6.1 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 SLOT=0
-_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	git-2	15733ab6a6feb34af9837b41623c2bad	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	git-2	e92e09651292b1bef5656592364550f7	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=3cf0583ca114be7e1687eddea8ad0128

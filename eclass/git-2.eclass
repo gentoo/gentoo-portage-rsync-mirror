@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.29 2012/04/03 10:32:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.30 2013/01/09 17:26:55 axs Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -68,6 +68,9 @@ DEPEND="dev-vcs/git"
 # @DESCRIPTION:
 # URI for the repository
 # e.g. http://foo, git://bar
+#
+# It can be overriden via env using packagename_LIVE_REPO
+# variable.
 #
 # Support multiple values:
 # EGIT_REPO_URI="git://a/b.git http://c/d.git"

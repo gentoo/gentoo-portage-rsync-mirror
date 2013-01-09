@@ -7,5 +7,5 @@ IUSE=altivec debug doc mmx postproc sse sse2 sse3 ssse3 sse4_1 static-libs +thre
 LICENSE=BSD
 REQUIRED_USE=sse2? ( mmx )
 SLOT=0
-_eclasses_=git-2	15733ab6a6feb34af9837b41623c2bad	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=b8fb38eaa0e70e2e296bfdb608745918

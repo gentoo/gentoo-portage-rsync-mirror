@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.604 2013/01/08 20:18:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.605 2013/01/09 17:26:55 axs Exp $
+
+  09 Jan 2013; Ian Stakenvicius <axs@gentoo.org> git-2.eclass:
+  added documentation for an undocumented override variable
 
   08 Jan 2013; Michał Górny <mgorny@gentoo.org> python-single-r1.eclass:
   Fix the PYTHON_SINGLE_TARGET validity check.

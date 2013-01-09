@@ -7,5 +7,5 @@ IUSE=+lastfm libnotify +lyrics
 LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:3 >=dev-libs/glib-2.30:2 media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 dev-db/sqlite:3 media-libs/taglib x11-libs/cairo x11-libs/libX11 lastfm? ( net-libs/libsoup:2.4 ) libnotify? ( x11-libs/libnotify ) lyrics? ( net-libs/libsoup:2.4 dev-libs/libxml2:2 )
 SLOT=0
-_eclasses_=fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-2	15733ab6a6feb34af9837b41623c2bad	gnome2-utils	794d2847b4af390a1e020924876c8297
+_eclasses_=fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-2	e92e09651292b1bef5656592364550f7	gnome2-utils	794d2847b4af390a1e020924876c8297
 _md5_=0f428cf0d7aca8350ea0731241d30cc6

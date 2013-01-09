@@ -9,5 +9,5 @@ RDEPEND=media-libs/libsdl net-libs/libvncserver x11-libs/libxcb x11-libs/xcb-uti
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://gentoo/netsurf-buildsystem-0_p20120717.tar.gz
-_eclasses_=git-2	15733ab6a6feb34af9837b41623c2bad	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=6d6e901141019489b356a3e3feb28fc5

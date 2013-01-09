@@ -6,5 +6,5 @@ HOMEPAGE=http://www.gentoo.org/proj/en/portage/tools/index.xml
 LICENSE=GPL-2
 RDEPEND=sys-apps/portage dev-lang/perl sys-apps/diffutils || ( =dev-lang/python-3.3* =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-3.3*[xml] =dev-lang/python-3.2*[xml] =dev-lang/python-3.1*[xml] =dev-lang/python-2.7*[xml] =dev-lang/python-2.6*[xml] )
 SLOT=0
-_eclasses_=git-2	15733ab6a6feb34af9837b41623c2bad	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=9a1712c9781b2bb80dd6a718453d5afb

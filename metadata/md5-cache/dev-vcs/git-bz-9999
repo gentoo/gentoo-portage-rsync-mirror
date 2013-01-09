@@ -7,5 +7,5 @@ IUSE=python_targets_python2_5 python_targets_python2_6 python_targets_python2_7 
 LICENSE=GPL-2
 RDEPEND=dev-vcs/git
 SLOT=0
-_eclasses_=git-2	15733ab6a6feb34af9837b41623c2bad	multilib	9aa8a023e062fca0ba79362d9d0cc488	python-r1	b9091432451f035281bf6fc17720e820	python-utils-r1	069a968fde0ceb8a9cd5c6a89d77cbc2	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	9aa8a023e062fca0ba79362d9d0cc488	python-r1	b9091432451f035281bf6fc17720e820	python-utils-r1	069a968fde0ceb8a9cd5c6a89d77cbc2	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=e05c84febb106d9cdde7197aa0604a4d

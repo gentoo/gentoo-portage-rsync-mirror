@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/python:2.7[ncurses,xml] python_targets_python2_7? ( dev-lang/python:2.7 )
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
-_eclasses_=git-2	15733ab6a6feb34af9837b41623c2bad	python-distutils-ng	b6176485a30153729ae856cd37d0174c
+_eclasses_=git-2	e92e09651292b1bef5656592364550f7	python-distutils-ng	b6176485a30153729ae856cd37d0174c
 _md5_=91fbfa651640e5a5c5dc9020f37fa029

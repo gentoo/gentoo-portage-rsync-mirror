@@ -7,5 +7,5 @@ IUSE=debug ncurses gtk
 LICENSE=GPL-2
 RDEPEND=virtual/libusb:0 ncurses? ( sys-libs/ncurses ) gtk? ( x11-libs/gtk+:2 )
 SLOT=0
-_eclasses_=git-2	15733ab6a6feb34af9837b41623c2bad	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	4f764d2b1e34e4ef12b9b0d6e680c0ee
+_eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	4f764d2b1e34e4ef12b9b0d6e680c0ee
 _md5_=a9db26972025870b8e82ab425a92ceee

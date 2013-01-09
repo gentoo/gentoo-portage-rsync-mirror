@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ogre
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.91 2012/12/14 12:53:39 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.92 2013/01/09 17:26:13 hasufell Exp $
+
+  09 Jan 2013; Julian Ospald <hasufell@gentoo.org> ogre-1.8.1.ebuild,
+  +files/ogre-1.8.1-gles2.patch:
+  fix build with USE=gles2 wrt #435560
 
   14 Dec 2012; Agostino Sarubbo <ago@gentoo.org> ogre-1.8.1.ebuild:
   Stable for x86, wrt bug #447160
