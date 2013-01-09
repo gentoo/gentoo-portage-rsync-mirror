@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.3.3.ebuild,v 1.1 2012/12/18 21:39:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.3.3-r1.ebuild,v 1.1 2013/01/09 11:28:45 pinkbyte Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -12,11 +12,12 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
-IUSE="+gd pcre"
+IUSE="+gd ldap pcre"
 
 DEPEND="
-	pcre? ( dev-libs/libpcre )
 	gd? ( media-libs/gd[png,truetype] )
+	pcre? ( dev-libs/libpcre )
+	ldap? ( net-nds/openldap )
 "
 RDEPEND="${DEPEND}"
 
@@ -49,15 +50,13 @@ src_prepare() {
 		-e 's:/usr/local/\(squidGuard/squidGuard.conf\):/etc/\1:' \
 			-i sarg.1 sarg-php/sarg-squidguard-block.php || die
 
-	# https://sourceforge.net/tracker/?func=detail&aid=3415225&group_id=68910&atid=522793
-	sed 's:\(@mandir@\):\1/man1:' -i Makefile.in || die #379395
-
 	eautoreconf
 }
 
 src_configure() {
 	econf \
-		$(use_with pcre) \
 		$(use_with gd) \
+		$(use_with ldap) \
+		$(use_with pcre) \
 		--sysconfdir=/etc/sarg/
 }

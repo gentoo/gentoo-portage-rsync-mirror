@@ -1,6 +1,10 @@
 # ChangeLog for virtual/opencl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/ChangeLog,v 1.8 2012/07/14 19:43:11 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/ChangeLog,v 1.10 2013/01/09 11:07:28 xarthisius Exp $
+
+  09 Jan 2013; Kacper Kowalik <xarthisius@gentoo.org> opencl-0-r2.ebuild:
+  Put nvidia/ati in required_use for x86 wrt #450180. Thanks to 
+  Vicente Olivert Riera <peratu@carrosses.com> for report
 
   14 Jul 2012; Ulrich Müller <ulm@gentoo.org> opencl-0.ebuild,
   opencl-0-r2.ebuild:
@@ -39,4 +43,3 @@
   20 Dec 2011; Mike Frysinger <vapier@gentoo.org> +opencl-0.ebuild,
   +metadata.xml:
   Initial ebuild by me for #392179 by Michal Pytasz.
-

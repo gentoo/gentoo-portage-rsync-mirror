@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/opencl-0-r2.ebuild,v 1.4 2012/07/14 19:43:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/opencl-0-r2.ebuild,v 1.5 2013/01/09 11:05:43 xarthisius Exp $
 
 EAPI="4"
 
@@ -21,3 +21,5 @@ RDEPEND="app-admin/eselect-opencl
 		video_cards_nvidia? ( >=x11-drivers/nvidia-drivers-290.10-r2 )
 		dev-util/intel-ocl-sdk
 	)"
+
+REQUIRED_USE="x86? ( || ( video_cards_fglrx video_cards_nvidia ) )"

@@ -1,12 +1,12 @@
 DEFINED_PHASES=install
-DEPEND=>=dev-php/PEAR-MDB2-2.5.0_beta3 || ( dev-lang/php:5.3[sqlite] dev-lang/php[sqlite2] ) dev-lang/php >=dev-php/pear-1.8.1
+DEPEND=>=dev-php/PEAR-MDB2-2.5.0_beta3 dev-lang/php[sqlite2] dev-lang/php >=dev-php/pear-1.8.1
 DESCRIPTION=Database Abstraction Layer, sqlite driver
 EAPI=2
 HOMEPAGE=http://pear.php.net/MDB2_Driver_sqlite
 KEYWORDS=alpha amd64 arm hppa ia64 ppc ~ppc64 s390 sh sparc x86
 LICENSE=BSD
-RDEPEND=>=dev-php/PEAR-MDB2-2.5.0_beta3 || ( dev-lang/php:5.3[sqlite] dev-lang/php[sqlite2] ) dev-lang/php >=dev-php/pear-1.8.1
+RDEPEND=>=dev-php/PEAR-MDB2-2.5.0_beta3 dev-lang/php[sqlite2] dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/MDB2_Driver_sqlite-1.5.0b3.tgz
 _eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=02bca0865739e484866f91d3cb87b79f
+_md5_=e6ece39545b1889004f163c22e8c7e29

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.18.6.ebuild,v 1.1 2012/11/30 04:36:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.18.6.ebuild,v 1.2 2013/01/09 11:11:37 olemarkus Exp $
 
 EAPI="5"
 inherit webapp versionator
@@ -20,7 +20,8 @@ RDEPEND=">=dev-lang/php-5.3[mysql?,postgres?,session,xml,xmlreader]
 	!imagemagick? ( dev-lang/php[gd] )
 	sqlite? (
 		dev-db/sqlite:3[fts3]
-		>=dev-lang/php-5.3[sqlite3,pdo]
+		>=dev-lang/php-5.3[pdo]
+		|| ( dev-lang/php[sqlite] dev-lang/php[sqlite3] )
 	)
 	virtual/httpd-php"
 

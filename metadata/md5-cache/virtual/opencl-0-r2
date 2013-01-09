@@ -4,5 +4,6 @@ EAPI=4
 IUSE=video_cards_fglrx video_cards_nvidia
 KEYWORDS=amd64 x86
 RDEPEND=app-admin/eselect-opencl || ( video_cards_fglrx? ( >=x11-drivers/ati-drivers-12.1-r1 ) video_cards_nvidia? ( >=x11-drivers/nvidia-drivers-290.10-r2 ) dev-util/intel-ocl-sdk )
+REQUIRED_USE=x86? ( || ( video_cards_fglrx video_cards_nvidia ) )
 SLOT=0
-_md5_=d55147378db47c11882613d2c0836853
+_md5_=97f023e0fc6cb36b5796d68a02745d6b
