@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-endless-pagination/django-endless-pagination-1.1.ebuild,v 1.1 2012/11/18 12:04:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-endless-pagination/django-endless-pagination-1.1.ebuild,v 1.2 2013/01/09 09:02:48 idella4 Exp $
 
 EAPI=4
 
@@ -41,4 +41,9 @@ src_test() {
 src_install() {
 	distutils_src_install
 	use doc && dohtml -r doc/_build/html/
+
+	#rm all OSX fork files, Bug #450842
+	pushd "${ED}" > /dev/null
+	rm -f $(find . -name "._*")
+	popd  > /dev/null
 }
