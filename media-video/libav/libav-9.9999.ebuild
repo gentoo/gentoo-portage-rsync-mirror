@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.ebuild,v 1.2 2013/01/07 00:14:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.9999.ebuild,v 1.1 2013/01/09 10:29:03 scarabeus Exp $
 
 EAPI=4
 
