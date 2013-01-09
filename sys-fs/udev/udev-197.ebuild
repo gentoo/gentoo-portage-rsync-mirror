@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197.ebuild,v 1.1 2013/01/09 19:25:49 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197.ebuild,v 1.2 2013/01/09 19:39:55 williamh Exp $
 
 EAPI=4
 
@@ -46,13 +46,13 @@ DEPEND="${COMMON_DEPEND}
 	virtual/os-headers
 	virtual/pkgconfig
 	!<sys-kernel/linux-headers-${KV_min}
-	app-text/docbook-xsl-stylesheets
 	doc? ( dev-util/gtk-doc )
 	hwdb? ( >=sys-apps/hwids-20121202.2[udev] )"
 
 if [[ ${PV} = 9999* ]]
 then
 	DEPEND="${DEPEND}
+		app-text/docbook-xsl-stylesheets
 		dev-libs/libxslt"
 fi
 

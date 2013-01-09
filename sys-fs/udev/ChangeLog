@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.752 2013/01/09 19:25:49 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.753 2013/01/09 19:39:55 williamh Exp $
+
+  09 Jan 2013; William Hubbs <williamh@gentoo.org> udev-197.ebuild,
+  udev-9999.ebuild:
+  I was told that the fix I mentioned in the previous commit is incorrect
+  because systemd already generates the man pages in their tarball.
 
 *udev-197 (09 Jan 2013)
 
