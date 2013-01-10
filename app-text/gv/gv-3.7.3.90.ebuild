@@ -1,17 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.3-r1.ebuild,v 1.13 2013/01/10 20:22:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.3.90.ebuild,v 1.1 2013/01/10 20:22:10 ssuominen Exp $
 
-EAPI=4
-inherit eutils flag-o-matic toolchain-funcs
+EAPI=5
+inherit eutils
 
 DESCRIPTION="Viewer for PostScript and PDF documents using Ghostscript"
 HOMEPAGE="http://www.gnu.org/software/gv/"
-SRC_URI="mirror://gnu/gv/${P}.tar.gz"
+# Change 'gnu-alpha' to 'gnu' for final release, like 3.7.4
+SRC_URI="mirror://gnu-alpha/gv/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~mips ppc ppc64 sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="xinerama"
 
 RDEPEND="app-text/ghostscript-gpl
@@ -30,14 +31,7 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.7.3-libXaw3d-1.6.patch
-}
-
 src_configure() {
-	# Grab -DXAW_INTERNATIONALIZATION if needed
-	append-cppflags "$($(tc-getPKG_CONFIG) --cflags xaw3d)"
-
 	export ac_cv_lib_Xinerama_main=$(usex xinerama)
 	econf --enable-scrollbar-code
 }

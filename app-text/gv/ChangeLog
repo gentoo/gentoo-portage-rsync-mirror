@@ -1,6 +1,14 @@
 # ChangeLog for app-text/gv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.109 2013/01/10 07:08:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.111 2013/01/10 20:24:10 ssuominen Exp $
+
+*gv-3.7.3.90 (10 Jan 2013)
+
+  10 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> gv-3.7.3-r1.ebuild,
+  +gv-3.7.3.90.ebuild:
+  Version bump to 'alpha' release. If libXaw3d has USE="-unicode" set,
+  app-text/gv will fail to build even with USE="-unicode" wrt #444630 by
+  Michael Hill
 
   10 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> -files/gv-3.6.1-a0.patch,
   -gv-3.7.1-r1.ebuild, -files/gv-3.7.1-aplinedel.patch:
