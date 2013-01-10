@@ -4,5 +4,6 @@
 	<herd>leechcraft</herd>
 	<use>
 		<flag name="fb2">Enable support for FictionBook format</flag>
+		<flag name="spectre">Enable PostScript backend for Monocle using the <pkg>app-text/libspectre</pkg></flag>
 	</use>
 </pkgmetadata>
