@@ -3,10 +3,10 @@ DEPEND=app-arch/xz-utils >=virtual/emacs-21
 DESCRIPTION=Emacs major mode for editing Standard ML
 EAPI=4
 HOMEPAGE=http://www.iro.umontreal.ca/~monnier/elisp/
-KEYWORDS=~alpha ~amd64 ~ppc ~x86
+KEYWORDS=~alpha ~amd64 ppc ~x86
 LICENSE=GPL-3+
 RDEPEND=>=virtual/emacs-21
 SLOT=0
 SRC_URI=mirror://gentoo/sml-mode-6.1.el.xz
 _eclasses_=elisp	a2514d37ed52ce36a38a93fca064db1a	elisp-common	21605c8f0b2a5ffa3233faeb3f9df309	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=66f32fb7e3ab2396d05b910c18c3f6be
+_md5_=c8f05d4e3f33becfbeb4b6c12a3a1e20
