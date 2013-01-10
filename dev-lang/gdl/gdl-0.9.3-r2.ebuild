@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.3-r1.ebuild,v 1.1 2013/01/08 05:54:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.3-r2.ebuild,v 1.1 2013/01/10 22:40:35 bicatali Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ RDEPEND="
 	hdf? ( sci-libs/hdf )
 	hdf5? ( sci-libs/hdf5 )
 	imagemagick? ( media-gfx/imagemagick )
-	netcdf? ( || ( sci-libs/netcdf-cxx sci-libs/netcdf[cxx] ) )
+	netcdf? ( || ( >=sci-libs/netcdf-cxx-4.2-r1 sci-libs/netcdf[cxx] ) )
 	proj? ( sci-libs/proj )
 	postscript? ( dev-libs/pslib )
 	python? ( dev-python/numpy )
@@ -125,19 +125,18 @@ src_configure() {
 }
 
 src_compile() {
-	cmake-utils_src_compile
-	use python && python_src_compile
+	BUILD_DIR="${S}_build" cmake-utils_src_compile
+	use python && VERBOSE=1 python_src_compile
 }
 
 src_test() {
 	# upstream does not include tests if python module is on
 	# there is check target instead of the ctest to define some LDPATH
 	use python || Xemake -j1 -C ${BUILD_DIR} check
-
 }
 
 src_install() {
-	cmake-utils_src_install
+	BUILD_DIR="${S}_build" cmake-utils_src_install
 	if use python; then
 		installation() {
 			exeinto $(python_get_sitedir)

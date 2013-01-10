@@ -1,6 +1,6 @@
 --- CMakeModules/FindNetCDF.cmake.orig	2013-01-03 11:27:52.373435387 -0800
 +++ CMakeModules/FindNetCDF.cmake	2013-01-03 12:23:04.710333638 -0800
-@@ -9,16 +9,29 @@
+@@ -9,16 +9,27 @@
  #
  
  
@@ -26,11 +26,9 @@
 +	  else(NETCDF_INCLUDE_DIRS)
 +	    find_package_handle_standard_args(NETCDF DEFAULT_MSG NETCDF_LIBRARIES)
 +	  endif(NETCDF_INCLUDE_DIRS)
-+	  message("-- Found NETCDF_LIBRARIES = ${NETCDF_LIBRARIES}")
-+	  message("-- Found NETCDF_INCLUDE_DIRS = ${NETCDF_INCLUDE_DIRS}")
  	endif(NETCDF_FOUND)
 -else(NETCDFPKG) # no netcdf.pc file
-+else(NETCDFPKG) # no pc file
++else(NETCDFPKG) # no pc file. assume netcdf-3
  	find_library(NETCDF_LIBRARIES NAMES netcdf)
  	find_path(NETCDF_INCLUDE_DIRS NAMES netcdfcpp.h PATH_SUFFIXES netcdf-3)	
  	find_package_handle_standard_args(NETCDF DEFAULT_MSG NETCDF_LIBRARIES NETCDF_INCLUDE_DIRS)
