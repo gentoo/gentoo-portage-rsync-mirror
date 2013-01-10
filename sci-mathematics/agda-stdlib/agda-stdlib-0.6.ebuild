@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda-stdlib/agda-stdlib-0.6.ebuild,v 1.1 2012/03/25 14:02:15 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda-stdlib/agda-stdlib-0.6.ebuild,v 1.2 2013/01/10 12:31:25 gienah Exp $
 
 EAPI=4
 
@@ -36,6 +36,7 @@ src_test() {
 
 src_install() {
 	insinto usr/share/agda-stdlib
+	export INSOPTIONS=--preserve-timestamps
 	doins -r src/*
 	dodoc -r html/*
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/baselayout-prefix
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.20 2012/08/11 10:19:18 heroxbd Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.21 2013/01/10 12:06:18 grobian Exp $
+
+*baselayout-prefix-2.2 (10 Jan 2013)
+
+  10 Jan 2013; Fabian Groffen <grobian@gentoo.org>
+  +baselayout-prefix-2.2.ebuild:
+  Version bump.  Takes libeinfo and einfo from forked OpenRC, takes profile from
+  baselayout-2.2.
 
   11 Aug 2012; Benda Xu <heroxbd@gentoo.org>
   baselayout-prefix-1.12.14-r1.ebuild:
@@ -211,4 +218,3 @@
   12 May 2005; Joseph Jezak <josejx@gentoo.org> +metadata.xml,
   +baselayout-darwin-1.11.11.ebuild:
   Initial commit.
-
