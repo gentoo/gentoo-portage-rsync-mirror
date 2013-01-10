@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci</herd>
-	<herd>python</herd>
-	<longdescription lang="en">
+  <herd>sci</herd>
+  <herd>python</herd>
+  <longdescription lang="en">
   NumPy is a general-purpose array-processing Python package designed to
   efficiently manipulate large multi-dimensional arrays of arbitrary
   records without sacrificing too much speed for small multi-dimensional

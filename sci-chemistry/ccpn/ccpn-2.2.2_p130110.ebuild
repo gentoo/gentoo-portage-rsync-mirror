@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.2.2_p121119.ebuild,v 1.1 2012/11/19 09:47:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.2.2_p130110.ebuild,v 1.1 2013/01/10 17:41:33 jlec Exp $
 
 EAPI=4
 
@@ -15,14 +15,15 @@ MY_PV="$(replace_version_separator 3 _ ${PV%%_p*})"
 MY_MAJOR="$(get_version_component_range 1-3)"
 
 DESCRIPTION="The Collaborative Computing Project for NMR"
-SRC_URI="http://www-old.ccpn.ac.uk/download/${MY_PN}/analysis${MY_PV}.tar.gz"
-	[[ -n ${PATCHSET} ]] && SRC_URI="${SRC_URI}	http://dev.gentoo.org/~jlec/distfiles/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch.xz"
 HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
+SRC_URI="http://www-old.ccpn.ac.uk/download/${MY_PN}/analysis${MY_PV}.tar.gz"
+[[ -n ${PATCHSET} ]] \
+	&& SRC_URI+=" http://dev.gentoo.org/~jlec/distfiles/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch.xz"
 
 SLOT="0"
 LICENSE="|| ( CCPN LGPL-2.1 )"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="extendnmr +opengl"
+IUSE="+opengl"
 
 RDEPEND="
 	dev-lang/tk[threads]
@@ -35,13 +36,7 @@ RDEPEND="
 	opengl? (
 		media-libs/freeglut
 		dev-python/pyglet )"
-# We need to fix this
-#		sci-chemistry/mdd
 DEPEND="${RDEPEND}"
-PDEPEND="
-	extendnmr? (
-		>=sci-chemistry/aria-2.3.2-r1
-		sci-chemistry/prodecomp )"
 
 RESTRICT="mirror"
 
@@ -102,6 +97,7 @@ src_prepare() {
 		-e "s|^\(GLUT_NOT_IN_GL =\).*|\1|g" \
 		-e "s|^\(X11_LIB_FLAGS =\).*|\1 -L${EPREFIX}/usr/$(get_libdir)|g" \
 		-e "s|^\(TCL_LIB_FLAGS =\).*|\1 -L${EPREFIX}/usr/$(get_libdir)|g" \
+		-e "s|^\(TK_LIB =\).*|\1 -ltk${tk_ver}|g" \
 		-e "s|^\(TK_LIB_FLAGS =\).*|\1 -L${EPREFIX}/usr/$(get_libdir)|g" \
 		-e "s|^\(PYTHON_INCLUDE_FLAGS =\).*|\1 -I${EPREFIX}/$(python_get_includedir)|g" \
 		-e "s|^\(PYTHON_LIB =\).*|\1 $(python_get_library -l)|g" \
@@ -127,8 +123,7 @@ src_install() {
 	libdir=$(get_libdir)
 	tkver=$(best_version dev-lang/tk | cut -d- -f3 | cut -d. -f1,2)
 
-	_wrapper="analysis dangle dataShifter depositionFileImporter eci formatConverter pipe2azara xeasy2azara"
-	use extendnmr && _wrapper="${_wrapper} extendNmr"
+	_wrapper="analysis dangle dataShifter depositionFileImporter eci formatConverter pipe2azara xeasy2azara extendNmr"
 	for wrapper in ${_wrapper}; do
 		sed \
 			-e "s|gentoo_sitedir|${EPREFIX}$(python_get_sitedir)|g" \
@@ -164,7 +159,6 @@ src_install() {
 	eend
 
 	ebegin "Adjusting permissions"
-
 	for _file in $(find "${ED}" -type f -name "*so"); do
 		chmod 755 ${_file}
 	done

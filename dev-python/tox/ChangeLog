@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/tox
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.7 2012/10/31 11:08:28 idella4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.8 2013/01/10 17:39:17 idella4 Exp $
+
+  11 Jan 2013; Ian Delaney <idella4@gentoo.org> tox-1.4.2.ebuild:
+  Upgraded test suite to ensure testing by use of the in source built content,
+  updated PYTHON_DEPEND, resticting pypy, fixes bug #451008 by flameeyes
 
   31 Oct 2012; Michał Górny <mgorny@gentoo.org> tox-1.4.2.ebuild:
   Use virtual for argparse.

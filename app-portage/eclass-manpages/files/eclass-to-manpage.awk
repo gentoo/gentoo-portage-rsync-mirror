@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/files/eclass-to-manpage.awk,v 1.27 2012/07/18 14:27:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/files/eclass-to-manpage.awk,v 1.28 2013/01/10 17:42:39 vapier Exp $
 
 # This awk converts the comment documentation found in eclasses
 # into man pages for easier/nicer reading.
@@ -8,13 +8,17 @@
 # If you wish to have multiple paragraphs in a description, then
 # create empty comment lines.  Paragraph parsing ends when the comment
 # block does.
-#
+
 # The format of the eclass description:
 # @ECLASS: foo.eclass
 # @MAINTAINER:
 # <required; list of contacts, one per line>
 # @AUTHOR:
 # <optional; list of authors, one per line>
+# @BUGREPORTS:
+# <optional; description of how to report bugs;
+#  default: tell people to use bugs.gentoo.org>
+# @VCSURL: <optional; url to vcs for this eclass; default: http://sources.gentoo.org/eclass/@ECLASS@?view=log>
 # @BLURB: <required; short description>
 # @DESCRIPTION:
 # <optional; long description>
@@ -158,6 +162,10 @@ function handle_eclass() {
 		eclass_maintainer = eat_paragraph()
 	if ($2 == "@AUTHOR:")
 		eclass_author = eat_paragraph()
+	if ($2 == "@BUGREPORTS:")
+		reporting_bugs = eat_paragraph()
+	if ($2 == "@VCSURL:")
+		vcs_url = eat_line()
 	if ($2 == "@BLURB:")
 		blurb = eat_line()
 	if ($2 == "@DESCRIPTION:")
@@ -350,12 +358,12 @@ function handle_footer() {
 		print pre_text(man_text(eclass_maintainer))
 	}
 	print ".SH \"REPORTING BUGS\""
-	print "Please report bugs via http://bugs.gentoo.org/"
+	print reporting_bugs
 	print ".SH \"FILES\""
 	print ".BR " eclassdir "/" eclass
 	print ".SH \"SEE ALSO\""
 	print ".BR ebuild (5)"
-	print pre_text("http://sources.gentoo.org/eclass/" eclass "?view=log")
+	print pre_text(gensub("@ECLASS@", eclass, "", vcs_url))
 }
 
 #
@@ -366,6 +374,8 @@ BEGIN {
 	if (PORTDIR == "")
 		PORTDIR = "/usr/portage"
 	eclassdir = PORTDIR "/eclass"
+	reporting_bugs = "Please report bugs via http://bugs.gentoo.org/"
+	vcs_url = "http://sources.gentoo.org/eclass/@ECLASS@?view=log"
 }
 
 #

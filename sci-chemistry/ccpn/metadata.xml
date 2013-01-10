@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci-chemistry</herd>
-	<maintainer>
-		<email>jlec@gentoo.org</email>
-	</maintainer>
-	<use>
-		<flag name="extendnmr">Install needed packages for extendNMR support</flag>
-	</use>
+  <herd>sci-chemistry</herd>
+  <maintainer>
+    <email>jlec@gentoo.org</email>
+  </maintainer>
+  <use>
+    <flag name="extendnmr">Install needed packages for extendNMR support</flag>
+  </use>
 </pkgmetadata>

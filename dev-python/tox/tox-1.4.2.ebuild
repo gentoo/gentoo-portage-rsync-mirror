@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/tox-1.4.2.ebuild,v 1.3 2012/10/31 08:56:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/tox-1.4.2.ebuild,v 1.4 2013/01/10 17:39:17 idella4 Exp $
 
 EAPI=4
 
-PYTHON_DEPEND="*"
+PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
-
+RESTRICT_PYTHON_ABIS="2.7-pypy-*"
 inherit distutils eutils
 
 DESCRIPTION="virtualenv-based automation of test activities"
@@ -38,7 +38,10 @@ src_compile() {
 
 src_test() {
 	testing() {
-		PYTHONPATH=. py.test -x
+		"$(PYTHON)" setup.py build -b build-${PYTHON_ABI} \
+			install --root "${T}/test-${PYTHON_ABI}"
+		PATH="${T}/test-${PYTHON_ABI}/usr/bin:${PATH}" \
+		PYTHONPATH="${T}/test-${PYTHON_ABI}/$(python_get_sitedir -b)" py.test -x
 	}
 	python_execute_function testing
 }
