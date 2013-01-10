@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.218 2013/01/06 21:25:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.219 2013/01/10 21:19:22 slyfox Exp $
+
+  10 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org> package.use.mask:
+  mask USE=seccomp for app-emulation/qemu (sys-libs/libseccomp knows only about
+  x86 and amd64 hosts)
 
   06 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Remove obsolete mask entries

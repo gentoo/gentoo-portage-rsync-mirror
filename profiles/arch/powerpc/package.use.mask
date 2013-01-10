@@ -1,6 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.155 2013/01/06 21:25:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.156 2013/01/10 21:19:22 slyfox Exp $
+
+# Sergei Trofimovich <slyfox@gentoo.org> (11 Jan 2013)
+# Current sys-libs/libseccomp (up to 1.0.1) support
+# only x86/amd64. Relies on hardcoded syscall numbers.
+app-emulation/qemu seccomp
 
 # Anthony G. Basile <blueness@gentoo.org> (15 Nove 2012)
 # Mask telepathy, no stable net-libs/telepathy-qt, bug #441456

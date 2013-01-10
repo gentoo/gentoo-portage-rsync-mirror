@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.155 2013/01/04 16:15:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.156 2013/01/10 21:04:56 slyfox Exp $
+
+  10 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/qemu-9999-cflags.patch, qemu-9999.ebuild:
+  Refresh cflags patch by Michal Privoznik and by Tom Wijsman (bug #451178).
 
   03 Jan 2013; Sven Vermeulen <swift@gentoo.org> qemu-1.1.2-r2.ebuild,
   qemu-1.1.2-r3.ebuild, qemu-1.2.0.ebuild, qemu-1.2.1.ebuild:
