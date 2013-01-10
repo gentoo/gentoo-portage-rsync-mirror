@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2.ebuild,v 1.1 2013/01/10 12:06:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r1.ebuild,v 1.1 2013/01/10 15:42:13 grobian Exp $
 
 EAPI=3
 
 inherit eutils multilib
 
 MY_P=${P/-prefix/}  # just use "upstream" sources
-EINFO=einfo-1.0
+EINFO=einfo-1.0.1
 DESCRIPTION="Minimal baselayout and e-functions for Gentoo Prefix installs"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2
