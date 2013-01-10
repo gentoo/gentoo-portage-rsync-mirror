@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/autogen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.90 2012/12/01 18:38:19 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.91 2013/01/10 19:44:08 mr_bones_ Exp $
+
+  10 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -autogen-5.11.5.ebuild,
+  -autogen-5.11.6.ebuild, -autogen-5.11.9.ebuild, -autogen-5.12.ebuild,
+  -autogen-5.14.ebuild, -autogen-5.9.7.ebuild,
+  -files/autogen-5.11.6-gcc46.patch:
+  old
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> autogen-5.15.ebuild:
   alpha/ia64/m68k/s390/sh/sparc/x86 stable wrt #439162

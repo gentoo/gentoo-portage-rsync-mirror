@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.0.ebuild,v 1.2 2012/12/24 18:49:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.0.ebuild,v 1.3 2013/01/10 19:51:04 vapier Exp $
 
 inherit flag-o-matic eutils libtool unpacker toolchain-funcs
 
@@ -29,7 +29,7 @@ src_unpack() {
 	cd "${S}"
 	[[ -d ${FILESDIR}/${PV} ]] && EPATCH_SUFFIX="diff" EPATCH_FORCE="yes" epatch "${FILESDIR}"/${PV}
 	epatch "${FILESDIR}"/${PN}-4.1.4-noexecstack.patch
-	epatch "${FILESDIR}"/${PN}-5.0.5-x32-support.patch
+	epatch "${FILESDIR}"/${PN}-5.1.0-x32-support.patch
 
 	# disable -fPIE -pie in the tests for x86  #236054
 	if use x86 && gcc-specs-pie ; then
@@ -44,7 +44,7 @@ src_unpack() {
 	mv configure configure.wrapped || die
 	cat <<-\EOF > configure
 	#!/bin/sh
-	exec env ABI="$GMPABI" "${0}.wrapped" "$@"
+	exec env ABI="$GMPABI" "$0.wrapped" "$@"
 	EOF
 	chmod a+rx configure
 }
@@ -67,10 +67,8 @@ src_compile() {
 	tc-export CC
 	econf \
 		--localstatedir=/var/state/gmp \
-		--disable-mpbsd \
 		$(use_enable cxx) \
-		$(use_enable static-libs static) \
-		|| die
+		$(use_enable static-libs static)
 
 	emake || die
 }

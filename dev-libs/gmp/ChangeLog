@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.171 2012/12/24 18:49:45 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.172 2013/01/10 19:51:04 vapier Exp $
+
+  10 Jan 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/gmp-5.1.0-x32-support.patch, gmp-5.1.0.ebuild:
+  Fix x32 builds #451038 by Zenitur.
 
   24 Dec 2012; Mike Frysinger <vapier@gentoo.org>
   +files/gmp-5.1.0-x86-nopie-tests.patch, gmp-5.1.0.ebuild:

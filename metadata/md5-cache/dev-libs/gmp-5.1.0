@@ -8,4 +8,4 @@ LICENSE=LGPL-3
 SLOT=0
 SRC_URI=mirror://gnu/gmp/gmp-5.1.0.tar.xz ftp://ftp.gmplib.org/pub/gmp-5.1.0/gmp-5.1.0.tar.xz doc? ( http://gmplib.org/gmp-man-5.1.0.pdf )
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	61ad55e732e494378165e7dcd4744b91	libtool	2b273eea1976cfaed3449345d94331ac	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	unpacker	50e1227854e96469a19a63f053496328	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=0b4c8fec43a12b28f146f3b26c4ea2d2
+_md5_=71a75eb68d6701c04fd988869a6f3056
