@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/ansible
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.9 2013/01/10 08:41:32 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.10 2013/01/10 13:24:53 pinkbyte Exp $
+
+*ansible-0.9-r1 (10 Jan 2013)
+
+  10 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> -ansible-0.9.ebuild,
+  +ansible-0.9-r1.ebuild, +files/ansible-0.9-distribution-fix.patch:
+  Fix get_distribution() function, new revision
 
   10 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> ansible-0.9.ebuild,
   ansible-9999.ebuild:

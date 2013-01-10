@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-0.9.ebuild,v 1.2 2013/01/10 08:41:32 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-0.9-r1.ebuild,v 1.1 2013/01/10 13:24:53 pinkbyte Exp $
 
 EAPI="5"
 
@@ -32,6 +32,8 @@ RDEPEND="
 	)
 	sudo? ( app-admin/sudo )
 "
+
+PATCHES=( "${FILESDIR}/${P}-distribution-fix.patch" )
 
 src_prepare() {
 	distutils-r1_src_prepare
