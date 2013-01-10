@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.8.8.323-r1.ebuild,v 1.2 2013/01/09 18:28:00 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.8.8.323-r1.ebuild,v 1.3 2013/01/10 06:46:22 prometheanfire Exp $
 
 EAPI=4
 inherit eutils pax-utils
@@ -124,7 +124,7 @@ src_install() {
 	EOF
 
 	for size in 16 22 24 32 48 64 128 256; do
-		newicon -s ${size} "${SPOTIFY_HOME}/Icons/spotify-linux-${size}.png" \
+		newicon -s ${size} "${S}${SPOTIFY_HOME}/Icons/spotify-linux-${size}.png" \
 			"spotify-client.png"
 	done
 	domenu "${SPOTIFY_HOME}/spotify.desktop"
