@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/glog-0.3.2.ebuild,v 1.4 2012/11/19 18:34:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/glog-0.3.2.ebuild,v 1.5 2013/01/10 20:40:38 vapier Exp $
 
 EAPI="4"
 inherit eutils
@@ -30,15 +30,22 @@ src_configure() {
 	export ac_cv_lib_gflags_main=$(usex gflags)
 	export ac_cv_lib_unwind_backtrace=$(usex unwind)
 	use test || export ac_cv_prog_GTEST_CONFIG=no
-	econf $(use_enable static-libs static)
+	econf \
+		--docdir="\${datarootdir}/doc/${PF}" \
+		--htmldir="\${datarootdir}/doc/${PF}/html" \
+		$(use_enable static-libs static)
 }
 
 src_install() {
 	default
 
-	rm -rf "${D}/usr/share/doc"
-	dodoc AUTHORS ChangeLog NEWS README*
-	dohtml doc/*
+	# Punt docs we don't care about (NEWS is 0 bytes).
+	rm "${ED}"/usr/share/doc/${PF}/{COPYING,NEWS,README.windows}
 
-	use static-libs || rm "${D}"/usr/lib*/*.la
+	# --htmldir doesn't work (yet):
+	# https://code.google.com/p/google-glog/issues/detail?id=144
+	dohtml "${ED}"/usr/share/doc/${PF}/*
+	rm "${ED}"/usr/share/doc/${PF}/*.{html,css}
+
+	use static-libs || find "${ED}" -name '*.la' -delete
 }

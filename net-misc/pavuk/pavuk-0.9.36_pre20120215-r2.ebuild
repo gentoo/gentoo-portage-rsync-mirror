@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.36_pre20120215-r1.ebuild,v 1.1 2012/02/25 12:31:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.36_pre20120215-r2.ebuild,v 1.1 2013/01/10 20:43:52 pacho Exp $
 
-EAPI=4
+EAPI=5
 
 S="${WORKDIR}/${PN}"
 
@@ -38,11 +38,13 @@ PATCHES=(
 
 	# Fixes a segfault in the GTK+2 interface on amd64, bug #262504#c40
 	"${FILESDIR}/${P}-fix-gtkmulticol-segfault.patch"
+
+	# Fixed overflow, bug #450990
+	"${FILESDIR}/${P}-tl_selectr-overflow-fix.patch"
 )
 
 DOCS=( README CREDITS NEWS AUTHORS BUGS TODO MAILINGLIST wget-pavuk.HOWTO
-		ChangeLog wget-pavuk.HOWTO pavuk_authinfo.sample pavukrc.sample
-		)
+		ChangeLog wget-pavuk.HOWTO pavuk_authinfo.sample pavukrc.sample	)
 
 src_prepare() {
 	# Fixes a bug in Makefile.am that causes aclocal to fail

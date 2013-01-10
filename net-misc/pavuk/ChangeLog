@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/pavuk
-# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.38 2012/02/25 12:31:13 pacho Exp $
+# Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.39 2013/01/10 20:43:52 pacho Exp $
+
+*pavuk-0.9.36_pre20120215-r2 (10 Jan 2013)
+
+  10 Jan 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/pavuk-0.9.36_pre20120215-tl_selectr-overflow-fix.patch,
+  +pavuk-0.9.36_pre20120215-r2.ebuild, -pavuk-0.9.36_pre20120215-r1.ebuild,
+  -pavuk-0.9.36_pre20120215.ebuild:
+  Fix overflow (bug #450990 by Diego Elio Pettenò and fix by Richard Grenville),
+  remove old.
 
 *pavuk-0.9.36_pre20120215-r1 (25 Feb 2012)
 
@@ -176,4 +185,3 @@
 
   10 Feb 2003; Seth Chandler <sethbc@gentoo.org>: pavuk-0.9.28.ebuild
   added pavuk to portage thx to Emil Mikulic <emikulic@optushome.com.au>
-

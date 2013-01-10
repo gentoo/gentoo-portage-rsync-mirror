@@ -1,4 +1,7 @@
 
+  10 Jan 2013; Anthony G. Basile <blueness@gentoo.org> elfix-0.7.0.ebuild:
+  Stable x86, bug #445334
+
   06 Jan 2013; Anthony G. Basile <blueness@gentoo.org> -elfix-0.8.0.ebuild:
   Remove deprecated unstable version
 
