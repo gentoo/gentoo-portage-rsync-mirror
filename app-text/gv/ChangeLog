@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.108 2012/09/16 20:27:03 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.109 2013/01/10 07:08:15 ssuominen Exp $
+
+  10 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> -files/gv-3.6.1-a0.patch,
+  -gv-3.7.1-r1.ebuild, -files/gv-3.7.1-aplinedel.patch:
+  old
 
   16 Sep 2012; Christoph Junghans <ottxor@gentoo.org> gv-3.7.3-r1.ebuild:
   added prefix keywords
