@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.15.0_beta1.ebuild,v 1.3 2012/12/10 18:44:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.15.0_beta3.ebuild,v 1.1 2013/01/10 04:20:56 radhermit Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils autotools toolchain-funcs
 
@@ -33,7 +33,7 @@ S=${WORKDIR}/${MY_P}
 
 DOCS=( Changelog.txt README )
 
-pkg_setup() {
+pkg_pretend() {
 	if use openmp ; then
 		tc-has-openmp || die "Please switch to an openmp compatible compiler"
 	fi
@@ -41,7 +41,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.13.4-docs.patch
-	epatch "${FILESDIR}"/${PN}-0.14.7-pkgconfig.patch
 	eautoreconf
 }
 
