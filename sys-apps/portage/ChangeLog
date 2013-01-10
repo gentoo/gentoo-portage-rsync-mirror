@@ -1,9 +1,28 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1158 2013/01/01 13:38:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1160 2013/01/10 15:25:08 zmedico Exp $
+
+*portage-2.2.0_alpha150 (10 Jan 2013)
+
+  10 Jan 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha150.ebuild:
+  2.2.0_alpha150 version bump. This includes all of the fixes in 2.1.11.39. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.11.39 (10 Jan 2013)
+
+  10 Jan 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.39.ebuild:
+  2.1.11.39 version bump. This fixes bug #243192 (update quickpkg man page), bug
+  #298298 (include packages from nested package sets in emerge --depclean
+  summary), bug #446610 (handle syncfs return value), bug #446662 (add
+  QA_CONFIGURE_OPTIONS), bug #448176 (fix emerge --keep-going to avoid dropping
+  packages), bug #448858 (relocation error triggered by glibc upgrade), bug
+  #449678 (silence repoman warning about usex for EAPI 5), bug #449708 (make
+  use() fatal when called with unknown flags in EAPI 5), bug #450278 (add
+  QA_AM_MAINTAINER_MODE), bug #450960 (mention relavant file names in autounmask
+  messages), and bug #451118 (fix make.conf.5 formatting of compress-index
+  docs). Bug #445274 tracks all bugs fixed since portage-2.1.11.31.
 
   01 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2012:
   Split ChangeLog.
 
   For previous entries, please see ChangeLog-2012.
-

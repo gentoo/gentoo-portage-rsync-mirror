@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/havp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.37 2013/01/09 14:03:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.39 2013/01/10 15:19:06 ago Exp $
+
+  10 Jan 2013; Agostino Sarubbo <ago@gentoo.org> havp-0.92a.ebuild:
+  Stable for x86, wrt bug #330475
+
+  10 Jan 2013; Agostino Sarubbo <ago@gentoo.org> havp-0.92a.ebuild:
+  Stable for amd64, wrt bug #330475
 
   09 Jan 2013; Jeroen Roovers <jer@gentoo.org> havp-0.92a.ebuild,
   +files/havp-0.92a-run.patch, files/havp.initd:
@@ -172,4 +178,3 @@
   +files/havp-0.76-gentoo.patch, +files/havp.initd, +metadata.xml,
   +havp-0.76.ebuild:
   Initial import from bug #99303.
-

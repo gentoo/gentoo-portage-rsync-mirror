@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.9.ebuild,v 1.6 2013/01/10 15:13:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.12.ebuild,v 1.1 2013/01/10 15:13:31 jlec Exp $
 
 EAPI=4
 
@@ -35,6 +35,8 @@ RDEPEND="${DEPEND_COMMON}
 DOCS=( Release_Notes )
 
 PATCHES=( "${FILESDIR}"/${P}-tcl8.6.patch )
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	PBS_SERVER_HOME="${PBS_SERVER_HOME:-/var/spool/torque}"
@@ -72,6 +74,11 @@ pkg_setup() {
 		fi
 	fi
 }
+
+#src_prepare() {
+#	append-cflags -DUSE_INTERP_RESULT
+#	autotools-utils_src_prepare
+#}
 
 src_configure() {
 	local myeconfargs=( --with-rcp=mom_rcp )

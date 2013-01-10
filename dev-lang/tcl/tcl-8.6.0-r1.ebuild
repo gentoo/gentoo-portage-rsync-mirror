@@ -1,16 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.6.0.ebuild,v 1.1 2013/01/09 20:10:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.6.0-r1.ebuild,v 1.2 2013/01/10 15:29:25 jlec Exp $
 
 EAPI=5
 
 inherit autotools eutils flag-o-matic multilib toolchain-funcs versionator
 
-MY_P="${PN}${PV/_beta/b}"
+MY_P="${PN}${PV}"
 
 DESCRIPTION="Tool Command Language"
 HOMEPAGE="http://www.tcl.tk/"
-SRC_URI="mirror://sourceforge/tcl/${MY_P}-src.tar.gz"
+SRC_URI="mirror://sourceforge/tcl/${PN}-core${PV}-src.tar.gz"
 
 LICENSE="tcltk"
 SLOT="0"
@@ -22,7 +22,7 @@ S="${SPARENT}"/unix
 
 src_prepare() {
 	find \
-		"${SPARENT}"/{compat,pkgs}/* \
+		"${SPARENT}"/compat/* \
 		"${SPARENT}"/doc/try.n \
 		-delete || die
 
@@ -49,7 +49,6 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--with-encoding=utf8 \
 		$(use_enable threads) \
 		$(use_enable debug symbols)
 }
