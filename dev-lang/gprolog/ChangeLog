@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.62 2013/01/09 19:18:26 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.63 2013/01/10 12:52:38 keri Exp $
+
+  10 Jan 2013; <keri@gentoo.org> gprolog-1.4.1.ebuild, gprolog-1.4.2.ebuild:
+  Restrict gprolog compile to single instance of gplc as it cannot safely be
+  run in parallel
 
 *gprolog-1.4.2 (09 Jan 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.4.2.ebuild,v 1.1 2013/01/09 19:18:26 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.4.2.ebuild,v 1.2 2013/01/10 12:52:38 keri Exp $
 
 EAPI=4
 
@@ -50,12 +50,13 @@ src_configure() {
 
 src_compile() {
 	cd "${S}"/src
-	emake
+	# gprolog is compiled using gplc which cannot be run in parallel
+	emake -j1
 }
 
 src_test() {
 	cd "${S}"/src
-	emake check
+	emake -j1 check
 }
 
 src_install() {
