@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.5.ebuild,v 1.6 2013/01/06 09:42:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.5.ebuild,v 1.7 2013/01/10 16:23:51 jlec Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+dbus extensions +fts icu nls passiv plugins sql-debug"
 
 RDEPEND="
-	dev-libs/xapian
+	dev-libs/xapian[inmemory]
 	dev-python/dbus-python
 	dev-python/pygobject:2
 	dev-python/pyxdg

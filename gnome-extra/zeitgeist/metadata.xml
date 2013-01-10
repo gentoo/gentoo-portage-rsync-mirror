@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>desktop-misc</herd>
-	<maintainer>
-		<email>jlec@gentoo.org</email>
-	</maintainer>
-	<longdescription>
+  <herd>desktop-misc</herd>
+  <maintainer>
+    <email>jlec@gentoo.org</email>
+  </maintainer>
+  <longdescription>
 The engine is the main module that accepts all incoming events and allows 
 applications to fetch as well as subscribe to be notified when events 
 are logged. It is the heart of Zeitgeist.
 </longdescription>
-	<use>
-		<flag name="extensions">Use <pkg>gnome-extra/zeitgeist-extentions</pkg> to enhance the internal routines</flag>
-		<flag name="sql-debug">Enable SQL debugging</flag>
-		<flag name="passiv">Use <pkg>gnome-extra/zeitgeist-datahub</pkg> to passively inject events</flag>
-		<flag name="plugins">Use <pkg>gnome-extra/zeitgeist-datasources</pkg> to enable numerous packages to inject events</flag>
-		<flag name="fts">Enable the full text search extension</flag>
-	</use>
+  <use>
+    <flag name="extensions">Use <pkg>gnome-extra/zeitgeist-extentions</pkg> to enhance the internal routines</flag>
+    <flag name="sql-debug">Enable SQL debugging</flag>
+    <flag name="passiv">Use <pkg>gnome-extra/zeitgeist-datahub</pkg> to passively inject events</flag>
+    <flag name="plugins">Use <pkg>gnome-extra/zeitgeist-datasources</pkg> to enable numerous packages to inject events</flag>
+    <flag name="fts">Enable the full text search extension</flag>
+  </use>
 </pkgmetadata>
