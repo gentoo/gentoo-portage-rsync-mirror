@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tvdb_api/tvdb_api-1.8.1.ebuild,v 1.1 2012/10/23 19:42:53 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tvdb_api/tvdb_api-1.8.2.ebuild,v 1.1 2013/01/10 18:10:16 thev00d00 Exp $
 
 EAPI=4
 
