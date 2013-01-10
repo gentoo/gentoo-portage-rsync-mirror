@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.38 2013/01/05 10:02:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.39 2013/01/10 22:09:30 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -332,9 +332,40 @@ distutils-r1_python_install() {
 	esetup.py install "${flags[@]}" --root="${root}" "${@}"
 	_distutils-r1_rename_scripts "${root}"
 
-	# merge
-	cp -a -l -n "${root}"/* "${D}"/ || die "Merging ${EPYTHON} image failed."
-	rm -rf "${root}"
+	_distutils-r1_merge_root "${root}" "${D}"
+}
+
+# @FUNCTION: distutils-r1_merge_root
+# @USAGE: <src-root> <dest-root>
+# @INTERNAL
+# @DESCRIPTION:
+# Merge the directory tree from <src-root> to <dest-root>, removing
+# the <src-root> in the process.
+_distutils-r1_merge_root() {
+	local src=${1}
+	local dest=${2}
+
+	local lockfile=${T}/distutils-r1-merge-lock
+
+	if type -P lockf &>/dev/null; then
+		# On BSD, we have 'lockf' wrapper.
+		tar -C "${src}" -f - -c . \
+			| lockf "${lockfile}" tar -x -f - -C "${dest}"
+	else
+		if type -P flock &>/dev/null; then
+			# On Linux, we have 'flock' which can lock fd.
+			local lock_fd
+			redirect_alloc_fd lock_fd "${lockfile}" '>>'
+			flock ${lock_fd}
+		else
+			ewarn "distutils-r1: no locking service found, please report."
+		fi
+
+		cp -a -l -n "${src}"/. "${dest}"/
+	fi
+	[[ ${?} == 0 ]] || die "Merging ${EPYTHON} image failed."
+
+	rm -rf "${src}"
 }
 
 # @FUNCTION: distutils-r1_python_install_all

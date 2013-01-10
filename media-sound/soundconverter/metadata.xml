@@ -3,4 +3,7 @@
 <pkgmetadata>
 <herd>gstreamer</herd>
 <maintainer><email>hanno@gentoo.org</email></maintainer>
+<use>
+<flag name='opus'>Enable Opus audio codec support</flag>
+</use>
 </pkgmetadata>

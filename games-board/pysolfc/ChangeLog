@@ -1,6 +1,11 @@
 # ChangeLog for games-board/pysolfc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.5 2012/10/15 05:39:54 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.6 2013/01/10 22:16:59 hasufell Exp $
+
+*pysolfc-2.0-r1 (10 Jan 2013)
+
+  10 Jan 2013; Julian Ospald <hasufell@gentoo.org> +pysolfc-2.0-r1.ebuild:
+  migrate to distutils-r1
 
   15 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
   metadata fix (bug #438318)

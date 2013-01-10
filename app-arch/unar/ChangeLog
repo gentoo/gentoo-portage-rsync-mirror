@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unar/ChangeLog,v 1.2 2012/09/17 11:12:15 hanno Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unar/ChangeLog,v 1.3 2013/01/10 22:17:58 hanno Exp $
+
+*unar-1.5 (10 Jan 2013)
+
+  10 Jan 2013; Hanno Boeck <hanno@gentoo.org> +unar-1.5.ebuild:
+  Version bump.
 
 *unar-1.2 (17 Sep 2012)
 
