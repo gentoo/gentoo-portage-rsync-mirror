@@ -1,6 +1,13 @@
 # ChangeLog for games-server/crossfire-server
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.26 2012/05/30 23:20:48 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.27 2013/01/10 05:37:03 mr_bones_ Exp $
+
+*crossfire-server-1.70.0 (10 Jan 2013)
+
+  10 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +crossfire-server-1.70.0.ebuild, -files/crossfire-server-1.11.0-curl.patch,
+  -files/crossfire-server-1.11.0-libpng15.patch:
+  version bump (bug #410219)
 
   30 May 2012; Michael Sterrett <mr_bones_@gentoo.org>
   -crossfire-server-1.11.0.ebuild:
