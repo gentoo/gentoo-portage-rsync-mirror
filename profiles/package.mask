@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14360 2013/01/09 18:19:20 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14361 2013/01/10 11:15:09 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -375,10 +375,6 @@ dev-ml/ocamlduce
 # Sébastien Fabbro <bicatali@gentoo.org> (31 Oct 2012)
 # live ebuild
 =sys-fs/redirfs-9999
-
-# Ben de Groot <yngwin@gentoo.org> (29 Oct 2012)
-# Fails compilation on missing sqlite header - unbundle patch needs updating
-=net-news/quiterss-0.10.3
 
 # Doug Goldstein <cardoe@gentoo.org> (28 Oct 2012)
 # Do not use this ebuild. Stop trying to use it.
