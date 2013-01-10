@@ -1,16 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.7.ebuild,v 1.2 2012/12/26 03:46:58 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-5.2.7.ebuild,v 1.1 2013/01/10 10:27:40 pesa Exp $
 
 EAPI="4"
-PYTHON_DEPEND="2:2.6"
+PYTHON_DEPEND="3:3.1"
 SUPPORT_PYTHON_ABIS="1"
-# 2.4 and 2.5 are restricted to avoid conditional dependency on dev-python/simplejson.
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="2.* *-jython 2.7-pypy-*"
 
 inherit eutils python
 
-SLOT="4"
+SLOT="5"
 MY_PN="${PN}${SLOT}"
 MY_PV="${PV/_pre/-snapshot-}"
 MY_P="${MY_PN}-${MY_PV}"
@@ -22,18 +21,17 @@ SRC_URI="${BASE_URI}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="kde spell"
+IUSE="spell"
 
 DEPEND="
 	>=dev-python/sip-4.12.4
 	>=dev-python/PyQt4-4.9.6-r1[X,help,svg,webkit]
-	>=dev-python/qscintilla-python-2.3
-	kde? ( kde-base/pykde4 )
+	>=dev-python/qscintilla-python-2.4
 "
 RDEPEND="${DEPEND}
 	>=dev-python/chardet-2.0.1
-	>=dev-python/coverage-3.0.1
-	>=dev-python/pygments-1.3.1
+	>=dev-python/coverage-3.2
+	>=dev-python/pygments-1.4
 "
 PDEPEND="
 	spell? ( dev-python/pyenchant )
@@ -51,11 +49,17 @@ S=${WORKDIR}/${MY_P}
 PYTHON_VERSIONED_EXECUTABLES=("/usr/bin/.*")
 
 src_prepare() {
-	epatch "${FILESDIR}/eric-4.4-no-interactive.patch"
-	use kde || epatch "${FILESDIR}/eric-4.4-no-pykde.patch"
+	# Avoid file collisions between different slots of Eric.
+	sed -e "s/^Icon=eric$/&${SLOT}/" -i eric/${MY_PN}.desktop || die
+	sed -e "s/\([^[:alnum:]]\)eric\.png\([^[:alnum:]]\)/\1eric5.png\2/" \
+		-i $(grep -lr "eric\.png" .) || die
+	mv eric/icons/default/eric{,5}.png || die
+	mv eric/pixmaps/eric{,5}.png || die
+	rm -f eric/APIs/Python/zope-*.api
+	rm -f eric/APIs/Ruby/Ruby-*.api
 
-	# Delete internal copies of dev-python/chardet, dev-python/coverage,
-	# dev-python/pygments and dev-python/simplejson.
+	# Delete internal copies of dev-python/chardet,
+	# dev-python/coverage and dev-python/pygments.
 	rm -fr eric/ThirdParty
 	rm -fr eric/DebugClients/Python{,3}/coverage
 	sed -i -e '\|/coverage/|d' eric/${MY_PN}.e4p || die
@@ -75,12 +79,11 @@ src_install() {
 	python_execute_function installation
 	python_merge_intermediate_installation_images "${T}/images"
 
-	doicon eric/icons/default/eric.png || die
-	make_desktop_entry "${MY_PN} --nosplash" ${MY_PN} eric "Development;IDE;Qt"
+	doicon eric/icons/default/${MY_PN}.png || die
 }
 
 pkg_postinst() {
-	python_mod_optimize ${MY_PN}{,config.py,plugins}
+	python_mod_optimize -x "/eric5/(DebugClients/Python|UtilitiesPython2)/" ${MY_PN}{,config.py,plugins}
 
 	elog
 	elog "If you want to use Eric with mod_python, have a look at"
