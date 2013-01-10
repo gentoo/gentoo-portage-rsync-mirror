@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=sys-libs/zlib media-libs/libpng media-libs/libmng virtual/jpeg media-libs/openjpeg media-libs/tiff media-libs/libraw media-libs/openexr virtual/pkgconfig app-arch/unzip
+DESCRIPTION=Image library supporting many formats
+EAPI=4
+HOMEPAGE=http://freeimage.sourceforge.net/
+IUSE=static-libs
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( GPL-2 FIPL-1.0 )
+RDEPEND=sys-libs/zlib media-libs/libpng media-libs/libmng virtual/jpeg media-libs/openjpeg media-libs/tiff media-libs/libraw media-libs/openexr
+SLOT=0
+SRC_URI=mirror://sourceforge/freeimage/FreeImage3153.zip mirror://sourceforge/freeimage/FreeImage3153.pdf
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=99f285bd17a02a79e4c3d90aa7ab043a

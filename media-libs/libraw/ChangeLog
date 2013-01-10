@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libraw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.43 2013/01/06 09:50:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.44 2013/01/09 23:37:41 vapier Exp $
+
+  09 Jan 2013; Mike Frysinger <vapier@gentoo.org> libraw-0.14.7.ebuild:
+  Add arm for ChromiumOS.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libraw-0.14.7.ebuild:
   Add ~sparc, wrt bug #449220
