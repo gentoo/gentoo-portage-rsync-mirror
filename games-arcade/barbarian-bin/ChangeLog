@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/barbarian-bin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/ChangeLog,v 1.6 2007/01/14 08:39:20 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/ChangeLog,v 1.7 2013/01/10 08:36:18 tupone Exp $
+
+  10 Jan 2013; Tupone Alfredo <tupone@gentoo.org> barbarian-bin-1.01.ebuild:
+  Use QA_PREBUILT. Bug #450858 by Diego
 
   14 Jan 2007; Michael Sterrett <mr_bones_@gentoo.org>
   barbarian-bin-1.01.ebuild:
