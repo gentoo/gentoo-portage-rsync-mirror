@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/windowmaker
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.136 2012/08/14 00:43:00 chithanh Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.137 2013/01/10 10:41:46 voyageur Exp $
+
+*windowmaker-0.95.4 (10 Jan 2013)
+
+  10 Jan 2013; Bernard Cafarelli <voyageur@gentoo.org>
+  -windowmaker-0.95.3.ebuild, +windowmaker-0.95.4.ebuild:
+  Version bump, keep underlinking patch as it was committed just after
+  tag/release
 
   14 Aug 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   windowmaker-0.95.3-r1.ebuild:

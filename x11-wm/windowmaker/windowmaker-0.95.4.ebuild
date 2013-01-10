@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.95.3.ebuild,v 1.1 2012/06/07 22:42:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.95.4.ebuild,v 1.1 2013/01/10 10:41:46 voyageur Exp $
 
 EAPI=4
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="The fast and light GNUstep window manager"
 HOMEPAGE="http://www.windowmaker.org/"
@@ -13,7 +13,7 @@ SRC_URI=" http://windowmaker.org/pub/source/release/${P/windowm/WindowM}.tar.gz
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="gif jpeg nls png tiff modelock xinerama xrandr"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 
 DEPEND="media-libs/fontconfig
 	>=x11-libs/libXft-2.1.0
@@ -40,6 +40,9 @@ src_prepare() {
 			sed -i -e "s:/opt/share/WindowMaker:${EPREFIX}/usr/share/WindowMaker:g;" "$file" || die
 		fi;
 	done;
+
+	epatch "${FILESDIR}"/${PN}-0.95.3-fix_underlinking.patch
+	eautoreconf
 }
 
 src_configure() {
