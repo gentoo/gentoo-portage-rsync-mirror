@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metasploit_data_models/metasploit_data_models-0.3.1.ebuild,v 1.2 2013/01/09 04:29:39 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metasploit_data_models/metasploit_data_models-0.3.1-r1.ebuild,v 1.1 2013/01/10 02:58:34 zerochaos Exp $
 
 EAPI=5
 
@@ -24,3 +24,15 @@ IUSE=""
 #ruby_add_bdepend "test? ( dev-ruby/rails dev-ruby/pry )"
 
 ruby_add_rdepend ">=dev-ruby/activerecord-3.2.10[postgres]"
+
+each_ruby_install() {
+	ruby_fakegem_install_gemspec
+
+	local _gemlibdirs="${RUBY_FAKEGEM_EXTRAINSTALL}"
+	for directory in app bin lib script spec; do
+		[[ -d ${directory} ]] && _gemlibdirs="${_gemlibdirs} ${directory}"
+	done
+
+	[[ -n ${_gemlibdirs} ]] && \
+		ruby_fakegem_doins -r ${_gemlibdirs}
+}
