@@ -1,6 +1,16 @@
 # ChangeLog for app-portage/eclass-manpages
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.31 2012/07/18 14:27:54 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.33 2013/01/10 17:21:58 vapier Exp $
+
+  10 Jan 2013; Mike Frysinger <vapier@gentoo.org>
+  eclass-manpages-20130110.ebuild:
+  Update to EAPI=4.
+
+*eclass-manpages-20130110 (10 Jan 2013)
+
+  10 Jan 2013; Mike Frysinger <vapier@gentoo.org>
+  +eclass-manpages-20130110.ebuild:
+  Version bump.  Support all overlays if available.
 
 *eclass-manpages-20120718 (18 Jul 2012)
 

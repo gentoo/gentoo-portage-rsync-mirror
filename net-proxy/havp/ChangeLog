@@ -1,6 +1,15 @@
 # ChangeLog for net-proxy/havp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.39 2013/01/10 15:19:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.41 2013/01/10 17:26:47 jer Exp $
+
+*havp-0.92a-r1 (10 Jan 2013)
+
+  10 Jan 2013; Jeroen Roovers <jer@gentoo.org> +havp-0.92a-r1.ebuild:
+  Respect CXXFLAGS (bug #451186, bug #451188, AR (bug #451184).
+
+  10 Jan 2013; Jeroen Roovers <jer@gentoo.org> -havp-0.90-r1.ebuild,
+  -files/havp-0.90-gcc44.patch:
+  Old.
 
   10 Jan 2013; Agostino Sarubbo <ago@gentoo.org> havp-0.92a.ebuild:
   Stable for x86, wrt bug #330475
