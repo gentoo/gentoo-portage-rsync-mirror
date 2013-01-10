@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/porticron
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.29 2012/03/10 17:17:24 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.30 2013/01/10 07:46:06 hollow Exp $
+
+  10 Jan 2013; Benedikt Böhm <hollow@gentoo.org> -porticron-0.5.ebuild,
+  -porticron-0.5.1.ebuild, -porticron-0.5.2.ebuild, -porticron-0.5.3.ebuild,
+  porticron-0.6.ebuild:
+  add ~arm wrt #451106; remove old versions
 
   10 Mar 2012; Brent Baude <ranger@gentoo.org> porticron-0.6.ebuild:
   Marking porticron-0.6 ppc for bug 367189

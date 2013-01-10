@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-de
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.31 2012/08/18 09:20:02 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.32 2013/01/10 07:58:56 scarabeus Exp $
+
+  10 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  -myspell-de-2012.06.10.ebuild, myspell-de-2012.06.17.ebuild:
+  Stabilise latest on all archs, drop older.
 
 *myspell-de-2012.06.17 (18 Aug 2012)
 
