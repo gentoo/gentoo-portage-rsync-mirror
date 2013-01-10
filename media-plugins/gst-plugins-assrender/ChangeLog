@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-assrender
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-assrender/ChangeLog,v 1.6 2013/01/07 19:30:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-assrender/ChangeLog,v 1.7 2013/01/10 18:55:42 blueness Exp $
+
+  10 Jan 2013; Anthony G. Basile <blueness@gentoo.org>
+  gst-plugins-assrender-0.10.23.ebuild, gst-plugins-assrender-1.0.3.ebuild:
+  Keyword ~ppc ~ppc64, bug #450672, thanks vincent
 
   07 Jan 2013; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-assrender-0.10.23.ebuild, gst-plugins-assrender-1.0.3.ebuild:
@@ -35,4 +39,3 @@
   supported these in text form, but this one overlays on top of the video
   and hence supports styling, effects, karaoke features and other advanced
   features of Advanced SubStation Alpha
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ispc/ispc-1.3.0.ebuild,v 1.4 2013/01/08 05:43:51 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ispc/ispc-1.3.1.ebuild,v 1.1 2013/01/10 18:33:03 ottxor Exp $
 
 EAPI=4
 
@@ -17,7 +17,6 @@ if [[ ${PV} = *9999 ]]; then
 else
 	inherit vcs-snapshot
 	SRC_URI="https://github.com/${PN}/${PN}/tarball/v${PV} -> ${P}.tar.gz"
-	PATCHES=( "${FILESDIR}/${P}-gcc-4.7.patch" )
 fi
 
 LICENSE="BSD BSD-2 UoI-NCSA"
@@ -26,8 +25,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
 RDEPEND="
-	|| ( =sys-devel/clang-3.0* =sys-devel/clang-3.1* )
-	|| ( =sys-devel/llvm-3.0* =sys-devel/llvm-3.1* )
+	>=sys-devel/clang-3.0
+	>=sys-devel/llvm-3.0
 	"
 DEPEND="
 	${RDEPEND}
