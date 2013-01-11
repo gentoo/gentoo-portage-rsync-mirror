@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_auth_kerb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/ChangeLog,v 1.12 2013/01/03 18:58:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/ChangeLog,v 1.13 2013/01/11 20:41:59 pacho Exp $
+
+  11 Jan 2013; Pacho Ramos <pacho@gentoo.org>
+  files/mod_auth_kerb-5.4-s4u2proxy.patch:
+  Commit patch properly to prevent CVS keywords to be modified (#327445#c15 by
+  Zac Medico)
 
 *mod_auth_kerb-5.4-r1 (03 Jan 2013)
 

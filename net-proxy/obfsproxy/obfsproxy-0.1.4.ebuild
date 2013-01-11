@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/obfsproxy-0.1.4.ebuild,v 1.3 2013/01/08 20:17:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/obfsproxy-0.1.4.ebuild,v 1.4 2013/01/11 20:58:58 blueness Exp $
 
 EAPI="4"
+
+inherit toolchain-funcs
 
 DESCRIPTION="A tor-compliant pluggable transports proxy to obfuscate tor traffic"
 HOMEPAGE="https://www.torproject.org/projects/obfsproxy.html"
@@ -18,6 +20,10 @@ DEPEND="dev-libs/openssl
 	>=net-misc/tor-0.2.3.12_alpha
 	sys-libs/zlib"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	sed -i -e "s:^AR = ar:AR = $(tc-getAR):" Makefile.in
+}
 
 src_install() {
 	emake DESTDIR="${D}" install

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.126 2013/01/11 07:35:43 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.127 2013/01/11 20:55:00 williamh Exp $
 
 EAPI=4
 
@@ -128,6 +128,9 @@ src_prepare()
 	then
 		EPATCH_SUFFIX=patch EPATCH_FORCE=yes epatch
 	fi
+
+	# apply user patches
+	epatch_user
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
