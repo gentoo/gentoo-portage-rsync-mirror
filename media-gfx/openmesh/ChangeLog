@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/openmesh
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.25 2012/09/23 08:26:50 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.26 2013/01/11 20:16:58 jsbronder Exp $
+
+  11 Jan 2013; Justin Bronder <jsbronder@gentoo.org> openmesh-2.0_rc5.ebuild,
+  openmesh-2.1.ebuild, openmesh-2.2.ebuild:
+  Fix license for >=2.0_rc5. #450304
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> openmesh-2.2.ebuild:
   x86 stable wrt bug #430546

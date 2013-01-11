@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/munge-0.5.10-r1.ebuild,v 1.2 2012/05/24 05:04:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/munge-0.5.10-r1.ebuild,v 1.3 2013/01/11 20:05:08 jsbronder Exp $
 
 EAPI=4
 inherit user
@@ -40,6 +40,12 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+
+	# 450830
+	if [ -d "${D}"/var/run ]; then
+		rm -rf "${D}"/var/run || die
+	fi
+
 	diropts -o munge -g munge -m700
 	dodir /etc/munge || die
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/munge
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/ChangeLog,v 1.12 2012/05/24 05:04:28 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/ChangeLog,v 1.13 2013/01/11 20:05:08 jsbronder Exp $
+
+  11 Jan 2013; Justin Bronder <jsbronder@gentoo.org> munge-0.5.10-r1.ebuild:
+  Remove /var/run from install image. #450830.
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> munge-0.5.10-r1.ebuild:
   Inherit user for enewuser/etc... rather than eutils.

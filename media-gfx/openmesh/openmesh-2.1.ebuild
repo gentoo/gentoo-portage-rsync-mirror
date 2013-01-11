@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-2.1.ebuild,v 1.1 2012/02/20 22:30:03 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-2.1.ebuild,v 1.2 2013/01/11 20:16:58 jsbronder Exp $
 
 EAPI="3"
 inherit eutils cmake-utils
@@ -13,8 +13,7 @@ DESCRIPTION="A generic and efficient data structure for representing and manipul
 HOMEPAGE="http://www.openmesh.org/"
 SRC_URI="http://openmesh.org/fileadmin/${PN}-files/${MY_PV/-RC/RC}/${MY_PN}-${MY_PV}.tar.bz2"
 
-# See COPYING.EXCEPTIONS
-LICENSE="LGPL-3 as-is"
+LICENSE="LGPL-3-with-linking-exception"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="qt4 static-libs"
