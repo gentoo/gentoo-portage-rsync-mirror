@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.67 2013/01/08 21:20:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.68 2013/01/11 19:28:17 mgorny Exp $
+
+  11 Jan 2013; Michał Górny <mgorny@gentoo.org> -systemd-195.ebuild,
+  systemd-196.ebuild, systemd-9999.ebuild:
+  Bump the sys-apps/dbus dependency, per bug #451402. Drop old.
 
   08 Jan 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
   Remove unnecessary enewuser/enewgroup -- spotted by WilliamH.

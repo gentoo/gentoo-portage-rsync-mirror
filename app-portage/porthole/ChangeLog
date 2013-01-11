@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/porthole
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.54 2012/03/04 04:12:36 dolsen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.55 2013/01/11 19:21:12 zerochaos Exp $
+
+  11 Jan 2013; Rick Farina <zerochaos@gentoo.org> porthole-0.6.1-r1.ebuild,
+  porthole-0.6.1-r2.ebuild, porthole-0.6.1-r3.ebuild:
+  adding ~arm keyword
 
 *porthole-0.6.1-r3 (04 Mar 2012)
 

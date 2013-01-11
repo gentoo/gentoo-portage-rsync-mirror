@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/gfceux
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/ChangeLog,v 1.4 2011/04/06 20:02:40 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/ChangeLog,v 1.5 2013/01/11 19:04:23 hasufell Exp $
+
+*gfceux-2.1.1-r1 (11 Jan 2013)
+
+  11 Jan 2013; Julian Ospald <hasufell@gentoo.org> +gfceux-2.1.1-r1.ebuild:
+  migrate to distutils-r1, respect games variables
 
   06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gfceux-2.1.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AnyEvent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/ChangeLog,v 1.109 2013/01/07 20:16:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/ChangeLog,v 1.110 2013/01/11 19:06:48 blueness Exp $
+
+  11 Jan 2013; Anthony G. Basile <blueness@gentoo.org> AnyEvent-7.40.0.ebuild:
+  stable ppc ppc64, bug #415199, thanks vincent
 
   07 Jan 2013; Agostino Sarubbo <ago@gentoo.org> AnyEvent-7.40.0.ebuild:
   Stable for amd64, wrt bug #415199
