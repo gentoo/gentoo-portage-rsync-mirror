@@ -1,17 +1,17 @@
-From 2be577b2bbffeccec254d146f78e8a915c8bb989 Mon Sep 17 00:00:00 2001
+From 42ac774a89dd11d5056b806845abb95508469173 Mon Sep 17 00:00:00 2001
 From: Mike Frysinger <vapier@gentoo.org>
 Date: Thu, 9 Oct 2008 15:51:09 -0400
 Subject: [PATCH 1/2] add uClibc guess support
 
 ---
- config.guess |   99 +++++++++++++++++++++++++++++++++------------------------
- 1 files changed, 57 insertions(+), 42 deletions(-)
+ config.guess | 99 ++++++++++++++++++++++++++++++++++--------------------------
+ 1 file changed, 57 insertions(+), 42 deletions(-)
 
 diff --git a/config.guess b/config.guess
-index d622a44..a3b0d66 100755
+index 0aee604..8905e54 100755
 --- a/config.guess
 +++ b/config.guess
-@@ -138,6 +138,29 @@ UNAME_RELEASE=`(uname -r) 2>/dev/null` || UNAME_RELEASE=unknown
+@@ -136,6 +136,29 @@ UNAME_RELEASE=`(uname -r) 2>/dev/null` || UNAME_RELEASE=unknown
  UNAME_SYSTEM=`(uname -s) 2>/dev/null`  || UNAME_SYSTEM=unknown
  UNAME_VERSION=`(uname -v) 2>/dev/null` || UNAME_VERSION=unknown
  
@@ -41,7 +41,7 @@ index d622a44..a3b0d66 100755
  # Note: order is significant - the case branches are not exclusive.
  
  case "${UNAME_MACHINE}:${UNAME_SYSTEM}:${UNAME_RELEASE}:${UNAME_VERSION}" in
-@@ -852,21 +875,21 @@ EOF
+@@ -857,21 +880,21 @@ EOF
  	exit ;;
      *:GNU:*:*)
  	# the GNU system
@@ -67,7 +67,7 @@ index d622a44..a3b0d66 100755
  	exit ;;
      alpha:Linux:*:*)
  	case `sed -n '/^cpu model/s/^.*: \(.*\)/\1/p' < /proc/cpuinfo` in
-@@ -879,59 +902,51 @@ EOF
+@@ -884,59 +907,51 @@ EOF
  	  EV68*) UNAME_MACHINE=alphaev68 ;;
  	esac
  	objdump --private-headers /bin/sh | grep -q ld.so.1
@@ -141,7 +141,7 @@ index d622a44..a3b0d66 100755
  	exit ;;
      mips:Linux:*:* | mips64:Linux:*:*)
  	eval $set_cc_for_build
-@@ -950,54 +965,54 @@ EOF
+@@ -955,54 +970,54 @@ EOF
  	#endif
  EOF
  	eval `$CC_FOR_BUILD -E $dummy.c 2>/dev/null | grep '^CPU'`
@@ -213,5 +213,5 @@ index d622a44..a3b0d66 100755
      i*86:DYNIX/ptx:4*:*)
  	# ptx 4.0 does uname -s correctly, with DYNIX/ptx in there.
 -- 
-1.7.8.4
+1.8.0.2
 

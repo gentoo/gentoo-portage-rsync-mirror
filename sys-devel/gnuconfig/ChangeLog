@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/gnuconfig
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.67 2012/10/11 16:08:45 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.69 2013/01/11 16:59:14 vapier Exp $
+
+*gnuconfig-20130111 (11 Jan 2013)
+
+  11 Jan 2013; Mike Frysinger <vapier@gentoo.org> +gnuconfig-20130111.ebuild,
+  files/99999999/0001-add-uClibc-guess-support.patch,
+  files/99999999/0002-add-ps2-targets-to-config.sub.patch:
+  Version bump.
+
+  11 Jan 2013; Mike Frysinger <vapier@gentoo.org> gnuconfig-20121010.ebuild:
+  Mark stable for all.
 
 *gnuconfig-20121010 (11 Oct 2012)
 

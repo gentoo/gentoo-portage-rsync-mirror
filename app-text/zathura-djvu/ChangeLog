@@ -1,6 +1,14 @@
 # ChangeLog for app-text/zathura-djvu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/ChangeLog,v 1.14 2013/01/11 10:51:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-djvu/ChangeLog,v 1.16 2013/01/11 16:39:16 ssuominen Exp $
+
+  11 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  zathura-djvu-0.2.1.ebuild:
+  Keyword ~arm wrt #368757 (tested with cortex-a8, hardfloat)
+
+  11 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -zathura-djvu-0.2.0.ebuild:
+  old
 
   11 Jan 2013; Agostino Sarubbo <ago@gentoo.org> zathura-djvu-0.2.1.ebuild:
   Stable for x86, wrt bug #450750

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zathura-meta
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-meta/ChangeLog,v 1.4 2012/10/07 09:58:00 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-meta/ChangeLog,v 1.5 2013/01/11 16:39:36 ssuominen Exp $
+
+  11 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> zathura-meta-0.ebuild:
+  Keyword ~arm wrt #368757 (tested with cortex-a8, hardfloat)
 
   07 Oct 2012; Ulrich Müller <ulm@gentoo.org> zathura-meta-0.ebuild:
   Update LICENSE to "metapackage" non-license.

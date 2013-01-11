@@ -1,6 +1,14 @@
 # ChangeLog for games-board/pychess
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.18 2012/08/07 09:54:44 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.20 2013/01/11 16:46:48 hasufell Exp $
+
+  11 Jan 2013; Julian Ospald <hasufell@gentoo.org> pychess-0.10.1-r1.ebuild:
+  call distutils-r1_src_compile explicitly
+
+*pychess-0.10.1-r1 (11 Jan 2013)
+
+  11 Jan 2013; Julian Ospald <hasufell@gentoo.org> +pychess-0.10.1-r1.ebuild:
+  migrate to distutils-r1
 
   07 Aug 2012; Tim Harder <radhermit@gentoo.org> -pychess-0.10.ebuild:
   Remove old.

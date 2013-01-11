@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.2.1.ebuild,v 1.8 2013/01/11 16:31:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.2.1.ebuild,v 1.9 2013/01/11 16:37:35 ssuominen Exp $
 
 EAPI=5
 inherit eutils fdo-mime multilib toolchain-funcs virtualx
@@ -11,7 +11,7 @@ SRC_URI="http://pwmt.org/projects/${PN}/download/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
 IUSE="+doc sqlite test"
 
 RDEPEND=">=dev-libs/girara-0.1.4:2

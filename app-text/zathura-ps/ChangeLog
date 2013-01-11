@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zathura-ps
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/ChangeLog,v 1.9 2012/09/21 02:12:49 heroxbd Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/ChangeLog,v 1.10 2013/01/11 16:38:01 ssuominen Exp $
+
+  11 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> zathura-ps-0.2.0.ebuild:
+  Keyword ~arm wrt #368757 (tested with cortex-a8, hardfloat)
 
   21 Sep 2012; Benda Xu <heroxbd@gentoo.org> zathura-ps-0.2.0.ebuild:
   trivial modification for prefix support and keyword ~amd64-linux ~x86-linux
