@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/cvs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.7 2012/06/09 07:10:57 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.8 2013/01/11 13:47:04 slyfox Exp $
+
+*cvs-1.12.13-r2 (11 Jan 2013)
+*cvs-1.12.13.1-r1 (11 Jan 2013)
+*cvs-1.12.12-r10 (11 Jan 2013)
+
+  11 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org> +cvs-1.12.12-r10.ebuild,
+  +cvs-1.12.13-r2.ebuild, +cvs-1.12.13.1-r1.ebuild,
+  +files/cvs-1.12.12-fix-massive-leak.patch:
+  Fixed memory leak easily triggered by cvsps on large repos (like gentoo-x86).
 
   09 Jun 2012; Mike Frysinger <vapier@gentoo.org>
   +files/cvs-1.12.12-mktime-x32.patch, cvs-1.12.12-r6.ebuild,
@@ -607,4 +616,3 @@
 
   16 Mar 2002; Bruce A. Locke <blocke@shivan.org> cvs-1.11.1_p1.ebuild : Update
   to cvs 1.11.1p1 with Redhat's external zlib linking patch
-

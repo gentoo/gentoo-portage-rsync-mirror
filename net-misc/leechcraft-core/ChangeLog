@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/leechcraft-core
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/ChangeLog,v 1.33 2012/12/25 16:43:11 maksbotan Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/ChangeLog,v 1.34 2013/01/11 13:48:37 maksbotan Exp $
+
+  11 Jan 2013; Maxim Koltsov <maksbotan@gentoo.org> leechcraft-core-9999.ebuild:
+  Add qt-declarative dependency to 9999, thanks to 0xd34df00d
 
 *leechcraft-core-0.5.90 (25 Dec 2012)
 
