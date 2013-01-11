@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/chunky_png
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chunky_png/ChangeLog,v 1.5 2012/08/14 18:31:33 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chunky_png/ChangeLog,v 1.6 2013/01/11 07:17:22 graaff Exp $
+
+*chunky_png-1.2.7 (11 Jan 2013)
+
+  11 Jan 2013; Hans de Graaff <graaff@gentoo.org> +chunky_png-1.2.7.ebuild:
+  Version bump.
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata.xml so that it's the same as most other packages.

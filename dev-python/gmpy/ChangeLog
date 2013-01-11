@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gmpy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.30 2012/08/17 07:38:12 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.31 2013/01/11 07:04:13 patrick Exp $
+
+*gmpy-1.16 (11 Jan 2013)
+
+  11 Jan 2013; Patrick Lauer <patrick@gentoo.org> +gmpy-1.16.ebuild:
+  Bump for #451232
 
 *gmpy-1.15 (17 Aug 2012)
 
