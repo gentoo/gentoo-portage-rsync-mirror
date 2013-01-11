@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/wxdirect
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxdirect/ChangeLog,v 1.5 2012/12/27 02:55:18 gienah Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxdirect/ChangeLog,v 1.6 2013/01/11 09:41:26 gienah Exp $
+
+  11 Jan 2013; Mark Wright <gienah@gentoo.org>
+  files/wxdirect-0.13.1.2-ghc-7.6.patch:
+  Thanks to peanuts for reporting, patch wxdirect-0.13.1.2 for ghc 7.4.2
 
 *wxdirect-0.13.1.2 (27 Dec 2012)
 *wxdirect-0.90.0.1 (27 Dec 2012)

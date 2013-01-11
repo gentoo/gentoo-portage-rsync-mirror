@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.181 2013/01/06 10:25:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.182 2013/01/11 09:59:31 mgorny Exp $
+
+*setuptools-9999 (11 Jan 2013)
+
+  11 Jan 2013; Michał Górny <mgorny@gentoo.org> +setuptools-9999.ebuild:
+  Add a live ebuild.
 
   06 Jan 2013; Markus Meier <maekke@gentoo.org> setuptools-0.6.33.ebuild:
   arm stable, bug #449426
