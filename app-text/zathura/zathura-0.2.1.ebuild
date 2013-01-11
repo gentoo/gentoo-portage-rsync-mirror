@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.2.1.ebuild,v 1.7 2013/01/11 10:51:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.2.1.ebuild,v 1.8 2013/01/11 16:31:04 ssuominen Exp $
 
 EAPI=5
-inherit eutils fdo-mime multilib toolchain-funcs
+inherit eutils fdo-mime multilib toolchain-funcs virtualx
 
 DESCRIPTION="A highly customizable and functional document viewer"
 HOMEPAGE="http://pwmt.org/projects/zathura/"
@@ -12,7 +12,7 @@ SRC_URI="http://pwmt.org/projects/${PN}/download/${P}.tar.gz"
 LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
-IUSE="+doc sqlite"
+IUSE="+doc sqlite test"
 
 RDEPEND=">=dev-libs/girara-0.1.4:2
 	>=dev-libs/glib-2
@@ -21,7 +21,8 @@ RDEPEND=">=dev-libs/girara-0.1.4:2
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
-	doc? ( dev-python/docutils )"
+	doc? ( dev-python/docutils )
+	test? ( dev-libs/check )"
 
 pkg_setup() {
 	myzathuraconf=(
@@ -45,6 +46,10 @@ src_prepare() {
 
 src_compile() {
 	emake "${myzathuraconf[@]}"
+}
+
+src_test() {
+	Xemake test
 }
 
 src_install() {

@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install prepare
+DEFINED_PHASES=compile install postinst prepare
 DEPEND=sys-fs/fuse dev-util/scons virtual/pkgconfig
 DESCRIPTION=exFAT filesystem FUSE module
 EAPI=4
@@ -9,4 +9,4 @@ RDEPEND=sys-fs/fuse
 SLOT=0
 SRC_URI=http://exfat.googlecode.com/files/fuse-exfat-0.9.8.tar.gz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	4f764d2b1e34e4ef12b9b0d6e680c0ee	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=f6ad57ff2f1ae0c564ae6550137de184
+_md5_=8c0116f20f64c371e9b7706bdd3433be

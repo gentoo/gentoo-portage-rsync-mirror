@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.62.ebuild,v 1.1 2013/01/02 21:18:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.62-r1.ebuild,v 1.1 2013/01/11 16:10:08 alonbl Exp $
 
 EAPI=5
 inherit eutils systemd
@@ -29,7 +29,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	# Install 99-laptop-mode.rules to rules.d directory in /usr/lib instead of /etc
-	sed -i -e '/udev/s:/etc:/usr/lib:' install.sh || die
+	sed -i -e '/udev/s:/etc:/lib:' install.sh || die
 
 	# This should avoid conflict with pm-powersave wrt #327443 and #396703
 	cat <<-EOF > "${T}"/${PN}

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/fuse-exfat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/ChangeLog,v 1.8 2013/01/09 19:23:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/ChangeLog,v 1.9 2013/01/11 16:15:59 ssuominen Exp $
+
+  11 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  fuse-exfat-0.9.8-r1.ebuild:
+  pkg_postinst() note for installing also exfat-tools.
 
   09 Jan 2013; Mike Frysinger <vapier@gentoo.org>
   +files/fuse-exfat-0.9.8-build-vars.patch, fuse-exfat-0.9.8-r1.ebuild:
