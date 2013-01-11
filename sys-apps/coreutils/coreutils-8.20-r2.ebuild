@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.20-r2.ebuild,v 1.1 2013/01/11 06:21:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.20-r2.ebuild,v 1.2 2013/01/11 07:31:33 polynomial-c Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu-alpha/coreutils/${P}.tar.xz
 	mirror://gnu/${PN}/${P}.tar.xz
 	mirror://gentoo/${P}.tar.xz
 	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.xz
-	http://dev.gentoo.org/~ryao/dist/${P}-patches-${PATCH_VER}.tar.xz"
+	http://dev.gentoo.org/~vapier/dist/${P}-patches-${PATCH_VER}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"

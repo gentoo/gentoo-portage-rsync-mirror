@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/ChangeLog,v 1.12 2012/06/28 06:46:52 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/ChangeLog,v 1.13 2013/01/11 07:32:32 patrick Exp $
+
+*pp-1.6.3 (11 Jan 2013)
+
+  11 Jan 2013; Patrick Lauer <patrick@gentoo.org> +pp-1.6.3.ebuild:
+  Bump for #451224
 
 *pp-1.6.2 (28 Jun 2012)
 

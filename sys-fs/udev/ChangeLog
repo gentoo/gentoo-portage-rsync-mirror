@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.753 2013/01/09 19:39:55 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.754 2013/01/11 07:35:43 williamh Exp $
+
+*udev-197-r1 (11 Jan 2013)
+
+  11 Jan 2013; William Hubbs <williamh@gentoo.org> +udev-197-r1.ebuild,
+  udev-9999.ebuild:
+  use systemd eclass for bug #451152, thanks to Mike Gilbert for the patch.
 
   09 Jan 2013; William Hubbs <williamh@gentoo.org> udev-197.ebuild,
   udev-9999.ebuild:
