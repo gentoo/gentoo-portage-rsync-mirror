@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/girara
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/ChangeLog,v 1.16 2012/09/21 02:03:05 heroxbd Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/ChangeLog,v 1.18 2013/01/11 10:51:29 ago Exp $
+
+  11 Jan 2013; Agostino Sarubbo <ago@gentoo.org> girara-0.1.4.ebuild:
+  Stable for x86, wrt bug #450750
+
+  11 Jan 2013; Agostino Sarubbo <ago@gentoo.org> girara-0.1.4.ebuild:
+  Stable for amd64, wrt bug #450750
 
   21 Sep 2012; Benda Xu <heroxbd@gentoo.org> girara-0.1.4.ebuild:
   keyword ~amd64-linux ~x86-linux
@@ -66,4 +72,3 @@
   08 Mar 2012; Samuli Suominen <ssuominen@gentoo.org>
   +girara-0.1.0-r300.ebuild:
   Initial commit wrt #405289 by Paweł Rumian
-

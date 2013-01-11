@@ -1,0 +1,14 @@
+# ChangeLog for www-apps/webdavcgi
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/webdavcgi/ChangeLog,v 1.2 2013/01/11 10:52:04 dev-zero Exp $
+
+  11 Jan 2013; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
+  Add missing upstream remote-ids.
+
+*webdavcgi-0.8.3 (11 Jan 2013)
+
+  11 Jan 2013; Tiziano Müller <dev-zero@gentoo.org>
+  +files/0.8.3-logout-var-expansion.patch, +files/postinstall-en.txt,
+  +files/postinstall-webdavwrapper-en.txt, +files/reconfig,
+  +files/reconfig-suid, +metadata.xml, +webdavcgi-0.8.3.ebuild:
+  Initial commit, required for www-apps/webdavcgi.

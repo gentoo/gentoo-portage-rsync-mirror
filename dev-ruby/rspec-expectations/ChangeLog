@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/rspec-expectations
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/ChangeLog,v 1.40 2013/01/09 13:10:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/ChangeLog,v 1.42 2013/01/11 10:35:04 ago Exp $
+
+  11 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  rspec-expectations-2.12.1.ebuild:
+  Stable for x86, wrt bug #450532
+
+  11 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  rspec-expectations-2.12.1.ebuild:
+  Stable for amd64, wrt bug #450532
 
   09 Jan 2013; Jeroen Roovers <jer@gentoo.org>
   rspec-expectations-2.12.1.ebuild:
