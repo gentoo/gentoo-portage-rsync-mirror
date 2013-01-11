@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.14 2009/03/09 17:03:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.15 2013/01/11 06:55:24 tupone Exp $
 
 inherit eutils multilib games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 x86"
 IUSE=""
 RESTRICT="strip"
-QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/${PN}/gish"
+QA_PREBUILT="${GAMES_PREFIX_OPT:1}/${PN}/gish"
 
 RDEPEND="media-libs/libsdl
 	>=media-libs/openal-1.6.372

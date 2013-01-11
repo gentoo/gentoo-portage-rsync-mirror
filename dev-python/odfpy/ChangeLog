@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/odfpy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/odfpy/ChangeLog,v 1.7 2011/12/15 02:34:59 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/odfpy/ChangeLog,v 1.8 2013/01/11 06:46:27 patrick Exp $
+
+*odfpy-0.9.5 (11 Jan 2013)
+
+  11 Jan 2013; Patrick Lauer <patrick@gentoo.org> +odfpy-0.9.5.ebuild:
+  Bump for #451238
 
   15 Dec 2011; Mike Gilbert <floppym@gentoo.org> odfpy-0.9.4.ebuild:
   Just change to tests/ once instead of pushing and popping.

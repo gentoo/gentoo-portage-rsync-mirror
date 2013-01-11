@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/gish-demo
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/ChangeLog,v 1.12 2009/03/09 17:03:52 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/ChangeLog,v 1.13 2013/01/11 06:55:24 tupone Exp $
+
+  11 Jan 2013; Tupone Alfredo <tupone@gentoo.org> gish-demo-1.0.0.ebuild:
+  Use QA_PREBUILT. Bug #450400 by Diego
 
   09 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
   gish-demo-1.0.0.ebuild:
