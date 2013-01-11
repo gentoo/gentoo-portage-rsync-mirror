@@ -1,0 +1,23 @@
+diff --git a/requests/packages/urllib3/filepost.py b/requests/packages/urllib3/filepost.py
+index 8d900bd..5febf44 100644
+--- a/requests/packages/urllib3/filepost.py
++++ b/requests/packages/urllib3/filepost.py
+@@ -7,7 +7,17 @@
+ import codecs
+ import mimetypes
+ 
+-from uuid import uuid4
++from os import getenv
++from sys import hexversion
++
++# this is needed to work around Gentoo bug #364877
++if hexversion >= 0x03030000 and getenv('SANDBOX_ON') == '1':
++    from unittest.mock import patch
++    with patch('subprocess.Popen'):
++        from uuid import uuid4
++else:
++    from uuid import uuid4
++
+ from io import BytesIO
+ 
+ from .packages import six

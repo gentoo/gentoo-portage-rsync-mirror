@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.9.0-r1.ebuild,v 1.9 2013/01/11 18:10:36 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.9.0-r2.ebuild,v 1.1 2013/01/11 18:10:36 billie Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3 BSD LGPL-2.1 MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="apcupsd audacious curl debug eve hddtemp imlib iostats lua lua-cairo lua-imlib math moc mpd nano-syntax ncurses nvidia +portmon rss thinkpad truetype vim-syntax weather-metar weather-xoap wifi X xmms2"
 
 DEPEND_COMMON="
@@ -61,7 +61,8 @@ DEPEND="
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.8.1-utf8-scroll.patch" \
 		"${FILESDIR}/${P}-ncurses.patch" \
-		"${FILESDIR}/${P}-lines-fix.patch"
+		"${FILESDIR}/${P}-lines-fix.patch" \
+		"${FILESDIR}/${P}-update-when-message-count-decreases.patch"
 }
 
 src_configure() {
