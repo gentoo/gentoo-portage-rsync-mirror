@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.166 2013/01/10 15:29:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.167 2013/01/11 08:29:22 jlec Exp $
+
+  11 Jan 2013; Justin Lecher <jlec@gentoo.org> tcl-8.6.0-r1.ebuild:
+  Subslot to PV
 
   10 Jan 2013; Justin Lecher <jlec@gentoo.org> tcl-8.6.0-r1.ebuild:
   Use minimal tarball

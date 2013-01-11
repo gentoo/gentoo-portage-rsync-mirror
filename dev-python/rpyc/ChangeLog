@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rpyc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpyc/ChangeLog,v 1.9 2012/06/02 18:28:06 grozin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpyc/ChangeLog,v 1.10 2013/01/11 08:11:57 patrick Exp $
+
+*rpyc-3.2.3 (11 Jan 2013)
+
+  11 Jan 2013; Patrick Lauer <patrick@gentoo.org> +rpyc-3.2.3.ebuild:
+  Bump for #451212
 
 *rpyc-3.2.2 (02 Jun 2012)
 
@@ -50,4 +55,3 @@
   06 Jan 2009; Andrey Grozin <grozin@gentoo.org> +metadata.xml,
   +rpyc-3.02.ebuild:
   Initial import
-

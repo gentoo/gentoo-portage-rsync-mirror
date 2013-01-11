@@ -111,7 +111,7 @@ diff -aurN NAMD_2.7b1_Source.orig/arch/Linux-x86_64.tcl NAMD_2.7b1_Source/arch/L
 +TCLDIR=/usr
  TCLINCL=-I$(TCLDIR)/include
 -TCLLIB=-L$(TCLDIR)/lib -ltcl8.3 -ldl
-+TCLLIB=-L$(TCLDIR)/gentoo-libdir -ltcl8.5 -ldl
++TCLLIB=-L$(TCLDIR)/gentoo-libdir -ltcl -ldl
  TCLFLAGS=-DNAMD_TCL
  TCL=$(TCLINCL) $(TCLFLAGS)
  
