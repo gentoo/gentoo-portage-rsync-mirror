@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/tig
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.18 2012/10/13 16:42:07 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.20 2013/01/11 11:16:44 ago Exp $
+
+  11 Jan 2013; Agostino Sarubbo <ago@gentoo.org> tig-1.1.ebuild:
+  Stable for x86, wrt bug #450958
+
+  11 Jan 2013; Agostino Sarubbo <ago@gentoo.org> tig-1.1.ebuild:
+  Stable for amd64, wrt bug #450958
 
 *tig-1.1 (13 Oct 2012)
 
@@ -187,4 +193,3 @@
   - Initial addition of tig to the build system.
     Note that we do not add the documentation as the Makefile is a bit borked in
     this regard.
-
