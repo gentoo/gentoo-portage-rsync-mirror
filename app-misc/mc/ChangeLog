@@ -1,6 +1,21 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.277 2013/01/07 22:22:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.278 2013/01/11 11:38:42 polynomial-c Exp $
+
+*mc-4.8.7-r1 (11 Jan 2013)
+
+  11 Jan 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -files/mc-4.8.1-fix-fallocate-xBSD.patch, -mc-4.8.3-r2.ebuild,
+  -files/mc-4.8.3-fix-chown-crash.patch,
+  -files/mc-4.8.3-fix-relative-symlink-creation-crash.patch,
+  -files/mc-4.8.3-missing-do_panel_cd_stub_env.c, -mc-4.8.4-r3.ebuild,
+  -files/mc-4.8.4-Ticket-2851-fixes-of-ext.d-scripts.patch,
+  -files/mc-4.8.4-Ticket-2853-fileposition-in-mcedit.patch,
+  -files/mc-4.8.4-Ticket-2856-aspell-sigsegv.patch,
+  -files/mc-4.8.4-Ticket-2858-htmlview-segfault.patch, -mc-4.8.6.ebuild,
+  +mc-4.8.7-r1.ebuild, metadata.xml:
+  Fixed handling of external programs with xdg USE flag being unset (bug
+  #449936). Removed old versions. Added myself as maintainer.
 
   07 Jan 2013; Agostino Sarubbo <ago@gentoo.org> mc-4.8.7.ebuild:
   Stable for alpha, wrt bug #436518

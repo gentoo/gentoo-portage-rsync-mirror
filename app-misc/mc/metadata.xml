@@ -10,6 +10,10 @@
     <email>slyfox@gentoo.org</email>
     <name>Sergei Trofimovich</name>
   </maintainer>
+  <maintainer>
+    <email>polynomial-c@gentoo.org</email>
+    <name>Lars Wendler</name>
+  </maintainer>
   <use>
     <flag name="edit">Compile and install the mcedit application</flag>
     <flag name="mclib">Compile and install the libmc.so shared library</flag>
