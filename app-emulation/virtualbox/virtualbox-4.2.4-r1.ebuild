@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.4-r1.ebuild,v 1.4 2012/12/18 22:40:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.4-r1.ebuild,v 1.5 2013/01/11 10:04:37 polynomial-c Exp $
 
 EAPI=4
 
@@ -50,7 +50,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 		x11-libs/libXext
 		x11-libs/libXmu
 		x11-libs/libXt
-		media-libs/libsdl[X,video]
+		media-libs/libsdl:0[X,video]
 	)
 	vnc? ( >=net-libs/libvncserver-0.9.9 )
 	java? ( || ( virtual/jre:1.7 virtual/jre:1.6 ) )"
