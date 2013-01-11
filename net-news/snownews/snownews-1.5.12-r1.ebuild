@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/snownews-1.5.12-r1.ebuild,v 1.7 2012/07/29 16:13:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/snownews-1.5.12-r1.ebuild,v 1.8 2013/01/11 02:06:25 mr_bones_ Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -15,19 +15,12 @@ KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="unicode"
 
 DEPEND=">=dev-libs/libxml2-2.5.6
-	>=sys-libs/ncurses-5.3
+	>=sys-libs/ncurses-5.3[unicode?]
 	dev-libs/openssl"
 
 RDEPEND="${DEPEND}
 	dev-perl/XML-LibXML
 	dev-perl/libwww-perl"
-
-pkg_setup() {
-	if use unicode && ! built_with_use sys-libs/ncurses unicode; then
-		eerror "sys-libs/ncurses must be build with unicode"
-		die "${PN} requires sys-libs/ncurses with USE=unicode"
-	fi
-}
 
 src_prepare() {
 	use unicode && sed -i -e "s/-lncurses/-lncursesw/" \

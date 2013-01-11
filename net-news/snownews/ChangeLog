@@ -1,6 +1,10 @@
 # ChangeLog for net-news/snownews
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.37 2012/07/29 16:13:32 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/ChangeLog,v 1.38 2013/01/11 02:06:25 mr_bones_ Exp $
+
+  11 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  snownews-1.5.12-r1.ebuild:
+  stop using built_with_use
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> snownews-1.5.10.ebuild,
   snownews-1.5.12-r1.ebuild:
@@ -230,4 +234,3 @@
   08 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> metadata.xml,
   snownews-1.2.3.ebuild:
   initial import, ebuild submited by Jan Brinkmann <lucky@the-luckyduck.de>
-
