@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/ws4py
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ChangeLog,v 1.7 2013/01/06 19:56:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ChangeLog,v 1.8 2013/01/11 15:50:38 idella4 Exp $
+
+*ws4py-0.2.4 (11 Jan 2013)
+
+  11 Jan 2013; Ian Delaney <idella4@gentoo.org>
+  +files/ws4py-0.2-cherrypy_test.patch, +ws4py-0.2.4.ebuild, ws4py-0.2.3.ebuild:
+  0.2.3.ebuild; corrections re gevent now present in portage, adjusted
+  PYTHON_DEPEND to encompass py3 and pypy, set cherrypy to minimal version in
+  DEPEND, discarded sed stmnt added cherrypy_test.patch to src_prepare acquired
+  upstream, fixes issue 72, fixes Bug #450638 by Ago, version bump 0.2.4 with
+  all these features
 
   06 Jan 2013; Michał Górny <mgorny@gentoo.org> ws4py-0.2.3.ebuild:
   Use virtual/python-unittest2.

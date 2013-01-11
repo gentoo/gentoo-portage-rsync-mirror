@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ws4py-0.2.3.ebuild,v 1.3 2013/01/11 15:50:38 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ws4py-0.2.4.ebuild,v 1.1 2013/01/11 15:50:38 idella4 Exp $
 
 # We could depend on dev-python/cherrypy when USE=server, but
 # that is an optional component ...
@@ -9,6 +9,7 @@
 EAPI="4"
 PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="*-jython"
 DISTUTILS_SRC_TEST="py.test"
 
 inherit distutils eutils

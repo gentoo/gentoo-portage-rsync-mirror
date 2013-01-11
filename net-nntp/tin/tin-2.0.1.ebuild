@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-2.0.1.ebuild,v 1.3 2012/10/30 23:02:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-2.0.1.ebuild,v 1.4 2013/01/11 15:35:00 jer Exp $
 
 EAPI=4
-inherit eutils toolchain-funcs versionator
+inherit autotools eutils toolchain-funcs versionator
 
 DESCRIPTION="A threaded NNTP and spool based UseNet newsreader"
 HOMEPAGE="http://www.tin.org/"
@@ -36,6 +36,8 @@ DEPEND="
 src_prepare() {
 	# Do not strip
 	sed -i src/Makefile.in -e '388s|-s ||g' || die "sed src/Makefile.in failed"
+	sed -i configure.in -e '/CFLAGS/s|-g||g' || die
+	eautoreconf
 }
 
 src_configure() {
@@ -53,7 +55,7 @@ src_configure() {
 
 	use etiquette || myconf="${myconf} --disable-etiquette"
 
-	tc-export CC
+	tc-export AR CC RANLIB
 
 	econf \
 		$(use_enable cancel-locks) \
