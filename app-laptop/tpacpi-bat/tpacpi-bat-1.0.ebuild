@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpacpi-bat/tpacpi-bat-1.0.ebuild,v 1.1 2012/12/20 04:58:40 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpacpi-bat/tpacpi-bat-1.0.ebuild,v 1.2 2013/01/11 22:39:50 ottxor Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ if [ "${PV}" = "9999" ]; then
 	KEYWORDS=""
 else
 	inherit vcs-snapshot
-	SRC_URI="https://github.com/teleshoes/tpacpi-bat/tarball/v${PV} -> ${P}.tar.gz"
+	SRC_URI="mirror://github/teleshoes/tpacpi-bat/tarball/v${PV} -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
 fi
 DESCRIPTION="Control battery thresholds of recent ThinkPads, which are not supported by tp_smapi"

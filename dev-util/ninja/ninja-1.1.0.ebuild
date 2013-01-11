@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.1.0.ebuild,v 1.1 2012/12/31 18:45:04 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.1.0.ebuild,v 1.2 2013/01/11 22:42:26 ottxor Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ if [ "${PV}" = "999999" ]; then
 	KEYWORDS=""
 else
 	inherit vcs-snapshot
-	SRC_URI="https://github.com/martine/ninja/tarball/v${PV} -> ${P}.tar.gz"
+	SRC_URI="mirror://github/martine/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86 ~ppc-macos"
 fi
 

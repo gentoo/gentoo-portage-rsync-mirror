@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-9999.ebuild,v 1.4 2013/01/06 03:12:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-9999.ebuild,v 1.5 2013/01/11 22:32:12 prometheanfire Exp $
 
 EAPI=5
 #test restricted becaues of bad requirements given (old webob for instance)
@@ -35,7 +35,7 @@ RDEPEND="${DEPEND}
 	dev-python/routes
 	>=dev-python/sqlalchemy-migrate-0.7
 	>=dev-python/webob-1.0.8
-	virtual/python-argparse
+	virtual/python-argparse[${PYTHON_USEDEP}]
 	sqlite? ( dev-python/sqlalchemy[sqlite] )
 	mysql? ( dev-python/sqlalchemy[mysql] )
 	postgres? ( dev-python/sqlalchemy[postgres] )

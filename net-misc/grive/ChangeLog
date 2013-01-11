@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/grive
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/ChangeLog,v 1.8 2012/11/13 02:36:08 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grive/ChangeLog,v 1.9 2013/01/11 22:36:50 ottxor Exp $
+
+  11 Jan 2013; Christoph Junghans <ottxor@gentoo.org> grive-0.2.0.ebuild:
+  updated SRC_URI
 
   13 Nov 2012; Christoph Junghans <ottxor@gentoo.org>
   +files/grive-0.2.0-check-bfd.h.patch, grive-0.2.0.ebuild:

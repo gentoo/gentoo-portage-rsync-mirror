@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/hub-1.10.4.ebuild,v 1.1 2013/01/10 04:09:49 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/hub-1.10.4.ebuild,v 1.2 2013/01/11 22:35:01 ottxor Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ ruby_add_bdepend "test? ( dev-ruby/webmock dev-util/cucumber )"
 
 DESCRIPTION="command-line wrapper for git that makes you better at GitHub"
 HOMEPAGE="http://defunkt.io/hub/"
-SRC_URI="https://github.com/defunkt/${PN}/tarball/v${PV} -> ${P}.tar.gz"
+SRC_URI="mirror://github/defunkt/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
