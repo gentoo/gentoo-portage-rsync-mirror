@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/xfsprogs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.153 2012/10/19 04:19:18 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.154 2013/01/11 05:36:15 vapier Exp $
+
+*xfsprogs-3.1.10 (11 Jan 2013)
+
+  11 Jan 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/xfsprogs-3.1.10-sharedlibs.patch, +xfsprogs-3.1.10.ebuild:
+  Version bump #450588 by Agostino Sarubbo.
 
   19 Oct 2012; Mike Frysinger <vapier@gentoo.org>
   files/xfsprogs-3.1.1-sharedlibs.patch:

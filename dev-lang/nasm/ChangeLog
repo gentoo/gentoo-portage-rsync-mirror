@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.106 2013/01/11 04:54:31 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.107 2013/01/11 05:39:58 zerochaos Exp $
+
+  11 Jan 2013; Rick Farina <zerochaos@gentoo.org> nasm-2.10.05.ebuild,
+  nasm-2.10.07.ebuild:
+  backpeddling arm keyword because even though it works fine everyone thinks
+  it's not needed and it's too late for me to test right now
 
   11 Jan 2013; Rick Farina <zerochaos@gentoo.org> nasm-2.10.05.ebuild,
   nasm-2.10.07.ebuild:
