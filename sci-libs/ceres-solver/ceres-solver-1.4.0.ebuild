@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ceres-solver/ceres-solver-1.4.0.ebuild,v 1.1 2012/11/19 22:45:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ceres-solver/ceres-solver-1.4.0.ebuild,v 1.2 2013/01/11 14:43:40 jlec Exp $
 
 EAPI=4
 
@@ -33,8 +33,9 @@ DEPEND="${RDEPEND}
 	sparse? ( virtual/pkgconfig )
 	doc? (
 		dev-python/pygments
-		virtual/latex-base
-		dev-texlive/texlive-science )"
+		dev-tex/minted
+		dev-texlive/texlive-science
+		virtual/latex-base )"
 
 src_prepare() {
 	# prefix love
