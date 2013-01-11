@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.109-r1.ebuild,v 1.3 2013/01/06 18:20:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.110.ebuild,v 1.1 2013/01/11 03:06:13 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib pam pax-utils systemd user
@@ -57,8 +57,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-XAUTHORITY-fallback.patch
-
 	sed -i -e 's|unix-group:wheel|unix-user:0|' src/polkitbackend/*-default.rules || die #401513
 
 	if has_version '>=dev-lang/spidermonkey-1.8.7'; then
