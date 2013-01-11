@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.4.0_beta3.ebuild,v 1.3 2012/12/25 15:25:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.4.0_beta3.ebuild,v 1.4 2013/01/11 13:04:03 ago Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/krusader/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="4"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="+bookmarks debug"
 
 RDEPEND="

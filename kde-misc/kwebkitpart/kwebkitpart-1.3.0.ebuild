@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/kwebkitpart-1.3.0.ebuild,v 1.5 2012/11/15 01:08:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/kwebkitpart-1.3.0.ebuild,v 1.6 2013/01/11 13:02:44 ago Exp $
 
 EAPI=4
 
@@ -12,6 +12,6 @@ HOMEPAGE="https://projects.kde.org/projects/extragear/base/kwebkitpart"
 SRC_URI="http://dev.gentoo.org/~johu/distfiles/${P}.tar.xz"
 
 LICENSE="LGPL-2"
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc x86"
 SLOT="4"
 IUSE="debug"

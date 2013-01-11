@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/polkit-kde-kcmodules/polkit-kde-kcmodules-0.98_pre20120917.ebuild,v 1.4 2012/11/16 12:56:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/polkit-kde-kcmodules/polkit-kde-kcmodules-0.98_pre20120917.ebuild,v 1.5 2013/01/11 13:09:45 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.kde.org"
 SRC_URI="http://dev.gentoo.org/~johu/distfiles/${P}.tar.xz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86"
+KEYWORDS="amd64 ~arm ppc x86"
 SLOT="4"
 IUSE="debug"
 

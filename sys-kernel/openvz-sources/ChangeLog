@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.182 2013/01/03 20:01:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.183 2013/01/11 13:31:02 pinkbyte Exp $
+
+  11 Jan 2013; Sergey Popov <pinkbyte@gentoo.org>
+  openvz-sources-2.6.18.028.099.3.ebuild,
+  openvz-sources-2.6.18.028.101.1.ebuild:
+  Drop ~ia64 keyword due to build failures. Upstream does not support it
+  anymore, bug #411161
 
   03 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Adding proxy maintainers team and Andreis Vinogradovs as proxy maintainer

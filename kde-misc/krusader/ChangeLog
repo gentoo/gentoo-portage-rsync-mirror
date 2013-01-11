@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krusader
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.110 2012/12/25 15:25:50 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.111 2013/01/11 13:04:03 ago Exp $
+
+  11 Jan 2013; Agostino Sarubbo <ago@gentoo.org> krusader-2.4.0_beta3.ebuild:
+  Drop ~ppc64
 
   25 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/krusader-2.4.0_beta1-gcc47.patch, -krusader-2.4.0_beta1-r1.ebuild,
