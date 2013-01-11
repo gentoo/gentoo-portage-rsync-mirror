@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1160 2013/01/10 15:25:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1162 2013/01/11 08:33:55 zmedico Exp $
+
+*portage-2.2.0_alpha151 (11 Jan 2013)
+
+  11 Jan 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha151.ebuild,
+  -portage-2.2.0_alpha150.ebuild:
+  2.2.0_alpha150 version bump. This includes all of the fixes in 2.1.11.40. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.11.40 (11 Jan 2013)
+
+  11 Jan 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.40.ebuild,
+  -portage-2.1.11.39.ebuild:
+  2.1.11.40 version bump. This fixes bug #451344 (spawn_nofetch portage
+  NameError, a regression in 2.1.11.39 and 2.2.0_alpha150). Bug #445274 tracks
+  all bugs fixed since portage-2.1.11.31.
 
 *portage-2.2.0_alpha150 (10 Jan 2013)
 
