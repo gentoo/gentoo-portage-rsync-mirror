@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.2.1.ebuild,v 1.4 2012/09/21 02:03:45 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/zathura-0.2.1.ebuild,v 1.5 2013/01/11 03:56:52 ssuominen Exp $
 
-EAPI=4
-inherit eutils multilib toolchain-funcs
+EAPI=5
+inherit eutils fdo-mime multilib toolchain-funcs
 
 DESCRIPTION="A highly customizable and functional document viewer"
 HOMEPAGE="http://pwmt.org/projects/zathura/"
@@ -50,4 +50,12 @@ src_compile() {
 src_install() {
 	emake "${myzathuraconf[@]}" install
 	dodoc AUTHORS
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
 }
