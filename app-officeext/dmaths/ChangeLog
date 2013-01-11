@@ -1,6 +1,10 @@
 # ChangeLog for app-officeext/dmaths
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/dmaths/ChangeLog,v 1.4 2012/10/31 21:02:29 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/dmaths/ChangeLog,v 1.5 2013/01/11 12:29:39 scarabeus Exp $
+
+  11 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> -dmaths-3.4.2.2.ebuild,
+  dmaths-3.4.9.0.ebuild:
+  Stabilise on amd64 and x86. Drop older.
 
 *dmaths-3.4.9.0 (31 Oct 2012)
 

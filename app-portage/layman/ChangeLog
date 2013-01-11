@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.166 2012/12/16 19:15:47 dolsen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.167 2013/01/11 12:02:18 ago Exp $
+
+  11 Jan 2013; Agostino Sarubbo <ago@gentoo.org> layman-2.0.0.ebuild:
+  Stable for amd64, wrt bug #451200
 
 *layman-2.0.0 (16 Dec 2012)
 
@@ -721,4 +724,3 @@
 
   12 Mar 2006; <wrobel@gentoo.org> +metadata.xml, +layman-0.9.ebuild:
   Added layman-0.9 to the tree
-

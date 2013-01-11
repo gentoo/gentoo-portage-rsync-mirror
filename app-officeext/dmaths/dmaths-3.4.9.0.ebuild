@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/dmaths/dmaths-3.4.9.0.ebuild,v 1.1 2012/10/31 21:02:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/dmaths/dmaths-3.4.9.0.ebuild,v 1.2 2013/01/11 12:29:39 scarabeus Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://extensions.libreoffice.org/extension-center/${PN}/releases/${PV}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="virtual/ooo"
