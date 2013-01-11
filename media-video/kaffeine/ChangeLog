@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kaffeine
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.124 2012/07/12 12:26:47 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.125 2013/01/11 21:15:00 dilfridge Exp $
+
+  11 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> kaffeine-1.2.2.ebuild:
+  Drop ppc64, unfulfilled dependencies
 
   12 Jul 2012; Michael Palimaka <kensington@gentoo.org> metadata.xml:
   Cleanup metadata.

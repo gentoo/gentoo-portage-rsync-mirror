@@ -1,6 +1,13 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.427 2013/01/10 10:14:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.428 2013/01/11 21:24:53 scarabeus Exp $
+
+*libreoffice-4.0.0.1 (11 Jan 2013)
+
+  11 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libreoffice-4.0.0.1.ebuild,
+  libreoffice-4.0.9999.ebuild, libreoffice-9999-r2.ebuild:
+  Bump to 4.0rc1 for testing, unmasked as already a lot of regression testing
+  was done.
 
   10 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop unused desc.

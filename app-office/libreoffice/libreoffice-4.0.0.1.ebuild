@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.148 2013/01/11 21:24:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.0.1.ebuild,v 1.1 2013/01/11 21:24:53 scarabeus Exp $
 
 EAPI=5
 
@@ -35,15 +35,16 @@ HOMEPAGE="http://www.libreoffice.org"
 SRC_URI="branding? ( http://dev.gentoo.org/~dilfridge/distfiles/${BRANDING} )"
 [[ -n ${PATCHSET} ]] && SRC_URI+=" http://dev.gentooexperimental.org/~scarabeus/${PATCHSET}"
 
-# Split modules following git/tarballs
-# Core MUST be first!
 # Help is used for the image generator
+# We can also build translations and others if needed.
+# Core must be first
 MODULES="core help"
 # Only release has the tarballs
 if [[ ${PV} != *9999* ]]; then
 	for i in ${DEV_URI}; do
 		for mod in ${MODULES}; do
 			if [[ ${mod} == core ]]; then
+				# core is now packed without it in the name, git reponame stay
 				SRC_URI+=" ${i}/${P}.tar.xz"
 			else
 				SRC_URI+=" ${i}/${PN}-${mod}-${PV}.tar.xz"
@@ -90,7 +91,7 @@ unset lo_xt
 
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
-[[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+[[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
@@ -414,6 +415,9 @@ src_configure() {
 	# --disable-gnome-vfs: old gnome virtual fs support
 	# --disable-kdeab: kde3 adressbook
 	# --disable-kde: kde3 support
+	# --disable-mozilla: mozilla internal is for contact integration, never
+	#   worked on linux
+	# --disable-pch: precompiled headers cause build crashes
 	# --disable-rpath: relative runtime path is not desired
 	# --disable-systray: quickstarter does not actually work at all so do not
 	#   promote it
@@ -448,7 +452,9 @@ src_configure() {
 		--disable-ext-report-builder \
 		--disable-kdeab \
 		--disable-kde \
+		--disable-mozilla \
 		--disable-online-update \
+		--disable-pch \
 		--disable-rpath \
 		--disable-systray \
 		--disable-zenity \
@@ -469,6 +475,7 @@ src_configure() {
 		--without-fonts \
 		--without-myspell-dicts \
 		--without-stlport \
+		--without-system-mozilla \
 		--without-help \
 		--with-helppack-integration \
 		--without-sun-templates \

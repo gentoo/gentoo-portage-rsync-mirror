@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.9999.ebuild,v 1.9 2013/01/01 10:56:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.9999.ebuild,v 1.10 2013/01/11 21:24:53 scarabeus Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ QT_MINIMAL="4.7.4"
 KDE_SCM="git"
 CMAKE_REQUIRED="never"
 
-PYTHON_COMPAT=( python3_3 )
+PYTHON_COMPAT=( python2_7 python3_3 )
 PYTHON_REQ_USE="threads,xml"
 
 # experimental ; release ; old
@@ -35,15 +35,20 @@ HOMEPAGE="http://www.libreoffice.org"
 SRC_URI="branding? ( http://dev.gentoo.org/~dilfridge/distfiles/${BRANDING} )"
 [[ -n ${PATCHSET} ]] && SRC_URI+=" http://dev.gentooexperimental.org/~scarabeus/${PATCHSET}"
 
-# Split modules following git/tarballs
-# Core MUST be first!
 # Help is used for the image generator
+# We can also build translations and others if needed.
+# Core must be first
 MODULES="core help"
 # Only release has the tarballs
 if [[ ${PV} != *9999* ]]; then
 	for i in ${DEV_URI}; do
 		for mod in ${MODULES}; do
-			SRC_URI+=" ${i}/${PN}-${mod}-${PV}.tar.xz"
+			if [[ ${mod} == core ]]; then
+				# core is now packed without it in the name, git reponame stay
+				SRC_URI+=" ${i}/${P}.tar.xz"
+			else
+				SRC_URI+=" ${i}/${PN}-${mod}-${PV}.tar.xz"
+			fi
 		done
 		unset mod
 	done
@@ -234,8 +239,6 @@ REQUIRED_USE="
 	nsplugin? ( gtk )
 "
 
-S="${WORKDIR}/${PN}-core-${PV}"
-
 CHECKREQS_MEMORY="512M"
 CHECKREQS_DISK_BUILD="6G"
 
@@ -276,21 +279,13 @@ src_unpack() {
 	local mod mod2 dest tmplfile tmplname mypv
 
 	[[ -n ${PATCHSET} ]] && unpack ${PATCHSET}
-	if use branding; then
-		unpack "${BRANDING}"
-	fi
+	use branding && unpack "${BRANDING}"
 
 	if [[ ${PV} != *9999* ]]; then
+		unpack "${P}.tar.xz"
 		for mod in ${MODULES}; do
+			[[ ${mod} == core ]] && continue
 			unpack "${PN}-${mod}-${PV}.tar.xz"
-			if [[ ${mod} != core ]]; then
-				mod2=${mod}
-				# mapping does not match on help
-				[[ ${mod} == help ]] && mod2="helpcontent2"
-				mkdir -p "${S}/${mod2}/" || die
-				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}/${mod2}" || die
-				rm -rf "${WORKDIR}/${PN}-${mod}-${PV}"
-			fi
 		done
 	else
 		for mod in ${MODULES}; do
@@ -405,6 +400,11 @@ src_configure() {
 		mv -v "${WORKDIR}/branding-intro.png" "${S}/icon-themes/galaxy/brand/intro.png" || die
 	fi
 
+	# System python 2.7 enablement:
+	export PYTHON="${PYTHON}"
+	export PYTHON_CFLAGS=`pkg-config --cflags ${EPYTHON}`
+	export PYTHON_LIBS=`pkg-config --libs ${EPYTHON}`
+
 	# system headers/libs/...: enforce using system packages
 	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster
 	# --enable-cairo: ensure that cairo is always required
@@ -441,6 +441,7 @@ src_configure() {
 		--enable-randr-link \
 		--enable-release-build \
 		--enable-unix-qstart-libpng \
+		--enable-hardlink-deliver \
 		--disable-ccache \
 		--disable-crashdump \
 		--disable-dependency-tracking \
