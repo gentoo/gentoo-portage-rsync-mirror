@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.30 2013/01/09 02:14:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.31 2013/01/11 00:59:49 radhermit Exp $
+
+*requests-1.1.0 (11 Jan 2013)
+
+  11 Jan 2013; Tim Harder <radhermit@gentoo.org> +requests-1.1.0.ebuild,
+  +files/requests-1.1.0-system-cacerts.patch,
+  +files/requests-1.1.0-system-libs.patch:
+  Version bump.
 
   09 Jan 2013; Tim Harder <radhermit@gentoo.org> -requests-1.0.3.ebuild,
   -files/requests-1.0.3-system-libs.patch:

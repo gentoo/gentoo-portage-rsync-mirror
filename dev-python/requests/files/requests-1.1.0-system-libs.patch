@@ -1,0 +1,21 @@
+--- requests-1.1.0/requests/compat.py
++++ requests-1.1.0/requests/compat.py
+@@ -4,7 +4,7 @@
+ pythoncompat
+ """
+ 
+-from .packages import charade as chardet
++import charade as chardet
+ 
+ import sys
+ 
+--- requests-1.1.0/setup.py
++++ requests-1.1.0/setup.py
+@@ -17,7 +17,6 @@
+ packages = [
+     'requests',
+     'requests.packages',
+-	'requests.packages.charade',
+     'requests.packages.urllib3',
+     'requests.packages.urllib3.packages',
+     'requests.packages.urllib3.packages.ssl_match_hostname'
