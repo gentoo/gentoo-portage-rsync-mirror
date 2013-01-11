@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install nofetch postinst postrm prepare setup test unpack
+DEPEND=sci-chemistry/clashlist sci-chemistry/procheck sci-libs/clashscore-db dev-python/numpy dev-python/matplotlib[tk] >=sci-chemistry/cns-1.2.1-r7[aria,openmp] dev-lang/tk >=sci-chemistry/ccpn-2.2 dev-tcltk/tix =dev-lang/python-2* =dev-lang/python-2*[tk]
+DESCRIPTION=Automated NOE assignment and NMR structure calculation
+EAPI=3
+HOMEPAGE=http://aria.pasteur.fr/
+IUSE=examples
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=cns
+RDEPEND=sci-chemistry/clashlist sci-chemistry/procheck sci-libs/clashscore-db dev-python/numpy dev-python/matplotlib[tk] >=sci-chemistry/cns-1.2.1-r7[aria,openmp] dev-lang/tk >=sci-chemistry/ccpn-2.2 dev-tcltk/tix =dev-lang/python-2* =dev-lang/python-2*[tk]
+RESTRICT=fetch
+SLOT=0
+SRC_URI=http://aria.pasteur.fr/archives/aria2.3.2_latest.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=aaef3a7715f3f4ec18a2fe8526862c3f

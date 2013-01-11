@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.93 2013/01/11 05:01:09 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.94 2013/01/11 17:24:42 zerochaos Exp $
+
+  11 Jan 2013; Rick Farina <zerochaos@gentoo.org> syslinux-4.06.ebuild,
+  syslinux-5.00.ebuild:
+  initially everything appeared to work on arm, it didn't, removing keywords
 
   11 Jan 2013; Rick Farina <zerochaos@gentoo.org> syslinux-4.06.ebuild,
   syslinux-5.00.ebuild:
