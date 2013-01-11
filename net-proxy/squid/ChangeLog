@@ -1,6 +1,15 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.372 2013/01/04 08:22:07 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.373 2013/01/11 15:25:49 eras Exp $
+
+*squid-3.2.6 (11 Jan 2013)
+*squid-3.1.23 (11 Jan 2013)
+
+  11 Jan 2013; Eray Aslan <eras@gentoo.org> +files/squid.confd-r1,
+  +files/squid.initd-logrotate-r3, +files/squid.initd-r3, +squid-3.1.23.ebuild,
+  +squid-3.2.6.ebuild:
+  Version bump. Use max_filedescriptors to determine the max number of files
+  squid can open.  Fix DEPEND - bug #383367
 
   04 Jan 2013; Eray Aslan <eras@gentoo.org> -files/squid-2-heimdal.patch,
   -files/squid-2.7.9-gentoo.patch, -files/squid-3.1.18-ecap.patch,
