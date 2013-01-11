@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.105 2013/01/02 19:05:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.106 2013/01/11 04:54:31 zerochaos Exp $
+
+  11 Jan 2013; Rick Farina <zerochaos@gentoo.org> nasm-2.10.05.ebuild,
+  nasm-2.10.07.ebuild:
+  not sure why -* is there, seems to work fine on arm, adding keyword
 
 *nasm-2.10.07 (02 Jan 2013)
 

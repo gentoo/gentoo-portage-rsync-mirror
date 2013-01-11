@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-PasswdMD5/Crypt-PasswdMD5-1.300.0.ebuild,v 1.3 2011/09/27 22:38:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-PasswdMD5/Crypt-PasswdMD5-1.300.0.ebuild,v 1.4 2013/01/11 04:59:15 zerochaos Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Provides interoperable MD5-based crypt() functions"
 
 LICENSE="${LICENSE} BEER-WARE"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 SRC_TEST="do"

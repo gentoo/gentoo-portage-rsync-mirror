@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-5.00.ebuild,v 1.1 2012/12/10 12:58:24 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-5.00.ebuild,v 1.2 2013/01/11 05:01:09 zerochaos Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/linux/utils/boot/syslinux/${PV:0:1}.xx/${P/_/-}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~arm ~x86"
 IUSE="custom-cflags"
 
 RDEPEND="sys-fs/mtools
