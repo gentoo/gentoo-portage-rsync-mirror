@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-5.5.2-r1.ebuild,v 1.2 2013/01/09 11:55:25 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-5.5.2-r1.ebuild,v 1.3 2013/01/11 09:16:28 pinkbyte Exp $
 
 EAPI=4
 
@@ -40,4 +40,6 @@ src_install() {
 	perlinfo
 	insinto "${VENDOR_LIB}"
 	doins bwInclude.pm
+
+	dodoc HISTORY INSTALL README
 }
