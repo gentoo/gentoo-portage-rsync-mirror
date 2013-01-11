@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pixz/pixz-1.0.2.ebuild,v 1.1 2013/01/09 21:30:13 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pixz/pixz-1.0.2.ebuild,v 1.2 2013/01/11 01:55:11 zerochaos Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2
 	KEYWORDS=""
 else
-	SRC_URI="https://github.com/vasi/${PN}/archive/v${PV}.zip -> ${P}.zip"
+	SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
@@ -38,5 +38,6 @@ src_compile() {
 
 src_install() {
 	dobin pixz
+	doman pixz.1
 	dodoc README TODO
 }
