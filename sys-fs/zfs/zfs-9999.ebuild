@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.39 2012/12/03 02:03:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.40 2013/01/11 06:13:59 ryao Exp $
 
 EAPI="4"
 
@@ -16,8 +16,8 @@ if [ ${PV} == "9999" ] ; then
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
-	SRC_URI="https://github.com/downloads/zfsonlinux/${PN}/${PN}-${MY_PV}.tar.gz"
-	S="${WORKDIR}/${PN}-${MY_PV}"
+	SRC_URI="https://github.com/zfsonlinux/${PN}/archive/${PN}-${MY_PV}.tar.gz"
+	S="${WORKDIR}/${PN}-${PN}-${MY_PV}"
 	KEYWORDS="~amd64"
 fi
 
@@ -86,13 +86,6 @@ src_install() {
 	rm -rf "${ED}usr/share/dracut"
 	use test-suite || rm -rf "${ED}usr/libexec"
 
-	if use rootfs
-	then
-		doinitd "${FILESDIR}/zfs-shutdown"
-		exeinto /usr/share/zfs
-		doexe "${FILESDIR}/linuxrc"
-	fi
-
 	newbashcomp "${FILESDIR}/bash-completion" zfs
 
 }
@@ -102,7 +95,10 @@ pkg_postinst() {
 	[ -e "${EROOT}/etc/runlevels/boot/zfs" ] \
 		|| ewarn 'You should add zfs to the boot runlevel.'
 
-	use rootfs && ([ -e "${EROOT}/etc/runlevels/shutdown/zfs-shutdown" ] \
-		|| ewarn 'You should add zfs-shutdown to the shutdown runlevel.')
+	if [ -e "${EROOT}/etc/runlevels/shutdown/zfs-shutdown" ]
+	then
+		einfo "The zfs-shutdown script is obsolete. Removing it from runlevel."
+		rm "${EROOT}/etc/runlevels/shutdown/zfs-shutdown"
+	fi
 
 }
