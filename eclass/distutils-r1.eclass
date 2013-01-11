@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.39 2013/01/10 22:09:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.40 2013/01/11 01:06:37 floppym Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -352,9 +352,9 @@ _distutils-r1_merge_root() {
 		tar -C "${src}" -f - -c . \
 			| lockf "${lockfile}" tar -x -f - -C "${dest}"
 	else
+		local lock_fd
 		if type -P flock &>/dev/null; then
 			# On Linux, we have 'flock' which can lock fd.
-			local lock_fd
 			redirect_alloc_fd lock_fd "${lockfile}" '>>'
 			flock ${lock_fd}
 		else
@@ -362,6 +362,12 @@ _distutils-r1_merge_root() {
 		fi
 
 		cp -a -l -n "${src}"/. "${dest}"/
+
+		if [[ ${lock_fd} ]]; then
+			# Close the lock file when we are done with it.
+			# Prevents deadlock if we aren't in a subshell.
+			eval "exec ${lock_fd}>&-"
+		fi
 	fi
 	[[ ${?} == 0 ]] || die "Merging ${EPYTHON} image failed."
 

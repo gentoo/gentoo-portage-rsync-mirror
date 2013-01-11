@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/gunicorn-0.17.0.ebuild,v 1.1 2012/12/29 04:39:39 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/gunicorn-0.17.2.ebuild,v 1.1 2013/01/11 01:12:15 rafaelmartins Exp $
 
 EAPI="5"
 SUPPORT_PYTHON_ABIS="1"
