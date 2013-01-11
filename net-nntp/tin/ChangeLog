@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/tin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.42 2013/01/11 15:35:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.43 2013/01/11 18:56:48 blueness Exp $
+
+  11 Jan 2013; Anthony G. Basile <blueness@gentoo.org> tin-2.0.1.ebuild:
+  stable ppc, bug #450928, thanks vincent
 
   11 Jan 2013; Jeroen Roovers <jer@gentoo.org> tin-2.0.1.ebuild,
   -tin-2.1.0.ebuild, tin-2.1.2.ebuild:

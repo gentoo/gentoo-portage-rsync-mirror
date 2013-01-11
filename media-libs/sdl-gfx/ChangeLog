@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-gfx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.91 2013/01/11 11:16:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.92 2013/01/11 18:53:17 blueness Exp $
+
+  11 Jan 2013; Anthony G. Basile <blueness@gentoo.org> sdl-gfx-2.0.24.ebuild:
+  stable ppc ppc64, bug #450768, thanks vincent
 
   11 Jan 2013; Agostino Sarubbo <ago@gentoo.org> sdl-gfx-2.0.24.ebuild:
   Stable for x86, wrt bug #450768

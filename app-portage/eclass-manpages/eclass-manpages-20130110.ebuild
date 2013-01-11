@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/eclass-manpages-20130110.ebuild,v 1.2 2013/01/10 17:21:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/eclass-manpages-20130110.ebuild,v 1.3 2013/01/11 18:35:28 vapier Exp $
 
 EAPI="4"
 
@@ -18,7 +18,8 @@ S=${WORKDIR}
 genit() {
 	local e=${1:-${ECLASSDIR}}
 	einfo "Generating man pages from: ${e}"
-	env ECLASSDIR=${e} "${FILESDIR}"/eclass-to-manpage.sh || die
+	# Need `bash` because the .sh isn't +x on the servers #451352
+	env ECLASSDIR=${e} bash "${FILESDIR}"/eclass-to-manpage.sh || die
 }
 
 src_compile() {
