@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.3.ebuild,v 1.4 2013/01/02 11:33:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.3.ebuild,v 1.6 2013/01/11 21:44:11 bicatali Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
-inherit autotools-utils toolchain-funcs fortran-2
+inherit autotools-utils multilib toolchain-funcs fortran-2
 
 DESCRIPTION="High-level interactive language for numerical computations"
 LICENSE="GPL-3"
@@ -15,8 +15,8 @@ HOMEPAGE="http://www.octave.org/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 SLOT="0"
-IUSE="curl doc fftw +glpk gnuplot hdf5 +imagemagick opengl +qhull +qrupdate
-	readline +sparse static-libs X zlib"
+IUSE="curl doc fftw +glpk gnuplot hdf5 +imagemagick opengl postscript
+	+qhull +qrupdate readline +sparse static-libs X zlib"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 RDEPEND="
@@ -37,6 +37,10 @@ RDEPEND="
 		media-libs/fontconfig
 		>=x11-libs/fltk-1.3:1[opengl]
 		virtual/glu )
+	postscript? (
+		app-text/epstool
+		media-gfx/pstoedit
+		media-gfx/transfig )
 	qhull? ( media-libs/qhull )
 	qrupdate? ( sci-libs/qrupdate )
 	readline? ( sys-libs/readline )
@@ -78,23 +82,14 @@ src_configure() {
 	# occasional fail on install, force regeneration (bug #401189)
 	rm doc/interpreter/contributors.texi || die
 
-	local myconf="--without-magick"
-	if use imagemagick; then
-		if has_version media-gfx/graphicsmagick[cxx]; then
-			myconf="--with-magick=GraphicsMagick"
-		else
-			myconf="--with-magick=ImageMagick"
-		fi
-	fi
-
 	# unfortunate dependency on mpi from hdf5 (bug #302621)
 	use hdf5 && has_version sci-libs/hdf5[mpi] && \
 		export CXX=mpicxx CC=mpicc FC=mpif77 F77=mpif77
 
-	local myeconfargs+=(
+	local myeconfargs=(
 		--localstatedir="${EPREFIX}/var/state/octave"
-		--with-blas="$(pkg-config --libs blas)"
-		--with-lapack="$(pkg-config --libs lapack)"
+		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)"
+		--with-lapack="$($(tc-getPKG_CONFIG) --libs lapack)"
 		$(use_enable doc docs)
 		$(use_enable readline)
 		$(use_with curl)
@@ -113,8 +108,16 @@ src_configure() {
 		$(use_with sparse cxsparse)
 		$(use_with X x)
 		$(use_with zlib z)
-		${myconf}
 	)
+	if use imagemagick; then
+		if has_version media-gfx/graphicsmagick[cxx]; then
+			myeconfargs+=( "--with-magick=GraphicsMagick" )
+		else
+			myeconfargs+=( "--with-magick=ImageMagick" )
+		fi
+	else
+		myeconfargs+=( "--without-magick" )
+	fi
 	autotools-utils_src_configure
 }
 
