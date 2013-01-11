@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14361 2013/01/10 11:15:09 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14362 2013/01/11 22:12:41 slyfox Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -272,13 +272,6 @@ sci-libs/lapack-atlas
 # Masked for removal in 30 days. (07 Jan 2012)
 # Upstream says the project is dead and is being replaced
 app-emulation/qemulator
-
-# Sergei Trofimovich <slyfox@gentoo.org> (06 Dec 2012)
-# dev-haskell/time is a core library for ghc-6.12 and upper.
-# Please, unmerge it from your system and fix the breakage
-# with haskell-updater.
-# Masked for removal.
-dev-haskell/time
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (05 Dec 2012)
 # Masked for removal in 30 days.

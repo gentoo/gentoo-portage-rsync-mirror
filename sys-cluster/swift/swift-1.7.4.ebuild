@@ -1,14 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.7.4.ebuild,v 1.1 2013/01/02 20:03:40 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.7.4.ebuild,v 1.2 2013/01/11 22:29:38 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
 
 inherit distutils-r1 eutils linux-info
 
-DESCRIPTION="Swift is a highly available, distributed, eventually consistent
-object/blob store"
+DESCRIPTION="A highly available, distributed, eventually consistent object/blob store"
 HOMEPAGE="https://launchpad.net/swift"
 SRC_URI="http://launchpad.net/${PN}/folsom/${PV}/+download/${P}.tar.gz"
 
@@ -17,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="proxy account container object test +memcache"
 
-DEPEND="dev-python/setuptools
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		test? ( dev-python/nose
 				dev-python/coverage
 				dev-python/nosexcover
@@ -29,7 +28,7 @@ RDEPEND="dev-python/eventlet
 		dev-python/greenlet
 		dev-python/netifaces
 		dev-python/pastedeploy
-		dev-python/simplejson
+		dev-python/simplejson[${PYTHON_USEDEP}]
 		dev-python/pyxattr
 		dev-python/configobj
 		dev-python/webob

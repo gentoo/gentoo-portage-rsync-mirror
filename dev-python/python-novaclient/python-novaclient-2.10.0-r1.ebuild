@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-novaclient/python-novaclient-2.10.0.ebuild,v 1.2 2013/01/06 19:47:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-novaclient/python-novaclient-2.10.0-r1.ebuild,v 1.1 2013/01/11 22:14:51 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
 
 inherit distutils-r1
 
-DESCRIPTION="This is a client for the OpenStack Nova API."
+DESCRIPTION="A client for the OpenStack Nova API"
 HOMEPAGE="https://github.com/openstack/python-novaclient"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
@@ -26,10 +26,10 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				dev-python/requests
 				dev-python/simplejson
 				virtual/python-unittest2 )"
-RDEPEND="virtual/python-argparse
+RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
 		dev-python/httplib2
 		dev-python/prettytable
-		dev-python/simplejson"
+		dev-python/simplejson[${PYTHON_USEDEP}]"
 
 python_test() {
 	"${PYTHON}" setup.py nosetests || die

@@ -1,6 +1,17 @@
 # ChangeLog for app-misc/ranger
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.19 2012/08/13 19:07:06 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.22 2013/01/11 22:25:09 radhermit Exp $
+
+  11 Jan 2013; Tim Harder <radhermit@gentoo.org> ranger-9999.ebuild:
+  Drop empty SRC_URI.
+
+  11 Jan 2013; Tim Harder <radhermit@gentoo.org> ranger-9999.ebuild:
+  Migrate live ebuild to distutils-r1.
+
+*ranger-1.5.5-r1 (11 Jan 2013)
+
+  11 Jan 2013; Tim Harder <radhermit@gentoo.org> +ranger-1.5.5-r1.ebuild:
+  Revision bump. Migrate to distutils-r1.
 
 *ranger-1.5.5 (13 Aug 2012)
 
