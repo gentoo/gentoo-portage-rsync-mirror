@@ -10,4 +10,4 @@ RDEPEND=dev-lang/python bazaar? ( dev-vcs/bzr ) cvs? ( dev-vcs/cvs ) darcs? ( de
 SLOT=0
 SRC_URI=mirror://sourceforge/layman/layman-2.0.0.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	prefix	21058c21ca48453d771df15500873ede	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=472f2c9cf0ec18abae72b2bcda38e1a3
+_md5_=38becdf76511759196a919b500cdcd79

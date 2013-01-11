@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.119 2013/01/11 16:09:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.120 2013/01/11 17:34:09 jlec Exp $
+
+*gtkpod-2.1.3-r1 (11 Jan 2013)
+
+  11 Jan 2013; Justin Lecher <jlec@gentoo.org> -gtkpod-2.1.3.ebuild,
+  +gtkpod-2.1.3-r1.ebuild:
+  Reintroduce the versions for deps and fix patch against usage of
+  libmusicbrainz4, thanks ssuominen
 
 *gtkpod-2.1.3 (11 Jan 2013)
 
