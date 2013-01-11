@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0-r2.ebuild,v 1.3 2012/12/11 03:11:48 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0.2.ebuild,v 1.1 2013/01/11 19:40:02 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
-MOZ_ESR=""
+MOZ_ESR="1"
 
 # This list can be updated using scripts/get_langs.sh from the mozilla overlay
 MOZ_LANGS=(ar ast be bg bn-BD br ca cs da de el en en-GB en-US es-AR
@@ -21,7 +21,7 @@ fi
 MOZ_P="${PN}-${MOZ_PV}"
 
 # Enigmail version
-EMVER="1.4.6"
+EMVER="1.5.0"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
@@ -37,7 +37,7 @@ LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="bindist gconf +crypt +jit +ipc ldap +lightning +minimal mozdom selinux"
 
 PATCH="thunderbird-17.0-patches-01"
-PATCHFF="firefox-17.0-patches-0.3"
+PATCHFF="firefox-17.0-patches-0.4"
 
 SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}${MOZ_PV}/source/${MOZ_P}.source.tar.bz2
@@ -50,8 +50,8 @@ SRC_URI="${SRC_URI}
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 RDEPEND=">=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.13.6
-	>=dev-libs/nspr-4.9.2
+	>=dev-libs/nss-3.14.1
+	>=dev-libs/nspr-4.9.4
 	>=dev-libs/glib-2.26
 	gconf? ( >=gnome-base/gconf-1.2.1:2 )
 	>=media-libs/libpng-1.5.11[apng]

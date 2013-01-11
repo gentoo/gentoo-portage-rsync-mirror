@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/thunderbird
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.183 2012/12/11 03:11:48 axs Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.184 2013/01/11 19:40:02 anarchy Exp $
+
+*thunderbird-17.0.2 (11 Jan 2013)
+
+  11 Jan 2013; <anarchy@gentoo.org> -thunderbird-17.0-r2.ebuild,
+  +thunderbird-17.0.2.ebuild:
+  Security Bump, bug #450940
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> thunderbird-17.0-r2.ebuild:
   Put them back again as the js engine needs them

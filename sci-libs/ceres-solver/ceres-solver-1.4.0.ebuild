@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ceres-solver/ceres-solver-1.4.0.ebuild,v 1.2 2013/01/11 14:43:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ceres-solver/ceres-solver-1.4.0.ebuild,v 1.3 2013/01/11 19:37:29 bicatali Exp $
 
 EAPI=4
 
-inherit cmake-utils eutils multilib
+inherit cmake-utils eutils multilib toolchain-funcs
 
 DESCRIPTION="Nonlinear least-squares minimizer"
 HOMEPAGE="https://code.google.com/p/ceres-solver/"
@@ -60,8 +60,8 @@ src_prepare() {
 src_configure() {
 	local blibs llibs
 	if use sparse; then
-		blibs=$(pkg-config --libs blas)
-		llibs=$(pkg-config --libs lapack)
+		blibs=$($(tc-getPKG_CONFIG) --libs blas)
+		llibs=$($(tc-getPKG_CONFIG) --libs lapack)
 	fi
 	local mycmakeargs=(
 		-DBLAS_LIB="${blibs}"
