@@ -23,14 +23,9 @@
     <flag name="gnome">Adds support for GNOME's filesystem abstraction layer, <pkg>gnome-base/gnome-vfs</pkg>. This flag is not GUI-related.</flag>
     <flag name="growl">Enables growl notification support (over UDP for remote access and native on OSX)</flag>
     <flag name="httpd">Enables a web based interface for vlc.</flag>
-    <flag name="id3tag">Enables id3tag metadata reader plugin.</flag>
 	<flag name="ios-vout">Enables iPhone OS video output.</flag>
     <flag name="kate">Adds support for Ogg Kate subtitles via libkate.</flag>
     <flag name="libproxy">Enables support for proxy settings in the HTTP access module.</flag>
-    <flag name="libv4l">Enables Libv4l Video4Linux support.</flag>
-    <flag name="libv4l2">Enables Libv4l2 Video4Linux2 support (for conversion
-		from various video formats to standard ones, needed to use v4l2 devices
-		with strange formats).</flag>
 	<flag name="libtar">Uses libtar instead of the built-in tar reader for reading custom skins.</flag>
     <flag name="libtiger">Enables Ogg Kate subtitles rendering using libtiger.</flag>
 	<flag name="linsys">Enables support for Linux Linear Systems Ltd. SDI and HD-SDI input cards.</flag>
@@ -51,7 +46,6 @@
     <flag name="projectm">Enables the projectM visualization plugin.</flag>
     <flag name="pvr">Enables PVR cards access module.</flag>
     <flag name="qt4" restrict="&gt;=media-video/vlc-0.9">Builds a <pkg>x11-libs/qt</pkg> based frontend. It is now the most up-to-date graphical interface available.</flag>
-    <flag name="remoteosd">Enables RemoteOSD plugin (VNC client as video filter).</flag>
     <flag name="rtsp">Enables real audio and RTSP modules.</flag>
     <flag name="run-as-root">Allows vlc to start for root. Don't enable this unless you have a very specific (e.g. embedded) need for it!</flag>
     <flag name="schroedinger">Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).</flag>
@@ -60,7 +54,6 @@
     <flag name="shine">Enables shine fixed point mp3 encoder.</flag>
     <flag name="shout">Enables libshout output.</flag>
     <flag name="skins">Enables support for the skins2 interface.</flag>
-    <flag name="stream">Enables sout module for audio/video data streaming/transcoding/etc..</flag>
 	<flag name="switcher">Enables MPEG2 video switcher stream output module.</flag>
 	<flag name="swscale">Enables image scaling and conversion via libswscale (part of FFmpeg).</flag>
     <flag name="twolame">Enables twolame support (MPEG Audio Layer 2 encoder).</flag>
