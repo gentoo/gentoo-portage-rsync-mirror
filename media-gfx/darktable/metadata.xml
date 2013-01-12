@@ -13,6 +13,7 @@
 		<flag name="flickr">Add support for uploading photos to flickr</flag>
 		<flag name="geo">Enable geotagging support</flag>
 		<flag name="opencl">Enable opencl support</flag>
+		<flag name="pax_kernel">Triggers paxmarking of main darktable binary</flag>
 		<flag name="rawspeed">Enable the rawspeed backend</flag>
 		<flag name="slideshow">Build the opengl slideshow viewer</flag>
 	</use>

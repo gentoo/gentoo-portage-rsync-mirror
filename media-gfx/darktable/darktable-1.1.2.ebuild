@@ -1,20 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-9999.ebuild,v 1.5 2013/01/12 18:36:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.1.2.ebuild,v 1.1 2013/01/12 18:36:25 radhermit Exp $
 
 EAPI="5"
 
-inherit cmake-utils toolchain-funcs gnome2-utils fdo-mime git-2 pax-utils eutils
-
-EGIT_REPO_URI="git://github.com/darktable-org/darktable.git"
+inherit cmake-utils toolchain-funcs gnome2-utils fdo-mime pax-utils eutils
 
 DESCRIPTION="A virtual lighttable and darkroom for photographers"
 HOMEPAGE="http://www.darktable.org/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	doc? ( mirror://sourceforge/${PN}/${PN}-usermanual-1.1.1.pdf )"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3 CCPL-Attribution-3.0"
 SLOT="0"
-KEYWORDS=""
-IUSE="colord facebook flickr geo gnome-keyring gphoto2 graphicsmagick jpeg2k kde
+KEYWORDS="~amd64 ~x86"
+IUSE="colord doc facebook flickr geo gnome-keyring gphoto2 graphicsmagick jpeg2k kde
 nls opencl openmp pax_kernel +rawspeed +slideshow"
 
 RDEPEND="
@@ -93,6 +93,7 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
+	use doc && dodoc "${DISTDIR}"/${PN}-usermanual-1.1.1.pdf
 
 	if use pax_kernel && use opencl ; then
 		pax-mark Cm "${ED}"/usr/bin/${PN} || die

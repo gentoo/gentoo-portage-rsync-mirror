@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/darktable
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.32 2012/12/19 19:15:46 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.33 2013/01/12 18:36:25 radhermit Exp $
+
+*darktable-1.1.2 (12 Jan 2013)
+
+  12 Jan 2013; Tim Harder <radhermit@gentoo.org> +darktable-1.1.2.ebuild,
+  darktable-9999.ebuild, metadata.xml:
+  Version bump. Add graphicsmagick/jpeg2k use flags and update the desktop mime
+  database on install. Add pax_kernel use flag to work around hardened issue
+  (bug #448692 by prometheanfire).
 
   19 Dec 2012; Tim Harder <radhermit@gentoo.org> darktable-9999.ebuild,
   metadata.xml:

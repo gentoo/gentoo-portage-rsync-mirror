@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.20 2012/02/05 06:09:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.21 2013/01/12 18:42:26 tupone Exp $
 
 inherit eutils unpacker games
 
 MY_P="ut2004-lnx-demo${PV}.run"
 DESCRIPTION="Demo for the critically-acclaimed first-person shooter"
 HOMEPAGE="http://www.unrealtournament.com/"
-SRC_URI="http://dev.gentoo.org/~tupone/${MY_P}"
+SRC_URI="mirror://gentoo/${MY_P}"
 
 LICENSE="as-is"
 SLOT="0"
@@ -28,6 +28,7 @@ S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
+QA_PREBUILT="${dir:1}/System/*"
 
 src_unpack() {
 	unpack_makeself

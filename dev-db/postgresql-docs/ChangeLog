@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/postgresql-docs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.184 2012/12/10 06:02:52 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.185 2013/01/12 18:59:35 titanofold Exp $
+
+*postgresql-docs-9.2.2-r1 (12 Jan 2013)
+*postgresql-docs-9.1.7-r1 (12 Jan 2013)
+*postgresql-docs-9.0.11-r1 (12 Jan 2013)
+*postgresql-docs-8.4.15-r1 (12 Jan 2013)
+*postgresql-docs-8.3.22-r1 (12 Jan 2013)
+
+  12 Jan 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  +postgresql-docs-8.3.22-r1.ebuild, +postgresql-docs-8.4.15-r1.ebuild,
+  +postgresql-docs-9.0.11-r1.ebuild, +postgresql-docs-9.1.7-r1.ebuild,
+  +postgresql-docs-9.2.2-r1.ebuild:
+  Fixes bug 444214
 
 *postgresql-docs-9.1.7 (10 Dec 2012)
 *postgresql-docs-8.3.22 (10 Dec 2012)

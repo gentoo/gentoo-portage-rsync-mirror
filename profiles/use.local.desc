@@ -2507,6 +2507,7 @@ media-gfx/darktable:flickr - Add support for uploading photos to flickr
 media-gfx/darktable:geo - Enable geotagging support
 media-gfx/darktable:graphicsmagick - Use media-gfx/graphicsmagick for image importing
 media-gfx/darktable:opencl - Enable opencl support
+media-gfx/darktable:pax_kernel - Triggers paxmarking of main darktable binary
 media-gfx/darktable:rawspeed - Enable the rawspeed backend
 media-gfx/darktable:slideshow - Build the opengl slideshow viewer
 media-gfx/digikam:addressbook - Add support for kdepim
