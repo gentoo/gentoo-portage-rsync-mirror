@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/saku/saku-3.10.1.ebuild,v 1.2 2012/07/13 09:42:47 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/saku/saku-3.10.1-r1.ebuild,v 1.1 2013/01/12 04:56:54 naota Exp $
 
 EAPI=3
 
@@ -27,6 +27,7 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i -e "/^prefix/s:/usr:${EPREFIX}/usr:" file/saku.ini || die
+	sed -i -e "s:root/share/doc/saku/:root/share/doc/${PF}/:" setup.py || die
 }
 
 src_install() {
@@ -40,6 +41,5 @@ src_install() {
 
 	diropts -o saku -g saku
 	dodir /var/log/saku
-	dodir /var/run/saku
 	dodir /var/spool/saku
 }

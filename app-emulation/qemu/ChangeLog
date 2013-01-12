@@ -1,6 +1,23 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.157 2013/01/11 23:54:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.160 2013/01/12 04:56:15 cardoe Exp $
+
+  12 Jan 2013; Doug Goldstein <cardoe@gentoo.org> +files/qemu-binfmt.initd,
+  qemu-1.2.2.ebuild:
+  Install initscript that qemu-user provides for binfmts when QEMU_USER_TARGETS
+  are set.
+
+  12 Jan 2013; Doug Goldstein <cardoe@gentoo.org> qemu-1.2.2.ebuild:
+  Remove trailing whitespace.
+
+*qemu-1.2.2 (12 Jan 2013)
+
+  12 Jan 2013; Doug Goldstein <cardoe@gentoo.org> +qemu-1.2.2.ebuild:
+  Version bump. Fix libseccomp issues (fun tracking that down). Fix doc
+  installation, fix from Chris Mayo <aklhfex@gmail.com>, bug #438228. Fix mips
+  link issue due to piix4_pm_init, bug # 447196. Backport madvise() call to for
+  THP support, bug #446490. Fix ld and objcopy calls, bug #438040. Add verbose
+  log (which is useless), bug #438036.
 
   11 Jan 2013; Doug Goldstein <cardoe@gentoo.org> qemu-1.1.1-r1.ebuild,
   qemu-1.1.2-r1.ebuild, qemu-1.1.2-r2.ebuild, qemu-1.1.2-r3.ebuild,

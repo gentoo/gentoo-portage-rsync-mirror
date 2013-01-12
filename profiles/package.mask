@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14362 2013/01/11 22:12:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14363 2013/01/12 04:37:25 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Doug Goldstein <cardoe@.gentoo.org> (11 Jan 2013)
+# Affected by numerous security issues in the tree.
+# app-emulation/qemu should do everything this package
+# does, given that its the same upstream tarballs
+# just with a limited subset of options enabled.
+# Open a bug if app-emulation/qemu doesn't do
+# something this package did.
+app-emulation/qemu-user
 
 # Jeroen Roovers <jer@gentoo.org> (09 Jan 2013)
 # Testing branch, unstable upstream
