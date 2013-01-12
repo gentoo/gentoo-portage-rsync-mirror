@@ -1,0 +1,10 @@
+--- AstroMenaceSource/Object3D/GroundObject/GroundObject.cpp.orig
++++ AstroMenaceSource/Object3D/GroundObject/GroundObject.cpp
+@@ -47,6 +47,7 @@
+ 	MaxWheelRotateAngle = 20.0f;
+ 	TrackObjectNum = -1;
+ 	TrackRotationDirection = 1;
++	WheelTrackSpeed = 0.0f;
+ 
+ 	TargetHorizObjectQuantity = 0;
+ 	TargetHorizObject = 0;
