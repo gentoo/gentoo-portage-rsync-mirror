@@ -14,8 +14,10 @@ configurable VPN daemon which can be used to securely link two or more
 networks using an encrypted tunnel.</longdescription>
   <use>
     <flag name="eurephia">Apply eurephia patch</flag>
+    <flag name="down-root">Enable the down-root plugin</flag>
     <flag name="iproute2">Enabled iproute2 support instead of net-tools</flag>
     <flag name="passwordsave">Enables openvpn to save passwords</flag>
     <flag name="pkcs11">Enable PKCS#11 smartcard support</flag>
+    <flag name="plugins">Enable the OpenVPN plugin system</flag>
   </use>
 </pkgmetadata>

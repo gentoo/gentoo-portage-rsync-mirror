@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.240 2013/01/06 20:12:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.241 2013/01/12 14:28:30 djc Exp $
+
+*openvpn-2.3.0 (12 Jan 2013)
+
+  12 Jan 2013; Dirkjan Ochtman <djc@gentoo.org> +openvpn-2.3.0.ebuild,
+  metadata.xml:
+  Version bump to 2.3.0 (bug 451376) with updated build system (bug 415995).
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> openvpn-2.2.2.ebuild:
   Drop duplicate arches from KEYWORDS
