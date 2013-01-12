@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.14.ebuild,v 1.8 2013/01/01 14:07:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.14.ebuild,v 1.9 2013/01/12 21:23:16 cardoe Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ python sasl smartcard static-libs usbredir vala"
 # TODO:
 # * check if sys-freebsd/freebsd-lib (from virtual/acl) provides acl/libacl.h
 # * use external pnp.ids as soon as that means not pulling in gnome-desktop
-RDEPEND="pulseaudio? ( media-sound/pulseaudio )
+RDEPEND="pulseaudio? ( media-sound/pulseaudio[glib] )
 	gstreamer? ( !pulseaudio? (
 		media-libs/gstreamer:0.10
 		media-libs/gst-plugins-base:0.10 ) )

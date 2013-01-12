@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.14-r1.ebuild,v 1.9 2013/01/06 10:03:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.14-r1.ebuild,v 1.10 2013/01/12 21:23:16 cardoe Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ REQUIRED_USE="?? ( pulseaudio gstreamer )"
 # TODO:
 # * check if sys-freebsd/freebsd-lib (from virtual/acl) provides acl/libacl.h
 # * use external pnp.ids as soon as that means not pulling in gnome-desktop
-RDEPEND="pulseaudio? ( media-sound/pulseaudio )
+RDEPEND="pulseaudio? ( media-sound/pulseaudio[glib] )
 	gstreamer? (
 		media-libs/gstreamer:0.10
 		media-libs/gst-plugins-base:0.10 )
