@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-familyguy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-familyguy/ChangeLog,v 1.8 2010/12/12 17:30:45 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-familyguy/ChangeLog,v 1.9 2013/01/12 08:43:07 ulm Exp $
+
+  12 Jan 2013; Ulrich Müller <ulm@gentoo.org>
+  fortune-mod-familyguy-0.2.ebuild:
+  Update LICENSE, bug 450450.
 
   12 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   fortune-mod-familyguy-0.2.ebuild:

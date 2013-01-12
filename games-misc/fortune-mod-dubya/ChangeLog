@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-dubya
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-dubya/ChangeLog,v 1.17 2010/12/12 17:43:58 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-dubya/ChangeLog,v 1.18 2013/01/12 08:41:24 ulm Exp $
+
+  12 Jan 2013; Ulrich Müller <ulm@gentoo.org>
+  fortune-mod-dubya-20050118.ebuild:
+  Update LICENSE, bug 450450.
 
   12 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   fortune-mod-dubya-20050118.ebuild:
