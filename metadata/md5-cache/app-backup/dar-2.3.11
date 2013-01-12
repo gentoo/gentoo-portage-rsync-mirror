@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-libs/zlib-1.2.3 >=app-arch/bzip2-1.0.2 acl? ( static? ( sys-apps/attr[static-libs] ) !static? ( sys-apps/attr ) ) nls? ( virtual/libintl ) ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=mirror://sourceforge/dar/dar-2.3.11.tar.gz
-_eclasses_=confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	61ad55e732e494378165e7dcd4744b91	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=87f49d5bc34c05c77a2f9a19e9cd53df

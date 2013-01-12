@@ -9,5 +9,5 @@ RDEPEND=!mail-mta/courier !mail-mta/esmtp !mail-mta/exim !mail-mta/mini-qmail !m
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://qmail/qmail-1.03.tar.gz http://dev.gentoo.org/~hollow/distfiles/genqmail-20080406.tar.bz2 http://www.nrg4u.com/qmail/qmail-ldap-1.03-20060201.patch.gz mirror://gentoo/qmail-ldap-1.03-20060201-controls20060401d.patch mirror://gentoo/qmail-ldap-1.03-queue-custom-error.patch !vanilla? ( qmail-spp? ( mirror://sourceforge/qmail-spp/qmail-spp-0.42.tar.gz mirror://gentoo/qmail-ldap-1.03-spp-0.42.patch ) )
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fixheadtails	f96922acc9287f1e889a1e50a6c8986e	flag-o-matic	61ad55e732e494378165e7dcd4744b91	multilib	9aa8a023e062fca0ba79362d9d0cc488	qmail	5fc81682db4b862e5b126eae627ba70c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fixheadtails	f96922acc9287f1e889a1e50a6c8986e	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	9aa8a023e062fca0ba79362d9d0cc488	qmail	5fc81682db4b862e5b126eae627ba70c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=84abc01f971e506f0a8428b1ae7a4624

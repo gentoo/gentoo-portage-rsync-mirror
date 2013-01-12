@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-9999.ebuild,v 1.5 2012/09/09 17:15:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-9999.ebuild,v 1.6 2013/01/12 14:43:29 djc Exp $
 
 EAPI=4
 
-inherit multilib toolchain-funcs autotools flag-o-matic user git-2
+inherit multilib autotools flag-o-matic user git-2
 
 DESCRIPTION="Robust and highly flexible tunneling application compatible with many OSes"
 EGIT_REPO_URI="https://github.com/OpenVPN/${PN}.git"
@@ -13,15 +13,16 @@ HOMEPAGE="http://openvpn.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="examples iproute2 minimal pam passwordsave selinux +ssl +lzo static pkcs11 userland_BSD"
+IUSE="examples down-root iproute2 pam passwordsave pkcs11 +plugins selinux +ssl +lzo static userland_BSD"
 
-REQUIRED_USE="static? ( minimal )"
+REQUIRED_USE="static? ( !plugins !pkcs11 )
+			!plugins? ( !pam !down-root )"
 
 DEPEND="
 	kernel_linux? (
 		iproute2? ( sys-apps/iproute2[-minimal] ) !iproute2? ( sys-apps/net-tools )
 	)
-	!minimal? ( pam? ( virtual/pam ) )
+	pam? ( virtual/pam )
 	selinux? ( sec-policy/selinux-openvpn )
 	ssl? ( >=dev-libs/openssl-0.9.7 )
 	lzo? ( >=dev-libs/lzo-1.07 )
@@ -33,43 +34,24 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf=""
-
-	if use minimal ; then
-		myconf="${myconf} --disable-plugins"
-		myconf="${myconf} --disable-pkcs11"
-	else
-		myconf="$(use_enable pkcs11)"
-	fi
-
 	use static && LDFLAGS="${LDFLAGS} -Xcompiler -static"
-	econf ${myconf} \
+	econf \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		--with-plugindir="${ROOT}/usr/$(get_libdir)/$PN" \
 		$(use_enable passwordsave password-save) \
 		$(use_enable ssl) \
 		$(use_enable ssl crypto) \
 		$(use_enable lzo) \
+		$(use_enable pkcs11) \
+		$(use_enable plugins) \
 		$(use_enable iproute2) \
-		--docdir="${EPREFIX}/usr/share/doc/${PF}"
-}
-
-src_compile() {
-	emake
-
-	if ! use minimal ; then
-		cd src/plugins
-		for i in *; do
-			[[ ${i} == "README" || ${i} == "examples" || ${i} == "defer" ]] && continue
-			[[ ${i} == "auth-pam" ]] && ! use pam && continue
-			einfo "Building ${i} plugin"
-			emake -C "${i}" CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
-		done
-		cd ..
-	fi
+		$(use_enable pam plugin-auth-pam) \
+		$(use_enable down-root plugin-down-root)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-
+	default
+	find "${ED}/usr" -name '*.la' -delete
 	# install documentation
 	dodoc AUTHORS ChangeLog PORTS README README.IPv6
 
@@ -88,11 +70,6 @@ src_install() {
 		# dodoc does not supportly support directory traversal, #15193
 		insinto /usr/share/doc/${PF}/examples
 		doins -r sample contrib
-	fi
-
-	if ! use minimal ; then
-		exeinto "/usr/$(get_libdir)/${PN}"
-		doexe src/plugins/*/*.so
 	fi
 }
 
@@ -130,7 +107,7 @@ pkg_postinst() {
 		ewarn "can move your scripts to."
 	fi
 
-	if ! use minimal ; then
+	if use plugins ; then
 		einfo ""
 		einfo "plugins have been installed into /usr/$(get_libdir)/${PN}"
 	fi

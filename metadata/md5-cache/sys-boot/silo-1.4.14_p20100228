@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=sys-fs/e2fsprogs sys-apps/sparc-utils
 SLOT=0
 SRC_URI=mirror://debian/pool/main/s/silo/silo_1.4.14+git20100228.orig.tar.gz mirror://debian/pool/main/s/silo/silo_1.4.14+git20100228-1.diff.gz
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	61ad55e732e494378165e7dcd4744b91	mount-boot	02dd3bb4c5f025fef0fc3ade0f27c217	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	mount-boot	02dd3bb4c5f025fef0fc3ade0f27c217	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=298d1e782105defd529086e6943156a2
