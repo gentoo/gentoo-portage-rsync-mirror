@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0-r2.ebuild,v 1.14 2013/01/12 11:11:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0-r2.ebuild,v 1.15 2013/01/12 11:38:08 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -157,6 +157,12 @@ src_prepare() {
 
 	# disable pyc compiling
 	python_clean_py-compile_files
+
+	# FIXME: upstream should provide a way to set GST_INSPECT, bug #358755 & co.
+	# gst-inspect causes sandbox violations when a plugin needs write access to
+	# /dev/dri/card* in its init phase.
+	sed -e "s|\(gst010_inspect=\).*|\1$(type -P true)|" \
+		-i configure || die
 }
 
 src_configure() {

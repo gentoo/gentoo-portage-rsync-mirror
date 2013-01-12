@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.354 2013/01/12 11:11:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.355 2013/01/12 11:38:07 eva Exp $
+
+  12 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> totem-2.32.0-r2.ebuild,
+  totem-3.4.3.ebuild, totem-3.6.3-r1.ebuild:
+  Workaround sandbox violations due to gst-inspect, bug #358755 & co.
 
   12 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> totem-2.32.0-r2.ebuild,
   totem-3.4.3.ebuild:

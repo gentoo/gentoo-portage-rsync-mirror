@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libnice/gst-plugins-libnice-0.1.3-r100.ebuild,v 1.1 2012/12/08 00:05:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libnice/gst-plugins-libnice-0.1.3-r100.ebuild,v 1.2 2013/01/12 11:59:02 eva Exp $
 
 EAPI="5"
 
@@ -18,11 +18,13 @@ IUSE=""
 
 # ${PN} was part of net-libs/libnice before 0.1.3-r1
 RDEPEND="~net-libs/libnice-${PV}
-	>=media-libs/gstreamer-0.10.10:0.10
-	>=media-libs/gst-plugins-base-0.10.10:0.10
-	>net-libs/libnice-0.1.3"
+	media-libs/gstreamer:1.0
+	media-libs/gst-plugins-base:1.0
+	>net-libs/libnice-0.1.3
+"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 S="${WORKDIR}/${MY_P}/gst"
 

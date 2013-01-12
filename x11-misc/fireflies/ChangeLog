@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fireflies
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.27 2012/01/04 21:35:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.28 2013/01/12 11:46:27 ulm Exp $
+
+  23 Dec 2012; Ulrich Müller <ulm@gentoo.org> fireflies-2.07.ebuild,
+  fireflies-2.07-r1.ebuild:
+  Fix LICENSE, see COPYING and notices in source files, bug 446760.
 
   04 Jan 2012; Brent Baude <ranger@gentoo.org> fireflies-2.07-r1.ebuild:
   Marking fireflies-2.07-r1 ppc for bug 394021

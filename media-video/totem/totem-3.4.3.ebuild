@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.4.3.ebuild,v 1.6 2013/01/12 11:11:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.4.3.ebuild,v 1.7 2013/01/12 11:38:07 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -164,13 +164,12 @@ src_prepare() {
 	# Only needed when regenerating C sources from Vala files
 	#use vala && vala_src_prepare
 	gnome2_src_prepare
-}
 
-src_configure() {
-	# Work around sandbox violations when FEATURES=-userpriv caused by
-	# gst-inspect-0.10 (bug #358755)
-	unset DISPLAY
-	gnome2_src_configure
+	# FIXME: upstream should provide a way to set GST_INSPECT, bug #358755 & co.
+	# gst-inspect causes sandbox violations when a plugin needs write access to
+	# /dev/dri/card* in its init phase.
+	sed -e "s|\(gst010_inspect=\).*|\1$(type -P true)|" \
+		-i configure || die
 }
 
 pkg_postinst() {

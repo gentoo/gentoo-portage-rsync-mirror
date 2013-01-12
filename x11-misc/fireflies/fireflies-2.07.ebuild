@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.07.ebuild,v 1.8 2009/08/09 18:18:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.07.ebuild,v 1.9 2013/01/12 11:46:27 ulm Exp $
 
 inherit eutils multilib
 
@@ -8,7 +8,7 @@ DESCRIPTION="Fireflies screensaver: Wicked cool eye candy"
 HOMEPAGE="http://somewhere.fscked.org/proj/fireflies/"
 SRC_URI="http://somewhere.fscked.org/proj/${PN}/files/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 HPND"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""

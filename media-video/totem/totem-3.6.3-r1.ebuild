@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.6.3-r1.ebuild,v 1.7 2013/01/06 09:58:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.6.3-r1.ebuild,v 1.8 2013/01/12 11:38:07 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -88,6 +88,16 @@ DEPEND="${RDEPEND}
 "
 # docbook-xml-dtd is needed for user doc
 
+src_prepare() {
+	gnome2_src_prepare
+
+	# FIXME: upstream should provide a way to set GST_INSPECT, bug #358755 & co.
+	# gst-inspect causes sandbox violations when a plugin needs write access to
+	# /dev/dri/card* in its init phase.
+	sed -e "s|\(gst10_inspect=\).*|\1$(type -P true)|" \
+		-i configure || die
+}
+
 src_configure() {
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
 	use nsplugin && DOCS="${DOCS} browser-plugin/README.browser-plugin"
@@ -125,9 +135,6 @@ src_configure() {
 
 	G2CONF="${G2CONF} --with-plugins=${plugins}"
 
-	# Work around sandbox violations when FEATURES=-userpriv caused by
-	# gst-inspect-1.0(bug #358755)
-	unset DISPLAY
 	gnome2_src_configure
 }
 
