@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pysolfc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.6 2013/01/10 22:16:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.7 2013/01/12 15:29:50 hasufell Exp $
+
+  12 Jan 2013; Julian Ospald <hasufell@gentoo.org> pysolfc-2.0-r1.ebuild:
+  remove inherit magic and call functions explicitly
 
 *pysolfc-2.0-r1 (10 Jan 2013)
 

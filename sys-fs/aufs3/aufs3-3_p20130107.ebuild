@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20130107.ebuild,v 1.2 2013/01/09 09:57:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20130107.ebuild,v 1.3 2013/01/12 15:19:03 jlec Exp $
 
 EAPI=4
 
@@ -114,7 +114,11 @@ src_prepare() {
 	use pax_kernel && epatch "${FILESDIR}"/pax-2.patch
 
 	sed -i "s:aufs.ko usr/include/linux/aufs_type.h:aufs.ko:g" Makefile || die
-	sed -i "s:__user::g" include/uapi/linux/aufs_type.h || die
+	if [[ ${KV_MINOR} -lt 7 ]]; then
+		sed -i "s:__user::g" include/linux/aufs_type.h || die
+	else
+		sed -i "s:__user::g" include/uapi/linux/aufs_type.h || die
+	fi
 
 	cd "${WORKDIR}"/${P}/${PN/3}-util
 

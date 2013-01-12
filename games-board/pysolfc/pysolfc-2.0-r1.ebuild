@@ -1,14 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/pysolfc-2.0-r1.ebuild,v 1.1 2013/01/10 22:16:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/pysolfc-2.0-r1.ebuild,v 1.2 2013/01/12 15:29:50 hasufell Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_6 python2_7 )
 PYTHON_REQ_USE="tk"
 
-# inherit base explicitly to avoid random overrides on distutils-r1
-inherit base eutils python-r1 distutils-r1 games
+inherit eutils python-r1 distutils-r1 games
 
 MY_PN=PySolFC
 SOL_URI="mirror://sourceforge/${PN}"
@@ -30,6 +29,8 @@ RDEPEND="sound? ( dev-python/pygame )
 		dev-tcltk/tktable )"
 
 python_prepare_all() {
+	distutils-r1_python_prepare_all
+
 	sed -i \
 		-e "/pysol.desktop/d" \
 		-e "s:share/icons:share/pixmaps:" \
@@ -40,6 +41,10 @@ python_prepare_all() {
 	sed -i \
 		-e '/scripts/d' \
 		setup.py || die
+}
+
+src_prepare() {
+	distutils-r1_src_prepare
 }
 
 # Avoid running emake on shipped Makefile
@@ -68,4 +73,8 @@ python_install_all() {
 	dodoc docs/README*
 
 	prepgamesdirs
+}
+
+src_install() {
+	distutils-r1_src_install
 }

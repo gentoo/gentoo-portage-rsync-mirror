@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.43 2013/01/09 09:57:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.44 2013/01/12 15:19:03 jlec Exp $
+
+  12 Jan 2013; Justin Lecher <jlec@gentoo.org> aufs3-3_p20130107.ebuild:
+  Fix header file location for <linux-3.7, #451384
 
   09 Jan 2013; Justin Lecher <jlec@gentoo.org> aufs3-3_p20130107.ebuild:
   Fix for now location of header file, #450810
