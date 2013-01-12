@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.331 2013/01/06 09:39:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.332 2013/01/12 10:51:22 eva Exp $
+
+  12 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-games-3.6.1-r1.ebuild:
+  Drop python_pkg_setup, does not exist in python-r1 eclass, bug #451428.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gnome-games-3.6.1-r1.ebuild:
   Add ~sparc, wrt bug #449220

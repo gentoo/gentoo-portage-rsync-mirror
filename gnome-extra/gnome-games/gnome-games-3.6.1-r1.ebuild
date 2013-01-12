@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.6.1-r1.ebuild,v 1.6 2013/01/06 09:39:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.6.1-r1.ebuild,v 1.7 2013/01/12 10:51:22 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -76,7 +76,6 @@ _omitgame() {
 pkg_setup() {
 	# create the games user / group
 	games_pkg_setup
-	python_pkg_setup
 }
 
 src_prepare() {

@@ -778,7 +778,6 @@ app-office/libreoffice:binfilterdebug - Generate debug info for binfilter code (
 app-office/libreoffice:gtk3 - Enable highly experimental gtk3 frontend
 app-office/libreoffice:jemalloc - Use dev-libs/jemalloc for allocations
 app-office/libreoffice:odk - Build the Office Development Kit
-app-office/libreoffice:pdfimport - Build pdf-import extension using app-text/poppler. Note that you don't need this for pdf-export!
 app-office/libreoffice:telepathy - Enable document colaboration features using telepathy communication framework.
 app-office/libreoffice:vba - Enable support for VBA compatibility and ActiveX embedding
 app-office/libreoffice:webdav - Adds support for HTTP content adding via net-libs/neon

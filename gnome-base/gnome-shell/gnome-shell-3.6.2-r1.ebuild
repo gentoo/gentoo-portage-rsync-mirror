@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.6.2-r1.ebuild,v 1.6 2013/01/06 09:37:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.6.2-r1.ebuild,v 1.7 2013/01/12 10:46:19 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -54,7 +54,7 @@ COMMON_DEPEND="
 	media-libs/libcanberra
 	media-libs/mesa
 	media-sound/pulseaudio
-	net-libs/libsoup:2.4[introspection]
+	>=net-libs/libsoup-2.40:2.4[introspection]
 	x11-libs/libX11
 	x11-libs/gdk-pixbuf:2[introspection]
 	x11-libs/pango[introspection]

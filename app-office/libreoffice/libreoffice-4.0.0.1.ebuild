@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.0.1.ebuild,v 1.1 2013/01/11 21:24:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.0.1.ebuild,v 1.2 2013/01/12 10:52:05 scarabeus Exp $
 
 EAPI=5
 
@@ -73,8 +73,8 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="bluetooth +branding +cups dbus debug eds gnome gstreamer +gtk
-gtk3 jemalloc kde mysql nsplugin odk opengl pdfimport postgres
-telepathy test +vba +webdav"
+gtk3 jemalloc kde mysql nsplugin odk opengl postgres telepathy test +vba
++webdav"
 
 LO_EXTS="nlpsolver presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -105,6 +105,7 @@ COMMON_DEPEND="
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
+	>=app-text/poppler-0.16[xpdf-headers(+),cxx]
 	>=dev-cpp/clucene-2.3.3.4-r2
 	dev-cpp/libcmis:0.3
 	dev-db/unixODBC
@@ -162,7 +163,6 @@ COMMON_DEPEND="
 		virtual/glu
 		virtual/opengl
 	)
-	pdfimport? ( >=app-text/poppler-0.16[xpdf-headers(+),cxx] )
 	postgres? ( >=dev-db/postgresql-base-9.0[kerberos] )
 	telepathy? (
 		dev-libs/glib:2
@@ -494,7 +494,6 @@ src_configure() {
 		$(use_enable nsplugin) \
 		$(use_enable odk) \
 		$(use_enable opengl) \
-		$(use_enable pdfimport) \
 		$(use_enable postgres postgresql-sdbc) \
 		$(use_enable telepathy) \
 		$(use_enable test linkoo) \

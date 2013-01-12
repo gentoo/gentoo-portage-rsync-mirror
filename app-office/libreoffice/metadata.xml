@@ -13,7 +13,6 @@ version</longdescription>
 		<flag name="gtk3">Enable highly experimental gtk3 frontend</flag>
 		<flag name="jemalloc">Use <pkg>dev-libs/jemalloc</pkg> for allocations</flag>
 		<flag name="odk">Build the Office Development Kit</flag>
-		<flag name="pdfimport">Build pdf-import extension using <pkg>app-text/poppler</pkg>. Note that you don't need this for pdf-export!</flag>
 		<flag name="telepathy">Enable document colaboration features using telepathy communication framework.</flag>
 		<flag name="vba">Enable support for VBA compatibility and ActiveX embedding</flag>
 		<flag name="webdav">Adds support for HTTP content adding via <pkg>net-libs/neon</pkg></flag>
