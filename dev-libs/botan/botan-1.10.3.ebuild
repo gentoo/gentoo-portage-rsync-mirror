@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.10.3.ebuild,v 1.1 2012/12/15 01:03:30 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.10.3.ebuild,v 1.2 2013/01/12 19:02:41 alonbl Exp $
 
 EAPI="3"
 #PYTHON_BDEPEND="2"
@@ -16,14 +16,14 @@ SRC_URI="http://files.randombit.net/botan/${MY_P}.tbz"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~ppc-macos"
 SLOT="0"
 LICENSE="BSD"
-IUSE="bzip2 gmp ssl threads zlib"
+IUSE="bindist bzip2 gmp ssl threads zlib"
 
 S="${WORKDIR}/${MY_P}"
 
 RDEPEND="bzip2? ( >=app-arch/bzip2-1.0.5 )
 	zlib? ( >=sys-libs/zlib-1.2.3 )
 	gmp? ( >=dev-libs/gmp-4.2.2 )
-	ssl? ( >=dev-libs/openssl-0.9.8g )"
+	ssl? ( >=dev-libs/openssl-0.9.8g[bindist=] )"
 DEPEND="${RDEPEND}
 	=dev-lang/python-2*"
 
@@ -42,6 +42,10 @@ src_configure() {
 
 	if ! use threads; then
 		disable_modules="${disable_modules},pthreads"
+	fi
+
+	if use bindist; then
+		disable_modules="${disable_modules},ecdsa"
 	fi
 
 	# Enable v9 instructions for sparc64

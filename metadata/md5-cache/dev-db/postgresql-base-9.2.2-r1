@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare
+DEPEND=!!dev-db/libpq !!dev-db/postgresql !!dev-db/postgresql-client !!dev-db/postgresql-libs sys-apps/less >=app-admin/eselect-postgresql-1.0.10 virtual/libintl kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( virtual/pam ) readline? ( sys-libs/readline ) ssl? ( >=dev-libs/openssl-0.9.6-r1 ) zlib? ( sys-libs/zlib ) !!<sys-apps/sandbox-2.0 sys-devel/bison sys-devel/flex nls? ( sys-devel/gettext ) sys-devel/automake >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=PostgreSQL libraries and clients
+EAPI=4
+HOMEPAGE=http://www.postgresql.org/
+IUSE=doc kerberos ldap nls pam pg_legacytimestamp readline ssl threads zlib linguas_af linguas_cs linguas_de linguas_en linguas_es linguas_fa linguas_fr linguas_hr linguas_hu linguas_it linguas_ko linguas_nb linguas_pl linguas_pt_BR linguas_ro linguas_ru linguas_sk linguas_sl linguas_sv linguas_tr linguas_zh_CN linguas_zh_TW
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris
+LICENSE=POSTGRESQL
+PDEPEND=doc? ( ~dev-db/postgresql-docs-9.2.2 )
+RDEPEND=!!dev-db/libpq !!dev-db/postgresql !!dev-db/postgresql-client !!dev-db/postgresql-libs sys-apps/less >=app-admin/eselect-postgresql-1.0.10 virtual/libintl kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( virtual/pam ) readline? ( sys-libs/readline ) ssl? ( >=dev-libs/openssl-0.9.6-r1 ) zlib? ( sys-libs/zlib )
+RESTRICT=test
+SLOT=9.2
+SRC_URI=mirror://postgresql/source/v9.2.2/postgresql-9.2.2.tar.bz2 http://dev.gentoo.org/~titanofold/postgresql-patches-9.2beta3.tbz2
+_eclasses_=autotools	5116b10b2150724f41b564f1cc863e47	eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	multilib	9aa8a023e062fca0ba79362d9d0cc488	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=2acf40c5882ff1449140ce4792bb5cc4

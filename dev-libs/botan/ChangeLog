@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/botan
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.73 2012/12/15 18:56:47 alonbl Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.74 2013/01/12 19:02:41 alonbl Exp $
+
+  12 Jan 2013; Alon Bar-Lev <alonbl@gentoo.org> botan-1.10.3.ebuild:
+  Add bindist USE to disable ecdsa, bug#446226, thanks to Peter Stuge
 
 *botan-1.10.3 (15 Dec 2012)
 

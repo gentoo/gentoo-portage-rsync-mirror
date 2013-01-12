@@ -1,35 +1,30 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.4 2013/01/12 19:10:13 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.2.2-r1.ebuild,v 1.1 2013/01/12 19:10:13 titanofold Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
 
 WANT_AUTOMAKE="none"
-inherit autotools eutils flag-o-matic multilib pam prefix python user versionator base git-2
+inherit autotools eutils flag-o-matic multilib pam prefix python user versionator
 
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
 
-SLOT="9.3"
-
-EGIT_REPO_URI="git://git.postgresql.org/git/postgresql.git"
-
-SRC_URI="http://dev.gentoo.org/~titanofold/postgresql-initscript-2.3.tbz2
-	http://dev.gentoo.org/~titanofold/postgresql-patches-9.2beta2.tbz2"
+SLOT="$(get_version_component_range 1-2)"
 
 # Comment the following six lines when not a beta or rc.
 #MY_PV="${PV//_}"
 #MY_FILE_PV="${SLOT}$(get_version_component_range 4)"
 #S="${WORKDIR}/postgresql-${MY_FILE_PV}"
-#SRC_URI="mirror://postgresql/source/v${MY_PV}/postgresql-${MY_FILE_PV}.tar.bz2
-#		 http://dev.gentoo.org/~titanofold/postgresql-patches-${MY_FILE_PV}.tbz2
+#SRC_URI="mirror://postgresql/source/v${MY_FILE_PV}/postgresql-${MY_FILE_PV}.tar.bz2
+#		 http://dev.gentoo.org/~titanofold/postgresql-patches-${SLOT}beta3.tbz2
 #		 http://dev.gentoo.org/~titanofold/postgresql-initscript-2.3.tbz2"
 
 # Comment the following four lines when a beta or rc.
-#S="${WORKDIR}/postgresql-${PV}"
-#SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
-#		 http://dev.gentoo.org/~titanofold/postgresql-patches-${PV}.tbz2
-#		 http://dev.gentoo.org/~titanofold/postgresql-initscript-2.1.tbz2"
+S="${WORKDIR}/postgresql-${PV}"
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
+		 http://dev.gentoo.org/~titanofold/postgresql-patches-${SLOT}beta3.tbz2
+		 http://dev.gentoo.org/~titanofold/postgresql-initscript-2.3.tbz2"
 
 LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL server"
@@ -61,15 +56,10 @@ RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}[pam?,pg_legacytimestamp=,nls=]
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	xml? ( virtual/pkgconfig )"
-#PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
+PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 
 # Support /var/run or /run for the socket directory
 [[ ! -d /run ]] && RUNDIR=/var
-
-src_unpack() {
-	base_src_unpack
-	git-2_src_unpack
-}
 
 pkg_setup() {
 	enewgroup postgres 70

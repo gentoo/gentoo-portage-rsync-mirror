@@ -1,36 +1,23 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9999.ebuild,v 1.3 2013/01/12 19:08:18 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.1.7-r1.ebuild,v 1.1 2013/01/12 19:08:18 titanofold Exp $
 
 EAPI="4"
 
 WANT_AUTOMAKE="none"
 
-inherit autotools eutils flag-o-matic multilib prefix versionator base git-2
+inherit autotools eutils flag-o-matic multilib prefix versionator
 
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
 
-# Fix if needed
-SLOT="9.3"
+SLOT="$(get_version_component_range 1-2)"
+S="${WORKDIR}/postgresql-${PV}"
 
-EGIT_REPO_URI="git://git.postgresql.org/git/postgresql.git"
-SRC_URI="http://dev.gentoo.org/~titanofold/postgresql-patches-9.2beta2.tbz2"
-
-# Comment the following five lines when not a beta or rc.
-#MY_PV="${PV//_}"
-#MY_FILE_PV="${SLOT}$(get_version_component_range 4)"
-#S="${WORKDIR}/postgresql-${MY_FILE_PV}"
-#SRC_URI="mirror://postgresql/source/v${MY_PV}/postgresql-${MY_FILE_PV}.tar.bz2
-#		 http://dev.gentoo.org/~titanofold/postgresql-patches-${MY_FILE_PV}.tbz2"
-
-# Comment the following three lines when a beta or rc.
-#S="${WORKDIR}/postgresql-${PV}"
-#SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
-#		 http://dev.gentoo.org/~titanofold/postgresql-patches-${PV}.tbz2"
-
-LICENSE="POSTGRESQL"
 DESCRIPTION="PostgreSQL libraries and clients"
 HOMEPAGE="http://www.postgresql.org/"
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
+		 http://dev.gentoo.org/~titanofold/postgresql-patches-9.1-r1.tbz2"
+LICENSE="POSTGRESQL"
 
 # No tests to be done for clients and libraries
 RESTRICT="test"
@@ -56,7 +43,6 @@ RDEPEND="!!dev-db/libpq
 		 !!dev-db/postgresql
 		 !!dev-db/postgresql-client
 		 !!dev-db/postgresql-libs
-		 sys-apps/less
 		 >=app-admin/eselect-postgresql-1.0.10
 		 virtual/libintl
 		 kerberos? ( virtual/krb5 )
@@ -74,15 +60,10 @@ DEPEND="${RDEPEND}
 		nls? ( sys-devel/gettext )
 "
 
-#PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
+PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 
 # Support /var/run or /run for the socket directory
 [[ ! -d /run ]] && RUNDIR=/var
-
-src_unpack() {
-	base_src_unpack
-	git-2_src_unpack
-}
 
 src_prepare() {
 	epatch "${WORKDIR}/autoconf.patch" \
@@ -139,28 +120,26 @@ src_configure() {
 }
 
 src_compile() {
-	emake
+	emake -j1
 
 	cd "${S}/contrib"
 	emake
 }
 
 src_install() {
-	mkdir -p "${D}/usr/share/postgresql-${SLOT}"
 	emake DESTDIR="${D}" install
 	insinto /usr/include/postgresql-${SLOT}/postmaster
 	doins "${S}"/src/include/postmaster/*.h
 
 	dodir /usr/share/postgresql-${SLOT}/man/
-	# manpages aren't generated, need to add sgml transformation stuff
-	#cp -r "${S}"/doc/src/sgml/man{1,7} "${ED}"/usr/share/postgresql-${SLOT}/man/ || die
-	#rm "${ED}/usr/share/postgresql-${SLOT}/man/man1"/{initdb,pg_{controldata,ctl,resetxlog},post{gres,master}}.1
-	#docompress /usr/share/postgresql-${SLOT}/man/man{1,7}
+	cp -r "${S}"/doc/src/sgml/man{1,7} "${ED}"/usr/share/postgresql-${SLOT}/man/ || die
+	rm "${ED}/usr/share/postgresql-${SLOT}/man/man1"/{initdb,pg_{controldata,ctl,resetxlog},post{gres,master}}.1
+	docompress /usr/share/postgresql-${SLOT}/man/man{1,7}
 
 	# Don't use ${PF} here as three packages
 	# (dev-db/postgresql-{docs,base,server}) have the same set of docs.
 	insinto /usr/share/doc/postgresql-${SLOT}
-	doins README HISTORY doc/{README.*,TODO,bug.template}
+	doins README HISTORY doc/{TODO,bug.template}
 
 	cd "${S}/contrib"
 	emake DESTDIR="${D}" install
@@ -178,6 +157,10 @@ pkg_postinst() {
 
 	elog "If you need a global psqlrc-file, you can place it in:"
 	elog "    ${EROOT%/}/etc/postgresql-${SLOT}/"
+	einfo
+	einfo "If this is your first install of PostgreSQL, you 'll want to:"
+	einfo "    source /etc/profile"
+	einfo "In your open terminal sessions."
 }
 
 pkg_postrm() {
