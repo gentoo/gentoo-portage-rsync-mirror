@@ -1,6 +1,25 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.43 2013/01/12 21:24:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.47 2013/01/12 21:52:15 cardoe Exp $
+
+  12 Jan 2013; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  Add virtualization herd since we're mostly maintaining and using this package.
+
+*spice-gtk-0.14-r2 (12 Jan 2013)
+
+  12 Jan 2013; Doug Goldstein <cardoe@gentoo.org> -spice-gtk-0.14-r1.ebuild,
+  +spice-gtk-0.14-r2.ebuild:
+  Get rid of the usbredir patch since we're shipping a newer version which
+  supports that version anyway.
+
+  12 Jan 2013; Doug Goldstein <cardoe@gentoo.org> spice-gtk-0.16.ebuild:
+  Fix typo
+
+*spice-gtk-0.16 (12 Jan 2013)
+
+  12 Jan 2013; Doug Goldstein <cardoe@gentoo.org> +spice-gtk-0.16.ebuild,
+  metadata.xml:
+  Version bump
 
   12 Jan 2013; Doug Goldstein <cardoe@gentoo.org> -spice-gtk-0.7.159.ebuild:
   Remove older version

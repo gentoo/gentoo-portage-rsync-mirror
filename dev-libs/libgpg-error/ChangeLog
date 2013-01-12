@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgpg-error
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.84 2012/04/26 15:57:07 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.85 2013/01/12 21:36:53 alonbl Exp $
+
+  12 Jan 2013; Alon Bar-Lev <alonbl@gentoo.org> libgpg-error-1.10-r1.ebuild:
+  Add linguas support, per bug#402685
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   libgpg-error-1.10-r1.ebuild:
@@ -320,4 +323,3 @@
 
   29 Dec 2003; Hanno Boeck <hanno@gentoo.org> libgpg-error-0.6.ebuild:
   New ebuild, lib needed by latest libgcrypt.
-

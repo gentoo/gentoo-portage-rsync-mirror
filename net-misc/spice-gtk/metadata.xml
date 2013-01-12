@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>virtualization</herd>
 	<maintainer>
 		<email>dev-zero@gentoo.org</email>
 		<name>Tiziano Müller</name>
@@ -20,5 +21,7 @@
 			devices to another machine over TCP</flag>
 		<flag name="vala">Generate <pkg>dev-lang/vala</pkg> bindings using
 			vapigen and regenerate .vala files using valac</flag>
+	    <flag name="dbus">Support for desktop integration such as
+			automounting and other APIs exposed by your DE via D-Bus</flag>
 	</use>
 </pkgmetadata>

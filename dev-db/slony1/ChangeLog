@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/slony1
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.37 2012/07/28 12:24:08 titanofold Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.38 2013/01/12 21:37:19 titanofold Exp $
+
+*slony1-2.1.2 (12 Jan 2013)
+
+  12 Jan 2013; Aaron W. Swenson <titanofold@gentoo.org> +slony1-2.1.2.ebuild,
+  +files/slony1-2.1.2-ldflags.patch, -files/ldflags.patch:
+  Version bump fixing bug 433509. Remove unreferenced patch.
 
   28 Jul 2012; Aaron W. Swenson <titanofold@gentoo.org> slony1-2.1.1.ebuild:
   Add GPL-2 to $LICENSE. Fixes bug 425926.

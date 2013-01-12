@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.14-r1.ebuild,v 1.10 2013/01/12 21:23:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.14-r2.ebuild,v 1.1 2013/01/12 21:45:43 cardoe Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ HOMEPAGE="http://spice-space.org http://gitorious.org/spice-gtk"
 LICENSE="LGPL-2.1"
 SLOT="0"
 SRC_URI="http://spice-space.org/download/gtk/${P}.tar.bz2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc gstreamer gtk3 +introspection policykit pulseaudio
 python sasl smartcard static-libs usbredir vala"
 
@@ -45,6 +45,7 @@ RDEPEND="pulseaudio? ( media-sound/pulseaudio[glib] )
 	usbredir? (
 		sys-apps/hwids
 		>=sys-apps/usbredir-0.4.2
+		<sys-apps/usbredir-0.5
 		virtual/libusb:1
 		virtual/udev[gudev]
 		policykit? (
@@ -78,8 +79,7 @@ src_prepare() {
 	mkdir ${GTK3_BUILDDIR} || die
 
 	epatch \
-		"${FILESDIR}/0.12-parallel-install.patch" \
-		"${FILESDIR}/${PV}-Deal-with-libusbredirparser.pc-rename-to-libusbredir.patch"
+		"${FILESDIR}/0.12-parallel-install.patch"
 	eautoreconf
 }
 
