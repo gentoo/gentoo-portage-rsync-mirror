@@ -1,6 +1,19 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.39 2013/01/01 14:06:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.42 2013/01/12 22:22:40 cardoe Exp $
+
+  12 Jan 2013; Doug Goldstein <cardoe@gentoo.org> spice-0.12.2.ebuild:
+  Switch to EAPI=5
+
+*spice-0.12.2 (12 Jan 2013)
+
+  12 Jan 2013; Doug Goldstein <cardoe@gentoo.org> +spice-0.12.2.ebuild:
+  Version bump
+
+  12 Jan 2013; Doug Goldstein <cardoe@gentoo.org> -spice-0.10.0.ebuild,
+  -spice-0.10.1.ebuild, -spice-0.11.0.ebuild, -spice-0.8.1.ebuild,
+  -spice-0.8.2-r1.ebuild:
+  Remove older versions
 
   01 Jan 2013; Michał Górny <mgorny@gentoo.org> spice-0.11.0.ebuild,
   spice-0.11.3.ebuild, spice-0.12.0.ebuild:

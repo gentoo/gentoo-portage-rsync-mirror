@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.3.ebuild,v 1.6 2012/12/01 19:34:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.3.ebuild,v 1.7 2013/01/12 22:16:07 alonbl Exp $
 
 EAPI=4
 
@@ -11,7 +11,8 @@ SRC_URI="mirror://gnupg/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
-IUSE="nls"
+IUSE_LINGUAS=" ar cs de es fr ja nl pl pt_BR ru sv tr zh_TW"
+IUSE="nls ${IUSE_LINGUAS// / linguas_}"
 
 RDEPEND=">=x11-libs/gtk+-2.10.0:2
 	>=dev-libs/libgpg-error-1.4
@@ -22,14 +23,16 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
+src_prepare() {
+	sed -i 's/Application;//' gpa.desktop
+}
+
 src_configure() {
-	# force --libexecdir so that it doesn't expand to
-	# ${exec_prefix}/libexec instead.
 	econf \
-		--libexecdir=/usr/libexec \
 		--with-gpgme-prefix=/usr \
 		--with-libassuan-prefix=/usr \
-		$(use_enable nls)
+		$(use_enable nls) \
+		GPGKEYS_LDAP="/usr/libexec/gpgkeys_ldap"
 }
 
 DOCS=( AUTHORS ChangeLog README NEWS TODO )

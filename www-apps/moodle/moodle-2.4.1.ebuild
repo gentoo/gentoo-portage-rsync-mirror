@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/moodle-2.1.9.ebuild,v 1.1 2012/11/10 09:51:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/moodle-2.4.1.ebuild,v 1.1 2013/01/12 22:09:09 blueness Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit versionator webapp
 
@@ -26,9 +26,9 @@ AUTHENTICATION_FLAGS="imap?,ldap?,odbc?"
 AUTHENTICATION_MODES=${AUTHENTICATION_FLAGS//\?/}
 AUTHENTICATION_MODES=${AUTHENTICATION_MODES//,/ }
 
-PHP_REQUIRED_FLAGS_53="ctype,curl,iconv,json,session,simplexml,xml,zip"
-PHP_OPTIONAL_FLAGS_53="gd,intl,soap,ssl,tokenizer,xmlrpc"
-PHP_FLAGS_53="${PHP_REQUIRED_FLAGS_53},${PHP_OPTIONAL_FLAGS_53}"
+PHP_REQUIRED_FLAGS="ctype,curl,iconv,json,session,simplexml,xml,zip"
+PHP_OPTIONAL_FLAGS="gd,intl,soap,ssl,tokenizer,xmlrpc"
+PHP_FLAGS="${PHP_REQUIRED_FLAGS},${PHP_OPTIONAL_FLAGS}"
 
 IUSE="${DB_TYPES} ${AUTHENTICATION_MODES} vhosts"
 REQUIRED_USE="|| ( ${DB_TYPES} )"
@@ -39,7 +39,7 @@ REQUIRED_USE="|| ( ${DB_TYPES} )"
 # which may live on another server
 DEPEND=""
 RDEPEND="
-	=dev-lang/php-5.3*[${DB_FLAGS},${AUTHENTICATION_FLAGS},${PHP_FLAGS_53}]
+	=dev-lang/php-5.3*[${DB_FLAGS},${AUTHENTICATION_FLAGS},${PHP_FLAGS}]
 	virtual/httpd-php
 	virtual/cron"
 

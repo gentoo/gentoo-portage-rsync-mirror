@@ -1,9 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Headers defining the SPICE protocol.
-EAPI=4
-HOMEPAGE=http://spice-space.org/
-KEYWORDS=amd64 x86
-LICENSE=BSD
-SLOT=0
-SRC_URI=http://spice-space.org/download/releases/spice-protocol-0.10.0.tar.bz2
-_md5_=59fc56e8551dd2eef21eae9df86f9fcf

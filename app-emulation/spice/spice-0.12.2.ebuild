@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.11.0.ebuild,v 1.8 2013/01/01 14:06:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.12.2.ebuild,v 1.2 2013/01/12 22:22:40 cardoe Exp $
 
-EAPI=4
+EAPI=5
 
 PYTHON_DEPEND="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://spice-space.org/download/releases/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+client +gui sasl smartcard static-libs" # static
 
 RDEPEND=">=x11-libs/pixman-0.17.7
@@ -65,7 +65,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}/${PV}-gold.patch"
+		"${FILESDIR}/0.11.0-gold.patch"
 }
 
 src_configure() {
