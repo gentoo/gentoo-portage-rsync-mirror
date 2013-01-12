@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/hexdump-esr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hexdump-esr/ChangeLog,v 1.20 2012/09/26 12:57:29 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hexdump-esr/ChangeLog,v 1.22 2013/01/12 17:37:49 pinkbyte Exp $
+
+  12 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> hexdump-esr-1.7.ebuild:
+  Change license, according to COPYING file in tarball
+
+*hexdump-esr-1.8 (12 Jan 2013)
+
+  12 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> +hexdump-esr-1.8.ebuild:
+  Version bump
 
   26 Sep 2012; Michael Palimaka <kensington@gentoo.org>
   -hexdump-esr-1.6-r1.ebuild:

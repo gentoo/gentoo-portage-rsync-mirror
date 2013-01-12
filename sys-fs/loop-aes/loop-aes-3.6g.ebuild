@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.6g.ebuild,v 1.3 2013/01/04 22:43:19 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.6g.ebuild,v 1.4 2013/01/12 18:01:20 alonbl Exp $
 
 EAPI="3"
 
@@ -71,4 +71,12 @@ pkg_postinst() {
 	einfo "use your processors native AES instructions giving quite a speed"
 	einfo "increase."
 	einfo
+
+	ewarn
+	ewarn "Please consider using loop-aes-losetup package instead of"
+	ewarn "util-linux[loop-aes], it will enable all loop-aes services"
+	ewarn "without patching util-linux package"
+	ewarn
+	ewarn "In future only loop-aes-losetup will be available in portage"
+	ewarn
 }

@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-2.0-r5.ebuild,v 1.1 2012/12/17 09:28:23 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-2.0-r6.ebuild,v 1.1 2013/01/12 17:38:01 alonbl Exp $
 
 EAPI=5
 
 inherit eutils
 
-PATCH_VERSION="2"
+PATCH_VERSION="3"
 
 DESCRIPTION="Hibernate script supporting multiple suspend methods"
 HOMEPAGE="http://www.tuxonice.net/"
@@ -26,7 +26,6 @@ DOCS=( CHANGELOG README SCRIPTLET-API hibernate.vim )
 
 src_prepare() {
 	epatch "${WORKDIR}/${PV}/"*.patch
-	epatch "${FILESDIR}/${PN}-baselayout2-clock.patch" # fix for bug #406065
 }
 
 src_install() {
