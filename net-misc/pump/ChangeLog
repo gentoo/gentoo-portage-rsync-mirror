@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/pump
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.51 2012/12/16 14:17:50 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.52 2013/01/12 19:49:18 pinkbyte Exp $
+
+*pump-0.8.24-r4 (12 Jan 2013)
+
+  12 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> +pump-0.8.24-r4.ebuild:
+  Revision bump: EAPI 5, epatch_user support, new upstream patchset, generic
+  cleanups
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #95685

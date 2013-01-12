@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/lbzip2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.40 2012/10/07 11:55:08 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.41 2013/01/12 19:46:09 jlec Exp $
+
+*lbzip2-2.2-r1 (12 Jan 2013)
+
+  12 Jan 2013; Justin Lecher <jlec@gentoo.org> +lbzip2-2.2-r1.ebuild,
+  +files/lbzip2-2.2-assertion.patch, metadata.xml:
+  Backport fix from upstream git for Assertion failure, #436382
 
   07 Oct 2012; Justin Lecher <jlec@gentoo.org> -lbzip2-0.23-r2.ebuild,
   -lbzip2-2.1.ebuild, -lbzip2-2.1-r2.ebuild, lbzip2-2.2.ebuild:

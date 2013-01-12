@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.1.2.ebuild,v 1.1 2013/01/12 18:36:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.1.2.ebuild,v 1.2 2013/01/12 19:34:53 radhermit Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 LICENSE="GPL-3 CCPL-Attribution-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="colord doc facebook flickr geo gnome-keyring gphoto2 graphicsmagick jpeg2k kde
+IUSE="colord doc facebook flickr geo gnome-keyring gphoto2 kde
 nls opencl openmp pax_kernel +rawspeed +slideshow"
 
 RDEPEND="
@@ -27,8 +27,6 @@ RDEPEND="
 	gnome-keyring? ( gnome-base/gnome-keyring )
 	gnome-base/librsvg:2
 	gphoto2? ( media-libs/libgphoto2 )
-	graphicsmagick? ( media-gfx/graphicsmagick )
-	jpeg2k? ( media-libs/openjpeg )
 	kde? (
 		dev-libs/dbus-glib
 		kde-base/kwalletd
@@ -76,8 +74,6 @@ src_configure() {
 		$(cmake-utils_use_use geo GEO)
 		$(cmake-utils_use_use gnome-keyring GNOME_KEYRING)
 		$(cmake-utils_use_use gphoto2 CAMERA_SUPPORT)
-		$(cmake-utils_use_use graphicsmagick GRAPHICSMAGICK)
-		$(cmake-utils_use_use jpeg2k OPENJPEG)
 		$(cmake-utils_use_use kde KWALLET)
 		$(cmake-utils_use_use nls NLS)
 		$(cmake-utils_use_use opencl OPENCL)
