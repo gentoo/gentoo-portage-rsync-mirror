@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-0.3.0.ebuild,v 1.4 2012/11/16 19:47:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-0.3.0.ebuild,v 1.5 2013/01/12 13:35:55 pinkbyte Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SLOT="0.3"
 
 # Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc x86 ~amd64-linux ~x86-linux"
 
 IUSE="static-libs man test"
 

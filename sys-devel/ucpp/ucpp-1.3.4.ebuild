@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ucpp/ucpp-1.3.4.ebuild,v 1.1 2012/12/19 07:57:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ucpp/ucpp-1.3.4.ebuild,v 1.2 2013/01/12 13:57:53 pinkbyte Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux"
 IUSE="static-libs"
 
 src_configure() {
