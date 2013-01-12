@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xpp3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.29 2012/09/29 18:10:57 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/ChangeLog,v 1.30 2013/01/12 10:22:42 ulm Exp $
+
+  12 Jan 2013; Ulrich Müller <ulm@gentoo.org> xpp3-1.1.4c.ebuild,
+  xpp3-1.1.4c-r1.ebuild:
+  Fix LICENSE, bug 449682.
 
   29 Sep 2012; Fabian Groffen <grobian@gentoo.org> xpp3-1.1.4c-r1.ebuild:
   Marked ~x64-macos

@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-contrib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/ChangeLog,v 1.39 2012/11/06 12:54:03 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/ChangeLog,v 1.40 2013/01/12 10:16:23 ulm Exp $
+
+  12 Jan 2013; Ulrich Müller <ulm@gentoo.org> freebsd-contrib-7.2.ebuild,
+  freebsd-contrib-8.0.ebuild, freebsd-contrib-8.2.ebuild,
+  freebsd-contrib-9.0.ebuild, freebsd-contrib-9.1_rc1.ebuild,
+  freebsd-contrib-9.1_rc2.ebuild, freebsd-contrib-9.1_rc3.ebuild:
+  Fix LICENSE, bug 449796.
 
 *freebsd-contrib-9.1_rc3 (06 Nov 2012)
 

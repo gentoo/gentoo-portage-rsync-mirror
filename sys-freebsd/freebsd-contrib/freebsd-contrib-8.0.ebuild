@@ -1,18 +1,17 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-8.0.ebuild,v 1.2 2011/12/10 02:39:01 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-8.0.ebuild,v 1.3 2013/01/12 10:16:23 ulm Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
 DESCRIPTION="Contributed sources for FreeBSD."
-SLOT="0"
-KEYWORDS="~sparc-fbsd ~x86-fbsd"
-LICENSE="BSD GPL-2 as-is"
-
-IUSE=""
-
 SRC_URI="mirror://gentoo/${GNU}.tar.bz2
 	mirror://gentoo/${P}.tar.bz2"
+
+LICENSE="BSD GPL-2+ libodialog"
+SLOT="0"
+KEYWORDS="~sparc-fbsd ~x86-fbsd"
+IUSE=""
 
 RDEPEND=""
 DEPEND="=sys-freebsd/freebsd-sources-${RV}*

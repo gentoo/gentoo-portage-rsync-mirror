@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.7.37.ebuild,v 1.1 2012/09/02 04:05:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.7.37.ebuild,v 1.2 2013/01/12 10:10:36 ulm Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Portable Network Graphics (PNG) optimizing utility"
 HOMEPAGE="http://pmt.sourceforge.net/pngcrush/"
 SRC_URI="mirror://sourceforge/pmt/${MY_P}.tar.xz"
 
-LICENSE="as-is"
+LICENSE="pngcrush"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
