@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14363 2013/01/12 04:37:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14364 2013/01/12 07:23:57 marienz Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -383,7 +383,7 @@ dev-ml/ocamlduce
 =app-emulation/qemu-1.2.0
 
 # Gilles Dartiguelongue <eva@gentoo.org> (25 Oct 2012)
-# Too broken to be used but adding for testing purpose
+# Too broken to be used but adding for testing purpose (bug #438560)
 =media-sound/rhythmbox-2.98
 
 # Pacho Ramos <pacho@gentoo.org> (25 Oct 2012)
