@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.4.2-r1.ebuild,v 1.10 2012/05/29 17:06:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.4.2-r1.ebuild,v 1.11 2013/01/12 20:31:44 ulm Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Shared Memory Abstraction Library"
 HOMEPAGE="http://www.ossp.org/pkg/lib/mm/"
 SRC_URI="ftp://ftp.ossp.org/pkg/lib/mm/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="mm"
 SLOT="1.2"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""

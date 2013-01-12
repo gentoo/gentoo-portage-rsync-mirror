@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/ChangeLog,v 1.46 2012/05/29 17:06:35 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/ChangeLog,v 1.47 2013/01/12 20:31:44 ulm Exp $
+
+  12 Jan 2013; Ulrich Müller <ulm@gentoo.org> mm-1.4.2-r1.ebuild:
+  Fix LICENSE, see LICENSE file.
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org> mm-1.4.2-r1.ebuild:
   keyword ~amd64-fbsd

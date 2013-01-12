@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare
-DEPEND=>=dev-libs/libassuan-2 >=dev-libs/libgcrypt-1.4 >=dev-libs/libgpg-error-1.7 >=dev-libs/libksba-1.0.7 >=dev-libs/pth-1.3.7 >=net-misc/curl-7.10 sys-libs/zlib adns? ( >=net-libs/adns-1.4 ) bzip2? ( app-arch/bzip2 ) readline? ( sys-libs/readline ) smartcard? ( usb? ( virtual/libusb:0 ) ) ldap? ( net-nds/openldap ) || ( app-crypt/pinentry app-crypt/pinentry-qt ) static? ( >=dev-libs/libassuan-2[static-libs] >=dev-libs/libgcrypt-1.4[static-libs] >=dev-libs/libgpg-error-1.7[static-libs] >=dev-libs/libksba-1.0.7[static-libs] >=dev-libs/pth-1.3.7[static-libs] sys-libs/zlib[static-libs] bzip2? ( app-arch/bzip2[static-libs] ) ) nls? ( sys-devel/gettext ) doc? ( sys-apps/texinfo )
+DEPEND=>=dev-libs/libassuan-2 >=dev-libs/libgcrypt-1.4 >=dev-libs/libgpg-error-1.7 >=dev-libs/libksba-1.0.7 >=dev-libs/pth-1.3.7 >=net-misc/curl-7.10 sys-libs/zlib adns? ( >=net-libs/adns-1.4 ) bzip2? ( app-arch/bzip2 ) readline? ( sys-libs/readline ) smartcard? ( usb? ( virtual/libusb:0 ) ) ldap? ( net-nds/openldap ) || ( app-crypt/pinentry app-crypt/pinentry-qt ) static? ( >=dev-libs/libassuan-2[static-libs] >=dev-libs/libgcrypt-1.4[static-libs] >=dev-libs/libgpg-error-1.7[static-libs] >=dev-libs/libksba-1.0.7[static-libs] >=dev-libs/pth-1.3.7[static-libs] >=net-misc/curl-7.10[static-libs] sys-libs/zlib[static-libs] bzip2? ( app-arch/bzip2[static-libs] ) ) nls? ( sys-devel/gettext ) doc? ( sys-apps/texinfo )
 DESCRIPTION=The GNU Privacy Guard, a GPL pgp replacement
 EAPI=4
 HOMEPAGE=http://www.gnupg.org/
@@ -11,4 +11,4 @@ REQUIRED_USE=smartcard? ( !static )
 SLOT=0
 SRC_URI=mirror://gnupg/gnupg/gnupg-2.0.19.tar.bz2
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=b6ba770296bab79fe1b4f524d21c49be
+_md5_=f6e1d2b6285173a8da4f356fee05d6a5
