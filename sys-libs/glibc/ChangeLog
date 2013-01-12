@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.916 2013/01/08 12:16:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.917 2013/01/12 08:03:06 armin76 Exp $
+
+  12 Jan 2013; Raúl Porcel <armin76@gentoo.org> glibc-2.16.0.ebuild:
+  2.16.0 breaks some packages on alpha, 2.17 works fine
 
   08 Jan 2013; Mike Frysinger <vapier@gentoo.org> glibc-2.17.ebuild:
   Add hppa/fpu fix from Guy Martin #450676 by Jeroen Roovers.

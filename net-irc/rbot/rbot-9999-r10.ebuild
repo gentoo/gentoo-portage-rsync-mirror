@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r10.ebuild,v 1.8 2012/06/01 03:58:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r10.ebuild,v 1.9 2013/01/12 08:24:44 ulm Exp $
 
 inherit ruby eutils user
 
@@ -9,7 +9,7 @@ inherit ruby eutils user
 DESCRIPTION="rbot is a ruby IRC bot"
 HOMEPAGE="http://ruby-rbot.org/"
 
-LICENSE="GPL-2 as-is"
+LICENSE="|| ( feh GPL-2 )"
 SLOT="0"
 KEYWORDS=""
 IUSE="spell aspell timezone translator shorturl nls dict figlet

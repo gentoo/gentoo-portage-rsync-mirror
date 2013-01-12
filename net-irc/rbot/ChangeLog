@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/rbot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.52 2012/06/01 03:58:21 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.53 2013/01/12 08:24:44 ulm Exp $
+
+  12 Jan 2013; Ulrich Müller <ulm@gentoo.org> rbot-0.9.10-r1.ebuild,
+  rbot-0.9.15.ebuild, rbot-9999-r10.ebuild, metadata.xml:
+  Update LICENSE, bug 449170. Remove unused hunspell flag from metadata.
 
   01 Jun 2012; Zac Medico <zmedico@gentoo.org> rbot-0.9.15.ebuild,
   rbot-9999-r10.ebuild:
