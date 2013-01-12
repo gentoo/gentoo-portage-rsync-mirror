@@ -1,5 +1,5 @@
---- CMakeLists.txt	2008/02/15 09:55:15	33
-+++ CMakeLists.txt	2008/05/19 08:11:36	36
+--- CMakeLists.txt
++++ CMakeLists.txt
 @@ -13,6 +13,8 @@
  # ./AstroMenace
  #

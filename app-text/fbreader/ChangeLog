@@ -1,6 +1,20 @@
 # ChangeLog for app-text/fbreader
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.28 2012/12/02 10:40:37 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.31 2013/01/12 15:53:27 scarabeus Exp $
+
+  12 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/fbreader-0.12.10-gcc45.patch:
+  Drop unused patch.
+
+  12 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> -fbreader-0.12.10.ebuild,
+  fbreader-0.99.4.ebuild:
+  Stabilise latest on amd64 and x86. Drop older.
+
+*fbreader-0.99.4 (12 Jan 2013)
+
+  12 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> +fbreader-0.99.4.ebuild,
+  -fbreader-0.99.1.ebuild, -fbreader-0.99.2.ebuild:
+  Version bump to latest.
 
   02 Dec 2012; Markus Meier <maekke@gentoo.org> fbreader-0.99.2.ebuild:
   add ~arm, bug #431244

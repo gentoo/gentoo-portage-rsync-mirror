@@ -1,5 +1,5 @@
---- OpenAstroMenaceSVN/AstroMenaceSource/Core/RendererInterface/RendererInterface.h.orig	2007-09-15 12:26:47.000000000 +0400
-+++ OpenAstroMenaceSVN/AstroMenaceSource/Core/RendererInterface/RendererInterface.h	2009-12-01 23:21:23.551205491 +0300
+--- OpenAstroMenaceSVN/AstroMenaceSource/Core/RendererInterface/RendererInterface.h.orig
++++ OpenAstroMenaceSVN/AstroMenaceSource/Core/RendererInterface/RendererInterface.h
 @@ -37,6 +37,7 @@
  #include "../Base.h"
  #include "../Math/Math.h"

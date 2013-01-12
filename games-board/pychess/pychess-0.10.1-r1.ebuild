@@ -1,13 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.10.1-r1.ebuild,v 1.2 2013/01/11 16:46:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.10.1-r1.ebuild,v 1.3 2013/01/12 15:32:12 hasufell Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_6 python2_7 )
 
-# inherit base explicitly to avoid overrides on distutils-r1
-inherit base fdo-mime gnome2-utils distutils-r1 games
+inherit fdo-mime gnome2-utils distutils-r1 games
 
 DESCRIPTION="A chess client for Gnome"
 HOMEPAGE="http://pychess.googlepages.com/home"
@@ -40,8 +39,16 @@ python_install_all() {
 	prepgamesdirs
 }
 
+src_prepare() {
+	distutils-r1_src_prepare
+}
+
 src_compile() {
 	distutils-r1_src_compile
+}
+
+src_install() {
+	distutils-r1_src_install
 }
 
 pkg_preinst() {

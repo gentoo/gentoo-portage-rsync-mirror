@@ -1,13 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/gfceux-2.1.1-r1.ebuild,v 1.1 2013/01/11 19:04:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/gfceux-2.1.1-r1.ebuild,v 1.2 2013/01/12 15:38:21 hasufell Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_6 python2_7 )
 
-# inherit base explicitly to avoid overrides on distutils-r1
-inherit base eutils gnome2-utils distutils-r1 games
+inherit eutils gnome2-utils distutils-r1 games
 
 DESCRIPTION="A graphical frontend for the FCEUX emulator"
 HOMEPAGE="http://fceux.com"
@@ -25,6 +24,8 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/${PN}
 
 python_prepare_all() {
+	distutils-r1_python_prepare_all
+
 	sed -i \
 		-e "s#data/gfceux.glade#${GAMES_DATADIR}/${PN}/gfceux.glade#" \
 		src/main.py || die
@@ -32,6 +33,10 @@ python_prepare_all() {
 
 python_install() {
 	distutils-r1_python_install --install-scripts="${GAMES_BINDIR}"
+}
+
+src_prepare() {
+	distutils-r1_src_prepare
 }
 
 src_compile() {

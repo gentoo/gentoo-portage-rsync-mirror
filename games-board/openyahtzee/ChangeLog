@@ -1,6 +1,9 @@
 # ChangeLog for games-board/openyahtzee
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.16 2012/07/14 19:34:34 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.17 2013/01/12 15:44:14 mr_bones_ Exp $
+
+  12 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> openyahtzee-1.9.1.ebuild:
+  boost is needed for building (bug #451518)
 
   14 Jul 2012; Julian Ospald <hasufell@gentoo.org> openyahtzee-1.9.1.ebuild:
   drop unused eutils too
@@ -68,4 +71,3 @@
   11 May 2007; Tupone Alfredo <tupone@gentoo.org> +metadata.xml,
   +openyahtzee-1.7.ebuild:
   New package, requested wih bug #137555 by Guy Rutenberg
-

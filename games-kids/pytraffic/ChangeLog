@@ -1,6 +1,12 @@
 # ChangeLog for games-kids/pytraffic
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/ChangeLog,v 1.13 2011/04/06 20:04:12 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/ChangeLog,v 1.14 2013/01/12 15:41:34 hasufell Exp $
+
+*pytraffic-2.5.4-r1 (12 Jan 2013)
+
+  12 Jan 2013; Julian Ospald <hasufell@gentoo.org> +pytraffic-2.5.4-r1.ebuild,
+  +files/pytraffic:
+  migrate to distutils-r1, respect FHS, support multiple ABI
 
   06 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pytraffic-2.5.4.ebuild:

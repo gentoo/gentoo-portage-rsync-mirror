@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.3.1-r1.ebuild,v 1.1 2013/01/12 12:19:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.3.1-r1.ebuild,v 1.2 2013/01/12 15:38:40 mr_bones_ Exp $
 
 EAPI=5
 inherit gnome2-utils cmake-utils eutils games
@@ -24,7 +24,7 @@ DEPEND="virtual/opengl
 	media-libs/libvorbis
 	x11-libs/libXinerama"
 
-S="${WORKDIR}/AstroMenace"
+S=${WORKDIR}/AstroMenace
 
 src_prepare() {
 	# no messing with CXXFLAGS please.
@@ -32,9 +32,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-overflow.patch
 
 	# enhancements patches(all - in upstream), bug #450158
-	epatch "${FILESDIR}"/${P}-keyboard_control-fix.patch
-	epatch "${FILESDIR}"/${P}-rendering-blinking_triangles-fix.patch
-	epatch "${FILESDIR}"/${P}-textures_quality-fix.patch
+	epatch \
+		"${FILESDIR}"/${P}-keyboard_control-fix.patch \
+		"${FILESDIR}"/${P}-rendering-blinking_triangles-fix.patch \
+		"${FILESDIR}"/${P}-textures_quality-fix.patch
 }
 
 src_configure() {

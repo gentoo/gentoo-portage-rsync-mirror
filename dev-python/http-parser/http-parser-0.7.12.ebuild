@@ -1,13 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/http-parser-0.7.12.ebuild,v 1.1 2012/10/30 06:08:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/http-parser-0.7.12.ebuild,v 1.2 2013/01/12 15:53:33 idella4 Exp $
 
-EAPI=4
+EAPI=5
 
-SUPPORT_PYTHON_ABIS=1
-RESTRICT_PYTHON_ABIS="2.5 *-jython"
+PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2} pypy{1_9,2_0} )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="HTTP request/response parser for python in C"
 HOMEPAGE="http://github.com/benoitc/http-parser"
@@ -20,13 +19,11 @@ IUSE="examples"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	dev-python/setuptools
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/cython"
 
-PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
-
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 	if use examples; then
 		docompress -x usr/share/doc/${P}/examples
 		insinto usr/share/doc/${P}

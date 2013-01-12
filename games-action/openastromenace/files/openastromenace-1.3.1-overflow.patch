@@ -1,5 +1,5 @@
---- AstroMenaceSource/Core/VirtualFileSystem/VFS.cpp.orig	2013-01-03 14:44:24.215884583 -0500
-+++ AstroMenaceSource/Core/VirtualFileSystem/VFS.cpp	2013-01-03 14:49:17.035312094 -0500
+--- AstroMenaceSource/Core/VirtualFileSystem/VFS.cpp.orig
++++ AstroMenaceSource/Core/VirtualFileSystem/VFS.cpp
 @@ -554,7 +554,7 @@
  	//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  	// Проверяем сигнатуру "VFS_" - 4 байт

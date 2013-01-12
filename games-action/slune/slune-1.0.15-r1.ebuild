@@ -1,13 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/slune/slune-1.0.15-r1.ebuild,v 1.2 2013/01/11 18:51:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/slune/slune-1.0.15-r1.ebuild,v 1.3 2013/01/12 15:36:03 hasufell Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
 
-# inherit base explicitly to avoid overrides on distutils-r1
-inherit base eutils gnome2-utils python-utils-r1 distutils-r1 games
+inherit gnome2-utils python-utils-r1 distutils-r1 games
 
 DESCRIPTION="A 3D action game with multiplayer mode and amazing graphics"
 HOMEPAGE="http://oomadness.tuxfamily.org/en/slune/"
@@ -40,6 +39,10 @@ python_install() {
 	for i in $(ls -I locale "${ED}${GAMES_DATADIR}"/${PN}) ; do
 		dosym "${GAMES_DATADIR}/${PN}/${i}" "$(python_get_sitedir)/${PN}/${i}"
 	done
+}
+
+src_prepare() {
+	distutils-r1_src_prepare
 }
 
 src_compile() {
