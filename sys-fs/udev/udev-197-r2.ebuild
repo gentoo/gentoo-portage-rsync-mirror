@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.1 2013/01/12 05:57:42 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.2 2013/01/12 16:36:11 williamh Exp $
 
 EAPI=4
 
@@ -283,7 +283,7 @@ src_install()
 		pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 		systemunitdir="$(systemd_get_unitdir)"
 	)
-	emake DESTDIR="${D}" "${targets[@]}"
+	emake -j1 DESTDIR="${D}" "${targets[@]}"
 	if use doc
 	then
 		emake -C docs/libudev DESTDIR="${D}" install
