@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.1.ebuild,v 1.2 2013/01/11 23:37:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.10.2.2.ebuild,v 1.1 2013/01/11 23:37:55 cardoe Exp $
 
 EAPI=4
 
@@ -22,8 +22,8 @@ if [[ ${PV} = *9999* ]]; then
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz
-		ftp://libvirt.org/libvirt/${MY_P}.tar.gz
+	SRC_URI="http://libvirt.org/sources/stable_updates/${MY_P}.tar.gz
+		ftp://libvirt.org/libvirt/stable_updates/${MY_P}.tar.gz
 		${BACKPORTS:+
 			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
 	KEYWORDS="~amd64 ~x86"
@@ -34,7 +34,7 @@ DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="audit avahi +caps debug firewalld iscsi +libvirtd lvm +lxc +macvtap nfs \
+IUSE="audit avahi +caps debug iscsi +libvirtd lvm +lxc +macvtap nfs \
 	nls numa openvz parted pcap phyp policykit python qemu rbd sasl \
 	selinux +udev uml +vepa virtualbox virt-network xen elibc_glibc"
 REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
@@ -44,9 +44,7 @@ REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 	uml? ( libvirtd )
 	vepa? ( macvtap )
 	virtualbox? ( libvirtd )
-	xen? ( libvirtd )
-	virt-network? ( libvirtd )
-	firewalld? ( virt-network )"
+	xen? ( libvirtd )"
 
 # gettext.sh command is used by the libvirt command wrappers, and it's
 # non-optional, so put it into RDEPEND.
@@ -99,9 +97,7 @@ RDEPEND="sys-libs/readline
 		>=net-firewall/iptables-1.4.10
 		net-misc/radvd
 		net-firewall/ebtables
-		sys-apps/iproute2[-minimal]
-		firewalld? ( net-firewall/firewalld )
-	)
+		sys-apps/iproute2[-minimal] )
 	elibc_glibc? ( || ( >=net-libs/libtirpc-0.2.2-r1 <sys-libs/glibc-2.14 ) )"
 # one? ( dev-libs/xmlrpc-c )
 DEPEND="${RDEPEND}
@@ -198,14 +194,11 @@ src_prepare() {
 	local avahi_init=
 	local iscsi_init=
 	local rbd_init=
-	local firewalld_init=
-	cp "${FILESDIR}/libvirtd.init-r11" "${S}/libvirtd.init"
+	cp "${FILESDIR}/libvirtd.init-r10" "${S}/libvirtd.init"
 	use avahi && avahi_init='avahi-daemon'
 	use iscsi && iscsi_init='iscsid'
 	use rbd && rbd_init='ceph'
-	use firewalld && firewalld_init='need firewalld'
 
-	sed -e "s/USE_FLAG_FIREWALLD/${firewalld_init}/" -i "${S}/libvirtd.init"
 	sed -e "s/USE_FLAG_AVAHI/${avahi_init}/" -i "${S}/libvirtd.init"
 	sed -e "s/USE_FLAG_ISCSI/${iscsi_init}/" -i "${S}/libvirtd.init"
 	sed -e "s/USE_FLAG_RBD/${rbd_init}/" -i "${S}/libvirtd.init"
@@ -267,7 +260,6 @@ src_configure() {
 	myconf="${myconf} $(use_with macvtap)"
 	myconf="${myconf} $(use_with pcap libpcap)"
 	myconf="${myconf} $(use_with vepa virtualport)"
-	myconf="${myconf} $(use_with firewalld)"
 
 	## other
 	myconf="${myconf} $(use_enable nls)"
@@ -293,6 +285,9 @@ src_configure() {
 
 	# locking support
 	myconf="${myconf} --without-sanlock"
+
+	# DBus access to iptables/ebtables and friends
+	myconf="${myconf} --without-firewalld"
 
 	# this is a nasty trick to work around the problem in bug
 	# #275073. The reason why we don't solve this properly is that
@@ -324,7 +319,6 @@ src_configure() {
 
 src_test() {
 	# Explicitly allow parallel build of tests
-	export VIR_TEST_DEBUG=1
 	HOME="${T}" emake check || die "tests failed"
 }
 

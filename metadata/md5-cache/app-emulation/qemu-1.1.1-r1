@@ -11,4 +11,4 @@ REQUIRED_USE=static? ( !alsa !pulseaudio !bluetooth ) amd64? ( qemu_softmmu_targ
 SLOT=0
 SRC_URI=mirror://sourceforge/kvm/qemu-kvm/qemu-kvm-1.1.1.tar.gz http://dev.gentoo.org/~cardoe/distfiles/qemu-kvm-1.1.1-bp-1.tar.xz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	61ad55e732e494378165e7dcd4744b91	linux-info	f01ffb28843e2de3ea571f80f07e5078	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	4f764d2b1e34e4ef12b9b0d6e680c0ee	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=f2d580eecef2242c1cb2b6417910ba1f
+_md5_=5ccd6e94d23e31db68cf2d15bf709215

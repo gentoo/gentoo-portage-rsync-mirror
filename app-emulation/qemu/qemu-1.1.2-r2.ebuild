@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.2-r2.ebuild,v 1.10 2013/01/03 18:26:23 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.1.2-r2.ebuild,v 1.11 2013/01/11 23:54:15 cardoe Exp $
 
 EAPI="4"
 
@@ -328,7 +328,7 @@ src_install() {
 		dohtml qemu-doc.html qemu-tech.html || die
 	fi
 
-	use python & dobin scripts/kvm/kvm_stat
+	use python && dobin scripts/kvm/kvm_stat
 
 	# Remove SeaBIOS since we're using the SeaBIOS packaged one
 	rm "${ED}/usr/share/qemu/bios.bin"

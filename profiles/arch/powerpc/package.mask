@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.55 2012/12/27 12:15:32 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.56 2013/01/11 23:53:45 cardoe Exp $
 
 # Brent Baude <ranger@gentoo.org> (20 Nov 2012)
 # Masking kgcc64 now that toolchain is biarch
@@ -19,3 +19,7 @@ x11-themes/smplayer-themes
 # Justin Lecher <jlec@gentoo.org> (9 Mar 2011)
 # sci-libs/plplot needs keywords #358035
 =sci-biology/emboss-6.3.1*
+
+# Doug Goldstein <cardoe@gentoo.org> (11 Jan 2013)
+# Masked due to depends on bug #438780
+>=app-emulation/qemu-1.2.0

@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.156 2013/01/10 21:04:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.157 2013/01/11 23:54:15 cardoe Exp $
+
+  11 Jan 2013; Doug Goldstein <cardoe@gentoo.org> qemu-1.1.1-r1.ebuild,
+  qemu-1.1.2-r1.ebuild, qemu-1.1.2-r2.ebuild, qemu-1.1.2-r3.ebuild,
+  qemu-1.2.0.ebuild, qemu-1.2.1.ebuild, qemu-9999.ebuild:
+  Fix bad ampersand usage.
 
   10 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org>
   +files/qemu-9999-cflags.patch, qemu-9999.ebuild:

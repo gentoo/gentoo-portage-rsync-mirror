@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.1.ebuild,v 1.5 2013/01/03 18:26:23 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.1.ebuild,v 1.6 2013/01/11 23:54:15 cardoe Exp $
 
 EAPI="4"
 
@@ -328,7 +328,7 @@ src_install() {
 		dohtml qemu-doc.html qemu-tech.html || die
 	fi
 
-	use python & dobin scripts/kvm/kvm_stat
+	use python && dobin scripts/kvm/kvm_stat
 
 	# Avoid collision with app-emulation/libcacard
 	use smartcard && mv "${ED}/usr/bin/vscclient" "${ED}/usr/bin/qemu-vscclient"
