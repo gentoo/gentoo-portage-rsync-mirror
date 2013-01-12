@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7344 2013/01/11 22:12:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7345 2013/01/12 09:19:11 hanno Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Jan 2013; Hanno Boeck <hanno@gentoo.org> license_groups:
+  Add licenses LIBGLOSS and NEWLIB to MISC-FREE (they had issues that have been
+  resolved upstream now).
 
   11 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org> package.mask:
   removed dev-haskell/time mask, as it's gone from tree now
