@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.755 2013/01/11 19:42:35 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.756 2013/01/12 05:57:42 williamh Exp $
+
+*udev-197-r2 (12 Jan 2013)
+
+  12 Jan 2013; William Hubbs <williamh@gentoo.org> +udev-197-r2.ebuild,
+  udev-9999.ebuild:
+  This is the last of the revisions to move everything back to / and fix
+  rootlibdir, thanks to Dave Reisner on the #systemd irc channel for his
+  assistance.
 
   11 Jan 2013; William Hubbs <williamh@gentoo.org> -udev-195.ebuild,
   -udev-197.ebuild:

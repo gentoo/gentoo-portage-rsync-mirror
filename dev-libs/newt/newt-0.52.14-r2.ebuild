@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.14-r2.ebuild,v 1.1 2012/05/16 13:32:27 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.14-r2.ebuild,v 1.2 2013/01/12 05:57:16 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ RDEPEND="=sys-libs/slang-2*
 	>=dev-libs/popt-1.6
 	elibc_uclibc? ( sys-libs/ncurses )
 	gpm? ( sys-libs/gpm )
-	tcl? ( =dev-lang/tcl-8.5* )
+	tcl? ( >=dev-lang/tcl-8.5 )
 	"
 
 DEPEND="${RDEPEND}"
@@ -37,7 +37,7 @@ src_prepare() {
 	fi
 
 	sed -i Makefile.in \
-		-e 's|-ltcl8.4|-ltcl8.5|g' \
+		-e 's|-ltcl8.4|-ltcl|g' \
 		-e 's|$(SHCFLAGS) -o|$(LDFLAGS) &|g' \
 		-e 's|-g -o|$(CFLAGS) $(LDFLAGS) -o|g' \
 		-e 's|-shared -o|$(CFLAGS) $(LDFLAGS) &|g' \
@@ -56,7 +56,8 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}"/${PN}-0.52.13-gold.patch \
-		"${FILESDIR}"/${P}-snack.patch
+		"${FILESDIR}"/${P}-snack.patch \
+		"${FILESDIR}"/${P}-tcl.patch
 	eautoreconf
 }
 
