@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pygoocanvas
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.23 2012/05/04 15:12:15 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.24 2013/01/12 18:20:35 eva Exp $
+
+*pygoocanvas-0.14.1-r1 (12 Jan 2013)
+
+  12 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +pygoocanvas-0.14.1-r1.ebuild:
+  Switch to python-r1 and EAPI=5.
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org> pygoocanvas-0.14.1.ebuild:
   Migrating dev-util/pkgconfig -> virtual/pkgconfig

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r5.ebuild,v 1.9 2013/01/04 15:45:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r5.ebuild,v 1.10 2013/01/12 18:23:09 ulm Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.x.org/contrib/applications/${P}.tar.gz
 # until someone who reads japanese can find a better place
 HOMEPAGE="http://www.asahi-net.or.jp/~hc3j-tkg/kterm/"
 
-LICENSE="MIT HPND xboing"
+LICENSE="MIT HPND XC"
 SLOT="0"
 KEYWORDS="-alpha amd64 ppc ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="Xaw3d"
