@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.4.0.ebuild,v 1.3 2012/12/01 12:57:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.4.0.ebuild,v 1.4 2013/01/12 13:20:59 scarabeus Exp $
 
 EAPI=5
 
 DESCRIPTION="An interface library to access tags for identifying languages"
-HOMEPAGE="https://github.com/tagoh/liblangtag/"
-SRC_URI="https://github.com/downloads/tagoh/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://tagoh.bitbucket.org/liblangtag/"
+SRC_URI="https://bitbucket.org/tagoh/${PN}/downloads/${P}.tar.bz2"
 
-LICENSE="LGPL-3"
+LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="introspection static-libs test"

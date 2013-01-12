@@ -1,6 +1,9 @@
 # ChangeLog for app-text/liblangtag
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/ChangeLog,v 1.6 2012/12/01 12:57:10 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/ChangeLog,v 1.7 2013/01/12 13:20:59 scarabeus Exp $
+
+  12 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> liblangtag-0.4.0.ebuild:
+  New homepage/download uri.
 
   01 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/liblangtag-0.3-automagic-tests.patch, -liblangtag-0.3-r1.ebuild,
