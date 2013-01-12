@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/alternate
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/ChangeLog,v 1.49 2010/11/11 10:20:50 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/ChangeLog,v 1.50 2013/01/12 11:23:23 ulm Exp $
+
+  12 Jan 2013; Ulrich Müller <ulm@gentoo.org> alternate-2.18.ebuild:
+  Fix LICENSE.
 
   11 Nov 2010; Tim Harder <radhermit@gentoo.org> -alternate-2.12-r1.ebuild,
   -alternate-2.15.ebuild:
