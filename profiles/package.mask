@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14364 2013/01/12 07:23:57 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14365 2013/01/12 07:50:32 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -277,11 +277,6 @@ sci-libs/lapack-atlas
 # raise unknown issues. Bug #445662 for more details.
 =x11-apps/xdm-1.1.11-r2
 
-# Doug Goldstein <cardoe@gentoo.org> (07 Dec 2012)
-# Masked for removal in 30 days. (07 Jan 2012)
-# Upstream says the project is dead and is being replaced
-app-emulation/qemulator
-
 # Alexandre Rostovtsev <tetromino@gentoo.org> (05 Dec 2012)
 # Masked for removal in 30 days.
 # Incompatible with recent cogl and clutter versions (bug #435164)
@@ -377,10 +372,6 @@ dev-ml/ocamlduce
 # Sébastien Fabbro <bicatali@gentoo.org> (31 Oct 2012)
 # live ebuild
 =sys-fs/redirfs-9999
-
-# Doug Goldstein <cardoe@gentoo.org> (28 Oct 2012)
-# Do not use this ebuild. Stop trying to use it.
-=app-emulation/qemu-1.2.0
 
 # Gilles Dartiguelongue <eva@gentoo.org> (25 Oct 2012)
 # Too broken to be used but adding for testing purpose (bug #438560)
