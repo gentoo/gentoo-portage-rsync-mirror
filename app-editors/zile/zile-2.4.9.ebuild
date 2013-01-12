@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.4.9.ebuild,v 1.1 2013/01/04 18:33:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.4.9.ebuild,v 1.2 2013/01/12 12:40:14 ulm Exp $
 
 EAPI=5
 
@@ -19,6 +19,8 @@ RDEPEND="dev-libs/boehm-gc
 
 DEPEND="${RDEPEND}
 	test? ( dev-lang/perl )"
+
+QA_AM_MAINTAINER_MODE=".*help2man.*" #450278
 
 src_configure() {
 	econf \

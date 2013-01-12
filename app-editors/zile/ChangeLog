@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.184 2013/01/04 18:33:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.185 2013/01/12 12:40:14 ulm Exp $
+
+  12 Jan 2013; Ulrich Müller <ulm@gentoo.org> zile-2.4.9.ebuild:
+  Suppress false QA warning for help2man, bug 450278.
 
 *zile-2.4.9 (04 Jan 2013)
 
