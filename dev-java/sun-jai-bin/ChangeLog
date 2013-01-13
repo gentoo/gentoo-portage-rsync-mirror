@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jai-bin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/ChangeLog,v 1.20 2011/12/31 16:40:51 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/ChangeLog,v 1.21 2013/01/13 11:29:27 sera Exp $
+
+  13 Jan 2013; Ralph Sennhauser <sera@gentoo.org> sun-jai-bin-1.1.3.ebuild,
+  sun-jai-bin-1.1.3-r1.ebuild:
+  Add QA_PREBUILT. #440968
 
   31 Dec 2011; Ralph Sennhauser <sera@gentoo.org> sun-jai-bin-1.1.3.ebuild:
   Drop ia64 support #345433

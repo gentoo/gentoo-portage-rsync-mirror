@@ -4,10 +4,10 @@ DESCRIPTION=GNU BackGammon
 EAPI=4
 HOMEPAGE=http://www.gnubg.org/
 IUSE=gtk opengl python threads
-KEYWORDS=amd64 ppc ppc64 ~x86 ~x86-fbsd
+KEYWORDS=amd64 ppc ppc64 x86 ~x86-fbsd
 LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 media-libs/libpng:0 dev-libs/libxml2 media-libs/freetype:2 media-libs/libcanberra gtk? ( x11-libs/gtk+:2 x11-libs/cairo x11-libs/pango ) opengl? ( x11-libs/gtk+:2 x11-libs/cairo x11-libs/pango x11-libs/gtkglext >=media-libs/ftgl-2.1.2-r1 ) sys-libs/readline python? ( dev-lang/python ) media-fonts/ttf-bitstream-vera virtual/libintl dev-db/sqlite:3 python? ( =dev-lang/python-2* )
 SLOT=0
 SRC_URI=http://www.gnubg.org/media/sources/gnubg-source-SNAPSHOT-20121201.tar.gz
 _eclasses_=autotools	5116b10b2150724f41b564f1cc863e47	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	games	e0a83e3f3f024b8c8ef7a8217d716cbf	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	9aa8a023e062fca0ba79362d9d0cc488	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=1e7d3ee290b4568c60a7b63bad27293b
+_md5_=1549d503cf650f991b4c51d1adef4df3

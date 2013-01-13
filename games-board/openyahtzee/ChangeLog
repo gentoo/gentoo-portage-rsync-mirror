@@ -1,6 +1,9 @@
 # ChangeLog for games-board/openyahtzee
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.17 2013/01/12 15:44:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/openyahtzee/ChangeLog,v 1.18 2013/01/13 11:13:12 ago Exp $
+
+  13 Jan 2013; Agostino Sarubbo <ago@gentoo.org> openyahtzee-1.9.1.ebuild:
+  Stable for amd64, wrt bug #451468
 
   12 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> openyahtzee-1.9.1.ebuild:
   boost is needed for building (bug #451518)

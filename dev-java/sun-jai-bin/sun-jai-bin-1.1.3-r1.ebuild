@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.3-r1.ebuild,v 1.2 2011/12/14 17:38:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.3-r1.ebuild,v 1.3 2013/01/13 11:29:27 sera Exp $
 
 inherit java-pkg-2
 
@@ -21,6 +21,7 @@ DEPEND=""
 RDEPEND=">=virtual/jre-1.3"
 IUSE=""
 RESTRICT="mirror"
+QA_PREBUILT="*"
 
 S=${WORKDIR}/${MY_P}/
 

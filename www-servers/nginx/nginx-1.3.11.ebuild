@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.3.9.ebuild,v 1.1 2012/12/24 21:07:25 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.3.11.ebuild,v 1.1 2013/01/13 11:08:42 hollow Exp $
 
 EAPI="4"
 
@@ -18,32 +18,29 @@ EAPI="4"
 GENTOO_DEPEND_ON_PERL="no"
 
 # syslog
-SYSLOG_MODULE_PV="1.2.0"
+SYSLOG_MODULE_PV="0.24"
+SYSLOG_MODULE_NGINX_PV="1.3.11"
 SYSLOG_MODULE_P="ngx_syslog-${SYSLOG_MODULE_PV}"
-SYSLOG_MODULE_SHA1="2686c1c"
-SYSLOG_MODULE_URI="https://github.com/yaoweibin/nginx_syslog_patch/tarball/${SYSLOG_MODULE_SHA1}"
-SYSLOG_MODULE_WD="${WORKDIR}/yaoweibin-nginx_syslog_patch-${SYSLOG_MODULE_SHA1}"
+SYSLOG_MODULE_URI="https://github.com/yaoweibin/nginx_syslog_patch/archive/v${SYSLOG_MODULE_PV}.tar.gz"
+SYSLOG_MODULE_WD="${WORKDIR}/nginx_syslog_patch-${SYSLOG_MODULE_PV}"
 
 # devel_kit (https://github.com/simpl/ngx_devel_kit, BSD license)
 DEVEL_KIT_MODULE_PV="0.2.17"
-DEVEL_KIT_MODULE_P="ngx_devel_kit-${DEVEL_KIT_MODULE_PV}"
-DEVEL_KIT_MODULE_SHA1="bc97eea"
-DEVEL_KIT_MODULE_URI="https://github.com/simpl/ngx_devel_kit/tarball/v${DEVEL_KIT_MODULE_PV}"
-DEVEL_KIT_MODULE_WD="${WORKDIR}/simpl-ngx_devel_kit-${DEVEL_KIT_MODULE_SHA1}"
+DEVEL_KIT_MODULE_P="ngx_devel_kit-${DEVEL_KIT_MODULE_PV}-r1"
+DEVEL_KIT_MODULE_URI="https://github.com/simpl/ngx_devel_kit/archive/v${DEVEL_KIT_MODULE_PV}.tar.gz"
+DEVEL_KIT_MODULE_WD="${WORKDIR}/ngx_devel_kit-${DEVEL_KIT_MODULE_PV}"
 
 # http_uploadprogress (https://github.com/masterzen/nginx-upload-progress-module, BSD-2 license)
 HTTP_UPLOAD_PROGRESS_MODULE_PV="0.9.0"
-HTTP_UPLOAD_PROGRESS_MODULE_P="ngx_http_upload_progress-${HTTP_UPLOAD_PROGRESS_MODULE_PV}"
-HTTP_UPLOAD_PROGRESS_MODULE_SHA1="a788dea"
-HTTP_UPLOAD_PROGRESS_MODULE_URI="http://github.com/masterzen/nginx-upload-progress-module/tarball/v${HTTP_UPLOAD_PROGRESS_MODULE_PV}"
-HTTP_UPLOAD_PROGRESS_MODULE_WD="${WORKDIR}/masterzen-nginx-upload-progress-module-${HTTP_UPLOAD_PROGRESS_MODULE_SHA1}"
+HTTP_UPLOAD_PROGRESS_MODULE_P="ngx_http_upload_progress-${HTTP_UPLOAD_PROGRESS_MODULE_PV}-r1"
+HTTP_UPLOAD_PROGRESS_MODULE_URI="https://github.com/masterzen/nginx-upload-progress-module/archive/v${HTTP_UPLOAD_PROGRESS_MODULE_PV}.tar.gz"
+HTTP_UPLOAD_PROGRESS_MODULE_WD="${WORKDIR}/nginx-upload-progress-module-${HTTP_UPLOAD_PROGRESS_MODULE_PV}"
 
 # http_headers_more (http://github.com/agentzh/headers-more-nginx-module, BSD license)
-HTTP_HEADERS_MORE_MODULE_PV="0.17"
-HTTP_HEADERS_MORE_MODULE_P="ngx_http_headers_more-${HTTP_HEADERS_MORE_MODULE_PV}"
-HTTP_HEADERS_MORE_MODULE_SHA1="b7c8cfc"
-HTTP_HEADERS_MORE_MODULE_URI="http://github.com/agentzh/headers-more-nginx-module/tarball/v${HTTP_HEADERS_MORE_MODULE_PV}"
-HTTP_HEADERS_MORE_MODULE_WD="${WORKDIR}/agentzh-headers-more-nginx-module-${HTTP_HEADERS_MORE_MODULE_SHA1}"
+HTTP_HEADERS_MORE_MODULE_PV="0.19"
+HTTP_HEADERS_MORE_MODULE_P="ngx_http_headers_more-${HTTP_HEADERS_MORE_MODULE_PV}-r1"
+HTTP_HEADERS_MORE_MODULE_URI="https://github.com/agentzh/headers-more-nginx-module/archive/v${HTTP_HEADERS_MORE_MODULE_PV}.tar.gz"
+HTTP_HEADERS_MORE_MODULE_WD="${WORKDIR}/headers-more-nginx-module-${HTTP_HEADERS_MORE_MODULE_PV}"
 
 # http_push (http://pushmodule.slact.net/, MIT license)
 HTTP_PUSH_MODULE_PV="0.692"
@@ -52,7 +49,7 @@ HTTP_PUSH_MODULE_URI="http://pushmodule.slact.net/downloads/nginx_http_push_modu
 HTTP_PUSH_MODULE_WD="${WORKDIR}/nginx_http_push_module-${HTTP_PUSH_MODULE_PV}"
 
 # http_cache_purge (http://labs.frickle.com/nginx_ngx_cache_purge/, BSD-2 license)
-HTTP_CACHE_PURGE_MODULE_PV="1.6"
+HTTP_CACHE_PURGE_MODULE_PV="2.0"
 HTTP_CACHE_PURGE_MODULE_P="ngx_http_cache_purge-${HTTP_CACHE_PURGE_MODULE_PV}"
 HTTP_CACHE_PURGE_MODULE_URI="http://labs.frickle.com/files/ngx_cache_purge-${HTTP_CACHE_PURGE_MODULE_PV}.tar.gz"
 HTTP_CACHE_PURGE_MODULE_WD="${WORKDIR}/ngx_cache_purge-${HTTP_CACHE_PURGE_MODULE_PV}"
@@ -76,11 +73,16 @@ HTTP_FANCYINDEX_MODULE_URI="http://gitorious.org/ngx-fancyindex/ngx-fancyindex/a
 HTTP_FANCYINDEX_MODULE_WD="${WORKDIR}/ngx-fancyindex-ngx-fancyindex"
 
 # http_lua (https://github.com/chaoslawful/lua-nginx-module, BSD license)
-HTTP_LUA_MODULE_PV="0.5.10"
+HTTP_LUA_MODULE_PV="0.7.11"
 HTTP_LUA_MODULE_P="ngx_http_lua-${HTTP_LUA_MODULE_PV}"
-HTTP_LUA_MODULE_SHA1="db0bebe"
-HTTP_LUA_MODULE_URI="https://github.com/chaoslawful/lua-nginx-module/tarball/v${HTTP_LUA_MODULE_PV}"
-HTTP_LUA_MODULE_WD="${WORKDIR}/chaoslawful-lua-nginx-module-${HTTP_LUA_MODULE_SHA1}"
+HTTP_LUA_MODULE_URI="https://github.com/chaoslawful/lua-nginx-module/archive/v${HTTP_LUA_MODULE_PV}.tar.gz"
+HTTP_LUA_MODULE_WD="${WORKDIR}/lua-nginx-module-${HTTP_LUA_MODULE_PV}"
+
+# http_auth_pam (http://web.iti.upv.es/~sto/nginx/, unknown license)
+HTTP_AUTH_PAM_MODULE_PV="1.2"
+HTTP_AUTH_PAM_MODULE_P="ngx_http_auth_pam-${HTTP_AUTH_PAM_MODULE_PV}"
+HTTP_AUTH_PAM_MODULE_URI="http://web.iti.upv.es/~sto/nginx/ngx_http_auth_pam_module-${HTTP_AUTH_PAM_MODULE_PV}.tar.gz"
+HTTP_AUTH_PAM_MODULE_WD="${WORKDIR}/ngx_http_auth_pam_module-${HTTP_AUTH_PAM_MODULE_PV}"
 
 inherit eutils ssl-cert toolchain-funcs perl-module flag-o-matic user
 
@@ -91,12 +93,13 @@ SRC_URI="http://nginx.org/download/${P}.tar.gz
 	${DEVEL_KIT_MODULE_URI} -> ${DEVEL_KIT_MODULE_P}.tar.gz
 	nginx_modules_http_upload_progress? ( ${HTTP_UPLOAD_PROGRESS_MODULE_URI} -> ${HTTP_UPLOAD_PROGRESS_MODULE_P}.tar.gz )
 	nginx_modules_http_headers_more? ( ${HTTP_HEADERS_MORE_MODULE_URI} -> ${HTTP_HEADERS_MORE_MODULE_P}.tar.gz )
-	nginx_modules_http_push? ( ${HTTP_PUSH_MODULE_URI} )
-	nginx_modules_http_cache_purge? ( ${HTTP_CACHE_PURGE_MODULE_URI} )
-	nginx_modules_http_upload? ( ${HTTP_UPLOAD_MODULE_URI} )
-	nginx_modules_http_slowfs_cache? ( ${HTTP_SLOWFS_CACHE_MODULE_URI} )
+	nginx_modules_http_push? ( ${HTTP_PUSH_MODULE_URI} -> ${HTTP_PUSH_MODULE_P}.tar.gz )
+	nginx_modules_http_cache_purge? ( ${HTTP_CACHE_PURGE_MODULE_URI} -> ${HTTP_CACHE_PURGE_MODULE_P}.tar.gz )
+	nginx_modules_http_upload? ( ${HTTP_UPLOAD_MODULE_URI} -> ${HTTP_UPLOAD_MODULE_P}.tar.gz )
+	nginx_modules_http_slowfs_cache? ( ${HTTP_SLOWFS_CACHE_MODULE_URI} -> ${HTTP_SLOWFS_CACHE_MODULE_P}.tar.gz )
 	nginx_modules_http_fancyindex? ( ${HTTP_FANCYINDEX_MODULE_URI} -> ${HTTP_FANCYINDEX_MODULE_P}.tar.gz )
-	nginx_modules_http_lua? ( ${HTTP_LUA_MODULE_URI} -> ${HTTP_LUA_MODULE_P}.tar.gz )"
+	nginx_modules_http_lua? ( ${HTTP_LUA_MODULE_URI} -> ${HTTP_LUA_MODULE_P}.tar.gz )
+	nginx_modules_http_auth_pam? ( ${HTTP_AUTH_PAM_MODULE_URI} -> ${HTTP_AUTH_PAM_MODULE_P}.tar.gz )"
 
 LICENSE="BSD-2 BSD SSLeay MIT GPL-2"
 SLOT="0"
@@ -111,13 +114,13 @@ NGINX_MODULES_MAIL="imap pop3 smtp"
 NGINX_MODULES_3RD="
 	http_upload_progress
 	http_headers_more
-	http_passenger
 	http_push
 	http_cache_purge
 	http_upload
 	http_slowfs_cache
 	http_fancyindex
-	http_lua"
+	http_lua
+	http_auth_pam"
 
 IUSE="aio debug +http +http-cache ipv6 libatomic +pcre pcre-jit selinux ssl
 syslog vim-syntax"
@@ -152,7 +155,8 @@ CDEPEND="
 	nginx_modules_http_rewrite? ( >=dev-libs/libpcre-4.2 )
 	nginx_modules_http_secure_link? ( userland_GNU? ( dev-libs/openssl ) )
 	nginx_modules_http_xslt? ( dev-libs/libxml2 dev-libs/libxslt )
-	nginx_modules_http_lua? ( || ( dev-lang/lua dev-lang/luajit ) )"
+	nginx_modules_http_lua? ( || ( dev-lang/lua dev-lang/luajit ) )
+	nginx_modules_http_auth_pam? ( virtual/pam )"
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}
 	arm? ( dev-libs/libatomic_ops )
@@ -161,24 +165,6 @@ PDEPEND="vim-syntax? ( app-vim/nginx-syntax )"
 REQUIRED_USE="pcre-jit? ( pcre )"
 
 pkg_setup() {
-	if use nginx_modules_http_passenger; then
-		einfo
-		einfo "Passenger support has been removed from the nginx ebuild to"
-		einfo "get rid of file collisions, its broken build system and"
-		einfo "incompatibilities between passenger 2 and 3."
-		einfo
-		einfo "Please switch to passenger-3 standalone or use the"
-		einfo "unicorn gem which provides a sane nginx-like architecture"
-		einfo "out of the box."
-		einfo
-		einfo "For more information on sane ruby deployments with"
-		einfo "passenger-3/unicorn go to:"
-		einfo
-		einfo "https://rvm.beginrescueend.com"
-		einfo
-		die "nginx_modules_http_passenger still in IUSE"
-	fi
-
 	ebegin "Creating nginx user and group"
 	enewgroup ${PN}
 	enewuser ${PN} -1 -1 -1 ${PN}
@@ -204,7 +190,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	use syslog && epatch "${SYSLOG_MODULE_WD}"/syslog_${SYSLOG_MODULE_PV}.patch
+	use syslog && epatch "${SYSLOG_MODULE_WD}"/syslog_${SYSLOG_MODULE_NGINX_PV}.patch
 
 	find auto/ -type f -print0 | xargs -0 sed -i 's:\&\& make:\&\& \\$(MAKE):' || die
 	# We have config protection, don't rename etc files
@@ -290,6 +276,11 @@ src_configure() {
 		myconf+=" --add-module=${HTTP_LUA_MODULE_WD}"
 	fi
 
+	if use nginx_modules_http_auth_pam; then
+		http_enabled=1
+		myconf+=" --add-module=${HTTP_AUTH_PAM_MODULE_WD}"
+	fi
+
 	if use http || use http-cache; then
 		http_enabled=1
 	fi
@@ -361,8 +352,9 @@ src_install() {
 	doman man/nginx.8
 	dodoc CHANGES* README
 
-	dodir /var/www/localhost
-	mv "${ED}"/usr/html "${ED}"/var/www/localhost/htdocs || die
+	# just keepdir. do not copy the default htdocs files (bug #449136)
+	keepdir /var/www/localhost
+	rm -rf "${D}"/usr/html || die
 
 	# logrotate
 	insinto /etc/logrotate.d
@@ -407,6 +399,11 @@ src_install() {
 	if use nginx_modules_http_lua; then
 		docinto ${HTTP_LUA_MODULE_P}
 		dodoc "${HTTP_LUA_MODULE_WD}"/{Changes,README.markdown}
+	fi
+
+	if use nginx_modules_http_auth_pam; then
+		docinto ${HTTP_AUTH_PAM_MODULE_P}
+		dodoc "${HTTP_AUTH_PAM_MODULE_WD}"/{README,ChangeLog}
 	fi
 }
 

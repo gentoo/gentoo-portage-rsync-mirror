@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/queen/queen-1.ebuild,v 1.2 2012/12/14 20:31:18 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/queen/queen-1.ebuild,v 1.3 2013/01/13 11:30:29 ago Exp $
 
 EAPI=4
 inherit eutils games
@@ -37,7 +37,7 @@ SRC_URI="
 
 LICENSE="queen"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="mp3 linguas_de +linguas_en linguas_fr linguas_he linguas_it"
 REQUIRED_USE="|| ( linguas_de linguas_en linguas_fr linguas_he linguas_it )"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.97-r1.ebuild,v 1.3 2013/01/06 16:00:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.97-r1.ebuild,v 1.4 2013/01/13 11:29:53 ago Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ if [[ ${PV} != *9999* ]]; then
 	gl hi hne hr hu is it ja ka lt mai ml nb nds nl nn pl pt pt_BR ro ru rw sk
 	sv ta tg tr ug uk zh_CN zh_TW"
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-	KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux"
+	KEYWORDS="amd64 ~ppc x86 ~amd64-linux"
 	KDE_HANDBOOK="optional"
 else
 	ESVN_REPO_URI="https://kdiff3.svn.sourceforge.net/svnroot/kdiff3/trunk/kdiff3"

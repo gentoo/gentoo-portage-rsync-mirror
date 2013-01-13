@@ -4,11 +4,11 @@ DESCRIPTION=3rd installment of the classic id 3D first-person shooter
 EAPI=2
 HOMEPAGE=http://www.idsoftware.com/
 IUSE=cdinstall dedicated opengl teamarena
-KEYWORDS=-* amd64 ~x86
+KEYWORDS=-* amd64 x86
 LICENSE=Q3AEULA GPL-2
 RDEPEND=sys-libs/glibc dedicated? ( app-misc/screen ) amd64? ( app-emulation/emul-linux-x86-baselibs ) opengl? ( virtual/opengl x86? ( x11-libs/libXext x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp ) amd64? ( app-emulation/emul-linux-x86-xlibs || ( >=app-emulation/emul-linux-x86-xlibs-7.0 x11-drivers/nvidia-drivers >=x11-drivers/ati-drivers-8.8.25-r1 ) ) ) cdinstall? ( games-fps/quake3-data[cdinstall] teamarena? ( games-fps/quake3-teamarena ) ) !dedicated? ( !opengl? ( virtual/opengl x86? ( x11-libs/libXext x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp ) amd64? ( app-emulation/emul-linux-x86-xlibs || ( >=app-emulation/emul-linux-x86-xlibs-7.0 x11-drivers/nvidia-drivers >=x11-drivers/ati-drivers-8.8.25-r1 ) ) ) )
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://idsoftware/quake3/linux/linuxq3apoint-1.32b-3.x86.run mirror://idsoftware/quake3/quake3-1.32c.zip
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	games	e0a83e3f3f024b8c8ef7a8217d716cbf	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	unpacker	50e1227854e96469a19a63f053496328	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=338388a3068604b8d298914c342b0607
+_md5_=c3953673d96156b4a94a211f2a59328c

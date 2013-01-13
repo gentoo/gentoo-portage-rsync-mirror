@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e4rat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/ChangeLog,v 1.12 2012/12/22 11:00:03 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/ChangeLog,v 1.13 2013/01/13 11:21:31 ago Exp $
+
+  13 Jan 2013; Agostino Sarubbo <ago@gentoo.org> e4rat-0.2.3-r1.ebuild:
+  Stable for x86, wrt bug #448004
 
   22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> e4rat-0.2.3-r1.ebuild:
   Stable for amd64, wrt bug #448004

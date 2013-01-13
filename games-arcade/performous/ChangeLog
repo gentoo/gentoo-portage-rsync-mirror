@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/performous
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.13 2013/01/07 22:47:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.14 2013/01/13 11:22:47 ago Exp $
+
+  13 Jan 2013; Agostino Sarubbo <ago@gentoo.org> performous-0.7.0.ebuild:
+  Stable for x86, wrt bug #449932
 
   07 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/performous-0.6.1-boost150.patch, -files/performous-0.6.1-ffmpeg.patch,

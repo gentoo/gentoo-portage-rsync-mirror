@@ -10,4 +10,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=!amd64? ( http://download.java.net/media/jai/builds/release/1_1_3/jai-1_1_3-lib-linux-i586.tar.gz ) amd64? ( http://download.java.net/media/jai/builds/release/1_1_3/jai-1_1_3-lib-linux-amd64.tar.gz )
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	2d9eb3508fa5d6759e39354b74545567	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=34c97f14ca4368b06b0d73aa4e053aca
+_md5_=3c04c5e92aba561a1e8935a8d0c4fe57

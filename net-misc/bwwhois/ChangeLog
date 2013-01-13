@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bwwhois
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.35 2013/01/11 19:01:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.36 2013/01/13 11:29:10 ago Exp $
+
+  13 Jan 2013; Agostino Sarubbo <ago@gentoo.org> bwwhois-5.5.2-r1.ebuild:
+  Stable for x86, wrt bug #451036
 
   11 Jan 2013; Anthony G. Basile <blueness@gentoo.org> bwwhois-5.5.2-r1.ebuild:
   stable ppc, bug #451036, thanks vincent

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.7.0.ebuild,v 1.2 2013/01/03 10:57:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.7.0.ebuild,v 1.3 2013/01/13 11:22:47 ago Exp $
 
 EAPI=3
 inherit eutils flag-o-matic base cmake-utils games
@@ -25,7 +25,7 @@ LICENSE="GPL-2
 		CCPL-Attribution-NonCommercial-NoDerivs-2.5
 	)"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="songs tools"
 
 RDEPEND="dev-cpp/glibmm
