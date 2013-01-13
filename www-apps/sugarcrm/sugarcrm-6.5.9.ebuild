@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/sugarcrm/sugarcrm-6.4.0.ebuild,v 1.1 2012/02/25 14:29:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/sugarcrm/sugarcrm-6.5.9.ebuild,v 1.1 2013/01/13 17:33:09 maksbotan Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ inherit webapp eutils
 
 DESCRIPTION="A complete CRM and groupware system for businesses of all sizes."
 HOMEPAGE="http://www.sugarforge.org/"
-SRC_URI="http://www.sugarforge.org/frs/download.php/8838/${MY_PN}-${PV}.zip"
+SRC_URI="mirror://sourceforge/project/${PN}/1%20-%20SugarCRM%206.5.X/SugarCommunityEdition-6.5.X/SugarCE-${PV}.zip"
 
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"

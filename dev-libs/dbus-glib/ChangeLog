@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/dbus-glib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.110 2012/10/14 14:58:21 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.111 2013/01/13 17:50:03 eva Exp $
+
+*dbus-glib-0.100-r2 (13 Jan 2013)
+
+  13 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> -dbus-glib-0.98.ebuild,
+  +dbus-glib-0.100-r2.ebuild, +files/dbus-glib-0.100-fix-tests.patch:
+  Add patch to fix testsuite bug #356699. Switch to EAPI=5. Clean up old
+  revision
 
   14 Oct 2012; Raúl Porcel <armin76@gentoo.org> dbus-glib-0.100.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #416725
