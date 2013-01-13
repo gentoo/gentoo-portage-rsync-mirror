@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Module-Refresh
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Refresh/ChangeLog,v 1.27 2012/06/24 12:59:10 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Refresh/ChangeLog,v 1.28 2013/01/13 12:53:56 maekke Exp $
+
+  13 Jan 2013; Markus Meier <maekke@gentoo.org> Module-Refresh-0.170.0.ebuild:
+  add ~arm, bug #449762
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

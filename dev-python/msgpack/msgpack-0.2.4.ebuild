@@ -1,15 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/msgpack-0.2.4.ebuild,v 1.1 2013/01/11 06:01:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/msgpack-0.2.4.ebuild,v 1.2 2013/01/13 12:42:22 mgorny Exp $
 
-EAPI="4"
-PYTHON_DEPEND="2:2.5 3"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.7-pypy-* *-jython"
-DISTUTILS_SRC_TEST="nosetests"
-DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
+EAPI=5
+PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} )
 
-inherit distutils
+inherit distutils-r1
 
 MY_PN="${PN}-python"
 MY_P="${MY_PN}-${PV}"
@@ -23,10 +19,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-DEPEND="test? ( dev-python/six )"
+DEPEND="test? ( dev-python/six[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_P}"
 
-src_test() {
-	distutils_src_test -P -w test;
+python_test() {
+	nosetests -P -w test || die "Tests fail with ${EPYTHON}"
 }

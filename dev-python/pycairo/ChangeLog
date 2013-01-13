@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.126 2013/01/06 09:29:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.127 2013/01/13 12:54:24 eva Exp $
+
+*pycairo-1.10.0-r4 (13 Jan 2013)
+
+  13 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +pycairo-1.10.0-r4.ebuild:
+  Switch to EAPI=5 and python-r1.eclass.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> pycairo-1.10.0-r3.ebuild:
   Add ~sparc, wrt bug #449220

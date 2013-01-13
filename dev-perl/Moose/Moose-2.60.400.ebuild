@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/Moose-2.60.400.ebuild,v 1.3 2012/12/25 18:32:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/Moose-2.60.400.ebuild,v 1.4 2013/01/13 12:54:43 maekke Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="A postmodern object system for Perl 5"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86 ~x64-macos"
+KEYWORDS="amd64 ~arm ppc ~x86 ~x64-macos"
 IUSE="test"
 
 CONFLICTS="

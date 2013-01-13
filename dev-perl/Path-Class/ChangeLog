@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Path-Class
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.43 2013/01/06 15:38:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.44 2013/01/13 12:53:12 maekke Exp $
+
+  13 Jan 2013; Markus Meier <maekke@gentoo.org> Path-Class-0.290.0.ebuild:
+  add ~arm, bug #449762
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> -Path-Class-0.240.0.ebuild,
   -Path-Class-0.270.0.ebuild:

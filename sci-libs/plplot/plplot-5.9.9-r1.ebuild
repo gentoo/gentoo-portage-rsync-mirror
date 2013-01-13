@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9-r1.ebuild,v 1.6 2012/10/16 20:22:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9-r1.ebuild,v 1.7 2013/01/13 12:46:02 jlec Exp $
 
 EAPI=4
 
@@ -68,6 +68,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-tk86.patch
 	# path for python independent of python version
 	epatch "${FILESDIR}"/${PN}-5.9.6-python.patch
 	# test with pdf assumes a modified bundled libharu

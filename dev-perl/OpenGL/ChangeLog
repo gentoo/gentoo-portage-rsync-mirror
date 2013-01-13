@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/OpenGL
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenGL/ChangeLog,v 1.3 2012/06/24 12:58:19 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenGL/ChangeLog,v 1.4 2013/01/13 12:42:02 maekke Exp $
+
+  13 Jan 2013; Markus Meier <maekke@gentoo.org> OpenGL-0.660.0.ebuild:
+  add ~arm, bug #449762
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

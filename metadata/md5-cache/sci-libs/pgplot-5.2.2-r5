@@ -4,10 +4,10 @@ DESCRIPTION=FORTRAN/C device-independent scientific graphic library
 EAPI=4
 HOMEPAGE=http://www.astro.caltech.edu/~tjp/pgplot/
 IUSE=doc motif static-libs tk
-KEYWORDS=~amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=~amd64 ~arm ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux
 LICENSE=free-noncomm
 RDEPEND=media-libs/libpng x11-libs/libX11 x11-libs/libXt motif? ( >=x11-libs/motif-2.3:0 ) tk? ( dev-lang/tk ) virtual/fortran
 SLOT=0
 SRC_URI=ftp://ftp.astro.caltech.edu/pub/pgplot/pgplot522.tar.gz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fortran-2	19652e219ec9b62d7d89735821d7afb6	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=ccb931b62598cc06cd0340499fb11e5f
+_md5_=497199fbd704dd352cb1cb62c778cde9

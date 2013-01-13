@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/testtools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.52 2012/10/12 00:50:23 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.54 2013/01/13 12:59:43 fauli Exp $
+
+  13 Jan 2013; Christian Faulhammer <fauli@gentoo.org> -testtools-0.9.8.ebuild,
+  -testtools-0.9.11.ebuild, -testtools-0.9.14.ebuild, -testtools-0.9.16.ebuild:
+  clean up
+
+*testtools-0.9.24 (13 Jan 2013)
+
+  13 Jan 2013; Christian Faulhammer <fauli@gentoo.org>
+  +testtools-0.9.24.ebuild:
+  version bump
 
   12 Oct 2012; Mike Gilbert <floppym@gentoo.org> testtools-0.9.16.ebuild:
   Restrict python 2.5 per Arfrever.
