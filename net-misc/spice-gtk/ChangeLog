@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.47 2013/01/12 21:52:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.49 2013/01/12 23:56:49 cardoe Exp $
+
+*spice-gtk-0.15.3 (12 Jan 2013)
+
+  12 Jan 2013; Doug Goldstein <cardoe@gentoo.org> -spice-gtk-0.15.ebuild,
+  +spice-gtk-0.15.3.ebuild:
+  Use upstream's git snapshot that they use in Fedora to fix a SSL issue
+
+*spice-gtk-0.15 (12 Jan 2013)
+
+  12 Jan 2013; Doug Goldstein <cardoe@gentoo.org> +spice-gtk-0.15.ebuild:
+  Version bump
 
   12 Jan 2013; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   Add virtualization herd since we're mostly maintaining and using this package.
