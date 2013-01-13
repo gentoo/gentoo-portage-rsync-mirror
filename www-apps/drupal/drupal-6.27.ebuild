@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-7.17.ebuild,v 1.1 2012/11/09 22:32:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-6.27.ebuild,v 1.1 2013/01/13 07:23:08 radhermit Exp $
 
-EAPI=4
+EAPI=5
 
 inherit webapp
 
@@ -14,23 +14,20 @@ SRC_URI="http://drupal.org/files/projects/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
-IUSE="+mysql postgres sqlite"
+IUSE="+mysql postgres"
 
 RDEPEND="virtual/httpd-php
 	dev-lang/php[gd,pdo,postgres?,xml]
-	dev-php/pecl-apc
-	dev-php/pecl-uploadprogress
-	mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) )
-	sqlite? ( dev-lang/php[sqlite3] )"
+	mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) )"
 
 need_httpd_cgi
 
-REQUIRED_USE="|| ( mysql postgres sqlite )"
+REQUIRED_USE="|| ( mysql postgres )"
 
 src_install() {
 	webapp_src_preinst
 
-	local docs="MAINTAINERS.txt LICENSE.txt INSTALL.txt CHANGELOG.txt INSTALL.mysql.txt INSTALL.pgsql.txt INSTALL.sqlite.txt UPGRADE.txt "
+	local docs="MAINTAINERS.txt LICENSE.txt INSTALL.txt CHANGELOG.txt INSTALL.mysql.txt INSTALL.pgsql.txt UPGRADE.txt "
 	dodoc ${docs}
 	rm -f ${docs} INSTALL COPYRIGHT.txt
 
