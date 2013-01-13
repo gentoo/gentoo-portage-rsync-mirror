@@ -1,6 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-6.3.ebuild,v 1.6 2012/03/18 17:46:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-6.5.ebuild,v 1.1 2013/01/13 22:22:21 fauli Exp $
+
+EAPI=4
 
 inherit elisp
 
@@ -10,7 +12,7 @@ SRC_URI="http://www.mew.org/Release/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ssl linguas_ja"
 RESTRICT="test"
 
@@ -20,27 +22,24 @@ RDEPEND="${DEPEND}
 
 SITEFILE="50${PN}-gentoo.el"
 
-src_compile() {
+src_configure() {
 	econf \
-		--with-elispdir=${SITELISP}/${PN} \
-		--with-etcdir=${SITEETC}/${PN}
-	emake || die
+		--with-elispdir="${SITELISP}/${PN}" \
+		--with-etcdir="${SITEETC}/${PN}"
+}
 
-	if use linguas_ja; then
-		emake jinfo || die
-	fi
+src_compile() {
+	emake
+	use linguas_ja && emake jinfo
 	rm -f info/*~				# remove spurious backup files
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-
-	if use linguas_ja; then
-		emake DESTDIR="${D}" install-jinfo || die
-	fi
+	emake DESTDIR="${D}" install
+	use linguas_ja && emake DESTDIR="${D}" install-jinfo
 
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
-	dodoc 00api 00changes* 00diff 00readme mew.dot.* || die
+	dodoc 00api 00changes* 00diff 00readme dot.*
 }
 
 pkg_postinst() {
