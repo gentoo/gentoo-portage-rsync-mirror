@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/xfce4-panel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.229 2012/11/28 12:27:36 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.230 2013/01/13 06:03:33 ssuominen Exp $
+
+*xfce4-panel-4.10.0-r1 (13 Jan 2013)
+
+  13 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-panel-4.10.0-r1.ebuild, +files/xfce4-panel-4.10.0-icons.patch:
+  Fix icons not probably resizing when requested wrt #447182 by Carlos Silva.
+  The patch is from upstream git.
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-panel-4.10.0.ebuild:

@@ -1,24 +1,18 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.75.ebuild,v 1.1 2012/12/18 05:05:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.76.ebuild,v 1.1 2013/01/13 06:29:19 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2 user
 
-#if [[ ${PV} == *9999* ]]; then
-#	ESVN_REPO_URI="svn://svn.transmissionbt.com/Transmission/trunk"
-#	inherit subversion
-#else
-	SRC_URI="http://download.transmissionbt.com/${PN}/files/${P}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux"
-#fi
-
 DESCRIPTION="A Fast, Easy and Free BitTorrent client"
 HOMEPAGE="http://www.transmissionbt.com/"
+SRC_URI="http://download.transmissionbt.com/${PN}/files/${P}.tar.xz"
 
 LICENSE="GPL-2 MIT"
 SLOT=0
 IUSE="ayatana gtk lightweight qt4 xfs"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux"
 
 RDEPEND="
 	>=dev-libs/libevent-2.0.10
@@ -55,21 +49,7 @@ pkg_setup() {
 	enewuser ${PN} -1 -1 -1 ${PN}
 }
 
-src_unpack() {
-#	if [[ ${PV} == *9999* ]]; then
-#		subversion_src_unpack
-#	else
-		default
-#	fi
-}
-
 src_prepare() {
-#	if [[ ${PV} == *9999* ]]; then
-#		subversion_src_prepare
-#		./update-version-h.sh
-#	fi
-
-	sed -i -e '/^_Name/s:_::' qt/transmission-qt.desktop
 	sed -i -e '/CFLAGS/s:-ggdb3::' configure.ac
 	use ayatana || sed -i -e '/^LIBAPPINDICATOR_MINIMUM/s:=.*:=9999:' configure.ac
 
@@ -77,23 +57,6 @@ src_prepare() {
 	sed -i -e 's|noinst\(_PROGRAMS = $(TESTS)\)|check\1|' lib${PN}/Makefile.am || die
 
 	eautoreconf
-
-	if use qt4; then
-		cat <<-EOF > "${T}"/${PN}-magnet.protocol
-		[Protocol]
-		exec=${PN}-qt '%u'
-		protocol=magnet
-		Icon=${PN}
-		input=none
-		output=none
-		helper=true
-		listing=
-		reading=false
-		writing=false
-		makedir=false
-		deleting=false
-		EOF
-	fi
 }
 
 src_configure() {
@@ -143,9 +106,6 @@ src_install() {
 		for res in 16 22 24 32 48; do
 			newicon -s ${res} icons/hicolor_apps_${res}x${res}_${PN}.png ${PN}-qt.png
 		done
-
-		insinto /usr/share/kde4/services
-		doins "${T}"/${PN}-magnet.protocol
 
 		insinto /usr/share/qt4/translations
 		doins translations/*.qm

@@ -1,6 +1,17 @@
 # ChangeLog for net-p2p/transmission
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.221 2012/12/18 05:05:31 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.223 2013/01/13 06:30:19 ssuominen Exp $
+
+  13 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -transmission-2.75.ebuild:
+  old
+
+*transmission-2.76 (13 Jan 2013)
+
+  13 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +transmission-2.76.ebuild:
+  Version bump wrt #451492 by jospezial. Remove custom KDE magnet service file
+  because upstream -qt.desktop file gained magnet support through MimeType.
 
 *transmission-2.75 (18 Dec 2012)
 
