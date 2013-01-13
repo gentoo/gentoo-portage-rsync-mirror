@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libffi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.157 2012/12/07 23:12:09 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.158 2013/01/13 04:52:11 vapier Exp $
+
+  13 Jan 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/libffi-3.0.11-x86-pic-check.patch, libffi-3.0.11.ebuild:
+  Add fix from upstream for PIC compile checks #417179 by Richard Yao.
 
   07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> libffi-3.0.11.ebuild:
   Stable for ppc64, wrt bug #416669
