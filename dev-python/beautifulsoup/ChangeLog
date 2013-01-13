@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/beautifulsoup
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.79 2012/12/27 10:57:06 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.80 2013/01/13 20:08:57 radhermit Exp $
+
+  13 Jan 2013; Tim Harder <radhermit@gentoo.org> -beautifulsoup-4.0.4.ebuild,
+  -beautifulsoup-4.0.5.ebuild, -beautifulsoup-4.1.0.ebuild,
+  -beautifulsoup-4.1.1.ebuild, -beautifulsoup-4.1.2.ebuild:
+  Remove old.
 
   27 Dec 2012; Raúl Porcel <armin76@gentoo.org> beautifulsoup-4.1.3.ebuild:
   alpha/s390/sh/sparc stable wrt #441272
