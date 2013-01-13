@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.40 2013/01/11 01:06:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.44 2013/01/12 23:18:20 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -168,20 +168,21 @@ DEPEND=${PYTHON_DEPS}
 # @DESCRIPTION:
 # Run the setup.py using currently selected Python interpreter
 # (if ${PYTHON} is set; fallback 'python' otherwise). The setup.py will
-# be passed default command-line arguments, then ${mydistutilsargs[@]},
-# then any parameters passed to this command.
+# be passed default ${mydistutilsargs[@]}, then any parameters passed
+# to this command and optionally a standard option set (e.g. the build
+# directory in an ebuild using out-of-source builds).
 #
 # This command dies on failure.
 esetup.py() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local args=()
+	local add_args=()
 	if [[ ! ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
 		if [[ ! ${BUILD_DIR} ]]; then
 			die 'Out-of-source build requested, yet BUILD_DIR unset.'
 		fi
 
-		args+=(
+		add_args+=(
 			build
 			--build-base "${BUILD_DIR}"
 			# using a single directory for them helps us export ${PYTHONPATH}
@@ -192,7 +193,7 @@ esetup.py() {
 	fi
 
 	set -- "${PYTHON:-python}" setup.py \
-		"${args[@]}" "${mydistutilsargs[@]}" "${@}"
+		"${mydistutilsargs[@]}" "${@}" "${add_args[@]}"
 
 	echo "${@}" >&2
 	"${@}" || die
@@ -228,9 +229,7 @@ distutils-r1_python_prepare_all() {
 
 # @FUNCTION: distutils-r1_python_prepare
 # @DESCRIPTION:
-# The default python_prepare(). Currently it is a no-op
-# but in the future it may apply implementation-specific quirks
-# to the build system.
+# The default python_prepare(). A no-op.
 distutils-r1_python_prepare() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -239,7 +238,7 @@ distutils-r1_python_prepare() {
 
 # @FUNCTION: distutils-r1_python_configure
 # @DESCRIPTION:
-# The default python_configure(). Currently a no-op.
+# The default python_configure(). A no-op.
 distutils-r1_python_configure() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -250,7 +249,8 @@ distutils-r1_python_configure() {
 # @USAGE: [additional-args...]
 # @DESCRIPTION:
 # The default python_compile(). Runs 'esetup.py build'. Any parameters
-# passed to this function will be passed to setup.py.
+# passed to this function will be appended to setup.py invocation,
+# i.e. passed as options to the 'build' command.
 distutils-r1_python_compile() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -259,7 +259,7 @@ distutils-r1_python_compile() {
 
 # @FUNCTION: distutils-r1_python_test
 # @DESCRIPTION:
-# The default python_test(). Currently a no-op.
+# The default python_test(). A no-op.
 distutils-r1_python_test() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -304,7 +304,8 @@ _distutils-r1_rename_scripts() {
 # @DESCRIPTION:
 # The default python_install(). Runs 'esetup.py install', appending
 # the optimization flags. Then renames the installed scripts.
-# Any parameters passed to this function will be passed to setup.py.
+# Any parameters passed to this function will be appended
+# to the setup.py invocation (i.e. as options to the 'install' command).
 distutils-r1_python_install() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -381,7 +382,7 @@ distutils-r1_python_install_all() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	if declare -p DOCS &>/dev/null; then
-		dodoc "${DOCS[@]}" || die "dodoc failed"
+		dodoc -r "${DOCS[@]}" || die "dodoc failed"
 	else
 		local f
 		# same list as in PMS
@@ -450,9 +451,11 @@ distutils-r1_run_phase() {
 # @DESCRIPTION:
 # Run the given command, restoring the best-implementation state.
 _distutils-r1_run_common_phase() {
+	local DISTUTILS_ORIG_BUILD_DIR=${BUILD_DIR}
+
 	local EPYTHON=${_DISTUTILS_BEST_IMPL[0]}
 	local PYTHON=${_DISTUTILS_BEST_IMPL[1]}
-	local BEST_BUILD_DIR=${_DISTUTILS_BEST_IMPL[2]}
+	local BUILD_DIR=${_DISTUTILS_BEST_IMPL[2]}
 	local PYTHONPATH=${_DISTUTILS_BEST_IMPL[3]}
 
 	export EPYTHON PYTHON PYTHONPATH
@@ -491,8 +494,6 @@ distutils-r1_src_prepare() {
 	_distutils-r1_multijob_init
 	if declare -f python_prepare >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_prepare
-	else
-		python_foreach_impl distutils-r1_run_phase distutils-r1_python_prepare
 	fi
 	multijob_finish
 }
@@ -501,8 +502,6 @@ distutils-r1_src_configure() {
 	_distutils-r1_multijob_init
 	if declare -f python_configure >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_configure
-	else
-		python_foreach_impl distutils-r1_run_phase distutils-r1_python_configure
 	fi
 	multijob_finish
 
@@ -533,8 +532,6 @@ distutils-r1_src_test() {
 	_distutils-r1_multijob_init
 	if declare -f python_test >/dev/null; then
 		python_foreach_impl distutils-r1_run_phase python_test
-	else
-		python_foreach_impl distutils-r1_run_phase distutils-r1_python_test
 	fi
 	multijob_finish
 

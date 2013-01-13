@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.113 2013/01/06 18:57:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.114 2013/01/12 23:25:02 mgorny Exp $
+
+  12 Jan 2013; Michał Górny <mgorny@gentoo.org> logilab-common-0.58.3-r1.ebuild:
+  Fix following change of BEST_BUILD_DIR to BUILD_DIR.
 
   06 Jan 2013; Michał Górny <mgorny@gentoo.org> logilab-common-0.55.2.ebuild,
   logilab-common-0.57.1.ebuild, logilab-common-0.57.2.ebuild,

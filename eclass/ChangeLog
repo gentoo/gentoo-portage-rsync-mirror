@@ -1,6 +1,20 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.609 2013/01/12 14:35:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.613 2013/01/12 23:18:20 mgorny Exp $
+
+  12 Jan 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Provide best implementation's build dir in python_*_all() as BUILD_DIR to
+  make use of esetup.py easier.
+
+  12 Jan 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Pass arguments to setup.py in an predictable order, especially do not prepend
+  commands before user options.
+
+  12 Jan 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Support specifying directories in DOCS.
+
+  12 Jan 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Do not call dummy phases unnecessarily.
 
   12 Jan 2013; Justin Lecher <jlec@gentoo.org> flag-o-matic.eclass:
   Don't check for twice, but check for redirect support, #445244; thanks Andrey

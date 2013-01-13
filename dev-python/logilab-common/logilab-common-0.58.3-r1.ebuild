@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.58.3-r1.ebuild,v 1.3 2013/01/06 18:57:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.58.3-r1.ebuild,v 1.4 2013/01/12 23:25:02 mgorny Exp $
 
 EAPI=5
 # broken with python3.3, bug #449276
@@ -39,7 +39,7 @@ python_prepare_all() {
 python_compile_all() {
 	if use doc; then
 		# Simplest way to make makefile point to the right place.
-		ln -s "${BEST_BUILD_DIR}" build || die
+		ln -s "${BUILD_DIR}" build || die
 		emake -C doc epydoc
 		rm build || die
 	fi
