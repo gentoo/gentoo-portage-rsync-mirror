@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.93 2013/01/10 07:40:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.94 2013/01/13 09:17:27 graaff Exp $
+
+  13 Jan 2013; Hans de Graaff <graaff@gentoo.org> rack-1.4.3.ebuild,
+  +files/rack-1.4.3-tmpdir.patch:
+  Clean up ebuild. Fix sandbox violation in tests. Update HOMEPAGE.
 
 *rack-1.4.3 (10 Jan 2013)
 

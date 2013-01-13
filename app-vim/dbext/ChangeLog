@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/dbext
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.30 2012/12/04 11:22:43 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.31 2013/01/13 09:21:31 radhermit Exp $
+
+*dbext-18.0 (13 Jan 2013)
+
+  13 Jan 2013; Tim Harder <radhermit@gentoo.org> +dbext-18.0.ebuild:
+  Version bump.
 
   04 Dec 2012; <ago@gentoo.org> dbext-16.0.ebuild:
   Stable for x86, wrt bug #441126

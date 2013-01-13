@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/django-evolution
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/ChangeLog,v 1.4 2012/11/13 11:26:49 idella4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/ChangeLog,v 1.5 2013/01/13 09:21:23 idella4 Exp $
+
+*django-evolution-0.6.7-r1 (13 Jan 2013)
+
+  13 Jan 2013; Ian Delaney <idella4@gentoo.org>
+  +django-evolution-0.6.7-r1.ebuild:
+  rev-bump; adding pypy support, migration to distutils-r1
 
   14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
   Updating maintainer, metadata.xml
