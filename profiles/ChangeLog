@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7355 2013/01/13 17:30:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7356 2013/01/13 18:56:34 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jan 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add Old-MIT license to MISC-FREE group.
 
   13 Jan 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Unmask dev-libs/icu-50.1.1, should be OK for ~arch.
