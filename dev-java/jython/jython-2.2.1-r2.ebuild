@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.2.1-r2.ebuild,v 1.1 2012/09/27 14:47:27 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.2.1-r2.ebuild,v 1.2 2013/01/13 08:59:12 sera Exp $
 
 EAPI=4
 
@@ -95,7 +95,7 @@ src_install() {
 	java-pkg_dojar "dist/${PN}.jar"
 
 	dodoc README.txt NEWS ACKNOWLEDGMENTS
-	use doc && dohtml -A .css .jpg .gif -r Doc/*
+	use doc && dohtml -r Doc/*
 
 	local java_args="-Dpython.home=/usr/share/jython"
 	java_args="${java_args} -Dpython.cachedir=\${HOME}/.jythoncachedir"
