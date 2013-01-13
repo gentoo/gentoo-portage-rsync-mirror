@@ -1,4 +1,7 @@
 
+  13 Jan 2013; Sven Vermeulen <swift@gentoo.org>
+  selinux-pan-2.20120725-r9.ebuild:
+  Stabilizing r9
 
 *selinux-pan-2.20120725-r9 (21 Dec 2012)
 

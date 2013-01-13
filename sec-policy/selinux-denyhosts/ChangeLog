@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-denyhosts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-denyhosts/ChangeLog,v 1.19 2012/12/30 19:25:51 swift Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-denyhosts/ChangeLog,v 1.20 2013/01/13 16:03:45 swift Exp $
+
+  13 Jan 2013; Sven Vermeulen <swift@gentoo.org>
+  selinux-denyhosts-2.20120725-r9.ebuild:
+  Stabilizing r9
 
 *selinux-denyhosts-2.20120725-r9 (21 Dec 2012)
 

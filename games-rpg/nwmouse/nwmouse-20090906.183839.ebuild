@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-20090906.183839.ebuild,v 1.3 2010/08/17 20:30:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-20090906.183839.ebuild,v 1.4 2013/01/13 16:19:42 tupone Exp $
 
 inherit games
 
@@ -12,11 +12,6 @@ SRC_URI="http://dev.gentoo.org/~calchan/distfiles/${P}.tar.bz2
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 x86"
-# I've looked at this stuff, and I can't find the problem myself, so I'm just
-# removing the warnings.  If someone feels like finding the patch, that would be
-# great and I'll gladly include it.
-QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/nwn/nwmouse.so"
-QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/nwn/nwmouse.so"
 IUSE=""
 RESTRICT="strip mirror"
 
@@ -33,7 +28,12 @@ RDEPEND="sys-libs/glibc
 		x11-libs/libX11
 		media-libs/libsdl )"
 
+# I've looked at this stuff, and I can't find the problem myself, so I'm just
+# removing the warnings.  If someone feels like finding the patch, that would be
+# great and I'll gladly include it.
 dir="${GAMES_PREFIX_OPT}/nwn"
+QA_PREBUILT="${dir:1}/nwmouse.so
+	${dir:1}/nwmouse/libdis/libdisasm.so"
 
 pkg_setup() {
 	games_pkg_setup

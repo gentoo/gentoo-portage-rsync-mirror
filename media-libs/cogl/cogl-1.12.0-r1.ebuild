@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.12.0-r1.ebuild,v 1.3 2013/01/06 09:47:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.12.0-r1.ebuild,v 1.4 2013/01/13 16:16:47 eva Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
@@ -30,7 +30,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 	virtual/opengl
 	gles2? ( media-libs/mesa[gles2] )
 
-	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
+	introspection? ( >=dev-libs/gobject-introspection-1.34.2 )
 	pango? ( >=x11-libs/pango-1.20.0[introspection?] )"
 # before clutter-1.7, cogl was part of clutter
 RDEPEND="${COMMON_DEPEND}

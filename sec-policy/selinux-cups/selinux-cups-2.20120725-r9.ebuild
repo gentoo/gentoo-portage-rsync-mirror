@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-cups/selinux-cups-2.20120725-r9.ebuild,v 1.1 2012/12/21 20:47:25 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-cups/selinux-cups-2.20120725-r9.ebuild,v 1.2 2013/01/13 16:03:56 swift Exp $
 EAPI="4"
 
 IUSE=""
@@ -11,7 +11,7 @@ inherit selinux-policy-2
 
 DESCRIPTION="SELinux policy for cups"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="${DEPEND}
 	sec-policy/selinux-lpd
 "
