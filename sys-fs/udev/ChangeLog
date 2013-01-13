@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.758 2013/01/13 17:58:13 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.759 2013/01/13 20:56:57 williamh Exp $
+
+  13 Jan 2013; William Hubbs <williamh@gentoo.org> udev-197-r2.ebuild,
+  udev-9999.ebuild:
+  Fix udev-init-scripts dependencies per poly-c and move udevadm to /bin. If
+  someone wants a revbump I will do so.
 
   13 Jan 2013; William Hubbs <williamh@gentoo.org> -udev-197-r1.ebuild:
   remove old version

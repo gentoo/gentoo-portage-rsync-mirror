@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.2 2013/01/12 16:36:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.3 2013/01/13 20:56:57 williamh Exp $
 
 EAPI=4
 
@@ -57,8 +57,7 @@ then
 fi
 
 RDEPEND="${COMMON_DEPEND}
-	openrc? ( >=sys-fs/udev-init-scripts-19
-		!<sys-apps/openrc-0.9.9 )
+	openrc? ( !<sys-apps/openrc-0.9.9 )
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.45
 	!sys-fs/device-mapper
@@ -66,7 +65,8 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25"
 
-PDEPEND=">=virtual/udev-180"
+PDEPEND=">=virtual/udev-180
+	openrc? ( >=sys-fs/udev-init-scripts-19 )"
 
 S=${WORKDIR}/systemd-${PV}
 
@@ -161,6 +161,7 @@ src_configure()
 		ac_cv_header_sys_capability_h=yes
 		DBUS_CFLAGS=' '
 		DBUS_LIBS=' '
+		--bindir=/bin
 		--docdir=/usr/share/doc/${PF}
 		--libdir=/usr/$(get_libdir)
 		--with-html-dir=/usr/share/doc/${PF}/html
@@ -300,7 +301,7 @@ src_install()
 	doins "${FILESDIR}"/40-gentoo.rules
 
 	# install udevadm symlink
-	dosym ../usr/bin/udevadm /sbin/udevadm
+	dosym ../bin/udevadm /sbin/udevadm
 }
 
 pkg_preinst()
