@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.10.1-r1.ebuild,v 1.3 2013/01/12 15:32:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.10.1-r1.ebuild,v 1.4 2013/01/13 21:06:33 hasufell Exp $
 
 EAPI=5
 
@@ -54,7 +54,6 @@ src_install() {
 pkg_preinst() {
 	games_pkg_preinst
 	gnome2_icon_savelist
-	fdo-mime_desktop_database_update
 }
 
 pkg_postinst() {

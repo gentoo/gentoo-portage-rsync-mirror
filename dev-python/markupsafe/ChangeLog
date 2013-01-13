@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/markupsafe
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.43 2012/12/19 12:18:19 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.44 2013/01/13 21:23:44 mgorny Exp $
+
+  13 Jan 2013; Michał Górny <mgorny@gentoo.org> markupsafe-0.15-r1.ebuild:
+  Enable pypy2.0.
 
 *markupsafe-0.15-r1 (19 Dec 2012)
 

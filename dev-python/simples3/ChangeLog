@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simples3
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simples3/ChangeLog,v 1.1 2011/12/01 14:36:19 djc Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simples3/ChangeLog,v 1.2 2013/01/13 21:05:42 mgorny Exp $
+
+  13 Jan 2013; Michał Górny <mgorny@gentoo.org> simples3-1.0.ebuild:
+  Migrate to distutils-r1. Improve homepage. Proxied for Johan Bergström.
 
 *simples3-1.0 (01 Dec 2011)
 
@@ -38,4 +41,3 @@
   12 May 2009; Johan Bergström (jbergstroem) <bugs@bergstroem.nu>
   +simples3-0.2.ebuild, +metadata.xml:
   Ebuild for bug 267146
-
