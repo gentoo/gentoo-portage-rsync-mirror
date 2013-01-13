@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/s390 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.57 2013/01/09 16:54:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.58 2013/01/13 13:20:38 armin76 Exp $
+
+  13 Jan 2013; Raúl Porcel <armin76@gentoo.org> s390x/make.defaults:
+  Add -multilib on BOOTSTRAP_USE for s390x, bug #451020
 
   09 Jan 2013; Justin Lecher <jlec@gentoo.org> package.use.mask:
   Mask test for dev-lang/tk, x11-base/xorg-server[xvfb] is not keyworded

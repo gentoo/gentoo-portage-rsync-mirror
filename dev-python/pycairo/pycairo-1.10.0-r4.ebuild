@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r4.ebuild,v 1.1 2013/01/13 12:54:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.10.0-r4.ebuild,v 1.3 2013/01/13 13:23:49 eva Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python2_{6,7} python3_{1,2} )
+PYTHON_COMPAT=( python2_{6,7} python3_{1,2,3} )
 
 inherit eutils python-r1 waf-utils
 
@@ -49,9 +49,9 @@ src_prepare() {
 
 	preparation() {
 		if [[ ${EPYTHON} == python3.* ]]; then
-			cp -r "${WORKDIR}/pycairo-${PYCAIRO_PYTHON3_VERSION}" "${BUILD_DIR}" || die
+			cp -r -l "${WORKDIR}/pycairo-${PYCAIRO_PYTHON3_VERSION}" "${BUILD_DIR}" || die
 		else
-			cp -r "${WORKDIR}/py2cairo-${PYCAIRO_PYTHON2_VERSION}" "${BUILD_DIR}" || die
+			cp -r -l "${WORKDIR}/py2cairo-${PYCAIRO_PYTHON2_VERSION}" "${BUILD_DIR}" || die
 		fi
 	}
 	python_foreach_impl preparation
@@ -84,7 +84,7 @@ src_compile() {
 src_test() {
 	test_installation() {
 		./waf install --destdir="${T}/tests/${BUILD_DIR}"
-		PYTHONPATH="${T}/tests/${BUILD_DIR}${EPREFIX}${PYTHON_SITEDIR}" py.test -v
+		PYTHONPATH="${T}/tests/${BUILD_DIR}$(python_get_sitedir)" py.test -v
 	}
 	python_foreach_impl run_in_build_dir test_installation
 }
@@ -95,10 +95,9 @@ src_install() {
 	dodoc AUTHORS NEWS README
 
 	if use doc; then
-		pushd doc/_build/html > /dev/null
-		insinto /usr/share/doc/${PF}/html
-		doins -r [a-z]* _static
-		popd > /dev/null
+		pushd doc/_build/html > /dev/null || die
+		dohtml -r [a-z]* _static
+		popd > /dev/null || die
 	fi
 
 	if use examples; then
@@ -111,8 +110,8 @@ src_install() {
 		# calling them .bundle, it also has no idea what it should do to create
 		# proper ones (dylibs)
 		fix_darwin_install_names() {
-			local x="${PYTHON_SITEDIR}/cairo/_cairo.bundle"
-			install_name_tool -id "${EPREFIX}${x}" "${ED}${x}"
+			local x="$(python_get_sitedir)/cairo/_cairo.bundle"
+			install_name_tool -id "${x}" "${ED}${x}"
 		}
 		python_foreach_impl fix_darwin_install_names
 	fi
@@ -121,5 +120,5 @@ src_install() {
 run_in_build_dir() {
 	pushd "${BUILD_DIR}" > /dev/null || die
 	"$@"
-	popd > /dev/null
+	popd > /dev/null || die
 }

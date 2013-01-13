@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/B-Hooks-EndOfScope
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Hooks-EndOfScope/ChangeLog,v 1.27 2013/01/08 18:39:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Hooks-EndOfScope/ChangeLog,v 1.28 2013/01/13 13:25:28 maekke Exp $
+
+  13 Jan 2013; Markus Meier <maekke@gentoo.org>
+  B-Hooks-EndOfScope-0.120.0.ebuild:
+  add ~arm, bug #449762
 
   08 Jan 2013; Torsten Veller <tove@gentoo.org>
   -B-Hooks-EndOfScope-0.90.0.ebuild:
