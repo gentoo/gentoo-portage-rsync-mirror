@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.74 2013/01/12 19:02:41 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.75 2013/01/13 00:09:55 alonbl Exp $
+
+*botan-1.10.3-r1 (13 Jan 2013)
+
+  13 Jan 2013; Alon Bar-Lev <alonbl@gentoo.org> +botan-1.10.3-r1.ebuild:
+  Python support per bug#382889, some sync with Arfrever Frehtes Taifersar
+  Arahesis work, cleanups
 
   12 Jan 2013; Alon Bar-Lev <alonbl@gentoo.org> botan-1.10.3.ebuild:
   Add bindist USE to disable ecdsa, bug#446226, thanks to Peter Stuge

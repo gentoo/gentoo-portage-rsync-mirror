@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/man-db
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.33 2012/10/28 11:09:21 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.34 2013/01/13 00:13:48 vapier Exp $
+
+  13 Jan 2013; Mike Frysinger <vapier@gentoo.org> man-db-2.6.3-r1.ebuild:
+  Reset permissions/owners on /var/cache/man if they are broken (like when
+  migrating from sys-apps/man) #447944 by Viacheslav Prisivko.
 
 *man-db-2.6.3-r1 (28 Oct 2012)
 
