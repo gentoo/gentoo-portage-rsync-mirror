@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/sun-jimi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/ChangeLog,v 1.13 2011/12/31 16:43:00 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jimi/ChangeLog,v 1.14 2013/01/13 13:40:24 sera Exp $
+
+*sun-jimi-1.0-r3 (13 Jan 2013)
+
+  13 Jan 2013; Ralph Sennhauser <sera@gentoo.org> +sun-jimi-1.0-r3.ebuild:
+  Fix Homepage and download url, thanks to Elisas Propst <mail@eliasprobst.eu>.
+  #435802
+  LICENSE is now Oracle-BCLA-JavaSE.
+  EAPI bump.
 
   31 Dec 2011; Ralph Sennhauser <sera@gentoo.org> sun-jimi-1.0-r2.ebuild:
   Drop ia64 support #345433

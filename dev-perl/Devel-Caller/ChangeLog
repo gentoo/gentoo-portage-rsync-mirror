@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Caller
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Caller/ChangeLog,v 1.8 2012/11/18 11:17:00 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Caller/ChangeLog,v 1.9 2013/01/13 13:54:11 maekke Exp $
+
+  13 Jan 2013; Markus Meier <maekke@gentoo.org> Devel-Caller-2.50.0.ebuild:
+  add ~arm, bug #449762
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Cycle
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Cycle/ChangeLog,v 1.30 2012/06/24 13:00:01 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Cycle/ChangeLog,v 1.31 2013/01/13 13:34:54 maekke Exp $
+
+  13 Jan 2013; Markus Meier <maekke@gentoo.org> Devel-Cycle-1.110.0.ebuild:
+  add ~arm, bug #449762
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

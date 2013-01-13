@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Inspector
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.85 2012/11/04 16:18:43 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.86 2013/01/13 13:47:38 maekke Exp $
+
+  13 Jan 2013; Markus Meier <maekke@gentoo.org> Class-Inspector-1.280.0.ebuild:
+  add ~arm, bug #449762
 
 *Class-Inspector-1.280.0 (04 Nov 2012)
 

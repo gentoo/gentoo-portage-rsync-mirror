@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Map
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Map/ChangeLog,v 1.6 2012/12/26 09:39:28 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Map/ChangeLog,v 1.7 2013/01/13 13:59:23 maekke Exp $
+
+  13 Jan 2013; Markus Meier <maekke@gentoo.org> File-Map-0.560.0.ebuild:
+  add ~arm, bug #449762
 
 *File-Map-0.560.0 (26 Dec 2012)
 

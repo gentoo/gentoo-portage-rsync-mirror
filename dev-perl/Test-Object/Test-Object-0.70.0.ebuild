@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Object/Test-Object-0.70.0.ebuild,v 1.2 2011/09/03 21:04:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Object/Test-Object-0.70.0.ebuild,v 1.3 2013/01/13 13:48:25 maekke Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Thoroughly testing objects via registered handlers"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="amd64 ~arm ~ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE=""
 
 RDEPEND="virtual/perl-File-Spec

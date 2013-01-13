@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-LexAlias
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-LexAlias/ChangeLog,v 1.5 2012/11/18 11:17:40 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-LexAlias/ChangeLog,v 1.6 2013/01/13 13:54:47 maekke Exp $
+
+  13 Jan 2013; Markus Meier <maekke@gentoo.org> Devel-LexAlias-0.40.0.ebuild:
+  add ~arm, bug #449762
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.
