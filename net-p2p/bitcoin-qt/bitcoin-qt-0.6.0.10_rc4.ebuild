@@ -1,6 +1,6 @@
-# Copyright 2010-2012 Gentoo Foundation
+# Copyright 2010-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.6.0.10_rc4.ebuild,v 1.1 2012/10/29 01:58:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.6.0.10_rc4.ebuild,v 1.2 2013/01/13 22:40:35 blueness Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="$IUSE 1stclassmsg dbus +eligius +qrcode ssl upnp"
 
 RDEPEND="
-	>=dev-libs/boost-1.41.0
+	>=dev-libs/boost-1.41.0[threads(+)]
 	dev-libs/openssl[-bindist]
 	qrcode? (
 		media-gfx/qrencode
@@ -74,7 +74,6 @@ src_prepare() {
 
 src_configure() {
 	OPTS=()
-	local BOOST_PKG BOOST_VER
 
 	use dbus && OPTS+=("USE_DBUS=1")
 	use ssl  && OPTS+=("DEFINES+=USE_SSL")
@@ -88,12 +87,6 @@ src_configure() {
 
 	OPTS+=("BDB_INCLUDE_PATH=$(db_includedir "${DB_VER}")")
 	OPTS+=("BDB_LIB_SUFFIX=-${DB_VER}")
-
-	BOOST_PKG="$(best_version 'dev-libs/boost')"
-	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
-	BOOST_VER="$(replace_all_version_separators _ "${BOOST_VER}")"
-	OPTS+=("BOOST_INCLUDE_PATH=/usr/include/boost-${BOOST_VER}")
-	OPTS+=("BOOST_LIB_SUFFIX=-${BOOST_VER}")
 
 	eqmake4 "${PN}.pro" "${OPTS[@]}"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.117 2012/12/16 14:11:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.118 2013/01/13 22:35:28 eva Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -118,7 +118,7 @@ gnome2_src_configure() {
 	# Update the GNOME configuration options
 	if [[ ${GCONF_DEBUG} != 'no' ]] ; then
 		if use debug ; then
-			G2CONF="${G2CONF} --enable-debug=yes"
+			G2CONF="--enable-debug=yes ${G2CONF}"
 		fi
 	fi
 
@@ -130,45 +130,45 @@ gnome2_src_configure() {
 	# rebuild docs.
 	# Preserve old behavior for older EAPI.
 	if grep -q "enable-gtk-doc" ${ECONF_SOURCE:-.}/configure ; then
-		if has ${EAPI-0} 0 1 2 3 4 && has doc ${IUSE} ; then
-			G2CONF="${G2CONF} $(use_enable doc gtk-doc)"
+		if has ${EAPI:-0} 0 1 2 3 4 && has doc ${IUSE} ; then
+			G2CONF="$(use_enable doc gtk-doc) ${G2CONF}"
 		else
-			G2CONF="${G2CONF} --disable-gtk-doc"
+			G2CONF="--disable-gtk-doc ${G2CONF}"
 		fi
 	fi
 
 	# Pass --disable-maintainer-mode when needed
 	if grep -q "^[[:space:]]*AM_MAINTAINER_MODE(\[enable\])" \
 		${ECONF_SOURCE:-.}/configure.*; then
-		G2CONF="${G2CONF} --disable-maintainer-mode"
+		G2CONF="--disable-maintainer-mode ${G2CONF}"
 	fi
 
 	# Pass --disable-scrollkeeper when possible
 	if grep -q "disable-scrollkeeper" ${ECONF_SOURCE:-.}/configure; then
-		G2CONF="${G2CONF} --disable-scrollkeeper"
+		G2CONF="--disable-scrollkeeper ${G2CONF}"
 	fi
 
 	# Pass --disable-silent-rules when possible (not needed for eapi5), bug #429308
 	if has ${EAPI:-0} 0 1 2 3 4; then
 		if grep -q "disable-silent-rules" ${ECONF_SOURCE:-.}/configure; then
-			G2CONF="${G2CONF} --disable-silent-rules"
+			G2CONF="--disable-silent-rules ${G2CONF}"
 		fi
 	fi
 
 	# Pass --disable-schemas-install when possible
 	if grep -q "disable-schemas-install" ${ECONF_SOURCE:-.}/configure; then
-		G2CONF="${G2CONF} --disable-schemas-install"
+		G2CONF="--disable-schemas-install ${G2CONF}"
 	fi
 
 	# Pass --disable-schemas-compile when possible
 	if grep -q "disable-schemas-compile" ${ECONF_SOURCE:-.}/configure; then
-		G2CONF="${G2CONF} --disable-schemas-compile"
+		G2CONF="--disable-schemas-compile ${G2CONF}"
 	fi
 
 	# Avoid sandbox violations caused by gnome-vfs (bug #128289 and #345659)
 	addwrite "$(unset HOME; echo ~)/.gnome2"
 
-	econf "$@" ${G2CONF}
+	econf ${G2CONF} "$@"
 }
 
 # @FUNCTION: gnome2_src_compile

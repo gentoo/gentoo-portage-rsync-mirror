@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/glib:2 dev-libs/gmp dev-libs/mpfr dev-libs/popt sys-libs/ncurses sys-libs/readline gnome? ( x11-libs/gtk+:2 gnome-base/libgnome gnome-base/libgnomeui gnome-base/libglade:2.0 x11-libs/gtksourceview:2.0 x11-libs/vte:0 )
 SLOT=0
 SRC_URI=http://ftp.gnome.org/pub/GNOME/sources/genius/1.0/genius-1.0.16.tar.xz doc? ( http://www.jirka.org/genius-reference.pdf )
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	18cda077fa5f661f96aa70c192b4b4a5	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	ddf6065984ab0a6d09e8c2ec264d7921	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=d83d9a31ef69870b8787119c6465c12a

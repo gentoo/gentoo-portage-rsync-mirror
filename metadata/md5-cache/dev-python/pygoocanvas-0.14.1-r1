@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-python/pygobject-2.11.3:2 >=dev-python/pygtk-2.10.4:2 >=dev-python/pycairo-1.8.4 >=x11-libs/goocanvas-0.14:0
 SLOT=0
 SRC_URI=mirror://gnome/sources/pygoocanvas/0.14/pygoocanvas-0.14.1.tar.bz2
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	18cda077fa5f661f96aa70c192b4b4a5	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	9aa8a023e062fca0ba79362d9d0cc488	python-r1	b9091432451f035281bf6fc17720e820	python-utils-r1	069a968fde0ceb8a9cd5c6a89d77cbc2	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	ddf6065984ab0a6d09e8c2ec264d7921	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	9aa8a023e062fca0ba79362d9d0cc488	python-r1	b9091432451f035281bf6fc17720e820	python-utils-r1	069a968fde0ceb8a9cd5c6a89d77cbc2	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=8d28a2ec3820d5741a284c183e90d76c

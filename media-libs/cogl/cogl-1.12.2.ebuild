@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.12.2.ebuild,v 1.2 2013/01/13 16:16:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.12.2.ebuild,v 1.4 2013/01/13 22:46:06 eva Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
@@ -17,7 +17,8 @@ IUSE="doc examples +introspection +opengl gles2 +pango"
 KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 # XXX: need uprof for optional profiling support
-COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
+COMMON_DEPEND="
+	>=dev-libs/glib-2.28.0:2
 	x11-libs/cairo:=
 	>=x11-libs/gdk-pixbuf-2:2
 	x11-libs/libdrm:=
@@ -40,6 +41,7 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/gtk-doc-am-1.13
 	sys-devel/gettext
 	virtual/pkgconfig
+	doc? ( >=dev-util/gtk-doc-1.13 )
 	test? (	app-admin/eselect-opengl
 		media-libs/mesa[classic] )
 "
@@ -56,6 +58,7 @@ src_configure() {
 		--enable-deprecated        \
 		--enable-gdk-pixbuf        \
 		--enable-glib              \
+		$(use_enable doc gtk-doc)  \
 		$(use_enable opengl glx)   \
 		$(use_enable opengl gl)    \
 		$(use_enable gles2)        \
@@ -83,10 +86,6 @@ src_install() {
 	EXAMPLES="examples/{*.c,*.jpg}"
 
 	clutter_src_install
-
-	# Make sure gtk-doc is installed
-	cd "${S}"/doc || die
-	emake install DESTDIR="${D}" || die
 
 	# Remove silly examples-data directory
 	rm -rvf "${ED}/usr/share/cogl/examples-data/" || die

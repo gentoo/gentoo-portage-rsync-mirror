@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.613 2013/01/12 23:18:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.614 2013/01/13 22:35:28 eva Exp $
+
+  13 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> gnome2.eclass:
+  Allow ebuild override of eclass generated econf.
 
   12 Jan 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Provide best implementation's build dir in python_*_all() as BUILD_DIR to

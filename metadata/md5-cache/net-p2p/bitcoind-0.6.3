@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install prepare setup test
-DEPEND=>=dev-libs/boost-1.41.0 dev-libs/openssl[-bindist] logrotate? ( app-admin/logrotate ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx] >=app-shells/bash-4.1
+DEPEND=>=dev-libs/boost-1.41.0[threads(+)] dev-libs/openssl[-bindist] logrotate? ( app-admin/logrotate ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx] >=app-shells/bash-4.1
 DESCRIPTION=Original Bitcoin crypto-currency wallet for automated services
 EAPI=4
 HOMEPAGE=http://bitcoin.org/
 IUSE=+eligius examples logrotate upnp
 KEYWORDS=amd64 arm x86
 LICENSE=MIT ISC GPL-2
-RDEPEND=>=dev-libs/boost-1.41.0 dev-libs/openssl[-bindist] logrotate? ( app-admin/logrotate ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx]
+RDEPEND=>=dev-libs/boost-1.41.0[threads(+)] dev-libs/openssl[-bindist] logrotate? ( app-admin/logrotate ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx]
 SLOT=0
 SRC_URI=https://nodeload.github.com/bitcoin/bitcoin/tarball/v0.6.3 -> bitcoin-v0.6.3.tgz eligius? ( http://luke.dashjr.org/programs/bitcoin/files/bitcoind/eligius/sendfee/0.6.1-eligius_sendfee.patch.xz ) logrotate? ( https://github.com/bitcoin/bitcoin/commit/9af080c351c40a4f56d37174253d33a9f4ffdb69.diff -> 0.6.3-reopen_log_file.patch )
 _eclasses_=db-use	2f5d6a2718559b90a51648d8ff58be83	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=e5446c7e6b2e7cf924e79949a8223b31
+_md5_=f18f6895cba6f4b302d6c3ee97ce5a0a
