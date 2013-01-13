@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/socketpool
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/ChangeLog,v 1.1 2012/11/16 02:39:07 idella4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/ChangeLog,v 1.2 2013/01/13 04:19:18 idella4 Exp $
+
+  13 Jan 2013; Ian Delaney <idella4@gentoo.org> socketpool-0.5.2.ebuild:
+  migrated to distutils-r1, added test phase, its 1 test fails making for Bug
+  #451610
 
 *socketpool-0.5.2 (16 Nov 2012)
 
