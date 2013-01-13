@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mygui/mygui-3.2.0-r1.ebuild,v 1.2 2013/01/05 12:07:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mygui/mygui-3.2.0-r1.ebuild,v 1.3 2013/01/13 11:40:06 ago Exp $
 
 EAPI=4
 inherit eutils cmake-utils flag-o-matic multilib
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/my-gui/${MY_PN}/${MY_P}/${MY_P}.zip"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug doc plugins samples static-libs test tools linguas_ru"
 
 RDEPEND="dev-games/ogre[freeimage,opengl]

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.0.3-r3.ebuild,v 1.17 2012/12/30 14:29:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.0.3-r3.ebuild,v 1.18 2013/01/13 11:32:26 ago Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
@@ -22,7 +22,7 @@ SRC_URI="mirror://sourceforge/bacula/${MY_P}.tar.gz"
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc sparc ~x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="acl bacula-clientonly bacula-nodir bacula-nosd ipv6 logwatch mysql postgres python qt4 readline +sqlite3 ssl static tcpd vim-syntax X"
 
 # maintainer comment:

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.30.ebuild,v 1.9 2012/12/30 20:44:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.30.ebuild,v 1.10 2013/01/13 11:35:35 ago Exp $
 
 EAPI=4
 inherit multilib python eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/msmtp/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc gnome-keyring gnutls idn +mta nls sasl ssl vim-syntax"
 
 CDEPEND="

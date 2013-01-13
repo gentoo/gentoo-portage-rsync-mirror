@@ -1,6 +1,9 @@
 # ChangeLog for games-action/atanks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.83 2013/01/04 13:05:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.84 2013/01/13 11:39:32 ago Exp $
+
+  13 Jan 2013; Agostino Sarubbo <ago@gentoo.org> atanks-5.7.ebuild:
+  Stable for x86, wrt bug #449896
 
   04 Jan 2013; Agostino Sarubbo <ago@gentoo.org> atanks-5.7.ebuild:
   Stable for ppc, wrt bug #449896

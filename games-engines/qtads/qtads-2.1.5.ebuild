@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-2.1.5.ebuild,v 1.4 2013/01/03 10:59:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-2.1.5.ebuild,v 1.5 2013/01/13 11:40:48 ago Exp $
 
 EAPI=4
 inherit eutils gnome2-utils fdo-mime qt4-r2 games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/qtads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[audio]

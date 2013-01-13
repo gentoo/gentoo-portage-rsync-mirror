@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-5.7.ebuild,v 1.3 2013/01/04 13:05:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-5.7.ebuild,v 1.4 2013/01/13 11:39:32 ago Exp $
 
 EAPI=2
 inherit eutils gnome2-utils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/atanks/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="media-libs/allegro:0[X]"
