@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2.ebuild,v 1.6 2013/01/12 23:32:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2.ebuild,v 1.7 2013/01/13 02:53:28 cardoe Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ MY_P=${MY_PN}-1.2.0
 
 PYTHON_DEPEND="2"
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python user udev
-BACKPORTS=49a7da83
+BACKPORTS=b6773f5e
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/virt/kvm/qemu-kvm.git"
