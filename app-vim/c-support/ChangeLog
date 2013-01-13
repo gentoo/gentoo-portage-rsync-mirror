@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/c-support
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/c-support/ChangeLog,v 1.4 2012/08/05 23:40:48 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/c-support/ChangeLog,v 1.5 2013/01/13 19:23:45 radhermit Exp $
+
+*c-support-6.0 (13 Jan 2013)
+
+  13 Jan 2013; Tim Harder <radhermit@gentoo.org> +c-support-6.0.ebuild:
+  Version bump.
 
   05 Aug 2012; Tim Harder <radhermit@gentoo.org> -c-support-5.13.ebuild:
   Remove old.

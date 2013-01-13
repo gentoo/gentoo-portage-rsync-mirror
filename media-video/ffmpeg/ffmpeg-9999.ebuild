@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.109 2012/12/08 12:06:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.110 2013/01/13 19:23:29 aballier Exp $
 
 EAPI="4"
 
@@ -30,11 +30,11 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 fi
 IUSE="
 	aac aacplus alsa amr avresample bindist bluray +bzip2 cdio celt
-	cpudetection debug doc +encode faac fdk flite fontconfig frei0r gnutls
-	gsm +hardcoded-tables iec61883 ieee1394 jack jpeg2k libass libcaca libv4l
-	modplug mp3	network openal openssl opus oss pic pulseaudio rtmp schroedinger
-	sdl speex static-libs test theora threads truetype twolame v4l vaapi vdpau
-	vorbis vpx X x264 xvid +zlib
+	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
+	gnutls gsm +hardcoded-tables iec61883 ieee1394 jack jpeg2k libass libcaca
+	libv4l modplug mp3 network openal openssl opus oss pic pulseaudio rtmp
+	schroedinger sdl speex static-libs test theora threads truetype twolame v4l
+	vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -282,8 +282,12 @@ src_compile() {
 src_install() {
 	emake V=1 DESTDIR="${D}" install install-man
 
-	dodoc Changelog README INSTALL
-	dodoc -r doc/*
+	dodoc Changelog README CREDITS doc/*.txt doc/APIchanges doc/RELEASE_NOTES
+	use doc && dohtml -r doc/*
+	if use examples ; then
+		insinto "/usr/share/doc/${PF}/examples"
+		doins -r doc/examples/*
+	fi
 
 	for i in ${FFTOOLS} ; do
 		if use fftools_$i ; then
