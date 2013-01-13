@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r1.ebuild,v 1.6 2013/01/07 03:40:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r1.ebuild,v 1.7 2013/01/13 19:43:16 floppym Exp $
 
 EAPI=4
 
@@ -89,7 +89,8 @@ RDEPEND+="
 "
 if [[ -n ${DO_AUTORECONF} ]] ; then
 	DEPEND+=" >=sys-devel/autogen-5.10"
-else
+fi
+if [[ ${PV} != 9999 ]]; then
 	DEPEND+=" app-arch/xz-utils"
 fi
 

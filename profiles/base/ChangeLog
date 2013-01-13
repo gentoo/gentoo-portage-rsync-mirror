@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.491 2013/01/02 20:11:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.492 2013/01/13 19:45:10 aballier Exp $
+
+  13 Jan 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  also mask dev-ml/eliom[ocamlduce], bug #446876 by Michael Palimaka
+  (kensington)
 
   02 Jan 2013; Michał Górny <mgorny@gentoo.org> package.use.force:
   Force pypy2.0 on python-exec.

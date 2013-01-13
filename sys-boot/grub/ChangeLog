@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.245 2013/01/07 03:40:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.246 2013/01/13 19:43:16 floppym Exp $
+
+  13 Jan 2013; Mike Gilbert <floppym@gentoo.org> grub-2.00-r1.ebuild:
+  Fix dependency on xz-utils, reported by onox.
 
   07 Jan 2013; Mike Gilbert <floppym@gentoo.org>
   +files/grub-2.00-compression.patch, grub-2.00-r1.ebuild:

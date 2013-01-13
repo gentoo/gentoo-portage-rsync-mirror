@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptstate
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/ChangeLog,v 1.42 2012/09/20 14:00:01 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptstate/ChangeLog,v 1.43 2013/01/13 19:53:48 ulm Exp $
+
+  13 Jan 2013; Ulrich Müller <ulm@gentoo.org> iptstate-2.2.3.ebuild:
+  Fix LICENSE, see LICENSE file.
 
   20 Sep 2012; Johannes Huber <johu@gentoo.org> iptstate-2.2.5.ebuild:
   Stable for x86, wrt bug #429152

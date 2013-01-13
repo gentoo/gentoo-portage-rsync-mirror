@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/tyxml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/ChangeLog,v 1.5 2012/08/07 16:38:14 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/ChangeLog,v 1.6 2013/01/13 19:50:06 aballier Exp $
+
+*tyxml-2.2.0 (13 Jan 2013)
+
+  13 Jan 2013; Alexis Ballier <aballier@gentoo.org> +tyxml-2.2.0.ebuild:
+  version bump, bug #446726 by Jacques-Pascal Deplaix
 
   07 Aug 2012; Alexis Ballier <aballier@gentoo.org> -tyxml-2.0.2.ebuild,
   -tyxml-2.1.ebuild:
