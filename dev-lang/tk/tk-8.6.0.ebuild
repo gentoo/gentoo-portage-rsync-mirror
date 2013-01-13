@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.6.0.ebuild,v 1.2 2013/01/11 09:34:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.6.0.ebuild,v 1.3 2013/01/13 21:54:44 grobian Exp $
 
 EAPI=5
 
@@ -66,8 +66,7 @@ src_prepare() {
 	tc-export CC
 
 	sed \
-		-e 's:-O2::g' \
-		-e 's:-O::g' \
+		-e 's:-O[2s]\?::g' \
 		-i tcl.m4 || die
 
 	eautoconf

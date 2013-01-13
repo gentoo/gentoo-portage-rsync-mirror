@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.9.ebuild,v 1.8 2013/01/06 09:49:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.11.ebuild,v 1.1 2013/01/13 21:34:13 tetromino Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ DESCRIPTION="An OpenType text shaping engine"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/HarfBuzz"
 [[ ${PV} == 9999 ]] || SRC_URI="http://www.freedesktop.org/software/${PN}/release/${P}.tar.bz2"
 
-LICENSE="MIT"
+LICENSE="Old-MIT ISC icu"
 SLOT="0"
 [[ ${PV} == 9999 ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris"
@@ -29,8 +29,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
-# needed for autoreconf
-[[ ${PV} == 9999 ]] && DEPEND+=" dev-util/gtk-doc-am"
 
 src_prepare() {
 	if [[ ${CHOST} == *-darwin* ]] ; then

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/Babel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.45 2012/12/19 19:37:53 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.46 2013/01/13 21:31:58 mgorny Exp $
+
+  13 Jan 2013; Michał Górny <mgorny@gentoo.org> Babel-0.9.6-r1.ebuild:
+  Enable pypy2.0.
 
 *Babel-0.9.6-r1 (19 Dec 2012)
 

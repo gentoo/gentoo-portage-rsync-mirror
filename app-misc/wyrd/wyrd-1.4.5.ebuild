@@ -1,8 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/wyrd-1.4.5.ebuild,v 1.2 2012/07/29 17:16:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/wyrd-1.4.5.ebuild,v 1.3 2013/01/13 21:40:20 aballier Exp $
 
 EAPI=4
+
+inherit eutils autotools
 
 DESCRIPTION="Text-based front-end to Remind"
 HOMEPAGE="http://pessimization.com/software/wyrd/"
@@ -20,6 +22,11 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-lang/ocaml-3.08
 "
+
+src_prepare() {
+	epatch "${FILESDIR}/ocaml4.patch"
+	eautoreconf
+}
 
 src_configure() {
 	econf \
