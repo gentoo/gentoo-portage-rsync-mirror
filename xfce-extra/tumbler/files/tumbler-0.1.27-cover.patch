@@ -1,0 +1,12 @@
+diff -ur tumbler-0.1.27/acinclude.m4 tumbler-0.1.27.orig/acinclude.m4
+--- tumbler-0.1.27/acinclude.m4	2013-01-12 13:14:28.000000000 +0200
++++ tumbler-0.1.27.orig/acinclude.m4	2013-01-13 12:23:46.472324118 +0200
+@@ -250,7 +250,7 @@
+ dnl
+ AC_DEFUN([TUMBLER_COVER_THUMBNAILER],
+ [
+-AC_ARG_ENABLE([pixbuf-thumbnailer], [AC_HELP_STRING([--disable-cover-thumbnailer], [Don't build the Cover thumbnailer plugin])],
++AC_ARG_ENABLE([cover-thumbnailer], [AC_HELP_STRING([--disable-cover-thumbnailer], [Don't build the Cover thumbnailer plugin])],
+   [ac_tumbler_cover_thumbnailer=$enableval], [ac_tumbler_cover_thumbnailer=yes])
+ if test x"$ac_tumbler_cover_thumbnailer" = x"yes"; then
+   dnl Check for gdk-pixbuf
