@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.13.1.ebuild,v 1.2 2012/12/02 22:24:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.14.1.ebuild,v 1.1 2013/01/13 10:49:42 pacho Exp $
 
-EAPI=4
-GCONF_DEBUG=no
+EAPI="5"
+GCONF_DEBUG="no"
 
 inherit gnome2
 
@@ -14,17 +14,20 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="btrfs dmraid fat gtk hfs jfs kde mdadm ntfs reiserfs reiser4 xfs"
+IUSE="btrfs dmraid fat gtk hfs jfs kde mdadm ntfs policykit reiserfs reiser4 xfs"
 
 # FIXME: add gpart support
-COMMON_DEPEND=">=dev-cpp/gtkmm-2.16:2.4
-	>=dev-libs/glib-2
-	>=sys-block/parted-3.1"
+COMMON_DEPEND=">=dev-cpp/gtkmm-2.22:2.4
+	>=dev-libs/glib-2:2
+	>=sys-block/parted-3.1:="
 
 RDEPEND="${COMMON_DEPEND}
-	gtk? ( x11-libs/gksu )
-	kde? ( kde-base/kdesu )
+	!policykit? (
+		gtk? ( x11-libs/gksu )
+		kde? ( kde-base/kdesu ) )
+	policykit? ( sys-auth/polkit )
 
+	>=sys-apps/util-linux-2.20
 	>=sys-fs/e2fsprogs-1.41
 	btrfs? ( sys-fs/btrfs-progs )
 	dmraid? ( || (
@@ -53,9 +56,8 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	virtual/pkgconfig"
 
-DOCS="AUTHORS ChangeLog NEWS README"
-
 src_configure() {
+	DOCS="AUTHORS ChangeLog NEWS README"
 	G2CONF="${G2CONF}
 		--enable-doc
 		GKSUPROG=$(type -P true)"
@@ -72,16 +74,23 @@ src_install() {
 
 	local _ddir="${D}"/usr/share/applications
 
-	if use kde; then
-		cp "${_ddir}"/gparted{,-kde}.desktop
-		sed -i -e 's:Exec=:Exec=kdesu :' "${_ddir}"/gparted-kde.desktop
-		echo 'OnlyShowIn=KDE;' >> "${_ddir}"/gparted-kde.desktop
-	fi
-
-	if use gtk; then
-		sed -i -e 's:Exec=:Exec=gksu :' "${_ddir}"/gparted.desktop
-		echo 'NotShowIn=KDE;' >> "${_ddir}"/gparted.desktop
+	if use policykit; then
+		sed -i -e 's:/usr/sbin/gparted %f:gparted-pkexec:' "${_ddir}"/gparted.desktop
+		insinto /usr/share/polkit-1/actions/
+		doins "${FILESDIR}"/org.gentoo.pkexec.gparted.policy
+		dobin "${FILESDIR}"/gparted-pkexec
 	else
-		echo 'OnlyShowIn=X-NeverShowThis;' >> "${_ddir}"/gparted.desktop
+		if use kde; then
+			cp "${_ddir}"/gparted{,-kde}.desktop
+			sed -i -e 's:Exec=:Exec=kdesu :' "${_ddir}"/gparted-kde.desktop
+			echo 'OnlyShowIn=KDE;' >> "${_ddir}"/gparted-kde.desktop
+		fi
+
+		if use gtk; then
+			sed -i -e 's:Exec=:Exec=gksu :' "${_ddir}"/gparted.desktop
+			echo 'NotShowIn=KDE;' >> "${_ddir}"/gparted.desktop
+		else
+			echo 'OnlyShowIn=X-NeverShowThis;' >> "${_ddir}"/gparted.desktop
+		fi
 	fi
 }

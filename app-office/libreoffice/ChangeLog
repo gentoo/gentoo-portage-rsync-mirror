@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.430 2013/01/12 10:54:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.431 2013/01/13 10:52:53 scarabeus Exp $
+
+  13 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.0.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  Fix configure dropped options. Wrt bug#451576.
 
   12 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop unused desc.

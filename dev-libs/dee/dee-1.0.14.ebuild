@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/dee-1.0.14.ebuild,v 1.6 2013/01/06 09:21:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dee/dee-1.0.14.ebuild,v 1.7 2013/01/13 10:37:17 jlec Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND="
 	dev-libs/glib:2
 	dev-libs/icu"
 DEPEND="${RDEPEND}
-	dev-util/gtk-doc
+	doc? ( dev-util/gtk-doc )
 	test? (
 		dev-libs/gtx
 		dev-util/dbus-test-runner
@@ -41,7 +41,7 @@ src_configure() {
 		--disable-silent-rules
 		$(use_enable debug trace-log)
 		$(use_enable test tests)
-		$(use_enable test extended-tests)
+#		$(use_enable test extended-tests)
 		$(use_enable icu)
 		$(use_enable doc gtk-doc)
 		)
