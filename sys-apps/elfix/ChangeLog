@@ -1,4 +1,7 @@
 
+  13 Jan 2013; Anthony G. Basile <blueness@gentoo.org> -elfix-0.6.0.ebuild:
+  Remove older stable
+
   10 Jan 2013; Anthony G. Basile <blueness@gentoo.org> elfix-0.7.0.ebuild:
   Stable x86, bug #445334
 
