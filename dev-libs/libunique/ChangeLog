@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libunique
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.60 2012/10/26 02:14:55 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.61 2013/01/13 16:35:38 eva Exp $
+
+  13 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> -libunique-1.1.6.ebuild,
+  libunique-1.1.6-r1.ebuild, libunique-3.0.2.ebuild:
+  Add dbus[X] to dependencies for tests, bug #402461. Does not really affect
+  dependency tree since libunique is targeted for use by X applications.
 
   26 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   libunique-1.1.6-r1.ebuild:

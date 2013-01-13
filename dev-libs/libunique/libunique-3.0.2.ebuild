@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-3.0.2.ebuild,v 1.11 2012/05/04 18:35:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-3.0.2.ebuild,v 1.12 2013/01/13 16:35:38 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -17,7 +17,9 @@ SLOT="3"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 IUSE="doc +introspection"
 
-RDEPEND=">=dev-libs/glib-2.25.7:2
+RDEPEND="
+	>=dev-libs/glib-2.25.7:2
+	sys-apps/dbus[X]
 	>=x11-libs/gtk+-2.90.0:3[introspection?]
 	x11-libs/libX11
 "
