@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/nautilus-sendto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/ChangeLog,v 1.66 2013/01/06 09:40:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/ChangeLog,v 1.67 2013/01/13 15:53:49 eva Exp $
+
+*nautilus-sendto-3.6.1 (13 Jan 2013)
+
+  13 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  nautilus-sendto-2.32.0.ebuild, -nautilus-sendto-3.0.3.ebuild,
+  +nautilus-sendto-3.6.1.ebuild:
+  Version bump. Drop old revision. Fix USE=doc issues, bug #356071.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> nautilus-sendto-3.6.0.ebuild:
   Add ~sparc, wrt bug #449220
