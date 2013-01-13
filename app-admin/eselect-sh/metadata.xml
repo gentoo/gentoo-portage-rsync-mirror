@@ -5,11 +5,4 @@
 		<email>mgorny@gentoo.org</email>
 		<name>Michał Górny</name>
 	</maintainer>
-	<upstream>
-		<maintainer status="active">
-			<email>mgorny@gentoo.org</email>
-			<name>Michał Górny</name>
-		</maintainer>
-		<bugs-to>https://bitbucket.org/mgorny/eselect-sh/issues/</bugs-to>
-	</upstream>
 </pkgmetadata>
