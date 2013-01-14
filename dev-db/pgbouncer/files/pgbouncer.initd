@@ -1,6 +1,6 @@
 #!/sbin/runscript
 
-extra_started_commands="reload"
+extra_started_commands="reload upgrade"
 
 if [ -d /run ] ; then
 	RUNDIR=/run/pgbouncer
@@ -14,8 +14,7 @@ depend() {
 }
 
 start() {
-	mkdir -p ${RUNDIR}
-	chown pgbouncer:pgbouncer ${RUNDIR}
+	checkpath -d -m 755 -o pgbouncer:pgbouncer ${RUNDIR}
 
 	ebegin "Starting pgbouncer"
 	start-stop-daemon --start --pidfile ${RUNDIR}/pgbouncer.pid \
@@ -31,7 +30,14 @@ stop() {
 
 reload() {
 	ebegin "Gracefully reloading pgbouncer"
-	start-stop-daemon --stop --oknodo --signal HUP \
-		--pidfile ${RUNDIR}/pgbouncer.pid
+	kill -HUP $(head -n1 ${RUNDIR}/pgbouncer.pid)
 	eend $?
+}
+
+upgrade() {
+	egrep -q "^unix_socket_dir" /etc/pgbouncer.conf || \
+		eerror "Not running with unix sockets, cannot upgrade"
+    ebegin "Gracefully upgrading pgbouncer"
+		/usr/bin/pgbouncer -R -q -d -u pgbouncer /etc/pgbouncer.conf
+    eend $?
 }

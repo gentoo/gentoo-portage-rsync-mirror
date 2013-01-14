@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/colordiff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.93 2013/01/14 16:38:14 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.94 2013/01/14 17:15:09 pinkbyte Exp $
+
+  14 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> colordiff-1.0.13.ebuild:
+  Stable on arm, wrt bug #451650
 
   14 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> colordiff-1.0.13.ebuild:
   Stable on amd64, wrt bug #451650
