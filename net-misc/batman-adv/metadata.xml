@@ -7,6 +7,7 @@
 </maintainer>
 <use>
 	<flag name="bla">B.A.T.M.A.N. bridge loop avoidance</flag>
+	<flag name="dat">B.A.T.M.A.N. distributed arp table</flag>
 </use>
 </pkgmetadata>
 

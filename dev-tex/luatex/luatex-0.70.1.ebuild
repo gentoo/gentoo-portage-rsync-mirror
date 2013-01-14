@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.70.1.ebuild,v 1.16 2012/08/08 16:30:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.70.1.ebuild,v 1.17 2013/01/14 11:18:50 aballier Exp $
 
 EAPI=4
 
@@ -108,10 +108,11 @@ src_install() {
 
 pkg_postinst() {
 	if ! has_version '>=dev-texlive/texlive-basic-2008' ; then
-		elog "Please note that this package does not install much files, mainly the"
-		elog "${PN} executable that will need other files in order to be useful.."
-		elog "Please consider installing a recent TeX distribution"
-		elog "like TeX Live 2008 to get the full power of ${PN}"
+		elog "Note that this package does not install many files, mainly just the"
+		elog "${PN} executable, which needs other files in order to be"
+		elog "useful. Please consider installing a recent TeX distribution such as"
+		elog "TeX Live 2008 or later to take advantage of the full power of"
+		elog "${PN} ."
 	fi
 	if [ "$ROOT" = "/" ] && [ -x "${EPREFIX}"/usr/bin/fmtutil-sys ] ; then
 		einfo "Rebuilding formats"

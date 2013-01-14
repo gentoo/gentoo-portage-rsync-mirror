@@ -4385,6 +4385,7 @@ net-misc/badvpn:server - Build the badvpn-server program, a central server that 
 net-misc/badvpn:tun2socks - Build tun2socks, a program which implements a TUN device that forwards TCP traffic through a SOCKS5 server.
 net-misc/badvpn:udpgw - Build udpgw, a small daemon which allows tun2socks to forward UDP traffic.
 net-misc/batman-adv:bla - B.A.T.M.A.N. bridge loop avoidance
+net-misc/batman-adv:dat - B.A.T.M.A.N. distributed arp table
 net-misc/bfgminer:adl - Enable support for controlling fans and overclocking on AMD cards with AMD Display Library
 net-misc/bfgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE FPGAs
 net-misc/bfgminer:cpumining - Enable support for mining with CPUs

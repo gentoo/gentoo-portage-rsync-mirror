@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/luatex
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.105 2012/10/17 13:20:58 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.106 2013/01/14 11:18:50 aballier Exp $
+
+  14 Jan 2013; Alexis Ballier <aballier@gentoo.org> luatex-0.70.1.ebuild,
+  luatex-0.70.1-r1.ebuild:
+  Tweak elog message to mention newer TeX Live versions, bug #439916 by Keshav
+  Kini
 
   17 Oct 2012; Alexis Ballier <aballier@gentoo.org> luatex-0.70.1-r1.ebuild:
   switch to efmtutil-sys
