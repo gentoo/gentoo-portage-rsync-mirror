@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=|| ( virtual/udev sys-apps/hotplug ) sys-apps/hotplug-base sys-apps/fxload kernel_linux? ( virtual/modutils )
 SLOT=0
 SRC_URI=http://oss.wischip.com/wis-go7007-linux-0.9.8.tar.bz2
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	linux-info	f01ffb28843e2de3ea571f80f07e5078	linux-mod	dbc722ed035721476f23ab7b0572985e	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	4f764d2b1e34e4ef12b9b0d6e680c0ee	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	linux-info	577c57349491cfe6518278f7433d6123	linux-mod	dbc722ed035721476f23ab7b0572985e	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	4f764d2b1e34e4ef12b9b0d6e680c0ee	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=6c3a6db8bb81fccd3c84b5333dea4a6e

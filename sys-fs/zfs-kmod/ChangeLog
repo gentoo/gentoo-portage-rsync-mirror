@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/zfs-kmod
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.11 2012/12/23 05:44:22 ryao Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.13 2013/01/14 21:11:11 ryao Exp $
+
+*zfs-kmod-0.6.0_rc13-r1 (14 Jan 2013)
+
+  14 Jan 2013; Richard Yao <ryao@gentoo.org>
+  +files/zfs-kmod-0.6.0_rc13-fix-invisible-snapshots.patch,
+  +files/zfs-kmod-0.6.0_rc13-fix-recursive-reader.patch,
+  +files/zfs-kmod-0.6.0_rc13-gcc-4.7-compat.patch,
+  +zfs-kmod-0.6.0_rc13-r1.ebuild:
+  Fix deadlock that can occur with concurrent `zfs destroy` and `zfs list`
+  operations, fix regression that makes snapshots invisible, fix GCC 4.7 build
+  failure with USE=debug, add Linux 3.8 support
 
 *zfs-kmod-0.6.0_rc13 (23 Dec 2012)
 

@@ -9,5 +9,5 @@ LICENSE=Apache-2.0 GPL-2
 RDEPEND=ssl? ( dev-libs/openssl ) monitor? ( dev-python/twisted dev-python/twisted-conch dev-python/twisted-web pyside? ( dev-python/pyside ) !pyside? ( dev-python/PyQt4 ) net-zope/zope-interface ) debug? ( dev-lang/perl ) monitor? ( =dev-lang/python-2* )
 SLOT=0
 SRC_URI=http://openvswitch.org/releases/openvswitch-1.6.1.tar.gz
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	linux-info	f01ffb28843e2de3ea571f80f07e5078	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	linux-info	577c57349491cfe6518278f7433d6123	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=c91c0099055da6c48f8869bc24ac1841

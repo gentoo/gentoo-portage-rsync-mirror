@@ -1,10 +1,18 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7358 2013/01/14 20:56:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7360 2013/01/14 21:02:57 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> +releases/13.0/eapi,
+  +releases/13.0/make.defaults, +releases/13.0/package.mask,
+  +releases/13.0/parent:
+  Add 13.0 release directory referring to eapi-5-files
+
+  14 Jan 2013; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Update google-chrome mask; it is not affected by the masked dependencies.
 
   14 Jan 2013; Mike Gilbert <floppym@gentoo.org> package.mask:
   Revert last change due to bad dependencies.

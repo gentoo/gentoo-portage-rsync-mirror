@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.143 2013/01/14 11:59:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.144 2013/01/14 21:11:20 mgorny Exp $
+
+  14 Jan 2013; Michał Górny <mgorny@gentoo.org> pysqlite-2.6.3-r1.ebuild:
+  Fix installing examples.
 
 *pysqlite-2.6.3-r1 (14 Jan 2013)
 

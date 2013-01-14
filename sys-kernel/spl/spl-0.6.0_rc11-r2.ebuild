@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc11-r2.ebuild,v 1.4 2012/12/29 17:01:12 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc11-r2.ebuild,v 1.5 2013/01/14 21:07:59 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -54,9 +54,12 @@ src_prepare() {
 	# Workaround for hard coded path
 	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/check.sh || die
 
-	# Linux 3.6 Support
-	epatch "${FILESDIR}/${P}-linux-3.6-compat.patch"
-	epatch "${FILESDIR}/${PN}-0.6.0_rc12-fix-3.6-compat-regression.patch"
+	if [ ${PV} != "9999" ]
+	then
+		# Linux 3.6 Support
+		epatch "${FILESDIR}/${P}-linux-3.6-compat.patch"
+		epatch "${FILESDIR}/${PN}-0.6.0_rc12-fix-3.6-compat-regression.patch"
+	fi
 
 	autotools-utils_src_prepare
 }

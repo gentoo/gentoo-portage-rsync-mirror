@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.219 2013/01/10 21:19:22 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.220 2013/01/14 21:24:05 slyfox Exp $
+
+  14 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org> ppc64/64ul/use.mask:
+  mask template_haskell on ppc64 (unregisterised arch)
 
   10 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org> package.use.mask:
   mask USE=seccomp for app-emulation/qemu (sys-libs/libseccomp knows only about

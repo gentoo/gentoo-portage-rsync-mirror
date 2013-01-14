@@ -1,4 +1,4 @@
-DEFINED_PHASES=install prepare
+DEFINED_PHASES=compile install prepare
 DEPEND=x11-libs/gtk+:2 dev-libs/openssl virtual/pkgconfig
 DESCRIPTION=A One Time Password and S/Key calculator for X
 EAPI=5
@@ -9,4 +9,4 @@ RDEPEND=x11-libs/gtk+:2 dev-libs/openssl
 SLOT=0
 SRC_URI=http://killa.net/infosec/otpCalc/otpCalc-0.97.tar.gz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=9175566ac3f984c6c6d1db9831d64235
+_md5_=d3c838ae33fbe1ef7d6ec21428487ea2

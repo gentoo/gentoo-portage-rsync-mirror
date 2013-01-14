@@ -80,3 +80,7 @@ audit
 
 # see bug #446900 and bug #425494
 clang
+
+# unregisterised ghc arch for now.
+# no ghci - no TH
+template_haskell
