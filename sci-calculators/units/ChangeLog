@@ -1,6 +1,12 @@
 # ChangeLog for sci-calculators/units
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.51 2013/01/14 12:38:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.53 2013/01/14 20:24:25 jer Exp $
+
+  14 Jan 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Fix metadata.xml.
+
+  14 Jan 2013; Jeroen Roovers <jer@gentoo.org> -files/units-2.00-gentoo.patch:
+  Clean up after Justin.
 
   14 Jan 2013; Justin Lecher <jlec@gentoo.org> -units-1.88.ebuild,
   -units-1.88-r1.ebuild, -units-2.00.ebuild, metadata.xml:
