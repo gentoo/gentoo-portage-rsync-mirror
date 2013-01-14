@@ -1,6 +1,17 @@
 # ChangeLog for app-forensics/libewf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.29 2012/12/10 05:17:10 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.31 2013/01/14 05:47:36 radhermit Exp $
+
+*libewf-20130105 (14 Jan 2013)
+
+  14 Jan 2013; Tim Harder <radhermit@gentoo.org> +libewf-20130105.ebuild:
+  Version bump, update HOMEPAGE and SRC_URI.
+
+*libewf-20121209-r1 (14 Jan 2013)
+
+  14 Jan 2013; Tim Harder <radhermit@gentoo.org> +libewf-20121209-r1.ebuild,
+  metadata.xml:
+  Revision bump. Add fuse, uuid, and ssl use flags and fix deps.
 
 *libewf-20121209 (10 Dec 2012)
 
