@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/oracle-jdk-bin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.27 2012/12/19 14:36:41 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.28 2013/01/14 06:59:45 sera Exp $
+
+*oracle-jdk-bin-1.7.0.11 (14 Jan 2013)
+
+  14 Jan 2013; Ralph Sennhauser <sera@gentoo.org>
+  +oracle-jdk-bin-1.7.0.11.ebuild:
+  Security bump. Arm and all demos missing ... #451206.
 
 *oracle-jdk-bin-1.7.0.10 (19 Dec 2012)
 
@@ -8,7 +14,7 @@
   -oracle-jdk-bin-1.7.0.5-r1.ebuild, -oracle-jdk-bin-1.7.0.5-r2.ebuild,
   -oracle-jdk-bin-1.7.0.6.ebuild, -oracle-jdk-bin-1.7.0.7.ebuild,
   +oracle-jdk-bin-1.7.0.10.ebuild:
-  Version bump (arm not available). #447248
+  Version bump. #447248
   Remove vulnerable.
 
   23 Oct 2012; Andreas Schuerch <nativemad@gentoo.org>
