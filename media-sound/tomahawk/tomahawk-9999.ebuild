@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.9 2012/08/10 23:09:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.10 2013/01/14 21:32:05 johu Exp $
 
-EAPI=4
+EAPI=5
 
 QT_MINIMAL="4.7.0"
 
@@ -32,7 +32,7 @@ DEPEND="
 	dev-libs/qjson
 	dev-libs/quazip
 	>=media-libs/liblastfm-1.0.1
-	>=media-libs/libechonest-2.0.1
+	>=media-libs/libechonest-2.0.2
 	>=media-libs/phonon-4.5.0
 	media-libs/taglib
 	x11-libs/libX11
@@ -41,12 +41,14 @@ DEPEND="
 	>=x11-libs/qt-gui-${QT_MINIMAL}:4
 	>=x11-libs/qt-sql-${QT_MINIMAL}:4[sqlite]
 	>=x11-libs/qt-webkit-${QT_MINIMAL}:4
-	jabber? ( net-libs/jreen )
+	jabber? ( >=net-libs/jreen-1.1.1 )
 	twitter? ( net-libs/qtweetlib )
 "
 RDEPEND="${DEPEND}
 	app-crypt/qca-ossl
 "
+
+DOCS=( AUTHORS ChangeLog README.md )
 
 src_configure() {
 	local mycmakeargs=(

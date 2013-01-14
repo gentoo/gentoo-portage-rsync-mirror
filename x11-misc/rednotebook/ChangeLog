@@ -1,6 +1,17 @@
 # ChangeLog for x11-misc/rednotebook
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.66 2012/11/21 20:42:06 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.67 2013/01/14 21:34:32 hwoarang Exp $
+
+*rednotebook-1.6.5 (14 Jan 2013)
+
+  14 Jan 2013; Markos Chandras <hwoarang@gentoo.org>
+  +files/rednotebook-1.6.5-disable-spell.patch, +rednotebook-1.6.5.ebuild,
+  -files/rednotebook-1.1.0-disable-spell.patch,
+  -files/rednotebook-1.1.1-disable-webkit.patch,
+  -files/rednotebook-1.1.2-disable-webkit.patch,
+  -files/rednotebook-1.1.4-disable-webkit.patch, -rednotebook-1.2.0.ebuild,
+  -rednotebook-1.5.0-r1.ebuild, -rednotebook-1.6.1.ebuild:
+  Version bump
 
 *rednotebook-1.6.2 (21 Nov 2012)
 

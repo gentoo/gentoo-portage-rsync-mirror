@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.28.0.ebuild,v 1.1 2013/01/14 13:54:01 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.28.1.ebuild,v 1.1 2013/01/14 21:50:41 axs Exp $
 
 EAPI=5
 
@@ -25,10 +25,11 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
-	if [[ ${REPLACING_VERSIONS//./} -lt 0253 ]]; then
-	    local eixcache="${EROOT}"/var/cache/${PN}
-	    [[ -f ${eixcache} ]] && rm -f "${eixcache}"
-	fi
+	case " ${REPLACING_VERSIONS}" in
+	*\ 0.[0-9].*|*\ 0.1[0-9].*|*\ 0.2[0-4].*|*\ 0.25.0*)
+		local eixcache="${EROOT}/var/cache/${PN}"
+		test -f "${eixcache}" && rm -f -- "${eixcache}";;
+	esac
 }
 
 src_prepare() {

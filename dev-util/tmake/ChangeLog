@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/tmake
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/ChangeLog,v 1.30 2012/05/10 16:12:27 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/ChangeLog,v 1.31 2013/01/14 21:45:41 ulm Exp $
+
+  14 Jan 2013; Ulrich Müller <ulm@gentoo.org> tmake-2.12.ebuild:
+  Update LICENSE, see LICENSE file in tarball.
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -tmake-1.13.ebuild,
   -tmake-1.8-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.8.2.ebuild,v 1.1 2012/12/06 04:35:15 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.8.4.ebuild,v 1.1 2013/01/14 21:40:35 prometheanfire Exp $
 
 EAPI=2
 
@@ -155,9 +155,6 @@ src_install() {
 		dodir /etc/icinga/eventhandlers || die
 		fowners icinga:icinga /etc/icinga/eventhandlers || die
 	fi
-
-	dodir /var/run/icinga || die
-	fowners icinga:icinga /var/run/icinga || die
 
 	keepdir /etc/icinga
 	keepdir /var/lib/icinga
