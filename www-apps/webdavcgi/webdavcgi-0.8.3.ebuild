@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/webdavcgi/webdavcgi-0.8.3.ebuild,v 1.1 2013/01/11 10:43:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/webdavcgi/webdavcgi-0.8.3.ebuild,v 1.2 2013/01/14 08:22:33 dev-zero Exp $
 
 EAPI=4
 
@@ -47,9 +47,12 @@ src_prepare() {
 
 src_compile() {
 	if use suid; then
+		# There are several webdavwrappers, TODO: make it configureable
+		export WEBDAVWRAPPER="webdavwrapper"
+
 		$(tc-getCC) ${LDFLAGS} ${CFLAGS} \
-			-o "${CGIBINDIR}/webdavwrapper" \
-			helper/webdavwrapper.c || die "compile webdavwrapper failed"
+			-o "${CGIBINDIR}/${WEBDAVWRAPPER}" \
+			helper/webdavwrapper.c || die "compile ${WEBDAVWRAPPER} failed"
 	fi
 }
 
@@ -68,7 +71,7 @@ src_install() {
 	newexe "${CGIBINDIR}/logout-dist" logout
 
 	doexe "${CGIBINDIR}/webdav.pl"
-	use suid && doexe "${CGIBINDIR}/webdavwrapper"
+	use suid && doexe "${CGIBINDIR}/${WEBDAVWRAPPER}"
 
 	local currentDir
 	for currentDir in ${installDirs}; do
@@ -92,10 +95,10 @@ src_install() {
 	# In order to change the user and group ID at runtime, the webdavwrapper
 	# needs to be run as root (set-user-ID and set-group-ID bit)
 	if use suid; then
-		einfo "Setting SUID and SGID bit for webdavwrapper"
-		fowners root:root "${MY_CGIBINDIR}/webdavwrapper"
-		fperms 6755 "${MY_CGIBINDIR}/webdavwrapper"
-		webapp_postinst_txt en "${FILESDIR}/postinstall-webdavwrapper-en.txt"
+		einfo "Setting SUID and SGID bit for ${WEBDAVWRAPPER}"
+		fowners root:root "${MY_CGIBINDIR}/${WEBDAVWRAPPER}"
+		fperms 6755 "${MY_CGIBINDIR}/${WEBDAVWRAPPER}"
+		webapp_postinst_txt en "${FILESDIR}/postinstall-${WEBDAVWRAPPER}-en.txt"
 		webapp_hook_script "${FILESDIR}/reconfig-suid"
 	else
 		ewarn "You have the 'suid' USE flag disabled"

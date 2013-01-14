@@ -3,4 +3,8 @@
 <pkgmetadata>
 <herd>net-im</herd>
 <longdescription>Licq is an ICQ clone with an extensive plugin system.</longdescription>
+
+<use>
+	<flag name="aosd">Build the advanced on screen display plugin.</flag>
+</use>
 </pkgmetadata>
