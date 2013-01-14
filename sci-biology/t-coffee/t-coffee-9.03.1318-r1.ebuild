@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-9.03.1318.ebuild,v 1.1 2012/12/11 14:39:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-9.03.1318-r1.ebuild,v 1.1 2013/01/14 10:49:03 jlec Exp $
 
 EAPI=5
 
@@ -15,10 +15,12 @@ SRC_URI="http://www.tcoffee.org/Packages/Stable/Version_${MY_PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples"
 
-RDEPEND="sci-biology/clustalw"
+RDEPEND="
+	sci-biology/clustalw
+	sci-chemistry/tm-align"
 DEPEND=""
 
 S="${WORKDIR}/${MY_P}"
@@ -42,11 +44,11 @@ src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
-		-C t_coffee_source all
+		-C t_coffee_source t_coffee
 }
 
 src_install() {
-	dobin t_coffee_source/{t_coffee,TMalign}
+	dobin t_coffee_source/t_coffee
 
 	if use examples; then
 		insinto /usr/share/${PN}
