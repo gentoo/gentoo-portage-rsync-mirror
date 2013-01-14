@@ -1,19 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-9999.ebuild,v 1.12 2013/01/14 16:53:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-0.7.5.ebuild,v 1.1 2013/01/14 16:53:52 pinkbyte Exp $
 
 EAPI=5
 
-EGIT_REPO_URI="https://code.google.com/p/qxmpp"
-
-inherit qt4-r2 multilib git-2
+inherit qt4-r2 multilib
 
 DESCRIPTION="A cross-platform C++ XMPP client library based on the Qt framework."
 HOMEPAGE="http://code.google.com/p/qxmpp/"
+SRC_URI="http://qxmpp.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE="debug doc test"
 
 RDEPEND="x11-libs/qt-core:4
