@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.53 2012/09/24 00:44:31 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.54 2013/01/14 07:47:16 jlec Exp $
+
+*nvidia-cuda-toolkit-5.0.35 (14 Jan 2013)
+*nvidia-cuda-toolkit-4.2.9-r1 (14 Jan 2013)
+
+  14 Jan 2013; Justin Lecher <jlec@gentoo.org> -nvidia-cuda-toolkit-3.2.ebuild,
+  +nvidia-cuda-toolkit-4.2.9-r1.ebuild, +nvidia-cuda-toolkit-5.0.35.ebuild,
+  +files/cuda-config.in, metadata.xml:
+  Version Bump, #446072 and #451972; fine grad what msg we are showing,
+  #440434; support prefix installations, #405317; drop old, #351702; take the
+  package
 
   24 Sep 2012; Mike Frysinger <vapier@gentoo.org>
   nvidia-cuda-toolkit-3.2.ebuild, nvidia-cuda-toolkit-4.0.ebuild,
