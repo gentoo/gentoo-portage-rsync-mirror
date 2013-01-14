@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pry
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pry/ChangeLog,v 1.4 2012/11/26 10:06:36 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pry/ChangeLog,v 1.6 2013/01/13 23:02:58 radhermit Exp $
+
+  13 Jan 2013; Tim Harder <radhermit@gentoo.org> -pry-0.2.1.ebuild:
+  Remove old.
+
+*pry-0.2.1-r1 (13 Jan 2013)
+
+  13 Jan 2013; Tim Harder <radhermit@gentoo.org> +pry-0.2.1-r1.ebuild:
+  Revision bump, migrate to distutils-r1.
 
   26 Nov 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Add pypi upstream metadata.
