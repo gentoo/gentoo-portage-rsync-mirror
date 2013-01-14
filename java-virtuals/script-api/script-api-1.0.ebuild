@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/script-api/script-api-1.0.ebuild,v 1.1 2012/07/18 09:55:44 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/script-api/script-api-1.0.ebuild,v 1.2 2013/01/14 19:37:44 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI=""
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="

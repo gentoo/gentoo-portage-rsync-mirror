@@ -4,11 +4,11 @@ DESCRIPTION=An implementation of Python written in Java
 EAPI=4
 HOMEPAGE=http://www.jython.org
 IUSE=readline elibc_FreeBSD doc examples source elibc_FreeBSD
-KEYWORDS=~amd64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos
+KEYWORDS=amd64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos
 LICENSE=PSF-2
 RDEPEND=!<=dev-java/freemarker-2.3.10 dev-java/antlr:3 dev-java/asm:3 dev-java/guava:0 >=dev-java/java-config-2.1.11-r3 dev-java/jffi:1.0 dev-java/jline:0 dev-java/jnr-constants:0 dev-java/jnr-posix:1.1 java-virtuals/script-api:0 java-virtuals/servlet-api:2.5 readline? ( >=dev-java/libreadline-java-0.8.0:0 ) >=virtual/jre-1.5 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 RESTRICT=test
 SLOT=2.5
 SRC_URI=http://central.maven.org/maven2/org/python/jython-installer/2.5.3/jython-installer-2.5.3.jar
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	java-ant-2	daa6d2d0a12ebb700a69d9f1d2f02c5c	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	2d9eb3508fa5d6759e39354b74545567	multilib	9aa8a023e062fca0ba79362d9d0cc488	python-utils-r1	069a968fde0ceb8a9cd5c6a89d77cbc2	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=d1df4e5c16ac9422737936f51fa05d9f
+_md5_=639f05c1a1777e64af094efb834688c4
