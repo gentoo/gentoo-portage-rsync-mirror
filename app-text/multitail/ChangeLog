@@ -1,6 +1,12 @@
 # ChangeLog for app-text/multitail
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.92 2012/11/25 09:09:57 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.93 2013/01/14 07:12:27 jlec Exp $
+
+*multitail-5.2.11 (14 Jan 2013)
+
+  14 Jan 2013; Justin Lecher <jlec@gentoo.org> +multitail-5.2.11.ebuild,
+  metadata.xml:
+  Version Bump, moved to EAPI=5
 
 *multitail-5.2.10 (25 Nov 2012)
 

@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.4.ebuild,v 1.1 2012/11/25 12:45:46 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.4.ebuild,v 1.2 2013/01/14 07:14:11 polynomial-c Exp $
 
 EAPI=5
 
 inherit eutils gnome2 multilib
 
 DESCRIPTION="Graphical IRC client based on XChat"
-SRC_URI="https://github.com/downloads/${PN}/${PN}/${P}.tar.xz"
+SRC_URI="mirror://github/${PN}/${PN}/${P}.tar.xz"
 HOMEPAGE="http://www.hexchat.org/"
 
 LICENSE="GPL-2"
@@ -49,6 +49,7 @@ src_prepare() {
 			-i configure.ac || die 'sed failed'
 	fi
 
+	mkdir "m4" || die "mkdir failed"
 	./autogen.sh || die "autogen.sh failed"
 }
 
