@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.64 2013/01/05 01:19:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.65 2013/01/14 17:47:27 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils python
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS=""
 SLOT="0"
-IUSE="build doc epydoc +ipc pypy2_0 python2 python3 selinux xattr"
+IUSE="build doc epydoc +ipc linguas_ru pypy2_0 python2 python3 selinux xattr"
 
 # Import of the io module in python-2.6 raises ImportError for the
 # thread module if threading is disabled.
@@ -140,7 +140,7 @@ src_prepare() {
 		die "Failed to patch portage.VERSION"
 	sed -e "1s/VERSION/${_version}/" -i doc/fragment/version || \
 		die "Failed to patch VERSION in doc/fragment/version"
-	sed -e "1s/VERSION/${_version}/" -i man/* || \
+	sed -e "1s/VERSION/${_version}/" -i $(find man -type f) || \
 		die "Failed to patch VERSION in man page headers"
 
 	if ! use ipc ; then
@@ -212,6 +212,14 @@ src_prepare() {
 		eerror "Please notify the arch maintainer about this issue. Using generic."
 		eerror ""
 	fi
+
+	local x
+	for x in ru ; do
+		if ! use linguas_${x} ; then
+			einfo "Removing unused man pages for ${x} locale ..."
+			rm -rf "${S}/man/${x}"
+		fi
+	done
 }
 
 src_compile() {

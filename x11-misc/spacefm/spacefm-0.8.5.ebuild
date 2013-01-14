@@ -1,20 +1,19 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-9999.ebuild,v 1.12 2013/01/14 17:56:49 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.8.5.ebuild,v 1.1 2013/01/14 17:55:16 hasufell Exp $
 
-EAPI=4
+EAPI=5
 
-EGIT_REPO_URI="git://github.com/IgnorantGuru/${PN}.git"
-EGIT_BRANCH="next"
-
-inherit fdo-mime git-2 gnome2-utils linux-info
+inherit fdo-mime gnome2-utils linux-info
 
 DESCRIPTION="A multi-panel tabbed file manager"
 HOMEPAGE="http://ignorantguru.github.com/spacefm/"
+SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz
+	mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+startup-notification"
 
 RDEPEND="dev-libs/glib:2
@@ -23,7 +22,7 @@ RDEPEND="dev-libs/glib:2
 	virtual/freedesktop-icon-theme
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
-	x11-libs/gtk+:3
+	x11-libs/gtk+:2
 	x11-libs/pango
 	x11-libs/libX11
 	x11-misc/shared-mime-info
@@ -40,7 +39,7 @@ src_configure() {
 		--disable-hal \
 		--enable-inotify \
 		--disable-pixmaps \
-		--with-gtk3=yes
+		--with-gtk3=no # still glitches in gtk3
 }
 
 pkg_preinst() {

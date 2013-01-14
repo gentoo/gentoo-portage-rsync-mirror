@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.180 2013/01/03 18:45:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.181 2013/01/14 17:37:20 vapier Exp $
+
+  14 Jan 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/automake-1.13-dyn-ithreads.patch, automake-1.13.1.ebuild:
+  Do perl thread detection at runtime rather than configure time #343439 by
+  Muelli.
 
   03 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org> automake-1.12.2.ebuild,
   automake-1.12.3.ebuild, automake-1.12.4.ebuild, automake-1.12.5.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.13.1.ebuild,v 1.2 2013/01/03 11:33:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.13.1.ebuild,v 1.3 2013/01/14 17:37:20 vapier Exp $
 
 inherit eutils versionator unpacker
 
@@ -23,7 +23,7 @@ LICENSE="GPL-2"
 # Use Gentoo versioning for slotting.
 SLOT="${PV:0:4}"
 # Testing.
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND="dev-lang/perl
@@ -51,6 +51,7 @@ src_unpack() {
 		-e "s:(automake|automake-history)(.info|.texi):\1${SLOT}\2:g" \
 		Makefile.in || die
 	export WANT_AUTOCONF=2.5
+	epatch "${FILESDIR}"/${PN}-1.13-dyn-ithreads.patch
 }
 
 src_compile() {
