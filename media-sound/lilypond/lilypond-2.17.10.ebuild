@@ -1,21 +1,21 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-9999.ebuild,v 1.2 2013/01/14 03:04:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.17.10.ebuild,v 1.1 2013/01/14 03:04:10 radhermit Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit elisp-common autotools eutils git-2 python-single-r1
-
-EGIT_REPO_URI="git://git.sv.gnu.org/lilypond.git"
+inherit elisp-common autotools eutils python-single-r1
 
 DESCRIPTION="GNU Music Typesetter"
+SRC_URI="http://download.linuxaudio.org/lilypond/sources/v${PV:0:4}/${P}.tar.gz"
 HOMEPAGE="http://lilypond.org/"
 
 SLOT="0"
 LICENSE="GPL-3 FDL-1.3"
-KEYWORDS=""
-IUSE="debug emacs profile vim-syntax"
+KEYWORDS="~amd64 ~hppa ~x86"
+LANGS=" ca cs da de el eo es fi fr it ja nl ru sv tr uk vi zh_TW"
+IUSE="debug emacs profile vim-syntax ${LANGS// / linguas_}"
 
 RDEPEND=">=app-text/ghostscript-gpl-8.15
 	>=dev-scheme/guile-1.8.2[deprecated,regex]
@@ -41,11 +41,17 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.17.2-tex-docs.patch
+
 	if ! use vim-syntax ; then
 		sed -i -e "s/vim//" GNUmakefile.in || die
 	fi
 
 	sed -i -e "s/OPTIMIZE -g/OPTIMIZE/" aclocal.m4 || die
+
+	for lang in ${LANGS}; do
+		use linguas_${lang} || rm po/${lang}.po || die
+	done
 
 	eautoreconf
 }
@@ -86,7 +92,7 @@ src_install () {
 
 	python_fix_shebang "${ED}"
 
-	dodoc HACKING README.txt
+	dodoc AUTHORS.txt HACKING NEWS.txt README.txt
 }
 
 pkg_postinst() {
