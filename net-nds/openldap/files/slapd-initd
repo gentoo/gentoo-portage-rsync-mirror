@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/files/slapd-initd,v 1.4 2012/02/12 01:02:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/files/slapd-initd,v 1.5 2013/01/14 02:30:20 patrick Exp $
 
 depend() {
 	need net.lo
@@ -9,6 +9,11 @@ depend() {
 }
 
 start() {
+        checkpath -q -d /var/run/openldap/ -o ldap:ldap 
+        if ! checkconfig -Q ; then
+                eerror "There is a problem with your slapd.conf!"
+                return 1
+        fi
 	ebegin "Starting ldap-server"
 	eval start-stop-daemon --start --pidfile /var/run/openldap/slapd.pid --exec /usr/lib/openldap/slapd -- -u ldap -g ldap "${OPTS}"
 	eend $?
