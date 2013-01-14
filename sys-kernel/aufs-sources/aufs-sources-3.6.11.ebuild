@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.6.11.ebuild,v 1.2 2012/12/23 09:49:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.6.11.ebuild,v 1.3 2013/01/14 09:18:29 jlec Exp $
 
 EAPI=5
 ETYPE="sources"
@@ -28,8 +28,6 @@ UNIPATCH_LIST="
 	"${WORKDIR}"/aufs3-base.patch"
 #	${WORKDIR}/aufs3-proc_map.patch"
 
-PDEPEND="sys-fs/aufs-util"
-
 src_unpack() {
 	use module && UNIPATCH_LIST+=" "${WORKDIR}"/aufs3-standalone.patch"
 	unpack ${AUFS_TARBALL}
@@ -46,6 +44,9 @@ pkg_postinst() {
 	kernel-2_pkg_postinst
 	einfo "For more info on this patchset, and how to report problems, see:"
 	einfo "${HOMEPAGE}"
+	if ! has_version sys-fs/aufs-util; then
+		einfo "In order to use aufs FS you need to install sys-fs/aufs-util"
+	fi
 }
 
 pkg_postrm() {

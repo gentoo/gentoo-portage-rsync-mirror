@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/python-unittest2-1.ebuild,v 1.1 2013/01/07 20:16:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/python-unittest2-1.ebuild,v 1.2 2013/01/14 09:30:38 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} pypy{1_9,2_0} )
 inherit python-r1
 
-DESCRIPTION="A virtual for Python 2.7/3.2+-compatible unittest or unittest2"
+DESCRIPTION="A virtual for packages needing unittest2 in Python 2.5, 2.6, 3.1"
 HOMEPAGE=""
 SRC_URI=""
 

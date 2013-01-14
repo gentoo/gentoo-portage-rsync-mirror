@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.7.1.ebuild,v 1.1 2013/01/07 11:09:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.7.1.ebuild,v 1.2 2013/01/14 09:18:29 jlec Exp $
 
 EAPI=5
 
@@ -48,6 +48,9 @@ pkg_postinst() {
 	kernel-2_pkg_postinst
 	einfo "For more info on this patchset, and how to report problems, see:"
 	einfo "${HOMEPAGE}"
+	if ! has_version sys-fs/aufs-util; then
+		einfo "In order to use aufs FS you need to install sys-fs/aufs-util"
+	fi
 }
 
 pkg_postrm() {
