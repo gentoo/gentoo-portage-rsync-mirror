@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cln
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.62 2013/01/01 08:25:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.63 2013/01/14 10:01:18 jlec Exp $
+
+  14 Jan 2013; Justin Lecher <jlec@gentoo.org> -cln-1.3.1.ebuild,
+  -cln-1.3.2.ebuild, metadata.xml:
+  Drop old, fixes #303189 & #444450
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> cln-1.3.2-r1.ebuild:
   Stable for arm, wrt bug #446100

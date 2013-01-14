@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libzip
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.55 2012/07/26 01:23:53 creffett Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.56 2013/01/14 09:57:59 pinkbyte Exp $
+
+  14 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> libzip-0.10.1-r1.ebuild:
+  Keyword ~arm, wrt bug #451528
 
   26 Jul 2012; Chris Reffett <creffett@gentoo.org> metadata.xml:
   Add myself to maintainers, rest of KDE team didn't have any objections
