@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcmidi/abcmidi-2012.11.23.ebuild,v 1.1 2012/11/23 23:41:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcmidi/abcmidi-2012.12.25.ebuild,v 1.1 2013/01/14 03:49:58 radhermit Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit eutils versionator autotools
 
@@ -28,7 +28,7 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 	dodoc doc/{AUTHORS,CHANGES,abcguide.txt,abcmatch.txt,history.txt,readme.txt,yapshelp.txt}
 
 	if use examples ; then
