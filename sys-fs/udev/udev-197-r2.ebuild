@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.3 2013/01/13 20:56:57 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.4 2013/01/14 18:08:01 williamh Exp $
 
 EAPI=4
 
@@ -390,20 +390,23 @@ pkg_postinst()
 			ewarn "they are disabled by default on live systems."
 			ewarn "Please see the contents of ${net_rules} for more"
 			ewarn "information on this feature."
-			ewarn
 	fi
 	if [[ -d ${ROOT}usr/lib/udev ]]
 	then
+			ewarn
 		ewarn "Please re-emerge all packages on your system which install"
 		ewarn "rules and helpers in /usr/lib/udev. They should now be in"
 		ewarn "/lib/udev."
 		ewarn
+		ewarn "One way to do this is to run the following command:"
+		ewarn "emerge -1av \$(equery -q belongs -n /usr/lib/udev | xargs)"
 	fi
 
 	ewarn
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"
 	ewarn "into effect."
 	ewarn "The method you use to do this depends on your init system."
+	ewarn
 
 	preserve_old_lib_notify /$(get_libdir)/libudev.so.0
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.759 2013/01/13 20:56:57 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.760 2013/01/14 18:08:01 williamh Exp $
+
+  14 Jan 2013; William Hubbs <williamh@gentoo.org> udev-197-r2.ebuild:
+  Add an example of the command needed to re-emerge packages with files in
+  /usr/lib/udev for bug #451266.
 
   13 Jan 2013; William Hubbs <williamh@gentoo.org> udev-197-r2.ebuild,
   udev-9999.ebuild:

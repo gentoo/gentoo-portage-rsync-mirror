@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.86 2012/12/24 10:07:16 polynomial-c Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.87 2013/01/14 18:08:59 polynomial-c Exp $
+
+  14 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> files/uptimed.init:
+  Better fix for bug #448382. Thanks to WilliamH for giving the right input.
 
   24 Dec 2012; Lars Wendler <polynomial-c@gentoo.org> files/uptimed.init:
   Really fix init script this time.
