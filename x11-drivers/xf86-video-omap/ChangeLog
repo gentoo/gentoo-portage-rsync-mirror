@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-omap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-omap/ChangeLog,v 1.3 2012/12/17 20:17:06 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-omap/ChangeLog,v 1.4 2013/01/14 13:41:29 chithanh Exp $
+
+*xf86-video-omap-0.4.3 (14 Jan 2013)
+
+  14 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-omap-0.4.3.ebuild:
+  Version bump.
 
   17 Dec 2012; Markus Meier <maekke@gentoo.org> xf86-video-omap-0.4.2.ebuild:
   arm stable, bug #440872
