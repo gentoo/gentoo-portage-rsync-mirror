@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1364.26.ebuild,v 1.1 2013/01/09 04:17:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1364.26.ebuild,v 1.2 2013/01/14 01:52:06 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -138,6 +138,9 @@ src_prepare() {
 
 	# Fix build with system opus, bug #439884.
 	epatch "${FILESDIR}/${PN}-system-opus-r0.patch"
+
+	# Backport fix for test expectations, bug #444886.
+	epatch "${FILESDIR}/${PN}-icu50-tests-r0.patch"
 
 	# Missing gyp files in tarball.
 	# https://code.google.com/p/chromium/issues/detail?id=144823
