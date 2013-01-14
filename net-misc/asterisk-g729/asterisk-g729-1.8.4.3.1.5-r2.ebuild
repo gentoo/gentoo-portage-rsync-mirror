@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/asterisk-g729-1.8.4.3.1.5-r2.ebuild,v 1.2 2012/09/24 00:46:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/asterisk-g729-1.8.4.3.1.5-r2.ebuild,v 1.3 2013/01/14 12:49:00 chainsaw Exp $
 
 EAPI="4"
 
@@ -64,7 +64,7 @@ RESTRICT="mirror strip"
 QA_FLAGS_IGNORED_amd64="usr/lib64/codec_g729a.so usr/sbin/benchg729"
 QA_FLAGS_IGNORED_x86="usr/lib/codec_g729a.so usr/sbin/benchg729"
 
-QA_EXECSTACK="usr/sbin/benchg729 usr/sbin/asthostid usr/sbin/astregister"
+QA_PREBUILT="usr/sbin/benchg729 usr/sbin/asthostid usr/sbin/astregister"
 
 S="${WORKDIR}"
 

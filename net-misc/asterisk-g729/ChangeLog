@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk-g729
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/ChangeLog,v 1.7 2013/01/14 12:17:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/ChangeLog,v 1.8 2013/01/14 12:49:00 chainsaw Exp $
+
+  14 Jan 2013; Tony Vroon <chainsaw@gentoo.org>
+  asterisk-g729-1.8.4.3.1.5-r2.ebuild:
+  Change to QA_PREBUILT to suppress more warnings. On-disk binaries will be
+  identical, no revbump.
 
 *asterisk-g729-11.0.3.1.5 (14 Jan 2013)
 

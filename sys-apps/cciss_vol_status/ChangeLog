@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/cciss_vol_status
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.12 2012/06/20 14:42:28 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cciss_vol_status/ChangeLog,v 1.13 2013/01/14 12:33:35 chainsaw Exp $
+
+*cciss_vol_status-1.10 (14 Jan 2013)
+
+  14 Jan 2013; Tony Vroon <chainsaw@gentoo.org> +cciss_vol_status-1.10.ebuild:
+  Run cron job hourly instead of daily, as suggested by Michael Orlitzky in bug
+  #449798. Bump to 1.10 as requested by Agostino "ago" Sarubbo in bug #450578.
 
   20 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   cciss_vol_status-1.09-r1.ebuild:

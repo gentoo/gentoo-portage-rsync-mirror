@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/units
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.50 2012/12/30 20:41:59 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.51 2013/01/14 12:38:42 jlec Exp $
+
+  14 Jan 2013; Justin Lecher <jlec@gentoo.org> -units-1.88.ebuild,
+  -units-1.88-r1.ebuild, -units-2.00.ebuild, metadata.xml:
+  Drop old
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> units-2.01.ebuild:
   Stable for alpha, wrt bug #448448
