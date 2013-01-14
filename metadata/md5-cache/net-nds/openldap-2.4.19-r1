@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup test
-DEPEND=sys-libs/ncurses sys-devel/libtool icu? ( dev-libs/icu ) tcpd? ( sys-apps/tcp-wrappers ) ssl? ( !gnutls? ( dev-libs/openssl ) gnutls? ( net-libs/gnutls ) ) sasl? ( dev-libs/cyrus-sasl ) !minimal? ( odbc? ( !iodbc? ( dev-db/unixODBC ) iodbc? ( dev-db/libiodbc ) ) slp? ( net-libs/openslp ) perl? ( dev-lang/perl[-build] ) samba? ( dev-libs/openssl ) berkdb? ( sys-libs/db ) smbkrb5passwd? ( dev-libs/openssl app-crypt/heimdal ) kerberos? ( virtual/krb5 ) cxx? ( dev-libs/cyrus-sasl ) ) selinux? ( sec-policy/selinux-ldap ) ssl? ( dev-libs/openssl )
+DEPEND=sys-libs/ncurses sys-devel/libtool icu? ( dev-libs/icu ) tcpd? ( sys-apps/tcp-wrappers ) ssl? ( !gnutls? ( dev-libs/openssl ) gnutls? ( <net-libs/gnutls-3 ) ) sasl? ( dev-libs/cyrus-sasl ) !minimal? ( odbc? ( !iodbc? ( dev-db/unixODBC ) iodbc? ( dev-db/libiodbc ) ) slp? ( net-libs/openslp ) perl? ( dev-lang/perl[-build] ) samba? ( dev-libs/openssl ) berkdb? ( sys-libs/db ) smbkrb5passwd? ( dev-libs/openssl app-crypt/heimdal ) kerberos? ( virtual/krb5 ) cxx? ( dev-libs/cyrus-sasl ) ) selinux? ( sec-policy/selinux-ldap ) ssl? ( dev-libs/openssl )
 DESCRIPTION=LDAP suite of application and development tools
 EAPI=2
 HOMEPAGE=http://www.OpenLDAP.org/
 IUSE=crypt icu samba slp tcpd experimental minimal +berkdb overlays perl gnutls iodbc sasl ssl odbc debug ipv6 +syslog selinux smbkrb5passwd kerberos -cxx ssl
 KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd
 LICENSE=OPENLDAP
-RDEPEND=sys-libs/ncurses sys-devel/libtool icu? ( dev-libs/icu ) tcpd? ( sys-apps/tcp-wrappers ) ssl? ( !gnutls? ( dev-libs/openssl ) gnutls? ( net-libs/gnutls ) ) sasl? ( dev-libs/cyrus-sasl ) !minimal? ( odbc? ( !iodbc? ( dev-db/unixODBC ) iodbc? ( dev-db/libiodbc ) ) slp? ( net-libs/openslp ) perl? ( dev-lang/perl[-build] ) samba? ( dev-libs/openssl ) berkdb? ( sys-libs/db ) smbkrb5passwd? ( dev-libs/openssl app-crypt/heimdal ) kerberos? ( virtual/krb5 ) cxx? ( dev-libs/cyrus-sasl ) ) selinux? ( sec-policy/selinux-ldap )
+RDEPEND=sys-libs/ncurses sys-devel/libtool icu? ( dev-libs/icu ) tcpd? ( sys-apps/tcp-wrappers ) ssl? ( !gnutls? ( dev-libs/openssl ) gnutls? ( <net-libs/gnutls-3 ) ) sasl? ( dev-libs/cyrus-sasl ) !minimal? ( odbc? ( !iodbc? ( dev-db/unixODBC ) iodbc? ( dev-db/libiodbc ) ) slp? ( net-libs/openslp ) perl? ( dev-lang/perl[-build] ) samba? ( dev-libs/openssl ) berkdb? ( sys-libs/db ) smbkrb5passwd? ( dev-libs/openssl app-crypt/heimdal ) kerberos? ( virtual/krb5 ) cxx? ( dev-libs/cyrus-sasl ) ) selinux? ( sec-policy/selinux-ldap )
 SLOT=0
 SRC_URI=mirror://openldap/openldap-release/openldap-2.4.19.tgz
 _eclasses_=db-use	2f5d6a2718559b90a51648d8ff58be83	eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	9aa8a023e062fca0ba79362d9d0cc488	ssl-cert	0b45da48a22fda62c57c1809b8b55315	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=00c03d8e980cfde500125998acc9ed44
+_md5_=68764001f3acca638a576934c0bf58ec

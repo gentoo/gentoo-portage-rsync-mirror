@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.30.ebuild,v 1.9 2012/10/22 08:25:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.30.ebuild,v 1.10 2013/01/14 02:46:20 patrick Exp $
 
 EAPI="3"
 
@@ -33,7 +33,7 @@ RDEPEND="sys-libs/ncurses
 	icu? ( dev-libs/icu )
 	tcpd? ( sys-apps/tcp-wrappers )
 	ssl? ( !gnutls? ( dev-libs/openssl )
-		gnutls? ( net-libs/gnutls dev-libs/libgcrypt ) )
+		gnutls? ( <net-libs/gnutls-3 dev-libs/libgcrypt ) )
 	sasl? ( dev-libs/cyrus-sasl )
 	!minimal? (
 		odbc? ( !iodbc? ( dev-db/unixODBC )
