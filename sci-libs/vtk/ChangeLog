@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.102 2013/01/10 16:18:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.103 2013/01/14 10:10:15 jlec Exp $
+
+  14 Jan 2013; Justin Lecher <jlec@gentoo.org> vtk-5.10.1.ebuild:
+  Solve problems with USE=examples, #447146
 
   10 Jan 2013; Justin Lecher <jlec@gentoo.org> vtk-5.10.1.ebuild:
   Add compatibility fix for tcl8.6

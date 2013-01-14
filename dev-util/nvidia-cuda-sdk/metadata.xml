@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>spock@gentoo.org</email>
-		<name>Michał Januszewski</name>
-	</maintainer>
-	<use>
-		<flag name='emulation'>
+  <maintainer>
+    <email>jlec@gentoo.org</email>
+    <name>Justin Lecher</name>
+  </maintainer>
+  <use>
+    <flag name="emulation">
 			Build binaries for device emulation mode.  These binaries
 			will not require a CUDA-capable GPU to run.
 		</flag>
-		<flag name='opencl'>
+    <flag name="opencl">
 			Build OpenCL binaries.
 		</flag>
-		<flag name='cuda'>
+    <flag name="cuda">
 			Build CUDA binaries.
 		</flag>
-	</use>
+  </use>
 </pkgmetadata>
-

@@ -1,6 +1,22 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.32 2012/08/02 05:10:47 zerochaos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.34 2013/01/14 10:20:00 jlec Exp $
+
+  14 Jan 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Take package
+
+*nvidia-cuda-sdk-5.0.35 (14 Jan 2013)
+*nvidia-cuda-sdk-4.2.9-r1 (14 Jan 2013)
+
+  14 Jan 2013; Justin Lecher <jlec@gentoo.org>
+  -nvidia-cuda-sdk-2.1.1215.2015.ebuild, -nvidia-cuda-sdk-2.2.ebuild,
+  -nvidia-cuda-sdk-2.3.ebuild, -nvidia-cuda-sdk-3.0_beta1.ebuild,
+  -nvidia-cuda-sdk-3.0.ebuild, -nvidia-cuda-sdk-3.1.ebuild,
+  -nvidia-cuda-sdk-3.2.ebuild, -nvidia-cuda-sdk-4.0.ebuild,
+  -nvidia-cuda-sdk-4.1.ebuild, +nvidia-cuda-sdk-4.2.9-r1.ebuild,
+  +files/nvidia-cuda-sdk-4.2.9-asneeded.patch, +nvidia-cuda-sdk-5.0.35.ebuild,
+  metadata.xml:
+  Version Bump; drop old
 
   02 Aug 2012; Rick Farina <zerochaos@gentoo.org> nvidia-cuda-sdk-4.2.ebuild:
   fix stupidity recognized in bug #429370
