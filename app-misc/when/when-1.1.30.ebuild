@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/when-1.1.30.ebuild,v 1.1 2012/10/25 09:22:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/when-1.1.30.ebuild,v 1.3 2013/01/14 16:20:13 pinkbyte Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lightandmatter.com/when/when.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 DEPEND="dev-lang/perl"
@@ -20,15 +20,15 @@ S="${WORKDIR}"/when_dist
 
 src_prepare() {
 	# Fix path for tests
-	sed -i 's,^	when,	./when,' Makefile
+	sed -i 's,^	when,	./when,' Makefile || die 'sed failed'
 }
 
 src_compile() { :; }
 
 src_test() {
 	# The when command requires these files, or attempts to run setup function.
-	mkdir "${HOME}"/.when
-	touch "${HOME}"/.when/{calendar,preferences}
+	mkdir "${HOME}"/.when || die 'mkdir failed'
+	touch "${HOME}"/.when/{calendar,preferences} || die 'touch failed'
 	emake test
 }
 
