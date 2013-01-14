@@ -1,0 +1,9 @@
+# ChangeLog for Gentoo eapi-5-files profile directory
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/ChangeLog,v 1.1 2013/01/14 20:47:01 dilfridge Exp $
+
+  14 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> +eapi,
+  +package.use.stable.force, +package.use.stable.mask, +use.stable.force,
+  +use.stable.mask:
+  Add empty files
+

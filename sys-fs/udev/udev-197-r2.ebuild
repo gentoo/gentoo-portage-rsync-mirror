@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.4 2013/01/14 18:08:01 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.5 2013/01/14 20:58:54 williamh Exp $
 
 EAPI=4
 
@@ -399,7 +399,8 @@ pkg_postinst()
 		ewarn "/lib/udev."
 		ewarn
 		ewarn "One way to do this is to run the following command:"
-		ewarn "emerge -1av \$(equery -q belongs -n /usr/lib/udev | xargs)"
+		ewarn "emerge -av1 \$(qfile -q -S -C /usr/lib/udev)"
+		ewarn "Note that qfile can be found in app-portage/portage-utils"
 	fi
 
 	ewarn

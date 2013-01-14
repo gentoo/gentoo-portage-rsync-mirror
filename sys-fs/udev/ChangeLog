@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.760 2013/01/14 18:08:01 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.761 2013/01/14 20:58:54 williamh Exp $
+
+  14 Jan 2013; William Hubbs <williamh@gentoo.org> udev-197-r2.ebuild:
+  update the emerge procedure for udev consumers to use qfile. Thanks to Paul
+  Varner for explaining why this is the better option.
 
   14 Jan 2013; William Hubbs <williamh@gentoo.org> udev-197-r2.ebuild:
   Add an example of the command needed to re-emerge packages with files in
