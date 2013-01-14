@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.50 2013/01/13 11:11:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.51 2013/01/14 19:01:43 ago Exp $
+
+  14 Jan 2013; Agostino Sarubbo <ago@gentoo.org> spice-gtk-0.14-r2.ebuild:
+  Stable for amd64, wrt bug #451580
 
   13 Jan 2013; Justin Lecher <jlec@gentoo.org> spice-gtk-0.16.ebuild,
   metadata.xml:
