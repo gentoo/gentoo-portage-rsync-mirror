@@ -1,6 +1,14 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.431 2013/01/13 10:52:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.433 2013/01/14 13:24:37 scarabeus Exp $
+
+  14 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.0.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  Remove rdepend on npapi-sdk, as it just provides headers during the build.
+
+  14 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.0.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  Fix git build as we moved the main folder.
 
   13 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.0.9999.ebuild,
   libreoffice-9999-r2.ebuild:
