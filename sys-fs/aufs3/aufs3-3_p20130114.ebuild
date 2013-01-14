@@ -1,16 +1,16 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20121112.ebuild,v 1.3 2012/11/26 20:36:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20130114.ebuild,v 1.1 2013/01/14 08:55:06 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils flag-o-matic linux-mod multilib toolchain-funcs
 
 AUFS_VERSION="${PV%%_p*}"
 # highest branch version
-PATCH_MAX_VER=6
+PATCH_MAX_VER=7
 # highest supported version
-KERN_MAX_VER=7
+KERN_MAX_VER=8
 # highest util branch version
 UTIL_MAX_VER=0
 
@@ -23,21 +23,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc fuse pax_kernel hfs inotify kernel-patch nfs ramfs"
 
-DEPEND="dev-vcs/git"
+DEPEND="
+	dev-util/patchutils
+	dev-vcs/git"
 RDEPEND="
 	!sys-fs/aufs
 	!sys-fs/aufs2"
 
-S="${WORKDIR}"/${PN}-standalone
+S="${WORKDIR}"/${P}/${PN}-standalone
 
 MODULE_NAMES="aufs(misc:${S})"
 
 pkg_setup() {
-	CONFIG_CHECK="${CONFIG_CHECK} ~EXPERIMENTAL !AUFS_FS"
-	use inotify && CONFIG_CHECK="${CONFIG_CHECK} ~FSNOTIFY"
-	use nfs && CONFIG_CHECK="${CONFIG_CHECK} EXPORTFS"
-	use fuse && CONFIG_CHECK="${CONFIG_CHECK} ~FUSE_FS"
-	use hfs && CONFIG_CHECK="${CONFIG_CHECK} ~HFSPLUS_FS"
+	CONFIG_CHECK+=" ~EXPERIMENTAL !AUFS_FS"
+	use inotify && CONFIG_CHECK+=" ~FSNOTIFY"
+	use nfs && CONFIG_CHECK+=" EXPORTFS"
+	use fuse && CONFIG_CHECK+=" ~FUSE_FS"
+	use hfs && CONFIG_CHECK+=" ~HFSPLUS_FS"
+	use pax_kernel && CONFIG_CHECK+=" PAX" && ERROR_PAX="Please use hardened sources"
 
 	# this is needed so merging a binpkg ${PN} is possible w/out a kernel unpacked on the system
 	[ -n "$PKG_SETUP_HAS_BEEN_RAN" ] && return
@@ -62,24 +65,28 @@ pkg_setup() {
 		UTIL_BRANCH="${KV_MINOR}"
 	fi
 
-	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/${PV}/${PN}-standalone-${PATCH_BRANCH}.patch >/dev/null && \
-		patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/${PV}/${PN}-base-${PATCH_BRANCH}.patch >/dev/null ); then
+	pushd "${T}" &> /dev/null
+	unpack ${A}
+	cd ${P}/${PN}-standalone
+	local module_branch=origin/${PN}.${PATCH_BRANCH}
+	git checkout -q -b local-gentoo ${module_branch} || die
+	combinediff ${PN}-base.patch ${PN}-standalone.patch > ${PN}-standalone-base-combined.patch
+	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < ${PN}-standalone-base-combined.patch > /dev/null ); then
 		if use kernel-patch; then
 			cd ${KV_DIR}
 			ewarn "Patching your kernel..."
-			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/${PV}/${PN}-standalone-${PATCH_BRANCH}.patch >/dev/null
-			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/${PV}/${PN}-base-${PATCH_BRANCH}.patch >/dev/null
-			epatch "${FILESDIR}"/${PV}/${PN}-{base,standalone}-${PATCH_BRANCH}.patch
+			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${T}"/${P}/${PN}-standalone/${PN}-standalone-base-combined.patch >/dev/null
+			epatch "${T}"/${P}/${PN}-standalone/${PN}-standalone-base-combined.patch
 			ewarn "You need to compile your kernel with the applied patch"
 			ewarn "to be able to load and use the aufs kernel module"
 		else
 			eerror "You need to apply a patch to your kernel to compile and run the ${PN} module"
 			eerror "Either enable the kernel-patch useflag to do it with this ebuild"
-			eerror "or apply ${FILESDIR}/${PN}-base-${PATCH_BRANCH}.patch and"
-			eerror "${FILESDIR}/${PN}-standalone-${PATCH_BRANCH}.patch by hand"
+			eerror "or apply ${EPRFIX}/usr/share/doc/${PF}/${PN}-standalone-base-combined.patch by hand"
 			die "missing kernel patch, please apply it first"
 		fi
 	fi
+	popd &> /dev/null
 	export PKG_SETUP_HAS_BEEN_RAN=1
 }
 
@@ -113,9 +120,13 @@ src_prepare() {
 	use pax_kernel && epatch "${FILESDIR}"/pax-2.patch
 
 	sed -i "s:aufs.ko usr/include/linux/aufs_type.h:aufs.ko:g" Makefile || die
-	sed -i "s:__user::g" include/linux/aufs_type.h || die
+	if [[ ${KV_MINOR} -lt 7 ]]; then
+		sed -i "s:__user::g" include/linux/aufs_type.h || die
+	else
+		sed -i "s:__user::g" include/uapi/linux/aufs_type.h || die
+	fi
 
-	cd "${WORKDIR}"/${PN/3}-util
+	cd "${WORKDIR}"/${P}/${PN/3}-util
 
 	einfo "Using for utils building branch ${util_branch}"
 	git checkout -b local-gentoo ${util_branch} || die
@@ -128,7 +139,7 @@ src_compile() {
 
 	emake CC=$(tc-getCC) LD=$(tc-getLD) LDFLAGS="$(raw-ldflags)" ARCH=$(tc-arch-kernel) CONFIG_AUFS_FS=m KDIR=${KV_OUT_DIR}
 
-	cd "${WORKDIR}"/${PN/3}-util
+	cd "${WORKDIR}"/${P}/${PN/3}-util
 	emake CC=$(tc-getCC) AR=$(tc-getAR) KDIR=${KV_OUT_DIR} C_INCLUDE_PATH="${S}"/include
 }
 
@@ -139,9 +150,11 @@ src_install() {
 
 	use doc && doins -r Documentation
 
+	use kernel-patch || doins "${T}"/${P}/${PN}-standalone/${PN}-standalone-base-combined.patch
+
 	dodoc Documentation/filesystems/aufs/README
 
-	cd "${WORKDIR}"/${PN/3}-util
+	cd "${WORKDIR}"/${P}/${PN/3}-util
 	emake DESTDIR="${D}" KDIR=${KV_OUT_DIR} install
 
 	newdoc README README-utils

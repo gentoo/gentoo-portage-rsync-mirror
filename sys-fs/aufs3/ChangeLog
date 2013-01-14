@@ -1,6 +1,40 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.44 2013/01/12 15:19:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.45 2013/01/14 08:55:06 jlec Exp $
+
+*aufs3-3_p20130114 (14 Jan 2013)
+
+  14 Jan 2013; Justin Lecher <jlec@gentoo.org>
+  -files/3_p20121112/aufs3-base-0.patch, -files/3_p20121112/aufs3-base-1.patch,
+  -files/3_p20121112/aufs3-base-2.patch, -aufs3-3_p20121015.ebuild,
+  -aufs3-3_p20121015-r1.ebuild, -aufs3-3_p20121112.ebuild,
+  -aufs3-3_p20121129.ebuild, +aufs3-3_p20130114.ebuild,
+  -files/3_p20121112/aufs3-base-3.patch, -files/3_p20121112/aufs3-base-4.patch,
+  -files/3_p20121112/aufs3-base-5.patch, -files/3_p20121112/aufs3-base-6.patch,
+  -files/3_p20121112/aufs3-base-x-rcN.patch,
+  -files/3_p20121112/aufs3-standalone-0.patch,
+  -files/3_p20121112/aufs3-standalone-1.patch,
+  -files/3_p20121112/aufs3-standalone-2.patch,
+  -files/3_p20121112/aufs3-standalone-3.patch,
+  -files/3_p20121112/aufs3-standalone-4.patch,
+  -files/3_p20121112/aufs3-standalone-5.patch,
+  -files/3_p20121112/aufs3-standalone-6.patch,
+  -files/3_p20121112/aufs3-standalone-x-rcN.patch,
+  -files/3_p20121129/aufs3-base-0.patch, -files/3_p20121129/aufs3-base-1.patch,
+  -files/3_p20121129/aufs3-base-2.patch, -files/3_p20121129/aufs3-base-3.patch,
+  -files/3_p20121129/aufs3-base-4.patch, -files/3_p20121129/aufs3-base-5.patch,
+  -files/3_p20121129/aufs3-base-6.patch,
+  -files/3_p20121129/aufs3-base-x-rcN.patch,
+  -files/3_p20121129/aufs3-standalone-0.patch,
+  -files/3_p20121129/aufs3-standalone-1.patch,
+  -files/3_p20121129/aufs3-standalone-2.patch,
+  -files/3_p20121129/aufs3-standalone-3.patch,
+  -files/3_p20121129/aufs3-standalone-4.patch,
+  -files/3_p20121129/aufs3-standalone-5.patch,
+  -files/3_p20121129/aufs3-standalone-6.patch,
+  -files/3_p20121129/aufs3-standalone-x-rcN.patch:
+  Drop old and refactor patching procedure to reduce size of FILESDIR, #450800
+  and reliability, #368385 & #451970
 
   12 Jan 2013; Justin Lecher <jlec@gentoo.org> aufs3-3_p20130107.ebuild:
   Fix header file location for <linux-3.7, #451384

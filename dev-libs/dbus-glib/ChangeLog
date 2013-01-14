@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.111 2013/01/13 17:50:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.112 2013/01/14 08:35:48 ssuominen Exp $
+
+  14 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  dbus-glib-0.100-r2.ebuild:
+  Restore installation of documentation and revert syntax to used in -r1 wrt
+  #451984 by Nikoli
 
 *dbus-glib-0.100-r2 (13 Jan 2013)
 
