@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.169 2013/01/14 22:24:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.170 2013/01/14 22:36:26 cardoe Exp $
+
+  14 Jan 2013; Doug Goldstein <cardoe@gentoo.org> qemu-1.2.2.ebuild,
+  qemu-1.3.0.ebuild, qemu-9999.ebuild:
+  Only tell x86 and amd64 users about the qemu-kvm symlink since it only
+  applies to them.
 
   14 Jan 2013; Doug Goldstein <cardoe@gentoo.org> qemu-1.2.2.ebuild,
   qemu-1.3.0.ebuild, qemu-9999.ebuild:

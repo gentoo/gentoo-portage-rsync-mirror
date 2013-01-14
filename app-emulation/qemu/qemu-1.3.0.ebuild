@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.3.0.ebuild,v 1.2 2013/01/14 22:24:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.3.0.ebuild,v 1.3 2013/01/14 22:36:26 cardoe Exp $
 
 EAPI=5
 
@@ -325,7 +325,7 @@ src_install() {
 			ewarn "The deprecated '/usr/bin/kvm' symlink is no longer installed"
 			ewarn "You should use '/usr/bin/qemu-kvm', you may need to edit"
 			ewarn "your libvirt configs or other wrappers for ${PN}"
-		else
+		elif use x86 || use amd64; then
 			elog "You disabled QEMU_SOFTMMU_TARGETS=x86_64, this disables install"
 			elog "of the /usr/bin/qemu-kvm symlink."
 		fi

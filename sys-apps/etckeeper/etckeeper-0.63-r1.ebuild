@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63-r1.ebuild,v 1.5 2013/01/06 19:18:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-0.63-r1.ebuild,v 1.6 2013/01/14 22:58:43 hasufell Exp $
 
 EAPI=5
 
@@ -68,7 +68,7 @@ pkg_postinst(){
 	elog "For dev-vcs/bzr you need to enable 'bazaar' useflag."
 	elog
 	elog "You may want to adjust your /etc/portage/bashrc"
-	elog "see the example file in /usr/share/doc/${P}/examples"
+	elog "see the example file in /usr/share/doc/${PF}/examples"
 	elog
 	elog "To initialise your etc-dir as a repository run:"
 	elog "${PN} init -d /etc"
