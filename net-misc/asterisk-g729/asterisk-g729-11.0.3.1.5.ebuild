@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/asterisk-g729-10.0.3.1.5.ebuild,v 1.3 2012/09/24 00:46:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/asterisk-g729-11.0.3.1.5.ebuild,v 1.1 2013/01/14 12:17:33 chainsaw Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://store.digium.com/productview.php?product_code=G729CODEC"
 
 BENCH_PV=1.0.8
 
-AST_PV=10.0
+AST_PV=11.0
 MY_PV=$(replace_version_separator 2 _)
 
 SRC_URI="x86? (
@@ -54,14 +54,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND} =net-misc/asterisk-10*"
+RDEPEND="${DEPEND} =net-misc/asterisk-11*"
 
 RESTRICT="mirror strip"
 
-QA_FLAGS_IGNORED_amd64="usr/lib64/codec_g729a.so usr/sbin/benchg729"
-QA_FLAGS_IGNORED_x86="usr/lib/codec_g729a.so usr/sbin/benchg729"
-
-QA_EXECSTACK="usr/sbin/benchg729 usr/sbin/asthostid usr/sbin/astregister"
+QA_FLAGS_IGNORED_amd64="usr/lib64/asterisk/modules/codec_g729a.so usr/sbin/benchg729"
+QA_FLAGS_IGNORED_x86="usr/lib/asterisk/modules/codec_g729a.so usr/sbin/benchg729"
+QA_PREBUILT="usr/sbin/benchg729 usr/sbin/asthostid usr/sbin/astregister"
 
 S="${WORKDIR}"
 
