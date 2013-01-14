@@ -8,6 +8,5 @@
   track based tagging and cross platform compatibility.</longdescription>
 <use>
   <flag name='acoustid'>Use media-libs/chromaprint for acoustic fingerprinting</flag>
-  <flag name='coverart'>Install plugin for direct coverart dowload</flag>
 </use>
 </pkgmetadata>

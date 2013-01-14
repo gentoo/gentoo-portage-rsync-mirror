@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.440 2013/01/06 12:53:52 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.441 2013/01/14 04:27:48 jmbsvicetto Exp $
+
+  14 Jan 2013; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +files/amarok-2.6.90-fix-crash-lastfm.patch, amarok-2.6.90.ebuild:
+  Applied reworked upstream patch by Matěj Laitl to fix a crash on startup
+  related to the lastfm port - fixes bug 451476.
 
 *amarok-2.6.90 (06 Jan 2013)
 

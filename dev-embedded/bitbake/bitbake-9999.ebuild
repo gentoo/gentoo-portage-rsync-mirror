@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-9999.ebuild,v 1.12 2013/01/05 08:56:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/bitbake-9999.ebuild,v 1.13 2013/01/14 04:07:33 radhermit Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
-PYTHON_USE="sqlite"
+PYTHON_REQ_USE="sqlite"
 
 inherit distutils-r1 vcs-snapshot
 

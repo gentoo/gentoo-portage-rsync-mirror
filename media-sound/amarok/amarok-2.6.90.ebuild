@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.6.90.ebuild,v 1.1 2013/01/06 12:53:52 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.6.90.ebuild,v 1.2 2013/01/14 04:27:48 jmbsvicetto Exp $
 
 EAPI=4
 
@@ -70,6 +70,13 @@ RDEPEND="${COMMONDEPEND}
 	!media-sound/amarok-utils
 	$(add_kdebase_dep phonon-kde)
 "
+
+# Reworked patch to apply cleanly on 2.6.90
+# commit 68f90970f51015b9410b0786fa4d861089ccd413
+# by Matěj Laitl <matej@laitl.cz>
+PATCHES=(
+	"${FILESDIR}/${P}-fix-crash-lastfm.patch"
+)
 
 src_configure() {
 	# Append minimal-toc cflag for ppc64, see bug 280552 and 292707
