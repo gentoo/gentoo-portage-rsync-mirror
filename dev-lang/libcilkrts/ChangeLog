@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/libcilkrts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/libcilkrts/ChangeLog,v 1.2 2012/07/18 02:23:48 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/libcilkrts/ChangeLog,v 1.3 2013/01/14 04:41:37 ottxor Exp $
+
+*libcilkrts-2856 (14 Jan 2013)
+
+  14 Jan 2013; Christoph Junghans <ottxor@gentoo.org>
+  +files/libcilkrts-2856-flags.patch, +libcilkrts-2856.ebuild,
+  -files/libcilkrts-2546-build.patch, -libcilkrts-2546.ebuild:
+  version bump
 
 *libcilkrts-2546 (18 Jul 2012)
 
