@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap-ng
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.53 2012/11/24 02:36:09 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.54 2013/01/15 14:32:56 flameeyes Exp $
+
+  15 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org> libcap-ng-0.7.3.ebuild:
+  Fix bug #452118 (automake-1.13 failure).
 
   24 Nov 2012; Tim Harder <radhermit@gentoo.org> -libcap-ng-0.7.ebuild:
   Remove old.
@@ -200,4 +203,3 @@
   12 Sep 2009; Alin Năstac <mrness@gentoo.org>
   +files/libcap-ng-gentoo.patch, +metadata.xml, +libcap-ng-0.6.1.ebuild:
   Initial version.
-

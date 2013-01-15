@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.438 2013/01/15 14:26:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.439 2013/01/15 14:36:43 chainsaw Exp $
+
+*asterisk-1.8.20.0 (15 Jan 2013)
+
+  15 Jan 2013; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.20.0.ebuild:
+  Bugfix release on the 1.8 branch. The fix for bug #440278 is now upstream.
 
 *asterisk-11.2.0 (15 Jan 2013)
 

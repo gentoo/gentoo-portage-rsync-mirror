@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.7.3.ebuild,v 1.1 2012/11/24 02:34:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.7.3.ebuild,v 1.2 2013/01/15 14:32:56 flameeyes Exp $
 
 EAPI=5
 
@@ -35,6 +35,7 @@ src_prepare() {
 
 	# Python bindings are built/tested/installed manually.
 	sed -i -e "/^SUBDIRS/s/ python//" bindings/Makefile.am || die
+	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die
 
 	eautoreconf
 
