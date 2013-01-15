@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.69 2013/01/10 15:19:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.70 2013/01/15 06:11:22 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> test-unit-1.2.3.ebuild,
+  test-unit-2.5.3.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   10 Jan 2013; Agostino Sarubbo <ago@gentoo.org> test-unit-2.5.3.ebuild:
   Stable for x86, wrt bug #449558

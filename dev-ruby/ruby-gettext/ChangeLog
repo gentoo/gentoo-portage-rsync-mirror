@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.101 2013/01/04 20:35:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.102 2013/01/15 06:14:02 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> ruby-gettext-2.2.1.ebuild,
+  ruby-gettext-2.3.3.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   04 Jan 2013; Agostino Sarubbo <ago@gentoo.org> ruby-gettext-2.2.1.ebuild:
   Stable for ia64, wrt bug #448310

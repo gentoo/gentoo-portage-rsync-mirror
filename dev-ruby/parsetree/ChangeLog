@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/parsetree
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.53 2012/10/28 17:19:33 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.54 2013/01/15 06:07:04 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> parsetree-3.0.7.ebuild,
+  parsetree-3.0.9-r1.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> parsetree-3.0.6.ebuild,
   parsetree-3.0.7.ebuild, parsetree-3.0.9-r1.ebuild:

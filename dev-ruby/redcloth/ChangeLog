@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcloth
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.77 2012/11/07 03:33:25 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.78 2013/01/15 06:10:41 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> redcloth-4.2.9.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> redcloth-4.2.9.ebuild:
   Stable for HPPA (bug #427594).

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby_parser
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.39 2012/10/28 17:21:44 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.40 2013/01/15 06:05:48 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> ruby_parser-2.0.5.ebuild,
+  ruby_parser-2.3.0.ebuild, ruby_parser-2.3.1.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> ruby_parser-2.0.5.ebuild:
   alpha stable

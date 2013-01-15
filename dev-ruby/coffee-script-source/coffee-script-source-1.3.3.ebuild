@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-script-source/coffee-script-source-1.3.3.ebuild,v 1.2 2012/09/17 19:21:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-script-source/coffee-script-source-1.3.3.ebuild,v 1.3 2013/01/15 06:29:09 zerochaos Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18 jruby"
@@ -15,6 +15,6 @@ HOMEPAGE="https://github.com/rails/coffee-rails"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x64-macos ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~x86 ~x64-macos ~x86-solaris"
 
 IUSE=""
