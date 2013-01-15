@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.96 2013/01/13 09:47:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.97 2013/01/15 04:56:38 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> rack-1.1.4.ebuild,
+  rack-1.4.1.ebuild, rack-1.4.3.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
 *rack-1.1.4 (13 Jan 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.1.4.ebuild,v 1.1 2013/01/13 09:47:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.1.4.ebuild,v 1.2 2013/01/15 04:56:38 zerochaos Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18 jruby"
@@ -43,7 +43,6 @@ each_ruby_prepare() {
 			;;
 	esac
 }
-
 
 each_ruby_test() {
 	# Since the Rakefile calls specrb directly rather than loading it, we

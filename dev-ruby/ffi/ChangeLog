@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ffi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.47 2012/12/30 20:40:33 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.48 2013/01/15 04:47:05 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> ffi-1.1.5.ebuild,
+  ffi-1.2.0.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> ffi-1.1.5.ebuild:
   Stable for alpha, wrt bug #448056

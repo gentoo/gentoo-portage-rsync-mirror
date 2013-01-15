@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-ffi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.16 2012/10/28 17:18:57 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.17 2013/01/15 04:48:09 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> ruby-ffi-0.ebuild,
+  ruby-ffi-1.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> ruby-ffi-0.ebuild,
   ruby-ffi-1.ebuild:
@@ -58,4 +62,3 @@
   +metadata.xml:
   Add a virtual for the Ruby FFI implementation to have an easy way to
   handle FFI-based extensions.
-
