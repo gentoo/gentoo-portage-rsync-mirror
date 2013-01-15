@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/tzinfo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.109 2012/11/08 06:50:39 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.110 2013/01/15 02:36:31 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> tzinfo-0.3.33.ebuild,
+  tzinfo-0.3.35.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
 *tzinfo-0.3.35 (08 Nov 2012)
 

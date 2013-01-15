@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/msgpack
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/ChangeLog,v 1.16 2012/09/27 09:39:02 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/ChangeLog,v 1.17 2013/01/15 02:51:59 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> msgpack-0.4.7.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   27 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> msgpack-0.4.7.ebuild:
   Keyword ~ppc/~ppc64 wrt #412603
@@ -78,4 +81,3 @@
   02 Mar 2010; MATSUU Takuto <matsuu@gentoo.org> +msgpack-0.3.3.ebuild,
   +metadata.xml:
   Initial import.
-

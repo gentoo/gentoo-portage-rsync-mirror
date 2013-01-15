@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-1.2.0.ebuild,v 1.8 2012/06/16 10:48:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-1.2.0.ebuild,v 1.9 2013/01/15 02:41:42 vapier Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.7"
 inherit autotools eutils python
 
 DESCRIPTION="An assembler for x86 and x86_64 instruction sets"
-HOMEPAGE="http://www.tortall.net/projects/yasm/"
+HOMEPAGE="http://yasm.tortall.net/"
 SRC_URI="http://www.tortall.net/projects/yasm/releases/${P}.tar.gz"
 
 LICENSE="BSD-2 BSD || ( Artistic GPL-2 LGPL-2 )"
