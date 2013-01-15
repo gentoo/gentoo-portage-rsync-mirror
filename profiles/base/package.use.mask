@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.430 2013/01/13 19:45:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.431 2013/01/15 13:17:26 aballier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -492,7 +492,3 @@ media-video/vlc media-library
 # Leave it unmasked for live ebuild, people should know what they do if they use
 # it anyway
 <media-video/ffmpeg-9999 celt
-
-# Alexis Ballier <aballier@gentoo.org> <5 Oct 2011>
-# harfbuzz support does not build for now, leave the useflag be and unmask it later
-media-libs/libass harfbuzz
