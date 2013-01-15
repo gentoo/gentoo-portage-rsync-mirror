@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus-m17n
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ChangeLog,v 1.23 2012/05/03 19:24:28 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ChangeLog,v 1.24 2013/01/15 08:43:46 naota Exp $
+
+*ibus-m17n-1.3.4 (15 Jan 2013)
+
+  15 Jan 2013; Naohiro Aota <naota@gentoo.org> +ibus-m17n-1.3.4.ebuild:
+  bumped #451850
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org>
   ibus-m17n-1.2.0.20091217.ebuild, ibus-m17n-1.3.1.ebuild,
@@ -123,4 +128,3 @@
   06 Sep 2008; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
   +ibus-m17n-0.1.1.20080901.ebuild:
   Initial import.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-9999.ebuild,v 1.6 2013/01/11 21:24:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-9999.ebuild,v 1.7 2013/01/15 08:42:58 scarabeus Exp $
 
 EAPI=5
 
@@ -37,6 +37,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--disable-werror \
 		$(use_enable static-libs static)
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.3.0.ebuild,v 1.3 2013/01/11 21:23:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.3.0.ebuild,v 1.4 2013/01/15 08:42:58 scarabeus Exp $
 
 EAPI=4
 
@@ -40,6 +40,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--disable-werror \
 		--disable-spreadsheet-model \
 		$(use_enable static-libs static)
 }
