@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clipboard
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clipboard/ChangeLog,v 1.17 2012/06/24 12:59:06 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clipboard/ChangeLog,v 1.18 2013/01/15 22:09:54 maekke Exp $
+
+  15 Jan 2013; Markus Meier <maekke@gentoo.org> Clipboard-0.130.0.ebuild:
+  add ~arm, bug #449762
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

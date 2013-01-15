@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/sofia-sip
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/ChangeLog,v 1.24 2012/12/31 15:52:56 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/ChangeLog,v 1.25 2013/01/15 22:02:18 ulm Exp $
+
+  15 Jan 2013; Ulrich Müller <ulm@gentoo.org> sofia-sip-1.12.10.ebuild,
+  sofia-sip-1.12.11.ebuild:
+  Specify LICENSE more precisely, bug 452402.
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> sofia-sip-1.12.11.ebuild:
   Add ~ppc64, wrt bug #449220

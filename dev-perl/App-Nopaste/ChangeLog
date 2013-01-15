@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/App-Nopaste
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-Nopaste/ChangeLog,v 1.37 2013/01/08 18:42:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-Nopaste/ChangeLog,v 1.38 2013/01/15 22:10:31 maekke Exp $
+
+  15 Jan 2013; Markus Meier <maekke@gentoo.org> App-Nopaste-0.900.0.ebuild:
+  add ~arm, bug #449762
 
   08 Jan 2013; Torsten Veller <tove@gentoo.org> -App-Nopaste-0.330.0.ebuild,
   -App-Nopaste-0.340.0.ebuild, -App-Nopaste-0.350.0.ebuild:
