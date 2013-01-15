@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.46 2012/12/22 13:38:15 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.47 2013/01/15 05:50:56 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> hoe-seattlerb-1.2.8.ebuild,
+  hoe-seattlerb-1.2.9.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
 *hoe-seattlerb-1.2.9 (22 Dec 2012)
 
@@ -184,4 +188,3 @@
   25 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   +hoe-seattlerb-1.2.1.ebuild, +metadata.xml:
   Initial import of the seattlerb hoe plugin which is needed for hoe tests.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.0.ebuild,v 1.3 2013/01/10 19:51:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.0.ebuild,v 1.4 2013/01/15 05:45:10 vapier Exp $
 
 inherit flag-o-matic eutils libtool unpacker toolchain-funcs
 
@@ -71,6 +71,10 @@ src_compile() {
 		$(use_enable static-libs static)
 
 	emake || die
+}
+
+src_test() {
+	emake check
 }
 
 src_install() {
