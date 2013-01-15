@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0.ebuild,v 1.4 2013/01/09 11:42:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.1.ebuild,v 1.1 2013/01/15 20:46:15 vostorga Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -48,6 +48,8 @@ RDEPEND="dev-libs/iniparser
 	selinux? ( sec-policy/selinux-samba )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+REQUIRED_USE="ads? ( ldap )"
 
 RESTRICT="mirror"
 
@@ -143,7 +145,7 @@ pkg_postinst() {
 	ewarn "controller work previously known as 'samba4'."
 
 	elog "For further information and migration steps make sure to read "
-	#elog "http://samba.org/samba/history/${P}.html and "
+	elog "http://samba.org/samba/history/${P}.html "
 	elog "http://samba.org/samba/history/${PN}-4.0.0.html and"
 	elog "http://wiki.samba.org/index.php/Samba4/HOWTO "
 }
