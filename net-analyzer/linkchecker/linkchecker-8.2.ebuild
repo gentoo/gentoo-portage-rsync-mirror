@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-8.2.ebuild,v 1.3 2013/01/15 12:32:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-8.2.ebuild,v 1.4 2013/01/15 16:17:54 jlec Exp $
 
 EAPI=4
 
@@ -8,6 +8,8 @@ PYTHON_DEPEND="2:2.7"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 2.5 2.6 3.*"
 PYTHON_MODNAME="linkcheck"
+PYTHON_USE_WITH=sqlite
+PYTHON_USE_WITH_OPT=bookmarks
 
 inherit bash-completion-r1 distutils eutils multilib
 
@@ -25,7 +27,6 @@ IUSE="bash-completion bookmarks clamav doc geoip gnome login nagios syntax-check
 RDEPEND="
 	dev-python/dnspython
 	bash-completion? ( dev-python/optcomplete )
-	bookmarks? ( dev-python/pysqlite:2 )
 	clamav? ( app-antivirus/clamav )
 	geoip? ( dev-python/geoip-python )
 	gnome? ( dev-python/pygtk:2 )

@@ -1,6 +1,23 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1166 2013/01/14 23:15:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1168 2013/01/15 16:05:03 zmedico Exp $
+
+*portage-2.2.0_alpha153 (15 Jan 2013)
+
+  15 Jan 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha153.ebuild,
+  -portage-2.2.0_alpha152.ebuild:
+  2.2.0_alpha153 version bump. This includes all of the fixes in 2.1.11.42. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.11.42 (15 Jan 2013)
+
+  15 Jan 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.42.ebuild,
+  -portage-2.1.11.41.ebuild:
+  2.1.11.42 version bump. This fixes bug #452030 (prevent duplicate test runs
+  with test-fail-continue) and bug #452176 (warn about deprecated /etc/make.*
+  files). This also fixes a random KeyError which can occur when checking binary
+  package digests (regression since 2.1.11.39 and 2.2.0_alpha150). Bug #445274
+  tracks all bugs fixed since portage-2.1.11.31.
 
   14 Jan 2013; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
   Remove LINGUAS loop which is handled by the Makefile now.
