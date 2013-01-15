@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nanomsg/nanomsg-20121207.ebuild,v 1.1 2012/12/07 05:12:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nanomsg/nanomsg-20121207.ebuild,v 1.2 2013/01/15 03:05:27 patrick Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentooexperimental.org/~dreeevil/${P}.zip"
 
 inherit eutils cmake-utils
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

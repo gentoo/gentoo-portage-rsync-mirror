@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/syntax
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.43 2012/11/06 17:08:10 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.44 2013/01/15 03:26:27 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> syntax-1.0.0-r2.ebuild,
+  syntax-1.0.0-r3.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   06 Nov 2012; Jeroen Roovers <jer@gentoo.org> syntax-1.0.0-r3.ebuild:
   Stable for HPPA (bug #426668).

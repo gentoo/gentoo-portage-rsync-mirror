@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rexical
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.30 2012/11/06 17:06:18 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.31 2013/01/15 03:10:55 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> rexical-1.0.5-r1.ebuild,
+  rexical-1.0.5.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   06 Nov 2012; Jeroen Roovers <jer@gentoo.org> rexical-1.0.5-r1.ebuild:
   Stable for HPPA (bug #426668).
@@ -104,4 +108,3 @@
   15 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +rexical-1.0.4.ebuild, +files/rexical-1.0.4-ruby187.patch, +metadata.xml:
   Initial import of rexical, needed for nokogiri after patching.
-
