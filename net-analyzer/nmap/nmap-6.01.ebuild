@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.01.ebuild,v 1.16 2013/01/01 19:03:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.01.ebuild,v 1.17 2013/01/15 17:03:14 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -19,7 +19,7 @@ SRC_URI="
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
-IUSE="gtk ipv6 lua ncat ndiff nmap-update nping ssl"
+IUSE="gtk lua ncat ndiff nmap-update nping ssl"
 
 NMAP_PYTHON_DEPEND="
 || (
@@ -32,7 +32,7 @@ NMAP_PYTHON_DEPEND="
 DEPEND="
 	dev-libs/apr
 	dev-libs/libpcre
-	net-libs/libpcap[ipv6?]
+	net-libs/libpcap[ipv6]
 	gtk? (
 		>=x11-libs/gtk+-2.6:2
 		>=dev-python/pygtk-2.6
