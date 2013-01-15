@@ -1,6 +1,12 @@
 # ChangeLog for app-text/qpdfview
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.29 2013/01/15 16:38:05 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.30 2013/01/15 17:36:21 kensington Exp $
+
+*qpdfview-0.3.7-r1 (15 Jan 2013)
+
+  15 Jan 2013; Michael Palimaka <kensington@gentoo.org>
+  +qpdfview-0.3.7-r1.ebuild, -qpdfview-0.3.7.ebuild:
+  Fix sqlite USE flag.
 
 *qpdfview-0.3.7 (15 Jan 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.7.ebuild,v 1.1 2013/01/15 16:38:05 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.7-r1.ebuild,v 1.1 2013/01/15 17:36:21 kensington Exp $
 
 EAPI=5
 PLOCALES="ast bs ca cs da de el en_GB es eu fi fr he hr id it ky my pl pt_BR ro ru sk tr ug uk zh_CN"
@@ -36,11 +36,15 @@ src_prepare() {
 src_configure() {
 	local config i
 
-	for i in cups dbus sqlite svg synctex; do
+	for i in cups dbus svg synctex; do
 		if ! use ${i} ; then
 			config+=" without_${i}"
 		fi
 	done
+
+	if ! use sqlite ; then
+		config+=" without_sql"
+	fi
 
 	eqmake4 CONFIG+="${config}"
 }
