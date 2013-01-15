@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ntfs3g
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.143 2012/12/30 14:59:47 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.144 2013/01/15 01:36:53 chutzpah Exp $
+
+*ntfs3g-2013.1.13 (15 Jan 2013)
+
+  15 Jan 2013; Patrick McLean <chutzpah@gentoo.org> +ntfs3g-2013.1.13.ebuild:
+  Version bump.
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> ntfs3g-2012.1.15-r2.ebuild:
   Stable for amd64, wrt bug #439832
