@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.10.1.ebuild,v 1.3 2013/01/14 10:10:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.10.1.ebuild,v 1.4 2013/01/15 13:57:49 jlec Exp $
 
 EAPI=3
 
@@ -76,6 +76,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-5.6.0-odbc.patch
 	"${FILESDIR}"/${PN}-5.6.1-ffmpeg.patch
 	"${FILESDIR}"/${PN}-5.6.1-libav-0.8.patch
+	"${FILESDIR}"/${P}-tcl8.6.patch
 	)
 
 pkg_setup() {
@@ -88,7 +89,7 @@ pkg_setup() {
 	java-pkg-opt-2_pkg_setup
 
 	use python && python_set_active_version 2
-	append-cppflags -D__STDC_CONSTANT_MACROS -DUSE_INTERP_ERRORLINE
+	append-cppflags -D__STDC_CONSTANT_MACROS
 }
 
 src_configure() {

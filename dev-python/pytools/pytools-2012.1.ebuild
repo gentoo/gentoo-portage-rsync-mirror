@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/pytools-2012.1.ebuild,v 1.1 2013/01/14 13:51:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/pytools-2012.1.ebuild,v 1.2 2013/01/15 13:41:23 jlec Exp $
 
 EAPI=5
 
@@ -20,9 +20,9 @@ IUSE="test"
 
 DEPEND="
 	dev-python/setuptools
-	test? ( dev-python/pytest )"
+	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
 python_test() {
 	py.test || die "Tests fail with ${EPYTHON}"
-	}
+}
