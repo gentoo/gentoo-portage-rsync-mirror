@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/thcrut
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/ChangeLog,v 1.11 2007/02/20 00:44:05 jokey Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/ChangeLog,v 1.12 2013/01/15 20:17:20 ulm Exp $
+
+  15 Jan 2013; Ulrich Müller <ulm@gentoo.org> thcrut-1.2.5.ebuild:
+  Fix LICENSE, bug 449954.
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

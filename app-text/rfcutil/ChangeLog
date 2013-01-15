@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rfcutil
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/ChangeLog,v 1.39 2012/10/17 05:04:42 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/ChangeLog,v 1.40 2013/01/15 20:22:01 ulm Exp $
+
+  15 Jan 2013; Ulrich Müller <ulm@gentoo.org> rfcutil-3.2.3-r2.ebuild:
+  Fix LICENSE, see notice in rfc-3.2.3 file, bug 452194.
 
   17 Oct 2012; Michael Palimaka <kensington@gentoo.org> -files/rfc-3.2.3.diff,
   -rfcutil-3.2.3-r1.ebuild:
