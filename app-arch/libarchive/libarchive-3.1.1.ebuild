@@ -1,18 +1,18 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-3.0.3.ebuild,v 1.11 2012/05/18 18:18:53 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-3.1.1.ebuild,v 1.1 2013/01/15 07:26:32 ssuominen Exp $
 
-EAPI=4
-inherit eutils multilib
+EAPI=5
+inherit autotools eutils multilib
 
 DESCRIPTION="BSD tar command"
-HOMEPAGE="http://code.google.com/p/libarchive/"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
+HOMEPAGE="http://libarchive.github.com/"
+SRC_URI="http://github.com/${PN}/${PN}/${PN/lib}/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-IUSE="acl +bzip2 +e2fsprogs expat +iconv kernel_linux +lzma nettle static-libs xattr +zlib"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+IUSE="acl +bzip2 +e2fsprogs expat +iconv kernel_linux +lzma lzo nettle static-libs xattr +zlib"
 
 RDEPEND="dev-libs/openssl:0
 	acl? ( virtual/acl )
@@ -24,6 +24,7 @@ RDEPEND="dev-libs/openssl:0
 		xattr? ( sys-apps/attr )
 		)
 	lzma? ( app-arch/xz-utils )
+	lzo? ( >=dev-libs/lzo-2 )
 	nettle? ( dev-libs/nettle )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
@@ -35,7 +36,8 @@ DEPEND="${RDEPEND}
 DOCS="NEWS README"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-nozlib.patch
+	# If removed, restore elibtoolize to allow building shared libs on Solaris/x64!
+	eautoreconf
 }
 
 src_configure() {
@@ -54,6 +56,7 @@ src_configure() {
 		--without-lzmadec \
 		$(use_with iconv) \
 		$(use_with lzma) \
+		$(use_with lzo lzo2) \
 		$(use_with nettle) \
 		$(use_with !expat xml2) \
 		$(use_with expat)
@@ -68,10 +71,10 @@ src_install() {
 	default
 
 	# Libs.private: should be used from libarchive.pc instead
-	rm -f "${ED}"usr/lib*/lib*.la
+	prune_libtool_files
 
 	# Create tar symlink for FreeBSD
-	if [[ ${CHOST} == *-freebsd* ]]; then
+	if ! use prefix && [[ ${CHOST} == *-freebsd* ]]; then
 		dosym bsdtar /usr/bin/tar
 		echo '.so bsdtar.1' > "${T}"/tar.1
 		doman "${T}"/tar.1
@@ -80,9 +83,9 @@ src_install() {
 }
 
 pkg_preinst() {
-	preserve_old_lib /{,usr/}$(get_libdir)/${PN}$(get_libname 2)
+	preserve_old_lib /usr/$(get_libdir)/${PN}$(get_libname 12)
 }
 
 pkg_postinst() {
-	preserve_old_lib_notify /{,usr/}$(get_libdir)/${PN}$(get_libname 2)
+	preserve_old_lib_notify /usr/$(get_libdir)/${PN}$(get_libname 12)
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/thor-0.15.2.ebuild,v 1.1 2012/06/07 21:57:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/thor-0.15.2.ebuild,v 1.2 2013/01/15 07:11:04 zerochaos Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -22,7 +22,7 @@ SRC_URI="http://github.com/wycats/${PN}/tarball/v${PV} -> ${PN}-git-${PV}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 IUSE="doc"
 
 ruby_add_bdepend "

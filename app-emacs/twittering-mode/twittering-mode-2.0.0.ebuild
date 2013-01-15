@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/twittering-mode/twittering-mode-2.0.0.ebuild,v 1.1 2011/05/07 09:05:23 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/twittering-mode/twittering-mode-2.0.0.ebuild,v 1.2 2013/01/15 07:24:42 naota Exp $
 
 EAPI=4
 
@@ -11,10 +11,12 @@ if [ "${PV}" = "9999" ]; then
 	inherit git-2
 	SRC_URI=""
 	KEYWORDS=""
+	IUSE="doc"
 else
 	SRC_URI="mirror://sourceforge/twmode/${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 	RESTRICT="test"
+	IUSE=""
 fi
 
 DESCRIPTION="Emacs major mode for Twitter."
@@ -22,20 +24,13 @@ HOMEPAGE="http://twmode.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="doc"
 
 DEPEND=""
 RDEPEND="app-crypt/gnupg"
 
-src_prepare() {
-	if [ "${PV}" = "9999" ]; then
-		epatch "${FILESDIR}"/${P}-proxy-test.patch
-	fi
-}
-
 src_compile() {
 	elisp-compile twittering-mode.el || die
-	use doc && emake -C doc/manual
+	[ "${PV}" = "9999" ] && use doc && emake -C doc/manual
 }
 
 src_test() {
@@ -43,6 +38,6 @@ src_test() {
 }
 
 src_install() {
-	use doc && dodoc doc/manual/twmode/twmode.html
+	[ "${PV}" = "9999" ] && use doc && dodoc doc/manual/twmode/twmode.html
 	elisp-install ${PN} twittering-mode.el *.elc || die
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/memcache-client
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memcache-client/ChangeLog,v 1.13 2012/05/01 18:24:12 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memcache-client/ChangeLog,v 1.14 2013/01/15 07:19:22 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> memcache-client-1.8.5.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   01 May 2012; Raúl Porcel <armin76@gentoo.org> memcache-client-1.8.5.ebuild:
   Drop ia64/sparc keywords
@@ -47,4 +50,3 @@
   28 Nov 2010; Hans de Graaff <graaff@gentoo.org>
   +memcache-client-1.8.5.ebuild, +metadata.xml:
   Initial import. Dependency for Rails 3.
-

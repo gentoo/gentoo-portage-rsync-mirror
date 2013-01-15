@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-rails
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.52 2012/07/08 15:23:05 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.53 2013/01/15 07:12:01 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> eselect-rails-0.18.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> eselect-rails-0.16.ebuild,
   eselect-rails-0.18.ebuild:
@@ -197,4 +200,3 @@
   01 Sep 2007; Joshua Nichols <nichoj@gentoo.org> +metadata.xml,
   +eselect-rails-0.10.ebuild:
   Initial version, to support rails 1.1.6-r2 and 1.2.3-r1.
-

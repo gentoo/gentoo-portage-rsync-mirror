@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/libxml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.73 2012/12/02 13:53:09 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.74 2013/01/15 07:16:14 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> libxml-2.2.1.ebuild,
+  libxml-2.3.3.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   02 Dec 2012; Hans de Graaff <graaff@gentoo.org> libxml-2.2.1.ebuild,
   libxml-2.3.3.ebuild:
@@ -308,4 +312,3 @@
   02 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
   +libxml-0.3.4.ebuild:
   Initial import. Ebuild submitted by <evanm@frap.net>, closing bug #56298.
-
