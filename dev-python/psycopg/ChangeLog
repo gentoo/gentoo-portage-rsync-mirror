@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.153 2013/01/14 13:31:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.154 2013/01/15 18:03:38 mgorny Exp $
+
+  15 Jan 2013; Michał Górny <mgorny@gentoo.org> psycopg-2.4.6-r1.ebuild:
+  Fix recursive dohtml call.
 
 *psycopg-2.4.6-r1 (14 Jan 2013)
 

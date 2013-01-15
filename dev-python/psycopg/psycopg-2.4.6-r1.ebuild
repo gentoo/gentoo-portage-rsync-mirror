@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.4.6-r1.ebuild,v 1.1 2013/01/14 13:31:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.4.6-r1.ebuild,v 1.2 2013/01/15 18:03:38 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2} )
@@ -63,7 +63,7 @@ python_install_all() {
 
 	if use doc; then
 		dodoc doc/psycopg2.txt
-		dohtml doc/html/.
+		dohtml -r doc/html/.
 	fi
 
 	if use examples; then

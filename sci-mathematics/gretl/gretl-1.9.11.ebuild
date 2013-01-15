@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.11.ebuild,v 1.1 2012/11/30 07:33:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.11.ebuild,v 1.2 2013/01/15 18:22:35 bicatali Exp $
 
 EAPI=4
 
@@ -41,6 +41,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 SITEFILE=50${PN}-gentoo.el
+
+REQUIRED_USE="emacs? ( gtk )"
 
 pkg_setup() {
 	if use openmp && [[ $(tc-getCC)$ == *gcc* ]] && ! tc-has-openmp
