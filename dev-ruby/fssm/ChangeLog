@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fssm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.21 2012/08/14 03:40:16 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.22 2013/01/15 06:46:46 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> fssm-0.2.7-r1.ebuild,
+  fssm-0.2.7.ebuild, fssm-0.2.8.1.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> fssm-0.2.8.1.ebuild:
   Port to rspec helper for testing.

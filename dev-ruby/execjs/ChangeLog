@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/execjs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/ChangeLog,v 1.5 2012/06/29 05:05:04 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/ChangeLog,v 1.6 2013/01/15 06:32:22 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> execjs-1.2.13-r1.ebuild,
+  execjs-1.4.0.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
 *execjs-1.4.0 (29 Jun 2012)
 
@@ -25,4 +29,3 @@
   30 Dec 2011; Hans de Graaff <graaff@gentoo.org> +execjs-1.2.13.ebuild,
   +metadata.xml:
   Initial import. Dependency for dev-ruby/uglifier.
-

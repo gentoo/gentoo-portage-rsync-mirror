@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/erubis
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.20 2012/08/14 18:33:20 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.21 2013/01/15 06:50:09 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> erubis-2.6.6-r1.ebuild,
+  erubis-2.7.0.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   14 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata.xml so that it's the same as most other packages.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack-ssl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-ssl/ChangeLog,v 1.5 2012/05/17 10:51:39 tomka Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-ssl/ChangeLog,v 1.6 2013/01/15 06:56:54 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> rack-ssl-1.3.2.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   17 May 2012; Thomas Kahle <tomka@gentoo.org> rack-ssl-1.3.2.ebuild:
   marked ~x86 per bug 396547
@@ -20,4 +23,3 @@
   29 Dec 2011; Hans de Graaff <graaff@gentoo.org> +rack-ssl-1.3.2.ebuild,
   +metadata.xml:
   Initial import. New dependency for dev-ruby/railties.
-
