@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.2.ebuild,v 1.5 2012/04/26 13:07:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.2.ebuild,v 1.6 2013/01/15 04:29:33 vapier Exp $
 
 EAPI="2" #356089
 
 LIBTOOLIZE="true" #225559
 WANT_LIBTOOL="none"
-inherit eutils autotools multilib
+inherit eutils autotools multilib unpacker
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.savannah.gnu.org/${PN}.git
@@ -39,8 +39,7 @@ src_unpack() {
 		cd "${S}"
 		./bootstrap || die
 	else
-		xz -dc "${DISTDIR}"/${A} > ${P}.tar #356089
-		unpack ./${P}.tar
+		unpacker_src_unpack
 	fi
 }
 
@@ -78,8 +77,9 @@ src_install() {
 	# for crappy packages that utilize the system libtool, so undo that.
 	dosed '1,/^build_old_libs=/{/^build_old_libs=/{s:=.*:=yes:}}' /usr/bin/libtool || die
 
+	local x
 	for x in $(find "${D}" -name config.guess -o -name config.sub) ; do
-		rm -f "${x}" ; ln -sf /usr/share/gnuconfig/${x##*/} "${x}"
+		ln -sf /usr/share/gnuconfig/${x##*/} "${x}" || die
 	done
 }
 

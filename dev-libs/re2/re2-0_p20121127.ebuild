@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/re2-0_p20121029.ebuild,v 1.1 2012/10/31 03:36:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/re2-0_p20121127.ebuild,v 1.1 2013/01/15 04:06:11 phajdan.jr Exp $
 
 EAPI=4
 
@@ -18,7 +18,12 @@ IUSE=""
 # TODO: the directory in the tarball should really be versioned.
 S="${WORKDIR}/${PN}"
 
-pkg_setup() {
+src_prepare() {
+	# Fix problems with FilteredRE2 symbols not being exported.
+	epatch "${FILESDIR}/${PN}-symbols-r0.patch"
+}
+
+src_compile() {
 	makeopts=(
 		AR="$(tc-getAR)"
 		CXX="$(tc-getCXX)"
@@ -26,14 +31,11 @@ pkg_setup() {
 		LDFLAGS="${LDFLAGS} -pthread"
 		NM="$(tc-getNM)"
 	)
-}
-
-src_compile() {
 	emake "${makeopts[@]}"
 }
 
 src_test() {
-	emake "${makeopts[@]}" shared-test shared-bigtest
+	emake "${makeopts[@]}" shared-test
 }
 
 src_install() {
