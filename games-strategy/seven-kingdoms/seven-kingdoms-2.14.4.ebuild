@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/seven-kingdoms/seven-kingdoms-2.14.4.ebuild,v 1.2 2013/01/08 00:17:20 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/seven-kingdoms/seven-kingdoms-2.14.4.ebuild,v 1.3 2013/01/15 12:35:06 pinkbyte Exp $
 
 EAPI=5
 
@@ -24,9 +24,9 @@ IUSE="network"
 
 DEPEND="media-libs/libsdl[X,video]
 	media-libs/openal
-	network? ( media-libs/sdl-net )"
+	network? ( media-libs/sdl-net )
+	!games-strategy/seven-kingdoms-data"
 RDEPEND="${DEPEND}"
-PDEPEND="games-strategy/seven-kingdoms-data"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -45,13 +45,13 @@ src_configure() {
 		--disable-debug \
 		--without-directx \
 		--without-wine \
-		--program-suffix=".bin" \
 		--datadir="${GAMES_DATADIR}/${MY_PN}"
 }
 
 src_install() {
 	autotools-utils_src_install
 
+	newgamesbin "src/client/${MY_PN}" "${MY_PN}.bin"
 	doicon "${DISTDIR}/${MY_PN}.png"
 	games_make_wrapper "${MY_PN}" "${GAMES_BINDIR}/${MY_PN}.bin" "${GAMES_DATADIR}/${MY_PN}"
 	make_desktop_entry "${MY_PN}" "Seven Kingdoms: Ancient Adversaries" "${MY_PN}" "Game;StrategyGame"
