@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcdio
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.133 2012/06/16 10:37:53 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.134 2013/01/15 18:41:48 ssuominen Exp $
+
+*libcdio-0.90 (15 Jan 2013)
+
+  15 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> +libcdio-0.90.ebuild:
+  Version bump.
 
   16 Jun 2012; Fabian Groffen <grobian@gentoo.org> libcdio-0.83.ebuild:
   Added Prefix keywords
