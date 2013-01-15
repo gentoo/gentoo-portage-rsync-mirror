@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyasn1
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.44 2013/01/08 15:56:20 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.45 2013/01/15 16:42:13 idella4 Exp $
+
+  15 Jan 2013; Ian Delaney <idella4@gentoo.org> pyasn1-0.1.6.ebuild:
+  0.1.6 migrated to distutils-r1 eclass, requested by kensington
 
 *pyasn1-0.1.6 (09 Jan 2013)
 

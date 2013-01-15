@@ -1,9 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/perdition-1.18.ebuild,v 1.2 2011/06/15 15:24:06 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/perdition-1.18.ebuild,v 1.3 2013/01/15 16:34:23 jer Exp $
 
 EAPI=4
-inherit eutils pam
+inherit eutils pam user
 
 DESCRIPTION="modular and fully featured POP3 and IMAP4 proxy"
 HOMEPAGE="http://www.vergenet.net/linux/perdition/"
