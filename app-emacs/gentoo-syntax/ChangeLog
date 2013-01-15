@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gentoo-syntax
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.83 2012/09/22 22:41:09 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.84 2013/01/15 10:40:16 ago Exp $
+
+  15 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gentoo-syntax-1.20.ebuild:
+  Stable for amd64, wrt bug #451924
 
 *gentoo-syntax-1.20 (22 Sep 2012)
 
@@ -421,4 +424,3 @@
   25 Nov 2006; Matthew Kennedy <mkennedy@gentoo.org>
   +files/50ebuild-mode-gentoo.el, +metadata.xml, +ebuild-mode-1.0.ebuild:
   Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
-
