@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/otpcalc-0.97-r6.ebuild,v 1.2 2013/01/14 21:25:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/otpcalc-0.97-r6.ebuild,v 1.3 2013/01/15 19:36:30 ulm Exp $
 
 EAPI=5
 
@@ -40,10 +40,8 @@ src_prepare() {
 		-e 's:$(CC) $(CFLAGS) $^:$(CC) $(LDFLAGS) $(CFLAGS) $^:' \
 		-e "s#-s -O3#${CFLAGS}#g" \
 		Makefile.in || die
-}
 
-src_compile() {
-	emake CC="$(tc-getCC)"
+	tc-export CC
 }
 
 src_install() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.3-r1.ebuild,v 1.1 2012/11/01 06:55:40 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.3-r1.ebuild,v 1.2 2013/01/15 19:36:09 ottxor Exp $
 
 EAPI="3"
 inherit flag-o-matic eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc64-solaris ~x64-solaris"
 IUSE="ssl"
 RESTRICT="test"
 
@@ -31,16 +31,18 @@ src_configure() {
 	# Instead of filtering --as-needed (bug #128505), append --no-as-needed
 	append-ldflags $(no-as-needed)
 
-	use ssl && myconf+=" --with-ssl=/usr --enable-ssl"
+	use ssl && myconf+=" --with-ssl=${EPREFIX}/usr --enable-ssl"
 
 	# econf overwrites the stuff from config.layout, so we have to put them into
 	# our myconf line too
 	econf \
-		--sbindir=/usr/sbin \
-		--with-z=/usr \
-		--with-apr=/usr \
-		--with-apr-util=/usr \
-		--with-pcre=/usr \
+		--sbindir="${EPREFIX}"/usr/sbin \
+		--with-perl="${EPREFIX}"/usr/bin/perl \
+		--with-expat="${EPREFIX}"/usr \
+		--with-z="${EPREFIX}"/usr \
+		--with-apr="${EPREFIX}"/usr \
+		--with-apr-util="${EPREFIX}"/usr \
+		--with-pcre="${EPREFIX}"/usr \
 		${myconf}
 }
 
@@ -52,7 +54,7 @@ src_compile() {
 src_install () {
 	cd support || die
 
-	make DESTDIR="${ED}" install
+	make DESTDIR="${D}" install
 
 	# install manpages
 	doman "${S}"/docs/man/{dbmmanage,htdigest,htpasswd,htdbm,ab,logresolve}.1 \

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/apache-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.128 2012/11/27 18:38:44 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.129 2013/01/15 19:36:09 ottxor Exp $
+
+  15 Jan 2013; Christoph Junghans <ottxor@gentoo.org>
+  apache-tools-2.4.3-r1.ebuild:
+  added prefix support (bug #447298)
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop apache herd as discussed in http://www.gossamer-

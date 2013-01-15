@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.11 2012/11/28 07:37:32 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.12 2013/01/15 19:41:25 hwoarang Exp $
 
 EAPI=4
 
@@ -16,12 +16,16 @@ if [[ ${PV} == "9999" ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~ppc ~x86"
+	MY_LANGS="bs cs de es et ga gl hu ia lt nl pt pt_BR sk sv uk zh_CN"
 fi
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
 IUSE="debug test +zlib"
+for MY_LANG in ${MY_LANGS} ; do
+	IUSE="${IUSE} linguas_${MY_LANG}"
+done
 
 RDEPEND="
 	>=x11-libs/qt-gui-${QT_REQUIRED}:4
@@ -41,5 +45,18 @@ src_configure() {
 	use debug && myopts="$myopts CONFIG+=debug"
 	use test || myopts="$myopts CONFIG+=disable_tests"
 	use zlib || myopts="$myopts CONFIG+=disable_zlib"
+	if [[ ${MY_LANGS} ]]; then
+		rm po/trojita_common_x-test.po
+		for x in po/*.po; do
+			mylang=${x#po/trojita_common_}
+			mylang=${mylang%.po}
+			use linguas_$mylang || rm $x
+		done
+	fi
+
 	eqmake4 PREFIX=/usr $myopts
+}
+
+src_test() {
+	Xemake test
 }

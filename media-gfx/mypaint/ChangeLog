@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/mypaint
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/ChangeLog,v 1.19 2012/07/24 21:13:45 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/ChangeLog,v 1.21 2013/01/15 19:59:13 hwoarang Exp $
+
+  15 Jan 2013; Markos Chandras <hwoarang@gentoo.org> mypaint-1.1.0.ebuild:
+  Fix SConscript file for proper multilib support
+
+*mypaint-1.1.0 (15 Jan 2013)
+
+  15 Jan 2013; Markos Chandras <hwoarang@gentoo.org>
+  +files/mypaint-1.1.0-gentoo.patch, +mypaint-1.1.0.ebuild:
+  Version bump. Bug #450316. Thanks to Alexander Soloviëv <no.friday@yandex.ru>
 
   24 Jul 2012; Markos Chandras <hwoarang@gentoo.org> -mypaint-0.9.0.ebuild,
   -mypaint-0.9.1.ebuild, -mypaint-1.0.0.ebuild, mypaint-1.0.0-r1.ebuild:
