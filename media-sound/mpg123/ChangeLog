@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.279 2013/01/14 04:11:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.280 2013/01/15 21:44:13 ssuominen Exp $
+
+*mpg123-1.14.4-r1 (15 Jan 2013)
+
+  15 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> +mpg123-1.14.4-r1.ebuild:
+  Introduce eselect-mpg123 support.
 
   14 Jan 2013; Tim Harder <radhermit@gentoo.org> -mpg123-1.13.2.ebuild,
   -mpg123-1.14.2.ebuild, -mpg123-1.14.3.ebuild:

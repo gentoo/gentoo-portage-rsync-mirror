@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/mod_auth_kerb-5.4-r1.ebuild,v 1.1 2013/01/03 18:58:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/mod_auth_kerb-5.4-r1.ebuild,v 1.2 2013/01/15 21:32:01 pacho Exp $
 
 inherit apache-module eutils
 
@@ -29,7 +29,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-rcopshack.patch
 	epatch "${FILESDIR}"/${P}-fixes.patch
-	epatch "${FILESDIR}"/${P}-s4u2proxy.patch
+	epatch "${FILESDIR}"/${P}-s4u2proxy-r1.patch
 	epatch "${FILESDIR}"/${P}-httpd24.patch
 	epatch "${FILESDIR}"/${P}-delegation.patch
 	epatch "${FILESDIR}"/${P}-cachedir.patch

@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.1.3-r4.ebuild,v 1.1 2013/01/14 00:03:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.1.3-r5.ebuild,v 1.2 2013/01/15 21:50:22 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2} pypy1_9 )
 
-inherit distutils-r1
+inherit distutils-r1 versionator
 
 MY_PN="Sphinx"
 MY_P="${MY_PN}-${PV}"
@@ -47,6 +47,14 @@ python_compile() {
 			2to3 -w --no-diffs "${BUILD_DIR}"/lib/tests || die
 		fi
 	fi
+
+	# Generate the grammar. It will be caught by install somehow.
+	# Note that the tests usually do it for us. However, I don't want
+	# to trust USE=test really running all the tests, especially
+	# with FEATURES=test-fail-continue.
+	cd "${BUILD_DIR}"/lib || die
+	"${PYTHON}" -m sphinx.pycode.__init__ \
+		|| die "Grammar generation failed."
 }
 
 python_compile_all() {
@@ -61,4 +69,50 @@ python_install_all() {
 	use doc && local HTML_DOCS=( doc/_build/html/. )
 
 	distutils-r1_python_install_all
+}
+
+replacing_python_eclass() {
+	local pv
+	for pv in ${REPLACING_VERSIONS}; do
+		if ! version_is_at_least 1.1.3-r4 ${pv}; then
+			return 0
+		fi
+	done
+
+	return 1
+}
+
+pkg_preinst() {
+	if replacing_python_eclass; then
+		# the old python.eclass ebuild will want to remove our pickles...
+		backup_pickle() {
+			# array to enable filename expansion
+			local pickle_name=(
+				"${D}$(python_get_sitedir)"/sphinx/pycode/Grammar*.pickle
+			)
+
+			local dest=${ROOT}${pickle_name[0]#${D}}.backup
+
+			cp -p -v "${pickle_name[0]}" "${dest}" \
+				|| die "Unable to backup grammar pickle from overwriting"
+		}
+
+		python_foreach_impl backup_pickle
+	fi
+}
+
+pkg_postinst() {
+	if replacing_python_eclass; then
+		restore_pickle() {
+			local backup_name=(
+				"${ROOT}$(python_get_sitedir)"/sphinx/pycode/Grammar*.pickle.backup
+			)
+			local dest=${backup_name[0]%.backup}
+
+			mv -v "${backup_name[0]}" "${dest}" \
+				|| die "Unable to restore grammar pickle backup"
+		}
+
+		python_foreach_impl restore_pickle
+	fi
 }

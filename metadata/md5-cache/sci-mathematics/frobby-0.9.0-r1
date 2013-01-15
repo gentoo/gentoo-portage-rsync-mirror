@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=dev-libs/gmp[cxx] doc? ( virtual/latex-base )
+DESCRIPTION=Software system and project for computations with monomial ideals
+EAPI=4
+HOMEPAGE=http://www.broune.com/frobby/
+IUSE=doc static-libs
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/gmp[cxx]
+SLOT=0
+SRC_URI=http://www.broune.com/frobby/frobby_v0.9.0.tar.gz
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=05caff3cfd0a1ed42fd383b0676a0cdd
