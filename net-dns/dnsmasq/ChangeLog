@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dnsmasq
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.231 2012/11/14 18:31:00 chutzpah Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.232 2013/01/15 01:05:50 chutzpah Exp $
+
+*dnsmasq-2.65 (15 Jan 2013)
+
+  15 Jan 2013; Patrick McLean <chutzpah@gentoo.org> +dnsmasq-2.65.ebuild,
+  dnsmasq-2.63-r1.ebuild, dnsmasq-2.63.ebuild:
+  Version bump. Add REQUIRED_USE block so conntrack can't be enabled on s390 to
+  all current versions.
 
 *dnsmasq-2.63-r1 (14 Nov 2012)
 

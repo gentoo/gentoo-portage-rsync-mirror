@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.63.ebuild,v 1.8 2013/01/15 01:05:50 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.65.ebuild,v 1.1 2013/01/15 01:05:50 chutzpah Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils toolchain-funcs flag-o-matic user systemd
 
@@ -12,27 +12,28 @@ SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${P}.tar.xz"
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="conntrack dbus +dhcp idn ipv6 lua nls script tftp"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+IUSE="conntrack dbus +dhcp dhcp-tools idn ipv6 lua nls script tftp"
 DM_LINGUAS="de es fi fr id it no pl pt_BR ro"
 for dm_lingua in ${DM_LINGUAS}; do
 	IUSE+=" linguas_${dm_lingua}"
 done
 
 RDEPEND="dbus? ( sys-apps/dbus )
-	idn? ( net-dns/libidn )
-	lua? ( dev-lang/lua )
-	conntrack? ( !s390? ( net-libs/libnetfilter_conntrack ) )
-	nls? (
-		sys-devel/gettext
-		net-dns/libidn
-	)"
+		idn? ( net-dns/libidn )
+		lua? ( dev-lang/lua )
+		conntrack? ( !s390? ( net-libs/libnetfilter_conntrack ) )
+		nls? (
+			sys-devel/gettext
+			net-dns/libidn
+		)"
 
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	app-arch/xz-utils"
+		virtual/pkgconfig
+		app-arch/xz-utils"
 
 REQUIRED_USE="lua? ( script )
+			  dhcp-tools? ( dhcp )
 			  s390? ( !conntrack )"
 
 use_have() {
@@ -83,6 +84,13 @@ src_compile() {
 		LDFLAGS="${LDFLAGS}" \
 		COPTS="${COPTS}" \
 		all$(use nls && echo "-i18n")
+
+	use dhcp-tools && emake -C contrib/wrt \
+		PREFIX=/usr \
+		CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
+		all
 }
 
 src_install() {
@@ -110,9 +118,14 @@ src_install() {
 	insinto /etc
 	newins dnsmasq.conf.example dnsmasq.conf
 
-	if use dbus ; then
+	if use dbus; then
 		insinto /etc/dbus-1/system.d
 		doins dbus/dnsmasq.conf
+	fi
+
+	if use dhcp-tools; then
+		dosbin contrib/wrt/{dhcp_release,dhcp_lease_time}
+		doman contrib/wrt/{dhcp_release,dhcp_lease_time}.1
 	fi
 
 	systemd_dounit "${FILESDIR}"/dnsmasq.service
