@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.617 2013/01/15 11:23:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.618 2013/01/15 12:09:45 jer Exp $
+
+  15 Jan 2013; Jeroen Roovers <jer@gentoo.org> ChangeLog:
+  DECRIPTION -> DESCRIPTION (bug #451654 by Christopher Schwan).
 
   15 Jan 2013; Justin Lecher <jlec@gentoo.org> git.eclass:
   @THANKS is no keywords
