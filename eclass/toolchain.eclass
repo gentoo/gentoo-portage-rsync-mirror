@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.566 2012/12/29 06:45:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.567 2013/01/15 02:30:53 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -115,7 +115,7 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 		tc_version_is_at_least "4.3" && IUSE+=" fixed-point"
 		tc_version_is_at_least "4.4" && IUSE+=" graphite"
 		[[ ${GCC_BRANCH_VER} == 4.5 ]] && IUSE+=" lto"
-		tc_version_is_at_least "4.6" && IUSE+=" go"
+		tc_version_is_at_least "4.7" && IUSE+=" go"
 	fi
 fi
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.6.3.ebuild,v 1.24 2013/01/13 13:21:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.6.3.ebuild,v 1.25 2013/01/15 02:18:17 dirtyepic Exp $
 
-PATCH_VER="1.9"
+PATCH_VER="1.10"
 UCLIBC_VER="1.0"
 
 # Hardened gcc 4 stuff
