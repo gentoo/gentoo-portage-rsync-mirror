@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sitecopy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.55 2011/01/16 20:51:19 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.56 2013/01/15 21:22:22 hwoarang Exp $
+
+  15 Jan 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove myself from metadata
 
 *sitecopy-0.16.6_p3 (16 Jan 2011)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-registration
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-registration/ChangeLog,v 1.2 2012/04/08 19:20:59 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-registration/ChangeLog,v 1.3 2013/01/15 21:19:45 hwoarang Exp $
+
+  15 Jan 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove myself from metadata
 
 *django-registration-0.8 (08 Apr 2012)
 
@@ -15,4 +18,3 @@
   Added django-registration to the tree. Thanks to Arne Babenhauserheide for
   the bug report and initial ebuild.
   Fixes bug 264640.
-

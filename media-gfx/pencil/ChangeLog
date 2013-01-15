@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pencil
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pencil/ChangeLog,v 1.3 2011/09/06 09:00:43 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pencil/ChangeLog,v 1.4 2013/01/15 21:21:36 hwoarang Exp $
+
+  15 Jan 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove myself from metadata
 
   06 Sep 2011; Markos Chandras <hwoarang@gentoo.org> pencil-0.4.4_beta.ebuild,
   +files/pencil-0.4.4_beta-gcc461.patch:
@@ -16,4 +19,3 @@
   +metadata.xml:
   Initial commit. Bug #232673. Thanks to Samuli Suominen and Matteo 'The Peach'
   Pescarin for the ebuilds
-

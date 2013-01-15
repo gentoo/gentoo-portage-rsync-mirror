@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xxdiff
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.58 2012/11/30 20:39:15 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.59 2013/01/15 21:21:11 hwoarang Exp $
+
+  15 Jan 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Remove myself from metadata
 
   30 Nov 2012; Markos Chandras <hwoarang@gentoo.org>
   +files/xxdiff-4.0_beta1_p20110426-gcc47.patch,

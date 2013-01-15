@@ -5,10 +5,6 @@
 		<email>jmbsvicetto@gentoo.org</email>
 		<name>Jorge Manuel B. S. Vicetto</name>
 	</maintainer>
-	<maintainer>
-		<email>hwoarang@gentoo.org</email>
-		<name>Markos Chandras</name>
-	</maintainer>
 	<herd>python</herd>
 	<upstream>
 		<remote-id type="pypi">django-registration</remote-id>

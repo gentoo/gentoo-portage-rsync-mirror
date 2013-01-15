@@ -7,11 +7,6 @@
 	<name>Dmitriy Vilkov</name>
 	<description>Assign bugs to him</description>
 </maintainer>
-<maintainer>
-	<email>hwoarang@gentoo.org</email>
-	<name>Markos Chandras</name>
-	<description>Proxy maintainer. CC him on bugs</description>
-</maintainer>
 <longdescription lang="en">
 </longdescription>
 </pkgmetadata>

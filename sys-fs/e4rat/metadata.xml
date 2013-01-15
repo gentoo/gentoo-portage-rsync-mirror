@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-<email>hwoarang@gentoo.org</email>
-<name>Markos Chandras</name>
-</maintainer>
-<maintainer>
 <email>pacho@gentoo.org</email>
 <name>Pacho Ramos</name>
 </maintainer>
