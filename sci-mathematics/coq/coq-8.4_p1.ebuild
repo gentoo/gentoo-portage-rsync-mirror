@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4_p1.ebuild,v 1.1 2013/01/07 02:30:46 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4_p1.ebuild,v 1.2 2013/01/15 19:25:21 aballier Exp $
 
 EAPI="4"
 
@@ -33,6 +33,10 @@ DEPEND="${RDEPEND}
 		)"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-camlp4.patch"
+}
 
 src_configure() {
 	ocaml_lib=`ocamlc -where`

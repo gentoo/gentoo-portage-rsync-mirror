@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pragha
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/ChangeLog,v 1.24 2012/11/28 12:40:31 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/ChangeLog,v 1.25 2013/01/15 19:23:19 ssuominen Exp $
+
+  15 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> pragha-1.1.1.ebuild:
+  Fix compability with dev-libs/libcdio-paranoia.
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> pragha-1.1.1.ebuild:
   EAPI5
