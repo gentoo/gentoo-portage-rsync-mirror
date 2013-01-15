@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1165 2013/01/14 19:55:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1166 2013/01/14 23:15:40 zmedico Exp $
+
+  14 Jan 2013; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
+  Remove LINGUAS loop which is handled by the Makefile now.
 
 *portage-2.2.0_alpha152 (14 Jan 2013)
 

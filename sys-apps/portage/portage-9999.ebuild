@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.65 2013/01/14 17:47:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.66 2013/01/14 23:15:40 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils python
@@ -212,14 +212,6 @@ src_prepare() {
 		eerror "Please notify the arch maintainer about this issue. Using generic."
 		eerror ""
 	fi
-
-	local x
-	for x in ru ; do
-		if ! use linguas_${x} ; then
-			einfo "Removing unused man pages for ${x} locale ..."
-			rm -rf "${S}/man/${x}"
-		fi
-	done
 }
 
 src_compile() {
