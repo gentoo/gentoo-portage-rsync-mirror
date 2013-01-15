@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/restkit-4.2.0.ebuild,v 1.2 2013/01/15 05:05:32 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/restkit-4.2.0.ebuild,v 1.3 2013/01/15 14:07:22 idella4 Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ src_compile() {
 	if use doc ; then
 		pushd doc > /dev/null
 		PYTHONPATH="${S}" emake html
-		popd > /dev/nill
+		popd > /dev/null
 	fi
 }
 
@@ -53,4 +53,7 @@ src_install() {
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
+
+	einfo "Remove tests to avoid file collisions"
+	rm -rf $(find "${ED}" -name tests) || die
 }

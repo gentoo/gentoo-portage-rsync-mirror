@@ -1,6 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/smrsh-8.12.10.ebuild,v 1.8 2009/12/03 11:41:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/smrsh-8.14.6.ebuild,v 1.1 2013/01/15 14:28:17 eras Exp $
+
+EAPI=4
+inherit toolchain-funcs
 
 DESCRIPTION="Sendmail restricted shell, for use with MTAs other than Sendmail"
 HOMEPAGE="http://www.sendmail.org/"
@@ -8,7 +11,7 @@ SRC_URI="ftp://ftp.sendmail.org/pub/sendmail/sendmail.${PV}.tar.gz"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-devel/m4
@@ -18,25 +21,29 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/sendmail-${PV}"
 
-src_compile() {
+src_prepare() {
 	cd "${S}/${PN}"
-
 	sed -e "s:/usr/libexec:/usr/sbin:g" \
 		-e "s:/usr/adm/sm.bin:/var/lib/smrsh:g" \
 		-i README -i smrsh.8 || die "sed failed"
 
-	sed -e "s:@@confCCOPTS@@:${CFLAGS}:" "${FILESDIR}/site.config.m4" \
+	sed -e "s:@@confCCOPTS@@:${CFLAGS}:" \
+		-e "s:@@confLDOPTS@@:${LDFLAGS}:" \
+		-e "s:@@confCC@@:$(tc-getCC):" "${FILESDIR}/${PN}-8.14.5-site.config.m4" \
 		> "${S}/devtools/Site/site.config.m4" || die "sed failed"
+}
 
+src_compile() {
+	cd "${S}/${PN}"
 	/bin/sh Build
 }
 
 src_install() {
-	cd "${S}/${PN}"
-	dosbin "${S}/obj.$(uname -s).$(uname -r).$(arch)/${PN}/${PN}"
+	dosbin "${S}/obj.$(uname -s).$(uname -r).$(arch)/${PN}/${PN}" || die
 
-	doman smrsh.8
-	dodoc README
+	cd "${S}/${PN}"
+	doman smrsh.8 || die
+	dodoc README || die
 
 	keepdir /var/lib/smrsh
 }

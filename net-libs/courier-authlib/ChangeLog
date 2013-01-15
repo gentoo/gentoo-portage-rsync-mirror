@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.135 2013/01/13 11:34:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.136 2013/01/15 14:17:18 eras Exp $
+
+  15 Jan 2013; Eray Aslan <eras@gentoo.org> courier-authlib-0.65.0-r2.ebuild:
+  Fix double user eclass inherit.  Add die to a few places.  Thanks to Chema
+  Alonso.
 
   13 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
   courier-authlib-0.65.0-r2.ebuild:

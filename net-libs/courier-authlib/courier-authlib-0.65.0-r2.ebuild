@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.65.0-r2.ebuild,v 1.6 2013/01/13 11:34:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.65.0-r2.ebuild,v 1.7 2013/01/15 14:17:18 eras Exp $
 
 EAPI=4
-inherit eutils flag-o-matic multilib user autotools user
+inherit autotools eutils flag-o-matic multilib user
 
 KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 
@@ -47,7 +47,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-sqlite.patch
 
 	# move local macro to m4 and run eautoreconf
-	mkdir "${S}/m4"
+	mkdir "${S}/m4" || die
 	sed -n -e '/# AC_PROG_SYSCONFTOOL/,+33 p' "${S}"/aclocal.m4 > \
 		m4/sysconftool.m4 || die
 	sed -i -e '/^SUBDIRS/i ACLOCAL_AMFLAGS = -I m4' "${S}"/Makefile.am || die
@@ -93,7 +93,7 @@ orderfirst() {
 	if [[ -e "${file}" ]] ; then
 		orig="$(grep ^${option}= ${file} | cut -d\" -f 2)"
 		new="${option}=\"${param} `echo ${orig} | sed -e\"s/${param}//g\" -e\"s/  / /g\"`\""
-		sed -i -e "s/^${option}=.*$/${new}/" "${file}"
+		sed -i -e "s/^${option}=.*$/${new}/" "${file}" || die
 	fi
 }
 
@@ -106,8 +106,8 @@ finduserdb() {
 		/usr/local/share/sqwebmail /usr/local/etc/courier-imap ; do
 		if [[ -e "${dir}/userdb" ]] ; then
 			einfo "Found userdb at: ${dir}/userdb"
-			cp -f "${dir}/userdb" "${D}/etc/courier/authlib/"
-			chmod go-rwx "${D}/etc/courier/authlib/userdb"
+			cp -f "${dir}/userdb" "${D}/etc/courier/authlib/" || die
+			chmod go-rwx "${D}/etc/courier/authlib/userdb" || die
 			continue
 		fi
 	done
@@ -122,7 +122,7 @@ src_install() {
 	[[ ! -e "${D}/etc/courier/authlib/userdb" ]] && finduserdb
 	emake DESTDIR="${D}" install-configure
 	rm -f "${D}"/etc/courier/authlib/*.bak
-	chown mail:mail "${D}"/etc/courier/authlib/*
+	chown mail:mail "${D}"/etc/courier/authlib/* || die
 	for y in "${D}"/etc/courier/authlib/*.dist ; do
 		[[ ! -e "${y%%.dist}" ]] && cp -f "${y}" "${y%%.dist}"
 	done
@@ -143,7 +143,7 @@ src_install() {
 	if use ldap ; then
 		dodoc README.ldap
 		dodir /etc/openldap/schema
-		cp -f authldap.schema "${D}/etc/openldap/schema/"
+		cp -f authldap.schema "${D}/etc/openldap/schema/" || die
 	fi
 	if use sqlite ; then
 		dohtml README.authsqlite.html README.authmysql.html
@@ -156,7 +156,7 @@ src_install() {
 pkg_postinst() {
 	if [[ -e /etc/courier/authlib/userdb ]] ; then
 		einfo "Running makeuserdb ..."
-		chmod go-rwx /etc/courier/authlib/userdb
+		chmod go-rwx /etc/courier/authlib/userdb || die
 		makeuserdb
 	fi
 
