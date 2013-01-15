@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.0.0-r1.ebuild,v 1.2 2012/08/14 15:45:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.0.0-r1.ebuild,v 1.4 2013/01/15 22:43:48 ssuominen Exp $
 
 EAPI=4
-inherit multilib toolchain-funcs eutils
+inherit multilib toolchain-funcs eutils flag-o-matic
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-2
@@ -42,6 +42,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-support-arm.patch
 }
 src_configure() {
+	replace-flags -ggdb3 -g #402825
+
+	unset CODECS #357487
+
 	#let the build system decide which AS to use (it honours $AS but
 	#then feeds it with yasm flags without checking...) bug 345161
 	unset AS

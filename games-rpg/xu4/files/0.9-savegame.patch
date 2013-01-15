@@ -1,5 +1,5 @@
---- src/savegame.c.orig	2004-06-22 01:11:47.000000000 -0700
-+++ src/savegame.c	2004-06-22 01:14:42.000000000 -0700
+--- src/savegame.c.orig
++++ src/savegame.c
 @@ -21,23 +21,24 @@
  char *partySavFilename() {
      char *fname;
@@ -61,8 +61,8 @@
      return fname;
  }
      
---- src/u4.c.orig	2004-06-22 01:28:38.000000000 -0700
-+++ src/u4.c	2004-06-22 01:30:30.000000000 -0700
+--- src/u4.c.orig
++++ src/u4.c
 @@ -38,6 +38,10 @@
      osxInit(argv[0]);
  #endif

@@ -1,5 +1,5 @@
---- src/Makefile.common.old	2010-09-30 06:12:23.000000000 +0200
-+++ src/Makefile.common	2010-09-30 06:15:22.000000000 +0200
+--- src/Makefile.common.old
++++ src/Makefile.common
 @@ -68,25 +68,25 @@
  mkutils::  dumpsavegame$(EXEEXT) lzwenc$(EXEEXT) lzwdec$(EXEEXT) rleenc$(EXEEXT) rledec$(EXEEXT) tlkconv$(EXEEXT)
  

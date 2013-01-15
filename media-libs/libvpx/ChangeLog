@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.68 2013/01/06 09:51:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.70 2013/01/15 22:43:48 ssuominen Exp $
+
+  15 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> libvpx-1.0.0.ebuild,
+  libvpx-1.0.0-r1.ebuild, libvpx-1.1.0.ebuild, libvpx-9999.ebuild:
+  Replace -ggdb3 with -g to avoid build failure wrt #402825. Thanks to Eric
+  Thiele for reporting and "n86wtjq5rg" for solution.
+
+  15 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> libvpx-0.9.6.ebuild,
+  libvpx-0.9.7.ebuild, libvpx-0.9.7-r1.ebuild, libvpx-1.0.0.ebuild,
+  libvpx-1.0.0-r1.ebuild, libvpx-1.1.0.ebuild, libvpx-9999.ebuild:
+  Unset variable CODECS which is picked up by the build system wrt #357487.
+  Thanks to Aaron Lewis for reporting and Ben Kohler for solution.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libvpx-1.1.0.ebuild:
   Add ~sparc, wrt bug #449220

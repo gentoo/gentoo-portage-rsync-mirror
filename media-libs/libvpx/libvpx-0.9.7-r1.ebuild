@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.7-r1.ebuild,v 1.5 2012/02/20 11:30:16 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.7-r1.ebuild,v 1.6 2013/01/15 22:36:05 ssuominen Exp $
 
 EAPI=4
 inherit eutils multilib toolchain-funcs
@@ -45,6 +45,8 @@ src_prepare() {
 }
 
 src_configure() {
+	unset CODECS #357487
+
 	# http://bugs.gentoo.org/show_bug.cgi?id=384585
 	addpredict /usr/share/snmp/mibs/.index
 
