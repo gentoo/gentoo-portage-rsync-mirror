@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/fast_xs-0.8.0.ebuild,v 1.12 2012/10/28 18:13:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/fast_xs-0.8.0.ebuild,v 1.13 2013/01/15 05:16:24 zerochaos Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://fast-xs.rubyforge.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend "doc? ( >=dev-ruby/hoe-2.3.2 )"

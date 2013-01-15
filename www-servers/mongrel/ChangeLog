@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/mongrel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.49 2012/10/28 18:10:07 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.50 2013/01/15 05:15:20 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> mongrel-1.1.5-r3.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> mongrel-1.1.5-r3.ebuild:
   Add ~alpha/~ia64/~sparc wrt #405757
@@ -176,4 +179,3 @@
   04 Jan 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
   +mongrel-1.0.ebuild:
   New ebuild, #126925
-

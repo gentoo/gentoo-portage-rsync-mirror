@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.57 2013/01/06 13:04:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.58 2013/01/15 05:23:45 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> cucumber-1.2.1.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   06 Jan 2013; Hans de Graaff <graaff@gentoo.org> -cucumber-0.10.2.ebuild,
   -cucumber-0.10.3.ebuild, -cucumber-1.0.0.ebuild, -cucumber-1.0.1.ebuild,
@@ -258,4 +261,3 @@
   Initial import from my overlay, where is was available as
   dev-ruby/cucumber. I've opted for dev-util in the main tree since Cucumber
   has a much wider application than just testing ruby code.
-

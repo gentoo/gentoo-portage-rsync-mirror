@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hpricot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.43 2012/10/28 18:14:58 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.44 2013/01/15 05:17:20 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> hpricot-0.8.6-r1.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> hpricot-0.8.4.ebuild,
   hpricot-0.8.6.ebuild, hpricot-0.8.6-r1.ebuild:

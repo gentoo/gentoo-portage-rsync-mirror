@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdiscount
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.16 2012/10/28 18:15:16 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.17 2013/01/15 05:02:19 zerochaos Exp $
+
+  15 Jan 2013; Rick Farina <zerochaos@gentoo.org> rdiscount-1.6.8-r1.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> rdiscount-1.6.8-r1.ebuild:
   Add ~alpha
@@ -58,4 +61,3 @@
   14 Sep 2010; Hans de Graaff <graaff@gentoo.org> +rdiscount-1.6.5.ebuild,
   +metadata.xml:
   Initial import. Dependency of app-text/ronn.
-
