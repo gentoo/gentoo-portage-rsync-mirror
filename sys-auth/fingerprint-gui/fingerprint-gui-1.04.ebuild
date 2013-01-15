@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/fingerprint-gui-1.04.ebuild,v 1.5 2012/10/31 16:10:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/fingerprint-gui-1.04.ebuild,v 1.6 2013/01/15 11:11:38 xmw Exp $
 
 EAPI=4
 
@@ -31,6 +31,8 @@ QA_FLAGS_IGNORED="/usr/lib/libbsapi.so /usr/lib64/libbsapi.so"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-unistd.patch
+	sed -e '/Icon=/s:=.*:Fingerprint:' \
+		-i bin/${PN}/${PN}.desktop || die
 }
 
 src_configure() {
@@ -54,6 +56,7 @@ src_install() {
 		#fowners root:plugdev /var/upek_data
 		#fperms 0775 /var/upek_data
 	fi
+	doicon src/res/Fingerprint.png
 
 	dodoc CHANGELOG README
 	dohtml doc/*

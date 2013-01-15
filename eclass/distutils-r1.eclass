@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.44 2013/01/12 23:18:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.45 2013/01/15 11:10:17 jlec Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -69,7 +69,7 @@ DEPEND=${PYTHON_DEPS}
 
 # @ECLASS-VARIABLE: DISTUTILS_JOBS
 # @DEFAULT_UNSET
-# @DECRIPTION:
+# @DESCRIPTION:
 # The number of parallel jobs to run for distutils-r1 parallel builds.
 # If unset, the job-count in ${MAKEOPTS} will be used.
 #

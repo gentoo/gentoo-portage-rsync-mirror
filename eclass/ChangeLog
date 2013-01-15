@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.615 2013/01/15 02:30:53 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.617 2013/01/15 11:23:43 jlec Exp $
+
+  15 Jan 2013; Justin Lecher <jlec@gentoo.org> git.eclass:
+  @THANKS is no keywords
+
+  15 Jan 2013; Justin Lecher <jlec@gentoo.org> distutils-r1.eclass:
+  Fix typo
 
   15 Jan 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Drop go support for 4.6 - broken by newer glibc versions and upstream
