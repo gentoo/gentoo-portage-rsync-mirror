@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vserver</herd>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>andreis.vinogradovs@gmail.com</email>
 		<name>Andreis Vinogradovs</name>

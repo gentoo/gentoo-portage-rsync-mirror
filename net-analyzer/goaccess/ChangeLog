@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/goaccess
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/goaccess/ChangeLog,v 1.2 2012/10/23 12:50:07 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/goaccess/ChangeLog,v 1.3 2013/01/15 11:32:30 pinkbyte Exp $
+
+*goaccess-0.5-r1 (15 Jan 2013)
+
+  15 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> -goaccess-0.5.ebuild,
+  +goaccess-0.5-r1.ebuild:
+  Revision bump: EAPI 5, use autotools-utils eclass, respect CFLAGS wrt bug
+  #451806
 
   23 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Fix proxy maintainers herd name in metadata

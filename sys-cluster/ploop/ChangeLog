@@ -1,6 +1,18 @@
 # ChangeLog for sys-cluster/ploop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ploop/ChangeLog,v 1.4 2013/01/02 16:56:02 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ploop/ChangeLog,v 1.7 2013/01/15 11:59:53 pinkbyte Exp $
+
+  15 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Add proxy maintainers herd
+
+  15 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> ploop-1.5.ebuild:
+  Add USE-flag 'debug' for debug builds, do not do debug build by default, wrt
+  bug #452088. Thanks to Agostino Sarubbo for discovering this issue
+
+  15 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> ploop-1.2.ebuild,
+  ploop-1.4.ebuild, ploop-1.5.ebuild:
+  Respect AR and RANLIB, wrt bug #452092. Thanks to Agostino Sarubbo for
+  discovering this issue
 
   02 Jan 2013; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
   Add slepnoga as maintainer

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ploop/ploop-1.2.ebuild,v 1.1 2012/05/03 22:32:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ploop/ploop-1.2.ebuild,v 1.2 2013/01/15 11:44:41 pinkbyte Exp $
 
 EAPI=4
 
@@ -25,6 +25,10 @@ src_prepare() {
 	# Avoid striping of binaries
 	sed -e '/INSTALL/{s: -s::}' -i tools/Makefile || die
 	epatch "${FILESDIR}/ploop-1.2-soname.patch"
+
+	# respect AR and RANLIB, bug #452092
+	tc-export AR RANLIB
+	sed -i -e 's/ranlib/$(RANLIB)/' lib/Makefile || die 'sed on lib/Makefile failed'
 }
 
 src_compile() {
