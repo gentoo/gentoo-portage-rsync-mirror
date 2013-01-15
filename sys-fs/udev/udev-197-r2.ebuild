@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.5 2013/01/14 20:58:54 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.7 2013/01/15 15:30:55 williamh Exp $
 
 EAPI=4
 
 KV_min=2.6.39
 
-inherit autotools eutils linux-info multilib systemd
+inherit autotools eutils linux-info multilib systemd toolchain-funcs versionator
 
 if [[ ${PV} = 9999* ]]
 then
@@ -131,6 +131,10 @@ src_prepare()
 
 	# apply user patches
 	epatch_user
+
+	# compile with older versions of gcc #451110
+	version_is_at_least 4.6 $(gcc-version) || \
+		sed -i 's:static_assert:alsdjflkasjdfa:' src/shared/macro.h
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \

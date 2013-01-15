@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pycuda
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/ChangeLog,v 1.17 2012/11/08 06:32:59 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/ChangeLog,v 1.18 2013/01/15 15:25:13 jlec Exp $
+
+*pycuda-2012.1 (15 Jan 2013)
+
+  15 Jan 2013; Justin Lecher <jlec@gentoo.org> +pycuda-2012.1.ebuild,
+  metadata.xml:
+  Version Bump; bump to EAPI=5 and distutils-r1.eclass; depend on libcuda.so,
+  #403729
 
   08 Nov 2012; Diego E. Pettenò <flameeyes@gentoo.org> -pycuda-2011.2.2.ebuild:
   Remove old version depending on older boost.

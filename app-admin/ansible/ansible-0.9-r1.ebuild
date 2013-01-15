@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-0.9-r1.ebuild,v 1.1 2013/01/10 13:24:53 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-0.9-r1.ebuild,v 1.2 2013/01/15 15:18:28 pinkbyte Exp $
 
 EAPI="5"
 
@@ -54,7 +54,7 @@ src_install() {
 	doman docs/man/man1/*.1
 	if use examples; then
 		dodoc -r examples
-		docompress -x /usr/share/doc/${P}/examples
+		docompress -x /usr/share/doc/${PF}/examples
 	fi
 	# Hint: do not install example config files into /etc
 	# let this choice to user

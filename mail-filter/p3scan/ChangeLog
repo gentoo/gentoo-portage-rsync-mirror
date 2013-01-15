@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/p3scan
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.17 2012/06/04 23:59:37 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.18 2013/01/15 15:01:34 eras Exp $
+
+*p3scan-2.3.2-r2 (15 Jan 2013)
+
+  15 Jan 2013; Eray Aslan <eras@gentoo.org> +files/p3scan.init-r1,
+  +p3scan-2.3.2-r2.ebuild:
+  Create run dir when necessary - bug #452230
 
   04 Jun 2012; Zac Medico <zmedico@gentoo.org> p3scan-2.3.1.ebuild,
   p3scan-2.3.2-r1.ebuild:
@@ -84,4 +90,3 @@
   Initial import. Closes bug #86216, by Zhenzhi <zzzzzz at singnet.com.sg>.
   Ebuild and initscript provided by Christian Zoffoli <xmerlin at gentoo.org>,
   modified by me.
-
