@@ -1,6 +1,9 @@
 # ChangeLog for app-text/highlight
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.58 2012/12/31 06:53:38 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.59 2013/01/15 15:56:47 jer Exp $
+
+  15 Jan 2013; Jeroen Roovers <jer@gentoo.org> highlight-3.9.ebuild:
+  Stable for HPPA (bug #436704).
 
   31 Dec 2012; Mike Frysinger <vapier@gentoo.org> highlight-3.12.ebuild,
   highlight-3.3.ebuild, highlight-3.9.ebuild:

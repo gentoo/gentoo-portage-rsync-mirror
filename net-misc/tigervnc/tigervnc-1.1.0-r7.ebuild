@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.1.0-r7.ebuild,v 1.11 2012/09/16 18:14:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.1.0-r7.ebuild,v 1.12 2013/01/15 15:45:02 armin76 Exp $
 
 EAPI="1"
 
 inherit eutils toolchain-funcs multilib autotools
 
-XSERVER_VERSION="1.12.2"
+XSERVER_VERSION="1.12.4"
 OPENGL_DIR="xorg-x11"
 
 DESCRIPTION="Remote desktop viewer display system"

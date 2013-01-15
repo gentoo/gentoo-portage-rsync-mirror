@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.9999.ebuild,v 1.14 2013/01/14 13:24:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.9999.ebuild,v 1.15 2013/01/15 15:45:50 scarabeus Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ BRANDING="${PN}-branding-gentoo-0.7.tar.xz"
 # PATCHSET="${P}-patchset-01.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
-inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python-single-r1 multilib toolchain-funcs flag-o-matic ${SCM_ECLASS}
+inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python-single-r1 multilib toolchain-funcs flag-o-matic nsplugins ${SCM_ECLASS}
 unset SCM_ECLASS
 
 DESCRIPTION="LibreOffice, a full office productivity suite."
