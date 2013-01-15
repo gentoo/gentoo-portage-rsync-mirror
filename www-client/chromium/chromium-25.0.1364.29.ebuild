@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1364.5.ebuild,v 1.1 2012/12/27 17:44:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1364.29.ebuild,v 1.1 2013/01/15 03:49:15 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -45,6 +45,7 @@ RDEPEND="app-accessibility/speech-dispatcher
 	media-libs/libpng
 	media-libs/libvpx
 	>=media-libs/libwebp-0.2.0_rc1
+	media-libs/opus
 	media-libs/speex
 	pulseaudio? ( media-sound/pulseaudio )
 	system-ffmpeg? ( >=media-video/ffmpeg-1.0 )
@@ -126,10 +127,6 @@ src_prepare() {
 		eend $?
 	fi
 
-	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
-	# sed -i '1i#define OF(x) x' \
-	#	third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.h || die
-
 	# Fix build without NaCl glibc toolchain.
 	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
 
@@ -138,6 +135,12 @@ src_prepare() {
 
 	# Backport a fix for libpng shim headers.
 	epatch "${FILESDIR}/${PN}-system-libpng-r0.patch"
+
+	# Fix build with system opus, bug #439884.
+	epatch "${FILESDIR}/${PN}-system-opus-r0.patch"
+
+	# Backport fix for test expectations, bug #444886.
+	epatch "${FILESDIR}/${PN}-icu50-tests-r0.patch"
 
 	# Missing gyp files in tarball.
 	# https://code.google.com/p/chromium/issues/detail?id=144823
@@ -192,7 +195,7 @@ src_prepare() {
 		\! -path 'third_party/mt19937ar/*' \
 		\! -path 'third_party/npapi/*' \
 		\! -path 'third_party/openmax/*' \
-		\! -path 'third_party/opus/*' \
+		\! -path 'third_party/opus/opus.h' \
 		\! -path 'third_party/ots/*' \
 		\! -path 'third_party/pywebsocket/*' \
 		\! -path 'third_party/qcms/*' \
@@ -213,10 +216,6 @@ src_prepare() {
 		\! -path 'third_party/webrtc/*' \
 		\! -path 'third_party/widevine/*' \
 		-delete || die
-
-	local v8_bundled="$(chromium_bundled_v8_version)"
-	local v8_installed="$(chromium_installed_v8_version)"
-	einfo "V8 version: bundled - ${v8_bundled}; installed - ${v8_installed}"
 
 	# Remove bundled v8.
 	find v8 -type f \! -iname '*.gyp*' -delete || die
@@ -253,7 +252,6 @@ src_configure() {
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg
 	# TODO: use_system_hunspell (upstream changes needed).
-	# TODO: use_system_opus (bug #439884).
 	# TODO: use_system_ssl (http://crbug.com/58087).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 	myconf+="
@@ -270,6 +268,7 @@ src_configure() {
 		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
 		-Duse_system_minizip=1
+		-Duse_system_opus=1
 		-Duse_system_protobuf=1
 		-Duse_system_speex=1
 		-Duse_system_v8=1

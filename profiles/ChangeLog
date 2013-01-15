@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7360 2013/01/14 21:02:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7361 2013/01/15 03:56:18 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jan 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Roll chromium masks (M26).
 
   14 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> +releases/13.0/eapi,
   +releases/13.0/make.defaults, +releases/13.0/package.mask,

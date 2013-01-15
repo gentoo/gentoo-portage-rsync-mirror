@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14374 2013/01/14 21:01:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14375 2013/01/15 03:56:19 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (14 Jan 2013)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-26
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (14 Jan 2013)
+# Mask v8 versions used for www-client/chromium dev channel releases.
+>=dev-lang/v8-3.16
 
 # Mike Gilbert <floppym@gentoo.org> (13 Jan 2013)
 # Dev channel releases are only for people who are developers or want more
@@ -342,19 +351,6 @@ dev-vcs/gitosis-gentoo
 # Masked for testing as too many packages fail.
 # See bug #443230 for tracking the progress
 =media-video/libav-9.1*
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (09 Nov 2012)
-# Masked for testing, bug #438756.
->=net-libs/libsrtp-1.4.4_p20121108
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (08 Nov 2012)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-25
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (08 Nov 2012)
-# Mask v8 versions used for www-client/chromium dev channel releases.
->=dev-lang/v8-3.15
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (04 Nov 2012)
 # masked for testing, bug #422605
