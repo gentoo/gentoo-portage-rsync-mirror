@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.2.0-r1.ebuild,v 1.1 2013/01/16 06:54:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.2.0-r1.ebuild,v 1.2 2013/01/16 07:23:15 pinkbyte Exp $
 
 EAPI="5"
 
-inherit autotools eutils base linux-info perl-app multilib systemd user
+inherit autotools base eutils linux-info multilib perl-app systemd user
 
 DESCRIPTION="A a daemon which collects system statistic and provides mechanisms to store the values"
 
