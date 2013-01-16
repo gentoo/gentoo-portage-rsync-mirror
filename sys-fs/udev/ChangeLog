@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.764 2013/01/15 16:01:56 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.766 2013/01/16 13:56:48 ssuominen Exp $
+
+*udev-197-r3 (16 Jan 2013)
+
+  16 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197-r2.ebuild,
+  +udev-197-r3.ebuild, udev-9999.ebuild:
+  Edit -r2 to install 80-net-name-slot.rules if the file isn't there yet; this
+  is for stable. This will make current -r2 as -r3 with a safe kludge to avoid
+  overwriting the file; this is for ~arch.
 
   15 Jan 2013; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
   sync live ebuild
