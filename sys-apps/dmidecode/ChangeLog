@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmidecode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.36 2012/07/23 15:00:09 swift Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.37 2013/01/16 11:23:31 ago Exp $
+
+  16 Jan 2013; Agostino Sarubbo <ago@gentoo.org> dmidecode-2.11.ebuild:
+  Stable for amd64, wrt bug #373237
 
   23 Jul 2012; <swift@gentoo.org> dmidecode-2.10.ebuild, dmidecode-2.11.ebuild:
   Adding optional dependency on SELinux policy modules

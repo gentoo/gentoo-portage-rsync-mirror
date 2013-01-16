@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/otpcalc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/ChangeLog,v 1.21 2013/01/15 19:36:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/otpcalc/ChangeLog,v 1.22 2013/01/16 11:23:43 ago Exp $
+
+  16 Jan 2013; Agostino Sarubbo <ago@gentoo.org> otpcalc-0.97-r6.ebuild:
+  Stable for amd64, wrt bug #451934
 
   15 Jan 2013; Ulrich Müller <ulm@gentoo.org> otpcalc-0.97-r6.ebuild:
   Properly fix the CC issue, bug 452096.
@@ -188,4 +191,3 @@
 
   05 Sep 2003; Tavis Ormandy <taviso@gentoo.org> otpcalc-0.96.ebuild:
   initial import
-
