@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-9999.ebuild,v 1.1 2013/01/15 00:39:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-9999.ebuild,v 1.2 2013/01/16 03:44:29 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? *"
@@ -85,8 +85,8 @@ src_compile() {
 }
 
 src_install() {
-	default
-	dodoc MAINT
+	do_make DESTDIR="${D}" install
+	dodoc ChangeLog MAINT README
 
 	use python && cd python && distutils_src_install
 	prune_libtool_files

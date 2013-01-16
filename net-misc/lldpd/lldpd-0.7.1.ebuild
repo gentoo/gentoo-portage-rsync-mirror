@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.7.1.ebuild,v 1.1 2013/01/15 22:06:43 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/lldpd-0.7.1.ebuild,v 1.2 2013/01/16 03:44:54 chutzpah Exp $
 
 EAPI=5
 
@@ -67,7 +67,7 @@ src_configure() {
 
 src_compile() {
 	emake
-	emake doxygen-doc
+	use doc && emake doxygen-doc
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.230 2013/01/15 00:39:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.231 2013/01/16 03:44:29 radhermit Exp $
+
+  16 Jan 2013; Tim Harder <radhermit@gentoo.org> file-9999.ebuild:
+  Revert to previous install method.
 
 *file-9999 (15 Jan 2013)
 
