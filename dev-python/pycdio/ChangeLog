@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycdio
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdio/ChangeLog,v 1.8 2012/02/22 08:30:18 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdio/ChangeLog,v 1.9 2013/01/16 05:25:58 ssuominen Exp $
+
+*pycdio-0.18 (16 Jan 2013)
+
+  16 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> +pycdio-0.18.ebuild:
+  Version bump for >=dev-libs/libcdio-0.90 compability.
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> pycdio-0.17.ebuild:
   Restricting jython

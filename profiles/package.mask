@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14380 2013/01/16 00:45:14 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14381 2013/01/16 05:25:47 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,6 +44,9 @@
 # Masked while swiftly porting reverse dependencies to new headers
 >=dev-libs/libcdio-0.90
 >=dev-libs/libcdio-paranoia-0.90
+app-admin/eselect-cdparanoia
+>=media-sound/cdparanoia-3.10.2-r5
+>=dev-python/pycdio-0.18
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (14 Jan 2013)
 # Dev channel releases are only for people who are developers or want more
