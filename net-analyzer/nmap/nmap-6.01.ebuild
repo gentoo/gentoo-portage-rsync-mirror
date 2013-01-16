@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.01.ebuild,v 1.20 2013/01/16 09:21:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.01.ebuild,v 1.21 2013/01/16 19:21:09 jer Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -72,12 +72,6 @@ src_prepare() {
 		-e 's|^Categories=.*|Categories=Network;System;Security;|g' \
 		zenmap/install_scripts/unix/zenmap-root.desktop \
 		zenmap/install_scripts/unix/zenmap.desktop || die
-
-	# respect AR and RANLIB, wrt bug #445524
-	tc-export AR RANLIB
-	sed -i -e '/^RANLIB/d' -e '/^AR/d' liblinear/{,blas}/Makefile || die
-	sed -i -e '/^RANLIB/d' -e "/^AR/s/ar/$(tc-getAR)/" liblua/Makefile || die
-	sed -i -e '/^AR/d' {libnetutil,libpcre,nbase,nsock/src}/Makefile.in || die
 }
 
 src_configure() {
@@ -92,6 +86,12 @@ src_configure() {
 		$(use_with nping) \
 		$(use_with ssl openssl) \
 		--with-libdnet=included
+}
+
+src_compile() {
+	emake \
+		AR=$(tc-getAR) \
+		RANLIB=$(tc-getRANLIB)
 }
 
 src_install() {

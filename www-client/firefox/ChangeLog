@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.203 2013/01/16 18:11:37 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.204 2013/01/16 19:02:15 mgorny Exp $
+
+  16 Jan 2013; Michał Górny <mgorny@gentoo.org> firefox-10.0.10.ebuild,
+  firefox-10.0.11.ebuild, firefox-10.0.6.ebuild, firefox-10.0.7.ebuild,
+  firefox-10.0.9.ebuild, firefox-17.0.2.ebuild, firefox-18.0-r1.ebuild:
+  Remove python.eclass traces (python now controlled by mozcoreconf-2.eclass).
 
   16 Jan 2013; <anarchy@gentoo.org> firefox-18.0-r1.ebuild:
   Fix linguas support in fx-18

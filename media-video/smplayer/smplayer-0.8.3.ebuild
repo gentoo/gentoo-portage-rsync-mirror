@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.8.3.ebuild,v 1.1 2012/12/23 15:02:45 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.8.3.ebuild,v 1.2 2013/01/16 19:13:40 yngwin Exp $
 
 EAPI=4
 PLOCALES="ar_SY bg ca cs da de el_GR en_US es et eu fi fr gl hr hu it ja ka ko
@@ -33,7 +33,7 @@ DEPEND="x11-libs/qt-core:4
 	dev-libs/quazip"
 MPLAYER_USE="[libass,png,X]"
 RDEPEND="${DEPEND}
-	|| ( media-video/mplayer${MPLAYER_USE} media-video/mplayer2${MPLAYER_USE} )"
+	|| ( media-video/mplayer2${MPLAYER_USE} media-video/mplayer${MPLAYER_USE} )"
 
 src_prepare() {
 	# Unbundle dev-libs/quazip

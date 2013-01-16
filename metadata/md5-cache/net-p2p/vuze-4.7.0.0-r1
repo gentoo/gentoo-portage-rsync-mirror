@@ -10,5 +10,5 @@ PDEPEND=~net-p2p/vuze-coreplugins-4.7.0.0
 RDEPEND=dev-java/json-simple:0 dev-java/bcprov:1.3 >=dev-java/commons-cli-1.0:1 >=dev-java/log4j-1.2.8:0 dev-java/swt:3.7[cairo] !net-p2p/azureus-bin >=virtual/jre-1.5 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 SLOT=0
 SRC_URI=mirror://sourceforge/azureus/vuze/Vuze_4700/Vuze_4700_source.zip mirror://gentoo/vuze-4.5.0.2-gentoo-patches.tar.bz2
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-ant-2	daa6d2d0a12ebb700a69d9f1d2f02c5c	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	2d9eb3508fa5d6759e39354b74545567	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-ant-2	daa6d2d0a12ebb700a69d9f1d2f02c5c	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	dcda71e114d638cdf01db57b8445337d	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=93a3af979e136c3b568737de817cebab

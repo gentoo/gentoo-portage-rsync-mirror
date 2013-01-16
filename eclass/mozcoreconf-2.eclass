@@ -1,11 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.26 2013/01/16 16:00:10 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.27 2013/01/16 19:02:10 mgorny Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
 
-inherit multilib flag-o-matic python versionator
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE='threads,sqlite'
+
+inherit multilib flag-o-matic python-any-r1 versionator
 
 IUSE="${IUSE} custom-cflags custom-optimization"
 
@@ -16,7 +19,7 @@ RDEPEND="x11-libs/libXrender
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	=dev-lang/python-2.7*[threads,sqlite]"
+	${PYTHON_DEPS}"
 
 # mozconfig_annotate: add an annotated line to .mozconfig
 #
@@ -92,13 +95,13 @@ moz_pkgsetup() {
 	export USE_PTHREADS=1
 	export ALDFLAGS=${LDFLAGS}
 
-	python_set_active_version 2
-
 	if [[ $(gcc-major-version) -eq 3 ]]; then
 		ewarn "Unsupported compiler detected, DO NOT file bugs for"
 		ewarn "outdated compilers. Bugs opened with gcc-3 will be closed"
 		ewarn "invalid."
 	fi
+
+	python-any-r1_pkg_setup
 }
 
 mozconfig_init() {

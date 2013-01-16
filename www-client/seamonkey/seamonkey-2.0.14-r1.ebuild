@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.14-r1.ebuild,v 1.7 2012/07/04 19:20:50 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0.14-r1.ebuild,v 1.8 2013/01/16 19:02:13 mgorny Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
-inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib fdo-mime autotools mozextension java-pkg-opt-2 python
+inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib fdo-mime autotools mozextension java-pkg-opt-2
 
 PATCH="${PN}-2.0.11-patches-01"
 EMVER="1.0.1"
@@ -80,7 +80,6 @@ RDEPEND="java? ( virtual/jre )
 		>=gnome-base/libgnome-2.16.0 )"
 
 DEPEND="${RDEPEND}
-	=dev-lang/python-2*[threads]
 	virtual/pkgconfig
 	java? ( >=virtual/jdk-1.4 )"
 
@@ -141,7 +140,8 @@ pkg_setup() {
 
 	java-pkg-opt-2_pkg_setup
 
-	python_set_active_version 2
+	# why not moz_pkgsetup?
+	python-any-r1_pkg_setup
 }
 
 src_prepare() {

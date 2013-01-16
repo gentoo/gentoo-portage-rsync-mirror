@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-10.0.11.ebuild,v 1.5 2012/12/05 20:55:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-10.0.11.ebuild,v 1.6 2013/01/16 19:02:15 mgorny Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -25,7 +25,7 @@ EMVER="1.3.5"
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
 
-inherit flag-o-matic toolchain-funcs mozconfig-3 makeedit multilib autotools pax-utils python check-reqs nsplugins mozlinguas
+inherit flag-o-matic toolchain-funcs mozconfig-3 makeedit multilib autotools pax-utils check-reqs nsplugins mozlinguas
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.com/en-US/thunderbird/"

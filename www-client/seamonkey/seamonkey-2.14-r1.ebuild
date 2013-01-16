@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.14-r1.ebuild,v 1.6 2012/12/10 19:12:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.14-r1.ebuild,v 1.7 2013/01/16 19:02:13 mgorny Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -26,7 +26,7 @@ else
 	MOZ_LANGPACK_SUFFIX=".langpack.xpi"
 fi
 
-inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension python nsplugins mozlinguas
+inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension nsplugins mozlinguas
 
 PATCHFF="firefox-17.0-patches-0.1"
 PATCH="${PN}-2.14-patches-01"
@@ -79,7 +79,6 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	selinux? ( sec-policy/selinux-mozilla )"
 
 DEPEND="${RDEPEND}
-	dev-python/pysqlite
 	!elibc_glibc? ( dev-libs/libexecinfo )
 	virtual/pkgconfig
 	amd64? ( ${ASM_DEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-18.0-r1.ebuild,v 1.2 2013/01/16 18:11:37 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-18.0-r1.ebuild,v 1.3 2013/01/16 19:02:15 mgorny Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -30,7 +30,7 @@ PATCH="${PN}-18.0-patches-0.7"
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
 
-inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils fdo-mime autotools python virtualx nsplugins mozlinguas
+inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils fdo-mime autotools virtualx nsplugins mozlinguas
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
@@ -62,7 +62,6 @@ RDEPEND="
 	>=media-libs/libvpx-1.0.0
 	kernel_linux? ( media-libs/alsa-lib )
 	selinux? ( sec-policy/selinux-mozilla )"
-# We don't use PYTHON_DEPEND/PYTHON_USE_WITH for some silly reason
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	pgo? (

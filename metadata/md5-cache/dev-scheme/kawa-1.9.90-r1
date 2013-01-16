@@ -9,5 +9,5 @@ LICENSE=MIT public-domain jemacs? ( GPL-2 ) krl? ( GPL-2 )
 RDEPEND=( >=virtual/jdk-1.5 ) frontend? ( sys-libs/readline:0 ) sax? ( dev-java/sax:0 ) echo2? ( dev-java/echo2 ) swt? ( dev-java/swt:3.5 ) servlets? ( dev-java/servletapi:2.4 ) >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 SLOT=0
 SRC_URI=mirror://gnu/kawa/kawa-1.9.90.tar.gz xqtests? ( http://www.w3.org/XML/Query/test-suite/XQTS_1_0_2.zip )
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	2d9eb3508fa5d6759e39354b74545567	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	dcda71e114d638cdf01db57b8445337d	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=93db3669b400d66f0badfef77bba5882

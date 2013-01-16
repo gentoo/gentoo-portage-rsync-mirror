@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=virtual/jre-1.4 dev-java/javahelp:0 dev-java/jgoodies-forms:0 dev-java/jibx:0 dev-java/jsr173 >=dev-java/simplyhtml-0.13.1:0 groovy? ( dev-java/groovy ) latex? ( dev-java/hoteqn:0 ) pdf? ( dev-java/batik:1.7 >=dev-java/fop-0.95:0 ) svg? ( dev-java/batik:1.7 >=dev-java/fop-0.95:0 ) >=dev-java/java-config-2.1.9-r1
 SLOT=0
 SRC_URI=mirror://sourceforge/freemind/freemind-src-0.9.0.tar.gz
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	java-ant-2	daa6d2d0a12ebb700a69d9f1d2f02c5c	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	2d9eb3508fa5d6759e39354b74545567	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	java-ant-2	daa6d2d0a12ebb700a69d9f1d2f02c5c	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	dcda71e114d638cdf01db57b8445337d	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=735ad3207a735024a66984de96cefea5
