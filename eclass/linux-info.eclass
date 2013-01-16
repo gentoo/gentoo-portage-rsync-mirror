@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.94 2013/01/14 21:19:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.95 2013/01/16 14:29:01 zmedico Exp $
 
 # @ECLASS: linux-info.eclass
 # @MAINTAINER:
@@ -323,7 +323,7 @@ linux_chkconfig_module() {
 # MUST call linux_config_exists first.
 linux_chkconfig_builtin() {
 	linux_config_qa_check linux_chkconfig_builtin
-	localRESULT config
+	local RESULT config
 	config="${KV_OUT_DIR}/.config"
 	[ ! -f "${config}" ] && config="/proc/config.gz"
 	RESULT="$(getfilevar_noexec CONFIG_${1} "${config}")"

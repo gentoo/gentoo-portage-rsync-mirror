@@ -1,6 +1,10 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.128 2013/01/16 10:37:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.129 2013/01/16 14:25:28 scarabeus Exp $
+
+  16 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.8.5.ebuild,
+  libav-0.8.9999.ebuild:
+  Subslot also libav 0.8 for the fun.
 
   16 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> libav-9.1.ebuild,
   libav-9.9999.ebuild, libav-9999.ebuild, metadata.xml:

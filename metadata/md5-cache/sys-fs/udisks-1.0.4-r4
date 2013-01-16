@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/dbus-glib-0.100 >=dev-libs/glib-2.30 >=dev-libs/libatasmart-0.19 >=sys-auth/polkit-0.104-r1 >=sys-apps/dbus-1.6 >=sys-apps/sg3_utils-1.27.20090411 >=sys-block/parted-3 >=sys-fs/lvm2-2.02.66 >=virtual/udev-196[gudev,hwdb] selinux? ( sec-policy/selinux-devicekit ) >=sys-apps/util-linux-2.20.1-r2 virtual/eject remote-access? ( net-dns/avahi )
 SLOT=0
 SRC_URI=http://hal.freedesktop.org/releases/udisks-1.0.4.tar.gz
-_eclasses_=bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6	eutils	d40dc948067bd3db1c8ebf7d51897313	linux-info	577c57349491cfe6518278f7433d6123	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	4f764d2b1e34e4ef12b9b0d6e680c0ee	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6	eutils	d40dc948067bd3db1c8ebf7d51897313	linux-info	6923bbfed4371639315c56d17e2da90c	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	4f764d2b1e34e4ef12b9b0d6e680c0ee	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=f1783501accebebaddbd075595ef73eb
