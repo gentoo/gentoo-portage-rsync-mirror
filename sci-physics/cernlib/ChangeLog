@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/cernlib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.31 2012/10/24 19:42:22 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.32 2013/01/16 22:04:04 bicatali Exp $
+
+*cernlib-2006-r5 (16 Jan 2013)
+
+  16 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org> +cernlib-2006-r5.ebuild,
+  +files/cernlib-2006-ypatchy-short-name.patch:
+  Added a patch for proper nypatchy generation, updated Debian patch, use
+  generic pkg-config and ebuild cleaning. Keyworded amd64-linux and x86-linux
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> cernlib-2006-r3.ebuild,
   cernlib-2006-r4.ebuild:
@@ -127,4 +134,3 @@
   24 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
   +cernlib-2006.ebuild:
   Initial import. Closes bug #65708
-

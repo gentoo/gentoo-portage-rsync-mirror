@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/tsm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/ChangeLog,v 1.17 2013/01/01 19:10:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/ChangeLog,v 1.18 2013/01/16 22:29:19 pacho Exp $
+
+*tsm-6.4.0.0-r1 (16 Jan 2013)
+
+  16 Jan 2013; Pacho Ramos <pacho@gentoo.org> +tsm-6.4.0.0-r1.ebuild:
+  Move stuff from /usr/local to /opt, #452332 by Martin von Gagern
 
   01 Jan 2013; Ulrich Müller <ulm@gentoo.org> tsm-6.2.2.0-r2.ebuild,
   tsm-6.3.0.5-r2.ebuild, tsm-6.4.0.0.ebuild:
