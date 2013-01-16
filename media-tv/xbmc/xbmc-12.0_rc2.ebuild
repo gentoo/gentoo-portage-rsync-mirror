@@ -1,12 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-12.0_rc2.ebuild,v 1.5 2012/12/29 20:12:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-12.0_rc2.ebuild,v 1.6 2013/01/15 23:41:32 mgorny Exp $
 
 EAPI="4"
 
 # Does not work with py3 here
 # It might work with py:2.5 but I didn't test that
 PYTHON_DEPEND="2:2.6"
+PYTHON_USE_WITH=sqlite
 
 inherit eutils python multiprocessing autotools
 
@@ -54,7 +55,6 @@ COMMON_DEPEND="virtual/glu
 	>=dev-libs/lzo-2.04
 	dev-libs/tinyxml[stl]
 	dev-libs/yajl
-	>=dev-python/pysqlite-2
 	dev-python/simplejson
 	media-libs/alsa-lib
 	media-libs/flac

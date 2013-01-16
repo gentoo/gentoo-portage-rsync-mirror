@@ -1,12 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.5.4-r1.ebuild,v 1.1 2012/12/19 05:32:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.5.4-r1.ebuild,v 1.2 2013/01/15 23:34:45 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 PYTHON_USE_WITH="threads ssl?"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[45] 3.* 2.7-pypy-*"  #see bug 394307
+
+PYTHON_USE_WITH=sqlite
+PYTHON_USE_WITH_OPT=sqlite
 
 inherit eutils distutils
 
@@ -22,7 +25,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-
 IUSE="doc ssl sqlite"
 
 DEPEND="doc? ( dev-python/docutils )"
-RDEPEND="sqlite? ( dev-python/pysqlite )"
+RDEPEND=""
 S="${WORKDIR}/${PN}"
 
 # github changed tarball internals again...

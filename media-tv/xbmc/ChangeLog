@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xbmc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.163 2012/12/29 20:12:18 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.164 2013/01/15 23:41:32 mgorny Exp $
+
+  15 Jan 2013; Michał Górny <mgorny@gentoo.org> xbmc-12.0_rc2.ebuild,
+  xbmc-9999.ebuild:
+  Fix sqlite3 module dependency -- the package supports only built-in Python
+  sqlite3, not external pysqlite2.
 
   29 Dec 2012; Mike Frysinger <vapier@gentoo.org> xbmc-12.0_rc2.ebuild,
   xbmc-9999.ebuild:
