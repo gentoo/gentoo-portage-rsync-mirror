@@ -22,10 +22,7 @@ backbone of cloud and data center management.
 </longdescription>
 	<use>
 		<flag name="openssl">Add support for using TLS via OpenSSL.</flag>
-		<flag name="jinja">Add support to use dev-python/jinja to parse Salt
-		states.</flag>
-		<flag name="libvirt">Support managing virtual machines with
-		app-emulation/libvirt.</flag>
+		<flag name="libvirt">Support managing virtual machines with app-emulation/libvirt.</flag>
 		<flag name="mongodb">Support returning data to a mongodb server.</flag>
 		<flag name="redis">Support returning data to a redis database.</flag>
 	</use>

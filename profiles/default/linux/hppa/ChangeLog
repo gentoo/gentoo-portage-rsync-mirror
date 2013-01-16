@@ -1,6 +1,11 @@
 # ChangeLog for profiles/default/linux/hppa
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/ChangeLog,v 1.14 2012/10/22 23:24:21 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/ChangeLog,v 1.15 2013/01/16 21:33:00 dilfridge Exp $
+
+  16 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> +13.0/desktop/eapi,
+  +13.0/desktop/parent, +13.0/developer/eapi, +13.0/developer/parent,
+  +13.0/eapi, +13.0/parent:
+  Copy profile tree 10.0 to 13.0 and adapt inheritance
 
   22 Oct 2012; Jeroen Roovers <jer@gentoo.org> -10.0/desktop/gnome/eapi,
   -10.0/desktop/gnome/parent, -10.0/desktop/kde/eapi, -10.0/desktop/kde/parent:
