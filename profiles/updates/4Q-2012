@@ -59,3 +59,4 @@ move media-sound/leechcraft-lemon net-misc/leechcraft-lemon
 move dev-haskell/hsql-sqlite dev-haskell/hsql-sqlite3
 slotmove dev-ruby/builder 3.1.4 3.1
 move x11-terms/terminal x11-terms/xfce4-terminal
+move media-gfx/opencolorio media-libs/opencolorio

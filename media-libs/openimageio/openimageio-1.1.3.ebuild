@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.3.ebuild,v 1.1 2013/01/15 09:13:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.3.ebuild,v 1.2 2013/01/16 05:50:00 pinkbyte Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ RDEPEND="dev-libs/boost[python?]
 	sys-libs/zlib
 	virtual/jpeg
 	jpeg2k? ( >=media-libs/openjpeg-1.5 )
-	opencolorio? ( >=media-gfx/opencolorio-1.0.7 )
+	opencolorio? ( >=media-libs/opencolorio-1.0.7 )
 	opencv? ( >=media-libs/opencv-2.3 )
 	opengl? (
 		virtual/glu

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opencolorio/opencolorio-1.0.7.ebuild,v 1.7 2013/01/15 09:19:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/opencolorio-1.0.7.ebuild,v 1.1 2013/01/16 05:47:02 pinkbyte Exp $
 
 EAPI=4
 

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7366 2013/01/16 00:45:14 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7367 2013/01/16 05:48:22 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> updates/4Q-2012:
+  Move from media-gfx/opencolorio to media-libs/opencolorio
 
   16 Jan 2013; Maciej Mrozowski <reavertm@gentoo.org> package.mask:
   mask poppler-0.22 due to API change
