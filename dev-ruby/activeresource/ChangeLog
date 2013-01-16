@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.134 2013/01/09 15:13:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.135 2013/01/16 00:57:27 zerochaos Exp $
+
+  16 Jan 2013; Rick Farina <zerochaos@gentoo.org> activeresource-3.2.10.ebuild,
+  activeresource-3.2.11.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   09 Jan 2013; Agostino Sarubbo <ago@gentoo.org> activeresource-2.3.15.ebuild:
   Stable for ppc64, wrt bug #450974

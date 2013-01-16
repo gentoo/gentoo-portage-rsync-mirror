@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.18.4-r2.ebuild,v 1.1 2012/08/08 17:21:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.22.0.ebuild,v 1.1 2013/01/16 00:47:54 reavertm Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit cmake-utils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://poppler.freedesktop.org/"
 SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 IUSE="cairo cjk curl cxx debug doc +introspection jpeg jpeg2k +lcms png qt4 tiff +utils"
 
@@ -25,12 +25,12 @@ COMMON_DEPEND="
 	cairo? (
 		dev-libs/glib:2
 		>=x11-libs/cairo-1.10.0
-		introspection? ( >=dev-libs/gobject-introspection-0.9.12 )
+		introspection? ( >=dev-libs/gobject-introspection-1.32.1 )
 	)
 	curl? ( net-misc/curl )
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/openjpeg )
-	lcms? ( =media-libs/lcms-1* )
+	lcms? ( media-libs/lcms:2 )
 	png? ( >=media-libs/libpng-1.4:0 )
 	qt4? (
 		x11-libs/qt-core:4
@@ -50,8 +50,6 @@ RDEPEND="${COMMON_DEPEND}
 	cjk? ( >=app-text/poppler-data-0.4.4 )
 "
 
-PATCHES=( "${FILESDIR}/${P}-newline.patch" )
-
 DOCS=(AUTHORS ChangeLog NEWS README README-XPDF TODO)
 
 src_configure() {
@@ -65,7 +63,6 @@ src_configure() {
 		$(cmake-utils_use_enable curl LIBCURL)
 		$(cmake-utils_use_enable cxx CPP)
 		$(cmake-utils_use_enable jpeg2k LIBOPENJPEG)
-		$(cmake-utils_use_enable lcms)
 		$(cmake-utils_use_enable utils)
 		$(cmake-utils_use_with cairo)
 		$(cmake-utils_use_with introspection GObjectIntrospection)
@@ -74,6 +71,11 @@ src_configure() {
 		$(cmake-utils_use_with qt4)
 		$(cmake-utils_use_with tiff)
 	)
+	if use lcms; then
+		mycmakeargs+=(-DENABLE_CMS=lcms2)
+	else
+		mycmakeargs+=(-DENABLE_CMS=)
+	fi
 
 	cmake-utils_src_configure
 }

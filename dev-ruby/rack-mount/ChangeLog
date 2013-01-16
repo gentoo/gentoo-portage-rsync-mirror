@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack-mount
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.25 2012/09/11 17:53:55 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.26 2013/01/16 00:35:45 zerochaos Exp $
+
+  16 Jan 2013; Rick Farina <zerochaos@gentoo.org> rack-mount-0.8.3.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   11 Sep 2012; Hans de Graaff <graaff@gentoo.org> -rack-mount-0.7.4.ebuild:
   Cleanup. Nothing in the tree depends on it and this should probably have been
@@ -101,4 +104,3 @@
   03 Dec 2010; Hans de Graaff <graaff@gentoo.org> +rack-mount-0.6.13.ebuild,
   +metadata.xml:
   Initial import. New dependency of Rails 3.0.3.
-

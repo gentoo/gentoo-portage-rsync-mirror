@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/haml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.80 2012/10/06 06:17:36 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.81 2013/01/16 00:58:44 zerochaos Exp $
+
+  16 Jan 2013; Rick Farina <zerochaos@gentoo.org> haml-3.1.6.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   06 Oct 2012; Hans de Graaff <graaff@gentoo.org> -haml-3.1.4.ebuild:
   Cleanup.
@@ -358,4 +361,3 @@
   15 Aug 2007; Christian Parpart <trapni@gentoo.org> +metadata.xml,
   +haml-1.7.0.ebuild:
   initial import
-

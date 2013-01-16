@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/activemodel-3.2.10.ebuild,v 1.1 2013/01/03 06:55:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/activemodel-3.2.10.ebuild,v 1.2 2013/01/16 00:44:01 zerochaos Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ SRC_URI="http://github.com/rails/rails/tarball/v${PV} -> rails-${PV}.tgz"
 
 LICENSE="MIT"
 SLOT="$(get_version_component_range 1-2)"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 RUBY_S="rails-rails-*/activemodel"
