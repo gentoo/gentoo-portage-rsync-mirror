@@ -1,13 +1,13 @@
-DEFINED_PHASES=compile install postinst postrm prepare test
-DEPEND=>=dev-python/numpy-1.3 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+DEFINED_PHASES=compile install postinst postrm prepare setup test
+DEPEND=>=dev-python/numpy-1.3 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) sqlite? ( || ( =dev-lang/python-2.7*[sqlite] =dev-lang/python-2.6*[sqlite] ) )
 DESCRIPTION=Astronomical tables support for Python
 EAPI=2
 HOMEPAGE=http://atpy.github.com/ http://pypi.python.org/pypi/ATpy
 IUSE=+fits hdf5 mysql postgres sqlite +votable
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-3
-RDEPEND=dev-python/numpy dev-python/asciitable fits? ( dev-python/pyfits ) hdf5? ( dev-python/h5py ) mysql? ( dev-python/mysql-python ) postgres? ( dev-db/pygresql ) sqlite? ( dev-python/pysqlite ) votable? ( dev-python/vo ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+RDEPEND=dev-python/numpy dev-python/asciitable fits? ( dev-python/pyfits ) hdf5? ( dev-python/h5py ) mysql? ( dev-python/mysql-python ) postgres? ( dev-db/pygresql ) votable? ( dev-python/vo ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) sqlite? ( || ( =dev-lang/python-2.7*[sqlite] =dev-lang/python-2.6*[sqlite] ) )
 SLOT=0
 SRC_URI=mirror://github/atpy/atpy/ATpy-0.9.6.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=a2522eb66b0535b5f116aa6894c12198
+_md5_=daa4b6afc084e6d538600475ff789edf

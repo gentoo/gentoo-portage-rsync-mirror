@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7364 2013/01/15 21:31:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7365 2013/01/15 23:08:24 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jan 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask latest luatex as it breaks with current texlive
 
   15 Jan 2013; Michał Górny <mgorny@gentoo.org> package.mask:
   Remove dev-python/sphinx mask after replacing the broken rev with a new one.

@@ -1,12 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/atpy-0.9.6.ebuild,v 1.1 2012/08/02 17:31:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/atpy-0.9.6.ebuild,v 1.2 2013/01/15 23:15:17 mgorny Exp $
 
 EAPI="2"
 
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[45] 3.* *-jython"
+
+PYTHON_USE_WITH=sqlite
+PYTHON_USE_WITH_OPT=sqlite
 
 inherit distutils
 
@@ -23,7 +26,6 @@ RDEPEND="dev-python/numpy
 	hdf5? ( dev-python/h5py )
 	mysql? ( dev-python/mysql-python )
 	postgres? ( dev-db/pygresql )
-	sqlite? ( dev-python/pysqlite )
 	votable? ( dev-python/vo )"
 
 DEPEND=">=dev-python/numpy-1.3"

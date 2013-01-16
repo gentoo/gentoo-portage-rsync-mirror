@@ -1,0 +1,14 @@
+# ChangeLog for Gentoo/alpha profile directory
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.1 2013/01/15 23:07:59 dilfridge Exp $
+
+  15 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> +13.0/desktop/eapi,
+  +13.0/desktop/gnome/eapi, +13.0/desktop/gnome/parent, +13.0/desktop/kde/eapi,
+  +13.0/desktop/kde/parent, +13.0/desktop/parent, +13.0/developer/eapi,
+  +13.0/developer/make.defaults, +13.0/developer/parent, +13.0/eapi,
+  +13.0/no-multilib/eapi, +13.0/no-multilib/parent, +13.0/parent,
+  +13.0/selinux/eapi, +13.0/selinux/parent, +13.0/server/eapi,
+  +13.0/server/parent, +13.0/x32/eapi, +13.0/x32/make.defaults,
+  +13.0/x32/parent:
+  Copy profile tree 10.0 to 13.0 and adapt inheritance
+

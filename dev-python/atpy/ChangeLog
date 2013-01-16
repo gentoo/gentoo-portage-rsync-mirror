@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/atpy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/ChangeLog,v 1.7 2012/08/02 17:31:55 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/ChangeLog,v 1.8 2013/01/15 23:15:17 mgorny Exp $
+
+  15 Jan 2013; Michał Górny <mgorny@gentoo.org> atpy-0.9.6.ebuild:
+  Fix sqlite3 module dependency -- the package supports only built-in Python
+  sqlite3, not external pysqlite2.
 
 *atpy-0.9.6 (02 Aug 2012)
 
