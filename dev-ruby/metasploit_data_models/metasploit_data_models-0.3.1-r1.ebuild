@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metasploit_data_models/metasploit_data_models-0.3.1-r1.ebuild,v 1.2 2013/01/10 16:20:01 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metasploit_data_models/metasploit_data_models-0.3.1-r1.ebuild,v 1.3 2013/01/16 01:11:10 zerochaos Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="https://github.com/rapid7/${PN}/archive/${PV}.zip -> ${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 #pry isn't available for 1.9

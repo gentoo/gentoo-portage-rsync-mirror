@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/test_declarative-0.0.5-r1.ebuild,v 1.1 2012/07/26 17:47:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/test_declarative-0.0.5-r1.ebuild,v 1.2 2013/01/16 01:07:50 zerochaos Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RUBY_S="svenfuchs-test_declarative-*"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE=""
 
 each_ruby_test() {

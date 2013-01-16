@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rack-test
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/ChangeLog,v 1.25 2012/10/05 10:36:53 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/ChangeLog,v 1.26 2013/01/16 01:03:21 zerochaos Exp $
+
+  16 Jan 2013; Rick Farina <zerochaos@gentoo.org> rack-test-0.5.7.ebuild,
+  rack-test-0.6.1.ebuild, rack-test-0.6.2.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
 *rack-test-0.6.2 (05 Oct 2012)
 

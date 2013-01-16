@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/test_declarative
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.7 2012/07/26 17:47:57 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.8 2013/01/16 01:07:51 zerochaos Exp $
+
+  16 Jan 2013; Rick Farina <zerochaos@gentoo.org>
+  test_declarative-0.0.5-r1.ebuild, test_declarative-0.0.5.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
 *test_declarative-0.0.5-r1 (26 Jul 2012)
 
@@ -30,4 +34,3 @@
   20 Feb 2011; Hans de Graaff <graaff@gentoo.org>
   +test_declarative-0.0.5.ebuild, +metadata.xml:
   Initial import. New dependency for dev-ruby/i18n.
-

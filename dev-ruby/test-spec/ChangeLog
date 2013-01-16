@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-spec
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.30 2012/10/28 17:45:21 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.31 2013/01/16 01:01:24 zerochaos Exp $
+
+  16 Jan 2013; Rick Farina <zerochaos@gentoo.org> test-spec-0.10.0-r4.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> test-spec-0.10.0-r4.ebuild:
   Add ~alpha/~ia64/~sparc wrt #431384
@@ -126,4 +129,3 @@
   02 Aug 2007; Joshua Nichols <nichoj@gentoo.org> +metadata.xml,
   +test-spec-0.4.0.ebuild:
   Initial version.
-

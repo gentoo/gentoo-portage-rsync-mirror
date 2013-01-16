@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/yajl-ruby
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.21 2012/08/13 19:16:07 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.22 2013/01/16 01:12:55 zerochaos Exp $
+
+  16 Jan 2013; Rick Farina <zerochaos@gentoo.org> yajl-ruby-1.1.0.ebuild:
+  adding ~arm keywords to net-analyzer/metasploit rdeps
 
   13 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> yajl-ruby-1.1.0.ebuild:
   The rspec recipe takes care of IUSE and dependency.
