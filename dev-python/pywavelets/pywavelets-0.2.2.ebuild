@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywavelets/pywavelets-0.2.2.ebuild,v 1.4 2012/11/27 11:30:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywavelets/pywavelets-0.2.2.ebuild,v 1.5 2013/01/16 19:55:14 jlec Exp $
 
 EAPI=4
+
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.5 3.* *-jython 2.7-pypy-*"
@@ -42,7 +43,7 @@ src_test() {
 
 src_compile() {
 	distutils_src_compile
-	use doc && emake -C doc html || die "emake html failed"
+	use doc && emake -C doc html
 }
 
 src_install () {

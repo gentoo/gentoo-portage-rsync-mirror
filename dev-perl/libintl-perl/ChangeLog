@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/libintl-perl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.50 2012/06/24 19:00:28 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.51 2013/01/16 19:52:44 tove Exp $
+
+*libintl-perl-1.210.0 (16 Jan 2013)
+
+  16 Jan 2013; Torsten Veller <tove@gentoo.org> +libintl-perl-1.210.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> libintl-perl-1.200.0.ebuild:
   Don't run tests with a de_* and without the de_AT locale. Thanks to Kent
