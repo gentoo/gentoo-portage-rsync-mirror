@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.100 2013/01/10 17:41:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.101 2013/01/16 11:43:05 jlec Exp $
+
+*ccpn-2.2.2_p130116 (16 Jan 2013)
+
+  16 Jan 2013; Justin Lecher <jlec@gentoo.org> ccpn-2.2.2_p130110.ebuild,
+  +ccpn-2.2.2_p130116.ebuild, metadata.xml:
+  Todays python patches; fix for generic tcl/tk; drop unused local use
+  description
 
 *ccpn-2.2.2_p130110 (10 Jan 2013)
 
@@ -8,7 +15,7 @@
   -ccpn-2.2.2_p120912.ebuild, -ccpn-2.2.2_p121012.ebuild,
   -ccpn-2.2.2_p121112.ebuild, -ccpn-2.2.2_p121119.ebuild,
   +ccpn-2.2.2_p130110.ebuild, metadata.xml:
-  Todays python patches
+  Todays python patches, Drop old
 
 *ccpn-2.2.2_p121125 (25 Nov 2012)
 

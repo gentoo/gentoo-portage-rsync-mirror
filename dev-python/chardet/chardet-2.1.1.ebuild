@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/chardet-2.1.1.ebuild,v 1.1 2013/01/16 08:33:23 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/chardet-2.1.1.ebuild,v 1.2 2013/01/16 11:33:03 zmedico Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -11,7 +11,7 @@ inherit distutils
 
 DESCRIPTION="Character encoding auto-detection in Python."
 HOMEPAGE="http://chardet.feedparser.org/ http://code.google.com/p/chardet/"
-SRC_URI="mirror//pypi/c/chardet/chardet-2.1.1.tar.gz"
+SRC_URI="mirror://pypi/c/chardet/chardet-2.1.1.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

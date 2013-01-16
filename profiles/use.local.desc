@@ -3572,6 +3572,7 @@ net-analyzer/lilac:nmap - Installs nmap which can be used to automatically disco
 net-analyzer/linkchecker:bookmarks - Mozilla Bookmark parsing
 net-analyzer/linkchecker:login - login form submission
 net-analyzer/linkchecker:nagios - Install nagios cli plugin
+net-analyzer/linkchecker:sqlite - Mozilla Bookmark parsing
 net-analyzer/linkchecker:syntax-check - HTML/CSS syntax checks
 net-analyzer/metasploit:gui - Enable Java GUI
 net-analyzer/munin:apache - Set up the configuration of the CGI generation of HTML and graphs to work with Apache. This also install an include-able configuration file.
@@ -4883,7 +4884,6 @@ sci-chemistry/ball:sql - Include SQL database support
 sci-chemistry/ball:webkit - Uses x11-libs/qt-webkit for drawing
 sci-chemistry/ccp4:arpwarp - Add binary arp-warp for molecular replacement
 sci-chemistry/ccp4:balbes - Install sci-chemistry/balbes
-sci-chemistry/ccpn:extendnmr - Install needed packages for extendNMR support
 sci-chemistry/chemtool:emf - EMF export support
 sci-chemistry/cns:aria - Support patch for sci-chemistry/aria
 sci-chemistry/eden:double-precision - More precise calculations at the expense of speed

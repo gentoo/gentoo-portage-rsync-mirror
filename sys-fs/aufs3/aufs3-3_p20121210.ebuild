@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20121210.ebuild,v 1.3 2013/01/16 09:29:32 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20121210.ebuild,v 1.4 2013/01/16 11:46:40 jlec Exp $
 
 EAPI=4
 
-inherit eutils flag-o-matic linux-mod multilib toolchain-funcs
+inherit eutils flag-o-matic linux-info linux-mod multilib toolchain-funcs
 
 AUFS_VERSION="${PV%%_p*}"
 # highest branch version
@@ -21,7 +21,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
-IUSE="debug doc fuse pax_kernel hfs inotify kernel-patch nfs ramfs"
+IUSE="debug doc fuse hfs inotify kernel-patch nfs pax_kernel ramfs"
 
 DEPEND="dev-vcs/git"
 RDEPEND="
@@ -116,7 +116,7 @@ src_prepare() {
 	sed -i "s:aufs.ko usr/include/linux/aufs_type.h:aufs.ko:g" Makefile || die
 	sed -i "s:__user::g" include/linux/aufs_type.h || die
 
-	cd "${WORKDIR}"/${P}/${PN/3}-util
+	cd "${WORKDIR}"/${P}/${PN/3}-util || die
 
 	einfo "Using for utils building branch ${util_branch}"
 	git checkout -b local-gentoo ${util_branch} || die
@@ -129,7 +129,7 @@ src_compile() {
 
 	emake CC=$(tc-getCC) LD=$(tc-getLD) LDFLAGS="$(raw-ldflags)" ARCH=$(tc-arch-kernel) CONFIG_AUFS_FS=m KDIR=${KV_OUT_DIR}
 
-	cd "${WORKDIR}"/${P}/${PN/3}-util
+	cd "${WORKDIR}"/${P}/${PN/3}-util || die
 	emake CC=$(tc-getCC) AR=$(tc-getAR) KDIR=${KV_OUT_DIR} C_INCLUDE_PATH="${S}"/include
 }
 
@@ -142,7 +142,7 @@ src_install() {
 
 	dodoc Documentation/filesystems/aufs/README
 
-	cd "${WORKDIR}"/${P}/${PN/3}-util
+	cd "${WORKDIR}"/${P}/${PN/3}-util || die
 	emake DESTDIR="${D}" KDIR=${KV_OUT_DIR} install
 
 	newdoc README README-utils
