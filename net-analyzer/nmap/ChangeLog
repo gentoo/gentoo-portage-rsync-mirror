@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.278 2013/01/16 07:55:37 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.279 2013/01/16 09:18:19 pinkbyte Exp $
+
+  16 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> nmap-6.01.ebuild,
+  nmap-6.25.ebuild:
+  Fix building with USE='lua' due to recent changes, wrt bug #452452. Thanks to
+  Marien Zwart
 
   16 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> nmap-6.01.ebuild,
   nmap-6.25.ebuild:

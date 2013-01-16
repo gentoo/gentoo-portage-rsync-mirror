@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.45 2013/01/14 08:55:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.46 2013/01/16 09:29:32 nimiux Exp $
+
+  16 Jan 2013; Chema Alonso <nimiux@gentoo.org> aufs3-3_p20121210.ebuild:
+  Marked stable for amd64 wrt bug #451988
 
 *aufs3-3_p20130114 (14 Jan 2013)
 

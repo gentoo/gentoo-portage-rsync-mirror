@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install postinst postrm preinst prepare setup unpack
-DEPEND=doc? ( dev-python/docutils ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) sqlite? ( || ( =dev-lang/python-2.7*[sqlite] =dev-lang/python-2.6*[sqlite] ) )
+DEPEND=doc? ( dev-python/docutils ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[threads,sqlite?,ssl?] =dev-lang/python-2.6*[threads,sqlite?,ssl?] )
 DESCRIPTION=Powerful IMAP/Maildir synchronization and reader support
 EAPI=3
 HOMEPAGE=http://offlineimap.org
 IUSE=doc ssl sqlite
 KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=GPL-2
-RDEPEND=|| ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) sqlite? ( || ( =dev-lang/python-2.7*[sqlite] =dev-lang/python-2.6*[sqlite] ) )
+RDEPEND=|| ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[threads,sqlite?,ssl?] =dev-lang/python-2.6*[threads,sqlite?,ssl?] )
 SLOT=0
 SRC_URI=https://github.com/spaetz/offlineimap/tarball/v6.5.4 -> offlineimap-6.5.4.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=ea23ff2b74d12c619f32ecada30b80a1
+_md5_=2b038d90b0bf813af885e2b944f6d47d

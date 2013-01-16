@@ -1,15 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.5.4-r1.ebuild,v 1.2 2013/01/15 23:34:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.5.4-r1.ebuild,v 1.3 2013/01/16 09:21:59 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
-PYTHON_USE_WITH="threads ssl?"
+PYTHON_USE_WITH="threads sqlite? ssl?"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[45] 3.* 2.7-pypy-*"  #see bug 394307
-
-PYTHON_USE_WITH=sqlite
-PYTHON_USE_WITH_OPT=sqlite
 
 inherit eutils distutils
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/offlineimap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.88 2013/01/15 23:34:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.89 2013/01/16 09:21:59 mgorny Exp $
+
+  16 Jan 2013; Michał Górny <mgorny@gentoo.org> offlineimap-6.5.4-r1.ebuild:
+  Fix PYTHON_USE_WITH. Sorry for my mistake.
 
   15 Jan 2013; Michał Górny <mgorny@gentoo.org> offlineimap-6.5.4-r1.ebuild:
   Fix dependency on sqlite support. The package supports Python's built-in
