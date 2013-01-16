@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins10.eclass,v 1.8 2012/12/02 17:16:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins10.eclass,v 1.9 2013/01/16 22:52:37 eva Exp $
 
 # @ECLASS: gst-plugins10.eclass
 # @MAINTAINER:
@@ -46,6 +46,7 @@ EXPORT_FUNCTIONS ${GST_EXPF}
 # @DESCRIPTION:
 # Should we delete all the .la files?
 # NOT to be used without due consideration.
+# Defaults to no for EAPI < 5.
 if has "${EAPI:-0}" 0 1 2 3; then
 	: ${GST_LA_PUNT:="no"}
 else
@@ -184,10 +185,9 @@ gst-plugins10_system_link() {
 
 # @FUNCTION: gst-plugins10_remove_unversioned_binaries
 # @INTERNAL
-# @DEPRECATED
 # @DESCRIPTION:
 # Remove the unversioned binaries gstreamer provides to prevent file collision
-# with other slots.
+# with other slots. DEPRECATED
 gst-plugins10_remove_unversioned_binaries() {
 	cd "${D}"/usr/bin
 	local gst_bins
@@ -199,6 +199,8 @@ gst-plugins10_remove_unversioned_binaries() {
 }
 
 # @FUNCTION: gst-plugins10_src_configure
+# @DESCRIPTION:
+# Handles logic common to configuring gstreamer plugins
 gst-plugins10_src_configure() {
 	local plugin gst_conf
 
@@ -248,6 +250,8 @@ gst-plugins10_src_configure() {
 }
 
 # @FUNCTION: gst-plugins10_src_compile
+# @DESCRIPTION:
+# Compiles requested gstreamer plugin.
 gst-plugins10_src_compile() {
 	has ${EAPI:-0} 0 1 && gst-plugins10_src_configure "$@"
 
@@ -261,6 +265,8 @@ gst-plugins10_src_compile() {
 }
 
 # @FUNCTION: gst-plugins10_src_install
+# @DESCRIPTION:
+# Installs requested gstreamer plugin.
 gst-plugins10_src_install() {
 	gst-plugins10_find_plugin_dir
 

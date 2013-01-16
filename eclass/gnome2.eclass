@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.118 2013/01/13 22:35:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.120 2013/01/16 23:01:02 eva Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
 # gnome@gentoo.org
-# @BLURB: 
+# @BLURB: Provides phases for Gnome/Gtk+ based packages.
 # @DESCRIPTION:
 # Exports portage base functions used by ebuilds written for packages using the
 # GNOME framework. For additional functions, see gnome2-utils.eclass.
@@ -23,7 +23,7 @@ case "${EAPI:-0}" in
 esac
 
 # @ECLASS-VARIABLE: G2CONF
-# @DEFAULT-UNSET
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Extra configure opts passed to econf
 G2CONF=${G2CONF:-""}
@@ -39,26 +39,19 @@ else
 fi
 
 # @ECLASS-VARIABLE: ELTCONF
-# @DEFAULT-UNSET
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # Extra options passed to elibtoolize
 ELTCONF=${ELTCONF:-""}
 
 # @ECLASS-VARIABLE: USE_EINSTALL
-# @DEFAULT-UNSET
-# @DEPRECATED
+# @DEFAULT_UNSET
 # @DESCRIPTION:
-# Should we use EINSTALL instead of DESTDIR
+# Should we use EINSTALL instead of DESTDIR. DEPRECATED
 USE_EINSTALL=${USE_EINSTALL:-""}
 
-# @ECLASS-VARIABLE: SCROLLKEEPER_UPDATE
-# @DEPRECATED
-# @DESCRIPTION:
-# Whether to run scrollkeeper for this package or not.
-SCROLLKEEPER_UPDATE=${SCROLLKEEPER_UPDATE:-"1"}
-
 # @ECLASS-VARIABLE: DOCS
-# @DEFAULT-UNSET
+# @DEFAULT_UNSET
 # @DESCRIPTION:
 # String containing documents passed to dodoc command.
 
@@ -130,7 +123,7 @@ gnome2_src_configure() {
 	# rebuild docs.
 	# Preserve old behavior for older EAPI.
 	if grep -q "enable-gtk-doc" ${ECONF_SOURCE:-.}/configure ; then
-		if has ${EAPI:-0} 0 1 2 3 4 && has doc ${IUSE} ; then
+		if has ${EAPI:-0} 0 1 2 3 4 && in_iuse doc ; then
 			G2CONF="$(use_enable doc gtk-doc) ${G2CONF}"
 		else
 			G2CONF="--disable-gtk-doc ${G2CONF}"
@@ -238,7 +231,7 @@ gnome2_src_install() {
 	if has ${EAPI:-0} 0 1 2 3 4; then
 		if [[ "${GNOME2_LA_PUNT}" != "no" ]]; then
 			ebegin "Removing .la files"
-			if ! { has static-libs ${IUSE//+} && use static-libs; }; then
+			if ! use_if_iuse static-libs ; then
 				find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
 			fi
 			eend
@@ -275,8 +268,6 @@ gnome2_pkg_postinst() {
 	gnome2_scrollkeeper_update
 }
 
-# @#FUNCTION: gnome2_pkg_prerm
-# @#DESCRIPTION:
 # # FIXME Handle GConf schemas removal
 #gnome2_pkg_prerm() {
 #	gnome2_gconf_uninstall

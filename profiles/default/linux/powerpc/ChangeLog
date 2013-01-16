@@ -1,0 +1,32 @@
+# ChangeLog for Gentoo/alpha profile directory
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/powerpc/ChangeLog,v 1.1 2013/01/16 22:32:56 dilfridge Exp $
+
+  16 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +ppc32/13.0/desktop/eapi, +ppc32/13.0/desktop/gnome/eapi,
+  +ppc32/13.0/desktop/gnome/parent, +ppc32/13.0/desktop/kde/eapi,
+  +ppc32/13.0/desktop/kde/parent, +ppc32/13.0/desktop/parent,
+  +ppc32/13.0/developer/eapi, +ppc32/13.0/developer/parent, +ppc32/13.0/eapi,
+  +ppc32/13.0/parent, +ppc64/13.0/32bit-userland/desktop/eapi,
+  +ppc64/13.0/32bit-userland/desktop/gnome/eapi,
+  +ppc64/13.0/32bit-userland/desktop/gnome/parent,
+  +ppc64/13.0/32bit-userland/desktop/kde/eapi,
+  +ppc64/13.0/32bit-userland/desktop/kde/parent,
+  +ppc64/13.0/32bit-userland/desktop/parent,
+  +ppc64/13.0/32bit-userland/developer/eapi,
+  +ppc64/13.0/32bit-userland/developer/parent, +ppc64/13.0/32bit-userland/eapi,
+  +ppc64/13.0/32bit-userland/parent, +ppc64/13.0/64bit-userland/desktop/eapi,
+  +ppc64/13.0/64bit-userland/desktop/gnome/eapi,
+  +ppc64/13.0/64bit-userland/desktop/gnome/parent,
+  +ppc64/13.0/64bit-userland/desktop/kde/eapi,
+  +ppc64/13.0/64bit-userland/desktop/kde/parent,
+  +ppc64/13.0/64bit-userland/desktop/parent,
+  +ppc64/13.0/64bit-userland/developer/eapi,
+  +ppc64/13.0/64bit-userland/developer/parent, +ppc64/13.0/64bit-userland/eapi,
+  +ppc64/13.0/64bit-userland/parent, +ppc64/13.0/desktop/eapi,
+  +ppc64/13.0/desktop/gnome/eapi, +ppc64/13.0/desktop/gnome/parent,
+  +ppc64/13.0/desktop/kde/eapi, +ppc64/13.0/desktop/kde/parent,
+  +ppc64/13.0/desktop/parent, +ppc64/13.0/developer/eapi,
+  +ppc64/13.0/developer/parent, +ppc64/13.0/eapi, +ppc64/13.0/parent:
+  Copy profile tree 10.0 to 13.0 and adapt inheritance
+

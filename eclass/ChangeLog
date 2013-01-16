@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.622 2013/01/16 19:06:15 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.624 2013/01/16 23:01:02 eva Exp $
+
+  16 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> gnome2.eclass:
+  Drop deprecated SCROLLKEEPER_UPDATE and switch to in_iuse.
+
+  16 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> gnome2.eclass,
+  gst-plugins10.eclass:
+  Update eclass documentation to be correclty parsed, bug #452204.
 
   16 Jan 2013; Ralph Sennhauser <sera@gentoo.org> java-utils-2.eclass:
   Be graceful if no system vm is set if trying to determine build vm from
