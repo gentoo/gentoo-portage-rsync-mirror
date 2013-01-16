@@ -1,28 +1,29 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/mpir-2.4.0.ebuild,v 1.2 2011/08/15 09:22:11 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/mpir-2.6.0.ebuild,v 1.1 2013/01/16 10:14:00 tomka Exp $
 
 EAPI=4
 
 inherit eutils autotools-utils
 
-DESCRIPTION="Library for arbitrary precision integer arithmetic derived from version 4.2.1 of gmp"
+DESCRIPTION="Library for arbitrary precision integer arithmetic (fork of gmp)"
 HOMEPAGE="http://www.mpir.org/"
-SRC_URI="http://www.mpir.org/${P}.tar.bz2"
+SRC_URI="http://www.mpir.org/${P}.tar.lzma"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="+cxx cpudetection static-libs"
 
 DEPEND="x86? ( dev-lang/yasm )
 	amd64? ( dev-lang/yasm )"
 RDEPEND=""
 
-src_prepare(){
+src_prepare() {
 	epatch \
-		"${FILESDIR}/${PN}-2.2.0-yasm.patch" \
-		"${FILESDIR}/${PN}-1.3.0-ABI-multilib.patch"
+		"${FILESDIR}"/${PN}-2.6.0-yasm.patch \
+		"${FILESDIR}"/${PN}-1.3.0-ABI-multilib.patch \
+		"${FILESDIR}"/${PN}-2.5.1-automake-1.12.patch
 
 	# In the same way there was QA regarding executable stacks
 	# with GMP we have some here as well. We cannot apply the
@@ -50,12 +51,12 @@ src_prepare(){
 }
 
 src_configure() {
-# beware that cpudetection aka fat binaries is x86/amd64 only.
-# Place mpir in profiles/arch/$arch/package.use.mask when making it available on $arch.
-	myeconfargs=(
+	# beware that cpudetection aka fat binaries is x86/amd64 only.
+	# Place mpir in profiles/arch/$arch/package.use.mask
+	# when making it available on $arch.
+	myeconfargs+=(
 		$(use_enable cxx)
 		$(use_enable cpudetection fat)
-		$(use_enable static-libs static)
 	)
 	autotools-utils_src_configure
 }

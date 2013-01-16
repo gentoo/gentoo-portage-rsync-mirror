@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.138 2013/01/15 07:30:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.139 2013/01/16 10:09:43 ssuominen Exp $
+
+  16 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> libarchive-3.1.1.ebuild:
+  Include subslot support and call it 13 from SONAME wrt #452444 by Michael
+  Palimaka
 
   15 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> -libarchive-3.0.3.ebuild,
   -files/libarchive-3.0.3-nozlib.patch:
