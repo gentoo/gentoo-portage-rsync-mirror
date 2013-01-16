@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/django-evolution-0.6.7-r1.ebuild,v 1.2 2013/01/14 05:45:14 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/django-evolution-0.6.7-r1.ebuild,v 1.3 2013/01/16 02:42:49 idella4 Exp $
 
 EAPI=5
 
@@ -26,15 +26,16 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-#python_test() {
-#	"${PYTHON}" tests/runtests.py || exit_status=1
-#}
+python_test() {
+	# This is tested, any delay in die subsequent to (implicitly inherited) multiprocessing eclass
+	"${PYTHON}" tests/runtests.py || die
+}
 
 src_install() {
 	distutils-r1_src_install
 
 	einfo "Remove tests to avoid file collisions"
 	rm -rf $(find "${ED}" -name tests) || die
-	
+
 	dodoc -r docs/
 }
