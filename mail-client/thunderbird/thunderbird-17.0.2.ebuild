@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0.2.ebuild,v 1.1 2013/01/11 19:40:02 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0.2.ebuild,v 1.2 2013/01/16 16:02:00 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -75,7 +75,6 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	) )"
 
 DEPEND="${RDEPEND}
-	dev-python/pysqlite
 	!elibc_glibc? ( dev-libs/libexecinfo )
 	virtual/pkgconfig
 	amd64? ( ${ASM_DEPEND}

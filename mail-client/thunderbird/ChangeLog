@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.184 2013/01/11 19:40:02 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.185 2013/01/16 16:02:00 anarchy Exp $
+
+  16 Jan 2013; <anarchy@gentoo.org> thunderbird-17.0.2.ebuild:
+  Remove pysqlite dep, use python[sqlite]
 
 *thunderbird-17.0.2 (11 Jan 2013)
 

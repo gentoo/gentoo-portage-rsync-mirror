@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.15.ebuild,v 1.1 2013/01/10 06:09:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.15.ebuild,v 1.2 2013/01/16 16:06:15 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -79,7 +79,6 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	selinux? ( sec-policy/selinux-mozilla )"
 
 DEPEND="${RDEPEND}
-	dev-python/pysqlite
 	!elibc_glibc? ( dev-libs/libexecinfo )
 	virtual/pkgconfig
 	amd64? ( ${ASM_DEPEND}

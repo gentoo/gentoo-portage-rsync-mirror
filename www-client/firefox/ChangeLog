@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.200 2013/01/11 19:43:34 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.201 2013/01/16 16:04:07 anarchy Exp $
+
+  16 Jan 2013; <anarchy@gentoo.org> firefox-17.0.2.ebuild, firefox-18.0.ebuild:
+  Remove pysqlite dep, use python[sqlite]
 
   11 Jan 2013; <anarchy@gentoo.org> firefox-17.0.2.ebuild:
   Fix nss/nspr dep

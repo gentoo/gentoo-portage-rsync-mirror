@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.421 2013/01/14 07:30:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.422 2013/01/16 16:06:15 anarchy Exp $
+
+  16 Jan 2013; <anarchy@gentoo.org> seamonkey-2.15.ebuild:
+  Remove pysqlite dep, use python[sqlite]
 
   14 Jan 2013; Lars Wendler <polynomial-c@gentoo.org>
   -files/icon/seamonkey.png:

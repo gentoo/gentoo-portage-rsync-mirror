@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-17.0.2.ebuild,v 1.2 2013/01/11 19:43:34 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-17.0.2.ebuild,v 1.3 2013/01/16 16:04:07 anarchy Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -63,7 +63,6 @@ RDEPEND="
 	selinux? ( sec-policy/selinux-mozilla )"
 # We don't use PYTHON_DEPEND/PYTHON_USE_WITH for some silly reason
 DEPEND="${RDEPEND}
-	dev-python/pysqlite
 	virtual/pkgconfig
 	pgo? (
 		=dev-lang/python-2*[sqlite]
