@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<longdescription lang="en">
+  <herd>sci</herd>
+  <longdescription lang="en">
   Statsmodels is a python package that provides a complement to scipy
   for statistical computations including descriptive statistics and
   estimation of statistical models.
@@ -15,7 +15,7 @@
   maximum likelihood estimators. An extensive list of result
   statistics are avalable for each  estimation problem.
 </longdescription>
-<upstream>
-  <remote-id type="pypi">statsmodels</remote-id>
-</upstream>
+  <upstream>
+    <remote-id type="pypi">statsmodels</remote-id>
+  </upstream>
 </pkgmetadata>

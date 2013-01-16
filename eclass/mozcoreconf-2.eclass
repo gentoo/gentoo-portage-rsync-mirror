@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.25 2012/12/10 16:47:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.26 2013/01/16 16:00:10 anarchy Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
@@ -16,7 +16,7 @@ RDEPEND="x11-libs/libXrender
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	=dev-lang/python-2*[threads]"
+	=dev-lang/python-2.7*[threads,sqlite]"
 
 # mozconfig_annotate: add an annotated line to .mozconfig
 #

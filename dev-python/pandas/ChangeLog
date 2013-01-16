@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pandas
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.9 2012/12/29 13:26:25 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.10 2013/01/16 15:39:16 jlec Exp $
+
+  16 Jan 2013; Justin Lecher <jlec@gentoo.org> -pandas-0.8.1.ebuild,
+  -pandas-0.9.0.ebuild, -pandas-0.9.1.ebuild, pandas-0.10.0.ebuild,
+  metadata.xml:
+  No py3 support
 
 *pandas-0.10.0 (29 Dec 2012)
 

@@ -10,4 +10,4 @@ RDEPEND=dev-python/numpy >=dev-python/python-dateutil-2.1 dev-python/matplotlib 
 SLOT=0
 SRC_URI=mirror://pypi/p/pandas/pandas-0.10.0.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=79c59aec427454fe5ab026653bd2aaba
+_md5_=ca1f96531751c9f44b9ea2c11385cd40

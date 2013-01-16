@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scikits_statsmodels
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_statsmodels/ChangeLog,v 1.9 2012/12/10 19:29:07 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_statsmodels/ChangeLog,v 1.10 2013/01/16 15:33:53 jlec Exp $
+
+  16 Jan 2013; Justin Lecher <jlec@gentoo.org>
+  scikits_statsmodels-0.4.3.ebuild, metadata.xml:
+  No support for python3
 
   10 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org>
   -scikits_statsmodels-0.4.0.ebuild, metadata.xml,
