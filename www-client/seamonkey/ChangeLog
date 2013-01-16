@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.423 2013/01/16 17:02:00 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.424 2013/01/16 18:13:48 anarchy Exp $
+
+  16 Jan 2013; <anarchy@gentoo.org> seamonkey-2.15-r1.ebuild:
+  Fix linguas support in fx-18
 
 *seamonkey-2.15-r1 (16 Jan 2013)
 
