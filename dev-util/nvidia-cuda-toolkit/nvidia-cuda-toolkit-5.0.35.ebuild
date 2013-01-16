@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-5.0.35.ebuild,v 1.1 2013/01/14 07:47:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-5.0.35.ebuild,v 1.2 2013/01/16 12:34:27 jlec Exp $
 
 EAPI=5
 
@@ -23,11 +23,7 @@ IUSE="debugger doc eclipse profiler"
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	|| (
-		sys-devel/gcc:4.4
-		sys-devel/gcc:4.5
-		sys-devel/gcc:4.6
-		)
+	sys-devel/gcc:4.6[cxx]
 	!<=x11-drivers/nvidia-drivers-270.41
 	debugger? ( sys-libs/libtermcap-compat )
 	profiler? ( >=virtual/jre-1.6 )"

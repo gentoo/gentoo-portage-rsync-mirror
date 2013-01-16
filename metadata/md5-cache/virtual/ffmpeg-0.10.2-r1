@@ -1,8 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual package for FFmpeg implementation
-EAPI=4
-IUSE=X +encode jpeg2k mp3 sdl theora threads truetype vaapi vdpau x264
-KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd
-RDEPEND=|| ( >=media-video/ffmpeg-0.10.2[X=,encode=,jpeg2k=,mp3=,sdl=,theora=,threads=,truetype=,vaapi=,vdpau=,x264=] >=media-video/libav-0.8.2[X=,encode=,jpeg2k=,mp3=,sdl=,theora=,threads=,truetype=,vaapi=,vdpau=,x264=] )
-SLOT=0
-_md5_=2bc799eff7ebc597e0d607cfaf9302c8

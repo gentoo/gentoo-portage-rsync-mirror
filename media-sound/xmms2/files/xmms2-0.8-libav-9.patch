@@ -1,0 +1,21 @@
+commit a1fe1f45c19c67ed80c05d8276b88d1296f984d2
+Author: Raphaël Bois <virtualdust@gmail.com>
+Date:   Sun Nov 25 17:55:12 2012 +0100
+
+    OTHER: Add Diego Biurrun in AUTHORS file
+
+diff --git a/AUTHORS b/AUTHORS
+index 9d05e1a..3b84fce 100644
+--- a/AUTHORS
++++ b/AUTHORS
+@@ -37,6 +37,10 @@ E: xkr47@outerspace.dyndns.org
+ W: http://xkr47.outerspace.dyndns.org/
+ D: curl_http updated to xforms, icymetaint plugin (extracted from curl)
+ 
++N: Diego Biurrun
++E: diego@biurrun.de
++D: Support for libav 9 in avcodec plugin
++
+ N: Magnus Bjernstad
+ E: bjernstad@gmail.com
+ D: PythonAPI fixes.
