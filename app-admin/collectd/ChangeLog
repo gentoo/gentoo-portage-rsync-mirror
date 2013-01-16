@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/collectd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.47 2012/12/03 20:57:02 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.48 2013/01/16 06:54:07 pinkbyte Exp $
+
+*collectd-5.2.0-r1 (16 Jan 2013)
+
+  16 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> +collectd-5.2.0-r1.ebuild:
+  Revision bump: add installation of systemd service file and other little
+  fixes, wrt bug #448480. Thanks to Johan Bergström
 
 *collectd-5.2.0 (03 Dec 2012)
 

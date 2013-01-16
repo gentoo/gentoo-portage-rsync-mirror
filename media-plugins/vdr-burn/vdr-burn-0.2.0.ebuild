@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0.ebuild,v 1.5 2012/12/15 14:13:24 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0.ebuild,v 1.6 2013/01/16 06:38:38 ssuominen Exp $
 
 EAPI="5"
 
@@ -39,9 +39,11 @@ S="${WORKDIR}/${P#vdr-}"
 src_prepare() {
 	vdr-plugin-2_src_prepare
 
-	epatch "${FILESDIR}/${P}_gentoo-path.diff"
-	epatch "${FILESDIR}/${P}_setdefaults.diff"
-	epatch "${FILESDIR}/${P}_makefile.diff"
+	epatch \
+		"${FILESDIR}"/${P}_gentoo-path.diff \
+		"${FILESDIR}"/${P}_setdefaults.diff \
+		"${FILESDIR}"/${P}_makefile.diff \
+		"${FILESDIR}"/${P}-missing-include-for-function-setpriority.patch
 
 	use dvdarchive && sed -i Makefile \
 		-e "s:#ENABLE_DMH_ARCHIVE:ENABLE_DMH_ARCHIVE:"
