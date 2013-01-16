@@ -1,6 +1,12 @@
 # ChangeLog for media-video/devede
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.42 2012/07/19 06:32:21 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.43 2013/01/16 13:03:09 lu_zero Exp $
+
+*devede-3.23.0 (16 Jan 2013)
+
+  16 Jan 2013; Luca Barbato <lu_zero@gentoo.org> +devede-3.23.0.ebuild,
+  metadata.xml:
+  New version, supports avconv out of box
 
 *devede-3.22.0 (19 Jul 2012)
 

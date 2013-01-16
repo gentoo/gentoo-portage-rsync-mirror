@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-5.0.35.ebuild,v 1.1 2013/01/14 10:19:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-5.0.35.ebuild,v 1.2 2013/01/16 13:03:48 jlec Exp $
 
 EAPI=4
 
@@ -28,6 +28,7 @@ RDEPEND="
 	examples? (
 		media-libs/freeimage
 		media-libs/glew
+		virtual/mpi
 		>=x11-drivers/nvidia-drivers-304.54
 		)"
 DEPEND="${RDEPEND}"

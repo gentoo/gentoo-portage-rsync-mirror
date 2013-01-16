@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.55 2013/01/16 12:34:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.56 2013/01/16 13:08:47 jlec Exp $
+
+  16 Jan 2013; Justin Lecher <jlec@gentoo.org>
+  nvidia-cuda-toolkit-4.2.9-r1.ebuild:
+  x86 and x86_64 packages are different, #452388
 
   16 Jan 2013; Justin Lecher <jlec@gentoo.org>
   nvidia-cuda-toolkit-5.0.35.ebuild:
