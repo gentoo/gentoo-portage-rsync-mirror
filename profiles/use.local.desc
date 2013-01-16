@@ -5800,6 +5800,7 @@ www-client/seamonkey:ipc - Use inter-process communication between tabs and plug
 www-client/seamonkey:mailclient - Build Mozilla's Mail client (default on)
 www-client/seamonkey:methodjit - Enable JIT for JavaScript using MethodJIT for faster JS performance. Hardened users can disable this USE-flag to use MPROTECT on grsecurity kernels.
 www-client/seamonkey:roaming - Build roaming extension support (default on)
+www-client/seamonkey:system-jpeg - Use the system-wide media-libs/libjpeg-turbo Use system jpeg instead of bundled.
 www-client/seamonkey:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 www-client/seamonkey:webm - Use system media-libs/libvpx for HTML5 WebM video support.
 www-client/uget:aria2 - Enable support for net-misc/aria2 through xmlrpc. You'll find the plugin in the app's settings.

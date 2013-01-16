@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.15.ebuild,v 1.2 2013/01/16 16:06:15 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.15-r1.ebuild,v 1.1 2013/01/16 17:02:00 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -28,7 +28,7 @@ fi
 
 inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension python nsplugins mozlinguas
 
-PATCHFF="firefox-18.0-patches-0.5"
+PATCHFF="firefox-18.0-patches-0.6"
 PATCH="${PN}-2.14-patches-01"
 EMVER="1.5.0"
 
@@ -47,7 +47,7 @@ fi
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="+chatzilla +crypt gstreamer +ipc +roaming system-sqlite"
+IUSE="+chatzilla +crypt gstreamer +ipc +jit +roaming system-jpeg system-sqlite"
 
 SRC_URI+="${SRC_URI}
 	${MOZ_FTP_URI}/source/${MY_MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
@@ -73,6 +73,7 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 		>=media-libs/gstreamer-0.10.33:0.10
 		>=media-libs/gst-plugins-base-0.10.33:0.10
 	)
+	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
 	system-sqlite? ( >=dev-db/sqlite-3.7.13[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
 	crypt? ( >=app-crypt/gnupg-1.4 )
 	kernel_linux? ( media-libs/alsa-lib )
@@ -171,7 +172,7 @@ src_prepare() {
 		-i "${S}"/suite/installer/Makefile.in || die
 	# Don't error out when there's no files to be removed:
 	sed 's@\(xargs rm\)$@\1 -f@' \
-		-i "${S}"/mozilla/toolkit/mozapps/installer/packager.mk || die
+		-i "${ms}"/toolkit/mozapps/installer/packager.mk || die
 
 	eautoreconf
 	cd "${S}"/mozilla
@@ -221,6 +222,10 @@ src_configure() {
 
 	mozconfig_use_enable gstreamer
 	mozconfig_use_enable system-sqlite
+	mozconfig_use_with system-jpeg
+	# Feature is know to cause problems on hardened
+	mozconfig_use_enable jit methodjit
+	mozconfig_use_enable jit tracejit
 
 	# Use an objdir to keep things organized.
 	echo "mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/seamonk" \
