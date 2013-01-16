@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.134 2013/01/16 15:15:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.135 2013/01/16 20:05:44 ago Exp $
+
+  16 Jan 2013; Agostino Sarubbo <ago@gentoo.org> wicd-1.7.2.4-r2.ebuild:
+  Stable for ppc64, wrt bug #441966
 
   16 Jan 2013; Agostino Sarubbo <ago@gentoo.org> wicd-1.7.2.4-r2.ebuild:
   Stable for ppc, wrt bug #441966

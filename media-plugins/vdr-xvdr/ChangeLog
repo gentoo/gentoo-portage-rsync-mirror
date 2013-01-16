@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-xvdr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xvdr/ChangeLog,v 1.5 2012/05/01 11:44:37 hd_brummy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xvdr/ChangeLog,v 1.6 2013/01/16 20:04:34 hd_brummy Exp $
+
+  16 Jan 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-xvdr-9999.ebuild:
+  eapi-5, fixed libsi includes #451522
 
   01 May 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-xvdr-9999.ebuild:
   eapi=4; vdr-plugin-2.eclass
