@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.262 2013/01/06 20:54:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.263 2013/01/16 16:44:04 ssuominen Exp $
+
+  16 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  audacious-plugins-3.3.3.ebuild, +files/audacious-plugins-3.3.3-libcdio.patch:
+  Fix compability with libcdio-paranoia wrt #452458
 
   06 Jan 2013;  <jd@gentoo.org> audacious-plugins-2.4.4-r1.ebuild,
   audacious-plugins-2.5.4.ebuild, audacious-plugins-3.1.1.ebuild,

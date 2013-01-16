@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.3.3.ebuild,v 1.2 2013/01/06 20:54:46 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.3.3.ebuild,v 1.3 2013/01/16 16:44:04 ssuominen Exp $
 
 EAPI=4
+inherit eutils
 
 MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
@@ -29,7 +30,7 @@ RDEPEND="app-arch/unzip
 	alsa? ( >=media-libs/alsa-lib-1.0.16 )
 	bs2b? ( media-libs/libbs2b )
 	cdda? ( >=media-libs/libcddb-1.2.1
-		>=dev-libs/libcdio-0.79-r1 )
+		|| ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
 	cue? ( media-libs/libcue )
 	ffmpeg? ( >=virtual/ffmpeg-0.7.3 )
 	flac? ( >=media-libs/libvorbis-1.0
@@ -66,13 +67,14 @@ mp3_warning() {
 
 src_prepare() {
 	has_version "<dev-libs/glib-2.32" && \
-		cd ${S}/src/mpris2 && \
+		cd "${S}"/src/mpris2 && \
 		gdbus-codegen --interface-prefix org.mpris. \
 			--c-namespace Mpris --generate-c-code object-core mpris2.xml && \
 		gdbus-codegen --interface-prefix org.mpris. \
 			--c-namespace Mpris \
 			--generate-c-code object-player mpris2-player.xml && \
-		cd ${S}
+		cd "${S}"
+		epatch "${FILESDIR}"/${P}-libcdio.patch
 }
 
 src_configure() {
