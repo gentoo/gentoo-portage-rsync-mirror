@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ngrep
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.71 2012/06/12 02:56:28 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.72 2013/01/16 09:39:22 ulm Exp $
+
+  16 Jan 2013; Ulrich Müller <ulm@gentoo.org> ngrep-1.45-r3.ebuild:
+  Fix LICENSE, see LICENSE.txt, bug 452012.
 
   12 Jun 2012; Zac Medico <zmedico@gentoo.org> ngrep-1.45-r3.ebuild:
   inherit user for enewgroup and enewuser

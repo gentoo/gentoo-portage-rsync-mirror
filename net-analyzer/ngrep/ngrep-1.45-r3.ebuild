@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.45-r3.ebuild,v 1.8 2012/06/12 02:56:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.45-r3.ebuild,v 1.9 2013/01/16 09:39:22 ulm Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ DESCRIPTION="A grep for network layers"
 HOMEPAGE="http://ngrep.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ngrep/${P}.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="ngrep"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="ipv6 pcre"
