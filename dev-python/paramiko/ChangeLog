@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.75 2013/01/16 15:14:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.76 2013/01/16 18:50:37 ago Exp $
+
+  16 Jan 2013; Agostino Sarubbo <ago@gentoo.org> paramiko-1.9.0.ebuild:
+  Stable for ppc64, wrt bug #452242
 
   16 Jan 2013; Agostino Sarubbo <ago@gentoo.org> paramiko-1.9.0.ebuild:
   Stable for ppc, wrt bug #452242
