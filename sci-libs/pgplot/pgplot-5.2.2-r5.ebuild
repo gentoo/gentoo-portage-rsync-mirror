@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r5.ebuild,v 1.4 2013/01/13 12:40:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r5.ebuild,v 1.5 2013/01/16 20:35:15 jlec Exp $
 
 EAPI=4
 
@@ -34,7 +34,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-makemake.patch \
 		"${FILESDIR}"/${PN}-compile-setup.patch \
 		"${FILESDIR}"/${PN}-headers.patch \
-		"${FILESDIR}"/${PN}-libpng15.patch
+		"${FILESDIR}"/${PN}-libpng15.patch \
+		"${FILESDIR}"/${PN}-tk86.patch
 
 	# gfortran < 4.3 does not compile gif, pp and wd drivers
 	if [[ $(tc-getFC) == *gfortran* ]] &&

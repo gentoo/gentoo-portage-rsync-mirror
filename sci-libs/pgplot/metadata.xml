@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci</herd>
-	<longdescription lang="en">
+  <herd>sci</herd>
+  <longdescription lang="en">
   PGPLOT is a Fortran subroutine package for drawing graphs on a variety
   of display devices. The CPGPLOT library adds an intermediate level of
   wrapper functions between C programs and the PGPLOT library. These

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.7.ebuild,v 1.2 2013/01/01 14:52:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.8.ebuild,v 1.1 2013/01/16 20:49:25 flameeyes Exp $
 
 EAPI="4"
 
@@ -9,12 +9,14 @@ inherit eutils multilib udev user
 DESCRIPTION="PC/SC Architecture smartcard middleware library"
 HOMEPAGE="http://pcsclite.alioth.debian.org/"
 
-STUPID_NUM="3842"
+STUPID_NUM="3862"
 MY_P="${PN}-${PV/_/-}"
 SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
 
-LICENSE="BSD ISC MIT GPL-3+"
+# GPL-2 is there for the init script; everything else comes from
+# upstream.
+LICENSE="BSD ISC MIT GPL-3+ GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
@@ -30,12 +32,14 @@ CDEPEND="libusb? ( virtual/libusb:1 )
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
-	!<app-crypt/ccid-1.4.1-r1"
+	!<app-crypt/ccid-1.4.1-r1
+	!<sys-apps/baselayout-2
+	!<sys-apps/openrc-0.11.8"
 
 pkg_setup() {
 	enewgroup openct # make sure it exists
 	enewgroup pcscd
-	enewuser pcscd -1 -1 /var/run/pcscd pcscd,openct
+	enewuser pcscd -1 -1 /run/pcscd pcscd,openct
 }
 
 src_configure() {
@@ -45,6 +49,7 @@ src_configure() {
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--enable-usbdropdir="${EPREFIX}/usr/$(get_libdir)/readers/usb" \
 		--without-systemdsystemunitdir \
+		--enable-ipcdir=/run/pcscd \
 		$(use_enable udev libudev) \
 		$(use_enable libusb) \
 		${myconf}
@@ -56,7 +61,7 @@ src_install() {
 	default
 	prune_libtool_files
 
-	newinitd "${FILESDIR}"/pcscd-init.5 pcscd
+	newinitd "${FILESDIR}"/pcscd-init.6 pcscd
 
 	if use udev; then
 		insinto "$(udev_get_udevdir)"/rules.d

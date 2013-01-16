@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/pgplot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.28 2013/01/13 12:40:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.29 2013/01/16 20:35:15 jlec Exp $
+
+  16 Jan 2013; Justin Lecher <jlec@gentoo.org> +files/pgplot-tk86.patch,
+  pgplot-5.2.2-r5.ebuild, metadata.xml:
+  Add fix for tk8.6, #451614, thanks Juergen Rose for the patch
 
   13 Jan 2013; Markus Meier <maekke@gentoo.org> pgplot-5.2.2-r5.ebuild:
   add ~arm, bug #449762

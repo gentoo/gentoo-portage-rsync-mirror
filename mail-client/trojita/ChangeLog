@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/trojita
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.18 2013/01/15 19:41:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.19 2013/01/16 20:40:20 hwoarang Exp $
+
+*trojita-0.3.91 (16 Jan 2013)
+
+  16 Jan 2013; Markos Chandras <hwoarang@gentoo.org> +trojita-0.3.91.ebuild:
+  Version bump. Bug #451328
 
   15 Jan 2013; Markos Chandras <hwoarang@gentoo.org> trojita-9999.ebuild:
   Update git repo. Add virtualx eclass for tests. Bug #451328. Thanks to Jan

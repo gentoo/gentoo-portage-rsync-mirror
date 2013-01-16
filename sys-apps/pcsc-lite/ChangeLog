@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.153 2013/01/01 14:52:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.154 2013/01/16 20:49:25 flameeyes Exp $
+
+*pcsc-lite-1.8.8 (16 Jan 2013)
+
+  16 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org> +files/pcscd-init.6,
+  +pcsc-lite-1.8.8.ebuild, -pcsc-lite-1.8.7.ebuild:
+  Version bump; use /run directly rather than rely on /var/run. Add GPL-2 to the
+  list of licenses because of init script.
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> pcsc-lite-1.8.7.ebuild:
   Add ~alpha, wrt bug #449220
