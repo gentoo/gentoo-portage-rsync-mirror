@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/synergy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.91 2012/10/17 03:52:35 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.92 2013/01/16 10:32:55 darkside Exp $
+
+  16 Jan 2013; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  drop maintainership since I no longer use
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> synergy-1.4.10.ebuild:
   x86 stable wrt bug #435692
