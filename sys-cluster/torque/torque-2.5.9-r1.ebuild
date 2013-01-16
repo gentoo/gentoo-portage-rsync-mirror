@@ -1,12 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-3.0.6.ebuild,v 1.2 2012/12/13 16:21:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.9-r1.ebuild,v 1.1 2013/01/16 21:05:26 jlec Exp $
 
 EAPI=4
 
-AUTOTOOLS_AUTORECONF=yes
-
-inherit autotools-utils flag-o-matic linux-info
+inherit autotools-utils eutils flag-o-matic linux-info
 
 DESCRIPTION="Resource manager and queuing system based on OpenPBS"
 HOMEPAGE="http://www.adaptivecomputing.com/products/torque.php"
@@ -16,13 +14,12 @@ LICENSE="torque-2.5"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="cpusets +crypt doc drmaa kernel_linux munge nvidia server static-libs +syslog threads tk"
+IUSE="cpusets +crypt doc drmaa kernel_linux munge server static-libs +syslog threads tk xml"
 
 # ed is used by makedepend-sh
 DEPEND_COMMON="sys-libs/ncurses
 	sys-libs/readline
 	munge? ( sys-auth/munge )
-	nvidia? ( >=x11-drivers/nvidia-drivers-275 )
 	tk? ( dev-lang/tk )
 	syslog? ( virtual/logger )
 	!games-util/qstat"
@@ -36,6 +33,8 @@ RDEPEND="${DEPEND_COMMON}
 	!crypt? ( net-misc/netkit-rsh )"
 
 DOCS=( Release_Notes )
+
+PATCHES=( "${FILESDIR}"/${P}-tcl8.6.patch )
 
 pkg_setup() {
 	PBS_SERVER_HOME="${PBS_SERVER_HOME:-/var/spool/torque}"
@@ -74,17 +73,10 @@ pkg_setup() {
 	fi
 }
 
-src_prepare() {
-	# as-needed fix, libutils.a needs librt.
-	sed -i 's,^\(LDADD = .*\)$(MOMLIBS) $(PBS_LIBS),\1$(PBS_LIBS) $(MOMLIBS),' \
-		src/resmom/Makefile.am || die
-	autotools-utils_src_prepare
-}
-
 src_configure() {
 	local myeconfargs=( --with-rcp=mom_rcp )
 
-	use crypt && myeconfargs+=( --with-rcp=scp )
+	use crypt && myeconfargs=( --with-rcp=scp )
 
 	myeconfargs+=(
 		$(use_enable tk gui)
@@ -92,8 +84,8 @@ src_configure() {
 		$(use_enable server)
 		$(use_enable drmaa)
 		$(use_enable threads high-availability)
+		$(use_enable xml server-xml)
 		$(use_enable munge munge-auth)
-		$(use_enable nvidia nvidia-gpus)
 		--with-server-home=${PBS_SERVER_HOME}
 		--with-environ=/etc/pbs_environment
 		--with-default-server=${PBS_SERVER_NAME}
@@ -192,13 +184,6 @@ pkg_postinst() {
 	elog "http://www.clusterresources.com/wiki/doku.php?id=torque:torque_wiki"
 	echo
 	elog "    For a basic setup, you may use emerge --config ${PN}"
-	if use server; then
-		elog "    The format for the serverdb is now xml only.  If you do not want"
-		elog "this, reverting to 2.4.x is your only option.  The upgrade will"
-		elog "happen automatically when pbs_server is restarted"
-	fi
-	elog "    The on-wire protocol version has been bumped from 1 to 2."
-	elog "Versions of Torque before 3.0.0 are no longer able to communicate."
 }
 
 # root will be setup as the primary operator/manager, the local machine

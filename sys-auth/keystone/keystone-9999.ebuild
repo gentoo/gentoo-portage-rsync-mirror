@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-9999.ebuild,v 1.5 2013/01/11 22:32:12 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-9999.ebuild,v 1.6 2013/01/16 21:19:33 mgorny Exp $
 
 EAPI=5
 #test restricted becaues of bad requirements given (old webob for instance)
 RESTRICT="test"
-PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
+PYTHON_COMPAT=( python2_6 python2_7 )
 
 inherit git-2 distutils-r1
 
@@ -25,13 +25,13 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}
 	dev-python/eventlet
 	dev-python/greenlet
-	dev-python/iso8601
-	dev-python/lxml
+	dev-python/iso8601[${PYTHON_USEDEP}]
+	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/passlib
 	dev-python/paste
 	dev-python/pastedeploy
 	dev-python/python-daemon
-	dev-python/python-pam
+	dev-python/python-pam[${PYTHON_USEDEP}]
 	dev-python/routes
 	>=dev-python/sqlalchemy-migrate-0.7
 	>=dev-python/webob-1.0.8

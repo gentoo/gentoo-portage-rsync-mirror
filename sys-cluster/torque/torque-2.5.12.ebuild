@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.12.ebuild,v 1.1 2013/01/10 15:13:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.12.ebuild,v 1.2 2013/01/16 21:05:26 jlec Exp $
 
 EAPI=4
 
@@ -83,7 +83,7 @@ pkg_setup() {
 src_configure() {
 	local myeconfargs=( --with-rcp=mom_rcp )
 
-	use crypt && myeconfargs+=( --with-rcp=scp )
+	use crypt && myeconfargs=( --with-rcp=scp )
 
 	myeconfargs+=(
 		$(use_enable tk gui)
