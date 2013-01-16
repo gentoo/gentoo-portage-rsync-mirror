@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rex/rex-0.33.3.ebuild,v 1.1 2012/10/10 06:35:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rex/rex-0.37.1.ebuild,v 1.1 2013/01/16 08:01:37 patrick Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 	dev-perl/Digest-HMAC
 	dev-perl/Expect
 	dev-perl/DBI
-	dev-perl/yaml"
+	dev-perl/yaml
+	dev-perl/libwww-perl"
 
 SRC_TEST="do"

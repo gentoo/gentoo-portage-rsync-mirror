@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.6.6.ebuild,v 1.1 2013/01/14 21:39:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.6.6.ebuild,v 1.2 2013/01/16 08:29:30 ssuominen Exp $
 
 EAPI="5"
 
@@ -29,7 +29,7 @@ RDEPEND="x11-libs/qt-qt3support:4
 	media-libs/taglib
 	alsa? ( media-libs/alsa-lib )
 	bs2b? ( media-libs/libbs2b )
-	cdda? ( dev-libs/libcdio )
+	cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
 	dbus? ( sys-apps/dbus )
 	aac? ( media-libs/faad2 )
 	enca? ( app-i18n/enca )
@@ -62,6 +62,16 @@ DEPEND="${RDEPEND}"
 DOCS="AUTHORS ChangeLog README"
 
 CMAKE_IN_SOURCE_BUILD="1"
+
+src_prepare() {
+	if has_version dev-libs/libcdio-paranoia; then
+		sed -i \
+			-e 's:cdio/cdda.h:cdio/paranoia/cdda.h:' \
+			src/plugins/Input/cdaudio/decoder_cdaudio.cpp || die
+	fi
+
+	base_src_prepare
+}
 
 src_configure() {
 	mycmakeargs=(

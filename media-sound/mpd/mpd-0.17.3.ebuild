@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.3.ebuild,v 1.1 2013/01/14 04:22:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.3.ebuild,v 1.2 2013/01/16 08:20:12 ssuominen Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib systemd user
@@ -37,7 +37,7 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	ao? ( media-libs/libao[alsa?,pulseaudio?] )
 	audiofile? ( media-libs/audiofile )
 	bzip2? ( app-arch/bzip2 )
-	cdio? ( dev-libs/libcdio[-minimal] )
+	cdio? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
 	curl? ( net-misc/curl )
 	ffmpeg? ( virtual/ffmpeg )
 	flac? ( media-libs/flac[ogg?] )
@@ -90,6 +90,12 @@ pkg_setup() {
 src_prepare() {
 	cp -f doc/mpdconf.example doc/mpdconf.dist || die "cp failed"
 	epatch "${FILESDIR}"/${PN}-0.16.conf.patch
+
+	if has_version dev-libs/libcdio-paranoia; then
+		sed -i \
+			-e 's:cdio/paranoia.h:cdio/paranoia/paranoia.h:' \
+			src/input/cdio_paranoia_input_plugin.c || die
+	fi
 }
 
 src_configure() {

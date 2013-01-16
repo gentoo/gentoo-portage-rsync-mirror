@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8-r1.ebuild,v 1.10 2012/11/16 09:30:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8-r1.ebuild,v 1.11 2013/01/16 08:15:40 ssuominen Exp $
 
 EAPI=3
 
@@ -29,7 +29,7 @@ RDEPEND="server? (
 		alsa? ( media-libs/alsa-lib )
 		ao? ( media-libs/libao )
 		avahi? ( net-dns/avahi[mdnsresponder-compat] )
-		cdda? ( dev-libs/libcdio
+		cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal]	)
 			>=media-libs/libdiscid-0.1.1
 			>=media-sound/cdparanoia-3.9.8 )
 		curl? ( >=net-misc/curl-7.15.1 )
@@ -107,6 +107,10 @@ src_prepare() {
 	cd .waf* || die
 	epatch "${FILESDIR}/${PN}"-0.8DrO_o-waflib-fix-perl.patch
 	cd "${S}"
+
+	if has_version dev-libs/libcdio-paranoia; then
+		sed -i -e 's:cdio/cdda.h:cdio/paranoia/cdda.h:' src/plugins/cdda/cdda.c || die
+	fi
 }
 
 src_configure() {
