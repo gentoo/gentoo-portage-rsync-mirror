@@ -4,10 +4,10 @@ DESCRIPTION=Secure backup system using gnupg to encrypt data
 EAPI=4
 HOMEPAGE=http://www.nongnu.org/duplicity/
 IUSE=s3
-KEYWORDS=amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos
+KEYWORDS=amd64 ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos
 LICENSE=GPL-3
 RDEPEND=net-libs/librsync app-crypt/gnupg dev-python/paramiko >=dev-python/pexpect-2.1 >=dev-python/py-gnupg-0.3.2 s3? ( dev-python/boto ) =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://code.launchpad.net/duplicity/0.6-series/0.6.20/+download/duplicity-0.6.20.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=8a0048fc55c223797e082817dd77c99f
+_md5_=7ca4a47ea4a67b1962da35718ef2c44c

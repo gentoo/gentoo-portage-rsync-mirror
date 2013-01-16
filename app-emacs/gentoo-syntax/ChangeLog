@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.84 2013/01/15 10:40:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.85 2013/01/16 15:05:23 ago Exp $
+
+  16 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gentoo-syntax-1.20.ebuild:
+  Stable for ppc, wrt bug #451924
 
   15 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gentoo-syntax-1.20.ebuild:
   Stable for amd64, wrt bug #451924

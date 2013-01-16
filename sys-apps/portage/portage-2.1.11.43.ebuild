@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.11.40.ebuild,v 1.1 2013/01/11 08:32:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.11.43.ebuild,v 1.1 2013/01/16 15:04:51 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 SLOT="0"
-IUSE="build doc epydoc +ipc linguas_pl pypy2_0 python2 python3 selinux xattr"
+IUSE="build doc epydoc +ipc linguas_pl linguas_ru pypy2_0 python2 python3 selinux xattr"
 
 # Import of the io module in python-2.6 raises ImportError for the
 # thread module if threading is disabled.
@@ -154,7 +154,7 @@ src_prepare() {
 		die "Failed to patch portage.VERSION"
 	sed -e "1s/VERSION/${PVR}/" -i doc/fragment/version || \
 		die "Failed to patch VERSION in doc/fragment/version"
-	sed -e "1s/VERSION/${PVR}/" -i man/* || \
+	sed -e "1s/VERSION/${PVR}/" -i $(find man -type f) || \
 		die "Failed to patch VERSION in man page headers"
 
 	if ! use ipc ; then

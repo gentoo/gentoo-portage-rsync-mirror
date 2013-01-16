@@ -1,6 +1,22 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1168 2013/01/15 16:05:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1170 2013/01/16 15:05:44 zmedico Exp $
+
+*portage-2.2.0_alpha154 (16 Jan 2013)
+
+  16 Jan 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha154.ebuild,
+  -portage-2.2.0_alpha151.ebuild:
+  2.2.0_alpha154 version bump. This includes all of the fixes in 2.1.11.43. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.11.43 (16 Jan 2013)
+
+  16 Jan 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.43.ebuild,
+  -portage-2.1.11.40.ebuild:
+  2.1.11.43 version bump. This fixes bug #451048 (show free ram/swap in emerge
+  --info output). This also fixes random 'Bad file descriptor' errors for PyPy,
+  by avoiding file descriptor interference via dup2(). Bug #445274 tracks all
+  bugs fixed since portage-2.1.11.31.
 
 *portage-2.2.0_alpha153 (15 Jan 2013)
 

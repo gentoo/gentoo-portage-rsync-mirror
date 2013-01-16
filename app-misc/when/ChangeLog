@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/when
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.64 2013/01/14 16:20:13 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.65 2013/01/16 15:03:20 ago Exp $
+
+  16 Jan 2013; Agostino Sarubbo <ago@gentoo.org> when-1.1.30.ebuild:
+  Stable for ppc, wrt bug #451646
 
   14 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> when-1.1.30.ebuild:
   Stable on amd64, wrt bug #451646
@@ -248,4 +251,3 @@
   18 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
   +when-1.0.10.ebuild:
   Initial commit.
-
