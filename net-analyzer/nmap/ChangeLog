@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.277 2013/01/15 17:03:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.278 2013/01/16 07:55:37 pinkbyte Exp $
+
+  16 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> nmap-6.01.ebuild,
+  nmap-6.25.ebuild:
+  Respect AR and RANLIB, wrt bug #445524. Thanks to Agostino Sarubbo for
+  discovering this issue
 
   15 Jan 2013; Jeroen Roovers <jer@gentoo.org> -files/nmap-5.00-python.patch,
   -files/nmap-5.20-nolua.patch, -files/nmap-5.21-openssl-1.patch,

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7368 2013/01/16 06:21:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7369 2013/01/16 07:51:45 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jan 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add Clear-BSD license to GPL-COMPATIBLE, bug 416205. Add ngrep license to
+  MISC-FREE, bug 452012.
 
   16 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> updates/4Q-2012,
   +updates/1Q-2013:

@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.25.ebuild,v 1.6 2013/01/15 17:03:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.25.ebuild,v 1.7 2013/01/16 07:55:37 pinkbyte Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 
-inherit eutils flag-o-matic python
+inherit eutils flag-o-matic python toolchain-funcs
 
 MY_P=${P/_beta/BETA}
 
@@ -103,6 +103,12 @@ src_prepare() {
 		-e 's|^Categories=.*|Categories=Network;System;Security;|g' \
 		zenmap/install_scripts/unix/zenmap-root.desktop \
 		zenmap/install_scripts/unix/zenmap.desktop || die
+
+	# respect AR and RANLIB, wrt bug #445524
+	tc-export AR RANLIB
+	sed -i -e '/^RANLIB/d' -e '/^AR/d' liblinear/{,blas}/Makefile || die
+	sed -i -e '/^RANLIB/d' -e '/^AR/d' liblua/Makefile || die
+	sed -i -e '/^AR/d' {libnetutil,libpcre,nbase,nsock/src}/Makefile.in || die
 }
 
 src_configure() {

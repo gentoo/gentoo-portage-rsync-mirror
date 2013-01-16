@@ -1,6 +1,23 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.103 2013/01/01 19:09:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.104 2013/01/16 07:56:57 ssuominen Exp $
+
+  16 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -libmikmod-3.1.12-r1.ebuild, -files/libmikmod-3.1.12-64bit.patch,
+  -files/libmikmod-3.1.12-autotools.patch, -libmikmod-3.2.0_beta2-r3.ebuild,
+  -libmikmod-3.2.0_beta2-r5.ebuild, -files/libmikmod-3.2.0_beta2-64bit.patch,
+  -files/libmikmod-3.2.0_beta2-CVE-2009-3995-3996.patch,
+  -files/libmikmod-3.2.0_beta2-CVE-2010-2546-2971.patch,
+  -files/libmikmod-3.2.0_beta2-autotools.patch,
+  -files/libmikmod-3.2.0_beta2-doubleRegister.patch,
+  -files/libmikmod-3.2.0_beta2-fix-unload-crash.patch,
+  -files/libmikmod-3.2.0_beta2-fix-vol-crash.patch,
+  -files/libmikmod-3.2.0_beta2-info.patch,
+  -files/libmikmod-3.2.0_beta2-no-drv_raw.patch,
+  -files/libmikmod-3.2.0_beta2-pa-workaround.patch,
+  -files/libmikmod-3.2.0_beta2-shell.patch,
+  -files/libmikmod-CVE-2007-6720.patch, -files/libmikmod-CVE-2009-0179.patch:
+  old
 
   01 Jan 2013; Raúl Porcel <armin76@gentoo.org> libmikmod-3.2.0.ebuild:
   sh stable wrt #445556
