@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14381 2013/01/16 05:25:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14382 2013/01/16 08:34:30 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -39,14 +39,6 @@
 # Not really compatible with TeX Live 2012, breaks texdoc, produces some non
 # fatal errors in some documents, mask until fixed or TeX Live 2013 is out.
 >=dev-tex/luatex-0.74
-
-# Samuli Suominen <ssuominen@gentoo.org> (15 Jan 2013)
-# Masked while swiftly porting reverse dependencies to new headers
->=dev-libs/libcdio-0.90
->=dev-libs/libcdio-paranoia-0.90
-app-admin/eselect-cdparanoia
->=media-sound/cdparanoia-3.10.2-r5
->=dev-python/pycdio-0.18
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (14 Jan 2013)
 # Dev channel releases are only for people who are developers or want more

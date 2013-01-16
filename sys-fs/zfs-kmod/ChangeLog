@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.13 2013/01/14 21:11:11 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.15 2013/01/16 09:01:09 ryao Exp $
+
+  16 Jan 2013; Richard Yao <ryao@gentoo.org> zfs-kmod-9999.ebuild:
+  Filter -Wl,* from LDFLAGS to prevent build failures on ARM
+
+*zfs-kmod-0.6.0_rc13-r2 (16 Jan 2013)
+
+  16 Jan 2013; Richard Yao <ryao@gentoo.org> +zfs-kmod-0.6.0_rc13-r2.ebuild:
+  Filter -Wl,* from LDFLAGS to prevent build failures on ARM
 
 *zfs-kmod-0.6.0_rc13-r1 (14 Jan 2013)
 

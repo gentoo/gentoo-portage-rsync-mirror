@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.39 2013/01/14 21:11:56 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.41 2013/01/16 09:01:11 ryao Exp $
+
+  16 Jan 2013; Richard Yao <ryao@gentoo.org> spl-9999.ebuild:
+  Filter -Wl,* from LDFLAGS to prevent build failures on ARM
+
+*spl-0.6.0_rc13-r2 (16 Jan 2013)
+
+  16 Jan 2013; Richard Yao <ryao@gentoo.org> +spl-0.6.0_rc13-r2.ebuild:
+  Filter -Wl,* from LDFLAGS to prevent build failures on ARM
 
   14 Jan 2013; Richard Yao <ryao@gentoo.org> spl-0.6.0_rc13-r1.ebuild:
   Fix trailing whitespace in ebuild
