@@ -15,6 +15,7 @@
     <flag name="amr">Enables Adaptive Multi-Rate Audio support</flag>
 	<flag name="avresample">Enables libavresample, <pkg>media-video/libav</pkg> version of libswresample (which installed and makes libavresample redundant): A conversion library between uncompressed audio formats.</flag>
     <flag name="avx">Adds support for Advanced Vector Extensions instructions (Intel Sandy Bridge, AMD Bulldozer and later chips)</flag>
+	<flag name="bindist">Enforces license compatibility constraints via REQUIRED_USE.</flag>
 	<flag name="bluray">Enable playback of Blu-ray filesystems</flag>
     <flag name="cdio">Enables audio CD grabbing with <pkg>dev-libs/libcdio</pkg>.</flag>
 	<flag name="celt">Adds Xiph CELT audio decoding support via <pkg>media-libs/celt</pkg></flag>
