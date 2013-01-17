@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.1.ebuild,v 1.2 2013/01/16 10:37:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.1.ebuild,v 1.3 2013/01/17 10:38:24 lu_zero Exp $
 
 EAPI=5
 
@@ -51,7 +51,8 @@ RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	amr? ( media-libs/opencore-amr )
 	bzip2? ( app-arch/bzip2 )
-	cdio? ( dev-libs/libcdio )
+	cdio? ( || ( dev-libs/libcdio-paranoia
+				<dev-libs/libcdio-0.90[-minimal] ) )
 	encode? (
 		aac? ( media-libs/vo-aacenc )
 		amr? ( media-libs/vo-amrwbenc )
@@ -124,6 +125,7 @@ src_prepare() {
 	if [[ ${PV%_p*} != ${PV} ]]; then
 		sed -i -e "s/UNKNOWN/DATE-${PV#*_pre}/" "${S}/version.sh" || die
 	fi
+	epatch "${FILESDIR}"/0001-libcdio-support-recent-cdio-paranoia.patch
 }
 
 src_configure() {

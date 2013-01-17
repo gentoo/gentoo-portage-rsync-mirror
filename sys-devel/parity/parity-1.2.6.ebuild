@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/parity/parity-9999.ebuild,v 1.4 2013/01/17 10:57:50 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/parity/parity-1.2.6.ebuild,v 1.1 2013/01/17 10:57:50 haubi Exp $
 
 EAPI=4
+
+inherit eutils
 
 if [[ ${PV} == 9999 ]]; then
 	inherit subversion
@@ -34,6 +36,10 @@ pkg_setup() {
 		einfo "To make parity find it's paths correctly, please set MSSDK to the"
 		einfo "value correspoding to the above example for your system."
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-debugging.patch
 }
 
 src_install() {

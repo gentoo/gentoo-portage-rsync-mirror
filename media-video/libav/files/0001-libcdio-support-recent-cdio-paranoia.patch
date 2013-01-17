@@ -1,0 +1,60 @@
+From eab6903cdaf0501a80cd4971604d390a9d920db4 Mon Sep 17 00:00:00 2001
+From: Luca Barbato <lu_zero@gentoo.org>
+Date: Thu, 17 Jan 2013 11:24:01 +0100
+Subject: [PATCH] libcdio: support recent cdio-paranoia
+
+Upstream decided to split the paranoia interface and move the headers
+accordingly.
+---
+ configure             | 7 +++++--
+ libavdevice/libcdio.c | 7 +++++++
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+
+diff --git a/configure b/configure
+index 8cc9cdc..6a8990d 100755
+--- a/configure
++++ b/configure
+@@ -1201,6 +1201,8 @@ HAVE_LIST="
+     asm_mod_y
+     attribute_may_alias
+     attribute_packed
++    cdio_paranoia_h
++    cdio_paranoia_paranoia_h
+     closesocket
+     cmov
+     CommandLineToArgvW
+@@ -3551,8 +3553,9 @@ enabled jack_indev && check_lib2 jack/jack.h jack_client_open -ljack &&
+ 
+ enabled_any sndio_indev sndio_outdev && check_lib2 sndio.h sio_open -lsndio
+ 
+-enabled libcdio &&
+-    check_lib2 "cdio/cdda.h cdio/paranoia.h" cdio_cddap_open -lcdio_paranoia -lcdio_cdda -lcdio
++if enabled libcdio; then
++    check_lib2 "cdio/cdda.h cdio/paranoia.h" cdio_cddap_open -lcdio_paranoia -lcdio_cdda -lcdio || check_lib2 "cdio/paranoia/cdda.h cdio/paranoia/paranoia.h" cdio_cddap_open -lcdio_paranoia -lcdio_cdda -lcdio
++fi
+ 
+ enabled x11grab                                           &&
+ require X11 X11/Xlib.h XOpenDisplay -lX11                 &&
+diff --git a/libavdevice/libcdio.c b/libavdevice/libcdio.c
+index e846ee6..06ddb4a 100644
+--- a/libavdevice/libcdio.c
++++ b/libavdevice/libcdio.c
+@@ -23,8 +23,15 @@
+  * libcdio CD grabbing
+  */
+ 
++#include "config.h"
++
++#if HAVE_CDIO_PARANOIA_H
+ #include <cdio/cdda.h>
+ #include <cdio/paranoia.h>
++#elif HAVE_CDIO_PARANOIA_PARANOIA_H
++#include <cdio/paranoia/cdda.h>
++#include <cdio/paranoia/paranoia.h>
++#endif
+ 
+ #include "libavutil/log.h"
+ #include "libavutil/mem.h"
+-- 
+1.8.0.2
+
