@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/glu-9.0.0.ebuild,v 1.13 2013/01/04 17:46:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/glu-9.0.0.ebuild,v 1.14 2013/01/17 12:42:50 jlec Exp $
 
 EAPI=4
 
@@ -47,7 +47,7 @@ foreachabi() {
 pkg_pretend() {
 	if [[ ${MERGE_TYPE} != buildonly ]] && has collision-protect ${FEATURES}; then
 		if [[ $(readlink "${EPREFIX}"/usr/$(get_libdir)/libGLU$(get_libname)) == *opengl* ]]; then
-			eerror "FEATURES=\"collision protect\" is enabled, which will prevent overwriting"
+			eerror "FEATURES=\"collision-protect\" is enabled, which will prevent overwriting"
 			eerror "symlinks that were formerly managed by eselect opengl. You must disable"
 			eerror "collision-protect or remove ${EPREFIX}/usr/$(get_libdir)/libGLU$(get_libname)*"
 			eerror "manually. For details see bug #435682."
