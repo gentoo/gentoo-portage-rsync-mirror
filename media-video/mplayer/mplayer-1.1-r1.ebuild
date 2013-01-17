@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.18 2013/01/17 16:51:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.19 2013/01/17 17:48:55 aballier Exp $
 
 EAPI=4
 
@@ -270,7 +270,8 @@ src_prepare() {
 	base_src_prepare
 	if has_version '>=media-video/libav-9_rc' || has_version '>=media-video/ffmpeg-1.1' ; then
 		epatch "${FILESDIR}/${P}-libav-9.patch" \
-			"${FILESDIR}/${P}-planaraudio.patch"
+			"${FILESDIR}/${P}-planaraudio.patch" \
+			"${FILESDIR}/${P}-missingbreak.patch"
 	fi
 }
 
