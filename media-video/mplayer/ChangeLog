@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.868 2013/01/16 16:44:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.869 2013/01/17 09:01:57 lu_zero Exp $
+
+  17 Jan 2013; Luca Barbato <lu_zero@gentoo.org> mplayer-1.1-r1.ebuild,
+  +files/mplayer-1.1-libav-9.patch:
+  Add support for libav-9 as well.
 
   16 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/mplayer-1.1-libav-0.8.patch, mplayer-1.1-r1.ebuild:

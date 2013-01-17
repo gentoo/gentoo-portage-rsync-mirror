@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.14 2013/01/16 16:44:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1-r1.ebuild,v 1.15 2013/01/17 09:01:57 lu_zero Exp $
 
 EAPI=4
 
@@ -195,6 +195,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.0_rc4-pkg-config.patch"
 	"${FILESDIR}/${P}-ffmpeg.patch"
 	"${FILESDIR}/${P}-libav-0.8.patch"
+	"${FILESDIR}/${P}-libav-9.patch"
 	"${FILESDIR}/${P}-codecid.patch"
 )
 
