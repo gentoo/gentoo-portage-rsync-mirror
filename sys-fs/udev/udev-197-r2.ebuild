@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.9 2013/01/17 00:42:19 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.10 2013/01/17 19:35:25 williamh Exp $
 
 EAPI=4
 
@@ -46,7 +46,7 @@ DEPEND="${COMMON_DEPEND}
 	virtual/os-headers
 	virtual/pkgconfig
 	!<sys-kernel/linux-headers-${KV_min}
-	doc? ( dev-util/gtk-doc )
+	doc? ( >=dev-util/gtk-doc-1.18 )
 	hwdb? ( >=sys-apps/hwids-20121202.2[udev] )"
 
 if [[ ${PV} = 9999* ]]

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-0.24.1.ebuild,v 1.1 2012/12/23 17:50:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-0.24.1.ebuild,v 1.2 2013/01/17 19:47:01 hwoarang Exp $
 
 EAPI=4
 
@@ -41,6 +41,10 @@ DEPEND=">=dev-libs/openssl-1.0
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-libav-9.patch"
+}
 
 src_compile() {
 	emake -C HomerBuild default \
