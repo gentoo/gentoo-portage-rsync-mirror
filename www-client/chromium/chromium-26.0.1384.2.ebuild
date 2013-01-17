@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-26.0.1384.2.ebuild,v 1.1 2013/01/16 16:51:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-26.0.1384.2.ebuild,v 1.2 2013/01/17 04:41:52 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -50,7 +50,7 @@ RDEPEND="app-accessibility/speech-dispatcher
 	media-libs/opus
 	media-libs/speex
 	pulseaudio? ( media-sound/pulseaudio )
-	system-ffmpeg? ( >=media-video/ffmpeg-1.0 )
+	system-ffmpeg? ( || ( <media-video/ffmpeg-1.0 >=media-video/ffmpeg-1.0[opus] ) )
 	>=net-libs/libsrtp-1.4.4_p20121108
 	sys-apps/dbus
 	sys-apps/pciutils
@@ -119,14 +119,10 @@ pkg_setup() {
 
 src_prepare() {
 	if ! use arm; then
-		ebegin "Preparing NaCl newlib toolchain"
-		pushd "${T}" >/dev/null || die
-		mkdir sdk || die
-		cp -a /usr/$(get_libdir)/nacl-toolchain-newlib sdk/nacl-sdk || die
-		mkdir -p "${S}"/native_client/toolchain/.tars || die
-		tar czf "${S}"/native_client/toolchain/.tars/naclsdk_linux_x86.tgz sdk || die
-		popd >/dev/null || die
-		eend $?
+		mkdir -p out/Release/obj/gen/sdk/toolchain || die
+		cp -a /usr/$(get_libdir)/nacl-toolchain-newlib \
+			out/Release/obj/gen/sdk/toolchain/linux_x86_newlib || die
+		touch out/Release/obj/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	fi
 
 	# Fix build without NaCl glibc toolchain.
@@ -150,7 +146,7 @@ src_prepare() {
 	}
 	EOF
 
-	epatch "${FILESDIR}/${PN}-system-ffmpeg-r0.patch"
+	epatch "${FILESDIR}/${PN}-system-ffmpeg-r1.patch"
 
 	epatch_user
 
@@ -194,7 +190,6 @@ src_prepare() {
 		\! -path 'third_party/undoview/*' \
 		\! -path 'third_party/v8-i18n/*' \
 		\! -path 'third_party/webdriver/*' \
-		\! -path 'third_party/webgl_conformance/*' \
 		\! -path 'third_party/webrtc/*' \
 		\! -path 'third_party/widevine/*' \
 		-delete || die
@@ -226,6 +221,10 @@ src_configure() {
 
 	# TODO: also build with pnacl
 	myconf+=" -Ddisable_pnacl=1"
+
+	# It would be awkward for us to tar the toolchain and get it untarred again
+	# during the build.
+	myconf+=" -Ddisable_newlib_untar=1"
 
 	# Make it possible to remove third_party/adobe.
 	echo > "${T}/flapper_version.h" || die
