@@ -5468,6 +5468,7 @@ sys-devel/gettext:cvs - When running `autopoint`, use cvs to store the internal 
 sys-devel/gettext:git - When running `autopoint`, use git to store the internal development files; this requires git at runtime, but will be faster/smaller than raw archives
 sys-devel/kgcc64:multislot - Allow for SLOTs to include minor version (eg. 3.3.4 instead of just 3.3)
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
+sys-devel/llvm:doc - Build and install the HTML documentation and regenerate the man pages
 sys-devel/llvm:gold - Build the gold linker plugin
 sys-devel/llvm:llvm-gcc - Build LLVM with sys-devel/llvm-gcc
 sys-devel/llvm:multitarget - Build all host targets (default: host only)

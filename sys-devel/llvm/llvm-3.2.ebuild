@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.2.ebuild,v 1.3 2013/01/07 20:22:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.2.ebuild,v 1.4 2013/01/17 13:44:07 voyageur Exp $
 
 EAPI=5
 PYTHON_DEPEND="2"
@@ -8,7 +8,8 @@ inherit eutils flag-o-matic multilib toolchain-funcs python pax-utils
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
-SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz"
+SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz
+	!doc? ( http://dev.gentoo.org/~voyageur/distfiles/${P}-manpages.tar.bz2 )"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
@@ -16,12 +17,12 @@ KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux 
 IUSE="debug doc gold +libffi multitarget ocaml test udis86 vim-syntax"
 
 DEPEND="dev-lang/perl
-	dev-python/sphinx
 	>=sys-devel/make-3.79
 	>=sys-devel/flex-2.5.4
 	>=sys-devel/bison-1.875d
 	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1 )
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
+	doc? ( dev-python/sphinx )
 	gold? ( >=sys-devel/binutils-2.22[cxx] )
 	libffi? ( virtual/pkgconfig
 		virtual/libffi )
@@ -148,8 +149,10 @@ src_configure() {
 src_compile() {
 	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1
 
-	emake -C docs -f Makefile.sphinx man
-	use doc && emake -C docs -f Makefile.sphinx html
+	if use doc; then
+		emake -C docs -f Makefile.sphinx man html
+	fi
+	#	emake -C docs -f Makefile.sphinx html
 
 	pax-mark m Release/bin/lli
 	if use test; then
@@ -162,8 +165,12 @@ src_compile() {
 src_install() {
 	emake KEEP_SYMBOLS=1 DESTDIR="${D}" install
 
-	doman docs/_build/man/*.1
-	use doc && dohtml -r docs/_build/html/
+	if use doc; then
+		doman docs/_build/man/*.1
+		dohtml -r docs/_build/html/
+	else
+		doman "${WORKDIR}"/${P}-manpages/*.1
+	fi
 
 	if use vim-syntax; then
 		insinto /usr/share/vim/vimfiles/syntax
