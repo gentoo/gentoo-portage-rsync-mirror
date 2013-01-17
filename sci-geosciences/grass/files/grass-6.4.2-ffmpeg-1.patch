@@ -1,0 +1,188 @@
+Fix build with ffmpeg-1.
+Part of https://bugs.gentoo.org/show_bug.cgi?id=443264
+Note: This patches configure directly to avoid having to rerun autotools there.
+
+Index: grass-6.4.2/configure
+===================================================================
+--- grass-6.4.2.orig/configure
++++ grass-6.4.2/configure
+@@ -10712,9 +10712,9 @@ LDFLAGS="$FFMPEGLIBPATH $LDFLAGS"
+ 
+ 
+ 
+-echo $ac_n "checking for avcodec_init in -lavcodec""... $ac_c" 1>&6
+-echo "configure:10717: checking for avcodec_init in -lavcodec" >&5
+-ac_lib_var=`echo avcodec'_'avcodec_init | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for avcodec_version in -lavcodec""... $ac_c" 1>&6
++echo "configure:10717: checking for avcodec_version in -lavcodec" >&5
++ac_lib_var=`echo avcodec'_'avcodec_version | sed 'y%./+-%__p_%'`
+ 
+ ac_save_LIBS="$LIBS"
+ LIBS="-lavcodec $FFMPEGLIB  $LIBS"
+@@ -10724,10 +10724,10 @@ cat > conftest.$ac_ext <<EOF
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char avcodec_init();
++char avcodec_version();
+ 
+ int main() {
+-avcodec_init()
++avcodec_version()
+ ; return 0; }
+ EOF
+ if { (eval echo configure:10734: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+@@ -10748,9 +10748,9 @@ if eval "test \"`echo '$ac_cv_lib_'$ac_l
+ else
+   echo "$ac_t""no" 1>&6
+ 
+-echo $ac_n "checking for avcodec_init in -lavcodec""... $ac_c" 1>&6
+-echo "configure:10753: checking for avcodec_init in -lavcodec" >&5
+-ac_lib_var=`echo avcodec'_'avcodec_init | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for avcodec_version in -lavcodec""... $ac_c" 1>&6
++echo "configure:10753: checking for avcodec_version in -lavcodec" >&5
++ac_lib_var=`echo avcodec'_'avcodec_version | sed 'y%./+-%__p_%'`
+ 
+ ac_save_LIBS="$LIBS"
+ LIBS="-lavcodec $FFMPEGLIB $MATHLIB $LIBS"
+@@ -10760,10 +10760,10 @@ cat > conftest.$ac_ext <<EOF
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char avcodec_init();
++char avcodec_version();
+ 
+ int main() {
+-avcodec_init()
++avcodec_version()
+ ; return 0; }
+ EOF
+ if { (eval echo configure:10770: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+@@ -10810,9 +10810,9 @@ LDFLAGS="$FFMPEGLIBPATH $LDFLAGS"
+ 
+ 
+ 
+-echo $ac_n "checking for av_set_parameters in -lavformat""... $ac_c" 1>&6
+-echo "configure:10815: checking for av_set_parameters in -lavformat" >&5
+-ac_lib_var=`echo avformat'_'av_set_parameters | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for avformat_version in -lavformat""... $ac_c" 1>&6
++echo "configure:10815: checking for avformat_version in -lavformat" >&5
++ac_lib_var=`echo avformat'_'avformat_version | sed 'y%./+-%__p_%'`
+ 
+ ac_save_LIBS="$LIBS"
+ LIBS="-lavformat $FFMPEGLIB  $LIBS"
+@@ -10822,10 +10822,10 @@ cat > conftest.$ac_ext <<EOF
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char av_set_parameters();
++char avformat_version();
+ 
+ int main() {
+-av_set_parameters()
++avformat_version()
+ ; return 0; }
+ EOF
+ if { (eval echo configure:10832: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+@@ -10846,9 +10846,9 @@ if eval "test \"`echo '$ac_cv_lib_'$ac_l
+ else
+   echo "$ac_t""no" 1>&6
+ 
+-echo $ac_n "checking for av_set_parameters in -lavformat""... $ac_c" 1>&6
+-echo "configure:10851: checking for av_set_parameters in -lavformat" >&5
+-ac_lib_var=`echo avformat'_'av_set_parameters | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for avformat_version in -lavformat""... $ac_c" 1>&6
++echo "configure:10851: checking for avformat_version in -lavformat" >&5
++ac_lib_var=`echo avformat'_'avformat_version | sed 'y%./+-%__p_%'`
+ 
+ ac_save_LIBS="$LIBS"
+ LIBS="-lavformat $FFMPEGLIB $MATHLIB $LIBS"
+@@ -10858,10 +10858,10 @@ cat > conftest.$ac_ext <<EOF
+ /* Override any gcc2 internal prototype to avoid an error.  */
+ /* We use char because int might match the return type of a gcc2
+     builtin and then its argument prototype would still apply.  */
+-char av_set_parameters();
++char avformat_version();
+ 
+ int main() {
+-av_set_parameters()
++avformat_version()
+ ; return 0; }
+ EOF
+ if { (eval echo configure:10868: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+Index: grass-6.4.2/lib/ogsf/gsd_img_mpeg.c
+===================================================================
+--- grass-6.4.2.orig/lib/ogsf/gsd_img_mpeg.c
++++ grass-6.4.2/lib/ogsf/gsd_img_mpeg.c
+@@ -26,7 +26,8 @@
+ 
+ /* FFMPEG stuff */
+ #ifdef HAVE_FFMPEG
+-#include <avformat.h>
++#include <libavformat/avformat.h>
++#include <libavformat/avio.h>
+ 
+ /* 5 seconds stream duration */
+ #define STREAM_DURATION   5.0
+@@ -58,7 +59,7 @@ static AVStream *add_video_stream(AVForm
+     AVCodecContext *c;
+     AVStream *st;
+ 
+-    st = av_new_stream(oc, 0);
++    st = avformat_new_stream(oc, 0);
+     if (!st) {
+ 	G_warning(_("Unable to allocate stream"));
+ 	return NULL;
+@@ -97,7 +98,7 @@ static AVStream *add_video_stream(AVForm
+ 	c->flags |= CODEC_FLAG_GLOBAL_HEADER;
+ 
+     c->flags |= CODEC_FLAG_QSCALE;
+-    c->global_quality = st->quality = FF_QP2LAMBDA * 10;
++    c->global_quality = FF_QP2LAMBDA * 10;
+ 
+     return st;
+ }
+@@ -332,13 +333,7 @@ int gsd_init_mpeg(const char *filename)
+ 	    add_video_stream(oc, fmt->video_codec, (r - l + 1), (t - b + 1));
+     }
+ 
+-    /* set the output parameters (must be done even if no parameters). */
+-    if (av_set_parameters(oc, NULL) < 0) {
+-	G_warning(_("Invalid output format parameters"));
+-	return (-1);
+-    }
+-
+-    dump_format(oc, 0, filename, 1);
++    av_dump_format(oc, 0, filename, 1);
+ 
+     /* now that all the parameters are set, we can open the audio and
+        video codecs and allocate the necessary encode buffers */
+@@ -347,14 +342,17 @@ int gsd_init_mpeg(const char *filename)
+ 
+     /* open the output file, if needed */
+     if (!(fmt->flags & AVFMT_NOFILE)) {
+-	if (url_fopen(&oc->pb, filename, URL_WRONLY) < 0) {
++	if (avio_open(&oc->pb, filename, AVIO_FLAG_WRITE) < 0) {
+ 	    G_warning(_("Unable to open <%s>"), filename);
+ 	    return (-1);
+ 	}
+     }
+ 
+     /* write the stream header, if any */
+-    av_write_header(oc);
++    if(avformat_write_header(oc, NULL) < 0) {
++	G_warning(_("Failed to write header"));
++	return (-1);
++    }
+ 
+ 
+ #else
+@@ -439,7 +437,7 @@ int gsd_close_mpeg(void)
+ #if (LIBAVFORMAT_VERSION_INT>>16) < 52
+ 	url_fclose(&oc->pb);
+ #else
+-	url_fclose(oc->pb);
++	avio_close(oc->pb);
+ #endif
+     }
+ 

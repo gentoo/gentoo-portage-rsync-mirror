@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.32.4.ebuild,v 1.12 2013/01/17 15:27:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.32.4.ebuild,v 1.13 2013/01/17 20:39:19 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -63,7 +63,7 @@ src_install() {
 	# Make sure this directory exists, bug #268070, upstream #572027
 	keepdir /etc/gconf/gconf.xml.system
 
-	echo 'CONFIG_PROTECT_MASK='${EPREFIX}/etc/gconf'' > 50gconf
+	echo "CONFIG_PROTECT_MASK=\"${EPREFIX}/etc/gconf\"" > 50gconf
 	echo 'GSETTINGS_BACKEND="gconf"' >> 50gconf
 	doenvd 50gconf
 	dodir /root/.gconfd

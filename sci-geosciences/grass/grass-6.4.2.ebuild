@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.2.ebuild,v 1.4 2012/10/24 19:38:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.2.ebuild,v 1.5 2013/01/17 20:55:37 aballier Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ RDEPEND="
 	sys-libs/ncurses
 	sys-libs/zlib
 	cairo? ( x11-libs/cairo[X?,opengl?] )
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? ( >=virtual/ffmpeg-0.10 )
 	fftw? ( sci-libs/fftw:3.0 )
 	gmath? (
 		virtual/blas
@@ -92,6 +92,7 @@ S="${WORKDIR}/${MY_P}"
 PATCHES=(
 	"${FILESDIR}"/${PN}-pkgconf.patch
 	"${FILESDIR}"/${PN}-6.4.1-libav-0.8.patch
+	"${FILESDIR}"/${PN}-6.4.2-ffmpeg-1.patch
 )
 
 REQUIRED_USE="
