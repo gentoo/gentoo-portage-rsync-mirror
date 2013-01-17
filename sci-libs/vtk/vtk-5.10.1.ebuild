@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.10.1.ebuild,v 1.4 2013/01/15 13:57:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.10.1.ebuild,v 1.5 2013/01/17 21:15:03 aballier Exp $
 
 EAPI=3
 
@@ -77,6 +77,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-5.6.1-ffmpeg.patch
 	"${FILESDIR}"/${PN}-5.6.1-libav-0.8.patch
 	"${FILESDIR}"/${P}-tcl8.6.patch
+	"${FILESDIR}"/${P}-ffmpeg-1.patch
 	)
 
 pkg_setup() {

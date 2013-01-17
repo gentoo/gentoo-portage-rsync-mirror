@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.138 2013/01/17 19:35:25 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.139 2013/01/17 21:04:58 ssuominen Exp $
 
 EAPI=4
 
@@ -177,8 +177,10 @@ src_prepare()
 	fi
 
 	# This is the actual fix for bug #443030 if the check earlier doesn't fail.
-	# Run after eautoreconf to ensure config.h is there.
-	use elibc_glibc || echo '#define secure_getenv(x) NULL' >> config.h
+	if ! use elibc_glibc; then
+		echo '#define secure_getenv(x) NULL' >> config.h.in
+		sed -i -e '/error.*secure_getenv/s:.*:#define secure_getenv(x) NULL:' src/shared/missing.h || die
+	fi
 }
 
 src_configure()

@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/xye
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/ChangeLog,v 1.31 2012/10/17 08:05:17 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xye/ChangeLog,v 1.32 2013/01/17 21:25:39 mr_bones_ Exp $
+
+*xye-0.12.1 (17 Jan 2013)
+
+  17 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/xye-0.12.1-gcc47.patch, +xye-0.12.1.ebuild,
+  files/xye-0.12.0-gcc47.patch:
+  version bump (bug #452318)
 
   17 Oct 2012; Tupone Alfredo <tupone@gentoo.org> xye-0.12.0.ebuild,
   +files/xye-0.12.0-gcc47.patch:
@@ -129,4 +136,3 @@
   02 May 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +xye-0.7.5.ebuild:
   initial commit - ebuild submitted by Cristiano Chiucchiolo via bug #131564
-

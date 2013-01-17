@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/aqualung
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.25 2012/05/05 08:05:33 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.27 2013/01/17 21:19:34 billie Exp $
+
+*aqualung-0.9_beta11-r2 (17 Jan 2013)
+
+  17 Jan 2013; Daniel Pielmeier <billie@gentoo.org>
+  aqualung-0.9_beta11-r1.ebuild, +aqualung-0.9_beta11-r2.ebuild:
+  Revison bump. Switch to EAPI 5. Reorder deps and configure switches. Other
+  minor changes. Ebuild support for bug #452460. Build with libcdio-paranoia
+  still needs a patch to work.
 
   05 May 2012; Michał Górny <mgorny@gentoo.org>
   aqualung-0.9_beta11-r1.ebuild:

@@ -1,13 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11-r1.ebuild,v 1.12 2013/01/17 21:16:54 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11-r2.ebuild,v 1.1 2013/01/17 21:16:54 billie Exp $
 
-EAPI=4
+EAPI=5
 
-inherit autotools eutils versionator
+inherit autotools eutils
 
-MY_PV=$(delete_version_separator 2)
-MY_PV=${MY_PV/_p/.}
+MY_PV=${PV/_/}
 
 DESCRIPTION="A music player for a wide range of formats designed for gapless playback"
 HOMEPAGE="http://aqualung.factorial.hu/"
@@ -15,33 +14,37 @@ SRC_URI="mirror://sourceforge/aqualung/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="alsa cdda cddb debug flac ffmpeg ifp jack ladspa lame libsamplerate lua
 	mac modplug mp3 musepack oss podcast pulseaudio sndfile speex systray vorbis wavpack"
-KEYWORDS="amd64 x86"
 
-RDEPEND="alsa? ( media-libs/alsa-lib )
-	cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
-	cddb? ( media-libs/libcddb )
-	flac? ( media-libs/flac )
-	ffmpeg? ( >=virtual/ffmpeg-0.6.90 )
-	ifp? ( media-libs/libifp )
+RDEPEND="sys-libs/zlib
+	app-arch/bzip2
+	dev-libs/libxml2
+	x11-libs/gtk+:2
+	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
-	ladspa? ( media-libs/liblrdf )
+	pulseaudio? ( media-sound/pulseaudio )
+	flac? ( media-libs/flac )
 	lame? ( media-sound/lame )
-	libsamplerate? ( media-libs/libsamplerate )
-	lua? ( dev-lang/lua )
+	ffmpeg? ( >=virtual/ffmpeg-0.6.90 )
 	mac? ( media-sound/mac )
 	modplug? ( media-libs/libmodplug )
-	mp3? ( media-libs/libmad )
 	musepack? ( >=media-sound/musepack-tools-444 )
-	pulseaudio? ( media-sound/pulseaudio )
+	mp3? ( media-libs/libmad )
 	sndfile? ( media-libs/libsndfile )
 	speex? ( media-libs/speex media-libs/liboggz )
 	vorbis? ( media-libs/libvorbis )
 	wavpack? ( media-sound/wavpack )
-	x11-libs/gtk+:2"
+	ladspa? ( media-libs/liblrdf )
+	libsamplerate? ( media-libs/libsamplerate )
+	cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
+	ifp? ( media-libs/libifp )
+	cddb? ( media-libs/libcddb )
+	lua? ( dev-lang/lua )"
+
 DEPEND="${RDEPEND}
-	dev-libs/libxml2
+	sys-devel/gettext
 	virtual/pkgconfig"
 
 S=${WORKDIR}/${PN}-${MY_PV}
@@ -68,32 +71,32 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_with alsa) \
-		$(use_with cdda) \
-		$(use_with cddb) \
 		$(use_enable debug) \
-		$(use_with flac) \
-		$(use_with ffmpeg lavc) \
-		$(use_with ifp) \
+		$(use_with alsa) \
 		$(use_with jack) \
-		$(use_with ladspa) \
+		$(use_with oss) \
+		$(use_with pulseaudio pulse) \
+		$(use_with flac) \
 		$(use_with lame) \
-		$(use_with libsamplerate src) \
-		$(use_with lua) \
+		$(use_with ffmpeg lavc) \
 		$(use_with mac) \
 		$(use_with modplug mod) \
-		$(use_with mp3 mpeg) \
 		$(use_with musepack mpc) \
-		$(use_with oss) \
 		$(use_with podcast) \
-		$(use_with pulseaudio pulse) \
+		$(use_with mp3 mpeg) \
 		$(use_with sndfile) \
 		$(use_with speex) \
 		$(use_with systray) \
 		$(use_with vorbis ogg) \
 		$(use_with vorbis vorbisenc) \
-		$(use_with wavpack) \
 		--with-loop \
+		$(use_with wavpack) \
+		$(use_with ladspa) \
+		$(use_with libsamplerate src) \
+		$(use_with cdda) \
+		$(use_with ifp) \
+		$(use_with cddb) \
+		$(use_with lua) \
 		--docdir=/usr/share/doc/${PF}
 }
 

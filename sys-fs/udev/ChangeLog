@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.775 2013/01/17 19:35:25 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.777 2013/01/17 21:28:00 ssuominen Exp $
+
+  17 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197-r3.ebuild,
+  udev-9999.ebuild:
+  Remove one more use of secure_getenv() from src/shared/missing.h when
+  required.
 
   17 Jan 2013; William Hubbs <williamh@gentoo.org> udev-197-r2.ebuild,
   udev-197-r3.ebuild, udev-9999.ebuild:
@@ -8,14 +13,11 @@
 
   17 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197-r3.ebuild,
   udev-9999.ebuild:
-  Restore support for uClibc head by disabling usage of secure_getenv in logs.
-  Use maintainer safe kludge when building from git to avoid missing other
-  uses. Thanks to Mike Frysinger in bug #443030, Comment #5.
-
-  17 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197-r3.ebuild,
-  udev-9999.ebuild:
+  Restore support for uClibc head by disabling usage of secure_getenv() in
+  logs. Use maintainer safe kludge when building from git to avoid missing 
+  other uses. Thanks to Mike Frysinger in bug #443030, Comment #5.
   Fix building without dev-util/intltool and sys-devel/gettext wrt #443028,
-  Comment #3 by Mike Frysinger
+  Comment #3 by Mike Frysinger.
 
   17 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> udev-171-r10.ebuild:
   Change KV_min and KV_reliable from 2.6.32 to 2.6.31 because it was 
