@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r2.ebuild,v 1.16 2012/10/23 20:07:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r2.ebuild,v 1.17 2013/01/17 04:19:21 vapier Exp $
 
 EAPI="1"
 inherit eutils flag-o-matic toolchain-funcs
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/ncurses/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="5"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-IUSE="ada +cxx debug doc gpm minimal profile static-libs trace unicode"
+IUSE="ada +cxx debug doc gpm minimal profile static-libs tinfo trace unicode"
 
 DEPEND="gpm? ( sys-libs/gpm )"
 #	berkdb? ( sys-libs/db )"
@@ -107,6 +107,7 @@ do_compile() {
 		$(use_with debug expanded) \
 		$(use_with !debug macros) \
 		$(use_with trace) \
+		$(use_with tinfo termlib) \
 		${conf_abi} \
 		"$@"
 
@@ -138,8 +139,11 @@ src_install() {
 	fi
 
 	# Move libncurses{,w} into /lib
-	gen_usr_ldscript -a ncurses
-	use unicode && gen_usr_ldscript -a ncursesw
+	gen_usr_ldscript -a \
+		ncurses \
+		$(usex unicode 'ncursesw' '') \
+		$(use tinfo && usex unicode 'tinfow' '') \
+		$(usev tinfo)
 	ln -sf libncurses.so "${D}"/usr/$(get_libdir)/libcurses.so || die
 	use static-libs || find "${D}"/usr/ -name '*.a' -a '!' -name '*curses++*.a' -delete
 
