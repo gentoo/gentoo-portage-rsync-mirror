@@ -1,6 +1,11 @@
 # ChangeLog for razorqt-base/razorqt-libs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-libs/ChangeLog,v 1.3 2013/01/06 18:12:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-libs/ChangeLog,v 1.4 2013/01/17 05:54:38 yngwin Exp $
+
+  17 Jan 2013; Ben de Groot <yngwin@gentoo.org> razorqt-libs-0.5.0.ebuild,
+  razorqt-libs-0.5.1.ebuild:
+  Add blocker to <razorqt-base/razorqt-meta-0.5.0 to fix file collisions, bug
+  #452560. Fix mirror usage.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> razorqt-libs-0.5.1.ebuild:
   Add ~ppc, wrt bug #449322
