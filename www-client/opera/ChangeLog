@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.788 2012/12/28 16:03:33 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.789 2013/01/17 17:23:15 jer Exp $
+
+*opera-12.13_pre1721 (17 Jan 2013)
+
+  17 Jan 2013; Jeroen Roovers <jer@gentoo.org> +opera-12.13_pre1721.ebuild:
+  http://my.opera.com/desktopteam/blog/2013/01/17/twelvethirteen
 
   28 Dec 2012; Jeroen Roovers <jer@gentoo.org> opera-12.12_p1707.ebuild:
   Set QA_PREBUILT in global scope (bug #442090).

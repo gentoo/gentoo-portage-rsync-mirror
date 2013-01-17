@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>python</herd>
+  <maintainer>
+    <email>prometheanfire@gentoo.org</email>
+    <name>Matthew Thode</name>
+  </maintainer>
+  <longdescription lang="en">
+  Identify specific nodes in a JSON document (according to draft 08)
+  http://tools.ietf.org/html/draft-ietf-appsawg-json-pointer-08
+  </longdescription>
+</pkgmetadata>
+

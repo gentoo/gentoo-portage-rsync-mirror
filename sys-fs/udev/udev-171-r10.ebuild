@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r10.ebuild,v 1.1 2012/12/18 20:00:20 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r10.ebuild,v 1.2 2013/01/17 17:11:38 ssuominen Exp $
 
 EAPI=4
 
-KV_min=2.6.32
-KV_reliable=2.6.32
+KV_min=2.6.31
+KV_reliable=2.6.31
 PATCHSET=${P}-gentoo-patchset-v2
 scriptversion=7.1
 scriptname=udev-gentoo-scripts
@@ -275,7 +275,7 @@ src_install() {
 	fi
 
 	cd "${WORKDIR}/${scriptname}"
-	sed -i -e 's/2.6.34/2.6.32/' init.d/udev
+	sed -i -e 's/2.6.34/2.6.31/' init.d/udev
 	doconfd conf.d/*
 	exeinto /lib/udev
 	doexe helpers/*

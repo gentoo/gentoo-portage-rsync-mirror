@@ -1,8 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for udev implementation and number of its features
-EAPI=2
-IUSE=gudev hwdb keymap selinux static-libs
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
-RDEPEND=gudev? ( <sys-fs/udev-171[extras] ) hwdb? ( || ( <sys-fs/udev-171[extras] ~sys-fs/udev-141 ) ) keymap? ( || ( <sys-fs/udev-171[extras] ~sys-fs/udev-141 ) ) <sys-fs/udev-171[selinux?]
-SLOT=0
-_md5_=8dafeba877c7d1477a21d0d0f0979ef7

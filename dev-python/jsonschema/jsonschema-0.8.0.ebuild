@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonschema/jsonschema-0.8.0.ebuild,v 1.1 2013/01/16 03:03:55 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonschema/jsonschema-0.8.0.ebuild,v 1.2 2013/01/17 17:24:02 prometheanfire Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""

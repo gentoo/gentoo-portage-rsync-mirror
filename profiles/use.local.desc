@@ -5574,7 +5574,6 @@ sys-fs/s3ql:contrib - Install additional contributed scripts
 sys-fs/snapraid:ssl - use the MD5 fast implementation of the OpenSSL
 sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app-arch/xz-utils
 sys-fs/udev:action_modeswitch - switch Mobile Action cables into serial mode
-sys-fs/udev:devfs-compat - Install rules for devfs compatible device names
 sys-fs/udev:edd - create /dev/disk/by-id/edd-* links for BIOS EDD data
 sys-fs/udev:extras - Compile udev-extras requiring external dependencies
 sys-fs/udev:floppy - create historical floppy kernel device nodes (/dev/fd0h1440, ...)
@@ -5583,7 +5582,6 @@ sys-fs/udev:hwdb - read vendor/device string database and add it to udev databas
 sys-fs/udev:introspection - Use dev-libs/gobject-introspection for introspection
 sys-fs/udev:keymap - map custom hardware's multimedia keys
 sys-fs/udev:kmod - enable udev to load kernel modules
-sys-fs/udev:old-hd-rules - Install rules for /dev/hd* devices, removed upstream at udev-148
 sys-fs/udev:openrc - install the OpenRC init scripts
 sys-fs/udev:rule_generator - enable persistent network and optical device rule generator
 sys-fs/udisks:gptfdisk - Pull in sys-apps/gptfdisk for sgdisk command as used by partitioning functionality
