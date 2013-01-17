@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/gdbm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.61 2012/04/26 14:43:40 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.62 2013/01/17 03:43:50 vapier Exp $
+
+*gdbm-1.10 (17 Jan 2013)
+
+  17 Jan 2013; Mike Frysinger <vapier@gentoo.org> +gdbm-1.10.ebuild:
+  Version bump #452396 by Agostino Sarubbo.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> gdbm-1.9.1-r2.ebuild:
   keyword ~amd64-fbsd

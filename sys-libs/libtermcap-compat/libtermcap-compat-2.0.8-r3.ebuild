@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r3.ebuild,v 1.6 2012/03/18 15:19:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r3.ebuild,v 1.7 2013/01/17 03:57:17 vapier Exp $
 
 # we only want this for binary-only packages, so we will only be installing
 # the lib used at runtime; no headers and no files to link against
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils multilib toolchain-funcs
 
@@ -40,12 +40,11 @@ src_configure() {
 }
 
 src_install() {
-	into /
-	dolib.so libtermcap.so.${PV} || die
-	dosym libtermcap.so.${PV} /$(get_libdir)/libtermcap.so.2 || die
+	dolib.so libtermcap.so.${PV}
+	dosym libtermcap.so.${PV} /usr/$(get_libdir)/libtermcap.so.2
 
 	insinto /etc
-	doins "${WORKDIR}"/termcap || die
+	doins "${WORKDIR}"/termcap
 
 	dodoc ChangeLog README
 }
