@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/backlite-1.0.3-r1.ebuild,v 1.2 2013/01/13 11:12:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/backlite-1.0.3-r1.ebuild,v 1.3 2013/01/17 18:42:37 aballier Exp $
 
 EAPI=4
 
-inherit qt4-r2
+inherit qt4-r2 eutils
 
 DESCRIPTION="backlite is a pure QT4 version of k9copy"
 HOMEPAGE="http://k9copy.sourceforge.net/"
@@ -32,6 +32,8 @@ RDEPEND="${DEPEND}
 src_prepare() {
 	sed -i -e '/^MimeTypes=.*/d' \
 		-e '/^Encoding=.*/d' *.desktop || die
+	epatch "${FILESDIR}/${P}-ffmpeg-0.11.patch" \
+		"${FILESDIR}/${P}-includepaths.patch"
 }
 
 src_configure() {
