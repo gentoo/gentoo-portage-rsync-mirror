@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.2.9-r1.ebuild,v 1.2 2013/01/16 13:08:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.2.9-r1.ebuild,v 1.3 2013/01/17 01:30:30 ottxor Exp $
 
 EAPI=5
 
@@ -50,9 +50,8 @@ src_prepare() {
 		-e "s:CUDA_SUPPORTED_GCC:${cuda_supported_gcc}:g" \
 		"${FILESDIR}"/cuda-config.in > "${T}"/cuda-config || die
 
-	dfiles="install-linux.pl libnvvp/jre run_files"
-	use amd64 && dfiles+=" cuda-installer.pl"
-	find ${dfiles} -delete || die
+	#452388 - x86 don't have all of these files
+	rm -rf install-linux.pl libnvvp/jre run_files cuda-installer.pl
 }
 
 src_install() {
