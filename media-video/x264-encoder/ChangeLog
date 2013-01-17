@@ -1,6 +1,10 @@
 # ChangeLog for media-video/x264-encoder
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/ChangeLog,v 1.68 2012/07/08 17:11:26 lu_zero Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/ChangeLog,v 1.69 2013/01/17 10:23:12 lu_zero Exp $
+
+  17 Jan 2013; Luca Barbato <lu_zero@gentoo.org>
+  x264-encoder-0.0.20120707.ebuild:
+  Add missing rdep
 
 *x264-encoder-0.0.20120707 (08 Jul 2012)
 

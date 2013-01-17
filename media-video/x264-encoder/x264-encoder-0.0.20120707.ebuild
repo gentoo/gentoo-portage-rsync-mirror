@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20120707.ebuild,v 1.1 2012/07/08 17:11:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20120707.ebuild,v 1.2 2013/01/17 10:23:12 lu_zero Exp $
 
 EAPI=4
 
@@ -36,6 +36,7 @@ IUSE="10bit custom-cflags debug ffmpeg ffmpegsource +interlaced mp4 +threads"
 REQUIRED_USE="ffmpegsource? ( ffmpeg )"
 
 RDEPEND="ffmpeg? ( virtual/ffmpeg )
+	~media-libs/x264-${PV}
 	ffmpegsource? ( media-libs/ffmpegsource )
 	mp4? ( >=media-video/gpac-0.4.1_pre20060122 )"
 
