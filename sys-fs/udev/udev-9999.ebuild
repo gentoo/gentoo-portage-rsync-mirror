@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.134 2013/01/17 18:06:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.137 2013/01/17 19:24:33 ssuominen Exp $
 
 EAPI=4
 
@@ -129,7 +129,7 @@ src_prepare()
 		EPATCH_SUFFIX=patch EPATCH_FORCE=yes epatch
 	fi
 
-	# Remove requirements for dev-util/intltool, sys-devel/gettext, see #443028
+	# Remove requirements for gettext and intltool wrt bug #443028
 	if ! has_version dev-util/intltool && ! [[ ${PV} = 9999* ]]; then
 		sed -i \
 			-e '/INTLTOOL_APPLIED_VERSION=/s:=.*:=0.40.0:' \
@@ -137,6 +137,17 @@ src_prepare()
 			configure || die
 		eval export INTLTOOL_{EXTRACT,MERGE,UPDATE}=/bin/true
 		eval export {MSG{FMT,MERGE},XGETTEXT}=/bin/true
+	fi
+
+	# This check is for maintainers only
+	if [[ ${PV} = 9999* ]]; then
+		# Support uClibc wrt bug #443030 with a safe kludge so we know when
+		# to check for other uses than logs. See the echo for secure_getenv
+		# at the end of src_prepare().
+		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 13 ]]; then
+			eerror "The line count of secure_getenv failed, see bug #443030"
+			die
+		fi
 	fi
 
 	# apply user patches
@@ -164,6 +175,10 @@ src_prepare()
 		check_default_rules
 		elibtoolize
 	fi
+
+	# This is the actual fix for bug #443030 if the check earlier doesn't fail.
+	# Run after eautoreconf to ensure config.h is there.
+	use elibc_glibc || echo '#define secure_getenv(x) NULL' >> config.h
 }
 
 src_configure()

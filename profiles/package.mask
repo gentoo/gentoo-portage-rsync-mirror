@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14385 2013/01/17 17:21:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14386 2013/01/17 19:20:18 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,34 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org>
+# Dead since 2003, doesn't work with journaling filesystems.
+# Also collides with dev-util/smem (#288721). Removal in a month.
+app-misc/secure-delete
+
+# Pacho Ramos <pacho@gentoo.org>
+# No upstream, doesn't work well (#350559). Removal in a month.
+app-misc/ccal
+
+# Pacho Ramos <pacho@gentoo.org>
+# Upstream dead for a long time, broken php support (#356841).
+# Removal in a month.
+www-apache/mod_vhs
+
+# Pacho Ramos <pacho@gentoo.org>
+# Multiple bugs (#449458). No maintained at all and upstream
+# dead. Removal in a month.
+app-portage/epm
+
+# Pacho Ramos <pacho@gentoo.org>
+# Still uses depend.php (#449820), upstream dead for ages and 
+# newer versions don't work. Removal in a month.
+www-apps/online-bookmarks
+
+# Pacho Ramos <pacho@gentoo.org>
+# It's for kernel-2.4 only (#450594). Removal in a month.
+sys-apps/i2c
 
 # Michał Górny <mgorny@gentoo.org>
 # Unmaintained and replaced by built-in sqlite3 module in Python.

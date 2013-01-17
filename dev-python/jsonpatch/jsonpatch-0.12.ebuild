@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpatch/jsonpatch-0.12.ebuild,v 1.1 2013/01/17 17:13:33 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpatch/jsonpatch-0.12.ebuild,v 1.2 2013/01/17 19:23:48 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -18,4 +18,4 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-RDEPEND="dev-python/jsonpointer"
+RDEPEND="dev-python/jsonpointer[${PYTHON_USEDEP}]"

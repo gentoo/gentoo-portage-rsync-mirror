@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci-physics</herd>
-	<longdescription lang="en">
+<herd>sci-physics</herd>
+<longdescription lang="en">
   PAW is an interactive program providing interactive graphical
   presentation and statistical and mathematical analysis tools. It is
   designed to work on objects familiar to physicists such as histograms,

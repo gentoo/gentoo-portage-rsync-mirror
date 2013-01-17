@@ -1,10 +1,17 @@
 # ChangeLog for dev-python/python-glanceclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-glanceclient/ChangeLog,v 1.1 2013/01/17 17:30:41 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-glanceclient/ChangeLog,v 1.3 2013/01/17 19:22:25 prometheanfire Exp $
+
+  17 Jan 2013; Matthew Thode <prometheanfire@gentoo.org>
+  python-glanceclient-0.7.0.ebuild:
+  update for warlocks less usability with python 2.6
+
+  17 Jan 2013; Matthew Thode <prometheanfire@gentoo.org>
+  python-glanceclient-0.7.0.ebuild:
+  forgot the [${PYTHON_USEDEP}]
 
 *python-glanceclient-0.7.0 (17 Jan 2013)
 
   17 Jan 2013; Matthew Thode <prometheanfire@gentoo.org>
   +python-glanceclient-0.7.0.ebuild, +metadata.xml:
   adding python-glanceclient for glance
-
