@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
-DEPEND=dev-libs/libgcrypt dev-libs/protobuf x11-libs/qt-core:4 x11-libs/qt-sql:4 !dedicated? ( x11-libs/qt-multimedia:4 x11-libs/qt-svg:4 x11-libs/qt-gui:4 ) >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=sys-apps/sed-4
+DEPEND=dev-libs/libgcrypt dev-libs/protobuf x11-libs/qt-core:4 x11-libs/qt-sql:4 !dedicated? ( x11-libs/qt-multimedia:4 x11-libs/qt-svg:4 x11-libs/qt-gui:4 ) >=dev-util/cmake-2.8.8 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=sys-apps/sed-4
 DESCRIPTION=An open-source multiplatform software for playing card games over a network
 EAPI=3
 HOMEPAGE=http://cockatrice.de/
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libgcrypt dev-libs/protobuf x11-libs/qt-core:4 x11-libs/qt-sql:4 !dedicated? ( x11-libs/qt-multimedia:4 x11-libs/qt-svg:4 x11-libs/qt-gui:4 )
 SLOT=0
 SRC_URI=http://cockatrice.de/files/cockatrice_source_20120702.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	341ea44ed97a940b6ff74283ed5b94d7	eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	games	e0a83e3f3f024b8c8ef7a8217d716cbf	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	3cb7a29aafd4b984d2bf12bc50abe5da	eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	games	e0a83e3f3f024b8c8ef7a8217d716cbf	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=d331dc1446d95f55305ea1616dc76ebe

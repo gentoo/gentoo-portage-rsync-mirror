@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.3.2-r4.ebuild,v 1.1 2013/01/11 17:10:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.3.2-r4.ebuild,v 1.2 2013/01/17 20:24:41 jlec Exp $
 
 EAPI=3
 
@@ -37,7 +37,7 @@ RESTRICT="fetch"
 S="${WORKDIR}/${MY_P}"
 
 pkg_nofetch(){
-	einfo "Go to ${HOMEPAGE}, download ${A}"
+	einfo "Go to http://aria.pasteur.fr/archives/aria2.3.2.tar.gz/view, download ${A}"
 	einfo "and place it in ${DISTDIR}"
 }
 

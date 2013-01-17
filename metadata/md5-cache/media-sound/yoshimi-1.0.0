@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=sys-libs/zlib media-libs/fontconfig x11-libs/fltk:1[opengl] sci-libs/fftw:3.0 >=dev-libs/mini-xml-2.5 >=media-libs/alsa-lib-1.0.17 >=media-sound/jack-audio-connection-kit-0.115.6 media-libs/libsndfile virtual/pkgconfig >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=sys-libs/zlib media-libs/fontconfig x11-libs/fltk:1[opengl] sci-libs/fftw:3.0 >=dev-libs/mini-xml-2.5 >=media-libs/alsa-lib-1.0.17 >=media-sound/jack-audio-connection-kit-0.115.6 media-libs/libsndfile virtual/pkgconfig >=dev-util/cmake-2.8.8 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=A software synthesizer based on ZynAddSubFX
 EAPI=4
 HOMEPAGE=http://yoshimi.sourceforge.net/
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/zlib media-libs/fontconfig x11-libs/fltk:1[opengl] sci-libs/fftw:3.0 >=dev-libs/mini-xml-2.5 >=media-libs/alsa-lib-1.0.17 >=media-sound/jack-audio-connection-kit-0.115.6 media-libs/libsndfile
 SLOT=0
 SRC_URI=mirror://sourceforge/yoshimi/yoshimi-1.0.0.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	341ea44ed97a940b6ff74283ed5b94d7	eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	3cb7a29aafd4b984d2bf12bc50abe5da	eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=997c5b312ed3584f7e28dd7b9693c392
