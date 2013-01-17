@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/parity/parity-9999.ebuild,v 1.4 2013/01/17 10:57:50 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/parity/parity-9999.ebuild,v 1.5 2013/01/17 11:07:21 haubi Exp $
 
 EAPI=4
 
 if [[ ${PV} == 9999 ]]; then
 	inherit subversion
-	ESVN_REPO_URI="https://parity.svn.sf.net/svnroot/parity/trunk"
+	ESVN_REPO_URI="http://svn.code.sf.net/p/parity/code/trunk"
 	ESVN_BOOTSTRAP="confix --bootstrap"
 	ESVN_PROJECT="${PN}"
 	: ${KEYWORDS=""}

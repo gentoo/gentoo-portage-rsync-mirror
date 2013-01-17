@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9999.ebuild,v 1.21 2013/01/16 14:25:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9999.ebuild,v 1.22 2013/01/17 11:29:34 scarabeus Exp $
 
 EAPI=5
 
@@ -48,7 +48,12 @@ RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	amr? ( media-libs/opencore-amr )
 	bzip2? ( app-arch/bzip2 )
-	cdio? ( dev-libs/libcdio )
+	cdio? (
+		|| (
+			dev-libs/libcdio-paranoia
+			<dev-libs/libcdio-0.90[-minimal]
+		)
+	)
 	dirac? ( media-video/dirac )
 	encode? (
 		aac? ( media-libs/vo-aacenc )
