@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/sshguard-1.5-r2.ebuild,v 1.1 2013/01/17 08:14:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/sshguard-1.5-r2.ebuild,v 1.2 2013/01/17 08:39:50 pinkbyte Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ src_prepare() {
 
 src_configure() {
 	# Needed for usleep(3), see "nasty" in src/sshguard_logsuck.c
-	append-flags -D_BSD_SOURCE
+	append-cppflags -D_BSD_SOURCE
 
 	local myconf
 	if use kernel_linux; then
