@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.161 2013/01/16 18:52:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.162 2013/01/17 15:39:06 jer Exp $
+
+  17 Jan 2013; Jeroen Roovers <jer@gentoo.org> less-457.ebuild:
+  Stable for HPPA (bug #450608).
 
   16 Jan 2013; Agostino Sarubbo <ago@gentoo.org> less-457.ebuild:
   Stable for ppc64, wrt bug #450608

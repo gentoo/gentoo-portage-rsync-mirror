@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.4.2.ebuild,v 1.1 2013/01/14 02:59:42 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlstarlet/xmlstarlet-1.4.2.ebuild,v 1.2 2013/01/17 15:54:07 jlec Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ src_configure() {
 	# - doc/xmlstarlet.txt
 	# - doc/xmlstarlet.1
 	econf \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--disable-build-docs \
 		--disable-static-libs \
 		--disable-silent-rules

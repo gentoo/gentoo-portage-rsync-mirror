@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/pragha-1.1.1.ebuild,v 1.5 2013/01/15 19:23:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/pragha-1.1.1.ebuild,v 1.6 2013/01/17 15:51:34 ssuominen Exp $
 
 EAPI=5
 inherit xfconf
@@ -47,6 +47,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# http://github.com/matiasdelellis/pragha/issues/46
 	if has_version dev-libs/libcdio-paranoia; then
 		sed -i -e '/#include/s:cdio/cdda.h:cdio/paranoia/cdda.h:' src/cdda.h || die
 	fi
