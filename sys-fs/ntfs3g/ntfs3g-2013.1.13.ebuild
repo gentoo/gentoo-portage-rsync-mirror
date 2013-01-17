@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2013.1.13.ebuild,v 1.1 2013/01/15 01:36:53 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2013.1.13.ebuild,v 1.2 2013/01/17 02:34:39 zmedico Exp $
 
 EAPI=5
 inherit eutils linux-info udev
@@ -43,8 +43,15 @@ pkg_setup() {
 	fi
 }
 
+src_prepare() {
+	# add missing $(sbindir) references
+	sed -e 's:sbin\($\|/\):$(sbindir)\1:g' \
+		-i ntfsprogs/Makefile.in src/Makefile.in || die
+}
+
 src_configure() {
 	econf \
+		--prefix="${EPREFIX}"/usr \
 		--exec-prefix="${EPREFIX}"/usr \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		$(use_enable debug) \
@@ -68,9 +75,7 @@ src_install() {
 	prune_libtool_files
 
 	# http://bugs.gentoo.org/398069
-	dodir /usr/sbin
-	mv "${ED}"/sbin/* "${ED}"/usr/sbin || die
-	rm -r "${ED}"/sbin
+	rmdir "${D}"/sbin
 
 	dosym mount.ntfs-3g /usr/sbin/mount.ntfs #374197
 }
