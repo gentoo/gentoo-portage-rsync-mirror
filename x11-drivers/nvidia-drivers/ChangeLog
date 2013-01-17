@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.416 2013/01/16 22:09:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.417 2013/01/17 18:29:22 cardoe Exp $
+
+  17 Jan 2013; Doug Goldstein <cardoe@gentoo.org> nvidia-drivers-313.18.ebuild:
+  Fix X.org server depend
 
 *nvidia-drivers-313.18 (16 Jan 2013)
 

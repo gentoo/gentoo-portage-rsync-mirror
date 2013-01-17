@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.2 2013/01/17 00:42:19 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.3 2013/01/17 18:06:51 ssuominen Exp $
 
 EAPI=4
 
@@ -42,7 +42,6 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 
 DEPEND="${COMMON_DEPEND}
 	dev-util/gperf
-	>=dev-util/intltool-0.50
 	virtual/os-headers
 	virtual/pkgconfig
 	!<sys-kernel/linux-headers-${KV_min}
@@ -53,7 +52,8 @@ if [[ ${PV} = 9999* ]]
 then
 	DEPEND="${DEPEND}
 		app-text/docbook-xsl-stylesheets
-		dev-libs/libxslt"
+		dev-libs/libxslt
+		>=dev-util/intltool-0.50"
 fi
 
 RDEPEND="${COMMON_DEPEND}
@@ -127,6 +127,16 @@ src_prepare()
 	if [[ -n "${patchset}" ]]
 	then
 		EPATCH_SUFFIX=patch EPATCH_FORCE=yes epatch
+	fi
+
+	# Remove requirements for dev-util/intltool, sys-devel/gettext, see #443028
+	if ! has_version dev-util/intltool && ! [[ ${PV} = 9999* ]]; then
+		sed -i \
+			-e '/INTLTOOL_APPLIED_VERSION=/s:=.*:=0.40.0:' \
+			-e '/XML::Parser perl module is required for intltool/s|^|:|' \
+			configure || die
+		eval export INTLTOOL_{EXTRACT,MERGE,UPDATE}=/bin/true
+		eval export {MSG{FMT,MERGE},XGETTEXT}=/bin/true
 	fi
 
 	# apply user patches
