@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.624 2013/01/16 23:01:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.625 2013/01/16 23:57:37 anarchy Exp $
+
+  16 Jan 2013; Jory A. Pratt <anarchy@gentoo.org> mozconfig-3.eclass:
+  Remove webrtc block as it is supported on all archs now.
 
   16 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> gnome2.eclass:
   Drop deprecated SCROLLKEEPER_UPDATE and switch to in_iuse.

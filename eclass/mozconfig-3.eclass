@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.33 2012/12/09 15:37:12 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.34 2013/01/16 23:57:37 anarchy Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -87,13 +87,6 @@ mozconfig_config() {
 	else
 		mozconfig_annotate '' --disable-webm
 		mozconfig_annotate '' --disable-system-libvpx
-	fi
-
-	# Disable webrtc for arches that it doesn't support, bug 444780
-	if $(mozversion_is_new_enough) ; then
-		if ! use x86 && ! use amd64 ; then
-			mozconfig_annotate '' --disable-webrtc
-		fi
 	fi
 
 	# These are enabled by default in all mozilla applications

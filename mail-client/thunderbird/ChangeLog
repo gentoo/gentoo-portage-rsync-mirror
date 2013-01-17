@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.186 2013/01/16 19:02:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.187 2013/01/16 23:43:35 anarchy Exp $
+
+  16 Jan 2013; <anarchy@gentoo.org> thunderbird-17.0.2.ebuild:
+  Pax mark /usr/$(get_libdir)/${PN}/thunderbird, bug #449068
 
   16 Jan 2013; Michał Górny <mgorny@gentoo.org> thunderbird-10.0.10.ebuild,
   thunderbird-10.0.11.ebuild, thunderbird-10.0.6.ebuild,
