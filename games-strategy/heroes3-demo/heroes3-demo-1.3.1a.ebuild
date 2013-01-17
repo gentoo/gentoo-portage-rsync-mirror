@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/heroes3-demo-1.3.1a.ebuild,v 1.4 2012/02/08 21:33:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/heroes3-demo-1.3.1a.ebuild,v 1.5 2013/01/17 07:13:42 tupone Exp $
 
 inherit eutils unpacker games
 
@@ -28,13 +28,15 @@ RDEPEND=">=sys-libs/lib-compat-loki-0.2
 		app-emulation/emul-linux-x86-xlibs
 		app-emulation/emul-linux-x86-compat )"
 
+dir="${GAMES_PREFIX_OPT}/${PN}"
+QA_PREBUILT="${dir:1}/*"
+
 S=${WORKDIR}
 
 src_install() {
 	# Apply patch
 	loki_patch patch.dat data/ || die "loki patch failed"
 
-	local dir="${GAMES_PREFIX_OPT}/${PN}"
 	local demo="data/demos/${MY_PN}_demo"
 
 	local exe_stub="${MY_PN}_demo"
