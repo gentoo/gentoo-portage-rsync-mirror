@@ -1,11 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mozprofile/mozprofile-0.4.ebuild,v 1.2 2012/08/27 15:48:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mozprofile/mozprofile-0.4.ebuild,v 1.3 2013/01/17 16:22:30 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_USE_WITH=sqlite
 
 inherit distutils
 
@@ -19,7 +20,6 @@ SLOT="0"
 IUSE=""
 
 DEPEND="dev-python/manifestdestiny
-	dev-python/pysqlite:2
 	dev-python/simplejson
 	dev-python/setuptools"
 RDEPEND="${DEPEND}"

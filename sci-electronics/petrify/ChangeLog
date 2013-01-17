@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/petrify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/petrify/ChangeLog,v 1.8 2013/01/13 19:14:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/petrify/ChangeLog,v 1.9 2013/01/17 16:20:57 jlec Exp $
+
+*petrify-4.2-r1 (17 Jan 2013)
+
+  17 Jan 2013; Justin Lecher <jlec@gentoo.org> -petrify-4.2.ebuild,
+  +petrify-4.2-r1.ebuild:
+  Several QA enhacements, #449870
 
   13 Jan 2013; Ulrich Müller <ulm@gentoo.org> petrify-4.2.ebuild:
   Update LICENSE, the petrify license is a duplicate of Old-MIT.

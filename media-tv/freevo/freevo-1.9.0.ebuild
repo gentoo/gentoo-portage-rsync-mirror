@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.11 2012/06/04 23:49:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.12 2013/01/17 16:26:30 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
-PYTHON_USE_WITH="xml"
+PYTHON_USE_WITH="sqlite? xml"
 
 inherit distutils eutils
 
@@ -48,7 +48,6 @@ RDEPEND="dev-python/beautifulsoup:python-2
 	lirc? ( app-misc/lirc >=dev-python/pylirc-0.0.3 )
 	matrox? ( >=media-video/matroxset-0.3 )
 	mixer? ( media-sound/aumix )
-	sqlite? ( dev-python/pysqlite:0 )
 	tv? (	media-tv/xmltv
 		tvtime? ( media-tv/tvtime ) )
 	xine? ( media-video/xine-ui )

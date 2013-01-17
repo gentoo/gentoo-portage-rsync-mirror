@@ -1,9 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.1.ebuild,v 1.9 2012/04/28 09:14:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5.1.ebuild,v 1.10 2013/01/17 16:01:15 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
+PYTHON_USE_WITH=sqlite
 
 inherit multilib eutils python versionator
 
@@ -23,7 +24,6 @@ IUSE="mysql"
 RDEPEND="
 	|| ( app-office/libreoffice app-office/openoffice )
 	=dev-python/wxpython-2.8*
-	dev-python/pysqlite
 	dev-db/sqliteodbc
 	dev-db/unixODBC
 	mysql? (

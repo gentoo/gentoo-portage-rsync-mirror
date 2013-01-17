@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/libftd2xx-0.4.16-r1.ebuild,v 1.2 2013/01/03 19:37:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/libftd2xx-0.4.16-r1.ebuild,v 1.3 2013/01/17 16:16:01 pacho Exp $
 
 EAPI=5
 inherit multilib
@@ -42,5 +42,7 @@ src_install() {
 		doins -r lib_table
 	fi
 
-	dodoc Config.txt FAQ.txt README.dat
+	dodoc Config.txt
+	use x86 && dodoc faq.txt readme.dat
+	use amd64 && dodoc FAQ.txt README.dat
 }

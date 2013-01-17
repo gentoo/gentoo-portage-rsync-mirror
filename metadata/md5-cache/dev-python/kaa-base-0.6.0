@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup
-DEPEND=>=dev-libs/glib-2.4.0 avahi? ( net-dns/avahi[python] ) sqlite? ( dev-python/dbus-python >=dev-python/pysqlite-2.3.0 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-2.7*[threads(+)] =dev-lang/python-2.6*[threads(+)] =dev-lang/python-2.5*[threads(+)] )
+DEPEND=>=dev-libs/glib-2.4.0 avahi? ( net-dns/avahi[python] ) sqlite? ( dev-python/dbus-python ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-2.7*[sqlite?,threads(+)] =dev-lang/python-2.6*[sqlite?,threads(+)] =dev-lang/python-2.5*[sqlite?,threads(+)] )
 DESCRIPTION=Basic Framework for all Kaa Python Modules.
 EAPI=4
 HOMEPAGE=http://freevo.sourceforge.net/kaa/
 IUSE=avahi ssl sqlite tls lirc
 KEYWORDS=amd64 ppc x86
 LICENSE=LGPL-2.1
-RDEPEND=>=dev-libs/glib-2.4.0 avahi? ( net-dns/avahi[python] ) sqlite? ( dev-python/dbus-python >=dev-python/pysqlite-2.3.0 ) dev-python/pynotifier lirc? ( dev-python/pylirc ) tls? ( dev-python/tlslite ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-2.7*[threads(+)] =dev-lang/python-2.6*[threads(+)] =dev-lang/python-2.5*[threads(+)] )
+RDEPEND=>=dev-libs/glib-2.4.0 avahi? ( net-dns/avahi[python] ) sqlite? ( dev-python/dbus-python ) dev-python/pynotifier lirc? ( dev-python/pylirc ) tls? ( dev-python/tlslite ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-2.7*[sqlite?,threads(+)] =dev-lang/python-2.6*[sqlite?,threads(+)] =dev-lang/python-2.5*[sqlite?,threads(+)] )
 SLOT=0
 SRC_URI=mirror://sourceforge/freevo/kaa-base-0.6.0.tar.gz
 _eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=5d1991166b5bd83ef83141fb31274766
+_md5_=fe599e68dac4cef20eac831317e60c66

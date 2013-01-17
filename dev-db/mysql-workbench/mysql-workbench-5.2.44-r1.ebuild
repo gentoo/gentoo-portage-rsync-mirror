@@ -1,10 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.44-r1.ebuild,v 1.1 2012/11/26 20:41:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.44-r1.ebuild,v 1.2 2013/01/17 16:06:34 mgorny Exp $
 
 EAPI=4
 GCONF_DEBUG="no"
 PYTHON_DEPEND=2
+
+PYTHON_USE_WITH=sqlite
+PYTHON_USE_WITH_OPT=doc
 
 inherit gnome2 eutils flag-o-matic python autotools
 
@@ -44,7 +47,6 @@ CDEPEND="dev-db/sqlite:3
 	>=x11-libs/cairo-1.5.12[svg]
 	dev-python/pexpect
 	>=dev-python/paramiko-1.7.4
-	doc? ( dev-python/pysqlite:2 )
 	gnome-keyring? ( gnome-base/libgnome-keyring )
 	nls? ( sys-devel/gettext )"
 RDEPEND="${CDEPEND}

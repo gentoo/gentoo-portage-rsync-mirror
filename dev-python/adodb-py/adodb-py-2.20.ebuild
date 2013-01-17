@@ -1,11 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-2.20.ebuild,v 1.7 2010/09/29 15:51:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-2.20.ebuild,v 1.8 2013/01/17 16:11:04 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_USE_WITH=sqlite?
 
 inherit distutils eutils
 
@@ -22,8 +23,7 @@ KEYWORDS="~amd64 ia64 ppc ~ppc64 x86"
 IUSE="mysql postgres sqlite"
 
 RDEPEND="postgres? ( dev-python/psycopg:0 )
-	mysql? ( >=dev-python/mysql-python-0.9.2 )
-	sqlite? ( dev-python/pysqlite:2 ) "
+	mysql? ( >=dev-python/mysql-python-0.9.2 )"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
