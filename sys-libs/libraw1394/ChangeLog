@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libraw1394
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.68 2012/09/02 18:22:55 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.69 2013/01/17 03:20:29 vapier Exp $
+
+*libraw1394-2.1.0 (17 Jan 2013)
+
+  17 Jan 2013; Mike Frysinger <vapier@gentoo.org> +libraw1394-2.1.0.ebuild:
+  Version bump #452392 by Agostino Sarubbo.
 
   02 Sep 2012; Raúl Porcel <armin76@gentoo.org> libraw1394-2.0.8.ebuild:
   alpha/ia64/sh/sparc stable wrt #422231

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.367 2013/01/11 07:31:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.368 2013/01/17 03:12:56 vapier Exp $
+
+  17 Jan 2013; Mike Frysinger <vapier@gentoo.org> coreutils-8.20-r2.ebuild:
+  Fix building on hppa-1.1 systems #452570 by Jeroen Roovers.
 
   11 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> coreutils-8.20-r2.ebuild:
   non-maintainer commit: Fixed download location of patchset.

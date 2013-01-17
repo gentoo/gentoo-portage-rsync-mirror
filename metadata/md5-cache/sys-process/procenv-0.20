@@ -5,5 +5,5 @@ HOMEPAGE=https://launchpad.net/procenv/
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 SLOT=0
-SRC_URI=https://launchpad.net/procenv/trunk/v0.18/+download/procenv-0.18.tar.gz
-_md5_=7a6a4417c94963f40721462f38880274
+SRC_URI=https://launchpad.net/procenv/trunk/v0.20/+download/procenv-0.20.tar.gz
+_md5_=5793d659b279e8fb7cba28e5e215ea60
