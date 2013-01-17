@@ -1,9 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-9999.ebuild,v 1.8 2012/03/22 21:56:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-9999.ebuild,v 1.9 2013/01/17 16:37:57 mgorny Exp $
 
 EAPI="4"
 ESVN_REPO_URI="http://svn.berlios.de/svnroot/repos/griffith/trunk"
+PYTHON_USE_WITH=sqlite
 
 inherit eutils python multilib subversion
 
@@ -22,7 +23,6 @@ RDEPEND="dev-python/imaging
 	dev-python/pyxml
 	>=dev-python/pygtk-2.6.1:2
 	dev-python/pygobject:2
-	dev-python/pysqlite:2
 	>=dev-python/sqlalchemy-0.5.2
 	>=dev-python/reportlab-1.19
 	>=dev-python/sqlalchemy-0.4.6"

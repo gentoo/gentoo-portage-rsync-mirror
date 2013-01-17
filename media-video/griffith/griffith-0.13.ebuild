@@ -1,10 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.13.ebuild,v 1.3 2012/07/22 09:26:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.13.ebuild,v 1.4 2013/01/17 16:36:44 mgorny Exp $
 
 EAPI="4"
 
 PYTHON_DEPEND="2"
+PYTHON_USE_WITH=sqlite
 
 inherit eutils versionator python multilib
 
@@ -24,7 +25,6 @@ RDEPEND="dev-python/imaging
 	dev-python/pyxml
 	>=dev-python/pygtk-2.6.1:2
 	dev-python/pygobject:2
-	dev-python/pysqlite:2
 	>=dev-python/sqlalchemy-0.5.2
 	>=dev-python/reportlab-1.19"
 DEPEND="${RDEPEND}

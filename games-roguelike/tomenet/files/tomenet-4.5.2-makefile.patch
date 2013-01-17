@@ -1,5 +1,5 @@
---- makefile
-+++ makefile
+--- src/makefile
++++ src/makefile
 @@ -203,7 +203,7 @@
  #
  # This is my compiler of choice, it seems to work most everywhere
@@ -52,3 +52,13 @@
  ##
  ## Without SDL
  #CFLAGS = -g -pipe -Wall -DUSE_X11 -DUSE_GCU -I${X11BASE}/include -D_XOPEN_SOURCE -D_BSD_SOURCE -DMEXP=19937
+@@ -357,9 +368,6 @@
+ # Compile a client with 'test client' version/tag
+ tomenet.test: CFLAGS += -DTEST_CLIENT -O0
+ 
+-# Normal release build
+-tomenet: CFLAGS += -O2
+-
+ 
+ # Lua
+ SRCS += $(LUASRCS)

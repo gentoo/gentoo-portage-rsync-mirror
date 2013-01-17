@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/tomenet-4.5.2.ebuild,v 1.1 2013/01/16 22:28:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/tomenet-4.5.2.ebuild,v 1.2 2013/01/17 16:37:24 hasufell Exp $
 
 EAPI=5
 inherit eutils gnome2-utils games
@@ -31,7 +31,7 @@ S=${WORKDIR}/${P}/src
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
-	rm -r ../lib/{data,save} || die
+	use server || use dedicated || { rm -r ../lib/{config,data,save} || die ;}
 
 	sed \
 		-e "s#@LIBDIR@#${GAMES_DATADIR}/${PN}#" \
@@ -54,7 +54,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc ../{ChangeLog,TomeNET-Guide.txt,changes.txt}
+	dodoc ../TomeNET-Guide.txt
 
 	if ! use dedicated ; then
 		newgamesbin ${PN} ${PN}.bin
@@ -67,8 +67,6 @@ src_install() {
 	if use server || use dedicated ; then
 		newgamesbin tomenet.server tomenet.server.bin
 		dogamesbin "${T}"/${PN}.server accedit evilmeta
-		docinto server
-		dodoc runserv
 	fi
 
 	insinto "${GAMES_DATADIR}/${PN}"
@@ -88,7 +86,7 @@ pkg_postinst() {
 	gnome2_icon_cache_update
 
 	if use sound; then
-		elog "You can get soundepacks from here:"
+		elog "You can get soundpacks from here:"
 		elog '  http://tomenet.net/downloads.php'
 		elog "They must be placed inside ~/.tomenet directory."
 	fi

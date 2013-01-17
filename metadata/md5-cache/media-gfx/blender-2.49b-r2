@@ -10,4 +10,4 @@ RDEPEND=ffmpeg? ( virtual/ffmpeg[encode,theora] ) >=media-libs/openjpeg-1.5.0 me
 SLOT=0
 SRC_URI=http://download.blender.org/source/blender-2.49b.tar.gz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=cb6696aff1167ddca9d4b88282a17859
+_md5_=f5eceab811ca8a2aafdac7737dcc4e82

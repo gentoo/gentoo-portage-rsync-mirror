@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.871 2013/01/17 15:42:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.872 2013/01/17 16:51:58 aballier Exp $
+
+  17 Jan 2013; Alexis Ballier <aballier@gentoo.org> mplayer-1.1-r1.ebuild:
+  we need ffmpeg-1.1 for the libav-9 patch
 
   17 Jan 2013; Alexis Ballier <aballier@gentoo.org> mplayer-1.1-r1.ebuild,
   +files/mplayer-1.1-planaraudio.patch:

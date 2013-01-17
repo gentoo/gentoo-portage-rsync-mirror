@@ -1,6 +1,10 @@
 # ChangeLog for net-print/pykota
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.29 2012/03/20 14:46:11 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.30 2013/01/17 16:47:48 mgorny Exp $
+
+  17 Jan 2013; Michał Górny <mgorny@gentoo.org> pykota-1.25_p2437-r1.ebuild,
+  pykota-1.26.ebuild:
+  Use built-in Python sqlite3 support rather than pysqlite package.
 
   20 Mar 2012; Jeroen Roovers <jer@gentoo.org> pykota-1.25_p2437-r1.ebuild,
   pykota-1.26.ebuild:
@@ -145,4 +149,3 @@
 
   06 Nov 2004; Christian Andreetta <satya@gentoo.org> :
   version bump. CVS version of pykota 1.20
-
