@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-1.8.15-r1.ebuild,v 1.1 2012/11/14 08:48:15 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-1.8.16.ebuild,v 1.1 2013/01/17 05:24:08 yngwin Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -31,7 +31,6 @@ S=${WORKDIR}/${MY_P}
 DOCS="ChangeLog README TODO"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-cairo.patch"
 	epatch_user
 }
 
