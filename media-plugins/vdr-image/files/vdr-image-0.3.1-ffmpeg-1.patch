@@ -1,0 +1,14 @@
+https://bugs.gentoo.org/show_bug.cgi?id=443428
+
+Index: image-0.3.1/liboutput/encode.c
+===================================================================
+--- image-0.3.1.orig/liboutput/encode.c
++++ image-0.3.1/liboutput/encode.c
+@@ -49,7 +49,6 @@ cEncode::cEncode(unsigned int nNumberOfF
+ 
+ bool cEncode::Register()
+ {
+-    avcodec_init();
+ #if 0 
+     // XXX to resolv: dosen't work with osdpip
+     register_avcodec(&mpeg2video_encoder);

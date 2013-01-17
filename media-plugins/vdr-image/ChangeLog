@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-image
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.38 2013/01/09 18:15:48 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.39 2013/01/17 22:32:32 aballier Exp $
+
+  17 Jan 2013; Alexis Ballier <aballier@gentoo.org> vdr-image-0.3.1.ebuild,
+  +files/vdr-image-0.3.1-ffmpeg-1.patch:
+  fix build with ffmpeg-1, part of bug #443428
 
   09 Jan 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-image-0.3.1.ebuild:
   moved to vdr-plugin-2.eclass; eapi=5; removed empty translation

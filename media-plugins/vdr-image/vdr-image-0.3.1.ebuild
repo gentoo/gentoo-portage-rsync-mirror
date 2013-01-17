@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.3.1.ebuild,v 1.4 2013/01/09 18:15:48 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/vdr-image-0.3.1.ebuild,v 1.5 2013/01/17 22:32:32 aballier Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 IUSE="exif"
 
 COMMON_DEPEND=">=media-video/vdr-1.5.8
-	>=virtual/ffmpeg-0.4.8_p20080326
+	>=virtual/ffmpeg-0.10
 	>=media-libs/netpbm-10.0
 	exif? ( media-libs/libexif )"
 
@@ -37,7 +37,8 @@ src_prepare() {
 
 	vdr-plugin-2_src_prepare
 
-	epatch "${FILESDIR}/${P}-gentoo.diff"
+	epatch "${FILESDIR}/${P}-gentoo.diff" \
+		"${FILESDIR}/${P}-ffmpeg-1.patch"
 
 	use !exif && sed -i "s:#WITHOUT_LIBEXIF:WITHOUT_LIBEXIF:" Makefile
 

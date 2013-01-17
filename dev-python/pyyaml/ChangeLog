@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyyaml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyyaml/ChangeLog,v 1.28 2012/07/01 15:53:42 hattya Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyyaml/ChangeLog,v 1.29 2013/01/17 22:57:12 chutzpah Exp $
+
+*pyyaml-3.10-r1 (17 Jan 2013)
+
+  17 Jan 2013; Patrick McLean <chutzpah@gentoo.org> +pyyaml-3.10-r1.ebuild:
+  Revision bump, port to distutils-r1
 
   01 Jul 2012; Akinori Hattori <hattya@gentoo.org> pyyaml-3.10.ebuild:
   keyword ~ia64.
@@ -100,4 +105,3 @@
   05 Oct 2007; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
   +pyyaml-3.05.ebuild:
   initial commit.
-
