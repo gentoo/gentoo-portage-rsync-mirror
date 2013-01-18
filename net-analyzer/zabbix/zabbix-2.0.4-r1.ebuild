@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.2-r2.ebuild,v 1.1 2012/10/02 05:34:04 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.4-r1.ebuild,v 1.1 2013/01/18 18:51:53 mattm Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://prdownloads.sourceforge.net/zabbix/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="agent java curl frontend ipv6 jabber ldap mysql openipmi oracle postgres proxy server ssh snmp sqlite iodbc odbc static"
 
 COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
@@ -68,6 +68,7 @@ java_prepare() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/2.0/patches/zbx6097.patch"
 	eautoreconf
 }
 
@@ -188,15 +189,13 @@ pkg_postinst() {
 		"${ROOT}"/var/lib/zabbix \
 		"${ROOT}"/var/lib/zabbix/home \
 		"${ROOT}"/var/lib/zabbix/scripts \
-		"${ROOT}"/var/log/zabbix \
-		"${ROOT}"/var/run/zabbix
+		"${ROOT}"/var/log/zabbix
 	chmod 0750 \
 		"${ROOT}"/etc/zabbix \
 		"${ROOT}"/var/lib/zabbix \
 		"${ROOT}"/var/lib/zabbix/home \
 		"${ROOT}"/var/lib/zabbix/scripts \
-		"${ROOT}"/var/log/zabbix \
-		"${ROOT}"/var/run/zabbix
+		"${ROOT}"/var/log/zabbix
 
 	chmod 0640 \
 		"${ROOT}"/etc/zabbix/zabbix_*
@@ -264,16 +263,14 @@ src_install() {
 		/var/lib/zabbix \
 		/var/lib/zabbix/home \
 		/var/lib/zabbix/scripts \
-		/var/log/zabbix \
-		/var/run/zabbix
+		/var/log/zabbix
 
 	keepdir \
 		/etc/zabbix \
 		/var/lib/zabbix \
 		/var/lib/zabbix/home \
 		/var/lib/zabbix/scripts \
-		/var/log/zabbix \
-		/var/run/zabbix
+		/var/log/zabbix
 
 	if use server; then
 		insinto /etc/zabbix
@@ -340,15 +337,13 @@ src_install() {
 		/var/lib/zabbix \
 		/var/lib/zabbix/home \
 		/var/lib/zabbix/scripts \
-		/var/log/zabbix \
-		/var/run/zabbix
+		/var/log/zabbix
 	fperms 0750 \
 		/etc/zabbix \
 		/var/lib/zabbix \
 		/var/lib/zabbix/home \
 		/var/lib/zabbix/scripts \
-		/var/log/zabbix \
-		/var/run/zabbix
+		/var/log/zabbix
 
 	dodoc README INSTALL NEWS ChangeLog \
 		conf/zabbix_agent.conf \
