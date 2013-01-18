@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.5.6.2.ebuild,v 1.1 2012/08/15 17:50:32 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.5.11.2.ebuild,v 1.1 2013/01/18 12:18:13 constanze Exp $
 
 EAPI="4"
 
@@ -41,7 +41,7 @@ src_install() {
 	keepdir /var/lib/shorewall
 
 	cd "${WORKDIR}/${P}"
-	DESTDIR="${D}" ./install.sh "${FILESDIR}"/shorewallrc || die "install.sh failed"
+	DESTDIR="${D}" ./install.sh "${FILESDIR}"/shorewallrc_new || die "install.sh failed"
 	newinitd "${FILESDIR}"/shorewall.initd shorewall
 
 	dodoc changelog.txt releasenotes.txt

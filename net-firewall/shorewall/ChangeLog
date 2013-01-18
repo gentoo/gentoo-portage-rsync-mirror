@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/shorewall
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.209 2012/10/21 12:54:54 constanze Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.210 2013/01/18 12:18:13 constanze Exp $
+
+*shorewall-4.5.11.2 (18 Jan 2013)
+
+  18 Jan 2013; Constanze Hausner <constanze@gentoo.org>
+  -shorewall-4.4.15.1-r1.ebuild, -shorewall-4.4.27.ebuild,
+  -shorewall-4.4.27-r1.ebuild, -shorewall-4.5.0.1.ebuild,
+  -shorewall-4.5.4.2.ebuild, -shorewall-4.5.6.2.ebuild,
+  +shorewall-4.5.11.2.ebuild:
+  Version bump and cleanup of old versions
 
 *shorewall-4.5.8.2-r1 (21 Oct 2012)
 
