@@ -1,6 +1,12 @@
 # ChangeLog for media-video/xine-ui
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.178 2012/06/16 20:33:05 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.180 2013/01/18 09:54:29 ago Exp $
+
+  18 Jan 2013; Agostino Sarubbo <ago@gentoo.org> xine-ui-0.99.7.ebuild:
+  Stable for x86, wrt bug #451350
+
+  18 Jan 2013; Agostino Sarubbo <ago@gentoo.org> xine-ui-0.99.7.ebuild:
+  Stable for amd64, wrt bug #451350
 
 *xine-ui-0.99.7 (16 Jun 2012)
 
