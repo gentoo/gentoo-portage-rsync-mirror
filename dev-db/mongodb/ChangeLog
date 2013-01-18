@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mongodb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.54 2012/11/28 11:23:52 ultrabug Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.55 2013/01/18 11:19:27 ultrabug Exp $
+
+*mongodb-2.2.2-r1 (18 Jan 2013)
+
+  18 Jan 2013; Ultrabug <ultrabug@gentoo.org> -mongodb-1.8.5.ebuild,
+  +mongodb-2.2.2-r1.ebuild, files/mms-agent.initd, files/mongodb.initd,
+  files/mongos.initd:
+  Do not keepdir /var/run wrt #445686, obsolete version 1.8.5 moved to ultrabug
+  overlay wrt #376983
 
 *mongodb-2.0.8-r2 (28 Nov 2012)
 *mongodb-2.0.8-r1 (28 Nov 2012)

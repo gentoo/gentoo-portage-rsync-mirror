@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-4.1.3-r1.ebuild,v 1.2 2013/01/17 22:42:33 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-4.1.3-r1.ebuild,v 1.3 2013/01/18 11:12:01 mgorny Exp $
 
 EAPI=5
 
@@ -26,8 +26,6 @@ DEPEND="doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
-
-REQUIRED_USE="doc? ( !python_targets_python3_3 )"
 
 python_compile_all() {
 	if use doc; then

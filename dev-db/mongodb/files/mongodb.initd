@@ -1,15 +1,14 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/files/mongodb.initd,v 1.4 2011/08/26 12:38:49 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/files/mongodb.initd,v 1.5 2013/01/18 11:19:27 ultrabug Exp $
 
 depend() {
 	need net
 }
 
 start() {
-	mkdir -p ${MONGODB_RUN:-/var/run/mongodb}
-	chown ${MONGODB_USER:-mongodb}: ${MONGODB_RUN:-/var/run/mongodb}
+	checkpath -d -m 0750 -o "${MONGODB_USER}":mongodb "${MONGODB_RUN}"
 
 	# Listen to MONGODB_IP if configured
 	[ -z "${MONGODB_IP}" ] || MONGODB_OPTIONS="--bind_ip ${MONGODB_IP} ${MONGODB_OPTIONS}"
