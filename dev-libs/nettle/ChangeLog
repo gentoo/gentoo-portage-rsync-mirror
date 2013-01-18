@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.75 2013/01/18 01:22:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.76 2013/01/18 03:39:56 radhermit Exp $
+
+  18 Jan 2013; Tim Harder <radhermit@gentoo.org> nettle-2.6.ebuild,
+  files/nettle-2.6-shared.patch:
+  Remove explicit src_test. The default just throws a couple warnings if static
+  libs aren't built but still passes successfully.
 
   18 Jan 2013; Tim Harder <radhermit@gentoo.org> nettle-2.6.ebuild:
   Explicitly specify examples dir.

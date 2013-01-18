@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.6.ebuild,v 1.2 2013/01/18 01:22:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.6.ebuild,v 1.3 2013/01/18 03:39:56 radhermit Exp $
 
 EAPI="5"
 
@@ -38,15 +38,6 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable doc documentation) \
 		--disable-openssl
-}
-
-src_test() {
-	cd testsuite
-
-	# symbols test requires static libs
-	use static-libs || rm symbols-test || die
-
-	../run-tests || die
 }
 
 src_install() {

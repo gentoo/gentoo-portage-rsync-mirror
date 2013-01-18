@@ -32,17 +32,6 @@
  
  
  check: $(TS_ALL)
---- nettle-2.6/run-tests
-+++ nettle-2.6/run-tests
-@@ -28,6 +28,8 @@
- 
- export srcdir
- 
-+export LD_LIBRARY_PATH="../.lib"
-+
- # When used in make rules, we sometimes get the filenames VPATH
- # expanded, but usually not.
- find_program () {
 --- nettle-2.6/testsuite/Makefile.in
 +++ nettle-2.6/testsuite/Makefile.in
 @@ -8,7 +8,7 @@

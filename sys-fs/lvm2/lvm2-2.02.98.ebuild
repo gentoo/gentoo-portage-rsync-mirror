@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.98.ebuild,v 1.1 2013/01/18 01:39:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.98.ebuild,v 1.3 2013/01/18 03:39:06 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs autotools linux-info udev
@@ -55,10 +55,6 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-}
-
 src_prepare() {
 	epatch "${FILESDIR}"/lvm.conf-2.02.67.patch
 
@@ -105,7 +101,8 @@ src_prepare() {
 	#epatch "${FILESDIR}"/${PN}-2.02.95-udev185.patch
 
 	# Upstream patch for https://bugs.gentoo.org/444328
-	epatch "${FILESDIR}"/${P}-strict-aliasing.patch
+	# Merged upstream
+	#epatch "${FILESDIR}"/${PN}-2.02.97-strict-aliasing.patch
 
 	# Fix calling AR directly with USE static, bug #444082
 	if use static ; then
