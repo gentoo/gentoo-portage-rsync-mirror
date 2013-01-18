@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/keystone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.7 2013/01/16 21:19:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.8 2013/01/18 07:34:04 prometheanfire Exp $
+
+  18 Jan 2013; Matthew Thode <prometheanfire@gentoo.org> keystone-2012.2.ebuild,
+  keystone-9999.ebuild:
+  made use of required_use
 
   16 Jan 2013; Michał Górny <mgorny@gentoo.org> keystone-2012.2.ebuild,
   keystone-9999.ebuild:

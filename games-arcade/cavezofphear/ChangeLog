@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/cavezofphear
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/ChangeLog,v 1.11 2009/09/05 15:04:05 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/ChangeLog,v 1.12 2013/01/18 07:41:02 mr_bones_ Exp $
+
+*cavezofphear-0.5.1 (18 Jan 2013)
+
+  18 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +cavezofphear-0.5.1.ebuild, +files/cavezofphear-0.5.1-gentoo.patch:
+  version bump (bug #452314)
 
   05 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org>
   cavezofphear-0.5.ebuild, files/cavezofphear-0.5-gentoo.patch:
@@ -39,4 +45,3 @@
   08 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org>
   cavezofphear-0.1.ebuild:
   initial commit (bug 32507)
-

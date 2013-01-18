@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-9999.ebuild,v 1.6 2013/01/16 21:19:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-9999.ebuild,v 1.7 2013/01/18 07:34:03 prometheanfire Exp $
 
 EAPI=5
 #test restricted becaues of bad requirements given (old webob for instance)
@@ -19,6 +19,7 @@ SLOT="folsom"
 KEYWORDS=""
 IUSE="+sqlite mysql postgres ldap"
 #IUSE="+sqlite mysql postgres ldap test"
+REQUIRED_USE="|| ( ldap mysql postgres sqlite )"
 
 #todo, seperate out rdepend via use flags
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
@@ -39,14 +40,7 @@ RDEPEND="${DEPEND}
 	sqlite? ( dev-python/sqlalchemy[sqlite] )
 	mysql? ( dev-python/sqlalchemy[mysql] )
 	postgres? ( dev-python/sqlalchemy[postgres] )
-	ldap? ( dev-python/python-ldap )
-	( || (
-		sys-auth/keystone[sqlite]
-		sys-auth/keystone[mysql]
-		sys-auth/keystone[postgres]
-		sys-auth/keystone[ldap]
-		) )
-	"
+	ldap? ( dev-python/python-ldap )"
 #	test? ( dev-python/Babel
 #			dev-python/decorator
 #			dev-python/eventlet
