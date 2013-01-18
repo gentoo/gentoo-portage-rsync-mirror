@@ -211,5 +211,10 @@ python_single_target_jython2_5
 # fdk-aac is already keyworded here
 -fdk
 
+# Samuli Suominen <ssuominen@gentoo.org> (18 Jan 2013)
+# libdlm and cman are not keyworded
+cman
+clvm
+
 # for gnome 3.6 keywording
 -zeitgeist

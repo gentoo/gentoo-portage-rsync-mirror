@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.107 2012/12/09 00:05:22 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.108 2013/01/18 14:23:28 ssuominen Exp $
+
+  18 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> use.mask:
+  Mask USE="cman clvm" because cman and libdlm are not keyworded on this arch.
 
   09 Dec 2012; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
   Unmask media-sound/audacity[sbsms] since libsbsms now works, bug #436020

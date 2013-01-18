@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.220 2013/01/14 21:24:05 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.222 2013/01/18 14:30:16 ssuominen Exp $
+
+  18 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> use.mask:
+  Mask USE="cman clvm" because cman and libdlm are not keyworded on this arch.
 
   14 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org> ppc64/64ul/use.mask:
   mask template_haskell on ppc64 (unregisterised arch)

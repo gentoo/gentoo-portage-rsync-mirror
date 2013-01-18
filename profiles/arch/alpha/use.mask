@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.77 2013/01/01 14:26:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.78 2013/01/18 14:14:27 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -221,5 +221,10 @@ python_single_target_jython2_5
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
 # media-libs/xine-lib is not keyworded
 xine
+
+# Samuli Suominen <ssuominen@gentoo.org> (18 Jan 2013)
+# libdlm and cman are not keyworded
+cman
+clvm
 
 -zeitgeist

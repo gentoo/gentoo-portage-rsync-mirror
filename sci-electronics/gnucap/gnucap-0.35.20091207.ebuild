@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.20091207.ebuild,v 1.5 2011/06/28 20:12:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.20091207.ebuild,v 1.6 2013/01/18 14:02:10 jlec Exp $
 
 EAPI="2"
 
-inherit multilib
+inherit multilib toolchain-funcs
 
 SNAPSHOTDATE="${P##*.}"
 MY_PV="${PN}-${SNAPSHOTDATE:0:4}-${SNAPSHOTDATE:4:2}-${SNAPSHOTDATE:6:2}"
@@ -50,13 +50,15 @@ src_prepare() {
 
 	sed -i -e "s:strchr(str2, '|'):const_cast<char*>(strchr(str2, '|')):" \
 		{src,modelgen}/ap_match.cc || die "sed failed"
+
+	tc-export CC CXX
 }
 
 src_compile () {
 	emake || die "Compilation failed"
 	for PLUGIN_DIR in models-* ; do
 		cd "${S}/${PLUGIN_DIR}"
-		emake || die "Compilation failed in ${PLUGIN_DIR}"
+		emake CC=$(tc-getCC) CCC=$(tc-getCXX) || die "Compilation failed in ${PLUGIN_DIR}"
 	done
 }
 

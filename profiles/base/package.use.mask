@@ -1,10 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.431 2013/01/15 13:17:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.432 2013/01/18 14:27:46 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Samuli Suominen <ssuominen@gentoo.org> (20 Mar 2011)
+# The dependencies for these flags are still in ~arch so
+# we unmask them only for >=sys-fs/lvm2-2.02.98.
+<sys-fs/lvm2-2.02.98 clvm cman
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (30 Dec 2012)
 # sys-apps/biosdevname is keyworded only for amd64/x86
@@ -333,10 +338,6 @@ net-dns/pdnsd isdn urandom
 # Mask due to unsatisfied dependencies
 # applet is required for the search panel applet
 >=app-misc/tracker-0.10 applet
-
-# Ultrabug <ultrabug@gentoo.org> (20 Mar 2011)
-# Mask clustering support until new sys-cluster/cman is pushed.
-sys-fs/lvm2 clvm cman
 
 # Raúl Porcel <armin76@gentoo.org> (13 Feb 2011)
 # Masked until devs know how to use repoman

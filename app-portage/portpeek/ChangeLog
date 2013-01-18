@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portpeek
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.161 2012/12/17 16:49:08 mpagano Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.162 2013/01/18 14:08:39 mpagano Exp $
+
+*portpeek-2.1.6 (18 Jan 2013)
+
+  18 Jan 2013; Michael Pagano <mpagano@gentoo.org> +portpeek-2.1.6.ebuild:
+  Refactor atom handling. Make nicer output for package.use changes
 
 *portpeek-2.1.4 (17 Dec 2012)
 
