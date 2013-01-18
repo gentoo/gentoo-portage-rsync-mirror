@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1149.ebuild,v 1.1 2013/01/18 00:59:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1149.ebuild,v 1.2 2013/01/18 01:08:23 radhermit Exp $
 
 EAPI=4
 WX_GTK_VER="2.8"
@@ -87,12 +87,14 @@ src_install() {
 }
 
 pkg_preinst() {
+	games_pkg_preinst
 	if use gtk || use wxwidgets ; then
 		gnome2_icon_savelist
 	fi
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	if use gtk || use wxwidgets ; then
 		gnome2_icon_cache_update
 	fi

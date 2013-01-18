@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-9999.ebuild,v 1.2 2012/09/09 22:10:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-9999.ebuild,v 1.3 2013/01/18 01:08:23 radhermit Exp $
 
 EAPI=4
 WX_GTK_VER="2.8"
@@ -44,7 +44,8 @@ src_prepare() {
 	# Fix issue with zlib-1.2.5.1 macros (bug #383179)
 	sed -i '1i#define OF(x) x' src/common/memgzio.c || die
 
-	sed -i -e "s:\(DESTINATION\) bin:\1 ${GAMES_BINDIR}:" CMakeLists.txt || die
+	sed -i "s:\(DESTINATION\) bin:\1 ${GAMES_BINDIR}:" \
+		CMakeLists.txt src/wx/CMakeLists.txt || die
 }
 
 src_configure() {
@@ -60,7 +61,6 @@ src_configure() {
 		$(cmake-utils_use_enable wxwidgets WX)
 		$(cmake-utils_use_enable x86 ASM_CORE)
 		$(cmake-utils_use_enable x86 ASM_SCALERS)
-		-DCMAKE_INSTALL_PREFIX="${GAMES_PREFIX}"
 		-DCMAKE_SKIP_RPATH=ON
 		-DDATA_INSTALL_DIR=share/games/${PN}
 	)
@@ -80,4 +80,26 @@ src_install() {
 	fi
 
 	prepgamesdirs
+}
+
+pkg_preinst() {
+	games_pkg_preinst
+	if use gtk || use wxwidgets ; then
+		gnome2_icon_savelist
+	fi
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	if use gtk || use wxwidgets ; then
+		gnome2_icon_cache_update
+	fi
+	use gtk && fdo-mime_desktop_database_update
+}
+
+pkg_postrm() {
+	if use gtk || use wxwidgets ; then
+		gnome2_icon_cache_update
+	fi
+	use gtk && fdo-mime_desktop_database_update
 }

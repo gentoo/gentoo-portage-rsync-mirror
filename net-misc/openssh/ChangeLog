@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/openssh
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.461 2012/11/28 01:07:04 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.462 2013/01/18 01:14:14 robbat2 Exp $
+
+*openssh-6.1_p1-r1 (18 Jan 2013)
+
+  18 Jan 2013; Robin H. Johnson <robbat2@gentoo.org> +openssh-6.1_p1-r1.ebuild,
+  metadata.xml, openssh-5.9_p1-r4.ebuild, openssh-6.0_p1-r1.ebuild,
+  openssh-6.0_p1.ebuild, openssh-6.1_p1.ebuild:
+  Bug #448944: add bindist description. Bug #435372: add LDNS support for SSHFP.
+  Bug #410541/#266386: convert "need net" to detection of ListenAddress (if you
+  specify a custom ListenAddress, you should see the migration comments in the
+  init script). Bug #426084: Include license of init script. Bug #391011: handle
+  compile for G/FBSD9.0.
 
   28 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> files/sshd.rc6.4:
   Bug #410541: prepare for detection of net variants to warn if the user needs a

@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.1_p1.ebuild,v 1.9 2013/01/18 01:14:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.1_p1-r1.ebuild,v 1.1 2013/01/18 01:14:14 robbat2 Exp $
 
 EAPI="4"
-inherit eutils user flag-o-matic multilib autotools pam systemd
+inherit eutils user flag-o-matic multilib autotools pam systemd versionator
 
 # Make it more portable between straight releases
 # and _p? releases.
@@ -24,7 +24,7 @@ SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-IUSE="bindist ${HPN_PATCH:++}hpn kerberos ldap libedit pam selinux skey static tcpd X X509"
+IUSE="bindist ${HPN_PATCH:++}hpn kerberos ldap ldns libedit pam selinux skey static tcpd X X509"
 
 LIB_DEPEND="selinux? ( >=sys-libs/libselinux-1.28[static-libs(+)] )
 	skey? ( >=sys-auth/skey-1.1.5-r1[static-libs(+)] )
@@ -33,12 +33,12 @@ LIB_DEPEND="selinux? ( >=sys-libs/libselinux-1.28[static-libs(+)] )
 	dev-libs/openssl[static-libs(+)]
 	>=sys-libs/zlib-1.2.3[static-libs(+)]
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6[static-libs(+)] )"
-RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )
+RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} net-libs/ldns[ssl] )
 	pam? ( virtual/pam )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )"
 DEPEND="${RDEPEND}
-	static? ( ${LIB_DEPEND} )
+	static? ( ${LIB_DEPEND} net-libs/ldns[ssl,static-libs(+)] )
 	virtual/pkgconfig
 	virtual/os-headers
 	sys-devel/autoconf"
@@ -155,10 +155,17 @@ static_use_with() {
 }
 
 src_configure() {
+	local myconf
 	addwrite /dev/ptmx
 	addpredict /etc/skey/skeykeys #skey configure code triggers this
 
 	use static && append-ldflags -static
+
+	# Special settings for Gentoo/FreeBSD 9.0 or later (see bug #391011)
+	if use elibc_FreeBSD && version_is_at_least 9.0 "$(uname -r|sed 's/\(.\..\).*/\1/')" ; then
+		myconf="${myconf} --disable-utmp --disable-wtmp --disable-wtmpx"
+		append-ldflags -lutil
+	fi
 
 	econf \
 		--with-ldflags="${LDFLAGS}" \
@@ -174,17 +181,19 @@ src_configure() {
 		$(static_use_with pam) \
 		$(static_use_with kerberos kerberos5 /usr) \
 		${LDAP_PATCH:+$(use X509 || ( use ldap && use_with ldap ))} \
+		$(use_with ldns) \
 		$(use_with libedit) \
 		$(use_with selinux) \
 		$(use_with skey) \
-		$(use_with tcpd tcp-wrappers)
+		$(use_with tcpd tcp-wrappers) \
+		${myconf}
 }
 
 src_install() {
 	emake install-nokeys DESTDIR="${D}"
 	fperms 600 /etc/ssh/sshd_config
 	dobin contrib/ssh-copy-id
-	newinitd "${FILESDIR}"/sshd.rc6.3 sshd
+	newinitd "${FILESDIR}"/sshd.rc6.4 sshd
 	newconfd "${FILESDIR}"/sshd.confd sshd
 	keepdir /var/empty
 

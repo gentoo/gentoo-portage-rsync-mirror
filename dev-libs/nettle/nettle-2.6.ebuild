@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.6.ebuild,v 1.1 2013/01/18 00:57:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.6.ebuild,v 1.2 2013/01/18 01:22:08 radhermit Exp $
 
 EAPI="5"
 
@@ -20,12 +20,13 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-shared.patch
+
 	sed -e '/CFLAGS=/s: -ggdb3::' \
 		-e 's/solaris\*)/sunldsolaris*)/' \
 		-i configure.ac || die
 
 	# conditionally build tests and examples required by tests
-	use test || sed -i '/SUBDIRS/s/testsuite.*//' Makefile.in || die
+	use test || sed -i '/SUBDIRS/s/testsuite examples//' Makefile.in || die
 
 	eautoreconf
 }
