@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql-init-scripts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/ChangeLog,v 1.14 2012/03/08 14:57:22 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/ChangeLog,v 1.15 2013/01/18 01:51:47 robbat2 Exp $
+
+*mysql-init-scripts-2.0_pre1-r3 (18 Jan 2013)
+
+  18 Jan 2013; Robin H. Johnson <robbat2@gentoo.org> +files/mysql-5.1.67-init.d,
+  +mysql-init-scripts-2.0_pre1-r3.ebuild:
+  Bug #423387: /var/run fix. Bug #452562/#175783: checkbashisms.
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org>
   mysql-init-scripts-2.0_pre1-r2.ebuild:
@@ -71,4 +77,3 @@
 
   12 Jan 2007; Luca Longinotti <chtekk@gentoo.org> ChangeLog:
   Move from sys-apps/mysql.
-
