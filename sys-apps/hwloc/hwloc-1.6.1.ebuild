@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.6.ebuild,v 1.1 2012/12/06 19:52:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.6.1.ebuild,v 1.1 2013/01/18 06:52:18 xarthisius Exp $
 
 EAPI=4
 

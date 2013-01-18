@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.140 2013/01/18 06:23:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.141 2013/01/18 06:42:22 ssuominen Exp $
 
-EAPI=5
+EAPI=4
 
 KV_min=2.6.39
 
@@ -27,7 +27,7 @@ DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace d
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
-SLOT="0/1-0" # 0/libudevSONAME-libgudevSONAME
+SLOT="0"
 IUSE="acl doc gudev hwdb introspection keymap +kmod +openrc selinux static-libs"
 
 RESTRICT="test"

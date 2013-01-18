@@ -1,6 +1,13 @@
 # ChangeLog for games-board/gtkatlantic
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/ChangeLog,v 1.17 2012/05/04 04:30:10 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/ChangeLog,v 1.18 2013/01/18 06:38:34 mr_bones_ Exp $
+
+*gtkatlantic-0.4.3 (18 Jan 2013)
+
+  18 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/gtkatlantic-0.4.3-compile.patch, +gtkatlantic-0.4.3.ebuild,
+  files/gtkatlantic-0.4.2-libpng14.patch:
+  version bump (bug #452316)
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gtkatlantic-0.4.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
