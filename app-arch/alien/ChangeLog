@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/alien
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.38 2012/10/06 17:01:45 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.39 2013/01/18 09:17:49 lordvan Exp $
+
+*alien-8.88 (18 Jan 2013)
+
+  18 Jan 2013; <lordvan@gentoo.org> -alien-8.74.ebuild, -alien-8.86.ebuild,
+  +alien-8.88.ebuild:
+  removed old versions + version bump (bug #451678, Thanks Agostino Sarubbo for
+  reporting)
 
   06 Oct 2012; Raúl Porcel <armin76@gentoo.org> alien-8.87.ebuild:
   alpha stable wrt #428842

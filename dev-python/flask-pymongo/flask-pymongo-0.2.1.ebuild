@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-pymongo/flask-pymongo-0.1.2.ebuild,v 1.2 2012/06/21 15:52:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-pymongo/flask-pymongo-0.2.1.ebuild,v 1.1 2013/01/18 09:26:28 ultrabug Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 
 RDEPEND=">=dev-python/flask-0.8
-	>=dev-python/pymongo-2.1"
+	>=dev-python/pymongo-2.4"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )
 	dev-python/setuptools

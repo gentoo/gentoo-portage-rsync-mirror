@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/vor
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/ChangeLog,v 1.8 2012/08/24 07:49:43 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/ChangeLog,v 1.9 2013/01/18 09:03:56 mr_bones_ Exp $
+
+*vor-0.5.5 (18 Jan 2013)
+
+  18 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> +vor-0.5.5.ebuild:
+  version bump (bug #452312)
 
   24 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org> vor-0.5.4.ebuild:
   any mod support will do

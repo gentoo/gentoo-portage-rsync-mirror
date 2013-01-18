@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.87.ebuild,v 1.6 2012/10/06 17:01:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.87.ebuild,v 1.7 2013/01/18 09:17:49 lordvan Exp $
 
 EAPI=1
 
