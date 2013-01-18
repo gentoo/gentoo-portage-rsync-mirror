@@ -1,6 +1,9 @@
-# ChangeLog for Gentoo/alpha profile directory
+# ChangeLog for the default/linux/s390 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/s390/ChangeLog,v 1.1 2013/01/18 19:35:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/s390/ChangeLog,v 1.2 2013/01/18 20:04:58 dilfridge Exp $
+
+  18 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> ChangeLog:
+  Fix ChangeLog header
 
   18 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> +13.0/eapi,
   +13.0/parent, +13.0/s390x/parent:

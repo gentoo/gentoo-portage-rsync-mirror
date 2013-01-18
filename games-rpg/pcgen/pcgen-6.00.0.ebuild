@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/pcgen-6.00.0.ebuild,v 1.1 2012/12/17 09:52:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/pcgen-6.00.0.ebuild,v 1.2 2013/01/18 20:01:31 nimiux Exp $
 
 EAPI=5
 inherit versionator gnome2-utils games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/pcgen/pcgen${MY_PV}_full.zip"
 
 LICENSE="LGPL-2.1 OGL-1.0a"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.6"

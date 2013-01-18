@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.7-r1.ebuild,v 1.1 2012/12/20 22:44:04 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.7-r1.ebuild,v 1.2 2013/01/18 20:10:34 hasufell Exp $
 
 EAPI=4
 inherit eutils
@@ -46,11 +46,6 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 S2=${WORKDIR}/${MY_P}_static
 
-src_unpack() {
-	default
-	cp -a "${S}" "${S2}" || die
-}
-
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-irrlicht-1.8.patch
 
@@ -70,6 +65,10 @@ src_prepare() {
 	if use examples ; then
 		cp -r Samples Samples.clean
 		rm -f $(find Samples.clean -name 'Makefile*')
+	fi
+
+	if use static-libs ; then
+		cp -a "${S}" "${S2}" || die
 	fi
 }
 
