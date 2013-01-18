@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/libvformat-1.13-r2.ebuild,v 1.1 2013/01/18 16:20:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/libvformat-1.13-r2.ebuild,v 1.2 2013/01/18 16:51:01 jer Exp $
 
 EAPI=5
 inherit eutils autotools
@@ -27,6 +27,10 @@ src_prepare() {
 		"${FILESDIR}"/${P}-str.patch
 
 	eautoreconf
+}
+
+src_configure() {
+	econf $(use_enable static-libs static)
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.141 2013/01/18 06:42:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.142 2013/01/18 16:59:23 ssuominen Exp $
 
 EAPI=4
 
@@ -214,6 +214,7 @@ src_configure()
 		--disable-tcpwrap
 		--disable-timedated
 		--disable-xz
+		--disable-silent-rules
 		$(use_enable acl)
 		$(use_enable doc gtk-doc)
 		$(use_enable gudev)

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.65 2013/01/07 19:22:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.66 2013/01/18 17:01:13 ssuominen Exp $
+
+  18 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> kmod-12-r1.ebuild,
+  kmod-9999.ebuild:
+  Pass --disable-silent-rules wrt #452854 by Agostino Sarubbo
 
   07 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> kmod-12-r1.ebuild,
   kmod-9999.ebuild:

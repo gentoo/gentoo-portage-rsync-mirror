@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/alpine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/ChangeLog,v 1.25 2013/01/04 08:50:18 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/ChangeLog,v 1.26 2013/01/18 17:00:54 jer Exp $
+
+  18 Jan 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove Sascha Lucas as maintainer (bug #452784).
 
   04 Jan 2013; Eray Aslan <eras@gentoo.org> -alpine-2.00-r4.ebuild,
   -files/CVE-2008-5514.patch:
