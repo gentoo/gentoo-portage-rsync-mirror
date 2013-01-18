@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libvformat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/ChangeLog,v 1.15 2012/04/06 21:46:13 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/ChangeLog,v 1.16 2013/01/18 16:20:46 jer Exp $
+
+*libvformat-1.13-r2 (18 Jan 2013)
+
+  18 Jan 2013; Jeroen Roovers <jer@gentoo.org> +libvformat-1.13-r2.ebuild,
+  +files/libvformat-1.13-has_unistd.patch, +files/libvformat-1.13-str.patch:
+  Use str* functions from libc by Raphaël Droz (bug #452756). Add
+  USE=static-libs. Use newer Debian patchset. HAS_UNISTD_H -> HAVE_UNISTD_H.
 
   06 Apr 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #63588

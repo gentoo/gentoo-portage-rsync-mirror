@@ -1,20 +1,22 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.7.ebuild,v 1.2 2012/01/05 12:38:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.9.ebuild,v 1.1 2013/01/18 16:25:49 kensington Exp $
 
-EAPI=4
+EAPI=5
 
 KDE_LINGUAS="cs de fr"
+KDE_HANDBOOK="optional"
 inherit kde4-base
 
-DESCRIPTION="Kwave is a sound editor for KDE"
+DESCRIPTION="A sound editor for KDE that can edit many types of audio files"
 HOMEPAGE="http://kwave.sourceforge.net/"
-SRC_URI="mirror://sourceforge/kwave/${P}-1.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}-1.tar.bz2"
 
-LICENSE="BSD FDL-1.2 GPL-2 LGPL-2"
+LICENSE="BSD GPL-2 LGPL-2
+	handbook? ( FDL-1.2 )"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa debug flac +handbook mad oss pulseaudio vorbis"
+IUSE="alsa debug flac handbook mp3 oss phonon pulseaudio vorbis"
 
 RDEPEND="
 	media-libs/audiofile
@@ -22,10 +24,12 @@ RDEPEND="
 	media-libs/libsamplerate
 	alsa? ( media-libs/alsa-lib )
 	flac? ( media-libs/flac )
-	mad? (
+	mp3? (
 		media-libs/id3lib
 		media-libs/libmad
+		|| ( media-sound/lame media-sound/twolame media-sound/toolame )
 	)
+	phonon? ( media-libs/phonon )
 	pulseaudio? ( media-sound/pulseaudio )
 	vorbis? (
 		media-libs/libogg
@@ -34,20 +38,20 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	$(add_kdebase_dep kdesdk-misc extras)
-	|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[imagemagick,png] )
+	|| ( media-gfx/imagemagick[png,svg] media-gfx/graphicsmagick[imagemagick,png,svg] )
 "
 
-DOCS=( AUTHORS CHANGES README TODO )
+DOCS=( AUTHORS CHANGES LICENSES README TODO )
 
 src_configure() {
 	local mycmakeargs=(
 		-DWITH_SAMPLERATE=ON
-		-DWITH_PHONON=ON
 		$(cmake-utils_use_with alsa)
 		$(cmake-utils_use_with flac)
-		$(cmake-utils_use_with mad MP3)
+		$(cmake-utils_use_with mp3)
 		$(cmake-utils_use_with vorbis OGG)
 		$(cmake-utils_use_with oss)
+		$(cmake-utils_use_with phonon)
 		$(cmake-utils_use_with pulseaudio)
 		$(cmake-utils_use debug)
 	)

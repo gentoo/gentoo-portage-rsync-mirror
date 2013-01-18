@@ -18,7 +18,7 @@ case "$group" in
 	button)
 		case "$action" in
 			power)
-				/sbin/init 0
+				/etc/acpi/actions/powerbtn.sh
 				;;
 
 			# if your laptop doesnt turn on/off the display via hardware

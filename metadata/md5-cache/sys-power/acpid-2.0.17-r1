@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst
+DEPEND=selinux? ( sec-policy/selinux-apm )
+DESCRIPTION=Daemon for Advanced Configuration and Power Interface
+EAPI=4
+HOMEPAGE=http://tedfelix.com/linux/acpid-netlink.html
+IUSE=selinux
+KEYWORDS=~amd64 ~ia64 -ppc ~x86
+LICENSE=GPL-2
+RDEPEND=selinux? ( sec-policy/selinux-apm )
+SLOT=0
+SRC_URI=http://tedfelix.com/linux/acpid-2.0.17.tar.xz
+_eclasses_=systemd	28706ddc21464b4ed255eee9fc70b516
+_md5_=f75cf92179dd1669d6862b471ff17c80

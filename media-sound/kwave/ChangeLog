@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/kwave
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.26 2012/06/25 18:36:38 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.27 2013/01/18 16:25:49 kensington Exp $
+
+*kwave-0.8.9 (18 Jan 2013)
+
+  18 Jan 2013; Michael Palimaka <kensington@gentoo.org> +kwave-0.8.9.ebuild,
+  -kwave-0.8.7.ebuild:
+  Version bump wrt bug #452238. Remove old.
 
 *kwave-0.8.8-r1 (25 Jun 2012)
 
