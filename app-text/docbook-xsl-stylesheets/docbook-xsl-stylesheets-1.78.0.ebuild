@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.77.0.ebuild,v 1.1 2012/05/23 04:21:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.78.0.ebuild,v 1.1 2013/01/18 12:45:23 flameeyes Exp $
 
-EAPI=4
+EAPI=5
 
 DOCBOOKDIR="/usr/share/sgml/${PN/-//}"
 MY_PN="${PN%-stylesheets}"
@@ -18,7 +18,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="ruby"
 
 RDEPEND=">=app-text/build-docbook-catalog-1.1
-	ruby? ( || ( dev-lang/ruby dev-lang/ruby-enterprise ) )"
+	ruby? ( dev-lang/ruby )"
+DEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
@@ -29,7 +30,7 @@ RESTRICT=test
 src_compile() { :; }
 
 src_test() {
-	emake check || die "test failed"
+	emake check
 }
 
 src_install() {
@@ -38,7 +39,7 @@ src_install() {
 	dodoc AUTHORS BUGS NEWS README RELEASE-NOTES.txt TODO
 
 	insinto ${DOCBOOKDIR}
-	doins VERSION
+	doins VERSION VERSION.xsl
 
 	local i
 	for i in $(find . -maxdepth 1 -mindepth 1 -type d -exec basename {} \;); do
