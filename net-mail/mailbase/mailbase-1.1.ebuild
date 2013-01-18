@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-1.1.ebuild,v 1.4 2013/01/16 18:50:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-1.1.ebuild,v 1.5 2013/01/18 17:07:55 jer Exp $
 
 inherit pam eutils user
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="pam"
 
 RDEPEND="pam? ( virtual/pam )"
