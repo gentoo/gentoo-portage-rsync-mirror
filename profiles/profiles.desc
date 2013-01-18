@@ -14,6 +14,12 @@ alpha           default/linux/alpha/10.0/desktop/kde            stable
 alpha           default/linux/alpha/10.0/developer              stable
 alpha           default/linux/alpha/10.0/server                 stable
 
+alpha           default/linux/alpha/13.0                        dev
+alpha           default/linux/alpha/13.0/desktop                dev
+alpha           default/linux/alpha/13.0/desktop/gnome          dev
+alpha           default/linux/alpha/13.0/desktop/kde            dev
+alpha           default/linux/alpha/13.0/developer              dev
+
 # AMD64 Profiles
 amd64           default/linux/amd64/10.0                        stable
 amd64           default/linux/amd64/10.0/selinux                dev
@@ -24,6 +30,15 @@ amd64           default/linux/amd64/10.0/developer              stable
 amd64           default/linux/amd64/10.0/no-multilib            dev
 amd64           default/linux/amd64/10.0/server                 stable
 amd64           default/linux/amd64/10.0/x32                    dev
+
+amd64           default/linux/amd64/13.0                        dev
+amd64           default/linux/amd64/13.0/selinux                dev
+amd64           default/linux/amd64/13.0/desktop                dev
+amd64           default/linux/amd64/13.0/desktop/gnome          dev
+amd64           default/linux/amd64/13.0/desktop/kde            dev
+amd64           default/linux/amd64/13.0/developer              dev
+amd64           default/linux/amd64/13.0/no-multilib            dev
+amd64           default/linux/amd64/13.0/x32                    dev
 
 # ARM Profiles
 arm             default/linux/arm/10.0                          stable
@@ -63,11 +78,46 @@ arm             default/linux/arm/10.0/armv7a/desktop/kde       dev
 arm             default/linux/arm/10.0/armv7a/developer         dev
 arm             default/linux/arm/10.0/armv7a/server            dev
 
+arm             default/linux/arm/13.0                          dev
+arm             default/linux/arm/13.0/desktop                  dev
+arm             default/linux/arm/13.0/desktop/gnome            dev
+arm             default/linux/arm/13.0/desktop/kde              dev
+arm             default/linux/arm/13.0/developer                dev
+arm             default/linux/arm/13.0/armv4                    dev
+arm             default/linux/arm/13.0/armv4/desktop            dev
+arm             default/linux/arm/13.0/armv4/desktop/gnome      dev
+arm             default/linux/arm/13.0/armv4/desktop/kde        dev
+arm             default/linux/arm/13.0/armv4/developer          dev
+arm             default/linux/arm/13.0/armv4t                   dev
+arm             default/linux/arm/13.0/armv4t/desktop           dev
+arm             default/linux/arm/13.0/armv4t/desktop/gnome     dev
+arm             default/linux/arm/13.0/armv4t/desktop/kde       dev
+arm             default/linux/arm/13.0/armv4t/developer         dev
+arm             default/linux/arm/13.0/armv5te                  dev
+arm             default/linux/arm/13.0/armv5te/desktop          dev
+arm             default/linux/arm/13.0/armv5te/desktop/gnome    dev
+arm             default/linux/arm/13.0/armv5te/desktop/kde      dev
+arm             default/linux/arm/13.0/armv5te/developer        dev
+arm             default/linux/arm/13.0/armv6j                   dev
+arm             default/linux/arm/13.0/armv6j/desktop           dev
+arm             default/linux/arm/13.0/armv6j/desktop/gnome     dev
+arm             default/linux/arm/13.0/armv6j/desktop/kde       dev
+arm             default/linux/arm/13.0/armv6j/developer         dev
+arm             default/linux/arm/13.0/armv7a                   dev
+arm             default/linux/arm/13.0/armv7a/desktop           dev
+arm             default/linux/arm/13.0/armv7a/desktop/gnome     dev
+arm             default/linux/arm/13.0/armv7a/desktop/kde       dev
+arm             default/linux/arm/13.0/armv7a/developer         dev
+
 # HPPA Profiles
 hppa            default/linux/hppa/10.0                         stable
 hppa            default/linux/hppa/10.0/desktop                 dev
 hppa            default/linux/hppa/10.0/developer               dev
 hppa            default/linux/hppa/10.0/server                  dev
+
+hppa            default/linux/hppa/13.0                         dev
+hppa            default/linux/hppa/13.0/desktop                 dev
+hppa            default/linux/hppa/13.0/developer               dev
 
 # IA64 Profiles
 ia64            default/linux/ia64/10.0                         stable
@@ -77,6 +127,12 @@ ia64            default/linux/ia64/10.0/desktop/kde             stable
 ia64            default/linux/ia64/10.0/developer               stable
 ia64            default/linux/ia64/10.0/server                  stable
 
+ia64            default/linux/ia64/13.0                         dev
+ia64            default/linux/ia64/13.0/desktop                 dev
+ia64            default/linux/ia64/13.0/desktop/gnome           dev
+ia64            default/linux/ia64/13.0/desktop/kde             dev
+ia64            default/linux/ia64/13.0/developer               dev
+
 # M68K Profiles
 m68k            default/linux/m68k/10.0                         dev
 m68k            default/linux/m68k/10.0/desktop                 dev
@@ -84,6 +140,12 @@ m68k            default/linux/m68k/10.0/desktop/gnome           dev
 m68k            default/linux/m68k/10.0/desktop/kde             dev
 m68k            default/linux/m68k/10.0/developer               dev
 m68k            default/linux/m68k/10.0/server                  dev
+
+m68k            default/linux/m68k/13.0                         dev
+m68k            default/linux/m68k/13.0/desktop                 dev
+m68k            default/linux/m68k/13.0/desktop/gnome           dev
+m68k            default/linux/m68k/13.0/desktop/kde             dev
+m68k            default/linux/m68k/13.0/developer               dev
 
 # MIPS Profiles
 mips            default/linux/mips/10.0                                         exp
@@ -99,6 +161,19 @@ mips            default/linux/mips/10.0/mipsel/multilib                         
 mips            default/linux/mips/10.0/mipsel/multilib/n32                     exp
 mips            default/linux/mips/10.0/mipsel/multilib/n64                     exp
 
+mips            default/linux/mips/13.0                                         exp
+mips            default/linux/mips/13.0/n32                                     exp
+mips            default/linux/mips/13.0/n64                                     exp
+mips            default/linux/mips/13.0/multilib                                exp
+mips            default/linux/mips/13.0/multilib/n32                            exp
+mips            default/linux/mips/13.0/multilib/n64                            exp
+mips            default/linux/mips/13.0/mipsel                                  exp
+mips            default/linux/mips/13.0/mipsel/n32                              exp
+mips            default/linux/mips/13.0/mipsel/n64                              exp
+mips            default/linux/mips/13.0/mipsel/multilib                         exp
+mips            default/linux/mips/13.0/mipsel/multilib/n32                     exp
+mips            default/linux/mips/13.0/mipsel/multilib/n64                     exp
+
 # PPC32 Profiles
 ppc             default/linux/powerpc/ppc32/10.0                stable
 ppc             default/linux/powerpc/ppc32/10.0/desktop        stable
@@ -106,6 +181,12 @@ ppc             default/linux/powerpc/ppc32/10.0/desktop/gnome  stable
 ppc             default/linux/powerpc/ppc32/10.0/desktop/kde    stable
 ppc             default/linux/powerpc/ppc32/10.0/developer      stable
 ppc             default/linux/powerpc/ppc32/10.0/server         dev
+
+ppc             default/linux/powerpc/ppc32/13.0                dev
+ppc             default/linux/powerpc/ppc32/13.0/desktop        dev
+ppc             default/linux/powerpc/ppc32/13.0/desktop/gnome  dev
+ppc             default/linux/powerpc/ppc32/13.0/desktop/kde    dev
+ppc             default/linux/powerpc/ppc32/13.0/developer      dev
 
 # PPC64 Profiles
 ppc             default/linux/powerpc/ppc64/10.0/32bit-userland                 stable
@@ -121,11 +202,25 @@ ppc64           default/linux/powerpc/ppc64/10.0/64bit-userland/desktop/kde     
 ppc64           default/linux/powerpc/ppc64/10.0/64bit-userland/developer       stable
 ppc64           default/linux/powerpc/ppc64/10.0/64bit-userland/server          dev
 
+ppc             default/linux/powerpc/ppc64/13.0/32bit-userland                 dev
+ppc             default/linux/powerpc/ppc64/13.0/32bit-userland/desktop         dev
+ppc             default/linux/powerpc/ppc64/13.0/32bit-userland/desktop/gnome   dev
+ppc             default/linux/powerpc/ppc64/13.0/32bit-userland/desktop/kde     dev
+ppc             default/linux/powerpc/ppc64/13.0/32bit-userland/developer       dev
+ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland                 dev
+ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland/desktop         dev
+ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland/desktop/gnome   dev
+ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland/desktop/kde     dev
+ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland/developer       dev
+
 # S390 Profiles
 s390            default/linux/s390/10.0                         stable
 s390            default/linux/s390/10.0/s390x                   stable
 s390            default/linux/s390/10.0/server                  stable
 s390            default/linux/s390/10.0/server/s390x            stable
+
+s390            default/linux/s390/13.0                         dev
+s390            default/linux/s390/13.0/s390x                   dev
 
 # SH Profiles
 sh              default/linux/sh/10.0                           dev
@@ -135,6 +230,12 @@ sh              default/linux/sh/10.0/desktop/kde               dev
 sh              default/linux/sh/10.0/developer                 dev
 sh              default/linux/sh/10.0/server                    dev
 
+sh              default/linux/sh/13.0                           dev
+sh              default/linux/sh/13.0/desktop                   dev
+sh              default/linux/sh/13.0/desktop/gnome             dev
+sh              default/linux/sh/13.0/desktop/kde               dev
+sh              default/linux/sh/13.0/developer                 dev
+
 # SPARC Profiles
 sparc           default/linux/sparc/10.0                        stable
 sparc           default/linux/sparc/10.0/desktop                stable
@@ -142,6 +243,12 @@ sparc           default/linux/sparc/10.0/desktop/gnome          stable
 sparc           default/linux/sparc/10.0/desktop/kde            stable
 sparc           default/linux/sparc/10.0/developer              stable
 sparc           default/linux/sparc/10.0/server                 stable
+
+sparc           default/linux/sparc/13.0                        dev
+sparc           default/linux/sparc/13.0/desktop                dev
+sparc           default/linux/sparc/13.0/desktop/gnome          dev
+sparc           default/linux/sparc/13.0/desktop/kde            dev
+sparc           default/linux/sparc/13.0/developer              dev
 
 # x86 Profiles
 x86             default/linux/x86/10.0                          stable
@@ -151,6 +258,13 @@ x86             default/linux/x86/10.0/desktop/gnome            stable
 x86             default/linux/x86/10.0/desktop/kde              stable
 x86             default/linux/x86/10.0/developer                stable
 x86             default/linux/x86/10.0/server                   stable
+
+x86             default/linux/x86/13.0                          dev
+x86             default/linux/x86/13.0/selinux                  dev
+x86             default/linux/x86/13.0/desktop                  dev
+x86             default/linux/x86/13.0/desktop/gnome            dev
+x86             default/linux/x86/13.0/desktop/kde              dev
+x86             default/linux/x86/13.0/developer                dev
 
 # Gentoo/FreeBSD Profiles
 amd64-fbsd	default/bsd/fbsd/amd64/9.0			stable
