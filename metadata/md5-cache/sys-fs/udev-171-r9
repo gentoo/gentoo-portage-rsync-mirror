@@ -10,4 +10,4 @@ RDEPEND=selinux? ( sys-libs/libselinux ) extras? ( dev-libs/glib:2 dev-libs/gobj
 SLOT=0
 SRC_URI=mirror://gentoo/udev-171.tar.bz2 test? ( mirror://gentoo/udev-171-testsys.tar.bz2 ) mirror://gentoo/udev-gentoo-legacy-patchset-2.tar.bz2 mirror://gentoo/udev-171-gentoo-patchset-v1.tar.bz2 mirror://gentoo/udev-gentoo-scripts-7.1.tar.bz2
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	linux-info	6923bbfed4371639315c56d17e2da90c	multilib	9aa8a023e062fca0ba79362d9d0cc488	systemd	28706ddc21464b4ed255eee9fc70b516	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=ee9e1e5c2ac77a838422936b57942b28
+_md5_=67a4c624e92f99c929889a9ebaf14776

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/chardet-2.0.1-r1.ebuild,v 1.1 2013/01/18 05:57:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/chardet-2.0.1-r1.ebuild,v 1.2 2013/01/18 06:03:09 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_{5,6,7},3_{1,2,3}} pypy{1_9,2_0} )
@@ -27,21 +27,18 @@ push_sourcedir() {
 	else
 		pushd "${WORKDIR}/python2-${P}" || die
 	fi
+	"$@"
+	popd
 }
 
 python_compile() {
-	push_sourcedir
-	distutils-r1_python_compile
-	popd
+	push_sourcedir distutils-r1_python_compile
 }
 
 python_install() {
-	push_sourcedir
-	distutils-r1_python_install
-	popd
+	push_sourcedir distutils-r1_python_install
 }
 
 python_install_all() {
-	push_sourcedir
-	dohtml -r docs/
+	push_sourcedir dohtml -r docs/
 }
