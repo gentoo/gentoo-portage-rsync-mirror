@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.56 2013/01/18 20:10:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.57 2013/01/18 21:57:16 hasufell Exp $
+
+*cegui-0.7.9 (18 Jan 2013)
+
+  18 Jan 2013; Julian Ospald <hasufell@gentoo.org> +cegui-0.7.9.ebuild:
+  version bump
 
   18 Jan 2013; Julian Ospald <hasufell@gentoo.org> cegui-0.7.7-r1.ebuild:
   fix static-libs build
