@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/cryptsetup
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.145 2012/12/21 05:17:04 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.146 2013/01/17 23:35:08 robbat2 Exp $
+
+*cryptsetup-1.6.0 (17 Jan 2013)
+*cryptsetup-1.5.1 (17 Jan 2013)
+
+  17 Jan 2013; Robin H. Johnson <robbat2@gentoo.org> +cryptsetup-1.5.1.ebuild,
+  +cryptsetup-1.6.0.ebuild, +files/1.5.1-dmcrypt.rc, metadata.xml:
+  Bump per bug #421249. Add UUID support per bug #420015.
 
   21 Dec 2012; Mike Frysinger <vapier@gentoo.org> cryptsetup-1.4.3.ebuild:
   Drop udev dep since cryptsetup no longer calls udevsettle at runtime #445660

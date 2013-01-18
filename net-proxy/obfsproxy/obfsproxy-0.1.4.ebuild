@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/obfsproxy-0.1.4.ebuild,v 1.6 2013/01/15 18:03:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/obfsproxy-0.1.4.ebuild,v 1.7 2013/01/17 23:52:23 blueness Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ DEPEND="dev-libs/openssl
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	sed -i -e "s:^AR = ar:AR = $(tc-getAR):" Makefile.in
+	sed -i -e "s:^AR = ar:AR = $(tc-getAR):" Makefile.in || die
 }
 
 src_install() {
