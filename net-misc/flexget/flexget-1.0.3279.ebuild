@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta3181.ebuild,v 1.5 2013/01/01 18:45:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0.3279.ebuild,v 1.1 2013/01/18 04:03:10 floppym Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python2_{6,7} )
 inherit distutils-r1 eutils
 
 if [[ ${PV} != 9999 ]]; then
-	MY_P="FlexGet-${PV/_beta/r}"
+	MY_P="FlexGet-${PV}"
 	SRC_URI="http://download.flexget.com/unstable/${MY_P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 else
@@ -27,7 +27,7 @@ SLOT="0"
 IUSE="test"
 
 DEPEND="
-	>=dev-python/feedparser-5.1.2
+	>=dev-python/feedparser-5.1.3
 	>=dev-python/sqlalchemy-0.7
 	dev-python/pyyaml
 	dev-python/beautifulsoup:python-2
@@ -40,7 +40,8 @@ DEPEND="
 	dev-python/flask
 	dev-python/cherrypy
 	dev-python/python-dateutil
-	=dev-python/requests-0.14*
+	>=dev-python/requests-1.0
+	<dev-python/requests-1.99
 	dev-python/setuptools
 	virtual/python-argparse[${PYTHON_USEDEP}]
 "

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/charade
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/charade/ChangeLog,v 1.2 2012/12/21 12:55:08 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/charade/ChangeLog,v 1.3 2013/01/18 04:13:36 floppym Exp $
+
+*charade-1.0.3 (18 Jan 2013)
+
+  18 Jan 2013; Mike Gilbert <floppym@gentoo.org> +charade-1.0.3.ebuild,
+  -charade-1.0.1.ebuild:
+  Version bump, fixes bug 452466. Thanks to Ian Cordasco for the quick fix.
 
   21 Dec 2012; Michał Górny <mgorny@gentoo.org> charade-1.0.1.ebuild:
   Use PYTHON_USEDEP to properly request implementation support in deps.

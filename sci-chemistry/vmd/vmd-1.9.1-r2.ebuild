@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1-r2.ebuild,v 1.1 2013/01/11 09:29:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1-r2.ebuild,v 1.2 2013/01/18 04:16:06 ottxor Exp $
 
 EAPI=5
 
@@ -32,12 +32,7 @@ CDEPEND="
 	>=x11-libs/fltk-1.1.10-r2:1
 	x11-libs/libXft
 	x11-libs/libXi
-	cuda? (
-		>=dev-util/nvidia-cuda-toolkit-3.1
-		|| (
-			sys-devel/gcc:4.4
-			sys-devel/gcc:4.5 )
-		)
+	cuda? ( >=dev-util/nvidia-cuda-toolkit-4.2.9-r1 )
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${CDEPEND}
 	dev-lang/swig"
