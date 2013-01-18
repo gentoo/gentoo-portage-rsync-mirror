@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14386 2013/01/17 19:20:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14387 2013/01/18 05:08:11 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org (18 Jan 2013)
+# Release made by unofficial maintainer. Drops support for Python 3 with
+# very few improvements. Should be replaced by dev-python/charade eventually.
+=dev-python/chardet-2.1.1
 
 # Pacho Ramos <pacho@gentoo.org>
 # Dead since 2003, doesn't work with journaling filesystems.
