@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/lshw
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.104 2012/12/02 07:00:28 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.106 2013/01/18 10:59:44 ago Exp $
+
+  18 Jan 2013; Agostino Sarubbo <ago@gentoo.org> lshw-02.16b-r2.ebuild:
+  Stable for x86, wrt bug #452684
+
+  18 Jan 2013; Agostino Sarubbo <ago@gentoo.org> lshw-02.16b-r2.ebuild:
+  Stable for amd64, wrt bug #452684
 
 *lshw-02.16b-r2 (02 Dec 2012)
 
