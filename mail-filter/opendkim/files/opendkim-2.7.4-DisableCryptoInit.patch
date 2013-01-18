@@ -1,0 +1,109 @@
+From 23548465adccd682ba9ecba58025f852d2353bad Mon Sep 17 00:00:00 2001
+From: Murray S. Kucherawy <msk@trusteddomain.org>
+Date: Thu, 10 Jan 2013 00:49:11 -0800
+Subject: [PATCH] Fix bug #SF3531477: Add (hopefully temporary) configuration option
+ "DisableCryptoInit" so that opendkim's initialization of the crypto library
+ doesn't conflict with the same work done by other libraries.  Reported by
+ Quanah Gibson-Mount.
+
+---
+ opendkim/opendkim-config.h  |    1 +
+ opendkim/opendkim-crypto.c  |    7 +++++--
+ opendkim/opendkim.c         |   17 +++++++++++++----
+ opendkim/opendkim.conf.5.in |    6 ++++++
+ 5 files changed, 29 insertions(+), 6 deletions(-)
+
+diff --git a/opendkim/opendkim-config.h b/opendkim/opendkim-config.h
+index dfc3606..0d40bb9 100644
+--- a/opendkim/opendkim-config.h
++++ b/opendkim/opendkim-config.h
+@@ -56,6 +56,7 @@ struct configdef dkimf_config[] =
+ 	{ "Diagnostics",		CONFIG_TYPE_BOOLEAN,	FALSE },
+ 	{ "DiagnosticDirectory",	CONFIG_TYPE_STRING,	FALSE },
+ 	{ "DisableADSP",		CONFIG_TYPE_BOOLEAN,	FALSE },
++	{ "DisableCryptoInit",		CONFIG_TYPE_BOOLEAN,	FALSE },
+ #ifdef _FFR_DKIM_REPUTATION
+ 	{ "DKIMReputationFail",		CONFIG_TYPE_INTEGER,	FALSE },
+ 	{ "DKIMReputationPass",		CONFIG_TYPE_INTEGER,	FALSE },
+diff --git a/opendkim/opendkim-crypto.c b/opendkim/opendkim-crypto.c
+index 2ea9b44..fb42fd0 100644
+--- a/opendkim/opendkim-crypto.c
++++ b/opendkim/opendkim-crypto.c
+@@ -121,9 +121,12 @@ dkimf_crypto_init(void)
+ void
+ dkimf_crypto_free(void)
+ {
+-	(void) gnutls_global_deinit();
++	if (crypto_init_done)
++	{
++		(void) gnutls_global_deinit();
+ 
+-	(void) pthread_key_delete(logkey);
++		(void) pthread_key_delete(logkey);
++	}
+ 
+ 	return;
+ }
+diff --git a/opendkim/opendkim.c b/opendkim/opendkim.c
+index 9863d30..3fa0a60 100644
+--- a/opendkim/opendkim.c
++++ b/opendkim/opendkim.c
+@@ -209,6 +209,7 @@ struct lua_global
+ 
+ struct dkimf_config
+ {
++	_Bool		conf_disablecryptoinit;	/* initialize SSL libs? */
+ #ifdef USE_LDAP
+ 	_Bool		conf_softstart;		/* do LDAP soft starts */
+ #endif /* USE_LDAP */
+@@ -6414,6 +6415,10 @@ dkimf_config_load(struct config *data, struct dkimf_config *conf,
+ 		                  &conf->conf_noadsp,
+ 		                  sizeof conf->conf_noadsp);
+ 
++		(void) config_get(data, "DisableCryptoInit",
++		                  &conf->conf_disablecryptoinit,
++		                  sizeof conf->conf_disablecryptoinit);
++
+ 		str = NULL;
+ 		(void) config_get(data, "ADSPAction", &str, sizeof str);
+ 		if (str != NULL)
+@@ -17503,11 +17508,15 @@ main(int argc, char **argv)
+ 	}
+ 
+ 	/* initialize libcrypto mutexes */
+-	status = dkimf_crypto_init();
+-	if (status != 0)
++	if (!curconf->conf_disablecryptoinit)
+ 	{
+-		fprintf(stderr, "%s: error initializing crypto library: %s\n",
+-		        progname, strerror(status));
++		status = dkimf_crypto_init();
++		if (status != 0)
++		{
++			fprintf(stderr,
++			        "%s: error initializing crypto library: %s\n",
++			        progname, strerror(status));
++		}
+ 	}
+ 
+ 	if ((curconf->conf_mode & DKIMF_MODE_VERIFIER) != 0 &&
+diff --git a/opendkim/opendkim.conf.5.in b/opendkim/opendkim.conf.5.in
+index a963e73..2c20549 100644
+--- a/opendkim/opendkim.conf.5.in
++++ b/opendkim/opendkim.conf.5.in
+@@ -236,6 +236,12 @@ If set, suppresses Author Domain Signing Practices (ADSP) checks, which
+ require multiple additional DNS queries.
+ 
+ .TP
++.I DisableCryptoInit (Boolean)
++If set, skips initialization of the SSL library initialization steps, which
++are normaly required in multi-threaded environments.  This assumes some other
++library opendkim is using will do the required initialization and shutdown.
++
++.TP
+ .I DKIMReputationFail (integer)
+ If the reputation returned by the DNS reputation service exceeds this
+ value then the result "x-dkim-rep" is set to "fail".
+-- 
+1.7.4.1
+
