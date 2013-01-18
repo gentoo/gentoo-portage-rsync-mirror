@@ -1,16 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.6 2013/01/18 18:24:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-197.ebuild,v 1.1 2013/01/18 18:24:35 mgorny Exp $
 
 EAPI=5
-
-#if LIVE
-AUTOTOOLS_AUTORECONF=yes
-EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${PN}
-	http://cgit.freedesktop.org/${PN}/${PN}/"
-
-inherit git-2
-#endif
 
 PYTHON_COMPAT=( python2_7 )
 inherit autotools-utils bash-completion-r1 linux-info pam \
@@ -65,14 +57,6 @@ DEPEND="${COMMON_DEPEND}
 	sys-fs/quota
 	>=sys-kernel/linux-headers-${MINKV}"
 
-#if LIVE
-SRC_URI=
-KEYWORDS=
-
-DEPEND="dev-libs/gobject-introspection
-	>=dev-util/gtk-doc-1.18"
-#endif
-
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
@@ -89,10 +73,6 @@ src_prepare() {
 	local PATCHES=(
 		"${FILESDIR}"/197-0001-Disable-udev-targets.patch
 	)
-
-#if LIVE
-	gtkdocize --docdir docs/ || die
-#endif
 
 	autotools-utils_src_prepare
 
