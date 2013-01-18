@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/pacemaker
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/ChangeLog,v 1.26 2012/11/14 17:24:22 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/ChangeLog,v 1.27 2013/01/18 11:51:54 ultrabug Exp $
+
+*pacemaker-1.1.8-r1 (18 Jan 2013)
+
+  18 Jan 2013; Ultrabug <ultrabug@gentoo.org> +pacemaker-1.1.8-r1.ebuild,
+  files/pacemaker.initd:
+  Do not keepdir /var/run/crm wrt #449878
 
   14 Nov 2012; Jeroen Roovers <jer@gentoo.org> pacemaker-1.1.8.ebuild:
   Marked ~hppa (bug #442408).
