@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/vbam
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/ChangeLog,v 1.15 2012/09/09 22:11:28 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/ChangeLog,v 1.16 2013/01/18 00:59:36 radhermit Exp $
+
+*vbam-1.8.0.1149 (18 Jan 2013)
+
+  18 Jan 2013; Tim Harder <radhermit@gentoo.org> +vbam-1.8.0.1149.ebuild,
+  +files/vbam-1.8.0.1149-desktop.patch:
+  Version bump (fixes bug #443270).
 
   09 Sep 2012; Tim Harder <radhermit@gentoo.org> -vbam-1.8.0.1009-r1.ebuild,
   -files/vbam-1.8.0.1009-desktop.patch, -files/vbam-1.8.0.1009-no-nls.patch:
