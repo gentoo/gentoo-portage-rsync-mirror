@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8-r1.ebuild,v 1.12 2013/01/16 12:35:31 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8-r1.ebuild,v 1.13 2013/01/18 08:05:25 slyfox Exp $
 
 EAPI=3
 
@@ -107,6 +107,8 @@ src_prepare() {
 	cd .waf* || die
 	epatch "${FILESDIR}/${PN}"-0.8DrO_o-waflib-fix-perl.patch
 	cd "${S}"
+	epatch "${FILESDIR}/${P}"-ffmpeg-0.11.patch #443256
+	epatch "${FILESDIR}/${P}"-libav-9-p2.patch #443256
 	epatch "${FILESDIR}/${P}"-libav-9.patch #443256
 
 	if has_version dev-libs/libcdio-paranoia; then

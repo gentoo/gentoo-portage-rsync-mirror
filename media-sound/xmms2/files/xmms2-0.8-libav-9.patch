@@ -1,21 +1,20 @@
-commit a1fe1f45c19c67ed80c05d8276b88d1296f984d2
-Author: Raphaël Bois <virtualdust@gmail.com>
-Date:   Sun Nov 25 17:55:12 2012 +0100
+commit d61dbc522f4024debb1f99de758de9e5cc7c0936
+Author: Diego Biurrun <diego@biurrun.de>
+Date:   Sun Nov 25 17:33:02 2012 +0100
 
-    OTHER: Add Diego Biurrun in AUTHORS file
+    OTHER: Support for newer libavcodec versions
+    
+    Add missing #include
 
-diff --git a/AUTHORS b/AUTHORS
-index 9d05e1a..3b84fce 100644
---- a/AUTHORS
-+++ b/AUTHORS
-@@ -37,6 +37,10 @@ E: xkr47@outerspace.dyndns.org
- W: http://xkr47.outerspace.dyndns.org/
- D: curl_http updated to xforms, icymetaint plugin (extracted from curl)
+diff --git a/src/plugins/avcodec/avcodec.c b/src/plugins/avcodec/avcodec.c
+index c846d64..114d7df 100644
+--- a/src/plugins/avcodec/avcodec.c
++++ b/src/plugins/avcodec/avcodec.c
+@@ -23,6 +23,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <glib.h>
++#include <libavutil/mem.h>
  
-+N: Diego Biurrun
-+E: diego@biurrun.de
-+D: Support for libav 9 in avcodec plugin
-+
- N: Magnus Bjernstad
- E: bjernstad@gmail.com
- D: PythonAPI fixes.
+ #include "avcodec_compat.h"
+ 
