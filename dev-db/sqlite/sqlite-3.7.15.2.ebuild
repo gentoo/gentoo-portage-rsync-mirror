@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.15.2.ebuild,v 1.1 2013/01/17 05:46:51 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.15.2.ebuild,v 1.2 2013/01/18 22:48:48 floppym Exp $
 
 EAPI="5"
 
 inherit autotools eutils flag-o-matic multilib versionator
 
 SRC_PV="$(printf "%u%02u%02u%02u" $(get_version_components))"
-DOC_PV="$(printf "%u%02u%02u00" $(get_version_components $(get_version_component_range 1-3)))"
-# DOC_PV="${SRC_PV}"
+# DOC_PV="$(printf "%u%02u%02u00" $(get_version_components $(get_version_component_range 1-3)))"
+DOC_PV="${SRC_PV}"
 
 DESCRIPTION="A SQL Database Engine in a C Library"
 HOMEPAGE="http://sqlite.org/"
@@ -26,7 +26,7 @@ IUSE="debug doc +extensions +fts3 icu +readline secure-delete soundex static-lib
 
 RDEPEND="icu? ( dev-libs/icu:= )
 	readline? ( sys-libs/readline )
-	tcl? ( dev-lang/tcl )"
+	tcl? ( dev-lang/tcl:= )"
 DEPEND="${RDEPEND}
 	doc? ( app-arch/unzip )
 	tcl? ( app-arch/unzip )
@@ -146,7 +146,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" TCLLIBDIR="${EPREFIX}/usr/$(get_libdir)/${P}" install
+	emake DESTDIR="${D}" TCLLIBDIR="${EPREFIX}/usr/$(get_libdir)/${P}" install
 	prune_libtool_files
 
 	doman sqlite3.1
