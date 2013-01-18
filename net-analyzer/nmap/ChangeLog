@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.281 2013/01/16 19:33:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.282 2013/01/18 14:58:04 polynomial-c Exp $
+
+  18 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> nmap-6.01.ebuild,
+  nmap-6.25.ebuild:
+  non-maintaienr commit: Removed ipv6 dependency now that a proper fix went
+  into libpcap (bug #452832).
 
   16 Jan 2013; Jeroen Roovers <jer@gentoo.org> nmap-6.25.ebuild,
   +files/nmap-6.25-liblua-ar.patch:

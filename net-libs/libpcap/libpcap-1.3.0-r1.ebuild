@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.3.0.ebuild,v 1.10 2012/09/30 16:26:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.3.0-r1.ebuild,v 1.1 2013/01/18 14:50:38 polynomial-c Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -27,7 +27,8 @@ DOCS=( CREDITS CHANGES VERSION TODO README{,.dag,.linux,.macosx,.septel} )
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.2.0-cross-linux.patch \
-		"${FILESDIR}"/${PN}-1.3.0-canusb.patch
+		"${FILESDIR}"/${PN}-1.3.0-canusb.patch \
+		"${FILESDIR}"/${P}-fix-systems-without-ipv6-support.patch
 	# Prefix' Solaris uses GNU ld
 	sed -i -e 's/freebsd\*/freebsd*|solaris*/' \
 		-e 's/sparc64\*/sparc64*|sparcv9*/'  aclocal.m4 || die

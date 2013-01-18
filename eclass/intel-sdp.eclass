@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.5 2012/12/05 19:41:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.6 2013/01/18 15:00:31 jlec Exp $
 
 # @ECLASS: intel-sdp.eclass
 # @MAINTAINER:
@@ -390,8 +390,8 @@ intel-sdp_src_install() {
 	[[ -d "${ED}" ]] || dodir /
 	mv opt "${ED}"/ || die "moving files failed"
 
-	dodir "${INTEL_SDP_EDIR}"/licenses
-	keepdir "${INTEL_SDP_EDIR}"/licenses
+	dodir "${INTEL_SDP_DIR}"/licenses
+	keepdir "${INTEL_SDP_DIR}"/licenses
 }
 
 # @FUNCTION: intel-sdp_pkg_postinst

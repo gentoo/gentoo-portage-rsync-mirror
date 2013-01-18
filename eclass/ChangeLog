@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.625 2013/01/16 23:57:37 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.626 2013/01/18 15:00:31 jlec Exp $
+
+  18 Jan 2013; Justin Lecher <jlec@gentoo.org> intel-sdp.eclass:
+  No EPREFIX with helper functions
 
   16 Jan 2013; Jory A. Pratt <anarchy@gentoo.org> mozconfig-3.eclass:
   Remove webrtc block as it is supported on all archs now.
