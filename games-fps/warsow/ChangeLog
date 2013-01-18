@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/warsow
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.47 2012/12/27 02:24:48 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.48 2013/01/18 19:08:09 hasufell Exp $
+
+*warsow-1.02-r1 (18 Jan 2013)
+
+  18 Jan 2013; Julian Ospald <hasufell@gentoo.org> +warsow-1.02-r1.ebuild,
+  files/warsow-1.02-build.patch:
+  unbundle libRocket, revbump for safety
 
   27 Dec 2012; Julian Ospald <hasufell@gentoo.org> warsow-1.02.ebuild,
   files/warsow-1.02-build.patch:
