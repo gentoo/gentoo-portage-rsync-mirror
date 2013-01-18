@@ -1,35 +1,44 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-1.4.4.ebuild,v 1.2 2013/01/18 10:22:53 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-2.3.0.ebuild,v 1.1 2013/01/18 10:22:53 ultrabug Exp $
 
 EAPI=4
 
-inherit base autotools
+inherit autotools base
+
+MY_TREE="b7db472"
 
 DESCRIPTION="OSI Certified implementation of a complete cluster engine"
 HOMEPAGE="http://www.corosync.org/"
-SRC_URI="mirror://github/corosync/corosync/${P}.tar.gz"
+SRC_URI="https://github.com/corosync/corosync/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD-2 public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
-IUSE="doc infiniband ssl static-libs"
+KEYWORDS="~amd64 ~x86"
+IUSE="doc infiniband static-libs"
 
+# TODO: support those new configure flags
+# --enable-watchdog : Watchdog support
+# --enable-augeas : Install the augeas lens for corosync.conf
+# --enable-snmp : SNMP protocol support
+# --enable-xmlconf : XML configuration support
+# --enable-systemd : Install systemd service files
 RDEPEND="!sys-cluster/heartbeat
-	ssl? ( dev-libs/nss )
 	infiniband? (
 		sys-infiniband/libibverbs
 		sys-infiniband/librdmacm
-	)"
+	)
+	dev-libs/nss
+	sys-cluster/libqb"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( sys-apps/groff )"
 
-PATCHES=(
-	"${FILESDIR}/${PN}-docs.patch"
-)
+PATCHES=( "${FILESDIR}/${PN}-2.0.0-docs.patch" )
 
-DOCS=( README.recovery README.devmap SECURITY TODO AUTHORS )
+DOCS=( README.recovery SECURITY TODO AUTHORS )
+
+S="${WORKDIR}/${PN}-${PN}-${MY_TREE}"
 
 src_prepare() {
 	base_src_prepare
@@ -43,7 +52,6 @@ src_configure() {
 		--localstatedir=/var \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_enable doc) \
-		$(use_enable ssl nss) \
 		$(use_enable infiniband rdma)
 }
 

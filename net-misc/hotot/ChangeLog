@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/hotot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.25 2012/12/16 23:40:38 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.27 2013/01/18 10:23:00 ago Exp $
+
+  18 Jan 2013; Agostino Sarubbo <ago@gentoo.org> hotot-0.9.8.11.ebuild:
+  Stable for x86, wrt bug #452472
+
+  18 Jan 2013; Agostino Sarubbo <ago@gentoo.org> hotot-0.9.8.11.ebuild:
+  Stable for amd64, wrt bug #452472
 
 *hotot-0.9.8.11 (16 Dec 2012)
 

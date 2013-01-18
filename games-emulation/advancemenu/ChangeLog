@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/advancemenu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.32 2010/01/22 20:16:11 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.33 2013/01/18 10:06:08 mr_bones_ Exp $
+
+*advancemenu-2.6 (18 Jan 2013)
+
+  18 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> +advancemenu-2.6.ebuild,
+  +files/advancemenu-2.6-alsa-pkg-config.patch,
+  +files/advancemenu-2.6-pic.patch:
+  version bump (bug #452250)
 
   22 Jan 2010; Brent Baude <ranger@gentoo.org> advancemenu-2.5.0.ebuild:
   stable ppc, bug 285395
