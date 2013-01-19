@@ -1,0 +1,9 @@
+# ChangeLog for app-doc/devmanual
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/ChangeLog,v 1.1 2013/01/19 10:36:17 hwoarang Exp $
+
+*devmanual-9999 (19 Jan 2013)
+
+  19 Jan 2013; Markos Chandras <hwoarang@gentoo.org> +devmanual-9999.ebuild,
+  +metadata.xml:
+  Add live ebuild for offline use of the Gentoo Development Guide. Bug #447170
