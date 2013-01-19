@@ -3,6 +3,6 @@ DESCRIPTION=Virtual to select between sys-fs/udev and sys-fs/eudev
 EAPI=2
 IUSE=gudev hwdb introspection keymap selinux static-libs
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
-RDEPEND=|| ( >=sys-fs/udev-196-r1[gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] >=sys-fs/eudev-1_beta1[gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] )
+RDEPEND=|| ( ~sys-fs/udev-196[gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] >=sys-fs/eudev-1_beta1[gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] )
 SLOT=0
-_md5_=b44926bb747c5ce36fa7daf1666e26cd
+_md5_=980143aa5de968c698639b52e75fe02a

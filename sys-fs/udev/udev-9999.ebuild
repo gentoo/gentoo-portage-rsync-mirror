@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.143 2013/01/19 13:47:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.144 2013/01/19 14:58:11 ssuominen Exp $
 
 EAPI=4
 
@@ -65,7 +65,7 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25"
 
-PDEPEND=">=virtual/udev-180
+PDEPEND=">=virtual/udev-197
 	openrc? ( >=sys-fs/udev-init-scripts-19 )"
 
 S=${WORKDIR}/systemd-${PV}

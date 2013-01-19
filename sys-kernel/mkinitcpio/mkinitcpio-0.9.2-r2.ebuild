@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mkinitcpio/mkinitcpio-0.9.2-r2.ebuild,v 1.1 2013/01/19 14:24:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mkinitcpio/mkinitcpio-0.9.2-r2.ebuild,v 1.2 2013/01/19 14:43:33 ssuominen Exp $
 
 EAPI=4
 
@@ -81,7 +81,7 @@ src_install() {
 	insinto /usr/lib/initcpio/install
 	use udev && doins install/udev
 	use device-mapper && doins install/lvm2
-	use mdadm && doins install/{mdadm{,_udev}}
+	use mdadm && doins install/mdadm{,_udev}
 	use dmraid && doins install/dmraid
 	use cryptsetup && doins install/encrypt
 	use pcmcia && doins install/pcmcia
