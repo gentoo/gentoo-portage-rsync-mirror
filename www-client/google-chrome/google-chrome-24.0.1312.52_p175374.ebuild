@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-24.0.1312.52_p175374.ebuild,v 1.1 2013/01/11 02:02:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-24.0.1312.52_p175374.ebuild,v 1.2 2013/01/19 18:43:08 floppym Exp $
 
 EAPI="4"
 
@@ -83,9 +83,7 @@ QA_PREBUILT="*"
 S=${WORKDIR}
 
 pkg_nofetch() {
-	eerror "Please do not report bugs for google-chrome fetch failures."
-	eerror "The problem will be resolved with the next version bump."
-	eerror "Sync your portage tree and try again."
+	eerror "Please wait 24 hours before reporting a bug for google-chrome fetch failures."
 }
 
 pkg_setup() {
