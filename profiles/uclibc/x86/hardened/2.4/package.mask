@@ -2,5 +2,3 @@
 >=sys-kernel/gentoo-sources-2.5
 >=sys-kernel/hardened-sources-2.5
 >=sys-kernel/vanilla-sources-2.5
-
->=virtual/pcmcia-2.5
