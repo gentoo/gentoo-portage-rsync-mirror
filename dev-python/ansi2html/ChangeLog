@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ansi2html
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.5 2012/10/25 10:51:54 iksaif Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.6 2013/01/19 20:25:10 mgorny Exp $
+
+*ansi2html-0.9.3-r1 (19 Jan 2013)
+
+  19 Jan 2013; Michał Górny <mgorny@gentoo.org> +ansi2html-0.9.3-r1.ebuild:
+  Migrate to distutils-r1.
 
 *ansi2html-0.9.3 (25 Oct 2012)
 

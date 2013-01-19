@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.19-r1.ebuild,v 1.2 2013/01/12 20:46:31 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.19-r1.ebuild,v 1.3 2013/01/19 20:12:23 alonbl Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnupg/gnupg/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="adns bzip2 doc ldap nls readline static selinux smartcard usb"
+IUSE="adns bzip2 doc ldap nls mta readline static selinux smartcard usb"
 
 COMMON_DEPEND_LIBS="
 	>=dev-libs/libassuan-2
@@ -49,7 +49,7 @@ DEPEND="${COMMON_DEPEND_LIBS}
 
 RDEPEND="!static? ( ${COMMON_DEPEND_LIBS} )
 	${COMMON_DEPEND_BINS}
-	virtual/mta
+	mta? ( virtual/mta )
 	!<=app-crypt/gnupg-2.0.1
 	selinux? ( sec-policy/selinux-gpg )
 	nls? ( virtual/libintl )"
@@ -84,6 +84,7 @@ src_configure() {
 		$(use_enable bzip2) \
 		$(use_enable !elibc_SunOS symcryptrun) \
 		$(use_enable nls) \
+		$(use_enable mta mailto) \
 		$(use_enable ldap) \
 		$(use_with readline) \
 		CC_FOR_BUILD="$(tc-getBUILD_CC)"

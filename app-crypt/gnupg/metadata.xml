@@ -21,5 +21,9 @@
       Build direct CCID access for scdaemon; requires
       <pkg>dev-libs/libusb</pkg>.
     </flag>
+    <flag name='mta'>
+      Build mta support using
+      <pkg>virtual/mta</pkg>.
+    </flag>
   </use>
 </pkgmetadata>

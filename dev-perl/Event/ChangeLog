@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Event
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.79 2012/10/09 01:22:30 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.80 2013/01/19 20:21:50 tove Exp $
+
+*Event-1.210.0 (19 Jan 2013)
+
+  19 Jan 2013; Torsten Veller <tove@gentoo.org> +Event-1.210.0.ebuild:
+  Version bump
 
   09 Oct 2012; Anthony G. Basile <blueness@gentoo.org> Event-1.10.ebuild:
   stable ppc ppc64, bug #436854
