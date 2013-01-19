@@ -4,6 +4,8 @@ Date: Sun, 17 Apr 2011 01:34:39 +0200
 Subject: [PATCH] gpgsm-gencert.sh: make sure not to abort after creating temp
  file.
 
+https://bugs.g10code.com/gnupg/issue1466
+
 ---
  tools/gpgsm-gencert.sh |    8 ++++----
  1 files changed, 4 insertions(+), 4 deletions(-)

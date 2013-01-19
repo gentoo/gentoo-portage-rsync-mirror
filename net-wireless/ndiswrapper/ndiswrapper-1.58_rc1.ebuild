@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.58_rc1.ebuild,v 1.2 2012/05/22 15:54:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.58_rc1.ebuild,v 1.3 2013/01/19 21:21:08 angelos Exp $
 
 EAPI=4
 inherit base linux-mod toolchain-funcs
@@ -33,12 +33,19 @@ pkg_pretend() {
 	linux-mod_pkg_setup
 }
 
+src_prepare() {
+	base_src_prepare
+
+	# Linux 3.7 fix by Philip Müller <philm@manjaro.org>
+	sed -i "s|/include/linux/version.h|/include/generated/uapi/linux/version.h|g" driver/Makefile
+}
+
 src_compile() {
-	local params
+	local params="WRAP_WQ=1"
 
 	# Enable verbose debugging information
 	if use debug; then
-		params="DEBUG=3"
+		params="${params} DEBUG=3"
 		use usb && params="${params} USB_DEBUG=1"
 	fi
 

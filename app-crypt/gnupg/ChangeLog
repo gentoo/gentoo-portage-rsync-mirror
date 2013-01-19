@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.455 2013/01/19 20:12:23 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.457 2013/01/19 21:16:55 alonbl Exp $
+
+  19 Jan 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  files/gnupg-2.0.17-gpgsm-gencert.patch:
+  cleanup files
+
+  19 Jan 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/gnupg-2.0.17-libgrcrypt150-bugfix.patch,
+  files/gnupg-2.0.17-gpgsm-gencert.patch:
+  cleanup files
 
 *gnupg-1.4.13-r1 (19 Jan 2013)
 
