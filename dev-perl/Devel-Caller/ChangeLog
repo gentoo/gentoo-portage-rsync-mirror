@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Devel-Caller
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Caller/ChangeLog,v 1.9 2013/01/13 13:54:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Caller/ChangeLog,v 1.10 2013/01/19 19:47:36 tove Exp $
+
+*Devel-Caller-2.60.0 (19 Jan 2013)
+
+  19 Jan 2013; Torsten Veller <tove@gentoo.org> +Devel-Caller-2.60.0.ebuild:
+  Version bump
 
   13 Jan 2013; Markus Meier <maekke@gentoo.org> Devel-Caller-2.50.0.ebuild:
   add ~arm, bug #449762
