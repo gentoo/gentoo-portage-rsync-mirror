@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/Text_Template
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/Text_Template/ChangeLog,v 1.5 2012/08/21 14:57:51 olemarkus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/Text_Template/ChangeLog,v 1.6 2013/01/19 16:32:17 jer Exp $
+
+  19 Jan 2013; Jeroen Roovers <jer@gentoo.org> Text_Template-1.1.1.ebuild:
+  DEPENDS -> DEPEND by Gordon Pettey (bug #452868).
 
   21 Aug 2012; Ole Markus With <olemarkus@gentoo.org>
   -Text_Template-1.0.0.ebuild:
