@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1170 2013/01/16 15:05:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1172 2013/01/19 07:40:44 zmedico Exp $
+
+*portage-2.2.0_alpha155 (19 Jan 2013)
+
+  19 Jan 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha155.ebuild,
+  -portage-2.2.0_alpha153.ebuild:
+  2.2.0_alpha155 version bump. This includes all of the fixes in 2.1.11.44. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.11.44 (19 Jan 2013)
+
+  19 Jan 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.44.ebuild,
+  -portage-2.1.11.42.ebuild:
+  2.1.11.44 version bump. This adds support for the @security package set, which
+  installs GLSA security updates (like glsa-check from gentoolkit). Bug #445274
+  tracks all bugs fixed since portage-2.1.11.31.
 
 *portage-2.2.0_alpha154 (16 Jan 2013)
 

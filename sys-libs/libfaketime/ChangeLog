@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libfaketime
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfaketime/ChangeLog,v 1.4 2012/10/23 22:28:09 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfaketime/ChangeLog,v 1.5 2013/01/19 07:38:14 pinkbyte Exp $
+
+  19 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> libfaketime-0.9.1.ebuild:
+  Stable on amd64, wrt bug #452834
 
   23 Oct 2012; Tim Harder <radhermit@gentoo.org> -libfaketime-0.9-r1.ebuild,
   -files/libfaketime-0.9-make.patch:
