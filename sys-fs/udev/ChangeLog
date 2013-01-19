@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.786 2013/01/19 14:58:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.787 2013/01/19 18:24:17 ssuominen Exp $
+
+  19 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197-r3.ebuild,
+  udev-197-r4.ebuild, udev-9999.ebuild:
+  Install mans related to libsystemd-daemon wrt #452892 by Mike Gilbert. Block
+  <sys-apps/systemd-${PV}.
 
   19 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197-r3.ebuild,
   udev-197-r4.ebuild, udev-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.4.2-r1.ebuild,v 1.1 2013/01/17 22:56:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.4.2-r2.ebuild,v 1.1 2013/01/19 18:10:32 mgorny Exp $
 
 EAPI=5
 
@@ -58,6 +58,11 @@ python_test() {
 		|| die "Tests fail with ${EPYTHON}"
 }
 
+src_install() {
+	distutils-r1_src_install
+	webapp_src_install
+}
+
 python_install_all() {
 	distutils-r1_python_install_all
 
@@ -70,8 +75,6 @@ python_install_all() {
 
 	insinto "${MY_HTDOCSDIR#${EPREFIX}}"
 	doins -r django/contrib/admin/static/admin/.
-
-	webapp_src_install
 }
 
 pkg_postinst() {
@@ -81,6 +84,8 @@ pkg_postinst() {
 	elog "site-packages dir for easy development"
 	elog
 	ewarn "If you build Django ${PV} without USE=\"vhosts\""
+
+	# XXX: call webapp_pkg_postinst? the old ebuild didn't do that...
 	ewarn "webapp-config will automatically install the"
 	ewarn "admin media into the localhost webroot."
 }
