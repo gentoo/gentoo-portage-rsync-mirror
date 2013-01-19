@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kover/kover-5.ebuild,v 1.2 2013/01/19 02:24:14 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kover/kover-6.ebuild,v 1.1 2013/01/19 02:24:14 creffett Exp $
 
 EAPI=5
 KDE_LINGUAS="de es fr it nb no pl"
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
 RDEPEND="
-	<dev-libs/libcdio-0.90[-minimal]
+	dev-libs/libcdio-paranoia
 	media-libs/libcddb
 "
 DEPEND="${RDEPEND}
