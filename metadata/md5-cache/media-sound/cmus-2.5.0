@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install
-DEPEND=sys-libs/ncurses[unicode?] aac? ( media-libs/faad2 ) alsa? ( >=media-libs/alsa-lib-1.0.11 ) ao? ( media-libs/libao ) cue? ( media-libs/libcue ) cddb? ( media-libs/libcddb ) cdda? ( dev-libs/libcdio ) discid? ( media-libs/libdiscid ) flac? ( media-libs/flac ) mad? ( >=media-libs/libmad-0.14 ) mikmod? ( media-libs/libmikmod:0 ) modplug? ( >=media-libs/libmodplug-0.7 ) mp4? ( >=media-libs/libmp4v2-1.9:0 ) musepack? ( >=media-sound/musepack-tools-444 ) pulseaudio? ( media-sound/pulseaudio ) vorbis? ( >=media-libs/libvorbis-1.0 ) wavpack? ( media-sound/wavpack ) wma? ( >=virtual/ffmpeg-0.10.2-r1 ) virtual/pkgconfig
+DEPEND=sys-libs/ncurses[unicode?] aac? ( media-libs/faad2 ) alsa? ( >=media-libs/alsa-lib-1.0.11 ) ao? ( media-libs/libao ) cue? ( media-libs/libcue ) cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) ) cddb? ( media-libs/libcddb ) discid? ( media-libs/libdiscid ) flac? ( media-libs/flac ) mad? ( >=media-libs/libmad-0.14 ) mikmod? ( media-libs/libmikmod:0 ) modplug? ( >=media-libs/libmodplug-0.7 ) mp4? ( >=media-libs/libmp4v2-1.9:0 ) musepack? ( >=media-sound/musepack-tools-444 ) pulseaudio? ( media-sound/pulseaudio ) vorbis? ( >=media-libs/libvorbis-1.0 ) wavpack? ( media-sound/wavpack ) wma? ( >=virtual/ffmpeg-0.10.2-r1 ) virtual/pkgconfig
 DESCRIPTION=A ncurses based music player with plugin support for many formats
 EAPI=4
 HOMEPAGE=http://cmus.sourceforge.net/
-IUSE=aac alsa ao cue cddb cdda discid debug examples flac mad mikmod modplug mp4 musepack oss pidgin pulseaudio unicode vorbis wavpack wma zsh-completion
+IUSE=aac alsa ao cue cdda cddb discid debug examples flac mad mikmod modplug mp4 musepack oss pidgin pulseaudio unicode vorbis wavpack wma zsh-completion
 KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd
 LICENSE=GPL-2
-RDEPEND=sys-libs/ncurses[unicode?] aac? ( media-libs/faad2 ) alsa? ( >=media-libs/alsa-lib-1.0.11 ) ao? ( media-libs/libao ) cue? ( media-libs/libcue ) cddb? ( media-libs/libcddb ) cdda? ( dev-libs/libcdio ) discid? ( media-libs/libdiscid ) flac? ( media-libs/flac ) mad? ( >=media-libs/libmad-0.14 ) mikmod? ( media-libs/libmikmod:0 ) modplug? ( >=media-libs/libmodplug-0.7 ) mp4? ( >=media-libs/libmp4v2-1.9:0 ) musepack? ( >=media-sound/musepack-tools-444 ) pulseaudio? ( media-sound/pulseaudio ) vorbis? ( >=media-libs/libvorbis-1.0 ) wavpack? ( media-sound/wavpack ) wma? ( >=virtual/ffmpeg-0.10.2-r1 ) zsh-completion? ( app-shells/zsh ) pidgin? ( net-im/pidgin dev-python/dbus-python )
+RDEPEND=sys-libs/ncurses[unicode?] aac? ( media-libs/faad2 ) alsa? ( >=media-libs/alsa-lib-1.0.11 ) ao? ( media-libs/libao ) cue? ( media-libs/libcue ) cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) ) cddb? ( media-libs/libcddb ) discid? ( media-libs/libdiscid ) flac? ( media-libs/flac ) mad? ( >=media-libs/libmad-0.14 ) mikmod? ( media-libs/libmikmod:0 ) modplug? ( >=media-libs/libmodplug-0.7 ) mp4? ( >=media-libs/libmp4v2-1.9:0 ) musepack? ( >=media-sound/musepack-tools-444 ) pulseaudio? ( media-sound/pulseaudio ) vorbis? ( >=media-libs/libvorbis-1.0 ) wavpack? ( media-sound/wavpack ) wma? ( >=virtual/ffmpeg-0.10.2-r1 ) zsh-completion? ( app-shells/zsh ) pidgin? ( net-im/pidgin dev-python/dbus-python )
 SLOT=0
 SRC_URI=mirror://sourceforge/cmus/cmus-v2.5.0.tar.bz2
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=0f4297a15abc28cbc1d92fec7ae7db69
+_md5_=7abc26b4a1b79e38368d677a331b55d8

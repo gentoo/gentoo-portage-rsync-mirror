@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.172 2013/01/19 03:42:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.174 2013/01/19 22:23:05 cardoe Exp $
+
+  19 Jan 2013; Doug Goldstein <cardoe@gentoo.org> qemu-1.2.2-r2.ebuild:
+  Just change the name of the tarball so no one sees anything weird
+
+*qemu-1.2.2-r2 (19 Jan 2013)
+
+  19 Jan 2013; Doug Goldstein <cardoe@gentoo.org> +qemu-1.2.2-r2.ebuild,
+  -qemu-1.2.2-r1.ebuild:
+  Regenerate bad patchset. Identified by Marien Zwart <marienz@gentoo.org>, bug
+  #452918
 
 *qemu-1.2.2-r1 (19 Jan 2013)
 

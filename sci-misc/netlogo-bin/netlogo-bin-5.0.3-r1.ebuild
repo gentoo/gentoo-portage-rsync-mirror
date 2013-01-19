@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/netlogo-bin-5.0.3.ebuild,v 1.1 2013/01/07 01:08:51 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/netlogo-bin-5.0.3-r1.ebuild,v 1.1 2013/01/19 22:02:16 creffett Exp $
 
 EAPI=5
 
@@ -29,6 +29,7 @@ QA_PREBUILT="/usr/share/"${PN}"/lib/Linux-*/*.so"
 src_install() {
 	insinto /usr/share/"${PN}"/
 	doins *.jar
+	rm lib/quaqua-7.3.4.jar
 	java-pkg_dojar extensions/sound/*.jar
 	java-pkg_dojar extensions/profiler/*.jar
 	java-pkg_dojar extensions/array/*.jar
@@ -39,6 +40,7 @@ src_install() {
 	java-pkg_dojar lib/*.jar
 
 	dohtml -r docs/*
+	dodoc "docs/NetLogo User Manual.pdf" docs/shapes.nlogo
 	insinto /usr/share/"${PN}"/models
 	doins -r models/*
 

@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/winetricks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.14 2013/01/06 02:58:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.15 2013/01/19 22:31:02 tetromino Exp $
+
+*winetricks-935 (19 Jan 2013)
+
+  19 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -winetricks-927.ebuild, winetricks-931.ebuild, +winetricks-935.ebuild,
+  winetricks-99999999.ebuild:
+  Version bump, drop old. Silence QA messages about Wine category in .desktop
+  file (bug #451552, thanks to Ilya Gordeev and Michael Palimaka).
 
 *winetricks-931 (06 Jan 2013)
 

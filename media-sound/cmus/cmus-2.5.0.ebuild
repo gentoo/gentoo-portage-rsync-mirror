@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.5.0.ebuild,v 1.1 2012/11/18 10:55:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.5.0.ebuild,v 1.3 2013/01/19 22:31:15 ssuominen Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -14,16 +14,16 @@ SRC_URI="mirror://sourceforge/cmus/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="aac alsa ao cue cddb cdda discid debug examples flac mad mikmod modplug mp4 musepack oss pidgin pulseaudio unicode vorbis wavpack wma zsh-completion"
+IUSE="aac alsa ao cue cdda cddb discid debug examples flac mad mikmod modplug mp4 musepack oss pidgin pulseaudio unicode vorbis wavpack wma zsh-completion"
 
 CDEPEND="sys-libs/ncurses[unicode?]
 	aac? ( media-libs/faad2 )
 	alsa? ( >=media-libs/alsa-lib-1.0.11 )
-	ao? (  media-libs/libao )
-	cue? (  media-libs/libcue )
-	cddb? (  media-libs/libcddb )
-	cdda? (  dev-libs/libcdio )
-	discid? (  media-libs/libdiscid )
+	ao? ( media-libs/libao )
+	cue? ( media-libs/libcue )
+	cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
+	cddb? ( media-libs/libcddb )
+	discid? ( media-libs/libdiscid )
 	flac? ( media-libs/flac )
 	mad? ( >=media-libs/libmad-0.14 )
 	mikmod? ( media-libs/libmikmod:0 )
@@ -56,7 +56,7 @@ src_configure() {
 
 	my_config cue CONFIG_CUE
 	my_config cddb CONFIG_CDDB
-	my_config cdio CONFIG_CDIO
+	my_config cdda CONFIG_CDIO
 	my_config discid CONFIG_DISCID
 	my_config flac CONFIG_FLAC
 	my_config mad CONFIG_MAD
