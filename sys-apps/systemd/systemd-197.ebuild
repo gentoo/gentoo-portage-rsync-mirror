@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-197.ebuild,v 1.1 2013/01/18 18:24:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-197.ebuild,v 1.2 2013/01/19 00:31:40 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 inherit autotools-utils bash-completion-r1 linux-info pam \
-	python-single-r1 systemd
+	python-single-r1 systemd udev
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
@@ -115,7 +115,8 @@ src_configure() {
 
 src_install() {
 	autotools-utils_src_install \
-		bashcompletiondir=/tmp
+		bashcompletiondir=/tmp \
+		udevlibexecdir="$(udev_get_udevdir)"
 
 	# remove pam.d plugin .la-file
 	prune_libtool_files --modules

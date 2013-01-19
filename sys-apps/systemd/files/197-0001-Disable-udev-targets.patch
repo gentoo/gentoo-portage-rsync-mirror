@@ -1,14 +1,14 @@
-From 75a1c1ea9b8438d0b1b7714d82a15fa40f33bb23 Mon Sep 17 00:00:00 2001
+From 39640ff78085e151b9f9fe03bde76efb47facdd0 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20G=C3=B3rny?= <mgorny@gentoo.org>
 Date: Fri, 18 Jan 2013 17:35:54 +0100
 Subject: [PATCH] Disable udev & libsystemd-daemon for systemd ebuild.
 
 ---
- Makefile.am | 12 +++++++-----
- 1 file changed, 7 insertions(+), 5 deletions(-)
+ Makefile.am | 15 ++++++++++-----
+ 1 file changed, 10 insertions(+), 5 deletions(-)
 
 diff --git a/Makefile.am b/Makefile.am
-index fb7d8fe..3c8f5b0 100644
+index fb7d8fe..09cf7c2 100644
 --- a/Makefile.am
 +++ b/Makefile.am
 @@ -293,8 +293,6 @@ dist_systemunit_DATA = \
@@ -30,10 +30,13 @@ index fb7d8fe..3c8f5b0 100644
  	units/debug-shell.service
  
  if HAVE_KMOD
-@@ -1658,6 +1653,10 @@ systemd_tty_ask_password_agent_LDADD = \
+@@ -1658,6 +1653,13 @@ systemd_tty_ask_password_agent_LDADD = \
  	libsystemd-label.la \
  	libsystemd-shared.la
  
++dist_udevrules_DATA += \
++	rules/99-systemd.rules
++
 +# disable udev & systemd-daemon which are installed by sys-fs/udev
 +# ENABLE_GUDEV is something that won't be set in systemd ebuild
 +if ENABLE_GUDEV
@@ -41,7 +44,7 @@ index fb7d8fe..3c8f5b0 100644
  # ------------------------------------------------------------------------------
  libsystemd_daemon_la_SOURCES = \
  	src/libsystemd-daemon/sd-daemon.c
-@@ -2417,6 +2416,9 @@ dist_udevrules_DATA += \
+@@ -2417,6 +2419,9 @@ dist_udevrules_DATA += \
  udevlibexec_PROGRAMS += \
  	mtd_probe
  
