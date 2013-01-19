@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/apipkg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apipkg/ChangeLog,v 1.4 2012/06/19 17:44:19 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apipkg/ChangeLog,v 1.5 2013/01/19 20:46:21 mgorny Exp $
+
+*apipkg-1.2-r1 (19 Jan 2013)
+
+  19 Jan 2013; Michał Górny <mgorny@gentoo.org> +apipkg-1.2-r1.ebuild:
+  Migrate to distutils-r1.
 
   19 Jun 2012; Kacper Kowalik <xarthisius@gentoo.org> apipkg-1.2.ebuild:
   Drop MY_P, bump to eapi4, add missing dependency on app-arch/unzip, drop test
@@ -22,4 +27,3 @@
   02 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   +apipkg-1.0_beta6.ebuild, +metadata.xml:
   Initial addition. Ebuild written by me.
-
