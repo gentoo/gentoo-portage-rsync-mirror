@@ -1,6 +1,11 @@
 # ChangeLog for razorqt-base/razorqt-session
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-session/ChangeLog,v 1.4 2013/01/17 07:23:31 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-session/ChangeLog,v 1.5 2013/01/19 14:03:03 yngwin Exp $
+
+*razorqt-session-0.5.2 (19 Jan 2013)
+
+  19 Jan 2013; Ben de Groot <yngwin@gentoo.org> +razorqt-session-0.5.2.ebuild:
+  Razor-qt 0.5.2 version bump
 
   17 Jan 2013; Ben de Groot <yngwin@gentoo.org> -razorqt-session-0.5.0.ebuild,
   razorqt-session-0.5.1.ebuild:

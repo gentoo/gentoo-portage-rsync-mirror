@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mkinitcpio/mkinitcpio-0.9.2-r1.ebuild,v 1.7 2012/12/19 11:19:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mkinitcpio/mkinitcpio-0.9.2-r2.ebuild,v 1.1 2013/01/19 14:24:35 ssuominen Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ RDEPEND="app-arch/cpio
 	sys-apps/grep
 	>=sys-apps/kmod-12-r1
 	>=sys-apps/util-linux-2.21
-	udev? ( >virtual/udev-171 )
+	udev? ( >=virtual/udev-197 )
 	device-mapper? ( sys-fs/lvm2[static] )
 	cryptsetup? ( sys-fs/cryptsetup[static] )
 	mdadm? ( sys-fs/mdadm[static] )
