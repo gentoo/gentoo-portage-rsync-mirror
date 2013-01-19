@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/adns-python
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adns-python/ChangeLog,v 1.29 2012/02/21 08:06:21 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adns-python/ChangeLog,v 1.31 2013/01/19 11:09:54 mgorny Exp $
+
+  19 Jan 2013; Michał Górny <mgorny@gentoo.org> adns-python-1.2.1-r1.ebuild:
+  Drop pypy because of segfaults.
+
+*adns-python-1.2.1-r1 (19 Jan 2013)
+
+  19 Jan 2013; Michał Górny <mgorny@gentoo.org> +adns-python-1.2.1-r1.ebuild:
+  Migrate to distutils-r1.
 
   21 Feb 2012; Patrick Lauer <patrick@gentoo.org> adns-python-1.2.1.ebuild:
   Restricting jython
