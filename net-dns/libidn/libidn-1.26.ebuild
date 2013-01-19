@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.26.ebuild,v 1.1 2012/12/15 17:52:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.26.ebuild,v 1.2 2013/01/19 17:09:04 jer Exp $
 
 EAPI=4
 inherit elisp-common java-pkg-opt-2 mono
@@ -37,15 +37,16 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_enable nls) \
 		$(use_enable java) \
 		$(use_enable mono csharp mono) \
+		$(use_enable nls) \
 		$(use_enable static-libs static) \
+		--disable-silent-rules \
 		--disable-valgrind-tests \
 		--with-lispdir="${EPREFIX}${SITELISP}/${PN}" \
-		--with-packager="Gentoo" \
+		--with-packager-bug-reports="https://bugs.gentoo.org" \
 		--with-packager-version="r${PR}" \
-		--with-packager-bug-reports="https://bugs.gentoo.org"
+		--with-packager="Gentoo"
 }
 
 src_compile() {
