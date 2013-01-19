@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-12.10.ebuild,v 1.2 2012/11/27 02:15:54 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-13.1.ebuild,v 1.1 2013/01/18 23:13:47 chithanh Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils multilib linux-info linux-mod toolchain-funcs versionator
 
@@ -10,18 +10,20 @@ DESCRIPTION="Ati precompiled drivers for Radeon Evergreen (HD5000 Series) and ne
 HOMEPAGE="http://www.amd.com"
 MY_V=( $(get_version_components) )
 #RUN="${WORKDIR}/amd-driver-installer-9.00-x86.x86_64.run"
-SRC_URI="http://www2.ati.com/drivers/linux/amd-driver-installer-catalyst-12.10-x86.x86_64.zip"
+DRIVERS_URI="http://www2.ati.com/drivers/linux/amd-driver-installer-catalyst-${PV}-linux-x86.x86_64.zip"
+XVBA_SDK_URI="http://developer.amd.com.php53-23.ord1-1.websitetestlink.com/wordpress/media/2012/10/xvba-sdk-0.74-404001.tar.gz"
+SRC_URI="${DRIVERS_URI} ${XVBA_SDK_URI}"
 FOLDER_PREFIX="common/"
 IUSE="debug +modules multilib qt4 static-libs disable-watermark"
 
-LICENSE="AMD GPL-2 QPL-1.0 as-is"
+LICENSE="AMD GPL-2 QPL-1.0"
 KEYWORDS="-* ~amd64 ~x86"
 SLOT="1"
 
 RESTRICT="bindist"
 
 RDEPEND="
-	<=x11-base/xorg-server-1.12.49[-minimal]
+	<=x11-base/xorg-server-1.13.49[-minimal]
 	>=app-admin/eselect-opengl-1.0.7
 	app-admin/eselect-opencl
 	sys-power/acpid
@@ -31,6 +33,7 @@ RDEPEND="
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
+	virtual/glu
 	multilib? (
 			app-emulation/emul-linux-x86-opengl
 			app-emulation/emul-linux-x86-xlibs
@@ -42,7 +45,7 @@ RDEPEND="
 			x11-libs/libXfixes
 			x11-libs/libXxf86vm
 			x11-libs/qt-core:4
-			x11-libs/qt-gui:4
+			x11-libs/qt-gui:4[accessibility]
 	)
 "
 
@@ -54,6 +57,7 @@ DEPEND="${RDEPEND}
 	x11-libs/libXtst
 	sys-apps/findutils
 	app-misc/pax-utils
+	app-arch/unzip
 "
 
 EMULTILIB_PKG="true"
@@ -218,14 +222,6 @@ _check_kernel_config() {
 		failed=1
 	fi
 
-	#if linux_chkconfig_present X86_X32; then
-	#	eerror "You've enabled x32 in the kernel."
-	#	eerror "Unfortunately, this option is not supported yet and prevents the fglrx"
-	#	eerror "kernel module from loading."
-	#	error+=" X86_32 enabled;"
-	#	failed=1
-	#fi
-
 	[[ ${failed} -ne 0 ]] && die "${error}"
 }
 
@@ -279,18 +275,26 @@ pkg_setup() {
 }
 
 src_unpack() {
-	if [[ ${A} =~ .*\.tar\.gz ]]; then
-		unpack ${A}
+	local DRIVERS_DISTFILE XVBA_SDK_DISTFILE
+	DRIVERS_DISTFILE=${DRIVERS_URI/*\//}
+	XVBA_SDK_DISTFILE=${XVBA_SDK_URI/*\//}
+
+	if [[ ${DRIVERS_DISTFILE} =~ .*\.tar\.gz ]]; then
+		unpack ${DRIVERS_DISTFILE}
 	else
 		#please note, RUN may be insanely assigned at top near SRC_URI
-		if [[ ${A} =~ .*\.zip ]]; then
-			unpack ${A}
-			[[ -z "$RUN" ]] && RUN="${S}/${A/%.zip/.run}"
+		if [[ ${DRIVERS_DISTFILE} =~ .*\.zip ]]; then
+			unpack ${DRIVERS_DISTFILE}
+			[[ -z "$RUN" ]] && RUN="${S}/${DRIVERS_DISTFILE/%.zip/.run}"
 		else
-			RUN="${DISTDIR}/${A}"
+			RUN="${DISTDIR}/${DRIVERS_DISTFILE}"
 		fi
 		sh ${RUN} --extract "${S}" 2>&1 > /dev/null || die
 	fi
+
+	mkdir xvba_sdk
+	cd xvba_sdk
+	unpack ${XVBA_SDK_DISTFILE}
 }
 
 src_prepare() {
@@ -337,6 +341,13 @@ src_prepare() {
 	# compile fix for linux-3.7
 	# https://bugs.gentoo.org/show_bug.cgi?id=438516
 	epatch "${FILESDIR}/ati-drivers-vm-reserverd.patch"
+
+	# compile fix for AGP-less kernel, bug #435322
+	epatch "${FILESDIR}"/ati-drivers-12.9-KCL_AGP_FindCapsRegisters-stub.patch
+
+	# Use ACPI_DEVICE_HANDLE wrapper to make driver build on linux-3.8
+	# see https://bugs.gentoo.org/show_bug.cgi?id=448216
+	epatch "${FILESDIR}/ati-drivers-kernel-3.8-acpihandle.patch"
 
 	cd "${MODULE_DIR}"
 
@@ -585,9 +596,10 @@ src_install-libs() {
 	for so in $(find "${D}"/usr/$(get_libdir) -maxdepth 1 -name *.so.[0-9].[0-9])
 	do
 		local soname=${so##*/}
-		## let's keep also this alternative way ;)
-		#dosym ${soname} /usr/$(get_libdir)/${soname%.[0-9]}
-		dosym ${soname} /usr/$(get_libdir)/$(scanelf -qF "#f%S" ${so})
+		local soname_one=${soname%.[0-9]}
+		local soname_zero=${soname_one%.[0-9]}
+		dosym ${soname} /usr/$(get_libdir)/${soname_one}
+		dosym ${soname_one} /usr/$(get_libdir)/${soname_zero}
 	done
 
 	# See https://bugs.gentoo.org/show_bug.cgi?id=443466
@@ -596,6 +608,9 @@ src_install-libs() {
 
 	#remove static libs if not wanted
 	use static-libs || rm -rf "${D}"/usr/$(get_libdir)/libfglrx_dm.a
+
+	#install xvba sdk headers
+	doheader xvba_sdk/include/amdxvba.h
 }
 
 pkg_postinst() {
@@ -617,6 +632,13 @@ pkg_postinst() {
 	use modules && linux-mod_pkg_postinst
 	"${ROOT}"/usr/bin/eselect opengl set --use-old ati
 	"${ROOT}"/usr/bin/eselect opencl set --use-old amd
+
+	if has_version ">=x11-drivers/xf86-video-intel-2.20.3"; then
+		ewarn "It is reported that xf86-video-intel-2.20.3 and later cause the X server"
+		ewarn "to crash on systems that use hybrid AMD/Intel graphics. If you experience"
+		ewarn "this crash, downgrade to xf86-video-intel-2.20.2 or earlier."
+		ewarn "For details, see https://bugs.gentoo.org/show_bug.cgi?id=430000"
+	fi
 }
 
 pkg_preinst() {
