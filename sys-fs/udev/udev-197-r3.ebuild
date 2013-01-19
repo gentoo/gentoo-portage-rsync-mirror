@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.11 2013/01/18 16:59:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.12 2013/01/19 13:47:25 ssuominen Exp $
 
 EAPI=4
 
@@ -293,6 +293,7 @@ src_install()
 		systemd-install-hook
 		libudev-install-hook
 		libsystemd-daemon-install-hook
+		install-pkgincludeHEADERS
 	)
 
 	if use gudev
@@ -315,6 +316,7 @@ src_install()
 				units/systemd-udev-settle.service"
 		pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 		systemunitdir="$(systemd_get_unitdir)"
+		pkginclude_HEADERS="src/systemd/sd-daemon.h"
 	)
 	emake -j1 DESTDIR="${D}" "${targets[@]}"
 	if use doc
@@ -334,6 +336,15 @@ src_install()
 
 	# install udevadm symlink
 	dosym ../bin/udevadm /sbin/udevadm
+
+	# move udevd where it should be and remove unlogical /lib/systemd
+	mv "${ED}"/lib/systemd/systemd-udevd "${ED}"/sbin/udevd || die
+	rm -r "${ED}"/lib/systemd
+
+	# install compability symlink for systemd and initramfs tools
+	dosym /sbin/udevd "$(systemd_get_utildir)"/systemd-udevd
+	find "${ED}/$(systemd_get_unitdir)" -name '*.service' -exec \
+		sed -i -e "/ExecStart/s:/lib/systemd:$(systemd_get_utildir):" {} +
 }
 
 pkg_preinst()
@@ -351,10 +362,9 @@ pkg_preinst()
 		fi
 	done
 	preserve_old_lib /$(get_libdir)/libudev.so.0
-	if has_version '<sys-fs/udev-197'; then
-		net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
-		[[ -f ${net_rules} ]] || cp "${FILESDIR}"/80-net-name-slot.rules "${net_rules}"
-	fi
+
+	net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
+	[[ -f ${net_rules} ]] || cp "${FILESDIR}"/80-net-name-slot.rules "${net_rules}"
 }
 
 # This function determines if a directory is a mount point.

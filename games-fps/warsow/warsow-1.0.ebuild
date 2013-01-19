@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.0.ebuild,v 1.6 2012/11/22 14:30:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.0.ebuild,v 1.7 2013/01/19 13:44:28 hasufell Exp $
 
 EAPI=4
 inherit eutils check-reqs gnome2-utils games
@@ -12,7 +12,9 @@ SRC_URI="http://funpark.warsow-esport.net/~${PN}/${PV}/${MY_P}_unified.tar.gz
 	http://funpark.warsow-esport.net/~${PN}/${PV}/${MY_P}_sdk.tar.gz
 	mirror://gentoo/${PN}.png"
 
-LICENSE="GPL-2 warsow"
+# ZLIB: bundled angelscript
+# MIT: bundled libRocket
+LICENSE="GPL-2 MIT ZLIB warsow"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="+angelscript debug dedicated irc openal server"

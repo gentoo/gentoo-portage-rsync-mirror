@@ -1,6 +1,12 @@
 # ChangeLog for razorqt-base/razorqt-autosuspend
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-autosuspend/ChangeLog,v 1.4 2013/01/17 07:08:57 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-autosuspend/ChangeLog,v 1.5 2013/01/19 13:34:49 yngwin Exp $
+
+*razorqt-autosuspend-0.5.2 (19 Jan 2013)
+
+  19 Jan 2013; Ben de Groot <yngwin@gentoo.org>
+  +razorqt-autosuspend-0.5.2.ebuild:
+  Razor-qt 0.5.2 version bump
 
   17 Jan 2013; Ben de Groot <yngwin@gentoo.org>
   -razorqt-autosuspend-0.5.0.ebuild, razorqt-autosuspend-0.5.1.ebuild:

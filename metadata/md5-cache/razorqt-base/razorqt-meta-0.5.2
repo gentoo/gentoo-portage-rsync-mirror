@@ -1,0 +1,10 @@
+DEFINED_PHASES=-
+DESCRIPTION=Meta ebuild to install the complete Razor-qt desktop environment
+EAPI=4
+HOMEPAGE=http://razor-qt.org/
+IUSE=doc +lightdm +policykit
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2+ LGPL-2.1+
+RDEPEND=~razorqt-base/libqtxdg-0.5.2 ~razorqt-base/razorqt-appswitcher-0.5.2 ~razorqt-base/razorqt-autosuspend-0.5.2 ~razorqt-base/razorqt-config-0.5.2 ~razorqt-base/razorqt-data-0.5.2[doc?] ~razorqt-base/razorqt-desktop-0.5.2 ~razorqt-base/razorqt-kbshortcuts-0.5.2 ~razorqt-base/razorqt-libs-0.5.2 ~razorqt-base/razorqt-notifications-0.5.2 ~razorqt-base/razorqt-openssh-askpass-0.5.2 ~razorqt-base/razorqt-panel-0.5.2 ~razorqt-base/razorqt-power-0.5.2 ~razorqt-base/razorqt-runner-0.5.2 ~razorqt-base/razorqt-session-0.5.2 lightdm? ( ~razorqt-base/razorqt-lightdm-greeter-0.5.2 ) policykit? ( ~razorqt-base/razorqt-policykit-0.5.2 ) || ( x11-wm/openbox kde-base/kwin x11-wm/metacity xfce-base/xfwm4 x11-wm/enlightenment x11-wm/fvwm x11-wm/sawfish x11-wm/windowmaker ) !<razorqt-base/razorqt-lightdm-greeter-0.5.0 !<razorqt-base/razorqt-meta-0.5.0 !x11-misc/lightdm-razorqt-greeter !x11-wm/razorqt
+SLOT=0
+_md5_=36c9209f41b8f56096585f5c35592c6c

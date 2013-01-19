@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r2.ebuild,v 1.10 2013/01/17 19:35:25 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r4.ebuild,v 1.1 2013/01/19 13:47:25 ssuominen Exp $
 
 EAPI=4
 
@@ -42,7 +42,6 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 
 DEPEND="${COMMON_DEPEND}
 	dev-util/gperf
-	>=dev-util/intltool-0.50
 	virtual/os-headers
 	virtual/pkgconfig
 	!<sys-kernel/linux-headers-${KV_min}
@@ -53,7 +52,8 @@ if [[ ${PV} = 9999* ]]
 then
 	DEPEND="${DEPEND}
 		app-text/docbook-xsl-stylesheets
-		dev-libs/libxslt"
+		dev-libs/libxslt
+		>=dev-util/intltool-0.50"
 fi
 
 RDEPEND="${COMMON_DEPEND}
@@ -129,6 +129,27 @@ src_prepare()
 		EPATCH_SUFFIX=patch EPATCH_FORCE=yes epatch
 	fi
 
+	# Remove requirements for gettext and intltool wrt bug #443028
+	if ! has_version dev-util/intltool && ! [[ ${PV} = 9999* ]]; then
+		sed -i \
+			-e '/INTLTOOL_APPLIED_VERSION=/s:=.*:=0.40.0:' \
+			-e '/XML::Parser perl module is required for intltool/s|^|:|' \
+			configure || die
+		eval export INTLTOOL_{EXTRACT,MERGE,UPDATE}=/bin/true
+		eval export {MSG{FMT,MERGE},XGETTEXT}=/bin/true
+	fi
+
+	# This check is for maintainers only
+	if [[ ${PV} = 9999* ]]; then
+		# Support uClibc wrt bug #443030 with a safe kludge so we know when
+		# to check for other uses than logs. See the echo for secure_getenv
+		# at the end of src_prepare().
+		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 16 ]]; then
+			eerror "The line count of secure_getenv failed, see bug #443030"
+			die
+		fi
+	fi
+
 	# apply user patches
 	epatch_user
 
@@ -153,6 +174,12 @@ src_prepare()
 	else
 		check_default_rules
 		elibtoolize
+	fi
+
+	# This is the actual fix for bug #443030 if the check earlier doesn't fail.
+	if ! use elibc_glibc; then
+		echo '#define secure_getenv(x) NULL' >> config.h.in
+		sed -i -e '/error.*secure_getenv/s:.*:#define secure_getenv(x) NULL:' src/shared/missing.h || die
 	fi
 }
 
@@ -187,6 +214,7 @@ src_configure()
 		--disable-tcpwrap
 		--disable-timedated
 		--disable-xz
+		--disable-silent-rules
 		$(use_enable acl)
 		$(use_enable doc gtk-doc)
 		$(use_enable gudev)
@@ -265,6 +293,7 @@ src_install()
 		systemd-install-hook
 		libudev-install-hook
 		libsystemd-daemon-install-hook
+		install-pkgincludeHEADERS
 	)
 
 	if use gudev
@@ -287,6 +316,7 @@ src_install()
 				units/systemd-udev-settle.service"
 		pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 		systemunitdir="$(systemd_get_unitdir)"
+		pkginclude_HEADERS="src/systemd/sd-daemon.h"
 	)
 	emake -j1 DESTDIR="${D}" "${targets[@]}"
 	if use doc
@@ -306,6 +336,15 @@ src_install()
 
 	# install udevadm symlink
 	dosym ../bin/udevadm /sbin/udevadm
+
+	# move udevd where it should be and remove unlogical /lib/systemd
+	mv "${ED}"/lib/systemd/systemd-udevd "${ED}"/sbin/udevd || die
+	rm -r "${ED}"/lib/systemd
+
+	# install compability symlink for systemd and initramfs tools
+	dosym /sbin/udevd "$(systemd_get_utildir)"/systemd-udevd
+	find "${ED}/$(systemd_get_unitdir)" -name '*.service' -exec \
+		sed -i -e "/ExecStart/s:/lib/systemd:$(systemd_get_utildir):" {} +
 }
 
 pkg_preinst()
@@ -323,9 +362,10 @@ pkg_preinst()
 		fi
 	done
 	preserve_old_lib /$(get_libdir)/libudev.so.0
-
-	net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
-	[[ -f ${net_rules} ]] || cp "${FILESDIR}"/80-net-name-slot.rules "${net_rules}"
+	if has_version '<sys-fs/udev-197'; then
+		net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
+		[[ -f ${net_rules} ]] || cp "${FILESDIR}"/80-net-name-slot.rules "${net_rules}"
+	fi
 }
 
 # This function determines if a directory is a mount point.
