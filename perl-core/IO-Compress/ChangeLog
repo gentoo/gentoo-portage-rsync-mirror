@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/IO-Compress
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Compress/ChangeLog,v 1.51 2012/12/25 21:16:48 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Compress/ChangeLog,v 1.52 2013/01/19 12:18:17 tove Exp $
+
+*IO-Compress-2.60.0 (19 Jan 2013)
+
+  19 Jan 2013; Torsten Veller <tove@gentoo.org> +IO-Compress-2.60.0.ebuild:
+  Version bump
 
 *IO-Compress-2.59.0 (25 Dec 2012)
 

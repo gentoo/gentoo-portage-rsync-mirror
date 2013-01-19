@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Compress-Raw-Bzip2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Compress-Raw-Bzip2/ChangeLog,v 1.49 2012/12/08 15:17:52 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Compress-Raw-Bzip2/ChangeLog,v 1.50 2013/01/19 12:15:57 tove Exp $
+
+*Compress-Raw-Bzip2-2.60.0 (19 Jan 2013)
+
+  19 Jan 2013; Torsten Veller <tove@gentoo.org>
+  +Compress-Raw-Bzip2-2.60.0.ebuild:
+  Version bump
 
 *Compress-Raw-Bzip2-2.59.0 (08 Dec 2012)
 

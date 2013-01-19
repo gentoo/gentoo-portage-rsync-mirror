@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Sub-Override
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Override/ChangeLog,v 1.26 2012/06/24 12:59:24 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Override/ChangeLog,v 1.27 2013/01/19 12:23:09 tove Exp $
+
+*Sub-Override-0.90.0 (19 Jan 2013)
+
+  19 Jan 2013; Torsten Veller <tove@gentoo.org> +Sub-Override-0.90.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
