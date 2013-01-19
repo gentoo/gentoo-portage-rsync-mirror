@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.116 2013/01/09 18:32:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.118 2013/01/19 15:53:57 ssuominen Exp $
+
+  19 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r4.ebuild,
+  udisks-2.0.91.ebuild:
+  amd64 stable wrt #427550
+
+  19 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> -udisks-2.0.1.ebuild,
+  -udisks-2.0.90.ebuild:
+  old
 
 *udisks-2.0.91 (09 Jan 2013)
 

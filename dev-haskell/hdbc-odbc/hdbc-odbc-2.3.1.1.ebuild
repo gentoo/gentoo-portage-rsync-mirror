@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/hdbc-odbc-2.3.1.1.ebuild,v 1.1 2012/12/24 15:34:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/hdbc-odbc-2.3.1.1.ebuild,v 1.2 2013/01/19 15:44:48 slyfox Exp $
 
 EAPI=5
 
@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${MY_PN}-2.3.1.0-ghc-7.6.patch"
+	epatch "${FILESDIR}/${PN}-2.3.1.0-ghc-7.6.patch"
 }
 
 src_configure() {

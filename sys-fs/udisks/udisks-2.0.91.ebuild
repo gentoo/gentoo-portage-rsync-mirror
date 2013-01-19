@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-2.0.91.ebuild,v 1.1 2013/01/09 18:32:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-2.0.91.ebuild,v 1.2 2013/01/19 15:53:57 ssuominen Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils linux-info systemd
@@ -11,13 +11,13 @@ SRC_URI="http://udisks.freedesktop.org/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug crypt +gptfdisk +introspection selinux systemd"
 
-UDEV_VERSION="196"
+UDEV_VERSION="197"
 COMMON_DEPEND=">=dev-libs/glib-2.32
 	>=dev-libs/libatasmart-0.19
-	>=sys-auth/polkit-0.108
+	>=sys-auth/polkit-0.110
 	virtual/acl
 	>=virtual/udev-${UDEV_VERSION}[gudev,hwdb]
 	introspection? ( >=dev-libs/gobject-introspection-1.30 )

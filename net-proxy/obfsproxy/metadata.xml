@@ -5,4 +5,7 @@
 		<email>blueness@gentoo.org</email>
 		<name>Anthony G. Basile</name>
 	</maintainer>
+	<use>
+		<flag name='daemon'>Run obfsproxy as a standalone daemon</flag>
+	</use>
 </pkgmetadata>

@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hdbc-odbc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/ChangeLog,v 1.19 2012/12/24 15:34:09 slyfox Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/ChangeLog,v 1.20 2013/01/19 15:44:48 slyfox Exp $
+
+  19 Jan 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/hdbc-odbc-2.3.1.0-ghc-7.6.patch, hdbc-odbc-2.3.1.1.ebuild:
+  Added missing patch noticed by Diego Elio Pettenò in bug #452994.
 
 *hdbc-odbc-2.3.1.1 (24 Dec 2012)
 
