@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.131 2013/01/10 13:11:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.132 2013/01/19 15:26:35 flameeyes Exp $
+
+*munin-2.1.9999 (19 Jan 2013)
+*munin-2.0.10-r1 (19 Jan 2013)
+
+  19 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org> +munin-2.0.10-r1.ebuild,
+  +munin-2.1.9999.ebuild, files/munin-asyncd.init.2:
+  Add a new revision which uses tmpfilesd instead of a local.start script,
+  changing all runtime paths to /run directly; munin-asyncd had its pidfile
+  mandated by the init script so change it for all of them as well; add a live
+  GIT ebuild for 2.1 series, where none of our patches are needed (all merged
+  in).
 
 *munin-2.0.10 (10 Jan 2013)
 
