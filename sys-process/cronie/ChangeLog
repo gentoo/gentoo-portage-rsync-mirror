@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/cronie
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.25 2012/12/18 22:36:34 polynomial-c Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.26 2013/01/19 17:43:32 polynomial-c Exp $
+
+*cronie-1.4.9-r1 (19 Jan 2013)
+
+  19 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> -cronie-1.4.8-r1.ebuild,
+  -cronie-1.4.9.ebuild, +cronie-1.4.9-r1.ebuild:
+  Make cronie use /etc/crontab again. Thanks to Dave Armstrong who reported
+  this in bug #452970.
 
 *cronie-1.4.9 (18 Dec 2012)
 
