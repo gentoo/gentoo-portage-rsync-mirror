@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/angelscript-2.25.2.ebuild,v 1.2 2013/01/18 20:52:02 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/angelscript-2.25.2.ebuild,v 1.3 2013/01/19 12:33:46 hasufell Exp $
 
 EAPI=5
 
@@ -40,9 +40,9 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/include
-	dodir /usr/$(get_libdir)
-	emake SHARED=1 VERSION=${PV} LOCAL="${D}/usr" INSTALL_LIBDIR="$(get_libdir)" install
+	doheader "${WORKDIR}"/sdk/${PN}/include/angelscript.h
+	dolib.so "${WORKDIR}"/sdk/${PN}/lib/libangelscript-${PV}.so
+	dosym libangelscript-${PV}.so /usr/$(get_libdir)/libangelscript.so
 
 	if use static-libs ; then
 		 dolib.a "${S2}"/${PN}/lib/libangelscript.a
