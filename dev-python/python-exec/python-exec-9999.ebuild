@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/python-exec-9999.ebuild,v 1.2 2012/12/17 19:43:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/python-exec-9999.ebuild,v 1.3 2013/01/19 10:21:12 mgorny Exp $
 
 EAPI=5
 
@@ -10,6 +10,10 @@ EGIT_REPO_URI="http://bitbucket.org/mgorny/${PN}.git"
 
 inherit git-2
 #endif
+
+# Kids, don't do this at home!
+inherit python-utils-r1
+PYTHON_COMPAT=( "${_PYTHON_ALL_IMPLS[@]}" )
 
 inherit autotools-utils python-r1
 

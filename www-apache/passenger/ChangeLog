@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.60 2013/01/01 18:43:00 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.61 2013/01/19 10:28:34 graaff Exp $
+
+  19 Jan 2013; Hans de Graaff <graaff@gentoo.org> -passenger-3.0.13.ebuild,
+  -passenger-3.0.14.ebuild:
+  Cleanup.
 
   02 Jan 2013; Andreas Schuerch <nativemad@gentoo.org> passenger-3.0.17.ebuild:
   x86 stable, see bug 440098

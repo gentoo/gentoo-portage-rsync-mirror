@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/tablelist-5.7.ebuild,v 1.1 2012/12/13 15:16:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/tablelist-5.7.ebuild,v 1.2 2013/01/19 10:23:13 ulm Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Multi-Column Listbox Package"
 HOMEPAGE="http://www.nemethi.de/tablelist/index.html"
 SRC_URI="http://www.nemethi.de/tablelist/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="tablelist"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples doc"
