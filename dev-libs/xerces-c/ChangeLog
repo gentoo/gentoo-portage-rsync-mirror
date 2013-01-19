@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xerces-c
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.104 2012/10/17 18:51:43 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.105 2013/01/18 23:55:50 bicatali Exp $
+
+  18 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org> xerces-c-3.1.1-r1.ebuild:
+  Keyworded amd64-linux and x86-linux
 
   17 Oct 2012; Markus Meier <maekke@gentoo.org> xerces-c-3.1.1-r1.ebuild:
   add ~arm, bug #430072
