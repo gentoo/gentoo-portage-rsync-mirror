@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14392 2013/01/19 09:45:03 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14393 2013/01/19 13:31:02 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,26 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (19 Jan 2013)
+# temp bump mask
+=razorqt-base/libqtxdg-0.5.2
+=razorqt-base/razorqt-appswitcher-0.5.2
+=razorqt-base/razorqt-autosuspend-0.5.2
+=razorqt-base/razorqt-config-0.5.2
+=razorqt-base/razorqt-data-0.5.2
+=razorqt-base/razorqt-desktop-0.5.2
+=razorqt-base/razorqt-kbshortcuts-0.5.2
+=razorqt-base/razorqt-libs-0.5.2
+=razorqt-base/razorqt-lightdm-greeter-0.5.2
+=razorqt-base/razorqt-meta-0.5.2
+=razorqt-base/razorqt-notifications-0.5.2
+=razorqt-base/razorqt-openssh-askpass-0.5.2
+=razorqt-base/razorqt-panel-0.5.2
+=razorqt-base/razorqt-policykit-0.5.2
+=razorqt-base/razorqt-power-0.5.2
+=razorqt-base/razorqt-runner-0.5.2
+=razorqt-base/razorqt-session-0.5.2
 
 # Marien Zwart <marienz@gentoo.org>
 # Patch tarball is broken, meaning this builds 1.2.0 (bug #452918)
@@ -64,7 +84,7 @@ www-apache/mod_vhs
 app-portage/epm
 
 # Pacho Ramos <pacho@gentoo.org>
-# Still uses depend.php (#449820), upstream dead for ages and 
+# Still uses depend.php (#449820), upstream dead for ages and
 # newer versions don't work. Removal in a month.
 www-apps/online-bookmarks
 
@@ -246,7 +266,7 @@ www-apache/mod_authn_pam
 www-apache/mod_cplusplus
 
 # Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Incompatible with recent kernels (#300047) , upstream dead, 
+# Incompatible with recent kernels (#300047) , upstream dead,
 # net-dialup/martian-modem can be used instead in most cases.
 net-dialup/ltmodem
 

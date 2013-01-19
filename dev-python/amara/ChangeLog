@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/amara
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/amara/ChangeLog,v 1.3 2012/05/16 09:39:14 dev-zero Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/amara/ChangeLog,v 1.5 2013/01/19 13:11:56 mgorny Exp $
+
+  19 Jan 2013; Michał Górny <mgorny@gentoo.org> amara-2.0.0_alpha6-r1.ebuild:
+  Disable pypy support.
+
+*amara-2.0.0_alpha6-r1 (19 Jan 2013)
+
+  19 Jan 2013; Michał Górny <mgorny@gentoo.org> +amara-2.0.0_alpha6-r1.ebuild:
+  Convert to distutils-r1. Enable tests, though they are known to fail terribly.
 
 *amara-2.0.0_alpha6 (16 May 2012)
 
@@ -19,4 +27,3 @@
   14 Nov 2008; Michael Marineau <marineam@gentoo.org> +metadata.xml,
   +amara-1.2.0.2.ebuild:
   Initial commit of Amara, resolves bug #112117
-
