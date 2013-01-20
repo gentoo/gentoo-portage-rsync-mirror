@@ -7,4 +7,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://download.sourceforge.net/ccsh/ccsh-0.0.4.tar.gz
 _eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=d8ef9abe7c8e9569cb4cfdc71f766d25
+_md5_=f61b665fde95a9ab68fd4ca8ef82d9ea

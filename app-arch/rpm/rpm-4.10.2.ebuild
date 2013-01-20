@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.10.2.ebuild,v 1.4 2013/01/07 19:22:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.10.2.ebuild,v 1.5 2013/01/20 10:49:26 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://rpm.org/releases/rpm-$(get_version_component_range 1-2).x/${P}.t
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
 
 IUSE="nls python doc caps lua acl selinux"
 

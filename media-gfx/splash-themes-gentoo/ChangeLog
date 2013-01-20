@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/splash-themes-gentoo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.25 2013/01/20 10:02:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.26 2013/01/20 10:39:59 pinkbyte Exp $
+
+*splash-themes-gentoo-20101212-r1 (20 Jan 2013)
+
+  20 Jan 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +splash-themes-gentoo-20101212-r1.ebuild:
+  Revision bump: EAPI 5, QA fixes, use internal function for installation
+  instead of simple 'cp'. Show postinstallation messages only at first install,
+  wrt bug #440458
 
   20 Jan 2013; Pacho Ramos <pacho@gentoo.org>
   -splash-themes-gentoo-20050429.ebuild, -splash-themes-gentoo-20080914.ebuild,

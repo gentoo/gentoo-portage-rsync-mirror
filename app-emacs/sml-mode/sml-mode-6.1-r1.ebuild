@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/sml-mode-6.1-r1.ebuild,v 1.4 2013/01/11 11:16:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/sml-mode-6.1-r1.ebuild,v 1.5 2013/01/20 10:51:32 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.el.xz"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc x86"
+KEYWORDS="alpha amd64 ppc x86"
 
 DEPEND="app-arch/xz-utils"
 

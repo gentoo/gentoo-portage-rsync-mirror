@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.23 2013/01/18 14:32:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.24 2013/01/20 10:51:20 mgorny Exp $
+
+  20 Jan 2013; Michał Górny <mgorny@gentoo.org> use.mask:
+  Remove duplicate pypy/jython masks (masked in base profile now).
 
   18 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> use.mask:
   Mask USE="cman clvm" because cman and libdlm are not keyworded on this arch.

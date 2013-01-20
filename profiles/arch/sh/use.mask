@@ -168,15 +168,6 @@ d3d
 # mask wayland since dev-libs/wayland isn't keyworded
 wayland
 
-# Michał Górny <mgorny@gentoo.org> (31 Oct 2012)
-# Mask PYTHON_TARGETS for implementations not keyworded on this arch.
-python_targets_pypy1_8
-python_targets_pypy1_9
-python_targets_jython2_5
-python_single_target_pypy1_8
-python_single_target_pypy1_9
-python_single_target_jython2_5
-
 # Samuli Suominen <ssuominen@gentoo.org> (18 Jan 2013)
 # libdlm and cman are not keyworded
 cman

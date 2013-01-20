@@ -2,7 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>app-backup</herd>
+	<herd>perl</herd>
 	<upstream>
 		<remote-id type="cpan">Snapback2</remote-id>
+		<remote-id type="cpan-module">Backup::Snapback</remote-id>
 	</upstream>
 </pkgmetadata>
