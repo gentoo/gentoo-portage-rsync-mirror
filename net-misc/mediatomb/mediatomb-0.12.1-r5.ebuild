@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1-r4.ebuild,v 1.2 2012/11/25 15:16:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1-r5.ebuild,v 1.1 2013/01/20 16:28:11 thev00d00 Exp $
 
 EAPI="4"
 inherit autotools eutils linux-info user
@@ -67,6 +67,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-thumb-cache.patch
 	epatch "${FILESDIR}"/${P}-libav9.patch
 	epatch "${FILESDIR}"/${P}-no-thumbnail.patch
+	epatch "${FILESDIR}"/${P}-avformatcontext-pointer.patch #446922
 	eautoreconf
 }
 
