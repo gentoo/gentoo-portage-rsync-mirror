@@ -3,11 +3,11 @@ DEPEND=virtual/linux-sources virtual/os-headers >=sys-apps/sed-4
 DESCRIPTION=CAPI4Linux Utils
 EAPI=3
 HOMEPAGE=ftp://ftp.in-berlin.de/pub/capi4linux/
-IUSE=fax pppd rcapid
+IUSE=fax +pppd rcapid
 KEYWORDS=~alpha ~amd64 ~ppc ~x86
 LICENSE=GPL-2
 RDEPEND=dev-lang/perl
 SLOT=0
 SRC_URI=ftp://ftp.in-berlin.de/pub/capi4linux/capi4k-utils-2005-07-18.tar.gz ftp://ftp.in-berlin.de/pub/capi4linux/OLD/capi4k-utils-2005-07-18.tar.gz http://sbriesen.de/gentoo/distfiles/capi4k-files-20050718-r4.tar.xz http://sbriesen.de/gentoo/distfiles/capi4k-patches-20050718-r4.tar.xz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	linux-info	6923bbfed4371639315c56d17e2da90c	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=51e5dfc3db21edbb428cec8290a8ec3e
+_md5_=d73ae21e7e8be34f06968643b837bedd

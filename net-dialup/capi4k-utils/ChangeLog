@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.70 2013/01/19 21:45:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.71 2013/01/20 13:54:12 dilfridge Exp $
+
+  20 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  capi4k-utils-20050718-r3.ebuild, capi4k-utils-20050718-r4.ebuild,
+  capi4k-utils-20050718-r5.ebuild:
+  Make pppd useflag default to on as per mailinglist discussion
 
   19 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
   capi4k-utils-20050718-r3.ebuild:

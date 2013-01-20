@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/pry
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/ChangeLog,v 1.10 2012/11/14 07:16:28 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/ChangeLog,v 1.11 2013/01/20 13:41:55 graaff Exp $
+
+*pry-0.9.11.4 (20 Jan 2013)
+
+  20 Jan 2013; Hans de Graaff <graaff@gentoo.org> +pry-0.9.11.4.ebuild:
+  Version bump. Drop ruby18 since it no longer seems to be supported and move
+  this version into a separate slot to allow parallel ruby18 and ruby19
+  versions if needed.
 
   14 Nov 2012; Hans de Graaff <graaff@gentoo.org> +pry-0.9.7.4-r1.ebuild:
   Revision bump to depend on the right slot of slop, and to actually write the

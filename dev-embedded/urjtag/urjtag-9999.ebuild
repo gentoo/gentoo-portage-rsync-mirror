@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/urjtag-9999.ebuild,v 1.2 2012/03/28 17:30:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/urjtag/urjtag-9999.ebuild,v 1.3 2013/01/20 13:58:53 swegener Exp $
 
 # TODO: figure out htf to make python.eclass work
 
 EAPI="4"
 
-inherit eutils
+inherit eutils multilib
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://urjtag.git.sourceforge.net/gitroot/urjtag/urjtag"
 	EGIT_SOURCEDIR=${WORKDIR}
@@ -40,6 +40,8 @@ src_prepare() {
 }
 
 src_configure() {
+	use ftd2xx && LDFLAGS="${LDFLAGS} -L/opt/$(get_libdir)"
+
 	econf \
 		--disable-werror \
 		--disable-python \
