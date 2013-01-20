@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/execnet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/ChangeLog,v 1.13 2012/06/21 20:22:51 grozin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/ChangeLog,v 1.14 2013/01/20 00:04:40 mgorny Exp $
+
+*execnet-1.1-r1 (20 Jan 2013)
+
+  20 Jan 2013; Michał Górny <mgorny@gentoo.org> +execnet-1.1-r1.ebuild:
+  Migrate to distutils-r1.
 
 *execnet-1.1 (21 Jun 2012)
 
@@ -71,4 +76,3 @@
   17 Jan 2010; Andrey Grozin <grozin@gentoo.org> +execnet-1.0.2.ebuild,
   +metadata.xml:
   Initial import
-

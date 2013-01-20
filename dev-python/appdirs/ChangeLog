@@ -1,10 +1,14 @@
 # ChangeLog for dev-python/appdirs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/appdirs/ChangeLog,v 1.1 2012/08/02 19:48:50 aidecoe Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/appdirs/ChangeLog,v 1.2 2013/01/20 00:16:10 mgorny Exp $
+
+*appdirs-1.2.0-r1 (20 Jan 2013)
+
+  20 Jan 2013; Michał Górny <mgorny@gentoo.org> +appdirs-1.2.0-r1.ebuild:
+  Migrate to distutils-r1.
 
 *appdirs-1.2.0 (02 Aug 2012)
 
   02 Aug 2012; Amadeusz Żołnowski <aidecoe@gentoo.org> +appdirs-1.2.0.ebuild,
   +metadata.xml:
   Initial ebuild.
-
