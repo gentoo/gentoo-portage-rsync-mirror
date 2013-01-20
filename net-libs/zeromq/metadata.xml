@@ -5,6 +5,10 @@
 		<email>djc@gentoo.org</email>
 		<name>Dirkjan Ochtman</name>
 	</maintainer>
+	<maintainer>
+		<email>qnikst@gentoo.org</email>
+		<name>Alexander Vershilov</name>
+	</maintainer>
 	<upstream>
 		<maintainer>
 			<email>sustrik@fastmq.com</email>

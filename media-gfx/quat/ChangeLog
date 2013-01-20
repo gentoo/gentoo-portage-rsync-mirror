@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/quat
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/quat/ChangeLog,v 1.11 2010/10/03 20:22:09 spock Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/quat/ChangeLog,v 1.12 2013/01/20 10:01:01 pacho Exp $
+
+  20 Jan 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due retirement, bug #35242
 
   03 Oct 2010; Michał Januszewski <spock@gentoo.org> quat-1.20.ebuild:
   Depend on fltk v1 (bug #339047).

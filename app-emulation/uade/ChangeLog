@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/uade
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.60 2012/05/03 18:49:08 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.61 2013/01/20 09:55:23 pacho Exp $
+
+  20 Jan 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup fue retirement, bug #35242
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> uade-2.13.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -249,4 +252,3 @@
 
   27 Aug 2003; Michael Sterrett <msterret@gentoo.org> uade-0.73.ebuild:
   initial commit; bug 25886 (at least, part of that bug)
-

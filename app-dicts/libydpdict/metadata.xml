@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>spock@gentoo.org</email>
-		<name>Michał Januszewski</name>
-	</maintainer>
-	<maintainer>
 		<email>peper@gentoo.org</email>
 		<name>Piotr Jaroszyński</name>
 	</maintainer>

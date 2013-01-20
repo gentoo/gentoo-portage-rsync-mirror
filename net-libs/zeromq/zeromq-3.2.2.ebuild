@@ -1,29 +1,27 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-2.1.10.ebuild,v 1.5 2013/01/20 09:51:02 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-3.2.2.ebuild,v 1.1 2013/01/20 09:51:02 qnikst Exp $
 
-# NOTES:
-# 1- use flag 'pgm' (OpenPGM support) must be masked by profiles for ARM archs;
+EAPI=5
 
-EAPI=3
-WANT_AUTOCONF="2.5"
 inherit autotools
 
-DESCRIPTION="ZeroMQ is a brokerless messaging kernel with extremely high performance."
-HOMEPAGE="http://www.zeromq.org"
+DESCRIPTION="ZeroMQ is a brokerless kernel"
+HOMEPAGE="http://www.zeromq.org/"
 SRC_URI="http://download.zeromq.org/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~hppa ~x86 ~ppc ~ppc64 ~amd64-linux ~x86-linux"
 IUSE="pgm test static-libs"
 
+DEPEND="sys-devel/gcc
+		pgm? (
+		  virtual/pkgconfig
+		  =net-libs/openpgm-5.1.118
+		)
+		sys-apps/util-linux"
 RDEPEND=""
-DEPEND="pgm? (
-		virtual/pkgconfig
-		=net-libs/openpgm-5.1.116
-	)
-	sys-apps/util-linux"
 
 src_prepare() {
 	einfo "Removing bundled OpenPGM library"
@@ -35,8 +33,8 @@ src_configure() {
 	local myconf
 	use pgm && myconf="--with-system-pgm" || myconf="--without-pgm"
 	econf \
-		$(use_enable static-libs static) \
-		$myconf
+	  $(use_enable static-libs static) \
+	  $myconf
 }
 
 src_install() {

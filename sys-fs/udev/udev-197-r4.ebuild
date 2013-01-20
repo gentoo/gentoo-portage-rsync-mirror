@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r4.ebuild,v 1.5 2013/01/19 18:30:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r4.ebuild,v 1.6 2013/01/20 09:57:30 ssuominen Exp $
 
 EAPI=4
 
@@ -42,18 +42,19 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	!<sys-apps/systemd-${PV}"
 
 DEPEND="${COMMON_DEPEND}
-	dev-util/gperf
 	virtual/os-headers
 	virtual/pkgconfig
 	!<sys-kernel/linux-headers-${KV_min}
 	doc? ( >=dev-util/gtk-doc-1.18 )
-	hwdb? ( >=sys-apps/hwids-20121202.2[udev] )"
+	hwdb? ( >=sys-apps/hwids-20130114[udev] )
+	keymap? ( dev-util/gperf )"
 
 if [[ ${PV} = 9999* ]]
 then
 	DEPEND="${DEPEND}
 		app-text/docbook-xsl-stylesheets
 		dev-libs/libxslt
+		dev-util/gperf
 		>=dev-util/intltool-0.50"
 fi
 
@@ -140,17 +141,6 @@ src_prepare()
 		eval export {MSG{FMT,MERGE},XGETTEXT}=/bin/true
 	fi
 
-	# This check is for maintainers only
-	if [[ ${PV} = 9999* ]]; then
-		# Support uClibc wrt bug #443030 with a safe kludge so we know when
-		# to check for other uses than logs. See the echo for secure_getenv
-		# at the end of src_prepare().
-		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 16 ]]; then
-			eerror "The line count of secure_getenv failed, see bug #443030"
-			die
-		fi
-	fi
-
 	# apply user patches
 	epatch_user
 
@@ -177,8 +167,21 @@ src_prepare()
 		elibtoolize
 	fi
 
-	# This is the actual fix for bug #443030 if the check earlier doesn't fail.
-	if ! use elibc_glibc; then
+	if [[ ${PV} = 9999* ]]; then
+		# secure_getenv() disable for non-glibc systems wrt bug #443030
+		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 16 ]]; then
+			eerror "The line count for secure_getenv() failed, see bug #443030"
+			die
+		fi
+
+		# gperf disable if keymaps are not requested wrt bug #452760
+		if ! [[ $(grep -i gperf Makefile.am | wc -l) -eq 24 ]]; then
+			eerror "The line count for gperf references failed, see bug 452760"
+			die
+		fi
+	fi
+
+	if ! use elibc_glibc; then #443030
 		echo '#define secure_getenv(x) NULL' >> config.h.in
 		sed -i -e '/error.*secure_getenv/s:.*:#define secure_getenv(x) NULL:' src/shared/missing.h || die
 	fi
@@ -186,6 +189,8 @@ src_prepare()
 
 src_configure()
 {
+	use keymap || export ac_cv_path_GPERF=true #452760
+
 	local econf_args
 
 	econf_args=(

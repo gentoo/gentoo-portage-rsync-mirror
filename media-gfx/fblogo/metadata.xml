@@ -2,8 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>spock@gentoo.org</email>
-  <name>Michal Januszewski</name>
-  <description>It seems fblogo was maintained by Troy Dack. Since he is now on hiatus I decided to take care about this package.</description>
+<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 </pkgmetadata>

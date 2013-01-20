@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fbida
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.92 2012/12/02 16:29:49 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.93 2013/01/20 09:59:41 pacho Exp $
+
+  20 Jan 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due retirement, bug #35242
 
 *fbida-2.09 (02 Dec 2012)
 
@@ -329,4 +332,3 @@
   06 Feb 2005; Michał Januszewski <spock@gentoo.org> +metadata.xml,
   +fbida-2.03.ebuild:
   Initial commit. Closes #80415.
-

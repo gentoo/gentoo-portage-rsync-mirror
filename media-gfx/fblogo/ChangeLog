@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fblogo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.15 2010/09/30 10:32:18 spock Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.16 2013/01/20 10:00:30 pacho Exp $
+
+  20 Jan 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due retirement, bug #35242
 
   30 Sep 2010; Michał Januszewski <spock@gentoo.org> fblogo-0.5.2.ebuild:
   Make the ebuild respect LDFLAGS (bug #337408).
@@ -61,4 +64,3 @@
   17 Aug 2003; Troy Dack <tad@gentoo.org> fblogo-0.5.0.ebuild:
   Initial import. Thanks to Jesús Pérez (h0m3r) <jesus.pr@worldonline.es> for
   the .ebuild (Bug #19450)
-

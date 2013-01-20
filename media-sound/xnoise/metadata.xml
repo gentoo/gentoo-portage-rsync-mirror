@@ -11,6 +11,6 @@
 		<flag name="lyrics">Enable support for lyrics fetching</flag>
 	</use>
 	<upstream>
-		<remote-id type="google-code">xnoise</remote-id>
+		<remote-id type="bitbucket">shuerhaaken/xnoise</remote-id>
 	</upstream>
 </pkgmetadata>

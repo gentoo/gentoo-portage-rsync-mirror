@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libbinio
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbinio/ChangeLog,v 1.30 2011/12/23 00:48:16 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbinio/ChangeLog,v 1.31 2013/01/20 09:55:56 pacho Exp $
+
+  20 Jan 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup fue retirement, bug #35242
 
   23 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> libbinio-1.4.ebuild:
   USE="static-libs" and remove unnecessary libbinio.la libtool archive.
@@ -102,4 +105,3 @@
   20 Jul 2004; Michal Januszewski <spock@gentoo.org> +metadata.xml,
   +libbinio-1.2.ebuild:
   Initial commit.
-
