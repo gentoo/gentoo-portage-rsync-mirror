@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec-mocks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.45 2013/01/15 05:45:34 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.46 2013/01/20 17:06:24 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> rspec-mocks-2.12.1.ebuild:
+  Stable for alpha, wrt bug #450532
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> rspec-mocks-2.6.0.ebuild:
   adding ~arm keywords to net-analyzer/metasploit rdeps

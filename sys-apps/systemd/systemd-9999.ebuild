@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.7 2013/01/19 00:31:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.8 2013/01/20 17:20:49 mgorny Exp $
 
 EAPI=5
 
@@ -137,6 +137,10 @@ src_install() {
 	autotools-utils_src_install \
 		bashcompletiondir=/tmp \
 		udevlibexecdir=/lib/udev
+
+	# README files stating 'hey, this directory was replaced by our
+	# awesome whatever'
+	rm "${D}"/{etc/init.d,var/log}/README || die
 
 	# remove pam.d plugin .la-file
 	prune_libtool_files --modules

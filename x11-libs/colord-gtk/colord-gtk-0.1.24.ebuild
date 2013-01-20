@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/colord-gtk-0.1.24.ebuild,v 1.9 2013/01/06 11:19:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/colord-gtk/colord-gtk-0.1.24.ebuild,v 1.10 2013/01/20 17:08:43 ago Exp $
 
 EAPI="5"
 VALA_MIN_API_VERSION="0.14"
@@ -14,7 +14,7 @@ SRC_URI="http://www.freedesktop.org/software/colord/releases/${P}.tar.xz"
 
 LICENSE="LGPL-3+"
 SLOT="0/1" # subslot = libcolord-gtk soname version
-KEYWORDS="~alpha amd64 arm ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="doc +introspection vala"
 REQUIRED_USE="vala? ( introspection )"
 

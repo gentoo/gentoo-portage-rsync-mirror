@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.46 2013/01/15 05:52:14 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.47 2013/01/20 17:07:14 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> rspec-core-2.12.2.ebuild:
+  Stable for alpha, wrt bug #450532
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> rspec-core-2.10.1.ebuild,
   rspec-core-2.11.1.ebuild, rspec-core-2.12.2.ebuild,
