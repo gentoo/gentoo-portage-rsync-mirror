@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/scorched3d
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.89 2012/08/08 19:53:17 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.90 2013/01/20 01:18:42 mr_bones_ Exp $
+
+  20 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/scorched3d-43.2a-fixups.patch, -files/scorched3d-43.2a-gcc43.patch,
+  -files/scorched3d-43.2a-odbc.patch, -files/scorched3d-43.2a-png15.patch,
+  -files/scorched3d-43.2a-win32.patch, -scorched3d-43.2a.ebuild:
+  old
 
   08 Aug 2012; Brent Baude <ranger@gentoo.org> scorched3d-43.3d.ebuild:
   Marking scorched3d-43.3d ppc for bug 424243
@@ -402,4 +408,3 @@
 
   06 Aug 2003; Michael Sterrett <msterret@gentoo.org> scorched3d-35.ebuild:
   initial commit (bug 25846)
-

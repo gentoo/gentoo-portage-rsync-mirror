@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warzone2100
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.74 2012/07/29 21:18:01 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.75 2013/01/20 01:22:20 mr_bones_ Exp $
+
+  20 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -warzone2100-2.3.8.ebuild:
+  old
 
   29 Jul 2012; Julian Ospald <hasufell@gentoo.org> warzone2100-2.3.9.ebuild,
   +files/warzone2100-2.3.9-pkgconf.patch:
@@ -345,4 +349,3 @@
   +files/0.2.2-clparse.c.patch, +metadata.xml, +warzone2100-0.2.2.ebuild:
   Initial import. Original ebuild by <denisdupeyron@msn.com>. Patch submitted
   by Fabien Zouaoui <fabien@zouaoui.org>. Closing bug #96249.
-

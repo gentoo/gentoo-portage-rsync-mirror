@@ -1,6 +1,10 @@
 # ChangeLog for games-action/abuse
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/ChangeLog,v 1.16 2011/10/04 22:27:47 josejx Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/ChangeLog,v 1.17 2013/01/20 01:12:09 mr_bones_ Exp $
+
+  20 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -abuse-0.7.1.ebuild,
+  -files/abuse-0.7.1-ovflfix.patch:
+  old
 
   04 Oct 2011; Joseph Jezak <josejx@gentoo.org> abuse-0.8.ebuild:
   Marked ppc stable for bug #375327.
