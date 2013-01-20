@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-openssh-askpass/razorqt-openssh-askpass-0.5.1.ebuild,v 1.3 2013/01/17 07:14:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-openssh-askpass/razorqt-openssh-askpass-0.5.1.ebuild,v 1.5 2013/01/20 19:08:55 ago Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -15,7 +15,7 @@ if [[ ${PV} = *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://github/Razor-qt/razor-qt/razorqt-${PV}.tar.bz2"
-	KEYWORDS="~amd64 ~ppc ~x86"
+	KEYWORDS="amd64 ~ppc x86"
 	S="${WORKDIR}/razorqt-${PV}"
 fi
 

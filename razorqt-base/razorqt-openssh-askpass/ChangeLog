@@ -1,6 +1,14 @@
 # ChangeLog for razorqt-base/razorqt-openssh-askpass
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-openssh-askpass/ChangeLog,v 1.5 2013/01/19 13:58:31 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-openssh-askpass/ChangeLog,v 1.7 2013/01/20 19:08:55 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  razorqt-openssh-askpass-0.5.1.ebuild:
+  Stable for x86, wrt bug #452646
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  razorqt-openssh-askpass-0.5.1.ebuild:
+  Stable for amd64, wrt bug #452646
 
 *razorqt-openssh-askpass-0.5.2 (19 Jan 2013)
 
