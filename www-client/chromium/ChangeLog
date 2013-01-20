@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.793 2013/01/17 04:41:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.794 2013/01/20 06:00:45 phajdan.jr Exp $
+
+*chromium-26.0.1386.0 (20 Jan 2013)
+
+  20 Jan 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-nspr-r0.patch, +chromium-26.0.1386.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Dev channel bump.
 
   17 Jan 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   +files/chromium-system-ffmpeg-r1.patch, chromium-26.0.1384.2.ebuild,
