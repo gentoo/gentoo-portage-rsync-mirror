@@ -2,13 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>desktop-wm</herd>
+  <herd>proxy-maintainers</herd>
   <maintainer>
 	  <email>i92guboj@gentoo.org</email>
 	  <description>Proxied committer, assign bugs</description>
-  </maintainer>
-  <maintainer>
-	  <email>maintainer-needed@gentoo.org</email>
-	  <description>Need proxy committer, CC bugs</description>
   </maintainer>
   <longdescription lang="en">
 		fvwm is an ICCCM-compliant X window manager providing a 3D look for

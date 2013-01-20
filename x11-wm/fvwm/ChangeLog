@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.190 2012/11/09 10:14:42 darkside Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.191 2013/01/20 08:15:04 pacho Exp $
+
+  20 Jan 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Update committers
 
   09 Nov 2012; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   remove myself from metadata

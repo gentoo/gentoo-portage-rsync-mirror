@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-24.0.1312.52_p175374.ebuild,v 1.2 2013/01/19 18:43:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-24.0.1312.52_p175374.ebuild,v 1.3 2013/01/20 08:22:07 floppym Exp $
 
 EAPI="4"
 
@@ -34,8 +34,16 @@ esac
 MY_PN="${PN}-${SLOT}"
 MY_P="${MY_PN}_${MY_PV}"
 
-SRC_BASE="http://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_"
-SRC_URI="amd64? ( ${SRC_BASE}amd64.deb ) x86? ( ${SRC_BASE}i386.deb )"
+SRC_URI="
+	amd64? (
+		http://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_amd64.deb
+		mirror://gentoo/google-chrome-libudev-0.13.1-amd64.tar.xz
+	)
+	x86? (
+		http://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_i386.deb
+		mirror://gentoo/google-chrome-libudev-0.13.1-x86.tar.xz
+	)
+"
 
 LICENSE="google-chrome"
 KEYWORDS="-* ~amd64 ~x86"
@@ -58,7 +66,6 @@ RDEPEND="
 	net-print/cups
 	sys-apps/dbus
 	|| ( >=sys-devel/gcc-4.4.0[-nocxx] >=sys-devel/gcc-4.4.0[cxx] )
-	virtual/udev
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
@@ -116,9 +123,6 @@ src_install() {
 		insinto /usr/share/icons/hicolor/${size}x${size}/apps
 		newins "${D}${CHROME_HOME}product_logo_${size}.png" google-chrome.png
 	done
-
-	# Compatibility symlink for newer udev, bug 423415.
-	dosym "/usr/$(get_libdir)/libudev.so" "${CHROME_HOME}libudev.so.0"
 }
 
 any_cpu_missing_flag() {
