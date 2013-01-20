@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.6.ebuild,v 1.6 2013/01/07 12:06:21 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.1.6.ebuild,v 1.7 2013/01/20 19:56:21 alonbl Exp $
 
 EAPI=4
 
@@ -62,6 +62,8 @@ src_prepare() {
 	for file in $(grep -l AutoGen-ed src/*.c) ; do
 		rm src/$(basename ${file} .c).{c,h} || die
 	done
+
+	epatch "${FILESDIR}/${P}-danetool.patch"
 
 	# support user patches
 	epatch_user

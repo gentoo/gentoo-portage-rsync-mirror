@@ -1,6 +1,9 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.15 2013/01/19 14:52:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.16 2013/01/20 19:53:48 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> udev-197.ebuild:
+  Stable for x86, wrt bug #452556
 
   19 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197.ebuild:
   amd64 stable wrt #452556

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.402 2013/01/07 12:06:21 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.403 2013/01/20 19:56:21 alonbl Exp $
+
+  20 Jan 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/gnutls-3.1.6-danetool.patch, gnutls-3.1.6.ebuild:
+  Fix parallel build, bug#452942
 
   07 Jan 2013; Alon Bar-Lev <alonbl@gentoo.org> gnutls-3.1.6.ebuild:
   Depend on >=1.11.6, per bug#450644, thanks to Martin Mokrejš

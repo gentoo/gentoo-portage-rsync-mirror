@@ -1,0 +1,11 @@
+--- gnutls-3.1.6/src/Makefile.am.org	2013-01-20 21:40:25.090856708 +0200
++++ gnutls-3.1.6/src/Makefile.am	2013-01-20 21:42:24.348037683 +0200
+@@ -191,7 +191,7 @@ libcmd_tpmtool_la_LIBADD += $(LTLIBREADL
+ endif # ENABLE_TROUSERS
+ 
+ BUILT_SOURCES = ocsptool-args.c p11tool-args.c psk-args.c cli-debug-args.c \
+-		cli-args.c serv-args.c srptool-args.c certtool-args.c
++		cli-args.c serv-args.c srptool-args.c certtool-args.c danetool-args.c
+ 
+ danetool-args.c: $(srcdir)/args-std.def $(srcdir)/danetool-args.def
+ 	-autogen danetool-args.def
