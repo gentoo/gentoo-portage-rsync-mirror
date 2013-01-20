@@ -4,5 +4,6 @@
 	<herd>gstreamer</herd>
 	<use>
 		<flag name="pango">Enable pango GStreamer plugin</flag>
+		<flag name="ivorbis">Enable integer based vorbis decoder.</flag>
     </use>
 </pkgmetadata>
