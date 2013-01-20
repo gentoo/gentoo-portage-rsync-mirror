@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/hiera
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera/ChangeLog,v 1.5 2013/01/04 07:06:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera/ChangeLog,v 1.7 2013/01/20 09:00:00 graaff Exp $
+
+  20 Jan 2013; Hans de Graaff <graaff@gentoo.org> -hiera-1.1.2.ebuild:
+  Remove broken version.
+
+*hiera-1.1.2-r1 (20 Jan 2013)
+
+  20 Jan 2013; Hans de Graaff <graaff@gentoo.org> +hiera-1.1.2-r1.ebuild:
+  Fix gemspec for our way of handling json vs json_pure. Fixes bug 452882.
 
 *hiera-1.1.2 (04 Jan 2013)
 

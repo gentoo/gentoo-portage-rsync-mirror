@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera/hiera-1.1.2.ebuild,v 1.1 2013/01/04 07:06:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera/hiera-1.1.2-r1.ebuild,v 1.1 2013/01/20 08:57:13 graaff Exp $
 
 EAPI=5
 
@@ -24,3 +24,9 @@ KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 ruby_add_bdepend "test? ( dev-ruby/mocha )"
 
 ruby_add_rdepend "dev-ruby/json"
+
+all_ruby_prepare() {
+	# Our json package is either the compiled version or the pure
+	# version. Fix gemspec accordingly.
+	sed -i -e 's/json_pure/json/' ../metadata || die
+}
