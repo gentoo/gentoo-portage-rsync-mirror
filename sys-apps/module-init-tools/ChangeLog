@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/module-init-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.187 2012/11/24 21:14:02 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.188 2013/01/19 23:29:12 ssuominen Exp $
+
+  19 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -files/modutils-2.4.27-alias.patch, -files/modutils-2.4.27-build.patch,
+  -files/modutils-2.4.27-flex.patch, -files/modutils-2.4.27-gcc.patch,
+  -files/modutils-2.4.27-hppa.patch,
+  -files/modutils-2.4.27-no-nested-function.patch,
+  -files/module-init-tools-3.1_generate-modprobe-assume-kernel.patch,
+  -files/module-init-tools-3.2.2-handle-dupliate-aliases.patch,
+  -files/module-init-tools-3.2_pre7-abort-on-modprobe-failure.patch,
+  -module-init-tools-3.6-r1.ebuild,
+  -files/module-init-tools-3.6-hidden-dirs.patch,
+  -files/module-init-tools-3.6-skip-sys-check.patch,
+  -module-init-tools-3.10.ebuild, -module-init-tools-3.11.1.ebuild,
+  -module-init-tools-3.12-r1.ebuild, -module-init-tools-3.13.ebuild:
+  old
 
   24 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   -module-init-tools-3.5.ebuild, -module-init-tools-3.8.ebuild,
