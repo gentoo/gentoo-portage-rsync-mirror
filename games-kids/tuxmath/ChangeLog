@@ -1,6 +1,11 @@
 # ChangeLog for games-kids/tuxmath
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/ChangeLog,v 1.15 2012/08/06 22:29:18 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/ChangeLog,v 1.16 2013/01/20 21:52:13 hasufell Exp $
+
+*tuxmath-2.0.1 (20 Jan 2013)
+
+  20 Jan 2013; Julian Ospald <hasufell@gentoo.org> +tuxmath-2.0.1.ebuild:
+  version bump wrt #452258
 
   06 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org> tuxmath-1.7.2.ebuild:
   any mod support will do

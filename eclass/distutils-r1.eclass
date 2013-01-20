@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.45 2013/01/15 11:10:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.46 2013/01/20 21:41:08 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -415,7 +415,7 @@ distutils-r1_run_phase() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
-		pushd "${BUILD_DIR}" &>/dev/null || die
+		pushd "${BUILD_DIR}" >/dev/null || die
 	else
 		local PYTHONPATH="${BUILD_DIR}/lib:${PYTHONPATH}"
 		export PYTHONPATH
@@ -436,7 +436,7 @@ distutils-r1_run_phase() {
 	fi
 
 	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
-		popd &>/dev/null || die
+		popd >/dev/null || die
 	fi
 
 	# Store them for reuse.

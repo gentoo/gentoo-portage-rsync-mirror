@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/openafs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.184 2012/11/11 05:47:27 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.185 2013/01/20 21:47:12 ulm Exp $
+
+  20 Jan 2013; Ulrich Müller <ulm@gentoo.org> openafs-1.4.14.1.ebuild,
+  openafs-1.6.1.ebuild, openafs-1.6.1-r1.ebuild, openafs-1.6.1-r2.ebuild:
+  Drop sun-rpc from LICENSE, as Sun RPC was relicensed to BSD, bug 448618.
 
 *openafs-1.6.1-r2 (11 Nov 2012)
 

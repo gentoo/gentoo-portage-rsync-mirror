@@ -1,6 +1,12 @@
 # ChangeLog for media-radio/xastir
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.30 2012/12/07 14:31:19 tomjbe Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.32 2013/01/20 21:47:43 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> xastir-2.0.4.ebuild:
+  Stable for x86, wrt bug #452724
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> xastir-2.0.4.ebuild:
+  Stable for amd64, wrt bug #452724
 
 *xastir-2.0.4 (07 Dec 2012)
 
@@ -96,4 +102,3 @@
   +files/xastir-1.9.8-Destdir.diff, +files/xastir-1.9.8-scripts.diff,
   +metadata.xml:
   Moved back from sunrise. See Bug #109695
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/klayout-0.22.4.ebuild,v 1.1 2013/01/02 20:26:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/klayout-0.22.4.ebuild,v 1.3 2013/01/20 21:48:09 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.klayout.de/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="

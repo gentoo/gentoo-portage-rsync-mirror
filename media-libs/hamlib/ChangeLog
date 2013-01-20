@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/hamlib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.75 2012/11/20 20:05:25 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.77 2013/01/20 21:48:22 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> hamlib-1.2.15.3.ebuild:
+  Stable for x86, wrt bug #452718
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> hamlib-1.2.15.3.ebuild:
+  Stable for amd64, wrt bug #452718
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> hamlib-1.2.15.2.ebuild:
   Stable for x86, wrt bug #441368
@@ -325,4 +331,3 @@
 
   03 Jun 2004; <rphillips@gentoo.org> hamlib-1.1.4.ebuild, metadata.xml:
   New package. Submitted by Robb. Fixes #52155
-
