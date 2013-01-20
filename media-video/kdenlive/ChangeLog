@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.81 2012/08/17 12:50:37 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.82 2013/01/20 18:47:26 yngwin Exp $
+
+  20 Jan 2013; Ben de Groot <yngwin@gentoo.org> kdenlive-0.9.2.ebuild:
+  update mlt dep, because of useflag changes
 
   17 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/kdenlive-0.8.2.1-qt48.patch, -kdenlive-0.8.2.1.ebuild,

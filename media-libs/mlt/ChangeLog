@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mlt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.99 2012/11/26 14:32:40 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.100 2013/01/20 18:39:53 yngwin Exp $
+
+*mlt-0.8.6-r1 (20 Jan 2013)
+
+  20 Jan 2013; Ben de Groot <yngwin@gentoo.org>
+  +files/mlt-0.8.6-kdelibs-automagic.patch, +mlt-0.8.6-r1.ebuild, metadata.xml:
+  Add kdelibs-automagic patch, which has already been accepted upstream. Add
+  kdenlive useflag, as it is separately configurable from linking to kdelibs.
+  Fixes bug #445230. Thanks to Enlik for the patches.
 
   26 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Update to global useflag.

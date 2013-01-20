@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/global
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.104 2012/09/09 16:02:29 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.105 2013/01/20 19:00:22 floppym Exp $
+
+*global-6.2.7 (20 Jan 2013)
+
+  20 Jan 2013; Mike Gilbert <floppym@gentoo.org> +global-6.2.7.ebuild:
+  Version bump by Arfrever.
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> global-5.9.5.ebuild,
   global-5.9.7.ebuild, global-6.1.ebuild, global-6.2.ebuild,

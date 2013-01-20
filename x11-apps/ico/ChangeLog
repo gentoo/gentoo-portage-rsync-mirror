@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/ico
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ico/ChangeLog,v 1.29 2011/02/13 18:54:12 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ico/ChangeLog,v 1.30 2013/01/20 18:41:55 chithanh Exp $
+
+*ico-1.0.4 (20 Jan 2013)
+
+  20 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +ico-1.0.4.ebuild:
+  Version bump.
 
   13 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -ico-1.0.2.ebuild:
   old
@@ -114,4 +120,3 @@
 
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +ico-0.99.0.ebuild:
   Initial commit for modular X.
-

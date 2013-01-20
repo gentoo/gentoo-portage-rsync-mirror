@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/bdftopcf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/bdftopcf/ChangeLog,v 1.50 2012/04/26 21:05:56 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/bdftopcf/ChangeLog,v 1.51 2013/01/20 18:41:03 chithanh Exp $
+
+*bdftopcf-1.0.4 (20 Jan 2013)
+
+  20 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +bdftopcf-1.0.4.ebuild:
+  Version bump.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> bdftopcf-1.0.3.ebuild:
   keyword ~amd64-fbsd
@@ -185,4 +191,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +bdftopcf-0.99.0.ebuild:
   Initial commit for modular X.
-

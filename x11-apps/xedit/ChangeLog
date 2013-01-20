@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xedit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.37 2011/02/14 23:41:04 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.38 2013/01/20 18:39:31 chithanh Exp $
+
+*xedit-1.2.1 (20 Jan 2013)
+
+  20 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xedit-1.2.1.ebuild:
+  Version bump.
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> xedit-1.2.0.ebuild:
   ppc stable wrt #344827, #354237
@@ -139,4 +145,3 @@
 
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +xedit-0.99.0.ebuild:
   Initial commit for modular X.
-

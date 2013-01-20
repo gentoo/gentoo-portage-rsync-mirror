@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-input-vmmouse
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-vmmouse/ChangeLog,v 1.54 2012/06/24 19:02:37 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-vmmouse/ChangeLog,v 1.55 2013/01/20 18:51:58 chithanh Exp $
+
+*xf86-input-vmmouse-13.0.0 (20 Jan 2013)
+
+  20 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-input-vmmouse-13.0.0.ebuild, -xf86-input-vmmouse-12.7.0.ebuild,
+  -xf86-input-vmmouse-12.8.0.ebuild:
+  Version bump. Remove old.
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org>
   xf86-input-vmmouse-12.9.0.ebuild:
@@ -259,4 +266,3 @@
   +xf86-input-vmmouse-20060113.ebuild:
   Initial import of VMWare mouse driver for Xorg. The driver and PIC fix patch
   need testing. The patch might also be able to use some speed improvement.
-
