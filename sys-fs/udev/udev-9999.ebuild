@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.147 2013/01/20 09:57:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.148 2013/01/20 12:53:28 ssuominen Exp $
 
 EAPI=4
 
@@ -169,7 +169,7 @@ src_prepare()
 
 	if [[ ${PV} = 9999* ]]; then
 		# secure_getenv() disable for non-glibc systems wrt bug #443030
-		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 16 ]]; then
+		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 13 ]]; then
 			eerror "The line count for secure_getenv() failed, see bug #443030"
 			die
 		fi

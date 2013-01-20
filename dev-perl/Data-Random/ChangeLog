@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Data-Random
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Random/ChangeLog,v 1.12 2012/06/24 12:59:58 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Random/ChangeLog,v 1.13 2013/01/20 12:35:10 tove Exp $
+
+*Data-Random-0.80.0 (20 Jan 2013)
+
+  20 Jan 2013; Torsten Veller <tove@gentoo.org> +Data-Random-0.80.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
