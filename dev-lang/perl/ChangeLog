@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/perl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.389 2012/09/20 12:56:50 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.390 2013/01/20 20:22:11 tove Exp $
+
+*perl-5.16.2 (20 Jan 2013)
+
+  20 Jan 2013; Torsten Veller <tove@gentoo.org>
+  files/eblits/src_install-v50160001.eblit, +perl-5.16.2.ebuild:
+  Version bump (#449640).
+  * Does not create directories in /usr/local (#422981)
+  * CGI: Newline injection due to improper CRLF escaping in Set-Cookie and P3P
+    headers (#443446,CVE-2012-5526)
+  * Locale::Maketext: Two Code Injection Vulnerabilities (#446376,SA51498)
 
   20 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
