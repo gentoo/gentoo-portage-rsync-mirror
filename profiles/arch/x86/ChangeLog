@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.129 2013/01/18 14:18:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.130 2013/01/20 11:07:42 mgorny Exp $
+
+  20 Jan 2013; Michał Górny <mgorny@gentoo.org> use.mask:
+  Remove the pypy unmask for old profiles. It is unmasked in the new EAPI=5
+  profiles now.
 
   18 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> use.mask:
   Don't unmask USE="clvm" here because it's not masked in base profile thus

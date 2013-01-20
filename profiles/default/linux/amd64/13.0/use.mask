@@ -1,0 +1,10 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/13.0/use.mask,v 1.1 2013/01/20 11:06:26 mgorny Exp $
+
+# Michał Górny <mgorny@gentoo.org> (19 Jan 2013)
+# PyPy is keyworded on this arch.
+-python_targets_pypy1_9
+-python_targets_pypy2_0
+-python_single_target_pypy1_9
+-python_single_target_pypy2_0

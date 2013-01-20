@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.20.ebuild,v 1.13 2012/07/15 18:08:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.20.ebuild,v 1.14 2013/01/20 11:21:03 pinkbyte Exp $
 
 EAPI=4
 inherit autotools eutils multilib flag-o-matic python systemd virtualx user
@@ -76,6 +76,7 @@ src_configure() {
 	# libaudit is *only* used in DBus wrt SELinux support, so disable it, if
 	# not on an SELinux profile.
 	myconf=(
+		--disable-silent-rules
 		--disable-asserts
 		--disable-checks
 		--disable-embedded-tests

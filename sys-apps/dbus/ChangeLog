@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dbus
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.363 2012/11/17 13:21:01 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.364 2013/01/20 11:21:03 pinkbyte Exp $
+
+  20 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> dbus-1.4.20.ebuild,
+  dbus-1.6.2.ebuild, dbus-1.6.8.ebuild:
+  Make build.log verbose, wrt bug #453086
 
   17 Nov 2012; Pacho Ramos <pacho@gentoo.org> dbus-1.6.8-r1.ebuild:
   Show elog messages only when needed (#440526 by poletti.marco), disable silent

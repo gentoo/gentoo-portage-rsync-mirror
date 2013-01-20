@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.495 2013/01/19 15:53:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.496 2013/01/20 11:05:49 mgorny Exp $
+
+  20 Jan 2013; Michał Górny <mgorny@gentoo.org> use.mask:
+  Add a note that pypy flags are unmasked in the new profiles.
 
   19 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask USE="systemd" for sys-fs/udisks because systemd is not stable yet.
