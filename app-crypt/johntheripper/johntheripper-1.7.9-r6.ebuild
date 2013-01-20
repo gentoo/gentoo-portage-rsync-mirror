@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r6.ebuild,v 1.4 2013/01/11 15:24:47 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r6.ebuild,v 1.5 2013/01/20 10:20:29 ago Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ SRC_URI="http://www.openwall.com/john/g/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="alpha amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 #Remove AltiVec USE flag. Appears to be an upstream issue.
 IUSE="cuda custom-cflags -minimal mmx mpi opencl openmp sse2"
 REQUIRED_USE="openmp? ( !minimal )

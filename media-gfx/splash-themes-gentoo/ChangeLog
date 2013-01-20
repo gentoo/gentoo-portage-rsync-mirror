@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/splash-themes-gentoo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.24 2012/12/03 19:39:00 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.25 2013/01/20 10:02:34 pacho Exp $
+
+  20 Jan 2013; Pacho Ramos <pacho@gentoo.org>
+  -splash-themes-gentoo-20050429.ebuild, -splash-themes-gentoo-20080914.ebuild,
+  -splash-themes-gentoo-20090324.ebuild, -splash-themes-gentoo-20090926.ebuild,
+  -splash-themes-gentoo-20100302.ebuild, -splash-themes-gentoo-20100820.ebuild,
+  metadata.xml:
+  Cleanup due retirement, bug #35242
 
   03 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   splash-themes-gentoo-20101212.ebuild:
@@ -113,4 +120,3 @@
   Initial commmit. The package contains themes that were previously
   distributed as a part of the splashutils package. Extraction of the themes
   was requested in bug #90307.
-

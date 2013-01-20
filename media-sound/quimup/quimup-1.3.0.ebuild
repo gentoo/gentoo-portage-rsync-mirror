@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quimup/quimup-1.3.0.ebuild,v 1.1 2013/01/19 21:33:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quimup/quimup-1.3.0.ebuild,v 1.2 2013/01/20 10:23:43 angelos Exp $
 
-EAPI=3
+EAPI=5
 inherit eutils qt4-r2
 
 MY_P=${PN}_${PV}
@@ -17,10 +17,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="x11-libs/qt-gui:4
-	>=media-libs/libmpdclient-2.2"
+	>=media-libs/libmpdclient-2.3"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
+
+DOCS=( changelog FAQ.txt README )
 
 src_prepare() {
 	sed -i -e "/FLAGS/d" ${PN}.pro || die
@@ -28,10 +30,9 @@ src_prepare() {
 }
 
 src_install() {
-	dobin ${PN} || die "dobin failed"
-	dodoc changelog FAQ.txt README || die "dodoc failed"
+	default
+	dobin ${PN}
 
-	newicon Icons/${PN}64.png ${PN}.png || die "newins failed"
-
+	newicon src/resources/mn_icon.png ${PN}.png
 	make_desktop_entry ${PN} Quimup
 }

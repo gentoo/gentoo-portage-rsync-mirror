@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/adplug
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/ChangeLog,v 1.36 2012/05/05 08:02:27 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/ChangeLog,v 1.37 2013/01/20 10:05:36 pacho Exp $
+
+  20 Jan 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due retirement, bug #35242
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> adplug-2.1.ebuild,
   adplug-2.2.ebuild, adplug-2.2.1.ebuild:
@@ -141,4 +144,3 @@
   20 Jul 2004; Michal Januszewski <spock@gentoo.org> +metadata.xml,
   +adplug-1.4.1.ebuild:
   Initial commit.
-

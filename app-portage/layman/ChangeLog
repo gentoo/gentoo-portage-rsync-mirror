@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.173 2013/01/16 18:48:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.174 2013/01/20 10:13:38 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> layman-2.0.0.ebuild:
+  Stable for alpha, wrt bug #451200
 
   16 Jan 2013; Agostino Sarubbo <ago@gentoo.org> layman-2.0.0.ebuild:
   Stable for ppc64, wrt bug #451200

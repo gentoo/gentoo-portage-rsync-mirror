@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>spock@gentoo.org</email>
+	<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <use>
 	<flag name='x86emu'>Use x86emu for Video BIOS calls</flag>

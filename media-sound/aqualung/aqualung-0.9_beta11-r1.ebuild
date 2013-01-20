@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11-r1.ebuild,v 1.12 2013/01/17 21:16:54 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11-r1.ebuild,v 1.13 2013/01/20 10:05:03 billie Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ IUSE="alsa cdda cddb debug flac ffmpeg ifp jack ladspa lame libsamplerate lua
 KEYWORDS="amd64 x86"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
-	cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
+	cdda? ( <dev-libs/libcdio-0.90[-minimal] )
 	cddb? ( media-libs/libcddb )
 	flac? ( media-libs/flac )
 	ffmpeg? ( >=virtual/ffmpeg-0.6.90 )
@@ -57,12 +57,6 @@ src_prepare() {
 		-e '/BUILD_CFLAGS/s:-O2::' \
 		-e '/BUILD_CFLAGS/s: -ggdb -g -O0::' \
 		configure.ac || die
-	if has_version dev-libs/libcdio-paranoia; then
-		sed -i \
-			-e 's:cdio/cdda.h:cdio/paranoia/cdda.h:' \
-			-e 's:cdio/paranoia.h:cdio/paranoia/paranoia.h:' \
-			src/*.{c,h} src/decoder/dec_cdda.h || die
-	fi
 	eautoreconf
 }
 

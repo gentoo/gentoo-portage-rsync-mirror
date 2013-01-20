@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.82 2013/01/18 17:07:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.83 2013/01/20 10:25:47 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> mailbase-1.1.ebuild:
+  Stable for alpha, wrt bug #452366
 
   18 Jan 2013; Jeroen Roovers <jer@gentoo.org> mailbase-1.1.ebuild:
   Stable for HPPA (bug #452366).

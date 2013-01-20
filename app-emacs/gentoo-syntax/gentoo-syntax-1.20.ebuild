@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-1.20.ebuild,v 1.5 2013/01/17 16:39:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-1.20.ebuild,v 1.6 2013/01/20 10:25:21 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 DOCS="ChangeLog keyword-generation.sh"
 ELISP_TEXINFO="${PN}.texi"

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14394 2013/01/19 14:33:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14395 2013/01/20 10:16:08 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (20 Jan 2013)
+# 2.5* has known security and other issues due to bundled ffmpeg,
+# see (bugs #446468 and #444262)
+# 2.6* is masked for testing, and may have unknown issues due to bundled ffmpeg
+# This package needs a new, dedicated maintainer. We voted for keeping it in
+# the tree for now, so users who are willing to accept the known issues can
+# still easily install it by unmasking this.
+media-video/avidemux
 
 # Marien Zwart <marienz@gentoo.org>
 # Patch tarball is broken, meaning this builds 1.2.0 (bug #452918)
@@ -411,10 +420,6 @@ dev-vcs/gitosis-gentoo
 # Joerg Bornkessel <hd_brummy@gentoo.org> (04 Nov 2012)
 # masked for testing, bug #422605
 =media-plugins/vdr-softdevice-0.5.0.20110417
-
-# Markos Chandras <hwoarang@gentoo.org> (04 Nov 2012)
-# Masked for testing
-=media-video/avidemux-2.6*
 
 # Markos Chandras <hwoarang@gentoo.org> (03 Nov 2012)
 # Masked for testing

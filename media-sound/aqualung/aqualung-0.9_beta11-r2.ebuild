@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11-r2.ebuild,v 1.1 2013/01/17 21:16:54 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11-r2.ebuild,v 1.2 2013/01/20 10:05:03 billie Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/aqualung/${PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa cdda cddb debug flac ffmpeg ifp jack ladspa lame libsamplerate lua
+IUSE="alsa cddb debug flac ffmpeg ifp jack ladspa lame libsamplerate lua
 	mac modplug mp3 musepack oss podcast pulseaudio sndfile speex systray vorbis wavpack"
 
 RDEPEND="sys-libs/zlib
@@ -38,7 +38,6 @@ RDEPEND="sys-libs/zlib
 	wavpack? ( media-sound/wavpack )
 	ladspa? ( media-libs/liblrdf )
 	libsamplerate? ( media-libs/libsamplerate )
-	cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
 	ifp? ( media-libs/libifp )
 	cddb? ( media-libs/libcddb )
 	lua? ( dev-lang/lua )"
@@ -60,12 +59,6 @@ src_prepare() {
 		-e '/BUILD_CFLAGS/s:-O2::' \
 		-e '/BUILD_CFLAGS/s: -ggdb -g -O0::' \
 		configure.ac || die
-	if has_version dev-libs/libcdio-paranoia; then
-		sed -i \
-			-e 's:cdio/cdda.h:cdio/paranoia/cdda.h:' \
-			-e 's:cdio/paranoia.h:cdio/paranoia/paranoia.h:' \
-			src/*.{c,h} src/decoder/dec_cdda.h || die
-	fi
 	eautoreconf
 }
 
@@ -93,7 +86,7 @@ src_configure() {
 		$(use_with wavpack) \
 		$(use_with ladspa) \
 		$(use_with libsamplerate src) \
-		$(use_with cdda) \
+		--without-cdda \
 		$(use_with ifp) \
 		$(use_with cddb) \
 		$(use_with lua) \

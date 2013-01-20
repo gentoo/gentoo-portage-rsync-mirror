@@ -1,0 +1,78 @@
+https://github.com/QupZilla/qupzilla/commit/37da53731c6c92b4ece0bdb6e264472adf2f6d9f
+diff -ru QupZilla-1.3.5.org/src/lib/adblock/adblockicon.cpp QupZilla-1.3.5/src/lib/adblock/adblockicon.cpp
+--- QupZilla-1.3.5.org/src/lib/adblock/adblockicon.cpp	2012-12-11 19:20:32.094777090 +0100
++++ QupZilla-1.3.5/src/lib/adblock/adblockicon.cpp	2012-12-11 19:25:29.891932103 +0100
+@@ -111,7 +111,7 @@
+     menu->addAction(tr("Show AdBlock &Settings"), manager, SLOT(showDialog()));
+     menu->addSeparator();
+ 
+-    if (!pageUrl.isEmpty()) {
++    if (!pageUrl.isEmpty() && m_enabled) {
+         const QString &host = page->url().host().contains(QLatin1String("www.")) ? pageUrl.host().mid(4) : pageUrl.host();
+         const QString &hostFilter = QString("@@||%1^$document").arg(host);
+         const QString &pageFilter = QString("@@|%1|$document").arg(pageUrl.toString());
+
+https://github.com/QupZilla/qupzilla/commit/7eaa2d11e057cc28b22cb5c45f6285c6a350fa67
+and
+https://github.com/QupZilla/qupzilla/issues/652
+diff -ru QupZilla-1.3.5.org/src/lib/history/historymodel.cpp QupZilla-1.3.5/src/lib/history/historymodel.cpp
+--- QupZilla-1.3.5.org/src/lib/history/historymodel.cpp	2012-12-11 19:20:32.085777083 +0100
++++ QupZilla-1.3.5/src/lib/history/historymodel.cpp	2012-12-11 19:24:17.013895571 +0100
+@@ -264,6 +264,7 @@
+     beginResetModel();
+ 
+     delete m_rootItem;
++    m_todayItem = 0;
+     m_rootItem = new HistoryItem(0);
+ 
+     init();
+@@ -448,12 +449,15 @@
+     if (!query.next()) {
+         return;
+     }
++    
++    const qint64 &minTimestamp = query.value(0).toLongLong();
++    if (minTimestamp <= 0) {
++        return;
++    }
+ 
+     const QDate &today = QDate::currentDate();
+     const QDate &week = today.addDays(1 - today.dayOfWeek());
+     const QDate &month = QDate(today.year(), today.month(), 1);
+-
+-    const qint64 &minTimestamp = query.value(0).toLongLong();
+     const qint64 &currentTimestamp = QDateTime::currentMSecsSinceEpoch();
+ 
+     qint64 timestamp = currentTimestamp;
+
+backport of https://github.com/QupZilla/qupzilla/commit/d08ec28d70934fa82d51efceb1a422d96c6812f6
+diff -ru QupZilla-1.3.5.org/src/lib/webview/tabbar.cpp QupZilla-1.3.5/src/lib/webview/tabbar.cpp
+--- QupZilla-1.3.5.org/src/lib/webview/tabbar.cpp	2012-12-11 19:20:32.092777090 +0100
++++ QupZilla-1.3.5/src/lib/webview/tabbar.cpp	2012-12-11 19:27:23.110991048 +0100
+@@ -647,15 +647,6 @@
+     QAbstractButton::leaveEvent(event);
+ }
+ 
+-void CloseButton::hideEvent(QHideEvent* event)
+-{
+-    QAbstractButton::hideEvent(event);
+-
+-    if (!isVisible()) {
+-        deleteLater();
+-    }
+-}
+-
+ void CloseButton::paintEvent(QPaintEvent*)
+ {
+     QPainter p(this);
+diff -ru QupZilla-1.3.5.org/src/lib/webview/tabbar.h QupZilla-1.3.5/src/lib/webview/tabbar.h
+--- QupZilla-1.3.5.org/src/lib/webview/tabbar.h	2012-12-11 19:20:32.093777090 +0100
++++ QupZilla-1.3.5/src/lib/webview/tabbar.h	2012-12-11 19:27:32.539995733 +0100
+@@ -128,7 +128,6 @@
+ 
+     void enterEvent(QEvent* event);
+     void leaveEvent(QEvent* event);
+-    void hideEvent(QHideEvent* event);
+     void paintEvent(QPaintEvent* event);
+ };
+ 
