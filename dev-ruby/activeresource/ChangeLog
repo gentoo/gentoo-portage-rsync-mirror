@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.135 2013/01/16 00:57:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.136 2013/01/20 15:04:50 graaff Exp $
+
+  20 Jan 2013; Hans de Graaff <graaff@gentoo.org>
+  -activeresource-2.3.14.ebuild, -activeresource-3.0.18.ebuild,
+  -activeresource-3.1.9.ebuild, -activeresource-3.2.10.ebuild:
+  Remove vulnerable versions.
 
   16 Jan 2013; Rick Farina <zerochaos@gentoo.org> activeresource-3.2.10.ebuild,
   activeresource-3.2.11.ebuild:

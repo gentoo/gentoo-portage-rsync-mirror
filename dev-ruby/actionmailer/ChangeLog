@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.214 2013/01/16 00:29:48 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.215 2013/01/20 15:04:06 graaff Exp $
+
+  20 Jan 2013; Hans de Graaff <graaff@gentoo.org> -actionmailer-2.3.14.ebuild,
+  -actionmailer-3.0.18.ebuild, -actionmailer-3.1.9.ebuild,
+  -actionmailer-3.2.10.ebuild:
+  Remove vulnerable versions.
 
   16 Jan 2013; Rick Farina <zerochaos@gentoo.org> actionmailer-3.2.10.ebuild:
   adding ~arm keywords to net-analyzer/metasploit rdeps

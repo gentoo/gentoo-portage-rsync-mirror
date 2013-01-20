@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.46 2013/01/16 00:49:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.47 2013/01/20 15:02:59 graaff Exp $
+
+  20 Jan 2013; Hans de Graaff <graaff@gentoo.org> -railties-3.0.18.ebuild,
+  -railties-3.1.9.ebuild, -railties-3.2.10.ebuild:
+  Remove vulnerable versions.
 
   16 Jan 2013; Rick Farina <zerochaos@gentoo.org> railties-3.1.10.ebuild,
   railties-3.1.3.ebuild, railties-3.1.9.ebuild, railties-3.2.10.ebuild,

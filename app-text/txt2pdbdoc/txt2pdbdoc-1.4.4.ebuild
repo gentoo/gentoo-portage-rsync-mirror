@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2pdbdoc/txt2pdbdoc-1.4.4.ebuild,v 1.9 2009/01/03 00:40:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2pdbdoc/txt2pdbdoc-1.4.4.ebuild,v 1.10 2013/01/20 15:07:59 scarabeus Exp $
+
+EAPI=5
 
 inherit autotools
 
@@ -14,16 +16,11 @@ KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+DOCS=( AUTHORS README ChangeLog )
 
+src_prepare() {
 	sed -i -e "/^CFLAGS/d" configure.in
 	eautoreconf
-}
-
-src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS README ChangeLog
 }
