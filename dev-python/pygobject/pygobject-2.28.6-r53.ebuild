@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r53.ebuild,v 1.1 2013/01/14 03:17:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r53.ebuild,v 1.2 2013/01/20 12:04:58 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,13 +18,16 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd6
 IUSE="examples libffi test"
 
 COMMON_DEPEND=">=dev-libs/glib-2.24.0:2
-	libffi? ( virtual/libffi:= )"
+	libffi? ( virtual/libffi:= )
+	${PYTHON_DEPS}
+"
 DEPEND="${COMMON_DEPEND}
 	dev-util/gtk-doc-am
+	virtual/pkgconfig
 	test? (
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc )
-	virtual/pkgconfig"
+"
 RDEPEND="${COMMON_DEPEND}
 	!<dev-python/pygtk-2.23"
 
@@ -67,7 +70,6 @@ src_configure() {
 	# --disable-introspection and --disable-cairo because we use pygobject:3
 	# for introspection support
 	G2CONF="${G2CONF}
-		--disable-dependency-tracking
 		--disable-introspection
 		--disable-cairo
 		$(use_with libffi ffi)"
@@ -95,7 +97,7 @@ src_test() {
 
 src_install() {
 	installing() {
-		local f, prefixed_sitedir
+		local f prefixed_sitedir
 
 		gnome2_src_install
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Crypt-SSLeay
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.75 2012/06/24 12:59:31 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.76 2013/01/20 12:27:33 tove Exp $
+
+*Crypt-SSLeay-0.640.0 (20 Jan 2013)
+
+  20 Jan 2013; Torsten Veller <tove@gentoo.org> +Crypt-SSLeay-0.640.0.ebuild:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

@@ -1,11 +1,19 @@
 # ChangeLog for games-puzzle/wmpuzzle
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wmpuzzle/ChangeLog,v 1.6 2011/05/25 17:01:30 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wmpuzzle/ChangeLog,v 1.8 2013/01/20 12:24:26 ssuominen Exp $
+
+*wmpuzzle-0.5.1 (20 Jan 2013)
+
+  20 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> +wmpuzzle-0.5.1.ebuild:
+  Version bump wrt #453120 by Agostino Sarubbo
+
+  20 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Missing desktop-dock in metadata.xml
 
   25 May 2011; Michael Sterrett <mr_bones_@gentoo.org> wmpuzzle-0.5.0.ebuild:
   fix SRC_URI (bug #366961)
 
-  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  24 Nov 2008; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Re-assign to games herd.
 
   26 Jun 2008; Santiago M. Mola <coldwind@gentoo.org> wmpuzzle-0.5.0.ebuild:
@@ -15,12 +23,12 @@
   wmpuzzle-0.5.0.ebuild:
   stable x86, bug 229485
 
-  18 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  18 Jan 2008; Samuli Suominen <ssuominen@gentoo.org>
   +files/wmpuzzle-0.5.0-asneeded.patch, wmpuzzle-0.5.0.ebuild:
   Fixed building with asneeded.
 
 *wmpuzzle-0.5.0 (17 Jan 2008)
 
-  17 Jan 2008; Samuli Suominen <drac@gentoo.org> +wmpuzzle-0.5.0.ebuild:
+  17 Jan 2008; Samuli Suominen <ssuominen@gentoo.org> +wmpuzzle-0.5.0.ebuild:
   Initial commit. Ebuild by Kenneth Prugh a.k.a. Ken69267
 

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst postrm prepare setup
+DEPEND=>=dev-libs/cryptlib-3.3.3[python] || ( dev-python/m2crypto dev-python/pycrypto ) gmp? ( dev-python/gmpy ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+DESCRIPTION=TLS Lite is a free python library that implements SSL 3.0 and TLS 1.0/1.1
+EAPI=4
+HOMEPAGE=http://trevp.net/tlslite/ http://pypi.python.org/pypi/tlslite
+IUSE=doc gmp
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD public-domain
+RDEPEND=>=dev-libs/cryptlib-3.3.3[python] || ( dev-python/m2crypto dev-python/pycrypto ) gmp? ( dev-python/gmpy ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://github.com/trevp/tlslite/downloads/tlslite-0.4.3.tar.gz
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=29d3e3ec8f1bcc320ead0c4012900b9c

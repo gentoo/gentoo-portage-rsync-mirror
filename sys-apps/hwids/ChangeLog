@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.68 2013/01/19 15:03:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.69 2013/01/20 12:17:43 ssuominen Exp $
+
+  20 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> hwids-20130114.ebuild:
+  arm/x86 stable wrt #452554
 
 *hwids-20130119 (19 Jan 2013)
 

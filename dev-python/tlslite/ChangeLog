@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/tlslite
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.16 2012/06/25 07:43:28 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.17 2013/01/20 12:19:59 idella4 Exp $
+
+*tlslite-0.4.3 (20 Jan 2013)
+
+  20 Jan 2013; Ian Delaney <idella4@gentoo.org> +tlslite-0.4.3.ebuild:
+  bump; tests remain restricted, on testing both tests hang, test phase added
+  but disabled, closes req from Ago, Bug 451242
 
   25 Jun 2012; Jeff Horelick <jdhore@gentoo.org> tlslite-0.4.0.ebuild:
   marked x86 per bug 418921
@@ -66,4 +72,3 @@
   06 Feb 2006; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
   +tlslite-0.3.8.ebuild:
   initial commit.
-
