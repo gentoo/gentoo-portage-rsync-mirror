@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.1.ebuild,v 1.4 2013/01/20 14:09:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.1.ebuild,v 1.5 2013/01/20 14:58:00 ulm Exp $
 
 EAPI=4
 
-inherit elisp-common flag-o-matic multilib wxwidgets
+inherit elisp-common flag-o-matic multilib wxwidgets toolchain-funcs
 
 DESCRIPTION="Command-line driven interactive plotting program"
 HOMEPAGE="http://www.gnuplot.info/"
@@ -105,6 +105,8 @@ src_configure() {
 		WX_GTK_VER="2.8"
 		need-wxwidgets unicode
 	fi
+
+	tc-export CC CXX			#453174
 
 	local myconf
 	myconf="${myconf} --without-lisp-files"

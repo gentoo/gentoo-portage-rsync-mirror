@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.16 2012/07/11 17:27:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.17 2013/01/20 14:55:58 tupone Exp $
 
 EAPI=2
 inherit eutils unpacker games
@@ -16,9 +16,6 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="opengl dedicated"
 RESTRICT="strip mirror"
-QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/rtcw/pb/pbag.so
-	${GAMES_PREFIX_OPT:1}/rtcw/pb/pbsv.so
-	${GAMES_PREFIX_OPT:1}/rtcw/pb/pbcl.so"
 
 UIDEPEND="virtual/opengl
 	x86? (
@@ -39,6 +36,7 @@ S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
+QA_PREBUILT="${dir:1}/* ${dir:1}/pb/* ${dir:1}/main/*"
 
 src_install() {
 	insinto "${dir}"

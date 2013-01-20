@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.165 2013/01/20 10:23:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.166 2013/01/20 14:40:17 ssuominen Exp $
+
+  20 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> -openal-1.13.ebuild,
+  -openal-1.14.ebuild, -openal-1.15.ebuild:
+  old
 
   20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> openal-1.15.1.ebuild:
   Stable for alpha, wrt bug #440002

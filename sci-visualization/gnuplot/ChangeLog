@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.197 2013/01/20 14:09:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.198 2013/01/20 14:58:00 ulm Exp $
+
+  20 Jan 2013; Ulrich Müller <ulm@gentoo.org> gnuplot-4.6.1.ebuild:
+  Respect CXX, bug 453174.
 
   20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gnuplot-4.6.1.ebuild:
   Stable for x86, wrt bug #446243
