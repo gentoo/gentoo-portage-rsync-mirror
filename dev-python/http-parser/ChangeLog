@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/http-parser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/ChangeLog,v 1.5 2013/01/12 15:53:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/ChangeLog,v 1.6 2013/01/20 18:15:20 idella4 Exp $
+
+  20 Jan 2013; Ian Delaney <idella4@gentoo.org>
+  +files/http-parser-0.7.8-setup.patch, http-parser-0.7.8.ebuild:
+  Added http-parser-0.7.8-setup.patch, fixes locale issue wrt Bug #451826 by Ago
 
   12 Jan 2013; Ian Delaney <idella4@gentoo.org> http-parser-0.7.12.ebuild:
   migrated 0.7.12 to distutils-r1

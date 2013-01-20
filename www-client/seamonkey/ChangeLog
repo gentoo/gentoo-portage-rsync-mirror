@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.425 2013/01/16 19:02:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.426 2013/01/20 18:27:22 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.15-r1.ebuild:
+  Stable for amd64, wrt bug #450940
 
   16 Jan 2013; Michał Górny <mgorny@gentoo.org> seamonkey-2.0.14-r1.ebuild,
   seamonkey-2.14-r1.ebuild, seamonkey-2.14.1.ebuild, seamonkey-2.15-r1.ebuild,

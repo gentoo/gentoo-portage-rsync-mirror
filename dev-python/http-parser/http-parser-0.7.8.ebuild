@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/http-parser-0.7.8.ebuild,v 1.2 2012/10/17 05:48:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/http-parser-0.7.8.ebuild,v 1.3 2013/01/20 18:15:20 idella4 Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS=1
 RESTRICT_PYTHON_ABIS="2.5 *-jython"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="HTTP request/response parser for python in C"
 HOMEPAGE="http://github.com/benoitc/http-parser"
@@ -24,6 +24,10 @@ DEPEND="${RDEPEND}
 	dev-python/cython"
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-setup.patch
+}
 
 src_install() {
 	distutils_src_install

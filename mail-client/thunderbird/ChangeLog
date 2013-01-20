@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.187 2013/01/16 23:43:35 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.189 2013/01/20 18:31:07 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> thunderbird-17.0.2.ebuild:
+  Stable for x86, wrt bug #450940
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> thunderbird-17.0.2.ebuild:
+  Stable for amd64, wrt bug #450940
 
   16 Jan 2013; <anarchy@gentoo.org> thunderbird-17.0.2.ebuild:
   Pax mark /usr/$(get_libdir)/${PN}/thunderbird, bug #449068

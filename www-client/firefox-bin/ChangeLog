@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.132 2013/01/11 05:32:36 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.134 2013/01/20 18:30:17 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> firefox-bin-17.0.2.ebuild:
+  Stable for x86, wrt bug #450940
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> firefox-bin-17.0.2.ebuild:
+  Stable for amd64, wrt bug #450940
 
 *firefox-bin-17.0.2 (11 Jan 2013)
 
