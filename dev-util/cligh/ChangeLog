@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/cligh
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cligh/ChangeLog,v 1.1 2013/01/20 20:47:15 floppym Exp $
+
+*cligh-0.1_p20120630 (20 Jan 2013)
+*cligh-9999 (20 Jan 2013)
+
+  20 Jan 2013; Mike Gilbert <floppym@gentoo.org> +cligh-0.1_p20120630.ebuild,
+  +cligh-9999.ebuild, +metadata.xml:
+  New package requested by williamh.
