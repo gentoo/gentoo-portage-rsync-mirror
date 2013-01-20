@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/trophy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trophy/ChangeLog,v 1.10 2012/05/03 03:35:39 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trophy/ChangeLog,v 1.11 2013/01/19 23:46:40 hasufell Exp $
+
+*trophy-2.0.3 (19 Jan 2013)
+
+  19 Jan 2013; Julian Ospald <hasufell@gentoo.org> +trophy-2.0.3.ebuild:
+  version bump wrt #439296
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> trophy-1.1.5.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
