@@ -1,0 +1,129 @@
+Index: entangle-0.5.0/configure.ac
+===================================================================
+--- entangle-0.5.0.orig/configure.ac
++++ entangle-0.5.0/configure.ac
+@@ -28,7 +28,7 @@ GDK_PIXBUF_REQUIRED=2.12.0
+ AC_SUBST(GDK_PIXBUF_REQUIRED)
+ GTK_REQUIRED=3.0.0
+ AC_SUBST(GTK_REQUIRED)
+-GPHOTO2_REQUIRED=2.4.11
++GPHOTO2_REQUIRED=2.5.0
+ AC_SUBST(GPHOTO2_REQUIRED)
+ GUDEV_REQUIRED=145
+ AC_SUBST(GUDEV_REQUIRED)
+Index: entangle-0.5.0/src/backend/entangle-camera.c
+===================================================================
+--- entangle-0.5.0.orig/src/backend/entangle-camera.c
++++ entangle-0.5.0/src/backend/entangle-camera.c
+@@ -543,15 +543,14 @@ const char *entangle_camera_get_port(Ent
+ 
+ static unsigned int do_entangle_camera_progress_start(GPContext *ctx G_GNUC_UNUSED,
+                                                       float target,
+-                                                      const char *format,
+-                                                      va_list args,
++                                                      const char *txt,
+                                                       void *data)
+ {
+     EntangleCamera *cam = data;
+     EntangleCameraPrivate *priv = cam->priv;
+ 
+     if (priv->progress)
+-        entangle_progress_start(priv->progress, target, format, args);
++        entangle_progress_start(priv->progress, target, txt);
+ 
+     return 0; /* XXX what is this actually useful for ? */
+ }
+@@ -588,15 +587,14 @@ static void entangle_camera_reset_last_e
+ }
+ 
+ static void do_entangle_camera_error(GPContext *ctx G_GNUC_UNUSED,
+-                                     const char *fmt,
+-                                     va_list args,
++                                     const char *txt,
+                                      void *data)
+ {
+     EntangleCamera *cam = data;
+     EntangleCameraPrivate *priv = cam->priv;
+ 
+     entangle_camera_reset_last_error(cam);
+-    priv->lastError = g_strdup_vprintf(fmt, args);
++    priv->lastError = g_strdup(txt);
+     ENTANGLE_DEBUG("Got error %s", priv->lastError);
+ }
+ 
+Index: entangle-0.5.0/src/backend/entangle-progress.c
+===================================================================
+--- entangle-0.5.0.orig/src/backend/entangle-progress.c
++++ entangle-0.5.0/src/backend/entangle-progress.c
+@@ -23,11 +23,11 @@
+ #include "entangle-debug.h"
+ #include "entangle-progress.h"
+ 
+-void entangle_progress_start(EntangleProgress *prog, float target, const char *format, va_list args)
++void entangle_progress_start(EntangleProgress *prog, float target, const char *txt)
+ {
+     g_return_if_fail(ENTANGLE_IS_PROGRESS(prog));
+ 
+-    ENTANGLE_PROGRESS_GET_INTERFACE(prog)->start(prog, target, format, args);
++    ENTANGLE_PROGRESS_GET_INTERFACE(prog)->start(prog, target, txt);
+ }
+ 
+ void entangle_progress_update(EntangleProgress *prog, float current)
+Index: entangle-0.5.0/src/backend/entangle-progress.h
+===================================================================
+--- entangle-0.5.0.orig/src/backend/entangle-progress.h
++++ entangle-0.5.0/src/backend/entangle-progress.h
+@@ -38,14 +38,14 @@ typedef struct _EntangleProgressInterfac
+ struct _EntangleProgressInterface {
+     GTypeInterface parent;
+ 
+-    void (*start) (EntangleProgress *prog, float target, const char *format, va_list args);
++    void (*start) (EntangleProgress *prog, float target, const char *txt);
+     void (*update) (EntangleProgress *prog, float current);
+     void (*stop) (EntangleProgress *prog);
+ };
+ 
+ GType entangle_progress_get_type(void);
+ 
+-void entangle_progress_start(EntangleProgress *prog, float target, const char *format, va_list args);
++void entangle_progress_start(EntangleProgress *prog, float target, const char *txt);
+ void entangle_progress_update(EntangleProgress *prog, float current);
+ void entangle_progress_stop(EntangleProgress *prog);
+ 
+Index: entangle-0.5.0/src/frontend/entangle-camera-manager.c
+===================================================================
+--- entangle-0.5.0.orig/src/frontend/entangle-camera-manager.c
++++ entangle-0.5.0/src/frontend/entangle-camera-manager.c
+@@ -1091,14 +1091,13 @@ static void do_camera_file_preview(Entan
+ }
+ 
+ 
+-static void do_entangle_camera_progress_start(EntangleProgress *iface, float target, const char *format, va_list args)
++static void do_entangle_camera_progress_start(EntangleProgress *iface, float target, const char *txt)
+ {
+     g_return_if_fail(ENTANGLE_IS_CAMERA_MANAGER(iface));
+ 
+     EntangleCameraManager *manager = ENTANGLE_CAMERA_MANAGER(iface);
+     EntangleCameraManagerPrivate *priv = manager->priv;
+     GtkWidget *mtr;
+-    char *txt;
+     GtkWidget *operation;
+ 
+     gdk_threads_enter();
+@@ -1107,16 +1106,12 @@ static void do_entangle_camera_progress_
+     mtr = GTK_WIDGET(gtk_builder_get_object(priv->builder, "toolbar-progress"));
+     operation = GTK_WIDGET(gtk_builder_get_object(priv->builder, "toolbar-operation"));
+ 
+-    txt = g_strdup_vprintf(format, args);
+-
+     gtk_widget_set_tooltip_text(mtr, txt);
+     gtk_progress_bar_set_text(GTK_PROGRESS_BAR(mtr), txt);
+     gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(mtr), 0);
+ 
+     gtk_widget_show(operation);
+ 
+-    g_free(txt);
+-
+     gdk_threads_leave();
+ }
+ 

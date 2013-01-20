@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/dmidecode-2.11.ebuild,v 1.11 2013/01/16 20:06:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/dmidecode-2.11.ebuild,v 1.12 2013/01/20 13:18:00 ago Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* amd64 ~arm ~ia64 ppc ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-solaris"
+KEYWORDS="-* amd64 arm ~ia64 ppc ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-solaris"
 IUSE="selinux"
 
 DEPEND="selinux? ( sec-policy/selinux-dmidecode )"

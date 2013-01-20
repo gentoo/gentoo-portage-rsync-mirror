@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.111 2013/01/20 10:22:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.112 2013/01/20 13:16:49 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> luatex-0.70.1-r1.ebuild:
+  Stable for arm, wrt bug #452018
 
   20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> luatex-0.70.1-r1.ebuild:
   Stable for alpha, wrt bug #452018

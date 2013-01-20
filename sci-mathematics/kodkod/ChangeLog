@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/kodkod
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkod/ChangeLog,v 1.1 2012/12/05 10:41:32 gienah Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkod/ChangeLog,v 1.2 2013/01/20 13:17:39 flameeyes Exp $
+
+  20 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Fix invalid metadata.
 
 *kodkod-1.5.2 (05 Dec 2012)
 

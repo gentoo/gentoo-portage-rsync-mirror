@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sshfs-fuse
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.67 2012/11/07 04:20:46 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.68 2013/01/20 13:17:10 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> sshfs-fuse-2.4.ebuild:
+  Stable for arm, wrt bug #412147
 
   07 Nov 2012; Jeroen Roovers <jer@gentoo.org> sshfs-fuse-2.4.ebuild:
   Stable for HPPA too.
@@ -250,4 +253,3 @@
   15 Jan 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +sshfs-fuse-1.0.ebuild:
   Initial commit, thanks to OneOfOne in IRC
-

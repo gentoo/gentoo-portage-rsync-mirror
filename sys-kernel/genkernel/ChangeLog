@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.345 2013/01/16 18:52:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.346 2013/01/20 13:05:56 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> genkernel-3.4.45.ebuild:
+  Stable for x86, wrt bug #441004
 
   16 Jan 2013; Brent Baude <ranger@gentoo.org> genkernel-3.4.45.ebuild:
   Marking 441004 ppc and ppc64 to get weekly builds working again
