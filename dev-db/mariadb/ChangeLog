@@ -1,6 +1,30 @@
 # ChangeLog for dev-db/mariadb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.20 2012/12/18 17:51:01 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.24 2013/01/20 02:25:00 robbat2 Exp $
+
+  20 Jan 2013; Robin H. Johnson <robbat2@gentoo.org> +files/my.cnf-5.5:
+  New my.cnf for 5.5 series, per eclass changes.
+
+*mariadb-5.5.28a (20 Jan 2013)
+*mariadb-5.2.13 (20 Jan 2013)
+*mariadb-5.3.11 (20 Jan 2013)
+*mariadb-5.1.66 (20 Jan 2013)
+
+  20 Jan 2013; Robin H. Johnson <robbat2@gentoo.org> +mariadb-5.1.66.ebuild,
+  +mariadb-5.2.13.ebuild, +mariadb-5.3.11.ebuild, +mariadb-5.5.28a.ebuild:
+  Bump, includes upstream security fixes. Many thanks to Brian Evans
+  <grknight@lavabit.com> for his contributions.
+
+  20 Jan 2013; Robin H. Johnson <robbat2@gentoo.org> mariadb-5.1.62.ebuild,
+  mariadb-5.2.12.ebuild, mariadb-5.3.6.ebuild, mariadb-5.5.23.ebuild,
+  mariadb-5.5.28.ebuild:
+  Fix minor typo in test runner.
+
+  20 Jan 2013; Robin H. Johnson <robbat2@gentoo.org> -mariadb-5.1.42-r1.ebuild,
+  -mariadb-5.1.42.ebuild, -mariadb-5.1.50.ebuild, -mariadb-5.1.55.ebuild,
+  -mariadb-5.2.9.ebuild, mariadb-5.1.62.ebuild, mariadb-5.2.12.ebuild,
+  mariadb-5.3.6.ebuild, mariadb-5.5.28.ebuild:
+  Trim old versions.
 
   18 Dec 2012; Jeroen Roovers <jer@gentoo.org> mariadb-5.5.28.ebuild:
   Drop HPPA keywording.

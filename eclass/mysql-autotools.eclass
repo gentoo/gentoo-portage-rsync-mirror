@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.10 2012/11/01 23:57:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.11 2013/01/20 02:23:10 robbat2 Exp $
 
 # @ECLASS: mysql-autotools.eclass
 # @MAINTAINER:
@@ -301,6 +301,18 @@ mysql-autotools_configure_51() {
 	plugins_sta="${plugins_sta} ${plugins_dyn}" && \
 	plugins_dyn=""
 
+	# Google MySQL, bundle what upstream supports
+	if [[ "${PN}" == "google-mysql" ]]; then
+		for x in innobase innodb_plugin innodb ; do
+			plugins_sta="${plugins_sta//$x}"
+			plugins_dyn="${plugins_dyn//$x}"
+		done
+		plugins_sta="${plugins_sta} innodb_plugin googlestats"
+		myconf="${myconf} --with-perftools-dir=/usr --enable-perftools-tcmalloc"
+		# use system lzo for google-mysql
+		myconf="${myconf} --with-lzo2-dir=/usr"
+	fi
+
 	einfo "Available plugins: ${plugins_avail}"
 	einfo "Dynamic plugins: ${plugins_dyn}"
 	einfo "Static plugins: ${plugins_sta}"
@@ -461,7 +473,11 @@ mysql-autotools_src_configure() {
 
 	CXXFLAGS="${CXXFLAGS} -fno-exceptions -fno-strict-aliasing"
 	CXXFLAGS="${CXXFLAGS} -felide-constructors -fno-rtti"
+	# storage/googlestats, sql/ in google-mysql are using C++ templates
+	# implicitly. Upstream might be interested in this, exclude
+	# -fno-implicit-templates for google-mysql for now.
 	mysql_version_is_at_least "5.0" \
+	&& [[ "${PN}" != "google-mysql" ]] \
 	&& CXXFLAGS="${CXXFLAGS} -fno-implicit-templates"
 	export CXXFLAGS
 

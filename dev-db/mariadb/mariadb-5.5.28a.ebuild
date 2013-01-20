@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.5.28.ebuild,v 1.4 2013/01/20 02:09:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-5.5.28a.ebuild,v 1.1 2013/01/20 02:19:54 robbat2 Exp $
 
 EAPI="4"
-MY_EXTRAS_VER="20120906-1344Z"
+MY_EXTRAS_VER="20130120-0100Z"
 
 # Build system
 BUILD="cmake"
@@ -16,7 +16,7 @@ IUSE="$IUSE"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
 # When MY_EXTRAS is bumped, the index should be revised to exclude these.
-EPATCH_EXCLUDE=''
+EPATCH_EXCLUDE='20001_all_fix-minimal-build-cmake-mariadb.patch'
 
 DEPEND="|| ( >=sys-devel/gcc-3.4.6 >=sys-devel/gcc-apple-4.0 )"
 RDEPEND="${RDEPEND}"
