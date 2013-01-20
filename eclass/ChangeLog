@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.626 2013/01/18 15:00:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.627 2013/01/20 11:42:30 pacho Exp $
+
+  20 Jan 2013; Pacho Ramos <pacho@gentoo.org> +readme.gentoo.eclass:
+  Finally commit readme.gentoo.eclass to create a README.gentoo doc file
+  recording tips shown via elog messages first time the package is merged.
 
   18 Jan 2013; Justin Lecher <jlec@gentoo.org> intel-sdp.eclass:
   No EPREFIX with helper functions
