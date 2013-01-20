@@ -7,6 +7,7 @@
     <name>Christian Faulhammer</name>
   </maintainer>
   <use>
+    <flag name="cdio">use libcdio for CD support </flag>
     <flag name="cue">enable CUE sheet parsing</flag>
     <flag name="discid">enable reading the ID of the inserted CD</flag>
     <flag name="pidgin">install support script for <pkg>net-im/pidgin</pkg></flag>

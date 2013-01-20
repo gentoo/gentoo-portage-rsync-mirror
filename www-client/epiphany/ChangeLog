@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.290 2013/01/06 11:14:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.291 2013/01/20 22:55:48 eva Exp $
+
+  20 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> -epiphany-3.4.3.ebuild,
+  epiphany-3.6.1.ebuild, +files/epiphany-3.6.1-test-gwarning.patch:
+  Requires avahi[dbus], bug #453110. Fix some testsuite issues.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> epiphany-3.6.1.ebuild:
   Add ~sparc, wrt bug #449220

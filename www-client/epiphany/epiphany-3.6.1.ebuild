@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.6.1.ebuild,v 1.3 2013/01/06 11:14:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.6.1.ebuild,v 1.4 2013/01/20 22:55:48 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -24,7 +24,7 @@ RDEPEND="
 	>=dev-libs/libxslt-1.1.7
 	>=gnome-base/gnome-keyring-2.26.0
 	>=gnome-base/gsettings-desktop-schemas-0.0.1
-	>=net-dns/avahi-0.6.22
+	>=net-dns/avahi-0.6.22[dbus]
 	>=net-libs/webkit-gtk-1.9.6:3[jit?,introspection?]
 	>=net-libs/libsoup-gnome-2.39.6:2.4
 	>=x11-libs/gtk+-3.5.2:3[introspection?]
@@ -52,6 +52,11 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
+	# Fix testsuite
+	epatch "${FILESDIR}/${PN}-3.6.1-test-gwarning.patch"
+	sed -e '/\/do_migration_invalid/,+1 d' \
+		-i tests/ephy-migration-test.c || die
+
 	# Build-time segfaults under PaX with USE=introspection when building
 	# against webkit-gtk[introspection,jit]
 	if use introspection && use jit; then
@@ -63,15 +68,13 @@ src_prepare() {
 }
 
 src_configure() {
-	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS README TODO"
-	G2CONF="${G2CONF}
-		--enable-shared
-		--disable-static
-		--with-distributor-name=Gentoo
-		$(use_enable introspection)
-		$(use_enable nss)
-		$(use_enable test tests)"
-	gnome2_src_configure
+	gnome2_src_configure \
+		--enable-shared \
+		--disable-static \
+		--with-distributor-name=Gentoo \
+		$(use_enable introspection) \
+		$(use_enable nss) \
+		$(use_enable test tests)
 }
 
 src_compile() {
@@ -89,6 +92,7 @@ src_test() {
 }
 
 src_install() {
+	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS README TODO"
 	gnome2_src_install
 	use jit && pax-mark m "${ED}usr/bin/epiphany"
 }

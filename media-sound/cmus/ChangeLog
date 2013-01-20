@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cmus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.59 2013/01/19 22:28:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.60 2013/01/20 22:39:51 fauli Exp $
+
+  20 Jan 2013; Christian Faulhammer <fauli@gentoo.org> cmus-2.5.0.ebuild:
+  fix cdio issues, bug 452446
 
   19 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> cmus-2.5.0.ebuild:
   IUSE and dependency used "cdda" but my_config had "cdio" wrt #452446
