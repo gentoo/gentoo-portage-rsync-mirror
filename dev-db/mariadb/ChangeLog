@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.24 2013/01/20 02:25:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.25 2013/01/20 02:39:56 robbat2 Exp $
+
+  20 Jan 2013; Robin H. Johnson <robbat2@gentoo.org> files/my.cnf-5.1,
+  files/my.cnf-5.5:
+  Bug #430836: eprefix paths in my.cnf.
 
   20 Jan 2013; Robin H. Johnson <robbat2@gentoo.org> +files/my.cnf-5.5:
   New my.cnf for 5.5 series, per eclass changes.
