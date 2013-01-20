@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.80 2013/01/20 16:22:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.81 2013/01/20 16:53:23 ago Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -89,11 +89,6 @@ devil
 gts
 
 # Other
-
-# Alexandre Rostovtsev <tetromino@gmail.com> (28 Oct 2011)
-# x11-misc/colord and app-admin/packagekit-base not tested. Bug #387959.
-colord
-packagekit
 
 # Raúl Porcel <armin76@gentoo.org> (23 Apr 2011)
 # Needs to be tested
