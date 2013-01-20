@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/apse
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.11 2012/02/21 05:02:17 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.12 2013/01/20 00:45:10 mgorny Exp $
+
+*apse-0.2-r2 (20 Jan 2013)
+
+  20 Jan 2013; Michał Górny <mgorny@gentoo.org> +apse-0.2-r2.ebuild:
+  Migrate to distutils-r1. Correct the swig dependency.
 
   21 Feb 2012; Patrick Lauer <patrick@gentoo.org> apse-0.2-r1.ebuild:
   Restricting jython
@@ -42,4 +47,3 @@
   24 Jan 2005; Christian Andreetta <satya@gentoo.org> +metadata.xml,
   +apse-0.2.ebuild:
   New package submission
-

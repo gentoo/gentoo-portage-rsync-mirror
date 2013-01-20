@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/nss-pam-ldapd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.5 2012/11/19 01:01:44 prometheanfire Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.6 2013/01/20 00:44:08 prometheanfire Exp $
+
+  20 Jan 2013; Matthew Thode <prometheanfire@gentoo.org>
+  nss-pam-ldapd-0.8.12.ebuild:
+  removed /var/run keepdir for bug 452992
 
 *nss-pam-ldapd-0.8.12 (19 Nov 2012)
 
@@ -60,4 +64,3 @@
   that does all the LDAP communication. Due to the way NSS works, this will
   improve interaction with user programs since less code is being loaded
   into their process space.
-
