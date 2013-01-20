@@ -1,22 +1,22 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/abs-guide-6.4.ebuild,v 1.2 2012/01/02 04:52:35 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/abs-guide-6.6.ebuild,v 1.1 2013/01/20 06:16:05 dirtyepic Exp $
 
 EAPI="4"
 
 DESCRIPTION="An advanced reference and a tutorial on bash shell scripting"
 HOMEPAGE="http://www.tldp.org/LDP/abs/html"
 
-# Upstream likes to update the tarball without changing the name.
-# - fetch http://bash.webofcrafts.net/abs-guide-latest.tar.bz2
-# - fetch http://bash.webofcrafts.net/abs-guide.pdf
+# Upstream likes to update the tarballs without changing the names.
+# - http://bash.deta.in/abs-guide-${PV}.tar.bz2
+# - http://bash.deta.in/abs-guide.pdf <- remember to rename with ${PV}
 SRC_URI="http://dev.gentoo.org/~dirtyepic/dist/${P}.tar.bz2
-		pdf? ( http://dev.gentoo.org/~dirtyepic/dist/${P}.pdf )"
+	pdf? ( http://dev.gentoo.org/~dirtyepic/dist/${P}.pdf )"
 
 LICENSE="OPL"
 IUSE="pdf"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~mips ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 
 DEPEND=""
 RDEPEND=""
