@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.12-r1.ebuild,v 1.3 2013/01/16 18:51:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.12-r1.ebuild,v 1.5 2013/01/20 14:10:12 ago Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~arm ~ia64 ~ppc ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~ia64 ~ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 DEPEND=""

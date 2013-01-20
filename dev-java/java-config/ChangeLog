@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.274 2013/01/16 18:51:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.276 2013/01/20 14:10:12 ago Exp $
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> java-config-2.1.12-r1.ebuild:
+  Stable for x86, wrt bug #451998
+
+  20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> java-config-2.1.12-r1.ebuild:
+  Stable for amd64, wrt bug #451998
 
   16 Jan 2013; Agostino Sarubbo <ago@gentoo.org> java-config-2.1.12-r1.ebuild:
   Stable for ppc64, wrt bug #451998

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.41 2013/01/20 11:07:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.42 2013/01/20 14:18:53 graaff Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
@@ -59,7 +59,7 @@ ipmi
 
 # 2010/05/03 - Alex Legler <a3li@gentoo.org>
 # Add support for Ruby Enterprise Edition targets where rubyee is available
--ruby_targets_ree18
+# -ruby_targets_ree18
 
 # 2010/01/08 - Diego E. Pettenò <flameeyes@gentoo.org>
 # Add support for JRuby targets where jruby is available

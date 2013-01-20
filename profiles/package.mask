@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14395 2013/01/20 10:16:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14396 2013/01/20 14:18:52 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (20 Jan 2013) Mask
+# dev-lang/ruby-enterprise for removal, bug 453178.  The current
+# versions have minor security issues, the latest versions are masked
+# and don't work, and upstream announced end-of-life almost a year
+# ago. Ruby 1.9 has almost all of the benefits of REE, so the
+# recommendation is to switch to that if you are still using REE.
+dev-lang/ruby-enterprise
 
 # Ben de Groot <yngwin@gentoo.org> (20 Jan 2013)
 # 2.5* has known security and other issues due to bundled ffmpeg,

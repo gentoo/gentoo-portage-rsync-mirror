@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.17-r1.ebuild,v 1.1 2013/01/18 16:21:17 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.17-r1.ebuild,v 1.3 2013/01/20 14:09:53 ago Exp $
 
 EAPI=4
 inherit systemd
@@ -11,7 +11,7 @@ SRC_URI="http://tedfelix.com/linux/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 -ppc ~x86"
+KEYWORDS="amd64 ~ia64 -ppc x86"
 IUSE="selinux"
 
 RDEPEND="selinux? ( sec-policy/selinux-apm )"

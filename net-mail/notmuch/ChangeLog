@@ -1,6 +1,52 @@
 # ChangeLog for net-mail/notmuch
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.65 2012/11/20 20:36:15 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.66 2013/01/20 14:16:53 aidecoe Exp $
+
+*notmuch-0.15 (20 Jan 2013)
+
+  20 Jan 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/60notmuch-pick-gentoo.el, +notmuch-0.15.ebuild, metadata.xml:
+  Version bump. Added site-init file for notmuch-pick by Ulrich Müller
+  <ulm@gentoo.org> - thanks! :-)
+
+  NEWS
+  ~~~~
+  (Extracted headlines from NEWS file. See it for details.)
+
+  General
+  -------
+  - Date range search support
+  - Empty tag names and tags beginning with "-" are deprecated
+  - New add-on tool: notmuch-pick (installed on 'pick' USE flag)
+
+  Command-Line Interface
+  ----------------------
+
+  - `notmuch new` no longer chokes on mboxes
+  - Support for single message mboxes is deprecated
+  - Fixed `notmuch new` to skip ignored broken symlinks
+  - New dump/restore format and tagging interface
+  - Bcc and Reply-To headers are now available in notmuch show json output
+  - CLI callers can now request a specific output format version
+  - `notmuch search` has gained a null character separated text output format
+
+  Emacs Interface
+  ---------------
+
+  - Removal of the deprecated `notmuch-folders` variable
+  - Visibility of MIME parts can be toggled
+  - Emacs now buttonizes mid: links
+  - Handle errors from bodypart insertions
+  - Emacs now detects version mismatches with the notmuch CLI
+  - Improved text/calendar content handling
+  - Disabled coding conversions when reading in
+  `with-current-notmuch-show-message`
+  - Fixed errors with HTML email containing images in Emacs 24
+  - Fixed handling of tags with unusual characters in them
+  - Fixed buttonization of id: links without quote characters
+  - `notmuch-hello` refresh point placement improvements
+  - Automatic tag changes are now unified and customizable
+  - Support for stashing the thread id in show view
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> notmuch-0.14-r1.ebuild:
   Stable for x86, wrt bug #441466
