@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.9.2.ebuild,v 1.1 2012/11/23 22:12:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.9.2-r1.ebuild,v 1.1 2013/01/21 07:58:29 xmw Exp $
 
 EAPI=4
 
@@ -45,11 +45,6 @@ src_install() {
 	newconfd "${FILESDIR}"/${PN}.conf ${PN}
 
 	systemd_dounit "${FILESDIR}"/${PN}.service
-
-	# location of radvd.pid needs to be writeable by the radvd user
-	keepdir /var/run/radvd
-	fowners -R radvd:radvd /var/run/radvd
-	fperms 755 /var/run/radvd
 
 	if use kernel_FreeBSD ; then
 		sed -i -e \

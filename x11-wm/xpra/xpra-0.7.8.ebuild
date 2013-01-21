@@ -1,11 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.6.4.ebuild,v 1.4 2012/10/16 13:39:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.7.8.ebuild,v 1.1 2013/01/21 07:31:49 xmw Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="*"
+#dev-python/pygobject and dev-python/pygtk do not support python3
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
+DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 SUPPORT_PYTHON_ABIS="1"
 inherit distutils eutils
 
@@ -13,10 +15,10 @@ DESCRIPTION="X Persistent Remote Apps (xpra) and Partitioning WM (parti) based o
 HOMEPAGE="http://xpra.org/"
 SRC_URI="http://xpra.org/src/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~amd64-linux ~x86 ~x86-linux"
-IUSE="+clipboard +rencode server vpx x264"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="+clipboard +rencode server vpx webp x264"
 
 COMMON_DEPEND="dev-python/pygobject:2
 	dev-python/pygtk:2
@@ -28,6 +30,7 @@ COMMON_DEPEND="dev-python/pygobject:2
 	x11-libs/libXtst
 	vpx? ( media-libs/libvpx
 		virtual/ffmpeg )
+	webp? ( media-libs/libwebp )
 	x264? ( media-libs/x264
 		virtual/ffmpeg )"
 
@@ -47,27 +50,38 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-python/cython-0.16"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.7.1-ignore-gentoo-no-compile.patch
+	epatch "${FILESDIR}"/${PN}-0.7.4-prefix.patch
+
 	use clipboard || epatch patches/disable-clipboard.patch
 	use rencode   || epatch patches/disable-rencode.patch
 	use server    || epatch patches/disable-posix-server.patch
 	use vpx       || epatch patches/disable-vpx.patch
+	use webp      || epatch patches/disable-webp.patch
 	use x264      || epatch patches/disable-x264.patch
 
 	distutils_src_prepare
+
+	patching() {
+	    [[ "${PYTHON_ABI}" == 2.* ]] && return
+		2to3 --no-diffs -x all -f except -w -n .
+	}
+	python_execute_function --action-message \
+		'Applying patches with $(python_get_implementation) $(python_get_version)' \
+		-s patching
 }
 
 src_install() {
 	distutils_src_install
-	rm -v "${D}"usr/share/parti/{parti.,}README \
-		"${D}"usr/share/xpra/{webm/LICENSE,xpra.README} \
-		"${D}"usr/share/wimpiggy/wimpiggy.README
+	rm -v "${ED}"usr/share/parti/{parti.,}README \
+		"${ED}"usr/share/xpra/{webm/LICENSE,xpra.README} \
+		"${ED}"usr/share/wimpiggy/wimpiggy.README
 	dodoc {parti.,wimpiggy.,xpra.,}README
 
-	if use server ; then
-		einfo
-		elog "please make your Xorg binary readable for users of xpra"
-		elog "  chmod a+r /usr/bin/Xorg"
-		elog "and think about the security impact"
-		einfo
-	fi
+	einfo
+	elog "please make your Xorg binary readable for users of xpra"
+	elog "  chmod a+r /usr/bin/Xorg"
+	elog "and think about the security impact"
+	elog "A copy at ~/.xpra/Xorg matching the current modules is sufficient."
+	einfo
 }

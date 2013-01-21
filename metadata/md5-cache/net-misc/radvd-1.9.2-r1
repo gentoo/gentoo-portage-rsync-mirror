@@ -10,4 +10,4 @@ RDEPEND=dev-libs/libdaemon selinux? ( sec-policy/selinux-radvd )
 SLOT=0
 SRC_URI=http://v6web.litech.org/radvd/dist/radvd-1.9.2.tar.gz
 _eclasses_=systemd	28706ddc21464b4ed255eee9fc70b516	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=eee51f98223f390c5127ceff64b0e193
+_md5_=d8156aeb1328fee6797845e2121c0d2f
