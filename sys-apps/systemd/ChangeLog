@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.71 2013/01/20 17:20:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.72 2013/01/21 00:47:38 floppym Exp $
+
+*systemd-197-r1 (21 Jan 2013)
+
+  21 Jan 2013; Mike Gilbert <floppym@gentoo.org> +systemd-197-r1.ebuild,
+  -systemd-197.ebuild, systemd-9999.ebuild:
+  Disable SysV init script compatibility. Thanks to Michał Bartoszkiewicz on bug
+  453260.
 
   20 Jan 2013; Michał Górny <mgorny@gentoo.org> systemd-197.ebuild,
   systemd-9999.ebuild:
