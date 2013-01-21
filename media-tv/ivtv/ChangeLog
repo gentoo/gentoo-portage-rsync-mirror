@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/ivtv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.113 2012/11/29 02:22:04 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.114 2013/01/21 22:19:30 ssuominen Exp $
+
+  21 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> ivtv-1.0.1.ebuild,
+  ivtv-1.0.2.ebuild, ivtv-1.0.3-r2.ebuild:
+  Remove sys-apps/hotplug dependency from || () in favour of virtual/udev wrt
+  #145809
 
   29 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> ivtv-1.0.1.ebuild,
   ivtv-1.0.2.ebuild, ivtv-1.0.3-r2.ebuild, ivtv-1.1.0-r1.ebuild,

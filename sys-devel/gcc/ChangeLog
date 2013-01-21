@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.932 2013/01/15 02:18:17 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.933 2013/01/21 22:10:40 dirtyepic Exp $
+
+  21 Jan 2013; Ryan Hill <dirtyepic@gentoo.org> gcc-4.6.3.ebuild:
+  Patchset 1.11. Fixes bug #451680 (bootstrap comparison failure on alpha) and
+  bug #452768 (unable to find a register to spill in class 'VFP_LO_REGS' on
+  arm).
 
   15 Jan 2013; Ryan Hill <dirtyepic@gentoo.org> gcc-4.6.3.ebuild:
   Patchset 1.10. Backport patch to fix ICE on arm (bug #401561).

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/i2400m-fw/i2400m-fw-1.5.0.ebuild,v 1.4 2012/12/11 10:01:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/i2400m-fw/i2400m-fw-1.5.0.ebuild,v 1.5 2013/01/21 22:31:05 ssuominen Exp $
 
 EAPI=5
 MY_PV=${PV%.0}
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="|| ( virtual/udev >=sys-apps/hotplug-20040923 )"
+DEPEND="virtual/udev"
 
 src_install() {
 	insinto /lib/firmware

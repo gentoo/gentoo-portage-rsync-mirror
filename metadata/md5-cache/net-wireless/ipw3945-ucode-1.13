@@ -1,10 +1,10 @@
 DEFINED_PHASES=install
-DEPEND=|| ( virtual/udev >=sys-apps/hotplug-20040923 ) !<sys-fs/udev-096
+DEPEND=virtual/udev
 DESCRIPTION=Microcode for the Intel PRO/Wireless 3945ABG miniPCI express adapter
 HOMEPAGE=http://www.bughost.org/ipw3945/
 KEYWORDS=~amd64 x86
 LICENSE=ipw3945
-RDEPEND=|| ( virtual/udev >=sys-apps/hotplug-20040923 ) !<sys-fs/udev-096
+RDEPEND=virtual/udev
 SLOT=0
 SRC_URI=http://www.bughost.org/ipw3945/ipw3945-ucode-1.13.tgz
-_md5_=6dd876edaafa9a7a0c3711e963da58ef
+_md5_=ea15b863b68a884d9c43185615e6f351

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r6.ebuild,v 1.10 2012/12/11 09:06:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r6.ebuild,v 1.11 2013/01/21 22:18:07 ssuominen Exp $
 
 EAPI="3"
 
@@ -69,7 +69,7 @@ RDEPEND="${CDEPEND}
 		app-misc/screen
 		app-admin/logrotate
 	)
-	|| ( virtual/udev sys-apps/hotplug )"
+	virtual/udev"
 
 # hvmloader is used to bootstrap a fully virtualized kernel
 # Approved by QA team in bug #144032

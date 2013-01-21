@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-9999.ebuild,v 1.3 2012/12/11 17:09:39 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-9999.ebuild,v 1.4 2013/01/21 22:29:46 ssuominen Exp $
 
 inherit linux-mod cvs
 
@@ -12,8 +12,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 RDEPEND="net-wireless/atmel-firmware
-		|| ( virtual/udev >=sys-apps/hotplug-20040923 )
-		!<sys-fs/udev-096
+		virtual/udev
 		>=net-wireless/wireless-tools-26-r1"
 
 S=${WORKDIR}/${ECVS_MODULE}

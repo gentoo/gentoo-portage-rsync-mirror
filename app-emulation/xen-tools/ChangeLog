@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.124 2013/01/20 19:29:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.125 2013/01/21 22:18:07 ssuominen Exp $
+
+  21 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  xen-tools-4.1.1-r6.ebuild, xen-tools-4.1.2-r2.ebuild,
+  xen-tools-4.1.2-r3.ebuild, xen-tools-4.2.0-r1.ebuild,
+  xen-tools-4.2.0-r2.ebuild:
+  Remove sys-apps/hotplug dependency from || () in favour of virtual/udev wrt
+  #145809
 
   20 Jan 2013; Michał Górny <mgorny@gentoo.org> xen-tools-4.2.0-r2.ebuild:
   Drop python2.5 because of lxml.

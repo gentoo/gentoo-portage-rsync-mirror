@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/zd1201-firmware
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1201-firmware/ChangeLog,v 1.10 2012/12/11 17:48:26 axs Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1201-firmware/ChangeLog,v 1.11 2013/01/21 22:22:44 ssuominen Exp $
+
+  21 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  zd1201-firmware-0.14.ebuild:
+  Remove sys-apps/hotplug dependency from || () in favour of virtual/udev wrt
+  #145809
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> zd1201-firmware-0.14.ebuild:
   virtualize udev dependency
