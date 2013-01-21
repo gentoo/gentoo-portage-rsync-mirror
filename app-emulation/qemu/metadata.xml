@@ -19,6 +19,9 @@
     <flag name='sdl'>Enable the SDL-based console</flag>
 	<flag name='seccomp'>Utilize <pkg>sys-libs/libseccomp</pkg> to enable kernel filtering of system calls to prevent malicious guests from doing damage.</flag>
     <flag name='spice'>Enable Spice protocol support via <pkg>app-emulation/spice</pkg></flag>
+	<flag name='static-softmmu'>Builds the Software MMU (system) targets as static binaries</flag>
+	<flag name='static-user'>Build the User targets as static binaries</flag>
+	<flag name='static'>Enables both 'static-softmmu' and 'static-user'</flag>
 	<flag name='systemtap'>Enable SystemTAP/DTrace tracing</flag>
 	<flag name='tci'>Enable the TCG Interpreter which can speed up or slowdown workloads depending on the host and guest CPUs being emulated. In the future it will be a runtime option but for now its compile time.</flag>
     <flag name='tls'>Enable TLS support for the VNC console server</flag>

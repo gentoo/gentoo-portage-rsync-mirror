@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.174 2013/01/19 22:23:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.175 2013/01/21 05:40:24 cardoe Exp $
+
+*qemu-1.2.2-r100 (21 Jan 2013)
+
+  21 Jan 2013; Doug Goldstein <cardoe@gentoo.org> +qemu-1.2.2-r100.ebuild:
+  Add support for USE=static-softmmu and USE=static-user. Break out build rules
+  between the two so we can better support user needs.
 
   19 Jan 2013; Doug Goldstein <cardoe@gentoo.org> qemu-1.2.2-r2.ebuild:
   Just change the name of the tarball so no one sees anything weird

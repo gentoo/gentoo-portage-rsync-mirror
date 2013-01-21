@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/django-pipeline-1.2.9.ebuild,v 1.5 2012/12/04 15:39:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-pipeline/django-pipeline-1.2.9.ebuild,v 1.6 2013/01/21 05:46:14 idella4 Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -12,7 +12,8 @@ inherit distutils
 DESCRIPTION="An asset packaging library for Django"
 HOMEPAGE="http://pypi.python.org/pypi/django-pipeline/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
-KEYWORDS="amd64 x86"
+
+KEYWORDS="amd64 ~x86"
 IUSE="doc"
 
 LICENSE="MIT"
@@ -35,6 +36,7 @@ src_test() {
 	testing() {
 		local exit_status=0 test
 		pushd build-${PYTHON_ABI}/lib/tests/tests/ > /dev/null || die
+		PYTHONPATH=.
 		for test in [a-z]*.py
 		do
 			if ! "$(PYTHON)" ${test}; then
