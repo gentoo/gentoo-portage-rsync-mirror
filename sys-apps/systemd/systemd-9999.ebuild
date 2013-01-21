@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.10 2013/01/21 14:02:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.11 2013/01/21 17:33:35 floppym Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ RDEPEND="${COMMON_DEPEND}
 		<sys-apps/sysvinit-2.88-r4
 	)
 	!<sys-libs/glibc-2.10
-	!<sys-fs/udev-197-r4"
+	!<sys-fs/udev-197-r3"
 
 # sys-fs/quota is necessary to store correct paths in unit files
 DEPEND="${COMMON_DEPEND}

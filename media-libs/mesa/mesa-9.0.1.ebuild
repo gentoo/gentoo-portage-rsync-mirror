@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.0.1.ebuild,v 1.14 2013/01/21 01:31:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.0.1.ebuild,v 1.15 2013/01/21 17:54:17 mattst88 Exp $
 
 EAPI=4
 
@@ -94,7 +94,7 @@ RDEPEND="!<x11-base/xorg-server-1.7
 	x11-libs/libXxf86vm
 	>=x11-libs/libxcb-1.8.1
 	vdpau? ( >=x11-libs/libvdpau-0.4.1 )
-	wayland? ( dev-libs/wayland )
+	wayland? ( >=dev-libs/wayland-1.0.3 )
 	xorg? (
 		x11-base/xorg-server
 		x11-libs/libdrm[libkms]

@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.29 2013/01/21 13:50:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.30 2013/01/21 17:53:11 williamh Exp $
+
+*udev-init-scripts-20 (21 Jan 2013)
+
+  21 Jan 2013; William Hubbs <williamh@gentoo.org>
+  +udev-init-scripts-20.ebuild, udev-init-scripts-9999.ebuild:
+  version bump for running the udev executable only; not the symbolic link.
+  This is the same fix as 19-r1.
 
   21 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
   -udev-init-scripts-10.ebuild, -udev-init-scripts-12.ebuild,

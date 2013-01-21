@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Astro-FITS-Header
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-FITS-Header/ChangeLog,v 1.36 2013/01/08 18:41:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-FITS-Header/ChangeLog,v 1.37 2013/01/21 17:51:36 tove Exp $
+
+*Astro-FITS-Header-3.70.0 (21 Jan 2013)
+
+  21 Jan 2013; Torsten Veller <tove@gentoo.org>
+  +Astro-FITS-Header-3.70.0.ebuild:
+  Version bump
 
   08 Jan 2013; Torsten Veller <tove@gentoo.org>
   -Astro-FITS-Header-3.30.0.ebuild:

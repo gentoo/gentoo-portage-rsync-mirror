@@ -1,4 +1,4 @@
-DEFINED_PHASES=postinst unpack
+DEFINED_PHASES=postinst prepare unpack
 DEPEND=virtual/pkgconfig dev-vcs/git
 DESCRIPTION=udev startup scripts for openrc
 EAPI=4
@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=virtual/udev-180 sys-apps/openrc !<sys-fs/udev-186
 RESTRICT=test
 SLOT=0
-_eclasses_=git-2	e92e09651292b1bef5656592364550f7
-_md5_=904e95bfa8c999be131b2db8a4bdc215
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	git-2	e92e09651292b1bef5656592364550f7	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=9d7c17d4ec7e4ae15b6e7ea86f8def97

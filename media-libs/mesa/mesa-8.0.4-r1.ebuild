@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.4-r1.ebuild,v 1.10 2012/12/03 02:42:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.4-r1.ebuild,v 1.11 2013/01/21 17:54:17 mattst88 Exp $
 
 EAPI=4
 
@@ -93,7 +93,7 @@ RDEPEND="${EXTERNAL_DEPEND}
 	x11-libs/libXxf86vm
 	>=x11-libs/libxcb-1.8
 	vdpau? ( >=x11-libs/libvdpau-0.4.1 )
-	wayland? ( dev-libs/wayland )
+	wayland? ( =dev-libs/wayland-0.95.0 )
 	xvmc? ( >=x11-libs/libXvMC-1.0.6 )
 	${LIBDRM_DEPSTRING}[video_cards_nouveau?,video_cards_vmware?]
 	video_cards_nouveau? ( <x11-libs/libdrm-2.4.34 )
