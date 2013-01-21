@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.6.0.ebuild,v 1.2 2013/01/21 20:00:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.6.0.ebuild,v 1.3 2013/01/21 21:00:18 vapier Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="http://cryptsetup.googlecode.com/files/${MY_P}.tar.bz2"
 LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="nls python reencrypt selinux static static-libs urandom"
+IUSE="nls python reencrypt selinux static static-libs udev urandom"
 
 S=${WORKDIR}/${MY_P}
 
@@ -24,7 +24,7 @@ LIB_DEPEND="dev-libs/libgpg-error[static-libs(+)]
 	dev-libs/libgcrypt[static-libs(+)]
 	sys-fs/lvm2[static-libs(+)]
 	sys-libs/e2fsprogs-libs[static-libs(+)]
-	virtual/udev[static-libs(+)]"
+	udev? ( virtual/udev[static-libs(+)] )"
 # We have to always depend on ${LIB_DEPEND} rather than put behind
 # static? () because we provide a shared library which links against
 # these other packages. #414665
@@ -61,6 +61,7 @@ src_configure() {
 		$(use_enable python) \
 		$(use_enable reencrypt cryptsetup-reencrypt) \
 		$(use_enable selinux) \
+		$(use_enable udev) \
 		$(use_enable !urandom dev-random)
 }
 

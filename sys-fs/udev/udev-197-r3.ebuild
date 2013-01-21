@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.23 2013/01/21 20:21:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.24 2013/01/21 20:41:00 floppym Exp $
 
 EAPI=4
 
@@ -449,12 +449,14 @@ pkg_postinst()
 			ewarn "information on this feature."
 	fi
 
-	local fstab="${ROOT}"etc/fstab
-	if grep -qs "\/dev" "${fstab}" && ! grep -qs devtmpfs "${fstab}"; then
-		ewarn "You need to edit your /dev line in ${fstab} to have devtmpfs"
-		ewarn "filesystem. Otherwise udev won't be able to boot."
-		ewarn "See, http://bugs.gentoo.org/453186"
-	fi
+	local fstab="${ROOT}"etc/fstab dev path fstype rest
+	while read -r dev path fstype rest; do
+		if [[ ${path} == /dev && ${fstype} != devtmpfs ]]; then
+			ewarn "You need to edit your /dev line in ${fstab} to have devtmpfs"
+			ewarn "filesystem. Otherwise udev won't be able to boot."
+			ewarn "See, http://bugs.gentoo.org/453186"
+		fi
+	done < "${fstab}"
 
 	if [[ -d ${ROOT}usr/lib/udev ]]
 	then

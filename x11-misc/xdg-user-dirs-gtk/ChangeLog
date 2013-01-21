@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xdg-user-dirs-gtk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/ChangeLog,v 1.26 2012/06/17 18:09:50 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/ChangeLog,v 1.27 2013/01/21 20:39:40 tetromino Exp $
+
+*xdg-user-dirs-gtk-0.10 (21 Jan 2013)
+
+  21 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +xdg-user-dirs-gtk-0.10.ebuild:
+  Version bump, now uses the new gtk-3.6 bookmark file location.
 
   17 Jun 2012; Samuli Suominen <ssuominen@gentoo.org>
   -xdg-user-dirs-gtk-0.8-r1.ebuild:

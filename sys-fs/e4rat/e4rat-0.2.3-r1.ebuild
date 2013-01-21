@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/e4rat-0.2.3-r1.ebuild,v 1.4 2013/01/13 11:21:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e4rat/e4rat-0.2.3-r1.ebuild,v 1.5 2013/01/21 20:49:42 pacho Exp $
 
-EAPI=4
+EAPI=5
 
-inherit cmake-utils linux-info
+inherit cmake-utils linux-info readme.gentoo
 
 DESCRIPTION="Toolset to accelerate the boot process and application startup"
 HOMEPAGE="http://e4rat.sourceforge.net/"
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="dev-lang/perl
-	>=dev-libs/boost-1.42
+DEPEND="dev-lang/perl:=
+	>=dev-libs/boost-1.42:=
 	sys-fs/e2fsprogs
 	sys-process/audit
 	sys-process/lsof"
@@ -32,6 +32,8 @@ PATCHES=(
 
 pkg_setup() {
 	check_extra_config
+	DOC_CONTENTS="Please consult the following link if you need help
+		configuring your system: http://en.gentoo-wiki.com/wiki/E4rat"
 }
 
 src_install() {
@@ -41,18 +43,16 @@ src_install() {
 	dodir sbin
 	find "${D}"/usr/sbin -type f -exec mv {} "${D}"/sbin/. \; \
 		|| die
+
+	dodoc README
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
-	elog
-	elog "Please consult the upstream wiki if you need help"
-	elog "configuring your system"
-	elog "http://e4rat.sourceforge.net/wiki/index.php/Main_Page"
-	elog
+	readme.gentoo_print_elog
 	if has_version sys-apps/preload; then
 		elog "It appears you have sys-apps/preload installed. This may"
 		elog "has negative effects on ${PN}. You may want to disable preload"
 		elog "when using ${PN}."
-		elog "http://e4rat.sourceforge.net/wiki/index.php/Main_Page#Debian.2FUbuntu"
 	fi
 }
