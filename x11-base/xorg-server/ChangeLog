@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.720 2013/01/07 09:40:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.721 2013/01/21 01:37:22 vapier Exp $
+
+  21 Jan 2013; Mike Frysinger <vapier@gentoo.org> xorg-server-1.13.1.901.ebuild,
+  xorg-server-1.13.1.ebuild, xorg-server-1.13.99.901.ebuild:
+  Add s390 keywords #453114 by Sergey Popov.
 
   07 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -files/xorg-server-1.12-xf86edidmodes-array-bounds.patch,

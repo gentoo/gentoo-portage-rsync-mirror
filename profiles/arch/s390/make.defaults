@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/make.defaults,v 1.3 2012/08/27 16:36:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/make.defaults,v 1.4 2013/01/21 01:57:59 vapier Exp $
 
 ARCH="s390"
 ACCEPT_KEYWORDS="s390"
@@ -15,4 +15,5 @@ CXXFLAGS="${CFLAGS}"
 FFLAGS="${CFLAGS}"
 FCFLAGS="${CFLAGS}"
 
-USE="fbcon"
+INPUT_DEVICES="void"
+VIDEO_CARDS="dummy"
