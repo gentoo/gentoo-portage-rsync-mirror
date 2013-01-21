@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/enca
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.90 2013/01/21 15:17:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/ChangeLog,v 1.91 2013/01/21 16:23:35 ago Exp $
+
+  21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> enca-1.13-r3.ebuild:
+  Stable for sparc, wrt bug #452454
 
   21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> enca-1.13-r3.ebuild:
   Stable for ia64, wrt bug #452454
