@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-2.0.ebuild,v 1.5 2013/01/20 23:32:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-2.0-r1.ebuild,v 1.1 2013/01/20 23:48:29 robbat2 Exp $
 
 EAPI=4
 
@@ -45,6 +45,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${MY_P}+glibc-2.16.patch"
+	epatch "${FILESDIR}/${MY_P}-32bit-barrier.patch"
 }
 
 src_configure() {

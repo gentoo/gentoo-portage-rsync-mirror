@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.2 2012/12/01 16:26:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.3 2013/01/20 23:42:48 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
@@ -20,7 +20,7 @@
 # it.
 
 case ${EAPI:-0} in
-	2|3|4) ;;
+	2|3|4|5) ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 

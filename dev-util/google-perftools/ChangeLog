@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/google-perftools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.21 2013/01/20 23:30:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.23 2013/01/20 23:48:29 robbat2 Exp $
+
+*google-perftools-2.0-r1 (20 Jan 2013)
+
+  20 Jan 2013; Robin H. Johnson <robbat2@gentoo.org>
+  +files/gperftools-2.0-32bit-barrier.patch, +google-perftools-2.0-r1.ebuild:
+  Compilefix for bug #446770, done w/ revbump due to change of internal lock for
+  SuggestedDelayNS function.
+
+  20 Jan 2013; Robin H. Johnson <robbat2@gentoo.org>
+  google-perftools-2.0.ebuild:
+  Compiles on ~arm, tested on mv78100.
 
   20 Jan 2013; Robin H. Johnson <robbat2@gentoo.org>
   google-perftools-1.8.3.ebuild, google-perftools-2.0.ebuild:

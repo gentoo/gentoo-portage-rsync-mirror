@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.114 2013/01/04 19:24:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.115 2013/01/20 23:52:56 robbat2 Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
 # requires app-office/unoconv, which requires virtual/ooo, which is not
@@ -56,9 +56,9 @@ kde-base/perlqt qscintilla qwt
 app-office/libreoffice libreoffice_extensions_scripting-beanshell libreoffice_extensions_scripting-javascript libreoffice_extensions_wiki-publisher
 
 # Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
-# MySQL 5.5 wants systemtap, tcmalloc & jemalloc
->=dev-db/mysql-5.5 systemtap tcmalloc
->=dev-db/mariadb-5.5 systemtap tcmalloc
+# MySQL 5.5 wants systemtap
+>=dev-db/mysql-5.5 systemtap
+>=dev-db/mariadb-5.5 systemtap
 
 # Markus Meier <maekke@gentoo.org> (17 Oct 2012)
 # spidermonkey is broken on arm see bug #420471
@@ -151,8 +151,8 @@ gnome-base/gnome-control-center cheese socialweb
 app-admin/packagekit-base entropy
 
 # Robin H. Johnson <robbat2@gentoo.org> (03 Sep 2011)
-# Remove this for your arch after you keyword dev-utils/google-perftools and virtual/gsasl (bug #381737
-dev-libs/libmemcached tcmalloc sasl
+# Remove this for your arch after you keyword dev-utils/google-perftools and virtual/gsasl (bug #381737)
+dev-libs/libmemcached sasl
 
 # Pacho Ramos <pacho@gentoo.org> (19 Jul 2011)
 # Missing keywords on dependencies
