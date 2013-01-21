@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r3.ebuild,v 1.17 2013/01/20 13:54:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050718-r3.ebuild,v 1.18 2013/01/21 22:32:19 ssuominen Exp $
 
 EAPI=1
 inherit eutils multilib linux-info
@@ -26,7 +26,7 @@ DEPEND="virtual/linux-sources
 	virtual/os-headers
 	>=sys-apps/sed-4"
 
-RDEPEND="usb? ( sys-apps/hotplug )
+RDEPEND="usb? ( virtual/udev )
 	pcmcia? ( sys-apps/pcmciautils )
 	dev-lang/perl"
 
