@@ -1,16 +1,16 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/pkcs11-helper-1.08.ebuild,v 1.10 2012/05/04 18:35:49 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/pkcs11-helper-1.10.ebuild,v 1.1 2013/01/21 11:32:18 alonbl Exp $
 
-EAPI="3"
+EAPI="4"
 
 DESCRIPTION="PKCS#11 helper library"
 HOMEPAGE="http://www.opensc-project.org/opensc/wiki/pkcs11-helper"
-SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/opensc/${PN}/${P}.tar.bz2"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc gnutls nss static-libs"
 
 RDEPEND=">=dev-libs/openssl-0.9.7
@@ -30,6 +30,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	find "${ED}" -name "*.la" -print0 | xargs -0 rm -f
+	default
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }

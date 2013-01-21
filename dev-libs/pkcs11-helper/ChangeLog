@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/pkcs11-helper
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.53 2012/05/04 18:35:49 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.54 2013/01/21 11:32:18 alonbl Exp $
+
+*pkcs11-helper-1.10 (21 Jan 2013)
+
+  21 Jan 2013; Alon Bar-Lev <alonbl@gentoo.org> +pkcs11-helper-1.10.ebuild,
+  -pkcs11-helper-1.07.ebuild, -pkcs11-helper-1.08.ebuild,
+  pkcs11-helper-1.09.ebuild:
+  Version bump, fix SRC_URI to new locations, cleanup old
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> pkcs11-helper-1.07.ebuild,
   pkcs11-helper-1.08.ebuild, pkcs11-helper-1.09.ebuild:
@@ -194,4 +201,3 @@
   05 Jan 2007; Alon Bar-Lev <alonbl@gentoo.org> +metadata.xml,
   +pkcs11-helper-1.02.ebuild:
   Initial import
-
