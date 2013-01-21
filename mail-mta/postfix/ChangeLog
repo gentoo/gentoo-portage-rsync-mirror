@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.413 2013/01/21 14:22:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.414 2013/01/21 16:00:02 ago Exp $
+
+  21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> postfix-2.9.5.ebuild:
+  Stable for sparc, wrt bug #452590
 
   21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> postfix-2.9.5.ebuild:
   Stable for ia64, wrt bug #452590

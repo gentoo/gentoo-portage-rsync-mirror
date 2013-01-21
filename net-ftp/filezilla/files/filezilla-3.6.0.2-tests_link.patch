@@ -1,0 +1,11 @@
+diff -Naur filezilla-3.6.0.2.orig/tests/Makefile.am filezilla-3.6.0.2/tests/Makefile.am
+--- filezilla-3.6.0.2.orig/tests/Makefile.am	2013-01-21 16:46:47.794228822 +0100
++++ filezilla-3.6.0.2/tests/Makefile.am	2013-01-21 16:47:39.312178175 +0100
+@@ -18,6 +18,7 @@
+ test_LDFLAGS = $(CPPUNIT_LIBS)
+ test_LDFLAGS += ../src/engine/libengine.a 
+ test_LDFLAGS += $(LIBGNUTLS_LIBS)
++test_LDFLAGS += $(LIBSQLITE3_LIBS)
+ test_LDFLAGS += $(WX_LIBS)
+ test_LDFLAGS += $(IDN_LIB)
+ 

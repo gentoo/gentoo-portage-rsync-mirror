@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/fuse-exfat-1.0.0.ebuild,v 1.1 2013/01/21 14:27:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/fuse-exfat-1.0.0.ebuild,v 1.2 2013/01/21 15:43:49 ssuominen Exp $
 
 EAPI=5
 inherit scons-utils toolchain-funcs #udev
@@ -35,6 +35,6 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	elog 'You can install 'exfat-tools' for dump, label, mkfs and fcsk.'
+	elog 'You can install 'exfat-tools' for dump, label, mkfs and fsck.'
 	echo
 }

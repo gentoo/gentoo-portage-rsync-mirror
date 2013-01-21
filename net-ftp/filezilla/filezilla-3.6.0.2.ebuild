@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.6.0.2.ebuild,v 1.1 2012/11/30 16:32:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.6.0.2.ebuild,v 1.2 2013/01/21 15:54:24 voyageur Exp $
 
 EAPI=5
 
@@ -38,6 +38,7 @@ S="${WORKDIR}"/${PN}-${MY_PV}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.3.5.1-debug.patch
+	epatch "${FILESDIR}"/${P}-tests_link.patch
 	append-cppflags -DTIXML_USE_STL
 	eautoreconf
 }
