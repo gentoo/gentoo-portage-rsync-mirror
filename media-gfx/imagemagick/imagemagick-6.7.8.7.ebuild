@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.7.8.7.ebuild,v 1.8 2012/10/04 14:56:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.7.8.7.ebuild,v 1.9 2013/01/21 03:42:51 vapier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs versionator libtool
@@ -85,8 +85,8 @@ src_configure() {
 		$(use_enable opencl) \
 		--with-threads \
 		--without-included-ltdl \
-		--with-ltdl-include="${EPREFIX}"/usr/include \
-		--with-ltdl-lib="${EPREFIX}"/usr/$(get_libdir) \
+		--with-ltdl-include='' \
+		--with-ltdl-lib='' \
 		--with-modules \
 		--with-quantum-depth=${depth} \
 		$(use_with cxx magick-plus-plus) \

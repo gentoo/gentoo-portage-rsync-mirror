@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.496 2012/10/04 15:22:18 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.497 2013/01/21 03:42:51 vapier Exp $
+
+  21 Jan 2013; Mike Frysinger <vapier@gentoo.org> imagemagick-6.7.8.7.ebuild,
+  imagemagick-6.7.9.9.ebuild:
+  Disable search of libtool files (like ltdl.la) as well as -I/-L build paths
+  #383929 by Francesco Riosa.
 
 *imagemagick-6.7.9.9 (04 Oct 2012)
 
