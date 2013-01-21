@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/make.defaults,v 1.18 2013/01/20 13:55:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/make.defaults,v 1.19 2013/01/21 09:26:05 dilfridge Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -22,6 +22,12 @@ USE="${USE} mudflap fortran openmp"
 # and were later removed by me. Reinserting the USE flags again because they are
 # global USE flags that may be expected to be set by other packages.
 USE="${USE} cli pcre session"
+
+# 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
+# Modular X: Support direct rendering by default
+# 2013/01/21 - Andreas K. Huettel <dilfridge@gentoo.org>
+# Re-added following discussion with chithead
+USE="${USE} dri"
 
 # 2006/10/28 - Luca Barbato <lu_zero@gentoo.org>
 # on glibc system you cannot turn it off

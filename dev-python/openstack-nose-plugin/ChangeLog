@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/openstack-nose-plugin
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/openstack-nose-plugin/ChangeLog,v 1.1 2013/01/21 09:01:41 prometheanfire Exp $
+
+*openstack-nose-plugin-0.11 (21 Jan 2013)
+
+  21 Jan 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +openstack-nose-plugin-0.11.ebuild, +metadata.xml:
+  inital add of openstack-nose-plugins
+
