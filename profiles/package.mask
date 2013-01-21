@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14396 2013/01/20 14:18:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14397 2013/01/21 05:27:53 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Doug Goldstein <cardoe@gentoo.org> (20 Jan 2013)
+# Under development, feel free to test and report back
+=app-emulation/qemu-1.2.2-r100
 
 # Hans de Graaff <graaff@gentoo.org> (20 Jan 2013) Mask
 # dev-lang/ruby-enterprise for removal, bug 453178.  The current

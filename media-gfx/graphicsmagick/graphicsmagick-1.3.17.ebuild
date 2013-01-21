@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.17.ebuild,v 1.1 2012/10/15 06:03:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.17.ebuild,v 1.2 2013/01/21 05:18:13 vapier Exp $
 
 EAPI=5
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 MY_P=${P/graphicsm/GraphicsM}
 
@@ -43,6 +43,10 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.3.17-freetype.patch
+}
 
 src_configure() {
 	local depth=8
