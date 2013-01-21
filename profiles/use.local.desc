@@ -800,6 +800,7 @@ app-office/lyx:rtf - Add support for RTF import/export packages
 app-office/lyx:xetex - Add support for XeTeX typesetting
 app-office/rabbit:markdown - Markdown support (dev-ruby/kramdown)
 app-office/rabbit:tgif - tgif support (media-gfx/tgif)
+app-office/scribus:hunspell - Enable support for spell checking with app-text/hunspell
 app-office/scribus:linguas_cs_CZ - Language support for cs_CZ
 app-office/scribus:linguas_da_DK - Language support for da_DK
 app-office/scribus:linguas_de_1901 - Language support for de_1901
