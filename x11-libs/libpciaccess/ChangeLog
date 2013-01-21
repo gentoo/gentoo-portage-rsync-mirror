@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.84 2013/01/01 18:57:50 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.85 2013/01/21 01:26:12 vapier Exp $
+
+  21 Jan 2013; Mike Frysinger <vapier@gentoo.org> libpciaccess-0.13.1.ebuild:
+  Add s390 keywords #453114 by Sergey Popov.
 
   01 Jan 2013; Matt Turner <mattst88@gentoo.org> libpciaccess-0.13.1.ebuild:
   Add sys-apps/hwids dependency, bug 445572.
