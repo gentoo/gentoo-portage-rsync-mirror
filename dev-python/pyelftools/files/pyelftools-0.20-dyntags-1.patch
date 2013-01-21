@@ -21,7 +21,7 @@ diff -r f3408c7b9549 -r a9c9b2f9ec96 elftools/elf/dynamic.py
 +from .segments import Segment
 +from ..common.utils import struct_parse
 +
-+from enums import ENUM_D_TAG
++from .enums import ENUM_D_TAG
 +
 +
 +class DynamicTag(object):
