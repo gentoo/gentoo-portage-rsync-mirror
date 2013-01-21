@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/enca-1.13-r3.ebuild,v 1.7 2013/01/20 10:45:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/enca-1.13-r3.ebuild,v 1.8 2013/01/21 12:41:49 pinkbyte Exp $
 
 EAPI="4"
 
+AUTOTOOLS_AUTORECONF=2.52
 inherit eutils toolchain-funcs autotools-utils
 
 DESCRIPTION="ENCA detects the character coding of a file and converts it if desired"
@@ -17,8 +18,6 @@ IUSE="doc +recode"
 
 DEPEND="recode? ( >=app-text/recode-3.6_p15 )"
 RDEPEND="${DEPEND}"
-
-AUTOTOOLS_AUTORECONF=2.52
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-remove-dirty-path-hack.patch
