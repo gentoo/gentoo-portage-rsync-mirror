@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.44 2013/01/14 23:06:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.45 2013/01/21 15:07:32 cardoe Exp $
 
 EAPI="4"
 
@@ -286,7 +286,6 @@ src_configure() {
 		$(use_enable sasl vnc-sasl) \
 		$(use_enable sdl) \
 		$(use_enable seccomp) \
-		$(use_enable smartcard smartcard) \
 		$(use_enable smartcard smartcard-nss) \
 		$(use_enable spice) \
 		$(use_enable tci tcg-interpreter) \
@@ -333,7 +332,7 @@ src_install() {
 		fi
 	fi
 
-	dodoc Changelog MAINTAINERS TODO pci-ids.txt
+	dodoc Changelog MAINTAINERS TODO docs/specs/pci-ids.txt
 	newdoc pc-bios/README README.pc-bios
 
 	use python && dobin scripts/kvm/kvm_stat
