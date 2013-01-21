@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/x48
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.30 2012/11/06 20:16:49 nimiux Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.32 2013/01/21 20:24:04 nimiux Exp $
+
+  21 Jan 2013; Chema Alonso <nimiux@gentoo.org> -x48-0.6.3.ebuild,
+  -files/x48-0.6.3-no-readline.patch, -files/x48-0.6.3-off-by-one.patch:
+  Drop old version
+
+  21 Jan 2013; Chema Alonso <nimiux@gentoo.org> metadata.xml:
+  Add long description and use flag description.
 
   06 Nov 2012; Chema Alonso <nimiux@gentoo.org> -x48-0.4.3-r1.ebuild:
   Cleanup version 0.4.3

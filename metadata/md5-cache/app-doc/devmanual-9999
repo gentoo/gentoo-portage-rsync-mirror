@@ -7,4 +7,4 @@ KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc
 LICENSE=CCPL-Attribution-ShareAlike-2.0
 SLOT=0
 _eclasses_=git-2	e92e09651292b1bef5656592364550f7
-_md5_=a013b56bcccf6f2b799cc518dc447e61
+_md5_=e5132aa244ba2b8a393f91fd9244b621

@@ -1,0 +1,36 @@
+From ce8ba57e66b1e7dca878a446ce13977a33827feb Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Mon, 21 Jan 2013 15:11:54 -0500
+Subject: [PATCH] Don't check for gnome-doc-utils, we are no longer using them.
+
+Restore GNOME_COMMON_INIT to match gnome-terminal 3.7.x.
+---
+ configure.ac | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index bfa1c8a..e056d16 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -32,8 +32,7 @@ AC_HEADER_STDC
+ AM_PROG_LIBTOOL
+ IT_PROG_INTLTOOL([0.40.0])
+ 
+-# User documentation
+-YELP_HELP_INIT
++GNOME_COMMON_INIT
+ 
+ GNOME_DEBUG_CHECK
+ 
+@@ -154,7 +153,7 @@ AC_SUBST([GTK_BUILDER_CONVERT_FLAGS])
+ # Documentation
+ # *************
+ 
+-GNOME_DOC_INIT
++YELP_HELP_INIT
+ 
+ # ****************************
+ 
+-- 
+1.8.1.1
+

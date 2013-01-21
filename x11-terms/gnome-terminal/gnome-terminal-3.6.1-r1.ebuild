@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.6.1-r1.ebuild,v 1.5 2013/01/06 11:23:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.6.1-r1.ebuild,v 1.6 2013/01/21 20:25:40 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="The Gnome Terminal"
 HOMEPAGE="http://www.gnome.org/"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-3+"
 SLOT="0"
 IUSE=""
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 
 # FIXME: automagic dependency on gtk+[X]
 RDEPEND="
@@ -32,7 +32,17 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	sys-devel/gettext
 	virtual/pkgconfig
+
+	gnome-base/gnome-common
 "
+# eautoreconf needs gnome-base/gnome-common
+
+src_prepare() {
+	# https://bugzilla.gnome.org/show_bug.cgi?id=692233
+	epatch "${FILESDIR}/${PN}-3.6.1-no-gnome-doc-utils.patch"
+	eautoreconf
+	gnome2_src_prepare
+}
 
 src_configure() {
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"

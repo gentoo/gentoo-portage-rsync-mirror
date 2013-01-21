@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-2.1.0-r1.ebuild,v 1.1 2013/01/21 19:43:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-2.1.0-r1.ebuild,v 1.2 2013/01/21 20:03:46 scarabeus Exp $
 
 EAPI=5
 
@@ -30,18 +30,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}/src/libprojectM
 
 PATCHES=(
-	"${FILESDIR}"/${P}-libsuffix.patch
+	"${FILESDIR}"/${P}-multilib.patch
 	"${FILESDIR}"/${P}-path.patch
 )
-
-src_prepare() {
-	# fix pc file location
-	sed -i \
-		-e "s:/lib/pkgconfig:/$(get_libdir)/pkgconfig:g" \
-		CMakeLists.txt
-
-	base_src_prepare
-}
 
 src_configure() {
 	if use video_cards_nvidia; then

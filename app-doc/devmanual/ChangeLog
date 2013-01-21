@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/devmanual
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/ChangeLog,v 1.1 2013/01/19 10:36:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/ChangeLog,v 1.2 2013/01/21 20:02:24 hwoarang Exp $
+
+  21 Jan 2013; Markos Chandras <hwoarang@gentoo.org> devmanual-9999.ebuild:
+  Fix installation patch for html docs
 
 *devmanual-9999 (19 Jan 2013)
 
