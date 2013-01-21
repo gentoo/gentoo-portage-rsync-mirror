@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r4.ebuild,v 1.6 2013/01/20 09:57:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r4.ebuild,v 1.7 2013/01/21 18:56:20 ssuominen Exp $
 
 EAPI=4
 
@@ -455,6 +455,15 @@ pkg_postinst()
 			ewarn "Please see the contents of ${net_rules} for more"
 			ewarn "information on this feature."
 	fi
+
+	local fstab="${ROOT}"etc/fstab
+	if [[ $(grep -q ^udev ${fstab}) ]]; then
+		ewarn "You should review and/or remove your udev starting line from ${fstab}"
+		ewarn "Not doing so might result in unbootable system."
+		ewarn "You have been warned. For details, see:"
+		ewarn "http://bugs.gentoo.org/453186"
+	fi
+
 	if [[ -d ${ROOT}usr/lib/udev ]]
 	then
 			ewarn

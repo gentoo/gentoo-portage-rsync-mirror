@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.14.1.ebuild,v 1.8 2013/01/21 16:27:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.14.1.ebuild,v 1.9 2013/01/21 18:39:38 vapier Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -40,7 +40,7 @@ src_prepare() {
 
 	cd "${S}"/mozilla/security/coreconf || die
 	# hack nspr paths
-	echo 'INCLUDES += -I'"${EPREFIX}"'/usr/include/nspr -I$(DIST)/include/dbm' \
+	echo 'INCLUDES += -I$(DIST)/include/dbm' \
 		>> headers.mk || die "failed to append include"
 
 	# modify install path
@@ -59,6 +59,13 @@ src_prepare() {
 
 	epatch "${FILESDIR}/nss-3.13.1-solaris-gcc.patch"
 
+	# use host shlibsign if need be #436216
+	if tc-is-cross-compiler ; then
+		sed -i \
+			-e 's:"${2}"/shlibsign:shlibsign:' \
+			"${S}"/mozilla/security/nss/cmd/shlibsign/sign.sh || die
+	fi
+
 	# dirty hack
 	cd "${S}"/mozilla/security/nss || die
 	sed -i -e "/CRYPTOLIB/s:\$(SOFTOKEN_LIB_DIR):../freebl/\$(OBJDIR):" \
@@ -67,34 +74,78 @@ src_prepare() {
 		cmd/platlibs.mk || die
 }
 
-src_compile() {
-	strip-flags
+nssarch() {
+	# Most of the arches are the same as $ARCH
+	local t=${1:-${CHOST}}
+	case ${t} in
+	hppa*)   echo "parisc";;
+	i?86*)   echo "i686";;
+	x86_64*) echo "x86_64";;
+	*)       tc-arch ${t};;
+	esac
+}
 
+nssbits() {
 	echo > "${T}"/test.c || die
-	$(tc-getCC) ${CFLAGS} -c "${T}"/test.c -o "${T}"/test.o || die
+	${!1} ${CPPFLAGS} ${CFLAGS} -c "${T}"/test.c -o "${T}"/test.o || die
 	case $(file "${T}"/test.o) in
-	*32-bit*x86-64*) export USE_x32=1;;
-	*64-bit*|*ppc64*|*x86_64*) export USE_64=1;;
+	*32-bit*x86-64*) echo USE_x32=1;;
+	*64-bit*|*ppc64*|*x86_64*) echo USE_64=1;;
 	*32-bit*|*ppc*|*i386*) ;;
 	*) die "Failed to detect whether your arch is 64bits or 32bits, disable distcc if you're using it, please";;
 	esac
+}
 
-	export NSPR_INCLUDE_DIR=`nspr-config --includedir`
-	export NSPR_LIB_DIR=`nspr-config --libdir`
+src_compile() {
+	strip-flags
+
+	tc-export AR RANLIB {BUILD_,}{CC,PKG_CONFIG}
+	local makeargs=(
+		CC="${CC}"
+		AR="${AR} rc \$@"
+		RANLIB="${RANLIB}"
+		OPTIMIZER=
+		$(nssbits CC)
+	)
+
+	# Take care of nspr settings #436216
+	append-cppflags $(${PKG_CONFIG} nspr --cflags)
+	append-ldflags $(${PKG_CONFIG} nspr --libs-only-L)
+	unset NSPR_INCLUDE_DIR
+	export NSPR_LIB_DIR=${T}/fake-dir
+
+	# Do not let `uname` be used.
+	if use kernel_linux ; then
+		makeargs+=(
+			OS_TARGET=Linux
+			OS_RELEASE=2.6
+			OS_TEST="$(nssarch)"
+		)
+	fi
+
 	export BUILD_OPT=1
 	export NSS_USE_SYSTEM_SQLITE=1
 	export NSDISTMODE=copy
 	export NSS_ENABLE_ECC=1
-	export XCFLAGS="${CFLAGS}"
+	export XCFLAGS="${CFLAGS} ${CPPFLAGS}"
 	export FREEBL_NO_DEPEND=1
 	export ASFLAGS=""
 
-	cd "${S}"/mozilla/security/coreconf || die
-	emake -j1 CC="$(tc-getCC)" || die "coreconf make failed"
-	cd "${S}"/mozilla/security/dbm || die
-	emake -j1 CC="$(tc-getCC)" || die "dbm make failed"
-	cd "${S}"/mozilla/security/nss || die
-	emake -j1 CC="$(tc-getCC)" || die "nss make failed"
+	local d
+
+	# Build the host tools first.
+	LDFLAGS="${BUILD_LDFLAGS}" \
+	XCFLAGS="${BUILD_CFLAGS}" \
+	emake -j1 -C mozilla/security/coreconf \
+		CC="${BUILD_CC}" \
+		$(nssbits BUILD_CC) \
+		|| die
+	makeargs+=( NSINSTALL="${PWD}/$(find -type f -name nsinstall)" )
+
+	# Then build the target tools.
+	for d in dbm nss ; do
+		emake -j1 "${makeargs[@]}" -C mozilla/security/${d} || die "${d} make failed"
+	done
 }
 
 # Altering these 3 libraries breaks the CHK verification.
@@ -118,6 +169,7 @@ generate_chk() {
 	local libdir="$2"
 	einfo "Resigning core NSS libraries for FIPS validation"
 	shift 2
+	local i
 	for i in ${NSS_CHK_SIGN_LIBS} ; do
 		local libname=lib${i}.so
 		local chkname=lib${i}.chk
@@ -134,6 +186,7 @@ generate_chk() {
 cleanup_chk() {
 	local libdir="$1"
 	shift 1
+	local i
 	for i in ${NSS_CHK_SIGN_LIBS} ; do
 		local libfname="${libdir}/lib${i}.so"
 		# If the major version has changed, then we have old chk files.
@@ -162,7 +215,7 @@ src_install () {
 	insinto /usr/include/nss
 	doins public/nss/*.h || die
 	cd "${ED}"/usr/$(get_libdir) || die
-	local n=
+	local n file
 	for file in *$(get_libname); do
 		n=${file%$(get_libname)}$(get_libname ${MINOR_VERSION})
 		mv ${file} ${n} || die
@@ -172,7 +225,7 @@ src_install () {
 		fi
 	done
 
-	local nssutils
+	local f nssutils
 	# Always enabled because we need it for chk generation.
 	nssutils="shlibsign"
 	if use utils; then
@@ -192,7 +245,7 @@ src_install () {
 
 	# Prelink breaks the CHK files. We don't have any reliable way to run
 	# shlibsign after prelink.
-	declare -a libs
+	local l libs=()
 	for l in ${NSS_CHK_SIGN_LIBS} ; do
 		libs+=("${EPREFIX}/usr/$(get_libdir)/lib${l}.so")
 	done
@@ -204,7 +257,13 @@ src_install () {
 
 pkg_postinst() {
 	# We must re-sign the libraries AFTER they are stripped.
-	generate_chk "${EROOT}"/usr/bin/shlibsign "${EROOT}"/usr/$(get_libdir)
+	local shlibsign="${EROOT}/usr/bin/shlibsign"
+	# See if we can execute it (cross-compiling & such). #436216
+	"${shlibsign}" -h >&/dev/null
+	if [[ $? -gt 1 ]] ; then
+		shlibsign="shlibsign"
+	fi
+	generate_chk "${shlibsign}" "${EROOT}"/usr/$(get_libdir)
 }
 
 pkg_postrm() {
