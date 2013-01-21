@@ -1,0 +1,11 @@
+--- init.d/udev
++++ init.d/udev
+@@ -92,7 +92,7 @@
+ 
+ 	bins="/sbin/udevd /lib/systemd/systemd-udevd /usr/lib/systemd/systemd-udevd"
+ 	for f in ${bins}; do
+-		if [ -x "$f" ]; then
++		if [ -x "$f" ] && ! [ -L "$f" ]; then
+ 			command="$f"
+ 		fi
+ 	done
