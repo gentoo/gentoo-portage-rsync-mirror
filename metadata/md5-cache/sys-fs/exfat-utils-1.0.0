@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DEPEND=dev-util/scons
+DESCRIPTION=exFAT filesystem utilities
+EAPI=5
+HOMEPAGE=http://code.google.com/p/exfat/
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=GPL-3
+SLOT=0
+SRC_URI=http://exfat.googlecode.com/files/exfat-utils-1.0.0.tar.gz
+_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=2f245180fc850535776e25a4f8c88266

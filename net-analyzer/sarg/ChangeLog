@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sarg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.77 2013/01/21 11:23:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.78 2013/01/21 14:04:05 ago Exp $
+
+  21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> sarg-2.3.3-r1.ebuild:
+  Stable for ppc, wrt bug #452836
 
   21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> sarg-2.3.3-r1.ebuild:
   Stable for x86, wrt bug #452836

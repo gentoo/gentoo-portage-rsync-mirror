@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.8.3-r1.ebuild,v 1.3 2013/01/17 15:37:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.8.3-r1.ebuild,v 1.4 2013/01/21 14:08:03 ago Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://wizard.ae.krakow.pl/~mike/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc ~x86"
+KEYWORDS="amd64 hppa ppc ~x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"

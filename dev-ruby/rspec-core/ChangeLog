@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.48 2013/01/21 13:45:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.49 2013/01/21 14:03:45 ago Exp $
+
+  21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> rspec-core-2.12.2.ebuild:
+  Stable for ppc, wrt bug #450532
 
   21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> rspec-core-2.12.2.ebuild:
   Stable for ppc64, wrt bug #450532

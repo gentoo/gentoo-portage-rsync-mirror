@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.72 2013/01/21 00:47:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.73 2013/01/21 14:02:42 mgorny Exp $
+
+  21 Jan 2013; Michał Górny <mgorny@gentoo.org> -systemd-196.ebuild,
+  systemd-197-r1.ebuild, systemd-9999.ebuild:
+  Drop old as requested by ssuominen. Bump udev requirement to avoid bug
+  #452972.
 
 *systemd-197-r1 (21 Jan 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.3.3-r1.ebuild,v 1.3 2013/01/21 11:23:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.3.3-r1.ebuild,v 1.4 2013/01/21 14:04:05 ago Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -10,7 +10,7 @@ HOMEPAGE="http://sarg.sourceforge.net/sarg.php"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 SLOT="0"
 IUSE="+gd ldap pcre"
 

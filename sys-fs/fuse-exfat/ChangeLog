@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse-exfat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/ChangeLog,v 1.9 2013/01/11 16:15:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/ChangeLog,v 1.10 2013/01/21 14:27:43 ssuominen Exp $
+
+*fuse-exfat-1.0.0 (21 Jan 2013)
+
+  21 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> +fuse-exfat-1.0.0.ebuild:
+  Version bump. Thanks to Nikoli for reporting.
 
   11 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
   fuse-exfat-0.9.8-r1.ebuild:

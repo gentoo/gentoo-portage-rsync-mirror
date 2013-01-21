@@ -1,6 +1,13 @@
 # ChangeLog for net-im/ktp-presence-applet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-presence-applet/ChangeLog,v 1.10 2012/11/22 02:10:46 dastergon Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-presence-applet/ChangeLog,v 1.11 2013/01/21 14:26:59 scarabeus Exp $
+
+*ktp-presence-applet-0.5.2 (21 Jan 2013)
+
+  21 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +ktp-presence-applet-0.5.2.ebuild, -ktp-presence-applet-0.4.1.ebuild,
+  -ktp-presence-applet-0.5.0.ebuild, -ktp-presence-applet-0.5.1.ebuild:
+  Version bump to 0.5.2 and drop older.
 
 *ktp-presence-applet-0.5.1 (22 Nov 2012)
 

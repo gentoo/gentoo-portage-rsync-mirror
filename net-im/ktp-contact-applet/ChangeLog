@@ -1,6 +1,13 @@
 # ChangeLog for net-im/ktp-contact-applet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-contact-applet/ChangeLog,v 1.10 2012/11/22 01:10:10 dastergon Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-contact-applet/ChangeLog,v 1.11 2013/01/21 14:23:57 scarabeus Exp $
+
+*ktp-contact-applet-0.5.2 (21 Jan 2013)
+
+  21 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +ktp-contact-applet-0.5.2.ebuild, -ktp-contact-applet-0.4.1.ebuild,
+  -ktp-contact-applet-0.5.0.ebuild, -ktp-contact-applet-0.5.1.ebuild:
+  Version bump to 0.5.2 and drop older.
 
 *ktp-contact-applet-0.5.1 (22 Nov 2012)
 
