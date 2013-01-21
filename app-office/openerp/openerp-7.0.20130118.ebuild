@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/openerp-6.2_pre20121029.ebuild,v 1.1 2012/10/30 13:42:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/openerp-7.0.20130118.ebuild,v 1.1 2013/01/21 08:54:18 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -10,13 +10,14 @@ inherit eutils distutils
 DESCRIPTION="Open Source ERP & CRM"
 HOMEPAGE="http://www.openerp.com/"
 #yes, this is definitely a horrible URI
-FNAME="${PN}-${PV/_*/}dev-${PV/*_pre/}-000101"
-SRC_URI="http://nightly.openerp.com/trunk/nightly/src/${FNAME}.tar.gz"
+MY_PV=${PV/7.0./7.0-}
+FNAME="${PN}-${MY_PV}-002240"
+SRC_URI="http://nightly.openerp.com/7.0/nightly/src/${FNAME}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="postgres ldap ssl"
+KEYWORDS="~x86 ~amd64"
+IUSE="+postgres ldap ssl"
 
 CDEPEND="postgres? ( dev-db/postgresql-server )
 	dev-python/psutil
@@ -55,10 +56,6 @@ pkg_setup() {
 	python_pkg_setup
 }
 
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-6.1-setup.py.patch"
-}
-
 src_install() {
 	distutils_src_install
 
@@ -95,13 +92,13 @@ pkg_postinst() {
 	elog "Be sure the database is started before"
 }
 
-pquery() {
+psqlquery() {
 	psql -q -At -U postgres -d template1 -c "$@"
 }
 
 pkg_config() {
 	einfo "In the following, the 'postgres' user will be used."
-	if ! pquery "SELECT usename FROM pg_user WHERE usename = '${OPENERP_USER}'" | grep -q ${OPENERP_USER}; then
+	if ! psqlquery "SELECT usename FROM pg_user WHERE usename = '${OPENERP_USER}'" | grep -q ${OPENERP_USER}; then
 		ebegin "Creating database user ${OPENERP_USER}"
 		createuser --username=postgres --createdb --no-adduser ${OPENERP_USER}
 		eend $? || die "Failed to create database user"
