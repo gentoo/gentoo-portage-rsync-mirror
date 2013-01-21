@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.390 2013/01/20 20:22:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.391 2013/01/21 06:23:51 floppym Exp $
+
+  21 Jan 2013; Mike Gilbert <floppym@gentoo.org> perl-5.16.2.ebuild:
+  Add IUSE=build as a workaround for bug 453268.
 
 *perl-5.16.2 (20 Jan 2013)
 
