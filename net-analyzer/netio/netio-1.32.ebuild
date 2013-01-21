@@ -1,14 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.31.ebuild,v 1.2 2011/11/24 17:31:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.32.ebuild,v 1.1 2013/01/21 12:18:01 jer Exp $
 
 EAPI=4
-
 inherit eutils toolchain-funcs
 
 DESCRIPTION="a network benchmarking tool that measures net throughput with NetBIOS and TCP/IP protocols."
 HOMEPAGE="http://www.ars.de/ars/ars.nsf/docs/netio"
-SRC_URI='http://www.ars.de/ars/ars.nsf/f24a6a0b94c22d82862566960071bf5a/aa577bc4be573b05c125706d004c75b5/$FILE/netio131.zip'
+SRC_URI='http://www.ars.de/ARS/ars.nsf/f24a6a0b94c22d82862566960071bf5a/aa577bc4be573b05c125706d004c75b5/$FILE/netio132.zip'
 
 LICENSE="free-noncomm"
 SLOT="0"
@@ -34,9 +33,10 @@ src_prepare() {
 }
 
 src_compile() {
-	emake linux	\
+	emake \
 		CC="$(tc-getCC)" \
-		CFLAGS="${CFLAGS}"
+		CFLAGS="${CFLAGS}" \
+		linux
 }
 
 src_install() {

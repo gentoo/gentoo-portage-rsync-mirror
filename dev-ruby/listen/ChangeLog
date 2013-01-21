@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/listen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.16 2013/01/15 06:43:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.18 2013/01/21 12:09:32 graaff Exp $
+
+*listen-0.7.2-r1 (21 Jan 2013)
+
+  21 Jan 2013; Hans de Graaff <graaff@gentoo.org> +listen-0.7.2-r1.ebuild:
+  Fix rb-inotify dependency to adhere to semantic versioning.
+
+  21 Jan 2013; Hans de Graaff <graaff@gentoo.org> -listen-0.5.3.ebuild,
+  -listen-0.6.0.ebuild:
+  Cleanup.
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> listen-0.5.3.ebuild,
   listen-0.6.0.ebuild, listen-0.7.0.ebuild, listen-0.7.2.ebuild:
