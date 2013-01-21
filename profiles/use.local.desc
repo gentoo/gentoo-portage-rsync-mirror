@@ -3647,6 +3647,7 @@ net-analyzer/nsca:crypt - Build support for crypted communication with nsca, thr
 net-analyzer/nsca:minimal - Only build and install the send_nsca command and not the daemon. This allows a very minimal install with no overhead when setting up a node.
 net-analyzer/pchar:pcap - Use the net-libs/libpcap library
 net-analyzer/pmacct:64bit - Use 64bit counters instead of 32bit ones
+net-analyzer/pmacct:mongodb - Add support for mongodb backend
 net-analyzer/pmacct:ulog - Enable ULOG support
 net-analyzer/rrdcollect:exec - Enable exec:/// support
 net-analyzer/rrdcollect:librrd - Use the librrd library from net-analyzer/rrdtool

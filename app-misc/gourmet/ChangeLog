@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gourmet
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.32 2011/07/14 12:46:02 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.33 2013/01/21 21:18:23 nixphoeni Exp $
+
+  21 Jan 2013; Joe Sapp <nixphoeni@gentoo.org> gourmet-0.15.9.ebuild,
+  metadata.xml:
+  Updated HOMEPAGE, SRC_URI, and metadata
 
   14 Jul 2011; Pacho Ramos <pacho@gentoo.org> -gourmet-0.15.7-r1.ebuild,
   -gourmet-0.15.8.ebuild, gourmet-0.15.9.ebuild:

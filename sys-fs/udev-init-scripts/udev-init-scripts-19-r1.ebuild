@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-19-r1.ebuild,v 1.1 2013/01/21 10:23:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-19-r1.ebuild,v 1.3 2013/01/21 21:30:17 ssuominen Exp $
 
 EAPI=4
 
@@ -77,7 +77,9 @@ pkg_postinst()
 		fi
 	fi
 
-	ewarn "The udev-postmount service has been removed because the reasons for"
-	ewarn "its existance have been removed upstream."
-	ewarn "Please remove it from your runlevels."
+	if [[ -x $(type -P rc-update) ]] && rc-update show | grep udev-postmount | grep -qs 'boot\|default\|sysinit'; then
+		ewarn "The udev-postmount service has been removed because the reasons for"
+		ewarn "its existance have been removed upstream."
+		ewarn "Please remove it from your runlevels."
+	fi
 }

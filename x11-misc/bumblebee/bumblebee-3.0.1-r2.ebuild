@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/bumblebee-3.0.1.ebuild,v 1.1 2012/09/14 20:24:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/bumblebee-3.0.1-r2.ebuild,v 1.1 2013/01/21 21:19:16 pacho Exp $
 
-EAPI=4
-inherit multilib systemd user
+EAPI=5
+inherit eutils multilib readme.gentoo systemd udev user
 
 DESCRIPTION="Service providing elegant and stable means of managing Optimus graphics chipsets"
 HOMEPAGE="https://github.com/Bumblebee-Project/Bumblebee"
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="+bbswitch video_cards_nouveau video_cards_nvidia"
 
-RDEPEND="x11-misc/virtualgl
+RDEPEND="x11-misc/virtualgl:=
 	bbswitch? ( sys-power/bbswitch )
 	virtual/opengl
 	x11-base/xorg-drivers[video_cards_nvidia?,video_cards_nouveau?]"
@@ -29,6 +29,15 @@ DEPEND=">=sys-devel/autoconf-2.68
 	sys-apps/help2man"
 
 REQUIRED_USE="|| ( video_cards_nouveau video_cards_nvidia )"
+
+src_prepare() {
+	DOC_CONTENTS="In order to use Bumblebee, add your user to 'bumblebee' group.
+		You may need to setup your /etc/bumblebee/bumblebee.conf"
+
+	# --wait option for rmmod is deprecated:
+	# https://github.com/Bumblebee-Project/Bumblebee/issues/283
+	epatch "${FILESDIR}/${P}-remove-wait.patch"
+}
 
 src_configure() {
 	if use video_cards_nvidia ; then
@@ -45,7 +54,9 @@ src_configure() {
 			CONF_MODPATH_NVIDIA=${nvpref}/lib,${nvpref}/extensions,${xorgpref}/drivers,${xorgpref}"
 	fi
 
-	econf ${ECONF_PARAMS}
+	econf \
+		--docdir=/usr/share/doc/"${PF}" \
+		${ECONF_PARAMS}
 }
 
 src_install() {
@@ -53,6 +64,13 @@ src_install() {
 	newinitd "${FILESDIR}"/bumblebee.initd bumblebee
 	newenvd  "${FILESDIR}"/bumblebee.envd 99bumblebee
 	systemd_dounit scripts/systemd/bumblebeed.service
+
+	# Install udev rule to handle nvidia card switching,
+	# https://github.com/Bumblebee-Project/Bumblebee/issues/283
+	udev_dorules "${FILESDIR}"/99-remove-nvidia-dev.rules
+
+	readme.gentoo_create_doc
+
 	default
 }
 
@@ -61,9 +79,4 @@ pkg_preinst() {
 	use video_cards_nouveau || rm "${ED}"/etc/bumblebee/xorg.conf.nouveau
 
 	enewgroup bumblebee
-}
-
-pkg_postinst() {
-	ewarn "In order to use Bumblebee, add your user to 'bumblebee' group."
-	ewarn "You may need to setup your /etc/bumblebee/bumblebee.conf"
 }

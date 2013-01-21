@@ -20,6 +20,8 @@
 			<email>Thomas_Hinkle@alumni.brown.edu</email>
 			<name>Thomas Mills Hinkle</name>
 		</maintainer>
+		<bugs-to>https://github.com/thinkle/gourmet/issues</bugs-to>
+		<remote-id type="github">thinkle/gourmet</remote-id>
 	</upstream>
 	<use>
 		<flag name='rtf'>Enable export to RTF</flag>

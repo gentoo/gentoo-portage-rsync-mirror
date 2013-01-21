@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta1-r2.ebuild,v 1.1 2013/01/04 21:48:47 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta1-r2.ebuild,v 1.2 2013/01/21 21:25:44 mattst88 Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ then
 	inherit git-2
 else
 	SRC_URI="https://github.com/downloads/gentoo/${PN}/${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+	KEYWORDS="~amd64 ~arm ~mips ~ppc ~x86"
 fi
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"

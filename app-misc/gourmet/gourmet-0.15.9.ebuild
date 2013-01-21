@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.9.ebuild,v 1.4 2011/07/14 12:46:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.9.ebuild,v 1.5 2013/01/21 21:18:23 nixphoeni Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -10,8 +10,8 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 inherit distutils
 
 DESCRIPTION="Recipe Organizer and Shopping List Generator for Gnome"
-HOMEPAGE="http://grecipe-manager.sourceforge.net/"
-SRC_URI="mirror://sourceforge/grecipe-manager/${P}.tar.gz"
+HOMEPAGE="http://thinkle.github.com/gourmet/"
+SRC_URI="http://launchpad.net/gourmet/main/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

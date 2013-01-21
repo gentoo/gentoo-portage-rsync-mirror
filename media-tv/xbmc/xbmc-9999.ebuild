@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.130 2013/01/15 23:41:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.131 2013/01/21 21:08:21 scarabeus Exp $
 
 EAPI="4"
 
@@ -226,6 +226,9 @@ src_install() {
 
 	domenu tools/Linux/xbmc.desktop
 	newicon tools/Linux/xbmc-48x48.png xbmc.png
+
+	# punt simplejson bundle, we use the system one anyway
+	rm -rf "${ED}"/usr/share/xbmc/addons/script.module.simplejson/lib
 
 	insinto "$(python_get_sitedir)" #309885
 	doins tools/EventClients/lib/python/xbmcclient.py || die

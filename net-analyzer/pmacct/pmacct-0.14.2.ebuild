@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.14.0.ebuild,v 1.1 2012/04/13 15:22:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.14.2.ebuild,v 1.1 2013/01/21 21:07:39 jer Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -11,37 +11,44 @@ SRC_URI="http://www.pmacct.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="64bit debug ipv6 mysql postgres sqlite threads ulog"
+KEYWORDS="~amd64 ~x86"
+IUSE="64bit debug geoip ipv6 mongodb mysql postgres sqlite threads ulog"
 
-RDEPEND="net-libs/libpcap
+DEPEND="
+	net-libs/libpcap
+	mongodb? ( dev-libs/mongo-c-driver )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
-	sqlite? ( =dev-db/sqlite-3* )"
-DEPEND="${RDEPEND}"
+	sqlite? ( =dev-db/sqlite-3* )
+"
+RDEPEND="${DEPEND}"
+
 DOCS=(
-	CONFIG-KEYS ChangeLog EXAMPLES FAQS KNOWN-BUGS README TODO TOOLS UPGRADE
+	CONFIG-KEYS ChangeLog FAQS KNOWN-BUGS README TODO TOOLS UPGRADE
 	docs/INTERNALS docs/PLUGINS docs/SIGNALS
 )
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PN}-0.12.0-gentoo.patch \
-		"${FILESDIR}"/${PN}-0.12.5-sin6_addr.patch
+	epatch "${FILESDIR}"/${PN}-0.12.0-gentoo.patch
+	sed -i \
+		-e '/[[:space:]]ar /s|ar |$(AR) |g' \
+		$(find . -name Makefile.in) || die
 }
 
 src_configure() {
-	tc-export CC
+	tc-export CC AR RANLIB
+
 	econf \
 		$(use_enable 64bit) \
 		$(use_enable debug) \
+		$(use_enable geoip) \
 		$(use_enable ipv6) \
+		$(use_enable mongodb) \
 		$(use_enable mysql) \
 		$(use_enable postgres pgsql) \
 		$(use_enable sqlite sqlite3) \
 		$(use_enable threads) \
-		$(use_enable ulog) \
-		|| die "econf failed"
+		$(use_enable ulog)
 }
 
 src_install() {
