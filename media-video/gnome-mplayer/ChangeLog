@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.82 2013/01/21 11:22:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.83 2013/01/21 21:52:48 ssuominen Exp $
+
+  21 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-mplayer-1.0.7.ebuild:
+  Pull in x11-themes/gnome-icon-theme-symbolic because it's required for icons
+  to show.
 
   21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gnome-mplayer-1.0.7.ebuild:
   Stable for x86, wrt bug #452690

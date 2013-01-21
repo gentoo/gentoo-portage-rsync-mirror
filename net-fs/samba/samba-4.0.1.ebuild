@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.1.ebuild,v 1.1 2013/01/15 20:46:15 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.1.ebuild,v 1.2 2013/01/21 21:43:47 vostorga Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -85,7 +85,7 @@ src_configure() {
 		--enable-fhs \
 		--sysconfdir=/etc \
 		--localstatedir=/var \
-		--with-modulesdir=/usr/$(get_libdir) \
+		--with-modulesdir=/usr/$(get_libdir)/samba \
 		--disable-rpath \
 		--disable-rpath-install \
 		--nopyc \

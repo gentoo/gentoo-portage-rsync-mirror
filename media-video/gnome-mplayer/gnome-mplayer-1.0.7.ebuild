@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.7.ebuild,v 1.3 2013/01/21 11:22:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.7.ebuild,v 1.4 2013/01/21 21:52:48 ssuominen Exp $
 
 EAPI=5
 inherit fdo-mime gnome2-utils
@@ -30,6 +30,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.30
 		)
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.14 )"
 RDEPEND="${COMMON_DEPEND}
+	x11-themes/gnome-icon-theme-symbolic
 	|| ( >=media-video/mplayer-1.0_rc4_p20100101[libass] media-video/mplayer2[libass] )"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
