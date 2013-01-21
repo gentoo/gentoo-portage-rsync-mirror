@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/google-perftools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.20 2012/11/02 00:48:32 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.21 2013/01/20 23:30:53 robbat2 Exp $
+
+  20 Jan 2013; Robin H. Johnson <robbat2@gentoo.org>
+  google-perftools-1.8.3.ebuild, google-perftools-2.0.ebuild:
+  This contains ASM it turns out, with support only for some arches.
 
   02 Nov 2012; Anthony G. Basile <blueness@gentoo.org>
   google-perftools-2.0.ebuild:
