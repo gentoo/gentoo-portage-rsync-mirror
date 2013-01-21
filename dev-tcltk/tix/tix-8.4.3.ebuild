@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.4.3.ebuild,v 1.14 2012/12/13 07:31:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.4.3.ebuild,v 1.15 2013/01/21 17:18:15 jlec Exp $
 
 EAPI=5
 
@@ -33,6 +33,7 @@ src_prepare() {
 	sed \
 		-e 's:-Os::g' \
 		-i configure tclconfig/tcl.m4 || die
+	epatch "${FILESDIR}"/${P}-tcl8.6.patch
 }
 
 src_configure() {
