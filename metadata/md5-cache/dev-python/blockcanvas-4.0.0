@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-python/apptools-4.0 >=dev-python/chaco-4.0 >=dev-python/codetools-4.0 >=dev-python/etsdevtools-4.0 >=dev-python/pyface-4.0 >=dev-python/scimath-4.0 >=dev-python/traitsui-4.0 dev-python/configobj dev-python/docutils dev-python/greenlet dev-python/imaging dev-python/numpy =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://www.enthought.com/repo/ets/blockcanvas-4.0.0.tar.gz
-_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=fb4bc63dd7c123a1e21558cb2ce51207

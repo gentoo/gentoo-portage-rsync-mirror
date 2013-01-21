@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.36 2013/01/08 16:36:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.37 2013/01/21 19:28:16 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -132,7 +132,24 @@ fi
 # @CODE
 
 _python_set_globals() {
-	local flags=( "${PYTHON_COMPAT[@]/#/python_targets_}" )
+	local impls=()
+
+	PYTHON_DEPS=
+	local i PYTHON_PKG_DEP
+	for i in "${PYTHON_COMPAT[@]}"; do
+		_python_impl_supported "${i}" || continue
+
+		python_export "${i}" PYTHON_PKG_DEP
+		PYTHON_DEPS+="python_targets_${i}? ( ${PYTHON_PKG_DEP} ) "
+
+		impls+=( "${i}" )
+	done
+
+	if [[ ${#impls[@]} -eq 0 ]]; then
+		die "No supported implementation in PYTHON_COMPAT."
+	fi
+
+	local flags=( "${impls[@]/#/python_targets_}" )
 	local optflags=${flags[@]/%/?}
 
 	# A nice QA trick here. Since a python-single-r1 package has to have
@@ -141,7 +158,7 @@ _python_set_globals() {
 	# it should prevent developers from mistakenly depending on packages
 	# not supporting multiple Python implementations.
 
-	local flags_st=( "${PYTHON_COMPAT[@]/#/-python_single_target_}" )
+	local flags_st=( "${impls[@]/#/-python_single_target_}" )
 	optflags+=,${flags_st[@]/%/(-)}
 
 	IUSE=${flags[*]}
@@ -152,12 +169,7 @@ _python_set_globals() {
 	# but no point in making this overcomplex, BDEP doesn't hurt anyone
 	# 2) python-exec should be built with all targets forced anyway
 	# but if new targets were added, we may need to force a rebuild
-	PYTHON_DEPS="dev-python/python-exec[${PYTHON_USEDEP}]"
-	local i PYTHON_PKG_DEP
-	for i in "${PYTHON_COMPAT[@]}"; do
-		python_export "${i}" PYTHON_PKG_DEP
-		PYTHON_DEPS+=" python_targets_${i}? ( ${PYTHON_PKG_DEP} )"
-	done
+	PYTHON_DEPS+="dev-python/python-exec[${PYTHON_USEDEP}]"
 }
 _python_set_globals
 
@@ -171,6 +183,8 @@ _python_validate_useflags() {
 	local i
 
 	for i in "${PYTHON_COMPAT[@]}"; do
+		_python_impl_supported "${i}" || continue
+
 		use "python_targets_${i}" && return 0
 	done
 
@@ -210,6 +224,8 @@ python_gen_usedep() {
 	local matches=()
 
 	for impl in "${PYTHON_COMPAT[@]}"; do
+		_python_impl_supported "${impl}" || continue
+
 		for pattern; do
 			if [[ ${impl} == ${pattern} ]]; then
 				matches+=(
@@ -249,6 +265,8 @@ python_gen_useflags() {
 	local matches=()
 
 	for impl in "${PYTHON_COMPAT[@]}"; do
+		_python_impl_supported "${impl}" || continue
+
 		for pattern; do
 			if [[ ${impl} == ${pattern} ]]; then
 				matches+=( "python_targets_${impl}" )
@@ -292,6 +310,8 @@ python_gen_cond_dep() {
 	shift
 
 	for impl in "${PYTHON_COMPAT[@]}"; do
+		_python_impl_supported "${impl}" || continue
+
 		for pattern; do
 			if [[ ${impl} == ${pattern} ]]; then
 				matches+=( "python_targets_${impl}? ( ${dep} )" )
@@ -337,6 +357,8 @@ python_copy_sources() {
 	einfo "Will copy sources from ${S}"
 	# the order is irrelevant here
 	for impl in "${PYTHON_COMPAT[@]}"; do
+		_python_impl_supported "${impl}" || continue
+
 		if use "python_targets_${impl}"
 		then
 			local BUILD_DIR=${bdir%%/}-${impl}
@@ -369,6 +391,8 @@ _python_check_USE_PYTHON() {
 
 			local impl py2 py3 dis_py2 dis_py3
 			for impl in "${PYTHON_COMPAT[@]}"; do
+				_python_impl_supported "${impl}" || continue
+
 				if use "python_targets_${impl}"; then
 					case "${impl}" in
 						python2_*)
@@ -480,6 +504,8 @@ _python_check_USE_PYTHON() {
 		local impl old=${USE_PYTHON} new=() removed=()
 
 		for impl in "${PYTHON_COMPAT[@]}"; do
+			_python_impl_supported "${impl}" || continue
+
 			local abi
 			case "${impl}" in
 				python*)
@@ -573,7 +599,9 @@ python_foreach_impl() {
 
 	debug-print "${FUNCNAME}: bdir = ${bdir}"
 	for impl in "${_PYTHON_ALL_IMPLS[@]}"; do
-		if has "${impl}" "${PYTHON_COMPAT[@]}" && use "python_targets_${impl}"
+		if has "${impl}" "${PYTHON_COMPAT[@]}" \
+			&& _python_impl_supported "${impl}" \
+			&& use "python_targets_${impl}"
 		then
 			local EPYTHON PYTHON
 			python_export "${impl}" EPYTHON PYTHON
@@ -601,7 +629,9 @@ python_export_best() {
 
 	local impl best
 	for impl in "${_PYTHON_ALL_IMPLS[@]}"; do
-		if has "${impl}" "${PYTHON_COMPAT[@]}" && use "python_targets_${impl}"
+		if has "${impl}" "${PYTHON_COMPAT[@]}" \
+			&& _python_impl_supported "${impl}" \
+			&& use "python_targets_${impl}"
 		then
 			best=${impl}
 		fi

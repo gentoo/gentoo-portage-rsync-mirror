@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1-r3.ebuild,v 1.5 2012/03/02 23:03:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1-r3.ebuild,v 1.6 2013/01/21 19:02:24 ulm Exp $
 
 EAPI="2"
 
@@ -10,13 +10,16 @@ DESCRIPTION="A tiny vt100 terminal emulator for X"
 HOMEPAGE="ftp://ftp.x.org/R5contrib/xvt-1.0.README"
 SRC_URI="ftp://ftp.x.org/R5contrib/xvt-1.0.tar.Z
 		mirror://gentoo/xvt-2.1.diff.gz"
-LICENSE="as-is"
+
+LICENSE="xvt"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc x86"
 IUSE=""
+
 RDEPEND="x11-libs/libX11"
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
+
 S=${WORKDIR}/${PN}-1.0
 
 src_prepare() {

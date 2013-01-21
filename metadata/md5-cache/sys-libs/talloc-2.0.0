@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=!<net-fs/samba-libs-3.4
 SLOT=0
 SRC_URI=http://samba.org/ftp/talloc/talloc-2.0.0.tar.gz
-_eclasses_=confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=928bf3b5d7342d322e4e74608fa623f4

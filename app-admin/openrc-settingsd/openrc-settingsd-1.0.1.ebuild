@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/openrc-settingsd/openrc-settingsd-1.0.1.ebuild,v 1.6 2013/01/06 09:11:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/openrc-settingsd/openrc-settingsd-1.0.1.ebuild,v 1.7 2013/01/21 19:48:06 tetromino Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="System settings D-Bus service for OpenRC"
 HOMEPAGE="http://gnome.gentoo.org/openrc-settingsd.xml"
 SRC_URI="http://dev.gentoo.org/~tetromino/distfiles/${PN}/${P}.tar.xz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="systemd"
@@ -16,12 +16,11 @@ IUSE="systemd"
 COMMON_DEPEND=">=dev-libs/glib-2.30:2
 	dev-libs/libdaemon
 	sys-apps/dbus
-	sys-apps/openrc
+	sys-apps/openrc:=
 	sys-auth/polkit"
 RDEPEND="${COMMON_DEPEND}
-	sys-auth/nss-myhostname
-	systemd? ( sys-apps/systemd )
-	!systemd? ( !sys-apps/systemd )"
+	systemd? ( >=sys-apps/systemd-197 )
+	!systemd? ( sys-auth/nss-myhostname !sys-apps/systemd )"
 DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils
 	dev-util/gdbus-codegen

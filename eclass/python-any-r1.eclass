@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.5 2013/01/02 21:12:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.6 2013/01/21 19:28:16 mgorny Exp $
 
 # @ECLASS: python-any-r1
 # @MAINTAINER:
@@ -134,13 +134,13 @@ _python_build_set_globals() {
 }
 _python_build_set_globals
 
-# @FUNCTION: _python_impl_supported
+# @FUNCTION: _python_EPYTHON_supported
 # @USAGE: <epython>
 # @INTERNAL
 # @DESCRIPTION:
 # Check whether the specified implementation is supported by package
 # (specified in PYTHON_COMPAT).
-_python_impl_supported() {
+_python_EPYTHON_supported() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	local i=${1/./_}
@@ -153,6 +153,7 @@ _python_impl_supported() {
 			;;
 		*)
 			ewarn "Invalid EPYTHON: ${EPYTHON}"
+			return 1
 			;;
 	esac
 
@@ -173,7 +174,7 @@ python-any-r1_pkg_setup() {
 
 	# first, try ${EPYTHON}... maybe it's good enough for us.
 	if [[ ${EPYTHON} ]]; then
-		if _python_impl_supported "${EPYTHON}"; then
+		if _python_EPYTHON_supported "${EPYTHON}"; then
 			python_export EPYTHON PYTHON
 			return
 		fi
@@ -187,7 +188,7 @@ python-any-r1_pkg_setup() {
 		if [[ ! ${i} ]]; then
 			# no eselect-python?
 			break
-		elif _python_impl_supported "${i}"; then
+		elif _python_EPYTHON_supported "${i}"; then
 			python_export "${i}" EPYTHON PYTHON
 			return
 		fi
@@ -206,8 +207,6 @@ python-any-r1_pkg_setup() {
 		python_export "${i}" PYTHON_PKG_DEP EPYTHON PYTHON
 		ROOT=/ has_version "${PYTHON_PKG_DEP}" && return
 	done
-
-	die $EPYTHON
 }
 
 _PYTHON_ANY_R1=1

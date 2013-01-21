@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=x11-libs/libX11-1.4 x11-libs/libXxf86vm x11-libs/libxcb gnome? ( dev-libs/glib:2 >=gnome-base/gconf-2 ) gtk? ( >=dev-python/pygtk-2 dev-python/pyxdg ) gtk? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) )
 SLOT=0
 SRC_URI=http://launchpad.net/redshift/trunk/1.6/+download/redshift-1.6.tar.bz2
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=0204db0caacf290e8ab92ad842cad659

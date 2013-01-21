@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.5.1.ebuild,v 1.1 2013/01/17 23:35:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.5.1.ebuild,v 1.2 2013/01/21 20:00:21 ssuominen Exp $
 
 EAPI="4"
 
@@ -23,7 +23,8 @@ LIB_DEPEND="dev-libs/libgpg-error[static-libs(+)]
 	sys-apps/util-linux[static-libs(+)]
 	dev-libs/libgcrypt[static-libs(+)]
 	sys-fs/lvm2[static-libs(+)]
-	sys-libs/e2fsprogs-libs[static-libs(+)]"
+	sys-libs/e2fsprogs-libs[static-libs(+)]
+	virtual/udev[static-libs(+)]"
 # We have to always depend on ${LIB_DEPEND} rather than put behind
 # static? () because we provide a shared library which links against
 # these other packages. #414665

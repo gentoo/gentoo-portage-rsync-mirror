@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-2.1.0.ebuild,v 1.1 2012/06/10 22:08:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-2.1.0-r1.ebuild,v 1.1 2013/01/21 19:43:52 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
-inherit cmake-utils flag-o-matic eutils toolchain-funcs multilib
+inherit base cmake-utils flag-o-matic eutils toolchain-funcs multilib
 
 MY_P=${PN/m/M}-complete-${PV}-Source ; MY_P=${MY_P/lib}
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="debug openmp video_cards_nvidia"
 
-RDEPEND=">=media-libs/ftgl-2.1.3_rc5
+RDEPEND="media-fonts/dejavu
+	>=media-libs/ftgl-2.1.3_rc5
 	media-libs/freetype:2
 	media-libs/mesa
 	media-libs/glew
@@ -33,15 +34,26 @@ PATCHES=(
 	"${FILESDIR}"/${P}-path.patch
 )
 
+src_prepare() {
+	# fix pc file location
+	sed -i \
+		-e "s:/lib/pkgconfig:/$(get_libdir)/pkgconfig:g" \
+		CMakeLists.txt
+
+	base_src_prepare
+}
+
 src_configure() {
 	if use video_cards_nvidia; then
-		append-ldflags -L/opt/nvidia-cg-toolkit/lib
+		append-ldflags -L/opt/nvidia-cg-toolkit/$(get_libdir)
 		append-cppflags -I/opt/nvidia-cg-toolkit/include
 	fi
 
 	local mycmakeargs=(
 		$(cmake-utils_use_use video_cards_nvidia CG)
 		"-DUSE_OPENMP=OFF"
+		"-DprojectM_FONT_MENU=${EPREFIX}/usr/share/fonts/dejavu/DejaVuSans.ttf"
+		"-DprojectM_FONT_TITLE=${EPREFIX}/usr/share/fonts/dejavu/DejaVuSansMono.ttf"
 	)
 
 	if use openmp && tc-has-openmp; then

@@ -10,5 +10,5 @@ RDEPEND=X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXi x11-libs/libXrender
 RESTRICT=fetch strip
 SLOT=1.7
 SRC_URI=amd64? ( jdk-7u11-linux-x64.tar.gz ) x86? ( jdk-7u11-linux-i586.tar.gz ) x64-solaris? ( jdk-7u11-solaris-i586.tar.gz jdk-7u11-solaris-x64.tar.gz ) x86-solaris? ( jdk-7u11-solaris-i586.tar.gz ) sparc-solaris? ( jdk-7u11-solaris-sparc.tar.gz ) sparc64-solaris? ( jdk-7u11-solaris-sparc.tar.gz jdk-7u11-solaris-sparcv9.tar.gz ) jce? ( UnlimitedJCEPolicyJDK7.zip )
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	7dc6db7d110230640003e30e63a0b2bc	multilib	9aa8a023e062fca0ba79362d9d0cc488	pax-utils	0ace932c4045349c7fc1af0fe7091acf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	7dc6db7d110230640003e30e63a0b2bc	multilib	ded93e450747134a079e647d888aa80b	pax-utils	0ace932c4045349c7fc1af0fe7091acf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=b7a0d9dc97d8e755ca863965059500f1

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-python/dbus-python-0.80.2 >=dev-python/gconf-python-2.18.0 dev-python/gnome-keyring-python >=dev-python/imaging-1.1.6 >=dev-python/notify-python-0.1.1 >=dev-python/pywebkitgtk-1.0.1 >=dev-python/simplejson-1.9.1 >=dev-python/egenix-mx-base-3.0.0 >=dev-python/python-distutils-extra-2.15 >=dev-python/pycurl-7.19.0 >=dev-python/libwnck-python-2.26.0 >=dev-python/feedparser-4.1 >=dev-python/pyxdg-0.15 >=dev-python/mako-0.2.4 >=dev-python/pygtk-2.16 dev-python/oauth >=gnome-base/librsvg-2.22.2 =dev-lang/python-2* =dev-lang/python-2*[sqlite]
 SLOT=0
 SRC_URI=http://launchpad.net/gwibber/3.2/3.1.0/+download/gwibber-3.1.0.tar.gz
-_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=0d74ce789dac407fe70090cb8a8e36cd

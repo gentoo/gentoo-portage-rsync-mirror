@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=dev-python/munkres dev-python/python-musicbrainz-ngs dev-python/unidecode media-libs/mutagen chroma? ( dev-python/pyacoustid ) lastgenre? ( dev-python/pylast ) bpd? ( dev-python/bluelet ) replaygain? ( media-sound/rgain ) web? ( dev-python/flask ) doc? ( dev-python/sphinx ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[sqlite] =dev-lang/python-2.6*[sqlite] )
 SLOT=0
 SRC_URI=http://beets.googlecode.com/files/beets-1.0b15.tar.gz
-_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	9aa8a023e062fca0ba79362d9d0cc488	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=5a79cccd020a9c028a2bd38a5f8d7243

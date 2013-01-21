@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=ruby_targets_ruby18? ( gtk? ( >=dev-ruby/ruby-gtk2-0.12.0[ruby_targets_ruby18] ) nls? ( >=dev-ruby/ruby-gettext-0.8.0[ruby_targets_ruby18] ) >=dev-ruby/rubyzip-0.5.7[ruby_targets_ruby18] ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 )
 SLOT=0
 SRC_URI=mirror://rubyforge/rubygfe/rubygfe-0.3.4.tar.gz
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	java-utils-2	dcda71e114d638cdf01db57b8445337d	multilib	9aa8a023e062fca0ba79362d9d0cc488	ruby-ng	10ca07a887e226622062d89bb959a175	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	java-utils-2	dcda71e114d638cdf01db57b8445337d	multilib	ded93e450747134a079e647d888aa80b	ruby-ng	10ca07a887e226622062d89bb959a175	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=1ecb46659227f73d7752ad789b3d9c7f

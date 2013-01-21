@@ -9,5 +9,5 @@ PDEPEND=doc? ( dev-php/smarty-docs )
 RDEPEND=dev-lang/php dev-lang/php
 SLOT=0
 SRC_URI=http://www.smarty.net/distributions/Smarty-2.6.24.tar.gz
-_eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	php-lib-r1	d7318e400ae0d443613d286980877fd4	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	php-lib-r1	d7318e400ae0d443613d286980877fd4	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=881b1067d4da3457ac87ad574bab7177

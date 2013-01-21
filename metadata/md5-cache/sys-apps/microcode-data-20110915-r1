@@ -7,5 +7,5 @@ LICENSE=intel-ucode
 RDEPEND=!<sys-apps/microcode-ctl-1.17-r2
 SLOT=0
 SRC_URI=http://downloadmirror.intel.com/20429/eng/microcode-20110915.tgz
-_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=1eeaae9e771f24e528d8b11c1878fe77

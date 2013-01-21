@@ -1,21 +1,22 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.27 2010/09/17 11:16:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.28 2013/01/21 19:28:54 tetromino Exp $
 
 inherit eutils multilib autotools
 
 # GTKGLArea has been abandoned by the author. We'll continue to mirror the
 # source on Gentoo mirrors.
-DESCRIPTION="GL Extentions for gtk+"
-HOMEPAGE="http://www.student.oulu.fi/~jlof/gtkglarea/"
+DESCRIPTION="OpenGL canvas and context provider for GTK+"
+HOMEPAGE="http://www.mono-project.com/GtkGLArea"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2+ GPL-2+" # examples are GPL-2+, library is LGPL-2+
 SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc sh sparc x86"
 IUSE=""
 
 RDEPEND="=x11-libs/gtk+-1.2*
+	virtual/glu
 	virtual/opengl"
 DEPEND="${RDEPEND}"
 

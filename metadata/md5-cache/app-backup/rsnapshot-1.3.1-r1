@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.8.2 >=sys-apps/util-linux-2.12-r4 >=sys-apps/coreutils-5.0.91-r4 >=net-misc/openssh-3.7.1_p2-r1 >=net-misc/rsync-2.6.0
 SLOT=0
 SRC_URI=http://www.rsnapshot.org/downloads/rsnapshot-1.3.1.tar.gz
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=41a3406266359318682d1ace8b91436f

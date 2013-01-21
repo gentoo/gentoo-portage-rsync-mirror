@@ -6,5 +6,5 @@ LICENSE=GPL-2
 RDEPEND=app-text/ghostscript-gpl !<app-text/texlive-core-2007-r7
 SLOT=0
 SRC_URI=http://www.tm.uka.de/~bless/ps2eps-1.68.tar.gz
-_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=286fb443e68e7788b476c5140a695fd3

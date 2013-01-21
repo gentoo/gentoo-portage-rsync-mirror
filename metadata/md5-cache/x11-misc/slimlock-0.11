@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/freetype-2 media-libs/imlib2[png,jpeg] virtual/pam x11-libs/libX11 x11-libs/libXext x11-libs/libXft x11-misc/slim[pam]
 SLOT=0
 SRC_URI=http://github.com/joelburget/slimlock/tarball/v0.11 -> slimlock-0.11.tar.gz
-_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=f092cbb5af7886260bfc79ad50c07ce8

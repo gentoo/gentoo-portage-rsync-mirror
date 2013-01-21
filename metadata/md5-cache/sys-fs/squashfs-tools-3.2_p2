@@ -6,5 +6,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/zlib
 SLOT=3.0
 SRC_URI=mirror://sourceforge/squashfs/squashfs3.2-r2.tar.gz
-_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=f59c01d377585027fe3419584c1cc839

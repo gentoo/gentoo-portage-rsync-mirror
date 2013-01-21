@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1-with-linking-exception
 RDEPEND=dev-ml/pcre-ocaml dev-ml/res >=dev-ml/sexplib-108.07.01 >=dev-ml/bin-prot-108.07.01 >=dev-ml/fieldslib-108.07.01 >=dev-ml/pa_ounit-108.07.01 >=dev-ml/variantslib-108.07.01 >=dev-ml/pipebang-108.07.01 >=dev-lang/ocaml-3.12[ocamlopt?]
 SLOT=0
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/108.07.01/individual/core_extended-108.07.01.tar.gz http://dev.gentoo.org/~aballier/distfiles/core_extended-108.07.01.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	9aa8a023e062fca0ba79362d9d0cc488	oasis	b06dffa6b9fecb81ede1ade7fead8438	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	ded93e450747134a079e647d888aa80b	oasis	b06dffa6b9fecb81ede1ade7fead8438	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=8631045bd971bafcbe97ef44571772c6

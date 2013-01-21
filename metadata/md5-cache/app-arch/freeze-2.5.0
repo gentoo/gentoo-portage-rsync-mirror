@@ -8,5 +8,5 @@ LICENSE=GPL-1+
 RDEPEND=!<=media-libs/mlt-0.4.2 !>=app-forensics/sleuthkit-4.0.1 !media-libs/mlt[melt]
 SLOT=0
 SRC_URI=ftp://ftp.ibiblio.org/pub/Linux/utils/compress/freeze-2.5.0.tar.gz
-_eclasses_=multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=ab08003f67318c394886249535886cb9

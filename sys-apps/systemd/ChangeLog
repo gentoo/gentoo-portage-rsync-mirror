@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.76 2013/01/21 18:01:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.77 2013/01/21 19:48:28 tetromino Exp $
+
+  21 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  systemd-197-r1.ebuild, systemd-9999.ebuild:
+  Block nss-myhostname since it was merged into systemd-197 (bug#453026, thanks
+  to Michał Bartoszkiewicz).
 
   21 Jan 2013; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
   Append to the DEPEND variable instead of overwriting it.

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/libvisual-projectm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-projectm/ChangeLog,v 1.13 2012/05/08 07:28:41 nativemad Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-projectm/ChangeLog,v 1.14 2013/01/21 19:49:21 scarabeus Exp $
+
+  21 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libvisual-projectm-1.2.0.ebuild:
+  Drop oldest overshadowed version.
 
   08 May 2012; Andreas Schuerch <nativemad@gentoo.org>
   libvisual-projectm-2.0.1.ebuild:
@@ -64,4 +68,3 @@
   +libvisual-projectm-0.99.ebuild:
   Initial import, ProjectM libvisual plugin, thanks to all the users
   submitting ebuilds and feedback in bug #87870.
-

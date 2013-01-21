@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-lang/ocaml-3.10.2[ocamlopt?] media-libs/gd virtual/jpeg sys-libs/zlib media-libs/libpng media-libs/freetype:2
 SLOT=0
 SRC_URI=mirror://sourceforge/gd4o/gd4o-1.0a5.tar.gz
-_eclasses_=findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=2af23b1b8a0d23d4f2ea8ee95b82daac

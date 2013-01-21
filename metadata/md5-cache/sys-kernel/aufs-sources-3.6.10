@@ -11,5 +11,5 @@ RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl )
 RESTRICT=binchecks strip
 SLOT=3.6.10
 SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.6.tar.bz2 deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.6.N/deblob-3.6 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.6.N/deblob-check -> deblob-check-3.6 ) mirror://gentoo/genpatches-3.6-10.base.tar.bz2 mirror://gentoo/genpatches-3.6-10.extras.tar.bz2 http://dev.gentoo.org/~jlec/distfiles/aufs-sources-3.6.10.tar.xz
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	kernel-2	dd451098928ff900df7c254820871c00	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	kernel-2	dd451098928ff900df7c254820871c00	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=d5da320d3414e50272671708a59be180

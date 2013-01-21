@@ -8,5 +8,5 @@ LICENSE=as-is
 RDEPEND=virtual/mysql dbi? ( dev-db/libdbi ) ssl? ( dev-libs/openssl ) =www-servers/apache-2.2*
 SLOT=0
 SRC_URI=http://www.outoforder.cc/downloads/mod_log_sql/mod_log_sql-1.101.tar.bz2
-_eclasses_=apache-module	1f60370f9dceba046ec036cd6bbb0c8b	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=apache-module	1f60370f9dceba046ec036cd6bbb0c8b	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=9b9c4fa0fe47811dbad6ebf03b78fdaf

@@ -7,5 +7,5 @@ LICENSE=LLGPL-2.1
 RDEPEND=|| ( >=sys-apps/coreutils-8.15 app-misc/realpath ) >=dev-lisp/asdf-1.84 dev-lang/perl
 SLOT=0
 SRC_URI=mirror://gentoo/common-lisp-controller_4.27.tar.gz
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	9aa8a023e062fca0ba79362d9d0cc488	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=5f2726a07df356e3e29b643f07e25609

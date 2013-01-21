@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-197-r1.ebuild,v 1.3 2013/01/21 17:32:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-197-r1.ebuild,v 1.4 2013/01/21 19:48:28 tetromino Exp $
 
 EAPI=5
 
@@ -44,6 +44,7 @@ RDEPEND="${COMMON_DEPEND}
 		>=sys-apps/util-linux-2.22
 		<sys-apps/sysvinit-2.88-r4
 	)
+	!sys-auth/nss-myhostname
 	!<sys-libs/glibc-2.10
 	!<sys-fs/udev-197-r3"
 

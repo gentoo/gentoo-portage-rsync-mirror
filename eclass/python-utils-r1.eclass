@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.13 2013/01/05 10:01:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.14 2013/01/21 19:28:16 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -46,6 +46,37 @@ _PYTHON_ALL_IMPLS=(
 	python3_1 python3_2 python3_3
 	python2_5 python2_6 python2_7
 )
+
+# @FUNCTION: _python_impl_supported
+# @USAGE: <impl>
+# @INTERNAL
+# @DESCRIPTION:
+# Check whether the implementation <impl> (PYTHON_COMPAT-form)
+# is still supported.
+#
+# Returns 0 if the implementation is valid and supported. If it is
+# unsupported, returns 1 -- and the caller should ignore the entry.
+# If it is invalid, dies with an appopriate error messages.
+_python_impl_supported() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	[[ ${#} -eq 1 ]] || die "${FUNCNAME}: takes exactly 1 argument (impl)."
+
+	local impl=${1}
+
+	# keep in sync with _PYTHON_ALL_IMPLS!
+	# (not using that list because inline patterns shall be faster)
+	case "${impl}" in
+		python2_[567]|python3_[123]|pypy1_[89]|pypy2_0|jython2_5)
+			return 0
+			;;
+#		pypy1_8)
+#			return 1
+#			;;
+		*)
+			die "Invalid implementation in PYTHON_COMPAT: ${impl}"
+	esac
+}
 
 # @ECLASS-VARIABLE: PYTHON
 # @DESCRIPTION:

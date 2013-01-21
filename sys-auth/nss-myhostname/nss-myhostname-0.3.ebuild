@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-myhostname/nss-myhostname-0.3.ebuild,v 1.11 2013/01/06 11:09:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-myhostname/nss-myhostname-0.3.ebuild,v 1.12 2013/01/21 19:47:46 tetromino Exp $
 
 EAPI="4"
 
@@ -13,8 +13,10 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc x86"
 IUSE=""
 
-RDEPEND=""
-DEPEND="${RDEPEND}"
+COMMON_DEPEND=""
+RDEPEND="${COMMON_DEPEND}
+	!>=sys-apps/systemd-197"
+DEPEND="${COMMON_DEPEND}"
 
 src_prepare() {
 	# The documentation in doc/ is just the README file in other formats

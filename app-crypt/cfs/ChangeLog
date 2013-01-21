@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/cfs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/ChangeLog,v 1.15 2012/10/20 16:47:43 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cfs/ChangeLog,v 1.16 2013/01/21 19:06:32 ulm Exp $
+
+  21 Jan 2013; Ulrich Müller <ulm@gentoo.org> cfs-1.4.1.17-r2.ebuild,
+  cfs-1.4.1.17-r3.ebuild:
+  Fix LICENSE, bug 453290.
 
   20 Oct 2012; Agostino Sarubbo <ago@gentoo.org> cfs-1.4.1.17-r3.ebuild:
   Add ~amd64, wrt bug #439080

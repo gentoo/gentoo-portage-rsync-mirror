@@ -1,12 +1,12 @@
 DEFINED_PHASES=configure install postinst
-DEPEND=>=dev-libs/glib-2.30:2 dev-libs/libdaemon sys-apps/dbus sys-apps/openrc sys-auth/polkit app-arch/xz-utils dev-util/gdbus-codegen virtual/pkgconfig
+DEPEND=>=dev-libs/glib-2.30:2 dev-libs/libdaemon sys-apps/dbus sys-apps/openrc:= sys-auth/polkit app-arch/xz-utils dev-util/gdbus-codegen virtual/pkgconfig
 DESCRIPTION=System settings D-Bus service for OpenRC
-EAPI=4
+EAPI=5
 HOMEPAGE=http://gnome.gentoo.org/openrc-settingsd.xml
 IUSE=systemd
 KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
-LICENSE=GPL-2
-RDEPEND=>=dev-libs/glib-2.30:2 dev-libs/libdaemon sys-apps/dbus sys-apps/openrc sys-auth/polkit sys-auth/nss-myhostname systemd? ( sys-apps/systemd ) !systemd? ( !sys-apps/systemd )
+LICENSE=GPL-2+
+RDEPEND=>=dev-libs/glib-2.30:2 dev-libs/libdaemon sys-apps/dbus sys-apps/openrc:= sys-auth/polkit systemd? ( >=sys-apps/systemd-197 ) !systemd? ( sys-auth/nss-myhostname !sys-apps/systemd )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~tetromino/distfiles/openrc-settingsd/openrc-settingsd-1.0.1.tar.xz
-_md5_=bb194e576140a063d186a21e5adbb842
+_md5_=26f57d296373d78f77899e57f6df6b2d

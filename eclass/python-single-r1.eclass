@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.13 2013/01/08 20:18:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.14 2013/01/21 19:28:16 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -134,8 +134,31 @@ fi
 # @CODE
 
 _python_single_set_globals() {
-	local flags_mt=( "${PYTHON_COMPAT[@]/#/python_targets_}" )
-	local flags=( "${PYTHON_COMPAT[@]/#/python_single_target_}" )
+	local impls=()
+
+	PYTHON_DEPS=
+	local i PYTHON_PKG_DEP
+	for i in "${PYTHON_COMPAT[@]}"; do
+		_python_impl_supported "${i}" || continue
+
+		# The chosen targets need to be in PYTHON_TARGETS as well.
+		# This is in order to enforce correct dependencies on packages
+		# supporting multiple implementations.
+		#REQUIRED_USE+=" python_single_target_${i}? ( python_targets_${i} )"
+
+		python_export "${i}" PYTHON_PKG_DEP
+		PYTHON_DEPS+="python_single_target_${i}? ( ${PYTHON_PKG_DEP} ) "
+
+		impls+=( "${i}" )
+	done
+
+	if [[ ${#impls[@]} -eq 0 ]]; then
+		die "No supported implementation in PYTHON_COMPAT."
+	fi
+
+	local flags_mt=( "${impls[@]/#/python_targets_}" )
+	local flags=( "${impls[@]/#/python_single_target_}" )
+
 	local optflags=${flags_mt[@]/%/?}
 	optflags+=,${flags[@]/%/(+)?}
 
@@ -147,17 +170,7 @@ _python_single_set_globals() {
 	# but no point in making this overcomplex, BDEP doesn't hurt anyone
 	# 2) python-exec should be built with all targets forced anyway
 	# but if new targets were added, we may need to force a rebuild
-	PYTHON_DEPS="dev-python/python-exec[${PYTHON_USEDEP}]"
-	local i PYTHON_PKG_DEP
-	for i in "${PYTHON_COMPAT[@]}"; do
-		# The chosen targets need to be in PYTHON_TARGETS as well.
-		# This is in order to enforce correct dependencies on packages
-		# supporting multiple implementations.
-		#REQUIRED_USE+=" python_single_target_${i}? ( python_targets_${i} )"
-
-		python_export "${i}" PYTHON_PKG_DEP
-		PYTHON_DEPS+=" python_single_target_${i}? ( ${PYTHON_PKG_DEP} )"
-	done
+	PYTHON_DEPS+="dev-python/python-exec[${PYTHON_USEDEP}]"
 }
 _python_single_set_globals
 

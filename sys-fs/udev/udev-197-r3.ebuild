@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.19 2013/01/21 18:56:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.20 2013/01/21 19:05:42 ssuominen Exp $
 
 EAPI=4
 
@@ -450,7 +450,7 @@ pkg_postinst()
 	fi
 
 	local fstab="${ROOT}"etc/fstab
-	if [[ $(grep -q ^udev ${fstab}) ]]; then
+	if $(grep -qs ^udev "${fstab}"); then
 		ewarn "You should review and/or remove your udev starting line from ${fstab}"
 		ewarn "Not doing so might result in unbootable system."
 		ewarn "You have been warned. For details, see:"
