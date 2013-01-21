@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.182 2013/01/05 08:17:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.183 2013/01/21 04:47:17 radhermit Exp $
+
+*mkvtoolnix-6.0.0 (21 Jan 2013)
+
+  21 Jan 2013; Tim Harder <radhermit@gentoo.org> +mkvtoolnix-6.0.0.ebuild:
+  Version bump.
 
   05 Jan 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
