@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/mkinitcpio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mkinitcpio/ChangeLog,v 1.15 2013/01/19 14:43:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mkinitcpio/ChangeLog,v 1.17 2013/01/21 11:23:22 ago Exp $
+
+  21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> mkinitcpio-0.9.2-r2.ebuild:
+  Stable for x86, wrt bug #453000
+
+  21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> mkinitcpio-0.9.2-r2.ebuild:
+  Stable for amd64, wrt bug #453000
 
   19 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
   mkinitcpio-0.9.2-r2.ebuild:
