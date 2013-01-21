@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2012.ebuild,v 1.10 2012/12/17 20:13:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2012.ebuild,v 1.12 2013/01/21 10:49:09 aballier Exp $
 
 EAPI="2"
 
@@ -12,8 +12,8 @@ LICENSE="metapackage"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="cjk context detex doc dvi2tty dvipdfm extra epspdf games graphics
-humanities jadetex luatex music omega pdfannotextractor png pstricks publishers
-science tex4ht truetype xetex xindy xml X"
+humanities jadetex luatex metapost music omega pdfannotextractor png pstricks publishers
+science tex4ht texi2html truetype xetex xindy xml X"
 
 LANGS="af ar as bg bn bo ca cs cy da de el en en_GB eo es et eu fa fi fr ga gl
 	gu he hi hr hsb hu hy ia id is it ja ko kn la lo lt lv ml mn mr nb nl nn no
@@ -30,7 +30,7 @@ RDEPEND="${DEPEND}
 	app-text/psutils
 	>=${TEXLIVE_CAT}/texlive-fontutils-${PV}
 	media-gfx/sam2p
-	app-text/texi2html
+	texi2html? ( app-text/texi2html )
 	sys-apps/texinfo
 	>=${TEXLIVE_CAT}/texlive-texinfo-${PV}
 	app-text/t1utils
@@ -52,8 +52,10 @@ RDEPEND="${DEPEND}
 	>=${TEXLIVE_CAT}/texlive-latexrecommended-${PV}
 	>=dev-tex/xcolor-2.11
 	>=dev-tex/latex-beamer-3.20
-	>=${TEXLIVE_CAT}/texlive-metapost-${PV}
-		dev-tex/feynmf
+	metapost? (
+		>=${TEXLIVE_CAT}/texlive-metapost-${PV}
+			dev-tex/feynmf
+	)
 	>=${TEXLIVE_CAT}/texlive-genericrecommended-${PV}
 	pdfannotextractor? ( dev-tex/pdfannotextractor )
 	extra? (

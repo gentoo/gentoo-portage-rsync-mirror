@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.194 2013/01/06 10:07:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.195 2013/01/21 10:44:53 gurligebis Exp $
+
+*wpa_supplicant-2.0 (21 Jan 2013)
+
+  21 Jan 2013; <gurligebis@gentoo.org> +wpa_supplicant-2.0.ebuild,
+  +files/wpa_supplicant-2.0-dbus-path-fix.patch,
+  +files/wpa_supplicant-2.0-do-not-call-dbus-functions-with-NULL-path.patch,
+  +files/wpa_supplicant-2.0-generate-libeap-peer.patch:
+  Bumping to 2.0, fixing bug #453084
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> wpa_supplicant-1.1.ebuild:
   Add ~sparc, wrt bug #449220
