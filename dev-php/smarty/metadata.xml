@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>php</herd>
-	<maintainer>
-		<email>tomk@gentoo.org</email>
-		<name>Tom Knight</name>
-	</maintainer>
 	<longdescription lang="en">
 		Smarty is a template engine for PHP, facilitating the separation of
 		presentation (HTML/CSS) from application logic. This implies that PHP

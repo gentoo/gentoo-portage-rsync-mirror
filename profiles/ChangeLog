@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7392 2013/01/21 09:26:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7393 2013/01/21 18:11:52 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Jan 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add CFS, keynote, and xvt licenses to MISC-FREE group, bugs 453290, 453292,
+  and 452964.
 
   21 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   default/linux/make.defaults:

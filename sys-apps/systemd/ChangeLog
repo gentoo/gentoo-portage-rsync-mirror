@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.75 2013/01/21 17:33:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.76 2013/01/21 18:01:39 floppym Exp $
+
+  21 Jan 2013; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  Append to the DEPEND variable instead of overwriting it.
 
   21 Jan 2013; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
   Update live ebuild with previous change.

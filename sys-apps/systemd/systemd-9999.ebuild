@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.11 2013/01/21 17:33:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.12 2013/01/21 18:01:39 floppym Exp $
 
 EAPI=5
 
@@ -69,7 +69,7 @@ DEPEND="${COMMON_DEPEND}
 SRC_URI=
 KEYWORDS=
 
-DEPEND="dev-libs/gobject-introspection
+DEPEND+=" dev-libs/gobject-introspection
 	>=dev-util/gtk-doc-1.18"
 #endif
 

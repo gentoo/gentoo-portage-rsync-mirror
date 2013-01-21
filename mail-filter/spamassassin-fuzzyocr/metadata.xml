@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>perl</herd>
 	<maintainer>
-		<email>tomk@gentoo.org</email>
-		<name>Tom Knight</name>
-	</maintainer>
-	<maintainer>
 		<email>chutzpah@gentoo.org</email>
 		<name>Patrick McLean</name>
 	</maintainer>
