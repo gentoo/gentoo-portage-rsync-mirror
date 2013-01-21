@@ -1,16 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.67 2013/01/21 13:13:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.68 2013/01/21 13:41:47 mgorny Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
-
-# Michał Górny <mgorny@gentoo.org> (31 Oct 2012)
-# Mask PYTHON_TARGETS for implementations not keyworded on this arch
-# (bug #440616).
-python_targets_pypy1_8
-python_targets_pypy1_9
-python_targets_jython2_5
-python_single_target_pypy1_8
-python_single_target_pypy1_9
-python_single_target_jython2_5
 
 # Jeroen Roovers <jer@gentoo.org> (13 Nov 2012)
 # media-libs/fdk-aac is not supported on HPPA (bug #442806)

@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.23 2012/11/19 17:37:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-9999.ebuild,v 1.24 2013/01/21 13:38:17 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="python? 2" # it can use only ONE python, so stick with two for now
+PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
 
 EGIT_REPO_URI="git://git.sv.gnu.org/weechat.git"
 [[ ${PV} == "9999" ]] && GIT_ECLASS="git-2"
-inherit python multilib cmake-utils ${GIT_ECLASS}
+inherit python-single-r1 multilib cmake-utils ${GIT_ECLASS}
 
 DESCRIPTION="Portable and multi-interface IRC client."
 HOMEPAGE="http://weechat.org/"
@@ -36,6 +36,7 @@ RDEPEND="
 	irc? ( dev-libs/libgcrypt )
 	lua? ( dev-lang/lua[deprecated] )
 	perl? ( dev-lang/perl )
+	python? ( ${PYTHON_DEPS} )
 	ruby? ( >=dev-lang/ruby-1.9 )
 	ssl? ( net-libs/gnutls )
 	spell? ( app-text/aspell )
@@ -57,10 +58,7 @@ for X in "${LANGS[@]}" ; do
 done
 
 pkg_setup() {
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
+	use python && python-single-r1_pkg_setup
 }
 
 src_prepare() {

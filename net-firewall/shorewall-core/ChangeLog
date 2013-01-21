@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-core/ChangeLog,v 1.12 2013/01/20 10:26:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-core/ChangeLog,v 1.13 2013/01/21 13:48:38 ago Exp $
+
+  21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> shorewall-core-4.5.8.2.ebuild:
+  Stable for ppc64, wrt bug #452830
 
   20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> shorewall-core-4.5.8.2.ebuild:
   Stable for alpha, wrt bug #452830
