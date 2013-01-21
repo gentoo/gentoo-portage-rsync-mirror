@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.35 2013/01/16 13:03:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.36 2013/01/21 13:30:08 jlec Exp $
+
+  21 Jan 2013; Justin Lecher <jlec@gentoo.org> nvidia-cuda-sdk-5.0.35.ebuild,
+  metadata.xml:
+  Be more sensitive for presents of files when cleaning, #452944
 
   16 Jan 2013; Justin Lecher <jlec@gentoo.org> nvidia-cuda-sdk-5.0.35.ebuild:
   Add missing dep on virtual/mpi with USE=examples, #452040

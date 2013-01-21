@@ -1,5 +1,5 @@
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.66 2012/11/24 21:38:12 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.67 2013/01/21 13:13:44 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Michał Górny <mgorny@gentoo.org> (31 Oct 2012)
@@ -245,10 +245,6 @@ video_cards_vesa
 video_cards_vmware
 video_cards_voodoo
 
-# 27 Nov 2005 Guy Martin <gmsoft@gentoo.org>
-# gccxml doesn't build and boost depend on it with this use
-pyste
-
 # 25 Jul 2005 Guy Martin <gmsoft@gentoo.org>
 # lm_sensors not supported on hppa and ieee1394 not tested
 lm_sensors
@@ -257,21 +253,6 @@ ieee1394
 # 25 Jun 2005 Guy Martin <gmsoft@gentoo.org>
 # mono is not yet supported on hppa
 mono
-
-# 19 Jun 2005 Guy Martin <gmsoft@gentoo.org>
-# dmalloc is broken on hppa
-dmalloc
-
-# 10 Mar 2005 Stefan Knoblich <stkn@gentoo.org>
-# This needs zaptel and pri
-bri
-florz
-
-# 20 Feb 2005 Guy Martin <gmsoft@gentoo.org>
-# Hardware for asterisk not yet tested
-zaptel
-resperl
-pri
 
 # 18 Feb 2005 Guy Martin <gmsoft@gentoo.org>
 # No emboss support on hppa for now
@@ -297,14 +278,6 @@ avi
 # 13 Apr 2003 Guy Martin <gmsoft@gentoo.org>
 # Selinux patches not tested on hppa and no kernel sources are emergeables with this patch.
 selinux
-
-# 26 Jan 2006 Jeroen Roovers <jer@gentoo.org>
-# Same for dev-lang/php:java-internal
-java-internal
-
-# 24 Jan 2006 Jeroen Roovers <jer@gentoo.org>
-# Same for dev-lang/php:java-external
-java-external
 
 # 20 Mar 2003 Guy Martin <gmsoft@gentoo.org>
 # Many java apps need java => 1.3 and hppa has only 1.1 right now
