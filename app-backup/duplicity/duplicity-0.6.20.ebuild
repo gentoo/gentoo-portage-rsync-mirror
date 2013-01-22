@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/duplicity-0.6.20.ebuild,v 1.3 2013/01/16 15:01:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/duplicity-0.6.20.ebuild,v 1.4 2013/01/22 17:28:36 ago Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SRC_URI="http://code.launchpad.net/${PN}/0.6-series/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ppc ~sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="s3"
 
 DEPEND="

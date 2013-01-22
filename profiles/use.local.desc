@@ -637,6 +637,7 @@ app-misc/ddccontrol:ddcpci - enable direct PCI memory access (the setuid ddcpci 
 app-misc/digitemp:ds2490 - Build support for the ds2490 sensor
 app-misc/digitemp:ds9097 - Build support for the ds9097 sensor
 app-misc/digitemp:ds9097u - Build support for the ds9097u sensor
+app-misc/emelfm2:ansi - Add support for ANSI escape sequences
 app-misc/freemind:groovy - Build plugin for scripting via Groovy
 app-misc/freemind:latex - Build plugin for inserting mathematical formulas in LaTeX syntax
 app-misc/freemind:pdf - Build plugin for exporting mindmaps to SVG and PDF

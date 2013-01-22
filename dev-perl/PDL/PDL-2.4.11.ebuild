@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.5 2012/10/19 10:42:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.6 2013/01/22 17:08:18 bicatali Exp $
 
 EAPI=4
 
@@ -15,13 +15,14 @@ DESCRIPTION="Perl Data Language for scientific computing"
 LICENSE="Artistic as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="+badval doc fftw fortran gd gsl hdf netpbm opengl pdl2 proj pgplot plplot threads"
+IUSE="+badval doc fftw fortran gd gsl hdf netpbm pdl2 proj pgplot plplot threads"
 
 RDEPEND="sys-libs/ncurses
 	app-arch/sharutils
 	dev-perl/Astro-FITS-Header
 	dev-perl/File-Map
 	dev-perl/Inline
+	dev-perl/OpenGL
 	dev-perl/TermReadKey
 	|| ( dev-perl/Term-ReadLine-Perl dev-perl/Term-ReadLine-Gnu )
 	virtual/perl-Data-Dumper
@@ -38,7 +39,6 @@ RDEPEND="sys-libs/ncurses
 	netpbm? ( media-libs/netpbm virtual/ffmpeg )
 	pdl2? ( dev-perl/Devel-REPL )
 	proj? ( <sci-libs/proj-4.8 )
-	opengl? ( dev-perl/OpenGL )
 	pgplot? ( dev-perl/PGPLOT )
 	plplot? ( sci-libs/plplot )"
 
@@ -71,6 +71,7 @@ src_prepare() {
 src_configure() {
 	sed -i \
 		-e '/USE_POGL/s/=>.*/=> 1,/' \
+		-e "/WITH_3D/s/=>.*/=> 1,/" \
 		-e "/HTML_DOCS/s/=>.*/=> $(use doc && echo 1 || echo 0),/" \
 		-e "/WITH_BADVAL/s/=>.*/=> $(use badval && echo 1|| echo 0),/" \
 		-e "/WITH_DEVEL_REPL/s/=>.*/=> $(use pdl2 && echo 1 || echo 0),/" \
@@ -78,7 +79,6 @@ src_configure() {
 		-e "/WITH_GSL/s/=>.*/=> $(use gsl && echo 1 || echo 0),/" \
 		-e "/WITH_GD/s/=>.*/=> $(use gd && echo 1 || echo 0),/" \
 		-e "/WITH_HDF/s/=>.*/=> $(use hdf && echo 1 || echo 0),/" \
-		-e "/WITH_3D/s/=>.*/=> $(use opengl && echo 1 || echo 0),/" \
 		-e "/WITH_MINUIT/s/=>.*/=> $(use fortran && echo 1|| echo 0),/" \
 		-e "/WITH_PGPLOT/s/=>.*/=> $(use pgplot && echo 1 || echo 0),/" \
 		-e "/WITH_PLPLOT/s/=>.*/=> $(use plplot && echo 1 || echo 0),/" \
@@ -96,7 +96,7 @@ src_test() {
 src_install() {
 	perl-module_src_install
 	cp Doc/{scantree.pl,mkhtmldoc.pl} \
-		"${D}"/${VENDOR_ARCH}/PDL/Doc/ || die
+		"${ED}"/${VENDOR_ARCH}/PDL/Doc/ || die
 }
 
 pkg_postinst() {

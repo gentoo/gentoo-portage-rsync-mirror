@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.61 2013/01/08 12:44:00 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.62 2013/01/22 17:20:52 ago Exp $
+
+  22 Jan 2013; Agostino Sarubbo <ago@gentoo.org> nullmailer-1.11-r1.ebuild:
+  Stable for x86, wrt bug #450820
 
   08 Jan 2013; Eray Aslan <eras@gentoo.org> files/init.d-nullmailer-r2:
   Do not provide mta

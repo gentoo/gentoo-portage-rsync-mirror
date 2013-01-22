@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/evtxtools/evtxtools-1.1.1.ebuild,v 1.2 2013/01/15 10:39:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/evtxtools/evtxtools-1.1.1.ebuild,v 1.3 2013/01/22 17:25:18 ago Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="http://computer.forensikblog.de/files/evtx/${MY_PN}-${PV}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-perl/DateTime
