@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/rst2pdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.25 2013/01/11 06:53:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.26 2013/01/22 21:55:43 floppym Exp $
+
+*rst2pdf-0.93-r1 (22 Jan 2013)
+
+  22 Jan 2013; Mike Gilbert <floppym@gentoo.org> +rst2pdf-0.93-r1.ebuild:
+  Convert to distutils-r1. Add dependency on dev-python/pdfrw for bug 453460 by
+  Malcolm Purvis.
 
 *rst2pdf-0.93 (11 Jan 2013)
 
