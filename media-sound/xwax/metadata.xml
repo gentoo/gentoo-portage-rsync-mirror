@@ -8,12 +8,8 @@
 	</maintainer>
 	<use>
 		<flag name='alsa'>Adds support for ALSA audio input/output.</flag>
-		<flag name='xwax_decoders_aac'>Sets runtime dependencies to support decoding AAC audio.</flag>
-		<flag name='xwax_decoders_cd'>Sets runtime dependencies to support decoding audio from a compact disc.</flag>
-		<flag name='xwax_decoders_flac'>Sets runtime dependencies to support decoding FLAC audio.</flag>
-		<flag name='xwax_decoders_mp3'>Sets runtime dependencies to support decoding MP3 audio.</flag>
-		<flag name='xwax_decoders_ogg'>Sets runtime dependencies to support decoding Ogg Vorbis audio.</flag>
-		<flag name='xwax_decoders_misc'>Sets runtime dependencies to support decoding "other" audio files.</flag>
+		<flag name='jack'>Adds support for audio input/output via the JACK Audio Connection Kit.</flag>
+		<flag name='oss'>Adds support for OSS (open sound system) audio input/output.</flag>
 		<flag name='cdda'>Sets runtime dependencies to support decoding audio from a compact disc.</flag>
 		<flag name='mp3'>Sets runtime dependencies to support decoding MP3 audio.</flag>
 		<flag name='fallback'>Sets runtime dependencies to support decoding "other" audio files.</flag>

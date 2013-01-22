@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-1.2.ebuild,v 1.5 2012/08/23 19:10:03 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-1.2.ebuild,v 1.6 2013/01/22 00:45:11 nixphoeni Exp $
 
 EAPI=4
 inherit toolchain-funcs
