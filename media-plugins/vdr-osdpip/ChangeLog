@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-osdpip
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/ChangeLog,v 1.16 2012/10/20 18:02:23 hd_brummy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/ChangeLog,v 1.17 2013/01/22 12:52:50 aballier Exp $
+
+  22 Jan 2013; Alexis Ballier <aballier@gentoo.org> vdr-osdpip-0.1.1-r1.ebuild,
+  +files/vdr-osdpip-0.1.1-ffmpeg-1.patch:
+  fix build with ffmpeg-1, part of bug #443196
 
 *vdr-osdpip-0.1.1-r1 (20 Oct 2012)
 

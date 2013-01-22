@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.1.1-r1.ebuild,v 1.1 2012/10/20 18:02:23 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.1.1-r1.ebuild,v 1.2 2013/01/22 12:52:50 aballier Exp $
 
 EAPI="4"
 
 VERSION="880" # every bump, new version
 
-inherit vdr-plugin-2 flag-o-matic
+inherit vdr-plugin-2 flag-o-matic eutils
 
 DESCRIPTION="VDR plugin: Show another channel in the OSD"
 HOMEPAGE="http://projects.vdr-developer.org/projects/plg-osdpip"
@@ -27,4 +27,6 @@ src_prepare() {
 
 	# UINT64_C is needed by ffmpeg headers
 	append-cxxflags -D__STDC_CONSTANT_MACROS
+
+	epatch "${FILESDIR}/${P}-ffmpeg-1.patch"
 }
