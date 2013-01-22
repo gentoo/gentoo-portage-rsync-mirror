@@ -1,61 +1,66 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.21.ebuild,v 1.11 2012/12/31 18:12:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.28.ebuild,v 1.1 2013/01/22 07:23:43 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
+VALA_MIN_API_VERSION="0.18"
+VALA_USE_DEPEND="vapigen"
 
-inherit autotools bash-completion-r1 eutils user systemd base
+inherit autotools bash-completion-r1 check-reqs eutils user systemd base udev vala
 
 DESCRIPTION="System service to accurately color manage input and output devices"
 HOMEPAGE="http://www.freedesktop.org/software/colord/"
 SRC_URI="http://www.freedesktop.org/software/colord/releases/${P}.tar.xz"
 
 LICENSE="GPL-2+"
-SLOT="0"
-KEYWORDS="~alpha amd64 arm ~ia64 ~mips ~ppc ~ppc64 x86 ~x86-fbsd"
-IUSE="doc examples gtk +gusb +introspection scanner +udev vala"
+SLOT="0/1" # subslot = libcolord soname version
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="doc examples extra-print-profiles +gusb +introspection systemd +udev vala"
+REQUIRED_USE="vala? ( introspection )"
 
 COMMON_DEPEND="
-	dev-db/sqlite:3
+	dev-db/sqlite:3=
 	>=dev-libs/glib-2.28.0:2
-	>=media-libs/lcms-2.2:2
+	>=media-libs/lcms-2.2:2=
 	>=sys-auth/polkit-0.103
-	gtk? (
-		x11-libs/gdk-pixbuf:2[introspection?]
-		x11-libs/gtk+:3[introspection?] )
 	gusb? ( >=dev-libs/libgusb-0.1.1 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.8 )
-	scanner? ( media-gfx/sane-backends )
-	udev? ( virtual/udev[gudev] )
-"
+	systemd? ( >=sys-apps/systemd-44 )
+	udev? ( virtual/udev:=[gudev] )"
 RDEPEND="${COMMON_DEPEND}
-	media-gfx/shared-color-profiles"
+	!media-gfx/shared-color-profiles"
 DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	>=dev-util/intltool-0.35
-	virtual/pkgconfig
 	>=sys-devel/gettext-0.17
+	virtual/pkgconfig
 	doc? (
 		app-text/docbook-xml-dtd:4.1.2
-		>=dev-util/gtk-doc-1.9
-	)
-	vala? ( dev-lang/vala:0.14[vapigen] )
-"
+		>=dev-util/gtk-doc-1.9 )
+	extra-print-profiles? ( media-gfx/argyllcms )
+	vala? ( $(vala_depend) )"
 
 # FIXME: needs pre-installed dbus service files
 RESTRICT="test"
 
-DOCS=(AUTHORS ChangeLog MAINTAINERS NEWS README TODO)
+# According to upstream comment in colord.spec.in, building the extra print
+# profiles requires >=4G of memory
+CHECKREQS_MEMORY="4G"
+
+pkg_pretend() {
+	use extra-print-profiles && check-reqs_pkg_pretend
+}
 
 pkg_setup() {
+	use extra-print-profiles && check-reqs_pkg_setup
 	enewgroup colord
 	enewuser colord -1 -1 /var/lib/colord colord
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.1.11-fix-automagic-vala.patch"
-	epatch "${FILESDIR}/${PN}-0.1.15-fix-automagic-libgusb.patch"
+	use vala && vala_src_prepare
 
+	epatch "${FILESDIR}/${PN}-0.1.26-fix-automagic-systemd.patch"
 	eautoreconf
 }
 
@@ -69,21 +74,24 @@ src_configure() {
 		--with-daemon-user=colord \
 		--localstatedir="${EPREFIX}"/var \
 		$(use_enable doc gtk-doc) \
-		$(use_enable gtk) \
+		$(use_enable extra-print-profiles print-profiles) \
+		$(usex extra-print-profiles COLPROF="$(type -P argyll-colprof)" "") \
 		$(use_enable gusb) \
 		$(use_enable gusb reverse) \
 		$(use_enable introspection) \
-		$(use_enable scanner sane) \
+		$(use_enable systemd libsystemd-login) \
 		$(use_enable udev gudev) \
+		--with-udevrulesdir="$(udev_get_udevdir)"/rules.d \
 		$(use_enable vala) \
-		$(systemd_with_unitdir) \
-		VAPIGEN=$(type -p vapigen-0.14)
+		"$(systemd_with_unitdir)"
+
 	# parallel make fails in doc/api
 	use doc && MAKEOPTS="${MAKEOPTS} -j1"
 }
 
 src_install() {
-	base_src_install
+	DOCS=(AUTHORS ChangeLog MAINTAINERS NEWS README TODO)
+	default
 
 	newbashcomp client/colormgr-completion.bash colormgr
 	rm -vr "${ED}etc/bash_completion.d"
@@ -98,5 +106,5 @@ src_install() {
 		doins examples/*.c
 	fi
 
-	find "${D}" -name "*.la" -delete || die
+	prune_libtool_files --modules
 }

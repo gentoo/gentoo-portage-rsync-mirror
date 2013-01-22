@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-truecombat/enemy-territory-truecombat-0.49b.ebuild,v 1.5 2009/10/08 16:43:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-truecombat/enemy-territory-truecombat-0.49b.ebuild,v 1.6 2013/01/22 07:04:56 tupone Exp $
 
 EAPI=2
 
@@ -25,6 +25,8 @@ IUSE="dedicated opengl"
 
 RDEPEND="x86? ( =virtual/libstdc++-3.3 )
 	amd64? ( app-emulation/emul-linux-x86-compat )"
+
+QA_PREBUILT="${INS_DIR:1}/${MOD_DIR}/*.so"
 
 src_unpack() {
 	unpack tcetest049.zip

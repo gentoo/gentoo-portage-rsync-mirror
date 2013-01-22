@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/deform
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/deform/ChangeLog,v 1.5 2012/05/20 20:03:20 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/deform/ChangeLog,v 1.6 2013/01/22 07:02:44 patrick Exp $
+
+*deform-0.9.6 (22 Jan 2013)
+
+  22 Jan 2013; Patrick Lauer <patrick@gentoo.org> +deform-0.9.6.ebuild:
+  Bump
 
   20 May 2012; Mike Gilbert <floppym@gentoo.org> deform-0.9.5.ebuild:
   Revert docs code.
@@ -25,4 +30,3 @@
   30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
   +deform-0.9.2.ebuild, +metadata.xml:
   Initial version. Based on ebuild by Jan Matějka (bug #368051).
-
