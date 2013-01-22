@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-3.0.6-r1.ebuild,v 1.1 2013/01/16 21:05:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-3.0.6-r1.ebuild,v 1.2 2013/01/22 18:44:49 jlec Exp $
 
 EAPI=4
 
@@ -12,14 +12,14 @@ DESCRIPTION="Resource manager and queuing system based on OpenPBS"
 HOMEPAGE="http://www.adaptivecomputing.com/products/torque.php"
 SRC_URI="http://www.adaptivecomputing.com/resources/downloads/${PN}/${P}.tar.gz"
 
-LICENSE="torque-2.5"
-
 SLOT="0"
+LICENSE="torque-2.5"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cpusets +crypt doc drmaa kernel_linux munge nvidia server static-libs +syslog threads tk"
 
 # ed is used by makedepend-sh
-DEPEND_COMMON="sys-libs/ncurses
+DEPEND_COMMON="
+	sys-libs/ncurses
 	sys-libs/readline
 	munge? ( sys-auth/munge )
 	nvidia? ( >=x11-drivers/nvidia-drivers-275 )
@@ -36,6 +36,10 @@ RDEPEND="${DEPEND_COMMON}
 	!crypt? ( net-misc/netkit-rsh )"
 
 DOCS=( Release_Notes )
+
+PATCHES=( "${FILESDIR}"/${P}-tcl8.6.patch )
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	PBS_SERVER_HOME="${PBS_SERVER_HOME:-/var/spool/torque}"

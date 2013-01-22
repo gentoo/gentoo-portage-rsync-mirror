@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/znc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.60 2012/11/21 18:11:31 wired Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.61 2013/01/22 18:56:25 wired Exp $
+
+*znc-1.0-r1 (22 Jan 2013)
+
+  22 Jan 2013; Alex Alexander <wired@gentoo.org> -znc-1.0.ebuild,
+  +znc-1.0-r1.ebuild, files/znc.confd:
+  changed default system-wide-config folder from /etc/znc to /var/lib/znc - znc
+  stores a lot of things in that folder - modules, logs, etc, making /var/lib a
+  better location for it.
 
 *znc-1.0 (21 Nov 2012)
 

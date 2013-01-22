@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20121222.ebuild,v 1.1 2013/01/14 18:40:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20121222.ebuild,v 1.2 2013/01/22 18:39:39 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -69,7 +69,7 @@ opengl_client() { use opengl || ( ! use dedicated && ! use sdl ) }
 src_unpack() {
 	if use lights ; then
 		unpack "${MY_LIGHTS}"
-		unzip -qo "${DISTDIR}"/id1.pk3 || die "unzip id1.pk3 failed"
+		unzip -qo "${DISTDIR}"/id1.pk3 || die
 		mv *.lit maps/ || die
 		mv ReadMe.txt rtlights.txt
 	fi
@@ -95,16 +95,16 @@ src_prepare() {
 		-e '/^LDFLAGS_DEBUG/s/$/ $(LDFLAGS)/' \
 		-e '/^LDFLAGS_RELEASE/s/$/ $(LDFLAGS)/' \
 		-e "s:strip:true:" \
-		makefile.inc || die "sed makefile.inc failed"
+		makefile.inc || die
 
 	if ! use cdsound ; then
 		# Turn the CD accesses off
 		sed -i \
 			-e "s:/dev/cdrom:/dev/null:" \
-			cd_linux.c || die "sed cd_linux.c failed"
+			cd_linux.c || die
 		sed -i \
 			-e 's:COM_CheckParm("-nocdaudio"):1:' \
-			cd_shared.c || die "sed cd_shared.c failed"
+			cd_shared.c || die
 	fi
 }
 
@@ -122,13 +122,13 @@ src_compile() {
 
 	# Only compile a maximum of 1 client
 	if use sdl ; then
-		emake ${opts} "sdl-${type}" || die "emake sdl-${type} failed"
+		emake ${opts} "sdl-${type}" || die
 	elif opengl_client ; then
-		emake ${opts} "cl-${type}" || die "emake cl-${type} failed"
+		emake ${opts} "cl-${type}" || die
 	fi
 
 	if use dedicated ; then
-		emake ${opts} "sv-${type}" || die "emake sv-${type} failed"
+		emake ${opts} "sv-${type}" || die
 	fi
 }
 
@@ -139,8 +139,8 @@ src_install() {
 		use sdl && type=sdl
 
 		# darkplaces executable is needed, even just for demo
-		newgamesbin "${PN}-${type}" ${PN} || die "newgamesbin client failed"
-		newicon darkplaces72x72.png ${PN}.png || die "newicon failed"
+		newgamesbin "${PN}-${type}" ${PN} || die
+		newicon darkplaces72x72.png ${PN}.png || die
 
 		if use demo ; then
 			# Install command-line for demo, even if not desktop entry
@@ -156,14 +156,14 @@ src_install() {
 	fi
 
 	if use dedicated ; then
-		newgamesbin ${PN}-dedicated ${PN}-ded || die "newgamesbin ded failed"
+		newgamesbin ${PN}-dedicated ${PN}-ded || die
 	fi
 
 	dodoc *.txt ChangeLog todo "${WORKDIR}"/*.txt
 
 	if use lights ; then
 		insinto "${dir}"/id1
-		doins -r "${WORKDIR}"/{cubemaps,maps} || die "doins cubemaps maps failed"
+		doins -r "${WORKDIR}"/{cubemaps,maps} || die
 		if use demo ; then
 			# Set up symlinks, for the demo levels to include the lights
 			local d

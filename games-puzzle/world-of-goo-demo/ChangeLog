@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/world-of-goo-demo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo-demo/ChangeLog,v 1.6 2012/06/19 08:10:11 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo-demo/ChangeLog,v 1.7 2013/01/22 18:45:04 mr_bones_ Exp $
+
+  22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -world-of-goo-demo-1.41.ebuild:
+  old
 
   19 Jun 2012; Jeff Horelick <jdhore@gentoo.org>
   world-of-goo-demo-1.41-r1.ebuild:
@@ -31,4 +35,3 @@
   15 Feb 2009; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
   +world-of-goo-demo-1.40.ebuild:
   Initial ebuild #258960 by Vladimir Berezhnoy.
-

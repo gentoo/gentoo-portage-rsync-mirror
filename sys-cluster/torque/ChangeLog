@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.147 2013/01/16 21:05:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.148 2013/01/22 18:44:49 jlec Exp $
+
+  22 Jan 2013; Justin Lecher <jlec@gentoo.org> torque-3.0.6-r1.ebuild,
+  +files/torque-3.0.6-tcl8.6.patch:
+  Add fix for dev-lang/tcl-8.6, #453154
 
 *torque-3.0.6-r1 (16 Jan 2013)
 *torque-2.5.9-r1 (16 Jan 2013)

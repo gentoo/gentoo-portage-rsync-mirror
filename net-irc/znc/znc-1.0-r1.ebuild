@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-1.0.ebuild,v 1.1 2012/11/21 18:11:31 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-1.0-r1.ebuild,v 1.1 2013/01/22 18:56:25 wired Exp $
 
 EAPI=5
 
@@ -38,6 +38,8 @@ S=${WORKDIR}/${PN}-${MY_PV}
 PATCHES=(
 	"${FILESDIR}/${P}-systemwideconfig.patch"
 )
+
+CONFDIR="/var/lib/znc"
 
 pkg_setup() {
 	if use python; then
@@ -81,29 +83,38 @@ pkg_postinst() {
 		elog
 		elog "An init-script was installed in /etc/init.d"
 		elog "A config file was installed in /etc/conf.d"
-		if [[ ! -d "${EROOT}"/etc/znc ]]; then
+		if [[ ! -d "${EROOT}${CONFDIR}" ]]; then
 			elog
 			elog "Run 'emerge --config znc' to configure ZNC"
 			elog "as a system-wide daemon."
 			elog
 			elog "If you are using SSL you should also run:"
-			elog "  znc --system-wide-config-as znc --makepem -d /etc/znc"
+			elog "  znc --system-wide-config-as znc --makepem -d ${CONFDIR}"
 			elog "as root"
 			elog
 			elog "If migrating from a user-based install"
 			elog "you can use your existing config files:"
-			elog "  mkdir /etc/znc"
-			elog "  mv /home/\$USER/.znc/* /etc/znc/"
+			elog "  mkdir ${CONFDIR}"
+			elog "  mv /home/\$USER/.znc/* ${CONFDIR}"
 			elog "  rm -rf /home/\$USER/.znc"
-			elog "  chown -R znc:znc /etc/znc"
+			elog "  chown -R znc:znc ${CONFDIR}"
 			elog
 			elog "If you already have znc set up and want take advantage of the"
 			elog "init script but skip of all the above, you can also edit"
 			elog "  /etc/conf.d/znc"
 			elog "and adjust the variables to your current znc user and config"
 			elog "location."
+			if [[ -d "${EROOT}"/etc/znc ]]; then
+				elog
+				ewarn "/etc/znc exists on your system."
+				ewarn "Due to the nature of the contents of that folder,"
+				ewarn "we have changed the default configuration to use"
+				ewarn "	/var/lib/znc"
+				ewarn "please move /etc/znc to /var/lib/znc"
+				ewarn "or adjust /etc/conf.d/znc"
+			fi
 		else
-			elog "Existing config detected in /etc/znc"
+			elog "Existing config detected in ${CONFDIR}"
 			elog "You're good to go :)"
 		fi
 		elog
@@ -111,14 +122,14 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	if use daemon && ! [[ -d "${EROOT}"/etc/znc ]]; then
+	if use daemon && ! [[ -d "${EROOT}${CONFDIR}" ]]; then
 		einfo "Press ENTER to interactively create a new configuration file for znc."
 		einfo "To abort, press Control-C"
 		read
-		mkdir -p "${EROOT}"/etc/znc || die
-		chown -R ${PN}:${PN} "${EROOT}"/etc/znc ||
+		mkdir -p "${EROOT}${CONFDIR}" || die
+		chown -R ${PN}:${PN} "${EROOT}${CONFDIR}" ||
 			die "Setting permissions failed"
-		"${EROOT}"/usr/bin/znc --system-wide-config-as znc -c -r -d "${EROOT}"/etc/znc ||
+		"${EROOT}"/usr/bin/znc --system-wide-config-as znc -c -r -d "${EROOT}${CONFDIR}" ||
 			die "Config failed"
 		echo
 		einfo "To start znc, run '/etc/init.d/znc start'"
@@ -126,7 +137,7 @@ pkg_config() {
 		einfo "  rc-update add znc default"
 	else
 		if use daemon; then
-			ewarn "/etc/znc already exists, aborting to avoid damaging"
+			ewarn "${CONFDIR} already exists, aborting to avoid damaging"
 			ewarn "any existing configuration. If you are sure you want"
 			ewarn "to generate a new configuration, remove the folder"
 			ewarn "and try again."

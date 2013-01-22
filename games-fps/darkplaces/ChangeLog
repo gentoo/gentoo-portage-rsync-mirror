@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/darkplaces
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/ChangeLog,v 1.16 2013/01/14 18:40:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/ChangeLog,v 1.18 2013/01/22 18:39:39 mr_bones_ Exp $
+
+  22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  darkplaces-20121222.ebuild:
+  declutter
+
+  22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -darkplaces-20100408.ebuild:
+  old
 
 *darkplaces-20121222 (14 Jan 2013)
 

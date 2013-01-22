@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/mercator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.29 2013/01/13 11:38:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.30 2013/01/22 18:42:57 mr_bones_ Exp $
+
+  22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/mercator-0.3.0-gentoo.patch, -mercator-0.3.0.ebuild,
+  -mercator-0.3.1.ebuild:
+  old
 
   13 Jan 2013; Agostino Sarubbo <ago@gentoo.org> mercator-0.3.2.ebuild:
   Stable for x86, wrt bug #449890
