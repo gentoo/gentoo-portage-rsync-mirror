@@ -1,0 +1,29 @@
+ CMakeLists.txt | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 141301f..78578de 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -612,7 +612,7 @@ ENDIF (OLDRENDERLIBLOST OR WANT_QTARTHUR OR RENDER_LIB STREQUAL "QTARTHUR" OR NO
+ #>>Render Library
+ 
+ #<<CUPS
+-IF(NOT WIN32)
++IF(NOT WIN32 AND WANT_CUPS)
+   IF (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} LESS 2.5)
+     SET(Cups_DIR ${CMAKE_MODULE_PATH})
+   ENDIF (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION} LESS 2.5)
+@@ -621,10 +621,10 @@ IF(NOT WIN32)
+     SET(HAVE_CUPS 1)
+     MESSAGE("CUPS Library Found OK")
+   ENDIF(CUPS_FOUND)
+-ELSE(NOT WIN32)
++ELSE(NOT WIN32 AND WANT_CUPS)
+   # Windows doesn't use CUPS
+   SET(CUPS_INCLUDE_DIR)
+-ENDIF(NOT WIN32)
++ENDIF(NOT WIN32 AND WANT_CUPS)
+ #>>CUPS
+ 
+ #<<LibXML2

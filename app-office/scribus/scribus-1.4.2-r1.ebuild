@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.2-r1.ebuild,v 1.1 2013/01/22 07:54:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.2-r1.ebuild,v 1.2 2013/01/22 08:40:02 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE=tk
 
 inherit cmake-utils fdo-mime multilib python-single-r1
 
@@ -15,13 +16,14 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="cairo debug examples hunspell +minimal +pdf spell templates"
+IUSE="aspell cairo +cups debug examples hunspell +minimal +pdf templates"
 
 # a=$(ls resources/translations/po/scribus.*ts | sed -e 's:\.: :g' | awk '{print $2}'); echo ${a}
 IUSE_LINGUAS=" af ar bg br ca cs_CZ cy da_DK de de_1901 de_CH el en_AU en_GB en_US es_ES et eu fi fr gl hu id it ja ko lt_LT nb_NO nl pl_PL pt pt_BR ru sa sk_SK sl sq sr sv th_TH tr uk zh_CN zh_TW"
 IUSE+=" ${IUSE_LINGUAS// / linguas_}"
 
 COMMON_DEPEND="
+	dev-python/imaging[tk,${PYTHON_USEDEP}]
 	dev-libs/boost
 	dev-libs/hyphen
 	dev-libs/libxml2
@@ -36,15 +38,18 @@ COMMON_DEPEND="
 	x11-libs/qt-gui:4
 	virtual/jpeg
 	cairo? ( x11-libs/cairo[X,svg] )
+	cups? ( net-print/cups )
 	pdf? ( app-text/podofo )
-	spell? ( app-text/aspell )
+	aspell? ( app-text/aspell )
 	hunspell? ( app-text/hunspell )"
 RDEPEND="${COMMON_DEPEND}
 	app-text/ghostscript-gpl"
-DEPEND="${COMMON_DEPEND}"
+DEPEND="${COMMON_DEPEND}
+	virtual/pkgconfig"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-docs.patch
+	"${FILESDIR}"/${P}-cups.patch
 	"${FILESDIR}"/${PN}-1.4.0-minizip.patch
 	)
 
@@ -85,9 +90,10 @@ src_configure() {
 		-DWANT_QT3SUPPORT=OFF
 		-DGENTOOVERSION=${PVR}
 		-DWANT_GUI_LANG=${langs#,}
-		$(cmake-utils_use_has spell ASPELL)
+		$(cmake-utils_use_has aspell ASPELL)
 		$(cmake-utils_use_has pdf PODOFO)
 		$(cmake-utils_use_want cairo)
+		$(cmake-utils_use_want cups CUPS)
 		$(cmake-utils_use_want debug DEBUG)
 		$(cmake-utils_use_want minimal NOHEADERINSTALL)
 		$(cmake-utils_use_want hunspell HUNSPELL)

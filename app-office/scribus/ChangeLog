@@ -1,6 +1,11 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.170 2013/01/22 07:54:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.171 2013/01/22 08:40:02 jlec Exp $
+
+  22 Jan 2013; Justin Lecher <jlec@gentoo.org> scribus-1.4.2-r1.ebuild,
+  +files/scribus-1.4.2-cups.patch, metadata.xml:
+  Rename USE spell to aspell to better fit its meaning; handle cups support not
+  automagically; add missing deps
 
 *scribus-1.4.2-r1 (22 Jan 2013)
 

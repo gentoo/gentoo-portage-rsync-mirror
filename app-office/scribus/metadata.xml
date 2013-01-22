@@ -13,6 +13,7 @@
   <use>
     <flag name="minimal">Don't install headers (only required for e.g. plug-in developers)</flag>
     <flag name="templates">Document tamplates</flag>
+    <flag name="aspell">Enable support for spell checking with <pkg>app-text/aspell</pkg></flag>
     <flag name="hunspell">Enable support for spell checking with <pkg>app-text/hunspell</pkg></flag>
     <flag name="linguas_cs_CZ">Language support for cs_CZ</flag>
     <flag name="linguas_da_DK">Language support for da_DK</flag>

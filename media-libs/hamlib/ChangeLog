@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/hamlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.77 2013/01/20 21:48:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.78 2013/01/22 08:39:13 tomjbe Exp $
+
+  22 Jan 2013; Thomas Beierlein <tomjbe@gentoo.org> hamlib-1.2.15.3.ebuild,
+  +files/hamlib-1.2.15.3-configure.diff, -files/hamlib-bindings.diff:
+  use CXXFLAGS for building c++ components (bug #453240). Thanks ago
 
   20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> hamlib-1.2.15.3.ebuild:
   Stable for x86, wrt bug #452718
