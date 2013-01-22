@@ -11,7 +11,5 @@
 			manager GUI <pkg>app-admin/packagekit</pkg></flag>
 		<flag name="short-touchpad-timeout">Change the touchpad timeout so that 
 			it's effective for fast typists</flag>
-		<flag name="systemd">Use <pkg>sys-apps/systemd</pkg> instead of
-			<pkg>sys-auth/consolekit</pkg> for session tracking</flag>
 	</use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-frippery/gnome-shell-frippery-0.4.1.ebuild,v 1.1 2012/09/12 03:44:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-frippery/gnome-shell-frippery-0.4.1.ebuild,v 1.2 2013/01/22 08:25:54 tetromino Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ DESCRIPTION="Unofficial extension pack providing GNOME 2-like features for GNOME
 HOMEPAGE="http://intgat.tigress.co.uk/rmy/extensions/index.html"
 SRC_URI="http://intgat.tigress.co.uk/rmy/extensions/${P}.tgz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

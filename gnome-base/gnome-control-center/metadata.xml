@@ -13,7 +13,5 @@
 			<pkg>app-i18n/ibus</pkg></flag>
 		<flag name="socialweb">Add support for desktop background images from
 			Flickr using <pkg>net-libs/libsocialweb</pkg></flag>
-		<flag name="systemd">Use <pkg>sys-apps/systemd</pkg> instead of
-			<pkg>sys-auth/consolekit</pkg> for session tracking</flag>
 	</use>
 </pkgmetadata>
