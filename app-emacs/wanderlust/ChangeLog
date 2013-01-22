@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/wanderlust
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.88 2010/12/26 12:37:26 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.89 2013/01/21 23:02:01 ulm Exp $
+
+*wanderlust-2.15.9_pre20120923 (21 Jan 2013)
+
+  21 Jan 2013; Ulrich Müller <ulm@gentoo.org> wanderlust-2.14.0-r6.ebuild,
+  -wanderlust-2.15.9_pre20100125.ebuild, wanderlust-2.15.9_pre20101102.ebuild,
+  +wanderlust-2.15.9_pre20120923.ebuild:
+  New snapshot, bug 447852. Update HOMEPAGE. Specify LICENSE more precisely.
+  Remove intermediate version.
 
 *wanderlust-2.15.9_pre20101102 (26 Dec 2010)
 

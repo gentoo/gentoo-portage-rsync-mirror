@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.15.9_pre20101102.ebuild,v 1.1 2010/12/26 12:37:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.15.9_pre20101102.ebuild,v 1.2 2013/01/21 23:02:01 ulm Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ DESCRIPTION="Yet Another Message Interface on Emacsen"
 HOMEPAGE="http://www.gohome.org/wl/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="bbdb ssl linguas_ja"

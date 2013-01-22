@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-taglib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-taglib/ChangeLog,v 1.90 2012/12/03 23:49:52 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-taglib/ChangeLog,v 1.91 2013/01/21 23:21:39 eva Exp $
+
+*gst-plugins-taglib-1.0.5 (21 Jan 2013)
+
+  21 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-taglib-1.0.5.ebuild:
+  Version bump.
 
 *gst-plugins-taglib-1.0.3 (03 Dec 2012)
 
