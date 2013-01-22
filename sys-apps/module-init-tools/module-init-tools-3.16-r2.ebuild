@@ -1,10 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.16-r2.ebuild,v 1.3 2012/11/24 21:07:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.16-r2.ebuild,v 1.4 2013/01/22 11:21:07 ssuominen Exp $
 
+EAPI=4
 inherit eutils flag-o-matic toolchain-funcs
 
-DESCRIPTION="tools for managing linux kernel modules"
+DESCRIPTION="legacy tools for managing linux kernel modules"
 HOMEPAGE="http://modules.wiki.kernel.org/"
 SRC_URI="mirror://kernel/linux/utils/kernel/module-init-tools/${P}.tar.bz2
 	mirror://gentoo/${P}-man.tar.bz2"
@@ -21,14 +22,12 @@ RDEPEND="${DEPEND}
 	!sys-apps/kmod
 	!sys-apps/modutils"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	touch *.5 *.8 # dont regen manpages
 	sed -i -e "/^AR\>/s:=.*:=$(tc-getAR):" Makefile.in #440274
 }
 
-src_compile() {
+src_configure() {
 	mkdir build && cd build #290207
 	use static && append-ldflags -static
 	ECONF_SOURCE=.. \
@@ -37,7 +36,6 @@ src_compile() {
 		--enable-zlib \
 		--enable-zlib-dynamic \
 		--disable-static-utils
-	emake || die
 }
 
 src_test() {
@@ -46,20 +44,20 @@ src_test() {
 }
 
 src_install() {
-	emake -C build install DESTDIR="${D}" || die
+	emake -C build install DESTDIR="${D}"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	into /
-	newsbin "${FILESDIR}"/update-modules-3.5.sh update-modules || die
-	doman "${FILESDIR}"/update-modules.8 || die
+	newsbin "${FILESDIR}"/update-modules-3.5.sh update-modules
+	doman "${FILESDIR}"/update-modules.8
 
 	cat <<-EOF > "${T}"/usb-load-ehci-first.conf
 	softdep uhci_hcd pre: ehci_hcd
 	softdep ohci_hcd pre: ehci_hcd
 	EOF
 
-	insinto /etc/modprobe.d
-	doins "${T}"/usb-load-ehci-first.conf || die #260139
+	insinto /lib/modprobe.d
+	doins "${T}"/usb-load-ehci-first.conf #260139
 }
 
 pkg_postinst() {

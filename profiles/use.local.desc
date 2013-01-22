@@ -3002,6 +3002,7 @@ media-sound/jalv:gtkmm - Adds support for dev-cpp/gtkmm: C++ interface for GTK+2
 media-sound/kid3:acoustid - Enable support for acoustic fingerprinting plugin using (media-libs/chromaprint)
 media-sound/kwave:phonon - Enable playback via Phonon
 media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED**
+media-sound/leechcraft-lmp:graffiti - Build media tags editor plugin
 media-sound/leechcraft-lmp:mp3tunes - Build plugin for supporting the mp3tunes.com music locker service.
 media-sound/leechcraft-lmp:mpris - Enable MPRIS support
 media-sound/lmms:fluidsynth - Enables Fluidsynth MIDI software synthesis plugin.
