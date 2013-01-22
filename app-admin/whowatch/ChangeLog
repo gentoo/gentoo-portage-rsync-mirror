@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/whowatch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.46 2013/01/21 14:08:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.48 2013/01/22 17:45:19 jer Exp $
+
+  22 Jan 2013; Jeroen Roovers <jer@gentoo.org> -whowatch-1.8.3.ebuild:
+  Old.
+
+  22 Jan 2013; Agostino Sarubbo <ago@gentoo.org> whowatch-1.8.3-r1.ebuild:
+  Stable for x86, wrt bug #452626
 
   21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> whowatch-1.8.3-r1.ebuild:
   Stable for ppc, wrt bug #452626

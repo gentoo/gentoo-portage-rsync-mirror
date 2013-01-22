@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libfaketime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfaketime/ChangeLog,v 1.5 2013/01/19 07:38:14 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libfaketime/ChangeLog,v 1.6 2013/01/22 17:32:41 ago Exp $
+
+  22 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libfaketime-0.9.1.ebuild:
+  Stable for x86, wrt bug #452834
 
   19 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> libfaketime-0.9.1.ebuild:
   Stable on amd64, wrt bug #452834
@@ -27,4 +30,3 @@
   15 Jan 2012; Tim Harder <radhermit@gentoo.org> +libfaketime-0.9.ebuild,
   +files/libfaketime-0.9-make.patch, +metadata.xml:
   Initial import from sunrise overlay (bug #185753).
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/abcm2ps-6.6.22.ebuild,v 1.2 2013/01/15 10:40:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/abcm2ps-6.6.22.ebuild,v 1.3 2013/01/22 17:33:09 ago Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ SRC_URI="http://moinejf.free.fr/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="examples pango"
 
 RDEPEND="pango? ( x11-libs/pango media-libs/freetype:2 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.9-r1.ebuild,v 1.3 2013/01/21 18:51:19 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.9-r2.ebuild,v 1.1 2013/01/22 17:50:30 polynomial-c Exp $
 
 EAPI="5"
 
@@ -26,7 +26,9 @@ pkg_setup() {
 }
 
 src_configure() {
-	SPOOL_DIR="/var/spool/cron/crontabs" econf \
+	SPOOL_DIR="/var/spool/cron/crontabs" \
+	ANACRON_SPOOL_DIR="/var/spool/anacron" \
+	econf \
 		$(use_with inotify) \
 		$(use_with pam) \
 		$(use_with selinux) \
