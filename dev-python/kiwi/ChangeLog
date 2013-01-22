@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kiwi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.21 2012/12/11 17:06:30 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.22 2013/01/22 06:02:43 patrick Exp $
+
+*kiwi-1.9.36.2 (22 Jan 2013)
+
+  22 Jan 2013; Patrick Lauer <patrick@gentoo.org> +kiwi-1.9.36.2.ebuild:
+  Bump
 
   11 Dec 2012; Agostino Sarubbo <ago@gentoo.org> kiwi-1.9.36.ebuild:
   Add ~ppc, wrt bug #416677
