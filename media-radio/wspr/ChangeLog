@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/wspr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/ChangeLog,v 1.5 2012/10/19 10:43:50 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/ChangeLog,v 1.6 2013/01/22 19:07:31 jlec Exp $
+
+  22 Jan 2013; Justin Lecher <jlec@gentoo.org> wspr-2.00.ebuild, metadata.xml:
+  Fix SLOT for pmw
 
   19 Oct 2012; Justin Lecher <jlec@gentoo.org> wspr-2.00.ebuild, metadata.xml:
   Remove virtual/fortran and always call fortran-2_pkg_setup as intend by the

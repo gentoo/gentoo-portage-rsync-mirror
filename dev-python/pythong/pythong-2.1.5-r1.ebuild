@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.5-r1.ebuild,v 1.6 2012/02/22 07:34:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.5-r1.ebuild,v 1.7 2013/01/22 19:06:03 jlec Exp $
 
 EAPI="3"
 PYTHON_USE_WITH="tk"
@@ -26,7 +26,7 @@ IUSE="doc"
 S="${WORKDIR}/${MY_PN}-${MY_PV}"
 
 RDEPEND=">=dev-lang/tk-8.3.4
-	>=dev-python/pmw-1.2"
+	>=dev-python/pmw-1.2:0"
 DEPEND="${RDEPEND}"
 
 src_prepare() {

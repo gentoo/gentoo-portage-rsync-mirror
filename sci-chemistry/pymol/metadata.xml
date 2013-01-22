@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci-chemistry</herd>
-	<maintainer>
-		<email>jlec@gentoo.org</email>
-	</maintainer>
-	<use>
-		<flag name="apbs">Install the apbs plugin</flag>
-		<flag name="numpy">Compile numpy support</flag>
-		<flag name="vmd">Enable vmd module for trajectories</flag>
-		<flag name="web">Install Pymodule needed for web app support</flag>
-	</use>
+  <herd>sci-chemistry</herd>
+  <maintainer>
+    <email>jlec@gentoo.org</email>
+  </maintainer>
+  <use>
+    <flag name="apbs">Install the apbs plugin</flag>
+    <flag name="numpy">Compile numpy support</flag>
+    <flag name="vmd">Enable vmd module for trajectories</flag>
+    <flag name="web">Install Pymodule needed for web app support</flag>
+  </use>
 </pkgmetadata>

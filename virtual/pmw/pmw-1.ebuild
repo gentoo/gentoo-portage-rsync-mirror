@@ -1,0 +1,26 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/pmw/pmw-1.ebuild,v 1.1 2013/01/22 19:23:53 jlec Exp $
+
+EAPI=5
+
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
+
+inherit python-r1
+
+DESCRIPTION="A virtual for pmw, for Python 2 & 3"
+HOMEPAGE=""
+SRC_URI=""
+
+LICENSE=""
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
+IUSE=""
+
+RDEPEND="
+	$(python_gen_cond_dep \
+		"dev-python/pmw:py2[$(python_gen_usedep python2*)]" \
+		python2*)
+	$(python_gen_cond_dep \
+		"dev-python/pmw:py3[$(python_gen_usedep python3*)]" \
+		python3*)"

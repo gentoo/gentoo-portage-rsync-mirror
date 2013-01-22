@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.181 2013/01/21 13:41:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.182 2013/01/22 19:04:15 jer Exp $
+
+  22 Jan 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask USE=test for dev-python/pyquery (bug #452764).
 
   21 Jan 2013; Michał Górny <mgorny@gentoo.org> use.mask:
   Remove the pypy/jython mask. It is masked in base profile now.

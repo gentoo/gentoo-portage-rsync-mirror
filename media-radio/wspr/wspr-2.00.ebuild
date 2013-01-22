@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/wspr-2.00.ebuild,v 1.5 2012/10/19 10:43:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/wspr-2.00.ebuild,v 1.6 2013/01/22 19:07:31 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,7 +22,7 @@ IUSE=""
 RDEPEND="
 	dev-python/imaging[tk]
 	dev-python/numpy
-	dev-python/pmw
+	dev-python/pmw:0
 	sci-libs/fftw:3.0
 	media-libs/hamlib
 	media-libs/portaudio

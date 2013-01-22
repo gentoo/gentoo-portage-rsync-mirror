@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-9999.ebuild,v 1.2 2013/01/21 20:02:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-9999.ebuild,v 1.3 2013/01/22 19:01:19 hwoarang Exp $
 
 EAPI=5
 
@@ -29,5 +29,11 @@ pkg_postinst() {
 	elog "In order to browse the Gentoo Development Guide in"
 	elog "offline mode, point your browser to the following url:"
 	elog "/usr/share/doc/devmanual-9999/html/index.html"
+	elog
+	elog "The offline version of the devmanual does not include the"
+	elog "documentation for the eclasses. If you need it, then emerge"
+	elog "the following package:"
+	elog
+	elog "app-portage/eclass-manpages"
 	elog
 }

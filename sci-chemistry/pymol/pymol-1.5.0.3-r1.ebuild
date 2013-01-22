@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.5.0.3-r1.ebuild,v 1.9 2012/10/15 17:22:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.5.0.3-r1.ebuild,v 1.10 2013/01/22 19:10:13 jlec Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ IUSE="apbs numpy vmd web"
 
 DEPEND="
 	dev-python/numpy
-	dev-python/pmw
+	dev-python/pmw:0
 	media-libs/freetype:2
 	media-libs/glew
 	media-libs/libpng
