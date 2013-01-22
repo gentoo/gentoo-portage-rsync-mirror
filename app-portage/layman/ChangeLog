@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.176 2013/01/21 15:57:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.177 2013/01/22 15:48:01 jer Exp $
+
+  22 Jan 2013; Jeroen Roovers <jer@gentoo.org> layman-2.0.0.ebuild:
+  Stable for HPPA (bug #451200).
 
   21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> layman-2.0.0.ebuild:
   Stable for sparc, wrt bug #451200
