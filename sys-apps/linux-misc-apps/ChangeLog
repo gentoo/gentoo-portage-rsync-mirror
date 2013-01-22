@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/linux-misc-apps
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-misc-apps/ChangeLog,v 1.3 2012/11/19 10:23:08 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-misc-apps/ChangeLog,v 1.4 2013/01/22 10:59:16 ssuominen Exp $
+
+  22 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -linux-misc-apps-3.1.ebuild, -linux-misc-apps-3.6.ebuild:
+  old
 
 *linux-misc-apps-3.6-r1 (19 Nov 2012)
 
