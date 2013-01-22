@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.67 2013/01/20 15:39:10 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.68 2013/01/22 16:51:12 aidecoe Exp $
+
+  22 Jan 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.15.ebuild,
+  +files/0.15-0001-lib-Makefile.local-depend-on-libs-we-a.patch:
+  Patch fixing parallel build. It is already accepted by upstream.
+  Fixes bug #453314.
 
   20 Jan 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.15.ebuild:
   Fix dependency on emacs.

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7394 2013/01/21 22:37:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7395 2013/01/22 16:46:48 sera Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jan 2013; Ralph Sennhauser <sera@gentoo.org> package.mask:
+  Mask >=dev-java/gcj-jdk-4.7.0 while coresponding gcc is still masked
 
   21 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Lastrite coldplug, hotplug, hotplug-base and 2.4 kernel module ezusb2131 wrt

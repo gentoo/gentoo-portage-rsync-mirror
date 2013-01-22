@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.15.ebuild,v 1.2 2013/01/20 15:39:10 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.15.ebuild,v 1.3 2013/01/22 16:51:12 aidecoe Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="python? 2:2.6 3:3.2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[45] 3.1"
 
-inherit elisp-common pax-utils distutils
+inherit elisp-common eutils pax-utils distutils
 
 DESCRIPTION="Thread-based e-mail indexer, supporting quick search and tagging"
 HOMEPAGE="http://notmuchmail.org/"
@@ -51,6 +51,9 @@ RDEPEND="${CDEPEND}
 	zsh-completion? ( app-shells/zsh )
 	"
 
+PATCHES=(
+	"${FILESDIR}/${PV}-0001-lib-Makefile.local-depend-on-libs-we-a.patch"
+	)
 DOCS=( AUTHORS NEWS README )
 SITEFILE="50${PN}-gentoo.el"
 SITEFILE_PICK="60${PN}-pick-gentoo.el"
@@ -73,6 +76,11 @@ pkg_setup() {
 }
 
 src_prepare() {
+	local p
+	for p in "${PATCHES[@]}"; do
+		epatch "${p}"
+	done
+
 	default
 	bindings python distutils_src_prepare
 

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14399 2013/01/21 22:42:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14400 2013/01/22 16:46:48 sera Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -751,6 +751,7 @@ sci-chemistry/webmo
 # Masked for testing
 >=sys-devel/gcc-4.7.0
 >=sys-devel/kgcc64-4.7.0
+>=dev-java/gcj-jdk-4.7.0
 
 # Christian Faulhammer <fauli@gentoo.org> (12 Mar 2011)
 # Mask for testing

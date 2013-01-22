@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/icalendar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.21 2013/01/21 09:28:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.22 2013/01/22 16:58:43 idella4 Exp $
+
+*icalendar-3.2-r1 (22 Jan 2013)
+
+  22 Jan 2013; Ian Delaney <idella4@gentoo.org> +icalendar-3.2-r1.ebuild:
+  revbump, migrated to -r1
 
 *icalendar-3.2 (21 Jan 2013)
 
