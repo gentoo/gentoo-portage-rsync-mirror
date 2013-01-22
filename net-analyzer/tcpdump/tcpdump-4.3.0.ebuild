@@ -1,9 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.3.0.ebuild,v 1.8 2012/09/30 16:39:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.3.0.ebuild,v 1.9 2013/01/22 05:47:34 vapier Exp $
 
 EAPI="4"
-inherit flag-o-matic user
+
+AUTOTOOLS_AUTO_DEPEND="no" # Only cross-compiling
+inherit flag-o-matic user autotools eutils toolchain-funcs
 
 DESCRIPTION="A Tool for network monitoring and data acquisition"
 HOMEPAGE="http://www.tcpdump.org/"
@@ -42,6 +44,13 @@ pkg_setup() {
 	fi
 	enewgroup tcpdump
 	enewuser tcpdump -1 -1 -1 tcpdump
+}
+
+src_prepare() {
+	if tc-is-cross-compiler ; then
+		epatch "${FILESDIR}"/${P}-ssl-detect.patch
+		eautoreconf
+	fi
 }
 
 src_configure() {

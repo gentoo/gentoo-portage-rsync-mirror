@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsmi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.39 2012/09/03 19:51:16 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.40 2013/01/22 05:47:42 vapier Exp $
+
+  22 Jan 2013; Mike Frysinger <vapier@gentoo.org> libsmi-0.4.8-r1.ebuild:
+  Mark s390/sh stable.
 
   03 Sep 2012; Anthony G. Basile <blueness@gentoo.org> libsmi-0.4.8-r1.ebuild:
   Stable arm, bug #433263
@@ -135,4 +138,3 @@
 
   20 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> libsmi-0.4.2.ebuild:
   initial ebuild, by Barry Myles <gentoo@smyles.plus.com>, updated by myself.
-
