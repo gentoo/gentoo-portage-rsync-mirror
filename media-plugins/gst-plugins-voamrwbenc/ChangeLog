@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-voamrwbenc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-voamrwbenc/ChangeLog,v 1.1 2012/12/05 08:04:30 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-voamrwbenc/ChangeLog,v 1.2 2013/01/22 22:32:37 eva Exp $
+
+*gst-plugins-voamrwbenc-1.0.5 (22 Jan 2013)
+
+  22 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-voamrwbenc-1.0.5.ebuild:
+  Version bump.
 
 *gst-plugins-voamrwbenc-1.0.3 (05 Dec 2012)
 
