@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/colorcode
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/colorcode/ChangeLog,v 1.9 2011/09/04 17:34:57 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/colorcode/ChangeLog,v 1.10 2013/01/22 21:01:46 mr_bones_ Exp $
+
+  22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -colorcode-0.6.1.ebuild:
+  old
 
   04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> colorcode-0.7.2.ebuild:
   x86 stable wrt bug #380181
@@ -41,4 +44,3 @@
   31 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
   +colorcode-0.5.5.ebuild, +metadata.xml:
   Initial commit - ebuild submitted by ssuominen
-

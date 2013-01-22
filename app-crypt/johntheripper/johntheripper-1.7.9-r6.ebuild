@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r6.ebuild,v 1.6 2013/01/20 13:10:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r6.ebuild,v 1.7 2013/01/22 21:09:06 zerochaos Exp $
 
 EAPI="4"
 
@@ -141,6 +141,8 @@ src_prepare() {
 
 		# fix typo in jumbo patch
 		sed -i 's:All15:All5:' run/john.conf || die
+		# fix compile on ppc (only needed for jumbo-7)
+		epatch "${FILESDIR}/${P}-ppc-compile-fix.patch"
 	fi
 
 	cd src

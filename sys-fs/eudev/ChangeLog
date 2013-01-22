@@ -1,6 +1,25 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.13 2013/01/21 21:25:44 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.16 2013/01/22 21:29:06 axs Exp $
+
+  22 Jan 2013; Ian Stakenvicius <axs@gentoo.org> eudev-1_beta2.ebuild,
+  eudev-9999.ebuild:
+  moved *.hwdb removal to src_install so that files are not recorded in the vdb
+
+  22 Jan 2013; Ian Stakenvicius <axs@gentoo.org> eudev-1_beta2.ebuild,
+  eudev-9999.ebuild:
+  minor typo fix in ebuilds
+
+*eudev-1_beta2 (22 Jan 2013)
+
+  22 Jan 2013; Ian Stakenvicius <axs@gentoo.org> -eudev-0.ebuild,
+  -eudev-0-r1.ebuild, -eudev-1_beta1-r2.ebuild, +eudev-1_beta2.ebuild,
+  -files/eudev-1_beta1-fix-modprobe-call.patch,
+  -files/eudev-1_beta1-include-all-search-paths.patch, eudev-9999.ebuild,
+  metadata.xml:
+  new beta release, many bug fixes. libudev.so.1 is now shared by udevd and all
+  tools, libudev.so.0 can be installed to ease the pain of migration from
+  udev-179 and older, uclibc support restored.
 
   21 Jan 2013; Matt Turner <mattst88@gentoo.org> eudev-0-r1.ebuild,
   eudev-0.ebuild, eudev-1_beta1-r2.ebuild, eudev-9999.ebuild:

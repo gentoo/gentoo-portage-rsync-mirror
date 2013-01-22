@@ -5546,18 +5546,14 @@ sys-fs/ecryptfs-utils:gpg - Enable app-crypt/gnupg key module
 sys-fs/ecryptfs-utils:openssl - Enable dev-libs/openssl key module
 sys-fs/ecryptfs-utils:pkcs11 - Enable PKCS#11 (Smartcards) key module
 sys-fs/ecryptfs-utils:tpm - Enable support for Trusted Platform Module (TPM) using app-crypt/trousers
-sys-fs/eudev:action_modeswitch - for eudev-0: switch Mobile Action cables into serial mode
-sys-fs/eudev:edd - for eudev-0: create /dev/disk/by-id/edd-* links for BIOS EDD data
-sys-fs/eudev:extras - for eudev-0: Compile udev-extras requiring external dependencies
-sys-fs/eudev:floppy - for eudev-0: create historical floppy kernel device nodes (/dev/fd0h1440, ...)
 sys-fs/eudev:gudev - enable libudev gobject interface
 sys-fs/eudev:hwdb - read vendor/device string database and add it to udev database
 sys-fs/eudev:introspection - Use dev-libs/gobject-introspection for introspection
 sys-fs/eudev:keymap - map custom hardware's multimedia keys
 sys-fs/eudev:kmod - enable module loading through libkmod (requires modules)
+sys-fs/eudev:legacy-libudev - install libudev.so.0 to help with migration from udev-179 or older
 sys-fs/eudev:modutils - enable module loading support
 sys-fs/eudev:openrc - install the OpenRC init scripts
-sys-fs/eudev:rule_generator - for eudev-0: enable persistent network and optical device rule generator
 sys-fs/ext4magic:expert-mode - Builds ext4magic with expert mode. Highly useful in recovering data from a corrupted filesystem
 sys-fs/ext4magic:file-attr - Enable the recovery of file attributes (append, immutable, nodump etc)
 sys-fs/fur:void-chmod - Enable fake hook for "chmod" that will only return 0

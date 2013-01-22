@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta1-r2.ebuild,v 1.2 2013/01/21 21:25:44 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta2.ebuild,v 1.3 2013/01/22 21:29:06 axs Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ then
 	EGIT_REPO_URI="git://github.com/gentoo/eudev.git"
 	inherit git-2
 else
-	SRC_URI="https://github.com/downloads/gentoo/${PN}/${P}.tar.gz"
+	SRC_URI="http://dev.gentoo.org/~blueness/${PN}/${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~mips ~ppc ~x86"
 fi
 
@@ -22,12 +22,11 @@ HOMEPAGE="https://github.com/gentoo/eudev"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="doc gudev hwdb kmod introspection keymap +modutils +openrc selinux static-libs"
+IUSE="doc gudev hwdb kmod introspection keymap +modutils +openrc selinux static-libs legacy-libudev"
 
 RESTRICT="test"
 
 COMMON_DEPEND="gudev? ( dev-libs/glib:2 )
-	hwdb? ( sys-apps/hwids[udev(+)] )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	selinux? ( sys-libs/libselinux )
 	>=sys-apps/util-linux-2.20
@@ -44,12 +43,12 @@ DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt"
 
 RDEPEND="${COMMON_DEPEND}
+	hwdb? ( >=sys-apps/hwids-20121202.2[udev] )
 	openrc? ( >=sys-fs/udev-init-scripts-18 )
 	!sys-fs/udev
-	!!<=sys-fs/udev-180
 	!sys-apps/coldplug
 	!sys-apps/systemd
-	!<sys-fs/lvm2-2.02.45
+	!<sys-fs/lvm2-2.02.97
 	!sys-fs/device-mapper
 	!<sys-fs/udev-init-scripts-18"
 
@@ -66,20 +65,16 @@ udev_check_KV()
 
 pkg_pretend()
 {
-	if has_version "<sys-fs/udev-180"; then
-	ewarn "This version of eudev does not contain the libudev.so.0 library."
-	ewarn "Although we try to ensure that library file is preseved, this will not work"
-	ewarn "if you manually --unmerge your current version of sys-fs/udev prior to "
-	ewarn "emerging this package, as may be necessary to resolve blockages."
+	if has_version "<sys-fs/udev-180" && ! use legacy-libudev; then
+	ewarn "This version of eudev does not contain the libudev.so.0 library by "
+	ewarn "default.  This is an issue when migrating from sys-fs/udev-180 or older."
 	ewarn ""
-	ewarn "When migrating from udev please emerge sys-fs/eudev-0 before upgrading to this"
-	ewarn "version"
-	ewarn ""
-	ewarn "Removal of libudev.so.0 will effectively break any active Xorg sessions, and "
+	ewarn "Removal of libudev.so.0 will effectively break any active Xorg sessions, and"
 	ewarn "will probably have repercussions with other software as well.  A revdep-rebuild"
 	ewarn "is required to resolve these issues."
 	ewarn ""
-	ewarn "We apologize for the inconvenience that this will cause."
+	ewarn "Add USE=legacy-libudev to tell eudev to install a copy of libudev.so.0, if"
+	ewarn "you wish to continue to use your system while migrating to libudev.so.1"
 	fi
 }
 
@@ -106,13 +101,13 @@ pkg_setup()
 		eerror "for this version of udev."
 		eerror "You must upgrade your kernel or downgrade udev."
 	fi
+
+	# for USE=legacy-libudev
+	QA_SONAME_NO_SYMLINK="$(get_libdir)/libudev.so.0"
 }
 
 src_prepare()
 {
-	epatch "${FILESDIR}"/${P}-include-all-search-paths.patch
-	epatch "${FILESDIR}"/${P}-fix-modprobe-call.patch
-
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
 		-i rules/*.rules \
@@ -159,6 +154,7 @@ src_configure()
 		$(use_enable modutils modules)
 		$(use_enable selinux)
 		$(use_enable static-libs static)
+		$(use_enable legacy-libudev legacylib)
 	)
 	econf "${econf_args[@]}"
 }
@@ -170,14 +166,12 @@ src_install()
 	prune_libtool_files --all
 	rm -rf "${ED}"/usr/share/doc/${PF}/LICENSE.*
 
-	# place the keymaps in /$(libdir)/udev instead of /etc
-	# (fixed upstream but don't want to have to autoreconf)
-	use keymap && \
-	mv "${ED}"/etc/udev/keymaps "${ED}"/$(get_libdir)/udev/keymaps
-
 	# install gentoo-specific rules
-	insinto /usr/lib/udev/rules.d
+	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/40-gentoo.rules
+
+	# drop distributed hwdb files, they override sys-apps/hwids
+	rm -f "${ED}"/etc/udev/hwdb.d/*.hwdb
 }
 
 pkg_preinst()
@@ -218,9 +212,12 @@ pkg_postinst()
 		einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
+	use hwdb && udevadm hwdb --update
+
 	ewarn
 	ewarn "You need to restart eudev as soon as possible to make the"
-	ewarn "upgrade go into effect."
+	ewarn "upgrade go into effect:"
+	ewarn "\t/etc/init.d/udev --nodeps restart"
 
 	elog
 	elog "For more information on eudev on Gentoo, writing udev rules, and"
