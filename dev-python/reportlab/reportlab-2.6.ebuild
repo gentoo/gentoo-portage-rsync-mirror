@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.6.ebuild,v 1.1 2013/01/22 20:28:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.6.ebuild,v 1.2 2013/01/22 20:42:20 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -66,18 +66,12 @@ python_test() {
 }
 
 python_install_all() {
-	if use doc; then
-		# docs/reference/reportlab-reference.pdf is identical with docs/reportlab-reference.pdf
-		rm -f docs/reference/reportlab-reference.pdf
-
-		insinto /usr/share/doc/${PF}
-		doins -r docs/* || die "Installation of documentation failed"
-	fi
+	use doc && dodoc docs/*.pdf
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r demos || die "Installation of examples failed"
+		doins -r demos
 		insinto /usr/share/doc/${PF}/tools/pythonpoint
-		doins -r tools/pythonpoint/demos || die "Installation of examples failed"
+		doins -r tools/pythonpoint/demos
 	fi
 }

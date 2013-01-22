@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.84 2013/01/22 20:28:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.85 2013/01/22 20:42:20 floppym Exp $
+
+  22 Jan 2013; Mike Gilbert <floppym@gentoo.org> reportlab-2.6.ebuild:
+  Just install the generated pdf docs, not the entire docs directory.
 
 *reportlab-2.6 (22 Jan 2013)
 
