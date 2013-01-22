@@ -1,22 +1,24 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.6.2.ebuild,v 1.4 2013/01/06 09:59:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.6.2.ebuild,v 1.5 2013/01/22 05:16:46 tetromino Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="GNOME framework for accessing online accounts"
 HOMEPAGE="https://live.gnome.org/GnomeOnlineAccounts"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2+"
 SLOT="0"
 IUSE="gnome +introspection kerberos"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 # pango used in goaeditablelabel
 # libsoup used in goaoauthprovider
+# goa kerberos provider is incompatible with app-crypt/heimdal, see
+# https://bugzilla.gnome.org/show_bug.cgi?id=692250
 RDEPEND="
 	>=dev-libs/glib-2.32:2
 	app-crypt/libsecret
@@ -33,7 +35,7 @@ RDEPEND="
 	introspection? ( >=dev-libs/gobject-introspection-0.6.2 )
 	kerberos? (
 		app-crypt/gcr
-		virtual/krb5 )
+		app-crypt/mit-krb5 )
 "
 # goa-daemon can launch gnome-control-center
 PDEPEND="gnome? ( >=gnome-base/gnome-control-center-3.2[gnome-online-accounts(+)] )"
@@ -46,14 +48,20 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
+src_prepare() {
+	# fix build failure with gcc-4.5 and USE=kerberos, bug #450706
+	# https://bugzilla.gnome.org/show_bug.cgi?id=692251
+	epatch "${FILESDIR}/${PN}-3.6.2-GoaKerberosIdentity.patch"
+	gnome2_src_prepare
+}
+
 src_configure() {
 	# TODO: Give users a way to set the G/Y!/FB/Twitter/Windows Live secrets
-	G2CONF="${G2CONF}
-		--disable-static
-		--enable-documentation
-		--enable-exchange
-		--enable-facebook
-		--enable-windows-live
-		$(use_enable kerberos)"
-	gnome2_src_configure
+	gnome2_src_configure \
+		--disable-static \
+		--enable-documentation \
+		--enable-exchange \
+		--enable-facebook \
+		--enable-windows-live \
+		$(use_enable kerberos)
 }
