@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/devil
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.57 2012/12/17 20:35:24 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.58 2013/01/22 18:09:04 mr_bones_ Exp $
+
+  22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -devil-1.7.8.ebuild:
+  old
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> devil-1.7.8-r1.ebuild:
   Add ~ppc64, wrt bug #419621
@@ -199,4 +202,3 @@
   12 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> devil-1.6.1.ebuild files/digest-devil-1.6.1 ChangeLog :
   Initial import.
   ebuild submitted by Scott A. Friedman <friedman@ucla.edu>
-

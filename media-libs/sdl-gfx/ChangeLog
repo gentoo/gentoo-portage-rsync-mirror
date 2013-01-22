@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-gfx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.96 2013/01/21 16:07:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.97 2013/01/22 18:09:51 mr_bones_ Exp $
+
+  22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -sdl-gfx-2.0.23.ebuild:
+  old
 
   21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> sdl-gfx-2.0.24.ebuild:
   Stable for sparc, wrt bug #450768

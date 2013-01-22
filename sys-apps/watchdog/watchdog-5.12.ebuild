@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.12.ebuild,v 1.1 2012/06/15 04:39:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.12.ebuild,v 1.2 2013/01/22 18:02:34 vapier Exp $
 
 EAPI="4"
 
 inherit toolchain-funcs flag-o-matic
 
-DESCRIPTION="A software watchdog"
+DESCRIPTION="A software watchdog and /dev/watchdog daemon"
 HOMEPAGE="http://sourceforge.net/projects/watchdog/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 

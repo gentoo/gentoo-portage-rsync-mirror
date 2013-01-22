@@ -1,6 +1,10 @@
 # ChangeLog for games-util/catcodec
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/catcodec/ChangeLog,v 1.10 2012/05/19 20:27:17 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/catcodec/ChangeLog,v 1.11 2013/01/22 18:08:31 mr_bones_ Exp $
+
+  22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -catcodec-1.0.0.ebuild,
+  -files/catcodec-1.0.0-build.patch:
+  old
 
   19 May 2012; Michael Sterrett <mr_bones_@gentoo.org> catcodec-1.0.3.ebuild,
   +files/catcodec-1.0.3-gcc47.patch:
@@ -40,4 +44,3 @@
   +catcodec-1.0.0.ebuild, +files/catcodec-1.0.0-build.patch:
   initial commit - ebuild submitted by Locke 'Wizzleby' Shinseiko via bug
   #308355
-

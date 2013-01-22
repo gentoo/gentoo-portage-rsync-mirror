@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/uqm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.42 2012/11/22 10:08:14 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.43 2013/01/22 18:07:55 mr_bones_ Exp $
+
+  22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -uqm-0.7.0-r1.ebuild:
+  old
 
   22 Nov 2012; Agostino Sarubbo <ago@gentoo.org> uqm-0.7.0-r2.ebuild:
   Stable for x86, tested by Vincent Olivert Riera <peratu@carrosses.com>, wrt
