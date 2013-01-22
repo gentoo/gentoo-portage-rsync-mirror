@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libextractor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.85 2013/01/11 20:42:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.86 2013/01/22 06:43:22 ssuominen Exp $
+
+  22 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -libextractor-0.6.3-r1.ebuild:
+  old
 
   11 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libextractor-1.0.1.ebuild:
   Stable for x86, wrt bug #451122

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm prepare setup test
+DEPEND=>=dev-python/kombu-2.4.7 <dev-python/kombu-3.0 sql? ( dev-python/sqlalchemy ) dev-python/python-dateutil >=dev-python/anyjson-0.3.3 virtual/pyparsing >=dev-python/billiard-2.7.3.17 dev-python/pytz test? ( dev-python/gevent >=dev-python/mock-0.7.0 virtual/python-unittest2 dev-python/pyopenssl dev-python/nose-cover3 dev-python/sqlalchemy dev-python/pymongo dev-python/redis-py dev-db/redis ) doc? ( dev-python/docutils dev-python/sphinx dev-python/jinja dev-python/sphinxcontrib-issuetracker dev-python/sqlalchemy ) dev-python/setuptools || ( =dev-lang/python-3.3* =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* ) test? ( dev-python/nose )
+DESCRIPTION=Celery is an open source asynchronous task queue/job queue based on distributed message passing.
+EAPI=4
+HOMEPAGE=http://celeryproject.org/ http://pypi.python.org/pypi/celery
+IUSE=doc examples sql test test
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=>=dev-python/kombu-2.4.7 <dev-python/kombu-3.0 sql? ( dev-python/sqlalchemy ) dev-python/python-dateutil >=dev-python/anyjson-0.3.3 virtual/pyparsing >=dev-python/billiard-2.7.3.17 dev-python/pytz || ( =dev-lang/python-3.3* =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* )
+SLOT=0
+SRC_URI=mirror://pypi/c/celery/celery-3.0.13.tar.gz
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=6bc2df3415d5e25ba4acff907ed5a2fa
