@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.2.ebuild,v 1.1 2013/01/21 16:39:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.2-r1.ebuild,v 1.1 2013/01/22 07:54:10 jlec Exp $
 
 EAPI=5
 
@@ -35,9 +35,10 @@ COMMON_DEPEND="
 	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	virtual/jpeg
-	spell? ( app-text/aspell )
+	cairo? ( x11-libs/cairo[X,svg] )
 	pdf? ( app-text/podofo )
-	cairo? ( x11-libs/cairo[X,svg] )"
+	spell? ( app-text/aspell )
+	hunspell? ( app-text/hunspell )"
 RDEPEND="${COMMON_DEPEND}
 	app-text/ghostscript-gpl"
 DEPEND="${COMMON_DEPEND}"
@@ -87,8 +88,9 @@ src_configure() {
 		$(cmake-utils_use_has spell ASPELL)
 		$(cmake-utils_use_has pdf PODOFO)
 		$(cmake-utils_use_want cairo)
-		$(cmake-utils_use_want minimal NOHEADERINSTALL)
 		$(cmake-utils_use_want debug DEBUG)
+		$(cmake-utils_use_want minimal NOHEADERINSTALL)
+		$(cmake-utils_use_want hunspell HUNSPELL)
 		)
 	use examples || mycmakeargs+=( -DWANT_NOEXAMPLES=ON)
 	use templates || mycmakeargs+=( -DWANT_NOTEMPLATES=ON)

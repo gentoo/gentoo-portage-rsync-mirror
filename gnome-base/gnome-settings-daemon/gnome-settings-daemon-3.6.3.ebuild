@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.6.3.ebuild,v 1.4 2013/01/06 09:37:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.6.3.ebuild,v 1.5 2013/01/22 07:37:37 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -11,9 +11,9 @@ inherit autotools eutils gnome2 virtualx
 DESCRIPTION="Gnome Settings Daemon"
 HOMEPAGE="http://www.gnome.org"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
-IUSE="+colord +cups debug +i18n packagekit policykit +short-touchpad-timeout smartcard systemd +udev wacom"
+IUSE="+colord +cups debug +i18n input_devices_wacom packagekit policykit +short-touchpad-timeout smartcard systemd +udev"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 REQUIRED_USE="
 	packagekit? ( udev )
@@ -46,13 +46,13 @@ COMMON_DEPEND="
 	colord? ( >=x11-misc/colord-0.1.13 )
 	cups? ( >=net-print/cups-1.4[dbus] )
 	i18n? ( >=app-i18n/ibus-1.4.99 )
+	input_devices_wacom? (
+		>=dev-libs/libwacom-0.6
+		x11-drivers/xf86-input-wacom )
 	packagekit? ( >=app-admin/packagekit-base-0.7.4 )
 	smartcard? ( >=dev-libs/nss-3.11.2 )
 	systemd? ( >=sys-apps/systemd-31 )
 	udev? ( virtual/udev[gudev] )
-	wacom? (
-		>=dev-libs/libwacom-0.6
-		x11-drivers/xf86-input-wacom )
 "
 # Themes needed by g-s-d, gnome-shell, gtk+:3 apps to work properly
 # <gnome-color-manager-3.1.1 has file collisions with g-s-d-3.1.x
@@ -99,20 +99,19 @@ src_prepare() {
 src_configure() {
 	# README is empty
 	DOCS="AUTHORS NEWS ChangeLog MAINTAINERS"
-	G2CONF="${G2CONF}
-		--disable-static
-		--enable-man
-		$(use_enable colord color)
-		$(use_enable cups)
-		$(use_enable debug)
-		$(use_enable debug more-warnings)
-		$(use_enable i18n ibus)
-		$(use_enable packagekit)
-		$(use_enable smartcard smartcard-support)
-		$(use_enable systemd)
-		$(use_enable udev gudev)
-		$(use_enable wacom)"
-	gnome2_src_configure
+	gnome2_src_configure \
+		--disable-static \
+		--enable-man \
+		$(use_enable colord color) \
+		$(use_enable cups) \
+		$(use_enable debug) \
+		$(use_enable debug more-warnings) \
+		$(use_enable i18n ibus) \
+		$(use_enable packagekit) \
+		$(use_enable smartcard smartcard-support) \
+		$(use_enable systemd) \
+		$(use_enable udev gudev) \
+		$(use_enable input_devices_wacom wacom)
 }
 
 src_test() {

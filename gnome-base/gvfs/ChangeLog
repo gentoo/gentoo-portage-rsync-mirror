@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.197 2013/01/16 05:12:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.198 2013/01/22 07:49:29 tetromino Exp $
+
+  22 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> gvfs-1.14.2.ebuild:
+  Current udisks versions no longer have a systemd flag (bug #453482, thanks to
+  Lee Trager).
 
   16 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> gvfs-1.14.2.ebuild:
   Fix compability with dev-libs/libcdio-paranoia wrt #452400

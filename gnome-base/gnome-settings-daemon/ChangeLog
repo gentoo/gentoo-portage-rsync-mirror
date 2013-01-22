@@ -1,6 +1,19 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.114 2013/01/06 09:37:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.115 2013/01/22 07:37:37 tetromino Exp $
+
+*gnome-settings-daemon-3.6.4 (22 Jan 2013)
+
+  22 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-settings-daemon-2.32.1-r2.ebuild, -gnome-settings-daemon-3.2.3.ebuild,
+  gnome-settings-daemon-3.4.2.ebuild, gnome-settings-daemon-3.6.3.ebuild,
+  +gnome-settings-daemon-3.6.4.ebuild,
+  +files/gnome-settings-daemon-3.6.4-optional-color-wacom.patch, metadata.xml:
+  Version bump; fixes lots of bugs, including #450290
+  (gsettings-list-recursively crash), #451042 (caps lock key unreliable if used
+  for layout switching), and adds a KDE-compatible
+  org.freedesktop.ScreenSaver.xml dbus interface. Rename USE=wacom to
+  INPUT_DEVICES=wacom to match the rest of the tree. Update license. Drop old.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
   gnome-settings-daemon-3.6.3.ebuild:

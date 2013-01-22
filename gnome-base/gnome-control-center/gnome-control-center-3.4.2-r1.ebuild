@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.4.2-r1.ebuild,v 1.4 2012/12/27 07:52:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.4.2-r1.ebuild,v 1.5 2013/01/22 07:38:02 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="2"
-IUSE="+bluetooth +cheese +colord +cups +gnome-online-accounts +networkmanager +socialweb systemd wacom"
+IUSE="+bluetooth +cheese +colord +cups +gnome-online-accounts input_devices_wacom +networkmanager +socialweb systemd"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 # XXX: gnome-desktop-2.91.5 is needed for upstream commit c67f7efb
@@ -57,16 +57,19 @@ COMMON_DEPEND="
 	colord? ( >=x11-misc/colord-0.1.8 )
 	cups? ( >=net-print/cups-1.4[dbus] )
 	gnome-online-accounts? ( net-libs/gnome-online-accounts )
+	input_devices_wacom? (
+		>=dev-libs/libwacom-0.3
+		x11-libs/libXi )
 	networkmanager? (
 		>=gnome-extra/nm-applet-0.9.1.90
 		>=net-misc/networkmanager-0.8.997 )
 	socialweb? ( net-libs/libsocialweb )
 	systemd? ( >=sys-apps/systemd-31 )
-	wacom? ( >=dev-libs/libwacom-0.3
-		x11-libs/libXi )"
+"
 # <gnome-color-manager-3.1.2 has file collisions with g-c-c-3.1.x
 RDEPEND="${COMMON_DEPEND}
 	app-admin/apg
+	gnome-base/gnome-settings-daemon[input_devices_wacom?]
 	sys-apps/accountsservice
 	x11-themes/gnome-icon-theme-symbolic
 	colord? ( >=gnome-extra/gnome-color-manager-3 )
@@ -76,7 +79,6 @@ RDEPEND="${COMMON_DEPEND}
 	!systemd? (
 		app-admin/openrc-settingsd
 		sys-auth/consolekit )
-	wacom? ( gnome-base/gnome-settings-daemon[wacom] )
 
 	!<gnome-base/gdm-2.91.94
 	!<gnome-extra/gnome-color-manager-3.1.2
@@ -111,10 +113,10 @@ pkg_setup() {
 		$(use_with cheese)
 		$(use_enable colord color)
 		$(use_enable cups)
+		$(use_enable input_devices_wacom wacom)
 		$(use_enable gnome-online-accounts goa)
 		$(use_with socialweb libsocialweb)
-		$(use_enable systemd)
-		$(use_enable wacom)"
+		$(use_enable systemd)"
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
 }
 

@@ -2083,7 +2083,6 @@ gnome-base/gnome-control-center:gnome-online-accounts - Enable configuration pan
 gnome-base/gnome-control-center:i18n - Enable support for enhanced input methods through app-i18n/ibus
 gnome-base/gnome-control-center:socialweb - Add support for desktop background images from Flickr using net-libs/libsocialweb
 gnome-base/gnome-control-center:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for session tracking
-gnome-base/gnome-control-center:wacom - Enable support for Wacom tablets and drawing devices
 gnome-base/gnome-desktop:license-docs - Install help files documenting GNOME's licenses
 gnome-base/gnome-extra-apps:shotwell - Install the media-gfx/shotwell photo manager
 gnome-base/gnome-extra-apps:tracker - Install the app-misc/tracker indexer and the GNOME packages that require it
@@ -2098,7 +2097,6 @@ gnome-base/gnome-settings-daemon:i18n - Enable support for enhanced input method
 gnome-base/gnome-settings-daemon:packagekit - Enable support for the distro-neutral package manager GUI app-admin/packagekit
 gnome-base/gnome-settings-daemon:short-touchpad-timeout - Change the touchpad timeout so that it's effective for fast typists
 gnome-base/gnome-settings-daemon:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for session tracking
-gnome-base/gnome-settings-daemon:wacom - Enable support for Wacom tablets and drawing devices
 gnome-base/gnome-shell:i18n - Enable support for enhanced input methods through app-i18n/ibus
 gnome-base/gnome-shell:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for session tracking
 gnome-base/gvfs:afp - Enables support for accessing AFP (Apple Filing Protocol) network shares

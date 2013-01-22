@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.4.2.ebuild,v 1.6 2013/01/22 07:37:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.6.4.ebuild,v 1.1 2013/01/22 07:37:37 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
@@ -13,16 +13,19 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="+colord +cups debug input_devices_wacom packagekit policykit +short-touchpad-timeout smartcard systemd +udev"
+IUSE="+colord +cups debug +i18n input_devices_wacom packagekit policykit +short-touchpad-timeout smartcard systemd +udev"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+REQUIRED_USE="
+	packagekit? ( udev )
+	smartcard? ( udev )
+"
 
-# colord-0.1.13 needed to avoid polkit errors in CreateProfile and CreateDevice
+# require colord-0.1.27 dependency for connection type support
 COMMON_DEPEND="
 	>=dev-libs/glib-2.31.0:2
 	>=x11-libs/gtk+-3.3.4:3
-	>=gnome-base/libgnomekbd-2.91.1
-	>=gnome-base/gnome-desktop-3.3.92:3
-	>=gnome-base/gsettings-desktop-schemas-3.3.0
+	>=gnome-base/gnome-desktop-3.5.3:3=
+	>=gnome-base/gsettings-desktop-schemas-3.5.90
 	media-fonts/cantarell
 	media-libs/fontconfig
 	>=media-libs/lcms-2.2:2
@@ -31,27 +34,23 @@ COMMON_DEPEND="
 	>=sys-power/upower-0.9.11
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
-	>=x11-libs/libnotify-0.7.3
+	>=x11-libs/libnotify-0.7.3:=
 	x11-libs/libX11
+	x11-libs/libxkbfile
 	x11-libs/libXi
 	x11-libs/libXext
 	x11-libs/libXfixes
 	x11-libs/libXtst
 	x11-libs/libXxf86misc
-	>=x11-libs/libxklavier-5.0
-	>=media-sound/pulseaudio-0.9.16
 
-	colord? ( >=x11-misc/colord-0.1.13 )
+	colord? ( >=x11-misc/colord-0.1.27:= )
 	cups? ( >=net-print/cups-1.4[dbus] )
+	i18n? ( >=app-i18n/ibus-1.4.99 )
 	input_devices_wacom? (
 		>=dev-libs/libwacom-0.6
 		x11-drivers/xf86-input-wacom )
-	packagekit? (
-		virtual/udev[gudev]
-		>=app-admin/packagekit-base-0.6.12 )
-	smartcard? (
-		virtual/udev[gudev]
-		>=dev-libs/nss-3.11.2 )
+	packagekit? ( >=app-admin/packagekit-base-0.7.4 )
+	smartcard? ( >=dev-libs/nss-3.11.2 )
 	systemd? ( >=sys-apps/systemd-31 )
 	udev? ( virtual/udev[gudev] )
 "
@@ -67,15 +66,16 @@ RDEPEND="${COMMON_DEPEND}
 	!<gnome-extra/gnome-color-manager-3.1.1
 	!<gnome-extra/gnome-power-manager-3.1.3
 
-	!systemd? ( sys-auth/consolekit )"
+	!systemd? ( sys-auth/consolekit )
+"
 # xproto-7.0.15 needed for power plugin
 DEPEND="${COMMON_DEPEND}
 	cups? ( sys-apps/sed )
+	dev-libs/libxml2:2
 	sys-devel/gettext
 	>=dev-util/intltool-0.40
 	virtual/pkgconfig
 	x11-proto/inputproto
-	x11-proto/kbproto
 	x11-proto/xf86miscproto
 	>=x11-proto/xproto-7.0.15
 "
@@ -86,17 +86,10 @@ src_prepare() {
 	# people, so revert it if USE=short-touchpad-timeout.
 	# Revisit if/when upstream adds a setting for customizing the timeout.
 	use short-touchpad-timeout &&
-		epatch "${FILESDIR}/${PN}-3.0.2-short-touchpad-timeout.patch"
+		epatch "${FILESDIR}/${PN}-3.5.91-short-touchpad-timeout.patch"
 
 	# Make colord and wacom optional; requires eautoreconf
-	epatch "${FILESDIR}/${PN}-3.4.0-optional-color-wacom.patch"
-
-	# Useful patches in next release
-	epatch "${FILESDIR}/${P}-double-unref.patch"
-	epatch "${FILESDIR}/${P}-XI-2.2.patch"
-
-	# bug #428816, https://bugzilla.gnome.org/show_bug.cgi?id=679761
-	epatch "${FILESDIR}/${PN}-3.4.2-cups-1.6.patch"
+	epatch "${FILESDIR}/${PN}-3.6.4-optional-color-wacom.patch"
 
 	eautoreconf
 
@@ -108,11 +101,12 @@ src_configure() {
 	DOCS="AUTHORS NEWS ChangeLog MAINTAINERS"
 	gnome2_src_configure \
 		--disable-static \
-		--disable-schemas-compile \
+		--enable-man \
 		$(use_enable colord color) \
 		$(use_enable cups) \
 		$(use_enable debug) \
 		$(use_enable debug more-warnings) \
+		$(use_enable i18n ibus) \
 		$(use_enable packagekit) \
 		$(use_enable smartcard smartcard-support) \
 		$(use_enable systemd) \
@@ -122,11 +116,4 @@ src_configure() {
 
 src_test() {
 	Xemake check
-}
-
-src_install() {
-	gnome2_src_install
-
-	echo 'GSETTINGS_BACKEND="dconf"' >> 51gsettings-dconf
-	doenvd 51gsettings-dconf
 }

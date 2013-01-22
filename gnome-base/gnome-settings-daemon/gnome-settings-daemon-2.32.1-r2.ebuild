@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.32.1-r2.ebuild,v 1.9 2012/05/05 05:38:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.32.1-r2.ebuild,v 1.10 2013/01/22 07:37:37 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -17,7 +17,7 @@ SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/gnome-settings-daemon-2.3
 # 	mirror://gentoo/${PN}-2.30.0-gst-vol-control-support.patch" -> this causes bug #327609
 # 	mirror://gentoo/${PN}-2.30.2-gst-vol-control-support.patch.bz2" -> this patch has worse problems like bug #339732
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug libnotify policykit pulseaudio smartcard"
