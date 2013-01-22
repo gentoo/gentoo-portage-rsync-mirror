@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.274 2013/01/17 20:39:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.275 2013/01/22 03:59:59 tetromino Exp $
+
+*gconf-3.2.6 (22 Jan 2013)
+
+  22 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> +gconf-3.2.6.ebuild:
+  Version bump with various bugfixes.
 
   17 Jan 2013; Pacho Ramos <pacho@gentoo.org> gconf-2.32.4.ebuild,
   gconf-3.2.5.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.382 2013/01/06 09:44:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.383 2013/01/22 03:48:11 tetromino Exp $
+
+*evolution-3.6.3 (22 Jan 2013)
+
+  22 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +evolution-3.6.3.ebuild:
+  Version bump with various bugfixes. Modernize ebuild.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> evolution-3.6.2-r1.ebuild:
   Add ~sparc, wrt bug #449220
