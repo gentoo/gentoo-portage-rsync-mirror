@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.12-r2.ebuild,v 1.4 2013/01/22 02:40:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.16.ebuild,v 1.1 2013/01/22 02:40:43 robbat2 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.5"
@@ -13,31 +13,29 @@ SRC_URI="http://www.nlnetlabs.nl/downloads/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc-macos ~x64-macos"
-IUSE="doc examples gost python ssl static-libs vim-syntax"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~ppc-macos ~x64-macos"
+IUSE="doc gost +ecdsa python +ssl static-libs vim-syntax"
 
 RESTRICT="test" # 1.6.9 has no test directory
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.7 )
+	ecdsa? ( >=dev-libs/openssl-1.0.1c[-bindist] )
 	gost? ( >=dev-libs/openssl-1 )"
 DEPEND="${RDEPEND}
 	python? ( dev-lang/swig )
 	doc? ( app-doc/doxygen )"
+
+# configure will die if ecdsa is enabled and ssl is not
+REQUIRED_USE="ecdsa? ( ssl )"
 
 pkg_setup() {
 	use python && python_set_active_version 2
 	use python && python_pkg_setup
 }
 
-src_prepare() {
-	epatch "${FILESDIR}/1.6.12-cflags.patch"
-
-	eautoreconf
-}
-
 src_configure() {
 	econf \
-		$(use_with examples) \
+		$(use_enable ecdsa) \
 		$(use_enable gost) \
 		$(use_enable ssl sha2) \
 		$(use_enable static-libs static) \
@@ -45,18 +43,21 @@ src_configure() {
 		$(use_with python pyldns) \
 		$(use_with python pyldnsx) \
 		--without-drill \
+		--without-examples \
 		--disable-rpath
 }
 
 src_compile() {
-	emake
+	default
+
 	if use doc ; then
 		emake doxygen
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
+
 	dodoc Changelog README*
 
 	if use python ; then
@@ -77,6 +78,14 @@ src_install() {
 	fi
 
 	einfo
-	elog "Install net-dns/ldns-utils if you want drill"
+	elog "Install net-dns/ldns-utils if you want drill and examples"
 	einfo
+}
+
+pkg_postinst() {
+	use python && python_mod_optimize ldns.py ldnsx.py
+}
+
+pkg_postrm() {
+	use python && python_mod_cleanup ldns.py ldnsx.py
 }
