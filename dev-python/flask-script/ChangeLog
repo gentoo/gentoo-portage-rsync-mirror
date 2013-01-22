@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/flask-script
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-script/ChangeLog,v 1.7 2012/11/17 21:46:16 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-script/ChangeLog,v 1.8 2013/01/22 11:58:45 idella4 Exp $
+
+*flask-script-0.5.3 (22 Jan 2013)
+
+  22 Jan 2013; Ian Delaney <idella4@gentoo.org> +flask-script-0.5.3.ebuild:
+  bump
 
   17 Nov 2012; Mike Gilbert <floppym@gentoo.org> flask-script-0.5.1.ebuild:
   Set PYTHON_MODNAME=flask_script.py. Bug 443486 by mreug.
