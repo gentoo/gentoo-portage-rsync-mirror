@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/reportlab
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.83 2012/12/06 17:37:57 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.84 2013/01/22 20:28:47 floppym Exp $
+
+*reportlab-2.6 (22 Jan 2013)
+
+  22 Jan 2013; Mike Gilbert <floppym@gentoo.org> +reportlab-2.6.ebuild,
+  -reportlab-2.5.ebuild, reportlab-2.5-r1.ebuild:
+  Version bump. Convert to distutils-r1. Resolve bug 318233.
 
   06 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> reportlab-2.5-r1.ebuild:
   Keyword amd64-linux and x86-linux

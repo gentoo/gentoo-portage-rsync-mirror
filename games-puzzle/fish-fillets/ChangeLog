@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/fish-fillets
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.56 2012/05/04 04:45:27 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.57 2013/01/22 20:09:43 mr_bones_ Exp $
+
+  22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -fish-fillets-1.0.0.ebuild:
+  old
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> fish-fillets-1.0.0.ebuild,
   fish-fillets-1.0.1.ebuild:
@@ -250,4 +254,3 @@
   12 May 2004; Michael Sterrett <mr_bones_@gentoo.org>
   fish-fillets-0.3.0.ebuild, metadata.xml:
   initial commit (bug #47426)
-

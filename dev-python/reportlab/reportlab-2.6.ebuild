@@ -1,34 +1,39 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.5.ebuild,v 1.8 2012/02/22 07:18:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.6.ebuild,v 1.1 2013/01/22 20:28:47 floppym Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+EAPI="5"
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+# Tests crash with pypy
 
-inherit distutils eutils versionator
+inherit distutils-r1 eutils flag-o-matic
 
 DESCRIPTION="Tools for generating printable PDF documents from any data source."
-HOMEPAGE="http://www.reportlab.org/ http://pypi.python.org/pypi/reportlab"
-SRC_URI="http://www.reportlab.org/ftp/${P}.tar.gz"
+HOMEPAGE="http://www.reportlab.com/ http://pypi.python.org/pypi/reportlab"
+SRC_URI="http://www.reportlab.com/ftp/${P}.tar.gz
+	http://www.reportlab.com/ftp/fonts/pfbfer-20070710.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="doc examples test"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-fbsd ~x86-linux"
+IUSE="doc examples"
 
-DEPEND="dev-python/imaging
+RDEPEND="dev-python/imaging
 	media-fonts/ttf-bitstream-vera
 	media-libs/libart_lgpl
 	sys-libs/zlib"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
-PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
+DISTUTILS_NO_PARALLEL_BUILD=1
 
-src_prepare() {
-	distutils_src_prepare
+src_unpack() {
+	unpack ${P}.tar.gz
+	cd ${P}/src/reportlab/fonts || die
+	unpack pfbfer-20070710.zip
+}
 
+python_prepare_all() {
 	sed -i \
 		-e 's|/usr/lib/X11/fonts/TrueType/|/usr/share/fonts/ttf-bitstream-vera/|' \
 		-e 's|/usr/local/Acrobat|/opt/Acrobat|g' \
@@ -39,28 +44,28 @@ src_prepare() {
 
 	rm -fr src/rl_addons/renderPM/libart_lgpl
 	epatch "${FILESDIR}/${PN}-2.4-external_libart_lgpl.patch"
+
+	epatch "${FILESDIR}/${PN}-2.5-pypy-implicit-PyArg_NoArgs.patch"
 }
 
 src_compile() {
-	distutils_src_compile
+	append-cflags -fno-strict-aliasing
+	distutils-r1_src_compile
+}
 
-	# One of tests already builds documentation.
-	if use doc && ! use test; then
-		cd docs
-		PYTHONPATH="$(ls -d ../build-$(PYTHON -f --ABI)/lib.*)" "$(PYTHON -f)" genAll.py || die "genAll.py failed"
+python_compile_all() {
+	if use doc; then
+		cd docs || die
+		"${PYTHON}" genAll.py || die "docs generation failed"
 	fi
 }
 
-src_test() {
-	testing() {
-		"$(PYTHON)" setup.py tests-preinstall
-	}
-	python_execute_function testing
+python_test() {
+	cd tests || die
+	"${PYTHON}" runAll.py || die
 }
 
-src_install() {
-	distutils_src_install
-
+python_install_all() {
 	if use doc; then
 		# docs/reference/reportlab-reference.pdf is identical with docs/reportlab-reference.pdf
 		rm -f docs/reference/reportlab-reference.pdf

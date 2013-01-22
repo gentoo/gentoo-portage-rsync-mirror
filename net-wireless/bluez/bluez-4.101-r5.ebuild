@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101-r5.ebuild,v 1.4 2013/01/20 19:51:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101-r5.ebuild,v 1.6 2013/01/22 20:14:52 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -12,18 +12,18 @@ SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ~ppc ~ppc64 x86"
+KEYWORDS="amd64 arm hppa ~ppc ~ppc64 x86"
 IUSE="alsa +consolekit cups debug gstreamer pcmcia readline selinux test-programs usb"
 
 CDEPEND=">=dev-libs/glib-2.28:2
-	>=sys-apps/dbus-1.6
+	>=sys-apps/dbus-1.6:=
 	>=sys-apps/hwids-20121202.2
 	>=virtual/udev-171
 	alsa? (
 		media-libs/alsa-lib:=[alsa_pcm_plugins_extplug(+),alsa_pcm_plugins_ioplug(+)]
 		media-libs/libsndfile:=
 	)
-	cups? ( net-print/cups )
+	cups? ( net-print/cups:= )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10:0.10
 		>=media-libs/gst-plugins-base-0.10:0.10
@@ -42,6 +42,7 @@ RDEPEND="${CDEPEND}
 	test-programs? (
 		>=dev-python/dbus-python-1
 		dev-python/pygobject:2
+		dev-python/pygobject:3
 		${PYTHON_DEPS}
 	)
 "
