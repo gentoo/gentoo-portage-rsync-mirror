@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ivorbis/gst-plugins-ivorbis-0.10.36.ebuild,v 1.1 2013/01/20 17:51:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ivorbis/gst-plugins-ivorbis-0.10.36.ebuild,v 1.2 2013/01/22 19:54:14 jer Exp $
 
 EAPI="5"
 
 inherit gst-plugins-base gst-plugins10
 
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sh ~x86 ~x86-fbsd ~x64-macos"
+KEYWORDS="~amd64 ~hppa ~mips ~ppc ~ppc64 ~sh ~x86 ~x86-fbsd ~x64-macos"
 IUSE=""
 
 RDEPEND="media-libs/tremor"
