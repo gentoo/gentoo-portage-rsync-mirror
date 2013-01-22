@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.14.2.ebuild,v 1.1 2013/01/21 21:07:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.14.2.ebuild,v 1.2 2013/01/22 15:01:20 jer Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -24,7 +24,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 DOCS=(
-	CONFIG-KEYS ChangeLog FAQS KNOWN-BUGS README TODO TOOLS UPGRADE
+	CONFIG-KEYS ChangeLog FAQS KNOWN-BUGS QUICKSTART README TODO TOOLS UPGRADE
 	docs/INTERNALS docs/PLUGINS docs/SIGNALS
 )
 
