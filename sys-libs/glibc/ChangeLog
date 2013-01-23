@@ -1,5 +1,12 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.917 2013/01/12 08:03:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.919 2013/01/23 05:27:59 vapier Exp $
+
+  23 Jan 2013; Mike Frysinger <vapier@gentoo.org> glibc-2.16.0.ebuild,
+  glibc-2.17.ebuild:
+  Add fix from upstream for slow math calls on x86 #431938 by wbrana.
+
+  23 Jan 2013; Mike Frysinger <vapier@gentoo.org> glibc-2.17.ebuild:
+  Push out hppa fixes from upstream #452184 by Guy Martin.
 
   12 Jan 2013; Raúl Porcel <armin76@gentoo.org> glibc-2.16.0.ebuild:
   2.16.0 breaks some packages on alpha, 2.17 works fine
