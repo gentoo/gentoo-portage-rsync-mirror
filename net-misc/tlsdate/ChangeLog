@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tlsdate
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsdate/ChangeLog,v 1.5 2012/12/19 21:03:38 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsdate/ChangeLog,v 1.6 2013/01/23 22:36:10 vapier Exp $
+
+*tlsdate-0.0.5 (23 Jan 2013)
+
+  23 Jan 2013; Mike Frysinger <vapier@gentoo.org> +tlsdate-0.0.5.ebuild:
+  Version bump.
 
 *tlsdate-0.0.4-r2 (19 Dec 2012)
 
