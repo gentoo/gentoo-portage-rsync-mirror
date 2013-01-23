@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.26 2013/01/23 11:14:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.27 2013/01/23 20:23:12 ssuominen Exp $
 
 EAPI=4
 
@@ -138,17 +138,6 @@ src_prepare()
 			configure || die
 		eval export INTLTOOL_{EXTRACT,MERGE,UPDATE}=/bin/true
 		eval export {MSG{FMT,MERGE},XGETTEXT}=/bin/true
-	fi
-
-	# This check is for maintainers only
-	if [[ ${PV} = 9999* ]]; then
-		# Support uClibc wrt bug #443030 with a safe kludge so we know when
-		# to check for other uses than logs. See the echo for secure_getenv
-		# at the end of src_prepare().
-		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 16 ]]; then
-			eerror "The line count of secure_getenv failed, see bug #443030"
-			die
-		fi
 	fi
 
 	# apply user patches
@@ -357,6 +346,10 @@ src_install()
 	dosym /sbin/udevd "$(systemd_get_utildir)"/systemd-udevd
 	find "${ED}/$(systemd_get_unitdir)" -name '*.service' -exec \
 		sed -i -e "/ExecStart/s:/lib/systemd:$(systemd_get_utildir):" {} +
+
+	docinto gentoo
+	dodoc "${FILESDIR}"/80-net-name-slot.rules
+	docompress -x /usr/share/doc/${PF}/gentoo/80-net-name-slot.rules
 }
 
 pkg_preinst()
@@ -376,7 +369,7 @@ pkg_preinst()
 	preserve_old_lib /$(get_libdir)/libudev.so.0
 
 	net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
-	[[ -f ${net_rules} ]] || cp "${FILESDIR}"/80-net-name-slot.rules "${net_rules}"
+	[[ -f ${net_rules} ]] || cp "${ROOT}"usr/share/doc/${PF}/gentoo/80-net-name-slot.rules "${net_rules}"
 }
 
 # This function determines if a directory is a mount point.
