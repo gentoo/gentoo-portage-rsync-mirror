@@ -1,0 +1,15 @@
+DEFINED_PHASES=configure install postinst preinst prepare
+DEPEND=dev-lang/perl dev-lang/tcl dev-tcltk/expect sys-apps/diffutils cvs? ( dev-vcs/cvs ) subversion? ( dev-vcs/subversion ) || ( net-misc/netkit-telnetd net-misc/telnet-bsd ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Really Awesome New Cisco confIg Differ
+EAPI=4
+HOMEPAGE=http://www.shrubbery.net/rancid/
+IUSE=cvs subversion
+KEYWORDS=~amd64
+LICENSE=BSD-4
+RDEPEND=dev-lang/perl dev-lang/tcl dev-tcltk/expect sys-apps/diffutils cvs? ( dev-vcs/cvs ) subversion? ( dev-vcs/subversion ) || ( net-misc/netkit-telnetd net-misc/telnet-bsd )
+REQUIRED_USE=^^ ( cvs subversion )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=ftp://ftp.shrubbery.net/pub/rancid/rancid-2.3.8.tar.gz
+_eclasses_=autotools	5116b10b2150724f41b564f1cc863e47	eutils	d40dc948067bd3db1c8ebf7d51897313	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	readme.gentoo	e572626cf3c5ce896307ee73a06c2979	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=86b6476c65f5e0cbefa1e6ac7454e195
