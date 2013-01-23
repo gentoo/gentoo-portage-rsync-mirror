@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3_p20121021.ebuild,v 1.4 2012/11/28 12:35:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3_p20121021.ebuild,v 1.5 2013/01/23 16:44:21 ssuominen Exp $
 
 EAPI=5
 #EAUTORECONF=yes
@@ -8,12 +8,12 @@ inherit autotools xfconf
 
 DESCRIPTION="GTK+ based CD and DVD burning application"
 HOMEPAGE="http://goodies.xfce.org/projects/applications/xfburn"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
+SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="debug gstreamer udev"
+IUSE="debug gstreamer +udev"
 
 RDEPEND=">=dev-libs/glib-2.30
 	>=dev-libs/libburn-0.4.2

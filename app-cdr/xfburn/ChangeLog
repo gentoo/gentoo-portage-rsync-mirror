@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/xfburn
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.55 2012/11/28 12:36:56 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.56 2013/01/23 16:44:21 ssuominen Exp $
+
+  23 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  xfburn-0.4.3_p20121021.ebuild:
+  USE="udev" by default where visible. Use gentoo mirrors for uri.
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   -xfburn-0.4.3_p20120601.ebuild,

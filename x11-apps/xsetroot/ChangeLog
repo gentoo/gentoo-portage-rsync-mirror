@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xsetroot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetroot/ChangeLog,v 1.48 2012/05/15 14:23:20 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetroot/ChangeLog,v 1.49 2013/01/23 16:52:54 chithanh Exp $
+
+*xsetroot-1.1.1 (23 Jan 2013)
+
+  23 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xsetroot-1.1.1.ebuild:
+  Version bump.
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> xsetroot-1.1.0.ebuild:
   keyword ~amd64-fbsd
@@ -177,4 +183,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +xsetroot-0.99.0.ebuild:
   Initial commit for modular X.
-
