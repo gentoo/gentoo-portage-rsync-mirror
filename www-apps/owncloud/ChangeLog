@@ -1,6 +1,17 @@
 # ChangeLog for www-apps/owncloud
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.24 2013/01/17 12:25:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.26 2013/01/23 01:03:57 voyageur Exp $
+
+  23 Jan 2013; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/owncloud-4.5.2-fix_sabre_connector.patch:
+  Clean leftover patch file
+
+*owncloud-4.5.6 (23 Jan 2013)
+*owncloud-4.0.11 (23 Jan 2013)
+
+  23 Jan 2013; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-4.0.10.ebuild,
+  +owncloud-4.0.11.ebuild, -owncloud-4.5.5.ebuild, +owncloud-4.5.6.ebuild:
+  Security bump, remove vulnerable versions, bug #453604
 
   17 Jan 2013; Bernard Cafarelli <voyageur@gentoo.org> owncloud-4.0.10.ebuild,
   owncloud-4.5.5.ebuild:
