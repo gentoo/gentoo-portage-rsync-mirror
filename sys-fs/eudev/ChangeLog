@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.16 2013/01/22 21:29:06 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.17 2013/01/23 17:49:13 jer Exp $
+
+  23 Jan 2013; Jeroen Roovers <jer@gentoo.org> eudev-1_beta2.ebuild:
+  Marked ~hppa too.
 
   22 Jan 2013; Ian Stakenvicius <axs@gentoo.org> eudev-1_beta2.ebuild,
   eudev-9999.ebuild:
