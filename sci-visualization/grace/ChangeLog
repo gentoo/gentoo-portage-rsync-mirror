@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/grace
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.66 2012/10/24 19:45:13 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.67 2013/01/23 11:29:17 jlec Exp $
+
+*grace-5.1.23 (23 Jan 2013)
+
+  23 Jan 2013; Justin Lecher <jlec@gentoo.org> +grace-5.1.23.ebuild,
+  metadata.xml:
+  Version BUmp, #452338
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> grace-5.1.22-r2.ebuild,
   grace-5.1.22-r3.ebuild:

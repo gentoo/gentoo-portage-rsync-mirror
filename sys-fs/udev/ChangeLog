@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.796 2013/01/21 20:41:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.797 2013/01/23 11:10:21 ssuominen Exp $
+
+  23 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197-r3.ebuild,
+  udev-197-r4.ebuild, udev-9999.ebuild:
+  Post install message about changed network interface renaming wrt #453494
 
   21 Jan 2013; Mike Gilbert <floppym@gentoo.org> udev-197-r3.ebuild,
   udev-197-r4.ebuild, udev-9999.ebuild:

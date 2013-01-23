@@ -1,6 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/package.use.mask,v 1.10 2012/04/08 15:08:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/package.use.mask,v 1.11 2013/01/23 11:15:03 armin76 Exp $
+
+Raúl Porcel <armin76@gentoo.org> (23 Jan 2013)
+# Architecture is unsupported
+dev-libs/libpcre jit
 
 # Ryan Hill <dirtyepic@gentoo.org> (20 Jul 2011)
 # graphite requires dev-libs/ppl & dev-libs/cloog-ppl

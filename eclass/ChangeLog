@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.632 2013/01/23 09:44:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.633 2013/01/23 11:14:33 jlec Exp $
+
+  23 Jan 2013; Justin Lecher <jlec@gentoo.org> intel-sdp.eclass:
+  Add dummy dir to avoid sandbox violations when emerging with
+  FEATURES=-userpriv, #437512
 
   23 Jan 2013; Justin Lecher <jlec@gentoo.org> intel-sdp.eclass:
   Add support for license server, #447262

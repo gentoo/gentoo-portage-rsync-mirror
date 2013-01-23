@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.155 2013/01/21 20:41:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.157 2013/01/23 11:14:36 ssuominen Exp $
 
 EAPI=4
 
@@ -475,6 +475,17 @@ pkg_postinst()
 		ewarn "One way to do this is to run the following command:"
 		ewarn "emerge -av1 \$(qfile -q -S -C /usr/lib/udev)"
 		ewarn "Note that qfile can be found in app-portage/portage-utils"
+	fi
+
+	old_net_rules=${ROOT}etc/udev/rules.d/70-persistent-net.rules
+	if [[ -f ${old_net_rules} ]]; then
+		ewarn "You still have ${old_net_rules} in place from previous udev release."
+		ewarn "Upstream has removed the possibility of renaming to existing"
+		ewarn "network interfaces. For example, it's not possible to assign based"
+		ewarn "on MAC address to existing interface eth0."
+		ewarn "See http://bugs.gentoo.org/453494 for more information."
+		ewarn "Rename your file to something else starting with 70- to silence"
+		ewarn "this warning."
 	fi
 
 	ewarn
