@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.40 2013/01/11 06:13:59 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.41 2013/01/23 13:50:21 ryao Exp $
 
 EAPI="4"
 
@@ -8,10 +8,8 @@ AT_M4DIR="config"
 AUTOTOOLS_AUTORECONF="1"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
-inherit bash-completion-r1 flag-o-matic toolchain-funcs autotools-utils udev
-
 if [ ${PV} == "9999" ] ; then
-	inherit git-2
+	inherit git-2 linux-mod
 	EGIT_REPO_URI="git://github.com/zfsonlinux/${PN}.git"
 else
 	inherit eutils versionator
@@ -20,6 +18,8 @@ else
 	S="${WORKDIR}/${PN}-${PN}-${MY_PV}"
 	KEYWORDS="~amd64"
 fi
+
+inherit bash-completion-r1 flag-o-matic toolchain-funcs autotools-utils udev
 
 DESCRIPTION="Userland utilities for ZFS Linux kernel module"
 HOMEPAGE="http://zfsonlinux.org/"
@@ -58,6 +58,10 @@ RDEPEND="${COMMON_DEPEND}
 		)
 "
 
+pkg_setup() {
+	:
+}
+
 src_prepare() {
 	# Workaround for hard coded path
 	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/common.sh.in || die
@@ -92,6 +96,13 @@ src_install() {
 
 pkg_postinst() {
 
+	if [ ${PV} = "9999" ]
+	then
+		einfo "Adding ${P} to the module database to ensure that the"
+		einfo "kernel modules and userland utilities stay in sync."
+		update_moduledb
+	fi
+
 	[ -e "${EROOT}/etc/runlevels/boot/zfs" ] \
 		|| ewarn 'You should add zfs to the boot runlevel.'
 
@@ -101,4 +112,11 @@ pkg_postinst() {
 		rm "${EROOT}/etc/runlevels/shutdown/zfs-shutdown"
 	fi
 
+}
+
+pkg_postrm() {
+	if [ ${PV} = "9999" ]
+	then
+		remove_moduledb
+	fi
 }

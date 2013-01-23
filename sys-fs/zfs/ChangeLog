@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.55 2013/01/11 06:13:59 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.56 2013/01/23 13:50:21 ryao Exp $
+
+  23 Jan 2013; Richard Yao <ryao@gentoo.org> zfs-0.6.0_rc13-r1.ebuild,
+  zfs-9999.ebuild:
+  Make sys-fs/zfs-9999 add itself to the module database to ensure that the
+  userland-kernel interface remains in sync when using the 9999 ebuilds.
 
   11 Jan 2013; Richard Yao <ryao@gentoo.org> zfs-9999.ebuild:
   Synchronize zfs-9999.ebuild with zfs-0.6.0_rc13-r1.ebuild, bug #451016. Thanks
