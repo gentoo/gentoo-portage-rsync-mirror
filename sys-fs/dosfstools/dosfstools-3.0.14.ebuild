@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-3.0.13.ebuild,v 1.3 2013/01/23 19:09:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-3.0.14.ebuild,v 1.1 2013/01/23 19:13:27 ssuominen Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit toolchain-funcs flag-o-matic eutils
 

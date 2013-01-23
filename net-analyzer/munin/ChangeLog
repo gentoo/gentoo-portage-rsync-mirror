@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.132 2013/01/19 15:26:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.133 2013/01/23 19:22:41 flameeyes Exp $
+
+*munin-2.0.10-r2 (23 Jan 2013)
+
+  23 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org> +munin-2.0.10-r2.ebuild,
+  -munin-2.0.10-r1.ebuild, -munin-2.0.10.ebuild, -munin-2.0.9-r1.ebuild,
+  files/munin-node_init.d_2.0.7:
+  Add a 1.5s wait on the munin init script to solve a possible race condition
+  with munin-asyncd.
 
 *munin-2.1.9999 (19 Jan 2013)
 *munin-2.0.10-r1 (19 Jan 2013)

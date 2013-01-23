@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.10.ebuild,v 1.1 2013/01/10 13:11:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.10-r2.ebuild,v 1.1 2013/01/23 19:22:41 flameeyes Exp $
 
 EAPI=5
 
@@ -92,7 +92,8 @@ RDEPEND="${DEPEND_COM}
 		!minimal? (
 			virtual/cron
 			media-fonts/dejavu
-		)"
+		)
+		!<sys-apps/openrc-0.11.8"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -132,6 +133,7 @@ SPOOLDIR=\$(DESTDIR)/var/spool/munin-async
 LOGDIR=\$(DESTDIR)/var/log/munin
 PERLSITELIB=$(perl -V:vendorlib | cut -d"'" -f2)
 JCVALID=$(usex java yes no)
+STATEDIR=\$(DESTDIR)/run/munin
 EOF
 }
 
@@ -172,9 +174,9 @@ src_install() {
 	# run in parallel for now (because it uses internal loops).
 	emake -j1 DESTDIR="${D}" $(usex minimal install-minimal install)
 
-	# we remove /var/run from the install as that stops Portage from
-	# having to check it for symlinks when the new /run is used.
-	rm -rf "${D}"/var/run
+	# we remove /run from the install, as it's not the package's to deal
+	# with.
+	rm -rf "${D}"/run
 
 	# remove the plugins for non-Gentoo package managers
 	rm "${D}"/usr/libexec/munin/plugins/{apt{,_all},yum} || die
@@ -213,7 +215,7 @@ EOF
 	# Use a simpler pid file to avoid trouble with /run in tmpfs. The
 	# munin-node service is ran as user root, and only later drops
 	# privileges.
-	sed -i -e 's:/var/run/munin/munin-node.pid:/var/run/munin-node.pid:' \
+	sed -i -e 's:/run/munin/munin-node.pid:/run/munin-node.pid:' \
 		"${D}"/etc/munin/munin-node.conf || die
 
 	keepdir /var/spool/munin-async/.ssh
@@ -227,8 +229,10 @@ EOF
 		# the non-minimal install...
 		rm "${D}"/usr/libexec/munin/plugins/munin_stats
 	else
-		exeinto /etc/local.d/
-		newexe "${FILESDIR}"/localstart-munin 50munin.start
+		dodir /usr/lib/tmpfiles.d
+		cat - > "${D}"/usr/lib/tmpfiles.d/${CATEGORY}:${PN}:${SLOT}.conf <<EOF
+d /run/munin 0700 munin munin - -
+EOF
 
 		# remove font files so that we don't have to keep them around
 		rm "${D}"/usr/libexec/${PN}/*.ttf || die
@@ -376,11 +380,11 @@ pkg_postinst() {
 		fi
 	fi
 
-	# we create this here as we don't want Portage to check /var/run
+	# we create this here as we don't want Portage to check /run
 	# symlinks but we still need this to be present before the reboot.
-	if ! use minimal && ! [[ -d "${ROOT}"/var/run/munin ]]; then
-		mkdir "${ROOT}"/var/run/munin
-		chown munin:munin "${ROOT}"/var/run/munin
-		chmod 0750 "${ROOT}"/var/run/munin
+	if ! use minimal && ! [[ -d "${ROOT}"/run/munin ]]; then
+		mkdir "${ROOT}"/run/munin
+		chown munin:munin "${ROOT}"/run/munin
+		chmod 0700 "${ROOT}"/run/munin
 	fi
 }
