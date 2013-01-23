@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htmlc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmlc/ChangeLog,v 1.4 2012/07/24 10:51:37 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmlc/ChangeLog,v 1.5 2013/01/23 00:50:46 aballier Exp $
+
+  23 Jan 2013; Alexis Ballier <aballier@gentoo.org> htmlc-2.21.0.ebuild,
+  +files/htmlc-2.21.0-werror.patch:
+  disable werror (fix build with ocaml-4), bug #442828
 
   24 Jul 2012; Johannes Huber <johu@gentoo.org> htmlc-2.21.0.ebuild:
   Stable for x86, wrt bug #416525

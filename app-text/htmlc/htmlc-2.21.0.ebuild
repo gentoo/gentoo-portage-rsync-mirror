@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmlc/htmlc-2.21.0.ebuild,v 1.4 2012/07/24 10:51:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmlc/htmlc-2.21.0.ebuild,v 1.5 2013/01/23 00:50:46 aballier Exp $
 
 EAPI=3
 
@@ -22,6 +22,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	has_version '>=dev-lang/ocaml-3.12' && epatch "${FILESDIR}/${P}-ocaml312.patch"
+	epatch "${FILESDIR}/${P}-werror.patch"
 }
 
 src_configure() {
