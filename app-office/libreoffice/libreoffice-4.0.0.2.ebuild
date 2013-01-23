@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.0.1.ebuild,v 1.3 2013/01/15 15:45:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.0.2.ebuild,v 1.1 2013/01/23 15:27:24 scarabeus Exp $
 
 EAPI=5
 
@@ -73,8 +73,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="bluetooth +branding +cups dbus debug eds gnome gstreamer +gtk
-gtk3 jemalloc kde mysql nsplugin odk opengl postgres telepathy test +vba
-+webdav"
+gtk3 jemalloc kde mysql odk opengl postgres telepathy test +vba +webdav"
 
 LO_EXTS="nlpsolver presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -126,7 +125,6 @@ COMMON_DEPEND="
 	>=media-libs/libcdr-0.0.5
 	media-libs/libvisio
 	>=net-misc/curl-7.21.4
-	net-misc/npapi-sdk
 	net-nds/openldap
 	sci-mathematics/lpsolve
 	virtual/jpeg
@@ -183,7 +181,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 PDEPEND="
-	=app-office/libreoffice-l10n-3.6*
+	=app-office/libreoffice-l10n-4.0*
 "
 
 # FIXME: cppunit should be moved to test conditional
@@ -236,7 +234,6 @@ REQUIRED_USE="
 	libreoffice_extensions_scripting-beanshell? ( java )
 	libreoffice_extensions_scripting-javascript? ( java )
 	libreoffice_extensions_wiki-publisher? ( java )
-	nsplugin? ( gtk )
 "
 
 CHECKREQS_MEMORY="512M"
@@ -292,7 +289,8 @@ src_unpack() {
 			mypv=${PV/.9999}
 			[[ ${mypv} != ${PV} ]] && EGIT_BRANCH="${PN}-${mypv/./-}"
 			EGIT_PROJECT="${PN}/${mod}"
-			EGIT_SOURCEDIR="${WORKDIR}/${PN}-${mod}-${PV}"
+			EGIT_SOURCEDIR="${WORKDIR}/${P}"
+			[[ ${mod} != core ]] && EGIT_SOURCEDIR="${WORKDIR}/${PN}-${mod}-${PV}"
 			EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${mod}"
 			EGIT_NOUNPACK="true"
 			git-2_src_unpack
@@ -415,8 +413,6 @@ src_configure() {
 	# --disable-gnome-vfs: old gnome virtual fs support
 	# --disable-kdeab: kde3 adressbook
 	# --disable-kde: kde3 support
-	# --disable-mozilla: mozilla internal is for contact integration, never
-	#   worked on linux
 	# --disable-pch: precompiled headers cause build crashes
 	# --disable-rpath: relative runtime path is not desired
 	# --disable-systray: quickstarter does not actually work at all so do not
@@ -424,7 +420,6 @@ src_configure() {
 	# --disable-zenity: disable build icon
 	# --enable-extension-integration: enable any extension integration support
 	# --without-{afms,fonts,myspell-dicts,ppsd}: prevent install of sys pkgs
-	# --without-stlport: disable deprecated extensions framework
 	# --disable-ext-report-builder: too much java packages pulled in
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}/" \
@@ -452,7 +447,6 @@ src_configure() {
 		--disable-ext-report-builder \
 		--disable-kdeab \
 		--disable-kde \
-		--disable-mozilla \
 		--disable-online-update \
 		--disable-pch \
 		--disable-rpath \
@@ -474,7 +468,6 @@ src_configure() {
 		--without-afms \
 		--without-fonts \
 		--without-myspell-dicts \
-		--without-stlport \
 		--without-system-mozilla \
 		--without-help \
 		--with-helppack-integration \
@@ -491,7 +484,6 @@ src_configure() {
 		$(use_enable gtk3) \
 		$(use_enable kde kde4) \
 		$(use_enable mysql ext-mysql-connector) \
-		$(use_enable nsplugin) \
 		$(use_enable odk) \
 		$(use_enable opengl) \
 		$(use_enable postgres postgresql-sdbc) \
@@ -548,7 +540,7 @@ src_install() {
 	fi
 
 	# symlink the nsplugin to proper location
-	use nsplugin && inst_plugin /usr/$(get_libdir)/libreoffice/program/libnpsoplugin.so
+	use gtk && inst_plugin /usr/$(get_libdir)/libreoffice/program/libnpsoplugin.so
 
 	# Hack for offlinehelp, this needs fixing upstream at some point.
 	# It is broken because we send --without-help
