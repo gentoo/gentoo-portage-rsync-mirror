@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.9.92.ebuild,v 1.5 2013/01/23 04:53:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-2.0.0.ebuild,v 1.1 2013/01/23 04:53:18 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -18,7 +18,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples +introspection"
 
 # FIXME: Support for gstreamer-basevideo-0.10 (HW decoder support) is automagic
-RDEPEND="
+COMMON_DEPEND="
 	>=dev-libs/glib-2.20:2
 	>=media-libs/clutter-1.6.0:1.0=[introspection?]
 	>=media-libs/cogl-1.8:1.0=[introspection?]
@@ -27,7 +27,11 @@ RDEPEND="
 	media-libs/gst-plugins-base:1.0[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-0.6.8 )
 "
-DEPEND="${RDEPEND}
+# uses goom from gst-plugins-good
+RDEPEND="${COMMON_DEPEND}
+	media-libs/gst-plugins-good:1.0
+"
+DEPEND="${COMMON_DEPEND}
 	>=dev-util/gtk-doc-am-1.8
 	=dev-lang/python-2*
 	virtual/pkgconfig
@@ -41,9 +45,6 @@ pkg_setup() {
 src_prepare() {
 	DOCS="AUTHORS NEWS README"
 	EXAMPLES="examples/{*.c,*.png,README}"
-	G2CONF="${G2CONF}
-		--disable-maintainer-flags
-		$(use_enable introspection)"
 
 	# Make doc parallel installable
 	cd "${S}"/doc/reference
@@ -60,6 +61,12 @@ src_prepare() {
 
 	cd "${S}"
 	gnome2_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure \
+		--disable-maintainer-flags \
+		$(use_enable introspection)
 }
 
 src_compile() {

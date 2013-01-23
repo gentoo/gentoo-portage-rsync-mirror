@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.4.6.ebuild,v 1.7 2012/12/06 00:08:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.4.6.ebuild,v 1.8 2013/01/23 04:53:18 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -11,7 +11,7 @@ CLUTTER_LA_PUNT="yes"
 # no PYTHON_DEPEND, python2 is just a build-time dependency
 inherit autotools python gnome2 clutter gnome.org
 
-DESCRIPTION="GStreamer Integration library for Clutter"
+DESCRIPTION="GStreamer integration library for Clutter"
 
 SLOT="1.0"
 KEYWORDS="~alpha amd64 ~ppc x86"
