@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r6.ebuild,v 1.11 2013/01/21 22:18:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r6.ebuild,v 1.12 2013/01/23 14:07:22 idella4 Exp $
 
 EAPI="3"
 
@@ -78,6 +78,8 @@ QA_EXECSTACK="usr/share/xen/qemu/openbios-sparc32
 	usr/share/xen/qemu/openbios-sparc64"
 
 pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
 	export "CONFIG_LOMOUNT=y"
 
 	if use qemu; then
@@ -231,6 +233,7 @@ src_compile() {
 	fi
 
 	emake -C docs man-pages || die "make man-pages failed"
+	python_convert_shebangs -r 2 "${D}"
 }
 
 src_install() {

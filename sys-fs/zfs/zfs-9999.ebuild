@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.41 2013/01/23 13:50:21 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.42 2013/01/23 14:20:17 ryao Exp $
 
 EAPI="4"
 
@@ -96,7 +96,7 @@ src_install() {
 
 pkg_postinst() {
 
-	if [ ${PV} = "9999" ]
+	if ! use kernel-builtin && [ ${PV} = "9999" ]
 	then
 		einfo "Adding ${P} to the module database to ensure that the"
 		einfo "kernel modules and userland utilities stay in sync."
@@ -115,7 +115,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if [ ${PV} = "9999" ]
+	if ! use kernel-builtin && [ ${PV} = "9999" ]
 	then
 		remove_moduledb
 	fi

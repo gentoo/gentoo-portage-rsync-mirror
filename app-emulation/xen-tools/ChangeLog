@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.125 2013/01/21 22:18:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.126 2013/01/23 14:07:22 idella4 Exp $
+
+  23 Jan 2013; Ian Delaney <idella4@gentoo.org> xen-tools-4.1.1-r6.ebuild:
+  patch from razamatan applied, fixes Bug #413493
 
   21 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
   xen-tools-4.1.1-r6.ebuild, xen-tools-4.1.2-r2.ebuild,

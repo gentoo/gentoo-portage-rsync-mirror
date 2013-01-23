@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.71 2013/01/21 16:03:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.72 2013/01/23 14:12:44 flameeyes Exp $
+
+*hwids-20130123 (23 Jan 2013)
+
+  23 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org> +hwids-20130123.ebuild,
+  -hwids-20130119.ebuild:
+  Version bump; thanks to Michał Bartoszkiewicz for fixing the files'
+  permissions (now they are no longer executable).
 
   21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> hwids-20130114.ebuild:
   Stable for sparc, wrt bug #452554
