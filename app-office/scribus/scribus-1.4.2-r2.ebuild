@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.2-r1.ebuild,v 1.2 2013/01/22 08:40:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.2-r2.ebuild,v 1.1 2013/01/23 12:35:38 jlec Exp $
 
 EAPI=5
 
@@ -90,8 +90,8 @@ src_configure() {
 		-DWANT_QT3SUPPORT=OFF
 		-DGENTOOVERSION=${PVR}
 		-DWANT_GUI_LANG=${langs#,}
-		$(cmake-utils_use_has aspell ASPELL)
-		$(cmake-utils_use_has pdf PODOFO)
+		$(cmake-utils_use_with aspell ASPELL)
+		$(cmake-utils_use_with pdf PODOFO)
 		$(cmake-utils_use_want cairo)
 		$(cmake-utils_use_want cups CUPS)
 		$(cmake-utils_use_want debug DEBUG)

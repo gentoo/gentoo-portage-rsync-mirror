@@ -1,6 +1,12 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.171 2013/01/22 08:40:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.172 2013/01/23 12:35:38 jlec Exp $
+
+*scribus-1.4.2-r2 (23 Jan 2013)
+
+  23 Jan 2013; Justin Lecher <jlec@gentoo.org> -scribus-1.4.2-r1.ebuild,
+  +scribus-1.4.2-r2.ebuild:
+  Use correct WITH_* for cmake options
 
   22 Jan 2013; Justin Lecher <jlec@gentoo.org> scribus-1.4.2-r1.ebuild,
   +files/scribus-1.4.2-cups.patch, metadata.xml:
