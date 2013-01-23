@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7397 2013/01/23 20:13:57 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7398 2013/01/23 21:08:58 rich0 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Jan 2013; Richard Freeman <rich0@gentoo.org> package.mask:
+  Fix mythweb package name.
 
   23 Jan 2013; Richard Freeman <rich0@gentoo.org> package.mask:
   Fix date on mythplugins, and mask mythweb for testing.

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14403 2013/01/23 20:13:57 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14404 2013/01/23 21:08:58 rich0 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -33,7 +33,7 @@
 
 # Richard Freeman <rich0@gentoo.org> (23 Jan 2013)
 # Masked for testing - all of mythtv to be unmasked soon...
->=media-plugins/mythplugins-0.26
+>=www-apps/mythweb-0.26
 
 # Richard Freeman <rich0@gentoo.org> (23 Jan 2013)
 # Masked until mythweb is updated to 0.26, but works
