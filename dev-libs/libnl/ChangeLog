@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.135 2013/01/17 15:34:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.136 2013/01/23 17:20:20 jer Exp $
+
+*libnl-3.2.20 (23 Jan 2013)
+
+  23 Jan 2013; Jeroen Roovers <jer@gentoo.org> +libnl-3.2.20.ebuild,
+  +files/libnl-3.2.20-cache-api.patch,
+  +files/libnl-3.2.20-rtnl_tc_get_ops.patch:
+  Version bump.
 
 *libnl-3.2.19 (17 Jan 2013)
 

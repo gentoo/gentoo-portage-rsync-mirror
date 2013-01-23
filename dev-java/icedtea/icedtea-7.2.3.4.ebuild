@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.3.4.ebuild,v 1.1 2013/01/16 21:21:38 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.3.4.ebuild,v 1.2 2013/01/23 17:15:27 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -9,7 +9,7 @@
 
 EAPI="4"
 
-inherit java-pkg-2 java-vm-2 pax-utils prefix versionator virtualx
+inherit java-pkg-2 java-vm-2 pax-utils prefix versionator virtualx flag-o-matic
 
 ICEDTEA_VER=$(get_version_component_range 2-)
 ICEDTEA_BRANCH=$(get_version_component_range 2-3)
@@ -188,10 +188,17 @@ src_configure() {
 	config="${config} --${bootstrap}-bootstrap"
 
 	# Always use HotSpot as the primary VM if available. #389521 #368669 #357633 ...
-	# Otherwise use JamVM as it's the only possibility right now
-	if ! has "${ARCH}" amd64 sparc x86; then
-		config="${config} --enable-jamvm"
-	fi
+	case "${ARCH}" in
+		amd64|sparc|x86)
+			;;
+		arm)
+			config+=" --enable-jamvm" #IT1266
+			replace-flags -Os -O2 #BGO453612 #IT1267
+			;;
+		*)
+			config+=" --enable-jamvm"
+			;;
+	esac
 
 	# OpenJDK-specific parallelism support. Bug #389791, #337827
 	# Implementation modified from waf-utils.eclass

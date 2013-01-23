@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.3.1.ebuild,v 1.10 2012/09/09 11:43:04 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.3.1.ebuild,v 1.11 2013/01/23 17:12:01 pinkbyte Exp $
 
 EAPI="2"
 
 inherit webapp eutils depend.php confutils
 
 DESCRIPTION="Web based (PHP Script) photo album viewer/creator"
-HOMEPAGE="http://gallery.sourceforge.net/"
+HOMEPAGE="http://galleryproject.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-full.tar.gz"
 
 LICENSE="GPL-2"

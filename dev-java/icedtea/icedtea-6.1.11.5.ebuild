@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.11.5.ebuild,v 1.1 2012/10/18 15:42:21 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.11.5.ebuild,v 1.2 2013/01/23 17:15:27 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -9,7 +9,7 @@
 
 EAPI="4"
 
-inherit autotools java-pkg-2 java-vm-2 pax-utils prefix versionator virtualx
+inherit autotools java-pkg-2 java-vm-2 pax-utils prefix versionator virtualx flag-o-matic
 
 ICEDTEA_PKG=${PN}$(replace_version_separator 1 -)
 OPENJDK_BUILD="24"
@@ -192,18 +192,22 @@ src_configure() {
 	fi
 
 	# Always use HotSpot as the primary VM if available. #389521 #368669 #357633 ...
-	# Otherwise use CACAO
-	if ! has "${ARCH}" amd64 sparc x86; then
-		enable_cacao=yes
-	elif use cacao; then
-		ewarn 'Enabling CACAO on an architecture with HotSpot support; issues may result.'
-		ewarn 'If so, please rebuild with USE="-cacao"'
-		enable_cacao=yes
-	fi
-
-	if [[ ${enable_cacao} ]]; then
-		config="${config} --enable-cacao"
-	fi
+	case "${ARCH}" in
+		amd64|sparc|x86)
+			if use cacao; then
+				ewarn 'Enabling CACAO on an architecture with HotSpot support; issues may result.'
+				ewarn 'If so, please rebuild with USE="-cacao"'
+				config+=" --enable-cacao"
+			fi
+			;;
+		arm)
+			config+=" --enable-jamvm" #IT1266
+			replace-flags -Os -O2 #BGO453612 #IT1267
+			;;
+		*)
+			config+=" --enable-cacao"
+			;;
+	esac
 
 	# OpenJDK-specific parallelism support. Bug #389791, #337827
 	# Implementation modified from waf-utils.eclass

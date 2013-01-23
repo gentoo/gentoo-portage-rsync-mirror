@@ -5687,6 +5687,7 @@ sys-libs/zlib:minizip - include the minizip library for quick and dirty zip extr
 sys-power/cpufreqd:nforce2 - Enable support for nforce2 voltage settings plug-in
 sys-power/cpufreqd:nvidia - Enable nvidia overclocking (media-video/nvclock) plug-in
 sys-power/cpufreqd:pmu - Enable Power Management Unit plug-in
+sys-power/cpupower:cpufreq_bench - Build and install the cpufreq_bench binary
 sys-power/nvclock:gtk - Install the GTK+ based graphical interface
 sys-power/nvclock:nvcontrol - Add NVCONTROL support for OpenGL options
 sys-power/phctool:sudo - Enable support for sudo to run gui from non-root user

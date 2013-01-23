@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.188 2012/09/09 11:43:04 olemarkus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.189 2013/01/23 17:12:01 pinkbyte Exp $
+
+  23 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> gallery-2.3.1.ebuild:
+  Change homepage, wrt bug #421761
 
   09 Sep 2012; Ole Markus With <olemarkus@gentoo.org> gallery-2.3.1.ebuild:
   Fix dependencies to handle also php 5.4 with sqlite. Cleaned up deps related
