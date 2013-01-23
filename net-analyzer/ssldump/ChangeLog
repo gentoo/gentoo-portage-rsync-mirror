@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ssldump
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ChangeLog,v 1.23 2011/12/09 16:15:55 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ChangeLog,v 1.24 2013/01/23 09:31:45 pinkbyte Exp $
+
+*ssldump-0.9-r2 (23 Jan 2013)
+
+  23 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> +ssldump-0.9-r2.ebuild,
+  +files/ssldump-0.9-prefix-fix.patch:
+  Revision bump: EAPI 5, utilize autotools-utils eclass, add support for
+  installation in Prefix, wrt bug #414359, patch by Benda Xu
 
   09 Dec 2011; Jeroen Roovers <jer@gentoo.org> ssldump-0.9-r1.ebuild:
   sed must die().

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.6 2013/01/18 15:00:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.8 2013/01/23 09:49:30 jlec Exp $
 
 # @ECLASS: intel-sdp.eclass
 # @MAINTAINER:
@@ -259,6 +259,12 @@ intel-sdp_pkg_pretend() {
 
 	: ${CHECKREQS_DISK_BUILD:=256M}
 	check-reqs_pkg_pretend
+
+	if echo ${INTEL_LICENSE_FILE} | grep -q @; then
+		einfo "Looks like you are using following license server:"
+		einfo "   ${INTEL_LICENSE_FILE}"
+		return 0
+	fi
 
 	dirs=(
 		"${INTEL_SDP_EDIR}/licenses"

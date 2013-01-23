@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/kombu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.15 2013/01/08 22:07:41 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.16 2013/01/23 09:31:55 iksaif Exp $
+
+*kombu-2.5.4-r1 (23 Jan 2013)
+
+  23 Jan 2013; Corentin Chary <iksaif@gentoo.org> +kombu-2.5.4-r1.ebuild,
+  kombu-2.5.4.ebuild:
+  Remove unittest2 dependency.
 
 *kombu-2.5.4 (08 Jan 2013)
 
