@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/cado-nfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cado-nfs/ChangeLog,v 1.1 2013/01/13 10:44:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cado-nfs/ChangeLog,v 1.2 2013/01/23 10:08:54 patrick Exp $
+
+  23 Jan 2013; Patrick Lauer <patrick@gentoo.org> cado-nfs-1.1.ebuild:
+  Adding blocker for #453044
 
 *cado-nfs-1.1 (13 Jan 2013)
 

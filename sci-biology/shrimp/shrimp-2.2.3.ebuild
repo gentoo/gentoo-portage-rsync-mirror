@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/shrimp-2.2.3.ebuild,v 1.1 2012/10/18 18:17:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/shrimp-2.2.3.ebuild,v 1.2 2013/01/23 10:06:29 patrick Exp $
 
 EAPI=4
 
@@ -18,6 +18,10 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="custom-cflags"
+
+# file collision on /usr/bin/utils #453044
+DEPEND="!sci-mathematics/cado-nfs"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/SHRiMP_${MY_PV}
 
