@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-0.1.12a-r1.ebuild,v 1.3 2011/07/18 01:50:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-0.1.18-r1.ebuild,v 1.1 2013/01/23 10:51:13 jlec Exp $
 
-EAPI=2
+EAPI=5
 
-inherit toolchain-funcs multilib
+inherit multilib toolchain-funcs
 
 DESCRIPTION="Utilities for SAM (Sequence Alignment/Map), a format for large nucleotide sequence alignments"
 HOMEPAGE="http://samtools.sourceforge.net/"
@@ -17,31 +17,36 @@ KEYWORDS="~amd64 ~x86 ~x64-macos"
 
 src_prepare() {
 	sed \
+		-e '/CC/s:=:?=:g' \
+		-e "/LIBCURSES/s:=.*$:= $(pkg-config --libs ncurses):g" \
 		-e '/^CFLAGS=/d' \
 		-e "s/\$(CC) \$(CFLAGS)/& \$(LDFLAGS)/g" \
 		-e "s/-shared/& \$(LDFLAGS)/" \
 		-i "${S}"/{Makefile,misc/Makefile} || die #358563
 	sed -i 's~/software/bin/python~/usr/bin/env python~' "${S}"/misc/varfilter.py || die
+
+	tc-export CC
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" dylib || die
-	emake CC="$(tc-getCC)" || die
+	emake dylib
+	emake
 }
 
 src_install() {
-	dobin samtools || die
-	dobin $(find misc -type f -executable) || die
-	dolib.so libbam.so.1 || die
-	dosym libbam.so.1 /usr/$(get_libdir)/libbam.so || die
-	insinto /usr/include/bam
-	doins bam.h bgzf.h faidx.h kaln.h khash.h kprobaln.h kseq.h ksort.h sam.h || die
+	dobin samtools $(find misc -type f -executable)
 
-	doman ${PN}.1 || die
+	dolib.so libbam.so.1
+	dosym libbam.so.1 /usr/$(get_libdir)/libbam.so
+
+	insinto /usr/include/bam
+	doins bam.h bgzf.h faidx.h kaln.h khash.h kprobaln.h kseq.h ksort.h sam.h
+
+	doman ${PN}.1
 	dodoc AUTHORS ChangeLog NEWS
 
 	if use examples; then
 		insinto /usr/share/${PN}
-		doins -r examples || die
+		doins -r examples
 	fi
 }
