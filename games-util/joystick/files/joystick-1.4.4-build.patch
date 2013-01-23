@@ -1,0 +1,41 @@
+diff -ru linuxconsoletools-1.4.4.orig/docs/Makefile linuxconsoletools-1.4.4/docs/Makefile
+--- linuxconsoletools-1.4.4.orig/docs/Makefile	2011-12-15 10:49:01.000000000 -0500
++++ linuxconsoletools-1.4.4/docs/Makefile	2013-01-23 01:09:34.963691526 -0500
+@@ -20,13 +20,17 @@
+ # 02110-1301 USA.
+ 
+ MANPAGES	= inputattach.1 jstest.1 jscal.1 fftest.1 \
+-		  ffmvforce.1 ffset.1 ffcfstress.1 jscal-store.1 \
++		  ffset.1 ffcfstress.1 jscal-store.1 \
+ 		  jscal-restore.1
+ 
++ifneq ($(USE_SDL),no)
++MANPAGES += ffmvforce.1
++endif
++
+ PREFIX          ?= /usr/local
+ 
+ install:
+ 	install -d $(DESTDIR)$(PREFIX)/share/man/man1
+-	install $(MANPAGES) $(DESTDIR)$(PREFIX)/share/man/man1
++	install -m 644 $(MANPAGES) $(DESTDIR)$(PREFIX)/share/man/man1
+ 
+ .PHONY: install
+diff -ru linuxconsoletools-1.4.4.orig/utils/Makefile linuxconsoletools-1.4.4/utils/Makefile
+--- linuxconsoletools-1.4.4.orig/utils/Makefile	2012-09-05 02:34:53.000000000 -0400
++++ linuxconsoletools-1.4.4/utils/Makefile	2013-01-23 01:11:02.112760453 -0500
+@@ -27,9 +27,13 @@
+ 
+ CFLAGS		?= -g -O2 -Wall
+ 
+-PROGRAMS	= inputattach jstest jscal fftest ffmvforce ffset \
++PROGRAMS	= inputattach jstest jscal fftest ffset \
+ 		  ffcfstress jscal-restore jscal-store
+ 
++ifneq ($(USE_SDL),no)
++PROGRAMS += ffmvforce
++endif
++
+ PREFIX          ?= /usr/local
+ 
+ compile: $(PROGRAMS)
