@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/redis-py-2.7.2-r1.ebuild,v 1.1 2013/01/13 12:28:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/redis-py-2.7.2-r1.ebuild,v 1.2 2013/01/23 15:57:13 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} pypy{1_9,2_0} )
@@ -41,15 +41,13 @@ python_compile() {
 	distutils-r1_python_compile
 
 	if use test; then
-		cp -r tests-hidden "${BUILD_DIR}"/lib/tests || die
+		cp -r tests-hidden "${BUILD_DIR}"/tests || die
 	fi
 }
 
 src_test() {
 #	local DISTUTILS_NO_PARALLEL_BUILD=1
 
-	# moved to BUILD_DIR
-	rm -rf tests
 	distutils-r1_src_test
 }
 
@@ -58,7 +56,7 @@ python_test() {
 	local sock=${T}/redis-${EPYTHON}.sock
 
 	sed -i -e "s:port=6379:unix_socket_path=\"${sock}\":" \
-		"${BUILD_DIR}"/lib/tests/*.py || die
+		"${BUILD_DIR}"/tests/*.py || die
 
 	# XXX: find a way to make sure it is killed
 
@@ -67,6 +65,7 @@ python_test() {
 		--port 0 \
 		--unixsocket "${sock}" \
 		--daemonize yes || die
-	esetup.py test
+	PYTHONPATH="${PYTHONPATH}:${BUILD_DIR}" \
+		esetup.py test
 	kill "$(<"${pidfile}")"
 }
