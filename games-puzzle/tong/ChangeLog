@@ -1,6 +1,14 @@
 # ChangeLog for games-puzzle/tong
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/ChangeLog,v 1.7 2009/04/06 21:57:42 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/ChangeLog,v 1.8 2013/01/23 22:28:10 mr_bones_ Exp $
+
+*tong-1.2 (23 Jan 2013)
+
+  23 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/tong-1.2-datadir.patch, +files/tong-1.2-fps.patch,
+  +files/tong-1.2-makefile.patch, +tong-1.2.ebuild, files/tong-1.0-fps.patch,
+  files/tong-1.0-makefile.patch:
+  version bump (bug #452282)
 
   06 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
   +files/tong-1.0-fps.patch, -files/1.0-makefile.patch,
@@ -27,4 +35,3 @@
   01 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +tong-1.0.ebuild:
   initial commit - ebuild submitted by eGore via bug #76950
-

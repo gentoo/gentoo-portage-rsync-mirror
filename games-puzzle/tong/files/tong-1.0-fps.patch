@@ -1,5 +1,5 @@
---- tong.cpp.ori	2007-10-15 19:27:54.000000000 +0200
-+++ tong.cpp	2007-10-15 19:36:51.000000000 +0200
+--- tong.cpp.ori
++++ tong.cpp
 @@ -54,6 +54,8 @@
  #define MENUMOUSE_THRESHOLD 40
  #define DEMO_TIME           8000
