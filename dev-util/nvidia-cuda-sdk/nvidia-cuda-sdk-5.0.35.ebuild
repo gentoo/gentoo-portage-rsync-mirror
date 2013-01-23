@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-5.0.35.ebuild,v 1.3 2013/01/21 13:30:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-5.0.35.ebuild,v 1.4 2013/01/23 07:15:32 jlec Exp $
 
 EAPI=4
 
@@ -111,7 +111,7 @@ src_install() {
 	ebegin "Cleaning before installation..."
 	for i in ${crap}; do
 		if [[ -e ${i} ]]; then
-			find ${crap} -delete || die
+			find ${i} -delete || die
 		fi
 	done
 	find . \( -name Makefile -o -name "*.mk" \) -delete || die

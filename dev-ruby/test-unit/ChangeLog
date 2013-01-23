@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.75 2013/01/21 16:00:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.76 2013/01/23 07:30:28 graaff Exp $
+
+  23 Jan 2013; Hans de Graaff <graaff@gentoo.org> -test-unit-2.5.1-r1.ebuild,
+  -test-unit-2.5.2.ebuild:
+  Cleanup.
 
   21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> test-unit-2.5.3.ebuild:
   Stable for sparc, wrt bug #449558
