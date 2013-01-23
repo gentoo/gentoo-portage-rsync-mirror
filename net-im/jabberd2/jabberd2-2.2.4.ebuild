@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.4.ebuild,v 1.6 2011/11/02 09:18:39 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.4.ebuild,v 1.7 2013/01/23 11:41:03 pinkbyte Exp $
 
 inherit db-use eutils flag-o-matic pam
 
 DESCRIPTION="Open Source Jabber Server"
-HOMEPAGE="http://jabberd2.xiaoka.com/"
+HOMEPAGE="http://jabberd2.org"
 SRC_URI="http://ftp.xiaoka.com/${PN}/releases/jabberd-${PV}.tar.bz2"
 
 SLOT="0"

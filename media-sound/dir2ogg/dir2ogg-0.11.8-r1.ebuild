@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.11.8-r1.ebuild,v 1.1 2010/10/10 06:04:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.11.8-r1.ebuild,v 1.2 2013/01/23 11:51:13 ssuominen Exp $
 
 EAPI=2
 inherit versionator
@@ -22,7 +22,8 @@ RDEPEND=">=dev-lang/python-2.5
 	>=media-libs/mutagen-1.11
 	aac? ( || ( media-libs/faad2
 		media-video/mplayer ) )
-	cdparanoia? ( media-sound/cdparanoia )
+	cdparanoia? ( || ( dev-libs/libcdio-paranoia
+		media-sound/cdparanoia ) )
 	flac? ( || ( media-libs/flac
 		media-video/mplayer ) )
 	mac? ( || ( media-sound/mac

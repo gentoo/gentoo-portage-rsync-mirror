@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.5.4.ebuild,v 1.2 2012/11/25 09:32:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.5.4.ebuild,v 1.3 2013/01/23 11:52:34 ssuominen Exp $
 
 EAPI=5
 
@@ -22,7 +22,9 @@ RDEPEND="media-sound/cd-discid
 		media-libs/faac
 		media-video/atomicparsley
 		)
-	cdparanoia? ( media-sound/cdparanoia )
+	cdparanoia? (
+		|| ( dev-libs/libcdio-paranoia media-sound/cdparanoia )
+		)
 	cdr? ( virtual/cdrtools )
 	flac? ( media-libs/flac )
 	id3tag? (

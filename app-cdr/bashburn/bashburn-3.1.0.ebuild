@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-3.1.0.ebuild,v 1.5 2012/04/01 15:44:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-3.1.0.ebuild,v 1.6 2013/01/23 11:56:17 ssuominen Exp $
 
 EAPI=4
 
@@ -20,9 +20,9 @@ RDEPEND="${DEPEND}
 	app-cdr/cdrdao
 	app-cdr/dvd+rw-tools
 	media-libs/flac
-	media-sound/cdparanoia
+	|| ( dev-libs/libcdio-paranoia media-sound/cdparanoia )
 	media-sound/lame
-	media-sound/mpg123
+	|| ( media-sound/mpg123 media-sound/mpg321 )
 	media-sound/normalize
 	media-sound/vorbis-tools
 	virtual/cdrtools

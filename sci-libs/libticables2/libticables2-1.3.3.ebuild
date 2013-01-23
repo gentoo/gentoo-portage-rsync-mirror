@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables2/libticables2-1.3.3.ebuild,v 1.6 2012/08/04 15:02:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables2/libticables2-1.3.3.ebuild,v 1.7 2013/01/23 11:48:14 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils multilib
 
@@ -15,8 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc nls static-libs usb"
 
-RDEPEND="dev-libs/glib:2
-	usb? ( virtual/libusb:0 )
+RDEPEND="
+	dev-libs/glib:2
+	usb? ( virtual/libusb:1 )
 	nls? ( virtual/libintl )"
 
 DEPEND="${RDEPEND}
@@ -28,10 +29,11 @@ DOCS=( AUTHORS LOGO NEWS README ChangeLog docs/api.txt )
 src_configure() {
 	# --disable-libusb $(use_enable usb libusb10) would enable virtual/libusb:1
 	econf \
+		--disable-libusb \
 		--disable-rpath \
 		$(use_enable nls) \
 		$(use_enable static-libs static) \
-		$(use_enable usb libusb)
+		$(use_enable usb libusb10)
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.1.ebuild,v 1.3 2013/01/16 07:55:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.1.1.ebuild,v 1.1 2013/01/23 11:44:40 aballier Exp $
 
 EAPI="4"
 
@@ -30,11 +30,11 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 fi
 IUSE="
 	aac aacplus alsa amr avresample bindist bluray +bzip2 cdio celt
-	cpudetection debug doc +encode faac flite fontconfig frei0r gnutls gsm
-	+hardcoded-tables iec61883 ieee1394 jack jpeg2k libass libcaca libv4l
-	modplug mp3	network openal openssl opus oss pic pulseaudio rtmp schroedinger
-	sdl speex static-libs test theora threads truetype twolame v4l vaapi vdpau
-	vorbis vpx X x264 xvid +zlib
+	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
+	gnutls gsm +hardcoded-tables iec61883 ieee1394 jack jpeg2k libass libcaca
+	libv4l modplug mp3 network openal openssl opus oss pic pulseaudio rtmp
+	schroedinger sdl speex static-libs test theora threads truetype twolame v4l
+	vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -56,13 +56,14 @@ RDEPEND="
 	amr? ( media-libs/opencore-amr )
 	bluray? ( media-libs/libbluray )
 	bzip2? ( app-arch/bzip2 )
-	cdio? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
+	cdio? ( dev-libs/libcdio )
 	celt? ( >=media-libs/celt-0.11.1 )
 	encode? (
 		aac? ( media-libs/vo-aacenc )
 		aacplus? ( media-libs/libaacplus )
 		amr? ( media-libs/vo-amrwbenc )
 		faac? ( media-libs/faac )
+		fdk? ( media-libs/fdk-aac )
 		mp3? ( >=media-sound/lame-3.98.3 )
 		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
 		twolame? ( media-sound/twolame )
@@ -118,20 +119,13 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) !openssl )
 	libv4l? ( v4l )
 	fftools_cws2fws? ( zlib )
-	test? ( encode zlib )"
+	test? ( encode )"
 
 S=${WORKDIR}/${P/_/-}
 
 src_prepare() {
 	if [ "${PV%_p*}" != "${PV}" ] ; then # Snapshot
 		export revision=git-N-${FFMPEG_REVISION}
-	fi
-
-	if has_version dev-libs/libcdio-paranoia; then
-		sed -i \
-			-e 's:cdio/cdda.h:cdio/paranoia/cdda.h:' \
-			-e 's:cdio/paranoia.h:cdio/paranoia/paranoia.h:' \
-			configure libavdevice/libcdio.c || die
 	fi
 }
 
@@ -164,6 +158,7 @@ src_configure() {
 		done
 		use aacplus && myconf="${myconf} --enable-libaacplus --enable-nonfree"
 		use faac && myconf="${myconf} --enable-libfaac --enable-nonfree"
+		use fdk && myconf="${myconf} --enable-libfdk-aac --enable-nonfree"
 	else
 		myconf="${myconf} --disable-encoders"
 	fi
@@ -176,8 +171,6 @@ src_configure() {
 	use libcaca && myconf="${myconf} --enable-libcaca"
 	use openal && myconf="${myconf} --enable-openal"
 	# Indevs
-	# v4l1 is gone since linux-headers-2.6.38
-	myconf="${myconf} --disable-indev=v4l"
 	use v4l || myconf="${myconf} --disable-indev=v4l2"
 	for i in alsa oss jack ; do
 		use ${i} || myconf="${myconf} --disable-indev=${i}"
@@ -289,8 +282,12 @@ src_compile() {
 src_install() {
 	emake V=1 DESTDIR="${D}" install install-man
 
-	dodoc Changelog README INSTALL
-	dodoc -r doc/*
+	dodoc Changelog README CREDITS doc/*.txt doc/APIchanges doc/RELEASE_NOTES
+	use doc && dohtml -r doc/*
+	if use examples ; then
+		insinto "/usr/share/doc/${PF}/examples"
+		doins -r doc/examples/*
+	fi
 
 	for i in ${FFTOOLS} ; do
 		if use fftools_$i ; then

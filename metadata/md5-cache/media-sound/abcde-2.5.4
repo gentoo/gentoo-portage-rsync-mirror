@@ -5,7 +5,7 @@ HOMEPAGE=http://code.google.com/p/abcde/
 IUSE=aac cdparanoia cdr flac +id3tag +lame musicbrainz normalize replaygain speex vorbis
 KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
 LICENSE=GPL-2
-RDEPEND=media-sound/cd-discid net-misc/wget virtual/eject aac? ( media-libs/faac media-video/atomicparsley ) cdparanoia? ( media-sound/cdparanoia ) cdr? ( virtual/cdrtools ) flac? ( media-libs/flac ) id3tag? ( dev-python/eyeD3 >=media-sound/id3-0.12 media-sound/id3v2 ) lame? ( media-sound/lame ) musicbrainz? ( dev-perl/MusicBrainz-DiscID dev-perl/WebService-MusicBrainz perl-core/Digest-SHA virtual/perl-Getopt-Long ) normalize? ( >=media-sound/normalize-0.7.4 ) replaygain? ( vorbis? ( media-sound/vorbisgain ) lame? ( media-sound/mp3gain ) ) speex? ( media-libs/speex ) vorbis? ( media-sound/vorbis-tools )
+RDEPEND=media-sound/cd-discid net-misc/wget virtual/eject aac? ( media-libs/faac media-video/atomicparsley ) cdparanoia? ( || ( dev-libs/libcdio-paranoia media-sound/cdparanoia ) ) cdr? ( virtual/cdrtools ) flac? ( media-libs/flac ) id3tag? ( dev-python/eyeD3 >=media-sound/id3-0.12 media-sound/id3v2 ) lame? ( media-sound/lame ) musicbrainz? ( dev-perl/MusicBrainz-DiscID dev-perl/WebService-MusicBrainz perl-core/Digest-SHA virtual/perl-Getopt-Long ) normalize? ( >=media-sound/normalize-0.7.4 ) replaygain? ( vorbis? ( media-sound/vorbisgain ) lame? ( media-sound/mp3gain ) ) speex? ( media-libs/speex ) vorbis? ( media-sound/vorbis-tools )
 SLOT=0
 SRC_URI=http://abcde.googlecode.com/files/abcde-2.5.4.tar.gz
-_md5_=03a0353a5b7053dbcda963781f68a399
+_md5_=8d259855104d7612eed4c11ae8eeda21
