@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/activemodel-3.2.11.ebuild,v 1.2 2013/01/16 00:44:01 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/activemodel-3.2.11.ebuild,v 1.3 2013/01/23 20:32:50 flameeyes Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ RUBY_S="rails-rails-*/activemodel"
 
 ruby_add_rdepend "
 	~dev-ruby/activesupport-${PV}
-	>=dev-ruby/builder-3.0.0
+	>=dev-ruby/builder-3.0.0:3
 	>=dev-ruby/bcrypt-ruby-3.0.0"
 
 ruby_add_bdepend "

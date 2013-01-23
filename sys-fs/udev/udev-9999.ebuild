@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.158 2013/01/23 20:23:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.160 2013/01/23 20:47:04 ssuominen Exp $
 
 EAPI=4
 
@@ -383,11 +383,6 @@ pkg_preinst()
 		fi
 	done
 	preserve_old_lib /$(get_libdir)/libudev.so.0
-
-	if has_version '<sys-fs/udev-197'; then
-		net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
-		[[ -f ${net_rules} ]] || cp "${ROOT}"usr/share/doc/${PF}/gentoo/80-net-name-slot.rules "${net_rules}"
-	fi
 }
 
 # This function determines if a directory is a mount point.
@@ -403,6 +398,11 @@ ismounted()
 pkg_postinst()
 {
 	mkdir -p "${ROOT}"/run
+
+	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 197 ]]; then
+		net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
+		[[ -f ${net_rules} ]] || cp "${ROOT}"usr/share/doc/${PF}/gentoo/80-net-name-slot.rules "${net_rules}"
+	fi
 
 	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
 	# So try to remove it here (will only work if empty).

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.161 2013/01/20 06:00:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.162 2013/01/23 20:37:21 scarabeus Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -30,7 +30,7 @@ RDEPEND="app-accessibility/speech-dispatcher
 	>=dev-lang/v8-3.15.11.1:=
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat
-	>=dev-libs/icu-49.1.1-r1
+	>=dev-libs/icu-49.1.1-r1:=
 	dev-libs/jsoncpp
 	>=dev-libs/libevent-1.4.13
 	dev-libs/libxml2[icu]
