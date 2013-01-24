@@ -1,22 +1,25 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/modsecurity-crs-2.2.5.ebuild,v 1.6 2012/09/09 16:01:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/modsecurity-crs-2.2.7.ebuild,v 1.1 2013/01/24 15:26:38 flameeyes Exp $
 
-EAPI=4
+EAPI=5
+
+GITHUB_USER=SpiderLabs
+GITHUB_PROJECT=owasp-${PN}
 
 DESCRIPTION="Core Rule Set for ModSecurity"
 HOMEPAGE="http://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project"
-SRC_URI="mirror://sourceforge/mod-security/${PN}_${PV}.tar.gz"
+SRC_URI="https://github.com/${GITHUB_USER}/${GITHUB_PROJECT}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="lua geoip"
 
-RDEPEND=">=www-apache/mod_security-2.5.13-r1[lua?,geoip?]"
+RDEPEND=">=www-apache/mod_security-2.7[lua?,geoip?]"
 DEPEND=""
 
-S="${WORKDIR}/${PN}_${PV}"
+S="${WORKDIR}/${GITHUB_PROJECT}-${PV}"
 
 RULESDIR=/etc/modsecurity
 LUADIR=/usr/share/${PN}/lua
@@ -70,12 +73,14 @@ src_prepare() {
 
 src_install() {
 	insinto "${RULESDIR}"
-	doins -r base_rules optional_rules experimental_rules
+	# slr_rules as of 2.2.6 have broken IDs that don't work with
+	# ModSecurity 2.7, but the rules require 2.7 to begin with.
+	doins -r base_rules optional_rules experimental_rules #slr_rules
 
 	insinto "${LUADIR}"
 	doins lua/*.lua
 
-	dodoc CHANGELOG README
+	dodoc CHANGELOG README.md
 
 	(
 		cat - <<EOF
@@ -87,6 +92,10 @@ EOF
 		cat - <<EOF
 
 Include /etc/modsecurity/base_rules/*.conf
+
+# Include Trustwave SpiderLabs Research Team rules
+# Include /etc/modsecurity/slr_rules/*.conf
+# Not installed yet as of 2.2.6
 
 # Optionally use the other rules as well
 # Include /etc/modsecurity/optional_rules/*.conf

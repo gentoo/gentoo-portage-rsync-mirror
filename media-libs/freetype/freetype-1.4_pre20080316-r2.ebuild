@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.4_pre20080316-r2.ebuild,v 1.11 2012/05/20 12:45:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.4_pre20080316-r2.ebuild,v 1.12 2013/01/24 15:25:13 polynomial-c Exp $
 
 inherit autotools eutils libtool multilib
 
@@ -91,7 +91,7 @@ src_compile() {
 }
 
 src_install() {
-	use prefix || ED=${D}
+	use prefix || ED="${D}"
 	dodoc announce PATENTS README docs/*.txt docs/FAQ
 	use doc && dohtml -r docs
 
