@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/cpupower-3.8_rc4.ebuild,v 1.2 2013/01/24 13:57:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/cpupower-3.8_rc4.ebuild,v 1.3 2013/01/24 14:05:03 ssuominen Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs
@@ -22,6 +22,7 @@ IUSE="cpufreq_bench debug nls"
 RDEPEND="sys-apps/pciutils
 	!sys-apps/linux-misc-apps"
 DEPEND="${RDEPEND}
+	virtual/os-headers
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/linux-${PV/_/-}/tools/power/${PN}

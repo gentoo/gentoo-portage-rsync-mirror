@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sudsds/sudsds-1.0.1.ebuild,v 1.2 2013/01/07 11:58:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sudsds/sudsds-1.0.1.ebuild,v 1.3 2013/01/24 14:06:13 idella4 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -25,16 +25,19 @@ RDEPEND=""
 src_compile() {
 	distutils_src_compile
 
+	buildDocs() {
+		PYTHONPATH=$(ls -d build-${PYTHON_ABI}/lib/) \
+			epydoc -n "Sudsds - ${DESCRIPTION}" -o doc ${PN} || die "Generation of documentation failed"
+	}
+
 	if use doc; then
 		einfo "Generation of documentation"
-		epydoc -n "Sudsds - ${DESCRIPTION}" -o doc ${PN} || die "Generation of documentation failed"
+		python_execute_function -f buildDocs
 	fi
 }
 
 src_install() {
 	distutils_src_install
 
-	if use doc; then
-		dohtml -r doc/* || die "Installation of documentation failed"
-	fi
+	use doc && dohtml -r doc/
 }
