@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.8 2013/01/06 10:03:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.9 2013/01/24 04:38:08 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -107,6 +107,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.9.4.0-dhclient-ipv6.patch"
 	# https://bugzilla.gnome.org/show_bug.cgi?id=683932
 	epatch "${FILESDIR}/${PN}-0.9.6.0-daemon-signals.patch"
+	# https://bugzilla.gnome.org/show_bug.cgi?id=692423, bug #453736
+	epatch "${FILESDIR}/${PN}-0.9.6.4-object-api.h.patch"
 
 	epatch_user
 

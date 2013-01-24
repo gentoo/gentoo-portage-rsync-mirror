@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-1.2.6.ebuild,v 1.1 2013/01/17 19:28:26 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-1.2.6.ebuild,v 1.2 2013/01/24 04:50:08 jer Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://files.libburnia-project.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="acl cdio debug external-filters external-filters-setuid frontend-optional launch-frontend launch-frontend-setuid readline static-libs xattr zlib"
 
 REQUIRED_USE="frontend-optional? ( || ( launch-frontend launch-frontend-setuid ) )"

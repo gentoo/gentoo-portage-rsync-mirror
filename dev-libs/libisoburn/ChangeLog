@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.101 2013/01/17 19:28:26 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.102 2013/01/24 04:50:08 jer Exp $
+
+  24 Jan 2013; Jeroen Roovers <jer@gentoo.org> libisoburn-1.2.6.ebuild:
+  Marked ~hppa (bug #452728).
 
 *libisoburn-1.2.6 (17 Jan 2013)
 

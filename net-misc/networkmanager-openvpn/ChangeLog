@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager-openvpn
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/ChangeLog,v 1.34 2012/10/07 07:57:43 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/ChangeLog,v 1.35 2013/01/24 04:44:45 tetromino Exp $
+
+  24 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
+  Add myself to maintainer list to reflect reality.
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as talked with him.

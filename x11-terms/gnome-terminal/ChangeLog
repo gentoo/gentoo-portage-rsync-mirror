@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.255 2013/01/21 20:25:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.256 2013/01/24 04:56:18 tetromino Exp $
+
+*gnome-terminal-3.6.1-r2 (24 Jan 2013)
+
+  24 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-terminal-3.6.1-r2.ebuild,
+  +files/gnome-terminal-3.6.1-window-resize.patch:
+  Fix terminal window automatic resizing bug, thanks to Donnie Berkholz.
 
   21 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-terminal-3.6.1-r1.ebuild,

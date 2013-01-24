@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-4.8.3.ebuild,v 1.1 2013/01/04 03:31:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-4.8.3-r1.ebuild,v 1.1 2013/01/24 04:31:50 blueness Exp $
 
 EAPI="4"
 
@@ -67,10 +67,14 @@ src_install() {
 	exeinto /usr/bin
 	doexe usr/bin/SpiderOak
 
+	# inotify_dir_watcher needs to be marked executable, bug #453266
+	#chmod a+rx opt/SpiderOak/lib/inotify_dir_watcher
+
 	#install the executable
 	exeinto /opt/SpiderOak/lib
 	doexe opt/SpiderOak/lib/SpiderOak
-	rm -f opt/SpiderOak/lib/SpiderOak
+	doexe opt/SpiderOak/lib/inotify_dir_watcher
+	rm -f opt/SpiderOak/lib/{SpiderOak,inotify_dir_watcher}
 
 	#install the prebundled libraries
 	insinto /opt/SpiderOak

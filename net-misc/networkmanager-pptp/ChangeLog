@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager-pptp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/ChangeLog,v 1.27 2012/10/07 07:58:17 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/ChangeLog,v 1.28 2013/01/24 04:36:09 tetromino Exp $
+
+  24 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
+  Add myself to maintainer list to reflect reality.
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as talked with him.
