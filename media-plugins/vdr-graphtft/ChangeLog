@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-graphtft
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/ChangeLog,v 1.33 2012/10/31 20:02:45 hd_brummy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/ChangeLog,v 1.34 2013/01/24 13:05:14 aballier Exp $
+
+  24 Jan 2013; Alexis Ballier <aballier@gentoo.org> vdr-graphtft-0.3.4.ebuild,
+  +files/vdr-graphtft-0.3.4_ffmpeg-1.patch:
+  fix build with ffmpeg-1, part of bug #443228
 
   31 Oct 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-graphtft-0.3.6.ebuild, -files/vdr-graphtft-0.3.6_gcc-4.4.x.diff,

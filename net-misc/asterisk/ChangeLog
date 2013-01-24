@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.439 2013/01/15 14:36:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.440 2013/01/24 13:10:46 chainsaw Exp $
+
+*asterisk-11.2.1 (24 Jan 2013)
+*asterisk-1.8.20.1 (24 Jan 2013)
+
+  24 Jan 2013; Tony Vroon <chainsaw@gentoo.org> +files/1.8.0/asterisk.initd5,
+  -files/1.8.0/asterisk.initd, -files/1.8.0/asterisk.initd2,
+  -files/1.8.0/asterisk.initd3, +asterisk-1.8.20.1.ebuild,
+  +asterisk-11.2.1.ebuild:
+  Partial rewrite of the init script by Jaco Kroon addresses shortcomings
+  identified by Vincent Brillault in bug #445176. Upstream fixes include an
+  astcanary PID mix-up and a necessary reset of the RTP sequence counter when
+  SSRC changes.
 
 *asterisk-1.8.20.0 (15 Jan 2013)
 

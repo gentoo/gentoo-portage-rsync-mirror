@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.4.ebuild,v 1.2 2012/04/07 01:36:55 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.3.4.ebuild,v 1.3 2013/01/24 13:05:14 aballier Exp $
 
 EAPI="4"
 
@@ -39,7 +39,8 @@ PDEPEND="theme_deepblue? ( =x11-themes/vdrgraphtft-deepblue-0.3.1 )
 PATCHES=("${FILESDIR}/${P}_gentoo.diff"
 		"${FILESDIR}/${PN}-0.3.2.24_makefile.diff"
 		"${FILESDIR}/${P}_gcc-4.4.x.diff"
-		"${FILESDIR}/${P}_vdr-1.7.26_ChannelSwitch.patch")
+		"${FILESDIR}/${P}_vdr-1.7.26_ChannelSwitch.patch"
+		"${FILESDIR}/${P}_ffmpeg-1.patch")
 
 src_prepare() {
 

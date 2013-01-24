@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/files/1.8.0/asterisk.initd,v 1.1 2011/09/01 14:09:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/files/1.8.0/asterisk.initd5,v 1.1 2013/01/24 13:10:46 chainsaw Exp $
 
-opts="${opts} forcestop reload"
+extra_started_commands="forcestop reload"
 
 depend() {
 	need net
@@ -11,11 +11,13 @@ depend() {
 }
 
 is_running() {
-	if [ -z "`pidof asterisk`" ]; then
+	[ -r /var/run/asterisk/asterisk.pid ] || return 1
+	local ast_pid="`pidof asterisk`"
+	if [ -z "${ast_pid}" ]; then
 		return 1
 	else
 		PID="`cat /var/run/asterisk/asterisk.pid`"
-		for x in `pidof asterisk`; do
+		for x in ${ast_pid}; do
 			if [ "${x}" = "${PID}" ]; then
 				return 0
 			fi	
@@ -31,19 +33,17 @@ asterisk_run_loop() {
 	echo "Initializing asterisk wrapper"
 	OPTS="$*"
 
-	trap "rm /var/run/asterisk/wrapper_loop.pid" EXIT
-	cut -f4 -d' ' < /proc/self/stat > /var/run/asterisk/wrapper_loop.pid
+	trap "rm -f /var/run/asterisk/wrapper_loop.running" EXIT
+	touch "/var/run/asterisk/wrapper_loop.running"
 
-	while :; do
+	while [ -r "/var/run/asterisk/wrapper_loop.running" ]; do
 		if [ -n "${TTY}" ]; then
 			/usr/bin/stty -F ${TTY} sane
 			${NICE} /usr/sbin/asterisk ${OPTS} >${TTY} 2>&1 <${TTY}
 			result=$?
 		else
-			set -o pipefail
 			${NICE} /usr/sbin/asterisk ${OPTS} 2>&1 >/dev/null
 			result=$?
-			set +o pipefail
 		fi		
 
 		if [ $result -eq 0 ]; then
@@ -94,6 +94,8 @@ asterisk_run_loop() {
 		sleep "${ASTERISK_RESTART_DELAY}"
 		echo "Restarting Asterisk..."
 	done
+
+	echo "Terminating wrapper loop."
 	return 0
 }
 
@@ -194,6 +196,7 @@ start() {
 			OPTS="${OPTS} -G ${GROUP}"
 			GROUP=":${GROUP}"	# make it look nice...
 		fi
+		checkpath -d -m 0755 -o ${USER}${GROUP} /var/{log,run}/asterisk
 		for element in `find /var/{log,run}/asterisk`; do
 			if [ `stat -c %U $element` != "${USER}" ]; then
  				ewarn "${USER} is not the owner of $element, fixing."
@@ -204,6 +207,7 @@ start() {
 		done;
 		einfo "Starting asterisk as      : ${USER}${GROUP}"
 	else
+		checkpath -d -m 0755 -o root:root /var/{log,run}/asterisk
 		ewarn "Starting asterisk as root is not recommended."
 	fi
 
@@ -221,22 +225,40 @@ start() {
 	eend $result
 }
 
+wrapperstop() {
+	# Accomodate system upgrades (so a previous version of the wrapper script that still uses a pid file may be running).
+	if [ -r /var/run/asterisk/wrapper_loop.pid ]; then
+		ebegin "Killing wrapper script"
+		kill `cat /var/run/asterisk/wrapper_loop.pid`
+		eend $?
+	fi
+
+	# The new one (due to "hardened" requirements) uses a simpler
+	# flag to indicate running or shutting down.
+	if [ -r /var/run/asterisk/wrapper_loop.running ]; then
+		ebegin "Signalling wrapper script to terminate"
+		rm /var/run/asterisk/wrapper_loop.running
+		eend $?
+	fi
+
+	return 0
+}
+
 forcestop() {
+	# Just to be sure - when we want to forcestop we should make it all tear down.
+	wrapperstop
+
 	ebegin "Stopping asterisk PBX"
 	start-stop-daemon --stop --pidfile /var/run/asterisk/asterisk.pid
 	eend $?
 }
 
 stop() {
+	wrapperstop
+
 	if ! is_running; then
 		eerror "Asterisk is not running!"
 		return 0
-	fi
-
-	if [ -r /var/run/asterisk/wrapper_loop.pid ]; then
-		ebegin "Killing wrapper script"
-		kill `cat /var/run/asterisk/wrapper_loop.pid`
-		eend $?
 	fi
 
 	ebegin "Stopping asterisk PBX gracefully"
