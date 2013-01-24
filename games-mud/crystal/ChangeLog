@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/crystal
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/crystal/ChangeLog,v 1.12 2012/03/06 20:37:57 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/crystal/ChangeLog,v 1.13 2013/01/24 00:15:31 mr_bones_ Exp $
+
+  24 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -crystal-0.2.2.ebuild,
+  -files/crystal-0.2.2-64bit.patch, -files/crystal-0.2.2-gcc43.patch,
+  -files/crystal-0.2.2-glibc2.10.patch:
+  old
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> crystal-0.2.4.ebuild:
   Marking crystal-0.2.4 ppc for bug 398609
@@ -45,4 +50,3 @@
 
   17 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> crystal-0.2.1.ebuild:
   initial commit; ebuild submitted by Owen Cliffe via bug #41923
-

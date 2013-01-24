@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/powder
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/powder/ChangeLog,v 1.14 2013/01/13 11:28:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/powder/ChangeLog,v 1.15 2013/01/24 00:14:53 mr_bones_ Exp $
+
+  24 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -powder-115.ebuild:
+  old
 
   13 Jan 2013; Agostino Sarubbo <ago@gentoo.org> powder-117.ebuild:
   Stable for x86, wrt bug #450058

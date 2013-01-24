@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/crystalspace
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.56 2012/07/17 12:33:39 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.57 2013/01/24 00:16:26 hasufell Exp $
+
+*crystalspace-2.0 (24 Jan 2013)
+
+  24 Jan 2013; Julian Ospald <hasufell@gentoo.org> +crystalspace-2.0.ebuild,
+  +files/crystalspace-2.0-gcc47.patch:
+  version bump wrt #453138
 
   17 Jul 2012; Tupone Alfredo <tupone@gentoo.org> crystalspace-1.4.0.ebuild,
   +files/crystalspace-1.4.0-gcc47.patch:

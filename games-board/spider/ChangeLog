@@ -1,6 +1,13 @@
 # ChangeLog for games-board/spider
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/spider/ChangeLog,v 1.6 2012/12/11 06:34:02 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/spider/ChangeLog,v 1.7 2013/01/24 00:01:58 hasufell Exp $
+
+*spider-1.2_p4-r1 (23 Jan 2013)
+
+  23 Jan 2013; Julian Ospald <hasufell@gentoo.org> spider-1.2_p4.ebuild,
+  +spider-1.2_p4-r1.ebuild:
+  fix copyright header
+  revbump: bump eapi, update icon cache, respect CFLAGS wrt #453150
 
   11 Dec 2012; Ulrich Müller <ulm@gentoo.org> spider-1.2_p4.ebuild:
   Update LICENSE, see copyright.h file.

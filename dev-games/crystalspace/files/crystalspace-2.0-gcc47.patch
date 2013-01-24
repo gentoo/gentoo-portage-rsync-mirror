@@ -1,0 +1,42 @@
+--- include/csutil/blockallocator.h
++++ include/csutil/blockallocator.h
+@@ -193,7 +193,7 @@
+   ~csBlockAllocator()
+   {
+     ObjectDispose dispose (*this, false);
+-    DisposeAll (dispose);
++    this->DisposeAll (dispose);
+   }
+ 
+   /**
+@@ -215,7 +215,7 @@
+   void DeleteAll ()
+   {
+     ObjectDispose dispose (*this, true);
+-    DisposeAll (dispose);
++    this->DisposeAll (dispose);
+   }
+ 
+   /**
+--- include/csutil/parray.h
++++ include/csutil/parray.h
+@@ -112,7 +112,7 @@
+   {
+     CS_ASSERT (this->GetSize () > 0);
+     T* ret = GetAndClear (this->GetSize () - 1); // see *1*
+-    Truncate (this->GetSize () - 1);
++    this->Truncate (this->GetSize () - 1);
+     return ret;
+   }
+ 
+--- include/csutil/refarr.h
++++ include/csutil/refarr.h
+@@ -111,7 +111,7 @@
+   {
+     CS_ASSERT (this->GetSize () > 0);
+     csRef<T> ret = this->Get (this->GetSize () - 1); // see *1*
+-    SetSize (this->GetSize () - 1);
++    this->SetSize (this->GetSize () - 1);
+     return ret;
+   }
+ };

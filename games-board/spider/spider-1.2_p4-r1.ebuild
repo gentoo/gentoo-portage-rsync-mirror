@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/spider/spider-1.2_p4.ebuild,v 1.7 2013/01/24 00:01:58 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/spider/spider-1.2_p4-r1.ebuild,v 1.1 2013/01/24 00:01:58 hasufell Exp $
 
-EAPI=2
-inherit eutils games
+EAPI=5
+inherit eutils gnome2-utils games
 
 MY_P="${P%%_*}"
 MY_P="${MY_P/-/_}"
@@ -16,7 +16,7 @@ SRC_URI="mirror://debian/pool/main/s/spider/${MY_P}.orig.tar.gz
 
 LICENSE="HPND"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="athena"
 
 RDEPEND="x11-libs/libXext
@@ -48,7 +48,7 @@ src_configure() {
 		|| die "imake failed"
 	sed -i \
 		-e '/CC = /d' \
-		-e '/CDEBUGFLAGS = /d' \
+		-e "s/CDEBUGFLAGS = .*$/CDEBUGFLAGS = ${CFLAGS}/" \
 		-e '/LDOPTIONS = /s/$/$(LDFLAGS)/' \
 		Makefile \
 		|| die "sed failed"
@@ -61,11 +61,25 @@ src_install() {
 		MANSUFFIX="6" \
 		MANDIR="/usr/share/man/man6" \
 		HELPDIR="/usr/share/doc/${PF}" \
-		install install.doc install.man \
-		|| die "make install failed"
+		install install.doc install.man
 
 	dodoc README* ChangeLog
 	newicon icons/Spider.png ${PN}.png
+	newicon -s 32 icons/Spider32x32.png ${PN}.png
 	make_desktop_entry spider Spider
 	prepgamesdirs
+}
+
+pkg_preinst() {
+	games_pkg_preinst
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
