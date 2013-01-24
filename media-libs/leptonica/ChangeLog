@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/leptonica
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.4 2012/10/26 01:21:46 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.5 2013/01/24 21:38:48 sbriesen Exp $
+
+*leptonica-1.69 (24 Jan 2013)
+
+  24 Jan 2013; Stefan Briesenick <sbriesen@gentoo.org> +leptonica-1.69.ebuild:
+  version bump, solving bug #447950.
 
   26 Oct 2012; Anthony G. Basile <blueness@gentoo.org> leptonica-1.68.ebuild:
   keyword ~ppc ~ppc64, bug #437670

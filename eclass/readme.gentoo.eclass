@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/readme.gentoo.eclass,v 1.1 2013/01/20 11:42:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/readme.gentoo.eclass,v 1.2 2013/01/24 21:38:41 pacho Exp $
 
 # @ECLASS: readme.gentoo
 # @MAINTAINER:
@@ -36,6 +36,11 @@ esac
 
 EXPORT_FUNCTIONS src_install pkg_postinst
 
+# @ECLASS-VARIABLE: FORCE_PRINT_ELOG
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# If non-empty this variable forces elog messages to be printed.
+
 # @FUNCTION: readme.gentoo_create_doc
 # @DESCRIPTION:
 # Create doc file with ${DOC_CONTENTS} variable (preferred) and, if not set,
@@ -68,13 +73,20 @@ readme.gentoo_create_doc() {
 
 # @FUNCTION: readme.gentoo_print_elog
 # @DESCRIPTION:
-# Print elog messages with "${T}"/README.gentoo contents.
+# Print elog messages with "${T}"/README.gentoo contents. They will be
+# shown only when package is installed at first time.
 # Usually called at pkg_postinst phase.
+#
+# If you want to show them always, please set FORCE_PRINT_ELOG to a non empty
+# value in your ebuild before this function is called.
+# This can be useful when, for example, DOC_CONTENTS is modified, then, you can
+# rely on specific REPLACING_VERSIONS handling in your ebuild to print messages
+# when people update from versions still providing old message.
 readme.gentoo_print_elog() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	if [[ -f "${T}"/README.gentoo ]]; then
-		if ! [[ "${REPLACING_VERSIONS}" ]]; then
+		if ! [[ -n "${REPLACING_VERSIONS}" ]] || [[ -n "${FORCE_PRINT_ELOG}" ]]; then
 			eshopts_push
 			set -f
 			cat "${T}"/README.gentoo | while read -r ELINE; do elog "${ELINE}"; done
