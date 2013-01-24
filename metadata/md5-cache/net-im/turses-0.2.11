@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm prepare setup unpack
+DEPEND=dev-python/oauth2 dev-python/setuptools dev-python/tweepy dev-python/urwid test? ( dev-python/mock dev-python/nose dev-python/tox ) =dev-lang/python-2*
+DESCRIPTION=Command line twitter client
+EAPI=4
+HOMEPAGE=https://github.com/alejandrogomez/turses
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND==dev-lang/python-2*
+SLOT=0
+SRC_URI=https://github.com/alejandrogomez/turses/tarball/v0.2.11 -> turses-0.2.11.tar.gz
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	vcs-snapshot	d7572a392e0bd8e207deae5414f6a887
+_md5_=c31d7ecb89a78f670ba89ddc93fbf2b2

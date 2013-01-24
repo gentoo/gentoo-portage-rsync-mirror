@@ -1,0 +1,26 @@
+--- src/GNUmakefile.orig	2013-01-23 14:18:01.057345491 +0400
++++ src/GNUmakefile	2013-01-23 14:18:39.489345191 +0400
+@@ -6,11 +6,11 @@
+ GIT      = git
+ RM       = rm
+ INSTALL  = install
+-CC       = gcc
++CC       ?= gcc
+ LD       = $(CC)
+ CPPFLAGS = -I. -I$(VPATH)
+-CFLAGS   = -Wall -O2
+-LDFLAGS  = -ltalloc
++CFLAGS   ?= -Wall -O2
++LIBS     = -ltalloc
+ 
+ OBJECTS = cli.o			\
+ 	notice.o		\
+@@ -97,7 +97,7 @@
+ 
+ SRC     = $(dir $(firstword $(MAKEFILE_LIST)))
+ COMPILE = $($(quiet)CC) $(CPPFLAGS) $(CFLAGS) -MD -c $(SRC)$*.c -o $@
+-LINK    = $($(quiet)LD) -o $@ $^ $(LDFLAGS)
++LINK    = $($(quiet)LD) -o $@ $^ $(LDFLAGS) $(LIBS)
+ 
+ proot: $(OBJECTS)
+ 	$(LINK)
