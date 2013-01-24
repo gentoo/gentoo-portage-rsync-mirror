@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.347 2013/01/22 00:51:58 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.348 2013/01/24 13:56:11 gmsoft Exp $
+
+  24 Jan 2013; Guy Martin <gmsoft@gentoo.org> genkernel-3.4.45.ebuild:
+  Stable for hppa, wrt bug #441004
 
   22 Jan 2013; Mike Auty <ikelos@gentoo.org> genkernel-3.4.45.ebuild:
   Add additional dependency requiring pax-utils < 0.6 (see bug 450688).
