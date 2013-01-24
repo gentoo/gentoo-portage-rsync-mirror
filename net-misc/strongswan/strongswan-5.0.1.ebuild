@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.1.ebuild,v 1.2 2012/11/04 20:37:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.1.ebuild,v 1.3 2013/01/24 20:48:48 vapier Exp $
 
 EAPI=2
 inherit eutils linux-info user
@@ -42,7 +42,6 @@ pkg_setup() {
 		eerror "This ebuild currently only supports ${PN} with the"
 		eerror "native Linux 2.6 IPsec stack on kernels >= 2.6.16."
 		eerror
-		die "Please install a recent 2.6 kernel."
 	fi
 
 	if kernel_is -lt 2 6 34; then

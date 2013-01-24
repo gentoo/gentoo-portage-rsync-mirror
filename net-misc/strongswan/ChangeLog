@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/strongswan
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.106 2012/11/04 20:37:39 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.107 2013/01/24 20:48:48 vapier Exp $
+
+  24 Jan 2013; Mike Frysinger <vapier@gentoo.org> strongswan-5.0.0.ebuild,
+  strongswan-5.0.1.ebuild:
+  Drop `die` as it does not make sense in many cases -- cross-compiling,
+  deploying to ROOT=/some/where, building a binpkg for another system, etc...
 
   04 Nov 2012; Ulrich Müller <ulm@gentoo.org> strongswan-5.0.0.ebuild,
   strongswan-5.0.1.ebuild:
