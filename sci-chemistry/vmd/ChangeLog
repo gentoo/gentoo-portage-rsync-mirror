@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.54 2013/01/18 04:16:06 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.55 2013/01/24 08:05:05 jlec Exp $
+
+  24 Jan 2013; Justin Lecher <jlec@gentoo.org> vmd-1.9.1.ebuild,
+  vmd-1.9.1-r1.ebuild:
+  Force py2, #450716
+
 
   18 Jan 2013; Christoph Junghans <ottxor@gentoo.org> vmd-1.9.1-r2.ebuild:
   fix deps

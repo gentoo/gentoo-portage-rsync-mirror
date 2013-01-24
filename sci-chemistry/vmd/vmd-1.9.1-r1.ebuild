@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1-r1.ebuild,v 1.3 2012/11/29 15:13:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1-r1.ebuild,v 1.4 2013/01/24 08:05:05 jlec Exp $
 
 EAPI=5
 
@@ -61,6 +61,11 @@ pkg_nofetch() {
 	elog "after agreeing to the license and get"
 	elog "http://dev.gentoo.org/~jlec/distfiles/${P}-gentoo-patches-2.tar.xz"
 	elog "Place both in ${DISTDIR}"
+}
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
