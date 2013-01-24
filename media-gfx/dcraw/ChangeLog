@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/dcraw
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.84 2012/06/11 08:56:10 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.85 2013/01/24 09:57:21 xmw Exp $
+
+*dcraw-9.17 (24 Jan 2013)
+
+  24 Jan 2013; Michael Weber <xmw@gentoo.org> +dcraw-9.17.ebuild:
+  Version bump (bug 450482), maintainer timeout.
 
 *dcraw-9.12 (11 Jun 2012)
 
