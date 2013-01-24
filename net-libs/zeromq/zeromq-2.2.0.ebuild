@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-2.2.0.ebuild,v 1.9 2013/01/20 09:51:02 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-2.2.0.ebuild,v 1.10 2013/01/24 10:56:53 naota Exp $
 
 # NOTES:
 # 1- use flag 'pgm' (OpenPGM support) must be masked by profiles for ARM archs;
@@ -15,7 +15,7 @@ SRC_URI="http://download.zeromq.org/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="pgm test static-libs"
 
 RDEPEND=""
@@ -23,7 +23,7 @@ DEPEND="pgm? (
 		virtual/pkgconfig
 		=net-libs/openpgm-5.1.118
 	)
-	sys-apps/util-linux"
+	|| ( sys-apps/util-linux sys-freebsd/freebsd-lib )"
 
 src_prepare() {
 	einfo "Removing bundled OpenPGM library"

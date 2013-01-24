@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.162 2013/01/24 05:31:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.163 2013/01/24 10:36:26 ssuominen Exp $
 
 EAPI=4
 
@@ -399,8 +399,8 @@ pkg_postinst()
 {
 	mkdir -p "${ROOT}"run
 
+	net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
 	copy_net_rules() {
-		net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
 		[[ -f ${net_rules} ]] || cp "${ROOT}"usr/share/doc/${PF}/gentoo/80-net-name-slot.rules "${net_rules}"
 	}
 
