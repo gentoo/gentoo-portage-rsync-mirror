@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.14 2013/01/22 21:29:06 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.15 2013/01/24 20:22:57 axs Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ then
 	inherit git-2
 else
 	SRC_URI="http://dev.gentoo.org/~blueness/${PN}/${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~mips ~ppc ~x86"
+	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~x86"
 fi
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
@@ -138,13 +138,13 @@ src_configure()
 		ac_cv_header_sys_capability_h=yes
 		DBUS_CFLAGS=' '
 		DBUS_LIBS=' '
-		--with-rootprefix="${EROOT}"
-		--docdir="${EROOT}usr/share/doc/${PF}"
-		--libdir="${EROOT}usr/$(get_libdir)"
+		--with-rootprefix="/"
+		--docdir="/usr/share/doc/${PF}"
+		--libdir="/usr/$(get_libdir)"
 		--with-firmware-path="${EROOT}usr/lib/firmware/updates:${EROOT}usr/lib/firmware:${EROOT}lib/firmware/updates:${EROOT}lib/firmware"
-		--with-html-dir="${EROOT}usr/share/doc/${PF}/html"
-		--with-rootlibdir="${EROOT}$(get_libdir)"
-		--exec-prefix="${EROOT}"
+		--with-html-dir="/usr/share/doc/${PF}/html"
+		--with-rootlibdir="/$(get_libdir)"
+		--exec-prefix="/"
 		--enable-split-usr
 		$(use_enable doc gtk-doc)
 		$(use_enable gudev)

@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/aufs-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.12 2013/01/18 12:06:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.13 2013/01/24 20:09:06 jlec Exp $
+
+*aufs-sources-3.7.4 (24 Jan 2013)
+
+  24 Jan 2013; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.7.4.ebuild:
+  Version Bump
 
 *aufs-sources-3.7.3 (18 Jan 2013)
 
