@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/mcelog-1.0_pre3_p20120918.ebuild,v 1.2 2012/11/18 19:18:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/mcelog-1.0_pre3_p20120918-r1.ebuild,v 1.1 2013/01/24 21:15:37 hasufell Exp $
 
 EAPI=5
 
@@ -39,6 +39,14 @@ src_install() {
 
 	newinitd "${FILESDIR}"/${PN}.init ${PN}
 
+	insinto /etc/${PN}
+	doins triggers/* mcelog.conf
+
 	dodoc CHANGES README TODO *.pdf
 	doman ${PN}.8
+}
+
+pkg_postinst() {
+	einfo "The default configuration set is now installed in /etc/${PN}"
+	einfo "you might want to edit those files."
 }

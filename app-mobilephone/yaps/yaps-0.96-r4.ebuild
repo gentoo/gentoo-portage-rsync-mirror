@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r4.ebuild,v 1.3 2012/05/02 20:10:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r4.ebuild,v 1.4 2013/01/24 21:01:18 sbriesen Exp $
 
 EAPI="2"
 
@@ -18,7 +18,8 @@ IUSE="capi lua slang unicode"
 
 RDEPEND="capi? ( net-dialup/capi4k-utils )
 	slang? ( >=sys-libs/slang-1.4 )
-	lua? ( dev-lang/lua )"
+	lua? ( dev-lang/lua )
+	!media-sound/abcmidi"  # also contains "yaps"
 DEPEND="${RDEPEND}
 	!capi? ( sys-apps/sed )
 	lua? ( virtual/pkgconfig )"
