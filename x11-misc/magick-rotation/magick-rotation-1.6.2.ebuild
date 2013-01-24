@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/magick-rotation/magick-rotation-1.6.2.ebuild,v 1.2 2012/11/11 08:18:19 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/magick-rotation/magick-rotation-1.6.2.ebuild,v 1.3 2013/01/24 09:07:22 pinkbyte Exp $
 
 EAPI=4
 
@@ -26,6 +26,9 @@ RDEPEND="${DEPEND}
 	dev-python/pygobject
 	dev-python/py-notify
 	x11-apps/xinput"
+
+# there are not tests in package, default 'make check' does wrong things, bug #453672
+RESTRICT="test"
 
 pkg_setup() {
 	python_pkg_setup
