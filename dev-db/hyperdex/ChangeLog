@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/hyperdex
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/ChangeLog,v 1.4 2012/08/20 13:33:23 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/ChangeLog,v 1.5 2013/01/24 06:43:50 patrick Exp $
+
+*hyperdex-1.0_rc1 (24 Jan 2013)
+
+  24 Jan 2013; Patrick Lauer <patrick@gentoo.org> +hyperdex-1.0_rc1.ebuild:
+  Bump
 
   20 Aug 2012; Patrick Lauer <patrick@gentoo.org> hyperdex-0.4.0.ebuild:
   ... and clean up the python bits
