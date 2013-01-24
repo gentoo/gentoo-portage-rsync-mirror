@@ -1,6 +1,13 @@
 # ChangeLog for app-text/sigil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/ChangeLog,v 1.8 2013/01/24 20:56:27 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/ChangeLog,v 1.10 2013/01/24 22:16:21 sbriesen Exp $
+
+  24 Jan 2013; Stefan Briesenick <sbriesen@gentoo.org> -sigil-0.5.3.ebuild:
+  removed also sigil-0.5.3
+
+  24 Jan 2013; Stefan Briesenick <sbriesen@gentoo.org> -sigil-0.4.2.ebuild,
+  -sigil-0.4.905_beta1.ebuild, -sigil-0.5.0.ebuild:
+  removed old versions
 
 *sigil-0.6.2 (24 Jan 2013)
 

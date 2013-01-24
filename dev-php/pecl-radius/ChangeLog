@@ -1,6 +1,11 @@
-# ChangeLog for dev-php5/pecl-radius
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-radius/ChangeLog,v 1.1 2011/12/14 22:46:03 mabi Exp $
+# ChangeLog for dev-php/pecl-radius
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-radius/ChangeLog,v 1.2 2013/01/24 22:05:11 mabi Exp $
+
+*pecl-radius-1.2.5-r2 (24 Jan 2013)
+
+  24 Jan 2013; Matti Bickel <mabi@gentoo.org> +pecl-radius-1.2.5-r2.ebuild:
+  Include upstream patch to make package compile with php-5.4 (bug #453878)
 
 *pecl-radius-1.2.5-r1 (04 Nov 2010)
 
@@ -39,4 +44,3 @@
   28 Feb 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +pecl-radius-1.2.4.ebuild:
   Initial ebuild.
-

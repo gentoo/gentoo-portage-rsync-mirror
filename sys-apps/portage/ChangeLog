@@ -1,6 +1,22 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1182 2013/01/24 02:07:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1184 2013/01/24 22:13:22 zmedico Exp $
+
+*portage-2.2.0_alpha161 (24 Jan 2013)
+
+  24 Jan 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha161.ebuild,
+  -portage-2.2.0_alpha159.ebuild, -portage-2.2.0_alpha160.ebuild:
+  2.2.0_alpha161 version bump. This includes all of the fixes in 2.1.11.50. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.11.50 (24 Jan 2013)
+
+  24 Jan 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.50.ebuild,
+  -portage-2.1.11.48.ebuild, -portage-2.1.11.49.ebuild:
+  2.1.11.50 version bump. This fixes bug #453892 ('TypeError: must be char, not
+  unicode' exception with Python 2 when renaming files during merge), a
+  regression since 2.1.11.44 and 2.2.0_alpha155. Bug #445274 tracks all bugs
+  fixed since portage-2.1.11.31.
 
 *portage-2.2.0_alpha160 (24 Jan 2013)
 

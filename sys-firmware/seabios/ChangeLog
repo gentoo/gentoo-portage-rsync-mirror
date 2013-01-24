@@ -1,6 +1,12 @@
 # ChangeLog for sys-firmware/seabios
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.8 2013/01/23 21:21:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.10 2013/01/24 22:10:19 ago Exp $
+
+  24 Jan 2013; Agostino Sarubbo <ago@gentoo.org> seabios-1.7.1.ebuild:
+  Stable for x86, wrt bug #453282
+
+  24 Jan 2013; Agostino Sarubbo <ago@gentoo.org> seabios-1.7.1.ebuild:
+  Stable for amd64, wrt bug #453282
 
 *seabios-1.7.2 (23 Jan 2013)
 
@@ -90,4 +96,3 @@
   25 Aug 2011; Doug Goldstein <cardoe@gentoo.org>
   +seabios-0.6.3_pre20010817.ebuild, +metadata.xml:
   Add initial version of seabios
-
