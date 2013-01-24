@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup test unpack
+DEPEND=dev-cpp/glibmm dev-cpp/libxmlpp media-libs/portaudio dev-libs/boost[threads(+)] dev-libs/glib dev-libs/libxml2 gnome-base/librsvg media-gfx/imagemagick virtual/jpeg media-libs/libpng:0 media-libs/libsdl[joystick,video] virtual/ffmpeg virtual/opengl virtual/glu sys-libs/zlib virtual/libintl x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/pango midi? ( media-libs/portmidi ) webcam? ( media-libs/opencv ) media-libs/glew sys-apps/help2man sys-devel/gettext >=dev-util/cmake-2.8.8 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=SingStar GPL clone
+EAPI=5
+HOMEPAGE=http://sourceforge.net/projects/performous/
+IUSE=midi songs tools webcam
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 songs? ( CCPL-Attribution-ShareAlike-NonCommercial-2.5 CCPL-Attribution-NonCommercial-NoDerivs-2.5 )
+RDEPEND=dev-cpp/glibmm dev-cpp/libxmlpp media-libs/portaudio dev-libs/boost[threads(+)] dev-libs/glib dev-libs/libxml2 gnome-base/librsvg media-gfx/imagemagick virtual/jpeg media-libs/libpng:0 media-libs/libsdl[joystick,video] virtual/ffmpeg virtual/opengl virtual/glu sys-libs/zlib virtual/libintl x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/pango midi? ( media-libs/portmidi ) webcam? ( media-libs/opencv )
+SLOT=0
+SRC_URI=mirror://sourceforge/performous/performous-0.7.0.tar.bz2 songs? ( mirror://sourceforge/performous/ultrastar-songs-restricted-3.zip mirror://sourceforge/performous/ultrastar-songs-jc-1.zip mirror://sourceforge/performous/ultrastar-songs-libre-3.zip mirror://sourceforge/performous/ultrastar-songs-shearer-1.zip )
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	3cb7a29aafd4b984d2bf12bc50abe5da	eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	games	e0a83e3f3f024b8c8ef7a8217d716cbf	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=5fd3af64476436a9519ddc6cc61af618

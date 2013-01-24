@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/performous
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.14 2013/01/13 11:22:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.15 2013/01/24 17:04:10 hasufell Exp $
+
+*performous-0.7.0-r1 (24 Jan 2013)
+
+  24 Jan 2013; Julian Ospald <hasufell@gentoo.org> +performous-0.7.0-r1.ebuild,
+  +files/performous-0.7.0-cmake.patch, metadata.xml:
+  add missing deps, add midi and webcam useflag, fix build time issues wrt
+  #452476, bump EAPI
 
   13 Jan 2013; Agostino Sarubbo <ago@gentoo.org> performous-0.7.0.ebuild:
   Stable for x86, wrt bug #449932

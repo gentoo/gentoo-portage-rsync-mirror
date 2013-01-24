@@ -1909,8 +1909,10 @@ games-arcade/burgerspace:network - Enable client-server support
 games-arcade/jumpnbump:music - Enable playing of background music
 games-arcade/lbreakout2:themes - Install additional themes
 games-arcade/moleinvasion:music - Download and install the music files
+games-arcade/performous:midi - Enable MIDI I/O support
 games-arcade/performous:songs - Install a few demo songs
 games-arcade/performous:tools - Install tools
+games-arcade/performous:webcam - Enable Webcam support
 games-arcade/slimevolley:net - Enable network support
 games-arcade/smc:music - Download and install the music files
 games-arcade/tuxanci:physfs - Use dev-games/physfs instead of dev-libs/libzip to load compressed data
