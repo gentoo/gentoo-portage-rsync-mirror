@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.4.16.ebuild,v 1.3 2012/09/12 15:52:37 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.6.9.ebuild,v 1.1 2013/01/24 12:09:13 djc Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit autotools eutils flag-o-matic user
 
@@ -16,7 +16,7 @@ IUSE="+jemalloc tcmalloc test"
 SLOT="0"
 
 RDEPEND="tcmalloc? ( dev-util/google-perftools )
-	jemalloc? ( >=dev-libs/jemalloc-3.0 )"
+	jemalloc? ( >=dev-libs/jemalloc-3.2 )"
 DEPEND=">=sys-devel/autoconf-2.63
 	test? ( dev-lang/tcl )
 	${RDEPEND}"
@@ -25,30 +25,14 @@ REQUIRED_USE="tcmalloc? ( !jemalloc )
 
 S="${WORKDIR}/${PN}-${PV/_/-}"
 
-REDIS_PIDDIR=/var/run/redis/
-REDIS_PIDFILE=${REDIS_PIDDIR}/redis.pid
-REDIS_DATAPATH=/var/lib/redis
-REDIS_LOGPATH=/var/log/redis
-REDIS_LOGFILE=${REDIS_LOGPATH}/redis.log
-
 pkg_setup() {
 	enewgroup redis 75
-	enewuser redis 75 -1 ${REDIS_DATAPATH} redis
-	if use tcmalloc ; then
-		export EXTRA_EMAKE="${EXTRA_EMAKE} USE_TCMALLOC=yes"
-	elif use jemalloc ; then
-		export EXTRA_EMAKE="${EXTRA_EMAKE} JEMALLOC_SHARED=yes"
-	else
-		export EXTRA_EMAKE="${EXTRA_EMAKE} FORCE_LIBC_MALLOC=yes"
-	fi
+	enewuser redis 75 -1 /var/lib/redis redis
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/redis-2.4.3-shared.patch"
-	epatch "${FILESDIR}/redis-2.4.4-tcmalloc.patch"
-	if use jemalloc ; then
-		sed -i -e "s/je_/j/" src/zmalloc.c src/zmalloc.h
-	fi
+	epatch "${FILESDIR}/${PN}-2.6.7"-{shared,config}.patch
+	epatch "${FILESDIR}/${P}"-tclsh86.patch
 	# now we will rewrite present Makefiles
 	local makefiles=""
 	for MKF in $(find -name 'Makefile' | cut -b 3-); do
@@ -70,38 +54,48 @@ src_prepare() {
 	eautoconf
 }
 
+src_configure() {
+	econf
+
+	# Linenoise can't be built with -std=c99, see https://bugs.gentoo.org/451164
+	# also, don't define ANSI/c99 for lua twice
+	sed -i -e "s:-std=c99::g" deps/linenoise/Makefile deps/Makefile || die
+}
+
+src_compile() {
+	local myconf=""
+
+	if use tcmalloc ; then
+		myconf="${myconf} USE_TCMALLOC=yes"
+	elif use jemalloc ; then
+		myconf="${myconf} JEMALLOC_SHARED=yes"
+	else
+		myconf="${myconf} MALLOC=yes"
+	fi
+
+	emake ${myconf}
+}
+
 src_install() {
-	# configuration file rewrites
 	insinto /etc/
-	sed -r \
-		-e "/^pidfile\>/s,/var.*,${REDIS_PIDFILE}," \
-		-e '/^daemonize\>/s,no,yes,' \
-		-e '/^# bind/s,^# ,,' \
-		-e '/^# maxmemory\>/s,^# ,,' \
-		-e '/^maxmemory\>/s,<bytes>,67108864,' \
-		-e "/^dbfilename\>/s,dump.rdb,${REDIS_DATAPATH}/dump.rdb," \
-		-e "/^dir\>/s, .*, ${REDIS_DATAPATH}/," \
-		-e '/^loglevel\>/s:debug:notice:' \
-		-e "/^logfile\>/s:stdout:${REDIS_LOGFILE}:" \
-		<redis.conf \
-		>redis.conf.gentoo
-	newins redis.conf.gentoo redis.conf
-	use prefix || fowners redis:redis /etc/redis.conf
-	fperms 0644 /etc/redis.conf
+	doins redis.conf sentinel.conf
+	use prefix || fowners redis:redis /etc/{redis,sentinel}.conf
+	fperms 0644 /etc/{redis,sentinel}.conf
 
 	newconfd "${FILESDIR}/redis.confd" redis
 	newinitd "${FILESDIR}/redis.initd" redis
 
-	nonfatal dodoc 00-RELEASENOTES BUGS CONTRIBUTING README TODO
+	nonfatal dodoc 00-RELEASENOTES BUGS CONTRIBUTING MANIFESTO README
 
 	dobin src/redis-cli
 	dosbin src/redis-benchmark src/redis-server src/redis-check-aof src/redis-check-dump
 	fperms 0750 /usr/sbin/redis-benchmark
+	dosym /usr/sbin/redis-server /usr/sbin/redis-sentinel
 
 	if use prefix; then
-	        diropts -m0750
+		diropts -m0750
 	else
-	        diropts -m0750 -o redis -g redis
+		diropts -m0750 -o redis -g redis
 	fi
-	keepdir ${REDIS_DATAPATH} ${REDIS_LOGPATH}
+	keepdir /var/{log,lib}/redis
 }
