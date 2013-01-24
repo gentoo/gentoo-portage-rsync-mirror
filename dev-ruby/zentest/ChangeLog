@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.116 2013/01/15 05:51:34 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.117 2013/01/24 07:33:52 graaff Exp $
+
+*zentest-4.8.4 (24 Jan 2013)
+
+  24 Jan 2013; Hans de Graaff <graaff@gentoo.org> +zentest-4.8.4.ebuild:
+  Version bump.
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> zentest-4.7.0.ebuild,
   zentest-4.8.2.ebuild, zentest-4.8.3.ebuild:
