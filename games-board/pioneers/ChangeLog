@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pioneers
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.29 2012/08/08 19:48:48 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.30 2013/01/24 19:31:12 mr_bones_ Exp $
+
+  24 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -pioneers-0.12.3.ebuild:
+  old
 
   08 Aug 2012; Brent Baude <ranger@gentoo.org> pioneers-14.1.ebuild:
   Marking pioneers-14.1 ppc for bug 424247
@@ -168,4 +171,3 @@
   21 Jul 2005; Don Seiler <rizzo@gentoo.org> +metadata.xml,
   +pio-0.9.19.ebuild:
   Initial addition.  This package is the re-incarnation of gnocatan.
-

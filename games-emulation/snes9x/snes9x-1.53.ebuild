@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.53.ebuild,v 1.8 2012/10/09 11:04:51 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.53.ebuild,v 1.9 2013/01/24 19:24:32 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic multilib gnome2-utils games
@@ -9,7 +9,7 @@ DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
 HOMEPAGE="http://code.google.com/p/snes9x-gtk/"
 SRC_URI="http://snes9x-gtk.googlecode.com/files/${P}-src.tar.bz2"
 
-LICENSE="as-is GPL-2 LGPL-2.1"
+LICENSE="HPND GPL-2+ LGPL-2.1+"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="alsa debug gtk joystick multilib netplay nls opengl oss png pulseaudio portaudio +xv +xrandr zlib"

@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/snes9x
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.59 2012/10/09 11:04:51 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/ChangeLog,v 1.61 2013/01/24 19:29:48 mr_bones_ Exp $
+
+  24 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/snes9x-1.52-build.patch, -snes9x-1.52-r1.ebuild:
+  old
+
+  24 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> snes9x-1.53.ebuild:
+  update LICENSE
 
   09 Oct 2012;  <naota@gentoo.org> snes9x-1.53.ebuild:
   Add ~x86-fbsd wrt bug #232260
