@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.86 2013/01/06 07:27:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.87 2013/01/24 14:40:00 aballier Exp $
+
+  24 Jan 2013; Alexis Ballier <aballier@gentoo.org> vice-2.4.ebuild,
+  +files/vice-2.4-ffmpeg-1.patch:
+  Fix build and runtime with recent FFmpeg versions. Part of bug #443218.
 
   06 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   +files/vice-2.4-arm.patch, vice-2.4.ebuild:

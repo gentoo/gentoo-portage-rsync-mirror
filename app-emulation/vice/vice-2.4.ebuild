@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.4.ebuild,v 1.3 2013/01/06 07:27:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.4.ebuild,v 1.4 2013/01/24 14:40:00 aballier Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs games
@@ -59,7 +59,8 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-arm.patch
+	epatch "${FILESDIR}"/${P}-arm.patch \
+		"${FILESDIR}"/${P}-ffmpeg-1.patch
 	sed -i \
 		-e "s:/usr/local/lib/VICE:${GAMES_DATADIR}/${PN}:" \
 		man/vice.1 \
