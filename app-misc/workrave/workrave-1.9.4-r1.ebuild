@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.4-r1.ebuild,v 1.5 2012/10/25 18:42:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.4-r1.ebuild,v 1.6 2013/01/24 03:39:45 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -12,7 +12,7 @@ DESCRIPTION="Helpful utility to attack Repetitive Strain Injury (RSI)"
 HOMEPAGE="http://www.workrave.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="dbus doc distribution gnome gstreamer nls pulseaudio test"

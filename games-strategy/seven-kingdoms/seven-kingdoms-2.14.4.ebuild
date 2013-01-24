@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/seven-kingdoms/seven-kingdoms-2.14.4.ebuild,v 1.3 2013/01/15 12:35:06 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/seven-kingdoms/seven-kingdoms-2.14.4.ebuild,v 1.4 2013/01/24 03:56:55 pinkbyte Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ src_prepare() {
 src_configure() {
 	# In current state debugging works only on Windows :-/
 	egamesconf \
-		$(use_enable network)
+		$(use_enable network) \
 		--disable-debug \
 		--without-directx \
 		--without-wine \
