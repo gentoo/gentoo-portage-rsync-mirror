@@ -5,7 +5,4 @@
 		<email>radhermit@gentoo.org</email>
 		<name>Tim Harder</name>
 	</maintainer>
-	<longdescription lang="en">
-		Sipcalc is an advanced console-based IP subnet calculator.
-	</longdescription>
 </pkgmetadata>

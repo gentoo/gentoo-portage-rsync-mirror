@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14404 2013/01/23 21:08:58 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14405 2013/01/24 02:56:02 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeroen Roovers <jer@gentoo.org> (24 Jan 2013)
+# Mask broken dev-libs/libnl (bug #453736)
+=dev-libs/libnl-3.2.20
 
 # Richard Freeman <rich0@gentoo.org> (23 Jan 2013)
 # Masked for testing - all of mythtv to be unmasked soon...

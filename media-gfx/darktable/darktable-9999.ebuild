@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-9999.ebuild,v 1.5 2013/01/12 18:36:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-9999.ebuild,v 1.6 2013/01/24 02:32:38 radhermit Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ KEYWORDS=""
 IUSE="colord facebook flickr geo gnome-keyring gphoto2 graphicsmagick jpeg2k kde
 nls opencl openmp pax_kernel +rawspeed +slideshow"
 
-RDEPEND="
+CDEPEND="
 	dev-db/sqlite:3
 	dev-libs/libxml2:2
 	colord? ( x11-misc/colord )
@@ -29,10 +29,6 @@ RDEPEND="
 	gphoto2? ( media-libs/libgphoto2 )
 	graphicsmagick? ( media-gfx/graphicsmagick )
 	jpeg2k? ( media-libs/openjpeg )
-	kde? (
-		dev-libs/dbus-glib
-		kde-base/kwalletd
-	)
 	media-gfx/exiv2[xmp]
 	media-libs/lcms:2
 	>=media-libs/lensfun-0.2.3
@@ -50,7 +46,9 @@ RDEPEND="
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:2"
-DEPEND="${RDEPEND}
+RDEPEND="${CDEPEND}
+	kde? ( kde-base/kwalletd )"
+DEPEND="${CDEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
@@ -78,7 +76,6 @@ src_configure() {
 		$(cmake-utils_use_use gphoto2 CAMERA_SUPPORT)
 		$(cmake-utils_use_use graphicsmagick GRAPHICSMAGICK)
 		$(cmake-utils_use_use jpeg2k OPENJPEG)
-		$(cmake-utils_use_use kde KWALLET)
 		$(cmake-utils_use_use nls NLS)
 		$(cmake-utils_use_use opencl OPENCL)
 		$(cmake-utils_use_use openmp OPENMP)
