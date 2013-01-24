@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.567 2013/01/15 02:30:53 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.568 2013/01/24 01:27:27 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -97,7 +97,7 @@ STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${LIBPATH}/include/g++-v${GCC_BRANCH_VE
 
 
 #---->> SLOT+IUSE logic <<----
-IUSE="build multislot nls nptl test vanilla"
+IUSE="multislot nls nptl test vanilla"
 
 if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	IUSE+=" altivec cxx fortran"
@@ -107,7 +107,7 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	[[ -n ${SPECS_VER} ]] && IUSE+=" nossp"
 
 	if tc_version_is_at_least 3 ; then
-		IUSE+=" bootstrap doc gcj gtk hardened multilib objc"
+		IUSE+=" doc gcj gtk hardened multilib objc"
 
 		tc_version_is_at_least "4.0" && IUSE+=" objc-gc mudflap"
 		tc_version_is_at_least "4.1" && IUSE+=" libssp objc++"
@@ -130,9 +130,7 @@ fi
 #---->> DEPEND <<----
 
 RDEPEND="sys-libs/zlib
-	!build? (
-		nls? ( sys-devel/gettext )
-	)"
+	nls? ( sys-devel/gettext )"
 if tc_version_is_at_least 3 ; then
 	RDEPEND+=" virtual/libiconv"
 fi
@@ -1812,7 +1810,7 @@ do_gcc_PIE_patches() {
 		EPATCH_MULTI_MSG="Applying default pie patches ..." \
 		epatch "${WORKDIR}"/piepatch/def
 	fi
-	
+
 	# we want to be able to control the pie patch logic via something other
 	# than ALL_CFLAGS...
 	sed -e '/^ALL_CFLAGS/iHARD_CFLAGS = ' \
@@ -1829,11 +1827,6 @@ do_gcc_PIE_patches() {
 }
 
 should_we_gcc_config() {
-	# we always want to run gcc-config if we're bootstrapping, otherwise
-	# we might get stuck with the c-only stage1 compiler
-	use_if_iuse bootstrap && return 0
-	use build && return 0
-
 	# if the current config is invalid, we definitely want a new one
 	# Note: due to bash quirkiness, the following must not be 1 line
 	local curr_config
