@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glew
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.81 2012/09/29 13:56:28 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.82 2013/01/24 05:07:01 jer Exp $
+
+  24 Jan 2013; Jeroen Roovers <jer@gentoo.org> glew-1.9.0.ebuild:
+  Stable for HPPA (bug #453406).
 
   29 Sep 2012; Fabian Groffen <grobian@gentoo.org> glew-1.9.0.ebuild:
   Fix build of dylibs on Darwin, bug #433934, keyworded ~x{86,64}-macos

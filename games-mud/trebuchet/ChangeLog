@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/trebuchet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/trebuchet/ChangeLog,v 1.9 2012/01/21 16:37:40 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/trebuchet/ChangeLog,v 1.10 2013/01/24 05:16:29 mr_bones_ Exp $
+
+  24 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -trebuchet-1.052.ebuild:
+  old
 
   21 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> trebuchet-1.075.ebuild:
   x86 stable wrt bug #398613
@@ -35,4 +38,3 @@
   trebuchet-1.052.ebuild:
   Initial commit; ebuild based on the one supplied by Martti Rannanjarvi via bug
   40642
-

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libprojectm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.50 2013/01/21 20:09:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.51 2013/01/24 05:07:09 jer Exp $
+
+  24 Jan 2013; Jeroen Roovers <jer@gentoo.org> libprojectm-2.1.0-r1.ebuild:
+  Stable for HPPA (bug #453402).
 
   21 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org>
   files/libprojectm-2.1.0-multilib.patch:
