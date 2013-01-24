@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.78 2013/01/16 10:10:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.79 2013/01/24 16:07:48 mgorny Exp $
+
+  24 Jan 2013; Michał Górny <mgorny@gentoo.org> imaging-1.1.7-r2.ebuild:
+  Fix use of includedir on Prefix.
 
 *imaging-1.1.7-r2 (16 Jan 2013)
 
