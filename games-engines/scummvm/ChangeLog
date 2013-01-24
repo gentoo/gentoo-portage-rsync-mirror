@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/scummvm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.123 2012/12/16 20:00:24 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.124 2013/01/24 17:54:58 mr_bones_ Exp $
+
+  24 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -scummvm-1.4.0.ebuild,
+  -scummvm-1.4.1.ebuild:
+  old
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> scummvm-1.5.0.ebuild:
   Stable for ppc, wrt bug #442938

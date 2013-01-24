@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/alienarena
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.43 2012/09/23 08:50:16 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.44 2013/01/24 17:53:50 mr_bones_ Exp $
+
+  24 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -alienarena-20111227.ebuild, -files/alienarena-20111227-nodocs.patch:
+  old
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   alienarena-20120629.ebuild:
