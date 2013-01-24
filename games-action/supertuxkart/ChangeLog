@@ -1,6 +1,9 @@
 # ChangeLog for games-action/supertuxkart
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.33 2012/12/13 19:05:05 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.34 2013/01/24 18:34:44 nimiux Exp $
+
+  24 Jan 2013; Chema Alonso <nimiux@gentoo.org> supertuxkart-0.8.ebuild:
+  Marked stable for amd64 wrt bug #453386
 
   13 Dec 2012; Julian Ospald <hasufell@gentoo.org> supertuxkart-0.8.ebuild,
   +files/supertuxkart-0.8-desktopfile.patch:
