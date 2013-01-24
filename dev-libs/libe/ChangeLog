@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libe
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libe/ChangeLog,v 1.3 2012/08/20 13:15:43 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libe/ChangeLog,v 1.4 2013/01/24 05:46:14 patrick Exp $
+
+*libe-0.3.0 (24 Jan 2013)
+
+  24 Jan 2013; Patrick Lauer <patrick@gentoo.org> +libe-0.3.0.ebuild:
+  Bump
 
   20 Aug 2012; Patrick Lauer <patrick@gentoo.org> libe-0.2.7.ebuild:
   Adding pkgconfig, thanks to hasufell

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r4.ebuild,v 1.19 2013/01/24 03:13:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r4.ebuild,v 1.20 2013/01/24 05:31:44 ssuominen Exp $
 
 EAPI=4
 
@@ -411,7 +411,7 @@ pkg_postinst()
 	fi
 
 	if has_version sys-apps/biosdevname; then
-		ewarn "Because sys-apps/biosdevname is installed we are disable the new predictable"
+		ewarn "Because sys-apps/biosdevname is installed we disable the new predictable"
 		ewarn "network interface name scheme by default."
 		copy_net_rules
 	fi
