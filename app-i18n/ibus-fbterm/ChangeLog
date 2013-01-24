@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus-fbterm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-fbterm/ChangeLog,v 1.1 2012/06/22 00:09:45 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-fbterm/ChangeLog,v 1.2 2013/01/24 22:50:14 naota Exp $
+
+  24 Jan 2013; Naohiro Aota <naota@gentoo.org>
+  +files/ibus-fbterm-0.9.1-ibus-1.4.99.patch, ibus-fbterm-0.9.1.ebuild:
+  Add patch to deal with >=ibus-1.4.99. #453506
 
 *ibus-fbterm-0.9.1 (22 Jun 2012)
 
@@ -8,4 +12,3 @@
   +files/ibus-fbterm-0.9.1-ibus-1.4.1.patch, +ibus-fbterm-0.9.1.ebuild,
   +metadata.xml:
   New package app-i18n/ibus-fbterm.
-
