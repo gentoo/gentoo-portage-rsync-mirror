@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.160 2013/01/23 20:47:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.161 2013/01/24 03:13:09 ssuominen Exp $
 
 EAPI=4
 
@@ -397,17 +397,29 @@ ismounted()
 
 pkg_postinst()
 {
-	mkdir -p "${ROOT}"/run
+	mkdir -p "${ROOT}"run
 
-	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 197 ]]; then
+	copy_net_rules() {
 		net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
 		[[ -f ${net_rules} ]] || cp "${ROOT}"usr/share/doc/${PF}/gentoo/80-net-name-slot.rules "${net_rules}"
+	}
+
+	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 197 ]]; then
+		ewarn "Because this is a upgrade we disable the new predictable network interface"
+		ewarn "name scheme by default."
+		copy_net_rules
+	fi
+
+	if has_version sys-apps/biosdevname; then
+		ewarn "Because sys-apps/biosdevname is installed we are disable the new predictable"
+		ewarn "network interface name scheme by default."
+		copy_net_rules
 	fi
 
 	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
 	# So try to remove it here (will only work if empty).
-	rmdir "${ROOT}"/dev/loop 2>/dev/null
-	if [[ -d ${ROOT}/dev/loop ]]
+	rmdir "${ROOT}"dev/loop 2>/dev/null
+	if [[ -d ${ROOT}dev/loop ]]
 	then
 		ewarn "Please make sure your remove /dev/loop,"
 		ewarn "else losetup may be confused when looking for unused devices."
@@ -418,10 +430,10 @@ pkg_postinst()
 
 	# 64-device-mapper.rules now gets installed by sys-fs/device-mapper
 	# remove it if user don't has sys-fs/device-mapper installed, 27 Jun 2007
-	if [[ -f ${ROOT}/etc/udev/rules.d/64-device-mapper.rules ]] &&
+	if [[ -f ${ROOT}etc/udev/rules.d/64-device-mapper.rules ]] &&
 		! has_version sys-fs/device-mapper
 	then
-			rm -f "${ROOT}"/etc/udev/rules.d/64-device-mapper.rules
+			rm -f "${ROOT}"etc/udev/rules.d/64-device-mapper.rules
 			einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
