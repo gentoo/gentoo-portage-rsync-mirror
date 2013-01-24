@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6-r1.ebuild,v 1.1 2012/11/17 15:48:02 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.1.6-r1.ebuild,v 1.2 2013/01/23 23:09:41 sping Exp $
 
 EAPI=4
 
@@ -68,6 +68,7 @@ src_configure() {
 	#    if anyone wants to work on it just create bug with patch
 	# gtk and friends: always enable
 	econf \
+		--disable-silent-rules \
 		--disable-profile \
 		--without-libspiro \
 		--disable-docs --disable-workshop \

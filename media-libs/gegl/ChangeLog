@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gegl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.76 2012/11/17 15:48:02 sping Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.77 2013/01/23 23:09:41 sping Exp $
+
+  23 Jan 2013; Sebastian Pipping <sping@gentoo.org> gegl-0.1.6-r1.ebuild,
+  gegl-0.1.8-r1.ebuild, gegl-0.2.0-r1.ebuild, gegl-9999.ebuild:
+  Ensure verbose build (bug #453632)
 
 *gegl-0.1.8-r1 (17 Nov 2012)
 *gegl-0.1.6-r1 (17 Nov 2012)
