@@ -8,5 +8,5 @@ LICENSE=GPL-2 GPL-2+
 RDEPEND=dev-perl/Perl-Tags dev-perl/Perl-Critic || ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
 SLOT=0
 SRC_URI=https://github.com/vim-scripts/perl-support.vim/tarball/4.14 -> perl-support-4.14.tar.gz
-_eclasses_=vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	0a9f94c8f498d61aecc18fdc8ad711dd
+_eclasses_=vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	c17c1bfde9ce27e86e5d52a7aa902170
 _md5_=880ebb2999b2d8a8115a41bc4d11de78

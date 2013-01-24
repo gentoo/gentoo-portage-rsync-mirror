@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.633 2013/01/23 11:14:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.634 2013/01/24 00:58:47 radhermit Exp $
+
+  24 Jan 2013; Tim Harder <radhermit@gentoo.org> vim-plugin.eclass:
+  Only display vim plugin help elog messages for new installs.
 
   23 Jan 2013; Justin Lecher <jlec@gentoo.org> intel-sdp.eclass:
   Add dummy dir to avoid sandbox violations when emerging with

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.3-r2.ebuild,v 1.4 2012/12/30 21:49:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.3-r2.ebuild,v 1.5 2013/01/24 00:51:09 hasufell Exp $
 
 EAPI=4
 inherit eutils flag-o-matic gnome2-utils games
@@ -87,7 +87,7 @@ src_install() {
 	doins -r *.ini *.txt commands.lst
 
 	if use doc ; then
-		dohtml -r client/*
+		dohtml -r "${WORKDIR}"/client/*
 	fi
 
 	doicon -s 64 "${DISTDIR}/${PN}.png"

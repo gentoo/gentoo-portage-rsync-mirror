@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/eternal-lands
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.67 2012/12/30 21:49:24 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.68 2013/01/24 00:51:09 hasufell Exp $
+
+  24 Jan 2013; Julian Ospald <hasufell@gentoo.org>
+  eternal-lands-1.9.3-r2.ebuild:
+  fix doc useflag wrt #404079
 
   30 Dec 2012; Julian Ospald <hasufell@gentoo.org>
   eternal-lands-1.9.3-r2.ebuild:

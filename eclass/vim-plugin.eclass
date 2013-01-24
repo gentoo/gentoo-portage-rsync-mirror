@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.29 2012/08/03 08:49:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.30 2013/01/24 00:58:47 radhermit Exp $
 #
 # This eclass simplifies installation of app-vim plugins into
 # /usr/share/vim/vimfiles.  This is a version-independent directory
@@ -117,35 +117,37 @@ update_vim_afterscripts() {
 display_vim_plugin_help() {
 	local h
 
-	if [[ -n "${VIM_PLUGIN_HELPFILES}" ]] ; then
-		elog " "
-		elog "This plugin provides documentation via vim's help system. To"
-		elog "view it, use:"
-		for h in ${VIM_PLUGIN_HELPFILES} ; do
-			elog "    :help ${h}"
-		done
-		elog " "
+	if ! has_version ${CATEGORY}/${PN} ; then
+		if [[ -n "${VIM_PLUGIN_HELPFILES}" ]] ; then
+			elog " "
+			elog "This plugin provides documentation via vim's help system. To"
+			elog "view it, use:"
+			for h in ${VIM_PLUGIN_HELPFILES} ; do
+				elog "    :help ${h}"
+			done
+			elog " "
 
-	elif [[ -n "${VIM_PLUGIN_HELPTEXT}" ]] ; then
-		elog " "
-		while read h ; do
-			elog "$h"
-		done <<<"${VIM_PLUGIN_HELPTEXT}"
-		elog " "
+		elif [[ -n "${VIM_PLUGIN_HELPTEXT}" ]] ; then
+			elog " "
+			while read h ; do
+				elog "$h"
+			done <<<"${VIM_PLUGIN_HELPTEXT}"
+			elog " "
 
-	elif [[ -n "${VIM_PLUGIN_HELPURI}" ]] ; then
-		elog " "
-		elog "Documentation for this plugin is available online at:"
-		elog "    ${VIM_PLUGIN_HELPURI}"
-		elog " "
-	fi
+		elif [[ -n "${VIM_PLUGIN_HELPURI}" ]] ; then
+			elog " "
+			elog "Documentation for this plugin is available online at:"
+			elog "    ${VIM_PLUGIN_HELPURI}"
+			elog " "
+		fi
 
-	if has "filetype" "${VIM_PLUGIN_MESSAGES}" ; then
-		elog "This plugin makes use of filetype settings. To enable these,"
-		elog "add lines like:"
-		elog "    filetype plugin on"
-		elog "    filetype indent on"
-		elog "to your ~/.vimrc file."
-		elog " "
+		if has "filetype" "${VIM_PLUGIN_MESSAGES}" ; then
+			elog "This plugin makes use of filetype settings. To enable these,"
+			elog "add lines like:"
+			elog "    filetype plugin on"
+			elog "    filetype indent on"
+			elog "to your ~/.vimrc file."
+			elog " "
+		fi
 	fi
 }
