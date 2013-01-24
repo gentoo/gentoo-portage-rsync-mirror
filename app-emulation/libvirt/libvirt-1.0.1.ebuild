@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.1.ebuild,v 1.2 2013/01/11 23:37:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.1.ebuild,v 1.3 2013/01/24 04:18:47 cardoe Exp $
 
 EAPI=4
 
@@ -224,9 +224,12 @@ src_configure() {
 
 	## hypervisors on the local host
 	myconf="${myconf} $(use_with xen) $(use_with xen xen-inotify)"
-	 # leave it automagic as it depends on the version of xen used.
-	use xen || myconf+=" --without-libxl"
-	use xen || myconf+=" --without-xenapi"
+	myconf+=" $(use_with xen xenapi)"
+	if use xen && has_version ">=app-emulation/xen-tools-4.2.0"; then
+		myconf+=" --with-libxl"
+	else
+		myconf+=" --without-libxl"
+	fi
 	myconf="${myconf} $(use_with openvz)"
 	myconf="${myconf} $(use_with lxc)"
 	if use virtualbox && has_version app-emulation/virtualbox-ose; then

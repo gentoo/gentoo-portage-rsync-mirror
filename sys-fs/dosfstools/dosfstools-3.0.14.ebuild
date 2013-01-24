@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-3.0.14.ebuild,v 1.1 2013/01/23 19:13:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-3.0.14.ebuild,v 1.2 2013/01/24 04:23:26 ssuominen Exp $
 
 EAPI="5"
 
@@ -22,6 +22,7 @@ src_prepare() {
 	sed -i \
 		-e "/^PREFIX/s:=.*:= ${EPREFIX}/usr:" \
 		-e '/^OPTFLAGS/d' \
+		-e '/^DEBUGFLAGS/d' \
 		Makefile || die
 	append-lfs-flags
 	tc-export CC
