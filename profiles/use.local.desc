@@ -5668,6 +5668,7 @@ sys-libs/libosinfo:introspection - Use dev-libs/gobject-introspection for intros
 sys-libs/libosinfo:vala - Enable bindings for dev-lang/vala
 sys-libs/libseccomp:tools - enable debugging tools
 sys-libs/libunwind:debug-frame - Adds support for DWARF .debug_frame section: Use the information from this section if available
+sys-libs/libunwind:libatomic - Use libatomic instead of builtin atomic operations
 sys-libs/ncurses:ada - Add bindings for the ADA programming language
 sys-libs/ncurses:tinfo - Build curses library (libncurses) sep from the low-level terminfo library (libtinfo) -- usually needed only for binary packages -- but it is binary compatible in either mode
 sys-libs/ncurses:trace - Enable test trace() support in ncurses calls

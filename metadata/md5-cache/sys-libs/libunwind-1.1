@@ -1,12 +1,13 @@
 DEFINED_PHASES=configure install prepare test
-DEPEND=lzma? ( app-arch/xz-utils )
+DEPEND=lzma? ( app-arch/xz-utils ) libatomic? ( dev-libs/libatomic_ops )
 DESCRIPTION=Portable and efficient API to determine the call-chain of a program
 EAPI=4
 HOMEPAGE=http://savannah.nongnu.org/projects/libunwind
-IUSE=debug debug-frame lzma static-libs
+IUSE=debug debug-frame libatomic lzma static-libs
 KEYWORDS=~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~amd64-linux ~x86-fbsd ~x86-linux
 LICENSE=MIT
 RDEPEND=lzma? ( app-arch/xz-utils )
 SLOT=7
 SRC_URI=http://download.savannah.nongnu.org/releases/libunwind/libunwind-1.1.tar.gz
-_md5_=87f0e2101d8c9329e11dde36c29a3dc1
+_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=cc66dbe02e5ae1925219488558ae4c58

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libunwind
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.30 2012/12/19 17:32:09 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.31 2013/01/25 17:19:56 vapier Exp $
+
+  25 Jan 2013; Mike Frysinger <vapier@gentoo.org> libunwind-1.1.ebuild,
+  metadata.xml:
+  Add USE=libatomic to control dependency #453704 by Jeroen Roovers.
 
   19 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> libunwind-1.1.ebuild:
   Keyword amd64-linux and x86-linux

@@ -1,8 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/libunwind-1.1.ebuild,v 1.4 2012/12/19 17:32:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/libunwind-1.1.ebuild,v 1.5 2013/01/25 17:19:56 vapier Exp $
 
 EAPI="4"
+
+inherit eutils
 
 DESCRIPTION="Portable and efficient API to determine the call-chain of a program"
 HOMEPAGE="http://savannah.nongnu.org/projects/libunwind"
@@ -11,10 +13,12 @@ SRC_URI="http://download.savannah.nongnu.org/releases/libunwind/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="7"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~amd64-linux ~x86-fbsd ~x86-linux"
-IUSE="debug debug-frame lzma static-libs"
+IUSE="debug debug-frame libatomic lzma static-libs"
 
+# We just use the header from libatomic.
 RDEPEND="lzma? ( app-arch/xz-utils )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	libatomic? ( dev-libs/libatomic_ops )"
 
 DOCS=( AUTHORS ChangeLog NEWS README TODO )
 
@@ -36,6 +40,7 @@ src_configure() {
 	# conservative-checks: validate memory addresses before use; as of 1.0.1,
 	# only x86_64 supports this, yet may be useful for debugging, couple it with
 	# debug useflag.
+	ac_cv_header_atomic_ops_h=$(usex libatomic) \
 	econf \
 		--enable-cxx-exceptions \
 		$(use_enable debug-frame) \

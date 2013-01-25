@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bwm-ng
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.18 2012/12/26 08:14:56 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.19 2013/01/25 17:17:54 nimiux Exp $
+
+  25 Jan 2013; Chema Alonso <nimiux@gentoo.org> bwm-ng-0.6-r1.ebuild:
+  Marked stable for amd64 wrt bug #453998
 
 *bwm-ng-0.6-r1 (26 Dec 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/blas
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/blas/ChangeLog,v 1.8 2012/12/13 16:48:54 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/blas/ChangeLog,v 1.9 2013/01/25 17:19:25 ottxor Exp $
+
+  25 Jan 2013; Christoph Junghans <ottxor@gentoo.org> blas-1.0.ebuild:
+  added ~arm tested by me
 
   13 Dec 2012; Justin Lecher <jlec@gentoo.org> blas-1.0.ebuild, metadata.xml:
   Drop sci-libs/blas-atlas from deps due to coming removal, #372323
@@ -29,4 +32,3 @@
   10 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
   +blas-1.0.ebuild:
   New style virtual for blas. Version number is abitrary.
-

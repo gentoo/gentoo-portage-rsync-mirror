@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Email-Send-Gmail
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send-Gmail/ChangeLog,v 1.1 2012/12/24 09:12:04 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send-Gmail/ChangeLog,v 1.3 2013/01/25 17:24:48 ago Exp $
+
+  25 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  Email-Send-Gmail-0.330.0.ebuild:
+  Stable for amd64, wrt bug #453946
+
+  25 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  Email-Send-Gmail-0.330.0.ebuild:
+  Stable for x86, wrt bug #453946
 
 *Email-Send-Gmail-0.330.0 (24 Dec 2012)
 
@@ -8,4 +16,3 @@
   +Email-Send-Gmail-0.330.0.ebuild, +metadata.xml:
   Initial commit wrt bug #447724. Ebuild by Mikle Kolyada. He will maintain
   this package through proxy maintainers
-

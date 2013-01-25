@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-blas
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-blas/ChangeLog,v 1.24 2012/05/12 19:37:15 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-blas/ChangeLog,v 1.25 2013/01/25 17:07:22 ottxor Exp $
+
+  25 Jan 2013; Christoph Junghans <ottxor@gentoo.org> eselect-blas-0.1.ebuild:
+  added ~arm tested by me
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> eselect-blas-0.1.ebuild:
   keyword ~amd64-fbsd
@@ -85,4 +88,3 @@
   +files/blas.eselect-0.1, +files/blas.eselect.5, +metadata.xml,
   +eselect-blas-0.1.ebuild:
   New eselect module for switching BLAS implementations.
-

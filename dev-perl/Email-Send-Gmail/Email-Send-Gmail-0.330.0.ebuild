@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send-Gmail/Email-Send-Gmail-0.330.0.ebuild,v 1.1 2012/12/24 09:12:04 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send-Gmail/Email-Send-Gmail-0.330.0.ebuild,v 1.3 2013/01/25 17:24:48 ago Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Send Messages using Gmail"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND="dev-perl/Authen-SASL

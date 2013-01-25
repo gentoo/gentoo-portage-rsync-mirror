@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-lapack
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.20 2012/05/12 19:36:41 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.21 2013/01/25 17:22:02 ottxor Exp $
+
+  25 Jan 2013; Christoph Junghans <ottxor@gentoo.org> eselect-lapack-0.1.ebuild:
+  added ~arm tested by me
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> eselect-lapack-0.1.ebuild:
   keyword ~amd64-fbsd
@@ -74,4 +77,3 @@
   +files/lapack.eselect-0.1, +files/lapack.eselect.5, +metadata.xml,
   +eselect-lapack-0.1.ebuild:
   New eselect module for switching LAPACK implementations.
-
