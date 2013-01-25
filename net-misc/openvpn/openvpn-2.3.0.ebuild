@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.3.0.ebuild,v 1.2 2013/01/24 11:44:15 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.3.0.ebuild,v 1.3 2013/01/25 08:52:26 xarthisius Exp $
 
 EAPI=4
 
-inherit multilib autotools flag-o-matic user
+inherit multilib autotools flag-o-matic user systemd
 
 DESCRIPTION="Robust and highly flexible tunneling application compatible with many OSes"
 SRC_URI="http://swupdate.openvpn.net/community/releases/${P}.tar.gz"
@@ -71,6 +71,9 @@ src_install() {
 		insinto /usr/share/doc/${PF}/examples
 		doins -r sample contrib
 	fi
+
+	systemd_newtmpfilesd "${FILESDIR}"/${PN}.tmpfile ${PN}.conf || die
+	systemd_newunit "${FILESDIR}"/${PN}.service 'openvpn@.service' || die
 }
 
 pkg_postinst() {
