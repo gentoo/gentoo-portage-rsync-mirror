@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/emelfm2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.51 2013/01/22 17:07:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.54 2013/01/25 15:25:30 jer Exp $
+
+  25 Jan 2013; Jeroen Roovers <jer@gentoo.org> -emelfm2-0.7.5.ebuild,
+  -emelfm2-0.8.0.ebuild:
+  Old.
+
+  25 Jan 2013; Agostino Sarubbo <ago@gentoo.org> emelfm2-0.8.1.ebuild:
+  Stable for amd64, wrt bug #453554
+
+  25 Jan 2013; Agostino Sarubbo <ago@gentoo.org> emelfm2-0.8.1.ebuild:
+  Stable for x86, wrt bug #453554
 
 *emelfm2-0.8.2 (22 Jan 2013)
 
@@ -163,4 +173,3 @@
   23 Jul 2007; Samuli Suominen <drac@gentoo.org> +emelfm2-0.3.4.ebuild:
   Initial commit from Sunrise, thanks to Uwe Helm, Stefan Schweizer, Juan
   Aguado, Maarten Maathuis, and many others. Bug 153611.
-

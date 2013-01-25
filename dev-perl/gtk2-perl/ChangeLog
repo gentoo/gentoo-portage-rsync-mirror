@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/gtk2-perl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.137 2012/09/02 07:50:20 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.139 2013/01/25 15:07:58 ago Exp $
+
+  25 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gtk2-perl-1.244.0.ebuild:
+  Stable for amd64, wrt bug #453576
+
+  25 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gtk2-perl-1.244.0.ebuild:
+  Stable for x86, wrt bug #453576
 
   02 Sep 2012; Torsten Veller <tove@gentoo.org> -gtk2-perl-1.222.ebuild,
   -gtk2-perl-1.224.0.ebuild, -gtk2-perl-1.240.0.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.8.1.ebuild,v 1.1 2012/11/16 15:29:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.8.1.ebuild,v 1.3 2013/01/25 15:08:21 ago Exp $
 
 EAPI=4
 inherit eutils multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://emelfm2.net/rel/${P}.tar.bz2"
 
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="acl fam gimp kernel_linux nls policykit spell udev"
 
 COMMON_DEPEND=">=dev-libs/glib-2.26:2

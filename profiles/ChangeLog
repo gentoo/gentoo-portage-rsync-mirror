@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7400 2013/01/24 04:45:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7401 2013/01/25 15:22:39 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jan 2013; Julian Ospald <hasufell@gentoo.org> package.mask:
+  mask net-misc/gtk-youtube-viewer for removal wrt bug #453580
 
   24 Jan 2013; Jeroen Roovers <jer@gentoo.org> package.mask:
   Unmask =dev-libs/libnl-3.2.20 (bug #453736).

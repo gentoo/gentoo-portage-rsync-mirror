@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.2-r1.ebuild,v 1.1 2012/11/21 19:23:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.2-r1.ebuild,v 1.3 2013/01/25 15:08:45 ago Exp $
 
 EAPI=4
 #PERL_EXPORT_PHASE_FUNCTIONS=no
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.cipherdyne.org/psad"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/perl-ExtUtils-MakeMaker"

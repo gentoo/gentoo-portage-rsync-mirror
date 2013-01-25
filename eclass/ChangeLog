@@ -1,6 +1,26 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.635 2013/01/24 21:38:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.636 2013/01/25 15:10:24 haubi Exp $
+
+  25 Jan 2013; Michael Haubenwallner <haubi@gentoo.org>
+  +ELT-patches/aixrtl/1.5.0-cmds-c, +ELT-patches/aixrtl/1.5.0-cmds-cxx,
+  +ELT-patches/aixrtl/1.5.0-expsym-c, +ELT-patches/aixrtl/1.5.0-expsym-cxx,
+  +ELT-patches/aixrtl/1.5.0-noundef-c, +ELT-patches/aixrtl/1.5.0-noundef-cxx,
+  +ELT-patches/aixrtl/1.5.0-soname, +ELT-patches/aixrtl/1.5.0-usertl-c,
+  +ELT-patches/aixrtl/1.5.0-usertl-cxx, +ELT-patches/aixrtl/2.2.0-cmds-c,
+  +ELT-patches/aixrtl/2.2.0-cmds-cxx, +ELT-patches/aixrtl/2.2.0-expsym-c,
+  +ELT-patches/aixrtl/2.2.0-expsym-cxx, +ELT-patches/aixrtl/2.2.0-noundef-c,
+  +ELT-patches/aixrtl/2.2.0-noundef-cxx, +ELT-patches/aixrtl/2.2.0-usertl-cxx,
+  +ELT-patches/aixrtl/2.4.0-expsym-c, +ELT-patches/aixrtl/2.4.0-expsym-cxx,
+  -ELT-patches/aixrtl/1.4d-cmds-c, -ELT-patches/aixrtl/1.4d-cmds-cxx,
+  -ELT-patches/aixrtl/1.4d-sonamespec, -ELT-patches/aixrtl/1.4d-use-rtl-c,
+  -ELT-patches/aixrtl/1.4d-use-rtl-cxx, -ELT-patches/aixrtl/1.5-sonamespec,
+  -ELT-patches/aixrtl/2.1b-cmds-c, -ELT-patches/aixrtl/2.1b-cmds-cxx,
+  -ELT-patches/aixrtl/2.1b-use-rtl-cxx, ELT-patches/aixrtl/1.5.22-cmds-c,
+  ELT-patches/aixrtl/1.5.22-cmds-cxx, ELT-patches/aixrtl/2.2.8-cmds-c,
+  ELT-patches/aixrtl/2.2.8-cmds-cxx:
+  Recreate from scratch: Drop need for ld-wrapper with --soname support, is
+  unavailable during bootstrap. Ignore libtool before 1.5.0.
 
   24 Jan 2013; Pacho Ramos <pacho@gentoo.org> readme.gentoo.eclass:
   Include FORCE_PRINT_ELOG variable to for printing of messages when desired.
