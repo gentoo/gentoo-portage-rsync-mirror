@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.2.1.ebuild,v 1.1 2012/07/09 11:07:12 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.4.2.ebuild,v 1.1 2013/01/25 10:45:44 ultrabug Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_TESTS_FAILURES_TOLERANT_ABIS="*-jython"
 DISTUTILS_SRC_TEST="nosetests"
-
+PYTHON_TESTS_RESTRICTED_ABIS="3.*"
 inherit distutils
 
 DESCRIPTION="Python driver for MongoDB"
@@ -56,4 +56,9 @@ src_install() {
 	if use doc; then
 		dohtml -r html/* || die "Error installing docs"
 	fi
+}
+
+pkg_postinst() {
+	ewarn "Important changes on this release, make sure to read the changelog:"
+	ewarn "http://api.mongodb.org/python/${PV}/changelog.html"
 }
