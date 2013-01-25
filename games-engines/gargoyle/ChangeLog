@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/gargoyle
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.23 2012/09/23 08:54:41 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.24 2013/01/25 05:38:32 mr_bones_ Exp $
+
+  25 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -gargoyle-2010.1.ebuild:
+  old
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gargoyle-2011.1.ebuild:
   x86 stable wrt bug #432098
