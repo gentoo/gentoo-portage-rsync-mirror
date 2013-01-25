@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/selenium-webdriver/selenium-webdriver-2.29.0.ebuild,v 1.1 2013/01/22 06:40:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/selenium-webdriver/selenium-webdriver-2.29.0-r1.ebuild,v 1.1 2013/01/25 07:07:25 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19 ree18"
@@ -35,5 +35,5 @@ ruby_add_rdepend ">=dev-ruby/childprocess-0.2.5
 all_ruby_prepare() {
 	# Make websocket a development dependency since it is only needed
 	# for the safari driver which we don't support on Gentoo.
-	sed -i -e '/libwebsocket/,/version_requirements/ s/runtime/development/' ../metadata || die
+	sed -i -e '/websocket/,/version_requirements/ s/runtime/development/' ../metadata || die
 }
