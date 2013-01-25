@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-2.0.4.ebuild,v 1.3 2013/01/20 21:47:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-2.0.4.ebuild,v 1.4 2013/01/25 20:01:49 tomjbe Exp $
 
 EAPI=4
-inherit autotools eutils
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="X Amateur Station Tracking and Information Reporting"
 HOMEPAGE="http://xastir.sourceforge.net/"
@@ -61,6 +61,10 @@ src_configure() {
 		$(use_with geotiff) \
 		$(use_with gdal) \
 		$(use_with festival)
+}
+
+src_compile() {
+	emake AR="$(tc-getAR)"
 }
 
 src_install() {

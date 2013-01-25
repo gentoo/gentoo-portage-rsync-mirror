@@ -1,0 +1,50 @@
+From 70b61d96b7ca72b43c447a036cb118511f81d75b Mon Sep 17 00:00:00 2001
+From: Mike Gilbert <floppym@gentoo.org>
+Date: Fri, 25 Jan 2013 10:29:53 -0500
+Subject: [PATCH] Fix population of /run/udev/rules.d for newnet
+
+* Create /run/udev/rules.d before dropping files in place.
+* Move disable_oldnet_hotplug to start_pre so that it is done before starting the daemon
+
+http://bugs.gentoo.org/453656
+---
+ init.d/udev | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+diff --git a/init.d/udev b/init.d/udev
+index 342b3af..0a95873 100644
+--- a/init.d/udev
++++ b/init.d/udev
+@@ -100,6 +100,10 @@ start_pre()
+ 		eerror "Unable to find udev executable."
+ 		return 1
+ 	fi
++
++	# Need to do this before starting udev so it will load the rules.
++	disable_oldnet_hotplug
++
+ 	return 0
+ }
+ 
+@@ -118,7 +122,9 @@ disable_oldnet_hotplug()
+ {
+ 	if is_service_enabled network; then
+ 		# disable network hotplugging
+-		local f="/run/udev/rules.d/90-network.rules"
++		local d="/run/udev/rules.d"
++		mkdir -p "${d}"
++		local f="${d}/90-network.rules"
+ 		echo "# This file disables network hotplug events calling" >> "${f}"
+ 		echo "# old-style openrc net scripts" >> "${f}"
+ 		echo "# as we use /etc/init.d/network to set up our network" >> "${f}"
+@@ -186,7 +192,6 @@ display_hotplugged_services()
+ 
+ start_post()
+ {
+-	disable_oldnet_hotplug
+ 	start_udevmonitor
+ 	populate_dev
+ 	stop_udevmonitor
+-- 
+1.8.1.1
+

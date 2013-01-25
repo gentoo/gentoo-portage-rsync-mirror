@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/arduino-1.0.3.ebuild,v 1.1 2013/01/07 21:01:59 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/arduino-1.0.3-r1.ebuild,v 1.1 2013/01/25 20:22:31 miknix Exp $
 
 EAPI=4
 JAVA_PKG_IUSE="doc examples"
@@ -9,8 +9,9 @@ inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="An open-source AVR electronics prototyping platform"
 HOMEPAGE="http://arduino.cc/ http://arduino.googlecode.com/"
-SRC_URI="http://${PN}.googlecode.com/files/${P}-src.tar.gz"
-LICENSE="GPL-2 LGPL-2 CCPL-Attribution-ShareAlike-3.0"
+SRC_URI="http://${PN}.googlecode.com/files/${P}-src.tar.gz
+mirror://gentoo/arduino-icons.tar.bz2"
+LICENSE="GPL-2 GPL-2+ LGPL-2 CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 RESTRICT="strip binchecks"
@@ -79,6 +80,14 @@ src_install() {
 	# patching class files is too hard
 	dosym /usr/bin/avrdude "/usr/share/${PN}/hardware/tools/avrdude"
 	dosym /etc/avrdude.conf "/usr/share/${PN}/hardware/tools/avrdude.conf"
+
+	# install menu and icons
+	domenu "${FILESDIR}/${PN}.desktop"
+	for sz in 16 24 32 48 128 256; do
+		newicon -s $sz \
+			"${WORKDIR}/${PN}-icons/debian_icons_${sz}x${sz}_apps_${PN}.png" \
+			"${PN}.png"
+	done
 }
 
 pkg_postinst() {
