@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.22.1.ebuild,v 1.2 2013/01/08 11:42:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.22.1.ebuild,v 1.3 2013/01/25 00:14:44 naota Exp $
 
 EAPI="3"
 
@@ -9,7 +9,7 @@ inherit autotools eutils toolchain-funcs
 DESCRIPTION="Text formatter used for man pages"
 HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
 SRC_URI="mirror://gnu/groff/${P}.tar.gz
-	linguas_ja? ( mirror://gentoo/${PN}-1.21-japanese.patch.bz2 )"
+	linguas_ja? ( http://dev.gentoo.org/~naota/patch/${PN}-1.22.1-japanese.patch.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -52,7 +52,7 @@ src_prepare() {
 	EOF
 
 	if use linguas_ja ; then
-		epatch "${WORKDIR}"/${PN}-1.21-japanese.patch #255292 #350534
+		epatch "${WORKDIR}"/${PN}-1.22.1-japanese.patch #255292 #350534 #450796
 		eautoconf
 		eautoheader
 	fi
