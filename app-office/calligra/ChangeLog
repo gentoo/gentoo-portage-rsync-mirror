@@ -1,6 +1,11 @@
 # ChangeLog for app-office/calligra
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.76 2012/11/16 20:10:32 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.77 2013/01/25 09:34:43 patrick Exp $
+
+*calligra-2.5.5 (25 Jan 2013)
+
+  25 Jan 2013; Patrick Lauer <patrick@gentoo.org> +calligra-2.5.5.ebuild:
+  Bump
 
   16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> calligra-2.5.3.ebuild:
   workaround for bug 399061
