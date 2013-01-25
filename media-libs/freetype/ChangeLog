@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.351 2013/01/25 12:23:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.352 2013/01/25 17:57:44 polynomial-c Exp $
+
+  25 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> freetype-2.4.11.ebuild,
+  +files/freetype-2.4.11-auto-hinter_compile_fix.patch:
+  Non-maintainer commit: Fixed compilation with auto-hinter USE flag being
+  enabled. Thanks to Denis I. Polukarov for reporting this in bug #453956.
 
   25 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> freetype-2.4.11.ebuild:
   Non-maintainer commit: Replaced one useless enable_option line with a
