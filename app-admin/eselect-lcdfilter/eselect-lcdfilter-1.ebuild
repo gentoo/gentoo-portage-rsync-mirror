@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lcdfilter/eselect-lcdfilter-1.ebuild,v 1.3 2012/07/31 06:42:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lcdfilter/eselect-lcdfilter-1.ebuild,v 1.5 2013/01/25 11:06:26 ago Exp $
 
 EAPI=4
 inherit vcs-snapshot
@@ -11,7 +11,7 @@ SRC_URI="${HOMEPAGE}/tarball/v1 -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""

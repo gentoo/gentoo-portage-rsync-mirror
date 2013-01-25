@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-infinality
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-infinality/ChangeLog,v 1.1 2012/07/29 15:49:35 yngwin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-infinality/ChangeLog,v 1.3 2013/01/25 11:06:21 ago Exp $
+
+  25 Jan 2013; Agostino Sarubbo <ago@gentoo.org> eselect-infinality-1.ebuild:
+  Stable for amd64, wrt bug #488550
+
+  25 Jan 2013; Agostino Sarubbo <ago@gentoo.org> eselect-infinality-1.ebuild:
+  Stable for x86, wrt bug #488550
 
 *eselect-infinality-1 (29 Jul 2012)
 
