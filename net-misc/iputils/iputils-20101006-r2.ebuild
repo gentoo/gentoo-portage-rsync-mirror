@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20101006-r2.ebuild,v 1.7 2012/02/13 09:54:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20101006-r2.ebuild,v 1.8 2013/01/25 05:28:28 vapier Exp $
 
 # For released versions, we precompile the man/html pages and store
 # them in a tarball on our mirrors.  This avoids ugly issues while
@@ -20,7 +20,7 @@ else
 fi
 
 DESCRIPTION="Network monitoring tools including ping and ping6"
-HOMEPAGE="http://www.linux-foundation.org/en/Net:Iputils"
+HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/networking/iputils"
 
 LICENSE="BSD"
 SLOT="0"
