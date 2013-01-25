@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/libvisual-projectm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-projectm/ChangeLog,v 1.15 2013/01/21 20:26:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-projectm/ChangeLog,v 1.17 2013/01/25 13:56:02 ago Exp $
+
+  25 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  libvisual-projectm-2.1.0.ebuild:
+  Stable for amd64, wrt bug #453402
+
+  25 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  libvisual-projectm-2.1.0.ebuild:
+  Stable for x86, wrt bug #453402
 
 *libvisual-projectm-2.1.0 (21 Jan 2013)
 

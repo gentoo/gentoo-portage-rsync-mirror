@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.28.1.ebuild,v 1.1 2013/01/14 21:50:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.28.1-r1.ebuild,v 1.1 2013/01/25 13:53:30 axs Exp $
 
 EAPI=5
 
@@ -33,6 +33,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-overlay-number-regression.patch
 	epatch_user
 }
 
