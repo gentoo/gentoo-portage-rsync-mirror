@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/haveged
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.24 2013/01/06 17:50:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.25 2013/01/25 16:58:06 flameeyes Exp $
+
+*haveged-1.7 (25 Jan 2013)
+
+  25 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/haveged-1.7-build.patch, +files/haveged-init.d.3, +haveged-1.7.ebuild:
+  Version bump; new version now installs a library as well as the daemon, and
+  requires some patching. New init script forces a different pidfile location
+  and uses /run directly instead of /var/run.
 
 *haveged-1.6 (06 Jan 2013)
 

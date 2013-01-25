@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.154 2013/01/20 11:05:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.155 2013/01/25 16:38:09 ottxor Exp $
 
 # not ready for primetime
 packagekit
@@ -57,8 +57,12 @@ sse2
 sse3
 sse4
 sse4a
+sse41
 sse5
 ssse3
+avx
+avx128fma
+avx256
 svga
 win32codecs
 real
