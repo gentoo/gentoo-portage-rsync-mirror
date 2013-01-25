@@ -150,7 +150,7 @@ diff -Naurp a/src/eap_peer/libeap0.pc b/src/eap_peer/libeap0.pc
 diff -Naurp a/src/eap_peer/Makefile b/src/eap_peer/Makefile
 --- a/src/eap_peer/Makefile	2012-05-15 08:23:17.152386964 +0000
 +++ b/src/eap_peer/Makefile	2012-05-15 08:23:57.403389760 +0000
-@@ -1,11 +1,186 @@
+@@ -1,11 +1,188 @@
 -all:
 -	@echo Nothing to be made.
 +LIBEAP_NAME = libeap
@@ -192,7 +192,9 @@ diff -Naurp a/src/eap_peer/Makefile b/src/eap_peer/Makefile
 +OBJS_both += ../utils/base64.o
 +OBJS_both += ../utils/wpabuf.o
 +OBJS_both += ../crypto/md5.o
++ifneq ($(CONFIG_TLS), openssl)
 +OBJS_both += ../crypto/sha1.o
++endif
 +OBJS_both += ../crypto/sha1-tlsprf.o
 +OBJS_both += ../crypto/aes-encblock.o
 +OBJS_both += ../crypto/aes-wrap.o
