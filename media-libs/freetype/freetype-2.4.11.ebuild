@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11.ebuild,v 1.5 2013/01/25 11:08:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11.ebuild,v 1.6 2013/01/25 12:23:18 polynomial-c Exp $
 
 EAPI="4"
 
@@ -61,7 +61,8 @@ src_prepare() {
 		epatch "${WORKDIR}"/patches/freetype-enable-subpixel-hinting-infinality.patch
 		epatch "${WORKDIR}"/patches/freetype-entire-infinality-patchset.patch
 
-		enable_option FT_CONFIG_OPTION_SUBPIXEL_RENDERING
+		# FT_CONFIG_OPTION_SUBPIXEL_RENDERING is already enabled in
+		# freetype-2.4.11
 		enable_option TT_CONFIG_OPTION_SUBPIXEL_HINTING
 	fi
 

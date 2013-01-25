@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.350 2013/01/25 11:08:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.351 2013/01/25 12:23:18 polynomial-c Exp $
+
+  25 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> freetype-2.4.11.ebuild:
+  Non-maintainer commit: Replaced one useless enable_option line with a
+  comment.
 
   25 Jan 2013; Agostino Sarubbo <ago@gentoo.org> freetype-2.4.11.ebuild:
   Stable for ppc64, wrt bug #448550

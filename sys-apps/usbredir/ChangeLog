@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/usbredir
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.26 2013/01/12 07:30:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.28 2013/01/25 12:08:10 ago Exp $
+
+  25 Jan 2013; Agostino Sarubbo <ago@gentoo.org> usbredir-0.4.4.ebuild:
+  Stable for x86, wrt bug #453284
+
+  25 Jan 2013; Agostino Sarubbo <ago@gentoo.org> usbredir-0.4.4.ebuild:
+  Stable for amd64, wrt bug #453284
 
 *usbredir-0.4.4 (12 Jan 2013)
 
