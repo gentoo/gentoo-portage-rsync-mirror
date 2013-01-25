@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-2.3.ebuild,v 1.5 2012/05/21 19:56:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/rain-slick-2.3.ebuild,v 1.6 2013/01/25 19:06:08 tupone Exp $
 
 inherit eutils games
 
@@ -27,10 +27,13 @@ RDEPEND="sys-libs/glibc
 		app-emulation/emul-linux-x86-xlibs
 	)"
 
+dir="${GAMES_PREFIX_OPT}/${PN}/ep${EP}"
+QA_PREBUILT="${dir:1}/RainSlickEp2_bin
+	${dir:1}/linux_libs/*"
+
 S=${WORKDIR}/RainSlickEp${EP}
 
 src_install() {
-	local dir="${GAMES_PREFIX_OPT}/${PN}/ep${EP}"
 	dodir "${dir}"
 	cp -pPR * "${D}/${dir}/" || die
 	games_make_wrapper RainSlickEp${EP} "${dir}/RainSlickEp${EP}" || die
