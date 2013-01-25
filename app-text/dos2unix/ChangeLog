@@ -1,6 +1,11 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.120 2013/01/09 17:14:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.121 2013/01/25 21:42:12 polynomial-c Exp $
+
+*dos2unix-6.0.3 (25 Jan 2013)
+
+  25 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> +dos2unix-6.0.3.ebuild:
+  Non-maintainer commit: Version bump.
 
   09 Jan 2013; Justin Lecher <jlec@gentoo.org> -dos2unix-6.0.1.ebuild,
   metadata.xml:
