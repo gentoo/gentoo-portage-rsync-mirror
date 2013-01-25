@@ -23,7 +23,6 @@
     <remote-id type="cpan-module">DBIx::Class::AccessorGroup</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Admin</remote-id>
     <remote-id type="cpan-module">DBIx::Class::CDBICompat</remote-id>
-    <remote-id type="cpan-module">DBIx::Class::Carp</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Core</remote-id>
     <remote-id type="cpan-module">DBIx::Class::Cursor</remote-id>
     <remote-id type="cpan-module">DBIx::Class::DB</remote-id>
