@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>syadmin</herd>
+  <herd>sysadmin</herd>
   <longdescription>
     Nagios is a host and service monitor designed to inform you of
     network problems before your clients, end-users or managers do. It

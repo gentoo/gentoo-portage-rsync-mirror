@@ -1,10 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/exonerate/exonerate-2.2.0-r1.ebuild,v 1.4 2011/12/13 14:56:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/exonerate/exonerate-2.2.0-r1.ebuild,v 1.5 2013/01/25 16:24:50 jlec Exp $
 
 EAPI=4
 
-inherit autotools eutils toolchain-funcs
+AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils toolchain-funcs
 
 DESCRIPTION="Generic tool for pairwise sequence comparison"
 HOMEPAGE="http://www.ebi.ac.uk/~guy/exonerate/"
@@ -13,30 +15,36 @@ SRC_URI="http://www.ebi.ac.uk/~guy/exonerate/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc-macos ~x64-macos"
-IUSE="utils threads"
+IUSE="utils test threads"
+
+REQUIRED_USE="test? ( utils )"
 
 DEPEND="dev-libs/glib:2"
 RDEPEND="${DEPEND}"
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
+
+PATCHES=( "${FILESDIR}"/${P}-asneeded.patch )
 
 src_prepare() {
 	tc-export CC
 	sed \
 		-e 's: -O3 -finline-functions::g' \
 		-i configure.in || die
-	epatch "${FILESDIR}"/${P}-asneeded.patch
-	eautoreconf
+	autotools-utils_src_prepare
 }
 
 src_configure() {
-	econf \
-		$(use_enable utils utilities) \
-		$(use_enable threads pthreads) \
-		--enable-largefile \
+	local myeconfargs=(
+		$(use_enable utils utilities)
+		$(use_enable threads pthreads)
+		--enable-largefile
 		--enable-glib2
+	)
+	autotools-utils_src_configure
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
+	autotools-utils_src_install
 	doman doc/man/man1/*.1
-	dodoc README TODO NEWS AUTHORS ChangeLog || die
 }
