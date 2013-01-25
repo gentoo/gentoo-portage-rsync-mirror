@@ -1,6 +1,17 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.119 2013/01/22 08:09:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.121 2013/01/25 22:57:43 eva Exp $
+
+  25 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
+  Remove unused local description.
+
+  25 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-control-center-3.4.2-r1.ebuild,
+  -files/gnome-control-center-3.4.2-cups-1.6.patch,
+  -files/gnome-control-center-3.4.2-gentoo-paths.patch,
+  -files/gnome-control-center-3.4.2-optional-bt-colord-goa-wacom.patch,
+  -files/org.gnome.control-center.defaultbackground.policy:
+  Clean up old revisions and files.
 
   22 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
   Switch to global systemd USE flag.

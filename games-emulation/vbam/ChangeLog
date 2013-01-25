@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/vbam
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/ChangeLog,v 1.17 2013/01/18 01:08:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/ChangeLog,v 1.18 2013/01/25 22:48:59 radhermit Exp $
+
+  25 Jan 2013; Tim Harder <radhermit@gentoo.org> vbam-1.8.0.1149.ebuild,
+  vbam-9999.ebuild:
+  Inherit gnome2-utils and fdo-mime eclasses.
 
   18 Jan 2013; Tim Harder <radhermit@gentoo.org> vbam-1.8.0.1149.ebuild,
   vbam-9999.ebuild:

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14407 2013/01/25 15:22:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14408 2013/01/25 22:20:41 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (25 Jan 2013)
+# Masked for testing
+>=dev-libs/boost-1.53.0_beta1
 
 # Julian Ospald <hasufell@gentoo.org> (25 Jan 2013)
 # functionality now provided by >=net-misc/youtube-viewer[gtk]-3.0.3

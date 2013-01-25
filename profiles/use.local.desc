@@ -2082,7 +2082,6 @@ gnome-base/gdm:xklavier - Use x11-libs/libxklavier for keyboard management
 gnome-base/gnome:extras - Install additional GNOME applications
 gnome-base/gnome:fallback - Install gnome-base/gnome-panel and x11-wm/metacity for the GNOME 3 fallback mode
 gnome-base/gnome-applets:cpufreq - Build cpu frequency scaling monitor applet
-gnome-base/gnome-control-center:cheese - Add support for taking pictures for the user accounts panel using media-video/cheese
 gnome-base/gnome-control-center:colord - Support color management using x11-misc/colord
 gnome-base/gnome-control-center:gnome-online-accounts - Enable configuration panel for net-libs/gnome-online-accounts accounts
 gnome-base/gnome-control-center:i18n - Enable support for enhanced input methods through app-i18n/ibus

@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/freedroidrpg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/ChangeLog,v 1.37 2013/01/20 01:13:43 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/ChangeLog,v 1.38 2013/01/25 22:40:46 hasufell Exp $
+
+  25 Jan 2013; Julian Ospald <hasufell@gentoo.org> freedroidrpg-0.15.1.ebuild:
+  add missing gnome2-utils.eclass for icon cache update
 
 *freedroidrpg-0.15.1 (20 Jan 2013)
 

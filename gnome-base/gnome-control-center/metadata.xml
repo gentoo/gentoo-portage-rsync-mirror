@@ -5,8 +5,6 @@
 	<use>
 		<flag name="colord">Support color management using
 			<pkg>x11-misc/colord</pkg></flag>
-		<flag name="cheese">Add support for taking pictures for the user
-			accounts panel using <pkg>media-video/cheese</pkg></flag>
 		<flag name="gnome-online-accounts">Enable configuration panel for
 			<pkg>net-libs/gnome-online-accounts</pkg> accounts</flag>
 		<flag name="i18n">Enable support for enhanced input methods through

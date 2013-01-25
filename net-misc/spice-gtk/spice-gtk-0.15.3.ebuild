@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.15.3.ebuild,v 1.1 2013/01/12 23:56:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.15.3.ebuild,v 1.2 2013/01/25 22:27:28 cardoe Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -82,7 +82,8 @@ src_prepare() {
 	mkdir ${GTK3_BUILDDIR} || die
 
 	epatch \
-		"${FILESDIR}/0.12-parallel-install.patch"
+		"${FILESDIR}/0.12-parallel-install.patch" \
+		"${FILESDIR}/0001-build-sys-fix-out-of-tree-build-with-vala.patch"
 	eautoreconf
 }
 

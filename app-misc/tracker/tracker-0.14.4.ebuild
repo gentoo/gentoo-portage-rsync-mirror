@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.4.ebuild,v 1.7 2013/01/06 09:15:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.4.ebuild,v 1.8 2013/01/25 22:35:14 eva Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2:2.6"
@@ -29,7 +29,12 @@ IUSE="applet cue doc eds elibc_glibc exif firefox-bookmarks flac flickr gif
 gnome-keyring gsf gstreamer gtk iptc +iso +jpeg laptop +miner-fs mp3 networkmanager pdf playlist rss test thunderbird +tiff upnp-av +vorbis xine +xml xmp xps" # qt4 strigi
 [[ ${PV} = 9999 ]] || IUSE="${IUSE} nautilus"
 
-REQUIRED_USE="cue? ( gstreamer )"
+REQUIRED_USE="
+	^^ ( gstreamer xine )
+	cue? ( gstreamer )
+	upnp-av? ( gstreamer )
+	!miner-fs? ( !cue !exif !flac !gif !gsf !iptc !iso !jpeg !mp3 !pdf !playlist !tiff !vorbis !xml !xmp !xps )
+"
 
 # Test suite highly disfunctional, loops forever
 # putting aside for now
@@ -39,15 +44,15 @@ RESTRICT="test"
 # glibc-2.12 needed for SCHED_IDLE (see bug #385003)
 RDEPEND="
 	>=app-i18n/enca-1.9
-	>=dev-db/sqlite-3.7.14[threadsafe]
+	>=dev-db/sqlite-3.7.14:=[threadsafe]
 	>=dev-libs/glib-2.28:2
 	>=dev-libs/gobject-introspection-0.9.5
-	>=dev-libs/icu-4
+	>=dev-libs/icu-4:=
 	|| (
 		>=media-gfx/imagemagick-5.2.1[png,jpeg=]
 		media-gfx/graphicsmagick[imagemagick,png,jpeg=] )
-	>=media-libs/libpng-1.2
-	>=x11-libs/pango-1
+	>=media-libs/libpng-1.2:=
+	>=x11-libs/pango-1:=
 	sys-apps/util-linux
 
 	applet? (
@@ -56,8 +61,8 @@ RDEPEND="
 		>=x11-libs/gtk+-3:3 )
 	cue? ( media-libs/libcue )
 	eds? (
-		>=mail-client/evolution-3.3.5
-		>=gnome-extra/evolution-data-server-3.3.5
+		>=mail-client/evolution-3.3.5:=
+		>=gnome-extra/evolution-data-server-3.3.5:=
 		<mail-client/evolution-3.5.3
 		<gnome-extra/evolution-data-server-3.5.3 )
 	elibc_glibc? ( >=sys-libs/glibc-2.12 )
@@ -72,14 +77,12 @@ RDEPEND="
 	gsf? ( >=gnome-extra/libgsf-1.13 )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10.31:0.10
-		upnp-av? ( >=media-libs/gupnp-dlna-0.5 )
-		!upnp-av? ( >=media-libs/gst-plugins-base-0.10.31:0.10 ) )
-	!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
+		>=media-libs/gst-plugins-base-0.10.31:0.10 )
 	gtk? (
 		>=dev-libs/libgee-0.3:0
 		>=x11-libs/gtk+-3:3 )
 	iptc? ( media-libs/libiptcdata )
-	iso? ( >=sys-libs/libosinfo-0.0.2 )
+	iso? ( >=sys-libs/libosinfo-0.0.2:= )
 	jpeg? ( virtual/jpeg:0 )
 	laptop? ( >=sys-power/upower-0.9 )
 	mp3? (
@@ -87,8 +90,8 @@ RDEPEND="
 		gtk? ( x11-libs/gdk-pixbuf:2 ) )
 	networkmanager? ( >=net-misc/networkmanager-0.8 )
 	pdf? (
-		>=x11-libs/cairo-1
-		>=app-text/poppler-0.16[cairo,utils]
+		>=x11-libs/cairo-1:=
+		>=app-text/poppler-0.16:=[cairo,utils]
 		>=x11-libs/gtk+-2.12:2 )
 	playlist? ( dev-libs/totem-pl-parser )
 	rss? ( net-libs/libgrss )
@@ -96,11 +99,13 @@ RDEPEND="
 		>=mail-client/thunderbird-5.0
 		>=mail-client/thunderbird-bin-5.0 ) )
 	tiff? ( media-libs/tiff )
+	upnp-av? ( >=media-libs/gupnp-dlna-0.5 )
 	vorbis? ( >=media-libs/libvorbis-0.22 )
 	xine? ( >=media-libs/xine-lib-1 )
 	xml? ( >=dev-libs/libxml2-2.6 )
 	xmp? ( >=media-libs/exempi-2.1 )
 	xps? ( app-text/libgxps )
+	!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
 "
 #	strigi? ( >=app-misc/strigi-0.7 )
 #	mp3? ( qt4? (  >=x11-libs/qt-gui-4.7.1:4 ) )
@@ -112,7 +117,6 @@ DEPEND="${RDEPEND}
 	gtk? ( >=dev-libs/libgee-0.3 )
 	doc? (
 		app-office/dia
-		>=dev-util/gtk-doc-1.8
 		media-gfx/graphviz )
 	test? (
 		>=dev-libs/dbus-glib-0.82-r1
@@ -154,79 +158,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	if use gstreamer ; then
-		G2CONF="${G2CONF} --enable-generic-media-extractor=gstreamer"
-		if use upnp-av; then
-			G2CONF="${G2CONF} --with-gstreamer-backend=gupnp-dlna"
-		else
-			G2CONF="${G2CONF} --with-gstreamer-backend=discoverer"
-		fi
-	elif use xine ; then
-		G2CONF="${G2CONF} --enable-generic-media-extractor=xine"
-	else
-		G2CONF="${G2CONF} --enable-generic-media-extractor=external"
-	fi
-
-	# if use mp3 && (use gtk || use qt4); then
-	if use mp3 && use gtk; then
-		#G2CONF="${G2CONF} $(use_enable !qt4 gdkpixbuf) $(use_enable qt4 qt)"
-		G2CONF="${G2CONF} --enable-gdkpixbuf"
-	fi
-
-	# unicode-support: libunistring, libicu or glib ?
-	# According to NEWS, introspection is required
-	# FIXME: disabling streamanalyzer for now since tracker-sparql-builder.h
-	# is not being generated
-	# XXX: disabling qt since tracker-albumart-qt is unstable; bug #385345
-	# nautilus extension is in a separate package, nautilus-tracker-tags
-	G2CONF="${G2CONF}
-		--disable-hal
-		--enable-tracker-fts
-		--with-enca
-		--with-unicode-support=libicu
-		--enable-guarantee-metadata
-		--enable-introspection
-		--disable-libstreamanalyzer
-		--disable-qt
-		--disable-nautilus-extension
-		$(use_enable applet tracker-search-bar)
-		$(use_enable cue libcue)
-		$(use_enable eds miner-evolution)
-		$(use_enable exif libexif)
-		$(use_enable firefox-bookmarks miner-firefox)
-		$(use_with firefox-bookmarks firefox-plugin-dir ${EPREFIX}/usr/$(get_libdir)/firefox/extensions)
-		FIREFOX=${S}/firefox-version.sh
-		$(use_enable flac libflac)
-		$(use_enable flickr miner-flickr)
-		$(use_enable gnome-keyring)
-		$(use_enable gsf libgsf)
-		$(use_enable gtk tracker-explorer)
-		$(use_enable gtk tracker-preferences)
-		$(use_enable gtk tracker-needle)
-		$(use_enable iptc libiptcdata)
-		$(use_enable iso libosinfo)
-		$(use_enable jpeg libjpeg)
-		$(use_enable laptop upower)
-		$(use_enable miner-fs)
-		$(use_enable mp3 taglib)
-		$(use_enable networkmanager network-manager)
-		$(use_enable pdf poppler)
-		$(use_enable playlist)
-		$(use_enable rss miner-rss)
-		$(use_enable test functional-tests)
-		$(use_enable test unit-tests)
-		$(use_enable thunderbird miner-thunderbird)
-		$(use_with thunderbird thunderbird-plugin-dir ${EPREFIX}/usr/$(get_libdir)/thunderbird/extensions)
-		THUNDERBIRD=${S}/thunderbird-version.sh
-		$(use_enable tiff libtiff)
-		$(use_enable vorbis libvorbis)
-		$(use_enable xml libxml2)
-		$(use_enable xmp exempi)
-		$(use_enable xps libgpxs)"
-	#	$(use_enable strigi libstreamanalyzer)
-
-	DOCS="AUTHORS ChangeLog NEWS README"
-
 	# Fix functional tests scripts
 	find "${S}" -name "*.pyc" -delete
 	python_convert_shebangs -q -r 2 tests utils examples
@@ -246,6 +177,82 @@ src_prepare() {
 		vala_src_prepare
 	fi
 	gnome2_src_prepare
+}
+
+src_configure() {
+	local myconf=""
+
+	if use gstreamer ; then
+		myconf="${myconf} --enable-generic-media-extractor=gstreamer"
+		if use upnp-av; then
+			myconf="${myconf} --with-gstreamer-backend=gupnp-dlna"
+		else
+			myconf="${myconf} --with-gstreamer-backend=discoverer"
+		fi
+	elif use xine ; then
+		myconf="${myconf} --enable-generic-media-extractor=xine"
+	else
+		myconf="${myconf} --enable-generic-media-extractor=external"
+	fi
+
+	# if use mp3 && (use gtk || use qt4); then
+	if use mp3 && use gtk; then
+		#myconf="${myconf} $(use_enable !qt4 gdkpixbuf) $(use_enable qt4 qt)"
+		myconf="${myconf} --enable-gdkpixbuf"
+	fi
+
+	# unicode-support: libunistring, libicu or glib ?
+	# According to NEWS, introspection is required
+	# FIXME: disabling streamanalyzer for now since tracker-sparql-builder.h
+	# is not being generated
+	# XXX: disabling qt since tracker-albumart-qt is unstable; bug #385345
+	# nautilus extension is in a separate package, nautilus-tracker-tags
+	gnome2_src_configure \
+		--disable-hal \
+		--disable-libstreamanalyzer \
+		--disable-nautilus-extension \
+		--disable-qt \
+		--enable-guarantee-metadata \
+		--enable-introspection \
+		--enable-tracker-fts \
+		--with-enca \
+		--with-unicode-support=libicu \
+		$(use_enable applet tracker-search-bar) \
+		$(use_enable cue libcue) \
+		$(use_enable eds miner-evolution) \
+		$(use_enable exif libexif) \
+		$(use_enable firefox-bookmarks miner-firefox) \
+		$(use_with firefox-bookmarks firefox-plugin-dir "${EPREFIX}"/usr/$(get_libdir)/firefox/extensions) \
+		FIREFOX="${S}"/firefox-version.sh \
+		$(use_enable flac libflac) \
+		$(use_enable flickr miner-flickr) \
+		$(use_enable gnome-keyring) \
+		$(use_enable gsf libgsf) \
+		$(use_enable gtk tracker-explorer) \
+		$(use_enable gtk tracker-needle) \
+		$(use_enable gtk tracker-preferences) \
+		$(use_enable iptc libiptcdata) \
+		$(use_enable iso libosinfo) \
+		$(use_enable jpeg libjpeg) \
+		$(use_enable laptop upower) \
+		$(use_enable miner-fs) \
+		$(use_enable mp3 taglib) \
+		$(use_enable networkmanager network-manager) \
+		$(use_enable pdf poppler) \
+		$(use_enable playlist) \
+		$(use_enable rss miner-rss) \
+		$(use_enable test functional-tests) \
+		$(use_enable test unit-tests) \
+		$(use_enable thunderbird miner-thunderbird) \
+		$(use_with thunderbird thunderbird-plugin-dir "${EPREFIX}"/usr/$(get_libdir)/thunderbird/extensions) \
+		THUNDERBIRD="${S}"/thunderbird-version.sh \
+		$(use_enable tiff libtiff) \
+		$(use_enable vorbis libvorbis) \
+		$(use_enable xml libxml2) \
+		$(use_enable xmp exempi) \
+		$(use_enable xps libgxps) \
+		${myconf}
+	#	$(use_enable strigi libstreamanalyzer)
 }
 
 src_test() {
