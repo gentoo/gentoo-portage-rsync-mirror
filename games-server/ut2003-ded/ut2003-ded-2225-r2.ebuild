@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ut2003-ded-2225-r2.ebuild,v 1.10 2009/11/22 23:28:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ut2003-ded-2225-r2.ebuild,v 1.11 2013/01/25 07:41:28 tupone Exp $
 
 inherit games
 
@@ -26,6 +26,8 @@ S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
+
+QA_PREBUILT="${dir:1}/System/*"
 
 src_unpack() {
 	unpack ut2003-lnxded-${PV}.tar.bz2 \
