@@ -1,0 +1,11 @@
+# ChangeLog for www-client/weboob
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/weboob/ChangeLog,v 1.1 2013/01/25 08:31:16 patrick Exp $
+
+*weboob-0d (25 Jan 2013)
+*weboob-9999 (25 Jan 2013)
+*weboob-9998 (25 Jan 2013)
+
+  25 Jan 2013; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +weboob-0d.ebuild, +weboob-9998.ebuild, +weboob-9999.ebuild:
+  Initial import from laurentb overlay

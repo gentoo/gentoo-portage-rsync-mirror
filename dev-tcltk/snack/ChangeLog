@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/snack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.53 2013/01/24 22:24:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.54 2013/01/25 08:10:44 jlec Exp $
+
+*snack-2.2.10-r6 (25 Jan 2013)
+
+  25 Jan 2013; Justin Lecher <jlec@gentoo.org> +snack-2.2.10-r6.ebuild:
+  Respect AR, #453914; respect CFLAGS, #453916; use distutils-r1 and
+  autotools_utils eclasses
 
   24 Jan 2013; Agostino Sarubbo <ago@gentoo.org> snack-2.2.10-r5.ebuild:
   Stable for x86, wrt bug #446822
