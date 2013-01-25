@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.9 2013/01/24 04:38:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.10 2013/01/25 03:49:38 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -64,7 +64,8 @@ DEPEND="${COMMON_DEPEND}
 	>=sys-devel/gettext-0.17
 	>=sys-kernel/linux-headers-2.6.29
 	doc? ( >=dev-util/gtk-doc-1.8 )
-	vala? ( $(vala_depend) )"
+	vala? ( $(vala_depend) )
+	!wimax? ( !=dev-libs/libnl-3.2.20 )"
 
 sysfs_deprecated_check() {
 	ebegin "Checking for SYSFS_DEPRECATED support"
@@ -107,8 +108,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.9.4.0-dhclient-ipv6.patch"
 	# https://bugzilla.gnome.org/show_bug.cgi?id=683932
 	epatch "${FILESDIR}/${PN}-0.9.6.0-daemon-signals.patch"
-	# https://bugzilla.gnome.org/show_bug.cgi?id=692423, bug #453736
-	epatch "${FILESDIR}/${PN}-0.9.6.4-object-api.h.patch"
 
 	epatch_user
 
