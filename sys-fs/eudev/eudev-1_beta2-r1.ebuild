@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta2.ebuild,v 1.5 2013/01/24 20:22:57 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta2-r1.ebuild,v 1.1 2013/01/24 23:56:00 blueness Exp $
 
 EAPI=4
 
@@ -112,6 +112,9 @@ src_prepare()
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
 		-i rules/*.rules \
 	|| die "failed to change group dialout to uucp"
+
+	# Fix a typo found after 1_beta2 was rolled out
+	epatch "${FILESDIR}/${PN}-fix-typo-util.c.patch"
 
 	epatch_user
 
