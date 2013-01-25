@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.11 2013/01/25 04:42:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4-r1.ebuild,v 1.1 2013/01/25 04:42:37 tetromino Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -14,15 +14,15 @@ HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 
 LICENSE="GPL-2+"
 SLOT="0" # TODO: add subslot on 0.9.8 bump
-IUSE="avahi bluetooth connection-sharing +consolekit dhclient +dhcpcd doc gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf vala +wext wimax" # systemd
+IUSE="avahi bluetooth connection-sharing +consolekit dhclient +dhcpcd doc gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf systemd vala +wext wimax"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 REQUIRED_USE="
 	modemmanager? ( ppp )
 	^^ ( nss gnutls )
 	^^ ( dhclient dhcpcd )
+	?? ( consolekit systemd )
 "
-#	?? ( consolekit systemd )
 
 # gobject-introspection-0.10.3 is needed due to gnome bug 642300
 # wpa_supplicant-0.7.3-r3 is needed due to bug 359271
@@ -58,9 +58,8 @@ COMMON_DEPEND=">=sys-apps/dbus-1.2
 RDEPEND="${COMMON_DEPEND}
 	modemmanager? ( >=net-misc/modemmanager-0.4 )
 	consolekit? ( sys-auth/consolekit )
+	systemd? ( >=sys-apps/systemd-31 )
 "
-#	systemd? ( >=sys-apps/systemd-31 )
-
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.40
@@ -131,7 +130,7 @@ src_configure() {
 		--with-iptables=/sbin/iptables \
 		--enable-concheck \
 		--with-crypto=$(usex nss nss gnutls) \
-		--with-session-tracking=$(usex consolekit ck none) \
+		--with-session-tracking=$(usex consolekit ck $(usex systemd systemd none)) \
 		$(use_enable doc gtk-doc) \
 		$(use_enable introspection) \
 		$(use_enable ppp) \
@@ -159,11 +158,11 @@ src_install() {
 	# Need to keep the /etc/NetworkManager/dispatched.d for dispatcher scripts
 	keepdir /etc/NetworkManager/dispatcher.d
 
-#	if use systemd; then
+	if use systemd; then
 		# Our init.d script requires running a dispatcher script that annoys
 		# systemd users; bug #434692
-#		rm -rv "${ED}/etc/init.d" || die "rm failed"
-#	else
+		rm -rv "${ED}/etc/init.d" || die "rm failed"
+	else
 		# Provide openrc net dependency only when nm is connected
 		exeinto /etc/NetworkManager/dispatcher.d
 		newexe "${FILESDIR}/10-openrc-status-r3" 10-openrc-status
@@ -172,7 +171,7 @@ src_install() {
 
 		# Default conf.d file
 		newconfd "${FILESDIR}/conf.d.NetworkManager" NetworkManager
-#	fi
+	fi
 
 	# Add keyfile plugin support
 	keepdir /etc/NetworkManager/system-connections
