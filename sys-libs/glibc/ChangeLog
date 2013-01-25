@@ -1,5 +1,10 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.919 2013/01/23 05:27:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.920 2013/01/25 03:12:18 vapier Exp $
+
+  25 Jan 2013; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/pkg_preinst.eblit:
+  Refactor sanity checks a bit and include gcc in the search path #453760 by
+  William Throwe.
 
   23 Jan 2013; Mike Frysinger <vapier@gentoo.org> glibc-2.16.0.ebuild,
   glibc-2.17.ebuild:
