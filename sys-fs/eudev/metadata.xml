@@ -2,32 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>lu_zero@gentoo.org</email>
-  <name>Luca Barbato</name>
-</maintainer>
-<maintainer>
-  <email>blueness@gentoo.org</email>
-  <name>Anthony G. Basile</name>
-</maintainer>
-<maintainer>
-  <email>klondike@gentoo.org</email>
-  <name>Francisco Izquierdo</name>
-</maintainer>
-<maintainer>
-  <email>axs@gentoo.org</email>
-  <name>Ian Stakenvicius</name>
-</maintainer>
-<maintainer>
-  <email>prometheanfire@gentoo.org</email>
-  <name>Matthew Thode</name>
-</maintainer>
-<maintainer>
-  <email>chainsaw@gentoo.org</email>
-  <name>Tony Vroon</name>
-</maintainer>
-<maintainer>
-  <email>ryao@gentoo.org</email>
-  <name>Richard Yao</name>
+  <email>eudev@gentoo.org</email>
 </maintainer>
 <use>
   <flag name="gudev">enable libudev gobject interface</flag>

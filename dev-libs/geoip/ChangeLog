@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/geoip
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.142 2012/12/12 15:30:06 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.146 2013/01/25 14:58:31 jer Exp $
+
+  25 Jan 2013; Jeroen Roovers <jer@gentoo.org> geoip-1.4.8-r2.ebuild:
+  Stable for HPPA (bug #453404).
+
+  25 Jan 2013; Jeroen Roovers <jer@gentoo.org> geoip-1.4.8-r1.ebuild,
+  geoip-1.4.8-r2.ebuild:
+  Add sys-libs/zlib dependency by Agostino Sarubbo (bug #453404).
+
+  25 Jan 2013; Agostino Sarubbo <ago@gentoo.org> geoip-1.4.8-r2.ebuild:
+  Stable for amd64, wrt bug #453404
+
+  25 Jan 2013; Agostino Sarubbo <ago@gentoo.org> geoip-1.4.8-r2.ebuild:
+  Stable for x86, wrt bug #453404
 
 *geoip-1.4.8-r2 (12 Dec 2012)
 
