@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.21.0.ebuild,v 1.1 2013/01/22 01:48:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.21.0.ebuild,v 1.2 2013/01/25 18:51:27 vapier Exp $
 
 # See `man savedconfig.eclass` for info on how to use USE=savedconfig.
 
@@ -43,6 +43,10 @@ busybox_config_option() {
 	   ;;
 	esac
 	einfo $(grep "CONFIG_$2[= ]" .config || echo Could not find CONFIG_$2 ...)
+}
+
+busybox_config_enabled() {
+	grep "^CONFIG_$1=y" -q .config
 }
 
 src_prepare() {
@@ -195,6 +199,24 @@ src_install() {
 	fi
 	if use livecd ; then
 		dosym busybox /bin/vi
+	fi
+
+	# add busybox daemon's, bug #444718
+	if busybox_config_enabled FEATURE_NTPD_SERVER; then
+		newconfd "${FILESDIR}/ntpd.confd" "busybox-ntpd"
+		newinitd "${FILESDIR}/ntpd.initd" "busybox-ntpd"
+	fi
+	if busybox_config_enabled SYSLOGD; then
+		newconfd "${FILESDIR}/syslogd.confd" "busybox-syslogd"
+		newinitd "${FILESDIR}/syslogd.initd" "busybox-syslogd"
+	fi
+	if busybox_config_enabled KLOGD; then
+		newconfd "${FILESDIR}/klogd.confd" "busybox-klogd"
+		newinitd "${FILESDIR}/klogd.initd" "busybox-klogd"
+	fi
+	if busybox_config_enabled WATCHDOG; then
+		newconfd "${FILESDIR}/watchdog.confd" "busybox-watchdog"
+		newinitd "${FILESDIR}/watchdog.initd" "busybox-watchdog"
 	fi
 
 	# bundle up the symlink files for use later
