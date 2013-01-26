@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lockfile
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/ChangeLog,v 1.12 2012/06/09 08:17:55 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/ChangeLog,v 1.13 2013/01/26 05:38:07 prometheanfire Exp $
+
+  26 Jan 2013; Matthew Thode <prometheanfire@gentoo.org> +lockfile-0.8.ebuild:
+  adding lockfile-0.8 because sys-cluster/cinder needs it
 
   09 Jun 2012; Mike Frysinger <vapier@gentoo.org> lockfile-0.9.1.ebuild:
   Add arm love for ChromiumOS.

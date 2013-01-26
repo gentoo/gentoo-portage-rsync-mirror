@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/stevedore
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.1 2012/11/05 08:49:33 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.2 2013/01/26 05:41:06 prometheanfire Exp $
+
+*stevedore-0.8 (26 Jan 2013)
+
+  26 Jan 2013; Matthew Thode <prometheanfire@gentoo.org> +stevedore-0.8.ebuild:
+  adding stevedore-0.8 since sys-cluster/cinder needs it
 
 *stevedore-0.6 (05 Nov 2012)
 

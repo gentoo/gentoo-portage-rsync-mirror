@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>python</herd>
+  <maintainer>
+    <email>prometheanfire@gentoo.org</email>
+    <name>Matthew Thode</name>
+  </maintainer>
+  <longdescription lang="en">
+    This is a standalone release of the wsgiref library, that provides
+	validation support for WSGI 1.0.1 (PEP 3333) for Python versions less than
+	3.2, and includes the new wsgiref.util.test() utility function.
+  </longdescription>
+</pkgmetadata>
+
