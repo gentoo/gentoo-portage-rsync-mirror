@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
+	<maintainer>
+		<email>hwoarang@gentoo.org</email>
+		<name>Markos Chandras</name>
+	</maintainer>
 	<upstream>
 		<remote-id type="pypi">buildbot-slave</remote-id>
 	</upstream>

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/buildbot-slave-0.8.5.ebuild,v 1.3 2012/06/08 07:44:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/buildbot-slave-0.8.7_p1.ebuild,v 1.1 2013/01/26 15:50:31 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,7 +13,10 @@ inherit distutils user
 
 DESCRIPTION="BuildBot Slave Daemon"
 HOMEPAGE="http://trac.buildbot.net/ http://code.google.com/p/buildbot/ http://pypi.python.org/pypi/buildbot-slave"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+
+MY_PV="${PV/_p/p}"
+MY_P="${PN}-${MY_PV}"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,13 +24,15 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-
 IUSE="test"
 
 RDEPEND="dev-python/setuptools
-	>=dev-python/twisted-2
+	dev-python/twisted
 	!!<dev-util/buildbot-0.8.1
 	!<dev-util/buildbot-0.8.3"
 DEPEND="${RDEPEND}
 	test? ( dev-python/mock )"
 
 PYTHON_MODNAME="buildslave"
+
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	python_pkg_setup

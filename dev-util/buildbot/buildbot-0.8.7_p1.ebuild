@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.5.ebuild,v 1.6 2012/09/24 03:46:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.7_p1.ebuild,v 1.1 2013/01/26 15:44:53 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris"
 IUSE="doc examples irc mail manhole test"
 
 # sqlite3 module of Python 2.5 is not supported.
@@ -51,12 +51,6 @@ pkg_setup() {
 	enewuser buildbot
 }
 
-src_prepare() {
-	distutils_src_prepare
-	# https://github.com/buildbot/buildbot/commit/a3abed70546b3742964994517bb27556e06f6e20
-	sed -e "s/sqlalchemy-migrate == 0.6/sqlalchemy-migrate ==0.6, ==0.7/" -i setup.py || die "sed failed"
-}
-
 src_compile() {
 	distutils_src_compile
 
@@ -85,6 +79,14 @@ src_install() {
 
 	newconfd "${FILESDIR}/buildmaster.confd" buildmaster
 	newinitd "${FILESDIR}/buildmaster.initd" buildmaster
+
+	# In case of multiple masters, it's possible to edit web files
+	# so all master can share the changes. So protect them!
+	# If something else need to be protected, please open a bug
+	# on http://bugs.gentoo.org
+	echo "CONFIG_PROTECT=\"$(python_get_sitedir -f)/${PN}/status/web/\"" \
+		> 85${PN} || die
+	doenvd 85${PN}
 }
 
 pkg_postinst() {
@@ -94,7 +96,7 @@ pkg_postinst() {
 	elog "to support starting buildbot through Gentoo's init system. To use this,"
 	elog "set up your build master following the documentation, make sure the"
 	elog "resulting directories are owned by the \"buildbot\" user and point"
-	elog "\"${ROOT}etc/conf.d/buildmaster\" at the right location. The scripts can"
+	elog "\"${EROOT}etc/conf.d/buildmaster\" at the right location. The scripts can"
 	elog "run as a different user if desired. If you need to run more than one"
 	elog "build master, just copy the scripts."
 	elog
