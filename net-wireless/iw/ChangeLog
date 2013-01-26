@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/iw
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.59 2012/12/22 04:34:16 zerochaos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.61 2013/01/26 05:23:30 zerochaos Exp $
+
+  26 Jan 2013; Rick Farina <zerochaos@gentoo.org> iw-3.7.ebuild, iw-3.8.ebuild:
+  updating unstable ebuilds to work properly in prefix
+
+  26 Jan 2013; Rick Farina <zerochaos@gentoo.org> -iw-3.4.ebuild,
+  -iw-3.6.ebuild:
+  cleanup old unstable ebuilds
 
 *iw-3.8 (22 Dec 2012)
 
