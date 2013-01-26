@@ -8,4 +8,4 @@ LICENSE=vim
 RDEPEND=|| ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
 SLOT=0
 _eclasses_=git-2	e92e09651292b1bef5656592364550f7	vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	c17c1bfde9ce27e86e5d52a7aa902170
-_md5_=97bfe842e6e036ed0c135f6f8558770c
+_md5_=c2ddc021072cf334f73d6732c1ab4d22

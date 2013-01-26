@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install
-DEPEND=sys-devel/make dev-lang/perl sys-libs/zlib iso? ( sys-boot/syslinux )
+DEPEND=sys-devel/make dev-lang/perl sys-libs/zlib iso? ( sys-boot/syslinux virtual/cdrtools )
 DESCRIPTION=Open source network boot (PXE) firmware
 EAPI=4
 HOMEPAGE=http://ipxe.org
@@ -8,4 +8,4 @@ KEYWORDS=amd64 x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=https://git.ipxe.org/ipxe.git/snapshot/e6427b7ee117ea4af0812bb13b57999bccd8e058.tar.bz2
-_md5_=503878375fafeeb3d29eb6c2742ff9ca
+_md5_=f5f2fe547eff766d12fce9a6ada73c1b

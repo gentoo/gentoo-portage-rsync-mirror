@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20120905.ebuild,v 1.4 2013/01/24 22:09:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20120905.ebuild,v 1.5 2013/01/26 20:16:13 cardoe Exp $
 
 EAPI=4
 
@@ -19,7 +19,10 @@ IUSE="iso +qemu undi usb vmware"
 DEPEND="sys-devel/make
 	dev-lang/perl
 	sys-libs/zlib
-	iso? ( sys-boot/syslinux )"
+	iso? (
+		sys-boot/syslinux
+		virtual/cdrtools
+	)"
 RDEPEND=""
 
 S="${WORKDIR}/ipxe-${GIT_SHORT}/src"
