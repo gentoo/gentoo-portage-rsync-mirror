@@ -10,4 +10,4 @@ RDEPEND=app-accessibility/speech-dispatcher app-arch/bzip2 cups? ( dev-libs/libg
 SLOT=0
 SRC_URI=https://commondatastorage.googleapis.com/chromium-browser-official/chromium-26.0.1386.0-lite.tar.xz
 _eclasses_=chromium	10deb47dfb7657ba0fc7814da0bad35e	eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	gnome2-utils	794d2847b4af390a1e020924876c8297	linux-info	c27564a568491445be036a10498ed8be	multilib	ded93e450747134a079e647d888aa80b	pax-utils	0ace932c4045349c7fc1af0fe7091acf	portability	536c5e70c5fb252ed3b769e04aa3f05b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=087acdfdd0b49069007ce54278425088
+_md5_=1b483f3464286725c9a9c56596bdb328

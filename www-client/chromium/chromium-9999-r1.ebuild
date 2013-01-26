@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.162 2013/01/23 20:37:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.163 2013/01/26 04:14:15 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -343,9 +343,12 @@ src_configure() {
 		-Dlinux_use_gold_binary=0
 		-Dlinux_use_gold_flags=0"
 
+	# Always support proprietary codecs.
+	myconf+=" -Dproprietary_codecs=1"
+
 	if ! use bindist && ! use system-ffmpeg; then
 		# Enable H.624 support in bundled ffmpeg.
-		myconf+=" -Dproprietary_codecs=1 -Dffmpeg_branding=Chrome"
+		myconf+=" -Dffmpeg_branding=Chrome"
 	fi
 
 	# Set up Google API keys, see http://www.chromium.org/developers/how-tos/api-keys .
