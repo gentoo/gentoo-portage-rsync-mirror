@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.2.6.ebuild,v 1.8 2013/01/09 21:38:33 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.2.6.ebuild,v 1.9 2013/01/26 13:37:12 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_6 python2_7 python3_1 python3_2)
@@ -13,7 +13,7 @@ SRC_URI="mirror://bitbucket/mgorny/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~mips x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="amd64 arm ~mips x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="|| (
