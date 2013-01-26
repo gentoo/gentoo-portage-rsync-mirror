@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.179 2013/01/26 13:16:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.180 2013/01/26 21:59:52 vapier Exp $
+
+  26 Jan 2013; Mike Frysinger <vapier@gentoo.org> enlightenment-1.0.11.ebuild:
+  Mark stable for everyone else #453014.
 
   26 Jan 2013; Agostino Sarubbo <ago@gentoo.org> enlightenment-1.0.11.ebuild:
   Stable for ppc64, wrt bug #453014
