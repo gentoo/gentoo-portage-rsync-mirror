@@ -1,4 +1,4 @@
-From 8ed9db9f7079d1b602356e86ea13a7cf51f045b7 Mon Sep 17 00:00:00 2001
+From c66609d2c830d6fe06f48f5d38c54eb5cc6f2975 Mon Sep 17 00:00:00 2001
 From: Mike Frysinger <vapier@gentoo.org>
 Date: Thu, 24 Jan 2013 23:36:16 -0500
 Subject: [PATCH [iputils]] fix handling of CFLAGS
@@ -8,14 +8,23 @@ up in the environment already.
 
 Signed-off-by: Mike Frysinger <vapier@gentoo.org>
 ---
- Makefile | 10 ++++------
- 1 file changed, 4 insertions(+), 6 deletions(-)
+ Makefile | 13 +++++--------
+ 1 file changed, 5 insertions(+), 8 deletions(-)
 
 diff --git a/Makefile b/Makefile
-index 2c49940..dc317b1 100644
+index 2c49940..ecabac3 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -48,11 +48,10 @@ ENABLE_RDISC_SERVER=no
+@@ -2,8 +2,6 @@
+ # Configuration
+ #
+ 
+-# CC
+-CC=gcc
+ # Path to parent kernel include files directory
+ LIBC_INCLUDE=/usr/include
+ # Libraries
+@@ -48,11 +46,10 @@ ENABLE_RDISC_SERVER=no
  
  # -------------------------------------
  # What a pity, all new gccs are buggy and -Werror does not work. Sigh.
@@ -31,7 +40,7 @@ index 2c49940..dc317b1 100644
  LDLIB=
  
  FUNC_LIB = $(if $(filter static,$(1)),$(LDFLAG_STATIC) $(2) $(LDFLAG_DYNAMIC),$(2))
-@@ -113,7 +112,6 @@ IPV4_TARGETS=tracepath ping clockdiff rdisc arping tftpd rarpd
+@@ -113,7 +110,6 @@ IPV4_TARGETS=tracepath ping clockdiff rdisc arping tftpd rarpd
  IPV6_TARGETS=tracepath6 traceroute6 ping6
  TARGETS=$(IPV4_TARGETS) $(IPV6_TARGETS)
  
@@ -39,6 +48,14 @@ index 2c49940..dc317b1 100644
  LDLIBS=$(LDLIB) $(ADDLIB)
  
  UNAME_N:=$(shell uname -n)
+@@ -132,6 +128,7 @@ all: $(TARGETS)
+ 	$(COMPILE.c) $< $(DEF_$(patsubst %.o,%,$@)) -S -o $@
+ %.o: %.c
+ 	$(COMPILE.c) $< $(DEF_$(patsubst %.o,%,$@)) -o $@
++LINK.o += $(CFLAGS)
+ $(TARGETS): %: %.o
+ 	$(LINK.o) $^ $(LIB_$@) $(LDLIBS) -o $@
+ 
 -- 
 1.8.0.2
 

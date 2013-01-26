@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.282 2013/01/18 14:58:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.283 2013/01/26 17:19:15 jer Exp $
+
+  26 Jan 2013; Jeroen Roovers <jer@gentoo.org> nmap-6.01.ebuild,
+  nmap-6.25.ebuild:
+  Drop PYTHON_DEPEND and -4.75-include.patch by Alexander Zubkov (bug #435462).
 
   18 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> nmap-6.01.ebuild,
   nmap-6.25.ebuild:
