@@ -82,10 +82,12 @@ index a637d9c..8e7ef23 100644
  
  //#ifdef FFMPEG_NEEDS_EXTERN_C
  extern "C" 
-@@ -279,6 +282,118 @@ void FfmpegHandler::fillMetadata(Ref<CdsItem> item)
+@@ -279,6 +282,122 @@ void FfmpegHandler::fillMetadata(Ref<CdsItem> item)
      av_close_input_file(pFormatCtx);
  }
  
++#ifdef HAVE_FFMPEGTHUMBNAILER
++
 +static bool _mkdir(const char *path)
 +{
 +    int ret = mkdir(path, 0777);
@@ -198,10 +200,12 @@ index a637d9c..8e7ef23 100644
 +    fclose(fp);
 +}
 +
++#endif
++
  Ref<IOHandler> FfmpegHandler::serveContent(Ref<CdsItem> item, int resNum, off_t *data_size)
  {
      *data_size = -1;
-@@ -288,6 +403,18 @@ Ref<IOHandler> FfmpegHandler::serveContent(Ref<CdsItem> item, int resNum, off_t
+@@ -288,6 +407,18 @@ Ref<IOHandler> FfmpegHandler::serveContent(Ref<CdsItem> item, int resNum, off_t
      if (!cfg->getBoolOption(CFG_SERVER_EXTOPTS_FFMPEGTHUMBNAILER_ENABLED))
          return nil;
  
@@ -220,7 +224,7 @@ index a637d9c..8e7ef23 100644
  #ifdef FFMPEGTHUMBNAILER_OLD_API
      video_thumbnailer *th = create_thumbnailer();
      image_data *img = create_image_data();
-@@ -318,6 +445,10 @@ Ref<IOHandler> FfmpegHandler::serveContent(Ref<CdsItem> item, int resNum, off_t
+@@ -318,6 +449,10 @@ Ref<IOHandler> FfmpegHandler::serveContent(Ref<CdsItem> item, int resNum, off_t
  #endif // old api
          throw _Exception(_("Could not generate thumbnail for ") + 
                  item->getLocation());
