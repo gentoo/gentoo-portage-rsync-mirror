@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.15 2012/09/27 16:35:42 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.16 2013/01/26 15:01:52 swift Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -98,7 +98,7 @@ DEPEND="${RDEPEND}
 	sys-devel/m4
 	>=sys-apps/checkpolicy-2.0.21"
 
-SELINUX_EXPF="src_unpack src_compile src_install pkg_postinst"
+SELINUX_EXPF="src_unpack src_compile src_install pkg_postinst pkg_postrm"
 case "${EAPI:-0}" in
 	2|3|4|5) SELINUX_EXPF+=" src_prepare" ;;
 	*) ;;
@@ -279,5 +279,33 @@ selinux-policy-2_pkg_postinst() {
 			einfo "SELinux modules loaded succesfully."
 		fi
 	done
+}
+
+# @FUNCTION: selinux-policy-2_pkg_postrm
+# @DESCRIPTION:
+# Uninstall the module(s) from the SELinux policy stores, effectively
+# deactivating the policy on the system.
+selinux-policy-2_pkg_postrm() {
+	# Only if we are not upgrading
+	if [[ "${EAPI}" -lt 4 || -z "${REPLACED_BY_VERSION}" ]];
+	then
+		# build up the command in the case of multiple modules
+		local COMMAND
+		for i in ${MODS}; do
+			COMMAND="-r ${i} ${COMMAND}"
+		done
+	
+		for i in ${POLICY_TYPES}; do
+			einfo "Removing the following modules from the $i module store: ${MODS}"
+	
+			semodule -s ${i} ${COMMAND}
+			if [ $? -ne 0 ];
+			then
+				ewarn "SELinux module unload failed.";
+			else
+				einfo "SELinux modules unloaded succesfully."
+			fi
+		done
+	fi
 }
 
