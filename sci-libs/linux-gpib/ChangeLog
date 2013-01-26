@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/linux-gpib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.10 2012/12/11 17:56:53 axs Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.11 2013/01/26 22:22:04 dilfridge Exp $
+
+*linux-gpib-3.2.17 (26 Jan 2013)
+
+  26 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  linux-gpib-3.2.16-r3.ebuild, +linux-gpib-3.2.17.ebuild:
+  Version bump; remove module-rebuild from dependencies
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> linux-gpib-3.2.16-r3.ebuild:
   install udev rules with udev.eclass to support virtual/udev

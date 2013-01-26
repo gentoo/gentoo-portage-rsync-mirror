@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/screen-message
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screen-message/ChangeLog,v 1.3 2012/12/03 19:34:07 sping Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screen-message/ChangeLog,v 1.4 2013/01/26 22:31:29 sping Exp $
+
+  26 Jan 2013; Sebastian Pipping <sping@gentoo.org> screen-message-0.19.ebuild,
+  screen-message-0.20.ebuild:
+  Add blocker towards net-im/jabberd2 (bug #453994)
 
 *screen-message-0.20 (03 Dec 2012)
 
