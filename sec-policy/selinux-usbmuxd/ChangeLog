@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-usbmuxd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-usbmuxd/ChangeLog,v 1.22 2013/01/13 16:03:55 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-usbmuxd/ChangeLog,v 1.23 2013/01/26 18:20:50 swift Exp $
+
+*selinux-usbmuxd-2.20120725-r11 (26 Jan 2013)
+
+  26 Jan 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-usbmuxd-2.20120725-r11.ebuild:
+  Bumping selinux-usbmuxd to revision 11
 
   13 Jan 2013; Sven Vermeulen <swift@gentoo.org>
   selinux-usbmuxd-2.20120725-r9.ebuild:

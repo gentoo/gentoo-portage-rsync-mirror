@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.123 2013/01/16 20:57:44 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.124 2013/01/26 18:20:51 swift Exp $
+
+*selinux-base-policy-2.20120725-r11 (26 Jan 2013)
+
+  26 Jan 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-base-policy-2.20120725-r11.ebuild:
+  Bumping selinux-base-policy to revision 11
 
   16 Jan 2013; Sven Vermeulen <swift@gentoo.org>
   selinux-base-policy-2.20120725-r10.ebuild:

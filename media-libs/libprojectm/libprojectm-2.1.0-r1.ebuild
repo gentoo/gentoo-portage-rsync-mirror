@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-2.1.0-r1.ebuild,v 1.7 2013/01/26 13:17:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-2.1.0-r1.ebuild,v 1.8 2013/01/26 18:07:36 hasufell Exp $
 
 EAPI=5
 
@@ -37,6 +37,7 @@ PATCHES=(
 src_configure() {
 	if use video_cards_nvidia; then
 		append-ldflags -L/opt/nvidia-cg-toolkit/$(get_libdir)
+		append-ldflags -L/opt/nvidia-cg-toolkit/lib
 		append-cppflags -I/opt/nvidia-cg-toolkit/include
 	fi
 

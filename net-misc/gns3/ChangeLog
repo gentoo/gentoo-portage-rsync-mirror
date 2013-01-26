@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gns3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3/ChangeLog,v 1.2 2012/05/10 21:35:07 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3/ChangeLog,v 1.3 2013/01/26 18:04:42 hwoarang Exp $
+
+*gns3-0.8.3.1 (26 Jan 2013)
+
+  26 Jan 2013; Markos Chandras <hwoarang@gentoo.org>
+  +files/gns3-0.8.3.1_install_path.patch, +gns3-0.8.3.1.ebuild, metadata.xml:
+  Version bump. Bug #448538. Thanks to Aaron Bauman <bmangentoo@gmail.com> who
+  will maintain it
 
 *gns3-0.8.2 (10 May 2012)
 
@@ -15,4 +22,3 @@
   +files/gns3-0.7.4_set_qemu_path.patch, +files/gns3.xpm, +metadata.xml:
   Initial commit for gns3. Bug #213539. Thanks to Ján Bednár
   <jan.bednar@gmail.com> for the ebuilds and for becoming proxy maintainer
-

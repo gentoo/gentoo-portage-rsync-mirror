@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-radvd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-radvd/ChangeLog,v 1.22 2013/01/13 16:04:04 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-radvd/ChangeLog,v 1.23 2013/01/26 18:20:33 swift Exp $
+
+*selinux-radvd-2.20120725-r11 (26 Jan 2013)
+
+  26 Jan 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-radvd-2.20120725-r11.ebuild:
+  Bumping selinux-radvd to revision 11
 
   13 Jan 2013; Sven Vermeulen <swift@gentoo.org>
   selinux-radvd-2.20120725-r9.ebuild:

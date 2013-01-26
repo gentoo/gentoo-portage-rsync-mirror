@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.01.ebuild,v 1.23 2013/01/26 17:19:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.01.ebuild,v 1.24 2013/01/26 18:18:04 jer Exp $
 
 EAPI="4"
 
@@ -47,7 +47,9 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	python_set_active_version 2
+	if use gtk || use ndiff; then
+		python_set_active_version 2
+	fi
 }
 
 src_unpack() {

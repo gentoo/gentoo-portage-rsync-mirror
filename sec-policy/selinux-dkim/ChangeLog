@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-dkim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dkim/ChangeLog,v 1.22 2013/01/13 16:03:59 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-dkim/ChangeLog,v 1.23 2013/01/26 18:20:40 swift Exp $
+
+*selinux-dkim-2.20120725-r11 (26 Jan 2013)
+
+  26 Jan 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-dkim-2.20120725-r11.ebuild:
+  Bumping selinux-dkim to revision 11
 
   13 Jan 2013; Sven Vermeulen <swift@gentoo.org>
   selinux-dkim-2.20120725-r9.ebuild:

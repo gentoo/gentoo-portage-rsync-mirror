@@ -1,4 +1,11 @@
 
+
+*selinux-pan-2.20120725-r11 (26 Jan 2013)
+
+  26 Jan 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-pan-2.20120725-r11.ebuild:
+  Bumping selinux-pan to revision 11
+
   13 Jan 2013; Sven Vermeulen <swift@gentoo.org>
   selinux-pan-2.20120725-r9.ebuild:
   Stabilizing r9

@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-clamav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-clamav/ChangeLog,v 1.45 2013/01/13 16:03:50 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-clamav/ChangeLog,v 1.46 2013/01/26 18:20:36 swift Exp $
+
+*selinux-clamav-2.20120725-r11 (26 Jan 2013)
+
+  26 Jan 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-clamav-2.20120725-r11.ebuild:
+  Bumping selinux-clamav to revision 11
 
   13 Jan 2013; Sven Vermeulen <swift@gentoo.org>
   selinux-clamav-2.20120725-r9.ebuild:
