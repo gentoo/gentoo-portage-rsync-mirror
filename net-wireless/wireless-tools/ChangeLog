@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.153 2013/01/05 13:25:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.155 2013/01/26 00:14:12 zerochaos Exp $
+
+  26 Jan 2013; Rick Farina <zerochaos@gentoo.org> wireless-tools-30_pre9.ebuild:
+  bump eapi and minor cleanup for prefix support
+
+  26 Jan 2013; Rick Farina <zerochaos@gentoo.org>
+  -files/wireless-tools-29-inline-fix.patch, -wireless-tools-29-r1.ebuild,
+  -wireless-tools-29.ebuild:
+  remove old unneeded ebuilds
 
   05 Jan 2013; Raúl Porcel <armin76@gentoo.org> wireless-tools-30_pre9.ebuild:
   sh stable wrt #445292

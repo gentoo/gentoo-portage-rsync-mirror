@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/jemalloc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.25 2012/12/29 19:28:18 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.26 2013/01/26 00:22:14 anarchy Exp $
+
+*jemalloc-3.3.0 (26 Jan 2013)
+
+  26 Jan 2013; <anarchy@gentoo.org> +jemalloc-3.3.0.ebuild:
+  Misc upstream bug fixes, refer to changelog
 
   29 Dec 2012; Raúl Porcel <armin76@gentoo.org> jemalloc-3.2.0.ebuild:
   Add ~alpha wrt #429708

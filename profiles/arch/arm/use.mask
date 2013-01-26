@@ -108,7 +108,6 @@ zvbi
 dvd
 fluidsynth
 gnomecd
-lapack
 cblas
 prolog
 sid
