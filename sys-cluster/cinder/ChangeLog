@@ -1,0 +1,10 @@
+# ChangeLog for sys-cluster/cinder
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/ChangeLog,v 1.1 2013/01/26 06:27:21 prometheanfire Exp $
+
+*cinder-2012.2.1 (26 Jan 2013)
+
+  26 Jan 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +cinder-2012.2.1.ebuild, +metadata.xml:
+  initial add of openstack cinder
+
