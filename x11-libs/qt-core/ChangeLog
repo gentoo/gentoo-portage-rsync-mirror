@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.203 2013/01/03 15:30:58 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.204 2013/01/26 09:01:41 pesa Exp $
+
+  26 Jan 2013; Davide Pesavento <pesa@gentoo.org>
+  +files/set-pkg-config-locations-directly-to-install-dir.patch,
+  qt-core-4.8.4-r1.ebuild:
+  Apply upstream patch to solve bug 401025.
 
 *qt-core-4.8.4-r1 (03 Jan 2013)
 

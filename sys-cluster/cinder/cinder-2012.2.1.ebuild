@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2012.2.1.ebuild,v 1.1 2013/01/26 06:27:21 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2012.2.1.ebuild,v 1.2 2013/01/26 09:12:05 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
@@ -42,13 +42,7 @@ RDEPEND="=dev-python/amqplib-0.6.1
 		>=dev-python/setuptools-git-0.4
 		>=dev-python/python-glanceclient-0.5.0
 		<dev-python/python-glanceclient-2
-		>=dev-python/python-keystoneclient-0.2.0
-		dev-python/sqlalchemy"
-
-pkg_setup() {
-	enewuser swift
-	enewgroup swift
-}
+		>=dev-python/python-keystoneclient-0.2.0"
 
 python_install() {
 	distutils-r1_python_install
