@@ -1,6 +1,10 @@
 # ChangeLog for media-video/miro
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.20 2012/12/26 17:07:25 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/miro/ChangeLog,v 1.21 2013/01/26 14:39:18 aballier Exp $
+
+  26 Jan 2013; Alexis Ballier <aballier@gentoo.org> miro-5.0.4.ebuild,
+  +files/miro-5.0.4-ffmpeg-1.patch:
+  Add patch from upstream to fix build with ffmpeg-0.11, part of bug #443212
 
 *miro-5.0.4 (26 Dec 2012)
 

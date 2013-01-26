@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-pcd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pcd/ChangeLog,v 1.4 2011/04/06 17:20:39 idl0r Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pcd/ChangeLog,v 1.5 2013/01/26 14:44:11 aballier Exp $
+
+  26 Jan 2013; Alexis Ballier <aballier@gentoo.org> vdr-pcd-0.9.ebuild,
+  +files/vdr-pcd-0.9-ffmpeg-1.patch:
+  Fix build with ffmpeg-0.11, part of bug #443208
 
   06 Apr 2011; Christian Ruppert <idl0r@gentoo.org> vdr-pcd-0.9.ebuild:
   Use the new ffmpeg virtual, bug 362103. QA Fix: Assign RDEPEND. Switch to

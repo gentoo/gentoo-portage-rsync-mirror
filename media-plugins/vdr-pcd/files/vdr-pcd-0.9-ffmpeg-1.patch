@@ -1,0 +1,12 @@
+Index: pcd-0.9/mpeg.c
+===================================================================
+--- pcd-0.9.orig/mpeg.c
++++ pcd-0.9/mpeg.c
+@@ -44,7 +44,6 @@ cMpegFrame::cMpegFrame(bool Pal)
+   bufferSize = 0;
+   mpegSize = 0;
+ 
+-  avcodec_init();
+   avcodec_register_all();
+ 
+   if (!(avCodec = avcodec_find_encoder(CODEC_ID_MPEG2VIDEO))) {
