@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7402 2013/01/25 22:20:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7403 2013/01/26 11:06:37 lu_zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Jan 2013; Luca Barbato <lu_zero@gentoo.org> package.mask:
+  Remove qemu-user mask, current version provided and the userspace wrappers
+  aren't a security issue by themselves from start
 
   25 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask boost 1.53 betas.

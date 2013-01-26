@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.4.ebuild,v 1.11 2013/01/02 01:10:32 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.4.ebuild,v 1.12 2013/01/26 11:22:19 pesa Exp $
 
 EAPI=4
 
@@ -236,16 +236,11 @@ src_install() {
 pkg_postinst() {
 	qt4-build_pkg_postinst
 
-	# raster is the default graphicssystems, set it on first install
+	# raster is the default graphicssystem, set it on first install
 	eselect qtgraphicssystem set raster --use-old
-
-	elog "Starting with Qt 4.8, you may choose the active Qt Graphics System"
-	elog "by using a new eselect module called qtgraphicssystem."
-	elog "Run \`eselect qtgraphicssystem\` for more information."
 
 	if use gtkstyle; then
 		# see bug 388551
-		elog
 		elog "For Qt's GTK style to work, you need to either export"
 		elog "the following variable into your environment:"
 		elog '  GTK2_RC_FILES="$HOME/.gtkrc-2.0"'

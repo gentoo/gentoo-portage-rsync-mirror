@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.110 2013/01/21 16:04:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.111 2013/01/26 11:09:28 maekke Exp $
+
+  26 Jan 2013; Markus Meier <maekke@gentoo.org> lshw-02.16b-r2.ebuild:
+  arm stable, bug #452684
 
   21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> lshw-02.16b-r2.ebuild:
   Stable for sparc, wrt bug #452684

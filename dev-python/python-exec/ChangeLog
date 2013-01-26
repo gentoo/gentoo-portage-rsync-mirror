@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-exec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/ChangeLog,v 1.24 2013/01/23 10:49:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/ChangeLog,v 1.25 2013/01/26 11:10:42 maekke Exp $
+
+  26 Jan 2013; Markus Meier <maekke@gentoo.org> python-exec-0.2.ebuild:
+  arm stable, bug #452934
 
   23 Jan 2013; Agostino Sarubbo <ago@gentoo.org> python-exec-0.2.ebuild:
   Stable for amd64, wrt bug #452934
