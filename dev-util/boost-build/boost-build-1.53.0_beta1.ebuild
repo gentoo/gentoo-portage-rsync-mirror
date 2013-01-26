@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.51.0.ebuild,v 1.2 2012/10/31 16:32:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.53.0_beta1.ebuild,v 1.1 2013/01/25 23:03:15 flameeyes Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
@@ -8,7 +8,6 @@ PYTHON_DEPEND="python? 2"
 inherit eutils flag-o-matic python toolchain-funcs versionator
 
 MY_PV=$(replace_all_version_separators _)
-MAJOR_PV="$(replace_all_version_separators _ $(get_version_component_range 1-2))"
 
 DESCRIPTION="A system for large project software construction, which is simple to use and powerful."
 HOMEPAGE="http://www.boost.org/doc/tools/build/index.html"
@@ -16,7 +15,7 @@ SRC_URI="mirror://sourceforge/boost/boost_${MY_PV}.tar.bz2"
 
 LICENSE="Boost-1.0"
 SLOT=0
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~ppc-aix ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="examples python test"
 
 REQUIRED_USE="test? ( python )"
@@ -36,7 +35,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	tar xjpf "${DISTDIR}/${A}" ./boost_${MY_PV}/tools/build/v2 || die "unpacking tar failed"
+	tar xjpf "${DISTDIR}/${A}" boost_${MY_PV}/tools/build/v2 || die "unpacking tar failed"
 }
 
 src_prepare() {
@@ -44,7 +43,9 @@ src_prepare() {
 		"${FILESDIR}/${PN}-1.48.0-support_dots_in_python-buildid.patch" \
 		"${FILESDIR}/${PN}-1.48.0-disable_python_rpath.patch" \
 		"${FILESDIR}/${PN}-1.50.0-respect-c_ld-flags.patch" \
-		"${FILESDIR}/${PN}-1.50.0-fix-test.patch"
+		"${FILESDIR}/${PN}-1.50.0-fix-test.patch" \
+		"${FILESDIR}/${PN}-1.49.0-darwin-gentoo-toolchain.patch" \
+		"${FILESDIR}/${PN}-1.52.0-darwin-no-python-framework.patch"
 
 	# Remove stripping option
 	cd "${S}/engine"
@@ -66,11 +67,6 @@ src_prepare() {
 }
 
 src_configure() {
-	# For slotting
-	sed -i \
-		-e "s|/usr/share/boost-build|/usr/share/boost-build-${MAJOR_PV}|" \
-		engine/Jambase || die "sed failed"
-
 	if use python; then
 		# replace versions by user-selected one (TODO: fix this when slot-op
 		# deps are available to always match the best version available)
@@ -92,21 +88,20 @@ src_compile() {
 		toolset=cc
 	fi
 
-	CC=$(tc-getCC) ./build.sh ${toolset} -d+2 $(use_with python python /usr) || die "building bjam failed"
+	CC=$(tc-getCC) ./build.sh ${toolset} -d+2 $(use_with python python "${EROOT}"/usr) || die "building bjam failed"
 }
 
 src_install() {
-	newbin engine/bin.*/bjam bjam-${MAJOR_PV}
-	newbin engine/bin.*/b2 b2-${MAJOR_PV}
+	dobin engine/bin.*/{bjam,b2}
 
-	insinto /usr/share/boost-build-${MAJOR_PV}
+	insinto /usr/share/boost-build
 	doins -r "${FILESDIR}/site-config.jam" \
 		boost-build.jam bootstrap.jam build-system.jam user-config.jam *.py \
 		build kernel options tools util
 
-	rm "${D}/usr/share/boost-build-${MAJOR_PV}/build/project.ann.py" || die "removing faulty python file failed"
+	rm "${ED}/usr/share/boost-build/build/project.ann.py" || die "removing faulty python file failed"
 	if ! use python; then
-		find "${D}/usr/share/boost-build-${MAJOR_PV}" -iname "*.py" -delete || die "removing experimental python files failed"
+		find "${ED}/usr/share/boost-build" -iname "*.py" -delete || die "removing experimental python files failed"
 	fi
 
 	dodoc changes.txt hacking.txt release_procedure.txt \
@@ -132,9 +127,9 @@ src_test() {
 }
 
 pkg_postinst() {
-	use python && python_mod_optimize /usr/share/boost-build-${MAJOR_PV}
+	use python && python_mod_optimize /usr/share/boost-build
 }
 
 pkg_postrm() {
-	use python && python_mod_cleanup /usr/share/boost-build-${MAJOR_PV}
+	use python && python_mod_cleanup /usr/share/boost-build
 }

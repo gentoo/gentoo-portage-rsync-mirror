@@ -12,7 +12,6 @@
 		<flag name="gnome-online-accounts">Enable using
 			<pkg>net-libs/gnome-online-accounts</pkg> for authorization (e.g.
 			for Google Talk)</flag>
-		<flag name="legacy-call">Enable the Empathy 3.2-like call UI</flag>
 		<flag name="map">Enable world map support through
 			<pkg>media-libs/libchamplain</pkg></flag>
 		<flag name="nautilus">Enable nautilus-sendto support</flag>

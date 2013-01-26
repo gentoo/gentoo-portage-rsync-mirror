@@ -1,6 +1,13 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.121 2013/01/06 09:58:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.122 2013/01/25 23:14:04 eva Exp $
+
+*empathy-3.6.3 (25 Jan 2013)
+
+  25 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> -empathy-3.4.2.3.ebuild,
+  +empathy-3.6.3.ebuild, metadata.xml:
+  Version bump. Switch back to python.eclass since this is a build time only
+  dependency.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> empathy-3.6.2-r2.ebuild:
   Add ~sparc, wrt bug #449220

@@ -3903,7 +3903,6 @@ net-im/ekg2:ssl - Enable the complete SSL/TLS support through OpenSSL. This also
 net-im/empathy:geocode - Enable translation between addresses and geographic coordinates using sci-geosciences/geocode-glib and Yahoo! Place Finder
 net-im/empathy:geoloc - Enable geolocation support through app-misc/geoclue
 net-im/empathy:gnome-online-accounts - Enable using net-libs/gnome-online-accounts for authorization (e.g. for Google Talk)
-net-im/empathy:legacy-call - Enable the Empathy 3.2-like call UI
 net-im/empathy:map - Enable world map support through media-libs/libchamplain
 net-im/empathy:nautilus - Enable nautilus-sendto support
 net-im/empathy:sendto - Enable support for sending files to various devices using gnome-extra/nautilus-sendto

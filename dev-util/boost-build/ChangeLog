@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/boost-build
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.111 2012/12/08 12:11:22 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.112 2013/01/25 23:03:15 flameeyes Exp $
+
+*boost-build-1.53.0_beta1 (25 Jan 2013)
+
+  25 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org>
+  +boost-build-1.53.0_beta1.ebuild, -boost-build-1.46.1.ebuild,
+  -boost-build-1.51.0.ebuild:
+  Version bump. Remove obsolete.
 
   08 Dec 2012; Fabian Groffen <grobian@gentoo.org>
   +files/boost-build-1.49.0-darwin-gentoo-toolchain.patch,
