@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.120 2013/01/26 15:44:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.121 2013/01/26 16:36:44 hwoarang Exp $
+
+  26 Jan 2013; Markos Chandras <hwoarang@gentoo.org> buildbot-0.8.7_p1.ebuild:
+  Rework code for the env file creation. Thanks to floppym@gentoo.org. Use EAPI5
 
 *buildbot-0.8.7_p1 (26 Jan 2013)
 

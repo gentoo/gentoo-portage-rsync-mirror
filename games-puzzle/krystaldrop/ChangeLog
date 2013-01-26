@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/krystaldrop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/ChangeLog,v 1.12 2012/11/09 07:40:25 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/ChangeLog,v 1.13 2013/01/26 16:45:03 flameeyes Exp $
+
+  26 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org> krystaldrop-0.7.2.ebuild:
+  Fix obvious mistake in dependency assignment.
 
   09 Nov 2012; Tupone Alfredo <tupone@gentoo.org> krystaldrop-0.7.2.ebuild,
   +files/krystaldrop-0.7.2-cxxflags.patch:
@@ -47,4 +50,3 @@
   27 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org>
   krystaldrop-0.7.2.ebuild, metadata.xml, files/krystaldrop-assert.patch:
   initial commit; ebuild submitted by Will McQueen via bug #43059 (modified)
-

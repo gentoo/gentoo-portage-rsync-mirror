@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.7_p1.ebuild,v 1.1 2013/01/26 15:44:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.7_p1.ebuild,v 1.2 2013/01/26 16:36:44 hwoarang Exp $
 
-EAPI="3"
+EAPI="5"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
@@ -84,7 +84,12 @@ src_install() {
 	# so all master can share the changes. So protect them!
 	# If something else need to be protected, please open a bug
 	# on http://bugs.gentoo.org
-	echo "CONFIG_PROTECT=\"$(python_get_sitedir -f)/${PN}/status/web/\"" \
+	local cp
+	add_config_protect() {
+		cp+=" $(python_get_sitedir)/${PN}/status/web"
+	}
+	python_execute_function -q add_config_protect
+	echo "CONFIG_PROTECT=\"${cp}\"" \
 		> 85${PN} || die
 	doenvd 85${PN}
 }
