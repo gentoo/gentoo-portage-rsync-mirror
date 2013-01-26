@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/gtkatlantic-0.4.3.ebuild,v 1.1 2013/01/18 06:38:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/gtkatlantic-0.4.3.ebuild,v 1.2 2013/01/26 03:51:35 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils gnome2-utils games
@@ -21,11 +21,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	# quiet gtk deprecation warnings
-	sed -i \
-		-e 's/g_strncasecmp/g_ascii_strncasecmp/' \
-		-e 's/g_strup/g_ascii_strup/' \
-		src/{load.c,xmlparse.c} || die
 	epatch "${FILESDIR}"/${P}-compile.patch
 	eautoreconf
 }
