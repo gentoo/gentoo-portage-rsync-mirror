@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/wcd-5.2.1.ebuild,v 1.1 2012/03/13 13:04:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/wcd-5.2.1.ebuild,v 1.2 2013/01/26 21:16:26 jlec Exp $
 
 EAPI=4
 
@@ -15,7 +15,10 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
 IUSE="ncurses nls unicode"
 
-DEPEND="app-text/ghostscript-gpl"
+CDEPEND="sys-libs/ncurses[unicode?]"
+DEPEND="${CDEPEND}
+	app-text/ghostscript-gpl"
+RDEPEND="${CDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
@@ -23,7 +26,7 @@ src_prepare() {
 }
 
 src_compile() {
-	local mycompile
+	local mycompile="LFS=1"
 	use nls || mycompile="${mycompile} ENABLE_NLS="
 	use ncurses || mycompile="${mycompile} CURSES="
 	use unicode && mycompile="${mycompile} UCS=1"

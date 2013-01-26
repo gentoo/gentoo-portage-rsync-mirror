@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eschalon-book-1-demo/eschalon-book-1-demo-106.ebuild,v 1.3 2011/08/22 14:12:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eschalon-book-1-demo/eschalon-book-1-demo-106.ebuild,v 1.4 2013/01/26 21:23:52 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="strip"
-QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/${PN}/Eschalon Book I Demo"
+QA_PREBUILT="${GAMES_PREFIX_OPT:1}/${PN}/Eschalon Book I Demo"
 
 RDEPEND="x86? ( media-libs/freetype
 		virtual/opengl
