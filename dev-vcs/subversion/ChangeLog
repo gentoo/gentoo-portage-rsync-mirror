@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.95 2013/01/01 19:26:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.96 2013/01/26 17:44:46 grobian Exp $
+
+  26 Jan 2013; Fabian Groffen <grobian@gentoo.org> subversion-1.7.7.ebuild:
+  Fix compilation for FreeMiNT by Alan Hourihane, bug #451502
 
   01 Jan 2013; Raúl Porcel <armin76@gentoo.org> subversion-1.7.7.ebuild:
   s390/sh/x86 stable wrt #447946

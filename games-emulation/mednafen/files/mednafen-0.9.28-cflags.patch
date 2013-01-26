@@ -1,0 +1,35 @@
+--- configure.ac.orig	2013-01-25 13:30:36.167253683 -0500
++++ configure.ac	2013-01-25 13:32:16.993678869 -0500
+@@ -90,21 +90,6 @@
+ 
+ dnl -fno-unit-at-a-time
+ 
+-OPTIMIZER_FLAGS=""
+-
+-dnl -ffast-math removed January 12, 2013.  Don't re-add it, nor any of its sub-options(ESPECIALLY not -funsafe-math-optimizations),
+-dnl it messes up certain code(NES resampler, for example) under certain conditions and alignments of the great celestial squid.
+-dnl
+-dnl In fact, let's explicitly disable it here with -fno-fast-math.
+-dnl
+-AX_CFLAGS_GCC_OPTION([-fno-fast-math], OPTIMIZER_FLAGS)
+-AX_CFLAGS_GCC_OPTION([-fno-unsafe-math-optimizations], OPTIMIZER_FLAGS)
+-
+-AX_CFLAGS_GCC_OPTION([-fomit-frame-pointer], OPTIMIZER_FLAGS)
+-AX_CFLAGS_GCC_OPTION([-finline-limit=6000], OPTIMIZER_FLAGS)
+-AX_CFLAGS_GCC_OPTION([--param large-function-growth=800], OPTIMIZER_FLAGS)
+-AX_CFLAGS_GCC_OPTION([--param inline-unit-growth=175], OPTIMIZER_FLAGS)
+-AX_CFLAGS_GCC_OPTION([--param max-inline-insns-single=10000], OPTIMIZER_FLAGS)
+ AX_NO_STRICT_OVERFLOW
+ 
+ 
+@@ -138,8 +123,8 @@
+ MDFN_COMPAT_FLAGS=""
+ AX_CFLAGS_GCC_OPTION([-fsigned-char], MDFN_COMPAT_FLAGS)
+ 
+-AC_SUBST([AM_CFLAGS], "$MDFN_COMPAT_FLAGS $WARNING_FLAGS $OPTIMIZER_FLAGS $NO_STRICT_OVERFLOW_FLAGS")
+-AC_SUBST([AM_CXXFLAGS], "$MDFN_COMPAT_FLAGS $WARNING_FLAGS $OPTIMIZER_FLAGS $NO_STRICT_OVERFLOW_FLAGS")
++AC_SUBST([AM_CFLAGS], "$MDFN_COMPAT_FLAGS $WARNING_FLAGS $NO_STRICT_OVERFLOW_FLAGS")
++AC_SUBST([AM_CXXFLAGS], "$MDFN_COMPAT_FLAGS $WARNING_FLAGS $NO_STRICT_OVERFLOW_FLAGS")
+ 
+ AM_CONDITIONAL(WANT_DEBUGGER, false)
+ 

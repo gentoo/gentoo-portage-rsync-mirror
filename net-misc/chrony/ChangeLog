@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/chrony
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.90 2012/11/27 04:22:49 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.91 2013/01/26 17:48:11 jer Exp $
+
+  26 Jan 2013; Jeroen Roovers <jer@gentoo.org> chrony-1.26.ebuild,
+  chrony-1.27_pre1.ebuild:
+  Drop unrecognised --without-tomcrypt from configure call.
 
   27 Nov 2012; Anthony G. Basile <blueness@gentoo.org> chrony-1.27_pre1.ebuild:
   keyword ~arm, bug #444714

@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/mcelog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.27 2013/01/24 21:15:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.28 2013/01/26 17:52:36 hasufell Exp $
+
+  26 Jan 2013; Julian Ospald <hasufell@gentoo.org>
+  mcelog-1.0_pre3_p20120918-r1.ebuild,
+  +files/mcelog-1.0_pre3_p20120918-bashism.patch:
+  remove bashisms from scripts, install scripts executable
 
 *mcelog-1.0_pre3_p20120918-r1 (24 Jan 2013)
 

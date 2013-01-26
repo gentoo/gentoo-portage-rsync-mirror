@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/mednafen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.39 2012/06/13 07:13:03 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.40 2013/01/26 17:44:49 mr_bones_ Exp $
+
+*mednafen-0.9.28 (26 Jan 2013)
+
+  26 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/mednafen-0.9.28-cflags.patch, +files/mednafen-0.9.28-zlib.patch,
+  +mednafen-0.9.28.ebuild, metadata.xml:
+  version bump
 
   13 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org>
   -files/mednafen-0.8.13.3-zlib-1.2.6.patch,
@@ -174,4 +181,3 @@
   19 May 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +mednafen-0.6.1.ebuild:
   initial commit - ebuild submitted by Kai via bug #110044
-

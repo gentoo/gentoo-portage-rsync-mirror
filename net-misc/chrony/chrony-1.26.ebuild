@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.26.ebuild,v 1.7 2012/04/11 21:38:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.26.ebuild,v 1.8 2013/01/26 17:48:11 jer Exp $
 
 EAPI=2
 
@@ -34,13 +34,13 @@ src_configure() {
 	use caps     || myconf+=" --disable-linuxcaps"
 	# selfwritten configure
 	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc/chrony \
+		${myconf} ${EXTRA_ECONF} \
+		--docdir=/usr/share/doc/${PF} \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
-		--docdir=/usr/share/doc/${PF} \
-		--without-tomcrypt \
-		${myconf} ${EXTRA_ECONF} || die "configure failed"
+		--prefix=/usr \
+		--sysconfdir=/etc/chrony \
+		|| die "configure failed"
 }
 
 src_compile() {

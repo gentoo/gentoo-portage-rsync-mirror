@@ -1,0 +1,9 @@
+# ChangeLog for media-video/photofilmstrip
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/photofilmstrip/ChangeLog,v 1.1 2013/01/26 18:00:25 hwoarang Exp $
+
+*photofilmstrip-1.9.91 (26 Jan 2013)
+
+  26 Jan 2013; Markos Chandras <hwoarang@gentoo.org> +metadata.xml,
+  +photofilmstrip-1.9.91.ebuild:
+  Initial commit. Thanks to PhobosK <phobosk@fastmail.fm>. Bug #392267

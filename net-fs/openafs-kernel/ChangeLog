@@ -1,10 +1,17 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.143 2013/01/26 17:24:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.145 2013/01/26 17:37:57 vapier Exp $
+
+*openafs-kernel-1.6.2_pre3 (26 Jan 2013)
+
+  26 Jan 2013; Mike Frysinger <vapier@gentoo.org>
+  +openafs-kernel-1.6.2_pre3.ebuild, -openafs-kernel-1.6.1-r1.ebuild:
+  Version bump #453196 by Andrej Filipcic.
 
   26 Jan 2013; Mike Frysinger <vapier@gentoo.org>
   openafs-kernel-1.6.1-r1.ebuild, openafs-kernel-1.6.1-r2.ebuild:
-  Add missing linux-mod_pkg_post* calls #447840 by Renato Alves.
+  Add missing linux-mod_pkg_post* calls when USE=linux_kernel #447840 by
+  Renato Alves.
 
   26 Jan 2013; Mike Frysinger <vapier@gentoo.org>
   openafs-kernel-1.6.1-r2.ebuild:

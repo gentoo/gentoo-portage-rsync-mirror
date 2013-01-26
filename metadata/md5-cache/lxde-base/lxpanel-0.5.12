@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=x11-libs/gtk+:2 x11-libs/libXmu x11-libs/libXpm lxde-base/lxmenu-data lxde-base/menu-cache alsa? ( media-libs/alsa-lib ) wifi? ( net-wireless/wireless-tools ) virtual/pkgconfig sys-devel/gettext || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Lightweight X11 desktop panel for LXDE
+EAPI=4
+HOMEPAGE=http://lxde.org/
+IUSE=+alsa wifi
+KEYWORDS=~alpha ~amd64 ~arm ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=x11-libs/gtk+:2 x11-libs/libXmu x11-libs/libXpm lxde-base/lxmenu-data lxde-base/menu-cache alsa? ( media-libs/alsa-lib ) wifi? ( net-wireless/wireless-tools )
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://sourceforge/lxde/LXPanel%20%28desktop%20panel%29/LXPanel%200.5.12/lxpanel-0.5.12.tar.gz
+_eclasses_=autotools	5116b10b2150724f41b564f1cc863e47	eutils	d40dc948067bd3db1c8ebf7d51897313	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=d67b9a90b3350c7f31b923485a251e56

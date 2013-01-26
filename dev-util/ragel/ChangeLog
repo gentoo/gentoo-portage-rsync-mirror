@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ragel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.59 2012/10/27 18:27:51 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.60 2013/01/26 17:37:14 grobian Exp $
+
+  26 Jan 2013; Fabian Groffen <grobian@gentoo.org> ragel-6.7-r1.ebuild:
+  Marked ~m68k-mint, bug #449976
 
   27 Oct 2012; Raúl Porcel <armin76@gentoo.org> ragel-6.7-r1.ebuild:
   s390/sh stable wrt #411507
@@ -225,4 +228,3 @@
 
   07 Feb 2007; <twp@gentoo.org> +metadata.xml, +ragel-5.17.ebuild:
   Initial commit.
-
