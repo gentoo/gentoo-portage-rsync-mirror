@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/d-feet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.16 2012/12/17 19:53:11 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.17 2013/01/25 23:39:42 eva Exp $
+
+*d-feet-0.3.3 (25 Jan 2013)
+
+  25 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> -d-feet-0.1.12.ebuild,
+  -d-feet-0.1.14.ebuild, +d-feet-0.3.3.ebuild:
+  Version bump. Drop pypy1.9 since it is now available in dependencies. Do not
+  add python3 since setup.py fails badly with it. Drop old revisions.
 
   17 Dec 2012; Michał Górny <mgorny@gentoo.org> d-feet-0.1.15.ebuild,
   d-feet-0.3.1.ebuild:
