@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.101 2013/01/24 04:23:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.102 2013/01/26 11:51:47 ago Exp $
+
+  26 Jan 2013; Agostino Sarubbo <ago@gentoo.org> dosfstools-3.0.13.ebuild:
+  Stable for ppc, wrt bug #453716
 
   24 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> dosfstools-3.0.14.ebuild:
   Remove forced -g (by removing entire DEBUGFLAGS) and leave setting debug

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.64 2013/01/25 15:08:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.65 2013/01/26 11:53:15 ago Exp $
+
+  26 Jan 2013; Agostino Sarubbo <ago@gentoo.org> pekwm-0.1.15.ebuild:
+  Stable for ppc, wrt bug #453558
 
   25 Jan 2013; Agostino Sarubbo <ago@gentoo.org> pekwm-0.1.15.ebuild:
   Stable for amd64, wrt bug #453558

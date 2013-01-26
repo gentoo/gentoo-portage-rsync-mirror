@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.11-r1.ebuild,v 1.3 2013/01/22 17:44:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.11-r1.ebuild,v 1.4 2013/01/26 11:58:07 ago Exp $
 
 EAPI=4
 WANT_AUTOMAKE="1.10.3"
@@ -20,7 +20,7 @@ HOMEPAGE="http://untroubled.org/nullmailer/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 IUSE="ssl"
 
