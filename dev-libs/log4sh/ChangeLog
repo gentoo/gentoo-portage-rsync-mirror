@@ -1,49 +1,11 @@
 # ChangeLog for dev-libs/log4sh
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4sh/ChangeLog,v 1.10 2007/03/19 01:05:10 kloeri Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4sh/ChangeLog,v 1.11 2013/01/27 08:47:18 pinkbyte Exp $
 
-  19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
-  Remove ka0ttic from metadata.xml due to retirement.
+*log4sh-1.4.2 (27 Jan 2013)
 
-  03 Mar 2007; Marius Mauch <genone@gentoo.org> log4sh-1.2.5-r1.ebuild:
-  Replacing einfo with elog
-
-  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
-  Regenerate digest in Manifest2 format.
-
-  09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
-  Regenerate digest in Manifest2 format.
-
-  05 Jul 2005; David Holm <dholm@gentoo.org> log4sh-1.2.5-r1.ebuild:
-  Added to ~ppc.
-
-*log4sh-1.2.5-r1 (04 Jul 2005)
-
-  04 Jul 2005; Aaron Walker <ka0ttic@gentoo.org>
-  +files/log4sh-1.2.5-fix-insecure-tmp-creation.diff, -log4sh-1.2.5.ebuild,
-  +log4sh-1.2.5-r1.ebuild:
-  Revision bump for security bug 94069; thanks to taviso for the patch.
-
-  06 May 2005; Aaron Walker <ka0ttic@gentoo.org> -log4sh-1.2.3.ebuild,
-  -log4sh-1.2.4.ebuild, log4sh-1.2.5.ebuild:
-  Stable on x86; tidy old ebuilds.
-
-*log4sh-1.2.5 (02 Feb 2005)
-
-  02 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> +log4sh-1.2.5.ebuild:
-  Version bump.
-
-  25 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> log4sh-1.2.3.ebuild:
-  Marked stable on x86.
-
-*log4sh-1.2.4 (31 Dec 2004)
-
-  31 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> +log4sh-1.2.4.ebuild:
-  Version bump.
-
-*log4sh-1.2.3 (24 Dec 2004)
-
-  24 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
-  +log4sh-1.2.3.ebuild:
-  Initial commit.
+  27 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> +log4sh-1.4.2.ebuild,
+  metadata.xml:
+  Version bump: EAPI 5, add ~amd64 keyword, install examples optionally,
+  improve postinstall message. Assign myself as maintainer
 
