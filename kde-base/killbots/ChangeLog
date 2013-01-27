@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/killbots
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.125 2013/01/05 20:18:51 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.126 2013/01/27 12:14:13 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> killbots-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *killbots-4.9.5 (05 Jan 2013)
 
@@ -498,4 +501,3 @@
   27 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> +metadata.xml,
   +killbots-4.2.0.ebuild:
   Bump KDE-4.2.0
-

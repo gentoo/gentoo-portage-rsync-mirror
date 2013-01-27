@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r2.ebuild,v 1.4 2008/05/14 22:07:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r2.ebuild,v 1.5 2013/01/27 12:26:40 ulm Exp $
 
 inherit eutils autotools pam
 
@@ -8,8 +8,8 @@ DESCRIPTION="Daemon that provides on demand IP links via SLIP or PPP"
 HOMEPAGE="http://diald.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
+LICENSE="Old-MIT GPL-2" # GPL-2 only for init script
 SLOT="0"
-LICENSE="as-is"
 KEYWORDS="~amd64 x86"
 IUSE="pam"
 
@@ -48,7 +48,7 @@ src_install() {
 	dodir /var/cache/diald
 	mknod -m 0660 "${D}/var/cache/diald/diald.ctl" p
 
-	dodoc BUGS CHANGES LICENSE NOTES README* \
+	dodoc BUGS CHANGES NOTES README* \
 		THANKS TODO TODO.budget doc/diald-faq.txt
 	docinto setup ; cp -pPR setup/* "${D}/usr/share/doc/${PF}/setup"
 	docinto contrib ; cp -pPR contrib/* "${D}/usr/share/doc/${PF}/contrib"

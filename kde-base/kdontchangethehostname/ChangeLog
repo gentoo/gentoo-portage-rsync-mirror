@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdontchangethehostname
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdontchangethehostname/ChangeLog,v 1.78 2013/01/05 20:18:31 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdontchangethehostname/ChangeLog,v 1.79 2013/01/27 12:08:20 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  kdontchangethehostname-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *kdontchangethehostname-4.9.5 (05 Jan 2013)
 
@@ -366,4 +370,3 @@
   06 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
   +kdontchangethehostname-4.5.1.ebuild:
   Version bump
-

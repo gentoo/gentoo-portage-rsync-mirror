@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krosspython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krosspython/ChangeLog,v 1.126 2013/01/05 20:19:06 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krosspython/ChangeLog,v 1.127 2013/01/27 12:29:30 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> krosspython-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *krosspython-4.9.5 (05 Jan 2013)
 
@@ -541,4 +544,3 @@
   +metadata.xml, +krosspython-4.1.2.ebuild:
   Added krosspython-4.1.2. Thanks to jkt for the ebuild. This 2nd part
   completes the fix for bug 214408.
-

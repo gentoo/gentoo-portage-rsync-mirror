@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/pathogen
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/pathogen/ChangeLog,v 1.1 2013/01/27 12:11:40 radhermit Exp $
+
+*pathogen-2.2 (27 Jan 2013)
+
+  27 Jan 2013; Tim Harder <radhermit@gentoo.org> +pathogen-2.2.ebuild,
+  +metadata.xml:
+  Initial import.
+

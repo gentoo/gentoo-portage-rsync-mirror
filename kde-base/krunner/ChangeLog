@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krunner
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.153 2013/01/05 20:19:04 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.154 2013/01/27 12:30:19 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> krunner-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *krunner-4.9.5 (05 Jan 2013)
 
@@ -624,4 +627,3 @@
   18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   +files/krunner-4.0.0-linkage.patch, +metadata.xml, +krunner-4.0.0.ebuild:
   Added KDE 4.0.0's krunner.
-

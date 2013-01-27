@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmplot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmplot/ChangeLog,v 1.233 2013/01/05 20:18:56 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmplot/ChangeLog,v 1.234 2013/01/27 12:20:46 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kmplot-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *kmplot-4.9.5 (05 Jan 2013)
 
@@ -876,4 +879,3 @@
   +kmplot-3.4.0_beta1.ebuild:
   Adding the split ebuilds to portage. For KDE 3.4, we've created separate
   ebuilds for all the KDE apps.
-

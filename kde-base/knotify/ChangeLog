@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knotify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotify/ChangeLog,v 1.147 2013/01/05 20:19:13 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotify/ChangeLog,v 1.148 2013/01/27 12:22:39 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> knotify-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *knotify-4.9.5 (05 Jan 2013)
 
@@ -570,4 +573,3 @@
   18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +metadata.xml,
   +knotify-4.0.0.ebuild:
   Added KDE 4.0.0's knotify.
-

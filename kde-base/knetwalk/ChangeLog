@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knetwalk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetwalk/ChangeLog,v 1.160 2013/01/05 20:19:00 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetwalk/ChangeLog,v 1.161 2013/01/27 12:21:33 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> knetwalk-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *knetwalk-4.9.5 (05 Jan 2013)
 
@@ -636,4 +639,3 @@
   16 Dec 2007; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
   +knetwalk-3.5.8.ebuild:
   New ebuild for knetwalk as per bug 201613.
-

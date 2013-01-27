@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kollision
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kollision/ChangeLog,v 1.126 2013/01/05 20:18:57 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kollision/ChangeLog,v 1.127 2013/01/27 12:23:11 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kollision-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *kollision-4.9.5 (05 Jan 2013)
 
@@ -511,4 +514,3 @@
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   +metadata.xml, +kollision-4.1.2.ebuild:
   Add kde-4.1.2 into the tree from the kde-testing overlay.
-

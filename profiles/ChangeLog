@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7405 2013/01/27 07:51:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7406 2013/01/27 12:03:57 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Jan 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add TermReadKey and nap licenses to MISC-FREE group, bugs 450932 and 452014.
 
   27 Jan 2013; Tim Harder <radhermit@gentoo.org> package.mask:
   Mask dev-python/github2 for removal.

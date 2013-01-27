@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/nap
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.21 2008/11/27 21:43:37 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.22 2013/01/27 12:11:35 ulm Exp $
+
+  27 Jan 2013; Ulrich Müller <ulm@gentoo.org> nap-1.5.4-r1.ebuild:
+  Fix LICENSE and add bindist restriction, bug 452014.
 
 *nap-1.5.4-r1 (27 Nov 2008)
 
