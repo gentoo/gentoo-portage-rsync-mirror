@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.499 2012/12/20 03:28:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.500 2013/01/27 18:04:13 vapier Exp $
 
 # Keep them sorted
 
@@ -94,6 +94,7 @@ fastcgi - Add support for the FastCGI interface
 fbcon - Adds framebuffer support for the console, via the kernel
 ffmpeg - Enable ffmpeg-based audio/video codec support
 fftw - Use FFTW library for computing Fourier transforms
+filecaps - Use Linux file capabilities to control privilege rather than set*id
 firebird - Adds support for the Firebird relational database
 flac - Adds support for FLAC: Free Lossless Audio Codec
 flatfile - Adds dbm support for flat files

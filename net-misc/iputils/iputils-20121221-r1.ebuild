@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-99999999.ebuild,v 1.8 2013/01/27 18:04:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20121221-r1.ebuild,v 1.1 2013/01/27 18:04:28 vapier Exp $
 
 # For released versions, we precompile the man/html pages and store
 # them in a tarball on our mirrors.  This avoids ugly issues while
@@ -47,6 +47,7 @@ S=${WORKDIR}/${PN}-s${PV}
 src_prepare() {
 	epatch "${FILESDIR}"/021109-uclibc-no-ether_ntohost.patch
 	epatch "${FILESDIR}"/${PN}-20121221-openssl.patch #335436
+	epatch "${FILESDIR}"/${PN}-20121221-crypto-build.patch
 	epatch "${FILESDIR}"/${PN}-20100418-so_mark.patch #335347
 	epatch "${FILESDIR}"/${PN}-20121221-makefile.patch
 	epatch "${FILESDIR}"/${PN}-20121221-printf-size.patch

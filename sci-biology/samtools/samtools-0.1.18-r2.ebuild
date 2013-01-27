@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-0.1.18-r1.ebuild,v 1.1 2013/01/23 10:51:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-0.1.18-r2.ebuild,v 1.1 2013/01/27 18:09:51 jlec Exp $
 
 EAPI=5
 
@@ -15,11 +15,15 @@ SLOT="0"
 IUSE="examples"
 KEYWORDS="~amd64 ~x86 ~x64-macos"
 
+RDEPEND="sys-libs/ncurses"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
+
 src_prepare() {
 	sed \
-		-e '/CC/s:=:?=:g' \
-		-e "/LIBCURSES/s:=.*$:= $(pkg-config --libs ncurses):g" \
-		-e '/^CFLAGS=/d' \
+		-e '/^CC/s:=:?=:g' \
+		-e "/^LIBCURSES/s:=.*$:= $(pkg-config --libs ncurses):g" \
+		-e '/^CFLAGS=/s:=:?=:' \
 		-e "s/\$(CC) \$(CFLAGS)/& \$(LDFLAGS)/g" \
 		-e "s/-shared/& \$(LDFLAGS)/" \
 		-i "${S}"/{Makefile,misc/Makefile} || die #358563
