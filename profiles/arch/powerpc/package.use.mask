@@ -1,10 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.160 2013/01/27 15:40:09 yngwin Exp $
-
-# Ben de Groot <yngwin@gentoo.org> (27 Jan 2013)
-# unkeyworded razorqt-base/razorqt-lightdm-greeter
-x11-misc/lightdm razor
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.161 2013/01/27 16:55:48 yngwin Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (22 Jan 2013)
 # remove mask if/when media-gfx/argyllcms is keywored here.

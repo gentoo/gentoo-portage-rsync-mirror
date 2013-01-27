@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.37 2013/01/21 19:28:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.39 2013/01/27 16:40:15 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -679,6 +679,25 @@ python_replicate_script() {
 	for f; do
 		_python_ln_rel "${ED}"/usr/bin/python-exec "${f}" || die
 	done
+}
+
+# @FUNCTION: run_in_build_dir
+# @USAGE: <argv>...
+# @DESCRIPTION:
+# Run the given command in the directory pointed by BUILD_DIR.
+run_in_build_dir() {
+	debug-print-function ${FUNCNAME} "${@}"
+	local ret
+
+	[[ ${#} -ne 0 ]] || die "${FUNCNAME}: no command specified."
+	[[ ${BUILD_DIR} ]] || die "${FUNCNAME}: BUILD_DIR not set."
+
+	pushd "${BUILD_DIR}" >/dev/null || die
+	"${@}"
+	ret=${?}
+	popd >/dev/null || die
+
+	return ${ret}
 }
 
 _PYTHON_R1=1

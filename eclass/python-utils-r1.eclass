@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.14 2013/01/21 19:28:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.15 2013/01/27 16:35:33 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -616,6 +616,35 @@ python_domodule() {
 	doins -r "${@}" || die
 
 	python_optimize "${ED}/${d}"
+}
+
+# @FUNCTION: python_doheader
+# @USAGE: <files>...
+# @DESCRIPTION:
+# Install the given headers into the implementation-specific include
+# directory. This function is unconditionally recursive, i.e. you can
+# pass directories instead of files.
+#
+# Example:
+# @CODE
+# src_install() {
+#   python_foreach_impl python_doheader foo.h bar.h
+# }
+# @CODE
+python_doheader() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	[[ ${EPYTHON} ]] || die 'No Python implementation set (EPYTHON is null).'
+
+	local d PYTHON_INCLUDEDIR=${PYTHON_INCLUDEDIR}
+	[[ ${PYTHON_INCLUDEDIR} ]] || python_export PYTHON_INCLUDEDIR
+
+	d=${PYTHON_INCLUDEDIR#${EPREFIX}}
+
+	local INSDESTTREE
+
+	insinto "${d}"
+	doins -r "${@}" || die
 }
 
 _PYTHON_UTILS_R1=1

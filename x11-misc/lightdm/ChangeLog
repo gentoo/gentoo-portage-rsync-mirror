@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.59 2013/01/26 13:38:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.60 2013/01/27 16:57:53 yngwin Exp $
+
+*lightdm-1.4.0-r1 (27 Jan 2013)
+
+  27 Jan 2013; Ben de Groot <yngwin@gentoo.org> +files/README.gentoo,
+  +lightdm-1.4.0-r1.ebuild, metadata.xml:
+  Add greeters as pdepend to fix bug #453702. Implement readme.gentoo elog
+  handling. Drop keywords of arches that don't have greeters keyworded.
 
   26 Jan 2013; Agostino Sarubbo <ago@gentoo.org> lightdm-1.4.0.ebuild:
   Stable for arm, wrt bug #452950

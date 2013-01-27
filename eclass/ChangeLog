@@ -1,6 +1,22 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.646 2013/01/27 13:32:44 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.651 2013/01/27 16:40:14 mgorny Exp $
+
+  27 Jan 2013; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Fix output redirections in run_in_build_dir().
+
+  27 Jan 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Support using distutils-r1 along with python-single-r1.
+
+  27 Jan 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Support making dependency and phase function enforcement optional.
+
+  27 Jan 2013; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Introduce run_in_build_dir() function as used by GNOME ebuilds.
+
+  27 Jan 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Introduce python_doheader(), to install headers specific to a Python
+  implementation.
 
   27 Jan 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
   reverted last changes

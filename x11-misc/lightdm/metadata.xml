@@ -11,7 +11,10 @@
 </maintainer>
 <use>
 	<flag name="branding">Replace original gnome background with one from Gentoo ten project</flag>
+	<flag name="gtk">Pull in the gtk+ greeter</flag>
 	<flag name="introspection">Use dev-libs/gobject-introspection for introspection</flag>
+	<flag name="kde">Pull in the kde greeter</flag>
+	<flag name="razor">Pull in the razorqt greeter</flag>
 </use>
 <longdescription lang="en">
 </longdescription>
