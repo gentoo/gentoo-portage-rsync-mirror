@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.10.ebuild,v 1.1 2013/01/23 17:18:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.10-r1.ebuild,v 1.1 2013/01/27 11:20:15 chithanh Exp $
 
 EAPI=5
 
@@ -75,6 +75,7 @@ src_prepare() {
 	use legacy-drivers && epatch "${FILESDIR}"/${PN}-1.10.0-buggy_gradients.patch
 	epatch "${FILESDIR}"/${PN}-1.10.2-qt-surface.patch
 	epatch "${FILESDIR}"/${PN}-respect-fontconfig.patch
+	epatch "${FILESDIR}"/${P}-xlib-corruption.patch
 	epatch_user
 
 	# Slightly messed build system YAY

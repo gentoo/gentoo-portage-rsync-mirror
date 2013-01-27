@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.323 2013/01/23 17:18:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.324 2013/01/27 11:20:15 chithanh Exp $
+
+*cairo-1.12.10-r1 (27 Jan 2013)
+
+  27 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +cairo-1.12.10-r1.ebuild, +files/cairo-1.12.10-xlib-corruption.patch,
+  -cairo-1.12.10.ebuild:
+  Add patch to fix display corruption, bug #454108.
 
 *cairo-1.12.10 (23 Jan 2013)
 

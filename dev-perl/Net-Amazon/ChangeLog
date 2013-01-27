@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Net-Amazon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon/ChangeLog,v 1.43 2012/06/24 12:58:25 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon/ChangeLog,v 1.44 2013/01/27 11:17:26 tove Exp $
+
+*Net-Amazon-0.620.0 (27 Jan 2013)
+
+  27 Jan 2013; Torsten Veller <tove@gentoo.org> +Net-Amazon-0.620.0.ebuild,
+  metadata.xml:
+  Version bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
