@@ -1,0 +1,25 @@
+From: Andreas Hildebrandt <andreas.hildebrandt@uni-mainz.de>
+Date: Wed, 15 Aug 2012 00:12:49 +0200
+Subject: Fix compilation of Python bindings with new sip versions.
+
+For some reason, sip does not like static members of the same type as the class.
+In this case, a varget_... - method is generated with the wrong arguments
+(unnamed parameter which should be called "sipSelf"). This patch works around
+it.
+---
+ source/PYTHON/EXTENSIONS/BALL/PTE_.sip |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/source/PYTHON/EXTENSIONS/BALL/PTE_.sip b/source/PYTHON/EXTENSIONS/BALL/PTE_.sip
+index 4589e92..3e5f8ff 100644
+--- a/source/PYTHON/EXTENSIONS/BALL/PTE_.sip
++++ b/source/PYTHON/EXTENSIONS/BALL/PTE_.sip
+@@ -61,7 +61,7 @@ class Element
+    //friend ostream& operator << (ostream& s, const Element&);
+    bool isUnknown() const;
+ 
+-	 static Element UNKNOWN;
++	 Element UNKNOWN;
+  };
+ 
+ class PTE_

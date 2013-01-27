@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.1-r2.ebuild,v 1.3 2013/01/27 13:15:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.1-r2.ebuild,v 1.4 2013/01/27 14:05:24 pacho Exp $
 
 EAPI=4
 inherit toolchain-funcs eutils
@@ -32,6 +32,7 @@ src_prepare() {
 	local d=${WORKDIR}/debian/patches
 	EPATCH_SOURCE=${d} epatch $(<"${d}"/series)
 	sed -i -e 's/make/$(MAKE)/' Makefile || die
+	sed -i -e 's/ -O3//' Makefile fbsplash/Makefile usplash/Makefile || die
 }
 
 src_compile() {

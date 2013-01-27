@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ball-1.4.1.ebuild,v 1.4 2013/01/27 14:30:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ball-1.4.1-r1.ebuild,v 1.1 2013/01/27 14:30:47 jlec Exp $
 
 EAPI=4
 
@@ -51,6 +51,10 @@ PATCHES=(
 	"${FILESDIR}"/${P}-missing-signed.patch
 	"${FILESDIR}"/${P}-gcc-4.7.patch
 	"${FILESDIR}"/${P}-BondOrder.xml.patch
+	"${FILESDIR}"/${P}-Fixed-the-FPT-version-of-bond-order-assignment-2.patch
+	"${FILESDIR}"/${P}-Added-MAX_PENALTY-option-to-bond-order-assignment.patch
+	"${FILESDIR}"/${P}-Fixed-a-bug-in-the-AssignBondOrderProcessor.patch
+	"${FILESDIR}"/${P}-Fix-compilation-of-Python-bindings-with-new-sip-vers.patch
 	)
 
 pkg_setup() {

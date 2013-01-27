@@ -1,4 +1,5 @@
  include/BALL/COMMON/global.h                       | 26 +++++------
+ include/BALL/COMMON/hash.h                         | 36 +++++++--------
  include/BALL/DATATYPE/bitVector.h                  |  2 +-
  include/BALL/DATATYPE/hashMap.h                    |  9 +---
  include/BALL/DATATYPE/string.h                     | 11 +++--
@@ -11,7 +12,9 @@
  source/COMMON/version.C                            |  2 +-
  source/STRUCTURE/BONDORDERS/FPTBondOrderStrategy.C | 41 +++++++++--------
  source/STRUCTURE/kekulizer.C                       |  8 ++--
- 13 files changed, 91 insertions(+), 84 deletions(-)
+ source/TEST/INIFile_test.C                         |  8 ++--
+ source/TEST/ParameterSection_test.C                |  2 +-
+ 16 files changed, 114 insertions(+), 107 deletions(-)
 
 diff --git a/include/BALL/COMMON/global.h b/include/BALL/COMMON/global.h
 index 11d9246..02c81c6 100644
@@ -67,6 +70,60 @@ index 11d9246..02c81c6 100644
  }
  
  #endif // BALL_COMMON_GLOBAL_H
+diff --git a/include/BALL/COMMON/hash.h b/include/BALL/COMMON/hash.h
+index 8d45df3..ebb9a55 100644
+--- a/include/BALL/COMMON/hash.h
++++ b/include/BALL/COMMON/hash.h
+@@ -15,24 +15,6 @@
+ 
+ namespace BALL 
+ {
+-	/**	General Hash Function Template.
+-			This template function provides a simple wrapper
+-			for the specialized hash functions. It facilitates their use 
+-			in STL hash associative containers which expect a <b>Hasher</b>
+-			class as template parameter.
+-	\ingroup Common
+-	*/
+-  template <typename T>
+-  class HashFunction
+-  {
+-    public:
+-		
+-		HashIndex operator () (const T& t) const
+-    {
+-      return Hash(t);
+-		}
+-	};
+-
+ 	/**	@name Specialized Hash Functions.
+ 	*/
+ 	//@{
+@@ -105,6 +87,24 @@ namespace BALL
+ 
+ 	//@}
+ 
++	/**	General Hash Function Template.
++			This template function provides a simple wrapper
++			for the specialized hash functions. It facilitates their use 
++			in STL hash associative containers which expect a <b>Hasher</b>
++			class as template parameter.
++	\ingroup Common
++	*/
++  template <typename T>
++  class HashFunction
++  {
++    public:
++		
++		HashIndex operator () (const T& t) const
++    {
++      return Hash(t);
++		}
++	};
++
+ } // namespace BALL
+ 
+ #endif // BALL_COMMON_HASH_H
 diff --git a/include/BALL/DATATYPE/bitVector.h b/include/BALL/DATATYPE/bitVector.h
 index 991f08e..dc7ead6 100644
 --- a/include/BALL/DATATYPE/bitVector.h
@@ -487,3 +544,49 @@ index d1f4e78..c277091 100644
  	Size best_solution = 0;
  
  	for (Position solp = 0; solp < solutions_.size(); solp++)
+diff --git a/source/TEST/INIFile_test.C b/source/TEST/INIFile_test.C
+index 1f59d2c..cf37841 100644
+--- a/source/TEST/INIFile_test.C
++++ b/source/TEST/INIFile_test.C
+@@ -198,10 +198,10 @@ CHECK(bool appendLine(const String& section_name, const String& line))
+ 	
+ 	CAPTURE_OUTPUT_LEVEL(2000)
+ 		TEST_EQUAL(ini.appendLine("Section9", "GAU"), false)
+-	COMPARE_OUTPUT("In INIFile "BALL_TEST_DATA_PATH(INIFile_test.ini)" , error while appending line: GAU . Illegal section-name: Section9\n")
++	COMPARE_OUTPUT("In INIFile " BALL_TEST_DATA_PATH(INIFile_test.ini)" , error while appending line: GAU . Illegal section-name: Section9\n")
+ 	CAPTURE_OUTPUT_LEVEL(2000)
+ 		TEST_EQUAL(ini.appendLine("Section2", "[AU"), false)	
+-	COMPARE_OUTPUT("In INIFile "BALL_TEST_DATA_PATH(INIFile_test.ini)" , error while appending line: [AU . Illegal section-name: Section2\n")
++	COMPARE_OUTPUT("In INIFile " BALL_TEST_DATA_PATH(INIFile_test.ini)" , error while appending line: [AU . Illegal section-name: Section2\n")
+ 	TEST_EQUAL(ini.appendLine("Section3", "test1 = 123"), true)	
+ 	TEST_EQUAL(*ini.getLine(9), "test1 = 123")
+ 	TEST_EQUAL(ini.getNumberOfLines(), 11)
+@@ -403,13 +403,13 @@ CHECK(bool appendSection(const String& section))
+ 	TEST_EQUAL(ini.hasSection(ini.HEADER), true)
+ 	CAPTURE_OUTPUT_LEVEL(2000)
+ 		TEST_EQUAL(ini.appendSection(ini.HEADER), false)
+-		const char* output = "INIFile::appendSection: "BALL_TEST_DATA_PATH(INIFile_test.ini)" , while adding section: '#HEADER!' already exists.\n";
++		const char* output = "INIFile::appendSection: " BALL_TEST_DATA_PATH(INIFile_test.ini)" , while adding section: '#HEADER!' already exists.\n";
+ 	COMPARE_OUTPUT(output)
+   TEST_EQUAL(ini.getNumberOfLines(), 10)
+ 
+   CAPTURE_OUTPUT_LEVEL(2000)
+ 		TEST_EQUAL(ini.appendSection("Section1"), false)
+-	COMPARE_OUTPUT("INIFile::appendSection: "BALL_TEST_DATA_PATH(INIFile_test.ini)" , while adding section: 'Section1' already exists.\n")
++	COMPARE_OUTPUT("INIFile::appendSection: " BALL_TEST_DATA_PATH(INIFile_test.ini)" , while adding section: 'Section1' already exists.\n")
+   TEST_EQUAL(ini.getNumberOfLines(), 10)
+ 	TEST_EQUAL(ini.hasSection("Section1"), true)
+ 
+diff --git a/source/TEST/ParameterSection_test.C b/source/TEST/ParameterSection_test.C
+index 16424cd..b934b4a 100644
+--- a/source/TEST/ParameterSection_test.C
++++ b/source/TEST/ParameterSection_test.C
+@@ -55,7 +55,7 @@ CHECK(ParameterSection::extractSection(Parameters& parameters, const String& sec
+   bool result;
+ 	CAPTURE_OUTPUT_LEVEL(2000)
+ 		result = ps.extractSection(param, "Section1");
+-	COMPARE_OUTPUT("ParameterSection::extractSection: error reading section Section1 of file "BALL_TEST_DATA_PATH(ParameterSection_test.ini)":\nWrong number of fields in the format line: 0. FORMAT:\n")
++	COMPARE_OUTPUT("ParameterSection::extractSection: error reading section Section1 of file " BALL_TEST_DATA_PATH(ParameterSection_test.ini)":\nWrong number of fields in the format line: 0. FORMAT:\n")
+ 	TEST_EQUAL(result, false)
+ 	TEST_EQUAL(ps.getSectionName(), "Section1")
+ 
