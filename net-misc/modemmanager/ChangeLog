@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/modemmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.44 2013/01/27 12:47:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.45 2013/01/27 13:54:16 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> modemmanager-0.6.0.0.ebuild:
+  Stable for ppc, wrt bug #448006
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> modemmanager-0.6.0.0.ebuild:
   Stable for x86, wrt bug #448006

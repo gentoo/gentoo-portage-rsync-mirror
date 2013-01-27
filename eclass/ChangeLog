@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.645 2013/01/27 11:48:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.646 2013/01/27 13:32:44 hd_brummy Exp $
+
+  27 Jan 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  reverted last changes
 
   27 Jan 2013; Tim Harder <radhermit@gentoo.org> vim-plugin.eclass:
   Remove files before installing docs.

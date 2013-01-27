@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.68 2013/01/20 19:53:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.69 2013/01/27 13:53:03 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kmod-12-r1.ebuild:
+  Stable for ppc, wrt bug #452556
 
   20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kmod-12-r1.ebuild:
   Stable for x86, wrt bug #452556

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-024-r4.ebuild,v 1.1 2013/01/07 18:37:42 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-024-r4.ebuild,v 1.2 2013/01/27 13:49:33 aidecoe Exp $
 
 EAPI=4
 
@@ -269,5 +269,15 @@ pkg_postinst() {
 		ewarn "  CONFIG_DEVTMPFS"
 		ewarn "  CONFIG_MODULES"
 		ewarn ""
+	fi
+
+	if use dracut_modules_crypt || use dracut_modules_dmraid || use \
+		dracut_modules_mdraid || use dracut_modules_lvm; then
+
+		if ! [[ $(</proc/cmdline) =~ rd.auto[\ =] ]]; then
+			ewarn "Autoassembly of special devices like cryptoLUKS, dmraid, "
+			ewarn "mdraid or lvm is off for default as of  >=dracut-024."
+			ewarn "Use rd.auto option to turn it on."
+		fi
 	fi
 }
