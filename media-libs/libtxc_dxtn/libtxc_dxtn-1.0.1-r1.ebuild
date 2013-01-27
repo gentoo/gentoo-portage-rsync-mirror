@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/libtxc_dxtn-1.0.1-r1.ebuild,v 1.2 2013/01/20 23:51:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/libtxc_dxtn-1.0.1-r1.ebuild,v 1.3 2013/01/27 10:24:48 mgorny Exp $
 
 EAPI=5
 
@@ -19,6 +19,13 @@ RDEPEND="media-libs/mesa"
 DEPEND="${RDEPEND}"
 
 RESTRICT="bindist"
+
+src_install() {
+	autotools-multilib_src_install
+
+	# libtxc_dxtn is installed as a module (plugin)
+	prune_libtool_files --all
+}
 
 pkg_postinst() {
 	ewarn "Depending on where you live, you might need a valid license for s3tc"

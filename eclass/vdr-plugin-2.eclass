@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.19 2013/01/04 13:23:43 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.20 2013/01/27 10:17:13 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -593,19 +593,17 @@ vdr-plugin-2_src_install() {
 
 	local SOFILE_STRING=$(grep SOFILE Makefile)
 	if [[ -n ${SOFILE_STRING} ]]; then
-		dev_check "installing with new Makefile handling"
+		dev_check "einstall with new Makefile handling"
 		BUILD_TARGETS=${BUILD_TARGETS:-${VDRPLUGIN_MAKE_TARGET:-install }}
 		einstall ${BUILD_PARAMS} \
 			${BUILD_TARGETS} \
-			LOCDIR="${TMP_LOCALE_DIR}" \
-			LIBDIR="${S}" \
 			TMPDIR="${T}" \
 			DESTDIR="${D}" \
 			|| die "einstall (makefile target) failed"
+	else
+		insinto "${VDR_PLUGIN_DIR}"
+		doins libvdr-*.so.*
 	fi
-
-	insinto "${VDR_PLUGIN_DIR}"
-	doins libvdr-*.so.*
 
 	if [[ -d ${TMP_LOCALE_DIR} ]]; then
 		einfo "Installing locales"
