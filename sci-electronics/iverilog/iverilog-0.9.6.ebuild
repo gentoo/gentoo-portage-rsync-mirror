@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/iverilog-0.9.6.ebuild,v 1.1 2013/01/21 10:39:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/iverilog-0.9.6.ebuild,v 1.2 2013/01/27 09:34:57 grobian Exp $
 
 EAPI=4
 
@@ -34,12 +34,12 @@ src_prepare() {
 
 src_install() {
 	emake -j1 \
-		prefix="${D}"/usr \
-		mandir="${D}"/usr/share/man \
-		infodir="${D}"/usr/share/info \
-		libdir="${D}"/usr/$(get_libdir) \
-		libdir64="${D}"/usr/$(get_libdir) \
-		vpidir="${D}"/usr/$(get_libdir)/ivl \
+		prefix="${ED}"/usr \
+		mandir="${ED}"/usr/share/man \
+		infodir="${ED}"/usr/share/info \
+		libdir="${ED}"/usr/$(get_libdir) \
+		libdir64="${ED}"/usr/$(get_libdir) \
+		vpidir="${ED}"/usr/$(get_libdir)/ivl \
 		install
 
 	dodoc *.txt
