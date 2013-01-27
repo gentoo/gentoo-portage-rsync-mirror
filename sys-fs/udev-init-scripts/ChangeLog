@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.36 2013/01/27 20:12:03 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.37 2013/01/27 20:46:51 williamh Exp $
+
+  27 Jan 2013; William Hubbs <williamh@gentoo.org> -files/udev-init-scripts-21-f
+  ix-population-of-run-udev-rules.d-for-newnet.patch,
+  -udev-init-scripts-21-r1.ebuild, -udev-init-scripts-21.ebuild:
+  remove old unstable version
 
 *udev-init-scripts-22 (27 Jan 2013)
 
