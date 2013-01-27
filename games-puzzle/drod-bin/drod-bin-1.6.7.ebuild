@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.7.ebuild,v 1.3 2012/08/11 12:52:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.7.ebuild,v 1.4 2013/01/27 08:31:06 tupone Exp $
 
 EAPI=2
 
@@ -32,10 +32,13 @@ RDEPEND="
 		app-emulation/emul-linux-x86-compat
 	)"
 
+GDIR=${GAMES_PREFIX_OPT}/drod
+QA_PREBUILT="${GDIR:1}/drod-ae.bin
+	${GDIR:1}/Libs/*"
+
 S="${WORKDIR}"
 
 src_configure() {
-	GDIR=${GAMES_PREFIX_OPT}/drod
 	sed "s:%DRODAE_HOME%:${GDIR}:g" bin/Linux/x86/glibc-2.1/drod-ae.in > drod
 	chmod a+x drod-ae
 }
