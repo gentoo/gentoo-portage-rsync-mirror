@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.7.6.ebuild,v 1.2 2013/01/27 12:58:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.7.6.ebuild,v 1.3 2013/01/27 16:17:24 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://kde-apps.org/content/show.php?content=12956"
 SRC_URI="http://www.kde-apps.org/CONTENT/content-files/12956-${P}.tar.bz2"
 
 SLOT="4"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 LICENSE="GPL-2"
 IUSE="debug wifi"
 

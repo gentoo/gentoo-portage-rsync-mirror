@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1_rc3-r1.ebuild,v 1.3 2013/01/27 15:23:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1_rc3-r1.ebuild,v 1.4 2013/01/27 16:04:21 aballier Exp $
 
 EAPI=2
 
@@ -31,7 +31,6 @@ if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 		hesiod? ( net-dns/hesiod )
 		kerberos? ( virtual/krb5 )
 		usb? ( !dev-libs/libusb !dev-libs/libusbx )
-		userland_GNU? ( sys-apps/mtree )
 		zfs? ( =sys-freebsd/freebsd-cddl-${RV}* )
 		>=dev-libs/expat-2.0.1
 		!sys-libs/libutempter
@@ -46,6 +45,7 @@ else
 fi
 
 DEPEND="${DEPEND}
+		userland_GNU? ( sys-apps/mtree )
 		=sys-freebsd/freebsd-mk-defs-${RV}*"
 
 S="${WORKDIR}/lib"
@@ -337,7 +337,7 @@ src_compile() {
 		export YACC='yacc -by'
 		CHOST=${CTARGET} tc-export CC LD CXX RANLIB
 		mymakeopts="${mymakeopts} NLS="
-		append-flags "-I/usr/${CTARGET}/usr/include"
+		CFLAGS="${CFLAGS} -isystem /usr/${CTARGET}/usr/include"
 		append-ldflags "-L${WORKDIR}/${CHOST}/${WORKDIR}/lib/libc"
 	fi
 
