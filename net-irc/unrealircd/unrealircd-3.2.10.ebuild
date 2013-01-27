@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.10.ebuild,v 1.1 2012/12/26 18:54:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.10.ebuild,v 1.2 2013/01/27 07:31:25 binki Exp $
 
 EAPI=4
 
@@ -74,7 +74,7 @@ src_configure() {
 }
 
 src_install() {
-	keepdir /var/{lib,log,run}/unrealircd
+	keepdir /var/{lib,log}/unrealircd
 
 	newbin src/ircd unrealircd
 
@@ -110,7 +110,7 @@ src_install() {
 	newconfd "${FILESDIR}"/unrealircd.confd-r1 unrealircd
 
 	fperms 700 /etc/unrealircd
-	fowners -R unrealircd /{etc,var/{lib,log,run}}/unrealircd
+	fowners -R unrealircd /{etc,var/{lib,log}}/unrealircd
 }
 
 pkg_postinst() {

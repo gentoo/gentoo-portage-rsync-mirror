@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.164 2013/01/27 06:10:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.165 2013/01/27 07:42:46 ssuominen Exp $
 
 EAPI=4
 
@@ -65,7 +65,8 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-fs/device-mapper
 	!<sys-fs/udev-init-scripts-19
 	!<sys-kernel/dracut-017-r1
-	!<sys-kernel/genkernel-3.4.25"
+	!<sys-kernel/genkernel-3.4.25
+	!<sec-policy/selinux-base-2.20120725-r10"
 
 PDEPEND=">=virtual/udev-197
 	openrc? ( >=sys-fs/udev-init-scripts-19-r1 )"

@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/unrealircd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.97 2012/12/26 18:54:02 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.98 2013/01/27 07:31:25 binki Exp $
+
+  27 Jan 2013; Nathan Phillip Brink <binki@gentoo.org> files/unrealircd.initd,
+  unrealircd-3.2.10.ebuild, unrealircd-3.2.9.ebuild:
+  Create /var/run/unrealircd in the initscript instead of when installing the
+  package, fixing bug #453598 by Flameeyes (and supporting tmpfs /var/run).
 
 *unrealircd-3.2.10 (26 Dec 2012)
 
