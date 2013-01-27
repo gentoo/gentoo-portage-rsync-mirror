@@ -1,6 +1,12 @@
 # ChangeLog for app-text/zathura
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.47 2013/01/11 16:37:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.48 2013/01/27 21:50:00 ssuominen Exp $
+
+*zathura-0.2.2 (27 Jan 2013)
+
+  27 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> +zathura-0.2.2.ebuild:
+  Version bump. Still using GTK+ 2.x because of -pdf-poppler plug-in
+  compability.
 
   11 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> zathura-0.2.1.ebuild:
   Keyword ~arm wrt #368757 (tested with cortex-a8, hardfloat)

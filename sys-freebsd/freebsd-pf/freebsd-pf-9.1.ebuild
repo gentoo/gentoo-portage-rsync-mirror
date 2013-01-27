@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-9.1.ebuild,v 1.1 2013/01/27 21:26:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-9.1.ebuild,v 1.2 2013/01/27 21:36:01 aballier Exp $
 
 inherit bsdmk freebsd user
 
@@ -62,7 +62,6 @@ src_install() {
 	cd "${WORKDIR}"/etc
 	insinto /etc
 	doins pf.os
-	newdoc pf.conf pf.conf.example
 	# pf.initd provided by openrc, but no pf.confd
 	newconfd "${FILESDIR}/pf.confd" pf
 }

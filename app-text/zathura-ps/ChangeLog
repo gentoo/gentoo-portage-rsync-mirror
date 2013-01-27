@@ -1,6 +1,11 @@
 # ChangeLog for app-text/zathura-ps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/ChangeLog,v 1.10 2013/01/11 16:38:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-ps/ChangeLog,v 1.11 2013/01/27 21:59:16 ssuominen Exp $
+
+*zathura-ps-0.2.1 (27 Jan 2013)
+
+  27 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> +zathura-ps-0.2.1.ebuild:
+  Version bump.
 
   11 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> zathura-ps-0.2.0.ebuild:
   Keyword ~arm wrt #368757 (tested with cortex-a8, hardfloat)
