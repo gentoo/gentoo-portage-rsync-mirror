@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.43.ebuild,v 1.17 2012/12/31 13:01:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.43.ebuild,v 1.18 2013/01/27 07:30:22 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
+EAPI="4"
+PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+RESTRICT_PYTHON_ABIS="3.* 2.5 *-jython 2.7-pypy-*"  # pypy fails several tests
 DISTUTILS_SRC_TEST="trial"
 DISTUTILS_DISABLE_TEST_DEPENDENCY="1"
 
@@ -44,7 +44,7 @@ src_prepare() {
 	distutils_src_prepare
 	epatch "${FILESDIR}/${P}-zope_interface.patch"
 	epatch "${FILESDIR}/${P}-usage-exception.patch"
-
+	epatch "${FILESDIR}"/${PN}-prem_test.patch
 	# Delete test with additional dependencies.
 	if ! use web; then
 		rm -f ldaptor/test/test_webui.py

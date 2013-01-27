@@ -1,26 +1,28 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/libewf-20100226-r1.ebuild,v 1.9 2012/03/01 23:30:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/libewf-20130120.ebuild,v 1.1 2013/01/27 07:14:38 radhermit Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit autotools-utils
 
 DESCRIPTION="Implementation of the EWF (SMART and EnCase) image format"
-HOMEPAGE="http://libewf.sourceforge.net"
-SRC_URI="mirror://sourceforge/libewf/${P}.tar.gz"
+HOMEPAGE="http://code.google.com/p/libewf/"
+SRC_URI="http://libewf.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
-SLOT="0"
-KEYWORDS="amd64 hppa ppc x86"
+SLOT="0/2"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 # upstream bug #2597171, pyewf has implicit declarations
 #IUSE="debug python rawio unicode"
-IUSE="debug ewf2 rawio static-libs unicode"
+IUSE="debug ewf +fuse rawio +ssl static-libs +uuid unicode zlib"
 
 DEPEND="
-	sys-libs/e2fsprogs-libs
 	sys-libs/zlib
-	dev-libs/openssl"
+	fuse? ( sys-fs/fuse )
+	uuid? ( sys-apps/util-linux )
+	ssl? ( dev-libs/openssl )
+	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
@@ -31,9 +33,15 @@ src_configure() {
 	local myeconfargs=(
 		$(use_enable debug debug-output)
 		$(use_enable debug verbose-output)
-		$(use_enable ewf2 v2-api)
+		$(use_enable ewf v1-api)
 		$(use_enable rawio low-level-functions)
 		$(use_enable unicode wide-character-type)
+		$(use_with zlib)
+		# autodetects bzip2 but does not use
+		--without-bzip2
+		$(use_with ssl openssl)
+		$(use_with uuid libuuid)
+		$(use_with fuse libfuse)
 	)
 	autotools-utils_src_configure
 }
