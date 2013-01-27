@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.163 2013/01/24 10:36:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.164 2013/01/27 06:10:29 ssuominen Exp $
 
 EAPI=4
 
@@ -382,7 +382,7 @@ pkg_preinst()
 				/usr/share/gtk-doc/html/${htmldir}
 		fi
 	done
-	preserve_old_lib /$(get_libdir)/libudev.so.0
+	preserve_old_lib /{,usr/}$(get_libdir)/libudev$(get_libname 0)
 }
 
 # This function determines if a directory is a mount point.
@@ -510,7 +510,7 @@ pkg_postinst()
 	ewarn "The method you use to do this depends on your init system."
 	ewarn
 
-	preserve_old_lib_notify /$(get_libdir)/libudev.so.0
+	preserve_old_lib_notify /{,usr/}$(get_libdir)/libudev$(get_libname 0)
 
 	elog
 	elog "For more information on udev on Gentoo, writing udev rules, and"
