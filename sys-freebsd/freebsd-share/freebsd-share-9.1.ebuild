@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-9.1.ebuild,v 1.1 2013/01/27 21:27:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-9.1.ebuild,v 1.2 2013/01/27 22:24:31 aballier Exp $
 
 inherit bsdmk freebsd
 
@@ -8,7 +8,7 @@ DESCRIPTION="FreeBSD shared tools/files"
 SLOT="0"
 KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 
-IUSE="doc isdn"
+IUSE="doc"
 
 SRC_URI="mirror://gentoo/${SHARE}.tar.bz2
 	mirror://gentoo/${CONTRIB}.tar.bz2
@@ -29,7 +29,6 @@ RESTRICT="strip"
 S="${WORKDIR}/share"
 
 pkg_setup() {
-	use isdn || mymakeopts="${mymakeopts} NO_I4B= "
 	use doc || mymakeopts="${mymakeopts} NO_SHAREDOCS= "
 
 	mymakeopts="${mymakeopts} NO_SENDMAIL= NO_MANCOMPRESS= NO_INFOCOMPRESS= "

@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-pf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.40 2013/01/27 21:36:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.41 2013/01/27 22:20:08 aballier Exp $
+
+  27 Jan 2013; Alexis Ballier <aballier@gentoo.org> -freebsd-pf-9.1_rc1.ebuild,
+  -freebsd-pf-9.1_rc2.ebuild, -freebsd-pf-9.1_rc3.ebuild:
+  remove rc versions
 
   27 Jan 2013; Alexis Ballier <aballier@gentoo.org> freebsd-pf-9.1.ebuild:
   pf.conf{,.example} are provided by freebsd-share now, bug #449542 by Yuta

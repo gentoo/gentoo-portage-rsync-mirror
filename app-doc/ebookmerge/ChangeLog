@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/ebookmerge
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ChangeLog,v 1.16 2012/06/26 05:21:54 dirtyepic Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ChangeLog,v 1.17 2013/01/27 22:30:08 radhermit Exp $
+
+  27 Jan 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   26 Jun 2012; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
   Maintainer -> app-doc.

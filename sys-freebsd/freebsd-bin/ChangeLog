@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/ChangeLog,v 1.48 2013/01/27 21:24:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/ChangeLog,v 1.49 2013/01/27 22:17:33 aballier Exp $
+
+  27 Jan 2013; Alexis Ballier <aballier@gentoo.org>
+  -freebsd-bin-9.1_rc1.ebuild, -freebsd-bin-9.1_rc2.ebuild,
+  -freebsd-bin-9.1_rc3.ebuild:
+  remove rc versions
 
 *freebsd-bin-9.1 (27 Jan 2013)
 
