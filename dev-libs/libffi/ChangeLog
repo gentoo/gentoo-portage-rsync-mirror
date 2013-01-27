@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.158 2013/01/13 04:52:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.159 2013/01/27 19:57:08 grobian Exp $
+
+  27 Jan 2013; Fabian Groffen <grobian@gentoo.org> libffi-3.0.11.ebuild:
+  Unbreak Prefix bootstraps with host-provided libffi
 
   13 Jan 2013; Mike Frysinger <vapier@gentoo.org>
   +files/libffi-3.0.11-x86-pic-check.patch, libffi-3.0.11.ebuild:
