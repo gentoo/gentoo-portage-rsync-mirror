@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.218 2013/01/26 11:22:19 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.219 2013/01/27 00:41:32 pesa Exp $
+
+  27 Jan 2013; Davide Pesavento <pesa@gentoo.org> qt-gui-4.8.4.ebuild:
+  Add a few missing QCONFIG_ADD and QCONFIG_DEFINE.
 
   26 Jan 2013; Davide Pesavento <pesa@gentoo.org> qt-gui-4.8.4.ebuild:
   Remove elog about qtgraphicssystem eselect module.

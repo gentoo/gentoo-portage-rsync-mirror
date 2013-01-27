@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.1.ebuild,v 1.3 2013/01/24 04:18:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.1.ebuild,v 1.4 2013/01/27 00:31:57 cardoe Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="audit avahi +caps debug firewalld iscsi +libvirtd lvm +lxc +macvtap nfs \
+IUSE="audit avahi +caps firewalld iscsi +libvirtd lvm +lxc +macvtap nfs \
 	nls numa openvz parted pcap phyp policykit python qemu rbd sasl \
 	selinux +udev uml +vepa virtualbox virt-network xen elibc_glibc"
 REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
@@ -213,8 +213,6 @@ src_prepare() {
 
 src_configure() {
 	local myconf=""
-
-	myconf="${myconf} $(use_enable debug)"
 
 	## enable/disable daemon, otherwise client only utils
 	myconf="${myconf} $(use_with libvirtd)"
