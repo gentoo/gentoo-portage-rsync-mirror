@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/linuxfromscratch
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/ChangeLog,v 1.21 2012/11/03 06:00:54 dirtyepic Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/ChangeLog,v 1.22 2013/01/27 22:32:36 radhermit Exp $
+
+  27 Jan 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
   03 Nov 2012; Ryan Hill <dirtyepic@gentoo.org> linuxfromscratch-7.2.ebuild:
   Mark stable for all.

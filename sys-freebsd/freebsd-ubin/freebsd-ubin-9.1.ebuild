@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-9.1.ebuild,v 1.1 2013/01/27 21:28:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-9.1.ebuild,v 1.2 2013/01/27 22:39:32 aballier Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ SRC_URI="mirror://gentoo/${UBIN}.tar.bz2
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[usb?,bluetooth?]
 	ssl? ( dev-libs/openssl )
 	kerberos? ( virtual/krb5 )
-	ar? ( app-arch/libarchive )
+	ar? ( >=app-arch/libarchive-3 )
 	virtual/pam
 	sys-libs/zlib
 	>=sys-libs/ncurses-5.9
@@ -50,7 +50,8 @@ PATCHES=( "${FILESDIR}/${PN}-6.0-bsdcmp.patch"
 	"${FILESDIR}/${PN}-8.0-xinstall.patch"
 	"${FILESDIR}/${PN}-9.1-bsdar.patch"
 	"${FILESDIR}/${PN}-9.1-minigzip.patch"
-	"${FILESDIR}/${PN}-9.1-grep.patch" )
+	"${FILESDIR}/${PN}-9.1-grep.patch"
+	"${FILESDIR}/${PN}-9.1-ar-libarchive3.patch" )
 
 # Here we remove some sources we don't need because they are already
 # provided by portage's packages or similar. In order:

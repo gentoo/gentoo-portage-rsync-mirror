@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.85 2013/01/27 22:21:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.86 2013/01/27 22:39:32 aballier Exp $
+
+  27 Jan 2013; Alexis Ballier <aballier@gentoo.org> freebsd-ubin-9.1.ebuild,
+  +files/freebsd-ubin-9.1-ar-libarchive3.patch:
+  Fix build of ar with newer libarchive, bug #448510 by Yuta SATOH
 
   27 Jan 2013; Alexis Ballier <aballier@gentoo.org>
   -freebsd-ubin-9.1_rc1.ebuild, -freebsd-ubin-9.1_rc2.ebuild,

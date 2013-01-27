@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>app-doc</herd>
-	<maintainer>
-		<email>app-doc@gentoo.org</email>
-	</maintainer>
 	<use>
 		<flag name='htmlsingle'>Install all-on-one-page HTML version.</flag>
 	</use>

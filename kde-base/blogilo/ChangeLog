@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blogilo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.95 2013/01/27 14:59:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.96 2013/01/27 22:58:02 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> blogilo-4.9.5.ebuild:
+  Stable for ppc, wrt bug #450678
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> blogilo-4.9.5.ebuild:
   Stable for x86, wrt bug #450678
