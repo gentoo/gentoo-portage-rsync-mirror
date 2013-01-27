@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksystraycmd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ChangeLog,v 1.222 2013/01/27 12:35:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ChangeLog,v 1.223 2013/01/27 15:55:12 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> ksystraycmd-4.9.5.ebuild:
+  Stable for x86, wrt bug #450678
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> ksystraycmd-4.9.5.ebuild:
   Stable for amd64, wrt bug #450678

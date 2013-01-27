@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.116 2013/01/22 07:22:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.117 2013/01/27 15:40:08 yngwin Exp $
+
+# Ben de Groot <yngwin@gentoo.org> (27 Jan 2013)
+# unkeyworded razorqt-base/razorqt-lightdm-greeter
+x11-misc/lightdm razor
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (22 Jan 2013)
 # remove mask if/when media-gfx/argyllcms is keywored here.
@@ -81,14 +85,14 @@ media-libs/phonon vlc
 net-libs/cyassl aes-ni
 
 # Rick Farina <zerochaos@gentoo.org> (09 July 2012)
-# limited testing of net-libs/libbtbb is all this mask is needed for                   
+# limited testing of net-libs/libbtbb is all this mask is needed for
 net-analyzer/wireshark -btbb
 
 # Chí-Thanh Christopher Nguyen <chithanh@gentoo.org> (02 Jun 2012)
 # Mask udis86 flag for llvm, which is of limited use outside x86/amd64.
 sys-devel/llvm udis86
 
-# Robert Piasek <dagger@gentoo.org> (26 Apr 2012)          
+# Robert Piasek <dagger@gentoo.org> (26 Apr 2012)
 # Packages with optional systemd support. Masked in base and unmasked on arches
 # where sys-apps/systemd is available.
 # Samuli Suominen <ssuominen@gentoo.org> (07 Sep 2012)
@@ -119,7 +123,7 @@ www-client/epiphany -jit
 
 # Anthony G. Basile <blueness@gentoo.org> (Dec 21, 2011)
 # Mask the vde flag on tinc because net-misc/vde is not
-# keyworded for arm 
+# keyworded for arm
 net-misc/tinc vde
 
 # Davide Pesavento <pesa@gentoo.org> (30 Nov 2011)
