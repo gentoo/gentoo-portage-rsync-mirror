@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fcaps.eclass,v 1.1 2013/01/27 17:27:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fcaps.eclass,v 1.2 2013/01/27 17:47:10 vapier Exp $
 
 # @ECLASS: fcaps.eclass
 # @MAINTAINER:
@@ -56,7 +56,7 @@ DEPEND="filecaps? ( sys-libs/libcap )"
 # Note: If you override pkg_postinst, you must call fcaps_pkg_postinst yourself.
 
 # @FUNCTION: fcaps
-# @USAGE: [-o <owner>] [-g <group>] [-m <mode>] <capabilities> <file[s]>
+# @USAGE: [-o <owner>] [-g <group>] [-m <mode>] [-M <caps mode>] <capabilities> <file[s]>
 # @DESCRIPTION:
 # Sets the specified capabilities on the specified files.
 #
@@ -66,6 +66,9 @@ DEPEND="filecaps? ( sys-libs/libcap )"
 # If the file is a relative path (e.g. bin/foo rather than /bin/foo), then the
 # appropriate path var ($D/$ROOT/etc...) will be prefixed based on the current
 # ebuild phase.
+#
+# The caps mode (default 711) is used to set the permission on the file if
+# capabilities were properly set on the file.
 #
 # If the system is unable to set capabilities, it will use the specified user,
 # group, and mode (presumably to make the binary set*id).  The defaults there
@@ -78,12 +81,14 @@ fcaps() {
 	local owner='root'
 	local group='root'
 	local mode='4711'
+	local caps_mode='711'
 
 	while [[ $# -gt 0 ]] ; do
 		case $1 in
 		-o) owner=$2; shift;;
 		-g) group=$2; shift;;
 		-m) mode=$2; shift;;
+		-M) caps_mode=$2; shift;;
 		*) break;;
 		esac
 		shift
@@ -114,6 +119,10 @@ fcaps() {
 			# Try to set capabilities.  Ignore errors when the
 			# fs doesn't support it, but abort on all others.
 			debug-print "${FUNCNAME}: setting caps '${caps}' on '${file}'"
+
+			# If everything goes well, we don't want the file to be readable
+			# by people.
+			chmod ${caps_mode} "${file}" || die
 
 			if ! out=$(LC_ALL=C setcap "${caps}" "${file}" 2>&1) ; then
 				if [[ ${out} != *"Operation not supported"* ]] ; then
