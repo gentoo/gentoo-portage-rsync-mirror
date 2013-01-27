@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1_rc3-r1.ebuild,v 1.1 2012/11/09 20:58:00 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1_rc3-r1.ebuild,v 1.3 2013/01/27 15:23:25 aballier Exp $
 
 EAPI=2
 
@@ -156,7 +156,7 @@ src_prepare() {
 	# Fix the Makefiles of these few libraries that will overwrite our LDADD.
 	cd "${S}"
 	for dir in libradius libtacplus libcam libdevstat libfetch libgeom libmemstat libopie \
-		libsmb; do sed -i.bak -e 's:LDADD=:LDADD+=:g' "${dir}/Makefile" || \
+		libsmb libprocstat libulog; do sed -i.bak -e 's:LDADD=:LDADD+=:g' "${dir}/Makefile" || \
 		die "Problem fixing \"${dir}/Makefile"
 	done
 	# Call LD with LDFLAGS, rename them to RAW_LDFLAGS
@@ -463,7 +463,7 @@ src_install() {
 
 	cd "${WORKDIR}/etc/"
 	insinto /etc
-	doins auth.conf nls.alias mac.conf netconfig
+	doins nls.alias mac.conf netconfig
 
 	# Install ttys file
 	local MACHINE="$(tc-arch-kernel)"

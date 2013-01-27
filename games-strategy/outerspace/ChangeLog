@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/outerspace
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/ChangeLog,v 1.18 2011/01/30 18:14:46 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/ChangeLog,v 1.19 2013/01/27 15:17:57 hasufell Exp $
+
+*outerspace-0.5.68 (27 Jan 2013)
+
+  27 Jan 2013; Julian Ospald <hasufell@gentoo.org> +outerspace-0.5.68.ebuild,
+  +files/outerspace-0.5.68-setup.patch:
+  version bump wrt #380487, convert to distutils-r1
 
   30 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   outerspace-0.5.67-r1.ebuild:
