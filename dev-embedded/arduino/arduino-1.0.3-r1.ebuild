@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/arduino-1.0.3-r1.ebuild,v 1.1 2013/01/25 20:22:31 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/arduino-1.0.3-r1.ebuild,v 1.2 2013/01/26 23:09:43 miknix Exp $
 
 EAPI=4
 JAVA_PKG_IUSE="doc examples"
@@ -17,13 +17,17 @@ KEYWORDS="~x86 ~amd64"
 RESTRICT="strip binchecks"
 IUSE=""
 
-RDEPEND="dev-embedded/avrdude
+COMMONDEP="
+dev-java/jna
+>dev-java/rxtx-2.1"
+
+RDEPEND="${COMMONDEP}
+dev-embedded/avrdude
 dev-embedded/uisp
->dev-java/rxtx-2.1
 sys-devel/crossdev
 >=virtual/jre-1.5"
 
-DEPEND="dev-java/jna
+DEPEND="${COMMONDEP}
 >=virtual/jdk-1.5"
 
 EANT_GENTOO_CLASSPATH="jna,rxtx-2"

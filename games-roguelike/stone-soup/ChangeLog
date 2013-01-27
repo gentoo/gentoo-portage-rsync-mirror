@@ -1,6 +1,12 @@
 # ChangeLog for games-roguelike/stone-soup
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/ChangeLog,v 1.9 2012/12/13 18:17:05 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/ChangeLog,v 1.10 2013/01/26 23:02:16 hasufell Exp $
+
+*stone-soup-0.11.2 (26 Jan 2013)
+
+  26 Jan 2013; Julian Ospald <hasufell@gentoo.org> +stone-soup-0.11.2.ebuild,
+  +files/stone-soup-0.11.2-build.patch:
+  version bump
 
   13 Dec 2012; Julian Ospald <hasufell@gentoo.org> -stone-soup-0.10.3.ebuild,
   -files/stone-soup-0.10.3-build.patch, -stone-soup-0.11.1.ebuild:
