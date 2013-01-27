@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r3.ebuild,v 1.2 2012/10/24 19:32:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r3.ebuild,v 1.3 2013/01/27 14:41:45 jlec Exp $
 
 EAPI=4
 
@@ -28,6 +28,7 @@ DEPEND="
 	media-libs/libpng:0
 	media-libs/tiff:0
 	sys-libs/zlib
+	virtual/glu
 	virtual/jpeg
 	x11-libs/libXpm
 	x11-libs/motif:0

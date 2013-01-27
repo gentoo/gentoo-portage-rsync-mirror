@@ -1,6 +1,21 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.68 2013/01/22 16:51:12 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.69 2013/01/27 14:32:10 aidecoe Exp $
+
+*notmuch-0.15.1 (27 Jan 2013)
+
+  27 Jan 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +notmuch-0.15.1.ebuild,
+  +files/0.15.1-0001-lib-Makefile.local-depend-on-libs-we-a.patch:
+  Version bump.
+
+  NEWS
+  ~~~~
+  (Extracted headlines from NEWS file. See it for details.)
+
+  Internal test framework changes
+  -------------------------------
+  - Set a default value for TERM when running tests
 
   22 Jan 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.15.ebuild,
   +files/0.15-0001-lib-Makefile.local-depend-on-libs-we-a.patch:

@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/ball
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ChangeLog,v 1.4 2013/01/27 14:30:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ChangeLog,v 1.5 2013/01/27 14:57:36 jlec Exp $
+
+  27 Jan 2013; Justin Lecher <jlec@gentoo.org> ball-1.4.1-r1.ebuild:
+  Use python-single-r1 eclass
 
 *ball-1.4.1-r1 (27 Jan 2013)
 

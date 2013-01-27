@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/molmol
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.32 2012/10/24 19:32:20 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.33 2013/01/27 14:41:44 jlec Exp $
+
+  27 Jan 2013; Justin Lecher <jlec@gentoo.org> molmol-2k_p2-r2.ebuild,
+  molmol-2k_p2-r3.ebuild, metadata.xml:
+  Add missing dep on virtual/glu, #454288
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> molmol-2k_p2-r2.ebuild,
   molmol-2k_p2-r3.ebuild:

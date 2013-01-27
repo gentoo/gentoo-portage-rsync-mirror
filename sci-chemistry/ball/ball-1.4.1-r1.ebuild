@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ball-1.4.1-r1.ebuild,v 1.1 2013/01/27 14:30:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ball-1.4.1-r1.ebuild,v 1.2 2013/01/27 14:57:36 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="python? 2"
+PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
 
-inherit cmake-utils python
+inherit cmake-utils python-single-r1
 
 DESCRIPTION="Biochemical Algorithms Library"
 HOMEPAGE="http://www.ball-project.org/"
@@ -34,6 +34,7 @@ RDEPEND="
 	x11-libs/qt-webkit:4
 	cuda? ( dev-util/nvidia-cuda-toolkit )
 	mpi? ( virtual/mpi )
+	python? ( ${PYTHON_DEPS} )
 	sql? ( x11-libs/qt-sql:4 )
 	webkit? ( x11-libs/qt-webkit:4 )"
 DEPEND="${RDEPEND}
