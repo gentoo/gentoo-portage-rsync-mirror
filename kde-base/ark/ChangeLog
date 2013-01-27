@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.252 2013/01/05 20:18:43 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.253 2013/01/27 11:37:50 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> ark-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *ark-4.9.5 (05 Jan 2013)
 
@@ -961,4 +964,3 @@
   15 Jan 2005; Dan Armak <danarmak@gentoo.org> +ark-3.4.0_beta1.ebuild:
   Adding the split ebuilds to portage. For KDE 3.4, we've created separate
   ebuilds for all the KDE apps.
-

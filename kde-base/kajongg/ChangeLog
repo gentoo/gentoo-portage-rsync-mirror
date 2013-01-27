@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kajongg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.77 2013/01/05 20:19:08 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.78 2013/01/27 11:44:22 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kajongg-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *kajongg-4.9.5 (05 Jan 2013)
 
@@ -297,4 +300,3 @@
   05 Sep 2010; Theo Chatzimichos <tampakrap@gentoo.org>
   +kajongg-4.5.1.ebuild:
   Version bump
-

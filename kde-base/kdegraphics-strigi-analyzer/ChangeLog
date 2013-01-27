@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics-strigi-analyzer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-strigi-analyzer/ChangeLog,v 1.129 2013/01/05 20:18:30 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-strigi-analyzer/ChangeLog,v 1.130 2013/01/27 12:00:00 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  kdegraphics-strigi-analyzer-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *kdegraphics-strigi-analyzer-4.9.5 (05 Jan 2013)
 
@@ -622,4 +626,3 @@
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   +metadata.xml, +kdegraphics-strigi-analyzer-4.1.2.ebuild:
   Add kde-4.1.2 into the tree from the kde-testing overlay.
-

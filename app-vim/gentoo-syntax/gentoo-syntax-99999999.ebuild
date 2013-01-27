@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-99999999.ebuild,v 1.2 2013/01/26 20:01:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-99999999.ebuild,v 1.4 2013/01/27 11:50:39 radhermit Exp $
 
 EAPI=5
 
@@ -28,8 +28,6 @@ src_prepare() {
 			eend $?
 		done
 	fi
-
-	rm -r .git Makefile || die
 }
 
 pkg_postinst() {

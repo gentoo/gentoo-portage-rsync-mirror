@@ -7,5 +7,5 @@ IUSE=ignore-glep31
 LICENSE=vim
 RDEPEND=|| ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 )
 SLOT=0
-_eclasses_=git-2	e92e09651292b1bef5656592364550f7	vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	c17c1bfde9ce27e86e5d52a7aa902170
-_md5_=c2ddc021072cf334f73d6732c1ab4d22
+_eclasses_=git-2	e92e09651292b1bef5656592364550f7	vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	9a0a8d2f4bc0c0311a4589954a92520f
+_md5_=be72a5d40761700db47fb29369d27c1a

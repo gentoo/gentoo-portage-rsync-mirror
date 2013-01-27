@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.247 2013/01/05 20:19:02 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.248 2013/01/27 11:55:57 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kdebase-data-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *kdebase-data-4.9.5 (05 Jan 2013)
 
@@ -1019,4 +1022,3 @@
   +kdebase-data-3.4.0_rc1-r1.ebuild:
   This ebuild replaces kdebase-l10n, kdebase-startkde and kdebase-pics (bug
   84018).
-

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-wallpapers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.85 2013/01/05 20:18:50 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.86 2013/01/27 11:52:16 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kde-wallpapers-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *kde-wallpapers-4.9.5 (05 Jan 2013)
 
@@ -215,4 +218,3 @@
   27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org>
   +kde-wallpapers-4.7.0.ebuild, +metadata.xml:
   Version bump KDE SC 4.7.0
-

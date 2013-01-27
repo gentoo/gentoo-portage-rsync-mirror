@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/attica
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/ChangeLog,v 1.97 2013/01/05 20:18:53 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/ChangeLog,v 1.98 2013/01/27 11:38:06 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> attica-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *attica-4.9.5 (05 Jan 2013)
 
@@ -359,4 +362,3 @@
 
   08 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org> +attica-4.4.0.ebuild:
   Version bump to KDE SC 4.4.0
-

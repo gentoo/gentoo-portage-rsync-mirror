@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/analitza/analitza-4.9.5.ebuild,v 1.1 2013/01/05 20:18:20 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/analitza/analitza-4.9.5.ebuild,v 1.2 2013/01/27 11:37:33 ago Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ KDE_HANDBOOK="never"
 inherit kde4-base
 
 DESCRIPTION="KDE library for mathematical features"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug readline"
 
 DEPEND="
