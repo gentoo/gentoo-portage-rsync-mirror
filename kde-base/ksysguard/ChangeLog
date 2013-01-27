@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.267 2013/01/05 20:18:34 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.268 2013/01/27 12:35:09 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> ksysguard-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *ksysguard-4.9.5 (05 Jan 2013)
 
@@ -1064,4 +1067,3 @@
   +ksysguard-3.4.0_beta1.ebuild:
   Adding the split ebuilds to portage. For KDE 3.4, we've created separate
   ebuilds for all the KDE apps.
-

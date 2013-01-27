@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/oxygen-icons-4.9.5.ebuild,v 1.1 2013/01/05 20:18:21 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/oxygen-icons-4.9.5.ebuild,v 1.2 2013/01/27 12:47:53 ago Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ SRC_URI="
 "
 
 LICENSE="LGPL-3"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
 IUSE="aqua bindist"
 
 DEPEND=""

@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kde-gtk-config
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kde-gtk-config/ChangeLog,v 1.16 2013/01/11 12:56:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kde-gtk-config/ChangeLog,v 1.17 2013/01/27 12:56:24 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kde-gtk-config-2.1.1.ebuild:
+  Stable for amd64, wrt bug #450678
 
   11 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kde-gtk-config-2.1.1.ebuild,
   kde-gtk-config-2.1.ebuild:

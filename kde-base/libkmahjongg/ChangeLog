@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkmahjongg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmahjongg/ChangeLog,v 1.137 2013/01/05 20:18:48 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmahjongg/ChangeLog,v 1.138 2013/01/27 12:43:17 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libkmahjongg-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *libkmahjongg-4.9.5 (05 Jan 2013)
 
@@ -601,4 +604,3 @@
   +files/libkmahjongg-4.0.0-link.patch, +metadata.xml,
   +libkmahjongg-4.0.0.ebuild:
   Added KDE 4.0.0's libkmahjongg.
-

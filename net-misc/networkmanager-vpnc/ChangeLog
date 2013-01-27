@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/networkmanager-vpnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.26 2013/01/24 04:45:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.28 2013/01/27 12:47:48 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  networkmanager-vpnc-0.9.6.0.ebuild:
+  Stable for x86, wrt bug #448006
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
+  networkmanager-vpnc-0.9.6.0.ebuild:
+  Stable for amd64, wrt bug #448006
 
   24 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
   Add myself to maintainer list to reflect reality.

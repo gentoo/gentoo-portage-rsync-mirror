@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/sweeper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/sweeper/ChangeLog,v 1.136 2013/01/05 20:18:22 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/sweeper/ChangeLog,v 1.137 2013/01/27 12:54:48 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> sweeper-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *sweeper-4.9.5 (05 Jan 2013)
 
@@ -542,4 +545,3 @@
   18 Jan 2008; Ingmar Vanhassel <ingmar@gentoo.org> +metadata.xml,
   +sweeper-4.0.0.ebuild:
   Added KDE 4.0.0's sweeper.
-

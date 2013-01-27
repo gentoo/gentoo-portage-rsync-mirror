@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/perlqt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.57 2013/01/05 20:19:12 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.58 2013/01/27 12:49:12 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> perlqt-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *perlqt-4.9.5 (05 Jan 2013)
 
@@ -221,4 +224,3 @@
   27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +perlqt-4.7.0.ebuild,
   +metadata.xml:
   Version bump KDE SC 4.7.0
-

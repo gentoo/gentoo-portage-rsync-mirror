@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smokekde
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/ChangeLog,v 1.51 2013/01/05 20:19:10 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/ChangeLog,v 1.52 2013/01/27 12:52:57 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> smokekde-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *smokekde-4.9.5 (05 Jan 2013)
 

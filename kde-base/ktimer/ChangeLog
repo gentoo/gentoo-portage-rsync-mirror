@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktimer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimer/ChangeLog,v 1.228 2013/01/05 20:18:56 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimer/ChangeLog,v 1.229 2013/01/27 12:36:13 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> ktimer-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *ktimer-4.9.5 (05 Jan 2013)
 
@@ -861,4 +864,3 @@
   +ktimer-3.4.0_beta1.ebuild:
   Adding the split ebuilds to portage. For KDE 3.4, we've created separate
   ebuilds for all the KDE apps.
-

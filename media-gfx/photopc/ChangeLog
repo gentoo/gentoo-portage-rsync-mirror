@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/photopc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photopc/ChangeLog,v 1.13 2012/10/08 08:58:20 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photopc/ChangeLog,v 1.14 2013/01/27 12:41:24 ulm Exp $
+
+  27 Jan 2013; Ulrich Müller <ulm@gentoo.org> photopc-3.05.ebuild,
+  photopc-3.06.ebuild, photopc-3.07.ebuild:
+  Fix LICENSE, see README file, bug 453496.
 
 *photopc-3.07 (08 Oct 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluedevil
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.28 2012/12/10 15:31:25 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.29 2013/01/27 12:58:42 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> bluedevil-1.2.4.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *bluedevil-1.2.4 (10 Dec 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/powerdevil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.137 2013/01/05 20:18:19 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.138 2013/01/27 12:50:35 ago Exp $
+
+  27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> powerdevil-4.9.5.ebuild:
+  Stable for amd64, wrt bug #450678
 
 *powerdevil-4.9.5 (05 Jan 2013)
 

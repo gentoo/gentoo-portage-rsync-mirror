@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/libkgapi-0.4.4.ebuild,v 1.1 2013/01/01 20:27:38 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/libkgapi-0.4.4.ebuild,v 1.2 2013/01/27 12:57:54 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="Library for accessing Google calendar and contact resources"
 HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~x86"
 IUSE="oldpim"
 SLOT=4
 
