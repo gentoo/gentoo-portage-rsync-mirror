@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager-openconnect
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/ChangeLog,v 1.10 2013/01/24 04:37:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/ChangeLog,v 1.11 2013/01/27 21:18:17 tetromino Exp $
+
+  27 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -networkmanager-openconnect-0.8.4.ebuild:
+  Drop old.
 
   24 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
   Add myself to maintainer list to reflect reality.
