@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/votca-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.19 2012/12/26 23:22:22 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.20 2013/01/27 04:03:19 ottxor Exp $
+
+*votca-tools-1.2.3-r1 (27 Jan 2013)
+
+  27 Jan 2013; Christoph Junghans <ottxor@gentoo.org>
+  +files/votca-tools-1.2.3-boost-1.53.patch, +votca-tools-1.2.3-r1.ebuild,
+  -votca-tools-1.2.3.ebuild:
+  fix build with boost-1.53 (bug #454104)
 
   26 Dec 2012; Christoph Junghans <ottxor@gentoo.org> votca-tools-1.2.2.ebuild,
   votca-tools-1.2.3.ebuild:

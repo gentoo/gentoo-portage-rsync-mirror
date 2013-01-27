@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.3.ebuild,v 1.2 2012/12/26 23:22:22 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.3-r1.ebuild,v 1.1 2013/01/27 04:03:19 ottxor Exp $
 
 EAPI="3"
 
 inherit cmake-utils eutils multilib
 
 if [ "${PV}" != "9999" ]; then
-	SRC_URI="system-boost? ( http://votca.googlecode.com/files/${PF}_pristine.tar.gz )
-		!system-boost? ( http://votca.googlecode.com/files/${PF}.tar.gz )"
+	SRC_URI="system-boost? ( http://votca.googlecode.com/files/${P}_pristine.tar.gz )
+		!system-boost? ( http://votca.googlecode.com/files/${P}.tar.gz )"
 	RESTRICT="primaryuri"
 else
 	SRC_URI=""
@@ -36,6 +36,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 DOCS=( NOTICE )
+
+PATCHES=( "${FILESDIR}/${P}-boost-1.53.patch" )
 
 src_prepare() {
 	use gsl || ewarn "Disabling gsl will lead to reduced functionality"
