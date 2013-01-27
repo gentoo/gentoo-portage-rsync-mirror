@@ -5714,10 +5714,11 @@ sys-process/procps:ncurses - Build programs that use ncurses: top, slabtop, watc
 virtual/ffmpeg:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 virtual/mpi:romio - Enable romio, a high-performance portable MPI-IO
 virtual/mysql:embedded - Build embedded server (libmysqld)
-virtual/udev:gudev - Build and install gudev support
-virtual/udev:hwdb - Build and install hwdb support
+virtual/udev:gudev - Build and install libgudev support
+virtual/udev:hwdb - Build and install hardware database support
 virtual/udev:introspection - Build and install introspection support
-virtual/udev:keymap - Build and install keymap support
+virtual/udev:keymap - Build and install keymaps support
+virtual/udev:kmod - Build and install module loading support
 www-apache/mod_extract_forwarded:mod_proxy - Enable support for Apache's internal proxy
 www-apache/mod_musicindex:mysql - Add MySQL cache backend support
 www-apache/mod_nss:ecc - enable Elliptical Curve Cyptography
