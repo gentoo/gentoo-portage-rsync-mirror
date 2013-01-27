@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.35 2013/01/27 13:53:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.36 2013/01/27 20:12:03 williamh Exp $
+
+*udev-init-scripts-22 (27 Jan 2013)
+
+  27 Jan 2013; William Hubbs <williamh@gentoo.org>
+  +udev-init-scripts-22.ebuild:
+  version bump
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> udev-init-scripts-19-r1.ebuild:
   Stable for ppc, wrt bug #452556
