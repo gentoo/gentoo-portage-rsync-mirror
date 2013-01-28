@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.9.4.ebuild,v 1.9 2013/01/21 16:27:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.9.4.ebuild,v 1.10 2013/01/28 04:37:36 vapier Exp $
 
 EAPI=3
 WANT_AUTOCONF="2.1"
@@ -47,35 +47,36 @@ src_prepare() {
 src_configure() {
 	cd "${S}"/build
 
+	# We use the standard BUILD_xxx but nspr uses HOST_xxx
+	tc-export_build_env BUILD_CC
+	export HOST_CC=${BUILD_CC} HOST_CFLAGS=${BUILD_CFLAGS} HOST_LDFLAGS=${BUILD_LDFLAGS}
+	tc-export AR CC CXX RANLIB
+	[[ ${CBUILD} != ${CHOST} ]] \
+		&& export CROSS_COMPILE=1 \
+		|| unset CROSS_COMPILE
+
+	local myconf
 	echo > "${T}"/test.c
-	$(tc-getCC) -c "${T}"/test.c -o "${T}"/test.o
+	${CC} ${CFLAGS} ${CPPFLAGS} -c "${T}"/test.c -o "${T}"/test.o || die
 	case $(file "${T}"/test.o) in
-		*32-bit*x86-64*|*64-bit*|*ppc64*|*x86_64*) myconf="${myconf} --enable-64bit";;
+		*32-bit*x86-64*|*64-bit*|*ppc64*|*x86_64*) myconf+=" --enable-64bit";;
 		*32-bit*|*ppc*|*i386*) ;;
 		*) die "Failed to detect whether your arch is 64bits or 32bits, disable distcc if you're using it, please";;
 	esac
-	myconf="${myconf} --libdir=${EPREFIX}/usr/$(get_libdir)"
 
-	LC_ALL="C" ECONF_SOURCE="../mozilla/nsprpub" econf \
+	# Ancient autoconf needs help finding the right tools.
+	LC_ALL="C" ECONF_SOURCE="../mozilla/nsprpub" \
+	ac_cv_path_AR="${AR}" \
+	econf \
+		--libdir="${EPREFIX}/usr/$(get_libdir)" \
 		$(use_enable debug) \
 		$(use_enable !debug optimize) \
-		${myconf} || die "econf failed"
+		${myconf}
 }
 
 src_compile() {
 	cd "${S}"/build
-	if tc-is-cross-compiler; then
-		$(tc-getBUILD_CC) $BUILD_CFLAGS -DXP_UNIX ../mozilla/nsprpub/config/nsinstall.c \
-			-o config/native-nsinstall || die "failed to build nsinstall"
-		$(tc-getBUILD_CC) $BUILD_CFLAGS -DXP_UNIX ../mozilla/nsprpub/config/now.c \
-			-o config/native-now || die "failed to build now"
-		sed -s 's#/nsinstall$#/native-nsinstall#' -i config/autoconf.mk
-		for d in pr/src lib/libc/src lib/ds; do
-			sed -s 's#/now$#/native-now#' -i ${d}/Makefile
-	done
-	fi
-	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" \
-		AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)" || die "failed to build"
+	emake || die "failed to build"
 }
 
 src_install () {
@@ -85,10 +86,8 @@ src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	cd "${ED}"/usr/$(get_libdir)
-	for file in *.a; do
-		einfo "removing static libraries as upstream has requested!"
-		rm -f ${file} || die "failed to remove static libraries."
-	done
+	einfo "removing static libraries as upstream has requested!"
+	rm -f *.a || die "failed to remove static libraries."
 
 	local n=
 	# aix-soname.patch does this already
