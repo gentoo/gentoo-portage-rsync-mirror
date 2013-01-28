@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.105 2013/01/06 09:33:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.106 2013/01/28 20:31:47 vapier Exp $
+
+  28 Jan 2013; Mike Frysinger <vapier@gentoo.org> systemtap-2.0.ebuild:
+  Add ~s390 love -- it compiles #351931 by Pacho Ramos.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> systemtap-2.0.ebuild:
   Add ~sparc, wrt bug #449220

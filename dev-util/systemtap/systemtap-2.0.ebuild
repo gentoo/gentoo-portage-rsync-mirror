@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-2.0.ebuild,v 1.5 2013/01/06 09:33:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-2.0.ebuild,v 1.6 2013/01/28 20:31:46 vapier Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://sources.redhat.com/${PN}/ftp/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="sqlite"
 
 DEPEND=">=dev-libs/elfutils-0.142
