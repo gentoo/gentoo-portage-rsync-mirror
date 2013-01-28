@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.13.4-r1.ebuild,v 1.15 2012/08/06 19:42:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.13.4-r1.ebuild,v 1.16 2013/01/28 20:06:23 vapier Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ IUSE="debug gnutls idn ipv6 nls ntlm +ssl static"
 LIB_DEPEND="idn? ( net-dns/libidn[static-libs(+)] )
 	ssl? (
 		gnutls? ( net-libs/gnutls[static-libs(+)] )
-		!gnutls? ( >=dev-libs/openssl-0.9.6b[static-libs(+)] )
+		!gnutls? ( dev-libs/openssl:0[static-libs(+)] )
 	)"
 RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )"
 DEPEND="${RDEPEND}

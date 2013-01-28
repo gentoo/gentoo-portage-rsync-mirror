@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.14.ebuild,v 1.9 2012/12/16 17:48:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.14.ebuild,v 1.10 2013/01/28 20:06:23 vapier Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ LIB_DEPEND="idn? ( net-dns/libidn[static-libs(+)] )
 	pcre? ( dev-libs/libpcre[static-libs(+)] )
 	ssl? (
 		gnutls? ( net-libs/gnutls[static-libs(+)] )
-		!gnutls? ( >=dev-libs/openssl-0.9.6b[static-libs(+)] )
+		!gnutls? ( dev-libs/openssl:0[static-libs(+)] )
 	)
 	uuid? ( sys-apps/util-linux[static-libs(+)] )
 	zlib? ( sys-libs/zlib[static-libs(+)] )"
