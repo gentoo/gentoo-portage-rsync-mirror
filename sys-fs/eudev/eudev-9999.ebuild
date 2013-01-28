@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.16 2013/01/25 14:35:05 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.17 2013/01/28 14:34:35 axs Exp $
 
 EAPI=5
 
@@ -27,6 +27,7 @@ IUSE="doc gudev hwdb kmod introspection keymap +modutils +openrc selinux static-
 RESTRICT="test"
 
 COMMON_DEPEND="gudev? ( dev-libs/glib:2 )
+	kmod? ( sys-apps/kmod )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
 	selinux? ( sys-libs/libselinux )
 	>=sys-apps/util-linux-2.20

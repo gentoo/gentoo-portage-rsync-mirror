@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.7-r3.ebuild,v 1.3 2013/01/06 18:17:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.7-r3.ebuild,v 1.5 2013/01/28 14:44:52 aballier Exp $
 
 EAPI="5"
 WANT_AUTOCONF="2.1"
@@ -18,7 +18,7 @@ SRC_URI="http://people.mozilla.com/~dmandelin/${TARBALL_P}.tar.gz
 
 LICENSE="NPL-1.1"
 SLOT="0/mozjs187"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa -ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa -ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="debug jit minimal static-libs test"
 
 S="${WORKDIR}/${MY_P}"
@@ -53,11 +53,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-symbol-versions.patch
 
 	epatch_user
-
-	if [[ ${CHOST} == *-freebsd* ]]; then
-		# Don't try to be smart, this does not work in cross-compile anyway
-		ln -sfn "${BUILDDIR}/config/Linux_All.mk" "${S}/config/$(uname -s)$(uname -r).mk" || die
-	fi
 
 	cd "${BUILDDIR}" || die
 	eautoconf

@@ -1,6 +1,10 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.19 2013/01/27 13:53:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.20 2013/01/28 14:42:41 axs Exp $
+
+  28 Jan 2013; Ian Stakenvicius <axs@gentoo.org> udev-197.ebuild:
+  Adjust passthrough of USE=kmod on eudev to enable USE=modutils instead, bug
+  454312
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> udev-197.ebuild:
   Stable for ppc, wrt bug #452556

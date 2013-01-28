@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/libsecret-0.12.ebuild,v 1.8 2013/01/06 10:12:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/libsecret-0.12.ebuild,v 1.9 2013/01/28 14:56:10 aballier Exp $
 
 EAPI="5"
 VALA_MIN_API_VERSION=0.18
@@ -15,7 +15,7 @@ LICENSE="LGPL-2.1+ Apache-2.0" # Apache-2.0 license is used for tests only
 SLOT="0"
 IUSE="+crypt debug +introspection test vala"
 REQUIRED_USE="vala? ( introspection )"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.31.0:2

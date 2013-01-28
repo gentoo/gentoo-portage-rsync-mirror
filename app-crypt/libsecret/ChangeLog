@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/libsecret
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.12 2013/01/06 10:12:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.13 2013/01/28 14:56:10 aballier Exp $
+
+  28 Jan 2013; Alexis Ballier <aballier@gentoo.org> libsecret-0.12.ebuild:
+  keyword ~amd64-fbsd
 
   06 Jan 2013; Markus Meier <maekke@gentoo.org> libsecret-0.12.ebuild:
   add ~arm, bug #449220
