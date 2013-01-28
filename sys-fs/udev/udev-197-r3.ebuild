@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.32 2013/01/28 08:33:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r3.ebuild,v 1.33 2013/01/28 13:18:55 ssuominen Exp $
 
 EAPI=4
 
@@ -76,6 +76,8 @@ QA_MULTILIB_PATHS="lib/systemd/systemd-udevd"
 
 udev_check_KV()
 {
+	# accept4 came late for ia64 (thanks, ryao)
+	use ia64 && KV_min=3.3
 	if kernel_is lt ${KV_min//./ }
 	then
 		return 1
