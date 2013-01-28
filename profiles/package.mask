@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14413 2013/01/28 07:52:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14415 2013/01/28 19:54:19 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Sterrett <mr_bones_@gentoo.org> (28 Jan 2013)
+# Doesn't work with newer KDE and upstream seems dead (bug #453756)
+# Masked for removal on 20130227
+games-puzzle/kmagnet
+
 # Samuli Suominen <ssuominen@gentoo.org> (28 Jan 2013)
 # Uncompatible with current udev and baselayout
 # Bug 220121 and the ones it Blocks
@@ -51,6 +56,7 @@ dev-python/github2
 # Diego Elio Pettenò <flameeyes@gentoo.org> (25 Jan 2013)
 # Masked for testing
 >=dev-libs/boost-1.53.0_beta1
+>=dev-util/boost-build-1.53.0_beta1
 
 # Julian Ospald <hasufell@gentoo.org> (25 Jan 2013)
 # functionality now provided by >=net-misc/youtube-viewer[gtk]-3.0.3
@@ -983,10 +989,11 @@ gnome-extra/gnome-lirc-properties
 
 # Markus Ullmann <jokey@gentoo.org> (07 Jul 2008)
 # mask for security bug #190667 (CVE-2007-{4584,5839})
+# and for various other build problems (bug #425634)
 #
 # both CVEs are fixed in upstream version control as per:
 # http://bitchx.svn.sourceforge.net/svnroot/bitchx/trunk/Changelog
-~net-irc/bitchx-1.1
+net-irc/bitchx
 
 # Vlastimil Babka <caster@gentoo.org> (20 May 2008)
 # Masked for testing

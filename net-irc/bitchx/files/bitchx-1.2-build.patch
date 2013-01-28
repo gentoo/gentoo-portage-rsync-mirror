@@ -63,3 +63,24 @@ index 83b4fd9..00d7059 100644
  	$(INSTALL) $(PLUGIN_NAME)$(SHLIB_SUFFIX) $(DESTDIR)$(PLUGINDIR)
 -	$(INSTALL) $(srcdir)/BitchX.hints $(DESTDIR)$(PLUGINDIR)/@HINT_FILE@
 +	$(INSTALL_DATA) $(srcdir)/BitchX.hints $(DESTDIR)$(PLUGINDIR)/@HINT_FILE@
+--- a/configure.in
++++ b/configure.in
+@@ -993,18 +993,6 @@
+ done
+ LIBS="$NEW_LIBS"
+ 
+-NEW_CFLAGS=""
+-for CFLAG_IN in $CFLAGS; do
+-	for CFLAG_OUT in $NEW_CFLAGS; do
+-		if test x"$CFLAG_OUT" = x"$CFLAG_IN"; then
+-			CFLAG_IN=""
+-			break
+-		fi
+-	done
+-	NEW_CFLAGS="$NEW_CFLAGS $CFLAG_IN"
+-done
+-CFLAGS="$NEW_CFLAGS"
+-
+ RM="rm -f"
+ CP="cp -f"
+ MV="mv -f"

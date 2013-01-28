@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.32 2013/01/02 00:51:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.33 2013/01/28 19:53:58 vapier Exp $
 
 glibc_do_configure() {
 	local myconf=()
@@ -156,7 +156,7 @@ toolchain-glibc_headers_compile() {
 	# the best here ...
 	export \
 		ac_cv_header_cpuid_h=yes \
-		libc_cv_{386,390,alpha,arm,hppa,ia64,mips,{powerpc,sparc}{32,64},sh,x86_64}_tls=yes \
+		libc_cv_{386,390,alpha,arm,hppa,ia64,mips,{powerpc,sparc}{,32,64},sh,x86_64}_tls=yes \
 		libc_cv_asm_cfi_directives=yes \
 		libc_cv_broken_visibility_attribute=no \
 		libc_cv_gcc___thread=yes \

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.2.ebuild,v 1.2 2013/01/28 17:06:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.2.ebuild,v 1.3 2013/01/28 19:32:19 jer Exp $
 
 EAPI=4
 
-inherit flag-o-matic eutils
+inherit autotools eutils flag-o-matic
 
 MY_PN=BitchX
 MY_P=${MY_PN}-${PV}-final
@@ -25,12 +25,17 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	sed -i \
 		-e "s/#undef LATIN1/#define LATIN1 ON/;" \
-		include/config.h
+		include/config.h || die
 
 	epatch "${FILESDIR}"/${P}-build.patch
 	# Do epatch_user since even BX-1.2 has A LOT of patches and A LOT
 	# of behaviour controlled by manually editing config.h
 	epatch_user
+
+	sed -i \
+		-e 's|$(SHLIB_LD)|& $(LDFLAGS)|g' \
+		dll/*/Makefile.in || die
+	eautoreconf
 }
 
 src_configure() {
