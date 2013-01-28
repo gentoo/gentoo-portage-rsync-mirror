@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gri
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/ChangeLog,v 1.11 2012/08/01 23:39:06 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/ChangeLog,v 1.12 2013/01/28 08:38:57 jlec Exp $
+
+  28 Jan 2013; Justin Lecher <jlec@gentoo.org> gri-2.12.23.ebuild,
+  metadata.xml:
+  Drop bad test, #454032
 
   01 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> gri-2.12.23.ebuild,
   metadata.xml:

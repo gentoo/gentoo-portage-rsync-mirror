@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.23.ebuild,v 1.6 2012/08/01 23:39:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.23.ebuild,v 1.7 2013/01/28 08:38:57 jlec Exp $
 
 EAPI=4
 
@@ -32,6 +32,9 @@ src_prepare() {
 	# Makefile.am contains a call to the missing script that triggers gentoo qa
 	sed -i -e 's|${SHELL} ../missing --run tex|tex|g' \
 		doc/Makefile.in || die
+	sed \
+		-e "/system/d" \
+		-i doc/tst_suite/tst_rpn.gri || die
 }
 
 src_compile() {

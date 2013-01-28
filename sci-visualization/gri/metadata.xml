@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<longdescription lang='en'>
+  <herd>sci</herd>
+  <longdescription lang="en">
   Gri is a language for scientific graphics programming. The word
   "language" is important: Gri is command-driven, not
   point/click. Some users liken Gri to LaTeX, since both provide

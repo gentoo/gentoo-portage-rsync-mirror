@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/elliptics/elliptics-2.19.2.6.ebuild,v 1.1 2013/01/28 08:11:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/elliptics/elliptics-2.19.2.6.ebuild,v 1.2 2013/01/28 08:55:11 patrick Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -21,6 +21,7 @@ RDEPEND="app-arch/snappy
 	dev-libs/boost[python]
 	dev-libs/libevent
 	dev-libs/leveldb
+	dev-libs/smack
 	dev-db/kyotocabinet
 	net-misc/cocaine-core
 	net-libs/zeromq"

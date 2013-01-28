@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.805 2013/01/27 13:52:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.806 2013/01/28 08:33:19 ssuominen Exp $
+
+  28 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197-r3.ebuild,
+  udev-197-r4.ebuild, udev-9999.ebuild:
+  Change block <sys-fs/lvm2-2.02.45 to <sys-fs/lvm2-2.02.97-r1 because it's the
+  first compatible version with this version of udev.
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> udev-197-r3.ebuild:
   Stable for ppc, wrt bug #452556

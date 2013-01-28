@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r4.ebuild,v 1.23 2013/01/27 07:42:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r4.ebuild,v 1.24 2013/01/28 08:33:19 ssuominen Exp $
 
 EAPI=4
 
@@ -61,7 +61,7 @@ fi
 RDEPEND="${COMMON_DEPEND}
 	openrc? ( !<sys-apps/openrc-0.9.9 )
 	!sys-apps/coldplug
-	!<sys-fs/lvm2-2.02.45
+	!<sys-fs/lvm2-2.02.97-r1
 	!sys-fs/device-mapper
 	!<sys-fs/udev-init-scripts-19
 	!<sys-kernel/dracut-017-r1
