@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.670 2013/01/09 10:44:02 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.671 2013/01/28 11:50:13 olemarkus Exp $
+
+*php-5.4.11-r1 (28 Jan 2013)
+*php-5.3.21-r1 (28 Jan 2013)
+
+  28 Jan 2013; Ole Markus With <olemarkus@gentoo.org> +php-5.3.21-r1.ebuild,
+  +php-5.4.11-r1.ebuild:
+  Let USE='-mysql mysqlnd pdo' build pdo extension without building the to-be-
+  deprecated mysql extension. Bug 454020
 
   09 Jan 2013; Ole Markus With <olemarkus@gentoo.org> -php-5.3.15.ebuild,
   -php-5.3.19.ebuild, -php-5.4.5.ebuild, -php-5.4.6.ebuild, -php-5.4.9.ebuild,
