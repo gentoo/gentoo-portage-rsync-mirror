@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.185 2012/05/05 04:10:04 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.186 2013/01/28 14:20:27 aballier Exp $
+
+  28 Jan 2013; Alexis Ballier <aballier@gentoo.org> gtk-engines-2.20.2.ebuild:
+  keyword ~amd64-fbsd
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gtk-engines-2.20.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

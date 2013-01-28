@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.8.1.ebuild,v 1.1 2013/01/27 22:54:28 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.8.1.ebuild,v 1.2 2013/01/28 14:09:51 sping Exp $
 
 EAPI=2
 inherit versionator autotools eutils multilib
@@ -20,8 +20,8 @@ RDEPEND="media-libs/libmad
 	media-libs/libid3tag
 	pcre? ( dev-libs/libpcre )"
 DEPEND="${RDEPEND}
-	doc? ( <app-doc/doxygen-1.8 media-gfx/graphviz )
-	sys-apps/findutils"  # because doxygen 1.8.1/1.8.2 segfault on our docs
+	doc? ( >=app-doc/doxygen-1.8.3.1 media-gfx/graphviz )
+	sys-apps/findutils"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.7-libltdl.patch

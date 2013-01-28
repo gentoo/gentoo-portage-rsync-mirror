@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.113 2013/01/01 19:11:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.114 2013/01/28 14:23:00 aballier Exp $
+
+  28 Jan 2013; Alexis Ballier <aballier@gentoo.org> make-3.82-r4.ebuild:
+  keyword ~amd64-fbsd, it seems I did not keyword the latest version...
 
   01 Jan 2013; Raúl Porcel <armin76@gentoo.org> make-3.82-r4.ebuild:
   m68k/s390/sh stable wrt #441528
