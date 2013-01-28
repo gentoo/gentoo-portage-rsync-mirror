@@ -1,12 +1,12 @@
 # ChangeLog for dev-libs/libmirage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.24 2013/01/28 00:21:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.25 2013/01/28 08:11:08 tetromino Exp $
 
 *libmirage-2.0.0 (28 Jan 2013)
 
   28 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   -libmirage-1.4.0.ebuild, libmirage-1.5.0-r1.ebuild, +libmirage-2.0.0.ebuild:
-  Version bump; adds support for DMG (Apple disk image) and MDX (Dameon Tools)
+  Version bump; adds support for DMG (Apple disk image) and MDX (Daemon Tools)
   formats. Update to EAPI5. Update license. Drop old.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> libmirage-1.4.0.ebuild,

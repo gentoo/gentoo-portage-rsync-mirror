@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.14 2013/01/27 13:54:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.15 2013/01/28 08:07:29 tetromino Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -9,7 +9,7 @@ VALA_USE_DEPEND="vapigen"
 
 inherit autotools eutils gnome.org linux-info systemd user toolchain-funcs vala udev
 
-DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
+DESCRIPTION="Universal network configuration daemon for laptops, desktops, servers and virtualization hosts"
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 
 LICENSE="GPL-2+"
