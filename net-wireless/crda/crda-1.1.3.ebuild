@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.3.ebuild,v 1.2 2013/01/21 20:54:35 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.3.ebuild,v 1.3 2013/01/28 07:35:43 ssuominen Exp $
 
 EAPI=4
-inherit eutils toolchain-funcs python
+inherit eutils toolchain-funcs python udev
 
 DESCRIPTION="Central Regulatory Domain Agent for wireless networks."
 HOMEPAGE="http://wireless.kernel.org/en/developers/Regulatory"
@@ -16,8 +16,7 @@ IUSE=""
 
 RDEPEND="dev-libs/openssl:0
 	dev-libs/libnl:3
-	net-wireless/wireless-regdb
-	>=virtual/udev-171"
+	net-wireless/wireless-regdb"
 DEPEND="${RDEPEND}
 	dev-python/m2crypto
 	=dev-lang/python-2*
@@ -34,7 +33,7 @@ src_prepare() {
 
 src_compile() {
 	emake \
-		UDEV_RULE_DIR="$($(tc-getPKG_CONFIG) --variable=udevdir udev)/rules.d" \
+		UDEV_RULE_DIR="$(udev_get_udevdir)/rules.d" \
 		REG_BIN=/usr/$(get_libdir)/crda/regulatory.bin \
 		USE_OPENSSL=1 \
 		CC="$(tc-getCC)" \
@@ -47,7 +46,7 @@ src_test() {
 
 src_install() {
 	emake \
-		UDEV_RULE_DIR="$($(tc-getPKG_CONFIG) --variable=udevdir udev)/rules.d" \
+		UDEV_RULE_DIR="$(udev_get_udevdir)/rules.d" \
 		REG_BIN=/usr/$(get_libdir)/crda/regulatory.bin \
 		USE_OPENSSL=1 \
 		DESTDIR="${D}" \

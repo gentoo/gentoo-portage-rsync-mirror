@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/json-c
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.22 2012/09/30 18:14:18 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.23 2013/01/28 07:58:55 jlec Exp $
+
+*json-c-0.10 (28 Jan 2013)
+
+  28 Jan 2013; Justin Lecher <jlec@gentoo.org> json-c-0.9.ebuild,
+  json-c-0.9-r1.ebuild, +json-c-0.10.ebuild, +files/json-c-0.10-flags.patch,
+  +files/json-c-0.10-headers.patch, metadata.xml:
+  Version Bump, #454372; all patches prepared by radhermit (Tim Harder); moves
+  header out of the way to fix collision with jsoncpp, 452234
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> json-c-0.9-r1.ebuild:
   alpha/ia64/sh/sparc stable wrt #418745
