@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20121221.ebuild,v 1.3 2013/01/28 13:50:28 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-20121221.ebuild,v 1.4 2013/01/28 18:52:37 vapier Exp $
 
 # For released versions, we precompile the man/html pages and store
 # them in a tarball on our mirrors.  This avoids ugly issues while
@@ -26,12 +26,16 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="caps doc gnutls idn ipv6 SECURITY_HAZARD ssl static"
 
+LIB_DEPEND="caps? ( sys-libs/libcap[static-libs(+)] )
+	idn? ( net-dns/libidn[static-libs(+)] )
+	ipv6? (
+		gnutls? ( net-libs/gnutls[static-libs(+)] )
+		ssl? ( dev-libs/openssl[static-libs(+)] )
+	)"
 RDEPEND="!net-misc/rarpd
-	caps? ( sys-libs/libcap )
-	gnutls? ( net-libs/gnutls )
-	ssl? ( dev-libs/openssl )
-	idn? ( net-dns/libidn )"
+	!static? ( ${LIB_DEPEND//\[static-libs(+)]} )"
 DEPEND="${RDEPEND}
+	static? ( ${LIB_DEPEND} )
 	virtual/os-headers"
 if [[ ${PV} == "99999999" ]] ; then
 	DEPEND+="
