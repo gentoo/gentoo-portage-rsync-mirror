@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.95 2013/01/01 19:33:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.96 2013/01/28 15:16:02 aballier Exp $
+
+  28 Jan 2013; Alexis Ballier <aballier@gentoo.org> minitest-4.3.3.ebuild:
+  keyword ~amd64-fbsd
 
   01 Jan 2013; Raúl Porcel <armin76@gentoo.org> minitest-3.5.0.ebuild:
   arm/s390/sh/x86 stable wrt #448372

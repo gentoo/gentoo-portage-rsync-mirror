@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.298 2013/01/15 13:10:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.299 2013/01/28 15:28:53 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -13,9 +13,6 @@
 #            mask
 # Keep it simple, we do not really care about the date or who masked it, we want
 # to be easily able to determine what we need to keyword.
-
-# media-libs/harfbuzz
-media-libs/libass harfbuzz
 
 # dev-vcs/darcs
 app-portage/layman darcs

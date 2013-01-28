@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.92 2013/01/01 19:30:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.93 2013/01/28 15:15:18 aballier Exp $
+
+  28 Jan 2013; Alexis Ballier <aballier@gentoo.org> racc-1.4.9.ebuild:
+  keyword ~amd64-fbsd
 
   01 Jan 2013; Raúl Porcel <armin76@gentoo.org> racc-1.4.8.ebuild:
   arm/s390/sh stable wrt #448296

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.101 2013/01/06 06:31:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.102 2013/01/28 15:15:43 aballier Exp $
+
+  28 Jan 2013; Alexis Ballier <aballier@gentoo.org> json-1.7.6.ebuild:
+  keyword ~amd64-fbsd
 
 *json-1.7.6 (06 Jan 2013)
 
