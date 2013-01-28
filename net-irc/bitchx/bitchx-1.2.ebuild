@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.2.ebuild,v 1.1 2013/01/02 00:26:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.2.ebuild,v 1.2 2013/01/28 17:06:32 jer Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://bitchx.ca/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sh ~sparc ~x86"
 IUSE="ipv6 ssl"
 
 DEPEND="sys-libs/ncurses
@@ -27,7 +27,7 @@ src_prepare() {
 		-e "s/#undef LATIN1/#define LATIN1 ON/;" \
 		include/config.h
 
-	epatch ${FILESDIR}/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-build.patch
 	# Do epatch_user since even BX-1.2 has A LOT of patches and A LOT
 	# of behaviour controlled by manually editing config.h
 	epatch_user
