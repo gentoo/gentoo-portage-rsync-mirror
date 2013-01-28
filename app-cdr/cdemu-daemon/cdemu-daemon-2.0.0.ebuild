@@ -1,30 +1,36 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/cdemud-1.4.0.ebuild,v 1.2 2012/01/18 12:08:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu-daemon/cdemu-daemon-2.0.0.ebuild,v 1.1 2013/01/28 00:22:03 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
+
+CMAKE_MIN_VERSION="2.8.5"
+
+inherit cmake-utils
 
 DESCRIPTION="Daemon of the CDEmu optical media image mounting suite"
 HOMEPAGE="http://cdemu.org"
-SRC_URI="mirror://sourceforge/cdemu/cdemu-daemon-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/cdemu/${P}.tar.bz2"
 
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="amd64 ~x86"
+LICENSE="GPL-2+"
+SLOT="0/4" # subslot = CDEMU_DAEMON_INTERFACE_VERSION in CMakeLists.txt
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="pulseaudio"
 
-RDEPEND=">=dev-libs/dbus-glib-0.61
-	>=dev-libs/glib-2.14:2
-	>=dev-libs/libmirage-${PV}
+RDEPEND=">=dev-libs/glib-2.26:2
+	>=dev-libs/libmirage-${PV}:=
 	>=media-libs/libao-0.8.0[pulseaudio?]
 	sys-apps/dbus
 	>=sys-fs/vhba-20101015
 	!pulseaudio? ( >=media-libs/libao-0.8.0[alsa] )"
-DEPEND="${RDEPEND}"
-
-S=${WORKDIR}/cdemu-daemon-${PV}
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 src_prepare() {
+	DOCS="AUTHORS README"
+
+	sed -e 's/-DG_DISABLE_DEPRECATED//' -i CMakeLists.txt || die
+
 	if ! use pulseaudio; then
 		sed -e 's:AUDIO_DRIVER=pulse:AUDIO_DRIVER=alsa:' \
 			-i session/cdemu-daemon-session.sh || die "sed failed"

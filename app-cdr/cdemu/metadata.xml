@@ -6,6 +6,6 @@
   <name>Alexandre Rostovtsev</name>
 </maintainer>
 <use>
-  <flag name='cdemud'>Pull <pkg>app-cdr/cdemud</pkg> dependency, useful in chroot environment (bug #315491). Do not disable until you know what you are doing.</flag>
+  <flag name='cdemu-daemon'>Pull <pkg>app-cdr/cdemu-daemon</pkg> dependency, useful in chroot environment (bug #315491). Do not disable until you know what you are doing.</flag>
 </use>
 </pkgmetadata>

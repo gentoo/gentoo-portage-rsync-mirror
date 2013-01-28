@@ -1,2 +1,3 @@
 move media-gfx/opencolorio media-libs/opencolorio
 move dev-util/nvidia-cuda-npp dev-util/nvidia-cuda-toolkit
+move app-cdr/cdemud app-cdr/cdemu-daemon

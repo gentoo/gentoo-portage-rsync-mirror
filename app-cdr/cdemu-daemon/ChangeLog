@@ -1,6 +1,15 @@
-# ChangeLog for app-cdr/cdemud
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.26 2012/04/20 19:47:08 ssuominen Exp $
+# ChangeLog for app-cdr/cdemu-daemon
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu-daemon/ChangeLog,v 1.1 2013/01/28 00:22:03 tetromino Exp $
+
+*cdemu-daemon-2.0.0 (28 Jan 2013)
+*cdemu-daemon-1.5.0 (28 Jan 2013)
+
+  28 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +cdemu-daemon-1.5.0.ebuild, +cdemu-daemon-2.0.0.ebuild, +metadata.xml:
+  Rename cdemud to cdemu-daemon to follow upstream convention and executable
+  name. Version bump (bug #451748, thanks to Agostino Sarubbo). Update to
+  EAPI5. Update license. Drop old.
 
   20 Apr 2012; Samuli Suominen <ssuominen@gentoo.org>
   -files/cdemud.conf.d-1.1.0, -files/cdemud.init.d-1.1.0, -cdemud-1.2.0.ebuild:

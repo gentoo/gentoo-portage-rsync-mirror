@@ -1,23 +1,23 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-1.5.0.ebuild,v 1.5 2012/04/09 12:10:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-1.5.0.ebuild,v 1.6 2013/01/28 00:22:41 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 
 inherit eutils python
 
-DESCRIPTION="Command-line tool for controlling the CDEmu daemon (cdemud)"
+DESCRIPTION="Command-line tool for controlling cdemu-daemon"
 HOMEPAGE="http://cdemu.org"
 SRC_URI="mirror://sourceforge/cdemu/cdemu-client-${PV}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 ~hppa x86"
-IUSE="+cdemud"
+IUSE="+cdemu-daemon"
 
 RDEPEND="dev-python/dbus-python
-	cdemud? ( >=app-cdr/cdemud-1.4.0 )"
+	cdemu-daemon? ( ~app-cdr/cdemu-daemon-${PV} )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.21"
 

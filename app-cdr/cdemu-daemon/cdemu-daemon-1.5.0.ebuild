@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/cdemud-1.5.0.ebuild,v 1.4 2012/04/09 12:10:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu-daemon/cdemu-daemon-1.5.0.ebuild,v 1.1 2013/01/28 00:22:03 tetromino Exp $
 
 EAPI="4"
 
 DESCRIPTION="Daemon of the CDEmu optical media image mounting suite"
 HOMEPAGE="http://cdemu.org"
-SRC_URI="mirror://sourceforge/cdemu/cdemu-daemon-${PV}.tar.bz2"
+SRC_URI="mirror://sourceforge/cdemu/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 ~hppa x86"
 IUSE="pulseaudio"
@@ -20,8 +20,6 @@ RDEPEND=">=dev-libs/glib-2.28:2
 	>=sys-fs/vhba-20101015
 	!pulseaudio? ( >=media-libs/libao-0.8.0[alsa] )"
 DEPEND="${RDEPEND}"
-
-S=${WORKDIR}/cdemu-daemon-${PV}
 
 src_prepare() {
 	if ! use pulseaudio; then

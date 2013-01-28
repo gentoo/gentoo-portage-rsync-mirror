@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-1.5.0-r1.ebuild,v 1.5 2012/05/04 18:35:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-1.5.0-r1.ebuild,v 1.6 2013/01/28 00:21:01 tetromino Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="CD and DVD image access library"
 HOMEPAGE="http://cdemu.org"
 SRC_URI="mirror://sourceforge/cdemu/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 ~hppa x86"
 IUSE="static-libs"

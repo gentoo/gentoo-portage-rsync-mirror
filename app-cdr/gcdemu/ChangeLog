@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/gcdemu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/ChangeLog,v 1.23 2012/05/03 07:51:49 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/ChangeLog,v 1.24 2013/01/28 00:24:30 tetromino Exp $
+
+*gcdemu-2.0.0 (27 Jan 2013)
+
+  27 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gcdemu-1.4.0.ebuild, gcdemu-1.5.0.ebuild, +gcdemu-2.0.0.ebuild:
+  Version bump (bug #451752, thanks to Agostino Sarubbo). Update to
+  python-single-r1.eclass and EAPI5. Update license. Drop old.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gcdemu-1.4.0.ebuild,
   gcdemu-1.5.0.ebuild:

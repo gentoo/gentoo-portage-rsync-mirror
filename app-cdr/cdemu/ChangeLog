@@ -1,6 +1,15 @@
 # ChangeLog for app-cdr/cdemu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.36 2012/04/20 19:48:02 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.37 2013/01/28 00:22:41 tetromino Exp $
+
+*cdemu-2.0.0 (28 Jan 2013)
+
+  28 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> -cdemu-1.4.0.ebuild,
+  cdemu-1.5.0.ebuild, +cdemu-2.0.0.ebuild,
+  +files/cdemu-2.0.0-bash-completion-dir.patch, metadata.xml:
+  Version bump (bug #451746, thanks to Agostino Sarubbo); cdemud was renamed to
+  cdemu-daemon. Update to python-single-r1.eclass and EAPI5. Update license.
+  Drop old.
 
   20 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> -cdemu-1.2.0.ebuild:
   old
