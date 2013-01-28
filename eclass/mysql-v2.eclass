@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.22 2013/01/20 02:23:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.23 2013/01/28 02:13:05 robbat2 Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -152,7 +152,7 @@ DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
 HOMEPAGE="http://www.mysql.com/"
 if [[ "${PN}" == "mariadb" ]]; then
 	HOMEPAGE="http://mariadb.org/"
-	DESCRIPTION="MariaDB is a MySQL fork with 3rd-party patches and additional storage engines merged."
+	DESCRIPTION="An enhanced, drop-in replacement for MySQL"
 fi
 LICENSE="GPL-2"
 SLOT="0"
@@ -192,6 +192,8 @@ if mysql_version_is_at_least "5.5"; then
 	IUSE="${IUSE} jemalloc tcmalloc"
 fi
 
+REQUIRED_USE="${REQUIRED_USE} minimal? ( !cluster !extraengine !embedded ) static? ( !ssl )"
+
 mysql_version_is_at_least "5.5.7" \
 && IUSE="${IUSE} systemtap"
 
@@ -227,6 +229,11 @@ done
 [[ "${PN}" == "mariadb" ]] \
 && mysql_version_is_at_least "5.2.5" \
 && DEPEND="${DEPEND} sphinx? ( app-misc/sphinx )"
+
+# Bug 441700 MariaDB >=5.3 include custom mytop
+[[ "${PN}" == "mariadb" ]] \
+&& mysql_version_is_at_least "5.3" \
+&& DEPEND="${DEPEND} !dev-db/mytop"
 
 mysql_version_is_at_least "5.5.7" \
 && DEPEND="${DEPEND} systemtap? ( >=dev-util/systemtap-1.3 )" \
@@ -306,6 +313,7 @@ if pbxt_available; then
 
 	IUSE="${IUSE} pbxt"
 	PBXT_NEWSTYLE=1
+	REQUIRED_USE="${REQUIRED_USE} pbxt? ( !embedded ) "
 fi
 
 if xtradb_patch_available; then
@@ -318,6 +326,7 @@ if xtradb_patch_available; then
 	XTRADB_SRC_URI3="${XTRADB_SRC_B1}/${PN}/xtradb/${XTRADB_SRC_URI_COMMON}"
 	SRC_URI="${SRC_URI} xtradb? ( ${XTRADB_SRC_URI1} ${XTRADB_SRC_URI2} ${XTRADB_SRC_URI3} )"
 	IUSE="${IUSE} xtradb"
+	REQUIRED_USE="${REQUIRED_USE} xtradb? ( !embedded ) "
 fi
 
 #
@@ -367,31 +376,10 @@ mysql-v2_pkg_setup() {
 	fi
 
 	# Check for USE flag problems in pkg_setup
-	if use static && use ssl ; then
-		M="MySQL does not support being built statically with SSL support enabled!"
-		eerror "${M}"
-		die "${M}"
-	fi
-
 	if ! mysql_version_is_at_least "5.2" \
 		&& use debug ; then
 		# Also in package.use.mask
 		die "Bug #344885: Upstream has broken USE=debug for 5.1 series >=5.1.51"
-	fi
-
-	if ( use cluster || use extraengine || use embedded ) \
-	&& use minimal ; then
-		M="USE flags 'cluster', 'extraengine', 'embedded' conflict with 'minimal' USE flag!"
-		eerror "${M}"
-		die "${M}"
-	fi
-
-	if xtradb_patch_available \
-	&& use xtradb \
-	&& use embedded ; then
-		M="USE flags 'xtradb' and 'embedded' conflict and cause build failures"
-		eerror "${M}"
-		die "${M}"
 	fi
 
 	# This should come after all of the die statements

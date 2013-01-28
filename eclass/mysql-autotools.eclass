@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.13 2013/01/21 00:04:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.14 2013/01/28 02:13:05 robbat2 Exp $
 
 # @ECLASS: mysql-autotools.eclass
 # @MAINTAINER:
@@ -421,6 +421,8 @@ mysql-autotools_src_prepare() {
 		i='pbxt'
 		[ -d "${i}" ] && rm -rf "${i}"
 		cp -ral "${WORKDIR}/${PBXT_P}" "${i}"
+		f="${WORKDIR}/mysql-extras/pbxt/fix-low-priority.patch"
+		[[ -f $f ]] && epatch "$f" 
 		popd >/dev/null
 	fi
 
