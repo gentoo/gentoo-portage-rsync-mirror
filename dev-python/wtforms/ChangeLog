@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/wtforms
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/ChangeLog,v 1.23 2012/10/12 00:54:01 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/ChangeLog,v 1.24 2013/01/28 09:49:30 patrick Exp $
+
+*wtforms-1.0.3 (28 Jan 2013)
+
+  28 Jan 2013; Patrick Lauer <patrick@gentoo.org> +wtforms-1.0.3.ebuild:
+  Bump
 
   12 Oct 2012; Mike Gilbert <floppym@gentoo.org> wtforms-1.0.2.ebuild:
   Restrict python 2.5 per Arfrever.

@@ -1,10 +1,14 @@
 # ChangeLog for dev-python/twitter
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twitter/ChangeLog,v 1.1 2012/10/15 08:37:59 djc Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twitter/ChangeLog,v 1.2 2013/01/28 09:51:31 patrick Exp $
+
+*twitter-1.9.1 (28 Jan 2013)
+
+  28 Jan 2013; Patrick Lauer <patrick@gentoo.org> +twitter-1.9.1.ebuild:
+  Bump
 
 *twitter-1.9.0 (15 Oct 2012)
 
   15 Oct 2012; Dirkjan Ochtman <djc@gentoo.org> +twitter-1.9.0.ebuild,
   +metadata.xml:
   Initial version.
-

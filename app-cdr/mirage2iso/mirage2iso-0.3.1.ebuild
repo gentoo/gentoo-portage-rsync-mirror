@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mirage2iso/mirage2iso-0.3.1.ebuild,v 1.6 2012/08/30 22:47:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mirage2iso/mirage2iso-0.3.1.ebuild,v 1.7 2013/01/28 09:37:10 mgorny Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="pinentry test"
 
-COMMON_DEPEND="dev-libs/libmirage
+COMMON_DEPEND="<dev-libs/libmirage-2
 	dev-libs/glib:2
 	pinentry? ( dev-libs/libassuan )"
 DEPEND="${COMMON_DEPEND}
