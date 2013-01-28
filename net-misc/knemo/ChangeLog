@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knemo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.67 2013/01/27 16:17:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.68 2013/01/28 16:57:40 kensington Exp $
+
+  28 Jan 2013; Michael Palimaka <kensington@gentoo.org> -knemo-0.7.3.ebuild,
+  -knemo-0.7.5.ebuild:
+  Remove old.
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> knemo-0.7.6.ebuild:
   Stable for x86, wrt bug #450678
