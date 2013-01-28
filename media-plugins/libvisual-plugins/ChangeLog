@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/libvisual-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.58 2013/01/06 09:56:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.59 2013/01/28 03:00:44 mattst88 Exp $
+
+  28 Jan 2013; Matt Turner <mattst88@gentoo.org>
+  libvisual-plugins-0.4.0-r2.ebuild:
+  Add virtual/glu to dependencies, bug 436260.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
   libvisual-plugins-0.4.0-r2.ebuild:

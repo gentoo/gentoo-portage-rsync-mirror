@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.20 2013/01/06 09:56:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.21 2013/01/28 03:00:44 mattst88 Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -26,7 +26,10 @@ RDEPEND="media-libs/fontconfig
 	alsa? ( media-libs/alsa-lib )
 	gtk? ( x11-libs/gtk+:2 )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.109 )
-	opengl? ( virtual/opengl )"
+	opengl? (
+		virtual/glu
+		virtual/opengl
+	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	x11-libs/libXt"

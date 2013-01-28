@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install prepare
-DEPEND=|| ( media-libs/mesa[motif] ( media-libs/mesa x11-libs/libGLw ) ) >=x11-libs/motif-2.3:0 >=media-libs/freetype-2.0 media-fonts/corefonts virtual/jpeg dev-util/byacc
+DEPEND=|| ( media-libs/mesa[motif] ( media-libs/mesa x11-libs/libGLw ) ) >=x11-libs/motif-2.3:0 >=media-libs/freetype-2.0 media-fonts/corefonts virtual/glu virtual/jpeg dev-util/byacc
 DESCRIPTION=SGI OpenInventor Toolkit and Utilities
 EAPI=2
 HOMEPAGE=http://oss.sgi.com/projects/inventor/
 KEYWORDS=alpha amd64 sparc x86
 LICENSE=LGPL-2
-RDEPEND=|| ( media-libs/mesa[motif] ( media-libs/mesa x11-libs/libGLw ) ) >=x11-libs/motif-2.3:0 >=media-libs/freetype-2.0 media-fonts/corefonts virtual/jpeg
+RDEPEND=|| ( media-libs/mesa[motif] ( media-libs/mesa x11-libs/libGLw ) ) >=x11-libs/motif-2.3:0 >=media-libs/freetype-2.0 media-fonts/corefonts virtual/glu virtual/jpeg
 SLOT=0
 SRC_URI=ftp://oss.sgi.com/projects/inventor/download/inventor-2.1.5-10.src.tar.gz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=9b14cfde8fa238e8b60c9aecc598a1e1
+_md5_=4499f1058fa245d324e93acea862c8f3

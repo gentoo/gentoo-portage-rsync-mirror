@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/galan
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.28 2012/05/05 08:20:42 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.29 2013/01/28 02:43:11 mattst88 Exp $
+
+  28 Jan 2013; Matt Turner <mattst88@gentoo.org> galan-0.3.0_beta7.ebuild:
+  Add virtual/glu dependency, bug 438748.
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> galan-0.3.0_beta7.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -117,4 +120,3 @@
   first cut.
   
   Submitted by Torben Hohn.
-
