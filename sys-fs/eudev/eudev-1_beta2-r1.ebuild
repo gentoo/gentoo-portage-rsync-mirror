@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta2-r1.ebuild,v 1.5 2013/01/28 14:34:35 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta2-r1.ebuild,v 1.6 2013/01/28 21:25:21 axs Exp $
 
 EAPI=5
 
@@ -45,7 +45,6 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	hwdb? ( >=sys-apps/hwids-20121202.2[udev] )
-	openrc? ( >=sys-fs/udev-init-scripts-18 )
 	!sys-fs/udev
 	!sys-apps/coldplug
 	!sys-apps/systemd
@@ -53,7 +52,8 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-fs/device-mapper
 	!<sys-fs/udev-init-scripts-18"
 
-PDEPEND=">=virtual/udev-180"
+PDEPEND=">=virtual/udev-180
+	openrc? ( >=sys-fs/udev-init-scripts-18 )"
 
 udev_check_KV()
 {
@@ -116,6 +116,12 @@ src_prepare()
 
 	# Fix a typo found after 1_beta2 was rolled out
 	epatch "${FILESDIR}/${PN}-fix-typo-util.c.patch"
+
+	# Fix selinux - make it optional as eautoreconf is required
+	if use selinux ; then
+		epatch "${FILESDIR}/${PN}-fix-selinux.patch"
+		rm configure
+	fi
 
 	epatch_user
 
