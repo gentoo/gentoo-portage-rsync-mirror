@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sub-Exporter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.29 2013/01/06 15:02:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.30 2013/01/28 18:10:10 bicatali Exp $
+
+  28 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  Sub-Exporter-0.984.0.ebuild:
+  Keyworded amd64-linux and x86-linux
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> -Sub-Exporter-0.982.0.ebuild:
   Cleanup
