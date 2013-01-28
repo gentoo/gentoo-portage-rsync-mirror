@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kigo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.95 2013/01/27 23:32:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.96 2013/01/28 12:13:01 ago Exp $
+
+  28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -kigo-4.9.3.ebuild,
+  -kigo-4.9.4.ebuild:
+  Remove old
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kigo-4.9.5.ebuild:
   Stable for ppc, wrt bug #450678

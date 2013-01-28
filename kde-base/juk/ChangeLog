@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.251 2013/01/27 23:02:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.252 2013/01/28 12:12:33 ago Exp $
+
+  28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -juk-4.9.3.ebuild,
+  -juk-4.9.4.ebuild:
+  Remove old
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> juk-4.9.5.ebuild:
   Stable for ppc, wrt bug #450678

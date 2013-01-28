@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pairs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pairs/ChangeLog,v 1.16 2013/01/28 00:06:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pairs/ChangeLog,v 1.17 2013/01/28 12:13:36 ago Exp $
+
+  28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -pairs-4.9.3.ebuild,
+  -pairs-4.9.4.ebuild:
+  Remove old
 
   28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> pairs-4.9.5.ebuild:
   Stable for ppc, wrt bug #450678

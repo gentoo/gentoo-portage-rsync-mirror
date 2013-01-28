@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.239 2013/01/27 23:17:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.240 2013/01/28 12:12:47 ago Exp $
+
+  28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -kdeedu-meta-4.9.3.ebuild,
+  -kdeedu-meta-4.9.4.ebuild:
+  Remove old
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kdeedu-meta-4.9.5.ebuild:
   Stable for ppc, wrt bug #450678

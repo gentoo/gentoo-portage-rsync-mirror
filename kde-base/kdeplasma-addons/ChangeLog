@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.165 2013/01/27 23:22:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.166 2013/01/28 12:12:51 ago Exp $
+
+  28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -kdeplasma-addons-4.9.3.ebuild,
+  -kdeplasma-addons-4.9.4.ebuild:
+  Remove old
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kdeplasma-addons-4.9.5.ebuild:
   Stable for ppc, wrt bug #450678

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-l10n
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.163 2013/01/27 23:10:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.164 2013/01/28 12:12:42 ago Exp $
+
+  28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -kde-l10n-4.9.3.ebuild,
+  -kde-l10n-4.9.4.ebuild:
+  Remove old
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kde-l10n-4.9.5.ebuild:
   Stable for ppc, wrt bug #450678

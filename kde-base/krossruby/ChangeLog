@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krossruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.101 2013/01/27 23:48:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.102 2013/01/28 12:13:17 ago Exp $
+
+  28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -krossruby-4.9.3.ebuild,
+  -krossruby-4.9.4.ebuild:
+  Remove old
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> krossruby-4.9.5.ebuild:
   Stable for ppc, wrt bug #450678

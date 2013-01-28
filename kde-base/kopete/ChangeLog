@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.347 2013/01/27 23:44:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.348 2013/01/28 12:13:13 ago Exp $
+
+  28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -kopete-4.9.3.ebuild,
+  -kopete-4.9.4.ebuild:
+  Remove old
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kopete-4.9.5.ebuild:
   Stable for ppc, wrt bug #450678

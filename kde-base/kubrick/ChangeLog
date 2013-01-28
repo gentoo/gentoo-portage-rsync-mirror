@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kubrick
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.132 2013/01/27 23:56:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.133 2013/01/28 12:13:26 ago Exp $
+
+  28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -kubrick-4.9.3.ebuild,
+  -kubrick-4.9.4.ebuild:
+  Remove old
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kubrick-4.9.5.ebuild:
   Stable for ppc, wrt bug #450678

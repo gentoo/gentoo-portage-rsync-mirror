@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konq-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.171 2013/01/27 23:43:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.172 2013/01/28 12:13:12 ago Exp $
+
+  28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -konq-plugins-4.9.3.ebuild,
+  -konq-plugins-4.9.4.ebuild:
+  Remove old
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> konq-plugins-4.9.5.ebuild:
   Stable for ppc, wrt bug #450678

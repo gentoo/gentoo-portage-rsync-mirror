@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksudoku
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.147 2013/01/27 23:53:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.148 2013/01/28 12:13:22 ago Exp $
+
+  28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -ksudoku-4.9.3.ebuild,
+  -ksudoku-4.9.4.ebuild:
+  Remove old
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> ksudoku-4.9.5.ebuild:
   Stable for ppc, wrt bug #450678

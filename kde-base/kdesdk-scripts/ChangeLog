@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-scripts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.222 2013/01/27 23:23:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.223 2013/01/28 12:12:52 ago Exp $
+
+  28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -kdesdk-scripts-4.9.3.ebuild,
+  -kdesdk-scripts-4.9.4.ebuild:
+  Remove old
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kdesdk-scripts-4.9.5.ebuild:
   Stable for ppc, wrt bug #450678

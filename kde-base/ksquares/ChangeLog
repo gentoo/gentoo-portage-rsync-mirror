@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksquares
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksquares/ChangeLog,v 1.144 2013/01/27 23:51:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksquares/ChangeLog,v 1.145 2013/01/28 12:13:21 ago Exp $
+
+  28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -ksquares-4.9.3.ebuild,
+  -ksquares-4.9.4.ebuild:
+  Remove old
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> ksquares-4.9.5.ebuild:
   Stable for ppc, wrt bug #450678

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/bovo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.142 2013/01/27 22:58:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.143 2013/01/28 12:12:29 ago Exp $
+
+  28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -bovo-4.9.3.ebuild,
+  -bovo-4.9.4.ebuild:
+  Remove old
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> bovo-4.9.5.ebuild:
   Stable for ppc, wrt bug #450678
