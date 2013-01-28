@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtrace
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/ChangeLog,v 1.6 2013/01/05 07:37:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/ChangeLog,v 1.7 2013/01/28 22:47:50 radhermit Exp $
+
+  28 Jan 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Fix metadata.
 
   05 Jan 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Add myself as primary maintainer.

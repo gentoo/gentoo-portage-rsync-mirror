@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/fritzing-0.7.4b-r1.ebuild,v 1.1 2012/04/18 23:16:57 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/fritzing-0.7.11b.ebuild,v 1.1 2013/01/28 22:58:53 idl0r Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils qt4-r2
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="sys-libs/zlib
-	x11-libs/qt-core:4
+RDEPEND="x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	x11-libs/qt-svg:4
 	x11-libs/qt-sql:4[sqlite]
@@ -34,9 +33,12 @@ src_prepare() {
 	# Get a rid of the bundled libs
 	# Bug 412555 and
 	# https://code.google.com/p/fritzing/issues/detail?id=1898
-	rm -rf src/libs/quazip pri/quazip.pri src/libs/boost*
+	rm -rf src/lib/quazip/ pri/quazip.pri src/lib/boost*
 
-	epatch "${FILESDIR}/no-bundled-quazip.patch"
+	# Fritzing doesn't need zlib
+	sed -i -e 's:LIBS += -lz::' phoenix.pro || die
+
+	epatch "${FILESDIR}/${P}-no_bundled_quazip.patch"
 	epatch "${FILESDIR}/no-bundled-boost.patch"
 
 	edos2unix ${PN}.desktop

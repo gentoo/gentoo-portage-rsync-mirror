@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.8.1.ebuild,v 1.2 2013/01/28 14:09:51 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.8.1a.ebuild,v 1.1 2013/01/28 22:37:35 sping Exp $
 
 EAPI=2
 inherit versionator autotools eutils multilib
@@ -26,8 +26,6 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.7-libltdl.patch
 	eautoreconf
-
-	epatch "${FILESDIR}"/${P}-missing-files.patch
 }
 
 src_configure() {
@@ -43,5 +41,9 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog LIMITS NEWS README TODO || die
+
+	insinto /usr/share/doc/${PF}/doxygen/
+	doins doc/libmp3splt_ico.svg || die
+
 	find "${D}"/usr -name '*.la' -delete
 }

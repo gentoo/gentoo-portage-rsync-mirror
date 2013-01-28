@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libmp3splt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.31 2013/01/28 14:09:51 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.32 2013/01/28 22:37:35 sping Exp $
+
+*libmp3splt-0.8.1a (28 Jan 2013)
+
+  28 Jan 2013; Sebastian Pipping <sping@gentoo.org> -libmp3splt-0.8.1.ebuild,
+  -files/libmp3splt-0.8.1-missing-files.patch, +libmp3splt-0.8.1a.ebuild:
+  Bump to 0.8.1a
 
   28 Jan 2013; Sebastian Pipping <sping@gentoo.org> libmp3splt-0.8.1.ebuild:
   Require doxygen 1.8.3.1 or later (bug #454348)

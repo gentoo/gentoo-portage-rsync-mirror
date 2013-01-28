@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.0.ebuild,v 1.8 2012/10/07 13:35:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.2-r1.ebuild,v 1.1 2013/01/28 22:49:47 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 inherit bash-completion-r1 autotools eutils flag-o-matic fortran-2 multilib versionator toolchain-funcs
 
@@ -14,11 +14,12 @@ SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz
 
 LICENSE="|| ( GPL-2 GPL-3 ) LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="bash-completion cairo doc icu java jpeg lapack minimal nls openmp perl png profile readline static-libs tiff tk X"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-fbsd ~x86-linux ~x64-macos"
+IUSE="bash-completion cairo doc icu java jpeg lapack minimal nls openmp perl png prefix profile readline static-libs tiff tk X"
 REQUIRED_USE="png? ( || ( cairo X ) ) jpeg? ( || ( cairo X ) ) tiff? ( || ( cairo X ) )"
 
-CDEPEND="app-arch/bzip2
+CDEPEND="
+	app-arch/bzip2
 	app-text/ghostscript-gpl
 	dev-libs/libpcre
 	virtual/blas
@@ -46,7 +47,7 @@ RDEPEND="${CDEPEND}
 
 RESTRICT="minimal? ( test )"
 
-R_DIR="${EPREFIX}/usr/$(get_libdir)/${PN}"
+R_DIR="${EROOT}/usr/$(get_libdir)/${PN}"
 
 pkg_setup() {
 	if use openmp; then
@@ -76,21 +77,11 @@ src_prepare() {
 	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14951
 	epatch "${FILESDIR}"/${PN}-2.13.1-zlib_header_fix.patch
 
-	# tiff automagic
-	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14952
-	epatch "${FILESDIR}"/${PN}-2.14.1-tiff.patch
-
 	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14953
 	epatch "${FILESDIR}"/${PN}-2.14.1-rmath-shared.patch
 
-	# too many warning crash, bug #405463
-	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14954
-	epatch "${FILESDIR}"/${PN}-2.14.1-warnings-buffer-overflow.patch
-
-	# applied upstream for next R
-	epatch \
-		"${FILESDIR}"/${PN}-2.14.2-library-writability.patch \
-		"${FILESDIR}"/${PN}-2.14.2-prune-package-update.patch
+	# fix cairo plots (gentoo bug #453048)
+	epatch "${FILESDIR}"/${PN}-2.15.2-cairo.patch
 
 	# fix packages.html for doc (gentoo bug #205103)
 	sed -i \
@@ -108,7 +99,7 @@ src_prepare() {
 		$(grep -Flr ../manual/ doc) || die "sed for HTML links failed"
 
 	use lapack && \
-		export LAPACK_LIBS="$(pkg-config --libs lapack)"
+		export LAPACK_LIBS="$($(tc-getPKG_CONFIG) --libs lapack)"
 
 	if use X; then
 		export R_BROWSER="$(type -p xdg-open)"
@@ -116,6 +107,26 @@ src_prepare() {
 	fi
 	use perl && \
 		export PERL5LIB="${S}/share/perl:${PERL5LIB:+:}${PERL5LIB}"
+
+	# don't search /usr/local
+	sed -i -e '/FLAGS=.*\/local\//c\: # removed by ebuild' configure.ac || die
+	# Fix for Darwin (OS X)
+	if use prefix; then
+		if [[ ${CHOST} == *-darwin* ]] ; then
+			sed -i \
+				-e 's:-install_name libR.dylib:-install_name ${libdir}/R/lib/libR.dylib:' \
+				-e 's:-install_name libRlapack.dylib:-install_name ${libdir}/R/lib/libRlapack.dylib:' \
+				-e 's:-install_name libRblas.dylib:-install_name ${libdir}/R/lib/libRblas.dylib:' \
+				-e "/SHLIB_EXT/s/\.so/.dylib/" \
+				configure.ac || die
+			# sort of "undo" 2.14.1-rmath-shared.patch
+			sed -i \
+				-e "s:-Wl,-soname=libRmath.so:-install_name ${EROOT}/usr/$(get_libdir)/libRmath.dylib:" \
+				src/nmath/standalone/Makefile.in || die
+		else
+			append-ldflags -Wl,-rpath="${EROOT}/usr/$(get_libdir)/R/lib"
+		fi
+	fi
 	AT_M4DIR=m4 eaclocal
 	eautoconf
 }
@@ -124,11 +135,12 @@ src_configure() {
 	econf \
 		--enable-byte-compiled-packages \
 		--enable-R-shlib \
+		--disable-R-framework \
 		--with-system-zlib \
 		--with-system-bzlib \
 		--with-system-pcre \
 		--with-system-xz \
-		--with-blas="$(pkg-config --libs blas)" \
+		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)" \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		rdocdir="${EPREFIX}/usr/share/doc/${PF}" \
 		$(use_enable nls) \
@@ -149,7 +161,7 @@ src_configure() {
 		$(use_with X x)
 }
 
-src_compile(){
+src_compile() {
 	export VARTEXFONTS="${T}/fonts"
 	emake
 	emake -C src/nmath/standalone shared $(use static-libs && echo static)
@@ -171,6 +183,20 @@ src_install() {
 	EOF
 	doenvd 99R
 	use bash-completion && newbashcomp "${WORKDIR}"/${BCP} ${PN}
+	# The buildsystem has a different understanding of install_names than what
+	# we require.  Since it builds modules like shared objects (wrong), many
+	# objects (all modules) get an incorrect install_name.  Fixing the build
+	# system here is not really trivial.
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		local mod
+		pushd "${ED}"/usr/lib/R > /dev/null
+		for mod in $(find . -name "*.dylib") ; do
+			mod=${mod#./}
+			install_name_tool -id "${EPREFIX}/usr/lib/R/${mod}" \
+				"${mod}"
+		done
+		popd > /dev/null
+	fi
 }
 
 pkg_postinst() {
