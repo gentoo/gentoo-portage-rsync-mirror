@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.204 2013/01/20 15:05:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.205 2013/01/28 21:36:58 graaff Exp $
+
+*activesupport-2.3.16 (28 Jan 2013)
+
+  28 Jan 2013; Hans de Graaff <graaff@gentoo.org> +activesupport-2.3.16.ebuild,
+  +files/activesupport-2.3.16-unvendorize.patch:
+  Version bump for security bug 453844.
 
   20 Jan 2013; Hans de Graaff <graaff@gentoo.org>
   -activesupport-2.3.14-r1.ebuild, -activesupport-3.0.18.ebuild,
