@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/xen-pvgrub
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.14 2012/12/04 19:24:18 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.15 2013/01/28 05:29:05 idella4 Exp $
+
+*xen-pvgrub-4.2.1 (28 Jan 2013)
+
+  28 Jan 2013; Ian Delaney <idella4@gentoo.org>
+  +files/xen-4.2.1-externals.patch, +xen-pvgrub-4.2.1.ebuild,
+  -files/xen-4.2.0-newlib.patch, files/xen-4.2.0-externals.patch:
+  rm redundant xen-4.2.0-newlib.patch, rm corrupted & redundant 1st. hunk of
+  xen-4.2.0-externals.patch, add adjusted xen-4.2.1-externals.patch, version
+  bump
 
   04 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org> xen-pvgrub-4.1.1-r1.ebuild:
   This is supposed to be stable amd64 and x86. We do not remove stable keywords

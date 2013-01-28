@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.5.2.0-r3.ebuild,v 1.6 2012/12/02 22:46:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.5.2.0-r3.ebuild,v 1.7 2013/01/28 05:11:32 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="ModemManager"
@@ -10,7 +10,7 @@ inherit gnome.org user multilib toolchain-funcs udev
 DESCRIPTION="Modem and mobile broadband management libraries"
 HOMEPAGE="http://cgit.freedesktop.org/ModemManager/ModemManager/"
 
-LICENSE="LGPL-2.1"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 arm ppc ppc64 x86"
 IUSE="doc policykit test"

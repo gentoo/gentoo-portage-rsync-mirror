@@ -1,6 +1,6 @@
 # Copyright 2010-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/weboob/weboob-9998.ebuild,v 1.1 2013/01/25 08:31:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/weboob/weboob-9998.ebuild,v 1.2 2013/01/28 05:27:02 patrick Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.5"
@@ -9,19 +9,19 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit base distutils
 if [ "$PV" == "9999" ]; then
-	EGIT_REPO_URI="git://git.symlink.me/pub/romain/${PN}.git"
+	EGIT_REPO_URI="git://git.symlink.me/pub/${PN}/devel.git"
 	inherit git-2
 	KEYWORDS=""
 	SRC_URI=""
 elif [ "$PV" == "9998" ]; then
-	EGIT_REPO_URI="git://git.symlink.me/pub/romain/${PN}-stable.git"
+	EGIT_REPO_URI="git://git.symlink.me/pub/${PN}/stable.git"
 	inherit git-2
 	KEYWORDS=""
 	SRC_URI=""
 else
 	KEYWORDS="~x86 ~amd64"
-	SRC_URI="http://symlink.me/attachments/download/199/${PN}-0.d.tar.gz"
-	S="${WORKDIR}/${PN}-0.d"
+	SRC_URI="http://symlink.me/attachments/download/206/${PN}-0.e.tar.gz"
+	S="${WORKDIR}/${PN}-0.e"
 fi
 
 DESCRIPTION="Weboob (Web Out of Browsers) provides several applications to interact with a lot of websites."

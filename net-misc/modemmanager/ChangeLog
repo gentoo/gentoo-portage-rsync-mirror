@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/modemmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.45 2013/01/27 13:54:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.46 2013/01/28 05:11:32 tetromino Exp $
+
+  28 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -modemmanager-0.4.ebuild, -modemmanager-0.5.2.0-r2.ebuild,
+  modemmanager-0.5.2.0-r3.ebuild, modemmanager-0.6.0.0.ebuild:
+  Fix license; ModemManager had switched from LGPL to GPL in 2009. Drop old.
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> modemmanager-0.6.0.0.ebuild:
   Stable for ppc, wrt bug #448006

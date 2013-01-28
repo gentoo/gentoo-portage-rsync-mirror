@@ -1,5 +1,8 @@
 # Patch Makefile to patch insource newlib, 
 # Prevent internal downloading of external packages
+diff -ur xen-4.2.0.orig/stubdom/Makefile xen-4.2.0/stubdom/Makefile
+--- stubdom/Makefile	2012-09-17 18:21:17.000000000 +0800
++++ stubdom/Makefile	2012-12-05 14:01:10.694260256 +0800
 @@ -95,12 +95,13 @@
  ##############
  
@@ -15,14 +18,14 @@
  	patch -d $@ -p1 < newlib-stdint-size_max-fix-from-1.17.0.patch
  	find $@ -type f | xargs perl -i.bak \
  		-pe 's/\b_(tzname|daylight|timezone)\b/$$1/g'
-@@ -112,7 +113,7 @@
+@@ -110,7 +110,7 @@
  $(NEWLIB_STAMPFILE): mk-headers-$(XEN_TARGET_ARCH) newlib-$(NEWLIB_VERSION)
  	mkdir -p newlib-$(XEN_TARGET_ARCH)
  	( cd newlib-$(XEN_TARGET_ARCH) && \
 -	  CC_FOR_TARGET="$(CC) $(TARGET_CPPFLAGS) $(TARGET_CFLAGS) $(NEWLIB_CFLAGS)" AR_FOR_TARGET=$(AR) LD_FOR_TARGET=$(LD) RANLIB_FOR_TARGET=$(RANLIB) ../newlib-$(NEWLIB_VERSION)/configure --prefix=$(CROSS_PREFIX) --verbose --target=$(GNU_TARGET_ARCH)-xen-elf --enable-newlib-io-long-long --disable-multilib && \
 +	  CC_FOR_TARGET="$(CC) $(TARGET_CPPFLAGS) $(TARGET_CFLAGS) $(NEWLIB_CFLAGS)" AR_FOR_TARGET=$(AR) LD_FOR_TARGET=$(LD) LDFLAGS= RANLIB_FOR_TARGET=$(RANLIB) ../newlib-$(NEWLIB_VERSION)/configure --prefix=$(CROSS_PREFIX) --verbose --target=$(GNU_TARGET_ARCH)-xen-elf --enable-newlib-io-long-long --disable-multilib && \
- 	  $(CROSS_MAKE) && \
- 	  $(CROSS_MAKE) install )
+ 	  $(MAKE) DESTDIR= && \
+ 	  $(MAKE) DESTDIR= install )
  
 @@ -121,7 +122,7 @@
  ############
