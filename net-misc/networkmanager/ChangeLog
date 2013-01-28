@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.163 2013/01/27 13:54:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.164 2013/01/28 07:05:05 tetromino Exp $
+
+*networkmanager-9999 (28 Jan 2013)
+*networkmanager-0.9.7.995 (28 Jan 2013)
+
+  28 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +networkmanager-0.9.7.995.ebuild,
+  +files/networkmanager-0.9.7.995-pre-sleep.patch, +networkmanager-9999.ebuild,
+  +files/init.d.NetworkManager:
+  Add 0.9.8 development pre-release and a live git ebuild (bug #444814, thanks
+  to Pavel Šimerda and Sobhan Mohammadpour). Lots of improvements and
+  bugfixes. Wimax support has been disabled until we have a libnl:3 compatible
+  version in portage.
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> networkmanager-0.9.6.4.ebuild:
   Stable for ppc, wrt bug #448006
