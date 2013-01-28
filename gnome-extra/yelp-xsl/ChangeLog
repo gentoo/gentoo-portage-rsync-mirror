@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/yelp-xsl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp-xsl/ChangeLog,v 1.19 2013/01/06 10:14:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp-xsl/ChangeLog,v 1.20 2013/01/28 13:48:20 aballier Exp $
+
+  28 Jan 2013; Alexis Ballier <aballier@gentoo.org> yelp-xsl-3.6.1.ebuild:
+  keyword ~amd64-fbsd
 
   06 Jan 2013; Markus Meier <maekke@gentoo.org> yelp-xsl-3.6.1.ebuild:
   add ~arm, bug #449220

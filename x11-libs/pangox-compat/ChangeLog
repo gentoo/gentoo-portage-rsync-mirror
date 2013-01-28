@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pangox-compat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pangox-compat/ChangeLog,v 1.6 2013/01/06 11:21:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pangox-compat/ChangeLog,v 1.7 2013/01/28 13:52:23 aballier Exp $
+
+  28 Jan 2013; Alexis Ballier <aballier@gentoo.org> pangox-compat-0.0.2.ebuild:
+  keyword ~amd64-fbsd
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> pangox-compat-0.0.2.ebuild:
   Add ~sparc, wrt bug #449220
