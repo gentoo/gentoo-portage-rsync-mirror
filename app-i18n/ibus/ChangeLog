@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.117 2013/01/06 09:15:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.118 2013/01/28 10:13:35 naota Exp $
+
+  28 Jan 2013; Naohiro Aota <naota@gentoo.org>
+  +files/ibus-1.4.1-libxslt-1.1.27.patch, ibus-1.4.1.ebuild, ibus-1.4.2.ebuild:
+  Fix doc building. #442904
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> ibus-1.4.99.20121006.ebuild:
   Add ~sparc, wrt bug #449220
