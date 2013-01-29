@@ -1,7 +1,5 @@
-Index: ripperX-2.7.3/ripperX.pc.in
-===================================================================
---- ripperX-2.7.3.orig/ripperX.pc.in
-+++ ripperX-2.7.3/ripperX.pc.in
+--- ripperX.pc.in
++++ ripperX.pc.in
 @@ -1,6 +1,7 @@
  prefix=@prefix@
  exec_prefix=@exec_prefix@

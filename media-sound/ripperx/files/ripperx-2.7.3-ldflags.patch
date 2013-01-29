@@ -1,7 +1,5 @@
-Index: ripperX-2.7.3/plugins/Makefile.in
-===================================================================
---- ripperX-2.7.3.orig/plugins/Makefile.in
-+++ ripperX-2.7.3/plugins/Makefile.in
+--- plugins/Makefile.in
++++ plugins/Makefile.in
 @@ -658,7 +658,7 @@ uninstall-am: uninstall-binPROGRAMS
  all: ripperX_plugin_tester $(PLUGINS)
  

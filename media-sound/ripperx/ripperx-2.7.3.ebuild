@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.7.3.ebuild,v 1.6 2012/05/05 08:49:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.7.3.ebuild,v 1.7 2013/01/29 20:48:34 ssuominen Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils
 
 MY_P=${P/x/X}
@@ -17,10 +17,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 
-RDEPEND="x11-libs/gtk+:2
-	media-sound/lame
+RDEPEND="media-libs/id3lib
 	media-sound/cdparanoia
-	media-libs/id3lib"
+	media-sound/lame
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
@@ -28,18 +28,20 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-ldflags.patch \
+	# AC_CHECK_LIB(m, ceilf, [], [MATH_LIB="-lm" MATH_LIB=""]) #401867
+	sed -i -e '/ripperX_LDADD/s:=:= -lm:' src/Makefile.in || die
+
+	epatch \
+		"${FILESDIR}"/${P}-ldflags.patch \
 		"${FILESDIR}"/${P}-pkgconfig.patch
 }
 
 src_configure() {
-	econf \
-		--disable-dependency-tracking \
-		$(use_enable nls)
+	econf $(use_enable nls)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	dodoc BUGS CHANGES FAQ README* TODO
 	doicon src/xpms/${MY_PN}-icon.xpm
 	make_desktop_entry ${MY_PN} ${MY_PN} ${MY_PN}-icon
