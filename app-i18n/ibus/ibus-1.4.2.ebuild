@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.2.ebuild,v 1.4 2013/01/28 10:13:35 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.4.2.ebuild,v 1.5 2013/01/29 03:19:16 naota Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.5"
@@ -109,8 +109,8 @@ pkg_preinst() {
 
 pkg_postinst() {
 	use gconf && gnome2_gconf_install
-	use gtk && update_gtk_immodules
-	use gtk3 && update_gtk3_immodules
+	use gtk && gnome2_query_immodules_gtk2
+	use gtk3 && gnome2_query_immodules_gtk3
 	use python && python_mod_optimize /usr/share/${PN}
 	gnome2_icon_cache_update
 
@@ -133,8 +133,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	use gtk && gnome2_query_immmodules_gtk2
-	use gtk3 && gnome2_query_immmodules_gtk3
+	use gtk && gnome2_query_immodules_gtk2
+	use gtk3 && gnome2_query_immodules_gtk3
 	use python && python_mod_cleanup /usr/share/${PN}
 	gnome2_icon_cache_update
 }
