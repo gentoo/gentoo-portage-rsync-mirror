@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.208 2013/01/28 22:49:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.209 2013/01/29 18:27:44 bicatali Exp $
+
+  29 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org> R-2.15.2-r1.ebuild:
+  Fixed bash completion spaces (bug #417951, thanks Marco Poletti) and parallel
+  build (bug #395403)
 
 *R-2.15.2-r1 (28 Jan 2013)
 

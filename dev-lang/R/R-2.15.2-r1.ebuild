@@ -1,15 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.2-r1.ebuild,v 1.1 2013/01/28 22:49:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.2-r1.ebuild,v 1.2 2013/01/29 18:27:44 bicatali Exp $
 
 EAPI=5
 
 inherit bash-completion-r1 autotools eutils flag-o-matic fortran-2 multilib versionator toolchain-funcs
 
-BCP=${PN}-20120306.bash_completion
+BCP=${PN}-20130129.bash_completion
 DESCRIPTION="Language and environment for statistical computing and graphics"
 HOMEPAGE="http://www.r-project.org/"
-SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz
+#SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz
+SRC_URI="http://dev.gentoo.org/~bicatali/distfiles/${P}.tar.bz2
 	bash-completion? ( http://dev.gentoo.org/~bicatali/distfiles/${BCP}.bz2 )"
 
 LICENSE="|| ( GPL-2 GPL-3 ) LGPL-2.1"
