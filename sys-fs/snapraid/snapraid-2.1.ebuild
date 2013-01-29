@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/snapraid/snapraid-1.13.ebuild,v 1.1 2012/11/05 15:49:57 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/snapraid/snapraid-2.1.ebuild,v 1.1 2013/01/29 16:35:06 ottxor Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools-utils
 
