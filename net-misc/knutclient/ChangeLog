@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/knutclient
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.44 2011/04/21 08:47:18 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.45 2013/01/29 11:46:24 kensington Exp $
+
+*knutclient-1.0.5 (29 Jan 2013)
+
+  29 Jan 2013; Michael Palimaka <kensington@gentoo.org>
+  +files/knutclient-1.0.5-desktop.patch, +knutclient-1.0.5.ebuild:
+  Version bump wrt bug #453678.
 
 *knutclient-1.0.4 (21 Apr 2011)
 
@@ -23,4 +29,3 @@
   17 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
   +knutclient-1.0.1.ebuild:
   Initial commit wrt #307113 by "keenblade".
-

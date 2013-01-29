@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.149 2013/01/26 13:39:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.150 2013/01/29 11:36:25 ago Exp $
+
+  29 Jan 2013; Agostino Sarubbo <ago@gentoo.org> geoip-1.4.8-r2.ebuild:
+  Stable for ia64, wrt bug #453404
 
   26 Jan 2013; Agostino Sarubbo <ago@gentoo.org> geoip-1.4.8-r2.ebuild:
   Stable for arm, wrt bug #453404
