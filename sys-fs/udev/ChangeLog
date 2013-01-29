@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.809 2013/01/29 15:05:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.811 2013/01/29 15:53:55 ago Exp $
+
+  29 Jan 2013; Agostino Sarubbo <ago@gentoo.org> udev-197-r4.ebuild:
+  Stable for x86, wrt bug #452556
+
+  29 Jan 2013; Agostino Sarubbo <ago@gentoo.org> udev-197-r4.ebuild:
+  Stable for amd64, wrt bug #452556
 
 *udev-197-r5 (29 Jan 2013)
 
