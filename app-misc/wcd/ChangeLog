@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/wcd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/ChangeLog,v 1.8 2013/01/27 14:37:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/ChangeLog,v 1.9 2013/01/29 16:10:28 pinkbyte Exp $
+
+  29 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> wcd-5.2.3.ebuild:
+  Keyword ~arm
 
   27 Jan 2013; Justin Lecher <jlec@gentoo.org> wcd-5.2.1.ebuild,
   wcd-5.2.3.ebuild:
