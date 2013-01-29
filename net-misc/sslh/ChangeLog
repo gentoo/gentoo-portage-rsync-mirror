@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sslh
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslh/ChangeLog,v 1.13 2012/12/22 16:04:25 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslh/ChangeLog,v 1.14 2013/01/29 14:49:09 pinkbyte Exp $
+
+  29 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> sslh-1.14.ebuild:
+  Stable on amd64, wrt bug #454436
 
 *sslh-1.14 (22 Dec 2012)
 

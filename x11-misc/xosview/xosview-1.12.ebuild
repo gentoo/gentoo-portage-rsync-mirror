@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.12.ebuild,v 1.1 2012/12/08 16:13:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.12.ebuild,v 1.2 2013/01/29 14:38:50 pinkbyte Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.pogo.org.uk/~mark/${PN}/releases/${P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="suid"
 
 COMMON_DEPS="x11-libs/libX11
