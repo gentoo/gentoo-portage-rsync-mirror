@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.81 2013/01/10 19:06:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.82 2013/01/29 02:10:43 aballier Exp $
+
+  29 Jan 2013; Alexis Ballier <aballier@gentoo.org>
+  gst-plugins-meta-0.10-r8.ebuild, gst-plugins-meta-1.0-r1.ebuild:
+  keyword ~amd64-fbsd, bug #450672
 
   10 Jan 2013; Anthony G. Basile <blueness@gentoo.org>
   gst-plugins-meta-0.10-r8.ebuild, gst-plugins-meta-1.0-r1.ebuild:
