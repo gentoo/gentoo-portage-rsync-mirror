@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.118 2013/01/27 16:55:47 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.119 2013/01/29 08:45:34 pinkbyte Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (22 Jan 2013)
 # remove mask if/when media-gfx/argyllcms is keywored here.
@@ -80,10 +80,6 @@ media-libs/phonon vlc
 # Only work on amd64/x86
 net-libs/cyassl aes-ni
 
-# Rick Farina <zerochaos@gentoo.org> (09 July 2012)
-# limited testing of net-libs/libbtbb is all this mask is needed for
-net-analyzer/wireshark -btbb
-
 # Chí-Thanh Christopher Nguyen <chithanh@gentoo.org> (02 Jun 2012)
 # Mask udis86 flag for llvm, which is of limited use outside x86/amd64.
 sys-devel/llvm udis86
@@ -128,10 +124,6 @@ net-misc/tinc vde
 x11-libs/qt-script -jit
 x11-libs/qt-webkit -jit
 
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Nov 2011)
-# Missing keywords on dev-libs/libgusb, bug #392057
-=x11-misc/colord-0.1.15 gusb
-
 # Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
 # Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
 # bug #390345
@@ -151,7 +143,7 @@ gnome-extra/gnome-media aac mp3 speex twolame
 
 # Markus Meier <maekke@gentoo.org> (05 Sep 2011)
 # unkeyworded deps for bug 379657 and bug 379651
-gnome-base/gnome-control-center cheese socialweb
+gnome-base/gnome-control-center socialweb
 app-admin/packagekit-base entropy
 
 # Robin H. Johnson <robbat2@gentoo.org> (03 Sep 2011)
@@ -162,10 +154,6 @@ dev-libs/libmemcached sasl
 # Missing keywords on dependencies
 app-cdr/brasero vcd
 
-# Andreas K. Huettel <dilfridge@gentoo.org> (08 Apr 2011)
-# x11-libs/qscintilla still needs arm keywords, so...
-kde-base/pykde4 qscintilla
-
 # Pacho Ramos <pacho@gentoo.org> (02 Apr 2011)
 # quvi support is needed to play youtube files now
 media-video/totem flash youtube
@@ -173,11 +161,6 @@ media-video/totem flash youtube
 # Markus Meier <maekke@gentoo.org> (13 Mar 2011)
 # needs stable kde stuff
 sys-auth/polkit kde
-
-# Alexey Shvetsov <alexxy@gentoo.org> (04 Mar 2011)
-# Mask unsatisfied kde-deps bug #357403
-=kde-base/kdelibs-4.6* policykit
-=kde-base/solid-4.6* bluetooth
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No media-sound/lilypond here, yet (bug #356069)
@@ -211,7 +194,6 @@ dev-vcs/subversion kde
 # Raúl Porcel <armin76@gentoo.org> (20 Jan 2010)
 # Needs mplayer
 kde-base/dolphin thumbnail
-kde-base/konqueror thumbnail
 
 # Markus Meier <maekke@gentoo.org> (27 Sep 2009)
 # mask media-gfx/imagemagick[autotrace] as autotrace is not keyworded
@@ -220,10 +202,6 @@ media-gfx/imagemagick autotrace
 # Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
 # app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
 app-admin/gkrellm ntlm
-
-# Gilles Dartiguelongue <eva@gentoo.org> (23 Oct 2007)
-# gdm depends on zenity which is not keyworded
->=media-video/totem-2.20 galago
 
 # Masking this so repoman shuts up about paludis
 sys-apps/paludis ruby-bindings
