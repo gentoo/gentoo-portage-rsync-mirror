@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.1.2.ebuild,v 1.1 2013/01/28 21:22:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.1.2.ebuild,v 1.2 2013/01/29 19:52:58 grobian Exp $
 
 EAPI=4
 
@@ -468,8 +468,10 @@ src_install() {
 		newins "${FILESDIR}"/git-daemon.xinetd git-daemon
 	fi
 
-	newinitd "${FILESDIR}"/git-daemon.initd git-daemon
-	newconfd "${FILESDIR}"/git-daemon.confd git-daemon
+	if use !prefix ; then
+		newinitd "${FILESDIR}"/git-daemon.initd git-daemon
+		newconfd "${FILESDIR}"/git-daemon.confd git-daemon
+	fi
 
 	fixlocalpod
 }

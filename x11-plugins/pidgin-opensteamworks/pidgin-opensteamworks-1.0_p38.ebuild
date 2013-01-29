@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/pidgin-opensteamworks-1.0_p36.ebuild,v 1.5 2013/01/29 19:34:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/pidgin-opensteamworks-1.0_p38.ebuild,v 1.1 2013/01/29 19:34:57 hasufell Exp $
 
-EAPI=4
+EAPI=5
 
 inherit toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/glib:2
@@ -22,6 +22,7 @@ RDEPEND="dev-libs/glib:2
 	net-im/pidgin"
 DEPEND="${RDEPEND}
 	app-arch/unzip
+	app-arch/xz-utils
 	virtual/pkgconfig"
 
 pkg_setup() {
