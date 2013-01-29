@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libflowmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libflowmanager/ChangeLog,v 1.1 2013/01/27 06:21:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libflowmanager/ChangeLog,v 1.2 2013/01/29 06:03:33 radhermit Exp $
+
+  29 Jan 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Fix metadata.
 
 *libflowmanager-2.0.4 (27 Jan 2013)
 

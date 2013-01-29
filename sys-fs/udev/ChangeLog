@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.807 2013/01/28 13:18:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.808 2013/01/29 06:05:59 ssuominen Exp $
+
+  29 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
+  files/80-net-name-slot.rules:
+  Update link to Tracker wrt #454452 by Ian Abbott
 
   28 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197-r3.ebuild,
   udev-197-r4.ebuild, udev-9999.ebuild:
