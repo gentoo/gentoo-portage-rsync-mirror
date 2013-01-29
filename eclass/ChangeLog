@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.652 2013/01/27 23:59:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.653 2013/01/29 21:12:33 mgorny Exp $
+
+  29 Jan 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Disable pypy1.8 globally.
 
   27 Jan 2013; Tim Harder <radhermit@gentoo.org> vim-plugin.eclass:
   Remove all hidden files in the main tarball dir.

@@ -1,6 +1,11 @@
 # ChangeLog for games-util/grfcodec
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/ChangeLog,v 1.16 2012/10/31 13:41:33 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/ChangeLog,v 1.17 2013/01/29 21:05:12 mr_bones_ Exp $
+
+*grfcodec-6.0.2 (29 Jan 2013)
+
+  29 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> +grfcodec-6.0.2.ebuild:
+  version bump (bug #454126)
 
   31 Oct 2012; Tupone Alfredo <tupone@gentoo.org> -grfcodec-5.1.1.ebuild:
   Removed old version affected by Bug #320797 from Diego
@@ -64,4 +69,3 @@
   +metadata.xml:
   initial commit - ebuild and patch submitted by Locke 'Wizzleby' Shinseiko
   via bug #300328
-

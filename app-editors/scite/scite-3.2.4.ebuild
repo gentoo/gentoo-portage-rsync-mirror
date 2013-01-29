@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.1.0.ebuild,v 1.7 2012/09/05 07:10:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.2.4.ebuild,v 1.1 2013/01/29 21:11:51 ago Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
 
 LICENSE="Scintilla"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="lua"
 
 RDEPEND="dev-libs/glib
@@ -60,7 +60,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake -C ../../scintilla/gtk
+	emake -C ../../scintilla/gtk AR="$(tc-getAR)"
 	if use lua; then
 		emake
 	else

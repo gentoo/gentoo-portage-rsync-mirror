@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.15 2013/01/27 16:35:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.16 2013/01/29 21:12:33 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -42,7 +42,7 @@ inherit multilib
 # All supported Python implementations, most preferred last.
 _PYTHON_ALL_IMPLS=(
 	jython2_5
-	pypy1_8 pypy1_9 pypy2_0
+	pypy1_9 pypy2_0
 	python3_1 python3_2 python3_3
 	python2_5 python2_6 python2_7
 )
@@ -67,12 +67,12 @@ _python_impl_supported() {
 	# keep in sync with _PYTHON_ALL_IMPLS!
 	# (not using that list because inline patterns shall be faster)
 	case "${impl}" in
-		python2_[567]|python3_[123]|pypy1_[89]|pypy2_0|jython2_5)
+		python2_[567]|python3_[123]|pypy1_9|pypy2_0|jython2_5)
 			return 0
 			;;
-#		pypy1_8)
-#			return 1
-#			;;
+		pypy1_8)
+			return 1
+			;;
 		*)
 			die "Invalid implementation in PYTHON_COMPAT: ${impl}"
 	esac

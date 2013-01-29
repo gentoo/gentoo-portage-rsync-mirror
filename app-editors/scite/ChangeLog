@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/scite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.149 2013/01/02 12:14:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.150 2013/01/29 21:11:51 ago Exp $
+
+*scite-3.2.4 (29 Jan 2013)
+
+  29 Jan 2013; Agostino Sarubbo <ago@gentoo.org> +scite-3.2.4.ebuild,
+  -scite-3.1.0.ebuild:
+  Version bump to 3.2.4, remove old.
 
   02 Jan 2013; Agostino Sarubbo <ago@gentoo.org> scite-3.2.3.ebuild:
   Stable for amd64, wrt bug #449758
