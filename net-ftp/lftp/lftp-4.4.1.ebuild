@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.3.8.ebuild,v 1.9 2012/09/11 15:50:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.4.1.ebuild,v 1.1 2013/01/29 17:18:39 jer Exp $
 
 EAPI=4
-inherit autotools eutils
+inherit autotools eutils libtool
 
 DESCRIPTION="A sophisticated ftp/sftp/http/https/torrent client and file transfer program"
 HOMEPAGE="http://lftp.yar.ru/"
@@ -11,7 +11,7 @@ SRC_URI="http://ftp.yars.free.net/pub/source/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 
 LFTP_LINGUAS="cs de es fr it ja ko pl pt_BR ru zh_CN zh_HK zh_TW"
 
@@ -38,8 +38,8 @@ DEPEND="
 	=sys-devel/libtool-2*
 	app-arch/xz-utils
 	dev-lang/perl
-	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
+	virtual/pkgconfig
 "
 
 DOCS=(
@@ -50,10 +50,10 @@ DOCS=(
 src_prepare() {
 	epatch \
 		"${FILESDIR}/${PN}-4.0.2.91-lafile.patch" \
-		"${FILESDIR}/${PN}-4.0.3-autoconf-2.64.patch" \
 		"${FILESDIR}/${PN}-4.3.5-autopoint.patch" \
 		"${FILESDIR}/${PN}-4.3.8-gets.patch"
 	eautoreconf
+	elibtoolize # for Darwin bundles
 }
 
 src_configure() {
@@ -62,18 +62,18 @@ src_configure() {
 	if use ssl && use gnutls ; then
 		myconf="${myconf} --without-openssl"
 	elif use ssl && ! use gnutls ; then
-		myconf="${myconf} --without-gnutls --with-openssl=/usr"
+		myconf="${myconf} --without-gnutls --with-openssl=${EPREFIX}/usr"
 	else
 		myconf="${myconf} --without-gnutls --without-openssl"
 	fi
 
-	use socks5 && myconf="${myconf} --with-socksdante=/usr" \
+	use socks5 && myconf="${myconf} --with-socksdante=${EPREFIX}/usr" \
 		|| myconf="${myconf} --without-socksdante"
 
 	econf \
-		--enable-packager-mode \
-		--sysconfdir=/etc/lftp \
-		--with-modules \
 		$(use_enable nls) \
-		${myconf}
+		${myconf} \
+		--enable-packager-mode \
+		--sysconfdir="${EPREFIX}"/etc/${PN} \
+		--with-modules
 }

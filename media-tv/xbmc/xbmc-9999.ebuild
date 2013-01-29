@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.133 2013/01/26 11:17:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.134 2013/01/29 17:11:12 scarabeus Exp $
 
 EAPI="4"
 
@@ -240,13 +240,13 @@ src_install() {
 	# corefonts: arial ; unknown source teletext.ttf
 	rm -rf "${ED}"/usr/share/xbmc/media/Fonts/arial.ttf
 	dosym /usr/share/fonts/corefonts/arial.ttf \
-		/usr/share/xbmc/media/Fonts/
+		/usr/share/xbmc/media/Fonts/arial.ttf
 	# roboto: roboto-bold, roboto-regular ; unknown source: bold-caps
 	rm -rf "${ED}"/usr/share/xbmc/addons/skin.confluence/fonts/Roboto-*
 	dosym /usr/share/fonts/roboto/Roboto-Regular.ttf \
-		/usr/share/xbmc/addons/skin.confluence/fonts/
+		/usr/share/xbmc/addons/skin.confluence/fonts/Roboto-Regular.ttf
 	dosym /usr/share/fonts/roboto/Roboto-Bold.ttf \
-		/usr/share/xbmc/addons/skin.confluence/fonts/
+		/usr/share/xbmc/addons/skin.confluence/fonts/Roboto-Bold.ttf
 
 	insinto "$(python_get_sitedir)" #309885
 	doins tools/EventClients/lib/python/xbmcclient.py || die
