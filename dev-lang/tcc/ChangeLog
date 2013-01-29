@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.31 2010/08/16 20:05:34 truedfx Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.32 2013/01/29 09:31:34 patrick Exp $
+
+*tcc-0.9.26_pre1 (29 Jan 2013)
+
+  29 Jan 2013; Patrick Lauer <patrick@gentoo.org> +tcc-0.9.26_pre1.ebuild:
+  Bump to snapshot for #454500
 
   16 Aug 2010; Harald van Dĳk <truedfx@gentoo.org> tcc-0.9.25.ebuild,
   +files/tcc-0.9.25-flags.patch:
