@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.3.2-r2.ebuild,v 1.9 2012/02/21 07:08:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.3.2-r2.ebuild,v 1.10 2013/01/29 12:35:56 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ inherit distutils eutils
 
 MY_P="Pmw.${PV}"
 
-DESCRIPTION="A toolkit for building high-level compound widgets in Python using the Tkinter module."
+DESCRIPTION="Toolkit for building high-level compound widgets in Python using the Tkinter module"
 HOMEPAGE="http://pmw.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
@@ -21,8 +21,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="doc examples"
 
-DEPEND=""
-RDEPEND=""
+DEPEND="
+	!dev-python/pmw:py2
+	!dev-python/pmw:py3"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}/src"
 
