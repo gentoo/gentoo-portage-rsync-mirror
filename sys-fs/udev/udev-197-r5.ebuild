@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r4.ebuild,v 1.26 2013/01/29 15:05:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r5.ebuild,v 1.1 2013/01/29 15:05:28 ssuominen Exp $
 
 EAPI=4
 
@@ -407,7 +407,17 @@ pkg_postinst()
 		[[ -f ${net_rules} ]] || cp "${ROOT}"usr/share/doc/${PF}/gentoo/80-net-name-slot.rules "${net_rules}"
 	}
 
-	copy_net_rules
+	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 197 ]]; then
+		ewarn "Because this is a upgrade we disable the new predictable network interface"
+		ewarn "name scheme by default."
+		copy_net_rules
+	fi
+
+	if has_version sys-apps/biosdevname; then
+		ewarn "Because sys-apps/biosdevname is installed we disable the new predictable"
+		ewarn "network interface name scheme by default."
+		copy_net_rules
+	fi
 
 	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
 	# So try to remove it here (will only work if empty).

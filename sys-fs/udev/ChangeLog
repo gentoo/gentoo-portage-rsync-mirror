@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.808 2013/01/29 06:05:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.809 2013/01/29 15:05:28 ssuominen Exp $
+
+*udev-197-r5 (29 Jan 2013)
+
+  29 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197-r4.ebuild,
+  +udev-197-r5.ebuild:
+  Install 80-net-name-slot.rules if the file isn't there yet for stabilization
+  of -r4. This will make the new -r5 the old -r4.
 
   29 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
   files/80-net-name-slot.rules:
