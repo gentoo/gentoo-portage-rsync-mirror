@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rspec-mocks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.50 2013/01/21 16:22:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.51 2013/01/29 07:15:08 graaff Exp $
+
+*rspec-mocks-2.12.2 (29 Jan 2013)
+
+  29 Jan 2013; Hans de Graaff <graaff@gentoo.org> +rspec-mocks-2.12.2.ebuild:
+  Version bump.
 
   21 Jan 2013; Agostino Sarubbo <ago@gentoo.org> rspec-mocks-2.12.1.ebuild:
   Stable for sparc, wrt bug #450532
