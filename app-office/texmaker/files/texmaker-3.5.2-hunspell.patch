@@ -1,11 +1,26 @@
+ configdialog.cpp   |  2 +-
  latexeditor.h      |  2 +-
  latexeditorview.h  |  2 +-
  latexhighlighter.h |  2 +-
  spellerdialog.h    |  2 +-
+ texmaker.cpp       |  4 ++--
  texmaker.h         |  2 +-
  texmaker.pro       | 40 +++++-----------------------------------
- 6 files changed, 10 insertions(+), 40 deletions(-)
+ 8 files changed, 13 insertions(+), 43 deletions(-)
 
+diff --git a/configdialog.cpp b/configdialog.cpp
+index c2354d3..dea2bc1 100644
+--- a/configdialog.cpp
++++ b/configdialog.cpp
+@@ -211,7 +211,7 @@ void ConfigDialog::browseAspell()
+ QDir spelldir(QCoreApplication::applicationDirPath());
+ #else
+ #ifdef DEBIAN_SPELLDIR
+-QDir spelldir(PREFIX"/share/myspell/dicts");
++QDir spelldir(PREFIX"/share/myspell");
+ #else
+ QDir spelldir(PREFIX"/share/texmaker");
+ #endif
 diff --git a/latexeditor.h b/latexeditor.h
 index 1ad4195..8f43b61 100644
 --- a/latexeditor.h
@@ -58,6 +73,26 @@ index 83248ae..cd16dad 100644
  
  #include <QTextCursor>
  
+diff --git a/texmaker.cpp b/texmaker.cpp
+index 6e8f41b..c94d76a 100644
+--- a/texmaker.cpp
++++ b/texmaker.cpp
+@@ -4302,7 +4302,7 @@ geometry_options=config->value("Quick/GeometryOptions","left=2cm,right=2cm,top=2
+ QString dicDir=QCoreApplication::applicationDirPath() + "/";
+ #else
+ #ifdef DEBIAN_SPELLDIR
+-QString dicDir=PREFIX"/share/myspell/dicts/";
++QString dicDir=PREFIX"/share/myspell/";
+ #else
+ QString dicDir=PREFIX"/share/texmaker/";
+ #endif
+@@ -10747,4 +10747,4 @@ if (singlemode && currentEditorView())
+ 	    UpdateBibliography();
+ 	    }
+ 	}
+-}
+\ No newline at end of file
++}
 diff --git a/texmaker.h b/texmaker.h
 index 3b7135e..5713b5a 100644
 --- a/texmaker.h

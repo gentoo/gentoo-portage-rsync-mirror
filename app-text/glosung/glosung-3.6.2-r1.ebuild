@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/glosung-3.6.2.ebuild,v 1.1 2013/01/21 20:23:46 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/glosung-3.6.2-r1.ebuild,v 1.1 2013/01/29 18:52:04 creffett Exp $
 
 EAPI=5
 
-inherit eutils
+inherit eutils toolchain-funcs
 DESCRIPTION="Watch word program for the GNOME2 desktop (watch word (german): losung)"
 HOMEPAGE="http://www.godehardt.org/losung.html"
 SRC_URI="mirror://sourceforge/glosung/${P}.tar.bz2"
@@ -32,9 +32,11 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.6.2-glib-includes.patch"
+	epatch "${FILESDIR}/${PN}-3.6.2-scons-respectflags.patch"
 }
 
 src_compile() {
+	tc-export CC
 	scons ${MAKEOPTS} || die "scons make died"
 }
 
