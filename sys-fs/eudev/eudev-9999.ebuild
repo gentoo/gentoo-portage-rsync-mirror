@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.18 2013/01/28 21:25:21 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.19 2013/01/29 14:22:44 axs Exp $
 
 EAPI=5
 
@@ -66,6 +66,18 @@ udev_check_KV()
 
 pkg_pretend()
 {
+	ewarn "As of 2013-01-29, eudev-9999 provides the new interface renaming"
+	ewarn "functionality, as described in the URL below:"
+	ewarn "http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames"
+	ewarn " "
+	ewarn "This functionality is enabled BY DEFAULT because eudev has no means of synchronizing"
+	ewarn "between the default or user-modified choice of sys-fs/udev.  If you wish to disable"
+	ewarn "this new iface naming, please be sure that /etc/udev/rules.d/80-net-name-slot.rules"
+	ewarn "exists:"
+	ewarn "\ttouch /etc/udev/rules.d/80-net-name-slot.rules"
+	ewarn " "
+	ewarn "We are working on a better solution for the next beta release."
+	ewarn " "
 	if has_version "<sys-fs/udev-180" && ! use legacy-libudev; then
 	ewarn "This version of eudev does not contain the libudev.so.0 library by "
 	ewarn "default.  This is an issue when migrating from sys-fs/udev-180 or older."

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.24 2013/01/28 21:25:21 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.25 2013/01/29 14:22:44 axs Exp $
+
+  29 Jan 2013; Ian Stakenvicius <axs@gentoo.org> eudev-9999.ebuild:
+  Added comment regarding new net iface renaming, now provided in upstream git
 
   28 Jan 2013; Ian Stakenvicius <axs@gentoo.org> eudev-1_beta2-r1.ebuild,
   eudev-9999.ebuild, +files/eudev-fix-selinux.patch:
