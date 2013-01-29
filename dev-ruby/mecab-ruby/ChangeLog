@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mecab-ruby
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.28 2012/11/16 07:38:56 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mecab-ruby/ChangeLog,v 1.29 2013/01/29 08:14:34 patrick Exp $
+
+*mecab-ruby-0.995 (29 Jan 2013)
+
+  29 Jan 2013; Patrick Lauer <patrick@gentoo.org> +mecab-ruby-0.995.ebuild:
+  Bump
 
 *mecab-ruby-0.994 (16 Nov 2012)
 

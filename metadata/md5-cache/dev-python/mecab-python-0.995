@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst postrm prepare setup
+DEPEND=>=app-text/mecab-0.995 =dev-lang/python-2*
+DESCRIPTION=Python binding for MeCab
+EAPI=4
+HOMEPAGE=http://mecab.sourceforge.net/
+KEYWORDS=~amd64 ~ia64 ~ppc64 ~x86
+LICENSE=|| ( BSD LGPL-2.1 GPL-2 )
+RDEPEND=>=app-text/mecab-0.995 =dev-lang/python-2*
+SLOT=0
+SRC_URI=http://mecab.googlecode.com/files/mecab-python-0.995.tar.gz
+_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=7dfe5f51a809e670c879f74290993c6e
