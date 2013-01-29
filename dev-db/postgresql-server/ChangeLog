@@ -1,6 +1,19 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.229 2013/01/12 19:10:13 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.230 2013/01/29 10:09:22 patrick Exp $
+
+  29 Jan 2013; Patrick Lauer <patrick@gentoo.org>
+  postgresql-server-8.3.20.ebuild, postgresql-server-8.3.21.ebuild,
+  postgresql-server-8.3.22-r1.ebuild, postgresql-server-8.3.22.ebuild,
+  postgresql-server-8.4.13.ebuild, postgresql-server-8.4.14.ebuild,
+  postgresql-server-8.4.15-r1.ebuild, postgresql-server-8.4.15.ebuild,
+  postgresql-server-9.0.10.ebuild, postgresql-server-9.0.11-r1.ebuild,
+  postgresql-server-9.0.11.ebuild, postgresql-server-9.0.9.ebuild,
+  postgresql-server-9.1.5.ebuild, postgresql-server-9.1.6.ebuild,
+  postgresql-server-9.1.7-r1.ebuild, postgresql-server-9.1.7.ebuild,
+  postgresql-server-9.2.1.ebuild, postgresql-server-9.2.2-r1.ebuild,
+  postgresql-server-9.2.2.ebuild, postgresql-server-9999.ebuild:
+  Fixing typo in pkg_prerm
 
 *postgresql-server-9.2.2-r1 (12 Jan 2013)
 *postgresql-server-9.1.7-r1 (12 Jan 2013)
