@@ -1,15 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mirage2iso/mirage2iso-9999.ebuild,v 1.2 2013/01/28 23:03:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mirage2iso/mirage2iso-0.4.ebuild,v 1.1 2013/01/28 23:03:47 mgorny Exp $
 
 EAPI=4
-
-#if LIVE
-AUTOTOOLS_AUTORECONF=yes
-EGIT_REPO_URI="http://bitbucket.org/mgorny/${PN}.git"
-
-inherit git-2
-#endif
 
 inherit autotools-utils versionator
 
@@ -34,13 +27,6 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	pinentry? ( app-crypt/pinentry )"
 
-#if LIVE
-DEPEND="${DEPEND}
-	dev-libs/libassuan"
-KEYWORDS=
-SRC_URI=
-#endif
-
 src_configure() {
 	myeconfargs=(
 		$(use_with pinentry libassuan)
@@ -50,11 +36,6 @@ src_configure() {
 }
 
 src_test() {
-#if LIVE
-	autotools-utils_src_test
-	return ${?}
-
-#endif
 	mv "${WORKDIR}"/${PN}-${TESTS_PV}/tests/* tests/ || die
 	autotools-utils_src_test
 }
