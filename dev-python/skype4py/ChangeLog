@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/skype4py
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.11 2012/12/22 06:37:57 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.13 2013/01/29 07:46:17 radhermit Exp $
+
+  29 Jan 2013; Tim Harder <radhermit@gentoo.org> skype4py-1.0.32.1-r1.ebuild:
+  Remove unused doc use flag.
+
+  29 Jan 2013; Tim Harder <radhermit@gentoo.org> -skype4py-1.0.32.0.ebuild,
+  -skype4py-1.0.32.1.ebuild:
+  Remove old.
 
 *skype4py-1.0.32.1-r1 (22 Dec 2012)
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/libkolabxml-0.8.1.ebuild,v 1.6 2012/12/07 19:36:36 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/libkolabxml-0.8.1.ebuild,v 1.7 2013/01/29 07:54:11 kensington Exp $
 
 EAPI=4
 
-inherit cmake-utils
+inherit cmake-utils multilib
 
 DESCRIPTION="Kolab XML format schema definitions library"
 HOMEPAGE="http://www.kolab.org"
@@ -31,6 +31,7 @@ DEPEND="
 
 src_configure() {
 	local mycmakeargs=(
+		-DLIB_INSTALL_DIR=/usr/$(get_libdir)
 		$(cmake-utils_use csharp CSHARP_BINDINGS)
 		$(cmake-utils_use java JAVA_BINDINGS)
 		$(cmake-utils_use python PYTHON_BINDINGS)
