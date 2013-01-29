@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-9999.ebuild,v 1.5 2013/01/29 00:10:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-9999.ebuild,v 1.6 2013/01/29 11:19:36 hasufell Exp $
 
 EAPI=5
 
@@ -58,5 +58,6 @@ src_install() {
 	NO_VSYNC_OPENGL=$(nobuildit opengl) \
 	NO_REGEX_PCRE=$(nobuildit pcre) \
 		default
-	dodoc compton.sample.conf
+	docinto examples
+	nonfatal dodoc compton.sample.conf dbus-examples/*
 }

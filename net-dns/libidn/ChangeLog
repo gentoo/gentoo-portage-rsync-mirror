@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.178 2013/01/19 17:09:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.179 2013/01/29 11:17:00 ago Exp $
+
+  29 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libidn-1.26.ebuild:
+  Stable for ia64, wrt bug #454178
 
   19 Jan 2013; Jeroen Roovers <jer@gentoo.org> libidn-1.26.ebuild:
   Verbose build.

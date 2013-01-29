@@ -8,4 +8,4 @@ LICENSE=MIT
 RDEPEND=dev-libs/libconfig x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXrender dbus? ( sys-apps/dbus ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre:3 ) x11-apps/xprop x11-apps/xwininfo
 SLOT=0
 _eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=de5966e074881f72b21c2286f9d58703
+_md5_=3fe077f6190fa88ade7200c265798fbb
