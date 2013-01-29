@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar-demo/coldwar-demo-1-r1.ebuild,v 1.3 2012/02/05 06:22:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar-demo/coldwar-demo-1-r1.ebuild,v 1.4 2013/01/29 13:06:46 tupone Exp $
 
 inherit eutils unpacker games
 
@@ -34,8 +34,8 @@ DEPEND=""
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
 
-QA_TEXTRELS="${dir:1}/lib/libSDL-1.2.so.0.7.2
-	${dir:1}/lib/libSDL-1.2.so.0"
+QA_PREBUILT="${dir:1}/lib/*
+	${dir:1}/bin/meng"
 
 src_unpack() {
 	unpack_makeself

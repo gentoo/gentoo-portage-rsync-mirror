@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.1.ebuild,v 1.1 2013/01/27 21:28:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-9.1.ebuild,v 1.2 2013/01/29 13:11:14 aballier Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
 DESCRIPTION="FreeBSD kernel sources"
-SLOT="${PVR}"
+SLOT="${RV}"
 KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 
 IUSE="symlink"
@@ -18,10 +18,6 @@ DEPEND=""
 RESTRICT="strip binchecks"
 
 S="${WORKDIR}/sys"
-
-MY_PVR="${PVR}"
-
-[[ ${MY_PVR} == "${RV}" ]] && MY_PVR="${MY_PVR}-r0"
 
 PATCHES=( "${FILESDIR}/${PN}-9.0-disable-optimization.patch"
 	"${FILESDIR}/${PN}-9.1-gentoo.patch"
@@ -59,27 +55,21 @@ src_compile() {
 }
 
 src_install() {
-	insinto "/usr/src/sys-${MY_PVR}"
+	insinto "/usr/src/sys-${RV}"
 	doins -r "${S}/"*
 }
 
 pkg_postinst() {
 	if [[ ! -L "${ROOT}/usr/src/sys" ]]; then
-		einfo "/usr/src/sys symlink doesn't exist; creating symlink to sys-${MY_PVR}..."
-		ln -sf "sys-${MY_PVR}" "${ROOT}/usr/src/sys" || \
+		einfo "/usr/src/sys symlink doesn't exist; creating symlink to sys-${RV}..."
+		ln -sf "sys-${RV}" "${ROOT}/usr/src/sys" || \
 			eerror "Couldn't create ${ROOT}/usr/src/sys symlink."
-		# just in case...
-		[[ -L ""${ROOT}/usr/src/sys-${RV}"" ]] && rm "${ROOT}/usr/src/sys-${RV}"
-		ln -sf "sys-${MY_PVR}" "${ROOT}/usr/src/sys-${RV}" || \
-			eerror "Couldn't create ${ROOT}/usr/src/sys-${RV} symlink."
 	elif use symlink; then
 		einfo "Updating /usr/src/sys symlink to sys-${MY_PVR}..."
-		rm "${ROOT}/usr/src/sys" "${ROOT}/usr/src/sys-${RV}" || \
+		rm "${ROOT}/usr/src/sys" || \
 			eerror "Couldn't remove previous symlinks, please fix manually."
-		ln -sf "sys-${MY_PVR}" "${ROOT}/usr/src/sys" || \
+		ln -sf "sys-${RV}" "${ROOT}/usr/src/sys" || \
 			eerror "Couldn't create ${ROOT}/usr/src/sys symlink."
-		ln -sf "sys-${MY_PVR}" "${ROOT}/usr/src/sys-${RV}" || \
-			eerror "Couldn't create ${ROOT}/usr/src/sys-${RV} symlink."
 	fi
 
 	if use sparc-fbsd ; then
