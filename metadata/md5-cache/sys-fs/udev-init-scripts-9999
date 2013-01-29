@@ -3,10 +3,9 @@ DEPEND=virtual/pkgconfig dev-vcs/git
 DESCRIPTION=udev startup scripts for openrc
 EAPI=4
 HOMEPAGE=http://www.gentoo.org
-IUSE=build
 LICENSE=GPL-2
 RDEPEND=>=virtual/udev-180 sys-apps/openrc !<sys-fs/udev-186
 RESTRICT=test
 SLOT=0
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	git-2	e92e09651292b1bef5656592364550f7	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=09963df1a31d8bc28cc20b5afa4144c1
+_md5_=93662d7363c23124de7368b22e4bbfc5

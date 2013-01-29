@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.130 2013/01/26 11:26:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.131 2013/01/29 17:44:10 ssuominen Exp $
+
+  29 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> polkit-0.110.ebuild:
+  Force USE="debug" to be disabled in dev-lang/spidermonkey to avoid asseration
+  errors as noted by _AxS_.
 
   26 Jan 2013; Markus Meier <maekke@gentoo.org> polkit-0.110.ebuild:
   arm stable, bug #452688
