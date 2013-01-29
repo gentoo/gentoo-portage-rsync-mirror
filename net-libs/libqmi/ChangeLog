@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libqmi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/ChangeLog,v 1.2 2013/01/28 23:21:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/ChangeLog,v 1.4 2013/01/29 00:50:44 zmedico Exp $
+
+  29 Jan 2013; Zac Medico <zmedico@gentoo.org> Manifest:
+  Update Manifest with digests for a snapshot which I've manually uploaded to
+  dev.gentoo.org:/space/distfiles-local/, since the SRC_URI returns a
+  dynamically generated file with random digests.
 
 *libqmi-1.0.0 (28 Jan 2013)
 
