@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/molden
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.45 2012/10/19 09:55:01 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.46 2013/01/30 16:23:41 jlec Exp $
+
+  30 Jan 2013; Justin Lecher <jlec@gentoo.org> molden-4.8-r2.ebuild,
+  molden-5.0.ebuild, metadata.xml:
+  Add virtual/glu to deps, #454690
 
   19 Oct 2012; Justin Lecher <jlec@gentoo.org> molden-4.8-r2.ebuild,
   molden-5.0.ebuild:

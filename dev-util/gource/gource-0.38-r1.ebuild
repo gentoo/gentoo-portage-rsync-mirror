@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.38.ebuild,v 1.5 2012/11/22 04:13:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.38-r1.ebuild,v 1.1 2013/01/30 16:19:14 flameeyes Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ RDEPEND="
 	>=media-libs/libpng-1.2
 	virtual/jpeg
 	media-libs/mesa
-	media-fonts/freefont-ttf
+	media-fonts/freefont
 	>=media-libs/glew-1.5
 	dev-libs/tinyxml
 	>=dev-libs/boost-1.46[threads(+)]
@@ -58,7 +58,7 @@ src_configure() {
 	if has_version dev-libs/tinyxml[stl]; then
 		append-cppflags -DTIXML_USE_STL;
 	fi
-	econf --enable-ttf-font-dir=/usr/share/fonts/freefont-ttf/ \
+	econf --enable-ttf-font-dir=/usr/share/fonts/freefont/ \
 		--with-tinyxml
 }
 

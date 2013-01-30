@@ -1,6 +1,6 @@
 ## Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-4.8.1.ebuild,v 1.1 2012/08/26 16:03:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-4.8.1.ebuild,v 1.2 2013/01/30 16:13:04 jlec Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://meme.nbcr.net/downloads/${PN}_${PV}.tar.gz"
 LICENSE="meme"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug mpi"
+IUSE="debug examples mpi"
 
 DEPEND="
 	dev-libs/libxml2:2
@@ -34,6 +34,7 @@ S="${WORKDIR}/${PN}_${PV}"
 #}
 
 src_prepare() {
+	use examples || sed -e '/SUBDIRS/s:examples::g' -i doc/Makefile.am 
 	sed \
 		-e '/flags/s:-O3::g' \
 		-e '/opt/s:-O::g' \

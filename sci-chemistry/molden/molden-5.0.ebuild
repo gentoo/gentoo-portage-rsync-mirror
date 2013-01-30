@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-5.0.ebuild,v 1.4 2012/10/19 09:55:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-5.0.ebuild,v 1.5 2013/01/30 16:23:41 jlec Exp $
 
 EAPI=4
 
@@ -21,6 +21,7 @@ RDEPEND="
 	x11-libs/libXmu
 	opengl? (
 		media-libs/freeglut
+		virtual/glu
 		virtual/opengl )"
 DEPEND="${RDEPEND}
 	x11-misc/gccmakedep
