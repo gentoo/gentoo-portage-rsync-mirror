@@ -1,6 +1,13 @@
 # ChangeLog for app-benchmarks/bootchart2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/ChangeLog,v 1.15 2013/01/06 09:12:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/ChangeLog,v 1.16 2013/01/30 11:25:18 jlec Exp $
+
+*bootchart2-0.14.5-r1 (30 Jan 2013)
+
+  30 Jan 2013; Justin Lecher <jlec@gentoo.org> -bootchart2-0.14.2-r3.ebuild,
+  -bootchart2-0.14.4.ebuild, +bootchart2-0.14.5-r1.ebuild, metadata.xml:
+  drop old; add USE=X for track-only installations, #454340; move to new python
+  eclasses
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> bootchart2-0.14.5.ebuild:
   Add ~sparc, wrt bug #449220

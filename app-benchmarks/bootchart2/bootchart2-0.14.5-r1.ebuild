@@ -1,14 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/bootchart2-0.14.4.ebuild,v 1.1 2012/06/14 06:31:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/bootchart2-0.14.5-r1.ebuild,v 1.1 2013/01/30 11:25:18 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-pypy-*"
+PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} )
 
-inherit linux-info python systemd toolchain-funcs
+inherit linux-info python-r1 systemd toolchain-funcs
 
 DESCRIPTION="Performance analysis and visualization of the system boot process"
 HOMEPAGE="https://github.com/mmeeks/bootchart/"
@@ -16,15 +14,20 @@ SRC_URI="mirror://github/mmeeks/bootchart/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="svg"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+IUSE="svg test X"
+
+REQUIRED_USE="test? ( X )"
 
 RDEPEND="
 	!app-benchmarks/bootchart
-	dev-python/pycairo[svg?]
-	dev-python/pygtk
+	X? (
+		dev-python/pycairo[svg?,${PYTHON_USEDEP}]
+		dev-python/pygtk
+		${PYTHON_DEPS}
+		)
 	sys-apps/lsb-release"
-DEPEND="${RDEPEND}"
+DEPEND="${PYTHON_DEPS}"
 
 CONFIG_CHECK="~PROC_EVENTS ~TASKSTATS ~TASK_DELAY_ACCT ~TMPFS"
 
@@ -40,14 +43,11 @@ src_prepare() {
 }
 
 src_test() {
-	testing() {
-		emake test
-	}
-	python_execute_function testing
+	python_foreach_impl emake test
 }
 
 src_install() {
-	export NO_PYTHON_COMPILE=0
+	export NO_PYTHON_COMPILE=1
 	export DOCDIR=/usr/share/doc/${PF}
 	default
 
@@ -56,15 +56,13 @@ src_install() {
 	keepdir /lib/bootchart/tmpfs
 
 	installation() {
-		emake \
-			DESTDIR="${D}" \
-			PY_SITEDIR=$(python_get_sitedir) \
-			py-install-compile
-	}
-	python_execute_function installation
+		python_domodule pybootchartgui
 
-	# does not like python3 as active interpreter
-	python_convert_shebangs 2 "${ED}"/usr/bin/pybootchartgui
+		python_optimize "${ED}"/$(python_get_sitedir)
+		cp pybootchartgui.py "${T}"/pybootchartgui || die
+		python_doscript "${T}"/pybootchartgui
+	}
+	use X && python_foreach_impl installation
 
 	newinitd "${FILESDIR}"/${PN}.init ${PN}
 }
@@ -75,9 +73,4 @@ pkg_postinst() {
 	elog "please add the init script to your default runlevel"
 	elog "rc-update add bootchart2 default"
 	echo
-	python_mod_optimize pybootchartgui
-}
-
-pkg_postrm() {
-	python_mod_cleanup pybootchartgui
 }

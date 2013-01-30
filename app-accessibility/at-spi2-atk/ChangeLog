@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/at-spi2-atk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.18 2013/01/24 14:55:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.19 2013/01/30 11:11:06 aballier Exp $
+
+  28 Jan 2013; Alexis Ballier <aballier@gentoo.org> at-spi2-atk-2.6.2.ebuild:
+  keyword ~amd64-fbsd, bug #449220
 
   24 Jan 2013; Justin Lecher <jlec@gentoo.org> at-spi2-atk-2.6.2.ebuild:
   Keyworded for ~-linux prefix, tested by me
