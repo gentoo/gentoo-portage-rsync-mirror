@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-sunpinyin/ibus-sunpinyin-2.0.3-r1.ebuild,v 1.2 2011/04/17 09:11:23 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-sunpinyin/ibus-sunpinyin-2.0.3-r2.ebuild,v 1.1 2013/01/30 13:48:47 yngwin Exp $
 
-EAPI="1"
+EAPI=5
 PYTHON_DEPEND="2:2.5"
 inherit eutils python scons-utils
 
@@ -16,19 +16,18 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="app-i18n/ibus
-		app-i18n/sunpinyin"
+		~app-i18n/sunpinyin-${PV}"
 DEPEND="${RDEPEND}
 		sys-devel/gettext"
 
-src_unpack() {
-	unpack "${P}.tar.gz"
-	cd "${S}" && epatch "${FILESDIR}/${P}-force-switch.patch"
+src_prepare() {
+	epatch "${FILESDIR}/${P}-force-switch.patch"
 }
 
 src_compile() {
-	escons --prefix="/usr" || die
+	escons --prefix="/usr"
 }
 
 src_install() {
-	escons --prefix="/usr" --install-sandbox="${D}" install || die
+	escons --prefix="/usr" --install-sandbox="${D}" install
 }

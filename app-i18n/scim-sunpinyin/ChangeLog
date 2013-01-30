@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/scim-sunpinyin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-sunpinyin/ChangeLog,v 1.3 2011/04/17 09:14:15 qiaomuf Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-sunpinyin/ChangeLog,v 1.4 2013/01/30 13:51:55 yngwin Exp $
+
+*scim-sunpinyin-2.0.3-r2 (30 Jan 2013)
+
+  30 Jan 2013; Ben de Groot <yngwin@gentoo.org> +scim-sunpinyin-2.0.3-r2.ebuild,
+  -scim-sunpinyin-2.0.3-r1.ebuild:
+  Make sure this depends on correct sunpinyin version. Migrate to eapi5.
 
   17 Apr 2011; Mu Qiao <qiaomuf@gentoo.org> -scim-sunpinyin-2.0.3.ebuild,
   scim-sunpinyin-2.0.3-r1.ebuild:
@@ -17,4 +23,3 @@
   20 Feb 2011; Mu Qiao <qiaomuf@gentoo.org> +scim-sunpinyin-2.0.3.ebuild,
   +metadata.xml:
   New ebuild for scim-sunpinyin.
-
