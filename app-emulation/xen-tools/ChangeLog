@@ -1,6 +1,24 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.128 2013/01/24 08:53:49 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.129 2013/01/30 09:09:01 idella4 Exp $
+
+*xen-tools-4.2.0-r3 (30 Jan 2013)
+*xen-tools-4.2.1-r1 (30 Jan 2013)
+
+  30 Jan 2013; Ian Delaney <idella4@gentoo.org>
+  +files/xen-4-CVE-2012-4544-XSA-25.patch,
+  +files/xen-4-CVE-2012-6075-XSA-41.patch, +files/xen-4-fix_dotconfig-gcc.patch,
+  +files/xen-tools-4-add-nopie.patch, +files/xen-tools-4-docfix.patch,
+  +xen-tools-4.2.0-r3.ebuild, +xen-tools-4.2.1-r1.ebuild,
+  -files/xen-tools-3.4.2-as-needed.patch, files/ipxe-nopie.patch,
+  xen-tools-4.2.0-r2.ebuild:
+  revbump;-4.2.0-r3; adjustments to DEPS, implementation of ocaml flag courtesy
+  of user known as 'a.m' wrt Bug #447716, reconstitution of ipxe-nopie with
+  subsequent add of -4-add-nopie.patch, new use ocaml added and implemented
+  (possible to rename), sed statements reduced to patches, 2 sec. patches
+  applied, build & install of docs corrected/upgrade. 4.2.1-r1; changes mirrored
+  those to 4.2.0-r3, add of 1 valid sec. patch. Drop un-needed -3.4.2-as-
+  needed.patch
 
   24 Jan 2013; Ian Delaney <idella4@gentoo.org> -xen-tools-4.1.2-r2.ebuild,
   -xen-tools-4.2.0-r1.ebuild, xen-tools-4.2.0-r2.ebuild, xen-tools-4.2.1.ebuild:

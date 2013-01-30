@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.0-r2.ebuild,v 1.7 2013/01/30 09:09:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.0-r3.ebuild,v 1.1 2013/01/30 09:09:01 idella4 Exp $
 
 EAPI=5
 
@@ -32,9 +32,10 @@ DOCS=( README docs/README.xen-bugtool )
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="api custom-cflags debug doc flask hvm qemu pygrub screen static-libs xend"
+# TODO soon; ocaml up for a potential name change
+IUSE="api custom-cflags debug doc flask hvm ocaml qemu pygrub screen static-libs xend"
 
-REQUIRED_USE="hvm? ( qemu )"
+REQUIRD_USE="hvm? ( qemu )"
 
 CDEPEND="<dev-libs/yajl-2
 	dev-python/lxml[${PYTHON_USEDEP}]
@@ -42,18 +43,16 @@ CDEPEND="<dev-libs/yajl-2
 	dev-python/pyxml[${PYTHON_USEDEP}]
 	sys-libs/zlib
 	sys-power/iasl
-	dev-ml/findlib
+	ocaml? ( dev-ml/findlib )
 	hvm? ( media-libs/libsdl )
-	api? ( dev-libs/libxml2 net-misc/curl )
+	${PYTHON_DEPS}
+	api? ( dev-libs/libxml2
+		net-misc/curl )
 	${PYTHON_DEPS}
 	pygrub? ( ${PYTHON_DEPS//${PYTHON_REQ_USE}/ncurses} )"
-
 DEPEND="${CDEPEND}
-	sys-devel/bin86
-	sys-devel/dev86
 	dev-lang/perl
 	app-misc/pax-utils
-	dev-ml/findlib
 	doc? (
 		app-doc/doxygen
 		dev-tex/latex2html[png,gif]
@@ -67,16 +66,14 @@ DEPEND="${CDEPEND}
 		dev-texlive/texlive-pictures
 		dev-texlive/texlive-latexrecommended
 	)
-	hvm? (
-		x11-proto/xproto
+	hvm? (  x11-proto/xproto
+		sys-devel/bin86
 		sys-devel/dev86
-	)
-	"
-
+	)"
 RDEPEND="${CDEPEND}
 	sys-apps/iproute2
 	net-misc/bridge-utils
-	>=dev-lang/ocaml-3.12.0
+	ocaml? ( >=dev-lang/ocaml-3.12.0 )
 	screen? (
 		app-misc/screen
 		app-admin/logrotate
@@ -122,16 +119,13 @@ pkg_setup() {
 		fi
 	fi
 
-	use api     && export "LIBXENAPI_BINDINGS=y"
-	use flask   && export "FLASK_ENABLE=y"
+	use api   && export "LIBXENAPI_BINDINGS=y"
+	use flask && export "FLASK_ENABLE=y"
 }
 
 src_prepare() {
-	sed -e 's/-Wall//' -i Config.mk || die "Couldn't sanitize CFLAGS"
-
-	# Drop .config
-	sed -e '/-include $(XEN_ROOT)\/.config/d' -i Config.mk || die "Couldn't drop"
-
+	# Drop .config, fixes to gcc-4.6
+	epatch "${FILESDIR}"/${PN/-tools/}-4-fix_dotconfig-gcc.patch
 
 	# Xend
 	if ! use xend; then
@@ -172,13 +166,8 @@ src_prepare() {
 		sed -e "s:install-tools\: tools/ioemu-dir:install-tools\: :g" -i Makefile || die
 	fi
 
-	# Fix build for gcc-4.6
-	find "${S}" \( -name Makefile -o -name Rules.mk -o -name Config.mk \) \
-		-exec sed -e "s:-Werror::g" -i {} + || die "Failed to remove -Werror"
-
 	# Fix texi2html build error with new texi2html
-	sed -r -e "s:(texi2html.*) -number:\1:" \
-		-i tools/qemu-xen-traditional/Makefile || die
+	epatch "${FILESDIR}"/${PN}-4-docfix.patch
 
 	# Fix network broadcast on bridged networks
 	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
@@ -196,7 +185,8 @@ src_prepare() {
 
 	# Don't build ipxe with pie on hardened, Bug #360805
 	if gcc-specs-pie; then
-		epatch "${FILESDIR}/ipxe-nopie.patch"
+		cp -f "${FILESDIR}"/ipxe-nopie.patch tools/firmware/etherboot/patches/ || die
+		epatch "${FILESDIR}"/${PN}-4-add-nopie.patch
 	fi
 
 	# Prevent double stripping of files at install
@@ -204,6 +194,10 @@ src_prepare() {
 
 	# fix jobserver in Makefile
 	epatch "${FILESDIR}"/${P/-tools/}-jserver.patch
+
+	#Sec patches
+	epatch "${FILESDIR}"/xen-4-CVE-2012-4544-XSA-25.patch \
+		 "${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch
 }
 
 src_compile() {
@@ -220,12 +214,7 @@ src_compile() {
 	unset CFLAGS
 	emake CC="$(tc-getCC)" LD="$(tc-getLD)" -C tools ${myopt}
 
-	if use doc; then
-		sh ./docs/check_pkgs || die "package check failed"
-		emake docs
-		emake dev-docs
-	fi
-
+	use doc && emake -C docs txt html
 	emake -C docs man-pages
 }
 
@@ -238,14 +227,14 @@ src_install() {
 	local PYTHONDONTWRITEBYTECODE
 	export PYTHONDONTWRITEBYTECODE
 
-	emake DESTDIR="${ED}" DOCDIR="/usr/share/doc/${PF}" \
-		XEN_PYTHON_NATIVE_INSTALL=y install-tools
+	emake DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" \
+		install-tools
 
 	# Fix the remaining Python shebangs.
-	python_fix_shebang "${ED}"
+	python_fix_shebang "${D}"
 
 	# Remove RedHat-specific stuff
-	rm -rf "${ED}"tmp || die
+	rm -rf "${D}"tmp || die
 
 	# uncomment lines in xl.conf
 	sed -e 's:^#autoballoon=1:autoballoon=1:' \
@@ -254,15 +243,15 @@ src_install() {
 		-i tools/examples/xl.conf  || die
 
 	if use doc; then
-		emake DESTDIR="${ED}" DOCDIR="/usr/share/doc/${PF}" install-docs
+		emake DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" install-docs
 
-		dohtml -r docs/api/
+		dohtml -r docs/html/
 		docinto pdf
 		dodoc ${DOCS[@]}
-		[ -d "${ED}"/usr/share/doc/xen ] && mv "${ED}"/usr/share/doc/xen/* "${ED}"/usr/share/doc/${PF}/html
+		[ -d "${D}"/usr/share/doc/xen ] && mv "${ED}"/usr/share/doc/xen/* "${ED}"/usr/share/doc/${PF}/html
 	fi
 
-	rm -rf "${ED}"/usr/share/doc/xen/
+	rm -rf "${D}"/usr/share/doc/xen/
 	doman docs/man?/*
 
 	if use xend; then
@@ -276,14 +265,14 @@ src_install() {
 	newinitd "${FILESDIR}"/xenconsoled.initd xenconsoled
 
 	if use screen; then
-		cat "${FILESDIR}"/xendomains-screen.confd >> "${ED}"/etc/conf.d/xendomains || die
-		cp "${FILESDIR}"/xen-consoles.logrotate "${ED}"/etc/xen/ || die
+		cat "${FILESDIR}"/xendomains-screen.confd >> "${D}"/etc/conf.d/xendomains || die
+		cp "${FILESDIR}"/xen-consoles.logrotate "${D}"/etc/xen/ || die
 		keepdir /var/log/xen-consoles
 	fi
 
 	# For -static-libs wrt Bug 384355
 	if ! use static-libs; then
-		rm -f "${ED}"usr/$(get_libdir)/*.a "${ED}"usr/$(get_libdir)/ocaml/*/*.a
+		rm -f "${D}"usr/$(get_libdir)/*.a "${ED}"usr/$(get_libdir)/ocaml/*/*.a
 	fi
 
 	# xend expects these to exist
@@ -294,11 +283,11 @@ src_install() {
 
 	# Temp QA workaround
 	dodir "$(udev_get_udevdir)"
-	mv "${ED}"/etc/udev/* "${ED}/$(udev_get_udevdir)"
-	rm -rf "${ED}"/etc/udev
+	mv "${D}"/etc/udev/* "${ED}/$(udev_get_udevdir)"
+	rm -rf "${D}"/etc/udev
 
 	# Remove files failing QA AFTER emake installs them, avoiding seeking absent files
-	find "${ED}" \( -name openbios-sparc32 -o -name openbios-sparc64 \
+	find "${D}" \( -name openbios-sparc32 -o -name openbios-sparc64 \
 		-o -name openbios-ppc -o -name palcode-clipper \) -delete || die
 }
 

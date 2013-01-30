@@ -4,8 +4,8 @@
 		* /tools/firmware/etherboot/patches/ipxe-nopie.patche		New patch
 		* /tools/firmware/etherboot/patches/series				Add ipxe-nopie.patch
 
---- a/tools/firmware/etherboot/patches/ipxe-nopie.patch	1970-01-01 01:00:00.000000000 +0100
-+++ b/tools/firmware/etherboot/patches/ipxe-nopie.patch	2011-03-27 17:45:13.929697782 +0200
+#--- tools/firmware/etherboot/patches/ipxe-nopie.patch	1970-01-01 01:00:00.000000000 +0100
+#+++ tools/firmware/etherboot/patches/ipxe-nopie.patch	2011-03-27 17:45:13.929697782 +0200
 @@ -0,0 +1,11 @@
 +--- ipxe/src/Makefile~	2011-03-27 17:41:52.000000000 +0200
 ++++ ipxe/src/Makefile	2011-03-27 17:43:20.869446433 +0200
@@ -18,9 +18,3 @@
 + ASFLAGS		:=
 + LDFLAGS		:=
 + MAKEDEPS	:= Makefile
---- a/tools/firmware/etherboot/patches/series	2011-03-25 11:42:50.000000000 +0100
-+++ b/tools/firmware/etherboot/patches/series	2011-03-27 17:45:45.140446216 +0200
-build_fix_1.patch
-build_fix_2.patch
-build_fix_3.patch
-+ipxe-nopie.patch
