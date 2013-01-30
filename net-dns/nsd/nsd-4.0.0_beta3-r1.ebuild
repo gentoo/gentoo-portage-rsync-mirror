@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/nsd-4.0.0_beta3.ebuild,v 1.1 2013/01/30 10:43:01 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/nsd-4.0.0_beta3-r1.ebuild,v 1.1 2013/01/30 17:19:22 wschlich Exp $
 
 EAPI=4
 
@@ -18,13 +18,14 @@ SRC_URI="http://www.nlnetlabs.nl/downloads/${PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bind8-stats ipv6 libevent minimal-responses mmap +nsec3 ratelimit root-server runtime-checks ssl"
+IUSE="bind8-stats ipv6 libevent minimal-responses mmap munin +nsec3 ratelimit root-server runtime-checks ssl"
 
 RDEPEND="
 	dev-libs/openssl
 	virtual/yacc
 	libevent? ( dev-libs/libevent )
 	ssl? ( dev-libs/openssl )
+	munin? ( net-analyzer/munin )
 "
 DEPEND="
 	${RDEPEND}
@@ -39,11 +40,13 @@ pkg_setup() {
 src_configure() {
 	econf \
 		--enable-largefile \
-		--with-dbfile="${EPREFIX}"/var/db/nsd/nsd.db \
 		--with-logfile="${EPREFIX}"/var/log/nsd.log \
 		--with-pidfile="${EPREFIX}"/run/nsd/nsd.pid \
+		--with-dbfile="${EPREFIX}"/var/db/nsd/nsd.db \
 		--with-xfrdir="${EPREFIX}"/var/db/nsd \
-		--with-xfrdfile="${EPREFIX}"/var/db/nsd/xfrd.db \
+		--with-xfrdfile="${EPREFIX}"/var/db/nsd/xfrd.state \
+		--with-zonelistfile="${EPREFIX}"/var/db/nsd/zone.list \
+		--with-zonesdir="${EPREFIX}"/var/lib/nsd \
 		$(use_enable bind8-stats) \
 		$(use_enable ipv6) \
 		$(use_enable minimal-responses) \
@@ -63,10 +66,21 @@ src_install() {
 
 	newinitd "${FILESDIR}"/nsd.initd nsd
 
-	# database directory, writable by nsd for zone updates and transfers
+	# database directory, writable by nsd for database updates and zone transfers
 	dodir /var/db/nsd
 	fowners nsd:nsd /var/db/nsd
 	fperms 750 /var/db/nsd
+
+	# zones directory, writable by nsd for zone file updates (nsd-control write)
+	dodir /var/lib/nsd
+	fowners nsd:nsd /var/lib/nsd
+	fperms 750 /var/lib/nsd
+
+	# install munin plugin
+	if use munin; then
+		exeinto /usr/libexec/munin/plugins
+		doexe contrib/nsd_munin_
+	fi
 
 	# remove the /run directory that usually resides on tmpfs and is
 	# being taken care of by the nsd init script anyway (checkpath)

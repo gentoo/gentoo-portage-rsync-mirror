@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/nsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/ChangeLog,v 1.1 2013/01/30 10:43:01 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/ChangeLog,v 1.2 2013/01/30 17:19:22 wschlich Exp $
+
+*nsd-4.0.0_beta3-r1 (30 Jan 2013)
+
+  30 Jan 2013; Wolfram Schlich <wschlich@gentoo.org> +nsd-4.0.0_beta3-r1.ebuild,
+  -nsd-4.0.0_beta3.ebuild, metadata.xml:
+  added munin plugin + USE flag, small other improvements
 
 *nsd-4.0.0_beta3 (30 Jan 2013)
 

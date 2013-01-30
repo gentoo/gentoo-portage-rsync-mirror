@@ -1,6 +1,13 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.66 2013/01/23 15:27:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.67 2013/01/30 17:21:34 scarabeus Exp $
+
+*libreoffice-l10n-4.0.0.2 (30 Jan 2013)
+
+  30 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +libreoffice-l10n-4.0.0.2.ebuild, -libreoffice-l10n-4.0.0.1.ebuild:
+  Version bump to 4.0.0.2 to mitigate issue with the calc errors. Dep strings to
+  be adjusted later.
 
 *libreoffice-l10n-4.0.0.1 (23 Jan 2013)
 

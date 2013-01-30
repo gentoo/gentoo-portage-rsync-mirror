@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-4.0.0.1.ebuild,v 1.1 2013/01/23 15:27:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-4.0.0.2.ebuild,v 1.1 2013/01/30 17:21:34 scarabeus Exp $
 
 EAPI=4
 
@@ -18,11 +18,11 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="offlinehelp"
 
 LANGUAGES_HELP="ast bg bn_IN bn bo bs ca_XV ca cs da de dz el en_GB en en_ZA eo
-es et eu fi fr gl gu he hi hr hu id is it ja ka km ko lb mk nb ne nl nn om pl
-pt_BR pt ro ru si sk sl sq sv ta tg tr ug uk vi zh_CN zh_TW"
+es et eu fi fr gl gu he hi hr hu id is it ja ka km ko mk nb ne nl nn om pl
+pt_BR pt ro ru si sk sl sq sv tg tr ug uk vi zh_CN zh_TW"
 LANGUAGES="${LANGUAGES_HELP} af am ar as be br brx cy dgo fa ga gd kk kn kok ks
-ku lo lt lv mai ml mn mni mr my nr nso oc or pa_IN rw sa_IN sat sd sh sr ss st
-sw_TZ te th tn ts tt uz ve xh zu"
+ku lb lo lt lv mai ml mn mni mr my nr nso oc or pa_IN rw sa_IN sat sd sh sr ss st
+sw_TZ ta te th tn ts tt uz ve xh zu"
 
 for lang in ${LANGUAGES_HELP}; do
 	helppack=""
