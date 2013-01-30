@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.13_pre1733.ebuild,v 1.1 2013/01/28 12:01:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.13_p1734.ebuild,v 1.1 2013/01/30 14:29:16 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator

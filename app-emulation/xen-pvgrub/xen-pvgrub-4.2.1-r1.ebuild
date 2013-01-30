@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.2.1.ebuild,v 1.2 2013/01/30 14:12:30 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.2.1-r1.ebuild,v 1.1 2013/01/30 14:12:30 idella4 Exp $
 
-EAPI="4"
+EAPI=4
+PYTHON_DEPEND="2:2.6"
 
-inherit flag-o-matic eutils multilib toolchain-funcs
+inherit flag-o-matic eutils multilib python toolchain-funcs
 
 XEN_EXTFILES_URL="http://xenbits.xensource.com/xen-extfiles"
 LIBPCI_URL=ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci
@@ -26,10 +27,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="custom-cflags"
 
-DEPEND="sys-devel/gettext
-	sys-devel/gcc"
+DEPEND="sys-devel/gettext"
 
 RDEPEND=">=app-emulation/xen-4.2.1"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 
@@ -70,6 +75,9 @@ src_prepare() {
 
 	# fix jobserver in Makefile
 	epatch "${FILESDIR}"/${PN/-pvgrub/}-4.2.0-jserver.patch
+
+	#Sec patch
+	epatch "${FILESDIR}"/${PN/-pvgrub/}-4-CVE-2012-6075-XSA-41.patch
 }
 
 src_compile() {
@@ -80,7 +88,6 @@ src_compile() {
 
 	emake CC="$(tc-getCC)" LD="$(tc-getLD)" -C tools/include
 
-	# TODO; fix those -j1
 	if use x86; then
 		emake CC="$(tc-getCC)" LD="$(tc-getLD)" \
 		XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub

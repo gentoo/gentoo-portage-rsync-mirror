@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/xsunpinyin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsunpinyin/ChangeLog,v 1.6 2013/01/30 13:54:48 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsunpinyin/ChangeLog,v 1.7 2013/01/30 14:29:28 yngwin Exp $
+
+*xsunpinyin-2.0.4_pre20130108 (30 Jan 2013)
+
+  30 Jan 2013; Ben de Groot <yngwin@gentoo.org> +files/README.gentoo,
+  +xsunpinyin-2.0.4_pre20130108.ebuild:
+  Version bump to newest sunpinyin snapshot. Use subslot on sunpinyin dependency
+  to trigger rebuild.
 
 *xsunpinyin-2.0.3-r3 (30 Jan 2013)
 

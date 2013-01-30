@@ -1,6 +1,20 @@
 # ChangeLog for app-emulation/xen-pvgrub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.15 2013/01/28 05:29:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.16 2013/01/30 14:12:30 idella4 Exp $
+
+*xen-pvgrub-4.2.0-r1 (30 Jan 2013)
+*xen-pvgrub-4.2.1-r1 (30 Jan 2013)
+
+  30 Jan 2013; Ian Delaney <idella4@gentoo.org>
+  +files/xen-4-CVE-2012-4544-XSA-25.patch,
+  +files/xen-4-CVE-2012-6075-XSA-41.patch, +files/xen-4.2.0-jserver.patch,
+  +xen-pvgrub-4.2.0-r1.ebuild, +xen-pvgrub-4.2.1-r1.ebuild,
+  files/xen-4-fix_dotconfig-gcc.patch, files/xen-4.2.0-externals.patch,
+  xen-pvgrub-4.2.0.ebuild, xen-pvgrub-4.2.1.ebuild:
+  revbump; -4.2.0-r1, python eclass added to enable & ensure a py2 build wrt Bug
+  53930, xen-4-fix_dotconfig-gcc.patch, xen-4.2.0-externals.patch upgraded 1
+  sec. patch added, -4.2.1-r1 mirrors changes of -4.2.0-r1, -j1 workaround fixed
+  in -jserver.patch also in -4.2.0.
 
 *xen-pvgrub-4.2.1 (28 Jan 2013)
 

@@ -1,6 +1,18 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.179 2013/01/04 18:03:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.180 2013/01/30 14:11:11 chithanh Exp $
+
+*xkeyboard-config-2.8 (30 Jan 2013)
+
+  30 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xkeyboard-config-2.8.ebuild,
+  -files/xkeyboard-config-2.4.1-extended-function-keys.patch,
+  -files/xkeyboard-config-2.4.1-shift-backspace.patch,
+  -files/xorg-cve-2012-0064.patch, -xkeyboard-config-2.1.ebuild,
+  -xkeyboard-config-2.2.1-r1.ebuild, -xkeyboard-config-2.3.ebuild,
+  -xkeyboard-config-2.4.1-r2.ebuild, -xkeyboard-config-2.4.1-r3.ebuild,
+  -xkeyboard-config-2.5.1.ebuild, -xkeyboard-config-2.5.ebuild:
+  Version bump. Switch to EAPI=5 and drop old.
 
   04 Jan 2013; Jeroen Roovers <jer@gentoo.org> xkeyboard-config-2.7.ebuild:
   Stable for HPPA (bug #440872).

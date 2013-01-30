@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/cyassl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.19 2012/12/28 01:55:02 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.20 2013/01/30 14:28:00 jer Exp $
+
+  30 Jan 2013; Jeroen Roovers <jer@gentoo.org> cyassl-2.4.6.ebuild:
+  Stable for HPPA (bug #448980).
 
 *cyassl-2.4.6 (28 Dec 2012)
 
