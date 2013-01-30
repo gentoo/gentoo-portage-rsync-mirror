@@ -1,6 +1,10 @@
 # ChangeLog for games-action/wordwarvi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/ChangeLog,v 1.11 2012/05/03 03:02:33 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/ChangeLog,v 1.12 2013/01/30 22:54:11 mr_bones_ Exp $
+
+  30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/wordwarvi-0.26-sound.patch, -wordwarvi-0.26.ebuild:
+  old
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> wordwarvi-0.26.ebuild,
   wordwarvi-1.00.ebuild:
@@ -54,4 +58,3 @@
   04 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +wordwarvi-0.22.ebuild:
   initial commit
-

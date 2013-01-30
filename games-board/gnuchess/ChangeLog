@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnuchess
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.30 2012/09/30 18:03:12 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.31 2013/01/30 22:36:55 mr_bones_ Exp $
+
+  30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -gnuchess-5.08.ebuild:
+  old
 
   30 Sep 2012; Raúl Porcel <armin76@gentoo.org> gnuchess-5.08.ebuild,
   gnuchess-6.0.2.ebuild:

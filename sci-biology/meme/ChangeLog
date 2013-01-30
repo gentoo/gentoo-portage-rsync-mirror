@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/meme
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.19 2013/01/30 16:13:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.21 2013/01/30 22:44:02 ago Exp $
+
+  30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> meme-4.8.1.ebuild:
+  Stable for x86, wrt bug #454698
+
+  30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> meme-4.8.1.ebuild:
+  Stable for amd64, wrt bug #454698
 
   30 Jan 2013; Justin Lecher <jlec@gentoo.org> -meme-4.3.0-r1.ebuild,
   -meme-4.4.0.ebuild, meme-4.8.1.ebuild, metadata.xml:
@@ -85,4 +91,3 @@
   24 Apr 2007; Olivier Fisette <ribosome@gentoo.org>
   +files/meme-3.5.4-Makefile.am.patch, +metadata.xml, +meme-3.5.4.ebuild:
   Initial import.
-

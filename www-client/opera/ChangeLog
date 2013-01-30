@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.794 2013/01/30 14:39:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.796 2013/01/30 22:44:12 ago Exp $
+
+  30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> opera-12.13_p1734.ebuild:
+  Stable for x86, wrt bug #454654
+
+  30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> opera-12.13_p1734.ebuild:
+  Stable for amd64, wrt bug #454654
 
   30 Jan 2013; Jeroen Roovers <jer@gentoo.org> opera-12.13_p1734.ebuild:
   Do not install the update checker.
