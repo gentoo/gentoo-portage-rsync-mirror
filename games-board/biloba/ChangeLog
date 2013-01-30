@@ -1,6 +1,10 @@
 # ChangeLog for games-board/biloba
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/ChangeLog,v 1.8 2012/11/17 20:31:52 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/ChangeLog,v 1.9 2013/01/30 20:05:12 mr_bones_ Exp $
+
+  30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -biloba-0.6.ebuild,
+  -files/biloba-0.6-no-X11-dep.patch, -files/biloba-0.6-not-windows.patch:
+  old
 
   17 Nov 2012; Agostino Sarubbo <ago@gentoo.org> biloba-0.9.3.ebuild:
   Add ~amd64, wrt bug #442736
