@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libmirage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.25 2013/01/28 08:11:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.26 2013/01/30 05:18:24 tetromino Exp $
+
+  30 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libmirage-2.0.0.ebuild, +files/libmirage-2.0.0-gtk-doc.patch:
+  Ensure gtk-doc and gobject-introspection really are optional at build time
+  (bug #454550, thanks to Cesko Voeten).
 
 *libmirage-2.0.0 (28 Jan 2013)
 

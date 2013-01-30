@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-2.0.0.ebuild,v 1.1 2013/01/28 00:21:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-2.0.0.ebuild,v 1.2 2013/01/30 05:18:24 tetromino Exp $
 
 EAPI="5"
 
@@ -29,6 +29,10 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
 
 src_prepare() {
+	# Make sure gtk-doc and gobject-introspection are optional
+	# https://sourceforge.net/p/cdemu/patches/16/
+	epatch "${FILESDIR}/${PN}-2.0.0-gtk-doc.patch"
+
 	sed -e 's/-DG_DISABLE_DEPRECATED//' -i CMakeLists.txt || die
 }
 
