@@ -218,7 +218,7 @@ lesspipe() {
 			# 1: ... or we know less will handle raw codes -- this will
 			#    not detect -seiRM, so set LESSCOLORIZER yourself
 			if [[ ${LESSCOLOR} == "2" ]] || [[ " ${LESS} " == *" -"[rR]" "* ]] ; then
-				${LESSCOLORIZER} "$1"
+				LESSQUIET=true ${LESSCOLORIZER} "$1"
 			fi
 		fi
 
@@ -233,7 +233,7 @@ if [[ -z $1 ]] ; then
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
 	cat <<-EOF
-		$Id: lesspipe.sh,v 1.49 2012/11/22 04:20:15 vapier Exp $
+		$Id: lesspipe.sh,v 1.50 2013/01/30 07:08:38 vapier Exp $
 		Copyright 2001-2010 Gentoo Foundation
 		Mike Frysinger <vapier@gentoo.org>
 		     (with plenty of ideas stolen from other projects/distros)

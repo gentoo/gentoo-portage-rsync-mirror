@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fcaps.eclass,v 1.2 2013/01/27 17:47:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fcaps.eclass,v 1.3 2013/01/30 07:15:49 vapier Exp $
 
 # @ECLASS: fcaps.eclass
 # @MAINTAINER:
@@ -133,6 +133,7 @@ fcaps() {
 					local fstype=$(stat -f -c %T "${file}")
 					ewarn "Could not set caps on '${file}' due to missing filesystem support."
 					ewarn "Make sure you enable XATTR support for '${fstype}' in your kernel."
+					ewarn "You might also have to enable the relevant FS_SECURITY option."
 				fi
 			else
 				# Sanity check that everything took.
