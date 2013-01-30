@@ -1,0 +1,12 @@
+# ChangeLog for dev-python/robotframework-selenium2library
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/robotframework-selenium2library/ChangeLog,v 1.1 2013/01/30 19:07:57 radhermit Exp $
+
+*robotframework-selenium2library-9999 (30 Jan 2013)
+*robotframework-selenium2library-1.1.0 (30 Jan 2013)
+
+  30 Jan 2013; Tim Harder <radhermit@gentoo.org>
+  +robotframework-selenium2library-1.1.0.ebuild,
+  +robotframework-selenium2library-9999.ebuild, +metadata.xml:
+  Initial import, ebuild by me.
+

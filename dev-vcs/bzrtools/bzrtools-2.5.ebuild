@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/bzrtools-2.5.ebuild,v 1.6 2012/12/30 14:02:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/bzrtools-2.5.ebuild,v 1.7 2013/01/30 19:01:17 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="https://launchpad.net/${PN}/stable/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 #IUSE="test"
 

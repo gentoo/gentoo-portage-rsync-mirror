@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/recoll
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.13 2012/11/20 20:38:56 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.14 2013/01/30 19:20:11 hwoarang Exp $
+
+*recoll-1.18.1 (30 Jan 2013)
+
+  30 Jan 2013; Markos Chandras <hwoarang@gentoo.org> +recoll-1.18.1.ebuild:
+  Version bump #454554. Don't require inotify or fam. Bug #452192
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org> recoll-1.17.3-r1.ebuild:
   Stable for x86, wrt bug #432782

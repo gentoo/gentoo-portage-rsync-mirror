@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-fatalis-data/arx-fatalis-data-1.21-r1.ebuild,v 1.2 2012/08/11 10:19:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-fatalis-data/arx-fatalis-data-1.21-r1.ebuild,v 1.3 2013/01/30 19:08:34 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.zenimax.com/arxfatalis/patches/1.21/ArxFatalis_1.21_MUL
 
 LICENSE="ArxFatalis-EULA-JoWooD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="mirror"
 

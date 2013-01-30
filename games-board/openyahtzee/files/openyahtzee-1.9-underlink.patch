@@ -1,8 +1,0 @@
---- src/Makefile.am.old	2011-06-20 13:41:03.264848550 +0200
-+++ src/Makefile.am	2011-06-20 13:42:39.667245673 +0200
-@@ -42,4 +42,4 @@
- 	openyahtzee.rc
- 
- AM_CXXFLAGS = @WX_CXXFLAGS@
--openyahtzee_LDFLAGS = @WX_LIBS@
-+openyahtzee_LDADD = @WX_LIBS@ -ldl
