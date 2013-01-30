@@ -64,3 +64,72 @@
  fi
  ])
  if test "x$want_geoip" = "xno"; then
+--- a/acinclude.m4
++++ b/acinclude.m4
+@@ -435,7 +435,7 @@
+ 	  # searches the specified directory.
+ 	  #
+ 	  CPPFLAGS="$CPPFLAGS -I$pcap_dir/include"
+-	  AC_WIRESHARK_ADD_DASH_L(LDFLAGS, $pcap_dir/lib)
++dnl	  AC_WIRESHARK_ADD_DASH_L(LDFLAGS, $pcap_dir/lib)
+ 	fi
+ 
+ 	# Pcap header check
+@@ -659,7 +659,7 @@
+ 	  wireshark_save_CPPFLAGS="$CPPFLAGS"
+ 	  CPPFLAGS="$CPPFLAGS -I$zlib_dir/include"
+ 	  wireshark_save_LIBS="$LIBS"
+-	  AC_WIRESHARK_ADD_DASH_L(LIBS, $zlib_dir/lib)
++dnl	  AC_WIRESHARK_ADD_DASH_L(LIBS, $zlib_dir/lib)
+ 	fi
+ 
+ 	#
+@@ -711,7 +711,7 @@
+ 			# of LIBS.
+ 			#
+ 			LIBS=""
+-			AC_WIRESHARK_ADD_DASH_L(LIBS, $zlib_dir/lib)
++dnl			AC_WIRESHARK_ADD_DASH_L(LIBS, $zlib_dir/lib)
+ 			LIBS="$LIBS -lz $wireshark_save_LIBS"
+ 		else
+ 			LIBS="-lz $LIBS"
+@@ -1162,7 +1162,8 @@
+ 		if test "x$ac_cv_enable_usr_local" = "xyes" ; then
+ 			withval=/usr/local
+ 			if test -d "$withval"; then
+-				AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
++dnl				AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
++				true
+ 			fi
+ 		fi
+ 	fi
+@@ -1193,7 +1194,8 @@
+ 		if test "x$ac_cv_enable_usr_local" = "xyes" ; then
+ 			withval=/usr/local
+ 			if test -d "$withval"; then
+-				AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
++dnl				AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
++				true
+ 			fi
+ 		fi
+ 	fi
+@@ -1224,7 +1226,8 @@
+ 		if test "x$ac_cv_enable_usr_local" = "xyes" ; then
+ 			withval=/usr/local
+ 			if test -d "$withval"; then
+-				AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
++dnl				AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
++				true
+ 			fi
+ 		fi
+ 	fi
+@@ -1508,7 +1511,8 @@
+ 		if test "x$ac_cv_enable_usr_local" = "xyes" ; then
+ 			withval=/usr/local
+ 			if test -d "$withval"; then
+-				AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
++dnl				AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
++				true
+ 			fi
+ 		fi
+ 	fi

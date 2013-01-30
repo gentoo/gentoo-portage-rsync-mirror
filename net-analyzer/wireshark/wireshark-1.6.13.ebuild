@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.13.ebuild,v 1.1 2013/01/30 01:56:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.13.ebuild,v 1.2 2013/01/30 03:40:50 jer Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -108,7 +108,7 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.6.6-gtk-pcap.patch \
-		"${FILESDIR}"/${PN}-1.8.1-ldflags.patch
+		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch
 	sed -i -e 's|.png||g' ${PN}.desktop || die
 	eautoreconf
 }
