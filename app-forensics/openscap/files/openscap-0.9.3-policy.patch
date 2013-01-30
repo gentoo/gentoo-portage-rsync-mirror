@@ -1,0 +1,23 @@
+https://bugs.gentoo.org/show_bug.cgi?id=450328
+--- src/XCCDF_POLICY/xccdf_policy.c.orig	2012-12-14 18:13:18.000000000 +0800
++++ src/XCCDF_POLICY/xccdf_policy.c	2013-01-07 22:31:10.417704932 +0800
+@@ -389,8 +389,8 @@
+         __attribute__nonnull__(policy);
+         __attribute__nonnull__(item);
+ 
+-	static bool TRUE = true;
+-	static bool FALSE = false;
++	static bool TRUE2 = true;
++	static bool FALSE2 = false;
+ 	bool result;
+ 
+ 	oscap_htable_detach(policy->selected_final, xccdf_item_get_id(item));
+@@ -408,7 +408,7 @@
+ 		xccdf_item_iterator_free(child_it);
+ 	}
+ 
+-	assume_ex(oscap_htable_add(policy->selected_final, xccdf_item_get_id(item), result ? &TRUE : &FALSE), NULL);
++	assume_ex(oscap_htable_add(policy->selected_final, xccdf_item_get_id(item), result ? &TRUE2 : &FALSE2), NULL);
+ }
+ 
+ /**

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.5.ebuild,v 1.5 2013/01/30 15:48:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.5.ebuild,v 1.7 2013/01/30 18:59:05 jer Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
@@ -13,7 +13,7 @@ SRC_URI="http://www.wireshark.org/download/src/all-versions/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0/${PV}"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="
 	adns +caps doc doc-pdf geoip gtk crypt ipv6 kerberos libadns lua +pcap
 	portaudio profile python selinux smi ssl zlib
@@ -108,7 +108,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-1.8.1-ldflags.patch \
+		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
 		"${FILESDIR}"/${PN}-1.8.3-gnutls3.patch
 	sed -i -e 's|.png||g' ${PN}.desktop || die
 	eautoreconf

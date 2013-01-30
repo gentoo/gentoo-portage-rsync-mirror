@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/pcgen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/ChangeLog,v 1.31 2013/01/22 17:29:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/ChangeLog,v 1.32 2013/01/30 18:49:10 mr_bones_ Exp $
+
+  30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -pcgen-5.16.4.ebuild:
+  old
 
   22 Jan 2013; Agostino Sarubbo <ago@gentoo.org> pcgen-6.00.0.ebuild:
   Stable for x86, wrt bug #452702

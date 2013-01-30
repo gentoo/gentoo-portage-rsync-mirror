@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.135 2013/01/09 22:10:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.136 2013/01/30 19:00:31 ago Exp $
+
+  30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> matplotlib-1.1.1.ebuild:
+  Stable for x86, wrt bug #441278
 
   09 Jan 2013; Justin Lecher <jlec@gentoo.org> matplotlib-1.2.0.ebuild,
   matplotlib-1.2.0-r1.ebuild, metadata.xml:

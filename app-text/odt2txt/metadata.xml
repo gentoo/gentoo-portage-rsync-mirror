@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<herd>proxy-maintainers</herd>
 <maintainer>
-<email>hwoarang@gentoo.org</email>
-<name>Markos Chandras</name>
-<description>Proxy maintainer. CC him on bugs</description>
-</maintainer>
-<maintainer>
-<email>corentin.labbe@geomatys.fr</email>
+<email>clabbe.montjoie@gmail.com</email>
 <name>LABBE Corentin (Montjoie)</name>
 <description>Maintainer. Assign bugs to him</description>
 </maintainer>

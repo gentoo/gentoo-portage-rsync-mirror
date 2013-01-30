@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/torcs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/ChangeLog,v 1.38 2013/01/30 18:06:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/ChangeLog,v 1.39 2013/01/30 18:32:18 mr_bones_ Exp $
+
+  30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/torcs-1.3.1-as-needed.patch, -files/torcs-1.3.1-libpng15.patch,
+  -files/torcs-1.3.1-no-automake.patch, -torcs-1.3.1.ebuild:
+  old
 
   30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> torcs-1.3.4.ebuild:
   Stable for x86, wrt bug #453384

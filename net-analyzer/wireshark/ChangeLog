@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.435 2013/01/30 15:48:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.437 2013/01/30 18:59:05 jer Exp $
+
+  30 Jan 2013; Jeroen Roovers <jer@gentoo.org>
+  files/wireshark-1.6.13-ldflags.patch, -files/wireshark-1.8.1-ldflags.patch,
+  wireshark-1.8.4.ebuild, wireshark-1.8.5.ebuild:
+  Simplify LDFLAGS patch.
+
+  30 Jan 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.8.5.ebuild:
+  Stable for HPPA (bug #454606).
 
   30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> wireshark-1.6.13.ebuild,
   wireshark-1.8.5.ebuild:

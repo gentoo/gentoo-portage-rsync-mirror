@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/zsnes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.55 2012/09/23 08:49:34 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.56 2013/01/30 18:50:27 mr_bones_ Exp $
+
+  30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -zsnes-1.51-r2.ebuild:
+  old
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> zsnes-1.51-r4.ebuild:
   x86 stable wrt bug #432074

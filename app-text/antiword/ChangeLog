@@ -1,6 +1,9 @@
 # ChangeLog for app-text/antiword
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.46 2012/09/20 15:53:03 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.47 2013/01/30 18:54:47 hwoarang Exp $
+
+  30 Jan 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Update metadata.xml
 
   20 Sep 2012; Fabian Groffen <grobian@gentoo.org> antiword-0.37.ebuild:
   Redo patches to work around behaviour change in patch-2.7, bug #435492

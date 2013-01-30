@@ -1,6 +1,14 @@
 # ChangeLog for app-forensics/ovaldi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ChangeLog,v 1.3 2012/05/22 20:54:50 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ChangeLog,v 1.4 2013/01/30 18:53:05 hwoarang Exp $
+
+*ovaldi-5.10.1.4 (30 Jan 2013)
+
+  30 Jan 2013; Markos Chandras <hwoarang@gentoo.org>
+  +files/ovaldi-5.10.1.4-disable-selinux-probes.patch,
+  +files/ovaldi-5.10.1.4-strnicmp.patch, +files/ovaldi-5.10.1.4-xerces3.patch,
+  +ovaldi-5.10.1.4.ebuild, metadata.xml:
+  Version bump. Bug #451694 thanks to clabbe.montjoie@gmail.com
 
 *ovaldi-5.10.1.2 (22 May 2012)
 
@@ -24,4 +32,3 @@
   +files/rpmdb.patch, +files/use_local_rpmdb.patch, +metadata.xml:
   Initial commit. Moved from sunrise. Thanks to Anton Bolshakov for the
   original ebuild and LABBE Corentin for proxy-maintaining it. Bug #225065
-

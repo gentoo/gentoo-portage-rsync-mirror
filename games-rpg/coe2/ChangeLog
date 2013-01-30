@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/coe2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/coe2/ChangeLog,v 1.4 2013/01/05 20:37:51 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/coe2/ChangeLog,v 1.5 2013/01/30 18:52:25 mr_bones_ Exp $
+
+  30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -coe2-2007.ebuild:
+  old
 
 *coe2-2007-r1 (05 Jan 2013)
 
@@ -18,4 +21,3 @@
   29 Aug 2007; Tupone Alfredo <tupone@gentoo.org> +metadata.xml,
   +coe2-2007.ebuild:
   New package, requested via bug #181732 by Paul Bredbury
-
