@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tesseract
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.38 2012/12/16 14:55:42 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.39 2013/01/30 08:02:15 tomka Exp $
+
+  30 Jan 2013; Thomas Kahle <tomka@gentoo.org>
+  +files/tesseract-3.02-automake-compat.patch, -tesseract-3.01.ebuild,
+  tesseract-3.02.ebuild:
+  remove old, automake compatibility (bug 454506). Thanks Helmut Jarausch.
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #260683

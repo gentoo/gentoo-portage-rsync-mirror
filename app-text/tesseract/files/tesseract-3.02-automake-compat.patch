@@ -1,0 +1,11 @@
+--- configure.ac.ORIG	2013-01-25 10:24:52.713068658 +0100
++++ configure.ac	2013-01-29 12:05:31.582491749 +0100
+@@ -223,7 +223,7 @@
+ # TODO(luc) Resolve this issue.
+ #AM_INIT_AUTOMAKE(dist-zip)
+ AM_INIT_AUTOMAKE
+-AM_CONFIG_HEADER(config_auto.h:config/config.h.in)
++AC_CONFIG_HEADERS(config_auto.h:config/config.h.in)
+ #AM_PROG_CC_C_O
+ AM_MAINTAINER_MODE
+ # Need to tell automake if Visual C++ is being used:
