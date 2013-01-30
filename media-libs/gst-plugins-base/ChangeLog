@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.195 2013/01/22 19:55:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.196 2013/01/30 00:08:42 aballier Exp $
+
+  30 Jan 2013; Alexis Ballier <aballier@gentoo.org>
+  gst-plugins-base-1.0.5-r1.ebuild:
+  keyword ~amd64-fbsd
 
   22 Jan 2013; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-base-1.0.5-r1.ebuild:

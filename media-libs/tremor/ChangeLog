@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/tremor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/ChangeLog,v 1.6 2013/01/22 19:53:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/ChangeLog,v 1.7 2013/01/30 00:02:01 aballier Exp $
+
+  30 Jan 2013; Alexis Ballier <aballier@gentoo.org>
+  tremor-0_pre20120120.ebuild:
+  keyword ~amd64-fbsd
 
   22 Jan 2013; Jeroen Roovers <jer@gentoo.org> tremor-0_pre20120120.ebuild:
   Marked ~hppa (bug #453200).

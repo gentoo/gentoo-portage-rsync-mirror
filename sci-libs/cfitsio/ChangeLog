@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cfitsio
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.59 2012/10/07 09:06:50 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.60 2013/01/30 00:21:51 bicatali Exp $
+
+  30 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org> -cfitsio-3.290.ebuild,
+  -cfitsio-3.300-r1.ebuild:
+  Removed old, re-digest from new tar ball
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, #24135.
