@@ -1,69 +1,3 @@
---- a/configure.in
-+++ b/configure.in
-@@ -652,7 +652,8 @@
- 		#
- 		# Arrange that we search for libraries in "$prefix/lib".
- 		#
--		AC_WIRESHARK_ADD_DASH_L(LDFLAGS, $prefix/lib)
-+# We do not need this - JeR (possibly bug #394479)
-+#		AC_WIRESHARK_ADD_DASH_L(LDFLAGS, $prefix/lib)
- 	else
- 		AC_MSG_RESULT(no)
- 	fi
-@@ -648,7 +648,7 @@
- 		#
- 		# Arrange that we search for libraries in "/usr/local/lib".
- 		#
--		AC_WIRESHARK_ADD_DASH_L(LDFLAGS, /usr/local/lib)
-+#		AC_WIRESHARK_ADD_DASH_L(LDFLAGS, /usr/local/lib)
- 	else
- 		AC_MSG_RESULT(no)
- 	fi
-@@ -1469,7 +1469,7 @@
- 	want_libcap=yes
- elif test -d "$withval"; then
- 	want_libcap=yes
--	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
-+#	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
- fi
- ])
- if test "x$with_libcap" = "xno" ; then
-@@ -1500,7 +1500,7 @@
- 	want_ssl=yes
- elif test -d "$withval"; then
- 	want_ssl=yes
--	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
-+#	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
- fi
- ],[
- 	want_ssl=no
-@@ -1565,7 +1565,7 @@
- 	want_c_ares=yes
- elif test -d "$withval"; then
- 	want_c_ares=yes
--	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
-+#	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
- fi
- ])
- if test "x$want_c_ares" = "xno" ; then
-@@ -1590,7 +1590,7 @@
- 	want_adns=yes
- elif test -d "$withval"; then
- 	want_adns=yes
--	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
-+#	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
- fi
- ])
- if test "x$want_adns" = "xno" -o "x$have_good_c_ares" = "xyes" ; then
-@@ -1615,7 +1615,7 @@
- 	want_geoip=yes
- elif test -d "$withval"; then
- 	want_geoip=yes
--	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
-+#	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
- fi
- ])
- if test "x$want_geoip" = "xno"; then
 --- a/acinclude.m4
 +++ b/acinclude.m4
 @@ -435,7 +435,7 @@
@@ -133,3 +67,70 @@
  			fi
  		fi
  	fi
+--- a/configure.in
++++ b/configure.in
+@@ -652,7 +652,8 @@
+ 		#
+ 		# Arrange that we search for libraries in "$prefix/lib".
+ 		#
+-		AC_WIRESHARK_ADD_DASH_L(LDFLAGS, $prefix/lib)
++# We do not need this - JeR (possibly bug #394479)
++#		AC_WIRESHARK_ADD_DASH_L(LDFLAGS, $prefix/lib)
+ 	else
+ 		AC_MSG_RESULT(no)
+ 	fi
+@@ -648,7 +648,7 @@
+ 		#
+ 		# Arrange that we search for libraries in "/usr/local/lib".
+ 		#
+-		AC_WIRESHARK_ADD_DASH_L(LDFLAGS, /usr/local/lib)
++#		AC_WIRESHARK_ADD_DASH_L(LDFLAGS, /usr/local/lib)
+ 	else
+ 		AC_MSG_RESULT(no)
+ 	fi
+@@ -1469,7 +1469,7 @@
+ 	want_libcap=yes
+ elif test -d "$withval"; then
+ 	want_libcap=yes
+-	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
++#	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
+ fi
+ ])
+ if test "x$with_libcap" = "xno" ; then
+@@ -1500,7 +1500,7 @@
+ 	want_ssl=yes
+ elif test -d "$withval"; then
+ 	want_ssl=yes
+-	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
++#	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
+ fi
+ ],[
+ 	want_ssl=no
+@@ -1565,7 +1565,7 @@
+ 	want_c_ares=yes
+ elif test -d "$withval"; then
+ 	want_c_ares=yes
+-	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
++#	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
+ fi
+ ])
+ if test "x$want_c_ares" = "xno" ; then
+@@ -1590,7 +1590,7 @@
+ 	want_adns=yes
+ elif test -d "$withval"; then
+ 	want_adns=yes
+-	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
++#	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
+ fi
+ ])
+ if test "x$want_adns" = "xno" -o "x$have_good_c_ares" = "xyes" ; then
+@@ -1615,7 +1615,7 @@
+ 	want_geoip=yes
+ elif test -d "$withval"; then
+ 	want_geoip=yes
+-	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
++#	AC_WIRESHARK_ADD_DASH_L(LDFLAGS, ${withval}/lib)
+ fi
+ ])
+ if test "x$want_geoip" = "xno"; then
+

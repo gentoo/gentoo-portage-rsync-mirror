@@ -1,6 +1,19 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.428 2013/01/30 03:40:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.431 2013/01/30 04:28:06 zerochaos Exp $
+
+  30 Jan 2013; Rick Farina <zerochaos@gentoo.org> wireshark-1.6.13.ebuild,
+  wireshark-1.8.5.ebuild:
+  bumping eapi for subslot support to enable automatic rebuilding of external
+  modules
+
+  30 Jan 2013; Jeroen Roovers <jer@gentoo.org>
+  files/wireshark-1.8.1-ldflags.patch:
+  Change file order in patch to match equivalent 1.6.13 patch.
+
+  30 Jan 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.6.13.ebuild,
+  wireshark-1.8.5.ebuild:
+  Run enewuser in pkg_postinst() where it is used.
 
   30 Jan 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.6.12.ebuild,
   wireshark-1.6.13.ebuild, +files/wireshark-1.6.13-ldflags.patch,
