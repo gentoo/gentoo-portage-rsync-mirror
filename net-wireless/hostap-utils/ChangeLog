@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/hostap-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-utils/ChangeLog,v 1.39 2013/01/26 11:51:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-utils/ChangeLog,v 1.40 2013/01/30 18:22:22 ago Exp $
+
+  30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> hostap-utils-0.4.7-r1.ebuild:
+  Stable for x86, wrt bug #453106
 
   26 Jan 2013; Agostino Sarubbo <ago@gentoo.org> hostap-utils-0.4.7-r1.ebuild:
   Stable for ppc, wrt bug #453106

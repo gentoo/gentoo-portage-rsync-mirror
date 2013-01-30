@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7417 2013/01/29 21:16:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7418 2013/01/30 18:26:16 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Jan 2013; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Unmask www-client/opera-12.13 (bug #454654).
 
   29 Jan 2013; Michał Górny <mgorny@gentoo.org>
   desc/python_single_target.desc, desc/python_targets.desc:

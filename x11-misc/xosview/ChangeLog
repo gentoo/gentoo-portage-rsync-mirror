@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xosview
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.65 2013/01/29 14:38:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.66 2013/01/30 18:07:14 ago Exp $
+
+  30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> xosview-1.12.ebuild:
+  Stable for x86, wrt bug #454424
 
   29 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> xosview-1.12.ebuild:
   Stable on amd64, wrt bug #454424

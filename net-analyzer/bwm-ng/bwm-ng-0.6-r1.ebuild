@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/bwm-ng-0.6-r1.ebuild,v 1.2 2013/01/25 17:17:54 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/bwm-ng-0.6-r1.ebuild,v 1.3 2013/01/30 18:22:11 ago Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ DESCRIPTION="Bandwidth Monitor NG is a small and simple console-based bandwidth 
 SRC_URI="http://www.gropp.org/bwm-ng/${P}.tar.gz"
 HOMEPAGE="http://www.gropp.org/"
 
-KEYWORDS="amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="html csv"

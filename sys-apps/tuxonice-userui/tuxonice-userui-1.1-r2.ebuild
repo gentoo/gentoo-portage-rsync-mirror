@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.1-r2.ebuild,v 1.4 2013/01/27 14:05:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.1-r2.ebuild,v 1.5 2013/01/30 18:06:38 ago Exp $
 
 EAPI=4
 inherit toolchain-funcs eutils
@@ -12,7 +12,7 @@ SRC_URI="http://tuxonice.net/files/${P}.tar.gz -> ${P}.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE="fbsplash"
 DEPEND="fbsplash? (

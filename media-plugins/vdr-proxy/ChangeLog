@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-proxy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-proxy/ChangeLog,v 1.9 2012/06/12 19:26:34 hd_brummy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-proxy/ChangeLog,v 1.10 2013/01/30 18:08:36 ago Exp $
+
+  30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> vdr-proxy-0.1.4-r1.ebuild:
+  Stable for x86, wrt bug #441386
 
 *vdr-proxy-0.1.4-r1 (12 Jun 2012)
 
@@ -44,4 +47,3 @@
   05 Mar 2006; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
   +vdr-proxy-0.1.1.ebuild:
   Initial import of ebuild written by me.
-

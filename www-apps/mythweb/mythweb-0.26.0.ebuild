@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.26.0.ebuild,v 1.1 2013/01/24 00:23:02 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.26.0.ebuild,v 1.2 2013/01/30 18:23:38 rich0 Exp $
 
 EAPI=4
 
@@ -19,8 +19,8 @@ SRC_URI="ftp://ftp.osuosl.org/pub/mythtv/${MY_P}.tar.bz2
 IUSE=""
 KEYWORDS="~amd64 ~ppc ~x86"
 
-RDEPEND="dev-lang/php:5.3[json,mysql,session,posix]
-	virtual/httpd-php:5.3
+RDEPEND="dev-lang/php[json,mysql,session,posix]
+	virtual/httpd-php
 	dev-perl/DBI
 	dev-perl/DBD-mysql
 	dev-perl/HTTP-Date
