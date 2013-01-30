@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/open-cobol
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/open-cobol/ChangeLog,v 1.13 2008/09/06 11:33:17 pchrist Exp $
+# Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/open-cobol/ChangeLog,v 1.14 2013/01/30 05:52:54 patrick Exp $
+
+*open-cobol-1.1 (30 Jan 2013)
+
+  30 Jan 2013; Patrick Lauer <patrick@gentoo.org> +open-cobol-1.1.ebuild,
+  metadata.xml:
+  Bump
 
   06 Sep 2008; Panagiotis Christopoulos <pchrist@gentoo.org>
   open-cobol-1.0.ebuild:
