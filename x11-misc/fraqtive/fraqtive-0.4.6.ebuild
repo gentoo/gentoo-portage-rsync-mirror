@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/fraqtive-0.4.5.ebuild,v 1.3 2013/01/30 20:50:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/fraqtive-0.4.6.ebuild,v 1.1 2013/01/30 20:50:19 jer Exp $
 
 EAPI=4
-
 inherit eutils gnome2-utils qt4-r2
 
 DESCRIPTION="an open source, multi-platform generator of the Mandelbrot family fractals"
@@ -15,14 +14,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="sse2"
 
-RDEPEND="x11-libs/qt-core:4
+DEPEND="
+	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
-	x11-libs/qt-opengl:4"
-DEPEND="${RDEPEND}"
+	x11-libs/qt-opengl:4
+"
+RDEPEND="${DEPEND}"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-qt-4.8.patch
-
+src_configure() {
 	local conf="release"
 
 	if use sse2; then
@@ -35,6 +34,8 @@ src_prepare() {
 	echo "PREFIX = ${EPREFIX}/usr" >> "${S}"/config.pri
 	# Don't strip wrt #252096
 	echo "QMAKE_STRIP =" >> "${S}"/config.pri
+
+	qt4-r2_src_configure
 }
 
 pkg_preinst() {
