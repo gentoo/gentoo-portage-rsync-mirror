@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.6.ebuild,v 1.3 2012/10/07 18:52:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.6-r1.ebuild,v 1.1 2013/01/30 15:36:43 flameeyes Exp $
 
-EAPI=4
+EAPI=5
 
 inherit libtool multilib eutils pam toolchain-funcs flag-o-matic db-use autotools
 
@@ -37,6 +37,7 @@ DEPEND="${RDEPEND}
 PDEPEND="sys-auth/pambase
 	vim-syntax? ( app-vim/pam-syntax )"
 RDEPEND="${RDEPEND}
+	!<sys-apps/openrc-0.11.8
 	!sys-auth/openpam
 	!sys-auth/pam_userdb"
 
@@ -125,19 +126,19 @@ src_configure() {
 }
 
 src_compile() {
-	emake sepermitlockdir="${EPREFIX}/var/run/sepermit" || die "emake failed"
+	emake sepermitlockdir="${EPREFIX}/run/sepermit"
 }
 
 src_test() {
 	# explicitly allow parallel-build during testing
-	emake sepermitlockdir="${EPREFIX}/var/run/sepermit" check || die "emake check failed"
+	emake sepermitlockdir="${EPREFIX}/run/sepermit" check
 }
 
 src_install() {
 	local lib
 
 	emake DESTDIR="${D}" install \
-		 sepermitlockdir="${EPREFIX}/var/run/sepermit" || die "make install failed"
+		 sepermitlockdir="${EPREFIX}/var//sepermit"
 
 	# Need to be suid
 	fperms u+s /sbin/unix_chkpwd
@@ -162,6 +163,11 @@ src_install() {
 	# modules, and libpam is installed as a shared object only, so we
 	# don't need them for static linking either.
 	find "${D}" -name '*.la' -delete
+
+	dodir /usr/lib/tmpfiles.d
+	cat - > "${D}"/usr/lib/tmpfiles.d/${CATEGORY}:${PN}:${SLOT}.conf <<EOF
+d /run/sepermit 0755 root root
+EOF
 }
 
 pkg_preinst() {
