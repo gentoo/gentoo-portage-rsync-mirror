@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.653 2013/01/29 21:12:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.654 2013/01/30 10:42:25 mgorny Exp $
+
+  30 Jan 2013; Michał Górny <mgorny@gentoo.org> python-r1.eclass,
+  python-single-r1.eclass:
+  Use (-) USE-defaults to reduce issues from removing flags.
 
   29 Jan 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Disable pypy1.8 globally.

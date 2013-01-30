@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.39 2013/01/27 16:40:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.40 2013/01/30 10:42:25 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -128,7 +128,7 @@ fi
 #
 # Example value:
 # @CODE
-# python_targets_python2_6?,python_targets_python2_7?
+# python_targets_python2_6(-)?,python_targets_python2_7(-)?
 # @CODE
 
 _python_set_globals() {
@@ -150,7 +150,7 @@ _python_set_globals() {
 	fi
 
 	local flags=( "${impls[@]/#/python_targets_}" )
-	local optflags=${flags[@]/%/?}
+	local optflags=${flags[@]/%/(-)?}
 
 	# A nice QA trick here. Since a python-single-r1 package has to have
 	# at least one PYTHON_SINGLE_TARGET enabled (REQUIRED_USE),
@@ -229,7 +229,7 @@ python_gen_usedep() {
 		for pattern; do
 			if [[ ${impl} == ${pattern} ]]; then
 				matches+=(
-					"python_targets_${impl}?"
+					"python_targets_${impl}(-)?"
 					"-python_single_target_${impl}(-)"
 				)
 				break

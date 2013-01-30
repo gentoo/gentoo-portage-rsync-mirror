@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare setup
-DEPEND=python_single_target_python2_6? ( dev-lang/python:2.6[sqlite] ) python_single_target_python2_7? ( dev-lang/python:2.7[sqlite] ) dev-python/python-exec[python_targets_python2_6?,python_targets_python2_7?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-lang/swig sys-devel/gettext sys-apps/texinfo virtual/pkgconfig dev-libs/libxslt app-text/txt2man >=app-text/docbook-xsl-stylesheets-1.60
+DEPEND=python_single_target_python2_6? ( dev-lang/python:2.6[sqlite] ) python_single_target_python2_7? ( dev-lang/python:2.7[sqlite] ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-lang/swig sys-devel/gettext sys-apps/texinfo virtual/pkgconfig dev-libs/libxslt app-text/txt2man >=app-text/docbook-xsl-stylesheets-1.60
 DESCRIPTION=GNU Solfege is a program written to help you practice ear training.
 EAPI=5
 HOMEPAGE=http://www.solfege.org
 IUSE=alsa oss python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-3
-RDEPEND=python_single_target_python2_6? ( dev-lang/python:2.6[sqlite] ) python_single_target_python2_7? ( dev-lang/python:2.7[sqlite] ) dev-python/python-exec[python_targets_python2_6?,python_targets_python2_7?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] >=dev-python/pygtk-2.12 gnome-base/librsvg alsa? ( dev-python/pyalsa ) !oss? ( media-sound/timidity++ )
+RDEPEND=python_single_target_python2_6? ( dev-lang/python:2.6[sqlite] ) python_single_target_python2_7? ( dev-lang/python:2.7[sqlite] ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] >=dev-python/pygtk-2.12 gnome-base/librsvg alsa? ( dev-python/pyalsa ) !oss? ( media-sound/timidity++ )
 SLOT=0
 SRC_URI=mirror://sourceforge/solfege/solfege-3.20.7.tar.gz
-_eclasses_=multilib	ded93e450747134a079e647d888aa80b	python-single-r1	bb9df2bab825ac40550d15fb740159d4	python-utils-r1	8e94ca6ef82c71c1ccf8e97276525491	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	ded93e450747134a079e647d888aa80b	python-single-r1	ac5bf9438dc6ee497650a74d7a1402c2	python-utils-r1	8e94ca6ef82c71c1ccf8e97276525491	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=c45809401e10e7f6a5fbccc98455deac

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-vcs/git
 SLOT=0
 SRC_URI=mirror://bitbucket/mgorny/git-bz/downloads/git-bz-0.12.12.15.tar.bz2
-_eclasses_=multilib	ded93e450747134a079e647d888aa80b	python-r1	29f30620d357e98129cccc275fd1d949	python-utils-r1	8e94ca6ef82c71c1ccf8e97276525491	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	ded93e450747134a079e647d888aa80b	python-r1	048b50bedc7713734694d95a872490a6	python-utils-r1	8e94ca6ef82c71c1ccf8e97276525491	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=6ff1bc0d8bb58c5489b6a646c6f0fbf6

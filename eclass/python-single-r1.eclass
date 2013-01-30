@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.14 2013/01/21 19:28:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.15 2013/01/30 10:42:25 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -130,7 +130,7 @@ fi
 #
 # Example value:
 # @CODE
-# python_targets_python2_7?,python_single_target_python2_7(+)?
+# python_targets_python2_7(-)?,python_single_target_python2_7(+)?
 # @CODE
 
 _python_single_set_globals() {
@@ -159,7 +159,7 @@ _python_single_set_globals() {
 	local flags_mt=( "${impls[@]/#/python_targets_}" )
 	local flags=( "${impls[@]/#/python_single_target_}" )
 
-	local optflags=${flags_mt[@]/%/?}
+	local optflags=${flags_mt[@]/%/(-)?}
 	optflags+=,${flags[@]/%/(+)?}
 
 	IUSE="${flags_mt[*]} ${flags[*]}"
