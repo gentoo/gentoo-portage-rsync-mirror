@@ -1,0 +1,9 @@
+# ChangeLog for net-dns/validns
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/validns/ChangeLog,v 1.1 2013/01/30 18:01:16 wschlich Exp $
+
+*validns-0.6 (30 Jan 2013)
+
+  30 Jan 2013; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
+  +validns-0.6.ebuild:
+  initial import, ebuild by Tom Hendrikx <tom@whyscream.net>
