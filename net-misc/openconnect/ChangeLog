@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openconnect
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.7 2013/01/04 22:20:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.9 2013/01/30 15:29:35 ago Exp $
+
+  30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> openconnect-4.07-r3.ebuild:
+  Stable for x86, wrt bug #453936
+
+  30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> openconnect-4.07-r3.ebuild:
+  Stable for amd64, wrt bug #453936
 
 *openconnect-4.07-r3 (04 Jan 2013)
 

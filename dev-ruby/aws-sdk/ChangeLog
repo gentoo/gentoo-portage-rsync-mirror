@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/aws-sdk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/ChangeLog,v 1.16 2012/11/07 22:28:49 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/ChangeLog,v 1.17 2013/01/30 15:21:49 flameeyes Exp $
+
+*aws-sdk-1.8.1.1 (30 Jan 2013)
+
+  30 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org> +aws-sdk-1.8.1.1.ebuild,
+  aws-sdk-1.7.1.ebuild:
+  Version bump; drop dependency on httparty; drop ree18 support; use the new
+  github fetch URL so that RUBY_S is easier.
 
 *aws-sdk-1.7.1 (07 Nov 2012)
 

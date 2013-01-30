@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.107 2013/01/26 11:51:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.108 2013/01/30 15:05:36 jer Exp $
+
+  30 Jan 2013; Jeroen Roovers <jer@gentoo.org> radvd-1.9.2-r1.ebuild:
+  Stable for HPPA (bug #453296).
 
   26 Jan 2013; Agostino Sarubbo <ago@gentoo.org> radvd-1.9.2-r1.ebuild:
   Stable for ppc, wrt bug #453296

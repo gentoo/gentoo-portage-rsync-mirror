@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ttcp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ChangeLog,v 1.23 2012/10/12 10:16:50 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ChangeLog,v 1.25 2013/01/30 15:29:26 ago Exp $
+
+  30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> ttcp-1.12-r2.ebuild:
+  Stable for x86, wrt bug #454016
+
+  30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> ttcp-1.12-r2.ebuild:
+  Stable for amd64, wrt bug #454016
 
   12 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> ttcp-1.12.ebuild,
   ttcp-1.12-r1.ebuild:
