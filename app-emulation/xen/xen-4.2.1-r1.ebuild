@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.1.ebuild,v 1.1 2013/01/24 09:18:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.1-r1.ebuild,v 1.1 2013/01/30 12:12:31 idella4 Exp $
 
-EAPI="4"
+EAPI=5
+
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 if [[ $PV == *9999 ]]; then
 	KEYWORDS=""
@@ -15,7 +17,7 @@ else
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
 fi
 
-inherit mount-boot flag-o-matic toolchain-funcs ${live_eclass}
+inherit mount-boot flag-o-matic python-single-r1 toolchain-funcs ${live_eclass}
 
 DESCRIPTION="The Xen virtual machine monitor"
 HOMEPAGE="http://xen.org/"
@@ -38,6 +40,7 @@ REQUIRED_USE="
 	"
 
 pkg_setup() {
+	python-single-r1_pkg_setup
 	if [[ -z ${XEN_TARGET_ARCH} ]]; then
 		if use x86 && use amd64; then
 			die "Confusion! Both x86 and amd64 are set in your use flags!"
@@ -59,9 +62,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-
-	# Drop .config and Fix gcc-4.6
-	epatch  "${FILESDIR}"/${PN/-pvgrub/}-4-fix_dotconfig-gcc.patch	# Drop .config
+	# Drop .config and fix gcc-4.6
+	epatch  "${FILESDIR}"/${PN/-pvgrub/}-4-fix_dotconfig-gcc.patch
 
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
@@ -78,6 +80,11 @@ src_prepare() {
 
 	# not strictly necessary to fix this
 	sed -i 's/, "-Werror"//' "${S}/tools/python/setup.py" || die "failed to re-set setup.py"
+
+	#Security patches
+	epatch "${FILESDIR}"/${PN}-4-CVE-2012-5634-XSA-33.patch \
+                "${FILESDIR}"/${PN}-4-CVE-2013-0151-XSA-34_35.patch \
+                "${FILESDIR}"/${PN}-4-CVE-2013-0154-XSA-37.patch
 }
 
 src_configure() {

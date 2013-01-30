@@ -7,7 +7,7 @@ diff -ur xen-4.2.0.orig/extras/mini-os/minios.mk xen-4.2.0/extras/mini-os/minios
  # Define some default flags.
  # NB. '-Wcast-qual' is nasty, so I omitted it.
 -DEF_CFLAGS += -fno-builtin -Wall -Werror -Wredundant-decls -Wno-format -Wno-redundant-decls
-+DEF_CFLAGS += -fno-builtin -Wall  -Wredundant-decls -Wno-format -Wno-redundant-decls
++DEF_CFLAGS += -fno-builtin -Wall -Wredundant-decls -Wno-format -Wno-redundant-decls
  DEF_CFLAGS += $(call cc-option,$(CC),-fno-stack-protector,)
  DEF_CFLAGS += $(call cc-option,$(CC),-fgnu89-inline)
  DEF_CFLAGS += -Wstrict-prototypes -Wnested-externs -Wpointer-arith -Winline
@@ -19,7 +19,7 @@ diff -ur xen-4.2.0.orig/tools/libxc/Makefile xen-4.2.0/tools/libxc/Makefile
  -include $(XEN_TARGET_ARCH)/Makefile
 
 -CFLAGS   += -Werror -Wmissing-prototypes
-+CFLAGS   +=  -Wmissing-prototypes
++CFLAGS   += -Wmissing-prototypes
  CFLAGS   += -I. $(CFLAGS_xeninclude)
 
  # Needed for posix_fadvise64() in xc_linux.c

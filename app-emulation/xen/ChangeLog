@@ -1,6 +1,33 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.101 2013/01/24 09:18:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.102 2013/01/30 12:12:31 idella4 Exp $
+
+*xen-4.2.1-r1 (30 Jan 2013)
+*xen-4.2.0-r1 (30 Jan 2013)
+
+  30 Jan 2013; Ian Delaney <idella4@gentoo.org>
+  +files/xen-4-CVE-2012-4535-XSA-20.patch,
+  +files/xen-4-CVE-2012-4537-XSA-22.patch,
+  +files/xen-4-CVE-2012-4538-XSA-23.patch,
+  +files/xen-4-CVE-2012-4539-XSA-24.patch,
+  +files/xen-4-CVE-2012-5510-XSA-26.patch,
+  +files/xen-4-CVE-2012-5513-XSA-29.patch,
+  +files/xen-4-CVE-2012-5514-XSA-30.patch,
+  +files/xen-4-CVE-2012-5515-XSA-31.patch,
+  +files/xen-4-CVE-2012-5525-XSA-32.patch,
+  +files/xen-4-CVE-2012-5634-XSA-33.patch,
+  +files/xen-4-CVE-2013-0151-XSA-27_34_35.patch,
+  +files/xen-4-CVE-2013-0151-XSA-34_35.patch,
+  +files/xen-4-CVE-2013-0154-XSA-37.patch, +xen-4.2.0-r1.ebuild,
+  +xen-4.2.1-r1.ebuild, -xen-4.2.0.ebuild, -xen-4.2.1.ebuild,
+  files/xen-4-fix_dotconfig-gcc.patch:
+  revbumps; -4.2.0-r1, eclass python-single-r1 added to anable & ensure a build
+  by py2 fixing Bug #453930, PYTHON_COMPAT set accordingly, EAPI->5, sed
+  statements reduced to patches, many sec. patches added addressing Bugs
+  #445254, #431156, #454314. -4.2.1-r1, changes mirrored in those of -4.2.0-r1,
+  addition of 3 sec. patches that pertain to 4.2.1. Dropped 4.2.0 & 4.2.1 by
+  virtue of being prone to failure in form of Bug #453930. Sees 4.2.0-r1 ready
+  for testing for stable
 
 *xen-4.2.1 (24 Jan 2013)
 
