@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/fbzx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/ChangeLog,v 1.29 2012/10/30 11:11:44 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/ChangeLog,v 1.30 2013/01/30 22:26:56 mr_bones_ Exp $
+
+  30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -fbzx-2.4.1.ebuild,
+  -files/fbzx-2.4.1-build.patch:
+  old
 
   30 Oct 2012; <ago@gentoo.org> fbzx-2.10.0.ebuild:
   Stable for amd64, wrt bug #437312

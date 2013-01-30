@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/fceux
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.16 2012/10/26 07:31:49 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.17 2013/01/30 22:28:01 mr_bones_ Exp $
+
+  30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -fceux-2.1.4a.ebuild,
+  -files/fceux-2.1.4a-ovflfix.patch, -files/fceux-2.1.4a-underlink.patch:
+  old
 
   26 Oct 2012; Alfredo Tupone <tupone@gentoo.org> fceux-2.1.5.ebuild,
   +files/fceux-2.1.5-gcc47.patch:
@@ -65,4 +69,3 @@
   29 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org> +fceux-2.1.1.ebuild,
   +metadata.xml:
   initial commit - ebuild submitted by Denilson via bug #235860
-
