@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/bas
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/bas/ChangeLog,v 1.4 2011/12/15 22:46:21 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/bas/ChangeLog,v 1.5 2013/01/30 06:51:04 patrick Exp $
+
+*bas-2.3 (30 Jan 2013)
+
+  30 Jan 2013; Patrick Lauer <patrick@gentoo.org> +bas-2.3.ebuild,
+  +files/bas-2.3-configure.patch:
+  Bump
 
   15 Dec 2011; Pacho Ramos <pacho@gentoo.org> -bas-2.1.ebuild, metadata.xml:
   Drop maintainer due retirement, bug #353461; drop old.
@@ -18,4 +24,3 @@
   02 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> +bas-2.1.ebuild,
   +files/bas-2.1-configure.patch, +files/bas-2.1-makefile.patch:
   Initial commit wrt #353356 by Kevin McCarthy.
-

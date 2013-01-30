@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ferite
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.32 2012/11/26 22:11:54 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.33 2013/01/30 06:41:34 patrick Exp $
+
+*ferite-1.1.17 (30 Jan 2013)
+
+  30 Jan 2013; Patrick Lauer <patrick@gentoo.org> +ferite-1.1.17.ebuild:
+  Bump
 
   26 Nov 2012; Ulrich Müller <ulm@gentoo.org> ferite-1.0.2.ebuild:
   Fix LICENSE, BSD (3-clause) according to LICENSE file in tarball.
