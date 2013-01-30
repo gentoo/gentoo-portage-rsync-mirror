@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.18-r1.ebuild,v 1.2 2011/11/26 18:51:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.18-r1.ebuild,v 1.3 2013/01/30 00:44:35 jer Exp $
 
 EAPI="2"
 
@@ -44,4 +44,7 @@ src_install() {
 
 	insinto /usr/share/palo
 	doins iplboot || die
+
+	insinto /etc/kernel/postinst.d/
+	INSOPTIONS="-m 0744" doins "${FILESDIR}"/99palo
 }
