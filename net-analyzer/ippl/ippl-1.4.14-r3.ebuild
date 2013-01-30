@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ippl-1.4.14-r3.ebuild,v 1.2 2012/10/12 10:46:15 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ippl-1.4.14-r3.ebuild,v 1.3 2013/01/30 01:04:56 jer Exp $
 
 EAPI="4"
 
@@ -18,10 +18,6 @@ IUSE=""
 DEPEND="virtual/yacc
 	>=sys-devel/flex-2.5.4a-r4"
 RDEPEND=""
-
-pkg_setup() {
-	enewuser ippl
-}
 
 src_prepare() {
 	epatch \
@@ -52,4 +48,8 @@ src_install() {
 	dodoc BUGS CREDITS HISTORY README TODO
 
 	newinitd "${FILESDIR}"/ippl.rc ippl
+}
+
+pkg_postinst() {
+	enewuser ippl
 }

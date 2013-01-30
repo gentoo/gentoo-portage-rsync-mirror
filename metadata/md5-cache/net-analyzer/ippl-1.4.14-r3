@@ -1,4 +1,4 @@
-DEFINED_PHASES=install prepare setup
+DEFINED_PHASES=install postinst prepare
 DEPEND=virtual/yacc >=sys-devel/flex-2.5.4a-r4
 DESCRIPTION=A daemon which logs TCP/UDP/ICMP packets
 EAPI=4
@@ -8,4 +8,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://pltplp.net/ippl/archive/ippl-1.4.14.tar.gz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=a964623c9168593f4ddece77af8954a6
+_md5_=da2d0747471fa38f28a38e6b96805d01
