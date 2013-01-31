@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p42.ebuild,v 1.1 2013/01/03 03:31:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p42.ebuild,v 1.2 2013/01/31 05:25:11 vapier Exp $
 
 EAPI="1"
 
@@ -119,6 +119,7 @@ src_compile() {
 	# ncurses in one or two small places :(.
 
 	use plugins && append-ldflags -Wl,-rpath,/usr/$(get_libdir)/bash
+	tc-export AR #444070
 	econf \
 		--with-installed-readline=. \
 		--with-curses \
