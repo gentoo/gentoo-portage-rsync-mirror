@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-3.10.2.0-r1.ebuild,v 1.1 2013/01/09 03:22:25 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-3.10.2.0-r1.ebuild,v 1.3 2013/01/31 18:42:03 ago Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.google.com/chat/video"
 IUSE="libnotify +system-libCg video_cards_fglrx video_cards_radeon"
 SLOT="0"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 #GoogleTalkPlugin binary contains openssl and celt
 LICENSE="Google-TOS openssl BSD"
 RESTRICT="strip mirror"
