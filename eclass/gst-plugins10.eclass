@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins10.eclass,v 1.9 2013/01/16 22:52:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins10.eclass,v 1.10 2013/01/31 19:59:54 eva Exp $
 
 # @ECLASS: gst-plugins10.eclass
 # @MAINTAINER:
@@ -58,13 +58,13 @@ fi
 # Defines the plugins to be built.
 # May be set by an ebuild and contain more than one indentifier, space
 # seperated (only src_configure can handle mutiple plugins at this time).
-GST_PLUGINS_BUILD=${PN/gst-plugins-/}
+: ${GST_PLUGINS_BUILD:=${PN/gst-plugins-/}}
 
 # @ECLASS-VARIABLE: GST_PLUGINS_BUILD_DIR
 # @DESCRIPTION:
 # Actual build directory of the plugin.
 # Most often the same as the configure switch name.
-GST_PLUGINS_BUILD_DIR=${PN/gst-plugins-/}
+: ${GST_PLUGINS_BUILD_DIR:=${PN/gst-plugins-/}}
 
 # @ECLASS-VARIABLE: GST_TARBALL_SUFFIX
 # @DESCRIPTION:
@@ -142,20 +142,24 @@ gst-plugins10_get_plugins() {
 }
 
 # @FUNCTION: gst-plugins10_find_plugin_dir
+# @USAGE: gst-plugins10_find_plugin_dir [<build_dir>]
 # @INTERNAL
 # @DESCRIPTION:
 # Finds plugin build directory and cd to it.
+# Defaults to ${GST_PLUGINS_BUILD_DIR} if argument is not provided
 gst-plugins10_find_plugin_dir() {
-	if [[ ! -d ${S}/ext/${GST_PLUGINS_BUILD_DIR} ]]; then
-		if [[ ! -d ${S}/sys/${GST_PLUGINS_BUILD_DIR} ]]; then
+	local build_dir=${1:-${GST_PLUGINS_BUILD_DIR}}
+
+	if [[ ! -d ${S}/ext/${build_dir} ]]; then
+		if [[ ! -d ${S}/sys/${build_dir} ]]; then
 			ewarn "No such plugin directory"
 			die
 		fi
-		einfo "Building system plugin ${GST_PLUGINS_BUILD_DIR} ..."
-		cd "${S}"/sys/${GST_PLUGINS_BUILD_DIR}
+		einfo "Building system plugin in ${build_dir}..."
+		cd "${S}"/sys/${build_dir}
 	else
-		einfo "Building external plugin ${GST_PLUGINS_BUILD_DIR} ..."
-		cd "${S}"/ext/${GST_PLUGINS_BUILD_DIR}
+		einfo "Building external plugin in ${build_dir}..."
+		cd "${S}"/ext/${build_dir}
 	fi
 }
 
@@ -171,15 +175,16 @@ gst-plugins10_system_link() {
 	local directory libs pkgconfig pc tuple
 	pkgconfig=$(tc-getPKG_CONFIG)
 
-	gst-plugins10_find_plugin_dir
+	for plugin_dir in ${GST_PLUGINS_BUILD_DIR} ; do
+		gst-plugins10_find_plugin_dir ${plugin_dir}
 
-	for tuple in $@ ; do
-		directory="$(echo ${tuple} | cut -f1 -d':')"
-		pc="$(echo ${tuple} | cut -f2 -d':')-${SLOT}"
-		libs="$(${pkgconfig} --libs-only-l ${pc})"
-
-		sed -e "s:\$(top_builddir)/${directory}/.*\.la:${libs}:" \
-			-i Makefile.am Makefile.in || die
+		for tuple in $@ ; do
+			directory="$(echo ${tuple} | cut -f1 -d':')"
+			pc="$(echo ${tuple} | cut -f2 -d':')-${SLOT}"
+			libs="$(${pkgconfig} --libs-only-l ${pc})"
+			sed -e "s:\$(top_builddir)/${directory}/.*\.la:${libs}:" \
+				-i Makefile.am Makefile.in || die
+		done
 	done
 }
 
@@ -253,29 +258,37 @@ gst-plugins10_src_configure() {
 # @DESCRIPTION:
 # Compiles requested gstreamer plugin.
 gst-plugins10_src_compile() {
+	local plugin_dir
+	
 	has ${EAPI:-0} 0 1 && gst-plugins10_src_configure "$@"
 
-	gst-plugins10_find_plugin_dir
+	for plugin_dir in ${GST_PLUGINS_BUILD_DIR} ; do
+		gst-plugins10_find_plugin_dir ${plugin_dir}
 
-	if has "${EAPI:-0}" 0 1 2 3 ; then
-		emake || die
-	else
-		default
-	fi
+		if has "${EAPI:-0}" 0 1 2 3 ; then
+			emake || die
+		else
+			default
+		fi
+	done
 }
 
 # @FUNCTION: gst-plugins10_src_install
 # @DESCRIPTION:
 # Installs requested gstreamer plugin.
 gst-plugins10_src_install() {
-	gst-plugins10_find_plugin_dir
+	local plugin_dir
+	
+	for plugin_dir in ${GST_PLUGINS_BUILD_DIR} ; do
+		gst-plugins10_find_plugin_dir ${plugin_dir}
 
-	if has "${EAPI:-0}" 0 1 2 3 ; then
-		emake install DESTDIR="${D}" || die
-		[[ -e README ]] && dodoc README
-	else
-		default
-	fi
+		if has "${EAPI:-0}" 0 1 2 3 ; then
+			emake install DESTDIR="${D}" || die
+			[[ -e README ]] && dodoc README
+		else
+			default
+		fi
+	done
 
 	[[ ${GST_LA_PUNT} = "yes" ]] && prune_libtool_files --modules
 }

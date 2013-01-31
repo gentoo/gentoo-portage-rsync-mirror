@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.8.6.ebuild,v 1.1 2013/01/31 17:56:01 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.8.6.ebuild,v 1.3 2013/01/31 19:40:46 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://fedorahosted.org/released/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc +locator netlink nls python selinux test"
 
 COMMON_DEP="

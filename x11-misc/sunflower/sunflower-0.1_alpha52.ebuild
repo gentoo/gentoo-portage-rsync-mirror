@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/sunflower-0.1_alpha52.ebuild,v 1.2 2013/01/31 18:09:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/sunflower-0.1_alpha52.ebuild,v 1.3 2013/01/31 19:57:08 hasufell Exp $
 
 EAPI=5
 
@@ -52,7 +52,7 @@ src_install() {
 	# install for all enabled implementations
 	python_foreach_impl installme
 
-	doicon images/${PN}.png
+	newicon -s 64 images/${PN}_64.png ${PN}.png
 	doicon -s scalable images/${PN}.svg
 	newmenu ${MY_PN}.desktop ${PN}.desktop
 }

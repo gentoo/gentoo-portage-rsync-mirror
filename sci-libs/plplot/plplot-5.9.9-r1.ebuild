@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9-r1.ebuild,v 1.7 2013/01/13 12:46:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9-r1.ebuild,v 1.8 2013/01/31 19:54:55 bicatali Exp $
 
 EAPI=4
 
@@ -46,7 +46,7 @@ RDEPEND="
 	tcl? ( dev-lang/tcl dev-tcltk/itcl
 		tk? ( dev-lang/tk dev-tcltk/itk ) )
 	truetype? (
-				media-fonts/freefont-ttf
+				media-fonts/freefont
 				media-libs/lasi
 				gd? ( media-libs/gd[truetype] ) )
 	wxwidgets? ( x11-libs/wxGTK:2.8[X] x11-libs/agg[truetype?] )
