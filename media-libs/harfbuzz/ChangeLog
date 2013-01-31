@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.24 2013/01/28 13:50:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.25 2013/01/31 01:59:35 naota Exp $
+
+  31 Jan 2013; Naohiro Aota <naota@gentoo.org> harfbuzz-0.9.11.ebuild:
+  Add ~x86-fbsd.
 
   28 Jan 2013; Alexis Ballier <aballier@gentoo.org> harfbuzz-0.9.11.ebuild,
   harfbuzz-9999.ebuild:
