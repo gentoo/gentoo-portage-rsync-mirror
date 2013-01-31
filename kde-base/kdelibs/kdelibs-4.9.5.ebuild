@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.9.5.ebuild,v 1.4 2013/01/27 23:19:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.9.5.ebuild,v 1.5 2013/01/31 13:26:20 naota Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ EGIT_BRANCH="KDE/4.9"
 DESCRIPTION="KDE libraries needed by all KDE programs."
 SRC_URI+=" http://dev.gentoo.org/~johu/distfiles/${PN}-4.8.95-udisks2.patch.xz"
 
-KEYWORDS="amd64 ~arm ppc x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 LICENSE="LGPL-2.1"
 IUSE="3dnow acl alsa altivec +bzip2 debug doc fam jpeg2k kerberos lzma
 mmx nls openexr +policykit semantic-desktop spell sse sse2 ssl +udev +udisks

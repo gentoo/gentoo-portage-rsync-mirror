@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/libmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmail/ChangeLog,v 1.6 2013/01/30 15:30:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmail/ChangeLog,v 1.8 2013/01/31 13:16:35 pinkbyte Exp $
+
+  31 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> -libmail-0.3.ebuild:
+  Drop old revision
+
+*libmail-0.3-r2 (31 Jan 2013)
+
+  31 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> +libmail-0.3-r2.ebuild,
+  +files/libmail-0.3-respect-cflags.patch:
+  Revision bump: port to autotools-utils eclass, reorganize CFLAGS sed into
+  patch(fix bug #454380), add USE flags for debug and static libs building(bug
+  #454558)
 
   30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libmail-0.3-r1.ebuild:
   Stable for x86, wrt bug #454296

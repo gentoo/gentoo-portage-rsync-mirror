@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.891 2013/01/28 13:32:13 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.892 2013/01/31 13:26:20 naota Exp $
+
+  31 Jan 2013; Naohiro Aota <naota@gentoo.org> kdelibs-4.9.5.ebuild:
+  Add ~x86-fbsd.
 
   28 Jan 2013; Michael Palimaka <kensington@gentoo.org>
   -files/kdelibs-4.8.4-bytecode.patch,

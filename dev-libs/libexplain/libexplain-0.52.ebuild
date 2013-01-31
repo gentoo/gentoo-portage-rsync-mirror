@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-0.52.ebuild,v 1.1 2012/03/04 22:14:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-0.52.ebuild,v 1.2 2013/01/31 13:16:20 jlec Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=yes
@@ -16,14 +16,15 @@ SRC_URI="http://libexplain.sourceforge.net/${MY_P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-LICENSE="GPL-3"
+LICENSE="GPL-3 LGPL-3"
 IUSE="static-libs"
 
-DEPEND="
-	>=sys-kernel/linux-headers-2.6.35
+RDEPEND="
 	sys-libs/libcap
-	>=sys-libs/glibc-2.11"
-RDEPEND="${DEPEND}"
+	>=sys-libs/glibc-2.11
+	sys-process/lsof"
+DEPEND="${RDEPEND}
+	>=sys-kernel/linux-headers-2.6.35"
 
 S=${WORKDIR}/${MY_P}
 

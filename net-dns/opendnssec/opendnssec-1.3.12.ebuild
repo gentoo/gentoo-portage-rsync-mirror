@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.12.ebuild,v 1.1 2012/12/18 16:06:35 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.12.ebuild,v 1.2 2013/01/31 13:18:40 mschiff Exp $
 
 EAPI=4
 
@@ -51,6 +51,7 @@ REQUIRED_USE="
 
 PATCHES=(
 	"${FILESDIR}/${PN}-fix-localstatedir.patch"
+	"${FILESDIR}/${PN}-fix-run-dir.patch"
 	"${FILESDIR}/${PN}-drop-privileges.patch"
 	"${FILESDIR}/${PN}-use-system-trang.patch"
 )
@@ -174,7 +175,7 @@ src_install() {
 	use eppclient && fowners root:opendnssec /etc/opendnssec/eppclientd.conf
 
 	fowners opendnssec:opendnssec /var/lib/opendnssec/{,signconf,unsigned,signed,tmp}
-	fowners opendnssec:opendnssec /var/run/opendnssec
+	fowners opendnssec:opendnssec /run/opendnssec
 
 	# install conf/init script
 	newinitd "${FILESDIR}"/opendnssec.initd opendnssec
