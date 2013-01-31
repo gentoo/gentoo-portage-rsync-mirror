@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.655 2013/01/31 09:26:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.656 2013/01/31 14:12:12 chithanh Exp $
+
+  31 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-2.eclass:
+  Add EAPI 5 sub-slot dependency on x11-base/xorg-server for packages which
+  require rebuilding when the server is upgraded.
 
   31 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> obs-service.eclass:
   Additional files also must be versioned as they change between versions.
