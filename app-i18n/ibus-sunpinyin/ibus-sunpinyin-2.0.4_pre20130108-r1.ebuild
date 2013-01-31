@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-sunpinyin/ibus-sunpinyin-2.0.4_pre20130108.ebuild,v 1.1 2013/01/30 15:04:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-sunpinyin/ibus-sunpinyin-2.0.4_pre20130108-r1.ebuild,v 1.1 2013/01/31 10:23:45 yngwin Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.5"
-inherit multilib python scons-utils toolchain-funcs
+inherit python scons-utils toolchain-funcs
 
 DESCRIPTION="The SunPinYin IMEngine for IBus Framework"
 HOMEPAGE="https://sunpinyin.googlecode.com/"
@@ -31,7 +31,7 @@ src_configure() {
 	tc-export CXX
 	myesconsargs=(
 		--prefix="${EPREFIX}"/usr
-		--libdir="${EPREFIX}"/usr/$(get_libdir)
+		--libexecdir="${EPREFIX}"/usr/libexec
 	)
 }
 

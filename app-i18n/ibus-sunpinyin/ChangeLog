@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/ibus-sunpinyin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-sunpinyin/ChangeLog,v 1.9 2013/01/30 15:04:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-sunpinyin/ChangeLog,v 1.10 2013/01/31 10:23:45 yngwin Exp $
+
+*ibus-sunpinyin-2.0.4_pre20130108-r1 (31 Jan 2013)
+
+  31 Jan 2013; Ben de Groot <yngwin@gentoo.org>
+  +ibus-sunpinyin-2.0.4_pre20130108-r1.ebuild,
+  -ibus-sunpinyin-2.0.4_pre20130108.ebuild:
+  Use libexec to fix multilib-strict, bug #454758
 
 *ibus-sunpinyin-2.0.4_pre20130108 (30 Jan 2013)
 
