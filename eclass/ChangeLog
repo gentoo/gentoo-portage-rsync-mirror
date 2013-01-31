@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.654 2013/01/30 10:42:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.655 2013/01/31 09:26:42 scarabeus Exp $
+
+  31 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> obs-service.eclass:
+  Additional files also must be versioned as they change between versions.
 
   30 Jan 2013; Michał Górny <mgorny@gentoo.org> python-r1.eclass,
   python-single-r1.eclass:

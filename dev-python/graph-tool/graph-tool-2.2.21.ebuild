@@ -1,16 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/graph-tool/graph-tool-2.2.21.ebuild,v 1.1 2013/01/10 23:45:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/graph-tool/graph-tool-2.2.21.ebuild,v 1.2 2013/01/31 09:30:05 radhermit Exp $
 
-EAPI="5"
+EAPI=5
 PYTHON_COMPAT=( python{2_7,3_1,3_2,3_3} )
 
-inherit eutils toolchain-funcs python-r1
+inherit check-reqs eutils toolchain-funcs python-r1
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.skewed.de/graph-tool"
 	inherit git-2
-	KEYWORDS=""
 else
 	SRC_URI="http://downloads.skewed.de/${PN}/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
@@ -42,10 +41,14 @@ DEPEND="${CDEPEND}
 # most machines don't have enough ram for parallel builds
 MAKEOPTS="${MAKEOPTS} -j1"
 
+# bug 453544
+CHECKREQS_DISK_BUILD="6G"
+
 pkg_pretend() {
 	if use openmp ; then
 		tc-has-openmp || die "Please switch to an openmp compatible compiler"
 	fi
+	check-reqs_pkg_pretend
 }
 
 src_prepare() {

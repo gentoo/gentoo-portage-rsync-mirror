@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-9999.ebuild,v 1.3 2012/12/08 05:30:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-9999.ebuild,v 1.5 2013/01/31 09:23:08 zx2c4 Exp $
 
 EAPI=4
 
-DESCRIPTION="Binary plugins from Google Chrome for use in Chromium."
+DESCRIPTION="Binary plugins -- native API Flash and PDF -- from Google Chrome for use in Chromium."
 HOMEPAGE="http://www.google.com/chrome"
 URI_BASE="https://dl.google.com/linux/direct/"
 URI_BASE_NAME="google-chrome-unstable_current_"
