@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.26.2.ebuild,v 1.1 2012/06/30 15:15:25 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.26.2.ebuild,v 1.2 2013/01/31 05:52:41 mattst88 Exp $
 
 EAPI=4
 inherit xorg-2 toolchain-funcs versionator
@@ -21,5 +21,6 @@ pkg_setup() {
 		$(use_enable neon arm-neon)
 		$(use_enable iwmmxt arm-iwmmxt)
 		--disable-gtk
+		--disable-libpng
 	)
 }

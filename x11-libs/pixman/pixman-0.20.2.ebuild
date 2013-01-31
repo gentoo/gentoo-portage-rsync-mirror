@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.20.2.ebuild,v 1.9 2011/03/20 19:16:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.20.2.ebuild,v 1.10 2013/01/31 05:52:41 mattst88 Exp $
 
 EAPI=3
 inherit xorg-2 toolchain-funcs versionator
@@ -16,7 +16,8 @@ pkg_setup() {
 	CONFIGURE_OPTIONS="
 		$(use_enable altivec vmx)
 		$(use_enable neon arm-neon)
-		--disable-gtk"
+		--disable-gtk
+		--disable-libpng"
 
 	local enable_mmx="$(use mmx && echo 1 || echo 0)"
 	local enable_sse2="$(use sse2 && echo 1 || echo 0)"

@@ -1,13 +1,14 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=>=dev-libs/glib-2.30.2:2 net-dialup/ppp >=virtual/udev-147[gudev] policykit? ( >=sys-auth/polkit-0.106 ) doc? ( app-office/dia dev-libs/libxslt dev-util/gtk-doc ) test? ( dev-lang/python:2.7 dev-python/dbus-python[python_targets_python2_7] dev-python/pygobject:2[python_targets_python2_7] ) >=dev-util/intltool-0.40 sys-devel/gettext virtual/pkgconfig app-arch/xz-utils virtual/pkgconfig test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+DEPEND=>=dev-libs/glib-2.30.2:2 net-dialup/ppp >=virtual/udev-147[gudev] policykit? ( >=sys-auth/polkit-0.106 ) qmi? ( net-libs/libqmi ) doc? ( app-office/dia dev-libs/libxslt dev-util/gtk-doc ) test? ( dev-lang/python:2.7 dev-python/dbus-python[python_targets_python2_7] dev-python/pygobject:2[python_targets_python2_7] ) dev-util/gdbus-codegen >=dev-util/intltool-0.40 sys-devel/gettext virtual/pkgconfig app-arch/xz-utils virtual/pkgconfig test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
 DESCRIPTION=Modem and mobile broadband management libraries
 EAPI=5
 HOMEPAGE=http://cgit.freedesktop.org/ModemManager/ModemManager/
-IUSE=doc policykit test test
+IUSE=doc policykit +qmi qmi-newest test test
 KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2+
-RDEPEND=>=dev-libs/glib-2.30.2:2 net-dialup/ppp >=virtual/udev-147[gudev] policykit? ( >=sys-auth/polkit-0.106 )
+RDEPEND=>=dev-libs/glib-2.30.2:2 net-dialup/ppp >=virtual/udev-147[gudev] policykit? ( >=sys-auth/polkit-0.106 ) qmi? ( net-libs/libqmi )
+REQUIRED_USE=qmi-newest? ( qmi )
 SLOT=0/1
 SRC_URI=mirror://gnome/sources/ModemManager/0.7/ModemManager-0.7.990.tar.xz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	fea2246732f911905d6991fed203e65c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=b3ec0a8d0c5510772e1a74762d145922
+_md5_=89f7c7a3e13bc2e49fe8351c26b53f85

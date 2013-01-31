@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-9999.ebuild,v 1.1 2013/01/28 07:04:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-9999.ebuild,v 1.2 2013/01/31 06:00:34 tetromino Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="ModemManager"
@@ -33,6 +33,7 @@ DEPEND="${RDEPEND}
 		dev-lang/python:2.7
 		dev-python/dbus-python[python_targets_python2_7]
 		dev-python/pygobject:2[python_targets_python2_7] )
+	dev-util/gdbus-codegen
 	>=dev-util/intltool-0.40
 	sys-devel/gettext
 	virtual/pkgconfig
