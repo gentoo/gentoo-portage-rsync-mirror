@@ -1,6 +1,10 @@
 # ChangeLog for games-action/clanbomber
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.19 2012/11/15 11:43:55 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.20 2013/01/31 00:56:15 mr_bones_ Exp $
+
+  31 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -clanbomber-2.0.9.1.ebuild, -files/clanbomber-2.0.9.1-gcc43.patch:
+  old
 
   15 Nov 2012; Tupone Alfredo <tupone@gentoo.org> clanbomber-2.1.1.ebuild,
   +files/clanbomber-2.1.1-automake112.patch,

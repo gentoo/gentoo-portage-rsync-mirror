@@ -1,6 +1,15 @@
 # ChangeLog for net-im/ejabberd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.111 2012/09/23 08:22:11 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.114 2013/01/31 00:42:15 radhermit Exp $
+
+  31 Jan 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Another metadata whitespace fix.
+
+  31 Jan 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Fix metadata whitespace.
+
+  31 Jan 2013; Tim Harder <radhermit@gentoo.org> -ejabberd-2.1.10.ebuild:
+  Remove old.
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> ejabberd-2.1.11.ebuild:
   x86 stable wrt bug #427714
