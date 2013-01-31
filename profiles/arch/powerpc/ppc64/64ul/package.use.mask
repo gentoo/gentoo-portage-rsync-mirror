@@ -1,6 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/64ul/package.use.mask,v 1.18 2012/09/23 05:09:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/64ul/package.use.mask,v 1.19 2013/01/31 22:58:30 ago Exp $
+
+# Agostino Sarubbo <ago@gentoo.org> (31 Jan 2012)
+# Mask because requires a lot of unstable depends not ready for the stabilization
+gnome-extra/nm-applet bluetooth
 
 # Joseph Jezak <josejx@gentoo.org> (18 May 2012)
 # Mask the C# bindings for KDE

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.15 2013/01/28 08:07:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.16 2013/01/31 22:34:13 ago Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 LICENSE="GPL-2+"
 SLOT="0" # TODO: add subslot on 0.9.8 bump
 IUSE="avahi bluetooth connection-sharing +consolekit dhclient +dhcpcd doc gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf vala +wext wimax" # systemd
-KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ppc64 ~sparc x86"
 
 REQUIRED_USE="
 	modemmanager? ( ppp )

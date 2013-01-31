@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.225 2013/01/31 05:57:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.226 2013/01/31 22:58:29 ago Exp $
+
+  31 Jan 2013; Agostino Sarubbo <ago@gentoo.org> ppc64/64ul/package.use.mask:
+  Mask gnome-extra/nm-applet bluetooth because requires a lot of unstable
+  depends not ready for the stabilization
 
   31 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask net-misc/modemmanager[qmi,qmi-newest] until libqmi is keyworded.
