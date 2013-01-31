@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.167 2013/01/28 13:18:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.168 2013/01/31 10:38:57 ssuominen Exp $
 
 EAPI=4
 
@@ -104,7 +104,7 @@ check_default_rules()
 pkg_setup()
 {
 	# required kernel options
-	CONFIG_CHECK="~DEVTMPFS"
+	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2 ~SIGNALFD"
 	ERROR_DEVTMPFS="DEVTMPFS is not set in this kernel. Udev will not run."
 
 	linux-info_pkg_setup

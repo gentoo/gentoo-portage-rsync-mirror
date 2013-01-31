@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/vienna-rna
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.45 2012/07/10 18:58:02 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.46 2013/01/31 10:57:35 jlec Exp $
+
+  31 Jan 2013; Justin Lecher <jlec@gentoo.org> vienna-rna-1.8.5.ebuild,
+  metadata.xml:
+  Only call distutils phase functions with USE=python, #422899
 
   10 Jul 2012; Justin Lecher <jlec@gentoo.org> -vienna-rna-1.8.4-r1.ebuild,
   -vienna-rna-1.8.4-r2.ebuild, metadata.xml:

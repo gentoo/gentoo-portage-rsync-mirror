@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.811 2013/01/29 15:53:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.812 2013/01/31 10:38:57 ssuominen Exp $
+
+  31 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197-r4.ebuild,
+  udev-197-r5.ebuild, udev-9999.ebuild:
+  Backport kernel .config check from ebuild of 171; BLK_DEV_BSG, !IDE,
+  INOTIFY_USER, !SYSFS_DEPRECATED, !SYSFS_DEPRECATED_V2, and SIGNALFD
+  wrt #454614 by Alexandre Rostovtsev
 
   29 Jan 2013; Agostino Sarubbo <ago@gentoo.org> udev-197-r4.ebuild:
   Stable for x86, wrt bug #452556

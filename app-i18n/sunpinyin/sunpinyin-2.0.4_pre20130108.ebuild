@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/sunpinyin-2.0.4_pre20130108.ebuild,v 1.1 2013/01/30 13:36:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin/sunpinyin-2.0.4_pre20130108.ebuild,v 1.2 2013/01/31 10:56:00 yngwin Exp $
 
 EAPI=5
-inherit eutils multilib scons-utils toolchain-funcs
+PYTHON_COMPAT=( python2_7 )
+inherit eutils multilib python-any-r1 scons-utils toolchain-funcs
 
 DESCRIPTION="A Statistical Language Model based Chinese input method library"
 HOMEPAGE="https://sunpinyin.googlecode.com/"
@@ -16,6 +17,7 @@ IUSE=""
 
 RDEPEND="dev-db/sqlite:3"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	dev-util/intltool
 	sys-devel/gettext
 	virtual/pkgconfig"
