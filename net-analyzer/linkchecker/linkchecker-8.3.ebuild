@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-8.3.ebuild,v 1.3 2013/01/16 11:49:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-8.3.ebuild,v 1.4 2013/01/31 12:59:35 jlec Exp $
 
 EAPI=5
 
@@ -44,25 +44,21 @@ RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
 
-DISTUTILS_NO_PARALLEL_BUILD=true
-
-src_prepare() {
-	epatch \
-		"${FILESDIR}"/8.0-missing-files.patch \
-		"${FILESDIR}"/${P}-unbundle.patch \
+python_prepare_all() {
+	local PATCHES=(
+		"${FILESDIR}"/8.0-missing-files.patch
+		"${FILESDIR}"/${P}-unbundle.patch
 		"${FILESDIR}"/${PN}-8.0-desktop.patch
-	distutils-r1_src_prepare
+		)
+	distutils-r1_python_prepare_all
 }
 
-src_compile() {
-	distutils-r1_src_compile
-	if use doc; then
-		emake -C doc/html
-	fi
+python_compile_all() {
+	use doc && emake -C doc/html
 }
 
-src_install() {
-	distutils-r1_src_install
+python_install_all() {
+	distutils-r1_python_install_all
 	if ! use X; then
 		delete_gui() {
 				rm -rf \
@@ -71,10 +67,12 @@ src_install() {
 		}
 		python_foreach_impl delete_gui
 	fi
-	if use doc; then
-		dohtml doc/html/*
-	fi
+	use doc && dohtml doc/html/*
 	use bash-completion && dobashcomp config/linkchecker-completion
 	insinto /usr/$(get_libdir)/nagios/plugins
-	use nagios && doins linkchecker-nagios
+	if use nagios; then
+		doins linkchecker-nagios
+	else
+		rm -f "${ED}"/usr/bin/linkchecker-nagios* || die
+	fi
 }

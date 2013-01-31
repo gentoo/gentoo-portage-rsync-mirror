@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.86 2013/01/16 11:49:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.87 2013/01/31 12:59:35 jlec Exp $
+
+  31 Jan 2013; Justin Lecher <jlec@gentoo.org> linkchecker-7.9.ebuild,
+  linkchecker-8.2.ebuild, linkchecker-8.3.ebuild:
+  Call python_pkg_setup where necessary, #454820; fix usage of new python
+  eclasses; make installation with USE=-nagios cleaner
 
   16 Jan 2013; Justin Lecher <jlec@gentoo.org> linkchecker-8.3.ebuild,
   metadata.xml:

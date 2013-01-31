@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libexplain
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/ChangeLog,v 1.21 2012/05/30 07:07:12 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/ChangeLog,v 1.22 2013/01/31 12:57:01 jlec Exp $
+
+*libexplain-1.1 (31 Jan 2013)
+
+  31 Jan 2013; Justin Lecher <jlec@gentoo.org> +libexplain-1.1.ebuild,
+  +files/libexplain-1.1-v4l2.patch, +files/libexplain-1.1-yacc.patch,
+  metadata.xml:
+  Version BUmp; add fix for bison-2.6, #429552; backport fix for recent changes
+  in linux-header regarding v4l2, #438486
 
   30 May 2012; Tim Harder <radhermit@gentoo.org> -libexplain-0.51.ebuild:
   Remove old.

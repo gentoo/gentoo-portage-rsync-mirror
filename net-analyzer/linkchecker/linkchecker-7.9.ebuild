@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-7.9.ebuild,v 1.7 2013/01/15 16:17:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-7.9.ebuild,v 1.8 2013/01/31 12:59:35 jlec Exp $
 
 EAPI=4
 
@@ -46,6 +46,10 @@ DEPEND="
 RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	python_pkg_setup
+}
 
 src_prepare() {
 	epatch \
