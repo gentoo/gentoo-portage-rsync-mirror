@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/qrencode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.29 2012/10/21 00:05:32 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.30 2013/01/31 22:23:14 xmw Exp $
+
+*qrencode-3.4.1 (31 Jan 2013)
+
+  31 Jan 2013; Michael Weber <xmw@gentoo.org> +qrencode-3.4.1.ebuild:
+  Version bump (thanks Robert Sebastian Gerus, bug 447430)
 
   21 Oct 2012; Anthony G. Basile <blueness@gentoo.org> qrencode-3.3.1.ebuild:
   stable arm, bug #429188
