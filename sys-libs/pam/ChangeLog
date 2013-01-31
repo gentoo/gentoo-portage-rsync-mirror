@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.317 2013/01/30 22:43:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.318 2013/01/31 11:36:10 flameeyes Exp $
+
+*pam-1.1.6-r2 (31 Jan 2013)
+
+  31 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org> +pam-1.1.6-r2.ebuild,
+  -pam-1.1.6-r1.ebuild:
+  Revbump (to stable as well) to make sure that the sepermit path is correct at
+  install time. Thanks Agostino for catching the brainfreeze there. Also only
+  install the tmpfiles.d file if selinux USE flag is enabled. Remove redundant
+  disable-dependency-tracking.
 
   30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> pam-1.1.6-r1.ebuild:
   Stable for x86, wrt bug #454664

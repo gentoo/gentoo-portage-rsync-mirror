@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.6-r1.ebuild,v 1.3 2013/01/30 22:43:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.6-r2.ebuild,v 1.1 2013/01/31 11:36:10 flameeyes Exp $
 
 EAPI=5
 
@@ -106,7 +106,6 @@ src_configure() {
 	export ac_cv_header_xcrypt_h=no
 
 	econf \
-		--disable-dependency-tracking \
 		--enable-fast-install \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
@@ -138,7 +137,7 @@ src_install() {
 	local lib
 
 	emake DESTDIR="${D}" install \
-		 sepermitlockdir="${EPREFIX}/var//sepermit"
+		 sepermitlockdir="${EPREFIX}/run/sepermit"
 
 	# Need to be suid
 	fperms u+s /sbin/unix_chkpwd
@@ -164,10 +163,12 @@ src_install() {
 	# don't need them for static linking either.
 	find "${D}" -name '*.la' -delete
 
-	dodir /usr/lib/tmpfiles.d
-	cat - > "${D}"/usr/lib/tmpfiles.d/${CATEGORY}:${PN}:${SLOT}.conf <<EOF
+	if use selinux; then
+		dodir /usr/lib/tmpfiles.d
+		cat - > "${D}"/usr/lib/tmpfiles.d/${CATEGORY}:${PN}:${SLOT}.conf <<EOF
 d /run/sepermit 0755 root root
 EOF
+	fi
 }
 
 pkg_preinst() {
