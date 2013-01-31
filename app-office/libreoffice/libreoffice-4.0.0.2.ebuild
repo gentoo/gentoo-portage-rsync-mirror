@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.0.2.ebuild,v 1.3 2013/01/27 08:23:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.0.2.ebuild,v 1.4 2013/01/31 13:58:21 scarabeus Exp $
 
 EAPI=5
 
@@ -180,9 +180,13 @@ RDEPEND="${COMMON_DEPEND}
 	java? ( >=virtual/jre-1.6 )
 "
 
-PDEPEND="
-	=app-office/libreoffice-l10n-4.0*
-"
+if [[ ${PV} != *9999* ]]; then
+	PDEPEND="~app-office/libreoffice-l10n-${PV}"
+else
+	# Translations are not reliable on live ebuilds
+	# rather force people to use english only.
+	PDEPEND="!app-office/libreoffice-l10n"
+fi
 
 # FIXME: cppunit should be moved to test conditional
 #        after everything upstream is under gbuild

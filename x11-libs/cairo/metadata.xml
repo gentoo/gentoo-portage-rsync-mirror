@@ -7,11 +7,6 @@
     <name>Ben de Groot</name>
   </maintainer>
   <use>
-    <flag name='cleartype'>Add ClearType-style behavior for sub-pixel hinting.
-      Patch taken from Arch Linux</flag>
-    <flag name='lcdfilter'>Add FreeType LCD filtering, ClearType-style behavior
-      for sub-pixel-hinting. Overrides cleartype USE flag. Patch taken from
-      Ubuntu</flag>
     <flag name='opengl' restrict="&gt;=x11-libs/cairo-1.10.0">
       Use Mesa backend for acceleration</flag>
     <flag name='drm'>Use Linux DRM for backend acceleration</flag>

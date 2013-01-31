@@ -1,6 +1,20 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.324 2013/01/27 11:20:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.325 2013/01/31 13:35:51 chithanh Exp $
+
+*cairo-1.12.10-r2 (31 Jan 2013)
+
+  31 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +cairo-1.12.10-r2.ebuild, +files/cairo-1.12.10-xshm-corruption.patch,
+  -cairo-1.10.2-r2.ebuild, -cairo-1.12.10-r1.ebuild, -cairo-1.12.2-r2.ebuild,
+  -cairo-1.12.2-r3.ebuild, -cairo-1.12.2-r4.ebuild, -cairo-1.12.6.ebuild,
+  -cairo-1.8.10.ebuild, -files/cairo-1.12.2-fdr-nodl.patch,
+  -files/cairo-1.12.2-sphinx-nodl.patch,
+  -files/cairo-1.12.2-surfaceless-extension.patch,
+  -files/cairo-1.2.4-lcd-cleartype-like.diff,
+  -files/cairo-1.8.10-libpng14.patch, files/cairo-1.8.8-interix.patch,
+  metadata.xml:
+  Add patch to fix graphics corruption, bug #454468.
 
 *cairo-1.12.10-r1 (27 Jan 2013)
 
