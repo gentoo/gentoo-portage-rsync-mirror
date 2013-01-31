@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/smac
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/ChangeLog,v 1.18 2012/02/05 06:25:05 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/ChangeLog,v 1.19 2013/01/31 20:04:47 mr_bones_ Exp $
+
+  31 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> smac-6.0a.ebuild:
+  add log message about CONFIG_UID16 (bug #340303); tidy
 
   05 Feb 2012; Mike Frysinger <vapier@gentoo.org> smac-6.0a.ebuild:
   Move to new unpacker eclass for unpack_makeself.
@@ -60,4 +63,3 @@
   +smac-6.0a.ebuild:
   Initial import. Ebuild by <anakin.skyw@gmx.de> and submitted to bug #98687.
   Closing bug #98687 and bug #31395.
-
