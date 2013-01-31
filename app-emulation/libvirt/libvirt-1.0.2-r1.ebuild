@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.2.ebuild,v 1.1 2013/01/30 20:11:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.2-r1.ebuild,v 1.1 2013/01/31 16:03:54 cardoe Exp $
 
 EAPI=4
 
@@ -189,6 +189,8 @@ src_prepare() {
 			git hash-object bootstrap.conf
 		) >.git-module-status
 	fi
+
+	epatch "${FILESDIR}"/0001-complete-virterror-virerror-name-change.patch
 
 	epatch_user
 

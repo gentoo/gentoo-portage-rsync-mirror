@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.245 2013/01/30 20:11:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.246 2013/01/31 16:03:54 cardoe Exp $
+
+*libvirt-1.0.2-r1 (31 Jan 2013)
+
+  31 Jan 2013; Doug Goldstein <cardoe@gentoo.org>
+  +files/0001-complete-virterror-virerror-name-change.patch,
+  -libvirt-1.0.2.ebuild, +libvirt-1.0.2-r1.ebuild:
+  The 1.0.2 release had broken python bindings.
 
 *libvirt-1.0.2 (30 Jan 2013)
 
