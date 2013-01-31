@@ -1,6 +1,10 @@
 # ChangeLog for www-client/xombrero
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xombrero/ChangeLog,v 1.1 2013/01/31 00:25:39 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xombrero/ChangeLog,v 1.2 2013/01/31 03:25:16 rafaelmartins Exp $
+
+  31 Jan 2013; Rafael G. Martins <rafaelmartins@gentoo.org>
+  xombrero-1.4.0.ebuild:
+  Fix xombrero.desktop installation
 
 *xombrero-9999 (31 Jan 2013)
 *xombrero-1.4.0 (31 Jan 2013)
