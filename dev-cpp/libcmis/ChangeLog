@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libcmis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/ChangeLog,v 1.23 2013/01/12 13:35:55 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/ChangeLog,v 1.24 2013/01/31 15:34:17 scarabeus Exp $
+
+*libcmis-0.3.1 (31 Jan 2013)
+
+  31 Jan 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libcmis-0.3.1.ebuild,
+  libcmis-9999.ebuild:
+  Version bump to latest.
 
   12 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> libcmis-0.3.0.ebuild,
   libcmis-9999.ebuild:

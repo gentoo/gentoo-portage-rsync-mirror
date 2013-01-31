@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.102 2013/01/30 12:12:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.103 2013/01/31 15:43:53 idella4 Exp $
+
+  01 Feb 2013; Ian Delaney <idella4@gentoo.org> xen-4.2.0-r1.ebuild,
+  xen-4.2.1-r1.ebuild:
+  Removal of un-needed dep grub or grub-static from RDEP in 4.2.0-r1.4.2.1-r1,
+  from user a.m in Bug #447716
 
 *xen-4.2.1-r1 (30 Jan 2013)
 *xen-4.2.0-r1 (30 Jan 2013)

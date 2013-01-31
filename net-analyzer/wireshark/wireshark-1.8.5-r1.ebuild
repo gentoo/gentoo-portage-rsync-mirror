@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.13.ebuild,v 1.10 2013/01/31 15:59:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.5-r1.ebuild,v 1.1 2013/01/31 15:59:24 jer Exp $
 
-EAPI=5
+EAPI="5"
 PYTHON_DEPEND="python? 2"
-inherit autotools eutils flag-o-matic python toolchain-funcs user
+inherit autotools eutils fcaps flag-o-matic python toolchain-funcs user
 
 [[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && MY_P=${PN}-${PV/_} || MY_P=${P}
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
@@ -13,12 +13,13 @@ SRC_URI="http://www.wireshark.org/download/src/all-versions/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0/${PV}"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="
-	adns doc doc-pdf gtk ipv6 libadns lua crypt geoip kerberos profile
-	+pcap portaudio python +caps selinux smi ssl threads zlib
+	adns doc doc-pdf geoip gtk crypt ipv6 kerberos libadns lua +pcap
+	portaudio profile python selinux smi ssl zlib
 "
-RDEPEND=">=dev-libs/glib-2.14:2
+RDEPEND="
+	>=dev-libs/glib-2.14:2
 	zlib? ( sys-libs/zlib
 		!=sys-libs/zlib-1.2.4 )
 	smi? ( net-libs/libsmi )
@@ -26,10 +27,9 @@ RDEPEND=">=dev-libs/glib-2.14:2
 		x11-libs/pango
 		dev-libs/atk
 		x11-misc/xdg-utils )
-	ssl? ( <net-libs/gnutls-3 )
+	ssl? ( net-libs/gnutls dev-libs/libgcrypt )
 	crypt? ( dev-libs/libgcrypt )
 	pcap? ( net-libs/libpcap )
-	caps? ( sys-libs/libcap )
 	kerberos? ( virtual/krb5 )
 	portaudio? ( media-libs/portaudio )
 	adns? (
@@ -38,9 +38,11 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	libadns? ( net-libs/adns )
 	geoip? ( dev-libs/geoip )
 	lua? ( >=dev-lang/lua-5.1 )
-	selinux? ( sec-policy/selinux-wireshark )"
+	selinux? ( sec-policy/selinux-wireshark )
+"
 
-DEPEND="${RDEPEND}
+DEPEND="
+	${RDEPEND}
 	doc? ( dev-libs/libxslt
 		dev-libs/libxml2
 		app-doc/doxygen
@@ -53,44 +55,6 @@ DEPEND="${RDEPEND}
 "
 
 S=${WORKDIR}/${MY_P}
-
-# borrowed from GSoC2010_Gentoo_Capabilities by constanze and flameyeys
-# @FUNCTION: fcaps
-# @USAGE: fcaps {uid:gid} {file-mode} {cap1[,cap2,...]} {file}
-# @RETURN: 0 if all okay; non-zero if failure and fallback
-# @DESCRIPTION:
-# fcaps sets the specified capabilities in the effective and permitted set of
-# the given file. In case of failure fcaps sets the given file-mode.
-fcaps() {
-	local uid_gid=$1
-	local perms=$2
-	local capset=$3
-	local path=$4
-	local res
-
-	chmod $perms $path && \
-	chown $uid_gid $path
-	res=$?
-
-	use caps || return $res
-
-	#set the capability
-	setcap "$capset=ep" "$path" &> /dev/null
-	#check if the capabilitiy got set correctly
-	setcap -v "$capset=ep" "$path" &> /dev/null
-	res=$?
-
-	if [ $res -ne 0 ]; then
-		ewarn "Failed to set capabilities. Probable reason is missed kernel support."
-		ewarn "Kernel must have <FS>_FS_SECURITY enabled where <FS> is the filesystem"
-		ewarn "to store ${path} (e.g. EXT3_FS_SECURITY). For kernels version before"
-		ewarn "2.6.33_rc1 SECURITY_FILE_CAPABILITIES must be enabled as well."
-		ewarn
-		ewarn "Falling back to suid now..."
-		chmod u+s ${path}
-	fi
-	return $res
-}
 
 pkg_setup() {
 	if ! use gtk; then
@@ -105,8 +69,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-1.6.6-gtk-pcap.patch \
-		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch
+		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
+		"${FILESDIR}"/${PN}-1.8.3-gnutls3.patch
 	sed -i -e 's|.png||g' ${PN}.desktop || die
 	eautoreconf
 }
@@ -129,16 +93,17 @@ src_configure() {
 
 	if use adns; then
 		if use libadns; then
-			myconf+=" --with-adns --without-c-ares"
+			myconf+=( "--with-adns --without-c-ares" )
 		else
-			myconf+=" --without-adns --with-c-ares"
+			myconf+=( "--without-adns --with-c-ares" )
 		fi
 	else
 		if use libadns; then
-			myconf+=" --with-adns --without-c-ares"
+			myconf+=( "--with-adns --without-c-ares" )
+		else
+			myconf+=( "--without-adns --without-c-ares" )
 		fi
 	fi
-
 	# Workaround bug #213705. If krb5-config --libs has -lcrypto then pass
 	# --with-ssl to ./configure. (Mimics code from acinclude.m4).
 	if use kerberos; then
@@ -147,7 +112,7 @@ src_configure() {
 				ewarn "Kerberos was built with ssl support: linkage with openssl is enabled."
 				ewarn "Note there are annoying license incompatibilities between the OpenSSL"
 				ewarn "license and the GPL, so do your check before distributing such package."
-				myconf+=" --with-ssl"
+				myconf+=( "--with-ssl" )
 				;;
 		esac
 	fi
@@ -158,13 +123,12 @@ src_configure() {
 
 	# dumpcap requires libcap, setuid-install requires dumpcap
 	econf \
-		$(use pcap && use_enable !caps setuid-install) \
-		$(use pcap && use_enable caps setcap-install) \
+		$(use pcap && use_enable !filecaps setuid-install) \
+		$(use pcap && use_enable filecaps setcap-install) \
 		$(use_enable gtk wireshark) \
 		$(use_enable ipv6) \
 		$(use_enable profile profile-build) \
-		$(use_enable threads) \
-		$(use_with caps libcap) \
+		$(use_with filecaps libcap) \
 		$(use_with crypt gcrypt) \
 		$(use_with geoip) \
 		$(use_with kerberos krb5) \
@@ -176,14 +140,15 @@ src_configure() {
 		$(use_with smi libsmi) \
 		$(use_with ssl gnutls) \
 		$(use_with zlib) \
-		--sysconfdir="${EPREFIX}"/etc/wireshark \
 		--disable-extra-gcc-checks \
-		${myconf}
+		--disable-usr-local \
+		--sysconfdir="${EPREFIX}"/etc/wireshark \
+		${myconf[@]}
 }
 
 src_compile() {
 	default
-	use doc && cd docbook && { emake; }
+	use doc && emake -C docbook
 }
 
 src_install() {
@@ -200,6 +165,14 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README{,.bsd,.linux,.macos,.vmware} \
 		doc/{randpkt.txt,README*}
 
+	# install headers
+	local wsheader
+	for wsheader in $( echo $(< debian/wireshark-dev.header-files ) ); do
+		insinto /usr/include/wireshark/$( dirname ${wsheader} )
+		doins ${wsheader}
+	done
+
+	#with the above this really shouldn't be needed, but things may be looking in wiretap/ instead of wireshark/wiretap/
 	insinto /usr/include/wiretap
 	doins wiretap/wtap.h
 
@@ -219,8 +192,10 @@ pkg_postinst() {
 	# Add group for users allowed to sniff.
 	enewgroup wireshark
 
-	if use caps && use pcap; then
-		fcaps 0:wireshark 550 cap_dac_read_search,cap_net_raw,cap_net_admin "${EROOT}"/usr/bin/dumpcap
+	if use filecaps && use pcap; then
+		fcaps -o 0 -g wireshark -m 550 \
+			cap_dac_read_search,cap_net_raw,cap_net_admin \
+			"${EROOT}"/usr/bin/dumpcap
 	fi
 
 	ewarn "NOTE: To run wireshark as normal user you have to add yourself to"

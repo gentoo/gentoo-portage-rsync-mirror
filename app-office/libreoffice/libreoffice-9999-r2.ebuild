@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.158 2013/01/31 13:58:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.159 2013/01/31 15:36:23 scarabeus Exp $
 
 EAPI=5
 
@@ -105,7 +105,7 @@ COMMON_DEPEND="
 	>=app-text/libwps-0.2.2
 	>=app-text/poppler-0.16[xpdf-headers(+),cxx]
 	>=dev-cpp/clucene-2.3.3.4-r2
-	dev-cpp/libcmis:0.3
+	>=dev-cpp/libcmis-0.3.1:0.3
 	dev-db/unixODBC
 	dev-libs/expat
 	>=dev-libs/hyphen-2.7.1
