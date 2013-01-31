@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.48 2013/01/30 18:07:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.49 2013/01/31 07:15:31 jlec Exp $
+
+  31 Jan 2013; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20120813-r1.ebuild:
+  Drop old
 
   30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> aufs3-3_p20121210.ebuild:
   Stable for x86, wrt bug #451988
