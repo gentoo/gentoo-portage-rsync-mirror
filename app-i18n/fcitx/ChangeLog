@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/fcitx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.53 2012/10/29 08:48:14 yngwin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.54 2013/01/31 08:42:40 yngwin Exp $
+
+*fcitx-4.2.7 (31 Jan 2013)
+
+  31 Jan 2013; Ben de Groot <yngwin@gentoo.org> +fcitx-4.2.7.ebuild,
+  +files/fcitx-4.2.7-gcc46-compatible.patch, metadata.xml:
+  Version bump, bug #454482. Thanks to Dennis Lan and Wang Jiajun for
+  contributions.
 
   29 Oct 2012; Ben de Groot <yngwin@gentoo.org>
   +files/fcitx-4.2.6.1-offline.patch, fcitx-4.2.6.1.ebuild:

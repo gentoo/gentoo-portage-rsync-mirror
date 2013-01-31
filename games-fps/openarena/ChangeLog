@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/openarena
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.25 2012/07/04 03:16:53 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/ChangeLog,v 1.26 2013/01/31 08:46:50 mr_bones_ Exp $
+
+  31 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/openarena-0.8.5-bots-strcpy-fix.patch,
+  -files/openarena-0.8.5-makefile.patch,
+  -files/openarena-0.8.5-unbundling.patch, -openarena-0.8.5.ebuild:
+  old
 
   04 Jul 2012; Jeff Horelick <jdhore@gentoo.org> openarena-0.8.8.ebuild:
   marked x86 per bug 422123
@@ -112,4 +118,3 @@
   +openarena-0.7.1.ebuild:
   Initial import. Ebuild by Paul Bredbury <brebs@sent.com> and modified by me.
   Icon provided by Rémy Dupont <rem11_1999@yahoo.fr>. Closing bug #144705.
-

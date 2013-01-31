@@ -580,11 +580,15 @@ app-forensics/rdd:rawio - Enables raw IO handling
 app-forensics/sleuthkit:aff - Enable extra aff formats
 app-forensics/sleuthkit:ewf - Enable libewf support
 app-i18n/anthy:canna-2ch - Enable support for app-dicts/canna-2ch
-app-i18n/fcitx:gtk3 - Use GTK+3 instead of 2
+app-i18n/fcitx:autostart - Enable xdg-compatible autostart of fcitx
+app-i18n/fcitx:enchant - Use app-text/enchant for text prediction
+app-i18n/fcitx:gtk - Install GTK2 IM module
+app-i18n/fcitx:gtk3 - Install GTK3 IM module
 app-i18n/fcitx:introspection - Enable GObject Introspection
 app-i18n/fcitx:opencc - Enable OpenCC for Chinese Transform
 app-i18n/fcitx:pango - Enable support for x11-libs/pango
-app-i18n/fcitx:snooper - Enable Key Snooper for gtk app
+app-i18n/fcitx:qt4 - Install Qt4 IM module
+app-i18n/fcitx:snooper - Enable Key Snooper for GTK app
 app-i18n/fcitx:table - Enable Table IM
 app-i18n/fcitx-configtool:gtk3 - Use GTK+3 instead of 2
 app-i18n/ibus:dconf - Enable support for gnome-base/dconf

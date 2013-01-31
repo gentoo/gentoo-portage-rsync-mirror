@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/fcitx-configtool
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/ChangeLog,v 1.14 2012/10/29 06:59:12 yngwin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/ChangeLog,v 1.15 2013/01/31 08:49:05 yngwin Exp $
+
+*fcitx-configtool-0.4.6 (31 Jan 2013)
+
+  31 Jan 2013; Ben de Groot <yngwin@gentoo.org> +fcitx-configtool-0.4.6.ebuild:
+  Version bump, bug #454486. Thanks to Dennis Lan and Wang Jiajun for
+  contributions.
 
   29 Oct 2012; Ben de Groot <yngwin@gentoo.org> -fcitx-configtool-0.1.4.ebuild,
   -fcitx-configtool-0.4.4.ebuild:

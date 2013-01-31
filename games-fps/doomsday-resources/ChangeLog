@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday-resources
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/ChangeLog,v 1.7 2012/07/06 09:52:26 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/ChangeLog,v 1.8 2013/01/31 08:46:06 mr_bones_ Exp $
+
+  31 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -doomsday-resources-1.01.ebuild:
+  old
 
   06 Jul 2012; Agostino Sarubbo <ago@gentoo.org>
   doomsday-resources-1.01-r1.ebuild:
@@ -34,4 +38,3 @@
   +doomsday-resources-1.01.ebuild:
   Initial import. Ebuild by Paul Bredbury <brebs@sent.com> and edited by me.
   Closing bug #117098.
-

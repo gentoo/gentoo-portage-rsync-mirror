@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>cjk</herd>
-	<maintainer>
-		<email>qiaomuf@gentoo.org</email>
-		<name>Mu Qiao</name>
-	</maintainer>
-	<use>
-		<flag name="introspection">Enable GObject Introspection</flag>
-		<flag name="gtk3">Use GTK+3 instead of 2</flag>
-		<flag name='opencc'>Enable OpenCC for Chinese Transform</flag>
-		<flag name='pango'>Enable support for <pkg>x11-libs/pango</pkg></flag>
-		<flag name='snooper'>Enable Key Snooper for gtk app</flag>
-		<flag name='table'>Enable Table IM</flag>
-	</use>
+  <herd>cjk</herd>
+  <use>
+    <flag name='autostart'>Enable xdg-compatible autostart of fcitx</flag>
+	<flag name='enchant'>Use <pkg>app-text/enchant</pkg> for text prediction</flag>
+    <flag name='introspection'>Enable GObject Introspection</flag>
+    <flag name='gtk'>Install GTK2 IM module</flag>
+    <flag name='gtk3'>Install GTK3 IM module</flag>
+    <flag name='opencc'>Enable OpenCC for Chinese Transform</flag>
+    <flag name='pango'>Enable support for <pkg>x11-libs/pango</pkg></flag>
+    <flag name='qt4'>Install Qt4 IM module</flag>
+    <flag name='snooper'>Enable Key Snooper for GTK app</flag>
+    <flag name='table'>Enable Table IM</flag>
+  </use>
 </pkgmetadata>
