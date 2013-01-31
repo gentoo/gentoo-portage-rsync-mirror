@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/magit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/ChangeLog,v 1.8 2012/11/26 11:31:15 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/magit/ChangeLog,v 1.9 2013/01/31 18:22:21 bicatali Exp $
+
+  31 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org> magit-1.2.0.ebuild:
+  Keyworded amd64-linux and x86-linux
 
 *magit-1.2.0 (26 Nov 2012)
 
@@ -39,4 +42,3 @@
   10 Oct 2009; Ulrich Mueller <ulm@gentoo.org> +files/50magit-gentoo.el,
   +magit-0.7.ebuild, +metadata.xml:
   Initial import from Emacs overlay, bug 254531. Ebuild contributed by me.
-

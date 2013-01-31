@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.11 2013/01/31 13:46:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.12 2013/01/31 18:30:56 bicatali Exp $
+
+*pandas-0.10.1 (31 Jan 2013)
+
+  31 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org> +pandas-0.10.1.ebuild,
+  metadata.xml:
+  Version bump
 
   31 Jan 2013; Justin Lecher <jlec@gentoo.org> pandas-0.10.0.ebuild:
   Move to new python eclasses; fixes broken test with latest nose # 454828 and

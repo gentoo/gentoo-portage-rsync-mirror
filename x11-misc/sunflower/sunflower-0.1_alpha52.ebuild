@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/sunflower-0.1_alpha52.ebuild,v 1.1 2013/01/31 17:09:04 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/sunflower-0.1_alpha52.ebuild,v 1.2 2013/01/31 18:09:41 hasufell Exp $
 
 EAPI=5
 
@@ -35,13 +35,12 @@ src_prepare() {
 }
 
 src_install() {
+	touch __init__.py || die
 	installme() {
 		# install modules
 		python_moduleinto ${PN}
 		python_domodule images translations application ${MY_PN}.py \
-			AUTHORS CHANGES COPYING DEPENDS TODO
-
-		touch "${D}/$(python_get_sitedir)/${PN}/__init__.py" || die
+			AUTHORS CHANGES COPYING DEPENDS TODO __init__.py
 
 		# generate and install startup scripts
 		sed \
