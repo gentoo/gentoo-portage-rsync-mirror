@@ -1,6 +1,16 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.123 2013/01/23 17:06:34 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.124 2013/01/31 14:54:31 chithanh Exp $
+
+*xf86-video-intel-2.20.19-r1 (31 Jan 2013)
+
+  31 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xf86-video-intel-2.20.19-discard-mappings.patch,
+  +xf86-video-intel-2.20.19-r1.ebuild, -xf86-video-intel-2.20.15.ebuild,
+  -xf86-video-intel-2.20.16.ebuild, -xf86-video-intel-2.20.17.ebuild,
+  -xf86-video-intel-2.20.18.ebuild, -xf86-video-intel-2.20.19.ebuild,
+  xf86-video-intel-2.20.13.ebuild:
+  Add patch for bug #454412. Remove old.
 
 *xf86-video-intel-2.20.19 (23 Jan 2013)
 

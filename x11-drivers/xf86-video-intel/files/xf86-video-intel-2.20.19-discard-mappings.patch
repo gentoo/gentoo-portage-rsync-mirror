@@ -1,0 +1,31 @@
+From de28027ffc649920268ae6fdd64146f08310e8a4 Mon Sep 17 00:00:00 2001
+From: Chris Wilson <chris@chris-wilson.co.uk>
+Date: Wed, 30 Jan 2013 08:42:48 +0000
+Subject: sna/dri: Make sure we discard the existing mappings when swapping GPU bo
+
+If the GPU bo is currently mapped to the Pixmap, we need to be sure to
+invalidate that mapping if we swap the GPU bo (for SwapBuffers). If we
+forget, we leave a dangling pointer to chase.
+
+Bugzilla: https://bugs.freedesktop.org/show_bug.cgi?id=60042
+Signed-off-by: Chris Wilson <chris@chris-wilson.co.uk>
+---
+diff --git a/src/sna/sna_dri.c b/src/sna/sna_dri.c
+index 15b87dd..e33cd78 100644
+--- a/src/sna/sna_dri.c
++++ b/src/sna/sna_dri.c
+@@ -498,6 +498,12 @@ static void set_bo(PixmapPtr pixmap, struct kgem_bo *bo)
+ 	if (priv->gpu_bo != bo) {
+ 		kgem_bo_destroy(&sna->kgem, priv->gpu_bo);
+ 		priv->gpu_bo = ref(bo);
++		if (priv->mapped) {
++			assert(!priv->shm && priv->stride);
++			pixmap->devPrivate.ptr = PTR(priv->ptr);
++			pixmap->devKind = priv->stride;
++			priv->mapped = false;
++		}
+ 	}
+ 	if (bo->domain != DOMAIN_GPU)
+ 		bo->domain = DOMAIN_NONE;
+--
+cgit v0.9.0.2-2-gbebe

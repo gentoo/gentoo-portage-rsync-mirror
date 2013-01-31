@@ -1,0 +1,12 @@
+diff -Naur cyassl-2.4.6.orig/configure.ac cyassl-2.4.6/configure.ac
+--- cyassl-2.4.6.orig/configure.ac	2012-12-20 16:25:33.000000000 -0500
++++ cyassl-2.4.6/configure.ac	2013-01-31 09:49:36.000000000 -0500
+@@ -42,7 +42,7 @@
+ 
+ # capture user C_EXTRA_FLAGS from ./configure line, CFLAGS may hold -g -O2 even
+ # if user doesn't override, no way to tell
+-USER_C_EXTRA_FLAGS="$C_EXTRA_FLAGS"
++USER_C_EXTRA_FLAGS="$CFLAGS"
+ 
+ LT_INIT([win32-dll])
+ LT_LANG([C++])
