@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14416 2013/01/30 18:26:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14417 2013/01/31 00:31:10 rafaelmartins Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Rafael G. Martins <rafaelmartins@gentoo.org> (31 Jan 2013)
+# Renamed to xombrero. Please install www-client/xombrero (bug #417555)
+# The package was not pkg-moved to fix the upstream versioning mess.
+# Removal in 30 days
+www-client/xxxterm
 
 # Michael Sterrett <mr_bones_@gentoo.org> (28 Jan 2013)
 # Doesn't work with newer KDE and upstream seems dead (bug #453756)

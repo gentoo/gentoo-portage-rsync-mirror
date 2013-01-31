@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/backports-lzma
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/backports-lzma/ChangeLog,v 1.1 2013/01/31 00:23:36 radhermit Exp $
+
+*backports-lzma-0.0.1 (31 Jan 2013)
+
+  31 Jan 2013; Tim Harder <radhermit@gentoo.org> +backports-lzma-0.0.1.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me.
+

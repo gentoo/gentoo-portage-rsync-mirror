@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/hawknl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/ChangeLog,v 1.17 2012/08/08 19:47:41 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/ChangeLog,v 1.18 2013/01/31 00:15:58 mr_bones_ Exp $
+
+  31 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -hawknl-1.68-r1.ebuild:
+  old
 
   08 Aug 2012; Brent Baude <ranger@gentoo.org> hawknl-1.68-r2.ebuild:
   Marking hawknl-1.68-r2 ppc for bug 412665

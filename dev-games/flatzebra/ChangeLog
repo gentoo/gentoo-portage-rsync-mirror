@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/flatzebra
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.30 2012/10/17 03:28:48 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.31 2013/01/31 00:18:30 mr_bones_ Exp $
+
+  31 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -flatzebra-0.1.5.ebuild:
+  old
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> flatzebra-0.1.6.ebuild:
   x86 stable wrt bug #436912
