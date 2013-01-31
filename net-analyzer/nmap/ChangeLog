@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.284 2013/01/26 18:18:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.285 2013/01/31 02:31:21 jer Exp $
+
+  31 Jan 2013; Jeroen Roovers <jer@gentoo.org> nmap-6.25.ebuild:
+  Bring back USE=ipv6.
 
   26 Jan 2013; Jeroen Roovers <jer@gentoo.org> nmap-6.01.ebuild,
   nmap-6.25.ebuild:

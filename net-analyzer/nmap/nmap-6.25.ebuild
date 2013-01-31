@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.25.ebuild,v 1.13 2013/01/26 18:18:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.25.ebuild,v 1.14 2013/01/31 02:31:21 jer Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 
-IUSE="gtk +lua ncat ndiff nls nmap-update nping ssl"
+IUSE="gtk ipv6 +lua ncat ndiff nls nmap-update nping ssl"
 NMAP_LINGUAS="de es fr hr hu id it ja pl pt_BR pt_PT ro ru sk zh"
 for lingua in ${NMAP_LINGUAS}; do
 	IUSE+=" linguas_${lingua}"
@@ -36,7 +36,7 @@ NMAP_PYTHON_DEPEND="
 RDEPEND="
 	dev-libs/apr
 	dev-libs/libpcre
-	net-libs/libpcap
+	net-libs/libpcap[ipv6=]
 	gtk? (
 		>=x11-libs/gtk+-2.6:2
 		>=dev-python/pygtk-2.6
@@ -111,11 +111,12 @@ src_configure() {
 	# The bundled libdnet is incompatible with the version available in the
 	# tree, so we cannot use the system library here.
 	econf \
+		$(use_enable ipv6) \
+		$(use_enable nls) \
 		$(use_with gtk zenmap) \
 		$(use_with lua liblua) \
 		$(use_with ncat) \
 		$(use_with ndiff) \
-		$(use_enable nls) \
 		$(use_with nmap-update) \
 		$(use_with nping) \
 		$(use_with ssl openssl) \
