@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-2.0.91.ebuild,v 1.3 2013/01/25 12:10:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-2.0.91.ebuild,v 1.4 2013/01/31 15:06:56 kensington Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils linux-info systemd
@@ -38,6 +38,8 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	>=sys-kernel/linux-headers-3.1
 	virtual/pkgconfig"
+
+QA_MULTILIB_PATHS="usr/lib/udisks2/udisksd"
 
 DOCS="AUTHORS HACKING NEWS README"
 

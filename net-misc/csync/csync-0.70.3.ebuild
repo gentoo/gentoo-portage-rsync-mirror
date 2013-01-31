@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/csync-0.70.1.ebuild,v 1.1 2013/01/22 20:51:58 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/csync-0.70.3.ebuild,v 1.1 2013/01/31 15:25:18 scarabeus Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit base cmake-utils
 
 DESCRIPTION="A file synchronizer especially designed for you, the normal user"
 HOMEPAGE="http://csync.org/"
-SRC_URI="http://download.owncloud.com/download/testing/o${P}.tar.bz2"
+SRC_URI="http://download.owncloud.com/download/o${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

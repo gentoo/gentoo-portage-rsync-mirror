@@ -3014,6 +3014,7 @@ media-sound/lame:mp3rtp - Build the mp3-to-RTP streaming utility. **UNSUPPORTED*
 media-sound/leechcraft-lmp:graffiti - Build media tags editor plugin
 media-sound/leechcraft-lmp:mp3tunes - Build plugin for supporting the mp3tunes.com music locker service.
 media-sound/leechcraft-lmp:mpris - Enable MPRIS support
+media-sound/leechcraft-musiczombie:acoustid - Use media-libs/chromaprint for acoustic fingerprinting
 media-sound/lmms:fluidsynth - Enables Fluidsynth MIDI software synthesis plugin.
 media-sound/lmms:stk - Enables STK Mallet plugin.
 media-sound/lmms:vst - Enables the VeSTige plugin to run VST plugins through Wine.

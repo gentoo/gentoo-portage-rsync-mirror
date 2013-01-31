@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.1.4.ebuild,v 1.1 2012/12/21 13:32:30 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.2.0.ebuild,v 1.1 2013/01/31 15:26:22 scarabeus Exp $
 
 EAPI=5
 
@@ -9,22 +9,29 @@ PLOCALES="ca cs_CZ da de el en eo es es_AR et_EE eu fa fi_FI fr gl he hr hu_HU i
 nb_NO nl oc pl pt_BR pt_PT ro ru ru_RU sk_SK sl sr@latin sv ta_LK tr uk vi zh_CN zh_TW"
 inherit cmake-utils l10n
 
+MY_P="${PN}-${PV/_/}"
+
 DESCRIPTION="Synchronization of your folders with another computers"
 HOMEPAGE="http://owncloud.org/"
-SRC_URI="http://download.owncloud.com/download/${P}.tar.bz2"
+SRC_URI="http://download.owncloud.com/download/${MY_P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="CCPL-Attribution-3.0 GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc"
 
 RDEPEND="
-	>=net-misc/csync-0.60.4
+	>=net-misc/csync-0.70.3
+	sys-fs/inotify-tools
 	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	x11-libs/qt-test:4
 "
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	doc? ( dev-python/sphinx virtual/latex-base )
+"
+
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	# Yay for fcked detection.
@@ -36,6 +43,14 @@ src_prepare() {
 			rm ${LANG_DIR}/${PN}_${lang}.ts
 		fi
 	done
+	epatch "${FILESDIR}/${PN}-1.2.0_beta2-automagicness.patch"
+}
+
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_with doc SPHINX)
+	)
+	cmake-utils_src_configure
 }
 
 pkg_postinst() {

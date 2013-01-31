@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.437 2013/01/30 18:59:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.438 2013/01/31 15:21:50 jer Exp $
+
+  31 Jan 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.6.13.ebuild,
+  wireshark-1.8.5.ebuild:
+  Run enewuser before fcaps.
 
   30 Jan 2013; Jeroen Roovers <jer@gentoo.org>
   files/wireshark-1.6.13-ldflags.patch, -files/wireshark-1.8.1-ldflags.patch,

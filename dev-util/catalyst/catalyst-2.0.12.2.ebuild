@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.12.2.ebuild,v 1.2 2013/01/02 15:29:58 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.12.2.ebuild,v 1.3 2013/01/31 15:01:43 jer Exp $
 
 # catalyst-9999         -> latest Git
 # catalyst-2.9999       -> catalyst_2 branch from Git
@@ -91,7 +91,7 @@ src_install() {
 	insinto /usr/share/doc/${PF}/examples
 	doins examples/* || die
 	dodoc README ChangeLog AUTHORS
-	doman files/catalyst.1
+	doman files/catalyst.1 files/catalyst-spec.5
 	# Here is where we actually enable ccache
 	use ccache && \
 		dosed 's:options="autoresume kern:options="autoresume ccache kern:' \

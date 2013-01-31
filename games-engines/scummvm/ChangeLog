@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.125 2013/01/28 01:48:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.126 2013/01/31 15:25:21 hasufell Exp $
+
+  31 Jan 2013; Julian Ospald <hasufell@gentoo.org>
+  files/scummvm-1.5.0-EE.patch:
+  finally fix EE locale issue wrt #437488
 
   28 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> scummvm-1.5.0.ebuild:
   EAPI=5
