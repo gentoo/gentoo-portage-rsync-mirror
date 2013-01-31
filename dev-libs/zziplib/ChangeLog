@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/zziplib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.108 2012/05/09 13:16:33 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.109 2013/01/30 23:59:27 mr_bones_ Exp $
+
+  30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -zziplib-0.13.60.ebuild:
+  old
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> zziplib-0.13.60-r1.ebuild:
   keyword ~amd64-fbsd
@@ -426,4 +429,3 @@
 
   21 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> zziplib-0.10.82.ebuild:
   initial commit; ebuild supplied by Keith Constable via bug 34067
-
