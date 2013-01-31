@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14418 2013/01/31 01:06:34 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14419 2013/01/31 11:04:47 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -393,22 +393,6 @@ net-wireless/madwifi-ng
 # Masked for removal in 30 days. (17 Jan 2012)
 # This is provided by USE=xtended webalizer, bug #445226
 app-admin/webalizer-xtended
-
-# Sebastien Fabbro <bicatali@gentoo.org> (13 Dec 2012)
-# Necessary removal to get rid of very unstable sci-libs/lapack-atlas
-# Packages are in the science overlay
-# until sci-libs/atlas replacement make it to the main tree
-<sci-astronomy/sextractor-2.8.6-r1
-sci-astronomy/scamp
-
-# Justin Lecher <jlec@gentoo.org> (13 Dec 2012)
-# sci-libs/(lapack/blas)-altas will be removed due to
-# fragile build and runtime behaviour #372323.
-# Alternatives are sci-libs/lapack-reference & sci-libs/blas-reference.
-# Follow up package named sci-libs/atlas can be found in
-# sci overlay and will be moved once ready for prime time
-sci-libs/blas-atlas
-sci-libs/lapack-atlas
 
 # Michał Górny <mgorny@gentoo.org> (07 Dec 2012)
 # Experimental version disabling XDM-AUTHENTICATION-1 (in favor
