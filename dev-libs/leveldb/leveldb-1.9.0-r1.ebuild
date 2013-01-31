@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/leveldb-1.9.0.ebuild,v 1.2 2013/01/24 06:35:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/leveldb-1.9.0-r1.ebuild,v 1.1 2013/01/31 03:33:43 patrick Exp $
 EAPI=4
 
 PYTHON_DEPEND="2:2.6"
@@ -19,6 +19,11 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
+src_compile() {
+	emake all || die
+	emake libmemenv.a || die
+}
+
 src_install() {
 	mkdir -p "${D}/usr/include"
 	cp -r include/* "${D}/usr/include" || die
@@ -26,4 +31,5 @@ src_install() {
 	dosym libleveldb$(get_libname ).1.9 /usr/$(get_libdir)/libleveldb$(get_libname ) || die
 	dosym libleveldb$(get_libname ).1.9 /usr/$(get_libdir)/libleveldb$(get_libname ).1 || die
 	dolib.a libleveldb.a || die
+	dolib.a libmemenv.a || die
 }
