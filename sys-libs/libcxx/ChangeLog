@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcxx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.8 2012/11/05 12:02:01 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.9 2013/01/31 17:56:57 bicatali Exp $
+
+  31 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  libcxx-0.0_p20121105.ebuild, libcxx-9999.ebuild:
+  Keyworded x86 amd64-linux and x86-linux
 
 *libcxx-0.0_p20121105 (05 Nov 2012)
 
@@ -43,4 +47,3 @@
   +libcxx-0.0_p20120523.ebuild, +libcxx-9999.ebuild, +files/multilib.patch,
   +files/prepare_snapshot.sh, +metadata.xml:
   initial import, ebuild by me
-

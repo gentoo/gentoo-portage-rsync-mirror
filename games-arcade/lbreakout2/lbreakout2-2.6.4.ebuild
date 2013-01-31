@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.6.2.ebuild,v 1.4 2011/03/04 01:31:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.6.4.ebuild,v 1.1 2013/01/31 17:40:22 mr_bones_ Exp $
 
-EAPI=2
-inherit autotools flag-o-matic eutils games
+EAPI=5
+inherit autotools eutils flag-o-matic gnome2-utils games
 
-levels_V=20100920
-themes_V=20070514
+levels_V=20120815
+themes_V=20111026
 
 DESCRIPTION="Breakout clone written with the SDL library"
 HOMEPAGE="http://lgames.sourceforge.net/index.php?project=LBreakout2"
@@ -16,10 +16,10 @@ SRC_URI=" mirror://sourceforge/lgames/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="nls themes"
 
-RDEPEND="media-libs/libpng
+RDEPEND="media-libs/libpng:0
 	sys-libs/zlib
 	media-libs/libsdl[audio,joystick,video]
 	media-libs/sdl-net
@@ -44,7 +44,7 @@ src_unpack() {
 		# is harder to just compare if the filename is the same.
 		rm -f absoluteB.zip oz.zip moiree.zip
 		for f in *.zip; do
-			unzip -q "$f"  &&  rm -f "$f"  ||  die "unpacking ${f}"
+			unzip -q "$f"  &&  rm -f "$f" || die
 		done
 	fi
 }
@@ -57,7 +57,6 @@ src_prepare() {
 src_configure() {
 	filter-flags -O?
 	egamesconf \
-		--disable-dependency-tracking \
 		--enable-sdl-net \
 		--localedir=/usr/share/locale \
 		--with-docdir="/usr/share/doc/${PF}/html" \
@@ -65,17 +64,30 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	dodoc AUTHORS README TODO ChangeLog
+	default
 
 	if use themes ; then
 		insinto "${GAMES_DATADIR}/lbreakout2/gfx"
-		doins -r "${WORKDIR}/themes/"*  || die
+		doins -r "${WORKDIR}/themes/"*
 	fi
 
-	newicon client/gfx/win_icon.png lbreakout2.png
+	newicon client/gfx/win_icon.png ${PN}.png
+	newicon -s 32 client/gfx/win_icon.png ${PN}.png
 	make_desktop_entry lbreakout2 LBreakout2
 
 	prepgamesdirs
+}
+
+pkg_preinst() {
+    games_pkg_preinst
+    gnome2_icon_savelist
+}
+
+pkg_postinst() {
+    games_pkg_postinst
+    gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+    gnome2_icon_cache_update
 }

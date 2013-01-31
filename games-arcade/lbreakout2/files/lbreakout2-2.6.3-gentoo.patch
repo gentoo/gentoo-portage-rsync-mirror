@@ -1,6 +1,5 @@
-diff -ru lbreakout2-2.6.1.orig/Makefile.am lbreakout2-2.6.1/Makefile.am
---- lbreakout2-2.6.1.orig/Makefile.am	2009-10-26 12:43:18.000000000 -0400
-+++ lbreakout2-2.6.1/Makefile.am	2009-12-30 15:44:09.095784859 -0500
+--- lbreakout2-2.6.1.orig/Makefile.am
++++ lbreakout2-2.6.1/Makefile.am
 @@ -1,13 +1,8 @@
  SUBDIRS = intl m4 po common gui game server client docs
  
@@ -17,9 +16,8 @@ diff -ru lbreakout2-2.6.1.orig/Makefile.am lbreakout2-2.6.1/Makefile.am
  
  WIN32_TEXT = AUTHORS COPYING ChangeLog INSTALL README README-SDL.txt \
  TODO lbreakout2.spec ABOUT-NLS
-diff -ru lbreakout2-2.6.1.orig/common/gettext.h lbreakout2-2.6.1/common/gettext.h
---- lbreakout2-2.6.1.orig/common/gettext.h	2005-10-19 16:07:57.000000000 -0400
-+++ lbreakout2-2.6.1/common/gettext.h	2009-12-30 15:43:41.924907300 -0500
+--- lbreakout2-2.6.1.orig/common/gettext.h
++++ lbreakout2-2.6.1/common/gettext.h
 @@ -24,6 +24,7 @@
  
  /* Get declarations of GNU message catalog functions.  */
@@ -28,9 +26,8 @@ diff -ru lbreakout2-2.6.1.orig/common/gettext.h lbreakout2-2.6.1/common/gettext.
  
  #else
  
-diff -ru lbreakout2-2.6.1.orig/configure.in lbreakout2-2.6.1/configure.in
---- lbreakout2-2.6.1.orig/configure.in	2009-12-24 05:49:37.000000000 -0500
-+++ lbreakout2-2.6.1/configure.in	2009-12-30 15:43:54.432781208 -0500
+--- lbreakout2-2.6.1.orig/configure.in
++++ lbreakout2-2.6.1/configure.in
 @@ -80,8 +80,6 @@
  [  --enable-netdebug           Enable net packet debugging.], netdebug_flag="-DNET_DEBUG_MSG" )
  AC_SUBST(netdebug_flag)
@@ -40,9 +37,8 @@ diff -ru lbreakout2-2.6.1.orig/configure.in lbreakout2-2.6.1/configure.in
  locdir_flag="-DLOCALEDIR=\\\"$localedir\\\""
  
  dnl installation&highscore path
-diff -ru lbreakout2-2.6.1.orig/docs/Makefile.am lbreakout2-2.6.1/docs/Makefile.am
---- lbreakout2-2.6.1.orig/docs/Makefile.am	2005-02-16 16:07:25.000000000 -0500
-+++ lbreakout2-2.6.1/docs/Makefile.am	2009-12-30 15:44:55.780855338 -0500
+--- lbreakout2-2.6.1.orig/docs/Makefile.am
++++ lbreakout2-2.6.1/docs/Makefile.am
 @@ -7,11 +7,11 @@
  warp.jpg screen.jpg
  
@@ -58,9 +54,8 @@ diff -ru lbreakout2-2.6.1.orig/docs/Makefile.am lbreakout2-2.6.1/docs/Makefile.a
  
  win32-install-script:
  	@for file in $(EXTRA_DIST); do \
-diff -ru lbreakout2-2.6.1.orig/po/Makefile.in.in lbreakout2-2.6.1/po/Makefile.in.in
---- lbreakout2-2.6.1.orig/po/Makefile.in.in	2009-10-26 11:36:51.000000000 -0400
-+++ lbreakout2-2.6.1/po/Makefile.in.in	2009-12-30 15:44:36.248781296 -0500
+--- lbreakout2-2.6.1.orig/po/Makefile.in.in
++++ lbreakout2-2.6.1/po/Makefile.in.in
 @@ -24,7 +24,7 @@
  exec_prefix = @exec_prefix@
  datadir = @datadir@

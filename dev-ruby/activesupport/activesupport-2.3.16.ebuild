@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-2.3.16.ebuild,v 1.1 2013/01/28 21:36:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-2.3.16.ebuild,v 1.5 2013/01/31 17:46:47 ago Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 jruby"
@@ -17,7 +17,7 @@ HOMEPAGE="http://rubyforge.org/projects/activesupport/"
 
 LICENSE="MIT"
 SLOT="2.3"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~hppa ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/builder-2.1.2:0 >=dev-ruby/tzinfo-0.3.16 >=dev-ruby/i18n-0.4.1:0.4"

@@ -1,6 +1,14 @@
 # ChangeLog for games-arcade/lbreakout2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.35 2011/09/16 22:34:43 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.36 2013/01/31 17:40:22 mr_bones_ Exp $
+
+*lbreakout2-2.6.4 (31 Jan 2013)
+
+  31 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/lbreakout2-2.6.4-gentoo.patch, +lbreakout2-2.6.4.ebuild,
+  -files/lbreakout2-2.6.2-gentoo.patch, -lbreakout2-2.6.2.ebuild,
+  files/lbreakout2-2.6.3-gentoo.patch:
+  version bump (bug #452246); clean old
 
   16 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> lbreakout2-2.6.3.ebuild:
   bump the levelset version (bug #383261)
