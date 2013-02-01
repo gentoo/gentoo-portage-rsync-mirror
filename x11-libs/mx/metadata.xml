@@ -8,4 +8,7 @@
 		<flag name="glade">Build the <pkg>dev-util/glade</pkg> catalog
 			files</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">clutter-project/mx</remote-id>
+	</upstream>
 </pkgmetadata>

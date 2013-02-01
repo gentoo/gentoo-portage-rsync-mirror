@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/mx-1.4.7.ebuild,v 1.4 2013/01/06 11:20:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/mx-1.4.7.ebuild,v 1.5 2013/02/01 22:06:12 eva Exp $
 
 EAPI="4"
 
@@ -8,12 +8,12 @@ inherit eutils
 
 DESCRIPTION="A widget toolkit using Clutter"
 HOMEPAGE="http://clutter-project.org/"
-SRC_URI="https://github.com/downloads/clutter-project/${PN}/${P}.tar.xz"
+SRC_URI="mirror://github/clutter-project/${PN}/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="1.0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="dbus debug doc glade +gtk +introspection startup-notification"
+IUSE="dbus debug glade +gtk +introspection startup-notification"
 
 RDEPEND="
 	>=dev-libs/glib-2.28.0:2
@@ -31,11 +31,11 @@ RDEPEND="
 	startup-notification? ( >=x11-libs/startup-notification-0.9 )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
+	>=dev-util/gtk-doc-am-1.14
 	>=dev-util/intltool-0.35.0
 	sys-devel/gettext
-	doc? ( >=dev-util/gtk-doc-1.14 )"
-
-DOCS="ChangeLog NEWS README"
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	# Tests are interactive, no use for us
@@ -46,17 +46,16 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
-
-	myconf="--enable-maintainer-flags=no
-		--with-winsys=x11
-		$(use_enable gtk gtk-widgets)
-		$(use_enable introspection)
-		$(use_with dbus)
-		$(use_with glade)
-		$(use_with startup-notification)"
-
-	econf ${myconf}
+	econf \
+		--disable-maintainer-flags \
+		--disable-silent-rules \
+		--with-winsys=x11 \
+		$(use_enable gtk gtk-widgets) \
+		$(use_enable introspection) \
+		$(use_enable debug) \
+		$(use_with dbus) \
+		$(use_with glade) \
+		$(use_with startup-notification)
 }
 
 src_install() {
