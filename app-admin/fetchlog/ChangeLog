@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/fetchlog
-# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.13 2013/02/01 12:22:00 phosphan Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.14 2013/02/01 12:39:42 phosphan Exp $
+
+*fetchlog-1.4 (01 Feb 2013)
+
+  01 Feb 2013; Patrick Kursawe <phosphan@gentoo.org> +fetchlog-1.4.ebuild:
+  Version bump, see bug #451848
 
   01 Feb 2013; Patrick Kursawe <phosphan@gentoo.org> -fetchlog-0.94.ebuild:
   Cleanup

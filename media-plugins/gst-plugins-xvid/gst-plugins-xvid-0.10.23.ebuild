@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvid/gst-plugins-xvid-0.10.23.ebuild,v 1.4 2013/02/01 12:00:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvid/gst-plugins-xvid-0.10.23.ebuild,v 1.5 2013/02/01 12:41:30 ago Exp $
 
 EAPI="5"
 
 inherit gst-plugins-bad
 
 DESCRIPTION="GStreamer plugin for XviD (MPEG-4) video encoding/decoding support"
-KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND="media-libs/xvid"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ttf-fonts/ttf-fonts-1.ebuild,v 1.10 2013/02/01 12:07:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ttf-fonts/ttf-fonts-1.ebuild,v 1.11 2013/02/01 12:46:01 yngwin Exp $
 
 DESCRIPTION="Virtual for Serif/Sans/Monospace font packages"
 HOMEPAGE=""
@@ -14,9 +14,10 @@ IUSE=""
 DEPEND=""
 RDEPEND="|| (
 		media-fonts/dejavu
-		media-fonts/ttf-bitstream-vera
 		media-fonts/liberation-fonts
+		media-fonts/croscorefonts
 		media-fonts/droid
+		media-fonts/ttf-bitstream-vera
 		media-fonts/freefont
 		media-fonts/corefonts
 	)"
