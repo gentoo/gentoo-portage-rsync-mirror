@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/eventlet-0.9.16.ebuild,v 1.2 2012/10/30 16:37:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/eventlet-0.9.16.ebuild,v 1.3 2013/02/01 02:34:27 idella4 Exp $
 
 EAPI=3
 
@@ -21,7 +21,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples test"
 
 DEPEND="doc? ( dev-python/sphinx )
-	test? ( dev-python/greenlet )"
+	test? ( dev-python/greenlet
+		net-libs/gnutls
+		dev-python/httplib2 )"
 RDEPEND="dev-python/greenlet"
 
 src_compile() {
@@ -30,6 +32,11 @@ src_compile() {
 	if use doc ; then
 		emake -C doc html || die
 	fi
+}
+
+src_prepare() {
+	sed -e 's:import time:import time, traceback:' -i tests/mysqldb_test.py || die
+	distutils_src_prepare
 }
 
 src_install() {
