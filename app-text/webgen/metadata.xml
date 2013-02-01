@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>ruby</herd>
-  <herd>sgml</herd>
   <use>
     <flag name="builder">Enable programmatic HTML/XML generation</flag>
     <flag name="exif">Enable EXIF information in image galleries</flag>
