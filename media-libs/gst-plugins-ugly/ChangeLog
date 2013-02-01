@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-ugly
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.103 2013/01/22 22:36:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.104 2013/02/01 11:50:00 ago Exp $
+
+  01 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-ugly-0.10.19.ebuild:
+  Stable for amd64, wrt bug #454906
 
 *gst-plugins-ugly-1.0.5 (22 Jan 2013)
 
@@ -452,4 +456,3 @@
   04 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org> +metadata.xml,
   +gst-plugins-ugly-0.9.7.ebuild:
   0.10 Prerelease
-

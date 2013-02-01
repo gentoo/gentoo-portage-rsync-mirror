@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7420 2013/01/31 11:04:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7422 2013/02/01 11:48:52 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Remove obsolete masks on games-roguelike/noegnud-* packages
+
+  01 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Remove obsolete mask on www-apache/mod_cplusplus
 
   31 Jan 2013; Justin Lecher <jlec@gentoo.org> package.mask:
   Remove atlas masking after removal

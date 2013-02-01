@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-x264
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x264/ChangeLog,v 1.26 2013/01/29 01:55:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x264/ChangeLog,v 1.27 2013/02/01 12:00:10 ago Exp $
+
+  01 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-x264-0.10.19.ebuild:
+  Stable for amd64, wrt bug #454906
 
   29 Jan 2013; Alexis Ballier <aballier@gentoo.org>
   gst-plugins-x264-0.10.19.ebuild, gst-plugins-x264-1.0.5.ebuild:
@@ -138,4 +142,3 @@
   30 Mar 2009; Olivier Crête <tester@gentoo.org> +metadata.xml,
   +gst-plugins-x264-0.10.11.ebuild:
   Add x264 h.264 encoder plugin
-

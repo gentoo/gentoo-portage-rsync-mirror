@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-neon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.64 2012/12/02 18:01:26 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.65 2013/02/01 11:56:03 ago Exp $
+
+  01 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-neon-0.10.23.ebuild:
+  Stable for amd64, wrt bug #454906
 
 *gst-plugins-neon-0.10.23 (02 Dec 2012)
 
@@ -290,4 +294,3 @@
   24 Mar 2006; Zaheer Abbas Merali <zaheerm@gentoo.org> +metadata.xml,
   +gst-plugins-neon-0.10.1.ebuild:
   initial ebuild for gst-plugins-neon
-

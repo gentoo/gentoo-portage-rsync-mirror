@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14423 2013/02/01 00:08:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14425 2013/02/01 11:48:52 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -316,12 +316,6 @@ net-misc/asterisk-chan_misdn
 www-apache/mod_authn_pam
 
 # Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Patrick Lauer <patrick@gentoo.org> (16 Oct 2012)
-# upstream dead since 2008, doesn't build
-# See bug #282479. Removal in a month.
-www-apache/mod_cplusplus
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
 # Incompatible with recent kernels (#300047) , upstream dead,
 # net-dialup/martian-modem can be used instead in most cases.
 net-dialup/ltmodem
@@ -371,13 +365,6 @@ app-emulation/systemsim-cell
 # Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
 # Fails to build, always links statically (#448288). Removal in a month.
 sys-block/gcloop
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Fails to launch (#294013), abandoned, ancient NotEye
-# replaced it long time ago (#447848). Removal in a month.
-games-roguelike/noegnud-data
-games-roguelike/noegnud-nethack
-games-roguelike/noegnud-slashem
 
 # Panagiotis Christopoulos <pchrist@gentoo.org> (25 Dec 2012)
 # mask again these, temporarily, because more testing must be done.

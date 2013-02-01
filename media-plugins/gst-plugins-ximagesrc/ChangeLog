@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-ximagesrc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/ChangeLog,v 1.53 2013/01/21 23:23:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/ChangeLog,v 1.54 2013/02/01 12:00:41 ago Exp $
+
+  01 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-ximagesrc-0.10.31.ebuild:
+  Stable for amd64, wrt bug #454906
 
 *gst-plugins-ximagesrc-1.0.5 (21 Jan 2013)
 
@@ -256,4 +260,3 @@
   05 May 2006; Zaheer Abbas Merali <zaheerm@gentoo.org> +metadata.xml,
   +gst-plugins-ximagesrc-0.10.3.ebuild:
   initial import
-

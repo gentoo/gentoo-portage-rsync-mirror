@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-gsm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gsm/ChangeLog,v 1.4 2012/12/02 17:56:46 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gsm/ChangeLog,v 1.5 2013/02/01 11:52:43 ago Exp $
+
+  01 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gst-plugins-gsm-0.10.23.ebuild:
+  Stable for amd64, wrt bug #454906
 
 *gst-plugins-gsm-0.10.23 (02 Dec 2012)
 
@@ -20,4 +23,3 @@
   27 Sep 2011; Mart Raudsepp <leio@gentoo.org> +gst-plugins-gsm-0.10.22.ebuild:
   Add the gsm plugin from gst-plugins-bad for GSM audio decoding/encoding for
   bug 384093
-
