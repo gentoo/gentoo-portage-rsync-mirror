@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/dirdiff
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.12 2012/05/29 19:29:19 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.13 2013/02/01 15:31:07 jlec Exp $
+
+*dirdiff-2.1-r2 (01 Feb 2013)
+
+  01 Feb 2013; Justin Lecher <jlec@gentoo.org> +dirdiff-2.1-r2.ebuild,
+  +files/dirdiff-2.1-build.patch, +files/dirdiff-2.1-funky-chars.patch,
+  +files/dirdiff-2.1-tcl8.6.patch, +files/dirdiff-2.1-vcs.patch, metadata.xml:
+  Add fix for tcl-8.6, #455032; get some fixes from debian
 
   29 May 2012; Brent Baude <ranger@gentoo.org> dirdiff-2.1-r1.ebuild:
   Marking dirdiff-2.1-r1 ppc for bug 391617
