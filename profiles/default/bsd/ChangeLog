@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.137 2012/12/23 12:26:25 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.138 2013/02/01 22:42:14 aballier Exp $
+
+  01 Feb 2013; Alexis Ballier <aballier@gentoo.org>
+  fbsd/amd64/9.1/clang/packages.build, fbsd/packages.build:
+  remove nano from packages.build, bug #443810 by Yuta SATOH
 
   23 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask sys-fs/eudev next to sys-fs/udev wrt #447364
