@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/x264
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.78 2012/12/16 19:08:40 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.79 2013/02/01 17:38:39 ago Exp $
+
+  01 Feb 2013; Agostino Sarubbo <ago@gentoo.org> x264-0.0.20111220.ebuild:
+  Stable for ppc64, wrt bug #454906
 
   16 Dec 2012; Jeroen Roovers <jer@gentoo.org> x264-0.0.20120707.ebuild:
   Marked ~hppa (bug #446582).
