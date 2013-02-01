@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/readseq
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/readseq/ChangeLog,v 1.9 2010/11/28 08:56:48 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/readseq/ChangeLog,v 1.10 2013/02/01 14:55:17 jlec Exp $
+
+  01 Feb 2013; Justin Lecher <jlec@gentoo.org> -readseq-19930201.ebuild,
+  -readseq-19930201-r1.ebuild, readseq-20080420.ebuild, metadata.xml:
+  Drop old; Resolve file collision sci-biology/meme, #455010
 
 *readseq-19930201-r1 (28 Nov 2010)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/readseq/readseq-20080420.ebuild,v 1.3 2008/07/16 17:00:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/readseq/readseq-20080420.ebuild,v 1.4 2013/02/01 14:55:17 jlec Exp $
 
 EAPI=1
 
@@ -14,13 +14,17 @@ HOMEPAGE="http://iubio.bio.indiana.edu/soft/molbio/readseq/"
 # Renamed to the date of the modification and mirrored
 SRC_URI="http://dev.gentoo.org/~dberkholz/distfiles/${MY_P}.zip"
 #SRC_URI="mirror://gentoo/${MY_P}.zip"
+
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-COMMON="dev-java/xerces:2
-	dev-java/jaxp"
+
+COMMON="
+	dev-java/jaxp
+	dev-java/xerces:2"
 RDEPEND="${COMMON}
+	!=sci-biology/meme-4.8.1
 	>=virtual/jre-1.4"
 DEPEND="${COMMON}
 	>=virtual/jdk-1.4

@@ -1,6 +1,6 @@
 ## Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-4.8.1.ebuild,v 1.6 2013/02/01 14:51:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-4.8.1-r1.ebuild,v 1.1 2013/02/01 14:51:24 jlec Exp $
 
 EAPI=4
 
@@ -18,11 +18,9 @@ KEYWORDS="amd64 x86"
 IUSE="debug examples mpi"
 
 DEPEND="
-	!app-text/tree
 	app-shells/tcsh
 	dev-libs/libxml2:2
 	dev-libs/libxslt
-	!sci-biology/readseq
 	mpi? ( virtual/mpi )"
 RDEPEND="${DEPEND}"
 
@@ -66,6 +64,9 @@ src_test() {
 
 src_install() {
 	default
+
+	mv "${ED}"/usr/bin/{,meme-}tree || die
+	mv "${ED}"/usr/bin/{,meme-}readseq || die
 
 	echo "PATH=/opt/${PN}/bin" > 99${PN}
 	doenvd 99${PN}

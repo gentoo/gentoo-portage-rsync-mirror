@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.498 2013/01/21 05:18:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.499 2013/02/01 14:44:53 scarabeus Exp $
+
+  01 Feb 2013; Tomáš Chvátal <scarabeus@gentoo.org> imagemagick-6.7.8.7.ebuild,
+  imagemagick-6.7.9.9.ebuild:
+  Use subslots to make rmagic automatically rebuild with update. Fixes
+  bug#430636.
 
   21 Jan 2013; Mike Frysinger <vapier@gentoo.org>
   +files/imagemagick-6.7.8.7-freetype.patch, imagemagick-6.7.8.7.ebuild,

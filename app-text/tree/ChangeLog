@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tree
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.104 2013/01/22 18:03:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.105 2013/02/01 14:53:14 jlec Exp $
+
+  01 Feb 2013; Justin Lecher <jlec@gentoo.org> tree-1.6.0-r1.ebuild,
+  metadata.xml:
+  Resolve file collision sci-biology/meme, #455010
 
   22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -tree-1.6.0.ebuild:
   old

@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/meme
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.22 2013/01/31 07:17:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.23 2013/02/01 14:51:24 jlec Exp $
+
+*meme-4.8.1-r1 (01 Feb 2013)
+
+  01 Feb 2013; Justin Lecher <jlec@gentoo.org> meme-4.8.1.ebuild,
+  +meme-4.8.1-r1.ebuild:
+  Resolve file collision with app-text and sci-biology/readseq, #455010
 
   31 Jan 2013; Justin Lecher <jlec@gentoo.org> -meme-4.3.0.ebuild,
   meme-4.8.1.ebuild:
