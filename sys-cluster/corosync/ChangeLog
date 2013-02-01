@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/corosync
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/ChangeLog,v 1.26 2013/01/18 10:22:53 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/ChangeLog,v 1.27 2013/02/01 18:06:35 ago Exp $
+
+  01 Feb 2013; Agostino Sarubbo <ago@gentoo.org> -corosync-2.1.0.ebuild:
+  Remove old
 
 *corosync-2.3.0 (18 Jan 2013)
 *corosync-1.4.5 (18 Jan 2013)
@@ -135,4 +138,3 @@
   23 Mar 2010; Doug Goldstein <cardoe@gentoo.org> +corosync-1.2.0.ebuild,
   +files/corosync.initd, +metadata.xml:
   add initial version of corosync for testing with clvm
-

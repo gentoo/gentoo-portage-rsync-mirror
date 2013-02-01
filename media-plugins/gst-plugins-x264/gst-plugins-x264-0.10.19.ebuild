@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x264/gst-plugins-x264-0.10.19.ebuild,v 1.7 2013/02/01 12:40:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-x264/gst-plugins-x264-0.10.19.ebuild,v 1.8 2013/02/01 18:02:28 ago Exp $
 
 EAPI="5"
 
 inherit gst-plugins-ugly
 
-KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86 ~amd64-fbsd"
+KEYWORDS="amd64 ~hppa ~ppc ppc64 x86 ~amd64-fbsd"
 IUSE=""
 
 # 20111220 ensures us X264_BUILD >= 120
