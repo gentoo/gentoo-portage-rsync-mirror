@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/demerge-0.047-r1.ebuild,v 1.7 2013/01/04 21:58:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/demerge-0.047-r1.ebuild,v 1.8 2013/02/01 00:26:15 mr_bones_ Exp $
 
 DESCRIPTION="demerge - revert to previous installation states"
 HOMEPAGE="http://download.mpsna.de/opensource/demerge/"
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}
 		sys-apps/portage"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# Fix path for new make.conf location

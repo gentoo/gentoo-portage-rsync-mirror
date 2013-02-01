@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>games</herd>
-  <use>
-    <flag name="demo">Use the demo data instead of the full game</flag>
-    <flag name="levels">Install user-created levels (fRaBs)</flag>
-    <flag name="sound">Install optional sound data</flag>
-  </use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake3-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.35 2013/01/13 11:27:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.36 2013/02/01 00:14:12 mr_bones_ Exp $
+
+  01 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> -quake3-bin-1.32c.ebuild:
+  old
 
   13 Jan 2013; Agostino Sarubbo <ago@gentoo.org> quake3-bin-1.32c-r1.ebuild:
   Stable for x86, wrt bug #448030

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.15.ebuild,v 1.4 2012/04/16 19:35:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.15.ebuild,v 1.5 2013/02/01 00:03:14 mr_bones_ Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
-inherit autotools eutils python games
+inherit eutils python games
 
 DESCRIPTION="A modification of the classical Freedroid engine into an RPG"
 HOMEPAGE="http://freedroid.sourceforge.net/"

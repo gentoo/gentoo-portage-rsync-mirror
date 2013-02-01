@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/demerge
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.58 2013/01/05 14:48:57 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/ChangeLog,v 1.59 2013/02/01 00:26:15 mr_bones_ Exp $
+
+  01 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> demerge-0.047-r1.ebuild:
+  don't quote $A
 
   05 Jan 2013; Michael Palimaka <kensington@gentoo.org> -demerge-0.047.ebuild:
   Remove old.
