@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/gsl-shell-2.2.0.ebuild,v 1.1 2012/11/30 17:34:03 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/gsl-shell-2.2.0.ebuild,v 1.2 2013/02/01 12:09:55 ago Exp $
 
 EAPI=4
 inherit eutils
@@ -18,7 +18,7 @@ DEPEND=">=sci-libs/gsl-1.14
 	>=x11-libs/agg-2.5
 	>=media-libs/freetype-2.4.10
 	sys-libs/readline
-	|| ( media-fonts/ubuntu-font-family media-fonts/freefont-ttf media-fonts/dejavu )
+	|| ( media-fonts/ubuntu-font-family media-fonts/freefont media-fonts/dejavu )
 	doc? ( dev-python/sphinx[latex] )
 	fox? ( x11-libs/fox:1.6 )"
 RDEPEND="${DEPEND}"

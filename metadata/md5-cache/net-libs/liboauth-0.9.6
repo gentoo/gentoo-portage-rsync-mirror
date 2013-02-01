@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install test
-DEPEND=nss? ( dev-libs/nss curl? ( || ( net-misc/curl[ssl,curl_ssl_nss] net-misc/curl[-ssl] ) ) ) !nss? ( dev-libs/openssl curl? ( || ( net-misc/curl[ssl,curl_ssl_openssl] net-misc/curl[-ssl] ) ) ) net-misc/curl doc? ( app-doc/doxygen media-gfx/graphviz media-fonts/freefont-ttf ) virtual/pkgconfig
+DEPEND=nss? ( dev-libs/nss curl? ( || ( net-misc/curl[ssl,curl_ssl_nss] net-misc/curl[-ssl] ) ) ) !nss? ( dev-libs/openssl curl? ( || ( net-misc/curl[ssl,curl_ssl_openssl] net-misc/curl[-ssl] ) ) ) net-misc/curl doc? ( app-doc/doxygen media-gfx/graphviz media-fonts/freefont ) virtual/pkgconfig
 DESCRIPTION=C library implementing the OAuth secure authentication protocol
 EAPI=4
 HOMEPAGE=http://liboauth.sourceforge.net/
@@ -10,4 +10,4 @@ RDEPEND=nss? ( dev-libs/nss curl? ( || ( net-misc/curl[ssl,curl_ssl_nss] net-mis
 REQUIRED_USE=bindist? ( nss )
 SLOT=0
 SRC_URI=mirror://sourceforge/liboauth/liboauth-0.9.6.tar.gz http://liboauth.sourceforge.net/pool/liboauth-0.9.6.tar.gz
-_md5_=99bf6c3a52a9c33b5e518ddcf17632b1
+_md5_=485fb994195279b5f3a8d3dd7b612c55

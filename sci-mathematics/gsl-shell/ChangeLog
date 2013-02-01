@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gsl-shell
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/ChangeLog,v 1.6 2012/11/30 17:34:03 grozin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/ChangeLog,v 1.7 2013/02/01 12:09:55 ago Exp $
+
+  01 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gsl-shell-2.2.0.ebuild:
+  move media-fonts/freefont-ttf into media-fonts/freefont
 
 *gsl-shell-2.2.0 (30 Nov 2012)
 

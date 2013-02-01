@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ttf-fonts/ttf-fonts-1.ebuild,v 1.9 2012/07/27 12:39:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ttf-fonts/ttf-fonts-1.ebuild,v 1.10 2013/02/01 12:07:36 ago Exp $
 
 DESCRIPTION="Virtual for Serif/Sans/Monospace font packages"
 HOMEPAGE=""
@@ -17,6 +17,6 @@ RDEPEND="|| (
 		media-fonts/ttf-bitstream-vera
 		media-fonts/liberation-fonts
 		media-fonts/droid
-		media-fonts/freefont-ttf
+		media-fonts/freefont
 		media-fonts/corefonts
 	)"

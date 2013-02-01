@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/liboauth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.20 2013/01/06 10:00:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.21 2013/02/01 12:08:41 ago Exp $
+
+  01 Feb 2013; Agostino Sarubbo <ago@gentoo.org> liboauth-0.9.6.ebuild,
+  liboauth-0.9.7.ebuild:
+  move media-fonts/freefont-ttf into media-fonts/freefont
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> liboauth-0.9.7.ebuild:
   Add ~sparc, wrt bug #449220
