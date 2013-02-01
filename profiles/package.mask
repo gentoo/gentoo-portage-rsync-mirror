@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14425 2013/02/01 11:48:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14426 2013/02/01 17:10:37 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -62,6 +62,7 @@ games-puzzle/kmagnet
 # Uncompatible with current udev and baselayout
 # Bug 220121 and the ones it Blocks
 # Removal in 30 days
+x11-misc/mkxf86config
 <app-misc/livecd-tools-2.0
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (28 Jan 2013)
