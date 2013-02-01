@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-bin/etqw-bin-1.5.ebuild,v 1.5 2011/02/13 17:45:56 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-bin/etqw-bin-1.5.ebuild,v 1.6 2013/02/01 01:38:32 tristan Exp $
 
 inherit eutils games
 
@@ -27,8 +27,7 @@ RDEPEND="sys-libs/glibc
 S=${WORKDIR}/data
 dir=${GAMES_PREFIX_OPT}/etqw
 
-QA_TEXTRELS="${dir:1}/pb/*.so"
-QA_EXECSTACK="${dir:1}/*.x86
+QA_PREBUILT="${dir:1}/*.x86
 	${dir:1}/*.so*"
 
 src_unpack() {

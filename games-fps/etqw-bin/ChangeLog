@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/etqw-bin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-bin/ChangeLog,v 1.5 2011/11/17 19:01:20 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-bin/ChangeLog,v 1.6 2013/02/01 01:38:32 tristan Exp $
+
+  01 Feb 2013; Tristan Heaven <tristan@gentoo.org> etqw-bin-1.5.ebuild:
+  Use QA_PREBUILT, bug #430534
 
   17 Nov 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Change developer's email
