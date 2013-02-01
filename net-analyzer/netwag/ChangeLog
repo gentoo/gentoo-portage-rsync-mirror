@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netwag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/ChangeLog,v 1.28 2013/01/07 11:44:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/ChangeLog,v 1.29 2013/02/01 15:43:31 jer Exp $
+
+  01 Feb 2013; Jeroen Roovers <jer@gentoo.org> netwag-5.39.0.ebuild:
+  /usr/bin/eterm changed to /usr/bin/Eterm.
 
   07 Jan 2013; Jeroen Roovers <jer@gentoo.org> -netwag-5.38.0.ebuild:
   Old.

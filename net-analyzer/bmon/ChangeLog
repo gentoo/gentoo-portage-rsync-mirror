@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/bmon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.46 2012/03/06 19:07:32 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.47 2013/02/01 15:34:52 jer Exp $
+
+  01 Feb 2013; Jeroen Roovers <jer@gentoo.org> bmon-2.1.1_pre1.ebuild,
+  +files/bmon-2.1.1-verbose.patch:
+  Verbose build.
 
   06 Mar 2012; Jeroen Roovers <jer@gentoo.org> bmon-2.1.0-r3.ebuild,
   bmon-2.1.1_pre1.ebuild:

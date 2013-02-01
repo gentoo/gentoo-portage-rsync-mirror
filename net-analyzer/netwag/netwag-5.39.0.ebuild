@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/netwag-5.39.0.ebuild,v 1.4 2013/01/03 15:01:35 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/netwag-5.39.0.ebuild,v 1.5 2013/02/01 15:43:31 jer Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
@@ -38,7 +38,10 @@ src_prepare() {
 	sed -i \
 		-e 's:/man$:/share/man:g' \
 		-e "s:/usr/local:/usr:" \
-		config.dat
+		config.dat || die
+	sed -i \
+		-e 's|eterm|Eterm|g' \
+		genemake || die
 }
 
 src_configure() {
