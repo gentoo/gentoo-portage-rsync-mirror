@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer>
-  <email>maintainer-needed@gentoo.org</email>
-  </maintainer>
+	<maintainer>
+		<email>peter@weilbacher.org</email>
+		<name>Peter Weilbacher</name>
+		<description>Current maintainer, assign bugs</description>
+	</maintainer>
+	<maintainer>
+		<email>fuzzyray@gentoo.org</email>
+		<description>Proxy committer, CC bugs</description>
+	</maintainer>
 </pkgmetadata>

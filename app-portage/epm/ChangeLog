@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/epm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.32 2012/12/28 04:35:03 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.33 2013/02/01 20:53:40 fuzzyray Exp $
+
+*epm-1.40 (01 Feb 2013)
+
+  01 Feb 2013; Paul Varner <fuzzyray@gentoo.org> +epm-1.40.ebuild,
+  +files/epm-1.40-prefix.patch, metadata.xml:
+  Version bump to fix long standing issues. Changed maintainer to Peter
+  Weilbacher. Fixs bugs 73494, 93843, and 153921.
 
   28 Dec 2012; Christoph Junghans <ottxor@gentoo.org>
   files/epm-1.33-prefix.patch:
