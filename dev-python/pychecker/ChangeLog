@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pychecker
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.57 2012/07/08 15:32:10 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.58 2013/02/01 04:29:35 idella4 Exp $
+
+  01 Feb 2013; Ian Delaney <idella4@gentoo.org>
+  +files/pychecker-0.8.19-version.patch, pychecker-0.8.19.ebuild:
+  Add patch to set correct version in -0.8.19, fixes Bug #454214
 
   08 Jul 2012; Raúl Porcel <armin76@gentoo.org> pychecker-0.8.19.ebuild:
   alpha/ia64/sparc stable wrt #414881

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/pychecker-0.8.19.ebuild,v 1.9 2012/07/08 15:32:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/pychecker-0.8.19.ebuild,v 1.10 2013/02/01 04:29:35 idella4 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -26,6 +26,8 @@ PYTHON_VERSIONED_EXECUTABLES=("/usr/bin/pychecker")
 
 src_prepare() {
 	distutils_src_prepare
+
+	epatch "${FILESDIR}"/${P}-version.patch
 
 	# Disable installation of unneeded files.
 	sed -e "/'data_files'       :/d" -i setup.py || die "sed failed"
