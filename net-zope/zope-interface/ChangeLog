@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/zope-interface
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.41 2012/06/17 18:51:25 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.42 2013/02/01 08:55:34 patrick Exp $
+
+*zope-interface-4.0.3 (01 Feb 2013)
+
+  01 Feb 2013; Patrick Lauer <patrick@gentoo.org> +zope-interface-4.0.3.ebuild:
+  Bump
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> zope-interface-3.8.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #415871
@@ -330,4 +335,3 @@
   09 Nov 2004; Radoslaw Stachowiak <radek@gentoo.org> +metadata.xml,
   +zopeinterface-3.0.0.ebuild:
   First version in portage. Thanx goes to Sourav Mandal and fdrake.
-
