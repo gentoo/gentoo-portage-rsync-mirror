@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.44 2013/01/26 00:16:31 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.45 2013/02/01 21:28:56 mgorny Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
@@ -180,5 +180,10 @@ capslib
 
 # fdk-aac is already keyworded here
 -fdk
+
+# Michał Górny <mgorny@gentoo.org> (26 Jan 2013)
+# Unmask the multilib flags for this arch.
+-abi_x86_32
+-abi_x86_64
 
 # NOT NECESSARY - SECTION

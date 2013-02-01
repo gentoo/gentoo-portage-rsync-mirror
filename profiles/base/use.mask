@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.156 2013/01/29 21:15:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.157 2013/02/01 21:27:43 mgorny Exp $
 
 # not ready for primetime
 packagekit
@@ -325,3 +325,8 @@ python_targets_pypy1_9
 python_targets_pypy2_0
 python_single_target_pypy1_9
 python_single_target_pypy2_0
+
+# Michał Górny <mgorny@gentoo.org> (26 Jan 2013)
+# Mask the multilib flags globally. Unmasked in specific arches.
+abi_x86_32
+abi_x86_64
