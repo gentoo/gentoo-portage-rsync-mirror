@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2-r2.ebuild,v 1.5 2012/03/08 14:52:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2-r2.ebuild,v 1.6 2013/02/01 13:20:13 gmsoft Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://debian-knoppix.alioth.debian.org/sources/${PN}_${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 -mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 -mips ppc ppc64 sparc x86"
 IUSE="zlib"
 
 COMMON_DEPEND="zlib? ( sys-libs/zlib )

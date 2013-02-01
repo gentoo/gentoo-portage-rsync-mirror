@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sslh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslh/ChangeLog,v 1.15 2013/01/30 18:08:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslh/ChangeLog,v 1.16 2013/02/01 13:21:18 kensington Exp $
+
+  01 Feb 2013; Michael Palimaka <kensington@gentoo.org> -sslh-1.13-r2.ebuild:
+  Remove old.
 
   30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> sslh-1.14.ebuild:
   Stable for x86, wrt bug #454436

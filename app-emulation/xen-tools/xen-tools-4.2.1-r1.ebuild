@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r1.ebuild,v 1.2 2013/01/31 17:57:10 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r1.ebuild,v 1.3 2013/02/01 13:24:26 idella4 Exp $
 
 EAPI=5
 
@@ -51,6 +51,8 @@ CDEPEND="<dev-libs/yajl-2
 	${PYTHON_DEPS}
 	pygrub? ( ${PYTHON_DEPS//${PYTHON_REQ_USE}/ncurses} )"
 DEPEND="${CDEPEND}
+	sys-devel/bin86
+	sys-devel/dev86
 	dev-lang/perl
 	app-misc/pax-utils
 	doc? (
@@ -67,8 +69,6 @@ DEPEND="${CDEPEND}
 		dev-texlive/texlive-latexrecommended
 	)
 	hvm? (  x11-proto/xproto
-		sys-devel/bin86
-		sys-devel/dev86
 	)"
 RDEPEND="${CDEPEND}
 	sys-apps/iproute2

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.2.57.1.ebuild,v 1.15 2011/04/15 03:14:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.2.57.1.ebuild,v 1.16 2013/02/01 13:19:01 gmsoft Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/kudzu-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 -mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 -mips ppc ppc64 sparc x86"
 IUSE="zlib"
 
 DEPEND="dev-libs/popt

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwdata-gentoo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/ChangeLog,v 1.18 2008/08/23 06:10:06 cardoe Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/ChangeLog,v 1.19 2013/02/01 13:17:49 gmsoft Exp $
+
+  01 Feb 2013; Guy Martin <gmsoft@gentoo.org> hwdata-gentoo-0.4.ebuild:
+  hppa stable
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
