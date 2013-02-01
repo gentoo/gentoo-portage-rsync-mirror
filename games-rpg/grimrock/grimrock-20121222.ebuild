@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/grimrock/grimrock-20121222.ebuild,v 1.2 2013/01/29 12:37:49 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/grimrock/grimrock-20121222.ebuild,v 1.3 2013/02/01 20:02:48 hasufell Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ RDEPEND="
 	x11-libs/libXdmcp
 	x11-libs/libXext
 	system-libs? (
-		media-libs/freeimage
+		media-libs/freeimage[png]
 		media-libs/libogg
 		media-libs/libvorbis
 		media-libs/openal

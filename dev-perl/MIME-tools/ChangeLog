@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MIME-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.87 2013/01/06 18:57:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.88 2013/02/01 20:22:15 tove Exp $
+
+*MIME-tools-5.504.0 (01 Feb 2013)
+
+  01 Feb 2013; Torsten Veller <tove@gentoo.org> +MIME-tools-5.504.0.ebuild:
+  Version bump
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> -MIME-tools-5.502.0.ebuild:
   Cleanup

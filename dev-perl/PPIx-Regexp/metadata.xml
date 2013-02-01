@@ -21,6 +21,7 @@
     <remote-id type="cpan-module">PPIx::Regexp::Structure::Modifier</remote-id>
     <remote-id type="cpan-module">PPIx::Regexp::Structure::NamedCapture</remote-id>
     <remote-id type="cpan-module">PPIx::Regexp::Structure::Quantifier</remote-id>
+    <remote-id type="cpan-module">PPIx::Regexp::Structure::RegexSet</remote-id>
     <remote-id type="cpan-module">PPIx::Regexp::Structure::Regexp</remote-id>
     <remote-id type="cpan-module">PPIx::Regexp::Structure::Replacement</remote-id>
     <remote-id type="cpan-module">PPIx::Regexp::Structure::Subexpression</remote-id>

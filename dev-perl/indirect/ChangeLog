@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/indirect
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/indirect/ChangeLog,v 1.9 2012/12/22 18:26:33 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/indirect/ChangeLog,v 1.10 2013/02/01 20:07:07 tove Exp $
+
+*indirect-0.270.0 (01 Feb 2013)
+
+  01 Feb 2013; Torsten Veller <tove@gentoo.org> +indirect-0.270.0.ebuild:
+  Version bump
 
   22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> indirect-0.260.0.ebuild:
   Add ~ppc, wrt bug #429088

@@ -21,6 +21,7 @@
     <remote-id type="cpan-module">Image::Info::SVG::XMLLibXMLReader</remote-id>
     <remote-id type="cpan-module">Image::Info::SVG::XMLSimple</remote-id>
     <remote-id type="cpan-module">Image::Info::TIFF</remote-id>
+    <remote-id type="cpan-module">Image::Info::WBMP</remote-id>
     <remote-id type="cpan-module">Image::Info::XBM</remote-id>
     <remote-id type="cpan-module">Image::Info::XPM</remote-id>
     <remote-id type="cpan-module">Image::TIFF</remote-id>
