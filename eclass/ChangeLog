@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.657 2013/01/31 19:59:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.658 2013/02/01 21:39:50 mgorny Exp $
+
+  01 Feb 2013; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass,
+  +multilib-build.eclass:
+  Introduce a common multilib-build eclass to help building packages for
+  multilib, and use the new ABI_X86 flags in it.
 
   31 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> gst-plugins10.eclass:
   Allow build of multiple plugins in different directories. Make variables more
