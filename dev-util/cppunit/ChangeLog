@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.81 2013/01/31 16:34:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.83 2013/01/31 23:11:52 ago Exp $
+
+  31 Jan 2013; Agostino Sarubbo <ago@gentoo.org> cppunit-1.13.1.ebuild:
+  Stable for ppc, wrt bug #454544
+
+  31 Jan 2013; Agostino Sarubbo <ago@gentoo.org> cppunit-1.13.1.ebuild:
+  Stable for ppc64, wrt bug #454544
 
   31 Jan 2013; Jeroen Roovers <jer@gentoo.org> cppunit-1.13.1.ebuild:
   Stable for HPPA (bug #454544).

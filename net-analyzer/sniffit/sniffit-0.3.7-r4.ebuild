@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7-r4.ebuild,v 1.3 2013/01/30 15:30:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7-r4.ebuild,v 1.4 2013/01/31 23:12:13 ago Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -17,7 +17,7 @@ RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
 #S="${WORKDIR}"/${P/-/.}.beta

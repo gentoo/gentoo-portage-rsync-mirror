@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bwm-ng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.20 2013/01/30 18:22:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwm-ng/ChangeLog,v 1.21 2013/01/31 23:08:47 ago Exp $
+
+  31 Jan 2013; Agostino Sarubbo <ago@gentoo.org> bwm-ng-0.6-r1.ebuild:
+  Stable for ppc, wrt bug #453998
 
   30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> bwm-ng-0.6-r1.ebuild:
   Stable for x86, wrt bug #453998
