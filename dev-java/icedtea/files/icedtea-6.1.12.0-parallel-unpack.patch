@@ -1,0 +1,26 @@
+Author: Ralph Sennhauser <sera@gentoo.org>
+
+Fix parallel unpacking #453608
+
+diff --git a/Makefile.am b/Makefile.am
+index 48029bc..34882a7 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -1099,7 +1099,7 @@ clean-extract-openjdk:
+ 	rm -f stamps/patch-fsg.stamp
+ 	rm -f stamps/patch.stamp
+ 
+-stamps/extract-cacao.stamp:
++stamps/extract-cacao.stamp: stamps/download-cacao.stamp
+ if BUILD_CACAO
+ if !USE_SYSTEM_CACAO
+ if USE_ALT_CACAO_SRC_DIR
+@@ -1124,7 +1124,7 @@ endif
+ 	mkdir -p stamps
+ 	touch $@
+ 
+-stamps/extract-jamvm.stamp:
++stamps/extract-jamvm.stamp: stamps/download-jamvm.stamp
+ if BUILD_JAMVM
+ 	set -e ; \
+ 	if ! test -d jamvm ; \
