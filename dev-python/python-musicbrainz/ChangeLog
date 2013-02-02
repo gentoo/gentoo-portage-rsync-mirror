@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-musicbrainz
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/ChangeLog,v 1.12 2011/12/27 05:17:16 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/ChangeLog,v 1.13 2013/02/02 15:22:27 floppym Exp $
+
+*python-musicbrainz-0.7.4-r1 (02 Feb 2013)
+
+  02 Feb 2013; Mike Gilbert <floppym@gentoo.org>
+  +python-musicbrainz-0.7.4-r1.ebuild:
+  Convert to distutils-r1.
 
 *python-musicbrainz-0.7.4 (27 Dec 2011)
 
@@ -62,4 +68,3 @@
   15 Jan 2005; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
   +python-musicbrainz-20050108.ebuild:
   Initial commit. bug# 59047
-

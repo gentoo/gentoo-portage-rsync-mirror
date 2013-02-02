@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/configobj
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.28 2011/03/04 20:55:40 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.29 2013/02/02 15:05:49 floppym Exp $
+
+*configobj-4.7.2-r1 (02 Feb 2013)
+
+  02 Feb 2013; Mike Gilbert <floppym@gentoo.org> +configobj-4.7.2-r1.ebuild:
+  Convert to distutils-r1.
 
   04 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   configobj-4.7.2.ebuild:
@@ -117,4 +122,3 @@
   03 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> configobj-4.3.2.ebuild,
   +metadata.xml:
   Initial ebuild.
-
