@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>s4t4n@gentoo.org</email>
-  <name>Michele Noberasco</name>
+<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>
 vov (Vov's Obsessive Von-Neumann) is a tool that emulates the behavior of a Von-Neumann machine.

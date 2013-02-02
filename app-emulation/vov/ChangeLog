@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vov
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vov/ChangeLog,v 1.3 2008/07/28 20:44:09 cardoe Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vov/ChangeLog,v 1.4 2013/02/02 12:00:31 pacho Exp $
+
+  02 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup up due #48914
 
   28 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
@@ -12,4 +15,3 @@
 
   18 Feb 2008; Michele Noberasco <s4t4n@gentoo.org> vov-2.0.0.ebuild:
   Initial import.
-
