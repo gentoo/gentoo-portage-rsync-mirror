@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/mtkbabel
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mtkbabel/ChangeLog,v 1.6 2011/07/20 17:31:14 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mtkbabel/ChangeLog,v 1.7 2013/02/02 06:56:46 patrick Exp $
+
+*mtkbabel-0.8.3.1 (02 Feb 2013)
+
+  02 Feb 2013; Patrick Lauer <patrick@gentoo.org> +mtkbabel-0.8.3.1.ebuild:
+  Bump
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #118937
@@ -29,4 +34,3 @@
   17 Aug 2009; Thilo Bangert <bangert@gentoo.org> +mtkbabel-0.8.ebuild,
   +metadata.xml:
   initial ebuild
-
