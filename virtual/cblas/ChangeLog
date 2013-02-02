@@ -1,6 +1,9 @@
 # ChangeLog for virtual/cblas
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/cblas/ChangeLog,v 1.8 2012/05/12 20:11:58 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/cblas/ChangeLog,v 1.9 2013/02/02 07:55:46 jlec Exp $
+
+  02 Feb 2013; Justin Lecher <jlec@gentoo.org> cblas-1.0.ebuild, metadata.xml:
+  Drop atlas from deps
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> cblas-1.0.ebuild:
   keyword ~amd64-fbsd

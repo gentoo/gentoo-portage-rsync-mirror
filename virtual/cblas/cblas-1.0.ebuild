@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/cblas/cblas-1.0.ebuild,v 1.10 2012/05/12 20:11:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/cblas/cblas-1.0.ebuild,v 1.11 2013/02/02 07:55:46 jlec Exp $
 
 EAPI=2
 
@@ -15,7 +15,6 @@ IUSE=""
 
 RDEPEND="|| (
 		sci-libs/cblas-reference
-		>=sci-libs/blas-atlas-3.7.39
 		sci-libs/gsl[-cblas-external]
 		>=sci-libs/mkl-9.1.023
 	)"

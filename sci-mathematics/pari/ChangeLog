@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/pari
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.92 2012/10/22 22:01:21 fauli Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.93 2013/02/02 07:38:40 patrick Exp $
+
+*pari-2.5.3 (02 Feb 2013)
+
+  02 Feb 2013; Patrick Lauer <patrick@gentoo.org> +pari-2.5.3.ebuild:
+  Bump
 
   22 Oct 2012; Christian Faulhammer <fauli@gentoo.org> pari-2.3.4-r1.ebuild,
   pari-2.3.5.ebuild, pari-2.5.0-r3.ebuild, pari-2.5.1.ebuild,

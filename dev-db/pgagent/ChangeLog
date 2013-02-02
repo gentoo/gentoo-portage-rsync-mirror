@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pgagent
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgagent/ChangeLog,v 1.2 2012/07/28 12:21:42 titanofold Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgagent/ChangeLog,v 1.3 2013/02/02 07:55:40 patrick Exp $
+
+*pgagent-3.3.0 (02 Feb 2013)
+
+  02 Feb 2013; Patrick Lauer <patrick@gentoo.org> +pgagent-3.3.0.ebuild:
+  Bump
 
   28 Jul 2012; Aaron W. Swenson <titanofold@gentoo.org> pgagent-3.2.1.ebuild:
   Add GPL-2 to $LICENSE. Fixes bug 425922.
@@ -10,4 +15,3 @@
   28 Apr 2012; Aaron W. Swenson <titanofold@gentoo.org> +pgagent-3.2.1.ebuild,
   +files/pgagent.confd, +files/pgagent.initd, +metadata.xml:
   Initial commit. Bug 292767.
-
