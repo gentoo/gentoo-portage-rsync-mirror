@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/bozohttpd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.15 2012/03/21 11:26:51 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.16 2013/02/02 12:10:54 pacho Exp $
+
+  02 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup up due #48914
 
   21 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop www-server herd as discussed in gentoo-dev ML.
@@ -86,4 +89,3 @@
 
   24 Jun 2004; Michele Noberasco <s4t4n@gentoo.org> bozohttpd-20040218.ebuild:
   Initial import. Close bug #30573
-

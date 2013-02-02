@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qingy-themes
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qingy-themes/ChangeLog,v 1.7 2009/11/25 22:21:37 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qingy-themes/ChangeLog,v 1.8 2013/02/02 12:05:12 pacho Exp $
+
+  02 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup up due #48914
 
   25 Nov 2009; Markus Meier <maekke@gentoo.org>
   qingy-themes-20050816.ebuild:
@@ -27,4 +30,3 @@
 
   16 Aug 2005; Michele Noberasco <s4t4n@gentoo.org> qingy-themes-20050816.ebuild:
   Initial commit, closes bug #97663, submitted by Maxwell Grender-Jones.
-

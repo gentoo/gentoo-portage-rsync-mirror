@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/xlwt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.14 2012/12/03 21:24:39 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.15 2013/02/02 12:13:52 mgorny Exp $
+
+*xlwt-0.7.4-r1 (02 Feb 2013)
+
+  02 Feb 2013; Michał Górny <mgorny@gentoo.org> +xlwt-0.7.4-r1.ebuild:
+  Migrate to distutils-r1.
 
   03 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> xlwt-0.7.4.ebuild:
   Keyword amd64-linux and x86-linux

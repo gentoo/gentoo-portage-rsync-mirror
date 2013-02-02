@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>caster@gentoo.org</email>
-    <name>Vlastimil Babka</name>
-    <description>Assign bugs to me for now</description>
+	<email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <use>
     <flag name="qt-bundled">Use bundled Qt4 libraries instead of system ones. Recommended only for troubleshooting.</flag>

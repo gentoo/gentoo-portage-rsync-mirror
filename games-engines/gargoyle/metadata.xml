@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>games</herd>
-	<maintainer>
-		<email>s4t4n@gentoo.org</email>
-		<name>Michele Noberasco</name>
-	</maintainer>
 	<upstream>
 		<remote-id type="google-code">garglk</remote-id>
 	</upstream>

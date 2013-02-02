@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libical
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.68 2012/06/06 01:26:12 darkside Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.69 2013/02/02 12:02:36 pacho Exp $
+
+  02 Feb 2013; Pacho Ramos <pacho@gentoo.org> -libical-0.43.ebuild,
+  metadata.xml:
+  Cleanup up due #48914
 
   06 Jun 2012; Jeremy Olexa <darkside@gentoo.org> libical-0.48.ebuild:
   add prefix keywords, bug 419821
@@ -239,4 +243,3 @@
 
   06 Mar 2004; Markus Nigbur <pyrania@gentoo.org> libical-0.24_rc4.ebuild:
   Initial import.
-

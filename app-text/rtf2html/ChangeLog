@@ -1,6 +1,10 @@
 # ChangeLog for app-text/rtf2html
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/ChangeLog,v 1.8 2012/10/19 19:11:51 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/ChangeLog,v 1.9 2013/02/02 12:01:38 pacho Exp $
+
+  02 Feb 2013; Pacho Ramos <pacho@gentoo.org> -rtf2html-0.2.0.ebuild,
+  metadata.xml:
+  Cleanup up due #48914
 
   19 Oct 2012; Agostino Sarubbo <ago@gentoo.org> rtf2html-0.2.0-r1.ebuild:
   Add ~amd64, wrt to bug #438774

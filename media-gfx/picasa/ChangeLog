@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/picasa
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.23 2012/06/08 02:57:49 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.24 2013/02/02 12:20:17 pacho Exp $
+
+  02 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup up due #48914
 
   08 Jun 2012; Zac Medico <zmedico@gentoo.org>
   picasa-3.0.0.57.4402.0_beta.ebuild:
@@ -102,4 +105,3 @@
   06 Jun 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +picasa-2.2.2820.5.ebuild:
   ebuild for picasa, bug 134376
-
