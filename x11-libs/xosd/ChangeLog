@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/xosd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.82 2012/06/02 15:39:30 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.83 2013/02/02 04:03:56 wired Exp $
+
+*xosd-2.2.14-r2 (02 Feb 2013)
+
+  02 Feb 2013; Alex Alexander <wired@gentoo.org> +xosd-2.2.14-r2.ebuild,
+  +files/xosd-config-incorrect-dup-filter-fix.patch:
+  fixed broken xosd-config, bug #286632
 
   02 Jun 2012; Alexis Ballier <aballier@gentoo.org> xosd-2.2.14-r1.ebuild:
   keyword ~amd64-fbsd
