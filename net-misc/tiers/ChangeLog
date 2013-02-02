@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tiers
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/ChangeLog,v 1.14 2009/12/01 10:58:26 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/ChangeLog,v 1.15 2013/02/02 18:16:19 ulm Exp $
+
+  02 Feb 2013; Ulrich Müller <ulm@gentoo.org> tiers-1.1.ebuild:
+  Fix LICENSE, see COPYRIGHT file, bug 452600.
 
   01 Dec 2009; Diego E. Pettenò <flameeyes@gentoo.org> tiers-1.1.ebuild:
   Fix building with sys-devel/patch-2.6 (bug #295306).

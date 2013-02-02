@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.234 2013/01/28 19:13:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.235 2013/02/02 18:21:52 xarthisius Exp $
+
+  02 Feb 2013; Kacper Kowalik <xarthisius@gentoo.org> doxygen-1.5.8-r1.ebuild,
+  doxygen-1.7.6.1.ebuild, doxygen-1.8.3.1.ebuild:
+  Adjust make_desktop_entry so that it complies to latest fdo standard. Fixes
+  #455150 by Denis M. (Phr33d0m) <god@politeia.in>
 
 *doxygen-1.8.3.1 (28 Jan 2013)
 

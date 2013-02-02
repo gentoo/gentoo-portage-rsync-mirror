@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.3.1.ebuild,v 1.1 2013/01/28 08:15:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.3.1.ebuild,v 1.2 2013/02/02 18:21:52 xarthisius Exp $
 
 EAPI=4
 
@@ -208,7 +208,7 @@ src_install() {
 		doicon "${DISTDIR}/doxywizard.png"
 		make_desktop_entry doxywizard "DoxyWizard ${PV}" \
 			"/usr/share/pixmaps/doxywizard.png" \
-			"Application;Development"
+			"Development"
 	fi
 
 	dodoc INSTALL LANGUAGE.HOWTO README

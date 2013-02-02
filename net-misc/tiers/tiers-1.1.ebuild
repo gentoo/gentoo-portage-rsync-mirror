@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/tiers-1.1.ebuild,v 1.11 2009/12/01 10:58:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/tiers-1.1.ebuild,v 1.12 2013/02/02 18:16:19 ulm Exp $
 
 inherit eutils
 
@@ -9,13 +9,16 @@ DESCRIPTION="Random network topography generator"
 HOMEPAGE="http://www.isi.edu/nsnam/ns/ns-topogen.html#tiers"
 SRC_URI="http://www.isi.edu/nsnam/dist/topogen/${MY_P}.tar.gz
 		 http://www.isi.edu/nsnam/dist/topogen/tiers2ns-lan.awk"
-LICENSE="BSD as-is"
+
+LICENSE="mapm"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
+
 DEPEND="sys-devel/gcc"
 RDEPEND="sys-apps/gawk
 	sci-visualization/gnuplot"
+
 S=${WORKDIR}/${PN}${PV}
 
 src_unpack() {

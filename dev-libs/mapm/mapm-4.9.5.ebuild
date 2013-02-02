@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mapm/mapm-4.9.5.ebuild,v 1.3 2011/11/28 11:38:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mapm/mapm-4.9.5.ebuild,v 1.4 2013/02/02 18:12:55 ulm Exp $
 
 EAPI="2"
 
@@ -9,7 +9,8 @@ inherit eutils multilib toolchain-funcs
 DESCRIPTION="Mike's Arbitrary Precision Math Library"
 HOMEPAGE="http://www.tc.umn.edu/~ringx004/mapm-main.html"
 SRC_URI="http://www.tc.umn.edu/~ringx004/${P}.tar.gz"
-LICENSE="mapm"
+
+LICENSE="mapm-4.9.5"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""

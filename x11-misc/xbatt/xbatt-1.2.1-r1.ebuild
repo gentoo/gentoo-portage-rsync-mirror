@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbatt/xbatt-1.2.1-r1.ebuild,v 1.3 2012/02/16 19:35:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbatt/xbatt-1.2.1-r1.ebuild,v 1.4 2013/02/02 18:19:30 ulm Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Notebook battery indicator for X"
 HOMEPAGE="http://www.clave.gr.jp/~eto/xbatt/"
 SRC_URI="http://www.clave.gr.jp/~eto/xbatt/${P}.tar.gz"
 
-LICENSE="|| ( as-is BSD )"
+LICENSE="xbatt"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
