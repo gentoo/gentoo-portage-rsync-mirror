@@ -1,10 +1,35 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7424 2013/02/01 21:24:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7425 2013/02/02 03:17:17 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Feb 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened/linux/amd64/desktop/deprecated,
+  +hardened/linux/amd64/developer/deprecated,
+  +hardened/linux/amd64/server/deprecated,
+  +hardened/linux/ia64/desktop/deprecated,
+  +hardened/linux/ia64/developer/deprecated,
+  +hardened/linux/ia64/server/deprecated,
+  +hardened/linux/powerpc/ppc32/desktop/deprecated,
+  +hardened/linux/powerpc/ppc32/developer/deprecated,
+  +hardened/linux/powerpc/ppc32/server/deprecated,
+  +hardened/linux/powerpc/ppc64/32bit-userland/desktop/deprecated,
+  +hardened/linux/powerpc/ppc64/32bit-userland/developer/deprecated,
+  +hardened/linux/powerpc/ppc64/32bit-userland/server/deprecated,
+  +hardened/linux/powerpc/ppc64/64bit-userland/desktop/deprecated,
+  +hardened/linux/powerpc/ppc64/64bit-userland/developer/deprecated,
+  +hardened/linux/powerpc/ppc64/64bit-userland/server/deprecated,
+  +hardened/linux/powerpc/ppc64/desktop/deprecated,
+  +hardened/linux/powerpc/ppc64/developer/deprecated,
+  +hardened/linux/powerpc/ppc64/server/deprecated,
+  +hardened/linux/x86/desktop/deprecated,
+  +hardened/linux/x86/developer/deprecated,
+  +hardened/linux/x86/minimal/deprecated,
+  +hardened/linux/x86/server/deprecated:
+  Mark all hardened desktop/developer/server profiles as deprecated
 
   01 Feb 2013; Michał Górny <mgorny@gentoo.org> +desc/abi_x86.desc:
   Describe ABI_X86 flags for multilib.
