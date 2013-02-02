@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-power-manager
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.178 2012/12/25 22:06:33 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.179 2013/02/02 22:38:27 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  gnome-power-manager-3.6.0.ebuild:
+  Add ~arm, wrt bug #449220
 
 *gnome-power-manager-3.6.0 (25 Dec 2012)
 
@@ -868,4 +872,3 @@
   25 Apr 2006; Saleem Abdulrasool <compnerd@gentoo.org>
   +gnome-power-manager-2.14.2.ebuild:
   Initial import of gnome-power-manager.
-

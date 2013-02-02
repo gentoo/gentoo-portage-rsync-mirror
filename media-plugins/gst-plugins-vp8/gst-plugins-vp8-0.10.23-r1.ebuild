@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vp8/gst-plugins-vp8-0.10.23-r1.ebuild,v 1.6 2013/02/01 12:40:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vp8/gst-plugins-vp8-0.10.23-r1.ebuild,v 1.7 2013/02/02 22:56:24 ago Exp $
 
 EAPI="5"
 
 inherit eutils gst-plugins-bad gst-plugins10
 
 DESCRIPTION="GStreamer decoder for vpx video format"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd"
 IUSE=""
 
 RDEPEND="media-libs/libvpx"

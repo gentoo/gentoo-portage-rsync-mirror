@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gnome-video-effects
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-video-effects/ChangeLog,v 1.13 2012/10/28 16:03:51 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-video-effects/ChangeLog,v 1.14 2013/02/02 22:59:21 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  gnome-video-effects-0.4.0.ebuild:
+  Add ~arm, wrt bug #449220
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org>
   gnome-video-effects-0.4.0.ebuild:

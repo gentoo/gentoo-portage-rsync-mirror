@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.4.ebuild,v 1.7 2013/01/06 09:48:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.4.ebuild,v 1.8 2013/02/02 22:47:41 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -17,7 +17,7 @@ HOMEPAGE="https://live.gnome.org/Grilo"
 
 LICENSE="LGPL-2.1+"
 SLOT="0.2/1" # subslot is libgrilo-0.2 soname suffix
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gtk examples +introspection +network test vala"
 REQUIRED_USE="test? ( introspection )"
 

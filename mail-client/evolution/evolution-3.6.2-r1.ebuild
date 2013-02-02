@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.6.2-r1.ebuild,v 1.6 2013/01/06 09:44:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.6.2-r1.ebuild,v 1.7 2013/02/02 22:43:45 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ SRC_URI="${SRC_URI}
 LICENSE="|| ( LGPL-2 LGPL-3 ) CCPL-Attribution-ShareAlike-3.0 FDL-1.3+ OPENLDAP"
 SLOT="2.0"
 IUSE="crypt +gnome-online-accounts gstreamer kerberos ldap map ssl"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 # We need a graphical pinentry frontend to be able to ask for the GPG
 # password from inside evolution, bug 160302

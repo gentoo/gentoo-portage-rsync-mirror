@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/nwipe
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/nwipe/ChangeLog,v 1.6 2012/11/30 14:16:36 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/nwipe/ChangeLog,v 1.7 2013/02/02 22:59:24 alonbl Exp $
+
+*nwipe-0.12-r1 (02 Feb 2013)
+
+  02 Feb 2013; Alon Bar-Lev <alonbl@gentoo.org> +files/nwipe-0.12-ncurses.patch,
+  +nwipe-0.12-r1.ebuild:
+  Detect ncurses using pkg-config, bug#455110
 
   30 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> -nwipe-0.10.ebuild,
   -nwipe-0.11.ebuild:
@@ -28,4 +34,3 @@
 
   16 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +nwipe-0.06.ebuild:
   Initial commit.
-

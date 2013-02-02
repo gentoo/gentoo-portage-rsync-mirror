@@ -1,44 +1,33 @@
-diff -ru scummvm-1.5.0.orig/config.guess scummvm-1.5.0/config.guess
---- scummvm-1.5.0.orig/config.guess	2012-05-31 06:39:11.000000000 -0400
-+++ scummvm-1.5.0/config.guess	2012-10-07 21:27:00.510982188 -0400
-@@ -855,7 +855,7 @@
- 	exit ;;
-     *:GNU/*:*:*)
- 	# other systems with GNU libc and userland
--	echo ${UNAME_MACHINE}-unknown-`echo ${UNAME_SYSTEM} | sed 's,^[^/]*/,,' | tr '[A-Z]' '[a-z]'``echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`-gnu
-+	echo ${UNAME_MACHINE}-unknown-`echo ${UNAME_SYSTEM} | sed 's,^[^/]*/,,' | tr '[:upper:]' '[:lower:]'``echo ${UNAME_RELEASE}|sed -e 's/[-(].*//'`-gnu
- 	exit ;;
-     i*86:Minix:*:*)
- 	echo ${UNAME_MACHINE}-pc-minix
-@@ -955,7 +955,7 @@
- 	exit ;;
-     parisc:Linux:*:* | hppa:Linux:*:*)
- 	# Look for CPU level
--	case `grep '^cpu[^a-z]*:' /proc/cpuinfo 2>/dev/null | cut -d' ' -f2` in
-+	case `grep '^cpu[^[:lower:]]*:' /proc/cpuinfo 2>/dev/null | cut -d' ' -f2` in
- 	  PA7*) echo hppa1.1-unknown-linux-gnu ;;
- 	  PA8*) echo hppa2.0-unknown-linux-gnu ;;
- 	  *)    echo hppa-unknown-linux-gnu ;;
-diff -ru scummvm-1.5.0.orig/configure scummvm-1.5.0/configure
---- scummvm-1.5.0.orig/configure	2012-10-07 21:21:27.856337073 -0400
-+++ scummvm-1.5.0/configure	2012-10-07 21:26:08.689750153 -0400
-@@ -3464,8 +3464,8 @@
- 	if test -z "$_freetypeconfig"; then
- 		_freetype2=no
- 	else
--		FREETYPE2_LIBS=`$_freetypeconfig --prefix="$_freetypepath" --libs`
--		FREETYPE2_CFLAGS=`$_freetypeconfig --prefix="$_freetypepath" --cflags`
-+		FREETYPE2_LIBS=`pkg-config --libs freetype2 2>/dev/null || $_freetypeconfig --prefix="$_freetypepath" --libs`
-+		FREETYPE2_CFLAGS=`pkg-config --cflags freetype2 2>/dev/null || $_freetypeconfig --prefix="$_freetypepath" --cflags`
+From b65365e0d314bff91f5fb3c4fbdd3da7944ea7a2 Mon Sep 17 00:00:00 2001
+From: hasufell <julian.ospald@googlemail.com>
+Date: Fri, 1 Feb 2013 19:31:15 +0100
+Subject: [PATCH] CONFIGURE: Fix build under et_EE locale
+
+Freetype-config reports a broken include dir
+when et_EE locale is used. We set LC_ALL
+and LANGUAGE to "C" explicitly like autoconf
+does to force consistent behavior.
+---
+ configure |    6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/configure b/configure
+index 91364eb..3b8b845 100755
+--- a/configure
++++ b/configure
+@@ -21,6 +21,12 @@
+ # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ #
  
- 		if test "$_freetype2" = "auto"; then
- 			_freetype2=no
-@@ -3897,7 +3897,7 @@
- 	fi
- 
- 	# Save the settings
--	defname="ENABLE_`echo $engine | tr '[a-z]' '[A-Z]'`"
-+	defname="ENABLE_`echo $engine | tr '[:lower:]' '[:upper:]'`"
- 	if test "$isbuilt" = "no" ; then
- 		add_line_to_config_mk "# $defname"
- 	else
++# NLS nuisances.
++LC_ALL=C
++export LC_ALL
++LANGUAGE=C
++export LANGUAGE
++
+ # Save the current environment variables for next runs
+ SAVED_CONFIGFLAGS=$@
+ SAVED_LDFLAGS=$LDFLAGS
+-- 
+1.7.10
+

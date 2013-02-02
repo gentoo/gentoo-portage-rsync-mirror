@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.214 2013/01/20 10:05:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.215 2013/02/02 22:45:11 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> splashutils-1.5.4.4-r2.ebuild:
+  Add ~arm, wrt bug #449220
 
   20 Jan 2013; Pacho Ramos <pacho@gentoo.org> -splashutils-1.5.4.3-r3.ebuild,
   -splashutils-1.5.4.4.ebuild, metadata.xml:

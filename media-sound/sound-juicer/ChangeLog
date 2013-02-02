@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.225 2013/01/06 09:57:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.226 2013/02/02 22:58:39 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> sound-juicer-3.4.0.ebuild,
+  sound-juicer-3.5.1_pre20121231.ebuild:
+  Add ~arm, wrt bug #449220
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> sound-juicer-3.4.0.ebuild:
   Add ~sparc, wrt bug #449220

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.121 2013/01/25 22:57:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.122 2013/02/02 22:33:47 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  gnome-control-center-3.6.3-r1.ebuild:
+  Add ~arm, wrt bug #449220
 
   25 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
   Remove unused local description.

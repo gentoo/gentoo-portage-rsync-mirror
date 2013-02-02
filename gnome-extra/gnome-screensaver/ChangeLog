@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-screensaver
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.161 2012/12/24 10:51:05 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.162 2013/02/02 22:38:49 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gnome-screensaver-3.6.1.ebuild:
+  Add ~arm, wrt bug #449220
 
   24 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-screensaver-3.6.1.ebuild:
