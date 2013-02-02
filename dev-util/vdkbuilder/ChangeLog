@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/vdkbuilder
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.26 2010/09/26 14:00:21 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.27 2013/02/02 09:11:11 patrick Exp $
+
+*vdkbuilder-2.5.0 (02 Feb 2013)
+
+  02 Feb 2013; Patrick Lauer <patrick@gentoo.org> +vdkbuilder-2.5.0.ebuild:
+  Bump
 
   26 Sep 2010; Samuli Suominen <ssuominen@gentoo.org>
   vdkbuilder-2.4.0.ebuild, +files/vdkbuilder-2.4.0-make-382.patch:
@@ -84,4 +89,3 @@
 
   20 Jun 2002; J.Alberto S.L. <bass@gentoo.org> vdkbuilder-2.0.2.ebuild:
 	First relase.
-

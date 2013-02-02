@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/vdk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.30 2011/03/29 08:02:44 angelos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.31 2013/02/02 09:10:27 patrick Exp $
+
+*vdk-2.5.1 (02 Feb 2013)
+
+  02 Feb 2013; Patrick Lauer <patrick@gentoo.org> +vdk-2.5.1.ebuild:
+  Bump
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> vdk-2.4.0.ebuild,
   vdk-2.4.1.ebuild:
