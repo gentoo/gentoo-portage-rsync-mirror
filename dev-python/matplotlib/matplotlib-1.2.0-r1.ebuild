@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r1.ebuild,v 1.4 2013/01/09 22:10:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r1.ebuild,v 1.5 2013/02/02 01:17:03 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -113,7 +113,7 @@ src_prepare() {
 				-e 's:^wx = True:wx = False:' \
 				-e 's:^wxagg = True:wxagg = False:' \
 				-e 's:^six = False:six = True:' \
-				-i setup.cfg || die 
+				-i setup.cfg || die
 		fi
 
 	# avoid checks needing a X display

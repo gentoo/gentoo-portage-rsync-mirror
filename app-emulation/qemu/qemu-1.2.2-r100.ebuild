@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2-r100.ebuild,v 1.1 2013/01/21 05:40:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2-r100.ebuild,v 1.2 2013/02/02 01:14:38 mr_bones_ Exp $
 
 EAPI=5
 
@@ -224,7 +224,7 @@ src_prepare() {
 ##
 # configures qemu based on the build directory and the build type
 # we are using.
-# 
+#
 qemu_src_configure() {
 	debug-print-function $FUNCNAME "$@"
 
@@ -404,7 +404,7 @@ src_install() {
 	cd ${S}
 	dodoc Changelog MAINTAINERS TODO pci-ids.txt
 	newdoc pc-bios/README README.pc-bios
-	
+
 	# Avoid collision with app-emulation/libcacard
 	use smartcard && mv "${ED}/usr/bin/vscclient" "${ED}/usr/bin/qemu-vscclient"
 

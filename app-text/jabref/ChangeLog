@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jabref
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.89 2012/12/13 15:13:21 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.90 2013/02/02 01:23:15 calchan Exp $
+
+  02 Feb 2013; Denis Dupeyron <calchan@gentoo.org> jabref-2.6.ebuild:
+  Search feature is broken with java 1.7.
 
   13 Dec 2012; Justin Lecher <jlec@gentoo.org>
   -files/jabref-2.2-build.xml.patch, -jabref-2.3.1.ebuild, -jabref-2.5.ebuild,

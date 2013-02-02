@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/4store/4store-1.1.5.ebuild,v 1.1 2013/02/01 03:33:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/4store/4store-1.1.5.ebuild,v 1.2 2013/02/02 01:15:06 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -50,7 +50,7 @@ src_install() {
 	# fix 1777
 	fperms 755 /var/lib/4store
 
-	# fix 755 
+	# fix 755
 	fperms 644 \
 		/usr/share/man/man1/4s-query.1 \
 		/usr/share/man/man1/4s-backend-setup.1 \

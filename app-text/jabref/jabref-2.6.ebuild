@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.6.ebuild,v 1.4 2011/08/07 11:54:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.6.ebuild,v 1.5 2013/02/02 01:23:15 calchan Exp $
 
 EAPI=2
 
@@ -31,10 +31,10 @@ CDEPEND="dev-java/spin:0
 	dev-java/jpfcodegen:0
 	mysql? ( dev-java/jdbc-mysql:0 )"
 
-RDEPEND=">=virtual/jre-1.6
+RDEPEND="virtual/jre:1.6
 	${CDEPEND}"
 
-DEPEND=">=virtual/jdk-1.6
+DEPEND="virtual/jdk:1.6
 	${CDEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -84,4 +84,9 @@ src_install() {
 	newicon src/images/JabRef-icon-48.png JabRef-icon.png || die
 	make_desktop_entry ${PN} JabRef JabRef-icon Office
 	echo "MimeType=text/x-bibtex" >> "${D}/usr/share/applications/${PN}-${PN}.desktop"
+}
+
+pkg_postinst() {
+	elog "Users need to set their user java vm to one of the 1.6 slot for the search"
+	elog "feature to work."
 }

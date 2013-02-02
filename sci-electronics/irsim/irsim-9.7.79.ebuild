@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/irsim/irsim-9.7.79.ebuild,v 1.1 2013/01/21 09:28:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/irsim/irsim-9.7.79.ebuild,v 1.2 2013/02/02 01:18:32 mr_bones_ Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ src_configure() {
 	# Short-circuit top-level configure script to retain CFLAGS
 	cd scripts
 	#tc-export CPP
-	econf 
+	econf
 }
 
 src_install() {
