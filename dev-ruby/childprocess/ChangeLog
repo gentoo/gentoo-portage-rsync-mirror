@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/childprocess
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.26 2013/01/15 04:49:07 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.28 2013/02/02 10:57:06 graaff Exp $
+
+*childprocess-0.3.7 (02 Feb 2013)
+
+  02 Feb 2013; Hans de Graaff <graaff@gentoo.org> +childprocess-0.3.7.ebuild:
+  Version bump.
+
+  02 Feb 2013; Hans de Graaff <graaff@gentoo.org> -childprocess-0.3.3.ebuild,
+  -childprocess-0.3.4.ebuild, -childprocess-0.3.5.ebuild:
+  Cleanup.
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> childprocess-0.3.6.ebuild:
   adding ~arm keywords to net-analyzer/metasploit rdeps
