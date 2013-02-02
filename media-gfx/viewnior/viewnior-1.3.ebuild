@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/viewnior-1.3.ebuild,v 1.1 2012/06/14 07:47:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/viewnior-1.3.ebuild,v 1.2 2013/02/02 03:33:51 wired Exp $
 
 EAPI="4"
-inherit fdo-mime gnome2-utils
+inherit fdo-mime gnome2-utils autotools
 
 DESCRIPTION="Fast and simple image viewer"
 HOMEPAGE="http://xsisqox.github.com/Viewnior/index.html"
@@ -20,6 +20,14 @@ DEPEND="dev-libs/glib:2
 RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS ChangeLog* NEWS README TODO"
+
+src_prepare() {
+	# fix for bug #454230
+	sed -r -i "s:(PKG_CHECK_MODULES):AC_CHECK_LIB([m],[cos])\n\n\1:" configure.ac
+	sed -r -i "/^SHAVE_INIT/d" configure.ac
+
+	eautoreconf
+}
 
 pkg_preinst() {
 	gnome2_icon_savelist
