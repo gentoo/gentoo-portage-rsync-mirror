@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/glances-1.4.2.1.ebuild,v 1.1 2012/10/06 09:24:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/glances-1.4.2.1.ebuild,v 1.2 2013/02/02 17:32:28 floppym Exp $
 
 EAPI=4
 
@@ -14,15 +14,15 @@ DESCRIPTION="CLI curses based monitoring tool"
 HOMEPAGE="
 	https://github.com/nicolargo/glances/blob/master/README.md
 	http://pypi.python.org/pypi/Glances"
-SRC_URI="https://github.com/downloads/nicolargo/${PN}/${P}.tar.gz"
+SRC_URI="mirror://github/nicolargo/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="html"
 
-DEPEND=""
-RDEPEND="
+DEPEND="dev-python/setuptools"
+RDEPEND="${DEPEND}
 	>=dev-python/psutil-0.4.1
 	html? ( dev-python/jinja )"
 
