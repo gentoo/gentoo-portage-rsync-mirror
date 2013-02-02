@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/puddletag
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.24 2012/12/31 13:05:31 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.25 2013/02/02 16:36:56 billie Exp $
+
+*puddletag-1.0.1-r1 (02 Feb 2013)
+
+  02 Feb 2013; Daniel Pielmeier <billie@gentoo.org> +puddletag-1.0.1-r1.ebuild:
+  Revison bump. Switch to EAPI 5. Use distutils-r1. Thanks to Mike Gilbert for
+  migrating some dependencies. Remove redundant calls to
+  fdo-mime_desktop_database_update. Thanks to Michał Górny in bug 455130.
 
   31 Dec 2012; Michał Górny <mgorny@gentoo.org> puddletag-1.0.1.ebuild:
   Use virtual/pyparsing.

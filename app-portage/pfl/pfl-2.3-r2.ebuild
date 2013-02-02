@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.3-r2.ebuild,v 1.1 2013/02/02 12:39:57 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.3-r2.ebuild,v 1.2 2013/02/02 16:38:24 billie Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}
 	net-misc/curl
 	sys-apps/portage"
 
-src_install() {
+python_install_all() {
 	distutils-r1_src_install
 
 	if use network-cron ; then

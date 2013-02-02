@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ttcut
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.31 2012/03/10 08:36:07 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.32 2013/02/02 16:47:42 billie Exp $
+
+  02 Feb 2013; Daniel Pielmeier <billie@gentoo.org> ttcut-0.19.6-r3.ebuild:
+  Remove redundant calls to fdo-mime_desktop_database_update.
 
   10 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> ttcut-0.19.6-r3.ebuild,
   +files/ttcut-0.19.6-no_implicit_GLU.patch:

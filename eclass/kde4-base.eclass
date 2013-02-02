@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.121 2012/08/19 11:12:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.122 2013/02/02 16:58:00 dilfridge Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -170,12 +170,6 @@ case ${KDEBASE} in
 		if [[ ${KDE_BUILD_TYPE} = live && -z ${I_KNOW_WHAT_I_AM_DOING} ]]; then
 			# Disable tests for live ebuilds by default
 			RESTRICT+=" test"
-		fi
-
-		# Only add the kdeprefix USE flag for older versions, to help
-		# non-portage package managers handle the upgrade
-		if [[ ${PV} < 4.6.4 && ( ( ${KMNAME} != kdepim && ${PN} != kdepim-runtime ) || ${PV} < 4.6 ) ]]; then
-			IUSE+=" kdeprefix"
 		fi
 
 		# This code is to prevent portage from searching GENTOO_MIRRORS for
@@ -591,20 +585,6 @@ kde4-base_pkg_setup() {
 	if has handbook ${IUSE} || has "+handbook" ${IUSE} && [ "${KDE_HANDBOOK}" != optional ] ; then
 		eqawarn "Handbook support is enabled via KDE_HANDBOOK=optional in the ebuild."
 		eqawarn "Please do not just set IUSE=handbook, as this leads to dependency errors."
-	fi
-
-	if use_if_iuse kdeprefix; then
-		eerror "Sorry, kdeprefix support has been removed."
-		eerror "Please remove kdeprefix from your USE variable."
-		die "kdeprefix support has been removed"
-	fi
-
-	if [[ ${CATEGORY}/${PN} != kde-base/kdelibs && ${CATEGORY}/${PN} != kde-base/kde-env ]] && \
-			{ [[ ${KDE_REQUIRED} == always ]] || { [[ ${KDE_REQUIRED} == optional ]] && use kde; }; } && \
-			has_version kde-base/kdelibs[kdeprefix]; then
-		eerror "Sorry, kdeprefix support has been removed."
-		eerror "Please rebuild kdelibs without kdeprefix support."
-		die "kdeprefix support has been removed"
 	fi
 
 	# Don't set KDEHOME during compilation, it will cause access violations

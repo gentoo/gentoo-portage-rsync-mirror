@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.16.ebuild,v 1.1 2013/01/07 20:31:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.16.ebuild,v 1.2 2013/02/02 17:01:01 jer Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -44,7 +44,9 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-9.15-xsubpp.patch
 
 	if ! use vanilla; then
-		ewarn " + You are going to include unsupported third-party bug fixes/features."
+		ewarn "You are going to include unsupported third-party bug fixes/features."
+		ewarn "If you want even more control over patches, then set USE=vanilla"
+		ewarn "and store your patch set in /etc/portage/patches/${CATEGORY}/${PF}/"
 
 		use wcwidth && epatch doc/wcwidth.patch
 
@@ -64,6 +66,8 @@ src_prepare() {
 		use buffer-on-clear && epatch "${FILESDIR}"/${PN}-9.14-clear.patch
 
 		use alt-font-width && epatch "${FILESDIR}"/${PN}-9.06-font-width.patch
+	else
+		epatch_user
 	fi
 
 	# kill the rxvt-unicode terminfo file - #192083

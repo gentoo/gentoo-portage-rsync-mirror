@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ttcp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ChangeLog,v 1.26 2013/01/31 23:04:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ChangeLog,v 1.27 2013/02/02 16:54:24 jer Exp $
+
+  02 Feb 2013; Jeroen Roovers <jer@gentoo.org> -ttcp-1.12.ebuild,
+  -ttcp-1.12-r1.ebuild:
+  Old.
 
   31 Jan 2013; Agostino Sarubbo <ago@gentoo.org> ttcp-1.12-r2.ebuild:
   Stable for ppc, wrt bug #454016
