@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.31.ebuild,v 1.1 2012/11/25 10:48:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.31.ebuild,v 1.2 2013/02/02 02:56:52 blueness Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ PYTHON_USE_WITH_OPT="python"
 
 WANT_AUTOMAKE=1.11
 
-inherit autotools eutils mono python multilib flag-o-matic user
+inherit autotools eutils mono python multilib flag-o-matic user systemd
 
 DESCRIPTION="System which facilitates service discovery on a local network"
 HOMEPAGE="http://avahi.org/"
@@ -164,6 +164,7 @@ src_configure() {
 		--disable-qt3 \
 		$(use_enable qt4) \
 		$(use_enable gdbm) \
+		$(systemd_with_unitdir) \
 		${myconf}
 }
 
