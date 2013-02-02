@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.2.ebuild,v 1.1 2012/11/28 10:00:23 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.3.ebuild,v 1.1 2013/02/02 19:04:05 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -75,7 +75,7 @@ src_install() {
 
 	use v8 && pax-mark m "${ED}"/usr/bin/{mongo,mongod}
 
-	for x in /var/{lib,log,run}/${PN}; do
+	for x in /var/{lib,log}/${PN}; do
 		keepdir "${x}"
 		fowners mongodb:mongodb "${x}"
 	done

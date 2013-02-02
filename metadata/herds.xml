@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.990 2013/02/02 12:12:33 pacho Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.991 2013/02/02 19:31:23 pacho Exp $
 
 -->
 <herds>
@@ -1394,30 +1394,6 @@
   </maintainer>
 </herd>
 <herd>
-  <name>sparc-kernel</name>
-  <email>sparc-kernel@gentoo.org</email>
-  <description>Kernel packages for Gentoo/SPARC</description>
-  <maintainer>
-    <email>joker@gentoo.org</email>
-  </maintainer>
-</herd>
-<herd>
-  <name>ppc-kernel</name>
-  <email>ppc-kernel@gentoo.org</email>
-  <description>Kernel packages for Gentoo/PPC</description>
-  <maintainer>
-    <email>lu_zero@gentoo.org</email>
-  </maintainer>
-</herd>
-<herd>
-  <name>mips-kernel</name>
-  <email>mips-kernel</email>
-  <description>Kernel Packages for Gentoo/MIPS</description>
-  <maintainer>
-    <email>kumba@gentoo.org</email>
-  </maintainer>
-</herd>
-<herd>
   <name>openoffice</name>
   <email>openoffice@gentoo.org</email>
   <description>Openoffice related packages</description>
@@ -2204,11 +2180,6 @@
   <maintainer>
     <email>vapier@gentoo.org</email>
   </maintainer>
-</herd>
-<herd>
-  <name>lcd</name>
-  <email>lcd@gentoo.org</email>
-  <description>Software related to LCD control</description>
 </herd>
 <herd>
   <name>rox</name>

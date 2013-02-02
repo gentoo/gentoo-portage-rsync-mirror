@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/xboing
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/ChangeLog,v 1.14 2011/01/08 20:58:52 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/ChangeLog,v 1.15 2013/02/02 19:19:26 dilfridge Exp $
+
+  02 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org> -xboing-2.4-r1.ebuild,
+  +xboing-2.4-r2.ebuild, +files/xboing-2.4-buffer.patch,
+  +files/xboing-2.4-sleep.patch, metadata.xml:
+  Adopt package, fix buffer overflow (kinda), bug 442290, and impossible game
+  speed. Drop to ~arch as we're returning from package mask.
 
   08 Jan 2011; Tupone Alfredo <tupone@gentoo.org> xboing-2.4-r1.ebuild:
   Again respect LDFLAGS. Bug #351038 by flameeyes@gentoo.org
