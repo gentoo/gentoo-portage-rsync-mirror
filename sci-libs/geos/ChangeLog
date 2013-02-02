@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/geos
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.69 2012/08/11 15:24:48 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.70 2013/02/02 06:04:19 patrick Exp $
+
+*geos-3.3.7 (02 Feb 2013)
+
+  02 Feb 2013; Patrick Lauer <patrick@gentoo.org> +geos-3.3.7.ebuild:
+  Bump
 
   11 Aug 2012; Markus Meier <maekke@gentoo.org> geos-3.3.5.ebuild:
   x86 stable, bug #420125
