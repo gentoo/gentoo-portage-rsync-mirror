@@ -1,6 +1,12 @@
 # ChangeLog for www-client/uzbl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.50 2012/08/20 17:12:46 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.51 2013/02/02 04:42:03 wired Exp $
+
+  02 Feb 2013; Alex Alexander <wired@gentoo.org> -uzbl-2010.11.25.ebuild,
+  -uzbl-2011.02.15.ebuild, -uzbl-2011.03.17.ebuild, -uzbl-2011.07.17.ebuild,
+  -uzbl-2011.07.25.ebuild, -uzbl-2011.10.01.ebuild,
+  -files/uzbl-makefile-docdir.patch:
+  removed obsolete stuff
 
 *uzbl-2012.05.14 (20 Aug 2012)
 

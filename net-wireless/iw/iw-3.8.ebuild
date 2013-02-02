@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-3.8.ebuild,v 1.2 2013/01/26 05:23:30 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-3.8.ebuild,v 1.3 2013/02/02 04:41:15 zerochaos Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="nl80211-based configuration utility for wireless devices using the mac80211 kernel stack"
 HOMEPAGE="http://wireless.kernel.org/en/users/Documentation/iw"
-SRC_URI="http://linuxwireless.org/download/${PN}/${P}.tar.bz2"
+SRC_URI="https://www.kernel.org/pub/software/network/${PN}/${P}.tar.xz"
 
 LICENSE="ISC"
 SLOT="0"
