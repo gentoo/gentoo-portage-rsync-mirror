@@ -1964,6 +1964,10 @@ games-fps/doomsday:resources - Enable support for games-fps/doomsday-resources i
 games-fps/doomsday:snowberry - Install Snowberry doomsday front-end
 games-fps/duke3d:demo - Install the demo files
 games-fps/duke3d:pic - disable optimized assembly code that is not PIC friendly
+games-fps/eduke32:demo - Install games-fps/duke3d-demodata as well
+games-fps/eduke32:server - Compile with server support
+games-fps/eduke32:tools - Build several tools for modding and development
+games-fps/eduke32:vpx - Enable support for WebM VP8 Codecs
 games-fps/ezquake-bin:security - install the security module needed for some servers
 games-fps/lsdldoom:freedoom - Install games-fps/freedoom wad file
 games-fps/lsdldoom:net - Enables network game support

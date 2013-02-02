@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/duke3d-data
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/ChangeLog,v 1.6 2012/01/16 19:14:34 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/ChangeLog,v 1.7 2013/02/02 18:53:30 hasufell Exp $
+
+  02 Feb 2013; Julian Ospald <hasufell@gentoo.org> duke3d-data-1.0.ebuild:
+  add ~amd64 keyword, update RDEPEND logic
 
   16 Jan 2012; Ulrich Müller <ulm@gentoo.org> duke3d-data-1.0.ebuild:
   Migrate to cdrom.eclass, bug 398809.

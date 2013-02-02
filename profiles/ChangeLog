@@ -1,14 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7428 2013/02/02 18:09:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7429 2013/02/02 18:48:03 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   02 Feb 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
-  Add fmdrv, mapm-4.9.5, qmail-nelson, Time-modules, and xbatt licenses to
-  MISC-FREE group, bugs 453184, 452594, 453166, 453004, and 452966.
+  Add mapm-4.9.5, qmail-nelson, Time-modules, and xbatt licenses to
+  MISC-FREE group, bugs 452594, 453166, 453004, and 452966.
 
   02 Feb 2013; Tupone Alfredo <tupone@gentoo.org>
   hardened/linux/uclibc/amd64/package.mask:

@@ -1,21 +1,24 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qsanity/qmail-qsanity-0.52.ebuild,v 1.4 2006/02/20 21:08:27 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qsanity/qmail-qsanity-0.52.ebuild,v 1.5 2013/02/02 18:42:30 ulm Exp $
 
 DESCRIPTION="qmail-qsanity checks your queue data structures for internal consistency."
 HOMEPAGE="http://www.qmail.org/"
 SRC_URI="mirror://qmail/${P}"
-LICENSE="as-is"
+
+LICENSE="qmail-nelson"
 SLOT="0"
 # Should run on all platforms without issue
 KEYWORDS="x86 ~ppc ~hppa"
 IUSE=""
+
 DEPEND=""
 RDEPEND="virtual/qmail dev-lang/perl"
+
 S=${WORKDIR}
 
 src_unpack() {
-	cp ${DISTDIR}/${P} ${PN}
+	cp "${DISTDIR}"/${P} ${PN}
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.59.0.ebuild,v 1.1 2013/02/02 17:26:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.59.0.ebuild,v 1.2 2013/02/02 18:54:18 mgorny Exp $
 
 EAPI=5
 # broken with python3.3, bug #449276
@@ -50,11 +50,12 @@ python_test() {
 	# 1) because of namespaces, we can't use 'install --root',
 	# 2) 'install --home' is terribly broken on pypy,
 	# 3) non-root 'install' complains about PYTHONPATH and missing dirs,
+	#    so we need to set it properly and mkdir them,
 	# 4) it runs a bunch of commands which write random files to cwd,
 	#    in order to avoid that, we need to run them ourselves to pass
 	#    alternate build paths,
 	# 5) 'install' needs to go before 'bdist_egg' or the latter would
-	#    overwrite install paths.
+	#    re-set install paths.
 
 	local tpath=${BUILD_DIR}/test
 	local bindir=${tpath}/bin

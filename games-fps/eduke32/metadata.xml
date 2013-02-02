@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>games</herd>
+	<maintainer>
+		<email>hasufell@gentoo.org</email>
+		<name>Julian Ospald</name>
+	</maintainer>
+	<use>
+		<flag name="demo">Install <pkg>games-fps/duke3d-demodata</pkg> as well</flag>
+		<flag name="server">Compile with server support</flag>
+		<flag name="tools">Build several tools for modding and development</flag>
+		<flag name="vpx">Enable support for WebM VP8 Codecs</flag>
+	</use>
+</pkgmetadata>
+

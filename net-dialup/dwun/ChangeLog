@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/dwun
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dwun/ChangeLog,v 1.9 2009/06/20 10:03:48 mrness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dwun/ChangeLog,v 1.10 2013/02/02 18:57:47 ulm Exp $
+
+  02 Feb 2013; Ulrich Müller <ulm@gentoo.org> dwun-0.96e-r2.ebuild:
+  Fix LICENSE, MIT (Expat) according to COPYING file, bug 453214. Add GPL-2 for
+  init script, bug 426010.
 
 *dwun-0.96e-r2 (20 Jun 2009)
 
