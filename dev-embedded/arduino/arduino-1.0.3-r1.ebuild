@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/arduino-1.0.3-r1.ebuild,v 1.2 2013/01/26 23:09:43 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/arduino-1.0.3-r1.ebuild,v 1.3 2013/02/02 20:19:37 miknix Exp $
 
 EAPI=4
 JAVA_PKG_IUSE="doc examples"
@@ -70,7 +70,7 @@ src_install() {
 	if use doc; then
 		dodoc revisions.txt "${S}"/readme.txt
 		dohtml -r reference
-		java-pkg_dojavadoc "${S}"/build/javadoc
+		java-pkg_dojavadoc "${S}"/build/javadoc/everything
 	fi
 
 	insinto "/usr/share/${PN}/"
