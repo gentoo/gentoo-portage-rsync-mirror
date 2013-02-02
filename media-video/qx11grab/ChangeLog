@@ -1,6 +1,11 @@
 # ChangeLog for media-video/qx11grab
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.27 2012/12/25 11:03:29 pesa Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/ChangeLog,v 1.28 2013/02/02 08:24:42 patrick Exp $
+
+*qx11grab-0.4.6 (02 Feb 2013)
+
+  02 Feb 2013; Patrick Lauer <patrick@gentoo.org> +qx11grab-0.4.6.ebuild:
+  Bump
 
 *qx11grab-0.4.5 (25 Dec 2012)
 
