@@ -26,4 +26,8 @@ Other things we're doing include merging the two code trees, adding
 features, and improving the OpenGL renderer. And QuakeForge is still the 
 most portable source tree based on the id Software code.
 </longdescription>
+<use>
+	<flag name="wildmidi">enable libWildMidi support</flag>
+	<flag name="xdg">enable XDG support</flag>
+</use>
 </pkgmetadata>

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DEPEND=media-libs/libsamplerate net-misc/curl virtual/opengl png? ( media-libs/libpng:0 ) flac? ( media-libs/flac ) sdl? ( media-libs/libsdl ) svga? ( media-libs/svgalib ) X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXxf86vm ) ncurses? ( sys-libs/ncurses ) vorbis? ( media-libs/libogg media-libs/libvorbis ) zlib? ( sys-libs/zlib ) xv? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXxf86vm ) dga? ( x11-libs/libXxf86dga ) alsa? ( media-libs/alsa-lib ) wildmidi? ( media-sound/wildmidi ) cdinstall? ( games-fps/quake1-data ) >=sys-devel/bison-2.6 sys-devel/flex virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=A new 3d engine based off of id Softwares's legendary Quake and QuakeWorld game engine
+EAPI=5
+HOMEPAGE=http://www.quakeforge.net/
+IUSE=cdinstall debug fbcon flac sdl svga X ncurses png vorbis zlib ipv6 xv dga alsa oss xdg wildmidi
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=media-libs/libsamplerate net-misc/curl virtual/opengl png? ( media-libs/libpng:0 ) flac? ( media-libs/flac ) sdl? ( media-libs/libsdl ) svga? ( media-libs/svgalib ) X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXxf86vm ) ncurses? ( sys-libs/ncurses ) vorbis? ( media-libs/libogg media-libs/libvorbis ) zlib? ( sys-libs/zlib ) xv? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXxf86vm ) dga? ( x11-libs/libXxf86dga ) alsa? ( media-libs/alsa-lib ) wildmidi? ( media-sound/wildmidi )
+RESTRICT=userpriv
+SLOT=0
+SRC_URI=mirror://sourceforge/quake/quakeforge-0.7.2.tar.bz2
+_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	games	e0a83e3f3f024b8c8ef7a8217d716cbf	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=5ecced24adedc75e10c697a35d93b136

@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure unpack
-DEPEND=amd64? ( >=dev-lang/yasm-1 ) x86? ( >=dev-lang/yasm-1 ) x86-fbsd? ( >=dev-lang/yasm-1 ) dev-vcs/git
+DEPEND=amd64? ( >=dev-lang/yasm-1 ) amd64-fbsd? ( >=dev-lang/yasm-1 ) x86? ( >=dev-lang/yasm-1 ) x86-fbsd? ( >=dev-lang/yasm-1 ) dev-vcs/git
 DESCRIPTION=A free library for encoding X264/AVC streams
 EAPI=4
 HOMEPAGE=http://www.videolan.org/developers/x264.html
@@ -7,4 +7,4 @@ IUSE=debug +threads pic static-libs
 LICENSE=GPL-2
 SLOT=0
 _eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=634781e9d339550bd25441b7b3c286b5
+_md5_=c71cbc1bac9af889973832b3c6672c38

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20120707.ebuild,v 1.5 2012/12/16 19:08:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20120707.ebuild,v 1.6 2013/02/02 00:28:26 ssuominen Exp $
 
 EAPI=4
 
@@ -35,6 +35,7 @@ IUSE="10bit custom-cflags debug +interlaced pic static-libs +threads"
 
 RDEPEND=""
 DEPEND="amd64? ( >=dev-lang/yasm-1 )
+	amd64-fbsd? ( >=dev-lang/yasm-1 )
 	x86? ( >=dev-lang/yasm-1 )
 	x86-fbsd? ( >=dev-lang/yasm-1 )"
 
