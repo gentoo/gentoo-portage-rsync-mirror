@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/libghemical
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/ChangeLog,v 1.27 2012/05/21 23:25:19 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/ChangeLog,v 1.28 2013/02/02 05:55:29 patrick Exp $
+
+*libghemical-3.0.0 (02 Feb 2013)
+
+  02 Feb 2013; Patrick Lauer <patrick@gentoo.org> +libghemical-3.0.0.ebuild:
+  Bump
 
   21 May 2012; Mike Frysinger <vapier@gentoo.org> libghemical-2.99.1.ebuild:
   Inherit eutils for epatch.
@@ -124,4 +129,3 @@
   09 Jul 2005; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
   +libghemical-1.90.ebuild:
   Initial commit of development version.
-

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/liboglappth
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/liboglappth/ChangeLog,v 1.10 2012/05/05 03:52:30 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/liboglappth/ChangeLog,v 1.11 2013/02/02 05:54:01 patrick Exp $
+
+*liboglappth-1.0.0 (02 Feb 2013)
+
+  02 Feb 2013; Patrick Lauer <patrick@gentoo.org> +liboglappth-1.0.0.ebuild:
+  Bump
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> liboglappth-0.96.ebuild,
   liboglappth-0.98.ebuild:
@@ -43,4 +48,3 @@
   +metadata.xml, +liboglappth-0.96.ebuild:
   New package: A library for creating portable OpenGL applications with
   easy-to-code scene setup and selection operations.
-

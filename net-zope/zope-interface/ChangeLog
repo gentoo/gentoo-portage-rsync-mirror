@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-interface
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.42 2013/02/01 08:55:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.43 2013/02/02 05:42:26 patrick Exp $
+
+  02 Feb 2013; Patrick Lauer <patrick@gentoo.org> zope-interface-4.0.3.ebuild:
+  Restrict py 2.5 #455088
 
 *zope-interface-4.0.3 (01 Feb 2013)
 
