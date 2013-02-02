@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/configobj
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.29 2013/02/02 15:05:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.30 2013/02/02 21:36:29 floppym Exp $
+
+  02 Feb 2013; Mike Gilbert <floppym@gentoo.org> configobj-4.7.2-r1.ebuild:
+  Add || die to python_test.
 
 *configobj-4.7.2-r1 (02 Feb 2013)
 

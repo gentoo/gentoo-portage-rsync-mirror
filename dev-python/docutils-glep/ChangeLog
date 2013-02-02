@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils-glep
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils-glep/ChangeLog,v 1.4 2013/01/20 00:01:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils-glep/ChangeLog,v 1.5 2013/02/02 21:58:48 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> docutils-glep-0.4-r1.ebuild:
+  Stable for amd64, wrt bug #454314
 
   20 Jan 2013; Michał Górny <mgorny@gentoo.org> docutils-glep-0.4-r1.ebuild:
   Enable pypy2.0 for deps.
