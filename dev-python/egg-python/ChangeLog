@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/egg-python
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/ChangeLog,v 1.22 2012/08/13 09:24:08 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/ChangeLog,v 1.23 2013/02/02 22:28:32 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> egg-python-2.25.3.ebuild:
+  Add ~arm, wrt bug #449220
 
   13 Aug 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   egg-python-2.25.3.ebuild, +files/egg-python-2.25.3-python-libs.patch:
@@ -83,4 +86,3 @@
   +egg-python-2.19.1.ebuild:
   Initial import of gnome-python-extras split ebuilds. This package
   installs the bindings for the egg library.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.120 2013/02/01 20:44:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.121 2013/02/02 22:12:05 ago Exp $
 
 # Michał Górny <mgorny@gentoo.org> (01 Feb 2013)
 # virtual/cblas not keyworded on arm, bug #455050.
@@ -135,7 +135,7 @@ app-text/evince xps
 >=gnome-base/gdm-3 accessibility fprint gnome-shell smartcard
 >=gnome-base/gnome-menus-3.2 test
 >=gnome-base/gnome-panel-3 eds
->=gnome-base/nautilus-3 previewer sendto
+>=gnome-base/nautilus-3 previewer
 
 # Patrick McLean <chutzpah@gentoo.org> (08 Nov 2011)
 # mask conntrack USE flag for dnsmasq as dep is not keyworded

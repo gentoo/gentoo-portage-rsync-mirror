@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.143 2013/01/25 22:35:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.144 2013/02/02 22:22:59 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tracker-0.14.4.ebuild:
+  Add ~arm, wrt bug #449220
 
   25 Jan 2013; Gilles Dartiguelongue <eva@gentoo.org> tracker-0.14.4.ebuild,
   tracker-9999.ebuild:

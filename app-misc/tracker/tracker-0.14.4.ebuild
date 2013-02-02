@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.4.ebuild,v 1.8 2013/01/25 22:35:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.4.ebuild,v 1.9 2013/02/02 22:22:59 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ SLOT="0"
 if [[ ${PV} = 9999 ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 fi
 # USE="doc" is managed by eclass.
 IUSE="applet cue doc eds elibc_glibc exif firefox-bookmarks flac flickr gif

@@ -4,10 +4,10 @@ DESCRIPTION=Extensible screen reader that provides access to the desktop
 EAPI=5
 HOMEPAGE=http://projects.gnome.org/orca/
 IUSE=python_targets_python2_7
-KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 LICENSE=LGPL-2.1+ CCPL-Attribution-ShareAlike-3.0
 RDEPEND=>=app-accessibility/at-spi2-atk-2.5.91:2 >=app-accessibility/at-spi2-core-2.5.91:2 >=dev-libs/atk-2.5.91 >=dev-libs/glib-2.28:2 >=dev-python/pygobject-3.2.2:3[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=x11-libs/gtk+-3.5.16:3[introspection] python_targets_python2_7? ( dev-lang/python:2.7[threads] ) dev-python/python-exec[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] app-accessibility/speech-dispatcher[python] dev-libs/atk[introspection] dev-python/pyatspi[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pycairo dev-python/setproctitle x11-libs/libwnck:3[introspection] x11-libs/pango[introspection]
 SLOT=0
 SRC_URI=mirror://gnome/sources/orca/3.6/orca-3.6.3.tar.xz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	96ca31031ada9967bcf96a4fd8977ae4	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	python-r1	048b50bedc7713734694d95a872490a6	python-utils-r1	8e94ca6ef82c71c1ccf8e97276525491	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=a2ede653a81c796465bcf30ec40ef6c9
+_md5_=53f57a314e7e43f08131b2136ff03e6f

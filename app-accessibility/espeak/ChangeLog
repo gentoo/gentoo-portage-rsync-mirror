@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/espeak
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.105 2012/05/31 02:10:21 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.106 2013/02/02 22:17:43 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> espeak-1.46.01.ebuild:
+  Add ~arm, wrt bug #449220
 
   31 May 2012; Zac Medico <zmedico@gentoo.org> espeak-1.42.04.ebuild,
   espeak-1.45.03.ebuild, espeak-1.45.04.ebuild, espeak-1.46.01.ebuild:
@@ -424,4 +427,3 @@
   +espeak-1.16.ebuild:
   Initial commit.
   Thanks to breb@sent.com for the ebuild which I based this on, in bug 151004.
-

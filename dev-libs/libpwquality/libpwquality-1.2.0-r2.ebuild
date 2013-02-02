@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpwquality/libpwquality-1.2.0-r2.ebuild,v 1.6 2013/01/06 09:24:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpwquality/libpwquality-1.2.0-r2.ebuild,v 1.7 2013/02/02 22:26:32 ago Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -13,7 +13,7 @@ SRC_URI="https://fedorahosted.org/releases/l/i/${PN}/${P}.tar.bz2"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="pam python static-libs"
 
 RDEPEND=">=sys-libs/cracklib-2.8:=

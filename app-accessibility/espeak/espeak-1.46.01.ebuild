@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.46.01.ebuild,v 1.3 2012/05/31 02:10:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.46.01.ebuild,v 1.4 2013/02/02 22:17:43 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ DESCRIPTION="Speech synthesizer for English and other languages"
 HOMEPAGE="http://espeak.sourceforge.net/"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="portaudio pulseaudio"
 REQUIRED_USE="portaudio? ( !pulseaudio )
 	pulseaudio? ( !portaudio )"

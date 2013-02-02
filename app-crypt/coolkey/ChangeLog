@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/coolkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/ChangeLog,v 1.17 2013/01/06 09:13:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/coolkey/ChangeLog,v 1.18 2013/02/02 22:21:12 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> coolkey-1.1.0-r5.ebuild:
+  Add ~arm, wrt bug #449220
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> coolkey-1.1.0-r5.ebuild:
   Add ~sparc, wrt bug #449220

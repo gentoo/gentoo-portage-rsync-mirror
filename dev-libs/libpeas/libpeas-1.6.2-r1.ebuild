@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/libpeas-1.6.2-r1.ebuild,v 1.5 2013/01/06 09:24:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/libpeas-1.6.2-r1.ebuild,v 1.6 2013/02/02 22:26:12 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="http://developer.gnome.org/libpeas/stable/"
 LICENSE="LGPL-2+"
 SLOT="0"
 IUSE="gjs +gtk glade +python seed"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
 
 RDEPEND=">=dev-libs/glib-2.32:2
 	>=dev-libs/gobject-introspection-0.10.1

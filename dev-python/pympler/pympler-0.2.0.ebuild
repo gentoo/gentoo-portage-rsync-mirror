@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pympler/pympler-0.2.0.ebuild,v 1.7 2013/01/06 09:29:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pympler/pympler-0.2.0.ebuild,v 1.8 2013/02/02 22:29:56 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://code.google.com/p/pympler/"
 SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="Apache-2.0"
 IUSE=""
 

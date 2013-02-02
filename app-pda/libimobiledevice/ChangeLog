@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/libimobiledevice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.39 2013/01/16 18:41:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/ChangeLog,v 1.40 2013/02/02 22:23:16 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  libimobiledevice-1.1.4-r2.ebuild:
+  Add ~arm, wrt bug #449220
 
 *libimobiledevice-1.1.4-r3 (16 Jan 2013)
 
