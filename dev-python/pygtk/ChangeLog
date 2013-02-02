@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pygtk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.277 2012/05/13 20:02:41 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.278 2013/02/01 23:40:59 eva Exp $
+
+*pygtk-2.24.0-r3 (01 Feb 2013)
+
+  01 Feb 2013; Gilles Dartiguelongue <eva@gentoo.org> -pygtk-2.24.0-r1.ebuild,
+  +pygtk-2.24.0-r3.ebuild:
+  Version bump with EAPI=5 and python-r1 goodness.
 
   13 May 2012; Alexis Ballier <aballier@gentoo.org> pygtk-2.24.0-r2.ebuild:
   keyword ~amd64-fbsd
