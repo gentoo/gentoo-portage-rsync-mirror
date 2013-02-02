@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/wcd-5.2.1-r1.ebuild,v 1.1 2013/02/02 09:55:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/wcd-5.2.1-r1.ebuild,v 1.2 2013/02/02 17:07:25 jlec Exp $
 
 EAPI=4
 
@@ -19,6 +19,8 @@ CDEPEND="sys-libs/ncurses[unicode?]"
 DEPEND="${CDEPEND}
 	app-text/ghostscript-gpl"
 RDEPEND="${CDEPEND}"
+
+S="${WORKDIR}"/${P}/src
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2-demo/dominions2-demo-2.08-r1.ebuild,v 1.2 2012/11/26 10:22:43 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2-demo/dominions2-demo-2.08-r1.ebuild,v 1.3 2013/02/02 17:26:20 tupone Exp $
 
 EAPI=4
 
@@ -30,9 +30,10 @@ DEPEND="!amd64? (
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/dominions2demo
+dir="${GAMES_PREFIX_OPT}/${PN}"
+QA_PREBUILT="${dir:1}/dom2demo"
 
 src_install() {
-	local dir="${GAMES_PREFIX_OPT}/${PN}"
 
 	insinto "${dir}"
 	exeinto "${dir}"
