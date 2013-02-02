@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.815 2013/02/01 17:31:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.816 2013/02/02 16:16:22 grobian Exp $
+
+  02 Feb 2013; Fabian Groffen <grobian@gentoo.org> udev-171-r10.ebuild:
+  Drop ~x86-linux, bug #452708
 
 *udev-197-r6 (01 Feb 2013)
 

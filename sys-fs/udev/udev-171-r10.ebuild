@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r10.ebuild,v 1.3 2013/01/21 14:10:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r10.ebuild,v 1.4 2013/02/02 16:16:22 grobian Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ inherit eutils flag-o-matic multilib toolchain-funcs linux-info systemd libtool
 
 if [[ ${PV} != "9999" ]]
 then
-	KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-linux"
+	KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
 		test? ( mirror://gentoo/${PN}-171-testsys.tar.bz2 )
 		mirror://gentoo/${PN}-gentoo-legacy-patchset-2.tar.bz2"

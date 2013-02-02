@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.58 2013/01/22 03:07:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.59 2013/02/02 16:24:49 jer Exp $
+
+*pv-1.4.6 (02 Feb 2013)
+
+  02 Feb 2013; Jeroen Roovers <jer@gentoo.org> +pv-1.4.6.ebuild:
+  Version bump.
 
   22 Jan 2013; Mike Frysinger <vapier@gentoo.org> pv-1.4.5.ebuild:
   Use $(AR) rather than $(LD) for intermediate linking #437062 by
