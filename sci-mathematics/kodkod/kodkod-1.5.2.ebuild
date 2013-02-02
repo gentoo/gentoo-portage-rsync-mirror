@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkod/kodkod-1.5.2.ebuild,v 1.1 2012/12/05 10:41:32 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkod/kodkod-1.5.2.ebuild,v 1.2 2013/02/02 13:22:28 gienah Exp $
 
 EAPI="5"
 
@@ -46,7 +46,8 @@ src_prepare() {
 		-i "${S}/lib/cryptominisat-2.9.1/wscript" \
 		-i "${S}/lib/lingeling-276/wscript" \
 		|| die "Could not fix wscripts to respect LDFLAGS"
-
+	# Fix bug 453162 - sci-mathematics/kodkod-1.5.2: fails to build
+	epatch "${FILESDIR}/${PN}-1.5.2-changes-in-most-specific-varargs-method-selection.patch"
 }
 
 # note: kodkod waf fails when passed --libdir:

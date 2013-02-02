@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/bsd/use.mask,v 1.4 2011/11/01 00:56:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/bsd/use.mask,v 1.5 2013/02/02 13:12:27 grobian Exp $
 
 # these will more than likely never work on bsd
 3dfx
@@ -11,6 +11,8 @@ alsa
 apm
 cap
 caps
+cman
+clvm
 directfb
 divx4linux
 djbfft
