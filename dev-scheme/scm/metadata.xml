@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>scheme</herd>
-	<maintainer>
-		<email>hkBst@gentoo.org</email>
-		<name>Marijn Schouten</name>
-	</maintainer>
 	<longdescription lang="en">
 SCM is a  Scheme implementation conforming to  Revised5 Report on the Algorithmic Language Scheme and the IEEE P1178 specification.
 	</longdescription>

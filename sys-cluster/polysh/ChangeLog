@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/polysh
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/polysh/ChangeLog,v 1.2 2012/02/10 02:55:20 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/polysh/ChangeLog,v 1.3 2013/02/02 12:58:03 xarthisius Exp $
+
+*polysh-0.3.1 (02 Feb 2013)
+
+  02 Feb 2013; Kacper Kowalik <xarthisius@gentoo.org> +polysh-0.3.1.ebuild:
+  Add old stable version for a proper pkgmove
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> polysh-0.4.ebuild:
   Changing python deps in preparation for 2.4 removal
@@ -31,4 +36,3 @@
   +metadata.xml:
   Initial import, fixes bug 268826. Ebuild written by Łukasz Mierzwa
   <l.mierzwa@gmail.com>
-

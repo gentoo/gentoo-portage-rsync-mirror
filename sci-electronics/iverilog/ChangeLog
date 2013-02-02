@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/iverilog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.39 2013/01/27 09:34:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.40 2013/02/02 12:47:14 grobian Exp $
+
+  02 Feb 2013; Fabian Groffen <grobian@gentoo.org> iverilog-0.9.5.ebuild:
+  Also fix older version for Prefix, bug 453884#c5
 
   27 Jan 2013; Fabian Groffen <grobian@gentoo.org> iverilog-0.9.6.ebuild:
   Fix out of prefix install, bug #453884

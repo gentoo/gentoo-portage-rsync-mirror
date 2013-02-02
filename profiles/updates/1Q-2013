@@ -4,3 +4,4 @@ move app-cdr/cdemud app-cdr/cdemu-daemon
 slotmove =dev-python/pmw-1.3.3 0 py2
 slotmove =dev-python/pmw-2.0.0 0 py3
 move media-fonts/freefont-ttf media-fonts/freefont
+move sys-cluster/gsh sys-cluster/polysh

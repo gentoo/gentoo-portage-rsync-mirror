@@ -1732,7 +1732,6 @@ dev-scheme/guile:debug-freelist - Include garbage collector freelist debugging c
 dev-scheme/guile:debug-malloc - Include malloc debugging code
 dev-scheme/guile:deprecated - Enable deprecated features
 dev-scheme/guile:discouraged - (implied by deprecated) enable merely discouraged features
-dev-scheme/guile:elisp - Enable Emacs Lisp support
 dev-scheme/guile:networking - Include networking interfaces
 dev-scheme/guile:regex - Include regular expression interfaces
 dev-scheme/hop:debug - Enables building with debug symbols

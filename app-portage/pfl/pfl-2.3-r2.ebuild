@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.3-r1.ebuild,v 1.5 2013/02/02 12:39:57 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.3-r2.ebuild,v 1.1 2013/02/02 12:39:57 billie Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND=2
-PYTHON_USE_WITH=xml
+PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="xml"
 
-inherit distutils python
+inherit distutils-r1
 
 DESCRIPTION="Searchable online file/package database for Gentoo"
 HOMEPAGE="http://www.portagefilelist.de"
@@ -23,13 +23,8 @@ RDEPEND="${DEPEND}
 	net-misc/curl
 	sys-apps/portage"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 
 	if use network-cron ; then
 		exeinto /etc/cron.weekly
@@ -40,15 +35,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize ${PN}
-
 	if [[ ! -e "${EROOT%/}/var/lib/${PN}/pfl.info" ]]; then
 		touch "${EROOT%/}/var/lib/${PN}/pfl.info"
 		chown -R 0:portage "${EROOT%/}/var/lib/${PN}"
 		chmod 775 "${EROOT%/}/var/lib/${PN}"
 	fi
-}
-
-pkg_postrm() {
-	python_mod_cleanup ${PN}
 }
