@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/wcd-5.2.1.ebuild,v 1.4 2013/01/27 14:37:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/wcd-5.2.1-r1.ebuild,v 1.1 2013/02/02 09:55:53 jlec Exp $
 
 EAPI=4
 
@@ -11,8 +11,8 @@ HOMEPAGE="http://www.xs4all.nl/~waterlan/#WCD_ANCHOR"
 SRC_URI="http://www.xs4all.nl/~waterlan/${P}-src.tar.gz"
 
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
+KEYWORDS="amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="nls unicode"
 
 CDEPEND="sys-libs/ncurses[unicode?]"
@@ -31,4 +31,10 @@ src_compile() {
 	use unicode && mycompile="${mycompile} UCS=1"
 	emake \
 		${mycompile}
+}
+
+src_install() {
+	local DOCS="../README.txt"
+	default
+	emake DESTDIR="${D}" DOTWCD=1 install-profile sysconfdir="/etc"
 }
