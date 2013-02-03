@@ -1,6 +1,12 @@
 # ChangeLog for games-board/freedoko
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.19 2012/09/24 08:45:18 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.20 2013/02/03 00:56:36 hasufell Exp $
+
+*freedoko-0.7.11 (03 Feb 2013)
+
+  03 Feb 2013; Julian Ospald <hasufell@gentoo.org> +freedoko-0.7.11.ebuild,
+  +files/freedoko-0.7.11-gcc47.patch, +files/freedoko-0.7.11-gentoo.patch:
+  version bump wrt #452306
 
   24 Sep 2012; Tupone Alfredo <tupone@gentoo.org> freedoko-0.7.10.ebuild,
   +files/freedoko-0.7.10-gcc47.patch:

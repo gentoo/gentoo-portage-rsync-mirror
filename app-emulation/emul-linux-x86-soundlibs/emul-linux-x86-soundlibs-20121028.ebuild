@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20121028.ebuild,v 1.3 2012/11/25 07:26:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20121028.ebuild,v 1.4 2013/02/03 01:00:01 ottxor Exp $
 
 EAPI="4"
 inherit emul-linux-x86
@@ -10,7 +10,8 @@ KEYWORDS="-* amd64"
 IUSE="alsa"
 
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
-	~app-emulation/emul-linux-x86-medialibs-${PV}"
+	~app-emulation/emul-linux-x86-medialibs-${PV}
+	!>=sci-libs/fftw-3.3.3-r1[abi_x86_32]"
 
 src_prepare() {
 	_ALLOWED="${S}/etc/env.d"

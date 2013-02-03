@@ -5,7 +5,5 @@
 <use>
 	<flag name="gconf">Optional support for <pkg>gnome-base/gconf</pkg>
 		configuration storage system</flag>
-	<flag name="systemd">Use <pkg>sys-apps/systemd</pkg> instead of
-		<pkg>sys-auth/consolekit</pkg> for session tracking</flag>
 </use>
 </pkgmetadata>
