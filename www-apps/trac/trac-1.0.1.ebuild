@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-1.0.1.ebuild,v 1.1 2013/02/03 15:17:31 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-1.0.1.ebuild,v 1.2 2013/02/03 20:36:11 djc Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit distutils user webapp
+inherit distutils eutils user webapp
 
 MY_PV=${PV/_beta/b}
 MY_P=Trac-${MY_PV}
@@ -51,6 +51,10 @@ pkg_setup() {
 
 	enewgroup tracd
 	enewuser tracd -1 -1 -1 tracd
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${PV}-git-identity.patch"
 }
 
 src_test() {

@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/trac
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.135 2013/02/03 15:17:31 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.136 2013/02/03 20:36:11 djc Exp $
+
+  03 Feb 2013; Dirkjan Ochtman <djc@gentoo.org> +files/1.0.1-git-identity.patch,
+  trac-1.0.1.ebuild:
+  Fix test failure (upstream issue #11045).
 
 *trac-1.0.1 (03 Feb 2013)
 

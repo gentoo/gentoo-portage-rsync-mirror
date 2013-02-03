@@ -1,0 +1,36 @@
+http://trac.edgewall.org/changeset/11675
+
+Index: /branches/1.0-stable/tracopt/versioncontrol/git/tests/PyGIT.py
+===================================================================
+--- /branches/1.0-stable/tracopt/versioncontrol/git/tests/PyGIT.py	(revision 11674)
++++ /branches/1.0-stable/tracopt/versioncontrol/git/tests/PyGIT.py	(revision 11675)
+@@ -153,4 +153,6 @@
+         # create git repository and master branch
+         self._git('init', self.repos_path)
++        self._git('config', 'user.name', u"Joé")
++        self._git('config', 'user.email', "joe@example.com")
+         create_file(os.path.join(self.repos_path, '.gitignore'))
+         self._git('add', '.gitignore')
+@@ -166,5 +168,5 @@
+                      cwd=self.repos_path)
+         proc.wait()
+-        assert proc.returncode == 0
++        assert proc.returncode == 0, proc.stderr.read()
+         return proc
+ 
+@@ -181,5 +183,6 @@
+         create_file(os.path.join(self.repos_path, 'tickét.txt'))
+         self._git('add', 'tickét.txt')
+-        self._git('commit', '-m', 'unicode-filename')
++        self._git('commit', '-m', 'unicode-filename',
++                  '--date', 'Sun Feb 3 18:30 2013 +0100')
+         storage = self._storage()
+         filenames = sorted(fname for mode, type, sha, size, fname
+@@ -189,4 +192,7 @@
+         self.assertEquals(u'.gitignore', filenames[0])
+         self.assertEquals(u'tickét.txt', filenames[1])
++        # check commit author, for good measure
++        self.assertEquals(u'Joé <joe@example.com> 1359912600 +0100',
++                          storage.read_commit(storage.head())[1]['author'][0])
+ 
+     def test_unicode_branches(self):
