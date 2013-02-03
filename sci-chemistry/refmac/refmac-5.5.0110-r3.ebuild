@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110-r3.ebuild,v 1.8 2013/01/31 11:16:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110-r3.ebuild,v 1.9 2013/02/03 17:56:16 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="ccp4"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="

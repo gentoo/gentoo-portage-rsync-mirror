@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/makecif/makecif-5.6.6-r1.ebuild,v 1.3 2012/10/19 09:52:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/makecif/makecif-5.6.6-r1.ebuild,v 1.4 2013/02/03 17:56:31 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ysbl.york.ac.uk/~alexei/makecif.html"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 LICENSE="ccp4"
 IUSE=""
 
