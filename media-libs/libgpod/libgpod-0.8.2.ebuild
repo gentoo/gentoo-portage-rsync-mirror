@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.2.ebuild,v 1.8 2012/12/11 03:46:33 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.2.ebuild,v 1.9 2013/02/03 16:34:39 ssuominen Exp $
 
 EAPI=4
 
@@ -37,6 +37,7 @@ DEPEND="${RDEPEND}
 	python? ( >=dev-lang/swig-1.3.24 )
 	dev-libs/libxslt
 	dev-util/intltool
+	sys-devel/gettext
 	virtual/pkgconfig"
 
 DOCS="AUTHORS NEWS README* TROUBLESHOOTING"

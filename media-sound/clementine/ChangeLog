@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/clementine
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.72 2012/11/19 10:29:23 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.73 2013/02/03 16:46:17 ssuominen Exp $
+
+  03 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -clementine-1.0.1-r2.ebuild, -files/clementine-1.0.1-liblastfm-1.patch,
+  -clementine-1.1.0_rc1.ebuild, -clementine-1.1.0.ebuild:
+  old
 
   19 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> clementine-1.1.1.ebuild:
   Pull in required virtual/glu and virtual/opengl.

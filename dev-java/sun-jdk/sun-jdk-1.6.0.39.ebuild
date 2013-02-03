@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.39.ebuild,v 1.1 2013/02/03 09:09:37 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.39.ebuild,v 1.2 2013/02/03 16:50:57 sera Exp $
 
 EAPI="5"
 
 inherit eutils java-vm-2 prefix versionator
 
 # This URIs need to be updated when bumping!
-JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk6u38-downloads-1877406.html"
+JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html"
 JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html"
 # This is a list of archs supported by this update. Currently ia64 comes and goes ...
 AT_AVAILABLE=( amd64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
