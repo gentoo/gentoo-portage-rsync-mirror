@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.72 2013/01/30 14:46:58 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.73 2013/02/03 15:01:38 titanofold Exp $
+
+*postgis-2.0.2-r1 (03 Feb 2013)
+
+  03 Feb 2013; Aaron W. Swenson <titanofold@gentoo.org> -postgis-2.0.2.ebuild,
+  +postgis-2.0.2-r1.ebuild:
+  Add JSON-C dependency and use pkg-config fixing bug 454774.
 
 *postgis-2.0.2 (30 Jan 2013)
 *postgis-1.5.8 (30 Jan 2013)

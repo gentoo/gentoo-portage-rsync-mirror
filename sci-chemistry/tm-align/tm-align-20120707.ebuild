@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tm-align/tm-align-20120707.ebuild,v 1.1 2012/08/13 20:06:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tm-align/tm-align-20120707.ebuild,v 1.2 2013/02/03 15:13:39 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://zhanglab.ccmb.med.umich.edu/TM-align/TMtools${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="static custom-cflags"
 
 S="${WORKDIR}"
