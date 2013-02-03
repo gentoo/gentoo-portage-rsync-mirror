@@ -1,6 +1,17 @@
 # ChangeLog for media-gfx/sfftobmp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/ChangeLog,v 1.22 2013/02/02 19:22:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/ChangeLog,v 1.24 2013/02/03 10:40:28 ssuominen Exp $
+
+  03 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> -sfftobmp-3.1.1.ebuild,
+  -files/sfftobmp-3.1.1-gcc43-and-cerrno.patch:
+  old
+
+*sfftobmp-3.1.2-r1 (03 Feb 2013)
+
+  03 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +sfftobmp-3.1.2-r1.ebuild, +files/sfftobmp-3.1.2-boost_fs3.patch:
+  Fix compability with -DBOOST_FILESYSTEM_VERSION=3 and dev-libs/boost >= 1.50
+  wrt #425364 by Dennis Freise (and Diego Elio Pettenò)
 
   02 Feb 2013; Ulrich Müller <ulm@gentoo.org> sfftobmp-3.1.1.ebuild,
   sfftobmp-3.1.2.ebuild:
