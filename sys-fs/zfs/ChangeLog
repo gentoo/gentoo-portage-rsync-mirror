@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.58 2013/02/02 16:44:40 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.59 2013/02/03 15:51:45 ryao Exp $
+
+  03 Feb 2013; Richard Yao <ryao@gentoo.org> zfs-0.6.0_rc14.ebuild:
+  Commit warning about missing feature flags support in sys-boot/grub:2
 
 *zfs-0.6.0_rc14 (02 Feb 2013)
 
