@@ -5,9 +5,6 @@
 <maintainer>
 	<email>steev@gentoo.org</email>
 </maintainer>
-<maintainer>
-	<email>leio@gentoo.org</email>
-</maintainer>
 <longdescription lang="en">
 	moserial is a clean, friendly gtk-based serial terminal for the gnome desktop.
 </longdescription>

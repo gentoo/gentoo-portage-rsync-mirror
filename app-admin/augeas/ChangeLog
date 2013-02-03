@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/augeas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.41 2013/02/03 11:58:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.42 2013/02/03 13:19:20 prometheanfire Exp $
+
+  03 Feb 2013; Matthew Thode <prometheanfire@gentoo.org>
+  augeas-0.10.0-r1.ebuild, metadata.xml:
+  taking maintership
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -augeas-0.7.1.ebuild,
   -augeas-0.7.4.ebuild, -augeas-0.9.0.ebuild,

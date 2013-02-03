@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-<email>maintainer-needed@gentoo.org</email>
+<email>rich0@gentoo.org</email>
 </maintainer>
 <longdescription>
 Backup directory tree and files.

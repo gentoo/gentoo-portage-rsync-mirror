@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gtg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.12 2012/01/28 21:16:06 steev Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.13 2013/02/03 13:21:53 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup after talking with leio
 
 *gtg-0.2.5 (28 Jan 2012)
 
@@ -65,4 +68,3 @@
   +gtg-0.1.ebuild:
   Initial import of Getting Things Gnome! - a personal organizer for the
   GNOME desktop, inspired by the GTD methodology.
-

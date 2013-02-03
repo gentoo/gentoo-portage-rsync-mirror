@@ -2,10 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-<email>leio@gentoo.org</email>
+<email>steev@gentoo.org</email>
 </maintainer>
 <maintainer>
-<email>steev@gentoo.org</email>
+<email>leio@gentoo.org</email>
+<description>Backup maintainer, CC on bugs, assign to remaming</description>
 </maintainer>
 <longdescription lang="en">
 	Getting Things Gnome! (gtg) is a personal organizer for the GNOME desktop that
