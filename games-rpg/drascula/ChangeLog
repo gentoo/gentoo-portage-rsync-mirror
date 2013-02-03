@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/drascula
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/drascula/ChangeLog,v 1.6 2011/03/14 11:21:01 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/drascula/ChangeLog,v 1.7 2013/02/02 23:49:37 hasufell Exp $
+
+*drascula-1.0-r2 (02 Feb 2013)
+
+  02 Feb 2013; Julian Ospald <hasufell@gentoo.org> +drascula-1.0-r2.ebuild:
+  version bump
 
   14 Mar 2011; Alfredo Tupone <tupone@gentoo.org> drascula-1.0-r1.ebuild,
   metadata.xml:

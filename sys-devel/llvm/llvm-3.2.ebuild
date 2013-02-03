@@ -1,10 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.2.ebuild,v 1.4 2013/01/17 13:44:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.2.ebuild,v 1.5 2013/02/02 23:41:54 mgorny Exp $
 
 EAPI=5
-PYTHON_DEPEND="2"
-inherit eutils flag-o-matic multilib toolchain-funcs python pax-utils
+
+# pypy gives me around 1700 unresolved tests due to open file limit
+# being exceeded. probably GC does not close them fast enough.
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+
+inherit eutils flag-o-matic multilib python-any-r1 toolchain-funcs pax-utils
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
@@ -27,7 +31,8 @@ DEPEND="dev-lang/perl
 	libffi? ( virtual/pkgconfig
 		virtual/libffi )
 	ocaml? ( dev-lang/ocaml )
-	udis86? ( dev-libs/udis86[pic(+)] )"
+	udis86? ( dev-libs/udis86[pic(+)] )
+	${PYTHON_DEPS}"
 RDEPEND="dev-lang/perl
 	libffi? ( virtual/libffi )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
@@ -36,8 +41,7 @@ S=${WORKDIR}/${P}.src
 
 pkg_setup() {
 	# Required for test and build
-	python_set_active_version 2
-	python_pkg_setup
+	python-any-r1_pkg_setup
 
 	# need to check if the active compiler is ok
 
@@ -64,12 +68,12 @@ pkg_setup() {
 
 	if [[ ${CHOST} == x86_64-* && ${broken_gcc_amd64} == *" ${version} "* ]];
 	then
-		 elog "Your version of gcc is known to miscompile llvm in amd64"
-		 elog "architectures.  Check"
-		 elog "http://www.llvm.org/docs/GettingStarted.html for possible"
-		 elog "solutions."
+		elog "Your version of gcc is known to miscompile llvm in amd64"
+		elog "architectures.  Check"
+		elog "http://www.llvm.org/docs/GettingStarted.html for possible"
+		elog "solutions."
 		die "Your currently active version of gcc is known to miscompile llvm"
-	 fi
+	fi
 }
 
 src_prepare() {
@@ -95,9 +99,6 @@ src_prepare() {
 	# FileCheck is needed at least for dragonegg tests
 	sed -e "/NO_INSTALL = 1/s/^/#/" -i utils/FileCheck/Makefile \
 		|| die "FileCheck Makefile sed failed"
-
-	# Specify python version
-	python_convert_shebangs -r 2 test/Scripts
 
 	epatch "${FILESDIR}"/${PN}-3.2-nodoctargz.patch
 	epatch "${FILESDIR}"/${PN}-3.0-PPC_macro.patch
