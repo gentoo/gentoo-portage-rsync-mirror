@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.235 2013/02/02 18:21:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.236 2013/02/03 09:33:09 xarthisius Exp $
+
+  03 Feb 2013; Kacper Kowalik <xarthisius@gentoo.org> doxygen-1.7.6.1.ebuild,
+  doxygen-1.8.3.1.ebuild:
+  Respect AR/CC wrt #455206 by Alphat-PC <AlphatPC@gmail.com>. Thanks to the
+  reporter for the patch
 
   02 Feb 2013; Kacper Kowalik <xarthisius@gentoo.org> doxygen-1.5.8-r1.ebuild,
   doxygen-1.7.6.1.ebuild, doxygen-1.8.3.1.ebuild:

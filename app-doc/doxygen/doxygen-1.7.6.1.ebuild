@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.6.1.ebuild,v 1.15 2013/02/02 18:21:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.6.1.ebuild,v 1.16 2013/02/03 09:33:09 xarthisius Exp $
 
 EAPI=4
 
@@ -90,7 +90,8 @@ src_prepare() {
 		-e "s:^\(TMAKE_CXX\s*\)=.*$:\1= $(tc-getCXX):" \
 		-e "s:^\(TMAKE_LINK\s*\)=.*$:\1= $(tc-getCXX):" \
 		-e "s:^\(TMAKE_LINK_SHLIB\s*\)=.*$:\1= $(tc-getCXX):" \
-		-e "s:^\(TMAKE_CXX\s*\)=.*$:\1= $(tc-getCC):" \
+		-e "s:^\(TMAKE_CC\s*\)=.*$:\1= $(tc-getCC):" \
+		-e "s:^\(TMAKE_AR\s*\)=.*$:\1= $(tc-getAR) cqs:" \
 		tmake/lib/{{linux,gnu,freebsd,netbsd,openbsd,solaris}-g++,macosx-c++,linux-64}/tmake.conf \
 		|| die
 

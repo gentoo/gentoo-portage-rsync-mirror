@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.37.ebuild,v 1.2 2012/10/21 10:59:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.39.ebuild,v 1.1 2013/02/03 09:42:50 sera Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit java-vm-2 eutils prefix versionator
 
 # This URIs need to be updated when bumping!
-JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre6u37-downloads-1859589.html"
+JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre6downloads-1902815.html"
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"
@@ -20,8 +20,8 @@ SRC_URI="${X86_AT}"
 
 LICENSE="Oracle-BCLA-JavaSE"
 SLOT="1.6"
-KEYWORDS="-* amd64"
-IUSE="X alsa nsplugin pax_kernel"
+KEYWORDS="-* ~amd64"
+IUSE="+X alsa nsplugin pax_kernel"
 
 RESTRICT="fetch strip"
 QA_PREBUILT="*"
