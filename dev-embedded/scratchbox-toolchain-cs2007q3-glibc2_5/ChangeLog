@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/scratchbox-toolchain-cs2007q3-glibc2_5
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2007q3-glibc2_5/ChangeLog,v 1.7 2010/06/29 17:39:46 ayoy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2007q3-glibc2_5/ChangeLog,v 1.8 2013/02/03 11:39:04 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #453094
 
 *scratchbox-toolchain-cs2007q3-glibc2_5-1.0.16 (29 Jun 2010)
 
@@ -43,4 +46,3 @@
   06 May 2009; Olivier Crête <tester@gentoo.org> +metadata.xml,
   +scratchbox-toolchain-cs2007q3-glibc2_5-1.0.11.ebuild:
   Add new scratchbox toolchain
-

@@ -3,8 +3,5 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<herd>voip</herd>
-	<maintainer>
-		<email>tester@gentoo.org</email>
-	</maintainer>
 </pkgmetadata>
 

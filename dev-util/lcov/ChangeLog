@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/lcov
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lcov/ChangeLog,v 1.15 2012/10/18 08:35:32 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lcov/ChangeLog,v 1.16 2013/02/03 11:41:37 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #453094
 
   18 Oct 2012; Christoph Junghans <ottxor@gentoo.org> lcov-1.9-r1.ebuild:
   added prefix support (bug #435438)

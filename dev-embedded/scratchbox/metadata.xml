@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dev-embedded</herd>
-<maintainer>
- <email>tester@gentoo.org</email>
-</maintainer>
 </pkgmetadata>

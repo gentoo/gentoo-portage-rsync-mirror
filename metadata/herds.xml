@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.993 2013/02/03 11:27:58 pacho Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.994 2013/02/03 11:45:59 pacho Exp $
 
 -->
 <herds>
@@ -1154,10 +1154,6 @@
     <role>ejabberd and jabber-base</role>
   </maintainer>
   <maintainer>
-    <email>tester@gentoo.org</email>
-    <name>Olivier Crête</name>
-  </maintainer>
-  <maintainer>
     <email>wschlich@gentoo.org</email>
     <name>Wolfram Schlich</name>
     <role>MCabber</role>
@@ -1409,15 +1405,10 @@
 		<role>Asterisk related stuff</role>
   </maintainer>
   <maintainer>
-    <email>tester@gentoo.org</email>
-		<name>Olivier Crête</name>
-		<role>Telepathy related stuff</role>
-	</maintainer>
-	<maintainer>
-		<email>nirbheek@gentoo.org</email>
-		<name>Nirbheek Chauhan</name>
-		<role>Telepathy related stuff</role>
-	</maintainer>
+	<email>nirbheek@gentoo.org</email>
+	<name>Nirbheek Chauhan</name>
+	<role>Telepathy related stuff</role>
+  </maintainer>
   <maintainer>
     <email>chithanh@gentoo.org</email>
     <name>Chí-Thanh Christopher Nguyễn</name>
@@ -2002,9 +1993,6 @@
   <description>Handles all gstreamer related packages</description>
   <maintainer>
      <email>leio@gentoo.org</email>
-  </maintainer>
-  <maintainer>
-     <email>tester@gentoo.org</email>
   </maintainer>
   <maintainer>
     <email>eva@gentoo.org</email>

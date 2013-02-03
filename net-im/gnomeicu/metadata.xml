@@ -3,10 +3,5 @@
 <pkgmetadata>
 <herd>net-im</herd>
 <herd>gnome</herd>
-<maintainer>
-  <email>tester@gentoo.org</email>
-  <name>Olivier Crête</name> 
-  <description>GnomeICU upstream maintainer</description>
-</maintainer>
 <longdescription>Gnome ICQ Client</longdescription>
 </pkgmetadata>

@@ -1,6 +1,5 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux/package.provided,v 1.4 2011/02/07 20:52:21 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux/package.provided,v 1.5 2013/02/03 11:48:34 heroxbd Exp $
 
 sys-linux/glibc-0
-sys-linux/linux-sources-0

@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/scratchbox-devkit-perl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-perl/ChangeLog,v 1.6 2010/06/29 17:39:07 ayoy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-perl/ChangeLog,v 1.7 2013/02/03 11:37:39 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #453094
 
 *scratchbox-devkit-perl-1.0.5 (29 Jun 2010)
 
@@ -32,4 +35,3 @@
   06 May 2009; Olivier Crête <tester@gentoo.org> +metadata.xml,
   +scratchbox-devkit-perl-1.0.4.ebuild:
   Initial version, from sunrise and bug #94225
-

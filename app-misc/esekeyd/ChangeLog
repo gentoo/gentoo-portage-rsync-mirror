@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/esekeyd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/esekeyd/ChangeLog,v 1.8 2011/08/02 20:13:33 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/esekeyd/ChangeLog,v 1.9 2013/02/03 11:35:08 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -esekeyd-1.2.1.ebuild,
+  metadata.xml:
+  Cleanup due #453094
 
   02 Aug 2011; Markos Chandras <hwoarang@gentoo.org> esekeyd-1.2.6.ebuild:
   Stable on amd64 wrt bug #360591
@@ -32,4 +36,3 @@
   30 May 2005; Olivier Crête <tester@gentoo.org> +metadata.xml,
   +esekeyd-1.2.1.ebuild:
   New package, thanks to kandian for the tip
-

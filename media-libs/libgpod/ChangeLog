@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgpod
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.94 2012/12/11 03:46:33 axs Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.95 2013/02/03 11:42:23 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -libgpod-0.8.0.ebuild,
+  metadata.xml:
+  Cleanup due #453094
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> libgpod-0.8.0.ebuild,
   libgpod-0.8.2.ebuild:
@@ -355,4 +359,3 @@
   29 Nov 2005; Joe McCann <joem@gentoo.org> +metadata.xml,
   +libgpod-0.2.0.ebuild:
   New library that gives you access to contents of an ipod
-

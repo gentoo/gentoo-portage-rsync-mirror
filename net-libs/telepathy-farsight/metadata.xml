@@ -8,10 +8,5 @@
 		<name>Nirbheek Chauhan</name>
 		<description>is empathy/GNOME</description>
 	</maintainer>
-	<maintainer>
-		<email>tester@gentoo.org</email>
-		<name>Olivier Crête</name>
-		<description>is upstream</description>
-	</maintainer>
 </pkgmetadata>
 

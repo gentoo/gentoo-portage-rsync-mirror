@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debugedit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.31 2012/07/29 18:26:20 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.32 2013/02/03 11:40:46 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #453094
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> debugedit-4.4.6-r1.ebuild,
   debugedit-4.4.6-r2.ebuild, debugedit-5.1.9.ebuild, debugedit-5.3.5.ebuild,
@@ -129,4 +132,3 @@
   version number, it gets the list of sources files used to build a binary
   that has debug information embedded and fixes the paths inside the stripping
   the build directory
-

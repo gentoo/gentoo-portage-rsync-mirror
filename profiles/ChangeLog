@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7430 2013/02/02 19:21:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7431 2013/02/03 11:51:16 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Fix category for mono-tools mask
 
   02 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Remove xboing mask.

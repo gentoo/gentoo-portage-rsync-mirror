@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/logsurfer+
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsurfer+/ChangeLog,v 1.9 2012/04/05 05:24:08 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsurfer+/ChangeLog,v 1.10 2013/02/03 11:59:06 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -logsurfer+-1.7.ebuild,
+  -logsurfer+-1.8.ebuild, metadata.xml:
+  Cleanup due #22900
 
   05 Apr 2012; Jeff Horelick <jdhore@gentoo.org> logsurfer+-1.8-r1.ebuild:
   marked x86 per bug 404591
@@ -36,4 +40,3 @@
   30 Dec 2006; MATSUU Takuto <matsuu@gentoo.org> +files/logsurfer.confd,
   +files/logsurfer.initd, +metadata.xml, +logsurfer+-1.7.ebuild:
   Initial import.
-

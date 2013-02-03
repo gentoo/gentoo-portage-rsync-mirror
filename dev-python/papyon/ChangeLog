@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/papyon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.35 2012/01/20 17:55:02 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.36 2013/02/03 11:39:58 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #453094
 
   20 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> -papyon-0.5.4.ebuild,
   -papyon-0.5.5.ebuild:
@@ -138,4 +141,3 @@
   08 Aug 2009; Olivier Crête <tester@gentoo.org> +papyon-0.4.1.ebuild,
   +metadata.xml:
   Initial import
-
