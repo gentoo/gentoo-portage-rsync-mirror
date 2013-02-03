@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ldns-utils-1.6.16.ebuild,v 1.1 2013/01/22 02:42:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ldns-utils-1.6.16.ebuild,v 1.2 2013/02/03 21:07:02 radhermit Exp $
 
 EAPI="3"
-inherit autotools eutils
+inherit eutils
 
 MY_P="${P/-utils}"
 DESCRIPTION="Set of utilities to simplify various dns(sec) tasks."
