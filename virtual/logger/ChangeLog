@@ -1,6 +1,10 @@
 # ChangeLog for virtual/logger
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/logger/ChangeLog,v 1.4 2012/08/21 12:50:50 sbriesen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/logger/ChangeLog,v 1.5 2013/02/03 05:33:13 vapier Exp $
+
+  03 Feb 2013; Mike Frysinger <vapier@gentoo.org> logger-0.ebuild:
+  Drop app-admin/busybox-sysklogd as it no longer exists #444718 by Andreis
+  Vinogradovs.
 
   21 Aug 2012; Stefan Briesenick <sbriesen@gentoo.org> logger-0.ebuild:
   added app-admin/busybox-sysklogd.
@@ -15,4 +19,3 @@
 
   07 Apr 2011; Ultrabug <ultrabug@gentoo.org> +logger-0.ebuild, +metadata.xml:
   new-style virtual, wrt #358881
-
