@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anyjson/anyjson-0.3.3-r1.ebuild,v 1.1 2013/01/13 20:41:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anyjson/anyjson-0.3.3-r1.ebuild,v 1.2 2013/02/03 11:01:52 mgorny Exp $
 
 EAPI=5
 
@@ -33,10 +33,10 @@ DEPEND="${RDEPEND}
 	)"
 
 python_test() {
-	cp -r -l tests "${BUILD_DIR}"/lib || die
+	cp -r -l tests "${BUILD_DIR}" || die
 	if [[ ${EPYTHON} == python3* ]]; then
-		2to3 -w --no-diffs "${BUILD_DIR}"/lib || die
+		2to3 -w --no-diffs "${BUILD_DIR}"/tests || die
 	fi
 
-	nosetests -w "${BUILD_DIR}"/lib || die "Tests fail with ${EPYTHON}"
+	nosetests -w "${BUILD_DIR}"/tests || die "Tests fail with ${EPYTHON}"
 }

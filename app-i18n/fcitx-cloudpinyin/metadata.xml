@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>cjk</herd>
-	<maintainer>
-		<email>qiaomuf@gentoo.org</email>
-		<name>Mu Qiao</name>
-	</maintainer>
 	<upstream>
 		<remote-id type="google-code">fcitx</remote-id>
 	</upstream>

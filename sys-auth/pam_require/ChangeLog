@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_require
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_require/ChangeLog,v 1.6 2009/11/03 17:35:35 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_require/ChangeLog,v 1.7 2013/02/03 11:10:01 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -pam_require-0.6.ebuild,
+  metadata.xml:
+  Cleanup due #63939
 
   03 Nov 2009; Raúl Porcel <armin76@gentoo.org> pam_require-0.7.ebuild:
   Add ~ia64 wrt #282971
@@ -32,4 +36,3 @@
   05 Dec 2004; Christian Parpart <trapni@gentoo.org> +metadata.xml,
   +pam_require-0.6.ebuild:
   initial import
-

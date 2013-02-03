@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rb-inotify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/ChangeLog,v 1.16 2013/01/19 07:36:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/ChangeLog,v 1.17 2013/02/03 11:07:10 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #63939
 
 *rb-inotify-0.9.0 (19 Jan 2013)
 

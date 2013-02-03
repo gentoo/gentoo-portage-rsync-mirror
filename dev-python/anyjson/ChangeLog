@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/anyjson
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anyjson/ChangeLog,v 1.6 2013/01/26 08:51:26 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anyjson/ChangeLog,v 1.7 2013/02/03 11:01:52 mgorny Exp $
+
+  03 Feb 2013; Michał Górny <mgorny@gentoo.org> anyjson-0.3.3-r1.ebuild:
+  Fix installing "tests" package.
 
 *anyjson-0.2.4 (26 Jan 2013)
 

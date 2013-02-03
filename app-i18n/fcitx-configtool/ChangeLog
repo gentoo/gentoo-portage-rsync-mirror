@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/fcitx-configtool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/ChangeLog,v 1.16 2013/01/31 09:04:48 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/ChangeLog,v 1.17 2013/02/03 11:20:14 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #333419
 
   31 Jan 2013; Ben de Groot <yngwin@gentoo.org> fcitx-configtool-0.4.6.ebuild:
   Normalize homepage

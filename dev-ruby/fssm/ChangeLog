@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fssm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.22 2013/01/15 06:46:46 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.23 2013/02/03 11:06:02 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #63939
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> fssm-0.2.7-r1.ebuild,
   fssm-0.2.7.ebuild, fssm-0.2.8.1.ebuild:
