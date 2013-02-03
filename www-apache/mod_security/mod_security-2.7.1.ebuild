@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.7.1.ebuild,v 1.3 2013/01/28 19:05:20 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.7.1.ebuild,v 1.4 2013/02/03 02:51:06 jdhore Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://github/SpiderLabs/ModSecurity/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="geoip curl lua jit"
 
 DEPEND=">=dev-libs/libxml2-2.7.8
