@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/audit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.91 2012/12/31 21:44:31 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.92 2013/02/02 23:13:29 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> audit-2.2.2.ebuild:
+  Add ~arm, wrt bug #449220
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> audit-2.1.3-r1.ebuild:
   Stable for alpha, wrt to bug #418395

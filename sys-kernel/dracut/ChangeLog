@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.108 2013/01/27 13:49:33 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.109 2013/02/02 23:12:46 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> dracut-024-r4.ebuild:
+  Add ~arm, wrt bug #449220
 
   27 Jan 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-024-r4.ebuild:
   Warn in postinst log if rd.auto option is not set.  Rels bug #453836.

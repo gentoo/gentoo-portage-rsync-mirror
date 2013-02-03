@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.53 2013/01/25 22:27:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.54 2013/02/02 23:06:42 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> spice-gtk-0.14-r2.ebuild:
+  Add ~arm, wrt bug #449220
 
   25 Jan 2013; Doug Goldstein <cardoe@gentoo.org>
   +files/0001-build-sys-fix-out-of-tree-build-with-vala.patch,

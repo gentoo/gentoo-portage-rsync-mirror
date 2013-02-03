@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.4.ebuild,v 1.7 2013/01/06 11:10:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.4.ebuild,v 1.8 2013/02/02 23:11:45 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE_VIDEO_CARDS="video_cards_intel video_cards_nouveau video_cards_radeon"
 IUSE="${IUSE_VIDEO_CARDS} debug gdm +libkms +openrc +pango static-libs"
 

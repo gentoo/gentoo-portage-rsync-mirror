@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.100 2012/10/28 16:23:43 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.101 2013/02/02 23:03:19 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gtk-vnc-0.5.1.ebuild:
+  Add ~arm, wrt bug #449220
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> gtk-vnc-0.5.1.ebuild:
   ia64/sparc stable wrt #427544

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.140 2012/08/19 23:47:24 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.141 2013/02/02 23:06:20 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> rdesktop-1.7.1.ebuild:
+  Add ~arm, wrt bug #449220
 
   19 Aug 2012; Christoph Junghans <ottxor@gentoo.org> rdesktop-1.7.1.ebuild:
   added prefix keywords

@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/libfprint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.19 2013/01/06 11:09:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.20 2013/02/02 23:10:47 ago Exp $
+
+  02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libfprint-0.4.0.ebuild:
+  Add ~arm, wrt bug #449220
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libfprint-0.4.0.ebuild:
   Add ~sparc, wrt bug #449220
