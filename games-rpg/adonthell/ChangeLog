@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/adonthell
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.23 2012/04/13 19:22:44 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.24 2013/02/03 00:12:49 hasufell Exp $
+
+*adonthell-0.3.5-r1 (03 Feb 2013)
+
+  03 Feb 2013; Julian Ospald <hasufell@gentoo.org> +adonthell-0.3.5-r1.ebuild:
+  migrate to python-single-r1
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> adonthell-0.3.5.ebuild:
   Move EAPI assignment to top of ebuild, bug 411875.
