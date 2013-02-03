@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/dar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/ChangeLog,v 1.46 2013/02/03 13:05:31 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/ChangeLog,v 1.47 2013/02/03 16:15:11 rich0 Exp $
+
+*dar-2.4.9 (03 Feb 2013)
+
+  03 Feb 2013; Richard Freeman <rich0@gentoo.org> +dar-2.4.9.ebuild:
+  Bump, and correct static support - 411733 and 372761.
 
   03 Feb 2013; Richard Freeman <rich0@gentoo.org> metadata.xml:
   Taking over maintenance.

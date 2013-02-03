@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.36.ebuild,v 1.8 2013/02/03 14:29:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.36.ebuild,v 1.9 2013/02/03 16:28:02 tetromino Exp $
 
 EAPI=4
 
@@ -36,8 +36,9 @@ src_prepare() {
 
 	# Disable windows-portability tests that are relevant only on x86 and amd64
 	# and can fail on other arches (bug #455038)
-	[[ ${ABI} != x86 && ${ABI} != amd64 ]] &&
+	if [[ ${ABI} != x86 && ${ABI} != amd64 ]]; then
 		sed -e 's#check:\(.*\)$(CHECK_EXPORTS)#check:\1#' -i Makefile.{am,in} || die
+	fi
 }
 
 src_configure() {
