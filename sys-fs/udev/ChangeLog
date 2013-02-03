@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.816 2013/02/02 16:16:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.817 2013/02/03 06:33:36 ssuominen Exp $
+
+  03 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197-r6.ebuild,
+  udev-9999.ebuild:
+  Check for CONFIG_KALLSYMS=y wrt #447042 by "erhard.furtner"
 
   02 Feb 2013; Fabian Groffen <grobian@gentoo.org> udev-171-r10.ebuild:
   Drop ~x86-linux, bug #452708
