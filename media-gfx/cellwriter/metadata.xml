@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>graphics</herd>
-<maintainer>
-<email>matsuu@gentoo.org</email>
-</maintainer>
 </pkgmetadata>
 

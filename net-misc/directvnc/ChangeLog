@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/directvnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.26 2013/02/02 12:08:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.27 2013/02/03 12:07:51 tomka Exp $
+
+  03 Feb 2013; Thomas Kahle <tomka@gentoo.org> metadata.xml:
+  Pick up for proxy maintainership
 
   02 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup up due #48914

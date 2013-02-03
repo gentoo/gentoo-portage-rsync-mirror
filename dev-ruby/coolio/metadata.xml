@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>ruby</herd>
-<maintainer>
-<email>matsuu@gentoo.org</email>
-<name>MATSUU Takuto</name>
-</maintainer>
 </pkgmetadata>
 

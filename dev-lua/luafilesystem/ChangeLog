@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/luafilesystem
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luafilesystem/ChangeLog,v 1.8 2012/08/22 08:47:24 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luafilesystem/ChangeLog,v 1.9 2013/02/03 12:18:36 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #22900
 
   22 Aug 2012; Michael Weber <xmw@gentoo.org> luafilesystem-1.5.0.ebuild:
   ppc stable (bug 418773).

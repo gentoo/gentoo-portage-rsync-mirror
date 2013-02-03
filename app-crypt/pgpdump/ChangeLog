@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pgpdump
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.21 2012/11/17 10:27:32 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.22 2013/02/03 12:04:21 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #22900
 
   17 Nov 2012; Ulrich Müller <ulm@gentoo.org> pgpdump-0.26.ebuild,
   pgpdump-0.27.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rtf2html
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/ChangeLog,v 1.9 2013/02/02 12:01:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/ChangeLog,v 1.10 2013/02/03 12:07:40 tomka Exp $
+
+  03 Feb 2013; Thomas Kahle <tomka@gentoo.org> metadata.xml:
+  Pick up for proxy maintainership
 
   02 Feb 2013; Pacho Ramos <pacho@gentoo.org> -rtf2html-0.2.0.ebuild,
   metadata.xml:

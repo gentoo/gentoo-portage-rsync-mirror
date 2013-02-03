@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/dar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/ChangeLog,v 1.44 2012/02/08 21:01:53 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/ChangeLog,v 1.45 2013/02/03 12:03:10 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -dar-2.3.11.ebuild,
+  -dar-2.3.9.ebuild, -dar-2.4.0.ebuild, -files/dar-2.4.0-gcc.patch,
+  metadata.xml:
+  Cleanup due #22900
 
   08 Feb 2012; Fabian Groffen <grobian@gentoo.org> dar-2.4.2.ebuild:
   Fixed for Prefix, marked ~amd64-linux, thanks Massimo Burcheri in bug #399809
@@ -317,4 +322,3 @@
 
   06 Nov 2003; MATSUU Takuto <matsuu@gentoo.org> dar-2.0.0.ebuild:
   Initial import. bugs #9785.
-

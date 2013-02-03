@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ttyrec
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ttyrec/ChangeLog,v 1.22 2010/01/01 21:22:35 fauli Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ttyrec/ChangeLog,v 1.23 2013/02/03 12:06:28 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -ttyrec-1.0.6-r1.ebuild,
+  metadata.xml:
+  Cleanup due #22900
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> ttyrec-1.0.8.ebuild:
   Transfer Prefix keywords
@@ -71,4 +75,3 @@
   11 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> ttyrec-1.0.6.ebuild:
   Initial import. Ebuild submitted by MATSUU Takuto <matsuu@gentoo.org>
   This closes Bug #21993
-

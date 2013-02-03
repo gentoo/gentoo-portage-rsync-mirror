@@ -1,5 +1,10 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.16 2012/11/02 05:32:01 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.17 2013/02/03 12:09:47 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -files/gtest-1.4.0-asneeded.patch,
+  -files/gtest-1.4.0-gcc-4.7.patch, -files/gtest-1.5.0-asneeded.patch,
+  -gtest-1.4.0.ebuild, -gtest-1.5.0.ebuild, metadata.xml:
+  Cleanup due #22900
 
   02 Nov 2012; Justin Bronder <jsbronder@gentoo.org> gtest-1.6.0-r1.ebuild:
   Resolve #361703 by enabling threads unconditionally.
@@ -110,4 +115,3 @@
   01 Mar 2010; MATSUU Takuto <matsuu@gentoo.org> +gtest-1.4.0.ebuild,
   +files/gtest-1.4.0-asneeded.patch, +metadata.xml:
   Initial import.
-

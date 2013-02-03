@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/ldns-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ChangeLog,v 1.22 2013/01/22 02:42:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ChangeLog,v 1.23 2013/02/03 12:29:16 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -files/1.6.10-cflags.patch,
+  -ldns-utils-1.6.11.ebuild, -ldns-utils-1.6.13.ebuild, metadata.xml:
+  Cleanup due #22900
 
 *ldns-utils-1.6.16 (22 Jan 2013)
 

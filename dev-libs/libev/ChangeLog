@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libev
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.40 2012/05/12 19:17:33 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.41 2013/02/03 12:15:07 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #22900
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> libev-4.11.ebuild:
   keyword ~amd64-fbsd
@@ -168,4 +171,3 @@
   17 Jun 2008; MATSUU Takuto <matsuu@gentoo.org>
   +files/libev-3.42-gentoo.patch, +metadata.xml, +libev-3.42.ebuild:
   Initial import, bug #227819.
-

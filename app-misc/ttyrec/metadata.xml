@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>matsuu@gentoo.org</email>
-  <name>MATSUU Takuto</name>
+<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>
 ttyrec is a tty recorder. Recorded data can be played back with the

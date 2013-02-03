@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/msgpack
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/ChangeLog,v 1.4 2011/11/11 20:12:02 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/ChangeLog,v 1.5 2013/02/03 12:17:33 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -files/msgpack-0.4.2-test.patch,
+  -msgpack-0.4.2.ebuild, metadata.xml:
+  Cleanup due #22900
 
   11 Nov 2011; Mike Frysinger <vapier@gentoo.org> msgpack-0.4.2.ebuild,
   msgpack-0.5.6.ebuild:
@@ -19,4 +23,3 @@
   02 Mar 2010; MATSUU Takuto <matsuu@gentoo.org> +msgpack-0.4.2.ebuild,
   +files/msgpack-0.4.2-test.patch, +metadata.xml:
   Initial import.
-

@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-<email>maintainer-needed@gentoo.org</email>
-</maintainer>
-<longdescription>
-vov (Vov's Obsessive Von-Neumann) is a tool that emulates the behavior of a Von-Neumann machine.
-It is basically an interpreter, which reads files in the form of memory assignments and executes
-the encoded instructions. The vov's instructions make you able to perform simple arithmetic data
-manipulation. It is a very useful tool to see if your programs work and how.
-</longdescription>
-<use>
-	<flag name='gprof'>build with profiling support</flag>
-</use>
+  <maintainer>
+    <email>dennis.yxun@gmail.com</email>
+    <name>Dennis (dlan) Lan</name>
+    <description>maintainer, assign bugs</description>
+  </maintainer>
+  <maintainer>
+    <email>tomka@gentoo.org</email>
+    <name>Thomas Kahle</name>
+    <description>proxy maintainer, CC on bugs</description>
+  </maintainer>
+  <longdescription>
+  vov (Vov's Obsessive Von-Neumann) is a tool that emulates the behavior of a Von-Neumann machine.
+  It is basically an interpreter, which reads files in the form of memory assignments and executes
+  the encoded instructions. The vov's instructions make you able to perform simple arithmetic data
+  manipulation. It is a very useful tool to see if your programs work and how.
+  </longdescription>
+  <use>
+    <flag name='gprof'>build with profiling support</flag>
+  </use>
 </pkgmetadata>
