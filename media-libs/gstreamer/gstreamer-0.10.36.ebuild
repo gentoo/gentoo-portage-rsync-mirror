@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.36.ebuild,v 1.7 2013/02/01 18:08:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.36.ebuild,v 1.8 2013/02/03 14:29:01 tetromino Exp $
 
 EAPI=4
 
@@ -33,6 +33,11 @@ RDEPEND="${RDEPEND}
 src_prepare() {
 	# Disable silly test that's not guaranteed to pass on an arbitrary machine
 	epatch "${FILESDIR}/${PN}-0.10.36-disable-test_fail_abstract_new.patch"
+
+	# Disable windows-portability tests that are relevant only on x86 and amd64
+	# and can fail on other arches (bug #455038)
+	[[ ${ABI} != x86 && ${ABI} != amd64 ]] &&
+		sed -e 's#check:\(.*\)$(CHECK_EXPORTS)#check:\1#' -i Makefile.{am,in} || die
 }
 
 src_configure() {

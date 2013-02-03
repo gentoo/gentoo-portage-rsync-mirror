@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.321 2013/02/01 18:08:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.322 2013/02/03 14:29:01 tetromino Exp $
+
+  03 Feb 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gstreamer-0.10.36.ebuild:
+  Disable windows-portability tests on non-x86/amd64 arches, where they can
+  fail due to different ELF layouts (bug #455038, thanks to Agostino Sarubbo).
 
   01 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gstreamer-0.10.36.ebuild:
   Stable for ppc, wrt bug #454906
