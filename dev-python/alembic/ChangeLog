@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/alembic
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/alembic/ChangeLog,v 1.1 2013/02/03 03:41:02 idella4 Exp $
+
+*alembic-0.4.2 (03 Feb 2013)
+
+  03 Feb 2013; Ian Delaney <idella4@gentoo.org> +alembic-0.4.2.ebuild,
+  +metadata.xml:
+  new ebuild, written by Jan Matějka, submitted in Bug #Bug 447762, initial
+  ebuild supports py2.7 only
