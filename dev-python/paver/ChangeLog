@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.19 2013/01/30 20:03:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.20 2013/02/03 19:33:32 ago Exp $
+
+  03 Feb 2013; Agostino Sarubbo <ago@gentoo.org> paver-1.1.1.ebuild:
+  Add ~ppc, wrt bug #454638
 
   30 Jan 2013; Jeroen Roovers <jer@gentoo.org> paver-1.1.1.ebuild:
   Marked ~hppa (bug #454638).
@@ -75,4 +78,3 @@
   16 Nov 2009; Dror Levin <spatz@gentoo.org> +paver-1.0.1.ebuild,
   +metadata.xml:
   Initial import from qting-edge overlay. Fixes bug 274502.
-

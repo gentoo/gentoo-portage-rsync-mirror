@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.4.6.ebuild,v 1.7 2013/01/31 23:09:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.4.6.ebuild,v 1.8 2013/02/03 19:40:39 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~blueness/${PN}/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ~mips ppc ppc64 x86"
+KEYWORDS="amd64 arm hppa ~mips ppc ppc64 x86"
 
 #Add CRYPTO_OPTS=ecc when fixed
 CACHE_SIZE="small big +huge"

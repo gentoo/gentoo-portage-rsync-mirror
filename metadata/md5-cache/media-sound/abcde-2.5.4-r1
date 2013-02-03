@@ -3,10 +3,10 @@ DESCRIPTION=A command line CD encoder
 EAPI=5
 HOMEPAGE=http://code.google.com/p/abcde/
 IUSE=aac cdparanoia cdr flac +id3tag +lame musicbrainz normalize replaygain speex vorbis
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
 RDEPEND=media-sound/cd-discid net-misc/wget virtual/eject aac? ( media-libs/faac media-video/atomicparsley ) cdparanoia? ( || ( dev-libs/libcdio-paranoia media-sound/cdparanoia ) ) cdr? ( virtual/cdrtools ) flac? ( media-libs/flac ) id3tag? ( dev-python/eyeD3:0.7 >=media-sound/id3-0.12 media-sound/id3v2 ) lame? ( media-sound/lame ) musicbrainz? ( dev-perl/MusicBrainz-DiscID dev-perl/WebService-MusicBrainz perl-core/Digest-SHA virtual/perl-Getopt-Long ) normalize? ( >=media-sound/normalize-0.7.4 ) replaygain? ( vorbis? ( media-sound/vorbisgain ) lame? ( media-sound/mp3gain ) ) speex? ( media-libs/speex ) vorbis? ( media-sound/vorbis-tools )
 SLOT=0
 SRC_URI=http://abcde.googlecode.com/files/abcde-2.5.4.tar.gz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=d4d466d52f34686edb4ca2eb6a68669a
+_md5_=66e3c81ca46b6ff685229a24dbdae593

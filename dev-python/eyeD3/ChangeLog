@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/eyeD3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.55 2013/01/30 20:03:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.56 2013/02/03 19:33:16 ago Exp $
+
+  03 Feb 2013; Agostino Sarubbo <ago@gentoo.org> eyeD3-0.6.18-r1.ebuild,
+  eyeD3-0.7.1.ebuild:
+  Add ~ppc, wrt bug #454638
 
   30 Jan 2013; Jeroen Roovers <jer@gentoo.org> eyeD3-0.6.18-r1.ebuild,
   eyeD3-0.7.1.ebuild:
@@ -202,4 +206,3 @@
   30 Aug 2004; Patrick Dawson <pkdawson@gentoo.org> eyeD3-0.6.2.ebuild :
   Initial import.  Ebuild submitted by Travis Shirk <travis@pobox.com>.
   Closes bug #48745.
-

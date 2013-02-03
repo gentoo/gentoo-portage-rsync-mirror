@@ -11,6 +11,7 @@
     <remote-id type="cpan-module">Event::RPC::LogConnection</remote-id>
     <remote-id type="cpan-module">Event::RPC::Logger</remote-id>
     <remote-id type="cpan-module">Event::RPC::Loop</remote-id>
+    <remote-id type="cpan-module">Event::RPC::Loop::AnyEvent</remote-id>
     <remote-id type="cpan-module">Event::RPC::Loop::Event</remote-id>
     <remote-id type="cpan-module">Event::RPC::Loop::Glib</remote-id>
     <remote-id type="cpan-module">Event::RPC::Message</remote-id>
