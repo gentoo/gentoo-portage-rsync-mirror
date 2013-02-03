@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.217 2013/02/03 12:42:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.218 2013/02/03 18:59:23 jlec Exp $
+
+*distcc-3.1-r7 (03 Feb 2013)
+
+  03 Feb 2013; Justin Lecher <jlec@gentoo.org> +distcc-3.1-r7.ebuild,
+  metadata.xml:
+  Add USE blocker between gtk and gnome, #416595; bump EAPI; move to new python
+  eclasses
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #22900
