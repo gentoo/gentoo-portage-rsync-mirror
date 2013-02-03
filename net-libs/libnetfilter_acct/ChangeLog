@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnetfilter_acct
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/ChangeLog,v 1.12 2013/01/13 11:21:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_acct/ChangeLog,v 1.13 2013/02/03 19:25:35 ago Exp $
+
+  03 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libnetfilter_acct-1.0.1.ebuild:
+  Add ~ppc, wrt bug #450016
 
   13 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libnetfilter_acct-1.0.1.ebuild:
   Stable for x86, wrt bug #449216

@@ -7,8 +7,11 @@
 # because the new names will be drastically different from the eth*, wlan*, etc
 # names you are used to working with.
 #
-# To activate this function, move this file to a name that doesn't end in.rules,
-# or remove it then reboot your system.
+# To activate this function, copy 80-net-name-slot.rules from /lib/udev/rules.d/
+# to /etc/udev/rules.d/
+# Deleting the file from /etc/udev/rules.d/ works too but when you re-emerge
+# the current stable udev it will restore this dummy file there if it isn't there
+# already!
 #
 # If you want to deactivate this function, install a udev rules file as
 # /etc/udev/rules.d/80-net-name-slot.rules then reboot your system.
