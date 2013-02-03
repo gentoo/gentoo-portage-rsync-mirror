@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>matsuu@gentoo.org</email>
+<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>This is a small telnet daemon for standalone use, mostly on embedded systems.</longdescription>
 </pkgmetadata>

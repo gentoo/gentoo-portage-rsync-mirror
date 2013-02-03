@@ -1,13 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.2.0.ebuild,v 1.1 2013/01/31 15:26:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.2.0.ebuild,v 1.2 2013/02/03 12:40:44 scarabeus Exp $
 
 EAPI=5
 
-LANG_DIR="translations"
-PLOCALES="ca cs_CZ da de el en eo es es_AR et_EE eu fa fi_FI fr gl he hr hu_HU it ja_JP ko lb lt_LT mk
-nb_NO nl oc pl pt_BR pt_PT ro ru ru_RU sk_SK sl sr@latin sv ta_LK tr uk vi zh_CN zh_TW"
-inherit cmake-utils l10n
+inherit cmake-utils
 
 MY_P="${PN}-${PV/_/}"
 
@@ -37,12 +34,6 @@ src_prepare() {
 	# Yay for fcked detection.
 	export CSYNC_DIR="${EPREFIX}/usr/include/ocsync/"
 
-	local lang
-	for lang in ${PLOCALES} ; do
-		if ! use linguas_${lang} ; then
-			rm ${LANG_DIR}/${PN}_${lang}.ts
-		fi
-	done
 	epatch "${FILESDIR}/${PN}-1.2.0_beta2-automagicness.patch"
 }
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mangler/mangler-1.2.5.ebuild,v 1.1 2013/01/16 03:45:44 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mangler/mangler-1.2.5.ebuild,v 1.2 2013/02/03 12:42:51 prometheanfire Exp $
 
-EAPI=2
+EAPI=5
 
 DESCRIPTION="Open source VOIP client capable of connecting to Ventrilo 3.x servers"
 HOMEPAGE="http://www.mangler.org/"
@@ -47,7 +47,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog
 
 	find "${D}" -name '*.la' -exec rm -f '{}' +

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.216 2012/09/15 22:03:36 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.217 2013/02/03 12:42:47 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #22900
 
   15 Sep 2012; Mike Frysinger <vapier@gentoo.org> distcc-2.18.3-r10.ebuild,
   distcc-3.0-r4.ebuild, distcc-3.1-r5.ebuild, distcc-3.1-r6.ebuild,

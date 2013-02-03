@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/ccs-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ChangeLog,v 1.13 2012/04/17 05:22:49 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ChangeLog,v 1.14 2013/02/03 12:41:48 pacho Exp $
+
+  03 Feb 2013; Pacho Ramos <pacho@gentoo.org>
+  -ccs-tools-1.6.8_p20090623-r1.ebuild, -ccs-tools-1.6.8_p20090623.ebuild,
+  -ccs-tools-1.6.8_p20100115.ebuild, -ccs-tools-1.7.1_p20100110.ebuild,
+  -ccs-tools-1.7.2_p20100401.ebuild, -ccs-tools-1.8.0_p20110214.ebuild,
+  -ccs-tools-1.8.3_p20110929.ebuild,
+  -files/ccs-tools-1.6.8_p20090623-gentoo.patch,
+  -files/ccs-tools-1.8.0_p20110214-as-needed.patch,
+  -files/ccs-tools-1.8.0_p20110214-ldflags.patch,
+  -files/ccs-tools-1.8.0_p20110214-parallel.patch,
+  -files/ccs-tools-1.8.3_p20110929-ldflags.patch, metadata.xml:
+  Cleanup due #22900
 
 *ccs-tools-1.8.3_p20120414 (17 Apr 2012)
 
@@ -78,4 +90,3 @@
   +ccs-tools-1.6.8_p20090623.ebuild,
   +files/ccs-tools-1.6.8_p20090623-gentoo.patch, +metadata.xml:
   Initial import. Ebuild is submitted by Naohiro Aota, bug #271028.
-

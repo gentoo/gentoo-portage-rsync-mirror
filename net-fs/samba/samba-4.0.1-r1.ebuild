@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.1-r1.ebuild,v 1.1 2013/02/03 08:23:28 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.1-r1.ebuild,v 1.2 2013/02/03 12:56:41 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -26,7 +26,7 @@ LICENSE="GPL-3"
 SLOT="0"
 
 IUSE="acl addns ads aio avahi client cluster cups gnutls iprint
-ldap pam quota selinux swat syslog winbind"
+ldap pam quota selinux swat syslog test winbind"
 
 RDEPEND="${PYTHON_DEPS}
 	dev-libs/iniparser
