@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/transmissionrpc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/ChangeLog,v 1.5 2011/10/18 02:47:39 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/ChangeLog,v 1.6 2013/02/03 20:16:53 floppym Exp $
+
+*transmissionrpc-0.9 (03 Feb 2013)
+
+  03 Feb 2013; Mike Gilbert <floppym@gentoo.org> +transmissionrpc-0.9.ebuild,
+  transmissionrpc-9999.ebuild:
+  Version bump. Convert to distutils-r1.
 
 *transmissionrpc-0.8 (18 Oct 2011)
 
@@ -29,4 +35,3 @@
   +transmissionrpc-9999.ebuild, +files/transmissionrpc-timestamp-test.patch,
   +metadata.xml:
   New package for bug 377565
-
