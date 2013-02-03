@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.2-r1.ebuild,v 1.1 2013/02/01 20:44:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.2-r2.ebuild,v 1.1 2013/02/03 13:48:49 mgorny Exp $
 
 EAPI=5
 
@@ -101,6 +101,9 @@ python_prepare_all() {
 		# workaround bug 335908
 		[[ $(tc-getFC) == *gfortran* ]] && NUMPY_FCONFIG+=" --fcompiler=gnu95"
 	fi
+
+	# don't version f2py, we will handle it.
+	sed -i -e '/f2py_exe/s:+os\.path.*$::' numpy/f2py/setup.py || die
 
 	distutils-r1_python_prepare_all
 }
