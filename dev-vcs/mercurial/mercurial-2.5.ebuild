@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.4.1-r2.ebuild,v 1.4 2013/01/02 08:32:19 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.5.ebuild,v 1.2 2013/02/03 14:41:06 djc Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -64,7 +64,7 @@ src_install() {
 	fi
 
 	rm -f doc/*.?.txt || die
-	dodoc CONTRIBUTORS PKG-INFO README doc/*.txt || die
+	dodoc CONTRIBUTORS README doc/*.txt || die
 	cp hgweb*.cgi "${ED}"/usr/share/doc/${PF}/ || die
 
 	dobin hgeditor || die
