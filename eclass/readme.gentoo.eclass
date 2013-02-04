@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/readme.gentoo.eclass,v 1.2 2013/01/24 21:38:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/readme.gentoo.eclass,v 1.3 2013/02/04 18:39:47 pacho Exp $
 
 # @ECLASS: readme.gentoo
 # @MAINTAINER:
@@ -36,6 +36,13 @@ esac
 
 EXPORT_FUNCTIONS src_install pkg_postinst
 
+# @ECLASS-VARIABLE: DISABLE_AUTOFORMATTING
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# If non-empty, DOC_CONTENTS information will be strictly respected,
+# not getting it automatically formatted by fmt. If empty, it will 
+# rely on fmt for formatting and 'echo -e' options to tweak lines a bit.
+
 # @ECLASS-VARIABLE: FORCE_PRINT_ELOG
 # @DEFAULT_UNSET
 # @DESCRIPTION:
@@ -53,22 +60,22 @@ readme.gentoo_create_doc() {
 	if [[ -n "${DOC_CONTENTS}" ]]; then
 		eshopts_push
 		set -f
-		echo ${DOC_CONTENTS} | fmt > "${T}"/README.gentoo
-		eshopts_pop
-		dodoc "${T}"/README.gentoo
-	else
-		if [[ -f "${FILESDIR}/README.gentoo-${SLOT%/*}" ]]; then
-			cp "${FILESDIR}/README.gentoo-${SLOT%/*}" "${T}"/README.gentoo
-			dodoc "${T}"/README.gentoo
+		if [[ -n "${DISABLE_AUTOFORMATTING}" ]]; then
+			echo "${DOC_CONTENTS}" > "${T}"/README.gentoo
 		else
-			if [[ -f "${FILESDIR}/README.gentoo" ]]; then
-				cp "${FILESDIR}/README.gentoo" "${T}"/README.gentoo
-				dodoc "${T}"/README.gentoo
-			else
-				die "You are not specifying README.gentoo contents!"
-			fi
+			echo -e ${DOC_CONTENTS} | fmt > "${T}"/README.gentoo
 		fi
+		eshopts_pop
+	elif [[ -f "${FILESDIR}/README.gentoo-${SLOT%/*}" ]]; then
+		cp "${FILESDIR}/README.gentoo-${SLOT%/*}" "${T}"/README.gentoo
+	elif [[ -f "${FILESDIR}/README.gentoo" ]]; then
+		cp "${FILESDIR}/README.gentoo" "${T}"/README.gentoo
+	else
+		die "You are not specifying README.gentoo contents!"
 	fi
+
+	dodoc "${T}"/README.gentoo
+	README_GENTOO_DOC_VALUE=$(< "${T}/README.gentoo")
 }
 
 # @FUNCTION: readme.gentoo_print_elog
@@ -85,15 +92,10 @@ readme.gentoo_create_doc() {
 readme.gentoo_print_elog() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	if [[ -f "${T}"/README.gentoo ]]; then
-		if ! [[ -n "${REPLACING_VERSIONS}" ]] || [[ -n "${FORCE_PRINT_ELOG}" ]]; then
-			eshopts_push
-			set -f
-			cat "${T}"/README.gentoo | while read -r ELINE; do elog "${ELINE}"; done
-			eshopts_pop
-		fi
-	else
-		die "README.gentoo wasn't created at src_install!"
+	if [[ -z "${README_GENTOO_DOC_VALUE}" ]]; then
+		die "readme.gentoo_print_elog invoked without matching readme.gentoo_create_doc call!"
+	elif ! [[ -n "${REPLACING_VERSIONS}" ]] || [[ -n "${FORCE_PRINT_ELOG}" ]]; then
+		echo -e "${README_GENTOO_DOC_VALUE}" | while read -r ELINE; do elog "${ELINE}"; done
 	fi
 }
 

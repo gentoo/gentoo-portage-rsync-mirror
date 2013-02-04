@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.36_pre20120215-r2.ebuild,v 1.1 2013/01/10 20:43:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.36_pre20120215-r2.ebuild,v 1.2 2013/02/04 18:44:47 pacho Exp $
 
 EAPI=5
 
 S="${WORKDIR}/${PN}"
+AUTOTOOLS_AUTORECONF=1
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 inherit eutils autotools-utils
 
@@ -17,17 +19,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="debug gtk hammer ipv6 nls pcre profile ssl"
 
-RDEPEND="virtual/libintl
+RDEPEND="virtual/libintl:=
 	gtk? ( x11-libs/gtk+:2 )
-	pcre? ( dev-libs/libpcre )
-	ssl? ( dev-libs/openssl )"
-
+	pcre? ( dev-libs/libpcre:= )
+	ssl? ( dev-libs/openssl:= )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	sys-devel/gettext"
-
-AUTOTOOLS_AUTORECONF=1
-AUTOTOOLS_IN_SOURCE_BUILD=1
 
 PATCHES=(
 	# Fixes a bug in re.c for PCRE support

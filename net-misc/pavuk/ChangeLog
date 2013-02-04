@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pavuk
 # Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.39 2013/01/10 20:43:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.40 2013/02/04 18:44:47 pacho Exp $
+
+  04 Feb 2013; Pacho Ramos <pacho@gentoo.org>
+  pavuk-0.9.36_pre20120215-r2.ebuild:
+  Fix building due variables exported in wrong place (#452640 by dE and Richard
+  Grenville)
 
 *pavuk-0.9.36_pre20120215-r2 (10 Jan 2013)
 
