@@ -1,6 +1,16 @@
 # ChangeLog for app-arch/star
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.100 2012/02/02 17:17:45 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.101 2013/02/04 11:45:39 jlec Exp $
+
+*star-1.5.2 (04 Feb 2013)
+*star-1.5.1-r2 (04 Feb 2013)
+
+  04 Feb 2013; Justin Lecher <jlec@gentoo.org> star-1.5.1-r1.ebuild,
+  +star-1.5.1-r2.ebuild, +files/star-1.5.1-bufferoverflow.patch,
+  +files/star-1.5.1-changewarnSegv.patch,
+  +files/star-1.5.1-multivolsigsegv.patch,
+  +files/star-1.5.1-stdioconflict.patch, +star-1.5.2.ebuild, metadata.xml:
+  Version Bump; get some patches from fedora, fix segf #409165
 
   02 Feb 2012; Justin Lecher <jlec@gentoo.org> -star-1.5.1.ebuild:
   Dropped old
