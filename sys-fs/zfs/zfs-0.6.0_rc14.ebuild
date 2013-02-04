@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc14.ebuild,v 1.2 2013/02/03 15:51:45 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.0_rc14.ebuild,v 1.3 2013/02/04 17:31:37 ryao Exp $
 
 EAPI="4"
 
@@ -55,6 +55,7 @@ RDEPEND="${COMMON_DEPEND}
 	rootfs? (
 		app-arch/cpio
 		app-misc/pax-utils
+		!<sys-boot/grub-2.00-r2:2
 		)
 "
 
@@ -112,12 +113,6 @@ pkg_postinst() {
 		rm "${EROOT}/etc/runlevels/shutdown/zfs-shutdown"
 	fi
 
-	if use rootfs
-	then
-		ewarn "sys-boot/grub:2 lacks support for feature flags."
-		ewarn "If your /boot is on a ZFS pool, the pool must be version 28 or earlier."
-		ewarn "Do *NOT* upgrade any pools used for booting to use feature flags."
-	fi
 }
 
 pkg_postrm() {

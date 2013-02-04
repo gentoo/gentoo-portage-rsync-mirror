@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.42 2013/01/23 14:20:17 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.43 2013/02/04 17:31:37 ryao Exp $
 
 EAPI="4"
 
@@ -55,6 +55,7 @@ RDEPEND="${COMMON_DEPEND}
 	rootfs? (
 		app-arch/cpio
 		app-misc/pax-utils
+		!<sys-boot/grub-2.00-r2:2
 		)
 "
 
