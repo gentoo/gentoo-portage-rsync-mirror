@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.8.0-r1.ebuild,v 1.4 2013/02/04 18:58:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.8.0-r1.ebuild,v 1.5 2013/02/04 19:09:19 scarabeus Exp $
 
 EAPI=5
 
@@ -40,6 +40,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch \
+		"${FILESDIR}"/${PN}-fix-mesa-gl.h.patch
 	eautoreconf
 }
 

@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/culmus
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.77 2012/03/31 17:20:48 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.78 2013/02/04 19:27:34 alonbl Exp $
+
+*culmus-0.120-r4 (04 Feb 2013)
+
+  04 Feb 2013; Alon Bar-Lev <alonbl@gentoo.org> +culmus-0.120-r4.ebuild:
+  Install metrics, install fontconfig file, install taamey fonts if fancy not
+  installed, bug#419445
 
   31 Mar 2012; Raúl Porcel <armin76@gentoo.org> culmus-0.120-r3.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #400369
@@ -339,4 +345,3 @@
   07 Apr 2003; Dan Armak <danarmak@gentoo.org> culmus-0.8.ebuild:
   Culmus is a package of free Hebrew type1 fonts. Ebuild submitted by Meir
   Kriheli. Closes submission #18377.
-
