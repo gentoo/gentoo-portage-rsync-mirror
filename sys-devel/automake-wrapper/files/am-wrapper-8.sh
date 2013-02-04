@@ -1,7 +1,7 @@
 #!/bin/sh
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/files/am-wrapper-8.sh,v 1.1 2013/01/02 07:40:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/files/am-wrapper-8.sh,v 1.2 2013/02/04 14:00:23 aballier Exp $
 
 # Executes the correct automake version.
 #
@@ -128,7 +128,7 @@ fi
 do_awk() {
 	local file=$1 ; shift
 	local arg=$1 ; shift
-	local v=$(awk "{ if (match(\$0, \"$*\", res)) { print res[${arg}]; exit } }" "${file}")
+	local v=$(gawk "{ if (match(\$0, \"$*\", res)) { print res[${arg}]; exit } }" "${file}")
 	case " ${auto_vers} " in
 	*" ${v} "*) ;;
 	*) auto_vers="${auto_vers:+${auto_vers} }${v}" ;;

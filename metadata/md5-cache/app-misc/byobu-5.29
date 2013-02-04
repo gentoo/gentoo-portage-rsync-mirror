@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/newt screen? ( app-misc/screen ) !screen? ( app-misc/tmux )
 SLOT=0
 SRC_URI=http://launchpad.net/byobu/trunk/5.29/+download/byobu_5.29.orig.tar.gz
-_eclasses_=multilib	ded93e450747134a079e647d888aa80b	python-single-r1	ac5bf9438dc6ee497650a74d7a1402c2	python-utils-r1	8e94ca6ef82c71c1ccf8e97276525491	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=multilib	ded93e450747134a079e647d888aa80b	python-single-r1	ac5bf9438dc6ee497650a74d7a1402c2	python-utils-r1	120bfd06803274b3d1b986d506302851	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=a88681907be06c7d987322dab862c7b0
