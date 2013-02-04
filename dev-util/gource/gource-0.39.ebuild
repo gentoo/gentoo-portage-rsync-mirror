@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.38-r1.ebuild,v 1.1 2013/01/30 16:19:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.39.ebuild,v 1.1 2013/02/04 15:42:42 flameeyes Exp $
 
 EAPI=5
 
-inherit eutils autotools flag-o-matic versionator
+inherit eutils flag-o-matic versionator
 
 MY_P=${P/_p/-}
 MY_P=${MY_P/_/-}
@@ -20,21 +20,22 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
+	>=dev-libs/boost-1.46[threads(+)]
+	>=media-libs/glew-1.5
+	>=media-libs/libpng-1.2
 	>=media-libs/libsdl-1.2.10[video,opengl,X]
 	>=media-libs/sdl-image-1.2[jpeg,png]
 	dev-libs/libpcre:3
-	>=media-libs/libpng-1.2
-	virtual/jpeg
-	media-libs/mesa
-	media-fonts/freefont
-	>=media-libs/glew-1.5
 	dev-libs/tinyxml
-	>=dev-libs/boost-1.46[threads(+)]
+	media-fonts/freefont
+	media-libs/freetype:2
+	media-libs/mesa
+	virtual/glu
+	virtual/jpeg
 	"
 DEPEND="
 	${RDEPEND}
 	virtual/pkgconfig
-	media-libs/freetype:2
 	>=media-libs/glm-0.9.3
 	"
 
@@ -46,11 +47,6 @@ case ${PV} in
 	*)
 		S="${WORKDIR}/${PN}-$(get_version_component_range 1-2)" ;;
 esac
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}+boost-1.50.patch"
-	eautoreconf
-}
 
 src_configure() {
 	# fix bug #386525

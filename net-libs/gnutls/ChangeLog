@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.403 2013/01/20 19:56:21 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.404 2013/02/04 15:32:14 flameeyes Exp $
+
+*gnutls-3.1.7 (04 Feb 2013)
+
+  04 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org> +gnutls-3.1.7.ebuild:
+  Version bump; do not make heartbeat optional yet; fix automake dependency
+  properly to not require 1.11 when 1.12+ is installed.
 
   20 Jan 2013; Alon Bar-Lev <alonbl@gentoo.org>
   +files/gnutls-3.1.6-danetool.patch, gnutls-3.1.6.ebuild:

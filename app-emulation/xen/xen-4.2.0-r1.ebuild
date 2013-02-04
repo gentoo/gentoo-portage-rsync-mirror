@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.0-r1.ebuild,v 1.5 2013/02/04 14:41:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.0-r1.ebuild,v 1.6 2013/02/04 15:43:23 idella4 Exp $
 
 EAPI=5
 
@@ -85,7 +85,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-4-CVE-2012-4538-XSA-23.patch \
 		"${FILESDIR}"/${PN}-4-CVE-2012-4539-XSA-24.patch \
 		"${FILESDIR}"/${PN}-4-CVE-2012-5510-XSA-26.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2012-5513-XSA-29.patch
+		"${FILESDIR}"/${PN}-4-CVE-2012-5513-XSA-29.patch \
 		"${FILESDIR}"/${PN}-4-CVE-2012-5514-XSA-30.patch \
 		"${FILESDIR}"/${PN}-4-CVE-2012-5515-XSA-31.patch \
 		"${FILESDIR}"/${PN}-4-CVE-2012-5525-XSA-32.patch \

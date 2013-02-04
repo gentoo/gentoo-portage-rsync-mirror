@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/gource
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.24 2013/01/30 16:19:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.25 2013/02/04 15:42:42 flameeyes Exp $
+
+*gource-0.39 (04 Feb 2013)
+
+  04 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org> +gource-0.39.ebuild,
+  -files/gource-0.38+boost-1.50.patch, -gource-0.38-r1.ebuild:
+  Version bump, closes bug #455360. Fix deps.
 
 *gource-0.38-r1 (30 Jan 2013)
 

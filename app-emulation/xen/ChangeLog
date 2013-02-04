@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.107 2013/02/04 14:41:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.108 2013/02/04 15:43:23 idella4 Exp $
+
+  04 Feb 2013; Ian Delaney <idella4@gentoo.org> xen-4.2.0-r1.ebuild:
+  Add a missed '\' to added patch, 2nd. time lucky
 
   04 Feb 2013; Ian Delaney <idella4@gentoo.org> xen-4.2.0-r1.ebuild:
   Added acquired but missed sec patch 2012-5513-XSA-29.patch to set of sec
