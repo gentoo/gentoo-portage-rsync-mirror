@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.6-r2.ebuild,v 1.1 2013/01/29 18:44:19 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.6-r2.ebuild,v 1.2 2013/02/04 16:22:32 kensington Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2} )
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
 
 inherit eutils qt4-r2 python-r1 toolchain-funcs
 
@@ -87,15 +87,13 @@ src_prepare() {
 	python_copy_sources
 
 	preparation() {
-		pushd "${BUILD_DIR}" > /dev/null
 		if [[ ${EPYTHON} == python3.* ]]; then
 			rm -fr pyuic/uic/port_v2
 		else
 			rm -fr pyuic/uic/port_v3
 		fi
-		popd > /dev/null
 	}
-	python_foreach_impl preparation
+	python_foreach_impl run_in_build_dir preparation
 }
 
 pyqt4_use_enable() {
@@ -104,7 +102,6 @@ pyqt4_use_enable() {
 
 src_configure() {
 	configuration() {
-		pushd "${BUILD_DIR}" > /dev/null
 		local myconf=(
 			"${PYTHON}" configure.py
 			--confirm-license
@@ -173,32 +170,22 @@ src_configure() {
 			eqmake4 python.pro
 			popd > /dev/null || return
 		fi
-
-		popd > /dev/null
 	}
-	python_foreach_impl configuration
+	python_foreach_impl run_in_build_dir configuration
 }
 
 src_compile() {
-	compilation() {
-		pushd "${BUILD_DIR}" > /dev/null
-		default
-		popd > /dev/null
-	}
-	python_foreach_impl compilation
+	python_foreach_impl run_in_build_dir default
 }
 
 src_install() {
 	installation() {
-		pushd "${BUILD_DIR}" > /dev/null
 		# INSTALL_ROOT is used by designer/Makefile, other Makefiles use DESTDIR.
 		emake DESTDIR="${D}" INSTALL_ROOT="${D}" install
-		popd > /dev/null
-
 		mv "${ED}"/usr/bin/pyuic4{,-${EPYTHON}} || die
 		python_optimize
 	}
-	python_foreach_impl installation
+	python_foreach_impl run_in_build_dir installation
 
 	dosym python-exec /usr/bin/pyuic4
 	dodoc NEWS THANKS

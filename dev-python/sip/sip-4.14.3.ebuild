@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.14.3.ebuild,v 1.1 2013/02/01 08:18:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.14.3.ebuild,v 1.2 2013/02/04 16:20:17 kensington Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2} )
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
 
 inherit eutils python-r1 toolchain-funcs
 
@@ -68,7 +68,6 @@ src_prepare() {
 
 src_configure() {
 	configuration() {
-		pushd "${BUILD_DIR}" > /dev/null
 		local myconf=(
 			"${PYTHON}" configure.py
 			--bindir="${EPREFIX}/usr/bin"
@@ -92,28 +91,20 @@ src_configure() {
 		)
 		echo "${myconf[@]}"
 		"${myconf[@]}"
-		popd > /dev/null
 	}
-	python_foreach_impl configuration
+	python_foreach_impl run_in_build_dir configuration
 }
 
 src_compile() {
-	compilation() {
-		pushd "${BUILD_DIR}" > /dev/null
-		default
-		popd > /dev/null
-	}
-	python_foreach_impl compilation
+	python_foreach_impl run_in_build_dir default
 }
 
 src_install() {
 	installation() {
-		pushd "${BUILD_DIR}" > /dev/null
 		emake DESTDIR="${D}" install
 		python_optimize
-		popd > /dev/null
 	}
-	python_foreach_impl installation
+	python_foreach_impl run_in_build_dir installation
 
 	dodoc NEWS
 	use doc && dohtml -r doc/html/*
