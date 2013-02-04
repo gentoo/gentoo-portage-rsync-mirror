@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/easy-rsa/easy-rsa-2.2.0.ebuild,v 1.4 2013/02/03 19:34:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/easy-rsa/easy-rsa-2.2.0.ebuild,v 1.5 2013/02/04 09:16:29 pinkbyte Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit eutils multilib toolchain-funcs flag-o-matic
 
 DESCRIPTION="Small RSA key management package, based on OpenSSL."
 HOMEPAGE="http://openvpn.net/"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
 SRC_URI="http://swupdate.openvpn.net/community/releases/${P}_master.tar.gz"
 
 LICENSE="GPL-2"

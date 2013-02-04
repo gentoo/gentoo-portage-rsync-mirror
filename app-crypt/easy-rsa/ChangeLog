@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/easy-rsa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/easy-rsa/ChangeLog,v 1.4 2013/02/03 19:34:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/easy-rsa/ChangeLog,v 1.5 2013/02/04 09:16:29 pinkbyte Exp $
+
+  04 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> easy-rsa-2.2.0.ebuild:
+  Keyworded ~arm, wrt bug #453782
 
   03 Feb 2013; Agostino Sarubbo <ago@gentoo.org> easy-rsa-2.2.0.ebuild:
   Add ~ppc, wrt bug #453782

@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/gpsbabel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/ChangeLog,v 1.29 2012/11/23 11:10:55 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/ChangeLog,v 1.30 2013/02/04 09:12:41 patrick Exp $
+
+*gpsbabel-1.4.4 (04 Feb 2013)
+
+  04 Feb 2013; Patrick Lauer <patrick@gentoo.org> +gpsbabel-1.4.4.ebuild:
+  Bump for #442732
 
   23 Nov 2012;  <naota@gentoo.org> gpsbabel-1.4.3.ebuild:
   Add ~x86-fbsd wrt bug #444060
