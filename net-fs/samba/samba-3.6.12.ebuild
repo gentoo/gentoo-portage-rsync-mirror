@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.10.ebuild,v 1.5 2013/01/09 11:42:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.12.ebuild,v 1.1 2013/02/04 22:37:50 vostorga Exp $
 
 EAPI=4
 

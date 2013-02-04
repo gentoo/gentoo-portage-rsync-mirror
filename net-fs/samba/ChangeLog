@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.558 2013/02/04 11:24:19 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.559 2013/02/04 22:37:50 vostorga Exp $
+
+*samba-3.6.12 (04 Feb 2013)
+
+  04 Feb 2013; Víctor Ostorga <vostorga@gentoo.org> -samba-3.5.19.ebuild,
+  -samba-3.5.20.ebuild, samba-3.5.21.ebuild, -samba-3.6.10.ebuild,
+  -samba-3.6.11.ebuild, +samba-3.6.12.ebuild, -samba-4.0.1.ebuild,
+  -samba-4.0.1-r1.ebuild:
+  Version bump 3.5 and 3.6 branches to fix CVE-2013-0213 and CVE-2013-0214 bug
+  454798
 
 *samba-4.0.2 (04 Feb 2013)
 
