@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14430 2013/02/03 23:19:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14431 2013/02/04 19:56:41 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -644,6 +644,7 @@ sys-apps/systemd-sysv-utils
 # Jeroen Roovers <jer@gentoo.org> (27 Mar 2012)
 # Opera Next and Opera snapshots are unsupported and eternally unstable.
 # <http://my.opera.com/desktopteam/blog>
+=www-client/opera-12.14*
 www-client/opera-next
 
 # Ulrich Mueller <ulm@gentoo.org> (13 Dec 2011)

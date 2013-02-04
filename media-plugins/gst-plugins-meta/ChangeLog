@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.89 2013/02/03 14:03:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/ChangeLog,v 1.90 2013/02/04 19:39:22 ago Exp $
+
+  04 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-meta-0.10-r8.ebuild, gst-plugins-meta-1.0-r1.ebuild:
+  Add ~sparc, wrt bug #450672
 
   03 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-meta-0.10-r8.ebuild, gst-plugins-meta-1.0-r1.ebuild:

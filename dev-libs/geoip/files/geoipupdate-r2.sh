@@ -16,11 +16,15 @@ if [ -d "${GEOIPDIR}" ]; then
 		for db in $DATABASES; do
 			fname=$(basename $db)
 
-			wget --no-verbose -t 3 -T 60 "${GEOIP_MIRROR}/${db}.dat.gz" -O "${TMPDIR}/${fname}.dat.gz"
-			if [ $? -eq 0 ]; then
-				gunzip -fdc "${TMPDIR}/${fname}.dat.gz" > "${TMPDIR}/${fname}.dat"
-				mv "${TMPDIR}/${fname}.dat" "${GEOIPDIR}/${fname}.dat"
-				chmod 0644 "${GEOIPDIR}/${fname}.dat"
+			if [ -f ${GEOPDIR}/${fname} ]; then
+				wget --no-verbose -t 3 -T 60 \
+					"${GEOIP_MIRROR}/${db}.dat.gz" \
+					-O "${TMPDIR}/${fname}.dat.gz"
+				if [ $? -eq 0 ]; then
+					gunzip -fdc "${TMPDIR}/${fname}.dat.gz" > "${TMPDIR}/${fname}.dat"
+					mv "${TMPDIR}/${fname}.dat" "${GEOIPDIR}/${fname}.dat"
+					chmod 0644 "${GEOIPDIR}/${fname}.dat"
+				fi
 			fi
 		done
 		[ -d "${TMPDIR}" ] && rm -rf $TMPDIR

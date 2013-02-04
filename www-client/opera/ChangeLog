@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.797 2013/01/31 01:54:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.798 2013/02/04 19:59:46 jer Exp $
+
+*opera-12.14_pre1737 (04 Feb 2013)
+
+  04 Feb 2013; Jeroen Roovers <jer@gentoo.org> +opera-12.14_pre1737.ebuild:
+  http://my.opera.com/desktopteam/blog/2013/02/04/12-14-rc-crashloop-fix
 
   31 Jan 2013; Jeroen Roovers <jer@gentoo.org> -opera-12.12_p1707.ebuild:
   Old.

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/ChangeLog,v 1.16 2013/02/04 16:33:46 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/ChangeLog,v 1.17 2013/02/04 19:37:53 ago Exp $
+
+  04 Feb 2013; Agostino Sarubbo <ago@gentoo.org> opus-1.0.1.ebuild:
+  Add ~sparc, wrt bug #450672
 
 *opus-1.0.2-r1 (04 Feb 2013)
 
