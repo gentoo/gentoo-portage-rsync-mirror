@@ -17,4 +17,7 @@ Chrony はコンピュータのシステム・クロックの精度を保つた�
 接続(e.g. dial-up)しか持たないシステムで機能するよう書かれています。ですが永続的
 な接続でも機能します。
 </longdescription>
+<use>
+<flag name='rtc'>Include support for the Linux Real Time Clock interface</flag>
+</use>
 </pkgmetadata>

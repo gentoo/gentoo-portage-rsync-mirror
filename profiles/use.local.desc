@@ -4443,6 +4443,7 @@ net-misc/cgminer:scrypt - Enable support for scrypt mining algorithm
 net-misc/cgminer:sse2_4way - Enable support for CPU SSE2 4way mining algorithm
 net-misc/cgminer:sse4 - Enable support for CPU SSE4 mining algorithm
 net-misc/cgminer:ztex - Enable support for mining with Ztex FPGAs
+net-misc/chrony:rtc - Include support for the Linux Real Time Clock interface
 net-misc/connman:ethernet - Enable ethernet support.
 net-misc/connman:ofono - Use net-misc/ofono for telephony support.
 net-misc/connman:openvpn - Use net-misc/openvpn for openvpn support.
