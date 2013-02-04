@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyside
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.47 2012/12/26 06:29:30 pesa Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.48 2013/02/04 14:02:36 mgorny Exp $
+
+*pyside-1.1.2-r1 (04 Feb 2013)
+
+  04 Feb 2013; Michał Górny <mgorny@gentoo.org> +pyside-1.1.2-r1.ebuild:
+  Migrate to python-r1 (requested in bug #455378).
 
   26 Dec 2012; Davide Pesavento <pesa@gentoo.org> pyside-1.1.2.ebuild:
   Cosmetics.
