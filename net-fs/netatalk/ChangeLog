@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.91 2013/01/29 13:48:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.92 2013/02/04 08:25:58 jlec Exp $
+
+*netatalk-3.0.2-r1 (04 Feb 2013)
+
+  04 Feb 2013; Justin Lecher <jlec@gentoo.org> +netatalk-3.0.2-r1.ebuild:
+  Install systemd unit file, #455042
 
 *netatalk-3.0.2 (29 Jan 2013)
 
