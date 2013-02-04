@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.557 2013/02/03 12:56:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.558 2013/02/04 11:24:19 pinkbyte Exp $
+
+*samba-4.0.2 (04 Feb 2013)
+
+  04 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> +samba-4.0.2.ebuild:
+  Version bump
 
   03 Feb 2013; Lars Wendler <polynomial-c@gentoo.org> samba-4.0.1-r1.ebuild:
   Non-maintainer commit: Added test USE flag to IUSE.
