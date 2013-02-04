@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.48.ebuild,v 1.9 2012/06/06 01:26:12 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.48.ebuild,v 1.10 2013/02/04 06:00:32 patrick Exp $
 
 EAPI=4
 
@@ -19,6 +19,8 @@ IUSE="examples"
 # and answer became visible):
 # http://sourceforge.net/mailarchive/forum.php?thread_name=1257441040.20584.3431.camel%40tablet&forum_name=freeassociation-devel
 RESTRICT="test"
+
+DEPEND="dev-lang/perl"
 
 src_prepare() {
 	# Do not waste time building examples

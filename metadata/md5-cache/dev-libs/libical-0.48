@@ -1,4 +1,5 @@
 DEFINED_PHASES=configure install prepare
+DEPEND=dev-lang/perl
 DESCRIPTION=An implementation of basic iCAL protocols from citadel, previously known as aurore
 EAPI=4
 HOMEPAGE=http://freeassociation.sourceforge.net
@@ -8,4 +9,4 @@ LICENSE=|| ( MPL-1.1 LGPL-2 )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/freeassociation/libical/libical-0.48/libical-0.48.tar.gz
-_md5_=1718583685617b07afa8d996ba476ea6
+_md5_=b4b0a42b2cdee0c63c2e2d12be5eef98

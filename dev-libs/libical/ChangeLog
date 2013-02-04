@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libical
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.69 2013/02/02 12:02:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.70 2013/02/04 06:00:32 patrick Exp $
+
+  04 Feb 2013; Patrick Lauer <patrick@gentoo.org> libical-0.48.ebuild:
+  Fix dependencies #447330
 
   02 Feb 2013; Pacho Ramos <pacho@gentoo.org> -libical-0.43.ebuild,
   metadata.xml:

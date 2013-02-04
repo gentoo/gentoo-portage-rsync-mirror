@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.2.0-r1.ebuild,v 1.3 2013/02/02 21:17:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.2.0-r1.ebuild,v 1.4 2013/02/04 05:52:15 idella4 Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -73,6 +73,9 @@ src_prepare() {
 	# Drop .config and Fix gcc-4.6
 	epatch 	"${FILESDIR}"/${PN/-pvgrub/}-4-fix_dotconfig-gcc.patch
 
+	# fix jobserver in Makefile
+	epatch "${FILESDIR}"/${PN/-pvgrub/}-4.2.0-jserver.patch
+
 	#Sec patch
 	epatch "${FILESDIR}"/${PN/-pvgrub/}-4-CVE-2012-4544-XSA-25.patch
 }
@@ -83,12 +86,12 @@ src_compile() {
 		append-flags -fno-strict-overflow
 	fi
 
-	emake CC="$(tc-getCC)" LD="$(tc-getLD)" -C tools/include
+	emake CC="$(tc-getCC)" LD="$(tc-getLD)" AR="$(tc-getAR)" -C tools/include
 
-	# TODO; fix those -j1
 	if use x86; then
-		emake -j1 CC="$(tc-getCC)" LD="$(tc-getLD)" \
+		emake CC="$(tc-getCC)" LD="$(tc-getLD)" AR="$(tc-getAR)" \
 		XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub
+	# TODO; fix those -j1
 	elif use amd64; then
 		emake -j1 CC="$(tc-getCC)" LD="$(tc-getLD)" \
 		XEN_TARGET_ARCH="x86_64" -C stubdom pv-grub
