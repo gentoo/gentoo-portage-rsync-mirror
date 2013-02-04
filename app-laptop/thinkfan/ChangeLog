@@ -1,6 +1,12 @@
 # ChangeLog for app-laptop/thinkfan
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkfan/ChangeLog,v 1.10 2012/12/04 00:31:06 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkfan/ChangeLog,v 1.12 2013/02/04 13:18:04 ago Exp $
+
+  04 Feb 2013; Agostino Sarubbo <ago@gentoo.org> thinkfan-0.8.1-r1.ebuild:
+  Stable for x86, wrt bug #455402
+
+  04 Feb 2013; Agostino Sarubbo <ago@gentoo.org> thinkfan-0.8.1-r1.ebuild:
+  Stable for amd64, wrt bug #455402
 
 *thinkfan-0.8.1-r1 (04 Dec 2012)
 
@@ -43,4 +49,3 @@
   +files/thinkfan-0.7.3-makefile.patch, +files/thinkfan-0.7.3-openrc.patch,
   +thinkfan-0.8_alpha2.ebuild:
   Initial import. Thanks Maxim Konyushikhin for the initial ebuild (bug 387399)
-

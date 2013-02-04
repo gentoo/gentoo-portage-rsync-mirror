@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-27.9.ebuild,v 1.1 2013/01/08 11:29:06 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-27.9.ebuild,v 1.3 2013/02/04 13:18:10 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 
 # Since there are no statically linked binaries for this version of mprime,

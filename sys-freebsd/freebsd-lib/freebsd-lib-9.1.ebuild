@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1.ebuild,v 1.1 2013/01/27 21:25:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1.ebuild,v 1.2 2013/02/04 13:10:02 aballier Exp $
 
 EAPI=2
 
@@ -298,7 +298,13 @@ do_bootstrap() {
 do_compile() {
 	export MAKEOBJDIRPREFIX="${WORKDIR}/${CHOST}"
 	mkdir "${MAKEOBJDIRPREFIX}" || die "Could not create ${MAKEOBJDIRPREFIX}."
-	need_bootstrap && do_bootstrap
+	# Bootstrap if needed, otherwise assume the system headers are in
+	# /usr/include.
+	if need_bootstrap ; then
+		do_bootstrap
+	else
+		CFLAGS="${CFLAGS} -isystem /usr/include"
+	fi
 
 	export RAW_LDFLAGS=$(raw-ldflags)
 
