@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/glxquake-bin/glxquake-bin-0-r1.ebuild,v 1.4 2007/03/12 14:42:34 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/glxquake-bin/glxquake-bin-0-r1.ebuild,v 1.5 2013/02/04 09:44:00 tupone Exp $
 
 inherit games
 
@@ -26,6 +26,8 @@ RDEPEND="sys-libs/glibc
 	amd64? ( app-emulation/emul-linux-x86-xlibs )"
 
 S=${WORKDIR}/glxquake
+
+QA_PREBUILT="${GAMES_BINDIR:1}/glquake"
 
 src_install() {
 	dogamesbin glquake || die "dogamesbin failed"
