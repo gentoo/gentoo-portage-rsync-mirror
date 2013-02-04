@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.0.2-r1.ebuild,v 1.1 2013/02/03 15:01:38 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.0.2-r1.ebuild,v 1.2 2013/02/04 14:55:54 titanofold Exp $
 
 EAPI="4"
 
-inherit eutils flag-o-matic versionator
+inherit autotools eutils versionator
 
 DESCRIPTION="Geographic Objects for PostgreSQL"
 HOMEPAGE="http://postgis.net"
@@ -62,8 +62,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-${PGIS}-ldflags.patch"
-	append-flags $(pkg-config --cflags-only-I json)
+	epatch "${FILESDIR}/${PN}-${PGIS}-ldflags.patch" \
+		"${FILESDIR}/${PN}-${PGIS}-pkgconfig-json.patch"
+
+	local AT_M4DIR="macros"
+	eautoreconf
 }
 
 src_configure() {
