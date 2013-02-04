@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glfw
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/ChangeLog,v 1.15 2012/11/19 20:48:37 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/ChangeLog,v 1.16 2013/02/04 20:28:40 mr_bones_ Exp $
+
+  04 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> glfw-2.7.7.ebuild:
+  add static-libs support (bug #442752)
 
 *glfw-2.7.7 (19 Nov 2012)
 

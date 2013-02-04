@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/glfw-2.7.7.ebuild,v 1.1 2012/11/19 20:48:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/glfw-2.7.7.ebuild,v 1.2 2013/02/04 20:28:40 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="examples"
+IUSE="examples static-libs"
 
 DEPEND="x11-libs/libX11
 	x11-libs/libXrandr
@@ -23,22 +23,26 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	sed -i \
 		-e "s:\"docs/:\"/usr/share/doc/${PF}/pdf/:" \
-		readme.html \
-		|| die "sed failed"
+		readme.html || die
 
 	epatch "${FILESDIR}"/${P}-{dyn,pkgconfig}.patch
 
 	# respect ldflags
 	sed -i \
 		-e "s/\$(LFLAGS)/\$(LDFLAGS) \$(LFLAGS)/" \
-		{lib/x11,examples}/Makefile.x11.in || die "sed Makefile.x11.in failed"
+		{lib/x11,examples}/Makefile.x11.in || die
 
 	# respect cflags in linking command
 	# build system is messing up CFLAGS variable, so sed is the easy way to go
 	sed -i \
 		-e "/^libglfw.so/{n;s/\$(CC)/\$(CC) ${CFLAGS}/;}" \
-		lib/x11/Makefile.x11.in \
-		|| die "sed Makefile.x11.in failed"
+		lib/x11/Makefile.x11.in || die
+
+	if use !static-libs ; then
+		sed -i \
+			-e '/^all:/s/libglfw.a//' \
+			lib/x11/Makefile.x11.in || die
+	fi
 }
 
 src_configure() {
@@ -51,7 +55,7 @@ src_compile() {
 }
 
 src_install() {
-	dolib.a lib/x11/libglfw.a
+	use static-libs && dolib.a lib/x11/libglfw.a
 	dolib.so lib/x11/libglfw.so.2.7.7
 	dosym libglfw.so.2.7.7 /usr/$(get_libdir)/libglfw.so
 
