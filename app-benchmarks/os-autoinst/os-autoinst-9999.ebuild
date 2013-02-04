@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/os-autoinst/os-autoinst-9999.ebuild,v 1.4 2012/11/08 13:29:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/os-autoinst/os-autoinst-9999.ebuild,v 1.5 2013/02/04 15:10:19 scarabeus Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://gitorious.org/os-autoinst/os-autoinst.git"
 
-inherit git-2 autotools
+inherit git-2 autotools eutils
 
 DESCRIPTION="automated testing of Operating Systems"
 HOMEPAGE="http://os-autoinst.org/"
@@ -17,15 +17,15 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND="
+DEPEND="media-libs/opencv"
+RDEPEND="${DEPEND}
 	dev-lang/perl[ithreads]
+	dev-perl/JSON
 	app-emulation/qemu
 	app-text/gocr
 	media-gfx/imagemagick
 	media-video/ffmpeg2theora
-
 "
-DEPEND=""
 
 src_prepare() {
 	eautoreconf
@@ -33,5 +33,11 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--docdir="${EPREFIX}/usr/share/doc/${PF}"
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		--disable-static
+}
+
+src_install() {
+	default
+	prune_libtool_files --all
 }
