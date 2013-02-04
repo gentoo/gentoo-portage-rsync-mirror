@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/qlandkartegt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/ChangeLog,v 1.17 2012/08/29 19:56:35 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/ChangeLog,v 1.18 2013/02/04 08:34:23 patrick Exp $
+
+*qlandkartegt-1.6.0 (04 Feb 2013)
+
+  04 Feb 2013; Patrick Lauer <patrick@gentoo.org> +qlandkartegt-1.6.0.ebuild:
+  Bump for #451304, small dependency changes
 
 *qlandkartegt-1.5.1 (29 Aug 2012)
 
@@ -89,4 +94,3 @@
 
   10 Mar 2009; Hanno Boeck <hanno@gentoo.org> +qlandkartegt-0.11.0.ebuild:
   Initial commit of qlandkartegt, successor of qlandkarte.
-

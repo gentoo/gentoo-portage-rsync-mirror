@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.84 2013/02/02 23:28:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.85 2013/02/04 08:50:49 mgorny Exp $
+
+  04 Feb 2013; Michał Górny <mgorny@gentoo.org> clang-3.2.ebuild,
+  clang-9999.ebuild:
+  Use supported Python implementation during build. Fixes bug #455260.
 
   02 Feb 2013; Michał Górny <mgorny@gentoo.org> clang-3.2.ebuild,
   clang-9999.ebuild:

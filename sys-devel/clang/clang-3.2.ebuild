@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.2.ebuild,v 1.4 2013/02/02 23:28:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.2.ebuild,v 1.5 2013/02/04 08:50:49 mgorny Exp $
 
 EAPI=5
 
@@ -110,6 +110,9 @@ src_configure() {
 		CONF_FLAGS="${CONF_FLAGS} --enable-pic"
 	fi
 
+	# build with a suitable Python version
+	python_export_best
+
 	# clang prefers clang over gcc, so we may need to force that
 	tc-export CC CXX
 	econf ${CONF_FLAGS}
@@ -123,8 +126,6 @@ src_test() {
 	cd "${S}"/tools/clang || die "cd clang failed"
 
 	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"
-
-	python_export_best
 
 	if ! emake -j1 VERBOSE=1 test; then
 		has test $FEATURES && die "Make test failed. See above for details."

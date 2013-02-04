@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libunistring
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunistring/ChangeLog,v 1.7 2012/05/21 21:23:26 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunistring/ChangeLog,v 1.8 2013/02/04 08:55:24 pinkbyte Exp $
+
+  04 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> libunistring-0.9.3-r1.ebuild:
+  Keyword ~arm, wrt bug #455168
 
   21 May 2012; Jeff Horelick <jdhore@gentoo.org> libunistring-0.9.3-r1.ebuild:
   marked x86 per bug 415501
