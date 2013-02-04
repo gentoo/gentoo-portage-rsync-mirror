@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/qtads
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/ChangeLog,v 1.28 2013/01/24 20:12:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/ChangeLog,v 1.29 2013/02/04 22:26:40 mr_bones_ Exp $
+
+  04 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> qtads-2.1.6.ebuild:
+  eapi=5
 
   24 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -qtads-2.1.3.ebuild:
   old
