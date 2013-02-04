@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-	<email>maintainer-needed@gentoo.org</email>
+	<email>xmw@gentoo.org</email>
+	<name>Michael Weber</name>
   </maintainer>
   <longdescription lang="en">
     tmpreaper is a program that can be used to clean out temporary-file
