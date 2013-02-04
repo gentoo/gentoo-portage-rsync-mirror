@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.337 2013/02/01 17:16:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.338 2013/02/04 10:11:22 ago Exp $
+
+  04 Feb 2013; Agostino Sarubbo <ago@gentoo.org> sudo-1.8.6_p3.ebuild:
+  Stable for alpha, wrt bug #452602
 
 *sudo-1.8.6_p6 (01 Feb 2013)
 

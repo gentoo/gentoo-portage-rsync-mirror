@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/whoosh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.9 2013/01/14 11:06:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.10 2013/02/04 10:06:38 idella4 Exp $
+
+  04 Feb 2013; Ian Delaney <idella4@gentoo.org> whoosh-2.4.1-r1.ebuild:
+  Set DISTUTILS_NO_PARALLEL_BUILD, fixes Bug #454848 by flameeyes
 
 *whoosh-2.4.1-r1 (14 Jan 2013)
 

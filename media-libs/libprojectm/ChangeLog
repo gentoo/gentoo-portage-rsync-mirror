@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libprojectm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.56 2013/01/26 18:07:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.57 2013/02/04 10:12:14 ago Exp $
+
+  04 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libprojectm-2.1.0-r1.ebuild:
+  Stable for alpha, wrt bug #453402
 
   26 Jan 2013; Julian Ospald <hasufell@gentoo.org> libprojectm-2.1.0-r1.ebuild:
   fix build time issues wrt #443546
