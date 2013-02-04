@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsgui/traitsgui-3.6.0-r1.ebuild,v 1.2 2012/06/12 12:00:36 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsgui/traitsgui-3.6.0-r1.ebuild,v 1.3 2013/02/04 02:43:45 heroxbd Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples qt4 wxwidgets"
 
 DEPEND=">=dev-python/enthoughtbase-3.1.0

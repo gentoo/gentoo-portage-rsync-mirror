@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/traitsgui
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsgui/ChangeLog,v 1.20 2012/06/12 12:00:36 iksaif Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsgui/ChangeLog,v 1.21 2013/02/04 02:43:45 heroxbd Exp $
+
+  04 Feb 2013; Benda Xu <heroxbd@gentoo.org> traitsgui-3.6.0-r1.ebuild:
+  keyword ~amd64-linux ~x86-linux
 
   12 Jun 2012; Corentin Chary <iksaif@gentoo.org> traitsgui-3.6.0-r1.ebuild:
   Remove dead HOMEPAGE
@@ -91,4 +94,3 @@
   15 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
   +traitsgui-3.0.3.ebuild:
   Initial import
-

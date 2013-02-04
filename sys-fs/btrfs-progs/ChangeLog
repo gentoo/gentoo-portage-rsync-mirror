@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.59 2013/01/06 11:11:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.60 2013/02/04 02:50:57 floppym Exp $
+
+*btrfs-progs-0.20_rc1_p56 (04 Feb 2013)
+
+  04 Feb 2013; Mike Gilbert <floppym@gentoo.org>
+  +btrfs-progs-0.20_rc1_p56.ebuild, btrfs-progs-9999.ebuild:
+  Add another snapshot. Remove the ewarn messages from pkg_postinst; hopefull
+  people have upgraded their kernels by now.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> btrfs-progs-0.20_rc1.ebuild:
   Add ~sparc, wrt bug #449220
