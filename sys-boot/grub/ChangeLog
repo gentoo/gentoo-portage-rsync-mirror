@@ -1,6 +1,16 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.248 2013/01/19 03:05:28 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.250 2013/02/03 22:39:46 floppym Exp $
+
+  03 Feb 2013; Mike Gilbert <floppym@gentoo.org> grub-2.00-r2.ebuild:
+  Restore keywords after testing.
+
+*grub-2.00-r2 (03 Feb 2013)
+
+  03 Feb 2013; Richard Yao <ryao@gentoo.org>
+  +files/grub-2.00-zfs-feature-flag-support.patch, +grub-2.00-r2.ebuild:
+  Add ZFS support for Feature Flags and LZ4 Compression from Illumos GRUB; A big
+  thanks goes to Massimo Maggi for 99.9% of the porting work.
 
   19 Jan 2013; Matt Turner <mattst88@gentoo.org> grub-2.00-r1.ebuild:
   Add yeeloong? ( truetype ) to REQUIRED_USE, bug 452894.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.182 2013/02/02 18:48:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.183 2013/02/03 22:03:09 zerochaos Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -71,7 +71,7 @@ EULA AdobeFlash-10.3 BCS Broadcom cadsoft DOOM3 ETQW FraunhoferFDK google-chrome
 # - IFF there is an explicit inclusion requirement, USE=bindist
 #   MUST cause a copy of the license to be installed in a file
 #   location compliant with the license,
-BINARY-REDISTRIBUTABLE @FREE adobe-ps atheros-hal intel-psb intel-ucode ipw2100-fw ipw2200-fw ipw3945 libertas-fw NVIDIA qlogic-fibre-channel-firmware radeon-ucode ralink-firmware SmartLabs
+BINARY-REDISTRIBUTABLE @FREE adobe-ps atheros-hal hashcat intel-psb intel-ucode ipw2100-fw ipw2200-fw ipw3945 libertas-fw NVIDIA qlogic-fibre-channel-firmware radeon-ucode ralink-firmware SmartLabs
 
 # Deprecated license labels, used by repoman
 # as-is: see note in licenses/as-is and bug 436214

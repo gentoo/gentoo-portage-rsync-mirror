@@ -3,8 +3,7 @@
 <pkgmetadata>
   <herd>shell-tools</herd>
   <maintainer>
-    <email>weaver@gentoo.org</email>
-    <name>Andrey Kislyuk</name>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <longdescription>
 Byobu is a GPLv3 open source text-based window manager and terminal multiplexer.

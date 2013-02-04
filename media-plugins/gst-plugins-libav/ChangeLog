@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/gst-plugins-libav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/ChangeLog,v 1.5 2013/01/21 23:10:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/ChangeLog,v 1.6 2013/02/03 23:22:12 tetromino Exp $
+
+*gst-plugins-libav-1.1.0_pre20130128 (03 Feb 2013)
+
+  03 Feb 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-plugins-libav-1.0.3.ebuild, gst-plugins-libav-1.0.5.ebuild,
+  +gst-plugins-libav-1.1.0_pre20130128.ebuild,
+  +files/gst-plugins-libav-1.1.0_pre20130128-gbr-color.patch:
+  Add gst-plugins-libav-1.1 prerelease for libav-9 and ffmpeg-1.1 compatibility
+  (bug #423717). Pin gst-plugins-libav-1.0.x to libav-0.8 and ffmpeg-0.10.
 
 *gst-plugins-libav-1.0.5 (21 Jan 2013)
 

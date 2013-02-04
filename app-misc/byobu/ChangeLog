@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/byobu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/ChangeLog,v 1.43 2013/01/26 19:35:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/ChangeLog,v 1.44 2013/02/03 22:45:41 weaver Exp $
+
+  03 Feb 2013; Andrey Kislyuk <weaver@gentoo.org> metadata.xml:
+  Update package metadata to remove myself as maintainer
 
 *byobu-5.29 (26 Jan 2013)
 
@@ -212,4 +215,3 @@
   07 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
   +screen-profiles-1.42.ebuild:
   New package, bug 264644. Ebuild written by me.
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.0.3.ebuild,v 1.3 2012/12/09 08:54:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.0.3.ebuild,v 1.4 2013/02/03 23:22:12 tetromino Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ IUSE="+orc"
 
 RDEPEND="
 	media-libs/gst-plugins-base:1.0
-	>=virtual/ffmpeg-0.10.3
+	~virtual/ffmpeg-0.10.3
 	orc? ( >=dev-lang/orc-0.4.16 )
 "
 DEPEND="${RDEPEND}

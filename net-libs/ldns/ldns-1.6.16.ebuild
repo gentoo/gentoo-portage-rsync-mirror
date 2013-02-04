@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.16.ebuild,v 1.1 2013/01/22 02:40:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.16.ebuild,v 1.2 2013/02/03 21:37:09 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit autotools eutils python
+inherit eutils python
 
 DESCRIPTION="ldns is a library with the aim to simplify DNS programing in C"
 HOMEPAGE="http://www.nlnetlabs.nl/projects/ldns/"

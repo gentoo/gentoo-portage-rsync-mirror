@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc14.ebuild,v 1.1 2013/02/02 16:44:30 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc14.ebuild,v 1.2 2013/02/03 22:43:08 ryao Exp $
 
 EAPI="4"
 
@@ -98,5 +98,5 @@ pkg_postinst() {
 	ewarn "the ability to import them using older versions of ZFSOnLinux."
 	ewarn "Any new pools will be created with feature flag support and will"
 	ewarn "not be compatible with older versions of ZFSOnLinux. To create a new"
-	ewarn "pool that is backward compatible, use zpool create -o version=22 ..."
+	ewarn "pool that is backward compatible, use zpool create -o version=28 ..."
 }

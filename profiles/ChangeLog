@@ -1,10 +1,18 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7431 2013/02/03 11:51:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7433 2013/02/03 23:19:19 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Feb 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  Add media-plugins/gst-plugins-libav-1.1 prereleases to libav package.mask
+  (bug #423717).
+
+  03 Feb 2013; Rick Farina <zerochaos@gentoo.org> license_groups:
+  When the hashcat license was added I didn't know to add it to
+  license_groups, fixing that oversight.
 
   03 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
   Fix category for mono-tools mask

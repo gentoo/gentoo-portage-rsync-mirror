@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.0.5.ebuild,v 1.2 2013/02/03 23:22:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.1.0_pre20130128.ebuild,v 1.1 2013/02/03 23:22:12 tetromino Exp $
 
 EAPI="5"
 
@@ -9,7 +9,8 @@ inherit eutils flag-o-matic
 MY_PN="gst-libav"
 DESCRIPTION="FFmpeg based gstreamer plugin"
 HOMEPAGE="http://gstreamer.freedesktop.org/modules/gst-libav.html"
-SRC_URI="http://gstreamer.freedesktop.org/src/${MY_PN}/${MY_PN}-${PV}.tar.xz"
+#SRC_URI="http://gstreamer.freedesktop.org/src/${MY_PN}/${MY_PN}-${PV}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~tetromino/distfiles/${PN}/${MY_PN}-${PV}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="1.0"
@@ -19,7 +20,7 @@ IUSE="+orc"
 RDEPEND="
 	media-libs/gstreamer:1.0
 	media-libs/gst-plugins-base:1.0
-	~virtual/ffmpeg-0.10.3
+	>=virtual/ffmpeg-9
 	orc? ( >=dev-lang/orc-0.4.16 )
 "
 DEPEND="${RDEPEND}
@@ -31,6 +32,11 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
 	sed -e 's/sleep 15//' -i configure.ac configure || die
+
+	# allow building with gstreamer-1.0.x
+	sed -e 's/REQ=1.1.0/REQ=1.0.0/' -i configure.ac configure || die
+	# Disable GBR color support; it requires >=gst-plugins-base-1.1
+	epatch -R "${FILESDIR}/${P}-gbr-color.patch"
 }
 
 src_configure() {
@@ -42,6 +48,11 @@ src_configure() {
 		--with-package-origin="http://www.gentoo.org" \
 		--with-system-libav \
 		$(use_enable orc)
+}
+
+src_compile() {
+	# Don't build with -Werror
+	emake ERROR_CFLAGS=
 }
 
 src_install() {
