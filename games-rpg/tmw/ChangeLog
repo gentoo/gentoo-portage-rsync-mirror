@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/tmw
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.45 2012/10/17 03:55:13 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.46 2013/02/04 18:25:04 hasufell Exp $
+
+*tmw-20130201 (04 Feb 2013)
+
+  04 Feb 2013; Julian Ospald <hasufell@gentoo.org> +tmw-20130201.ebuild,
+  +files/tmw-branding-20130201-gentoo.patch:
+  version bump
 
   17 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> tmw-20120727.ebuild:
   x86 stable wrt bug #435882

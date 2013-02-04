@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn-data
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.47 2012/12/27 02:46:57 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/ChangeLog,v 1.48 2013/02/04 18:13:29 mr_bones_ Exp $
+
+  04 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> -nwn-data-1.29-r4.ebuild,
+  metadata.xml:
+  old
 
   27 Dec 2012; Jeff Horelick <jdhore@gentoo.org> nwn-data-1.29-r5.ebuild:
   marked x86 per bug 443550

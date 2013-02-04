@@ -5,8 +5,6 @@
   <maintainer>
     <email>calchan@gentoo.org</email>
     <name>Denis Dupeyron</name>
-    <description>Main maintainer for this is the herd, please CC on
-    bugs.</description>
   </maintainer>
   <use>
     <flag name="hou">Install the Hordes of the Underdark expansion pack</flag>
