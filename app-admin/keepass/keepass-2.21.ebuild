@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.20-r1.ebuild,v 1.1 2012/09/26 13:34:34 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.21.ebuild,v 1.1 2013/02/04 17:06:18 kensington Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils fdo-mime gnome2-utils mono multilib
 
@@ -26,9 +26,9 @@ S=${WORKDIR}
 
 src_prepare() {
 	# Remove Windows-specific things
-	pushd Build || die
+	pushd Build > /dev/null || die
 	. PrepMonoDev.sh || die
-	popd || die
+	popd > /dev/null || die
 
 	# KeePass looks for some XSL files in the same folder as the executable,
 	# we prefer to have it in /usr/share/KeePass

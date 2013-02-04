@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r2.ebuild,v 1.2 2013/02/03 22:39:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r2.ebuild,v 1.3 2013/02/04 17:29:22 ryao Exp $
 
 EAPI=4
 
@@ -331,6 +331,12 @@ src_install() {
 	newins "${FILESDIR}"/grub.default-2 grub
 }
 
+pkg_preinst() {
+	has_version "<sys-boot/grub-2.00-r2:2" && \
+		[[ "$(df -TP /boot | awk 'NR>1{print $2}')" = 'zfs' ]]
+	display_zfs_feature_flag_warning=$?
+}
+
 pkg_postinst() {
 	# display the link to guide
 	elog "For information on how to configure grub-2 please refer to the guide:"
@@ -345,5 +351,13 @@ pkg_postinst() {
 		ewarn "If you want to keep GRUB Legacy (grub-0.97) installed, please run"
 		ewarn "the following to add sys-boot/grub:0 to your world file."
 		ewarn "emerge --noreplace sys-boot/grub:0"
+	fi
+	if [[ $display_zfs_feature_flag_warning -eq 0 ]]; then
+		zfs_pool=$(df -TP /boot | awk 'NR>1{print $1}')
+		zfs_pool=${zfs_pool%%/*}
+		ewarn "The previous version of sys-boot/grub lacked support for ZFS feature flags."
+		ewarn "Your /boot is on ZFS. Running \"zpool upgrade ${zfs_pool}\" or \"zpool upgrade -a\""
+		ewarn "to upgrade your pool to support feature flags will prevent your system from booting."
+		ewarn "You should use grub2-install to reinstall your boot code. This will avoid problems."
 	fi
 }
