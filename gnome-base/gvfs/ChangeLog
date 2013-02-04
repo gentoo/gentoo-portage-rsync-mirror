@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.199 2013/01/22 08:06:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.200 2013/02/04 20:40:19 pacho Exp $
+
+  04 Feb 2013; Pacho Ramos <pacho@gentoo.org> gvfs-1.12.3-r1.ebuild:
+  Use eapi5 for next libphoto2 bumps
 
   22 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
   Switch to global systemd USE flag.
