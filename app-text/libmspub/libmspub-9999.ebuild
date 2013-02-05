@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmspub/libmspub-9999.ebuild,v 1.2 2013/01/12 13:16:14 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmspub/libmspub-9999.ebuild,v 1.3 2013/02/05 14:03:52 scarabeus Exp $
 
-EAPI=4
+EAPI=5
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/libreoffice/${PN}/"
 [[ ${PV} == 9999 ]] && vcs="autotools git-2"
@@ -25,10 +25,12 @@ IUSE="doc static-libs"
 RDEPEND="
 	app-text/libwpd:0.9
 	app-text/libwpg:0.2
+	dev-libs/icu:=
 	sys-libs/zlib
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
+	dev-libs/boost
 	sys-devel/libtool
 	doc? ( app-doc/doxygen )
 "
