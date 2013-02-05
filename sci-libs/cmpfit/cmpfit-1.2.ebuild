@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cmpfit/cmpfit-1.2.ebuild,v 1.1 2012/11/19 23:57:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cmpfit/cmpfit-1.2.ebuild,v 1.2 2013/02/05 18:35:16 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="MINPACK-1 Least Squares Fitting Library in C"
 HOMEPAGE="http://www.physics.wisc.edu/~craigm/idl/cmpfit.html"
 SRC_URI="http://www.physics.wisc.edu/~craigm/idl/down/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="public-domain minpack"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"

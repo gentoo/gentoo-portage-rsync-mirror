@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/helpblocks
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/ChangeLog,v 1.13 2012/09/05 07:42:44 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/ChangeLog,v 1.14 2013/02/05 18:46:44 radhermit Exp $
+
+  05 Feb 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Use herd instead of maintainer for metadata.
 
   05 Sep 2012; Justin Lecher <jlec@gentoo.org> helpblocks-1.21-r1.ebuild:
   Use domenu instead insinto + doins to install .desktop files

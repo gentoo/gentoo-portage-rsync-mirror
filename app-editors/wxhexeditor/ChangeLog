@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/wxhexeditor
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.3 2012/07/02 03:47:52 dirtyepic Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.4 2013/02/05 18:38:02 radhermit Exp $
+
+  05 Feb 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove redundant maintainer from metadata.
 
 *wxhexeditor-0.20 (02 Jul 2012)
 

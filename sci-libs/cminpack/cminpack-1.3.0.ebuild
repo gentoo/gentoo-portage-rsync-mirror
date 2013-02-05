@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cminpack/cminpack-1.3.0.ebuild,v 1.2 2012/08/03 17:22:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cminpack/cminpack-1.3.0.ebuild,v 1.3 2013/02/05 18:38:50 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="C implementation of the MINPACK nonlinear optimization library"
 HOMEPAGE="http://devernay.free.fr/hacks/cminpack/"
 SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENSE="minpack"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"

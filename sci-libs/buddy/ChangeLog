@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/buddy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/buddy/ChangeLog,v 1.13 2012/10/18 21:31:27 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/buddy/ChangeLog,v 1.14 2013/02/05 18:33:04 ulm Exp $
+
+  05 Feb 2013; Ulrich Müller <ulm@gentoo.org> buddy-2.2.ebuild,
+  buddy-2.4.ebuild:
+  Specify LICENSE more precisely, see README file, bug 455570.
 
   18 Oct 2012; Justin Lecher <jlec@gentoo.org> buddy-2.2.ebuild,
   buddy-2.4.ebuild, metadata.xml:

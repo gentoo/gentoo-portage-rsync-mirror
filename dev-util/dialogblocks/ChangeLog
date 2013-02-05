@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/dialogblocks
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/ChangeLog,v 1.23 2012/09/24 00:44:25 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/ChangeLog,v 1.25 2013/02/05 18:44:05 radhermit Exp $
+
+  05 Feb 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove whitespace.
+
+  05 Feb 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Use herd instead of maintainer for metadata.
 
   24 Sep 2012; Mike Frysinger <vapier@gentoo.org> dialogblocks-4.33.ebuild:
   QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).

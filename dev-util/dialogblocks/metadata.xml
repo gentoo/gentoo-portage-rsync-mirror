@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>wxwidgets@gentoo.org</email>
-</maintainer>
+<herd>wxwidgets</herd>
 <longdescription>
-Anthemion DialogBlocks is a sizer-based resource editor that quickly gets 
-you creating professional-looking dialogs, wizards and frames for deployment 
+Anthemion DialogBlocks is a sizer-based resource editor that quickly gets
+you creating professional-looking dialogs, wizards and frames for deployment
 on Windows, Linux, Mac or any other supported wxWidgets platform.
 </longdescription>
 </pkgmetadata>
