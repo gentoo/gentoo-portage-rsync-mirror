@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/racket
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/racket/ChangeLog,v 1.7 2012/11/09 09:25:20 hkbst Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/racket/ChangeLog,v 1.8 2013/02/05 12:09:23 hkbst Exp $
+
+*racket-5.3.2 (05 Feb 2013)
+
+  05 Feb 2013; Marijn Schouten <hkBst@gentoo.org> +racket-5.3.2.ebuild:
+  bump
 
 *racket-5.3.1 (09 Nov 2012)
 

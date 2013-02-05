@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/mcelog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.28 2013/01/26 17:52:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.29 2013/02/05 12:25:02 hasufell Exp $
+
+  05 Feb 2013; Julian Ospald <hasufell@gentoo.org>
+  mcelog-1.0_pre3_p20120918-r1.ebuild:
+  improve pkg_postinst wrt #455474
 
   26 Jan 2013; Julian Ospald <hasufell@gentoo.org>
   mcelog-1.0_pre3_p20120918-r1.ebuild,

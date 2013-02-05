@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/mcelog-1.0_pre3_p20120918-r1.ebuild,v 1.2 2013/01/26 17:52:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/mcelog-1.0_pre3_p20120918-r1.ebuild,v 1.3 2013/02/05 12:25:02 hasufell Exp $
 
 EAPI=5
 
@@ -53,4 +53,7 @@ src_install() {
 pkg_postinst() {
 	einfo "The default configuration set is now installed in /etc/${PN}"
 	einfo "you might want to edit those files."
+	einfo
+	einfo "A sample cronjob is installed into /etc/cron.daily"
+	einfo "without executable bit (system service is the preferred method now)"
 }
