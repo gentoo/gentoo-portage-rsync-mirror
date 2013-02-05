@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/adodb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.118 2012/06/10 12:12:11 mabi Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.119 2013/02/05 02:56:19 jmbsvicetto Exp $
+
+*adodb-5.17-r1 (05 Feb 2013)
+
+  05 Feb 2013; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +adodb-5.17-r1.ebuild:
+  Revert dev-php/adodb-5.17 to the old instalattion method to fix the directory
+  strcture - fixes bug 420517. Non-maintainer commit approved by Ole Markus.
 
 *adodb-5.17 (10 Jun 2012)
 
@@ -454,4 +461,3 @@
   04 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> adodb-4.0.5.ebuild:
   new package, partially based off initial ebuild in bug #35006, submitted by
   Roy "UberLord" Marples <uberlord@rsm.demon.co.uk>
-
