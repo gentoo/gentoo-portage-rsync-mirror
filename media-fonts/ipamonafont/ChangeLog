@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/ipamonafont
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ChangeLog,v 1.19 2009/09/07 01:46:06 dirtyepic Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ChangeLog,v 1.20 2013/02/05 17:55:03 ulm Exp $
+
+  05 Feb 2013; Ulrich Müller <ulm@gentoo.org> ipamonafont-1.0.8.ebuild:
+  Specify LICENSE more precisely, bug 452380.
 
   07 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> -ipamonafont-1.0.3.ebuild,
   -ipamonafont-1.0.5.ebuild:

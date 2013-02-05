@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmapi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmapi/ChangeLog,v 1.2 2012/10/10 14:24:38 dagger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmapi/ChangeLog,v 1.3 2013/02/05 17:55:08 pacho Exp $
+
+  05 Feb 2013; Pacho Ramos <pacho@gentoo.org> -libmapi-0.9.ebuild, metadata.xml:
+  Cleanup due #260981 after talking with him
 
   10 Oct 2012; nobody +files/openchange-1.0-BORG-fix-soname-QA.patch,
   +files/openchange-1.0-BORG-python-location-fix.patch:
@@ -12,4 +15,3 @@
   23 Feb 2010; Robert Piasek <dagger@gentoo.org> +libmapi-0.9.ebuild,
   +metadata.xml:
   New ebuild for libmapi-0.9.
-

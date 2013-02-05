@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/connman-gnome
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/connman-gnome/ChangeLog,v 1.3 2011/03/29 12:20:45 angelos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/connman-gnome/ChangeLog,v 1.4 2013/02/05 17:53:23 pacho Exp $
+
+  05 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #260981 after talking with him
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> connman-gnome-0.5.ebuild:
   Fixed slot deps
@@ -10,4 +13,3 @@
   13 Aug 2009; Robert Piasek <dagger@gentoo.org> +connman-gnome-0.5.ebuild,
   +metadata.xml:
   Initial ebuild of connman-gnome
-

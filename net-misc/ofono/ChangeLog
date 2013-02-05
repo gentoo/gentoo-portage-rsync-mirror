@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ofono
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.43 2012/12/03 02:28:30 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.44 2013/02/05 17:56:12 pacho Exp $
+
+  05 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #260981 after talking with him
 
   03 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> ofono-1.0.ebuild,
   ofono-1.10.ebuild:
@@ -235,4 +238,3 @@
   13 Aug 2009; Robert Piasek <dagger@gentoo.org> +ofono-0.3.ebuild,
   +metadata.xml:
   Initial port of ofono
-

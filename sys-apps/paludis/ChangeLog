@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/paludis
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.227 2012/11/17 08:29:45 dev-zero Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.228 2013/02/05 17:59:11 pacho Exp $
+
+  05 Feb 2013; Pacho Ramos <pacho@gentoo.org> -paludis-0.66.0.ebuild,
+  -paludis-0.68.0.ebuild, -paludis-0.70.2.ebuild, -paludis-0.72.2.ebuild,
+  -paludis-0.74.1.ebuild, -paludis-0.76.0.ebuild, -paludis-0.78.2.ebuild,
+  -paludis-0.80.2.ebuild, metadata.xml:
+  Cleanup due #260981 after talking with him
 
 *paludis-0.82.0 (17 Nov 2012)
 
