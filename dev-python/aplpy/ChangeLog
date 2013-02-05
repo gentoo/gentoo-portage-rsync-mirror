@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/aplpy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/ChangeLog,v 1.9 2012/08/02 18:07:23 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/ChangeLog,v 1.10 2013/02/05 22:42:52 bicatali Exp $
+
+*aplpy-0.9.8-r1 (05 Feb 2013)
+
+  05 Feb 2013; Sébastien Fabbro <bicatali@gentoo.org> +aplpy-0.9.8-r1.ebuild,
+  -aplpy-0.9.7.ebuild, metadata.xml:
+  Switch to distutils-r1
 
   02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> aplpy-0.9.8.ebuild:
   Keyword amd64-linux and x86-linux

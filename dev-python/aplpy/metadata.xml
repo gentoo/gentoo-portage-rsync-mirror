@@ -9,4 +9,7 @@
   capable of creating output files in several graphical formats,
   including EPS, PDF, PS, PNG, and SVG.
 </longdescription>
+<upstream>
+  <remote-id type="pypi">APLpy</remote-id>
+</upstream>
 </pkgmetadata>

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycurl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.78 2012/09/29 18:44:44 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.79 2013/02/05 22:37:49 mgorny Exp $
+
+*pycurl-7.19.0-r2 (05 Feb 2013)
+
+  05 Feb 2013; Michał Górny <mgorny@gentoo.org> +pycurl-7.19.0-r2.ebuild:
+  Migrate to distutils-r1.
 
   29 Sep 2012; Raúl Porcel <armin76@gentoo.org> pycurl-7.19.0-r1.ebuild:
   alpha/ia64/sparc stable wrt #434126

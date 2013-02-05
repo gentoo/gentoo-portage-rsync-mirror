@@ -1,50 +1,58 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09.ebuild,v 1.1 2012/12/02 16:29:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09.ebuild,v 1.2 2013/02/05 22:40:34 jer Exp $
 
-EAPI=2
-
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Image viewers for the framebuffer console (fbi) and X11 (ida)."
-HOMEPAGE="http://linux.bytesex.org/fbida/"
-SRC_URI="http://dl.bytesex.org/releases/${PN}/${P}.tar.gz
+HOMEPAGE="http://www.kraxel.org/blog/linux/fbida/"
+SRC_URI="http://www.kraxel.org/releases/${PN}/${P}.tar.gz
 	mirror://gentoo/ida.png.bz2" #370901
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="curl fbcon gif imagemagick lirc pdf png scanner tiff X"
 
-RDEPEND="png? ( media-libs/libpng )
-	gif? ( media-libs/giflib )
-	pdf? ( app-text/ghostscript-gpl media-libs/tiff )
-	tiff? ( media-libs/tiff )
+RDEPEND="
 	curl? ( net-misc/curl )
+	gif? ( media-libs/giflib )
 	lirc? ( app-misc/lirc )
-	imagemagick? ( || ( media-gfx/imagemagick
-		media-gfx/graphicsmagick[imagemagick] ) )
+	pdf? ( app-text/ghostscript-gpl media-libs/tiff )
+	png? ( media-libs/libpng )
+	tiff? ( media-libs/tiff )
+	imagemagick? (
+		|| (
+			media-gfx/imagemagick
+			media-gfx/graphicsmagick[imagemagick]
+		)
+	)
 	scanner? ( media-gfx/sane-backends )
-	X? ( x11-libs/libX11
-		x11-libs/libXt
-		x11-libs/libXpm
+	X? (
 		>=x11-libs/motif-2.3:0
+		x11-libs/libX11
+		x11-libs/libXpm
+		x11-libs/libXt
 	)
 	!media-gfx/fbi
-	virtual/jpeg
-	media-libs/libexif
-	>=media-libs/freetype-2.0
 	>=media-libs/fontconfig-2.2
-	virtual/ttf-fonts"
+	>=media-libs/freetype-2.0
+	media-libs/libexif
+	virtual/jpeg
+	virtual/ttf-fonts
+"
 
-DEPEND="${RDEPEND}
-	X? ( x11-proto/xextproto x11-proto/xproto )"
+DEPEND="
+	${RDEPEND}
+	X? ( x11-proto/xextproto x11-proto/xproto )
+"
 
 src_prepare() {
-	sed -e 's/DGifOpenFileName,ungif/DGifOpenFileName,gif/' \
-		-e 's/-lungif/-lgif/' -i "${S}/GNUmakefile"
+	sed -e 's:DGifOpenFileName,ungif:DGifOpenFileName,gif:' \
+		-e 's:-lungif:-lgif:' -i "${S}/GNUmakefile"
 
-	if [[ `gcc-major-version` -lt 4 ]]; then
-		sed	-e 's/-Wno-pointer-sign//' -i "${S}/GNUmakefile"
+	if [[ $(gcc-major-version) -lt 4 ]]; then
+		sed	-e 's:-Wno-pointer-sign::' -i "${S}/GNUmakefile" || die
 	fi
 
 	epatch "${FILESDIR}"/ida-desktop.patch
@@ -54,7 +62,7 @@ src_prepare() {
 src_configure() {
 	# Let autoconf do its job and then fix things to build fbida
 	# according to our specifications
-	emake Make.config || die
+	emake Make.config
 
 	set_feat() {
 		local useflag=${1}
@@ -65,7 +73,9 @@ src_configure() {
 			option="no"
 		fi
 
-		sed -e "s/${config}.*/${config} := ${option}/" -i "${S}/Make.config"
+		sed -i \
+			-e "s|${config}.*|${config} := ${option}|" \
+			"${S}/Make.config" || die
 	}
 
 	set_feat fbcon 	HAVE_LINUX_FB_H
@@ -82,12 +92,17 @@ src_configure() {
 	set_feat imagemagick HAVE_LIBMAGICK
 }
 
+src_compile() {
+	emake verbose=yes
+}
+
 src_install() {
-	make \
+	emake \
 		DESTDIR="${D}" \
 		STRIP="" \
 		prefix=/usr \
-		install || die
+		install
+
 	dodoc README
 
 	if ! use pdf; then
