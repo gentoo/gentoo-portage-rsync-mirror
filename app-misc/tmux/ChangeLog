@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.90 2013/02/04 19:48:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.91 2013/02/05 03:34:03 radhermit Exp $
+
+  05 Feb 2013; Tim Harder <radhermit@gentoo.org> tmux-9999.ebuild:
+  Update EGIT_REPO_URI.
 
   04 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tmux-1.6.ebuild,
   tmux-1.7-r1.ebuild, tmux-1.7-r2.ebuild, tmux-1.7.ebuild, tmux-9999.ebuild:

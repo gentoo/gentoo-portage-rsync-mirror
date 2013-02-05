@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-9999.ebuild,v 1.7 2013/01/08 15:12:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-9999.ebuild,v 1.8 2013/02/05 03:34:03 radhermit Exp $
 
 EAPI=4
 
 inherit autotools git-2 bash-completion-r1
 
-EGIT_REPO_URI="git://tmux.git.sourceforge.net/gitroot/tmux/tmux"
+EGIT_REPO_URI="git://git.code.sf.net/p/tmux/tmux-code"
+EGIT_PROJECT="tmux"
 
 DESCRIPTION="Terminal multiplexer"
 HOMEPAGE="http://tmux.sourceforge.net"
