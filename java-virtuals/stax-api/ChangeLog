@@ -1,6 +1,9 @@
 # ChangeLog for java-virtuals/stax-api
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/stax-api/ChangeLog,v 1.19 2012/10/04 17:40:49 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/stax-api/ChangeLog,v 1.20 2013/02/05 06:10:19 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> stax-api-1-r4.ebuild:
+  adding ~arm
 
   04 Oct 2012; Ralph Sennhauser <sera@gentoo.org> stax-api-1-r4.ebuild:
   Change license to public-domain. #426800

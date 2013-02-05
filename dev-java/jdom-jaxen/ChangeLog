@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdom-jaxen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/ChangeLog,v 1.16 2012/04/15 18:16:41 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom-jaxen/ChangeLog,v 1.17 2013/02/05 06:02:47 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> jdom-jaxen-1.0-r1.ebuild:
+  adding ~arm
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> jdom-jaxen-1.0-r1.ebuild:
   Add back ia64 love #349020 by Dennis Schridde.
@@ -76,4 +79,3 @@
   +jdom-jaxen-1.0.ebuild:
   Splitting jdom's jaxen class into separate package to avoid circular
   dependencies.
-

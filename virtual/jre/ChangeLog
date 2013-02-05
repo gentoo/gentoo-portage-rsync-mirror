@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jre
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.42 2012/12/08 12:35:25 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.43 2013/02/05 06:09:20 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> jre-1.6.0.ebuild:
+  adding ~arm
 
   08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> jre-1.5.0-r1.ebuild:
   Stable for ppc64, wrt bug #425618

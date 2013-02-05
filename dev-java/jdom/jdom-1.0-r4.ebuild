@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0-r4.ebuild,v 1.12 2012/04/15 18:17:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0-r4.ebuild,v 1.13 2013/02/05 06:03:21 zerochaos Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.jdom.org/dist/source/archive/${P}.tar.gz"
 HOMEPAGE="http://www.jdom.org"
 LICENSE="JDOM"
 SLOT="${PV}"
-KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm ~ia64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 COMMON_DEP="dev-java/saxpath
 		>=dev-java/xerces-2.7"
 RDEPEND=">=virtual/jre-1.4

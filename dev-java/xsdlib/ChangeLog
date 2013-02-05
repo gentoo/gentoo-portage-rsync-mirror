@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xsdlib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.40 2012/12/08 15:59:54 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xsdlib/ChangeLog,v 1.41 2013/02/05 06:14:24 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> xsdlib-20090415.ebuild:
+  adding ~arm
 
   08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xsdlib-20090415.ebuild:
   Stable for ppc64, wrt bug #428946
