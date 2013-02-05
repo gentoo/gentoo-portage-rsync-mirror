@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.4.2.ebuild,v 1.1 2013/01/17 19:09:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.4.2.ebuild,v 1.2 2013/02/05 13:42:01 ssuominen Exp $
 
 EAPI=4
 
-inherit eutils multilib versionator
+inherit eutils multilib versionator udev
 
 LICENSE="GPL-2"
 
@@ -31,6 +31,7 @@ src_prepare() {
 		scripts/Makefile.in || die
 	# don't participate in user survey bug 360483
 	sed -i -e '/usage-count/ s/yes/no/' scripts/drbd.conf.example || die
+	sed -i -e "s:\$(sysconfdir)/udev:$(get_udevdir):" scripts/Makefile.in || die
 }
 
 src_configure() {

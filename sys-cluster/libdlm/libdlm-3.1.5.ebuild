@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libdlm/libdlm-3.1.5.ebuild,v 1.2 2011/10/18 20:54:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libdlm/libdlm-3.1.5.ebuild,v 1.3 2013/02/05 13:37:26 ssuominen Exp $
 
 EAPI=4
 
@@ -28,13 +28,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=sys-kernel/linux-headers-2.6.24"
 
-S="${WORKDIR}/${MY_P}/dlm"
-
-src_prepare() {
-	sed -i \
-		-e "s|/lib|/$(get_libdir)|g" \
-		"${WORKDIR}/${MY_P}/make/install.mk" || die "sed failed"
-}
+S=${WORKDIR}/${MY_P}/dlm
 
 src_configure() {
 	cd "${WORKDIR}/${MY_P}"

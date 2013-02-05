@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.19_p20121013.ebuild,v 1.2 2013/01/06 03:54:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/razercfg-0.19_p20121013.ebuild,v 1.3 2013/02/05 13:54:50 ssuominen Exp $
 
 EAPI=4
 
-inherit cmake-utils multilib eutils
+inherit cmake-utils multilib eutils udev
 
 DESCRIPTION="Utility for advanced configuration of Razer mice (DeathAdder, Krait, Lachesis)"
 
@@ -28,7 +28,7 @@ src_prepare() {
 	sed -i \
 		-e '/ldconfig/{N;d}' \
 		-e '/udevadm control/{N;d}' \
-		-e "s:/etc/udev/rules.d/:/$(get_libdir)/udev/rules.d/:" \
+		-e "s:/etc/udev/rules.d/:$(get_udevdir)/rules.d/:" \
 		-e 's:01-razer-udev.rules:40-razercfg.rules:' \
 		-e "s:/etc/pm/sleep.d:/usr/$(get_libdir)/pm-utils/sleep.d/:" \
 		-e 's:50-razer:80razer:' \
