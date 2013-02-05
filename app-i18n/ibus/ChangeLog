@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.118 2013/01/28 10:13:35 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.119 2013/02/05 11:03:58 yngwin Exp $
+
+*ibus-1.5.1 (05 Feb 2013)
+
+  05 Feb 2013; Ben de Groot <yngwin@gentoo.org> +ibus-1.5.1.ebuild:
+  version bump, bug #447188
 
   28 Jan 2013; Naohiro Aota <naota@gentoo.org>
   +files/ibus-1.4.1-libxslt-1.1.27.patch, ibus-1.4.1.ebuild, ibus-1.4.2.ebuild:
