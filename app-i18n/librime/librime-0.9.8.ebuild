@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-0.9.6.ebuild,v 1.2 2013/01/28 06:48:48 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-0.9.8.ebuild,v 1.1 2013/02/05 10:25:33 yngwin Exp $
 
-EAPI=4
+EAPI=5
 
-inherit cmake-utils multilib vcs-snapshot
+inherit cmake-utils multilib
 
 DESCRIPTION="Rime Input Method Engine library"
 HOMEPAGE="http://code.google.com/p/rimeime/"
-SRC_URI="https://github.com/lotem/${PN}/tarball/rime-${PV} -> ${P}.tar.gz"
+SRC_URI="http://rimeime.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -23,6 +23,8 @@ RDEPEND="app-i18n/opencc
 	sys-libs/zlib
 	x11-proto/xproto"
 DEPEND="${RDEPEND}"
+
+S=${WORKDIR}/${PN}
 
 src_configure() {
 	local mycmakeargs=(
