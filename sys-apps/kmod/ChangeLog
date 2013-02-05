@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.69 2013/01/27 13:53:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.70 2013/02/05 16:01:09 ssuominen Exp $
+
+  05 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> kmod-12-r1.ebuild,
+  kmod-9999.ebuild:
+  Ensure CONFIG_MODULES is set using linux-info.eclass by Agostino Sarubbo
 
   27 Jan 2013; Agostino Sarubbo <ago@gentoo.org> kmod-12-r1.ebuild:
   Stable for ppc, wrt bug #452556

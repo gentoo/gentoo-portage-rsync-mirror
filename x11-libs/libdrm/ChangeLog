@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.216 2013/01/08 17:04:25 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.217 2013/02/05 15:46:00 chithanh Exp $
+
+*libdrm-2.4.42 (05 Feb 2013)
+
+  05 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libdrm-2.4.42.ebuild:
+  Version bump, bug #453690.
 
   08 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -files/libdrm-2.4.23-solaris.patch, -libdrm-2.4.25.ebuild,

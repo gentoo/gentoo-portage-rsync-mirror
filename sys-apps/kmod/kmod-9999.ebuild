@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.46 2013/01/18 17:01:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.47 2013/02/05 16:01:09 ssuominen Exp $
 
 EAPI=4
 
-inherit autotools eutils libtool multilib
+inherit autotools eutils libtool multilib linux-info
 
 if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/kernel/${PN}/${PN}.git"
@@ -36,6 +36,12 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )
 	lzma? ( virtual/pkgconfig )
 	zlib? ( virtual/pkgconfig )"
+
+pkg_setup() {
+	CONFIG_CHECK="~MODULES"
+
+	linux-info_pkg_setup
+}
 
 src_prepare()
 {
