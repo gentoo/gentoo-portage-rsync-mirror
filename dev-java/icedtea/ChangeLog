@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.88 2013/02/01 09:12:46 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.89 2013/02/05 07:33:54 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> icedtea-6.1.12.0.ebuild:
+  adding ~arm
 
   01 Feb 2013; Ralph Sennhauser <sera@gentoo.org> icedtea-6.1.12.0.ebuild,
   +files/icedtea-6.1.12.0-parallel-unpack.patch, icedtea-7.2.3.4.ebuild,
@@ -494,4 +497,3 @@
   +files/generate-cacerts.pl, +files/icedtea.env, +metadata.xml:
   Import of ebuild by Andrew John Hughes (gnu_andrew@member.fsf.org) from
   java-overlay.
-

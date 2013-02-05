@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.12.0.ebuild,v 1.2 2013/02/01 09:12:46 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.12.0.ebuild,v 1.3 2013/02/05 07:33:54 zerochaos Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -35,7 +35,7 @@ SRC_URI="
 
 LICENSE="Apache-1.1 Apache-2.0 GPL-1 GPL-2 GPL-2-with-linking-exception LGPL-2 MPL-1.0 MPL-1.1 public-domain W3C"
 SLOT="6"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86"
 
 IUSE="+X +alsa cacao cjk +cups debug doc examples javascript +jbootstrap +nsplugin
 	+nss pax_kernel pulseaudio +source systemtap test +webstart"

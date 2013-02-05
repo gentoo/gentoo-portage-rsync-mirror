@@ -1,6 +1,16 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.48 2013/02/02 22:44:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.50 2013/02/05 07:35:51 jlec Exp $
+
+  05 Feb 2013; Justin Lecher <jlec@gentoo.org> shotwell-0.13.1-r1.ebuild,
+  shotwell-0.13.1-r2.ebuild:
+  Propagate ~arm
+
+*shotwell-0.13.1-r2 (05 Feb 2013)
+
+  05 Feb 2013; Justin Lecher <jlec@gentoo.org> shotwell-0.13.1-r1.ebuild,
+  +shotwell-0.13.1-r2.ebuild:
+  EAPI bumpd and usage of subslots for libgphoto2, #455500
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> shotwell-0.13.1.ebuild:
   Add ~arm, wrt bug #449220

@@ -48,11 +48,6 @@ grace
 # media-gfx/gimp not tested.
 gimp
 
-# Paul de Vrieze <pauldv@gentoo.org>
-# There is no java in this profile (if there is it must be available). Without
-# this repoman will fail on apps like sys-libs/db
-java
-
 # No hardware to test by the team
 dvb
 ios

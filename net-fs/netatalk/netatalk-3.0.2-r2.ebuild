@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.0.2-r1.ebuild,v 1.1 2013/02/04 08:25:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.0.2-r2.ebuild,v 1.1 2013/02/05 07:45:01 jlec Exp $
 
 EAPI=4
 
@@ -104,9 +104,9 @@ src_install() {
 
 	sed \
 		-e "s|:SBINDIR:|${EPREFIX}/usr/sbin|g" \
-		distrib/initscripts service.systemd.tmpl \
+		distrib/initscripts/service.systemd.tmpl \
 		> "${T}"/service.systemd || die
-	systemd_newunit "${T}"/service.systemd ${P}.service
+	systemd_newunit "${T}"/service.systemd ${PN}.service
 }
 
 pkg_postinst() {
