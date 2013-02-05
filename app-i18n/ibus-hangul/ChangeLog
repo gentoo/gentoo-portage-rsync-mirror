@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus-hangul
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ChangeLog,v 1.25 2012/06/13 07:04:16 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ChangeLog,v 1.26 2013/02/05 11:37:36 yngwin Exp $
+
+*ibus-hangul-1.4.2 (05 Feb 2013)
+
+  05 Feb 2013; Ben de Groot <yngwin@gentoo.org> +ibus-hangul-1.4.2.ebuild:
+  version bump
 
   13 Jun 2012; Naohiro Aota <naota@gentoo.org> ibus-hangul-1.4.1.ebuild:
   setup/ibus-setup-hangul.in is no longer python script. Replace its "python"
@@ -129,4 +134,3 @@
   06 Sep 2008; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
   +ibus-hangul-0.1.1.20080901.ebuild:
   Initial import. Submitted by Hong Hao, bug 236471.
-

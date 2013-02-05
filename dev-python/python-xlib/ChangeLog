@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-xlib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.38 2011/08/15 08:00:58 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.39 2013/02/05 11:48:32 idella4 Exp $
+
+  05 Feb 2013; Ian Delaney <idella4@gentoo.org> +files/defs,
+  python-xlib-0.15_rc1-r1.ebuild:
+  Add file defs to newly made files/ by virtue of upstream missing it in the
+  source tarball in -0.15_rc1-r1, fix to jobserver issue by sed statement, fixes
+  Bug #454836 by flameeyes, see https://sourceforge.net/p/python-xlib/bugs/39/
 
   15 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
   python-xlib-0.15_rc1.ebuild:
