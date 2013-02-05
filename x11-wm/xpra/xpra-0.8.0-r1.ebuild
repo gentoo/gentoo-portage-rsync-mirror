@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.8.0.ebuild,v 1.1 2013/02/01 11:37:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.8.0-r1.ebuild,v 1.1 2013/02/05 08:01:54 xmw Exp $
 
 EAPI=5
 
@@ -61,7 +61,7 @@ python_prepare_all() {
 src_install() {
 	distutils-r1_src_install
 
-	rm -v "${ED}"usr/share/parti/{parti.,}README \
+	rm -vf "${ED}"usr/share/parti/{parti.,}README \
 		"${ED}"usr/share/xpra/{webm/LICENSE,xpra.README} \
 		"${ED}"usr/share/wimpiggy/wimpiggy.README || die
 	dodoc {parti.,wimpiggy.,xpra.,}README
