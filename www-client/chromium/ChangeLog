@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.801 2013/01/31 01:22:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.802 2013/02/05 10:31:43 phajdan.jr Exp $
+
+*chromium-26.0.1403.0 (05 Feb 2013)
+
+  05 Feb 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-gpsd-r0.patch, +files/chromium-system-v8-r0.patch,
+  +chromium-26.0.1403.0.ebuild, chromium-9999-r1.ebuild:
+  Dev channel bump. Back to bundled libvpx and bigger tarball. Use system mesa
+  and re2. Add optional support for libgps. Remove old.
 
 *chromium-25.0.1364.58 (31 Jan 2013)
 
