@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javacup
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.32 2012/04/15 18:03:30 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.33 2013/02/05 06:40:50 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org>
+  javacup-0.11a_beta20060608.ebuild:
+  adding ~arm
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org>
   javacup-0.11a_beta20060608.ebuild:
@@ -121,4 +125,3 @@
   19 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   +javacup-0.10k.ebuild:
   initial import, ebuild created me, as a dep
-

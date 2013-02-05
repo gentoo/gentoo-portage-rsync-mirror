@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/javacup-0.11a_beta20060608.ebuild,v 1.13 2012/04/15 18:03:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/javacup-0.11a_beta20060608.ebuild,v 1.14 2013/02/05 06:40:50 zerochaos Exp $
 
 JAVA_PKG_IUSE="source doc"
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm ~ia64 ppc ppc64 x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="userland_BSD"
 
 # find for bug #214664

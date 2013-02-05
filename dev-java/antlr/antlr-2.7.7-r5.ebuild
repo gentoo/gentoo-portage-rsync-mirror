@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7-r5.ebuild,v 1.3 2012/05/11 02:48:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7-r5.ebuild,v 1.4 2013/02/05 06:54:43 zerochaos Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -13,7 +13,7 @@ SRC_URI="http://www.antlr2.org/download/${P}.tar.gz"
 
 LICENSE="ANTLR"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc debug examples mono +cxx +java python script source static-libs"
 
 # TODO do we actually need jdk at runtime?

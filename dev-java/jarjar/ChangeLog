@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jarjar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.31 2012/04/15 18:19:05 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.32 2013/02/05 06:45:08 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> jarjar-0.9.ebuild:
+  adding ~arm
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> jarjar-0.9.ebuild:
   Add back ia64 love #349020 by Dennis Schridde.
@@ -119,4 +122,3 @@
   05 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
   +files/asm-2.0_alpha-buildfile.patch, +jarjar-0.4_p20050105.ebuild:
   Initial import. Dependency of #67395.
-

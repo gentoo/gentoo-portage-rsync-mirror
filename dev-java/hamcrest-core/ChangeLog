@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/hamcrest-core
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-core/ChangeLog,v 1.12 2012/04/15 18:24:20 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-core/ChangeLog,v 1.13 2013/02/05 06:47:09 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> hamcrest-core-1.1.ebuild:
+  adding ~arm
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> hamcrest-core-1.1.ebuild:
   Add back ia64 love #349020 by Dennis Schridde.
@@ -45,4 +48,3 @@
   +hamcrest-core-1.1.ebuild:
   Initial commit as junit-4.4 dependency, based on fordfrog's ebuild from
   java-overlay.
-

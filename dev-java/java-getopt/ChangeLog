@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-getopt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/ChangeLog,v 1.23 2012/04/15 18:18:13 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-getopt/ChangeLog,v 1.24 2013/02/05 06:32:41 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> java-getopt-1.0.13.ebuild:
+  adding ~arm
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> java-getopt-1.0.13.ebuild:
   Add back ia64 love #349020 by Dennis Schridde.
@@ -84,4 +87,3 @@
  
   11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Added missing changelog entry.
-

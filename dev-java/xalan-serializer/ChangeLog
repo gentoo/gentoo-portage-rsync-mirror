@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xalan-serializer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan-serializer/ChangeLog,v 1.14 2012/04/15 18:05:05 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan-serializer/ChangeLog,v 1.15 2013/02/05 06:38:12 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> xalan-serializer-2.7.1.ebuild:
+  adding ~arm
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org>
   xalan-serializer-2.7.1.ebuild:
@@ -61,4 +64,3 @@
   +xalan-serializer-2.7.0.ebuild:
   New package for serializer.jar from xalan, now used by both xalan and xerces
   - bug #156258.
-

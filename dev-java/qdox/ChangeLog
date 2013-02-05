@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/qdox
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.30 2012/12/10 17:31:39 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.31 2013/02/05 06:46:42 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> qdox-1.6.3.ebuild:
+  adding ~arm
 
   10 Dec 2012; Agostino Sarubbo <ago@gentoo.org> qdox-1.12.ebuild:
   Add ~ppc, wrt bug #401145
@@ -111,4 +114,3 @@
   04 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
   +qdox-20050104.ebuild:
   Initial import. Ebuild provides by /me. Dependency of #63290.
-

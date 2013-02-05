@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-regexp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/ChangeLog,v 1.28 2012/09/29 17:53:26 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/ChangeLog,v 1.29 2013/02/05 06:31:09 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> gnu-regexp-1.1.4-r2.ebuild:
+  adding ~arm
 
   29 Sep 2012; Fabian Groffen <grobian@gentoo.org> gnu-regexp-1.1.4-r2.ebuild:
   Marked ~x64-macos

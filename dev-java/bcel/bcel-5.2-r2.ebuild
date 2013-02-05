@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.2-r2.ebuild,v 1.9 2012/04/15 18:03:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.2-r2.ebuild,v 1.10 2013/02/05 06:39:33 zerochaos Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://apache/jakarta/${PN}/source/${P}-src.tar.gz
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm ~ia64 ppc ppc64 x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="-findbugs"
 
 RDEPEND=">=virtual/jre-1.5"

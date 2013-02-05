@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/stringtemplate
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/stringtemplate/ChangeLog,v 1.12 2012/04/15 18:35:04 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/stringtemplate/ChangeLog,v 1.13 2013/02/05 07:00:11 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> stringtemplate-3.2.1.ebuild,
+  stringtemplate-3.2.ebuild:
+  adding ~arm
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> stringtemplate-3.2.1.ebuild:
   Add back ia64 love #349020 by Dennis Schridde.
@@ -47,4 +51,3 @@
   +stringtemplate-3.2.ebuild:
   Moving stringtemplate to the main tree from java-experimental. Several Java
   team members showed in the logs. Part of bug #146952.
-
