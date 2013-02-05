@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/shrimp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/ChangeLog,v 1.17 2013/01/23 10:06:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/ChangeLog,v 1.18 2013/02/05 18:26:59 ulm Exp $
+
+  05 Feb 2013; Ulrich Müller <ulm@gentoo.org> shrimp-2.0.1.ebuild,
+  shrimp-2.1.0.ebuild, shrimp-2.2.3.ebuild:
+  Specify LICENSE more precisely, see LICENSE file, bug 455566.
 
   23 Jan 2013; Patrick Lauer <patrick@gentoo.org> shrimp-2.0.1.ebuild,
   shrimp-2.1.0.ebuild, shrimp-2.2.3.ebuild:

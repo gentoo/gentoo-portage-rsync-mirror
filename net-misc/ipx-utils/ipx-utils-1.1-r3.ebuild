@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ipx-utils-1.1-r3.ebuild,v 1.6 2012/07/29 17:19:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipx-utils/ipx-utils-1.1-r3.ebuild,v 1.7 2013/02/05 18:17:09 ulm Exp $
 
 EAPI="4"
 inherit eutils
@@ -9,7 +9,7 @@ DESCRIPTION="The IPX Utilities"
 HOMEPAGE="ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ncpfs/"
 SRC_URI="ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ncpfs/${P/-utils}.tar.gz"
 
-LICENSE="Caldera GPL-2"
+LICENSE="ipx-utils GPL-2" # GPL-2 only for init script
 SLOT="0"
 KEYWORDS="amd64 ppc64 x86"
 IUSE=""
@@ -30,5 +30,5 @@ src_install() {
 	emake DESTDIR="${D}" install
 
 	newconfd "${FILESDIR}"/ipx.confd ipx
-	newinitd "${FILESDIR}"/ipx.init-r1 ipx
+	newinitd "${FILESDIR}"/ipx.init ipx
 }

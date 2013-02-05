@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>ford_prefect@gentoo.org</email>
-    <name>Arun Raghavan</name>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <longdescription lang="en">
     xesam-tools provides a set of tools and examples to help developers

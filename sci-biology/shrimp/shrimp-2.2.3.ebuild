@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/shrimp-2.2.3.ebuild,v 1.2 2013/01/23 10:06:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/shrimp-2.2.3.ebuild,v 1.3 2013/02/05 18:26:59 ulm Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ DESCRIPTION="SHort Read Mapping Package"
 HOMEPAGE="http://compbio.cs.toronto.edu/shrimp/"
 SRC_URI="http://compbio.cs.toronto.edu/shrimp/releases/SHRiMP_${MY_PV}.src.tar.gz"
 
-LICENSE="as-is"
+LICENSE="shrimp"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="custom-cflags"

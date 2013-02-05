@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xesam-tools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xesam-tools/ChangeLog,v 1.6 2011/10/24 05:44:03 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xesam-tools/ChangeLog,v 1.7 2013/02/05 18:24:05 pacho Exp $
+
+  05 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup after talking with Ford_Prefect
 
   24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   xesam-tools-0.7.0.ebuild:
@@ -29,4 +32,3 @@
   20 Mar 2009; Arun Raghavan <ford_prefect@gentoo.org> +metadata.xml,
   +xesam-tools-0.6.1.ebuild:
   Initial commit.
-

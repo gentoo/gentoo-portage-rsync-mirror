@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>ford_prefect@gentoo.org</email>
-    <name>Arun Raghavan</name>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <use>
 	<flag name="faac">Use external faac library for AAC encoding</flag>

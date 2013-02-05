@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mutrace
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mutrace/ChangeLog,v 1.2 2009/11/23 10:05:19 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mutrace/ChangeLog,v 1.3 2013/02/05 18:23:20 pacho Exp $
+
+  05 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup after talking with Ford_Prefect
 
   23 Nov 2009; Robin H. Johnson <robbat2@gentoo.org> mutrace-0.2.ebuild:
   Works on amd64 and arm.
@@ -10,4 +13,3 @@
   26 Oct 2009; Arun Raghavan <ford_prefect@gentoo.org> +mutrace-0.2.ebuild,
   +metadata.xml:
   Initial commit
-

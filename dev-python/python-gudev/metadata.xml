@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>ford_prefect@gentoo.org</email>
-	</maintainer>
+<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>laurento.frittella@gmail.com</email>
 		<description>Proxy Maintainer (please CC on bugs)</description>

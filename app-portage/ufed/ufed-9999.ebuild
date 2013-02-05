@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-9999.ebuild,v 1.1 2012/11/20 18:22:58 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-9999.ebuild,v 1.2 2013/02/05 18:10:33 fuzzyray Exp $
 
 EAPI=4
 
-inherit eutils multilib git-2 autotools prefix
+inherit eutils multilib git-2 autotools
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/ufed.git"
 
@@ -24,7 +24,6 @@ RDEPEND="${DEPEND}
 src_prepare() {
 	# Change the version number to reflect the ebuild version
 	sed -i "s:,\[git\],:,\[9999-${EGIT_VERSION}\],:" configure.ac
-	eprefixify ufed.8
 	eautoreconf
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/google-gdata-sharp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/ChangeLog,v 1.9 2010/12/22 11:38:34 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/google-gdata-sharp/ChangeLog,v 1.10 2013/02/05 18:20:30 pacho Exp $
+
+  05 Feb 2013; Pacho Ramos <pacho@gentoo.org>
+  -google-gdata-sharp-1.4.0.2.ebuild, metadata.xml:
+  Cleanup after talking with Ford_Prefect
 
   22 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
   google-gdata-sharp-1.4.0.2-r2.ebuild:
@@ -49,4 +53,3 @@
   +google-gdata-sharp-1.4.0.2.ebuild, +files/pkgconfig-typo-fix.patch,
   +metadata.xml:
   Initial commit of C# bindings for the GData API.
-
