@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.450 2013/02/04 02:38:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.451 2013/02/05 15:24:10 tetromino Exp $
+
+  05 Feb 2013; Alexandre Rostovtsev <tetromino@gentoo.org> -wine-1.5.23.ebuild,
+  wine-1.5.23-r1.ebuild, wine-9999.ebuild:
+  Starting with 1.5.23, SSL/TLS support requires both gnutls (for secur32.dll
+  and winhttp.dll) and openssl (for wininet.dll); thanks to Jan Psota for
+  noticing. Remove broken 1.5.23.ebuild.
 
 *wine-1.5.23-r1 (04 Feb 2013)
 
