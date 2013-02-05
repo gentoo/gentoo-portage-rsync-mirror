@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.82 2013/01/20 18:47:26 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.83 2013/02/05 13:04:13 yngwin Exp $
+
+*kdenlive-0.9.4 (05 Feb 2013)
+
+  05 Feb 2013; Ben de Groot <yngwin@gentoo.org> +kdenlive-0.9.4.ebuild:
+  version bump
 
   20 Jan 2013; Ben de Groot <yngwin@gentoo.org> kdenlive-0.9.2.ebuild:
   update mlt dep, because of useflag changes

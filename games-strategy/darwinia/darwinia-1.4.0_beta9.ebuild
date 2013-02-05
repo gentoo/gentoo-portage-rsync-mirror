@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.12 2012/02/05 06:22:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.13 2013/02/05 13:16:45 tupone Exp $
 
 CDROM_OPTIONAL="yes"
 inherit eutils unpacker cdrom games
@@ -33,6 +33,7 @@ RDEPEND="
 S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/${PN}
+QA_PREBUILT="${dir:1}/lib/darwinia.bin.x86"
 
 src_unpack() {
 	use cdinstall && cdrom_get_cds gamefiles/main.dat

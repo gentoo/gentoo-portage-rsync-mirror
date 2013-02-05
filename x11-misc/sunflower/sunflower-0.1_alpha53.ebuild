@@ -1,11 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/sunflower-0.1_alpha52.ebuild,v 1.3 2013/01/31 19:57:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/sunflower-0.1_alpha53.ebuild,v 1.1 2013/02/05 13:12:38 hasufell Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
-inherit eutils fdo-mime gnome2-utils python-r1
+PLOCALES="bg cs de es hu pl ru uk_UA"
+inherit eutils fdo-mime gnome2-utils l10n python-r1
 
 MY_PV="${PV%_alpha*}a-${PV#*_alpha}"
 MY_PN="Sunflower"
@@ -27,7 +28,8 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/${MY_PN}
 
 src_prepare() {
-	find "${S}" -name "*.py[co]" -delete
+	find "${S}" -name "*.py[co]" -delete || die
+	find "${S}"/translations -name "*.po" -delete || die
 
 	sed -i \
 		-e '/^application_file/s/os.path.dirname(sys.argv\[0\])/os.getcwd()/' \
@@ -39,7 +41,7 @@ src_install() {
 	installme() {
 		# install modules
 		python_moduleinto ${PN}
-		python_domodule images translations application ${MY_PN}.py \
+		python_domodule images application ${MY_PN}.py \
 			AUTHORS CHANGES COPYING DEPENDS TODO __init__.py
 
 		# generate and install startup scripts
@@ -51,6 +53,9 @@ src_install() {
 
 	# install for all enabled implementations
 	python_foreach_impl installme
+
+	installlocale() { insinto /usr/share/locale ; doins -r "${S}"/translations/${1} ;}
+	l10n_for_each_locale_do installlocale
 
 	newicon -s 64 images/${PN}_64.png ${PN}.png
 	doicon -s scalable images/${PN}.svg

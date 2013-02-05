@@ -1,10 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwimax/madwimax-0.1.1.ebuild,v 1.5 2012/05/04 06:41:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwimax/madwimax-0.1.1-r1.ebuild,v 1.1 2013/02/05 13:25:23 ssuominen Exp $
 
-EAPI="3"
-
-inherit autotools linux-info
+EAPI=5
+inherit autotools linux-info udev
 
 DESCRIPTION="A reverse-engineered Linux driver for mobile WiMAX devices based on Samsung CMC-730 chip."
 HOMEPAGE="http://code.google.com/p/madwimax/"
@@ -17,11 +16,12 @@ IUSE="doc"
 
 RDEPEND="virtual/libusb:1"
 DEPEND="${RDEPEND}
-		virtual/pkgconfig
-		doc? (
-			app-text/asciidoc
-			app-text/docbook2X
-		)"
+	virtual/pkgconfig
+	doc? (
+		app-text/asciidoc
+		app-text/docbook2X
+	)"
+
 CONFIG_CHECK="~TUN"
 
 src_prepare() {
@@ -30,14 +30,13 @@ src_prepare() {
 }
 
 src_configure() {
-	if ! use doc; then
-		myconf="--without-man-pages"
-	fi
-	econf ${myconf} || die "econf failed"
+	local myconf
+	use doc || myconf="--without-man-pages"
+	econf ${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	mv "${D}"/etc/udev/rules.d/{z,}60_madwimax.rules || die
+	emake DESTDIR="${D}" udevrulesdir="$(get_udevdir)"/rules.d install
+	mv "${ED}/$(get_udevdir)"/rules.d/{z60_,60-}madwimax.rules || die
 	dodoc README
 }
