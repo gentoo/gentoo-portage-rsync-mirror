@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/lincity
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/ChangeLog,v 1.18 2010/01/12 23:40:13 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/ChangeLog,v 1.19 2013/02/05 02:07:46 hasufell Exp $
+
+*lincity-1.13.1 (05 Feb 2013)
+
+  05 Feb 2013; Julian Ospald <hasufell@gentoo.org> +lincity-1.13.1.ebuild:
+  version bump
 
   12 Jan 2010; Michael Sterrett <mr_bones_@gentoo.org>
   lincity-1.12.1.ebuild:

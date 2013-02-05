@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.3.ebuild,v 1.8 2011/10/19 16:15:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.3.ebuild,v 1.9 2013/02/05 02:13:49 dirtyepic Exp $
 
 EAPI=3
 PYTHON_DEPEND=2
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="dev-python/wxpython:2.8
-	dev-python/pyxml"
+RDEPEND="dev-python/wxpython:2.8"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -24,6 +23,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-pyxml.patch
+
 	sed -e "s:), '..')):), '../../../../..', 'share', 'opendict')):g" \
 		-i "${S}/lib/info.py"
 }

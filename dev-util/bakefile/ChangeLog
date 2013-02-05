@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/bakefile
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bakefile/ChangeLog,v 1.4 2012/01/15 19:07:48 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bakefile/ChangeLog,v 1.5 2013/02/05 02:23:59 dirtyepic Exp $
+
+*bakefile-0.2.9 (05 Feb 2013)
+
+  05 Feb 2013; Ryan Hill <dirtyepic@gentoo.org> -bakefile-0.2.6.ebuild,
+  +bakefile-0.2.9.ebuild:
+  Version bump.
 
   15 Jan 2012; Torsten Veller <tove@gentoo.org> bakefile-0.2.6.ebuild,
   bakefile-0.2.8.ebuild:
