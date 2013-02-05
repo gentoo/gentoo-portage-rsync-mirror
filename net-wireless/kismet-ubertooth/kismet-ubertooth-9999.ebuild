@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/kismet-ubertooth-9999.ebuild,v 1.8 2012/10/09 21:22:12 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet-ubertooth/kismet-ubertooth-9999.ebuild,v 1.9 2013/02/05 04:37:27 zerochaos Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit multilib
 
@@ -11,8 +11,10 @@ MY_PV=${MY_PV/./-R}
 S="${WORKDIR}/ubertooth-${MY_PV}"
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://ubertooth.git.sourceforge.net/gitroot/ubertooth/ubertooth"
-	SRC_URI=""
+	EGIT_REPO_URI="http://git.code.sf.net/p/ubertooth/code"
+	EGIT_PROJECT="ubertooth"
+	#EGIT_REPO_URI="git://ubertooth.git.sourceforge.net/gitroot/ubertooth/ubertooth"
+	#SRC_URI=""
 	inherit git-2
 	KEYWORDS=""
 else
