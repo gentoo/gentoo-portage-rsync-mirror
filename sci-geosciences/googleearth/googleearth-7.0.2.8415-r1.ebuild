@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.0.2.8415.ebuild,v 1.3 2013/02/04 23:34:26 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.0.2.8415-r1.ebuild,v 1.1 2013/02/04 23:32:34 hasufell Exp $
 
 EAPI=5
 
@@ -13,7 +13,8 @@ HOMEPAGE="http://earth.google.com/"
 SRC_URI="x86? ( http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb
 			-> GoogleEarthLinux-${PV}_i386.deb )
 	amd64? ( http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
-			-> GoogleEarthLinux-${PV}_amd64.deb ) "
+			-> GoogleEarthLinux-${PV}_amd64.deb )
+	http://dev.gentoo.org/~hasufell/distfiles/googleearth-libexpat-2.1.0-novisibility.tar.xz"
 LICENSE="googleearth GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -80,9 +81,11 @@ pkg_setup() {
 
 src_unpack() {
 	# default src_unpack fails with deb2targz installed, also this unpacks the data.tar.lzma as well
-	unpack_deb ${A}
+	unpack_deb GoogleEarthLinux-${PV}_$(usex amd64 "amd64" "i386").deb
 
 	cd opt/google/earth/free || die
+
+	unpack googleearth-libexpat-2.1.0-novisibility.tar.xz
 
 	if ! use qt-bundled; then
 		rm -v libQt{Core,Gui,Network,WebKit}.so.4 qt.conf || die
@@ -174,12 +177,6 @@ pkg_postinst() {
 	elog "For Intel Q33 (amd64):"
 	elog "	eselect mesa set 32bit i965 2"
 	elog "You may need to restart X afterwards"
-
-	ewarn
-	ewarn "You might need to run:"
-	ewarn "  eselect fontconfig disable 65-fonts-persian.conf"
-	ewarn "or googleearth will segfault, see bug #455124"
-	ewarn
 
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
