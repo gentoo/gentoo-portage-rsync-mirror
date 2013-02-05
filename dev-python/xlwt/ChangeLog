@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xlwt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.15 2013/02/02 12:13:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.16 2013/02/05 00:38:31 heroxbd Exp $
+
+  05 Feb 2013; Benda Xu <heroxbd@gentoo.org> xlwt-0.7.4-r1.ebuild:
+  keyword ~arm
 
 *xlwt-0.7.4-r1 (02 Feb 2013)
 

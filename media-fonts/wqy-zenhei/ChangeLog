@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/wqy-zenhei
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-zenhei/ChangeLog,v 1.11 2010/09/19 06:24:16 dirtyepic Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-zenhei/ChangeLog,v 1.12 2013/02/05 00:53:54 heroxbd Exp $
+
+  05 Feb 2013; Benda Xu <heroxbd@gentoo.org> wqy-zenhei-0.9.45.ebuild:
+  keyword ~arm
 
 *wqy-zenhei-0.9.45 (19 Sep 2010)
 
@@ -55,4 +58,3 @@
   25 May 2008; Ryan Hill <dirtyepic@gentoo.org> +metadata.xml,
   +wqy-zenhei-0.5.23.ebuild:
   Initial import for bug #192781. Based on ebuild by Hong Hao.
-
