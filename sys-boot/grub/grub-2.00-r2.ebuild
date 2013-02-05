@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r2.ebuild,v 1.3 2013/02/04 17:29:22 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r2.ebuild,v 1.4 2013/02/05 17:14:03 floppym Exp $
 
 EAPI=4
 
@@ -46,7 +46,8 @@ GRUB_PLATFORMS=(
 )
 IUSE+=" ${GRUB_PLATFORMS[@]/#/grub_platforms_}"
 
-REQUIRED_USE="grub_platforms_qemu? ( truetype )"
+REQUIRED_USE="grub_platforms_qemu? ( truetype )
+	grub_platforms_yeeloong? ( truetype )"
 
 # os-prober: Used on runtime to detect other OSes
 # xorriso (dev-libs/libisoburn): Used on runtime for mkrescue
@@ -82,12 +83,15 @@ DEPEND="${RDEPEND}
 	)
 "
 RDEPEND+="
-	grub_platforms_efi-32? ( sys-boot/efibootmgr )
-	grub_platforms_efi-64? ( sys-boot/efibootmgr )
+	kernel_linux? (
+		grub_platforms_efi-32? ( sys-boot/efibootmgr )
+		grub_platforms_efi-64? ( sys-boot/efibootmgr )
+	)
 "
 if [[ -n ${DO_AUTORECONF} ]] ; then
 	DEPEND+=" >=sys-devel/autogen-5.10"
-else
+fi
+if [[ ${PV} != 9999 ]]; then
 	DEPEND+=" app-arch/xz-utils"
 fi
 
@@ -234,6 +238,8 @@ src_prepare() {
 		epatch "${FILESDIR}/${P}-config-quoting.patch" #426364
 		epatch "${FILESDIR}/${P}-tftp-endian.patch" # 438612
 		epatch "${FILESDIR}/${P}-hardcoded-awk.patch" #424137
+		epatch "${FILESDIR}/${P}-freebsd.patch" #442050
+		epatch "${FILESDIR}/${P}-compression.patch" #424527
 		epatch "${FILESDIR}/${P}-zfs-feature-flag-support.patch" #455358
 	fi
 
@@ -274,6 +280,7 @@ src_configure() {
 
 	use custom-cflags || unset CCASFLAGS CFLAGS CPPFLAGS LDFLAGS
 	use static && append-ldflags -static
+	use elibc_FreeBSD && append-cppflags "-isystem /usr/include"
 
 	# Sandbox bug 404013.
 	use libzfs && addpredict /etc/dfs:/dev/zfs
@@ -336,6 +343,7 @@ pkg_preinst() {
 		[[ "$(df -TP /boot | awk 'NR>1{print $2}')" = 'zfs' ]]
 	display_zfs_feature_flag_warning=$?
 }
+
 
 pkg_postinst() {
 	# display the link to guide

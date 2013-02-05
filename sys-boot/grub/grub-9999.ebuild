@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.85 2012/10/20 21:46:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.86 2013/02/05 17:14:03 floppym Exp $
 
 EAPI=4
 
@@ -46,7 +46,8 @@ GRUB_PLATFORMS=(
 )
 IUSE+=" ${GRUB_PLATFORMS[@]/#/grub_platforms_}"
 
-REQUIRED_USE="grub_platforms_qemu? ( truetype )"
+REQUIRED_USE="grub_platforms_qemu? ( truetype )
+	grub_platforms_yeeloong? ( truetype )"
 
 # os-prober: Used on runtime to detect other OSes
 # xorriso (dev-libs/libisoburn): Used on runtime for mkrescue
@@ -82,12 +83,15 @@ DEPEND="${RDEPEND}
 	)
 "
 RDEPEND+="
-	grub_platforms_efi-32? ( sys-boot/efibootmgr )
-	grub_platforms_efi-64? ( sys-boot/efibootmgr )
+	kernel_linux? (
+		grub_platforms_efi-32? ( sys-boot/efibootmgr )
+		grub_platforms_efi-64? ( sys-boot/efibootmgr )
+	)
 "
 if [[ -n ${DO_AUTORECONF} ]] ; then
 	DEPEND+=" >=sys-devel/autogen-5.10"
-else
+fi
+if [[ ${PV} != 9999 ]]; then
 	DEPEND+=" app-arch/xz-utils"
 fi
 
@@ -234,6 +238,9 @@ src_prepare() {
 		epatch "${FILESDIR}/${P}-config-quoting.patch" #426364
 		epatch "${FILESDIR}/${P}-tftp-endian.patch" # 438612
 		epatch "${FILESDIR}/${P}-hardcoded-awk.patch" #424137
+		epatch "${FILESDIR}/${P}-freebsd.patch" #442050
+		epatch "${FILESDIR}/${P}-compression.patch" #424527
+		epatch "${FILESDIR}/${P}-zfs-feature-flag-support.patch" #455358
 	fi
 
 	# fix texinfo file name, bug 416035
@@ -273,6 +280,7 @@ src_configure() {
 
 	use custom-cflags || unset CCASFLAGS CFLAGS CPPFLAGS LDFLAGS
 	use static && append-ldflags -static
+	use elibc_FreeBSD && append-cppflags "-isystem /usr/include"
 
 	# Sandbox bug 404013.
 	use libzfs && addpredict /etc/dfs:/dev/zfs
@@ -330,6 +338,13 @@ src_install() {
 	newins "${FILESDIR}"/grub.default-2 grub
 }
 
+pkg_preinst() {
+	has_version "<sys-boot/grub-2.00-r2:2" && \
+		[[ "$(df -TP /boot | awk 'NR>1{print $2}')" = 'zfs' ]]
+	display_zfs_feature_flag_warning=$?
+}
+
+
 pkg_postinst() {
 	# display the link to guide
 	elog "For information on how to configure grub-2 please refer to the guide:"
@@ -344,5 +359,13 @@ pkg_postinst() {
 		ewarn "If you want to keep GRUB Legacy (grub-0.97) installed, please run"
 		ewarn "the following to add sys-boot/grub:0 to your world file."
 		ewarn "emerge --noreplace sys-boot/grub:0"
+	fi
+	if [[ $display_zfs_feature_flag_warning -eq 0 ]]; then
+		zfs_pool=$(df -TP /boot | awk 'NR>1{print $1}')
+		zfs_pool=${zfs_pool%%/*}
+		ewarn "The previous version of sys-boot/grub lacked support for ZFS feature flags."
+		ewarn "Your /boot is on ZFS. Running \"zpool upgrade ${zfs_pool}\" or \"zpool upgrade -a\""
+		ewarn "to upgrade your pool to support feature flags will prevent your system from booting."
+		ewarn "You should use grub2-install to reinstall your boot code. This will avoid problems."
 	fi
 }
