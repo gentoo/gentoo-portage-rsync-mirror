@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xerces
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.123 2012/06/28 21:13:10 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.124 2013/02/05 06:00:55 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> xerces-2.11.0.ebuild:
+  adding ~arm
 
   28 Jun 2012; Ralph Sennhauser <sera@gentoo.org> -xerces-2.9.1.ebuild,
   xerces-2.11.0.ebuild:

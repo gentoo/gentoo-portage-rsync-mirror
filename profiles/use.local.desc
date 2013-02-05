@@ -5071,6 +5071,7 @@ sci-libs/nlopt:octave - Add plugin for sci-mathematics/octave
 sci-libs/opencascade:gl2ps - Use gl2ps PostScript printing library
 sci-libs/openmm:cuda - enable cuda back-end
 sci-libs/openmm:opencl - enable opencl back-end
+sci-libs/openmm:wrappers - build wrappers for C and Fortran
 sci-libs/plplot:ada - Add bindings for the ADA programming language
 sci-libs/plplot:dynamic - Build with dynamic drivers
 sci-libs/plplot:octave - Add bindings for sci-mathematics/octave

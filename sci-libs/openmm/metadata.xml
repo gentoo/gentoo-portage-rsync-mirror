@@ -9,5 +9,6 @@
 	<use>
 		<flag name="cuda">enable cuda back-end</flag>
 		<flag name="opencl">enable opencl back-end</flag>
+		<flag name="wrappers">build wrappers for C and Fortran</flag>
 	</use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xjavac
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.40 2012/04/15 18:05:55 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.41 2013/02/05 06:00:26 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> xjavac-20110814.ebuild:
+  adding ~arm
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> xjavac-20110814.ebuild:
   Add back ia64 love #349020 by Dennis Schridde.
@@ -168,4 +171,3 @@
   +files/xjavac-20041208-build.xml, +xjavac-20041208.ebuild:
   Initial import. Needed to remove all packed jars from xerces-2 (#63287). Fixes
   #73816.
-
