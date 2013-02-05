@@ -4,9 +4,9 @@ DESCRIPTION=Virtual for servlet api
 EAPI=4
 HOMEPAGE=http://java.sun.com/products/servlet/
 IUSE=elibc_FreeBSD
-KEYWORDS=amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris
+KEYWORDS=amd64 ~arm ~ia64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris
 LICENSE=public-domain
 RDEPEND=|| ( dev-java/tomcat-servlet-api:2.5 dev-java/resin-servlet-api:2.5 dev-java/glassfish-servlet-api:2.5 ) >=dev-java/java-config-2.1.6
 SLOT=2.5
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	java-utils-2	dcda71e114d638cdf01db57b8445337d	java-virtuals-2	348b5b41a30c0b4eee11e7a9343d53ce	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=ba2966b0e97fd8b524aa32750030619a
+_md5_=d724cb78c12771f8f5a13694a8396f7b

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xom
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.66 2012/05/24 12:33:53 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.67 2013/02/05 07:28:53 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> xom-1.2.6-r1.ebuild:
+  adding ~arm
 
   24 May 2012; Ralph Sennhauser <sera@gentoo.org> -xom-1.0-r6.ebuild,
   -xom-1.0-r7.ebuild, -xom-1.2.6.ebuild:

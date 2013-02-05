@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.72 2012/04/15 18:16:05 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.73 2013/02/05 07:31:02 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> rhino-1.7.2-r2.ebuild:
+  adding ~arm
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> rhino-1.7.2-r2.ebuild:
   Add back ia64 love #349020 by Dennis Schridde.
@@ -272,4 +275,3 @@
 
   28 May 2003; Todd Berman <tberman@gentoo.org> rhino-1.5_rc4.ebuild:
   Initial Import, original submitted by Tom von Schwerdtner <tvon@etria.org>
-

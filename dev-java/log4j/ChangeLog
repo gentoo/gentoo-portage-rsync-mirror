@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/log4j
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.91 2012/10/19 08:32:19 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.92 2013/02/05 07:20:57 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> log4j-1.2.16.ebuild:
+  adding ~arm
 
   19 Oct 2012; Christoph Junghans <ottxor@gentoo.org> log4j-1.2.16.ebuild:
   added prefix support (bug #435578)

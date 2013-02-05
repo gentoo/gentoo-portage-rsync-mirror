@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/wayland
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.11 2013/01/21 17:54:20 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.12 2013/02/05 07:01:56 mattst88 Exp $
+
+*wayland-1.0.4 (05 Feb 2013)
+
+  05 Feb 2013; Matt Turner <mattst88@gentoo.org> +wayland-1.0.4.ebuild,
+  -wayland-1.0.3.ebuild:
+  Version bump to 1.0.4, bug 454764.
 
   21 Jan 2013; Matt Turner <mattst88@gentoo.org> -wayland-0.85.0.ebuild:
   Drop old.

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xml-xmlbeans
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.32 2013/01/13 17:28:27 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.33 2013/02/05 07:30:30 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org>
+  xml-xmlbeans-1.0.4_pre20041217-r1.ebuild,
+  xml-xmlbeans-1.0.4_pre20041217.ebuild:
+  adding ~arm
 
 *xml-xmlbeans-1.0.4_pre20041217-r1 (13 Jan 2013)
 

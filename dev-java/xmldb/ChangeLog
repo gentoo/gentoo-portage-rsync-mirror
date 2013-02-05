@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmldb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.32 2012/09/29 18:04:54 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/ChangeLog,v 1.33 2013/02/05 07:07:28 zerochaos Exp $
+
+  05 Feb 2013; Rick Farina <zerochaos@gentoo.org> xmldb-20011111-r1.ebuild:
+  adding ~arm
 
   29 Sep 2012; Fabian Groffen <grobian@gentoo.org> xmldb-20011111-r1.ebuild:
   Marked ~x64-macos

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/ferrisloki
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ChangeLog,v 1.21 2012/05/04 18:35:52 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ChangeLog,v 1.22 2013/02/05 07:25:18 dev-zero Exp $
+
+*ferrisloki-3.0.13 (05 Feb 2013)
+
+  05 Feb 2013; Tiziano Müller <dev-zero@gentoo.org> +ferrisloki-3.0.13.ebuild:
+  Version bump (bug #426318), use EAPI-5 and remove .la files.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> ferrisloki-3.0.3.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
