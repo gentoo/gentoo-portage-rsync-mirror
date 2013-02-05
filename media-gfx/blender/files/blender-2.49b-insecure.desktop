@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=Blender 2.4x (reduced security)
-Comment=3D modeling, animation, rendering and post-production.
-Exec=blender -666
-Icon=blender
-Terminal=0
-Type=Application
-Categories=Graphics;Application;
