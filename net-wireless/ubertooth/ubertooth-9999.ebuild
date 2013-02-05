@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.17 2012/12/05 00:17:43 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.18 2013/02/05 04:23:45 zerochaos Exp $
 
-EAPI="4"
+EAPI="5"
 
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
@@ -32,7 +32,7 @@ RDEPEND="${DEPEND}
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="http://git.code.sf.net/p/ubertooth/code"
-	SRC_URI=""
+	EGIT_PROJECT="ubertooth"
 	inherit git-2
 	KEYWORDS=""
 	DEPEND="=net-libs/libbtbb-9999"

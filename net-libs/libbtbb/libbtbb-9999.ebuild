@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-9999.ebuild,v 1.7 2012/10/08 19:09:35 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-9999.ebuild,v 1.8 2013/02/05 04:18:58 zerochaos Exp $
 
-EAPI=4
+EAPI=5
 
 inherit multilib cmake-utils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://libbtbb.sourceforge.net/"
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="http://git.code.sf.net/p/libbtbb/code"
-	SRC_URI=""
+	EGIT_PROJECT="libbtbb"
 	inherit git-2
 	KEYWORDS=""
 else
