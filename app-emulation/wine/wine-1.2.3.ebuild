@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.2.3.ebuild,v 1.21 2012/12/26 22:19:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.2.3.ebuild,v 1.22 2013/02/06 05:51:38 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils flag-o-matic multilib
 
@@ -22,7 +22,7 @@ fi
 
 pulse_patches() { echo "$1"/winepulse-{0.36,0.35-configure.ac,0.38-winecfg}.patch ; }
 GV="1.0.0-x86"
-DESCRIPTION="free implementation of Windows(tm) on Unix"
+DESCRIPTION="Free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
 SRC_URI="${SRC_URI}
 	gecko? ( mirror://sourceforge/${PN}/Wine%20Gecko/${GV}/wine_gecko-${GV}.cab )
@@ -38,7 +38,7 @@ MLIB_DEPS="amd64? (
 	truetype? ( >=app-emulation/emul-linux-x86-xlibs-2.1 )
 	X? (
 		>=app-emulation/emul-linux-x86-xlibs-2.1
-		>=app-emulation/emul-linux-x86-soundlibs-2.1[pulseaudio(+)?]
+		>=app-emulation/emul-linux-x86-soundlibs-2.1
 	)
 	mp3? ( app-emulation/emul-linux-x86-soundlibs )
 	openal? ( app-emulation/emul-linux-x86-sdl )
@@ -52,12 +52,12 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	perl? ( dev-lang/perl dev-perl/XML-Simple )
 	capi? ( net-dialup/capi4k-utils )
 	ncurses? ( >=sys-libs/ncurses-5.2 )
-	fontconfig? ( media-libs/fontconfig )
-	gphoto2? ( media-libs/libgphoto2 )
+	fontconfig? ( media-libs/fontconfig:= )
+	gphoto2? ( media-libs/libgphoto2:= )
 	jack? ( media-sound/jack-audio-connection-kit )
-	openal? ( media-libs/openal )
+	openal? ( media-libs/openal:= )
 	dbus? ( sys-apps/dbus )
-	gnutls? ( net-libs/gnutls )
+	gnutls? ( net-libs/gnutls:= )
 	X? (
 		x11-libs/libXcursor
 		x11-libs/libXrandr
@@ -68,22 +68,22 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	xinerama? ( x11-libs/libXinerama )
 	alsa? ( media-libs/alsa-lib )
 	nas? ( media-libs/nas )
-	cups? ( net-print/cups )
+	cups? ( net-print/cups:= )
 	opengl? (
 		virtual/glu
 		virtual/opengl
 	)
 	pulseaudio? ( media-sound/pulseaudio )
-	gsm? ( media-sound/gsm )
-	jpeg? ( virtual/jpeg )
-	ldap? ( net-nds/openldap )
-	lcms? ( =media-libs/lcms-1* )
+	gsm? ( media-sound/gsm:= )
+	jpeg? ( virtual/jpeg:= )
+	ldap? ( net-nds/openldap:= )
+	lcms? ( media-libs/lcms:0= )
 	mp3? ( >=media-sound/mpg123-1.5.0 )
 	samba? ( >=net-fs/samba-3.0.25 )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
-	scanner? ( media-gfx/sane-backends )
-	ssl? ( dev-libs/openssl )
-	png? ( media-libs/libpng )
+	scanner? ( media-gfx/sane-backends:= )
+	ssl? ( dev-libs/openssl:= )
+	png? ( media-libs/libpng:= )
 	v4l? ( media-libs/libv4l )
 	!win64? ( ${MLIB_DEPS} )
 	win32? ( ${MLIB_DEPS} )

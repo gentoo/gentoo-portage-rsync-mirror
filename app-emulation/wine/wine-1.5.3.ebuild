@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.3.ebuild,v 1.9 2012/12/26 22:19:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.3.ebuild,v 1.10 2013/02/06 05:51:38 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit autotools eutils flag-o-matic multilib pax-utils
 
@@ -19,7 +19,7 @@ else
 fi
 
 GV="1.5"
-DESCRIPTION="free implementation of Windows(tm) on Unix"
+DESCRIPTION="Free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
 SRC_URI="${SRC_URI}
 	gecko? (
@@ -51,15 +51,15 @@ MLIB_DEPS="amd64? (
 RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	perl? ( dev-lang/perl dev-perl/XML-Simple )
 	capi? ( net-dialup/capi4k-utils )
-	ncurses? ( >=sys-libs/ncurses-5.2 )
-	fontconfig? ( media-libs/fontconfig )
-	gphoto2? ( media-libs/libgphoto2 )
-	openal? ( media-libs/openal )
+	ncurses? ( >=sys-libs/ncurses-5.2:= )
+	fontconfig? ( media-libs/fontconfig:= )
+	gphoto2? ( media-libs/libgphoto2:= )
+	openal? ( media-libs/openal:= )
 	udisks? (
 		sys-apps/dbus
 		sys-fs/udisks:0
 	)
-	gnutls? ( net-libs/gnutls )
+	gnutls? ( net-libs/gnutls:= )
 	gstreamer? ( media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 )
 	X? (
 		x11-libs/libXcursor
@@ -70,25 +70,25 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	)
 	xinerama? ( x11-libs/libXinerama )
 	alsa? ( media-libs/alsa-lib )
-	cups? ( net-print/cups )
+	cups? ( net-print/cups:= )
 	opencl? ( virtual/opencl )
 	opengl? (
 		virtual/glu
 		virtual/opengl
 	)
-	gsm? ( media-sound/gsm )
-	jpeg? ( virtual/jpeg )
-	ldap? ( net-nds/openldap )
-	lcms? ( =media-libs/lcms-1* )
+	gsm? ( media-sound/gsm:= )
+	jpeg? ( virtual/jpeg:= )
+	ldap? ( net-nds/openldap:= )
+	lcms? ( media-libs/lcms:0= )
 	mp3? ( >=media-sound/mpg123-1.5.0 )
 	nls? ( sys-devel/gettext )
-	odbc? ( dev-db/unixODBC )
+	odbc? ( dev-db/unixODBC:= )
 	samba? ( >=net-fs/samba-3.0.25 )
 	selinux? ( sec-policy/selinux-wine )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
-	scanner? ( media-gfx/sane-backends )
-	ssl? ( dev-libs/openssl )
-	png? ( media-libs/libpng )
+	scanner? ( media-gfx/sane-backends:= )
+	ssl? ( dev-libs/openssl:= )
+	png? ( media-libs/libpng:= )
 	v4l? ( media-libs/libv4l )
 	!win64? ( ${MLIB_DEPS} )
 	win32? ( ${MLIB_DEPS} )

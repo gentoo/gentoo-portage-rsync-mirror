@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/yelp-tools-3.6.1.ebuild,v 1.11 2013/02/06 04:53:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/yelp-tools-3.6.1.ebuild,v 1.12 2013/02/06 05:54:04 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -19,6 +19,6 @@ RDEPEND=">=dev-libs/libxml2-2.6.12
 	>=dev-libs/libxslt-1.1.8
 	dev-util/itstool
 	gnome-extra/yelp-xsl
-	sys-apps/gawk"
+	virtual/awk"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

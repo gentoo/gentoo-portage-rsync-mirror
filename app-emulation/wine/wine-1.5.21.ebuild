@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.21.ebuild,v 1.2 2013/01/20 02:27:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.21.ebuild,v 1.3 2013/02/06 05:51:38 tetromino Exp $
 
 EAPI="5"
 
@@ -61,7 +61,7 @@ MLIB_DEPS="amd64? (
 RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	perl? ( dev-lang/perl dev-perl/XML-Simple )
 	capi? ( net-dialup/capi4k-utils )
-	ncurses? ( >=sys-libs/ncurses-5.2 )
+	ncurses? ( >=sys-libs/ncurses-5.2:= )
 	fontconfig? ( media-libs/fontconfig:= )
 	gphoto2? ( media-libs/libgphoto2:= )
 	openal? ( media-libs/openal:= )
