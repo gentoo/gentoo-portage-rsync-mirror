@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-2.0.0.ebuild,v 1.2 2013/01/29 12:35:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-2.0.0.ebuild,v 1.3 2013/02/06 04:38:13 idella4 Exp $
 
 EAPI=5
 
@@ -18,25 +18,34 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="py3"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
-IUSE="doc examples"
+IUSE="doc examples test"
 
 DEPEND="!dev-python/pmw:0"
 RDEPEND="${DEPEND}"
+# https://sourceforge.net/tracker/?func=detail&aid=3603487&group_id=10743&atid=110743
+RESTRICT="test"
 
 S="${WORKDIR}/src"
 
 DOCS="Pmw/README"
 
-pythone_prepare_all() {
-	local PATCHES=(
-		"${FILESDIR}"/${PN}-1.3.2-install-no-docs.patch
-		"${FILESDIR}"/1.3.2-python2.5.patch
-		)
-	distutils-r1_python_prepare_all
+src_prepare() {
+	distutils-r1_src_prepare
+	2to3 Pmw
+}
+
+python_test() {
+	cd ${BUILD_DIR}/lib/Pmw/Pmw_2_0_0/ || die
+	PYTHONPATH=PYTHONPATH=tests:../../
+	cp tests/{flagup.bmp,earthris.gif} . || die
+	for test in tests/*_test.py; do
+		echo "running test "$test
+		PYTHONPATH=tests:../../ "${PYTHON}" $test
+	done
 }
 
 python_install_all() {
-	local DIR="Pmw/Pmw_1_3_3"
+	local DIR="Pmw/Pmw_2_0_0"
 
 	if use doc; then
 		dohtml -a html,gif,py "${DIR}"/doc/*

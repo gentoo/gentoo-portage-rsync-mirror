@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/sabnzbd-0.7.7.ebuild,v 1.2 2013/01/03 23:05:32 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/sabnzbd-0.7.10.ebuild,v 1.1 2013/02/06 04:59:55 jsbronder Exp $
 
 EAPI="4"
 
@@ -20,25 +20,25 @@ SRC_URI="mirror://sourceforge/sabnzbdplus/${MY_P}-src.tar.gz"
 LICENSE="GPL-2 BSD LGPL-2 MIT BSD-1"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+rar +ssl unzip yenc"
+IUSE="+rar +ssl unzip +yenc"
 
-# We actually depend on dev-python/cherrypy as well but upstream has decided
-# to bundle a custom cut of the 3.2.0 branch.  Also, sabnzbd is installed to
-# /usr/share/ as upstream makes it clear they should not be in python's sitedir.
-# See:  http://wiki.sabnzbd.org/unix-packaging
+# Sabnzbd is installed to /usr/share/ as upstream makes it clear they should not
+# be in python's sitedir.  See:  http://wiki.sabnzbd.org/unix-packaging
 
-# TODO:  still bundled: kronos, rarfile, rsslib, ssmtplib, listquote, jso
-# Probably others, see licenses/
+# TODO:  still bundled but not in protage:
+# kronos, rarfile, rsslib, ssmtplib, listquote, json-py, msgfmt
+# pynewsleecher
 
 RDEPEND="
 	>=app-arch/par2cmdline-0.4
 	>=dev-python/cheetah-2.0.1
+	=dev-python/cherrypy-3.2*
 	dev-python/configobj
 	dev-python/feedparser
 	dev-python/gntp
 	dev-python/pythonutils
 	net-misc/wget
-	rar? ( app-arch/rar )
+	rar? ( || ( app-arch/unrar app-arch/rar ) )
 	ssl? ( dev-python/pyopenssl )
 	unzip? ( >=app-arch/unzip-5.5.2 )
 	yenc? ( dev-python/yenc )
@@ -61,8 +61,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/use-system-configobj-and-feedparser.patch
 
 	# remove bundled modules
-	rm sabnzbd/utils/{feedparser,configobj,gntp}.py
-	rm licenses/License-{feedparser,configobj,gntp}.txt
+	rm -r sabnzbd/utils/{feedparser,configobj,gntp}.py cherrypy
+	rm licenses/License-{feedparser,configobj,gntp,CherryPy}.txt
 }
 
 src_install() {
@@ -74,7 +74,7 @@ src_install() {
 	fperms +x /usr/share/${PN}/SABnzbd.py
 	dobin "${FILESDIR}"/sabnzbd
 
-	for d in cherrypy email icons interfaces locale po sabnzbd tools util; do
+	for d in email icons interfaces locale po sabnzbd tools util; do
 		insinto /usr/share/${PN}/${d}
 		doins -r ${d}/*
 	done
@@ -82,9 +82,16 @@ src_install() {
 	newinitd "${FILESDIR}/${PN}.initd" "${PN}"
 	newconfd "${FILESDIR}/${PN}.confd" "${PN}"
 
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}/"${PN}.logrotate ${PN}
+
 	diropts -o ${PN} -g ${PN}
 	dodir /etc/${PN}
 	dodir /var/log/${PN}
+
+	insinto "/etc/${PN}"
+	insopts -m 0600 -o ${PN} -g ${PN}
+	doins "${FILESDIR}/${PN}.ini"
 
 	dodoc {ABOUT,CHANGELOG,ISSUES,README}.txt Sample-PostProc.sh licenses/*
 }
