@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>net-news</herd>
-<longdescription lang="en">
-RSStool is a tool to read, parse, merge, and write RSS (and Atom) feeds.
-</longdescription>
+	<herd>net-news</herd>
+	<upstream>
+		<remote-id type="sourceforge">rsstool</remote-id>
+	</upstream>
 </pkgmetadata>

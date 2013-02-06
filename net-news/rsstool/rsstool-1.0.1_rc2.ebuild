@@ -1,16 +1,16 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rsstool/rsstool-1.0.1_rc2.ebuild,v 1.3 2012/01/04 09:12:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rsstool/rsstool-1.0.1_rc2.ebuild,v 1.4 2013/02/06 08:04:58 kensington Exp $
 
-EAPI=4
+EAPI=5
 
-inherit eutils toolchain-funcs
+inherit toolchain-funcs
 
 MY_P=${PN}-${PV/_}
 
 DESCRIPTION="cmdline tool to read, parse, merge, and write RSS (and Atom) feeds"
 HOMEPAGE="http://rsstool.sourceforge.net/"
-SRC_URI="mirror://berlios/${PN}/${MY_P}-src.zip"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}-src.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,14 +25,15 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}-src/src
 
 src_prepare() {
-	sed -i '1i#!/bin/bash' configure || die
+	sed -e '1i#!/bin/bash' -i configure || die
 }
 
 src_compile() {
-	emake CC=$(tc-getCC)
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
 	emake DESTDIR="${D}" BINDIR="/usr/bin" install
-	dohtml ../*.html
+
+	dohtml ../{changes,faq,readme}.html
 }
