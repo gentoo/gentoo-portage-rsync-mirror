@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.2.0-r1.ebuild,v 1.1 2013/02/06 12:22:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.2.0-r1.ebuild,v 1.2 2013/02/06 16:55:24 mgorny Exp $
 
 EAPI=5
 
@@ -39,10 +39,6 @@ python_install() {
 		--standard-lib \
 		--no-version-script \
 		--install-data "${EPREFIX}"/usr/share
-
-	# Build system does not use build_scripts properly.
-	# http://scons.tigris.org/issues/show_bug.cgi?id=2891
-	python_doscript "${ED}"usr/bin/scons{,ign,-time}
 }
 
 python_install_all() {
@@ -50,4 +46,8 @@ python_install_all() {
 	distutils-r1_python_install_all
 
 	use doc && dodoc "${DISTDIR}"/${P}-user.{pdf,html}
+
+	# Build system does not use build_scripts properly.
+	# http://scons.tigris.org/issues/show_bug.cgi?id=2891
+	python_replicate_script "${ED}"usr/bin/scons{,ign,-time}
 }
