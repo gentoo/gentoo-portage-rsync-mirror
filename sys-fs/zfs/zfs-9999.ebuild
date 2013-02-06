@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.43 2013/02/04 17:31:37 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.44 2013/02/06 01:48:50 ryao Exp $
 
 EAPI="4"
 
@@ -32,6 +32,7 @@ RESTRICT="test"
 COMMON_DEPEND="
 	sys-apps/util-linux[static-libs?]
 	sys-libs/zlib[static-libs(+)?]
+	virtual/awk
 "
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
@@ -43,7 +44,6 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-fs/zfs-fuse
 	!prefix? ( virtual/udev )
 	test-suite? (
-		sys-apps/gawk
 		sys-apps/util-linux
 		sys-devel/bc
 		sys-block/parted
@@ -64,10 +64,16 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Workaround for hard coded path
-	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/common.sh.in || die
-	# Workaround rename
-	sed -i "s|/usr/bin/scsi-rescan|/usr/sbin/rescan-scsi-bus|" scripts/common.sh.in || die
+	# Update paths
+	sed -e "s|/sbin/lsmod|/bin/lsmod|" \
+		-e "s|/usr/bin/scsi-rescan|/usr/sbin/rescan-scsi-bus|" \
+		-e "s|/sbin/parted|/usr/sbin/parted|" \
+		-i scripts/common.sh.in
+
+	if [ ${PV} != "9999" ]
+	then
+		epatch "${FILESDIR}/${P}-fix-libzpool-function-relocations.patch"
+	fi
 
 	autotools-utils_src_prepare
 }

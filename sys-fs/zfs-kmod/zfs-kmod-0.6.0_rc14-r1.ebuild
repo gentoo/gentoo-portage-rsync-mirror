@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc14.ebuild,v 1.2 2013/02/03 22:43:08 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc14-r1.ebuild,v 1.1 2013/02/06 01:46:26 ryao Exp $
 
 EAPI="4"
 
@@ -31,6 +31,7 @@ RESTRICT="test"
 
 DEPEND="
 	=sys-kernel/spl-${PV}*
+	virtual/awk
 "
 
 RDEPEND="${DEPEND}
@@ -61,6 +62,11 @@ pkg_setup() {
 }
 
 src_prepare() {
+	if [ ${PV} != "9999" ]
+	then
+		# Cast constant for 32-bit compatibility
+		epatch "${FILESDIR}/${P}-cast-const-for-32bit-compatibility.patch"
+	fi
 	autotools-utils_src_prepare
 }
 

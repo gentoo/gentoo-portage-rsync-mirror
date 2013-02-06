@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.27 2013/01/16 09:01:11 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.28 2013/02/06 01:45:21 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -26,7 +26,12 @@ SLOT="0"
 IUSE="custom-cflags debug debug-log"
 RESTRICT="test"
 
-RDEPEND="!sys-devel/spl"
+COMMON_DEPEND="virtual/awk"
+
+DEPEND="${COMMON_DEPEND}"
+
+RDEPEND="${COMMON_DEPEND}
+	!sys-devel/spl"
 
 AT_M4DIR="config"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
@@ -56,11 +61,11 @@ src_prepare() {
 
 	if [ ${PV} != "9999" ]
 	then
-		# Fix on_each_cpu autotools to work correctly
-		epatch "${FILESDIR}/${P}-fix-on_each_cpu-autotools-check.patch"
+		# Fix x86 build failures on Linux 3.4 and later, bug #450646
+		epatch "${FILESDIR}/${P}-fix-atomic64-checks.patch"
 
-		# Fix soft lockup regression
-		epatch "${FILESDIR}/${P}-fix-soft-lockup.patch"
+		# Fix autotools check that fails on ~ppc64
+		epatch "${FILESDIR}/${P}-fix-mutex-owner-check.patch"
 	fi
 
 	autotools-utils_src_prepare

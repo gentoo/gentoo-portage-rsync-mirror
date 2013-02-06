@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc14.ebuild,v 1.1 2013/02/02 16:44:19 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc14-r1.ebuild,v 1.1 2013/02/06 01:45:21 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -26,7 +26,12 @@ SLOT="0"
 IUSE="custom-cflags debug debug-log"
 RESTRICT="test"
 
-RDEPEND="!sys-devel/spl"
+COMMON_DEPEND="virtual/awk"
+
+DEPEND="${COMMON_DEPEND}"
+
+RDEPEND="${COMMON_DEPEND}
+	!sys-devel/spl"
 
 AT_M4DIR="config"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
@@ -53,6 +58,15 @@ pkg_setup() {
 src_prepare() {
 	# Workaround for hard coded path
 	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/check.sh || die
+
+	if [ ${PV} != "9999" ]
+	then
+		# Fix x86 build failures on Linux 3.4 and later, bug #450646
+		epatch "${FILESDIR}/${P}-fix-atomic64-checks.patch"
+
+		# Fix autotools check that fails on ~ppc64
+		epatch "${FILESDIR}/${P}-fix-mutex-owner-check.patch"
+	fi
 
 	autotools-utils_src_prepare
 }

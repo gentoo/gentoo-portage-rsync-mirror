@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.8 2013/01/16 09:01:09 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.9 2013/02/06 01:46:26 ryao Exp $
 
 EAPI="4"
 
@@ -31,6 +31,7 @@ RESTRICT="test"
 
 DEPEND="
 	=sys-kernel/spl-${PV}*
+	virtual/awk
 "
 
 RDEPEND="${DEPEND}
