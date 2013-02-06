@@ -1,6 +1,20 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.20 2013/02/03 19:33:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.23 2013/02/06 08:52:45 radhermit Exp $
+
+  06 Feb 2013; Tim Harder <radhermit@gentoo.org> paver-1.1.1.ebuild,
+  paver-1.1.1-r1.ebuild:
+  Add setuptools to RDEPEND since the pkg_resources module is used by the paver
+  script.
+
+  06 Feb 2013; Tim Harder <radhermit@gentoo.org> -paver-1.0.4.ebuild,
+  -paver-1.0.4-r1.ebuild, -paver-1.0.5.ebuild:
+  Remove old.
+
+*paver-1.1.1-r1 (06 Feb 2013)
+
+  06 Feb 2013; Tim Harder <radhermit@gentoo.org> +paver-1.1.1-r1.ebuild:
+  Revision bump, migrate to distutils-r1.
 
   03 Feb 2013; Agostino Sarubbo <ago@gentoo.org> paver-1.1.1.ebuild:
   Add ~ppc, wrt bug #454638

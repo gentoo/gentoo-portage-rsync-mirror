@@ -1,5 +1,8 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.17 2013/02/03 12:09:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.18 2013/02/06 08:36:07 tomka Exp $
+
+  06 Feb 2013; Thomas Kahle <tomka@gentoo.org> metadata.xml:
+  take maintainership
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -files/gtest-1.4.0-asneeded.patch,
   -files/gtest-1.4.0-gcc-4.7.patch, -files/gtest-1.5.0-asneeded.patch,
