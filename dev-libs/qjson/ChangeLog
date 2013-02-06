@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/qjson
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/ChangeLog,v 1.26 2013/02/06 07:50:14 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/ChangeLog,v 1.28 2013/02/06 10:00:47 ago Exp $
+
+  06 Feb 2013; Agostino Sarubbo <ago@gentoo.org> qjson-0.8.1.ebuild:
+  Stable for x86, wrt bug #455366
+
+  06 Feb 2013; Agostino Sarubbo <ago@gentoo.org> qjson-0.8.1.ebuild:
+  Stable for amd64, wrt bug #455366
 
   06 Feb 2013; Davide Pesavento <pesa@gentoo.org> -qjson-0.7.1_p20121016.ebuild,
   metadata.xml:
