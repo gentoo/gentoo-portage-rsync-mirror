@@ -5,6 +5,10 @@
     <email>rafaelmartins@gentoo.org</email>
     <name>Rafael G. Martins</name>
   </maintainer>
+  <maintainer>
+    <email>djc@gentoo.org</email>
+    <name>Dirkjan Ochtman</name>
+  </maintainer>
   <longdescription lang="en">
     The AccountManagerPlugin offers several features for managing user accounts:
 

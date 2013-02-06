@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/trac-accountmanager
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-accountmanager/ChangeLog,v 1.2 2011/09/08 06:54:18 rafaelmartins Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-accountmanager/ChangeLog,v 1.4 2013/02/06 13:39:18 djc Exp $
+
+*trac-accountmanager-0.4.2 (06 Feb 2013)
+
+  06 Feb 2013; Dirkjan Ochtman <djc@gentoo.org>
+  +trac-accountmanager-0.4.2.ebuild:
+  Version bump to 0.4.2.
+
+  06 Feb 2013; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Add myself to metadata.
 
 *trac-accountmanager-0.4_p10645 (08 Sep 2011)
 
@@ -13,4 +22,3 @@
   14 Jan 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
   +trac-accountmanager-0.3_p9766.ebuild, +metadata.xml:
   Initial commit.
-
