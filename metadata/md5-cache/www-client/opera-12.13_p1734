@@ -10,4 +10,4 @@ RDEPEND=media-libs/fontconfig media-libs/freetype sys-apps/util-linux sys-libs/z
 SLOT=0
 SRC_URI=amd64? ( mirror://opera/linux/1213/opera-12.13-1734.x86_64.linux.tar.xz ) x86? ( mirror://opera/linux/1213/opera-12.13-1734.i386.linux.tar.xz ) x86-fbsd? ( mirror://opera/unix/1213/opera-12.13-1734.i386.freebsd.tar.xz )
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	ded93e450747134a079e647d888aa80b	pax-utils	0ace932c4045349c7fc1af0fe7091acf	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=6bc6abd0e5a159f6a4e73bddb14721db
+_md5_=c1575e54e268ec548f36b08fdca07fde

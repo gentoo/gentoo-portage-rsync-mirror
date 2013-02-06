@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.13_pre1733.ebuild,v 1.2 2013/01/30 14:48:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.13_pre1733.ebuild,v 1.3 2013/02/06 18:37:25 jer Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -200,7 +200,7 @@ src_prepare() {
 src_install() {
 	# We install into usr instead of opt as Opera does not support the latter
 	dodir /usr
-	rm -f lib/opera/opera_autoupdatechecker
+	rm lib/${PN}/opera_autoupdatechecker || die
 	mv lib/ "${D}/${OPREFIX}" || die
 	mv share/ "${D}/usr/" || die
 
