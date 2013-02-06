@@ -8,7 +8,9 @@
 	<use>
 		<flag name="compatibility">Compatibility with previous versions of vifm</flag>
 		<flag name="extended-keys">Support for extended keys (arrows, home etc)</flag>
+		<flag name="gtk">Use gtk+ to determine mimetypes</flag>
 		<flag name="magic">Use libmagic to determine mimetypes</flag>
+		<flag name="vim">Install the vifm vim plugin, documentation and syntax</flag>
 		<flag name="vim-plugin">Install the vifm vim plugin</flag>
 	</use>
 	<longdescription>
