@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.14.1.ebuild,v 1.6 2013/01/16 19:02:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.15.2.ebuild,v 1.1 2013/02/06 18:00:57 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -13,7 +13,7 @@ MOZ_PV="${PV/_pre*}"
 MOZ_PV="${MOZ_PV/_alpha/a}"
 MOZ_PV="${MOZ_PV/_beta/b}"
 MOZ_PV="${MOZ_PV/_rc/rc}"
-MOZ_P="${PN}-${PV}"
+MOZ_P="${P}"
 MY_MOZ_P="${PN}-${MOZ_PV}"
 
 if [[ ${PV} == *_pre* ]] ; then
@@ -28,9 +28,9 @@ fi
 
 inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension nsplugins mozlinguas
 
-PATCHFF="firefox-17.0-patches-0.3"
+PATCHFF="firefox-18.0-patches-0.7"
 PATCH="${PN}-2.14-patches-01"
-EMVER="1.4.6"
+EMVER="1.5.0"
 
 DESCRIPTION="Seamonkey Web Browser"
 HOMEPAGE="http://www.seamonkey-project.org"
@@ -47,7 +47,7 @@ fi
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="+chatzilla +crypt gstreamer +ipc +roaming system-sqlite"
+IUSE="+chatzilla +crypt gstreamer +ipc +jit +roaming system-jpeg system-sqlite"
 
 SRC_URI+="${SRC_URI}
 	${MOZ_FTP_URI}/source/${MY_MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
@@ -59,8 +59,8 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND=">=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.13.6
-	>=dev-libs/nspr-4.9.2
+	>=dev-libs/nss-3.14.1
+	>=dev-libs/nspr-4.9.4
 	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
 	>=media-libs/libpng-1.5.11[apng]
@@ -73,7 +73,8 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 		>=media-libs/gstreamer-0.10.33:0.10
 		>=media-libs/gst-plugins-base-0.10.33:0.10
 	)
-	system-sqlite? ( >=dev-db/sqlite-3.7.13[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
+	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
+	system-sqlite? ( >=dev-db/sqlite-3.7.14.1[fts3,secure-delete,threadsafe,unlock-notify,debug=] )
 	crypt? ( >=app-crypt/gnupg-1.4 )
 	kernel_linux? ( media-libs/alsa-lib )
 	selinux? ( sec-policy/selinux-mozilla )"
@@ -125,7 +126,8 @@ src_prepare() {
 
 	# browser patches go here
 	pushd "${S}"/mozilla &>/dev/null || die
-	EPATCH_EXCLUDE="2000-firefox_gentoo_install_dirs.patch" \
+	EPATCH_EXCLUDE="2000-firefox_gentoo_install_dirs.patch
+			8007_revert_bug_677092.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
@@ -171,7 +173,7 @@ src_prepare() {
 		-i "${S}"/suite/installer/Makefile.in || die
 	# Don't error out when there's no files to be removed:
 	sed 's@\(xargs rm\)$@\1 -f@' \
-		-i "${S}"/mozilla/toolkit/mozapps/installer/packager.mk || die
+		-i "${ms}"/toolkit/mozapps/installer/packager.mk || die
 
 	eautoreconf
 	cd "${S}"/mozilla
@@ -221,6 +223,10 @@ src_configure() {
 
 	mozconfig_use_enable gstreamer
 	mozconfig_use_enable system-sqlite
+	mozconfig_use_with system-jpeg
+	# Feature is know to cause problems on hardened
+	mozconfig_use_enable jit methodjit
+	mozconfig_use_enable jit tracejit
 
 	# Use an objdir to keep things organized.
 	echo "mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/seamonk" \
@@ -263,6 +269,10 @@ src_install() {
 
 	# Copy our preference before omnijar is created.
 	sed "s|SEAMONKEY_PVR|${PVR}|" "${FILESDIR}"/all-gentoo-1.js > \
+		"${S}/${obj_dir}/mozilla/dist/bin/defaults/pref/all-gentoo.js" \
+		|| die
+
+	echo 'pref("extensions.autoDisableScopes", 3);' >> \
 		"${S}/${obj_dir}/mozilla/dist/bin/defaults/pref/all-gentoo.js" \
 		|| die
 

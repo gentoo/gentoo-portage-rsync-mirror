@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.8.ebuild,v 1.1 2013/02/06 12:56:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.8.ebuild,v 1.2 2013/02/06 17:52:02 ssuominen Exp $
 
 EAPI=5
 
@@ -72,6 +72,8 @@ src_unpack() {
 src_prepare() {
 	# Force disabled because we don't have this custom renamed in Portage
 	sed -i -e 's:gcr-3-gtk2:&dIsAbLe:' wscript || die
+
+	epatch "${FILESDIR}"/${P}-desktop_file_validation.patch
 }
 
 src_configure() {

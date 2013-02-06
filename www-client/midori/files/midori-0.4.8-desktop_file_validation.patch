@@ -1,0 +1,37 @@
+http://bugs.gentoo.org/show_bug.cgi?id=435864
+http://bugs.launchpad.net/midori/+bug/1117543
+
+--- data/midori.desktop.in
++++ data/midori.desktop.in
+@@ -17,17 +17,17 @@
+ X-Osso-Service=midori
+ X-Ayatana-Desktop-Shortcuts=TabNew;WindowNew;Private
+ 
+-[TabNew Shortcut Group]
++[X-TabNew Shortcut Group]
+ _Name=New Tab
+ Exec=midori -e TabNew
+ TargetEnvironment=Unity
+ 
+-[WindowNew Shortcut Group]
++[X-WindowNew Shortcut Group]
+ _Name=New Window
+ Exec=midori -e WindowNew
+ TargetEnvironment=Unity
+ 
+-[Private Shortcut Group]
++[X-Private Shortcut Group]
+ _Name=New Private Browsing Window
+ Exec=midori --private
+ TargetEnvironment=Unity
+--- data/midori-private.desktop.in
++++ data/midori-private.desktop.in
+@@ -9,7 +9,7 @@
+ Icon=midori
+ Terminal=false
+ StartupNotify=true
+-NotShowIn=Pantheon
++NotShowIn=X-Pantheon;
+ X-Osso-Type=application/x-executable
+ X-Osso-Service=midori
+ 
