@@ -1,6 +1,13 @@
 # ChangeLog for www-client/midori
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.100 2012/10/21 12:00:16 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.101 2013/02/06 12:56:37 ssuominen Exp $
+
+*midori-0.4.8 (06 Feb 2013)
+
+  06 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> +midori-0.4.8.ebuild,
+  midori-9999.ebuild:
+  Version bump. Use python-any-r1 eclass instead of the deprecated python
+  eclass.
 
   21 Oct 2012; Samuli Suominen <ssuominen@gentoo.org> midori-0.4.7.ebuild,
   midori-9999.ebuild:

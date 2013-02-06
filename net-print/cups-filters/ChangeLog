@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.49 2013/02/02 20:26:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.50 2013/02/06 12:57:25 gienah Exp $
+
+  06 Feb 2013; Mark Wright <gienah@gentoo.org>
+  +files/cups-filters-1.0.29-poppler-0.22.patch, cups-filters-1.0.29.ebuild:
+  Apply patch for upstream bug 1089 to fix build with poppler 0.22.0
 
 *cups-filters-1.0.29 (02 Feb 2013)
 

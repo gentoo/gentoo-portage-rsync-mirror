@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.29.ebuild,v 1.1 2013/02/02 20:26:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.29.ebuild,v 1.2 2013/02/06 12:57:25 gienah Exp $
 
 EAPI=4
 
@@ -42,7 +42,8 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
-PATCHES=( "${FILESDIR}/${PN}-1.0.29-openrc.patch" )
+PATCHES=( "${FILESDIR}/${PN}-1.0.29-openrc.patch"
+	"${FILESDIR}/${PN}-1.0.29-poppler-0.22.patch")
 
 src_prepare() {
 	base_src_prepare

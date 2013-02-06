@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/nsd-4.0.0_beta3-r1.ebuild,v 1.1 2013/01/30 17:19:22 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/nsd/nsd-4.0.0_beta4.ebuild,v 1.1 2013/02/06 12:34:24 wschlich Exp $
 
 EAPI=4
 
