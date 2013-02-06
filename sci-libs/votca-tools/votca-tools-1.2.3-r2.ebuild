@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.3-r1.ebuild,v 1.1 2013/01/27 04:03:19 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.3-r2.ebuild,v 1.1 2013/02/06 17:25:10 ottxor Exp $
 
 EAPI="3"
 
@@ -42,6 +42,8 @@ PATCHES=( "${FILESDIR}/${P}-boost-1.53.patch" )
 src_prepare() {
 	use gsl || ewarn "Disabling gsl will lead to reduced functionality"
 	use fftw || ewarn "Disabling fftw will lead to reduced functionality"
+
+	base_src_prepare
 
 	#remove bundled libs
 	if use system-boost; then
