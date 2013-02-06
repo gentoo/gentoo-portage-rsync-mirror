@@ -1,6 +1,10 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.104 2013/02/06 17:55:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.105 2013/02/06 18:18:15 ssuominen Exp $
+
+  06 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> midori-0.4.8.ebuild:
+  Comment out the desktop file validation patch temporarily because the code is
+  not compatible with it yet.
 
   06 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> midori-0.4.8.ebuild,
   +files/midori-0.4.8-desktop_file_validation.patch:
