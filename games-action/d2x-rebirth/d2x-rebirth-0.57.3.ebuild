@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/d2x-rebirth-0.57.3.ebuild,v 1.1 2013/02/06 21:11:58 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/d2x-rebirth-0.57.3.ebuild,v 1.2 2013/02/06 21:52:39 hasufell Exp $
 
 EAPI=5
 
@@ -46,7 +46,7 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-flags.patch
 
-	DOCS=( {CHANGELOG,COPYING,INSTALL,README,RELEASE-NOTES}.txt )
+	DOCS=( {CHANGELOG,INSTALL,README,RELEASE-NOTES}.txt )
 	edos2unix ${DOCS[@]}
 }
 
