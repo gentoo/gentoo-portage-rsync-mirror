@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits/scikits-0.1.ebuild,v 1.5 2013/02/06 15:43:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits/scikits-0.1-r1.ebuild,v 1.1 2013/02/06 15:43:16 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-SUPPORT_PYTHON_ABIS="1"
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} pypy{1_9,2_0} )
 
-inherit python
+inherit python-r1
 
 DESCRIPTION="Common files for python scikits"
 HOMEPAGE="http://projects.scipy.org/scipy/scikits"
@@ -20,11 +20,9 @@ IUSE="examples"
 S="${WORKDIR}"
 
 src_install() {
-	install_scikits() {
-		insinto $(python_get_sitedir)/scikits
-		doins scikits.example*/scikits/__init__.py
-	}
-	python_execute_function -q install_scikits
+	python_moduleinto scikits
+	python_foreach_impl python_domodule scikits.example*/scikits/__init__.py
+
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins -r scikits.example*/*

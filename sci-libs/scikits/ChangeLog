@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/scikits
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits/ChangeLog,v 1.3 2012/06/26 23:36:58 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits/ChangeLog,v 1.4 2013/02/06 15:43:16 jlec Exp $
+
+*scikits-0.1-r1 (06 Feb 2013)
+
+  06 Feb 2013; Justin Lecher <jlec@gentoo.org> scikits-0.1.ebuild,
+  +scikits-0.1-r1.ebuild, metadata.xml:
+  Convert to new python eclasses
 
   26 Jun 2012; Sebastien Fabbro <fabbros@gentoo.org> scikits-0.1.ebuild:
   keyword amd64-linux and x86-linux
