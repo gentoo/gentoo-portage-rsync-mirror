@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/arp-warp-bin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/ChangeLog,v 1.21 2012/07/24 13:35:02 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/ChangeLog,v 1.22 2013/02/06 07:55:47 jlec Exp $
+
+  06 Feb 2013; Justin Lecher <jlec@gentoo.org> arp-warp-bin-7.1-r1.ebuild,
+  metadata.xml:
+  Loosen awk dependency from gawk to virtual/awk, #455682
 
   24 Jul 2012; Justin Lecher <jlec@gentoo.org> arp-warp-bin-7.1-r1.ebuild:
   Use QA_PREBUILT for binary packages
