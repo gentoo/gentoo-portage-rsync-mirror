@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.220 2013/02/01 12:07:07 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.221 2013/02/06 21:20:01 phosphan Exp $
+
+  06 Feb 2013; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.23.ebuild:
+  Fixing the last fix.
 
   01 Feb 2013; Patrick Kursawe <phosphan@gentoo.org> sane-backends-1.0.23.ebuild:
   Bug #451822: If "threads" is not in USE, default-disable backends that

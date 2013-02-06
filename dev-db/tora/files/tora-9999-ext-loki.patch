@@ -1,0 +1,86 @@
+diff -Naur tora-2.1.4~/CMakeLists.txt tora-2.1.4/CMakeLists.txt
+--- tora-2.1.4~/CMakeLists.txt	2013-02-04 16:36:35.000000000 +0100
++++ tora-2.1.4/CMakeLists.txt	2013-02-04 17:07:00.084287072 +0100
+@@ -4,6 +4,7 @@
+ # options available for user's input
+ OPTION(WANT_DEBUG "Set the debug build and possible additional outputs" OFF)
+ OPTION(WANT_INTERNAL_QSCINTILLA "Use internal/bundled QScintilla2 source" OFF)
++OPTION(WANT_INTERNAL_LOKI "Use internal/bundled Loki source" OFF)
+ OPTION(ENABLE_ORACLE "Enable/Disable Oracle support at all. Including detection" ON)
+ OPTION(ENABLE_PGSQL "Enable/Disable PostgreSQL support. Including detection" ON)
+ OPTION(ENABLE_DB2 "Enable/Disable DB2 support. Including detection" ON)
+@@ -54,6 +55,7 @@
+ INCLUDE(CheckTypeSize)
+ INCLUDE(TestBigEndian)
+ INCLUDE(FindSubversion)
++INCLUDE(FindPkgConfig)
+ 
+ 
+ #Set the custom CMake module directory where our include/lib finders are
+@@ -222,6 +224,10 @@
+     MESSAGE(FATAL_ERROR "No Qt4 found")
+ ENDIF(QT_FOUND)
+ 
++IF (WANT_INTERNAL_LOKI)
++ELSE (WANT_INTERNAL_LOKI)
++  pkg_check_modules(LOKI REQUIRED  ferrisloki)
++ENDIF (WANT_INTERNAL_LOKI)
+ 
+ IF (WANT_INTERNAL_QSCINTILLA)
+     MESSAGE(STATUS "QSci: Building with internal copy of QScintilla.")
+diff -Naur tora-2.1.4~/src/CMakeLists.txt tora-2.1.4/src/CMakeLists.txt
+--- tora-2.1.4~/src/CMakeLists.txt	2013-02-04 16:36:21.000000000 +0100
++++ tora-2.1.4/src/CMakeLists.txt	2013-02-04 17:06:50.373408475 +0100
+@@ -3,7 +3,10 @@
+ 
+ #Subdirectories
+ # ADD_SUBDIRECTORY(i18n)
+-ADD_SUBDIRECTORY(loki)
++# Default: loki as 3rd party lib!
++IF (WANT_INTERNAL_LOKI)
++  ADD_SUBDIRECTORY(loki)
++ENDIF(WANT_INTERNAL_LOKI)
+ IF (WIN32)
+     ADD_SUBDIRECTORY(windows)
+ ENDIF (WIN32)
+@@ -497,7 +500,9 @@
+ QT4_ADD_RESOURCES(TORA_RCC_SRCS ${TORA_RCC_FILES})
+ 
+ 
+-LINK_DIRECTORIES(./loki)
++IF (WANT_INTERNAL_LOKI)
++  LINK_DIRECTORIES(./loki)
++ENDIF(WANT_INTERNAL_LOKI)
+ IF (WIN32)
+     LINK_DIRECTORIES(./windows)
+ ENDIF (WIN32)
+@@ -506,7 +511,10 @@
+ ENDIF (WANT_INTERNAL_QSCINTILLA)
+ 
+ 
+-SET(TORA_LOKI_LIB "tora_loki_lib")
++IF (WANT_INTERNAL_LOKI)
++  SET(LOKI_LIBRARIES "tora_loki_lib")
++  SET(LOKI_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/loki/include)
++ENDIF(WANT_INTERNAL_LOKI)
+ IF (WANT_INTERNAL_QSCINTILLA)
+     SET (TORA_QSCINTILLA_LIB tora_qscintilla2_lib)
+ ENDIF (WANT_INTERNAL_QSCINTILLA)
+@@ -522,7 +530,7 @@
+   ${CMAKE_CURRENT_SOURCE_DIR}
+   ${CMAKE_BINARY_DIR}
+   ${QT_INCLUDES}
+-  ${CMAKE_CURRENT_SOURCE_DIR}/loki/include
++  ${LOKI_INCLUDE_DIRS}
+   ${CMAKE_CURRENT_SOURCE_DIR}/otl
+ )
+ 
+@@ -648,7 +656,7 @@
+ ENDIF(USE_EXPERIMENTAL)  
+ 
+ # static
+-TARGET_LINK_LIBRARIES(${EXE_NAME} ${TORA_LOKI_LIB})
++TARGET_LINK_LIBRARIES(${EXE_NAME} ${LOKI_LIBRARIES})
+ IF (WANT_INTERNAL_QSCINTILLA)
+     TARGET_LINK_LIBRARIES(${EXE_NAME} ${TORA_QSCINTILLA_LIB} ${QT_LIBRARIES})
+ ENDIF (WANT_INTERNAL_QSCINTILLA)

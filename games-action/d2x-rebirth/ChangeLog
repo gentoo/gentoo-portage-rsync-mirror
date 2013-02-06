@@ -1,6 +1,12 @@
 # ChangeLog for games-action/d2x-rebirth
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/ChangeLog,v 1.4 2012/04/25 16:25:14 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x-rebirth/ChangeLog,v 1.5 2013/02/06 21:11:58 hasufell Exp $
+
+*d2x-rebirth-0.57.3 (06 Feb 2013)
+
+  06 Feb 2013; Julian Ospald <hasufell@gentoo.org> +d2x-rebirth-0.57.3.ebuild,
+  +files/d2x-rebirth-0.57.3-flags.patch:
+  version bump wrt #167341
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> d2x-rebirth-0.50.ebuild:
   Drop unnessecary die

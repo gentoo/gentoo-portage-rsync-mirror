@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.23.ebuild,v 1.14 2013/02/01 12:07:07 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.23.ebuild,v 1.15 2013/02/06 21:20:01 phosphan Exp $
 
 EAPI="4"
 
@@ -96,18 +96,11 @@ IUSE_SANE_BACKENDS="
 
 IUSE="avahi doc gphoto2 ipv6 threads usb v4l xinetd"
 
-mySign=""
-
 for backend in ${IUSE_SANE_BACKENDS}; do
 	if [ ${backend} = pnm ]; then
 		IUSE="${IUSE} -sane_backends_pnm"
 	elif [ ${backend} = mustek_usb2 -o ${backend} = kvs40xx ]; then
-		if use threads; then
-			mySign="+"
-		else
-			mySign="-"
-		fi
-		IUSE="${IUSE} ${mySign}sane_backends_${backend}"
+		IUSE="${IUSE} sane_backends_${backend}"
 	else
 		IUSE="${IUSE} +sane_backends_${backend}"
 	fi
