@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/tbb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.31 2012/12/22 14:06:43 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.33 2013/02/06 04:26:24 ago Exp $
+
+  06 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tbb-4.1.20121003.ebuild:
+  Stable for x86, wrt bug #455510
+
+  06 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tbb-4.1.20121003.ebuild:
+  Stable for amd64, wrt bug #455510
 
   22 Dec 2012; Anthony G. Basile <blueness@gentoo.org> tbb-4.1.20121003.ebuild:
   Keyword ~ppc, bug #441946, thanks peratu
