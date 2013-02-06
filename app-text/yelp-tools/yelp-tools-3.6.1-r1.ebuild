@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/yelp-tools-3.4.1.ebuild,v 1.8 2013/02/06 03:29:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/yelp-tools-3.6.1-r1.ebuild,v 1.1 2013/02/06 03:29:14 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Collection of tools for building and converting documentation"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="|| ( GPL-2+ freedist ) GPL-2+" # yelp.m4 is GPL2 || freely distributable
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd"
 IUSE=""
 
 # Requires gawk, not virtual/awk; using nawk as awk results in syntax errors
@@ -24,4 +24,7 @@ RDEPEND=">=dev-libs/libxml2-2.6.12
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-DOCS="AUTHORS NEWS README"
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-3.6.1-gawk.patch"
+	default
+}

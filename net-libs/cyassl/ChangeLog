@@ -1,6 +1,20 @@
 # ChangeLog for net-libs/cyassl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.26 2013/02/03 19:40:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.29 2013/02/06 03:22:05 blueness Exp $
+
+  06 Feb 2013; Anthony G. Basile <blueness@gentoo.org> -cyassl-2.0.8-r1.ebuild,
+  -cyassl-2.2.0.ebuild, -cyassl-2.3.0.ebuild, -cyassl-2.4.0.ebuild,
+  -files/cyassl-2.4.0-fix-missing-DYNAMIC_TYPE_LIBZ.patch:
+  Remove older versions, bug #442890
+
+  06 Feb 2013; Anthony G. Basile <blueness@gentoo.org> cyassl-2.5.0.ebuild:
+  Fix silent-rules, bug #449016
+
+*cyassl-2.5.0 (06 Feb 2013)
+
+  06 Feb 2013; Anthony G. Basile <blueness@gentoo.org> +cyassl-2.5.0.ebuild,
+  metadata.xml:
+  Version bump, sercurity fix, bug #455766
 
   03 Feb 2013; Agostino Sarubbo <ago@gentoo.org> cyassl-2.4.6.ebuild:
   Stable for arm, wrt bug #448980

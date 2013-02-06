@@ -7,7 +7,9 @@
 	</maintainer>
 	<use>
 		<flag name="aes-gcm">Enable AES Galois/Counter mode</flag>
+		<flag name="aes-ccm">Eanble AES Counter with CBC-MAC mode </flag>
 		<flag name="aes-ni">Enable Intel AES instruction support</flag>
+		<flag name="camellia">Enable Camellia-CBC cipher support </flag>
 		<!-- add this when ecc is fixed
 		<flag name="ecc">Enable Elliptic Curve support</flag>
 		-->

@@ -1,0 +1,62 @@
+From 5321959587ee0597703328213eb46716a3c0bb09 Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Tue, 5 Feb 2013 22:18:01 -0500
+Subject: [PATCH] Use gawk, not awk
+
+Some other awk implementations (e.g. nawk) fail with a syntax error:
+
+awk: syntax error at source line 2
+ context is
+     >>> BEGIN <<<  {
+---
+ tools/yelp-build.in | 4 ++--
+ tools/yelp-check.in | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/tools/yelp-build.in b/tools/yelp-build.in
+index 1d70145..5058d6e 100755
+--- a/tools/yelp-build.in
++++ b/tools/yelp-build.in
+@@ -35,7 +35,7 @@ mkdir_p () {
+ }
+ 
+ urlencode () {
+-    LANG=C awk '
++    LANG=C gawk '
+ BEGIN {
+   for (i = 1; i <= 255; i++) chars[sprintf("%c", i)] = i;
+ }
+@@ -53,7 +53,7 @@ BEGIN {
+ }
+ 
+ urldecode () {
+-    LANG=C awk '
++    LANG=C gawk '
+ BEGIN {
+   for(i = 0; i < 10; i++) hex[i] = i;
+   hex["A"] = hex["a"] = 10;
+diff --git a/tools/yelp-check.in b/tools/yelp-check.in
+index a258290..4961d67 100755
+--- a/tools/yelp-check.in
++++ b/tools/yelp-check.in
+@@ -30,7 +30,7 @@ urlencode () {
+     else
+         urlencode_slash='\/'
+     fi
+-    echo "$1" | LANG=C awk '
++    echo "$1" | LANG=C gawk '
+ BEGIN {
+   for (i = 1; i <= 255; i++) chars[sprintf("%c", i)] = i;
+ }
+@@ -48,7 +48,7 @@ BEGIN {
+ }
+ 
+ urldecode () {
+-    echo "$1" | LANG=C awk '
++    echo "$1" | LANG=C gawk '
+ BEGIN {
+   for(i = 0; i < 10; i++) hex[i] = i;
+   hex["A"] = hex["a"] = 10;
+-- 
+1.8.1.2
+

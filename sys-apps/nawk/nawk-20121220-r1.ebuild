@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/nawk-20110810-r1.ebuild,v 1.4 2013/02/06 03:19:35 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/nawk-20121220-r1.ebuild,v 1.1 2013/02/06 03:29:55 ottxor Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" ALLOC="${LDFLAGS}" YACC=$(type -p yacc)
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" CPPFLAGS=-DHAS_ISBLANK ALLOC="${LDFLAGS}" YACC=$(type -p yacc) YFLAGS="-d"
 }
 
 src_install() {

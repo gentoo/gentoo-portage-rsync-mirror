@@ -1,10 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.3.0.ebuild,v 1.2 2012/09/02 13:30:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.5.0.ebuild,v 1.2 2013/02/06 03:16:53 blueness Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit eutils
+WANT_AUTOMAKE=1.12
+
+inherit autotools eutils
 
 DESCRIPTION="Lightweight SSL/TLS library targeted at embedded and RTOS environments"
 HOMEPAGE="http://www.yassl.com/yaSSL/Home.html"
@@ -16,9 +18,9 @@ KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
 
 #Add CRYPTO_OPTS=ecc when fixed
 CACHE_SIZE="small big +huge"
-CRYPTO_OPTS="aes-gcm aes-ni +hc128 md2 +psk +ripemd sha512"
+CRYPTO_OPTS="aes-gcm aes-ccm aes-ni camellia +hc128 md2 +psk +ripemd sha512"
 CERT_OPTS="ocsp crl crl-monitor +sessioncerts +testcert"
-IUSE="debug -dtls ipv6 +httpd +sniffer static-libs threads +zlib cyassl-hardening ${CACHE_SIZE} ${CRYPTO_OPTS} ${CERT_OPTS}"
+IUSE="debug -dtls ipv6 +httpd +sniffer static-libs threads +zlib cyassl-hardening ${CACHE_SIZE} ${CRYPTO_OPTS} ${CERT_OPTS} test"
 
 #You can only pick one cach size
 #sha512 is broken on x86
@@ -34,8 +36,9 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.0.8-disable-testsuit-ifnothreads.patch
 
-	#Apply unconditionally, but only triggered if USE="aes-ni"
-	epatch "${FILESDIR}"/${PN}-2.0.8-fix-gnustack.patch
+	#Bug #454300
+	epatch "${FILESDIR}"/${PN}-2.4.6-respect-CFLAGS.patch
+	eautoreconf
 }
 
 src_configure() {
@@ -57,23 +60,24 @@ src_configure() {
 	#There are lots of options, so we'll force a few reasonable
 	#We may change this in the future, in particular ecc needs to be fixed
 	econf \
+		--disable-silent-rules              \
 		--enable-opensslExtra               \
 		--enable-fortress                   \
 		--enable-keygen                     \
 		--enable-certgen                    \
 		--disable-debug                     \
 		--disable-ecc                       \
-		--disable-small                     \
 		--disable-ntru                      \
 		--disable-noFilesystem              \
 		--disable-noInline                  \
-		--disable-gcc-lots-o-warnings       \
 		$(use_enable debug)                 \
 		$(use_enable small smallcache)      \
 		$(use_enable big bigcache)          \
 		$(use_enable huge hugecache)        \
 		$(use_enable aes-gcm aesgcm)        \
+		$(use_enable aes-ccm aesccm)        \
 		$(use_enable aes-ni aesni)          \
+		$(use_enable camellia)              \
 		$(use_enable hc128)                 \
 		$(use_enable md2)                   \
 		$(use_enable psk)                   \
@@ -90,7 +94,6 @@ src_configure() {
 		$(use_enable testcert)              \
 		$(use_enable static-libs static)    \
 		$(use_enable cyassl-hardening gcc-hardening)    \
-		$(use_enable cyassl-hardening linker-hardening) \
 		$(use_with zlib libz)               \
 		"${myconf[@]}"
 }
