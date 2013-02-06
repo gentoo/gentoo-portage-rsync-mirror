@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boehm-gc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.85 2013/02/03 12:12:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.86 2013/02/06 10:12:11 sera Exp $
+
+  06 Feb 2013; Ralph Sennhauser <sera@gentoo.org> metadata.xml:
+  Add myself and patrick as maintainer due #22900
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -boehm-gc-7.0-r1.ebuild,
   -boehm-gc-7.2_alpha4-r1.ebuild, -boehm-gc-7.2_alpha6.ebuild, metadata.xml:
