@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.4-r2.ebuild,v 1.1 2012/12/29 19:01:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.5-r1.ebuild,v 1.2 2013/02/06 14:59:35 axs Exp $
 
-EAPI=4
+EAPI=5
 
 CMAKE_MIN_VERSION="2.8.8"
 inherit cmake-utils pam eutils systemd versionator
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/libXmu
 	x11-libs/libX11
 	x11-libs/libXpm
 	x11-libs/libXft
-	media-libs/libpng
+	media-libs/libpng:=
 	virtual/jpeg
 	x11-apps/sessreg
 	consolekit? ( sys-auth/consolekit
@@ -34,10 +34,9 @@ PDEPEND="branding? ( >=x11-themes/slim-themes-1.2.3a-r3 )"
 
 src_prepare() {
 	# Our Gentoo-specific config changes
-	epatch "${FILESDIR}"/${P}-config.diff
-	epatch "${FILESDIR}"/${P}-libpng.patch
-	epatch "${FILESDIR}"/${P}-pam-end.patch
+	epatch "${FILESDIR}"/${PN}-1.3.4-config.diff
 	epatch "${FILESDIR}"/${P}-arm.patch
+	epatch "${FILESDIR}"/${P}-systemd-service.patch
 
 	if use elibc_FreeBSD; then
 		sed -i -e 's/"-DHAVE_SHADOW"/"-DNEEDS_BASENAME"/' CMakeLists.txt \
@@ -72,7 +71,6 @@ src_install() {
 	newins "${FILESDIR}/slim.logrotate" slim
 
 	dodoc xinitrc.sample ChangeLog README TODO THEMES
-	systemd_dounit "${FILESDIR}"/${PN}.service || die
 }
 
 pkg_postinst() {

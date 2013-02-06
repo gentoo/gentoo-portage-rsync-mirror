@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-50.1.2.ebuild,v 1.1 2013/02/06 14:21:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-50.1.2.ebuild,v 1.3 2013/02/06 14:53:22 scarabeus Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.icu-project.org/files/icu4c/${PV/_/}/icu4c-${PV//./_}-s
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 -amd64-fbsd -x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="debug doc examples static-libs"
 
 DEPEND="
@@ -25,13 +25,16 @@ S="${WORKDIR}/${PN}/source"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-4.8.1-fix_binformat_fonts.patch"
-	"${FILESDIR}/${PN}-4.8.1.1-fix_ltr.patch"
+	"${FILESDIR}/${PN}.7601.Indic-ccmp.patch"
+	"${FILESDIR}/${PN}-50.1.2-bsd.patch"
 )
 
 src_prepare() {
 	local variable
 
 	base_src_prepare
+	epatch -R \
+		"${FILESDIR}/${PN}.8198.revert.icu5431.patch"
 
 	# Do not hardcode flags in icu-config and icu-*.pc files.
 	# https://ssl.icu-project.org/trac/ticket/6102

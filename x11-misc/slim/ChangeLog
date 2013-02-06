@@ -1,6 +1,20 @@
 # ChangeLog for x11-misc/slim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.94 2013/02/06 14:28:37 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.97 2013/02/06 14:59:35 axs Exp $
+
+  06 Feb 2013; Ian Stakenvicius <axs@gentoo.org> slim-1.3.5-r1.ebuild:
+  bump to EAPI5 and put slot-operator dep on libpng
+
+  06 Feb 2013; Ian Stakenvicius <axs@gentoo.org> -slim-1.3.4-r2.ebuild,
+  -files/slim-1.3.4-arm.patch, -files/slim-1.3.4-libpng.patch,
+  -files/slim-1.3.4-pam-end.patch, -files/slim.service:
+  remove old
+
+*slim-1.3.5-r1 (06 Feb 2013)
+
+  06 Feb 2013; Ian Stakenvicius <axs@gentoo.org> -slim-1.3.5.ebuild,
+  +slim-1.3.5-r1.ebuild:
+  revbumped due to changes on disk
 
   06 Feb 2013; Ian Stakenvicius <axs@gentoo.org> slim-1.3.5.ebuild,
   +files/slim-1.3.5-systemd-service.patch:

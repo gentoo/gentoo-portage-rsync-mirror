@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.226 2013/02/06 14:21:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.228 2013/02/06 14:53:22 scarabeus Exp $
+
+  06 Feb 2013; Tomáš Chvátal <scarabeus@gentoo.org> +files/icu-50.1.2-bsd.patch,
+  icu-50.1.2.ebuild:
+  Fix building on bsd wrt bug#454796.
+
+  06 Feb 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/icu.7601.Indic-ccmp.patch, +files/icu.8198.revert.icu5431.patch,
+  -files/icu-50.1-no-c++11.patch, -icu-50.1-r1.ebuild, icu-50.1.2.ebuild:
+  Use patches from fedora to fix few more issues.
 
 *icu-50.1.2 (06 Feb 2013)
 
