@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.803 2013/02/06 02:32:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.804 2013/02/06 03:47:06 floppym Exp $
+
+  06 Feb 2013; Mike Gilbert <floppym@gentoo.org> -chromium-24.0.1312.52.ebuild,
+  chromium-24.0.1312.56.ebuild:
+  Add an upper bound on v8 due to API change. Reported by Mr_Bones_.
 
 *chromium-25.0.1364.68 (06 Feb 2013)
 
