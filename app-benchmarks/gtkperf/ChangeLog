@@ -1,6 +1,12 @@
 # ChangeLog for app-benchmarks/gtkperf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/gtkperf/ChangeLog,v 1.5 2013/02/03 13:20:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/gtkperf/ChangeLog,v 1.6 2013/02/05 23:36:38 xmw Exp $
+
+*gtkperf-0.40-r1 (05 Feb 2013)
+
+  05 Feb 2013; Michael Weber <xmw@gentoo.org> -gtkperf-0.40.ebuild,
+  +gtkperf-0.40-r1.ebuild, +files/gtkperf-0.40-gentoo.patch:
+  Fix CFLAGS (bug 428652), fix two compiler warnings, taking maint.
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup after talking with leio
