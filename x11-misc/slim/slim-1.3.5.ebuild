@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.5.ebuild,v 1.1 2012/12/31 18:09:51 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.5.ebuild,v 1.2 2013/02/06 14:28:37 axs Exp $
 
 EAPI=4
 
@@ -36,6 +36,7 @@ src_prepare() {
 	# Our Gentoo-specific config changes
 	epatch "${FILESDIR}"/${PN}-1.3.4-config.diff
 	epatch "${FILESDIR}"/${P}-arm.patch
+	epatch "${FILESDIR}"/${P}-systemd-service.patch
 
 	if use elibc_FreeBSD; then
 		sed -i -e 's/"-DHAVE_SHADOW"/"-DNEEDS_BASENAME"/' CMakeLists.txt \
