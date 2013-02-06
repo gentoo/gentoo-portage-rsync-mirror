@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tornado
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.30 2012/12/31 22:45:30 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.31 2013/02/05 23:14:49 mgorny Exp $
+
+*tornado-2.4-r1 (05 Feb 2013)
+
+  05 Feb 2013; Michał Górny <mgorny@gentoo.org> +tornado-2.4-r1.ebuild:
+  Migrate to distutils-r1.
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> tornado-2.4.ebuild:
   Stable for x86, wrt bug #449428

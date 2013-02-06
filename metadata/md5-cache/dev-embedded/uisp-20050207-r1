@@ -1,10 +1,10 @@
-DEFINED_PHASES=compile install unpack
-DEPEND=sys-apps/gawk sys-devel/gcc
+DEFINED_PHASES=install prepare
 DESCRIPTION=tool for AVR microcontrollers which can interface to many hardware in-system programmers
+EAPI=4
 HOMEPAGE=http://savannah.nongnu.org/projects/uisp
 KEYWORDS=~amd64 ~ppc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://savannah.nongnu.org/download/uisp/uisp-20050207.tar.gz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=c8dc56f49e0d7081849aa37e28f65bd2
+_md5_=65e1d3d1d0d83ae2b90968f777f7012f

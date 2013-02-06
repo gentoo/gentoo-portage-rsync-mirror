@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/jtag
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/jtag/ChangeLog,v 1.11 2012/09/08 00:36:23 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/jtag/ChangeLog,v 1.12 2013/02/05 23:23:15 vapier Exp $
+
+  05 Feb 2013; Mike Frysinger <vapier@gentoo.org> jtag-0.5.1-r1.ebuild:
+  Update to EAPI=4 and drop useless depends #455722 by Christoph Junghans.
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant metadata.
@@ -36,4 +39,3 @@
 
   24 Feb 2004; Michael Imhof <tantive@gentoo.org> jtag-0.5.1.ebuild:
   Initial import.
-
