@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.275 2013/02/05 10:31:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.276 2013/02/06 02:30:42 floppym Exp $
+
+*v8-3.15.11.15 (06 Feb 2013)
+
+  06 Feb 2013; Mike Gilbert <floppym@gentoo.org> +v8-3.15.11.15.ebuild,
+  -v8-3.15.11.11.ebuild:
+  Beta channel bump.
 
 *v8-3.16.11.1 (05 Feb 2013)
 
