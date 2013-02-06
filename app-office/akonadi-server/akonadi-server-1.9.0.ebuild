@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.9.0.ebuild,v 1.2 2013/02/06 18:59:38 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.9.0.ebuild,v 1.3 2013/02/06 20:14:33 dilfridge Exp $
 
 EAPI=4
 
@@ -72,7 +72,7 @@ pkg_setup() {
 	fi
 
 	# Notify about MySQL not being default anymore
-	if ! use sqlite && has_version "<=${CATEGORY}/${PN}-1.4.0[sqlite]"; then
+	if ! use sqlite && has_version "<=${CATEGORY}/${PN}-1.9.0[sqlite]"; then
 		ewarn
 		ewarn "The default storage drive has changed from SQLite to MySQL."
 		ewarn "If you want to stay with SQLite, enable the sqlite USE flag and reinstall"

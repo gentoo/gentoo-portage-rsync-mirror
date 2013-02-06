@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.61 2013/01/22 17:57:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.62 2013/02/06 20:22:12 dilfridge Exp $
+
+  06 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  nvidia-cuda-toolkit-4.2.9-r2.ebuild, nvidia-cuda-toolkit-5.0.35-r2.ebuild:
+  Will never work on any arches other than amd64 x86 (binary package)
 
 *nvidia-cuda-toolkit-5.0.35-r2 (22 Jan 2013)
 *nvidia-cuda-toolkit-4.2.9-r2 (22 Jan 2013)

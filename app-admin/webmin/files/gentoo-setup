@@ -1,5 +1,8 @@
 #!/bin/sh
 # gentoo-setup.sh
+#
+# Version 1.1
+#
 # A modified original Webmin setup.sh script to comply with Gentoo specifics
 #
 # Modification done by: PhobosK <phobosk@kbfx.net>
@@ -91,10 +94,11 @@ if [ "$upgrading" = 1 ]; then
 	real_os_type=`grep "^real_os_type=" $config_dir/config | sed -e 's/real_os_type=//g'`
 	real_os_version=`grep "^real_os_version=" $config_dir/config | sed -e 's/real_os_version=//g'`
 
-	# Get port, ssl, ssl_redirect and keyfile
+	# Get port, ssl, ssl_redirect, no_sslcompression and keyfile
 	port=`grep "^port=" $config_dir/miniserv.conf | sed -e 's/port=//g'`
 	ssl=`grep "^ssl=" $config_dir/miniserv.conf | sed -e 's/ssl=//g'`
 	ssl_redirect=`grep "^ssl_redirect=" $config_dir/miniserv.conf | sed -e 's/ssl_redirect=//g'`
+	no_sslcompression=`grep "^no_sslcompression=" $config_dir/miniserv.conf | sed -e 's/no_sslcompression=//g'`
 	keyfile=`grep "^keyfile=" $config_dir/miniserv.conf | sed -e 's/keyfile=//g'`
 
 	# Update ACLs
@@ -136,6 +140,7 @@ else
 	echo "ppath=$ppath" >> $cfile
 	echo "ssl=$ssl" >> $cfile
 	echo "ssl_redirect=$ssl_redirect" >> $cfile
+	echo "no_sslcompression=$no_sslcompression" >> $cfile
 	echo "keyfile=$keyfile" >> $cfile
 	echo "env_WEBMIN_CONFIG=$config_dir" >> $cfile
 	echo "env_WEBMIN_VAR=$var_dir" >> $cfile
@@ -275,6 +280,12 @@ done
 grep passwd_mode= $config_dir/miniserv.conf >/dev/null
 if [ "$?" != "0" ]; then
 	echo passwd_mode=0 >> $config_dir/miniserv.conf
+fi
+
+# Disable SSL compression to defeat BEAST attack
+grep no_sslcompression= $config_dir/miniserv.conf >/dev/null
+if [ "$?" != "0" ]; then
+	echo no_sslcompression=1 >> $config_dir/miniserv.conf
 fi
 
 # Make Perl crypt MD5 the default
