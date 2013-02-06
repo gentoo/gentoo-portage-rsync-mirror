@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.355 2013/02/01 12:58:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.356 2013/02/06 19:47:35 ago Exp $
+
+  06 Feb 2013; Agostino Sarubbo <ago@gentoo.org> freetype-2.4.11.ebuild:
+  Stable for sparc, wrt bug #448550
 
   01 Feb 2013; Ben de Groot <yngwin@gentoo.org> -freetype-2.4.10-r1.ebuild,
   -freetype-2.4.10.ebuild:

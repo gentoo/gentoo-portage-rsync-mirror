@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1185 2013/01/27 22:04:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1186 2013/02/06 19:46:46 zmedico Exp $
+
+  06 Feb 2013; Zac Medico <zmedico@gentoo.org> portage-2.1.11.31.ebuild,
+  portage-2.1.11.50.ebuild, portage-2.2.0_alpha142.ebuild,
+  portage-2.2.0_alpha161.ebuild, portage-9999.ebuild:
+  DEPEND on make-3.82 for bug #282760.
 
   27 Jan 2013; Zac Medico <zmedico@gentoo.org> portage-2.1.11.31.ebuild,
   portage-2.1.11.50.ebuild, portage-2.2.0_alpha142.ebuild,

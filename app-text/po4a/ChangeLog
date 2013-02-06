@@ -1,6 +1,9 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.65 2013/02/05 13:23:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.66 2013/02/06 19:38:12 ago Exp $
+
+  06 Feb 2013; Agostino Sarubbo <ago@gentoo.org> po4a-0.42.ebuild:
+  Stable for sparc, wrt bug #453122
 
   05 Feb 2013; Jeroen Roovers <jer@gentoo.org> po4a-0.42.ebuild:
   Stable for HPPA (bug #453122).

@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.296 2013/02/02 03:47:28 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.297 2013/02/06 19:36:51 hwoarang Exp $
+
+  06 Feb 2013; Markos Chandras <hwoarang@gentoo.org> files/lighttpd.initd:
+  Move lighttpd.pid from /var/run -> /run
 
 *lighttpd-1.4.32-r1 (02 Feb 2013)
 

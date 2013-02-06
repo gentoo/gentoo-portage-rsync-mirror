@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-exec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/ChangeLog,v 1.30 2013/02/04 09:47:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/ChangeLog,v 1.31 2013/02/06 19:45:41 ago Exp $
+
+  06 Feb 2013; Agostino Sarubbo <ago@gentoo.org> python-exec-0.2.ebuild:
+  Stable for sparc, wrt bug #452934
 
   04 Feb 2013; Agostino Sarubbo <ago@gentoo.org> python-exec-0.2.ebuild:
   Stable for alpha, wrt bug #452934

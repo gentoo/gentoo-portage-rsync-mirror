@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcdio-paranoia
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/ChangeLog,v 1.4 2013/01/16 10:17:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/ChangeLog,v 1.5 2013/02/06 19:32:46 ssuominen Exp $
+
+  06 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
+  libcdio-paranoia-0.90.ebuild, +files/libcdio-paranoia-0.90-mkdir_p.patch:
+  Fix building problem with the japanese manpage wrt #455374 by Sebastian
+  Pipping
 
   16 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
   libcdio-paranoia-0.90.ebuild:

@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.21 2012/01/08 20:45:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.22 2013/02/06 19:36:51 hwoarang Exp $
 
 extra_started_commands="reload graceful"
 
@@ -21,14 +21,14 @@ checkconfig() {
 	if [ -z "${LIGHTTPD_PID}" ] ; then
 		ewarn "server.pid-file variable in ${LIGHTTPD_CONF}"
 		ewarn "is not set. Falling back to lighttpd.pid"
-		LIGHTTPD_PID="/var/run/lighttpd.pid"
+		LIGHTTPD_PID="/run/lighttpd.pid"
 	fi
 	/usr/sbin/lighttpd -t -f ${LIGHTTPD_CONF} >/dev/null
 }
 
 start() {
 	checkconfig || return 1
-	checkpath -d -q -m 0750 -o lighttpd:lighttpd /var/run/lighttpd/
+	checkpath -d -q -m 0750 -o lighttpd:lighttpd /run/lighttpd/
 
 	ebegin "Starting lighttpd"
 	start-stop-daemon --start --quiet --exec /usr/sbin/lighttpd \

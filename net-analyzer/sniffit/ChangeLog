@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sniffit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.23 2013/01/31 23:12:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.24 2013/02/06 19:50:40 ago Exp $
+
+  06 Feb 2013; Agostino Sarubbo <ago@gentoo.org> sniffit-0.3.7-r4.ebuild:
+  Stable for sparc, wrt bug #454014
 
   31 Jan 2013; Agostino Sarubbo <ago@gentoo.org> sniffit-0.3.7-r4.ebuild:
   Stable for ppc, wrt bug #454014

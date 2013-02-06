@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.153 2013/02/04 19:44:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.154 2013/02/06 19:41:34 ago Exp $
+
+  06 Feb 2013; Agostino Sarubbo <ago@gentoo.org> geoip-1.4.8-r2.ebuild:
+  Stable for sparc, wrt bug #453404
 
   04 Feb 2013; Jeroen Roovers <jer@gentoo.org> files/geoipupdate-r2.sh,
   geoip-1.4.8-r3.ebuild, metadata.xml:

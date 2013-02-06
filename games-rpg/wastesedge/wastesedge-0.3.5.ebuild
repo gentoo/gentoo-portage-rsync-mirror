@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.5.ebuild,v 1.1 2013/02/03 00:15:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.5.ebuild,v 1.2 2013/02/06 19:46:10 mr_bones_ Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -14,7 +14,7 @@ SRC_URI="http://savannah.nongnu.org/download/adonthell/${PN}-src-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="vorbis nls"
+IUSE="nls"
 RESTRICT="userpriv"
 
 RDEPEND="${PYTHON_DEPS}
@@ -30,7 +30,6 @@ pkg_setup() {
 
 src_configure(){
 	egamesconf \
-		--disable-dependency-tracking \
 		$(use_enable nls) \
 		--with-adonthell-binary="${GAMES_BINDIR}/adonthell"
 }
