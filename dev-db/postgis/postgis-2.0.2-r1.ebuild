@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.0.2-r1.ebuild,v 1.2 2013/02/04 14:55:54 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.0.2-r1.ebuild,v 1.3 2013/02/06 02:52:58 titanofold Exp $
 
 EAPI="4"
 
@@ -51,6 +51,10 @@ RESTRICT="test"
 # *FLAGS settings.
 QA_FLAGS_IGNORED="usr/lib(64)?/(rt)?postgis-${PGIS}\.so"
 
+# Because developers have been fooled into thinking recursive make is a
+# good thing.
+MAKEOPTS="-j1"
+
 pkg_setup() {
 	export PGSLOT="$(postgresql-config show)"
 
@@ -80,12 +84,17 @@ src_compile() {
 	# Otherwise, it'd be fine.
 	emake
 	emake -C topology
-	use doc && emake -C doc html -j1
+
+	if use doc ; then
+		emake comments
+		emake cheatsheets
+		emake -C doc html
+	fi
 }
 
 src_install() {
 	emake DESTDIR="${D}" install
-	emake DESTDIR="${D}" comments-install
+	use doc && emake DESTDIR="${D}" comments-install
 	emake -C topology DESTDIR="${D}" install
 	dobin ./utils/postgis_restore.pl
 
