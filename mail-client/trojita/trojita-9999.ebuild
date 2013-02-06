@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.12 2013/01/15 19:41:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.13 2013/02/06 15:18:49 kensington Exp $
 
 EAPI=4
 
 QT_REQUIRED="4.6.0"
 EGIT_REPO_URI="git://gitorious.org/${PN}/${PN}.git"
 [[ ${PV} == "9999" ]] && GIT_ECLASS="git-2"
-inherit qt4-r2 ${GIT_ECLASS}
+inherit qt4-r2 virtualx ${GIT_ECLASS}
 
 DESCRIPTION="A Qt IMAP e-mail client"
 HOMEPAGE="http://trojita.flaska.net/"

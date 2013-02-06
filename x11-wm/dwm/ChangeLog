@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/dwm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.87 2012/05/03 14:40:04 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.88 2013/02/06 15:19:31 jer Exp $
+
+  06 Feb 2013; Jeroen Roovers <jer@gentoo.org> dwm-6.0.ebuild:
+  Verbose build.
 
   03 May 2012; Jeroen Roovers <jer@gentoo.org> dwm-6.0.ebuild:
   Add support for epatch_user by Marvin Vek (bug #414481).

@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/trojita
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.19 2013/01/16 20:40:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.20 2013/02/06 15:18:49 kensington Exp $
+
+  06 Feb 2013; Michael Palimaka <kensington@gentoo.org> trojita-0.3.91.ebuild,
+  trojita-9999.ebuild:
+  Add missing virtualx inherit wrt bug #452810.
 
 *trojita-0.3.91 (16 Jan 2013)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p514.ebuild,v 1.3 2012/07/19 20:38:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p514.ebuild,v 1.4 2013/02/06 15:25:07 jlec Exp $
 
 EAPI=4
 
@@ -20,15 +20,14 @@ SLOT="0"
 KEYWORDS="~amd64 arm ~ppc ~ppc64 ~sparc ~x86"
 IUSE="resolvconf +gnutls bindist"
 
+REQUIRED_USE="bindist? ( gnutls )"
+
 DEPEND="
 	dev-lang/perl
 	dev-libs/libgcrypt
 	>=sys-apps/iproute2-2.6.19.20061214[-minimal]
-	bindist? ( net-libs/gnutls )
-	!bindist? (
-		gnutls? ( net-libs/gnutls )
-		!gnutls? ( dev-libs/openssl )
-	)"
+	gnutls? ( net-libs/gnutls )
+	!gnutls? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}
 	resolvconf? ( net-dns/openresolv )"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-6.0.ebuild,v 1.11 2012/05/03 14:40:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-6.0.ebuild,v 1.12 2013/02/06 15:19:31 jer Exp $
 
 EAPI="4"
 
@@ -31,7 +31,11 @@ src_prepare() {
 		-e "s@/usr/X11R6/include@${EPREFIX}/usr/include/X11@" \
 		-e "s@/usr/X11R6/lib@${EPREFIX}/usr/lib@" \
 		-e "s@-I/usr/include@@" -e "s@-L/usr/lib@@" \
-		config.mk || die "sed failed"
+		config.mk || die
+	sed -i \
+		-e '/@echo CC/d' \
+		-e 's|@${CC}|$(CC)|g' \
+		Makefile || die
 
 	restore_config config.h
 	epatch_user
@@ -39,9 +43,9 @@ src_prepare() {
 
 src_compile() {
 	if use xinerama; then
-		emake CC=$(tc-getCC)
+		emake CC=$(tc-getCC) dwm
 	else
-		emake CC=$(tc-getCC) XINERAMAFLAGS="" XINERAMALIBS=""
+		emake CC=$(tc-getCC) XINERAMAFLAGS="" XINERAMALIBS="" dwm
 	fi
 }
 

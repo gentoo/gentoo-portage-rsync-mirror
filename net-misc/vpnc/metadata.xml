@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>ljakab@ac.upc.edu</email>
-		<name>Loránd Jakab</name>
-	</maintainer>
-	<maintainer>
-		<email>mmokrejs@fold.natur.cuni.cz</email>
-		<name>Martin Mokrejs</name>
-	</maintainer>
-	<maintainer>
-		<email>fauli@gentoo.org</email>
-		<name>Christian Faulhammer</name>
-	</maintainer>
-	<use>
-		<flag name="bindist">Using GnuTLS for SSL support as redistribution with OpenSSL as provider violates GPL</flag>
-		<flag name="hybrid-auth">Enable hybrid authentication (certificates), only if not redistributed as compiled binary</flag>
-		<flag name="resolvconf">Enable support for DNS managing framework <pkg>net-dns/openresolv</pkg></flag>
-	</use>
+  <maintainer>
+    <email>ljakab@ac.upc.edu</email>
+    <name>Loránd Jakab</name>
+  </maintainer>
+  <maintainer>
+    <email>mmokrejs@fold.natur.cuni.cz</email>
+    <name>Martin Mokrejs</name>
+  </maintainer>
+  <maintainer>
+    <email>fauli@gentoo.org</email>
+    <name>Christian Faulhammer</name>
+  </maintainer>
+  <use>
+    <flag name="bindist">Using GnuTLS for SSL support as redistribution with OpenSSL as provider violates GPL</flag>
+    <flag name="hybrid-auth">Enable hybrid authentication (certificates), only if not redistributed as compiled binary</flag>
+    <flag name="resolvconf">Enable support for DNS managing framework <pkg>net-dns/openresolv</pkg></flag>
+  </use>
 </pkgmetadata>

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vpnc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.102 2012/12/27 23:29:31 fauli Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.103 2013/02/06 15:25:07 jlec Exp $
+
+  06 Feb 2013; Justin Lecher <jlec@gentoo.org> vpnc-0.5.3_p514.ebuild,
+  metadata.xml:
+  Use REQUIRED_USE to sanitize *DEPENDS, thanks Dmitri Bogomolov for the
+  initial patch, #407965
 
   27 Dec 2012; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
   add local description of bindist USE flag to clarify on the whies and about,
