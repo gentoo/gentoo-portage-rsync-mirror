@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.325 2013/01/31 13:35:51 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.326 2013/02/06 00:22:32 mattst88 Exp $
+
+*cairo-1.12.12 (06 Feb 2013)
+
+  06 Feb 2013; Matt Turner <mattst88@gentoo.org> +cairo-1.12.12.ebuild,
+  +files/cairo-1.12.12-disable-test-suite.patch:
+  Version bump to 1.12.12, bug 455094. Also don't build the test suite, bug
+  454350; and bump pixman dependency to >=0.28.0, bug 454352.
 
 *cairo-1.12.10-r2 (31 Jan 2013)
 
