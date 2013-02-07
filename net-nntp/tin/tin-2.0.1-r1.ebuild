@@ -1,14 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-2.1.2.ebuild,v 1.4 2013/02/07 12:12:14 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-2.0.1-r1.ebuild,v 1.1 2013/02/07 12:12:14 kensington Exp $
 
 EAPI=5
-inherit eutils toolchain-funcs versionator
+inherit autotools eutils toolchain-funcs versionator
 
-TIN_PV=$(get_version_component_range 1-2)
 DESCRIPTION="A threaded NNTP and spool based UseNet newsreader"
 HOMEPAGE="http://www.tin.org/"
-SRC_URI="ftp://ftp.tin.org/pub/news/clients/tin/v${TIN_PV}/${P}.tar.xz"
+SRC_URI="ftp://ftp.tin.org/pub/news/clients/tin/v$(get_version_component_range 1-2)/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,13 +30,14 @@ RDEPEND="
 
 DEPEND="
 	${RDEPEND}
-	app-arch/xz-utils
 	virtual/pkgconfig
 "
 
 src_prepare() {
-	sed -i src/Makefile.in -e 's| -s | |g' || die
-	sed -i configure -e '/CFLAGS/s|-g||g' || die
+	# Do not strip
+	sed -i src/Makefile.in -e '388s|-s ||g' || die "sed src/Makefile.in failed"
+	sed -i configure.in -e '/CFLAGS/s|-g||g' || die
+	eautoreconf
 }
 
 src_configure() {
@@ -53,12 +53,13 @@ src_configure() {
 	local screen="ncurses"
 	use unicode && screen="ncursesw"
 
+	use etiquette || myconf="${myconf} --disable-etiquette"
+
 	tc-export AR CC RANLIB
 
 	econf \
 		$(use_enable cancel-locks) \
 		$(use_enable debug) \
-		$(use_enable etiquette) \
 		$(use_enable gpg pgp-gpg) \
 		$(use_enable ipv6) \
 		$(use_enable nls) \
@@ -72,7 +73,8 @@ src_configure() {
 		--with-coffee  \
 		--with-nntp-default-server="${TIN_DEFAULT_SERVER:-${NNTPSERVER:-news.gmane.org}}" \
 		--with-pcre=/usr \
-		--with-screen=${screen}
+		--with-screen=${screen} \
+		${myconf}
 }
 
 src_compile() {
