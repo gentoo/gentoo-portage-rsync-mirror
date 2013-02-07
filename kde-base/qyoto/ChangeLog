@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/qyoto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qyoto/ChangeLog,v 1.55 2013/01/28 13:27:05 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qyoto/ChangeLog,v 1.56 2013/02/07 04:57:09 alexxy Exp $
+
+*qyoto-4.10.0 (06 Feb 2013)
+
+  06 Feb 2013; Alexey Shvetsov <alexxy@gentoo.org> +qyoto-4.10.0.ebuild:
+  Version bump KDE SC 4.10.0
 
   28 Jan 2013; Michael Palimaka <kensington@gentoo.org>
   -files/qyoto-4.9.3-cmake-2.8.10.patch:

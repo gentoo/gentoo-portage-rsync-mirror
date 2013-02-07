@@ -1,9 +1,14 @@
 # ChangeLog for kde-base/kwalletd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.136 2013/02/07 01:25:49 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.137 2013/02/07 04:57:12 alexxy Exp $
 
   07 Feb 2013; Naohiro Aota <naota@gentoo.org> kwalletd-4.9.5.ebuild:
   Add ~x86-fbsd wrt bug #430072
+
+*kwalletd-4.10.0 (06 Feb 2013)
+
+  06 Feb 2013; Alexey Shvetsov <alexxy@gentoo.org> +kwalletd-4.10.0.ebuild:
+  Version bump KDE SC 4.10.0
 
   28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -kwalletd-4.9.3.ebuild,
   -kwalletd-4.9.4.ebuild:

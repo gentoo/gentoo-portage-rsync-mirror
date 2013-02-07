@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.215 2013/02/05 08:22:14 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.216 2013/02/07 04:45:57 alexxy Exp $
+
+  07 Feb 2013; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
+  Mask KDE SC 4.10.0 for keywording bug #455960
 
   05 Feb 2013; Rick Farina <zerochaos@gentoo.org> use.mask package.use.mask:
   removing java use mask, jre 1.6 is now available, 1.7 is next

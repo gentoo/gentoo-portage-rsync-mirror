@@ -1,9 +1,15 @@
 # ChangeLog for kde-base/kmimetypefinder
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmimetypefinder/ChangeLog,v 1.150 2013/02/07 01:16:03 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmimetypefinder/ChangeLog,v 1.151 2013/02/07 04:57:27 alexxy Exp $
 
   07 Feb 2013; Naohiro Aota <naota@gentoo.org> kmimetypefinder-4.9.5.ebuild:
   Add ~x86-fbsd wrt bug #430072
+
+*kmimetypefinder-4.10.0 (06 Feb 2013)
+
+  06 Feb 2013; Alexey Shvetsov <alexxy@gentoo.org>
+  +kmimetypefinder-4.10.0.ebuild:
+  Version bump KDE SC 4.10.0
 
   28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -kmimetypefinder-4.9.3.ebuild,
   -kmimetypefinder-4.9.4.ebuild:

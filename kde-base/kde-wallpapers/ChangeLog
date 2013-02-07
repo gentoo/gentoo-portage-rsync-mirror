@@ -1,9 +1,15 @@
 # ChangeLog for kde-base/kde-wallpapers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.90 2013/02/07 01:06:19 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.91 2013/02/07 04:57:42 alexxy Exp $
 
   07 Feb 2013; Naohiro Aota <naota@gentoo.org> kde-wallpapers-4.9.5.ebuild:
   Add ~x86-fbsd wrt bug #430072
+
+*kde-wallpapers-4.10.0 (06 Feb 2013)
+
+  06 Feb 2013; Alexey Shvetsov <alexxy@gentoo.org>
+  +kde-wallpapers-4.10.0.ebuild:
+  Version bump KDE SC 4.10.0
 
   28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -kde-wallpapers-4.9.3.ebuild,
   -kde-wallpapers-4.9.4.ebuild:

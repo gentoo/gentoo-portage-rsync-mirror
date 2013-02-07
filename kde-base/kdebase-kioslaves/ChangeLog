@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.289 2013/01/28 12:12:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.290 2013/02/07 04:56:57 alexxy Exp $
+
+*kdebase-kioslaves-4.10.0 (06 Feb 2013)
+
+  06 Feb 2013; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdebase-kioslaves-4.10.0.ebuild:
+  Version bump KDE SC 4.10.0
 
   28 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
   -kdebase-kioslaves-4.9.3.ebuild, -kdebase-kioslaves-4.9.4.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kleopatra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.142 2013/01/28 12:13:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.143 2013/02/07 04:57:43 alexxy Exp $
+
+*kleopatra-4.10.0 (06 Feb 2013)
+
+  06 Feb 2013; Alexey Shvetsov <alexxy@gentoo.org> +kleopatra-4.10.0.ebuild:
+  Version bump KDE SC 4.10.0
 
   28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -kleopatra-4.9.3.ebuild,
   -kleopatra-4.9.4.ebuild:

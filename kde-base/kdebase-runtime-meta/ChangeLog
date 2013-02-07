@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-runtime-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/ChangeLog,v 1.105 2013/01/28 12:12:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/ChangeLog,v 1.106 2013/02/07 04:57:55 alexxy Exp $
+
+*kdebase-runtime-meta-4.10.0 (06 Feb 2013)
+
+  06 Feb 2013; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdebase-runtime-meta-4.10.0.ebuild:
+  Version bump KDE SC 4.10.0
 
   28 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
   -kdebase-runtime-meta-4.9.3.ebuild, -kdebase-runtime-meta-4.9.4.ebuild:
