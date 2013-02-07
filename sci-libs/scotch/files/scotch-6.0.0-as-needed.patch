@@ -1,6 +1,6 @@
 diff -Nur src.orig/check/Makefile src/check/Makefile
---- src.orig/check/Makefile	2013-02-06 22:03:30.487658815 -0800
-+++ src/check/Makefile	2013-02-06 23:02:59.724078652 -0800
+--- src.orig/check/Makefile	2013-02-07 17:27:00.000000000 +0000
++++ src/check/Makefile	2013-02-07 17:27:21.000000000 +0000
 @@ -48,7 +48,7 @@
  				$(CC) $(CFLAGS) $(CLIBFLAGS) -I$(SCOTCHINCLUDEDIR) -c $(<) -o $(@)
  
@@ -11,8 +11,8 @@ diff -Nur src.orig/check/Makefile src/check/Makefile
  ##
  ##  Project rules.
 diff -Nur src.orig/esmumps/Makefile src/esmumps/Makefile
---- src.orig/esmumps/Makefile	2013-02-06 22:03:30.486658809 -0800
-+++ src/esmumps/Makefile	2013-02-06 23:03:17.826171776 -0800
+--- src.orig/esmumps/Makefile	2013-02-07 17:27:00.000000000 +0000
++++ src/esmumps/Makefile	2013-02-07 17:28:11.000000000 +0000
 @@ -44,7 +44,7 @@
  				$(CC) $(CFLAGS) $(CLIBFLAGS) -I$(includedir) -c $(<) -o $(@)
  
@@ -31,18 +31,17 @@ diff -Nur src.orig/esmumps/Makefile src/esmumps/Makefile
  					$(MAKE) CFLAGS="$(CFLAGS) -DSCOTCH_PTSCOTCH" CC=$(CCP) SCOTCHLIB=ptscotch ESMUMPSLIB=ptesmumps	\
  					libesmumps$(LIB)										\
  					main_esmumps$(EXE)
-@@ -142,7 +142,7 @@
- 					common.h				\
- 					esmumps.h
- 
--libesmumps$(LIB)		:	graph_graph$(OBJ)			\
-+lib$(ESMUMPSLIB)$(LIB)		:	graph_graph$(OBJ)			\
- 					order$(OBJ)				\
- 					order_scotch_graph$(OBJ)		\
- 					dof$(OBJ)				\
+@@ -160,6 +160,6 @@
+ 					order.h					\
+ 					symbol.h				\
+ 					esmumps.h				\
+-					lib$(ESMUMPSLIB)$(LIB)			\
++					libesmumps$(LIB)			\
+ 					$(libdir)/lib$(SCOTCHLIB)$(LIB)		\
+ 					$(libdir)/lib$(SCOTCHLIB)errexit$(LIB)
 diff -Nur src.orig/libscotch/Makefile src/libscotch/Makefile
---- src.orig/libscotch/Makefile	2013-02-06 22:03:30.494658850 -0800
-+++ src/libscotch/Makefile	2013-02-06 23:03:59.702387230 -0800
+--- src.orig/libscotch/Makefile	2013-02-07 17:27:00.000000000 +0000
++++ src/libscotch/Makefile	2013-02-07 17:27:21.000000000 +0000
 @@ -43,7 +43,7 @@
  				$(CC) $(CFLAGS) $(CLIBFLAGS) -c $(<) -o $(@)
  
@@ -70,8 +69,8 @@ diff -Nur src.orig/libscotch/Makefile src/libscotch/Makefile
  scotch.h			:	dummysizes$(EXE)			\
  					library.h
 diff -Nur src.orig/libscotchmetis/Makefile src/libscotchmetis/Makefile
---- src.orig/libscotchmetis/Makefile	2013-02-06 22:03:30.477658764 -0800
-+++ src/libscotchmetis/Makefile	2013-02-06 22:19:34.684626271 -0800
+--- src.orig/libscotchmetis/Makefile	2013-02-07 17:27:00.000000000 +0000
++++ src/libscotchmetis/Makefile	2013-02-07 17:27:21.000000000 +0000
 @@ -44,7 +44,7 @@
  				$(CC) $(CFLAGS) $(CLIBFLAGS) -I$(includedir) -I../libscotch -c $(<) -o $(@)
  
@@ -82,8 +81,8 @@ diff -Nur src.orig/libscotchmetis/Makefile src/libscotchmetis/Makefile
  ##
  ##  Project rules.
 diff -Nur src.orig/scotch/Makefile src/scotch/Makefile
---- src.orig/scotch/Makefile	2013-02-06 22:03:30.500658881 -0800
-+++ src/scotch/Makefile	2013-02-06 23:04:46.244626691 -0800
+--- src.orig/scotch/Makefile	2013-02-07 17:27:00.000000000 +0000
++++ src/scotch/Makefile	2013-02-07 17:27:21.000000000 +0000
 @@ -41,13 +41,13 @@
  include ../Makefile.inc
  

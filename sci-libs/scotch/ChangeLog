@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scotch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/ChangeLog,v 1.10 2013/02/07 07:29:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/ChangeLog,v 1.11 2013/02/07 17:30:59 bicatali Exp $
+
+  07 Feb 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  files/scotch-6.0.0-as-needed.patch:
+  Fixed for parallel compiling when mpi flag is set
 
 *scotch-6.0.0 (07 Feb 2013)
 
