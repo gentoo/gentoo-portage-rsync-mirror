@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-9.0.ebuild,v 1.9 2012/08/20 06:18:40 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-9.0.ebuild,v 1.10 2013/02/07 01:05:36 naota Exp $
 
 EAPI=4
 
@@ -19,8 +19,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 		mirror://gentoo/${LIB}.tar.bz2
 		mirror://gentoo/${SBIN}.tar.bz2
 		mirror://gentoo/${SYS}.tar.bz2
-		build? ( mirror://gentoo/${SYS}.tar.bz2
-			mirror://gentoo/${INCLUDE}.tar.bz2 )"
+		build? ( mirror://gentoo/${INCLUDE}.tar.bz2 )"
 
 # sys is required.
 
