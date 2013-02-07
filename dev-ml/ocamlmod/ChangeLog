@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlmod
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlmod/ChangeLog,v 1.4 2012/07/09 21:06:43 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlmod/ChangeLog,v 1.6 2013/02/07 14:17:32 aballier Exp $
+
+  07 Feb 2013; Alexis Ballier <aballier@gentoo.org> ocamlmod-0.0.3.ebuild:
+  convert to eapi5 to get subslot dep on ocaml
 
   09 Jul 2012; Ulrich Müller <ulm@gentoo.org> ocamlmod-0.0.3.ebuild:
   Update LICENSE, bug 425140.

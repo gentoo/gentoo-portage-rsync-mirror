@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlmod/ocamlmod-0.0.3.ebuild,v 1.2 2012/07/09 21:06:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlmod/ocamlmod-0.0.3.ebuild,v 1.3 2013/02/07 14:16:30 aballier Exp $
 
-EAPI=4
+EAPI=5
 
 #OASIS_BUILD_TESTS=1
 

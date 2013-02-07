@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlify/ocamlify-0.0.1.ebuild,v 1.2 2012/07/09 21:05:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlify/ocamlify-0.0.1.ebuild,v 1.3 2013/02/07 14:13:35 aballier Exp $
 
-EAPI=3
+EAPI=5
 
 OASIS_NO_DEBUG=1
 
