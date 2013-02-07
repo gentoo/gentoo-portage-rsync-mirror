@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/beecrypt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.83 2012/09/06 05:41:11 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.84 2013/02/07 09:51:52 pinkbyte Exp $
+
+*beecrypt-4.2.1-r1 (07 Feb 2013)
+
+  07 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> +beecrypt-4.2.1-r1.ebuild:
+  Revision bump: EAPI 5, add sub-slot operator for dependency on dev-libs/icu,
+  wrt bug #455900
 
   06 Sep 2012; Mike Frysinger <vapier@gentoo.org>
   files/beecrypt-4.2.1-build-system.patch:

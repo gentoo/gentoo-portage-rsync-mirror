@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid/rancid-2.3.8.ebuild,v 1.1 2013/01/22 23:08:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid/rancid-2.3.8.ebuild,v 1.2 2013/02/07 09:41:03 pinkbyte Exp $
 
 EAPI=4
 
@@ -33,6 +33,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-mailprefix.patch
 	epatch "${FILESDIR}"/${P}-config.patch
 	epatch "${FILESDIR}"/${P}-buildsystem.patch
+
+	# respect CFLAGS, bug #455840
+	sed -i -e '/^CFLAGS/d' bin/Makefile.am || die 'sed on bin/Makefile.am failed'
+
 	eautoreconf
 }
 
@@ -42,13 +46,13 @@ src_configure() {
 		--enable-conf-install \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html \
-		$(use svn && echo "--with-svn=fsfs")
+		$(use subversion && echo "--with-svn=fsfs")
 }
 
 src_install() {
 	default
 
-	if use svn ; then
+	if use subversion ; then
 		sed -e 's/^RCSSYS=cvs/RCSSYS=svn/' \
 			-i "${D}"/etc/rancid.conf || die
 	fi
