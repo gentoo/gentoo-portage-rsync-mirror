@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.29.2.ebuild,v 1.4 2013/02/06 23:45:02 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.29.2.ebuild,v 1.5 2013/02/07 16:32:54 mattst88 Exp $
 
 EAPI=4
 inherit xorg-2 toolchain-funcs versionator
@@ -18,7 +18,7 @@ src_configure() {
 		$(use_enable altivec vmx)
 		$(use_enable neon arm-neon)
 		$(use_enable iwmmxt arm-iwmmxt)
-		$(use_enable loongson2f -loongson-mmi)
+		$(use_enable loongson2f loongson-mmi)
 		--disable-gtk
 		--disable-libpng
 	)

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/nawk-20121220-r1.ebuild,v 1.1 2013/02/06 03:29:55 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nawk/nawk-20121220-r2.ebuild,v 1.1 2013/02/07 16:57:28 ottxor Exp $
 
 EAPI="4"
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Brian Kernighan's pattern scanning and processing language"
 HOMEPAGE="http://cm.bell-labs.com/cm/cs/awkbook/index.html"
@@ -20,6 +20,11 @@ DEPEND="${RDEPEND}
 	virtual/yacc"
 
 S="${WORKDIR}"
+
+src_prepare() {
+	rm -f ytab.[hc]
+	epatch "${FILESDIR}/${P}"-parallel-build.patch
+}
 
 src_compile() {
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" CPPFLAGS=-DHAS_ISBLANK ALLOC="${LDFLAGS}" YACC=$(type -p yacc) YFLAGS="-d"
