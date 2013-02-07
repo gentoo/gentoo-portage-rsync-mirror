@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-alsa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.206 2013/02/04 15:01:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.207 2013/02/07 13:09:46 ago Exp $
+
+  07 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-alsa-0.10.36.ebuild:
+  Stable for hppa, wrt bug #454906
 
   04 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-alsa-0.10.36.ebuild:

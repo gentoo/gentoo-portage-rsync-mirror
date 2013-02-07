@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-jack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jack/ChangeLog,v 1.31 2013/02/04 19:40:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jack/ChangeLog,v 1.32 2013/02/07 13:31:10 ago Exp $
+
+  07 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-jack-0.10.31.ebuild:
+  Stable for hppa, wrt bug #454906
 
   04 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-jack-0.10.31.ebuild, gst-plugins-jack-1.0.5.ebuild:

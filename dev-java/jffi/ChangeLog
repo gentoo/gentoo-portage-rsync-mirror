@@ -1,6 +1,18 @@
 # ChangeLog for dev-java/jffi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.25 2012/09/25 10:41:34 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.26 2013/02/07 13:15:36 sera Exp $
+
+*jffi-1.2.6 (07 Feb 2013)
+
+  07 Feb 2013; Ralph Sennhauser <sera@gentoo.org>
+  -files/0.3-makefile-flags.patch, -jffi-0.6.0.2.ebuild,
+  -jffi-0.6.0.2-r1.ebuild, -jffi-0.7_pre20100131.ebuild,
+  -files/jffi-0.7-makefile-flags.patch, -jffi-1.2.2.ebuild,
+  -files/0.4.1-makefile-flags.patch, -files/jffi-1.2.2_no-werror.patch,
+  +jffi-1.2.6.ebuild, +files/jffi-1.2.6_no-werror.patch,
+  -files/0.5-makefile-flags.patch, -files/0.6.0.2-makefile-flags.patch:
+  Version bump. #452168
+  Remove obsolete.
 
 *jffi-1.2.5 (25 Sep 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.102 2013/01/27 14:50:55 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.103 2013/02/07 13:11:34 yngwin Exp $
+
+  07 Feb 2013; Ben de Groot <yngwin@gentoo.org> -mlt-0.8.6.ebuild:
+  remove old ~ ebuild
 
   27 Jan 2013; Ben de Groot <yngwin@gentoo.org> mlt-0.8.8.ebuild:
   enable gpl3, bug #453252

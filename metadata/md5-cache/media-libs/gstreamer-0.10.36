@@ -4,10 +4,10 @@ DESCRIPTION=Streaming media framework
 EAPI=4
 HOMEPAGE=http://gstreamer.freedesktop.org/
 IUSE=+introspection nls +orc test
-KEYWORDS=alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
 LICENSE=LGPL-2+
 RDEPEND=>=dev-libs/glib-2.24:2 >=dev-libs/libxml2-2.4.9 introspection? ( >=dev-libs/gobject-introspection-0.6.8 ) !<media-libs/gst-plugins-base-0.10.26
 SLOT=0.10
 SRC_URI=http://gstreamer.freedesktop.org/src/gstreamer/gstreamer-0.10.36.tar.xz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	pax-utils	0ace932c4045349c7fc1af0fe7091acf	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=8bff3638bc32644ff96e0bd96722f4fc
+_md5_=55623a764d942c7d595f498bca8a8033

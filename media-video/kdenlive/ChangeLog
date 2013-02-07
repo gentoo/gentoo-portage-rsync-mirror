@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.83 2013/02/05 13:04:13 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.84 2013/02/07 13:07:42 yngwin Exp $
+
+  07 Feb 2013; Ben de Groot <yngwin@gentoo.org> kdenlive-0.9.4.ebuild:
+  kdenlive-0.9.4 depends on mlt >=0.8.6, so adjust deps, bug #455994
 
 *kdenlive-0.9.4 (05 Feb 2013)
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.2.2.ebuild,v 1.2 2012/05/28 19:33:58 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.2.6.ebuild,v 1.1 2013/02/07 13:15:36 sera Exp $
 
-EAPI="4"
+EAPI="5"
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -41,7 +41,7 @@ JAVA_ANT_REWRITE_CLASSPATH="yes"
 EANT_EXTRA_ARGS="-Dmaven.build.finalName=${PN}"
 src_compile() {
 	# generate Version.java
-	cat <<-EOF > src/main/java/com/kenai/jffi/Version.java
+	cat > src/main/java/com/kenai/jffi/Version.java <<-EOF
 		package com.kenai.jffi;
 		public final class Version {
 			private Version() {}
@@ -83,7 +83,7 @@ src_test() {
 }
 
 src_install() {
-	cat <<-EOF > boot.properties
+	cat > boot.properties <<-EOF
 		jffi.boot.library.path = ${JAVA_PKG_LIBDEST}
 	EOF
 	jar -uf target/${PN}.jar boot.properties || die

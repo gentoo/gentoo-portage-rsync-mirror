@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-oss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/ChangeLog,v 1.199 2013/02/04 15:05:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-oss/ChangeLog,v 1.200 2013/02/07 13:25:53 ago Exp $
+
+  07 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gst-plugins-oss-0.10.31.ebuild:
+  Stable for hppa, wrt bug #454906
 
   04 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gst-plugins-oss-0.10.31.ebuild:
   Stable for arm, wrt bug #454906
