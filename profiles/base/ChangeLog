@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.501 2013/02/06 23:31:52 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.502 2013/02/07 03:25:49 mattst88 Exp $
+
+  07 Feb 2013; Matt Turner <mattst88@gentoo.org> use.mask:
+  Drop sse5 USE flag.
 
   06 Feb 2013; Matt Turner <mattst88@gentoo.org> use.mask:
   use.mask mips-only loongson2f USE flag.

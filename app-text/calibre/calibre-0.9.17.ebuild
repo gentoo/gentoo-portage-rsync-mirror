@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.17.ebuild,v 1.1 2013/02/01 15:34:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.17.ebuild,v 1.3 2013/02/07 03:29:05 zmedico Exp $
 
-EAPI=4
+EAPI=5
 PYTHON_DEPEND=2:2.7
 PYTHON_USE_WITH="ssl sqlite"
 
@@ -21,10 +21,10 @@ SLOT="0"
 IUSE="+udisks"
 
 COMMON_DEPEND="
-	>=app-text/podofo-0.8.2
+	>=app-text/podofo-0.8.2:=
 	>=app-text/poppler-0.12.3-r3[qt4,xpdf-headers(+)]
-	>=dev-libs/chmlib-0.40
-	>=dev-libs/icu-4.4
+	>=dev-libs/chmlib-0.40:=
+	>=dev-libs/icu-4.4:=
 	>=dev-python/beautifulsoup-3.0.5:python-2
 	dev-python/netifaces
 	dev-python/python-dateutil
@@ -38,13 +38,13 @@ COMMON_DEPEND="
 	>=dev-python/python-dateutil-1.4.1
 	>=dev-python/PyQt4-4.9.1[X,svg,webkit]
 	media-fonts/liberation-fonts
-	>=media-gfx/imagemagick-6.5.9[jpeg,png]
-	>=media-libs/freetype-2
+	>=media-gfx/imagemagick-6.5.9:=[jpeg,png]
+	>=media-libs/freetype-2:=
 	>=media-libs/libwmf-0.2.8
-	>=media-libs/libmtp-1.1.4
-	virtual/libusb:1
-	x11-libs/qt-dbus:4
-	x11-libs/qt-svg:4
+	>=media-libs/libmtp-1.1.4:=
+	virtual/libusb:1=
+	x11-libs/qt-dbus:4=
+	x11-libs/qt-svg:4=
 	>=x11-misc/xdg-utils-1.0.2-r2"
 
 RDEPEND="${COMMON_DEPEND}

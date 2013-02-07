@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.158 2013/02/06 23:31:52 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.159 2013/02/07 03:25:49 mattst88 Exp $
 
 # not ready for primetime
 packagekit
@@ -58,7 +58,6 @@ sse3
 sse4
 sse4a
 sse41
-sse5
 ssse3
 avx
 avx128fma
