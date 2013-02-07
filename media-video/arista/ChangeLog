@@ -1,6 +1,10 @@
 # ChangeLog for media-video/arista
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.14 2013/02/05 18:28:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.15 2013/02/07 09:22:05 pinkbyte Exp $
+
+  07 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> arista-0.9.5.ebuild:
+  Fix HOMEPAGE, wrt bug #353422. Thanks to Branko Majic for discovering this
+  issue
 
   05 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup after talking with Ford_Prefect

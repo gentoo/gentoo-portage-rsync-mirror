@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/smplayer-themes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-themes/ChangeLog,v 1.31 2012/12/23 15:14:01 yngwin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-themes/ChangeLog,v 1.32 2013/02/07 09:06:11 pinkbyte Exp $
+
+  07 Feb 2013; Sergey Popov <pinkbyte@gentoo.org>
+  smplayer-themes-20120919.ebuild:
+  Stable on amd64, wrt bug #455864
 
 *smplayer-themes-20120919 (23 Dec 2012)
 

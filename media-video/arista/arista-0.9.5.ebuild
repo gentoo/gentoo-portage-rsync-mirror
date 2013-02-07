@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/arista-0.9.5.ebuild,v 1.7 2012/10/25 20:41:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/arista-0.9.5.ebuild,v 1.8 2013/02/07 09:22:05 pinkbyte Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ PYTHON_USE_WITH="xml"
 inherit distutils
 
 DESCRIPTION="An easy to use multimedia transcoder for the GNOME Desktop"
-HOMEPAGE="http://programmer-art.org/projects/arista-transcoder"
+HOMEPAGE="http://www.transcoder.org"
 SRC_URI="http://programmer-art.org/media/releases/arista-transcoder/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
