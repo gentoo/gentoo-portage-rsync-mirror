@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.111 2013/01/27 23:51:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.112 2013/02/07 13:45:38 aballier Exp $
 
 EAPI="4"
 
@@ -56,7 +56,7 @@ RDEPEND="
 	amr? ( media-libs/opencore-amr )
 	bluray? ( media-libs/libbluray )
 	bzip2? ( app-arch/bzip2 )
-	cdio? ( dev-libs/libcdio )
+	cdio? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
 	celt? ( >=media-libs/celt-0.11.1 )
 	encode? (
 		aac? ( media-libs/vo-aacenc )
