@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/menhir
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/menhir/ChangeLog,v 1.1 2013/02/07 20:36:44 aballier Exp $
+
+*menhir-20130116 (07 Feb 2013)
+
+  07 Feb 2013; Alexis Ballier <aballier@gentoo.org> +menhir-20130116.ebuild,
+  +metadata.xml:
+  Initial import, bug #406517, ebuild by Guillaume Horel
+

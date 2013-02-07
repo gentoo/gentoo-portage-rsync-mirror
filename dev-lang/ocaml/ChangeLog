@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.209 2013/02/07 12:44:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.210 2013/02/07 20:38:48 aballier Exp $
+
+  07 Feb 2013; Alexis Ballier <aballier@gentoo.org> ocaml-4.00.1.ebuild:
+  Do not suggest emerge @ocaml-rebuild if portage 2.2 is not used, it is not
+  going to work, bug #444254
 
   07 Feb 2013; Alexis Ballier <aballier@gentoo.org> ocaml-4.00.1.ebuild:
   Bump to EAPI 5, use PV subslot because we want to rebuild everything

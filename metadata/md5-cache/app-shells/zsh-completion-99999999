@@ -1,0 +1,10 @@
+DEFINED_PHASES=install unpack
+DEPEND=dev-vcs/git
+DESCRIPTION=Programmable Completion for zsh (includes emerge and ebuild commands)
+EAPI=5
+HOMEPAGE=http://git.overlays.gentoo.org/gitweb/?p=proj/zsh-completion.git
+LICENSE=ZSH
+RDEPEND=>=app-shells/zsh-4.3.5
+SLOT=0
+_eclasses_=git-2	e92e09651292b1bef5656592364550f7
+_md5_=111ca37755e0e479c5db37537689921f

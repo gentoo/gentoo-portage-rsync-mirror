@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7442 2013/02/07 18:46:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7444 2013/02/07 20:56:51 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org> profiles.desc:
+  13.0 profile stable on hppa
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Add shorter names for Creative Commons licenses.
 
   07 Feb 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
   unmask karlyriceditor 1.4, its fine now with older ffmpeg

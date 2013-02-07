@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-4.00.1.ebuild,v 1.2 2013/02/07 12:44:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-4.00.1.ebuild,v 1.3 2013/02/07 20:38:48 aballier Exp $
 
 EAPI="5"
 
@@ -119,7 +119,10 @@ pkg_postinst() {
 	ewarn "OCaml is not binary compatible from version to version, so you"
 	ewarn "need to rebuild all packages depending on it, that are actually"
 	ewarn "installed on your system. To do so, you can run:"
-	ewarn "emerge @ocaml-rebuild"
-	ewarn "Or, (almost) equivalently: emerge -1 /usr/$(get_libdir)/ocaml"
+	if has_version '>=sys-apps/portage-2.2' ; then
+		ewarn "emerge @ocaml-rebuild"
+	else
+		ewarn "emerge -1 /usr/$(get_libdir)/ocaml"
+	fi
 	echo
 }
