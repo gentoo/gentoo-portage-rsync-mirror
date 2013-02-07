@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.100 2013/02/06 18:54:35 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.101 2013/02/07 04:12:20 alexxy Exp $
+
+  07 Feb 2013; Alexey Shvetsov <alexxy@gentoo.org> soprano-2.9.0.ebuild:
+  Sync keywords
 
 *soprano-2.9.0 (06 Feb 2013)
 

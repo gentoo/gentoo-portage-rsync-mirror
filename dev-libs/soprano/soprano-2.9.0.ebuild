@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.9.0.ebuild,v 1.1 2013/02/06 18:54:35 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.9.0.ebuild,v 1.2 2013/02/07 04:12:20 alexxy Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ if [[ ${PV} == *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 fi
 
 inherit base cmake-utils flag-o-matic ${git_eclass}

@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/poedit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.74 2012/05/03 19:24:33 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.75 2013/02/07 04:08:54 dirtyepic Exp $
+
+*poedit-1.5.5 (07 Feb 2013)
+
+  07 Feb 2013; Ryan Hill <dirtyepic@gentoo.org> +poedit-1.5.5.ebuild,
+  +files/poedit-1.5.5-wx28.patch:
+  Version bump (bug #43008).
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> poedit-1.4.6.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
