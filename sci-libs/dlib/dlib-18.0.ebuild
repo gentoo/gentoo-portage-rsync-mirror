@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/dlib/dlib-17.48.ebuild,v 1.1 2012/12/11 00:09:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/dlib/dlib-18.0.ebuild,v 1.1 2013/02/07 05:46:33 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 inherit flag-o-matic toolchain-funcs
 
@@ -24,7 +24,7 @@ RDEPEND="
 DEPEND="test? ( ${RDEPEND} )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-makefile-test.patch
+	epatch "${FILESDIR}"/${PN}-17.48-makefile-test.patch
 }
 
 src_test() {
@@ -36,9 +36,8 @@ src_test() {
 src_install() {
 	dodoc dlib/README.txt
 	rm -r dlib/{README,LICENSE}.txt dlib/test || die
-	insinto /usr/include
-	doins -r dlib
-	use doc && dohtml docs/*
+	doheader -r dlib
+	use doc && dohtml -r docs/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples
