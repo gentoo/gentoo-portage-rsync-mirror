@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.661 2013/02/04 18:39:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.662 2013/02/07 03:38:33 alexxy Exp $
+
+  07 Feb 2013; Alexey Shvetsov <alexxy@gentoo.org> kde4-base.eclass,
+  kde4-functions.eclass, kde4-meta.eclass, kde4-meta-pkg.eclass:
+  Version bump KDE SC 4.10.0
 
   04 Feb 2013; Pacho Ramos <pacho@gentoo.org> readme.gentoo.eclass:
   Add a variable to stop autoformatting when not desired, use '-e' option for

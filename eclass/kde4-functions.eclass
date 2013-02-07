@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.62 2012/09/27 16:35:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.63 2013/02/07 03:38:33 alexxy Exp $
 
 inherit versionator
 
@@ -54,19 +54,13 @@ export KDE_BUILD_TYPE
 if [[ ${KDE_BUILD_TYPE} == live ]]; then
 	case "${KMNAME}" in
 		kdebase-workspace)
-			KDE_SCM="git"
 			EGIT_REPONAME=${EGIT_REPONAME:=kde-workspace}
 		;;
 		kdebase-runtime)
-			KDE_SCM="git"
 			EGIT_REPONAME=${EGIT_REPONAME:=kde-runtime}
 		;;
 		kdebase-apps)
-			KDE_SCM="git"
 			EGIT_REPONAME=${EGIT_REPONAME:=kde-baseapps}
-		;;
-		kde-workspace|kde-runtime|kde-baseapps)
-			KDE_SCM="git"
 		;;
 	esac
 fi
@@ -74,8 +68,8 @@ fi
 # @ECLASS-VARIABLE: KDE_SCM
 # @DESCRIPTION:
 # If this is a live package which scm does it use
-# Everything else uses svn by default
-KDE_SCM="${KDE_SCM:-svn}"
+# Everything else uses git by default
+KDE_SCM="${KDE_SCM:-git}"
 case ${KDE_SCM} in
 	svn|git) ;;
 	*) die "KDE_SCM: ${KDE_SCM} is not supported" ;;

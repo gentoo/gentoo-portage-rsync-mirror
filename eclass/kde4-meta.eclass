@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.68 2012/09/04 14:08:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.69 2013/02/07 03:38:33 alexxy Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -285,6 +285,7 @@ kde4-meta_create_extractlists() {
 	case ${KMNAME} in
 		kdebase | kdebase-apps | kde-baseapps)
 			KMEXTRACTONLY+="
+				CTestConfig.cmake
 				config-apps.h.cmake
 				ConfigureChecks.cmake"
 			;;
@@ -316,15 +317,10 @@ kde4-meta_create_extractlists() {
 			fi
 			KMEXTRACTONLY+="
 				config-enterprise.h.cmake
-				kleopatra/ConfigureChecks.cmake"
-			if ! [[ $(get_kde_version) < 4.5 ]]; then
-				KMEXTRACTONLY+="
-					CTestCustom.cmake
-					kdepim-version.h.cmake"
-			else
-				KMEXTRACTONLY+="
-					kdepim-version.h"
-			fi
+				kleopatra/ConfigureChecks.cmake
+				CTestCustom.cmake
+				kdepim-version.h.cmake
+				kdepim-version.h"
 			if use_if_iuse kontact; then
 				KMEXTRA+="
 					kontact/plugins/${PLUGINNAME:-${PN}}/"
@@ -565,16 +561,18 @@ kde4-meta_change_cmakelists() {
 					-e 's/if[[:space:]]*([[:space:]]*[[:alnum:]]*_FOUND[[:space:]]*)[[:space:]]*$/if(1) # &/' \
 					-i kontact/plugins/CMakeLists.txt || die 'failed to override build logic'
 			fi
-			if [[ $(get_kde_version) < 4.5 ]]; then
-				case ${PN} in
-					kalarm|kmailcvt|kontact|korganizer|korn)
-						sed -n -e '/qt4_generate_dbus_interface(.*org\.kde\.kmail\.\(kmail\|mailcomposer\)\.xml/p' \
-							-e '/add_custom_target(kmail_xml /,/)/p' \
-							-i kmail/CMakeLists.txt || die "uncommenting xml failed"
-						_change_cmakelists_parent_dirs kmail
+			case ${PV} in
+				4.4*)
+					case ${PN} in
+						kalarm|kmailcvt|kontact|korganizer|korn)
+							sed -n -e '/qt4_generate_dbus_interface(.*org\.kde\.kmail\.\(kmail\|mailcomposer\)\.xml/p' \
+								-e '/add_custom_target(kmail_xml /,/)/p' \
+								-i kmail/CMakeLists.txt || die "uncommenting xml failed"
+							_change_cmakelists_parent_dirs kmail
+							;;
+					esac
 					;;
-				esac
-			fi
+			esac
 			;;
 		kdewebdev)
 			# Disable hardcoded checks

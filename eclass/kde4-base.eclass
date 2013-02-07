@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.122 2013/02/02 16:58:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.123 2013/02/07 03:38:33 alexxy Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -10,8 +10,8 @@
 # The kde4-base.eclass provides support for building KDE4 based ebuilds
 # and KDE4 applications.
 #
-# NOTE: KDE 4 ebuilds currently support EAPI "3".  This will be reviewed
-# over time as new EAPI versions are approved.
+# NOTE: KDE 4 ebuilds currently support EAPIs 3, 4, and 5.  This will be
+# reviewed over time as new EAPI versions are approved.
 
 # @ECLASS-VARIABLE: KDE_SELINUX_MODULE
 # @DESCRIPTION:
@@ -378,15 +378,20 @@ case ${KDE_SELINUX_MODULE} in
 		;;
 esac
 
+# We always need the aqua useflag because otherwise we cannot = refer to it inside
+# add_kdebase_dep. This was always kind of a bug, but came to light with EAPI=5
+# (where referring to a use flag not in IUSE masks the ebuild).
+# The only alternative would be to prohibit using add_kdebase_dep if KDE_REQUIRED=never
+IUSE+=" aqua"
+
 case ${KDE_REQUIRED} in
 	always)
-		IUSE+=" aqua"
 		[[ -n ${kdecommondepend} ]] && COMMONDEPEND+=" ${kdecommondepend}"
 		[[ -n ${kdedepend} ]] && DEPEND+=" ${kdedepend}"
 		[[ -n ${kderdepend} ]] && RDEPEND+=" ${kderdepend}"
 		;;
 	optional)
-		IUSE+=" aqua kde"
+		IUSE+=" kde"
 		[[ -n ${kdecommondepend} ]] && COMMONDEPEND+=" kde? ( ${kdecommondepend} )"
 		[[ -n ${kdedepend} ]] && DEPEND+=" kde? ( ${kdedepend} )"
 		[[ -n ${kderdepend} ]] && RDEPEND+=" kde? ( ${kderdepend} )"
@@ -435,10 +440,10 @@ _calculate_src_uri() {
 					# KDEPIM 4.4, special case
 					# TODO: Remove this part when KDEPIM 4.4 gets out of the tree
 					SRC_URI="mirror://kde/stable/kdepim-${PV}/src/${_kmname_pv}.tar.bz2" ;;
-				4.[89].8[05] | 4.[89].9[0235678])
+				4.?.[6-9]? | 4.??.[6-9]?)
 					# Unstable KDE SC releases
 					SRC_URI="mirror://kde/unstable/${PV}/src/${_kmname_pv}.tar.xz" ;;
-				4.[1234567].[12345])
+				4.[1-7].[12345])
 					# Stable KDE SC with old .bz2 support
 					SRC_URI="mirror://kde/stable/${PV}/src/${_kmname_pv}.tar.bz2" ;;
 				*)
@@ -448,7 +453,7 @@ _calculate_src_uri() {
 			;;
 		kdevelop|kdevelop-php*|kdevplatform)
 			case ${KDEVELOP_VERSION} in
-				4.[12].[6-9]*) SRC_URI="mirror://kde/unstable/kdevelop/${KDEVELOP_VERSION}/src/${P}.tar.bz2" ;;
+				4.[123].[6-9]*) SRC_URI="mirror://kde/unstable/kdevelop/${KDEVELOP_VERSION}/src/${P}.tar.bz2" ;;
 				*) SRC_URI="mirror://kde/stable/kdevelop/${KDEVELOP_VERSION}/src/${P}.tar.bz2" ;;
 			esac
 			;;
