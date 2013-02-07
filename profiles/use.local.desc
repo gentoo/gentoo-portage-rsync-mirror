@@ -1078,6 +1078,8 @@ dev-embedded/ponyprog:epiphany - Enable support for www-client/epiphany
 dev-embedded/sdcc:boehm-gc - Enable Hans Boehm's garbage collector (dev-libs/boehm-gc)
 dev-embedded/urjtag:ftd2xx - Enable support for USB FTDI chips via dev-embedded/libftd2xx
 dev-embedded/urjtag:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
+dev-games/aseprite:memleak - Enable memory-leaks detector (only for developers)
+dev-games/aseprite:static - Link against static version of C and C++ runtimes
 dev-games/cegui:devil - Enable image loading via DevIL
 dev-games/cegui:irrlicht - Enable the Irrlicht renderer
 dev-games/cegui:ogre - Enable the OGRE renderer
