@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-7.0.2.ebuild,v 1.2 2013/02/07 13:45:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-7.0.2.ebuild,v 1.3 2013/02/07 14:36:52 aballier Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://bitbucket.org/mmottl/pcre-ocaml"
 SRC_URI="http://bitbucket.org/mmottl/pcre-ocaml/downloads/${P}.tar.gz"
 LICENSE="LGPL-2.1-with-linking-exception"
 IUSE="examples"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 RDEPEND=">=dev-libs/libpcre-4.5"
