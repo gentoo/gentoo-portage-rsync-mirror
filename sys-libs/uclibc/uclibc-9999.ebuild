@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-9999.ebuild,v 1.3 2012/06/09 06:47:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-9999.ebuild,v 1.4 2013/02/07 21:31:48 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs savedconfig
 if [[ ${PV} == "9999" ]] ; then
@@ -176,9 +176,11 @@ src_config() {
 		UCLIBC_HAS_RESOLVER_SUPPORT
 		UCLIBC_HAS_TZ_FILE_READ_MANY
 		UCLIBC_HAS_UTMPX
+		UCLIBC_SUPPORT_AI_ADDRCONFIG
 		UCLIBC_SUSV3_LEGACY
 		UCLIBC_SUSV3_LEGACY_MACROS
 		UCLIBC_SUSV4_LEGACY
+		UCLIBC_USE_NETLINK
 		PTHREADS_DEBUG_SUPPORT
 	)
 	kconfig_q_opt y "${defs[@]}"
@@ -279,6 +281,7 @@ src_unpack() {
 		amd64) target="x86_64";  config_target="no cpu-specific options";;
 		arm)   target="arm";     config_target="GENERIC_ARM";;
 		avr)   target="avr32";   config_target="no cpu-specific options";;
+		bfin)  target="bfin";    config_target="no cpu-specific options";;
 		ia64)  target="ia64";    config_target="no cpu-specific options";;
 		m68k)  target="m68k";    config_target="no cpu-specific options";;
 		mips)  target="mips";    config_target="MIPS_ISA_1";;

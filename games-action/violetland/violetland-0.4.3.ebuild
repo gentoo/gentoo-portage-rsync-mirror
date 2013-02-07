@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/violetland-0.4.3.ebuild,v 1.8 2012/11/29 07:50:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/violetland-0.4.3.ebuild,v 1.9 2013/02/07 22:00:38 ulm Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs flag-o-matic cmake-utils games
@@ -9,7 +9,7 @@ DESCRIPTION="Help a girl by name of Violet to struggle with hordes of monsters."
 HOMEPAGE="http://code.google.com/p/violetland/"
 SRC_URI="http://violetland.googlecode.com/files/${PN}-v${PV}-src.zip"
 
-LICENSE="GPL-3 CCPL-Attribution-ShareAlike-3.0"
+LICENSE="GPL-3 CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""

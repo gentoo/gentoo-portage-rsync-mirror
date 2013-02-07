@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Term-ANSIScreen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/ChangeLog,v 1.27 2012/09/02 08:03:40 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/ChangeLog,v 1.28 2013/02/07 21:54:43 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> Term-ANSIScreen-1.500.0.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   02 Sep 2012; Torsten Veller <tove@gentoo.org>
   -Term-ANSIScreen-1.420.0.ebuild:

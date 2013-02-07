@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-9999.ebuild,v 1.2 2011/07/16 14:04:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-9999.ebuild,v 1.3 2013/02/07 21:34:12 ulm Exp $
 
 EAPI=4
 inherit git-2
@@ -12,7 +12,7 @@ DESCRIPTION="Gentoo Package Manager Specification (draft)"
 HOMEPAGE="http://www.gentoo.org/proj/en/qa/pms.xml"
 SRC_URI=""
 
-LICENSE="CCPL-Attribution-ShareAlike-3.0"
+LICENSE="CC-BY-SA-3.0"
 SLOT="live"
 KEYWORDS=""
 IUSE="html"

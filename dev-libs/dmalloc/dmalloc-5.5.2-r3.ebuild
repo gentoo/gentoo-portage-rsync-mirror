@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.5.2-r3.ebuild,v 1.8 2011/07/27 13:00:23 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.5.2-r3.ebuild,v 1.9 2013/02/07 21:50:56 ulm Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ DESCRIPTION="A Debug Malloc Library"
 HOMEPAGE="http://dmalloc.com"
 SRC_URI="http://dmalloc.com/releases/${P}.tgz"
 
-LICENSE="CCPL-Attribution-ShareAlike-3.0"
+LICENSE="CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="threads"

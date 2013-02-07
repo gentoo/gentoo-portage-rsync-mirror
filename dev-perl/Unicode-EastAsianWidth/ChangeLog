@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unicode-EastAsianWidth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/ChangeLog,v 1.26 2013/01/06 14:50:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/ChangeLog,v 1.27 2013/02/07 21:56:33 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org>
+  Unicode-EastAsianWidth-1.320.0.ebuild, Unicode-EastAsianWidth-1.330.0.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org>
   -Unicode-EastAsianWidth-1.30.ebuild:

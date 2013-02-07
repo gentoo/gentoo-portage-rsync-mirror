@@ -3,6 +3,7 @@
 <pkgmetadata>
   <herd>games</herd>
   <use>
+    <flag name='debug'>Enable the builtin debugger</flag>
     <flag name='pax_kernel'>Triggers a paxmarking of the binary</flag>
   </use>
 </pkgmetadata>

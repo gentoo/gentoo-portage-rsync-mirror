@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-kernel-in-a-nutshell/linux-kernel-in-a-nutshell-1.ebuild,v 1.2 2010/10/19 09:05:30 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-kernel-in-a-nutshell/linux-kernel-in-a-nutshell-1.ebuild,v 1.3 2013/02/07 21:31:30 ulm Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.kroah.com/lkn/"
 SRC_URI="mirror://kernel/linux/kernel/people/gregkh/lkn/lkn_pdf.tar.bz2
 	mirror://kernel/linux/kernel/people/gregkh/lkn/lkn_xml.tar.bz2"
 
-LICENSE="CCPL-Attribution-ShareAlike-2.5"
+LICENSE="CC-BY-SA-2.5"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""

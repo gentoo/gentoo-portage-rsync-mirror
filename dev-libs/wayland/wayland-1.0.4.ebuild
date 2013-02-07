@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.0.4.ebuild,v 1.1 2013/02/05 07:01:56 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.0.4.ebuild,v 1.2 2013/02/07 21:52:59 ulm Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ else
 	SRC_URI="http://wayland.freedesktop.org/releases/${P}.tar.xz"
 fi
 
-LICENSE="CCPL-Attribution-ShareAlike-3.0 MIT"
+LICENSE="CC-BY-SA-3.0 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="doc static-libs"

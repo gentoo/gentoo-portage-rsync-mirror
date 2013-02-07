@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.680.0.ebuild,v 1.3 2011/10/04 21:32:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.680.0.ebuild,v 1.4 2013/02/07 21:53:50 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit perl-module
 
 DESCRIPTION="Module signature file manipulation "
 
-LICENSE="CC0-1.0-Universal"
+LICENSE="CC0-1.0"
 SLOT="0"
 KEYWORDS="amd64 x86 ~x86-solaris"
 IUSE="test"

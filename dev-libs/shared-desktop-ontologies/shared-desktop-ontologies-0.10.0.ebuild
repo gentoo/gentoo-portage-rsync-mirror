@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shared-desktop-ontologies/shared-desktop-ontologies-0.10.0.ebuild,v 1.4 2012/08/04 13:30:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shared-desktop-ontologies/shared-desktop-ontologies-0.10.0.ebuild,v 1.5 2013/02/07 21:51:50 ulm Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ if [[ ${PV} != *9999 ]]; then
 	KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 fi
 
-LICENSE="|| ( BSD CCPL-Attribution-ShareAlike-3.0 )"
+LICENSE="|| ( BSD CC-BY-SA-3.0 )"
 SLOT="0"
 IUSE=""
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.6.1.ebuild,v 1.3 2012/12/27 16:48:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.6.1.ebuild,v 1.4 2013/02/07 21:42:27 ulm Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -11,7 +11,7 @@ inherit eutils gnome2
 DESCRIPTION="Simple document viewer for GNOME"
 HOMEPAGE="http://www.gnome.org/projects/evince/"
 
-LICENSE="GPL-2+ CCPL-Attribution-ShareAlike-3.0"
+LICENSE="GPL-2+ CC-BY-SA-3.0"
 # subslot = evd3.(suffix of libevdocument3)-evv3.(suffix of libevview3)
 SLOT="0/evd3.4-evv3.3"
 IUSE="debug djvu dvi gnome-keyring +introspection nautilus +postscript t1lib tiff xps"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.53.ebuild,v 1.9 2013/01/24 19:24:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.53.ebuild,v 1.10 2013/02/07 21:32:17 vapier Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic multilib gnome2-utils games
@@ -44,6 +44,7 @@ src_prepare() {
 	sed -i -e '75i#define OF(x) x' unzip/{un,}zip.h || die
 	sed -i -e '22i#define OF(x) x' unzip/ioapi.h || die
 	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-cross-compile.patch
 	cd unix
 	eautoreconf
 	if use gtk; then

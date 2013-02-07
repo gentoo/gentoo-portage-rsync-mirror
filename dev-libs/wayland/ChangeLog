@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/wayland
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.12 2013/02/05 07:01:56 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.13 2013/02/07 21:52:59 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> wayland-0.95.0.ebuild,
+  wayland-1.0.4.ebuild:
+  Move Creative Commons licenses to shorter names.
 
 *wayland-1.0.4 (05 Feb 2013)
 
