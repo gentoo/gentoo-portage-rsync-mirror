@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.227 2013/02/07 04:45:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.228 2013/02/07 19:49:37 ago Exp $
+
+  07 Feb 2013; Agostino Sarubbo <ago@gentoo.org> package.mask:
+  Remove KDE SC 4.10.0, wrt to bug #455960
 
   07 Feb 2013; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   Mask KDE SC 4.10.0 for keywording bug #455960

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-6.07_p1.ebuild,v 1.1 2012/10/09 21:55:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/camlp5-6.07_p1.ebuild,v 1.2 2013/02/07 19:32:09 aballier Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit multilib findlib eutils
 
@@ -12,11 +12,11 @@ HOMEPAGE="http://pauillac.inria.fr/~ddr/camlp5/"
 SRC_URI="http://pauillac.inria.fr/~ddr/camlp5/distrib/src/${MY_P}.tgz"
 
 LICENSE="BSD"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="doc +ocamlopt"
 
-DEPEND=">=dev-lang/ocaml-3.10[ocamlopt?]"
+DEPEND=">=dev-lang/ocaml-3.10:=[ocamlopt?]"
 RDEPEND="${DEPEND}"
 
 PATCHLEVEL=${PV#*_p}
@@ -48,18 +48,18 @@ src_configure() {
 }
 
 src_compile(){
-	emake || die "emake failed"
+	emake
 	if use ocamlopt; then
-		emake  opt || die "Compiling native code programs failed"
-		emake  opt.opt || die "Compiling native code programs failed"
+		emake  opt
+		emake  opt.opt
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	# findlib support
 	insinto "$(ocamlfind printconf destdir)/${PN}"
-	doins etc/META || die "failed to install META file for findlib support"
+	doins etc/META
 
 	use doc && dohtml -r doc/*
 

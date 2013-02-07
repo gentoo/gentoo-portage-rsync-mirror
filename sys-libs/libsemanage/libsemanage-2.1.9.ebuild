@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.1.9.ebuild,v 1.3 2012/11/17 16:56:15 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.1.9.ebuild,v 1.4 2013/02/07 19:42:32 swift Exp $
 
 EAPI="3"
 # Support for 4 depends on python.eclass
 PYTHON_DEPEND="python? *"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
+RESTRICT_PYTHON_ABIS="*-jython *-pypy-* 2.6"
 
 inherit multilib python toolchain-funcs eutils
 
