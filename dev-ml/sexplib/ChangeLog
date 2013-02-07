@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/sexplib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/ChangeLog,v 1.20 2012/10/17 12:15:21 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/ChangeLog,v 1.21 2013/02/07 19:06:47 aballier Exp $
+
+*sexplib-109.07.00 (07 Feb 2013)
+
+  07 Feb 2013; Alexis Ballier <aballier@gentoo.org> +sexplib-109.07.00.ebuild:
+  version bump, eapi 5, add subslots and := deps
 
   17 Oct 2012; Alexis Ballier <aballier@gentoo.org> sexplib-108.07.01.ebuild:
   Mirror the distfile, upstream one fails to fetch, bug #438610 by Nick Bowler
