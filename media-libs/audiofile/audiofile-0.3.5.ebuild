@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.3.5.ebuild,v 1.1 2013/02/07 02:31:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.3.5.ebuild,v 1.2 2013/02/07 11:02:24 ssuominen Exp $
 
 EAPI=5
 
@@ -19,8 +19,8 @@ DEPEND="test? ( dev-cpp/gtest )"
 DOCS=( ACKNOWLEDGEMENTS AUTHORS ChangeLog NEWS NOTES README TODO )
 
 src_prepare() {
-	# don't build examples
-	sed -i "/^SRC_SUBDIRS/s: examples::" Makefile.am || die
+	# don't build examples wrt #455978
+	sed -i '/^SUBDIRS/s: examples::' Makefile.am || die
 
 	epatch "${FILESDIR}"/${P}-system-gtest.patch
 
