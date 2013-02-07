@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/DirectFB
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.129 2012/01/27 20:11:51 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.130 2013/02/07 20:15:45 hasufell Exp $
+
+*DirectFB-1.6.3 (07 Feb 2013)
+
+  07 Feb 2013; Julian Ospald <hasufell@gentoo.org> +DirectFB-1.6.3.ebuild,
+  +files/DirectFB-1.6.3-build.patch, +files/DirectFB-1.6.3-flags.patch,
+  +files/DirectFB-1.6.3-pkgconfig.patch, metadata.xml:
+  version bump wrt #452264
 
   27 Jan 2012; Tupone Alfredo <tupone@gentoo.org> DirectFB-1.4.9-r1.ebuild,
   metadata.xml:

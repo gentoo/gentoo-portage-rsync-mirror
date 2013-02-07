@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/slim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.97 2013/02/06 14:59:35 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.98 2013/02/07 20:03:01 axs Exp $
+
+  07 Feb 2013; Ian Stakenvicius <axs@gentoo.org> slim-1.3.5-r1.ebuild:
+  fixed slot operator on libpng , bug 456084
 
   06 Feb 2013; Ian Stakenvicius <axs@gentoo.org> slim-1.3.5-r1.ebuild:
   bump to EAPI5 and put slot-operator dep on libpng

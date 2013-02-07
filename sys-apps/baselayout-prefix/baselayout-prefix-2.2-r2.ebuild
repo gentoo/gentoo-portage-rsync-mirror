@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r1.ebuild,v 1.1 2013/01/10 15:42:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r2.ebuild,v 1.1 2013/02/07 20:27:49 grobian Exp $
 
 EAPI=3
 
@@ -66,6 +66,16 @@ src_install() {
 
 	# FHS compatibility symlinks stuff
 	dosym /var/tmp /usr/tmp
+
+	# add a dummy to avoid Portage shebang errors
+	dodir sbin
+	cat > "${ED}"/sbin/runscript <<- EOF
+		#!${BASH}
+
+		echo "runscript not supported by Gentoo Prefix Base System release ${PV}" 1>&2
+		exit 1
+	EOF
+	chmod 755 "${ED}"/sbin/runscript || die
 }
 
 pkg_postinst() {
