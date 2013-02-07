@@ -1,6 +1,12 @@
 # ChangeLog for games-action/d1x-rebirth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/ChangeLog,v 1.9 2013/01/31 08:45:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/ChangeLog,v 1.10 2013/02/06 23:27:30 hasufell Exp $
+
+*d1x-rebirth-0.57.3 (06 Feb 2013)
+
+  06 Feb 2013; Julian Ospald <hasufell@gentoo.org> +d1x-rebirth-0.57.3.ebuild,
+  +files/d1x-rebirth-0.57.3-flags.patch:
+  version bump wrt #369419
 
   31 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -d1x-rebirth-0.55.1.ebuild:

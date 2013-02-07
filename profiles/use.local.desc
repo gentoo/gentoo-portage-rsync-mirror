@@ -1903,8 +1903,12 @@ dev-vcs/subversion:webdav-serf - Enable WebDAV support using net-libs/serf
 games-action/chromium-bsu:mixer - Enables media-libs/sdl-mixer sound backend instead of media-libs/openal one.
 games-action/d1x-rebirth:awe32 - Enable AWE32 support
 games-action/d1x-rebirth:demo - Use the demo data instead of the full game
+games-action/d1x-rebirth:linguas_de - Provides German translations for the game's briefings, robot descriptions, and outro of the original campaign
 games-action/d1x-rebirth:mixer - Enable mixer support
 games-action/d1x-rebirth:mpu401 - Enable MPU401 music support
+games-action/d1x-rebirth:music - Support for ingame music
+games-action/d1x-rebirth:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
+games-action/d1x-rebirth:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
 games-action/d2x-rebirth:awe32 - Enable AWE32 support
 games-action/d2x-rebirth:demo - Install games-action/descent2-demodata as well
 games-action/d2x-rebirth:linguas_de - Provides German translations for the game's briefings, robot descriptions, and outro of the original campaign
@@ -2795,10 +2799,6 @@ media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/sge:image - enable sdl-image support
 media-libs/silgraphite:pango - Enables the pango-graphite pango module.
 media-libs/spandsp:fixed-point - Enable fixed point support
-media-libs/spandsp:sse3 - Enable SSE3 support
-media-libs/spandsp:sse4 - Enable SSE4 support
-media-libs/spandsp:sse4a - Enable SSE4a support
-media-libs/spandsp:sse5 - Enable SSE5 support
 media-libs/svgalib:kernel-helper - Build the helper kernel module
 media-libs/swfdec:alsa - Use ALSA for audio output
 media-libs/swfdec:doc - Build documentation

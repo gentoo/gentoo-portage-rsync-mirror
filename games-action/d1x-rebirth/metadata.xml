@@ -12,6 +12,13 @@ Descent 1 source that was released by Parallax and is based on the D1X source.
     <flag name="awe32">Enable AWE32 support</flag>
     <flag name="demo">Use the demo data instead of the full game</flag>
     <flag name="mixer">Enable mixer support</flag>
-    <flag name="mpu401">Enable MPU401 music support</flag>
+	<flag name="mpu401">Enable MPU401 music support</flag>
+	<flag name="music">Support for ingame music</flag>
+    <flag name="linguas_de">Provides German translations for the game's
+      briefings, robot descriptions, and outro of the original campaign</flag>
+    <flag name="opl3-musicpack">Include alternate version of the game's music, recorded
+      with the Yamaha YMF262 OPL3 soundchip</flag>
+    <flag name="sc55-musicpack">Include alternate version of the game's music, recorded
+      with the Roland Sound Canvas SC-55 MIDI module</flag>
   </use>
 </pkgmetadata>

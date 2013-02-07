@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/katepart
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/katepart/ChangeLog,v 1.58 2013/01/28 12:12:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/katepart/ChangeLog,v 1.59 2013/02/06 23:20:20 naota Exp $
+
+  06 Feb 2013; Naohiro Aota <naota@gentoo.org> katepart-4.9.5.ebuild:
+  Add ~x86-fbsd wrt bug #430072
 
   28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -katepart-4.9.3.ebuild,
   -katepart-4.9.4.ebuild:

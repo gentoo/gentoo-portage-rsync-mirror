@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-declarative
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.67 2012/12/31 05:58:04 pesa Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-declarative/ChangeLog,v 1.68 2013/02/06 23:26:25 naota Exp $
+
+  06 Feb 2013; Naohiro Aota <naota@gentoo.org> qt-declarative-4.8.4.ebuild:
+  Add ~x86-fbsd wrt bug #430072
 
   31 Dec 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Cleanup metadata.

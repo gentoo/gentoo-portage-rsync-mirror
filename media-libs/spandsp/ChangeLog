@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/spandsp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.24 2012/12/17 17:35:14 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.25 2013/02/06 23:20:19 mattst88 Exp $
+
+*spandsp-0.0.6_pre21 (06 Feb 2013)
+
+  06 Feb 2013; Matt Turner <mattst88@gentoo.org> +spandsp-0.0.6_pre21.ebuild,
+  -spandsp-0.0.2_pre26.ebuild, -spandsp-0.0.5_pre4.ebuild,
+  -spandsp-0.0.6_pre12.ebuild, -spandsp-0.0.6_pre7.ebuild, metadata.xml,
+  spandsp-0.0.6_pre12-r1.ebuild:
+  Drop old. Bump to 0.0.6_pre21, bug 319377. Drop bogus SSE* USE flags, bug
+  371991.
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> spandsp-0.0.6_pre12-r1.ebuild:
   Add ~ppc64, wrt bug #443964

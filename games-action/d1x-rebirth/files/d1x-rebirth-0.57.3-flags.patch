@@ -1,0 +1,21 @@
+--- d1x-rebirth_v0.57.3-src/SConstruct
++++ d1x-rebirth_v0.57.3-src/SConstruct
+@@ -390,7 +390,6 @@
+ 	env.Append(CPPFLAGS = ['-g'])
+ else:
+ 	env.Append(CPPDEFINES = ['NDEBUG', 'RELEASE'])
+-	env.Append(CPPFLAGS = ['-O2'])
+ 
+ # profiler?
+ if (profiler == 1):
+@@ -419,8 +418,9 @@
+ print '\n'
+ 
+ env.Append(CPPDEFINES = [('SHAREPATH', '\\"' + str(sharepath) + '\\"')])
++env.Append(LINKFLAGS = [str(lflags)])
+ # finally building program...
+-env.Program(target=str(target), source = common_sources, LIBS = libs, LINKFLAGS = str(lflags))
++env.Program(target=str(target), source = common_sources, LIBS = libs)
+ if (sys.platform != 'darwin'):
+ 	env.Install(BIN_DIR, str(target))
+ 	env.Alias('install', BIN_DIR)
