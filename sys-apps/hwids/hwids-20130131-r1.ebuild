@@ -1,27 +1,24 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-99999999.ebuild,v 1.16 2013/02/07 18:56:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20130131-r1.ebuild,v 1.1 2013/02/07 18:56:38 ssuominen Exp $
 
 EAPI=5
-inherit udev eutils git-2
+inherit udev eutils
 
 DESCRIPTION="Hardware (PCI, USB, OUI, IAB) IDs databases"
 HOMEPAGE="https://github.com/gentoo/hwids"
-EGIT_REPO_URI="${HOMEPAGE}.git"
+SRC_URI="https://github.com/gentoo/hwids/archive/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 BSD ) public-domain"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux"
 IUSE="+udev"
 
-DEPEND="net-misc/curl
-	udev? ( dev-lang/perl )"
+DEPEND="udev? ( dev-lang/perl )"
 RDEPEND="!<sys-apps/pciutils-3.1.9-r2
 	!<sys-apps/usbutils-005-r1"
 
-src_prepare() {
-	emake fetch
-}
+S=${WORKDIR}/hwids-${P}
 
 src_compile() {
 	emake UDEV=$(usex udev)

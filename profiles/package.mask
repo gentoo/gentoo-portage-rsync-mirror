@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14436 2013/02/06 08:40:45 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14437 2013/02/07 18:46:16 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,10 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Davide Pesavento <pesa@gentoo.org> (6 Feb 2013)
-# Requires masked virtual/ffmpeg.
->=media-sound/karlyriceditor-1.4
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (5 Feb 2013)
 # Needs a complete ebuild rewrite to use CMake, and a new patchset to

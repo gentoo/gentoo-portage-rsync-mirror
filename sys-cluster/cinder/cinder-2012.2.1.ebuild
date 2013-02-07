@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2012.2.1.ebuild,v 1.2 2013/01/26 09:12:05 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2012.2.1.ebuild,v 1.3 2013/02/07 18:57:19 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
@@ -27,7 +27,6 @@ RDEPEND="=dev-python/amqplib-0.6.1
 		>=dev-python/lxml-2.3
 		=dev-python/routes-1.12.3
 		>=dev-python/webob-1.0.8
-		=dev-python/wsgiref-0.1.2
 		>=dev-python/greenlet-0.3.1
 		=dev-python/pastedeploy-1.5.0
 		dev-python/paste
@@ -50,12 +49,11 @@ python_install() {
 	keepdir /etc/cinder/rootwrap.d
 	insinto /etc/cinder
 
-	newins "etc/cinder/cinder.conf.sample" "cinder.conf"
-	newins "etc/cinder/api-paste.ini" "api-paste.ini"
-	newins "etc/cinder/cinder_emc_config.xml.sample" "cinder_emc_config.xml.sample"
-	newins "etc/cinder/logging_sample.conf" "logging_sample.conf"
-	newins "etc/cinder/policy.json" "policy.json"
-	newins "etc/cinder/rootwrap.conf" "rootwrap.conf"
+	newins "${S}/etc/cinder/cinder.conf.sample" "cinder.conf"
+	newins "${S}/etc/cinder/api-paste.ini" "api-paste.ini"
+	newins "${S}/etc/cinder/logging_sample.conf" "logging_sample.conf"
+	newins "${S}/etc/cinder/policy.json" "policy.json"
+	newins "${S}/etc/cinder/rootwrap.conf" "rootwrap.conf"
 	insinto /etc/cinder/rootwrap.d
-	newins "etc/cinder/rootwrap.d/volume.filters" "volume.filters"
+	newins "${S}/etc/cinder/rootwrap.d/volume.filters" "volume.filters"
 }

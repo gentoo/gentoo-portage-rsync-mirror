@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.820 2013/02/07 18:10:24 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.821 2013/02/07 18:50:36 ssuominen Exp $
+
+*udev-197-r8 (07 Feb 2013)
+
+  07 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> +udev-197-r8.ebuild:
+  Support updating hwdb from an offset ${ROOT}. Thanks to Luca Barbato
+  (lu_zero) for the patch, see:
+  http://bugs.freedesktop.org/show_bug.cgi?id=60398
+  http://github.com/lu-zero/eudev/commit/96da532526fec9bbfc9f53f2c5819520b971710c
 
   07 Feb 2013; William Hubbs <williamh@gentoo.org> ChangeLog:
   Require >=sys-libs/libselinux-2.1.9 for bug #455214.

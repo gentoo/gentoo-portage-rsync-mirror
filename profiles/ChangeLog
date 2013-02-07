@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7441 2013/02/07 03:25:26 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7442 2013/02/07 18:46:16 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Feb 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask karlyriceditor 1.4, its fine now with older ffmpeg
 
   07 Feb 2013; Matt Turner <mattst88@gentoo.org>
   hardened/linux/uclibc/amd64/use.mask, hardened/linux/uclibc/x86/use.mask:
