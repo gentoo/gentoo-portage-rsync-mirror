@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-2.3.11.ebuild,v 1.1 2013/02/06 15:58:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-2.3.11.ebuild,v 1.2 2013/02/07 02:08:43 jer Exp $
 
 EAPI=5
 inherit eutils qt4-r2
@@ -38,6 +38,10 @@ src_prepare() {
 			rm -r lang/vym_${lingua}.ts || die
 		fi
 	done
+	sed -i \
+		-e '/lang\/vym_en.ts/d' \
+		CMakeLists.txt || die
+	rm -r lang/vym_en.ts || die
 }
 
 src_configure() {
@@ -46,6 +50,7 @@ src_configure() {
 
 src_install() {
 	qt4-r2_src_install
+	rmdir "${D}"/usr/share/${PN}/lang || die
 	doman doc/vym.1.gz
 	make_desktop_entry vym vym /usr/share/vym/icons/vym.png Education
 }
