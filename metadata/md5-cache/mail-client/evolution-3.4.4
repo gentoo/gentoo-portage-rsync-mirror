@@ -5,10 +5,10 @@ EAPI=4
 HOMEPAGE=http://projects.gnome.org/evolution/
 IUSE=clutter connman crypt +gnome-online-accounts gstreamer kerberos ldap map networkmanager python ssl
 KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd
-LICENSE=|| ( LGPL-2 LGPL-3 ) CCPL-Attribution-ShareAlike-3.0 FDL-1.3+ OPENLDAP
+LICENSE=|| ( LGPL-2 LGPL-3 ) CC-BY-SA-3.0 FDL-1.3+ OPENLDAP
 RDEPEND=>=dev-libs/glib-2.30:2 >=x11-libs/cairo-1.9.15[glib] >=x11-libs/gtk+-3.4:3 >=gnome-base/gnome-desktop-2.91.3:3 >=gnome-base/gsettings-desktop-schemas-2.91.92 >=dev-libs/libgweather-2.90.0:2 >=media-libs/libcanberra-0.25[gtk3] >=x11-libs/libnotify-0.7 >=gnome-extra/evolution-data-server-3.4.4[gnome-online-accounts?,weather] =gnome-extra/evolution-data-server-3.4* >=gnome-extra/gtkhtml-4.1.2:4.0 >=gnome-base/gconf-2:2 dev-libs/atk >=dev-libs/dbus-glib-0.6 >=dev-libs/libxml2-2.7.3:2 >=net-libs/libsoup-gnome-2.31.2:2.4 >=x11-misc/shared-mime-info-0.22 >=x11-themes/gnome-icon-theme-2.30.2.1 >=dev-libs/libgdata-0.10 x11-libs/libSM x11-libs/libICE clutter? ( >=media-libs/clutter-1.0.0:1.0 >=media-libs/clutter-gtk-0.90:1.0 x11-libs/mx:1.0 ) connman? ( net-misc/connman ) crypt? ( || ( ( >=app-crypt/gnupg-2.0.1-r2 || ( app-crypt/pinentry[gtk] app-crypt/pinentry-qt app-crypt/pinentry[qt4] ) ) =app-crypt/gnupg-1.4* ) ) gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.1.1 ) gstreamer? ( >=media-libs/gstreamer-0.10:0.10 >=media-libs/gst-plugins-base-0.10:0.10 ) kerberos? ( virtual/krb5 ) ldap? ( >=net-nds/openldap-2 ) map? ( >=app-misc/geoclue-0.12.0 >=media-libs/libchamplain-0.12:0.12 ) networkmanager? ( >=net-misc/networkmanager-0.7 ) ssl? ( >=dev-libs/nspr-4.6.1 >=dev-libs/nss-3.11 ) !<gnome-extra/evolution-exchange-2.32 python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) )
 REQUIRED_USE=map? ( clutter ) connman? ( !networkmanager ) networkmanager? ( !connman )
 SLOT=2.0
 SRC_URI=mirror://gnome/sources/evolution/3.4/evolution-3.4.4.tar.xz
 _eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	96ca31031ada9967bcf96a4fd8977ae4	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=d4c9f07efbceb76f96d80b1cf8fe33fe
+_md5_=338bce4dd9895a41ffb6925e53f3b030

@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/dragonhunt
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/ChangeLog,v 1.6 2010/05/05 05:07:50 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/ChangeLog,v 1.7 2013/02/07 22:12:52 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> dragonhunt-3.56.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   05 May 2010; Tupone Alfredo <tupone@gentoo.org> dragonhunt-3.56.ebuild:
   Force python2 fixing bug #312273 by arfrevergentoo.org

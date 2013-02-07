@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.7.0.ebuild,v 1.3 2013/01/13 11:22:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-0.7.0.ebuild,v 1.4 2013/02/07 22:06:19 ulm Exp $
 
 EAPI=3
 inherit eutils flag-o-matic base cmake-utils games
@@ -21,8 +21,8 @@ SRC_URI="mirror://sourceforge/performous/${P}.tar.bz2
 
 LICENSE="GPL-2
 	songs? (
-		CCPL-Attribution-ShareAlike-NonCommercial-2.5
-		CCPL-Attribution-NonCommercial-NoDerivs-2.5
+		CC-BY-NC-SA-2.5
+		CC-BY-NC-ND-2.5
 	)"
 SLOT="0"
 KEYWORDS="amd64 x86"

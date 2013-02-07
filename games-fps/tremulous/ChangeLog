@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/tremulous
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/ChangeLog,v 1.24 2012/11/08 21:04:00 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/ChangeLog,v 1.25 2013/02/07 22:07:55 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> tremulous-1.1.0-r4.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   08 Nov 2012; Tupone Alfredo <tupone@gentoo.org> tremulous-1.1.0-r4.ebuild,
   files/tremulous-1.1.0-ldflags.patch:

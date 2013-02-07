@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ufw-frontends
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ChangeLog,v 1.5 2012/09/24 11:51:57 thev00d00 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ChangeLog,v 1.6 2013/02/07 22:30:58 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> ufw-frontends-0.3.2.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   24 Sep 2012; Ian Whyman <thev00d00@gentoo.org> -ufw-frontends-0.3.1.ebuild:
   Drop old ready for new UFW

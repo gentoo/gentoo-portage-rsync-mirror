@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest-data/megaglest-data-3.7.0.ebuild,v 1.1 2012/11/14 17:10:49 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest-data/megaglest-data-3.7.0.ebuild,v 1.2 2013/02/07 22:17:52 ulm Exp $
 
 EAPI=4
 inherit cmake-utils games
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.megaglest.org/"
 SRC_URI="mirror://sourceforge/${MY_PN}/${P}.tar.xz
 	mirror://sourceforge/${MY_PN}/${MY_PN}-source-embedded-${PV}.tar.xz"
 
-LICENSE="CCPL-Attribution-ShareAlike-3.0 BitstreamVera GPL-2+ GPL-2-with-font-exception"
+LICENSE="CC-BY-SA-3.0 BitstreamVera GPL-2+ GPL-2-with-font-exception"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"

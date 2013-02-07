@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/whichwayisup
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/ChangeLog,v 1.18 2012/04/13 19:15:01 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/ChangeLog,v 1.19 2013/02/07 22:07:08 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> whichwayisup-0.7.9.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> whichwayisup-0.7.9.ebuild:
   Move EAPI assignment to top of ebuild, bug 411875.

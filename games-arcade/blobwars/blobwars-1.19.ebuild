@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.19.ebuild,v 1.5 2012/03/17 16:44:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.19.ebuild,v 1.6 2013/02/07 22:03:54 ulm Exp $
 
 EAPI=2
 inherit eutils gnome2-utils games
@@ -9,7 +9,7 @@ DESCRIPTION="Platform game about a blob and his quest to rescue MIAs from an ali
 HOMEPAGE="http://sourceforge.net/projects/blobwars/ https://sourceforge.net/apps/mediawiki/blobwars/index.php?title=Main_Page"
 SRC_URI="mirror://sourceforge/blobwars/${P}.tar.gz"
 
-LICENSE="BSD CCPL-Attribution-ShareAlike-3.0 CCPL-Attribution-3.0 GPL-2 LGPL-2.1 fairuse public-domain"
+LICENSE="BSD CC-BY-SA-3.0 CC-BY-3.0 GPL-2 LGPL-2.1 fairuse public-domain"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/whichwayisup-0.7.9.ebuild,v 1.11 2012/04/13 19:15:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/whichwayisup-0.7.9.ebuild,v 1.12 2013/02/07 22:07:08 ulm Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -12,7 +12,7 @@ DESCRIPTION="A traditional and challenging 2D platformer game with a slight rota
 HOMEPAGE="http://hectigo.net/puskutraktori/whichwayisup/"
 SRC_URI="http://hectigo.net/puskutraktori/whichwayisup/${MY_P}.zip"
 
-LICENSE="GPL-2 CCPL-Attribution-3.0"
+LICENSE="GPL-2 CC-BY-3.0"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""

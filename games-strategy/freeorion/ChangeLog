@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/freeorion
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/ChangeLog,v 1.3 2012/12/25 20:51:17 tomka Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/ChangeLog,v 1.4 2013/02/07 22:17:01 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org>
+  freeorion-0.4.2_pre20120910.ebuild, freeorion-0.4.2_pre20120910-r1.ebuild,
+  freeorion-0.4.2_pre20121225.ebuild:
+  Move Creative Commons licenses to shorter names.
 
 *freeorion-0.4.2_pre20121225 (25 Dec 2012)
 

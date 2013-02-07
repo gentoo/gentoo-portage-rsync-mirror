@@ -1,6 +1,10 @@
 # ChangeLog for games-util/pyfa
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.17 2012/12/09 21:37:27 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.18 2013/02/07 22:20:18 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> pyfa-1.1.11.ebuild,
+  pyfa-1.1.12.ebuild:
+  Move Creative Commons licenses to shorter names.
 
 *pyfa-1.1.12 (09 Dec 2012)
 

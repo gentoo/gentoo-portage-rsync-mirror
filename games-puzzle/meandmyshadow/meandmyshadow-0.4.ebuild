@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/meandmyshadow-0.4.ebuild,v 1.3 2012/10/17 02:59:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/meandmyshadow-0.4.ebuild,v 1.4 2013/02/07 22:09:33 ulm Exp $
 
 EAPI=3
 inherit cmake-utils gnome2-utils games
@@ -9,7 +9,7 @@ DESCRIPTION="A puzzle/plateform game with a player and its shadow"
 HOMEPAGE="http://meandmyshadow.sourceforge.net/"
 SRC_URI="mirror://sourceforge/meandmyshadow/${PV}/${P}-src.tar.gz"
 
-LICENSE="GPL-3 OFL-1.1 CCPL-Attribution-ShareAlike-2.5"
+LICENSE="GPL-3 OFL-1.1 CC-BY-SA-2.5"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="opengl"

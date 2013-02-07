@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.6.ebuild,v 1.2 2012/09/21 16:19:15 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.6.ebuild,v 1.3 2013/02/07 22:30:17 ulm Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="lensfun: A library for rectifying and simulating photographic lens 
 HOMEPAGE="http://lensfun.berlios.de/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
-LICENSE="LGPL-3 CCPL-Attribution-ShareAlike-3.0" # See README for reasoning.
+LICENSE="LGPL-3 CC-BY-SA-3.0" # See README for reasoning.
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc sse sse2"

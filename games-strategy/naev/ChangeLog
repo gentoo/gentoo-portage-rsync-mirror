@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/naev
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/ChangeLog,v 1.17 2012/10/22 02:57:37 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/ChangeLog,v 1.18 2013/02/07 22:18:41 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> naev-0.5.3.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   22 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> naev-0.5.3.ebuild:
   use newicon

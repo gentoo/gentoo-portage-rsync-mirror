@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/powder
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/powder/ChangeLog,v 1.15 2013/01/24 00:14:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/powder/ChangeLog,v 1.16 2013/02/07 22:11:02 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> powder-116.ebuild,
+  powder-117.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   24 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -powder-115.ebuild:
   old

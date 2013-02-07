@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.1.2-r1.ebuild,v 1.1 2013/01/14 21:24:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.1.2-r1.ebuild,v 1.2 2013/02/07 22:25:40 ulm Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.darktable.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	doc? ( mirror://sourceforge/${PN}/${PN}-usermanual-${PV}.pdf )"
 
-LICENSE="GPL-3 CCPL-Attribution-3.0"
+LICENSE="GPL-3 CC-BY-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="colord doc facebook flickr geo gnome-keyring gphoto2 kde

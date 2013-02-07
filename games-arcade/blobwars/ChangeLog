@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/blobwars
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.44 2012/03/17 16:44:32 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.45 2013/02/07 22:03:54 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> blobwars-1.19.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   17 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> blobwars-1.19.ebuild,
   +files/blobwars-1.19-zlib-1.2.5.2.patch:

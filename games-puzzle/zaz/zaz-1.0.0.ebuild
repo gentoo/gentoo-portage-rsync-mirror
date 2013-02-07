@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/zaz-1.0.0.ebuild,v 1.5 2012/05/04 04:45:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/zaz-1.0.0.ebuild,v 1.6 2013/02/07 22:10:18 ulm Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -9,7 +9,7 @@ DESCRIPTION="A puzzle game where the player has to arrange balls in triplets"
 HOMEPAGE="http://sourceforge.net/projects/zaz/"
 SRC_URI="mirror://sourceforge/zaz/${P}.tar.bz2"
 
-LICENSE="GPL-3 CCPL-Attribution-ShareAlike-3.0"
+LICENSE="GPL-3 CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="nls"

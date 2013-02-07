@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/barbarian-bin-1.01.ebuild,v 1.8 2013/01/10 08:36:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/barbarian-bin-1.01.ebuild,v 1.9 2013/02/07 22:02:19 ulm Exp $
 
 inherit eutils games
 
@@ -9,7 +9,7 @@ DESCRIPTION="Save Princess Mariana through one-on-one battles with demonic barba
 HOMEPAGE="http://www.tdbsoft.com/"
 SRC_URI="http://www.pcpages.com/tomberrr/downloads/${MY_PN}${PV/./}_linux.zip"
 
-LICENSE="CCPL-Attribution-NonCommercial-NoDerivs-2.0"
+LICENSE="CC-BY-NC-ND-2.0"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 RESTRICT="strip"

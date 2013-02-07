@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/dragonhunt-3.56.ebuild,v 1.5 2010/05/05 05:07:50 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/dragonhunt-3.56.ebuild,v 1.6 2013/02/07 22:12:52 ulm Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -11,7 +11,7 @@ DESCRIPTION="A simple graphical RPG"
 HOMEPAGE="http://emhsoft.com/dh.html"
 SRC_URI="http://emhsoft.com/dh/${MY_P}.tar.gz"
 
-LICENSE="GPL-2 CCPL-ShareAlike-1.0"
+LICENSE="GPL-2 CC-SA-1.0"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""

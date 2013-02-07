@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/opensfx/opensfx-0.2.3.ebuild,v 1.7 2010/10/15 13:55:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/opensfx/opensfx-0.2.3.ebuild,v 1.8 2013/02/07 22:08:50 ulm Exp $
 
 EAPI=2
 inherit games
@@ -9,7 +9,7 @@ DESCRIPTION="OpenSFX data files for OpenTTD"
 HOMEPAGE="http://bundles.openttdcoop.org/opensfx/"
 SRC_URI="http://bundles.openttdcoop.org/${PN}/releases/${P}-source.tar.gz"
 
-LICENSE="CCPL-Sampling-Plus-1.0"
+LICENSE="CC-Sampling-Plus-1.0"
 SLOT="0"
 KEYWORDS="amd64 ~arm ppc ppc64 x86"
 IUSE=""

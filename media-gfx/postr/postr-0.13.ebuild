@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/postr-0.13.ebuild,v 1.1 2012/10/09 22:53:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/postr-0.13.ebuild,v 1.2 2013/02/07 22:28:22 ulm Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ inherit eutils gnome2 python
 DESCRIPTION="Flickr uploader for GNOME"
 HOMEPAGE="http://projects.gnome.org/postr/"
 
-LICENSE="GPL-2+ CCPL-Attribution-ShareAlike-3.0"
+LICENSE="GPL-2+ CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gnome2"

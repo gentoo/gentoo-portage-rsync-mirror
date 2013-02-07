@@ -1,6 +1,9 @@
 # ChangeLog for games-action/wordwarvi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/ChangeLog,v 1.12 2013/01/30 22:54:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/ChangeLog,v 1.13 2013/02/07 22:01:29 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> wordwarvi-1.00.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/wordwarvi-0.26-sound.patch, -wordwarvi-0.26.ebuild:

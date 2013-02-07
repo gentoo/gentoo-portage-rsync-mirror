@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/qxmledit-0.8.3.ebuild,v 1.1 2012/09/27 20:09:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/qxmledit-0.8.4.ebuild,v 1.1 2013/02/07 22:21:13 hwoarang Exp $
 
-EAPI=4
+EAPI=5
 
 inherit multilib eutils qt4-r2
 

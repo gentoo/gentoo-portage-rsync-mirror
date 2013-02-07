@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.4.0.ebuild,v 1.7 2012/05/05 06:25:22 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.4.0.ebuild,v 1.8 2013/02/07 22:21:06 ulm Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ DESCRIPTION="Applets for the Avant Window Navigator"
 HOMEPAGE="http://launchpad.net/awn-extras"
 SRC_URI="http://launchpad.net/awn-extras/0.4/${PV}/+download/awn-extras-${PV}.tar.gz"
 
-LICENSE="BSD CCPL-Attribution-ShareAlike-3.0 GPL-3 LGPL-2.1"
+LICENSE="BSD CC-BY-SA-3.0 GPL-3 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+gconf gstreamer webkit"

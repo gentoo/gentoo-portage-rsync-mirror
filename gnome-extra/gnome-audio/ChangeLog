@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-audio
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-audio/ChangeLog,v 1.38 2010/09/22 01:23:46 abcd Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-audio/ChangeLog,v 1.39 2013/02/07 22:22:06 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> gnome-audio-2.22.2.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   22 Sep 2010; Jonathan Callen <abcd@gentoo.org> gnome-audio-2.22.2.ebuild:
   Use EAPI=3, add ~amd64-linux/~x86-linux keywords and prefix support

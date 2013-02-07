@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/postr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/ChangeLog,v 1.3 2012/10/09 22:53:51 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/ChangeLog,v 1.4 2013/02/07 22:28:22 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> postr-0.13.ebuild:
+  Move Creative Commons licenses to shorter names.
 
 *postr-0.13 (09 Oct 2012)
 

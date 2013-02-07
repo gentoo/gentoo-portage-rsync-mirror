@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/wordwarvi-1.00.ebuild,v 1.4 2012/05/03 03:02:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/wordwarvi-1.00.ebuild,v 1.5 2013/02/07 22:01:29 ulm Exp $
 
 EAPI=2
 inherit eutils games
@@ -9,7 +9,7 @@ DESCRIPTION="A retro side-scrolling shoot'em up based on the editor war story"
 HOMEPAGE="http://wordwarvi.sourceforge.net"
 SRC_URI="mirror://sourceforge/wordwarvi/${P}.tar.gz"
 
-LICENSE="GPL-2 CCPL-Attribution-2.0 CCPL-Attribution-ShareAlike-3.0"
+LICENSE="GPL-2 CC-BY-2.0 CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="portaudio"

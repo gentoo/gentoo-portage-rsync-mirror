@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/stone-soup-0.11.1-r1.ebuild,v 1.2 2012/12/13 17:18:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/stone-soup-0.11.1-r1.ebuild,v 1.3 2013/02/07 22:11:48 ulm Exp $
 
 ## TODO
 # add sound support (no build switch, no sound files)
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/crawl-ref/Stone%20Soup/${PV}/${MY_P}-nodeps.tar.xz
 # 2-clause BSD: all contributions by Steve Noonan and Jesse Luehrs
 # Public Domain|CC0: most of tiles
 # MIT: json.cc/json.h, some .js files in webserver/static/scripts/contrib/
-LICENSE="GPL-2 BSD BSD-2 public-domain CC0-1.0-Universal MIT"
+LICENSE="GPL-2 BSD BSD-2 public-domain CC0-1.0 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug ncurses test +tiles"

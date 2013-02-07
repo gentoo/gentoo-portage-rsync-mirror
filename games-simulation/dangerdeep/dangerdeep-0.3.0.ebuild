@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.3.0.ebuild,v 1.11 2012/07/25 12:44:07 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.3.0.ebuild,v 1.12 2013/02/07 22:15:30 ulm Exp $
 
 EAPI=2
 inherit eutils scons-utils games
@@ -10,7 +10,7 @@ HOMEPAGE="http://dangerdeep.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	mirror://sourceforge/${PN}/${PN}-data-${PV}.zip"
 
-LICENSE="GPL-2 CCPL-Attribution-NonCommercial-NoDerivs-2.0"
+LICENSE="GPL-2 CC-BY-NC-ND-2.0"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE="sse debug"
