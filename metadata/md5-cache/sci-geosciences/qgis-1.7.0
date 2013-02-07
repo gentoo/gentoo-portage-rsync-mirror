@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare setup test unpack
-DEPEND=dev-libs/expat sci-geosciences/gpsbabel >=sci-libs/gdal-1.6.1[geos,python?] sci-libs/geos sci-libs/gsl x11-libs/qt-core:4 x11-libs/qt-gui:4 x11-libs/qt-svg:4 x11-libs/qt-sql:4 x11-libs/qt-webkit:4 x11-libs/qwt:5[svg] x11-libs/qwtpolar grass? ( >=sci-geosciences/grass-6.4.0_rc6[python?] ) postgres? ( >=dev-db/postgresql-base-8.4 ) python? ( dev-python/PyQt4[X,sql,svg] ) spatialite? ( dev-db/sqlite:3 dev-db/spatialite ) sys-devel/bison sys-devel/flex python? ( =dev-lang/python-2* ) =dev-lang/python-2*[sqlite] >=dev-util/cmake-2.8.8 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=dev-libs/expat sci-geosciences/gpsbabel >=sci-libs/gdal-1.6.1[geos,python?] sci-libs/geos sci-libs/gsl x11-libs/qt-core:4 x11-libs/qt-gui:4 x11-libs/qt-svg:4 x11-libs/qt-sql:4 x11-libs/qt-webkit:4 x11-libs/qwt:5[svg] x11-libs/qwtpolar grass? ( >=sci-geosciences/grass-6.4.0_rc6[python?] ) postgres? ( >=dev-db/postgresql-base-8.4 ) python? ( dev-python/PyQt4[X,sql,svg] ) spatialite? ( dev-db/sqlite:3 dev-db/spatialite ) sys-devel/bison sys-devel/flex python? ( =dev-lang/python-2* ) =dev-lang/python-2*[sqlite] sys-devel/make >=dev-util/cmake-2.8.8 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=User friendly Geographic Information System
 EAPI=3
 HOMEPAGE=http://www.qgis.org/
@@ -10,5 +10,5 @@ RDEPEND=dev-libs/expat sci-geosciences/gpsbabel >=sci-libs/gdal-1.6.1[geos,pytho
 RESTRICT=test
 SLOT=0
 SRC_URI=http://qgis.org/downloads/qgis-1.7.0.tar.bz2 examples? ( http://download.osgeo.org/qgis/data/qgis_sample_data.tar.gz )
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	3cb7a29aafd4b984d2bf12bc50abe5da	eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	f33f782c8e36a6d104f072c262357ed9	eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=0d57696c5847ec49ba86244a124bd721

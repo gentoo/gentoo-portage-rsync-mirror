@@ -3,24 +3,11 @@ Patch by Jeroen Roovers from https://bugs.gentoo.org/show_bug.cgi?id=455984
 Fixes failure on configure stage with pkgconfig 0.28
 --- a/configure
 +++ b/configure
-@@ -11,10 +11,7 @@
-   test "$IPTSRC" || return 1
+@@ -217,7 +217,6 @@
+ iptables_ver		#IPTVER
+ iptables_pkg_config
+ iptables_dir		#IPTSRC
+-iptables_src_version	#check IPTSRC match to IPTVER
+ iptables_inc		#IPTINC
+ iptables_modules	#IPTLIB
  
-   echo -n "Checking iptables sources version: "
--  SRC="$IPTSRC/Makefile"
--  test -s "$SRC" || error "Please build iptables first."
--  VER=`sed -n 's/^\(IPTABLES_\)\?VERSION[ :]= \?//p' "$SRC"`
--  test "$VER" || error "Unknown version of iptables."
-+  VER=`pkg-config --modversion xtables`
-   if [ "$VER" = "$IPTVER" ]; then
-     echo "$VER (ok)"
-   else
-@@ -155,7 +152,7 @@
- iptables_pkg_config() {
-   if [ ! "$PKGVER" ]; then
-     echo -n "pkg-config for version $IPTVER exists: "
--    PKGVER=`pkg-config --exact-version=$IPTVER --modversion xtables 2>/dev/null`
-+    PKGVER=`pkg-config --modversion xtables 2>/dev/null`
-     if [ $? = 0 ]; then
-       echo "Yes"
-     else

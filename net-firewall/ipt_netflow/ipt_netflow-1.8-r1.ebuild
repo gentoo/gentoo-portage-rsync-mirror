@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ipt_netflow-1.8-r1.ebuild,v 1.1 2013/02/07 15:29:37 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ipt_netflow-1.8-r1.ebuild,v 1.3 2013/02/07 15:38:27 pinkbyte Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://sourceforge.net/projects/ipt-netflow"
 SRC_URI="mirror://sourceforge/${MY_PN}/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="net-firewall/iptables"
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 BUILD_TARGETS="all"
-CONFIG_CHECK="IP_NF_IPTABLES"
+CONFIG_CHECK="~IP_NF_IPTABLES"
 MODULE_NAMES="ipt_NETFLOW(ipt_netflow:${S})"
 
 IPT_LIB=/usr/$(get_libdir)/xtables
