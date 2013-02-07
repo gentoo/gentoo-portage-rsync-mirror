@@ -1,6 +1,16 @@
 # ChangeLog for dev-cpp/rudiments
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/ChangeLog,v 1.14 2013/02/03 12:10:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/ChangeLog,v 1.16 2013/02/07 10:16:06 dev-zero Exp $
+
+  07 Feb 2013; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
+  Add upstream remote-id info.
+
+*rudiments-0.40 (07 Feb 2013)
+
+  07 Feb 2013; Tiziano Müller <dev-zero@gentoo.org> +files/0.40-configure.patch,
+  +rudiments-0.40.ebuild:
+  Version bump (bug #454716), use EAPI-5, fix build-system, don't always install
+  static libs.
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #22900
