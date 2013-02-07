@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r2.ebuild,v 1.1 2013/02/06 10:49:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r2.ebuild,v 1.2 2013/02/07 11:54:44 mgorny Exp $
 
 EAPI=5
 
@@ -193,11 +193,10 @@ python_install() {
 }
 
 python_install_all() {
+	use doc && local HTML_DOCS=( doc/build/html/. )
+
 	distutils-r1_python_install_all
 
-	if use doc; then
-		dodoc -r doc/build/{latex/Matplotlib.pdf,html}
-	fi
 	if use examples; then
 		dodoc -r examples
 		docompress -x /usr/share/doc/${PF}/examples
