@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/libkgeomap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/ChangeLog,v 1.24 2012/10/27 04:23:08 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/ChangeLog,v 1.26 2013/02/07 21:10:16 dilfridge Exp $
+
+*libkgeomap-3.0.0_rc (07 Feb 2013)
+
+  07 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libkgeomap-3.0.0_rc.ebuild:
+  Version bump
+
+  07 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkgeomap-2.6.0.ebuild, -libkgeomap-2.7.0.ebuild, -libkgeomap-2.8.0.ebuild:
+  Cleanup
 
   27 Oct 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> libkgeomap-2.9.0.ebuild:
   x86 stable wrt bug #438352

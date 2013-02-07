@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-nl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/ChangeLog,v 1.26 2012/08/18 15:04:28 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/ChangeLog,v 1.27 2013/02/07 21:23:34 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> myspell-nl-2.10g.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   18 Aug 2012; Jeroen Roovers <jer@gentoo.org> myspell-nl-2.10g.ebuild:
   Fix description and homepage by Geert Lamers (bug #431856).

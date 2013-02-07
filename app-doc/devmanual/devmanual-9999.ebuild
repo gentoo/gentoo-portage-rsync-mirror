@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-9999.ebuild,v 1.3 2013/01/22 19:01:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-9999.ebuild,v 1.4 2013/02/07 21:28:50 ulm Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="The Gentoo Development Guide"
 HOMEPAGE="http://devmanual.gentoo.org/"
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/devmanual.git"
 
-LICENSE="CCPL-Attribution-ShareAlike-2.0"
+LICENSE="CC-BY-SA-2.0"
 SLOT="0"
 # Live ebuild but does not build anycode. It should work everywhere
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh

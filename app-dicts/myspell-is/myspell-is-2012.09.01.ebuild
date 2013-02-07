@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-is/myspell-is-2012.09.01.ebuild,v 1.10 2012/12/30 15:04:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-is/myspell-is-2012.09.01.ebuild,v 1.11 2013/02/07 21:22:30 ulm Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ DESCRIPTION="Icelandic dictionaries for myspell/hunspell"
 HOMEPAGE="http://extensions.libreoffice.org/extension-center/hunspell-is-the-icelandic-spelling-dictionary-project"
 SRC_URI="http://extensions.libreoffice.org/extension-center/hunspell-is-the-icelandic-spelling-dictionary-project/releases/${PV}/hunspell-is-${PV}.oxt"
 
-LICENSE="CCPL-Attribution-ShareAlike-3.0"
+LICENSE="CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""

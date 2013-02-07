@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/libkvkontakte-2.8.0.ebuild,v 1.1 2012/08/11 15:25:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/libkvkontakte-3.0.0_rc.ebuild,v 1.1 2013/02/07 21:11:50 dilfridge Exp $
 
 EAPI=4
 
 KDE_LINGUAS=""
-KDE_MINIMAL="4.8"
+KDE_MINIMAL="4.9"
 
 CMAKE_MIN_VERSION=2.8
 
@@ -13,7 +13,7 @@ inherit kde4-base
 
 MY_PV=${PV/_/-}
 MY_P="digikam-${MY_PV}"
-SRC_URI="mirror://sourceforge/digikam/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/unstable/digikam/${MY_P}.tar.bz2"
 
 DESCRIPTION="Library for accessing the features of social networking site vkontakte.ru"
 HOMEPAGE="http://www.digikam.org/"

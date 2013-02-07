@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-log/gnome-system-log-3.6.1.ebuild,v 1.5 2013/01/06 09:11:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-log/gnome-system-log-3.6.1.ebuild,v 1.6 2013/02/07 21:15:12 ulm Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ inherit gnome2
 DESCRIPTION="System log viewer for GNOME 3"
 HOMEPAGE="https://live.gnome.org/GnomeUtils"
 
-LICENSE="GPL-2+ CCPL-Attribution-ShareAlike-3.0"
+LICENSE="GPL-2+ CC-BY-SA-3.0"
 SLOT="0"
 IUSE=""
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"

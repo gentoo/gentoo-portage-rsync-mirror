@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-is
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-is/ChangeLog,v 1.14 2012/12/30 15:04:42 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-is/ChangeLog,v 1.15 2013/02/07 21:22:30 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> myspell-is-2012.07.29.ebuild,
+  myspell-is-2012.09.01.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> myspell-is-2012.09.01.ebuild:
   Stable for alpha, wrt bug #441056

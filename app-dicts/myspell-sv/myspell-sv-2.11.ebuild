@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-sv/myspell-sv-2.11.ebuild,v 1.2 2013/01/10 07:56:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-sv/myspell-sv-2.11.ebuild,v 1.3 2013/02/07 21:27:34 ulm Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ SRC_URI="
 	http://extensions.libreoffice.org/extension-center/swedish-thesaurus-based-on-synlex/releases/1.3/swedishthesaurus.oxt -> ${P}-thes.oxt
 "
 
-LICENSE="CCPL-Attribution-ShareAlike-3.0 GPL-2 LGPL-3"
+LICENSE="CC-BY-SA-3.0 GPL-2 LGPL-3"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
