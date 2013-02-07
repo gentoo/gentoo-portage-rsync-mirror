@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>x11</herd>
 <use>
+	<flag name="loongson2f">Enable Loongson2f MMI optimizations.</flag>
 	<flag name="mmxext">Enable MMX2 support.</flag>
 </use>
 </pkgmetadata>

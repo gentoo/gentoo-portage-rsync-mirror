@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.500 2013/02/01 21:27:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.501 2013/02/06 23:31:52 mattst88 Exp $
+
+  06 Feb 2013; Matt Turner <mattst88@gentoo.org> use.mask:
+  use.mask mips-only loongson2f USE flag.
 
   01 Feb 2013; Michał Górny <mgorny@gentoo.org> make.defaults, use.mask:
   Introduce ABI_X86 USE_EXPAND and mask the flags by default.

@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.61 2013/01/20 10:51:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.62 2013/02/06 23:32:20 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -372,6 +372,7 @@ fluidsynth
 -ip28
 -ip30
 -fixed-point
+-loongson2f
 
 # Samuli Suominen <ssuominen@gentoo.org> (18 Jan 2013)
 # libdlm and cman are not keyworded

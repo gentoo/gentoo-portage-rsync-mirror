@@ -6003,6 +6003,7 @@ x11-libs/libwnck:tools - Install wnckprop-3 and wnck-urgency-monitor-3 command-l
 x11-libs/libxklavier:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/mx:glade - Build the dev-util/glade catalog files
 x11-libs/mx:introspection - Use dev-libs/gobject-introspection for introspection
+x11-libs/pixman:loongson2f - Enable Loongson2f MMI optimizations.
 x11-libs/pixman:mmxext - Enable MMX2 support.
 x11-libs/qt-assistant:c++0x - Build Qt using the C++11 standard
 x11-libs/qt-assistant:compat - Build the extra compatibility layer required by a few packages, see http://labs.qt.nokia.com/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
