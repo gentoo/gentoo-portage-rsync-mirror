@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-4.00.1.ebuild,v 1.1 2012/10/07 21:33:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-4.00.1.ebuild,v 1.2 2013/02/07 12:44:08 aballier Exp $
 
-EAPI="1"
+EAPI="5"
 
 inherit flag-o-matic eutils multilib versionator toolchain-funcs
 
@@ -14,7 +14,9 @@ SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/cristal/ocaml/ocaml-$(get_version_com
 	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="QPL-1.0 LGPL-2"
-SLOT="0"
+# Everytime ocaml is updated to a new version, everything ocaml must be rebuilt,
+# so here we go with the subslot.
+SLOT="0/${PV}"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="emacs latex ncurses +ocamlopt tk X xemacs"
 
@@ -38,13 +40,11 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 }
 
-src_compile() {
+src_configure() {
 	export LC_ALL=C
 	local myconf=""
 
@@ -72,14 +72,16 @@ src_compile() {
 		-aspp "$(tc-getCC) -c" \
 		-partialld "$(tc-getLD) -r" \
 		--with-pthread ${myconf} || die "configure failed!"
+}
 
-	emake -j1 world || die "make world failed!"
+src_compile() {
+	emake -j1 world
 
 	# Native code generation can be disabled now
 	if use ocamlopt ; then
 		# bug #279968
-		emake -j1 opt || die "make opt failed!"
-		emake -j1 opt.opt || die "make opt.opt failed!"
+		emake -j1 opt
+		emake -j1 opt.opt
 	fi
 }
 
@@ -87,7 +89,7 @@ src_install() {
 	make BINDIR="${D}"/usr/bin \
 		LIBDIR="${D}"/usr/$(get_libdir)/ocaml \
 		MANDIR="${D}"/usr/share/man \
-		install || die "make install failed!"
+		install
 
 	# Install the compiler libs
 	dodir /usr/$(get_libdir)/ocaml/compiler-libs
@@ -99,13 +101,9 @@ src_install() {
 	dodir /usr/include
 	dosym /usr/$(get_libdir)/ocaml/caml /usr/include/
 
-	# Remove ${D} from ld.conf, as the buildsystem isn't $(DESTDIR) aware
-	dosed "s:${D}::g" /usr/$(get_libdir)/ocaml/ld.conf
-
 	dodoc Changes INSTALL README Upgrading
 
-	# Create and envd entry for latex input files (this definitely belongs into
-	# CONTENT and not in pkg_postinst.
+	# Create and envd entry for latex input files
 	if use latex ; then
 		echo "TEXINPUTS=/usr/$(get_libdir)/ocaml/ocamldoc:" > "${T}"/99ocamldoc
 		doenvd "${T}"/99ocamldoc
@@ -113,7 +111,7 @@ src_install() {
 
 	# Install ocaml-rebuild portage set
 	insinto /usr/share/portage/config/sets
-	doins "${FILESDIR}/ocaml.conf" || die
+	doins "${FILESDIR}/ocaml.conf"
 }
 
 pkg_postinst() {

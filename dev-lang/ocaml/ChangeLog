@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ocaml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.208 2012/10/07 21:33:31 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.209 2013/02/07 12:44:08 aballier Exp $
+
+  07 Feb 2013; Alexis Ballier <aballier@gentoo.org> ocaml-4.00.1.ebuild:
+  Bump to EAPI 5, use PV subslot because we want to rebuild everything
+  everytime ocaml is updated
 
 *ocaml-4.00.1 (07 Oct 2012)
 
