@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/bin-prot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/ChangeLog,v 1.19 2012/10/17 12:12:35 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/ChangeLog,v 1.20 2013/02/07 18:25:15 aballier Exp $
+
+*bin-prot-109.07.00 (07 Feb 2013)
+
+  07 Feb 2013; Alexis Ballier <aballier@gentoo.org> +bin-prot-109.07.00.ebuild:
+  version bump, eapi 5, use subslot and := deps
 
   17 Oct 2012; Alexis Ballier <aballier@gentoo.org> bin-prot-108.07.01.ebuild:
   Mirror the distfile, upstream one fails to fetch, bug #438610 by Nick Bowler

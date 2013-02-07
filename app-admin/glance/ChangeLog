@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/glance
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.1 2013/01/20 06:39:20 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.2 2013/02/07 18:02:58 prometheanfire Exp $
+
+*glance-2012.2.3 (07 Feb 2013)
+
+  07 Feb 2013; Matthew Thode <prometheanfire@gentoo.org>
+  -glance-2012.2.1.ebuild, +glance-2012.2.3.ebuild:
+  update glance to 2012.2.3 for bug 454678
 
 *glance-9999 (20 Jan 2013)
 *glance-2012.2.1 (20 Jan 2013)

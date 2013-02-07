@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.819 2013/02/07 12:18:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.820 2013/02/07 18:10:24 williamh Exp $
+
+  07 Feb 2013; William Hubbs <williamh@gentoo.org> ChangeLog:
+  Require >=sys-libs/libselinux-2.1.9 for bug #455214.
+  This applies to udev-197-r4.ebuild, udev-197-r6.ebuild,
+  udev-197-r7.ebuild and udev-9999.ebuild.
 
 *udev-197-r7 (07 Feb 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nss-pam-ldapd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.6 2013/01/20 00:44:08 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.7 2013/02/07 18:11:37 prometheanfire Exp $
+
+  07 Feb 2013; Matthew Thode <prometheanfire@gentoo.org> files/nslcd-init:
+  updating init scripts for bug 455598
 
   20 Jan 2013; Matthew Thode <prometheanfire@gentoo.org>
   nss-pam-ldapd-0.8.12.ebuild:
