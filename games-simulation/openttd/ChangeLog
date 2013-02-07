@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.136 2013/01/22 18:00:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.137 2013/02/07 08:36:36 mr_bones_ Exp $
+
+*openttd-1.2.3-r1 (07 Feb 2013)
+
+  07 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> +openttd-1.2.3-r1.ebuild:
+  rev bump for eapi=5 and icu slot dep (bug #455900)
 
   22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/openttd-1.2.0-cflags.patch, -files/openttd-1.2.2-cflags.patch,

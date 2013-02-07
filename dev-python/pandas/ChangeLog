@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.12 2013/01/31 18:30:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.13 2013/02/07 08:52:22 idella4 Exp $
+
+  07 Feb 2013; Ian Delaney <idella4@gentoo.org> pandas-0.10.1.ebuild:
+  deps added to build docs and a dep deleted to build docs to avoid circular
+  dependeny for the second time, (patchable) sed statement to disable naughty
+  downloading, build of docs corrected with einfo msg, 1 test file disabled
+  (rmvd) for py2.6, redundant distutils-r1_python_install dropped avoiding
+  wrongful duplication, example py modules set uncompressed
 
 *pandas-0.10.1 (31 Jan 2013)
 
