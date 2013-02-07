@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mirall
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/ChangeLog,v 1.16 2013/02/03 12:40:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/ChangeLog,v 1.17 2013/02/07 22:37:57 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> mirall-1.2.0.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   03 Feb 2013; Tomáš Chvátal <scarabeus@gentoo.org> mirall-1.2.0.ebuild:
   Drop languages as the setup as now is broken because it does not match

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/fritzing-0.7.10b.ebuild,v 1.1 2012/10/25 18:57:42 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/fritzing-0.7.10b.ebuild,v 1.2 2013/02/07 22:40:43 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Electronic Design Automation"
 HOMEPAGE="http://fritzing.org/"
 SRC_URI="http://fritzing.org/download/${PV}/source-tarball/${P}.source.tar.bz2"
 
-LICENSE="CCPL-Attribution-ShareAlike-3.0 GPL-2 GPL-3"
+LICENSE="CC-BY-SA-3.0 GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

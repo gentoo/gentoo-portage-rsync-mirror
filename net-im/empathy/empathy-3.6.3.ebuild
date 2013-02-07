@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.6.3.ebuild,v 1.1 2013/01/25 23:14:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.6.3.ebuild,v 1.2 2013/02/07 22:32:21 ulm Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ inherit gnome2 python virtualx
 DESCRIPTION="Telepathy instant messaging and video/audio call client for GNOME"
 HOMEPAGE="http://live.gnome.org/Empathy"
 
-LICENSE="GPL-2 CCPL-Attribution-ShareAlike-3.0 FDL-1.3 LGPL-2.1"
+LICENSE="GPL-2 CC-BY-SA-3.0 FDL-1.3 LGPL-2.1"
 SLOT="0"
 IUSE="debug +geocode +geoloc gnome gnome-online-accounts +map sendto spell test +v4l"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"

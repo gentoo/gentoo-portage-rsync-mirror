@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/greybird-0.8.2.ebuild,v 1.2 2012/08/04 06:39:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/greybird-0.8.2.ebuild,v 1.3 2013/02/07 22:56:38 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="The default Xubuntu 11.04 theme (emerald, GTK+-2, GTK+-3, metacity,
 HOMEPAGE="http://shimmerproject.org/project/greybird/ http://github.com/shimmerproject/Greybird"
 SRC_URI="http://github.com/shimmerproject/${MY_PN}/tarball/v${PV} -> ${P}.tar.gz"
 
-LICENSE="CCPL-Attribution-ShareAlike-NonCommercial-3.0 || ( GPL-2 GPL-3 )"
+LICENSE="CC-BY-NC-SA-3.0 || ( GPL-2 GPL-3 )"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""

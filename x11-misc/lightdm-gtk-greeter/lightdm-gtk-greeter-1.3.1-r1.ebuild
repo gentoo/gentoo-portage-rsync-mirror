@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/lightdm-gtk-greeter-1.3.1-r1.ebuild,v 1.5 2013/02/03 19:26:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/lightdm-gtk-greeter-1.3.1-r1.ebuild,v 1.6 2013/02/07 22:44:07 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://launchpad.net/lightdm-gtk-greeter/1.4/${PV}/+download/${P}.tar.g
 http://dev.gentoo.org/~hwoarang/distfiles/lightdm-gentoo-patch-2.tar.gz )"
 
 LICENSE="GPL-3 LGPL-3
-	branding? ( CCPL-Attribution-3.0 )"
+	branding? ( CC-BY-3.0 )"
 SLOT="0"
 KEYWORDS="amd64 arm ~ppc x86"
 IUSE="branding"

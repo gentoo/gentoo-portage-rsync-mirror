@@ -1,6 +1,10 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.123 2013/02/02 23:00:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.124 2013/02/07 22:32:21 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> empathy-3.6.2-r2.ebuild,
+  empathy-3.6.3.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> empathy-3.6.2-r2.ebuild:
   Add ~arm, wrt bug #449220

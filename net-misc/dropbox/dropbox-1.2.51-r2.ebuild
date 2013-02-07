@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-1.2.51-r2.ebuild,v 1.5 2012/09/24 00:46:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-1.2.51-r2.ebuild,v 1.6 2013/02/07 22:37:08 ulm Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://dropbox.com/"
 SRC_URI="x86? ( http://dl-web.dropbox.com/u/17/dropbox-lnx.x86-${PV}.tar.gz )
 	amd64? ( http://dl-web.dropbox.com/u/17/dropbox-lnx.x86_64-${PV}.tar.gz )"
 
-LICENSE="CCPL-Attribution-NoDerivs-3.0 FTL MIT LGPL-2 openssl dropbox"
+LICENSE="CC-BY-ND-3.0 FTL MIT LGPL-2 openssl dropbox"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+librsync-bundled"

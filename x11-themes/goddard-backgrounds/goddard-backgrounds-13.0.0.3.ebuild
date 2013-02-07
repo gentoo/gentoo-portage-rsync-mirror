@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/goddard-backgrounds/goddard-backgrounds-13.0.0.3.ebuild,v 1.3 2012/01/26 14:33:16 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/goddard-backgrounds/goddard-backgrounds-13.0.0.3.ebuild,v 1.4 2013/02/07 22:54:27 ulm Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ HOMEPAGE="https://fedoraproject.org/wiki/F13_Artwork"
 
 SRC_URI="mirror://fedora-dev/${SRC_PATH}/${PN}-$(replace_version_separator 3 -).fc${FEDORA}.src.rpm"
 
-LICENSE="CCPL-Attribution-ShareAlike-2.0"
+LICENSE="CC-BY-SA-2.0"
 KEYWORDS="amd64 x86"
 IUSE=""
 

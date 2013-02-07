@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r4.ebuild,v 1.4 2013/02/07 21:46:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r4.ebuild,v 1.5 2013/02/07 22:31:33 vapier Exp $
 
 EAPI=2
 inherit eutils autotools flag-o-matic toolchain-funcs multilib pax-utils games
@@ -45,7 +45,13 @@ src_prepare() {
 		"${FILESDIR}"/${P}-CC-quotes.patch \
 		"${FILESDIR}"/${P}-libpng15.patch \
 		"${FILESDIR}"/${P}-buffer.patch \
-		"${FILESDIR}"/${P}-gcc47.patch
+		"${FILESDIR}"/${P}-gcc47.patch \
+		"${FILESDIR}"/${P}-cross-compile.patch
+
+	# The sdl detection logic uses AC_PROG_PATH instead of
+	# AC_PROG_TOOL, so force the var to get set the way we
+	# need for things to work correctly.
+	tc-is-cross-compiler && export ac_cv_path_SDL_CONFIG=${CHOST}-sdl-config
 
 	sed -i -e '67i#define OF(x) x' zip/zunzip.h || die
 

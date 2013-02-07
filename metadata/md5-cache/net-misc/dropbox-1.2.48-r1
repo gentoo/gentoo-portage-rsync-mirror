@@ -4,10 +4,10 @@ DESCRIPTION=Dropbox daemon (pretends to be GUI-less).
 EAPI=4
 HOMEPAGE=http://dropbox.com/
 KEYWORDS=amd64 x86
-LICENSE=CCPL-Attribution-NoDerivs-3.0 FTL MIT LGPL-2 openssl dropbox
+LICENSE=CC-BY-ND-3.0 FTL MIT LGPL-2 openssl dropbox
 RDEPEND=>=sys-devel/gcc-4.2.0 net-misc/wget
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=x86? ( http://dl-web.dropbox.com/u/17/dropbox-lnx.x86-1.2.48.tar.gz ) amd64? ( http://dl-web.dropbox.com/u/17/dropbox-lnx.x86_64-1.2.48.tar.gz )
 _eclasses_=gnome2-utils	794d2847b4af390a1e020924876c8297
-_md5_=bebf46a67d46065984b2621c20faa4ef
+_md5_=0b6f49bd70c95db3d0f4bff68090de3c

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/greybird
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/ChangeLog,v 1.28 2012/11/21 11:26:35 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/ChangeLog,v 1.29 2013/02/07 22:56:38 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> greybird-0.8.2.ebuild,
+  greybird-1.0.7.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> greybird-1.0.7.ebuild:
   Stable for x86, wrt bug #443602

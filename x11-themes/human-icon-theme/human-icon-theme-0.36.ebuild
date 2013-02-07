@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/human-icon-theme/human-icon-theme-0.36.ebuild,v 1.2 2012/05/07 08:49:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/human-icon-theme/human-icon-theme-0.36.ebuild,v 1.3 2013/02/07 22:57:23 ulm Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -10,7 +10,7 @@ HOMEPAGE="http://packages.ubuntu.com/lucid/human-icon-theme"
 SRC_URI="mirror://ubuntu/pool/universe/h/${PN}/${PN}_${PV}.tar.gz
 	http://www.gentoo.org/images/gentoo-logo.svg"
 
-LICENSE="CCPL-Attribution-ShareAlike-2.5"
+LICENSE="CC-BY-SA-2.5"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

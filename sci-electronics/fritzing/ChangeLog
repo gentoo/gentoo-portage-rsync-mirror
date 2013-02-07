@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/fritzing
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/ChangeLog,v 1.4 2013/01/28 22:58:53 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/ChangeLog,v 1.5 2013/02/07 22:40:43 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> fritzing-0.7.10b.ebuild,
+  fritzing-0.7.11b.ebuild:
+  Move Creative Commons licenses to shorter names.
 
 *fritzing-0.7.11b (28 Jan 2013)
 

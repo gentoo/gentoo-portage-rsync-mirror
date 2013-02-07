@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/larry-backgrounds/larry-backgrounds-20110822.ebuild,v 1.4 2012/10/12 12:02:23 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/larry-backgrounds/larry-backgrounds-20110822.ebuild,v 1.5 2013/02/07 22:58:16 ulm Exp $
 
 EAPI="3"
 
@@ -38,7 +38,7 @@ SRC_URI="
 	${web_home}/gentoo-larry-bg-1920x1200.png
 "
 
-LICENSE="CCPL-Attribution-ShareAlike-2.5 CCPL-Attribution-ShareAlike-NonCommercial-2.5"
+LICENSE="CC-BY-SA-2.5 CC-BY-NC-SA-2.5"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""

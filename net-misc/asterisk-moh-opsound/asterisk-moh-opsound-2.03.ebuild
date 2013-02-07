@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-moh-opsound/asterisk-moh-opsound-2.03.ebuild,v 1.4 2011/02/27 19:03:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-moh-opsound/asterisk-moh-opsound-2.03.ebuild,v 1.5 2013/02/07 22:35:07 ulm Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ for c in ${CODECS}; do
 done
 
 IUSE="${CODECS}"
-LICENSE="CCPL-Attribution-ShareAlike-3.0"
+LICENSE="CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
