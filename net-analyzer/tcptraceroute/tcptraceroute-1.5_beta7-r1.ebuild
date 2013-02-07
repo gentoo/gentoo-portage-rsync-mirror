@@ -1,7 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.5_beta7-r1.ebuild,v 1.10 2013/02/02 23:00:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.5_beta7-r1.ebuild,v 1.11 2013/02/07 15:16:19 jer Exp $
 
+EAPI=5
 inherit flag-o-matic
 
 MY_P=${P/_beta/beta}
@@ -17,8 +18,11 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
-DEPEND="net-libs/libpcap
-	net-libs/libnet"
+DEPEND="
+	net-libs/libnet
+	net-libs/libpcap
+"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	dosbin tcptraceroute

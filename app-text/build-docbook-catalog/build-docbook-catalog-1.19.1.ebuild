@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/build-docbook-catalog-1.19.1.ebuild,v 1.7 2012/12/06 03:04:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/build-docbook-catalog-1.19.1.ebuild,v 1.8 2013/02/07 15:22:04 aballier Exp $
 
 EAPI="4"
 
@@ -13,10 +13,11 @@ SRC_URI="mirror://gentoo/${P}.tar.xz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-IUSE=""
+IUSE="userland_BSD"
 
 RDEPEND="|| ( sys-apps/util-linux app-misc/getopt )
 	!<app-text/docbook-xsl-stylesheets-1.73.1
+	userland_BSD? ( sys-apps/flock )
 	dev-libs/libxml2"
 DEPEND=""
 

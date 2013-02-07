@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-widget-menubar/plasma-widget-menubar-0.2.0.ebuild,v 1.1 2013/02/07 05:57:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-widget-menubar/plasma-widget-menubar-0.2.0.ebuild,v 1.2 2013/02/07 15:19:21 kensington Exp $
 
-EAPI=4
+EAPI=5
+KDE_MINIMAL="4.10.0"
 
 inherit kde4-base
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ocaml-data-notation-0.0.10.ebuild,v 1.1 2012/10/08 11:32:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ocaml-data-notation-0.0.10.ebuild,v 1.2 2013/02/07 15:23:10 aballier Exp $
 
-EAPI=3
+EAPI=5
 
 OASIS_BUILD_TESTS=1
 
@@ -13,11 +13,11 @@ HOMEPAGE="http://forge.ocamlcore.org/projects/odn"
 SRC_URI="http://forge.ocamlcore.org/frs/download.php/1029/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND=">=dev-ml/type-conv-108.07.01"
+RDEPEND=">=dev-ml/type-conv-108.07.01:="
 DEPEND="${RDEPEND}
 	test? ( dev-ml/ounit[ocamlopt?] dev-ml/ocaml-fileutils[ocamlopt?] )"
 
