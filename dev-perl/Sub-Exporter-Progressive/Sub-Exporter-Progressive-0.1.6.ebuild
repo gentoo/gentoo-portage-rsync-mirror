@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter-Progressive/Sub-Exporter-Progressive-0.1.6.ebuild,v 1.4 2013/01/13 12:46:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter-Progressive/Sub-Exporter-Progressive-0.1.6.ebuild,v 1.5 2013/02/08 19:46:03 bicatali Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Only use Sub::Exporter if you need it"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 RDEPEND="

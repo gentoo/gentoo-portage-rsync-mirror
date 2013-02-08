@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Digest-Perl-MD5
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Perl-MD5/ChangeLog,v 1.14 2012/12/17 20:13:54 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Perl-MD5/ChangeLog,v 1.15 2013/02/08 19:58:27 bicatali Exp $
+
+  08 Feb 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  Digest-Perl-MD5-1.800.0.ebuild:
+  Keyword amd64-linux and x86-linux
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   Digest-Perl-MD5-1.800.0.ebuild:

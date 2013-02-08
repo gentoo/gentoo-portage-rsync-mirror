@@ -1,0 +1,19 @@
+update-modules is a script from $FILESDIR of sys-apps/module-init-tools and it should
+be a no-op thesedays.
+
+# cd /usr/portage/sys-apps/module-init-tools/files
+# ./update-modules-3.5 --verbose
+
+* We have just /etc/modprobe.d; Nothing to do! 
+
+--- alsaconf/alsaconf.in
++++ alsaconf/alsaconf.in
+@@ -924,7 +924,7 @@
+     farewell
+     clear
+     case "$distribution" in
+-    gentoo | debian)
++    debian)
+ 	xecho "Running update-modules..."
+ 	update-modules
+ 	;;

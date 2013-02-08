@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sub-Install
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Install/ChangeLog,v 1.25 2012/09/09 16:14:52 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Install/ChangeLog,v 1.26 2013/02/08 19:48:07 bicatali Exp $
+
+  08 Feb 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  Sub-Install-0.926.0.ebuild:
+  Keyword amd64-linux
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> Sub-Install-0.926.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #418803
