@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-2011.1-r1.ebuild,v 1.7 2013/02/08 09:26:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-2012.1.ebuild,v 1.2 2013/02/08 09:26:19 patrick Exp $
 EAPI=4
 
 inherit autotools
@@ -10,10 +10,8 @@ RESTRICT="test"
 DESCRIPTION="OpenDylan language runtime environment"
 
 HOMEPAGE="http://opendylan.org"
-SRC_URI="https://github.com/dylan-lang/opendylan/zipball/v2011.1 -> opendylan-2011.1.zip"
-MY_P="dylan-lang-opendylan-23f8ab5" # WTF github, that's NOT funny
-
-S=${WORKDIR}/${MY_P}
+# stupid ... submodules don't get tarballed in? Thanks github.
+SRC_URI="http://dev.gentooexperimental.org/~dreeevil/opendylan-2012.1.tar.bz2"
 
 LICENSE="Opendylan"
 SLOT="0"
@@ -23,11 +21,13 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
+# the boehm-gc check is "wrong" and reported upstream
+# but for now static-libs useflag is needed
 DEPEND="app-arch/unzip
-	dev-libs/boehm-gc
+	dev-libs/boehm-gc[static-libs]
 	dev-lang/perl
 	dev-perl/XML-Parser
-	|| ( =dev-lang/opendylan-bin-2011.1 dev-lang/opendylan )
+	|| ( dev-lang/opendylan-bin dev-lang/opendylan )
 	x86? ( <dev-libs/mps-1.108 )"
 RDEPEND="${DEPEND}"
 
@@ -64,7 +64,9 @@ src_prepare() {
 }
 
 src_configure() {
-	if has_version =dev-lang/opendylan-bin-2011.1; then
+	if has_version =dev-lang/opendylan-bin-2012.1; then
+		PATH=/opt/opendylan-2012.1/bin/:$PATH
+	elif has_version =dev-lang/opendylan-bin-2011.1; then
 		PATH=/opt/opendylan-2011.1/bin/:$PATH
 	else
 		PATH=/opt/opendylan/bin:$PATH
@@ -86,7 +88,7 @@ src_configure() {
 
 src_compile() {
 	ulimit -s 32000 # this is naughty build system
-	emake || die
+	emake -j1 3-stage-bootstrap || die
 }
 
 src_install() {

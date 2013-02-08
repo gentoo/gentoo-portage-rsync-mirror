@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-9999.ebuild,v 1.3 2012/08/22 03:42:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-9999.ebuild,v 1.4 2013/02/08 09:26:19 patrick Exp $
 EAPI=4
 
 inherit autotools git-2
@@ -32,10 +32,12 @@ src_prepare() {
 }
 
 src_configure() {
-	if has_version =dev-lang/opendylan-bin-2011.1; then
+	if has_version =dev-lang/opendylan-bin-2012.1; then
+		PATH=/opt/opendylan-2012.1/bin/:$PATH
+	elif has_version =dev-lang/opendylan-bin-2011.1; then
 		PATH=/opt/opendylan-2011.1/bin/:$PATH
-        else
-                PATH=/opt/opendylan/bin/:$PATH
+	else
+		PATH=/opt/opendylan/bin/:$PATH
 	fi
 	econf --prefix=/opt/opendylan || die
 }
@@ -49,7 +51,7 @@ src_install() {
 	ulimit -s 32000 # this is naughty build system
 	# because of Makefile weirdness it rebuilds quite a bit here
 	# upstream has been notified
-	emake -j1 DESTDIR=${D} install
+	emake -j1 DESTDIR="${D}" install
 	mkdir -p "${D}/etc/env.d/opendylan/"
 	echo "export PATH=/opt/opendylan/bin:\$PATH" > "${D}/etc/env.d/opendylan/opendylan" || die "Failed to add env settings"
 }
