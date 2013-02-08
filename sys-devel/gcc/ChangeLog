@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.936 2013/02/07 13:08:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.937 2013/02/08 10:32:13 ago Exp $
+
+  08 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gcc-4.6.3.ebuild:
+  Stable for s390, wrt bug #418383
 
   07 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gcc-4.6.3.ebuild:
   Stable for sh, wrt bug #418383
