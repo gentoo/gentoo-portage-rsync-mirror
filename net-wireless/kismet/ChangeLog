@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.130 2013/02/08 05:59:06 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.131 2013/02/08 06:20:07 zerochaos Exp $
+
+  08 Feb 2013; Rick Farina <zerochaos@gentoo.org> kismet-2011.03.2-r3.ebuild,
+  kismet-9999.ebuild, metadata.xml:
+  fix deps due to failed libpcap libnl3 changes, fix metadata from cleanup
 
   08 Feb 2013; Rick Farina <zerochaos@gentoo.org> -files/gcc-4.3.patch,
   -files/kismet-2007.10.1-Makefile.in.patch, -files/kismet-2007.10.1-conf.d,
