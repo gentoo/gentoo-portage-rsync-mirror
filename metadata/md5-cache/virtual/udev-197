@@ -2,7 +2,7 @@ DEFINED_PHASES=-
 DESCRIPTION=Virtual to select between sys-fs/udev and sys-fs/eudev
 EAPI=2
 IUSE=gudev hwdb introspection keymap +kmod selinux static-libs
-KEYWORDS=~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86
+KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86
 RDEPEND=|| ( >=sys-fs/udev-197-r3[gudev?,hwdb?,introspection?,keymap?,kmod?,selinux?,static-libs?] kmod? ( >=sys-fs/eudev-1_beta1[modutils,gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] ) !kmod? ( >=sys-fs/eudev-1_beta1[gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] ) )
 SLOT=0
-_md5_=0b88f523e4378a00802903111b6226f9
+_md5_=13530dcf2e1851c5a6db0a52ab166434

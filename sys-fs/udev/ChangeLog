@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.823 2013/02/08 12:28:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.824 2013/02/08 14:51:23 jer Exp $
+
+  08 Feb 2013; Jeroen Roovers <jer@gentoo.org> udev-197-r4.ebuild:
+  Stable for HPPA (bug #452556).
 
   08 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
   Remove multiple targets that installed systemd files since libudev and

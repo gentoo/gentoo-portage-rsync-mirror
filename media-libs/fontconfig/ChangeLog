@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/fontconfig
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.161 2012/05/05 08:02:34 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.162 2013/02/08 14:57:19 yngwin Exp $
+
+*fontconfig-2.10.2 (08 Feb 2013)
+
+  08 Feb 2013; Ben de Groot <yngwin@gentoo.org>
+  +files/fontconfig-2.10.2-docbook.patch, +fontconfig-2.10.2.ebuild:
+  Version bump (bug #439864), thanks to MeisterP (infinality overlay). Enable
+  docs to install manpages (bug #369991). Apply fix for cross-compile, thanks to
+  Pinky in bug #284762. Use readme.gentoo.eclass for elog message (bug #440518).
+  This version also fixes fonts-conf manpage (bug #349253).
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> fontconfig-2.8.0-r1.ebuild,
   fontconfig-2.8.0-r2.ebuild, fontconfig-2.9.0.ebuild:
@@ -698,4 +707,3 @@
 
   30 Sep 2002; Martin Schlemmer <azarah@gentoo.org> fontconfig-2.0.ebuild :
   Initial version.
-

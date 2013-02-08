@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qjson
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/ChangeLog,v 1.29 2013/02/06 23:24:35 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/ChangeLog,v 1.30 2013/02/08 14:39:00 jer Exp $
+
+  08 Feb 2013; Jeroen Roovers <jer@gentoo.org> qjson-0.8.1.ebuild:
+  Stable for HPPA (bug #455366).
 
   06 Feb 2013; Naohiro Aota <naota@gentoo.org> qjson-0.7.1-r1.ebuild:
   Add ~x86-fbsd wrt bug #430072

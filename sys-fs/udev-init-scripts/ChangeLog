@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.42 2013/02/05 15:06:02 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.43 2013/02/08 14:50:41 jer Exp $
+
+  08 Feb 2013; Jeroen Roovers <jer@gentoo.org> udev-init-scripts-22.ebuild:
+  Stable for HPPA (bug #452556).
 
 *udev-init-scripts-23 (05 Feb 2013)
 

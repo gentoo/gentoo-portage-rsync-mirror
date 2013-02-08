@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-22.ebuild,v 1.6 2013/01/31 23:08:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-22.ebuild,v 1.7 2013/02/08 14:50:41 jer Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ IUSE=""
 
 if [ "${PV}" != "9999" ]; then
 	SRC_URI="http://dev.gentoo.org/~williamh/dist/${P}.tar.bz2"
-	KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86"
+	KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86"
 fi
 
 RESTRICT="test"
