@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.71 2013/01/15 23:50:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.72 2013/02/08 07:48:55 radhermit Exp $
+
+*libssh-0.5.4 (08 Feb 2013)
+
+  08 Feb 2013; Tim Harder <radhermit@gentoo.org> +libssh-0.5.4.ebuild:
+  Version bump. Update to EAPI 5 and add subslot.
 
   15 Jan 2013; Tim Harder <radhermit@gentoo.org> -libssh-0.5.2.ebuild:
   Remove old.
