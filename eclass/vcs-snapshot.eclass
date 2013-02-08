@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vcs-snapshot.eclass,v 1.5 2012/09/27 16:35:42 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vcs-snapshot.eclass,v 1.6 2013/02/08 20:51:35 mgorny Exp $
 
 # @ECLASS: vcs-snapshot.eclass
 # @MAINTAINER:
@@ -42,6 +42,12 @@ esac
 
 EXPORT_FUNCTIONS src_unpack
 
+# @FUNCTION: vcs-snapshot_src_unpack
+# @DESCRIPTION:
+# Extract all the archives from ${A}. The .tar, .tar.gz, .tar.bz2
+# and .tar.xz archives will be unpacked to directories matching their
+# local names. Other archive types will be passed down to regular
+# unpack.
 vcs-snapshot_src_unpack() {
 	local f
 

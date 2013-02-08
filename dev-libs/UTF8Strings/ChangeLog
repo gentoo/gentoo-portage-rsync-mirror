@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/UTF8Strings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/ChangeLog,v 1.1 2013/02/08 14:35:16 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/ChangeLog,v 1.2 2013/02/08 20:43:47 tomwij Exp $
+
+  08 Feb 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Updated metadata.xml for UTF8Strings as upstream developer wants to maintain
+  the package.
 
 *UTF8Strings-1.9 (08 Feb 2013)
 

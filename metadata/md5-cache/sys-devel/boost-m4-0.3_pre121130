@@ -6,5 +6,5 @@ KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/boost-m4-0.3_pre121130.tar.gz
-_eclasses_=vcs-snapshot	d7572a392e0bd8e207deae5414f6a887
+_eclasses_=vcs-snapshot	3facff03591093044e38f21285a02129
 _md5_=59c37c9765118d4ac4f71fbd2ea4fc6a

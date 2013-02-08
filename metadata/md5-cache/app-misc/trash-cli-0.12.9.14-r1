@@ -10,5 +10,5 @@ RDEPEND=python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://github.com/andreafrancia/trash-cli/tarball/0.12.9.14 -> trash-cli-0.12.9.14.tar.gz
-_eclasses_=python-distutils-ng	b6176485a30153729ae856cd37d0174c	vcs-snapshot	d7572a392e0bd8e207deae5414f6a887
+_eclasses_=python-distutils-ng	b6176485a30153729ae856cd37d0174c	vcs-snapshot	3facff03591093044e38f21285a02129
 _md5_=96298dbdb428a4cd58aaf4d21086ee7a
