@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/opus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/ChangeLog,v 1.18 2013/02/07 13:07:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/ChangeLog,v 1.20 2013/02/08 16:39:27 ago Exp $
+
+  08 Feb 2013; Agostino Sarubbo <ago@gentoo.org> opus-1.0.1.ebuild:
+  Stable for alpha, wrt bug #450438
+
+  08 Feb 2013; Agostino Sarubbo <ago@gentoo.org> opus-1.0.1.ebuild,
+  opus-1.0.2-r1.ebuild:
+  reverted the stabilization on wong version, stabilized the right.
 
   07 Feb 2013; Agostino Sarubbo <ago@gentoo.org> opus-1.0.2-r1.ebuild:
   Stable for hppa, wrt bug #454906

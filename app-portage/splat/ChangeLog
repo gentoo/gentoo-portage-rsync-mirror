@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/splat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/ChangeLog,v 1.30 2013/02/07 19:33:23 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/splat/ChangeLog,v 1.31 2013/02/08 16:48:21 ago Exp $
+
+  08 Feb 2013; Agostino Sarubbo <ago@gentoo.org> splat-0.08-r1.ebuild:
+  Stable for alpha, wrt bug #455870
 
   07 Feb 2013; Chema Alonso <nimiux@gentoo.org> splat-0.08-r1.ebuild:
   Marked stable for amd64 wrt bug #455870

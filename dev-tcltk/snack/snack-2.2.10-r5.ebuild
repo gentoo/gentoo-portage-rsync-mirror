@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r5.ebuild,v 1.7 2013/02/06 19:48:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r5.ebuild,v 1.8 2013/02/08 16:46:01 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.speech.kth.se/snack/"
 SRC_URI="http://www.speech.kth.se/snack/dist/${PN}${PV}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 hppa ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 SLOT="0"
 IUSE="alsa examples python threads vorbis"
 

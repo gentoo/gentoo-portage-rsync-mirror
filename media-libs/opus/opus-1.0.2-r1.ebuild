@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/opus-1.0.2-r1.ebuild,v 1.2 2013/02/07 13:07:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/opus-1.0.2-r1.ebuild,v 1.3 2013/02/08 16:38:14 ago Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ fi
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-fbsd"
 IUSE="custom-modes doc static-libs"
 
 DEPEND="doc? ( app-doc/doxygen )"

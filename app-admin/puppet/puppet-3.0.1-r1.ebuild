@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.0.1.ebuild,v 1.11 2013/02/03 13:01:38 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.0.1-r1.ebuild,v 1.1 2013/02/08 16:49:13 prometheanfire Exp $
 
 EAPI="4"
 
@@ -68,7 +68,7 @@ each_ruby_install() {
 }
 
 all_ruby_install() {
-	newinitd "${FILESDIR}"/puppet.init-r1 puppet
+	newinitd "${FILESDIR}"/puppet.init-r1-CVE-2012-6120 puppet
 
 	# Initial configuration files
 	insinto /etc/puppet
@@ -80,7 +80,7 @@ all_ruby_install() {
 	if use minimal ; then
 		rm "${ED}/etc/puppet/auth.conf"
 	else
-		newinitd "${FILESDIR}"/puppetmaster.init puppetmaster
+		newinitd "${FILESDIR}"/puppetmaster.init-CVE-2012-6120 puppetmaster
 		newconfd "${FILESDIR}"/puppetmaster.confd puppetmaster
 
 		insinto /etc/puppet
