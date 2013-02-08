@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.77 2013/01/21 19:48:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.78 2013/02/08 18:38:36 mgorny Exp $
+
+  08 Feb 2013; Michał Górny <mgorny@gentoo.org>
+  +files/198-0001-Disable-udev-targets.patch, systemd-9999.ebuild:
+  Update wrt changes to udev ebuild.
 
   21 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   systemd-197-r1.ebuild, systemd-9999.ebuild:

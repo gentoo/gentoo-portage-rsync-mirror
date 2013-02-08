@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.13 2013/01/21 19:48:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.14 2013/02/08 18:38:36 mgorny Exp $
 
 EAPI=5
 
@@ -72,23 +72,20 @@ KEYWORDS=
 
 DEPEND+=" dev-libs/gobject-introspection
 	>=dev-util/gtk-doc-1.18"
+
+pkg_pretend() {
+	ewarn "Please note that the live systemd ebuild is not actively maintained"
+	ewarn "and since the udev split, it is an easy way to get your system broken"
+	ewarn "and unbootable. Please consider using the release ebuilds instead."
+}
 #endif
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
-
-pkg_setup() {
-	use python && python-single-r1_pkg_setup
-}
-
 src_prepare() {
-	# systemd-analyze is for python2.7 only nowadays.
-	sed -i -e '1s/python/&2.7/' src/analyze/systemd-analyze
-
-	# link against external udev & libsystemd-daemon.
-	sed -i -e 's:lib\(udev\|systemd-daemon\)\.la:-l\1:' Makefile.am
+	# link against external udev.
+	sed -i -e 's:lib\(udev\)\.la:-l\1:' Makefile.am
 
 	local PATCHES=(
-		"${FILESDIR}"/197-0001-Disable-udev-targets.patch
+		"${FILESDIR}"/198-0001-Disable-udev-targets.patch
 	)
 
 #if LIVE

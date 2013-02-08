@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/miniupnpd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.30 2012/12/31 11:04:21 gurligebis Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.31 2013/02/08 19:00:04 gurligebis Exp $
+
+*miniupnpd-1.8 (08 Feb 2013)
+
+  08 Feb 2013; <gurligebis@gentoo.org> -files/miniupnpd-1.3-Makefile_fix.diff,
+  -miniupnpd-1.7.ebuild, -miniupnpd-1.8_pre20121005.ebuild,
+  +miniupnpd-1.8.ebuild, -files/miniupnpd-nf_nat-fix.diff:
+  Bumping to 1.8 and removing old versions and left over files
 
 *miniupnpd-1.8_pre20121005 (31 Dec 2012)
 

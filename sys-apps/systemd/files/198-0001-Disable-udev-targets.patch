@@ -1,0 +1,119 @@
+From 501e4eda140f1cf676f821599a7992819eb8aace Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Micha=C5=82=20G=C3=B3rny?= <mgorny@gentoo.org>
+Date: Fri, 8 Feb 2013 18:16:52 +0100
+Subject: [PATCH] Disable udev targets.
+
+---
+ Makefile-man.am |  6 +-----
+ Makefile.am     | 29 ++++++++++++++++++++---------
+ 2 files changed, 21 insertions(+), 14 deletions(-)
+
+diff --git a/Makefile-man.am b/Makefile-man.am
+index ee9a952..dd16432 100644
+--- a/Makefile-man.am
++++ b/Makefile-man.am
+@@ -69,7 +69,6 @@ MANPAGES += \
+ 	man/systemd-system-update-generator.8 \
+ 	man/systemd-tmpfiles.8 \
+ 	man/systemd-tty-ask-password-agent.1 \
+-	man/systemd-udevd.service.8 \
+ 	man/systemd-update-utmp-runlevel.service.8 \
+ 	man/systemd.1 \
+ 	man/systemd.automount.5 \
+@@ -91,9 +90,7 @@ MANPAGES += \
+ 	man/systemd.timer.5 \
+ 	man/systemd.unit.5 \
+ 	man/telinit.8 \
+-	man/tmpfiles.d.5 \
+-	man/udev.7 \
+-	man/udevadm.8
++	man/tmpfiles.d.5
+ MANPAGES_ALIAS += \
+ 	man/SD_ALERT.3 \
+ 	man/SD_CRIT.3 \
+@@ -185,7 +182,6 @@ MANPAGES_ALIAS += \
+ 	man/systemd-tmpfiles-setup.service.8 \
+ 	man/systemd-udevd-control.socket.8 \
+ 	man/systemd-udevd-kernel.socket.8 \
+-	man/systemd-udevd.8 \
+ 	man/systemd-update-utmp-shutdown.service.8 \
+ 	man/systemd-update-utmp.8
+ man/SD_ALERT.3: man/sd-daemon.3
+diff --git a/Makefile.am b/Makefile.am
+index 7bc6902..642a285 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -368,8 +368,6 @@ dist_systemunit_DATA = \
+ 	units/quotaon.service \
+ 	units/systemd-ask-password-wall.path \
+ 	units/systemd-ask-password-console.path \
+-	units/systemd-udevd-control.socket \
+-	units/systemd-udevd-kernel.socket \
+ 	units/system-update.target
+ 
+ nodist_systemunit_DATA = \
+@@ -399,9 +397,6 @@ nodist_systemunit_DATA = \
+ 	units/systemd-kexec.service \
+ 	units/systemd-fsck@.service \
+ 	units/systemd-fsck-root.service \
+-	units/systemd-udevd.service \
+-	units/systemd-udev-trigger.service \
+-	units/systemd-udev-settle.service \
+ 	units/debug-shell.service
+ 
+ dist_userunit_DATA = \
+@@ -1274,9 +1269,6 @@ nodist_systemunit_DATA += \
+ SYSINIT_TARGET_WANTS += \
+ 	systemd-modules-load.service
+ 
+-dist_udevrules_DATA += \
+-	rules/80-drivers.rules
+-
+ endif
+ 
+ EXTRA_DIST += \
+@@ -1555,6 +1547,22 @@ EXTRA_DIST += \
+ 	src/libsystemd-daemon/libsystemd-daemon.pc.in \
+ 	src/libsystemd-daemon/libsystemd-daemon.sym
+ 
++# needed parts of udev
++
++dist_udevrules_DATA += \
++	rules/99-systemd.rules
++
++SOCKETS_TARGET_WANTS += \
++	systemd-udevd-control.socket \
++	systemd-udevd-kernel.socket
++SYSINIT_TARGET_WANTS += \
++	systemd-udevd.service \
++	systemd-udev-trigger.service
++
++# we won't set this in systemd ebuild, so it is an easy way
++# of stripping the whole udev.
++if ENABLE_GUDEV
++
+ # ------------------------------------------------------------------------------
+ if ENABLE_GTK_DOC
+ SUBDIRS += \
+@@ -1565,7 +1573,7 @@ include_HEADERS += \
+ 	src/libudev/libudev.h
+ 
+ lib_LTLIBRARIES += \
+-	-ludev
++	libudev.la
+ 
+ libudev_la_SOURCES =\
+ 	src/libudev/libudev-private.h \
+@@ -2217,6 +2225,9 @@ udevlibexec_PROGRAMS += \
+ 	mtd_probe
+ 
+ # ------------------------------------------------------------------------------
++
++endif
++
+ libsystemd_id128_la_SOURCES = \
+ 	src/libsystemd-id128/sd-id128.c
+ 
+-- 
+1.8.1.2
+

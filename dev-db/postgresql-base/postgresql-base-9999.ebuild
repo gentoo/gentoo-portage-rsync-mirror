@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9999.ebuild,v 1.3 2013/01/12 19:08:18 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9999.ebuild,v 1.4 2013/02/08 18:48:08 titanofold Exp $
 
 EAPI="4"
 
@@ -76,9 +76,6 @@ DEPEND="${RDEPEND}
 
 #PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 
-# Support /var/run or /run for the socket directory
-[[ ! -d /run ]] && RUNDIR=/var
-
 src_unpack() {
 	base_src_unpack
 	git-2_src_unpack
@@ -97,9 +94,14 @@ src_prepare() {
 	# because psql/help.c includes the file
 	ln -s "${S}/src/include/libpq/pqsignal.h" "${S}/src/bin/psql/" || die
 
-	sed -e "s|@RUNDIR@|${RUNDIR}|g" \
-		-i src/include/pg_config_manual.h || \
-		die "RUNDIR sed failed"
+	sed -e "s|@RUNDIR@||g" \
+		-i src/include/pg_config_manual.h || die "RUNDIR sed failed"
+
+	if use pam ; then
+		sed -e "s/\(#define PGSQL_PAM_SERVICE \"postgresql\)/\1-${SLOT}/" \
+			-i src/backend/libpq/auth.c \
+			|| die 'PAM service name change failed.'
+	fi
 
 	eautoconf
 }

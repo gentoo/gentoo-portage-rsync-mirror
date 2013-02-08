@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.5 2013/01/29 10:09:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.6 2013/02/08 18:50:45 titanofold Exp $
 
-EAPI="4"
-PYTHON_DEPEND="python? 2"
+EAPI="5"
 
+PYTHON_COMPAT=( python{2_{5,6,7},3_{1,2,3}} )
 WANT_AUTOMAKE="none"
-inherit autotools eutils flag-o-matic multilib pam prefix python user versionator base git-2
+
+inherit autotools eutils flag-o-matic multilib pam prefix python-single-r1 user versionator base git-2
 
 KEYWORDS=""
 
@@ -14,7 +15,7 @@ SLOT="9.3"
 
 EGIT_REPO_URI="git://git.postgresql.org/git/postgresql.git"
 
-SRC_URI="http://dev.gentoo.org/~titanofold/postgresql-initscript-2.3.tbz2
+SRC_URI="http://dev.gentoo.org/~titanofold/postgresql-initscript-2.4.tbz2
 	http://dev.gentoo.org/~titanofold/postgresql-patches-9.2beta2.tbz2"
 
 # Comment the following six lines when not a beta or rc.
@@ -36,7 +37,7 @@ DESCRIPTION="PostgreSQL server"
 HOMEPAGE="http://www.postgresql.org/"
 
 LINGUAS="af cs de en es fa fr hr hu it ko nb pl pt_BR ro ru sk sl sv tr zh_CN zh_TW"
-IUSE="doc kernel_linux nls pam perl -pg_legacytimestamp python selinux tcl uuid xml"
+IUSE="doc kerberos kernel_linux nls pam perl -pg_legacytimestamp python selinux tcl test uuid xml"
 
 for lingua in ${LINGUAS}; do
 	IUSE+=" linguas_${lingua}"
@@ -52,8 +53,9 @@ wanted_languages() {
 	echo -n ${enable_langs}
 }
 
-RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}[pam?,pg_legacytimestamp=,nls=]
+RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}[kerberos?,pam?,pg_legacytimestamp=,nls=]
 	perl? ( >=dev-lang/perl-5.8 )
+	python? ( ${PYTHON_DEPS} )
 	selinux? ( sec-policy/selinux-postgresql )
 	tcl? ( >=dev-lang/tcl-8 )
 	uuid? ( dev-libs/ossp-uuid )
@@ -62,9 +64,6 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	xml? ( virtual/pkgconfig )"
 #PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
-
-# Support /var/run or /run for the socket directory
-[[ ! -d /run ]] && RUNDIR=/var
 
 src_unpack() {
 	base_src_unpack
@@ -75,7 +74,7 @@ pkg_setup() {
 	enewgroup postgres 70
 	enewuser postgres 70 /bin/bash /var/lib/postgresql postgres
 
-	use python && python_set_active_version 2
+	use python && python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -85,18 +84,21 @@ src_prepare() {
 
 	eprefixify src/include/pg_config_manual.h
 
+	if use pam ; then
+		sed -e "s/\(#define PGSQL_PAME_SERVICE \"postgresql\)/\1-${SLOT}/" \
+			-i src/backend/libpq/auth.c \
+			|| die 'PGSQL_PAM_SERVICE rename failed.'
+	fi
+
 	if use test ; then
 		epatch "${WORKDIR}/regress.patch"
 		sed -e "s|@SOCKETDIR@|${T}|g" -i src/test/regress/pg_regress{,_main}.c
-#		sed -e "s|/no/such/location|${S}/src/test/regress/tmp_check/no/such/location|g" \
-#			-i src/test/regress/{input,output}/tablespace.source
 	else
 		echo "all install:" > "${S}/src/test/regress/GNUmakefile"
 	fi
 
-	sed -e "s|@RUNDIR@|${RUNDIR}|g" \
-		-i src/include/pg_config_manual.h "${WORKDIR}/postgresql.init" || \
-		die "RUNDIR sed failed"
+	sed -e "s|@RUNDIR@||g" \
+		-i src/include/pg_config_manual.h || die "RUNDIR sed failed"
 	sed -e "s|@SLOT@|${SLOT}|g" \
 		-i "${WORKDIR}/postgresql.init" "${WORKDIR}/postgresql.confd" || \
 		die "SLOT sed failed"
@@ -157,11 +159,11 @@ src_install() {
 	newinitd "${WORKDIR}/postgresql.init" postgresql-${SLOT} || \
 		die "Inserting conf failed"
 
-	use pam && pamd_mimic system-auth postgresql auth account session
+	use pam && pamd_mimic system-auth postgresql-${SLOT} auth account session
 
 	if use prefix ; then
-		keepdir ${RUNDIR}/run/postgresql
-		fperms 0770 ${RUNDIR}/run/postgresql
+		keepdir /run/postgresql
+		fperms 0770 /run/postgresql
 	fi
 }
 
@@ -175,7 +177,7 @@ pkg_postinst() {
 	elog "http://www.postgresql.org/docs/${SLOT}/static/index.html"
 	elog
 	elog "The default location of the Unix-domain socket is:"
-	elog "    ${EROOT%/}${RUNDIR}/run/postgresql/"
+	elog "    ${EROOT%/}/run/postgresql/"
 	elog
 	elog "If you have users and/or services that you would like to utilize the"
 	elog "socket, you must add them to the 'postgres' system group:"
@@ -195,7 +197,7 @@ pkg_prerm() {
 		ewarn "Have you dumped and/or migrated the ${SLOT} database cluster?"
 		ewarn "\thttp://www.gentoo.org/doc/en/postgres-howto.xml#doc_chap5"
 
-		ebegin "Resuming removal in 10 seconds. Control-C to cancel"
+		ebegin "Resuming removal 10 seconds. Control-C to cancel"
 		sleep 10
 		eend 0
 	fi
@@ -354,7 +356,7 @@ src_test() {
 	einfo ">>> Test phase [check]: ${CATEGORY}/${PF}"
 
 	if [ ${UID} -ne 0 ] ; then
-		emake check  || die "Make check failed. See above for details."
+		emake check
 
 		einfo "If you think other tests besides the regression tests are necessary, please"
 		einfo "submit a bug including a patch for this ebuild to enable them."

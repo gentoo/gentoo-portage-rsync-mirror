@@ -1,6 +1,24 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.230 2013/01/29 10:09:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.231 2013/02/08 18:50:45 titanofold Exp $
+
+*postgresql-server-9.2.3 (08 Feb 2013)
+*postgresql-server-9.1.8 (08 Feb 2013)
+*postgresql-server-9.0.12 (08 Feb 2013)
+*postgresql-server-8.4.16 (08 Feb 2013)
+*postgresql-server-8.3.23 (08 Feb 2013)
+
+  08 Feb 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  +postgresql-server-8.3.23.ebuild, +postgresql-server-8.4.16.ebuild,
+  +postgresql-server-9.0.12.ebuild, +postgresql-server-9.1.8.ebuild,
+  +postgresql-server-9.2.3.ebuild, postgresql-server-9999.ebuild:
+  Added kerberos USE flag. (Bug 427948) Use python-single-r1.eclass to build
+  PL/Python against the Python of the users choosing. (Bug 427954) 'use'
+  instead of 'need' logger in /etc/init.d/postgresql-${SLOT}. (Bug 435280)
+  Default to sane character encoding default with --encoding=UTF-8 in
+  /etc/conf.d/postgresql-${SLOT}. (Bug 440258) Append ${SLOT} to PAM service
+  name; each slot now has its own PAM service file. (Bug 443113) Security
+  bump. (Bug 456080)
 
   29 Jan 2013; Patrick Lauer <patrick@gentoo.org>
   postgresql-server-8.3.20.ebuild, postgresql-server-8.3.21.ebuild,
