@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.6.16.ebuild,v 1.5 2013/01/05 17:34:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.6.16.ebuild,v 1.6 2013/02/08 14:25:02 jer Exp $
 
 EAPI=5
 
@@ -17,12 +17,12 @@ HOMEPAGE="http://www.puppetlabs.com/puppet/related-projects/facter/"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-IUSE=""
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+IUSE="+dmi"
+KEYWORDS="amd64 ~hppa ppc ~ppc64 sparc x86"
 
 CDEPEND="
 	>=sys-apps/net-tools-1.60_p20120127084908[old-output]
-	sys-apps/dmidecode
+	dmi? ( sys-apps/dmidecode )
 	sys-apps/lsb-release
 	sys-apps/pciutils"
 

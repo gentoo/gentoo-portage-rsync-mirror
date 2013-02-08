@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/gogoc-1.2-r2.ebuild,v 1.5 2013/01/02 19:24:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gogoc/gogoc-1.2-r2.ebuild,v 1.6 2013/02/08 14:30:38 jer Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ SRC_URI="http://gogo6.com/downloads/${MY_P}.tar.gz"
 # GPL-2 for Gentoo init script
 LICENSE="MIT GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa sparc x86"
+KEYWORDS="amd64 hppa sparc x86"
 IUSE="debug"
 
 DEPEND="dev-libs/openssl"

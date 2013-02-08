@@ -1,0 +1,23 @@
+diff --git a/gui/kmixdockwidget.cpp b/gui/kmixdockwidget.cpp
+index 3bda22e..fee74d9 100644
+--- a/gui/kmixdockwidget.cpp
++++ b/gui/kmixdockwidget.cpp
+@@ -347,10 +347,16 @@ KMixDockWidget::trayWheelEvent(int delta,Qt::Orientation wheelOrientation)
+ 
+     if ( inc < 1 ) inc = 1;
+ 
++    if (delta < 0)
++    	inc = -inc;
++
+     if (wheelOrientation == Qt::Horizontal) // Reverse horizontal scroll: bko228780 
+-    	delta = -delta;
++    	inc = -inc;
+ 
+-    long int cv = inc * (delta / 120 );
++    // bko313579 Do not use "delta", as that is setting more related to documents (Editor, Browser). KMix should
++    //           simply always use its own VOLUME_STEP_DIVISOR as a base for percentage change.
++    //long int cv = inc * (delta / 120 );
++    long cv = inc;
+     bool isInactive =  vol.isCapture() ? !md->isRecSource() : md->isMuted();
+     kDebug() << "Operating on capture=" << vol.isCapture() << ", isInactive=" << isInactive;
+ 	if ( cv > 0 && isInactive)

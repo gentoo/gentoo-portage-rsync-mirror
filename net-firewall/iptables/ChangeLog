@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.285 2012/12/30 23:11:07 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.286 2013/02/08 14:30:33 jer Exp $
+
+  08 Feb 2013; Jeroen Roovers <jer@gentoo.org> iptables-1.4.16.3.ebuild:
+  Stable for HPPA (bug #444145).
 
   30 Dec 2012; Mike Frysinger <vapier@gentoo.org>
   +files/iptables-1.4.17-libip6tc.patch, iptables-1.4.17.ebuild:

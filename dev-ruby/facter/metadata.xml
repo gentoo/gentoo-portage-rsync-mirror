@@ -6,4 +6,7 @@
 </maintainer>
 <herd>sysadmin</herd>
 <herd>ruby</herd>
+<use>
+<flag name='dmi'>Use sys-apps/dmidecode to determine system properties</flag>
+</use>
 </pkgmetadata>

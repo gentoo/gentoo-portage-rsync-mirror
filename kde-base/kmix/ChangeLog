@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kmix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.246 2013/02/07 04:56:59 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.247 2013/02/08 14:20:51 thev00d00 Exp $
+
+*kmix-4.10.0-r1 (08 Feb 2013)
+
+  08 Feb 2013; Ian Whyman <thev00d00@gentoo.org> -kmix-4.10.0.ebuild,
+  +kmix-4.10.0-r1.ebuild, +files/kmix-4.10.0-mousewheel-step-313579.patch:
+  Add patch to fix scrollwheel behaviour KDE #313579
 
 *kmix-4.10.0 (06 Feb 2013)
 

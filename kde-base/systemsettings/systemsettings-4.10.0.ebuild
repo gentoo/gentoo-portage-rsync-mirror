@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.10.0.ebuild,v 1.1 2013/02/07 04:57:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.10.0.ebuild,v 1.2 2013/02/08 14:14:26 kensington Exp $
 
 EAPI=5
 
@@ -16,7 +16,9 @@ IUSE="debug gtk +usb"
 KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 COMMONDEPEND="
+	app-misc/strigi
 	dev-libs/glib:2
+	$(add_kdebase_dep kwin)
 	$(add_kdebase_dep libkworkspace)
 	media-libs/fontconfig
 	>=media-libs/freetype-2
@@ -25,6 +27,7 @@ COMMONDEPEND="
 	x11-libs/libXext
 	x11-libs/libXfixes
 	x11-libs/libXft
+	x11-libs/libXi
 	x11-libs/libXrandr
 	x11-libs/libXtst
 	opengl? ( virtual/opengl )

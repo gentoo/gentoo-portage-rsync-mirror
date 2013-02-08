@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.138 2013/02/08 13:50:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.139 2013/02/08 14:05:32 aballier Exp $
 
 EAPI=4
 
@@ -15,8 +15,8 @@ bs2b cddb +cdio cdparanoia cpudetection debug dga
 directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode faac +faad fbcon
 ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
 +libass libcaca libmpeg2 lirc +live lzo mad md5sum +mmx mmxext mng +mp3 nas
-+network nut openal +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime
-radio +rar +real +rtc rtmp samba +shm sdl +speex sse sse2 ssse3
++network nut openal +opengl +osdmenu oss png pnm pulseaudio pvr
+radio +rar +rtc rtmp samba +shm sdl +speex sse sse2 ssse3
 tga +theora tremor +truetype +toolame +twolame +unicode v4l vdpau vidix
 +vorbis win32codecs +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc
 zoran"
@@ -407,23 +407,11 @@ src_configure() {
 	#################
 	# Binary codecs #
 	#################
-	# bug 213836
-	if ! use x86 || ! use win32codecs; then
-		use quicktime || myconf+=" --disable-qtx"
+	if use win32codecs ; then
+		myconf+=" --enable-win32dll"
+	else
+		myconf+=" --disable-qtx --disable-real --disable-win32dll"
 	fi
-
-	######################
-	# RealPlayer support #
-	######################
-	# Realplayer support shows up in four places:
-	# - libavcodec (internal)
-	# - win32codecs
-	# - realcodecs (win32codecs libs)
-	# - realcodecs (realplayer libs)
-
-	# internal
-	use real || myconf+=" --disable-real"
-	myconf+=" $(use_enable win32codecs win32dll)"
 
 	################
 	# Video Output #
@@ -568,7 +556,7 @@ src_install() {
 	dodoc DOCS/tech/{*.txt,MAINTAINERS,mpsub.sub,playtree,TODO,wishlist}
 	docinto TOOLS/
 	dodoc -r TOOLS
-	if use real; then
+	if use win32codecs; then
 		docinto tech/realcodecs/
 		dodoc DOCS/tech/realcodecs/*
 	fi

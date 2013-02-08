@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/kmix-4.10.0.ebuild,v 1.1 2013/02/07 04:56:59 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/kmix-4.10.0-r1.ebuild,v 1.1 2013/02/08 14:20:51 thev00d00 Exp $
 
 EAPI=5
 
@@ -17,6 +17,10 @@ DEPEND="
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.12 )
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"$FILESDIR/${P}-mousewheel-step-313579.patch"
+)
 
 src_configure() {
 	mycmakeargs=(
