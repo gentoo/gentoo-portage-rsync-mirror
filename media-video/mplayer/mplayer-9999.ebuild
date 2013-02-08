@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.134 2012/10/25 12:48:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.136 2013/02/08 13:29:33 aballier Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
 +libass libcaca libmpeg2 lirc +live lzo mad md5sum +mmx mmxext mng +mp3 nas
 +network nut openal +opengl +osdmenu oss png pnm pulseaudio pvr +quicktime
 radio +rar +real +rtc rtmp samba +shm sdl +speex sse sse2 ssse3
-tga +theora +tremor +truetype +toolame +twolame +unicode v4l vdpau vidix
+tga +theora tremor +truetype +toolame +twolame +unicode v4l vdpau vidix
 +vorbis win32codecs +X +x264 xanim xinerama +xscreensaver +xv +xvid xvmc
 zoran"
 
@@ -127,9 +127,10 @@ RDEPEND+="
 	sdl? ( media-libs/libsdl )
 	speex? ( media-libs/speex )
 	theora? ( media-libs/libtheora[encode?] )
+	tremor? ( media-libs/tremor )
 	truetype? ( ${FONT_RDEPS} )
 	vdpau? ( x11-libs/libvdpau )
-	vorbis? ( media-libs/libvorbis )
+	vorbis? ( !tremor? ( media-libs/libvorbis ) )
 	X? ( ${X_RDEPS}	)
 	xanim? ( media-video/xanim )
 	xinerama? ( x11-libs/libXinerama )
@@ -172,7 +173,6 @@ fi
 # dvd navigation requires dvd read support
 # ass and freetype font require iconv and ass requires freetype fonts
 # unicode transformations are usefull only with iconv
-# libvorbis require external tremor to work
 # radio requires oss or alsa backend
 # xvmc requires xvideo support
 REQUIRED_USE="bindist? ( !faac !win32codecs )
@@ -274,11 +274,14 @@ src_configure() {
 	# disable svga since we don't want it
 	# disable arts since we don't have kde3
 	# always disable internal ass
+	# disable opus since it only controls opus support in internal ffmpeg which
+	#         we do not use
 	myconf+="
 		--disable-svga --disable-svgalib_helper
 		--disable-ass-internal
 		--disable-arts
 		--disable-kai
+		--disable-libopus
 		$(use_enable network networking)
 		$(use_enable joystick)
 	"
@@ -375,26 +378,17 @@ src_configure() {
 			--disable-mpg123
 		"
 	fi
-	uses="a52 bs2b dv gsm lzo rtmp"
+	uses="a52 bs2b dv gsm lzo rtmp vorbis"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-lib${i}"
 	done
 
-	uses="faad gif jpeg libmpeg2 live mad mng png pnm speex tga theora xanim"
+	uses="faad gif jpeg libmpeg2 live mad mng png pnm speex tga theora tremor xanim"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
 	use jpeg2k || myconf+=" --disable-libopenjpeg"
-	if use vorbis || use tremor; then
-		use tremor || myconf+=" --disable-tremor-internal"
-		use vorbis || myconf+=" --disable-libvorbis"
-	else
-		myconf+="
-			--disable-tremor-internal
-			--disable-tremor
-			--disable-libvorbis
-		"
-	fi
+
 	# Encoding
 	uses="faac x264 xvid toolame twolame"
 	if use encode; then
