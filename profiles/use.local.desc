@@ -3371,14 +3371,11 @@ media-video/mjpg-streamer:v4l - Uses media-libs/libv4l function mapping for inpu
 media-video/mjpg-streamer:www - Installs WWW content
 media-video/motiontrack:multiprocess - Enables multi-process support (SMP/cluster) for motiontrack programs
 media-video/mplayer:3dnowext - Enable 3dnowext cpu instructions
-media-video/mplayer:amr - Enables Adaptive Multi-Rate format support
 media-video/mplayer:bl - Blinkenlights video output
 media-video/mplayer:bluray - Enable playback of Blu-ray filesystems
 media-video/mplayer:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
 media-video/mplayer:cdio - Use libcdio for CD support (instead of cdparanoia)
 media-video/mplayer:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
-media-video/mplayer:custom-cpuopts - Fine-tune custom CPU optimizations (UNSUPPORTED)
-media-video/mplayer:dirac - Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.
 media-video/mplayer:dvdnav - Use forked libdvdnav, navigate menus in GUIs
 media-video/mplayer:dxr3 - Enable DXR3/H+ video output
 media-video/mplayer:enca - Enables support for charset discovery and conversion
@@ -3389,7 +3386,6 @@ media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:md5sum - Enables md5sum video output
 media-video/mplayer:mmxext - Enables mmx2 support
 media-video/mplayer:mng - MNG input support
-media-video/mplayer:mpg123 - Enable support for mp3 decoding over media-sound/mpg123.
 media-video/mplayer:network - Enables network streaming support
 media-video/mplayer:nut - Enables support for the NUT container format
 media-video/mplayer:osdmenu - Enables support for on-screen display (OSD) menus
@@ -3400,7 +3396,6 @@ media-video/mplayer:rar - Enable Unique RAR File Library
 media-video/mplayer:real - Adds Real audio/video support
 media-video/mplayer:rtc - Enables usage of the linux real time clock. The alternative is software emulation of rtc
 media-video/mplayer:rtmp - Enables RTMPDump Streaming Media support
-media-video/mplayer:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).
 media-video/mplayer:shm - Enable support for shm
 media-video/mplayer:ssse3 - faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)
 media-video/mplayer:tga - Enables Targa video output
@@ -3408,7 +3403,6 @@ media-video/mplayer:toolame - Enable toolame MPEG-2 encoding
 media-video/mplayer:tremor - Enable internal support for Vorbis
 media-video/mplayer:twolame - Enable twolame MPEG-2 encoding
 media-video/mplayer:vidix - Support for vidix video output
-media-video/mplayer:vpx - Enables vp8 codec support using libvpx: Decoding vp8 does not require this to be enabled but libvpx can also be used for decoding; encoding vp8 requires this useflag to be enabled though.
 media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/mplayer:zoran - Enables ZR360[56]7/ZR36060 video output
