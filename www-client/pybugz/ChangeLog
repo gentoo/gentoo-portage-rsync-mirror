@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.108 2013/02/07 08:17:44 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.109 2013/02/08 03:13:35 floppym Exp $
+
+  08 Feb 2013; Mike Gilbert <floppym@gentoo.org> pybugz-9999.ebuild:
+  Migrate to distutils-r1.
 
   07 Feb 2013; William Hubbs <williamh@gentoo.org> ChangeLog:
   install man page, update git support and fix #432174.

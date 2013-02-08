@@ -1,6 +1,15 @@
 # ChangeLog for kde-misc/akonadi-facebook
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-facebook/ChangeLog,v 1.3 2012/11/23 04:32:50 creffett Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-facebook/ChangeLog,v 1.4 2013/02/08 03:24:05 creffett Exp $
+
+*akonadi-facebook-0_p20121207 (08 Feb 2013)
+
+  08 Feb 2013; Chris Reffett <creffett@gentoo.org>
+  +akonadi-facebook-0_p20121207.ebuild, -akonadi-facebook-0_p20120222.ebuild,
+  akonadi-facebook-0_p20120827.ebuild:
+  Remove old. Fix dependency in 201208 snapshot, should only depend on akonadi-
+  social-utils. Move 20121207 snapshot from overlay, which works with akonadi-
+  social-utils being rolled into kdepimlibs.
 
   23 Nov 2012; Chris Reffett <creffett@gentoo.org>
   akonadi-facebook-0_p20120827.ebuild:
