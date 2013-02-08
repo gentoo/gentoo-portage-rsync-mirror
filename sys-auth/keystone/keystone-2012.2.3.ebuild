@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2012.2.ebuild,v 1.5 2013/01/18 07:34:03 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2012.2.3.ebuild,v 1.1 2013/02/08 15:33:59 prometheanfire Exp $
 
 EAPI=5
 #test restricted becaues of bad requirements given (old webob for instance)
@@ -10,7 +10,7 @@ PYTHON_COMPAT=( python2_6 python2_7 )
 inherit distutils-r1
 
 DESCRIPTION="Keystone is the Openstack authentication, authorization, and
-service catalog written in Python"
+service catalog written in Python."
 HOMEPAGE="https://launchpad.net/keystone"
 SRC_URI="http://launchpad.net/${PN}/folsom/${PV}/+download/${P}.tar.gz"
 
@@ -68,6 +68,8 @@ RDEPEND="${DEPEND}
 #python_test() {
 #	"${PYTHON}" setup.py nosetests || die
 #}
+
+PATCHES=( "${FILESDIR}/keystone-CVE-2013-0270.patch" )
 
 python_install() {
 	distutils-r1_python_install

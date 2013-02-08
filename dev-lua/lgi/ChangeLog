@@ -1,6 +1,12 @@
 # ChangeLog for dev-lua/lgi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/ChangeLog,v 1.1 2012/11/27 20:20:48 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/ChangeLog,v 1.2 2013/02/08 15:48:18 maksbotan Exp $
+
+*lgi-0.6.2-r1 (08 Feb 2013)
+
+  08 Feb 2013; Maxim Koltsov <maksbotan@gentoo.org> +lgi-0.6.2-r1.ebuild:
+  Revbump: set up propep deps (bug #445049, thanks to krigstask) and fix test
+  with virtualx (bug #448460).
 
 *lgi-0.6.2 (27 Nov 2012)
 

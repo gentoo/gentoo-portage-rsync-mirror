@@ -1,16 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.5.ebuild,v 1.1 2013/01/25 09:34:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.5.ebuild,v 1.2 2013/02/08 15:37:09 kensington Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
 # krita/CMakeLists.txt
 
-EAPI=4
+EAPI=5
 
 EGIT_BRANCH="calligra/2.5"
 
-KDE_SCM=git
 KDE_MINIMAL=4.6.4
 QT_MINIMAL=4.8.1
 OPENGL_REQUIRED=optional
@@ -132,7 +131,7 @@ RDEPEND="
 	xslt? ( dev-libs/libxslt )
 	calligra_features_kexi? (
 		>=dev-db/sqlite-3.7.9:3[extensions]
-		dev-libs/icu
+		dev-libs/icu:=
 	)
 "
 DEPEND="${RDEPEND}"
