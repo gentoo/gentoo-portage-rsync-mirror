@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.173 2013/02/08 11:55:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.174 2013/02/08 12:28:41 ssuominen Exp $
 
 EAPI=4
 
@@ -251,7 +251,6 @@ src_compile()
 		systemd-udevd
 		udevadm
 		libudev.la
-		libsystemd-daemon.la
 		ata_id
 		cdrom_id
 		collect
@@ -259,10 +258,6 @@ src_compile()
 		v4l_id
 		accelerometer
 		mtd_probe
-		man/sd_is_fifo.3
-		man/sd_notify.3
-		man/sd_listen_fds.3
-		man/sd-daemon.3
 		man/udev.7
 		man/udevadm.8
 		man/systemd-udevd.8
@@ -281,8 +276,8 @@ src_compile()
 
 src_install()
 {
-	local lib_LTLIBRARIES="libsystemd-daemon.la libudev.la" \
-		pkgconfiglib_DATA="src/libsystemd-daemon/libsystemd-daemon.pc src/libudev/libudev.pc"
+	local lib_LTLIBRARIES="libudev.la" \
+		pkgconfiglib_DATA="src/libudev/libudev.pc"
 
 	local targets=(
 		install-libLTLIBRARIES
@@ -307,8 +302,6 @@ src_install()
 		install-typelibsDATA
 		install-dist_docDATA
 		libudev-install-hook
-		libsystemd-daemon-install-hook
-		install-pkgincludeHEADERS
 	)
 
 	if use gudev
@@ -322,14 +315,9 @@ src_install()
 		rootlibexec_PROGRAMS=systemd-udevd
 		bin_PROGRAMS=udevadm
 		lib_LTLIBRARIES="${lib_LTLIBRARIES}"
-		MANPAGES="man/sd-daemon.3 man/sd_notify.3 man/sd_listen_fds.3 \
-				man/sd_is_fifo.3 man/sd_booted.3 man/udev.7 man/udevadm.8 \
+		MANPAGES="man/udev.7 man/udevadm.8 \
 				man/systemd-udevd.service.8"
-		MANPAGES_ALIAS="man/sd_is_socket.3 man/sd_is_socket_unix.3 \
-				man/sd_is_socket_inet.3 man/sd_is_mq.3 man/sd_notifyf.3 \
-				man/SD_LISTEN_FDS_START.3 man/SD_EMERG.3 man/SD_ALERT.3 \
-				man/SD_CRIT.3 man/SD_ERR.3 man/SD_WARNING.3 man/SD_NOTICE.3 \
-				man/SD_INFO.3 man/SD_DEBUG.3 man/systemd-udevd.8"
+		MANPAGES_ALIAS="man/systemd-udevd.8"
 		dist_systemunit_DATA="units/systemd-udevd-control.socket \
 				units/systemd-udevd-kernel.socket"
 		nodist_systemunit_DATA="units/systemd-udevd.service \
@@ -337,9 +325,8 @@ src_install()
 				units/systemd-udev-settle.service"
 		pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 		systemunitdir="$(systemd_get_unitdir)"
-		pkginclude_HEADERS="src/systemd/sd-daemon.h"
 	)
-	emake -j1 DESTDIR="${D}" "${targets[@]}"
+	emake DESTDIR="${D}" "${targets[@]}"
 	if use doc
 	then
 		emake -C docs/libudev DESTDIR="${D}" install
