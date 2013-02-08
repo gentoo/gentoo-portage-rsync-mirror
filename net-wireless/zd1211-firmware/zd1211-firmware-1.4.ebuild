@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211-firmware/zd1211-firmware-1.4.ebuild,v 1.5 2013/01/21 22:24:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211-firmware/zd1211-firmware-1.4.ebuild,v 1.6 2013/02/08 17:57:38 ssuominen Exp $
 
 EAPI=5
 
@@ -12,9 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
-
-RDEPEND="virtual/udev"
-DEPEND=${RDEPEND}
 
 S=${WORKDIR}/${PN}
 

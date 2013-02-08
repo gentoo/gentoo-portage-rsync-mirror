@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2860-firmware/rt2860-firmware-34.ebuild,v 1.3 2013/01/21 22:27:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2860-firmware/rt2860-firmware-34.ebuild,v 1.4 2013/02/08 18:01:17 ssuominen Exp $
 
 EAPI="4"
 
@@ -14,9 +14,6 @@ LICENSE="ralink-firmware"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-
-RDEPEND="virtual/udev"
-DEPEND=""
 
 src_install() {
 	insinto /lib/firmware

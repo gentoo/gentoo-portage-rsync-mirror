@@ -1,7 +1,0 @@
-# If you have a USB mouse, you probably want to enable the following,
-# and change your XFree86 configuration so that it uses /dev/input/mice
-# as the mouse input device
-#X11_USBMICE_HACK=true
-
-# Put any modules here that you want to be loaded by the USB hotplug system
-#STATIC_MODULE_LIST=

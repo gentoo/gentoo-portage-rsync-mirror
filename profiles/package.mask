@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14438 2013/02/08 01:15:39 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14439 2013/02/08 17:35:32 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -93,13 +93,6 @@ net-misc/gtk-youtube-viewer
 # Doug Goldstein <cardoe@gentoo.org> (22 Jan 2013)
 # Masked for development
 =sys-block/open-iscsi-2.0.873
-
-# Samuli Suominen <ssuominen@gentoo.org> (22 Jan 2013)
-# Remove coldplug, hotplug and hotplug-base in 30 days wrt bug #145809
-sys-apps/ezusb2131
-sys-apps/hotplug
-sys-apps/hotplug-base
-sys-apps/coldplug
 
 # Doug Goldstein <cardoe@gentoo.org> (20 Jan 2013)
 # Under development, feel free to test and report back

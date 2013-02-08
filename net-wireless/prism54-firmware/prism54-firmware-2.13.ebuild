@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/prism54-firmware-2.13.ebuild,v 1.8 2013/01/21 22:27:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/prism54-firmware-2.13.ebuild,v 1.9 2013/02/08 17:54:36 ssuominen Exp $
 
 EAPI="4"
 
@@ -18,8 +18,6 @@ SLOT="1"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 RESTRICT="mirror"
-
-RDEPEND="virtual/udev"
 
 S=${WORKDIR}
 

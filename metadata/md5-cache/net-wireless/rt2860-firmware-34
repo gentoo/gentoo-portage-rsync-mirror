@@ -4,7 +4,6 @@ EAPI=4
 HOMEPAGE=http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git http://www.ralinktech.com/en/04_support/support.php?sn=501
 KEYWORDS=~amd64 ~x86
 LICENSE=ralink-firmware
-RDEPEND=virtual/udev
 SLOT=0
 SRC_URI=mirror://gentoo/rt2860-firmware-34.tar.bz2
-_md5_=228bfb3f616a3b8ac84f7722d6b7a5ac
+_md5_=67772647e3d7716b38c3c783c0f777f3

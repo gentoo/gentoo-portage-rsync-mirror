@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/zd1211-firmware
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211-firmware/ChangeLog,v 1.15 2013/01/21 22:24:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211-firmware/ChangeLog,v 1.16 2013/02/08 17:57:38 ssuominen Exp $
+
+  08 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
+  zd1211-firmware-1.4.ebuild:
+  Remove virtual/udev dependency wrt #432504
 
   21 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
   zd1211-firmware-1.4.ebuild:
