@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.10.0.ebuild,v 1.1 2013/02/07 04:57:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/kdepimlibs-4.10.0-r1.ebuild,v 1.1 2013/02/08 15:22:43 kensington Exp $
 
 EAPI=5
 
@@ -59,13 +59,13 @@ src_prepare() {
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_build handbook doc)
-		$(cmake-utils_use_with ldap)
+		$(cmake-utils_use_find_package ldap)
 		$(cmake-utils_use_with semantic-desktop Akonadi)
 		$(cmake-utils_use_with semantic-desktop SharedDesktopOntologies)
 		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use_with semantic-desktop NepomukCore)
 		$(cmake-utils_use !semantic-desktop KALARM_USE_KRESOURCES)
-		$(cmake-utils_use_with prison)
+		$(cmake-utils_use_find_package prison)
 	)
 
 	kde4-base_src_configure

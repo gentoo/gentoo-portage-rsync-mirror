@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.216 2013/02/07 04:45:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.217 2013/02/08 15:08:20 ago Exp $
+
+  08 Feb 2013; Agostino Sarubbo <ago@gentoo.org> package.mask:
+  Remove KDE SC 4.10.0, wrt to bug #455960
 
   07 Feb 2013; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   Mask KDE SC 4.10.0 for keywording bug #455960
