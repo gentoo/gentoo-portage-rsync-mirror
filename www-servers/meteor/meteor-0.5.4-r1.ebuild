@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/meteor-0.5.4.ebuild,v 1.2 2013/02/07 22:54:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/meteor-0.5.4-r1.ebuild,v 1.2 2013/02/08 19:26:04 tomwij Exp $
 
 EAPI=5
 
-inherit vcs-snapshot
+inherit eutils vcs-snapshot
 
 METEOR_BUNDLEV="0.2.12"
 
@@ -35,13 +35,19 @@ KEYWORDS="~amd64 ~x86"
 src_prepare() {
 	local DEV_BUNDLE_DIR="${WORKDIR}/${P}_bundle-${METEOR_BUNDLEV}"
 
-	einfo "Patching files..."
-	sed -e 's/DEV_BUNDLE=$(dirname "$SCRIPT_DIR")/DEV_BUNDLE="$SCRIPT_DIR"/g' -i meteor || die "Couldn't patch DEV_BUNDLE script dir."
+	einfo "Moving development bundle ..."
+	mv "${DEV_BUNDLE_DIR}"/* "${DEV_BUNDLE_DIR}"/.bundle_version.txt . || die "Couldn't move development bundle."
 
-	einfo "Merging development bundle..."
-	mv ${DEV_BUNDLE_DIR}/* ${DEV_BUNDLE_DIR}/.bundle_version.txt .
+	einfo "Patching files ..."
+	sed -i 's/DEV_BUNDLE=$(dirname "$SCRIPT_DIR")/DEV_BUNDLE="$SCRIPT_DIR"/g' meteor || die "Couldn't patch DEV_BUNDLE script dir."
+	sed -i "s/^exports\.CURRENT_VERSION.*/exports.CURRENT_VERSION = \"${PV}-gentoo\";/g" app/lib/updater.js || die "Couldn't add gentoo suffix to version."
 
-	einfo "Removing unnecessary files..."
+	einfo "Removing updater since Portage covers this ..."
+	epatch "${FILESDIR}"/${P}.remove_updater.patch
+	rm app/meteor/update.js || die "Couldn't remove updater."
+
+	# We don't care if these fail, just get rid of them if they exist.
+	einfo "Removing unnecessary files ..."
 	rm -rf admin
 	rm -rf {examples,packages}/*/.meteor/local
 	rm -rf examples/unfinished

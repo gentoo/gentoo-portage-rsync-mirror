@@ -1,6 +1,22 @@
 # ChangeLog for www-servers/meteor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/ChangeLog,v 1.2 2013/02/07 22:54:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/ChangeLog,v 1.4 2013/02/08 19:26:04 tomwij Exp $
+
+  08 Feb 2013; Tom Wijsman <TomWij@gentoo.org> -meteor-0.5.4.ebuild,
+  meteor-0.5.4-r1.ebuild, meteor-9999.ebuild:
+  Removed old revision of meteor.
+
+*meteor-9999 (08 Feb 2013)
+*meteor-0.5.4-r1 (08 Feb 2013)
+
+  08 Feb 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/meteor-0.5.4.remove_updater.patch, +meteor-0.5.4-r1.ebuild,
+  +meteor-9999.ebuild:
+  Added patch that removes updater from meteor, therefore a revision bump to
+  meteor-0.5.4-r1 such that users won't try to update manually. Added live
+  ebuild that installs the devel branch of meteor, for easier development and
+  testing. Done small fixes which make the ebuilds more reliable. Added gentoo
+  suffix to version output.
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> meteor-0.5.4.ebuild:
   Move Creative Commons licenses to shorter names.

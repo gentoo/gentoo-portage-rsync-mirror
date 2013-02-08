@@ -1,0 +1,79 @@
+diff -ur a/app/meteor/meteor.js b/app/meteor/meteor.js
+--- a/app/meteor/meteor.js	2013-02-07 22:56:06.000000000 +0100
++++ b/app/meteor/meteor.js	2013-02-08 18:35:42.665734143 +0100
+@@ -249,23 +249,6 @@
+   });
+ 
+   Commands.push({
+-    name: "update",
+-    help: "Upgrade to the latest version of Meteor",
+-    func: function (argv) {
+-      if (argv.help) {
+-        process.stdout.write(
+-          "Usage: meteor update\n" +
+-            "\n" +
+-            "Checks to see if a new version of Meteor is available, and if so,\n" +
+-            "downloads and installs it. You must be connected to the internet.\n");
+-        process.exit(1);
+-      }
+-
+-      require(path.join(__dirname, 'update.js'));
+-    }
+-  });
+-
+-  Commands.push({
+     name: "add",
+     help: "Add a package to this project",
+     func: function (argv) {
+diff -ur a/app/meteor/run.js b/app/meteor/run.js
+--- a/app/meteor/run.js	2013-02-07 22:56:06.000000000 +0100
++++ b/app/meteor/run.js	2013-02-08 18:33:28.135715176 +0100
+@@ -7,7 +7,6 @@
+ var httpProxy = require('http-proxy');
+ 
+ var files = require(path.join(__dirname, '..', 'lib', 'files.js'));
+-var updater = require(path.join(__dirname, '..', 'lib', 'updater.js'));
+ var bundler = require(path.join(__dirname, '..', 'lib', 'bundler.js'));
+ var mongo_runner = require(path.join(__dirname, '..', 'lib', 'mongo_runner.js'));
+ var mongoExitCodes = require(path.join(__dirname, '..', 'lib', 'mongo_exit_codes.js'));
+@@ -492,32 +491,6 @@
+   }
+ });
+ 
+-////////// Upgrade check //////////
+-
+-// XXX this should move to main meteor command-line, probably?
+-var start_update_checks = function () {
+-  var update_check = function () {
+-    updater.get_manifest(function (manifest) {
+-      if (!files.in_checkout() && manifest &&
+-          updater.needs_upgrade(manifest)) {
+-        console.log("////////////////////////////////////////");
+-        console.log("////////////////////////////////////////");
+-        console.log();
+-        console.log("meteor is out of date. Please run:");
+-        console.log();
+-        console.log("     meteor update");
+-        console.log();
+-        console.log("////////////////////////////////////////");
+-        console.log("////////////////////////////////////////");
+-      }
+-    });
+-  };
+-  setInterval(update_check, 12*60*60*1000); // twice a day
+-  update_check(); // and now.
+-}
+-
+-///////////////////////////////////////////////////////////////////////////////
+-
+ // Also used by "meteor deploy" in meteor.js.
+ 
+ exports.getSettings = function (filename) {
+@@ -765,7 +738,6 @@
+       process.stdout.write("Running on: http://localhost:" + outer_port + "/\n");
+     };
+ 
+-    start_update_checks();
+     launch();
+   });
+ };
