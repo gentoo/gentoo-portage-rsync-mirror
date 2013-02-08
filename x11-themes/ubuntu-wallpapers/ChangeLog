@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/ubuntu-wallpapers
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ChangeLog,v 1.6 2012/12/25 03:49:05 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ubuntu-wallpapers/ChangeLog,v 1.7 2013/02/07 23:08:52 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> ubuntu-wallpapers-0.34.1.ebuild,
+  ubuntu-wallpapers-0.35.2.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   25 Dec 2012; Jeff Horelick <jdhore@gentoo.org>
   ubuntu-wallpapers-0.35.2.ebuild:

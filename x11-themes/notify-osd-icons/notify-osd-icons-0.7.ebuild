@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/notify-osd-icons/notify-osd-icons-0.7.ebuild,v 1.1 2011/03/27 20:32:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/notify-osd-icons/notify-osd-icons-0.7.ebuild,v 1.2 2013/02/07 23:02:55 ulm Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ DESCRIPTION="Icons for on-screen-display notification agent"
 HOMEPAGE="http://launchpad.net/notify-osd"
 SRC_URI="mirror://ubuntu/pool/main/n/${PN}/${PN}_${PV}.tar.gz"
 
-LICENSE="CCPL-Attribution-ShareAlike-3.0"
+LICENSE="CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

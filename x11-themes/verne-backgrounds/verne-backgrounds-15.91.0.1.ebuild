@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/verne-backgrounds/verne-backgrounds-15.91.0.1.ebuild,v 1.1 2011/08/13 23:43:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/verne-backgrounds/verne-backgrounds-15.91.0.1.ebuild,v 1.2 2013/02/07 23:09:32 ulm Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ HOMEPAGE="https://fedoraproject.org/wiki/F16_Artwork"
 
 SRC_URI="mirror://fedora-dev/${SRC_PATH}/${PN}-$(replace_version_separator 3 -).fc${FEDORA}.src.rpm"
 
-LICENSE="CCPL-Attribution-ShareAlike-3.0"
+LICENSE="CC-BY-SA-3.0"
 KEYWORDS="~amd64"
 IUSE=""
 

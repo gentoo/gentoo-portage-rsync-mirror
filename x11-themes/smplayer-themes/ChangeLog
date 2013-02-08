@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/smplayer-themes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-themes/ChangeLog,v 1.32 2013/02/07 09:06:11 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-themes/ChangeLog,v 1.33 2013/02/07 23:03:46 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> smplayer-themes-20120131.ebuild,
+  smplayer-themes-20120919.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   07 Feb 2013; Sergey Popov <pinkbyte@gentoo.org>
   smplayer-themes-20120919.ebuild:

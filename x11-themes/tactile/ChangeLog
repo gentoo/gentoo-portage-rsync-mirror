@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/tactile
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tactile/ChangeLog,v 1.3 2011/08/24 20:18:36 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tactile/ChangeLog,v 1.4 2013/02/07 23:06:22 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org> tactile-0_pre20060612.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   24 Aug 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add package to proxy-maintainers herd

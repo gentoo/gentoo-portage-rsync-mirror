@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.3-r1.ebuild,v 1.7 2013/01/16 22:27:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.3-r1.ebuild,v 1.8 2013/02/07 23:02:11 ulm Exp $
 
 EAPI="4"
 
@@ -92,7 +92,7 @@ HOMEPAGE="http://art.gnome.org/themes/metacity/"
 RDEPEND="x11-wm/metacity"
 DEPEND="${RDEPEND}"
 
-LICENSE="GPL-2 LGPL-2.1 CCPL-Attribution-2.0 FreeArt public-domain"
+LICENSE="GPL-2 LGPL-2.1 CC-BY-2.0 FreeArt public-domain"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""

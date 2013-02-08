@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/tango-icon-theme-extras
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.26 2012/05/05 04:10:03 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.27 2013/02/07 23:08:08 ulm Exp $
+
+  07 Feb 2013; Ulrich Müller <ulm@gentoo.org>
+  tango-icon-theme-extras-0.1.0-r1.ebuild:
+  Move Creative Commons licenses to shorter names.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   tango-icon-theme-extras-0.1.0-r1.ebuild:

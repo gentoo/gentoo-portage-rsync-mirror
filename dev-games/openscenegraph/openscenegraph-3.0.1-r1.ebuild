@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-3.0.1.ebuild,v 1.8 2012/07/10 04:51:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-3.0.1-r1.ebuild,v 1.1 2013/02/07 23:14:45 reavertm Exp $
 
 EAPI=3
 
@@ -17,8 +17,7 @@ LICENSE="wxWinLL-3 LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="curl debug doc examples ffmpeg fltk fox gdal gif glut gtk itk jpeg jpeg2k
-openexr openinventor osgapps pdf png qt4 sdl static-libs svg tiff truetype vnc
-wxwidgets xine xrandr zlib"
+openexr openinventor osgapps pdf png qt4 sdl svg tiff truetype vnc wxwidgets xine xrandr zlib"
 
 # NOTE: OpenAL (support missing)
 # TODO: COLLADA, FBX, OpenVRML, Performer, DCMTK
@@ -98,6 +97,7 @@ src_configure() {
 	append-cppflags -D__STDC_CONSTANT_MACROS
 
 	mycmakeargs=(
+		-DDYNAMIC_OPENSCENEGRAPH=ON
 		-DWITH_OpenAL=OFF # Commented out in buildsystem
 		-DGENTOO_DOCDIR="/usr/share/doc/${PF}"
 		$(cmake-utils_use_with curl)
@@ -119,7 +119,6 @@ src_configure() {
 		$(cmake-utils_use_with pdf Poppler-glib)
 		$(cmake-utils_use_with png)
 		$(cmake-utils_use_with qt4)
-		$(cmake-utils_use !static-libs DYNAMIC_OPENSCENEGRAPH)
 		$(cmake-utils_use_with sdl)
 		$(cmake-utils_use_with svg rsvg)
 		$(cmake-utils_use_with tiff)
@@ -136,12 +135,4 @@ src_configure() {
 src_compile() {
 	cmake-utils_src_compile
 	use doc && cmake-utils_src_compile doc_openscenegraph doc_openthreads
-}
-
-pkg_postinst() {
-	if has_version 'dev-games/simgear'; then
-		ewarn "dev-games/simgear has been detected and may need to be rebuilt now."
-		ewarn "Please run the following:"
-		ewarn "  # emerge -1 dev-games/simgear"
-	fi
 }
