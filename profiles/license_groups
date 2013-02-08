@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.187 2013/02/07 23:12:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.188 2013/02/08 16:21:39 jer Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -68,7 +68,7 @@ EULA AdobeFlash-10.3 BCS Broadcom cadsoft DOOM3 ETQW FraunhoferFDK google-chrome
 # - MUST NOT restrict the cost of redistribution.
 # - MAY require explicit inclusion of the license with
 #   the distribution [1]
-# - IFF there is an explicit inclusion requirement, USE=bindist
+# - IF there is an explicit inclusion requirement, USE=bindist
 #   MUST cause a copy of the license to be installed in a file
 #   location compliant with the license,
 BINARY-REDISTRIBUTABLE @FREE adobe-ps atheros-hal hashcat intel-psb intel-ucode ipw2100-fw ipw2200-fw ipw3945 libertas-fw NVIDIA qlogic-fibre-channel-firmware radeon-ucode ralink-firmware SmartLabs
