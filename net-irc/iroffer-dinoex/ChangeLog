@@ -1,0 +1,17 @@
+# ChangeLog for net-irc/iroffer-dinoex
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/iroffer-dinoex/ChangeLog,v 1.2 2013/02/08 12:00:11 pinkbyte Exp $
+
+  08 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> files/iroffer-dinoex.init:
+  Port reload and reconnect initscript options from sunrise ebuild
+
+*iroffer-dinoex-3.28 (08 Feb 2013)
+
+  08 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> +iroffer-dinoex-3.28.ebuild,
+  +files/iroffer-dinoex.conf, +files/iroffer-dinoex.init,
+  +files/iroffer-dinoex.logrotate, +files/iroffer-dinoex-Werror.patch,
+  +files/iroffer-dinoex-config.patch, +metadata.xml:
+  Initial commit, wrt bug #426616. Ebuild made by Mikle Kolyada, who will
+  maintain this package through proxy maintainers. Logrotate script was picked
+  up from sunrise overlay
+

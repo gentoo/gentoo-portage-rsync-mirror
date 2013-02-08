@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.172 2013/02/07 18:05:03 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.173 2013/02/08 11:55:49 ssuominen Exp $
 
 EAPI=4
 
-KV_min=2.6.39
+KV_min=2.6.32
 
 inherit autotools eutils linux-info multilib systemd toolchain-funcs versionator
 
@@ -18,7 +18,8 @@ else
 	if [[ -n "${patchset}" ]]
 		then
 				SRC_URI="${SRC_URI}
-					http://dev.gentoo.org/~williamh/dist/${P}-patches-${patchset}.tar.bz2"
+					http://dev.gentoo.org/~williamh/dist/${P}-patches-${patchset}.tar.bz2
+					http://dev.gentoo.org/~ssuominen/${P}-patches-${patchset}.tar.bz2"
 			fi
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
@@ -77,8 +78,6 @@ QA_MULTILIB_PATHS="lib/systemd/systemd-udevd"
 
 udev_check_KV()
 {
-	# accept4 came late for ia64
-	use ia64 && KV_min=3.3
 	if kernel_is lt ${KV_min//./ }
 	then
 		return 1
@@ -176,13 +175,13 @@ src_prepare()
 
 	if [[ ${PV} = 9999* ]]; then
 		# secure_getenv() disable for non-glibc systems wrt bug #443030
-		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 13 ]]; then
+		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 23 ]]; then
 			eerror "The line count for secure_getenv() failed, see bug #443030"
 			die
 		fi
 
 		# gperf disable if keymaps are not requested wrt bug #452760
-		if ! [[ $(grep -i gperf Makefile.am | wc -l) -eq 24 ]]; then
+		if ! [[ $(grep -i gperf Makefile.am | wc -l) -eq 27 ]]; then
 			eerror "The line count for gperf references failed, see bug 452760"
 			die
 		fi
@@ -307,8 +306,6 @@ src_install()
 		install-sharepkgconfigDATA
 		install-typelibsDATA
 		install-dist_docDATA
-		udev-confdirs
-		systemd-install-hook
 		libudev-install-hook
 		libsystemd-daemon-install-hook
 		install-pkgincludeHEADERS
@@ -524,5 +521,5 @@ pkg_postinst()
 	elog "         fixing known issues visit:"
 	elog "         http://www.gentoo.org/doc/en/udev-guide.xml"
 
-	use hwdb && udevadm hwdb --update
+	use hwdb && udevadm hwdb --update --root="${ROOT%/}"
 }
