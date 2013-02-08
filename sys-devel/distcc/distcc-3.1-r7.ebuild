@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.1-r7.ebuild,v 1.3 2013/02/04 09:02:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.1-r7.ebuild,v 1.4 2013/02/08 08:23:20 jlec Exp $
 
 EAPI=5
 
@@ -15,21 +15,13 @@ SRC_URI="http://distcc.googlecode.com/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="avahi gnome gtk hardened ipv6 selinux xinetd"
-
-REQUIRED_USE="?? ( gtk gnome )"
+IUSE="avahi gtk hardened ipv6 selinux xinetd"
 
 RESTRICT="test"
 
 RDEPEND="
 	dev-libs/popt
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
-	gnome? (
-		>=gnome-base/libgnome-2
-		>=gnome-base/libgnomeui-2
-		x11-libs/gtk+:2
-		x11-libs/pango
-	)
 	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -76,7 +68,6 @@ src_configure() {
 	econf \
 		$(use_with avahi) \
 		$(use_with gtk) \
-		$(use_with gnome) \
 		${myconf}
 }
 
@@ -120,7 +111,7 @@ src_install() {
 	keepdir /var/run/distccd
 	fowners distcc:daemon /var/run/distccd
 
-	if use gnome || use gtk; then
+	if use gtk; then
 		einfo "Renaming /usr/bin/distccmon-gnome to /usr/bin/distccmon-gui"
 		einfo "This is to have a little sensability in naming schemes between distccmon programs"
 		mv "${D}/usr/bin/distccmon-gnome" "${D}/usr/bin/distccmon-gui" || die
@@ -141,7 +132,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	use gnome && fdo-mime_desktop_database_update
+	use gtk && fdo-mime_desktop_database_update
 
 	if use ipv6; then
 		elog
@@ -158,7 +149,7 @@ pkg_postinst() {
 	elog "To use the distccmon programs with Gentoo you should use this command:"
 	elog "# DISTCC_DIR=\"${DISTCC_DIR}\" distccmon-text 5"
 
-	if use gnome || use gtk; then
+	if use gtk; then
 		elog "Or:"
 		elog "# DISTCC_DIR=\"${DISTCC_DIR}\" distccmon-gnome"
 	fi
@@ -172,5 +163,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	use gnome && fdo-mime_desktop_database_update
+	use gtk && fdo-mime_desktop_database_update
 }
