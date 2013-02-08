@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.10.9.ebuild,v 1.1 2012/12/03 23:25:27 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.10.9.ebuild,v 1.2 2013/02/08 20:29:32 aballier Exp $
 
 EAPI=4
 
@@ -84,6 +84,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-svn_revision_override.patch"
 	epatch "${FILESDIR}/${P}-labs_is_in_stdlib.patch"
 	epatch "${FILESDIR}/${P}-avoid_cflags_mixup.patch"
+	epatch "${FILESDIR}/${P}-ffmpeg.patch"
 
 	if ! use h323; then
 		# Without this patch, ekiga wont compile, even with

@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/opal
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.85 2012/12/16 14:58:35 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.86 2013/02/08 20:29:32 aballier Exp $
+
+  08 Feb 2013; Alexis Ballier <aballier@gentoo.org> opal-3.10.9.ebuild,
+  +files/opal-3.10.9-ffmpeg.patch:
+  backport upstream fix to build with recent ffmpeg versions, part of bug
+  #443206
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #260683

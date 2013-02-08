@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.13.0.ebuild,v 1.1 2013/01/01 23:18:01 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.13.0.ebuild,v 1.2 2013/02/08 20:10:08 alonbl Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="doc +pcsc-lite openct ctapi readline ssl zlib"
+IUSE="doc +pcsc-lite secure-messaging openct ctapi readline ssl zlib"
 
 RDEPEND="zlib? ( sys-libs/zlib )
 	readline? ( sys-libs/readline )
@@ -38,6 +38,7 @@ src_configure() {
 		$(use_enable openct) \
 		$(use_enable readline) \
 		$(use_enable zlib) \
+		$(use_enable secure-messaging sm) \
 		$(use_enable ssl openssl) \
 		$(use_enable pcsc-lite pcsc) \
 		$(use_enable openct) \

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.133 2013/01/01 23:18:01 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.134 2013/02/08 20:10:08 alonbl Exp $
+
+  08 Feb 2013; Alon Bar-Lev <alonbl@gentoo.org> metadata.xml,
+  opensc-0.13.0.ebuild:
+  Add secure-messaging USE, bug#456044, thanks to  Marcus van Dam
 
 *opensc-0.13.0 (01 Jan 2013)
 

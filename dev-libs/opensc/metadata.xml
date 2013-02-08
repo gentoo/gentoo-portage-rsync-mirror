@@ -31,5 +31,9 @@
       Use <pkg>sys-apps/pcsc-lite</pkg> (and PC/SC API) for accessing
       Smartcard hardware.
     </flag>
+
+    <flag name='secure-messaging'>
+      Enable secure messaging.
+    </flag>
   </use>
 </pkgmetadata>

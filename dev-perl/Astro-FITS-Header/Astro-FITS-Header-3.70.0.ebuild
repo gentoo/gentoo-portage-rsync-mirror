@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-FITS-Header/Astro-FITS-Header-3.70.0.ebuild,v 1.1 2013/01/21 17:51:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-FITS-Header/Astro-FITS-Header-3.70.0.ebuild,v 1.2 2013/02/08 20:04:43 bicatali Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="Interface to FITS headers"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=""

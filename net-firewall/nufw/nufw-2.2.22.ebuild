@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.22.ebuild,v 1.2 2010/06/17 21:48:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.22.ebuild,v 1.3 2013/02/08 20:23:39 alonbl Exp $
+
+SSL_CERT_MANDATORY=1
 
 inherit ssl-cert eutils pam
 
