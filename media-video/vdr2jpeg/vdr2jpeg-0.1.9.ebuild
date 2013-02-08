@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.1.9.ebuild,v 1.6 2012/05/05 08:58:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.1.9.ebuild,v 1.7 2013/02/08 21:39:04 aballier Exp $
 
 EAPI=4
 
@@ -29,7 +29,8 @@ src_prepare() {
 		-e "s:usr/local:usr:" \
 		-e "s:-o vdr2jpeg:\$(LDFLAGS) -o vdr2jpeg:" \
 		Makefile || die
-	epatch "${FILESDIR}/${P}-ffmpeg.patch"
+	epatch "${FILESDIR}/${P}-ffmpeg.patch" \
+		"${FILESDIR}/${P}-ffmpeg1.patch"
 }
 
 src_install() {

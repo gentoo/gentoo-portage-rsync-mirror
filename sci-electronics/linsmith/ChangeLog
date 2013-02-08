@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/linsmith
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/ChangeLog,v 1.13 2012/12/07 15:11:46 tomjbe Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/ChangeLog,v 1.15 2013/02/08 21:41:25 ago Exp $
+
+  08 Feb 2013; Agostino Sarubbo <ago@gentoo.org> linsmith-0.99.24.ebuild:
+  Stable for x86, wrt bug #456032
+
+  08 Feb 2013; Agostino Sarubbo <ago@gentoo.org> linsmith-0.99.24.ebuild:
+  Stable for amd64, wrt bug #456032
 
 *linsmith-0.99.24 (07 Dec 2012)
 

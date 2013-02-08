@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.6_p3.ebuild,v 1.11 2013/02/04 10:11:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.6_p3.ebuild,v 1.12 2013/02/08 21:40:33 vapier Exp $
 
 EAPI=4
 
@@ -123,7 +123,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 
 	if use ldap ; then
 		dodoc README.LDAP doc/schema.OpenLDAP
