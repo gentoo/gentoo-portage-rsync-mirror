@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.133 2013/02/06 05:51:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.134 2013/02/08 05:12:28 tetromino Exp $
 
 EAPI="5"
 
@@ -99,9 +99,9 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	scanner? ( media-gfx/sane-backends:= )
 	ssl? (
-		dev-libs/openssl:=
+		dev-libs/openssl:0=
 		net-libs/gnutls:= )
-	png? ( media-libs/libpng:= )
+	png? ( media-libs/libpng:0= )
 	v4l? ( media-libs/libv4l )
 	!win64? ( ${MLIB_DEPS} )
 	win32? ( ${MLIB_DEPS} )
