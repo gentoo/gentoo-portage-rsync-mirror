@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libmnl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.16 2012/12/29 17:25:29 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.17 2013/02/08 06:41:26 vapier Exp $
+
+  08 Feb 2013; Mike Frysinger <vapier@gentoo.org> libmnl-1.0.1.ebuild,
+  libmnl-1.0.2.ebuild, libmnl-1.0.3.ebuild:
+  Fix docompress path, and simplify the find deletes.
 
   29 Dec 2012; Sergey Popov <pinkbyte@gentoo.org> libmnl-1.0.3.ebuild:
   Use prune_libtool_files instead of manual removing, add ~amd64-linux keyword

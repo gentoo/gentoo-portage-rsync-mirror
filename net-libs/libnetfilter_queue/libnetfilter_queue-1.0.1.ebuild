@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/libnetfilter_queue-1.0.1.ebuild,v 1.6 2012/08/11 14:35:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/libnetfilter_queue-1.0.1.ebuild,v 1.7 2013/02/08 06:43:05 vapier Exp $
 
 EAPI="4"
 
@@ -23,5 +23,5 @@ CONFIG_CHECK="~NETFILTER_NETLINK_QUEUE"
 
 pkg_setup() {
 	linux-info_pkg_setup
-	kernel_is lt 2 6 14 && die "requires at least 2.6.14 kernel version"
+	kernel_is lt 2 6 14 && ewarn "requires at least 2.6.14 kernel version"
 }

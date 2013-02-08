@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/libnfnetlink-1.0.1.ebuild,v 1.7 2012/12/16 19:43:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/libnfnetlink-1.0.1.ebuild,v 1.8 2013/02/08 06:44:16 vapier Exp $
 
 EAPI=4
 inherit linux-info eutils
@@ -20,7 +20,7 @@ pkg_setup() {
 	linux-info_pkg_setup
 
 	if kernel_is lt 2 6 18 ; then
-		die "${PN} requires at least 2.6.18 kernel version"
+		ewarn "${PN} requires at least 2.6.18 kernel version"
 	fi
 
 	#netfilter core team has changed some option names with kernel 2.6.20

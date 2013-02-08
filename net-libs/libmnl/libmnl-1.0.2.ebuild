@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/libmnl-1.0.2.ebuild,v 1.6 2012/08/24 13:56:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/libmnl-1.0.2.ebuild,v 1.7 2013/02/08 06:41:26 vapier Exp $
 
 EAPI=4
 
@@ -27,10 +27,10 @@ src_install() {
 	dodoc README
 
 	if use examples; then
-		find examples/ -name "Makefile*" -exec rm -f '{}' +
+		find examples/ -name 'Makefile*' -delete
 		dodoc -r examples/
-		docompress -x /usr/share/doc/${P}/examples
+		docompress -x /usr/share/doc/${PF}/examples
 	fi
 
-	find "${ED}" -name '*.la' -exec rm -f '{}' +
+	find "${ED}" -name '*.la' -delete
 }

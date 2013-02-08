@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/libmnl-1.0.3.ebuild,v 1.5 2012/12/29 17:25:29 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/libmnl-1.0.3.ebuild,v 1.6 2013/02/08 06:41:26 vapier Exp $
 
 EAPI=4
 
@@ -26,9 +26,9 @@ src_install() {
 	mv "${ED}"/{,usr/}$(get_libdir)/pkgconfig/libmnl.pc || die
 
 	if use examples; then
-		find examples/ -name "Makefile*" -exec rm -f '{}' +
+		find examples/ -name 'Makefile*' -delete
 		dodoc -r examples/
-		docompress -x /usr/share/doc/${P}/examples
+		docompress -x /usr/share/doc/${PF}/examples
 	fi
 
 	prune_libtool_files
