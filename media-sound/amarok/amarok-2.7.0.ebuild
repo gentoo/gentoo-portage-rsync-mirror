@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.7.0.ebuild,v 1.2 2013/01/18 13:01:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.7.0.ebuild,v 1.3 2013/02/08 03:49:10 jmbsvicetto Exp $
 
 EAPI=4
 
@@ -8,6 +8,7 @@ KDE_LINGUAS="bs ca ca@valencia cs da de el en_GB es et eu fi fr
 ga gl hu it ja lt lv nb nl pa pl pt pt_BR ru sl sr sr@ijekavian
 sr@ijekavianlatin sr@latin sv uk zh_CN zh_TW"
 KDE_REQUIRED="never"
+VIRTUALX_REQUIRED=test
 inherit flag-o-matic kde4-base
 
 DESCRIPTION="Advanced audio player based on KDE framework."

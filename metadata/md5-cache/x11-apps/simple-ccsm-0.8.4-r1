@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-python/compizconfig-python-0.8.4 >=dev-python/pygtk-2.10:2 >=x11-apps/ccsm-0.8.4 =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://releases.compiz.org/0.8.4/simple-ccsm-0.8.4.tar.bz2
-_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=3db80d3b17e7b1a58118cc006c71cbb6

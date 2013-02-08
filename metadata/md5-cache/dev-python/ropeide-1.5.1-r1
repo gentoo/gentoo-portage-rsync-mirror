@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-python/rope-0.8.4 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-2.7*[tk] =dev-lang/python-2.6*[tk] =dev-lang/python-2.5*[tk] )
 SLOT=0
 SRC_URI=mirror://sourceforge/rope/ropeide-1.5.1.tar.gz
-_eclasses_=distutils	15ae23f6f8219a009bfcfff7724fe727	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=43a1a0be2a20fe0d7cd136a3127d2fb0
