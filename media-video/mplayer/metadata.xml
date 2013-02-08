@@ -7,6 +7,7 @@
 </maintainer>
 <use>
 	<flag name="3dnowext">Enable 3dnowext cpu instructions</flag>
+	<flag name="bindist">Enforces license compatibility constraints via REQUIRED_USE.</flag>
 	<flag name="bl">Blinkenlights video output</flag>
 	<flag name="bluray">Enable playback of Blu-ray filesystems</flag>
 	<flag name="bs2b">Enable Bauer stereophonic-to-binaural headphone filter</flag>

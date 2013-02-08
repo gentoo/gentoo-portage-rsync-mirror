@@ -1,6 +1,17 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.877 2013/02/08 13:29:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.880 2013/02/08 13:50:18 aballier Exp $
+
+  08 Feb 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  disable libilbc for the same reason as libopus: it is for internal ffmpeg
+  only.
+
+  08 Feb 2013; Alexis Ballier <aballier@gentoo.org> mplayer-1.1-r1.ebuild,
+  mplayer-9999.ebuild:
+  let mplayer find by itself the binary codec dir, should fix bug #320087
+
+  08 Feb 2013; Alexis Ballier <aballier@gentoo.org> metadata.xml:
+  describe bindist as enforcing REQUIRED_USE, bug #369251
 
   08 Feb 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   disable opus since it only controls opus support in internal ffmpeg which we

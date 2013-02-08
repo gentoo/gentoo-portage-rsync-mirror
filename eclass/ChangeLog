@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.664 2013/02/08 03:38:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.665 2013/02/08 13:43:19 kensington Exp $
+
+  08 Feb 2013; Michael Palimaka <kensington@gentoo.org> cmake-utils.eclass:
+  Bump CMake minimum version to latest stable.
 
   08 Feb 2013; Patrick Lauer <patrick@gentoo.org> distutils.eclass:
   Fixing confusing message in distutils.eclass
