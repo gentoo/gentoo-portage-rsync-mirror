@@ -1,13 +1,13 @@
-DEFINED_PHASES=configure install postinst postrm prepare setup
-DEPEND=>=app-i18n/ibus-1.2.0.20100111 app-i18n/anthy >=dev-python/pygtk-2.15.2 nls? ( virtual/libintl ) dev-lang/swig dev-util/intltool virtual/pkgconfig nls? ( >=sys-devel/gettext-0.16.1 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+DEFINED_PHASES=configure install postinst postrm preinst prepare setup
+DEPEND=>=app-i18n/ibus-1.5.0 app-i18n/anthy deprecated? ( >=dev-python/pygtk-2.15.2 ) nls? ( virtual/libintl ) dev-libs/gobject-introspection dev-util/intltool virtual/pkgconfig deprecated? ( dev-lang/swig ) nls? ( >=sys-devel/gettext-0.16.1 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4
 DESCRIPTION=Japanese input method Anthy IMEngine for IBus Framework
 EAPI=5
 HOMEPAGE=http://code.google.com/p/ibus/
-IUSE=nls
+IUSE=deprecated nls
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
-RDEPEND=>=app-i18n/ibus-1.2.0.20100111 app-i18n/anthy >=dev-python/pygtk-2.15.2 nls? ( virtual/libintl ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+RDEPEND=>=app-i18n/ibus-1.5.0 app-i18n/anthy deprecated? ( >=dev-python/pygtk-2.15.2 ) nls? ( virtual/libintl ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 SLOT=0
-SRC_URI=http://ibus.googlecode.com/files/ibus-anthy-1.5.0.tar.gz
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=9e7ba84802397ae448995e51c95f72ad
+SRC_URI=http://ibus.googlecode.com/files/ibus-anthy-1.5.0.tar.gz https://raw.github.com/ibus/ibus-anthy/1.5.0/engine/anthy.i
+_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	d40dc948067bd3db1c8ebf7d51897313	gnome2-utils	794d2847b4af390a1e020924876c8297	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=43a0e2b430427a788fd6b95ffbb23678

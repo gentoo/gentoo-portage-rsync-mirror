@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus-anthy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.41 2013/02/05 11:33:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.42 2013/02/09 13:04:49 naota Exp $
+
+  09 Feb 2013; Naohiro Aota <naota@gentoo.org>
+  +files/ibus-anthy-1.5.0-configure.patch, ibus-anthy-1.5.0.ebuild,
+  metadata.xml:
+  Support building pygtk2; Call icon cache update. #455614
 
 *ibus-anthy-1.5.0 (05 Feb 2013)
 

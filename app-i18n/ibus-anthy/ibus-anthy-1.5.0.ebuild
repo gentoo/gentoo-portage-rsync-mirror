@@ -1,28 +1,30 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.5.0.ebuild,v 1.1 2013/02/05 11:33:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.5.0.ebuild,v 1.2 2013/02/09 13:04:49 naota Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.5"
-inherit eutils python
+inherit eutils python autotools gnome2-utils
 
 DESCRIPTION="Japanese input method Anthy IMEngine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/ibus/"
-SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz
+	https://raw.github.com/ibus/ibus-anthy/${PV}/engine/anthy.i"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="nls"
+IUSE="deprecated nls"
 
-RDEPEND=">=app-i18n/ibus-1.2.0.20100111
+RDEPEND=">=app-i18n/ibus-1.5.0
 	app-i18n/anthy
-	>=dev-python/pygtk-2.15.2
+	deprecated? ( >=dev-python/pygtk-2.15.2 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-lang/swig
+	dev-libs/gobject-introspection
 	dev-util/intltool
 	virtual/pkgconfig
+	deprecated? ( dev-lang/swig )
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 
 pkg_setup() {
@@ -34,10 +36,15 @@ src_prepare() {
 	>py-compile #397497
 	sed -i -e "s/python/python2/" \
 		engine/ibus-engine-anthy.in setup/ibus-setup-anthy.in || die
+	epatch "${FILESDIR}"/${P}-configure.patch
+	eautoreconf
+	cp "${DISTDIR}"/anthy.i "${S}"/engine # deal with packaging bug
 }
 
 src_configure() {
-	econf $(use_enable nls)
+	econf --enable-private-png \
+		$(use_enable deprecated pygtk2-anthy) \
+		$(use_enable nls)
 }
 
 src_install() {
@@ -46,6 +53,10 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README
 
 	find "${ED}" -name '*.la' -type f -delete || die
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
 }
 
 pkg_postinst() {
@@ -60,4 +71,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	python_mod_cleanup /usr/share/${PN}
+	gnome2_icon_cache_update
 }
