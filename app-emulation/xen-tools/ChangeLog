@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.134 2013/02/03 21:36:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.135 2013/02/09 07:14:00 idella4 Exp $
+
+  09 Feb 2013; Ian Delaney <idella4@gentoo.org> files/xendomains-screen.confd,
+  files/xendomains.initd-r2, xen-tools-4.2.1-r1.ebuild:
+  Added xendomains.confd to start of xendomains-screen.confd suggested in Bug
+  #455622, edited xendomains.initd-r2 wrt suggestion from Bug #455626, fixes
+  both bugs by Tomas Mozes
 
   03 Feb 2013; Agostino Sarubbo <ago@gentoo.org> -xen-tools-4.1.1-r6.ebuild,
   -xen-tools-4.1.2-r3.ebuild, -xen-tools-4.2.0-r2.ebuild:

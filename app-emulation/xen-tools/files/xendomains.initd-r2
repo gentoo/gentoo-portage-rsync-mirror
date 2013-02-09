@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xendomains.initd-r2,v 1.4 2012/01/12 13:40:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xendomains.initd-r2,v 1.5 2013/02/09 07:14:00 idella4 Exp $
 
 opts="start stop status restart"
 
@@ -39,6 +39,7 @@ start() {
 	if using_screen ; then
 		ebegin "Creating screen session to hold domain consoles"
 		(  screen -c ${SCREENRC:-/dev/null} -d -m -S ${SCREEN_NAME} -t dom0 \
+		&& sleep 5 \
 		&& ${screen_cmd} zombie dr \
 		&& logrotate -f /etc/xen/xen-consoles.logrotate \
 		&& ${screen_cmd} logfile  /var/log/xen-consoles/%t.log \
