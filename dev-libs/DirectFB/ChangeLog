@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.130 2013/02/07 20:15:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.131 2013/02/09 16:10:36 hasufell Exp $
+
+*DirectFB-1.6.3-r1 (09 Feb 2013)
+
+  09 Feb 2013; Julian Ospald <hasufell@gentoo.org> -DirectFB-1.6.3.ebuild,
+  +DirectFB-1.6.3-r1.ebuild, +files/DirectFB-1.6.3-setregion.patch,
+  metadata.xml:
+  fix logic/syntax of --with-gfxdrivers and --with-inputdrivers, fix bug
+  #456112 , fix bug #456122 , drop broken video_cards_savage, remove old
 
 *DirectFB-1.6.3 (07 Feb 2013)
 

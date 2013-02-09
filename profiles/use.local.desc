@@ -1322,7 +1322,7 @@ dev-libs/DirectFB:bmp - build BMP image provider
 dev-libs/DirectFB:dynload - enable dynload support
 dev-libs/DirectFB:gles2 - build gles2 gfxdriver
 dev-libs/DirectFB:imlib2 - build Imlib2 image provider
-dev-libs/DirectFB:input_devices_input_hub - build input driver input_hub
+dev-libs/DirectFB:input_hub - provides an asynchronous interface to the input devices available and those being added/removed
 dev-libs/DirectFB:mpeg2 - build MPEG2 image provider
 dev-libs/DirectFB:multicore - enable multicore support
 dev-libs/DirectFB:pnm - build PNM (PBM/PGM/PPM) image provider

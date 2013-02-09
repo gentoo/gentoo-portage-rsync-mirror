@@ -16,9 +16,9 @@
 		<flag name="dynload">enable dynload support</flag>
 		<flag name="gles2">build gles2 gfxdriver</flag>
 		<flag name="imlib2">build Imlib2 image provider</flag>
+		<flag name="input_hub">provides an asynchronous interface to the input devices available and those being added/removed</flag>
 		<flag name="mpeg2">build MPEG2 image provider</flag>
 		<flag name="multicore">enable multicore support</flag>
 		<flag name="pnm">build PNM (PBM/PGM/PPM) image provider</flag>
-		<flag name="input_devices_input_hub">build input driver input_hub</flag>
 	</use>
 </pkgmetadata>

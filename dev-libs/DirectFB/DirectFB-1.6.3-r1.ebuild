@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.6.3.ebuild,v 1.1 2013/02/07 20:15:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.6.3-r1.ebuild,v 1.1 2013/02/09 16:10:36 hasufell Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs
@@ -13,15 +13,15 @@ I_TO_D_r128="ati128"
 I_TO_D_s3="unichrome"
 I_TO_D_sis="sis315"
 I_TO_D_via="cle266"
-# cyber5k davinci ep9x gl omap pxa3xx sh772x
-IUSE_VIDEO_CARDS=" intel mach64 mga neomagic nsc nvidia r128 radeon s3 savage sis tdfx via vmware"
+# cyber5k davinci ep9x omap pxa3xx sh772x savage pvr2d
+IUSE_VIDEO_CARDS=" intel mach64 mga neomagic nsc nvidia r128 radeon s3 sis tdfx via vmware"
 IUV=${IUSE_VIDEO_CARDS// / video_cards_}
 # echo `sed -n '/Possible inputdrivers are:/,/^$/{/\(Possible\|^input\)/d;s:\[ *::;s:\].*::;s:,::g;p}' configure.in`
 I_TO_D_elo2300="elo-input"
 I_TO_D_evdev="linuxinput"
-I_TO_D_mouse="ps2mouse serialmouse"
+I_TO_D_mouse="ps2mouse,serialmouse"
 # dbox2remote dreamboxremote gunze h3600_ts penmount sonypijogdial ucb1x00 wm97xx zytronic
-IUSE_INPUT_DEVICES=" dynapro elo2300 evdev input_hub joystick keyboard lirc mouse mutouch tslib"
+IUSE_INPUT_DEVICES=" dynapro elo2300 evdev joystick keyboard lirc mouse mutouch tslib"
 IUD=${IUSE_INPUT_DEVICES// / input_devices_}
 
 DESCRIPTION="Thin library on top of the Linux framebuffer devices"
@@ -32,7 +32,7 @@ SRC_URI="http://directfb.org/downloads/Core/${PN}-${PV:0:3}/${P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 -mips ~ppc ~ppc64 ~sh -sparc ~x86"
-IUSE="bmp debug dynload doc fbcon gif gles2 imlib2 jpeg jpeg2k mmx mng mpeg2 multicore opengl png pnm sdl sse static-libs svg truetype v4l vdpau X zlib ${IUV} ${IUD}"
+IUSE="bmp debug dynload doc fbcon gif gles2 imlib2 input_hub jpeg jpeg2k mmx mng mpeg2 multicore opengl png pnm sdl sse static-libs svg truetype v4l vdpau X zlib ${IUV} ${IUD}"
 REQUIRED_USE="gles2? ( opengl )"
 
 # gstreamer useflag broken
@@ -59,7 +59,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-flags.patch \
 		"${FILESDIR}"/${P}-pkgconfig.patch \
-		"${FILESDIR}"/${P}-build.patch
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-setregion.patch
 
 	mv configure.{in,ac} || die
 	eautoreconf
@@ -89,6 +90,18 @@ src_configure() {
 			|| ewarn "Disabling SDL since libSDL.so is broken"
 	fi
 
+	# fix --with-gfxdrivers= logic, because opengl, vdpau and gles2 are no video_cards
+	local gfxdrivers="$(driver_list video_cards ${IUSE_VIDEO_CARDS})"
+	use opengl && gfxdrivers="${gfxdrivers},gl"
+	use vdpau && gfxdrivers="${gfxdrivers},vdpau"
+	use gles2 && gfxdrivers="${gfxdrivers},gles2"
+	gfxdrivers="$(echo ${gfxdrivers} | sed 's/none,//')"
+
+	# fix --with-inputdrivers= logic, don't know where to put "input_hub"
+	local inputdrivers="$(driver_list input_devices ${IUSE_INPUT_DEVICES})"
+	use input_hub && inputdrivers="${inputdrivers},input_hub"
+	inputdrivers="$(echo ${inputdrivers} | sed 's/none,//')"
+
 	econf \
 		$(use_enable static-libs static) \
 		$(use_enable X x11) \
@@ -115,8 +128,8 @@ src_configure() {
 		$(use_enable dynload) \
 		$(use_enable opengl mesa) \
 		${sdlconf} \
-		--with-gfxdrivers="$(driver_list video_cards ${IUSE_VIDEO_CARDS}) $(usex opengl "gl" "") $(usex vdpau "vdpau" "") $(usex gles2 "gles2" "")" \
-		--with-inputdrivers="$(driver_list input_devices ${IUSE_INPUT_DEVICES})" \
+		--with-gfxdrivers="${gfxdrivers}" \
+		--with-inputdrivers="${inputdrivers}" \
 		--disable-vnc
 }
 
