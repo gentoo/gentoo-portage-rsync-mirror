@@ -1,6 +1,23 @@
 # ChangeLog for media-gfx/darktable
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.37 2013/02/07 22:25:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.39 2013/02/09 21:17:27 radhermit Exp $
+
+  09 Feb 2013; Tim Harder <radhermit@gentoo.org>
+  -files/darktable-0.9.3-no-rawspeed.patch,
+  -files/darktable-0.9.3-opencl-kernels.patch,
+  -files/darktable-0.9.3-system-libraw.patch,
+  -files/darktable-1.0.4-cflags.patch, -darktable-1.0.5.ebuild,
+  -darktable-1.1.1.ebuild, -darktable-1.1.2.ebuild,
+  -files/darktable-1.1-automagic-colord.patch,
+  -files/darktable-1.1-cflags.patch, -files/darktable-1.1-opencl-kernels.patch:
+  Remove old.
+
+*darktable-1.1.3 (09 Feb 2013)
+
+  09 Feb 2013; Tim Harder <radhermit@gentoo.org> +darktable-1.1.3.ebuild,
+  darktable-9999.ebuild:
+  Version bump. Add explicit deps on glib and pango and slots for tiff and
+  libpng.
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> darktable-1.1.1.ebuild,
   darktable-1.1.2.ebuild, darktable-1.1.2-r1.ebuild:
