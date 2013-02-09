@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/citeproc-hs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/citeproc-hs/ChangeLog,v 1.6 2012/12/07 10:35:20 slyfox Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/citeproc-hs/ChangeLog,v 1.7 2013/02/09 19:15:55 slyfox Exp $
+
+*citeproc-hs-0.3.7 (09 Feb 2013)
+
+  09 Feb 2013; Sergei Trofimovich <slyfox@gentoo.org> +citeproc-hs-0.3.7.ebuild:
+  Version bump.
 
   07 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> citeproc-hs-0.3.2.ebuild,
   citeproc-hs-0.3.4.ebuild:

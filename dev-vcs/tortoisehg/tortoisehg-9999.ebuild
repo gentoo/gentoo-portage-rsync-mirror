@@ -1,22 +1,20 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-9999.ebuild,v 1.13 2012/11/24 22:37:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-9999.ebuild,v 1.15 2013/02/09 19:21:12 floppym Exp $
 
-EAPI=4
+EAPI=5
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-SUPPORT_PYTHON_ABIS=1
-PYTHON_DEPEND="2:2.5"
-RESTRICT_PYTHON_ABIS="2.4 3.* *-pypy-*"
-
-inherit distutils eutils
+inherit distutils-r1 eutils
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64 ~x86"
 	SRC_URI="mirror://bitbucket/${PN}/targz/downloads/${P}.tar.gz"
-	HG_DEPEND=">=dev-vcs/mercurial-2.3 <dev-vcs/mercurial-2.5"
+	HG_DEPEND=">=dev-vcs/mercurial-2.4 <dev-vcs/mercurial-2.5"
 else
 	inherit mercurial
 	EHG_REPO_URI="https://bitbucket.org/tortoisehg/thg"
+	EHG_REVISION="stable"
 	KEYWORDS=""
 	SRC_URI=""
 	HG_DEPEND="dev-vcs/mercurial"
@@ -30,16 +28,19 @@ SLOT="0"
 IUSE="doc"
 
 RDEPEND="${HG_DEPEND}
-	dev-python/iniparse
-	dev-python/pygments
+	dev-python/iniparse[${PYTHON_USEDEP}]
+	dev-python/pygments[${PYTHON_USEDEP}]
 	dev-python/PyQt4
 	dev-python/qscintilla-python"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-1.0.3 )"
 
-src_prepare() {
+# Workaround race condition in build_qt
+DISTUTILS_IN_SOURCE_BUILD=1
+
+python_prepare_all() {
 	if [[ ${LINGUAS+set} ]]; then
-		pushd i18n/tortoisehg > /dev/null || die
+		cd i18n/tortoisehg || die
 		local x y keep
 		for x in *.po; do
 			keep=false
@@ -51,28 +52,21 @@ src_prepare() {
 			done
 			${keep} || rm "${x}" || die
 		done
-		popd > /dev/null || die
+		cd "${S}" || die
 	fi
-
-	distutils_src_prepare
+	distutils-r1_python_prepare_all
 }
 
-src_compile() {
-	distutils_src_compile
-
-	if use doc ; then
-		emake -C doc html
-	fi
+python_compile_all() {
+	use doc && emake -C doc html
 }
 
-src_install() {
-	distutils_src_install
+python_install_all() {
+	distutils-r1_python_install_all
 	dodoc doc/ReadMe*.txt doc/TODO
-
 	if use doc ; then
-		dohtml -r doc/build/html
+		dohtml -r doc/build/html/
 	fi
-
 	newicon -s scalable icons/scalable/apps/thg-logo.svg tortoisehg_logo.svg
 	domenu contrib/${PN}.desktop
 }

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.1.ebuild,v 1.10 2013/01/21 16:01:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.1.ebuild,v 1.11 2013/02/09 19:11:58 pacho Exp $
 
 EAPI=4
 
-inherit elisp-common flag-o-matic multilib wxwidgets toolchain-funcs
+inherit elisp-common flag-o-matic multilib readme.gentoo toolchain-funcs wxwidgets
 
 DESCRIPTION="Command-line driven interactive plotting program"
 HOMEPAGE="http://www.gnuplot.info/"
@@ -94,6 +94,18 @@ src_prepare() {
 	if use prefix && use qt4; then
 		append-ldflags -Wl,-rpath,"${EPREFIX}"/usr/$(get_libdir)/qt4
 	fi
+
+	DOC_CONTENTS="Gnuplot no longer links against pdflib, see the ChangeLog for
+		details. You can use the \"pdfcairo\" terminal for PDF output."
+	use cairo || DOC_CONTENTS+=" It is available with USE=\"cairo\"."
+	use svga && DOC_CONTENTS+=" In order to enable ordinary users to use SVGA console graphics
+			gnuplot needs to be set up as setuid root. Please note that
+			this is usually considered to be a security hazard.
+			As root, manually \"chmod u+s /usr/bin/gnuplot\"."
+	use gd && DOC_CONTENTS+=" For font support in png/jpeg/gif output, you may have to
+			set the GDFONTPATH and GNUPLOT_DEFAULT_GDFONT environment
+			variables. See the FAQ file in /usr/share/doc/${PF}/
+			for more information."
 }
 
 src_configure() {
@@ -240,6 +252,8 @@ src_install () {
 		dodoc lisp/ChangeLog lisp/README
 		use doc && dodoc lisp/gpelcard.pdf
 	fi
+
+	readme.gentoo_create_doc
 }
 
 src_test() {
@@ -249,25 +263,7 @@ src_test() {
 pkg_postinst() {
 	use emacs && elisp-site-regen
 	use latex && texmf-update
-
-	elog "Gnuplot no longer links against pdflib, see the ChangeLog for"
-	elog "details. You can use the \"pdfcairo\" terminal for PDF output."
-	use cairo || elog "It is available with USE=\"cairo\"."
-
-	if use svga; then
-		echo
-		elog "In order to enable ordinary users to use SVGA console graphics"
-		elog "gnuplot needs to be set up as setuid root. Please note that"
-		elog "this is usually considered to be a security hazard."
-		elog "As root, manually \"chmod u+s /usr/bin/gnuplot\"."
-	fi
-	if use gd; then
-		echo
-		elog "For font support in png/jpeg/gif output, you may have to"
-		elog "set the GDFONTPATH and GNUPLOT_DEFAULT_GDFONT environment"
-		elog "variables. See the FAQ file in /usr/share/doc/${PF}/"
-		elog "for more information."
-	fi
+	readme.gentoo_print_elog
 }
 
 pkg_postrm() {

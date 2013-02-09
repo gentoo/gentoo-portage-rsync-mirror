@@ -1,6 +1,16 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.29 2013/01/04 08:23:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.31 2013/02/09 19:21:12 floppym Exp $
+
+*tortoisehg-2.7 (09 Feb 2013)
+
+  09 Feb 2013; Mike Gilbert <floppym@gentoo.org> +tortoisehg-2.7.ebuild,
+  tortoisehg-9999.ebuild:
+  Version bump, bug 456344. Depend on <mercurial-2.5 due to compatibility
+  problems.
+
+  09 Feb 2013; Mike Gilbert <floppym@gentoo.org> tortoisehg-9999.ebuild:
+  Convert to distutils-r1.
 
   04 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> tortoisehg-2.6.2.ebuild:
   Use official upstream tarball.
