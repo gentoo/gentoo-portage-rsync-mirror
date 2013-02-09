@@ -1,10 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7458 2013/02/09 18:32:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7461 2013/02/09 22:16:42 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org> profiles.desc:
+  m68k: remove 10.0 profiles from profiles.desc
+
+  09 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org> profiles.desc:
+  ia64: remove 10.0 profiles from profiles.desc
+
+  09 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +default/linux/ia64/10.0/deprecated, profiles.desc:
+  Mark ia64 13.0 profiles stable
 
   09 Feb 2013; Anthony G. Basile <blueness@gentoo.org>
   +hardened/linux/13.0/amd64/make.defaults,

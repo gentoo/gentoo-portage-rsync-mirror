@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.11-r1.ebuild,v 1.2 2013/02/07 21:20:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.11-r1.ebuild,v 1.3 2013/02/09 22:09:17 eras Exp $
 
 EAPI="4"
 inherit eutils flag-o-matic versionator
@@ -39,6 +39,7 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.11_uninitialized.patch"
+	epatch "${FILESDIR}/${PN}-1.11_clang.patch"
 	epatch "${FILESDIR}/${PN}_krb5-config_LDFLAGS.patch"
 }
 

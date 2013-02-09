@@ -1,6 +1,10 @@
 # ChangeLog for app-office/skrooge
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.35 2013/01/25 08:31:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.36 2013/02/09 22:20:31 scarabeus Exp $
+
+  09 Feb 2013; Tomáš Chvátal <scarabeus@gentoo.org> -skrooge-1.4.0.ebuild,
+  skrooge-1.5.1.ebuild:
+  Stable on amd64 and x86. Drop older testing only.
 
 *skrooge-1.5.1 (25 Jan 2013)
 
