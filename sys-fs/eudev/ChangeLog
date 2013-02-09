@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.27 2013/02/04 19:39:43 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.28 2013/02/09 07:58:36 lu_zero Exp $
+
+  09 Feb 2013; Luca Barbato <lu_zero@gentoo.org> eudev-1_beta2-r1.ebuild,
+  eudev-9999.ebuild, +files/eudev-hwdb-offset-root.patch:
+  Update eudev ebuilds to support ROOT properly
 
   04 Feb 2013; Ian Stakenvicius <axs@gentoo.org> eudev-9999.ebuild:
   adjusted udevdir path to always be /lib, bug 455326

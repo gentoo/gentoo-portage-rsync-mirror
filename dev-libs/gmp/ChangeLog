@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.173 2013/01/15 05:45:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.174 2013/02/09 07:57:09 vapier Exp $
+
+  09 Feb 2013; Mike Frysinger <vapier@gentoo.org> gmp-5.1.0.ebuild,
+  metadata.xml:
+  Add support for USE=pgo #454912 by Richard Yao.
 
   15 Jan 2013; Mike Frysinger <vapier@gentoo.org> gmp-5.1.0.ebuild:
   Run tests in parallel.

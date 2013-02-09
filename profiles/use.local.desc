@@ -1386,6 +1386,7 @@ dev-libs/geoip:perl-geoipupdate - Install pure perl version of geoipupdate, with
 dev-libs/gf2x:bindist - Disable automatic fine-tuning to local processor features like pclmul or sse2.
 dev-libs/glib:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-libs/glib:utils - Install gtester-report utility to generate test report files for your software.
+dev-libs/gmp:pgo - after building gmp, run some tests against to produce faster libraries -- this option will double the compile time
 dev-libs/gobject-introspection:doctool - Install g-ir-doc-tool for generating documentation from introspected data
 dev-libs/igraph:arpack - Use external sci-libs/arpack
 dev-libs/igraph:blas - Use external virtual/blas numerical library

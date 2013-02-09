@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.10.2.ebuild,v 1.1 2013/02/08 14:57:19 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.10.2.ebuild,v 1.2 2013/02/09 07:39:33 vapier Exp $
 
 EAPI=5
-inherit autotools eutils libtool toolchain-funcs readme.gentoo
+inherit autotools eutils libtool readme.gentoo
 
 DESCRIPTION="A library for configuring and customizing font access"
 HOMEPAGE="http://fontconfig.org/"
@@ -46,16 +46,6 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
-	if tc-is-cross-compiler; then
-		myconf="--with-arch=${ARCH}"
-		sed -i -e "s:^CFLAGS = @CFLAGS@:CFLAGS =:g" \
-			fc-case/Makefile.in \
-			fc-lang/Makefile.in \
-			fc-glyphname/Makefile.in \
-			fc-arch/Makefile.in
-	fi
-
 	# always enable docs to install manpages
 	econf \
 		$(use_enable static-libs static) \
@@ -64,15 +54,14 @@ src_configure() {
 		--localstatedir=/var \
 		--with-default-fonts=/usr/share/fonts \
 		--with-add-fonts=/usr/local/share/fonts \
-		--with-templatedir=/etc/fonts/conf.avail \
-		${myconf}
+		--with-templatedir=/etc/fonts/conf.avail
 }
 
 src_install() {
 	emake DESTDIR="${D}" install
 	emake DESTDIR="${D}" -C doc install-man
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	find "${ED}" -name '*.la' -delete
 
 	#fc-lang directory contains language coverage datafiles
 	#which are needed to test the coverage of fonts.

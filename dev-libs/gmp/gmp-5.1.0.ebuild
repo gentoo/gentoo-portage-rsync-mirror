@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.0.ebuild,v 1.4 2013/01/15 05:45:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.0.ebuild,v 1.5 2013/02/09 07:57:09 vapier Exp $
 
 inherit flag-o-matic eutils libtool unpacker toolchain-funcs
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.xz
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-IUSE="doc cxx static-libs"
+IUSE="doc cxx pgo static-libs"
 
 DEPEND="sys-devel/m4
 	app-arch/xz-utils"
@@ -71,6 +71,14 @@ src_compile() {
 		$(use_enable static-libs static)
 
 	emake || die
+
+	if use pgo ; then
+		emake -j1 -C tune tuneup || die
+		rm gmp-mparam.h || die
+		./tune/tuneup | tee gmp-mparam.h
+		emake clean || die
+		emake || die
+	fi
 }
 
 src_test() {

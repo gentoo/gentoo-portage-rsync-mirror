@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta2-r1.ebuild,v 1.6 2013/01/28 21:25:21 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1_beta2-r1.ebuild,v 1.7 2013/02/09 07:58:36 lu_zero Exp $
 
 EAPI=5
 
@@ -117,6 +117,9 @@ src_prepare()
 	# Fix a typo found after 1_beta2 was rolled out
 	epatch "${FILESDIR}/${PN}-fix-typo-util.c.patch"
 
+	# Backport offset root from master eudev
+	epatch "${FILESDIR}/${PN}-hwdb-offset-root.patch"
+
 	# Fix selinux - make it optional as eautoreconf is required
 	if use selinux ; then
 		epatch "${FILESDIR}/${PN}-fix-selinux.patch"
@@ -222,7 +225,7 @@ pkg_postinst()
 		einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
-	use hwdb && udevadm hwdb --update
+	use hwdb && udevadm hwdb --update --root="${ROOT%/}"
 
 	ewarn
 	ewarn "You need to restart eudev as soon as possible to make the"
