@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.55.7425_beta.ebuild,v 1.1 2013/02/02 00:29:51 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.55.7425_beta-r1.ebuild,v 1.1 2013/02/09 21:51:12 ottxor Exp $
 
 EAPI=5
 
@@ -57,6 +57,12 @@ pkg_nofetch() {
 	einfo "This version is no longer available from Google."
 	einfo "Note that Gentoo cannot mirror the distfiles due to license reasons, so we have to follow the bump."
 	einfo "Please file a version bump bug on http://bugs.gentoo.org (search existing bugs for ${PN} first!)."
+}
+
+pkg_setup() {
+	if type -p ifconfig > /dev/null && ! ifconfig | grep -q "^eth[0-9]" ; then
+		ewarn "${PN} needs at least one network interface named eth[0-9] (bug #455896)"
+	fi
 }
 
 src_install() {

@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/google-musicmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/ChangeLog,v 1.24 2013/02/02 00:29:51 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/ChangeLog,v 1.25 2013/02/09 21:51:12 ottxor Exp $
+
+*google-musicmanager-1.0.55.7425_beta-r1 (09 Feb 2013)
+
+  09 Feb 2013; Christoph Junghans <ottxor@gentoo.org>
+  +google-musicmanager-1.0.55.7425_beta-r1.ebuild,
+  -google-musicmanager-1.0.55.7425_beta.ebuild:
+  added warning about bug #455896
 
 *google-musicmanager-1.0.55.7425_beta (02 Feb 2013)
 

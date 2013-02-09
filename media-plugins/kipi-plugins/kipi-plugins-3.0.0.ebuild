@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.0.0.ebuild,v 1.1 2013/02/09 19:53:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.0.0.ebuild,v 1.2 2013/02/09 21:46:34 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 OPENGL_REQUIRED="optional"
 
@@ -49,7 +49,10 @@ DEPEND="
 			  x11-libs/gtk+:2
 			)
 	mediawiki?	( >=net-libs/libmediawiki-3.0.0 )
-	panorama?	( dev-libs/boost )
+	panorama?	(
+			  sys-devel/bison
+			  sys-devel/flex
+			)
 	redeyes?	( media-libs/opencv )
 	scanner? 	(
 			  $(add_kdebase_dep libksane)
@@ -74,7 +77,7 @@ RESTRICT=test
 # bug 420203
 
 PATCHES=(
-	"${FILESDIR}/${PN}-2.6.0_beta3-options.patch"
+	"${FILESDIR}/${PN}-3.0.0-options.patch"
 )
 
 src_prepare() {
