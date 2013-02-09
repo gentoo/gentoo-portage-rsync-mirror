@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/espresso
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/ChangeLog,v 1.11 2012/10/09 08:52:29 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/ChangeLog,v 1.12 2013/02/09 18:56:26 pacho Exp $
+
+  09 Feb 2013; Pacho Ramos <pacho@gentoo.org> espresso-3.1.1.ebuild:
+  Use readme.gentoo.eclass for elog message (#456068)
 
 *espresso-3.1.1 (09 Oct 2012)
 

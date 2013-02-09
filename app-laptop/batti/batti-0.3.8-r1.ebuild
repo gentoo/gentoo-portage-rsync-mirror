@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/batti-0.3.8-r1.ebuild,v 1.4 2011/12/04 10:16:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/batti-0.3.8-r1.ebuild,v 1.5 2013/02/09 18:57:10 idl0r Exp $
 
 EAPI=3
 
@@ -22,9 +22,8 @@ IUSE="libnotify"
 RDEPEND="dev-python/pygtk
 	dev-python/dbus-python
 	sys-power/upower
-	x11-themes/hicolor-icon-theme
-	libnotify? ( x11-libs/libnotify )
-	virtual/freedesktop-icon-theme"
+	x11-themes/gnome-icon-theme
+	libnotify? ( x11-libs/libnotify )"
 DEPEND=""
 
 DOCS="AUTHORS"

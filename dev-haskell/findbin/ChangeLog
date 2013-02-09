@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/findbin
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/findbin/ChangeLog,v 1.1 2013/02/09 18:54:42 slyfox Exp $
+
+*findbin-0.0.5-r1 (09 Feb 2013)
+
+  09 Feb 2013; Sergei Trofimovich <slyfox@gentoo.org> +findbin-0.0.5-r1.ebuild,
+  +metadata.xml:
+  A haskell library to 'Locate directory of original program'. A darcs-2.8.4+
+  depend.

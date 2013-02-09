@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.1.1.ebuild,v 1.1 2012/10/09 08:52:29 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.1.1.ebuild,v 1.2 2013/02/09 18:56:26 pacho Exp $
 
 EAPI=4
 
-inherit autotools-utils savedconfig
+inherit autotools-utils readme.gentoo savedconfig
 
 DESCRIPTION="Extensible Simulation Package for Research on Soft matter"
 HOMEPAGE="http://www.espressomd.org"
@@ -50,6 +50,20 @@ src_prepare() {
 		#tclline uses stty, which has different exit code on Darwin
 		sed -i '/source.*tclline/s/^/#/' "scripts/init.tcl" || die
 	fi
+
+	DISABLE_AUTOFORMATTING="yes"
+	DOC_CONTENTS=( "
+Please read and cite:
+ESPResSo, Comput. Phys. Commun. 174(9) ,704, 2006.
+http://dx.doi.org/10.1016/j.cpc.2005.10.005
+
+If you need more features, change
+/etc/portage/savedconfig/${CATEGORY}/${PF}
+and reemerge with USE=savedconfig
+
+For a full feature list see:
+/usr/share/${PN}/myconfig-sample.h
+	" )
 }
 
 src_configure() {
@@ -103,19 +117,11 @@ src_install() {
 		insinto /usr/share/${PN}/packages
 		doins -r packages/*
 	fi
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
-	elog
-	elog "Please read and cite:"
-	elog "ESPResSo, Comput. Phys. Commun. 174(9) ,704, 2006."
-	elog "http://dx.doi.org/10.1016/j.cpc.2005.10.005"
-	elog
-	elog "If you need more features, change"
-	elog "/etc/portage/savedconfig/${CATEGORY}/${PF}"
-	elog "and reemerge with USE=savedconfig"
-	elog
-	elog "For a full feature list see:"
-	elog "/usr/share/${PN}/myconfig-sample.h"
-	elog
+	savedconfig_pkg_postinst
+	readme.gentoo_pkg_postinst
 }

@@ -1,0 +1,5 @@
+# Copyright 1999-2013 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/13.0/amd64/x32/make.defaults,v 1.1 2013/02/09 18:32:24 blueness Exp $
+
+CHOST="x86_64-pc-linux-gnux32"

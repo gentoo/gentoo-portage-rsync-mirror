@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ghc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.229 2012/11/14 09:34:39 slyfox Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.230 2013/02/09 18:33:57 slyfox Exp $
+
+*ghc-7.6.2 (09 Feb 2013)
+
+  09 Feb 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/ghc-7.5.20120505-system-libffi.patch, +ghc-7.6.2.ebuild,
+  -ghc-6.10.4-r1.ebuild, -ghc-6.12.3.ebuild:
+  Bump up to 7.6.2. Removed old.
 
 *ghc-7.4.2 (14 Nov 2012)
 

@@ -1,10 +1,34 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7457 2013/02/09 12:55:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7458 2013/02/09 18:32:23 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Feb 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened/linux/13.0/amd64/make.defaults,
+  +hardened/linux/13.0/amd64/no-multilib/make.defaults,
+  +hardened/linux/13.0/amd64/no-multilib/package.mask,
+  +hardened/linux/13.0/amd64/no-multilib/package.use.mask,
+  +hardened/linux/13.0/amd64/no-multilib/parent,
+  +hardened/linux/13.0/amd64/no-multilib/selinux/parent,
+  +hardened/linux/13.0/amd64/no-multilib/use.mask,
+  +hardened/linux/13.0/amd64/package.mask,
+  +hardened/linux/13.0/amd64/package.use,
+  +hardened/linux/13.0/amd64/package.use.mask,
+  +hardened/linux/13.0/amd64/parent, +hardened/linux/13.0/amd64/selinux/parent,
+  +hardened/linux/13.0/amd64/use.mask,
+  +hardened/linux/13.0/amd64/x32/make.defaults,
+  +hardened/linux/13.0/amd64/x32/parent, +hardened/linux/13.0/make.defaults,
+  +hardened/linux/13.0/package.mask, +hardened/linux/13.0/package.use.force,
+  +hardened/linux/13.0/package.use.mask, +hardened/linux/13.0/packages,
+  +hardened/linux/13.0/parent, +hardened/linux/13.0/use.mask,
+  +hardened/linux/13.0/x86/make.defaults,
+  +hardened/linux/13.0/x86/package.mask,
+  +hardened/linux/13.0/x86/package.use.mask, +hardened/linux/13.0/x86/parent,
+  +hardened/linux/13.0/x86/selinux/parent, +hardened/linux/13.0/x86/use.mask:
+  Add hardened/linux/13.0 for amd64 and x86 for testing
 
   09 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org> profiles.desc:
   x86: remove 10.0 profiles from profiles.desc
