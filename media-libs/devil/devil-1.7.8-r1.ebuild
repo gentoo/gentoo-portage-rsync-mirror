@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8-r1.ebuild,v 1.7 2012/12/17 20:35:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8-r1.ebuild,v 1.8 2013/02/09 22:49:12 hasufell Exp $
 
 EAPI=2
 
@@ -15,12 +15,13 @@ SRC_URI="mirror://sourceforge/openil/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 x86"
-IUSE="allegro gif glut jpeg lcms mng nvtt openexr opengl png sdl sse sse2 sse3 static-libs tiff xpm X"
+IUSE="allegro gif glut jpeg jpeg2k lcms mng nvtt openexr opengl png sdl sse sse2 sse3 static-libs tiff xpm X"
 
 RDEPEND="allegro? ( media-libs/allegro:0 )
 	gif? ( media-libs/giflib )
 	glut? ( media-libs/freeglut )
 	jpeg? ( virtual/jpeg )
+	jpeg2k? ( media-libs/jasper )
 	lcms? ( =media-libs/lcms-1* )
 	mng? ( media-libs/libmng )
 	nvtt? ( media-gfx/nvidia-texture-tools )
@@ -55,6 +56,7 @@ src_configure() {
 		$(use_enable openexr exr) \
 		$(use_enable gif) \
 		$(use_enable jpeg) \
+		$(use_enable jpeg2k jp2) \
 		$(use_enable lcms) \
 		$(use_enable mng) \
 		$(use_enable png) \

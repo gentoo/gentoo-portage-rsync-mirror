@@ -5,8 +5,8 @@ HOMEPAGE=http://packages.debian.org/testing/utils/powermgmt-base
 IUSE=+pm-utils
 KEYWORDS=amd64 arm ia64 ppc ppc64 x86
 LICENSE=GPL-2
-RDEPEND=sys-apps/gawk sys-apps/grep virtual/modutils pm-utils? ( >=sys-power/pm-utils-1.4.1 )
+RDEPEND=!pm-utils? ( virtual/awk ) sys-apps/grep virtual/modutils pm-utils? ( >=sys-power/pm-utils-1.4.1 )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/p/powermgmt-base/powermgmt-base_1.31.tar.gz
 _eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=b817d836615c3cbbe6a2dc6cb5434952
+_md5_=c1a9b4cb7ee4b327edcf569ad336ee39
