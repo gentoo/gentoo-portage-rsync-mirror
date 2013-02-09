@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.78 2013/01/31 23:11:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.79 2013/02/09 08:07:03 graaff Exp $
+
+*mysql-workbench-5.2.46 (09 Feb 2013)
+
+  09 Feb 2013; Hans de Graaff <graaff@gentoo.org>
+  +mysql-workbench-5.2.46.ebuild:
+  Version bump.
 
   31 Jan 2013; Agostino Sarubbo <ago@gentoo.org> mysql-workbench-5.2.45.ebuild:
   Stable for ppc, wrt bug #454320

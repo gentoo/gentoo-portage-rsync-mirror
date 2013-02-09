@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libstrl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstrl/ChangeLog,v 1.10 2012/01/14 14:55:15 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstrl/ChangeLog,v 1.11 2013/02/09 08:30:15 binki Exp $
+
+  09 Feb 2013; Nathan Phillip Brink <binki@gentoo.org> libstrl-0.5.1.ebuild:
+  Add blockers on mail-filter/opendkim-2.7.0 through mail-filter/opendkim-2.7.2
+  due to bug #454938 and bug #441790 reported by Flameeyes.
 
   14 Jan 2012; Michał Górny <mgorny@gentoo.org> libstrl-0.5.1.ebuild:
   --docdir is now passed within autotools-utils.eclass.
@@ -43,4 +47,3 @@
   +metadata.xml:
   Moved from sunrise overlay. Thanks to Nathan Phillip Brink (ohnobinki)
   <ohnobinki@ohnopublishing.net>. Bug #351941
-
