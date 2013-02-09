@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.219 2013/01/27 00:41:32 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.220 2013/02/09 08:34:31 pesa Exp $
+
+*qt-gui-4.8.4-r1 (09 Feb 2013)
+
+  09 Feb 2013; Davide Pesavento <pesa@gentoo.org> +files/CVE-2013-0254.patch,
+  +qt-gui-4.8.4-r1.ebuild:
+  Apply upstream patch for CVE-2013-0254 (Gentoo bug #455884)
 
   27 Jan 2013; Davide Pesavento <pesa@gentoo.org> qt-gui-4.8.4.ebuild:
   Add a few missing QCONFIG_ADD and QCONFIG_DEFINE.

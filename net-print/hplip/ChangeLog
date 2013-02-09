@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.257 2012/12/15 09:31:35 billie Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.258 2013/02/09 08:57:51 billie Exp $
+
+*hplip-3.12.11-r1 (09 Feb 2013)
+
+  09 Feb 2013; Daniel Pielmeier <billie@gentoo.org> +hplip-3.12.11-r1.ebuild:
+  Revision bump. Switch to python-r1 to fix bug #455158.
 
   15 Dec 2012; Daniel Pielmeier <billie@gentoo.org> -hplip-3.12.9-r1.ebuild,
   -hplip-3.12.10a-r1.ebuild:

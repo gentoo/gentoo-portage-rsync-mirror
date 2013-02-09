@@ -1,14 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.10a.ebuild,v 1.10 2013/02/09 08:57:51 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.11-r1.ebuild,v 1.1 2013/02/09 08:57:51 billie Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="!minimal? 2"
-PYTHON_USE_WITH="threads xml"
-PYTHON_USE_WITH_OPT="!minimal"
+PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="threads,xml"
 
-inherit eutils fdo-mime linux-info python udev autotools toolchain-funcs
+inherit eutils fdo-mime linux-info python-single-r1 udev autotools toolchain-funcs
 
 DESCRIPTION="HP Linux Imaging and Printing. Includes printer, scanner, fax drivers and service tools."
 HOMEPAGE="http://hplipopensource.com/hplip-web/index.html"
@@ -17,16 +16,20 @@ SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 # zeroconf does not work properly with >=cups-1.4.
 # Thus support for it is also disabled in hplip.
 IUSE="doc fax +hpcups hpijs kde libnotify -libusb0 minimal parport policykit qt4 scanner snmp static-ppds X"
 
+# TODO: check if net-print/cups, sys-apps/dbus, net-analyzer/net-snmp
+# and dev-python/notify-python are migrated to python-r1
+
 COMMON_DEPEND="
 	virtual/jpeg
 	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
 	!minimal? (
+		${PYTHON_DEPS}
 		>=net-print/cups-1.4.0
 		!libusb0? ( virtual/libusb:1 )
 		libusb0? ( virtual/libusb:0 )
@@ -43,15 +46,15 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	>=app-text/ghostscript-gpl-8.71-r3
-	dev-python/dbus-python
+	>=dev-python/dbus-python-1.1.1-r1[${PYTHON_USEDEP}]
 	policykit? (
 		sys-auth/polkit
 	)
 	!minimal? (
-		dev-python/pygobject:2
+		>=dev-python/pygobject-2.28.6-r53:2[${PYTHON_USEDEP}]
 		kernel_linux? ( virtual/udev !<sys-fs/udev-114 )
 		scanner? (
-			dev-python/imaging
+			>=dev-python/imaging-1.1.7-r2[${PYTHON_USEDEP}]
 			X? ( || (
 				kde? ( kde-misc/skanlite )
 				media-gfx/xsane
@@ -59,11 +62,11 @@ RDEPEND="${COMMON_DEPEND}
 			) )
 		)
 		fax? (
-			dev-python/reportlab
-			dev-python/dbus-python
+			>=dev-python/reportlab-2.6[${PYTHON_USEDEP}]
+			>=dev-python/dbus-python-1.1.1-r1[${PYTHON_USEDEP}]
 		)
 		qt4? (
-			dev-python/PyQt4[dbus,X]
+			>=dev-python/PyQt4-4.9.6-r2[dbus,X,${PYTHON_USEDEP}]
 			libnotify? (
 				dev-python/notify-python
 			)
@@ -74,10 +77,7 @@ CONFIG_CHECK="~PARPORT ~PPDEV"
 ERROR_PARPORT="Please make sure kernel parallel port support is enabled (PARPORT and PPDEV)."
 
 pkg_setup() {
-	if ! use minimal; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
+	use !minimal && python-single-r1_pkg_setup
 
 	! use qt4 && ewarn "You need USE=qt4 for the hplip GUI."
 
@@ -99,13 +99,27 @@ pkg_setup() {
 }
 
 src_prepare() {
-	use !minimal && python_convert_shebangs -q -r 2 .
+	if use !minimal ; then
+		python_export EPYTHON PYTHON
+		python_fix_shebang .
+	fi
 
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
 
-	# Fix for Gentoo bug #345725
+	# Make desktop files follow the specification
+	# Gentoo bug: https://bugs.gentoo.org/show_bug.cgi?id=443680
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/1080324
+	sed -i -e '/^Categories=/s/Application;//' \
+		-e '/^Encoding=.*/d' hplip.desktop.in || die
+	sed -i -e '/^Categories=/s/Application;//' \
+		-e '/^Version=.*/d' \
+		-e '/^Comment=.*/d' hplip-systray.desktop.in || die
+
+	# Fix for Gentoo bug https://bugs.gentoo.org/show_bug.cgi?id=345725
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/880847,
+	# https://bugs.launchpad.net/hplip/+bug/500086
 	local udevdir=$(udev_get_udevdir)
 	sed -i -e "s|/etc/udev|${udevdir}|g" \
 		$(find . -type f -exec grep -l /etc/udev {} +) || die
@@ -215,7 +229,7 @@ src_install() {
 	default
 
 	# Installed by sane-backends
-	# Gentoo Bug: #201023
+	# Gentoo Bug: https://bugs.gentoo.org/show_bug.cgi?id=201023
 	rm -f "${D}"/etc/sane.d/dll.conf || die
 
 	rm -f "${D}"/usr/share/doc/${PF}/{copyright,README_LIBJPG,COPYING} || die
@@ -225,12 +239,14 @@ src_install() {
 	rm -rf "${D}"/usr/share/hal || die
 
 	find "${D}" -name '*.la' -exec rm -rf {} + || die
+
+	if use !minimal ; then
+		python_export EPYTHON PYTHON
+		python_optimize "${D}"/usr/share/hplip
+	fi
 }
 
 pkg_postinst() {
-	use !minimal && python_mod_optimize /usr/share/${PN}
-	fdo-mime_desktop_database_update
-
 	if [[ -z "${REPLACING_VERSIONS}" ]]; then
 		elog "For more information on setting up your printer please take"
 		elog "a look at the hplip section of the gentoo printing guide:"
@@ -238,9 +254,4 @@ pkg_postinst() {
 		elog
 		elog "Any user who wants to print must be in the lp group."
 	fi
-}
-
-pkg_postrm() {
-	use !minimal && python_mod_cleanup /usr/share/${PN}
-	fdo-mime_desktop_database_update
 }
