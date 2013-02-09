@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.6 2013/01/22 17:08:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.7 2013/02/08 23:08:06 bicatali Exp $
 
 EAPI=4
 
@@ -95,8 +95,7 @@ src_test() {
 
 src_install() {
 	perl-module_src_install
-	cp Doc/{scantree.pl,mkhtmldoc.pl} \
-		"${ED}"/${VENDOR_ARCH}/PDL/Doc/ || die
+	cp Doc/{scantree,mkhtmldoc}.pl "${D}"/${VENDOR_ARCH}/PDL/Doc || die
 }
 
 pkg_postinst() {
