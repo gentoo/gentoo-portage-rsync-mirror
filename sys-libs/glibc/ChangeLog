@@ -1,5 +1,14 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.921 2013/01/28 19:53:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.922 2013/02/09 04:42:17 vapier Exp $
+
+  09 Feb 2013; Mike Frysinger <vapier@gentoo.org> ChangeLog-2007,
+  files/eblits/src_unpack.eblit, glibc-2.10.1-r1.ebuild, glibc-2.11.3.ebuild,
+  glibc-2.12.1-r3.ebuild, glibc-2.12.2.ebuild, glibc-2.13-r2.ebuild,
+  glibc-2.13-r4.ebuild, glibc-2.14.1-r2.ebuild, glibc-2.14.1-r3.ebuild,
+  glibc-2.14.ebuild, glibc-2.15-r1.ebuild, glibc-2.15-r2.ebuild,
+  glibc-2.15-r3.ebuild, glibc-2.16.0.ebuild, glibc-2.17.ebuild,
+  glibc-2.9_p20081201-r3.ebuild, glibc-9999.ebuild:
+  Update SRC_URI/bug/mail links to use sourceware.org #455152 by wbrana.
 
   28 Jan 2013; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_compile.eblit:

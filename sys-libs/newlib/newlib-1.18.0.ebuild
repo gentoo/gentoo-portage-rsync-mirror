@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.18.0.ebuild,v 1.4 2012/11/20 14:21:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.18.0.ebuild,v 1.5 2013/02/09 04:40:10 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,7 +14,7 @@ fi
 
 DESCRIPTION="Newlib is a C library intended for use on embedded systems"
 HOMEPAGE="http://sourceware.org/newlib/"
-SRC_URI="ftp://sources.redhat.com/pub/newlib/${P}.tar.gz"
+SRC_URI="ftp://sourceware.org/pub/newlib/${P}.tar.gz"
 
 LICENSE="NEWLIB LIBGLOSS GPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \

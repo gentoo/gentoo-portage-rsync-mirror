@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/http-parser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/ChangeLog,v 1.9 2013/02/07 23:40:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/ChangeLog,v 1.10 2013/02/09 04:42:38 floppym Exp $
+
+  09 Feb 2013; Mike Gilbert <floppym@gentoo.org> http-parser-0.7.12.ebuild:
+  Utilize python_install_all.
 
   07 Feb 2013; Mike Gilbert <floppym@gentoo.org> http-parser-0.7.12.ebuild:
   Apply encoding fix and disable strict aliasing in the latest ebuild.

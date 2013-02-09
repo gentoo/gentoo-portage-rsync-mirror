@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/newlib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.20 2012/12/20 22:15:20 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.21 2013/02/09 04:40:10 vapier Exp $
+
+  09 Feb 2013; Mike Frysinger <vapier@gentoo.org> newlib-1.18.0.ebuild,
+  newlib-1.19.0.ebuild, newlib-1.20.0.ebuild:
+  Update SRC_URI to use sourceware.org #455152 by wbrana.
 
 *newlib-2.0.0 (20 Dec 2012)
 

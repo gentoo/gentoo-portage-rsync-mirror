@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_unpack.eblit,v 1.20 2012/12/28 19:00:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_unpack.eblit,v 1.21 2013/02/09 04:42:18 vapier Exp $
 
 int_to_KV() {
 	local version=$1 major minor micro
@@ -169,7 +169,7 @@ eblit-glibc-src_unpack() {
 
 	# Glibc is stupid sometimes, and doesn't realize that with a
 	# static C-Only gcc, -lgcc_eh doesn't exist.
-	# http://sources.redhat.com/ml/libc-alpha/2003-09/msg00100.html
+	# http://sourceware.org/ml/libc-alpha/2003-09/msg00100.html
 	# http://sourceware.org/ml/libc-alpha/2005-02/msg00042.html
 	# But! Finally fixed in recent versions:
 	# http://sourceware.org/ml/libc-alpha/2012-05/msg01865.html

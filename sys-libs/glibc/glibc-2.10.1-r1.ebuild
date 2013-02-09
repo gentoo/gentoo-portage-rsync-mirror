@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.10.1-r1.ebuild,v 1.27 2012/12/30 17:16:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.10.1-r1.ebuild,v 1.28 2013/02/09 04:42:17 vapier Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib multiprocessing
 
@@ -93,7 +93,7 @@ fi
 
 SRC_URI=$(
 	upstream_uris() {
-		echo mirror://gnu/glibc/$1 ftp://sources.redhat.com/pub/glibc/{releases,snapshots}/$1 mirror://gentoo/$1
+		echo mirror://gnu/glibc/$1 ftp://sourceware.org/pub/glibc/{releases,snapshots}/$1 mirror://gentoo/$1
 	}
 	gentoo_uris() {
 		local devspace="HTTP~vapier/dist/URI HTTP~azarah/glibc/URI"

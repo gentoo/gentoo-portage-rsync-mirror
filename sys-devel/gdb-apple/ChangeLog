@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gdb-apple
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/ChangeLog,v 1.18 2012/03/04 16:15:04 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/ChangeLog,v 1.19 2013/02/09 04:36:22 vapier Exp $
+
+  09 Feb 2013; Mike Frysinger <vapier@gentoo.org> gdb-apple-1344.ebuild,
+  gdb-apple-1346.ebuild, gdb-apple-1461.ebuild, gdb-apple-1518.ebuild,
+  gdb-apple-1705.ebuild, gdb-apple-1708.ebuild, gdb-apple-1752.ebuild,
+  gdb-apple-563.ebuild, gdb-apple-768-r1.ebuild, gdb-apple-960.ebuild,
+  gdb-apple-962.ebuild, gdb-apple-966.ebuild:
+  Update HOMEPAGE to use sourceware.org #455152 by wbrana.
 
 *gdb-apple-1752 (04 Mar 2012)
 
@@ -146,4 +153,3 @@
   Made gdb-apple-563 compile on Darwin 7.  Added patch for both conditional
   support for features only available in OS X 10.4, and for conditional PPC64
   support for platforms that don't have 64-bits.
-

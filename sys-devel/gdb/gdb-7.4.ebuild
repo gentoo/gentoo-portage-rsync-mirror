@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.4.ebuild,v 1.4 2012/04/27 01:12:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.4.ebuild,v 1.5 2013/02/09 04:38:58 vapier Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ case ${PV} in
 	;;
 *.*.50.*)
 	# weekly snapshots
-	SRC_URI="ftp://sources.redhat.com/pub/gdb/snapshots/current/gdb-weekly-${PV}.tar.bz2"
+	SRC_URI="ftp://sourceware.org/pub/gdb/snapshots/current/gdb-weekly-${PV}.tar.bz2"
 	;;
 9999*)
 	# live git tree
@@ -38,7 +38,7 @@ case ${PV} in
 *)
 	# Normal upstream release
 	SRC_URI="mirror://gnu/gdb/${P}.tar.bz2
-		ftp://sources.redhat.com/pub/gdb/releases/${P}.tar.bz2"
+		ftp://sourceware.org/pub/gdb/releases/${P}.tar.bz2"
 	;;
 esac
 

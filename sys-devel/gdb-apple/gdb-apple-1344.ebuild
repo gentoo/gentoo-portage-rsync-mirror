@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/gdb-apple-1344.ebuild,v 1.4 2011/10/16 10:17:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/gdb-apple-1344.ebuild,v 1.5 2013/02/09 04:36:22 vapier Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Apple branch of the GNU Debugger, Developer Tools 3.2"
-HOMEPAGE="http://sources.redhat.com/gdb/"
+HOMEPAGE="http://sourceware.org/gdb/"
 SRC_URI="http://www.opensource.apple.com/darwinsource/tarballs/other/gdb-${PV}.tar.gz"
 
 LICENSE="APSL-2 GPL-2"
