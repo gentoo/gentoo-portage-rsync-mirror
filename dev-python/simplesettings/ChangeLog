@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplesettings
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplesettings/ChangeLog,v 1.3 2010/07/14 19:04:28 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplesettings/ChangeLog,v 1.4 2013/02/09 13:50:45 iksaif Exp $
+
+  09 Feb 2013; Corentin Chary <iksaif@gentoo.org> simplesettings-0.5.ebuild:
+  Remove dead homepage.
 
   14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   simplesettings-0.5.ebuild:
@@ -14,4 +17,3 @@
   25 Jul 2009; Jesus Rivero <neurogeek@gentoo.org>
   +simplesettings-0.5.ebuild, +metadata.xml:
   Initial commit. Thanks to Almad (bugs@almad.net). Closes bug #238902
-
