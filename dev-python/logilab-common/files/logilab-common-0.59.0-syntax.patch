@@ -1,0 +1,12 @@
+diff -ur logilab-common-0.59.0.orig/registry.py logilab-common-0.59.0/registry.py
+--- registry.py	2013-01-24 01:42:03.000000000 +0800
++++ registry.py	2013-02-09 22:48:43.988923037 +0800
+@@ -803,7 +803,7 @@
+                         and getattr(obj, '__select__', None)):
+                     return False
+             elif issubclass(obj, RegistrableInstance):
+- 		return False
++                return False
+         elif not isinstance(obj, RegistrableInstance):
+             return False
+         if not obj.__regid__:
