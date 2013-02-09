@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/hdapsd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.21 2012/11/18 20:39:55 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.22 2013/02/09 18:14:15 pacho Exp $
+
+  09 Feb 2013; Pacho Ramos <pacho@gentoo.org> hdapsd-20090401-r2.ebuild:
+  Use readme.gentoo.eclass for elog message (#456068)
 
 *hdapsd-20090401-r2 (18 Nov 2012)
 

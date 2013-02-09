@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20090401-r2.ebuild,v 1.1 2012/11/18 20:39:55 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20090401-r2.ebuild,v 1.2 2013/02/09 18:14:15 pacho Exp $
 
 EAPI=4
-inherit linux-info
+inherit linux-info readme.gentoo
 
 DESCRIPTION="IBM ThinkPad Harddrive Active Protection disk head parking daemon"
 HOMEPAGE="http://hdaps.sourceforge.net/"
@@ -22,6 +22,10 @@ pkg_setup() {
 		ERROR_SENSORS_HDAPS="${P} requires app-laptop/tp_smapi (with hdaps USE enabled) or support for CONFIG_SENSORS_HDAPS enabled"
 		linux-info_pkg_setup
 	fi
+
+	DOC_CONTENTS="You can change the default frequency by modifing /sys/devices/platform/hdaps/sampling_rate.
+		You might need to enable shock protection manually by running:\n
+		# echo -1 > /sys/block/DEVICE/device/unload_heads"
 }
 
 src_install() {
@@ -30,6 +34,7 @@ src_install() {
 	dodoc ChangeLog README AUTHORS
 	newconfd "${FILESDIR}"/hdapsd.conf.3 hdapsd
 	newinitd "${FILESDIR}"/hdapsd.init.3 hdapsd
+	readme.gentoo_create_doc
 }
 
 pkg_postinst(){
@@ -42,7 +47,5 @@ pkg_postinst(){
 		ewarn "of the in-kernel driver is strongly recommended!"
 	fi
 
-	elog "You can change the default frequency by modifing /sys/devices/platform/hdaps/sampling_rate"
-	elog "You might need to enable shock protection manually by running "
-	elog "   echo -1 > /sys/block/DEVICE/device/unload_heads"
+	readme.gentoo_print_elog
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6.ebuild,v 1.2 2013/01/25 17:20:09 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6.ebuild,v 1.3 2013/02/09 18:02:45 pacho Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ MANUAL_PV="4.6"
 
 CMAKE_MAKEFILE_GENERATOR="ninja"
 
-inherit bash-completion-r1 cmake-utils eutils multilib toolchain-funcs
+inherit bash-completion-r1 cmake-utils eutils multilib readme.gentoo toolchain-funcs
 
 if [[ $PV = *9999* ]]; then
 	EGIT_REPO_URI="git://git.gromacs.org/gromacs.git
@@ -83,6 +83,8 @@ src_prepare() {
 			cp -al "${WORKDIR}/regressiontests-${TEST_PV}" "${WORKDIR}/${P}_${x}/tests" || die
 		done
 	fi
+
+	DOC_CONTENTS="Gromacs can use sci-chemistry/vmd to read additional file formats"
 }
 
 src_configure() {
@@ -209,6 +211,8 @@ src_install() {
 		fi
 	fi
 	rm -rf "${ED}usr/share/gromacs/html/"
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
@@ -222,5 +226,5 @@ pkg_postinst() {
 		einfo  "For more Gromacs cool quotes (gcq) add g_luck to your .bashrc"
 	fi
 	einfo
-	elog  "Gromacs can use sci-chemistry/vmd to read additional file formats"
+	readme.gentoo_print_elog
 }

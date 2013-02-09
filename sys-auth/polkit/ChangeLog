@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.132 2013/01/31 23:09:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.133 2013/02/09 18:05:16 ago Exp $
+
+  09 Feb 2013; Agostino Sarubbo <ago@gentoo.org> polkit-0.110.ebuild:
+  Stable for ia64, wrt bug #452688
 
   31 Jan 2013; Agostino Sarubbo <ago@gentoo.org> polkit-0.110.ebuild:
   Stable for ppc, wrt bug #452688
