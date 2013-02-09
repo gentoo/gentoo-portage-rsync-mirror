@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.2.3.ebuild,v 1.1 2013/02/08 18:48:08 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.2.3-r1.ebuild,v 1.1 2013/02/09 12:43:54 titanofold Exp $
 
 EAPI="4"
 
@@ -16,13 +16,13 @@ SLOT="$(get_version_component_range 1-2)"
 #MY_PV="${PV//_}"
 #MY_FILE_PV="${SLOT}$(get_version_component_range 4)"
 #S="${WORKDIR}/postgresql-${MY_FILE_PV}"
-SRC_URI="mirror://postgresql/source/v${MY_FILE_PV}/postgresql-${MY_FILE_PV}.tar.bz2
-		 http://dev.gentoo.org/~titanofold/postgresql-patches-${SLOT}.tbz2"
+#SRC_URI="mirror://postgresql/source/v${MY_FILE_PV}/postgresql-${MY_FILE_PV}.tar.bz2
+#		 http://dev.gentoo.org/~titanofold/postgresql-patches-${SLOT}.tbz2"
 
 # Comment the following three lines when a beta or rc.
 S="${WORKDIR}/postgresql-${PV}"
 SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
-		 http://dev.gentoo.org/~titanofold/postgresql-patches-${SLOT}beta3.tbz2"
+		 http://dev.gentoo.org/~titanofold/postgresql-patches-${SLOT}.tbz2"
 
 LICENSE="POSTGRESQL"
 DESCRIPTION="PostgreSQL libraries and clients"
