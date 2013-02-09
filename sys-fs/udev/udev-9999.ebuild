@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.174 2013/02/08 12:28:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.175 2013/02/09 20:47:16 ssuominen Exp $
 
 EAPI=4
 
@@ -47,7 +47,6 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	!<sys-kernel/linux-headers-${KV_min}
 	doc? ( >=dev-util/gtk-doc-1.18 )
-	hwdb? ( >=sys-apps/hwids-20130114[udev] )
 	keymap? ( dev-util/gperf )"
 
 if [[ ${PV} = 9999* ]]
@@ -64,12 +63,13 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-apps/coldplug
 	!<sys-fs/lvm2-2.02.97-r1
 	!sys-fs/device-mapper
-	!<sys-fs/udev-init-scripts-19
+	!<sys-fs/udev-init-scripts-22
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25
 	!<sec-policy/selinux-base-2.20120725-r10"
 
-PDEPEND=">=virtual/udev-197
+PDEPEND=">=virtual/udev-197-r1
+	hwdb? ( >=sys-apps/hwids-20130114[udev] )
 	openrc? ( >=sys-fs/udev-init-scripts-19-r1 )"
 
 S=${WORKDIR}/systemd-${PV}
