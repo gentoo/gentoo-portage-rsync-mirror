@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.29.0.ebuild,v 1.1 2013/02/07 19:11:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.29.0.ebuild,v 1.2 2013/02/09 17:35:54 blueness Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://curl.haxx.se/download/${P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="adns idn ipv6 kerberos ldap metalink +nonblocking rtmp ssh ssl static-libs test threads"
+IUSE="adns idn ipv6 kerberos ldap metalink rtmp ssh ssl static-libs test threads"
 IUSE="${IUSE} curl_ssl_axtls curl_ssl_cyassl curl_ssl_gnutls curl_ssl_nss +curl_ssl_openssl curl_ssl_polarssl"
 
 #lead to lots of false negatives, bug #285669
@@ -172,7 +172,6 @@ src_configure() {
 		$(use_enable ipv6) \
 		--enable-largefile \
 		--enable-manual \
-		$(use_enable nonblocking) \
 		--enable-proxy \
 		--disable-soname-bump \
 		--disable-sspi \

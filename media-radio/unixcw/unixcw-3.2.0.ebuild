@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/unixcw-3.2.0.ebuild,v 1.1 2013/02/07 16:29:26 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/unixcw-3.2.0.ebuild,v 1.2 2013/02/09 17:41:52 tomjbe Exp $
 
 EAPI=4
 
@@ -25,6 +25,8 @@ DEPEND="${RDEPEND}
 	!<=app-misc/cw-1.0.16-r1"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-console.patch
+
 	append-cflags -std=gnu99
 	# add path to qt4 libs
 	sed -i -e "s#LDADD = -L#LDADD = -L/usr/$(get_libdir)/qt4 -L#g" \

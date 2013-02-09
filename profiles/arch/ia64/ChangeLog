@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.183 2013/01/31 05:57:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.184 2013/02/09 17:57:41 ago Exp $
+
+  09 Feb 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
+  Mask media-video/libav[hardcoded-tables] bug #453328
 
   31 Jan 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask net-misc/modemmanager[qmi,qmi-newest] until libqmi is keyworded.
