@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/fsarchiver/fsarchiver-0.6.13.ebuild,v 1.1 2012/03/18 00:36:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/fsarchiver/fsarchiver-0.6.16.ebuild,v 1.1 2013/02/09 10:10:05 hwoarang Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit autotools eutils
 
@@ -33,8 +33,4 @@ src_configure() {
 	$(use_enable lzo) \
 	$(use_enable static) \
 	$(use_enable debug devel)
-}
-
-src_install() {
-	emake DESTDIR="${D}" install
 }

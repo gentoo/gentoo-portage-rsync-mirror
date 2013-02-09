@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.192 2013/02/02 22:59:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.193 2013/02/09 10:14:25 billie Exp $
+
+  09 Feb 2013; Daniel Pielmeier <billie@gentoo.org>
+  mjpegtools-2.0.1_rc1.ebuild:
+  Use virtual/awk. This fixes bug #455740.
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> mjpegtools-2.0.1_rc1.ebuild:
   Add ~arm, wrt bug #449220

@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lessfs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/ChangeLog,v 1.59 2012/09/23 08:19:57 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/ChangeLog,v 1.60 2013/02/09 10:13:32 hwoarang Exp $
+
+*lessfs-1.5.13 (09 Feb 2013)
+
+  09 Feb 2013; Markos Chandras <hwoarang@gentoo.org> +lessfs-1.5.13.ebuild:
+  Version bump
 
   23 Sep 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> lessfs-1.5.12.ebuild:
   x86 stable wrt bug #432822
