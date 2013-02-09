@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.48 2013/02/02 19:28:02 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.49 2013/02/09 09:24:14 billie Exp $
+
+  09 Feb 2013; Daniel Pielmeier <billie@gentoo.org> -pfl-2.3-r1.ebuild:
+  Remove old.
 
   02 Feb 2013; Daniel Pielmeier <billie@gentoo.org> pfl-2.3-r2.ebuild:
   Remove distutils-r1_src_install from python_install_all() to avoid endless

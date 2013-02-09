@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.11-r1.ebuild,v 1.1 2013/02/09 08:57:51 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.12.11-r1.ebuild,v 1.2 2013/02/09 09:07:31 billie Exp $
 
 EAPI=5
 
@@ -54,6 +54,7 @@ RDEPEND="${COMMON_DEPEND}
 		>=dev-python/pygobject-2.28.6-r53:2[${PYTHON_USEDEP}]
 		kernel_linux? ( virtual/udev !<sys-fs/udev-114 )
 		scanner? (
+			>=dev-python/reportlab-2.6[${PYTHON_USEDEP}]
 			>=dev-python/imaging-1.1.7-r2[${PYTHON_USEDEP}]
 			X? ( || (
 				kde? ( kde-misc/skanlite )
