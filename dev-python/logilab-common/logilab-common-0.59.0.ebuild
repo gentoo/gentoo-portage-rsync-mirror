@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.59.0.ebuild,v 1.4 2013/02/09 17:33:58 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.59.0.ebuild,v 1.5 2013/02/09 20:05:07 floppym Exp $
 
 EAPI=5
 # broken with python3.3, bug #449276
@@ -31,10 +31,12 @@ DEPEND="${RDEPEND}
 	)
 	doc? ( dev-python/epydoc )"
 
+PATCHES=(
+	"${FILESDIR}"/${P}-syntax.patch
+)
+
 python_prepare_all() {
 	sed -e 's:(CURDIR):{S}/${P}:' -i doc/makefile || die
-	epatch "${FILESDIR}"/${P}-syntax.patch \
-		"${FILESDIR}"/${P}-utf8-test.patch
 	distutils-r1_python_prepare_all
 }
 
@@ -63,12 +65,14 @@ python_test() {
 	local bindir=${tpath}/bin
 	local libdir=${tpath}/lib
 	local PYTHONPATH=${libdir}:${PYTHONPATH}
-	export TZ=UTC
 
 	mkdir -p "${libdir}" || die
 	esetup.py egg_info --egg-base="${tpath}" \
 		install --install-lib="${libdir}" --install-scripts="${bindir}" \
 		bdist_egg --dist-dir="${tpath}"
+
+	# Prevent timezone related failure.
+	export TZ=UTC
 
 	# Make sure that the tests use correct modules.
 	cd "${libdir}" || die

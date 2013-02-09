@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.245 2013/01/25 08:52:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.246 2013/02/09 20:29:00 djc Exp $
+
+  09 Feb 2013; Dirkjan Ochtman <djc@gentoo.org> files/up.sh:
+  Add metric to openresolv if possible (thanks Alon Bar-Lev, bug 391175).
 
   25 Jan 2013; Kacper Kowalik <xarthisius@gentoo.org> +files/openvpn.service,
   +files/openvpn.tmpfile, openvpn-2.3.0.ebuild:

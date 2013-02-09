@@ -1,11 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkipi/libkipi-4.10.0.ebuild,v 1.1 2013/02/07 04:57:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkipi/libkipi-4.10.0.ebuild,v 1.2 2013/02/09 20:12:53 dilfridge Exp $
 
 EAPI=5
-
-# needed for digikam
-KDE_OVERRIDE_MINIMAL="4.9.0"
 
 inherit kde4-base
 

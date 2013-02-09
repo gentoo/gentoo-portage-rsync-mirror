@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.79 2013/02/07 19:18:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.80 2013/02/09 20:25:26 flameeyes Exp $
+
+*hwids-20130209.1 (09 Feb 2013)
+
+  09 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org> +hwids-20130209.1.ebuild,
+  -hwids-20130131.ebuild, hwids-99999999.ebuild:
+  Version bump; this version generates thw hwdb.bin file straight in the
+  package, rather than in postinst, so that the file is no longer orphaned.
 
   07 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
   -hwids-20130131-r1.ebuild, hwids-99999999.ebuild:

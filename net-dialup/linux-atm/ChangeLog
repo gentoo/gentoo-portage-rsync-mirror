@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/linux-atm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.42 2013/02/09 19:51:57 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.43 2013/02/09 20:24:39 pinkbyte Exp $
+
+*linux-atm-2.5.2 (09 Feb 2013)
+
+  09 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> +linux-atm-2.5.2.ebuild,
+  +files/linux-atm-2.5.2-headers.patch:
+  Version bump, wrt bug #302591
 
   09 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> linux-atm-2.5.0.ebuild:
   Add missing dependency on virtual/yacc, wrt bug #390649. Thanks to Nikoli

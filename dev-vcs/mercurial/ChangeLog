@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.111 2013/02/08 14:37:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.112 2013/02/09 20:25:06 djc Exp $
+
+*mercurial-2.5.1 (09 Feb 2013)
+
+  09 Feb 2013; Dirkjan Ochtman <djc@gentoo.org> +mercurial-2.5.1.ebuild:
+  Version bump mercurial to 2.5.1.
 
   08 Feb 2013; Jeroen Roovers <jer@gentoo.org> mercurial-2.4.2.ebuild:
   Stable for HPPA (bug #442788).

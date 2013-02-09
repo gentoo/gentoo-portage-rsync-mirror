@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-3.0.0_rc.ebuild,v 1.1 2013/02/07 21:15:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-3.0.0.ebuild,v 1.1 2013/02/09 20:09:43 dilfridge Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ rw se sk sl sq sr sr@Latn ss sv ta te tg th tr tt uk uz uz@cyrillic ven vi wa xh
 
 KDE_HANDBOOK="optional"
 CMAKE_MIN_VERSION="2.8"
-KDE_MINIMAL="4.9"
+KDE_MINIMAL="4.10"
 
 KDE_DOC_DIRS="doc-digikam doc-showfoto"
 
@@ -21,7 +21,7 @@ MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="Digital photo management application for KDE"
 HOMEPAGE="http://www.digikam.org/"
-SRC_URI="mirror://kde/unstable/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
@@ -33,9 +33,9 @@ IUSE="addressbook debug doc gphoto2 mysql semantic-desktop themedesigner +thumbn
 CDEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop=')
 	$(add_kdebase_dep kdebase-kioslaves)
-	$(add_kdebase_dep libkdcraw '' '4.9.80')
+	$(add_kdebase_dep libkdcraw)
 	$(add_kdebase_dep libkexiv2)
-	$(add_kdebase_dep libkipi '' '4.9.80')
+	$(add_kdebase_dep libkipi)
 	$(add_kdebase_dep marble plasma)
 	$(add_kdebase_dep solid)
 	media-libs/jasper

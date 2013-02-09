@@ -19,6 +19,23 @@
 # A possible workaround would be to just list multiple domain lines
 # and try and let resolvconf handle it
 
+min_route() {
+	local n=1
+	local m
+	local r
+
+	eval m="\$route_metric_$n"
+	while [ -n "${m}" ]; do
+		if [ -z "$r" ] || [ "$r" -gt "$m" ]; then
+			r="$m"
+		fi
+		n="$(($n+1))"
+		eval m="\$route_metric_$n"
+	done
+
+	echo "$r"
+}
+
 if [ "${PEER_DNS}" != "no" ]; then
 	NS=
 	DOMAIN=
@@ -48,7 +65,8 @@ if [ "${PEER_DNS}" != "no" ]; then
 		fi
 		DNS="${DNS}${NS}"
 		if [ -x /sbin/resolvconf ] ; then
-			printf "${DNS}" | /sbin/resolvconf -a "${dev}"
+			metric="$(min_route)"
+			printf "${DNS}" | /sbin/resolvconf -a "${dev}" ${metric:+-m ${metric}}
 		else
 			# Preserve the existing resolv.conf
 			if [ -e /etc/resolv.conf ] ; then
