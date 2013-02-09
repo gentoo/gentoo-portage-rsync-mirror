@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.400 2012/12/11 05:43:44 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.401 2013/02/08 23:50:46 sping Exp $
+
+*gimp-2.8.4 (08 Feb 2013)
+
+  08 Feb 2013; Sebastian Pipping <sping@gentoo.org> +gimp-2.8.4.ebuild:
+  Bump to 2.8.4 (bug #456082)
 
   11 Dec 2012; Patrick Lauer <patrick@gentoo.org> gimp-2.8.2-r1.ebuild,
   gimp-2.8.2.ebuild, gimp-9999.ebuild:
