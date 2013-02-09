@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/libkgeomap-3.0.0_rc.ebuild,v 1.1 2013/02/07 21:10:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/libkgeomap-3.0.0.ebuild,v 1.1 2013/02/09 19:45:44 dilfridge Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit kde4-base
 
 MY_PV=${PV/_/-}
 MY_P="digikam-${MY_PV}"
-SRC_URI="mirror://kde/unstable/digikam/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/stable/digikam/${MY_P}.tar.bz2"
 
 DESCRIPTION="Wrapper library for world map components as marble, openstreetmap and googlemap"
 HOMEPAGE="http://www.digikam.org/"

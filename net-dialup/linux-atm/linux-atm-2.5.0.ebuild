@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.5.0.ebuild,v 1.11 2009/02/28 09:08:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/linux-atm-2.5.0.ebuild,v 1.12 2013/02/09 19:51:57 pinkbyte Exp $
 
 inherit eutils libtool flag-o-matic toolchain-funcs
 
@@ -12,6 +12,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
+
+RDEPEND=""
+DEPEND="virtual/yacc"
+
 RESTRICT="test"
 
 src_unpack() {

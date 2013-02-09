@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/linux-atm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.41 2012/07/21 14:02:53 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linux-atm/ChangeLog,v 1.42 2013/02/09 19:51:57 pinkbyte Exp $
+
+  09 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> linux-atm-2.5.0.ebuild:
+  Add missing dependency on virtual/yacc, wrt bug #390649. Thanks to Nikoli
+  <nikoli AT lavabit.com> for discovering this issue
 
   21 Jul 2012; Pacho Ramos <pacho@gentoo.org> -linux-atm-2.4.1-r2.ebuild:
   drop old.

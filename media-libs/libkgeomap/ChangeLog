@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libkgeomap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/ChangeLog,v 1.26 2013/02/07 21:10:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/ChangeLog,v 1.27 2013/02/09 19:45:44 dilfridge Exp $
+
+*libkgeomap-3.0.0 (09 Feb 2013)
+
+  09 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkgeomap-3.0.0_rc.ebuild, +libkgeomap-3.0.0.ebuild:
+  Version bump
 
 *libkgeomap-3.0.0_rc (07 Feb 2013)
 

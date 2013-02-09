@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.0.0_rc.ebuild,v 1.1 2013/02/07 21:14:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.0.0.ebuild,v 1.1 2013/02/09 19:53:41 dilfridge Exp $
 
 EAPI=4
 
 OPENGL_REQUIRED="optional"
 
-KDE_MINIMAL="4.7"
+KDE_MINIMAL="4.10"
 
 KDE_LINGUAS="ar az be bg bn br bs ca cs csb cy da de el en_GB eo es et eu fa fi fo fr fy ga
 gl ha he hi hr hsb hu id is it ja ka kk km ko ku lb lo lt lv mi mk mn ms mt nb nds ne nl nn
@@ -22,7 +22,7 @@ MY_P="digikam-${MY_PV}"
 
 DESCRIPTION="Plugins for the KDE Image Plugin Interface"
 HOMEPAGE="http://www.digikam.org/"
-SRC_URI="mirror://kde/unstable/digikam/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/stable/digikam/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
@@ -31,8 +31,8 @@ SLOT="4"
 IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki mjpeg panorama redeyes scanner vkontakte"
 
 DEPEND="
-	$(add_kdebase_dep libkipi '' '4.9.80')
-	$(add_kdebase_dep libkdcraw '' '4.9.80')
+	$(add_kdebase_dep libkipi)
+	$(add_kdebase_dep libkdcraw)
 	$(add_kdebase_dep libkexiv2)
 	dev-libs/expat
 	dev-libs/libxml2
@@ -48,7 +48,7 @@ DEPEND="
 			  media-libs/libgpod
 			  x11-libs/gtk+:2
 			)
-	mediawiki?	( >=net-libs/libmediawiki-2.6.0 )
+	mediawiki?	( >=net-libs/libmediawiki-3.0.0 )
 	panorama?	( dev-libs/boost )
 	redeyes?	( media-libs/opencv )
 	scanner? 	(
