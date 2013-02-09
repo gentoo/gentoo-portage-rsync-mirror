@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/core_extended
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/ChangeLog,v 1.8 2013/02/07 19:29:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/ChangeLog,v 1.9 2013/02/09 02:50:08 aballier Exp $
+
+*core_extended-109.08.00 (09 Feb 2013)
+
+  09 Feb 2013; Alexis Ballier <aballier@gentoo.org>
+  +core_extended-109.08.00.ebuild:
+  version bump
 
 *core_extended-109.07.00 (07 Feb 2013)
 
