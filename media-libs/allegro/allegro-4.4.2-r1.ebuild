@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.2-r1.ebuild,v 1.6 2012/05/21 10:13:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.2-r1.ebuild,v 1.7 2013/02/09 10:48:17 ulm Exp $
 
 EAPI=2
 CMAKE_IN_SOURCE_BUILD=1
@@ -10,7 +10,7 @@ DESCRIPTION="cross-platform multimedia library"
 HOMEPAGE="http://alleg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 
-LICENSE="Allegro as-is GPL-2 ZLIB"
+LICENSE="Allegro MIT GPL-2+ ZLIB"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="alsa fbcon jack jpeg opengl oss png svga test vga vorbis X"
