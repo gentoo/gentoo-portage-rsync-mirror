@@ -56,11 +56,6 @@ arm             default/linux/arm/13.0/armv7a/desktop/kde       dev
 arm             default/linux/arm/13.0/armv7a/developer         dev
 
 # HPPA Profiles
-hppa            default/linux/hppa/10.0                         stable
-hppa            default/linux/hppa/10.0/desktop                 dev
-hppa            default/linux/hppa/10.0/developer               dev
-hppa            default/linux/hppa/10.0/server                  dev
-
 hppa            default/linux/hppa/13.0                         stable
 hppa            default/linux/hppa/13.0/desktop                 dev
 hppa            default/linux/hppa/13.0/developer               dev
@@ -94,19 +89,6 @@ m68k            default/linux/m68k/13.0/desktop/kde             dev
 m68k            default/linux/m68k/13.0/developer               dev
 
 # MIPS Profiles
-mips            default/linux/mips/10.0                                         exp
-mips            default/linux/mips/10.0/n32                                     exp
-mips            default/linux/mips/10.0/n64                                     exp
-mips            default/linux/mips/10.0/multilib                                exp
-mips            default/linux/mips/10.0/multilib/n32                            exp
-mips            default/linux/mips/10.0/multilib/n64                            exp
-mips            default/linux/mips/10.0/mipsel                                  exp
-mips            default/linux/mips/10.0/mipsel/n32                              exp
-mips            default/linux/mips/10.0/mipsel/n64                              exp
-mips            default/linux/mips/10.0/mipsel/multilib                         exp
-mips            default/linux/mips/10.0/mipsel/multilib/n32                     exp
-mips            default/linux/mips/10.0/mipsel/multilib/n64                     exp
-
 mips            default/linux/mips/13.0                                         exp
 mips            default/linux/mips/13.0/n32                                     exp
 mips            default/linux/mips/13.0/n64                                     exp
