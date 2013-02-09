@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.142 2013/01/11 10:04:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.143 2013/02/09 17:25:35 polynomial-c Exp $
+
+*virtualbox-4.2.6-r1 (09 Feb 2013)
+
+  09 Feb 2013; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-4.1.22-r1.ebuild, virtualbox-4.1.24.ebuild,
+  virtualbox-4.2.4-r1.ebuild, -virtualbox-4.2.6.ebuild,
+  +virtualbox-4.2.6-r1.ebuild:
+  Fixed location of ifconfig binary. Thanks to David Parrish for reporting this
+  in bug #455902 and to Greg Kubaryk for pointing out where the fix needs to be
+  applied.
 
   11 Jan 2013; Lars Wendler <polynomial-c@gentoo.org>
   virtualbox-4.1.22-r1.ebuild, virtualbox-4.1.24.ebuild,

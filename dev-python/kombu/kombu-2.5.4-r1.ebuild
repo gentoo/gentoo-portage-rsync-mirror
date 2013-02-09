@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-2.5.4-r1.ebuild,v 1.1 2013/01/23 09:31:55 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-2.5.4-r1.ebuild,v 1.2 2013/02/09 17:09:19 floppym Exp $
 
 EAPI="4"
 
@@ -44,12 +44,14 @@ src_compile() {
 	local SPHINXBUILD
 	if use doc; then
 		if python2.7 -c "import django.conf" &> /dev/null; then
-			SPHINXBUILD="sphinx-build-2.7"
+			# This will force sphinx-build to use python2.7
+			local EPYTHON=python2.7
+			export EPYTHON
 		else
 			die "kombu docs failed installation"
 		fi
 		einfo "building docs for kombu with python2.7"
-		PYTHONPATH="${S}" emake -C docs html SPHINXBUILD="${SPHINXBUILD}"
+		PYTHONPATH="${S}" emake -C docs html
 	fi
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/kombu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.17 2013/01/26 05:27:36 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.18 2013/02/09 17:09:19 floppym Exp $
+
+  09 Feb 2013; Mike Gilbert <floppym@gentoo.org> kombu-2.5.4-r1.ebuild:
+  Update docs building workaround to allow for python-r1 based sphinx. Bug
+  453976.
 
 *kombu-1.0.4 (26 Jan 2013)
 
