@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libupnp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.40 2013/01/30 19:24:44 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.41 2013/02/09 15:22:34 jer Exp $
+
+  09 Feb 2013; Jeroen Roovers <jer@gentoo.org> libupnp-1.6.18.ebuild:
+  Stable for HPPA (bug #454570).
 
   30 Jan 2013; <gurligebis@gentoo.org> -libupnp-1.6.6.ebuild,
   -files/libupnp-1.6.6-patch-statevar-query.patch, -libupnp-1.6.14.ebuild:

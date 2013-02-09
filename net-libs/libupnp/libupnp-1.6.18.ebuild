@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/libupnp-1.6.18.ebuild,v 1.1 2013/01/30 09:58:50 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/libupnp-1.6.18.ebuild,v 1.2 2013/02/09 15:22:34 jer Exp $
 
 EAPI="4"
 WANT_AUTOMAKE=1.9
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/pupnp/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux"
 IUSE="debug doc ipv6 static-libs"
 
 RDEPEND=""
