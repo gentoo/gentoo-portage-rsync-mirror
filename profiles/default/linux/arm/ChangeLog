@@ -1,6 +1,27 @@
 # ChangeLog for the default/linux/arm profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/arm/ChangeLog,v 1.3 2013/01/18 20:02:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/arm/ChangeLog,v 1.4 2013/02/09 11:43:13 dilfridge Exp $
+
+  09 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +10.0/armv4/deprecated, +10.0/armv4/desktop/deprecated,
+  +10.0/armv4/desktop/gnome/deprecated, +10.0/armv4/desktop/kde/deprecated,
+  +10.0/armv4/developer/deprecated, +10.0/armv4/server/deprecated,
+  +10.0/armv4t/deprecated, +10.0/armv4t/desktop/deprecated,
+  +10.0/armv4t/desktop/gnome/deprecated, +10.0/armv4t/desktop/kde/deprecated,
+  +10.0/armv4t/developer/deprecated, +10.0/armv4t/server/deprecated,
+  +10.0/armv5te/deprecated, +10.0/armv5te/desktop/deprecated,
+  +10.0/armv5te/desktop/gnome/deprecated, +10.0/armv5te/desktop/kde/deprecated,
+  +10.0/armv5te/developer/deprecated, +10.0/armv5te/server/deprecated,
+  +10.0/armv6j/deprecated, +10.0/armv6j/desktop/deprecated,
+  +10.0/armv6j/desktop/gnome/deprecated, +10.0/armv6j/desktop/kde/deprecated,
+  +10.0/armv6j/developer/deprecated, +10.0/armv6j/server/deprecated,
+  +10.0/armv7a/deprecated, +10.0/armv7a/desktop/deprecated,
+  +10.0/armv7a/desktop/gnome/deprecated, +10.0/armv7a/desktop/kde/deprecated,
+  +10.0/armv7a/developer/deprecated, +10.0/armv7a/server/deprecated,
+  +10.0/deprecated, +10.0/desktop/deprecated, +10.0/desktop/gnome/deprecated,
+  +10.0/desktop/kde/deprecated, +10.0/developer/deprecated,
+  +10.0/server/deprecated:
+  Deprecate 10.0 profiles
 
   18 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org> ChangeLog:
   Fix ChangeLog header

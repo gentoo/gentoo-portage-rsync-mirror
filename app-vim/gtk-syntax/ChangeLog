@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/gtk-syntax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.53 2013/01/13 09:50:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.54 2013/02/09 11:41:08 ulm Exp $
+
+  09 Feb 2013; Ulrich Müller <ulm@gentoo.org> gtk-syntax-20110214-r1.ebuild,
+  gtk-syntax-20121015.ebuild:
+  Fix LICENSE again, released under the same terms as vim itself, bug 450250.
 
 *gtk-syntax-20121015 (13 Jan 2013)
 

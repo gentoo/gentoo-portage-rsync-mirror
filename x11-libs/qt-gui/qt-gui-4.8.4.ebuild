@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.4.ebuild,v 1.13 2013/01/27 00:41:32 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.8.4.ebuild,v 1.14 2013/02/09 11:58:26 pesa Exp $
 
 EAPI=4
 
@@ -179,7 +179,7 @@ src_install() {
 			$(use egl && echo QT_EGL)
 			QT_FONTCONFIG
 			$(use gtkstyle && echo QT_STYLE_GTK)
-			QT_IMAGEFORMAT_JPEG QT_IMAGEFORMAT_PNG QT_MITSHM
+			QT_IMAGEFORMAT_JPEG QT_IMAGEFORMAT_PNG
 			$(use mng && echo QT_IMAGEFORMAT_MNG)
 			$(use nas && echo QT_NAS)
 			$(use nis && echo QT_NIS)

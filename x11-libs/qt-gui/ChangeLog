@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.220 2013/02/09 08:34:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.221 2013/02/09 11:58:26 pesa Exp $
+
+  09 Feb 2013; Davide Pesavento <pesa@gentoo.org> qt-gui-4.8.4-r1.ebuild,
+  qt-gui-4.8.4.ebuild:
+  Don't define QT_MITSHM (partially reverts a previous commit).
 
 *qt-gui-4.8.4-r1 (09 Feb 2013)
 
