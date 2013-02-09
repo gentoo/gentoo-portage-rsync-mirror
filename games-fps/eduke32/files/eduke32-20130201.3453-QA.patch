@@ -59,16 +59,15 @@ Subject: build system
  PROFILER?=0
  MUDFLAP?=0
  
-@@ -268,11 +267,10 @@
- 
+@@ -269,10 +268,9 @@
  
  # compiler flags etc.
--BASECFLAGS=
-+BASECFLAGS = $(CFLAGS) -std=gnu89
- BASECONLYFLAGS=-Wimplicit -Wdeclaration-after-statement
+ BASECFLAGS=
+-BASECONLYFLAGS=-Wimplicit -Wdeclaration-after-statement
 -BASECXXFLAGS= -fno-exceptions -fno-rtti -fpermissive -Wno-write-strings -Wno-narrowing
 -BASEASFLAGS=-s #-g
 -BASELDFLAGS=
++BASECONLYFLAGS = $(CFLAGS) -std=gnu89 -Wimplicit -Wdeclaration-after-statement
 +BASECXXFLAGS = $(CXXFLAGS) -fno-exceptions -fno-rtti -fpermissive -Wno-write-strings -Wno-narrowing
 +BASELDFLAGS = $(LDFLAGS)
  
@@ -143,3 +142,12 @@ Subject: build system
  .PHONY: clean cleanutils veryclean all utils dxutils sdlutils printutils printsdlutils printdxutils enginelib editorlib
  
  # TARGETS
+@@ -265,7 +267,7 @@
+ 	if $(LINKER) -o $@ $^ $(OURLDFLAGS) $(UTILLIBS) -I$(SDLROOT)/include -I$(SDLROOT)/include/SDL; then $(ONESTEP_OK); else $(ONESTEP_FAILED); fi
+ arttool$(EXESUFFIX): $(OBJ)/arttool.$o $(UTILADDOBJS)
+ 	$(ONESTEP_STATUS)
+-	if $(L_CXX) -o $@ $^ $(OURLDFLAGS) $(STATICSTDCPP) $(STDCPPLIB) $(UTILLIBS); then $(ONESTEP_OK); else $(ONESTEP_FAILED); fi
++	if $(L_CXX) $(OURCXXFLAGS) -o $@ $^ $(OURLDFLAGS) $(STATICSTDCPP) $(STDCPPLIB) $(UTILLIBS); then $(ONESTEP_OK); else $(ONESTEP_FAILED); fi
+ givedepth$(EXESUFFIX): $(OBJ)/givedepth.$o $(UTILADDOBJS)
+ 	$(ONESTEP_STATUS)
+ 	if $(LINKER) -o $@ $^ $(OURLDFLAGS) $(UTILLIBS); then $(ONESTEP_OK); else $(ONESTEP_FAILED); fi

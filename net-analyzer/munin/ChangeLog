@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.134 2013/02/01 16:16:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.135 2013/02/09 14:29:02 flameeyes Exp $
+
+*munin-2.0.11.1 (09 Feb 2013)
+
+  09 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org> +munin-2.0.11.1.ebuild,
+  -munin-2.0.11.ebuild, files/munin-node_init.d_2.0.7:
+  Version bump to 2.0.11.1; fix bug #456124 (init script's bashisms and other
+  stuff), also fix bug #455826 (FreeBSD compatibility).
 
 *munin-2.0.11 (01 Feb 2013)
 
