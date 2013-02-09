@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.231 2013/01/16 03:44:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.232 2013/02/09 06:52:20 vapier Exp $
+
+*file-5.12-r1 (09 Feb 2013)
+
+  09 Feb 2013; Mike Frysinger <vapier@gentoo.org> +file-5.12-r1.ebuild:
+  Pull magic updates from latest upstream git #450408 by Sergey Popov.
 
   16 Jan 2013; Tim Harder <radhermit@gentoo.org> file-9999.ebuild:
   Revert to previous install method.
