@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyGithub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyGithub/ChangeLog,v 1.3 2013/01/20 20:31:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyGithub/ChangeLog,v 1.4 2013/02/10 05:31:47 radhermit Exp $
+
+*PyGithub-1.11.1 (10 Feb 2013)
+
+  10 Feb 2013; Tim Harder <radhermit@gentoo.org> +PyGithub-1.11.1.ebuild:
+  Version bump.
 
   20 Jan 2013; Mike Gilbert <floppym@gentoo.org> PyGithub-1.10.0.ebuild:
   Add PYTHON_USEDEP to setuptools dep.
