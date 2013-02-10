@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.18.ebuild,v 1.1 2013/02/08 17:35:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.18.ebuild,v 1.4 2013/02/10 20:11:37 scarabeus Exp $
 
 EAPI=5
 PYTHON_DEPEND=2:2.7
@@ -22,7 +22,7 @@ IUSE="+udisks"
 
 COMMON_DEPEND="
 	>=app-text/podofo-0.8.2:=
-	>=app-text/poppler-0.12.3-r3[qt4,xpdf-headers(+)]
+	>=app-text/poppler-0.12.3-r3:=[qt4,xpdf-headers(+)]
 	>=dev-libs/chmlib-0.40:=
 	>=dev-libs/icu-4.4:=
 	>=dev-python/beautifulsoup-3.0.5:python-2
@@ -38,7 +38,7 @@ COMMON_DEPEND="
 	>=dev-python/python-dateutil-1.4.1
 	>=dev-python/PyQt4-4.9.1[X,svg,webkit]
 	media-fonts/liberation-fonts
-	>=media-gfx/imagemagick-6.5.9:=[jpeg,png]
+	>=media-gfx/imagemagick-6.5.9[jpeg,png]
 	>=media-libs/freetype-2:=
 	>=media-libs/libwmf-0.2.8
 	>=media-libs/libmtp-1.1.4:=
@@ -88,10 +88,15 @@ src_prepare() {
 '-e', 's|^LFLAGS .*|\\\\\\\\0 ${LDFLAGS}|', \
 '-i', 'Makefile'])" \
 		-i setup/extensions.py || die "sed failed to patch extensions.py"
+
+	# no_updates: do not annoy user with "new version is availible all the time
+	# disable_plugins: walking sec-hole, wait for upstream to use GHNS interface
+	epatch \
+		"${FILESDIR}/${PN}-no_updates_dialog.patch" \
+		"${FILESDIR}/${PN}-disable_plugins.patch"
 }
 
 src_install() {
-
 	# Bypass kbuildsycoca and update-mime-database in order to
 	# avoid sandbox violations if xdg-mime tries to call them.
 	cat - > "${T}/kbuildsycoca" <<-EOF

@@ -1,6 +1,12 @@
 # ChangeLog for app-text/convmv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.39 2012/02/21 08:35:47 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.40 2013/02/10 20:22:51 scarabeus Exp $
+
+  10 Feb 2013; Tomáš Chvátal <scarabeus@gentoo.org> -convmv-1.10.ebuild,
+  -convmv-1.12.ebuild, -convmv-1.14.ebuild,
+  -files/convmv-1.10-testcase-cleanup.patch, convmv-1.15.ebuild:
+  1.10 failed to convert some files for me. 1.15 work. Tested on ppc, ppc64
+  s390x x86 and amd64, commiting stable on all arches and removing old.
 
 *convmv-1.15 (21 Feb 2012)
 
@@ -130,4 +136,3 @@
   08 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> convmv-1.05.ebuild,
   metadata.xml:
   initial commit
-

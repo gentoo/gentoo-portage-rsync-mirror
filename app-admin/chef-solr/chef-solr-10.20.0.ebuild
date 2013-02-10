@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-solr/chef-solr-10.16.4.ebuild,v 1.2 2013/02/10 20:04:56 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-solr/chef-solr-10.20.0.ebuild,v 1.1 2013/02/10 20:04:57 hollow Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST="spec"
@@ -38,13 +38,8 @@ all_ruby_install() {
 	doinitd "${FILESDIR}/initd/chef-solr"
 	doconfd "${FILESDIR}/confd/chef-solr"
 
-	keepdir /etc/chef /var/lib/chef /var/log/chef /var/run/chef
-
 	insinto /etc/chef
 	doins "${FILESDIR}/solr.rb"
-
-	fowners chef:chef /etc/chef/{,solr.rb}
-	fowners chef:chef /var/{lib,log,run}/chef
 }
 
 pkg_postinst() {
