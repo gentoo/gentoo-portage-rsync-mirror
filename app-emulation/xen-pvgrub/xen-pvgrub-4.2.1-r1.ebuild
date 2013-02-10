@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.2.1-r1.ebuild,v 1.2 2013/02/04 05:52:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.2.1-r1.ebuild,v 1.3 2013/02/10 08:20:23 idella4 Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -58,10 +58,6 @@ src_prepare() {
 		$DISTDIR/newlib-1.16.0.tar.gz \
 		$DISTDIR/grub-0.97.tar.gz \
 		./stubdom/ || die "files not coped to stubdom"
-	# Note: tip to patch grub gentoo style, for review soon. This is around 1/3.
-#	cp "${WORKDIR}"/patch/{00[3-6]_all_grub*,010_all_grub*,01[3-9]_all_grub*,0[6-7]0_all_grub*} \
-#		"${WORKDIR}"/patch/{110_all_grub*,300_all_grub*} \
-#		 stubdom/grub.patches/ || die
 	einfo "files copied to stubdom"
 
 	# Patch the unmergeable newlib, fix most of the leftover gcc QA issues
@@ -78,6 +74,9 @@ src_prepare() {
 
 	#Sec patch
 	epatch "${FILESDIR}"/${PN/-pvgrub/}-4-CVE-2012-6075-XSA-41.patch
+
+	# wrt Bug #455196
+	epatch "${FILESDIR}"/${P/-pvgrub/}-CC.patch
 }
 
 src_compile() {

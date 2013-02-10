@@ -1,5 +1,0 @@
-#
-# UDEV rule for ltmodem
-#  creates symlink /dev/modem to /dev/ttySLT?, and takes care of permissions
-
-KERNEL=="ttySLTM[0-9]", NAME="%k", MODE="0660", GROUP="dialout", SYMLINK="modem"

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14439 2013/02/08 17:35:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14440 2013/02/10 08:10:29 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,11 +31,38 @@
 
 #--- END OF EXAMPLES ---
 
-# Ryan Hill <dirtyepic@gentoo.org> (7 Feb 2013)
+# Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
+# The firmware cleanup, part #1. Can be unmasked after
+# cleaning up the package if it's still needed.
+# Some of these install to wrong directory, /lib64/firmware
+# as opposed to correct /lib/firmware
+# Some of these don't have maintainer
+# Some of these are replaced by the firmware from the
+# linux-firmware package:
+# emerge -av linux-firmware
+# If you still have a reason to keep the package, please
+# let us know by filing a bug report.
+net-wireless/ar9271-firmware
+net-wireless/atmel-firmware
+net-wireless/b43-firmware
+net-wireless/b43legacy-firmware
+net-wireless/ipw2100-firmware
+net-wireless/ipw2200-firmware
+net-wireless/libertas-firmware
+net-wireless/prism54-firmware
+net-wireless/rt2860-firmware
+net-wireless/rt2870-firmware
+net-wireless/rt61-firmware
+net-wireless/rt73-firmware
+net-wireless/rtl8192su-firmware
+net-wireless/zd1201-firmware
+net-wireless/zd1211-firmware
+
+# Ryan Hill <dirtyepic@gentoo.org> (07 Feb 2013)
 # Breaks everything (bug #456108)
 =dev-libs/openssl-1.0.1d
 
-# Diego Elio Pettenò <flameeyes@gentoo.org> (5 Feb 2013)
+# Diego Elio Pettenò <flameeyes@gentoo.org> (05 Feb 2013)
 # Needs a complete ebuild rewrite to use CMake, and a new patchset to
 # unbundle the bundled libraries. Use at your own risk; don't ask for
 # a bump unless you can provide the two needed items.

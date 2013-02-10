@@ -1,0 +1,12 @@
+diff -ur xen-4.2.1.orig/stubdom/Makefile xen-4.2.1/stubdom/Makefile
+--- stubdom/Makefile	2012-12-17 23:00:06.000000000 +0800
++++ stubdom/Makefile	2013-02-10 16:01:01.883644638 +0800
+@@ -130,7 +130,7 @@
+ cross-zlib: $(ZLIB_STAMPFILE)
+ $(ZLIB_STAMPFILE): zlib-$(XEN_TARGET_ARCH) $(NEWLIB_STAMPFILE)
+ 	( cd $< && \
+-	  CFLAGS="$(TARGET_CPPFLAGS) $(TARGET_CFLAGS)" CC=$(CC) ./configure --prefix=$(CROSS_PREFIX)/$(GNU_TARGET_ARCH)-xen-elf && \
++	  CFLAGS="$(TARGET_CPPFLAGS) $(TARGET_CFLAGS)" CC="$(CC)" ./configure --prefix=$(CROSS_PREFIX)/$(GNU_TARGET_ARCH)-xen-elf && \
+ 	  $(MAKE) DESTDIR= libz.a && \
+ 	  $(MAKE) DESTDIR= install )
+ 

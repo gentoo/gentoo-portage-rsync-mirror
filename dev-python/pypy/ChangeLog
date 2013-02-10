@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.31 2013/01/02 04:41:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.32 2013/02/10 08:23:32 pacho Exp $
+
+  10 Feb 2013; Pacho Ramos <pacho@gentoo.org> -files/1.7-scripts-location.patch,
+  -files/1.8-elf-metadata-26a8d3fc57a7.patch,
+  -files/1.8-sext-instructions-02dc2f6160ee.patch, -pypy-1.8-r1.ebuild,
+  -pypy-1.8-r2.ebuild:
+  Remove masked package
 
   02 Jan 2013; Mike Gilbert <floppym@gentoo.org> pypy-2.0_beta1.ebuild:
   Add keywords.
