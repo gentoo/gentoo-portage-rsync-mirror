@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/timidity++
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.155 2012/10/24 19:17:46 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.156 2013/02/10 06:54:44 ssuominen Exp $
+
+*timidity++-2.14.0-r1 (10 Feb 2013)
+
+  10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +timidity++-2.14.0-r1.ebuild, +files/timidity++-2.14.0-tcltk86.patch:
+  Fix compability with dev-lang/tk >= 8.6.0 wrt #451296 by Helmut Jarausch and
+  others
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> timidity++-2.13.2-r13.ebuild,
   timidity++-2.13.2-r14.ebuild, timidity++-2.14.0.ebuild:

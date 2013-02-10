@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.16.ebuild,v 1.10 2012/08/25 22:33:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.16.ebuild,v 1.11 2013/02/10 06:40:28 ssuominen Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="A set of tools that use the proc filesystem"
 HOMEPAGE="http://psmisc.sourceforge.net/"
-SRC_URI="mirror://sourceforge/psmisc/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/psmisc/${P}.tar.gz -> ${P}-r1.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
