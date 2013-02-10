@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/up-imapproxy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.28 2011/11/28 11:41:27 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.29 2013/02/10 10:52:46 eras Exp $
+
+  10 Feb 2013; Eray Aslan <eras@gentoo.org>
+  -files/up-imapproxy-1.2.6-debian_patchset_5_and_security_fix.patch,
+  -up-imapproxy-1.2.6.ebuild:
+  Remove old
 
   28 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   up-imapproxy-1.2.7.ebuild:
@@ -116,4 +121,3 @@
   12 Nov 2003; <max@gentoo.org> up-imapproxy-1.2.1.ebuild,
   files/imapproxy.initd:
   Initial version. Fixes bug 29768.
-
