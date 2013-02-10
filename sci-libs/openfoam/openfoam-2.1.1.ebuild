@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam/openfoam-2.1.1.ebuild,v 1.1 2012/06/19 02:21:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam/openfoam-2.1.1.ebuild,v 1.2 2013/02/10 08:52:31 pacho Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ DEPEND="!=sci-libs/openfoam-bin-${MY_PV}*
 	sci-libs/parmetis
 	sci-libs/parmgridgen
 	sci-libs/scotch
-	|| ( >sci-visualization/paraview-3.0 sci-visualization/opendx )
+	sci-visualization/opendx
 	virtual/mpi"
 RDEPEND="${DEPEND}"
 

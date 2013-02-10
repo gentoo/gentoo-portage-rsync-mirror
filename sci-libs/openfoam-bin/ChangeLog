@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/openfoam-bin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam-bin/ChangeLog,v 1.5 2010/06/17 01:59:10 jsbronder Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam-bin/ChangeLog,v 1.6 2013/02/10 08:53:08 pacho Exp $
+
+  10 Feb 2013; Pacho Ramos <pacho@gentoo.org> openfoam-bin-1.6.ebuild:
+  paraview will be dropped from main tree, bug #424659
 
   17 Jun 2010; Justin Bronder <jsbronder@gentoo.org>
   openfoam-bin-1.5.ebuild, openfoam-bin-1.6.ebuild:
@@ -66,4 +69,3 @@
   +files/openfoam-bin-1.4.1_p20080118.patch, +files/compile-1.4.1.patch,
   +metadata.xml, +openfoam-bin-1.4.1_p20080118.ebuild:
   New ebuild for the binary version of OpenFOAM from bug 104257
-

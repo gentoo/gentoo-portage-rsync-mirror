@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/prism54-firmware
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/ChangeLog,v 1.20 2013/02/08 17:54:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/ChangeLog,v 1.22 2013/02/10 08:49:55 ssuominen Exp $
+
+  10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
+  prism54-firmware-2.13.ebuild:
+  Synchronize with ipw2100-firmware ebuild.
+
+  10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -prism54-firmware-1.0.4.3.ebuild:
+  old
 
   08 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
   prism54-firmware-1.0.4.3.ebuild, prism54-firmware-2.13.ebuild:

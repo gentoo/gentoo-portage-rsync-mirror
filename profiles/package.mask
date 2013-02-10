@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14440 2013/02/10 08:10:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14443 2013/02/10 09:00:04 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,29 @@
 
 #--- END OF EXAMPLES ---
 
+# Pacho Ramos <pacho@gentoo.org> (10 Feb 2013)
+# Upstream dropped support for linux time ago (#434390),
+# possible security issues (#360539). You can use Windows
+# version with PlayOnLinux. Removal in a month.
+media-gfx/picasa
+
+# Pacho Ramos <pacho@gentoo.org> (10 Feb 2013)
+# Abandoned by upstream, problems building (#362611).
+# Removal in a month.
+dev-python/papyon
+net-voip/telepathy-butterfly
+
+# Pacho Ramos <pacho@gentoo.org> (10 Feb 2013)
+# Fails with gcc-4.7, crashes (#301946, #312073), problems with
+# boost (#319921), problems with python-2.7 (#338826), really old
+# version in the tree, people should move to sci overlay one (#424659).
+# Removal in a month.
+sci-visualization/paraview
+
+# Pacho Ramos <pacho@gentoo.org> (10 Feb 2013)
+# Doesn't support kernel >= 2.6.22, #453202. Removal in a month.
+x11-misc/xdaf
+
 # Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
 # The firmware cleanup, part #1. Can be unmasked after
 # cleaning up the package if it's still needed.
@@ -42,14 +65,12 @@
 # emerge -av linux-firmware
 # If you still have a reason to keep the package, please
 # let us know by filing a bug report.
+# Removal at 01 Apr 2013
 net-wireless/ar9271-firmware
 net-wireless/atmel-firmware
 net-wireless/b43-firmware
 net-wireless/b43legacy-firmware
-net-wireless/ipw2100-firmware
-net-wireless/ipw2200-firmware
 net-wireless/libertas-firmware
-net-wireless/prism54-firmware
 net-wireless/rt2860-firmware
 net-wireless/rt2870-firmware
 net-wireless/rt61-firmware
@@ -57,6 +78,13 @@ net-wireless/rt73-firmware
 net-wireless/rtl8192su-firmware
 net-wireless/zd1201-firmware
 net-wireless/zd1211-firmware
+
+# Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
+# Unfortunately the package is missing license file
+# and we don't have anything to put into LICENSE field
+# If you figure this out, this can of course be unmasked.
+# The ebuild is clean.
+net-wireless/prism54-firmware
 
 # Ryan Hill <dirtyepic@gentoo.org> (07 Feb 2013)
 # Breaks everything (bug #456108)
@@ -295,13 +323,6 @@ dev-php/ezc-WorkflowSignalSlotTiein
 =x11-libs/libXi-1.6.99*
 =x11-proto/inputproto-2.2.99*
 
-# Mike Gilbert <floppym@gentoo.org> (03 Jan 2013)
-# No longer maintained upstream.
-# Please upgrade to PyPy 1.9 or 2.0.
-# Make sure to update USE_PYTHON and PYTHON_TARGETS as well.
-# Removal in 30 days.
-dev-python/pypy:1.8
-
 # Sergei Trofimovich <slyfox@gentoo.org> (01 Jan 2013)
 # Masked for removal (moved to haskell overlay).
 # Fails to build (bug #423763). Needs severe code cleanup
@@ -318,74 +339,6 @@ dev-haskell/wxhaskell:2.9
 # Does not build against modern kernels or X servers. Users of pre-HD5000
 # Radeon hardware should use 12.6_beta_pre897 ("12.6 Legacy") instead.
 =x11-drivers/ati-drivers-12.4
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Will be maintained in squeezebox overlay, please switch to it.
-# See bug #251494. Removal from the tree in a month.
-media-sound/logitechmediaserver-bin
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Doesn't compile with recent kernels (#265581) and is not needed on
-# them. Removal in a month.
-net-dialup/misdn
-net-dialup/misdnuser
-net-misc/asterisk-chan_misdn
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Upstream dead, some problems (#277348), one possible replacement
-# includes mod_authnz_external. Removal in a month.
-www-apache/mod_authn_pam
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Incompatible with recent kernels (#300047) , upstream dead,
-# net-dialup/martian-modem can be used instead in most cases.
-net-dialup/ltmodem
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Old SLOT is not maintained by upstream for a long time,
-# nothing requires it (#311497). Removal in a month.
-=dev-libs/gmime-2.2.27-r1
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Fails to build (#326799), upstream dead. Removal in a month.
-www-apache/mod_spin
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Dead stuff that shouldn't be used and that is required by
-# nothing (#407697). Removal in a month.
-dev-dotnet/galago-sharp
-sys-apps/galago-daemon
-dev-libs/libgalago
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Really old snapshot that is not compatible with apache-2.4,
-# upstream looks dead (#411465). Removal in a month.
-www-apache/mod_transform
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Upstream dropped them (#435842). Removal in a month.
-dev-util/monodevelop-java
-dev-util/monodevelop-python
-dev-util/monodevelop-vala
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# As distfiles are no longer provided by upstream and license
-# doesn't let us mirror them, it will be removed in a month (#444322).
-app-admin/flexlm
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# EOL for a long time as Cisco dropped its support in favor of Anyconnect,
-# it no longer works with current kernels (#444420). Removal in a month.
-net-misc/cisco-vpnclient-3des
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Upstream dead for ages, numerous bubgs, uses old tcl (#445206).
-# Removal in a month.
-app-emulation/systemsim-cell
-
-# Pacho Ramos <pacho@gentoo.org> (25 Dec 2012)
-# Fails to build, always links statically (#448288). Removal in a month.
-sys-block/gcloop
 
 # Panagiotis Christopoulos <pchrist@gentoo.org> (25 Dec 2012)
 # mask again these, temporarily, because more testing must be done.
@@ -423,23 +376,6 @@ app-admin/webalizer-xtended
 # of MIT-MAGIC-COOKIE-1). It should fix bug #306223 but it can also
 # raise unknown issues. Bug #445662 for more details.
 =x11-apps/xdm-1.1.11-r2
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (05 Dec 2012)
-# Masked for removal in 30 days.
-# Incompatible with recent cogl and clutter versions (bug #435164)
-mail-client/claws-mail-geolocation
-<media-libs/libchamplain-0.9
-<media-libs/clutter-gtk-1.0
-
-# Sebastian Pipping <sping@gentoo.org> (27 Nov 2012)
-# Masked for removal in 30 days.
-# Licensing issues, turned out not distributable (bug #444332)
-app-admin/profiler
-
-# Sebastian Pipping <sping@gentoo.org> (27 Nov 2012)
-# Masked for removal in 30 days.
-# Server and software development discontinued upstream (bug #438082)
-app-admin/smolt
 
 # Tim Harder <radhermit@gentoo.org> (27 Nov 2012)
 # Masked for testing

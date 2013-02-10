@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MooseX-Getopt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Getopt/ChangeLog,v 1.40 2013/02/10 08:01:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Getopt/ChangeLog,v 1.41 2013/02/10 08:45:48 tove Exp $
+
+  10 Feb 2013; Torsten Veller <tove@gentoo.org> MooseX-Getopt-0.520.0.ebuild,
+  MooseX-Getopt-0.540.0.ebuild:
+  Drop dev-perl/MooseX-ConfigFromFile as test dependency to work around a
+  dependency cycle
 
 *MooseX-Getopt-0.540.0 (10 Feb 2013)
 

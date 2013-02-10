@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/ipw2200-firmware
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200-firmware/ChangeLog,v 1.25 2013/02/08 17:50:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200-firmware/ChangeLog,v 1.27 2013/02/10 08:42:21 ssuominen Exp $
+
+  10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
+  ipw2200-firmware-3.1.ebuild:
+  Synchronize with net-wireless/ipw2100-firmware ebuild.
+
+  10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -ipw2200-firmware-2.2.ebuild, -ipw2200-firmware-2.4.ebuild:
+  old
 
   08 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
   ipw2200-firmware-2.2.ebuild, ipw2200-firmware-2.4.ebuild,

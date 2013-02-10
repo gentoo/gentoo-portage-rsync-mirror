@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Getopt/MooseX-Getopt-0.520.0.ebuild,v 1.2 2013/02/10 08:01:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Getopt/MooseX-Getopt-0.520.0.ebuild,v 1.3 2013/02/10 08:45:48 tove Exp $
 
 EAPI=5
 
@@ -33,7 +33,6 @@ DEPEND="${RDEPEND}
 		>=virtual/perl-Test-Simple-0.620.0
 		dev-perl/Test-Trap
 		>=dev-perl/Test-Warn-0.210.0
-		dev-perl/MooseX-ConfigFromFile
 	)
 "
 
