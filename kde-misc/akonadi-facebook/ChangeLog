@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/akonadi-facebook
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-facebook/ChangeLog,v 1.4 2013/02/08 03:24:05 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-facebook/ChangeLog,v 1.5 2013/02/10 03:08:37 creffett Exp $
+
+*akonadi-facebook-0_p20130209 (10 Feb 2013)
+
+  10 Feb 2013; Chris Reffett <creffett@gentoo.org>
+  +akonadi-facebook-0_p20130209.ebuild:
+  Version bump, new snapshot that works with 4.10
 
 *akonadi-facebook-0_p20121207 (08 Feb 2013)
 

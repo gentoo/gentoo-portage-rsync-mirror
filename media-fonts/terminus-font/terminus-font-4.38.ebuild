@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.38.ebuild,v 1.3 2012/08/29 06:04:00 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.38.ebuild,v 1.4 2013/02/10 03:21:41 ottxor Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="a-like-o +center-tilde distinct-l ru-dv +ru-g quote ru-i ru-k +psf raw-fon
 
 DEPEND="app-arch/gzip
 	dev-lang/perl
-	sys-apps/gawk
+	virtual/awk
 	pcf? ( x11-apps/bdftopcf )"
 RDEPEND=""
 
