@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/unixcw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/ChangeLog,v 1.9 2013/02/09 17:41:52 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/ChangeLog,v 1.10 2013/02/10 15:12:27 tomjbe Exp $
+
+  10 Feb 2013; Thomas Beierlein <tomjbe@gentoo.org> unixcw-3.2.0.ebuild,
+  +files/unixcw-3.2.0-pulseaudio.patch:
+  Add further missing includes
 
   09 Feb 2013; Thomas Beierlein <tomjbe@gentoo.org> unixcw-3.2.0.ebuild,
   +files/unixcw-3.2.0-console.patch:

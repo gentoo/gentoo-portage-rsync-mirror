@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.1_beta1.ebuild,v 1.8 2012/10/22 04:09:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.1_beta1.ebuild,v 1.9 2013/02/10 15:13:50 hasufell Exp $
 
 EAPI=2
 
@@ -41,6 +41,11 @@ DEPEND="${RDEPEND}
 	virtual/perl-Module-Build"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	perl-module_src_prepare
+	epatch "${FILESDIR}"/${P}-Werror.patch
+}
 
 src_configure() {
 	LD=$(tc-getCC) perl-module_src_configure

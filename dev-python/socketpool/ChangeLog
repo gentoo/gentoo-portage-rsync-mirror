@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/socketpool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/ChangeLog,v 1.4 2013/02/04 16:43:04 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/ChangeLog,v 1.5 2013/02/10 15:07:44 idella4 Exp $
+
+  10 Feb 2013; Ian Delaney <idella4@gentoo.org>
+  +files/socketpool-0.5.2-pool.patch, socketpool-0.5.2-r1.ebuild:
+  Added -pool.patch, fixes broken test, fixes Bug #451610
 
   04 Feb 2013; Ian Delaney <idella4@gentoo.org>
   +files/socketpool-0.5.2-locale.patch, socketpool-0.5.2-r1.ebuild:
