@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkworkspace
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.165 2013/02/07 04:57:50 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.166 2013/02/10 21:57:47 dilfridge Exp $
+
+  10 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  libkworkspace-4.10.0.ebuild:
+  Add missing dependency, bug 444438
 
   07 Feb 2013; Naohiro Aota <naota@gentoo.org> libkworkspace-4.9.5.ebuild:
   Add ~x86-fbsd wrt bug #430072

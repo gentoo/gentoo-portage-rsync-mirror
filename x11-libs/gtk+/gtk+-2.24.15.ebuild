@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.13-r1.ebuild,v 1.2 2012/12/06 06:13:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.15.ebuild,v 1.1 2013/02/10 21:53:44 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils flag-o-matic gnome.org virtualx autotools
 
@@ -27,11 +27,11 @@ COMMON_DEPEND="!aqua? (
 		x11-libs/libXfixes
 		x11-libs/libXcomposite
 		x11-libs/libXdamage
-		>=x11-libs/cairo-1.6[X,svg]
+		>=x11-libs/cairo-1.6:=[X,svg]
 		x11-libs/gdk-pixbuf:2[X,introspection?]
 	)
 	aqua? (
-		>=x11-libs/cairo-1.6[aqua,svg]
+		>=x11-libs/cairo-1.6:=[aqua,svg]
 		x11-libs/gdk-pixbuf:2[introspection?]
 	)
 	xinerama? ( x11-libs/libXinerama )
@@ -40,7 +40,7 @@ COMMON_DEPEND="!aqua? (
 	>=dev-libs/atk-1.29.2[introspection?]
 	media-libs/fontconfig
 	x11-misc/shared-mime-info
-	cups? ( net-print/cups )
+	cups? ( net-print/cups:= )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
 	!<gnome-base/gail-1000"
 DEPEND="${COMMON_DEPEND}
@@ -77,9 +77,6 @@ set_gtk2_confdir() {
 }
 
 src_prepare() {
-	# https://bugzilla.gnome.org/show_bug.cgi?id=684787
-	epatch "${FILESDIR}/${PN}-2.24.13-gold.patch"
-
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
 	epatch "${FILESDIR}/${PN}-2.21.3-multilib.patch"
@@ -89,9 +86,6 @@ src_prepare() {
 
 	# fix building with gir #372953, upstream bug #642085
 	epatch "${FILESDIR}"/${PN}-2.24.7-darwin-quartz-introspection.patch
-
-	# share bookmarks with gtk3 if they are found; in 2.24.14
-	epatch "${FILESDIR}/${P}-gtk3-bookmarks.patch"
 
 	# marshalers code was pre-generated with glib-2.31, upstream bug #671763
 	rm -v gdk/gdkmarshalers.c gtk/gtkmarshal.c gtk/gtkmarshalers.c \
@@ -161,20 +155,15 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="$(use_enable xinerama)
-		$(use_enable cups cups auto)
-		$(use_enable introspection)
-		--disable-papi"
-	if use aqua; then
-		myconf="${myconf} --with-gdktarget=quartz"
-	else
-		myconf="${myconf} --with-gdktarget=x11 --with-xinput"
-	fi
-
 	# Passing --disable-debug is not recommended for production use
-	use debug && myconf="${myconf} --enable-debug=yes"
-
-	econf ${myconf}
+	econf \
+		$(usex aqua --with-gdktarget=quartz --with-gdktarget=x11) \
+		$(usex aqua "" --with-xinput) \
+		$(usex debug --enable-debug=yes "") \
+		$(use_enable cups cups auto) \
+		$(use_enable introspection) \
+		$(use_enable xinerama) \
+		--disable-papi
 }
 
 src_test() {
@@ -186,7 +175,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 
 	set_gtk2_confdir
 	dodir ${GTK2_CONFDIR}
@@ -248,4 +237,9 @@ pkg_postinst() {
 		elog "Alternatively, check \"gtk-print-preview-command\" documentation and"
 		elog "add it to your gtkrc."
 	fi
+
+	elog "To make the gtk2 file chooser use 'current directory' mode by default,"
+	elog "edit ~/.config/gtk-2.0/gtkfilechooser.ini to contain the following:"
+	elog "[Filechooser Settings]"
+	elog "StartupMode=cwd"
 }

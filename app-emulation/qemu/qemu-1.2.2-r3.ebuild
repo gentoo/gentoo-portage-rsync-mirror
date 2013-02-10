@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2-r3.ebuild,v 1.1 2013/02/10 21:23:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2-r3.ebuild,v 1.2 2013/02/10 21:50:04 cardoe Exp $
 
 EAPI=5
 
 MY_PN="qemu-kvm"
 MY_P=${MY_PN}-1.2.0
 
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.4"
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python user udev
 BACKPORTS=7c9a3a87
 

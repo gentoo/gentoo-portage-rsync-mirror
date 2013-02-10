@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libpostproc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.13 2012/11/25 15:56:14 lu_zero Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.14 2013/02/10 21:49:49 mattst88 Exp $
+
+  10 Feb 2013; Matt Turner <mattst88@gentoo.org>
+  libpostproc-0.8.0.20121125.ebuild, libpostproc-9999.ebuild, metadata.xml:
+  Drop unused 3dnowext and vis USE flags. Add missing mmxext USE flag. Bug
+  455814.
 
 *libpostproc-0.8.0.20121125 (25 Nov 2012)
 

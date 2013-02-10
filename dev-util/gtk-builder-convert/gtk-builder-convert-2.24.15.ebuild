@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-builder-convert/gtk-builder-convert-2.24.13.ebuild,v 1.2 2012/12/06 09:05:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-builder-convert/gtk-builder-convert-2.24.15.ebuild,v 1.1 2013/02/10 21:54:09 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 
 GNOME_ORG_MODULE="gtk+"
-PYTHON_DEPEND="2"
-PYTHON_USE_WITH="xml"
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_REQ_USE="xml"
 
-inherit gnome.org python
+inherit gnome.org python-single-r1
 
 DESCRIPTION="Converts Glade files to GtkBuilder XML format"
 HOMEPAGE="http://www.gtk.org/"
@@ -19,15 +19,16 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE=""
 
 # gtk-builder-convert was part of gtk+ until 2.24.10-r1
-RDEPEND="!<=x11-libs/gtk+-2.24.10:2"
-DEPEND=""
+COMMON_DEPEND="${PYTHON_DEPS}"
+RDEPEND="!<=x11-libs/gtk+-2.24.10:2
+	${COMMON_DEPEND}"
+DEPEND="${COMMON_DEPEND}"
 
 src_configure() { :; }
 
 src_compile() { :; }
 
 src_install() {
-	cd gtk
-	python_convert_shebangs 2 gtk-builder-convert
-	dobin gtk-builder-convert
+	cd gtk || die
+	python_doscript gtk-builder-convert
 }

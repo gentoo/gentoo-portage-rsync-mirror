@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.181 2013/02/10 21:29:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.182 2013/02/10 21:50:04 cardoe Exp $
+
+  10 Feb 2013; Doug Goldstein <cardoe@gentoo.org> qemu-1.2.2-r3.ebuild:
+  Fix PYTHON_DEPEND line
 
   10 Feb 2013; Doug Goldstein <cardoe@gentoo.org> -qemu-1.2.1.ebuild,
   -qemu-1.2.2.ebuild:

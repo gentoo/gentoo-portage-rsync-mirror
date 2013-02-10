@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-9999.ebuild,v 1.6 2012/05/18 19:24:50 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-9999.ebuild,v 1.7 2013/02/10 21:49:49 mattst88 Exp $
 
 EAPI="4"
 
@@ -31,7 +31,7 @@ IUSE="pic static-libs"
 
 # String for CPU features in the useflag[:configure_option] form
 # if :configure_option isn't set, it will use 'useflag' as configure option
-CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec mmx vis"
+CPU_FEATURES="3dnow:amd3dnow altivec mmx mmxext"
 for i in ${CPU_FEATURES}; do
 	IUSE="${IUSE} ${i%:*}"
 done

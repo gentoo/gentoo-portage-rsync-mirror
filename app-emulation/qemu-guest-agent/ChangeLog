@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/qemu-guest-agent
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.6 2012/12/13 20:06:02 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.8 2013/02/10 21:48:48 cardoe Exp $
+
+  10 Feb 2013; Doug Goldstein <cardoe@gentoo.org>
+  -qemu-guest-agent-1.1.1.ebuild:
+  Remove older version
+
+  10 Feb 2013; Doug Goldstein <cardoe@gentoo.org>
+  qemu-guest-agent-1.2.0.ebuild:
+  Fix python build depends. bug #448264, thanks to David Weber
+  <davidwerbung@gmx.de>
 
   13 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
   qemu-guest-agent-1.1.1.ebuild, qemu-guest-agent-1.2.0.ebuild:

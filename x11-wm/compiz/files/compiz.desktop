@@ -1,6 +1,5 @@
 [Desktop Entry]
 Type=Application
-Encoding=UTF-8
 Name=Compiz
 Name[en_GB]=Compiz
 Exec=compiz ccp

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/qemu-guest-agent-1.2.0.ebuild,v 1.2 2012/12/13 20:06:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/qemu-guest-agent-1.2.0.ebuild,v 1.3 2013/02/10 21:47:50 cardoe Exp $
 
 EAPI=4
 
-inherit systemd udev
+inherit systemd udev python
 
 MY_PN="qemu"
 MY_P="${MY_PN}-${PV}"
@@ -29,11 +29,16 @@ IUSE=""
 DEPEND=">=dev-libs/glib-2.22"
 RDEPEND="${DEPEND}
 	!<app-emulation/qemu-1.1.1-r1"
+PYTHON_DEPEND="2:2.4"
 
 S="${WORKDIR}/${MY_P}"
 
+pkg_setup() {
+	python_set_active_version 2
+}
+
 src_configure() {
-	./configure
+	./configure --python=python2
 }
 
 src_compile() {

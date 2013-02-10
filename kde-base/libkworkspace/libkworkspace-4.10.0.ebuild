@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/libkworkspace-4.10.0.ebuild,v 1.1 2013/02/07 04:57:50 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/libkworkspace-4.10.0.ebuild,v 1.2 2013/02/10 21:57:47 dilfridge Exp $
 
 EAPI=5
 
@@ -22,6 +22,7 @@ KMSAVELIBS="true"
 DEPEND="
 	x11-libs/libxkbfile
 	x11-libs/libXcomposite
+	x11-libs/xcb-util-renderutil
 "
 RDEPEND=${DEPEND}
 

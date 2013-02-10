@@ -11,6 +11,7 @@
 		instruction set, present in modern AMD CPUs.  (Check for
 		3dnowext in /proc/cpuinfo to know whether your CPU supports it).
 	</flag>
+	<flag name="mmxext">Enable mmx2 support.</flag>
 	<flag name="pic">Force shared libraries to be built as PIC (this is slower).</flag>
 	<flag name="vis"> Adds support for SIMD optimizations for UltraSPARC processors.</flag>
 </use>
