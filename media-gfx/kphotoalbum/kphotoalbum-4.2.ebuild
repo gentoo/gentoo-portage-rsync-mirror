@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.2.ebuild,v 1.2 2012/08/25 20:12:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.2.ebuild,v 1.3 2013/02/09 23:42:18 dilfridge Exp $
 
 EAPI=4
 
@@ -24,8 +24,8 @@ DEPEND="
 	virtual/jpeg
 	exif? ( >=media-gfx/exiv2-0.17 )
 	geolocation? ( $(add_kdebase_dep marble) )
-	kipi? ( $(add_kdebase_dep libkipi) )
-	raw? ( $(add_kdebase_dep libkdcraw) )
+	kipi? ( $(add_kdebase_dep libkipi) <kde-base/libkipi-4.9.50 )
+	raw? ( $(add_kdebase_dep libkdcraw) <kde-base/libkdcraw-4.9.50 )
 "
 RDEPEND="${DEPEND}
 	semantic-desktop? ( $(add_kdebase_dep nepomuk) )

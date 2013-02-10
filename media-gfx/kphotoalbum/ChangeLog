@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/kphotoalbum
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.55 2012/08/25 20:12:47 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.56 2013/02/09 23:42:18 dilfridge Exp $
+
+  09 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  kphotoalbum-4.2.ebuild:
+  Does not build with KDE 4.10
 
   25 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/kphotoalbum-4.1.1-docbook_fix.patch,
