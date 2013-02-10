@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7472 2013/02/10 16:21:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7473 2013/02/10 16:41:16 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask net-wireless/rtl8192su-firmware again as it's obsolete with latest
+  driver from upstream site which is now using rtl8172fw.bin.
 
   10 Feb 2013; Rick Farina <zerochaos@gentoo.org> package.mask:
   removing mask on firmware which was inappropriately masked and

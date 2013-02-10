@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.0.2.8415-r1.ebuild,v 1.3 2013/02/10 15:45:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.0.2.8415-r2.ebuild,v 1.1 2013/02/10 16:50:14 hasufell Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ LICENSE="googleearth GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror strip"
-IUSE="mdns-bundled +qt-bundled"
+IUSE="+system-mdns system-qt"
 
 GCC_NEEDED="4.2"
 QA_PREBUILT="*"
@@ -39,20 +39,20 @@ RDEPEND="|| ( >=sys-devel/gcc-${GCC_NEEDED}[cxx] >=sys-devel/gcc-${GCC_NEEDED}[-
 		x11-libs/libXdmcp
 		sys-libs/zlib
 		dev-libs/glib:2
-		!qt-bundled? (
+		system-qt? (
 			>=x11-libs/qt-core-4.5.3:4
 			>=x11-libs/qt-gui-4.5.3:4
 			>=x11-libs/qt-webkit-4.5.3:4
 		)
 		net-misc/curl
 		sci-libs/gdal
-		!mdns-bundled? ( sys-auth/nss-mdns )
+		system-mdns? ( sys-auth/nss-mdns )
 	)
 	amd64? (
 		>=app-emulation/emul-linux-x86-xlibs-20081109
 		>=app-emulation/emul-linux-x86-baselibs-20081109
 		app-emulation/emul-linux-x86-opengl
-		!qt-bundled? (
+		system-qt? (
 			>=app-emulation/emul-linux-x86-qtlibs-20091231-r1
 		)
 	)
@@ -87,12 +87,12 @@ src_unpack() {
 
 	unpack googleearth-libexpat-2.1.0-novisibility.tar.xz
 
-	if ! use qt-bundled; then
+	if use system-qt; then
 		rm -v libQt{Core,Gui,Network,WebKit}.so.4 qt.conf || die
 		rm -rv plugins/imageformats || die
 	fi
 	rm -v libcurl.so.4 || die
-	if ! use mdns-bundled; then
+	if use system-mdns; then
 		rm -v libnss_mdns4_minimal.so.2 || die
 	fi
 
@@ -161,9 +161,8 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	elog "The qt-bundled flag is now enabled by default due to crashes on startup with system Qt."
-	elog "Testing and reporting outcome with/without the flag is welcome (bug #319813)."
-	elog "If it crashes in both cases, disabling tips is reported to help (bug #354281):"
+	elog "The system-qt flag is disabled by default due to crashes on startup with system Qt."
+	elog "Do not report bugs if you attempt to enable this masked flag."
 	elog ""
 	elog "When you get a crash starting Google Earth, try adding a file ~./config/Google/GoogleEarthPlus.conf"
 	elog "the following options:"

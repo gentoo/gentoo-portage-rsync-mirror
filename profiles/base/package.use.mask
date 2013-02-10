@@ -1,10 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.434 2013/01/22 05:09:31 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.435 2013/02/10 16:52:53 hasufell Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Julian Ospald <hasufell@gentoo.org> (10 Feb 2013)
+# This flag is experimental and breaks googleearth
+# in numerous ways. Unsupportable.
+>=sci-geosciences/googleearth-7.0.2.8415-r2 system-qt
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 Mar 2011)
 # The dependencies for these flags are still in ~arch so

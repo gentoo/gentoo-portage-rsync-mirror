@@ -1,6 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43legacy-firmware/b43legacy-firmware-3.130.20.0.ebuild,v 1.2 2012/12/10 00:40:11 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43legacy-firmware/b43legacy-firmware-3.130.20.0.ebuild,v 1.3 2013/02/10 16:37:45 zerochaos Exp $
+
+EAPI=5
 
 : ${B43_FIRMWARE_SRC_OBJ:=${A}}
 

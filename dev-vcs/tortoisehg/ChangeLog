@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.31 2013/02/09 19:21:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.32 2013/02/10 16:58:17 floppym Exp $
+
+  10 Feb 2013; Mike Gilbert <floppym@gentoo.org> tortoisehg-2.7.ebuild,
+  tortoisehg-9999.ebuild:
+  Increase the upper bound on mercurial to 2.6.
 
 *tortoisehg-2.7 (09 Feb 2013)
 

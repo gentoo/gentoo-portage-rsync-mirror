@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14450 2013/02/10 16:21:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14452 2013/02/10 16:45:30 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -85,7 +85,7 @@ net-wireless/i2400m-fw
 net-wireless/prism54-firmware
 net-wireless/bluez-firmware
 
-# Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2012)
+# Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
 # Package is mirror restricted and the tarball is no longer
 # available wrt bug #446644 and even if it did, it doesn't work
 # as per bug #369497. Replacement should be in linux-firmware package,
@@ -93,12 +93,21 @@ net-wireless/bluez-firmware
 # Removal at 01 Apr 2013
 media-tv/ivtv-firmware
 
-# Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2012)
+# Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
 # Only for Linux 2.6.25 (or older) and oldest udev in tree
 # needs 2.6.32.60, if not newer. Use either in-kernel driver
 # or something else.
 # Removal at 01 Apr 2012
 media-tv/ivtv
+
+# Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
+# Latest driver package from the realtek site,
+# rtl8712_8188_8191_8192SU_usb_linux_v2.6.6.0.20120405
+# is using rtl8172fw.bin firmware. This would need to be
+# packaged in 2 packages: the new driver, and the
+# rtl8172fw-firmware.
+# Removal at 01 Apr 2013
+net-wireless/rtl8192su-firmware
 
 # Ryan Hill <dirtyepic@gentoo.org> (07 Feb 2013)
 # Breaks everything (bug #456108)
