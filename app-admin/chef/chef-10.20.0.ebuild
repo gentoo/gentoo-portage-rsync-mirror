@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-10.20.0.ebuild,v 1.1 2013/02/10 20:00:15 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-10.20.0.ebuild,v 1.2 2013/02/10 21:08:24 hollow Exp $
 
 EAPI=4
 USE_RUBY="ruby19"
@@ -51,8 +51,6 @@ ruby_add_rdepend ">=dev-ruby/bunny-0.6.0
 	<dev-ruby/yajl-ruby-2"
 
 each_ruby_prepare() {
-	epatch "${FILESDIR}"/chef-10.18.2-remove-clone-warnings.patch
-
 	ruby_fakegem_metadata_gemspec ../metadata ${RUBY_FAKEGEM_GEMSPEC}
 
 	# bunny
