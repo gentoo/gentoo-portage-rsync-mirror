@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Path-Tiny
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Tiny/ChangeLog,v 1.1 2013/02/03 13:49:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Tiny/ChangeLog,v 1.2 2013/02/10 07:38:55 tove Exp $
+
+*Path-Tiny-0.5.0 (10 Feb 2013)
+
+  10 Feb 2013; Torsten Veller <tove@gentoo.org> +Path-Tiny-0.5.0.ebuild:
+  Version bump
 
 *Path-Tiny-0.3.0 (03 Feb 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.99 2013/02/10 06:20:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.100 2013/02/10 07:53:31 vapier Exp $
 
 # @ECLASS: linux-info.eclass
 # @MAINTAINER:
@@ -462,6 +462,13 @@ get_version() {
 		return 1
 	fi
 
+	# See if the kernel dir is actually an output dir. #454294
+	if [ -z "${KBUILD_OUTPUT}" -a -L "${KERNEL_DIR}/source" ]; then
+		KBUILD_OUTPUT=${KERNEL_DIR}
+		KERNEL_DIR=$(readlink -f "${KERNEL_DIR}/source")
+		KV_DIR=${KERNEL_DIR}
+	fi
+
 	if [ -z "${get_version_warning_done}" ]; then
 		qeinfo "Found kernel source directory:"
 		qeinfo "    ${KV_DIR}"
@@ -481,7 +488,7 @@ get_version() {
 	# KBUILD_OUTPUT, and we need this for .config and localversions-*
 	# so we better find it eh?
 	# do we pass KBUILD_OUTPUT on the CLI?
-	OUTPUT_DIR="${OUTPUT_DIR:-${KBUILD_OUTPUT}}"
+	local OUTPUT_DIR=${KBUILD_OUTPUT}
 
 	# keep track of it
 	KERNEL_MAKEFILE="${KV_DIR}/Makefile"

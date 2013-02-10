@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/orbit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.184 2012/05/09 01:35:12 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.185 2013/02/10 07:49:31 pacho Exp $
+
+  10 Feb 2013; Pacho Ramos <pacho@gentoo.org> -orbit-2.14.19.ebuild:
+  Drop old
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> orbit-2.14.19-r1.ebuild:
   keyword ~amd64-fbsd
@@ -669,4 +672,3 @@
   21 Aug 2004; Mike Gardiner <obz@gentoo.org> +metadata.xml, +orbit-2.10.4.ebuild:
   First version using the amalgamated orbit ebuild, combining ORBit and ORBit2
   and using slots
-

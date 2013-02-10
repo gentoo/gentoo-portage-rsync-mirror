@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Mouse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.39 2013/01/19 12:36:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mouse/ChangeLog,v 1.40 2013/02/10 07:41:45 tove Exp $
+
+*Mouse-1.50.0 (10 Feb 2013)
+
+  10 Feb 2013; Torsten Veller <tove@gentoo.org> +Mouse-1.50.0.ebuild:
+  Version bump
 
 *Mouse-1.40.0 (19 Jan 2013)
 
