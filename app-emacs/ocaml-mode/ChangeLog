@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/ocaml-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.61 2013/02/10 16:55:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.63 2013/02/10 20:48:00 ago Exp $
+
+  10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> ocaml-mode-3.12.1-r1.ebuild:
+  Stable for amd64, wrt bug #456440
+
+  10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> ocaml-mode-3.12.1-r1.ebuild:
+  Stable for x86, wrt bug #456440
 
 *ocaml-mode-4.00.1 (10 Feb 2013)
 
@@ -228,4 +234,3 @@
   files/50ocaml-mode-gentoo.el:
   Initial import for the ocaml mode accompanying the standard distribution of
   ocaml. Closes bug #43128. Thanks to liquidx@gentoo.org for initial ebuilds.
-

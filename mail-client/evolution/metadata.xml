@@ -17,5 +17,6 @@
 		<flag name="networkmanager">Allows Evolution to automagically toggle
 			online/offline mode by talking to <pkg>net-misc/networkmanager</pkg>
 			and getting the current network state</flag>
+		<flag name="weather">Enable optional weather calendar support</flag>
 	</use>
 </pkgmetadata>

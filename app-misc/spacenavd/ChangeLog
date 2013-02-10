@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/spacenavd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/ChangeLog,v 1.11 2012/11/16 10:26:42 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/ChangeLog,v 1.13 2013/02/10 20:48:24 ago Exp $
+
+  10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> spacenavd-0.5-r4.ebuild:
+  Stable for amd64, wrt bug #456454
+
+  10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> spacenavd-0.5-r4.ebuild:
+  Stable for x86, wrt bug #456454
 
   16 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> -spacenavd-0.5-r3.ebuild:
   old

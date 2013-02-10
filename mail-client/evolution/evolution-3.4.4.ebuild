@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.4.4.ebuild,v 1.8 2013/02/07 22:24:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.4.4.ebuild,v 1.9 2013/02/10 20:49:08 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ HOMEPAGE="http://projects.gnome.org/evolution/"
 LICENSE="|| ( LGPL-2 LGPL-3 ) CC-BY-SA-3.0 FDL-1.3+ OPENLDAP"
 SLOT="2.0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="clutter connman crypt +gnome-online-accounts gstreamer kerberos ldap map networkmanager python ssl"
+IUSE="clutter connman crypt +gnome-online-accounts gstreamer kerberos ldap map networkmanager python ssl +weather"
 
 # We need a graphical pinentry frontend to be able to ask for the GPG
 # password from inside evolution, bug 160302
@@ -32,10 +32,9 @@ COMMON_DEPEND=">=dev-libs/glib-2.30:2
 	>=x11-libs/gtk+-3.4:3
 	>=gnome-base/gnome-desktop-2.91.3:3
 	>=gnome-base/gsettings-desktop-schemas-2.91.92
-	>=dev-libs/libgweather-2.90.0:2
 	>=media-libs/libcanberra-0.25[gtk3]
 	>=x11-libs/libnotify-0.7
-	>=gnome-extra/evolution-data-server-${PV}[gnome-online-accounts?,weather]
+	>=gnome-extra/evolution-data-server-${PV}[gnome-online-accounts?,weather?]
 	=gnome-extra/evolution-data-server-${MY_MAJORV}*
 	>=gnome-extra/gtkhtml-4.1.2:4.0
 	>=gnome-base/gconf-2:2
@@ -70,7 +69,8 @@ COMMON_DEPEND=">=dev-libs/glib-2.30:2
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
 	ssl? (
 		>=dev-libs/nspr-4.6.1
-		>=dev-libs/nss-3.11 )"
+		>=dev-libs/nss-3.11 )
+	weather? ( >=dev-libs/libgweather-2.90.0:2 )"
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	>=app-text/gnome-doc-utils-0.20.10
@@ -109,7 +109,6 @@ src_prepare() {
 		--disable-mono
 		--disable-pst-import
 		--enable-canberra
-		--enable-weather
 		$(use_enable ssl nss)
 		$(use_enable ssl smime)
 		$(use_enable networkmanager nm)
@@ -121,7 +120,8 @@ src_prepare() {
 		pythonpath=$(PYTHON -2 -a)
 		$(use_with clutter)
 		$(use_with ldap openldap)
-		$(use_with kerberos krb5 ${EPREFIX}/usr)"
+		$(use_with kerberos krb5 ${EPREFIX}/usr)
+		$(use_enable weather)"
 
 	# dang - I've changed this to do --enable-plugins=experimental.  This will
 	# autodetect new-mail-notify and exchange, but that cannot be helped for the

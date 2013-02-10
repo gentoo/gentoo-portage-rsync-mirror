@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.6.2-r1.ebuild,v 1.8 2013/02/07 22:24:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.6.2-r1.ebuild,v 1.9 2013/02/10 20:49:08 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ SRC_URI="${SRC_URI}
 # Note: explicitly "|| ( LGPL-2 LGPL-3 )", not "LGPL-2+".
 LICENSE="|| ( LGPL-2 LGPL-3 ) CC-BY-SA-3.0 FDL-1.3+ OPENLDAP"
 SLOT="2.0"
-IUSE="crypt +gnome-online-accounts gstreamer kerberos ldap map ssl"
+IUSE="crypt +gnome-online-accounts gstreamer kerberos ldap map ssl +weather"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 # We need a graphical pinentry frontend to be able to ask for the GPG
@@ -33,10 +33,9 @@ COMMON_DEPEND=">=dev-libs/glib-2.32:2
 	>=x11-libs/gtk+-3.4.0:3
 	>=gnome-base/gnome-desktop-2.91.3:3=
 	>=gnome-base/gsettings-desktop-schemas-2.91.92
-	>=dev-libs/libgweather-3.5.0:2=
 	>=media-libs/libcanberra-0.25[gtk3]
 	>=x11-libs/libnotify-0.7:=
-	>=gnome-extra/evolution-data-server-${PV}:=[gnome-online-accounts?,weather]
+	>=gnome-extra/evolution-data-server-${PV}:=[gnome-online-accounts?,weather?]
 	=gnome-extra/evolution-data-server-${MY_MAJORV}*
 	>=gnome-extra/gtkhtml-4.5.2:4.0
 	dev-libs/atk
@@ -70,7 +69,8 @@ COMMON_DEPEND=">=dev-libs/glib-2.32:2
 		>=media-libs/libchamplain-0.12:0.12 )
 	ssl? (
 		>=dev-libs/nspr-4.6.1:=
-		>=dev-libs/nss-3.11:= )"
+		>=dev-libs/nss-3.11:= )
+	weather? ( >=dev-libs/libgweather-3.5.0:2= )"
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	dev-util/gtk-doc-am
@@ -97,14 +97,14 @@ src_prepare() {
 		--disable-image-inline
 		--disable-pst-import
 		--enable-canberra
-		--enable-weather
 		$(use_enable ssl nss)
 		$(use_enable ssl smime)
 		$(use_enable gnome-online-accounts goa)
 		$(use_enable gstreamer audio-inline)
 		$(use_enable map contact-maps)
 		$(use_with ldap openldap)
-		$(use_with kerberos krb5 ${EPREFIX}/usr)"
+		$(use_with kerberos krb5 ${EPREFIX}/usr)
+		$(use_enable weather)"
 
 	# Use NSS/NSPR only if 'ssl' is enabled.
 	if use ssl ; then
