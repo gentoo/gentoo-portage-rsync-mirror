@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/util-vserver
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.111 2012/12/05 06:03:49 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.112 2013/02/10 19:49:25 hollow Exp $
+
+*util-vserver-0.30.216_pre3038 (10 Feb 2013)
+
+  10 Feb 2013; Benedikt Böhm <hollow@gentoo.org>
+  +util-vserver-0.30.216_pre3038.ebuild,
+  +files/util-vserver-0.30.216-varlock.patch:
+  version bump. fixes #446206
 
   05 Dec 2012; Patrick Lauer <patrick@gentoo.org>
   util-vserver-0.30.216_pre3025.ebuild:
