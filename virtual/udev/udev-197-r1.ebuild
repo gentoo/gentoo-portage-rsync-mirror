@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/udev-197-r1.ebuild,v 1.1 2013/02/09 19:57:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/udev-197-r1.ebuild,v 1.2 2013/02/10 11:12:29 ssuominen Exp $
 
 EAPI=2
 
@@ -16,6 +16,6 @@ IUSE="gudev hwdb introspection keymap +kmod selinux static-libs"
 
 DEPEND=""
 RDEPEND="|| ( >=sys-fs/udev-197-r8[gudev?,hwdb?,introspection?,keymap?,kmod?,selinux?,static-libs?]
-	kmod? ( >=sys-fs/eudev-1_beta2-r1[modutils,gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] )
-	!kmod? ( >=sys-fs/eudev-1_beta2-r1[gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] )
+	kmod? ( >=sys-fs/eudev-1_beta2-r2[modutils,gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] )
+	!kmod? ( >=sys-fs/eudev-1_beta2-r2[gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] )
 	)"

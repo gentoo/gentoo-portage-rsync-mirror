@@ -1,6 +1,9 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.24 2013/02/09 23:01:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.25 2013/02/10 11:12:29 ssuominen Exp $
+
+  10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197-r1.ebuild:
+  Raise eudev dependency to -r2.
 
   09 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197.ebuild:
   arm/ppc64 stable wrt #452556
