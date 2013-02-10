@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/gst-plugins-gconf-0.10.31.ebuild,v 1.9 2013/02/04 15:02:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gconf/gst-plugins-gconf-0.10.31.ebuild,v 1.10 2013/02/10 22:31:15 ago Exp $
 
 EAPI="5"
 
 inherit gnome2-utils gst-plugins-good gst-plugins10
 
 DESCRIPTION="GStreamer plugin for wrapping GConf audio/video settings"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=gnome-base/gconf-2"
