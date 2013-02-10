@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.10.ebuild,v 1.4 2013/02/08 10:25:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.10.ebuild,v 1.5 2013/02/10 19:02:39 nimiux Exp $
 
 EAPI=4
 
@@ -87,7 +87,8 @@ src_install() {
 	insinto "/usr/include/${PN}"
 	doins include/*
 
-	diropts -o"${PN}" -g"${PN}"
+	diropts -o"${PN}" -g"${PN}" -m0700
+	dodir "/var/lib/${PN}"
 	dodir "/var/lib/${PN}/data"
 
 	newinitd "${FILESDIR}/${PF}-init" "${PN}"

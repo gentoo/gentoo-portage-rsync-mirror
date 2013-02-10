@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.67 2013/02/08 10:26:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.68 2013/02/10 19:02:39 nimiux Exp $
+
+  10 Feb 2013; Chema Alonso <nimiux@gentoo.org> inspircd-2.0.10.ebuild:
+  Fix directory permissions. Thanks to ago for noticing.
 
   08 Feb 2013; Agostino Sarubbo <ago@gentoo.org> -inspircd-2.0.8.ebuild,
   -inspircd-2.0.9.ebuild:
