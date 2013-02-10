@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.8.1.ebuild,v 1.3 2013/02/02 23:08:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.8.1.ebuild,v 1.4 2013/02/10 15:41:09 eva Exp $
 
-EAPI="4"
-PYTHON_DEPEND="2:2.5"
+EAPI="5"
+PYTHON_COMPAT=( python2_{5,6,7} )
 
-inherit base python eutils
+inherit eutils python-any-r1
 
 DESCRIPTION="A link-local XMPP connection manager for Telepathy"
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/CategorySalut"
@@ -14,45 +14,52 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
-IUSE="test"
+IUSE="gnutls test"
 
-RDEPEND="dev-libs/libxml2
-	>=dev-libs/glib-2.24:2
+RDEPEND="
+	>=dev-libs/dbus-glib-0.61
+	dev-libs/libxml2
+	>=dev-libs/glib-2.28:2
 	>=sys-apps/dbus-1.1.0
 	>=net-libs/telepathy-glib-0.17.1
 	>=net-dns/avahi-0.6.22[dbus]
 	net-libs/libsoup:2.4
-	sys-apps/util-linux"
+	sys-apps/util-linux
+	gnutls? ( >=net-libs/gnutls-2.10.2 )
+	!gnutls? ( >=dev-libs/openssl-0.9.8g )
+"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
+	dev-libs/libxslt
+	virtual/pkgconfig
 	test? (
 		>=dev-libs/check-0.9.4
 		net-libs/libgsasl
 		dev-python/twisted-words )
-	dev-libs/libxslt
-	virtual/pkgconfig"
+"
 # FIXME: needs xmppstream python module
 #               >=net-dns/avahi-0.6.22[python]
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README"
-	python_set_active_version 2
-	python_pkg_setup
+	python-any-r1_pkg_setup
 }
 
 src_prepare() {
 	# Fix uninitialized variable, upstream bug #37701
 	epatch "${FILESDIR}/${PN}-0.5.0-uninitialized.patch"
 
-	python_convert_shebangs -r 2 .
+	_python_rewrite_shebangs .
 }
 
 src_configure() {
 	econf \
+		--disable-coding-style-checks \
 		--disable-plugins \
 		--disable-Werror \
 		--disable-static \
 		--disable-avahi-tests \
-		--docdir=/usr/share/doc/${PF}
+		--docdir=/usr/share/doc/${PF} \
+		--with-tls=$(usex gnutls gnutls openssl)
 		#$(use_enable test avahi-tests)
 }
 

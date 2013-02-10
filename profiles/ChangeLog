@@ -1,10 +1,21 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7467 2013/02/10 14:01:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7471 2013/02/10 15:58:06 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite media-tv/ivtv because it's only for Linux 2.6.25 and oldest udev in
+  tree needs at least 2.6.32.60.
+
+  10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite media-tv/ivtv-firmware wrt #369497 and #446644
+
+  10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unmask both zd1201 and zd1211 firmware pkgs as they are not in linux-firmware
+  pkg wrt #456638
 
   10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask net-wireless/bluez-firmware because of missing or unclear licensing.

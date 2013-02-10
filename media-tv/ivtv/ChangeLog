@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.114 2013/01/21 22:19:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.116 2013/02/10 15:54:37 ssuominen Exp $
+
+  10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> ivtv-1.2.0-r1.ebuild:
+  Don't pull media-tv/ivtv-firmware because it can't be fetched and
+  linux-firmware should have replacement.
+
+  10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> -ivtv-1.0.1.ebuild,
+  -ivtv-1.0.2.ebuild, -ivtv-1.0.3-r2.ebuild, -ivtv-1.1.0-r1.ebuild:
+  old
 
   21 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> ivtv-1.0.1.ebuild,
   ivtv-1.0.2.ebuild, ivtv-1.0.3-r2.ebuild:

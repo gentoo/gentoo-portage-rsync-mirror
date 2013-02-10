@@ -1,28 +1,30 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.2.0-r1.ebuild,v 1.6 2012/11/29 02:22:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.2.0-r1.ebuild,v 1.7 2013/02/10 15:54:37 ssuominen Exp $
 
 inherit eutils linux-mod
 
 DESCRIPTION="ivtv driver for Hauppauge PVR PCI cards"
 HOMEPAGE="http://www.ivtvdriver.org"
 SRC_URI="http://dl.ivtvdriver.org/ivtv/archive/1.2.x/${P}.tar.gz"
-SLOT="0"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="perl"
-RDEPEND="virtual/udev"
+
+RDEPEND=""
 DEPEND="app-arch/unzip"
-PDEPEND=">=media-tv/ivtv-firmware-20070217
+PDEPEND="
 	perl? (
 		dev-perl/Video-Frequencies
 		dev-perl/Video-ivtv
 		dev-perl/Config-IniFiles
 		virtual/perl-Getopt-Long
-		dev-perl/perl-tk )"
+		dev-perl/perl-tk
+	)"
 
 pkg_setup() {
-
 	MODULE_NAMES="saa717x(extra:${S}/i2c-drivers)"
 	BUILD_TARGETS="all"
 	CONFIG_CHECK="EXPERIMENTAL KMOD HAS_IOMEM FW_LOADER I2C I2C_ALGOBIT
@@ -80,7 +82,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	linux-mod_pkg_postinst
 
 	elog ""

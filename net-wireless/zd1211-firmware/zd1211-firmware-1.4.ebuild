@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211-firmware/zd1211-firmware-1.4.ebuild,v 1.6 2013/02/08 17:57:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211-firmware/zd1211-firmware-1.4.ebuild,v 1.7 2013/02/10 15:33:36 ssuominen Exp $
 
 EAPI=5
 
@@ -10,15 +10,13 @@ SRC_URI="mirror://sourceforge/zd1211/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 S=${WORKDIR}/${PN}
 
 src_install() {
 	insinto /lib/firmware/zd1211
-	doins zd1211_ub zd1211_ur zd1211_uphr
-	doins zd1211b_ub zd1211b_ur zd1211b_uphr
-
+	doins zd1211_u{b,r,phr} zd1211b_u{b,r,phr}
 	dodoc README
 }
