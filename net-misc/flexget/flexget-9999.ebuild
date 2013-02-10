@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.31 2013/01/18 04:03:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.32 2013/02/10 00:51:02 floppym Exp $
 
 EAPI=5
 
@@ -10,13 +10,13 @@ inherit distutils-r1 eutils
 
 if [[ ${PV} != 9999 ]]; then
 	MY_P="FlexGet-${PV}"
-	SRC_URI="http://download.flexget.com/unstable/${MY_P}.tar.gz"
+	SRC_URI="http://download.flexget.com/${MY_P}.tar.gz
+		http://download.flexget.com/archive/${MY_P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 else
-	inherit subversion
-	SRC_URI=""
-	ESVN_REPO_URI="http://svn.flexget.com/trunk"
-	KEYWORDS=""
+	inherit git-2
+	EGIT_REPO_URI="git://github.com/Flexget/Flexget.git
+		https://github.com/Flexget/Flexget.git"
 fi
 
 DESCRIPTION="Multipurpose automation tool for content like torrents, nzbs, podcasts, comics"
@@ -54,7 +54,7 @@ else
 	S="${WORKDIR}/${MY_P}"
 fi
 
-src_prepare() {
+python_prepare_all() {
 	# Prevent setup from grabbing nose from pypi
 	sed -e /setup_requires/d \
 		-e '/SQLAlchemy/s/, <0.8//' \
@@ -66,8 +66,7 @@ src_prepare() {
 		# Generate setup.py
 		paver generate_setup || die
 	fi
-
-	distutils-r1_src_prepare
+	distutils-r1_python_prepare_all
 }
 
 python_test() {
