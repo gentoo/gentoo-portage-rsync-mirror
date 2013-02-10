@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-3.2.11.ebuild,v 1.2 2013/01/15 07:19:48 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-3.2.11.ebuild,v 1.3 2013/02/10 09:27:53 graaff Exp $
 
 EAPI=4
 
@@ -38,6 +38,7 @@ ruby_add_bdepend "test? (
 	>=dev-ruby/memcache-client-1.5.8
 	dev-ruby/nokogiri
 	>=dev-ruby/builder-3.0.3:3
+	>=dev-ruby/tzinfo-0.3.29
 	)"
 
 # libxml is not strictly needed, there are tests using this code. jruby

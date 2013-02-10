@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/restkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/ChangeLog,v 1.8 2013/01/15 14:07:23 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/ChangeLog,v 1.9 2013/02/10 09:02:37 idella4 Exp $
+
+*restkit-4.2.1 (10 Feb 2013)
+
+  10 Feb 2013; Ian Delaney <idella4@gentoo.org> +restkit-4.2.1.ebuild:
+  bump
 
   15 Jan 2013; Ian Delaney <idella4@gentoo.org> restkit-4.2.0.ebuild:
   tests folder removed to avoid file collisions, fixes Bug #451968
