@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r2.ebuild,v 1.3 2013/02/10 11:51:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r2.ebuild,v 1.4 2013/02/10 14:25:27 mgorny Exp $
 
 EAPI=5
 
@@ -174,12 +174,7 @@ python_compile_all() {
 }
 
 python_test() {
-	local test_dir="${BUILD_DIR}"/tests/lib
-	mkdir -p "${test_dir}" || die
-	local PYTHONPATH=${test_dir}:${PYTHONPATH}
-	export PYTHONPATH
-
-	wrap_setup esetup.py install --install-lib="${test_dir}"
+	wrap_setup distutils_install_for_testing
 
 	cd "${TMPDIR}" || die
 	"${PYTHON}" -c "

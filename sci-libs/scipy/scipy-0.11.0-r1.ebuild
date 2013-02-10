@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.11.0-r1.ebuild,v 1.2 2013/02/07 17:06:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.11.0-r1.ebuild,v 1.3 2013/02/10 14:27:47 mgorny Exp $
 
 EAPI=5
 
@@ -104,14 +104,7 @@ python_compile() {
 }
 
 python_test() {
-	local test_dir="${BUILD_DIR}"/build/tests
-	mkdir -p "${test_dir}" || die
-	local PYTHONPATH=${test_dir}:${PYTHONPATH}
-
-	export PYTHONPATH
-
-	esetup.py install --install-lib="${test_dir}" \
-		--install-scripts="${test_dir}/bin" ${SCIPY_FCONFIG}
+	distutils_install_for_testing ${SCIPY_FCONFIG}
 
 	cd "${TMPDIR}" || die
 	"${PYTHON}" -c "

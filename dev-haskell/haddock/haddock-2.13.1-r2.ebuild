@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.13.1.ebuild,v 1.1 2012/11/18 13:42:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.13.1-r2.ebuild,v 1.1 2013/02/10 14:23:03 slyfox Exp $
 
-EAPI="4"
+EAPI=5
 
 CABAL_FEATURES="bin lib profile haddock hscolour nocabaldep"
 inherit eutils haskell-cabal pax-utils
@@ -12,15 +12,15 @@ HOMEPAGE="http://www.haskell.org/haddock/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
-SLOT="0"
+SLOT="0/${PV}"
 # ia64 lost as we don't have ghc-7 there yet
 # ppc64 needs to be rekeyworded due to xhtml not being keyworded
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-haskell/ghc-paths[profile?]
-		=dev-haskell/xhtml-3000.2*[profile?]
-		>=dev-lang/ghc-7.6.1"
+RDEPEND="dev-haskell/ghc-paths:=[profile?]
+		=dev-haskell/xhtml-3000.2*:=[profile?]
+		>=dev-lang/ghc-7.6.1:="
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.14"
 
@@ -31,6 +31,8 @@ CABAL_EXTRA_BUILD_FLAGS="--ghc-options=-rtsopts"
 src_prepare() {
 	# we would like to avoid happy and alex depends
 	epatch "${FILESDIR}"/${PN}-2.13.1-drop-tools.patch
+	# Fix: Ticket #213 Haddock fails when advanced typesystem features are used
+	epatch "${FILESDIR}"/${PN}-2.13.1-renameType.patch
 }
 
 src_configure() {

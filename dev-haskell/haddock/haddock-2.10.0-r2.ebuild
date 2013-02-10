@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.10.0-r2.ebuild,v 1.1 2012/10/21 08:04:50 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.10.0-r2.ebuild,v 1.2 2013/02/10 14:23:03 slyfox Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ IUSE=""
 
 RDEPEND="dev-haskell/ghc-paths[profile?]
 		=dev-haskell/xhtml-3000.2*[profile?]
-		>=dev-lang/ghc-7.4"
+		>=dev-lang/ghc-7.4 <dev-lang/ghc-7.6"
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.14"
 
