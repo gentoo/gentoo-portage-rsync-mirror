@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt73-firmware/rt73-firmware-1.8-r1.ebuild,v 1.5 2013/02/08 17:59:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt73-firmware/rt73-firmware-1.8-r1.ebuild,v 1.6 2013/02/10 13:07:30 ssuominen Exp $
 
-inherit multilib
+EAPI=5
 
 MY_PN=RT71W_Firmware
 MY_P=${MY_PN}_V${PV}
@@ -22,9 +22,6 @@ DEPEND="app-arch/unzip"
 S=${WORKDIR}/${MY_P}
 
 src_install() {
-	insinto /$(get_libdir)/firmware
+	insinto /lib/firmware
 	doins rt73.bin
-	# The license MUST be installed so that we can redistribute.
-	# Otherwise binpkgs or CDs wouldn't have the license.
-	dodoc LICENSE.ralink-firmware.txt
 }

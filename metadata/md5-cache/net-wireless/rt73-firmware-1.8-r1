@@ -1,10 +1,10 @@
 DEFINED_PHASES=install
 DEPEND=app-arch/unzip
 DESCRIPTION=Firmware for Ralink rt73-based WiFi USB adapters (rt73usb module)
+EAPI=5
 HOMEPAGE=http://www.ralinktech.com/ralink/Home/Support/Linux.html
 KEYWORDS=amd64 x86
 LICENSE=ralink-firmware
 SLOT=0
 SRC_URI=http://www.ralinktech.com.tw/data/RT71W_Firmware_V1.8.zip
-_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=a404f8dc72bf19b045c504a1c4acd5a2
+_md5_=ea31f8d47f88684946893f9bd1d1689c
