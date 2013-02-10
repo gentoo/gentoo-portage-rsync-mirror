@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.96 2013/01/24 20:47:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.97 2013/02/10 02:21:55 vapier Exp $
 
 # @ECLASS: linux-info.eclass
 # @MAINTAINER:
@@ -245,7 +245,7 @@ linux_config_qa_check() {
 # It returns true if .config exists in a build directory otherwise false
 linux_config_src_exists() {
 	export _LINUX_CONFIG_EXISTS_DONE=1
-	[ -s "${KV_OUT_DIR}/.config" ]
+	[[ -n ${KV_OUT_DIR} && -s ${KV_OUT_DIR}/.config ]]
 }
 
 # @FUNCTION: linux_config_bin_exists
@@ -254,7 +254,7 @@ linux_config_src_exists() {
 # It returns true if .config exists in /proc, otherwise false
 linux_config_bin_exists() {
 	export _LINUX_CONFIG_EXISTS_DONE=1
-	[ -s "/proc/config.gz" ]
+	[[ -s /proc/config.gz ]]
 }
 
 # @FUNCTION: linux_config_exists
@@ -266,6 +266,20 @@ linux_config_bin_exists() {
 # functions.
 linux_config_exists() {
 	linux_config_src_exists || linux_config_bin_exists
+}
+
+# @FUNCTION: linux_config_path
+# @DESCRIPTION:
+# Echo the name of the config file to use.  If none are found,
+# then return false.
+linux_config_path() {
+	if linux_config_src_exists; then
+		echo "${KV_OUT_DIR}/.config"
+	elif linux_config_bin_exists; then
+		echo "/proc/config.gz"
+	else
+		return 1
+	fi
 }
 
 # @FUNCTION: require_configured_kernel
@@ -291,11 +305,7 @@ require_configured_kernel() {
 # MUST call linux_config_exists first.
 linux_chkconfig_present() {
 	linux_config_qa_check linux_chkconfig_present
-	local RESULT config
-	config="${KV_OUT_DIR}/.config"
-	[ ! -f "${config}" ] && config="/proc/config.gz"
-	RESULT="$(getfilevar_noexec CONFIG_${1} "${config}")"
-	[ "${RESULT}" = "m" -o "${RESULT}" = "y" ] && return 0 || return 1
+	[[ $(getfilevar_noexec "CONFIG_$1" "$(linux_config_path)") == [my] ]]
 }
 
 # @FUNCTION: linux_chkconfig_module
@@ -307,11 +317,7 @@ linux_chkconfig_present() {
 # MUST call linux_config_exists first.
 linux_chkconfig_module() {
 	linux_config_qa_check linux_chkconfig_module
-	local RESULT config
-	config="${KV_OUT_DIR}/.config"
-	[ ! -f "${config}" ] && config="/proc/config.gz"
-	RESULT="$(getfilevar_noexec CONFIG_${1} "${config}")"
-	[ "${RESULT}" = "m" ] && return 0 || return 1
+	[[ $(getfilevar_noexec "CONFIG_$1" "$(linux_config_path)") == m ]]
 }
 
 # @FUNCTION: linux_chkconfig_builtin
@@ -323,11 +329,7 @@ linux_chkconfig_module() {
 # MUST call linux_config_exists first.
 linux_chkconfig_builtin() {
 	linux_config_qa_check linux_chkconfig_builtin
-	local RESULT config
-	config="${KV_OUT_DIR}/.config"
-	[ ! -f "${config}" ] && config="/proc/config.gz"
-	RESULT="$(getfilevar_noexec CONFIG_${1} "${config}")"
-	[ "${RESULT}" = "y" ] && return 0 || return 1
+	[[ $(getfilevar_noexec "CONFIG_$1" "$(linux_config_path)") == y ]]
 }
 
 # @FUNCTION: linux_chkconfig_string
@@ -339,10 +341,7 @@ linux_chkconfig_builtin() {
 # MUST call linux_config_exists first.
 linux_chkconfig_string() {
 	linux_config_qa_check linux_chkconfig_string
-	local config
-	config="${KV_OUT_DIR}/.config"
-	[ ! -f "${config}" ] && config="/proc/config.gz"
-	getfilevar_noexec "CONFIG_${1}" "${config}"
+	getfilevar_noexec "CONFIG_$1" "$(linux_config_path)"
 }
 
 # Versioning Functions
