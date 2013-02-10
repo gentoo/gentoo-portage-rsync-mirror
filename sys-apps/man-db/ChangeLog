@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man-db
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.42 2013/02/08 15:52:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.43 2013/02/10 14:43:56 ago Exp $
+
+  10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> man-db-2.6.3-r1.ebuild:
+  Stable for ppc64, wrt bug #455026
 
   08 Feb 2013; Jeroen Roovers <jer@gentoo.org> man-db-2.6.3-r1.ebuild:
   Stable for HPPA (bug #455026).
