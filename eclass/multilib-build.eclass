@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.1 2013/02/01 21:39:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.2 2013/02/10 11:44:00 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -135,6 +135,44 @@ multilib_parallel_foreach_abi() {
 	done
 
 	multijob_finish
+}
+
+# @FUNCTION: multilib_check_headers
+# @DESCRIPTION:
+# Check whether the header files are consistent between ABIs.
+#
+# This function needs to be called after each ABI's installation phase.
+# It obtains the header file checksums and compares them with previous
+# runs (if any). Dies if header files differ.
+multilib_check_headers() {
+	_multilib_header_cksum() {
+		find "${ED}"usr/include -type f \
+			-exec cksum {} + | sort -k2
+	}
+
+	local cksum=$(_multilib_header_cksum)
+	local cksum_file=${T}/.multilib_header_cksum
+
+	if [[ -f ${cksum_file} ]]; then
+		local cksum_prev=$(< "${cksum_file}")
+
+		if [[ ${cksum} != ${cksum_prev} ]]; then
+			echo "${cksum}" > "${cksum_file}.new"
+
+			eerror "Header files have changed between ABIs."
+
+			if type -p diff &>/dev/null; then
+				eerror "$(diff -du "${cksum_file}" "${cksum_file}.new")"
+			else
+				eerror "Old checksums in: ${cksum_file}"
+				eerror "New checksums in: ${cksum_file}.new"
+			fi
+
+			die "Header checksum mismatch, aborting."
+		fi
+	else
+		echo "${cksum}" > "${cksum_file}"
+	fi
 }
 
 _MULTILIB_BUILD=1

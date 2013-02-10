@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/qt-core:4 x11-libs/qt-gui:4 x11-libs/qt-qt3support:4 net-dialup/lrzsz
 SLOT=0
 SRC_URI=http://cutecom.sourceforge.net/cutecom-0.20.0.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	2dda478e7e4206f6fb1aa72785cb5ef7	eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	2dda478e7e4206f6fb1aa72785cb5ef7	eutils	f2731576962f01811c9573b3323fa374	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=3b68d4b5951127e34192ec4b1385fbf4

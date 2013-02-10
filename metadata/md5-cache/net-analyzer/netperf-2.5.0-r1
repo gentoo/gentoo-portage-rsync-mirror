@@ -7,5 +7,5 @@ KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86
 LICENSE=netperf
 SLOT=0
 SRC_URI=ftp://ftp.netperf.org/netperf/netperf-2.5.0.tar.bz2
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=29e5d7ee014d406d13e9015b548d32c9

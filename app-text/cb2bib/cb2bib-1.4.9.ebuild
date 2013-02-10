@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/cb2bib-1.4.9.ebuild,v 1.1 2012/11/06 10:16:16 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/cb2bib-1.4.9.ebuild,v 1.3 2013/02/10 12:24:48 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.molspaces.com/dl/progs/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug +lzo +webkit"
 
 DEPEND="

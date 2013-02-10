@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.8 2013/02/01 21:39:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.9 2013/02/10 11:44:00 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
@@ -50,34 +50,7 @@ autotools-multilib_src_install() {
 		autotools-utils_src_install
 
 		# Make sure all headers are the same for each ABI.
-		autotools-multilib_cksum() {
-			find "${ED}"usr/include -type f \
-				-exec cksum {} + | sort -k2
-		}
-
-		local cksum=$(autotools-multilib_cksum)
-		local cksum_file=${T}/.autotools-multilib_cksum
-
-		if [[ -f ${cksum_file} ]]; then
-			local cksum_prev=$(< "${cksum_file}")
-
-			if [[ ${cksum} != ${cksum_prev} ]]; then
-				echo "${cksum}" > "${cksum_file}.new"
-
-				eerror "Header files have changed between ABIs."
-
-				if type -p diff &>/dev/null; then
-					eerror "$(diff -du "${cksum_file}" "${cksum_file}.new")"
-				else
-					eerror "Old checksums in: ${cksum_file}"
-					eerror "New checksums in: ${cksum_file}.new"
-				fi
-
-				die "Header checksum mismatch, aborting."
-			fi
-		else
-			echo "${cksum}" > "${cksum_file}"
-		fi
+		multilib_check_headers
 	}
 
 	multilib_foreach_abi autotools-multilib_secure_install

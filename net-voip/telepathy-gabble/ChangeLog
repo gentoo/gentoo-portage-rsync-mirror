@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/telepathy-gabble
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.107 2013/02/02 23:07:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.108 2013/02/10 12:14:37 eva Exp $
+
+  10 Feb 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -telepathy-gabble-0.16.3.ebuild, telepathy-gabble-0.16.4.ebuild:
+  Fix USE=jingle confusing file-transfer with voip, switch to EAPI=5 and
+  python-any-r1. Make tls backend configurable, bug #456250.
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> telepathy-gabble-0.16.4.ebuild:
   Add ~arm, wrt bug #449220

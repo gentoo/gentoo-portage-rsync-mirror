@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/tk-8.3.4 dev-libs/elfutils
 SLOT=0
 SRC_URI=http://www.csse.uwa.edu.au/cnet/cnet-2.0.10.tgz
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=7de92ae84b8a245adf3564299009cad0

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7465 2013/02/10 09:00:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7466 2013/02/10 12:59:00 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask net-wireless/i2400m-fw because it's part of linux-firmware pkg.
 
   10 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Move prism54-firmware to it's own mask because of missing license. Unmask

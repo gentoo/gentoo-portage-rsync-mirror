@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r2.ebuild,v 1.2 2013/02/07 11:54:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r2.ebuild,v 1.3 2013/02/10 11:51:58 mgorny Exp $
 
 EAPI=5
 
@@ -160,7 +160,6 @@ wrap_setup() {
 }
 
 python_compile() {
-	unset DISPLAY # bug #278524
 	wrap_setup distutils-r1_python_compile
 }
 
@@ -168,6 +167,7 @@ python_compile_all() {
 	if use doc; then
 		cd doc || die
 
+		unset DISPLAY # bug #278524
 		VARTEXFONTS="${T}"/fonts \
 		"${PYTHON}" ./make.py --small html || die
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.2-r2.ebuild,v 1.1 2013/02/03 13:48:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.2-r2.ebuild,v 1.2 2013/02/10 11:55:23 mgorny Exp $
 
 EAPI=5
 
@@ -113,11 +113,10 @@ python_compile() {
 }
 
 python_test() {
-	local fake_root=${BUILD_DIR}/tests
+	distutils_install_for_testing ${NUMPY_FCONFIG}
 
-	esetup.py ${NUMPY_FCONFIG} build install --home="${fake_root}"
-	cd "${fake_root}"/lib || die
-	PYTHONPATH=python "${PYTHON}" -c "
+	cd "${TMPDIR}" || die
+	"${PYTHON}" -c "
 import numpy, sys
 r = numpy.test()
 sys.exit(0 if r.wasSuccessful() else 1)" || die "Tests fail with ${EPYTHON}"

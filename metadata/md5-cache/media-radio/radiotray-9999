@@ -8,5 +8,5 @@ LICENSE=GPL-1+
 RDEPEND=dev-python/gst-python:0.10 dev-python/pygtk dev-python/lxml dev-python/pyxdg dev-python/pygobject:2 dev-python/notify-python media-libs/gst-plugins-good:0.10 media-libs/gst-plugins-ugly:0.10 media-plugins/gst-plugins-alsa:0.10 media-plugins/gst-plugins-libmms:0.10 media-plugins/gst-plugins-ffmpeg:0.10 media-plugins/gst-plugins-mad:0.10 media-plugins/gst-plugins-ogg:0.10 media-plugins/gst-plugins-soup:0.10 media-plugins/gst-plugins-vorbis:0.10 python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2_7? ( dev-lang/python:2.7 )
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
 SLOT=0
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	mercurial	6840a3d39fd16bd270579bf4499f269b	multilib	ded93e450747134a079e647d888aa80b	python-distutils-ng	b6176485a30153729ae856cd37d0174c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	f2731576962f01811c9573b3323fa374	mercurial	6840a3d39fd16bd270579bf4499f269b	multilib	ded93e450747134a079e647d888aa80b	python-distutils-ng	b6176485a30153729ae856cd37d0174c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=3e9d7cbc034cc8ed0dfd153a0bc074ef

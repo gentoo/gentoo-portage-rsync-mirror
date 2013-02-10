@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-python/casuarius dev-python/ply dev-python/traits || ( dev-python/wxpython dev-python/PyQt4 dev-python/pyside ) dev-lang/python
 SLOT=0
 SRC_URI=http://www.enthought.com/repo/ets/enaml-0.2.0.tar.gz
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=1b772a84fd89895d2affc626d9da7c09

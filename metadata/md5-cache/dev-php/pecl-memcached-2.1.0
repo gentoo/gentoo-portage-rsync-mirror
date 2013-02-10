@@ -9,5 +9,5 @@ LICENSE=PHP-3
 RDEPEND=>=dev-libs/libmemcached-0.38 sys-libs/zlib dev-lang/php[session?] igbinary? ( dev-php/igbinary[php_targets_php5-4?,php_targets_php5-3?] ) || ( =dev-php/pecl-memcached-2.1.0[php_targets_php5-3] =dev-php/pecl-memcached-2.1.0[php_targets_php5-4] ) php_targets_php5-3? ( dev-lang/php:5.3 ) php_targets_php5-4? ( dev-lang/php:5.4 )
 SLOT=0
 SRC_URI=http://pecl.php.net/get/memcached-2.1.0.tgz
-_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	d40dc948067bd3db1c8ebf7d51897313	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	php-ext-pecl-r2	de1308bcf4fef59a8ee8793efc7c3051	php-ext-source-r2	fdd92230a8379a1fcebd1a8978703083	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	f2731576962f01811c9573b3323fa374	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	php-ext-pecl-r2	de1308bcf4fef59a8ee8793efc7c3051	php-ext-source-r2	fdd92230a8379a1fcebd1a8978703083	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=9931e85820847a330f2c3d07e92e7cfb

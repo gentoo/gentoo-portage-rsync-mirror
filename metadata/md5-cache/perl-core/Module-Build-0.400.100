@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=>=virtual/perl-CPAN-Meta-2.110.420 >=virtual/perl-CPAN-Meta-YAML-0.3.0 >=virtual/perl-Parse-CPAN-Meta-1.440.100 >=virtual/perl-Module-Metadata-1.0.2 >=virtual/perl-Perl-OSType-1 >=virtual/perl-ExtUtils-CBuilder-0.27 >=virtual/perl-ExtUtils-ParseXS-2.22.05 >=virtual/perl-Archive-Tar-1.09 >=virtual/perl-Test-Harness-3.16 >=virtual/perl-version-0.87 dev-lang/perl[-build]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/L/LE/LEONT/Module-Build-0.4001.tar.gz
-_eclasses_=alternatives	7a734a903498a04a0722152a124aa3a5	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	825d3d7654c88c5c4dec7400d3612578	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=alternatives	7a734a903498a04a0722152a124aa3a5	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	825d3d7654c88c5c4dec7400d3612578	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=004b11adf0112b53d909628aa98ce3ad

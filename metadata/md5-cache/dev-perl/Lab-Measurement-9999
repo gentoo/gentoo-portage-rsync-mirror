@@ -5,5 +5,5 @@ HOMEPAGE=http://www.labmeasurement.de/
 LICENSE=|| ( Artistic GPL-2 )
 RDEPEND=dev-lang/perl dev-perl/Clone dev-perl/Exception-Class dev-perl/TermReadKey dev-perl/TeX-Encode dev-perl/XML-Generator dev-perl/XML-DOM dev-perl/XML-Twig dev-perl/encoding-warnings perl-core/Switch sci-visualization/gnuplot virtual/perl-Data-Dumper virtual/perl-Encode virtual/perl-Switch virtual/perl-Time-HiRes !dev-perl/Lab-Instrument !dev-perl/Lab-Tools
 SLOT=0
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	git-2	e92e09651292b1bef5656592364550f7	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	825d3d7654c88c5c4dec7400d3612578	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	f2731576962f01811c9573b3323fa374	git-2	e92e09651292b1bef5656592364550f7	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	825d3d7654c88c5c4dec7400d3612578	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=db01b2f50734c1268a25faf313a92e2e

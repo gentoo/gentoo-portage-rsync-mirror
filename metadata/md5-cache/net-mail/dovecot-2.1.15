@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1 MIT
 RDEPEND=caps? ( sys-libs/libcap ) kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) lucene? ( >=dev-cpp/clucene-2.3 ) mysql? ( virtual/mysql ) pam? ( virtual/pam ) postgres? ( dev-db/postgresql-base !dev-db/postgresql-base[ldap,threads] ) selinux? ( sec-policy/selinux-dovecot ) sqlite? ( dev-db/sqlite ) ssl? ( dev-libs/openssl ) vpopmail? ( net-mail/vpopmail ) virtual/libiconv >=net-mail/mailbase-0.00-r8
 SLOT=0
 SRC_URI=http://www.dovecot.org/releases/2.1/dovecot-2.1.15.tar.gz sieve? ( http://www.rename-it.nl/dovecot/2.1/dovecot-2.1-pigeonhole-0.3.3.tar.gz ) managesieve? ( http://www.rename-it.nl/dovecot/2.1/dovecot-2.1-pigeonhole-0.3.3.tar.gz )
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	ssl-cert	0b45da48a22fda62c57c1809b8b55315	systemd	28706ddc21464b4ed255eee9fc70b516	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	ssl-cert	0b45da48a22fda62c57c1809b8b55315	systemd	28706ddc21464b4ed255eee9fc70b516	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=6bf78ef77447adf4dbeac208879d65f9

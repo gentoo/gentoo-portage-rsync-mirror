@@ -8,5 +8,5 @@ LICENSE=public-domain
 RDEPEND=>=dev-python/docutils-0.10[python_targets_python2_5(-)?,python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_1(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,python_targets_pypy1_9(-)?,python_targets_pypy2_0(-)?,-python_single_target_python2_5(-),-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_1(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-),-python_single_target_pypy1_9(-),-python_single_target_pypy2_0(-)]
 SLOT=0
 SRC_URI=mirror://gentoo/glep-0.4-r1.tbz2
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	python-r1	048b50bedc7713734694d95a872490a6	python-utils-r1	120bfd06803274b3d1b986d506302851	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	python-r1	048b50bedc7713734694d95a872490a6	python-utils-r1	120bfd06803274b3d1b986d506302851	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=7e3db04c788ded85c9611a2ccd3c3212

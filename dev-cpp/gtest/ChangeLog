@@ -1,5 +1,11 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.18 2013/02/06 08:36:07 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.20 2013/02/10 12:07:05 ago Exp $
+
+  10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gtest-1.6.0-r1.ebuild:
+  Stable for x86, wrt bug #456476
+
+  10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gtest-1.6.0-r1.ebuild:
+  Stable for amd64, wrt bug #456476
 
   06 Feb 2013; Thomas Kahle <tomka@gentoo.org> metadata.xml:
   take maintainership

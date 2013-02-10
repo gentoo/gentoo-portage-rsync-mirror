@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=!games-misc/wtf !app-misc/banner !games-board/ace !games-puzzle/hangman sys-libs/ncurses sys-apps/miscfiles
 SLOT=0
 SRC_URI=ftp://metalab.unc.edu/pub/Linux/games/bsd-games-2.17.tar.gz mirror://debian/pool/main/b/bsdgames/bsdgames_2.17-16.diff.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d40dc948067bd3db1c8ebf7d51897313	games	e0a83e3f3f024b8c8ef7a8217d716cbf	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	f2731576962f01811c9573b3323fa374	games	e0a83e3f3f024b8c8ef7a8217d716cbf	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=84069913be665c581c24a8597219b44a

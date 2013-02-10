@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14444 2013/02/10 09:04:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14445 2013/02/10 12:59:00 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -78,6 +78,7 @@ net-wireless/rt73-firmware
 net-wireless/rtl8192su-firmware
 net-wireless/zd1201-firmware
 net-wireless/zd1211-firmware
+net-wireless/i2400m-fw
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
 # Unfortunately the package is missing license file

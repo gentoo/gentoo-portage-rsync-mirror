@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=AGPL-3 Apache-2.0 Boost-1.0 BSD BSD-2 CC-BY-SA-2.0 HPND MIT npm ODbL-1.0 openssl public-domain Unlicense ZLIB || ( BSD-2 GPL-2+ ) WTFPL-2
 SLOT=0
 SRC_URI=https://github.com/meteor/meteor/tarball/v0.5.4 -> meteor-0.5.4.tar.gz x86? ( https://d3sqy0vbqsdhku.cloudfront.net/dev_bundle_Linux_i686_0.2.12.tar.gz -> meteor-0.5.4_bundle-0.2.12.tar.gz ) amd64? ( https://d3sqy0vbqsdhku.cloudfront.net/dev_bundle_Linux_x86_64_0.2.12.tar.gz -> meteor-0.5.4_bundle-0.2.12.tar.gz )
-_eclasses_=eutils	d40dc948067bd3db1c8ebf7d51897313	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
+_eclasses_=eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
 _md5_=301c233f11450cfab7b6e44ef68d36f5

@@ -10,5 +10,5 @@ RDEPEND=dev-python/ecdsa dev-python/slowaes gtk? ( dev-python/pygtk:2 ) qt4? ( d
 REQUIRED_USE=|| ( gtk qt4 )
 SLOT=0
 SRC_URI=http://electrum-desktop.com/files/Electrum-1.0.tar.gz
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	d40dc948067bd3db1c8ebf7d51897313	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	f2731576962f01811c9573b3323fa374	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=25591593e00b9bb10f243581936d4a4b
