@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14452 2013/02/10 16:45:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14454 2013/02/10 18:45:24 zerochaos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -100,12 +100,9 @@ media-tv/ivtv-firmware
 # Removal at 01 Apr 2012
 media-tv/ivtv
 
-# Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
-# Latest driver package from the realtek site,
-# rtl8712_8188_8191_8192SU_usb_linux_v2.6.6.0.20120405
-# is using rtl8172fw.bin firmware. This would need to be
-# packaged in 2 packages: the new driver, and the
-# rtl8172fw-firmware.
+# Rick Farina <zerochaos@gentoo.org> (10 Feb 2013)
+# This firmware has been replaced by rtlwifi/*
+# which is already in the linux-firmware package.
 # Removal at 01 Apr 2013
 net-wireless/rtl8192su-firmware
 

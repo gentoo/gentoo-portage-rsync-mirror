@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/nwipe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/nwipe/ChangeLog,v 1.7 2013/02/02 22:59:24 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/nwipe/ChangeLog,v 1.8 2013/02/10 18:31:48 alonbl Exp $
+
+*nwipe-0.13 (10 Feb 2013)
+
+  10 Feb 2013; Alon Bar-Lev <alonbl@gentoo.org> +nwipe-0.13.ebuild:
+  Version bump
 
 *nwipe-0.12-r1 (02 Feb 2013)
 
