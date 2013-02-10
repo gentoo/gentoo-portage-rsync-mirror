@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/dinero
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/ChangeLog,v 1.13 2013/02/10 12:47:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/ChangeLog,v 1.14 2013/02/10 17:22:10 ago Exp $
+
+  10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> dinero-4.7-r1.ebuild:
+  Stable for ppc, wrt bug #456442
 
   10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> dinero-4.7-r1.ebuild:
   Stable for x86, wrt bug #456442

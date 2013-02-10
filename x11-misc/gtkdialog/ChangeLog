@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gtkdialog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/ChangeLog,v 1.25 2013/02/06 22:59:37 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/ChangeLog,v 1.26 2013/02/10 17:23:11 ago Exp $
+
+  10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gtkdialog-0.8.2.ebuild:
+  Stable for ppc, wrt bug #455780
 
   06 Feb 2013; Chema Alonso <nimiux@gentoo.org> gtkdialog-0.8.2.ebuild:
   Marked stable for amd64 wrt bug #455780
@@ -102,4 +105,3 @@
   20 Mar 2004; Markus Nigbur <pyrania@gentoo.org> gtkdialog-0.58.8.ebuild,
   metadata.xml:
   Initial import. Closing bug #39869.
-

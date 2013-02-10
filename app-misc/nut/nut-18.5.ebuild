@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/nut-18.5.ebuild,v 1.3 2013/02/09 19:45:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/nut-18.5.ebuild,v 1.4 2013/02/10 17:14:02 ago Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ppc x86"
+KEYWORDS="~alpha amd64 ~arm ppc x86"
 IUSE=""
 
 src_prepare() {

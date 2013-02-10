@@ -1,5 +1,8 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.21 2013/02/10 14:46:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.22 2013/02/10 17:15:23 ago Exp $
+
+  10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gtest-1.6.0-r1.ebuild:
+  Stable for ppc, wrt bug #456476
 
   10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gtest-1.6.0-r1.ebuild:
   Stable for ppc64, wrt bug #456476

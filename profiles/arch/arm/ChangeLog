@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.217 2013/02/08 15:08:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.218 2013/02/10 17:16:02 pinkbyte Exp $
+
+  10 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
+  Mask =dev-libs/xapian-bindings-1.2.12-r1 cause it becomes stable wrt bug
+  #456550
 
   08 Feb 2013; Agostino Sarubbo <ago@gentoo.org> package.mask:
   Remove KDE SC 4.10.0, wrt to bug #455960
