@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.32 2013/02/10 00:51:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.33 2013/02/10 01:11:33 floppym Exp $
 
 EAPI=5
 
@@ -29,24 +29,24 @@ IUSE="test"
 DEPEND="
 	>=dev-python/feedparser-5.1.3
 	>=dev-python/sqlalchemy-0.7
-	dev-python/pyyaml
+	dev-python/pyyaml[${PYTHON_USEDEP}]
 	dev-python/beautifulsoup:python-2
-	dev-python/beautifulsoup:4
-	dev-python/html5lib
-	dev-python/jinja
+	dev-python/beautifulsoup:4[${PYTHON_USEDEP}]
+	dev-python/html5lib[${PYTHON_USEDEP}]
+	dev-python/jinja[${PYTHON_USEDEP}]
 	dev-python/PyRSS2Gen
 	dev-python/pynzb
 	dev-python/progressbar
 	dev-python/flask
 	dev-python/cherrypy
-	dev-python/python-dateutil
-	>=dev-python/requests-1.0
+	dev-python/python-dateutil[${PYTHON_USEDEP}]
+	>=dev-python/requests-1.0[${PYTHON_USEDEP}]
 	<dev-python/requests-1.99
-	dev-python/setuptools
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	virtual/python-argparse[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
-DEPEND+=" test? ( dev-python/nose )"
+DEPEND+=" test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 if [[ ${PV} == 9999 ]]; then
 	DEPEND+=" dev-python/paver"
