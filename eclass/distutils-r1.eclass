@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.51 2013/02/10 11:41:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.52 2013/02/10 16:15:05 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -216,11 +216,12 @@ esetup.py() {
 		fi
 
 		# if setuptools is used, adjust egg_info path as well
-		if "${PYTHON:-python}" setup.py --help egg_info &>/dev/null; then
-			add_args+=(
-				egg_info --egg-base "${BUILD_DIR}"
-			)
-		fi
+		# (disabled since it causes build not to install scripts)
+#		if "${PYTHON:-python}" setup.py --help egg_info &>/dev/null; then
+#			add_args+=(
+#				egg_info --egg-base "${BUILD_DIR}"
+#			)
+#		fi
 
 		add_args+=(
 			build

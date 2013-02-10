@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14449 2013/02/10 15:58:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14450 2013/02/10 16:21:37 zerochaos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -67,15 +67,11 @@ x11-misc/xdaf
 # let us know by filing a bug report.
 # Removal at 01 Apr 2013
 net-wireless/ar9271-firmware
-net-wireless/atmel-firmware
-net-wireless/b43-firmware
-net-wireless/b43legacy-firmware
 net-wireless/libertas-firmware
 net-wireless/rt2860-firmware
 net-wireless/rt2870-firmware
 net-wireless/rt61-firmware
 net-wireless/rt73-firmware
-net-wireless/rtl8192su-firmware
 net-wireless/i2400m-fw
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)

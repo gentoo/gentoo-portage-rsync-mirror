@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.672 2013/02/10 11:44:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.673 2013/02/10 16:15:05 mgorny Exp $
+
+  10 Feb 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Temporarily disable egg_info since it causes problems with installing
+  scripts.
 
   10 Feb 2013; Michał Górny <mgorny@gentoo.org> +cmake-multilib.eclass:
   Introduce cmake-utils wrapper eclass for multilib.
