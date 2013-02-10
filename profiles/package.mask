@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14445 2013/02/10 12:59:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14446 2013/02/10 14:01:01 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -81,11 +81,15 @@ net-wireless/zd1211-firmware
 net-wireless/i2400m-fw
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
-# Unfortunately the package is missing license file
-# and we don't have anything to put into LICENSE field
-# If you figure this out, this can of course be unmasked.
-# The ebuild is clean. Removal at 01 Apr 2013
+# Unfortunately these packages are missing proper licenses
+# If you can figure out the licensing issues, these can
+# be unmasked.
+# prism54 -> no license at all
+# bluez -> only COPYING with GPL-2, but where is the source then?
+# and http://www.bluez.org/download/ lists it as deprecated
+# Removal at 01 Apr 2013
 net-wireless/prism54-firmware
+net-wireless/bluez-firmware
 
 # Ryan Hill <dirtyepic@gentoo.org> (07 Feb 2013)
 # Breaks everything (bug #456108)

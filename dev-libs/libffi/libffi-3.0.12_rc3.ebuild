@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.12_rc3.ebuild,v 1.1 2013/02/09 17:37:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.12_rc3.ebuild,v 1.2 2013/02/10 13:48:36 ssuominen Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="debug static-libs test"
+IUSE="debug pax_kernel static-libs test"
 
 RDEPEND=""
 DEPEND="test? ( dev-util/dejagnu )"
@@ -48,6 +48,7 @@ src_configure() {
 	use userland_BSD && export HOST="${CHOST}"
 	econf \
 		$(use_enable static-libs static) \
+		$(use_enable pax_kernel pax_emutramp) \
 		$(use_enable debug)
 }
 
