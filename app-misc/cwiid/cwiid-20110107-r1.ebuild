@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/cwiid-20110107-r1.ebuild,v 1.4 2012/08/14 23:25:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/cwiid-20110107-r1.ebuild,v 1.5 2013/02/10 02:49:41 ottxor Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="python"
 
-DEPEND="sys-apps/gawk
+DEPEND="virtual/awk
 	sys-apps/sed
 	sys-devel/bison
 	>=sys-devel/flex-2.5.35

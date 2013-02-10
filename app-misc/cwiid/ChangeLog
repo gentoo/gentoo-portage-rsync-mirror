@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cwiid
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/ChangeLog,v 1.5 2012/08/14 23:25:36 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/ChangeLog,v 1.6 2013/02/10 02:49:41 ottxor Exp $
+
+  10 Feb 2013; Christoph Junghans <ottxor@gentoo.org> cwiid-20110107-r1.ebuild:
+  fixed awk dep (bug #455712)
 
   14 Aug 2012; Julian Ospald <hasufell@gentoo.org> cwiid-20110107-r1.ebuild:
   missed virtual/pkgconfig in DEPEND
@@ -24,4 +27,3 @@
   07 Jan 2011; Fabio Erculiani <lxnay@gentoo.org> +cwiid-20110107.ebuild,
   +metadata.xml:
   new ebuild, see bug #347630 thanks to Marco Clocchiatti
-
