@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.435 2013/02/10 16:52:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.436 2013/02/11 09:19:44 yngwin Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -51,7 +51,7 @@ www-client/firefox pgo
 media-libs/opencolorio pdf
 
 # Chris Reffett <creffett@gentoo.org> (23 Nov 2012)
-# CMake's PHP module can't find our install location, so 
+# CMake's PHP module can't find our install location, so
 # libkolab(xml) fails with the php flag enabled.
 net-libs/libkolab php
 net-libs/libkolabxml php
@@ -167,7 +167,7 @@ media-libs/opencv ipp
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (02 May 2012)
 # Causes crashes and build failures, not needed by any package, bug #412177
-<x11-libs/cairo-1.12 qt4
+x11-libs/cairo qt4
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (13 Apr 2012)
 # Packages with optional systemd support. Masked in base and unmasked on arches

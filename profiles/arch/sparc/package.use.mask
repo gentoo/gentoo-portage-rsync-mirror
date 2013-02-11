@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.132 2013/01/31 05:57:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.133 2013/02/11 09:21:21 yngwin Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Jan 2013)
 # remove mask when net-libs/libqmi is keyworded here
@@ -72,10 +72,6 @@ gnome-base/gvfs udisks
 # Pacho Ramos <pacho@gentoo.org> (07 May 2012)
 # libhid is not keyworded
 app-misc/lcdproc hid
-
-# Davide Pesavento <pesa@gentoo.org> (2 May 2012)
-# Requires Qt 4.8, which is not keyworded on sparc.
-x11-libs/cairo qt4
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (12 Apr 2012)
 # Temporary mask-in-base, unmask-in-arch for dev-python/mako keywording for
