@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14458 2013/02/11 07:33:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14459 2013/02/11 14:06:59 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -107,21 +107,6 @@ net-wireless/i2400m-fw
 # Removal at 01 Apr 2013
 net-wireless/prism54-firmware
 net-wireless/bluez-firmware
-
-# Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
-# Package is mirror restricted and the tarball is no longer
-# available wrt bug #446644 and even if it did, it doesn't work
-# as per bug #369497. Replacement should be in linux-firmware package,
-# at least according to blockers.
-# Removal at 01 Apr 2013
-media-tv/ivtv-firmware
-
-# Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
-# Only for Linux 2.6.25 (or older) and oldest udev in tree
-# needs 2.6.32.60, if not newer. Use either in-kernel driver
-# or something else.
-# Removal at 01 Apr 2012
-media-tv/ivtv
 
 # Rick Farina <zerochaos@gentoo.org> (10 Feb 2013)
 # This firmware has been replaced by rtlwifi/*

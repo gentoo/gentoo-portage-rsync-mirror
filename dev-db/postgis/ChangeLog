@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.75 2013/02/06 02:52:58 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.76 2013/02/11 14:11:31 titanofold Exp $
+
+*postgis-2.0.2-r2 (11 Feb 2013)
+
+  11 Feb 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  -postgis-2.0.2-r1.ebuild, +postgis-2.0.2-r2.ebuild,
+  files/postgis-2.0-pkgconfig-json.patch:
+  Patch now defines HAVE_LIBJSON.
 
   06 Feb 2013; Aaron W. Swenson <titanofold@gentoo.org>
   postgis-2.0.2-r1.ebuild:

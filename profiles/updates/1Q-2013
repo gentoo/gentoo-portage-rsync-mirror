@@ -6,3 +6,7 @@ slotmove =dev-python/pmw-2.0.0 0 py3
 move media-fonts/freefont-ttf media-fonts/freefont
 move sys-cluster/gsh sys-cluster/polysh
 move media-tv/ivtv-firmware sys-firmware/ivtv-firmware
+move net-wireless/zd1201-firmware sys-firmware/zd1201-firmware
+move net-wireless/zd1211-firmware sys-firmware/zd1211-firmware
+move net-wireless/ipw2100-firmware sys-firmware/ipw2100-firmware
+move net-wireless/ipw2200-firmware sys-firmware/ipw2200-firmware

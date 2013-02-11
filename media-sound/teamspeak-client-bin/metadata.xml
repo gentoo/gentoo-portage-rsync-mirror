@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-	</maintainer>
-	<longdescription>TeamSpeak Client (Voice Communication Software)</longdescription>
+  <maintainer>
+    <email>TomWij@gentoo.org</email>
+    <name>Tom Wijsman</name>
+  </maintainer>
+  <longdescription>TeamSpeak Client (Voice Communication Software)</longdescription>
 </pkgmetadata>
