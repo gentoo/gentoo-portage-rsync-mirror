@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/zope-fixers
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/ChangeLog,v 1.12 2012/05/08 23:54:21 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/ChangeLog,v 1.13 2013/02/11 21:27:32 mgorny Exp $
+
+*zope-fixers-1.0-r1 (11 Feb 2013)
+
+  11 Feb 2013; Michał Górny <mgorny@gentoo.org> +zope-fixers-1.0-r1.ebuild:
+  Migrate to distutils-r1.
 
   08 May 2012; Alexis Ballier <aballier@gentoo.org> zope-fixers-1.0.ebuild:
   keyword ~amd64-fbsd
@@ -41,4 +46,3 @@
   05 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   +zope-fixers-1.0.ebuild, +metadata.xml:
   Initial addition. Ebuild written by me.
-

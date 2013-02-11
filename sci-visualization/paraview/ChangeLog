@@ -1,6 +1,26 @@
 # ChangeLog for sci-visualization/paraview
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.61 2012/05/06 23:13:07 pesa Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.62 2013/02/11 21:29:20 hasufell Exp $
+
+*paraview-3.98.0 (11 Feb 2013)
+
+  11 Feb 2013; Julian Ospald <hasufell@gentoo.org> -paraview-3.6.2.ebuild,
+  -files/paraview-3.6.2-about.html.patch,
+  -files/paraview-3.6.2-assistant.patch,
+  -files/paraview-3.6.2-boost-property_map.patch,
+  -files/paraview-3.6.2-findcg-cmake.patch, -files/paraview-3.6.2-h5part.patch,
+  -files/paraview-3.6.2-hdf-1.8.3.patch, -files/paraview-3.6.2-libpng14.patch,
+  -files/paraview-3.6.2-libpng15.patch,
+  -files/paraview-3.6.2-no-doc-finder.patch, -files/paraview-3.6.2-odbc.patch,
+  -files/paraview-3.6.2-pointsprite-disable.patch,
+  -files/paraview-3.6.2-qt.patch, +paraview-3.98.0.ebuild,
+  +files/paraview-3.98.0-gcc-4.7.patch, +files/paraview-3.98.0-mpi4py.patch,
+  +files/paraview-3.98.0-pvblot.patch,
+  +files/paraview-3.98.0-removesqlite.patch,
+  +files/paraview-3.98.0-vtk-cg-path.patch,
+  +files/paraview-3.98.0-vtknetcd.patch,
+  +files/paraview-3.98.0-xdmf-cstring.patch:
+  version bump wrt #317345
 
   06 May 2012; Davide Pesavento <pesa@gentoo.org> paraview-3.6.2.ebuild:
   Stop inheriting deprecated qt4 eclass (it wasn't used anyway).

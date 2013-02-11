@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pomap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.23 2013/02/11 03:12:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.24 2013/02/11 21:29:49 ago Exp $
+
+  11 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pomap-3.0.1.ebuild:
+  Stable for amd64, wrt bug #456558
 
   11 Feb 2013; Alexis Ballier <aballier@gentoo.org> pomap-3.0.1.ebuild:
   eapi5, add subslot and use := deps
