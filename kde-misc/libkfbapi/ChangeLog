@@ -1,0 +1,9 @@
+# ChangeLog for kde-misc/libkfbapi
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/libkfbapi/ChangeLog,v 1.1 2013/02/11 03:39:05 creffett Exp $
+
+*libkfbapi-1.0_p20130209 (11 Feb 2013)
+
+  11 Feb 2013; Chris Reffett <creffett@gentoo.org>
+  +libkfbapi-1.0_p20130209.ebuild, +metadata.xml:
+  New package, dependency of latest akonadi-facebook snapshot
