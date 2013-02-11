@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.454 2013/01/21 17:54:17 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.455 2013/02/11 06:51:53 mattst88 Exp $
+
+*mesa-9.1_rc1 (11 Feb 2013)
+
+  11 Feb 2013; Matt Turner <mattst88@gentoo.org> +mesa-9.1_rc1.ebuild:
+  Version bump to 9.1_rc1.
 
   21 Jan 2013; Matt Turner <mattst88@gentoo.org> mesa-8.0.4-r1.ebuild,
   mesa-9.0.1.ebuild:
