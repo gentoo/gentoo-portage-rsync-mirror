@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14456 2013/02/10 21:52:43 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14457 2013/02/11 05:36:16 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Doug Goldstein <cardoe@gentoo.org> (10 Feb 2013)
+# Use the in-kernel saa717x driver, available since at least 2.6.25
+# Removal in 30 days
+media-tv/ivtv
 
 # Matt Turner <mattst88@gentoo.org> (10 Feb 2013)
 # Use the in-kernel AT76C50X_USB driver.
