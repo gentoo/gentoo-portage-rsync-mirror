@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.106 2013/02/09 07:41:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.107 2013/02/11 19:14:01 graaff Exp $
+
+  11 Feb 2013; Hans de Graaff <graaff@gentoo.org> rack-1.3.10.ebuild:
+  Add back arm keyword that got lost in the recent set of bumps and removals.
 
 *rack-1.4.5 (09 Feb 2013)
 *rack-1.3.10 (09 Feb 2013)
