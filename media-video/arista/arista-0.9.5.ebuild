@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/arista-0.9.5.ebuild,v 1.8 2013/02/07 09:22:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/arista-0.9.5.ebuild,v 1.9 2013/02/11 19:49:47 pinkbyte Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -29,6 +29,7 @@ RDEPEND=">=x11-libs/gtk+-2.16:2
 	dev-python/gconf-python:2
 	dev-python/dbus-python
 	dev-python/python-gudev
+	gnome-base/librsvg
 	>=media-libs/gstreamer-0.10.22:0.10
 	dev-python/gst-python:0.10
 	media-libs/gst-plugins-base:0.10
@@ -36,6 +37,7 @@ RDEPEND=">=x11-libs/gtk+-2.16:2
 	media-libs/gst-plugins-bad:0.10
 	media-plugins/gst-plugins-meta:0.10
 	media-plugins/gst-plugins-ffmpeg:0.10
+	x11-themes/gnome-icon-theme
 	nautilus? ( dev-python/nautilus-python )
 	kde? ( dev-python/librsvg-python )
 	faac? ( media-plugins/gst-plugins-faac:0.10 )

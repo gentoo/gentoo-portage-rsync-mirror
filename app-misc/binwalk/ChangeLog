@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/binwalk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/binwalk/ChangeLog,v 1.23 2013/01/02 22:13:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/binwalk/ChangeLog,v 1.24 2013/02/11 19:53:24 radhermit Exp $
+
+*binwalk-1.0 (11 Feb 2013)
+
+  11 Feb 2013; Tim Harder <radhermit@gentoo.org> +binwalk-1.0.ebuild:
+  Version bump.
 
   02 Jan 2013; Tim Harder <radhermit@gentoo.org> -binwalk-0.4.3.ebuild,
   -binwalk-0.4.4.ebuild:
