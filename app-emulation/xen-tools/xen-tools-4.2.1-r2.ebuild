@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r2.ebuild,v 1.3 2013/02/11 13:40:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r2.ebuild,v 1.4 2013/02/11 15:26:37 idella4 Exp $
 
 EAPI=5
 
@@ -39,7 +39,6 @@ REQUIRED_USE="hvm? ( qemu )"
 CDEPEND="<dev-libs/yajl-2
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/pypam[${PYTHON_USEDEP}]
-	dev-python/pyxml[${PYTHON_USEDEP}]
 	sys-libs/zlib
 	sys-power/iasl
 	ocaml? ( dev-ml/findlib )

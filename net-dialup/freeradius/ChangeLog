@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/freeradius
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.112 2012/12/30 11:53:23 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.114 2013/02/11 15:27:16 pinkbyte Exp $
+
+  11 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> freeradius-2.2.0.ebuild:
+  Fix buidling with app-crypt/heimdal as a kerberos implementation by readding
+  ${myconf} to configure arguments, wrt bug #454198. Thanks to Georgy Kovtunov
+  for discovering this issue
 
   30 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Add a local description for the bindist USE flag (bug #448940).
