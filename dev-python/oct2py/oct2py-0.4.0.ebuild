@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oct2py/oct2py-0.4.0.ebuild,v 1.1 2013/01/22 06:55:35 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oct2py/oct2py-0.4.0.ebuild,v 1.2 2013/02/11 15:57:19 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_2} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit distutils-r1
 
@@ -17,10 +17,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
-RDEPEND="sci-libs/scipy
+RDEPEND="sci-libs/scipy[${PYTHON_USEDEP}]
 	sci-mathematics/octave"
 DEPEND="${RDEPEND}
-	doc? ( dev-python/sphinx )"
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
 
 python_compile_all() {
 	if use doc; then
@@ -29,14 +29,16 @@ python_compile_all() {
 }
 
 python_test() {
-	nosetests || die
+	nosetests || die "Tests fail with ${EPYTHON}"
 }
 
 python_install_all() {
-	use doc && dohtml -r html/
+	use doc && local HTML_DOCS=( html/. )
+	distutils-r1_python_install_all
+
 	if use examples; then
-		docompress -x /usr/share/doc/${PF}/example
-		insinto /usr/share/doc/${PF}/
-		doins -r example/
+		docompress -x /usr/share/doc/${PF}/examples
+		docinto examples
+		doins -r example/.
 	fi
 }

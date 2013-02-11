@@ -3721,7 +3721,6 @@ net-analyzer/tcpreplay:tcpdump - Use net-analyzer/tcpdump for packet decoding fe
 net-analyzer/wireshark:adns - Use the GNU net-dns/c-ares library to resolve DNS names
 net-analyzer/wireshark:crypt - Use dev-libs/libgcrypt to decrypt traffic
 net-analyzer/wireshark:doc-pdf - Build documentation in pdf format (US and a4 paper sizes)
-net-analyzer/wireshark:gcrypt - Use dev-libs/libgcrypt to decrypt IPsec traffic
 net-analyzer/wireshark:libadns - Use net-lib/adns (DEPRECATED) instead of net-dns/c-ares to resolve DNS names
 net-analyzer/wireshark:pcap - Use net-libs/libpcap for network packet capturing (build dumpcap, rawshark)
 net-analyzer/wireshark:smi - Use net-libs/libsmi to resolve numeric OIDs into human readable format
