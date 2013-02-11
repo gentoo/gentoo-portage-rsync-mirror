@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r3.ebuild,v 1.4 2012/11/21 04:12:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r3.ebuild,v 1.5 2013/02/11 13:06:09 pinkbyte Exp $
 
 EAPI=2
 
 inherit eutils autotools
 
 DESCRIPTION="Fast output system for Snort"
-HOMEPAGE="http://www.snort.org/dl/barnyard/"
+HOMEPAGE="http://sourceforge.net/projects/barnyard"
 SRC_URI="mirror://sourceforge/barnyard/barnyard-${PV/_/-}.tar.gz
 	mirror://gentoo/${P}-patches.tar.bz2"
 
