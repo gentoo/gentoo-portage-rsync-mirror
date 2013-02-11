@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14459 2013/02/11 14:06:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14460 2013/02/11 14:35:47 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -294,56 +294,6 @@ dev-perl/Class-MOP
 # Masked for testing. Is not compatible with cvsps-2 (bug #450424).
 # But can be used on it's own! Try 'cvsps --fast-export'.
 >=dev-vcs/cvsps-3
-
-# Ole Markus With <olemarkus@gentoo.org> (04 Jan 2013)
-# No release in four years. Replaced by Zeta Components, which also has yet to
-# have had any releases.
-# Masked for removal.
-dev-php/ezc-Archive
-dev-php/ezc-Authentication
-dev-php/ezc-AuthenticationDatabaseTiein
-dev-php/ezc-Cache
-dev-php/ezc-Configuration
-dev-php/ezc-ConsoleTools
-dev-php/ezc-Database
-dev-php/ezc-DatabaseSchema
-dev-php/ezc-Debug
-dev-php/ezc-Document
-dev-php/ezc-EventLog
-dev-php/ezc-EventLogDatabaseTiein
-dev-php/ezc-Execution
-dev-php/ezc-eZcomponents
-dev-php/ezc-Feed
-dev-php/ezc-File
-dev-php/ezc-GraphDatabaseTiein
-dev-php/ezc-ImageAnalysis
-dev-php/ezc-ImageConversion
-dev-php/ezc-Mail
-dev-php/ezc-MvcAuthenticationTiein
-dev-php/ezc-MvcFeedTiein
-dev-php/ezc-MvcMailTiein
-dev-php/ezc-MvcTemplateTiein
-dev-php/ezc-MvcTools
-dev-php/ezc-PersistentObject
-dev-php/ezc-PersistentObjectDatabaseSchemaTiein
-dev-php/ezc-PhpGenerator
-dev-php/ezc-Search
-dev-php/ezc-SignalSlot
-dev-php/ezc-SystemInformation
-dev-php/ezc-Template
-dev-php/ezc-TemplateTranslationTiein
-dev-php/ezc-Translation
-dev-php/ezc-TranslationCacheTiein
-dev-php/ezc-Tree
-dev-php/ezc-TreeDatabaseTiein
-dev-php/ezc-TreePersistentObjectTiein
-dev-php/ezc-Url
-dev-php/ezc-UserInput
-dev-php/ezc-Webdav
-dev-php/ezc-Workflow
-dev-php/ezc-WorkflowDatabaseTiein
-dev-php/ezc-WorkflowEventLogTiein
-dev-php/ezc-WorkflowSignalSlotTiein
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (04 Jan 2013)
 # Mask some prerelease x11 packages
