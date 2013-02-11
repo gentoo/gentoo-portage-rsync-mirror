@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/slim-themes-1.2.3a-r6.ebuild,v 1.4 2012/06/23 20:22:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/slim-themes-1.2.3a-r6.ebuild,v 1.5 2013/02/11 11:27:12 ago Exp $
 
 EAPI=2
 inherit eutils
@@ -31,7 +31,7 @@ SRC_URI="mirror://berlios/slim/slim-1.2.3-themepack1a.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-misc/slim"

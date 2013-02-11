@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/slim-themes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.32 2012/08/08 18:24:44 axs Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.33 2013/02/11 11:27:12 ago Exp $
+
+  11 Feb 2013; Agostino Sarubbo <ago@gentoo.org> slim-themes-1.2.3a-r6.ebuild:
+  Stable for arm, wrt bug #455856
 
   08 Aug 2012; Ian Stakenvicius <axs@gentoo.org> metadata.xml:
   Changing maintainer
@@ -136,4 +139,3 @@
   02 May 2007; Samuli Suominen <drac@gentoo.org> +metadata.xml,
   +slim-themes-1.2.3a.ebuild:
   Initial commit based on ebuild in Sunrise Overlay. Bug 107526.
-

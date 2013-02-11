@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ocaml-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.63 2013/02/10 20:48:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.64 2013/02/11 11:15:51 ago Exp $
+
+  11 Feb 2013; Agostino Sarubbo <ago@gentoo.org> ocaml-mode-3.12.1-r1.ebuild:
+  Stable for arm, wrt bug #456440
 
   10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> ocaml-mode-3.12.1-r1.ebuild:
   Stable for amd64, wrt bug #456440
