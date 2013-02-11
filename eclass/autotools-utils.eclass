@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.61 2012/12/14 08:40:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.62 2013/02/11 09:46:07 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -486,12 +486,15 @@ autotools-utils_src_install() {
 	fi
 
 	# XXX: support installing them from builddir as well?
-	if [[ ${DOCS} ]]; then
-		if [[ ${EAPI} == [23] ]]; then
-			dodoc "${DOCS[@]}" || die
-		else
-			# dies by itself
-			dodoc -r "${DOCS[@]}"
+	if declare -p DOCS &>/dev/null; then
+		# an empty list == don't install anything
+		if [[ ${DOCS[@]} ]]; then
+			if [[ ${EAPI} == [23] ]]; then
+				dodoc "${DOCS[@]}" || die
+			else
+				# dies by itself
+				dodoc -r "${DOCS[@]}"
+			fi
 		fi
 	else
 		local f
