@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pomap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.22 2012/10/10 11:54:19 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.23 2013/02/11 03:12:28 aballier Exp $
+
+  11 Feb 2013; Alexis Ballier <aballier@gentoo.org> pomap-3.0.1.ebuild:
+  eapi5, add subslot and use := deps
 
 *pomap-3.0.1 (10 Oct 2012)
 

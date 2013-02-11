@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/postgresql-ocaml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/ChangeLog,v 1.29 2012/10/10 11:35:32 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/ChangeLog,v 1.30 2013/02/11 03:10:03 aballier Exp $
+
+  11 Feb 2013; Alexis Ballier <aballier@gentoo.org>
+  postgresql-ocaml-2.0.2.ebuild:
+  eapi5, add subslot and := deps
 
 *postgresql-ocaml-2.0.2 (10 Oct 2012)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-3.6.3.ebuild,v 1.1 2013/02/04 12:44:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-3.6.3.ebuild,v 1.2 2013/02/11 03:08:27 aballier Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit eutils findlib
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://projects.camlcity.org/projects/ocamlnet.html"
 SRC_URI="http://download.camlcity.org/download/${MY_P}.tar.gz"
 
 LICENSE="ZLIB GPL-2"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="cryptokit gtk ssl tk httpd +ocamlopt +pcre zip"
 RESTRICT="installsources"
@@ -21,12 +21,12 @@ RESTRICT="installsources"
 # ocaml-cryptgps, which is not available.
 
 DEPEND=">=dev-ml/findlib-1.0
-		pcre? ( >=dev-ml/pcre-ocaml-5 )
-		>=dev-lang/ocaml-3.10.2[tk?,ocamlopt?]
-		cryptokit? ( dev-ml/cryptokit )
-		gtk? ( >=dev-ml/lablgtk-2 )
-		ssl? ( >=dev-ml/ocaml-ssl-0.4 )
-		zip? ( dev-ml/camlzip )
+		pcre? ( >=dev-ml/pcre-ocaml-5:= )
+		>=dev-lang/ocaml-3.10.2:=[tk?,ocamlopt?]
+		cryptokit? ( dev-ml/cryptokit:= )
+		gtk? ( >=dev-ml/lablgtk-2:= )
+		ssl? ( >=dev-ml/ocaml-ssl-0.4:= )
+		zip? ( dev-ml/camlzip:= )
 		"
 RDEPEND="${DEPEND}"
 
@@ -63,9 +63,9 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 all || die "make failed"
+	emake -j1 all
 	if use ocamlopt; then
-		emake -j1 opt || die "make failed"
+		emake -j1 opt
 	fi
 }
 

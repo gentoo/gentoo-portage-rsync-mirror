@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.3.3-r1.ebuild,v 1.1 2012/11/01 00:14:13 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.3.3-r1.ebuild,v 1.2 2013/02/11 03:02:02 aballier Exp $
 
-EAPI=4
+EAPI=5
 
 inherit multilib
 
@@ -18,7 +18,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 
-DEPEND=">=dev-lang/ocaml-3.10[ocamlopt?,tk?]"
+DEPEND=">=dev-lang/ocaml-3.10:=[ocamlopt?,tk?]"
 RDEPEND="${DEPEND}"
 
 ocamlfind_destdir="${EPREFIX}/usr/$(get_libdir)/ocaml"

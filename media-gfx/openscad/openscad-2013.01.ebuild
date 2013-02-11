@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openscad/openscad-2011.12.ebuild,v 1.4 2013/02/11 03:23:45 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openscad/openscad-2013.01.ebuild,v 1.1 2013/02/11 03:23:45 mattm Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit qt4-r2
 
 DESCRIPTION="The Programmers Solid 3D CAD Modeller"
 HOMEPAGE="http://www.openscad.org/"
-SRC_URI="mirror://github/openscad/openscad/openscad-2011.12.src.tar.gz"
+SRC_URI="https://openscad.googlecode.com/files/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
