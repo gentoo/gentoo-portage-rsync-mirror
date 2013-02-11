@@ -1,6 +1,5 @@
-diff -ur qgis-1.7.0.orig//cmake/PythonMacros.cmake qgis-1.7.0/cmake/PythonMacros.cmake
---- qgis-1.7.0.orig//cmake/PythonMacros.cmake	2011-06-05 12:59:48.000000000 +0100
-+++ qgis-1.7.0/cmake/PythonMacros.cmake	2011-09-01 20:36:09.285050896 +0100
+--- cmake/PythonMacros.cmake
++++ cmake/PythonMacros.cmake
 @@ -22,40 +22,4 @@
    # Install the source file.
    INSTALL(FILES ${SOURCE_FILE} DESTINATION ${DESINATION_DIR})
@@ -42,15 +41,14 @@ diff -ur qgis-1.7.0.orig//cmake/PythonMacros.cmake qgis-1.7.0/cmake/PythonMacros
 -
 -  INSTALL(FILES ${_bin_pyc} DESTINATION ${DESINATION_DIR})
  ENDMACRO(PYTHON_INSTALL)
-diff -ur qgis-1.7.0.orig//python/CMakeLists.txt qgis-1.7.0/python/CMakeLists.txt
---- qgis-1.7.0.orig//python/CMakeLists.txt	2011-06-05 12:59:48.000000000 +0100
-+++ qgis-1.7.0/python/CMakeLists.txt	2011-09-01 20:35:57.429003659 +0100
-@@ -82,8 +82,6 @@
+--- python/CMakeLists.txt
++++ python/CMakeLists.txt
+@@ -102,8 +102,6 @@
  
  SET (QGIS_PYTHON_DIR ${PYTHON_SITE_PACKAGES_DIR}/qgis)
  
 -ADD_CUSTOM_TARGET(compile_python_files ALL)
 -
- PYTHON_INSTALL(__init__.py ${QGIS_PYTHON_DIR})
- PYTHON_INSTALL(utils.py    ${QGIS_PYTHON_DIR})
- PYTHON_INSTALL(console.py  ${QGIS_PYTHON_DIR})
+ ADD_CUSTOM_COMMAND(TARGET compile_python_files
+        POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E make_directory ${QGIS_PYTHON_OUTPUT_DIRECTORY}
