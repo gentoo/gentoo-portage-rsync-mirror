@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.0.4.ebuild,v 1.2 2013/02/07 21:52:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.0.4.ebuild,v 1.3 2013/02/11 07:03:35 mattst88 Exp $
 
 EAPI=4
 
@@ -45,4 +45,9 @@ src_configure() {
 		myconf+=" --disable-scanner"
 	fi
 	econf ${myconf}
+}
+
+src_test() {
+	export XDG_RUNTIME_DIR="${T}"
+	default
 }

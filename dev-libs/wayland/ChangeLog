@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/wayland
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.13 2013/02/07 21:52:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.14 2013/02/11 07:03:35 mattst88 Exp $
+
+  11 Feb 2013; Matt Turner <mattst88@gentoo.org> wayland-1.0.4.ebuild:
+  Define XDG_RUNTIME_DIR for tests, bug 456054.
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> wayland-0.95.0.ebuild,
   wayland-1.0.4.ebuild:
