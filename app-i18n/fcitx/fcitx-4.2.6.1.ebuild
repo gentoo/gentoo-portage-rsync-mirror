@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.6.1.ebuild,v 1.2 2012/10/29 08:48:14 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.6.1.ebuild,v 1.3 2013/02/10 23:37:24 naota Exp $
 
 EAPI=4
 
