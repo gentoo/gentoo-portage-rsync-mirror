@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/libspatialindex
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libspatialindex/ChangeLog,v 1.1 2013/02/11 00:49:46 hasufell Exp $
+
+*libspatialindex-1.8.0 (11 Feb 2013)
+
+  11 Feb 2013; Julian Ospald <hasufell@gentoo.org>
+  +libspatialindex-1.8.0.ebuild, +files/libspatialindex-1.8.0-QA.patch,
+  +metadata.xml:
+  initial import wrt #413367
+

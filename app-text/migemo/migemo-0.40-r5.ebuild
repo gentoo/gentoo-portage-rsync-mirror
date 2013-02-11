@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/migemo-0.40-r5.ebuild,v 1.2 2012/12/11 15:53:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/migemo-0.40-r5.ebuild,v 1.3 2013/02/11 00:55:09 naota Exp $
 
 EAPI=4
 # ruby19, jruby: dev-ruby/ruby-romkan not work

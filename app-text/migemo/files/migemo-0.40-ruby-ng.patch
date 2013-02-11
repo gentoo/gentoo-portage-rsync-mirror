@@ -41,7 +41,7 @@
  
  echo -n "checking Ruby/Bsearch... "
 -if ruby -rbsearch -e 'exit(if Bsearch::VERSION >= "1.2" then 0 else 1 end)'; then
-+if $RUBY -rbsearch -e 'exit(if Bsearch::VERSION >= "1.2" then 0 else 1 end)'; then
++if $RUBY -rbsearch -e 'require "bsearch"; exit(if Bsearch::VERSION >= "1.2" then 0 else 1 end)'; then
     echo found
  else
     echo not found
