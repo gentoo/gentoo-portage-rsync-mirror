@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14460 2013/02/11 14:35:47 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14462 2013/02/11 20:45:56 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,31 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (11 Feb 2013)
+# The 3 files from this package are part of the linux-firmware
+# package now. Removal in 30 days.
+media-tv/cx18-firmware
+
+# Hans de Graaff <hans@degraaff.org> (11 Feb 2013)
+# No longer supported upstream even for security bugs.
+# Port your application to another version of Rails.
+# The Rails 3.0 version in the tree has security issues
+# and no new 3.0 versions will be released anymore.
+dev-ruby/rails:3.0
+dev-ruby/railties:3.0
+dev-ruby/activerecord:3.0
+dev-ruby/actionmailer:3.0
+dev-ruby/actionpack:3.0
+dev-ruby/activeresource:3.0
+dev-ruby/activemodel:3.0
+dev-ruby/activesupport:3.0
+dev-ruby/arel:2.0
+dev-ruby/i18n:0.5
+dev-ruby/rack-mount:0.6
+dev-ruby/rack-test:0.5
+dev-ruby/mysql2:0.2
+
 
 # Doug Goldstein <cardoe@gentoo.org> (10 Feb 2013)
 # Use the in-kernel saa717x driver, available since at least 2.6.25

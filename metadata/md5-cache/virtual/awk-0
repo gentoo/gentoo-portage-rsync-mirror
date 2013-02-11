@@ -1,6 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for awk implementation
-KEYWORDS=alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-macos
+KEYWORDS=alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-macos
 RDEPEND=|| ( sys-apps/gawk sys-apps/mawk sys-apps/nawk sys-apps/busybox )
 SLOT=0
-_md5_=a73914b258a47214f1051fd47c31fad1
+_md5_=996ec76e42a5d20c7e847db114650bfb
