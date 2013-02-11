@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.225 2013/02/11 19:11:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.226 2013/02/11 20:12:40 graaff Exp $
+
+*activerecord-3.2.12 (11 Feb 2013)
+
+  11 Feb 2013; Hans de Graaff <graaff@gentoo.org> +activerecord-3.2.12.ebuild:
+  Version bump for security bug 456840.
 
   11 Feb 2013; Hans de Graaff <graaff@gentoo.org> -activerecord-2.3.15.ebuild,
   -activerecord-2.3.15-r1.ebuild, -activerecord-3.0.19.ebuild,

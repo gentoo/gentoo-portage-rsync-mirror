@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.60 2013/02/06 00:10:18 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.61 2013/02/11 20:16:17 ssuominen Exp $
+
+  11 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
+  linux-firmware-20120719.ebuild, linux-firmware-20120816.ebuild,
+  linux-firmware-20120909.ebuild, linux-firmware-20120924.ebuild,
+  linux-firmware-20121030.ebuild, linux-firmware-20121225.ebuild,
+  linux-firmware-20130113.ebuild, linux-firmware-99999999.ebuild:
+  Block only old revision of ivtv-firmware for the v4l-cx25840.fw file
+  collision wrt #362361
 
 *linux-firmware-20130113 (06 Feb 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20130113.ebuild,v 1.1 2013/02/06 00:10:18 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20130113.ebuild,v 1.2 2013/02/11 20:16:17 ssuominen Exp $
 
 EAPI=5
 inherit savedconfig
@@ -29,7 +29,7 @@ RDEPEND="!savedconfig? (
 		!media-sound/alsa-firmware[alsa_cards_sb16]
 		!media-sound/alsa-firmware[alsa_cards_ymfpci]
 		!media-tv/cx18-firmware
-		!media-tv/ivtv-firmware
+		!<sys-firmware/ivtv-firmware-20080701-r1
 		!media-tv/linuxtv-dvb-firmware[dvb_cards_cx231xx]
 		!media-tv/linuxtv-dvb-firmware[dvb_cards_cx23885]
 		!media-tv/linuxtv-dvb-firmware[dvb_cards_usb-dib0700]
