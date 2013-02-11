@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.137 2013/02/11 09:51:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.138 2013/02/11 12:49:51 idella4 Exp $
+
+  11 Feb 2013; Ian Delaney <idella4@gentoo.org> xen-tools-4.2.0-r3.ebuild,
+  xen-tools-4.2.1-r1.ebuild, xen-tools-4.2.1-r2.ebuild:
+  Fix to install with use qemu
 
   11 Feb 2013; Ian Delaney <idella4@gentoo.org> xen-tools-4.2.0-r3.ebuild:
   the manifests

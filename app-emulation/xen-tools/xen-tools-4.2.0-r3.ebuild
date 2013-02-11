@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.0-r3.ebuild,v 1.5 2013/02/02 21:17:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.0-r3.ebuild,v 1.6 2013/02/11 12:49:51 idella4 Exp $
 
 EAPI=5
 
@@ -269,7 +269,11 @@ src_install() {
 		keepdir /var/log/xen-consoles
 	fi
 
-	# For -static-libs wrt Bug 384355
+	if use qemu; then
+		mkdir -p "${D}"usr/lib64/xen/bin || die
+		mv "${D}"usr/lib/xen/bin/qemu* "${D}"usr/lib64/xen/bin/ || die
+	fi	# For -static-libs wrt Bug 384355
+
 	if ! use static-libs; then
 		rm -f "${D}"usr/$(get_libdir)/*.a "${ED}"usr/$(get_libdir)/ocaml/*/*.a
 	fi

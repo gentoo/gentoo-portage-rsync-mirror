@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r1.ebuild,v 1.5 2013/02/11 09:44:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r1.ebuild,v 1.6 2013/02/11 12:49:51 idella4 Exp $
 
 EAPI=5
 
@@ -265,6 +265,11 @@ src_install() {
 		cat "${FILESDIR}"/xendomains-screen.confd >> "${ED}"/etc/conf.d/xendomains || die
 		cp "${FILESDIR}"/xen-consoles.logrotate "${ED}"/etc/xen/ || die
 		keepdir /var/log/xen-consoles
+	fi
+
+	if use qemu; then
+		mkdir -p "${D}"usr/lib64/xen/bin || die
+		mv "${D}"usr/lib/xen/bin/qemu* "${D}"usr/lib64/xen/bin/ || die
 	fi
 
 	# For -static-libs wrt Bug 384355
