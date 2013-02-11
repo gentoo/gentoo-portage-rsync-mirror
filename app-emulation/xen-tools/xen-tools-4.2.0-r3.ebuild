@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.0-r3.ebuild,v 1.6 2013/02/11 12:49:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.0-r3.ebuild,v 1.7 2013/02/11 13:40:59 idella4 Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ SLOT="0"
 # TODO soon; ocaml up for a potential name change
 IUSE="api custom-cflags debug doc flask hvm ocaml qemu pygrub screen static-libs xend"
 
-REQUIRD_USE="hvm? ( qemu )"
+REQUIRED_USE="hvm? ( qemu )"
 
 CDEPEND="<dev-libs/yajl-2
 	dev-python/lxml[${PYTHON_USEDEP}]

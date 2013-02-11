@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.4.2-r1.ebuild,v 1.1 2013/02/11 11:48:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.4.2-r1.ebuild,v 1.2 2013/02/11 13:45:07 mgorny Exp $
 
 EAPI=5
 
@@ -91,7 +91,6 @@ python_test() {
 			: $(( DB_PORT += 1 ))
 			continue
 		else
-			die "${TMPDIR}"/mongodb-${DB_PORT}.sock
 			eend 1
 			eerror "Unable to start mongod for tests. See the server log:"
 			eerror "	${logpath}"
