@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/oyranos
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.8 2012/11/23 21:55:30 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.9 2013/02/11 07:46:50 xmw Exp $
+
+*oyranos-0.9.1-r1 (11 Feb 2013)
+
+  11 Feb 2013; Michael Weber <xmw@gentoo.org> +oyranos-0.9.1-r1.ebuild,
+  +files/oyranos-0.9.1-buildsystem-2.patch:
+  Revbump to include buildsystem patch by Benjamin Schindler, thanks to all
+  contributors of bug 456104
 
   23 Nov 2012; Michael Weber <xmw@gentoo.org> oyranos-0.4.0-r1.ebuild,
   oyranos-0.9.0.ebuild, oyranos-0.9.1.ebuild:

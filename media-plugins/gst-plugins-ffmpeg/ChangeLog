@@ -1,6 +1,16 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.151 2013/02/10 22:30:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.152 2013/02/11 07:34:18 tetromino Exp $
+
+*gst-plugins-ffmpeg-0.10.13_p201211 (11 Feb 2013)
+
+  11 Feb 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-plugins-ffmpeg-0.10.13-r2.ebuild,
+  +gst-plugins-ffmpeg-0.10.13_p201211.ebuild:
+  Add the gstreamer-2012.11 SDK git snapshot of gst-plugins-ffmpeg with
+  additional backported patches from gst-plugins-libav-1.1 for libav-9 and
+  (hopefully) ffmpeg-1.1 compatibility; should fix bug #423717. Pin existing
+  ebuild to libav-0.8 and ffmpeg-0.10.
 
   10 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-ffmpeg-0.10.13-r2.ebuild:
