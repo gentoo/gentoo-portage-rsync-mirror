@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7-r1.ebuild,v 1.8 2012/09/26 15:07:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7-r1.ebuild,v 1.9 2013/02/11 22:24:08 pinkbyte Exp $
 
 EAPI="4"
 
@@ -36,7 +36,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	sys-apps/gawk"
+	virtual/awk"
 
 DISTUTILS_SETUP_FILES=("bindings/python|setup.py")
 

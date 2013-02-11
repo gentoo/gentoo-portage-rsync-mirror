@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/files/virtualbox-guest-additions-8.initd,v 1.1 2013/02/10 18:11:16 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/files/virtualbox-guest-additions-8.initd,v 1.2 2013/02/11 22:13:47 polynomial-c Exp $
 
 pidfile="/var/run/vboxguest-service.pid"
 command="/usr/sbin/vboxguest-service"
@@ -15,12 +15,12 @@ depend() {
 
 start_pre() {
 	einfo "Loading kernel modules"
-	/sbin/modprobe vboxguest &> /dev/null
-	/sbin/modprobe vboxsf &> /dev/null
+	/sbin/modprobe vboxguest 2>&1
+	/sbin/modprobe vboxsf 2>&1
 }
 
 stop_post() {
 	einfo "Removing kernel modules"
-	/sbin/modprobe -r vboxsf &> /dev/null
-	/sbin/modprobe -r vboxguest &> /dev/null
+	/sbin/modprobe -r vboxsf 2>&1
+	/sbin/modprobe -r vboxguest 2>&1
 }
