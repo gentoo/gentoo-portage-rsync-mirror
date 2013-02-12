@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usbview
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/ChangeLog,v 1.44 2013/02/12 20:21:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/ChangeLog,v 1.45 2013/02/12 22:01:54 jer Exp $
+
+  12 Feb 2013; Jeroen Roovers <jer@gentoo.org> usbview-2.0.ebuild:
+  Stable for HPPA (bug #456426).
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> usbview-2.0.ebuild:
   Stable for sparc, wrt bug #456426
