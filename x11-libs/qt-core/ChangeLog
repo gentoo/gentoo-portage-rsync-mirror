@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.211 2013/02/11 11:15:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.213 2013/02/12 21:05:12 ago Exp $
+
+  12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> qt-core-4.8.4-r2.ebuild:
+  Stable for alpha, wrt bug #455884
+
+  12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> qt-core-4.8.4-r2.ebuild:
+  Stable for x86, wrt bug #455884
 
   11 Feb 2013; Agostino Sarubbo <ago@gentoo.org> qt-core-4.8.4-r2.ebuild:
   Stable for arm, wrt bug #455884
