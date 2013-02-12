@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.5.2.0-r3.ebuild,v 1.7 2013/01/28 05:11:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-0.6.0.0-r1.ebuild,v 1.1 2013/02/12 04:59:21 tetromino Exp $
 
-EAPI="4"
+EAPI="5"
 GNOME_ORG_MODULE="ModemManager"
 
-inherit gnome.org user multilib toolchain-funcs udev
+inherit eutils gnome.org user multilib toolchain-funcs udev
 
 DESCRIPTION="Modem and mobile broadband management libraries"
 HOMEPAGE="http://cgit.freedesktop.org/ModemManager/ModemManager/"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ppc64 x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc policykit test"
 
 RDEPEND=">=dev-libs/glib-2.18:2
@@ -26,7 +26,12 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig"
 
-DOCS="AUTHORS ChangeLog NEWS README"
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-0.6.0.0-multi-plugin-probing.patch" #456782
+
+	epatch_user
+	default
+}
 
 src_configure() {
 	# ppp-2.4.5 changes the plugin directory
@@ -62,7 +67,7 @@ src_install() {
 	fi
 
 	# Remove useless .la files
-	find "${D}" -name '*.la' -delete
+	prune_libtool_files --modules
 }
 
 pkg_postinst() {
