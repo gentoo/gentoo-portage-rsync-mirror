@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>ultrabug@gentoo.org</email>
-  <name>Alexys Jacob</name>
-  <description>Primary Maintainer</description>
-</maintainer>
-<use>
-	<flag name='extras'>Add support for the UDP spoofing module (omudpspoof) using <pkg>net-libs/libnet</pkg></flag>
-	<flag name='relp'>Add support for the Reliable Event Logging Protocol using <pkg>dev-libs/librelp</pkg></flag>
-	<flag name='zeromq'>Add support for the ZeroMQ input and output plugins using <pkg>net-libs/zeromq</pkg></flag>
-</use>
+  <maintainer>
+    <email>ultrabug@gentoo.org</email>
+    <name>Alexys Jacob</name>
+    <description>Primary Maintainer</description>
+  </maintainer>
+  <use>
+    <flag name="extras">Add support for the UDP spoofing module (omudpspoof) using <pkg>net-libs/libnet</pkg></flag>
+    <flag name="relp">Add support for the Reliable Event Logging Protocol using <pkg>dev-libs/librelp</pkg></flag>
+    <flag name="zeromq">Add support for the ZeroMQ input and output plugins using <pkg>net-libs/zeromq</pkg></flag>
+  </use>
 </pkgmetadata>

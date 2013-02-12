@@ -1,0 +1,156 @@
+From edf9b718d3007bdb519b3d64cb1f8145bba8e15e Mon Sep 17 00:00:00 2001
+From: Justin Lecher <jlec@gentoo.org>
+Date: Tue, 12 Feb 2013 11:55:17 +0100
+Subject: [PATCH] Use pkg-config to detect json-c
+
+There was a typo in the configure.ac which prevented correct usage of pkg-config
+to detect json-c.
+This patch corrects this typo and removes all paths from json.h in source files.
+
+Signed-off-by: Justin Lecher <jlec@gentoo.org>
+---
+ action.c                          | 2 +-
+ configure.ac                      | 2 +-
+ plugins/imkmsg/kmsg.c             | 2 +-
+ plugins/mmjsonparse/mmjsonparse.c | 2 +-
+ plugins/mmnormalize/mmnormalize.c | 2 +-
+ plugins/ommongodb/ommongodb.c     | 2 +-
+ runtime/msg.c                     | 2 +-
+ runtime/msg.h                     | 2 +-
+ template.c                        | 2 +-
+ template.h                        | 2 +-
+ 10 files changed, 10 insertions(+), 10 deletions(-)
+
+diff --git a/action.c b/action.c
+index 07f3a6f..d5cf983 100644
+--- a/action.c
++++ b/action.c
+@@ -98,7 +98,7 @@
+ #include <strings.h>
+ #include <time.h>
+ #include <errno.h>
+-#include <json/json.h>
++#include <json.h>
+ 
+ #include "dirty.h"
+ #include "template.h"
+diff --git a/configure.ac b/configure.ac
+index e9fce3f..cad0d57 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -758,7 +758,7 @@ if test "x$enable_rsyslogrt" = "xyes"; then
+   RSRT_LIBS1="\$(top_builddir)/runtime/librsyslog.la"
+ fi
+ AM_CONDITIONAL(ENABLE_RSYSLOGRT, test x$enable_rsyslogrt = xyes)
+-RSRT_CFLAGS="\$(RSRT_CFLAGS1) \$(LIBESTR_CFLAGS) \$(JSON_C_FLAGS)"
++RSRT_CFLAGS="\$(RSRT_CFLAGS1) \$(LIBESTR_CFLAGS) \$(JSON_C_CFLAGS)"
+ RSRT_LIBS="\$(RSRT_LIBS1) \$(LIBESTR_LIBS) \$(JSON_C_LIBS)"
+ AC_SUBST(RSRT_CFLAGS1)
+ AC_SUBST(RSRT_LIBS1)
+diff --git a/plugins/imkmsg/kmsg.c b/plugins/imkmsg/kmsg.c
+index b771d68..1c3ae4d 100644
+--- a/plugins/imkmsg/kmsg.c
++++ b/plugins/imkmsg/kmsg.c
+@@ -35,7 +35,7 @@
+ #ifdef  OS_LINUX
+ #include <sys/klog.h>
+ #endif
+-#include <json/json.h>
++#include <json.h>
+ 
+ #include "rsyslog.h"
+ #include "srUtils.h"
+diff --git a/plugins/mmjsonparse/mmjsonparse.c b/plugins/mmjsonparse/mmjsonparse.c
+index c47aceb..56db557 100644
+--- a/plugins/mmjsonparse/mmjsonparse.c
++++ b/plugins/mmjsonparse/mmjsonparse.c
+@@ -36,7 +36,7 @@
+ #include <unistd.h>
+ #include <ctype.h>
+ #include <libestr.h>
+-#include <json/json.h>
++#include <json.h>
+ #include "conf.h"
+ #include "syslogd-types.h"
+ #include "template.h"
+diff --git a/plugins/mmnormalize/mmnormalize.c b/plugins/mmnormalize/mmnormalize.c
+index fd2004a..45dde98 100644
+--- a/plugins/mmnormalize/mmnormalize.c
++++ b/plugins/mmnormalize/mmnormalize.c
+@@ -40,7 +40,7 @@
+ #include <unistd.h>
+ #include <libestr.h>
+ #include <libee/libee.h>
+-#include <json/json.h>
++#include <json.h>
+ #include <liblognorm.h>
+ #include "conf.h"
+ #include "syslogd-types.h"
+diff --git a/plugins/ommongodb/ommongodb.c b/plugins/ommongodb/ommongodb.c
+index dd99741..64d501d 100644
+--- a/plugins/ommongodb/ommongodb.c
++++ b/plugins/ommongodb/ommongodb.c
+@@ -33,7 +33,7 @@
+ #include <stdint.h>
+ #include <time.h>
+ #include <mongo.h>
+-#include <json/json.h>
++#include <json.h>
+ /* For struct json_object_iter, should not be necessary in future versions */
+ #include <json/json_object_private.h>
+ 
+diff --git a/runtime/msg.c b/runtime/msg.c
+index 68577ad..664abb9 100644
+--- a/runtime/msg.c
++++ b/runtime/msg.c
+@@ -41,7 +41,7 @@
+ #endif
+ #include <netdb.h>
+ #include <libestr.h>
+-#include <json/json.h>
++#include <json.h>
+ /* For struct json_object_iter, should not be necessary in future versions */
+ #include <json/json_object_private.h>
+ #if HAVE_MALLOC_H
+diff --git a/runtime/msg.h b/runtime/msg.h
+index 564441b..caa825f 100644
+--- a/runtime/msg.h
++++ b/runtime/msg.h
+@@ -30,7 +30,7 @@
+ 
+ #include <pthread.h>
+ #include <libestr.h>
+-#include <json/json.h>
++#include <json.h>
+ #include "obj.h"
+ #include "syslogd-types.h"
+ #include "template.h"
+diff --git a/template.c b/template.c
+index 1ccb375..974aba3 100644
+--- a/template.c
++++ b/template.c
+@@ -34,7 +34,7 @@
+ #include <string.h>
+ #include <ctype.h>
+ #include <assert.h>
+-#include <json/json.h>
++#include <json.h>
+ #include "stringbuf.h"
+ #include "syslogd-types.h"
+ #include "template.h"
+diff --git a/template.h b/template.h
+index 018e2f5..c87e7a8 100644
+--- a/template.h
++++ b/template.h
+@@ -30,7 +30,7 @@
+ #ifndef	TEMPLATE_H_INCLUDED
+ #define	TEMPLATE_H_INCLUDED 1
+ 
+-#include <json/json.h>
++#include <json.h>
+ #include <libestr.h>
+ #include "regexp.h"
+ #include "stringbuf.h"
+-- 
+1.8.1.2
+

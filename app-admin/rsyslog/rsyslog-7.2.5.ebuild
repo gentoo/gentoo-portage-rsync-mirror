@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.2.5.ebuild,v 1.1 2013/01/21 13:13:22 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.2.5.ebuild,v 1.2 2013/02/12 12:06:16 jlec Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=yes
@@ -47,12 +47,15 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 
 DOCS=(AUTHORS ChangeLog doc/rsyslog-example.conf)
 
+PATCHES=(
+	"${FILESDIR}"/${P}-json-c-pkgconfig.patch
+
+	# Fix runtime UUID/JSON libs linking
+	"${FILESDIR}"/6-stable/${PN}-6.6.0-fix-runtime.patch	)
+
 src_prepare() {
 	# Don't force '-g' CFLAG
 	sed -e 's/CFLAGS="\(.*\) -g"/CFLAGS="\1"/g' -i configure.ac || die
-
-	# Fix runtime UUID/JSON libs linking
-	epatch "${FILESDIR}/6-stable/${PN}-6.6.0-fix-runtime.patch"
 
 	autotools-utils_src_prepare
 }
