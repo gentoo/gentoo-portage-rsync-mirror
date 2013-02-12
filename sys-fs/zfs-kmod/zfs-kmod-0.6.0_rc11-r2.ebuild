@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc14-r1.ebuild,v 1.1 2013/02/06 01:46:26 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc11-r2.ebuild,v 1.1 2013/02/11 23:36:17 ryao Exp $
 
 EAPI="4"
 
@@ -16,8 +16,8 @@ if [ ${PV} == "9999" ] ; then
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
-	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${MY_PV}.tar.gz"
-	S="${WORKDIR}/zfs-zfs-${MY_PV}"
+	SRC_URI="https://github.com/downloads/zfsonlinux/zfs/zfs-${MY_PV}.tar.gz"
+	S="${WORKDIR}/zfs-${MY_PV}"
 	KEYWORDS="~amd64"
 fi
 
@@ -56,7 +56,7 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 8 || die "Linux 3.8 is the latest supported version."; }
+		{ kernel_is le 3 6 || die "Linux 3.6 is the latest supported version."; }
 
 	check_extra_config
 }
@@ -64,16 +64,33 @@ pkg_setup() {
 src_prepare() {
 	if [ ${PV} != "9999" ]
 	then
+		# Fix various deadlocks
+		epatch "${FILESDIR}/${P}-fix-32-bit-integer-size-mismatch.patch"
+		epatch "${FILESDIR}/${P}-fix-i386-infinite-loop.patch"
+		epatch "${FILESDIR}/${P}-fix-rename-failure.patch"
+		epatch "${FILESDIR}/${P}-fix-zvol_probe-null.patch"
+		epatch "${FILESDIR}/${P}-return-positive-error.patch"
+
+		# Linux 3.6 Support
+		epatch "${FILESDIR}/${P}-linux-3.6-compat-0-elevator-change.patch"
+		epatch "${FILESDIR}/${P}-linux-3.6-compat-1.patch"
+		epatch "${FILESDIR}/${P}-linux-3.6-compat-2.patch"
+		epatch "${FILESDIR}/${P}-linux-3.6-compat-3.patch"
+		epatch "${FILESDIR}/${P}-linux-3.6-compat-4.patch"
+		epatch "${FILESDIR}/${P}-linux-3.6-compat-5.patch"
+
 		# Cast constant for 32-bit compatibility
-		epatch "${FILESDIR}/${P}-cast-const-for-32bit-compatibility.patch"
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-cast-const-for-32bit-compatibility.patch"
+
+		# Handle missing name length check in Linux VFS
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-vfs-name-length-compatibility.patch"
 	fi
+
 	autotools-utils_src_prepare
 }
 
 src_configure() {
 	use custom-cflags || strip-flags
-	filter-ldflags -Wl,*
-
 	set_arch_to_kernel
 	local myeconfargs=(
 		--bindir="${EPREFIX}/bin"
@@ -99,10 +116,4 @@ pkg_postinst() {
 		ewarn "at least 256M and decreasing zfs_arc_max to some value less than that."
 	fi
 
-	ewarn "This version of ZFSOnLinux introduces support for features flags."
-	ewarn "If you upgrade your pools to make use of feature flags, you will lose"
-	ewarn "the ability to import them using older versions of ZFSOnLinux."
-	ewarn "Any new pools will be created with feature flag support and will"
-	ewarn "not be compatible with older versions of ZFSOnLinux. To create a new"
-	ewarn "pool that is backward compatible, use zpool create -o version=28 ..."
 }

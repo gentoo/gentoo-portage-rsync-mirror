@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc13.ebuild,v 1.2 2013/02/06 01:46:26 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc13-r3.ebuild,v 1.1 2013/02/11 23:36:17 ryao Exp $
 
 EAPI="4"
 
@@ -56,17 +56,36 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 7 || die "Linux 3.7 is the latest supported version."; }
+		{ kernel_is le 3 8 || die "Linux 3.8 is the latest supported version."; }
 
 	check_extra_config
 }
 
 src_prepare() {
+	if [ ${PV} != "9999" ]
+	then
+		# Fix regression where snapshots are not visible
+		epatch "${FILESDIR}/${P}-fix-invisible-snapshots.patch"
+
+		# Fix deadlock involving concurrent `zfs destroy` and `zfs list` commands
+		epatch "${FILESDIR}/${P}-fix-recursive-reader.patch"
+
+		# Fix USE=debug build failure involving GCC 4.7
+		epatch "${FILESDIR}/${P}-gcc-4.7-compat.patch"
+
+		# Cast constant for 32-bit compatibility
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-cast-const-for-32bit-compatibility.patch"
+
+		# Handle missing name length check in Linux VFS
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-vfs-name-length-compatibility.patch"
+	fi
 	autotools-utils_src_prepare
 }
 
 src_configure() {
 	use custom-cflags || strip-flags
+	filter-ldflags -Wl,*
+
 	set_arch_to_kernel
 	local myeconfargs=(
 		--bindir="${EPREFIX}/bin"

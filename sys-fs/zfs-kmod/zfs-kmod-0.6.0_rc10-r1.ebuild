@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc11-r1.ebuild,v 1.3 2013/02/06 01:46:26 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc10-r1.ebuild,v 1.1 2013/02/11 23:36:17 ryao Exp $
 
 EAPI="4"
 
@@ -40,6 +40,7 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	CONFIG_CHECK="!DEBUG_LOCK_ALLOC
+		!PREEMPT
 		BLK_DEV_LOOP
 		EFI_PARTITION
 		IOSCHED_NOOP
@@ -65,19 +66,23 @@ src_prepare() {
 	if [ ${PV} != "9999" ]
 	then
 		# Fix various deadlocks
-		epatch "${FILESDIR}/${P}-fix-32-bit-integer-size-mismatch.patch"
-		epatch "${FILESDIR}/${P}-fix-i386-infinite-loop.patch"
-		epatch "${FILESDIR}/${P}-fix-rename-failure.patch"
-		epatch "${FILESDIR}/${P}-fix-zvol_probe-null.patch"
-		epatch "${FILESDIR}/${P}-return-positive-error.patch"
+		epatch "${FILESDIR}/${PN}-0.6.0_rc9-remove-pfmalloc-1-of-3.patch"
+		epatch "${FILESDIR}/${PN}-0.6.0_rc9-remove-pfmalloc-2-of-3.patch"
+		epatch "${FILESDIR}/${PN}-0.6.0_rc9-remove-pfmalloc-3-of-3.patch"
+
+		# Handle missing name length check in Linux VFS
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-vfs-name-length-compatibility.patch"
 
 		# Linux 3.6 Support
-		epatch "${FILESDIR}/${P}-linux-3.6-compat-0-elevator-change.patch"
-		epatch "${FILESDIR}/${P}-linux-3.6-compat-1.patch"
-		epatch "${FILESDIR}/${P}-linux-3.6-compat-2.patch"
-		epatch "${FILESDIR}/${P}-linux-3.6-compat-3.patch"
-		epatch "${FILESDIR}/${P}-linux-3.6-compat-4.patch"
-		epatch "${FILESDIR}/${P}-linux-3.6-compat-5.patch"
+		epatch "${FILESDIR}/${PN}-0.6.0_rc11-linux-3.6-compat-0-elevator-change.patch"
+		epatch "${FILESDIR}/${PN}-0.6.0_rc11-linux-3.6-compat-1.patch"
+		epatch "${FILESDIR}/${PN}-0.6.0_rc11-linux-3.6-compat-2.patch"
+		epatch "${FILESDIR}/${PN}-0.6.0_rc11-linux-3.6-compat-3.patch"
+		epatch "${FILESDIR}/${PN}-0.6.0_rc11-linux-3.6-compat-4.patch"
+		epatch "${FILESDIR}/${PN}-0.6.0_rc11-linux-3.6-compat-5.patch"
+
+		# Cast constant for 32-bit compatibility
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-cast-const-for-32bit-compatibility.patch"
 	fi
 
 	autotools-utils_src_prepare
@@ -104,10 +109,6 @@ src_install() {
 pkg_postinst() {
 	linux-mod_pkg_postinst
 
-	if use x86 || use arm
-	then
-		ewarn "32-bit kernels will likely require increasing vmalloc to"
-		ewarn "at least 256M and decreasing zfs_arc_max to some value less than that."
-	fi
+	use x86 && ewarn "32-bit kernels are unsupported by ZFSOnLinux upstream. Do not file bug reports."
 
 }

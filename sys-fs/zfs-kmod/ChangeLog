@@ -1,6 +1,24 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.18 2013/02/06 01:46:26 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.19 2013/02/11 23:36:17 ryao Exp $
+
+*zfs-kmod-0.6.0_rc12-r2 (11 Feb 2013)
+*zfs-kmod-0.6.0_rc14-r2 (11 Feb 2013)
+*zfs-kmod-0.6.0_rc10-r1 (11 Feb 2013)
+*zfs-kmod-0.6.0_rc11-r2 (11 Feb 2013)
+*zfs-kmod-0.6.0_rc13-r3 (11 Feb 2013)
+
+  11 Feb 2013; Richard Yao <ryao@gentoo.org>
+  +files/zfs-kmod-0.6.0_rc14-vfs-name-length-compatibility.patch,
+  +zfs-kmod-0.6.0_rc10-r1.ebuild, +zfs-kmod-0.6.0_rc11-r2.ebuild,
+  +zfs-kmod-0.6.0_rc12-r2.ebuild, +zfs-kmod-0.6.0_rc13-r3.ebuild,
+  +zfs-kmod-0.6.0_rc14-r2.ebuild, -zfs-kmod-0.6.0_rc10.ebuild,
+  -zfs-kmod-0.6.0_rc11-r1.ebuild, -zfs-kmod-0.6.0_rc11.ebuild,
+  -zfs-kmod-0.6.0_rc12-r1.ebuild, -zfs-kmod-0.6.0_rc12.ebuild,
+  -zfs-kmod-0.6.0_rc13-r1.ebuild, -zfs-kmod-0.6.0_rc13-r2.ebuild,
+  -zfs-kmod-0.6.0_rc13.ebuild, -zfs-kmod-0.6.0_rc14-r1.ebuild:
+  Add file name length check omitted by Linux VFS. Backport kernel compatibility
+  fixes to older versions in all situations possible without new patches.
 
 *zfs-kmod-0.6.0_rc14-r1 (06 Feb 2013)
 
