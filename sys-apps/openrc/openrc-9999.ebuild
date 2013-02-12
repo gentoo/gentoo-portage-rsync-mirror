@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.117 2013/01/03 21:11:37 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.118 2013/02/12 19:01:51 swift Exp $
 
 EAPI=4
 
@@ -32,6 +32,7 @@ RDEPEND="virtual/init
 	kernel_linux? (
 		sys-process/psmisc
 	)
+	selinux? ( sec-policy/selinux-openrc )
 	!<sys-fs/udev-init-scripts-17
 	!<sys-fs/udev-133"
 DEPEND="${RDEPEND}

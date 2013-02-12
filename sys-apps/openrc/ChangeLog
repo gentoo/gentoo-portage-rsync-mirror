@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.262 2013/01/03 21:11:37 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.263 2013/02/12 19:01:51 swift Exp $
+
+  12 Feb 2013; Sven Vermeulen <swift@gentoo.org> openrc-0.9.8.4.ebuild,
+  openrc-0.11.8.ebuild, openrc-9999.ebuild:
+  Add dependency on selinux-openrc if USE=selinux
 
   03 Jan 2013; William Hubbs <williamh@gentoo.org> metadata.xml,
   openrc-9999.ebuild:

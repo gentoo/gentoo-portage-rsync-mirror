@@ -4,11 +4,11 @@ DESCRIPTION=OCaml tool to find/use non-standard packages.
 EAPI=5
 HOMEPAGE=http://projects.camlcity.org/projects/findlib.html
 IUSE=doc +ocamlopt tk
-KEYWORDS=~alpha amd64 ~hppa ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos
+KEYWORDS=alpha amd64 ~hppa ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=MIT
 RDEPEND=>=dev-lang/ocaml-3.10:=[ocamlopt?,tk?]
 RESTRICT=installsources
 SLOT=0
 SRC_URI=http://download.camlcity.org/download/findlib-1.3.3.tar.gz
 _eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=5777ee7d3c7c0248042f8589e9a6935a
+_md5_=ab85b6e12cd1a01faf5b8b1289e49774
