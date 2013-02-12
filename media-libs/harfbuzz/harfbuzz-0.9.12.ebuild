@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.10.ebuild,v 1.2 2013/01/13 21:34:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.12.ebuild,v 1.1 2013/02/12 03:18:45 tetromino Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/harfbuzz"
 [[ ${PV} == 9999 ]] && inherit git-2 autotools
 
-inherit eutils libtool
+inherit autotools eutils libtool
 
 DESCRIPTION="An OpenType text shaping engine"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/HarfBuzz"
@@ -16,15 +16,15 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/HarfBuzz"
 LICENSE="Old-MIT ISC icu"
 SLOT="0"
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris"
 IUSE="static-libs"
 
 RDEPEND="
 	dev-libs/glib:2
-	dev-libs/icu
-	media-gfx/graphite2
-	media-libs/freetype:2
-	x11-libs/cairo
+	dev-libs/icu:=
+	media-gfx/graphite2:=
+	media-libs/freetype:2=
+	x11-libs/cairo:=
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -42,8 +42,12 @@ src_prepare() {
 			-e '/libharfbuzz_la_LINK = /s/\<LINK\>/CXXLINK/' \
 			src/Makefile.in || die
 	fi
-	[[ ${PV} == 9999 ]] && eautoreconf
-	elibtoolize  # for building a shared library on x64-solaris
+#	[[ ${PV} == 9999 ]] && eautoreconf
+#	elibtoolize  # for building a shared library on x64-solaris
+
+	# parallel make failure, fixed in 0.9.13, needs eautoreconf; bug #450920
+	epatch "${FILESDIR}/${P}-hb-version.h.patch"
+	eautoreconf
 }
 
 src_configure() {
@@ -53,5 +57,5 @@ src_configure() {
 
 src_install() {
 	default
-	prune_libtool_files --all
+	prune_libtool_files --modules
 }

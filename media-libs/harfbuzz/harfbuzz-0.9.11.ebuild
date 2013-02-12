@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.11.ebuild,v 1.4 2013/02/08 15:28:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.11.ebuild,v 1.5 2013/02/12 03:18:45 tetromino Exp $
 
 EAPI=5
 
@@ -21,10 +21,10 @@ IUSE="static-libs"
 
 RDEPEND="
 	dev-libs/glib:2
-	dev-libs/icu
-	media-gfx/graphite2
-	media-libs/freetype:2
-	x11-libs/cairo
+	dev-libs/icu:=
+	media-gfx/graphite2:=
+	media-libs/freetype:2=
+	x11-libs/cairo:=
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -53,5 +53,5 @@ src_configure() {
 
 src_install() {
 	default
-	prune_libtool_files --all
+	prune_libtool_files --modules
 }

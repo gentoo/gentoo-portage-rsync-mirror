@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.26 2013/02/08 15:28:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.27 2013/02/12 03:18:45 tetromino Exp $
+
+*harfbuzz-0.9.12 (12 Feb 2013)
+
+  12 Feb 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -harfbuzz-0.9.10.ebuild, harfbuzz-0.9.11.ebuild, +harfbuzz-0.9.12.ebuild,
+  +files/harfbuzz-0.9.12-hb-version.h.patch, harfbuzz-9999.ebuild:
+  Version bump, drop old. Fix intermittent parallel make failure (bug #450920,
+  thanks to Michał Górny). Add subslot dependencies on libraries with non-0
+  soname versions (bug #455900, thanks to Pacho Ramos).
 
   08 Feb 2013; Agostino Sarubbo <ago@gentoo.org> harfbuzz-0.9.11.ebuild:
   Add ~sh, wrt bug #449220
