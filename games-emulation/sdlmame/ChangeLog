@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.60 2013/02/12 22:23:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.61 2013/02/12 22:43:45 hasufell Exp $
+
+  12 Feb 2013; Julian Ospald <hasufell@gentoo.org> sdlmame-0.148_p1.ebuild:
+  cosmetic fix, make the sed apply for missing leading whitespaces too
 
   12 Feb 2013; Julian Ospald <hasufell@gentoo.org> sdlmame-0.148_p1.ebuild:
   fontconfig is unconditional, fix alsa-sed
@@ -297,4 +300,3 @@
   +files/mame.ini.in, +files/vector.ini, +metadata.xml,
   +sdlmame-0.124.ebuild, +sdlmame-0.124_p3.ebuild:
   Initial release
-

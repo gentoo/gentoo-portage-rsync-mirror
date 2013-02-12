@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.148_p1.ebuild,v 1.3 2013/02/12 22:23:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.148_p1.ebuild,v 1.4 2013/02/12 22:43:45 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -60,7 +60,7 @@ disable_feature() {
 # Function to enable a makefile option
 enable_feature() {
 	sed -i \
-		-e "/^#.*$1.*=/s:^# ::"  \
+		-e "/^#.*$1.*=/s:^#::"  \
 		"${S}"/${2:-makefile} \
 		|| die "sed failed"
 }
@@ -117,7 +117,7 @@ src_prepare() {
 
 	if ! use alsa ; then
 		einfo "Disabling alsa midi support"
-		sed -i -e "/^#NO_USE_MIDI.*=/s:^#::" src/osd/sdl/sdl.mak || die
+		enable_feature NO_USE_MIDI src/osd/sdl/sdl.mak
 	fi
 
 	if ! use X ; then
