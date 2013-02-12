@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.5.ebuild,v 1.8 2013/02/10 17:19:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.5.ebuild,v 1.9 2013/02/12 20:20:11 ago Exp $
 
 EAPI=5
 inherit autotools python
@@ -13,7 +13,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="examples test"
 
 RDEPEND="app-arch/xz-utils"

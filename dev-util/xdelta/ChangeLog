@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xdelta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.88 2013/02/10 17:19:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.89 2013/02/12 20:20:11 ago Exp $
+
+  12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> xdelta-3.0.5.ebuild:
+  Stable for sparc, wrt bug #455876
 
   10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> xdelta-3.0.5.ebuild:
   Stable for ppc, wrt bug #455876

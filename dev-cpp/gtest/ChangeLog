@@ -1,5 +1,8 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.25 2013/02/12 19:27:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.26 2013/02/12 20:25:35 ago Exp $
+
+  12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gtest-1.6.0-r1.ebuild:
+  Stable for sparc, wrt bug #456476
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gtest-1.6.0-r1.ebuild:
   Stable for alpha, wrt bug #456476
