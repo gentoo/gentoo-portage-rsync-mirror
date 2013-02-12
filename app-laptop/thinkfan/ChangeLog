@@ -1,6 +1,15 @@
 # ChangeLog for app-laptop/thinkfan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkfan/ChangeLog,v 1.12 2013/02/04 13:18:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkfan/ChangeLog,v 1.13 2013/02/12 19:52:39 xmw Exp $
+
+*thinkfan-0.9_beta2 (12 Feb 2013)
+
+  12 Feb 2013; Michael Weber <xmw@gentoo.org>
+  -files/thinkfan-0.7.3-makefile.patch, -files/thinkfan-0.7.3-openrc.patch,
+  -thinkfan-0.8.0.ebuild, -thinkfan-0.8.1.ebuild, +thinkfan-0.9_beta2.ebuild,
+  metadata.xml:
+  Remove old ebuilds and files, version bump to newest beta, cmake-utils, USE
+  flags for atasmart.
 
   04 Feb 2013; Agostino Sarubbo <ago@gentoo.org> thinkfan-0.8.1-r1.ebuild:
   Stable for x86, wrt bug #455402

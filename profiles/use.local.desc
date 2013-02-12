@@ -632,6 +632,7 @@ app-laptop/prey:secure - Delete or hide sensitive user data
 app-laptop/prey:session - Get screenshots from user session
 app-laptop/prey:userpriv - Create a prey user group so regular users can access and modify the prey configuration. Use it with caution
 app-laptop/prey:webcam - Use computer's webcam to take screenshots of the thief
+app-laptop/thinkfan:atasmart - include libatasmart support to get disc temperature
 app-laptop/tp_smapi:hdaps - Install a compatible HDAPS module
 app-misc/anki:furigana - Enable support for furigana generation
 app-misc/anki:graph - Enable support for making graphs
