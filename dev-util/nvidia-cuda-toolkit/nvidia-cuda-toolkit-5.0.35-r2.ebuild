@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-5.0.35-r2.ebuild,v 1.2 2013/02/06 20:22:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-5.0.35-r2.ebuild,v 1.3 2013/02/12 15:18:33 jlec Exp $
 
 EAPI=5
 
@@ -25,7 +25,10 @@ DEPEND=""
 RDEPEND="${DEPEND}
 	sys-devel/gcc:4.6[cxx]
 	!<=x11-drivers/nvidia-drivers-270.41
-	debugger? ( sys-libs/libtermcap-compat )
+	debugger? (
+		sys-libs/libtermcap-compat
+		sys-libs/ncurses[tinfo]
+		)
 	profiler? ( >=virtual/jre-1.6 )"
 
 S="${WORKDIR}"

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rabbitmq-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.24 2013/01/11 15:05:23 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.25 2013/02/12 15:18:02 ultrabug Exp $
+
+*rabbitmq-server-3.0.2 (12 Feb 2013)
+
+  12 Feb 2013; Ultrabug <ultrabug@gentoo.org> +rabbitmq-server-3.0.2.ebuild:
+  Version bump
 
 *rabbitmq-server-3.0.1 (11 Jan 2013)
 *rabbitmq-server-2.8.7 (11 Jan 2013)
@@ -18,4 +23,3 @@
   Drop old. Add GPL-2 LICENSE fix #426092. Enhanced systemd service file fix
   #419531 and init script fix #416345 thx to Maksim Melnikau. Fix #430510 VCS
   fetching in compilation. Fix #430508 parallel building. Version bump.
-
