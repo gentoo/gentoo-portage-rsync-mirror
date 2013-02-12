@@ -1,6 +1,30 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1198 2013/02/09 18:06:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1200 2013/02/12 04:10:53 zmedico Exp $
+
+*portage-2.2.0_alpha162 (12 Feb 2013)
+
+  12 Feb 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha162.ebuild:
+  2.2.0_alpha162 version bump. This includes all of the fixes in 2.1.11.51. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.11.51 (12 Feb 2013)
+
+  12 Feb 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.51.ebuild:
+  2.1.11.51 version bump. This fixes bug #456340 (unsatisfied slot-operator
+  message hides other dependency problems), bug #456830 (hide IUSE QA warning
+  for API consumers like Entropy), bug #455606 (QA warning for
+  lib*/udev/rules.d), bug #456342 (repoman use.stable handling), bug #456208
+  (trigger rebuild for sub-slot change without revbump), bug #456236 (restore
+  compatibility with python-2.6.4), bug #455946 (prompt to add packages to world
+  only when needed), bug #440304 (preserve configure timestamp when patching it
+  for CONFIG_SHELL), bug #273272 (make RESTRICT=test mask USE=test), bug #454904
+  (sample slot-operator rebuild output for emerge man page). bug #454880
+  (OSError in tests triggered by missing ccache or distcc), bug #454400
+  (KeyError when updating installed CONTENTS of blocked packages), bug #454050
+  (tweak die message for FEATURES=fail-clean), and bug #454060 (allow
+  suppression of errror for missing portage group). Bug #456888 tracks all bugs
+  fixed since portage-2.1.11.50.
 
   09 Feb 2013; Agostino Sarubbo <ago@gentoo.org> portage-2.1.11.50.ebuild:
   Stable for ia64, wrt bug #455930

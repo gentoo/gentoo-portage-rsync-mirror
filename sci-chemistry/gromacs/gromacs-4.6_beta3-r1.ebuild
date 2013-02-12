@@ -1,13 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6_beta3-r1.ebuild,v 1.2 2012/12/29 23:00:35 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6_beta3-r1.ebuild,v 1.3 2013/02/12 04:11:10 ottxor Exp $
 
 EAPI=5
 
 TEST_PV="4.0.4"
 MANUAL_PV="4.6-beta1"
-
-CMAKE_MAKEFILE_GENERATOR="ninja"
 
 inherit bash-completion-r1 cmake-utils eutils multilib toolchain-funcs
 
@@ -27,7 +25,7 @@ else
 		doc? (  ftp://ftp.gromacs.org/pub/manual/${PN}-manual-${MANUAL_PV}.pdf )"
 fi
 
-ACCE_IUSE="sse2 sse41 avx128fma avx256"
+ACCE_IUSE="sse2 sse4_1 avx128fma avx256"
 
 DESCRIPTION="The ultimate molecular dynamics simulation package"
 HOMEPAGE="http://www.gromacs.org/"
@@ -95,7 +93,7 @@ src_configure() {
 	#go from slowest to fastest acceleration
 	local acce="None"
 	use sse2 && acce="SSE2"
-	use sse41 && acce="SSE4.1"
+	use sse4_1 && acce="SSE4.1"
 	use avx128fma && acce="AVX_128_FMA"
 	use avx256 && acce="AVX_256"
 

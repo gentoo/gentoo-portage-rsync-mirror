@@ -4962,7 +4962,7 @@ sci-chemistry/gromacs:mkl - Use sci-libs/mkl for fft, blas, lapack routines
 sci-chemistry/gromacs:offensive - Enable gromacs partly offensive quotes
 sci-chemistry/gromacs:openmm - Add acceleration through sci-libs/openmm
 sci-chemistry/gromacs:single-precision - Single precision version of gromacs (default)
-sci-chemistry/gromacs:sse41 - Enable sse4.1 acceleration
+sci-chemistry/gromacs:sse4_1 - Enable sse4.1 acceleration
 sci-chemistry/gsim:emf - Support for .emf export
 sci-chemistry/icm:32bit - Automatically generated description for 32bit
 sci-chemistry/icm:64bit - Automatically generated description for 64bit

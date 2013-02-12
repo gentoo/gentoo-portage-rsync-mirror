@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.133 2013/02/07 03:21:26 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.134 2013/02/12 04:19:04 ottxor Exp $
+
+  12 Feb 2013; Christoph Junghans <ottxor@gentoo.org> use.mask:
+  sse41 -> sse4_1 (bug #456886)
 
   07 Feb 2013; Matt Turner <mattst88@gentoo.org> use.mask:
   Drop sse5 USE flag.
