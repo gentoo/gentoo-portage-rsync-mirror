@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.2_rc1.ebuild,v 1.4 2012/09/15 22:03:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.2_rc1.ebuild,v 1.5 2013/02/12 09:09:20 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -14,7 +14,7 @@ SRC_URI="http://distcc.googlecode.com/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="avahi crossdev gnome gssapi gtk hardened ipv6 selinux xinetd"
 
 RESTRICT="test"
