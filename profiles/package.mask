@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14465 2013/02/12 12:45:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14466 2013/02/12 16:04:45 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -62,7 +62,6 @@ dev-ruby/rack-mount:0.6
 dev-ruby/rack-test:0.5
 dev-ruby/mysql2:0.2
 
-
 # Doug Goldstein <cardoe@gentoo.org> (10 Feb 2013)
 # Use the in-kernel saa717x driver, available since at least 2.6.25
 # Removal in 30 days
@@ -113,7 +112,7 @@ x11-misc/xdaf
 # emerge -av linux-firmware
 # If you still have a reason to keep the package, please
 # let us know by filing a bug report.
-# Removal at 01 Apr 2013
+# Removal in 30 days
 net-wireless/ar9271-firmware
 net-wireless/libertas-firmware
 net-wireless/rt2860-firmware
@@ -123,20 +122,16 @@ net-wireless/rt73-firmware
 net-wireless/i2400m-fw
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
-# Unfortunately these packages are missing proper licenses
-# If you can figure out the licensing issues, these can
-# be unmasked.
-# prism54 -> no license at all
-# bluez -> only COPYING with GPL-2, but where is the source then?
-# and http://www.bluez.org/download/ lists it as deprecated
-# Removal at 01 Apr 2013
+# There is no license file available for prism54-firmware
+# since it's been extracted from windows binary blob
+# drivers. And this is for very old hardware.
+# Removal in 30 days
 net-wireless/prism54-firmware
-net-wireless/bluez-firmware
 
 # Rick Farina <zerochaos@gentoo.org> (10 Feb 2013)
 # This firmware has been replaced by rtlwifi/*
 # which is already in the linux-firmware package.
-# Removal at 01 Apr 2013
+# Removal in 30 days
 net-wireless/rtl8192su-firmware
 
 # Ryan Hill <dirtyepic@gentoo.org> (07 Feb 2013)
