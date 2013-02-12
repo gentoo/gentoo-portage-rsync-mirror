@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.0.0.ebuild,v 1.2 2013/02/09 21:46:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.0.0.ebuild,v 1.3 2013/02/11 23:23:32 creffett Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki mjpeg panorama redeyes scanner vkontakte"
+IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki mjpeg panorama redeyes scanner upnp vkontakte"
 
 DEPEND="
 	$(add_kdebase_dep libkipi)
@@ -58,6 +58,7 @@ DEPEND="
 			  $(add_kdebase_dep libksane)
 			  media-gfx/sane-backends
 			)
+	upnp? ( media-libs/herqq )
 	vkontakte?	( net-libs/libkvkontakte )
 "
 RDEPEND="${DEPEND}
@@ -116,6 +117,7 @@ src_configure() {
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with crypt QCA2)
 		$(cmake-utils_use_with scanner KSane)
+		$(cmake-utils_use_with upnp Hupnp)
 		$(cmake-utils_use_enable expoblending)
 		$(cmake-utils_use_enable panorama)
 	)

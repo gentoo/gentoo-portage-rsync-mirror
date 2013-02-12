@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc13-r2.ebuild,v 1.2 2013/02/06 01:45:21 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc13-r2.ebuild,v 1.3 2013/02/11 23:25:16 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -66,6 +66,12 @@ src_prepare() {
 
 		# Fix soft lockup regression
 		epatch "${FILESDIR}/${P}-fix-soft-lockup.patch"
+
+		# Fix x86 build failures on Linux 3.4 and later, bug #450646
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-fix-atomic64-checks.patch"
+
+		# Fix autotools check that fails on ~ppc64
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-fix-mutex-owner-check.patch"
 	fi
 
 	autotools-utils_src_prepare

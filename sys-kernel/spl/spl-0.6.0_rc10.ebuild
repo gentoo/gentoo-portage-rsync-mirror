@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc10.ebuild,v 1.7 2013/02/06 01:45:21 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc10.ebuild,v 1.8 2013/02/11 23:25:16 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -50,7 +50,7 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 5 || die "Linux 3.5 is the latest supported version."; }
+		{ kernel_is le 3 6 || die "Linux 3.6 is the latest supported version."; }
 
 	check_extra_config
 }
@@ -61,7 +61,18 @@ src_prepare() {
 
 	if [ ${PV} != "9999" ]
 	then
+		# Fix potential deadlocks when ZFS is used on swap
 		epatch "${FILESDIR}/${PN}-0.6.0_rc9-alias-km-sleep-with-km-pushpage.patch"
+
+		# Linux 3.6 Support
+		epatch "${FILESDIR}/${PN}-0.6.0_rc11-linux-3.6-compat.patch"
+		epatch "${FILESDIR}/${PN}-0.6.0_rc12-fix-3.6-compat-regression.patch"
+
+		# Fix x86 build failures on Linux 3.4 and later, bug #450646
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-fix-atomic64-checks.patch"
+
+		# Fix autotools check that fails on ~ppc64
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-fix-mutex-owner-check.patch"
 	fi
 
 	autotools-utils_src_prepare

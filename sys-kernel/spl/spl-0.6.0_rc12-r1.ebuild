@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc12-r1.ebuild,v 1.4 2013/02/06 01:45:21 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc12-r1.ebuild,v 1.5 2013/02/11 23:25:16 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -50,7 +50,7 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 7 || die "Linux 3.7 is the latest supported version."; }
+		{ kernel_is le 3 8 || die "Linux 3.8 is the latest supported version."; }
 
 	check_extra_config
 }
@@ -59,14 +59,23 @@ src_prepare() {
 	# Workaround for hard coded path
 	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/check.sh || die
 
-	# Stability Fix
-	epatch "${FILESDIR}/${P}-fix-race-in-slabs.patch"
+	if [ ${PV} != "9999" ]
+	then
+		# Stability Fix
+		epatch "${FILESDIR}/${P}-fix-race-in-slabs.patch"
 
-	# Linux 3.6 Support
-	epatch "${FILESDIR}/${P}-fix-3.6-compat-regression.patch"
+		# Linux 3.6 Support
+		epatch "${FILESDIR}/${P}-fix-3.6-compat-regression.patch"
 
-	# Linux 3.7 Support
-	epatch "${FILESDIR}/${P}-linux-3.7-compat.patch"
+		# Linux 3.7 Support
+		epatch "${FILESDIR}/${P}-linux-3.7-compat.patch"
+
+		# Fix x86 build failures on Linux 3.4 and later, bug #450646
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-fix-atomic64-checks.patch"
+
+		# Fix autotools check that fails on ~ppc64
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-fix-mutex-owner-check.patch"
+	fi
 
 	autotools-utils_src_prepare
 }
