@@ -1,5 +1,8 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.923 2013/02/09 05:39:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.924 2013/02/12 08:16:05 armin76 Exp $
+
+  12 Feb 2013; Raúl Porcel <armin76@gentoo.org> glibc-2.15-r3.ebuild:
+  m68k stable
 
   09 Feb 2013; Mike Frysinger <vapier@gentoo.org>
   files/eblits/pkg_preinst.eblit:

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/atari-fdisk/atari-fdisk-0.7.1.5.4.ebuild,v 1.1 2009/01/14 02:59:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/atari-fdisk/atari-fdisk-0.7.1.5.4.ebuild,v 1.2 2013/02/12 08:19:50 armin76 Exp $
 
 inherit versionator toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/a/${PN}/${PN}_${MY_PV}-${DEB_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 m68k ~mips ~ppc ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
