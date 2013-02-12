@@ -1,6 +1,22 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.241 2013/02/11 18:21:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.242 2013/02/12 18:22:24 titanofold Exp $
+
+*postgresql-server-9.2.3-r1 (12 Feb 2013)
+*postgresql-server-9.1.8-r1 (12 Feb 2013)
+*postgresql-server-9.0.12-r1 (12 Feb 2013)
+*postgresql-server-8.4.16-r1 (12 Feb 2013)
+*postgresql-server-8.3.23-r1 (12 Feb 2013)
+
+  12 Feb 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  -postgresql-server-8.3.23.ebuild, +postgresql-server-8.3.23-r1.ebuild,
+  -postgresql-server-8.4.16.ebuild, +postgresql-server-8.4.16-r1.ebuild,
+  -postgresql-server-9.0.12.ebuild, +postgresql-server-9.0.12-r1.ebuild,
+  -postgresql-server-9.1.8.ebuild, +postgresql-server-9.1.8-r1.ebuild,
+  -postgresql-server-9.2.3.ebuild, +postgresql-server-9.2.3-r1.ebuild,
+  postgresql-server-9999.ebuild:
+  Revision bump to fix typo in sed statement -- PGSQL_PAME_SERVICE should have
+  been PGSQL_PAM_SERVICE -- to fix bug 456964.
 
   11 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   postgresql-server-8.3.23.ebuild, postgresql-server-8.4.16.ebuild,

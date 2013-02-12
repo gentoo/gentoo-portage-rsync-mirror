@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/pypax-0.8.1.ebuild,v 1.6 2013/02/12 16:48:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/pypax-0.8.1.ebuild,v 1.7 2013/02/12 18:02:31 ago Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ S="${WORKDIR}/elfix-${PV}/scripts"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~sparc x86"
 IUSE="+ptpax +xtpax"
 
 REQUIRED_USE="|| ( ptpax xtpax )"

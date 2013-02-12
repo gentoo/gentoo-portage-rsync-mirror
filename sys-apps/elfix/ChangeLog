@@ -1,4 +1,7 @@
 
+  12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> elfix-0.8.1.ebuild:
+  Stable for ia64, wrt bug #456656
+
   12 Feb 2013; Anthony G. Basile <blueness@gentoo.org> elfix-0.8.1.ebuild:
   stable ppc ppc64, bug #456656
 

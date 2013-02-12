@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.1.8.ebuild,v 1.11 2013/02/11 18:21:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.1.8-r1.ebuild,v 1.1 2013/02/12 18:22:24 titanofold Exp $
 
 EAPI="5"
 
@@ -66,7 +66,7 @@ src_prepare() {
 	eprefixify src/include/pg_config_manual.h
 
 	if use pam ; then
-		sed -e "s/\(#define PGSQL_PAME_SERVICE \"postgresql\)/\1-${SLOT}/" \
+		sed -e "s/\(#define PGSQL_PAM_SERVICE \"postgresql\)/\1-${SLOT}/" \
 			-i src/backend/libpq/auth.c \
 			|| die 'PGSQL_PAM_SERVICE rename failed.'
 	fi
