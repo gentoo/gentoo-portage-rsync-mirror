@@ -1,4 +1,10 @@
 
+  12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> elfix-0.8.1.ebuild:
+  Stable for x86, wrt bug #456656
+
+  12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> elfix-0.8.1.ebuild:
+  Stable for amd64, wrt bug #456656
+
   13 Jan 2013; Anthony G. Basile <blueness@gentoo.org> -elfix-0.6.0.ebuild:
   Remove older stable
 

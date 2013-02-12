@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/camlzip-1.05.ebuild,v 1.2 2013/02/11 02:59:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/camlzip-1.05.ebuild,v 1.4 2013/02/12 14:19:27 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="http://forge.ocamlcore.org/frs/download.php/1037/${P}.tar.gz"
 
 SLOT="1/${PV}"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 
 RDEPEND=">=dev-lang/ocaml-3.10.2:=[ocamlopt?]
 		>=sys-libs/zlib-1.1.3"

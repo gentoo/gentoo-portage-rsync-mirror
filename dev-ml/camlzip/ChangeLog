@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/camlzip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.22 2013/02/11 02:59:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.24 2013/02/12 14:19:27 ago Exp $
+
+  12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> camlzip-1.05.ebuild:
+  Stable for x86, wrt bug #456552
+
+  12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> camlzip-1.05.ebuild:
+  Stable for amd64, wrt bug #456552
 
   11 Feb 2013; Alexis Ballier <aballier@gentoo.org> camlzip-1.05.ebuild:
   eapi5, add subslot and := deps
@@ -87,4 +93,3 @@
   metadata.xml, files/META:
   Add camlzip, an ocaml library to access compressed files (g?zip, jar), thanks
   to Julien TIERNY <julien.tierny@wanadoo.fr> for the ebuild (bug #50621)
-

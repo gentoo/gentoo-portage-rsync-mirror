@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/kdesvn-1.6.0.ebuild,v 1.2 2012/10/24 14:21:45 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/kdesvn-1.6.0.ebuild,v 1.4 2013/02/12 14:20:40 ago Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ else
 fi
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="debug"
 
