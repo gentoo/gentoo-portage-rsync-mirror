@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.257 2013/02/09 17:35:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.258 2013/02/12 13:56:30 blueness Exp $
+
+*curl-7.29.0-r1 (12 Feb 2013)
+
+  12 Feb 2013; Anthony G. Basile <blueness@gentoo.org> +curl-7.29.0-r1.ebuild,
+  +files/curl-7.29.0-fix-null-pointer.patch, -curl-7.29.0.ebuild:
+  Fix null pointer ref, bug #456842
 
   09 Feb 2013; Anthony G. Basile <blueness@gentoo.org> curl-7.29.0.ebuild:
   Remove USE=nonblocking, bug #456320
