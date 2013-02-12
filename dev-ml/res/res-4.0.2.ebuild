@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/res-4.0.2.ebuild,v 1.4 2013/02/11 21:30:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/res-4.0.2.ebuild,v 1.5 2013/02/12 16:59:15 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ LICENSE="LGPL-2.1-with-linking-exception"
 DEPEND=""
 RDEPEND="${DEPEND}"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="examples"
 
 DOCS=( "AUTHORS.txt" "CHANGES.txt" "README.md" )

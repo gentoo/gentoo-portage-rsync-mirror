@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/megaglest
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.12 2012/12/28 11:28:19 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.13 2013/02/12 16:58:28 hasufell Exp $
+
+  12 Feb 2013; Julian Ospald <hasufell@gentoo.org> megaglest-3.7.1.ebuild,
+  +files/megaglest-3.7.1-miniupnpc-1.8.patch:
+  fix build with miniupnpc-1.8 wrt #456952
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> megaglest-3.7.1.ebuild:
   Stable for x86, wrt bug #448546
