@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.53.0_beta1.ebuild,v 1.1 2013/01/25 23:03:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.53.0.ebuild,v 1.1 2013/02/12 15:39:04 flameeyes Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"

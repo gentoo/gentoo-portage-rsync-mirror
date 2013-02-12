@@ -1,5 +1,9 @@
 # ChangeLog for sys-libs/glibc
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.924 2013/02/12 08:16:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.925 2013/02/12 15:53:08 jer Exp $
+
+  12 Feb 2013; Jeroen Roovers <jer@gentoo.org> glibc-2.15-r1.ebuild,
+  glibc-2.15-r2.ebuild:
+  Mask sys-libs/glibc-2.15 for HPPA too.
 
   12 Feb 2013; Raúl Porcel <armin76@gentoo.org> glibc-2.15-r3.ebuild:
   m68k stable
