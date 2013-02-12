@@ -8,4 +8,4 @@ LICENSE=GPL-2 public-domain freedist
 RDEPEND=cdb? ( dev-db/cdb ) !app-i18n/skk-jisyo-extra !app-i18n/skk-jisyo-cdb
 SLOT=0
 SRC_URI=mirror://gentoo/skk-jisyo-200705.tar.gz
-_md5_=4baaad1a8a3566fa38308530f1860295
+_md5_=e189ed00ec075e69ccc39ef9413d02ec

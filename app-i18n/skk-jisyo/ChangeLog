@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/skk-jisyo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.64 2011/03/23 17:51:18 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.65 2013/02/12 09:36:15 naota Exp $
+
+  12 Feb 2013; Naohiro Aota <naota@gentoo.org> skk-jisyo-200705.ebuild,
+  skk-jisyo-200812.ebuild, skk-jisyo-201101.ebuild, skk-jisyo-9999.ebuild:
+  Call gawk not to attempt to call plain awk. #455698
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> skk-jisyo-201101.ebuild:
   ppc/ppc64 stable wrt #353411
@@ -266,4 +270,3 @@
   30 Jul 2002; Stuart Bouyer <stubear@gentoo.org> skk-jisyo-200207.ebuild :
 
   Initail ebuild submitted by Matsuu Takuto <matsuu@7501.net>
-

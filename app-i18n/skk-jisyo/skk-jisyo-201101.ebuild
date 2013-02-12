@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/skk-jisyo-201101.ebuild,v 1.6 2011/03/23 17:51:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/skk-jisyo-201101.ebuild,v 1.7 2013/02/12 09:36:15 naota Exp $
 
 EAPI="3"
 
@@ -32,9 +32,9 @@ src_compile() {
 
 	for f in SKK-JISYO.* zipcode/SKK-JISYO.* ; do
 		mv ${f} ${f}.annotated
-		awk -f "${FILESDIR}"/unannotation.awk ${f}.annotated > $(basename ${f}) || die
+		gawk -f "${FILESDIR}"/unannotation.awk ${f}.annotated > $(basename ${f}) || die
 		if use cdb ; then
-			awk '
+			gawk '
 				/^[^;]/ {
 					s = substr($0, index($0, " ") + 1)
 					print "+" length($1) "," length(s) ":" $1 "->" s
