@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/pybloomfiltermmap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/ChangeLog,v 1.10 2013/01/30 18:56:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/ChangeLog,v 1.12 2013/02/12 12:40:18 pinkbyte Exp $
+
+*pybloomfiltermmap-0.3.11-r1 (12 Feb 2013)
+
+  12 Feb 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +pybloomfiltermmap-0.3.11-r1.ebuild:
+  Revision bump: EAPI 5, port to distutils-r1 eclass
+
+  12 Feb 2013; Sergey Popov <pinkbyte@gentoo.org>
+  pybloomfiltermmap-0.3.11.ebuild:
+  Stable on amd64, wrt bug #456606
 
   30 Jan 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Update metadata.xml

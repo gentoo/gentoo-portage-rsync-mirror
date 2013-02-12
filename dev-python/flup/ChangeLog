@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/flup
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/ChangeLog,v 1.16 2012/09/22 02:08:12 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/ChangeLog,v 1.17 2013/02/12 12:59:51 mgorny Exp $
+
+*flup-1.0.2-r1 (12 Feb 2013)
+
+  12 Feb 2013; Michał Górny <mgorny@gentoo.org> +flup-1.0.2-r1.ebuild:
+  Migrate to distutils-r1.
 
   22 Sep 2012; Anthony G. Basile <blueness@gentoo.org> flup-1.0.2.ebuild:
   keyword ~arm, bug #433978
@@ -56,4 +61,3 @@
   13 Jan 2007; Tiziano Müller <dev-zero@gentoo.org> +metadata.xml,
   +flup-0.5_p2307.ebuild:
   New ebuild for bug #100784.
-
