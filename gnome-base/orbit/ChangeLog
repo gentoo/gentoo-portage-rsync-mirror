@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/orbit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.185 2013/02/10 07:49:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.186 2013/02/12 06:53:58 tetromino Exp $
+
+*orbit-2.14.19-r2 (12 Feb 2013)
+
+  12 Feb 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  orbit-2.14.19-r1.ebuild, +orbit-2.14.19-r2.ebuild,
+  +files/orbit-2.14.19-link_protocol_is_local.patch:
+  Drop useless doc USE flag. Punt .la files and make static-libs optional (bug
+  #456772, thanks to Agostino Sarubbo). Fix link_protocol_is_local logic for
+  ipv4 on ipv6-enabled machines (bug #413231, thanks to Patrick Lauer).
 
   10 Feb 2013; Pacho Ramos <pacho@gentoo.org> -orbit-2.14.19.ebuild:
   Drop old
