@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/greenlet-0.4.0-r1.ebuild,v 1.1 2013/02/04 23:19:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/greenlet-0.4.0-r1.ebuild,v 1.2 2013/02/12 11:49:58 mgorny Exp $
 
 EAPI=5
 
+# Note: greenlet is built-in in pypy
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
 
 inherit distutils-r1 flag-o-matic
@@ -22,10 +23,6 @@ DEPEND="app-arch/unzip
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
-# Build system symlinks the built libraries back into sourcedir.
-# https://github.com/python-greenlet/greenlet/issues/26
-DISTUTILS_IN_SOURCE_BUILD=1
-
 python_compile() {
 	if [[ ${EPYTHON} == python2* ]]; then
 		local CFLAGS=${CFLAGS} CXXFLAGS=${CXXFLAGS}
@@ -41,7 +38,7 @@ python_compile_all() {
 }
 
 python_test() {
-	esetup.py test
+	"${PYTHON}" run-tests.py -n || die "Tests fail with ${EPYTHON}"
 }
 
 python_install_all() {
