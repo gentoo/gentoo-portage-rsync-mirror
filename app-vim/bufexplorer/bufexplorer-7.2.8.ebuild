@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/bufferexplorer/bufferexplorer-7.2.8.ebuild,v 1.2 2012/12/22 08:14:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/bufexplorer/bufexplorer-7.2.8.ebuild,v 1.1 2013/02/12 11:08:01 radhermit Exp $
 
 EAPI="2"
 

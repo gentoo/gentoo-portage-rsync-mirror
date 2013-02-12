@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/mecab-skkserv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/ChangeLog,v 1.6 2012/08/28 07:32:45 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/ChangeLog,v 1.7 2013/02/12 11:07:37 naota Exp $
+
+  12 Feb 2013; Naohiro Aota <naota@gentoo.org>
+  +files/mecab-skkserv-0.03-dicrc.patch, mecab-skkserv-0.03.ebuild:
+  Set default cost-factor. #451832
 
   28 Aug 2012; Naohiro Aota <naota@gentoo.org>
   +files/mecab-skkserv-0.03-cflags.patch, mecab-skkserv-0.03.ebuild:
