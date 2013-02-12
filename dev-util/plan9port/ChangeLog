@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/plan9port
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/ChangeLog,v 1.11 2013/02/11 00:26:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/ChangeLog,v 1.12 2013/02/12 01:27:31 blueness Exp $
+
+*plan9port-20130209-r1 (12 Feb 2013)
+
+  12 Feb 2013; Anthony G. Basile <blueness@gentoo.org>
+  +files/plan9port-cflags.patch, +plan9port-20130209-r1.ebuild,
+  -plan9port-20130209.ebuild:
+  Respect CFLAGS, bug #455440
 
 *plan9port-20130209 (11 Feb 2013)
 

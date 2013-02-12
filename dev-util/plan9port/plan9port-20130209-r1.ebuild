@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/plan9port-20130209.ebuild,v 1.1 2013/02/11 00:26:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/plan9port-20130209-r1.ebuild,v 1.1 2013/02/12 01:27:31 blueness Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ PLAN9=/usr/lib/plan9
 
 src_prepare()
 {
-	epatch "${FILESDIR}/${PN}-"{9660srv-errno,noexecstack}".patch"
+	epatch "${FILESDIR}/${PN}-"{9660srv-errno,noexecstack,cflags}".patch"
 
 	# Fix paths, done in place of ./INSTALL -c
 	einfo "Fixing hard-coded /usr/local/plan9 paths"
