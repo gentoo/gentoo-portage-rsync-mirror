@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/rawtherapee
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/ChangeLog,v 1.9 2012/06/04 10:34:43 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/ChangeLog,v 1.10 2013/02/12 07:56:31 radhermit Exp $
+
+*rawtherapee-4.0.9-r1 (12 Feb 2013)
+
+  12 Feb 2013; Tim Harder <radhermit@gentoo.org> +rawtherapee-4.0.9-r1.ebuild,
+  +files/rawtherapee-4.0.9-desktop.patch:
+  Revision bump, remove inode/directory from mimetype in desktop file (bug
+  #420081).
 
   04 Jun 2012; Tim Harder <radhermit@gentoo.org>
   -files/rawtherapee-4.0.4-nohg.patch, -rawtherapee-4.0.6.ebuild:

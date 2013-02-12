@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ddskk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.40 2013/01/15 07:54:21 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.41 2013/02/12 07:56:05 naota Exp $
+
+  12 Feb 2013; Naohiro Aota <naota@gentoo.org> ddskk-14.2.ebuild,
+  ddskk-14.3.ebuild, ddskk-14.4.ebuild:
+  Drop apel dependency if >=emacs-22. #455958
 
 *ddskk-14.4 (15 Jan 2013)
 

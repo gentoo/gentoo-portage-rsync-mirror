@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-14.3.ebuild,v 1.4 2012/03/08 09:01:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-14.3.ebuild,v 1.5 2013/02/12 07:56:05 naota Exp $
 
 EAPI=3
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
-DEPEND=">=app-emacs/apel-10.7"
+DEPEND="|| ( ( =virtual/emacs-21 >=app-emacs/apel-10.7 )
+			 >=virtual/emacs-22 )"
 RDEPEND="${DEPEND}
 	|| ( app-i18n/skk-jisyo virtual/skkserv )"
 
