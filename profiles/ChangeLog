@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7484 2013/02/11 21:31:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7485 2013/02/12 07:19:29 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Feb 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Use proper email address in entry.
 
   11 Feb 2013; Julian Ospald <hasufell@gentoo.org> package.mask:
   unmask sci-visualization/paraview, I bumped it

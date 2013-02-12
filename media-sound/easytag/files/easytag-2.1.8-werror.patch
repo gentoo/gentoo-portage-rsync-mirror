@@ -1,5 +1,5 @@
---- easytag-2.1.8/configure.ac
-+++ easytag-2.1.8/configure.ac
+--- configure.ac
++++ configure.ac
 @@ -239,7 +239,7 @@
       AC_MSG_RESULT([$have_ws2])])
  

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14463 2013/02/11 21:31:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14464 2013/02/12 07:19:29 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,11 +36,12 @@
 # package now. Removal in 30 days.
 media-tv/cx18-firmware
 
-# Hans de Graaff <hans@degraaff.org> (11 Feb 2013)
+# Hans de Graaff <graaff@gentoo.org> (11 Feb 2013)
 # No longer supported upstream even for security bugs.
 # Port your application to another version of Rails.
 # The Rails 3.0 version in the tree has security issues
 # and no new 3.0 versions will be released anymore.
+# Removal in 30 days.
 dev-ruby/rails:3.0
 dev-ruby/railties:3.0
 dev-ruby/activerecord:3.0

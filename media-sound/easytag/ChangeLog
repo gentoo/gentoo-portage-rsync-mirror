@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/easytag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.166 2013/02/12 04:47:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.167 2013/02/12 07:17:18 ssuominen Exp $
+
+  12 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
+  files/easytag-2.1.8-desktop.patch:
+  Remove inode/directory from MimeType line to prevent easytag from acting as
+  default filemanager.
 
 *easytag-2.1.8 (12 Feb 2013)
 

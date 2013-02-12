@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.20.6.ebuild,v 1.10 2012/05/04 03:33:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.20.6.ebuild,v 1.11 2013/02/12 07:16:21 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -22,11 +22,12 @@ RDEPEND=">=dev-libs/libxml2-2.6.12[python]
 	 >=dev-libs/libxslt-1.1.8
 "
 DEPEND="${RDEPEND}
-	sys-devel/gettext
-	>=dev-util/intltool-0.35
-	virtual/pkgconfig
 	~app-text/docbook-xml-dtd-4.4
-	app-text/scrollkeeper-dtd"
+	app-text/scrollkeeper-dtd
+	>=dev-util/intltool-0.35
+	sys-devel/gettext
+	virtual/awk
+	virtual/pkgconfig"
 # dev-libs/glib needed for eautofoo, bug #255114.
 
 # FIXME: Highly broken with parallel make, see bug #286889
