@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/cyassl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.29 2013/02/06 03:22:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/ChangeLog,v 1.30 2013/02/12 00:29:23 blueness Exp $
+
+  12 Feb 2013; Anthony G. Basile <blueness@gentoo.org> cyassl-2.5.0.ebuild:
+  Workaround eautoreconf which WANT_AUTOMAKE=1.12 which is still ~arch
 
   06 Feb 2013; Anthony G. Basile <blueness@gentoo.org> -cyassl-2.0.8-r1.ebuild,
   -cyassl-2.2.0.ebuild, -cyassl-2.3.0.ebuild, -cyassl-2.4.0.ebuild,

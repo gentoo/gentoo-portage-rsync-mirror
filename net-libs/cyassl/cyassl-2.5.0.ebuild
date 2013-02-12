@@ -1,12 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.5.0.ebuild,v 1.2 2013/02/06 03:16:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cyassl/cyassl-2.5.0.ebuild,v 1.3 2013/02/12 00:29:23 blueness Exp $
 
 EAPI="5"
 
-WANT_AUTOMAKE=1.12
-
-inherit autotools eutils
+inherit eutils
 
 DESCRIPTION="Lightweight SSL/TLS library targeted at embedded and RTOS environments"
 HOMEPAGE="http://www.yassl.com/yaSSL/Home.html"
@@ -35,10 +33,6 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.0.8-disable-testsuit-ifnothreads.patch
-
-	#Bug #454300
-	epatch "${FILESDIR}"/${PN}-2.4.6-respect-CFLAGS.patch
-	eautoreconf
 }
 
 src_configure() {
@@ -56,6 +50,9 @@ src_configure() {
 		#not pie friendly, sorry x86, no fast math for you :(
 		myconf+=( --disable-fastmath --disable-fasthugemath --disable-bump )
 	fi
+
+	#Bug #454300
+	export C_EXTRA_FLAGS=${CFLAGS}
 
 	#There are lots of options, so we'll force a few reasonable
 	#We may change this in the future, in particular ecc needs to be fixed

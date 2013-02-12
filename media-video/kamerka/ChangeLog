@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kamerka
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kamerka/ChangeLog,v 1.5 2012/09/26 17:05:50 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kamerka/ChangeLog,v 1.6 2013/02/12 00:03:46 creffett Exp $
+
+*kamerka-0.8.5 (12 Feb 2013)
+
+  12 Feb 2013; Chris Reffett <creffett@gentoo.org> +kamerka-0.8.5.ebuild:
+  Version bump to 0.8.5
 
   26 Sep 2012; Michael Palimaka <kensington@gentoo.org> -kamerka-0.6.ebuild,
   -kamerka-0.8.1.ebuild:
