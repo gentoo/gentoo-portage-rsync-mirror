@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkfep/skkfep-0.87-r1.ebuild,v 1.6 2012/03/25 14:32:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkfep/skkfep-0.87-r1.ebuild,v 1.7 2013/02/12 08:43:53 naota Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND=">=sys-libs/ncurses-5.7-r7"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	sys-apps/gawk"
+	virtual/awk"
 RDEPEND="${RDEPEND}
 	app-i18n/skk-jisyo"
 

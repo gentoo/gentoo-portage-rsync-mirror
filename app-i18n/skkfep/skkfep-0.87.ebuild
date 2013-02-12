@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkfep/skkfep-0.87.ebuild,v 1.4 2011/02/14 20:46:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkfep/skkfep-0.87.ebuild,v 1.5 2013/02/12 08:43:53 naota Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4
-	sys-apps/gawk
+	virtual/awk
 	sys-libs/ncurses"
 RDEPEND="virtual/skkserv"
 
