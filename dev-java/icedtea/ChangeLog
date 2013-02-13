@@ -1,6 +1,20 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.90 2013/02/11 05:51:50 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.91 2013/02/13 18:56:54 sera Exp $
+
+*icedtea-7.2.3.6 (13 Feb 2013)
+*icedtea-6.1.12.2 (13 Feb 2013)
+
+  13 Feb 2013; Ralph Sennhauser <sera@gentoo.org> -icedtea-6.1.11.5.ebuild,
+  -icedtea-6.1.12.0.ebuild, -files/icedtea-6.1.12.0-parallel-unpack.patch,
+  -icedtea-6.1.12.1.ebuild, +icedtea-6.1.12.2.ebuild,
+  -files/icedtea-6-pass_javac_memory_args_to_vm.patch,
+  -files/icedtea-6_pax_kernel_support.patch,
+  -files/icedtea-7.2.3.2-pax_mark_rmic_java.patch,
+  -files/icedtea-7.2.3.3-pax_mark_rmic_java.patch, -icedtea-7.2.3.4.ebuild,
+  -files/icedtea-7.2.3.4-parallel-unpack.patch, +icedtea-7.2.3.6.ebuild:
+  Bump, security fixes for 7, regression fixes for 6
+  Remove vulnerable
 
 *icedtea-6.1.12.1 (11 Feb 2013)
 

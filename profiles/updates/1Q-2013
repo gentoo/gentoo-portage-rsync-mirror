@@ -13,3 +13,6 @@ move net-wireless/ipw2200-firmware sys-firmware/ipw2200-firmware
 move app-vim/threesome app-vim/splice
 move app-vim/bufferexplorer app-vim/bufexplorer
 move net-wireless/bluez-firmware sys-firmware/bluez-firmware
+move net-wireless/atmel-firmware sys-firmware/atmel-firmware
+move net-wireless/b43-firmware sys-firmware/b43-firmware
+move net-wireless/b43legacy-firmware sys-firmware/b43legacy-firmware

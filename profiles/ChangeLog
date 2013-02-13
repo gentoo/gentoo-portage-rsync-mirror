@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7491 2013/02/13 15:00:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7493 2013/02/13 18:56:05 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> updates/1Q-2013:
+  Move atmel-firmware, b43-firmware and b43legacy-firmware from net-wireless/
+  to sys-firmware/ category.
 
   13 Feb 2013; Jeroen Roovers <jer@gentoo.org> license_groups:
   Add AdobeFlash-11.x license.
@@ -17,7 +21,7 @@
   Westermann-Clark
 
   12 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> updates/1Q-2013:
-  Move bluez-firmware from net-wireless category to sys-firmware category.
+  Move bluez-firmware from net-wireless/ to sys-firmware/ category.
 
   12 Feb 2013; Tim Harder <radhermit@gentoo.org> updates/1Q-2013:
   Rename app-vim/bufferexplorer to app-vim/bufexplorer to follow upstream.

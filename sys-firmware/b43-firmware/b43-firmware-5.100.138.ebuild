@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-firmware/b43-firmware-5.100.138.ebuild,v 1.3 2013/02/10 16:40:26 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/b43-firmware/b43-firmware-5.100.138.ebuild,v 1.1 2013/02/13 18:52:20 ssuominen Exp $
 
 EAPI=5
 

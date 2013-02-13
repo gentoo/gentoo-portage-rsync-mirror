@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/at76c503a
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.23 2013/02/08 17:45:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/ChangeLog,v 1.24 2013/02/13 18:46:34 ssuominen Exp $
+
+  13 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> at76c503a-0.16.ebuild,
+  at76c503a-9999.ebuild:
+  atmel-firmware is now in sys-firmware/ category instead of net-wireless/
 
   08 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> at76c503a-0.16.ebuild,
   at76c503a-9999.ebuild:
