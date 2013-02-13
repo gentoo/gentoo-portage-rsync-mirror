@@ -1,6 +1,11 @@
 # ChangeLog for virtual/mta
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mta/ChangeLog,v 1.8 2012/11/07 11:42:04 eras Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/mta/ChangeLog,v 1.9 2013/02/13 09:37:42 eras Exp $
+
+*mta-1 (13 Feb 2013)
+
+  13 Feb 2013; Eray Aslan <eras@gentoo.org> +mta-1.ebuild:
+  Change default mta - bug #450812
 
   07 Nov 2012; Eray Aslan <eras@gentoo.org> mta-0.ebuild:
   mail-mta/nbsmtp is no longer in the tree

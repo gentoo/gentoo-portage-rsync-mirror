@@ -1,0 +1,35 @@
+ configure.ac | 21 ++++++++++++++++-----
+ 1 file changed, 16 insertions(+), 5 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index f78cfc3..ac40bf9 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -127,11 +127,22 @@ if test "x$found_libevent" = xno; then
+ fi
+ 
+ # Look for curses.
+-AC_SEARCH_LIBS(
+-	setupterm,
+-	[terminfo curses ncurses],
+-	found_curses=yes,
+-	found_curses=no
++PKG_CHECK_MODULES(
++	CURSES,
++	ncurses,
++	[
++		CPPFLAGS="$CURSES_CFLAGS $CPPFLAGS"
++		LIBS="$CURSES_LIBS $LIBS"
++		found_curses=yes
++	],
++	[
++		AC_SEARCH_LIBS(
++			setupterm,
++			[terminfo curses ncurses],
++			found_curses=yes,
++			found_curses=no
++		)
++	]
+ )
+ if test "x$found_curses" = xno; then
+     AC_MSG_ERROR("curses not found")
