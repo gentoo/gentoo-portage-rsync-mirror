@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/xboxdrv-0.8.4-r1.ebuild,v 1.1 2013/01/09 14:19:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/xboxdrv-0.8.4-r1.ebuild,v 1.2 2013/02/13 16:31:55 mr_bones_ Exp $
 
 EAPI=5
 inherit base linux-info scons-utils toolchain-funcs
 
-MY_P="${PN}-linux-${PV}"
+MY_P=${PN}-linux-${PV}
 DESCRIPTION="Userspace Xbox 360 Controller driver"
 HOMEPAGE="http://pingus.seul.org/~grumbel/xboxdrv/"
 SRC_URI="http://pingus.seul.org/~grumbel/xboxdrv/${MY_P}.tar.bz2"
@@ -24,7 +24,7 @@ RDEPEND="dev-libs/boost
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 CONFIG_CHECK="~INPUT_EVDEV ~INPUT_JOYDEV ~INPUT_UINPUT ~!JOYSTICK_XPAD"
 

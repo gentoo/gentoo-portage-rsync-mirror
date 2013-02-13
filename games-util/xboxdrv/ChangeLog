@@ -1,6 +1,10 @@
 # ChangeLog for games-util/xboxdrv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.27 2013/01/09 14:19:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.28 2013/02/13 16:31:55 mr_bones_ Exp $
+
+  13 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  files/xboxdrv-0.8.4-libusbx-1.0.13-fix.patch, xboxdrv-0.8.4-r1.ebuild:
+  tidy
 
 *xboxdrv-0.8.4-r1 (09 Jan 2013)
 
@@ -114,4 +118,3 @@
   04 Mar 2010; Tristan Heaven <nyhm@gentoo.org> +xboxdrv-0.4.10.ebuild,
   +files/xboxdrv-0.4.10-build.patch, +metadata.xml:
   Initial commit, based on Frittella Laurento's ebuild from bug #279652
-

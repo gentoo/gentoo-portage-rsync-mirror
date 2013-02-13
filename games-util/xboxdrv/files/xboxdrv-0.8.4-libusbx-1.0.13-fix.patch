@@ -6,8 +6,6 @@ Date:   Wed Dec 19 11:39:31 2012 +0100
     
     Fixes #28
 
-diff --git a/src/firestorm_dual_controller.cpp b/src/firestorm_dual_controller.cpp
-index 675949c..5255b9b 100644
 --- a/src/firestorm_dual_controller.cpp
 +++ b/src/firestorm_dual_controller.cpp
 @@ -99,8 +99,6 @@ FirestormDualController::FirestormDualController(libusb_device* dev, bool is_vsb
@@ -19,8 +17,6 @@ index 675949c..5255b9b 100644
  }
  
  void
-diff --git a/src/generic_usb_controller.cpp b/src/generic_usb_controller.cpp
-index 1c5ce31..b8ad696 100644
 --- a/src/generic_usb_controller.cpp
 +++ b/src/generic_usb_controller.cpp
 @@ -62,8 +62,6 @@ GenericUSBController::GenericUSBController(libusb_device* dev,
@@ -32,8 +28,6 @@ index 1c5ce31..b8ad696 100644
  }
  
  void
-diff --git a/src/playstation3_usb_controller.cpp b/src/playstation3_usb_controller.cpp
-index 86b5c72..676ebf9 100644
 --- a/src/playstation3_usb_controller.cpp
 +++ b/src/playstation3_usb_controller.cpp
 @@ -37,8 +37,6 @@ Playstation3USBController::Playstation3USBController(libusb_device* dev, bool tr
@@ -45,8 +39,6 @@ index 86b5c72..676ebf9 100644
  }
  
  #define HID_GET_REPORT      0x01
-diff --git a/src/saitek_p2500_controller.cpp b/src/saitek_p2500_controller.cpp
-index a3be21b..4734776 100644
 --- a/src/saitek_p2500_controller.cpp
 +++ b/src/saitek_p2500_controller.cpp
 @@ -66,8 +66,6 @@ SaitekP2500Controller::SaitekP2500Controller(libusb_device* dev, bool try_detach
@@ -58,8 +50,6 @@ index a3be21b..4734776 100644
  }
  
  void
-diff --git a/src/usb_controller.cpp b/src/usb_controller.cpp
-index 828b3b6..6c9c5e4 100644
 --- a/src/usb_controller.cpp
 +++ b/src/usb_controller.cpp
 @@ -28,7 +28,8 @@
@@ -284,8 +274,6 @@ index 828b3b6..6c9c5e4 100644
  int
  USBController::usb_find_ep(int direction, uint8_t if_class, uint8_t if_subclass, uint8_t if_protocol)
  {
-diff --git a/src/usb_controller.hpp b/src/usb_controller.hpp
-index 726e9c2..f808be3 100644
 --- a/src/usb_controller.hpp
 +++ b/src/usb_controller.hpp
 @@ -22,6 +22,7 @@
@@ -317,8 +305,6 @@ index 726e9c2..f808be3 100644
  
    void usb_write(int endpoint, uint8_t* data, int len);
    void usb_control(uint8_t bmRequestType, uint8_t  bRequest,
-diff --git a/src/xbox360_controller.cpp b/src/xbox360_controller.cpp
-index 818b61f..dfae576 100644
 --- a/src/xbox360_controller.cpp
 +++ b/src/xbox360_controller.cpp
 @@ -86,8 +86,6 @@ Xbox360Controller::Xbox360Controller(libusb_device* dev,
@@ -330,8 +316,6 @@ index 818b61f..dfae576 100644
  }
  
  void
-diff --git a/src/xbox360_wireless_controller.cpp b/src/xbox360_wireless_controller.cpp
-index 5b24db3..4e7ea1f 100644
 --- a/src/xbox360_wireless_controller.cpp
 +++ b/src/xbox360_wireless_controller.cpp
 @@ -50,8 +50,6 @@ Xbox360WirelessController::Xbox360WirelessController(libusb_device* dev, int con
@@ -343,8 +327,6 @@ index 5b24db3..4e7ea1f 100644
  }
  
  void
-diff --git a/src/xbox_controller.cpp b/src/xbox_controller.cpp
-index afa5bd2..8e72353 100644
 --- a/src/xbox_controller.cpp
 +++ b/src/xbox_controller.cpp
 @@ -41,8 +41,6 @@ XboxController::XboxController(libusb_device* dev, bool try_detach) :
