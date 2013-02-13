@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usbview
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/ChangeLog,v 1.45 2013/02/12 22:01:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/ChangeLog,v 1.46 2013/02/13 16:17:19 ssuominen Exp $
+
+  13 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> -usbview-1.1.ebuild:
+  old
 
   12 Feb 2013; Jeroen Roovers <jer@gentoo.org> usbview-2.0.ebuild:
   Stable for HPPA (bug #456426).
