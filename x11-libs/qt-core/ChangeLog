@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.213 2013/02/12 21:05:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.214 2013/02/13 10:08:50 pesa Exp $
+
+*qt-core-4.8.4-r3 (13 Feb 2013)
+
+  13 Feb 2013; Davide Pesavento <pesa@gentoo.org>
+  +files/fix-call-to-QMetaObject-metaCall-from-updateProperty.patch,
+  +qt-core-4.8.4-r3.ebuild:
+  Fix bug 450818. Patch by David E. Narváez <david.narvaez@computer.org>.
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> qt-core-4.8.4-r2.ebuild:
   Stable for alpha, wrt bug #455884
