@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/rkward
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.32 2011/11/25 20:02:51 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.33 2013/02/13 21:55:41 bicatali Exp $
+
+*rkward-0.6.0 (13 Feb 2013)
+
+  13 Feb 2013; Sébastien Fabbro <bicatali@gentoo.org> +rkward-0.6.0.ebuild,
+  -files/rkward-0.5.6-focus.patch, -rkward-0.5.5.ebuild,
+  -rkward-0.5.6-r1.ebuild, -rkward-0.5.6.ebuild:
+  Version bump
 
 *rkward-0.5.7 (25 Nov 2011)
 
@@ -150,4 +157,3 @@
   Initial import. Closing bug #65547. Thanks to masterdriverz,
   adsmith@math.duke.edu, and others in the bug report and the gentooscience
   overlay.
-

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.230 2013/02/09 18:33:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.231 2013/02/13 21:46:44 slyfox Exp $
+
+  13 Feb 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/terminfo-0.3.2.5-tinfo.patch, ghc-7.4.2.ebuild:
+  Fix ghc build failure against 'USE=tinfo ncurses' (bug #454216).
 
 *ghc-7.6.2 (09 Feb 2013)
 

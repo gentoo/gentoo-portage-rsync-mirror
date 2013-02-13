@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.2.ebuild,v 1.1 2012/11/14 09:34:39 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.2.ebuild,v 1.2 2013/02/13 21:46:44 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -375,6 +375,11 @@ src_prepare() {
 			sed -i -e '/^FP_DIR_DOCBOOK_XSL/s:\[.*\]:['"${EPREFIX}"'/usr/share/sgml/docbook/xsl-stylesheets/]:' utils/haddock/doc/configure.ac || die
 		fi
 
+		cd "${S}"/libraries/terminfo
+		# bug #454216
+		epatch "${FILESDIR}"/terminfo-0.3.2.5-tinfo.patch
+
+		cd "${S}"
 		# as we have changed the build system
 		eautoreconf
 	fi
