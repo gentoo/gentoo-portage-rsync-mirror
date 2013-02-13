@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pastedeploy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/ChangeLog,v 1.12 2012/02/24 14:19:13 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/ChangeLog,v 1.13 2013/02/12 23:48:25 mgorny Exp $
+
+*pastedeploy-1.5.0-r1 (12 Feb 2013)
+
+  12 Feb 2013; Michał Górny <mgorny@gentoo.org> +pastedeploy-1.5.0-r1.ebuild:
+  Migrate to distutils-r1.
 
   24 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   pastedeploy-1.5.0.ebuild:
@@ -50,4 +55,3 @@
 
   04 Feb 2007; Tiziano Müller <dev-zero@gentoo.org> pastedeploy-1.1.ebuild:
   Added ~amd64 keyword.
-

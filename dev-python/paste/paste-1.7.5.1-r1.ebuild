@@ -1,0 +1,61 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/paste-1.7.5.1-r1.ebuild,v 1.1 2013/02/12 23:37:32 mgorny Exp $
+
+EAPI=5
+
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+
+inherit distutils-r1
+
+MY_PN="Paste"
+MY_P="${MY_PN}-${PV}"
+
+DESCRIPTION="Tools for using a Web Server Gateway Interface stack"
+HOMEPAGE="http://pythonpaste.org http://pypi.python.org/pypi/Paste"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="~amd64 ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris"
+IUSE="doc flup openid"
+
+RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	flup? ( dev-python/flup[${PYTHON_USEDEP}] )
+	openid? ( dev-python/python-openid[${PYTHON_USEDEP}] )"
+DEPEND="${RDEPEND}
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
+
+S="${WORKDIR}/${MY_P}"
+
+python_prepare_all() {
+	# Disable failing tests.
+	rm -f tests/test_cgiapp.py
+	sed \
+		-e "s/test_find_file/_&/" \
+		-e "s/test_deep/_&/" \
+		-e "s/test_static_parser/_&/" \
+		-i tests/test_urlparser.py || die "sed failed"
+
+	# Remove a test that runs against the paste website.
+	rm -f tests/test_proxy.py
+
+	local PATCHES=(
+		"${FILESDIR}/${P}-fix-tests-for-pypy.patch"
+	)
+
+	distutils-r1_python_prepare_all
+}
+
+python_compile_all() {
+	"${PYTHON}" setup.py build_sphinx || die
+}
+
+python_test() {
+	nosetests || die "Tests fail with ${EPYTHON}"
+}
+
+python_install_all() {
+	use doc && local HTML_DOCS=( build/sphinx/html/. )
+	distutils-r1_python_install_all
+}
