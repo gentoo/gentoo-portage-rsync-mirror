@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-310.32.ebuild,v 1.1 2013/02/12 22:35:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-310.32.ebuild,v 1.2 2013/02/12 23:06:02 jer Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ COMMON="app-admin/eselect-opencl
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
 	multilib? ( app-emulation/emul-linux-x86-xlibs )
 	X? (
-		<x11-base/xorg-server-1.13.99
+		<x11-base/xorg-server-1.14.99
 		>=app-admin/eselect-opengl-1.0.9
 	)"
 DEPEND="${COMMON}
