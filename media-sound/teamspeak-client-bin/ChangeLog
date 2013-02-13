@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/teamspeak-client-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.26 2013/02/12 03:43:14 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.27 2013/02/13 22:30:36 tomwij Exp $
+
+  13 Feb 2013; Tom Wijsman <TomWij@gentoo.org>
+  -teamspeak-client-bin-3.0.6.ebuild, teamspeak-client-bin-3.0.9.2.ebuild:
+  Removed old 3.0.6 ebuild. Made the desktop entry use a better logo as its
+  icon. Thanks to Mikkl for reporting, fixes bug #457152.
 
   12 Feb 2013; Tom Wijsman <TomWij@gentoo.org>
   teamspeak-client-bin-3.0.9.2.ebuild:

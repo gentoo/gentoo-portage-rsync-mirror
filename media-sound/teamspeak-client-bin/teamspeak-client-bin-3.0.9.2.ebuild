@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/teamspeak-client-bin-3.0.9.2.ebuild,v 1.2 2013/02/12 03:43:14 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/teamspeak-client-bin-3.0.9.2.ebuild,v 1.3 2013/02/13 22:30:36 tomwij Exp $
 
 EAPI=5
 
@@ -40,6 +40,6 @@ src_install() {
 	doexe "${FILESDIR}/teamspeak3"
 
 	make_desktop_entry teamspeak3 TeamSpeak3 \
-		"/opt/teamspeak3-client/gfx/default/24x24_connect.png" \
+		"/opt/teamspeak3-client/pluginsdk/docs/client_html/images/logo.png" \
 		Network
 }
