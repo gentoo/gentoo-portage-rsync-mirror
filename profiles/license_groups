@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.188 2013/02/08 16:21:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.189 2013/02/13 15:00:48 jer Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -59,7 +59,7 @@ FREE-DOCUMENTS @FSF-APPROVED-OTHER @MISC-FREE-DOCS
 # and share modifications
 FREE @FREE-SOFTWARE @FREE-DOCUMENTS
 
-EULA AdobeFlash-10.3 BCS Broadcom cadsoft DOOM3 ETQW FraunhoferFDK google-chrome googleearth Google-TOS IBM-J1.5 IBM-J1.6 Intel-SDP Introversion Livestation-EULA LOKI-EULA LRCTF MakeMKV-EULA MARBLEBLAST Mendeley-EULA MSjdbcEULA40 Nero-AAC-EULA Nero-EULA-US Oracle-BCLA-JavaSE POMPOM postal2 PUEL Q3AEULA QUAKE4 RTCW RTCW-ETEULA SCM-MICRO skype-eula skype-4.0.0.7-copyright spin-commercial spin-educational sun-bcla-java-vm THINKTANKS UPEK-SDK-EULA ut2003 ut2003-demo
+EULA AdobeFlash-10.3 AdobeFlash-11.x BCS Broadcom cadsoft DOOM3 ETQW FraunhoferFDK google-chrome googleearth Google-TOS IBM-J1.5 IBM-J1.6 Intel-SDP Introversion Livestation-EULA LOKI-EULA LRCTF MakeMKV-EULA MARBLEBLAST Mendeley-EULA MSjdbcEULA40 Nero-AAC-EULA Nero-EULA-US Oracle-BCLA-JavaSE POMPOM postal2 PUEL Q3AEULA QUAKE4 RTCW RTCW-ETEULA SCM-MICRO skype-eula skype-4.0.0.7-copyright spin-commercial spin-educational sun-bcla-java-vm THINKTANKS UPEK-SDK-EULA ut2003 ut2003-demo
 
 # As proposed: http://archives.gentoo.org/gentoo-dev/msg_6c950b46c50fe72ebc5e650bbf70f77c.xml
 # Excerpt of the rules for this license group:
