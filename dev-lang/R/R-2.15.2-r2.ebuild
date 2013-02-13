@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.2-r1.ebuild,v 1.2 2013/01/29 18:27:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.2-r2.ebuild,v 1.1 2013/02/13 19:16:31 calchan Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ RDEPEND="${CDEPEND}
 
 RESTRICT="minimal? ( test )"
 
-R_DIR="${EROOT}/usr/$(get_libdir)/${PN}"
+R_DIR="${EROOT%/}/usr/$(get_libdir)/${PN}"
 
 pkg_setup() {
 	if use openmp; then
@@ -122,10 +122,10 @@ src_prepare() {
 				configure.ac || die
 			# sort of "undo" 2.14.1-rmath-shared.patch
 			sed -i \
-				-e "s:-Wl,-soname=libRmath.so:-install_name ${EROOT}/usr/$(get_libdir)/libRmath.dylib:" \
+				-e "s:-Wl,-soname=libRmath.so:-install_name ${EROOT%/}/usr/$(get_libdir)/libRmath.dylib:" \
 				src/nmath/standalone/Makefile.in || die
 		else
-			append-ldflags -Wl,-rpath="${EROOT}/usr/$(get_libdir)/R/lib"
+			append-ldflags -Wl,-rpath="${EROOT%/}/usr/$(get_libdir)/R/lib"
 		fi
 	fi
 	AT_M4DIR=m4 eaclocal

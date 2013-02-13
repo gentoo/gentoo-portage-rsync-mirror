@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.6 2012/12/23 10:55:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.7 2013/02/13 19:28:51 hasufell Exp $
 
 # These are broken as reported by Halcy0n, Aug, 23, 2011
 games-action/shadowgrounds-bin
@@ -12,3 +12,4 @@ media-sound/aucdtect
 # 32bit only
 dev-lang/rebol-bin
 dev-lang/rebol
+games-action/trine2

@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.209 2013/01/29 18:27:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.210 2013/02/13 19:16:31 calchan Exp $
+
+*R-2.15.2-r2 (13 Feb 2013)
+
+  13 Feb 2013; Denis Dupeyron <calchan@gentoo.org> -R-2.15.2-r1.ebuild,
+  +R-2.15.2-r2.ebuild:
+  Fix R_HOME warning when R is started up.
 
   29 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org> R-2.15.2-r1.ebuild:
   Fixed bash completion spaces (bug #417951, thanks Marco Poletti) and parallel
