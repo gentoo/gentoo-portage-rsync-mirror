@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/assets/assets-0.1.1-r1.ebuild,v 1.1 2013/02/12 01:25:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/assets/assets-0.1.1-r1.ebuild,v 1.2 2013/02/13 07:53:49 maksbotan Exp $
 
 EAPI=5
 
@@ -9,8 +9,8 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 inherit distutils-r1
 
 DESCRIPTION="Cache-friendly asset management via content-hash-naming"
-HOMEPAGE="http://jderose.fedorapeople.org/assets"
-SRC_URI="http://jderose.fedorapeople.org/${PN}/${PV}/${P}.tar.gz"
+HOMEPAGE="https://launchpad.net/web-assets"
+SRC_URI="https://launchpad.net/web-assets/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
