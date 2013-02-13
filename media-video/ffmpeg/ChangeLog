@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.602 2013/02/07 13:47:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.603 2013/02/13 17:42:36 aballier Exp $
+
+  13 Feb 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  run tests against built libavresample
 
   07 Feb 2013; Alexis Ballier <aballier@gentoo.org> -ffmpeg-1.1.1.ebuild:
   remove old
