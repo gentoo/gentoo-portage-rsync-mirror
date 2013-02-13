@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/gwiz
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/gwiz/ChangeLog,v 1.9 2011/07/27 17:56:13 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/gwiz/ChangeLog,v 1.10 2013/02/13 21:08:32 mr_bones_ Exp $
+
+  13 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/gwiz-0.8-buffer.patch, gwiz-0.8.ebuild:
+  EAPI=5; compile warning patch
 
   27 Jul 2011; Pacho Ramos <pacho@gentoo.org> gwiz-0.8.ebuild:
   Install a menu entry, bug #160221.

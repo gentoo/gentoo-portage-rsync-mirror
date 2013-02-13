@@ -1,8 +1,9 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/gwiz/gwiz-0.8.ebuild,v 1.10 2011/07/27 17:56:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/gwiz/gwiz-0.8.ebuild,v 1.11 2013/02/13 21:08:32 mr_bones_ Exp $
 
-inherit eutils
+EAPI=5
+inherit eutils games
 
 DESCRIPTION="clone of old-school Wizardry(tm) games by SirTech"
 HOMEPAGE="http://icculus.org/gwiz/"
@@ -13,18 +14,16 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.2.3
-	>=media-libs/sdl-image-1.2.1-r1
+DEPEND=">=media-libs/libsdl-1.2.3[joystick,video]
+	>=media-libs/sdl-image-1.2.1-r1[png]
 	>=media-libs/sdl-ttf-2.0.4"
+RDEPEND="${DEPEND}"
 
-src_compile() {
-	econf || die
-	emake || die
-}
+PATCHES=( "${FILESDIR}"/${P}-buffer.patch )
 
 src_install() {
-	einstall || die
-	doicon pixmaps/gwiz_icon.xpm
-	make_desktop_entry gwiz Gwiz gwiz_icon.xpm
+	default
 	dodoc AUTHORS ChangeLog README doc/HOWTO-PLAY
+	newicon pixmaps/gwiz_icon.xpm ${PN}.xpm
+	make_desktop_entry gwiz Gwiz
 }
