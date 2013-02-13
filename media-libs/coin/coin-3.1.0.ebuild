@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.0.ebuild,v 1.10 2013/02/08 08:10:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.0.ebuild,v 1.11 2013/02/13 08:41:54 xarthisius Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="a high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1."
 HOMEPAGE="http://www.coin3d.org/"
-SRC_URI="ftp://ftp.coin3d.org/pub/coin/src/all/${MY_P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~xarthisius/distfiles/${MY_P}.tar.gz"
 
 LICENSE="|| ( GPL-2 PEL )"
 SLOT="0"

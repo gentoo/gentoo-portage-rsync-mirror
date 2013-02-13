@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14466 2013/02/12 16:04:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14467 2013/02/13 08:52:27 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Eray Aslan <eras@gentoo.org> (13 Feb 2013)
+# Mask experimental software
+=mail-mta/postfix-2.11*
 
 # Ian Delaney <idella4@gentoo.org> (12 Feb 2013)
 # This is a work in progress targeting an old bug
@@ -601,10 +605,6 @@ kde-misc/kgtk
 # Blocks sysvinit yet doesn't provide all tools provided by it.
 # Masking until we get the necessary tools out of sysvinit.
 sys-apps/systemd-sysv-utils
-
-# Eray Aslan <eras@gentoo.org> (19 Jan 2012)
-# Mask experimental software
-=mail-mta/postfix-2.10*
 
 # Jeroen Roovers <jer@gentoo.org> (27 Mar 2012)
 # Opera Next and Opera snapshots are unsupported and eternally unstable.

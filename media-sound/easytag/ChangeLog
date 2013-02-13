@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/easytag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.167 2013/02/12 07:17:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.168 2013/02/13 08:54:45 radhermit Exp $
+
+  13 Feb 2013; Tim Harder <radhermit@gentoo.org> easytag-2.1.8.ebuild,
+  +files/easytag-2.1.8-taglib.patch:
+  Fix check for taglib (bug #456976).
 
   12 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
   files/easytag-2.1.8-desktop.patch:

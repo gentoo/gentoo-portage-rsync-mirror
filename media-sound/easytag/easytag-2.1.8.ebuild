@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.8.ebuild,v 1.1 2013/02/12 04:47:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.8.ebuild,v 1.2 2013/02/13 08:54:45 radhermit Exp $
 
 EAPI=5
 inherit eutils autotools gnome.org fdo-mime
@@ -37,6 +37,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-desktop.patch
 	epatch "${FILESDIR}"/${P}-werror.patch
+	epatch "${FILESDIR}"/${P}-taglib.patch
 	epatch "${FILESDIR}"/${P}-docs.patch
 	eautoreconf
 }

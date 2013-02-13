@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10_pre20130204.ebuild,v 1.1 2013/02/09 10:12:40 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10.0.ebuild,v 1.1 2013/02/13 08:48:58 eras Exp $
 
 EAPI=5
 inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator
 
 MY_PV="${PV/_pre/-}"
 MY_SRC="${PN}-${MY_PV}"
-MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental"
-VDA_PV="2.9.1"
+MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
+VDA_PV="2.9.5"
 VDA_P="${PN}-vda-v11-${VDA_PV}"
 RC_VER="2.7"
 

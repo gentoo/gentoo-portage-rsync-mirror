@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7489 2013/02/12 16:04:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7490 2013/02/13 08:52:27 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Feb 2013; Eray Aslan <eras@gentoo.org> package.mask:
+  Mask mail-mta/postfix-2.11 and unmask mail-mta/postfix-2.10
 
   12 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Unmask bluez-firwmare now that license has been fixed wrt #456948 by Daniel
