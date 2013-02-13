@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.828 2013/02/09 23:00:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.829 2013/02/13 22:37:15 ssuominen Exp $
+
+  13 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Update to use --disable-polkit flag, see:
+  http://cgit.freedesktop.org/systemd/systemd/commit/?id=46ba8aae2b82bc5c87ba34
+  7e6bf914ecd5e9d51e
 
   09 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> udev-197-r4.ebuild:
   arm/ppc64 stable wrt #452556

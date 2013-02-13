@@ -1,15 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.7.6.ebuild,v 1.1 2013/01/11 09:07:27 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.8.4.ebuild,v 1.1 2013/02/13 22:57:36 xmw Exp $
 
-EAPI=3
+EAPI=5
 
-PYTHON_DEPEND="*"
 #dev-python/pygobject and dev-python/pygtk do not support python3
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
-DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
-SUPPORT_PYTHON_ABIS="1"
-inherit distutils eutils
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+inherit distutils-r1 eutils readme.gentoo
 
 DESCRIPTION="X Persistent Remote Apps (xpra) and Partitioning WM (parti) based on wimpiggy"
 HOMEPAGE="http://xpra.org/"
@@ -49,9 +46,12 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	>=dev-python/cython-0.16"
 
-src_prepare() {
+python_prepare_all() {
 	epatch "${FILESDIR}"/${PN}-0.7.1-ignore-gentoo-no-compile.patch
-	epatch "${FILESDIR}"/${PN}-0.7.4-prefix.patch
+	epatch "${FILESDIR}"/${PN}-0.8.0-prefix.patch
+	if has_version media-video/ffmpeg ; then
+		epatch patches/old-libav.patch
+	fi
 
 	use clipboard || epatch patches/disable-clipboard.patch
 	use rencode   || epatch patches/disable-rencode.patch
@@ -59,29 +59,20 @@ src_prepare() {
 	use vpx       || epatch patches/disable-vpx.patch
 	use webp      || epatch patches/disable-webp.patch
 	use x264      || epatch patches/disable-x264.patch
-
-	distutils_src_prepare
-
-	patching() {
-	    [[ "${PYTHON_ABI}" == 2.* ]] && return
-		2to3 --no-diffs -x all -f except -w -n .
-	}
-	python_execute_function --action-message \
-		'Applying patches with $(python_get_implementation) $(python_get_version)' \
-		-s patching
 }
 
 src_install() {
-	distutils_src_install
-	rm -v "${ED}"usr/share/parti/{parti.,}README \
+	distutils-r1_src_install
+
+	rm -vf "${ED}"usr/share/parti/{parti.,}README \
 		"${ED}"usr/share/xpra/{webm/LICENSE,xpra.README} \
-		"${ED}"usr/share/wimpiggy/wimpiggy.README
+		"${ED}"usr/share/wimpiggy/wimpiggy.README || die
 	dodoc {parti.,wimpiggy.,xpra.,}README
 
-	einfo
-	elog "please make your Xorg binary readable for users of xpra"
-	elog "  chmod a+r /usr/bin/Xorg"
-	elog "and think about the security impact"
-	elog "A copy at ~/.xpra/Xorg matching the current modules is sufficient."
-	einfo
+	DOC_CONTENTS="""please make your Xorg binary readable for users of xpra
+  chmod a+r /usr/bin/Xorg
+and think about the security impact
+A copy at ~/.xpra/Xorg matching the current modules is sufficient."""
+
+	readme.gentoo_src_install
 }
