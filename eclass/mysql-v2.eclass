@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.23 2013/01/28 02:13:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.24 2013/02/13 00:40:57 robbat2 Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -187,6 +187,10 @@ IUSE="${IUSE} +community profiling"
 && mysql_version_is_at_least "5.2.5" \
 && IUSE="${IUSE} sphinx"
 
+[[ ${PN} == "mariadb" ]] \
+&& mysql_version_is_at_least "5.2.10" \
+&& IUSE="${IUSE} pam"
+
 if mysql_version_is_at_least "5.5"; then
 	REQUIRED_USE="tcmalloc? ( !jemalloc ) jemalloc? ( !tcmalloc )"
 	IUSE="${IUSE} jemalloc tcmalloc"
@@ -230,10 +234,14 @@ done
 && mysql_version_is_at_least "5.2.5" \
 && DEPEND="${DEPEND} sphinx? ( app-misc/sphinx )"
 
+[[ "${PN}" == "mariadb" ]] \
+&& mysql_version_is_at_least "5.2.10" \
+&& DEPEND="${DEPEND} !minimal? ( pam? ( virtual/pam ) )"
+
 # Bug 441700 MariaDB >=5.3 include custom mytop
 [[ "${PN}" == "mariadb" ]] \
 && mysql_version_is_at_least "5.3" \
-&& DEPEND="${DEPEND} !dev-db/mytop"
+&& DEPEND="${DEPEND} perl? ( !dev-db/mytop )"
 
 mysql_version_is_at_least "5.5.7" \
 && DEPEND="${DEPEND} systemtap? ( >=dev-util/systemtap-1.3 )" \
@@ -250,6 +258,15 @@ RDEPEND="${DEPEND}
 	!minimal? ( !prefix? ( dev-db/mysql-init-scripts ) )
 	selinux? ( sec-policy/selinux-mysql )
 "
+
+# Bug 455016 Add dependancies of mytop
+[[ "${PN}" == "mariadb" ]] \
+&& mysql_version_is_at_least "5.3" \
+&& RDEPEND="${RDEPEND} perl? (
+	virtual/perl-Getopt-Long
+	dev-perl/TermReadKey
+	virtual/perl-Term-ANSIColor
+	virtual/perl-Time-HiRes ) "
 
 DEPEND="${DEPEND}
 	virtual/yacc
@@ -483,6 +500,15 @@ mysql-v2_pkg_postinst() {
 			&& [[ "${script%.sh}" == "${script}" ]] \
 			&& dodoc "${script}"
 		done
+
+		if [ ${PN} == "mariadb" ] \
+		&& mysql_version_is_at_least "5.2.10" && use pam ; then
+			einfo
+			elog "This install includes the PAM authentication plugin."
+			elog "To activate and configure the PAM plugin, please read:"
+			elog "https://kb.askmonty.org/en/pam-authentication-plugin/"
+			einfo
+		fi
 
 		einfo
 		elog "You might want to run:"

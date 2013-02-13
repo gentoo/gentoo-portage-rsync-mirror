@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7-r1.ebuild,v 1.9 2013/02/11 22:24:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7-r1.ebuild,v 1.10 2013/02/13 00:36:52 jer Exp $
 
 EAPI="4"
 
@@ -47,10 +47,18 @@ pkg_setup() {
 src_prepare() {
 	epatch	"${FILESDIR}"/0001_"${P}"-configure.ac.patch
 	epatch	"${FILESDIR}/${PN}"-1.4.5-automake-1.11.2.patch
-	sed -i '/PERLLD/s:same as PERLCC:same-as-PERLCC:' configure.ac #281694
+
+	# bug 281694
+	# bug 456810
+	# no time to sleep
+	sed -i \
+		-e '/PERLLD/s:same as PERLCC:same-as-PERLCC:' \
+		-e 's|$LUA_CFLAGS|IGNORE_THIS_BAD_TEST|g' \
+		-e 's|^sleep 1$||g' \
+		configure.ac || die
 
 	# Python bindings are built/installed manually
-	sed -e "/^all-local:/s/ @COMP_PYTHON@//" -i bindings/Makefile.am
+	sed -e "/^all-local:/s/ @COMP_PYTHON@//" -i bindings/Makefile.am || die
 
 	eautoreconf
 }
@@ -95,7 +103,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	default
 
 	if ! use doc ; then
 		rm -rf "${ED}"usr/share/doc/${PF}/{html,txt}

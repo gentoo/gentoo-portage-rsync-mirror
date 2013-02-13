@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.13 2013/01/20 02:37:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-cmake.eclass,v 1.14 2013/02/13 00:40:57 robbat2 Exp $
 
 # @ECLASS: mysql-cmake.eclass
 # @MAINTAINER:
@@ -185,6 +185,11 @@ configure_cmake_standard() {
 			$(cmake-utils_use_with sphinx SPHINX_STORAGE_ENGINE)
 			$(cmake-utils_use_with extraengine FEDERATEDX_STORAGE_ENGINE)
 		)
+
+		if ! use pam ; then
+			mycmakeargs+=( -DAUTH_PAM_DISABLED=1 )
+		fi
+		
 	fi
 }
 
@@ -388,4 +393,8 @@ mysql-cmake_src_install() {
 	fi
 
 	mysql_lib_symlinks "${ED}"
+
+	#Remove mytop if perl is not selected
+	[[ "${PN}" == "mariadb" ]] && ! use perl \
+	&& rm -f "${ED}/usr/bin/mytop"
 }

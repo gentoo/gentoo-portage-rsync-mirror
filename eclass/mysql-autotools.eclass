@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.14 2013/01/28 02:13:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.15 2013/02/13 00:40:57 robbat2 Exp $
 
 # @ECLASS: mysql-autotools.eclass
 # @MAINTAINER:
@@ -287,6 +287,15 @@ mysql-autotools_configure_51() {
 				use ${i} \
 				&& plugins_dyn="${plugins_dyn} ${i}" \
 				|| plugins_dis="${plugins_dis} ${i}"
+			done
+		fi
+
+		#Authentication plugins
+		if mysql_version_is_at_least "5.2.11" ; then
+			for i in pam ; do
+				use ${i} \
+				&& plugins_dyn="${plugins_dyn} auth_${i}" \
+				|| plugins_dis="${plugins_dis} auth_${i}"
 			done
 		fi
 	fi
@@ -648,4 +657,12 @@ mysql-autotools_src_install() {
 	fi
 
 	mysql_lib_symlinks "${ED}"
+
+	#Remove mytop if perl is not selected
+	[[ "${PN}" == "mariadb" ]] && ! use perl \
+	&& mysql_version_is_at_least "5.3" \
+	&& rm -f "${ED}/usr/bin/mytop"
+
+	#Bug 455462 remove unnecessary libtool files
+	prune_libtool_files --modules
 }

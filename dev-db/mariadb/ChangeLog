@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.26 2013/01/21 23:04:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.27 2013/02/13 00:47:45 robbat2 Exp $
+
+*mariadb-5.3.12 (13 Feb 2013)
+*mariadb-5.1.67 (13 Feb 2013)
+*mariadb-5.2.14 (13 Feb 2013)
+*mariadb-5.5.29 (13 Feb 2013)
+
+  13 Feb 2013; Robin H. Johnson <robbat2@gentoo.org> +mariadb-5.1.67.ebuild,
+  +mariadb-5.2.14.ebuild, +mariadb-5.3.12.ebuild, +mariadb-5.5.29.ebuild:
+  Bump from mysql overlay, thanks to Brian Evans <grknight@lavabit.com>.
 
   21 Jan 2013; Robin H. Johnson <robbat2@gentoo.org> -mariadb-5.1.62.ebuild,
   -mariadb-5.2.12.ebuild, -mariadb-5.3.6.ebuild, -mariadb-5.5.23.ebuild,

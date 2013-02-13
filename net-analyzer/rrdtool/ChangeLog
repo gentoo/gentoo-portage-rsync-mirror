@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.241 2013/02/11 22:24:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.242 2013/02/13 00:36:52 jer Exp $
+
+  13 Feb 2013; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.7-r1.ebuild:
+  Fix building with USE=lua and dev-util/pkgconfig-0.28 (bug #456810 by Juergen
+  Rose).
 
   11 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> rrdtool-1.4.5-r1.ebuild,
   rrdtool-1.4.5-r2.ebuild, rrdtool-1.4.7-r1.ebuild:
