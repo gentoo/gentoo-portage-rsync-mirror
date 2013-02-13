@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/guile-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.43 2013/01/31 23:09:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.44 2013/02/13 20:32:52 pacho Exp $
+
+  13 Feb 2013; Pacho Ramos <pacho@gentoo.org>
+  -files/guile-gtk-0.19-Makefile.in.patch, -guile-gtk-1.2.0.31.ebuild,
+  -guile-gtk-1.2.0.41.ebuild, -guile-gtk-1.2.0.60.ebuild:
+  Drop old
 
   31 Jan 2013; Agostino Sarubbo <ago@gentoo.org> guile-gtk-2.1-r1.ebuild:
   Stable for ppc, wrt bug #422323
