@@ -1,6 +1,9 @@
 # ChangeLog for games-action/trine2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trine2/ChangeLog,v 1.1 2013/02/13 19:24:58 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trine2/ChangeLog,v 1.2 2013/02/13 19:34:27 hasufell Exp $
+
+  13 Feb 2013; Julian Ospald <hasufell@gentoo.org> trine2-1.16.ebuild:
+  add bindist restriction
 
 *trine2-1.16 (13 Feb 2013)
 
