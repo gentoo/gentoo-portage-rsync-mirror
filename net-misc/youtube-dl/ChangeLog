@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.140 2013/02/12 16:59:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.141 2013/02/13 15:13:02 jer Exp $
+
+  13 Feb 2013; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2013.01.06.ebuild,
+  -youtube-dl-2013.01.08.ebuild, youtube-dl-2013.01.13.ebuild,
+  youtube-dl-2013.01.28.ebuild, youtube-dl-2013.02.02.ebuild:
+  Fix dev-python[coverage] test dependency to cover versions that
+  unconditionally depend on dev-python/coverage anyway (bug #457038 by Michael
+  Palimaka).
 
 *youtube-dl-2013.02.02 (12 Feb 2013)
 
