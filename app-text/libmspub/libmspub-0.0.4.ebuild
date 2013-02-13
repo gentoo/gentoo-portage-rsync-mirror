@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmspub/libmspub-0.0.4.ebuild,v 1.1 2013/02/05 14:03:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmspub/libmspub-0.0.4.ebuild,v 1.2 2013/02/13 07:11:58 scarabeus Exp $
 
 EAPI=5
 
@@ -43,6 +43,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		$(use_enable static-libs static) \
 		--disable-werror \
 		$(use_with doc docs)
