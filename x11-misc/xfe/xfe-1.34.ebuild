@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.33-r1.ebuild,v 1.2 2013/02/13 02:05:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.34.ebuild,v 1.1 2013/02/13 02:05:40 jer Exp $
 
 EAPI=5
 
@@ -36,10 +36,9 @@ DEPEND="
 "
 
 DOCS=( AUTHORS BUGS ChangeLog README TODO )
+
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.32.2-missing_Xlib_h.patch
-	"${FILESDIR}"/${P}-flags.patch
-	"${FILESDIR}"/${P}-desktopfile.patch
 )
 
 src_prepare() {
@@ -56,7 +55,7 @@ src_prepare() {
 	# malformed LINGUAS file
 	# recent intltool expects newline for every linguas
 	sed -i \
-		-e '/^#/!s/\s\s*/\n/g' \
+		-e '/^#/!s:\s\s*:\n:g' \
 		po/LINGUAS || die
 
 	# remove not selected locales

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/orbit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.186 2013/02/12 06:53:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.187 2013/02/13 02:13:22 tetromino Exp $
+
+  13 Feb 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  files/orbit-2.14.19-link_protocol_is_local.patch:
+  Update patch to upstreamed version.
 
 *orbit-2.14.19-r2 (12 Feb 2013)
 

@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xfe
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.84 2012/12/28 11:09:50 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.85 2013/02/13 02:05:40 jer Exp $
+
+*xfe-1.34 (13 Feb 2013)
+
+  13 Feb 2013; Jeroen Roovers <jer@gentoo.org> xfe-1.33-r1.ebuild,
+  +xfe-1.34.ebuild:
+  Version bump (bug #457030 by teidakankan). Do not install useless NEWS.
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xfe-1.33.ebuild:
   Stable for ppc64, wrt bug #448544
