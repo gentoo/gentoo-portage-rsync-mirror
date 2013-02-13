@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libzrtpcpp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/ChangeLog,v 1.16 2012/10/14 00:17:19 chithanh Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/ChangeLog,v 1.17 2013/02/13 11:09:23 chithanh Exp $
+
+*libzrtpcpp-2.3.2 (13 Feb 2013)
+
+  13 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libzrtpcpp-2.3.2.ebuild:
+  Version bump, bug #300553.
 
   14 Oct 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   libzrtpcpp-0.9.0.ebuild, libzrtpcpp-1.3.0.ebuild, libzrtpcpp-1.4.1.ebuild:
