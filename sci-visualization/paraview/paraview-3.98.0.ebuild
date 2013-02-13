@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.98.0.ebuild,v 1.1 2013/02/11 21:29:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.98.0.ebuild,v 1.2 2013/02/13 12:44:18 hasufell Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ RDEPEND="
 	sys-libs/zlib
 	virtual/jpeg
 	virtual/opengl
-	x11-libs/gl2ps
+	>=x11-libs/gl2ps-1.3.8
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXmu

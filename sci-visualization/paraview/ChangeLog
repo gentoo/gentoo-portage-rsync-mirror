@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.62 2013/02/11 21:29:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.63 2013/02/13 12:44:18 hasufell Exp $
+
+  13 Feb 2013; Julian Ospald <hasufell@gentoo.org> paraview-3.98.0.ebuild:
+  fix gl2ps dep
 
 *paraview-3.98.0 (11 Feb 2013)
 
