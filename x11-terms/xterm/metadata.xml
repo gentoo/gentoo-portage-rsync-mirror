@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>dickey@radix.net</email>
-		<name>Thomas Dickey</name>
-	</maintainer>
-	<herd>x11</herd>
-	<use>
-		<flag name='toolbar'>Enable the xterm toolbar to be built</flag>
-	</use>
+  <maintainer>
+    <email>dickey@radix.net</email>
+    <name>Thomas Dickey</name>
+  </maintainer>
+  <herd>x11</herd>
+  <use>
+    <flag name="toolbar">Enable the xterm toolbar to be built</flag>
+  </use>
 </pkgmetadata>

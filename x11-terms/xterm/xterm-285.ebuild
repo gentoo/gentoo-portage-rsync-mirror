@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-285.ebuild,v 1.11 2013/01/04 18:04:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-285.ebuild,v 1.12 2013/02/14 13:42:55 jlec Exp $
 
 EAPI=4
-inherit eutils multilib
+
+inherit eutils flag-o-matic multilib
 
 DESCRIPTION="Terminal Emulator for X Windows"
-HOMEPAGE="http://dickey.his.com/xterm/"
+HOMEPAGE="http://invisible-island.net/xterm/"
 SRC_URI="ftp://invisible-island.net/${PN}/${P}.tgz"
 
 LICENSE="MIT"
@@ -42,6 +43,12 @@ src_configure() {
 	# looking for reason why crosscompile failed? try restoring this:
 	# --x-libraries="${ROOT}usr/$(get_libdir)"
 	# -ssuominen, 2011
+
+	# 454736
+	# Workaround for ncurses[tinfo] until upstream fixes their buildsystem using
+	# something sane like pkg-config or ncurses5-config and stops guessing libs
+	# Everything gets linked against ncurses anyways, so don't shout
+	append-libs $(pkg-config --libs ncurses)
 
 	econf \
 		--libdir="${EPREFIX}"/etc \

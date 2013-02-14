@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-288.ebuild,v 1.1 2013/01/09 16:22:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-288.ebuild,v 1.2 2013/02/14 13:42:55 jlec Exp $
 
 EAPI=5
-inherit eutils multilib
+
+inherit eutils flag-o-matic multilib
 
 DESCRIPTION="Terminal Emulator for X Windows"
-HOMEPAGE="http://dickey.his.com/xterm/"
+HOMEPAGE="http://invisible-island.net/xterm/"
 SRC_URI="ftp://invisible-island.net/${PN}/${P}.tgz"
 
 LICENSE="MIT"
@@ -34,11 +35,19 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/kbproto
 	x11-proto/xproto"
 
+DOCS=( README{,.i18n} ctlseqs.txt )
+
 pkg_setup() {
 	DEFAULTS_DIR="${EPREFIX}"/usr/share/X11/app-defaults
 }
 
 src_configure() {
+	# 454736
+	# Workaround for ncurses[tinfo] until upstream fixes their buildsystem using
+	# something sane like pkg-config or ncurses5-config and stops guessing libs
+	# Everything gets linked against ncurses anyways, so don't shout
+	append-libs $(pkg-config --libs ncurses)
+
 	econf \
 		--libdir="${EPREFIX}"/etc \
 		--disable-full-tgetent \
@@ -66,8 +75,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc README{,.i18n} ctlseqs.txt
+	default
+
 	dohtml xterm.log.html
 	domenu *.desktop
 
@@ -78,5 +87,5 @@ src_install() {
 	fperms 0755 /usr/bin/xterm
 
 	# restore the navy blue
-	sed -i -e "s:blue2$:blue:" "${ED}${DEFAULTS_DIR}"/XTerm-color
+	sed -i -e "s:blue2$:blue:" "${ED}${DEFAULTS_DIR}"/XTerm-color || die
 }

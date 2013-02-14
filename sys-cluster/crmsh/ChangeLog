@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/crmsh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/ChangeLog,v 1.3 2013/01/18 09:15:37 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/ChangeLog,v 1.4 2013/02/14 13:38:53 ultrabug Exp $
+
+*crmsh-1.2.5 (14 Feb 2013)
+
+  14 Feb 2013; Ultrabug <ultrabug@gentoo.org> +crmsh-1.2.5.ebuild:
+  Version bump
 
 *crmsh-1.2.4 (18 Jan 2013)
 
