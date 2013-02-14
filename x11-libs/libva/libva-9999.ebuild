@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.12 2012/11/21 18:13:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.13 2013/02/14 19:08:51 aballier Exp $
 
 EAPI=4
 
@@ -44,7 +44,7 @@ RDEPEND=">=x11-libs/libdrm-2.4
 	)
 	egl? ( media-libs/mesa[egl] )
 	opengl? ( virtual/opengl )
-	wayland? ( >=dev-libs/wayland-0.95.0 )"
+	wayland? ( >=dev-libs/wayland-1 )"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

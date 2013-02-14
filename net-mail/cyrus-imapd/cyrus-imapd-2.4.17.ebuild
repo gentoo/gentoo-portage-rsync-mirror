@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.17.ebuild,v 1.4 2013/02/14 18:43:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.17.ebuild,v 1.5 2013/02/14 19:08:13 eras Exp $
 
 EAPI=4
 
-inherit db-use eutils multilib pam ssl-cert user
+inherit autotools db-use eutils multilib pam ssl-cert user toolchain-funcs
 
 MY_P=${P/_/}
 
@@ -78,6 +78,17 @@ src_prepare() {
 	# libcom_err.a to libafscom_err.a
 	sed -i -e '/afs\/libcom_err.a/s:libcom_err.a:libafscom_err.a:' \
 		configure{,.in} || die
+
+	sed -i -e "s/ar cr/$(tc-getAR) cr/" \
+		perl/sieve/lib/Makefile.in \
+		imap/Makefile.in \
+		lib/Makefile.in \
+		installsieve/Makefile.in \
+		com_err/et/Makefile.in \
+		sieve/Makefile.in \
+		syslog/Makefile.in || die
+
+	eautoreconf
 }
 
 src_configure() {

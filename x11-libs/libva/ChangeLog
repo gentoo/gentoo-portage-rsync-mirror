@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libva
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.46 2012/12/02 22:16:11 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.48 2013/02/14 19:08:51 aballier Exp $
+
+  14 Feb 2013; Alexis Ballier <aballier@gentoo.org> libva-9999.ebuild:
+  upstream master needs wayland-1
+
+  14 Feb 2013; Alexis Ballier <aballier@gentoo.org> libva-1.1.0.ebuild,
+  +files/libva-1.1.0-wayland1.patch:
+  Add upsteam patch porting to wayland-1 API, bug #455310 by Dennis Schridde
 
   02 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> libva-1.0.15.ebuild,
   libva-1.0.16.ebuild:
