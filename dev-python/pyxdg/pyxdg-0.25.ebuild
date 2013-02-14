@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.25.ebuild,v 1.6 2013/02/14 21:50:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.25.ebuild,v 1.7 2013/02/14 22:18:47 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://people.freedesktop.org/~takluyver/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="test"
 
 DEPEND="test? ( dev-python/nose[${PYTHON_USEDEP}] )"

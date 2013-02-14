@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.95 2013/02/14 21:35:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.96 2013/02/14 22:08:49 ago Exp $
+
+  14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> xapian-1.2.13.ebuild:
+  Stable for ppc, wrt bug #457296
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> xapian-1.2.13.ebuild:
   Stable for ppc64, wrt bug #457296

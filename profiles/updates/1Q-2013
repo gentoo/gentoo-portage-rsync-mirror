@@ -16,3 +16,4 @@ move net-wireless/bluez-firmware sys-firmware/bluez-firmware
 move net-wireless/atmel-firmware sys-firmware/atmel-firmware
 move net-wireless/b43-firmware sys-firmware/b43-firmware
 move net-wireless/b43legacy-firmware sys-firmware/b43legacy-firmware
+move net-wireless/rt61-firmware sys-firmware/rt61-firmware
