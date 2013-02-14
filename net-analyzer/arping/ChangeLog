@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.67 2013/01/03 17:05:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.69 2013/02/14 12:20:56 ago Exp $
+
+  14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> arping-2.13.ebuild:
+  Stable for x86, wrt bug #457412
+
+  14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> arping-2.13.ebuild:
+  Stable for amd64, wrt bug #457412
 
 *arping-2.13 (03 Jan 2013)
 

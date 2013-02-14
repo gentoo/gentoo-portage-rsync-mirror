@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/giggle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.18 2013/02/14 12:00:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.19 2013/02/14 12:08:26 ago Exp $
+
+  14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> giggle-0.6.2.ebuild:
+  Stable for x86, wrt bug #457352
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> giggle-0.6.2.ebuild:
   Stable for amd64, wrt bug #457352

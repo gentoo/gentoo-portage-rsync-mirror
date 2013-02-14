@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.8.ebuild,v 1.4 2012/02/24 20:55:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/vdradmin-am-3.6.8.ebuild,v 1.7 2013/02/14 12:30:09 hd_brummy Exp $
 
-EAPI=4
+EAPI="5"
 
-inherit eutils ssl-cert
+inherit eutils ssl-cert user
 
 DESCRIPTION="WWW Admin for the Video Disk Recorder"
 HOMEPAGE="http://andreas.vdr-developer.org/vdradmin-am/index.html"

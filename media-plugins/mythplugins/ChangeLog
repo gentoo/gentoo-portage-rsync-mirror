@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythplugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.8 2013/01/29 19:15:34 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.9 2013/02/14 12:08:15 rich0 Exp $
+
+*mythplugins-0.26.0_p20130207 (14 Feb 2013)
+
+  14 Feb 2013; Richard Freeman <rich0@gentoo.org>
+  +mythplugins-0.26.0_p20130207.ebuild:
+  Bump patchset.
 
   29 Jan 2013; Richard Freeman <rich0@gentoo.org> Manifest:
   Fix manifest for regenerated patch.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-2.5.4-r1.ebuild,v 1.1 2013/01/12 15:41:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/pytraffic-2.5.4-r1.ebuild,v 1.3 2013/02/14 12:09:13 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://alpha.uhasselt.be/Research/Algebra/Members/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[audio]

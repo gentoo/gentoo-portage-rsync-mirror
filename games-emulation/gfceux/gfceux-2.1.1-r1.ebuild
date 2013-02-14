@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/gfceux-2.1.1-r1.ebuild,v 1.2 2013/01/12 15:38:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/gfceux-2.1.1-r1.ebuild,v 1.4 2013/02/14 12:09:02 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/fceultra/fceux-${PV}.src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-python/pygtk"

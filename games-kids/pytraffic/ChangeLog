@@ -1,6 +1,12 @@
 # ChangeLog for games-kids/pytraffic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/ChangeLog,v 1.14 2013/01/12 15:41:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/ChangeLog,v 1.16 2013/02/14 12:09:13 ago Exp $
+
+  14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pytraffic-2.5.4-r1.ebuild:
+  Stable for x86, wrt bug #457114
+
+  14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pytraffic-2.5.4-r1.ebuild:
+  Stable for amd64, wrt bug #457114
 
 *pytraffic-2.5.4-r1 (12 Jan 2013)
 
