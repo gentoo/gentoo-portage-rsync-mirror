@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7493 2013/02/13 18:56:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7494 2013/02/14 07:46:23 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Feb 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Add ree18-only virtuals to the ruby-enterprise mask.
 
   13 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> updates/1Q-2013:
   Move atmel-firmware, b43-firmware and b43legacy-firmware from net-wireless/

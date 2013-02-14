@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14468 2013/02/13 19:18:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14469 2013/02/14 07:46:23 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -218,6 +218,10 @@ net-misc/gtk-youtube-viewer
 # ago. Ruby 1.9 has almost all of the benefits of REE, so the
 # recommendation is to switch to that if you are still using REE.
 dev-lang/ruby-enterprise
+=virtual/rubygems-3
+=virtual/ruby-rdoc-3
+=virtual/ruby-ssl-3
+=virtual/ruby-threads-3
 
 # Ben de Groot <yngwin@gentoo.org> (20 Jan 2013)
 # 2.5* has known security and other issues due to bundled ffmpeg,
