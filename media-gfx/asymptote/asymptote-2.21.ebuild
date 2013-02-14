@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.21.ebuild,v 1.2 2013/02/14 15:12:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.21.ebuild,v 1.3 2013/02/14 18:42:28 ago Exp $
 
 EAPI=4
 SUPPORT_PYTHON_ABIS=1
@@ -13,7 +13,7 @@ HOMEPAGE="http://asymptote.sourceforge.net/"
 SRC_URI="mirror://sourceforge/asymptote/${P}.src.tgz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="+boehm-gc doc emacs examples fftw gsl +imagemagick latex offscreen +opengl python sigsegv svg vim-syntax X"
 REQUIRED_USE="offscreen? ( opengl )"
 

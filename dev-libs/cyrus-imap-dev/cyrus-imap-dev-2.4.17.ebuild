@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.4.17.ebuild,v 1.3 2013/02/14 15:13:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.4.17.ebuild,v 1.5 2013/02/14 18:52:09 eras Exp $
 
 EAPI=4
-inherit eutils db-use multilib
+inherit autotools db-use eutils multilib toolchain-funcs
 
 MY_PV="${PV/_/}"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.cyrusimap.org/cyrus-imapd/cyrus-imapd-${MY_PV}.tar.gz"
 
 LICENSE="BSD-with-attribution"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="afs berkdb kerberos snmp ssl tcpd"
 
 RDEPEND=">=dev-libs/cyrus-sasl-2.1.13
@@ -28,6 +28,19 @@ RDEPEND=">=dev-libs/cyrus-sasl-2.1.13
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/cyrus-imapd-${MY_PV}"
+
+src_prepare() {
+	sed -i -e "s/ar cr/$(tc-getAR) cr/" \
+		perl/sieve/lib/Makefile.in \
+		imap/Makefile.in \
+		lib/Makefile.in \
+		installsieve/Makefile.in \
+		com_err/et/Makefile.in \
+		sieve/Makefile.in \
+		syslog/Makefile.in
+
+	eautoreconf
+}
 
 src_configure() {
 	local myconf

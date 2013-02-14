@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.4.17.ebuild,v 1.3 2013/02/14 15:13:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.4.17.ebuild,v 1.5 2013/02/14 18:59:49 eras Exp $
 
 EAPI=4
 
-inherit eutils perl-app db-use
+inherit autotools db-use eutils perl-app toolchain-funcs
 
 MY_PV=${PV/_/}
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.cyrusimap.org/cyrus-imapd/cyrus-imapd-${MY_PV}.tar.gz"
 
 LICENSE="BSD-with-attribution"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc x86"
 IUSE="berkdb kerberos ssl"
 
 RDEPEND=">=dev-lang/perl-5.6.1
@@ -31,6 +31,15 @@ S="${WORKDIR}/cyrus-imapd-${MY_PV}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.4.10-ldflags.patch"
+	sed -i -e "s/ar cr/$(tc-getAR) cr/" \
+		perl/sieve/lib/Makefile.in \
+		imap/Makefile.in \
+		lib/Makefile.in \
+		installsieve/Makefile.in \
+		com_err/et/Makefile.in \
+		sieve/Makefile.in \
+		syslog/Makefile.in
+	eautoreconf
 }
 
 src_configure() {
