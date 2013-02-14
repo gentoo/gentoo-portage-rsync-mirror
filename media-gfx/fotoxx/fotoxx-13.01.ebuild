@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-13.01.ebuild,v 1.1 2013/01/02 08:26:00 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-13.01.ebuild,v 1.2 2013/02/14 12:40:38 pinkbyte Exp $
 EAPI=4
 inherit eutils toolchain-funcs fdo-mime
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.kornelix.com/uploads/1/3/0/3/13035936/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="x11-libs/gtk+:3
