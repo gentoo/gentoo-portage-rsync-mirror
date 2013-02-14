@@ -1,6 +1,12 @@
 # ChangeLog for app-text/xournal
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.40 2012/07/05 22:53:15 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.42 2013/02/14 20:19:46 ago Exp $
+
+  14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> xournal-0.4.7.ebuild:
+  Stable for x86, wrt bug #457522
+
+  14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> xournal-0.4.7.ebuild:
+  Stable for amd64, wrt bug #457522
 
 *xournal-0.4.7 (05 Jul 2012)
 
@@ -196,4 +202,3 @@
   
   Ebuild based on contributions by Saleem Abdulrasool, Casey Link, Joachim
   Langenbach, Gautam Iyer and John Troxler.
-

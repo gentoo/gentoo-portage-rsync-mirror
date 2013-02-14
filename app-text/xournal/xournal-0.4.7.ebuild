@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.7.ebuild,v 1.2 2012/07/09 02:34:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.7.ebuild,v 1.4 2013/02/14 20:19:46 ago Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="+pdf vanilla"
 
 if [[ "${PV}" != "9999" ]]; then
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz !vanilla? ( http://dev.gentoo.org/~dilfridge/distfiles/${PN}-${PVR}-gentoo.patch.xz )"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 else
 	inherit git-2
 	SRC_URI=""

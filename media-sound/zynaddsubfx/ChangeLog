@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/zynaddsubfx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/ChangeLog,v 1.43 2012/11/27 11:49:11 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/ChangeLog,v 1.45 2013/02/14 20:21:11 ago Exp $
+
+  14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> zynaddsubfx-2.4.3.ebuild:
+  Stable for x86, wrt bug #457406
+
+  14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> zynaddsubfx-2.4.3.ebuild:
+  Stable for amd64, wrt bug #457406
 
   27 Nov 2012; Alexis Ballier <aballier@gentoo.org> zynaddsubfx-2.4.3.ebuild,
   +files/zynaddsubfx-2.4.3-nofltk.patch:
@@ -214,4 +220,3 @@
   
   Build still a little rough, configure and configuration / build scripts
   have to be patched. Still, very cool synth.
-

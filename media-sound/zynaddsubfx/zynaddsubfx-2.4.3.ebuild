@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.4.3.ebuild,v 1.2 2012/11/27 11:49:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.4.3.ebuild,v 1.4 2013/02/14 20:21:11 ago Exp $
 
 EAPI=4
 inherit eutils cmake-utils
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/zynaddsubfx/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="alsa +fltk jack lash"
 
 RDEPEND=">=dev-libs/mini-xml-2.2.1
