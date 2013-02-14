@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.87 2013/01/19 12:21:55 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.88 2013/02/14 13:14:36 ago Exp $
+
+  14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> java-sdk-docs-1.7.0.11.ebuild:
+  Stable for x86, wrt bug #455174
 
 *java-sdk-docs-1.7.0.11 (19 Jan 2013)
 

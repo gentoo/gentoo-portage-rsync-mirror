@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.7.0.11.ebuild,v 1.1 2013/01/19 12:21:55 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.7.0.11.ebuild,v 1.2 2013/02/14 13:14:36 ago Exp $
 
 ORIG_NAME="jdk-7u11-apidocs.zip"
 SRC_URI="${ORIG_NAME}"
@@ -9,7 +9,7 @@ DESCRIPTION="Oracle's documentation bundle (including API) for Java SE"
 HOMEPAGE="http://download.oracle.com/javase/7/docs/"
 LICENSE="oracle-java-documentation-7"
 SLOT="1.7"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND=""
