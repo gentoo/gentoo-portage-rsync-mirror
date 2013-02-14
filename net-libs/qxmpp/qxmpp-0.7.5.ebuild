@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-0.7.5.ebuild,v 1.1 2013/01/14 16:53:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/qxmpp-0.7.5.ebuild,v 1.3 2013/02/14 14:34:21 pinkbyte Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://qxmpp.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux"
 IUSE="debug doc test"
 
 RDEPEND="x11-libs/qt-core:4
@@ -43,6 +43,6 @@ src_install() {
 	qt4-r2_src_install
 	if use doc; then
 		# Use proper path for documentation
-		mv "${ED}"/usr/share/doc/${PN} "${ED}"/usr/share/doc/${P} || die "doc mv failed"
+		mv "${ED}"/usr/share/doc/${PN} "${ED}"/usr/share/doc/${PF} || die "doc mv failed"
 	fi
 }

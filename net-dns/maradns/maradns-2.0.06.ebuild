@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-2.0.06.ebuild,v 1.3 2012/07/11 11:00:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-2.0.06.ebuild,v 1.4 2013/02/14 14:47:43 mgorny Exp $
 
 EAPI="4"
-inherit eutils toolchain-funcs flag-o-matic user
+inherit eutils toolchain-funcs flag-o-matic systemd user
 
 DEADWOOD_VER="3.2.02"
 
@@ -86,6 +86,13 @@ src_install() {
 	if ! use authonly; then
 		newinitd "${FILESDIR}"/deadwood deadwood
 	fi
+
+	# systemd unit
+	# please keep paths in sync!
+	sed -e "s^@bindir@^${EPREFIX}/usr/sbin^" \
+		-e "s^@sysconfdir@^${EPREFIX}/etc/maradns^" \
+		"${FILESDIR}"/maradns.service.in > "${T}"/maradns.service
+	systemd_dounit "${T}"/maradns.service
 }
 
 pkg_postinst() {
