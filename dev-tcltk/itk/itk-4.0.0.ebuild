@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/itk-4.0_beta6.ebuild,v 1.1 2013/01/13 12:41:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/itk-4.0.0.ebuild,v 1.1 2013/02/14 17:17:38 jlec Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}${MY_PV}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-install_data.patch
+#	epatch "${FILESDIR}"/${P}-install_data.patch
 	AT_M4DIR=.. eautoconf
 	sed 's:-pipe::g' -i configure || die
 }
