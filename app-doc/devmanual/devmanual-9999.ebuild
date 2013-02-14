@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-9999.ebuild,v 1.4 2013/02/07 21:28:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-9999.ebuild,v 1.5 2013/02/14 21:14:31 pacho Exp $
 
 EAPI=5
 
-inherit git-2
+inherit git-2 readme.gentoo
 
 DESCRIPTION="The Gentoo Development Guide"
 HOMEPAGE="http://devmanual.gentoo.org/"
@@ -20,20 +20,23 @@ IUSE=""
 DEPEND="dev-libs/libxslt
 	media-gfx/imagemagick[truetype]"
 
+DOC_CONTENTS="In order to browse the Gentoo Development Guide in
+	offline mode, point your browser to the following url:
+	/usr/share/doc/devmanual-9999/html/index.html"
+
 src_install() {
 	dohtml -r *
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
-	elog
-	elog "In order to browse the Gentoo Development Guide in"
-	elog "offline mode, point your browser to the following url:"
-	elog "/usr/share/doc/devmanual-9999/html/index.html"
-	elog
-	elog "The offline version of the devmanual does not include the"
-	elog "documentation for the eclasses. If you need it, then emerge"
-	elog "the following package:"
-	elog
-	elog "app-portage/eclass-manpages"
-	elog
+	readme.gentoo_print_elog
+	if ! has_version app-portage/eclass-manpages; then
+		elog "The offline version of the devmanual does not include the"
+		elog "documentation for the eclasses. If you need it, then emerge"
+		elog "the following package:"
+		elog
+		elog "app-portage/eclass-manpages"
+		elog
+	fi
 }

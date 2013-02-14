@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/devmanual
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/ChangeLog,v 1.4 2013/02/07 21:28:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/ChangeLog,v 1.5 2013/02/14 21:14:31 pacho Exp $
+
+  14 Feb 2013; Pacho Ramos <pacho@gentoo.org> devmanual-9999.ebuild:
+  Don't show elog messages always (#457596)
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> devmanual-9999.ebuild:
   Move Creative Commons licenses to shorter names.

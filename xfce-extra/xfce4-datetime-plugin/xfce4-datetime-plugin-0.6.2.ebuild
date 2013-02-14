@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime-plugin/xfce4-datetime-plugin-0.6.1-r1.ebuild,v 1.1 2012/12/17 23:09:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime-plugin/xfce4-datetime-plugin-0.6.2.ebuild,v 1.1 2013/02/14 21:22:27 ssuominen Exp $
 
 EAPI=5
-EAUTORECONF=1
 inherit xfconf
 
 DESCRIPTION="A panel plug-in with date, time and embedded calender"
@@ -25,22 +24,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
-	PATCHES=( "${FILESDIR}"/${P}-port-to-libxfce4ui.patch )
-
 	XFCONF=(
-		--disable-static
 		$(xfconf_use_debug)
 		)
 
 	DOCS=( AUTHORS ChangeLog NEWS THANKS )
-}
-
-src_prepare() {
-	# http://bugzilla.xfce.org/show_bug.cgi?id=9654
-	sed -i -e '/Encoding/d' panel-plugin/datetime.desktop.in.in || die
-
-	# http://bugzilla.xfce.org/show_bug.cgi?id=8064#c2
-	sed -i -e 's:BM_DEBUG_SUPPORT:XDT_FEATURE_DEBUG:' configure.in || die
-
-	xfconf_src_prepare
 }
