@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.177 2013/02/12 20:24:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.178 2013/02/14 05:46:18 jer Exp $
+
+  14 Feb 2013; Jeroen Roovers <jer@gentoo.org> tcl-8.5.13-r1.ebuild:
+  Stable for HPPA (bug #456408).
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tcl-8.5.13-r1.ebuild:
   Stable for sparc, wrt bug #456408
