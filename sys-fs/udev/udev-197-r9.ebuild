@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r8.ebuild,v 1.3 2013/02/14 18:17:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r9.ebuild,v 1.1 2013/02/14 18:17:25 ssuominen Exp $
 
 EAPI=4
 
@@ -410,11 +410,11 @@ pkg_postinst()
 		[[ -f ${net_rules} ]] || cp "${ROOT}"usr/share/doc/${PF}/gentoo/80-net-name-slot.rules "${net_rules}"
 	}
 
-#	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 197 ]]; then
-#		ewarn "Because this is a upgrade we disable the new predictable network interface"
-#		ewarn "name scheme by default."
+	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 197 ]]; then
+		ewarn "Because this is a upgrade we disable the new predictable network interface"
+		ewarn "name scheme by default."
 		copy_net_rules
-#	fi
+	fi
 
 	if has_version sys-apps/biosdevname; then
 		ewarn "Because sys-apps/biosdevname is installed we disable the new predictable"
