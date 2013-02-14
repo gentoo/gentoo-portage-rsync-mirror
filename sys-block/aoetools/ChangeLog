@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/aoetools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.41 2012/10/27 04:23:42 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.42 2013/02/14 11:58:14 ago Exp $
+
+  14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> aoetools-35.ebuild:
+  Stable for amd64, wrt bug #457472
 
 *aoetools-35 (27 Oct 2012)
 
@@ -160,4 +163,3 @@
   16 Sep 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +aoetools-7.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-
