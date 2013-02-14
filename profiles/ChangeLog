@@ -1,15 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7495 2013/02/14 22:29:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7496 2013/02/14 22:33:47 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
-  14 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> updates/1Q-2013,
-  package.mask:
-  Move rt61-firmware from net-wireless/ to sys-firmware/ category and unmask it
-  by request from Jakob Juhnke <jakob.juhnke AT s2007.tu-chemnitz.de>
+  14 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> updates/1Q-2013:
+  Move rt61-firmware from net-wireless/ to sys-firmware/ category.
 
   14 Feb 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
   Add ree18-only virtuals to the ruby-enterprise mask.

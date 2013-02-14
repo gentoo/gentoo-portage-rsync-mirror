@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14470 2013/02/14 22:29:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14471 2013/02/14 22:33:47 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -128,6 +128,7 @@ net-wireless/libertas-firmware
 net-wireless/rt2860-firmware
 net-wireless/rt2870-firmware
 net-wireless/rt73-firmware
+sys-firmware/rt61-firmware
 net-wireless/i2400m-fw
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
