@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.139 2013/02/08 14:05:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.140 2013/02/14 21:01:11 aballier Exp $
 
 EAPI=4
 
@@ -61,7 +61,7 @@ RDEPEND+="
 	sys-libs/ncurses
 	app-arch/bzip2
 	sys-libs/zlib
-	>=media-video/ffmpeg-0.11.1
+	|| ( >=media-video/ffmpeg-1.0 >=media-video/libav-9 )
 	!bindist? (
 		x86? (
 			win32codecs? ( media-libs/win32codecs )

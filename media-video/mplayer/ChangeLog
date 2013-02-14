@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.881 2013/02/08 14:05:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.882 2013/02/14 21:01:11 aballier Exp $
+
+  14 Feb 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  It seems fine with libav-9 so allow it in the deps
 
   08 Feb 2013; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   Merge all binary codec support under win32codecs useflag
