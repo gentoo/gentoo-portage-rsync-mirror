@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-1.0.2-r1.ebuild,v 1.1 2013/01/03 09:34:18 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-1.0.2-r1.ebuild,v 1.2 2013/02/14 19:57:00 eras Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs user
@@ -158,7 +158,7 @@ src_compile() {
 	emake LIBS="${LIBS} -lcrypt" \
 		CFLAGS="${CFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
-		CC=$(tc-getCC) || die "emake failed"
+		CC=$(tc-getCC)
 }
 
 src_install() {
