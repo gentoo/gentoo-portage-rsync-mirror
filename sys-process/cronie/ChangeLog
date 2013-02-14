@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/cronie
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.33 2013/02/06 19:49:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.34 2013/02/14 16:06:12 polynomial-c Exp $
+
+  14 Feb 2013; Lars Wendler <polynomial-c@gentoo.org> -files/cronie-1.2-initd,
+  -cronie-1.4.8.ebuild:
+  Removed old.
 
   06 Feb 2013; Agostino Sarubbo <ago@gentoo.org> cronie-1.4.9-r4.ebuild:
   Stable for sparc, wrt bug #453364

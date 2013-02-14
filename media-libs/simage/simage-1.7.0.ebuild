@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/simage/simage-1.7.0.ebuild,v 1.6 2012/05/05 08:02:35 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/simage/simage-1.7.0.ebuild,v 1.7 2013/02/14 16:20:35 ago Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.coin3d.org/lib/simage/"
 SRC_URI="ftp://ftp.coin3d.org/pub/coin/src/all/${P}.tar.gz"
 
 LICENSE="public-domain as-is"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 SLOT="0"
 IUSE="debug gif jpeg jpeg2k png sndfile static-libs tiff vorbis zlib"
 

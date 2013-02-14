@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qtractor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.47 2013/01/13 21:02:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.48 2013/02/14 16:02:25 aballier Exp $
+
+  14 Feb 2013; Alexis Ballier <aballier@gentoo.org> qtractor-0.5.7.ebuild:
+  drop gtkstyle usedep on qt-gui, its not needed anymore, bug #453312 by
+  josedavidmj-gentoo@yahoo.es
 
 *qtractor-0.5.7 (13 Jan 2013)
 

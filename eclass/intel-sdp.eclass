@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.10 2013/02/14 08:17:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.11 2013/02/14 16:29:00 jlec Exp $
 
 # @ECLASS: intel-sdp.eclass
 # @MAINTAINER:
@@ -46,6 +46,12 @@
 # @DESCRIPTION:
 # The package sub-directory where it will end-up in /opt/intel
 # To find out its value, you have to do a raw install from the Intel tar ball
+
+# @ECLASS-VARIABLE: INTEL_SKIP_LICENSE
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# Possibility to skip the mandatory check for licenses. Only set this if there
+# is really no fix.
 
 # @ECLASS-VARIABLE: INTEL_RPMS_DIRS
 # @DESCRIPTION:
@@ -238,13 +244,15 @@ _isdp_version_test() {
 # @INTERNAL
 # Test if installed compiler is working
 _isdp_run-test() {
-	case ${PN} in
-		ifc | icc )
-			_isdp_version_test ;;
-		* )
-			debug-print "No test available for ${PN}"
-			;;
-	esac
+	if [[ -z ${INTEL_SKIP_LICENSE} ]]; then
+		case ${PN} in
+			ifc | icc )
+				_isdp_version_test ;;
+			* )
+				debug-print "No test available for ${PN}"
+				;;
+		esac
+	fi
 }
 
 # @FUNCTION: intel-sdp_pkg_pretend
@@ -259,30 +267,35 @@ intel-sdp_pkg_pretend() {
 	: ${CHECKREQS_DISK_BUILD:=256M}
 	check-reqs_pkg_pretend
 
-	if echo ${INTEL_LICENSE_FILE} | grep -q @; then
-		einfo "Looks like you are using following license server:"
-		einfo "   ${INTEL_LICENSE_FILE}"
-		return 0
-	fi
-
-	dirs=(
-		"${INTEL_SDP_EDIR}/licenses"
-		"${INTEL_SDP_EDIR}/Licenses"
-		"${EPREFIX}/opt/intel/licenses"
-		)
-	for dir in "${dirs[@]}" ; do
-		ebegin "Checking for a license in: ${dir}"
-		#maybe use nullglob or [[ $(echo ${dir/*lic) != "${dir}/*lic" ]]
-		[[ $( ls "${dir}"/*lic 2>/dev/null ) ]]; ret=$?
-		eend ${ret}
-		if [[ ${ret} == "0" ]]; then
-			warn=${ret}
-			break
+	if [[ -z ${INTEL_SKIP_LICENSE} ]]; then
+		if echo ${INTEL_LICENSE_FILE} | grep -q @; then
+			einfo "Looks like you are using following license server:"
+			einfo "   ${INTEL_LICENSE_FILE}"
+			return 0
 		fi
-	done
-	if [[ ${warn} == "1" ]]; then
-		_isdp_big-warning pre-check
-		die "Could not find license file"
+
+		dirs=(
+			"${INTEL_SDP_EDIR}/licenses"
+			"${INTEL_SDP_EDIR}/Licenses"
+			"${EPREFIX}/opt/intel/licenses"
+			)
+		for dir in "${dirs[@]}" ; do
+			ebegin "Checking for a license in: ${dir}"
+			#maybe use nullglob or [[ $(echo ${dir/*lic) != "${dir}/*lic" ]]
+			[[ $( ls "${dir}"/*lic 2>/dev/null ) ]]; ret=$?
+			eend ${ret}
+			if [[ ${ret} == "0" ]]; then
+				warn=${ret}
+				break
+			fi
+		done
+		if [[ ${warn} == "1" ]]; then
+			_isdp_big-warning pre-check
+			die "Could not find license file"
+		fi
+	else
+		eqawarn "The ebuild doesn't check for a license!"
+		eqawarn "This shouldn't be done unless there is a serious reason."
 	fi
 }
 

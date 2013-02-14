@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.676 2013/02/14 08:17:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.677 2013/02/14 16:29:00 jlec Exp $
+
+  14 Feb 2013; Justin Lecher <jlec@gentoo.org> intel-sdp.eclass:
+  Make it possible to bypass license check from ebuilds
 
   14 Feb 2013; Justin Lecher <jlec@gentoo.org> intel-sdp.eclass:
   Drop KEYWORDS from eclass, #342185

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.5.7.ebuild,v 1.1 2013/01/13 21:02:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.5.7.ebuild,v 1.2 2013/02/14 16:02:25 aballier Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug dssi libsamplerate mad osc rubberband vorbis suil sse zlib"
 
 RDEPEND=">=x11-libs/qt-core-4.2:4
-	>=x11-libs/qt-gui-4.7:4[gtkstyle]
+	>=x11-libs/qt-gui-4.7:4
 	media-libs/alsa-lib
 	media-libs/libsndfile
 	media-sound/jack-audio-connection-kit

@@ -5,7 +5,6 @@
   <use>
     <flag name="coreaudio">Build the CoreAudio driver on Mac OS X systems</flag>
     <flag name="cpudetection">Enables runtime cpudetection</flag>
-    <flag name="netjack">Build with support for Realtime Audio Transport over generic IP</flag>
 	<flag name="pam">Add basic realime configuration via <pkg>sys-auth/realtime-base</pkg></flag>
   </use>
 </pkgmetadata>
