@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/WiRouterKeyRec/WiRouterKeyRec-1.1.2.ebuild,v 1.1 2013/01/02 17:28:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/WiRouterKeyRec/WiRouterKeyRec-1.1.2.ebuild,v 1.2 2013/02/14 10:33:30 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ DESCRIPTION="Recovery tool for wpa passphrase"
 HOMEPAGE="http://www.salvatorefresta.net"
 SRC_URI="http://tools.salvatorefresta.net/${MY_P}.zip -> ${P}.zip"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"

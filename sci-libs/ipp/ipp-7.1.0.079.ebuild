@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ipp-7.1.0.079.ebuild,v 1.1 2012/10/09 20:38:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ipp-7.1.0.079.ebuild,v 1.2 2013/02/14 10:32:13 jlec Exp $
 
 EAPI=4
+
 INTEL_DPN=parallel_studio_xe
 INTEL_DID=2749
 INTEL_DPV=2013
@@ -14,8 +15,10 @@ DESCRIPTION="Intel Integrated Performance Primitive library for multimedia and d
 HOMEPAGE="http://software.intel.com/en-us/articles/intel-ipp/"
 
 IUSE=""
-DEPEND=""
+KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
+
 RDEPEND=">=dev-libs/intel-common-13"
+DEPEND=""
 
 CHECKREQS_DISK_BUILD=3000M
 
