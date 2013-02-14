@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/linux-sources-1.ebuild,v 1.1 2013/02/14 13:31:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/linux-sources-1.ebuild,v 1.2 2013/02/14 15:21:59 jer Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~x86"
 IUSE="firmware"
 
 DEPEND="firmware? ( sys-kernel/linux-firmware )"

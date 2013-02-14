@@ -1,6 +1,9 @@
 # ChangeLog for virtual/linux-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.17 2013/02/14 13:31:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.18 2013/02/14 15:21:59 jer Exp $
+
+  14 Feb 2013; Jeroen Roovers <jer@gentoo.org> linux-sources-1.ebuild:
+  Marked ~hppa (bug #457082).
 
 *linux-sources-1 (14 Feb 2013)
 

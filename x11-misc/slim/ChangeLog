@@ -1,6 +1,21 @@
 # ChangeLog for x11-misc/slim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.104 2013/02/12 20:22:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.105 2013/02/14 15:23:11 axs Exp $
+
+*slim-1.3.5-r2 (14 Feb 2013)
+
+  14 Feb 2013; Ian Stakenvicius <axs@gentoo.org>
+  +files/slim-1.3.5-honour-cflags.patch, +slim-1.3.5-r2.ebuild,
+  -files/14509-fix-keyboard-in-tty-from-which-slim-is-lauched.patch,
+  -files/15287-fix-pam-authentication-with-pam_unix2.patch,
+  -files/252280-fix-default_user-focus_passwd.patch,
+  -files/261359-fix-SIGTERM-freeze.patch,
+  -files/261713-restart-xserver-if-killed.patch,
+  -files/346037-stop_setting_host_for_pam_ck_connector_so.patch,
+  -files/slim-1.3.2-bsd-install.patch, -files/slim-1.3.2-ck.patch,
+  -files/slim-1.3.2-libpng15.patch, -files/slim-1.3.2-r3-config.diff,
+  -slim-1.3.2-r7.ebuild:
+  remove old, fix cflags override (bug 456144)
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> slim-1.3.5-r1.ebuild:
   Stable for sparc, wrt bug #455856

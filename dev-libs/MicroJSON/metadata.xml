@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>gorelov@grigory.info</email>
+    <name>Gorelov Grigory</name>
+    <description>Maintainer and upstream developer.</description>
+  </maintainer>
+  <maintainer>
+    <email>TomWij@gentoo.org</email>
+    <name>Tom Wijsman</name>
+    <description>Committer, please CC him.</description>
+  </maintainer>
+  <longdescription>
+    Small and simple to use JSON generation and parsing library.
+  </longdescription>
+</pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/asymptote
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.100 2012/10/11 14:25:36 grozin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.101 2013/02/14 15:12:34 ago Exp $
+
+  14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> asymptote-2.21.ebuild:
+  Stable for amd64, wrt bug #456940
 
 *asymptote-2.21 (11 Oct 2012)
 
@@ -775,4 +778,3 @@
   +asymptote-1.20.ebuild:
   Initial version, fixes Bug 82871, thanks to 
   Emiliano Vavassori for the ebuild and patches.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/intel-common/intel-common-13.1.2.146.ebuild,v 1.1 2013/02/14 14:47:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/intel-common/intel-common-13.1.2.146.ebuild,v 1.2 2013/02/14 15:11:22 jlec Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://software.intel.com/en-us/articles/intel-compilers/"
 IUSE="+compiler"
 KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
 
-CHECKREQS_DISK_BUILD=325M
+CHECKREQS_DISK_BUILD=375M
 
 pkg_setup() {
 	einfo ${INTEL_SDP_EDIR}
