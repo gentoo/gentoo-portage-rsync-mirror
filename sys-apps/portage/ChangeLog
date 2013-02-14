@@ -1,6 +1,20 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1200 2013/02/12 04:10:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1202 2013/02/14 06:04:40 zmedico Exp $
+
+*portage-2.2.0_alpha163 (14 Feb 2013)
+
+  14 Feb 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha163.ebuild:
+  2.2.0_alpha163 version bump. This includes all of the fixes in 2.1.11.52. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.11.52 (14 Feb 2013)
+
+  14 Feb 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.52.ebuild:
+  2.1.11.52 version bump. This fixes bug #457142 (regression in 2.1.11.51 and
+  2.2.0_alpha162 which triggers slot conflicts involving built slot-operator
+  dependencies) and bug #457034 (repoman warning if FEATURES=sign is not enabled
+  for commit. Bug #456888 tracks all bugs fixed since portage-2.1.11.50.
 
 *portage-2.2.0_alpha162 (12 Feb 2013)
 
