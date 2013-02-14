@@ -1,25 +1,21 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze-coreplugins/vuze-coreplugins-4.7.0.0.ebuild,v 1.1 2011/11/17 23:27:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze-coreplugins/vuze-coreplugins-4.8.1.2.ebuild,v 1.1 2013/02/14 04:42:55 dirtyepic Exp $
 
 # eventually this should be built from source...
 
-EAPI=2
+EAPI=5
 
-inherit eutils
+# don't forget to update these when bumping the version
+PLUGINS_V=2.1.7  # http://www.vuze.com/plugins/details/azplugins
+RATING_V=1.3.1   # http://www.vuze.com/plugins/details/azrating
+UPDATER_V=1.8.17 # http://www.vuze.com/plugins/details/azupdater
+UPNPAV_V=0.4.6   # http://www.vuze.com/plugins/details/azupnpav
 
-PLUGINS_N=azplugins
-RATING_N=azrating
-UPDATER_N=azupdater
-UPNPAV_N=azupnpav
-PLUGINS_V=2.1.6
-RATING_V=1.3.1
-UPDATER_V=1.8.17
-UPNPAV_V=0.3.8
-PLUGINS_DIST=${PLUGINS_N}_${PLUGINS_V}.jar
-RATING_DIST=${RATING_N}_${RATING_V}.jar
-UPDATER_DIST=${UPDATER_N}_${UPDATER_V}.zip
-UPNPAV_DIST=${UPNPAV_N}_${UPNPAV_V}.zip
+PLUGINS_DIST=azplugins_${PLUGINS_V}.jar
+RATING_DIST=azrating_${RATING_V}.jar
+UPDATER_DIST=azupdater_${UPDATER_V}.zip
+UPNPAV_DIST=azupnpav_${UPNPAV_V}.zip
 
 ALLPLUGINS_URL="http://azureus.sourceforge.net/plugins"
 
@@ -43,11 +39,11 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 src_unpack() {
-	mkdir -p plugins/{${PLUGINS_N},${RATING_N},${UPDATER_N},${UPNPAV_N}} || die
-	cp "${DISTDIR}/${PLUGINS_DIST}" plugins/${PLUGINS_N} || die
-	cp "${DISTDIR}/${RATING_DIST}" plugins/${RATING_N} || die
-	cd "${WORKDIR}/plugins/${UPDATER_N}" && unpack ${UPDATER_DIST} || die
-	cd "${WORKDIR}/plugins/${UPNPAV_N}" && unpack ${UPNPAV_DIST} || die
+	mkdir -p plugins/{azplugins,azrating,azupdater,azupnpav} || die
+	cp "${DISTDIR}"/${PLUGINS_DIST} plugins/azplugins || die
+	cp "${DISTDIR}"/${RATING_DIST} plugins/azrating || die
+	cd "${WORKDIR}"/plugins/azupdater && unpack ${UPDATER_DIST} || die
+	cd "${WORKDIR}"/plugins/azupnpav && unpack ${UPNPAV_DIST} || die
 }
 
 src_compile() { :; }
@@ -63,5 +59,5 @@ pkg_postinst() {
 	elog "are now installed into shared plugin directory by the ebuild."
 	elog "Vuze may warn that shared plugin dir is not writable, that's fine."
 	elog "Users are recommended to delete the following plugin copies:"
-	elog "~/.azureus/plugins/{${PLUGINS_N},${RATING_N},${UPDATER_N},${UPNPAV_N}}"
+	elog "~/.azureus/plugins/{azplugins,azrating,azupdater,azupnpav}"
 }

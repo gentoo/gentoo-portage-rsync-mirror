@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.16.ebuild,v 1.4 2013/02/13 16:42:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.16.ebuild,v 1.5 2013/02/14 04:58:12 jer Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -35,6 +35,7 @@ DEPEND="
 	x11-proto/xproto
 "
 
+RESTRICT="test"
 REQUIRED_USE="vanilla? ( !alt-font-width !buffer-on-clear focused-urgency !secondary-wheel !wcwidth )"
 
 src_prepare() {
