@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/intel-common/intel-common-13.0.1.117.ebuild,v 1.2 2012/12/10 21:15:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/intel-common/intel-common-13.0.1.117.ebuild,v 1.3 2013/02/14 08:11:29 jlec Exp $
 
 EAPI=4
 
@@ -15,6 +15,7 @@ DESCRIPTION="Common libraries and utilities needed for Intel compilers and libra
 HOMEPAGE="http://software.intel.com/en-us/articles/intel-compilers/"
 
 IUSE="+compiler"
+KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 CHECKREQS_DISK_BUILD=325M
 

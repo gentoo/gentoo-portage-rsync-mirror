@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.675 2013/02/12 12:59:45 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.676 2013/02/14 08:17:35 jlec Exp $
+
+  14 Feb 2013; Justin Lecher <jlec@gentoo.org> intel-sdp.eclass:
+  Drop KEYWORDS from eclass, #342185
 
   12 Feb 2013; Michael Haubenwallner <haubi@gentoo.org>
   ELT-patches/aixrtl/1.5.0-cmds-c:

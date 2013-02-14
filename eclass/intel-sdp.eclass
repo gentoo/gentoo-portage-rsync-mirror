@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.9 2013/01/23 11:14:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.10 2013/02/14 08:17:35 jlec Exp $
 
 # @ECLASS: intel-sdp.eclass
 # @MAINTAINER:
@@ -98,7 +98,6 @@ LICENSE="Intel-SDP"
 #SLOT="${_INTEL_PV1}.${_INTEL_PV2}"
 SLOT="0"
 IUSE="examples multilib"
-KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 RESTRICT="mirror"
 
