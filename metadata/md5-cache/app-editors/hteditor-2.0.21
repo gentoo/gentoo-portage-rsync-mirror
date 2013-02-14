@@ -4,10 +4,10 @@ DESCRIPTION=A file viewer, editor and analyzer for text, binary, and executable 
 EAPI=5
 HOMEPAGE=http://hte.sourceforge.net/
 IUSE=X
-KEYWORDS=amd64 ~ppc ~ppc64 x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
+KEYWORDS=amd64 ~ppc ppc64 x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
 LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses X? ( x11-libs/libX11 ) >=dev-libs/lzo-2
 SLOT=0
 SRC_URI=mirror://sourceforge/hte/ht-2.0.21.tar.bz2
 _eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=ab7133117cfe3971bad00af48f15348a
+_md5_=f9f90541856b89a9eabb918e8a96689e

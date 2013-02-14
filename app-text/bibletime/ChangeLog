@@ -1,6 +1,9 @@
 # ChangeLog for app-text/bibletime
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.67 2012/10/01 11:33:28 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.68 2013/02/14 21:55:47 creffett Exp $
+
+  14 Feb 2013; Chris Reffett <creffett@gentoo.org> bibletime-2.9.1.ebuild:
+  Bump EAPI, add subslot dep on icu wrt bug 455900.
 
   01 Oct 2012; Johannes Huber <johu@gentoo.org> -bibletime-2.3.3.ebuild:
   Remove old.

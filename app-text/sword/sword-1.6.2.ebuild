@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.6.2.ebuild,v 1.8 2012/09/16 19:00:59 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.6.2.ebuild,v 1.9 2013/02/14 21:59:25 creffett Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils flag-o-matic
 
 DESCRIPTION="Library for Bible reading software."
@@ -16,7 +16,7 @@ IUSE="curl debug doc icu static-libs"
 
 RDEPEND="sys-libs/zlib
 	curl? ( net-misc/curl )
-	icu? ( dev-libs/icu )"
+	icu? ( dev-libs/icu:= )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

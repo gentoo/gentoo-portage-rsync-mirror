@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-2.9.1.ebuild,v 1.5 2012/09/08 11:20:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-2.9.1.ebuild,v 1.6 2013/02/14 21:55:47 creffett Exp $
 
-EAPI=4
+EAPI=5
 inherit cmake-utils
 
 DESCRIPTION="Qt4 Bible study application using the SWORD library."
@@ -27,7 +27,7 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	dev-libs/boost
-	dev-libs/icu
+	dev-libs/icu:=
 	net-misc/curl
 	sys-libs/zlib
 	x11-libs/qt-test:4"
