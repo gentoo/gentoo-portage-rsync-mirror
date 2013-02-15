@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-3.10.2.0-r1.ebuild,v 1.3 2013/01/31 18:42:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-3.10.2.0-r1.ebuild,v 1.4 2013/02/15 22:01:15 ottxor Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 #GoogleTalkPlugin binary contains openssl and celt
 LICENSE="Google-TOS openssl BSD"
-RESTRICT="strip mirror"
+RESTRICT="fetch strip"
 
 RDEPEND="|| ( media-sound/pulseaudio media-libs/alsa-lib )
 	dev-libs/glib:2
@@ -75,9 +75,12 @@ done
 
 # nofetch means upstream bumped and thus needs version bump
 pkg_nofetch() {
-	einfo "This version is no longer available from Google."
-	einfo "Note that Gentoo cannot mirror the distfiles due to license reasons, so we have to follow the bump."
-	einfo "Please file a version bump bug on http://bugs.gentoo.org (search	existing bugs for ${PN} first!)."
+	elog "This version is no longer available from Google and the license prevents mirroring."
+	elog "This ebuild is intended for users who already downloaded it previously and have problems"
+	elog "with ${PV}+. If you can get the distfile from e.g. another computer of yours, or search"
+	use amd64 && MY_PKG="${MY_PKG/i386/amd64}"
+	elog "it with google: http://www.google.com/search?q=intitle:%22index+of%22+${MY_PKG}"
+	elog "and copy the file ${MY_PKG} to ${DISTDIR}."
 }
 
 src_unpack() {

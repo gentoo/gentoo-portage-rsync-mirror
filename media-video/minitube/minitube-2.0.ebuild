@@ -1,11 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.0.ebuild,v 1.1 2013/02/10 21:01:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.0.ebuild,v 1.2 2013/02/15 21:55:54 hwoarang Exp $
 
 EAPI=5
-PLOCALES="ar ca ca_ES da de_DE el en es es_AR es_ES fi fi_FI fr gl he_IL hr hu
-ia id it jv ka_GE nb nl nn pl pl_PL pt pt_BR ro ru sk sl sq sr sv_SE tr
-uk_UA zh_CN"
+PLOCALES="ar ca ca_ES da de_DE el en es es_AR es_ES fi fi_FI fr he_IL hr hu
+ia it jv nl pl pl_PL pt_BR ro ru sk sl tr zh_CN"
 
 inherit l10n qt4-r2
 
