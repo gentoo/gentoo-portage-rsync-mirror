@@ -1,6 +1,12 @@
 # ChangeLog for media-video/motion
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.41 2012/06/09 23:36:03 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.42 2013/02/15 19:17:27 aballier Exp $
+
+  15 Feb 2013; Alexis Ballier <aballier@gentoo.org> +files/ffmpeg1.patch,
+  motion-3.2.12-r2.ebuild:
+  Fix build with ffmpeg-1. Disable mpeg1 append code based on the ffurl API as
+  mpeg1 is blacklisted with
+  new ffmpeg versions in this code anyway.
 
   09 Jun 2012; Zac Medico <zmedico@gentoo.org> motion-3.2.12-r2.ebuild:
   inherit user for enewuser

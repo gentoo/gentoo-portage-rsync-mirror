@@ -1,10 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.436 2013/02/11 09:19:44 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.437 2013/02/15 19:21:20 aballier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Alexis Ballier <aballier@gentoo.org> (15 Feb 2013)
+# Needs a huge patch to build against recent releases of FFmpeg/libav.
+# Mask it until upstream fixes it. Bug #417869
+media-sound/audacity ffmpeg
 
 # Julian Ospald <hasufell@gentoo.org> (10 Feb 2013)
 # This flag is experimental and breaks googleearth

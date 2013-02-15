@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.97.ebuild,v 1.5 2013/02/15 18:56:21 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.97.ebuild,v 1.6 2013/02/15 19:06:04 ago Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu-alpha/mailutils/${P}.tar.xz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="amd64 ~hppa ~ppc ~x86 ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~hppa ~ppc x86 ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="berkdb bidi +clients gdbm sasl guile ipv6 kerberos ldap mysql nls pam postgres
 python servers ssl static-libs +threads tcpd tokyocabinet"
 

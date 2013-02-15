@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyquery
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.24 2012/10/13 18:45:57 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.25 2013/02/15 19:20:18 mgorny Exp $
+
+*pyquery-1.2.1-r1 (15 Feb 2013)
+
+  15 Feb 2013; Michał Górny <mgorny@gentoo.org> +pyquery-1.2.1-r1.ebuild:
+  Migrate to distutils-r1.
 
   13 Oct 2012; Raúl Porcel <armin76@gentoo.org> pyquery-0.6.1.ebuild,
   pyquery-1.0.ebuild, pyquery-1.1.1.ebuild, pyquery-1.2.1.ebuild:
@@ -86,4 +91,3 @@
 
   19 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> +pyquery-0.6.1.ebuild:
   Initial commit wrt #339489 by Stefan Talpalaru.
-
