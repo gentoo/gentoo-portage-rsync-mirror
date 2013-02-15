@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/logger/logger-0.ebuild,v 1.4 2013/02/03 05:33:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/logger/logger-0.ebuild,v 1.5 2013/02/15 01:55:57 blueness Exp $
+
+EAPI="2"
 
 DESCRIPTION="Virtual for system loggers"
 HOMEPAGE=""
@@ -20,4 +22,5 @@ RDEPEND="|| (
 	app-admin/syslog-ng
 	app-admin/syslogread
 	sys-freebsd/freebsd-usbin
+	sys-apps/busybox[syslog]
 )"

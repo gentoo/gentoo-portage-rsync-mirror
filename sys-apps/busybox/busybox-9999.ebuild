@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-9999.ebuild,v 1.9 2013/01/22 01:48:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-9999.ebuild,v 1.10 2013/02/15 01:50:54 blueness Exp $
 
 # See `man savedconfig.eclass` for info on how to use USE=savedconfig.
 
@@ -21,7 +21,9 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="ipv6 livecd make-symlinks math mdev -pam selinux sep-usr +static systemd"
+
+# USE=syslog simply satisfies sys-apps/busybox[syslog] in virtual/logger, bug #444718
+IUSE="ipv6 livecd make-symlinks math mdev -pam selinux sep-usr +static syslog systemd"
 RESTRICT="test"
 
 RDEPEND="!static? ( selinux? ( sys-libs/libselinux ) )
