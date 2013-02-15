@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10_p20120903.ebuild,v 1.2 2012/10/31 17:26:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10_p20120903.ebuild,v 1.3 2013/02/15 16:04:48 aballier Exp $
 
 EAPI=4
 CMAKE_REQUIRED="never"
@@ -154,6 +154,11 @@ src_prepare() {
 
 	# Allow building against boost-1.50, bug #425442
 	epatch "${FILESDIR}"/${PN}-0.8.10-boost-1.50.patch
+
+	# fix build with ffmpeg-1 / libav-9, bug #443184
+	epatch "${FILESDIR}/${P}-ffmpeg1.patch" \
+		"${FILESDIR}/${P}-libav9.patch" \
+		"${FILESDIR}/${P}-bytesfmt.patch"
 
 	eautoreconf
 }
