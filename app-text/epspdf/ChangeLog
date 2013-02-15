@@ -1,6 +1,11 @@
 # ChangeLog for app-text/epspdf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/ChangeLog,v 1.11 2012/12/17 20:15:36 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/ChangeLog,v 1.12 2013/02/15 21:24:37 aballier Exp $
+
+*epspdf-0.6.0 (15 Feb 2013)
+
+  15 Feb 2013; Alexis Ballier <aballier@gentoo.org> +epspdf-0.6.0.ebuild:
+  Version bump, rewriten in texlua dropping the ruby dep.
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> epspdf-0.5.3.ebuild:
   Add ~ppc64, wrt bug #428248
