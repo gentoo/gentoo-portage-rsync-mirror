@@ -1,0 +1,19 @@
+Index: mozilla/security/nss/lib/softoken/sdb.c
+===================================================================
+RCS file: /cvsroot/mozilla/security/nss/lib/softoken/sdb.c,v
+retrieving revision 1.30
+diff -u -u -r1.30 sdb.c
+--- mozilla/security/nss/lib/softoken/sdb.c	16 Jan 2013 18:13:25 -0000	1.30
++++ mozilla/security/nss/lib/softoken/sdb.c	4 Feb 2013 19:15:58 -0000
+@@ -254,6 +254,10 @@
+ #error "sdb_getFallbackTempDir not implemented"
+ #endif
+ 
++#ifndef SQLITE_FCNTL_TEMPFILENAME
++#define SQLITE_FCNTL_TEMPFILENAME 16
++#endif
++
+ static char *
+ sdb_getTempDir(sqlite3 *sqlDB)
+ {
+
