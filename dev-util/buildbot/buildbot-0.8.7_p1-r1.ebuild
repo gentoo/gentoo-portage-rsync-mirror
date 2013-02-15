@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.7_p1-r1.ebuild,v 1.1 2013/02/06 18:15:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.7_p1-r1.ebuild,v 1.2 2013/02/15 20:45:27 pacho Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 DISTUTILS_SRC_TEST="trial"
 DISTUTILS_DISABLE_TEST_DEPENDENCY="1"
 
-inherit distutils user
+inherit distutils readme.gentoo user
 
 MY_PV="${PV/_p/p}"
 MY_P="${PN}-${MY_PV}"
@@ -49,6 +49,14 @@ S="${WORKDIR}/${MY_P}"
 pkg_setup() {
 	python_pkg_setup
 	enewuser buildbot
+
+	DOC_CONTENTS="The \"buildbot\" user and the \"buildmaster\" init script has been added
+		to support starting buildbot through Gentoo's init system. To use this,
+		set up your build master following the documentation, make sure the
+		resulting directories are owned by the \"buildbot\" user and point
+		\"${EROOT}etc/conf.d/buildmaster\" at the right location. The scripts can
+		run as a different user if desired. If you need to run more than one
+		build master, just copy the scripts."
 }
 
 src_compile() {
@@ -92,18 +100,13 @@ src_install() {
 	echo "CONFIG_PROTECT=\"${cp}\"" \
 		> 85${PN} || die
 	doenvd 85${PN}
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
 	distutils_pkg_postinst
-
-	elog "The \"buildbot\" user and the \"buildmaster\" init script has been added"
-	elog "to support starting buildbot through Gentoo's init system. To use this,"
-	elog "set up your build master following the documentation, make sure the"
-	elog "resulting directories are owned by the \"buildbot\" user and point"
-	elog "\"${EROOT}etc/conf.d/buildmaster\" at the right location. The scripts can"
-	elog "run as a different user if desired. If you need to run more than one"
-	elog "build master, just copy the scripts."
+	readme.gentoo_print_elog
 	elog
 	elog "Upstream recommends the following when upgrading:"
 	elog "Each time you install a new version of Buildbot, you should run the"

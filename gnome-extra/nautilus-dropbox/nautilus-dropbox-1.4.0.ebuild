@@ -1,10 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-1.4.0.ebuild,v 1.3 2012/08/23 03:16:47 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-1.4.0.ebuild,v 1.4 2013/02/15 20:53:35 pacho Exp $
 
-EAPI="3"
+EAPI="5"
+GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2"
-inherit autotools eutils python linux-info gnome2 user
+
+inherit autotools eutils python linux-info gnome2 readme.gentoo user
 
 DESCRIPTION="Store, Sync and Share Files Online"
 HOMEPAGE="http://www.dropbox.com/"
@@ -27,9 +29,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	dev-python/docutils"
 
-DOCS="AUTHORS ChangeLog NEWS README"
-G2CONF="${G2CONF} $(use_enable debug) --disable-static"
-
 CONFIG_CHECK="~INOTIFY_USER"
 
 pkg_setup () {
@@ -37,9 +36,15 @@ pkg_setup () {
 	enewgroup dropbox
 	python_set_active_version 2
 	python_pkg_setup
+
+	DOC_CONTENTS="Add any users who wish to have access to the dropbox nautilus
+		plugin to the group 'dropbox'. You need to setup a drobox account
+		before using this plugin. Visit ${HOMEPAGE} for more information."
 }
 
 src_prepare() {
+	G2CONF="${G2CONF} $(use_enable debug) --disable-static"
+
 	gnome2_src_prepare
 	python_convert_shebangs 2 dropbox.in
 
@@ -61,18 +66,13 @@ src_install () {
 	# Strip $EPREFIX from $extensiondir as fowners/fperms act on $ED not $D
 	extensiondir="${extensiondir#${EPREFIX}}"
 
-	find "${ED}" -name '*.la' -exec rm -f {} + || die
-
 	use prefix || fowners root:dropbox "${extensiondir}"/libnautilus-dropbox.so
 	fperms o-rwx "${extensiondir}"/libnautilus-dropbox.so
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst () {
 	gnome2_pkg_postinst
-
-	elog
-	elog "Add any users who wish to have access to the dropbox nautilus"
-	elog "plugin to the group 'dropbox'. You need to setup a drobox account"
-	elog "before using this plugin. Visit ${HOMEPAGE} for more information."
-	elog
+	readme.gentoo_print_elog
 }

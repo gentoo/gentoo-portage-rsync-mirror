@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.18.1.ebuild,v 1.1 2013/01/30 19:20:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.18.1.ebuild,v 1.2 2013/02/15 20:50:33 hwoarang Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 INDEX_HELPERS="audio chm djvu dvi exif postscript ics info lyx msdoc msppt msxls pdf rtf tex wordperfect xml"
-IUSE="+spell inotify +qt4 +session camelcase xattr fam ${INDEX_HELPERS}"
+IUSE="+spell inotify +qt4 +session camelcase xattr webkit fam ${INDEX_HELPERS}"
 
 DEPEND="
 	virtual/libiconv
@@ -23,10 +23,8 @@ DEPEND="
 	sys-libs/zlib
 	spell? ( app-text/aspell )
 	!inotify? ( fam? ( virtual/fam ) )
-	qt4? (
-		x11-libs/qt-core:4[qt3support]
-		x11-libs/qt-webkit:4
-		)
+	qt4? ( x11-libs/qt-core:4[qt3support] )
+	webkit? ( x11-libs/qt-webkit:4 )
 	session? (
 		inotify? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE )
 		!inotify? ( fam? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE ) )
@@ -103,7 +101,9 @@ src_prepare() {
 src_configure() {
 	local qtconf
 
-	use qt4 && qtconf="QMAKEPATH=/usr/bin/qmake"
+	if use qt4 || use webkit; then
+		qtconf="QMAKEPATH=/usr/bin/qmake"
+	fi
 
 	econf \
 		$(use_with spell aspell) \
@@ -115,7 +115,9 @@ src_configure() {
 		$(use_with inotify) \
 		$(use_enable session x11mon) \
 		${qtconf}
-	cd qtgui && eqmake4 ${PN}.pro && cd ..
+	if use qt4; then
+		cd qtgui && eqmake4 ${PN}.pro && cd ..
+	fi
 }
 
 src_compile() {

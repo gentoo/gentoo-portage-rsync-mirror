@@ -1,15 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/buildbot-slave-0.8.7_p1.ebuild,v 1.1 2013/01/26 15:50:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/buildbot-slave-0.8.7_p1.ebuild,v 1.2 2013/02/15 20:34:54 pacho Exp $
 
-EAPI="3"
+EAPI="5"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 DISTUTILS_SRC_TEST="trial buildslave"
 DISTUTILS_DISABLE_TEST_DEPENDENCY="1"
 
-inherit distutils user
+inherit distutils readme.gentoo user
 
 DESCRIPTION="BuildBot Slave Daemon"
 HOMEPAGE="http://trac.buildbot.net/ http://code.google.com/p/buildbot/ http://pypi.python.org/pypi/buildbot-slave"
@@ -37,25 +37,28 @@ S="${WORKDIR}/${MY_P}"
 pkg_setup() {
 	python_pkg_setup
 	enewuser buildbot
+
+	DOC_CONTENTS="The \"buildbot\" user and the \"buildslave\" init script has been added
+		to support starting buildslave through Gentoo's init system. To use this,
+		set up your build slave following the documentation, make sure the
+		resulting directories are owned by the \"buildbot\" user and point
+		\"${ROOT}etc/conf.d/buildslave\" at the right location.  The scripts can
+		run as a different user if desired. If you need to run more than one
+		build slave, just copy the scripts."
 }
 
 src_install() {
 	distutils_src_install
 
-	doman docs/buildslave.1 || die "doman failed"
+	doman docs/buildslave.1
 
-	newconfd "${FILESDIR}/buildslave.confd" buildslave || die "newconfd failed"
-	newinitd "${FILESDIR}/buildslave.initd" buildslave || die "newinitd failed"
+	newconfd "${FILESDIR}/buildslave.confd" buildslave
+	newinitd "${FILESDIR}/buildslave.initd" buildslave
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
 	distutils_pkg_postinst
-
-	elog "The \"buildbot\" user and the \"buildslave\" init script has been added"
-	elog "to support starting buildslave through Gentoo's init system. To use this,"
-	elog "set up your build slave following the documentation, make sure the"
-	elog "resulting directories are owned by the \"buildbot\" user and point"
-	elog "\"${ROOT}etc/conf.d/buildslave\" at the right location.  The scripts can"
-	elog "run as a different user if desired. If you need to run more than one"
-	elog "build slave, just copy the scripts."
+	readme.gentoo_print_elog
 }

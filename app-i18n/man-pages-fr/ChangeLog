@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/man-pages-fr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-fr/ChangeLog,v 1.8 2012/09/29 10:53:42 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-fr/ChangeLog,v 1.9 2013/02/15 20:56:36 pinkbyte Exp $
+
+*man-pages-fr-3.40.1 (15 Feb 2013)
+
+  15 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> +man-pages-fr-3.40.1.ebuild:
+  Version bump, wrt bug #419907 - EAPI 5, add ~amd64-linux keyword. Thanks to
+  Fred Passerin for ebuild updates
 
   29 Sep 2012; Ulrich Müller <ulm@gentoo.org> man-pages-fr-2.39.0.ebuild:
   Specify LICENSE more precisely.

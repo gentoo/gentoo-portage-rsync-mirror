@@ -1,6 +1,12 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.279 2013/01/13 19:20:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.280 2013/02/15 20:44:53 aballier Exp $
+
+*lyx-2.0.5.1-r1 (15 Feb 2013)
+
+  15 Feb 2013; Alexis Ballier <aballier@gentoo.org> +lyx-2.0.5.1-r1.ebuild:
+  Depend on app-text/texlive so that the linguas and useflag logic can be
+  reused from this ebuild. Thanks Pavel. Bug #451982
 
 *lyx-2.0.5.1 (13 Jan 2013)
 
