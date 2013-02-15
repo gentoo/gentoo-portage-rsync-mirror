@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.8.4.ebuild,v 1.10 2012/12/29 08:45:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/qt-dbus-4.8.4.ebuild,v 1.11 2013/02/15 09:17:50 pesa Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-4.7-qdbusintegrator-no-const.patch"
+	"${FILESDIR}/${PN}-4.8.4-qdbusconnection-silence-warning.patch"
 )
 
 pkg_setup() {
