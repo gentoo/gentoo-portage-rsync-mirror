@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/soappy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.45 2012/08/06 09:42:04 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.46 2013/02/15 22:48:06 mgorny Exp $
+
+*soappy-0.12.5-r2 (15 Feb 2013)
+
+  15 Feb 2013; Michał Górny <mgorny@gentoo.org> +soappy-0.12.5-r2.ebuild:
+  Migrate to distutils-r1.
 
 *soappy-0.12.5-r1 (06 Aug 2012)
 

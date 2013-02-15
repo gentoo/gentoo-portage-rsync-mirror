@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libotf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.59 2013/02/15 21:59:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.61 2013/02/15 22:54:15 ago Exp $
+
+  15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libotf-0.9.13.ebuild:
+  Stable for alpha, wrt bug #456544
+
+  15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libotf-0.9.13.ebuild:
+  Stable for sparc, wrt bug #456544
 
   15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libotf-0.9.13.ebuild:
   Stable for arm, wrt bug #456544

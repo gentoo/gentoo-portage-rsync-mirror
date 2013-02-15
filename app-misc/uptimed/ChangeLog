@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.87 2013/01/14 18:08:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.88 2013/02/15 22:37:30 ago Exp $
+
+  15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> uptimed-0.3.17-r1.ebuild:
+  Stable for sparc, wrt bug #457250
 
   14 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> files/uptimed.init:
   Better fix for bug #448382. Thanks to WilliamH for giving the right input.

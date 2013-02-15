@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.88 2013/02/15 22:14:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.90 2013/02/15 23:00:42 ago Exp $
+
+  15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> coverage-3.5.3-r1.ebuild:
+  Stable for alpha, wrt bug #457334
+
+  15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> coverage-3.5.3-r1.ebuild:
+  Stable for sparc, wrt bug #457334
 
   15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> coverage-3.5.3-r1.ebuild:
   Stable for arm, wrt bug #457334
