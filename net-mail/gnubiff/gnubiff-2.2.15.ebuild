@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.15.ebuild,v 1.2 2012/05/03 04:18:37 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.15.ebuild,v 1.3 2013/02/15 11:33:35 eras Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -32,7 +32,8 @@ DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-fix-nls.patch \
-		"${FILESDIR}"/${P}-gold.patch
+		"${FILESDIR}"/${P}-gold.patch \
+		"${FILESDIR}"/${P}-underlink.patch
 	eautoreconf
 }
 

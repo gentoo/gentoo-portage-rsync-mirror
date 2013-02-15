@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/gnubiff
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.40 2012/05/03 04:18:37 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/ChangeLog,v 1.41 2013/02/15 11:33:35 eras Exp $
+
+  15 Feb 2013; Eray Aslan <eras@gentoo.org>
+  +files/gnubiff-2.2.15-underlink.patch, gnubiff-2.2.15.ebuild:
+  Fix underlinking - bug #456302
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gnubiff-2.2.13-r2.ebuild,
   gnubiff-2.2.13-r3.ebuild, gnubiff-2.2.15.ebuild:
@@ -182,4 +186,3 @@
   05 Nov 2004; Andrej Kacian <ticho@gentoo.org> :
   Initial import, closes #39429. Ebuild submitted by Andreas Waschinski
   <wascha@web.de>.
-
