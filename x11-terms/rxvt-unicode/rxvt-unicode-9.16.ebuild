@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.16.ebuild,v 1.8 2013/02/14 18:41:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.16.ebuild,v 1.9 2013/02/15 17:30:08 jer Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -105,11 +105,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	default
 
-	dodoc README.FAQ Changes
-	cd "${S}"/doc
-	dodoc README* changes.txt etc/* rxvt-tabbed
+	dodoc \
+		README.FAQ Changes doc/README* doc/changes.txt doc/etc/* doc/rxvt-tabbed
 
 	make_desktop_entry urxvt rxvt-unicode utilities-terminal \
 		"System;TerminalEmulator"

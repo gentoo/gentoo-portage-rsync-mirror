@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+#Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-web/ganglia-web-3.5.4.ebuild,v 1.1 2013/02/09 17:41:43 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-web/ganglia-web-3.5.6.ebuild,v 1.1 2013/02/15 17:15:31 jsbronder Exp $
 
 EAPI=4
 WEBAPP_MANUAL_SLOT="yes"
@@ -41,10 +41,17 @@ src_install() {
 	webapp_configfile "${MY_HTDOCSDIR}"/conf_default.php
 	webapp_src_install
 
-	keepdir /var/lib/ganglia/rrds
-	fowners nobody:nobody /var/lib/ganglia/rrds
-	fowners -R nobody:nobody /var/lib/ganglia/dwoo
-	fperms -R 777 /var/lib/ganglia/dwoo
+	fowners -R nobody:nobody /var/lib/ganglia-web/dwoo
+	fperms -R 777 /var/lib/ganglia-web/dwoo
 
 	dodoc AUTHORS README TODO || die
+}
+
+pkg_postinst() {
+	webapp_pkg_postinst
+
+	# upgrade from < 3.5.6
+	if [ -d "${ROOT}"/var/lib/ganglia/dwoo ]; then
+		rm -rf "${ROOT}"/var/lib/ganglia/dwoo || die
+	fi
 }

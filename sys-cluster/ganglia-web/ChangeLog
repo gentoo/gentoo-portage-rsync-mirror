@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/ganglia-web
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-web/ChangeLog,v 1.5 2013/02/09 17:41:43 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia-web/ChangeLog,v 1.6 2013/02/15 17:15:31 jsbronder Exp $
+
+*ganglia-web-3.5.6 (15 Feb 2013)
+
+  15 Feb 2013; Justin Bronder <jsbronder@gentoo.org> -ganglia-web-3.5.4.ebuild,
+  +ganglia-web-3.5.6.ebuild:
+  Version bump, contains fix for CVE-2013-0275. Drop old unstable.
 
 *ganglia-web-3.5.4 (09 Feb 2013)
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20120903.ebuild,v 1.2 2012/11/06 19:26:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20120903.ebuild,v 1.3 2013/02/15 17:23:17 pacho Exp $
 
 EAPI="4"
 
-inherit autotools eutils
+inherit autotools eutils readme.gentoo
 
 MY_PN="${PN}-full"
 MY_P="${MY_PN}-${PV}"
@@ -29,6 +29,12 @@ S="${WORKDIR}"/${MY_P}
 pkg_setup() {
 	# Don't create groups
 	export CREATE=0
+
+	DOC_CONTENTS="LTP requires root access to run the tests.
+		The LTP root directory is located in /usr/libexec/${PN}
+		but the results and output folders will be created in /tmp.
+		For more information please read the ltp-howto located in
+		/usr/share/doc/${PF}"
 }
 
 src_prepare() {
@@ -77,14 +83,5 @@ src_install() {
 	dohtml -r doc/automation-*.html
 	doman doc/man1/*.1
 	doman doc/man3/*.3
-}
-
-pkg_postinst() {
-	elog
-	elog "LTP requires root access to run the tests."
-	elog "The LTP root directory is located in /usr/libexec/${PN}"
-	elog "but the results and output folders will be created in /tmp."
-	elog "For more information please read the ltp-howto"
-	elog "located in /usr/share/doc/${PF}"
-	elog
+	readme.gentoo_create_doc
 }
