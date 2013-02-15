@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/prey-0.5.4-r1.ebuild,v 1.3 2012/11/20 20:37:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/prey-0.5.4-r1.ebuild,v 1.4 2013/02/15 18:47:47 pacho Exp $
 
 EAPI=4
 
-inherit eutils user
+inherit eutils readme.gentoo user
 
 DESCRIPTION="Tracking software for asset recovery"
 HOMEPAGE="http://preyproject.com/"
@@ -60,6 +60,28 @@ pkg_setup() {
 }
 
 src_prepare() {
+	DISABLE_AUTOFORMATTING="yes"
+	use userpriv && has_version "${CATEGORY}/${PN}:${SLOT}[-userpriv]" && FORCE_PRINT_ELOG="yes"
+	! use userpriv && has_version "${CATEGORY}/${PN}:${SLOT}[userpriv]" && FORCE_PRINT_ELOG="yes"
+
+	DOC_CONTENTS="--Configuration--
+Make sure you follow the next steps before running prey for the
+first time.
+"
+
+	if use userpriv; then
+		DOC_CONTENTS+="- Add your user to ${PN} group using:
+# gpasswd -a <your_user> ${PN}"
+	else
+		DOC_CONTENTS+="You don't seem to have 'userpriv' enabled so
+${PN} configuration is only accessible as root"
+	fi
+
+	DOC_CONTENTS+="
+- Create an account on http://preyproject.com/
+- Modify the core and module configuration in /etc/prey
+- Uncomment the line in /etc/cron.d/prey.cron"
+
 	# remove system module since it depends on hal and we don't
 	# have hal in portage anymore
 	rm -rf "${S}"/modules/system || die
@@ -141,19 +163,5 @@ src_install() {
 		fi
 	done
 
-}
-pkg_postinst () {
-	elog "--Configuration--"
-	elog "Make sure you follow the next steps before running prey for the"
-	elog "first time"
-	if use userpriv; then
-		elog "- Add your user to ${PN} group using"
-		elog "gpasswd -a <your_user> ${PN}"
-	else
-		elog "You don't seem to have 'userpriv' enabled so"
-		elog "${PN} configuration is only accessible as root"
-	fi
-	elog "- Create an account on http://preyproject.com/"
-	elog "- Modify the core and module configuration in /etc/prey"
-	elog "- Uncomment the line in /etc/cron.d/prey.cron"
+	readme.gentoo_create_doc
 }

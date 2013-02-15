@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.97.ebuild,v 1.4 2013/02/15 17:48:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.97.ebuild,v 1.5 2013/02/15 18:56:21 eras Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -83,6 +83,7 @@ src_configure() {
 		--with-mail-spool=/var/spool/mail \
 		--with-readline \
 		--enable-sendmail \
+		--disable-debug \
 		--disable-rpath
 }
 

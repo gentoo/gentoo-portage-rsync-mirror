@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-12-r1.ebuild,v 1.11 2013/02/09 23:02:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-12-r1.ebuild,v 1.12 2013/02/15 18:33:52 ssuominen Exp $
 
 EAPI=4
 
@@ -38,7 +38,7 @@ DEPEND="${RDEPEND}
 	zlib? ( virtual/pkgconfig )"
 
 pkg_setup() {
-	CONFIG_CHECK="~MODULES"
+	CONFIG_CHECK="~MODULES ~MODULE_UNLOAD"
 
 	linux-info_pkg_setup
 }
