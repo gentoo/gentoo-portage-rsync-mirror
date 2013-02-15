@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/transmission-remote-cli
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-cli/ChangeLog,v 1.1 2013/02/14 13:10:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-cli/ChangeLog,v 1.2 2013/02/14 23:27:11 xmw Exp $
+
+*transmission-remote-cli-1.4.7-r1 (14 Feb 2013)
+
+  14 Feb 2013; Michael Weber <xmw@gentoo.org>
+  +transmission-remote-cli-1.4.7-r1.ebuild:
+  Improved python-r1 handling
 
 *transmission-remote-cli-1.4.7 (14 Feb 2013)
 

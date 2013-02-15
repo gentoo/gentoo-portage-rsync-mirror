@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.894 2013/02/07 17:14:25 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.895 2013/02/14 23:07:34 dilfridge Exp $
+
+  14 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org> kdelibs-4.10.0.ebuild:
+  Depend on newest libattica, does not hurt and could help for bug 456754
 
   07 Feb 2013; Michael Palimaka <kensington@gentoo.org>
   +files/kdelibs-4.10.0-udisks.patch, kdelibs-4.10.0.ebuild:

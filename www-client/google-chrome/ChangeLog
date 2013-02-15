@@ -1,6 +1,13 @@
 # ChangeLog for www-client/google-chrome
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.243 2013/02/13 23:18:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.244 2013/02/14 23:15:21 floppym Exp $
+
+*google-chrome-26.0.1410.5_alpha182376 (14 Feb 2013)
+
+  14 Feb 2013; Mike Gilbert <floppym@gentoo.org>
+  +google-chrome-26.0.1410.5_alpha182376.ebuild,
+  -google-chrome-26.0.1410.3_alpha181934.ebuild:
+  Dev channel bump.
 
 *google-chrome-26.0.1410.3_alpha181934 (13 Feb 2013)
 *google-chrome-25.0.1364.84_beta182155 (13 Feb 2013)
