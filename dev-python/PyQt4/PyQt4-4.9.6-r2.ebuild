@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.6-r2.ebuild,v 1.3 2013/02/13 08:52:33 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.6-r2.ebuild,v 1.4 2013/02/15 08:07:48 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
@@ -160,8 +160,8 @@ src_configure() {
 			popd > /dev/null || return
 
 			# Fix insecure runpaths.
-			sed -i -e "/^LFLAGS\s*=/ s:-Wl,-rpath,${BUILDDIR}/qpy/${mod}::" \
-				${mod}/Makefile || die "Failed to fix rpath for ${mod}"
+			sed -i -e "/^LFLAGS\s*=/ s:-Wl,-rpath,${BUILD_DIR}/qpy/${mod}::" \
+				${mod}/Makefile || die "failed to fix rpath for ${mod}"
 		done
 
 		# Avoid stripping of libpythonplugin.so.
