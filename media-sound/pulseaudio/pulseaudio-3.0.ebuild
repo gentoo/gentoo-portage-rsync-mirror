@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-3.0.ebuild,v 1.2 2012/12/21 16:55:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-3.0.ebuild,v 1.3 2013/02/15 08:51:56 nirbheek Exp $
 
-EAPI=4
+EAPI="4"
 
 inherit eutils flag-o-matic user versionator toolchain-funcs udev
 
@@ -18,7 +18,9 @@ SRC_URI="http://freedesktop.org/software/pulseaudio/releases/${P}.tar.xz"
 LICENSE="!gdbm? ( LGPL-2.1 ) gdbm? ( GPL-2 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="+alsa avahi +caps equalizer jack lirc neon oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib gtk test doc +udev ipv6 system-wide realtime +orc ssl +gdbm +webrtc-aec xen systemd"
+IUSE="+alsa +asyncns avahi bluetooth +caps dbus doc equalizer +gdbm +glib gnome
+gtk ipv6 jack libsamplerate lirc neon +orc oss qt realtime ssl systemd
+system-wide tcpd test +udev +webrtc-aec +X xen"
 
 RDEPEND=">=media-libs/libsndfile-1.0.20
 	X? (
@@ -48,10 +50,7 @@ RDEPEND=">=media-libs/libsndfile-1.0.20
 	asyncns? ( net-libs/libasyncns )
 	udev? ( >=virtual/udev-143[hwdb] )
 	realtime? ( sys-auth/rtkit )
-	equalizer? (
-		sci-libs/fftw:3.0
-		dev-python/PyQt4[dbus]
-	)
+	equalizer? ( sci-libs/fftw:3.0 )
 	orc? ( >=dev-lang/orc-0.4.9 )
 	ssl? ( dev-libs/openssl )
 	>=media-libs/speex-1.2_rc1
@@ -79,7 +78,9 @@ PDEPEND="alsa? ( media-plugins/alsa-plugins[pulseaudio] )"
 
 # alsa-utils dep is for the alsasound init.d script (see bug #155707)
 # bluez dep is for the bluetooth init.d script
+# PyQt4 dep is for the qpaeq script
 RDEPEND="${RDEPEND}
+	equalizer? ( qt? ( dev-python/PyQt4[dbus] ) )
 	X? ( gnome-extra/gnome-audio )
 	system-wide? (
 		sys-apps/openrc
@@ -221,5 +222,10 @@ pkg_postinst() {
 		elog "configuration file. If you do enable it, you'll have to have"
 		elog "your Bluetooth controller enabled and inserted at bootup or"
 		elog "PulseAudio will refuse to start."
+	fi
+	if use equalizer && ! use qt; then
+		elog "You've enabled the 'equalizer' USE-flag but not the 'qt' USE-flag."
+		elog "This will build the equalizer module, but the 'qpaeq' tool"
+		elog "which is required to set equalizer levels will not work."
 	fi
 }

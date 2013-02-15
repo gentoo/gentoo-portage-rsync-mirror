@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.296 2013/01/01 18:46:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.297 2013/02/15 08:51:56 nirbheek Exp $
+
+  15 Feb 2013; Nirbheek Chauhan <nirbheek@gentoo.org> metadata.xml,
+  pulseaudio-3.0.ebuild, pulseaudio-9999.ebuild:
+  Add USE=qt to pull in qt deps for equalizer
 
   01 Jan 2013; Raúl Porcel <armin76@gentoo.org> pulseaudio-2.1-r1.ebuild:
   sh stable wrt #435074
