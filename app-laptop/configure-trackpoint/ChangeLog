@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/configure-trackpoint
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-trackpoint/ChangeLog,v 1.5 2012/05/02 20:22:39 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-trackpoint/ChangeLog,v 1.6 2013/02/15 18:11:41 pacho Exp $
+
+  15 Feb 2013; Pacho Ramos <pacho@gentoo.org> configure-trackpoint-0.7.ebuild:
+  Don't show elog messages always (#457596)
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org>
   configure-trackpoint-0.7.ebuild:
@@ -23,4 +26,3 @@
   +configure-trackpoint-0.7.ebuild, +metadata.xml:
   Initial commit of configure-trackpoint, a configuration utility for
   app-laptop/tp_smapi
-

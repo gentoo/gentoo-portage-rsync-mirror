@@ -1,9 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-trackpoint/configure-trackpoint-0.7.ebuild,v 1.3 2012/05/02 20:22:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-trackpoint/configure-trackpoint-0.7.ebuild,v 1.4 2013/02/15 18:11:41 pacho Exp $
 
-EAPI=2
-inherit gnome2
+EAPI=5
+GCONF_DEBUG="no"
+
+inherit gnome2 readme.gentoo
 
 DESCRIPTION="Thinkpad GNOME configuration utility for TrackPoint (For the linux
 kernel 2.6 TrackPoint driver)"
@@ -24,6 +26,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	DOC_CONTENTS="The ${PN} does not automatically load the app-laptop/tp_smapi modules
+		so you need to do it manually"
+
 	if has_version kde-base/kdesu && ! has_version x11-libs/gksu; then
 		sed -i -e "/^Exec/s:gksu:kdesu:" ${PN}.desktop \
 			|| die "Failed to replace gksu with kdesu"
@@ -31,15 +36,12 @@ src_prepare() {
 	gnome2_src_prepare
 }
 
-src_configure() {
-	G2CONF="--disable-dependency-tracking --disable-maintainer-mode"
-	gnome2_src_configure
+src_install() {
+	gnome2_src_install
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	elog
-	elog "The ${PN} does not automatically load the app-laptop/tp_smapi modules"
-	elog "so you need to do it manually"
-	elog
+	readme.gentoo_print_elog
 }

@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.152 2013/02/11 07:34:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.153 2013/02/15 18:25:45 aballier Exp $
+
+  15 Feb 2013; Alexis Ballier <aballier@gentoo.org>
+  +files/0.10.13_p201211-channel_layout.patch,
+  +files/0.10.13_p201211-coma.patch, +files/0.10.13_p201211-iscodec.patch,
+  gst-plugins-ffmpeg-0.10.13_p201211.ebuild:
+  fixes for compatibility with older ffmpeg/libav (same as done for gst-libav)
 
 *gst-plugins-ffmpeg-0.10.13_p201211 (11 Feb 2013)
 

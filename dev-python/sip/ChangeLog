@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.238 2013/02/08 23:52:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.239 2013/02/15 18:11:57 ago Exp $
+
+  15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> sip-4.14.3.ebuild:
+  Stable for amd64, wrt bug #457046
 
   08 Feb 2013; Sébastien Fabbro <bicatali@gentoo.org> sip-4.14.3.ebuild:
   Fixed for double-prefix

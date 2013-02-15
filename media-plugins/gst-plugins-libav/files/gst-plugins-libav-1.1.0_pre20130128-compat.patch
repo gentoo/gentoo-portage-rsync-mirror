@@ -1,0 +1,49 @@
+Index: gst-libav-1.1.0_pre20130128/ext/libav/gstavcodecmap.c
+===================================================================
+--- gst-libav-1.1.0_pre20130128.orig/ext/libav/gstavcodecmap.c
++++ gst-libav-1.1.0_pre20130128/ext/libav/gstavcodecmap.c
+@@ -27,7 +27,16 @@
+ 
+ #include <gst/gst.h>
+ #include <libavcodec/avcodec.h>
++#include <libavutil/avutil.h>
++#if (LIBAVUTIL_VERSION_INT > AV_VERSION_INT(52,6,0) || (LIBAVUTIL_VERSION_MICRO < 100 && LIBAVUTIL_VERSION_INT > AV_VERSION_INT(52,2,0)))
+ #include <libavutil/channel_layout.h>
++#else
++#include <libavutil/audioconvert.h>
++#endif
++#if (LIBAVUTIL_VERSION_INT < AV_VERSION_INT(51,42,0) || (LIBAVUTIL_VERSION_MICRO > 100 && LIBAVUTIL_VERSION_INT < AV_VERSION_INT(51,74,0)))
++#define AVPixelFormat PixelFormat
++#endif
++
+ 
+ #include "gstav.h"
+ #include "gstavcodecmap.h"
+Index: gst-libav-1.1.0_pre20130128/ext/libav/gstavutils.h
+===================================================================
+--- gst-libav-1.1.0_pre20130128.orig/ext/libav/gstavutils.h
++++ gst-libav-1.1.0_pre20130128/ext/libav/gstavutils.h
+@@ -94,4 +94,23 @@ av_smp_format_depth(enum AVSampleFormat
+ GstBuffer *
+ new_aligned_buffer (gint size);
+ 
++#if (LIBAVCODEC_VERSION_INT < AV_VERSION_INT(54,7,0) || (LIBAVCODEC_VERSION_MICRO >= 100 && LIBAVCODEC_VERSION_INT < AV_VERSION_INT(54,8,0)))
++static inline int av_codec_is_encoder(AVCodec *codec)
++{
++  return codec && (codec->encode || codec->encode2);
++}
++
++static inline int av_codec_is_decoder(AVCodec *codec)
++{
++  return codec && codec->decode;
++}
++#endif
++
++#if (LIBAVCODEC_VERSION_INT < AV_VERSION_INT(54,28,0) || (LIBAVCODEC_VERSION_MICRO >= 100 && LIBAVCODEC_VERSION_INT < AV_VERSION_INT(54,59,0)))
++static inline void avcodec_free_frame(AVFrame **frame)
++{
++  av_free(*frame);
++}
++#endif
++
+ #endif /* __GST_FFMPEG_UTILS_H__ */

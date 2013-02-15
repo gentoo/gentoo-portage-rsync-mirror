@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-libav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/ChangeLog,v 1.6 2013/02/03 23:22:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/ChangeLog,v 1.7 2013/02/15 18:07:33 aballier Exp $
+
+  15 Feb 2013; Alexis Ballier <aballier@gentoo.org>
+  gst-plugins-libav-1.1.0_pre20130128.ebuild,
+  +files/gst-plugins-libav-1.1.0_pre20130128-coma.patch,
+  +files/gst-plugins-libav-1.1.0_pre20130128-compat.patch:
+  Fix build with ffmpeg 0.10 / libav 0.8, and fix a problem with muxers with
+  coma in their name
 
 *gst-plugins-libav-1.1.0_pre20130128 (03 Feb 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13_p201211.ebuild,v 1.1 2013/02/11 07:34:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13_p201211.ebuild,v 1.2 2013/02/15 18:25:45 aballier Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ S=${WORKDIR}/${MY_P}
 
 RDEPEND=">=media-libs/gstreamer-0.10.31:0.10
 	>=media-libs/gst-plugins-base-0.10.31:0.10
-	>=virtual/ffmpeg-9
+	>=virtual/ffmpeg-0.10
 	|| ( media-video/ffmpeg media-libs/libpostproc )
 	orc? ( >=dev-lang/orc-0.4.6 )"
 DEPEND="${RDEPEND}
@@ -41,6 +41,11 @@ src_prepare() {
 
 	# monkey's audio requires planar audio support to be backported
 	sed -e 's#[ \t]elements/ffdemux_ape[^ ]*##' -i tests/check/Makefile.{am,in} || die
+
+	# compat bits for older ffmpeg/libav releases
+	epatch "${FILESDIR}/${PV}-channel_layout.patch" \
+		"${FILESDIR}/${PV}-iscodec.patch" \
+		"${FILESDIR}/${PV}-coma.patch"
 }
 
 src_configure() {
