@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.6-r2.ebuild,v 1.1 2013/02/15 14:29:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.6-r2.ebuild,v 1.2 2013/02/15 14:43:04 mgorny Exp $
 
 EAPI=5
 
@@ -35,6 +35,10 @@ python_compile_all() {
 		rst2html.py Doc/pycrypt.rst > Doc/index.html
 		epydoc --config=Doc/epydoc-config --exclude-introspect="^Crypto\.(Random\.OSRNG\.nt|Util\.winrandom)$" || die
 	fi
+}
+
+python_test() {
+	esetup.py test
 }
 
 python_install_all() {
