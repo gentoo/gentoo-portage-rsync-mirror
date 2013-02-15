@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/phpvirtualbox-4.2.4.ebuild,v 1.1 2012/11/02 17:17:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/phpvirtualbox-4.2.4.ebuild,v 1.2 2013/02/15 20:19:58 hwoarang Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit versionator eutils webapp depend.php
 
@@ -22,12 +22,12 @@ RDEPEND="
 "
 DEPEND="app-arch/unzip"
 
+S="${WORKDIR}"/${MY_P}
+
 need_php_httpd
 
 src_install() {
 	webapp_src_preinst
-
-	cd ${MY_P}
 
 	dodoc CHANGELOG.txt LICENSE.txt README.txt || die
 	rm -f CHANGELOG.txt LICENSE.txt README.txt

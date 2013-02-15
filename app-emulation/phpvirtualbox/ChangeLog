@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/phpvirtualbox
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/ChangeLog,v 1.8 2012/11/02 17:17:19 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/ChangeLog,v 1.9 2013/02/15 20:19:58 hwoarang Exp $
+
+  15 Feb 2013; Markos Chandras <hwoarang@gentoo.org> phpvirtualbox-4.2.4.ebuild:
+  Bump to EAPI5. Bug #457738
 
 *phpvirtualbox-4.2.4 (02 Nov 2012)
 

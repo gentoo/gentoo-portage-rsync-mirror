@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14471 2013/02/14 22:33:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14472 2013/02/15 20:03:27 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (15 Feb 2013)
+# Starting from this version, some decoders and encoders (like AAC or APE)
+# switched to outputing or needing planar audio, this breaks some applications
+# at runtime and the tree needs to be checked. For instance, <xbmc-12,
+# <vlc-2.0.6 break.
+>=media-video/ffmpeg-1.1
 
 # Michael Sterrett <mr_bones_@gentoo.org> (13 Feb 2013)
 # No longer licensed for sale upstream.
