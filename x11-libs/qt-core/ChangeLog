@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.214 2013/02/13 10:08:50 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.215 2013/02/15 10:20:02 pesa Exp $
+
+*qt-core-4.8.4-r4 (15 Feb 2013)
+
+  15 Feb 2013; Davide Pesavento <pesa@gentoo.org>
+  +files/blacklist-mis-issued-Turktrust-certs.patch,
+  +files/moc-workaround-for-BOOST_JOIN.patch, +qt-core-4.8.4-r4.ebuild,
+  -qt-core-4.8.4-r3.ebuild:
+  Apply workaround for newer boost headers (bug 454080 by Flameeyes). Blacklist
+  mis-issued Türktrust SSL certs.
 
 *qt-core-4.8.4-r3 (13 Feb 2013)
 
