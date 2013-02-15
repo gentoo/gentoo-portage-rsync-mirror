@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailutils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.57 2012/10/20 17:48:12 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.58 2013/02/15 12:46:12 eras Exp $
+
+  15 Feb 2013; Eray Aslan <eras@gentoo.org>
+  +files/mailutils-2.99.97-gsasl.patch, mailutils-2.99.97.ebuild:
+  Fix QA warning
 
   20 Oct 2012; Jeroen Roovers <jer@gentoo.org> mailutils-2.99.97.ebuild:
   Marked ~hppa (bug #439040).

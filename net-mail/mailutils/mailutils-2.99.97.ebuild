@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.97.ebuild,v 1.2 2012/10/20 17:48:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.97.ebuild,v 1.3 2013/02/15 12:46:12 eras Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -53,6 +53,7 @@ pkg_setup() {
 src_prepare() {
 	# Disable bytecompilation of Python modules.
 	echo "#!/bin/sh" > build-aux/py-compile
+	epatch "${FILESDIR}/${P}-gsasl.patch"
 }
 
 src_configure() {

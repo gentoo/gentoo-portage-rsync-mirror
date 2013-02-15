@@ -1,0 +1,24 @@
+From d2455d52c2789022e57b80584140248aedd3973e Mon Sep 17 00:00:00 2001
+From: Sergey Poznyakoff <gray@gnu.org.ua>
+Date: Thu, 07 Jun 2012 15:00:21 +0000
+Subject: Minor fix.
+
+* imap4d/imap4d.c Include mailutils/gsasl.h unconditionally.
+---
+diff --git a/imap4d/imap4d.c b/imap4d/imap4d.c
+index 04fe4d5..d05c862 100644
+--- a/imap4d/imap4d.c
++++ b/imap4d/imap4d.c
+@@ -15,9 +15,7 @@
+    along with GNU Mailutils.  If not, see <http://www.gnu.org/licenses/>. */
+ 
+ #include "imap4d.h"
+-#ifdef WITH_GSASL
+-# include <mailutils/gsasl.h>
+-#endif
++#include <mailutils/gsasl.h>
+ #include "mailutils/libargp.h"
+ #include "tcpwrap.h"
+ 
+--
+cgit v0.9.0.2
