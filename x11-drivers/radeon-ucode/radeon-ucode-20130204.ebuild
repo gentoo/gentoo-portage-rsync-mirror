@@ -1,11 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/radeon-ucode-20110531.ebuild,v 1.4 2011/09/04 12:07:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/radeon-ucode-20130204.ebuild,v 1.1 2013/02/15 15:47:56 chithanh Exp $
 
 inherit linux-info
 
 UCODE_BASE_URI="http://people.freedesktop.org/~agd5f/${PN/-/_}"
 UCODE_FILES=(
+	"ARUBA_me.bin"
+	"ARUBA_pfp.bin"
+	"ARUBA_rlc.bin"
 	"BARTS_mc.bin"
 	"BARTS_me.bin"
 	"BARTS_pfp.bin"
@@ -26,10 +29,20 @@ UCODE_FILES=(
 	"JUNIPER_me.bin"
 	"JUNIPER_pfp.bin"
 	"JUNIPER_rlc.bin"
+	"OLAND_ce.bin"
+	"OLAND_mc.bin"
+	"OLAND_me.bin"
+	"OLAND_pfp.bin"
+	"OLAND_rlc.bin"
 	"R600_rlc.bin"
 	"R700_rlc.bin"
 	"PALM_me.bin"
 	"PALM_pfp.bin"
+	"PITCAIRN_ce.bin"
+	"PITCAIRN_mc.bin"
+	"PITCAIRN_me.bin"
+	"PITCAIRN_pfp.bin"
+	"PITCAIRN_rlc.bin"
 	"REDWOOD_me.bin"
 	"REDWOOD_pfp.bin"
 	"REDWOOD_rlc.bin"
@@ -38,18 +51,28 @@ UCODE_FILES=(
 	"SUMO_me.bin"
 	"SUMO_pfp.bin"
 	"SUMO_rlc.bin"
+	"TAHITI_ce.bin"
+	"TAHITI_mc.bin"
+	"TAHITI_me.bin"
+	"TAHITI_pfp.bin"
+	"TAHITI_rlc.bin"
 	"TURKS_mc.bin"
 	"TURKS_me.bin"
 	"TURKS_pfp.bin"
+	"VERDE_ce.bin"
+	"VERDE_mc.bin"
+	"VERDE_me.bin"
+	"VERDE_pfp.bin"
+	"VERDE_rlc.bin"
 )
 
-DESCRIPTION="IRQ microcode for r6xx/r7xx/Evergreen/Northern Islands Radeon GPUs and APUs"
+DESCRIPTION="IRQ microcode for r6xx/r7xx/Evergreen/N.Islands/S.Islands Radeon GPUs and APUs"
 HOMEPAGE="http://people.freedesktop.org/~agd5f/radeon_ucode/"
 SRC_URI="${UCODE_FILES[@]/#/${UCODE_BASE_URI}/}"
 
 LICENSE="radeon-ucode"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 src_unpack() { :; }

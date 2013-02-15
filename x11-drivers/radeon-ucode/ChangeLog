@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/radeon-ucode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/ChangeLog,v 1.24 2012/06/24 18:59:27 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/radeon-ucode/ChangeLog,v 1.25 2013/02/15 15:47:56 chithanh Exp $
+
+*radeon-ucode-20130204 (15 Feb 2013)
+
+  15 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +radeon-ucode-20130204.ebuild, -radeon-ucode-20110302.ebuild,
+  -radeon-ucode-20110531.ebuild:
+  Update for new OLAND firmware.
 
   24 Jun 2012; Agostino Sarubbo <ago@gentoo.org> radeon-ucode-20120320.ebuild:
   Stable for x86, wrt bug #419473
@@ -108,4 +115,3 @@
   15 Feb 2010; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +radeon-ucode-20091209.ebuild, +metadata.xml:
   Initial import, based on an ebuild by scarabeus
-
