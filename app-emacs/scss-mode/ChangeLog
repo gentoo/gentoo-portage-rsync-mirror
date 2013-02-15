@@ -1,0 +1,9 @@
+# ChangeLog for app-emacs/scss-mode
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/scss-mode/ChangeLog,v 1.1 2013/02/15 06:18:13 flameeyes Exp $
+
+*scss-mode-20130215 (15 Feb 2013)
+
+  15 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/50scss-mode-gentoo.el, +metadata.xml, +scss-mode-20130215.ebuild:
+  Initial import of an Emacs mode for editing sass's SCSS files.
