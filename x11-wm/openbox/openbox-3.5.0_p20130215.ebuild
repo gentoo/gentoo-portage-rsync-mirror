@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_p20111019-r2.ebuild,v 1.3 2012/11/30 20:06:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_p20130215.ebuild,v 1.1 2013/02/15 22:22:10 hwoarang Exp $
 
-EAPI="2"
-inherit multilib autotools eutils
+EAPI="4"
+inherit multilib autotools python eutils
 
 DESCRIPTION="A standards compliant, fast, light-weight, extensible window manager"
 HOMEPAGE="http://openbox.org/"
@@ -36,9 +36,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}"
 
 src_prepare() {
+	use python && python_convert_shebangs -r 2 .
 	epatch "${FILESDIR}"/${PN}-gnome-session-3.4.9.patch
-	epatch "${FILESDIR}"/${P/_p*/}-gtk34.patch
-	epatch "${FILESDIR}"/${P/_p*/}-fix-desktop-files.patch
 	sed -i \
 		-e "s:-O0 -ggdb ::" \
 		-e 's/-fno-strict-aliasing//' \
@@ -64,7 +63,7 @@ src_install() {
 	dodir /etc/X11/Sessions
 	echo "/usr/bin/openbox-session" > "${D}/etc/X11/Sessions/${PN}"
 	fperms a+x /etc/X11/Sessions/${PN}
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	if use branding; then
 		insinto /usr/share/themes
 		doins -r "${WORKDIR}"/Surreal_Gentoo

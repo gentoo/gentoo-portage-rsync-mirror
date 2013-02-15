@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.38 2013/02/14 22:12:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.39 2013/02/15 22:19:15 ago Exp $
+
+  15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> aiccu-2007.01.15-r2.ebuild:
+  Stable for arm, wrt bug #457440
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> aiccu-2007.01.15-r2.ebuild:
   Stable for ppc, wrt bug #457440

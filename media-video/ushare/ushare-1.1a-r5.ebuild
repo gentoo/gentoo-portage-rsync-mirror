@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ushare-1.1a-r5.ebuild,v 1.3 2013/02/14 20:19:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ushare-1.1a-r5.ebuild,v 1.4 2013/02/15 22:07:24 hwoarang Exp $
 
 EAPI=4
-inherit eutils multilib user
+inherit eutils multilib user toolchain-funcs
 
 DESCRIPTION="uShare is a UPnP (TM) A/V & DLNA Media Server"
 HOMEPAGE="http://ushare.geexbox.org/"
@@ -32,6 +32,8 @@ src_configure() {
 
 	# I can't use econf
 	# --host is not implemented in ./configure file
+	tc-export CC CXX
+	
 	./configure ${myconf} || die "./configure failed"
 }
 

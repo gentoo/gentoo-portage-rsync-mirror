@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/m2crypto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.72 2012/05/13 20:46:48 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.73 2013/02/15 22:19:02 mgorny Exp $
+
+*m2crypto-0.21.1-r1 (15 Feb 2013)
+
+  15 Feb 2013; Michał Górny <mgorny@gentoo.org> +m2crypto-0.21.1-r1.ebuild:
+  Migrate to distutils-r1.
 
   13 May 2012; Alexis Ballier <aballier@gentoo.org> m2crypto-0.21.1.ebuild:
   keyword ~amd64-fbsd

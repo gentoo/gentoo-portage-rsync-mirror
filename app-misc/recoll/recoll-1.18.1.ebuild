@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.18.1.ebuild,v 1.2 2013/02/15 20:50:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.18.1.ebuild,v 1.3 2013/02/15 22:10:24 hwoarang Exp $
 
 EAPI="4"
 
@@ -35,7 +35,7 @@ RDEPEND="
 	${DEPEND}
 	app-arch/unzip
 	sys-apps/sed
-	|| ( sys-apps/gawk sys-apps/mawk )
+	virtual/awk
 	pdf? ( app-text/poppler )
 	postscript? ( app-text/pstotext )
 	msdoc? ( app-text/antiword )

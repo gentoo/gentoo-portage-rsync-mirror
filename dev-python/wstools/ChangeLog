@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/wstools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wstools/ChangeLog,v 1.11 2012/08/02 22:15:36 neurogeek Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wstools/ChangeLog,v 1.12 2013/02/15 22:30:56 mgorny Exp $
+
+*wstools-0.4-r1 (15 Feb 2013)
+
+  15 Feb 2013; Michał Górny <mgorny@gentoo.org> +wstools-0.4-r1.ebuild:
+  Migrate to distutils-r1.
 
   02 Aug 2012; Jesus Rivero <neurogeek@gentoo.org> wstools-0.3.ebuild,
   wstools-0.4.ebuild:
