@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-0.5.90.ebuild,v 1.1 2012/12/25 16:43:11 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-0.5.90.ebuild,v 1.2 2013/02/16 20:44:23 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ inherit eutils confutils leechcraft
 DESCRIPTION="Core of LeechCraft, the modular network client"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug +sqlite postgres"
 
 DEPEND=">=dev-libs/boost-1.46

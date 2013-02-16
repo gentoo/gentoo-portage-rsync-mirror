@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/leechcraft-blogique
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-blogique/ChangeLog,v 1.3 2013/01/06 18:36:06 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-blogique/ChangeLog,v 1.4 2013/02/16 20:44:18 ago Exp $
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  leechcraft-blogique-0.5.90.ebuild:
+  Stable for amd64, wrt bug #457824
 
   06 Jan 2013; Michael Palimaka <kensington@gentoo.org>
   leechcraft-blogique-0.5.90.ebuild, leechcraft-blogique-9999.ebuild:
