@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7498 2013/02/15 20:03:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7499 2013/02/16 14:56:23 zerochaos Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Feb 2013; Rick Farina <zerochaos@gentoo.org> package.mask:
+  mask sys-firmware/iwl{3945,4965}-firmware packages have been merged into the sys-kernel/linux-firmware
+  package and have no maintainer. No real point in keeping two copies of the firmware in the tree
+  removal on 18 March 2013
 
   15 Feb 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask ffmpeg-1.1 for a different reason as >=0.11; for now this double masks
