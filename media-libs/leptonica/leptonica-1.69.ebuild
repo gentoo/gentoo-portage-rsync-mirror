@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/leptonica-1.69.ebuild,v 1.1 2013/01/24 21:38:48 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/leptonica-1.69.ebuild,v 1.2 2013/02/16 13:59:12 tomka Exp $
 
 EAPI=4
 
@@ -39,14 +39,21 @@ src_prepare() {
 src_configure() {
 	# $(use_with webp libwebp) -> unknown
 	# so use-flag just for pulling dependencies
+	# zlib handling see bug 454890
 	local myeconfargs=(
 		$(use_with gif giflib)
 		$(use_with jpeg)
 		$(use_with png libpng)
 		$(use_with tiff libtiff)
-		$(use_with zlib)
 		$(use_enable utils programs)
 		$(use_enable static-libs static)
 	)
+	# libpng requires zlib:
+	if use png && ! use zlib ; then
+		# Ignore users non-sensical choice of -zlib
+		myeconfargs+=("--with-zlib")
+	else
+		myeconfargs+=( $(use_with zlib) )
+	fi
 	autotools-utils_src_configure
 }
