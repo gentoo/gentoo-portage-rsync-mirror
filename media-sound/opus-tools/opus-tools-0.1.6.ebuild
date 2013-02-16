@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/opus-tools/opus-tools-0.1.6.ebuild,v 1.1 2013/01/13 23:07:59 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opus-tools/opus-tools-0.1.6.ebuild,v 1.2 2013/02/16 20:04:04 ago Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ fi
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libogg-1.3.0
