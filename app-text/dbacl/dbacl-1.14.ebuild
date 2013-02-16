@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dbacl/dbacl-1.14.ebuild,v 1.1 2012/12/31 18:55:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dbacl/dbacl-1.14.ebuild,v 1.3 2013/02/16 22:38:39 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lbreyer.com/gpl/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~s390 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~s390 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="interactive"
 
 RDEPEND="interactive? (

@@ -1,16 +1,16 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.2_p20120825.ebuild,v 1.2 2012/12/05 11:41:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.25.3_p20130131.ebuild,v 1.1 2013/02/16 22:50:34 cardoe Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="python? 2:2.6"
-BACKPORTS="46cab93562"
+BACKPORTS="ff8c4960"
 MY_P=${P%_p*}
 
 inherit flag-o-matic multilib eutils python user
 
-MYTHTV_VERSION="v0.25.2"
+MYTHTV_VERSION="v${MY_P}"
 MYTHTV_BRANCH="fixes/0.25"
 
 DESCRIPTION="Homebrew PVR project"

@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.3.1.ebuild,v 1.3 2013/02/03 09:33:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.3.1.ebuild,v 1.4 2013/02/16 22:40:35 mgorny Exp $
 
 EAPI=4
 
-inherit eutils fdo-mime flag-o-matic python qt4-r2 toolchain-funcs
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+inherit eutils fdo-mime flag-o-matic python-any-r1 qt4-r2 toolchain-funcs
 
 DESCRIPTION="Documentation system for most programming languages"
 HOMEPAGE="http://www.doxygen.org/"
@@ -38,7 +39,7 @@ RDEPEND="qt4? ( x11-libs/qt-gui:4 )
 DEPEND="sys-apps/sed
 	sys-devel/flex
 	sys-devel/bison
-	doc? ( =dev-lang/python-2* )
+	doc? ( ${PYTHON_DEPS} )
 	${RDEPEND}"
 
 RESTRICT="mirror"
@@ -74,10 +75,7 @@ get_langs() {
 
 pkg_setup() {
 	tc-export CC CXX
-	if use doc; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
+	use doc && python-any-r1_pkg_setup
 }
 
 src_prepare() {

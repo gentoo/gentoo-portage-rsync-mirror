@@ -1,6 +1,12 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.40 2013/02/10 00:37:35 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.42 2013/02/16 22:39:27 ago Exp $
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tesseract-3.02-r1.ebuild:
+  Stable for x86, wrt bug #454872
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tesseract-3.02-r1.ebuild:
+  Stable for amd64, wrt bug #454872
 
 *tesseract-3.02-r1 (10 Feb 2013)
 
