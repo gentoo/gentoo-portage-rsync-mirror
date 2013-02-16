@@ -1,6 +1,15 @@
-diff -U 3 -dHrN frobby_v0.9.0-orig/Makefile frobby_v0.9.0/Makefile
---- frobby_v0.9.0-orig/Makefile	2012-07-30 14:19:58.161584356 +0200
-+++ frobby_v0.9.0/Makefile	2012-07-30 14:21:36.796558990 +0200
+diff -U 3 -dHrN frobby_v0.9.0.orig/Makefile frobby_v0.9.0/Makefile
+--- frobby_v0.9.0.orig/Makefile	2013-01-15 22:40:13.127937655 +0100
++++ frobby_v0.9.0/Makefile	2013-02-16 10:54:42.265322522 +0100
+@@ -70,7 +70,7 @@
+   BIN_INSTALL_DIR = "/usr/local/bin/"
+ endif
+ 
+-cflags = $(CFLAGS) $(CPPFLAGS) -Wall -ansi -pedantic -I $(GMP_INC_DIR)	\
++cflags =  $(CPPFLAGS) -Wall -ansi -pedantic -I $(GMP_INC_DIR)	\
+          -Wno-uninitialized -Wno-unused-parameter
+ program = frobby
+ library = libfrobby.a
 @@ -87,7 +87,6 @@
  MATCH=false
  ifeq ($(MODE), release)
@@ -9,6 +18,15 @@ diff -U 3 -dHrN frobby_v0.9.0-orig/Makefile frobby_v0.9.0/Makefile
    MATCH=true
  endif
  ifeq ($(MODE), debug)
+@@ -99,7 +98,7 @@
+ endif
+ ifeq ($(MODE), shared)
+   outdir = bin/shared/
+-  cflags += -O2 -fPIC
++  cflags += -fPIC
+   library = libfrobby.so
+   MATCH=true
+ endif
 @@ -204,16 +203,13 @@
        mv -f $@.exe $@; \
  	fi
