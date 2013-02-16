@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>pva@gentoo.org</email>
-  <name>Peter Volkov</name>
-</maintainer>
+<herd>proxy-maintainers</herd>
 <maintainer>
   <email>yaleks@gentoo.ru</email>
   <name>Aleksandr Yakimov</name>

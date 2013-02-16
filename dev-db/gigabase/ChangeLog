@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/gigabase
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/ChangeLog,v 1.55 2012/03/08 09:21:08 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/ChangeLog,v 1.56 2013/02/16 12:30:37 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> -gigabase-3.82-r1.ebuild,
+  -gigabase-3.83.ebuild, metadata.xml:
+  Cleanup due bug #96436
 
   08 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> gigabase-3.83-r1.ebuild:
   x86 stable wrt bug #399961

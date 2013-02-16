@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.18.1.ebuild,v 1.3 2013/02/15 22:10:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.18.1.ebuild,v 1.4 2013/02/16 12:02:57 pacho Exp $
 
 EAPI="4"
 
 PYTHON_DEPEND="2"
-inherit toolchain-funcs qt4-r2 linux-info python
+inherit toolchain-funcs qt4-r2 linux-info python readme.gentoo
 
 DESCRIPTION="A personal full text search package"
 HOMEPAGE="http://www.lesbonscomptes.com/recoll/"
@@ -87,6 +87,20 @@ pkg_setup() {
 }
 
 src_prepare() {
+	use xattr && has_version "${CATEGORY}/${PN}:${SLOT}[-xattr]" && FORCE_PRINT_ELOG="yes"
+	! use xattr && has_version "${CATEGORY}/${PN}:${SLOT}[xattr]" && FORCE_PRINT_ELOG="yes"
+
+	DOC_CONTENTS="Default configuration files located at
+		/usr/share/${PN}/examples. Either edit these files to match
+		your needs or copy them to ~/.recoll/ and edit these files
+		instead."
+
+	use xattr && DOC_CONTENTS+="
+		Use flag \"xattr\" enables support for fetching field values
+		from extended file attributes. You will also need to set up a
+		map from the attributes names to the Recoll field names
+		(see comment at the end of the fields configuration file."
+
 	# remember configure.ac is b0rked. Fix it before using eautoreconf in the
 	# future
 	# eautoreconf
@@ -143,21 +157,13 @@ src_install() {
 	dodoc ChangeLog README
 	mv "${D}/usr/share/${PN}/doc" "${D}/usr/share/doc/${PF}/html"
 	dosym /usr/share/doc/${PF}/html /usr/share/${PN}/doc
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
-	elog
-	elog "Default configuration files located at"
-	elog "/usr/share/${PN}/examples. Either edit these files to match"
-	elog "your needs or copy them to ~/.recoll/ and edit these files"
-	elog "instead."
-	elog
-	if use xattr; then
-		elog "Use flag \"xattr\" enables support for fetching field values"
-		elog "from extended file attributes. You will also need to set up a"
-		elog "map from the attributes names to the Recoll field names"
-		elog "(see comment at the end of the fields configuration file."
-	fi
+	readme.gentoo_print_elog
+
 	if [[ -n ${REPLACING_VERSIONS} ]]; then
 		elog
 		elog "1.18 introduces significant index formats"

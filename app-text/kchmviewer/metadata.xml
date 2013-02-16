@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>kde</herd>
-  <maintainer>
-    <email>pva@gentoo.org</email>
-    <name>Peter Volkov</name>
-  </maintainer>
   <longdescription lang="en">
 	KchmViewer is a chm (MS HTML help file format) viewer It uses Trolltech Qt
 	widget library with optional KDE libraries. It does not require KDE, but may

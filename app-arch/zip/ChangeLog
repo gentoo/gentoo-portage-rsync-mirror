@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/zip
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.99 2012/10/20 16:43:15 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.100 2013/02/16 12:18:54 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
   20 Oct 2012; Raúl Porcel <armin76@gentoo.org> zip-3.0-r1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #436436

@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/uae
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.39 2011/03/27 10:31:29 nirbheek Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.40 2013/02/16 12:23:31 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org>
+  -files/uae-0.8.25-close_window_hack.diff,
+  -files/uae-0.8.25-fix_save_config.diff,
+  -files/uae-0.8.25-makefile_more_cleaning.diff,
+  -files/uae-0.8.25-memory_leaks_in_gui.diff,
+  -files/uae-0.8.26-gtk-ui-cleanup.patch, -uae-0.8.26-r1.ebuild,
+  -uae-0.8.29.ebuild, metadata.xml:
+  Cleanup due bug #96436
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> uae-0.8.26-r1.ebuild,
   uae-0.8.29.ebuild, uae-0.8.29-r1.ebuild:
@@ -182,4 +191,3 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
-

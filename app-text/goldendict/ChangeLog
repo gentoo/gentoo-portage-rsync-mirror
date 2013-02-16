@@ -1,6 +1,9 @@
 # ChangeLog for app-text/goldendict
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/ChangeLog,v 1.9 2012/07/26 07:04:22 yngwin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/ChangeLog,v 1.10 2013/02/16 12:26:43 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
   26 Jul 2012; Ben de Groot <yngwin@gentoo.org> goldendict-1.0.1.ebuild:
   Use l10n.eclass for handling locales. Bump eapi to 4.

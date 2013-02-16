@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>pva@gentoo.org</email>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		UAE is a mostly complete software emulation of the hardware of the
@@ -14,9 +14,5 @@
 	</longdescription>
 	<use>
 		<flag name='scsi'>Enable the uaescsi.device</flag>
-		<flag name='sdl-sound'>Use <pkg>media-sound/sdl-sound</pkg> for audio
-			output</flag>
-		<flag name='ui'>Build the user interface (could be gtk or ncurses based,
-			depending on sdl, dga, svga and aalib USE flags)</flag>
 	</use>
 </pkgmetadata>

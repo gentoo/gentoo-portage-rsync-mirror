@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djview
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.17 2012/10/11 07:42:04 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.18 2013/02/16 12:25:51 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
   11 Oct 2012; Anthony G. Basile <blueness@gentoo.org> djview-4.8.ebuild:
   stable ppc64, bug #414369

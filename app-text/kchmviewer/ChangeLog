@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kchmviewer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.49 2012/09/05 09:27:37 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.50 2013/02/16 12:28:00 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
   05 Sep 2012; Justin Lecher <jlec@gentoo.org> kchmviewer-6.0-r1.ebuild,
   kchmviewer-6.0.ebuild:

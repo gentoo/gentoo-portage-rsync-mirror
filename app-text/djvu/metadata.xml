@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>tex</herd>
-<maintainer>
-	<email>pva@gentoo.org</email>
-	<name>Peter Volkov</name>
-</maintainer>
 <longdescription>
 DjVu is a web-centric format and software platform for distributing documents
 and images. DjVu can advantageously replace PDF, PS, TIFF, JPEG, and GIF for

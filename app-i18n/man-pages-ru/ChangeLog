@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-ru
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.20 2013/02/15 23:06:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.21 2013/02/16 12:24:07 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
   15 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   man-pages-ru-3.41.2145.1724.20130102.ebuild:
