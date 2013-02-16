@@ -1,10 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/wildmidi-0.2.3.5.ebuild,v 1.7 2012/06/22 14:28:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wildmidi/wildmidi-0.2.3.5.ebuild,v 1.8 2013/02/16 08:11:46 pacho Exp $
 
-EAPI=3
-
-inherit base autotools
+EAPI=5
+inherit base autotools readme.gentoo
 
 DESCRIPTION="Midi processing library and a midi player using the gus patch set"
 HOMEPAGE="http://wildmidi.sourceforge.net/"
@@ -20,6 +19,10 @@ RDEPEND="${DEPEND}
 	media-sound/timidity-freepats"
 
 src_prepare() {
+	DOC_CONTENTS="${PN} is using timidity-freepats for midi playback.
+		A default configuration file was placed on /etc/${PN}.cfg.
+		For more information please read the ${PN}.cfg manpage."
+
 	# Workaround for parallel make
 	sed -i -e "/^wildmidi_libs/s:=.*:= libWildMidi.la:" "${S}"/src/Makefile.am || die
 	eautoreconf
@@ -36,11 +39,6 @@ src_install() {
 	base_src_install
 	find "${D}" -name '*.la' -exec rm -f {} +
 	insinto /etc
-	doins "${FILESDIR}"/${PN}.cfg || die
-}
-
-pkg_postinst() {
-	elog "${PN} is using timidity-freepats for midi playback."
-	elog "A default configuration file was placed on /etc/${PN}.cfg."
-	elog "For more information please read the ${PN}.cfg manpage."
+	doins "${FILESDIR}"/${PN}.cfg
+	readme.gentoo_create_doc
 }
