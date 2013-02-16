@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.4.4.ebuild,v 1.3 2012/04/18 20:35:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.4.4.ebuild,v 1.4 2013/02/16 07:39:56 pacho Exp $
 
 EAPI=4
 KDE_REQUIRED="optional"
 
-inherit eutils kde4-base
+inherit eutils kde4-base readme.gentoo
 
 DESCRIPTION="A Qt4/KDE4 wallpaper changer"
 HOMEPAGE="http://www.becrux.com/index.php?page=projects&name=wally"
@@ -38,6 +38,8 @@ PATCHES=(
 )
 
 src_prepare() {
+	DOC_CONTENTS="In order to use wallyplugin you need to
+		restart plasma in your KDE4 enviroment."
 	kde4-base_src_prepare
 	use kde || epatch "${FILESDIR}/${PN}-2.2.0-disable-kde4.patch"
 }
@@ -53,13 +55,9 @@ src_install() {
 	cmake-utils_src_install
 	newicon "${S}"/res/images/idle.png wally.png
 	make_desktop_entry wally Wally wally "Graphics;Qt"
+	use kde && readme.gentoo_create_doc
 }
 
 pkg_postinst() {
-	if use kde ; then
-		elog
-		elog "In order to use wallyplugin you need to"
-		elog "restart plasma in your KDE4 enviroment."
-		elog
-	fi
+	use kde && readme.gentoo_print_elog
 }

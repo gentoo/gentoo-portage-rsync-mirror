@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lastfmplayer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.71 2012/08/26 00:36:09 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.72 2013/02/16 07:55:04 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org>
+  lastfmplayer-1.5.4.27091-r3.ebuild:
+  Don't show elog messages always (#457596)
 
   26 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
   -lastfmplayer-1.5.4.27091-r1.ebuild, lastfmplayer-1.5.4.27091-r3.ebuild:

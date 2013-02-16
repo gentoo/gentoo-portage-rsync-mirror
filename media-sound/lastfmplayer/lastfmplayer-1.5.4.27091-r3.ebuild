@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.4.27091-r3.ebuild,v 1.2 2012/08/26 00:36:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.4.27091-r3.ebuild,v 1.3 2013/02/16 07:55:04 pacho Exp $
 
-EAPI=2
-inherit eutils multilib toolchain-funcs qt4-r2
+EAPI=5
+inherit eutils multilib readme.gentoo toolchain-funcs qt4-r2
 
 MY_P="${P/lastfmplayer/lastfm}+dfsg"
 
@@ -32,6 +32,15 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	DISABLE_AUTOFORMATTING="yes"
+	DOC_CONTENTS="To use the Last.fm player with a mozilla based browser:
+1. Install gnome-base/gconf
+2. gconftool-2 -t string -s /desktop/gnome/url-handlers/lastfm/command \"/usr/bin/lastfm %s\"
+3. gconftool-2 -s /desktop/gnome/url-handlers/lastfm/needs_terminal false -t bool
+4. gconftool-2 -t bool -s /desktop/gnome/url-handlers/lastfm/enabled true
+
+If you experience awkward fonts or widgets, try running qtconfig."
+
 	qt4-r2_src_prepare
 	# Use a different extensions path
 	epatch "${FILESDIR}"/${PN}-extensions-path.patch
@@ -81,9 +90,8 @@ src_compile() {
 src_install() {
 	cd "${WORKDIR}"
 	# Docs
-	dodoc "${S}"/ChangeLog.txt "${S}"/README debian/README.source \
-		|| die "dodoc failed"
-	doman debian/lastfm.1 || die "doman failed"
+	dodoc "${S}"/ChangeLog.txt "${S}"/README debian/README.source
+	doman debian/lastfm.1
 
 	# Copied from debian/rules
 	insinto /usr/share
@@ -100,7 +108,7 @@ src_install() {
 	if use dbus; then
 		insinto /usr/$(get_libdir)/lastfm_services/extensions/
 		insopts -m0755
-		doins "${S}"/bin/lastfm_services/extensions/*.so || die
+		doins "${S}"/bin/lastfm_services/extensions/*.so
 	fi
 	insinto /usr/$(get_libdir)
 	insopts -m0755
@@ -113,7 +121,7 @@ src_install() {
 	ln -sfn libMoose.so.1.0.0 libMoose.so.1
 	ln -sfn libMoose.so.1.0.0 libMoose.so.1.0
 	cd "${WORKDIR}"
-	newbin "${S}"/bin/last.fm lastfm || die "newbin failed"
+	newbin "${S}"/bin/last.fm lastfm
 	insinto /usr/share/lastfm/i18n
 	doins "${S}"/i18n/*.qm || die "failed to install translations"
 	fperms 755 /usr/bin/lastfm
@@ -124,17 +132,6 @@ src_install() {
 	make_desktop_entry lastfm "Last.fm Player" lastfm
 	sed -i -e "/^Exec/s:lastfm:& %U:" \
 		"${D}"/usr/share/applications/lastfm-${PN}.desktop || die
-}
 
-pkg_postinst() {
-	elog "To use the Last.fm player with a mozilla based browser:"
-	elog " 1. Install gnome-base/gconf"
-	elog " 2. gconftool-2 -t string -s \
-/desktop/gnome/url-handlers/lastfm/command \"/usr/bin/lastfm %s\""
-	elog " 3. gconftool-2 -s \
-/desktop/gnome/url-handlers/lastfm/needs_terminal false -t bool"
-	elog " 4. gconftool-2 -t bool -s \
-/desktop/gnome/url-handlers/lastfm/enabled true"
-	elog
-	elog "If you experience awkward fonts or widgets, try running qtconfig."
+	readme.gentoo_create_doc
 }

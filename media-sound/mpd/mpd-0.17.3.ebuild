@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.3.ebuild,v 1.2 2013/01/16 08:20:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.3.ebuild,v 1.3 2013/02/16 08:00:54 pacho Exp $
 
 EAPI=4
-inherit eutils flag-o-matic linux-info multilib systemd user
+inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
 
 DESCRIPTION="The Music Player Daemon (mpd)"
 HOMEPAGE="http://www.musicpd.org"
@@ -88,6 +88,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	DOC_CONTENTS="If you will be starting mpd via /etc/init.d/mpd, please make
+		sure that MPD's pid_file is unset."
+
 	cp -f doc/mpdconf.example doc/mpdconf.dist || die "cp failed"
 	epatch "${FILESDIR}"/${PN}-0.16.conf.patch
 
@@ -185,11 +188,12 @@ src_install() {
 	keepdir /var/lib/mpd/music
 	dodir /var/lib/mpd/playlists
 	keepdir /var/lib/mpd/playlists
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
-	elog "If you will be starting mpd via /etc/init.d/mpd, please make"
-	elog "sure that MPD's pid_file is unset."
+	readme.gentoo_print_elog
 
 	# also change the homedir if the user has existed before
 	usermod -d "/var/lib/mpd" mpd
