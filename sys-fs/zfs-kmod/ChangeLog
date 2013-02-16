@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.19 2013/02/11 23:36:17 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.20 2013/02/16 22:12:55 ryao Exp $
+
+*zfs-kmod-0.6.0_rc14-r3 (16 Feb 2013)
+
+  16 Feb 2013; Richard Yao <ryao@gentoo.org>
+  +files/zfs-kmod-0.6.0_rc14-improved-hardened-support.patch,
+  +zfs-kmod-0.6.0_rc14-r3.ebuild, -zfs-kmod-0.6.0_rc14-r2.ebuild:
+  Improve support for hardened kernels, bug \# 457176, thanks Marcin Apply name
+  length check patch to 0.6.0_rc14
 
 *zfs-kmod-0.6.0_rc12-r2 (11 Feb 2013)
 *zfs-kmod-0.6.0_rc14-r2 (11 Feb 2013)

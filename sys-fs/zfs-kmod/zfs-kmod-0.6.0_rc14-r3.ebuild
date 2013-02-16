@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc14-r2.ebuild,v 1.1 2013/02/11 23:36:17 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc14-r3.ebuild,v 1.1 2013/02/16 22:12:55 ryao Exp $
 
 EAPI="4"
 
@@ -66,6 +66,12 @@ src_prepare() {
 	then
 		# Cast constant for 32-bit compatibility
 		epatch "${FILESDIR}/${P}-cast-const-for-32bit-compatibility.patch"
+
+		# Handle missing name length check in Linux VFS
+		epatch "${FILESDIR}/${P}-vfs-name-length-compatibility.patch"
+
+		# Fix NULL pointer exception on hardened kernels, bug #457176
+		epatch 	"${FILESDIR}/${P}-improved-hardened-support.patch"
 	fi
 	autotools-utils_src_prepare
 }
