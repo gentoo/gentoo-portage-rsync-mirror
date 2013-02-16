@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/leechcraft-lemon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-lemon/ChangeLog,v 1.2 2012/12/25 16:47:14 maksbotan Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-lemon/ChangeLog,v 1.4 2013/02/16 21:30:47 ago Exp $
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> leechcraft-lemon-0.5.90.ebuild:
+  Stable for x86, wrt bug #457824
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> leechcraft-lemon-0.5.90.ebuild:
+  Stable for amd64, wrt bug #457824
 
 *leechcraft-lemon-0.5.90 (25 Dec 2012)
 

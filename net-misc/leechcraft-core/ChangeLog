@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/leechcraft-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/ChangeLog,v 1.35 2013/02/16 20:44:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/ChangeLog,v 1.36 2013/02/16 21:29:44 ago Exp $
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> leechcraft-core-0.5.90.ebuild:
+  Stable for x86, wrt bug #457824
 
   16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> leechcraft-core-0.5.90.ebuild:
   Stable for amd64, wrt bug #457824

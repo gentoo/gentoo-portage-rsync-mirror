@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/leechcraft-cstp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-cstp/ChangeLog,v 1.20 2013/02/16 20:44:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-cstp/ChangeLog,v 1.21 2013/02/16 21:29:50 ago Exp $
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> leechcraft-cstp-0.5.90.ebuild:
+  Stable for x86, wrt bug #457824
 
   16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> leechcraft-cstp-0.5.90.ebuild:
   Stable for amd64, wrt bug #457824

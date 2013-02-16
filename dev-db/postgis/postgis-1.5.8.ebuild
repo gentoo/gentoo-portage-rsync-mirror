@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.5.8.ebuild,v 1.1 2013/01/30 14:46:58 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.5.8.ebuild,v 1.2 2013/02/16 21:01:38 swegener Exp $
 
 EAPI="4"
 
@@ -16,6 +16,7 @@ IUSE="doc gtk"
 
 RDEPEND="
 		|| (
+			dev-db/postgresql-server:9.2
 			dev-db/postgresql-server:9.1
 			dev-db/postgresql-server:9.0
 			dev-db/postgresql-server:8.4
@@ -49,10 +50,10 @@ MAKEOPTS+=" -j1"
 pkg_setup() {
 	export PGSLOT="$(postgresql-config show)"
 
-	if [[ ${PGSLOT//.} < 83 || ${PGSLOT//.} > 91 ]] ; then
-		eerror "You must build ${CATEGORY}/${P} against PostgreSQL 8.3 - 9.1."
+	if [[ ${PGSLOT//.} < 83 || ${PGSLOT//.} > 92 ]] ; then
+		eerror "You must build ${CATEGORY}/${P} against PostgreSQL 8.3 - 9.2."
 		eerror "Set an appropriate slot with postgresql-config."
-		die 'Select a PostgreSQL slot between 8.3 and 9.1'
+		die 'Select a PostgreSQL slot between 8.3 and 9.2'
 	fi
 }
 

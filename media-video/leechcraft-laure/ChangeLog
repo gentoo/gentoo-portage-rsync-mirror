@@ -1,6 +1,9 @@
 # ChangeLog for media-video/leechcraft-laure
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/leechcraft-laure/ChangeLog,v 1.12 2013/02/16 20:43:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/leechcraft-laure/ChangeLog,v 1.13 2013/02/16 21:28:55 ago Exp $
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> leechcraft-laure-0.5.90.ebuild:
+  Stable for x86, wrt bug #457824
 
   16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> leechcraft-laure-0.5.90.ebuild:
   Stable for amd64, wrt bug #457824

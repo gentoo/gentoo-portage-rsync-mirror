@@ -1,6 +1,10 @@
 # ChangeLog for virtual/leechcraft-browser
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-browser/ChangeLog,v 1.18 2012/12/25 16:54:47 maksbotan Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-browser/ChangeLog,v 1.19 2013/02/16 21:13:11 ago Exp $
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  leechcraft-browser-0.5.90.ebuild:
+  Stable for amd64, wrt bug #457824
 
 *leechcraft-browser-0.5.90 (25 Dec 2012)
 
