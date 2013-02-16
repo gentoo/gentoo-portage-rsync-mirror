@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.79 2013/02/03 17:55:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.80 2013/02/16 14:25:30 aidecoe Exp $
+
+  16 Feb 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -pyro-4.14.ebuild:
+  Removing 4.14 which couldn't be stabilized because of serious bugs.
 
   03 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pyro-4.17.ebuild:
   Stable for ppc, wrt bug #455170
