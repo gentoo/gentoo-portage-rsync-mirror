@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.32-r1.ebuild,v 1.1 2013/02/02 03:47:28 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.32-r1.ebuild,v 1.2 2013/02/16 11:28:53 pacho Exp $
 
 EAPI="4"
-
-inherit base autotools eutils depend.php user
+inherit base autotools eutils depend.php readme.gentoo user
 
 DESCRIPTION="Lightweight high-performance web server"
 HOMEPAGE="http://www.lighttpd.net/"
@@ -96,6 +95,9 @@ pkg_setup() {
 	fi
 	enewgroup lighttpd
 	enewuser lighttpd -1 -1 /var/www/localhost/htdocs lighttpd
+
+	DOC_CONTENTS="IPv6 migration guide:\n
+		http://redmine.lighttpd.net/projects/lighttpd/wiki/IPv6-Config"
 }
 
 src_prepare() {
@@ -109,6 +111,7 @@ src_prepare() {
 	fi
 	eautoreconf
 }
+
 src_configure() {
 	econf --libdir=/usr/$(get_libdir)/${PN} \
 		--enable-lfs \
@@ -171,6 +174,7 @@ src_install() {
 	# docs
 	dodoc AUTHORS README NEWS doc/scripts/*.sh
 	newdoc doc/config//lighttpd.conf lighttpd.conf.distrib
+	use ipv6 && readme.gentoo_create_doc
 
 	use doc && dohtml -r doc/*
 
@@ -192,10 +196,8 @@ src_install() {
 }
 
 pkg_postinst () {
-	if use ipv6; then
-		elog "IPv6 migration guide:"
-		elog "http://redmine.lighttpd.net/projects/lighttpd/wiki/IPv6-Config"
-	fi
+	use ipv6 && readme.gentoo_print_elog
+
 	if [[ -f ${ROOT}etc/conf.d/spawn-fcgi.conf ]] ; then
 		einfo "spawn-fcgi is now provided by www-servers/spawn-fcgi."
 		einfo "spawn-fcgi's init script configuration is now located"

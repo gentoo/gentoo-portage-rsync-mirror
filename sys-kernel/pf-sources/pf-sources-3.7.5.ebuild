@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-3.7.5.ebuild,v 1.1 2013/02/14 20:14:06 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-3.7.5.ebuild,v 1.2 2013/02/16 11:18:25 pacho Exp $
 
-EAPI="2"
-
-inherit versionator
+EAPI="5"
+inherit readme.gentoo versionator
 
 COMPRESSTYPE=".bz2"
 K_USEPV="yes"
@@ -39,6 +38,14 @@ IUSE="" # experimental
 KV_FULL="${PVR}-pf"
 S="${WORKDIR}"/linux-"${KV_FULL}"
 
+DISABLE_AUTOFORMATTING="yes"
+DOC_CONTENTS="
+${P} has the following optional runtime dependencies:
+- sys-apps/tuxonice-userui: provides minimal userspace progress
+information related to suspending and resuming process.
+- sys-power/hibernate-script or sys-power/pm-utils: runtime utilities
+for hibernating and suspending your computer."
+
 pkg_setup(){
 	ewarn
 	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
@@ -53,17 +60,14 @@ src_prepare(){
 	epatch "${DISTDIR}"/"${PF_FILE}"
 }
 
+src_install() {
+	kernel-2_src_install
+	readme.gentoo_create_doc
+}
+
 pkg_postinst() {
 	kernel-2_pkg_postinst
-
-	elog
-	elog "${P} has the following optional runtime dependencies:"
-	elog "  sys-apps/tuxonice-userui"
-	elog "    provides minimal userspace progress information related to"
-	elog "    suspending and resuming process"
-	elog "  sys-power/hibernate-script or sys-power/pm-utils"
-	elog "    runtime utilites for hibernating and suspending your computer"
-	elog
+	readme.gentoo_print_elog
 }
 
 K_EXTRAEINFO="For more info on pf-sources and details on how to report problems,

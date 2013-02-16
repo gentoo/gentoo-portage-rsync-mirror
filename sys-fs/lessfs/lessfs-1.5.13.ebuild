@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.5.13.ebuild,v 1.1 2013/02/09 10:13:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/lessfs-1.5.13.ebuild,v 1.2 2013/02/16 11:10:11 pacho Exp $
 
 EAPI="5"
+inherit readme.gentoo
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
@@ -26,6 +27,10 @@ RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
+DOC_CONTENTS="Default configuration file: /etc/${PN}.cfg.
+	If your host is a client consult the following configuration
+	file: /usr/share/doc/${PF}/${PN}.cfg-slave.*"
+
 src_configure() {
 	econf \
 		$(use_enable debug) $(use_enable debug lckdebug) \
@@ -40,13 +45,5 @@ src_install () {
 	insinto /etc
 	newins examples/lessfs.cfg-master ${PN}.cfg
 	dodoc examples/lessfs.* etc/lessfs.*
-
-}
-
-pkg_postinst() {
-	elog
-	elog "Default configuration file: /etc/${PN}.cfg"
-	elog "If your host is a client consult the following configuration"
-	elog "file: /usr/share/doc/${PF}/${PN}.cfg-slave.bz2"
-	elog
+	readme.gentoo_create_doc
 }
