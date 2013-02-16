@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-3.1.0.ebuild,v 1.6 2012/11/17 19:08:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-3.1.0.ebuild,v 1.7 2013/02/16 10:52:27 pacho Exp $
 
-EAPI="3"
+EAPI="5"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="sqlite"
 
-inherit eutils distutils
+inherit eutils distutils readme.gentoo
 
 DESCRIPTION="Gwibber is an open source microblogging client for GNOME developed
 with Python and GTK."
@@ -45,6 +45,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	DOC_CONTENTS="A new Twitter API is used. If your old accounts fail to work, try to
+		re-add them."
+
 	epatch "$FILESDIR"/gwibber-twitter-api-key.patch
 	epatch "$FILESDIR"/make_nm_optional.patch
 	epatch "$FILESDIR"/gwibber-fix-uuid-import.patch
@@ -53,6 +56,10 @@ src_prepare() {
 src_install() {
 	distutils_src_install
 	doman gwibber{,-poster,-accounts}.1 || die "Man page couldn't be installed."
-	elog "A new Twitter API is used. If your old accounts fail to work, try to"
-	elog "re-add them."
+	readme.gentoo_create_doc
+}
+
+pkg_postinst() {
+	distutils_pkg_postinst
+	readme.gentoo_print_elog
 }
