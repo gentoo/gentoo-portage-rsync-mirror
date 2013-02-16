@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.123 2013/02/10 17:16:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.124 2013/02/16 09:20:31 eras Exp $
+
+# Eray Aslan <eras@gentoo.org> (16 Feb 2013)
+# Mask further java flag
+=dev-libs/cyrus-sasl-2.1.25-r4 java
 
 # Rick Farina <zerochaos@gentoo.org> (05 Feb 2013)
 # masking all stable packages with java use flag
