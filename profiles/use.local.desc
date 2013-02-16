@@ -5194,6 +5194,7 @@ sci-mathematics/octave:qrupdate - Add support for sci-libs/qrupdatefor QR and Ch
 sci-mathematics/octave:sparse - Add enhanced support for sparse matrix algebra with SuiteSparse
 sci-mathematics/pari:data - Add additional data (elldata, galdata, seadata, nftables)
 sci-mathematics/polymake:libpolymake - Build the polymake library to build applications using the C++ interface.
+sci-mathematics/rstudio:server - Build and install the RStudio server
 sci-mathematics/singular:boost - Compile against external boost headers (dev-libs/boost)
 sci-mathematics/spass:isabelle - Add integration support for the Isabelle/HOL theorem prover.
 sci-mathematics/unuran:prng - Use sci-mathematics/prng library
