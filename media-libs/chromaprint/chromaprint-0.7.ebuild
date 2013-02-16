@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-0.7.ebuild,v 1.3 2012/12/12 16:25:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-0.7.ebuild,v 1.4 2013/02/16 16:54:21 lu_zero Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -26,7 +26,9 @@ DEPEND="${RDEPEND}
 
 DOCS="NEWS.txt README.txt"
 
-PATCHES=( "${FILESDIR}"/${P}-boost.patch "${FILESDIR}"/${P}-ffmpeg.patch )
+PATCHES=( "${FILESDIR}"/${P}-boost.patch
+		  "${FILESDIR}"/${P}-ffmpeg.patch
+		  "${FILESDIR}"/${P}-libav9.patch )
 
 src_configure() {
 	local mycmakeargs=(
