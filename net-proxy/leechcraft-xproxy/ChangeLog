@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/leechcraft-xproxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/leechcraft-xproxy/ChangeLog,v 1.11 2013/02/16 21:12:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/leechcraft-xproxy/ChangeLog,v 1.12 2013/02/16 21:32:26 ago Exp $
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  leechcraft-xproxy-0.5.90.ebuild:
+  Stable for x86, wrt bug #457824
 
   16 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   leechcraft-xproxy-0.5.90.ebuild:

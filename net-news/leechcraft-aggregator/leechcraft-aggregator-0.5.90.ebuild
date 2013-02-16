@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leechcraft-aggregator/leechcraft-aggregator-0.5.90.ebuild,v 1.2 2013/02/16 21:12:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leechcraft-aggregator/leechcraft-aggregator-0.5.90.ebuild,v 1.3 2013/02/16 21:32:16 ago Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ inherit leechcraft
 DESCRIPTION="Full-featured RSS/Atom feed reader for LeechCraft"
 
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug mysql +sqlite postgres"
 
 DEPEND="~net-misc/leechcraft-core-${PV}[postgres?,sqlite?]

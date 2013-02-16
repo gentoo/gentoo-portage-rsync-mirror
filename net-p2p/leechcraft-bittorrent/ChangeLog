@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/leechcraft-bittorrent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-bittorrent/ChangeLog,v 1.22 2013/02/16 21:12:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-bittorrent/ChangeLog,v 1.23 2013/02/16 21:32:21 ago Exp $
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  leechcraft-bittorrent-0.5.90.ebuild:
+  Stable for x86, wrt bug #457824
 
   16 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   leechcraft-bittorrent-0.5.90.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.4.7.ebuild,v 1.1 2013/02/16 20:47:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.4.7.ebuild,v 1.2 2013/02/16 21:56:17 hwoarang Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ RDEPEND="
 	>=x11-libs/qt-core-4.7.2:4
 	>=x11-libs/qt-dbus-4.7.2:4
 	>=x11-libs/qt-gui-4.7.2:4[dbus]
-	>=virtual/ffmpeg-0.10.3[X,encode,truetype]
+	>=virtual/ffmpeg-0.9[X,encode,truetype]
 	kde? ( kde-base/kdelibs:4 )
 	opengl? ( >=x11-libs/qt-opengl-4.7.2:4 )
 	pulseaudio? ( media-sound/pulseaudio )

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14473 2013/02/16 14:56:23 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14475 2013/02/16 21:55:41 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,19 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (17 Feb 2013)
+# Does not build with libav-0.8
+=media-video/qx11grab-0.4.7
+
+# Doug Goldstein <cardoe@gentoo.org> (16 Feb 2013)
+# For most use cases you can unmask this and use this
+# as there has been ample interested. This however breaks
+# at least one feature fundamental to me.
+# * migration from previous versions is broken and migration
+#   to future versions is broken
+# So this is in the tree for people that want/need it but its masked.
+=app-emulation/qemu-1.4.0
 
 # Rick Farina <zerochaos@gentoo.org> (15 Feb 2013)
 # these firmware packages have been merged into the sys-kernel/linux-firmware
