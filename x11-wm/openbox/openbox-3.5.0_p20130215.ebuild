@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_p20130215.ebuild,v 1.1 2013/02/15 22:22:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_p20130215.ebuild,v 1.2 2013/02/16 05:58:07 zmedico Exp $
 
 EAPI="4"
 inherit multilib autotools python eutils
@@ -12,7 +12,7 @@ branding? ( http://dev.gentoo.org/~hwoarang/distfiles/surreal-gentoo.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-linux"
 IUSE="branding debug imlib nls python session startup-notification static-libs"
 
 RDEPEND="dev-libs/glib:2
@@ -48,7 +48,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--disable-silent-rules \
 		$(use_enable debug) \
 		$(use_enable imlib imlib2) \
@@ -61,7 +61,7 @@ src_configure() {
 
 src_install() {
 	dodir /etc/X11/Sessions
-	echo "/usr/bin/openbox-session" > "${D}/etc/X11/Sessions/${PN}"
+	echo "/usr/bin/openbox-session" > "${ED}/etc/X11/Sessions/${PN}"
 	fperms a+x /etc/X11/Sessions/${PN}
 	emake DESTDIR="${D}" install
 	if use branding; then
@@ -73,6 +73,6 @@ src_install() {
 			"${D}"/etc/xdg/openbox/rc.xml \
 			|| die "failed to set Surreal Gentoo as the default theme"
 	fi
-	! use static-libs && rm "${D}"/usr/$(get_libdir)/lib{obt,obrender}.la
-	! use python && rm "${D}"/usr/libexec/openbox-xdg-autostart
+	! use static-libs && rm "${ED}"/usr/$(get_libdir)/lib{obt,obrender}.la
+	! use python && rm "${ED}"/usr/libexec/openbox-xdg-autostart
 }

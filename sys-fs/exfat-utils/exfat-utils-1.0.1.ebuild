@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/exfat-utils/exfat-utils-1.0.0.ebuild,v 1.2 2013/02/16 05:28:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/exfat-utils/exfat-utils-1.0.1.ebuild,v 1.1 2013/02/16 05:53:49 ssuominen Exp $
 
 EAPI=5
 inherit scons-utils toolchain-funcs
