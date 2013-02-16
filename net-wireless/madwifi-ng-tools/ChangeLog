@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/madwifi-ng-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/ChangeLog,v 1.58 2012/12/21 17:49:48 zerochaos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/ChangeLog,v 1.59 2013/02/16 13:00:41 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
   21 Dec 2012; Rick Farina <zerochaos@gentoo.org> metadata.xml:
   adding myself as maintainer to help ease the transition

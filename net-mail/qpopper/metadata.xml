@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>net-mail</herd>
-  <maintainer>
-  	<email>pva@gentoo.org</email>
-	<name>Peter Volkov</name>
-  </maintainer>
   <use>
     <flag name="apop">Enables the pop.auth file in /etc/pop.auth</flag>
     <flag name="drac">Enables DRAC support</flag>

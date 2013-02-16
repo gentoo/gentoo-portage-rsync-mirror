@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ipv6calc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.58 2012/09/09 17:32:56 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.59 2013/02/16 12:55:08 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> -ipv6calc-0.80.0.ebuild,
+  -ipv6calc-0.90.0-r1.ebuild, -ipv6calc-0.92.0.ebuild, metadata.xml:
+  Cleanup due bug #96436
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> ipv6calc-0.93.1.ebuild:
   sparc stable wrt #419303

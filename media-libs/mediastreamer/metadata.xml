@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>voip</herd>
-	<maintainer>
-		<email>pva@gentoo.org</email>
-		<name>Peter Volkov</name>
-	</maintainer>
 	<use>
 		<flag name="amr">Use of AMR Narrow Band codec plugin</flag>
 		<flag name="g726">Support g726 codec</flag>

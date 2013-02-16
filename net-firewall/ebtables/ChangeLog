@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ebtables
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.50 2012/12/19 16:00:36 qnikst Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.51 2013/02/16 12:48:50 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
 *ebtables-2.0.10.4-r1 (19 Dec 2012)
 

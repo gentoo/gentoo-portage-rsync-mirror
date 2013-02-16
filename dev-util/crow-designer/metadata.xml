@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>pva@gentoo.org</email>
-		<name>Peter Volkov</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">Gideon is a modern GUI builder for GTK+ toolkit. It is an advanced
 		IDE-embeddable RAD tool designed to fulfil l the needs of desktop

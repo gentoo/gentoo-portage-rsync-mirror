@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vconfig
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.31 2009/09/23 19:47:33 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.32 2013/02/16 12:58:00 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> vconfig-1.9.ebuild:
   Remove virtual/libc

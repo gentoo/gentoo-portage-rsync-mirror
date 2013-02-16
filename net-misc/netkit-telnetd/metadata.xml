@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>pva@gentoo.org</email>
-		<name>Peter Volkov</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription>The telnetd program is a server which supports the DARPA telnet interactive communication protocol.</longdescription>
 </pkgmetadata>

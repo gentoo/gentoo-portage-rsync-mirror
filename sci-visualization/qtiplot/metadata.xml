@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sci</herd>
-	<maintainer>
-		<email>pva@gentoo.org</email>
-		<name>Peter Volkov</name>
-	</maintainer>
 	<longdescription>
 	Data analysis and scientific plotting package. This is a clone of the
 	popular Origin software available on another well known platform implemented

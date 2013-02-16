@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/udns
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.26 2012/09/05 15:51:52 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.27 2013/02/16 12:53:23 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> -udns-0.0.9.ebuild, metadata.xml:
+  Cleanup due bug #96436
 
 *udns-0.2 (05 Sep 2012)
 
@@ -93,4 +96,3 @@
   +udns-0.0.9.ebuild:
   Initial commit, ebuild by Simon Arlott <bugzilla.gentoo.simon@arlott.org>,
   see bug #222741.
-

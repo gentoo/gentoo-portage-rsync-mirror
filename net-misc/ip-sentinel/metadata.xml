@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-  <email>pva@gentoo.org</email>
-  <name>Peter Volkov</name>
-</maintainer>
 <longdescription>
 This program tries to prevent unauthorized usage of IPs within the local
 ethernet broadcastdomain by giving an answer to ARP-requests. After receiving

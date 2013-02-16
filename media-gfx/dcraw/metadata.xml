@@ -6,10 +6,6 @@
 	<name>Wolfram Schlich</name>
 	<description>Primary maintainer</description>
 </maintainer>
-<maintainer>
-	<email>pva@gentoo.org</email>
-	<name>Peter Volkov</name>
-</maintainer>
 <longdescription>
 This utility converts the native (RAW), format of various digital cameras into
 netpbm portable pixmap (.ppm) image. Supports the following models: Canon,

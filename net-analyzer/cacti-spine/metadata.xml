@@ -6,10 +6,6 @@
 		<email>ramereth@gentoo.org</email>
 		<name>Lance Albertson</name>
 	</maintainer>
-	<maintainer>
-		<email>pva@gentoo.org</email>
-		<name>Peter Volkov</name>
-	</maintainer>
 	<longdescription lang="en">
 		Spine (formerly known as Cactid) is a poller for Cacti that primarily
 		strives to be as fast as possible. For this reason it is written in

@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/monotone
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.24 2012/06/07 22:13:04 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.25 2013/02/16 12:39:34 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> -monotone-1.0-r2.ebuild,
+  metadata.xml:
+  Cleanup due bug #96436
 
   07 Jun 2012; Zac Medico <zmedico@gentoo.org> monotone-0.99.1-r1.ebuild,
   monotone-1.0-r2.ebuild, monotone-1.0-r3.ebuild:
@@ -414,4 +418,3 @@
   +monotone-0.15.ebuild:
   initial import as per bug #39383. Ebuild based of contributions from Peter
   Simons <simons@cryp.to> and Wojciech Milkowski <wmilkowski@gazeta.pl>.
-

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/guiloader-c++
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/ChangeLog,v 1.25 2012/05/04 18:35:47 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader-c++/ChangeLog,v 1.26 2013/02/16 12:31:48 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> -guiloader-c++-2.15.0.ebuild,
+  -guiloader-c++-2.17.1.ebuild, -guiloader-c++-2.19.0.ebuild, metadata.xml:
+  Cleanup due bug #96436
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> guiloader-c++-2.15.0.ebuild,
   guiloader-c++-2.17.1.ebuild, guiloader-c++-2.19.0.ebuild,
@@ -120,4 +124,3 @@
   30 Aug 2006; Peter Volkov <pva@gentoo.org> +metadata.xml,
   +guiloader-c++-2.8.0.ebuild:
   Initial import. Enjoy :)
-

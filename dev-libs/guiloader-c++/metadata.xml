@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>pva@gentoo.org</email>
-		<name>Peter Volkov</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">GuiLoader/C++ is a C++ binding to GuiLoader library. It is a convenience
 		layer that simplifies development of GuiLoader based applications

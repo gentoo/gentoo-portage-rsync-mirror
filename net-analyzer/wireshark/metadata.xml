@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>netmon</herd>
 <maintainer>
-	<email>pva@gentoo.org</email>
-	<name>Peter Volkov</name>
-</maintainer>
-<maintainer>
 	<email>zerochaos@gentoo.org</email>
 	<name>Rick Farina</name>
 	<description>Excessive wireshark user and enthusiast</description>

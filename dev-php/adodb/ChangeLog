@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/adodb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.119 2013/02/05 02:56:19 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.120 2013/02/16 12:35:57 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
 *adodb-5.17-r1 (05 Feb 2013)
 

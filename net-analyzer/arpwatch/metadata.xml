@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-	<maintainer>
-		<email>pva@gentoo.org</email>
-		<name>Peter Volkov</name>
-	</maintainer>
 	<longdescription lang="en">
 		The arpwatch package contains arpwatch and arpsnmp. Arpwatch and arpsnmp
 		are both network monitoring tools. Both utilities monitor Ethernet or

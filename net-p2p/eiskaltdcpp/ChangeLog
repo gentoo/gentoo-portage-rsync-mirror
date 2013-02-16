@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/eiskaltdcpp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.45 2012/12/14 15:45:07 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.46 2013/02/16 12:59:36 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
   14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Remove redundant USE=upnp description; it matches the global flag meaning.

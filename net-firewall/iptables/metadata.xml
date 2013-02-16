@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
-<maintainer>
-	<email>pva@gentoo.org</email>
-</maintainer>
 <use>
  <flag name='netlink'>Build against libnfnetlink which enables the nfnl_osf util</flag>
 </use>

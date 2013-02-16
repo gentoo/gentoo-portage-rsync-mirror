@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nautilus-python
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.19 2012/08/11 12:45:33 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.20 2013/02/16 12:36:39 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
   11 Aug 2012; Markus Meier <maekke@gentoo.org> nautilus-python-1.1-r1.ebuild:
   x86 stable, bug #418903

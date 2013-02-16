@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/drac
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/ChangeLog,v 1.19 2012/11/30 23:03:34 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/ChangeLog,v 1.20 2013/02/16 12:40:55 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
   30 Nov 2012; Tim Harder <radhermit@gentoo.org> drac-1.12-r1.ebuild:
   Fix LICENSE (bug #445382 by ulm).

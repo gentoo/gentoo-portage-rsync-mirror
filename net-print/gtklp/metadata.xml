@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>printing</herd>
-<maintainer>
-	<email>pva@gentoo.org</email>
-	<name>Peter Volkov</name>
-</maintainer>
 <longdescription>
 	GtkLP is an graphical frontend for CUPS, the Common UNIX Printing System.
 	It is used to have an easy (and graphical) access to all of the many options

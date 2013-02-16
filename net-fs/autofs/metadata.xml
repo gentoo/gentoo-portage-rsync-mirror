@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>net-fs</herd>
 <maintainer>
-	<email>pva@gentoo.org</email>
-	<name>Peter Volkov</name>
-</maintainer>
-<maintainer>
 	<email>gentoobugsie.20.dsurawicz@spamgourmet.com</email>
 	<name>Dustin Polke</name>
 </maintainer>

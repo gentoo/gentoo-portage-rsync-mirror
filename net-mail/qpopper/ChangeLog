@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qpopper
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.38 2011/12/19 15:32:15 eras Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.39 2013/02/16 12:54:04 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
   19 Dec 2011; Eray Aslan <eras@gentoo.org>
   -files/qpopper-4.0.14-parallel-build.patch, -qpopper-4.0.16.ebuild,

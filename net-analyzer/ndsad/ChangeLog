@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ndsad
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ChangeLog,v 1.8 2008/09/16 07:57:28 pva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ChangeLog,v 1.9 2013/02/16 12:46:38 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
   16 Sep 2008; Peter Volkov <pva@gentoo.org> ndsad-1.33.ebuild:
   Some cleanups, avoid calling autotols directly, bug #226415, thank Diego
@@ -33,4 +36,3 @@
   09 Jan 2006; Peter Volkov <pva@gentoo.org> +files/ndsad.conf.d,
   +files/ndsad.init, +metadata.xml, +ndsad-1.33.ebuild:
   Initial bump.
-

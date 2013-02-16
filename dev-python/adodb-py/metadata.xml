@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>python</herd>
-<maintainer>
-	<email>pva@gentoo.org</email>
-	<name>Peter Volkov</name>
-</maintainer>
 <longdescription>Database abstraction library for Python</longdescription>
 <longdescription lang="ja">
 Python言語用データベース抽象化ライブラリです。

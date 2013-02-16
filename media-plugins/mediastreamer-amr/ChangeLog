@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mediastreamer-amr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-amr/ChangeLog,v 1.7 2012/11/19 20:54:52 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-amr/ChangeLog,v 1.8 2013/02/16 12:44:56 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
   19 Nov 2012; Michał Górny <mgorny@gentoo.org>
   +files/mediastreamer-amr-0.0.1-include.patch, mediastreamer-amr-0.0.1.ebuild:

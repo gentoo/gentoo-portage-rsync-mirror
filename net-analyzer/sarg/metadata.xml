@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
- <maintainer>
-  <email>pva@gentoo.org</email>
-  <name>Peter Volkov</name>
- </maintainer>
  <longdescription>Sarg - Squid Analysis Report Generator is a tool that allow
  you to view "where" your users are going to on the Internet. Sarg provides many
  informations about Squid users activities: times, bytes, sites, etc...
