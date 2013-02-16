@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/profile-sync-daemon-5.06.ebuild,v 1.1 2012/11/29 12:51:04 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/profile-sync-daemon-5.21.ebuild,v 1.1 2013/02/16 17:38:58 hasufell Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils vcs-snapshot
 
 DESCRIPTION="Symlinks and syncs browser profile dirs to RAM"
 HOMEPAGE="https://wiki.archlinux.org/index.php/Profile-sync-daemon"
-SRC_URI="https://github.com/hasufell/${PN}/tarball/v${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/graysky2/profile-sync-daemon/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
@@ -20,8 +20,12 @@ RDEPEND="
 	net-misc/rsync
 	cron? ( virtual/cron )"
 
+src_compile() {
+	emake -f Makefile.gentoo
+}
+
 src_install() {
-	emake DESTDIR="${D}" $(usex cron "install" "install-bin install-doc install-man")
+	emake -f Makefile.gentoo DESTDIR="${D}" $(usex cron "install" "install-bin install-doc install-man")
 }
 
 pkg_postinst() {

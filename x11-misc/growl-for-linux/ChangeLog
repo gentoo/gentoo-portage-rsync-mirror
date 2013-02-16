@@ -1,6 +1,18 @@
 # ChangeLog for x11-misc/growl-for-linux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/growl-for-linux/ChangeLog,v 1.5 2013/02/03 12:46:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/growl-for-linux/ChangeLog,v 1.6 2013/02/16 17:50:15 tomwij Exp $
+
+*growl-for-linux-9999 (16 Feb 2013)
+*growl-for-linux-0.6.7 (16 Feb 2013)
+
+  16 Feb 2013; Tom Wijsman <TomWij@gentoo.org> +growl-for-linux-0.6.7.ebuild,
+  +growl-for-linux-9999.ebuild, metadata.xml:
+  Took maintainership. Version bump to 0.6.7; not 0.6.9 since that archive
+  misses files and thus doesn't compile, 0.7.0 can be obtained through the live
+  ebuild I have added, although it does not compile currently due to
+  https://github.com/mattn/growl-for-
+  linux/commit/9950a92838f0d5755eba850f7681bbb44c19dae1. Thanks to df for
+  reporting, thanks to pinkbyte for improving the ebuild. Fixes bug #413337.
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -growl-for-linux-0.1.ebuild,
   metadata.xml:

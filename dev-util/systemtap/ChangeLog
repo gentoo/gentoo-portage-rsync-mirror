@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.106 2013/01/28 20:31:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.107 2013/02/16 17:51:26 swegener Exp $
+
+*systemtap-2.1 (16 Feb 2013)
+
+  16 Feb 2013; Sven Wegener <swegener@gentoo.org> +systemtap-2.1.ebuild:
+  Version bump.
 
   28 Jan 2013; Mike Frysinger <vapier@gentoo.org> systemtap-2.0.ebuild:
   Add ~s390 love -- it compiles #351931 by Pacho Ramos.
