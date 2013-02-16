@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/phpvirtualbox-4.2.4.ebuild,v 1.2 2013/02/15 20:19:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/phpvirtualbox-4.2.4.ebuild,v 1.3 2013/02/16 11:56:04 pacho Exp $
 
 EAPI="5"
 
-inherit versionator eutils webapp depend.php
+inherit versionator eutils webapp depend.php readme.gentoo
 
 MY_PV="$(replace_version_separator 2 '-')"
 MY_P="${PN}-${MY_PV}"
@@ -26,10 +26,29 @@ S="${WORKDIR}"/${MY_P}
 
 need_php_httpd
 
+DISABLE_AUTOFORMATTING="yes"
+DOC_CONTENTS="
+Local or remote virtualbox hosts must be compiled with
+'vboxwebsrv' useflag and the respective init script
+must be running to use this interface:
+/etc/init.d/vboxwebsrv start
+
+To enable the automatic startup mode feature uncomment the
+following line in the config.php file:
+var \$startStopConfig = true;
+
+You should also add the /etc/init.d/vboxinit script to the
+default runlevel on the virtualbox host:
+\`rc-update add vboxinit default\`
+If the server is on a remote host, than the script must be
+copied manually from
+'${FILESDIR}'/vboxinit-initd to
+/etc/init.d/vboxinit on the remote host."
+
 src_install() {
 	webapp_src_preinst
 
-	dodoc CHANGELOG.txt LICENSE.txt README.txt || die
+	dodoc CHANGELOG.txt LICENSE.txt README.txt
 	rm -f CHANGELOG.txt LICENSE.txt README.txt
 
 	insinto "${MY_HTDOCSDIR}"
@@ -44,24 +63,11 @@ src_install() {
 	then
 		newinitd "${FILESDIR}"/vboxinit-initd vboxinit
 	fi
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
 	webapp_pkg_postinst
-	elog "Local or remote virtualbox hosts must be compiled with"
-	elog "'vboxwebsrv' useflag and the respective init script"
-	elog "must be running to use this interface"
-	elog " /etc/init.d/vboxwebsrv start"
-	elog
-	elog "To enable the automatic startup mode feature uncomment the"
-	elog "following line in the config.php file:"
-	elog " var \$startStopConfig = true;"
-	elog
-	elog "You should also add the /etc/init.d/vboxinit script to the"
-	elog "default runlevel on the virtualbox host:"
-	elog "\`rc-update add vboxinit default\`"
-	elog "If the server is on a remote host, than the script must be"
-	elog "copied manually from"
-	elog "${FILESDIR}/vboxinit-initd to /etc/init.d/vboxinit"
-	elog "on the remote host."
+	readme.gentoo_print_elog
 }

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pcmanfm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.88 2012/11/02 17:29:44 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.89 2013/02/16 11:43:01 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> pcmanfm-1.1.0.ebuild:
+  Don't show elog messages always (#457596)
 
 *pcmanfm-1.1.0 (02 Nov 2012)
 

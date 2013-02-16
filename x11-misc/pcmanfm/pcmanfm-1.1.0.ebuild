@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-1.1.0.ebuild,v 1.1 2012/11/02 17:29:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-1.1.0.ebuild,v 1.2 2013/02/16 11:43:01 pacho Exp $
 
 EAPI="4"
-inherit eutils fdo-mime
+inherit eutils fdo-mime readme.gentoo
 
 MY_PV="${PV/_/}"
 MY_P="${PN}-${MY_PV}"
@@ -32,6 +32,9 @@ S="${WORKDIR}"/${MY_P}
 
 DOCS=( AUTHORS )
 
+DOC_CONTENTS="PCmanFM can optionally support the menu://applications/
+	location. You should install lxde-base/lxmenu-data for that functionality."
+
 src_configure() {
 	strip-linguas -i "${S}/po"
 	econf --sysconfdir=/etc $(use_enable debug)
@@ -40,9 +43,7 @@ src_configure() {
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
-
-	elog 'PCmanFM can optionally support the menu://applications/ location.'
-	elog 'You should install lxde-base/lxmenu-data for that functionality.'
+	readme.gentoo_print_elog
 }
 
 pkg_postrm() {

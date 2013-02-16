@@ -1,13 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.13-r1.ebuild,v 1.1 2013/02/04 07:28:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.13-r1.ebuild,v 1.2 2013/02/16 11:44:16 mgorny Exp $
 
-EAPI="3"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython"
-PYTHON_TESTS_FAILURES_TOLERANT_ABIS="3.1"
+EAPI=5
 
-inherit distutils
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} pypy{1_9,2_0} )
+
+inherit distutils-r1 flag-o-matic
 
 MY_PN="pyOpenSSL"
 MY_P="${MY_PN}-${PV}"
@@ -23,70 +22,54 @@ IUSE="doc"
 
 RDEPEND=">=dev-libs/openssl-0.9.6g"
 DEPEND="${RDEPEND}
-	doc? (
-		=dev-lang/python-2*
-		>=dev-tex/latex2html-2002.2[gif,png]
-	)"
+	doc? ( >=dev-tex/latex2html-2002.2[gif,png] )"
+
+# pypy* won't fit since CPython 3 is 'better' than it
+REQUIRED_USE="doc? ( || ( $(python_gen_useflags python2*) ) )"
 
 S="${WORKDIR}/${MY_P}"
 
-PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
-
-PYTHON_MODNAME="OpenSSL"
-
-src_prepare() {
-	distutils_src_prepare
+python_prepare_all() {
 	sed \
 		-e "s/test_set_tlsext_host_name_wrong_args/_&/" \
-		-i OpenSSL/test/test_ssl.py
-	sed -e "s/python/&2/" -i doc/Makefile
+		-i OpenSSL/test/test_ssl.py || die "test_ssl sed failed"
+
+	distutils-r1_python_prepare_all
 }
 
-src_compile() {
-	distutils_src_compile
+python_compile() {
+	local CFLAGS=${CFLAGS} CXXFLAGS=${CXXFLAGS}
+	[[ ${EPYTHON} != python3* ]] && append-flags -fno-strict-aliasing
 
+	distutils-r1_python_compile
+}
+
+python_compile_all() {
 	if use doc; then
 		addwrite /var/cache/fonts
 
-		pushd doc > /dev/null
-		emake -j1 html ps dvi || die "Generation of documentation failed"
-		popd > /dev/null
+		cd doc || die
+		emake -j1 html ps dvi
 	fi
 }
 
-src_test() {
-	test_package() {
-		pushd OpenSSL/test > /dev/null
+python_test() {
+	cd "${BUILD_DIR}"/lib/OpenSSL/test || die
 
-		local exit_status="0" test
-		for test in test_*.py; do
-			einfo "Running ${test}..."
-			if ! PYTHONPATH="$(ls -d ../../build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" "${test}"; then
-				eerror "${test} failed with $(python_get_implementation_and_version)"
-				exit_status="1"
-			fi
-		done
-
-		popd > /dev/null
-
-		return "${exit_status}"
-	}
-	python_execute_function test_package
+	local t
+	for t in test_*.py; do
+		"${PYTHON}" "${t}" || ewarn "Test ${t} fails with ${EPYTHON}"
+	done
 }
 
-src_install() {
-	distutils_src_install
-
-	delete_tests() {
-		rm -fr "${ED}$(python_get_sitedir)/OpenSSL/test"
-	}
-	python_execute_function -q delete_tests
+python_install_all() {
+	distutils-r1_python_install_all
 
 	if use doc; then
-		dohtml doc/html/* || die "dohtml failed"
-		dodoc doc/pyOpenSSL.* || die "dodoc failed"
+		dohtml -r doc/html/.
+		dodoc doc/pyOpenSSL.*
 	fi
 
-	insinto /usr/share/doc/${PF}/examples
-	doins -r examples/* || die "doins failed"
+	dodoc -r examples
+	docompress -x /usr/share/doc/${PF}/examples
 }

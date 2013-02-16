@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/phpvirtualbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/ChangeLog,v 1.9 2013/02/15 20:19:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/phpvirtualbox/ChangeLog,v 1.10 2013/02/16 11:56:04 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> phpvirtualbox-4.2.4.ebuild:
+  Don't show elog messages always (#457596)
 
   15 Feb 2013; Markos Chandras <hwoarang@gentoo.org> phpvirtualbox-4.2.4.ebuild:
   Bump to EAPI5. Bug #457738

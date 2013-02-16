@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.38 2013/01/26 13:37:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.39 2013/02/16 11:58:45 mgorny Exp $
+
+*gentoopm-0.2.8 (16 Feb 2013)
+
+  16 Feb 2013; Michał Górny <mgorny@gentoo.org> +gentoopm-0.2.8.ebuild:
+  Version bump. The new version fixes portage dependency parsing and package
+  list sorting.
 
   26 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gentoopm-0.2.6.ebuild:
   Stable for arm, wrt bug #453846
