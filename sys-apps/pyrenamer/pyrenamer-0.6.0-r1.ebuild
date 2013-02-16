@@ -1,9 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pyrenamer/pyrenamer-0.6.0.ebuild,v 1.2 2010/08/05 21:06:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pyrenamer/pyrenamer-0.6.0-r1.ebuild,v 1.1 2013/02/16 00:24:16 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit python gnome2
 
@@ -21,8 +23,12 @@ RDEPEND="dev-python/pygtk:2
 	music? ( || ( dev-python/eyeD3 app-misc/hachoir-metadata ) )"
 
 pkg_setup() {
-	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_prepare() {
+	python_convert_shebangs -r 2 .
+	gnome2_src_prepare
 }
 
 pkg_postinst() {
