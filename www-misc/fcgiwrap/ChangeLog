@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/fcgiwrap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/ChangeLog,v 1.12 2012/12/31 08:04:29 darkside Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/ChangeLog,v 1.13 2013/02/16 13:06:52 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
   31 Dec 2012; Jeremy Olexa <darkside@gentoo.org> fcgiwrap-1.0.3-r1.ebuild,
   fcgiwrap-9999.ebuild:
@@ -52,4 +55,3 @@
   29 Jun 2010; Peter Volkov <pva@gentoo.org> +fcgiwrap-1.0.2-r1.ebuild,
   +fcgiwrap-9999.ebuild, +metadata.xml:
   Initial import, bug #325413, thank Nikoli for this job.
-

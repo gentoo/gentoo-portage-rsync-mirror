@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.999 2013/02/10 15:21:53 hasufell Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1000 2013/02/16 13:10:29 pacho Exp $
 
 -->
 <herds>
@@ -62,10 +62,6 @@
   <name>bazaar</name>
   <email>bazaar@gentoo.org</email>
   <description>Bazaar distributed version control system and related packages</description>
-  <maintainer>
-    <email>pva@gentoo.org</email>
-    <name>Peter Volkov</name>
-  </maintainer>
   <maintainer>
     <email>fauli@gentoo.org</email>
     <name>Christian Faulhammer</name>
@@ -205,9 +201,6 @@
   </maintainer>
   <maintainer>
     <email>vapier@gentoo.org</email>
-  </maintainer>
-  <maintainer>
-    <email>pva@gentoo.org</email>
   </maintainer>
 </herd>
 <herd>
@@ -1381,10 +1374,6 @@
   <name>app-dicts</name>
   <email>app-dicts@gentoo.org</email>
   <description>Spell checking programs and dictionaries</description>
-  <maintainer>
-    <email>pva@gentoo.org</email>
-    <name>Peter Volkov</name>
-  </maintainer>
 </herd>
 <herd>
   <name>voip</name>
@@ -1563,10 +1552,6 @@
     <email>sbriesen@gentoo.org</email>
     <name>Stefan Briesenick</name>
   </maintainer>
-  <maintainer>
-    <email>pva@gentoo.org</email>
-    <name>Peter Volkov</name>
-  </maintainer>
 </herd>
 <herd>
   <name>embedded</name>
@@ -1737,10 +1722,6 @@
     <role>netcat and a small handful of packages</role>
   </maintainer>
   <maintainer>
-    <email>pva@gentoo.org</email>
-    <name>Peter Volkov</name>
-  </maintainer>
-  <maintainer>
       <email>cedk@gentoo.org</email>
       <name>Cédric Krier</name>
   </maintainer>
@@ -1835,10 +1816,6 @@
     <role>Team lead</role>
   </maintainer>
   <maintainer>
-    <email>pva@gentoo.org</email>
-    <name>Peter Volkov</name>
-  </maintainer>
-  <maintainer>
     <email>dev-zero@gentoo.org</email>
     <name>Tiziano Müller</name>
   </maintainer>
@@ -1872,9 +1849,6 @@
   </maintainer>
   <maintainer>
     <email>jer@gentoo.org</email>
-  </maintainer>
-  <maintainer>
-    <email>pva@gentoo.org</email>
   </maintainer>
 </herd>
 <herd>
@@ -2087,11 +2061,6 @@
     <email>hollow@gentoo.org</email>
     <name>Benedikt Böhm</name>
     <role>Linux-VServer</role>
-  </maintainer>
-  <maintainer>
-    <email>pva@gentoo.org</email>
-    <name>Peter Volkov</name>
-    <role>OpenVZ</role>
   </maintainer>
 </herd>
 <herd>

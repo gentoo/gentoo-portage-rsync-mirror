@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.0.3.ebuild,v 1.1 2013/02/07 14:50:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.0.3.ebuild,v 1.2 2013/02/16 13:18:10 gienah Exp $
 
 EAPI=5
 
@@ -229,6 +229,8 @@ PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-3.7-system-pyuno.patch"
 	"${FILESDIR}/${PN}-3.7-separate-checks.patch"
+	# bug 454274
+	"${FILESDIR}/${PN}-4.0.0.3-boost-1.53.0.patch"
 )
 
 REQUIRED_USE="

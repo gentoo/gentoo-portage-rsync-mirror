@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.83 2013/02/16 12:38:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.84 2013/02/16 13:26:59 tomwij Exp $
+
+*oprofile-0.9.8 (16 Feb 2013)
+
+  16 Feb 2013; Tom Wijsman <TomWij@gentoo.org> +oprofile-0.9.8.ebuild,
+  metadata.xml:
+  Took maintainership. Version bump to 0.9.8. Removed epatch call since it was
+  applied upstream, disabled werror, switched to EAPI 5.
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> -oprofile-0.9.6.ebuild,
   metadata.xml:

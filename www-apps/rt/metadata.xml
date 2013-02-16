@@ -6,10 +6,6 @@
 		<email>eric.joshua.martin@gmail.com</email>
 		<name>Eric Martin</name>
 	</maintainer>
- 	<maintainer>
-		<email>pva@gentoo.org</email>
-		<name>Peter Volkov</name>
-	</maintainer>
 	<use>
 		<flag name="lighttpd">Add <pkg>www-servers/lighttpd</pkg> support</flag>
 	</use>

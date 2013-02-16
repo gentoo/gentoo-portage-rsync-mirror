@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-0.5.90.ebuild,v 1.1 2012/12/25 16:44:19 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/leechcraft-full-0.5.90-r1.ebuild,v 1.1 2013/02/16 13:15:03 maksbotan Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://leechcraft.org/"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-3"
-IUSE="kde"
+IUSE="kde unstable"
 
 RDEPEND="
 		~app-editors/leechcraft-popishu-${PV}
@@ -19,7 +19,6 @@ RDEPEND="
 		~media-sound/leechcraft-lmp-${PV}
 		~media-sound/leechcraft-lastfmscrobble-${PV}
 		~media-sound/leechcraft-musiczombie-${PV}
-		~media-sound/leechcraft-touchstreams-${PV}
 		~net-analyzer/leechcraft-networkmonitor-${PV}
 		~net-im/leechcraft-azoth-${PV}
 		~net-misc/leechcraft-advancednotifications-${PV}
@@ -59,5 +58,6 @@ RDEPEND="
 		~www-misc/leechcraft-pogooglue-${PV}
 		~www-misc/leechcraft-seekthru-${PV}
 		~x11-plugins/leechcraft-tpi-${PV}
+		unstable? ( ~media-sound/leechcraft-touchstreams-${PV} )
 		"
 DEPEND=""

@@ -8,10 +8,6 @@
 		<name>Andreis Vinogradovs</name>
 		<description>Proxy maintainer, CC him on bugs</description>
 	</maintainer>
-	<maintainer>
-		<email>pva@gentoo.org</email>
-		<name>Peter Volkov</name>
-	</maintainer>
 	<longdescription>
 		OpenVZ is an Operating System-level server virtualization solution, 
 		built on Linux. OpenVZ creates isolated, secure virtual private 

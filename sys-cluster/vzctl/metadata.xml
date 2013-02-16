@@ -8,11 +8,6 @@
 		<name>Andreis Vinogradovs</name>
 		<description>Primary maintainer, assign bugs to him</description>
 	</maintainer>
-	<maintainer>
-		<email>pva@gentoo.org</email>
-		<name>Peter Volkov</name>
-		<description>Committer</description>
-	</maintainer>
 	<use>
 		<flag name='ploop'>Add support for ploop devices via <pkg>sys-cluster/ploop</pkg></flag>
 		<flag name='cgroup'>Add support to Linux kernel cgroup subsytem</flag>

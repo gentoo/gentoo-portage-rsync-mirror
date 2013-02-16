@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.76 2012/11/17 13:12:39 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.77 2013/02/16 13:06:39 pacho Exp $
+
+  16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #96436
 
 *rt-4.0.8 (17 Nov 2012)
 *rt-3.8.15 (17 Nov 2012)
