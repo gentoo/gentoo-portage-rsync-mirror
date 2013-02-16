@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/ffmpegsource
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ChangeLog,v 1.13 2012/11/08 11:31:35 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ChangeLog,v 1.14 2013/02/16 19:24:34 maksbotan Exp $
+
+*ffmpegsource-2.17.3_pre743 (16 Feb 2013)
+
+  16 Feb 2013; Maxim Koltsov <maksbotan@gentoo.org>
+  +ffmpegsource-2.17.3_pre743.ebuild:
+  Add snapshot to fix compilation with libav-9, bug #443190. Thanks to Nikoli
 
   08 Nov 2012; Alexis Ballier <aballier@gentoo.org> ffmpegsource-2.17.ebuild,
   +files/ffmpegsource-2.17-ffmpeg.patch:
@@ -59,4 +65,3 @@
   +ffmpegsource-9999.ebuild, +metadata.xml:
   Copy media-libs/ffmpegsource from multimedia overlay, thanks to Nikoli
   <nikoli@lavabit.com>. Bug #358015
-
