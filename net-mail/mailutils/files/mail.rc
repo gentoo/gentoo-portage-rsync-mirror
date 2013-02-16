@@ -1,4 +1,0 @@
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/files/mail.rc,v 1.1 2004/07/11 05:14:07 langthang Exp $
-# Default mail options, change to suit yourself.
-set ask askcc append dot save crt
-ignore Received Message-Id Resent-Message-Id Status Mail-From Return-Path Via

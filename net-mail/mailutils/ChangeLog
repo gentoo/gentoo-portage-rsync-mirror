@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.61 2013/02/15 19:06:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.62 2013/02/16 08:43:43 eras Exp $
+
+  16 Feb 2013; Eray Aslan <eras@gentoo.org> -files/mail.rc,
+  -files/mailutils-2.1-python.patch, -files/mailutils-2.2-gets.patch,
+  -mailutils-2.2.ebuild:
+  Remove old
 
   15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> mailutils-2.99.97.ebuild:
   Stable for x86, wrt bug #457692
