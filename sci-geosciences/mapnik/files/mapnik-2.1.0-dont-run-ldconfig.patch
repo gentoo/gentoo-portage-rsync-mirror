@@ -1,5 +1,5 @@
---- a/build.py
-+++ b/build.py
+--- a/src/build.py
++++ b/src/build.py
 @@ -38,7 +38,8 @@
          print stderr
  
