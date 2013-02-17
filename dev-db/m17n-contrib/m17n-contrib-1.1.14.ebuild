@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-contrib/m17n-contrib-1.1.14.ebuild,v 1.2 2012/12/03 10:56:28 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-contrib/m17n-contrib-1.1.14.ebuild,v 1.3 2013/02/17 15:11:57 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.savannah.gnu.org/releases/m17n/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND=""

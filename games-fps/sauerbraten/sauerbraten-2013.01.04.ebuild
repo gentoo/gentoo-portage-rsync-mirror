@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/sauerbraten-2013.01.04.ebuild,v 1.1 2013/01/05 18:23:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/sauerbraten-2013.01.04.ebuild,v 1.2 2013/02/17 15:12:26 ago Exp $
 
 EAPI=5
 inherit eutils flag-o-matic gnome2-utils games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/sauerbraten/sauerbraten/2013_01_04/sauerbraten_${P
 
 LICENSE="ZLIB freedist"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug dedicated server"
 
 RDEPEND="

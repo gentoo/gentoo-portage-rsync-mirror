@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/keepnote-0.7.8-r1.ebuild,v 1.1 2013/02/16 23:25:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/keepnote-0.7.8-r1.ebuild,v 1.2 2013/02/17 15:11:37 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://keepnote.org/"
 SRC_URI="http://keepnote.org/download-test/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="0"
 IUSE=""
 

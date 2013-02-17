@@ -1,6 +1,9 @@
 # ChangeLog for app-text/keepnote
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/ChangeLog,v 1.7 2013/02/16 23:25:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/ChangeLog,v 1.8 2013/02/17 15:11:37 ago Exp $
+
+  17 Feb 2013; Agostino Sarubbo <ago@gentoo.org> keepnote-0.7.8-r1.ebuild:
+  Stable for amd64, wrt bug #457916
 
 *keepnote-0.7.8-r1 (16 Feb 2013)
 
