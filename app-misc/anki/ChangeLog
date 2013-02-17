@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/anki
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.52 2013/02/06 08:52:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.53 2013/02/17 05:53:38 patrick Exp $
+
+*anki-2.0.8 (17 Feb 2013)
+
+  17 Feb 2013; Patrick Lauer <patrick@gentoo.org> +anki-2.0.8.ebuild:
+  Bump
 
 *anki-2.0.7 (06 Feb 2013)
 
