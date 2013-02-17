@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/bfast
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bfast/ChangeLog,v 1.8 2013/02/17 10:20:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bfast/ChangeLog,v 1.9 2013/02/17 10:38:44 jlec Exp $
+
+  17 Feb 2013; Justin Lecher <jlec@gentoo.org> bfast-0.7.0a.ebuild:
+  Build in source for tests
 
   17 Feb 2013; Justin Lecher <jlec@gentoo.org> -bfast-0.6.5a.ebuild,
   -bfast-0.6.5a-r1.ebuild, bfast-0.7.0a.ebuild, metadata.xml:

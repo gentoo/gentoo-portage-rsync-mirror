@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.125 2013/02/16 23:06:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.126 2013/02/17 10:43:26 hwoarang Exp $
+
+  17 Feb 2013; Markos Chandras <hwoarang@gentoo.org> -feh-2.9.1.ebuild,
+  -feh-2.9.ebuild:
+  Remove old
 
 *feh-2.9.1-r1 (16 Feb 2013)
 

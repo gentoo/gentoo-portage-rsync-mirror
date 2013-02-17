@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bfast/bfast-0.7.0a.ebuild,v 1.2 2013/02/17 10:20:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bfast/bfast-0.7.0a.ebuild,v 1.3 2013/02/17 10:38:44 jlec Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="test"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
@@ -33,6 +33,8 @@ src_prepare() {
 	sed \
 		-e '/docdir/d' \
 		-i Makefile.am || die
+
+	use test && AUTOTOOLS_IN_SOURCE_BUILD=1
 
 	autotools-utils_src_prepare
 }
