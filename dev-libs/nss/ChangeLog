@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.284 2013/02/15 13:30:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.285 2013/02/17 01:01:36 anarchy Exp $
+
+*nss-3.14.3 (17 Feb 2013)
+
+  17 Feb 2013; <anarchy@gentoo.org> +files/nss-3.14.1-gentoo-fixups-r1.patch,
+  +nss-3.14.3.ebuild,
+  +files/nss-3.14.3_sync_with_upstream_softokn_changes.patch:
+  Security bump, bug #455558, cleanup nss-config nss.pc bug #454578
 
 *nss-3.14.2 (15 Feb 2013)
 
