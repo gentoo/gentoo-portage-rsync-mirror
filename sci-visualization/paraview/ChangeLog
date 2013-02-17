@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.63 2013/02/13 12:44:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.64 2013/02/17 00:10:21 hasufell Exp $
+
+  17 Feb 2013; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  set correct maintainer
 
   13 Feb 2013; Julian Ospald <hasufell@gentoo.org> paraview-3.98.0.ebuild:
   fix gl2ps dep
@@ -317,4 +320,3 @@
   +metadata.xml, +paraview-2.4.4.ebuild:
   Initial import (fixes bug #118130). Many thanks to Daniel Tourde
   <daniel.tourde@caelae.se> for his ebuild and testing.
-

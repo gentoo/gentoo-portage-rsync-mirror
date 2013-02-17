@@ -1,10 +1,12 @@
 # ChangeLog for sci-geosciences/cdat-lite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/cdat-lite/ChangeLog,v 1.2 2013/02/10 23:27:25 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/cdat-lite/ChangeLog,v 1.3 2013/02/17 00:22:30 hasufell Exp $
+
+  17 Feb 2013; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  set correct maintainer
 
 *cdat-lite-6.0_rc2 (10 Feb 2013)
 
   10 Feb 2013; Julian Ospald <hasufell@gentoo.org> +cdat-lite-6.0_rc2.ebuild,
   +files/cdat-lite-6.0_rc2-QA.patch, +metadata.xml:
   initial import wrt #302082 based on Tim Ceras work
-

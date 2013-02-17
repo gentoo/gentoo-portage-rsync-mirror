@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/rstudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/ChangeLog,v 1.1 2013/02/16 15:39:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/ChangeLog,v 1.2 2013/02/17 00:08:47 hasufell Exp $
+
+  17 Feb 2013; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  set correct maintainer
 
 *rstudio-0.97.318 (16 Feb 2013)
 
@@ -9,4 +12,3 @@
   +files/rstudio-0.97.318-paths.patch, +files/rstudio-0.97.318-prefs.patch,
   +files/rstudio-rserver.initd, +metadata.xml:
   initial import wrt #365595
-

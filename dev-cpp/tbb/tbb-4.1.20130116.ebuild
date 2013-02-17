@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.1.20130116.ebuild,v 1.1 2013/02/13 00:02:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.1.20130116.ebuild,v 1.2 2013/02/17 00:17:37 dilfridge Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib versionator toolchain-funcs
@@ -24,7 +24,9 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MYP}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-4.0.297-underlinking.patch
+	epatch \
+		"${FILESDIR}"/${PN}-4.0.297-underlinking.patch \
+		"${FILESDIR}"/${PN}-4.1.20121003-ppc.patch
 	# use fully qualified gcc compilers. do not force march/mcpu
 	# not tested with icc
 	# order in sed expressions is important

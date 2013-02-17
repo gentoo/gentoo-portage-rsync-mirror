@@ -1,10 +1,12 @@
 # ChangeLog for sci-geosciences/swmm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/swmm/ChangeLog,v 1.2 2013/02/10 23:33:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/swmm/ChangeLog,v 1.3 2013/02/17 00:19:24 hasufell Exp $
+
+  17 Feb 2013; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  set correct maintainer
 
 *swmm-5.0.022 (10 Feb 2013)
 
   10 Feb 2013; Julian Ospald <hasufell@gentoo.org> +swmm-5.0.022.ebuild,
   +files/swmm-5.0.022-QA.patch, +metadata.xml:
   initial import wrt #240628 based on Tim Ceras work
-
