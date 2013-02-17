@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14478 2013/02/17 02:26:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14479 2013/02/17 12:43:37 reavertm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -301,7 +301,7 @@ sys-apps/i2c
 
 # Maciej Mrozowski <reavertm@gentoo.org>
 # API change breaks packages, bug 449534.
-=app-text/poppler-0.22.0
+>=app-text/poppler-0.22.0
 
 # Alexis Ballier <aballier@gentoo.org>
 # Not really compatible with TeX Live 2012, breaks texdoc, produces some non
