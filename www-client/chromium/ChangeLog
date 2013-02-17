@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.805 2013/02/15 02:11:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.807 2013/02/17 20:19:02 floppym Exp $
+
+  17 Feb 2013; Mike Gilbert <floppym@gentoo.org> chromium-26.0.1403.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Use python-any-r1 eclass.
+
+  17 Feb 2013; Mike Gilbert <floppym@gentoo.org> chromium-26.0.1403.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Use the correct values for *.host as suggested by vapier in bug 410883. Move
+  tc-export from pkg_setup to src_configure.
 
 *chromium-25.0.1364.84 (15 Feb 2013)
 

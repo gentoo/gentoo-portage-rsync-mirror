@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/which
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/ChangeLog,v 1.41 2010/01/07 21:59:48 fauli Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/ChangeLog,v 1.42 2013/02/17 20:15:47 zmedico Exp $
+
+  17 Feb 2013; Zac Medico <zmedico@gentoo.org> which-2.20.ebuild:
+  Add ~arm-linux keyword.
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org> which-2.20.ebuild:
   Transfer Prefix keywords

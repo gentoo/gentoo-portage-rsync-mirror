@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/libkipi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkipi/ChangeLog,v 1.137 2013/02/09 20:12:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkipi/ChangeLog,v 1.138 2013/02/17 20:20:10 dilfridge Exp $
+
+*libkipi-4.10.0-r1 (17 Feb 2013)
+
+  17 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libkipi-4.10.0-r1.ebuild, +files/libkipi-4.10.0-uname.patch:
+  Properly process plugin exclude list, bug 424071
 
   09 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org> libkipi-4.10.0.ebuild:
   Remove digikam workaround, not needed anymore

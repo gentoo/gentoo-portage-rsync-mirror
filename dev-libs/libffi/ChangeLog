@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.163 2013/02/11 21:00:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.164 2013/02/17 20:12:26 zmedico Exp $
+
+  17 Feb 2013; Zac Medico <zmedico@gentoo.org> libffi-3.0.12.ebuild:
+  Add ~arm-linux keyword.
 
   11 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
   -files/libffi-3.0.9-x32.patch, -libffi-3.0.10.ebuild,

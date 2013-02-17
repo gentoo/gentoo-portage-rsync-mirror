@@ -1,16 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-26.0.1403.0.ebuild,v 1.1 2013/02/05 10:31:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-26.0.1403.0.ebuild,v 1.3 2013/02/17 20:19:02 floppym Exp $
 
 EAPI="5"
-PYTHON_DEPEND="2:2.6"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 CHROMIUM_LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he
 	hi hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt_BR pt_PT ro ru sk sl sr
 	sv sw ta te th tr uk vi zh_CN zh_TW"
 
 inherit chromium eutils flag-o-matic multilib \
-	pax-utils portability python toolchain-funcs versionator virtualx
+	pax-utils portability python-any-r1 toolchain-funcs versionator virtualx
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
@@ -104,12 +104,8 @@ pkg_setup() {
 	fi
 	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser${CHROMIUM_SUFFIX}"
 
-	# Make sure the build system will use the right tools, bug #340795.
-	tc-export AR CC CXX RANLIB
-
 	# Make sure the build system will use the right python, bug #344367.
-	python_set_active_version 2
-	python_pkg_setup
+	python-any-r1_pkg_setup
 
 	if ! use selinux; then
 		chromium_suid_sandbox_check_kernel_config
@@ -323,6 +319,12 @@ src_configure() {
 		strip-flags
 	fi
 
+	# Make sure the build system will use the right tools, bug #340795.
+	tc-export AR CC CXX RANLIB
+
+	# Tools for building programs to be executed on the build system, bug #410883.
+	tc-export_build_env BUILD_AR BUILD_CC BUILD_CXX
+
 	egyp_chromium ${myconf} || die
 }
 
@@ -343,10 +345,10 @@ src_compile() {
 
 	# See bug #410883 for more info about the .host mess.
 	emake ${make_targets} BUILDTYPE=Release V=1 \
-		CC.host="$(tc-getCC)" CFLAGS.host="${CFLAGS}" \
-		CXX.host="$(tc-getCXX)" CXXFLAGS.host="${CXXFLAGS}" \
-		LINK.host="$(tc-getCXX)" LDFLAGS.host="${LDFLAGS}" \
-		AR.host="$(tc-getAR)" || die
+		CC.host="${BUILD_CC}" CFLAGS.host="${BUILD_CFLAGS}" \
+		CXX.host="${BUILD_CXX}" CXXFLAGS.host="${BUILD_CXXFLAGS}" \
+		LINK.host="${BUILD_CXX}" LDFLAGS.host="${BUILD_LDFLAGS}" \
+		AR.host="${BUILD_AR}" || die
 
 	pax-mark m out/Release/chrome
 	if use test; then

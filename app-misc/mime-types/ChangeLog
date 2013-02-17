@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.85 2013/01/04 13:21:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.86 2013/02/17 20:04:56 zmedico Exp $
+
+  17 Feb 2013; Zac Medico <zmedico@gentoo.org> mime-types-9.ebuild:
+  Add ~arm-linux keyword.
 
   04 Jan 2013; Agostino Sarubbo <ago@gentoo.org> mime-types-9.ebuild:
   Stable for ppc64, wrt bug #449406

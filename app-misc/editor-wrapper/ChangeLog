@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/editor-wrapper
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/editor-wrapper/ChangeLog,v 1.19 2012/08/05 12:10:36 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/editor-wrapper/ChangeLog,v 1.20 2013/02/17 20:09:14 zmedico Exp $
+
+  17 Feb 2013; Zac Medico <zmedico@gentoo.org> editor-wrapper-4.ebuild:
+  Add ~arm-linux keyword.
 
   05 Aug 2012; Fabian Groffen <grobian@gentoo.org> editor-wrapper-4.ebuild:
   Marked ~x86-freebsd
