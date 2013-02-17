@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.7.2.ebuild,v 1.1 2012/12/08 06:19:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.7.2.ebuild,v 1.2 2013/02/17 22:28:39 vapier Exp $
 
 EAPI=5
 
@@ -15,9 +15,10 @@ SRC_URI="https://alioth.debian.org/frs/download.php/${NUM}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~x86"
-IUSE="debug test unwind"
+IUSE="debug selinux test unwind"
 
 RDEPEND="dev-libs/elfutils
+	selinux? ( sys-libs/libselinux )
 	unwind? ( sys-libs/libunwind )"
 DEPEND="${RDEPEND}
 	test? ( dev-util/dejagnu )"
@@ -28,6 +29,8 @@ src_prepare() {
 }
 
 src_configure() {
+	ac_cv_header_selinux_selinux_h=$(usex selinux) \
+	ac_cv_lib_selinux_security_get_boolean_active=$(usex selinux) \
 	econf \
 		--disable-werror \
 		$(use_enable debug) \

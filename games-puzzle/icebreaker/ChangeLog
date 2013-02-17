@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/icebreaker
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.16 2010/10/19 08:48:21 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.17 2013/02/17 22:04:38 hasufell Exp $
+
+*icebreaker-1.9.6 (17 Feb 2013)
+
+  17 Feb 2013; Julian Ospald <hasufell@gentoo.org> +icebreaker-1.9.6.ebuild,
+  +files/icebreaker-1.9.6-gentoo.patch, +files/icebreaker-1.9.6-ldflags.patch,
+  +files/icebreaker-1.9.6-parallell-install.patch:
+  version bump
 
   19 Oct 2010; Tupone Alfredo <tupone@gentoo.org> icebreaker-1.9.5.ebuild,
   +files/icebreaker-1.9.5-parallell-install.patch:

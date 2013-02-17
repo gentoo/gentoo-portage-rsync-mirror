@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.59 2013/01/05 08:31:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.60 2013/02/17 22:28:39 vapier Exp $
+
+  17 Feb 2013; Mike Frysinger <vapier@gentoo.org> ltrace-0.7.2.ebuild:
+  Fix automagic depend on libselinux.
 
   05 Jan 2013; Tim Harder <radhermit@gentoo.org>
   -files/0.4-cross-compile.patch, -files/ltrace-0.3.31-64bit-fixes.patch,
@@ -231,5 +234,3 @@
   26 Mar 2002; Bruce A. Locke <blocke@shivan.org> ltrace-0.3.23.ebuild :
 
   Ebuild cleanup and update to 0.3.23
-
-
