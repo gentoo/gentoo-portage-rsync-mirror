@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/keepnote-0.7.9-r1.ebuild,v 1.1 2012/09/26 12:14:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/keepnote-0.7.8-r1.ebuild,v 1.1 2013/02/16 23:25:29 hasufell Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_COMPAT="python2_6 python2_7"
-PYTHON_USE="sqlite,xml"
+PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_REQ_USE="sqlite,xml"
 
-inherit eutils gnome2-utils python-distutils-ng
+inherit gnome2-utils distutils-r1
 
 DESCRIPTION="A note taking application"
 HOMEPAGE="http://keepnote.org/"
@@ -22,18 +22,12 @@ RDEPEND="dev-python/pygobject:2
 	dev-python/pygtk:2
 	x11-misc/xdg-utils"
 
+PATCHES=( "${FILESDIR}"/${P}-desktopfile.patch )
 DOCS=( CHANGES )
 
-python_prepare_all() {
-	epatch "${FILESDIR}"/${PN}-0.7.8-desktopfile.patch
-}
-
 python_test() {
+	distutils-r1_python_test
 	"${PYTHON}" test/testing.py || die
-}
-
-python_install_all() {
-	dodoc ${DOCS[@]}
 }
 
 pkg_preinst() {
