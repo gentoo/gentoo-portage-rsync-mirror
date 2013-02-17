@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/files/qemu-binfmt.initd,v 1.1 2013/01/12 04:56:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/files/qemu-binfmt.initd,v 1.2 2013/02/17 21:54:51 vapier Exp $
 
 # enable automatic i386/ARM/M68K/MIPS/SPARC/PPC/s390 program execution by the kernel
 
@@ -12,16 +12,16 @@ depend() {
 start() {
    ebegin "Registering qemu-user binaries"
 
-   if [[ ! -d /proc/sys/fs/binfmt_misc ]] ; then
+   if [ ! -d /proc/sys/fs/binfmt_misc ] ; then
       eerror "You need support for \"misc binaries\" in your kernel!"
       eend 1
    fi
 
-   if [[ $(mount | grep -c binfmt_misc) -eq 0 ]] ; then
-      mount -t binfmt_misc binfmt_misc /proc/sys/fs/binfmt_misc &> /dev/null
+   if [ $(mount | grep -c binfmt_misc) -eq 0 ] ; then
+      mount -t binfmt_misc binfmt_misc /proc/sys/fs/binfmt_misc >/dev/null 2>&1
       local result=$?
 
-      if [[ $result -ne 0 ]] ; then
+      if [ $result -ne 0 ] ; then
          eend $result
       fi
    fi
@@ -119,7 +119,7 @@ stop() {
    arches="${arches} s390x"
 
    for a in ${arches}; do
-      if [[ -f /proc/sys/fs/binfmt_misc/$a ]] ; then
+      if [ -f /proc/sys/fs/binfmt_misc/$a ] ; then
          echo '-1' > /proc/sys/fs/binfmt_misc/$a
       fi
    done

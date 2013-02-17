@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wakeonlan
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.24 2012/03/03 00:08:14 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.25 2013/02/17 21:39:01 zmedico Exp $
+
+  17 Feb 2013; Zac Medico <zmedico@gentoo.org> wakeonlan-0.41-r1.ebuild:
+  Add ~arm-linux keyword.
 
   03 Mar 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   remove myself from metadata
