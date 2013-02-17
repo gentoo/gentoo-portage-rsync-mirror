@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unrar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.183 2012/07/15 17:19:06 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.184 2013/02/17 20:53:56 zmedico Exp $
+
+  17 Feb 2013; Zac Medico <zmedico@gentoo.org> unrar-4.2.4.ebuild:
+  Add ~arm-linux and ~x86-linux keywords.
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> unrar-4.2.3.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #421221

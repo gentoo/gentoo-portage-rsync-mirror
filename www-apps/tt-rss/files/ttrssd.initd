@@ -37,7 +37,9 @@ stop() {
 	for INSTANCE_DIR in ${INSTANCE_DIRS}; do
 		[ -f "${INSTANCE_DIR}/update_daemon2.php" ] || continue
 		einfo "  ${INSTANCE_DIR}"
-		start-stop-daemon --stop -x /usr/bin/php "${INSTANCE_DIR}/update_daemon2.php"
+		start-stop-daemon --stop -x /usr/bin/php \
+			"${INSTANCE_DIR}/update_daemon2.php" && \
+			rm -f ${INSTANCE_DIR}/lock/*.lock
 	done
 	eend $?
 }

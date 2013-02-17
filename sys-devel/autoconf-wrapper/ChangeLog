@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf-wrapper
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.96 2012/04/26 11:58:46 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.97 2013/02/17 20:36:02 zmedico Exp $
+
+  17 Feb 2013; Zac Medico <zmedico@gentoo.org> autoconf-wrapper-12.ebuild:
+  Add ~arm-linux keyword.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> autoconf-wrapper-12.ebuild:
   keyword ~amd64-fbsd

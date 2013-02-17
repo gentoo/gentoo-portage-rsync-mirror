@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libjpeg-turbo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.57 2012/12/28 16:10:14 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.58 2013/02/17 20:40:32 zmedico Exp $
+
+  17 Feb 2013; Zac Medico <zmedico@gentoo.org> libjpeg-turbo-1.2.1.ebuild:
+  Add ~arm-linux keyword.
 
   28 Dec 2012; Samuli Suominen <ssuominen@gentoo.org>
   libjpeg-turbo-1.2.1.ebuild:
