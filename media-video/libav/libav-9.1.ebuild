@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.1.ebuild,v 1.3 2013/01/17 10:38:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9.1.ebuild,v 1.4 2013/02/17 11:42:03 lu_zero Exp $
 
 EAPI=5
 
@@ -126,6 +126,7 @@ src_prepare() {
 		sed -i -e "s/UNKNOWN/DATE-${PV#*_pre}/" "${S}/version.sh" || die
 	fi
 	epatch "${FILESDIR}"/0001-libcdio-support-recent-cdio-paranoia.patch
+	epatch "${FILESDIR}"/0001-build-The-libopencore-amrnb-encoder-depends-on-audio.patch
 }
 
 src_configure() {
