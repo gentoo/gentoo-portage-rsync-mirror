@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/consed/consed-19-r2.ebuild,v 1.3 2012/10/24 19:30:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/consed/consed-19-r2.ebuild,v 1.4 2013/02/17 10:25:40 jlec Exp $
 
 EAPI=3
 
@@ -41,7 +41,7 @@ src_prepare() {
 		-e 's/ARCHIVES=/ARCHIVES=\n_ARCHIVES=/' \
 		-e 's/CFLGS=/CFLGS= ${CFLAGS} /' "${S}/makefile" || die
 	sed -i -e 's/CFLAGS=/CFLAGS += /' "${S}"/misc/*/Makefile || die
-	sed -i 's!\($szPhredParameterFile =\).*!\1 $ENV{PHRED_PARAMETER_FILE} || "${EPREFIX}/usr/share/phred/phredpar.dat";!' "${S}/scripts/"* || die
+	sed -i 's!\($szPhredParameterFile =\).*!\1 $ENV{PHRED_PARAMETER_FILE} || "'${EPREFIX}'/usr/share/phred/phredpar.dat";!' "${S}/scripts/"* || die
 }
 
 src_compile() {
@@ -60,7 +60,7 @@ src_install() {
 	doins -r standard polyphred autofinish assembly_view 454_newbler \
 		align454reads align454reads_answer solexa_example \
 		solexa_example_answer selectRegions selectRegionsAnswer || die
-	echo 'CONSED_HOME=${EPREFIX}/usr' > "${S}/99consed"
+	echo 'CONSED_HOME='${EPREFIX}'/usr' > "${S}/99consed"
 	doenvd "${S}/99consed" || die
 	dodoc README.txt *_announcement.txt || die
 }

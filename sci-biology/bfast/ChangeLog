@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/bfast
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bfast/ChangeLog,v 1.7 2011/11/28 02:15:41 weaver Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bfast/ChangeLog,v 1.8 2013/02/17 10:20:34 jlec Exp $
+
+  17 Feb 2013; Justin Lecher <jlec@gentoo.org> -bfast-0.6.5a.ebuild,
+  -bfast-0.6.5a-r1.ebuild, bfast-0.7.0a.ebuild, metadata.xml:
+  Drop old; move to autotools-utils; install docs in right place, #304603
 
 *bfast-0.7.0a (28 Nov 2011)
 

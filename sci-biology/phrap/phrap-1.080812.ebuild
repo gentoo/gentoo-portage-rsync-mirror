@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phrap/phrap-1.080812.ebuild,v 1.3 2008/12/31 01:09:25 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phrap/phrap-1.080812.ebuild,v 1.4 2013/02/17 10:28:37 jlec Exp $
 
 DESCRIPTION="Phrap, swat, cross_match: Shotgun assembly and alignment utilities"
 HOMEPAGE="http://www.phrap.org/"
@@ -12,7 +12,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND=""
+RDEPEND="dev-lang/perl
+		dev-perl/perl-tk"
 
 S="${WORKDIR}"
 
@@ -28,6 +29,10 @@ src_compile() {
 	sed -i 's/CFLAGS=/#CFLAGS=/' makefile
 	sed -i 's|#!/usr/local/bin/perl|#!/usr/bin/env perl|' phrapview
 	emake || die "emake failed"
+	# TODO: we need to extract staden sources because for compilation some of those
+	# files are needed: http://www.phrap.org/phredphrap/phrap.html
+	# (look for gcphrap and other gc* programs)
+	# emake gcphrap || die
 }
 
 src_install() {

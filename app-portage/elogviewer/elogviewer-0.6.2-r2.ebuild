@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/elogviewer-0.6.2-r1.ebuild,v 1.2 2011/09/24 17:36:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/elogviewer-0.6.2-r2.ebuild,v 1.1 2013/02/17 10:05:36 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2
@@ -24,6 +24,8 @@ RDEPEND=">=sys-apps/portage-2.1
 src_prepare() {
 	# Apply patch from Bug 349071 to restore missing newline
 	epatch "${FILESDIR}/${P}-missing_newline.patch"
+	# Fix bug #453016
+	sed -e 's|is not ""|!= ""|' -i elogviewer || die
 }
 
 src_install() {
