@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/modsecurity-crs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/ChangeLog,v 1.36 2013/01/24 15:26:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/ChangeLog,v 1.37 2013/02/17 18:24:31 ago Exp $
+
+  17 Feb 2013; Agostino Sarubbo <ago@gentoo.org> modsecurity-crs-2.2.7.ebuild:
+  Stable for amd64, wrt bug #457864
 
 *modsecurity-crs-2.2.7 (24 Jan 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.149 2013/02/12 20:20:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.150 2013/02/17 18:29:34 jer Exp $
+
+  17 Feb 2013; Jeroen Roovers <jer@gentoo.org> psmisc-22.20.ebuild:
+  Stable for HPPA (bug #456390).
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> psmisc-22.20.ebuild:
   Stable for sparc, wrt bug #456390

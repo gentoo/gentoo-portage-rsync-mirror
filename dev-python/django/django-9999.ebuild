@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.16 2013/01/17 22:56:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.17 2013/02/17 18:03:15 floppym Exp $
 
 EAPI=5
 
@@ -8,8 +8,9 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE='sqlite?'
 
 #if LIVE
-ESVN_REPO_URI="http://code.djangoproject.com/svn/django/trunk/"
-inherit subversion
+inherit git-2
+EGIT_REPO_URI="git://github.com/django/django.git
+	https://github.com/django/django.git"
 #endif
 
 inherit bash-completion-r1 distutils-r1 versionator webapp
