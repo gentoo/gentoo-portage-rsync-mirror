@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.32 2013/02/10 08:23:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.33 2013/02/17 22:45:18 floppym Exp $
+
+  17 Feb 2013; Mike Gilbert <floppym@gentoo.org> pypy-1.9-r2.ebuild,
+  pypy-2.0_beta1.ebuild:
+  Export CC so the build system picks it up.
 
   10 Feb 2013; Pacho Ramos <pacho@gentoo.org> -files/1.7-scripts-location.patch,
   -files/1.8-elf-metadata-26a8d3fc57a7.patch,

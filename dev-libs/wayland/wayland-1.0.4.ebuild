@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.0.4.ebuild,v 1.3 2013/02/11 07:03:35 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.0.4.ebuild,v 1.4 2013/02/17 22:36:44 mattst88 Exp $
 
 EAPI=4
 
@@ -25,12 +25,11 @@ fi
 LICENSE="CC-BY-SA-3.0 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86"
-IUSE="doc static-libs"
+IUSE="static-libs"
 
 RDEPEND="dev-libs/expat
 	virtual/libffi"
-DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	if [[ ${PV} = 9999* ]]; then
@@ -39,8 +38,7 @@ src_prepare() {
 }
 
 src_configure() {
-	myconf="$(use_enable static-libs static) \
-			$(use_enable doc documentation)"
+	myconf="$(use_enable static-libs static)"
 	if tc-is-cross-compiler ; then
 		myconf+=" --disable-scanner"
 	fi

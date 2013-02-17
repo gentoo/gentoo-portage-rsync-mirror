@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0_beta1.ebuild,v 1.3 2013/01/02 04:41:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0_beta1.ebuild,v 1.4 2013/02/17 22:45:18 floppym Exp $
 
 EAPI=5
 
@@ -50,6 +50,8 @@ src_prepare() {
 }
 
 src_compile() {
+	tc-export CC
+
 	local args=(
 		$(usex jit -Ojit -O2)
 		$(usex shadowstack --gcrootfinder=shadowstack '')
