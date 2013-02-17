@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14477 2013/02/17 01:47:09 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14478 2013/02/17 02:26:10 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -398,11 +398,6 @@ dev-haskell/wxhaskell:2.9
 # stable wpa_supplicant sometimes wants madwifi-ng-tools
 #net-wireless/madwifi-ng-tools
 net-wireless/madwifi-ng
-
-# Julian Ospald <hasufell@gentoo.org> (20 Dev 2012)
-# old and subject to removal
-# version scheme collides with new release
-=games-roguelike/tomenet-100310
 
 # Anthony G. Basile <blueness@gentoo.org> (17 Dec 2012)
 # Masked for removal in 30 days. (17 Jan 2012)
