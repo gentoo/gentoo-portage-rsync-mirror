@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>leechcraft</herd>
-<use>
-	<flag name="extras">Obsolete flag left for compability with leechcraft ebuilds</flag>
-</use>
 <upstream>
 	<remote-id type="google-code">qxmpp</remote-id>
 	<changelog>http://code.google.com/p/qxmpp/source/browse/CHANGELOG</changelog>

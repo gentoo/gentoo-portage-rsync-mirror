@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.16.ebuild,v 1.1 2012/11/27 11:36:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.16.ebuild,v 1.2 2013/02/17 19:01:11 pinkbyte Exp $
 
-EAPI="4"
+EAPI="5"
 inherit autotools linux-info linux-mod
 
 DESCRIPTION="IPset tool for iptables, successor to ippool."

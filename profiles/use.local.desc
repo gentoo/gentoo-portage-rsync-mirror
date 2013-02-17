@@ -4325,7 +4325,6 @@ net-libs/ptlib:tts - Enable Text-To-Speech server support
 net-libs/ptlib:video - Enable video support
 net-libs/ptlib:vxml - Enable VoiceXML support
 net-libs/ptlib:wav - Enable WAVFILE support
-net-libs/qxmpp:extras - Obsolete flag left for compability with leechcraft ebuilds
 net-libs/rest:gnome - Extract proxy information using net-libs/libsoup-gnome
 net-libs/telepathy-glib:vala - Enable bindings for dev-lang/vala
 net-libs/telepathy-qt:farsight - Enable support for farsight connection manager

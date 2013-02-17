@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14479 2013/02/17 12:43:37 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14480 2013/02/17 18:50:40 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -182,7 +182,7 @@ net-wireless/rtl8192su-firmware
 # Diego Elio Pettenò <flameeyes@gentoo.org> (05 Feb 2013)
 # Needs a complete ebuild rewrite to use CMake, and a new patchset to
 # unbundle the bundled libraries. Use at your own risk; don't ask for
-# a bump unless you can provide the two needed items.
+# a bump unless you can provide the two needed items (see bug #364291).
 media-gfx/blender
 
 # Michael Sterrett <mr_bones_@gentoo.org> (31 Jan 2013)
