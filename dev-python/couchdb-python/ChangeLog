@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/couchdb-python
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.16 2012/06/12 06:17:25 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.17 2013/02/17 13:42:51 mgorny Exp $
+
+*couchdb-python-0.8-r1 (17 Feb 2013)
+
+  17 Feb 2013; Michał Górny <mgorny@gentoo.org> +couchdb-python-0.8-r1.ebuild:
+  Migrate to distutils-r1. Restrict tests because of the requirement for couchdb
+  server, bug #327869.
 
   12 Jun 2012; Justin Lecher <jlec@gentoo.org> couchdb-python-0.6.1.ebuild,
   couchdb-python-0.7.ebuild, couchdb-python-0.8.ebuild:
@@ -72,4 +78,3 @@
   +couchdb-python-0.5.ebuild, +metadata.xml:
   Initial commit of couchdb-python-0.5. Ebuild by Juergen Geuter. Fixes
   #273719
-

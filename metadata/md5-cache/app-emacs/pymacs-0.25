@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DEPEND=doc? ( >=dev-python/docutils-0.7 virtual/latex-base ) python_targets_python2_5? ( dev-lang/python:2.5 ) python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_5(-)?,python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_5(-),-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=virtual/emacs-21
+DESCRIPTION=A tool that allows both-side communication beetween Python and Emacs Lisp
+EAPI=5
+HOMEPAGE=http://pymacs.progiciels-bpi.ca/
+IUSE=doc python_targets_python2_5 python_targets_python2_6 python_targets_python2_7
+KEYWORDS=~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+LICENSE=GPL-2+
+RDEPEND=python_targets_python2_5? ( dev-lang/python:2.5 ) python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_5(-)?,python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_5(-),-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=virtual/emacs-21
+SLOT=0
+SRC_URI=https://github.com/pinard/Pymacs/tarball/v0.25 -> pymacs-0.25.tar.gz
+_eclasses_=distutils-r1	6b599f498cf8823f9e3b4124b715143f	elisp	a2514d37ed52ce36a38a93fca064db1a	elisp-common	21605c8f0b2a5ffa3233faeb3f9df309	eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	048b50bedc7713734694d95a872490a6	python-utils-r1	120bfd06803274b3d1b986d506302851	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
+_md5_=5f2ee22dea19e6bb69fe4dfa77ebe5e7
