@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-1.0-r1.ebuild,v 1.2 2013/02/03 11:04:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-1.0-r1.ebuild,v 1.3 2013/02/17 17:41:06 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://znc.in/releases/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="daemon debug ipv6 perl python ssl sasl tcl"
 
 RDEPEND="

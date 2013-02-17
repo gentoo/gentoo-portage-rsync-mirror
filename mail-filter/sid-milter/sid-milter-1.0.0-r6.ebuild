@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-1.0.0-r6.ebuild,v 1.1 2013/01/04 11:46:38 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-1.0.0-r6.ebuild,v 1.2 2013/02/17 17:37:05 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/sid-milter/${P}.tar.gz"
 
 LICENSE="Sendmail-Open-Source"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="ipv6"
 
 DEPEND="dev-libs/openssl

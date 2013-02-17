@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.63 2013/02/03 11:04:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.64 2013/02/17 17:41:06 ago Exp $
+
+  17 Feb 2013; Agostino Sarubbo <ago@gentoo.org> znc-1.0-r1.ebuild:
+  Stable for x86, wrt bug #446454
 
   03 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> znc-1.0-r1.ebuild:
   Stable on amd64, wrt bug #446454
@@ -286,4 +289,3 @@
   +znc-0.047.ebuild:
   Initial import, initial ebuild by Uli Schlachter <tobespammed at web dot de>
   bug 175212
-

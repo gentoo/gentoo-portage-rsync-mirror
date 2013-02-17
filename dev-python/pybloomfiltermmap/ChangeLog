@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pybloomfiltermmap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/ChangeLog,v 1.12 2013/02/12 12:40:18 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/ChangeLog,v 1.13 2013/02/17 17:37:24 ago Exp $
+
+  17 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  pybloomfiltermmap-0.3.11.ebuild:
+  Stable for x86, wrt bug #456606
 
 *pybloomfiltermmap-0.3.11-r1 (12 Feb 2013)
 

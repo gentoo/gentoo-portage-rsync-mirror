@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/sauerbraten
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/ChangeLog,v 1.20 2013/02/17 15:12:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/ChangeLog,v 1.21 2013/02/17 17:41:29 ago Exp $
+
+  17 Feb 2013; Agostino Sarubbo <ago@gentoo.org> sauerbraten-2013.01.04.ebuild:
+  Stable for x86, wrt bug #456060
 
   17 Feb 2013; Agostino Sarubbo <ago@gentoo.org> sauerbraten-2013.01.04.ebuild:
   Stable for amd64, wrt bug #456060

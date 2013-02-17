@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/stella
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.77 2013/02/10 17:22:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.78 2013/02/17 17:40:08 ago Exp $
+
+  17 Feb 2013; Agostino Sarubbo <ago@gentoo.org> stella-3.7.5.ebuild:
+  Stable for x86, wrt bug #455522
 
   10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> stella-3.7.5.ebuild:
   Stable for ppc, wrt bug #455522

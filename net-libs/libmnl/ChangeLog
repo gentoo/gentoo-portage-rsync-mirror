@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmnl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.21 2013/02/16 23:10:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmnl/ChangeLog,v 1.22 2013/02/17 17:39:44 ago Exp $
+
+  17 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libmnl-1.0.3.ebuild:
+  Stable for x86, wrt bug #457806
 
   16 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> libmnl-1.0.3.ebuild:
   Stable on arm, wrt bug #457806

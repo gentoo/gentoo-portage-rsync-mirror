@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hexdump-esr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hexdump-esr/ChangeLog,v 1.26 2013/02/14 22:19:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hexdump-esr/ChangeLog,v 1.27 2013/02/17 17:41:50 ago Exp $
+
+  17 Feb 2013; Agostino Sarubbo <ago@gentoo.org> hexdump-esr-1.8.ebuild:
+  Stable for x86, wrt bug #457470
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> hexdump-esr-1.8.ebuild:
   Stable for ppc, wrt bug #457470

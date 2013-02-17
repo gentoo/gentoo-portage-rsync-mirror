@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.89 2013/02/17 15:11:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.90 2013/02/17 17:37:49 ago Exp $
+
+  17 Feb 2013; Agostino Sarubbo <ago@gentoo.org> uptimed-0.3.17-r1.ebuild:
+  Stable for x86, wrt bug #457250
 
   17 Feb 2013; Agostino Sarubbo <ago@gentoo.org> uptimed-0.3.17-r1.ebuild:
   Stable for amd64, wrt bug #457250

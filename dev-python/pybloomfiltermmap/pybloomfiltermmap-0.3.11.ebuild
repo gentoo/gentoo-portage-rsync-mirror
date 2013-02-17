@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/pybloomfiltermmap-0.3.11.ebuild,v 1.2 2013/02/12 12:31:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/pybloomfiltermmap-0.3.11.ebuild,v 1.3 2013/02/17 17:37:24 ago Exp $
 
 EAPI=4
 
@@ -16,5 +16,5 @@ HOMEPAGE="http://pypi.python.org/pypi/pybloomfiltermmap"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
