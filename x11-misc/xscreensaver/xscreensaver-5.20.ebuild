@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.20.ebuild,v 1.9 2012/12/16 19:56:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.20.ebuild,v 1.10 2013/02/17 03:40:42 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic multilib pam
@@ -55,8 +55,6 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xf86miscproto
 	x11-proto/xf86vidmodeproto
 	xinerama? ( x11-proto/xineramaproto )"
-
-REQUIRED_USE="gdm? ( new-login )"
 
 src_prepare() {
 	if use new-login && ! use gdm; then #392967
