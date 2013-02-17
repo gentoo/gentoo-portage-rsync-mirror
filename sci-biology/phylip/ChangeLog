@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/phylip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.39 2010/01/01 21:38:17 fauli Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.40 2013/02/17 11:28:00 jlec Exp $
+
+*phylip-3.69-r1 (17 Feb 2013)
+
+  17 Feb 2013; Justin Lecher <jlec@gentoo.org> -phylip-3.68.ebuild,
+  +phylip-3.69-r1.ebuild, metadata.xml:
+  Respect LDFLAGS, #337921
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> phylip-3.69.ebuild:
   Transfer Prefix keywords

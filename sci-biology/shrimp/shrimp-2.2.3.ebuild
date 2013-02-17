@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/shrimp-2.2.3.ebuild,v 1.4 2013/02/17 09:38:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/shrimp-2.2.3.ebuild,v 1.5 2013/02/17 11:14:56 jlec Exp $
 
 EAPI=5
 
@@ -17,13 +17,17 @@ SRC_URI="http://compbio.cs.toronto.edu/shrimp/releases/SHRiMP_${MY_PV}.src.tar.g
 LICENSE="shrimp"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="custom-cflags"
+IUSE="custom-cflags +sse2"
 
 # file collision on /usr/bin/utils #453044
 DEPEND="!sci-mathematics/cado-nfs"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/SHRiMP_${MY_PV}
+
+pkg_pretend() {
+	use sse2 || die "This package needs sse2 support in your CPU"
+}
 
 pkg_setup() {
 	if [[ ${CC} == *gcc* ]] &&	! tc-has-openmp; then
