@@ -3,8 +3,14 @@
 <pkgmetadata>
 <herd>proxy-maintainers</herd>
 <maintainer>
-  <email>yaleks@gentoo.ru</email>
-  <name>Aleksandr Yakimov</name>
+	<email>yaleks@gentoo.ru</email>
+	<name>Aleksandr Yakimov</name>
+	<description>Maintainer. Assign bugs to him</description>
+</maintainer>
+<maintainer>
+	<email>pinkbyte@gentoo.org</email>
+	<name>Sergey Popov</name>
+	<description>Proxy maintainer. CC him on bugs</description>
 </maintainer>
 	<longdescription lang="en">
 		YAGF is a graphical front-end for cuneiform and tesseract OCR tools.
