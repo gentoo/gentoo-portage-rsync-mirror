@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.228 2013/02/07 19:49:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.229 2013/02/17 21:01:58 pinkbyte Exp $
+
+  17 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> ppc64/package.use.mask:
+  Mask sys-cluster/vzctl[ploop], wrt bug #414531
 
   07 Feb 2013; Agostino Sarubbo <ago@gentoo.org> package.mask:
   Remove KDE SC 4.10.0, wrt to bug #455960

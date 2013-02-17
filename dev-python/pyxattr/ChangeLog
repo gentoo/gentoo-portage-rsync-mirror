@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.44 2013/01/03 23:09:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.45 2013/02/17 21:21:44 zmedico Exp $
+
+  17 Feb 2013; Zac Medico <zmedico@gentoo.org> pyxattr-0.5.2.ebuild:
+  Add ~arm-linux keyword.
 
 *pyxattr-0.5.2 (03 Jan 2013)
 

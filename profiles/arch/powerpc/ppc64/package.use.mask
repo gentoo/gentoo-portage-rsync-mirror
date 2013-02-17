@@ -1,6 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.50 2012/12/31 00:08:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.51 2013/02/17 21:01:58 pinkbyte Exp $
+
+# Sergey Popov <pinkbyte@gentoo.org> (18 Feb 2013)
+# sys-cluster/ploop can not be build on ppc64, bug #447644
+# Masking USE-dep on it
+sys-cluster/vzctl ploop
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
 # requires app-office/unoconv, which requires virtual/ooo, which is not
