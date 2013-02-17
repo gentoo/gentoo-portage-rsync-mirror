@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/matrix-toolkits-java/matrix-toolkits-java-0.9.12.ebuild,v 1.1 2009/09/21 04:57:20 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/matrix-toolkits-java/matrix-toolkits-java-0.9.12.ebuild,v 1.2 2013/02/17 09:46:48 jlec Exp $
 
 EAPI="2"
 
@@ -21,7 +21,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEPS=""
-DEPEND=">=virtual/jdk-1.5
+DEPEND="
+	dev-java/junit:0
+	>=virtual/jdk-1.5
 	${COMMON_DEPS}"
 RDEPEND=">=virtual/jre-1.5
 	${COMMON_DEPS}"
