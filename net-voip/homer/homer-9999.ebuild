@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-9999.ebuild,v 1.1 2012/12/23 17:50:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-9999.ebuild,v 1.2 2013/02/17 19:43:52 hwoarang Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="pulseaudio"
 
 DEPEND=">=dev-libs/openssl-1.0
 	media-libs/alsa-lib
@@ -37,10 +37,20 @@ DEPEND=">=dev-libs/openssl-1.0
 	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	x11-libs/qt-multimedia:4
-	x11-libs/qt-webkit:4"
+	x11-libs/qt-webkit:4
+	pulseaudio? ( media-sound/pulseaudio )"
+
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
+
+src_prepare() {
+	if use pulseaudio; then
+		sed -i \
+			-e "/^set(FEATURE_PULSEAUDIO/s:OFF:ON:" \
+				HomerBuild/config/HomerFeatures.txt
+	fi
+}
 
 src_compile() {
 	emake -C HomerBuild default \
