@@ -1,6 +1,11 @@
 # ChangeLog for app-officeext/texmaths
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/texmaths/ChangeLog,v 1.11 2012/11/24 22:17:10 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/texmaths/ChangeLog,v 1.12 2013/02/16 23:58:19 dilfridge Exp $
+
+*texmaths-0.37 (16 Feb 2013)
+
+  16 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org> +texmaths-0.37.ebuild:
+  Version bump
 
   24 Nov 2012; Andreas K. Huettel <dilfridge@gentoo.org> -texmaths-0.36.ebuild:
   Remove old and b0rken

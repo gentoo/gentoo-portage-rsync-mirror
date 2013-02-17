@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/nload-0.7.4.ebuild,v 1.6 2012/12/26 09:12:27 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/nload-0.7.4.ebuild,v 1.7 2013/02/16 23:51:40 pinkbyte Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.roland-riegel.de/nload/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc x86"
+KEYWORDS="amd64 arm ppc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
