@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/rmblast
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rmblast/ChangeLog,v 1.3 2012/10/31 20:41:32 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rmblast/ChangeLog,v 1.4 2013/02/18 10:48:11 jlec Exp $
+
+*rmblast-1.2-r1 (18 Feb 2013)
+
+  18 Feb 2013; Justin Lecher <jlec@gentoo.org> rmblast-1.2.ebuild,
+  +rmblast-1.2-r1.ebuild, +files/rmblast-1.2-gcc47.patch, metadata.xml:
+  Bug fixes: Build against any boost, #356315; build with gcc-4.7, #442266
 
   31 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> rmblast-1.2.ebuild:
   QA: drop maximum boost version dep; if it fails to build, it has to be fixed.

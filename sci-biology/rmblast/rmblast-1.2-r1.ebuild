@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rmblast/rmblast-1.2.ebuild,v 1.4 2013/02/18 10:48:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rmblast/rmblast-1.2-r1.ebuild,v 1.1 2013/02/18 10:48:11 jlec Exp $
 
-EAPI="3"
+EAPI=5
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -17,7 +17,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=dev-libs/boost-1.35.0"
+DEPEND="dev-libs/boost"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}-ncbi-blast-${MY_NCBI_BLAST_V}-src/c++"

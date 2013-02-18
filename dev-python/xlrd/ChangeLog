@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xlrd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.7 2012/12/03 21:26:47 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.8 2013/02/18 11:01:04 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> xlrd-0.8.0.ebuild:
+  Stable for amd64, wrt bug #458072
 
   03 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> xlrd-0.8.0.ebuild:
   Keyword amd64-linux and x86-linux

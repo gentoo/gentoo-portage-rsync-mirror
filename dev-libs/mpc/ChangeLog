@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.34 2012/09/09 08:15:42 dirtyepic Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.35 2013/02/18 11:00:55 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> mpc-1.0.1.ebuild:
+  Stable for amd64, wrt bug #441194
 
 *mpc-1.0.1 (09 Sep 2012)
 
@@ -137,4 +140,3 @@
   31 May 2009; Ryan Hill <dirtyepic@gentoo.org> +mpc-0.6.ebuild,
   +metadata.xml:
   Initial import.
-
