@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-4.6.1.ebuild,v 1.1 2012/12/17 11:58:19 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-4.6.4.ebuild,v 1.1 2013/02/18 21:58:03 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -33,13 +33,15 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	ELTCONF="--reverse-deps"
-	G2CONF="${G2CONF}
-		--disable-static"
 
 	# Regenerate marshallers for <glib-2.31 compatibility
 	rm -v components/editor/gtkhtml-spell-marshal.{c,h} \
 		components/editor/gtkhtml-editor-marshal.{c,h} || die
 	gnome2_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure --disable-static
 }
 
 src_install() {

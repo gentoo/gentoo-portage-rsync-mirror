@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libtirpc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.29 2012/07/09 11:05:48 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.30 2013/02/18 21:56:35 vapier Exp $
+
+*libtirpc-0.2.3 (18 Feb 2013)
+
+  18 Feb 2013; Mike Frysinger <vapier@gentoo.org> +libtirpc-0.2.3.ebuild:
+  Version bump.
 
   09 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org> -libtirpc-0.2.2.ebuild:
   Remove masked version.

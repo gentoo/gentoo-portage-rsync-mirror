@@ -80,6 +80,9 @@ opengl
 xpm
 video_cards_sis
 
+# mask wayland since dev-libs/wayland isn't keyworded
+wayland
+
 # I need to have some of the bad tcltk uses fixed, until then...
 # tcl was marked stable on this platform so only adding tk to mask
 tk
@@ -158,3 +161,12 @@ video_cards_trident
 video_cards_tseng
 video_cards_v4l
 video_cards_vesa
+
+# these mesa drivers do not make sense either
+video_cards_i915
+video_cards_i965
+video_cards_r100
+video_cards_r200
+video_cards_r300
+video_cards_r600
+video_cards_radeonsi

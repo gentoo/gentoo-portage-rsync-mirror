@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.14.ebuild,v 1.2 2012/12/16 06:40:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.16.ebuild,v 1.1 2013/02/18 21:45:27 tetromino Exp $
 
 EAPI="5"
 
@@ -77,9 +77,6 @@ set_gtk2_confdir() {
 }
 
 src_prepare() {
-	# https://bugzilla.gnome.org/show_bug.cgi?id=684787
-	epatch "${FILESDIR}/${PN}-2.24.13-gold.patch"
-
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
 	epatch "${FILESDIR}/${PN}-2.21.3-multilib.patch"

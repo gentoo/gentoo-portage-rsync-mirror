@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.634 2013/02/10 21:53:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.635 2013/02/18 21:45:27 tetromino Exp $
+
+*gtk+-2.24.16 (18 Feb 2013)
+
+  18 Feb 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/gtk+-2.24.13-gold.patch, -gtk+-2.24.14.ebuild, +gtk+-2.24.16.ebuild:
+  Version bump with minor bugfixes. Drop old.
 
 *gtk+-2.24.15 (10 Feb 2013)
 

@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.278 2013/02/18 16:59:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.280 2013/02/18 21:47:23 floppym Exp $
+
+  18 Feb 2013; Mike Gilbert <floppym@gentoo.org> v8-3.15.11.15.ebuild:
+  Also apply build changes to 3.15.
+
+*v8-3.16.14.1 (18 Feb 2013)
+
+  18 Feb 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> -v8-3.16.4.1.ebuild,
+  +v8-3.16.14.1.ebuild:
+  Dev channel bump. Remove old.
 
   18 Feb 2013; Mike Gilbert <floppym@gentoo.org> v8-9999.ebuild:
   Convert live ebuild to python-any-r1.

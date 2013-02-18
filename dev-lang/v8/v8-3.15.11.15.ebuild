@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.15.11.15.ebuild,v 1.1 2013/02/06 02:30:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.15.11.15.ebuild,v 1.2 2013/02/18 21:47:23 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -23,7 +23,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-vfp2-r0.patch
 }
 
-src_compile() {
+src_configure() {
 	tc-export AR CC CXX RANLIB
 	export LINK=${CXX}
 
@@ -46,20 +46,34 @@ src_compile() {
 	esac
 	mytarget=${myarch}.release
 
-	local snapshot=on
-	host-is-pax && snapshot=off
-
 	# TODO: Add console=readline option once implemented upstream
 	# http://code.google.com/p/v8/issues/detail?id=1781
 
+	# Generate the real Makefile.
 	emake V=1 \
 		library=shared \
 		werror=no \
 		soname_version=${soname_version} \
-		snapshot=${snapshot} \
+		snapshot=on \
 		hardfp=${hardfp} \
-		${mytarget} || die
+		out/Makefile.${myarch} || die
+}
 
+src_compile() {
+	local makeargs=(
+		-C out
+		-f Makefile.${myarch}
+		V=1
+		BUILDTYPE=Release
+		builddir="${S}/out/${mytarget}"
+	)
+
+	# Build mksnapshot so we can pax-mark it.
+	emake "${makeargs[@]}" mksnapshot || die
+	pax-mark m out/${mytarget}/mksnapshot
+
+	# Build everything else.
+	emake "${makeargs[@]}" || die
 	pax-mark m out/${mytarget}/{cctest,d8,shell} || die
 }
 

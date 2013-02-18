@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.167 2013/02/18 17:00:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.168 2013/02/18 21:43:06 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -48,7 +48,7 @@ RDEPEND="app-accessibility/speech-dispatcher
 	>=media-libs/libjpeg-turbo-1.2.0-r1
 	media-libs/libpng
 	>=media-libs/libwebp-0.2.0_rc1
-	media-libs/mesa[gles2]
+	!x86? ( media-libs/mesa[gles2] )
 	media-libs/opus
 	media-libs/speex
 	pulseaudio? ( media-sound/pulseaudio )
@@ -206,6 +206,7 @@ src_prepare() {
 		\! -path 'third_party/hyphen/*' \
 		\! -path 'third_party/iccjpeg/*' \
 		\! -path 'third_party/jstemplate/*' \
+		\! -path 'third_party/khronos/*' \
 		\! -path 'third_party/leveldatabase/*' \
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libphonenumber/*' \
@@ -214,6 +215,7 @@ src_prepare() {
 		\! -path 'third_party/libXNVCtrl/*' \
 		\! -path 'third_party/libyuv/*' \
 		\! -path 'third_party/lss/*' \
+		\! -path 'third_party/mesa/*' \
 		\! -path 'third_party/modp_b64/*' \
 		\! -path 'third_party/mongoose/*' \
 		\! -path 'third_party/mt19937ar/*' \
@@ -234,6 +236,7 @@ src_prepare() {
 		\! -path 'third_party/webdriver/*' \
 		\! -path 'third_party/webrtc/*' \
 		\! -path 'third_party/widevine/*' \
+		\! -path 'third_party/x86inc/*' \
 		-delete || die
 
 	local v8_bundled="$(chromium_bundled_v8_version)"
@@ -287,7 +290,6 @@ src_configure() {
 		-Duse_system_libusb=1
 		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
-		-Duse_system_mesa=1
 		-Duse_system_minizip=1
 		-Duse_system_nspr=1
 		-Duse_system_opus=1
@@ -299,6 +301,12 @@ src_configure() {
 		-Duse_system_yasm=1
 		-Duse_system_zlib=1
 		$(gyp_use system-ffmpeg use_system_ffmpeg)"
+
+	# TODO: Use system mesa on x86, bug #457130 .
+	if ! use x86; then
+		myconf+="
+			-Duse_system_mesa=1"
+	fi
 
 	# Optional dependencies.
 	# TODO: linux_link_kerberos, bug #381289.
