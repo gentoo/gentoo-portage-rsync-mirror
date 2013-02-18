@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/tribler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.44 2013/02/14 20:19:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/ChangeLog,v 1.45 2013/02/18 19:01:32 blueness Exp $
+
+  18 Feb 2013; Anthony G. Basile <blueness@gentoo.org>
+  +files/tribler-fix-desktop.patch, -tribler-6.0.2.ebuild, tribler-6.0.3.ebuild:
+  Remove older stable; fix .desktop, bug #457582
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tribler-6.0.3.ebuild:
   Stable for x86, wrt bug #457460

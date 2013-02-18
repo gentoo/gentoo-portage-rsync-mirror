@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Time-HiRes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.76 2012/05/21 11:50:36 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-HiRes/ChangeLog,v 1.77 2013/02/18 19:07:01 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-Time-HiRes-1.972.500-r1.ebuild:
+  Stable for amd64, wrt bug #458122
 
 *perl-Time-HiRes-1.972.500-r1 (21 May 2012)
 
@@ -343,4 +347,3 @@
   +perl-Time-HiRes-1.66.ebuild, +perl-Time-HiRes-1.82.ebuild,
   +perl-Time-HiRes-1.86.ebuild:
   New virtual for perl-core/Time-HiRes
-

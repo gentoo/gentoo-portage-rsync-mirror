@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-6.0.3.ebuild,v 1.3 2013/02/14 20:19:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/tribler/tribler-6.0.3.ebuild,v 1.4 2013/02/18 19:01:32 blueness Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -55,6 +55,7 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-5.9.12-fix-global-declarations.patch"
 	epatch "${FILESDIR}/${PN}-log2homedir.patch"
+	epatch "${FILESDIR}/${PN}-fix-desktop.patch"
 
 	python_convert_shebangs -r 2 .
 }

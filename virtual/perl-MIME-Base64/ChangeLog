@@ -1,6 +1,14 @@
 # ChangeLog for virtual/perl-MIME-Base64
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-MIME-Base64/ChangeLog,v 1.49 2012/05/21 11:50:35 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-MIME-Base64/ChangeLog,v 1.51 2013/02/18 19:28:40 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-MIME-Base64-3.130.0-r2.ebuild:
+  Stable for x86, wrt bug #458122
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-MIME-Base64-3.130.0-r2.ebuild:
+  Stable for amd64, wrt bug #458122
 
 *perl-MIME-Base64-3.130.0-r2 (21 May 2012)
 
@@ -202,4 +210,3 @@
   +perl-MIME-Base64-3.00.ebuild, +perl-MIME-Base64-3.01.ebuild,
   +perl-MIME-Base64-3.05.ebuild, +perl-MIME-Base64-3.07.ebuild:
   New virtual for perl-core/MIME-Base64
-

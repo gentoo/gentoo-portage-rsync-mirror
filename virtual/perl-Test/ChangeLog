@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Test
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test/ChangeLog,v 1.11 2013/01/19 12:02:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test/ChangeLog,v 1.12 2013/02/18 19:06:16 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-Test-1.260.0.ebuild:
+  Stable for amd64, wrt bug #458122
 
 *perl-Test-1.260.0 (19 Jan 2013)
 
@@ -46,4 +49,3 @@
   07 Feb 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +perl-Test-1.24.ebuild, +perl-Test-1.25.ebuild:
   New virtual for perl-core/Test
-

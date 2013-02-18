@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Filter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Filter/ChangeLog,v 1.13 2013/01/20 11:25:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Filter/ChangeLog,v 1.15 2013/02/18 19:28:10 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-Filter-1.450.0.ebuild:
+  Stable for x86, wrt bug #458122
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-Filter-1.450.0.ebuild:
+  Stable for amd64, wrt bug #458122
 
 *perl-Filter-1.450.0 (20 Jan 2013)
 
@@ -53,4 +59,3 @@
   10 Aug 2009; Torsten Veller <tove@gentoo.org> +perl-Filter-1.33.ebuild,
   +perl-Filter-1.37.ebuild, +metadata.xml:
   Add virtual for Filter
-

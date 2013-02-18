@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Pod-Simple
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Simple/ChangeLog,v 1.53 2012/08/22 16:59:39 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Simple/ChangeLog,v 1.55 2013/02/18 19:31:12 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-Pod-Simple-3.230.0.ebuild:
+  Stable for x86, wrt bug #458122
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-Pod-Simple-3.230.0.ebuild:
+  Stable for amd64, wrt bug #458122
 
 *perl-Pod-Simple-3.230.0 (22 Aug 2012)
 
@@ -240,4 +246,3 @@
   01 Nov 2008; Yuval Yaari <yuval@gentoo.org> +metadata.xml,
   +perl-Pod-Simple-3.05.ebuild, +perl-Pod-Simple-3.07.ebuild:
   Adding virtuals for dual-lifed modules that come with perl-5.10
-
