@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dropwatch/dropwatch-1.4.ebuild,v 1.1 2012/10/24 09:46:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dropwatch/dropwatch-1.4.ebuild,v 1.3 2013/02/18 11:57:09 pinkbyte Exp $
 
 EAPI=4
 
@@ -22,7 +22,10 @@ DEPEND="${RDEPEND}
 
 CONFIG_CHECK="~NET_DROP_MONITOR"
 
-PATCHES=( "${FILESDIR}/${P}-makefile.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-makefile.patch"
+	"${FILESDIR}/${P}-binutils-2.23.patch"
+)
 
 src_compile() {
 	emake CC="$(tc-getCC)" -C src
