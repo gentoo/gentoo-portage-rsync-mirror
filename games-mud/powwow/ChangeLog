@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/powwow
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/ChangeLog,v 1.17 2012/07/02 19:16:33 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/ChangeLog,v 1.18 2013/02/18 17:10:59 hasufell Exp $
+
+  18 Feb 2013; Julian Ospald <hasufell@gentoo.org> powwow-1.2.16.ebuild,
+  +files/powwow-1.2.16-underlinking.patch:
+  fix underlinking wrt #454928
 
   02 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org> -powwow-1.2.15.ebuild:
   old
