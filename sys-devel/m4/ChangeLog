@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.162 2012/08/19 18:46:56 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.163 2013/02/18 01:07:35 zmedico Exp $
+
+  18 Feb 2013; Zac Medico <zmedico@gentoo.org> m4-1.4.16.ebuild:
+  Add ~arm-linux keyword.
 
   19 Aug 2012; Raúl Porcel <armin76@gentoo.org> m4-1.4.16.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #423239

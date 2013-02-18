@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jpeg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.9 2012/05/21 14:41:53 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.10 2013/02/18 01:06:08 zmedico Exp $
+
+  18 Feb 2013; Zac Medico <zmedico@gentoo.org> jpeg-0.ebuild:
+  Add ~arm-linux keyword.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> jpeg-0.ebuild:
   keyword ~amd64-fbsd
@@ -21,4 +24,3 @@
 
   23 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> +jpeg-0.ebuild:
   Initial commit.
-

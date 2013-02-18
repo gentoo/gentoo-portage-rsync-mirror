@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/notpacman
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/notpacman/ChangeLog,v 1.1 2013/02/18 01:01:45 hasufell Exp $
+
+*notpacman-1.0.4 (18 Feb 2013)
+
+  18 Feb 2013; Julian Ospald <hasufell@gentoo.org> +notpacman-1.0.4.ebuild,
+  +metadata.xml:
+  initial import
+
