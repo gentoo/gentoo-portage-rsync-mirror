@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-4.00.1.ebuild,v 1.3 2013/02/07 20:38:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-4.00.1.ebuild,v 1.4 2013/02/18 18:09:14 aballier Exp $
 
 EAPI="5"
 
@@ -90,12 +90,6 @@ src_install() {
 		LIBDIR="${D}"/usr/$(get_libdir)/ocaml \
 		MANDIR="${D}"/usr/share/man \
 		install
-
-	# Install the compiler libs
-	dodir /usr/$(get_libdir)/ocaml/compiler-libs
-	insinto /usr/$(get_libdir)/ocaml/compiler-libs
-	doins {utils,typing,parsing}/*.{mli,cmi,cmo}
-	use ocamlopt && doins {utils,typing,parsing}/*.{cmx,o}
 
 	# Symlink the headers to the right place
 	dodir /usr/include
