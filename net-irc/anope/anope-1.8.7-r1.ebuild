@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/anope-1.8.7.ebuild,v 1.3 2012/07/01 21:07:35 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/anope-1.8.7-r1.ebuild,v 1.1 2013/02/18 08:25:51 gurligebis Exp $
 
 EAPI=4
 
-inherit autotools eutils multilib versionator
+inherit autotools eutils multilib versionator user
 
 DESCRIPTION="Anope IRC Services"
 HOMEPAGE="http://www.anope.org"

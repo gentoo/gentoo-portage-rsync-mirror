@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/anope
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.21 2012/07/01 21:07:35 binki Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.22 2013/02/18 08:25:51 gurligebis Exp $
+
+*anope-1.8.7-r1 (18 Feb 2013)
+
+  18 Feb 2013; <gurligebis@gentoo.org> -anope-1.8.7.ebuild,
+  +anope-1.8.7-r1.ebuild, files/anope-init.d:
+  Fixing init script to ensure /run directory exists, fixing #448464
 
   01 Jul 2012; Nathan Phillip Brink <binki@gentoo.org> anope-1.8.7.ebuild:
   Ensure that /var/lib/anope/backups directory exists so that database backups
