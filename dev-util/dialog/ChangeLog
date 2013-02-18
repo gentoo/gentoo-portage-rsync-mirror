@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dialog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.179 2013/02/17 18:33:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.180 2013/02/18 13:32:23 jer Exp $
+
+  18 Feb 2013; Jeroen Roovers <jer@gentoo.org> dialog-1.2.20121230.ebuild:
+  Fix USE=examples install (bug #458038 by Branko Majic).
 
   17 Feb 2013; Jeroen Roovers <jer@gentoo.org> dialog-1.2.20121230.ebuild:
   Stable for HPPA (bug #457344).

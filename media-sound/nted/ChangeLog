@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/nted
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.36 2013/02/18 13:23:30 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.37 2013/02/18 13:41:33 pinkbyte Exp $
+
+*nted-1.10.18-r3 (18 Feb 2013)
+
+  18 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> -nted-1.10.18.ebuild,
+  +nted-1.10.18-r3.ebuild:
+  Port to autotools-utils eclass, revbump for last changes, drop old revision
 
   18 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> nted-1.10.18-r2.ebuild:
   Fix desktop file, wrt bug #458080. Thanks to Agostino Sarubbo for discovering
