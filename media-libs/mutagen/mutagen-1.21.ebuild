@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.21.ebuild,v 1.2 2013/02/18 15:02:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.21.ebuild,v 1.3 2013/02/18 15:41:24 floppym Exp $
 
 EAPI=5
 
@@ -23,5 +23,11 @@ DEPEND="test? ( dev-python/eyeD3 )"
 DOCS=( API-NOTES NEWS README TODO TUTORIAL )
 
 src_test() {
-	"${PYTHON:-python2.7}" setup.py test
+	# tests/test_flac.py uses temp files with a constant path.
+	# If we had multiple python implementations, we would hit a race.
+	DISTUTILS_NO_PARALLEL_BUILD=1 distutils-r1_src_test
+}
+
+python_test() {
+	esetup.py test
 }
