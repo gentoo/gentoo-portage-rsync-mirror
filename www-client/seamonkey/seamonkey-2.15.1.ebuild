@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.15.1.ebuild,v 1.2 2013/02/04 12:36:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.15.1.ebuild,v 1.3 2013/02/18 16:06:02 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -67,7 +67,7 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	>=media-libs/libvpx-1.0.0
 	>=x11-libs/cairo-1.10
 	>=x11-libs/pango-1.14.0
-	>=x11-libs/gtk+-2.14
+	>=x11-libs/gtk+-2.14:2
 	virtual/libffi
 	gstreamer? (
 		>=media-libs/gstreamer-0.10.33:0.10
