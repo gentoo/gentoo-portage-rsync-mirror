@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.18-r1.ebuild,v 1.3 2013/02/18 11:06:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.18-r1.ebuild,v 1.4 2013/02/18 12:43:19 pinkbyte Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="WYSIWYG score editor for GTK+"
 HOMEPAGE="http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml"
@@ -46,4 +46,8 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_enable nls) \
 		$(use_with doc)
+}
+
+src_compile() {
+	emake AR="$(tc-getAR)"
 }

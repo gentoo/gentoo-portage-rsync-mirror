@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/ncbi-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.86 2012/10/24 19:31:33 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.87 2013/02/18 12:53:27 jlec Exp $
+
+  18 Feb 2013; Justin Lecher <jlec@gentoo.org> ncbi-tools-0.20080302.ebuild,
+  ncbi-tools-0.20090809.ebuild, ncbi-tools-2.2.26.ebuild,
+  -ncbi-tools-20080302.ebuild, -ncbi-tools-20090809.ebuild, metadata.xml:
+  Drop old; rename fmerge.1 to fmerg-ncbi.1 -> resolves collision with
+  dev-util/fhist, #429560
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> ncbi-tools-0.20080302.ebuild,
   ncbi-tools-0.20090809.ebuild, ncbi-tools-2.2.26.ebuild,

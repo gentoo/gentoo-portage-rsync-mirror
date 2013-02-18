@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/allpathslg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/ChangeLog,v 1.10 2012/12/14 09:57:17 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/ChangeLog,v 1.11 2013/02/18 12:32:22 jlec Exp $
+
+  18 Feb 2013; Justin Lecher <jlec@gentoo.org> -allpathslg-41839.ebuild,
+  metadata.xml:
+  Drop old
 
   14 Dec 2012; Ulrich Müller <ulm@gentoo.org> allpathslg-37578.ebuild,
   allpathslg-41839.ebuild, allpathslg-42337.ebuild:

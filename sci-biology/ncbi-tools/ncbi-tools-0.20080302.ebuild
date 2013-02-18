@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-0.20080302.ebuild,v 1.2 2012/10/24 19:31:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-0.20080302.ebuild,v 1.3 2013/02/18 12:53:27 jlec Exp $
 
 EAPI=1
 
@@ -24,8 +24,10 @@ KEYWORDS="~alpha amd64 ~ppc ppc64 ~sparc x86"
 
 IUSE="doc X"
 
-RDEPEND="app-shells/tcsh
+RDEPEND="
+	app-shells/tcsh
 	dev-lang/perl
+	!dev-util/fhist
 	media-libs/libpng
 	X? ( >=x11-libs/motif-2.3:0 )"
 

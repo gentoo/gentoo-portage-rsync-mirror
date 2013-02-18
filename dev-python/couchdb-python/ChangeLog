@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/couchdb-python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.17 2013/02/17 13:42:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.18 2013/02/18 12:59:11 mgorny Exp $
+
+  18 Feb 2013; Michał Górny <mgorny@gentoo.org> couchdb-python-0.7.ebuild,
+  couchdb-python-0.8-r1.ebuild, couchdb-python-0.8.ebuild:
+  Remove unnecessary httplib2 dep wrt bug #458070.
 
 *couchdb-python-0.8-r1 (17 Feb 2013)
 

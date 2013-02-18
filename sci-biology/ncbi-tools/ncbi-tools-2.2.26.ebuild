@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-2.2.26.ebuild,v 1.2 2012/10/24 19:31:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-2.2.26.ebuild,v 1.3 2013/02/18 12:53:27 jlec Exp $
 
 EAPI=4
 
@@ -121,6 +121,7 @@ src_install() {
 	newdoc "${S}"/network/encrypt/README README.encrypt
 	newdoc "${S}"/network/nsclilib/readme README.nsclilib
 	newdoc "${S}"/sequin/README README.sequin
+	mv "${S}"/doc/man/fmerge{,-ncbi}.1 || die
 	doman "${S}"/doc/man/*
 
 	# Hypertext user documentation

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/zeus-jscl/zeus-jscl-1.64.ebuild,v 1.1 2009/11/17 19:07:25 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/zeus-jscl/zeus-jscl-1.64.ebuild,v 1.2 2013/02/18 12:55:20 jlec Exp $
 
 EAPI="2"
 
@@ -31,5 +31,5 @@ S="${WORKDIR}/${PN}"
 src_install() {
 	java-pkg_newjar lib/${P}.jar ${PN}.jar
 	use source && java-pkg_dosrc src
-	use doc && java-pkg_dodoc doc
+	use doc && java-pkg_dojavadoc doc/api
 }
