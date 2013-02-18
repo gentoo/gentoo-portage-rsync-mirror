@@ -1,0 +1,13 @@
+diff -Nuar ./src/hamster/widgets/activityentry.py ./src/hamster/widgets/activityentry.py
+--- ./src/hamster/widgets/activityentry.py	2010-11-15 18:26:38.000000000 -0500
++++ ./src/hamster/widgets/activityentry.py	2013-02-04 20:27:39.606957036 -0500
+@@ -114,7 +114,7 @@
+         for activity in self.external_activities:
+             name = activity['name']
+             if activity['category']:
+-                name = "%s@%s" % name, activity['category']
++                name = "%s@%s" % (name, activity['category'])
+             external_names.add(name.lower())
+ 
+         return activity_name, activity_name in external_names
+

@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/hamster-applet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/ChangeLog,v 1.46 2012/08/29 05:03:09 leio Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/ChangeLog,v 1.47 2013/02/18 20:40:36 pacho Exp $
+
+*hamster-applet-2.32.1-r1 (18 Feb 2013)
+
+  18 Feb 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/hamster-applet-2.32.1-fix-edit.patch, +hamster-applet-2.32.1-r1.ebuild,
+  -files/hamster-applet-2.30.2-fix-import.patch:
+  Fix existing activities edition, bug #455536 by Wayne
 
   29 Aug 2012; Mart Raudsepp <leio@gentoo.org> hamster-applet-2.32.1.ebuild:
   QA: Fix python[sqlite] depend to eclass method. This avoids portage trying to
@@ -227,4 +234,3 @@
   +files/hamster-applet-2.24.0-python25.patch, +metadata.xml,
   +hamster-applet-2.24.0.ebuild:
   initial ebuild, Shamelessly stolen from graaff's overlay.
-
