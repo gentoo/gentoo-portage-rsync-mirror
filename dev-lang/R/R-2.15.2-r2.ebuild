@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.2-r2.ebuild,v 1.1 2013/02/13 19:16:31 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.15.2-r2.ebuild,v 1.2 2013/02/18 19:45:15 calchan Exp $
 
 EAPI=5
 
@@ -164,8 +164,8 @@ src_configure() {
 
 src_compile() {
 	export VARTEXFONTS="${T}/fonts"
-	emake
-	emake -C src/nmath/standalone shared $(use static-libs && echo static)
+	emake AR="$(tc-getAR)"
+	emake -C src/nmath/standalone shared $(use static-libs && echo static) AR="$(tc-getAR)"
 	use doc && emake info pdf
 }
 

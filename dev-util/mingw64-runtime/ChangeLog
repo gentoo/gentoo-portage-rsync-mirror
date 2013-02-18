@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/mingw64-runtime
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/ChangeLog,v 1.10 2012/06/06 19:58:24 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/ChangeLog,v 1.11 2013/02/18 19:52:50 vapier Exp $
+
+*mingw64-runtime-2.0.7 (18 Feb 2013)
+
+  18 Feb 2013; Mike Frysinger <vapier@gentoo.org> +mingw64-runtime-2.0.7.ebuild:
+  Version bump #457684 by Dennis Schridde.
 
   06 Jun 2012; Mike Frysinger <vapier@gentoo.org> mingw64-runtime-2.0.1.ebuild:
   Always provide mingw symlink in sysroot for gcc #419601 by Alon Bar-Lev.
@@ -56,4 +61,3 @@
   09 Dec 2009; Mike Frysinger <vapier@gentoo.org>
   +mingw64-runtime-20090419.ebuild, +metadata.xml:
   Initial ebuild based on mingw-runtime by Suertreus #271197.
-
