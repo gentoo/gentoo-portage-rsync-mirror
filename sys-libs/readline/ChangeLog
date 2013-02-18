@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.182 2013/01/03 03:02:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.183 2013/02/17 23:40:35 zmedico Exp $
+
+  17 Feb 2013; Zac Medico <zmedico@gentoo.org> readline-6.2_p4.ebuild:
+  Add ~arm-linux keyword.
 
 *readline-6.2_p4 (03 Jan 2013)
 
