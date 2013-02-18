@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.105 2013/01/20 19:00:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.106 2013/02/18 08:32:53 naota Exp $
+
+*global-6.2.7-r1 (18 Feb 2013)
+
+  18 Feb 2013; Naohiro Aota +global-6.2.7-r1.ebuild:
+  Do not drop all .la files. #457856
 
 *global-6.2.7 (20 Jan 2013)
 
