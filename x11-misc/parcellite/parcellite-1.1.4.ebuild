@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/parcellite-1.1.4.ebuild,v 1.1 2013/01/26 17:50:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/parcellite-1.1.4.ebuild,v 1.3 2013/02/18 11:06:40 ago Exp $
 
 EAPI=4
 inherit fdo-mime
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 PL_LINGUAS="ca cs da de es fr hu it ja nb pl pl_PL pt_BR ro ru sv tr zh_CN"

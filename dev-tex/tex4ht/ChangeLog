@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/tex4ht
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.78 2012/07/25 14:18:20 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.79 2013/02/18 11:04:42 aballier Exp $
+
+*tex4ht-20090611_p1038-r2 (18 Feb 2013)
+
+  18 Feb 2013; Alexis Ballier <aballier@gentoo.org>
+  +files/tex4ht-texlive-updates.patch, +tex4ht-20090611_p1038-r2.ebuild:
+  Add small updates from TeX Live, by José Romildo Malaquias , bug #406045
 
   25 Jul 2012; Christoph Junghans <ottxor@gentoo.org>
   tex4ht-20090611_p1038-r1.ebuild:

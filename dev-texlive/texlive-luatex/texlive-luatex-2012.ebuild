@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-luatex/texlive-luatex-2012.ebuild,v 1.2 2012/10/03 18:22:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-luatex/texlive-luatex-2012.ebuild,v 1.3 2013/02/18 11:17:28 aballier Exp $
 
 EAPI="4"
 
@@ -19,7 +19,9 @@ DEPEND=">=dev-texlive/texlive-basic-2012
 >=dev-tex/luatex-0.45
 
 "
-RDEPEND="${DEPEND} "
+RDEPEND="${DEPEND}
+	dev-texlive/texlive-xetex
+	"
 TEXLIVE_MODULE_BINSCRIPTS="
 	texmf-dist/scripts/luaotfload/mkluatexfontdb.lua
 	texmf-dist/scripts/checkcites/checkcites.lua
