@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/mecab-skkserv-0.03.ebuild,v 1.5 2013/02/12 11:07:37 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mecab-skkserv/mecab-skkserv-0.03.ebuild,v 1.6 2013/02/18 16:43:08 mr_bones_ Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}
 
 DOCS=( README NEWS AUTHORS )
 HTML_DOCS=( index.html )
-PATCHES=( 
+PATCHES=(
 	"${FILESDIR}"/${P}-cflags.patch
 	"${FILESDIR}"/${P}-dicrc.patch
 	)

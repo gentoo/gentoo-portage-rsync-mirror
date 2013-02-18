@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/sabnzbd-0.7.11.ebuild,v 1.1 2013/02/14 18:39:40 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/sabnzbd-0.7.11.ebuild,v 1.2 2013/02/18 16:44:23 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ IUSE="+rar +ssl unzip +yenc"
 # pynewsleecher
 #
 # Also note that cherrypy is still bundled.  It's near impossible to find
-# out where the bundled and heavily patched version came from (pulled from 
+# out where the bundled and heavily patched version came from (pulled from
 # cherrypy subversion, patched somewhere, then imported to sabnzbd and patched
 # further.  Upstream is planning on making this easier with 0.8.0.
 # https://github.com/sabnzbd/sabnzbd/issues/47

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.6.1.ebuild,v 1.1 2013/02/07 05:01:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.6.1.ebuild,v 1.2 2013/02/18 16:43:34 mr_bones_ Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -26,5 +26,5 @@ RDEPEND=""
 # permission denied test needs FEATURES="userpriv" to work *sigh*
 # rest is just confused and needs a good sedding to work
 src_prepare() {
-	sed -i -e 's/unittest2/unittest/' pyflakes/test/* || die 
+	sed -i -e 's/unittest2/unittest/' pyflakes/test/* || die
 }

@@ -1,10 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.34 2012/11/25 19:05:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.36 2013/02/18 16:59:00 floppym Exp $
 
 EAPI="5"
+PYTHON_COMPAT=( python2_{6,7} )
 
-inherit eutils multilib pax-utils python-utils-r1 subversion toolchain-funcs
+inherit eutils multilib pax-utils python-any-r1 subversion toolchain-funcs
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
@@ -15,7 +16,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="|| ( dev-lang/python:2.7 dev-lang/python:2.6 )"
+DEPEND="${PYTHON_DEPS}"
 
 src_unpack() {
 	subversion_src_unpack
@@ -23,10 +24,9 @@ src_unpack() {
 	make dependencies || die
 }
 
-src_compile() {
+src_configure() {
 	tc-export AR CC CXX RANLIB
 	export LINK=${CXX}
-	python_export python2 EPYTHON
 
 	local hardfp=off
 
@@ -50,20 +50,34 @@ src_compile() {
 	subversion_wc_info
 	soname_version="${PV}.${ESVN_WC_REVISION}"
 
-	local snapshot=on
-	host-is-pax && snapshot=off
-
 	# TODO: Add console=readline option once implemented upstream
 	# http://code.google.com/p/v8/issues/detail?id=1781
 
+	# Generate the real Makefile.
 	emake V=1 \
 		library=shared \
 		werror=no \
 		soname_version=${soname_version} \
-		snapshot=${snapshot} \
+		snapshot=on \
 		hardfp=${hardfp} \
-		${mytarget} || die
+		out/Makefile.${myarch} || die
+}
 
+src_compile() {
+	local makeargs=(
+		-C out
+		-f Makefile.${myarch}
+		V=1
+		BUILDTYPE=Release
+		builddir="${S}/out/${mytarget}"
+	)
+
+	# Build mksnapshot so we can pax-mark it.
+	emake "${makeargs[@]}" mksnapshot || die
+	pax-mark m out/${mytarget}/mksnapshot
+
+	# Build everything else.
+	emake "${makeargs[@]}" || die
 	pax-mark m out/${mytarget}/{cctest,d8,shell} || die
 }
 

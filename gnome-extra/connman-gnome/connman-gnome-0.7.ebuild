@@ -1,11 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/connman-gnome/connman-gnome-0.7.ebuild,v 1.1 2013/02/18 12:23:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/connman-gnome/connman-gnome-0.7.ebuild,v 1.2 2013/02/18 16:43:58 mr_bones_ Exp $
 
 EAPI=5
 
 inherit vcs-snapshot autotools
-
 
 DESCRIPTION="Provides a daemon for managing internet connections"
 HOMEPAGE="https://github.com/connectivity/connman-gnome"

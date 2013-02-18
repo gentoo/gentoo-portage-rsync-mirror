@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r2.ebuild,v 1.4 2013/02/05 17:14:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00-r2.ebuild,v 1.5 2013/02/18 16:45:17 mr_bones_ Exp $
 
 EAPI=4
 
@@ -343,7 +343,6 @@ pkg_preinst() {
 		[[ "$(df -TP /boot | awk 'NR>1{print $2}')" = 'zfs' ]]
 	display_zfs_feature_flag_warning=$?
 }
-
 
 pkg_postinst() {
 	# display the link to guide
