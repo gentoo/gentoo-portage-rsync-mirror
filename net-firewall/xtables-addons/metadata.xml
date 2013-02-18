@@ -7,6 +7,10 @@
 	<name>Andreis Vinogradovs</name>
 	<description>Co-maintainer, through proxy maintainers</description>
 </maintainer>
+<maintainer>
+	<email>blueness@gentoo.org</email>
+	<name>Anthony G. Basile</name>
+</maintainer>
 <longdescription>
 Xtables-addons is the successor to patch-o-matic(-ng). Likewise, it contains
 extensions that were not, or are not yet, accepted in the main kernel/iptables
