@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.391 2013/01/21 06:23:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.392 2013/02/18 22:46:49 zmedico Exp $
+
+  18 Feb 2013; Zac Medico <zmedico@gentoo.org> perl-5.16.2.ebuild:
+  Add ~arm-linux keyword.
 
   21 Jan 2013; Mike Gilbert <floppym@gentoo.org> perl-5.16.2.ebuild:
   Add IUSE=build as a workaround for bug 453268.
