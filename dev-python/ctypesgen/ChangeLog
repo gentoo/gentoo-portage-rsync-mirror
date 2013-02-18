@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ctypesgen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.25 2012/05/12 01:16:16 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.26 2013/02/18 14:22:53 mgorny Exp $
+
+*ctypesgen-0_p72-r1 (18 Feb 2013)
+
+  18 Feb 2013; Michał Górny <mgorny@gentoo.org> +ctypesgen-0_p72-r1.ebuild:
+  Migrate to distutils-r1. Fix and enable tests.
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> ctypesgen-0_p72.ebuild:
   keyword ~amd64-fbsd
@@ -78,4 +83,3 @@
   22 Mar 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   +metadata.xml, +ctypesgen-0_p72.ebuild:
   New package. Initial ebuild by me.
-
