@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.94 2013/01/11 17:24:42 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.95 2013/02/18 15:22:00 chithanh Exp $
+
+*syslinux-5.01 (18 Feb 2013)
+
+  18 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +syslinux-5.01.ebuild:
+  Version bump, bug #457974.
 
   11 Jan 2013; Rick Farina <zerochaos@gentoo.org> syslinux-4.06.ebuild,
   syslinux-5.00.ebuild:
