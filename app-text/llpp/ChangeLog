@@ -1,6 +1,9 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.33 2013/01/06 03:27:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.34 2013/02/17 23:13:52 xmw Exp $
+
+  17 Feb 2013; Michael Weber <xmw@gentoo.org> llpp-9999.ebuild:
+  update live build to include utils.ml
 
   06 Jan 2013; Zac Medico <zmedico@gentoo.org> Manifest:
   Update Manifest with digests for a snapshot which I've manually uploaded to

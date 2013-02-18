@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.351 2013/02/17 15:56:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.352 2013/02/17 23:09:52 zmedico Exp $
+
+  17 Feb 2013; Zac Medico <zmedico@gentoo.org> dhcpcd-5.6.7.ebuild:
+  Add ~arm-linux keyword.
 
 *dhcpcd-9999 (17 Feb 2013)
 

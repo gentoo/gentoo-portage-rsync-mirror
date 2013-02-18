@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gnu-netcat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/ChangeLog,v 1.28 2012/02/06 18:43:07 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/ChangeLog,v 1.29 2013/02/17 23:20:20 zmedico Exp $
+
+  17 Feb 2013; Zac Medico <zmedico@gentoo.org> gnu-netcat-0.7.1-r3.ebuild:
+  Add ~arm-linux keyword.
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> gnu-netcat-0.7.1-r3.ebuild:
   Marking gnu-netcat-0.7.1-r3 ppc for bug 397127
