@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-0.2.0.ebuild,v 1.15 2012/05/21 19:18:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-0.2.0.ebuild,v 1.16 2013/02/18 22:06:43 vapier Exp $
 
 EAPI="2"
 
@@ -34,6 +34,7 @@ src_prepare() {
 		eautoreconf
 	else
 		epatch "${FILESDIR}"/${P}-pkgconfig.patch
+		epatch "${FILESDIR}"/${P}-no-nss.patch
 		eautoreconf
 	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/rpcbind
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.20 2012/05/21 19:18:08 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.21 2013/02/18 22:06:43 vapier Exp $
+
+  18 Feb 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/rpcbind-0.2.0-no-nss.patch, rpcbind-0.2.0.ebuild:
+  Fix building on non-glibc systems #458024 by Mark Reiche.
 
   21 May 2012; Kacper Kowalik <xarthisius@gentoo.org> rpcbind-0.2.0.ebuild:
   Add missing inheritance of eutils.eclass
@@ -78,4 +82,3 @@
   29 Dec 2007; Mike Frysinger <vapier@gentoo.org> +files/rpcbind.confd,
   +files/rpcbind.initd, +metadata.xml, +rpcbind-0.1.4.ebuild:
   Initial ebuild by me.
-
