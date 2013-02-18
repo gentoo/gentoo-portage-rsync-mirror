@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/raxml/raxml-7.2.6.ebuild,v 1.1 2011/06/27 05:59:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/raxml/raxml-7.2.6.ebuild,v 1.2 2013/02/18 12:20:50 jlec Exp $
 
 EAPI=4
 
@@ -20,6 +20,10 @@ DEPEND="" # mpi? ( virtual/mpi )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/RAxML-${PV}"
+
+pkg_pretend() {
+	use sse3 || die "This package needs sse3 support in your CPU"
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch

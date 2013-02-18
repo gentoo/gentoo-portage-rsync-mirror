@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/beast-mcmc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/beast-mcmc/ChangeLog,v 1.4 2010/03/21 01:21:23 weaver Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/beast-mcmc/ChangeLog,v 1.5 2013/02/18 12:05:56 jlec Exp $
+
+*beast-mcmc-1.7.5 (18 Feb 2013)
+
+  18 Feb 2013; Justin Lecher <jlec@gentoo.org> +beast-mcmc-1.7.5.ebuild,
+  metadata.xml:
+  Version Bump, fixes missing package, #374277
 
   20 Mar 2010; Andrey Kislyuk <weaver@gentoo.org> -beast-mcmc-1.5.1.ebuild:
   Drop old version
