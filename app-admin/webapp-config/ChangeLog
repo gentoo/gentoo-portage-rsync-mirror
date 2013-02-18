@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.85 2013/02/09 00:18:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.86 2013/02/18 17:44:32 blueness Exp $
+
+*webapp-config-9999 (18 Feb 2013)
+
+  18 Feb 2013; Anthony G. Basile <blueness@gentoo.org>
+  +webapp-config-9999.ebuild, metadata.xml:
+  Add live ebuild, thanks Devan Franchini
 
   09 Feb 2013; Anthony G. Basile <blueness@gentoo.org>
   -webapp-config-1.50.16-r1.ebuild:

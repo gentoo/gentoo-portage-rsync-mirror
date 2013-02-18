@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/at
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.42 2012/07/07 12:31:07 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.43 2013/02/18 17:57:48 swift Exp $
+
+  18 Feb 2013; Sven Vermeulen <swift@gentoo.org> at-3.1.10.2-r1.ebuild,
+  at-3.1.10.2-r2.ebuild, at-3.1.13.ebuild, at-3.1.13-r1.ebuild:
+  Adding dependency towards selinux-at, see bug #457554
 
   07 Jul 2012; Anthony G. Basile <blueness@gentoo.org> at-3.1.13-r1.ebuild:
   Keyword ~mips
