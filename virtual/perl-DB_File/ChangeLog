@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-DB_File
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-DB_File/ChangeLog,v 1.50 2012/08/30 18:21:35 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-DB_File/ChangeLog,v 1.51 2013/02/18 18:58:34 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-DB_File-1.827.0.ebuild:
+  Stable for amd64, wrt bug #458122
 
 *perl-DB_File-1.827.0 (30 Aug 2012)
 
@@ -199,4 +202,3 @@
   +perl-DB_File-1.811.ebuild, +perl-DB_File-1.813.ebuild,
   +perl-DB_File-1.814.ebuild:
   New virtual for perl-core/DB_File
-

@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Load
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Load/ChangeLog,v 1.24 2013/02/03 19:44:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Load/ChangeLog,v 1.25 2013/02/18 19:00:29 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-Module-Load-0.240.0.ebuild:
+  Stable for amd64, wrt bug #458122
 
 *perl-Module-Load-0.240.0 (03 Feb 2013)
 
@@ -113,4 +117,3 @@
   20 Jan 2009; Torsten Veller <tove@gentoo.org> +metadata.xml,
   +perl-Module-Load-0.12.ebuild, +perl-Module-Load-0.14.ebuild:
   Adding virtuals for dual-lifed modules that come with perl-5.10
-

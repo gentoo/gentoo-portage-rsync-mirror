@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.113 2013/02/13 17:42:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.114 2013/02/18 18:55:08 aballier Exp $
 
 EAPI="4"
 
@@ -127,6 +127,7 @@ src_prepare() {
 	if [ "${PV%_p*}" != "${PV}" ] ; then # Snapshot
 		export revision=git-N-${FFMPEG_REVISION}
 	fi
+	epatch_user
 }
 
 src_configure() {

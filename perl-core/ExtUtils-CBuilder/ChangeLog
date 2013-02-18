@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/ExtUtils-CBuilder
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-CBuilder/ChangeLog,v 1.45 2012/06/24 15:39:00 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-CBuilder/ChangeLog,v 1.46 2013/02/18 18:49:05 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  ExtUtils-CBuilder-0.280.205.ebuild:
+  Stable for amd64, wrt bug #458122
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Digest-MD5
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-MD5/ChangeLog,v 1.52 2012/06/09 08:36:22 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-MD5/ChangeLog,v 1.53 2013/02/18 18:58:58 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-Digest-MD5-2.520.0.ebuild:
+  Stable for amd64, wrt bug #458122
 
 *perl-Digest-MD5-2.520.0 (09 Jun 2012)
 
@@ -223,4 +226,3 @@
   06 Feb 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +perl-Digest-MD5-2.33.ebuild, +perl-Digest-MD5-2.36.ebuild:
   New virtual for perl-core/Digest-MD5
-

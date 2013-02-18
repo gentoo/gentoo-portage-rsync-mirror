@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/PodParser
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/ChangeLog,v 1.56 2012/06/24 15:39:01 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/ChangeLog,v 1.57 2013/02/18 18:54:02 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> PodParser-1.510.0.ebuild:
+  Stable for amd64, wrt bug #458122
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

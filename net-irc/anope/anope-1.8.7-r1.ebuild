@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/anope-1.8.7-r1.ebuild,v 1.1 2013/02/18 08:25:51 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/anope-1.8.7-r1.ebuild,v 1.2 2013/02/18 18:48:48 gurligebis Exp $
 
 EAPI=4
 
@@ -66,8 +66,8 @@ src_configure() {
 }
 
 src_install() {
-	keepdir /var/{log,run}/anope /var/lib/anope/backups
-	fowners anope:anope /var/{lib,log,run}/anope /var/lib/anope/backups
+	keepdir /var/log/anope /var/lib/anope/backups
+	fowners anope:anope /var/{lib,log}/anope /var/lib/anope/backups
 
 	local baselibdir
 	baselibdir="${D}/usr/$(get_libdir)/anope"

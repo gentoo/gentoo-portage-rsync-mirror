@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-CGI
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.101 2012/11/17 19:18:59 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.102 2013/02/18 18:57:19 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-CGI-3.630.0.ebuild:
+  Stable for amd64, wrt bug #458122
 
 *perl-CGI-3.630.0 (17 Nov 2012)
 
@@ -388,4 +391,3 @@
   +perl-CGI-3.05.ebuild, +perl-CGI-3.07.ebuild, +perl-CGI-3.09.ebuild,
   +perl-CGI-3.10.ebuild, +perl-CGI-3.15.ebuild:
   New virtual for perl-core/CGI
-

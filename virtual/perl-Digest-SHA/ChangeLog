@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Digest-SHA
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.50 2013/01/25 21:18:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.51 2013/02/18 18:59:12 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-Digest-SHA-5.820.0.ebuild:
+  Stable for amd64, wrt bug #458122
 
 *perl-Digest-SHA-5.820.0 (25 Jan 2013)
 
@@ -212,4 +215,3 @@
   +perl-Digest-SHA-5.45.ebuild, +perl-Digest-SHA-5.46.ebuild,
   +perl-Digest-SHA-5.47.ebuild:
   Adding virtuals for dual-lifed modules that come with perl-5.10
-

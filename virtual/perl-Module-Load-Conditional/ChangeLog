@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Load-Conditional
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Load-Conditional/ChangeLog,v 1.30 2013/01/20 11:21:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Load-Conditional/ChangeLog,v 1.31 2013/02/18 19:00:18 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-Module-Load-Conditional-0.540.0.ebuild:
+  Stable for amd64, wrt bug #458122
 
 *perl-Module-Load-Conditional-0.540.0 (20 Jan 2013)
 
@@ -163,4 +167,3 @@
   +perl-Module-Load-Conditional-0.28.ebuild,
   +perl-Module-Load-Conditional-0.30.ebuild:
   Adding virtuals for dual-lifed modules that come with perl-5.10
-

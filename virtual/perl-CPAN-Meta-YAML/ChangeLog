@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-CPAN-Meta-YAML
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta-YAML/ChangeLog,v 1.25 2012/05/21 11:50:34 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta-YAML/ChangeLog,v 1.26 2013/02/18 18:57:57 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-CPAN-Meta-YAML-0.8.0.ebuild:
+  Stable for amd64, wrt bug #458122
 
 *perl-CPAN-Meta-YAML-0.7.0-r1 (21 May 2012)
 
@@ -118,4 +122,3 @@
   28 Jan 2011; Torsten Veller <tove@gentoo.org>
   +perl-CPAN-Meta-YAML-0.3.ebuild, +metadata.xml:
   Initial version
-

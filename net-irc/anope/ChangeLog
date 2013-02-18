@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/anope
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.22 2013/02/18 08:25:51 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.23 2013/02/18 18:48:48 gurligebis Exp $
+
+  18 Feb 2013; <gurligebis@gentoo.org> anope-1.8.7-r1.ebuild:
+  Removing keepdir on /var/run/anope, since it is gone, fixing #458158
 
 *anope-1.8.7-r1 (18 Feb 2013)
 

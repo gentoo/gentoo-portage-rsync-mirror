@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/SQL-Statement-1.402.0.ebuild,v 1.2 2013/02/18 18:31:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/SQL-Statement-1.402.0.ebuild,v 1.3 2013/02/18 18:32:49 ago Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Small SQL parser and engine"
 
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="test"
 
 RDEPEND=">=dev-perl/DBI-1.616
