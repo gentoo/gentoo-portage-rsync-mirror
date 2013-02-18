@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-1.6.16.ebuild,v 1.1 2013/02/11 00:20:20 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-1.6.16.ebuild,v 1.2 2013/02/18 05:40:15 naota Exp $
 
 EAPI=5
 inherit eutils gnome2-utils pax-utils
@@ -39,7 +39,6 @@ RDEPEND="
 	)
 	app-arch/bzip2
 	dev-libs/popt
-	dev-libs/openssl:0.9.8
 	!librsync-bundled? ( net-libs/librsync )
 	net-misc/wget
 	>=sys-devel/gcc-4.2.0

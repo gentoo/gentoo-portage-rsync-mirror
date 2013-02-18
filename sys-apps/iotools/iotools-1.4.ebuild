@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iotools/iotools-1.4.ebuild,v 1.1 2013/02/10 09:47:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iotools/iotools-1.4.ebuild,v 1.2 2013/02/18 05:48:19 vapier Exp $
 
 EAPI="4"
 
@@ -35,8 +35,10 @@ src_install() {
 	# when cross-compiling will likely fail.
 	local known_cmds="and btr bts busy_loop cmos_read cmos_write cpuid cpu_list io_read16 io_read32 io_read8 io_write16 io_write32 io_write8 mmio_dump mmio_read16 mmio_read32 mmio_read64 mmio_read8 mmio_write16 mmio_write32 mmio_write64 mmio_write8 not or pci_list pci_read16 pci_read32 pci_read8 pci_write16 pci_write32 pci_write8 rdmsr rdtsc runon shl shr smbus_quick smbus_read16 smbus_read8 smbus_readblock smbus_receive_byte smbus_send_byte smbus_write16 smbus_write8 smbus_writeblock wrmsr xor"
 	if ! tc-is-cross-compiler ; then
-		local check_cmds=$(echo $(./iotools --list-cmds 2>/dev/null | grep '^  ' | sort))
+		local check_cmds=$(echo $(./iotools --list-cmds 2>/dev/null | grep '^  ' | LC_ALL=C sort))
 		if [[ ${known_cmds} != "${check_cmds:-${known_cmds}}" ]] ; then
+			eerror "known_cmds = ${known_cmds}"
+			eerror "check_cmds = ${check_cmds}"
 			die "need to update known_cmds cache in the ebuild"
 		fi
 	fi
