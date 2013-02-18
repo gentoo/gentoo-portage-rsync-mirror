@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14480 2013/02/17 18:50:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14481 2013/02/18 13:13:13 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Eray Aslan <eras@gentoo.org> (18 Feb 2013)
+# Mask beta versions
+=mail-filter/opendkim-2.8.0_beta*
 
 # Davide Pesavento <pesa@gentoo.org> (17 Feb 2013)
 # Mask beta version for testing.

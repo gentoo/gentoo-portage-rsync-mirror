@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libcxxrt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/ChangeLog,v 1.6 2013/01/31 17:48:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/ChangeLog,v 1.7 2013/02/18 13:31:28 aballier Exp $
+
+*libcxxrt-0.0_p20130218 (18 Feb 2013)
+
+  18 Feb 2013; Alexis Ballier <aballier@gentoo.org>
+  +libcxxrt-0.0_p20130218.ebuild:
+  bump a new snapshot
 
   31 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org>
   libcxxrt-0.0_p20120911.ebuild, libcxxrt-9999.ebuild:

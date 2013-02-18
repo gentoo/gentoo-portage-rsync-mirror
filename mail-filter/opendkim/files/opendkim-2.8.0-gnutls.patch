@@ -1,0 +1,13 @@
+--- opendkim/opendkim-testmsg.c	2013-02-15 01:36:45.000000000 +0200
++++ opendkim/opendkim-testmsg.c	2013-02-18 14:40:41.411736713 +0200
+@@ -15,6 +15,10 @@
+ #include <string.h>
+ #include <unistd.h>
+ 
++#ifdef USE_GNUTLS
++# include <gnutls/gnutls.h>
++#endif /* USE_GNUTLS */
++
+ /* libopendkim includes */
+ #include <dkim.h>
+ 
