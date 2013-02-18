@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>games</herd>
+	<use>
+		<flag name="qt4">Use qt4 gui instead of gtk+</flag>
+	</use>
 </pkgmetadata>

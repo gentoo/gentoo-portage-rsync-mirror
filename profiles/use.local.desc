@@ -1969,6 +1969,7 @@ games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recom
 games-emulation/snes9x:xrandr - Enable support for the X xrandr extension
 games-emulation/vbam:link - Enable GBA linking functionality
 games-emulation/xmess:net - Add network support
+games-emulation/yabause:qt4 - Use qt4 gui instead of gtk+
 games-emulation/zsnes:debug - Enable the builtin debugger
 games-emulation/zsnes:pax_kernel - Triggers a paxmarking of the binary
 games-engines/frobtads:tads2compiler - Build TADS2 compiler

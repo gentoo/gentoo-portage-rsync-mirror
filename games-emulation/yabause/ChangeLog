@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/yabause
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/ChangeLog,v 1.35 2012/10/10 15:18:12 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/ChangeLog,v 1.36 2013/02/18 00:36:27 hasufell Exp $
+
+*yabause-0.9.12 (18 Feb 2013)
+
+  18 Feb 2013; Julian Ospald <hasufell@gentoo.org> +yabause-0.9.12.ebuild,
+  +files/yabause-0.9.12-RWX.patch, +files/yabause-0.9.12-cmake.patch,
+  metadata.xml:
+  version bump wrt #452298
 
   10 Oct 2012; Brent Baude <ranger@gentoo.org> yabause-0.9.10.ebuild:
   Marking yabause-0.9.10 ppc for bug 435688

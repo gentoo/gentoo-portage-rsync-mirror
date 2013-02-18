@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pixz/pixz-1.0.2.ebuild,v 1.2 2013/01/11 01:55:11 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pixz/pixz-1.0.2.ebuild,v 1.3 2013/02/18 01:00:53 vapier Exp $
 
 EAPI=4
 
-inherit toolchain-funcs flag-o-matic
+inherit toolchain-funcs flag-o-matic eutils
 
 DESCRIPTION="Parallel Indexed XZ compressor"
 HOMEPAGE="https://github.com/vasi/pixz"
@@ -27,6 +27,10 @@ LIB_DEPEND=">=app-arch/libarchive-2.8[static-libs(+)]
 RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )"
 DEPEND="${RDEPEND}
 	static? ( ${LIB_DEPEND} )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-lm.patch
+}
 
 src_configure() {
 	use static && append-ldflags -static
