@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/vor-0.5.5.ebuild,v 1.3 2013/02/18 11:05:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/vor-0.5.5.ebuild,v 1.4 2013/02/18 20:17:57 ago Exp $
 
 EAPI=5
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://qualdan.com/vor/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[audio,video]

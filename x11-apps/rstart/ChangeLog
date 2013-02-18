@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/rstart
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/rstart/ChangeLog,v 1.34 2011/02/14 15:48:29 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/rstart/ChangeLog,v 1.35 2013/02/18 20:02:57 chithanh Exp $
+
+*rstart-1.0.5 (18 Feb 2013)
+
+  18 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +rstart-1.0.5.ebuild:
+  Version bump.
 
   14 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -rstart-1.0.3.ebuild:
   old
@@ -127,4 +133,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +files/rstart-destdir.patch, +rstart-0.99.0.ebuild:
   Initial commit for modular X.
-

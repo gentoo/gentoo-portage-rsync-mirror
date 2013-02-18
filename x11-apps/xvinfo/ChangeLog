@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xvinfo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.53 2012/05/15 14:13:16 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.54 2013/02/18 20:02:40 chithanh Exp $
+
+*xvinfo-1.1.2 (18 Feb 2013)
+
+  18 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xvinfo-1.1.2.ebuild:
+  Version bump.
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> xvinfo-1.1.1.ebuild:
   keyword ~amd64-fbsd
@@ -174,4 +180,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +xvinfo-0.99.0.ebuild:
   Initial commit for modular X.
-

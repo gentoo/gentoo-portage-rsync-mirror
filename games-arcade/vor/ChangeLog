@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/vor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/ChangeLog,v 1.11 2013/02/18 11:05:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/vor/ChangeLog,v 1.12 2013/02/18 20:17:57 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> vor-0.5.5.ebuild:
+  Stable for ppc, wrt bug #458050
 
   18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> vor-0.5.5.ebuild:
   Stable for x86, wrt bug #458050

@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/sessreg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.87 2012/05/15 14:16:11 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.88 2013/02/18 20:03:14 chithanh Exp $
+
+*sessreg-1.0.8 (18 Feb 2013)
+
+  18 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +sessreg-1.0.8.ebuild, -sessreg-1.0.6.ebuild:
+  Version bump.
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> sessreg-1.0.7.ebuild:
   keyword ~amd64-fbsd
@@ -309,4 +315,3 @@
   20 Oct 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml,
   +sessreg-0.99.1.ebuild:
   New package for 7.0 RC1.
-
