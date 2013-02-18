@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.9.ebuild,v 1.6 2013/02/15 22:01:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.9.ebuild,v 1.7 2013/02/18 21:01:30 blueness Exp $
 
 EAPI="4"
 
@@ -130,6 +130,7 @@ use_flag_config() {
 
 src_configure() {
 	tc-export CC
+	tc-export AR
 
 	if use savedconfig; then
 		restore_config config/.config
@@ -147,10 +148,7 @@ src_configure() {
 
 src_compile() {
 	default
-	if use doc; then
-		emake docs
-		mv www README
-	fi
+	use doc && emake docs
 }
 
 src_install() {

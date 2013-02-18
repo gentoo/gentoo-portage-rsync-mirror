@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-13.1.ebuild,v 1.2 2013/02/18 21:08:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-13.2_beta3.ebuild,v 1.1 2013/02/18 21:08:54 chithanh Exp $
 
 EAPI=5
 
@@ -11,10 +11,11 @@ HOMEPAGE="http://www.amd.com"
 MY_V=( $(get_version_components) )
 #RUN="${WORKDIR}/amd-driver-installer-9.00-x86.x86_64.run"
 SLOT="1"
+[[ "${MY_V[2]}" =~  beta.* ]] && BETADIR="beta/"
 if [[ legacy != ${SLOT} ]]; then
-	DRIVERS_URI="http://www2.ati.com/drivers/linux/amd-driver-installer-catalyst-${PV}-linux-x86.x86_64.zip"
+	DRIVERS_URI="http://www2.ati.com/drivers/${BETADIR}amd-driver-installer-catalyst-${PV/_beta/-beta}-linux-x86.x86_64.zip"
 else
-	DRIVERS_URI="http://www2.ati.com/drivers/legacy/amd-driver-installer-catalyst-$(get_version_component_range 1-2)-legacy-linux-x86.x86_64.zip"
+	DRIVERS_URI="http://www2.ati.com/drivers/legacy/amd-driver-installer-catalyst-$(get_version_component_range 1-2)-$(get_version_component_range 3)-legacy-linux-x86.x86_64.zip"
 fi
 XVBA_SDK_URI="http://developer.amd.com/wordpress/media/2012/10/xvba-sdk-0.74-404001.tar.gz"
 SRC_URI="${DRIVERS_URI} ${XVBA_SDK_URI}"

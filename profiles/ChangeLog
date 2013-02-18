@@ -1,10 +1,18 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7505 2013/02/18 13:13:13 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7507 2013/02/18 21:15:42 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  updates/1Q-2013:
+  Move ati-drivers-12.6_beta_pre897 to legacy slot
+
+  18 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Remove ati-drivers-12.4 mask as the package has been dropped.
 
   18 Feb 2013; Eray Aslan <eras@gentoo.org> package.mask:
   Mask mail-filter/opendkim-2.8.0_beta versions for testing.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.21.0.ebuild,v 1.3 2013/02/15 18:24:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.21.0.ebuild,v 1.5 2013/02/18 21:30:06 vapier Exp $
 
 # See `man savedconfig.eclass` for info on how to use USE=savedconfig.
 
@@ -22,7 +22,6 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 
-# USE=syslog simply satisfies sys-apps/busybox[syslog] in virtual/logger, bug #444718
 IUSE="ipv6 livecd make-symlinks math mdev -pam selinux sep-usr +static syslog systemd"
 RESTRICT="test"
 
@@ -35,16 +34,20 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 busybox_config_option() {
-	case $1 in
-	y) sed -i -e "s:.*\<CONFIG_$2\>.*set:CONFIG_$2=y:g" .config;;
-	n) sed -i -e "s:CONFIG_$2=y:# CONFIG_$2 is not set:g" .config;;
-	*) use $1 \
-	       && busybox_config_option y $2 \
-	       || busybox_config_option n $2
-	   return 0
-	   ;;
-	esac
-	einfo $(grep "CONFIG_$2[= ]" .config || echo Could not find CONFIG_$2 ...)
+	local flag=$1 ; shift
+	if [[ ${flag} != [yn] ]] ; then
+		busybox_config_option $(usex ${flag} y n) "$@"
+		return
+	fi
+	while [[ $# -gt 0 ]] ; do
+		if [[ ${flag} == "y" ]] ; then
+			sed -i -e "s:.*\<CONFIG_$1\>.*set:CONFIG_$1=y:g" .config
+		else
+			sed -i -e "s:CONFIG_$1=y:# CONFIG_$1 is not set:g" .config
+		fi
+		einfo $(grep "CONFIG_$1[= ]" .config || echo Could not find CONFIG_$1 ...)
+		shift
+	done
 }
 
 busybox_config_enabled() {
@@ -58,7 +61,7 @@ src_prepare() {
 
 	# patches go here!
 	epatch "${FILESDIR}"/${PN}-1.19.0-bb.patch
-	#epatch "${FILESDIR}"/${P}-*.patch
+	epatch "${FILESDIR}"/${P}-*.patch
 	cp "${FILESDIR}"/ginit.c init/ || die
 
 	# flag cleanup
@@ -126,6 +129,7 @@ src_configure() {
 	fi
 	busybox_config_option $(usex static n pam) PAM
 	busybox_config_option static STATIC
+	busybox_config_option syslog {K,SYS}LOGD LOGGER
 	busybox_config_option systemd FEATURE_SYSTEMD
 	busybox_config_option math FEATURE_AWK_LIBM
 

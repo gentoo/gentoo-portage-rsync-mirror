@@ -15,11 +15,9 @@
 		<flag name='modules'>Build the kernel modules</flag>
 	</use>
 	<use>
-		<flag name='pax_kernel'>
-			Enable if the user plans to run the package under a pax enabled hardened kernel
-		</flag>
+		<flag name='disable-watermark'>Do a potentially dangerous binary search and replace to disable watermark</flag>
 	</use>
 	<use>
-		<flag name='disable-watermark'>Do a potentially dangerous binary search and replace to disable watermark</flag>
+		<flag name='pax_kernel'>Enable pax kernel specific patches</flag>
 	</use>
 </pkgmetadata>
