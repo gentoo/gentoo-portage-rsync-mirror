@@ -1,6 +1,13 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.161 2013/02/02 23:01:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.162 2013/02/19 16:42:22 jlec Exp $
+
+*gajim-0.15.2-r1 (19 Feb 2013)
+
+  19 Feb 2013; Justin Lecher <jlec@gentoo.org> -gajim-0.15.2.ebuild,
+  +gajim-0.15.2-r1.ebuild, +files/gajim-0.15.2-CVE-2012-5524.patch,
+  metadata.xml:
+  Backport fix for CVE-2012-5524, #442860
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gajim-0.15.2.ebuild:
   Add ~arm, wrt bug #449220

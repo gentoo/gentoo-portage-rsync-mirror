@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libwnck
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.297 2012/12/16 09:04:08 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.298 2013/02/19 16:37:09 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libwnck-3.4.4.ebuild:
+  Stable for alpha, wrt bug #457978
 
   16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   libwnck-2.31.0.ebuild, libwnck-3.2.1.ebuild, libwnck-3.4.4.ebuild:

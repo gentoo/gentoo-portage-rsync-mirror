@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/leptonica-1.68.ebuild,v 1.8 2013/02/18 21:03:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/leptonica-1.68.ebuild,v 1.9 2013/02/19 16:35:54 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.leptonica.com/source/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 x86"
+KEYWORDS="alpha amd64 ~arm ppc ppc64 x86"
 IUSE="gif jpeg png tiff webp utils zlib static-libs"
 
 DEPEND="gif? ( media-libs/giflib )

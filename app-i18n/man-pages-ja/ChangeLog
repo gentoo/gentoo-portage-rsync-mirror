@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-ja
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.38 2013/02/19 02:34:45 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.39 2013/02/19 16:34:47 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> man-pages-ja-20111020.ebuild:
+  Stable for alpha, wrt bug #457620
 
   19 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> man-pages-ja-20111020.ebuild:
   Stable on arm, wrt bug #457620

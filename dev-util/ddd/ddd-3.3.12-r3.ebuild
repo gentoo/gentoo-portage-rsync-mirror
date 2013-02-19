@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.12-r3.ebuild,v 1.5 2013/02/18 20:58:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.12-r3.ebuild,v 1.6 2013/02/19 16:35:12 ago Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/ddd"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3 LGPL-3 FDL-1.1"
-KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="+gnuplot readline"
 
