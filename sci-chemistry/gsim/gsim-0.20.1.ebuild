@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gsim/gsim-0.20.1.ebuild,v 1.2 2012/05/21 15:08:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gsim/gsim-0.20.1.ebuild,v 1.3 2013/02/19 16:25:36 jlec Exp $
 
 EAPI=4
 
-inherit eutils qt4-r2
+inherit eutils qt4-r2 toolchain-funcs
 
 DESCRIPTION="Programm for visualisation and processing of experimental and simulated NMR spectra"
 HOMEPAGE="http://sourceforge.net/projects/gsim/"
@@ -38,7 +38,7 @@ src_prepare() {
 	INCLUDEPATH += "${EPREFIX}/usr/include/libcmatrixR3/" \
 		"${EPREFIX}/usr/include/Minuit2" \
 		"${EPREFIX}/usr/include"
-	LIBS += -lcmatrix  -lMinuit2 -lmuparser $(pkg-config --libs cblas)
+	LIBS += -lcmatrix  -lMinuit2 -lmuparser $($(tc-getPKG_CONFIG) --libs cblas)
 	EOF
 
 	use opengl && echo "CONFIG+=use_opengl" >> build.conf

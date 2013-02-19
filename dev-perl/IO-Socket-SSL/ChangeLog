@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/IO-Socket-SSL
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/ChangeLog,v 1.184 2013/02/19 05:07:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/ChangeLog,v 1.185 2013/02/19 16:30:47 tove Exp $
+
+*IO-Socket-SSL-1.840.0 (19 Feb 2013)
+
+  19 Feb 2013; Torsten Veller <tove@gentoo.org> +IO-Socket-SSL-1.840.0.ebuild:
+  Version bump
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> IO-Socket-SSL-1.830.0.ebuild:
   Add ~arm-linux keyword.

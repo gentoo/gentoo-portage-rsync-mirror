@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/psi-3.4.0-r2.ebuild,v 1.7 2012/10/19 10:21:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/psi-3.4.0-r2.ebuild,v 1.9 2013/02/19 16:31:05 jlec Exp $
 
 EAPI=4
 
-inherit autotools-utils fortran-2 multilib
+inherit autotools-utils fortran-2 multilib toolchain-funcs
 
 DESCRIPTION="Suite of ab initio quantum chemistry programs to compute various molecular properties"
 HOMEPAGE="http://www.psicode.org/"
@@ -21,6 +21,7 @@ RDEPEND="
 	virtual/lapack
 	>=sci-libs/libint-1.1.4"
 DEPEND="${RDEPEND}
+	virtual/pkgconfig
 	test? ( dev-lang/perl )"
 
 S="${WORKDIR}/${PN}${PV:0:1}"
@@ -58,8 +59,8 @@ src_configure() {
 	local myeconfargs=(
 		--with-opt="${CXXFLAGS}"
 		--datadir="${EPREFIX}"/usr/share/${PN}
-		--with-blas="$(pkg-config blas --libs)"
-		--with-lapack="$(pkg-config --libs lapack)"
+		--with-blas="$($(tc-getPKG_CONFIG) blas --libs)"
+		--with-lapack="$($(tc-getPKG_CONFIG) --libs lapack)"
 		)
 	autotools-utils_src_configure
 }

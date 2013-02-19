@@ -1,6 +1,17 @@
 # ChangeLog for sci-chemistry/psi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/ChangeLog,v 1.21 2012/10/19 10:21:22 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/ChangeLog,v 1.23 2013/02/19 16:31:05 jlec Exp $
+
+  19 Feb 2013; Justin Lecher <jlec@gentoo.org> psi-3.4.0-r2.ebuild:
+  Add missing dep on virtual/pkgconfig
+
+  19 Feb 2013; Justin Lecher <jlec@gentoo.org>
+  -files/psi-3.3.0-parallel-make.patch, psi-3.4.0-r2.ebuild,
+  -files/3.3.0-gcc-4.3.patch, -files/add-libint-error-message.patch,
+  -files/dont-build-libint.patch, -files/try-more-compilers.patch,
+  -files/try-pthread-for-blas-lapack.patch, metadata.xml:
+  Use tc-getPKG_CONFIG from toolchain-funcs.eclass instead of plain pkg-config;
+  drop old patches
 
   19 Oct 2012; Justin Lecher <jlec@gentoo.org> psi-3.4.0-r2.ebuild,
   metadata.xml:
