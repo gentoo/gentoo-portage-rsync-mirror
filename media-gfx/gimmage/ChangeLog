@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimmage
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/ChangeLog,v 1.17 2012/05/05 07:00:25 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/ChangeLog,v 1.18 2013/02/19 18:45:27 dirtyepic Exp $
+
+  19 Feb 2013; Ryan Hill <dirtyepic@gentoo.org> gimmage-0.2.3.ebuild,
+  +files/gimmage-0.2.3-gcc47.patch:
+  Fix build with GCC 4.7 (bug #422453).
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gimmage-0.2.3.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

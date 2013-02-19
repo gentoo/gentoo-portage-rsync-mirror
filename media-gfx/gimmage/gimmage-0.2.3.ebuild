@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/gimmage-0.2.3.ebuild,v 1.11 2012/05/05 07:00:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/gimmage-0.2.3.ebuild,v 1.12 2013/02/19 18:45:27 dirtyepic Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -25,7 +25,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-as-needed.patch \
-		"${FILESDIR}"/${P}-desktop-entry.patch
+		"${FILESDIR}"/${P}-desktop-entry.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
 	eautoreconf
 }
 
