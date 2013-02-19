@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hpc/hpc-0.6.0.0.ebuild,v 1.1 2012/12/27 21:05:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hpc/hpc-0.6.0.0.ebuild,v 1.2 2013/02/19 21:47:57 slyfox Exp $
 
 EAPI=4
 
@@ -22,4 +22,4 @@ RDEPEND=">=dev-lang/ghc-6.10.1"
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.6"
 
-CABAL_CORE_LIB_GHC_PV="7.6.1"
+CABAL_CORE_LIB_GHC_PV="7.6.1 7.6.2"
