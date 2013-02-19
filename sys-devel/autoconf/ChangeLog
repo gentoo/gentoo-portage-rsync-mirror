@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.182 2013/01/28 14:34:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.183 2013/02/19 04:45:38 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> autoconf-2.69.ebuild,
+  autoconf-9999.ebuild:
+  Add ~arm-linux + ~x86-linux keywords.
 
   28 Jan 2013; Alexis Ballier <aballier@gentoo.org> autoconf-2.13.ebuild:
   Use GNU awk and GNU m4 on userland_BSD, bug #453798 by Yuta SATOH

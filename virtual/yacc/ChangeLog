@@ -1,6 +1,9 @@
 # ChangeLog for virtual/yacc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/yacc/ChangeLog,v 1.7 2012/09/26 21:40:16 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/yacc/ChangeLog,v 1.8 2013/02/19 04:58:05 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> yacc-0.ebuild:
+  Add ~arm-linux keyword.
 
   26 Sep 2012; Tim Harder <radhermit@gentoo.org> yacc-0.ebuild:
   Add byacc to the list.
@@ -25,4 +28,3 @@
   11 Aug 2011; Mike Frysinger <vapier@gentoo.org> +yacc-0.ebuild,
   +metadata.xml:
   Initial yacc virtual.
-

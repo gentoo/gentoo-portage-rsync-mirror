@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SSLeay
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.101 2013/01/19 20:30:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.102 2013/02/19 04:59:09 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> Net-SSLeay-1.520.0.ebuild:
+  Add ~arm-linux keyword.
 
 *Net-SSLeay-1.520.0 (19 Jan 2013)
 

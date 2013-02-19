@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.122 2012/12/13 20:32:46 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.123 2013/02/19 04:49:00 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> bison-2.7.ebuild:
+  Add ~arm-linux keyword.
 
   13 Dec 2012; Tim Harder <radhermit@gentoo.org> bison-2.6.5.ebuild:
   Revert to EAPI 4.

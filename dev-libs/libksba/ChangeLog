@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libksba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.142 2013/02/12 20:21:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.143 2013/02/19 04:52:56 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> libksba-1.3.0.ebuild:
+  Add ~arm-linux keyword.
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libksba-1.3.0.ebuild:
   Stable for sparc, wrt bug #456540

@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/firewalld
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.10 2012/12/17 19:33:23 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.11 2013/02/19 04:52:25 cardoe Exp $
+
+*firewalld-0.2.12 (19 Feb 2013)
+
+  19 Feb 2013; Doug Goldstein <cardoe@gentoo.org> +firewalld-0.2.12.ebuild:
+  Version bump
 
   17 Dec 2012; Michał Górny <mgorny@gentoo.org> firewalld-0.2.9-r1.ebuild:
   Bump to EAPI=5 to make Paludis happy, bug #447524.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1d-r1.ebuild,v 1.1 2013/02/08 06:29:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1d-r1.ebuild,v 1.2 2013/02/19 04:40:52 zmedico Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz
 
 LICENSE="openssl"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="bindist gmp kerberos rfc3779 sse2 static-libs test vanilla zlib"
 
 # Have the sub-libs in RDEPEND with [static-libs] since, logically,
@@ -39,7 +39,8 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	SSL_CNF_DIR="/etc/ssl"
 	sed \
-		-e "/^DIR=/s:=.*:=${SSL_CNF_DIR}:" \
+		-e "/^DIR=/s:=.*:=${EPREFIX}${SSL_CNF_DIR}:" \
+		-e "s:SSL_CMD=/usr:SSL_CMD=${EPREFIX}/usr:" \
 		"${DISTDIR}"/${PN}-c_rehash.sh.${REV} \
 		> "${WORKDIR}"/c_rehash || die #416717
 }
@@ -69,7 +70,7 @@ src_prepare() {
 		-e '/^MAKEDEPPROG/s:=.*:=$(CC):' \
 		-e $(has noman FEATURES \
 			&& echo '/^install:/s:install_docs::' \
-			|| echo '/^MANDIR=/s:=.*:=/usr/share/man:') \
+			|| echo '/^MANDIR=/s:=.*:='${EPREFIX}'/usr/share/man:') \
 		Makefile.org \
 		|| die
 	# show the actual commands in the log
@@ -82,7 +83,7 @@ src_prepare() {
 	append-flags -fno-strict-aliasing
 	append-flags $(test-flags-CC -Wa,--noexecstack)
 
-	sed -i '1s,^:$,#!/usr/bin/perl,' Configure #141906
+	sed -i '1s,^:$,#!'${EPREFIX}'/usr/bin/perl,' Configure #141906
 	./config --test-sanity || die "I AM NOT SANE"
 }
 
@@ -123,8 +124,8 @@ src_configure() {
 		$(use_ssl kerberos krb5 --with-krb5-flavor=${krb5}) \
 		$(use_ssl rfc3779) \
 		$(use_ssl zlib) \
-		--prefix=/usr \
-		--openssldir=${SSL_CNF_DIR} \
+		--prefix="${EPREFIX}"/usr \
+		--openssldir="${EPREFIX}"${SSL_CNF_DIR} \
 		--libdir=$(get_libdir) \
 		shared threads \
 		|| die
@@ -170,15 +171,15 @@ src_install() {
 	# build system: the static archives are built as PIC all the time.
 	# Only way around this would be to manually configure+compile openssl
 	# twice; once with shared lib support enabled and once without.
-	use static-libs || rm -f "${D}"/usr/lib*/lib*.a
+	use static-libs || rm -f "${ED}"/usr/lib*/lib*.a
 
 	# create the certs directory
 	dodir ${SSL_CNF_DIR}/certs
-	cp -RP certs/* "${D}"${SSL_CNF_DIR}/certs/ || die
-	rm -r "${D}"${SSL_CNF_DIR}/certs/{demo,expired}
+	cp -RP certs/* "${ED}"${SSL_CNF_DIR}/certs/ || die
+	rm -r "${ED}"${SSL_CNF_DIR}/certs/{demo,expired}
 
 	# Namespace openssl programs to prevent conflicts with other man pages
-	cd "${D}"/usr/share/man
+	cd "${ED}"/usr/share/man
 	local m d s
 	for m in $(find . -type f | xargs grep -L '#include') ; do
 		d=${m%/*} ; d=${d#./} ; m=${m##*/}
@@ -200,7 +201,7 @@ src_install() {
 	[[ -n $(find -L ${d} -type l) ]] && die "broken manpage links found :("
 
 	dodir /etc/sandbox.d #254521
-	echo 'SANDBOX_PREDICT="/dev/crypto"' > "${D}"/etc/sandbox.d/10openssl
+	echo 'SANDBOX_PREDICT="/dev/crypto"' > "${ED}"/etc/sandbox.d/10openssl
 
 	diropts -m0700
 	keepdir ${SSL_CNF_DIR}/private
@@ -212,8 +213,8 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	ebegin "Running 'c_rehash ${ROOT%/}${SSL_CNF_DIR}/certs/' to rebuild hashes #333069"
-	c_rehash "${ROOT%/}${SSL_CNF_DIR}/certs" >/dev/null
+	ebegin "Running 'c_rehash ${EROOT%/}${SSL_CNF_DIR}/certs/' to rebuild hashes #333069"
+	c_rehash "${EROOT%/}${SSL_CNF_DIR}/certs" >/dev/null
 	eend $?
 
 	has_version ${CATEGORY}/${PN}:0.9.8 && return 0
