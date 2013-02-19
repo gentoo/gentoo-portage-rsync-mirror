@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.69 2013/02/19 15:11:07 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.70 2013/02/19 22:33:07 nimiux Exp $
+
+*inspircd-2.0.10-r1 (19 Feb 2013)
+
+  19 Feb 2013; Chema Alonso <nimiux@gentoo.org> +inspircd-2.0.10-r1.ebuild,
+  metadata.xml:
+  Move to EAPI5. Add pcre, posix and tre flags wrt bug #457654
 
   19 Feb 2013; Chema Alonso <nimiux@gentoo.org>
   -files/inspircd-2.0.8-fix-path-builds.patch, -files/inspircd-2.0.8-init,

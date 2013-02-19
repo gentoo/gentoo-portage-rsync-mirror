@@ -26,8 +26,11 @@
 		<flag name="ipv6">Enable support for IP version 6</flag>
 		<flag name="ldap">Enable LDAP support</flag>
 		<flag name="mysql">Enable MySQL database backend</flag>
+		<flag name="pcre">Adds support for Perl Compatible Regular Expressions</flag>
+		<flag name="posix">Adds support for POSIX-compatible functions</flag>
 		<flag name="postgres">Enable PostgreSQL database backend</flag>
 		<flag name="sqlite">Enable Sqlite database backend</flag>
 		<flag name="ssl">Enable SSL support</flag>
+		<flag name="tre">Enable support for TRE, a lightweight, robust, and efficient POSIX compliant regexp matching library</flag>
 	</use>
 </pkgmetadata>

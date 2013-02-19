@@ -4109,9 +4109,12 @@ net-irc/inspircd:gnutls - Enable TLS support
 net-irc/inspircd:ipv6 - Enable support for IP version 6
 net-irc/inspircd:ldap - Enable LDAP support
 net-irc/inspircd:mysql - Enable MySQL database backend
+net-irc/inspircd:pcre - Adds support for Perl Compatible Regular Expressions
+net-irc/inspircd:posix - Adds support for POSIX-compatible functions
 net-irc/inspircd:postgres - Enable PostgreSQL database backend
 net-irc/inspircd:sqlite - Enable Sqlite database backend
 net-irc/inspircd:ssl - Enable SSL support
+net-irc/inspircd:tre - Enable support for TRE, a lightweight, robust, and efficient POSIX compliant regexp matching library
 net-irc/iroffer-dinoex:admin - Compile with HTTP Admin
 net-irc/iroffer-dinoex:blowfish - Compile with blowfish encryption support
 net-irc/iroffer-dinoex:chroot - Compile with chroot support
