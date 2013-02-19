@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-JSON-PP
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-JSON-PP/ChangeLog,v 1.23 2012/05/21 11:50:39 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-JSON-PP/ChangeLog,v 1.24 2013/02/18 23:21:02 zmedico Exp $
+
+  18 Feb 2013; Zac Medico <zmedico@gentoo.org> perl-JSON-PP-2.272.0-r1.ebuild:
+  Add ~arm-linux keyword.
 
 *perl-JSON-PP-2.272.0-r1 (21 May 2012)
 
@@ -94,4 +97,3 @@
   28 Jan 2011; Torsten Veller <tove@gentoo.org> +perl-JSON-PP-2.271.40.ebuild,
   +metadata.xml:
   Initial version
-

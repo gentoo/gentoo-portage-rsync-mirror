@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.110 2013/02/15 22:59:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.111 2013/02/18 23:30:32 jer Exp $
+
+  18 Feb 2013; Jeroen Roovers <jer@gentoo.org> pyxdg-0.25.ebuild:
+  Stable for HPPA (bug #457334).
 
   15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pyxdg-0.25.ebuild:
   Stable for alpha, wrt bug #457334

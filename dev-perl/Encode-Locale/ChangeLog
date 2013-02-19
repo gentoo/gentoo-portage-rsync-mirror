@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Encode-Locale
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.31 2012/09/02 16:39:32 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.32 2013/02/18 23:14:08 zmedico Exp $
+
+  18 Feb 2013; Zac Medico <zmedico@gentoo.org> Encode-Locale-1.30.0.ebuild:
+  Add ~arm-linux keyword.
 
   02 Sep 2012; Torsten Veller <tove@gentoo.org> -Encode-Locale-1.20.0.ebuild:
   Cleanup

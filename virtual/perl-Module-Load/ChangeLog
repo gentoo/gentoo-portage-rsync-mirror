@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Load
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Load/ChangeLog,v 1.26 2013/02/18 19:26:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Load/ChangeLog,v 1.27 2013/02/18 23:02:04 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-Module-Load-0.240.0.ebuild:
+  Stable for ppc64, wrt bug #458122
 
   18 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   perl-Module-Load-0.240.0.ebuild:

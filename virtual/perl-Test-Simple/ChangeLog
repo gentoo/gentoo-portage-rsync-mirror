@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Test-Simple
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.84 2012/10/16 14:34:44 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/ChangeLog,v 1.85 2013/02/18 23:23:49 zmedico Exp $
+
+  18 Feb 2013; Zac Medico <zmedico@gentoo.org>
+  perl-Test-Simple-0.980.0-r2.ebuild:
+  Add ~arm-linux keyword.
 
   16 Oct 2012; Anthony G. Basile <blueness@gentoo.org>
   perl-Test-Simple-0.980.0-r2.ebuild:
