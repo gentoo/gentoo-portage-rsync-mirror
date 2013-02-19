@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ofono
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.44 2013/02/05 17:56:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.45 2013/02/19 13:49:02 tomka Exp $
+
+  19 Feb 2013; Thomas Kahle <tomka@gentoo.org> metadata.xml:
+  Pick up for proxy maintainership
 
   05 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #260981 after talking with him

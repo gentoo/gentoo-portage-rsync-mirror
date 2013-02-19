@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/directvnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.27 2013/02/03 12:07:51 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.28 2013/02/19 13:43:17 tomka Exp $
+
+*directvnc-0.7.6-r1 (19 Feb 2013)
+*directvnc-0.7.8 (19 Feb 2013)
+
+  19 Feb 2013; Thomas Kahle <tomka@gentoo.org> +directvnc-0.7.6-r1.ebuild,
+  +directvnc-0.7.8.ebuild, +files/directvnc-0.7.6-mouse.patch,
+  +files/directvnc-0.7.8-mouse.patch, -directvnc-0.7.6.ebuild, metadata.xml:
+  bump and maintenance (proxy-commit)
 
   03 Feb 2013; Thomas Kahle <tomka@gentoo.org> metadata.xml:
   Pick up for proxy maintainership
