@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc-am
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.78 2012/05/05 09:51:53 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.79 2013/02/19 02:26:15 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> gtk-doc-am-1.18.ebuild:
+  Add ~arm-linux keyword.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gtk-doc-am-1.17.ebuild,
   gtk-doc-am-1.18.ebuild:
@@ -270,4 +273,3 @@
   24 Mar 2008; Daniel Gryniewicz <dang@gentoo.org> +gtk-doc-am-1.10.ebuild:
   Package to install just gtk-doc.m4, so that other packages needing it for
   eautreconf can dep on it
-
