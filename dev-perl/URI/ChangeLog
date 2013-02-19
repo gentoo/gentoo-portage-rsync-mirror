@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/URI
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.107 2012/09/02 07:54:07 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.108 2013/02/19 00:21:50 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> URI-1.600.0.ebuild:
+  Add ~arm-linux keyword.
 
   02 Sep 2012; Torsten Veller <tove@gentoo.org> -URI-1.55.ebuild,
   -URI-1.590.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.552 2013/02/17 09:05:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.553 2013/02/19 00:08:33 tetromino Exp $
+
+  19 Feb 2013; Alexandre Rostovtsev <tetromino@gentoo.org> glib-2.30.3.ebuild,
+  glib-2.32.4-r1.ebuild, glib-2.34.2.ebuild, glib-2.34.3.ebuild:
+  Add epatch_user (bug #453560).
 
   17 Feb 2013; Zac Medico <zmedico@gentoo.org> glib-2.34.3.ebuild:
   Fix xml catalog from prefix, and add ~arm-linux keyword.

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.3.ebuild,v 1.14 2012/10/10 07:35:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.3.ebuild,v 1.15 2013/02/19 00:08:33 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -117,6 +117,8 @@ src_prepare() {
 
 	# Fix from glib-2.31 for ppc64
 	epatch "${FILESDIR}/${PN}-2.30.3-closure-64bit-be.patch"
+
+	epatch_user
 
 	# disable pyc compiling
 	use test && python_clean_py-compile_files

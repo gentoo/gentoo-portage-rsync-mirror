@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.34.2.ebuild,v 1.1 2012/11/10 05:00:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.34.2.ebuild,v 1.2 2013/02/19 00:08:33 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -104,6 +104,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.34.0-testsuite-skip-thread4.patch"
 	# https://bugzilla.gnome.org/show_bug.cgi?id=679308
 	epatch "${FILESDIR}/${PN}-2.34.0-testsuite-skip-gdbus-auth-tests.patch"
+
+	epatch_user
 
 	# disable pyc compiling
 	use test && python_clean_py-compile_files
