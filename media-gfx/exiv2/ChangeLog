@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.105 2013/02/18 20:26:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.106 2013/02/19 21:04:50 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> exiv2-0.23-r1.ebuild:
+  Stable for arm, wrt bug #437432
 
   18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> exiv2-0.23-r1.ebuild:
   Stable for ppc, wrt bug #437432
