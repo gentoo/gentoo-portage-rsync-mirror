@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/diffutils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.77 2012/10/05 17:56:59 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.78 2013/02/19 03:06:43 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> diffutils-3.2.ebuild:
+  Add ~arm-linux keyword.
 
   05 Oct 2012; Brent Baude <ranger@gentoo.org> diffutils-3.2.ebuild:
   Marking diffutils-3.2 ppc64 for bug 431950

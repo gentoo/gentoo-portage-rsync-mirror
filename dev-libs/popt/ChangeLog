@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/popt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.100 2012/04/26 14:04:24 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.101 2013/02/19 03:05:09 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> popt-1.16-r1.ebuild:
+  Add ~arm-linux and ~x86-linux keywords.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> popt-1.16-r1.ebuild:
   keyword ~amd64-fbsd
