@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aacgain/aacgain-1.9.ebuild,v 1.1 2011/10/23 17:05:17 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aacgain/aacgain-1.9.ebuild,v 1.2 2013/02/19 06:04:55 zx2c4 Exp $
 
 EAPI=4
 
@@ -52,6 +52,7 @@ src_prepare() {
 		-e 's:^\(autoreconf\|pushd\|popd\):# \1:g' aacgain/linux/prepare.sh
 
 	epatch ${PN}/mp4v2.patch
+	epatch "${FILESDIR}"/${P}-patch-dotdot.patch
 
 	cd "${S}/${PN}/linux"
 	sh prepare.sh || die "prepare failed!"
