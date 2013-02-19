@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.2.0-r1.ebuild,v 1.4 2013/02/04 05:52:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.2.0-r1.ebuild,v 1.5 2013/02/19 19:18:02 idella4 Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -36,8 +36,28 @@ pkg_setup() {
 	python_pkg_setup
 }
 
-src_prepare() {
+retar-externals() {
+	# Purely to unclutter src_prepare
+	local set="grub-0.97.tar.gz lwip-1.3.0.tar.gz newlib-1.16.0.tar.gz zlib-1.2.3.tar.gz"
 
+	# epatch can't patch in $WORKDIR, requires a sed; Bug #455194. Patchable, but sed informative
+	sed -e s':AR=${AR-"ar rc"}:AR=${AR-"ar"}:' \
+		-i "${WORKDIR}"/zlib-1.2.3/configure
+	sed -e 's:^AR=ar rc:AR=ar:' \
+		-e s':$(AR) $@:$(AR) rc $@:' \
+		-i "${WORKDIR}"/zlib-1.2.3/{Makefile,Makefile.in}
+	einfo "zlib Makefile edited"
+
+	cd "${WORKDIR}"
+	tar czp zlib-1.2.3 -f zlib-1.2.3.tar.gz
+	tar czp grub-0.97 -f grub-0.97.tar.gz
+	tar czp lwip -f lwip-1.3.0.tar.gz
+	tar czp newlib-1.16.0 -f newlib-1.16.0.tar.gz
+	mv $set "${S}"/stubdom/
+	einfo "tarballs moved to source"
+}
+
+src_prepare() {
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
 		einfo "User wants their own CFLAGS - removing defaults"
@@ -52,16 +72,7 @@ src_prepare() {
 	fi
 
 	#Substitute for internal downloading
-	cp $DISTDIR/zlib-1.2.3.tar.gz \
-		$DISTDIR/pciutils-2.2.9.tar.bz2 \
-		$DISTDIR/lwip-1.3.0.tar.gz \
-		$DISTDIR/newlib-1.16.0.tar.gz \
-		$DISTDIR/grub-0.97.tar.gz \
-		./stubdom/ || die "files not coped to stubdom"
-	# Note: tip to patch grub gentoo style, for review soon. This is around 1/3.
-#	cp "${WORKDIR}"/patch/{00[3-6]_all_grub*,010_all_grub*,01[3-9]_all_grub*,0[6-7]0_all_grub*} \
-#		"${WORKDIR}"/patch/{110_all_grub*,300_all_grub*} \
-#		 stubdom/grub.patches/ || die
+	cp $DISTDIR/pciutils-2.2.9.tar.bz2 ./stubdom/ || die "pciutils not coped to stubdom"
 	einfo "files copied to stubdom"
 
 	# Patch the unmergeable newlib, fix most of the leftover gcc QA issues
@@ -78,6 +89,10 @@ src_prepare() {
 
 	#Sec patch
 	epatch "${FILESDIR}"/${PN/-pvgrub/}-4-CVE-2012-4544-XSA-25.patch
+
+	#Substitute for internal downloading. pciutils copied only due to the only .bz2
+	cp $DISTDIR/pciutils-2.2.9.tar.bz2 ./stubdom/ || die "pciutils not copied to stubdom"
+	retar-externals || die "re-tar procedure failed"
 }
 
 src_compile() {
@@ -88,16 +103,17 @@ src_compile() {
 
 	emake CC="$(tc-getCC)" LD="$(tc-getLD)" AR="$(tc-getAR)" -C tools/include
 
-	if use x86; then
-		emake CC="$(tc-getCC)" LD="$(tc-getLD)" AR="$(tc-getAR)" \
-		XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub
 	# TODO; fix those -j1
+	if use x86; then
+		emake -j1 CC="$(tc-getCC)" LD="$(tc-getLD)" AR="$(tc-getAR)" \
+		XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub
 	elif use amd64; then
-		emake -j1 CC="$(tc-getCC)" LD="$(tc-getLD)" \
+		emake -j1 CC="$(tc-getCC)" LD="$(tc-getLD)" AR="$(tc-getAR)" \
 		XEN_TARGET_ARCH="x86_64" -C stubdom pv-grub
 		if use multilib; then
 			multilib_toolchain_setup x86
-			emake -j1 XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub
+			emake -j1 CC="$(tc-getCC)" AR="$(tc-getAR)" \
+			XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub
 		fi
 	fi
 }

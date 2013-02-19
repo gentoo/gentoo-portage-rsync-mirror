@@ -41,12 +41,11 @@ diff -ur xen-4.2.0.orig/stubdom/Makefile xen-4.2.0/stubdom/Makefile
  
  GNU_TARGET_ARCH:=$(XEN_TARGET_ARCH)
  ifeq ($(XEN_TARGET_ARCH),x86_32)
-@@ -95,12 +95,13 @@
+@@ -95,12 +95,12 @@
  ##############
  
  newlib-$(NEWLIB_VERSION).tar.gz:
 -	$(WGET) $(NEWLIB_URL)/$@
-+#	$(WGET) $(NEWLIB_URL)/$@
  
  newlib-$(NEWLIB_VERSION): newlib-$(NEWLIB_VERSION).tar.gz
  	tar xzf $<
@@ -56,7 +55,7 @@ diff -ur xen-4.2.0.orig/stubdom/Makefile xen-4.2.0/stubdom/Makefile
  	patch -d $@ -p1 < newlib-stdint-size_max-fix-from-1.17.0.patch
  	find $@ -type f | xargs perl -i.bak \
  		-pe 's/\b_(tzname|daylight|timezone)\b/$$1/g'
-@@ -112,7 +113,7 @@
+@@ -112,7 +112,7 @@
  $(NEWLIB_STAMPFILE): mk-headers-$(XEN_TARGET_ARCH) newlib-$(NEWLIB_VERSION)
  	mkdir -p newlib-$(XEN_TARGET_ARCH)
  	( cd newlib-$(XEN_TARGET_ARCH) && \
@@ -65,39 +64,44 @@ diff -ur xen-4.2.0.orig/stubdom/Makefile xen-4.2.0/stubdom/Makefile
  	  $(CROSS_MAKE) && \
  	  $(CROSS_MAKE) install )
  
-@@ -121,7 +122,7 @@
+@@ -121,7 +121,6 @@
  ############
  
  zlib-$(ZLIB_VERSION).tar.gz:
 -	$(WGET) $(ZLIB_URL)/$@
-+#	$(WGET) $(ZLIB_URL)/$@
  
  zlib-$(XEN_TARGET_ARCH): zlib-$(ZLIB_VERSION).tar.gz 
  	tar xzf $<
-@@ -141,7 +142,7 @@
+@@ -132,7 +132,7 @@
+ cross-zlib: $(ZLIB_STAMPFILE)
+ $(ZLIB_STAMPFILE): zlib-$(XEN_TARGET_ARCH) $(NEWLIB_STAMPFILE)
+ 	( cd $< && \
+-	  CFLAGS="$(TARGET_CPPFLAGS) $(TARGET_CFLAGS)" CC=$(CC) ./configure --prefix=$(CROSS_PREFIX)/$(GNU_TARGET_ARCH)-xen-elf && \
++	  CFLAGS="$(TARGET_CPPFLAGS) $(TARGET_CFLAGS)" CC="$(CC)" ./configure --prefix=$(CROSS_PREFIX)/$(GNU_TARGET_ARCH)-xen-elf && \
+ 	  $(CROSS_MAKE) libz.a && \
+ 	  $(CROSS_MAKE) install )
+ 
+@@ -141,7 +142,6 @@
  ##############
  
  pciutils-$(LIBPCI_VERSION).tar.bz2:
 -	$(WGET) $(LIBPCI_URL)/$@
-+#	$(WGET) $(LIBPCI_URL)/$@
  
  pciutils-$(XEN_TARGET_ARCH): pciutils-$(LIBPCI_VERSION).tar.bz2
  	tar xjf $<
-@@ -169,7 +170,7 @@
+@@ -169,7 +170,6 @@
  ######
  
  lwip-$(LWIP_VERSION).tar.gz:
 -	$(WGET) $(LWIP_URL)/$@
-+#	$(WGET) $(LWIP_URL)/$@
  
  lwip-$(XEN_TARGET_ARCH): lwip-$(LWIP_VERSION).tar.gz
  	tar xzf $<
-@@ -325,7 +326,7 @@
+@@ -325,7 +326,6 @@
  ######
  
  grub-$(GRUB_VERSION).tar.gz:
 -	$(WGET) $(GRUB_URL)/$@
-+#$(WGET) $(GRUB_URL)/$@
  
  grub-upstream: grub-$(GRUB_VERSION).tar.gz
  	tar xzf $<

@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/bashmark
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bashmark/ChangeLog,v 1.13 2010/05/22 11:49:44 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bashmark/ChangeLog,v 1.14 2013/02/19 19:15:42 dirtyepic Exp $
+
+  19 Feb 2013; Ryan Hill <dirtyepic@gentoo.org> bashmark-0.6.2.ebuild,
+  +files/bashmark-0.6.2-gcc47.patch:
+  Fix build with GCC 4.7 (bug #422577).
 
   22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove genstef from metadata.xml (#66339)
