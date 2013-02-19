@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.120 2013/02/18 23:58:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.121 2013/02/19 00:50:56 tetromino Exp $
+
+*dbus-glib-0.100.1 (19 Feb 2013)
+
+  19 Feb 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +dbus-glib-0.100.1.ebuild:
+  Bump, fixes authentication bypass (CVE-2013-0292, bug #457792).
 
   18 Feb 2013; Jeroen Roovers <jer@gentoo.org> dbus-glib-0.100-r2.ebuild:
   Stable for HPPA (bug #456972).
