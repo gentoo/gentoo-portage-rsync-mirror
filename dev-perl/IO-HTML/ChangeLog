@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-HTML
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-HTML/ChangeLog,v 1.7 2012/12/01 18:52:42 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-HTML/ChangeLog,v 1.8 2013/02/19 03:48:19 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> IO-HTML-0.40.0.ebuild:
+  Add ~arm-linux + ~x86-linux keywords.
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> IO-HTML-0.40.0.ebuild:
   Add ~alpha/~ia64/~m68k/~s390/~sh/~sparc wrt #437532

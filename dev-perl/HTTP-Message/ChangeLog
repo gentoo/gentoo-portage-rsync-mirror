@@ -1,9 +1,10 @@
 # ChangeLog for dev-perl/HTTP-Message
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/ChangeLog,v 1.39 2013/02/19 02:02:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Message/ChangeLog,v 1.40 2013/02/19 03:50:35 zmedico Exp $
 
-  19 Feb 2013; Zac Medico <zmedico@gentoo.org> HTTP-Message-6.30.0.ebuild:
-  Add ~arm-linux keyword.
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> HTTP-Message-6.30.0.ebuild,
+  HTTP-Message-6.60.0.ebuild:
+  Add ~arm-linux + ~x86-linux keywords.
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> HTTP-Message-6.40.0.ebuild,
   HTTP-Message-6.60.0.ebuild:

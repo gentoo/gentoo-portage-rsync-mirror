@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/einstein-2.0.ebuild,v 1.9 2010/09/01 20:48:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/einstein-2.0.ebuild,v 1.10 2013/02/19 03:44:38 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
 
 DESCRIPTION="A puzzle game inspired by Albert Einstein"
-HOMEPAGE="http://games.flowix.com/en/"
-SRC_URI="http://games.flowix.com/files/einstein/${P}-src.tar.gz
+HOMEPAGE="https://freecode.com/projects/einsteinpuzzle"
+SRC_URI="mirror://gentoo/${P}-src.tar.gz
 	mirror://gentoo/${PN}.png"
 
 LICENSE="GPL-2"
@@ -26,16 +26,16 @@ src_prepare() {
 		-e "s:\$(PREFIX)/share/einstein:${GAMES_DATADIR}/${PN}:" \
 		-e "s:\$(PREFIX)/bin:${GAMES_BINDIR}:" \
 		-e "s/\(OPTIMIZE=[^#]*\)/\0 ${CXXFLAGS}/" Makefile \
-		|| die "sed Makefile failed"
+		|| die
 	sed -i \
 		-e "s:PREFIX L\"/share/einstein:L\"${GAMES_DATADIR}/${PN}:" main.cpp \
-		|| die "sed main.cpp failed"
+		|| die
 }
 
 src_install() {
-	dogamesbin "${PN}" || die "dogamesbin failed"
+	dogamesbin "${PN}" || die
 	insinto "${GAMES_DATADIR}/${PN}/res"
-	doins einstein.res || die "doins failed"
+	doins einstein.res || die
 	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry ${PN} "Einstein Puzzle"
 	prepgamesdirs

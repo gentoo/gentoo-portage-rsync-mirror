@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/einstein
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/ChangeLog,v 1.9 2009/11/12 21:28:24 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/ChangeLog,v 1.10 2013/02/19 03:44:38 mr_bones_ Exp $
+
+  19 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> einstein-2.0.ebuild:
+  metadata update for bug #457880; tidy
 
   12 Nov 2009; Michael Sterrett <mr_bones_@gentoo.org> einstein-2.0.ebuild:
   EAPI=2
@@ -34,4 +37,3 @@
   19 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +einstein-2.0.ebuild:
   initial commit - ebuild from Philipp Edelmann via bug #126662
-
