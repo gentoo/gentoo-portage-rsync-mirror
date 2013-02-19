@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/ExtUtils-CBuilder
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-CBuilder/ChangeLog,v 1.50 2013/02/19 02:17:22 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-CBuilder/ChangeLog,v 1.51 2013/02/19 09:38:14 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  ExtUtils-CBuilder-0.280.205.ebuild:
+  Stable for hppa, wrt bug #458122
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org>
   ExtUtils-CBuilder-0.280.205.ebuild:

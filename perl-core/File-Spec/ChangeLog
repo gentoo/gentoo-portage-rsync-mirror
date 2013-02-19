@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/File-Spec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.90 2013/02/18 23:56:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.91 2013/02/19 09:56:49 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> File-Spec-3.400.0.ebuild:
+  Stable for hppa, wrt bug #458122
 
   18 Feb 2013; Zac Medico <zmedico@gentoo.org> File-Spec-3.400.0.ebuild:
   Add ~arm-linux keyword.

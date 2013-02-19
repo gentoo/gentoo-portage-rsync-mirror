@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Module-Load
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load/ChangeLog,v 1.24 2013/02/18 23:55:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load/ChangeLog,v 1.25 2013/02/19 09:55:24 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> Module-Load-0.240.0.ebuild:
+  Stable for hppa, wrt bug #458122
 
   18 Feb 2013; Zac Medico <zmedico@gentoo.org> Module-Load-0.240.0.ebuild:
   Add ~arm-linux keyword.

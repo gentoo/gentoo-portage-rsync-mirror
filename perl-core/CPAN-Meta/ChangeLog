@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/CPAN-Meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta/ChangeLog,v 1.35 2013/02/19 02:30:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta/ChangeLog,v 1.36 2013/02/19 09:34:42 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> CPAN-Meta-2.120.921.ebuild:
+  Stable for hppa, wrt bug #458122
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> CPAN-Meta-2.120.921.ebuild:
   Add ~arm-linux keyword.
