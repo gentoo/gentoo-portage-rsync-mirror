@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alsa-lib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.334 2012/09/09 08:32:27 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.335 2013/02/19 14:15:48 mgorny Exp $
+
+*alsa-lib-1.0.26-r1 (19 Feb 2013)
+
+  19 Feb 2013; Michał Górny <mgorny@gentoo.org> +alsa-lib-1.0.26-r1.ebuild:
+  Migrate to python-single-r1.
 
   09 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> alsa-lib-1.0.26.ebuild:
   Punt base.eclass from inherit because it was never used and PATCHES was
