@@ -1,6 +1,9 @@
 # ChangeLog for virtual/mta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mta/ChangeLog,v 1.9 2013/02/13 09:37:42 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mta/ChangeLog,v 1.10 2013/02/19 02:55:17 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> mta-1.ebuild:
+  Add ~arm-linux keyword.
 
 *mta-1 (13 Feb 2013)
 

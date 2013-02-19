@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-lib-bin-symlink
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lib-bin-symlink/ChangeLog,v 1.4 2013/01/14 13:19:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lib-bin-symlink/ChangeLog,v 1.5 2013/02/19 02:50:40 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org>
+  eselect-lib-bin-symlink-0.1.1.ebuild, eselect-lib-bin-symlink-9999.ebuild:
+  Add ~arm-linux keywords.
 
 *eselect-lib-bin-symlink-0.1.1 (14 Jan 2013)
 

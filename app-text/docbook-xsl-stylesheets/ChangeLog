@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-xsl-stylesheets
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.124 2013/01/18 12:45:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.125 2013/02/19 02:45:45 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org>
+  docbook-xsl-stylesheets-1.78.0.ebuild:
+  Add ~arm-linux keyword.
 
 *docbook-xsl-stylesheets-1.78.0 (18 Jan 2013)
 

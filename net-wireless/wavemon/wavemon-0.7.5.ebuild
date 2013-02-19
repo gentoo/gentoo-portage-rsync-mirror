@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.7.5.ebuild,v 1.10 2012/12/30 14:23:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.7.5.ebuild,v 1.11 2013/02/19 02:37:10 pinkbyte Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="http://eden-feed.erg.abdn.ac.uk/wavemon/stable-releases/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ppc sparc x86"
+KEYWORDS="amd64 arm hppa ppc sparc x86"
 
 IUSE="caps"
 DEPEND="sys-libs/ncurses

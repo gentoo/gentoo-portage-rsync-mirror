@@ -1,10 +1,12 @@
 # ChangeLog for app-admin/eselect-cdparanoia
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cdparanoia/ChangeLog,v 1.1 2013/01/15 20:53:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cdparanoia/ChangeLog,v 1.2 2013/02/19 02:51:20 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> eselect-cdparanoia-0.1.ebuild:
+  Add ~arm-linux keyword.
 
 *eselect-cdparanoia-0.1 (15 Jan 2013)
 
   15 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
   +files/cdparanoia.eselect-0.1, +eselect-cdparanoia-0.1.ebuild:
   Initial commit.
-
