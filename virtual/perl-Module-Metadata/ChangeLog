@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Metadata
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Metadata/ChangeLog,v 1.30 2013/02/19 01:57:16 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Metadata/ChangeLog,v 1.31 2013/02/19 10:17:23 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-Module-Metadata-1.0.11.ebuild:
+  Stable for hppa, wrt bug #458122
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org>
   perl-Module-Metadata-1.0.11.ebuild:

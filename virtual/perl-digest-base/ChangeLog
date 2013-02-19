@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-digest-base
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-digest-base/ChangeLog,v 1.46 2013/02/19 00:13:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-digest-base/ChangeLog,v 1.47 2013/02/19 10:21:59 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-digest-base-1.170.0-r1.ebuild:
+  Stable for hppa, wrt bug #458122
 
   19 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   perl-digest-base-1.170.0-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Test-Harness
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.76 2013/02/18 23:46:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.77 2013/02/19 10:04:11 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> Test-Harness-3.260.0.ebuild:
+  Stable for hppa, wrt bug #458122
 
   18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> Test-Harness-3.260.0.ebuild:
   Stable for ppc, wrt bug #458122

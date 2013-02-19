@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/version
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.61 2013/02/18 23:50:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.62 2013/02/19 10:05:58 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> version-0.990.100.ebuild:
+  Stable for hppa, wrt bug #458122
 
   18 Feb 2013; Zac Medico <zmedico@gentoo.org> version-0.990.100.ebuild:
   Add ~arm-linux keyword.

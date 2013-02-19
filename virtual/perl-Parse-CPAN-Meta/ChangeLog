@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Parse-CPAN-Meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Parse-CPAN-Meta/ChangeLog,v 1.42 2013/02/19 01:56:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Parse-CPAN-Meta/ChangeLog,v 1.43 2013/02/19 10:17:45 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-Parse-CPAN-Meta-1.440.400.ebuild:
+  Stable for hppa, wrt bug #458122
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org>
   perl-Parse-CPAN-Meta-1.440.400.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-version
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.65 2013/02/19 00:22:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.66 2013/02/19 10:22:23 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-version-0.990.100.ebuild:
+  Stable for hppa, wrt bug #458122
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> perl-version-0.990.100.ebuild:
   Add ~arm-linux keyword.

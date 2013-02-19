@@ -1,6 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Test
-KEYWORDS=~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sparc x86
+KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sparc x86
 RDEPEND=~perl-core/Test-1.260.0
 SLOT=0
-_md5_=a54f965ebe5e87b4930eb56ad9455fe3
+_md5_=78d9b1e9fcc82941b911f6c0411b510f

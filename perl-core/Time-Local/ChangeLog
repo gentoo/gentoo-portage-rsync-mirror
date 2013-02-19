@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Time-Local
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.71 2013/02/19 00:19:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.72 2013/02/19 10:04:53 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> Time-Local-1.230.0.ebuild:
+  Stable for hppa, wrt bug #458122
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> Time-Local-1.230.0.ebuild:
   Add ~arm-linux keyword.

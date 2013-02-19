@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Pod-Simple
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Simple/ChangeLog,v 1.57 2013/02/19 00:01:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Simple/ChangeLog,v 1.58 2013/02/19 10:18:08 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-Pod-Simple-3.230.0.ebuild:
+  Stable for hppa, wrt bug #458122
 
   18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-Pod-Simple-3.230.0.ebuild:
   Stable for ppc, wrt bug #458122

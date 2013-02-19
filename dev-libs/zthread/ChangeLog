@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/zthread
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.32 2012/06/23 11:48:56 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.33 2013/02/19 10:13:10 dev-zero Exp $
+
+*zthread-2.3.2-r3 (19 Feb 2013)
+
+  19 Feb 2013; Tiziano Müller <dev-zero@gentoo.org>
+  +files/zthread-2.3.2-automake-r2.patch, +zthread-2.3.2-r3.ebuild:
+  Fix bug #269988, use default's and prune_libtool_files, update the automake
+  patch to not add LDFLAGS to LIBADD.
 
   23 Jun 2012; Kacper Kowalik <xarthisius.kk@gmail.com>
   +files/zthread-2.3.2-gcc47.patch, zthread-2.3.2-r2.ebuild:
