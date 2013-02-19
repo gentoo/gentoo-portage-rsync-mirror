@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opengtl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/ChangeLog,v 1.14 2012/12/04 15:39:18 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/ChangeLog,v 1.15 2013/02/19 18:05:42 chithanh Exp $
+
+  19 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  opengtl-0.9.17.ebuild:
+  Keyword ~arm
 
   04 Dec 2012; <ago@gentoo.org> opengtl-0.9.17.ebuild:
   Stable for x86, wrt bug #443540

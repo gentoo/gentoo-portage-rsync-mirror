@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.0.4.ebuild,v 1.4 2013/02/17 22:36:44 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.0.4.ebuild,v 1.5 2013/02/19 18:09:24 mattst88 Exp $
 
 EAPI=4
 
@@ -38,7 +38,8 @@ src_prepare() {
 }
 
 src_configure() {
-	myconf="$(use_enable static-libs static)"
+	myconf="$(use_enable static-libs static)
+		--disable-documentation"
 	if tc-is-cross-compiler ; then
 		myconf+=" --disable-scanner"
 	fi

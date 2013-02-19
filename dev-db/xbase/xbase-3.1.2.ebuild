@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/xbase-3.1.2.ebuild,v 1.8 2012/08/15 11:00:48 blueness Exp ${PN}/${PN}-2.0.0-r1.ebuild,v 1.6 2012/06/29 14:42:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/xbase-3.1.2.ebuild,v 1.9 2013/02/19 18:02:59 chithanh Exp ${PN}/${PN}-2.0.0-r1.ebuild,v 1.6 2012/06/29 14:42:09 jer Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=no
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/xdb/${PN}64-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 hppa ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm hppa ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc static-libs"
 
 S="${WORKDIR}"/${PN}64-${PV}
