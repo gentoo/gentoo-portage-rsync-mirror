@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.236 2012/11/18 13:57:10 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.237 2013/02/19 05:05:05 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> rsync-3.0.9-r2.ebuild:
+  Add ~arm-linux keyword.
 
   18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> -rsync-3.0.7-r2.ebuild,
   -rsync-3.0.7.ebuild:

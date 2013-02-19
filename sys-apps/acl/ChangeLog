@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/acl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.118 2011/12/29 20:49:04 halcy0n Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/ChangeLog,v 1.119 2013/02/19 05:08:46 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> acl-2.2.51.ebuild:
+  Add ~arm-linux keyword.
 
   29 Dec 2011; Mark Loeser <halcy0n@gentoo.org> acl-2.2.51.ebuild:
   Stable for ppc64; bug #379057

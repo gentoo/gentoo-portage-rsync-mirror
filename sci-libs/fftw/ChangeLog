@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.135 2013/02/03 00:54:22 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.136 2013/02/19 05:13:14 ottxor Exp $
+
+  19 Feb 2013; Christoph Junghans <ottxor@gentoo.org> metadata.xml:
+  fixed fma description (bug #445053)
 
 *fftw-3.3.3-r1 (03 Feb 2013)
 
