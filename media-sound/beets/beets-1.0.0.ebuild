@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/beets-1.0_beta15.ebuild,v 1.1 2012/08/21 21:23:33 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/beets-1.0.0.ebuild,v 1.1 2013/02/19 22:22:59 sochotnicky Exp $
 
 EAPI="4"
 
@@ -10,9 +10,9 @@ SUPPORT_PYTHON_ABIS="1"
 #There a few test failures with 2.6, worth investigating
 RESTRICT_PYTHON_ABIS="2.5 3.* 2.7-pypy-*"
 
-inherit distutils
+inherit distutils eutils
 
-MY_PV=${PV/_beta/b}
+MY_PV=${PV/_rc/rc}
 MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="A media library management system for obsessive-compulsive music geeks"
@@ -22,19 +22,22 @@ HOMEPAGE="http://beets.radbox.org/"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="MIT"
-IUSE="chroma doc lastgenre bpd replaygain web"
+IUSE="bpd chroma convert doc echonest_tempo lastgenre replaygain web"
 
 RDEPEND="
 	dev-python/munkres
 	dev-python/python-musicbrainz-ngs
 	dev-python/unidecode
 	media-libs/mutagen
-	chroma? ( dev-python/pyacoustid )
-	lastgenre? ( dev-python/pylast )
 	bpd? ( dev-python/bluelet )
-	replaygain? ( media-sound/rgain )
+	chroma? ( dev-python/pyacoustid )
+	convert? ( media-video/ffmpeg[encode] )
+	doc? ( dev-python/sphinx )
+	echonest_tempo? ( dev-python/pyechonest )
+	lastgenre? ( dev-python/pylast )
+	replaygain? ( || ( media-sound/mp3gain media-sound/aacgain ) )
 	web? ( dev-python/flask )
-	doc? ( dev-python/sphinx )"
+"
 
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
@@ -44,15 +47,20 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	distutils_src_prepare
 
+	# we'll need this as long as portage doesn't have proper python
+	# namespace support (without this we would try to load modules from
+	# previous installation during updates)
+	use test && epatch "${FILESDIR}/${P}-test-namespace.patch"
+
 	# remove plugins that do not have appropriate dependencies installed
-	for flag in lastgenre bpd web chroma replaygain;do
+	for flag in bpd chroma convert echonest_tempo lastgenre replaygain web;do
 		if ! use $flag ; then
 			rm -r beetsplug/$flag* || \
 				die "Unable to remove $flag plugin"
 		fi
 	done
 
-	for flag in lastgenre bpd web;do
+	for flag in bpd lastgenre web;do
 		if ! use $flag ; then
 			sed -i "s:'beetsplug.$flag',::" setup.py || \
 				die "Unable to disable $flag plugin "
@@ -60,6 +68,7 @@ src_prepare() {
 	done
 
 	use bpd || rm -f test/test_player.py
+
 }
 
 src_compile() {

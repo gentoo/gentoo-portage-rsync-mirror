@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.604 2013/02/18 18:55:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.605 2013/02/19 22:05:34 aballier Exp $
+
+  19 Feb 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  add libsoxr useflag
 
   18 Feb 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   Add epatch_user, by Hristo Venev, bug #448612

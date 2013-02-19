@@ -27,6 +27,7 @@
 	<flag name="frei0r">Enable frei0r wrapping in libavfilter</flag>
     <flag name="hardcoded-tables">Use pre-calculated tables rather than calculating them on the fly.</flag>
 	<flag name="iec61883"> Support for FireWire DV/HDV input device using <pkg>media-libs/libiec61883</pkg>.</flag>
+	<flag name="libsoxr">Enables audio resampling through <pkg>media-libs/soxr</pkg>.</flag>
 	<flag name="libv4l">Uses <pkg>media-libs/libv4l</pkg> for video4linux instead of direct calls. Adds support for more devices via the userspace library.</flag>
     <flag name="mmxext">Enables mmx2 support</flag>
     <flag name="network">Enables network streaming support</flag>

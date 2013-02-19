@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.114 2013/02/18 18:55:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.115 2013/02/19 22:05:34 aballier Exp $
 
 EAPI="4"
 
@@ -32,9 +32,9 @@ IUSE="
 	aac aacplus alsa amr avresample bindist bluray +bzip2 cdio celt
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
 	gnutls gsm +hardcoded-tables iec61883 ieee1394 jack jpeg2k libass libcaca
-	libv4l modplug mp3 network openal openssl opus oss pic pulseaudio rtmp
-	schroedinger sdl speex static-libs test theora threads truetype twolame v4l
-	vaapi vdpau vorbis vpx X x264 xvid +zlib
+	libsoxr libv4l modplug mp3 network openal openssl opus oss pic pulseaudio
+	rtmp schroedinger sdl speex static-libs test theora threads truetype twolame
+	v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -81,6 +81,7 @@ RDEPEND="
 	jpeg2k? ( >=media-libs/openjpeg-1.3-r2 )
 	libass? ( media-libs/libass )
 	libcaca? ( media-libs/libcaca )
+	libsoxr? ( media-libs/soxr )
 	libv4l? ( media-libs/libv4l )
 	modplug? ( media-libs/libmodplug )
 	openal? ( >=media-libs/openal-1.1 )
@@ -189,6 +190,8 @@ src_configure() {
 	done
 	use truetype && myconf="${myconf} --enable-libfreetype"
 	use flite    && myconf="${myconf} --enable-libflite"
+	# libswresample options
+	use libsoxr && myconf="${myconf} --enable-libsoxr"
 
 	# Threads; we only support pthread for now but ffmpeg supports more
 	use threads && myconf="${myconf} --enable-pthreads"
