@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-HMAC
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/ChangeLog,v 1.45 2012/06/24 12:59:45 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/ChangeLog,v 1.46 2013/02/19 01:59:10 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> Digest-HMAC-1.30.0.ebuild:
+  Add ~arm-linux keyword.
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

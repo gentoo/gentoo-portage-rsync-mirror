@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Digest-MD5
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/ChangeLog,v 1.54 2013/02/18 23:35:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/ChangeLog,v 1.55 2013/02/19 01:38:45 zmedico Exp $
+
+  19 Feb 2013; Zac Medico <zmedico@gentoo.org> Digest-MD5-2.520.0.ebuild:
+  Add ~arm-linux keyword.
 
   18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> Digest-MD5-2.520.0.ebuild:
   Stable for ppc, wrt bug #458122
