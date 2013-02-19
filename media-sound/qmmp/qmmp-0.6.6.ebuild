@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.6.6.ebuild,v 1.2 2013/01/16 08:29:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.6.6.ebuild,v 1.3 2013/02/19 20:02:18 hwoarang Exp $
 
 EAPI="5"
 
@@ -62,6 +62,8 @@ DEPEND="${RDEPEND}"
 DOCS="AUTHORS ChangeLog README"
 
 CMAKE_IN_SOURCE_BUILD="1"
+
+REQUIRED_USE="kde? ( dbus ) "
 
 src_prepare() {
 	if has_version dev-libs/libcdio-paranoia; then

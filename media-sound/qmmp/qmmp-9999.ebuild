@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.21 2012/11/04 11:14:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.22 2013/02/19 20:02:18 hwoarang Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit cmake-utils
 [ "$PV" == "9999" ] && inherit subversion
@@ -61,6 +61,8 @@ DEPEND="${RDEPEND}"
 DOCS="AUTHORS ChangeLog README"
 
 CMAKE_IN_SOURCE_BUILD="1"
+
+REQUIRED_USE="kde? ( dbus )"
 
 src_configure() {
 	mycmakeargs=(
