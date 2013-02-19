@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libevocosm
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevocosm/ChangeLog,v 1.12 2009/04/25 22:25:49 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevocosm/ChangeLog,v 1.13 2013/02/19 17:05:43 dirtyepic Exp $
+
+  19 Feb 2013; Ryan Hill <dirtyepic@gentoo.org> libevocosm-3.3.1.ebuild,
+  +files/libevocosm-3.3.1-gcc47.patch:
+  Fix build with GCC 4.7 (bug #421607).
 
 *libevocosm-3.3.1 (25 Apr 2009)
 

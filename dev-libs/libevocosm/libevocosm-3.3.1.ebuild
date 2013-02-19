@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevocosm/libevocosm-3.3.1.ebuild,v 1.1 2009/04/25 22:25:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevocosm/libevocosm-3.3.1.ebuild,v 1.2 2013/02/19 17:05:43 dirtyepic Exp $
 
 inherit eutils
 
@@ -16,6 +16,12 @@ RDEPEND="dev-libs/libcoyotl
 	dev-libs/libbrahe"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc47.patch
+}
 
 src_compile() {
 	ac_cv_prog_HAVE_DOXYGEN="false" econf || die "econf failed"

@@ -1,6 +1,6 @@
 # ChangeLog for sci-mathematics/rstudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/ChangeLog,v 1.2 2013/02/17 00:08:47 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/ChangeLog,v 1.3 2013/02/19 17:06:13 bicatali Exp $
 
   17 Feb 2013; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   set correct maintainer
@@ -11,4 +11,19 @@
   +files/rstudio-0.97.318-linker_flags.patch,
   +files/rstudio-0.97.318-paths.patch, +files/rstudio-0.97.318-prefs.patch,
   +files/rstudio-rserver.initd, +metadata.xml:
-  initial import wrt #365595
+  initial import from science overlay.
+
+*rstudio-0.97.237 (09 Dec 2012)
+
+  09 Dec 2012; Denis Dupeyron <calchan@gentoo.org> +rstudio-0.97.237.ebuild,
+  +files/rstudio-0.97.237-prefs.patch:
+  sci-mathematics/rstudio: version bump. The desktop patch isn't needed any
+  longer. Updated prefs patch. Updated gwt version.
+
+*rstudio-0.96.316 (29 Jun 2012)
+
+  29 Jun 2012; Sebastien Fabbro <fabbros@gentoo.org> +rstudio-0.96.316.ebuild,
+  +files/rstudio-0.96.316-linker_flags.patch,
+  +files/rstudio-0.96.316-paths.patch, +files/rstudio-0.96.316-prefs.patch,
+  +.Rhistory, +files/rstudio-rserver.initd, +metadata.xml:
+  Initial import. Ebuild inspired from Eric Johnson and others, bug #365595

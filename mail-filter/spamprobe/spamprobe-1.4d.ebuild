@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/spamprobe-1.4d.ebuild,v 1.7 2011/02/26 17:05:15 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/spamprobe-1.4d.ebuild,v 1.8 2013/02/19 17:26:44 dirtyepic Exp $
 
 EAPI=2
 inherit eutils
@@ -22,7 +22,8 @@ DEPEND="berkdb? ( >=sys-libs/db-3.2 )
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.4b-gcc43.patch \
 		"${FILESDIR}"/${P}-libpng14.patch \
-		"${FILESDIR}"/${P}+db-5.0.patch
+		"${FILESDIR}"/${P}+db-5.0.patch \
+		"${FILESDIR}"/${P}-gcc47.patch
 }
 
 src_configure() {

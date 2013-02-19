@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamprobe
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.28 2011/02/26 17:05:15 signals Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.29 2013/02/19 17:26:44 dirtyepic Exp $
+
+  19 Feb 2013; Ryan Hill <dirtyepic@gentoo.org> spamprobe-1.4d.ebuild,
+  +files/spamprobe-1.4d-gcc47.patch:
+  Fix build with GCC 4.7 (bug #421769).
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org> spamprobe-1.4d.ebuild:
   Updated depends from media-libs/jpeg to virtual/jpeg
