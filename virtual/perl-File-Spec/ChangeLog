@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-File-Spec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Spec/ChangeLog,v 1.73 2013/02/18 23:02:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Spec/ChangeLog,v 1.74 2013/02/18 23:56:36 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-File-Spec-3.400.0.ebuild:
+  Stable for ppc, wrt bug #458122
 
   18 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-File-Spec-3.400.0.ebuild:
   Stable for ppc64, wrt bug #458122

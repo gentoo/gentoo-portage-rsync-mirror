@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Package-Constants
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Package-Constants/ChangeLog,v 1.26 2012/05/21 11:50:39 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Package-Constants/ChangeLog,v 1.27 2013/02/18 23:51:49 zmedico Exp $
+
+  18 Feb 2013; Zac Medico <zmedico@gentoo.org>
+  perl-Package-Constants-0.20.0-r2.ebuild:
+  Add ~arm-linux keyword.
 
 *perl-Package-Constants-0.20.0-r2 (21 May 2012)
 
@@ -116,4 +120,3 @@
   +perl-Package-Constants-0.01.ebuild, +perl-Package-Constants-0.02.ebuild,
   +metadata.xml:
   Add virtual for Package-Constants
-

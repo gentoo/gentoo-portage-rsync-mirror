@@ -1,6 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Math-BigInt
-KEYWORDS=~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sh ~sparc x86 ~ppc-aix ~ppc-macos ~x86-solaris
+KEYWORDS=~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~s390 ~sh ~sparc x86 ~ppc-aix ~ppc-macos ~x86-solaris
 RDEPEND=~perl-core/Math-BigInt-1.997.0
 SLOT=0
-_md5_=dc73b2c6923600c207e7ed5705f00c49
+_md5_=a3edbf74fb614cf25adbe0a6b69c6f37

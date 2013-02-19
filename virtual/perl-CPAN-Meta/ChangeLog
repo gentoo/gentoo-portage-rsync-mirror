@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-CPAN-Meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta/ChangeLog,v 1.32 2013/02/18 22:57:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta/ChangeLog,v 1.33 2013/02/18 23:50:12 ago Exp $
+
+  18 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-CPAN-Meta-2.120.921.ebuild:
+  Stable for ppc, wrt bug #458122
 
   18 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   perl-CPAN-Meta-2.120.921.ebuild:
