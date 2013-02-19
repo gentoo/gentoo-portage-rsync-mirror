@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect-lite/expect-lite-4.3.3.ebuild,v 1.1 2012/12/10 03:34:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect-lite/expect-lite-4.3.3.ebuild,v 1.2 2013/02/19 08:03:37 vapier Exp $
 
 DESCRIPTION="quick and easy command line automation tool built on top of expect"
 HOMEPAGE="http://expect-lite.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug examples"
 
 RDEPEND="dev-tcltk/expect
