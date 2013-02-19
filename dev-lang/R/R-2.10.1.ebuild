@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.10.1.ebuild,v 1.18 2012/10/07 13:35:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.10.1.ebuild,v 1.19 2013/02/19 12:31:48 jlec Exp $
 
 EAPI=2
 
@@ -88,7 +88,7 @@ src_prepare() {
 	sed -i -e 's:png_ptr->jmpbuf:png_jmpbuf(png_ptr):' src/modules/X11/rbitmap.c || die
 
 	use lapack && \
-		export LAPACK_LIBS="$(pkg-config --libs lapack)"
+		export LAPACK_LIBS="$($(tc-getPKG_CONFIG) --libs lapack)"
 
 	if use X; then
 		export R_BROWSER="$(type -p xdg-open)"
@@ -108,7 +108,7 @@ src_configure() {
 		--with-system-zlib \
 		--with-system-bzlib \
 		--with-system-pcre \
-		--with-blas="$(pkg-config --libs blas)" \
+		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)" \
 		--docdir=/usr/share/doc/${PF} \
 		rdocdir=/usr/share/doc/${PF} \
 		$(use_enable nls) \
