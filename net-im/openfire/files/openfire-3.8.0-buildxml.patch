@@ -1,0 +1,20 @@
+diff --git a/build/build.xml b/build/build.xml
+index fc3b75f..4eacc95 100644
+--- a/build/build.xml
++++ b/build/build.xml
+@@ -1244,6 +1244,7 @@
+     </target>
+     <target name="-plugins-impl" if="dirlist">
+ 
++        <taskdef classname="net.sf.antcontrib.logic.For" name="for"/>
+         <!-- For each plugin in the main src dir, call the 'buildplugin' macro -->
+         <for list="${dirlist}" param="plugin" trim="true">
+             <sequential>
+@@ -1262,6 +1263,7 @@
+     </target>
+     <target name="-plugins-impl-dev" if="plugin.dev.dir" depends="anttasks">
+ 
++        <taskdef classname="net.sf.antcontrib.logic.For" name="for"/>
+         <!-- Get a list of plugins in the optional dev dir -->
+         <subdirinfo dir="${plugin.dev.dir}" property="dirlist2" ifexists="plugin.xml"/>
+ 

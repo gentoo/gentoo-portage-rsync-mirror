@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-5.3.0.ebuild,v 1.1 2013/02/04 05:01:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-5.3.0.ebuild,v 1.2 2013/02/19 09:04:51 pesa Exp $
 
 EAPI="4"
 PYTHON_DEPEND="3:3.1"
@@ -25,13 +25,13 @@ IUSE="spell"
 
 DEPEND="
 	>=dev-python/sip-4.12.4
-	>=dev-python/PyQt4-4.9.6-r1[X,help,svg,webkit]
-	>=dev-python/qscintilla-python-2.4
+	>=dev-python/PyQt4-4.9.6-r1[X,help,sql,svg,webkit]
+	>=dev-python/qscintilla-python-2.6
 "
 RDEPEND="${DEPEND}
 	>=dev-python/chardet-2.0.1
 	>=dev-python/coverage-3.2
-	>=dev-python/pygments-1.4
+	>=dev-python/pygments-1.5
 "
 PDEPEND="
 	spell? ( dev-python/pyenchant )
@@ -65,6 +65,9 @@ src_prepare() {
 	sed -i -e '\|/coverage/|d' eric/${MY_PN}.e4p || die
 	sed -i -e 's/from DebugClients\.Python3\?\.coverage /from coverage /' \
 		$(grep -lr 'from DebugClients\.Python3\?\.coverage' .) || die
+
+	# Fix desktop files (bug 458092).
+	sed -i -e '/^Categories=/s:Python:X-&:' eric/eric5{,_webbrowser}.desktop || die
 }
 
 src_install() {

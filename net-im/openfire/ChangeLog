@@ -1,6 +1,12 @@
 # ChangeLog for net-im/openfire
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.45 2012/06/26 19:25:47 slyfox Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.46 2013/02/19 09:07:18 slyfox Exp $
+
+*openfire-3.8.0 (19 Feb 2013)
+
+  19 Feb 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/openfire-3.8.0-buildxml.patch, +openfire-3.8.0.ebuild:
+  Version bump (bug #457658 by Thomas Raschbacher).
 
 *openfire-3.7.1-r1 (26 Jun 2012)
 
@@ -324,4 +330,3 @@
   +wildfire-2.5.0.ebuild:
   Initial import so that more users can start to test. Credits to all that
   helped in bug #120513
-
