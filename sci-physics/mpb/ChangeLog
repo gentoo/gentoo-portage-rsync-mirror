@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/mpb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/ChangeLog,v 1.16 2012/08/08 04:08:59 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/ChangeLog,v 1.17 2013/02/19 19:44:18 jlec Exp $
+
+  19 Feb 2013; Justin Lecher <jlec@gentoo.org> mpb-1.4.2-r2.ebuild,
+  metadata.xml:
+  Use tc-getPKG_CONFIG from toolchain-funcs.eclass instead of plain pkg-config
 
   08 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
   +files/mpb-1.4.2-guile18.patch, -files/mpb-1.4.2-gcc4.patch, metadata.xml,

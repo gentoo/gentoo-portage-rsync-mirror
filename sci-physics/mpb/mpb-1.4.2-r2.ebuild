@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2-r2.ebuild,v 1.6 2012/08/08 04:08:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2-r2.ebuild,v 1.7 2013/02/19 19:44:18 jlec Exp $
 
 EAPI=4
 
@@ -53,8 +53,8 @@ src_configure() {
 	#
 	local myconf=(
 		--with-libctl="${EPREFIX}/usr/share/libctl"
-		--with-blas="$(pkg-config --libs blas)"
-		--with-lapack="$(pkg-config --libs lapack)"
+		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)"
+		--with-lapack="$($(tc-getPKG_CONFIG) --libs lapack)"
 		$(use_with hdf5)
 	)
 

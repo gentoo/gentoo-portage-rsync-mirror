@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Locale-Maketext-Simple
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Locale-Maketext-Simple/ChangeLog,v 1.11 2012/06/24 15:39:04 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Locale-Maketext-Simple/ChangeLog,v 1.12 2013/02/19 19:35:58 ago Exp $
+
+  19 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  Locale-Maketext-Simple-0.210.0.ebuild:
+  Stable for alpha, wrt bug #458122
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
