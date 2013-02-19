@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ambertools/ambertools-1.5-r1.ebuild,v 1.3 2012/10/19 07:15:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ambertools/ambertools-1.5-r1.ebuild,v 1.4 2013/02/19 15:41:00 jlec Exp $
 
 EAPI=4
 
@@ -59,16 +59,17 @@ src_prepare() {
 
 src_configure() {
 	cd AmberTools/src
-	sed -e "s:\\\\\$(LIBDIR)/arpack.a:-larpack:g" \
-		-e "s:\\\\\$(LIBDIR)/lapack.a:$(pkg-config lapack --libs) -lclapack:g" \
-		-e "s:\\\\\$(LIBDIR)/blas.a:$(pkg-config blas cblas --libs):g" \
+	sed \
+		-e "s:\\\\\$(LIBDIR)/arpack.a:-larpack:g" \
+		-e "s:\\\\\$(LIBDIR)/lapack.a:$($(tc-getPKG_CONFIG) --libs lapack) -lclapack:g" \
+		-e "s:\\\\\$(LIBDIR)/blas.a:$($(tc-getPKG_CONFIG) --libs blas cblas):g" \
 		-e "s:\\\\\$(LIBDIR)/libdrfftw.a:${EPREFIX}/usr/$(get_libdir)/libdrfftw.a:g" \
 		-e "s:\\\\\$(LIBDIR)/libdfftw.a:${EPREFIX}/usr/$(get_libdir)/libdrfftw.a:g" \
 		-e "s:CFLAGS=:CFLAGS=${CFLAGS} -DBINTRAJ :g" \
 		-e "s:FFLAGS=:FFLAGS=${FFLAGS} :g" \
 		-e "s:LDFLAGS=$ldflags:LDFLAGS=${LDFLAGS}:g" \
 		-e "s:fc=g77:fc=$(tc-getFC):g" \
-		-e "s:\$netcdflib:$(pkg-config netcdf --libs):g" \
+		-e "s:\$netcdflib:$($(tc-getPKG_CONFIG) --libs netcdf):g" \
 		-e "s:NETCDF=\$netcdf:NETCDF=netcdf.mod:g" \
 		-e "s:-O3::g" \
 		-i configure || die

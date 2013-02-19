@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/apbs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.59 2012/10/19 07:19:17 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.60 2013/02/19 15:42:15 jlec Exp $
+
+  19 Feb 2013; Justin Lecher <jlec@gentoo.org> apbs-1.2.1b-r4.ebuild,
+  metadata.xml:
+  Use tc-getPKG_CONFIG from toolchain-funcs.eclass instead of plain pkg-config
 
   19 Oct 2012; Justin Lecher <jlec@gentoo.org> apbs-1.2.1b-r4.ebuild,
   -apbs-1.3.ebuild, -apbs-1.3-r1.ebuild, -apbs-1.3-r2.ebuild,

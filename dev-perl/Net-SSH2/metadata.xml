@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>perl</herd>
+  <use>
+    <flag name="gcrypt">Use libgcrypt instead of openssl</flag>
+  </use>
   <upstream>
     <remote-id type="cpan">Net-SSH2</remote-id>
     <remote-id type="cpan-module">Net::SSH2</remote-id>

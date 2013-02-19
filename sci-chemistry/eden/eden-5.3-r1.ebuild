@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3-r1.ebuild,v 1.6 2012/07/26 14:20:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3-r1.ebuild,v 1.7 2013/02/19 15:43:19 jlec Exp $
 
 EAPI=4
 
@@ -45,7 +45,7 @@ src_prepare() {
 		-e "s:^\(LIB.*=.*\$(FFTW)/\).*:\1$(get_libdir):g" \
 		-e "s:^\(BIN.*=\).*:\1 ${D}usr/bin:g" \
 		-e "s:^\(CFLAGS.*=\).*:\1 ${CFLAGS}:g" \
-		-e "s:-lgsl -lgslcblas:$(pkg-config --libs gsl):g" \
+		-e "s:-lgsl -lgslcblas:$($(tc-getPKG_CONFIG) --libs gsl):g" \
 		${SRC}/Makefile || die
 
 	if ! use double-precision; then

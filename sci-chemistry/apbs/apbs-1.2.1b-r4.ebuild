@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.14 2012/10/19 07:19:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.15 2013/02/19 15:42:15 jlec Exp $
 
 EAPI="3"
 
@@ -80,7 +80,7 @@ src_configure() {
 	econf \
 		--disable-maloc-rebuild \
 		--enable-shared \
-		--with-blas="$(pkg-config --libs blas)" \
+		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)" \
 		$(use_enable openmp) \
 		$(use_enable python) \
 		$(use_enable tools) \

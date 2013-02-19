@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.2-r2.ebuild,v 1.3 2013/02/18 00:54:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.2-r2.ebuild,v 1.4 2013/02/19 15:34:06 jlec Exp $
 
 EAPI=5
 
@@ -45,17 +45,17 @@ src_unpack() {
 }
 
 pc_incdir() {
-	pkg-config --cflags-only-I $@ | \
+	$(tc-getPKG_CONFIG) --cflags-only-I $@ | \
 		sed -e 's/^-I//' -e 's/[ ]*-I/:/g'
 }
 
 pc_libdir() {
-	pkg-config --libs-only-L $@ | \
+	$(tc-getPKG_CONFIG) --libs-only-L $@ | \
 		sed -e 's/^-L//' -e 's/[ ]*-L/:/g'
 }
 
 pc_libs() {
-	pkg-config --libs-only-l $@ | \
+	$(tc-getPKG_CONFIG) --libs-only-l $@ | \
 		sed -e 's/[ ]-l*\(pthread\|m\)[ ]*//g' \
 		-e 's/^-l//' -e 's/[ ]*-l/,/g'
 }
@@ -64,7 +64,7 @@ python_prepare_all() {
 	epatch "${FILESDIR}"/${PN}-1.6.1-atlas.patch
 
 	if use lapack; then
-		append-ldflags "$(pkg-config --libs-only-other cblas lapack)"
+		append-ldflags "$($(tc-getPKG_CONFIG) --libs-only-other cblas lapack)"
 		local libdir="${EPREFIX}"/usr/$(get_libdir)
 		# make sure _dotblas.so gets built
 		sed -i -e '/NO_ATLAS_INFO/,+1d' numpy/core/setup.py || die
