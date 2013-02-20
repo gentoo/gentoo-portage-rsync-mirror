@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qiviewer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiviewer/ChangeLog,v 1.3 2013/02/14 20:03:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiviewer/ChangeLog,v 1.4 2013/02/20 12:55:25 pinkbyte Exp $
+
+  20 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> qiviewer-0.5.0-r1.ebuild:
+  Port to readme.gentoo eclass, as suggested in bug #457604
 
 *qiviewer-0.5.0-r1 (14 Feb 2013)
 

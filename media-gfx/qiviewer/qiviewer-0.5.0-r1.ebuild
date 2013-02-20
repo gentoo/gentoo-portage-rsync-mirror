@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiviewer/qiviewer-0.5.0-r1.ebuild,v 1.1 2013/02/14 20:03:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiviewer/qiviewer-0.5.0-r1.ebuild,v 1.2 2013/02/20 12:55:25 pinkbyte Exp $
 
 EAPI="5"
 
 PLOCALES="el es_AR es_ES"
 
-inherit l10n qt4-r2
+inherit l10n qt4-r2 readme.gentoo
 
 DESCRIPTION="Lightweight image viewer, similar to eog or viewnior for Gnome"
 HOMEPAGE="http://code.google.com/p/qiviewer"
@@ -22,6 +22,10 @@ DEPEND="x11-libs/qt-gui:4
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}/src"
+
+DOC_CONTENTS="If you want support for gif and tiff images
+make sure that you build x11-libs/qt-gui
+with apropriate USE flags"
 
 src_prepare() {
 	local LOCALE_FILES=""
@@ -52,10 +56,5 @@ src_install() {
 	qt4-r2_src_install
 	cd "${WORKDIR}"/"${PN}"
 	dodoc AUTHORS ChangeLog README
-}
-
-pkg_postinst() {
-	einfo "If you want support for gif and tiff images"
-	einfo "make sure that you build x11-libs/qt-gui"
-	einfo "with apropriate USE flags"
+	readme.gentoo_create_doc
 }
