@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.15.ebuild,v 1.2 2012/10/19 10:45:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.17.ebuild,v 1.1 2013/02/20 20:45:12 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 FORTRAN_NEEDED=fortran
 
@@ -21,19 +21,37 @@ RDEPEND="
 	fits? ( sci-libs/cfitsio )
 	pgplot? ( sci-libs/pgplot )"
 DEPEND="${RDEPEND}
-	sys-devel/flex"
+	sys-devel/flex
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -i -e 's/COPYING\*//' GNUmakefile || die
 }
 
 src_configure() {
+	local myconf=()
+	# hacks because cfitsio and pgplot directories are hard-coded
+	if use fits; then
+		myconf+=(
+			--with-cfitsioinc="${EROOT}/usr/include"
+			--with-cfitsiolib="${EROOT}/usr/$(get_libdir)"
+		)
+	else
+		myconf+=( --without-cfitsio )
+	fi
+	if use pgplot; then
+		myconf+=(
+			--with-pgplotinc="${EROOT}/usr/include"
+			--with-pgplotlib="${EROOT}/usr/$(get_libdir)"
+		)
+	else
+		myconf+=( --without-pgplot )
+	fi
 	econf \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		$(use_enable static-libs static) \
 		$(use_enable fortran) \
-		$(use_with fits cfitsio) \
-		$(use_with pgplot)
+		${myconf[@]}
 }
 
 src_compile() {

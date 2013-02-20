@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/wcslib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/ChangeLog,v 1.34 2012/11/14 18:51:43 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/ChangeLog,v 1.35 2013/02/20 20:45:12 bicatali Exp $
+
+*wcslib-4.17 (20 Feb 2013)
+
+  20 Feb 2013; Sébastien Fabbro <bicatali@gentoo.org> +wcslib-4.17.ebuild,
+  -wcslib-4.15.ebuild, metadata.xml:
+  Version bump. Switch to EAPI5, do more checks for cfitsio and pgplot to work
+  for non standard location such as prefix
 
 *wcslib-4.16 (14 Nov 2012)
 
