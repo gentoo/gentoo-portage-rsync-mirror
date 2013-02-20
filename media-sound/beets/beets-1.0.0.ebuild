@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/beets-1.0.0.ebuild,v 1.1 2013/02/19 22:22:59 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/beets-1.0.0.ebuild,v 1.2 2013/02/20 00:01:07 sochotnicky Exp $
 
 EAPI="4"
 
@@ -50,7 +50,7 @@ src_prepare() {
 	# we'll need this as long as portage doesn't have proper python
 	# namespace support (without this we would try to load modules from
 	# previous installation during updates)
-	use test && epatch "${FILESDIR}/${P}-test-namespace.patch"
+	use test && epatch "${FILESDIR}/${PN}-1.0_rc2-test-namespace.patch"
 
 	# remove plugins that do not have appropriate dependencies installed
 	for flag in bpd chroma convert echonest_tempo lastgenre replaygain web;do
