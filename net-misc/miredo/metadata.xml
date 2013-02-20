@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
+  <email>flameeyes@gentoo.org</email>
+</maintainer>
+<maintainer>
   <email>xmw@gentoo.org</email>
   <name>Michael Weber</name>
 </maintainer>

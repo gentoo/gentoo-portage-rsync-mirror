@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/miredo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/ChangeLog,v 1.14 2012/06/20 06:22:44 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miredo/ChangeLog,v 1.15 2013/02/20 19:14:41 flameeyes Exp $
+
+*miredo-1.2.5-r2 (20 Feb 2013)
+
+  20 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/miredo-1.2.5-ip-path.patch, +files/miredo.conf.2, +files/miredo.rc.2,
+  +miredo-1.2.5-r2.ebuild, -miredo-1.2.5-r1.ebuild, metadata.xml:
+  Fix bug #443448 by checking both /sbin and /bin for the ip command; simplify
+  init scripts, avoiding the too-quiet mode and allowing monitoring.
 
 *miredo-1.2.5-r1 (20 Jun 2012)
 
@@ -64,4 +72,3 @@
   +files/miredo-server.rc, +metadata.xml:
   initial import - in part based on the work Clemmit Sigler and Samuel
   Tardieu (bug #77603)
-

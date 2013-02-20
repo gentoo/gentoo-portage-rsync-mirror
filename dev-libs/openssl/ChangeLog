@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.475 2013/02/19 04:40:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.476 2013/02/20 19:14:48 vapier Exp $
+
+*openssl-1.0.1e (20 Feb 2013)
+
+  20 Feb 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-1.0.1e-ipv6.patch, +openssl-1.0.1e.ebuild:
+  Version bump #458414 by Per Pomsel.
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> openssl-1.0.1d-r1.ebuild:
   Fix for prefix and add ~arm-linux + ~x86-linux keywords.
