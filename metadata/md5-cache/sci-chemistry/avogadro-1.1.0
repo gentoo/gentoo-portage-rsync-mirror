@@ -4,11 +4,11 @@ DESCRIPTION=Advanced molecular editor that uses Qt4 and OpenGL
 EAPI=5
 HOMEPAGE=http://avogadro.openmolecules.net/
 IUSE=+glsl python sse2 test
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-2
 RDEPEND=>=sci-chemistry/openbabel-2.3.0 >=x11-libs/qt-gui-4.5.3:4 >=x11-libs/qt-opengl-4.5.3:4 x11-libs/gl2ps glsl? ( >=media-libs/glew-1.5.0 ) python? ( >=dev-libs/boost-1.35.0-r5[python] dev-python/numpy dev-python/sip ) python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/avogadro/avogadro-1.1.0.tar.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	2dda478e7e4206f6fb1aa72785cb5ef7	eutils	f2731576962f01811c9573b3323fa374	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=80d0cf1cb7c264e579345fe8da851098
+_md5_=10e96561447dcecdfb00fd469e7f50a0

@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/eigen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.74 2013/01/01 18:24:15 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.75 2013/02/20 19:41:35 ago Exp $
+
+  20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> eigen-2.0.17.ebuild,
+  eigen-3.0.6.ebuild:
+  Add ~arm, wrt bug #455960
 
   01 Jan 2013; Michael Palimaka <kensington@gentoo.org> -eigen-2.0.16.ebuild,
   -eigen-3.0.5.ebuild, -files/eigen-3.0.2-latex.patch:

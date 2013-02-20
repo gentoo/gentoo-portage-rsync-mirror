@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.29.1.5.ebuild,v 1.1 2013/02/19 10:39:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.29.1.5.ebuild,v 1.2 2013/02/20 19:35:26 flameeyes Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ MY_DOC="userg_revQ"
 DESCRIPTION="EPSON Image Scan! for Linux (including sane-epkowa backend)"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
 SRC_URI="http://dev.gentoo.org/~flameeyes/avasys/${PN}_${MY_PVR}.tar.gz
-	doc? ( http://dev.gentoo.org/~flameeyes/avasys/${MY_DOC}_e.pdf 
+	doc? ( http://dev.gentoo.org/~flameeyes/avasys/${MY_DOC}_e.pdf
 		linguas_ja? ( http://dev.gentoo.org/~flameeyes/avasys/${MY_DOC}_j.pdf )
 	)"
 LICENSE="GPL-2 AVASYS"
@@ -145,7 +145,7 @@ src_install() {
 			die "Can't find GIMP plugin directory."
 		fi
 		dodir "${plugindir}"
-		dosym /usr/bin/iscan "${plugindir}"
+		dosym /usr/bin/iscan "${plugindir}"/iscan
 	fi
 
 	# install desktop entry

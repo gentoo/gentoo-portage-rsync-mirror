@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.53 2013/02/19 10:39:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.54 2013/02/20 19:35:26 flameeyes Exp $
+
+  20 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org> iscan-2.29.1.5.ebuild:
+  Fix QA warning (closes bug #458098).
 
 *iscan-2.29.1.5 (19 Feb 2013)
 

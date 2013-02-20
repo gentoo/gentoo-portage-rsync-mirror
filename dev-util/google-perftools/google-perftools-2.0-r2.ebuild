@@ -1,31 +1,33 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-2.0-r1.ebuild,v 1.2 2013/02/03 15:09:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-2.0-r2.ebuild,v 1.1 2013/02/20 19:54:18 flameeyes Exp $
 
-EAPI=4
+EAPI=5
 
 MY_P="gperftools-${PV}"
 
-inherit toolchain-funcs eutils flag-o-matic
+inherit toolchain-funcs eutils flag-o-matic autotools-utils
 
 DESCRIPTION="Fast, multi-threaded malloc() and nifty performance analysis tools"
 HOMEPAGE="http://code.google.com/p/gperftools/"
 SRC_URI="http://gperftools.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="MIT"
-SLOT="0"
+SLOT="0/4"
 # contains ASM code, with support for
 # freebsd x86/amd64
 # linux x86/amd64/ppc/ppc64/arm
 # OSX ppc/amd64
 # AIX ppc/ppc64
-KEYWORDS="-* ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="largepages +debug minimal test"
+KEYWORDS="-* ~arm ~amd64 ~ppc64 ~x86 ~x86-fbsd"
+IUSE="largepages +debug minimal test static-libs"
 
 DEPEND="sys-libs/libunwind"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+HTML_DOCS="doc"
 
 pkg_setup() {
 	# set up the make options in here so that we can actually make use
@@ -36,11 +38,7 @@ pkg_setup() {
 	# touching the build system (and thus without rebuilding
 	# autotools). Keep commented as long as it's restricted.
 	use test || \
-		makeopts="${makeopts} noinst_PROGRAMS= "
-
-	# don't install _anything_ from the documentation, since it would
-	# install it in non-standard locations, and would just waste time.
-	makeopts="${makeopts} dist_doc_DATA= "
+		MAKEOPTS+=" noinst_PROGRAMS= "
 }
 
 src_prepare() {
@@ -50,19 +48,15 @@ src_prepare() {
 
 src_configure() {
 	use largepages && append-cppflags -DTCMALLOC_LARGE_PAGES
-
 	append-flags -fno-strict-aliasing -fno-omit-frame-pointer
 
-	econf \
-		--disable-static \
-		--disable-dependency-tracking \
-		--enable-fast-install \
-		$(use_enable debug debugalloc) \
+	local myeconfargs=(
+		--htmldir=/usr/share/doc/${PF}/html
+		$(use_enable debug debugalloc)
 		$(use_enable minimal)
-}
+	)
 
-src_compile() {
-	emake ${makeopts}
+	autotools-utils_src_configure
 }
 
 src_test() {
@@ -74,17 +68,5 @@ src_test() {
 			;;
 	esac
 
-	emake check
-}
-
-src_install() {
-	emake DESTDIR="${D}" install ${makeopts}
-
-	# Remove libtool files since we dropped the static libraries
-	find "${D}" -name '*.la' -delete
-
-	dodoc README AUTHORS ChangeLog TODO NEWS
-	pushd doc
-	dohtml -r *
-	popd
+	autotools-utils_src_test
 }
