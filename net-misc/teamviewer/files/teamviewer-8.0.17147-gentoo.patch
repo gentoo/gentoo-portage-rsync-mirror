@@ -1,0 +1,135 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Tue Feb 19 23:01:44 UTC 2013
+Subject: remove all daemon/systemd related bits
+
+--- teamviewer8/tv_bin/script/tvw_main
++++ teamviewer8/tv_bin/script/tvw_main
+@@ -2,7 +2,6 @@
+ 
+ . "$TV_SCRIPT_DIR/tvw_config"
+ . "$TV_SCRIPT_DIR/tvw_aux"
+-. "$TV_SCRIPT_DIR/tvw_daemon"
+ . "$TV_SCRIPT_DIR/tvw_profile"
+ 
+ Init()
+@@ -57,7 +56,6 @@
+     --help )		PrintHelp			;;
+     --version )		PrintVersion			;;
+     --info )		PrintInfo			;;
+-    --daemon )		Run_Daemon $opt			;;
+     --winecfg )		Run_WineCfg "$@"		;;
+     --regedit )		Run_RegEdit "$@"		;;
+     --kill )		Run_KillTeamViewer		;;
+@@ -123,26 +121,14 @@
+   wine regedit "$@"
+ }
+ 
+-Run_Daemon()
+-{
+-  local opt="$1"
+-
+-  case "$opt" in
+-    ( disable )				removeDaemon	|| rootSuggest	;;
+-    ( enable  )				installDaemon	|| rootSuggest	;;
+-    ( start | stop | restart )		cmdDaemon $opt	|| rootSuggest	;;
+-    ( status )				cmdDaemon $opt			;;
+-    ( * )				echo "unknown option '$opt'"	;;
+-  esac
+-}
+-
+ SetPasswd()
+ {
++  echo "Stop your teamviewer daemon first, then press enter."
++  read
++
+   local pwd="$1"
+   [ -n "$pwd" ] || die 'no password specified'
+ 
+-  Run_Daemon 'stop' > /dev/null
+-  
+   $TV_BIN_DIR/teamviewerd --passwd "$pwd"
+   case $? in
+     0  ) echo 'ok'	;;
+@@ -151,29 +137,28 @@
+     13 ) echo 'password not accepted - illegal char detected'	;;
+     *  ) echo 'unknown response'	;;
+    esac
+-  
+-  Run_Daemon 'start' || die 'failed to restart the daemon'
+-  echo
++
++   echo "You may start your teamviewer daemon again."
+ }
+ 
+ ExportLicense()
+ {
++  echo "Stop your teamviewer daemon first, then press enter."
++  read
++
+   local license="$1"
+   local path='/tmp/tv_global.conf'
+ 
+   [ -n "$license" ] || die 'no license specified'
+ 
+-  Run_Daemon 'stop' > /dev/null
+-  
+   $TV_BIN_DIR/teamviewerd --export-license "$license" "$path"
+   case $? in
+     0  ) echo "ok - license exported to '$path'"		;;
+     11 ) echo "destination '$path' not accessible"		;;
+     *  ) echo 'unknown response'	;;
+    esac
+-  
+-  Run_Daemon 'start' || die 'failed to restart the daemon'
+-  echo
++
++   echo "You may start your teamviewer daemon again."
+ }
+ 
+ CreateZipLog()
+@@ -214,35 +199,18 @@
+   ABecho "teamviewer --passwd [PASSWD]"	"set a password (useful when installing remote (ssh)"
+   ABecho "teamviewer --ziplog"		"create a zip containing all teamviewer logs (useful when contacting support)"
+   echo
+-  ABecho "teamviewer --daemon status"	"show current status of the TeamViewer daemon"
+-  ABecho "teamviewer --daemon start"	"start		TeamViewer daemon"
+-  ABecho "teamviewer --daemon stop"	"stop		TeamViewer daemon"
+-  ABecho "teamviewer --daemon restart"	"stop/start	TeamViewer daemon"
+-  ABecho "teamviewer --daemon disable"	"disable	TeamViewer daemon - don't start daemon on system startup"
+-  ABecho "teamviewer --daemon enable"	"enable		TeamViewer daemon - start daemon on system startup (default)"
+ }
+ 
+ PrintInfo()
+ {
+   PrintVersion
+   echo
+-  PrintDaemonStatus
+-  echo
+   PrintTeamViewerID
+ }
+ 
+ PrintVersion()
+ {
+   ABecho "TeamViewer" "$TV_VERSION"
+-}
+-
+-PrintDaemonStatus()
+-{
+-  local cmd="$(daemonCtl 'status')"
+-  local txt="$(eval "$cmd")"
+-  [ $? = 0 ] || txt='n/a (error)'
+-  
+-  ABecho "teamviewerd status" "$txt"
+ }
+ 
+ PrintTeamViewerID
+@@ -256,6 +224,6 @@
+     ABecho "TeamViewer ID:" "$tvid"
+   else
+     echo "TeamViewer ID: not found"
+-    echo "Try restarting the TeamViewer daemon (e.g. teamviewer --daemon restart)"
+-  fi
+-}
++    echo "Try restarting the TeamViewer daemon."
++  fi
++}
