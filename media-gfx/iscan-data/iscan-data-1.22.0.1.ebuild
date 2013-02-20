@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-data/iscan-data-1.22.0.1.ebuild,v 1.1 2013/02/19 10:38:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-data/iscan-data-1.22.0.1.ebuild,v 1.3 2013/02/20 13:20:04 flameeyes Exp $
 
-EAPI=4
+EAPI=5
 
-inherit eutils versionator
+inherit eutils versionator udev multilib
 
 MY_PV="$(get_version_component_range 1-3)"
 MY_PVR="$(replace_version_separator 3 -)"
@@ -16,23 +16,28 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="udev"
 
-DEPEND="dev-libs/libxslt"
-RDEPEND="${DEPEND}"
+DEPEND="udev? (
+		dev-libs/libxslt
+		media-gfx/sane-backends
+	)"
+RDEPEND=""
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
+DOCS=( NEWS SUPPORTED-DEVICES KNOWN-PROBLEMS )
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 
+	if use udev; then
 	# create udev rules
-	dodir /lib/udev/rules.d
-	"${D}usr/$(get_libdir)/iscan-data/make-policy-file" \
-		--force --quiet --mode udev \
-		-d "${D}usr/share/iscan-data/epkowa.desc" \
-		-o "${D}$(get_libdir)/udev/rules.d/99-iscan.rules"
-
-	# install docs
-	dodoc NEWS SUPPORTED-DEVICES KNOWN-PROBLEMS
+		local rulesdir=$(get_udevdir)/rules.d
+		dodir ${rulesdir}
+		"${D}usr/$(get_libdir)/iscan-data/make-policy-file" \
+			--force --quiet --mode udev \
+			-d "${D}usr/share/iscan-data/epkowa.desc" \
+			-o "${D}${rulesdir}/99-iscan.rules" || die
+	fi
 }

@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/iscan-data
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-data/ChangeLog,v 1.9 2013/02/19 10:38:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-data/ChangeLog,v 1.11 2013/02/20 13:20:04 flameeyes Exp $
+
+  20 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org>
+  iscan-data-1.22.0.1.ebuild:
+  Add a missing inherit.
+
+  20 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org>
+  iscan-data-1.22.0.1.ebuild:
+  Add an udev USE flag for the rules generation; add a dependency on sane-
+  backends for the generation of said rules, and make sure to die if it fails.
 
 *iscan-data-1.22.0.1 (19 Feb 2013)
 

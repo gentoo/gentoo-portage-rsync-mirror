@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/icm-3.7.2b.ebuild,v 1.3 2012/02/05 05:59:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/icm-3.7.2e.ebuild,v 1.1 2013/02/20 13:15:45 alexxy Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils unpacker versionator
 
@@ -16,7 +16,7 @@ SRC_URI="${MY_P}-linux.sh"
 LICENSE="MolSoft"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="32bit 64bit"
+IUSE="32bit 64bit vim-syntax"
 
 REQUIRED_USE="^^ (
 					( !32bit 64bit )
@@ -28,6 +28,7 @@ RESTRICT="fetch"
 
 DEPEND="!sci-chemistry/icm-browser
 		app-arch/unzip
+		vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 		amd64? (
 			64bit? (
 					=media-libs/tiff-3*
@@ -80,23 +81,45 @@ src_install () {
 	doenvd "${FILESDIR}/90icm" || die
 	if use x86; then
 		dosym "${instdir}/icm"  /opt/bin/icm || die
+		dosym "${instdir}/icmng" /opt/bin/icmng || die
 		rm  "${D}/${instdir}/icm64" || die
+		rm  "${D}/${instdir}/icmng64" || die
+		rm "${D}/${instdir}/icmora64" || die
+		rm "${D}/${instdir}/icmora64.bin" || die
+		rm -rf "${D}/${instdir}/lib64" || die
 	elif use amd64; then
 		if use 32bit; then
 			dosym "${instdir}/icm"  /opt/bin/icm || die
+			dosym "${instdir}/icmng" /opt/bin/icmng || die
 		fi
 		if use 64bit; then
 			dosym "${instdir}/icm64" /opt/bin/icm64 || die
+			dosym "${instdir}/icmng64" /opt/bin/icmng64 || die
 		fi
 		if ! use 64bit; then
 			rm  "${D}/${instdir}/icm64" || die
+			rm  "${D}/${instdir}/icmng64" || die
+			rm "${D}/${instdir}/icmora64{,.bin}" || die
+			rm -rf "${D}/${instdir}/lib64" || die
 		fi
 		if ! use 32bit; then
 			rm "${D}/${instdir}/icm" || die
+			rm "${D}/${instdir}/icmng" || die
+			rm "${D}/${instdir}/icmora" || die
+			rm "${D}/${instdir}/icmora.bin" || die
+			rm -rf "${D}/${instdir}/lib32" || die
 		fi
 	fi
 	dosym "${instdir}/txdoc"  /opt/bin/txdoc || die
 	dosym "${instdir}/lmhostid"  /opt/bin/lmhostid || die
+	# install vim files
+	if use vim-syntax ; then
+		insinto /usr/share/vim/vimfiles/ftdetect
+		doins  "${WORKDIR}/icm.vim"
+		insinto /usr/share/vim/vimfiles/syntax
+		doins  "${WORKDIR}/icm.vim"
+		rm "${D}/${instdir}/icm.vim" || die
+	fi
 	# make desktop entry
 	doicon "${FILESDIR}/${PN}.xpm"
 	if use x86; then

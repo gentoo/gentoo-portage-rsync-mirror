@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/isync
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/ChangeLog,v 1.19 2012/06/27 19:59:21 eras Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/ChangeLog,v 1.20 2013/02/20 13:30:51 eras Exp $
+
+*isync-1.0.6 (20 Feb 2013)
+
+  20 Feb 2013; Eray Aslan <eras@gentoo.org> +isync-1.0.6.ebuild:
+  Security bump - bug #458420
 
   27 Jun 2012; Eray Aslan <eras@gentoo.org> -isync-1.0.4.ebuild:
   remove old
@@ -77,4 +82,3 @@
   +isync-0.9.2.ebuild:
   Initial version. Closes #61365, ebuild submitted by Claudio Valente
   <claudiovalente@yahoo.com>.
-

@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/icm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/ChangeLog,v 1.10 2012/10/19 09:09:23 alexxy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/ChangeLog,v 1.11 2013/02/20 13:15:45 alexxy Exp $
+
+*icm-3.7.2e (20 Feb 2013)
+
+  20 Feb 2013; Alexey Shvetsov <alexxy@gentoo.org> +icm-3.7.2e.ebuild,
+  -icm-3.7.2b.ebuild, -icm-3.7.2c.ebuild:
+  Update version and clean up old
 
 *icm-3.7.2d (19 Oct 2012)
 
