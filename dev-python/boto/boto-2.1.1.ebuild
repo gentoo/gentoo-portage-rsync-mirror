@@ -1,6 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/boto-2.1.1.ebuild,v 1.4 2013/02/20 05:41:50 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/boto-2.1.1.ebuild,v 1.5 2013/02/20 06:18:44 prometheanfire Exp $
+
+#please do not remove without checking if it is still required by
+#sys-cluster/nova
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
