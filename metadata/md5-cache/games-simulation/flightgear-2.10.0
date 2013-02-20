@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup test unpack
+DEPEND=dev-db/sqlite:3 >=dev-games/openscenegraph-3.0.1[png] ~dev-games/simgear-2.10.0[jpeg?,subversion?] sys-libs/zlib virtual/opengl udev? ( virtual/udev ) fgpanel? ( media-libs/freeglut media-libs/libpng ) >=dev-libs/boost-1.44 media-libs/openal >=media-libs/plib-1.8.5 jpeg? ( virtual/jpeg ) subversion? ( dev-libs/apr dev-vcs/subversion ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Open Source Flight Simulator
+EAPI=5
+HOMEPAGE=http://www.flightgear.org/
+IUSE=debug fgpanel jpeg +jsbsim oldfdm subversion test +udev +yasim
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-db/sqlite:3 >=dev-games/openscenegraph-3.0.1[png] ~dev-games/simgear-2.10.0[jpeg?,subversion?] sys-libs/zlib virtual/opengl udev? ( virtual/udev ) fgpanel? ( media-libs/freeglut media-libs/libpng ) ~games-simulation/flightgear-data-2.10.0
+SLOT=0
+SRC_URI=mirror://flightgear/Source/flightgear-2.10.0.tar.bz2
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	2dda478e7e4206f6fb1aa72785cb5ef7	eutils	f2731576962f01811c9573b3323fa374	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	games	e0a83e3f3f024b8c8ef7a8217d716cbf	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=c3f9149b2edd01ec34d4ed9bbcc24558

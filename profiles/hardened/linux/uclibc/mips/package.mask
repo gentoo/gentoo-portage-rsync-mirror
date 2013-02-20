@@ -1,15 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/uclibc/mips/package.mask,v 1.8 2013/01/27 01:25:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/uclibc/mips/package.mask,v 1.9 2013/02/20 21:31:10 blueness Exp $
 
 #
 # Since mips is a ~arch, we need to mask some extra packages here
 #
->sys-apps/util-linux-2.20.1-r2
 >dev-lang/perl-5.12.4-r2
 >dev-libs/libpcre-8.30-r2
 >sys-process/procps-3.2.8_p11
->sys-apps/sysvinit-2.88-r3
 >sys-apps/coreutils-8.19
 #
 # Prefer module-init-tools for virtual/modutils

@@ -1,6 +1,13 @@
 # ChangeLog for games-simulation/flightgear
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.62 2012/12/09 15:09:51 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.63 2013/02/20 21:26:32 reavertm Exp $
+
+*flightgear-2.10.0 (20 Feb 2013)
+
+  20 Feb 2013; Maciej Mrozowski <reavertm@gentoo.org> +flightgear-2.10.0.ebuild,
+  -files/flightgear-2.0.0-sdl.patch, -files/flightgear-2.4.0-svn.patch,
+  -flightgear-2.4.0.ebuild:
+  Version bump, bug 458202. Thanks to Christian Schmitt for some ideas.
 
   09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> flightgear-2.8.0.ebuild:
   Stable for ppc, wrt bug #425838

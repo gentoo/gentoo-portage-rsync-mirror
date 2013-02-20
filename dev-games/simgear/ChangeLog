@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/simgear
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.57 2012/12/09 15:10:08 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.58 2013/02/20 21:21:42 reavertm Exp $
+
+*simgear-2.10.0 (20 Feb 2013)
+
+  20 Feb 2013; Maciej Mrozowski <reavertm@gentoo.org> +simgear-2.10.0.ebuild,
+  -files/simgear-2.4.0-boost148.patch, -simgear-2.4.0.ebuild:
+  Version bump, bug 458202. Thanks to Christian Schmitt.
 
   09 Dec 2012; Agostino Sarubbo <ago@gentoo.org> simgear-2.8.0-r1.ebuild:
   Stable for ppc, wrt bug #425838
