@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.100 2013/01/20 18:31:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.101 2013/02/20 02:25:56 jdhore Exp $
+
+*thunderbird-bin-17.0.3 (20 Feb 2013)
+
+  20 Feb 2013; Jeff Horelick <jdhore@gentoo.org> +thunderbird-bin-17.0.3.ebuild:
+  Version bump on ESR branch
 
   20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> thunderbird-bin-17.0.2.ebuild:
   Stable for x86, wrt bug #450940

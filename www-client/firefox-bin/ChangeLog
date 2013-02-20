@@ -1,6 +1,13 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.136 2013/02/07 06:59:32 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.137 2013/02/20 02:15:34 jdhore Exp $
+
+*firefox-bin-19.0 (20 Feb 2013)
+*firefox-bin-17.0.3 (20 Feb 2013)
+
+  20 Feb 2013; Jeff Horelick <jdhore@gentoo.org> +firefox-bin-17.0.3.ebuild,
+  +firefox-bin-19.0.ebuild:
+  Version bump on ESR and mainline branches
 
 *firefox-bin-18.0.2 (07 Feb 2013)
 
