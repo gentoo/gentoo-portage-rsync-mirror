@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.65.0-r2.ebuild,v 1.12 2013/01/21 16:08:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.65.0-r2.ebuild,v 1.13 2013/02/20 09:37:14 ago Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic multilib user
 
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 
 DESCRIPTION="Courier authentication library."
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"

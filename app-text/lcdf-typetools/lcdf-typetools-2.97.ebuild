@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/lcdf-typetools-2.97.ebuild,v 1.9 2013/02/12 20:24:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/lcdf-typetools-2.97.ebuild,v 1.10 2013/02/20 09:45:36 ago Exp $
 
 EAPI=2
 
 DESCRIPTION="Font utilities for eg manipulating OTF"
 SRC_URI="http://www.lcdf.org/type/${P}.tar.gz"
 HOMEPAGE="http://www.lcdf.org/type/#typetools"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="+kpathsea"

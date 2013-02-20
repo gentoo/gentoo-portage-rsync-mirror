@@ -1,5 +1,8 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.26 2013/02/12 20:25:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.27 2013/02/20 09:49:13 ago Exp $
+
+  20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gtest-1.6.0-r1.ebuild:
+  Stable for s390, wrt bug #456476
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gtest-1.6.0-r1.ebuild:
   Stable for sparc, wrt bug #456476

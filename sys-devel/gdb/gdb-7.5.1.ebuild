@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.5.1.ebuild,v 1.9 2013/02/19 21:03:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.5.1.ebuild,v 1.10 2013/02/20 09:46:59 ago Exp $
 
 EAPI="3"
 
@@ -50,7 +50,7 @@ SRC_URI="${SRC_URI} ${PATCH_VER:+mirror://gentoo/${P}-patches-${PATCH_VER}.tar.x
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 if [[ ${PV} != 9999* ]] ; then
-	KEYWORDS="alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 s390 ~sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 fi
 IUSE="+client expat multitarget nls +python +server test vanilla zlib"
 

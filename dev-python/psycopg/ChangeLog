@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.155 2013/01/19 11:52:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.156 2013/02/20 09:45:09 ago Exp $
+
+  20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> psycopg-2.4.5.ebuild:
+  Stable for s390, wrt bug #449426
 
 *psycopg-1.1.21-r1 (19 Jan 2013)
 

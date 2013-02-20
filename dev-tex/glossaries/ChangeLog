@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.63 2013/01/20 10:14:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.64 2013/02/20 09:34:31 ago Exp $
+
+  20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> glossaries-3.04.ebuild:
+  Stable for s390, wrt bug #449926
 
   20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> glossaries-3.04.ebuild:
   Stable for alpha, wrt bug #449926

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.141 2013/01/21 16:08:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.142 2013/02/20 09:37:14 ago Exp $
+
+  20 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  courier-authlib-0.65.0-r2.ebuild:
+  Stable for s390, wrt bug #450190
 
   21 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
   courier-authlib-0.65.0-r2.ebuild:

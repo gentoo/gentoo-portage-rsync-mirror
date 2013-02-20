@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-2.5-r2.ebuild,v 1.9 2012/12/29 08:54:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unace/unace-2.5-r2.ebuild,v 1.10 2013/02/20 09:54:31 ago Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/non-free/u/unace-nonfree/unace-nonfree_${PV}.orig.
 
 LICENSE="freedist"
 SLOT="1"
-KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 ~s390 x86 ~amd64-linux ~x86-linux ~sparc-solaris"
+KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 s390 x86 ~amd64-linux ~x86-linux ~sparc-solaris"
 IUSE=""
 
 DEPEND=""

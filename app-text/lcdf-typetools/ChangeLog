@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lcdf-typetools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.98 2013/02/12 20:24:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.99 2013/02/20 09:45:36 ago Exp $
+
+  20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> lcdf-typetools-2.97.ebuild:
+  Stable for s390, wrt bug #456468
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> lcdf-typetools-2.97.ebuild:
   Stable for sparc, wrt bug #456468
