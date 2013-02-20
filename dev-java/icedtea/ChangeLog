@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.91 2013/02/13 18:56:54 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.92 2013/02/20 09:07:51 sera Exp $
+
+*icedtea-6.1.12.3 (20 Feb 2013)
+
+  20 Feb 2013; Ralph Sennhauser <sera@gentoo.org> +icedtea-6.1.12.3.ebuild:
+  Security bump #458410
 
 *icedtea-7.2.3.6 (13 Feb 2013)
 *icedtea-6.1.12.2 (13 Feb 2013)
