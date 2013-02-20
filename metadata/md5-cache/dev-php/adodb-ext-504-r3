@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=>=dev-php/adodb-4.70 app-arch/unzip || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-3? ( dev-lang/php:5.3 )
+DESCRIPTION=PHP extension providing up to 100% speedup by replacing parts of ADOdb with C code.
+EAPI=5
+HOMEPAGE=http://adodb.sourceforge.net/
+IUSE=php_targets_php5-3
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=>=dev-php/adodb-4.70 || ( =dev-php/adodb-ext-504-r3[php_targets_php5-3] ) php_targets_php5-3? ( dev-lang/php:5.3 )
+SLOT=0
+SRC_URI=http://phplens.com/lens/dl/adodb-ext-504.zip
+_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	f2731576962f01811c9573b3323fa374	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	php-ext-source-r2	fdd92230a8379a1fcebd1a8978703083	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=b017acd806ac5f1a5a73665399287920

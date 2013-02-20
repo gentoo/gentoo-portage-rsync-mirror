@@ -1,12 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-2.12.0.ebuild,v 1.1 2012/05/11 05:55:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-2.14.2.ebuild,v 1.1 2013/02/20 07:10:26 graaff Exp $
 
-EAPI=4
-USE_RUBY="ruby18"
+EAPI=5
+# ruby19 → pending on net/sftp
+USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
-RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.mdown"
+RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.md"
 
 inherit ruby-fakegem
 
