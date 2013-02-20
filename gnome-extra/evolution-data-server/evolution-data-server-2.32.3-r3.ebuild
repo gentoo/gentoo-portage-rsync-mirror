@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.3-r3.ebuild,v 1.1 2013/01/22 19:59:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.3-r3.ebuild,v 1.2 2013/02/20 14:44:58 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -94,6 +94,9 @@ src_prepare() {
 
 	# Upstream bug #669003 - CalDAV: Cannot modify calendar object (libical 0.48)
 	epatch "${FILESDIR}/${P}-libical-0.48.patch"
+
+	# Fix building with libxml2-2.9, backported from eds-3.6
+	epatch "${FILESDIR}/${P}-libxml2-2.9.patch"
 
 	# /usr/include/db.h is always db-1 on FreeBSD
 	# so include the right dir in CPPFLAGS

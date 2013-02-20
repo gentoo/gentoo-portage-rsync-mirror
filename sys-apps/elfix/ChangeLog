@@ -1,4 +1,8 @@
 
+
+  20 Feb 2013; Jeroen Roovers <jer@gentoo.org> elfix-0.8.1.ebuild:
+  Stable for HPPA (bug #456656).
+
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> elfix-0.8.1.ebuild:
   Stable for sparc, wrt bug #456656
 

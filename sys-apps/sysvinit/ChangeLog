@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sysvinit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.109 2012/09/06 16:40:49 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.110 2013/02/20 14:53:50 jer Exp $
+
+  20 Feb 2013; Jeroen Roovers <jer@gentoo.org> sysvinit-2.88-r4.ebuild:
+  Stable for HPPA (bug #458226).
 
 *sysvinit-2.88-r4 (06 Sep 2012)
 

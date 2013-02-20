@@ -1,15 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.9.0.ebuild,v 1.1 2012/11/27 05:43:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.9.0-r2.ebuild,v 1.1 2013/02/20 14:57:49 tetromino Exp $
 
 EAPI="5"
-PYTHON_DEPEND="python? 2"
-PYTHON_USE_WITH="xml"
-PYTHON_USE_WITH_OPT="python"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_REQ_USE="xml"
 
-inherit libtool flag-o-matic eutils python autotools prefix
+inherit libtool flag-o-matic eutils python-r1 autotools prefix
 
 DESCRIPTION="Version 2 of the library to manipulate XML files"
 HOMEPAGE="http://www.xmlsoft.org/"
@@ -32,20 +29,17 @@ SRC_URI="ftp://xmlsoft.org/${PN}/${PN}-${PV/_rc/-rc}.tar.gz
 		${XSTS_HOME}/${XSTS_NAME_2}/${XSTS_TARBALL_2}
 		http://www.w3.org/XML/Test/${XMLCONF_TARBALL} )"
 
-RDEPEND="sys-libs/zlib
-	icu? ( dev-libs/icu )
-	lzma? ( app-arch/xz-utils )
-	readline? ( sys-libs/readline )"
+RDEPEND="sys-libs/zlib:=
+	icu? ( dev-libs/icu:= )
+	lzma? ( app-arch/xz-utils:= )
+	python? ( ${PYTHON_DEPS} )
+	readline? ( sys-libs/readline:= )"
 
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
 	hppa? ( >=sys-devel/binutils-2.15.92.0.2 )"
 
 S="${WORKDIR}/${PN}-${PV%_rc*}"
-
-pkg_setup() {
-	use python && python_pkg_setup
-}
 
 src_unpack() {
 	# ${A} isn't used to avoid unpacking of test tarballs into $WORKDIR,
@@ -69,7 +63,7 @@ src_prepare() {
 
 	eprefixify catalog.c xmlcatalog.c runtest.c xmllint.c
 
-	epunt_cxx
+#	epunt_cxx # if we don't eautoreconf
 
 	epatch "${FILESDIR}/${PN}-2.9.0-disable_static_modules.patch"
 
@@ -84,22 +78,24 @@ src_prepare() {
 	# Buffer underflow in xmlParseAttValueComplex, bug #444836; fixed in 2.9.1
 	epatch "${FILESDIR}/${PN}-2.8.0-xmlParseAttValueComplex-underflow.patch"
 
+	# Entity expansion DoS, bug #458430; fixed in 2.9.1
+	epatch "${FILESDIR}/${PN}-2.9.0-excessive-entity-expansion.patch"
+
 	# Please do not remove, as else we get references to PORTAGE_TMPDIR
 	# in /usr/lib/python?.?/site-packages/libxml2mod.la among things.
 	# We now need to run eautoreconf at the end to prevent maintainer mode.
 #	elibtoolize
 
 	# Python bindings are built/tested/installed manually.
-	sed -e 's/$(PYTHON_SUBDIR)//' -i Makefile.am || die "sed 1 failed"
-
-	# Use Gentoo's python-config naming scheme
-	sed -e 's/python$PYTHON_VERSION-config/python-config-$PYTHON_VERSION/' \
-		-i configure.in || die "sed 2 failed"
+	epatch "${FILESDIR}/${PN}-2.9.0-manual-python.patch"
 
 	eautoreconf
 }
 
 src_configure() {
+	# filter seemingly problematic CFLAGS (#26320)
+	filter-flags -fprefetch-loop-arrays -funroll-loops
+
 	# USE zlib support breaks gnome2
 	# (libgnomeprint for instance fails to compile with
 	# fresh install, and existing) - <azarah@gentoo.org> (22 Dec 2002).
@@ -108,53 +104,35 @@ src_configure() {
 	# switch (enabling the libxml2 debug module). See bug #100898.
 
 	# --with-mem-debug causes unusual segmentation faults (bug #105120).
-
-	local myconf=(
-		--with-html-subdir=${PF}/html
-		--docdir="${EPREFIX}/usr/share/doc/${PF}"
-		$(use_with debug run-debug)
-		$(use_with icu)
-		$(use_with lzma)
-		$(use_with python)
-		$(use_with readline)
-		$(use_with readline history)
-		$(use_enable ipv6)
-		$(use_enable static-libs static) )
-
-	# filter seemingly problematic CFLAGS (#26320)
-	filter-flags -fprefetch-loop-arrays -funroll-loops
-
-	econf "${myconf[@]}"
+	econf \
+		-with-html-subdir=${PF}/html \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		$(use_with debug run-debug) \
+		$(use_with icu) \
+		$(use_with lzma) \
+		$(use_with python) \
+		$(use_with readline) \
+		$(use_with readline history) \
+		$(use_enable ipv6) \
+		$(use_enable static-libs static)
 }
 
 src_compile() {
 	default
-
 	if use python; then
-		python_copy_sources python
-		building() {
-			emake PYTHON_INCLUDES="${EPREFIX}$(python_get_includedir)" \
-				PYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)"
-		}
-		python_execute_function -s --source-dir python building
+		python_copy_sources
+		python_foreach_impl libxml2_py_emake
 	fi
 }
 
 src_test() {
 	default
-
-	if use python; then
-		testing() {
-			emake test
-		}
-		python_execute_function -s --source-dir python testing
-	fi
+	use python && python_foreach_impl libxml2_py_emake test
 }
 
 src_install() {
 	emake DESTDIR="${D}" \
-		EXAMPLES_DIR="${EPREFIX}"/usr/share/doc/${PF}/examples \
-		install || die "Installation failed"
+		EXAMPLES_DIR="${EPREFIX}"/usr/share/doc/${PF}/examples install
 
 	# on windows, xmllint is installed by interix libxml2 in parent prefix.
 	# this is the version to use. the native winnt version does not support
@@ -166,16 +144,11 @@ src_install() {
 	fi
 
 	if use python; then
-		installation() {
-			emake DESTDIR="${D}" \
-				PYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)" \
-				docsdir="${EPREFIX}"/usr/share/doc/${PF}/python \
-				exampledir="${EPREFIX}"/usr/share/doc/${PF}/python/examples \
-				install
-		}
-		python_execute_function -s --source-dir python installation
-
-		python_clean_installation_image
+		python_foreach_impl libxml2_py_emake DESTDIR="${D}" \
+			docsdir="${EPREFIX}"/usr/share/doc/${PF}/python \
+			exampledir="${EPREFIX}"/usr/share/doc/${PF}/python/examples \
+			install
+		python_foreach_impl python_optimize
 	fi
 
 	rm -rf "${ED}"/usr/share/doc/${P}
@@ -191,18 +164,13 @@ src_install() {
 		rm -rf "${ED}/usr/share/doc/${PF}/python/examples"
 	fi
 
-	prune_libtool_files
+	prune_libtool_files --modules
 }
 
 pkg_postinst() {
-	if use python; then
-		python_mod_optimize drv_libxml2.py libxml2.py
-	fi
-
 	# We don't want to do the xmlcatalog during stage1, as xmlcatalog will not
 	# be in / and stage1 builds to ROOT=/tmp/stage1root. This fixes bug #208887.
-	if [ "${ROOT}" != "/" ]
-	then
+	if [[ "${ROOT}" != "/" ]]; then
 		elog "Skipping XML catalog creation for stage building (bug #208887)."
 	else
 		# need an XML catalog, so no-one writes to a non-existent one
@@ -211,16 +179,22 @@ pkg_postinst() {
 		# we dont want to clobber an existing catalog though,
 		# only ensure that one is there
 		# <obz@gentoo.org>
-		if [ ! -e ${CATALOG} ]; then
-			[ -d "${EROOT}etc/xml" ] || mkdir -p "${EROOT}etc/xml"
-			"${EPREFIX}"/usr/bin/xmlcatalog --create > ${CATALOG}
+		if [[ ! -e ${CATALOG} ]]; then
+			[[ -d "${EROOT}etc/xml" ]] || mkdir -p "${EROOT}etc/xml"
+			"${EPREFIX}"/usr/bin/xmlcatalog --create > "${CATALOG}"
 			einfo "Created XML catalog in ${CATALOG}"
 		fi
 	fi
 }
 
-pkg_postrm() {
-	if use python; then
-		python_mod_cleanup drv_libxml2.py libxml2.py
-	fi
+libxml2_py_emake() {
+	pushd "${BUILD_DIR}/python" > /dev/null || die
+	emake \
+		PYTHON="${PYTHON}" \
+		PYTHON_INCLUDES="${EPREFIX}/usr/include/${EPYTHON}" \
+		PYTHON_LIBS="$(python-config --ldflags)" \
+		PYTHON_SITE_PACKAGES="$(python_get_sitedir)" \
+		pythondir="$(python_get_sitedir)" \
+		PYTHON_VERSION=${EPYTHON/python} "$@"
+	popd > /dev/null
 }

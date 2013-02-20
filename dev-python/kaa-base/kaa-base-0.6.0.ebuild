@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/kaa-base-0.6.0.ebuild,v 1.9 2013/01/17 16:20:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/kaa-base-0.6.0.ebuild,v 1.10 2013/02/20 14:35:11 idella4 Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/freevo/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="avahi ssl sqlite tls lirc"
+IUSE="avahi sqlite tls lirc"
 
 DEPEND=">=dev-libs/glib-2.4.0
 	avahi? ( net-dns/avahi[python] )
