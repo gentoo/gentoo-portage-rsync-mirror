@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/allpathslg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/ChangeLog,v 1.11 2013/02/18 12:32:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/ChangeLog,v 1.12 2013/02/20 15:56:10 ago Exp $
+
+  20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> allpathslg-42337.ebuild:
+  Stable for amd64, wrt bug #458106
 
   18 Feb 2013; Justin Lecher <jlec@gentoo.org> -allpathslg-41839.ebuild,
   metadata.xml:
@@ -55,4 +58,3 @@
   25 Jan 2011; Andrey Kislyuk <weaver@gentoo.org> +allpathslg-35725.ebuild,
   +metadata.xml:
   Package move from sci-biology/allpaths and version bump
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/allpathslg-42337.ebuild,v 1.3 2012/12/14 09:57:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/allpathslg-42337.ebuild,v 1.4 2013/02/20 15:56:10 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.broadinstitute.org/pub/crd/ALLPATHS/Release-LG/latest_source_
 LICENSE="MIT"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 DEPEND="
 	dev-libs/boost

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.126 2013/02/20 13:08:25 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.127 2013/02/20 15:38:44 chithanh Exp $
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (20 Feb 2013)
 # Mask flags of calligra and dependencies due to lack of keywords
-app-office/calligra openexr postgres
+app-office/calligra openexr postgres spacenav
 media-gfx/pstoedit emf
 
 # Eray Aslan <eras@gentoo.org> (16 Feb 2013)

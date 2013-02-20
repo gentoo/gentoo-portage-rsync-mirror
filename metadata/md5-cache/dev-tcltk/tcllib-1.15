@@ -1,0 +1,12 @@
+DEFINED_PHASES=install
+DEPEND=dev-lang/tcl
+DESCRIPTION=Tcl Standard Library
+EAPI=5
+HOMEPAGE=http://www.tcl.tk/software/tcllib/
+IUSE=examples
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~s390 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos
+LICENSE=BSD
+RDEPEND=dev-lang/tcl
+SLOT=0
+SRC_URI=mirror://sourceforge/tcllib/tcllib-1.15.tar.bz2
+_md5_=c5205e824f70f7bdc944a99de99a28a3

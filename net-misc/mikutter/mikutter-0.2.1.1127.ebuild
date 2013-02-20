@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.2.0.1064-r1.ebuild,v 1.1 2012/12/05 12:33:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.2.1.1127.ebuild,v 1.1 2013/02/20 15:35:05 naota Exp $
 
 EAPI=3
 
@@ -29,7 +29,8 @@ DEPEND=""
 RDEPEND="libnotify? ( x11-libs/libnotify )
 	sound? ( media-sound/alsa-utils )"
 
-ruby_add_rdepend "dev-ruby/ruby-gtk2
+ruby_add_rdepend "dev-ruby/bsearch
+	dev-ruby/ruby-gtk2
 	dev-ruby/rcairo
 	dev-ruby/httpclient
 	virtual/ruby-ssl"
@@ -41,8 +42,6 @@ each_ruby_install() {
 	doexe mikutter.rb
 	insinto /usr/share/mikutter
 	doins -r core plugin
-	insinto /usr/share/mikutter/vendor
-	doins vendor/escape.rb
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/mikutter
 	dodoc README

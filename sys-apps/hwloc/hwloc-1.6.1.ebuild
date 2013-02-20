@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.6.1.ebuild,v 1.1 2013/01/18 06:52:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.6.1.ebuild,v 1.2 2013/02/20 15:56:36 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.open-mpi.org/software/${PN}/${MY_PV}/downloads/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux"
 IUSE="cairo debug +numa +pci plugins svg static-libs xml X"
 
 RDEPEND="sys-libs/ncurses
