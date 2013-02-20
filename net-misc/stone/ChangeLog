@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/stone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/ChangeLog,v 1.21 2013/02/20 13:56:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/ChangeLog,v 1.22 2013/02/20 14:03:51 pinkbyte Exp $
+
+  20 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> stone-2.3e-r1.ebuild,
+  +files/stone.man:
+  Add missing manpage from CVS, wrt bug #252780. Thanks to Mike Kazantsev for
+  discovering this issue
 
 *stone-2.3e-r1 (20 Feb 2013)
 

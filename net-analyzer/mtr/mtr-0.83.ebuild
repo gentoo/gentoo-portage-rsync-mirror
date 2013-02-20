@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.83.ebuild,v 1.2 2013/02/20 13:55:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.83.ebuild,v 1.3 2013/02/20 14:07:12 jer Exp $
 
-EAPI="4"
-
+EAPI=5
 inherit eutils autotools flag-o-matic
 
 DESCRIPTION="My TraceRoute, an Excellent network diagnostic tool"
@@ -26,7 +25,9 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS FORMATS NEWS README SECURITY TODO )
 
 src_prepare() {
-	epatch "${FILESDIR}"/0.80-impl-dec.patch
+	epatch \
+		"${FILESDIR}"/0.80-impl-dec.patch \
+		"${FILESDIR}"/0.83-no_ipv6.patch
 
 	# Keep this comment and following mv, even in case ebuild does not need
 	# it: kept gtk-2.0.m4 in SRC_URI but you'll have to mv it before autoreconf

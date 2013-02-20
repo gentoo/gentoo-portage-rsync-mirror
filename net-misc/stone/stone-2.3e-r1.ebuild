@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/stone-2.3e-r1.ebuild,v 1.1 2013/02/20 13:56:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/stone-2.3e-r1.ebuild,v 1.2 2013/02/20 14:03:51 pinkbyte Exp $
 
 EAPI=5
 
@@ -41,5 +41,6 @@ src_compile() {
 
 src_install() {
 	dobin stone
+	newman "${FILESDIR}/${PN}.man" "${PN}.1"
 	dodoc README*
 }
