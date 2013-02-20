@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.179 2012/11/06 03:19:17 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.180 2013/02/20 22:54:26 zmedico Exp $
+
+  20 Feb 2013; Zac Medico <zmedico@gentoo.org> tar-1.26-r1.ebuild:
+  Add ~arm-linux keyword.
 
   06 Nov 2012; Mike Frysinger <vapier@gentoo.org> tar-1.26-r1.ebuild:
   Do not delete gtar for prefix systems pointed out by David James.

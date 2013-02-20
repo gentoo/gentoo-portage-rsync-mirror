@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.370 2013/02/18 21:45:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.371 2013/02/20 22:37:32 zmedico Exp $
+
+  20 Feb 2013; Zac Medico <zmedico@gentoo.org> coreutils-8.21.ebuild:
+  Fix for prefix and add ~arm-linux + ~x86-linux keywords.
 
 *coreutils-8.21 (18 Feb 2013)
 

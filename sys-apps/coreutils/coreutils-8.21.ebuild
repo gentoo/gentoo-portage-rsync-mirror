@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.21.ebuild,v 1.1 2013/02/18 21:45:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.21.ebuild,v 1.2 2013/02/20 22:37:32 zmedico Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://gnu-alpha/coreutils/${P}.tar.xz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~arm-linux ~x86-linux"
 IUSE="acl caps gmp nls selinux static userland_BSD vanilla xattr"
 
 LIB_DEPEND="acl? ( sys-apps/acl[static-libs] )
@@ -109,7 +109,7 @@ src_test() {
 		for w in "$@" ; do
 			ww="${T}/mount-wrappers/${w}"
 			cat <<-EOF > "${ww}"
-				#!/bin/sh
+				#!${EPREFIX}/bin/sh
 				exec env SANDBOX_WRITE="\${SANDBOX_WRITE}:/etc/mtab:/dev/loop" $(type -P $w) "\$@"
 			EOF
 			chmod a+rx "${ww}"
@@ -132,7 +132,7 @@ src_install() {
 	newins src/dircolors.hin DIR_COLORS || die
 
 	if [[ ${USERLAND} == "GNU" ]] ; then
-		cd "${D}"/usr/bin
+		cd "${ED}"/usr/bin
 		dodir /bin
 		# move critical binaries into /bin (required by FHS)
 		local fhs="cat chgrp chmod chown cp date dd df echo false ln ls
@@ -149,8 +149,9 @@ src_install() {
 		done
 	else
 		# For now, drop the man pages, collides with the ones of the system.
-		rm -rf "${D}"/usr/share/man
+		rm -rf "${ED}"/usr/share/man
 	fi
+
 }
 
 pkg_postinst() {
@@ -159,15 +160,15 @@ pkg_postinst() {
 	ewarn "  changes, such as: source /etc/profile"
 
 	# /bin/dircolors sometimes sticks around #224823
-	if [ -e "${ROOT}/usr/bin/dircolors" ] && [ -e "${ROOT}/bin/dircolors" ] ; then
-		if strings "${ROOT}/bin/dircolors" | grep -qs "GNU coreutils" ; then
+	if [ -e "${EROOT}/usr/bin/dircolors" ] && [ -e "${EROOT}/bin/dircolors" ] ; then
+		if strings "${EROOT}/bin/dircolors" | grep -qs "GNU coreutils" ; then
 			einfo "Deleting orphaned GNU /bin/dircolors for you"
-			rm -f "${ROOT}/bin/dircolors"
+			rm -f "${EROOT}/bin/dircolors"
 		fi
 	fi
 
 	# Help out users using experimental filesystems
-	if grep -qs btrfs "${ROOT}"/etc/fstab /proc/mounts ; then
+	if grep -qs btrfs "${EROOT}"/etc/fstab /proc/mounts ; then
 		case $(uname -r) in
 		2.6.[12][0-9]|2.6.3[0-7]*)
 			ewarn "You are running a system with a buggy btrfs driver."

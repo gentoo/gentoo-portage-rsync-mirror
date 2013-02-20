@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.128 2013/01/25 00:14:44 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.129 2013/02/20 22:45:37 zmedico Exp $
+
+  20 Feb 2013; Zac Medico <zmedico@gentoo.org> groff-1.22.1.ebuild:
+  Add ~arm-linux keyword.
 
   25 Jan 2013; Naohiro Aota <naota@gentoo.org> groff-1.22.1.ebuild:
   Bump japanese patch. #450796
