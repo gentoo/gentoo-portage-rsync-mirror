@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r3.ebuild,v 1.14 2012/10/24 19:42:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r3.ebuild,v 1.15 2013/02/20 16:48:39 jlec Exp $
 
 EAPI=3
 
@@ -49,8 +49,8 @@ src_prepare() {
 
 	# use system blas and lapack set by gentoo framework
 	sed -i \
-		-e "s:\$DEPS -lm:$(pkg-config --libs blas):" \
-		-e "s:\$DEPS -llapack -lm:$(pkg-config --libs lapack):" \
+		-e "s:\$DEPS -lm:$($(tc-getPKG_CONFIG) --libs blas):" \
+		-e "s:\$DEPS -llapack -lm:$($(tc-getPKG_CONFIG) --libs lapack):" \
 		-e 's:`depend $d $a blas`::' \
 		-e 's:X11R6:X11:g' \
 		debian/add-ons/bin/cernlib.in || die "sed failed"

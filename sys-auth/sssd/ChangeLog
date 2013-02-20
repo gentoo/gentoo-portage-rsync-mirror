@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.35 2013/01/31 19:48:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.36 2013/02/20 16:46:53 maksbotan Exp $
+
+*sssd-1.9.4-r1 (20 Feb 2013)
+
+  20 Feb 2013; Maxim Koltsov <maksbotan@gentoo.org> +sssd-1.9.4-r1.ebuild:
+  Remove samba-4 dep until it's unmasked.
 
   31 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -sssd-1.8.1-r1.ebuild,
   -sssd-1.8.2.ebuild, -sssd-1.8.4.ebuild, -sssd-1.8.5.ebuild,
