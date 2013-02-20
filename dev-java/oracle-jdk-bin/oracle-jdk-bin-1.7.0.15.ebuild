@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.11.ebuild,v 1.1 2013/01/14 06:59:45 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.15.ebuild,v 1.1 2013/02/20 12:07:43 sera Exp $
 
 EAPI="5"
 
@@ -14,9 +14,8 @@ JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-
 AT_AVAILABLE=( amd64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
 # Sometimes some or all of the demos are missing, this is to not have to rewrite half
 # the ebuild when it happens.
-#DEMOS_AVAILABLE=( amd64 arm x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
-DEMOS_AVAILABLE=()
-FX_VERSION="2_2_4"
+DEMOS_AVAILABLE=( amd64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
+FX_VERSION="2_2_7"
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"
@@ -57,7 +56,7 @@ SRC_URI+=" jce? ( ${JCE_FILE} )"
 
 LICENSE="Oracle-BCLA-JavaSE examples? ( BSD )"
 SLOT="1.7"
-KEYWORDS="-arm ~amd64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 -arm ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+X alsa derby doc examples +fontconfig jce nsplugin pax_kernel source"
 
 RESTRICT="fetch strip"

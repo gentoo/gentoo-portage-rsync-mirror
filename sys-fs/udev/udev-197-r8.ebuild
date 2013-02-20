@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r8.ebuild,v 1.9 2013/02/19 21:01:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r8.ebuild,v 1.10 2013/02/20 12:04:33 ssuominen Exp $
 
 EAPI=4
 
@@ -135,6 +135,7 @@ src_prepare()
 	cat <<-EOF > "${T}"/40-gentoo.rules
 	SUBSYSTEM=="snd", GROUP="audio"
 	SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", GROUP="usb"
+	SUBSYSTEM=="mem", KERNEL=="null|zero|full|random|urandom", MODE="0666"
 	EOF
 
 	# Remove requirements for gettext and intltool wrt bug #443028
