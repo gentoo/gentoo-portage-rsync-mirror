@@ -1,20 +1,19 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.9.ebuild,v 1.2 2012/10/23 05:08:34 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.15.ebuild,v 1.1 2013/02/20 12:00:39 sera Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit java-vm-2 eutils prefix versionator
 
-UPDATE="$(get_version_component_range 4)"
-MY_PV="$(get_version_component_range 2)u${UPDATE}"
-S_PV="$(get_version_component_range 1-3)_0${UPDATE}"
+MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
+S_PV="$(replace_version_separator 3 '_')"
 
 X86_AT="jre-${MY_PV}-linux-i586.tar.gz"
 AMD64_AT="jre-${MY_PV}-linux-x64.tar.gz"
 
 # This URIs need updating when bumping!
-JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre7u9-downloads-1859586.html"
+JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html"
 JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html"
 
 JCE_DIR="UnlimitedJCEPolicy"
@@ -29,7 +28,7 @@ SRC_URI="
 
 LICENSE="Oracle-BCLA-JavaSE"
 SLOT="1.7"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="X alsa fontconfig jce nsplugin pax_kernel"
 
 RESTRICT="fetch strip"

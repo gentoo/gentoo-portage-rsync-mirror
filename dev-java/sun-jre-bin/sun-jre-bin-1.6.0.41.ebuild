@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.38.ebuild,v 1.3 2013/01/27 16:41:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.41.ebuild,v 1.1 2013/02/20 11:46:25 sera Exp $
 
 EAPI="5"
 
 inherit java-vm-2 eutils prefix versionator
 
 # This URIs need to be updated when bumping!
-JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre6u38-downloads-1877409.html"
+JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre6downloads-1902815.html"
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"
@@ -25,7 +25,7 @@ SRC_URI="
 
 LICENSE="Oracle-BCLA-JavaSE"
 SLOT="1.6"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 -ia64 ~x86"
 IUSE="X alsa jce nsplugin pax_kernel"
 
 RESTRICT="fetch strip"
