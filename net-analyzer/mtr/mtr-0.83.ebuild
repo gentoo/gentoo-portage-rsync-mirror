@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.83.ebuild,v 1.1 2013/02/19 21:02:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.83.ebuild,v 1.2 2013/02/20 13:55:00 jer Exp $
 
 EAPI="4"
 
@@ -18,9 +18,10 @@ IUSE="gtk ipv6 suid"
 
 RDEPEND="
 	sys-libs/ncurses
+	dev-libs/glib:2
 	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
-	gtk? ( virtual/pkgconfig )"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS FORMATS NEWS README SECURITY TODO )
 
@@ -31,6 +32,9 @@ src_prepare() {
 	# it: kept gtk-2.0.m4 in SRC_URI but you'll have to mv it before autoreconf
 	mv "${WORKDIR}"/gtk-2.0-for-mtr.m4 gtk-2.0.m4 #222909
 	AT_M4DIR="." eautoreconf
+
+	append-cppflags $(pkg-config --cflags glib-2.0)
+	append-libs $(pkg-config --libs glib-2.0)
 }
 src_configure() {
 	# In the source's configure script -lresolv is commented out. Apparently it

@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/stone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/ChangeLog,v 1.20 2013/02/03 12:37:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/ChangeLog,v 1.21 2013/02/20 13:56:01 pinkbyte Exp $
+
+*stone-2.3e-r1 (20 Feb 2013)
+
+  20 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> +stone-2.3e-r1.ebuild,
+  +files/stone-2.3e-makefile.patch:
+  Revision bump: EAPI 5, base eclass, use flag-o-matic for CFLAGS handling,
+  respect LDFLAGS, wrt bug #337879
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -stone-2.2c.ebuild,
   -stone-2.2e.ebuild, metadata.xml:

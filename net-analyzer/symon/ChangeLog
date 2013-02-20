@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/symon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.13 2012/09/13 07:07:53 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.14 2013/02/20 13:38:59 jer Exp $
+
+*symon-2.86 (20 Feb 2013)
+
+  20 Feb 2013; Jeroen Roovers <jer@gentoo.org> +symon-2.86.ebuild:
+  Version bump.
 
   13 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> files/symon-init.d,
   files/symux-init.d:

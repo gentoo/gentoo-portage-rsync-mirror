@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.29 2013/02/10 11:02:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.30 2013/02/20 13:37:30 blueness Exp $
+
+  20 Feb 2013; Anthony G. Basile <blueness@gentoo.org> files/40-gentoo.rules:
+  Sync 40-gentoo.rules with sys-fs/udev, bug #457868
 
 *eudev-1_beta2-r2 (10 Feb 2013)
 
