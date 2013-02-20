@@ -14,7 +14,7 @@
  cflags=" -I${includedir} @CPPFLAGS@" 
  fflags="@FFLAGS@ @MOD_FLAG@${includedir}"
 -libs="-L${libdir} @NC_LIBS@"
-+libs="-L${libdir} @NC_LIBS@ $(nc-config --libs)"
++libs="-L${libdir} @NC_LIBS@ -lnetcdf"
  flibs="-L${libdir} @NC_FLIBS@"
  has_dap="@HAS_DAP@"
  has_nc2="@HAS_NC2@"

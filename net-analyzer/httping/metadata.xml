@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
+<use>
+<flag name='tfo'>Enable support for TCP Fast Open</flag>
+</use>
 </pkgmetadata>

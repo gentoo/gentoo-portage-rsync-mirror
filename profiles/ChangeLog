@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7508 2013/02/20 16:49:35 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7509 2013/02/20 17:01:52 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Feb 2013; Julian Ospald <hasufell@gentoo.org> license_groups:
+  add TeamViewer license to @EULA
 
   20 Feb 2013; Maxim Koltsov <maksbotan@gentoo.org> package.mask:
   Unmask sssd-1.9.4-r1
