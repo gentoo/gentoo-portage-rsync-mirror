@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ngspice/ngspice-25.ebuild,v 1.1 2013/01/17 23:22:14 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ngspice/ngspice-25.ebuild,v 1.2 2013/02/20 00:32:43 calchan Exp $
 
 EAPI="3"
 
@@ -16,7 +16,8 @@ SLOT="0"
 IUSE="X debug readline"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND="readline? ( >=sys-libs/readline-5.0 )
+DEPEND="sys-libs/ncurses
+	readline? ( >=sys-libs/readline-5.0 )
 	X? ( x11-libs/libXaw
 		x11-libs/libXt
 		x11-libs/libX11
