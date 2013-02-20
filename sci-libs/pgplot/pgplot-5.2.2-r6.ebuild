@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r5.ebuild,v 1.5 2013/01/16 20:35:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r6.ebuild,v 1.1 2013/02/20 20:12:48 bicatali Exp $
 
 EAPI=4
 
@@ -131,6 +131,8 @@ src_test() {
 src_install() {
 	insinto /usr/$(get_libdir)/pgplot
 	doins grfont.dat grexec.f *.inc rgb.txt
+	echo "PGPLOT_FONT=${EROOT%/}/usr/$(get_libdir)/pgplot/grfont.dat" >> 99pgplot
+	doenvd 99pgplot
 
 	dolib.so libpgplot.so*
 	dobin pgxwin_server pgdisp
