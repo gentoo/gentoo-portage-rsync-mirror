@@ -1,10 +1,16 @@
 # ChangeLog for dev-libs/radlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/radlib/ChangeLog,v 1.1 2013/02/19 23:00:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/radlib/ChangeLog,v 1.2 2013/02/20 18:19:03 flameeyes Exp $
+
+*radlib-2.12.0-r1 (20 Feb 2013)
+
+  20 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/radlib-2.12.0-build.patch, +radlib-2.12.0-r1.ebuild,
+  -radlib-2.12.0.ebuild:
+  Fix build.
 
 *radlib-2.12.0 (19 Feb 2013)
 
   19 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org> +radlib-2.12.0.ebuild,
   +metadata.xml:
   Initial import of radlib needed for wview.
-

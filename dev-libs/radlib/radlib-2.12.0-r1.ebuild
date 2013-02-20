@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/radlib/radlib-2.12.0.ebuild,v 1.1 2013/02/19 23:00:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/radlib/radlib-2.12.0-r1.ebuild,v 1.1 2013/02/20 18:19:03 flameeyes Exp $
 
 EAPI=5
 
-inherit autotools-utils
+inherit autotools-utils autotools
 
 DESCRIPTION="Rapid Application Development Library"
 HOMEPAGE="http://www.radlib.teel.ws/"
@@ -22,6 +22,11 @@ RDEPEND="mysql? ( dev-db/mysql )
 DEPEND="${RDEPEND}"
 
 RESTRICT_USE="^^ ( mysql postgres )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-build.patch
+	eautoreconf
+}
 
 src_configure() {
 	local myeconfargs=(
