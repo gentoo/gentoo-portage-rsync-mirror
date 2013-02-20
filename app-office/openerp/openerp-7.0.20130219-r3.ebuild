@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/openerp-7.0.20130219.ebuild,v 1.1 2013/02/19 09:31:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/openerp-7.0.20130219-r3.ebuild,v 1.1 2013/02/20 06:35:55 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit eutils distutils
+inherit eutils distutils user
 
 DESCRIPTION="Open Source ERP & CRM"
 HOMEPAGE="http://www.openerp.com/"
@@ -43,7 +43,8 @@ CDEPEND="postgres? ( dev-db/postgresql-server )
 	dev-python/vatnumber
 	dev-python/zsi
 	dev-python/mock
-	dev-python/unittest2"
+	dev-python/unittest2
+	dev-python/jinja"
 
 RDEPEND="${CDEPEND}"
 DEPEND="${CDEPEND}"
@@ -61,9 +62,8 @@ pkg_setup() {
 src_install() {
 	distutils_src_install
 
-	doinitd "${FILESDIR}/${PN}"
-	newconfd "${FILESDIR}/openerp-confd" "${PN}"
-	keepdir /var/run/openerp
+	doinitd "${FILESDIR}/${PN}-2" "${PN}"
+	newconfd "${FILESDIR}/openerp-confd-2" "${PN}"
 	keepdir /var/log/openerp
 
 	insinto /etc/logrotate.d
@@ -77,7 +77,6 @@ pkg_preinst() {
 	enewgroup ${OPENERP_GROUP}
 	enewuser ${OPENERP_USER} -1 -1 -1 ${OPENERP_GROUP}
 
-	fowners ${OPENERP_USER}:${OPENERP_GROUP} /var/run/openerp
 	fowners ${OPENERP_USER}:${OPENERP_GROUP} /var/log/openerp
 	fowners -R ${OPENERP_USER}:${OPENERP_GROUP} "$(python_get_sitedir)/${PN}/addons/"
 
@@ -85,7 +84,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	chown ${OPENERP_USER}:${OPENERP_GROUP} /var/run/openerp
 	chown ${OPENERP_USER}:${OPENERP_GROUP} /var/log/openerp
 	chown -R ${OPENERP_USER}:${OPENERP_GROUP} "$(python_get_sitedir)/${PN}/addons/"
 

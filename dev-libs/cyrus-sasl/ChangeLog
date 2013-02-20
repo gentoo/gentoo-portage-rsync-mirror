@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.267 2013/02/19 21:04:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.268 2013/02/20 06:57:20 eras Exp $
+
+  20 Feb 2013; Eray Aslan <eras@gentoo.org> cyrus-sasl-2.1.25-r4.ebuild:
+  Add net-mail/mailbase to DEPEND - bug #458408
 
   19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> cyrus-sasl-2.1.25-r4.ebuild:
   Stable for arm, wrt bug #457688

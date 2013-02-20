@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.25-r4.ebuild,v 1.9 2013/02/19 21:04:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.25-r4.ebuild,v 1.10 2013/02/20 06:57:20 eras Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib autotools pam java-pkg-opt-2 db-use
@@ -17,7 +17,8 @@ KEYWORDS="alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64
 IUSE="authdaemond berkdb gdbm kerberos ldapdb openldap mysql pam postgres sample sqlite
 srp ssl static-libs urandom"
 
-DEPEND="authdaemond? ( || ( net-mail/courier-imap mail-mta/courier ) )
+DEPEND="net-mail/mailbase
+	authdaemond? ( || ( net-mail/courier-imap mail-mta/courier ) )
 	berkdb? ( >=sys-libs/db-3.2 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	kerberos? ( virtual/krb5 )
