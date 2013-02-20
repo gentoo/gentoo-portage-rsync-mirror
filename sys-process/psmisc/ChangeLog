@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.151 2013/02/20 09:48:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.152 2013/02/20 10:18:49 ssuominen Exp $
+
+  20 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> psmisc-22.20.ebuild:
+  Fix installation when CTARGET is set and fuser is installed as eg.
+  x86_64-pc-linux-gnu-fuser wrt #458250
 
   20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> psmisc-22.20.ebuild:
   Stable for s390, wrt bug #456390

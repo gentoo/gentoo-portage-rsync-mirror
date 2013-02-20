@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.179 2013/01/29 19:52:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.180 2013/02/20 10:05:42 ago Exp $
+
+  20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> git-1.7.12.4.ebuild:
+  Stable for s390, wrt bug #436704
 
   29 Jan 2013; Fabian Groffen <grobian@gentoo.org> git-1.8.0.2.ebuild,
   git-1.8.1.2.ebuild:

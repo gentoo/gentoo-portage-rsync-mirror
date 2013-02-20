@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.20.ebuild,v 1.12 2013/02/20 09:48:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.20.ebuild,v 1.13 2013/02/20 10:18:49 ssuominen Exp $
 
 EAPI="4"
 
@@ -50,7 +50,7 @@ src_install() {
 	[[ -s ${ED}/usr/bin/peekfd ]] || rm -f "${ED}"/usr/bin/peekfd
 	[[ -e ${ED}/usr/bin/peekfd ]] || rm -f "${ED}"/usr/share/man/man1/peekfd.1
 
-	# fuser is needed by init.d scripts
+	# fuser is needed by init.d scripts; use * wildcard for #458250
 	dodir /bin
-	mv "${ED}"/usr/bin/fuser "${ED}"/bin || die
+	mv "${ED}"/usr/bin/*fuser "${ED}"/bin || die
 }
