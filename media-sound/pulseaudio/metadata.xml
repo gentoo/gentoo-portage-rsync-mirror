@@ -41,9 +41,6 @@
       Makes PulseAudio use RealtimeKit (<pkg>sys-auth/rtkit</pkg>) to get
       real-time priority while running.
     </flag>
-    <flag name="qt">
-	  Pull in deps for the equalizer GUI qpaeq (requires <pkg>dev-python/PyQt4</pkg>).
-    </flag>
     <flag name="equalizer">
       Enable the equalizer module (requires <pkg>sci-libs/fftw</pkg>).
     </flag>
