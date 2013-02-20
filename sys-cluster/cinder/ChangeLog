@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/cinder
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/ChangeLog,v 1.3 2013/02/07 18:57:19 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/ChangeLog,v 1.4 2013/02/20 05:57:08 prometheanfire Exp $
+
+*cinder-2012.2.3 (20 Feb 2013)
+
+  20 Feb 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +files/cinder-2012.2-CVE-2013-1664.patch, -cinder-2012.2.1.ebuild,
+  +cinder-2012.2.3.ebuild:
+  updating cinder and addressing CVE-2013-1664 from bug 458332
 
   07 Feb 2013; Matthew Thode <prometheanfire@gentoo.org>
   cinder-2012.2.1.ebuild:

@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.1 2013/01/26 09:18:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.2 2013/02/20 05:42:51 prometheanfire Exp $
+
+*nova-2012.2.3 (20 Feb 2013)
+*nova-2012.2.2-r1 (20 Feb 2013)
+
+  20 Feb 2013; Matthew Thode <prometheanfire@gentoo.org> -nova-2012.2.2.ebuild,
+  +nova-2012.2.2-r1.ebuild, +nova-2012.2.3.ebuild,
+  +files/nova-folsom-CVE-2013-1664.patch:
+  updating nova and addressing CVE-2013-1664 from bug 458330
 
 *nova-2012.2.2 (26 Jan 2013)
 
