@@ -1,6 +1,9 @@
 # ChangeLog for virtual/pkgconfig
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pkgconfig/ChangeLog,v 1.14 2012/09/16 16:01:43 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/pkgconfig/ChangeLog,v 1.15 2013/02/21 05:14:05 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> pkgconfig-0.ebuild:
+  Add ~arm-linux keyword.
 
   16 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> pkgconfig-0.ebuild:
   Force latest dev-util/pkgconfig to ensure installed pkg.m4 is up to date.

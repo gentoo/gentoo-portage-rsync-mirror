@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.208 2012/12/02 02:43:36 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.209 2013/02/21 05:15:55 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> libpcre-8.32.ebuild:
+  Add ~arm-linux keyword.
 
 *libpcre-8.32 (02 Dec 2012)
 
