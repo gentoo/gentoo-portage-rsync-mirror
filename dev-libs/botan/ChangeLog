@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.75 2013/01/13 00:09:55 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.76 2013/02/21 13:36:44 pinkbyte Exp $
+
+  21 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> botan-1.10.3-r1.ebuild:
+  Add ~arm keyword, wrt bug #458438
 
 *botan-1.10.3-r1 (13 Jan 2013)
 

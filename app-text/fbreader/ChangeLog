@@ -1,6 +1,12 @@
 # ChangeLog for app-text/fbreader
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.32 2013/01/19 06:13:47 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.33 2013/02/21 13:40:17 grozin Exp $
+
+*fbreader-0.99.4-r1 (21 Feb 2013)
+
+  21 Feb 2013; Andrey Grozin <grozin@gentoo.org> -fbreader-0.99.2.ebuild,
+  +fbreader-0.99.4-r1.ebuild, +files/fbreader-0.99.4.patch:
+  Fixed #452636
 
   19 Jan 2013; Andrey Grozin <grozin@gentoo.org> +fbreader-0.99.2.ebuild:
   Added 0.99.2 back, see bug #452636

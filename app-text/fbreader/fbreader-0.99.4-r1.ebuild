@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.99.2.ebuild,v 1.5 2013/01/19 06:13:47 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.99.4-r1.ebuild,v 1.1 2013/02/21 13:40:17 grozin Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils multilib
 
@@ -39,6 +39,10 @@ src_prepare() {
 	sed -e "/^CC = /d" \
 		-i makefiles/arch/desktop.mk || die "removing CC line failed"
 
+	# let portage strip the binary
+	sed -e '/@strip/d' \
+		-i fbreader/desktop/Makefile || die
+
 	# Respect *FLAGS
 	sed -e "s/^CFLAGS = -pipe/CFLAGS +=/" \
 		-i makefiles/arch/desktop.mk || die "CFLAGS sed failed"
@@ -61,6 +65,9 @@ src_prepare() {
 	else
 		echo "TARGET_STATUS = release" >> makefiles/target.mk
 	fi
+
+	# bug #452636
+	epatch "${FILESDIR}"/${P}.patch
 }
 
 src_install() {
