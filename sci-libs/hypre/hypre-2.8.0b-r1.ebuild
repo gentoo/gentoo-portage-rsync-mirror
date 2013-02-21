@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.8.0b-r1.ebuild,v 1.8 2012/10/18 21:06:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.8.0b-r1.ebuild,v 1.9 2013/02/21 21:31:38 jlec Exp $
 
 EAPI=4
 
@@ -51,16 +51,16 @@ src_configure() {
 	)
 	if use blas; then
 		myeconfargs+=(
-			--with-blas-libs="$(pkg-config --libs-only-l blas | sed -e 's/-l//g')"
-			--with-blas-lib-dirs="$(pkg-config --libs-only-L blas | sed -e 's/-L//g')"
+			--with-blas-libs="$($(tc-getPKG_CONFIG) --libs-only-l blas | sed -e 's/-l//g')"
+			--with-blas-lib-dirs="$($(tc-getPKG_CONFIG) --libs-only-L blas | sed -e 's/-L//g')"
 		)
 	else
 		myeconfargs+=( --without-blas )
 	fi
 	if use lapack; then
 		myeconfargs+=(
-			--with-lapack-libs="$(pkg-config --libs-only-l lapack | sed -e 's/-l//g')"
-			--with-lapack-lib-dirs="$(pkg-config --libs-only-L lapack | sed -e 's/-L//g')"
+			--with-lapack-libs="$($(tc-getPKG_CONFIG) --libs-only-l lapack | sed -e 's/-l//g')"
+			--with-lapack-lib-dirs="$($(tc-getPKG_CONFIG) --libs-only-L lapack | sed -e 's/-L//g')"
 		)
 	else
 		myeconfargs+=( --without-lapack )

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/dsdp-5.8-r2.ebuild,v 1.4 2012/07/11 02:31:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/dsdp-5.8-r2.ebuild,v 1.5 2013/02/21 21:38:53 jlec Exp $
 
 EAPI=4
 
-inherit eutils toolchain-funcs versionator
+inherit eutils multilib toolchain-funcs versionator
 
 MYP=DSDP${PV}
 
@@ -31,7 +31,7 @@ make_shared_lib() {
 		$([[ ${CHOST} == *-darwin* ]] && echo "-Wl,-install_name -Wl,${EPREFIX}/usr/$(get_libdir)/${soname}") \
 		-Wl,--whole-archive "${1}" -Wl,--no-whole-archive \
 		-o $(dirname "${1}")/"${soname}" \
-		-lm $(pkg-config --libs blas lapack) || return 1
+		-lm $($(tc-getPKG_CONFIG) --libs blas lapack) || return 1
 
 }
 
@@ -48,7 +48,7 @@ src_prepare() {
 		-e "s|\(CC[[:space:]]*=\).*|\1$(tc-getCC)|" \
 		-e "s|\(OPTFLAGS[[:space:]]*=\).*|\1${CFLAGS}|" \
 		-e "s|\(CLINKER[[:space:]]*=\).*|\1 \${CC} ${LDFLAGS}|" \
-		-e "s|\(LAPACKBLAS[[:space:]]*=\).*|\1 $(pkg-config --libs blas lapack)|" \
+		-e "s|\(LAPACKBLAS[[:space:]]*=\).*|\1 $($(tc-getPKG_CONFIG) --libs blas lapack)|" \
 		-e "s|\(^ARCH[[:space:]]*=\).*|\1$(tc-getAR) cr|" \
 		-e "s|\(^RANLIB[[:space:]]*=\).*|\1$(tc-getRANLIB)|" \
 		make.include || die

@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14.ebuild,v 1.9 2012/05/04 08:22:52 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14.ebuild,v 1.10 2013/02/21 21:36:16 jlec Exp $
 
 EAPI="3"
 
-inherit eutils flag-o-matic autotools
+inherit autotools eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="The GNU Scientific Library"
 HOMEPAGE="http://www.gnu.org/software/gsl/"
@@ -47,8 +47,8 @@ src_prepare() {
 
 src_configure() {
 	if use cblas-external; then
-		export CBLAS_LIBS="$(pkg-config --libs cblas)"
-		export CBLAS_CFLAGS="$(pkg-config --cflags cblas)"
+		export CBLAS_LIBS="$($(tc-getPKG_CONFIG) --libs cblas)"
+		export CBLAS_CFLAGS="$($(tc-getPKG_CONFIG) --cflags cblas)"
 	fi
 	econf $(use_with cblas-external cblas)
 }

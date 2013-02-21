@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.2.4.ebuild,v 1.1 2013/01/29 21:11:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.2.4.ebuild,v 1.2 2013/02/21 21:52:08 ulm Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ DESCRIPTION="A very powerful editor for programmers"
 HOMEPAGE="http://www.scintilla.org/SciTE.html"
 SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
 
-LICENSE="Scintilla"
+LICENSE="HPND lua? ( MIT )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="lua"

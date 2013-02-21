@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cholmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.36 2013/01/03 05:26:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.37 2013/02/21 21:56:07 jlec Exp $
+
+  21 Feb 2013; Justin Lecher <jlec@gentoo.org> cholmod-1.6.0-r1.ebuild,
+  cholmod-1.7.4.ebuild, metadata.xml:
+  Use tc-getPKG_CONFIG from toolchain-funcs.eclass instead of plain pkg-config
 
   03 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org> cholmod-2.0.1.ebuild:
   Use generic pkg-config, replace supernodal with easier lapack use flag

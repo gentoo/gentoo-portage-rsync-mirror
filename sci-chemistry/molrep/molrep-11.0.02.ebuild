@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/molrep-11.0.02.ebuild,v 1.9 2012/10/19 09:56:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/molrep-11.0.02.ebuild,v 1.10 2013/02/21 22:00:47 jlec Exp $
 
 EAPI=4
 
@@ -19,7 +19,8 @@ RDEPEND="
 	>=sci-libs/ccp4-libs-6.1.3
 	sci-libs/mmdb
 	virtual/lapack"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${PN}"
 
@@ -36,7 +37,7 @@ src_compile() {
 		MR_FORT="$(tc-getFC) ${FFLAGS}" \
 		FFLAGS="${FFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
-		MR_LIBRARY="-L${EPREFIX}/usr/$(get_libdir) -lccp4f -lccp4c $(pkg-config --libs mmdb lapack) -lccif -lstdc++ -lm"
+		MR_LIBRARY="-L${EPREFIX}/usr/$(get_libdir) -lccp4f -lccp4c $($(tc-getPKG_CONFIG) --libs mmdb lapack) -lccif -lstdc++ -lm"
 }
 
 src_test() {

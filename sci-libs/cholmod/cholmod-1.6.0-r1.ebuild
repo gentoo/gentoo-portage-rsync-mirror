@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.6.0-r1.ebuild,v 1.17 2012/05/04 08:22:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.6.0-r1.ebuild,v 1.18 2013/02/21 21:56:07 jlec Exp $
 
-inherit autotools eutils
+inherit autotools eutils toolchain-funcs
 
 MY_PN=CHOLMOD
 
@@ -64,8 +64,8 @@ src_compile() {
 	local lapack_libs=no
 	local blas_libs=no
 	if use supernodal; then
-		blas_libs=$(pkg-config --libs blas)
-		lapack_libs=$(pkg-config --libs lapack)
+		blas_libs=$($(tc-getPKG_CONFIG) --libs blas)
+		lapack_libs=$($(tc-getPKG_CONFIG) --libs lapack)
 	fi
 	econf \
 		--with-blas="${blas_libs}" \

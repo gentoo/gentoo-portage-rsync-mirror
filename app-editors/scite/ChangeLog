@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/scite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.150 2013/01/29 21:11:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.151 2013/02/21 21:52:08 ulm Exp $
+
+  21 Feb 2013; Ulrich Müller <ulm@gentoo.org> scite-3.2.3.ebuild,
+  scite-3.2.4.ebuild:
+  Update LICENSE, the Scintilla license is a duplicate of the HPND.
 
 *scite-3.2.4 (29 Jan 2013)
 
