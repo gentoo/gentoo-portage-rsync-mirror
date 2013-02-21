@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SMTP-SSL
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SMTP-SSL/ChangeLog,v 1.18 2012/11/18 11:30:34 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SMTP-SSL/ChangeLog,v 1.19 2013/02/20 23:38:53 zmedico Exp $
+
+  20 Feb 2013; Zac Medico <zmedico@gentoo.org> Net-SMTP-SSL-1.10.0.ebuild:
+  Add ~arm-linux keyword.
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

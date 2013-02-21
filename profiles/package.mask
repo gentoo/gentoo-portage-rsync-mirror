@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14484 2013/02/20 16:49:35 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14485 2013/02/20 23:32:19 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -288,11 +288,6 @@ app-misc/secure-delete
 # Pacho Ramos <pacho@gentoo.org>
 # No upstream, doesn't work well (#350559). Removal in a month.
 app-misc/ccal
-
-# Pacho Ramos <pacho@gentoo.org>
-# Upstream dead for a long time, broken php support (#356841).
-# Removal in a month.
-www-apache/mod_vhs
 
 # Pacho Ramos <pacho@gentoo.org>
 # Still uses depend.php (#449820), upstream dead for ages and

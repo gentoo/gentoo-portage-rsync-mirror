@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/vo-aacenc-9999.ebuild,v 1.9 2012/08/04 17:26:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/vo-aacenc-9999.ebuild,v 1.10 2013/02/20 23:34:12 zmedico Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 
 [[ ${PV} == *9999 ]] || \
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos"
 IUSE="examples static-libs neon"
 
 src_prepare() {

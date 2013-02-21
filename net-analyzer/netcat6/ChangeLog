@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netcat6
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.30 2012/07/24 00:16:06 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.31 2013/02/21 00:01:15 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> netcat6-1.0-r2.ebuild:
+  Add ~arm-linux keyword.
 
   24 Jul 2012; Anthony G. Basile <blueness@gentoo.org> netcat6-1.0-r2.ebuild:
   Keyword ~mips
@@ -103,4 +106,3 @@
 
   02 Jun 2003; Peter Johanson <latexer@gentoo.org> netcat6-0.5.ebuild:
   Initial import. Netcat version that supports IPv6 also
-

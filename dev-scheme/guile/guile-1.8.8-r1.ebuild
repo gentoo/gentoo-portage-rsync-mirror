@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.8-r1.ebuild,v 1.13 2012/11/02 17:31:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-1.8.8-r1.ebuild,v 1.14 2013/02/20 23:36:45 zmedico Exp $
 
 EAPI=3
 inherit eutils autotools flag-o-matic elisp-common
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnu.org/software/guile/"
 SRC_URI="mirror://gnu/guile/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="networking +regex discouraged +deprecated emacs nls debug-freelist debug-malloc debug +threads"
 RESTRICT="!regex? ( test )"
 
