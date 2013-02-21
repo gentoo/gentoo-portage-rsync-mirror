@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.15.ebuild,v 1.7 2011/07/15 15:59:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.15.ebuild,v 1.8 2013/02/21 10:28:53 scarabeus Exp $
 
-EAPI=2
+EAPI=5
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="IBM's Journaling Filesystem (JFS) Utilities"
 HOMEPAGE="http://jfs.sourceforge.net/"
@@ -18,6 +18,13 @@ IUSE="static"
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}"
 
+DOCS=( AUTHORS ChangeLog NEWS README )
+
+src_prepare() {
+	epatch \
+		"${FILESDIR}/${P}-linux-headers.patch"
+}
+
 src_configure() {
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
@@ -27,10 +34,9 @@ src_configure() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README
+	default
 
-	rm -f "${D}"/sbin/{mkfs,fsck}.jfs
+	rm -f "${ED}"/sbin/{mkfs,fsck}.jfs || die
 	dosym /sbin/jfs_mkfs /sbin/mkfs.jfs
 	dosym /sbin/jfs_fsck /sbin/fsck.jfs
 }
