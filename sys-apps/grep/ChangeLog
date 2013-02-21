@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/grep
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.124 2012/12/24 01:32:46 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.125 2013/02/21 18:52:58 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> grep-2.9.ebuild:
+  Add ~arm-linux keyword.
 
   24 Dec 2012; Mike Frysinger <vapier@gentoo.org> grep-2.14.ebuild:
   Mark alpha/s390/sh stable #436692.

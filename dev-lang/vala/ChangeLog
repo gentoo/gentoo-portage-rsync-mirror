@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.136 2013/01/06 20:08:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.137 2013/02/21 18:40:06 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> vala-0.18.1.ebuild:
+  Add ~arm-linux keyword.
 
   06 Jan 2013; Raúl Porcel <armin76@gentoo.org> vala-0.10.4-r2.ebuild,
   vala-0.12.1-r1.ebuild, vala-0.14.2-r2.ebuild, vala-0.16.1-r2.ebuild:

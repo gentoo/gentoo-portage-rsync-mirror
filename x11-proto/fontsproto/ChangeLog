@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/fontsproto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/fontsproto/ChangeLog,v 1.55 2012/08/26 18:10:38 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/fontsproto/ChangeLog,v 1.56 2013/02/21 18:44:37 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> fontsproto-2.1.2.ebuild:
+  Add ~arm-linux keyword.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> fontsproto-2.1.2.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -205,4 +208,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +fontsproto-2.0.ebuild:
   Initial commit for modular X
-

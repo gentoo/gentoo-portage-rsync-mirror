@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lame
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.160 2012/09/09 17:35:17 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.161 2013/02/21 18:41:59 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> lame-3.99.5.ebuild:
+  Add ~arm-linux keyword.
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> lame-3.99.5.ebuild:
   alpha/ia64/sh/sparc stable wrt #426420

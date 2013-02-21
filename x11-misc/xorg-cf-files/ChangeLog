@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xorg-cf-files
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.46 2012/05/09 16:16:50 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xorg-cf-files/ChangeLog,v 1.47 2013/02/21 18:47:07 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> xorg-cf-files-1.0.4.ebuild:
+  Add ~arm-linux keyword.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> xorg-cf-files-1.0.4.ebuild:
   keyword ~amd64-fbsd
@@ -199,4 +202,3 @@
   20 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org> +metadata.xml,
   +xorg-cf-files-0.99.1.ebuild:
   New package for 7.0 RC1.
-

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbitmaps
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbitmaps/ChangeLog,v 1.45 2012/05/06 00:06:33 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbitmaps/ChangeLog,v 1.46 2013/02/21 18:45:49 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> xbitmaps-1.1.1.ebuild:
+  Add ~arm-linux keyword.
 
   06 May 2012; Alexis Ballier <aballier@gentoo.org> xbitmaps-1.1.1.ebuild:
   keyword ~amd64-fbsd
@@ -158,4 +161,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +xbitmaps-0.99.0.ebuild:
   Initial commit for modular X.
-

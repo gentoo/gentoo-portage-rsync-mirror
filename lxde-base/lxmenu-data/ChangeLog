@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxmenu-data
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxmenu-data/ChangeLog,v 1.19 2012/08/25 00:01:43 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxmenu-data/ChangeLog,v 1.20 2013/02/21 18:48:02 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> lxmenu-data-0.1.2.ebuild:
+  Add ~arm-linux keyword.
 
   25 Aug 2012; Markos Chandras <hwoarang@gentoo.org> -lxmenu-data-0.1.1.ebuild:
   Remove old LXDE packages

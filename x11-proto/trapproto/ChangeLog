@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/trapproto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/trapproto/ChangeLog,v 1.32 2012/05/09 16:15:27 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/trapproto/ChangeLog,v 1.33 2013/02/21 18:35:14 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> trapproto-3.4.3.ebuild:
+  Add ~arm-linux keyword.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> trapproto-3.4.3.ebuild:
   keyword ~amd64-fbsd
@@ -122,4 +125,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +trapproto-3.4.ebuild:
   Initial commit for modular X
-
