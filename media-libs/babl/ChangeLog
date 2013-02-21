@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/babl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.44 2012/12/17 20:09:36 sping Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.45 2013/02/21 18:07:17 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> babl-0.1.10.ebuild:
+  Add ~arm-linux keyword.
 
   17 Dec 2012; Sebastian Pipping <sping@gentoo.org> babl-0.1.10.ebuild,
   +files/babl-0.1.10-clang.patch:
@@ -158,4 +161,3 @@
   07 Oct 2008; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
   +babl-0.0.22.ebuild:
   Initial commit of babl library.
-

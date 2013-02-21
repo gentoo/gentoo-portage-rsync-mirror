@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/compositeproto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/compositeproto/ChangeLog,v 1.54 2012/05/06 01:08:41 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/compositeproto/ChangeLog,v 1.55 2013/02/21 18:20:36 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> compositeproto-0.4.2.ebuild:
+  Add ~arm-linux keyword.
 
   06 May 2012; Alexis Ballier <aballier@gentoo.org>
   compositeproto-0.4.2.ebuild:
@@ -218,4 +221,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +compositeproto-0.2.ebuild:
   Initial commit for modular X
-

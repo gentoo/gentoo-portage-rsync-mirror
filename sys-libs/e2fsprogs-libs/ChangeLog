@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.93 2012/10/07 16:17:39 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.94 2013/02/21 18:19:43 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> e2fsprogs-libs-1.42.6.ebuild:
+  Add ~arm-linux keyword.
 
 *e2fsprogs-libs-1.42.6 (07 Oct 2012)
 

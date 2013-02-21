@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xineramaproto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xineramaproto/ChangeLog,v 1.51 2012/05/08 23:52:13 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xineramaproto/ChangeLog,v 1.52 2013/02/21 18:02:23 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> xineramaproto-1.2.1.ebuild:
+  Add ~arm-linux keyword.
 
   08 May 2012; Alexis Ballier <aballier@gentoo.org> xineramaproto-1.2.1.ebuild:
   keyword ~amd64-fbsd
@@ -214,4 +217,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +panoramixproto-1.1.ebuild:
   Initial commit for modular X
-

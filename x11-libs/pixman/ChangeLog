@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pixman
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.157 2013/02/07 16:32:54 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.158 2013/02/21 18:24:25 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> pixman-0.29.2.ebuild:
+  Add ~arm-linux keyword.
 
   07 Feb 2013; Matt Turner <mattst88@gentoo.org> pixman-0.29.2.ebuild:
   Typo fix for loongson-mmi, bug 455966.

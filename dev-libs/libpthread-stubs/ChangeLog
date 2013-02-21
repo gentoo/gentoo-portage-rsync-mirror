@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpthread-stubs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.25 2012/04/26 18:46:12 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.26 2013/02/21 18:23:32 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> libpthread-stubs-0.3.ebuild:
+  Add ~arm-linux keyword.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   libpthread-stubs-0.3.ebuild:

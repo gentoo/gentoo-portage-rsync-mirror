@@ -1,6 +1,16 @@
 # ChangeLog for games-arcade/sdl-sopwith
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/ChangeLog,v 1.16 2013/01/21 05:09:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/ChangeLog,v 1.18 2013/02/21 18:25:37 pinkbyte Exp $
+
+  21 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> sdl-sopwith-1.7.5-r1.ebuild:
+  Minor QA fixes, stable on amd64, wrt bug #458504
+
+*sdl-sopwith-1.7.5-r1 (21 Feb 2013)
+
+  21 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> +sdl-sopwith-1.7.5-r1.ebuild,
+  +files/sdl-sopwith-1.7.5-video-fix.patch:
+  Revision bump: add fix for segfault issue during video device detection,
+  discovered in bug #458504
 
 *sdl-sopwith-1.7.5 (21 Jan 2013)
 
