@@ -1,6 +1,17 @@
 # ChangeLog for app-text/acroread
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.191 2012/12/19 16:57:44 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.193 2013/02/21 19:37:49 scarabeus Exp $
+
+  21 Feb 2013; Tomáš Chvátal <scarabeus@gentoo.org> acroread-9.5.4.ebuild:
+  Stable on amd64 and x86.
+
+*acroread-9.5.4 (21 Feb 2013)
+
+  21 Feb 2013; Tomáš Chvátal <scarabeus@gentoo.org> +acroread-9.5.4.ebuild,
+  -acroread-9.5.1-r1.ebuild, -acroread-9.5.1.ebuild, metadata.xml:
+  Version bump to latest secure version, drop older. Cleanup ebuild to lose the
+  linguas support as last release with them was 9.1 and add html useflag
+  (renamed from minimal) wrt bug#332075.
 
   19 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   acroread-9.5.1.ebuild, acroread-9.5.1-r1.ebuild:
