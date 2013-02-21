@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/damageproto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/damageproto/ChangeLog,v 1.54 2012/05/06 00:11:15 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/damageproto/ChangeLog,v 1.55 2013/02/21 17:58:14 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> damageproto-1.2.1.ebuild:
+  Add ~arm-linux keyword.
 
   06 May 2012; Alexis Ballier <aballier@gentoo.org> damageproto-1.2.1.ebuild:
   keyword ~amd64-fbsd
@@ -203,4 +206,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +damageproto-1.0.ebuild:
   Initial commit for modular X
-

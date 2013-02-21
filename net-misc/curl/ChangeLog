@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.258 2013/02/12 13:56:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.259 2013/02/21 17:33:29 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> curl-7.29.0-r1.ebuild:
+  Add ~arm-linux keyword.
 
 *curl-7.29.0-r1 (12 Feb 2013)
 
