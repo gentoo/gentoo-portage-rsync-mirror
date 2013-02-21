@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.173 2013/01/28 20:06:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.174 2013/02/21 19:22:08 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> wget-1.14.ebuild:
+  Add ~arm-linux keyword.
 
   28 Jan 2013; Mike Frysinger <vapier@gentoo.org> wget-1.13.4-r1.ebuild,
   wget-1.14.ebuild:

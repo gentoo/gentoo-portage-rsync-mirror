@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.121 2013/02/19 00:50:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.122 2013/02/21 19:27:57 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> dbus-glib-0.100-r2.ebuild,
+  dbus-glib-0.100.1.ebuild:
+  Add ~arm-linux keywords.
 
 *dbus-glib-0.100.1 (19 Feb 2013)
 

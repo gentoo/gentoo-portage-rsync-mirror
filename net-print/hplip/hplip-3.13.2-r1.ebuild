@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.2.ebuild,v 1.1 2013/02/14 19:15:19 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.2-r1.ebuild,v 1.1 2013/02/21 19:10:07 billie Exp $
 
 EAPI=5
 
@@ -245,6 +245,14 @@ src_install() {
 		python_export EPYTHON PYTHON
 		python_optimize "${D}"/usr/share/hplip
 	fi
+}
+
+pkg_preinst() {
+	# remove temporary directory so it is recreated with correct permissions
+	# this ensures correct permissions when upgrading from the vulnerable
+	# versions affected by bug #452586
+	# remove this after some time
+	rm -rf "${ROOT%/}/var/log/hp"
 }
 
 pkg_postinst() {

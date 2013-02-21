@@ -1,6 +1,9 @@
 # ChangeLog for virtual/editor
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/editor/ChangeLog,v 1.25 2012/10/07 22:22:29 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/editor/ChangeLog,v 1.26 2013/02/21 19:20:56 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> editor-0.ebuild:
+  Add ~arm-linux keyword.
 
   07 Oct 2012; Ulrich Müller <ulm@gentoo.org> editor-0.ebuild:
   Update package providing pico from pine to alpine.
@@ -79,4 +82,3 @@
   +editor-0.ebuild:
   initial commit to remove all the PROVIDE=virtual/editor statements in
   various ebuilds
-

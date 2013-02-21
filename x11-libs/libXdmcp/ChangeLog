@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXdmcp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdmcp/ChangeLog,v 1.70 2012/08/26 17:40:44 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdmcp/ChangeLog,v 1.71 2013/02/21 19:24:42 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> libXdmcp-1.1.1.ebuild:
+  Add ~arm-linux keyword.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libXdmcp-1.1.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -252,4 +255,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +libXdmcp-0.99.0.ebuild:
   Initial commit for modular X.
-
