@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cpulimit/cpulimit-1.8.ebuild,v 1.1 2012/12/30 13:45:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cpulimit/cpulimit-1.8.ebuild,v 1.2 2013/02/21 12:50:23 pinkbyte Exp $
 
 EAPI=5
 
@@ -20,6 +20,8 @@ RDEPEND=""
 
 src_prepare() {
 	tc-export CC
+	# set correct VERSION
+	sed -i -e '/^#define VERSION/s/1.7/1.8/' cpulimit.c || die 'sed on VERSION string failed'
 }
 
 src_install() {
