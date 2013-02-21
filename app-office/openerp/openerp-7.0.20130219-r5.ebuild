@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/openerp-7.0.20130219-r4.ebuild,v 1.1 2013/02/20 07:24:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/openerp-7.0.20130219-r5.ebuild,v 1.1 2013/02/21 05:46:33 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -62,7 +62,7 @@ pkg_setup() {
 src_install() {
 	distutils_src_install
 
-	doinitd "${FILESDIR}/${PN}-2" "${PN}"
+	newinitd "${FILESDIR}/${PN}-2" "${PN}"
 	newconfd "${FILESDIR}/openerp-confd-2" "${PN}"
 	keepdir /var/log/openerp
 
