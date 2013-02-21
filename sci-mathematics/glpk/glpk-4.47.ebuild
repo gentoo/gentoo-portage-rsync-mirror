@@ -1,9 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.47.ebuild,v 1.5 2012/12/11 18:33:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.47.ebuild,v 1.6 2013/02/21 16:53:29 jlec Exp $
 
 EAPI=4
-inherit flag-o-matic toolchain-funcs
+
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="GNU Linear Programming Kit"
 LICENSE="GPL-3"
@@ -18,7 +19,6 @@ RDEPEND="
 	gmp? ( dev-libs/gmp )
 	mysql? ( virtual/mysql )
 	odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) )"
-
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -47,4 +47,5 @@ src_install() {
 		doins -r examples
 	fi
 	use doc && dodoc doc/*.pdf doc/notes/*.pdf doc/*.txt
+	prune_libtool_files
 }
