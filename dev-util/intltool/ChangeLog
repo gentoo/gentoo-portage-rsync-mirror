@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.164 2012/05/28 16:08:34 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.165 2013/02/21 03:01:23 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> intltool-0.50.2.ebuild:
+  Add ~arm-linux keyword.
 
   28 May 2012; Samuli Suominen <ssuominen@gentoo.org> -intltool-0.50.0.ebuild:
   old

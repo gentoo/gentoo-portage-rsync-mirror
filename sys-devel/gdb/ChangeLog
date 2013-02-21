@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.235 2013/02/20 09:46:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.236 2013/02/21 03:21:28 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> gdb-7.5.1.ebuild,
+  gdb-9999.ebuild:
+  Add ~arm-linux keyword.
 
   20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gdb-7.5.1.ebuild:
   Stable for s390, wrt bug #457796

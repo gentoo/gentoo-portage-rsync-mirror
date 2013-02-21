@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit-dev
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.113 2011/09/20 22:11:46 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.114 2013/02/21 03:23:54 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> gentoolkit-dev-0.2.8.ebuild:
+  Add ~arm-linux keyword.
 
   20 Sep 2011; Michał Górny <mgorny@gentoo.org> gentoolkit-dev-9999.ebuild:
   Add HTTP fallback for git-2. Sorry for missing it in the first commit.
