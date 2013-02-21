@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/version
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.65 2013/02/19 21:58:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.66 2013/02/21 14:59:08 ago Exp $
+
+  21 Feb 2013; Agostino Sarubbo <ago@gentoo.org> version-0.990.100.ebuild:
+  Stable for ia64, wrt bug #458122
 
   19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> version-0.990.100.ebuild:
   Stable for arm, wrt bug #458122

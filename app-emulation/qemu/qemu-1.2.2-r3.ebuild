@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2-r3.ebuild,v 1.2 2013/02/10 21:50:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2-r3.ebuild,v 1.3 2013/02/21 14:53:45 cardoe Exp $
 
 EAPI=5
 
@@ -400,6 +400,10 @@ src_install() {
 		use python && dobin "${S}/scripts/kvm/kvm_stat"
 		use python && dobin "${S}/scripts/kvm/vmxcap"
 	fi
+
+	# Install config file example for qemu-bridge-helper
+	insinto "/etc/qemu"
+	doins "${FILESDIR}/bridge.conf"
 
 	cd "${S}"
 	dodoc Changelog MAINTAINERS TODO pci-ids.txt

@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Safe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Safe/ChangeLog,v 1.35 2013/02/19 19:15:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Safe/ChangeLog,v 1.36 2013/02/21 14:54:59 ago Exp $
+
+  21 Feb 2013; Agostino Sarubbo <ago@gentoo.org> Safe-2.330.0.ebuild:
+  Stable for ia64, wrt bug #458122
 
   19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> Safe-2.330.0.ebuild:
   Stable for alpha, wrt bug #458122

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-7.0.9377.ebuild,v 1.1 2013/02/20 02:39:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-7.0.9377.ebuild,v 1.2 2013/02/21 14:33:17 hasufell Exp $
 
 EAPI=5
 
@@ -84,7 +84,7 @@ src_install () {
 
 	newicon -s 48 "${S}"/.tvscript/${PN}.png ${MY_PN}.png
 	dodoc linux_FAQ_{EN,DE}.txt
-	make_desktop_entry ${MY_PN} TeamViewer ${MY_PN}
+	make_desktop_entry ${MY_PN} TeamViewer-${MV} ${MY_PN}
 }
 
 pkg_preinst() {

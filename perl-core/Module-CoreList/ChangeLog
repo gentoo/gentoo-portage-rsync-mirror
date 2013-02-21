@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Module-CoreList
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/ChangeLog,v 1.61 2013/02/19 21:53:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/ChangeLog,v 1.62 2013/02/21 14:52:51 ago Exp $
+
+  21 Feb 2013; Agostino Sarubbo <ago@gentoo.org> Module-CoreList-2.800.0.ebuild:
+  Stable for ia64, wrt bug #458122
 
   19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> Module-CoreList-2.800.0.ebuild:
   Stable for arm, wrt bug #458122

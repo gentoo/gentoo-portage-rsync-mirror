@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Sys-Syslog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.62 2013/02/19 21:55:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.63 2013/02/21 14:56:03 ago Exp $
+
+  21 Feb 2013; Agostino Sarubbo <ago@gentoo.org> Sys-Syslog-0.320.0.ebuild:
+  Stable for ia64, wrt bug #458122
 
   19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> Sys-Syslog-0.320.0.ebuild:
   Stable for arm, wrt bug #458122
