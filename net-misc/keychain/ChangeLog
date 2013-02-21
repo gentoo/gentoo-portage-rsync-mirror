@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/keychain
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.95 2012/10/06 15:08:54 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.96 2013/02/21 00:02:01 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> keychain-2.7.1-r1.ebuild:
+  Add ~arm-linux keyword.
 
 *keychain-2.7.1-r1 (06 Oct 2012)
 

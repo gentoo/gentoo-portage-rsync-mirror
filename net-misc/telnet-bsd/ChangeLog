@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/telnet-bsd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.47 2012/07/26 20:18:01 ryao Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.48 2013/02/21 00:02:47 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> telnet-bsd-1.2-r1.ebuild:
+  Add ~arm-linux keyword.
 
   26 Jul 2012; Richard Yao <ryao@gentoo.org> telnet-bsd-1.2-r1.ebuild:
   Keyword ~amd64-fbsd

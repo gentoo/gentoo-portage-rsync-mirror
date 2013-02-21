@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mailx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.84 2012/10/09 10:03:54 eras Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.85 2013/02/21 00:23:21 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> mailx-8.1.2.20050715-r6.ebuild:
+  Add ~arm-linux keyword.
 
   01 Oct 2012; Eray Aslan <eras@gentoo.org> -mailx-8.1.2.20050715-r5.ebuild,
   mailx-8.1.2.20050715-r6.ebuild:

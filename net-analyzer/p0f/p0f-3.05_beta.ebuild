@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-3.05_beta.ebuild,v 1.1 2012/05/14 11:38:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-3.05_beta.ebuild,v 1.2 2013/02/21 00:24:39 zmedico Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="http://lcamtuf.coredump.cx/p0f3/releases/${MY_P}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos"
 IUSE="debug ipv6"
 
 RDEPEND="net-libs/libpcap"

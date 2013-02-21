@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Parser
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.64 2012/09/01 12:02:13 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/ChangeLog,v 1.65 2013/02/21 00:19:51 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> XML-Parser-2.410.0-r1.ebuild:
+  Add ~arm-linux keyword.
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> XML-Parser-2.410.0-r1.ebuild:
   Marked ~ppc-aix, bug #432288

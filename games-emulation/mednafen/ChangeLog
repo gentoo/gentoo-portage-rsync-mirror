@@ -1,9 +1,6 @@
 # ChangeLog for games-emulation/mednafen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.42 2013/02/20 23:47:20 mr_bones_ Exp $
-
-  20 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> mednafen-0.9.28.ebuild:
-  add glu dep (bug #458512)
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.43 2013/02/21 00:05:51 mr_bones_ Exp $
 
   14 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> mednafen-0.9.28.ebuild:
   add opengl to libsdl use deps (bug #457606)

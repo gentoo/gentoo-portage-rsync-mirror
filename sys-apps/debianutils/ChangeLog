@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.192 2013/02/20 09:49:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.193 2013/02/21 00:14:49 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> debianutils-4.3.4.ebuild:
+  Add ~arm-linux and ~x86-linux keywords.
 
   20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> debianutils-4.3.4.ebuild:
   Stable for s390, wrt bug #450348

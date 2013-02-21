@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.180 2012/12/21 21:02:27 swegener Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.181 2013/02/21 00:12:06 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> screen-4.0.3-r7.ebuild,
+  screen-4.0.3-r8.ebuild:
+  Add ~arm-linux keywords.
 
 *screen-4.0.3-r8 (21 Dec 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/p0f
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.50 2012/05/14 11:38:17 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.51 2013/02/21 00:24:39 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> p0f-3.05_beta.ebuild:
+  Add ~arm-linux keyword.
 
 *p0f-3.05_beta (14 May 2012)
 
@@ -185,5 +188,3 @@
 	21 Feb 2002; F.Meyndert <m0rpheus@gentoo.org> p0f-1.8.2.ebuild
 	Added  ebuild for p0f, p0f performs passive OS detection based
 	on SYN packets.
-
-

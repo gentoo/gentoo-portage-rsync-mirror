@@ -4,10 +4,10 @@ DESCRIPTION=MTD userspace tools (NFTL, JFFS2, NAND, FTL, UBI)
 EAPI=3
 HOMEPAGE=http://git.infradead.org/?p=mtd-utils.git;a=summary
 IUSE=xattr
-KEYWORDS=amd64 arm ~mips ppc x86 ~amd64-linux ~x86-linux
+KEYWORDS=amd64 arm ~mips ppc x86 ~amd64-linux ~arm-linux ~x86-linux
 LICENSE=GPL-2
 RDEPEND=!sys-fs/mtd dev-libs/lzo sys-libs/zlib >=sys-apps/util-linux-2.16
 SLOT=0
 SRC_URI=http://git.infradead.org/mtd-utils.git/snapshot/v1.5.0.tar.gz -> mtd-utils-1.5.0.tar.gz
 _eclasses_=eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	3facff03591093044e38f21285a02129
-_md5_=024d4d141808febe32ed7c0f290db089
+_md5_=8dc6ca4687850be20c652fcea308101b
