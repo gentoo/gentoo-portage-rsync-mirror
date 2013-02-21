@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pngquant
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngquant/ChangeLog,v 1.1 2013/02/20 18:36:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngquant/ChangeLog,v 1.2 2013/02/21 09:55:42 ssuominen Exp $
+
+  21 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> pngquant-1.8.2.ebuild:
+  Change license from own "pngquant" to new separate "rwpng" (+ "HPND")
 
 *pngquant-1.8.2 (20 Feb 2013)
 
