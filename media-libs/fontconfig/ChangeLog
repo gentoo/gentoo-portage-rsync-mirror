@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.163 2013/02/09 07:39:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.164 2013/02/21 17:07:25 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> fontconfig-2.9.0.ebuild:
+  Fix for prefix and add ~arm-linux + ~x86-linux keywords.
 
   09 Feb 2013; Mike Frysinger <vapier@gentoo.org> fontconfig-2.10.2.ebuild:
   Drop cross-compiling hacks since upstream handles it now #284762.

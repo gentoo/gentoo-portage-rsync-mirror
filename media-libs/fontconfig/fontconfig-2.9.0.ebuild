@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.9.0.ebuild,v 1.2 2012/05/05 08:02:34 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.9.0.ebuild,v 1.3 2013/02/21 17:07:25 zmedico Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://fontconfig.org/release/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="1.0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="doc static-libs"
 
 # Purposefully dropped the xml USE flag and libxml2 support.  Expat is the
@@ -52,9 +52,9 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable doc docs) \
 		$(use_enable doc docbook) \
-		--localstatedir=/var \
-		--with-default-fonts=/usr/share/fonts \
-		--with-add-fonts=/usr/local/share/fonts \
+		--localstatedir="${EPREFIX}"/var \
+		--with-default-fonts="${EPREFIX}"/usr/share/fonts \
+		--with-add-fonts="${EPREFIX}"/usr/local/share/fonts \
 		${myconf} || die
 }
 
@@ -75,9 +75,9 @@ src_install() {
 	dodoc doc/fontconfig-user.{txt,pdf}
 	dodoc AUTHORS ChangeLog README
 
-	if [[ -e ${D}usr/share/doc/fontconfig/ ]];  then
-		mv "${D}"usr/share/doc/fontconfig/* "${D}"/usr/share/doc/${P}
-		rm -rf "${D}"usr/share/doc/fontconfig
+	if [[ -e ${ED}usr/share/doc/fontconfig/ ]];  then
+		mv "${ED}"usr/share/doc/fontconfig/* "${ED}"/usr/share/doc/${P}
+		rm -rf "${ED}"usr/share/doc/fontconfig
 	fi
 
 	# Changes should be made to /etc/fonts/local.conf, and as we had
@@ -87,7 +87,7 @@ src_install() {
 
 	# As of fontconfig 2.7, everything sticks their noses in here.
 	dodir /etc/sandbox.d
-	echo 'SANDBOX_PREDICT="/var/cache/fontconfig"' > "${D}"/etc/sandbox.d/37fontconfig
+	echo 'SANDBOX_PREDICT="/var/cache/fontconfig"' > "${ED}"/etc/sandbox.d/37fontconfig
 }
 
 pkg_preinst() {
@@ -95,15 +95,15 @@ pkg_preinst() {
 	# /etc/fonts/conf.d/ contains symlinks to ../conf.avail/ to include various
 	# config files.  If we install as-is, we'll blow away user settings.
 	ebegin "Syncing fontconfig configuration to system"
-	if [[ -e ${ROOT}/etc/fonts/conf.d ]]; then
-		for file in "${ROOT}"/etc/fonts/conf.avail/*; do
+	if [[ -e ${EROOT}/etc/fonts/conf.d ]]; then
+		for file in "${EROOT}"/etc/fonts/conf.avail/*; do
 			f=${file##*/}
-			if [[ -L ${ROOT}/etc/fonts/conf.d/${f} ]]; then
-				[[ -f ${D}etc/fonts/conf.avail/${f} ]] \
-					&& ln -sf ../conf.avail/"${f}" "${D}"etc/fonts/conf.d/ &>/dev/null
+			if [[ -L ${EROOT}/etc/fonts/conf.d/${f} ]]; then
+				[[ -f ${ED}etc/fonts/conf.avail/${f} ]] \
+					&& ln -sf ../conf.avail/"${f}" "${ED}"etc/fonts/conf.d/ &>/dev/null
 			else
-				[[ -f ${D}etc/fonts/conf.avail/${f} ]] \
-					&& rm "${D}"etc/fonts/conf.d/"${f}" &>/dev/null
+				[[ -f ${ED}etc/fonts/conf.avail/${f} ]] \
+					&& rm "${ED}"etc/fonts/conf.d/"${f}" &>/dev/null
 			fi
 		done
 	fi
@@ -111,20 +111,20 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	einfo "Cleaning broken symlinks in "${ROOT}"etc/fonts/conf.d/"
-	find -L "${ROOT}"etc/fonts/conf.d/ -type l -delete
+	einfo "Cleaning broken symlinks in "${EROOT}"etc/fonts/conf.d/"
+	find -L "${EROOT}"etc/fonts/conf.d/ -type l -delete
 
 	echo
 	ewarn "Please make fontconfig configuration changes using \`eselect fontconfig\`"
 	ewarn "Any changes made to /etc/fonts/fonts.conf will be overwritten."
 	ewarn
 	ewarn "If you need to reset your configuration to upstream defaults, delete"
-	ewarn "the directory ${ROOT}etc/fonts/conf.d/ and re-emerge fontconfig."
+	ewarn "the directory ${EROOT}etc/fonts/conf.d/ and re-emerge fontconfig."
 	echo
 
 	if [[ ${ROOT} = / ]]; then
 		ebegin "Creating global font cache"
-		/usr/bin/fc-cache -srf
+		"${EPREFIX}"/usr/bin/fc-cache -srf
 		eend $?
 	fi
 }
