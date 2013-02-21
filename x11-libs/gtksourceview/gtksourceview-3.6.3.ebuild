@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.6.1.ebuild,v 1.1 2012/12/16 20:22:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.6.3.ebuild,v 1.1 2013/02/20 23:02:13 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,25 +17,21 @@ IUSE="glade +introspection"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 
 # Note: has native OSX support, prefix teams, attack!
-RDEPEND=">=x11-libs/gtk+-3.4:3[introspection?]
+RDEPEND="
+	>=x11-libs/gtk+-3.4:3[introspection?]
 	>=dev-libs/libxml2-2.6:2
 	>=dev-libs/glib-2.32:2
 	glade? ( >=dev-util/glade-3.9:3.10 )
-	introspection? ( >=dev-libs/gobject-introspection-0.9.0 )"
+	introspection? ( >=dev-libs/gobject-introspection-0.9.0 )
+"
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.50
 	>=sys-devel/gettext-0.17
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 src_prepare() {
-	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README"
-	G2CONF="${G2CONF}
-		--disable-deprecations
-		--enable-providers
-		$(use_enable glade glade-catalog)
-		$(use_enable introspection)"
-
 	gnome2_src_prepare
 
 	sed -i -e 's:--warn-all::' gtksourceview/Makefile.in || die
@@ -46,11 +42,20 @@ src_prepare() {
 		-i tests/test-languagemanager.c || die
 }
 
+src_configure() {
+	gnome2_src_configure \
+		--disable-deprecations \
+		--enable-providers \
+		$(use_enable glade glade-catalog) \
+		$(use_enable introspection)
+}
+
 src_test() {
 	Xemake check
 }
 
 src_install() {
+	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README"
 	gnome2_src_install
 
 	insinto /usr/share/${PN}-3.0/language-specs

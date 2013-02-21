@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/lua
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.170 2012/09/09 14:58:48 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.171 2013/02/20 23:27:06 zmedico Exp $
+
+  20 Feb 2013; Zac Medico <zmedico@gentoo.org> lua-5.1.5.ebuild,
+  lua-5.2.1.ebuild:
+  Fix for prefix and add ~arm-linux + ~x86-linux keywords.
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> lua-5.1.4-r8.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #430752

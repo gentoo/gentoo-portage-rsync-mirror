@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/LWP-Protocol-https
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-Protocol-https/ChangeLog,v 1.19 2012/06/24 12:59:14 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-Protocol-https/ChangeLog,v 1.20 2013/02/20 23:07:06 zmedico Exp $
+
+  20 Feb 2013; Zac Medico <zmedico@gentoo.org> LWP-Protocol-https-6.30.0.ebuild:
+  Add ~arm-linux keyword.
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

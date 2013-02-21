@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/pump
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.55 2013/02/20 19:54:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.56 2013/02/20 23:17:49 pinkbyte Exp $
+
+  20 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> pump-0.8.24-r4.ebuild:
+  Respect AR, wrt bug #458482. Thanks to Agostino Sarubbo for discovering this
+  issue
 
   20 Feb 2013; Jeroen Roovers <jer@gentoo.org> pump-0.8.24-r4.ebuild:
   Stable for HPPA (bug #457458).

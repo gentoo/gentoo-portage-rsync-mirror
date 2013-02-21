@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/keynote
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.23 2013/01/21 19:08:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.24 2013/02/20 23:26:27 pinkbyte Exp $
+
+  20 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> keynote-2.3-r3.ebuild:
+  Export path to current AR executable, wrt bug #448904
 
   21 Jan 2013; Ulrich Müller <ulm@gentoo.org> keynote-2.3-r3.ebuild:
   Fix LICENSE, see LICENSE file, bug 453292.

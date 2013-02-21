@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/WWW-Mechanize
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.89 2013/01/13 13:36:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.90 2013/02/20 23:31:00 zmedico Exp $
+
+  20 Feb 2013; Zac Medico <zmedico@gentoo.org> WWW-Mechanize-1.720.0.ebuild:
+  Add ~arm-linux keyword.
 
   13 Jan 2013; Markus Meier <maekke@gentoo.org> WWW-Mechanize-1.720.0.ebuild:
   add ~arm, bug #449762

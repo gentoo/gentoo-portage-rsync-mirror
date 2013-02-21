@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3-r3.ebuild,v 1.4 2013/01/21 19:08:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3-r3.ebuild,v 1.5 2013/02/20 23:26:27 pinkbyte Exp $
 
 EAPI=5
 
@@ -21,6 +21,8 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	tc-export AR CC RANLIB
+	# bug #448904
+	export ac_cv_path_AR="$(type -p $(tc-getAR))"
 }
 
 src_prepare() {
