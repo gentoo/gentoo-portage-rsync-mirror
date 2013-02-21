@@ -10,4 +10,4 @@ RDEPEND=>=sci-libs/gsl-1.14 virtual/blas >=x11-libs/agg-2.5 >=media-libs/freetyp
 SLOT=0
 SRC_URI=http://download.savannah.gnu.org/releases/gsl-shell/gsl-shell-2.2.0.tar.gz
 _eclasses_=eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=12123d1fa280465653c6f624691592f3
+_md5_=3dddb6606f15f7ee0f35cc36342e6c80

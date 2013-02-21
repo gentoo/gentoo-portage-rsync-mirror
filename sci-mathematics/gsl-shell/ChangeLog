@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/gsl-shell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/ChangeLog,v 1.7 2013/02/01 12:09:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/ChangeLog,v 1.8 2013/02/21 14:12:55 jlec Exp $
+
+  21 Feb 2013; Justin Lecher <jlec@gentoo.org> gsl-shell-2.2.0.ebuild,
+  metadata.xml:
+  Use tc-getPKG_CONFIG from toolchain-funcs.eclass instead of plain pkg-config
 
   01 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gsl-shell-2.2.0.ebuild:
   move media-fonts/freefont-ttf into media-fonts/freefont
