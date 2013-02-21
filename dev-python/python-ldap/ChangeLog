@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-ldap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.120 2012/12/27 09:24:39 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/ChangeLog,v 1.121 2013/02/21 11:14:02 mgorny Exp $
+
+*python-ldap-2.4.10-r1 (21 Feb 2013)
+
+  21 Feb 2013; Michał Górny <mgorny@gentoo.org> +python-ldap-2.4.10-r1.ebuild:
+  Migrate to distutils-r1. Enable a subset of tests.
 
   27 Dec 2012; Raúl Porcel <armin76@gentoo.org> python-ldap-2.4.10.ebuild:
   alpha/sparc stable wrt #441298
