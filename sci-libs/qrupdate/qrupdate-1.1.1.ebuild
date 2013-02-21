@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/qrupdate-1.1.1.ebuild,v 1.7 2012/10/16 20:02:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qrupdate/qrupdate-1.1.1.ebuild,v 1.8 2013/02/21 21:26:09 jlec Exp $
 
 EAPI=4
 
@@ -24,8 +24,8 @@ src_prepare() {
 	sed -i Makeconf \
 		-e "s:gfortran:$(tc-getFC):g" \
 		-e "s:FFLAGS=.*:FFLAGS=${FFLAGS}:" \
-		-e "s:BLAS=.*:BLAS=$(pkg-config --libs blas):" \
-		-e "s:LAPACK=.*:LAPACK=$(pkg-config --libs lapack):" \
+		-e "s:BLAS=.*:BLAS=$($(tc-getPKG_CONFIG) --libs blas):" \
+		-e "s:LAPACK=.*:LAPACK=$($(tc-getPKG_CONFIG) --libs lapack):" \
 		-e "/^LIBDIR=/a\PREFIX=${EPREFIX}/usr" \
 		-e "s:LIBDIR=lib:LIBDIR=$(get_libdir):" \
 		|| die "Failed to set up Makeconf"

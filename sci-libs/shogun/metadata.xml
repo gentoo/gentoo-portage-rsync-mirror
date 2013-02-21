@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci</herd>
-	<longdescription lang="en">
+  <herd>sci</herd>
+  <longdescription lang="en">
    SHOGUN - is a new machine learning toolbox with focus on large
    scale kernel methods and especially on Support Vector Machines
    (SVM) with focus to bioinformatics. It provides a generic SVM
@@ -21,14 +21,14 @@
    (e.g. substracting the mean) can be attached to each feature object
    allowing for on-the-fly pre-processing.
 </longdescription>
-	<use>
-		<flag name="arpack">Enable support for <pkg>sci-libs/arpack</pkg></flag>
-		<flag name="glpk">Enable support for <pkg>sci-mathematics/glpk</pkg></flag>
-		<flag name="json">Enable support for parsing JSON format</flag>
-		<flag name="lpsolve">Enable support for Linear Programming Solver</flag>
-		<flag name="R">Enable support for <pkg>dev-lang/R</pkg></flag>
-		<flag name="octave">Enable support for <pkg>sci-mathematics/octave</pkg></flag>
-		<flag name="snappy">Enable support for snappy compression</flag>
-		<flag name="superlu">Enable support for <pkg>sci-libs/superlu</pkg></flag>
-	</use>
+  <use>
+    <flag name="arpack">Enable support for <pkg>sci-libs/arpack</pkg></flag>
+    <flag name="glpk">Enable support for <pkg>sci-mathematics/glpk</pkg></flag>
+    <flag name="json">Enable support for parsing JSON format</flag>
+    <flag name="lpsolve">Enable support for Linear Programming Solver</flag>
+    <flag name="R">Enable support for <pkg>dev-lang/R</pkg></flag>
+    <flag name="octave">Enable support for <pkg>sci-mathematics/octave</pkg></flag>
+    <flag name="snappy">Enable support for snappy compression</flag>
+    <flag name="superlu">Enable support for <pkg>sci-libs/superlu</pkg></flag>
+  </use>
 </pkgmetadata>

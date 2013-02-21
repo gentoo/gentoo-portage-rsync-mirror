@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.2.0.ebuild,v 1.17 2012/10/16 19:17:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.2.0.ebuild,v 1.18 2013/02/21 21:20:21 jlec Exp $
 
-inherit autotools eutils fortran-2
+inherit autotools eutils fortran-2 toolchain-funcs
 
 MY_PN=UMFPACK
 
@@ -32,7 +32,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		--with-blas="$(pkg-config --libs blas)"
+		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)"
 	emake || die "emake failed"
 }
 

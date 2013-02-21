@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/taucs-2.2.ebuild,v 1.10 2012/10/16 19:31:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/taucs-2.2.ebuild,v 1.11 2013/02/21 21:22:10 jlec Exp $
 
 EAPI=4
 
@@ -38,12 +38,12 @@ src_configure() {
 		CFLAGS=${CFLAGS} -fPIC
 		FFLAGS=${FFLAGS} -fPIC
 		LDFLAGS=${LDFLAGS} -fPIC
-		LIBBLAS=$(pkg-config --libs blas)
-		LIBLAPACK=$(pkg-config --libs lapack)
+		LIBBLAS=$($(tc-getPKG_CONFIG) --libs blas)
+		LIBLAPACK=$($(tc-getPKG_CONFIG) --libs lapack)
 		LIBF77=
 	EOF
 
-	echo "LIBMETIS=$(pkg-config --libs metis)" >> config/linux_shared.mk
+	echo "LIBMETIS=$($(tc-getPKG_CONFIG) --libs metis)" >> config/linux_shared.mk
 	# no cat <<EOF because -o has a trailing space
 	if use cilk; then
 		echo "CILKC=cilkc" >> config/linux_shared.mk
@@ -67,7 +67,7 @@ src_compile() {
 	cd lib/linux_shared
 	$(tc-getFC) ${LDFLAGS} -shared -Wl,-soname=libtaucs.so.1 \
 		-Wl,--whole-archive libtaucs.a -Wl,--no-whole-archive \
-		$(pkg-config --libs blas lapack metis) \
+		$($(tc-getPKG_CONFIG) --libs blas lapack metis) \
 		-o libtaucs.so.1.0.0 \
 		|| die "shared lib linking failed"
 }

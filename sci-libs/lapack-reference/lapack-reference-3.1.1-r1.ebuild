@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1-r1.ebuild,v 1.32 2013/02/01 07:08:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1-r1.ebuild,v 1.33 2013/02/21 21:27:56 jlec Exp $
 
 inherit autotools eutils fortran-2 flag-o-matic multilib toolchain-funcs
 
@@ -46,9 +46,9 @@ src_unpack() {
 
 	# set up the testing routines
 	sed -e "s:g77:$(tc-getFC):" \
-		-e "s:-funroll-all-loops -O3:${FFLAGS} $(pkg-config --cflags blas):" \
-		-e "s:LOADOPTS =:LOADOPTS = ${LDFLAGS} $(pkg-config --cflags blas):" \
-		-e "s:../../blas\$(PLAT).a:$(pkg-config --libs blas):" \
+		-e "s:-funroll-all-loops -O3:${FFLAGS} $($(tc-getPKG_CONFIG) --cflags blas):" \
+		-e "s:LOADOPTS =:LOADOPTS = ${LDFLAGS} $($(tc-getPKG_CONFIG) --cflags blas):" \
+		-e "s:../../blas\$(PLAT).a:$($(tc-getPKG_CONFIG) --libs blas):" \
 		-e "s:lapack\$(PLAT).a:SRC/.libs/liblapack.a:" \
 		make.inc.example > make.inc \
 		|| die "Failed to set up make.inc"
@@ -57,7 +57,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--libdir="/usr/$(get_libdir)/lapack/reference" \
-		--with-blas="$(pkg-config --libs blas)"
+		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)"
 	emake || die "emake failed"
 }
 

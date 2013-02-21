@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/shogun-1.1.0.ebuild,v 1.4 2012/08/04 20:51:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/shogun-1.1.0.ebuild,v 1.5 2013/02/21 21:24:38 jlec Exp $
 
 EAPI=4
 
@@ -19,9 +19,10 @@ LICENSE="GPL-3 free-noncomm"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="arpack bzip2 doc examples glpk gzip hdf5 json lapack lpsolve mono lua lzma
-	lzo java R ruby	octave python readline snappy static-libs superlu test xml"
+	lzo java R ruby octave python readline snappy static-libs superlu test xml"
 
-RDEPEND="sci-libs/gsl
+RDEPEND="
+	sci-libs/gsl
 	sys-libs/zlib
 	arpack? ( sci-libs/arpack )
 	bzip2? ( app-arch/bzip2 )
@@ -67,7 +68,7 @@ src_prepare() {
 	sed -i \
 		-e 's/dist-packages/site-packages/g' \
 		-e '/^COMP_OPTS=/d' \
-		-e "s:-llapack -lcblas:$(pkg-config --libs cblas lapack):g" \
+		-e "s:-llapack -lcblas:$($(tc-getPKG_CONFIG) --libs cblas lapack):g" \
 		configure || die
 
 	# disable ldconfig which violates sandbox

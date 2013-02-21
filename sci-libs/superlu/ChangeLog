@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/superlu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.20 2012/12/12 20:31:31 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.21 2013/02/21 21:23:07 jlec Exp $
+
+  21 Feb 2013; Justin Lecher <jlec@gentoo.org> superlu-4.1-r1.ebuild:
+  Use tc-getPKG_CONFIG from toolchain-funcs.eclass instead of plain pkg-config
 
   12 Dec 2012; Justin Lecher <jlec@gentoo.org> superlu-4.3.ebuild:
   Respect AR and RANLIB

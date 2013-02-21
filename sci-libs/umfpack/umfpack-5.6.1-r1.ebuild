@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.6.1-r1.ebuild,v 1.2 2012/11/21 23:56:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.6.1-r1.ebuild,v 1.3 2013/02/21 21:20:21 jlec Exp $
 
 EAPI=4
 
-inherit autotools-utils
+inherit autotools-utils toolchain-funcs
 
 DESCRIPTION="Unsymmetric multifrontal sparse LU factorization library"
 HOMEPAGE="http://www.cise.ufl.edu/research/sparse/umfpack"
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	local myeconfargs+=(
-		--with-blas="$(pkg-config --libs blas)"
+		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)"
 		$(use_with doc)
 		$(use_with cholmod)
 	)

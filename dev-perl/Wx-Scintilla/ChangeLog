@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Wx-Scintilla
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Wx-Scintilla/ChangeLog,v 1.9 2013/01/06 14:48:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Wx-Scintilla/ChangeLog,v 1.10 2013/02/21 21:27:58 ulm Exp $
+
+  21 Feb 2013; Ulrich Müller <ulm@gentoo.org> Wx-Scintilla-0.390.0.ebuild:
+  Update LICENSE, the Scintilla license is a duplicate of the HPND.
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> -Wx-Scintilla-0.380.100.ebuild:
   Cleanup

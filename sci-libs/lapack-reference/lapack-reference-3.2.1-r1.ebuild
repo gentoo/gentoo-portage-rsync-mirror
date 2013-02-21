@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1-r1.ebuild,v 1.16 2013/02/01 07:08:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1-r1.ebuild,v 1.17 2013/02/21 21:27:56 jlec Exp $
 
 EAPI=3
 
@@ -47,9 +47,9 @@ src_prepare() {
 
 	# set up the testing routines
 	sed -e "s:g77:$(tc-getFC):" \
-		-e "s:-funroll-all-loops -O3:${FFLAGS} $(pkg-config --cflags blas):" \
-		-e "s:LOADOPTS =:LOADOPTS = ${LDFLAGS} $(pkg-config --cflags blas):" \
-		-e "s:../../blas\$(PLAT).a:$(pkg-config --libs blas):" \
+		-e "s:-funroll-all-loops -O3:${FFLAGS} $($(tc-getPKG_CONFIG) --cflags blas):" \
+		-e "s:LOADOPTS =:LOADOPTS = ${LDFLAGS} $($(tc-getPKG_CONFIG) --cflags blas):" \
+		-e "s:../../blas\$(PLAT).a:$($(tc-getPKG_CONFIG) --libs blas):" \
 		-e "s:lapack\$(PLAT).a:SRC/.libs/liblapack.a:" \
 		make.inc.example > make.inc \
 		|| die "Failed to set up make.inc"
@@ -65,7 +65,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--libdir="${EPREFIX}/usr/$(get_libdir)/lapack/reference" \
-		--with-blas="$(pkg-config --libs blas)"
+		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)"
 }
 
 src_install() {

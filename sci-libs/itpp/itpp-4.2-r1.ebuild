@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.14 2012/07/17 08:11:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/itpp-4.2-r1.ebuild,v 1.15 2013/02/21 21:30:40 jlec Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=yes
 
-inherit autotools-utils flag-o-matic
+inherit autotools-utils flag-o-matic toolchain-funcs
 
 DESCRIPTION="C++ library of mathematical, signal processing and communication"
 HOMEPAGE="http://itpp.sourceforge.net/"
@@ -43,9 +43,9 @@ src_prepare() {
 
 src_configure() {
 	local blasconf="no"
-	use blas && blasconf="$(pkg-config --libs blas)"
+	use blas && blasconf="$($(tc-getPKG_CONFIG) --libs blas)"
 	local lapackconf="no"
-	use lapack && lapackconf="$(pkg-config --libs blas lapack)"
+	use lapack && lapackconf="$($(tc-getPKG_CONFIG) --libs blas lapack)"
 
 	local myeconfargs=(
 		--docdir="${EPREFIX}/usr/share/doc/${PF}"

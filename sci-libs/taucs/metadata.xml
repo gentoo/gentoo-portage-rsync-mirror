@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci</herd>
-	<longdescription lang="en">
+  <herd>sci</herd>
+  <longdescription lang="en">
   TAUCS is a C library of sparse linear solvers.
   The current version of the library (1.0) includes the following
   functionality:
@@ -23,7 +23,7 @@
   * Multilevel-Support-Graph Preconditioners.
   * Utility Routines
 </longdescription>
-	<use>
-		<flag name="cilk">Enable multithreading using <pkg>dev-lang/cilk</pkg>)</flag>
-	</use>
+  <use>
+    <flag name="cilk">Enable multithreading using <pkg>dev-lang/cilk</pkg>)</flag>
+  </use>
 </pkgmetadata>

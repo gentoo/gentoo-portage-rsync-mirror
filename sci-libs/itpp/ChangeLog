@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/itpp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.116 2012/08/03 19:24:33 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.117 2013/02/21 21:30:40 jlec Exp $
+
+  21 Feb 2013; Justin Lecher <jlec@gentoo.org> -itpp-4.0.6.ebuild,
+  itpp-4.2-r1.ebuild, itpp-4.2-r2.ebuild, metadata.xml:
+  Use tc-getPKG_CONFIG from toolchain-funcs.eclass instead of plain pkg-config
 
   03 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> itpp-4.2-r2.ebuild:
   Keyword amd64-linux x86-linux
