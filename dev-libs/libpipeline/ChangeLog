@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpipeline
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.23 2013/02/20 10:08:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.24 2013/02/21 16:22:22 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> libpipeline-1.2.2.ebuild:
+  Add ~arm-linux and ~x86-linux keywords.
 
   20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libpipeline-1.2.2.ebuild:
   Stable for s390, wrt bug #455026
