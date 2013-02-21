@@ -1,6 +1,9 @@
 # ChangeLog for media-video/get_flash_videos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/ChangeLog,v 1.15 2013/02/16 08:27:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/ChangeLog,v 1.16 2013/02/21 02:55:21 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> get_flash_videos-1.24-r1.ebuild:
+  Add ~arm-linux keyword.
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> get_flash_videos-1.24-r1.ebuild:
   Don't show elog messages always (#457596)

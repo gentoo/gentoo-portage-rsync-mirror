@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/wmpuzzle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wmpuzzle/ChangeLog,v 1.8 2013/01/20 12:24:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wmpuzzle/ChangeLog,v 1.9 2013/02/21 02:59:37 mr_bones_ Exp $
+
+  21 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> wmpuzzle-0.5.1.ebuild:
+  update menu icon handling
 
 *wmpuzzle-0.5.1 (20 Jan 2013)
 
@@ -31,4 +34,3 @@
 
   17 Jan 2008; Samuli Suominen <ssuominen@gentoo.org> +wmpuzzle-0.5.0.ebuild:
   Initial commit. Ebuild by Kenneth Prugh a.k.a. Ken69267
-

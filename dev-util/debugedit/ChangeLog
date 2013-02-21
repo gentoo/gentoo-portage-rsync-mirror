@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debugedit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.32 2013/02/03 11:40:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.33 2013/02/21 02:57:16 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> debugedit-5.3.5-r1.ebuild:
+  Add ~arm-linux keyword.
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #453094
