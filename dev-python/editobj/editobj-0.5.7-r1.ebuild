@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/editobj-0.5.7-r1.ebuild,v 1.7 2013/02/14 22:10:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/editobj-0.5.7-r1.ebuild,v 1.8 2013/02/21 13:29:03 ago Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="http://download.gna.org/songwrite/${MY_P}.tar.gz"
 HOMEPAGE="http://home.gna.org/oomadness/en/editobj/index.html"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ia64 ppc x86"
+KEYWORDS="amd64 ia64 ppc x86"
 SLOT="0"
 IUSE=""
 

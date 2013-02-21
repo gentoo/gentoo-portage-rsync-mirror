@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/editobj
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/ChangeLog,v 1.23 2013/02/14 22:10:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/ChangeLog,v 1.24 2013/02/21 13:29:03 ago Exp $
+
+  21 Feb 2013; Agostino Sarubbo <ago@gentoo.org> editobj-0.5.7-r1.ebuild:
+  Stable for ia64, wrt bug #457188
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> editobj-0.5.7-r1.ebuild:
   Stable for ppc, wrt bug #457188

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.3-r1.ebuild,v 1.14 2012/05/04 07:46:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.3-r1.ebuild,v 1.15 2013/02/21 13:30:58 jlec Exp $
 
 EAPI=4
 inherit eutils base autotools toolchain-funcs
@@ -75,8 +75,8 @@ src_configure() {
 		--localstatedir="${EPREFIX}/var/state/octave" \
 		--enable-shared \
 		--without-hdf5 \
-		--with-blas="$(pkg-config --libs blas)" \
-		--with-lapack="$(pkg-config --libs lapack)" \
+		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)" \
+		--with-lapack="$($(tc-getPKG_CONFIG) --libs lapack)" \
 		$(use_enable doc docs) \
 		$(use_enable readline) \
 		$(use_with curl) \

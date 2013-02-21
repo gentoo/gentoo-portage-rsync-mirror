@@ -3,10 +3,10 @@ DEPEND==dev-lang/python-2* =dev-lang/python-2*[tk]
 DESCRIPTION=EditObj can create a dialog box to edit ANY Python object.
 EAPI=3
 HOMEPAGE=http://home.gna.org/oomadness/en/editobj/index.html
-KEYWORDS=amd64 ~ia64 ppc x86
+KEYWORDS=amd64 ia64 ppc x86
 LICENSE=GPL-2
 RDEPEND==dev-lang/python-2* =dev-lang/python-2*[tk]
 SLOT=0
 SRC_URI=http://download.gna.org/songwrite/EditObj-0.5.7.tar.gz
 _eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=9eaf71ae3a73506342953e010f0ab960
+_md5_=c10b5397273feed6c2100ead67da4c12
