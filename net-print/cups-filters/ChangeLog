@@ -1,6 +1,17 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.50 2013/02/06 12:57:25 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.51 2013/02/21 11:41:20 scarabeus Exp $
+
+*cups-filters-1.0.29-r1 (21 Feb 2013)
+*cups-filters-9999-r1 (21 Feb 2013)
+
+  21 Feb 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +cups-filters-1.0.29-r1.ebuild, +cups-filters-9999-r1.ebuild,
+  -cups-filters-1.0.25.ebuild, -cups-filters-1.0.29.ebuild,
+  -cups-filters-9999.ebuild, -files/cups-filters-1.0.24-rev7009.diff,
+  files/cups-browsed.init.d:
+  Remove oldest. Revision bump to fix typo in initscript wrt bug#457076. Update
+  live ebuild to eapi5.
 
   06 Feb 2013; Mark Wright <gienah@gentoo.org>
   +files/cups-filters-1.0.29-poppler-0.22.patch, cups-filters-1.0.29.ebuild:

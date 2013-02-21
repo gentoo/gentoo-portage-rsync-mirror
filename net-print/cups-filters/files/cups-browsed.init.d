@@ -1,7 +1,7 @@
 #!/sbin/runscript
 
 depend() {
-	need cups avahi-daemon
+	need cupsd avahi-daemon
 }
 
 start() {
