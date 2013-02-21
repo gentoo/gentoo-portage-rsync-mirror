@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14485 2013/02/20 23:32:19 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14486 2013/02/21 08:27:22 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Justin Lecher <jlec@gentoo.org> (21 Feb 2013)
+# Temporary mask, because compatibility with recent tcl is not proven
+=dev-tcltk/tcllib-1.15
 
 # Michael Sterrett <mr_bones_@gentoo.org> (18 Feb 2013)
 # Quite dead.  Use games-engines/stratagus instead.

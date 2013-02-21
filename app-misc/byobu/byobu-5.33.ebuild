@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-5.27.ebuild,v 1.2 2013/01/17 15:23:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-5.33.ebuild,v 1.1 2013/02/21 08:11:32 radhermit Exp $
 
 EAPI=5
-
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
 inherit python-single-r1
@@ -21,7 +20,6 @@ RDEPEND="
 	dev-libs/newt
 	screen? ( app-misc/screen )
 	!screen? ( app-misc/tmux )"
-DEPEND=""
 
 src_prepare() {
 	python_fix_shebang .
