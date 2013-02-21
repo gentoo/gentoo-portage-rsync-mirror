@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.13-r1.ebuild,v 1.2 2013/02/16 11:44:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.13-r1.ebuild,v 1.3 2013/02/21 09:28:59 mgorny Exp $
 
 EAPI=5
 
@@ -58,7 +58,7 @@ python_test() {
 
 	local t
 	for t in test_*.py; do
-		"${PYTHON}" "${t}" || ewarn "Test ${t} fails with ${EPYTHON}"
+		"${PYTHON}" "${t}" || die "Test ${t} fails with ${EPYTHON}"
 	done
 }
 

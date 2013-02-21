@@ -1,28 +1,31 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.7.51.ebuild,v 1.1 2013/02/21 07:15:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.7.51.ebuild,v 1.2 2013/02/21 09:26:24 swegener Exp $
 
 EAPI=5
-
-MY_P=${P}-nolib
 
 inherit toolchain-funcs
 
 DESCRIPTION="Portable Network Graphics (PNG) optimizing utility"
 HOMEPAGE="http://pmt.sourceforge.net/pngcrush/"
-SRC_URI="mirror://sourceforge/pmt/${MY_P}.tar.xz"
+SRC_URI="system-libs? ( mirror://sourceforge/pmt/${P}-nolib.tar.xz )
+	!system-libs? ( mirror://sourceforge/pmt/${P}.tar.xz )"
 
 LICENSE="pngcrush"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE=""
+IUSE="+system-libs"
 
-RDEPEND=">=media-libs/libpng-1.4:0
-	sys-libs/zlib"
+RDEPEND="system-libs? (
+		>=media-libs/libpng-1.4:0
+		sys-libs/zlib
+	)"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
-S=${WORKDIR}/${MY_P}
+pkg_setup() {
+	use system-libs && S+="-nolib"
+}
 
 src_compile() {
 	emake \
