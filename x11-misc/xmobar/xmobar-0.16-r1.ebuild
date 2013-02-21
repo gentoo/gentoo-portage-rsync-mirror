@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/xmobar-0.16.ebuild,v 1.2 2013/02/09 18:49:06 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmobar/xmobar-0.16-r1.ebuild,v 1.1 2013/02/21 20:58:50 slyfox Exp $
 
 EAPI=5
 
@@ -59,8 +59,8 @@ src_configure() {
 		$(cabal_flag mpd with_mpd) \
 		$(cabal_flag alsa with_alsa) \
 		$(cabal_flag timezone with_datezone) \
-		$(cabal_flag wifi with_iwlib)
-		$(cabal_flag dbus with_wbus)
+		$(cabal_flag wifi with_iwlib) \
+		$(cabal_flag dbus with_wbus) \
 		$(cabal_flag mpris with_mpris)
 }
 

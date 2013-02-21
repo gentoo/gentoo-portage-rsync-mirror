@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/t4k-common/t4k-common-0.1.1.ebuild,v 1.1 2013/01/20 21:50:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/t4k-common/t4k-common-0.1.1.ebuild,v 1.2 2013/02/21 20:44:06 nimiux Exp $
 
 EAPI=5
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://alioth.debian.org/frs/download.php/3540/t4k_common-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="static-libs svg"
 
 RDEPEND="dev-libs/libxml2:2
