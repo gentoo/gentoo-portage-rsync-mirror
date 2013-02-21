@@ -1,6 +1,14 @@
 # ChangeLog for dev-cpp/asio
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.32 2012/08/05 20:43:13 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.33 2013/02/21 22:58:37 idl0r Exp $
+
+*asio-1.4.8-r1 (21 Feb 2013)
+
+  21 Feb 2013; Christian Ruppert <idl0r@gentoo.org> -asio-1.4.8.ebuild,
+  +asio-1.4.8-r1.ebuild, +files/asio-1.4.8_declarations.patch, metadata.xml:
+  Add a patch to fix some function declarations,
+  http://sourceforge.net/tracker/?func=detail&aid=3291113&group_id=122478&atid=
+  694037
 
   05 Aug 2012; Anthony G. Basile <blueness@gentoo.org> asio-1.4.8.ebuild:
   Keyword ~arm

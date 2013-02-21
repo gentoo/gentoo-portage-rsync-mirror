@@ -1,8 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/asio-1.4.8.ebuild,v 1.2 2012/08/05 20:43:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/asio-1.4.8-r1.ebuild,v 1.1 2013/02/21 22:58:37 idl0r Exp $
 
 EAPI=4
+
+inherit eutils
 
 DESCRIPTION="Asynchronous Network Library"
 HOMEPAGE="http://asio.sourceforge.net/"
@@ -27,6 +29,10 @@ all:
 install:
 		EOF
 	fi
+
+	# Added ASIO_DECL to a number of function definitions
+	# http://sourceforge.net/tracker/?func=detail&aid=3291113&group_id=122478&atid=694037
+	epatch "${FILESDIR}/${P}_declarations.patch"
 }
 
 src_install() {
