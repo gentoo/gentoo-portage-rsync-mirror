@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/arpack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.48 2013/01/08 02:50:20 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.49 2013/02/21 15:43:40 jlec Exp $
+
+  21 Feb 2013; Justin Lecher <jlec@gentoo.org> arpack-0.96-r3.ebuild,
+  metadata.xml:
+  Use tc-getPKG_CONFIG from toolchain-funcs.eclass instead of plain pkg-config
 
   08 Jan 2013; Denis Dupeyron <calchan@gentoo.org> arpack-3.1.2.ebuild:
   Fix typo in tc-getPKG_CONFIG.

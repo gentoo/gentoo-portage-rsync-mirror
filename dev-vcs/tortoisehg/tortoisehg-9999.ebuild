@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-9999.ebuild,v 1.16 2013/02/10 16:58:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-9999.ebuild,v 1.17 2013/02/21 15:40:09 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -30,7 +30,7 @@ IUSE="doc"
 RDEPEND="${HG_DEPEND}
 	dev-python/iniparse[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
-	dev-python/PyQt4
+	dev-python/PyQt4[svg,${PYTHON_USEDEP}]
 	dev-python/qscintilla-python"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-1.0.3 )"

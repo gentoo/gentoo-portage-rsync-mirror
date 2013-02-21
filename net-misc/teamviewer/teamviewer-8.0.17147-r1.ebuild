@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-8.0.17147.ebuild,v 1.2 2013/02/21 14:33:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-8.0.17147-r1.ebuild,v 1.1 2013/02/21 15:51:17 hasufell Exp $
 
 EAPI=5
 
-inherit eutils gnome2-utils
+inherit eutils gnome2-utils systemd
 
 # Major version
 MV=${PV/\.*}
@@ -98,6 +98,7 @@ src_install () {
 	doexe ${PN}d
 
 	doinitd "${T}"/${PN}d-${MV}
+	systemd_dounit "${FILESDIR}"/${PN}.service
 
 	newicon -s 48 desktop/${PN}.png ${MY_PN}.png
 	dodoc ../linux_FAQ_{EN,DE}.txt

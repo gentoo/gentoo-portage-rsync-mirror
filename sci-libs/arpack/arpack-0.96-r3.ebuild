@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-0.96-r3.ebuild,v 1.4 2012/10/19 10:39:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-0.96-r3.ebuild,v 1.5 2013/02/21 15:43:40 jlec Exp $
 
 EAPI=4
 
@@ -49,13 +49,13 @@ src_prepare() {
 	# fix examples library paths
 	sed -i \
 		-e '/^include/d' \
-		-e "s:\$(ALIBS):-larpack $(pkg-config --libs blas lapack):g" \
+		-e "s:\$(ALIBS):-larpack $($(tc-getPKG_CONFIG) --libs blas lapack):g" \
 		-e 's:$(FFLAGS):$(FFLAGS) $(LDFLAGS):g' \
 		EXAMPLES/*/makefile || die "sed failed"
 
 	sed -i \
 		-e '/^include/d' \
-		-e "s:\$(PLIBS):-larpack -lparpack $(pkg-config --libs blas lapack):g" \
+		-e "s:\$(PLIBS):-larpack -lparpack $($(tc-getPKG_CONFIG) --libs blas lapack):g" \
 		-e 's:_$(PLAT)::g' \
 		-e 's:$(PFC):mpif77:g' \
 		-e 's:$(PFFLAGS):$(FFLAGS) $(LDFLAGS) $(EXTOBJS):g' \
@@ -69,8 +69,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--with-blas="$(pkg-config --libs blas)" \
-		--with-lapack="$(pkg-config --libs lapack)" \
+		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)" \
+		--with-lapack="$($(tc-getPKG_CONFIG) --libs lapack)" \
 		$(use_enable static-libs static) \
 		$(use_enable mpi)
 }

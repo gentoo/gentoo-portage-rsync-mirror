@@ -1,10 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.438 2013/02/20 02:41:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.439 2013/02/21 15:43:33 ago Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Agostino Sarubbo <ago@gentoo.org< (21 Feb 2013)
+# Mask vpx because requires new libvpx and is not ready to go to stable
+>=media-plugins/gst-plugins-meta-1.0 vpx
 
 # Julian Ospald <hasufell@gentoo.org> (20 Feb 2013)
 # Unsupported and experimental.

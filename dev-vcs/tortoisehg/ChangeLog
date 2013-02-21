@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.32 2013/02/10 16:58:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.33 2013/02/21 15:40:09 floppym Exp $
+
+  21 Feb 2013; Mike Gilbert <floppym@gentoo.org> tortoisehg-2.7.ebuild,
+  tortoisehg-9999.ebuild:
+  Depend on dev-python/PyQt4[svg], bug 458546 by Piergiorgio Beruto. Also add
+  PYTHON_USEDEP.
 
   10 Feb 2013; Mike Gilbert <floppym@gentoo.org> tortoisehg-2.7.ebuild,
   tortoisehg-9999.ebuild:
