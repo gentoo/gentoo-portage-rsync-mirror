@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/unionfs-fuse
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs-fuse/ChangeLog,v 1.8 2012/09/22 20:29:57 sping Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs-fuse/ChangeLog,v 1.9 2013/02/21 03:59:06 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> unionfs-fuse-0.26.ebuild:
+  Fix for prefix and add ~x86-linux keyword.
 
   22 Sep 2012; Sebastian Pipping <sping@gentoo.org> unionfs-fuse-0.26.ebuild,
   +files/unionfs-fuse-0.26-declare-chroot.patch,
@@ -39,4 +42,3 @@
   +unionfs-fuse-0.23.ebuild, +files/unionfs-fuse-0.23-makefile.patch,
   +metadata.xml:
   New package (fixes bug #143026)
-

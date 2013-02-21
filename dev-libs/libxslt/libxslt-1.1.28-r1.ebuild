@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.28-r1.ebuild,v 1.1 2012/12/18 07:48:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.28-r1.ebuild,v 1.2 2013/02/21 03:40:54 zmedico Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://xmlsoft.org/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="crypt debug python static-libs"
 
 RDEPEND=">=dev-libs/libxml2-2.8.0:2
@@ -46,7 +46,7 @@ src_configure() {
 
 	econf \
 		$(use_enable static-libs static) \
-		--with-html-dir=/usr/share/doc/${PF} \
+		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF} \
 		--with-html-subdir=html \
 		$(use_with crypt crypto) \
 		$(use_with python) \
@@ -86,8 +86,8 @@ libxslt_py_emake() {
 		PYTHON="${PYTHON}" \
 		PYTHON_INCLUDES="${EPREFIX}/usr/include/${EPYTHON}" \
 		PYTHON_LIBS="$(python-config --ldflags)" \
-		PYTHON_SITE_PACKAGES="$(python_get_sitedir)" \
-		pythondir="$(python_get_sitedir)" \
+		PYTHON_SITE_PACKAGES="${EPREFIX}$(python_get_sitedir)" \
+		pythondir="${EPREFIX}$(python_get_sitedir)" \
 		PYTHON_VERSION=${EPYTHON/python} "$@"
 	popd > /dev/null
 }

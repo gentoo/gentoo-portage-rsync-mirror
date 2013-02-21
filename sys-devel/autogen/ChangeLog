@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.91 2013/01/10 19:44:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.92 2013/02/21 03:43:49 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> autogen-5.15.ebuild:
+  Add ~arm-linux keyword.
 
   10 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -autogen-5.11.5.ebuild,
   -autogen-5.11.6.ebuild, -autogen-5.11.9.ebuild, -autogen-5.12.ebuild,
