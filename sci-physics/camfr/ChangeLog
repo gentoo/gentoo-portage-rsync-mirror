@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/camfr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.25 2012/10/16 19:06:44 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/ChangeLog,v 1.26 2013/02/21 22:09:58 jlec Exp $
+
+  21 Feb 2013; Justin Lecher <jlec@gentoo.org> camfr-20070717-r3.ebuild,
+  metadata.xml:
+  Use tc-getPKG_CONFIG from toolchain-funcs.eclass instead of plain pkg-config
 
   16 Oct 2012; Justin Lecher <jlec@gentoo.org> camfr-20070717-r3.ebuild,
   metadata.xml:

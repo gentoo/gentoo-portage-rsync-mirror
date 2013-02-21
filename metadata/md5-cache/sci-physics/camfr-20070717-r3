@@ -9,4 +9,4 @@ RDEPEND=dev-libs/blitz >=dev-libs/boost-1.48[python] dev-python/imaging[tk] dev-
 SLOT=0
 SRC_URI=mirror://sourceforge/camfr/camfr-20070717.tgz
 _eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	f2731576962f01811c9573b3323fa374	fortran-2	19652e219ec9b62d7d89735821d7afb6	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=fa92a92c248c09edc88cb3a49a3eb791
+_md5_=94b6008ce7e003304af8293dc2501433

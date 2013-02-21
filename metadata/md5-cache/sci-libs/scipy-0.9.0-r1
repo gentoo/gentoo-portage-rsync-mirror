@@ -10,4 +10,4 @@ RDEPEND=>=dev-python/numpy-1.5[lapack] media-libs/qhull sci-libs/arpack sci-libs
 SLOT=0
 SRC_URI=mirror://sourceforge/scipy/scipy-0.9.0.tar.gz doc? ( http://docs.scipy.org/doc/scipy-0.9.0/scipy-html.zip -> scipy-0.9-html.zip http://docs.scipy.org/doc/scipy-0.9.0/scipy-ref.pdf -> scipy-0.9-ref.pdf )
 _eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	f2731576962f01811c9573b3323fa374	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	fortran-2	19652e219ec9b62d7d89735821d7afb6	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=20772bd5e0695e4e2405db17122b5e46
+_md5_=c1b1aae9b5011b932dc646839aa993a8

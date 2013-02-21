@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.5.ebuild,v 1.7 2012/10/16 20:08:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.5.ebuild,v 1.8 2013/02/21 22:05:32 jlec Exp $
 
 EAPI=4
 
 AUTOTOOLS_AUTORECONF=yes
 
-inherit autotools-utils fortran-2 multilib
+inherit autotools-utils fortran-2 multilib toolchain-funcs
 
 DESCRIPTION="Portable Understructure for Numerical Computing"
 HOMEPAGE="http://fetk.org/codes/punc/index.html"
@@ -28,8 +28,8 @@ RDEPEND="
 	virtual/blas
 	virtual/lapack
 	mpi? ( virtual/mpi )"
-DEPEND="
-	${RDEPEND}
+DEPEND="${RDEPEND}
+	virtual/pkgconfig
 	doc? (
 		media-gfx/graphviz
 		app-doc/doxygen )"
@@ -38,7 +38,8 @@ S="${WORKDIR}/${PN}"
 
 PATCHES=(
 	"${FILESDIR}"/${PV}-linking.patch
-	"${FILESDIR}"/1.4-doc.patch )
+	"${FILESDIR}"/1.4-doc.patch
+	)
 
 src_prepare() {
 	sed 's:punc/slu_ddefs.h:superlu/slu_ddefs.h:g' src/superlu/punc/vsuperlu.h > vsuperlu.h || die
@@ -63,7 +64,7 @@ src_configure() {
 	fetk_lib="${EPREFIX}"/usr/$(get_libdir)
 	export FETK_INCLUDE="${fetk_include}"
 	export FETK_LIBRARY="${fetk_lib}"
-	export FETK_LAPACK_LIBRARY="$(pkg-config --libs lapack)"
+	export FETK_LAPACK_LIBRARY="$($(tc-getPKG_CONFIG) --libs lapack)"
 	export FETK_BLAS_LIBRARY="${fetk_lib}"
 	export FETK_SUPERLU_LIBRARY="-lsuperlu"
 	export FETK_ARPACK_LIBRARY="${fetk_lib}"

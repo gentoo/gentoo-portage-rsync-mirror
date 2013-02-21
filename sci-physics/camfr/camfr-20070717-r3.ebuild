@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r3.ebuild,v 1.4 2012/10/16 19:06:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r3.ebuild,v 1.5 2013/02/21 22:09:58 jlec Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 PYTHON_USE_WITH="tk"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils fortran-2 distutils
+inherit eutils fortran-2 distutils toolchain-funcs
 
 DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="true"
 
@@ -53,10 +53,10 @@ src_prepare() {
 			include_dirs.append("${EPREFIX}/$(python_get_sitedir)")
 		EOF
 		local x
-		for x in $(pkg-config --libs-only-l lapack); do
+		for x in $($(tc-getPKG_CONFIG) --libs-only-l lapack); do
 			lapack_libs="${lapack_libs}, \"${x#-l}\""
 		done
-		for x in $(pkg-config --libs-only-L lapack); do
+		for x in $($(tc-getPKG_CONFIG) --libs-only-L lapack); do
 			lapack_libdirs="${lapack_libdirs}, \"${x#-L}\""
 		done
 		cat <<-EOF >> machine_cfg.py

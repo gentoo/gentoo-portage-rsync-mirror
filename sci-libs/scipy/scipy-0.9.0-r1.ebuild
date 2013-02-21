@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0-r1.ebuild,v 1.11 2012/10/16 19:47:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0-r1.ebuild,v 1.12 2013/02/21 22:08:08 jlec Exp $
 
 EAPI="3"
 
@@ -78,28 +78,28 @@ src_prepare() {
 	local libdir="${EPREFIX}"/usr/$(get_libdir)
 	cat > site.cfg <<-EOF
 		[atlas]
-		include_dirs = $(pkg-config --cflags-only-I \
+		include_dirs = $($(tc-getPKG_CONFIG) --cflags-only-I \
 			cblas | sed -e 's/^-I//' -e 's/ -I/:/g')
-		library_dirs = $(pkg-config --libs-only-L \
+		library_dirs = $($(tc-getPKG_CONFIG) --libs-only-L \
 			cblas blas lapack| sed -e \
 			's/^-L//' -e 's/ -L/:/g' -e 's/ //g'):${libdir}
-		atlas_libs = $(pkg-config --libs-only-l \
+		atlas_libs = $($(tc-getPKG_CONFIG) --libs-only-l \
 			cblas blas | sed -e 's/^-l//' -e 's/ -l/, /g' -e 's/,.pthread//g')
-		lapack_libs = $(pkg-config --libs-only-l \
+		lapack_libs = $($(tc-getPKG_CONFIG) --libs-only-l \
 			lapack | sed -e 's/^-l//' -e 's/ -l/, /g' -e 's/,.pthread//g')
 		[blas_opt]
-		include_dirs = $(pkg-config --cflags-only-I \
+		include_dirs = $($(tc-getPKG_CONFIG) --cflags-only-I \
 			cblas | sed -e 's/^-I//' -e 's/ -I/:/g')
-		library_dirs = $(pkg-config --libs-only-L \
+		library_dirs = $($(tc-getPKG_CONFIG) --libs-only-L \
 			cblas blas | sed -e 's/^-L//' -e 's/ -L/:/g' \
 			-e 's/ //g'):${libdir}
-		libraries = $(pkg-config --libs-only-l \
+		libraries = $($(tc-getPKG_CONFIG) --libs-only-l \
 			cblas blas | sed -e 's/^-l//' -e 's/ -l/, /g' -e 's/,.pthread//g')
 		[lapack_opt]
-		library_dirs = $(pkg-config --libs-only-L \
+		library_dirs = $($(tc-getPKG_CONFIG) --libs-only-L \
 			lapack | sed -e 's/^-L//' -e 's/ -L/:/g' \
 			-e 's/ //g'):${libdir}
-		libraries = $(pkg-config --libs-only-l \
+		libraries = $($(tc-getPKG_CONFIG) --libs-only-l \
 			lapack | sed -e 's/^-l//' -e 's/ -l/, /g' -e 's/,.pthread//g')
 	EOF
 }
