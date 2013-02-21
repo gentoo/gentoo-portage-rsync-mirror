@@ -1,6 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Text-Tabs+Wrap
-KEYWORDS=alpha amd64 ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd
+KEYWORDS=alpha amd64 ia64 ppc ppc64 ~sparc x86 ~x86-fbsd
 RDEPEND=~perl-core/Text-Tabs+Wrap-2012.81.800
 SLOT=0
-_md5_=0444219dd6718d554df9d8dbcb668afd
+_md5_=6d47154563525d03cc148f6097b908c3

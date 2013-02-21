@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.105 2012/08/02 22:35:14 neurogeek Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.106 2013/02/21 15:03:47 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> gdata-2.0.17.ebuild:
+  Add ~arm-linux and ~x86-linux keywords.
 
   02 Aug 2012; Jesus Rivero <neurogeek@gentoo.org> gdata-2.0.14.ebuild,
   gdata-2.0.16.ebuild, gdata-2.0.17.ebuild:
@@ -391,4 +394,3 @@
   22 May 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml,
   +gdata-1.0.2.ebuild:
   dev-python/gdata - The official python interface to the Google Data API
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0_beta1.ebuild,v 1.4 2013/02/17 22:45:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0_beta1.ebuild,v 1.5 2013/02/21 15:25:39 idella4 Exp $
 
 EAPI=5
 
@@ -43,7 +43,8 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/1.9-scripts-location.patch"
 	epatch "${FILESDIR}/1.9-distutils.unixccompiler.UnixCCompiler.runtime_library_dir_option.patch"
-	epatch "${FILESDIR}/2.0-distutils-fix_handling_of_executables_and_flags.patch"
+	epatch "${FILESDIR}/2.0-distutils-fix_handling_of_executables_and_flags.patch" \
+		"${FILESDIR}"/2.0-encoder-3655afd07f2f.patch
 
 	# The following is Gentoo-specific.
 	epatch "${FILESDIR}/2.0-no-static-hack.patch"

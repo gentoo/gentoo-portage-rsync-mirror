@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.33 2013/02/17 22:45:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.34 2013/02/21 15:25:39 idella4 Exp $
+
+  21 Feb 2013; Ian Delaney <idella4@gentoo.org>
+  +files/2.0-encoder-3655afd07f2f.patch, pypy-2.0_beta1.ebuild:
+  Patch added from pypy.org/issue1366, makes testsuite of Djblets pypy capable
+  wrt Bug #451958 , decision not to revbump due to onerous load to rebuild
 
   17 Feb 2013; Mike Gilbert <floppym@gentoo.org> pypy-1.9-r2.ebuild,
   pypy-2.0_beta1.ebuild:

@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/logbook
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logbook/ChangeLog,v 1.3 2012/11/03 06:00:24 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logbook/ChangeLog,v 1.4 2013/02/21 15:05:03 idella4 Exp $
+
+*logbook-0.4.1 (21 Feb 2013)
+
+  21 Feb 2013; Ian Delaney <idella4@gentoo.org>
+  +files/logbook-0.4.1-testspy3.patch, +files/logbook-0.4.1.patch,
+  +logbook-0.4.1.ebuild:
+  bump with required patch to pass testsuite; closes Bug 451248
 
   03 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> -logbook-0.3.ebuild:
   old
@@ -18,4 +25,3 @@
 
   11 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> +logbook-0.3.ebuild:
   Initial commit.
-
