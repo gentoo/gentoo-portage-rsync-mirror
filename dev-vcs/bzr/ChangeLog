@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.67 2013/01/30 19:01:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.68 2013/02/21 04:11:46 zmedico Exp $
+
+  21 Feb 2013; Zac Medico <zmedico@gentoo.org> bzr-2.5.1.ebuild:
+  Add ~arm-linux keyword.
 
   30 Jan 2013; Agostino Sarubbo <ago@gentoo.org> bzr-2.5.1.ebuild:
   Stable for x86, wrt bug #418969
