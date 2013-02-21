@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.11.0-r1.ebuild,v 1.3 2013/02/10 14:27:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.11.0-r1.ebuild,v 1.4 2013/02/21 00:37:29 bicatali Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 inherit eutils fortran-2 distutils-r1 flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Scientific algorithms library for Python"
-HOMEPAGE="http://www.scipy.org/ http://pypi.python.org/pypi/scipy"
+HOMEPAGE="http://www.scipy.org/"
 SRC_URI="
 	mirror://sourceforge/${PN}/${P}.tar.gz
 	doc? (
@@ -49,17 +49,17 @@ src_unpack() {
 }
 
 pc_incdir() {
-	pkg-config --cflags-only-I $@ | \
+	$(tc-getPKG_CONFIG) --cflags-only-I $@ | \
 		sed -e 's/^-I//' -e 's/[ ]*-I/:/g'
 }
 
 pc_libdir() {
-	pkg-config --libs-only-L $@ | \
+	$(tc-getPKG_CONFIG) --libs-only-L $@ | \
 		sed -e 's/^-L//' -e 's/[ ]*-L/:/g'
 }
 
 pc_libs() {
-	pkg-config --libs-only-l $@ | \
+	$(tc-getPKG_CONFIG) --libs-only-l $@ | \
 		sed -e 's/[ ]-l*\(pthread\|m\)[ ]*//g' \
 		-e 's/^-l//' -e 's/[ ]*-l/,/g'
 }
