@@ -1,19 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-9999.ebuild,v 1.14 2013/02/22 14:24:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-4.2.ebuild,v 1.1 2013/02/22 14:24:39 pinkbyte Exp $
 
 EAPI="5"
 
-inherit bash-completion-r1 autotools git-2 toolchain-funcs udev
+inherit base bash-completion-r1 eutils toolchain-funcs udev
 
 DESCRIPTION="OpenVZ ConTainers control utility"
 HOMEPAGE="http://openvz.org/"
-EGIT_REPO_URI="git://git.openvz.org/pub/${PN}
-	http://git.openvz.org/pub/${PN}"
+SRC_URI="http://download.openvz.org/utils/${PN}/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="cgroup +ploop"
 
 RDEPEND="
@@ -33,7 +32,6 @@ src_prepare() {
 	sed -i -e 's:=redhat-:=gentoo-:' etc/dists/default || die 'sed on etc/dists/default failed'
 	# Set proper udev directory
 	sed -i -e "s:/lib/udev:$(udev_get_udevdir):" src/lib/dev.c || die 'sed on src/lib/dev.c failed'
-	eautoreconf
 }
 
 src_configure() {
