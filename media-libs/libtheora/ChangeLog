@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libtheora
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.107 2012/05/15 13:09:16 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.108 2013/02/22 15:51:11 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> libtheora-1.1.1.ebuild:
+  Fix for prefix, add ~arm-linux keyword, and merge KEYWORDS from the
+  gentoo_prefix repo.
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> libtheora-1.1.1.ebuild:
   keyword ~amd64-fbsd
@@ -446,4 +450,3 @@
 
   24 Feb 2004; Martin Holzer <mholzer@gentoo.org> libtheora-1.0_alpha2.ebuild:
   Initial ebuild. Submitted by MATSUU Takuto <matsuu@gentoo.org> in 41383
-

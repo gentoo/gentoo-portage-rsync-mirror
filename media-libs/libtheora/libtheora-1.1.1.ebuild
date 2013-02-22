@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.1.1.ebuild,v 1.10 2012/05/15 13:09:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.1.1.ebuild,v 1.11 2013/02/22 15:51:11 zmedico Exp $
 
-EAPI=2
+EAPI=3
 inherit autotools eutils flag-o-matic
 
 DESCRIPTION="The Theora Video Compression Codec"
@@ -11,7 +11,7 @@ SRC_URI="http://downloads.xiph.org/releases/theora/${P/_}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~ppc-aix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="doc +encode examples static-libs"
 
 RDEPEND="media-libs/libogg
@@ -49,7 +49,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" docdir=/usr/share/doc/${PF} \
+	emake DESTDIR="${D}" docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		install || die "emake install failed"
 
 	dodoc AUTHORS CHANGES README
@@ -67,5 +67,5 @@ src_install() {
 		done
 	fi
 
-	find "${D}" -name '*.la' -exec rm -f '{}' +
+	find "${ED}" -name '*.la' -exec rm -f '{}' +
 }

@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/fixesproto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/fixesproto/ChangeLog,v 1.55 2012/05/06 00:11:54 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/fixesproto/ChangeLog,v 1.56 2013/02/22 15:41:59 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> fixesproto-5.0.ebuild:
+  Add ~arm-linux keyword.
 
   06 May 2012; Alexis Ballier <aballier@gentoo.org> fixesproto-5.0.ebuild:
   keyword ~amd64-fbsd
@@ -205,4 +208,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +fixesproto-3.0.ebuild:
   Initial commit for modular X
-
