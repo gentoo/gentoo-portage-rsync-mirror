@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pciutils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.213 2012/12/31 18:08:04 ryao Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.214 2013/02/22 17:31:31 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> pciutils-3.1.10.ebuild:
+  Add ~arm-linux keyword.
 
   31 Dec 2012; Richard Yao <ryao@gentoo.org> pciutils-3.1.10.ebuild:
   Keyword ~x64-freebsd

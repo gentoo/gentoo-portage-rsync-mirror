@@ -1,6 +1,9 @@
 # ChangeLog for virtual/pager
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pager/ChangeLog,v 1.11 2012/04/27 23:15:27 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/pager/ChangeLog,v 1.12 2013/02/22 17:45:29 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> pager-0.ebuild:
+  Add ~arm-linux keyword.
 
   27 Apr 2012; Alexis Ballier <aballier@gentoo.org> pager-0.ebuild:
   keyword ~amd64-fbsd
@@ -34,4 +37,3 @@
   21 Mar 2008; Christian Faulhammer <opfer@gentoo.org> +metadata.xml,
   +pager-0.ebuild:
   initial import
-

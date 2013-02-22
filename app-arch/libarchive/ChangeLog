@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.139 2013/01/16 10:09:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.140 2013/02/22 17:59:47 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> libarchive-3.1.1.ebuild:
+  Add ~arm-linux keyword.
 
   16 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> libarchive-3.1.1.ebuild:
   Include subslot support and call it 13 from SONAME wrt #452444 by Michael
