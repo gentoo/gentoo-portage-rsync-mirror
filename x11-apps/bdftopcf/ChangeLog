@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/bdftopcf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/bdftopcf/ChangeLog,v 1.51 2013/01/20 18:41:03 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/bdftopcf/ChangeLog,v 1.52 2013/02/22 18:12:04 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> bdftopcf-1.0.4.ebuild:
+  Add ~arm-linux keyword.
 
 *bdftopcf-1.0.4 (20 Jan 2013)
 

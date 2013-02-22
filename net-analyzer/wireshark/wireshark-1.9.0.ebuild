@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.9.0.ebuild,v 1.4 2013/02/22 17:19:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.9.0.ebuild,v 1.6 2013/02/22 18:28:26 jer Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
@@ -20,6 +20,7 @@ IUSE="
 "
 RDEPEND="
 	>=dev-libs/glib-2.14:2
+	dev-libs/libnl
 	adns? ( !libadns? ( >=net-dns/c-ares-1.5 ) )
 	crypt? ( dev-libs/libgcrypt )
 	geoip? ( dev-libs/geoip )
@@ -196,7 +197,7 @@ pkg_postinst() {
 	enewgroup wireshark
 
 	if use pcap; then
-		fcaps -o 0 -g wireshark -m 0750 -M 550 \
+		fcaps -o 0 -g wireshark -m 0750 -M 0750 \
 			cap_dac_read_search,cap_net_raw,cap_net_admin \
 			"${EROOT}"/usr/bin/dumpcap
 	fi

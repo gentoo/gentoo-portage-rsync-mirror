@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.451 2013/02/22 17:19:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.453 2013/02/22 18:28:26 jer Exp $
+
+  22 Feb 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.9.0.ebuild:
+  Add dev-libs/libnl dependency.
+
+  22 Feb 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.8.5-r1.ebuild,
+  wireshark-1.9.0.ebuild:
+  Backport changes to 1.8.5.
 
   22 Feb 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.6.13-r1.ebuild,
   wireshark-1.9.0.ebuild:

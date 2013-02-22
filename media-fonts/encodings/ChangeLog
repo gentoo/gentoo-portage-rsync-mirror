@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/encodings
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/encodings/ChangeLog,v 1.76 2012/04/26 19:27:30 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/encodings/ChangeLog,v 1.77 2013/02/22 18:13:51 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> encodings-1.0.4.ebuild:
+  Add ~arm-linux keyword.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> encodings-1.0.4.ebuild:
   keyword ~amd64-fbsd
@@ -294,4 +297,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +encodings-0.99.0.ebuild:
   Initial commit for modular X.
-
