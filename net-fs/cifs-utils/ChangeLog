@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.48 2013/02/22 09:04:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.49 2013/02/22 15:08:37 polynomial-c Exp $
+
+*cifs-utils-5.9 (22 Feb 2013)
+
+  22 Feb 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -cifs-utils-5.5-r1.ebuild, +cifs-utils-5.9.ebuild:
+  Non-maintainer commit: Version bump. Removed old.
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> cifs-utils-5.8-r1.ebuild:
   Fix for prefix and add ~arm-linux + ~x86-linux keywords.

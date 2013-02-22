@@ -1,18 +1,18 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.5-r1.ebuild,v 1.5 2012/09/29 16:54:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.9.ebuild,v 1.1 2013/02/22 15:08:37 polynomial-c Exp $
 
 EAPI=4
 
 inherit eutils confutils linux-info
 
 DESCRIPTION="Tools for Managing Linux CIFS Client Filesystems"
-HOMEPAGE="http://www.samba.org/linux-cifs/cifs-utils/"
+HOMEPAGE="http://wiki.samba.org/index.php/LinuxCIFS_utils"
 SRC_URI="ftp://ftp.samba.org/pub/linux-cifs/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~arm-linux ~x86-linux"
 IUSE="ads +caps caps-ng creds upcall"
 
 DEPEND="!net-fs/mount-cifs
@@ -26,7 +26,11 @@ RDEPEND="${DEPEND}"
 
 REQUIRED_USE="^^ ( caps caps-ng )"
 
+DOCS="doc/linux-cifs-client-guide.odt"
+
 pkg_setup() {
+	linux-info_pkg_setup
+
 	confutils_use_conflict caps caps-ng
 	if ! linux_config_exists || ! linux_chkconfig_present CIFS; then
 		ewarn "You must enable CIFS support in your kernel config, "
@@ -40,35 +44,25 @@ pkg_setup() {
 	fi
 }
 
-src_prepare() {
-	# bug #424487
-	epatch "${FILESDIR}"/${P}-initialize_rc_var_properly.patch
-
-	#Getting rid of -Werror
-	sed -e "s/-Werror//" -i Makefile.in || die "sed failed"
-}
-
 src_configure() {
-	local myconf=''
-	if use "caps-ng"; then
-		myconf="${myconf} --with-libcap-ng=yes "
-	else
-		myconf="${myconf} --with-libcap-ng=no "
-	fi
-	myconf="${myconf} \
+	ROOTSBINDIR="${EPREFIX}"/sbin \
+	econf \
 		$(use_enable ads cifsupcall) \
 		$(use_with caps libcap) \
 		$(use_with caps-ng libcap-ng) \
 		$(use_enable creds cifscreds) \
 		$(use_enable upcall cifsupcall) \
+		--with-libcap-ng=$(use caps-ng && echo 'yes' || echo 'no') \
 		--disable-cifsidmap \
-		--disable-cifsacl"
-	econf ${myconf}
+		--disable-cifsacl
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc doc/linux-cifs-client-guide.odt
+	default
+
+	# remove empty directories
+	find "${ED}" -type d -print0 | xargs --null rmdir \
+		--ignore-fail-on-non-empty &>/dev/null
 }
 
 pkg_postinst() {
