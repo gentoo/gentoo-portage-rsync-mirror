@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.423 2013/02/22 00:21:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.424 2013/02/22 00:37:02 cardoe Exp $
+
+  22 Feb 2013; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-96.43.23.ebuild, nvidia-drivers-173.14.36.ebuild,
+  nvidia-drivers-304.64.ebuild, nvidia-drivers-310.32.ebuild,
+  nvidia-drivers-313.18.ebuild:
+  Add generic message to let people know they're on their own for newer kernels
 
   22 Feb 2013; Doug Goldstein <cardoe@gentoo.org>
   -nvidia-drivers-96.43.20.ebuild, -nvidia-drivers-173.14.35.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.64.ebuild,v 1.4 2012/12/19 16:52:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.64.ebuild,v 1.5 2013/02/22 00:37:02 cardoe Exp $
 
 EAPI=4
 
@@ -90,6 +90,15 @@ pkg_setup() {
 		# expects x86_64 or i386 and then converts it to x86
 		# later on in the build process
 		BUILD_FIXES="ARCH=$(uname -m | sed -e 's/i.86/i386/')"
+	fi
+
+	if use kernel_linux && kernel_is ge 3 7 ; then
+		ewarn "Gentoo supports kernel's which are supported by NVIDIA"
+		ewarn "which are limited to the following kernels:"
+		ewarn "<sys-kernel/gentoo-sources-3.7"
+		ewarn "<sys-kernel/vanilla-sources-3.7"
+		ewarn ""
+		ewarn "You are on your own"
 	fi
 
 	# Since Nvidia ships 3 different series of drivers, we need to give the user

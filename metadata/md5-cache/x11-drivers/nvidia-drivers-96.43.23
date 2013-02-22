@@ -11,4 +11,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/96.43.23/NVIDIA-Linux-x86-96.43.23-pkg0.run ) amd64? ( ftp://download.nvidia.com/XFree86/Linux-x86_64/96.43.23/NVIDIA-Linux-x86_64-96.43.23-pkg2.run ) x86-fbsd? ( ftp://download.nvidia.com/freebsd/96.43.23/NVIDIA-FreeBSD-x86-96.43.23.tar.gz )
 _eclasses_=eutils	f2731576962f01811c9573b3323fa374	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	linux-mod	dbc722ed035721476f23ab7b0572985e	multilib	ded93e450747134a079e647d888aa80b	nvidia-driver	80e162b87fb4c2e236684d64adc96ed4	portability	536c5e70c5fb252ed3b769e04aa3f05b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	unpacker	50e1227854e96469a19a63f053496328	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=8a52b4e3b775a0bf78eafdf7cec19b8c
+_md5_=48c9abd7bdc7c01d36501449276b566b

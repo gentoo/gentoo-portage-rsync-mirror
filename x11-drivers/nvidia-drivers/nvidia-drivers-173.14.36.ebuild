@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.36.ebuild,v 1.4 2012/12/19 16:52:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.36.ebuild,v 1.5 2013/02/22 00:37:02 cardoe Exp $
 
 EAPI="2"
 
@@ -192,6 +192,15 @@ pkg_setup() {
 	use userland_BSD && MAKE="$(get_bmake)"
 
 	export _POSIX2_VERSION="199209"
+
+	if use kernel_linux && kernel_is ge 3 7 ; then
+		ewarn "Gentoo supports kernel's which are supported by NVIDIA"
+		ewarn "which are limited to the following kernels:"
+		ewarn "<sys-kernel/gentoo-sources-3.7"
+		ewarn "<sys-kernel/vanilla-sources-3.7"
+		ewarn ""
+		ewarn "You are on your own"
+	fi
 
 	# Since Nvidia ships 3 different series of drivers, we need to give the user
 	# some kind of guidance as to what version they should install. This tries
