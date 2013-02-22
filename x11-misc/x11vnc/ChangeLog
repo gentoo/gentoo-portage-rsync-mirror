@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.106 2013/01/21 01:25:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.107 2013/02/22 19:39:11 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> x11vnc-0.9.13-r1.ebuild:
+  Add ~arm-linux keyword.
 
   21 Jan 2013; Mike Frysinger <vapier@gentoo.org> x11vnc-0.9.13-r1.ebuild,
   x11vnc-0.9.13.ebuild:
