@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.53 2013/02/11 09:46:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.54 2013/02/21 23:18:56 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -151,7 +151,25 @@ fi
 #
 # Example:
 # @CODE
-# HTML_DOCS=( doc/html/ )
+# HTML_DOCS=( doc/html/. )
+# @CODE
+
+# @ECLASS-VARIABLE: EXAMPLES
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# An array containing examples installed into 'examples' doc
+# subdirectory. The files and directories listed there must exist
+# in the directory from which distutils-r1_python_install_all() is run
+# (${S} by default).
+#
+# The 'examples' subdirectory will be marked not to be compressed
+# automatically.
+#
+# If unset, no examples will be installed.
+#
+# Example:
+# @CODE
+# EXAMPLES=( examples/. demos/. )
 # @CODE
 
 # @ECLASS-VARIABLE: DISTUTILS_IN_SOURCE_BUILD
@@ -487,7 +505,7 @@ distutils-r1_python_install_all() {
 	if declare -p DOCS &>/dev/null; then
 		# an empty list == don't install anything
 		if [[ ${DOCS[@]} ]]; then
-			dodoc -r "${DOCS[@]}" || die "dodoc failed"
+			dodoc -r "${DOCS[@]}"
 		fi
 	else
 		local f
@@ -495,13 +513,20 @@ distutils-r1_python_install_all() {
 		for f in README* ChangeLog AUTHORS NEWS TODO CHANGES \
 				THANKS BUGS FAQ CREDITS CHANGELOG; do
 			if [[ -s ${f} ]]; then
-				dodoc "${f}" || die "(default) dodoc ${f} failed"
+				dodoc "${f}"
 			fi
 		done
 	fi
 
 	if declare -p HTML_DOCS &>/dev/null; then
-		dohtml -r "${HTML_DOCS[@]}" || die "dohtml failed"
+		dohtml -r "${HTML_DOCS[@]}"
+	fi
+
+	if declare -p EXAMPLES &>/dev/null; then
+		local DOCDESTTREE=examples
+		dodoc -r "${EXAMPLES[@]}"
+
+		docompress -x /usr/share/doc/${PF}/examples
 	fi
 }
 

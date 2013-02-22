@@ -9,7 +9,7 @@
     </maintainer>
     <bugs-to>http://sourceforge.net/tracker/?group_id=1689</bugs-to>
   </upstream>
-<use>
-  <flag name='system-libs'>Use libpng and libz provided by system</flag>
-</use>
+  <use>
+    <flag name='system-libs'>Use libpng and libz provided by system</flag>
+  </use>
 </pkgmetadata>
