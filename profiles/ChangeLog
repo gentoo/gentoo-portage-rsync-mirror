@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7515 2013/02/21 21:57:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7518 2013/02/22 10:44:19 moult Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Feb 2013; Dion Moult <moult@gentoo.org> package.mask:
+  Remove dev-libs/libole2 mask as removed from tree.
+
+  22 Feb 2013; Dion Moult <moult@gentoo.org> package.mask:
+  Remove app-admin/webalizer-xtended mask as removed from tree
+
+  22 Feb 2013; Dion Moult <moult@gentoo.org> package.mask:
+  Remove dev-haskell/wash mask as removed from tree.
 
   21 Feb 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
   Remove Scintilla license (duplicate of HPND) from MISC-FREE group.
