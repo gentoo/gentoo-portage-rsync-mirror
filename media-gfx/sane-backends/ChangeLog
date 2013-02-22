@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.221 2013/02/06 21:20:01 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.222 2013/02/22 21:02:33 phosphan Exp $
+
+  22 Feb 2013; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.23.ebuild:
+  Update to EAPI 5 for libgphoto2 stabilization, see bug #455500.
 
   06 Feb 2013; Patrick Kursawe <phosphan@gentoo.org>
   sane-backends-1.0.23.ebuild:

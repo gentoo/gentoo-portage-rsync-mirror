@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.4.ebuild,v 1.1 2013/02/08 23:50:46 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.4.ebuild,v 1.2 2013/02/22 21:15:05 zmedico Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gimp.org/"
 SRC_URI="mirror://gimp/v$(get_version_component_range 1-2)/${P}.tar.bz2"
 LICENSE="GPL-3 LGPL-3"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~arm-linux ~x86-linux"
 
 LANGS="am ar ast az be bg br ca ca@valencia cs csb da de dz el en_CA en_GB eo es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kk km kn ko lt lv mk ml ms my nb nds ne nl nn oc pa pl pt pt_BR ro ru rw si sk sl sr sr@latin sv ta te th tr tt uk vi xh yi zh_CN zh_HK zh_TW"
 IUSE="alsa aalib altivec bzip2 curl dbus debug doc exif gnome postscript jpeg jpeg2k lcms mmx mng pdf png python smp sse svg tiff udev webkit wmf xpm"
@@ -125,7 +125,7 @@ _clean_up_locales() {
 			einfo "- keeping ${lang}"
 			continue
 		}
-		rm -Rf "${D}"/usr/share/locale/"${lang}" || die
+		rm -Rf "${ED}"/usr/share/locale/"${lang}" || die
 	done
 }
 
@@ -139,13 +139,13 @@ src_install() {
 
 	# Workaround for bug #321111 to give GIMP the least
 	# precedence on PDF documents by default
-	mv "${D}"/usr/share/applications/{,zzz-}gimp.desktop || die
+	mv "${ED}"/usr/share/applications/{,zzz-}gimp.desktop || die
 
-	find "${D}" -name '*.la' -delete || die
+	find "${ED}" -name '*.la' -delete || die
 
 	# Prevent dead symlink gimp-console.1 from downstream man page compression (bug #433527)
 	local gimp_app_version=$(get_version_component_range 1-2)
-	mv "${D}"/usr/share/man/man1/gimp-console{-${gimp_app_version},}.1 || die
+	mv "${ED}"/usr/share/man/man1/gimp-console{-${gimp_app_version},}.1 || die
 
 	_clean_up_locales
 }

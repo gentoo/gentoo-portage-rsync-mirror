@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.23.ebuild,v 1.15 2013/02/06 21:20:01 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.23.ebuild,v 1.16 2013/02/22 21:02:33 phosphan Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils flag-o-matic multilib udev user
 
@@ -125,7 +125,7 @@ RDEPEND="
 	sane_backends_mustek_pp? ( sys-libs/libieee1284 )
 	usb? ( virtual/libusb:0 )
 	gphoto2? (
-		media-libs/libgphoto2
+		media-libs/libgphoto2:=
 		virtual/jpeg
 	)
 	v4l? ( media-libs/libv4l )

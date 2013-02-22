@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.48 2012/12/11 05:43:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.49 2013/02/22 21:15:05 zmedico Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -132,9 +132,9 @@ src_install() {
 
 	# Workaround for bug #321111 to give GIMP the least
 	# precedence on PDF documents by default
-	mv "${D}"/usr/share/applications/{,zzz-}gimp.desktop || die
+	mv "${ED}"/usr/share/applications/{,zzz-}gimp.desktop || die
 
-	find "${D}" -name '*.la' -delete || die
+	find "${ED}" -name '*.la' -delete || die
 }
 
 pkg_postinst() {
