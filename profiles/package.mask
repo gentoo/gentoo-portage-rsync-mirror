@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14490 2013/02/22 12:10:13 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14491 2013/02/22 16:25:08 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeroen Roovers <jer@gentoo.org> (22 Feb 2013)
+# Development versions of net-analyzer/wireshark
+=net-analyzer/wireshark-1.9*
 
 # Eray Aslan <eras@gentoo.org> (22 Feb 2013)
 # Mask beta versions

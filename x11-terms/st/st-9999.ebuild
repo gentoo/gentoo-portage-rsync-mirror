@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-9999.ebuild,v 1.6 2012/12/17 21:56:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-9999.ebuild,v 1.7 2013/02/22 16:16:39 xmw Exp $
 
-EAPI=3
+EAPI=5
 
 inherit git-2 savedconfig toolchain-funcs
 
@@ -13,18 +13,15 @@ EGIT_REPO_URI="git://git.suckless.org/st"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="savedconfig"
 
-RDEPEND="x11-libs/libX11"
+RDEPEND="
+	media-libs/fontconfig
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXft"
 DEPEND="${RDEPEND}
 	sys-libs/ncurses"
-
-pkg_setup() {
-	elog "Please ensure an usable font is installed, like"
-	elog "    media-fonts/corefonts"
-	elog "    media-fonts/dejavu"
-	elog "    media-fonts/urw-fonts"
-}
 
 src_prepare() {
 	sed -e '/^CFLAGS/s:[[:space:]]-Wall[[:space:]]: :' \
@@ -39,7 +36,16 @@ src_prepare() {
 src_install() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}"/usr install || die
 	tic -s -o "${ED}"/usr/share/terminfo st.info || die
-	dodoc TODO || die
+	dodoc TODO
 
 	save_config config.h
+}
+
+pkg_postinst() {
+	if ! [[ "${REPLACING_VERSIONS}" ]]; then
+		elog "Please ensure a usable font is installed, like"
+		elog "    media-fonts/corefonts"
+		elog "    media-fonts/dejavu"
+		elog "    media-fonts/urw-fonts"
+	fi
 }
