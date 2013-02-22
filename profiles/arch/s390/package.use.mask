@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/package.use.mask,v 1.22 2013/01/09 16:54:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/package.use.mask,v 1.23 2013/02/22 00:00:22 robbat2 Exp $
 
 # Justin Lecher <jlec@gentoo.org> (09 Jan 2013)
 # x11-base/xorg-server[xvfb] is not keyworded
@@ -27,3 +27,8 @@ sys-apps/paludis ruby-bindings
 
 # missing keyword for sys-cluster/openmpi sys-cluster/mpich2
 dev-libs/boost mpi
+
+# Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
+# MySQL 5.5 wants systemtap, tcmalloc & jemalloc
+>=dev-db/mysql-5.5 tcmalloc
+>=dev-db/mariadb-5.5 tcmalloc
