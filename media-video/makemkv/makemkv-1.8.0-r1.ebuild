@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.8.0.ebuild,v 1.3 2013/02/22 11:05:41 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.8.0-r1.ebuild,v 1.1 2013/02/22 12:56:13 mattm Exp $
 
 EAPI=4
-inherit eutils gnome2-utils multilib
+inherit eutils gnome2-utils multilib flag-o-matic
 
 MY_P=makemkv-oss-${PV}
 MY_PB=makemkv-bin-${PV}
@@ -35,6 +35,10 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.linux.patch
+}
+
+src_configure() {
+	replace-flags -O* -Os
 }
 
 src_compile() {
