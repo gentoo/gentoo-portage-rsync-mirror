@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7518 2013/02/22 10:44:19 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7519 2013/02/22 12:10:13 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Feb 2013; Eray Aslan <eras@gentoo.org> package.mask:
+  Mask =net-mail/dovecot-2.2_beta*
 
   22 Feb 2013; Dion Moult <moult@gentoo.org> package.mask:
   Remove dev-libs/libole2 mask as removed from tree.
