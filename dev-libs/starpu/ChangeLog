@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/starpu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/ChangeLog,v 1.6 2012/10/30 15:00:48 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/ChangeLog,v 1.7 2013/02/22 17:05:37 bicatali Exp $
+
+*starpu-1.0.5 (22 Feb 2013)
+
+  22 Feb 2013; Sébastien Fabbro <bicatali@gentoo.org> +starpu-1.0.5.ebuild,
+  -starpu-1.0.2.ebuild:
+  Version bump
 
 *starpu-1.0.4 (30 Oct 2012)
 

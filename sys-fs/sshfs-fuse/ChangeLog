@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sshfs-fuse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.68 2013/01/20 13:17:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.69 2013/02/22 17:30:08 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> sshfs-fuse-2.4.ebuild:
+  Add ~arm-linux keyword.
 
   20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> sshfs-fuse-2.4.ebuild:
   Stable for arm, wrt bug #412147

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/topal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.13 2013/02/15 19:08:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.14 2013/02/22 17:28:46 ago Exp $
+
+  22 Feb 2013; Agostino Sarubbo <ago@gentoo.org> topal-75.ebuild:
+  Stable for ppc, wrt bug #457438
 
   15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> topal-75.ebuild:
   Stable for x86, wrt bug #457438

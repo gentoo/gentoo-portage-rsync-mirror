@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/UTF8Strings-1.12.0.ebuild,v 1.1 2013/02/13 22:36:57 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/UTF8Strings-1.12.0.ebuild,v 1.2 2013/02/22 17:04:56 tomwij Exp $
+
+EAPI="5"
 
 inherit cmake-utils
 

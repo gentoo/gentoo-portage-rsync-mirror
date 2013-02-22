@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/starpu-1.0.2.ebuild,v 1.4 2012/10/31 20:20:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/starpu-1.0.5.ebuild,v 1.1 2013/02/22 17:05:37 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 AUTOTOOLS_AUTORECONF=1
 inherit autotools-utils toolchain-funcs
 
-PID=31334
+PID=32086
 
 DESCRIPTION="Unified runtime system for heterogeneous multicore architectures"
 HOMEPAGE="http://runtime.bordeaux.inria.fr/StarPU/"
@@ -18,7 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
 IUSE="blas cuda debug doc examples fftw gcc-plugin mpi opencl qt4 static-libs test"
-RDEPEND="sys-apps/hwloc
+
+RDEPEND="
+	sys-apps/hwloc
 	sci-mathematics/glpk
 	blas? ( virtual/blas )
 	cuda? ( x11-drivers/nvidia-drivers dev-util/nvidia-cuda-toolkit )
@@ -35,10 +37,8 @@ DEPEND="${RDEPEND}
 	test? ( gcc-plugin? ( dev-scheme/guile ) )"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-1.0.1-detect-qt.patch
 	"${FILESDIR}"/${PN}-1.0.1-respect-cflags.patch
 	"${FILESDIR}"/${PN}-1.0.1-system-blas.patch
-	"${FILESDIR}"/${PN}-1.0.1-no-examples.patch
 	"${FILESDIR}"/${PN}-1.0.1-no-pc-ldflags.patch
 )
 
@@ -47,6 +47,7 @@ src_configure() {
 	local myeconfargs=(
 		$(use_enable cuda)
 		$(use_enable debug)
+		$(use_enable examples build-examples)
 		$(use_enable fftw starpufft)
 		$(use_enable gcc-plugin gcc-extensions)
 		$(use_enable opencl)

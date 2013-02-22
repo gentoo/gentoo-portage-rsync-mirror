@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.304 2013/02/21 16:12:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.305 2013/02/22 17:27:42 ago Exp $
+
+  22 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libwnck-3.4.4.ebuild:
+  Stable for ppc, wrt bug #457978
 
   21 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libwnck-3.4.4.ebuild:
   Stable for sparc, wrt bug #457978

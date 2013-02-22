@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.57 2012/08/26 19:25:00 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.58 2013/02/22 17:13:41 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> imake-1.0.5.ebuild:
+  Add ~arm-linux keyword.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> imake-1.0.5.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -206,4 +209,3 @@
   20 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org> +metadata.xml,
   +imake-0.99.1.ebuild:
   New package for 7.0 RC1.
-

@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/tintin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.125 2013/02/19 19:31:12 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.126 2013/02/22 17:27:15 ago Exp $
+
+  22 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tintin-2.00.9.ebuild:
+  Stable for ppc, wrt bug #458238
 
   19 Feb 2013; Chema Alonso <nimiux@gentoo.org> tintin-2.00.9.ebuild:
   Stable for amd64 wrt bug #458238

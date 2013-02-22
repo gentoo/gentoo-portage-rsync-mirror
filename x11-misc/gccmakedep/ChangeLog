@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gccmakedep
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gccmakedep/ChangeLog,v 1.32 2012/08/26 19:23:14 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gccmakedep/ChangeLog,v 1.33 2013/02/22 17:15:45 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> gccmakedep-1.0.2-r1.ebuild:
+  Add ~arm-linux keyword.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> gccmakedep-1.0.2-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -122,4 +125,3 @@
   09 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   +gccmakedep-0.99.0.ebuild:
   Initial import.
-

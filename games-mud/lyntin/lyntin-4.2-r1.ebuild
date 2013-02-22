@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.2-r1.ebuild,v 1.1 2013/01/17 15:47:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.2-r1.ebuild,v 1.2 2013/02/22 17:23:33 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/lyntin/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="tk"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xmille
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/ChangeLog,v 1.12 2013/01/22 17:23:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/ChangeLog,v 1.13 2013/02/22 17:28:01 ago Exp $
+
+  22 Feb 2013; Agostino Sarubbo <ago@gentoo.org> xmille-2.0-r2.ebuild:
+  Stable for ppc, wrt bug #458642
 
 *xmille-2.0-r2 (22 Jan 2013)
 
@@ -42,4 +45,3 @@
   08 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
   xmille-2.0.ebuild, files/2.0.patch:
   initial commit; ebuild and patch from Bruce Guenter via bug 37626
-

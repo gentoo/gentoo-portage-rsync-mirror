@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.13-r1.ebuild,v 1.1 2013/01/31 15:59:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.13-r1.ebuild,v 1.2 2013/02/22 17:19:09 jer Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
@@ -15,43 +15,55 @@ LICENSE="GPL-2"
 SLOT="0/${PV}"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="
-	adns doc doc-pdf gtk ipv6 libadns lua crypt geoip kerberos profile
-	+pcap portaudio python selinux smi ssl threads zlib
+	adns crypt doc doc-pdf +filecaps geoip gtk ipv6 kerberos libadns lua +pcap
+	portaudio profile python selinux smi ssl threads zlib
 "
-RDEPEND=">=dev-libs/glib-2.14:2
-	zlib? ( sys-libs/zlib
-		!=sys-libs/zlib-1.2.4 )
-	smi? ( net-libs/libsmi )
-	gtk? ( >=x11-libs/gtk+-2.4.0:2
-		x11-libs/pango
-		dev-libs/atk
-		x11-misc/xdg-utils )
-	ssl? ( <net-libs/gnutls-3 )
+RDEPEND="
+	>=dev-libs/glib-2.14:2
+	adns? ( !libadns? ( >=net-dns/c-ares-1.5 ) )
 	crypt? ( dev-libs/libgcrypt )
-	pcap? ( net-libs/libpcap )
-	kerberos? ( virtual/krb5 )
-	portaudio? ( media-libs/portaudio )
-	adns? (
-		!libadns? ( >=net-dns/c-ares-1.5 )
-	)
-	libadns? ( net-libs/adns )
 	geoip? ( dev-libs/geoip )
+	gtk? (
+		>=x11-libs/gtk+-2.4.0:2
+		dev-libs/atk
+		x11-libs/pango
+		x11-misc/xdg-utils
+	)
+	kerberos? ( virtual/krb5 )
+	libadns? ( net-libs/adns )
 	lua? ( >=dev-lang/lua-5.1 )
-	selinux? ( sec-policy/selinux-wireshark )"
+	pcap? ( net-libs/libpcap )
+	portaudio? ( media-libs/portaudio )
+	selinux? ( sec-policy/selinux-wireshark )
+	smi? ( net-libs/libsmi )
+	ssl? ( <net-libs/gnutls-3 )
+	zlib? ( sys-libs/zlib !=sys-libs/zlib-1.2.4 )
+"
 
-DEPEND="${RDEPEND}
-	doc? ( dev-libs/libxslt
-		dev-libs/libxml2
-		app-doc/doxygen
-		doc-pdf? ( dev-java/fop ) )
-	virtual/pkgconfig
+DEPEND="
+	${RDEPEND}
 	dev-lang/perl
-	sys-devel/bison
+	doc? (
+		app-doc/doxygen
+		dev-libs/libxml2
+		dev-libs/libxslt
+		doc-pdf? ( dev-java/fop )
+	)
 	sys-apps/sed
+	sys-devel/bison
 	sys-devel/flex
+	virtual/pkgconfig
 "
 
 S=${WORKDIR}/${MY_P}
+
+pkg_pretend() {
+	if [[ $(gcc-major-version) -lt 3 ||
+		( $(gcc-major-version) -eq 3 &&
+		$(gcc-minor-version) -le 4 ) ]] ; then
+		die "Unsupported compiler version, please upgrade."
+	fi
+}
 
 pkg_setup() {
 	if ! use gtk; then
@@ -75,12 +87,6 @@ src_prepare() {
 src_configure() {
 	local myconf
 
-	if [[ $(gcc-major-version) -lt 3 ||
-		( $(gcc-major-version) -eq 3 &&
-			$(gcc-minor-version) -le 4 ) ]] ; then
-		die "Unsupported compiler version, please upgrade."
-	fi
-
 	# profile and pie are incompatible #215806, #292991
 	if use profile; then
 		ewarn "You've enabled the 'profile' USE flag, building PIE binaries is disabled."
@@ -90,13 +96,15 @@ src_configure() {
 
 	if use adns; then
 		if use libadns; then
-			myconf+=" --with-adns --without-c-ares"
+			myconf+=( "--with-adns --without-c-ares" )
 		else
-			myconf+=" --without-adns --with-c-ares"
+			myconf+=( "--without-adns --with-c-ares" )
 		fi
 	else
 		if use libadns; then
-			myconf+=" --with-adns --without-c-ares"
+			myconf+=( "--with-adns --without-c-ares" )
+		else
+			myconf+=( "--without-adns --without-c-ares" )
 		fi
 	fi
 
@@ -108,7 +116,7 @@ src_configure() {
 				ewarn "Kerberos was built with ssl support: linkage with openssl is enabled."
 				ewarn "Note there are annoying license incompatibilities between the OpenSSL"
 				ewarn "license and the GPL, so do your check before distributing such package."
-				myconf+=" --with-ssl"
+				myconf+=( "--with-ssl" )
 				;;
 		esac
 	fi
@@ -125,8 +133,8 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_enable profile profile-build) \
 		$(use_enable threads) \
-		$(use_with filecaps libcap) \
 		$(use_with crypt gcrypt) \
+		$(use_with filecaps libcap) \
 		$(use_with geoip) \
 		$(use_with kerberos krb5) \
 		$(use_with lua) \
@@ -139,12 +147,12 @@ src_configure() {
 		$(use_with zlib) \
 		--sysconfdir="${EPREFIX}"/etc/wireshark \
 		--disable-extra-gcc-checks \
-		${myconf}
+		${myconf[@]}
 }
 
 src_compile() {
 	default
-	use doc && cd docbook && { emake; }
+	use doc && emake -C docbook
 }
 
 src_install() {
@@ -180,8 +188,8 @@ pkg_postinst() {
 	# Add group for users allowed to sniff.
 	enewgroup wireshark
 
-	if use filecaps && use pcap; then
-		fcaps -o 0 -g wireshark -m 550 \
+	if use pcap; then
+		fcaps -o 0 -g wireshark -m 0750 -M 550 \
 			cap_dac_read_search,cap_net_raw,cap_net_admin \
 			"${EROOT}"/usr/bin/dumpcap
 	fi

@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/UTF8Strings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/ChangeLog,v 1.3 2013/02/13 22:36:57 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/ChangeLog,v 1.4 2013/02/22 17:04:56 tomwij Exp $
+
+*UTF8Strings-1.12.1 (22 Feb 2013)
+
+  22 Feb 2013; Tom Wijsman <TomWij@gentoo.org> +UTF8Strings-1.12.1.ebuild,
+  UTF8Strings-1.12.0.ebuild, UTF8Strings-1.9.ebuild:
+  Version bump to 1.12.1 by Gorelov Grigory which supports multilib-strict,
+  removes .a files and is now EAPI=5. Fixes bug #458748 and #458750.
 
 *UTF8Strings-1.12.0 (13 Feb 2013)
 
