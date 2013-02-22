@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.9.0.ebuild,v 1.1 2013/02/22 15:56:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.9.0.ebuild,v 1.3 2013/02/22 16:43:54 jer Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0/${PV}"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="
-	adns doc doc-pdf geoip +filecaps gtk crypt ipv6 kerberos libadns lua
+	adns doc doc-pdf +filecaps geoip gtk crypt ipv6 kerberos libadns lua +pcap
 	portaudio profile python selinux smi ssl zlib
 "
 RDEPEND="
@@ -30,6 +30,7 @@ RDEPEND="
 	ssl? ( net-libs/gnutls dev-libs/libgcrypt )
 	crypt? ( dev-libs/libgcrypt )
 	kerberos? ( virtual/krb5 )
+	pcap? ( net-libs/libpcap )
 	portaudio? ( media-libs/portaudio )
 	adns? (
 		!libadns? ( >=net-dns/c-ares-1.5 )
@@ -42,10 +43,12 @@ RDEPEND="
 
 DEPEND="
 	${RDEPEND}
-	doc? ( dev-libs/libxslt
+	doc? (
+		dev-libs/libxslt
 		dev-libs/libxml2
 		app-doc/doxygen
-		doc-pdf? ( dev-java/fop ) )
+		doc-pdf? ( dev-java/fop )
+	)
 	virtual/pkgconfig
 	dev-lang/perl
 	sys-devel/bison
@@ -122,18 +125,18 @@ src_configure() {
 
 	# dumpcap requires libcap, setuid-install requires dumpcap
 	econf \
-		$(use_enable !filecaps setuid-install) \
-		$(use_enable filecaps setcap-install) \
+		$(use pcap && use_enable !filecaps setuid-install) \
+		$(use pcap && use_enable filecaps setcap-install) \
 		$(use_enable gtk wireshark) \
 		$(use_enable ipv6) \
 		$(use_enable profile profile-build) \
 		$(use_with crypt gcrypt) \
-		$(use_with filecaps dumpcap-group wireshark) \
 		$(use_with filecaps libcap) \
-		$(use_with filecaps pcap) \
 		$(use_with geoip) \
 		$(use_with kerberos krb5) \
 		$(use_with lua) \
+		$(use_with pcap dumpcap-group wireshark) \
+		$(use_with pcap) \
 		$(use_with portaudio) \
 		$(use_with python) \
 		$(use_with smi libsmi) \
@@ -184,16 +187,18 @@ src_install() {
 		done
 		domenu wireshark.desktop
 	fi
-	use filecaps && chmod o-x "${ED}"/usr/bin/dumpcap #357237
+	use pcap && chmod o-x "${ED}"/usr/bin/dumpcap #357237
 }
 
 pkg_postinst() {
 	# Add group for users allowed to sniff.
 	enewgroup wireshark
 
-	fcaps -o 0 -g wireshark -m 0750 -M 550 \
-		cap_dac_read_search,cap_net_raw,cap_net_admin \
-		"${EROOT}"/usr/bin/dumpcap
+	if use pcap; then
+		fcaps -o 0 -g wireshark -m 0750 -M 550 \
+			cap_dac_read_search,cap_net_raw,cap_net_admin \
+			"${EROOT}"/usr/bin/dumpcap
+	fi
 
 	ewarn "NOTE: To run wireshark as normal user you have to add yourself to"
 	ewarn "the wireshark group. This security measure ensures that only trusted"

@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.448 2013/02/22 15:56:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.450 2013/02/22 16:43:54 jer Exp $
+
+  22 Feb 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.9.0.ebuild:
+  Restore old use pcap && use_enable filecaps logic.
+
+  22 Feb 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.9.0.ebuild:
+  Fix USE=pcap USE=filecaps confusion.
 
 *wireshark-1.9.0 (22 Feb 2013)
 
