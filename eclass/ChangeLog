@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.679 2013/02/21 23:18:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.680 2013/02/22 14:42:09 mgorny Exp $
+
+  22 Feb 2013; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass:
+  Fix passing arguments to phases.
 
   21 Feb 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Support EXAMPLES to install examples in a consistent manner.

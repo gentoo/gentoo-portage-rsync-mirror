@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.9 2013/02/10 11:44:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.10 2013/02/22 14:42:09 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
@@ -34,24 +34,24 @@ inherit autotools-utils multilib-build
 EXPORT_FUNCTIONS src_configure src_compile src_test src_install
 
 autotools-multilib_src_configure() {
-	multilib_parallel_foreach_abi autotools-utils_src_configure
+	multilib_parallel_foreach_abi autotools-utils_src_configure "${@}"
 }
 
 autotools-multilib_src_compile() {
-	multilib_foreach_abi autotools-utils_src_compile
+	multilib_foreach_abi autotools-utils_src_compile "${@}"
 }
 
 autotools-multilib_src_test() {
-	multilib_foreach_abi autotools-utils_src_test
+	multilib_foreach_abi autotools-utils_src_test "${@}"
 }
 
 autotools-multilib_src_install() {
 	autotools-multilib_secure_install() {
-		autotools-utils_src_install
+		autotools-utils_src_install "${@}"
 
 		# Make sure all headers are the same for each ABI.
 		multilib_check_headers
 	}
 
-	multilib_foreach_abi autotools-multilib_secure_install
+	multilib_foreach_abi autotools-multilib_secure_install "${@}"
 }
