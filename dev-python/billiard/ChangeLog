@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/billiard
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.6 2013/01/08 20:53:41 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.7 2013/02/22 08:11:01 patrick Exp $
+
+*billiard-2.7.3.20 (22 Feb 2013)
+
+  22 Feb 2013; Patrick Lauer <patrick@gentoo.org> +billiard-2.7.3.20.ebuild:
+  Bump
 
 *billiard-2.7.3.19 (08 Jan 2013)
 
