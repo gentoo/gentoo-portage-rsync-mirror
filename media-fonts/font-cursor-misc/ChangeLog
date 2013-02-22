@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-cursor-misc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-cursor-misc/ChangeLog,v 1.48 2012/05/12 01:00:01 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-cursor-misc/ChangeLog,v 1.49 2013/02/22 18:43:09 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> font-cursor-misc-1.0.3.ebuild:
+  Add ~arm-linux keyword.
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org>
   font-cursor-misc-1.0.3.ebuild:
@@ -199,4 +202,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +font-cursor-misc-0.99.0.ebuild:
   Initial commit for modular X.
-

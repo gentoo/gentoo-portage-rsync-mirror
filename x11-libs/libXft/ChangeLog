@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXft
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.86 2012/08/26 17:48:02 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.87 2013/02/22 18:48:35 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> libXft-2.3.1.ebuild:
+  Add ~arm-linux keyword.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libXft-2.3.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -311,4 +314,3 @@
 
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +libXft-2.1.7.ebuild:
   Initial commit for modular X.
-

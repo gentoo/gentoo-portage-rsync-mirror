@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfixes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.76 2012/05/06 00:12:41 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.77 2013/02/22 18:35:07 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> libXfixes-5.0.ebuild:
+  Add ~arm-linux keyword.
 
   06 May 2012; Alexis Ballier <aballier@gentoo.org> libXfixes-5.0.ebuild:
   keyword ~amd64-fbsd
@@ -294,4 +297,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +libXfixes-3.0.0.ebuild:
   Initial commit for modular X.
-

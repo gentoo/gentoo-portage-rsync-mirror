@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.326 2013/02/06 00:22:32 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.327 2013/02/22 18:44:21 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> cairo-1.12.12.ebuild,
+  cairo-9999.ebuild:
+  Add ~arm-linux keywords.
 
 *cairo-1.12.12 (06 Feb 2013)
 
