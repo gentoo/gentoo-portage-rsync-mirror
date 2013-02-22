@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>voip</herd>
+  <use>
+    <flag name="aec">Enable acoustic echo cancellation</flag>
+    <flag name="audio">Enable audio codecs</flag>
+    <flag name="video">Enable video codecs</flag>
+  </use>
+</pkgmetadata>

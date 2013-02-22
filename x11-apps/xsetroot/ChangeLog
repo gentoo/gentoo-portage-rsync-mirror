@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xsetroot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetroot/ChangeLog,v 1.49 2013/01/23 16:52:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetroot/ChangeLog,v 1.50 2013/02/22 19:26:13 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> xsetroot-1.1.1.ebuild:
+  Add ~arm-linux keyword.
 
 *xsetroot-1.1.1 (23 Jan 2013)
 

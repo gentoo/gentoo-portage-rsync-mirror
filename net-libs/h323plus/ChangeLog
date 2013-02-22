@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/h323plus
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/h323plus/ChangeLog,v 1.1 2013/02/22 19:04:21 chithanh Exp $
+
+*h323plus-1.25.0 (22 Feb 2013)
+
+  22 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/h323plus-1.25.0-ptrace-debugoptionlist.patch,
+  +files/h323plus-1.25.0-ptrace-param.patch, +h323plus-1.25.0.ebuild,
+  +metadata.xml:
+  Initial commit, bug #290106.

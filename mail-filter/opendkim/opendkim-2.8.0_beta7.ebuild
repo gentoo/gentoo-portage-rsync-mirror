@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.8.0_beta5.ebuild,v 1.2 2013/02/18 13:19:44 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.8.0_beta7.ebuild,v 1.1 2013/02/22 19:11:27 eras Exp $
 
 EAPI=5
 inherit eutils db-use autotools user
@@ -61,10 +61,6 @@ src_prepare() {
 		opendkim/tests/t-sign-ss-macro-value-file.lua || die
 
 	epatch "${FILESDIR}/${PN}-2.8.0-unbreak_upgrade.patch"
-	epatch "${FILESDIR}/${PN}-2.8.0-free.patch"
-	epatch "${FILESDIR}/${PN}-2.8.0-lber.patch"
-	epatch "${FILESDIR}/${PN}-2.8.0-libbsd.patch"
-	epatch "${FILESDIR}/${PN}-2.8.0-gnutls.patch"
 	eautoreconf
 }
 

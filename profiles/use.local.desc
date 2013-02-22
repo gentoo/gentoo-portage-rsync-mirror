@@ -4231,6 +4231,9 @@ net-libs/gupnp:connman - Add support for net-misc/connman
 net-libs/gupnp:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/gupnp-av:introspection - Use dev-libs/gobject-introspection for introspection
 net-libs/gupnp-igd:introspection - Use dev-libs/gobject-introspection for introspection
+net-libs/h323plus:aec - Enable acoustic echo cancellation
+net-libs/h323plus:audio - Enable audio codecs
+net-libs/h323plus:video - Enable video codecs
 net-libs/iax:snomhack - Use slower memset for SNOM phoneem
 net-libs/ldns:ecdsa - Enable ECDSA support
 net-libs/ldns:gost - Enable GOST support

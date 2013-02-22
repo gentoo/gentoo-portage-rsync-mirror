@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.369 2013/02/08 15:28:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.370 2013/02/22 19:27:48 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> pango-1.32.5.ebuild:
+  Add ~arm-linux keyword.
 
   08 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pango-1.32.5.ebuild:
   Add ~sh, wrt bug #449220

@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.57 2013/02/18 13:17:18 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.58 2013/02/22 19:11:27 eras Exp $
+
+*opendkim-2.8.0_beta7 (22 Feb 2013)
+
+  22 Feb 2013; Eray Aslan <eras@gentoo.org> +opendkim-2.8.0_beta7.ebuild,
+  -files/opendkim-2.8.0-free.patch, -files/opendkim-2.8.0-gnutls.patch,
+  -files/opendkim-2.8.0-lber.patch, -files/opendkim-2.8.0-libbsd.patch,
+  -opendkim-2.8.0_beta5.ebuild:
+  Version bump
 
 *opendkim-2.8.0_beta5 (18 Feb 2013)
 

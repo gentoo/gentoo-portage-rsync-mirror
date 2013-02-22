@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.29 2013/02/12 16:46:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.30 2013/02/22 19:18:52 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> harfbuzz-0.9.12.ebuild,
+  harfbuzz-9999.ebuild:
+  Add ~arm-linux keywords.
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> harfbuzz-0.9.12.ebuild:
   Stable for x86, wrt bug #456872
