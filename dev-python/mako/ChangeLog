@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mako
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.60 2012/11/16 13:36:31 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.61 2013/02/22 00:06:32 mgorny Exp $
+
+*mako-0.7.3-r1 (22 Feb 2013)
+
+  22 Feb 2013; Michał Górny <mgorny@gentoo.org> +mako-0.7.3-r1.ebuild:
+  Migrate to distutils-r1.
 
   16 Nov 2012; Anthony G. Basile <blueness@gentoo.org> mako-0.7.3.ebuild:
   keyword ~ppc64, bug #411761
