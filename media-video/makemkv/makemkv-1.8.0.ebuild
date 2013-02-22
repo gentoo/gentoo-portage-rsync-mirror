@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.8.0.ebuild,v 1.1 2013/02/22 03:19:51 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.8.0.ebuild,v 1.2 2013/02/22 04:57:53 mattm Exp $
 
 EAPI=4
 inherit eutils gnome2-utils multilib
@@ -15,7 +15,7 @@ SRC_URI="http://www.makemkv.com/download/${MY_P}.tar.gz
 
 LICENSE="LGPL-2.1 MPL-1.1 MakeMKV-EULA openssl"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="multilib"
 
 QA_PREBUILT="opt/bin/makemkvcon opt/bin/mmdtsdec"
@@ -54,7 +54,7 @@ src_install() {
 
 	local res
 	for res in 16 22 32 64 128; do
-		newicon -s ${res} makemkvgui/src/img/${res}/mkv_icon.png ${PN}.png
+		newicon -s ${res} makemkvgui/share/icons/${res}/makemkv.png ${PN}.png
 	done
 
 	make_desktop_entry ${PN} MakeMKV ${PN} 'Qt;AudioVideo;Video'
