@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lanmap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/ChangeLog,v 1.5 2012/09/19 20:22:03 darkside Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/ChangeLog,v 1.6 2013/02/22 20:59:09 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> lanmap-81-r1.ebuild:
+  Add ~arm-linux keyword.
 
   19 Sep 2012; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   dropping maintainership, backup herd exists
@@ -23,4 +26,3 @@
   +files/makefile.patch, +metadata.xml:
   Initial import. Many thanks to Justin Lecher (jlec), bug 249631. Moved
   from sunrise
-

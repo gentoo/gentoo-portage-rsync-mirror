@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.151 2013/02/21 21:52:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.152 2013/02/22 20:57:49 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> scite-3.2.4.ebuild:
+  Add ~arm-linux keyword.
 
   21 Feb 2013; Ulrich Müller <ulm@gentoo.org> scite-3.2.3.ebuild,
   scite-3.2.4.ebuild:

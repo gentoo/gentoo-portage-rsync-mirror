@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxpanel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.52 2013/01/26 17:46:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.53 2013/02/22 20:57:10 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> lxpanel-0.5.12.ebuild:
+  Add ~arm-linux keyword.
 
 *lxpanel-0.5.12 (26 Jan 2013)
 

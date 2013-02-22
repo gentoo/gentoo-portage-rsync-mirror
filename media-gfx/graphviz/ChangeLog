@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.269 2012/12/17 20:35:03 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.270 2013/02/22 20:56:24 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org> graphviz-2.28.0.ebuild:
+  Add ~arm-linux keyword.
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> graphviz-2.28.0.ebuild:
   Add ~ppc64, wrt bug #419621
