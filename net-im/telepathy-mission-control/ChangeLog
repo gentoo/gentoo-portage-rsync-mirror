@@ -1,6 +1,10 @@
 # ChangeLog for net-im/telepathy-mission-control
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.80 2013/02/02 23:02:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.81 2013/02/22 20:01:25 zmedico Exp $
+
+  22 Feb 2013; Zac Medico <zmedico@gentoo.org>
+  telepathy-mission-control-5.14.0-r1.ebuild:
+  Add ~arm-linux keyword.
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   telepathy-mission-control-5.14.0-r1.ebuild:
