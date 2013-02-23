@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3mir
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/ChangeLog,v 1.15 2008/04/21 18:21:07 phreak Exp $
+# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mir/ChangeLog,v 1.16 2013/02/23 20:29:32 zmedico Exp $
+
+  23 Feb 2013; Zac Medico <zmedico@gentoo.org> w3mir-1.0.10-r1.ebuild:
+  Add ~arm-linux and ~x86-linux keywords.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
@@ -62,4 +65,3 @@
 
   07 May 2003; <rac@gentoo.org> w3mir-1.0.10.ebuild:
   Initial import.  Ebuild submitted by Mol <newsg@infofab.no> in bug #13164.
-
