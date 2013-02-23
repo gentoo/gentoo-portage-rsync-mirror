@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7522 2013/02/22 18:57:16 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7524 2013/02/22 23:17:19 moult Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Feb 2013; Dion Moult <moult@gentoo.org> package.mask:
+  Remove www-apps/online-bookmarks mask as removed from tree. See #449820.
+
+  22 Feb 2013; Dion Moult <moult@gentoo.org> package.mask:
+  Mask net-misc/wxdfast (bug 457832)
 
   22 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:
