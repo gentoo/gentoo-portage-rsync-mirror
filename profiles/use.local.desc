@@ -2832,6 +2832,7 @@ media-libs/swfdec:gstreamer - Enable media-libs/gstreamer to support various med
 media-libs/swfdec:gtk - Enable GTK+ convenience library while is necessary for all GTK+ apps using swfdec (gnome-extra/swfdec-gnome and www-plugins/swfdec-mozilla)
 media-libs/swfdec:pulseaudio - Use media-sound/pulseaudio for audio output
 media-libs/taglib:asf - Provide support for Microsoft's 'advanced systems format' media container.
+media-libs/tremor:low-accuracy - enable 32bit only multiply operations
 media-libs/vips:fits - Enable support for the FITS image format through sci-libs/cfitsio
 media-libs/win32codecs:real - Installs the real video codecs
 media-libs/x264:10bit - Set output bit depth to 10, this may not be compatible with all decoders

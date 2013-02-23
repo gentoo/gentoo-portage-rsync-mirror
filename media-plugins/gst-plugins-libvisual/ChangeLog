@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-libvisual
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libvisual/ChangeLog,v 1.130 2013/02/21 22:22:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libvisual/ChangeLog,v 1.131 2013/02/23 10:15:58 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-libvisual-1.0.5.ebuild:
+  Stable for hppa, wrt bug #458188
 
   21 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-libvisual-1.0.5.ebuild:

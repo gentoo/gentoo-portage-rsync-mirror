@@ -1,22 +1,23 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/tremor-0_pre20120120.ebuild,v 1.13 2013/02/23 10:21:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/tremor-0_pre20130223.ebuild,v 1.1 2013/02/23 10:02:17 ssuominen Exp $
+
+EAPI=5
 
 # svn export http://svn.xiph.org/trunk/Tremor tremor-${PV}
 
-EAPI=4
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="A fixed-point version of the Ogg Vorbis decoder (also known as libvorbisidec)"
 HOMEPAGE="http://wiki.xiph.org/Tremor"
-SRC_URI="mirror://gentoo/${P}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ppc64 sparc x86 ~amd64-fbsd"
-IUSE="static-libs"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd"
+IUSE="low-accuracy static-libs"
 
-RDEPEND="media-libs/libogg"
+RDEPEND="media-libs/libogg:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -28,11 +29,13 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable static-libs static)
+	econf \
+		$(use_enable static-libs static) \
+		$(use_enable low-accuracy)
 }
 
 src_install() {
 	default
 	dohtml -r doc/*
-	rm -f "${ED}"usr/lib*/lib*.la
+	prune_libtool_files
 }

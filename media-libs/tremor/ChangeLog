@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/tremor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/ChangeLog,v 1.12 2013/02/23 09:41:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/ChangeLog,v 1.14 2013/02/23 10:21:07 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tremor-0_pre20120120.ebuild:
+  Stable for hppa, wrt bug #458188
+
+*tremor-0_pre20130223 (23 Feb 2013)
+
+  23 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +tremor-0_pre20130223.ebuild, metadata.xml:
+  New snapshot; new USE flag "low-accuracy" to enable 32bit only multiply
+  operations
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tremor-0_pre20120120.ebuild:
   Stable for sparc, wrt bug #458188
