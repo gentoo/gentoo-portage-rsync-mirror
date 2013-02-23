@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-libnice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libnice/ChangeLog,v 1.17 2013/02/22 18:11:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libnice/ChangeLog,v 1.18 2013/02/23 09:18:49 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-libnice-0.1.3-r100.ebuild:
+  Stable for sparc, wrt bug #458188
 
   22 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-libnice-0.1.3-r100.ebuild:
