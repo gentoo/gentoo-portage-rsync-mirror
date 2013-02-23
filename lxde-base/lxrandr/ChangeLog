@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxrandr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/ChangeLog,v 1.19 2012/08/25 00:04:15 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/ChangeLog,v 1.20 2013/02/23 02:34:07 zmedico Exp $
+
+  23 Feb 2013; Zac Medico <zmedico@gentoo.org> lxrandr-0.1.2.ebuild:
+  Add ~arm-linux and ~x86-linux keywords.
 
   25 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
   -files/lxrandr-0.1.1-intltool.patch, -lxrandr-0.1.1.ebuild:

@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.459 2013/02/23 02:25:39 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.461 2013/02/23 02:49:21 mattst88 Exp $
+
+  23 Feb 2013; Matt Turner <mattst88@gentoo.org> mesa-9.0.3.ebuild:
+  Drop unnecessary dependency on libdrm[libkms], bug 445488.
+
+*mesa-9.0.3 (23 Feb 2013)
+
+  23 Feb 2013; Matt Turner <mattst88@gentoo.org> +mesa-9.0.3.ebuild:
+  Version bump to 9.0.3, bug 454106.
 
   23 Feb 2013; Matt Turner <mattst88@gentoo.org> -mesa-9.1_rc1.ebuild,
   -mesa-9.1_rc2.ebuild:

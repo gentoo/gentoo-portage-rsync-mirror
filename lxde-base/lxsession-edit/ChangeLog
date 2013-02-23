@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxsession-edit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession-edit/ChangeLog,v 1.20 2012/08/25 00:04:55 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession-edit/ChangeLog,v 1.21 2013/02/23 02:42:36 zmedico Exp $
+
+  23 Feb 2013; Zac Medico <zmedico@gentoo.org> lxsession-edit-0.2.0.ebuild:
+  Add ~arm-linux and ~x86-linux keywords.
 
   25 Aug 2012; Markos Chandras <hwoarang@gentoo.org>
   -files/lxsession-edit-0.1.1-intltool.patch, -lxsession-edit-0.1.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.103 2012/08/25 00:10:58 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.104 2013/02/23 02:52:23 zmedico Exp $
+
+  23 Feb 2013; Zac Medico <zmedico@gentoo.org> obconf-2.0.3_p20111019.ebuild:
+  Add ~arm-linux and ~x86-linux keywords.
 
   25 Aug 2012; Markos Chandras <hwoarang@gentoo.org> -obconf-2.0.3-r1.ebuild,
   -obconf-2.0.3.ebuild:
