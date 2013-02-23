@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/star
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.101 2013/02/04 11:45:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.102 2013/02/23 17:55:55 jer Exp $
+
+  23 Feb 2013; Jeroen Roovers <jer@gentoo.org> star-1.5.2.ebuild:
+  Respect CFLAGS (bug #458774 by RB).
 
 *star-1.5.2 (04 Feb 2013)
 *star-1.5.1-r2 (04 Feb 2013)

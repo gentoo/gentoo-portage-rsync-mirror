@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5.2.ebuild,v 1.1 2013/02/04 11:45:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5.2.ebuild,v 1.2 2013/02/23 17:55:55 jer Exp $
 
 EAPI=5
 
@@ -58,7 +58,13 @@ src_prepare() {
 src_configure() { :; } #avoid ./configure run
 
 src_compile() {
-	emake CC="$(tc-getCC)" COPTX="${CFLAGS}" CPPOPTX="${CPPFLAGS}" LDOPTX="${LDFLAGS}"
+	emake \
+		CC="$(tc-getCC)" \
+		COPTX="${CFLAGS}" \
+		CPPOPTX="${CPPFLAGS}" \
+		COPTGPROF= \
+		COPTOPT= \
+		LDOPTX="${LDFLAGS}"
 }
 
 src_install() {

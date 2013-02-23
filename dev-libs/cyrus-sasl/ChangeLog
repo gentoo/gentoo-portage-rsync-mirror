@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.272 2013/02/23 15:04:08 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.273 2013/02/23 17:35:17 polynomial-c Exp $
+
+  23 Feb 2013; Lars Wendler <polynomial-c@gentoo.org>
+  +files/cyrus-sasl-2.1.26-missing-size_t.patch:
+  Added forgotten patch from previous commit.
 
 *cyrus-sasl-2.1.26-r1 (23 Feb 2013)
 

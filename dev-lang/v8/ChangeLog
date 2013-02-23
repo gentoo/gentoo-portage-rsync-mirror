@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.282 2013/02/22 12:09:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.283 2013/02/23 17:32:50 floppym Exp $
+
+  23 Feb 2013; Mike Gilbert <floppym@gentoo.org> -v8-3.14.5.3.ebuild,
+  -v8-3.15.11.13.ebuild:
+  Remove old.
 
   22 Feb 2013; Agostino Sarubbo <ago@gentoo.org> v8-3.15.11.15.ebuild:
   Stable for x86, wrt bug #458644

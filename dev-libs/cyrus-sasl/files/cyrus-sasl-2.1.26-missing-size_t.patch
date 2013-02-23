@@ -1,0 +1,12 @@
+diff -urpN cyrus-sasl-2.1.26.orig/include/sasl.h cyrus-sasl-2.1.26/include/sasl.h
+--- cyrus-sasl-2.1.26.orig/include/sasl.h	2012-10-12 07:05:48.000000000 -0700
++++ cyrus-sasl-2.1.26/include/sasl.h	2013-02-22 20:20:48.770386365 -0800
+@@ -121,6 +121,8 @@
+ #ifndef SASL_H
+ #define SASL_H 1
+ 
++#include <stddef.h>
++
+ /* Keep in sync with win32/common.mak */
+ #define SASL_VERSION_MAJOR 2
+ #define SASL_VERSION_MINOR 1
