@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-Manifest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.30 2013/02/21 15:06:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.31 2013/02/23 08:53:12 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-ExtUtils-Manifest-1.610.0.ebuild:
+  Stable for sparc, wrt bug #458122
 
   21 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   perl-ExtUtils-Manifest-1.610.0.ebuild:

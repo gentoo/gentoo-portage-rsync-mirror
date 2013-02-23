@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Pluggable
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Pluggable/ChangeLog,v 1.37 2013/02/21 15:10:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Pluggable/ChangeLog,v 1.38 2013/02/23 08:56:43 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-Module-Pluggable-4.600.0.ebuild:
+  Stable for sparc, wrt bug #458122
 
   21 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   perl-Module-Pluggable-4.600.0.ebuild:

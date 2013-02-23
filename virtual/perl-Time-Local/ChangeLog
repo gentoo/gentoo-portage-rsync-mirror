@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Time-Local
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.68 2013/02/21 15:14:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.69 2013/02/23 09:01:16 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-Time-Local-1.230.0.ebuild:
+  Stable for sparc, wrt bug #458122
 
   21 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-Time-Local-1.230.0.ebuild:
   Stable for ia64, wrt bug #458122

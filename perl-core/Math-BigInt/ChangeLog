@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Math-BigInt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/ChangeLog,v 1.81 2013/02/21 14:51:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/ChangeLog,v 1.82 2013/02/23 08:38:12 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> Math-BigInt-1.997.0.ebuild:
+  Stable for sparc, wrt bug #458122
 
   21 Feb 2013; Agostino Sarubbo <ago@gentoo.org> Math-BigInt-1.997.0.ebuild:
   Stable for ia64, wrt bug #458122
