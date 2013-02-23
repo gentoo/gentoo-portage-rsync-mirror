@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/best_in_place
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/ChangeLog,v 1.10 2012/12/14 16:31:11 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/ChangeLog,v 1.11 2013/02/23 11:03:58 graaff Exp $
+
+  23 Feb 2013; Hans de Graaff <graaff@gentoo.org> -best_in_place-1.1.2.ebuild:
+  Cleanup.
 
 *best_in_place-1.1.3 (14 Dec 2012)
 
