@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/amq-client
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amq-client/ChangeLog,v 1.5 2012/12/14 07:26:08 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amq-client/ChangeLog,v 1.6 2013/02/23 08:06:58 graaff Exp $
+
+  23 Feb 2013; Hans de Graaff <graaff@gentoo.org> -amq-client-0.9.4.ebuild,
+  -amq-client-0.9.5.ebuild:
+  Cleanup.
 
 *amq-client-0.9.10 (14 Dec 2012)
 
