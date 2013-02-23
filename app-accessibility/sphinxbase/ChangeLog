@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/sphinxbase
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.5 2013/02/23 12:42:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.6 2013/02/23 13:52:58 jlec Exp $
+
+  23 Feb 2013; Justin Lecher <jlec@gentoo.org> sphinxbase-0.8.ebuild:
+  Fix python testing
 
 *sphinxbase-0.8 (23 Feb 2013)
 

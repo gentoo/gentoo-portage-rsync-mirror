@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/sphinxbase-0.8.ebuild,v 1.1 2013/02/23 12:42:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/sphinxbase-0.8.ebuild,v 1.2 2013/02/23 13:52:58 jlec Exp $
 
 EAPI=5
 
@@ -58,7 +58,8 @@ src_compile() {
 }
 
 python_test() {
-	"${PYTHON}" sb_test.py || die "Tests fail with ${EPYTHON}"
+	LD_LIBRARY_PATH="${S}"/src/lib${PN}/.libs \
+		"${PYTHON}" sb_test.py || die "Tests fail with ${EPYTHON}"
 }
 
 src_test() {

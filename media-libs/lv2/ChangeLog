@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/lv2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2/ChangeLog,v 1.5 2012/12/11 19:13:09 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2/ChangeLog,v 1.6 2013/02/23 13:34:39 aballier Exp $
+
+*lv2-1.4.0 (23 Feb 2013)
+
+  23 Feb 2013; Alexis Ballier <aballier@gentoo.org> +lv2-1.4.0.ebuild:
+  version bump
 
   11 Dec 2012; Agostino Sarubbo <ago@gentoo.org> lv2-1.2.0.ebuild:
   Add ~ppc, wrt bug #421061
