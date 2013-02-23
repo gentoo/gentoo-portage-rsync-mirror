@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/freevo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.75 2013/01/17 16:32:21 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.76 2013/02/23 21:53:04 floppym Exp $
+
+  23 Feb 2013; Mike Gilbert <floppym@gentoo.org> freevo-1.7.6.1.ebuild,
+  freevo-1.9.0.ebuild:
+  Drop sqlite support, bug 408837.
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> freevo-1.9.0.ebuild:
   ppc stable (bug 358455)
@@ -320,4 +324,3 @@
   files/freevo-record.rc6, files/freevo-setup.patch, files/freevo-web.rc6,
   files/freevo.rc6:
   Initial version.
-
