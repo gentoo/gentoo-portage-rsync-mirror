@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gperf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.55 2012/04/26 22:06:49 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.56 2013/02/23 01:46:32 zmedico Exp $
+
+  23 Feb 2013; Zac Medico <zmedico@gentoo.org> gperf-3.0.4.ebuild:
+  Add ~arm-linux keyword.
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> gperf-3.0.4.ebuild:
   keyword ~amd64-fbsd
