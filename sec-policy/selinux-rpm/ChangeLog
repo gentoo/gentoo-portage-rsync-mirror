@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-rpm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-rpm/ChangeLog,v 1.22 2013/01/26 18:20:55 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-rpm/ChangeLog,v 1.23 2013/02/23 17:24:44 swift Exp $
+
+  23 Feb 2013; Sven Vermeulen <swift@gentoo.org>
+  selinux-rpm-2.20120725-r11.ebuild:
+  Stabilization
 
 *selinux-rpm-2.20120725-r11 (26 Jan 2013)
 

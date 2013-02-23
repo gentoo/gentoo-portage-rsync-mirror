@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kubrick
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.134 2013/02/07 04:57:23 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.135 2013/02/23 17:03:29 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> kubrick-4.10.0.ebuild,
+  kubrick-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *kubrick-4.10.0 (06 Feb 2013)
 

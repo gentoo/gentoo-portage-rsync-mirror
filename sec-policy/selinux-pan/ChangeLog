@@ -1,5 +1,9 @@
 
 
+  23 Feb 2013; Sven Vermeulen <swift@gentoo.org>
+  selinux-pan-2.20120725-r11.ebuild:
+  Stabilization
+
 *selinux-pan-2.20120725-r11 (26 Jan 2013)
 
   26 Jan 2013; Sven Vermeulen <swift@gentoo.org>

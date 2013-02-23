@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-distcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-distcc/ChangeLog,v 1.43 2013/01/26 18:20:30 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-distcc/ChangeLog,v 1.44 2013/02/23 17:24:18 swift Exp $
+
+  23 Feb 2013; Sven Vermeulen <swift@gentoo.org>
+  selinux-distcc-2.20120725-r11.ebuild:
+  Stabilization
 
 *selinux-distcc-2.20120725-r11 (26 Jan 2013)
 

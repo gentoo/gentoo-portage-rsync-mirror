@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.310 2013/02/07 04:56:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.311 2013/02/23 17:05:37 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> kwin-4.10.0.ebuild,
+  kwin-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *kwin-4.10.0 (06 Feb 2013)
 

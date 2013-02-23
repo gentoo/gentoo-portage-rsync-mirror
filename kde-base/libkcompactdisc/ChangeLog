@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkcompactdisc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcompactdisc/ChangeLog,v 1.144 2013/02/07 04:57:33 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcompactdisc/ChangeLog,v 1.145 2013/02/23 17:07:07 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libkcompactdisc-4.10.0.ebuild,
+  libkcompactdisc-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *libkcompactdisc-4.10.0 (06 Feb 2013)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/liboxygenstyle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.84 2013/02/07 04:57:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.85 2013/02/23 17:10:55 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> liboxygenstyle-4.10.0.ebuild,
+  liboxygenstyle-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
   07 Feb 2013; Naohiro Aota <naota@gentoo.org> liboxygenstyle-4.9.5.ebuild:
   Add ~x86-fbsd wrt bug #430072

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libtaskmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libtaskmanager/ChangeLog,v 1.149 2013/02/07 04:58:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libtaskmanager/ChangeLog,v 1.150 2013/02/23 17:11:49 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libtaskmanager-4.10.0.ebuild,
+  libtaskmanager-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *libtaskmanager-4.10.0 (06 Feb 2013)
 

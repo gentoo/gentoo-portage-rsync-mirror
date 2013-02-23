@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/nepomuk-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.29 2013/02/10 16:02:46 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.30 2013/02/23 17:13:42 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> nepomuk-core-4.10.0.ebuild,
+  nepomuk-core-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *nepomuk-core-4.10.0-r1 (10 Feb 2013)
 

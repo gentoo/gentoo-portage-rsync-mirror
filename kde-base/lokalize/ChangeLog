@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/lokalize
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/ChangeLog,v 1.139 2013/02/07 04:57:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/ChangeLog,v 1.140 2013/02/23 17:12:08 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> lokalize-4.10.0.ebuild,
+  lokalize-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *lokalize-4.10.0 (06 Feb 2013)
 

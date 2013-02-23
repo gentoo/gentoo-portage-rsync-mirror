@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/printer-applet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.108 2013/01/28 12:13:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.109 2013/02/23 17:18:59 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> printer-applet-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
   28 Jan 2013; Agostino Sarubbo <ago@gentoo.org> -printer-applet-4.9.3.ebuild,
   -printer-applet-4.9.4.ebuild:
