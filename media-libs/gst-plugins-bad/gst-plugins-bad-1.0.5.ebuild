@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-1.0.5.ebuild,v 1.9 2013/02/23 10:09:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-1.0.5.ebuild,v 1.10 2013/02/23 14:47:38 ago Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Less plugins for GStreamer"
 HOMEPAGE="http://gstreamer.freedesktop.org/"
 
 LICENSE="LGPL-2"
-KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="+orc"
 
 RDEPEND="

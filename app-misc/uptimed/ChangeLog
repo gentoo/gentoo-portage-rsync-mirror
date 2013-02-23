@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.93 2013/02/19 16:33:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.94 2013/02/23 14:51:03 polynomial-c Exp $
+
+  23 Feb 2013; Lars Wendler <polynomial-c@gentoo.org> uptimed-0.3.17-r1.ebuild:
+  Don't install libtool archives by default (bug #457754). Ported ebuild to
+  EAPI-5. Small cleanups.
 
   19 Feb 2013; Agostino Sarubbo <ago@gentoo.org> uptimed-0.3.17-r1.ebuild:
   Stable for alpha, wrt bug #457250
