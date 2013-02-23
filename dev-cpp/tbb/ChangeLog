@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.36 2013/02/22 17:26:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.37 2013/02/23 10:45:21 jlec Exp $
+
+  23 Feb 2013; Justin Lecher <jlec@gentoo.org> -tbb-4.0.297.ebuild,
+  metadata.xml:
+  Drop old
 
   22 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tbb-4.1.20121003.ebuild:
   Stable for ppc, wrt bug #455510
