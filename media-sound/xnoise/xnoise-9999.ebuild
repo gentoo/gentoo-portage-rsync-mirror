@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-9999.ebuild,v 1.13 2013/02/12 18:34:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-9999.ebuild,v 1.14 2013/02/23 19:02:29 angelos Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils git-2
@@ -20,6 +20,7 @@ RDEPEND="x11-libs/gtk+:3
 	gnome-base/librsvg:2
 	media-libs/gstreamer:1.0
 	media-libs/gst-plugins-base:1.0
+	media-plugins/gst-plugins-meta:1.0
 	dev-db/sqlite:3
 	media-libs/taglib
 	x11-libs/cairo
