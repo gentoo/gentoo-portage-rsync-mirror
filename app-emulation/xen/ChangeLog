@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.108 2013/02/04 15:43:23 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.109 2013/02/23 16:34:06 idella4 Exp $
+
+  23 Feb 2013; Ian Delaney <idella4@gentoo.org> +files/xen-4-efi.patch,
+  metadata.xml, xen-4.2.0-r1.ebuild, xen-4.2.1-r1.ebuild:
+  local efi IUSE flag added, efi support to both 4.2.0 & 4.2.1, fixes Bug
+  #458160 by Jiří Moravec
 
   04 Feb 2013; Ian Delaney <idella4@gentoo.org> xen-4.2.0-r1.ebuild:
   Add a missed '\' to added patch, 2nd. time lucky

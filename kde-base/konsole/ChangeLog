@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.261 2013/02/07 04:57:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.262 2013/02/23 16:48:27 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> konsole-4.10.0.ebuild,
+  konsole-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *konsole-4.10.0 (06 Feb 2013)
 

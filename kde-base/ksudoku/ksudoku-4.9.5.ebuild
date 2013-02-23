@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ksudoku-4.9.5.ebuild,v 1.4 2013/01/27 23:53:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ksudoku-4.9.5.ebuild,v 1.5 2013/02/23 16:59:26 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ OPENGL_REQUIRED="optional"
 inherit ${eclass}
 
 DESCRIPTION="KDE Sudoku"
-KEYWORDS="amd64 ~arm ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="

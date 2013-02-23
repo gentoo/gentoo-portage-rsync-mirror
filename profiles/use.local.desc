@@ -548,6 +548,7 @@ app-emulation/wine:udisks - Support dynamic storage devices using sys-fs/udisks
 app-emulation/wine:win32 - Build a 32bit version of Wine (won't run Win64 binaries)
 app-emulation/wine:win64 - Build a 64bit version of Wine (won't run Win32 binaries)
 app-emulation/x48:readline - Enables support for libreadline
+app-emulation/xen:efi - Adds efi boot support, requires LDFLAG -melf_x86_64 for amd64
 app-emulation/xen:flask - Enable the Flask XSM module from NSA
 app-emulation/xen:pae - Enable support for PAE kernels (usually x86-32 with >4GB memory)
 app-emulation/xen:xsm - Enable the Xen Security Modules (XSM)

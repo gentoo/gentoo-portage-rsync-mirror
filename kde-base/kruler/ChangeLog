@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kruler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kruler/ChangeLog,v 1.232 2013/02/07 04:57:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kruler/ChangeLog,v 1.233 2013/02/23 16:53:56 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> kruler-4.10.0.ebuild,
+  kruler-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *kruler-4.10.0 (06 Feb 2013)
 

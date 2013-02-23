@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kglobalaccel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kglobalaccel/ChangeLog,v 1.126 2013/02/07 04:57:39 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kglobalaccel/ChangeLog,v 1.127 2013/02/23 16:33:29 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> kglobalaccel-4.10.0.ebuild,
+  kglobalaccel-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
   07 Feb 2013; Naohiro Aota <naota@gentoo.org> kglobalaccel-4.9.5.ebuild:
   Add ~x86-fbsd wrt bug #430072

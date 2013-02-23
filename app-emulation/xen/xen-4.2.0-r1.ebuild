@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.0-r1.ebuild,v 1.6 2013/02/04 15:43:23 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.0-r1.ebuild,v 1.7 2013/02/23 16:34:06 idella4 Exp $
 
 EAPI=5
 
@@ -24,9 +24,10 @@ HOMEPAGE="http://xen.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="custom-cflags debug flask pae xsm"
+IUSE="custom-cflags debug efi flask pae xsm"
 
-RDEPEND=""
+RDEPEND="efi? ( >=sys-devel/binutils-2.22[multitarget] )
+		 >=sys-devel/binutils-2.22[-multitarget]"
 PDEPEND="~app-emulation/xen-tools-${PV}[${PYTHON_USEDEP}]"
 
 RESTRICT="test"
@@ -39,6 +40,7 @@ REQUIRED_USE="
 	"
 pkg_setup() {
 	python-single-r1_pkg_setup
+
 	if [[ -z ${XEN_TARGET_ARCH} ]]; then
 		if use x86 && use amd64; then
 			die "Confusion! Both x86 and amd64 are set in your use flags!"
@@ -62,6 +64,8 @@ pkg_setup() {
 src_prepare() {
 	# Drop .config, fix gcc-4.6
 	epatch "${FILESDIR}"/${PN}-4-fix_dotconfig-gcc.patch
+
+	use efi && epatch "${FILESDIR}"/${PN}-4-efi.patch
 
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
@@ -108,15 +112,16 @@ src_configure() {
 
 src_compile() {
 	# Send raw LDFLAGS so that --as-needed works
-	emake CC="$(tc-getCC)" LDFLAGS="$(raw-ldflags)" LD="$(tc-getLD)"  -C xen ${myopt}
+	emake CC="$(tc-getCC)" LDFLAGS="$(raw-ldflags)" LD="$(tc-getLD)" -C xen ${myopt}
 }
 
 src_install() {
 	local myopt
 	use debug && myopt="${myopt} debug=y"
 	use pae && myopt="${myopt} pae=y"
+	use efi && mkdir -p "${D}"/boot/efi
 
-	emake LDFLAGS="$(raw-ldflags)" DESTDIR="${ED}" -C xen ${myopt} install
+	emake LDFLAGS="$(raw-ldflags)" DESTDIR="${D}" -C xen ${myopt} install
 }
 
 pkg_postinst() {
@@ -124,8 +129,6 @@ pkg_postinst() {
 	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
 	elog " http://en.gentoo-wiki.com/wiki/Xen/"
 
-	if use pae; then
-		echo
-		ewarn "This is a PAE build of Xen. It will *only* boot PAE kernels!"
-	fi
+	use pae && ewarn "This is a PAE build of Xen. It will *only* boot PAE kernels!"
+	use efi && einfo "The efi executable is installed in boot/efi"
 }

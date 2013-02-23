@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.1-r1.ebuild,v 1.2 2013/01/31 15:43:53 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.1-r1.ebuild,v 1.3 2013/02/23 16:34:06 idella4 Exp $
 
 EAPI=5
 
@@ -24,9 +24,10 @@ HOMEPAGE="http://xen.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="custom-cflags debug flask pae xsm"
+IUSE="custom-cflags debug efi flask pae xsm"
 
-RDEPEND=""
+RDEPEND="efi? ( >=sys-devel/binutils-2.22[multitarget] )
+		>=sys-devel/binutils-2.22[-multitarget]"
 PDEPEND="~app-emulation/xen-tools-${PV}"
 
 RESTRICT="test"
@@ -63,6 +64,8 @@ pkg_setup() {
 src_prepare() {
 	# Drop .config and fix gcc-4.6
 	epatch  "${FILESDIR}"/${PN/-pvgrub/}-4-fix_dotconfig-gcc.patch
+
+	use efi && epatch "${FILESDIR}"/${PN}-4-efi.patch
 
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
@@ -107,6 +110,7 @@ src_install() {
 	local myopt
 	use debug && myopt="${myopt} debug=y"
 	use pae && myopt="${myopt} pae=y"
+	use efi && mkdir -p "${D}"/boot/efi
 
 	emake LDFLAGS="$(raw-ldflags)" DESTDIR="${D}" -C xen ${myopt} install
 }
@@ -116,8 +120,6 @@ pkg_postinst() {
 	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
 	elog " http://en.gentoo-wiki.com/wiki/Xen/"
 
-	if use pae; then
-		echo
-		ewarn "This is a PAE build of Xen. It will *only* boot PAE kernels!"
-	fi
+	use pae && ewarn "This is a PAE build of Xen. It will *only* boot PAE kernels!"
+	use efi && einfo "The efi executable is installed in boot/efi"
 }
