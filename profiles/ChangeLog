@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7524 2013/02/22 23:17:19 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7526 2013/02/23 13:19:19 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Feb 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask ffmpeg-1.0
+
+  23 Feb 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  Unmask gst-{ffmpeg,libav} now that they do not need anymore a masked
+  ffmpeg/libav
 
   22 Feb 2013; Dion Moult <moult@gentoo.org> package.mask:
   Remove www-apps/online-bookmarks mask as removed from tree. See #449820.

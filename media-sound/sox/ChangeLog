@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sox
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.143 2012/11/25 21:12:32 lu_zero Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.144 2013/02/23 13:12:09 aballier Exp $
+
+*sox-14.4.1 (23 Feb 2013)
+
+  23 Feb 2013; Alexis Ballier <aballier@gentoo.org> +sox-14.4.1.ebuild,
+  +files/sox-14.4.1-uclibc.patch:
+  version bump
 
   25 Nov 2012; Luca Barbato <lu_zero@gentoo.org> sox-14.4.0.ebuild,
   +files/sox-14.4.0-libav-9.patch:

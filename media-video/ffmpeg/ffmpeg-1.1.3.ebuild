@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.4.ebuild,v 1.3 2013/02/23 13:24:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.1.3.ebuild,v 1.1 2013/02/23 13:21:34 aballier Exp $
 
 EAPI="4"
 
@@ -26,15 +26,15 @@ FFMPEG_REVISION="${PV#*_p}"
 LICENSE="GPL-2 amr? ( GPL-3 ) encode? ( aac? ( GPL-3 ) )"
 SLOT="0"
 if [ "${PV#9999}" = "${PV}" ] ; then
-	KEYWORDS="~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 fi
 IUSE="
 	aac aacplus alsa amr avresample bindist bluray +bzip2 cdio celt
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
 	gnutls gsm +hardcoded-tables iec61883 ieee1394 jack jpeg2k libass libcaca
-	libv4l modplug mp3 network openal openssl opus oss pic pulseaudio rtmp
-	schroedinger sdl speex static-libs test theora threads truetype twolame v4l
-	vaapi vdpau vorbis vpx X x264 xvid +zlib
+	libsoxr libv4l modplug mp3 network openal openssl opus oss pic pulseaudio
+	rtmp schroedinger sdl speex static-libs test theora threads truetype twolame
+	v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -45,7 +45,7 @@ for i in ${CPU_FEATURES}; do
 	IUSE="${IUSE} ${i%:*}"
 done
 
-FFTOOLS="aviocat cws2fws ffeval fourcc2pixfmt graph2dot ismindex pktdumper qt-faststart trasher"
+FFTOOLS="aviocat cws2fws ffescape ffeval fourcc2pixfmt graph2dot ismindex pktdumper qt-faststart trasher"
 
 for i in ${FFTOOLS}; do
 	IUSE="${IUSE} +fftools_$i"
@@ -81,6 +81,7 @@ RDEPEND="
 	jpeg2k? ( >=media-libs/openjpeg-1.3-r2 )
 	libass? ( media-libs/libass )
 	libcaca? ( media-libs/libcaca )
+	libsoxr? ( media-libs/soxr )
 	libv4l? ( media-libs/libv4l )
 	modplug? ( media-libs/libmodplug )
 	openal? ( >=media-libs/openal-1.1 )
@@ -127,13 +128,7 @@ src_prepare() {
 	if [ "${PV%_p*}" != "${PV}" ] ; then # Snapshot
 		export revision=git-N-${FFMPEG_REVISION}
 	fi
-
-	if has_version dev-libs/libcdio-paranoia; then
-		sed -i \
-			-e 's:cdio/cdda.h:cdio/paranoia/cdda.h:' \
-			-e 's:cdio/paranoia.h:cdio/paranoia/paranoia.h:' \
-			configure libavdevice/libcdio.c || die
-	fi
+	epatch_user
 }
 
 src_configure() {
@@ -195,6 +190,8 @@ src_configure() {
 	done
 	use truetype && myconf="${myconf} --enable-libfreetype"
 	use flite    && myconf="${myconf} --enable-libflite"
+	# libswresample options
+	use libsoxr && myconf="${myconf} --enable-libsoxr"
 
 	# Threads; we only support pthread for now but ffmpeg supports more
 	use threads && myconf="${myconf} --enable-pthreads"
@@ -304,6 +301,6 @@ src_install() {
 }
 
 src_test() {
-	LD_LIBRARY_PATH="${S}/libpostproc:${S}/libswscale:${S}/libswresample:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
+	LD_LIBRARY_PATH="${S}/libpostproc:${S}/libswscale:${S}/libswresample:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil:${S}/libavresample" \
 		emake V=1 fate
 }

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14495 2013/02/22 23:17:18 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14497 2013/02/23 13:19:19 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -442,8 +442,6 @@ dev-vcs/gitosis-gentoo
 # See bug #443230 for tracking the progress
 =media-video/libav-9.1*
 ~virtual/ffmpeg-9
-=media-plugins/gst-plugins-libav-1.1*
-~media-plugins/gst-plugins-ffmpeg-0.10.13_p201211
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (04 Nov 2012)
 # masked for testing, bug #422605
@@ -575,12 +573,6 @@ net-misc/libteam
 # Markos Chandras <hwoarang@getnoo.org> (27 May 2012)
 # Mask alpha release
 =sci-electronics/qelectrotech-0.30_alpha*
-
-# Alexis Ballier <aballier@gentoo.org> (26 May 2012)
-# API/ABI has changed with this release.
-# Mask until the tree is fine.
-# https://bugs.gentoo.org/show_bug.cgi?id=417677
->=media-video/ffmpeg-0.11
 
 # Benda Xu <heroxbd@gentoo.org> (20 May 2012)
 # geant-4.9.5_p01 has a major class declaration change that renders
