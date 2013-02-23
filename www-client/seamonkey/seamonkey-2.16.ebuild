@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.16.ebuild,v 1.1 2013/02/21 13:54:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.16.ebuild,v 1.2 2013/02/23 15:09:25 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -63,7 +63,7 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	>=dev-libs/nspr-4.9.4
 	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
-	>=media-libs/libpng-1.5.11[apng]
+	>=media-libs/libpng-1.5.13[apng]
 	>=media-libs/libvpx-1.0.0
 	>=x11-libs/cairo-1.10
 	>=x11-libs/pango-1.14.0

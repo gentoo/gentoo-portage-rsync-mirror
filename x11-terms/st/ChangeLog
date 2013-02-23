@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/st
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.10 2013/02/22 16:16:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.11 2013/02/23 15:12:43 xmw Exp $
+
+  23 Feb 2013; Michael Weber <xmw@gentoo.org> -st-0.1.1.ebuild,
+  -st-0.2.1.ebuild, st-0.3.ebuild, st-9999.ebuild:
+  Correct X11 paths (thanks Joe M, bug 458796), verbose build.
 
   22 Feb 2013; Michael Weber <xmw@gentoo.org> st-0.3.ebuild, st-9999.ebuild,
   metadata.xml:

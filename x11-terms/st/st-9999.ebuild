@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-9999.ebuild,v 1.7 2013/02/22 16:16:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-9999.ebuild,v 1.8 2013/02/23 15:12:43 xmw Exp $
 
 EAPI=5
 
-inherit git-2 savedconfig toolchain-funcs
+inherit multilib savedconfig toolchain-funcs
 
 DESCRIPTION="simple terminal implementation for X"
 HOMEPAGE="http://st.suckless.org/"
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="savedconfig"
 
-RDEPEND="
-	media-libs/fontconfig
+RDEPEND="media-libs/fontconfig
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXft"
@@ -27,14 +26,18 @@ src_prepare() {
 	sed -e '/^CFLAGS/s:[[:space:]]-Wall[[:space:]]: :' \
 		-e '/^CFLAGS/s:[[:space:]]-O[^[:space:]]*[[:space:]]: :' \
 		-e '/^LDFLAGS/{s:[[:space:]]-s[[:space:]]: :}' \
+		-e '/^X11INC/{s:/usr/X11R6/include:/usr/include/X11:}' \
+		-e "/^X11LIB/{s:/usr/X11R6/lib:/usr/$(get_libdir)/X11:}" \
 		-i config.mk || die
+	sed -e '/@echo/!s:@::' \
+		-i Makefile || die
 	tc-export CC
 
 	restore_config config.h
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX="${EPREFIX}"/usr install || die
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}"/usr install
 	tic -s -o "${ED}"/usr/share/terminfo st.info || die
 	dodoc TODO
 
