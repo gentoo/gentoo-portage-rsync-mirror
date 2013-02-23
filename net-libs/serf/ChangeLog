@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.84 2013/01/01 19:08:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.85 2013/02/23 22:38:54 floppym Exp $
+
+*serf-1.2.0 (23 Feb 2013)
+
+  23 Feb 2013; Mike Gilbert <floppym@gentoo.org> +serf-1.2.0.ebuild:
+  Version bump. Ebuild by Arfrever.
 
   01 Jan 2013; Raúl Porcel <armin76@gentoo.org> serf-1.1.1.ebuild:
   s390/sh stable wrt #446524
