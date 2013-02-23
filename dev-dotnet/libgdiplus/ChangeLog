@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/libgdiplus
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.140 2012/12/07 04:53:34 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.141 2013/02/23 15:52:15 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libgdiplus-2.10.9.ebuild:
+  Add ~ppc64, wrt bug #455960
 
   07 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libgdiplus-2.10.9.ebuild:
@@ -667,4 +670,3 @@
   08 Jun 2004; Peter Johanson, <latexer@gentoo.org> libgdiplus-0.8.ebuild,
   metadata.xml:
   Initial commit. Ebuild by yours truly.
-

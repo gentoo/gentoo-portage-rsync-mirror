@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.257 2013/02/07 04:57:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.258 2013/02/23 15:55:06 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> ark-4.10.0.ebuild,
+  ark-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *ark-4.10.0 (06 Feb 2013)
 

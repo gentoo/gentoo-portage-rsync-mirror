@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.251 2012/11/30 16:56:33 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.252 2013/02/23 15:52:33 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> mono-2.10.9-r2.ebuild:
+  Add ~ppc64, wrt bug #455960
 
   30 Nov 2012; Agostino Sarubbo <ago@gentoo.org> mono-2.10.9-r2.ebuild:
   Stable for ppc, wrt bug #433768

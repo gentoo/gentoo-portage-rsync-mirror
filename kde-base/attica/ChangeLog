@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/attica
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/ChangeLog,v 1.103 2013/02/07 04:57:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/ChangeLog,v 1.104 2013/02/23 15:55:24 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> attica-4.10.0.ebuild,
+  attica-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
   07 Feb 2013; Naohiro Aota <naota@gentoo.org> attica-4.9.5.ebuild:
   Add ~x86-fbsd wrt bug #430072

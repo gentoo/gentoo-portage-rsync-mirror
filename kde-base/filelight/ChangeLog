@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/filelight
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.76 2013/02/07 04:57:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.77 2013/02/23 15:59:19 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> filelight-4.10.0.ebuild,
+  filelight-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *filelight-4.10.0 (06 Feb 2013)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libbackend-elements
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbackend-elements/ChangeLog,v 1.7 2012/11/30 15:13:05 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbackend-elements/ChangeLog,v 1.8 2013/02/23 15:50:57 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  libbackend-elements-1.7.2.ebuild:
+  Add ~ppc64, wrt bug #455960
 
   30 Nov 2012; <ago@gentoo.org> libbackend-elements-1.7.2.ebuild:
   Stable for ppc, wrt bug #442394
@@ -33,4 +37,3 @@
   +libbackend-elements-1.7.0.ebuild, +metadata.xml:
   Initial commit (ebuild written by me), needed for xsd and the required
   libraries.
-

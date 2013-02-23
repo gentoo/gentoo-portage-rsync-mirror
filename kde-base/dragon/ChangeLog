@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/dragon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dragon/ChangeLog,v 1.19 2013/02/07 04:56:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dragon/ChangeLog,v 1.20 2013/02/23 15:58:25 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> dragon-4.10.0.ebuild,
+  dragon-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *dragon-4.10.0 (06 Feb 2013)
 

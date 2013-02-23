@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/granatier
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/granatier/ChangeLog,v 1.94 2013/02/07 04:57:43 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/granatier/ChangeLog,v 1.95 2013/02/23 15:59:55 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> granatier-4.10.0.ebuild,
+  granatier-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *granatier-4.10.0 (06 Feb 2013)
 

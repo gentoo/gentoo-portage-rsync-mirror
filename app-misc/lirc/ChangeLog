@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.237 2012/11/30 14:00:24 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.238 2013/02/23 15:50:10 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> lirc-0.9.0-r2.ebuild:
+  Add ~ppc64, wrt bug #455960
 
   30 Nov 2012;  <ago@gentoo.org> -lirc-0.8.7.ebuild, -lirc-0.9.0.ebuild:
   Remove old
