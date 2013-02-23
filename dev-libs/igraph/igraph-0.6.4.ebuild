@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/igraph/igraph-0.6.4.ebuild,v 1.1 2013/02/21 20:18:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/igraph/igraph-0.6.4.ebuild,v 1.2 2013/02/23 12:45:10 jlec Exp $
 
 EAPI=5
 
@@ -25,7 +25,8 @@ DEPEND="
 	sci-libs/cxsparse
 	sci-mathematics/glpk
 	gmp? ( dev-libs/gmp )"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	virtual/pkgconfig"
 
 PATCHES=( "${FILESDIR}"/${P}-unbundle.patch )
 
