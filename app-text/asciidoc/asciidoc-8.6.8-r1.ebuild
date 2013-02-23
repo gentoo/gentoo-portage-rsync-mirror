@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-9999.ebuild,v 1.11 2013/02/23 00:44:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-8.6.8-r1.ebuild,v 1.1 2013/02/23 00:44:44 floppym Exp $
 
 EAPI=5
 
