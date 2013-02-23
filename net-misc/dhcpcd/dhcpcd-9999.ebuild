@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.1 2013/02/17 15:56:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.2 2013/02/22 23:34:33 williamh Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ if [[ ${PV} == "9999" ]]; then
 	inherit git-2
 else
 	SRC_URI="http://roy.marples.name/downloads/${PN}/${MY_P}.tar.bz2"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 	MY_P="${P/_alpha/-alpha}"
 	MY_P="${MY_P/_beta/-beta}"
 	MY_P="${MY_P/_rc/-rc}"
@@ -85,15 +85,5 @@ pkg_postinst()
 		elog "failover support you may have configured in your net configuration."
 		elog "This behaviour can be controlled with the -L flag."
 		elog "See the dhcpcd man page for more details."
-	fi
-
-	# Mea culpa, feel free to remove that after some time --mgorny.
-	if [[ -e "${ROOT}"/etc/systemd/system/network.target.wants/${PN}.service ]]
-	then
-		ebegin "Moving ${PN}.service to multi-user.target"
-		mv "${ROOT}"/etc/systemd/system/network.target.wants/${PN}.service \
-			"${ROOT}"/etc/systemd/system/multi-user.target.wants/
-		eend ${?} \
-			"Please try to re-enable dhcpcd.service"
 	fi
 }

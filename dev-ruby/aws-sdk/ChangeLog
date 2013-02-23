@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/aws-sdk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/ChangeLog,v 1.20 2013/02/19 10:35:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/ChangeLog,v 1.21 2013/02/22 23:48:32 flameeyes Exp $
+
+*aws-sdk-1.8.3.1 (22 Feb 2013)
+
+  22 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org> +aws-sdk-1.8.3.1.ebuild,
+  -aws-sdk-1.8.1.3.ebuild, -aws-sdk-1.8.2.ebuild, -aws-sdk-1.8.3.ebuild:
+  Version bump.
 
 *aws-sdk-1.8.3 (19 Feb 2013)
 

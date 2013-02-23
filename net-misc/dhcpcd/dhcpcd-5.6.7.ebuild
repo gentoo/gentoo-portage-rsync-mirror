@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.6.7.ebuild,v 1.2 2013/02/17 23:09:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.6.7.ebuild,v 1.3 2013/02/22 23:34:33 williamh Exp $
 
 EAPI=4
 
@@ -77,15 +77,5 @@ pkg_postinst() {
 		elog "failover support you may have configured in your net configuration."
 		elog "This behaviour can be controlled with the -L flag."
 		elog "See the dhcpcd man page for more details."
-	fi
-
-	# Mea culpa, feel free to remove that after some time --mgorny.
-	if [[ -e "${ROOT}"/etc/systemd/system/network.target.wants/${PN}.service ]]
-	then
-		ebegin "Moving ${PN}.service to multi-user.target"
-		mv "${ROOT}"/etc/systemd/system/network.target.wants/${PN}.service \
-			"${ROOT}"/etc/systemd/system/multi-user.target.wants/
-		eend ${?} \
-			"Please try to re-enable dhcpcd.service"
 	fi
 }

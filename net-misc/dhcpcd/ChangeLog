@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.353 2013/02/22 22:58:12 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.354 2013/02/22 23:34:33 williamh Exp $
+
+  22 Feb 2013; William Hubbs <williamh@gentoo.org> dhcpcd-5.6.7.ebuild,
+  dhcpcd-9999.ebuild:
+  remove outdated code for systemd and sync live ebuild
 
   22 Feb 2013; William Hubbs <williamh@gentoo.org> -dhcpcd-5.6.6.ebuild:
   remove old version
