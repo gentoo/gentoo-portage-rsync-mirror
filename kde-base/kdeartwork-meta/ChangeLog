@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.240 2013/02/07 04:57:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.241 2013/02/23 16:13:44 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> kdeartwork-meta-4.10.0.ebuild,
+  kdeartwork-meta-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *kdeartwork-meta-4.10.0 (06 Feb 2013)
 

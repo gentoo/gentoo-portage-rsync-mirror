@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kfilereplace
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfilereplace/ChangeLog,v 1.231 2013/02/07 04:57:27 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfilereplace/ChangeLog,v 1.232 2013/02/23 16:30:59 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> kfilereplace-4.10.0.ebuild,
+  kfilereplace-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *kfilereplace-4.10.0 (06 Feb 2013)
 

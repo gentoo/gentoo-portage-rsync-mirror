@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcmshell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcmshell/ChangeLog,v 1.151 2013/02/07 04:57:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcmshell/ChangeLog,v 1.152 2013/02/23 16:08:54 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> kcmshell-4.10.0.ebuild,
+  kcmshell-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
   07 Feb 2013; Naohiro Aota <naota@gentoo.org> kcmshell-4.9.5.ebuild:
   Add ~x86-fbsd wrt bug #430072

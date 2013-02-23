@@ -5,6 +5,10 @@
 		<email>blueness@gentoo.org</email>
 		<name>Anthony G. Basile</name>
 	</maintainer>
+	<maintainer>
+		<email>hwoarang@gentoo.org</email>
+		<name>Markos Chandras</name>
+	</maintainer>
 	<longdescription lang="en">
 		crosstool-NG is a utility for building cross-compiling toolchains.
 		It will only build the toolchain.  It is up to use how you want to

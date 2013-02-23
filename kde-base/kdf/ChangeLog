@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.232 2013/02/07 04:56:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.233 2013/02/23 16:27:56 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> kdf-4.10.0.ebuild,
+  kdf-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *kdf-4.10.0 (06 Feb 2013)
 

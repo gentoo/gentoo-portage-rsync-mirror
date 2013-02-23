@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.216 2013/02/07 04:57:07 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.217 2013/02/23 16:25:51 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> kdesdk-misc-4.10.0.ebuild,
+  kdesdk-misc-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
 *kdesdk-misc-4.10.0 (06 Feb 2013)
 

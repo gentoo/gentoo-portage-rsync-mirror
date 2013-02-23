@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.895 2013/02/14 23:07:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.896 2013/02/23 16:20:36 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> kdelibs-4.10.0.ebuild,
+  kdelibs-4.9.5.ebuild:
+  Add ~ppc64, wrt bug #455960
 
   14 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org> kdelibs-4.10.0.ebuild:
   Depend on newest libattica, does not hurt and could help for bug 456754
