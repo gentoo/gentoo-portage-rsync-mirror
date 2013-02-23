@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.84 2012/12/22 14:08:04 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.85 2013/02/23 21:09:45 ago Exp $
+
+  23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> opencv-2.4.3.ebuild:
+  Stable for ppc, wrt bug #455506
 
   22 Dec 2012; Anthony G. Basile <blueness@gentoo.org> opencv-2.4.3.ebuild:
   Keyword ~ppc, bug #441946, thanks peratu

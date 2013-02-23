@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.95 2013/02/17 18:03:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.96 2013/02/23 21:26:05 floppym Exp $
+
+*django-1.3.7 (23 Feb 2013)
+*django-1.4.5 (23 Feb 2013)
+
+  23 Feb 2013; Mike Gilbert <floppym@gentoo.org> +django-1.3.7.ebuild,
+  +django-1.4.5.ebuild, django-9999.ebuild:
+  Version bumps for security bug 447470. Port 1.3.7 to distutils-r1. Disable
+  parallel testing.
 
   17 Feb 2013; Mike Gilbert <floppym@gentoo.org> django-9999.ebuild:
   Convert to git, bug 457976 by guileone.

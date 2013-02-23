@@ -1,17 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.18 2013/02/23 21:26:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.3.7.ebuild,v 1.1 2013/02/23 21:26:05 floppym Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 PYTHON_REQ_USE='sqlite?'
-
-#if LIVE
-inherit git-2
-EGIT_REPO_URI="git://github.com/django/django.git
-	https://github.com/django/django.git"
-#endif
 
 inherit bash-completion-r1 distutils-r1 versionator webapp
 
@@ -33,14 +27,11 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-1.0.7[${PYTHON_USEDEP}] )
 	test? ( ${PYTHON_DEPS//sqlite?/sqlite} )"
 
-#if LIVE
-SRC_URI=
-KEYWORDS=
-#endif
-
 S="${WORKDIR}/${MY_P}"
 
 WEBAPP_MANUAL_SLOT="yes"
+
+PATCHES=( "${FILESDIR}/${PN}-1.3.1-djangodocs_extension.patch" )
 
 python_prepare_all() {
 	# Disable tests requiring network connection.
@@ -75,6 +66,11 @@ src_test() {
 	DISTUTILS_NO_PARALLEL_BUILD=1 distutils-r1_src_test
 }
 
+src_install() {
+	distutils-r1_src_install
+	webapp_src_install
+}
+
 python_install_all() {
 	distutils-r1_python_install_all
 
@@ -86,9 +82,7 @@ python_install_all() {
 	fi
 
 	insinto "${MY_HTDOCSDIR#${EPREFIX}}"
-	doins -r django/contrib/admin/static/admin/.
-
-	webapp_src_install
+	doins -r django/contrib/admin/media/.
 }
 
 pkg_postinst() {
@@ -98,6 +92,8 @@ pkg_postinst() {
 	elog "site-packages dir for easy development"
 	elog
 	ewarn "If you build Django ${PV} without USE=\"vhosts\""
+
+	# XXX: call webapp_pkg_postinst? the old ebuild didn't do that...
 	ewarn "webapp-config will automatically install the"
 	ewarn "admin media into the localhost webroot."
 }
