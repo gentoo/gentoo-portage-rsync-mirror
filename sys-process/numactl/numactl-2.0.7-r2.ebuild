@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.7-r2.ebuild,v 1.4 2012/06/29 07:15:55 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.7-r2.ebuild,v 1.5 2013/02/23 22:05:06 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://oss.sgi.com/www/projects/libnuma/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux"
 IUSE="perl static-libs"
 
 RDEPEND="perl? ( dev-lang/perl )"

@@ -1,0 +1,10 @@
+# ChangeLog for sys-process/crtools
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/crtools/ChangeLog,v 1.1 2013/02/23 22:27:00 radhermit Exp $
+
+*crtools-0.4 (23 Feb 2013)
+
+  23 Feb 2013; Tim Harder <radhermit@gentoo.org> +crtools-0.4.ebuild,
+  +files/crtools-0.4-flags.patch, +metadata.xml:
+  Initial import, ebuild by me.
+

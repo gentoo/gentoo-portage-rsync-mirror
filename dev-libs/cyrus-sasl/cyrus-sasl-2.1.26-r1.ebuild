@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r1.ebuild,v 1.1 2013/02/23 15:04:08 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r1.ebuild,v 1.2 2013/02/23 22:25:47 eras Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib autotools pam java-pkg-opt-2 db-use
@@ -186,7 +186,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	preserve_old_lib /usr/$(get_libdir)/libsasl2.so.2.0.25
+	preserve_old_lib /usr/$(get_libdir)/libsasl2.so.2
 }
 
 pkg_postinst () {
@@ -210,5 +210,5 @@ pkg_postinst () {
 		elog "to add the 'postfix' user to the 'mail' group."
 	fi
 
-	preserve_old_lib_notify /usr/$(get_libdir)/libsasl2.so.2.0.25
+	preserve_old_lib_notify /usr/$(get_libdir)/libsasl2.so.2
 }
