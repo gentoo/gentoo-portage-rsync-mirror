@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxde-common
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.38 2012/10/15 18:30:03 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.39 2013/02/23 02:20:39 zmedico Exp $
+
+  23 Feb 2013; Zac Medico <zmedico@gentoo.org> lxde-common-0.5.5-r3.ebuild:
+  Add ~arm-linux and ~x86-linux keywords.
 
 *lxde-common-0.5.5-r3 (15 Oct 2012)
 
