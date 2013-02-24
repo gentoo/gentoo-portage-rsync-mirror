@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/squaremap
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/squaremap/ChangeLog,v 1.1 2013/02/24 10:02:34 swegener Exp $
+
+*squaremap-1.0.1 (24 Feb 2013)
+
+  24 Feb 2013; Sven Wegener <swegener@gentoo.org> +squaremap-1.0.1.ebuild,
+  +metadata.xml:
+  Initial commit, thanks to Martin Mokrejš, bug #408221.
+
