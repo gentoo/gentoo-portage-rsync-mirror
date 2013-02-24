@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/m17n-db
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.66 2013/02/13 11:18:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.67 2013/02/24 18:07:09 ago Exp $
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> m17n-db-1.6.4.ebuild:
+  Stable for sh, wrt bug #455768
 
   13 Feb 2013; Agostino Sarubbo <ago@gentoo.org> m17n-db-1.6.4.ebuild:
   Stable for x86, wrt to bug #455768

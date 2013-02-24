@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.85 2013/02/21 03:45:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.86 2013/02/24 18:09:04 ago Exp $
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> paramiko-1.9.0.ebuild:
+  Stable for sh, wrt bug #452242
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> paramiko-1.9.0-r1.ebuild:
   Add ~arm-linux keyword.
