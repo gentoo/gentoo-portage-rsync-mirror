@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/hunkyfonts
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hunkyfonts/ChangeLog,v 1.13 2008/02/24 12:18:22 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hunkyfonts/ChangeLog,v 1.14 2013/02/24 16:43:15 ulm Exp $
+
+  24 Feb 2013; Ulrich Müller <ulm@gentoo.org> hunkyfonts-0.3.1.ebuild:
+  Fix LICENSE, bug 437082.
 
   24 Feb 2008; Raúl Porcel <armin76@gentoo.org> hunkyfonts-0.3.1.ebuild:
   alpha/sparc stable

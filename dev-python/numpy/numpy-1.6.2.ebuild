@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.2.ebuild,v 1.15 2013/02/19 15:34:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.2.ebuild,v 1.16 2013/02/24 16:33:39 jlec Exp $
 
 EAPI=4
 
@@ -89,7 +89,9 @@ pc_libs() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.6.1-atlas.patch
+	epatch \
+		"${FILESDIR}"/${PN}-1.6.1-atlas.patch \
+		"${FILESDIR}"/${P}-test-pareto.patch
 
 	if use lapack; then
 		append-ldflags "$($(tc-getPKG_CONFIG) --libs-only-other cblas lapack)"

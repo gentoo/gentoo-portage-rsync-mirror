@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.188 2013/02/19 20:17:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.189 2013/02/24 16:33:39 jlec Exp $
+
+  24 Feb 2013; Justin Lecher <jlec@gentoo.org> numpy-1.6.2.ebuild,
+  numpy-1.6.2-r2.ebuild, +files/numpy-1.6.2-test-pareto.patch, metadata.xml:
+  Backport fix for test failure (test_pareto) on 32bit systems, #447502
 
 *numpy-1.7.0 (19 Feb 2013)
 
