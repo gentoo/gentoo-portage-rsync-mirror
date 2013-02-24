@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r3.ebuild,v 1.8 2012/06/14 01:46:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r3.ebuild,v 1.9 2013/02/24 20:55:57 pinkbyte Exp $
 
 EAPI=1
 inherit toolchain-funcs flag-o-matic eutils user
@@ -11,10 +11,10 @@ HOMEPAGE="http://mgetty.greenie.net/"
 
 DEPEND="doc? ( virtual/latex-base virtual/texi2dvi )
 	>=sys-apps/sed-4
-	sys-apps/gawk
 	sys-apps/groff
 	dev-lang/perl
 	sys-apps/texinfo
+	virtual/awk
 	fax? ( !net-misc/hylafax )"
 RDEPEND="${DEPEND}
 	fax? ( media-libs/netpbm app-text/ghostscript-gpl )"
