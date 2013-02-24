@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.435 2013/02/24 11:32:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.436 2013/02/24 16:02:00 ago Exp $
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.16.ebuild:
+  Accidentally marked stable for amd64 and x86, revert
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.16.ebuild:
   Stable for x86, wrt bug #458390
