@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/tong
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/ChangeLog,v 1.8 2013/01/23 22:28:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/ChangeLog,v 1.10 2013/02/24 12:16:19 ago Exp $
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tong-1.2.ebuild:
+  Stable for x86, wrt bug #458836
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tong-1.2.ebuild:
+  Stable for amd64, wrt bug #458836
 
 *tong-1.2 (23 Jan 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipaddr/ipaddr-2.1.10-r1.ebuild,v 1.1 2013/01/22 20:17:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipaddr/ipaddr-2.1.10-r1.ebuild,v 1.2 2013/02/24 12:22:30 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} pypy{1_9,2_0} )
@@ -30,7 +30,6 @@ python_prepare() {
 }
 
 python_test() {
-	cd "${BUILD_DIR}" || die
 	PYTHONPATH=build/lib \
 		"${PYTHON}" ipaddr_test.py || die "Tests fail with ${EPYTHON}"
 }

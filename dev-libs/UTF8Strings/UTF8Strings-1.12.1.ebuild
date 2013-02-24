@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/UTF8Strings-1.12.1.ebuild,v 1.1 2013/02/22 17:04:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/UTF8Strings-1.12.1.ebuild,v 1.3 2013/02/24 12:15:25 ago Exp $
 
 EAPI="5"
 
@@ -11,5 +11,5 @@ HOMEPAGE="http://grigory.info/${PN}.About.html"
 SRC_URI="http://grigory.info/distfiles/${P}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"

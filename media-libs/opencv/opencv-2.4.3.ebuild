@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.3.ebuild,v 1.4 2013/02/23 21:09:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.3.ebuild,v 1.6 2013/02/24 12:15:47 ago Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}library/${MY_P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86 ~amd64-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux"
 IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k opencl openexr opengl pch png qt4 testprograms threads tiff v4l xine"
 
 RDEPEND="
