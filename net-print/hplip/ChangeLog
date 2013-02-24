@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.263 2013/02/21 19:10:07 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.264 2013/02/24 10:52:07 billie Exp $
+
+  24 Feb 2013; Daniel Pielmeier <billie@gentoo.org> hplip-3.13.2-r1.ebuild:
+  Use PYTHON_USEDEP for notify-python as it now uses python-r1.
 
 *hplip-3.13.2-r1 (21 Feb 2013)
 

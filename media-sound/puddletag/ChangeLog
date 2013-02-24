@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/puddletag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.26 2013/02/19 17:18:07 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.27 2013/02/24 10:56:05 billie Exp $
+
+  24 Feb 2013; Daniel Pielmeier <billie@gentoo.org> puddletag-1.0.1-r1.ebuild:
+  Use PYTHON_USEDEP for mutagen as it now uses distutils-r1.
 
   19 Feb 2013; Daniel Pielmeier <billie@gentoo.org> -puddletag-1.0.1.ebuild:
   Remove old.

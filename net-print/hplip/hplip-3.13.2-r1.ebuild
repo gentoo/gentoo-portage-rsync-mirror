@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.2-r1.ebuild,v 1.1 2013/02/21 19:10:07 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.2-r1.ebuild,v 1.2 2013/02/24 10:52:07 billie Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="doc fax +hpcups hpijs kde libnotify -libusb0 minimal parport policykit qt4 scanner snmp static-ppds X"
 
 # TODO: check if net-print/cups, sys-apps/dbus, net-analyzer/net-snmp
-# and dev-python/notify-python are migrated to python-r1
+# are migrated to python-r1
 
 COMMON_DEPEND="
 	virtual/jpeg
@@ -69,7 +69,7 @@ RDEPEND="${COMMON_DEPEND}
 		qt4? (
 			>=dev-python/PyQt4-4.9.6-r2[dbus,X,${PYTHON_USEDEP}]
 			libnotify? (
-				dev-python/notify-python
+				>=dev-python/notify-python-0.1.1-r3[${PYTHON_USEDEP}]
 			)
 		)
 	)"

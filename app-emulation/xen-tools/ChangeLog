@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.142 2013/02/22 10:36:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.143 2013/02/24 10:39:11 idella4 Exp $
+
+  24 Feb 2013; Ian Delaney <idella4@gentoo.org> files/xendomains.initd-r1,
+  files/xendomains.initd-r2:
+  Updated xendomains init scripts, ack to Tomas Mozes, fixes Bug #420067
 
   22 Feb 2013; Ian Delaney <idella4@gentoo.org> xen-tools-4.2.0-r3.ebuild,
   xen-tools-4.2.1-r1.ebuild:

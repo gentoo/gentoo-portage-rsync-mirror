@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xlwt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.16 2013/02/05 00:38:31 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.17 2013/02/24 10:33:01 mgorny Exp $
+
+  24 Feb 2013; Michał Górny <mgorny@gentoo.org> xlwt-0.7.4-r1.ebuild:
+  Do not run docompress on examples when they are not installed.
 
   05 Feb 2013; Benda Xu <heroxbd@gentoo.org> xlwt-0.7.4-r1.ebuild:
   keyword ~arm

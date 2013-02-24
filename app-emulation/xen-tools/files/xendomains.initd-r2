@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xendomains.initd-r2,v 1.5 2013/02/09 07:14:00 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xendomains.initd-r2,v 1.6 2013/02/24 10:39:11 idella4 Exp $
 
-opts="start stop status restart"
+extra_commands="status"
 
 depend() {
 	need xenstored

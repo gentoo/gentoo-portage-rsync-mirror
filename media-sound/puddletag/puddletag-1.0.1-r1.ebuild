@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/puddletag-1.0.1-r1.ebuild,v 1.1 2013/02/02 16:36:56 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/puddletag-1.0.1-r1.ebuild,v 1.2 2013/02/24 10:56:05 billie Exp $
 
 EAPI=5
 
@@ -17,12 +17,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="acoustid cover musicbrainz quodlibet"
 
-# TODO: check if media-libs/mutagen-1.20 is migrated to distutils-r1
-
 DEPEND=""
 RDEPEND=">=dev-python/PyQt4-4.9.6-r2[${PYTHON_USEDEP}]
 	virtual/pyparsing[${PYTHON_USEDEP}]
-	>=media-libs/mutagen-1.20
+	>=media-libs/mutagen-1.21[${PYTHON_USEDEP}]
 	>=dev-python/configobj-4.7.2-r1[${PYTHON_USEDEP}]
 	acoustid? ( >=media-libs/chromaprint-0.6 )
 	musicbrainz? ( >=dev-python/python-musicbrainz-0.7.4-r1[${PYTHON_USEDEP}] )
