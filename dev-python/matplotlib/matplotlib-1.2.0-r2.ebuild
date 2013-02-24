@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r2.ebuild,v 1.5 2013/02/10 22:28:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r2.ebuild,v 1.6 2013/02/24 11:45:28 mgorny Exp $
 
 EAPI=5
 
@@ -167,6 +167,9 @@ python_compile() {
 python_compile_all() {
 	if use doc; then
 		cd doc || die
+
+		# necessary for in-source build
+		local -x PYTHONPATH="${BUILD_DIR}"/build/lib:${PYTHONPATH}
 
 		unset DISPLAY # bug #278524
 		VARTEXFONTS="${T}"/fonts \
