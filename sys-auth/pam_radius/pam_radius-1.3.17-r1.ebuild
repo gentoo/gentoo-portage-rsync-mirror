@@ -1,25 +1,38 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_radius/pam_radius-1.3.17.ebuild,v 1.1 2008/06/28 06:51:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_radius/pam_radius-1.3.17-r1.ebuild,v 1.1 2013/02/24 01:36:09 flameeyes Exp $
 
-inherit eutils pam
+EAPI=5
+
+inherit eutils pam toolchain-funcs
 
 DESCRIPTION="PAM RADIUS authentication module"
 HOMEPAGE="http://www.freeradius.org/pam_radius_auth/"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="sys-libs/pam"
+DEPEND="virtual/pam"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+}
+
+doecho() {
+	echo "$@"
+	"$@" || die
+}
+
+src_compile() {
+	# using the Makefile would require patching it to work properly, so
+	# rather simply re-create it here.
+
+	pammod_hide_symbols
+	doecho $(tc-getCC) ${CFLAGS} -shared -fPIC ${LDFLAGS} *.c -lpam -o pam_radius_auth.so
 }
 
 src_install() {
