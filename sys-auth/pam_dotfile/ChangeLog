@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/pam_dotfile
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_dotfile/ChangeLog,v 1.10 2008/05/16 08:55:52 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_dotfile/ChangeLog,v 1.11 2013/02/24 00:00:50 flameeyes Exp $
+
+*pam_dotfile-0.7-r2 (24 Feb 2013)
+
+  24 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/pam_dotfile-0.7-gentoo.patch, +pam_dotfile-0.7-r2.ebuild:
+  Cleanup, use a single patch rather than a patches tarball (patches are split
+  in GitHub), simplify checks and hide symbols that are not part of the PAM
+  interface.
 
   16 May 2008; Diego Pettenò <flameeyes@gentoo.org>
   -pam_dotfile-0.7.ebuild:
