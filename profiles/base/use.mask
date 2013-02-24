@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.160 2013/02/12 04:17:41 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.161 2013/02/24 15:06:19 mgorny Exp $
 
 # not ready for primetime
 packagekit
@@ -330,3 +330,7 @@ python_single_target_pypy2_0
 # Mask the multilib flags globally. Unmasked in specific arches.
 abi_x86_32
 abi_x86_64
+
+# Michał Górny <mgorny@gentoo.org> (24 Feb 2013)
+# Mask the systemd flag globally. Unmasked in 13.0 profiles.
+systemd
