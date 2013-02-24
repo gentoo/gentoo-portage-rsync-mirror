@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.102 2013/02/24 20:55:57 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.103 2013/02/24 22:14:10 pinkbyte Exp $
+
+*mgetty-1.1.37 (24 Feb 2013)
+
+  24 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> +mgetty-1.1.37.ebuild,
+  +files/mgetty-1.1.37-gentoo.patch, +files/mgetty-1.1.37-nofax.patch,
+  +files/mgetty-1.1.37-qa-fixes.patch:
+  Version bump: EAPI 5, QA fixes, add blocker to net-misc/efax due to manpage
+  file collision
 
   24 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> mgetty-1.1.36-r3.ebuild:
   Change awk dependency to virtual/awk, wrt bug #455666

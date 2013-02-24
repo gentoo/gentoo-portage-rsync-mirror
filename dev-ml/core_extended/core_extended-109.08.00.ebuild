@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/core_extended-109.08.00.ebuild,v 1.1 2013/02/09 02:50:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/core_extended-109.08.00.ebuild,v 1.2 2013/02/24 22:12:43 aballier Exp $
 
 EAPI="5"
 
@@ -21,6 +21,7 @@ IUSE=""
 
 RDEPEND="dev-ml/pcre-ocaml:=
 	dev-ml/res:=
+	>=dev-ml/core-${PV}:=
 	>=dev-ml/sexplib-${PV}:=
 	>=dev-ml/bin-prot-${PV}:=
 	>=dev-ml/fieldslib-${PV}:=
