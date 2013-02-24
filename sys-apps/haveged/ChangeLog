@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/haveged
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.25 2013/01/25 16:58:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.26 2013/02/24 06:41:10 flameeyes Exp $
+
+*haveged-1.7a (24 Feb 2013)
+
+  24 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org> +haveged-1.7a.ebuild,
+  -files/haveged-1.7-build.patch, -haveged-1.6.ebuild, -haveged-1.7.ebuild:
+  Version bump (just applies the same patch we did), use autotools-utils, use
+  proper license value.
 
 *haveged-1.7 (25 Jan 2013)
 
