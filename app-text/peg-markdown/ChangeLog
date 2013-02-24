@@ -1,0 +1,10 @@
+# ChangeLog for app-text/peg-markdown
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/peg-markdown/ChangeLog,v 1.1 2013/02/24 04:26:36 rafaelmartins Exp $
+
+*peg-markdown-0.4.14 (24 Feb 2013)
+
+  24 Feb 2013; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +peg-markdown-0.4.14.ebuild, +metadata.xml:
+  Initial commit.
+
