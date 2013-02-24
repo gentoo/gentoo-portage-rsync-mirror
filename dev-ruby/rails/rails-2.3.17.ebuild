@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-2.3.17.ebuild,v 1.1 2013/02/11 21:23:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-2.3.17.ebuild,v 1.3 2013/02/24 14:48:53 ago Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.rubyonrails.org"
 
 LICENSE="MIT"
 SLOT="2.3"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ppc ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
 IUSE=""
 
