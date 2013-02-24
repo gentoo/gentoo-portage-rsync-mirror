@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.122 2013/02/07 11:02:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.123 2013/02/24 20:23:53 ssuominen Exp $
+
+  24 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> audiofile-0.3.5.ebuild:
+  Set missing empty RDEPEND.
 
   07 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> audiofile-0.3.5.ebuild:
   Fix sed line from SRC_SUBDIRS to SUBDIRS for 0.3.5 release wrt #455978 by
