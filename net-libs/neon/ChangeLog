@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/neon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.55 2013/02/21 18:25:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.56 2013/02/24 09:50:24 qnikst Exp $
+
+*neon-0.29.6-r3 (24 Feb 2013)
+
+  24 Feb 2013;  <qnikst@gentoo.org> +files/neon-0.29.6-doc.patch,
+  +neon-0.29.6-r3.ebuild:
+  fix docs layout, thanks to Chris Mayo (#458628)
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> neon-0.29.6-r2.ebuild:
   Add ~arm-linux keyword.

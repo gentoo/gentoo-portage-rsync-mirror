@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=expat? ( dev-libs/expat ) !expat? ( dev-libs/libxml2 ) gnutls? ( app-misc/ca-certificates >=net-libs/gnutls-2.0 pkcs11? ( dev-libs/pakchois ) ) !gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6f pkcs11? ( dev-libs/pakchois ) ) ) kerberos? ( virtual/krb5 ) libproxy? ( net-libs/libproxy ) nls? ( virtual/libintl ) zlib? ( sys-libs/zlib ) virtual/pkgconfig || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=HTTP and WebDAV client library
+EAPI=4
+HOMEPAGE=http://www.webdav.org/neon/
+IUSE=doc expat gnutls kerberos libproxy nls pkcs11 ssl static-libs zlib linguas_cs linguas_de linguas_fr linguas_ja linguas_nn linguas_pl linguas_ru linguas_tr linguas_zh_CN
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+LICENSE=GPL-2
+RDEPEND=expat? ( dev-libs/expat ) !expat? ( dev-libs/libxml2 ) gnutls? ( app-misc/ca-certificates >=net-libs/gnutls-2.0 pkcs11? ( dev-libs/pakchois ) ) !gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6f pkcs11? ( dev-libs/pakchois ) ) ) kerberos? ( virtual/krb5 ) libproxy? ( net-libs/libproxy ) nls? ( virtual/libintl ) zlib? ( sys-libs/zlib )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://www.webdav.org/neon/neon-0.29.6.tar.gz
+_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	f2731576962f01811c9573b3323fa374	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=792003f8348210571157497c5b83c40e
