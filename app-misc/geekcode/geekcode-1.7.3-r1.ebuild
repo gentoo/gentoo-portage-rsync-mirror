@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/geekcode-1.7.3-r1.ebuild,v 1.7 2012/03/18 18:52:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/geekcode-1.7.3-r1.ebuild,v 1.8 2013/02/24 13:49:30 pinkbyte Exp $
 
 EAPI="2"
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Geek code generator"
-HOMEPAGE="http://geekcode.sourceforge.net/"
+HOMEPAGE="http://sourceforge.net/projects/geekcode"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"

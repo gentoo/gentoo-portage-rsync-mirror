@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/geekcode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.34 2012/05/10 15:11:37 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.35 2013/02/24 13:49:30 pinkbyte Exp $
+
+  24 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> geekcode-1.7.3-r1.ebuild,
+  metadata.xml:
+  Correct homepage, assign myself as maintainer
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -geekcode-1.7.3.ebuild:
   Remove old
