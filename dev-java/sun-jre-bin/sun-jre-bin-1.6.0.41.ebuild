@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.41.ebuild,v 1.1 2013/02/20 11:46:25 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.41.ebuild,v 1.2 2013/02/24 08:30:08 sera Exp $
 
 EAPI="5"
 
@@ -25,7 +25,7 @@ SRC_URI="
 
 LICENSE="Oracle-BCLA-JavaSE"
 SLOT="1.6"
-KEYWORDS="~amd64 -ia64 ~x86"
+KEYWORDS="amd64 -ia64 x86"
 IUSE="X alsa jce nsplugin pax_kernel"
 
 RESTRICT="fetch strip"

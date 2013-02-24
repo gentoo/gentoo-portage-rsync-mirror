@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.0-r1.ebuild,v 1.8 2013/02/24 08:23:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.1-r2.ebuild,v 1.1 2013/02/24 08:23:59 idella4 Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ if [[ $PV == *9999 ]]; then
 	S="${WORKDIR}/${REPO}"
 	live_eclass="mercurial"
 else
-	KEYWORDS="amd64 x86"
+	KEYWORDS="~amd64 ~x86"
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
 fi
 
@@ -24,10 +24,10 @@ HOMEPAGE="http://xen.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="custom-cflags debug flask pae xsm"
+IUSE="custom-cflags debug efi flask pae xsm"
 
-RDEPEND=""
-PDEPEND="~app-emulation/xen-tools-${PV}[${PYTHON_USEDEP}]"
+RDEPEND="efi? ( >=sys-devel/binutils-2.22[multitarget] )"
+PDEPEND="~app-emulation/xen-tools-${PV}"
 
 RESTRICT="test"
 
@@ -37,9 +37,9 @@ QA_WX_LOAD="boot/xen-syms-${PV}"
 REQUIRED_USE="
 	flask? ( xsm )
 	"
+
 pkg_setup() {
 	python-single-r1_pkg_setup
-
 	if [[ -z ${XEN_TARGET_ARCH} ]]; then
 		if use x86 && use amd64; then
 			die "Confusion! Both x86 and amd64 are set in your use flags!"
@@ -61,8 +61,14 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Drop .config, fix gcc-4.6
-	epatch "${FILESDIR}"/${PN}-4-fix_dotconfig-gcc.patch
+	# Drop .config and fix gcc-4.6
+	epatch  "${FILESDIR}"/${PN/-pvgrub/}-4-fix_dotconfig-gcc.patch
+
+	if use efi; then
+		epatch "${FILESDIR}"/${PN}-4.2-efi.patch
+		export EFI_VENDOR="gentoo"
+		export EFI_MOUNTPOINT="boot"
+	fi
 
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
@@ -81,18 +87,9 @@ src_prepare() {
 	sed -i 's/, "-Werror"//' "${S}/tools/python/setup.py" || die "failed to re-set setup.py"
 
 	#Security patches
-	epatch "${FILESDIR}"/${PN}-4-CVE-2012-4535-XSA-20.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2012-4537-XSA-22.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2012-4538-XSA-23.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2012-4539-XSA-24.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2012-5510-XSA-26.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2012-5513-XSA-29.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2012-5514-XSA-30.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2012-5515-XSA-31.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2012-5525-XSA-32.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2012-5634-XSA-33.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2013-0151-XSA-27_34_35.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2013-0154-XSA-37.patch
+	epatch "${FILESDIR}"/${PN}-4-CVE-2012-5634-XSA-33.patch \
+                "${FILESDIR}"/${PN}-4-CVE-2013-0151-XSA-34_35.patch \
+                "${FILESDIR}"/${PN}-4-CVE-2013-0154-XSA-37.patch
 }
 
 src_configure() {
@@ -116,6 +113,8 @@ src_install() {
 	local myopt
 	use debug && myopt="${myopt} debug=y"
 	use pae && myopt="${myopt} pae=y"
+	#The 'make install' doesn't 'mkdir -p' the subdirs
+	use efi && mkdir -p "${D}"${EFI_MOUNTPOINT}/efi/${EFI_VENDOR} || die
 
 	emake LDFLAGS="$(raw-ldflags)" DESTDIR="${D}" -C xen ${myopt} install
 }
@@ -126,4 +125,5 @@ pkg_postinst() {
 	elog " http://en.gentoo-wiki.com/wiki/Xen/"
 
 	use pae && ewarn "This is a PAE build of Xen. It will *only* boot PAE kernels!"
+	use efi && einfo "The efi executable is installed in boot/efi/gentoo"
 }

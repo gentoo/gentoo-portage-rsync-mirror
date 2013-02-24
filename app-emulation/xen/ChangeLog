@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.109 2013/02/23 16:34:06 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.110 2013/02/24 08:23:59 idella4 Exp $
+
+*xen-4.2.1-r2 (24 Feb 2013)
+*xen-4.2.0-r2 (24 Feb 2013)
+
+  24 Feb 2013; Ian Delaney <idella4@gentoo.org> +files/xen-4.2-efi.patch,
+  +xen-4.2.0-r2.ebuild, +xen-4.2.1-r2.ebuild, -files/xen-4-efi.patch,
+  xen-4.2.0-r1.ebuild, xen-4.2.1-r1.ebuild:
+  After further review, reverted both -r1 ebuilds, revbumped both to -r2, fixed
+  deps and install, reduced efi.patch accordingly and re-named to
+  xen-4.2-efi.patch, all wrt Bug #458160
 
   23 Feb 2013; Ian Delaney <idella4@gentoo.org> +files/xen-4-efi.patch,
   metadata.xml, xen-4.2.0-r1.ebuild, xen-4.2.1-r1.ebuild:
