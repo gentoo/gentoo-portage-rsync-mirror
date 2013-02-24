@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geekcode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.35 2013/02/24 13:49:30 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geekcode/ChangeLog,v 1.36 2013/02/24 14:05:09 pinkbyte Exp $
+
+  24 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> geekcode-1.7.3-r1.ebuild:
+  Add ~arm and ~arm-linux keywords
 
   24 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> geekcode-1.7.3-r1.ebuild,
   metadata.xml:

@@ -32,3 +32,9 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
   If these license terms cause you a real problem, contact the author.
+
+---
+
+Gentoo license note: In order to qualify as a free software license,
+the "inner-net" license label must only be used for packages where
+clause 0 is not exercised.

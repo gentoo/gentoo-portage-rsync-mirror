@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ssh-askpass-fullscreen-1.0-r1.ebuild,v 1.2 2012/10/12 21:46:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ssh-askpass-fullscreen-1.0-r1.ebuild,v 1.3 2013/02/24 14:18:33 pacho Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools eutils
 
 DESCRIPTION="A small SSH Askpass replacement written with GTK2"
 HOMEPAGE="https://github.com/atj/ssh-askpass-fullscreen"
-SRC_URI="https://github.com/downloads/atj/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://github/atj/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2+"
 SLOT="0"
