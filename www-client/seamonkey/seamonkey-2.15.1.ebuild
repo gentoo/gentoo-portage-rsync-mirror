@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.15.1.ebuild,v 1.3 2013/02/18 16:06:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.15.1.ebuild,v 1.4 2013/02/24 19:13:03 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -227,6 +227,9 @@ src_configure() {
 	# Feature is know to cause problems on hardened
 	mozconfig_use_enable jit methodjit
 	mozconfig_use_enable jit tracejit
+
+	# Causes breakage, extremely experimental feature still in development
+	use ppc64 && mozconfig_annotate '' --disable-ion
 
 	# Use an objdir to keep things organized.
 	echo "mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/seamonk" \

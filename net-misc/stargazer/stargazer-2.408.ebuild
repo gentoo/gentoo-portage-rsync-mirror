@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stargazer/stargazer-2.408.ebuild,v 1.1 2013/02/23 20:13:31 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stargazer/stargazer-2.408.ebuild,v 1.2 2013/02/24 19:23:13 tomwij Exp $
 
 EAPI="5"
 
@@ -70,8 +70,8 @@ IUSE=${IUSE/module_store_files/+module_store_files}
 src_prepare() {
 	# Patches already in upstream's trunk
 	# Rename convertor to sgconv to avoid possible file name collisions
-	mv "${S}"/projects/convertor/ "${S}"/projects/sgconv/
-	mv "${S}"/projects/sgconv/convertor.conf "${S}"/projects/sgconv/sgconv.conf
+	mv "${S}"/projects/convertor/ "${S}"/projects/sgconv/ || die "Couldn't move convertor folder"
+	mv "${S}"/projects/sgconv/convertor.conf "${S}"/projects/sgconv/sgconv.conf || die "Couldn't move convertor config"
 	epatch "${FILESDIR}"/patches/stg-2.408-sgconv-upstream.patch
 
 	# Fix dependency on fbclient for module_store_firebird
@@ -103,10 +103,10 @@ src_prepare() {
 
 	for project in ${PROJECTS} ; do
 		# Rename build script to configure for further econf launch in every projects
-		mv "${S}"/projects/${project}/build "${S}"/projects/${project}/configure
+		mv "${S}"/projects/${project}/build "${S}"/projects/${project}/configure || die "Couldn't move build folder for ${project}"
 
 		# Change check for debug build
-		sed -i 's/if \[ "$1" = "debug" \]/if \[ "${10}" = "--enable-debug" \]/' "${S}"/projects/${project}/configure
+		sed -i 's/if \[ "$1" = "debug" \]/if \[ "${10}" = "--enable-debug" \]/' "${S}"/projects/${project}/configure || die "sed for debug check failed"
 	done
 
 	# Correct working directory, user and group for sgconv.conf, store_files.conf
@@ -124,17 +124,32 @@ src_prepare() {
 
 	# Define which module to compile
 	for module in ${!MODULES[@]} ; do
-		use $module || sed -i "s/${MODULES[$module]%:*}//" "${S}"/projects/stargazer/configure
+		if ! use $module ; then
+			sed -i "s/${MODULES[$module]%:*}//" "${S}"/projects/stargazer/configure || die "sed for module configure failed"
+		fi
 	done
 
 	# Correct Gentoo init script provided by upstream (TODO: Remove in further releases, already fixed in upstream's trunk)
-	use stargazer			&& sed -i 's/opts/extra_commands/' "${S}"/projects/stargazer/inst/linux/etc/init.d/stargazer.gentoo
+	if use stargazer ; then
+		sed -i 's/opts/extra_commands/' "${S}"/projects/stargazer/inst/linux/etc/init.d/stargazer.gentoo || die "sed for stargazer failed"
+	fi
 
 	# Correct Gentoo init script dependencies
-	use module_store_files		&& sed -i '11d' "${S}"/projects/stargazer/inst/linux/etc/init.d/stargazer.gentoo
-	use module_store_firebird	&& sed -i '11d;s/need net/need net firebird/' "${S}"/projects/stargazer/inst/linux/etc/init.d/stargazer.gentoo
-	use module_store_mysql		&& sed -i '11d;s/need net/need net mysql/' "${S}"/projects/stargazer/inst/linux/etc/init.d/stargazer.gentoo
-	use module_store_postgres	&& sed -i '11d;s/need net/need net postgresql/' "${S}"/projects/stargazer/inst/linux/etc/init.d/stargazer.gentoo
+	if use module_store_files ; then
+		sed -i '11d' "${S}"/projects/stargazer/inst/linux/etc/init.d/stargazer.gentoo || die "sed for module_store_files failed"
+	fi
+
+	if use module_store_firebird ; then
+		sed -i '11d;s/need net/need net firebird/' "${S}"/projects/stargazer/inst/linux/etc/init.d/stargazer.gentoo || die "sed for module_store_firebird failed"
+	fi
+
+	if use module_store_mysql ; then
+		sed -i '11d;s/need net/need net mysql/' "${S}"/projects/stargazer/inst/linux/etc/init.d/stargazer.gentoo || die "sed for module_store_mysql failed"
+	fi
+
+	if use module_store_postgres ; then
+		sed -i '11d;s/need net/need net postgresql/' "${S}"/projects/stargazer/inst/linux/etc/init.d/stargazer.gentoo || die "sed for module_store_postgres failed"
+	fi
 
 	# Check for IPQ subsystem availability
 	( use module_capture_ipq && kernel_is ge 3 5 ) && die "IPQ subsystem is gone since Linux kernel 3.5. You can't compile module_capture_ipq with your current kernel."
@@ -163,7 +178,7 @@ src_compile() {
 
 	# Build necessary libraries first
 	touch "${S}"/Makefile.conf
-	cd "${S}"/stglibs
+	cd "${S}"/stglibs || die "cd to stglibs failed"
 	emake STG_LIBS="ia.lib srvconf.lib"
 
 	for (( i = 0 ; i < ${#PROJECTS[@]} ; i++ )) ; do
@@ -174,8 +189,7 @@ src_compile() {
 	done
 
 	if use doc ; then
-		cd "${S}"/doc/xmlrpc
-
+		cd "${S}"/doc/xmlrpc || die "cd to doc/xmlrpc failed"
 		emake
 	fi
 }
@@ -216,7 +230,7 @@ src_install() {
 	fi
 
 	if use sgconv ; then
-		cd "${S}"/projects/sgconv
+		cd "${S}"/projects/sgconv || die "cd to sgconv project failed"
 
 		emake DESTDIR="${D}" PREFIX="${D}" install
 
@@ -229,13 +243,13 @@ src_install() {
 	fi
 
 	if use radius ; then
-		cd "${S}"/projects/rlm_stg
+		cd "${S}"/projects/rlm_stg || die "cd to rlm_stg project failed"
 
 		emake DESTDIR="${D}" PREFIX="${D}" install
 	fi
 
 	if use rscriptd ; then
-		cd "${S}"/projects/rscriptd
+		cd "${S}"/projects/rscriptd || die "cd to rscriptd project failed"
 
 		emake DESTDIR="${D}" PREFIX="${D}" install
 
@@ -250,7 +264,7 @@ src_install() {
 	fi
 
 	if use sgauth ; then
-		cd "${S}"/projects/sgauth
+		cd "${S}"/projects/sgauth || die "cd to sgauth project failed"
 
 		emake DESTDIR="${D}" PREFIX="${D}" install
 
@@ -262,7 +276,7 @@ src_install() {
 	fi
 
 	if use sgconf ; then
-		cd "${S}"/projects/sgconf
+		cd "${S}"/projects/sgconf || die "cd to sgconf project failed"
 
 		emake DESTDIR="${D}" PREFIX="${D}" install
 
@@ -271,7 +285,7 @@ src_install() {
 	fi
 
 	if use sgconf_xml ; then
-		cd "${S}"/projects/sgconf_xml
+		cd "${S}"/projects/sgconf_xml || die "cd to sgconf_xml project failed"
 
 		emake DESTDIR="${D}" PREFIX="${D}" install
 
@@ -280,7 +294,7 @@ src_install() {
 	fi
 
 	if use stargazer ; then
-		cd "${S}"/projects/stargazer
+		cd "${S}"/projects/stargazer || die "cd to stargazer project failed"
 
 		emake DESTDIR="${D}" PREFIX="${D}" install
 
@@ -362,7 +376,7 @@ src_install() {
 	( use sgconv || use rscriptd || use sgauth || use stargazer ) && fowners -R stg:stg /etc/stargazer
 
 	# Put the files in the right folder to support multilib
-	mv "${ED}"/usr/lib "${ED}"/usr/$(get_libdir)
+	mv "${ED}"/usr/lib "${ED}"/usr/$(get_libdir) || die "Failed to move library directory for multilib support"
 }
 
 pkg_setup() {
@@ -406,7 +420,7 @@ pkg_postinst() {
 
 		einfo "    It also may be used in section Accounting and Post-Auth."
 
-		use !module_auth_freeradius || einfo "\n    For use RADIUS data processing you should also enable USE-flag module_auth_freeradius."
+		use module_auth_freeradius || einfo "\n    For use RADIUS data processing you should also enable USE-flag module_auth_freeradius."
 	fi
 
 	if use rscriptd ; then
@@ -426,13 +440,13 @@ pkg_postinst() {
 	if use sgconf ; then
 		einfo "\nSgconf:"
 		einfo "-------"
-		use !module_config_sgconfig || einfo "    For further use of sgconf utility you should also enable USE-flag module_config_sgconfig."
+		use module_config_sgconfig || einfo "    For further use of sgconf utility you should also enable USE-flag module_config_sgconfig."
 	fi
 
 	if use sgconf_xml ; then
 		einfo "\nSgconf_xml:"
 		einfo "-----------"
-		use !module_config_rpcconfig || einfo "    For further use of sgconf_xml utility you should also enable USE-flag module_config_rpcconfig."
+		use module_config_rpcconfig || einfo "    For further use of sgconf_xml utility you should also enable USE-flag module_config_rpcconfig."
 	fi
 
 	if use stargazer ; then

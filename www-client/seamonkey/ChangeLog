@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.436 2013/02/24 16:02:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.437 2013/02/24 19:13:03 anarchy Exp $
+
+  24 Feb 2013; <anarchy@gentoo.org> seamonkey-2.15.1.ebuild,
+  seamonkey-2.16.ebuild:
+  Fix pax-mark issue for hardened support, bug #459022
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.16.ebuild:
   Accidentally marked stable for amd64 and x86, revert
