@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/nss-db
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/ChangeLog,v 1.23 2012/05/03 19:52:55 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/ChangeLog,v 1.24 2013/02/24 21:15:34 ottxor Exp $
+
+  24 Feb 2013; Christoph Junghans <ottxor@gentoo.org>
+  nss-db-2.2.3_pre1-r2.ebuild, nss-db-2.2.3_pre1-r3.ebuild:
+  dropped gawk from deps as it is in system set (bug #455686)
 
   03 May 2012; Robin H. Johnson <robbat2@gentoo.org> nss-db-2.2-r1.ebuild,
   nss-db-2.2.3_pre1-r2.ebuild, nss-db-2.2.3_pre1-r3.ebuild:

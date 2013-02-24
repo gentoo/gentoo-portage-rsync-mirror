@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r2.ebuild,v 1.9 2012/05/03 19:52:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r2.ebuild,v 1.10 2013/02/24 21:15:34 ottxor Exp $
 
 inherit eutils versionator multilib autotools
 
@@ -23,7 +23,6 @@ IUSE="nls"
 # awk and make ARE needed at runtime!
 # and this didn't compile on BSD libc either
 RDEPEND=">=sys-libs/db-4
-		 sys-apps/gawk
 		 sys-devel/make
 		 >=sys-libs/glibc-2.3
 		 !>=sys-libs/glibc-2.15"
