@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glew
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.90 2013/02/06 19:42:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.91 2013/02/24 17:51:42 ago Exp $
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> glew-1.9.0.ebuild:
+  Stable for sh, wrt bug #453406
 
   06 Feb 2013; Agostino Sarubbo <ago@gentoo.org> glew-1.9.0.ebuild:
   Stable for sparc, wrt bug #453406

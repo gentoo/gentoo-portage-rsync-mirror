@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.187 2013/02/20 09:47:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.188 2013/02/24 17:52:35 ago Exp $
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libidn-1.26.ebuild:
+  Stable for sh, wrt bug #454178
 
   20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libidn-1.26.ebuild:
   Stable for s390, wrt bug #454178

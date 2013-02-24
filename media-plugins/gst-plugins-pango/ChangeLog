@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-pango
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/ChangeLog,v 1.181 2013/02/10 22:35:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/ChangeLog,v 1.182 2013/02/24 18:00:30 ago Exp $
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-pango-0.10.36.ebuild:
+  Stable for sh, wrt bug #456476
 
   10 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-pango-0.10.36.ebuild:

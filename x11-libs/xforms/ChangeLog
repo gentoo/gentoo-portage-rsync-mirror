@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.57 2013/02/06 19:44:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.58 2013/02/24 17:53:24 ago Exp $
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> xforms-1.0.93_p1-r1.ebuild:
+  Stable for sh, wrt bug #454438
 
   06 Feb 2013; Agostino Sarubbo <ago@gentoo.org> xforms-1.0.93_p1-r1.ebuild:
   Stable for sparc, wrt bug #454438

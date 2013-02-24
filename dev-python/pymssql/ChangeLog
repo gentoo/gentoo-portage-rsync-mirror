@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymssql
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.33 2013/02/20 09:44:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.34 2013/02/24 17:49:37 ago Exp $
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pymssql-1.0.2.ebuild:
+  Stable for sh, wrt bug #449426
 
   20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pymssql-1.0.2.ebuild:
   Stable for s390, wrt bug #449426
