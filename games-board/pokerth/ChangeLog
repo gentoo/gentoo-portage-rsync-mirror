@@ -1,6 +1,12 @@
 # ChangeLog for games-board/pokerth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.48 2013/01/22 19:55:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.50 2013/02/24 11:30:42 ago Exp $
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pokerth-1.0.ebuild:
+  Stable for x86, wrt bug #458640
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pokerth-1.0.ebuild:
+  Stable for amd64, wrt bug #458640
 
   22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> pokerth-1.0.ebuild:
   add dev-libs/protobuf dep (bug #453578)

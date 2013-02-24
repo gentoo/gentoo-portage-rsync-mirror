@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.7.4-r1.ebuild,v 1.1 2013/01/22 08:11:10 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.7.4-r1.ebuild,v 1.3 2013/02/24 11:30:33 ago Exp $
 
 EAPI=4
 inherit eutils db-use autotools user
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/opendkim/${P}.tar.gz"
 
 LICENSE="Sendmail-Open-Source BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+berkdb gnutls ldap lua opendbx poll sasl +ssl static-libs unbound"
 
 DEPEND="|| ( mail-filter/libmilter mail-mta/sendmail )

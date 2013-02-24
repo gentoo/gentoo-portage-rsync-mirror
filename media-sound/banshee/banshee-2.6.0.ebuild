@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.6.0.ebuild,v 1.4 2013/02/21 20:53:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.6.0.ebuild,v 1.5 2013/02/24 11:28:40 ago Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://banshee.fm/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="+aac +cdda +bpm boo daap doc +encode ipod karma mtp test udev +web youtube"
 
 RDEPEND=">=dev-lang/mono-2.4.3

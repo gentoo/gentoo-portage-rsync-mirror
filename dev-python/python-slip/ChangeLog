@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-slip
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/ChangeLog,v 1.2 2012/11/08 04:28:44 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/ChangeLog,v 1.4 2013/02/24 11:30:02 ago Exp $
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> python-slip-0.2.21.ebuild:
+  Stable for x86, wrt bug #458688
+
+  24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> python-slip-0.2.21.ebuild:
+  Stable for amd64, wrt bug #458688
 
 *python-slip-0.2.21 (08 Nov 2012)
 
@@ -15,4 +21,3 @@
   +metadata.xml:
   New ebuild for a Python convenience library used by some Fedora-oriented
   projects.
-
