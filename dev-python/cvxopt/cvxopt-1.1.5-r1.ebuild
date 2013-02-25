@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.5-r1.ebuild,v 1.1 2012/05/26 14:56:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.5-r1.ebuild,v 1.3 2013/02/25 07:21:24 bicatali Exp $
 
 EAPI=4
 
 SUPPORT_PYTHON_ABIS=1
-RESTRICT_PYTHON_ABIS="2.4 2.5 *-jython 2.7-pypy-*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.3 *-jython 2.7-pypy-*"
 
-inherit distutils eutils
+inherit distutils eutils toolchain-funcs
 
 DESCRIPTION="Python package for convex optimization"
 HOMEPAGE="http://abel.ee.ucla.edu/cvxopt"
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc +dsdp examples fftw +glpk gsl"
 
-RDEPEND="virtual/blas
+RDEPEND="
+	virtual/blas
 	virtual/cblas
 	virtual/lapack
 	sci-libs/cholmod
@@ -35,15 +36,15 @@ S="${WORKDIR}/${P}/src"
 
 src_prepare(){
 	epatch "${FILESDIR}"/${P}-setup.patch
-	rm -rf src/C/SuiteSparse*/
-	rm -rf ../doc/build # 413905
+	rm -r C/SuiteSparse*/ || die
+	rm -r ../doc/build  || die # 413905
 
 	pkg_lib() {
-		local pylib=\'$(pkg-config --libs-only-l ${1} | sed \
+		local pylib=\'$($(tc-getPKG_CONFIG) --libs-only-l ${1} | sed \
 			-e 's/^-l//' \
 			-e "s/ -l/\',\'/g" \
 			-e 's/.,.pthread//g' \
-			-e "s:  ::")\'
+			-e "s:[[:space:]]::g")\'
 		sed -i -e "/_LIB = /s:\(.*\)'${1}'\(.*\):\1${pylib}\2:" setup.py
 	}
 
