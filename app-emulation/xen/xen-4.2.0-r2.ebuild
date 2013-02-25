@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.0-r2.ebuild,v 1.1 2013/02/24 08:23:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.0-r2.ebuild,v 1.2 2013/02/25 17:43:21 idella4 Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="custom-cflags debug efi flask pae xsm"
 
-RDEPEND=""
+RDEPEND="efi? ( >=sys-devel/binutils-2.22[multitarget] )"
 PDEPEND="~app-emulation/xen-tools-${PV}[${PYTHON_USEDEP}]"
 
 RESTRICT="test"

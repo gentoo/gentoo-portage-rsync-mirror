@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/rexical-1.0.5-r1.ebuild,v 1.11 2013/01/15 03:10:55 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/rexical-1.0.5-r1.ebuild,v 1.12 2013/02/25 17:47:49 graaff Exp $
 
 EAPI=2
 
@@ -20,11 +20,13 @@ KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux 
 SLOT="0"
 IUSE=""
 
+# File collision, bug 459116
+RDEPEND+=" !!app-admin/rex"
+
 ruby_add_bdepend "
 	doc? ( >=dev-ruby/hoe-2.6.2 )
 	test? (
 		>=dev-ruby/hoe-2.6.2
-		virtual/ruby-test-unit
 	)"
 
 all_ruby_install() {
