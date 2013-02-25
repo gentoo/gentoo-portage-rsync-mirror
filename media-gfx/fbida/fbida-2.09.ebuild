@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09.ebuild,v 1.4 2013/02/25 11:40:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09.ebuild,v 1.5 2013/02/25 14:34:26 hasufell Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -46,6 +46,10 @@ DEPEND="
 	${RDEPEND}
 	X? ( x11-proto/xextproto x11-proto/xproto )
 "
+
+pkg_setup() {
+	tc-export CC
+}
 
 src_prepare() {
 	sed -e 's:DGifOpenFileName,ungif:DGifOpenFileName,gif:' \
