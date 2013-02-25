@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/getdate
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/ChangeLog,v 1.16 2012/12/08 22:04:41 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/ChangeLog,v 1.17 2013/02/25 11:14:01 ago Exp $
+
+  25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> getdate-1.2-r1.ebuild:
+  Stable for amd64, wrt bug #457444
 
   08 Dec 2012; Ulrich Müller <ulm@gentoo.org> getdate-1.2.ebuild,
   getdate-1.2-r1.ebuild:
@@ -54,4 +57,3 @@
   06 Dec 2003; Chuck Short <zul@gentoo.org> getdate-1.2.ebuild, metadata.xml:
   Initial version, ebuild originally written by Alessandro Pisani
   <alextxm@tin.it>. Ebuild modified by me.
-
