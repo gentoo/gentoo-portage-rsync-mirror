@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-5.2.11.ebuild,v 1.1 2013/01/14 07:12:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-5.2.11.ebuild,v 1.2 2013/02/25 19:07:13 jlec Exp $
 
 EAPI=5
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Tail with multiple windows"
-HOMEPAGE="http://www.vanheusden.com/multitail/index.html"
+HOMEPAGE="http://www.vanheusden.com/multitail/"
 SRC_URI="http://www.vanheusden.com/multitail/${P}.tgz"
 
 LICENSE="GPL-2"

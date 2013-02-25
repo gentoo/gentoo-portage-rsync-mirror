@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.453 2013/02/22 18:28:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.454 2013/02/25 19:02:38 jer Exp $
+
+  25 Feb 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.6.13-r1.ebuild,
+  wireshark-1.8.5-r1.ebuild, wireshark-1.9.0.ebuild:
+  Ensure setuid on /usr/bin/dumpcap (bug #457084 by Kobboi).
 
   22 Feb 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.9.0.ebuild:
   Add dev-libs/libnl dependency.
