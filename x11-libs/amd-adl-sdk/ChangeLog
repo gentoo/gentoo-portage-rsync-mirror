@@ -1,4 +1,6 @@
 
+  25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> amd-adl-sdk-4.0.ebuild:
+  Stable for x86, wrt bug #430210
 
   11 Aug 2012; Agostino Sarubbo <ago@gentoo.org> amd-adl-sdk-4.0.ebuild:
   Stable for amd64, wrt bug #430210
@@ -19,4 +21,3 @@
   23 Feb 2012; Anthony G. Basile <blueness@gentoo.org> +amd-adl-sdk-3.0.ebuild,
   +metadata.xml:
   Initial commit, moved from luke-jr's bitcoin overlay
-

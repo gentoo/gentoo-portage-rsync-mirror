@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.8.ebuild,v 1.6 2013/01/04 19:19:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.8.ebuild,v 1.7 2013/02/25 13:31:04 ago Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.hdfgroup.org/ftp/HDF/HDF_Current/src/${MYP}.tar.bz2"
 
 SLOT="0"
 LICENSE="NCSA-HDF"
-KEYWORDS="amd64 ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="fortran szip static-libs"
 
 RDEPEND="
