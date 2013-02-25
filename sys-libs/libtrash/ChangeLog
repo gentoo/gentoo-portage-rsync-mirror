@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libtrash
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/ChangeLog,v 1.15 2013/02/03 12:45:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/ChangeLog,v 1.16 2013/02/25 20:45:09 pinkbyte Exp $
+
+  25 Feb 2013; Sergey Popov <pinkbyte@gentoo.org>
+  files/libtrash-3.2-gentoo.patch:
+  Add creation of missing symlink
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -files/libtrash-2.2-gentoo.patch,
   -files/libtrash-2.4-gentoo.patch, -libtrash-2.2.ebuild, -libtrash-2.8.ebuild,

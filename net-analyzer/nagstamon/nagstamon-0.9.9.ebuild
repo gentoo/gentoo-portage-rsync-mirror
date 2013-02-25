@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.9.ebuild,v 1.5 2012/09/05 08:05:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.9.9.ebuild,v 1.6 2013/02/25 20:45:24 idl0r Exp $
 
 EAPI="4"
 
@@ -26,6 +26,7 @@ DEPEND=""
 RDEPEND="dev-python/pygtk
 	dev-python/lxml
 	dev-python/beautifulsoup:python-2
+	gnome-base/librsvg
 	gnome? ( dev-python/egg-python )
 	sound? ( media-sound/sox )"
 

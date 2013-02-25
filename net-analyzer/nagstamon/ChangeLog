@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagstamon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.35 2013/02/25 00:36:37 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.36 2013/02/25 20:45:24 idl0r Exp $
+
+  25 Feb 2013; Christian Ruppert <idl0r@gentoo.org> nagstamon-0.9.9.ebuild,
+  nagstamon-0.9.9-r1.ebuild:
+  Add gnome-base/librsvg dependency, bug 447102
 
 *nagstamon-0.9.9-r1 (25 Feb 2013)
 

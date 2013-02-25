@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.813 2013/02/22 14:24:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.814 2013/02/25 21:00:27 phajdan.jr Exp $
+
+  25 Feb 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-26.0.1410.5.ebuild, chromium-9999-r1.ebuild:
+  Fixes for ARM, bug #372155. Used parts of Vladimir's patch.
 
   22 Feb 2013; Agostino Sarubbo <ago@gentoo.org> -chromium-24.0.1312.56.ebuild,
   -chromium-25.0.1364.68.ebuild, -chromium-25.0.1364.84.ebuild:

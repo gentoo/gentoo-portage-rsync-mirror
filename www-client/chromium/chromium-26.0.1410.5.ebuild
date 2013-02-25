@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-26.0.1410.5.ebuild,v 1.1 2013/02/18 21:43:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-26.0.1410.5.ebuild,v 1.2 2013/02/25 21:00:27 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -48,7 +48,7 @@ RDEPEND="app-accessibility/speech-dispatcher
 	>=media-libs/libjpeg-turbo-1.2.0-r1
 	media-libs/libpng
 	>=media-libs/libwebp-0.2.0_rc1
-	!x86? ( media-libs/mesa[gles2] )
+	!arm? ( !x86? ( media-libs/mesa[gles2] ) )
 	media-libs/opus
 	media-libs/speex
 	pulseaudio? ( media-sound/pulseaudio )
@@ -240,14 +240,19 @@ src_configure() {
 		-Duse_system_speex=1
 		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
-		-Duse_system_yasm=1
 		-Duse_system_zlib=1
 		$(gyp_use system-ffmpeg use_system_ffmpeg)"
 
 	# TODO: Use system mesa on x86, bug #457130 .
-	if ! use x86; then
+	if ! use x86 && ! use arm; then
 		myconf+="
 			-Duse_system_mesa=1"
+	fi
+
+	# TODO: patch gyp so that this arm conditional is not needed.
+	if ! use arm; then
+		myconf+="
+			-Duse_system_yasm=1"
 	fi
 
 	# Optional dependencies.
@@ -310,6 +315,7 @@ src_configure() {
 	elif [[ $myarch = arm ]] ; then
 		# TODO: re-enable NaCl (NativeClient).
 		myconf+=" -Dtarget_arch=arm
+			-Dsysroot=
 			-Darmv7=0
 			-Darm_neon=0
 			-Ddisable_nacl=1"

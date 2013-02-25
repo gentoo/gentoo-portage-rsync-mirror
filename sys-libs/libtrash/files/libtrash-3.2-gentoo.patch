@@ -45,7 +45,7 @@ diff -Naur libtrash-3.2.orig/src/Makefile libtrash-3.2/src/Makefile
  
  INSTLIBDIR=/usr/local/lib
  SYSCONFFILE=/etc/libtrash.conf
-@@ -32,10 +32,10 @@
+@@ -32,10 +32,11 @@
          -o libtrash.so.${VERSION} -ldl
  
  install-libtrash: 
@@ -55,6 +55,7 @@ diff -Naur libtrash-3.2.orig/src/Makefile libtrash-3.2/src/Makefile
 -	ldconfig	
 +	TRASH_OFF=YES install libtrash.so.${VERSION} $(DESTDIR)${INSTLIBDIR}/libtrash.so.${VERSION}
 +	TRASH_OFF=YES ln -sf libtrash.so.${VERSION} $(DESTDIR)${INSTLIBDIR}/libtrash.so
++	TRASH_OFF=YES ln -sf libtrash.so.${VERSION} $(DESTDIR)${INSTLIBDIR}/libtrash.so.3
 +	TRASH_OFF=YES install libtrash.conf.sys --mode a=r $(DESTDIR)${SYSCONFFILE}
 +#	ldconfig	
  
