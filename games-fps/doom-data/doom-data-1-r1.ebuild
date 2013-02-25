@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom-data/doom-data-1-r1.ebuild,v 1.3 2007/03/12 14:24:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom-data/doom-data-1-r1.ebuild,v 1.4 2013/02/25 02:42:56 vapier Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/doom1.wad.bz2"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 arm ppc sparc x86"
 IUSE="doomsday"
 
 DEPEND="doomsday? ( games-fps/doomsday )

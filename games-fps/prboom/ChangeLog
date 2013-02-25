@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/prboom
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.36 2011/11/02 01:32:11 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.37 2013/02/25 02:43:15 vapier Exp $
+
+  25 Feb 2013; Mike Frysinger <vapier@gentoo.org> prboom-2.5.0.ebuild:
+  Add arm love.
 
   02 Nov 2011; Michael Sterrett <mr_bones_@gentoo.org> prboom-2.5.0.ebuild:
   Adjust lsdldoom blocker to reflect updates (bug #388495)

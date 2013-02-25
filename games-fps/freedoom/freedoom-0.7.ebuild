@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/freedoom-0.7.ebuild,v 1.6 2011/04/24 17:33:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/freedoom-0.7.ebuild,v 1.7 2013/02/25 02:40:27 vapier Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://nongnu/freedoom/freedoom-iwad/shareware/freedoom-demo-${PV}.zi
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 arm ppc x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"

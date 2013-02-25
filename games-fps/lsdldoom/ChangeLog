@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/lsdldoom
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/ChangeLog,v 1.16 2012/01/10 20:24:55 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/ChangeLog,v 1.17 2013/02/25 02:43:31 vapier Exp $
+
+  25 Feb 2013; Mike Frysinger <vapier@gentoo.org> lsdldoom-1.5.ebuild:
+  Add arm love.
 
   10 Jan 2012; Brent Baude <ranger@gentoo.org> lsdldoom-1.5.ebuild:
   Marking lsdldoom-1.5 ppc for bug 393217
