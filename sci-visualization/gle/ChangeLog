@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/gle
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.20 2012/07/17 14:37:31 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.21 2013/02/25 05:35:48 bicatali Exp $
+
+*gle-4.2.4c (25 Feb 2013)
+
+  25 Feb 2013; Sébastien Fabbro <bicatali@gentoo.org> +gle-4.2.4c.ebuild,
+  metadata.xml:
+  Version bump
 
   17 Jul 2012; Justin Lecher <jlec@gentoo.org> gle-4.2.4b.ebuild,
   +files/gle-4.2.4b-gcc-4.7.patch:
@@ -104,4 +110,3 @@
   +metadata.xml, +gle-4.1.2b.ebuild:
   Initial import. Closing bug #128322. Thanks to Sebastien Fabbro for help
   with this ebuild in the science overlay.
-

@@ -24,7 +24,8 @@
 	<flag name='static'>Enables both 'static-softmmu' and 'static-user'</flag>
 	<flag name='systemtap'>Enable SystemTAP/DTrace tracing</flag>
 	<flag name='tci'>Enable the TCG Interpreter which can speed up or slowdown workloads depending on the host and guest CPUs being emulated. In the future it will be a runtime option but for now its compile time.</flag>
-    <flag name='tls'>Enable TLS support for the VNC console server</flag>
+    <flag name='tls'>Enable TLS support for the VNC console server.
+		For 1.4 and newer this also enables WebSocket support.</flag>
     <flag name='jpeg'>Enable jpeg image support for the VNC console server</flag>
     <flag name='png'>Enable png image support for the VNC console server</flag>
     <flag name="usbredir">Use <pkg>sys-apps/usbredir</pkg> to redirect USB

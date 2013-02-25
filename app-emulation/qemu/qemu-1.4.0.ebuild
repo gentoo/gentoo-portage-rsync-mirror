@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.4.0.ebuild,v 1.3 2013/02/25 05:27:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.4.0.ebuild,v 1.4 2013/02/25 05:52:50 cardoe Exp $
 
 EAPI=5
 
@@ -101,7 +101,7 @@ RDEPEND="!static-softmmu? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	sdl? ( media-libs/libsdl[X] )
 	selinux? ( sec-policy/selinux-qemu )
 	smartcard? ( dev-libs/nss )
-	spice? ( >=app-emulation/spice-protocol-0.12.2 )
+	spice? ( >=app-emulation/spice-protocol-0.12.3 )
 	systemtap? ( dev-util/systemtap )
 	usbredir? ( >=sys-apps/usbredir-0.5.3 )
 	virtfs? ( sys-libs/libcap )
@@ -252,11 +252,13 @@ qemu_src_configure() {
 		conf_opts+=" --target-list=${user_targets}"
 		conf_opts+=" --disable-bluez"
 		conf_opts+=" --disable-sdl"
+		conf_opts+=" --disable-tools"
 	fi
 
 	if [[ ${buildtype} == "softmmu" ]]; then
 		conf_opts+=" --disable-linux-user"
 		conf_opts+=" --enable-system"
+		conf_opts+=" --with-system-pixman"
 		conf_opts+=" --target-list=${softmmu_targets}"
 		conf_opts+=" $(use_enable bluetooth bluez)"
 		conf_opts+=" $(use_enable sdl)"
@@ -277,6 +279,7 @@ qemu_src_configure() {
 		conf_opts+=" $(use_enable smartcard smartcard-nss)"
 		conf_opts+=" $(use_enable spice)"
 		conf_opts+=" $(use_enable tls vnc-tls)"
+		conf_opts+=" $(use_enable tls vnc-ws)"
 		conf_opts+=" $(use_enable usbredir usb-redir)"
 		conf_opts+=" $(use_enable uuid)"
 		conf_opts+=" $(use_enable vde)"

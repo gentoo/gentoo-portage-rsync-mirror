@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.189 2013/02/25 05:27:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.190 2013/02/25 05:52:50 cardoe Exp $
+
+  25 Feb 2013; Doug Goldstein <cardoe@gentoo.org> qemu-1.4.0.ebuild,
+  metadata.xml:
+  Fix up depends. Disable building of tools for the user emulation targets to
+  remove some necessary depends. Fix automagical depend on GnuTLS when VNC
+  WebSockets are enabled.
 
   25 Feb 2013; Doug Goldstein <cardoe@gentoo.org> +files/qemu-kvm-1.4,
   qemu-1.4.0.ebuild:
