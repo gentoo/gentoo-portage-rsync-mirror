@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/type-conv/type-conv-109.08.00.ebuild,v 1.1 2013/02/08 23:19:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/type-conv/type-conv-109.08.00.ebuild,v 1.2 2013/02/25 06:45:38 slyfox Exp $
 
 EAPI="5"
 
@@ -21,6 +21,7 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
+	>=dev-lang/ocaml-4.0[ocamlopt?]
 	>=dev-ml/findlib-1.3.2"
 
 DOCS=( "README.md" "CHANGES.txt" )

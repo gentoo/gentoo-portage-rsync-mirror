@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.71 2013/02/16 18:16:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.72 2013/02/25 06:36:04 patrick Exp $
+
+*nodejs-0.8.20 (25 Feb 2013)
+*nodejs-0.6.21-r2 (25 Feb 2013)
+
+  25 Feb 2013; Patrick Lauer <patrick@gentoo.org> +nodejs-0.6.21-r2.ebuild,
+  +nodejs-0.8.20.ebuild:
+  Version bump for 0.6 and 0.8 that also disables shared v8 as our v8
+  maintainers remove all compatible versions
 
   16 Feb 2013; Mike Gilbert <floppym@gentoo.org> nodejs-0.9.3-r1.ebuild,
   nodejs-0.9.9.ebuild:
