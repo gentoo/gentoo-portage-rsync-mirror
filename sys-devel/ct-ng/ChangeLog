@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/ct-ng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ChangeLog,v 1.44 2013/02/23 16:07:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ChangeLog,v 1.45 2013/02/25 20:25:33 hwoarang Exp $
+
+  25 Feb 2013; Markos Chandras <hwoarang@gentoo.org>
+  +files/ct-ng-1.18.0-parallel-fix.patch, ct-ng-1.18.0.ebuild:
+  Apply upstream patch to fix parallel installation. Bug #450398
 
   23 Feb 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add myself as secondary maintainer

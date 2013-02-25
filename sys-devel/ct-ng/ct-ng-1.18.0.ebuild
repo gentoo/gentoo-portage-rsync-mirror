@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ct-ng-1.18.0.ebuild,v 1.1 2013/02/01 23:16:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ct-ng-1.18.0.ebuild,v 1.2 2013/02/25 20:25:33 hwoarang Exp $
 
 EAPI="4"
 
@@ -24,6 +24,9 @@ RDEPEND="net-misc/curl
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-kconfig-respect-flags.patch
+
+	# bug 450398. Fixed upstream. Remove it on the next version bump
+	epatch "${FILESDIR}"/${P}-parallel-fix.patch
 
 	#Upstream provides ${S}/bootstrap which runs autoconf -Wall --force
 	#We'll use eautoconf to be portage friendly

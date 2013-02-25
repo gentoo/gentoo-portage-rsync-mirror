@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.683 2013/02/24 23:30:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.684 2013/02/25 20:27:27 mgorny Exp $
+
+  25 Feb 2013; Michał Górny <mgorny@gentoo.org> xorg-2.eclass:
+  Bump the emul-linux-x86 blocker to match the new release.
 
   24 Feb 2013; Pacho Ramos <pacho@gentoo.org> emul-linux-x86.eclass:
   Allow headers installation, bug #458784

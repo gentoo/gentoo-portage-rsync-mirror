@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.3_p392.ebuild,v 1.10 2013/02/24 19:57:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.3_p392.ebuild,v 1.11 2013/02/25 20:16:34 flameeyes Exp $
 
 EAPI=4
 
-#PATCHSET=
+PATCHSET=1
 
 inherit autotools eutils flag-o-matic multilib versionator
 

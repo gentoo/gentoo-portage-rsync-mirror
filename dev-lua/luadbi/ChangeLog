@@ -1,6 +1,13 @@
 # ChangeLog for dev-lua/luadbi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.9 2012/12/31 09:50:58 djc Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.10 2013/02/25 20:25:17 pinkbyte Exp $
+
+*luadbi-0.5-r2 (25 Feb 2013)
+
+  25 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> +files/0.5-r2-Makefile.patch,
+  +luadbi-0.5-r2.ebuild:
+  Revision bump: EAPI 5, fix target dependencies in Makefile patch, respect
+  CFLAGS, wrt bug #436652
 
   31 Dec 2012; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Remove myself as a maintainer.
