@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxkbfile
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbfile/ChangeLog,v 1.78 2012/08/26 19:03:47 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbfile/ChangeLog,v 1.79 2013/02/25 08:29:30 zmedico Exp $
+
+  25 Feb 2013; Zac Medico <zmedico@gentoo.org> libxkbfile-1.0.8.ebuild:
+  Add ~arm-linux keyword.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libxkbfile-1.0.8.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -292,4 +295,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +libxkbfile-0.99.0.ebuild:
   Initial commit for modular X.
-

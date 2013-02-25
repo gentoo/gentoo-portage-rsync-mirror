@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.12.ebuild,v 1.4 2013/02/18 23:25:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.12.ebuild,v 1.5 2013/02/25 08:17:30 zmedico Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.samba.org/"
 SRC_URI="mirror://samba/stable/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ~ia64 ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="amd64 ~arm hppa ~ia64 ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="acl addns ads +aio avahi caps +client cluster cups debug dmapi doc examples fam
 	ldap ldb +netapi pam quota +readline selinux +server +smbclient smbsharemodes
 	swat syslog winbind"
@@ -145,9 +145,9 @@ src_configure() {
 	# anymore => LDAP?
 	# - --without-dce-dfs and --without-nisplus-home can't be passed to configure but are disabled by default
 	econf ${myconf} \
-		--with-piddir=/var/run/samba \
-		--sysconfdir=/etc/samba \
-		--localstatedir=/var \
+		--with-piddir="${EPREFIX}"/var/run/samba \
+		--sysconfdir="${EPREFIX}"/etc/samba \
+		--localstatedir="${EPREFIX}"/var \
 		$(use_enable debug developer) \
 		--enable-largefile \
 		--enable-socket-wrapper \
@@ -161,12 +161,12 @@ src_configure() {
 		--disable-dnssd \
 		$(use_enable avahi) \
 		--with-fhs \
-		--with-privatedir=/var/lib/samba/private \
-		--with-rootsbindir=/var/cache/samba \
-		--with-lockdir=/var/cache/samba \
-		--with-swatdir=/usr/share/doc/${PF}/swat \
-		--with-configdir=/etc/samba \
-		--with-logfilebase=/var/log/samba \
+		--with-privatedir="${EPREFIX}"/var/lib/samba/private \
+		--with-rootsbindir="${EPREFIX}"/var/cache/samba \
+		--with-lockdir="${EPREFIX}"/var/cache/samba \
+		--with-swatdir="${EPREFIX}"/usr/share/doc/${PF}/swat \
+		--with-configdir="${EPREFIX}"/etc/samba \
+		--with-logfilebase="${EPREFIX}"/var/log/samba \
 		--with-pammodulesdir=$(getpam_mod_dir) \
 		$(use_with dmapi) \
 		--without-afs \
@@ -174,7 +174,7 @@ src_configure() {
 		--without-vfs-afsacl \
 		$(use_with ldap) \
 		$(use_with ads) \
-		$(use_with ads krb5 /usr) \
+		$(use_with ads krb5 "${EPREFIX}"/usr) \
 		$(use_with ads dnsupdate) \
 		--without-automount \
 		$(use_with pam) \
@@ -188,7 +188,7 @@ src_configure() {
 		$(use_with smbclient libsmbclient) \
 		$(use_with smbsharemodes libsmbsharemodes) \
 		$(use_with addns libaddns) \
-		$(use_with cluster ctdb /usr) \
+		$(use_with cluster ctdb "${EPREFIX}"/usr) \
 		$(use_with cluster cluster-support) \
 		$(use_with acl acl-support) \
 		$(use_with aio aio-support) \
@@ -371,7 +371,7 @@ src_install() {
 		if use swat ; then
 			insinto /etc/xinetd.d
 			newins "${CONFDIR}/swat.xinetd" swat
-			script/installswat.sh "${D}" "${ROOT}/usr/share/doc/${PF}/swat" "${S}"
+			script/installswat.sh "${ED}" "${EROOT}/usr/share/doc/${PF}/swat" "${S}"
 		fi
 
 		dodoc ../MAINTAINERS.txt ../README* ../Roadmap ../WHATSNEW.txt ../docs/THANKS
@@ -418,10 +418,10 @@ src_install() {
 
 	# Remove empty installation directories
 	rmdir --ignore-fail-on-non-empty \
-		"${D}/usr/$(get_libdir)/samba" \
-		"${D}/usr"/{sbin,bin} \
-		"${D}/usr/share"/{man,locale,} \
-		"${D}/var"/{run,lib/samba/private,lib/samba,lib,cache/samba,cache,} \
+		"${ED}/usr/$(get_libdir)/samba" \
+		"${ED}/usr"/{sbin,bin} \
+		"${ED}/usr/share"/{man,locale,} \
+		"${ED}/var"/{run,lib/samba/private,lib/samba,lib,cache/samba,cache,} \
 	#	|| die "tried to remove non-empty dirs, this seems like a bug in the ebuild"
 }
 

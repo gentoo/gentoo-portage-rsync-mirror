@@ -1,6 +1,19 @@
 # ChangeLog for media-sound/amsynth
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/ChangeLog,v 1.43 2012/05/05 08:05:35 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/ChangeLog,v 1.45 2013/02/25 08:15:34 ssuominen Exp $
+
+  25 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> -amsynth-1.2.0.ebuild,
+  -files/amsynth-1.2.0+gcc-4.3.patch, -files/amsynth-1.2.0-asneeded.patch,
+  -files/amsynth-1.2.0-cflags.patch, -files/amsynth-1.2.0-debug.patch,
+  -amsynth-1.2.2.ebuild, -files/amsynth-1.2.2-asneeded.patch,
+  -amsynth-1.2.3.ebuild:
+  old
+
+*amsynth-1.3.2 (25 Feb 2013)
+
+  25 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> +amsynth-1.3.2.ebuild,
+  metadata.xml:
+  Version bump wrt #425278 by Diego Elio Pettenò
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> amsynth-1.2.0.ebuild,
   amsynth-1.2.2.ebuild, amsynth-1.2.3.ebuild, amsynth-1.2.3-r1.ebuild:

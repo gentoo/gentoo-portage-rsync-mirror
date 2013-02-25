@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-common
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.101 2012/10/19 18:56:37 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.102 2013/02/25 08:25:01 zmedico Exp $
+
+  25 Feb 2013; Zac Medico <zmedico@gentoo.org> gnome-common-3.6.0.ebuild:
+  Add ~arm-linux keyword.
 
 *gnome-common-3.6.0 (19 Oct 2012)
 

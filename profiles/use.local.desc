@@ -2955,6 +2955,7 @@ media-sound/amarok:mp3tunes - Enable mp3tunes integration
 media-sound/amarok:mtp - Enable support for libMTP (Plays4Sure) devices access through libmtp
 media-sound/amarok:ofa - Use media-libs/libofa to compute MusicDNS acoustic fingerprints (used by MusicBrainz)
 media-sound/amarok:utils - Build the utils - old media-sound/amarok-utils
+media-sound/amsynth:dssi - Enable support for DSSI Soft Synth Interface
 media-sound/aqualung:ifp - Enable support for iRiver iFP portable audio players
 media-sound/aqualung:lua - Enable support for programmable title formatting with dev-lang/lua
 media-sound/aqualung:mac - Enable support for decoding Monkey's Audio files

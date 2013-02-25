@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lash
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.38 2012/09/03 17:11:05 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.39 2013/02/25 08:04:11 ssuominen Exp $
+
+  25 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> lash-0.5.4-r1.ebuild,
+  +files/lash-0.5.4-gcc47.patch:
+  Fix building with sys-devel/gcc >= 4.7.0 wrt #451668 by David Kredba
 
   03 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> lash-0.5.4-r1.ebuild:
   Fix building with latest texi2html wrt #422045 but use the pregenerated
