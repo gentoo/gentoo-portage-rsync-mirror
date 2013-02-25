@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14502 2013/02/25 04:53:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14503 2013/02/25 06:01:52 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -88,15 +88,6 @@ games-strategy/freecraft
 # Markos Chandras <hwoarang@gentoo.org> (17 Feb 2013)
 # Does not build with libav-0.8
 =media-video/qx11grab-0.4.7
-
-# Doug Goldstein <cardoe@gentoo.org> (16 Feb 2013)
-# For most use cases you can unmask this and use this
-# as there has been ample interested. This however breaks
-# at least one feature fundamental to me.
-# * migration from previous versions is broken and migration
-#   to future versions is broken
-# So this is in the tree for people that want/need it but its masked.
-=app-emulation/qemu-1.4.0
 
 # Rick Farina <zerochaos@gentoo.org> (15 Feb 2013)
 # these firmware packages have been merged into the sys-kernel/linux-firmware
@@ -282,10 +273,6 @@ dev-python/github2
 # Doug Goldstein <cardoe@gentoo.org> (22 Jan 2013)
 # Masked for development
 =sys-block/open-iscsi-2.0.873
-
-# Doug Goldstein <cardoe@gentoo.org> (20 Jan 2013)
-# Under development, feel free to test and report back
-=app-emulation/qemu-1.2.2-r100
 
 # Hans de Graaff <graaff@gentoo.org> (20 Jan 2013) Mask
 # dev-lang/ruby-enterprise for removal, bug 453178.  The current
