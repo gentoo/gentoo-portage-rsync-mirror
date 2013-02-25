@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-3.2.5.ebuild,v 1.8 2013/01/17 20:39:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-3.2.5.ebuild,v 1.9 2013/02/25 09:07:15 zmedico Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ HOMEPAGE="http://projects.gnome.org/gconf/"
 
 LICENSE="LGPL-2+"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="debug gtk +introspection ldap orbit policykit"
 
 RDEPEND=">=dev-libs/glib-2.31:2
@@ -81,10 +81,10 @@ pkg_postinst() {
 
 	# change the permissions to avoid some gconf bugs
 	einfo "changing permissions for gconf dirs"
-	find  /etc/gconf/ -type d -exec chmod ugo+rx "{}" \;
+	find  "${EPREFIX}"/etc/gconf/ -type d -exec chmod ugo+rx "{}" \;
 
 	einfo "changing permissions for gconf files"
-	find  /etc/gconf/ -type f -exec chmod ugo+r "{}" \;
+	find  "${EPREFIX}"/etc/gconf/ -type f -exec chmod ugo+r "{}" \;
 
 	if ! use orbit; then
 		ewarn "You are using dbus for GConf's IPC. If you are upgrading from"
@@ -98,9 +98,9 @@ pkg_postinst() {
 
 kill_gconf() {
 	# This function will kill all running gconfd-2 that could be causing troubles
-	if [ -x /usr/bin/gconftool-2 ]
+	if [ -x "${EPREFIX}"/usr/bin/gconftool-2 ]
 	then
-		/usr/bin/gconftool-2 --shutdown
+		"${EPREFIX}"/usr/bin/gconftool-2 --shutdown
 	fi
 
 	return 0

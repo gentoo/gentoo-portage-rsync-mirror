@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/dconf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.42 2012/11/21 23:13:39 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.43 2013/02/25 09:10:55 zmedico Exp $
+
+  25 Feb 2013; Zac Medico <zmedico@gentoo.org> dconf-0.14.1.ebuild:
+  Add ~arm-linux and ~x86-linux keywords.
 
 *dconf-0.14.1 (21 Nov 2012)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libnotify
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.89 2012/08/19 18:25:14 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.90 2013/02/25 09:15:24 zmedico Exp $
+
+  25 Feb 2013; Zac Medico <zmedico@gentoo.org> libnotify-0.7.5.ebuild:
+  Add ~arm-linux keyword.
 
   19 Aug 2012; Raúl Porcel <armin76@gentoo.org> libnotify-0.7.5.ebuild:
   alpha/ia64/sh/sparc stable wrt #422357
@@ -329,4 +332,3 @@
   19 Feb 2006; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   +libnotify-0.3.2.ebuild:
   Initial commit, ebuild written by me.
-
