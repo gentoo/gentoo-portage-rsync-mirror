@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.65.0-r2.ebuild,v 1.14 2013/02/24 18:06:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.65.0-r2.ebuild,v 1.15 2013/02/25 10:53:32 eras Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic multilib user
@@ -29,8 +29,7 @@ DEPEND="${RDEPEND}
 		sqlite? ( dev-db/sqlite:3 )"
 
 # vpopmail support removed upstream
-REQUIRED_USE="( !vpopmail )
-	sqlite? ( mysql )"
+REQUIRED_USE="( !vpopmail )"
 
 pkg_setup() {
 	enewuser mail -1 -1 /var/spool/mail
@@ -44,8 +43,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-sqlite.patch
-
 	# move local macro to m4 and run eautoreconf
 	mkdir "${S}/m4" || die
 	sed -n -e '/# AC_PROG_SYSCONFTOOL/,+33 p' "${S}"/aclocal.m4 > \
