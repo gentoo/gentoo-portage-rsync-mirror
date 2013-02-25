@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.97 2013/02/25 14:34:26 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.98 2013/02/25 21:49:58 ago Exp $
+
+  25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> fbida-2.09.ebuild:
+  Stable for ppc, wrt bug #457364
 
   25 Feb 2013; Julian Ospald <hasufell@gentoo.org> fbida-2.09.ebuild:
   respect CC

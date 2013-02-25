@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/inputproto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.134 2013/02/21 17:23:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.135 2013/02/25 21:47:04 mgorny Exp $
+
+*inputproto-2.2-r1 (25 Feb 2013)
+
+  25 Feb 2013; Michał Górny <mgorny@gentoo.org> +inputproto-2.2-r1.ebuild,
+  inputproto-2.2.99.1.ebuild:
+  Enable multilib.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> inputproto-2.2.ebuild:
   Add ~arm-linux keyword.

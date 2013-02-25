@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ssvnc-1.0.29.ebuild,v 1.2 2012/04/14 19:09:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ssvnc-1.0.29.ebuild,v 1.3 2013/02/25 21:57:21 zmedico Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/ssvnc/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="java"
 
 RDEPEND="sys-libs/zlib

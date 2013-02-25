@@ -1,6 +1,11 @@
 # ChangeLog for x11-proto/xf86dgaproto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/ChangeLog,v 1.59 2012/08/26 18:26:54 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/ChangeLog,v 1.60 2013/02/25 21:57:51 mgorny Exp $
+
+*xf86dgaproto-2.1-r2 (25 Feb 2013)
+
+  25 Feb 2013; Michał Górny <mgorny@gentoo.org> +xf86dgaproto-2.1-r2.ebuild:
+  Enable multilib.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xf86dgaproto-2.1-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -206,4 +211,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +xf86dgaproto-2.0.ebuild:
   Initial commit for modular X
-

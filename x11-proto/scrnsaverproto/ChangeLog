@@ -1,6 +1,11 @@
 # ChangeLog for x11-proto/scrnsaverproto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/scrnsaverproto/ChangeLog,v 1.54 2012/08/26 18:19:39 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/scrnsaverproto/ChangeLog,v 1.55 2013/02/25 21:52:40 mgorny Exp $
+
+*scrnsaverproto-1.2.2-r1 (25 Feb 2013)
+
+  25 Feb 2013; Michał Górny <mgorny@gentoo.org> +scrnsaverproto-1.2.2-r1.ebuild:
+  Enable multilib.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> scrnsaverproto-1.2.2.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -209,4 +214,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +scrnsaverproto-1.0.ebuild:
   Initial commit for modular X
-

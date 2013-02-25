@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.180 2013/02/24 17:47:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.181 2013/02/25 21:39:15 zmedico Exp $
+
+  25 Feb 2013; Zac Medico <zmedico@gentoo.org> tcl-8.6.0-r1.ebuild:
+  Add ~arm-linux keyword.
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> tcl-8.5.13-r1.ebuild:
   Stable for sh, wrt bug #456408

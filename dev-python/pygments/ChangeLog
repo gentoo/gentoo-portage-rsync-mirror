@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.96 2013/02/15 15:19:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.97 2013/02/25 21:48:19 ago Exp $
+
+  25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pygments-1.5-r1.ebuild:
+  Stable for ppc, wrt bug #455724
 
   15 Feb 2013; Michał Górny <mgorny@gentoo.org> pygments-1.6.ebuild:
   Verbosely report the implementation failing tests.

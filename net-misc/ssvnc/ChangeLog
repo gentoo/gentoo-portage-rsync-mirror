@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ssvnc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.25 2012/04/14 19:09:34 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.26 2013/02/25 21:57:21 zmedico Exp $
+
+  25 Feb 2013; Zac Medico <zmedico@gentoo.org> ssvnc-1.0.29.ebuild:
+  Add ~arm-linux keyword.
 
   14 Apr 2012; Zac Medico <zmedico@gentoo.org> ssvnc-1.0.29.ebuild:
   Add ~amd64-linux keyword.
@@ -104,4 +107,3 @@
   +files/ssvnc-1.0.22-build.patch, +files/ssvnc-1.0.22-optional-java.patch,
   +metadata.xml, +ssvnc-1.0.22.ebuild:
   Initial package by me.
-
