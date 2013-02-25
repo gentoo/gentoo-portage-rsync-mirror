@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-dts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dts/ChangeLog,v 1.33 2013/02/23 10:11:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dts/ChangeLog,v 1.34 2013/02/25 22:52:09 eva Exp $
+
+  25 Feb 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-dts-0.10.22.ebuild, -gst-plugins-dts-1.0.3.ebuild:
+  Clean up old revisions.
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gst-plugins-dts-1.0.5.ebuild:
   Stable for hppa, wrt bug #458188

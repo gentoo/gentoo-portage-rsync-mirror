@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.164 2013/02/21 17:07:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.165 2013/02/25 22:38:16 mgorny Exp $
+
+*fontconfig-2.10.2-r1 (25 Feb 2013)
+
+  25 Feb 2013; Michał Górny <mgorny@gentoo.org> +fontconfig-2.10.2-r1.ebuild:
+  Convert to autotools-multilib. Acked by lu_zero, bug #455074.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> fontconfig-2.9.0.ebuild:
   Fix for prefix and add ~arm-linux + ~x86-linux keywords.

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-annodex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-annodex/ChangeLog,v 1.65 2013/02/04 09:52:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-annodex/ChangeLog,v 1.66 2013/02/25 22:46:46 eva Exp $
+
+  25 Feb 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-annodex-0.10.30.ebuild:
+  Clean up old revisions.
 
   04 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-annodex-0.10.31.ebuild:
