@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.7.8.ebuild,v 1.2 2013/02/25 11:14:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.7.8.ebuild,v 1.3 2013/02/25 11:39:24 ago Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SRC_URI="http://xpra.org/src/${P}.tar.bz2"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="+clipboard +rencode server vpx webp x264"
 
 COMMON_DEPEND="dev-python/pygobject:2

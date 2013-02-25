@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.94 2013/02/05 22:40:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.96 2013/02/25 11:40:15 ago Exp $
+
+  25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> fbida-2.09.ebuild:
+  Stable for x86, wrt bug #457364
+
+  25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> fbida-2.09.ebuild:
+  Stable for amd64, wrt bug #457364
 
   05 Feb 2013; Jeroen Roovers <jer@gentoo.org> fbida-2.09.ebuild:
   New HOMEPAGE. Verbose build.
