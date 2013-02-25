@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.112 2013/01/22 17:18:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.113 2013/02/25 04:45:41 bicatali Exp $
+
+*root-5.34.05 (23 Feb 2013)
+
+  23 Feb 2013; Andrew Savchenko <bircoph@gmail.com> -root-5.34.03.ebuild,
+  +root-5.34.05.ebuild, +files/root-5.34.05-nobyte-compile.patch:
+  Version bump.
 
   22 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org>
   +files/root-5.32.00-prop-flags.patch,
