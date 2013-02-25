@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/sakura
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.35 2012/08/27 17:56:15 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.36 2013/02/25 09:56:41 zmedico Exp $
+
+  25 Feb 2013; Zac Medico <zmedico@gentoo.org> sakura-3.0.4.ebuild:
+  Add ~arm-linux and ~x86-linux keywords.
 
   27 Aug 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Add to desktop-misc herd.
