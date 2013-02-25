@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.4.0.ebuild,v 1.2 2013/02/25 04:08:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.4.0.ebuild,v 1.3 2013/02/25 05:27:17 cardoe Exp $
 
 EAPI=5
 
 PYTHON_DEPEND="2:2.4"
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python \
 	user udev fcaps
-#BACKPORTS=7c9a3a87
+BACKPORTS=ebc00c94
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.qemu.org/qemu.git"
@@ -60,6 +60,7 @@ REQUIRED_USE="${REQUIRED_USE}
 LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
 	sys-apps/pciutils[static-libs(+)]
 	sys-libs/zlib[static-libs(+)]
+	>=x11-libs/pixman-0.28.0[static-libs(+)]
 	aio? ( dev-libs/libaio[static-libs(+)] )
 	caps? ( sys-libs/libcap-ng[static-libs(+)] )
 	curl? ( >=net-misc/curl-7.15.4[static-libs(+)] )
@@ -288,6 +289,7 @@ qemu_src_configure() {
 		conf_opts+=" $(use_enable xfs xfsctl)"
 		use mixemu && conf_opts+=" --enable-mixemu"
 		conf_opts+=" --audio-drv-list=${audio_opts}"
+		conf_opts+=" --enable-migration-from-qemu-kvm"
 	fi
 
 	conf_opts+=" $(use_enable debug debug-info)"
@@ -383,13 +385,13 @@ src_install() {
 		fi
 
 		if use qemu_softmmu_targets_x86_64 ; then
-			dosym /usr/bin/qemu-system-x86_64 /usr/bin/qemu-kvm
+			newbin "${FILESDIR}/qemu-kvm-1.4" qemu-kvm
 			ewarn "The deprecated '/usr/bin/kvm' symlink is no longer installed"
 			ewarn "You should use '/usr/bin/qemu-kvm', you may need to edit"
 			ewarn "your libvirt configs or other wrappers for ${PN}"
 		elif use x86 || use amd64; then
 			elog "You disabled QEMU_SOFTMMU_TARGETS=x86_64, this disables install"
-			elog "of the /usr/bin/qemu-kvm symlink."
+			elog "of the /usr/bin/qemu-kvm script."
 		fi
 
 		use python && dobin "${S}/scripts/kvm/kvm_stat"

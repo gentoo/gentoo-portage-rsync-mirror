@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.69 2013/01/21 17:17:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.70 2013/02/25 05:11:45 bicatali Exp $
+
+*geant-4.9.6_p01 (25 Feb 2013)
+
+  25 Feb 2013; Sébastien Fabbro <bicatali@gentoo.org> +geant-4.9.6_p01.ebuild:
+  Version bump
 
   21 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org> geant-4.9.6.ebuild:
   Fixed the environment file when the data use flag is enabled, bug #453224
