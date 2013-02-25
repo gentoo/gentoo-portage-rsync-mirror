@@ -1,38 +1,43 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/libtrash-3.2.ebuild,v 1.1 2008/12/30 01:33:22 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/libtrash-3.2-r1.ebuild,v 1.1 2013/02/25 21:22:46 pinkbyte Exp $
 
-inherit eutils toolchain-funcs
+EAPI=5
 
-DESCRIPTION="provides a trash can by intercepting certain calls to glibc"
+inherit eutils multilib toolchain-funcs
+
+DESCRIPTION="Provides a trash can by intercepting certain calls to glibc"
 HOMEPAGE="http://pages.stern.nyu.edu/~marriaga/software/libtrash/"
 SRC_URI="http://pages.stern.nyu.edu/~marriaga/software/libtrash/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
 
 DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-gentoo.patch"
-	sed -i -e "/^INSTLIBDIR/s:local/lib:$(get_libdir):" src/Makefile || die
+	unpack "${A}"
 
 	# now let's unpack strash too in cash anyone is interested
-	cd cleanTrash
+	cd "${S}/cleanTrash" || die "cd failed"
 	unpack ./strash-0.9.tar.gz
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${P}-ldflags.patch" # bug 334833
+	sed -i -e "/^INSTLIBDIR/s:local/lib:$(get_libdir):" src/Makefile || die "sed on Makefile failed"
+}
+
 src_compile() {
-	emake CC="$(tc-getCC)" || die "Error Making Source...Exiting"
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
 	dodir /etc /usr/$(get_libdir)
-	emake DESTDIR="${D}" install || die "Error Installing ${P}...Exiting"
+	emake DESTDIR="${D}" install
 
 	dosbin cleanTrash/ct2.pl
 	exeinto /etc/cron.daily

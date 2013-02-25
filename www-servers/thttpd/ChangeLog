@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thttpd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.56 2012/12/29 14:53:07 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.57 2013/02/25 21:27:58 zmedico Exp $
+
+  25 Feb 2013; Zac Medico <zmedico@gentoo.org> thttpd-2.26.4-r1.ebuild:
+  Add ~arm-linux keyword.
 
   29 Dec 2012; Anthony G. Basile <blueness@gentoo.org> -files/thttpd.confd,
   -files/thttpd.init:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.186 2013/01/28 14:20:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.187 2013/02/25 21:09:20 zmedico Exp $
+
+  25 Feb 2013; Zac Medico <zmedico@gentoo.org> gtk-engines-2.20.2.ebuild:
+  Add ~arm-linux keyword.
 
   28 Jan 2013; Alexis Ballier <aballier@gentoo.org> gtk-engines-2.20.2.ebuild:
   keyword ~amd64-fbsd
@@ -744,4 +747,3 @@
 
   19 Jun 2003; Alastair Tse <liquidx@gentoo.org> gtk-engines-2.2.0.ebuild:
   merged metal, redmond86, pixmap, pixbuf and notif engines
-

@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libtrash
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/ChangeLog,v 1.16 2013/02/25 20:45:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/ChangeLog,v 1.17 2013/02/25 21:22:46 pinkbyte Exp $
+
+*libtrash-3.2-r1 (25 Feb 2013)
+
+  25 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> -libtrash-3.2.ebuild,
+  +libtrash-3.2-r1.ebuild, +files/libtrash-3.2-ldflags.patch:
+  Revision bump: EAPI 5, respect LDFLAGS, wrt bug #334833, drop old revision.
+  Thanks to Diego Elio Pettenò for discovering this issue
 
   25 Feb 2013; Sergey Popov <pinkbyte@gentoo.org>
   files/libtrash-3.2-gentoo.patch:

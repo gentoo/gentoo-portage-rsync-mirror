@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icon-naming-utils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icon-naming-utils/ChangeLog,v 1.82 2012/05/15 23:32:37 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icon-naming-utils/ChangeLog,v 1.83 2013/02/25 21:16:55 zmedico Exp $
+
+  25 Feb 2013; Zac Medico <zmedico@gentoo.org> icon-naming-utils-0.8.90.ebuild:
+  Add ~arm-linux keyword.
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org>
   icon-naming-utils-0.8.90.ebuild:
@@ -360,4 +363,3 @@
   +icon-naming-utils-0.6.2.ebuild:
   New Package provided by Norman Jonas <bugs.gentoo.org@devport.codepilot.net>
   closing bug #109139.
-

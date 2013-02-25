@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-standard
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.37 2013/01/28 14:25:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.38 2013/02/25 21:13:10 zmedico Exp $
+
+  25 Feb 2013; Zac Medico <zmedico@gentoo.org>
+  gnome-themes-standard-3.6.2.ebuild:
+  Add ~arm-linux keyword.
 
   28 Jan 2013; Alexis Ballier <aballier@gentoo.org>
   gnome-themes-standard-3.6.2.ebuild:

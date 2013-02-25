@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-SAX-Base
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Base/ChangeLog,v 1.22 2012/06/24 13:00:16 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Base/ChangeLog,v 1.23 2013/02/25 21:07:47 zmedico Exp $
+
+  25 Feb 2013; Zac Medico <zmedico@gentoo.org> XML-SAX-Base-1.80.0.ebuild:
+  Add ~arm-linux keyword.
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
