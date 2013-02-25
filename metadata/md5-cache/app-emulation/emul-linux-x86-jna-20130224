@@ -1,0 +1,14 @@
+DEFINED_PHASES=install prepare
+DEPEND=>=sys-apps/findutils-4.2.26
+DESCRIPTION=Provides precompiled 32bit libraries
+EAPI=5
+HOMEPAGE=http://dev.gentoo.org/~pacho/emul.html
+IUSE=+development
+KEYWORDS=-* ~amd64
+LICENSE=LGPL-2.1
+RDEPEND=~app-emulation/emul-linux-x86-baselibs-20130224
+RESTRICT=strip
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-jna-20130224.tar.xz
+_eclasses_=emul-linux-x86	c34950dbcd2b4725fa3d91047c677902	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=0a44a74de7355102376e25098121ceac

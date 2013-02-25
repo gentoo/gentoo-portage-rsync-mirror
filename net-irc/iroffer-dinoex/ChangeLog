@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/iroffer-dinoex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/iroffer-dinoex/ChangeLog,v 1.2 2013/02/08 12:00:11 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/iroffer-dinoex/ChangeLog,v 1.3 2013/02/25 18:35:58 pinkbyte Exp $
+
+*iroffer-dinoex-3.28-r1 (25 Feb 2013)
+
+  25 Feb 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +iroffer-dinoex-3.28-r1.ebuild, files/iroffer-dinoex-config.patch:
+  Revision bump: improved config patch by Mikle Kolyada, various
+  locale-specific improvements by Sébastien P. wrt bug #456316
 
   08 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> files/iroffer-dinoex.init:
   Port reload and reconnect initscript options from sunrise ebuild
