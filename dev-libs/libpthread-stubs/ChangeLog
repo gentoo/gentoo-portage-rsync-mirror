@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpthread-stubs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.26 2013/02/21 18:23:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.27 2013/02/25 22:03:12 mgorny Exp $
+
+*libpthread-stubs-0.3-r1 (25 Feb 2013)
+
+  25 Feb 2013; Michał Górny <mgorny@gentoo.org> +libpthread-stubs-0.3-r1.ebuild:
+  Enable multilib.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> libpthread-stubs-0.3.ebuild:
   Add ~arm-linux keyword.

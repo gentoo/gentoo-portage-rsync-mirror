@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.361 2013/02/18 01:04:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.362 2013/02/25 22:20:29 mgorny Exp $
+
+*freetype-2.4.11-r1 (25 Feb 2013)
+
+  25 Feb 2013; Michał Górny <mgorny@gentoo.org> +freetype-2.4.11-r1.ebuild:
+  Convert to autotools-multilib. Acked by lu_zero, bug #455070.
 
   18 Feb 2013; Zac Medico <zmedico@gentoo.org> freetype-2.4.11.ebuild:
   Add ~arm-linux keyword.
