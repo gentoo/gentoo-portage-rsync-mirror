@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/hdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.36 2013/02/25 13:31:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.37 2013/02/25 13:37:18 xarthisius Exp $
+
+  25 Feb 2013; Kacper Kowalik <xarthisius@gentoo.org>
+  -files/4.2.6-autotools.patch, -hdf-4.2_p4.ebuild:
+  Drop old, obsoletes bug #448726
 
   25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> hdf-4.2.8.ebuild:
   Stable for x86, wrt bug #449226
