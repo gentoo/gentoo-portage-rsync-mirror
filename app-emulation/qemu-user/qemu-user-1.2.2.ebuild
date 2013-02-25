@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.2.2.ebuild,v 1.1 2013/01/20 00:47:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/qemu-user-1.2.2.ebuild,v 1.2 2013/02/25 16:35:36 zmedico Exp $
 
 EAPI=4
 
@@ -106,6 +106,7 @@ src_configure() {
 	conf_opts+=" --disable-vnc-tls"
 	conf_opts+=" --disable-curses"
 	conf_opts+=" --disable-sdl"
+	conf_opts+=" --disable-seccomp"
 	conf_opts+=" --disable-vde"
 	conf_opts+=" --prefix=/usr --sysconfdir=/etc --disable-bluez --disable-kvm"
 	conf_opts+=" --cc=$(tc-getCC) --host-cc=$(tc-getBUILD_CC)"
