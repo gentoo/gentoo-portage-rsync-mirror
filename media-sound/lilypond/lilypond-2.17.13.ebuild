@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.17.10.ebuild,v 1.1 2013/01/14 03:04:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.17.13.ebuild,v 1.1 2013/02/25 04:24:29 radhermit Exp $
 
-EAPI="5"
+EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
 inherit elisp-common autotools eutils python-single-r1

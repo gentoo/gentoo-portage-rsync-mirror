@@ -1,23 +1,26 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.4.0.ebuild,v 1.2 2013/02/25 04:08:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2-r4.ebuild,v 1.1 2013/02/25 04:08:48 cardoe Exp $
 
 EAPI=5
+
+MY_PN="qemu-kvm"
+MY_P=${MY_PN}-1.2.0
 
 PYTHON_DEPEND="2:2.4"
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python \
 	user udev fcaps
-#BACKPORTS=7c9a3a87
+BACKPORTS=7c9a3a87
 
 if [[ ${PV} = *9999* ]]; then
-	EGIT_REPO_URI="git://git.qemu.org/qemu.git"
+	EGIT_REPO_URI="git://git.kernel.org/pub/scm/virt/kvm/qemu-kvm.git"
 	inherit git-2
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="http://wiki.qemu-project.org/download//${P}.tar.bz2
+	SRC_URI="mirror://sourceforge/kvm/${MY_PN}/${MY_P}.tar.gz
 	${BACKPORTS:+
-		http://dev.gentoo.org/~cardoe/distfiles/${P}-${BACKPORTS}.tar.xz}"
+		http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 fi
 
@@ -71,7 +74,7 @@ LIB_DEPEND=">=dev-libs/glib-2.0[static-libs(+)]
 	sasl? ( dev-libs/cyrus-sasl[static-libs(+)] )
 	sdl? ( >=media-libs/libsdl-1.2.11[static-libs(+)] )
 	seccomp? ( >=sys-libs/libseccomp-1.0.1[static-libs(+)] )
-	spice? ( >=app-emulation/spice-0.12.0[static-libs(+)] )
+	spice? ( >=app-emulation/spice-0.9.0[static-libs(+)] )
 	tls? ( net-libs/gnutls[static-libs(+)] )
 	uuid? ( >=sys-apps/util-linux-2.16.0[static-libs(+)] )
 	vde? ( net-misc/vde[static-libs(+)] )
@@ -81,13 +84,13 @@ RDEPEND="!static-softmmu? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	!app-emulation/kqemu
 	qemu_softmmu_targets_i386? (
 		sys-firmware/ipxe
-		~sys-firmware/seabios-1.7.2
+		~sys-firmware/seabios-1.7.1
 		~sys-firmware/sgabios-0.1_pre8
 		~sys-firmware/vgabios-0.7a
 	)
 	qemu_softmmu_targets_x86_64? (
 		sys-firmware/ipxe
-		~sys-firmware/seabios-1.7.2
+		~sys-firmware/seabios-1.7.1
 		~sys-firmware/sgabios-0.1_pre8
 		~sys-firmware/vgabios-0.7a
 	)
@@ -102,7 +105,7 @@ RDEPEND="!static-softmmu? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	smartcard? ( dev-libs/nss )
 	spice? ( >=app-emulation/spice-protocol-0.12.2 )
 	systemtap? ( dev-util/systemtap )
-	usbredir? ( >=sys-apps/usbredir-0.5.3 )
+	usbredir? ( ~sys-apps/usbredir-0.4.4 )
 	virtfs? ( sys-libs/libcap )
 	xen? ( app-emulation/xen-tools )"
 
@@ -111,6 +114,8 @@ DEPEND="${RDEPEND}
 	doc? ( app-text/texi2html )
 	kernel_linux? ( >=sys-kernel/linux-headers-2.6.35 )
 	static-softmmu? ( ${LIB_DEPEND} )"
+
+S="${WORKDIR}/${MY_P}"
 
 STRIP_MASK="/usr/share/qemu/palcode-clipper"
 
@@ -203,7 +208,7 @@ src_prepare() {
 	python_convert_shebangs -r 2 "${S}/scripts/kvm/kvm_stat"
 	python_convert_shebangs -r 2 "${S}/scripts/kvm/vmxcap"
 
-	epatch "${FILESDIR}"/qemu-9999-cflags.patch
+	epatch "${FILESDIR}"/qemu-1.2.0-cflags.patch
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
@@ -273,6 +278,7 @@ qemu_src_configure() {
 		conf_opts+=" $(use_enable rbd)"
 		conf_opts+=" $(use_enable sasl vnc-sasl)"
 		conf_opts+=" $(use_enable seccomp)"
+		conf_opts+=" $(use_enable smartcard smartcard)"
 		conf_opts+=" $(use_enable smartcard smartcard-nss)"
 		conf_opts+=" $(use_enable spice)"
 		conf_opts+=" $(use_enable tls vnc-tls)"
@@ -401,7 +407,7 @@ src_install() {
 	doins "${FILESDIR}/bridge.conf"
 
 	cd "${S}"
-	dodoc Changelog MAINTAINERS TODO docs/specs/pci-ids.txt
+	dodoc Changelog MAINTAINERS TODO pci-ids.txt
 	newdoc pc-bios/README README.pc-bios
 
 	# Avoid collision with app-emulation/libcacard
