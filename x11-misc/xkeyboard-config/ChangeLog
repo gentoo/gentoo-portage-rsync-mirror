@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.180 2013/01/30 14:11:11 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.181 2013/02/25 08:42:24 zmedico Exp $
+
+  25 Feb 2013; Zac Medico <zmedico@gentoo.org> xkeyboard-config-2.8.ebuild:
+  Add ~arm-linux keyword.
 
 *xkeyboard-config-2.8 (30 Jan 2013)
 

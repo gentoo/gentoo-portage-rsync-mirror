@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tdb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.50 2012/12/05 06:45:55 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.51 2013/02/25 08:37:32 zmedico Exp $
+
+  25 Feb 2013; Zac Medico <zmedico@gentoo.org> tdb-1.2.11.ebuild:
+  Add ~arm-linux and ~x86-linux keywords.
 
 *tdb-1.2.11 (05 Dec 2012)
 
