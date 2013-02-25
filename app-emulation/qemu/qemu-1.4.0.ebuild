@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.4.0.ebuild,v 1.4 2013/02/25 05:52:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.4.0.ebuild,v 1.5 2013/02/25 15:07:35 cardoe Exp $
 
 EAPI=5
 
@@ -466,7 +466,7 @@ pkg_postinst() {
 
 	fcaps cap_net_admin /usr/libexec/qemu-bridge-helper
 	use virtfs && fcaps cap_chown cap_dac_override cap_fowner cap_fsetid \
-		cap_setgid cap_mknod cap_setuid /usr/libexec/virtfs-proxy-helper
+		cap_setgid cap_mknod cap_setuid /usr/bin/virtfs-proxy-helper
 
 	elog "The ssl USE flag was renamed to tls, so adjust your USE flags."
 	elog "The nss USE flag was renamed to smartcard, so adjust your USE flags."

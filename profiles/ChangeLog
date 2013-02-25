@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7529 2013/02/24 13:16:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7530 2013/02/25 15:09:24 lu_zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Feb 2013; Luca Barbato <lu_zero@gentoo.org> package.mask:
+  Update mask for libav-9.2
 
   24 Feb 2013; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add ACE license to MISC-FREE group, bug 455530.
