@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.17.ebuild,v 1.9 2013/02/17 18:32:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.17.ebuild,v 1.10 2013/02/25 12:09:57 eras Exp $
 
 EAPI=4
 
@@ -88,7 +88,7 @@ src_prepare() {
 		sieve/Makefile.in \
 		syslog/Makefile.in || die
 
-	eautoreconf
+	AT_M4DIR="cmulocal" eautoreconf
 }
 
 src_configure() {

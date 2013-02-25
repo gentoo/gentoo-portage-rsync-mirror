@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.49 2013/02/22 15:08:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.50 2013/02/25 12:07:15 polynomial-c Exp $
+
+*cifs-utils-5.9-r1 (25 Feb 2013)
+
+  25 Feb 2013; Lars Wendler <polynomial-c@gentoo.org> -cifs-utils-5.9.ebuild,
+  +cifs-utils-5.9-r1.ebuild,
+  +files/cifs-utils-5.9-set-parsed_info-got_user-when-a-cred-file.patch:
+  Mounting with credentials file fixed. Thanks to Michael Buchfink for
+  reporting this in bug #459040.
 
 *cifs-utils-5.9 (22 Feb 2013)
 

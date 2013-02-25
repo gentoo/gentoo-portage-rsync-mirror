@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/penumbra-collection/penumbra-collection-1.1.ebuild,v 1.6 2013/02/21 17:21:43 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/penumbra-collection/penumbra-collection-1.1.ebuild,v 1.7 2013/02/25 12:16:48 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="${MY_PN}-${PV}.sh"
 
 LICENSE="PENUMBRA-COLLECTION"
 SLOT="0"
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="fetch"
 

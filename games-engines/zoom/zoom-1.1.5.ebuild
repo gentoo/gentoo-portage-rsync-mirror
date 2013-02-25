@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/zoom-1.1.5.ebuild,v 1.3 2013/02/22 17:23:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/zoom/zoom-1.1.5.ebuild,v 1.4 2013/02/25 12:17:28 ago Exp $
 
 EAPI=5
 inherit games
@@ -11,7 +11,7 @@ SRC_URI="http://www.logicalshift.co.uk/unix/zoom/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libSM

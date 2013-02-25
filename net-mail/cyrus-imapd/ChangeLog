@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.210 2013/02/17 18:32:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.211 2013/02/25 12:09:57 eras Exp $
+
+  25 Feb 2013; Eray Aslan <eras@gentoo.org> cyrus-imapd-2.4.17.ebuild:
+  Add cmulocal m4dir to eautoreconf - bug #458956
 
   17 Feb 2013; Jeroen Roovers <jer@gentoo.org> cyrus-imapd-2.4.17.ebuild:
   Stable for HPPA (bug #456530).

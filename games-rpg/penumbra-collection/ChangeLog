@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/penumbra-collection
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/penumbra-collection/ChangeLog,v 1.5 2013/02/21 17:21:43 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/penumbra-collection/ChangeLog,v 1.6 2013/02/25 12:16:48 ago Exp $
+
+  25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> penumbra-collection-1.1.ebuild:
+  Stable for x86, wrt bug #457890
 
   21 Feb 2013; Chema Alonso <nimiux@gentoo.org> penumbra-collection-1.1.ebuild:
   Stable for amd64 wrt bug #457890
@@ -22,4 +25,3 @@
   17 Dec 2012; Julian Ospald <hasufell@gentoo.org>
   +penumbra-collection-1.1.ebuild, +metadata.xml:
   initial import based on work from Robert Cernansky wrt #278326
-

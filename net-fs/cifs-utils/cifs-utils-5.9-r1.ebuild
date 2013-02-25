@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.9.ebuild,v 1.1 2013/02/22 15:08:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.9-r1.ebuild,v 1.1 2013/02/25 12:07:15 polynomial-c Exp $
 
 EAPI=4
 
@@ -42,6 +42,11 @@ pkg_setup() {
 		ewarn
 		ewarn "and recompile your kernel ..."
 	fi
+}
+
+src_prepare() {
+	# bug #459040
+	epatch "${FILESDIR}"/${P}-set-parsed_info-got_user-when-a-cred-file.patch
 }
 
 src_configure() {
