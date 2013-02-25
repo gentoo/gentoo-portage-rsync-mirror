@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DEPEND=pkg-config? ( !dev-util/pkgconfig !dev-util/pkgconf[pkg-config] )
+DESCRIPTION=A perl based version of pkg-config from OpenBSD
+EAPI=5
+HOMEPAGE=http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/pkg-config/
+IUSE=+pkg-config
+KEYWORDS=~amd64 ~x86
+LICENSE=ISC
+RDEPEND=pkg-config? ( !dev-util/pkgconfig !dev-util/pkgconf[pkg-config] ) dev-lang/perl virtual/perl-Getopt-Long
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~ssuominen/pkgconfig-openbsd-20130225.tar.xz pkg-config? ( http://pkgconfig.freedesktop.org/releases/pkg-config-0.28.tar.gz )
+_md5_=3271aa976f1e518a39fb82abf84c1efc

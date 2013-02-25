@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/mp3check
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3check/ChangeLog,v 1.16 2012/02/05 15:10:38 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3check/ChangeLog,v 1.19 2013/02/25 07:49:47 ssuominen Exp $
+
+  25 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> mp3check-0.8.7.ebuild:
+  Install mp3check(1) manpage.
+
+*mp3check-0.8.7 (25 Feb 2013)
+
+  25 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> +mp3check-0.8.7.ebuild:
+  Version bump wrt #425242 by Diego Elio Pettenò and Andreas Sturmlechner
+
+  25 Feb 2013; Samuli Suominen <ssuominen@gentoo.org> -mp3check-0.8.0.ebuild,
+  -files/mp3check-0.8.0-gcc34.diff:
+  old
 
   05 Feb 2012; Raúl Porcel <armin76@gentoo.org> mp3check-0.8.0.ebuild,
   mp3check-0.8.4.ebuild:

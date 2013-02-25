@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/pkgconfig-openbsd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/ChangeLog,v 1.9 2012/07/13 09:32:54 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/ChangeLog,v 1.11 2013/02/25 07:33:55 ssuominen Exp $
+
+  25 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -pkgconfig-openbsd-20120710.ebuild:
+  old
+
+*pkgconfig-openbsd-20130225 (25 Feb 2013)
+
+  25 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +pkgconfig-openbsd-20130225.ebuild:
+  Version bump. Keyword ~əmd64 and ~x86 to get more people test this, not a
+  candidate for stabilization. Use pkg.m4 from pkg-config-0.28.
 
   13 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
   pkgconfig-openbsd-20120710.ebuild:
