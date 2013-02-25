@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.682 2013/02/24 21:05:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.683 2013/02/24 23:30:02 pacho Exp $
+
+  24 Feb 2013; Pacho Ramos <pacho@gentoo.org> emul-linux-x86.eclass:
+  Allow headers installation, bug #458784
 
   24 Feb 2013; Michał Górny <mgorny@gentoo.org> xorg-2.eclass:
   Introduce multilib support for xlibs.

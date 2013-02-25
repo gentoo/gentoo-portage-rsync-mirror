@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/emul-linux-x86.eclass,v 1.17 2013/02/24 16:31:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/emul-linux-x86.eclass,v 1.18 2013/02/24 23:30:02 pacho Exp $
 
 #
 # Original Author: Mike Doty <kingtaco@gentoo.org>
@@ -37,7 +37,7 @@ RDEPEND=""
 emul-linux-x86_src_prepare() {
 	ALLOWED=${ALLOWED:-^${S}/etc/env.d}
 	use development && ALLOWED="${ALLOWED}|/usr/lib32/pkgconfig"
-	find "${S}" ! -type d ! '(' -name '*.so' -o -name '*.so.[0-9]*' ')' | egrep -v "${ALLOWED}" | xargs -d $'\n' rm -f || die 'failed to remove everything but *.so*'
+	find "${S}" ! -type d ! '(' -name '*.so' -o -name '*.so.[0-9]*' -o -name '*.h' ')' | egrep -v "${ALLOWED}" | xargs -d $'\n' rm -f || die 'failed to remove everything but *.so*'
 }
 
 emul-linux-x86_src_install() {

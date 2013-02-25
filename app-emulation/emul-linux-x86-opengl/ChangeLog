@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-opengl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.28 2012/12/25 19:08:17 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.29 2013/02/24 23:28:36 pacho Exp $
+
+  24 Feb 2013; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-opengl-20121202-r1.ebuild:
+  Remove /usr/include headers
 
   25 Dec 2012; Pacho Ramos <pacho@gentoo.org>
   emul-linux-x86-opengl-20121202-r1.ebuild:

@@ -8,7 +8,7 @@ KEYWORDS=~alpha ~amd64 ~ppc ~x86
 LICENSE=GPL-2
 RDEPEND=virtual/httpd-php dev-lang/php[gd,pdo,postgres?,xml] dev-php/pecl-apc dev-php/pecl-uploadprogress mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) ) sqlite? ( || ( dev-lang/php[sqlite] dev-lang/php[sqlite3] ) ) >=app-admin/webapp-config-1.50.15
 REQUIRED_USE=|| ( mysql postgres sqlite )
-SLOT=7.19
-SRC_URI=http://drupal.org/files/projects/drupal-7.19.tar.gz
+SLOT=7.20
+SRC_URI=http://drupal.org/files/projects/drupal-7.20.tar.gz
 _eclasses_=webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=e160883dc13cab7721ad71dd41bf8ead
+_md5_=b6bf56f660a436ba79267eae5385ef00

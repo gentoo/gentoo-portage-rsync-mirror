@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/emul-linux-x86-opengl-20121202-r1.ebuild,v 1.2 2012/12/25 19:08:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/emul-linux-x86-opengl-20121202-r1.ebuild,v 1.3 2013/02/24 23:28:36 pacho Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -22,6 +22,7 @@ src_prepare() {
 	emul-linux-x86_src_prepare
 	rm -f "${S}/usr/lib32/libGL.so" || die
 	rm -f "${S}/usr/lib32/libGL.so.1" || die
+	rm -rf "${S}/usr/include" || die
 }
 
 pkg_postinst() {
