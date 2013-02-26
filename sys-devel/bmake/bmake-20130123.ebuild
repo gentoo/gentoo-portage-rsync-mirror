@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/bmake-20120325.ebuild,v 1.1 2012/04/24 12:12:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/bmake-20130123.ebuild,v 1.1 2013/02/26 08:06:39 naota Exp $
 
 EAPI=3
 
 inherit eutils
 
-MK_VER=20120315
+MK_VER=20121010
 DESCRIPTION="NetBSD's portable make"
 HOMEPAGE="http://www.crufty.net/help/sjg/bmake.html"
 SRC_URI="http://void.crufty.net/ftp/pub/sjg/${P}.tar.gz
@@ -14,7 +14,7 @@ SRC_URI="http://void.crufty.net/ftp/pub/sjg/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x64-freebsd"
 IUSE=""
 
 DEPEND=""
@@ -25,7 +25,7 @@ S="${WORKDIR}/${PN}"
 src_configure() {
 	econf \
 		--with-mksrc=../mk \
-		--with-default-sys-path=/usr/share/mk/${PN} \
+		--with-default-sys-path=${EPREFIX}/usr/share/mk/${PN} \
 		--with-machine_arch=${ARCH}
 }
 
@@ -50,6 +50,6 @@ src_install() {
 	dobin ${PN} || die
 	newman ${PN}.cat1 ${PN}.1 || die
 	FORCE_BSD_MK=1 SYS_MK_DIR=. \
-		sh ../mk/install-mk -v -m 644 "${D}"/usr/share/mk/${PN} \
+		sh ../mk/install-mk -v -m 644 "${ED}"/usr/share/mk/${PN} \
 		|| die "failed to install mk files"
 }

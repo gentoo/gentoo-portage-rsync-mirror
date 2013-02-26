@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/kwooty
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/ChangeLog,v 1.34 2012/11/14 20:54:07 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/ChangeLog,v 1.35 2013/02/26 08:07:32 kensington Exp $
+
+*kwooty-1.0.0 (26 Feb 2013)
+
+  26 Feb 2013; Michael Palimaka <kensington@gentoo.org> +kwooty-1.0.0.ebuild:
+  Version bump wrt bug #459214.
 
   14 Nov 2012; Johannes Huber <johu@gentoo.org> -kwooty-0.9.0.ebuild:
   Remove old.
