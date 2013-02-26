@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.119 2013/02/25 18:49:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.120 2013/02/26 22:59:48 mgorny Exp $
+
+*emul-linux-x86-xlibs-20130224-r1 (26 Feb 2013)
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org>
+  +emul-linux-x86-xlibs-20130224-r1.ebuild,
+  emul-linux-x86-xlibs-20130224.ebuild:
+  Introduce a meta-package using multilib-capable ebuilds.
 
 *emul-linux-x86-xlibs-20130224 (25 Feb 2013)
 

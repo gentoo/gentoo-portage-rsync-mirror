@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.2.2.ebuild,v 1.6 2012/12/14 11:05:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.2.2.ebuild,v 1.8 2013/02/26 23:00:38 robbat2 Exp $
 
 EAPI=3
 inherit autotools eutils perl-module user
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 RDEPEND="sys-libs/readline
 	virtual/inetd
-	sys-apps/gawk
+	virtual/awk
 	app-arch/tar
 	>=dev-lang/perl-5.6
 	app-arch/dump
@@ -186,6 +186,9 @@ src_prepare() {
 src_configure() {
 	# fix bug #36316
 	addpredict /var/cache/samba/gencache.tdb
+	# fix bug #376169
+	addpredict /run/blkid
+	addpredict /etc/blkid.tab
 
 	[ ! -f "${TMPENVFILE}" ] && die "Variable setting file (${TMPENVFILE}) should exist!"
 	source "${TMPENVFILE}"

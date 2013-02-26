@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.2.1.ebuild,v 1.17 2013/02/26 23:00:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.3.ebuild,v 1.2 2013/02/26 23:00:38 robbat2 Exp $
 
 EAPI=3
-inherit autotools eutils perl-module user
+inherit autotools eutils perl-module user systemd
 
 MY_P="${P/_}"
 DESCRIPTION="The Advanced Maryland Automatic Network Disk Archiver"
@@ -11,9 +11,8 @@ HOMEPAGE="http://www.amanda.org/"
 SRC_URI="mirror://sourceforge/amanda/${P}.tar.gz"
 LICENSE="HPND BSD BSD-2 GPL-2+ GPL-3+"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 RDEPEND="sys-libs/readline
-	virtual/inetd
 	virtual/awk
 	app-arch/tar
 	>=dev-lang/perl-5.6
@@ -27,6 +26,7 @@ RDEPEND="sys-libs/readline
 	kerberos? ( app-crypt/mit-krb5 )
 	xfs? ( sys-fs/xfsdump )
 	readline? ( sys-libs/readline )
+	!systemd? ( virtual/inetd )
 	!minimal? (
 		virtual/mailx
 		app-arch/mt-st
@@ -44,7 +44,7 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	"
 
-IUSE="curl gnuplot ipv6 kerberos minimal nls readline s3 samba xfs"
+IUSE="curl gnuplot ipv6 kerberos minimal nls readline s3 samba systemd xfs"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -138,16 +138,13 @@ src_unpack() {
 }
 
 src_prepare() {
-	# Fix a fun race condition if you use encryption.
-	# This is one of the reasons you should test your recovery procedures often.
-	#epatch "${FILESDIR}"/${PN}-2.6.0p2-amcrypt-ossl-asym-race-fix.patch
-
-	# gentoo bug 248838, check /sbin stuff before /bin
-	#epatch "${FILESDIR}"/${PN}-2.6.0_p2-syslocpath.patch
 
 	# gentoo bug #331111
 	sed -i '/^check-local: check-perl$/d' "${S}"/config/automake/scripts.am
 	sed -i '/^check-local:/s,syntax-check,,g' "${S}"/perl/Makefile.am
+
+	# bug with glibc-2.16.0
+	sed -i -e '/gets is a security/d' "${S}"/gnulib/stdio.in.h
 
 	eautoreconf
 
@@ -339,6 +336,13 @@ src_install() {
 		insinto /etc/cron.daily
 		newins "${MYFILESDIR}/amanda-cron" amanda
 	fi
+	
+	if use systemd; then
+		einfo "Installing systemd service and socket files for Amanda"
+	systemd_dounit "${FILESDIR}"/amanda.socket || die
+	systemd_newunit "${FILESDIR}"/amanda.service 'amanda@.service' || die
+	fi
+
 
 	insinto /etc/amanda
 	einfo "Installing .amandahosts File for ${AMANDA_USER_NAME} user"

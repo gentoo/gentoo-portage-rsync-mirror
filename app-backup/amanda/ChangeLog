@@ -1,6 +1,22 @@
 # ChangeLog for app-backup/amanda
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/ChangeLog,v 1.94 2012/12/14 11:05:41 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/ChangeLog,v 1.96 2013/02/26 23:00:38 robbat2 Exp $
+
+  26 Feb 2013; Robin H. Johnson <robbat2@gentoo.org> amanda-2.6.0_p2-r4.ebuild,
+  amanda-2.6.1_p2.ebuild, amanda-3.2.1.ebuild, amanda-3.2.2.ebuild,
+  amanda-3.2.3.ebuild, amanda-3.3.0.ebuild, amanda-3.3.1.ebuild,
+  amanda-3.3.3.ebuild:
+  Bug #376169: avoid blkid writes from /usr/sbin/dump testing.
+
+*amanda-3.2.3 (26 Feb 2013)
+*amanda-3.3.3 (26 Feb 2013)
+
+  26 Feb 2013; Robin H. Johnson <robbat2@gentoo.org> +amanda-3.2.3.ebuild,
+  +amanda-3.3.3.ebuild, +files/amanda.service, +files/amanda.socket,
+  amanda-2.6.0_p2-r4.ebuild, amanda-2.6.1_p2.ebuild, amanda-3.2.1.ebuild,
+  amanda-3.2.2.ebuild, amanda-3.3.0.ebuild, amanda-3.3.1.ebuild:
+  Bump of 3.3.3 per bug #428026 (has GLIBC2.16 support). Bump of 3.2.3 per bug
+  #436896 (no GLIBC2.16 support). Bug #455640: virtual/awk.
 
   14 Dec 2012; Ulrich Müller <ulm@gentoo.org> amanda-2.6.0_p2-r4.ebuild,
   amanda-2.6.1_p2.ebuild, amanda-3.2.1.ebuild, amanda-3.2.2.ebuild,
