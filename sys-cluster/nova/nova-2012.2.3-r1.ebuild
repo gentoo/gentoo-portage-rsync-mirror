@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2012.2.2-r1.ebuild,v 1.2 2013/02/20 06:13:35 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2012.2.3-r1.ebuild,v 1.1 2013/02/26 21:44:05 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
 
-inherit distutils-r1
+inherit distutils-r1 eutils
 
 DESCRIPTION="Nova is a cloud computing fabric controller (main part of an
 IaaS system). It is written in Python."
@@ -43,7 +43,10 @@ RDEPEND="=dev-python/amqplib-0.6.1
 		<dev-python/python-glanceclient-2
 		>=dev-python/python-quantumclient-2.1"
 
-PATCHES=( "${FILESDIR}/nova-folsom-CVE-2013-1664.patch" )
+PATCHES=(
+			"${FILESDIR}/nova-folsom-CVE-2013-1664.patch"
+			"${FILESDIR}/nova-folsom-3-CVE-2013-0335.patch"
+)
 
 python_install() {
 	distutils-r1_python_install
