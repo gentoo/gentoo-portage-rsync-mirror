@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.774 2013/02/24 18:48:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.775 2013/02/26 01:11:36 blueness Exp $
+
+*hardened-sources-3.7.5-r1 (26 Feb 2013)
+
+  26 Feb 2013; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.7.5-r1.ebuild:
+  Fix out-of-bounds access error in net/core/sock_diag.c:
+  http://lwn.net/Articles/539885
 
 *hardened-sources-3.8.0 (24 Feb 2013)
 
