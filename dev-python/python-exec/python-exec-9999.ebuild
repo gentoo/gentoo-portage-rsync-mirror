@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/python-exec-9999.ebuild,v 1.4 2013/02/23 18:04:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/python-exec-9999.ebuild,v 1.5 2013/02/26 18:36:57 mgorny Exp $
 
 EAPI=5
 
@@ -31,13 +31,12 @@ KEYWORDS=
 SRC_URI=
 #endif
 
-append_impl() {
-	pyimpls+="${EPYTHON} "
-}
-
 src_configure() {
-	local pyimpls
-	python_foreach_impl append_impl
+	local pyimpls i EPYTHON
+	for i in "${PYTHON_COMPAT[@]}"; do
+		python_export "${i}" EPYTHON
+		pyimpls+=" ${EPYTHON}"
+	done
 
 	local myeconfargs=(
 		--with-eprefix="${EPREFIX}"

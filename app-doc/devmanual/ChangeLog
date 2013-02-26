@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/devmanual
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/ChangeLog,v 1.5 2013/02/14 21:14:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/ChangeLog,v 1.6 2013/02/26 18:31:19 hwoarang Exp $
+
+  26 Feb 2013; Markos Chandras <hwoarang@gentoo.org> devmanual-9999.ebuild:
+  Typo
 
   14 Feb 2013; Pacho Ramos <pacho@gentoo.org> devmanual-9999.ebuild:
   Don't show elog messages always (#457596)
