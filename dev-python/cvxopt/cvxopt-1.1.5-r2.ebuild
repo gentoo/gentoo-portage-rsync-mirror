@@ -1,13 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.5.ebuild,v 1.4 2013/02/26 20:33:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cvxopt/cvxopt-1.1.5-r2.ebuild,v 1.1 2013/02/26 20:33:17 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-SUPPORT_PYTHON_ABIS=1
-RESTRICT_PYTHON_ABIS="2.4 2.5 *-jython 2.7-pypy-*"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit distutils eutils toolchain-funcs
+inherit distutils-r1 toolchain-funcs
 
 DESCRIPTION="Python package for convex optimization"
 HOMEPAGE="http://abel.ee.ucla.edu/cvxopt"
@@ -34,18 +33,20 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${P}/src"
 
-src_prepare(){
-	epatch "${FILESDIR}"/${P}-setup.patch
+python_prepare_all(){
+	local PATCHES=( "${FILESDIR}"/${P}-setup.patch )
 	rm -rf src/C/SuiteSparse*/
 	rm -rf ../doc/build # 413905
+
+	distutils-r1_python_prepare_all
 
 	pkg_lib() {
 		local pylib=\'$($(tc-getPKG_CONFIG) --libs-only-l ${1} | sed \
 			-e 's/^-l//' \
 			-e "s/ -l/\',\'/g" \
 			-e 's/.,.pthread//g' \
-			-e "s:  ::")\'
-		sed -i -e "/_LIB = /s:\(.*\)'${1}'\(.*\):\1${pylib}\2:" setup.py
+			-e "s:[[:space:]]::g")\'
+		sed -i -e "/_LIB = /s:\(.*\)'${1}'\(.*\):\1${pylib}\2:" setup.py || die
 	}
 
 	use_cvx() {
@@ -62,25 +63,20 @@ src_prepare(){
 	use_cvx fftw
 	use_cvx glpk
 	use_cvx dsdp
-	distutils_src_prepare
 }
 
-src_compile() {
-	distutils_src_compile
+python_compile_all() {
 	use doc && emake -C "${WORKDIR}"/${P}/doc -B html
 }
 
-src_test() {
+python_test() {
 	cd "${WORKDIR}"/${P}/examples/doc/chap8
-	testing() {
-		PYTHONPATH="$(ls -d ${S}/build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" lp.py
-	}
-	python_execute_function testing
+	"${PYTHON}" lp.py || die
 }
 
-src_install() {
-	distutils_src_install
-	use doc && dohtml -r "${WORKDIR}"/${P}/doc/build/html/*
+python_install_all() {
+	use doc && HTML_DOCS=( "${WORKDIR}"/${P}/doc/build/html/. )
 	insinto /usr/share/doc/${PF}
 	use examples && doins -r "${WORKDIR}"/${P}/examples
+	distutils-r1_python_install_all
 }

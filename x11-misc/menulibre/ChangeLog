@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/menulibre
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/menulibre/ChangeLog,v 1.1 2013/02/26 20:37:42 hasufell Exp $
+
+*menulibre-13.01.4 (26 Feb 2013)
+
+  26 Feb 2013; Julian Ospald <hasufell@gentoo.org> +menulibre-13.01.4.ebuild,
+  +metadata.xml:
+  initial import wrt #450300
+

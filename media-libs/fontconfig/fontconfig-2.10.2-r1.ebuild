@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.10.2-r1.ebuild,v 1.1 2013/02/25 22:38:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.10.2-r1.ebuild,v 1.2 2013/02/26 20:33:12 mgorny Exp $
 
 EAPI=5
 
@@ -56,7 +56,6 @@ src_configure() {
 		--with-default-fonts=/usr/share/fonts
 		--with-add-fonts=/usr/local/share/fonts
 		--with-templatedir=/etc/fonts/conf.avail
-		--with-freetype-config="$(tc-getPKG_CONFIG) freetype2"
 	)
 
 	autotools-multilib_src_configure

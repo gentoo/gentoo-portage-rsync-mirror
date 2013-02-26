@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.165 2013/02/25 22:38:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.166 2013/02/26 20:33:12 mgorny Exp $
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> fontconfig-2.10.2-r1.ebuild:
+  Drop removed --with-freetype-config. Fontconfig uses pkg-config now.
 
 *fontconfig-2.10.2-r1 (25 Feb 2013)
 
