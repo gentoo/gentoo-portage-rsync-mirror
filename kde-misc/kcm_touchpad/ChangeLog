@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kcm_touchpad
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_touchpad/ChangeLog,v 1.5 2011/01/31 03:44:39 tampakrap Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm_touchpad/ChangeLog,v 1.6 2013/02/26 13:03:36 kensington Exp $
+
+*kcm_touchpad-0.3.1-r1 (26 Feb 2013)
+
+  26 Feb 2013; Michael Palimaka <kensington@gentoo.org>
+  +kcm_touchpad-0.3.1-r1.ebuild, metadata.xml:
+  Migrate to EAPI 5. Add missing dependency.
 
   31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
   -kcm_touchpad-0.3.0.ebuild, kcm_touchpad-0.3.1.ebuild:
@@ -25,4 +31,3 @@
   31 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   +kcm_touchpad-0.3.0.ebuild:
   Initial commit wrt #289889, thanks to Andreis Vinogradovs for reporting.
-

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.418 2013/02/26 11:58:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.419 2013/02/26 13:12:00 ago Exp $
+
+  26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> util-linux-2.22.2.ebuild:
+  Stable for sparc, wrt bug #458226
 
   26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> util-linux-2.22.2.ebuild:
   Stable for arm, wrt bug #458226
