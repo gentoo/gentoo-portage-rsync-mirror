@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.55.7425_beta-r1.ebuild,v 1.1 2013/02/09 21:51:12 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.55.7425_beta-r2.ebuild,v 1.1 2013/02/26 03:27:46 ottxor Exp $
 
 EAPI=5
 
@@ -77,6 +77,11 @@ src_install() {
 
 	dosym /"${INSTALL_BASE}"/google-musicmanager /opt/bin/google-musicmanager
 
-	make_desktop_entry "${PN}" "Google Music Manager" \
-		"/${INSTALL_BASE}/product_logo_32.xpm" "AudioVideo;Audio;Player"
+	local icon size
+	for icon in product_logo_*.png; do
+		size=${icon#product_logo_}
+		size=${size%.png}
+		newicon -s "${size}" "${icon}" ${PN}.png
+	done
+	domenu ${PN}.desktop
 }
