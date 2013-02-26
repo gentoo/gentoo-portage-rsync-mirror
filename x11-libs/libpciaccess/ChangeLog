@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.85 2013/01/21 01:26:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.86 2013/02/26 17:00:59 mgorny Exp $
+
+*libpciaccess-0.13.1-r1 (26 Feb 2013)
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> +libpciaccess-0.13.1-r1.ebuild:
+  Enable multilib.
 
   21 Jan 2013; Mike Frysinger <vapier@gentoo.org> libpciaccess-0.13.1.ebuild:
   Add s390 keywords #453114 by Sergey Popov.
