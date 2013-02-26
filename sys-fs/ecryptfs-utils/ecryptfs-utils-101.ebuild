@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-101.ebuild,v 1.1 2012/11/02 11:47:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-101.ebuild,v 1.2 2013/02/26 22:09:43 vapier Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.5"
@@ -15,7 +15,7 @@ SRC_URI="http://launchpad.net/ecryptfs/trunk/${PV}/+download/${PN}_${PV}.orig.ta
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="doc gpg gtk openssl pam pkcs11 python suid tpm"
 
 RDEPEND=">=sys-apps/keyutils-1.0

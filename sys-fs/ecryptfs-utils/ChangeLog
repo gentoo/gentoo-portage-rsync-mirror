@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ecryptfs-utils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.50 2012/11/02 11:47:19 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.51 2013/02/26 22:09:43 vapier Exp $
+
+  26 Feb 2013; Mike Frysinger <vapier@gentoo.org> ecryptfs-utils-101.ebuild:
+  Add arm lovin for ChromiumOS.
 
 *ecryptfs-utils-101 (02 Nov 2012)
 
@@ -264,4 +267,3 @@
   03 Dec 2006; Charlie Shepherd <masterdriverz@gentoo.org> +metadata.xml,
   +ecryptfs-util-3.ebuild:
   Add initial ebuild
-
