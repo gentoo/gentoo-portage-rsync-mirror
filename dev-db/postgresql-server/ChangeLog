@@ -1,6 +1,19 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.243 2013/02/26 18:52:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.244 2013/02/26 19:14:08 ago Exp $
+
+  26 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  -postgresql-server-8.3.20.ebuild, -postgresql-server-8.3.21.ebuild,
+  -postgresql-server-8.3.22-r1.ebuild, -postgresql-server-8.3.22.ebuild,
+  -postgresql-server-8.4.13.ebuild, -postgresql-server-8.4.14.ebuild,
+  -postgresql-server-8.4.15-r1.ebuild, -postgresql-server-8.4.15.ebuild,
+  -postgresql-server-9.0.10.ebuild, -postgresql-server-9.0.11-r1.ebuild,
+  -postgresql-server-9.0.11.ebuild, -postgresql-server-9.0.9.ebuild,
+  -postgresql-server-9.1.5.ebuild, -postgresql-server-9.1.6.ebuild,
+  -postgresql-server-9.1.7-r1.ebuild, -postgresql-server-9.1.7.ebuild,
+  -postgresql-server-9.2.1.ebuild, -postgresql-server-9.2.2-r1.ebuild,
+  -postgresql-server-9.2.2.ebuild:
+  Remove old
 
   26 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   postgresql-server-8.3.23-r1.ebuild, postgresql-server-8.4.16-r1.ebuild,

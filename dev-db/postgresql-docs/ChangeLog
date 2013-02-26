@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.197 2013/02/26 18:50:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.198 2013/02/26 19:13:24 ago Exp $
+
+  26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> -postgresql-docs-8.3.20.ebuild,
+  -postgresql-docs-8.3.21.ebuild, -postgresql-docs-8.3.22-r1.ebuild,
+  -postgresql-docs-8.3.22.ebuild, -postgresql-docs-8.4.13.ebuild,
+  -postgresql-docs-8.4.14.ebuild, -postgresql-docs-8.4.15-r1.ebuild,
+  -postgresql-docs-8.4.15.ebuild, -postgresql-docs-9.0.10.ebuild,
+  -postgresql-docs-9.0.11-r1.ebuild, -postgresql-docs-9.0.11.ebuild,
+  -postgresql-docs-9.0.9.ebuild, -postgresql-docs-9.1.5.ebuild,
+  -postgresql-docs-9.1.6.ebuild, -postgresql-docs-9.1.7-r1.ebuild,
+  -postgresql-docs-9.1.7.ebuild, -postgresql-docs-9.2.1.ebuild,
+  -postgresql-docs-9.2.2-r1.ebuild, -postgresql-docs-9.2.2.ebuild:
+  Remove old
 
   26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> postgresql-docs-8.3.23.ebuild,
   postgresql-docs-8.4.16.ebuild, postgresql-docs-9.0.12.ebuild,

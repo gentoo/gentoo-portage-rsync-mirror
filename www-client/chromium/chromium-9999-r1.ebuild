@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.169 2013/02/25 21:00:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.170 2013/02/26 19:01:47 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -52,11 +52,7 @@ RDEPEND="app-accessibility/speech-dispatcher
 	media-libs/opus
 	media-libs/speex
 	pulseaudio? ( media-sound/pulseaudio )
-	system-ffmpeg? ( || (
-		>=media-video/ffmpeg-1.0[opus]
-		<media-video/ffmpeg-1.0
-		media-video/libav
-	) )
+	system-ffmpeg? ( >=media-video/ffmpeg-1.0[opus] )
 	>=net-libs/libsrtp-1.4.4_p20121108
 	sys-apps/dbus
 	sys-apps/pciutils
@@ -189,7 +185,7 @@ src_prepare() {
 	# Fix build without NaCl glibc toolchain.
 	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
 
-	epatch "${FILESDIR}/${PN}-system-ffmpeg-r1.patch"
+	epatch "${FILESDIR}/${PN}-system-ffmpeg-r2.patch"
 
 	epatch_user
 
