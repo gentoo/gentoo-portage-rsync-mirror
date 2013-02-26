@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14505 2013/02/26 07:25:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14506 2013/02/26 09:07:42 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -82,10 +82,6 @@ net-misc/wxdfast
 # Quite dead.  Use games-engines/stratagus instead.
 # Masked for removal on 20130320.
 games-strategy/freecraft
-
-# Eray Aslan <eras@gentoo.org> (18 Feb 2013)
-# Mask beta versions
-=mail-filter/opendkim-2.8.0_beta*
 
 # Davide Pesavento <pesa@gentoo.org> (17 Feb 2013)
 # Mask beta version for testing.

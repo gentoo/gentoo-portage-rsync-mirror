@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.51 2013/02/24 11:22:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.52 2013/02/26 09:11:09 ago Exp $
+
+  26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> warsow-1.02-r1.ebuild:
+  Revert to unstable
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> warsow-1.02-r1.ebuild:
   Stable for amd64, wrt bug #458244

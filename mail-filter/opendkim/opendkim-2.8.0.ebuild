@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.8.0_beta7.ebuild,v 1.1 2013/02/22 19:11:27 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.8.0.ebuild,v 1.1 2013/02/26 09:04:38 eras Exp $
 
 EAPI=5
 inherit eutils db-use autotools user
 
 # for betas
-MY_P=${P/_b/.B}
-S=${WORKDIR}/${PN}-2.8.0
-SRC_URI="mirror://sourceforge/opendkim/${MY_P}.tar.gz"
+#MY_P=${P/_b/.B}
+#S=${WORKDIR}/${PN}-2.8.0
+#SRC_URI="mirror://sourceforge/opendkim/${MY_P}.tar.gz"
 
 DESCRIPTION="A milter-based application to provide DKIM signing and verification"
 HOMEPAGE="http://opendkim.org"
-#SRC_URI="mirror://sourceforge/opendkim/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/opendkim/${P}.tar.gz"
 
 LICENSE="Sendmail-Open-Source BSD"
 SLOT="0"
@@ -105,8 +105,8 @@ src_configure() {
 		--enable-sender_macro \
 		--enable-vbr \
 		--disable-rpath \
-		--disable-live-testing
-		#--with-test-socket=/tmp/opendkim-S
+		--disable-live-testing \
+		--with-test-socket=/tmp/opendkim-S
 }
 
 src_install() {
@@ -135,15 +135,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "If you want to sign your mail messages and need some help"
-	elog "please run:"
-	elog "  emerge --config ${CATEGORY}/${PN}"
-	elog "It will help you create your key and give you hints on how"
-	elog "to configure your DNS and MTA."
+	if [[ -z ${REPLACING_VERSION} ]]; then
+		elog "If you want to sign your mail messages and need some help"
+		elog "please run:"
+		elog "  emerge --config ${CATEGORY}/${PN}"
+		elog "It will help you create your key and give you hints on how"
+		elog "to configure your DNS and MTA."
 
-	ewarn "Make sure your MTA has r/w access to the socket file."
-	ewarn "This can be done either by setting UMask to 002 and adding MTA's user"
-	ewarn "to milter group or you can simply set UMask to 000."
+		ewarn "Make sure your MTA has r/w access to the socket file."
+		ewarn "This can be done either by setting UMask to 002 and adding MTA's user"
+		ewarn "to milter group or you can simply set UMask to 000."
+	fi
 }
 
 pkg_config() {
