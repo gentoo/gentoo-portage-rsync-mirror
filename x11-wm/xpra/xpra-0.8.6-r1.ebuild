@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.8.6.ebuild,v 1.1 2013/02/25 06:39:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.8.6-r1.ebuild,v 1.1 2013/02/26 09:01:33 xmw Exp $
 
 EAPI=5
 
@@ -17,6 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+clipboard +rencode server vpx webp x264"
 
+# x264/old-libav.path situation see bug 459218
 COMMON_DEPEND="dev-python/pygobject:2
 	dev-python/pygtk:2
 	x11-libs/libX11
@@ -29,6 +30,7 @@ COMMON_DEPEND="dev-python/pygobject:2
 		virtual/ffmpeg )
 	webp? ( media-libs/libwebp )
 	x264? ( media-libs/x264
+		|| ( >=media-video/ffmpeg-1.0.4 media-video/libav )
 		virtual/ffmpeg )"
 
 RDEPEND="${COMMON_DEPEND}
@@ -49,8 +51,12 @@ DEPEND="${COMMON_DEPEND}
 python_prepare_all() {
 	epatch "${FILESDIR}"/${PN}-0.7.1-ignore-gentoo-no-compile.patch
 	epatch "${FILESDIR}"/${PN}-0.8.0-prefix.patch
-	if ! has_version ">=media-video/libav-9" ; then
-		epatch patches/old-libav.patch
+
+	#assuming ffmpeg and libav mutual exclusive installs
+	if has_version "media-video/libav" ; then
+		if ! has_version ">=media-video/libav-9" ; then
+			epatch patches/old-libav.patch
+		fi
 	fi
 
 	use clipboard || epatch patches/disable-clipboard.patch
