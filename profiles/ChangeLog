@@ -1,15 +1,18 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7537 2013/02/26 19:06:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7538 2013/02/26 19:35:32 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask the multilib freetype for testing due to header location change.
+
   26 Feb 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Roll dev-lang/v8, www-client/chromium p.mask entries for M27.
 
-  26 Feb 2013; Michał Górny <mgorny@gentoo.org> package.mask, repo_name:
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> package.mask:
   Unmask freetype after fixing the demo build bug.
 
   26 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:

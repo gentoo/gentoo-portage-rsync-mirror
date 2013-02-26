@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst preinst
+DEPEND=>=sys-devel/autoconf-2.68 sys-devel/automake sys-devel/gcc virtual/pkgconfig dev-libs/glib:2 x11-libs/libX11 dev-libs/libbsd sys-apps/help2man
+DESCRIPTION=Service providing elegant and stable means of managing Optimus graphics chipsets
+EAPI=5
+HOMEPAGE=http://bumblebee-project.org https://github.com/Bumblebee-Project/Bumblebee
+IUSE=+bbswitch video_cards_nouveau video_cards_nvidia
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=x11-misc/virtualgl:= bbswitch? ( sys-power/bbswitch ) virtual/opengl x11-base/xorg-drivers[video_cards_nvidia?,video_cards_nouveau?]
+REQUIRED_USE=|| ( video_cards_nouveau video_cards_nvidia )
+SLOT=0
+SRC_URI=http://bumblebee-project.org/bumblebee-3.1.tar.gz
+_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	readme.gentoo	5efd401a93b4821a9047556650a0702c	systemd	28706ddc21464b4ed255eee9fc70b516	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=d73b2df18cabcc38ed1a09c13c09c0c2
