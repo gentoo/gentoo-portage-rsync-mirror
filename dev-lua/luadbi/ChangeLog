@@ -1,6 +1,10 @@
 # ChangeLog for dev-lua/luadbi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.12 2013/02/26 10:59:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.13 2013/02/26 11:10:27 kensington Exp $
+
+  26 Feb 2013; Michael Palimaka <kensington@gentoo.org>
+  -files/0.5-Makefile.patch, -luadbi-0.5-r1.ebuild:
+  Remove old.
 
   26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> luadbi-0.5-r2.ebuild:
   Stable for x86, wrt bug #436648
