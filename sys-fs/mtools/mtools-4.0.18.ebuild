@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-4.0.18.ebuild,v 1.1 2013/01/17 03:18:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-4.0.18.ebuild,v 1.2 2013/02/26 21:28:40 grobian Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--sysconfdir=/etc/mtools \
+		--sysconfdir="${EPREFIX}"/etc/mtools \
 		$(use_with X x)
 }
 
@@ -41,5 +41,5 @@ src_install() {
 	insinto /etc/mtools
 	doins mtools.conf
 	# default is fine
-	sed -i -e '/^SAMPLE FILE$/s:^:#:' "${D}"/etc/mtools/mtools.conf || die
+	sed -i -e '/^SAMPLE FILE$/s:^:#:' "${ED}"/etc/mtools/mtools.conf || die
 }

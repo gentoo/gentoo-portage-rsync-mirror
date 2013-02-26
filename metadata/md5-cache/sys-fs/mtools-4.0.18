@@ -9,4 +9,4 @@ LICENSE=GPL-3
 RDEPEND=X? ( x11-libs/libICE x11-libs/libXau x11-libs/libSM x11-libs/libX11 x11-libs/libXt )
 SLOT=0
 SRC_URI=mirror://gnu/mtools/mtools-4.0.18.tar.bz2
-_md5_=7e8af6e0e0b1f90d42bce1747eb7cc80
+_md5_=3a006542bb62142d23bd6ad5cee11547
