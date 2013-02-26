@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.437_pre20110310.ebuild,v 1.2 2011/07/08 10:55:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.437_pre20110310.ebuild,v 1.3 2013/02/26 07:15:14 ulm Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ DESCRIPTION="emacs-w3m is an interface program of w3m on Emacs"
 HOMEPAGE="http://emacs-w3m.namazu.org"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="linguas_ja"
