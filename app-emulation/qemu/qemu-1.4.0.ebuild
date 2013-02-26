@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.4.0.ebuild,v 1.5 2013/02/25 15:07:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.4.0.ebuild,v 1.6 2013/02/26 05:49:10 cardoe Exp $
 
 EAPI=5
 
@@ -451,6 +451,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	local virtfs_caps=
+
 	if qemu_support_kvm; then
 		elog "If you don't have kvm compiled into the kernel, make sure you have"
 		elog "the kernel module loaded before running kvm. The easiest way to"
@@ -464,9 +466,11 @@ pkg_postinst() {
 		elog
 	fi
 
+	virtfs_caps+="cap_chown,cap_dac_override,cap_fowner,cap_fsetid"
+	virtfs_caps+="cap_setgid,cap_mknod,cap_setuid"
+
 	fcaps cap_net_admin /usr/libexec/qemu-bridge-helper
-	use virtfs && fcaps cap_chown cap_dac_override cap_fowner cap_fsetid \
-		cap_setgid cap_mknod cap_setuid /usr/bin/virtfs-proxy-helper
+	use virtfs && fcaps ${virtfs_caps} /usr/bin/virtfs-proxy-helper
 
 	elog "The ssl USE flag was renamed to tls, so adjust your USE flags."
 	elog "The nss USE flag was renamed to smartcard, so adjust your USE flags."

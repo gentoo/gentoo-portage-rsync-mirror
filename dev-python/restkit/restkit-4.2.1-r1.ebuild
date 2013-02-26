@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/restkit-4.2.1.ebuild,v 1.1 2013/02/10 09:02:37 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/restkit-4.2.1-r1.ebuild,v 1.1 2013/02/26 05:55:08 floppym Exp $
 
 EAPI=5
 
@@ -29,9 +29,9 @@ RDEPEND="cli? ( dev-python/ipython
 	>=dev-python/socketpool-0.5.0
 	>=dev-python/http-parser-0.7.7"
 
-src_compile() {
-	distutils-r1_src_compile
+PATCHES=( "${FILESDIR}/${PN}-exclude-tests.patch" )
 
+python_compile_all() {
 	if use doc ; then
 		pushd doc > /dev/null
 		PYTHONPATH="${S}" emake html
@@ -40,20 +40,15 @@ src_compile() {
 }
 
 python_test() {
-	nosetests -v tests || die
+	nosetests -v tests || die "Tests fail with ${EPYTHON}"
 }
 
-src_install() {
-	distutils-r1_src_install
-
-	use cli || rm "${D}"/usr/bin/restcli*
+python_install_all() {
+	use cli || rm "${ED}"/usr/bin/restcli*
 
 	use doc && dohtml -r doc/_build/html/
 	if use examples ; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
-
-	einfo "Remove tests to avoid file collisions"
-	rm -rf $(find "${D}" -name tests) || die
 }
