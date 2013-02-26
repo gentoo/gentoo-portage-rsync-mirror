@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.570 2013/02/25 20:16:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.571 2013/02/26 10:21:55 ago Exp $
+
+  26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> ruby-1.9.3_p392.ebuild:
+  Stable for alpha, wrt bug #458776
 
   25 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org> ruby-1.9.3_p392.ebuild:
   Add patch to fix bug #459074 (parallel build).
