@@ -1,6 +1,11 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.94 2013/02/21 18:22:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.95 2013/02/25 23:08:40 mgorny Exp $
+
+*xcb-proto-1.8-r1 (25 Feb 2013)
+
+  25 Feb 2013; Michał Górny <mgorny@gentoo.org> +xcb-proto-1.8-r1.ebuild:
+  Enable multilib.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> xcb-proto-1.8.ebuild:
   Add ~arm-linux keyword.
