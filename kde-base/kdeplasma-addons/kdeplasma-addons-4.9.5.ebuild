@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.9.5.ebuild,v 1.5 2013/02/23 16:24:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.9.5.ebuild,v 1.6 2013/02/26 04:40:06 kensington Exp $
 
 EAPI=4
 
@@ -40,6 +40,8 @@ DEPEND="${COMMON_DEPEND}
 "
 RDEPEND="${COMMON_DEPEND}
 "
+
+PATCHES=( "${FILESDIR}/kdeplasma-addons-4.10.0-microblog-build.patch" )
 
 src_configure() {
 	mycmakeargs=(

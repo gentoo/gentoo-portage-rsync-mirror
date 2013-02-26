@@ -1,0 +1,44 @@
+From 7cc088acb353f7903c780e55126a5ec18946cb92 Mon Sep 17 00:00:00 2001
+From: Michael Palimaka <kensington@gentoo.org>
+Date: Tue, 26 Feb 2013 15:11:26 +1100
+Subject: [PATCH] Fix build with OAuth present and QJson missing.
+
+Building with OAuth enabled and QJSon disabled fails, since microblog unconditionally requires QJson.
+
+REVIEW: 108662
+---
+ CMakeLists.txt             | 2 +-
+ dataengines/CMakeLists.txt | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index eba537c..20f070a 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -30,7 +30,7 @@ macro_bool_to_01(NEPOMUK_FOUND HAVE_NEPOMUK)
+ 
+ 
+ macro_optional_find_package(QJSON)
+-macro_log_feature(QJSON_FOUND "QJSon" "Used for various Internet runners, for parsing API responses" "" FALSE "" "")
++macro_log_feature(QJSON_FOUND "QJSon" "Used for various Internet runners, for parsing API responses, and the microblog dataengine" "" FALSE "" "")
+ 
+ macro_optional_find_package(QtOAuth)
+ macro_log_feature(QTOAUTH_FOUND "QtOAuth" "QtOAuth Library - required to build the Plasma Microblog DataEngine" "https://github.com/ayoy/qoauth" FALSE "" "Needed for building Plasma Microblog DataEngine")
+diff --git a/dataengines/CMakeLists.txt b/dataengines/CMakeLists.txt
+index c86be79..15c1aab 100644
+--- a/dataengines/CMakeLists.txt
++++ b/dataengines/CMakeLists.txt
+@@ -1,8 +1,8 @@
+ add_subdirectory(comic)
+ 
+-if (QCA2_FOUND AND QTOAUTH_FOUND)
++if (QCA2_FOUND AND QJSON_FOUND AND QTOAUTH_FOUND)
+       add_subdirectory(microblog)
+-endif(QCA2_FOUND AND QTOAUTH_FOUND)
++endif(QCA2_FOUND AND QJSON_FOUND AND QTOAUTH_FOUND)
+ 
+ if(LIBATTICA_FOUND)
+   add_subdirectory(ocs)
+-- 
+1.8.1.4
+
