@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68.5.1-r2.ebuild,v 1.4 2013/01/31 23:11:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68.5.1-r2.ebuild,v 1.5 2013/02/26 15:41:31 jer Exp $
 
 EAPI=4
 inherit user
@@ -31,6 +31,14 @@ pkg_setup() {
 	enewuser flows -1 -1 /var/lib/flows flows
 }
 
+src_prepare() {
+	sed -i \
+		-e 's|/var/run/|/run/|g' \
+		src/flow-capture.c \
+		src/flow-fanout.c \
+		|| die
+}
+
 src_configure() {
 	local myconf="--sysconfdir=/etc/flow-tools"
 	use mysql && myconf="${myconf} --with-mysql"
@@ -46,9 +54,10 @@ src_configure() {
 src_install() {
 	default
 
+	exeinto /var/lib/flows/bin
+	keepdir /run/flows
 	keepdir /var/lib/flows
 	keepdir /var/lib/flows/bin
-	exeinto /var/lib/flows/bin
 	doexe "${FILESDIR}"/linkme
 
 	newinitd "${FILESDIR}/flowcapture.initd" flowcapture
@@ -57,13 +66,11 @@ src_install() {
 	if ! use static-libs; then
 		rm -f "${D}"/usr/lib*/libft.la || die
 	fi
-}
 
-pkg_postinst() {
-	chown flows:flows /var/run/flows
-	chown flows:flows /var/lib/flows
-	chown flows:flows /var/lib/flows/bin
-	chmod 0755 /var/run/flows
-	chmod 0755 /var/lib/flows
-	chmod 0755 /var/lib/flows/bin
+	fowners flows:flows /run/flows
+	fowners flows:flows /var/lib/flows
+	fowners flows:flows /var/lib/flows/bin
+	fperms 0755 /run/flows
+	fperms 0755 /var/lib/flows
+	fperms 0755 /var/lib/flows/bin
 }
