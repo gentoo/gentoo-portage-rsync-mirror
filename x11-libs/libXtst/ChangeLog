@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXtst
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.80 2013/02/22 19:20:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.81 2013/02/26 16:11:15 mgorny Exp $
+
+*libXtst-1.2.1-r1 (26 Feb 2013)
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> +libXtst-1.2.1-r1.ebuild:
+  Enable multilib.
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> libXtst-1.2.1.ebuild:
   Add ~arm-linux keyword.

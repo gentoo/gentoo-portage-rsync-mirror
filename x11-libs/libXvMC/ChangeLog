@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXvMC
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.67 2012/08/26 18:48:49 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.68 2013/02/26 16:13:12 mgorny Exp $
+
+*libXvMC-1.0.7-r1 (26 Feb 2013)
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> +libXvMC-1.0.7-r1.ebuild:
+  Enable multilib.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libXvMC-1.0.7.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -251,4 +256,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +libXvMC-0.99.0.ebuild:
   Initial commit for modular X.
-

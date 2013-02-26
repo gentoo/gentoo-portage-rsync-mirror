@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2-r4.ebuild,v 1.2 2013/02/26 05:49:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.2.2-r4.ebuild,v 1.3 2013/02/26 16:16:18 cardoe Exp $
 
 EAPI=5
 
@@ -467,7 +467,7 @@ pkg_postinst() {
 		elog
 	fi
 
-	virtfs_caps+="cap_chown,cap_dac_override,cap_fowner,cap_fsetid"
+	virtfs_caps+="cap_chown,cap_dac_override,cap_fowner,cap_fsetid,"
 	virtfs_caps+="cap_setgid,cap_mknod,cap_setuid"
 
 	fcaps cap_net_admin /usr/libexec/qemu-bridge-helper

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXxf86vm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86vm/ChangeLog,v 1.70 2012/08/26 18:52:24 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86vm/ChangeLog,v 1.71 2013/02/26 16:10:30 mgorny Exp $
+
+*libXxf86vm-1.1.2-r1 (26 Feb 2013)
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> +libXxf86vm-1.1.2-r1.ebuild:
+  Enable multilib.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libXxf86vm-1.1.2.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -269,4 +274,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +libXxf86vm-0.99.0.ebuild:
   Initial commit for modular X.
-

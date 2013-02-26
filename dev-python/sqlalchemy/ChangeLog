@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.95 2013/02/24 17:48:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.96 2013/02/26 16:29:48 idella4 Exp $
+
+*sqlalchemy-0.7.10 (26 Feb 2013)
+
+  26 Feb 2013; Ian Delaney <idella4@gentoo.org>
+  +files/sqlalchemy-0.7-logging.patch, +sqlalchemy-0.7.10.ebuild,
+  sqlalchemy-0.7.9.ebuild:
+  bump, drop py25; Added -logging.patch, fixes import errors in test for 0.7.9 &
+  0.7.10, closes #Bug 458686
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> sqlalchemy-0.7.9.ebuild:
   Stable for sh, wrt bug #449426

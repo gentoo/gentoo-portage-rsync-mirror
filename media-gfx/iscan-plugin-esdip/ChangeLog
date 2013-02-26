@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/iscan-plugin-esdip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-esdip/ChangeLog,v 1.3 2013/02/18 09:55:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-esdip/ChangeLog,v 1.4 2013/02/26 16:16:28 flameeyes Exp $
+
+  26 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org>
+  -iscan-plugin-esdip-1.0.0.5.ebuild:
+  Remove old unfetchable version.
 
 *iscan-plugin-esdip-1.0.0.5-r1 (18 Feb 2013)
 

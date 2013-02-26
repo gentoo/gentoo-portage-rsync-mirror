@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.78 2012/08/26 18:47:01 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.79 2013/02/26 16:12:12 mgorny Exp $
+
+*libXv-1.0.7-r1 (26 Feb 2013)
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> +libXv-1.0.7-r1.ebuild:
+  Enable multilib.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libXv-1.0.7.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473

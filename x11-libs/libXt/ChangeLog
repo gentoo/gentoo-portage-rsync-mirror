@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.111 2013/02/22 18:30:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.112 2013/02/26 16:16:24 mgorny Exp $
+
+*libXt-1.1.3-r1 (26 Feb 2013)
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> +libXt-1.1.3-r1.ebuild:
+  Enable multilib.
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> libXt-1.1.3.ebuild:
   Add ~arm-linux keyword.

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/iscan-plugin-gt-f500
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f500/ChangeLog,v 1.5 2013/02/18 09:54:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-plugin-gt-f500/ChangeLog,v 1.6 2013/02/26 16:17:27 flameeyes Exp $
+
+  26 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org>
+  -iscan-plugin-gt-f500-1.0.0.1.ebuild:
+  Remove old unfetchable version.
 
 *iscan-plugin-gt-f500-1.0.0.1-r1 (18 Feb 2013)
 

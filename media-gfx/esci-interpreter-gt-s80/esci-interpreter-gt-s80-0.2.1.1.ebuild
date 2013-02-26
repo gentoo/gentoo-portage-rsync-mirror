@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/esci-interpreter-gt-s80/esci-interpreter-gt-s80-0.2.1.1.ebuild,v 1.1 2013/02/19 10:35:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/esci-interpreter-gt-s80/esci-interpreter-gt-s80-0.2.1.1.ebuild,v 1.2 2013/02/26 16:15:28 flameeyes Exp $
 
-EAPI=4
+EAPI=5
 
 inherit rpm versionator multilib
 
@@ -25,8 +25,7 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"
 
-QA_PREBUILT="/opt/iscan/esci/libesci-interpreter-gt-s80.so*
-	/opt/iscan/esci/libesci-interpreter-gt-s50.so*"
+QA_PREBUILT="/opt/iscan/*"
 
 src_configure() { :; }
 src_compile() { :; }
