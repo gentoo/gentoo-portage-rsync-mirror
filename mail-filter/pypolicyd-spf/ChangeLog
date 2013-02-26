@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/pypolicyd-spf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/ChangeLog,v 1.24 2012/12/22 12:10:21 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/ChangeLog,v 1.25 2013/02/26 10:57:54 ago Exp $
+
+  26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pypolicyd-spf-1.1.ebuild:
+  Stable for amd64, wrt bug #459134
 
   22 Dec 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Drop to maintainer-needed per Jared's request on bug #440656

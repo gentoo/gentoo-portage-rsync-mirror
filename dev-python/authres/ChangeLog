@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/authres
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/ChangeLog,v 1.8 2013/02/22 03:37:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/ChangeLog,v 1.10 2013/02/26 10:59:26 ago Exp $
+
+  26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> authres-0.402.ebuild:
+  Stable for x86, wrt bug #429028
+
+  26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> authres-0.402.ebuild:
+  Stable for amd64, wrt bug #429028
 
 *authres-0.500 (22 Feb 2013)
 
