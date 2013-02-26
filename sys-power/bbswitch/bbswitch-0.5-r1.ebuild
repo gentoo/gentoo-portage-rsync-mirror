@@ -1,10 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/bbswitch/bbswitch-0.4.2.ebuild,v 1.1 2012/05/06 09:38:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/bbswitch/bbswitch-0.5-r1.ebuild,v 1.1 2013/02/26 20:10:45 pacho Exp $
 
-EAPI="4"
-
-inherit linux-mod
+EAPI=5
+inherit eutils linux-mod
 
 DESCRIPTION="Toggle discrete NVIDIA Optimus graphics card"
 HOMEPAGE="https://github.com/Bumblebee-Project/bbswitch"
@@ -17,7 +16,6 @@ IUSE=""
 
 DEPEND="virtual/linux-sources
 	sys-kernel/linux-headers"
-
 RDEPEND=""
 
 MODULE_NAMES="bbswitch(acpi)"
@@ -27,6 +25,11 @@ pkg_setup() {
 
 	BUILD_TARGETS="default"
 	BUILD_PARAMS="KVERSION=${KV_FULL}"
+}
+
+src_prepare() {
+	# Linux 3.8 compatibility hack, bug #458508
+	epatch "${FILESDIR}/${P}-kernel-3.8.patch"
 }
 
 src_install() {

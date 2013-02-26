@@ -1,0 +1,53 @@
+From 5593d9519364dc7f6f28c3dd8358afb907f39c0f Mon Sep 17 00:00:00 2001
+From: Peter Wu <lekensteyn@gmail.com>
+Date: Wed, 30 Jan 2013 18:57:56 +0100
+Subject: [PATCH] Linux 3.8 compatibility hack
+
+Since the following commit, the device would not turn off because the power
+state is unknown. Until a fix is released in Linux (or until I know what
+better to do), I just assume the power state D0.
+
+commit ddc150f7a33ae0c9cb16eaac3641abc00f56316f
+Author: Lv Zheng <lv.zheng@intel.com>
+Date:   Fri Nov 16 02:46:28 2012 +0100
+
+    ACPI / PM: Add check preventing transitioning to non-D0 state from D3.
+
+    No power transitioning from D3 state up to a non-D0 state is allowed
+    so make acpi_device_set_power() fail and complain if such a transition
+    is attempted.
+
+    Signed-off-by: Lv Zheng <lv.zheng@intel.com>
+    Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
+---
+ bbswitch.c |   14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+diff --git a/bbswitch.c b/bbswitch.c
+index d839fa7..2646f29 100644
+--- a/bbswitch.c
++++ b/bbswitch.c
+@@ -238,6 +238,20 @@ static void bbswitch_off(void) {
+     pci_save_state(dis_dev);
+     pci_clear_master(dis_dev);
+     pci_disable_device(dis_dev);
++    do {
++        struct acpi_device *ad = NULL;
++        int r;
++
++        r = acpi_bus_get_device(dis_handle, &ad);
++        if (r || !ad) {
++            pr_warn("Cannot get ACPI device for PCI device\n");
++            break;
++        }
++        if (ad->power.state == ACPI_STATE_UNKNOWN) {
++            pr_debug("ACPI power state is unknown, forcing D0\n");
++            ad->power.state = ACPI_STATE_D0;
++        }
++    } while (0);
+     pci_set_power_state(dis_dev, PCI_D3cold);
+ 
+     if (bbswitch_acpi_off())
+-- 
+1.7.10
+

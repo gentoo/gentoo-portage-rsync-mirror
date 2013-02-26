@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/bbswitch
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/bbswitch/ChangeLog,v 1.5 2012/10/27 11:56:44 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/bbswitch/ChangeLog,v 1.6 2013/02/26 20:10:45 pacho Exp $
+
+*bbswitch-0.5-r1 (26 Feb 2013)
+
+  26 Feb 2013; Pacho Ramos <pacho@gentoo.org> +bbswitch-0.5-r1.ebuild,
+  +files/bbswitch-0.5-kernel-3.8.patch, -bbswitch-0.4.2.ebuild:
+  Add kernel-3.8 compatibity patch from upstream (#458508 by Philipp Leonhardt),
+  drop old.
 
 *bbswitch-0.5 (27 Oct 2012)
 
