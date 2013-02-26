@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14506 2013/02/26 09:07:42 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14508 2013/02/26 09:42:57 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Eray Aslan <eras@gentoo.org> (26 Feb 2013)
+# Mask release candidates
+=net-mail/dovecot-2.2_rc*
 
 # Michał Górny <mgorny@gentoo.org> (26 Feb 2013)
 # Building freetype with USE=utils is broken. Masking until I fix it.
@@ -69,10 +73,6 @@ net-misc/wxdfast
 # Jeroen Roovers <jer@gentoo.org> (22 Feb 2013)
 # Development versions of net-analyzer/wireshark
 =net-analyzer/wireshark-1.9*
-
-# Eray Aslan <eras@gentoo.org> (22 Feb 2013)
-# Mask beta versions
-=net-mail/dovecot-2.2_beta*
 
 # Justin Lecher <jlec@gentoo.org> (21 Feb 2013)
 # Temporary mask, because compatibility with recent tcl is not proven
