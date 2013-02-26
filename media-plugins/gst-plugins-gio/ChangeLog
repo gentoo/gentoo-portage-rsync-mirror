@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.106 2013/02/24 17:58:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.107 2013/02/25 23:37:09 eva Exp $
+
+  25 Feb 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-gio-0.10.35.ebuild:
+  Clean up old revisions.
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gst-plugins-gio-0.10.36.ebuild:
   Stable for sh, wrt bug #456476
