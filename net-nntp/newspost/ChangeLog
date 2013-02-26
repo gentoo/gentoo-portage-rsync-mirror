@@ -1,6 +1,13 @@
 # ChangeLog for net-nntp/newspost
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/newspost/ChangeLog,v 1.19 2013/02/26 11:00:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/newspost/ChangeLog,v 1.21 2013/02/26 12:07:17 kensington Exp $
+
+  26 Feb 2013; Michael Palimaka <kensington@gentoo.org>
+  -newspost-2.1.1-r1.ebuild, -newspost-2.1.1-r2.ebuild:
+  Remove old.
+
+  26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> newspost-2.1.1-r3.ebuild:
+  Stable for ppc, wrt bug #459250
 
   26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> newspost-2.1.1-r3.ebuild:
   Stable for x86, wrt bug #459250
