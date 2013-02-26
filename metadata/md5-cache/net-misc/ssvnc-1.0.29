@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/zlib virtual/jpeg dev-libs/openssl dev-lang/tk net-misc/stunnel java? ( virtual/jre ) x11-terms/xterm x11-libs/libICE x11-libs/libSM x11-libs/libXaw x11-libs/libX11 x11-libs/libXext x11-libs/libXmu x11-libs/libXp x11-libs/libXpm x11-libs/libXt
 SLOT=0
 SRC_URI=mirror://sourceforge/ssvnc/ssvnc-1.0.29.src.tar.gz
-_eclasses_=eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=345bcdfb6c83abd450d81a8339d7474b

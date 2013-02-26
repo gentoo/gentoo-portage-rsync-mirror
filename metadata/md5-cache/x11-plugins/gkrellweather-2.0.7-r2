@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.6.1 >=net-misc/wget-1.5.3 =app-admin/gkrellm-2*
 SLOT=2
 SRC_URI=http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/gkrellweather-2.0.7.tgz
-_eclasses_=eutils	f2731576962f01811c9573b3323fa374	gkrellm-plugin	4599c73f33aed9a9988a7031f60d2ed8	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	gkrellm-plugin	4599c73f33aed9a9988a7031f60d2ed8	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=54f1efd27050bceef4651ecc66b459a8

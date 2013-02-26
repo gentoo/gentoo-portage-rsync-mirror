@@ -10,5 +10,5 @@ RDEPEND=X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXi x11-libs/libXt x11-
 RESTRICT=fetch strip
 SLOT=1.6
 SRC_URI=amd64? ( jdk-6u39-linux-x64.bin ) x86? ( jdk-6u39-linux-i586.bin ) x64-solaris? ( jdk-6u39-solaris-i586.sh jdk-6u39-solaris-x64.sh ) x86-solaris? ( jdk-6u39-solaris-i586.sh ) sparc-solaris? ( jdk-6u39-solaris-sparc.sh ) sparc64-solaris? ( jdk-6u39-solaris-sparc.sh jdk-6u39-solaris-sparcv9.sh ) jce? ( jce_policy-6.zip )
-_eclasses_=eutils	f2731576962f01811c9573b3323fa374	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	7dc6db7d110230640003e30e63a0b2bc	multilib	ded93e450747134a079e647d888aa80b	pax-utils	0ace932c4045349c7fc1af0fe7091acf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	7dc6db7d110230640003e30e63a0b2bc	multilib	ded93e450747134a079e647d888aa80b	pax-utils	0ace932c4045349c7fc1af0fe7091acf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=c2a84d78100940c28a2fad945d82d001

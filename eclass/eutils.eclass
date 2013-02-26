@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.410 2013/02/10 11:42:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.411 2013/02/26 14:36:40 mgorny Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1407,8 +1407,9 @@ fi
 # that they should not be linked to, i.e. whenever these files
 # correspond to plugins.
 #
-# Note: if your package installs both static libraries and .pc files,
-# you need to add pkg-config to your DEPEND.
+# Note: if your package installs both static libraries and .pc files
+# which use variable substitution for -l flags, you need to add
+# pkg-config to your DEPEND.
 prune_libtool_files() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -1473,11 +1474,27 @@ prune_libtool_files() {
 					local pkgconf=$(tc-getPKG_CONFIG)
 
 					while IFS= read -r -d '' pc; do # for all .pc files
-						local arg
+						local arg libs
 
-						sed -e '/^Requires:/d' "${pc}" > "${tf}"
-						for arg in $("${pkgconf}" --libs "${tf}"); do
-							[[ ${arg} == -l* ]] && pc_libs+=( lib${arg#-l}.la )
+						# Use pkg-config if available (and works),
+						# fallback to sed.
+						if ${pkgconf} --exists "${pc}" &>/dev/null; then
+							sed -e '/^Requires:/d' "${pc}" > "${tf}"
+							libs=$(${pkgconf} --libs "${tf}")
+						else
+							libs=$(sed -ne 's/^Libs://p' "${pc}")
+						fi
+
+						for arg in ${libs}; do
+							if [[ ${arg} == -l* ]]; then
+								if [[ ${arg} == '*$*' ]]; then
+									eqawarn "${FUNCNAME}: variable substitution likely failed in ${pc}"
+									eqawarn "(arg: ${arg})"
+									eqawarn "Most likely, you need to add virtual/pkgconfig to DEPEND."
+								fi
+
+								pc_libs+=( lib${arg#-l}.la )
+							fi
 						done
 					done < <(find "${D}" -type f -name '*.pc' -print0)
 

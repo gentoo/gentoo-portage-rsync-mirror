@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-libs/boost-1.41.0 >=dev-libs/openssl-1.0.0b >=dev-libs/protobuf-2.2.0 >=media-libs/libsndfile-1.0.20[-minimal] >=media-libs/opus-1.0.1 >=media-libs/speex-1.2_rc1 sys-apps/lsb-release x11-libs/libX11 x11-libs/libXi x11-libs/qt-core:4[ssl] x11-libs/qt-gui:4 x11-libs/qt-opengl:4 x11-libs/qt-sql:4[sqlite] x11-libs/qt-svg:4 x11-libs/qt-xmlpatterns:4 x11-proto/inputproto alsa? ( media-libs/alsa-lib ) dbus? ( x11-libs/qt-dbus:4 ) g15? ( app-misc/g15daemon ) portaudio? ( media-libs/portaudio ) pulseaudio? ( media-sound/pulseaudio ) speech? ( app-accessibility/speech-dispatcher ) zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
 SLOT=0
 SRC_URI=http://mumble.info/snapshot/mumble-1.2.4~beta1.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	qt4-r2	19af9102ca9b827213997cc636e7e33c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	qt4-r2	19af9102ca9b827213997cc636e7e33c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=b5faf7efb0d505acb50ba7b9ac134339

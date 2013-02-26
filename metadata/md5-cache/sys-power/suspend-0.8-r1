@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/lzo-2[static-libs] fbsplash? ( >=media-gfx/splashutils-1.5.2 ) crypt? ( dev-libs/libgcrypt[static-libs] dev-libs/libgpg-error[static-libs] ) x86? ( dev-libs/libx86 ) amd64? ( dev-libs/libx86 )
 SLOT=0
 SRC_URI=mirror://sourceforge/suspend/suspend-0.8.tar.gz
-_eclasses_=eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=d137e3da83bc7681d6d5ae31f6ca2126

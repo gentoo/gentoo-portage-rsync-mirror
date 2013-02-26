@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11-r1.ebuild,v 1.1 2013/02/25 22:20:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11-r1.ebuild,v 1.2 2013/02/26 14:40:54 mgorny Exp $
 
 EAPI=5
 
@@ -79,8 +79,7 @@ src_prepare() {
 	sed -i -n -e '/@includedir@/{x;n;p;x};p' builds/unix/freetype-config.in || die
 
 	if use utils; then
-		cd "${WORKDIR}/ft2demos-${PV}"
-		sed -i -e "s:\.\.\/freetype2$:../freetype-${PV}:" Makefile || die
+		cd "${WORKDIR}/ft2demos-${PV}" || die
 		# Disable tests needing X11 when USE="-X". (bug #177597)
 		if ! use X; then
 			sed -i -e "/EXES\ +=\ ftdiff/ s:^:#:" Makefile || die
@@ -114,9 +113,12 @@ src_compile() {
 
 	if use utils; then
 		einfo "Building utils"
-		cd "${WORKDIR}/ft2demos-${PV}"
+		cd "${WORKDIR}/ft2demos-${PV}" || die
 		# fix for Prefix, bug #339334
-		emake X11_PATH="${EPREFIX}/usr/$(get_libdir)"
+		# XXX: replace ${ARCH} assumption when bug #459210 is fixed
+		emake X11_PATH="${EPREFIX}/usr/$(get_libdir)" \
+			TOP_DIR="${S}" \
+			{BUILD_DIR,OBJ_DIR}="${S%%/}-${ARCH}"
 	fi
 }
 
@@ -125,20 +127,22 @@ src_install() {
 
 	if use utils; then
 		einfo "Installing utils"
-		rm "${WORKDIR}"/ft2demos-${PV}/bin/README
+		rm "${WORKDIR}"/ft2demos-${PV}/bin/README || die
+		local ft2demo
 		for ft2demo in ../ft2demos-${PV}/bin/*; do
-			./builds/unix/libtool --mode=install $(type -P install) -m 755 "$ft2demo" \
-				"${ED}"/usr/bin
+			"${S%%/}-${ARCH}"/libtool --mode=install $(type -P install) -m 755 "$ft2demo" \
+				"${ED}"/usr/bin || die
 		done
 	fi
 
 	if use fontforge; then
 		# Probably fontforge needs less but this way makes things simplier...
 		einfo "Installing internal headers required for fontforge"
+		local header
 		find src/truetype include/freetype/internal -name '*.h' | \
 		while read header; do
-			mkdir -p "${ED}/usr/include/freetype2/internal4fontforge/$(dirname ${header})"
-			cp ${header} "${ED}/usr/include/freetype2/internal4fontforge/$(dirname ${header})"
+			mkdir -p "${ED}/usr/include/freetype2/internal4fontforge/$(dirname ${header})" || die
+			cp ${header} "${ED}/usr/include/freetype2/internal4fontforge/$(dirname ${header})" || die
 		done
 	fi
 

@@ -7,5 +7,5 @@ LICENSE=public-domain
 RDEPEND=!sci-geosciences/gmt sci-visualization/gnuplot
 SLOT=0
 SRC_URI=http://probcons.stanford.edu/probcons_v1_12.tar.gz
-_eclasses_=eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=ff99fbc88d1f3d5d4af928b5bd79aa0b

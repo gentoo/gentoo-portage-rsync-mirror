@@ -9,5 +9,5 @@ LICENSE=FESTIVAL HPND BSD rc regexp-UofT
 RDEPEND=nas? ( media-libs/nas ) X? ( x11-libs/libX11 x11-libs/libXt ) >=media-libs/alsa-lib-1.0.20-r1 !<app-accessibility/festival-1.96_beta !sys-power/powerman >=sys-libs/ncurses-5.6-r2
 SLOT=0
 SRC_URI=http://www.festvox.org/packed/festival/2.1/speech_tools-2.1-release.tar.gz http://dev.gentoo.org/~neurogeek/speech-tools/speech_tools-2.1-r2-patches.tar.gz
-_eclasses_=eutils	f2731576962f01811c9573b3323fa374	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=d2156f14eaf87a810db43f194f3506b8

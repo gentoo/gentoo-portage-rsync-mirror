@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sci-libs/libticables2 sci-libs/libticalcs2 sci-libs/libtifiles2 sci-libs/libticonv gnome-base/libglade:2.0 x11-libs/gtk+:2 dbus? ( >=dev-libs/dbus-glib-0.60 ) nls? ( virtual/libintl ) sdl? ( media-libs/libsdl ) xinerama? ( x11-libs/libXinerama )
 SLOT=0
 SRC_URI=http://repo.calcforge.org/debian/source/tiemu_3.03.orig.tar.gz
-_eclasses_=eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=c55e3578f18e5c87f301516a7924bd4f

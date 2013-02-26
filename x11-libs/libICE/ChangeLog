@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libICE
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.89 2013/02/21 19:23:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.90 2013/02/26 15:11:56 mgorny Exp $
+
+*libICE-1.0.8-r1 (26 Feb 2013)
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> +libICE-1.0.8-r1.ebuild:
+  Enable multilib.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> libICE-1.0.8.ebuild:
   Add ~arm-linux keyword.

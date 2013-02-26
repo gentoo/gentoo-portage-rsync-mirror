@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7535 2013/02/26 11:01:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7536 2013/02/26 14:43:07 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> package.mask, repo_name:
+  Unmask freetype after fixing the demo build bug.
 
   26 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask devmanual live ebuild.

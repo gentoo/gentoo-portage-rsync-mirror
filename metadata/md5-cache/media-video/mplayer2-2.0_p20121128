@@ -10,5 +10,5 @@ RDEPEND=sys-libs/ncurses sys-libs/zlib !bindist? ( x86? ( win32codecs? ( media-l
 REQUIRED_USE=bindist? ( !win32codecs ) cddb? ( cdio network ) dvdnav? ( dvd ) lcms? ( opengl ) libass? ( iconv ) opengl? ( || ( aqua X ) ) radio? ( || ( dvb v4l ) ) vdpau? ( X ) xinerama? ( X ) xscreensaver? ( X ) xv? ( X )
 SLOT=0
 SRC_URI=http://rion-overlay.googlecode.com/files/mplayer2-2.0_p20121128.tar.xz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	f2731576962f01811c9573b3323fa374	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	2824df7f5dc9f47aee293af8a6b517ed	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=b9129751951bba962e1f130fafa04fcc

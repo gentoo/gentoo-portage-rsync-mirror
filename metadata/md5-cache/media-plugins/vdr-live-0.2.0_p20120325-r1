@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=media-video/vdr >=dev-libs/tntnet-2.0[ssl=,sdk] >=dev-libs/cxxtools-2.0 pcre? ( >=dev-libs/libpcre-8.12[cxx] ) >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
 SLOT=0
 SRC_URI=mirror://gentoo/vdr-live-0.2.0_p20120325.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	f2731576962f01811c9573b3323fa374	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	ssl-cert	0b45da48a22fda62c57c1809b8b55315	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vdr-plugin-2	f3c6e17dec074b06a1767d3c62c9a17c
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	2824df7f5dc9f47aee293af8a6b517ed	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	ssl-cert	0b45da48a22fda62c57c1809b8b55315	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	vdr-plugin-2	f3c6e17dec074b06a1767d3c62c9a17c
 _md5_=99dfc9b9ced83f8f40776d7fc549f1de

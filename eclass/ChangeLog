@@ -1,6 +1,26 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.684 2013/02/25 20:27:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.690 2013/02/26 14:42:24 mgorny Exp $
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Enable writing split build logs.
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> eutils.eclass:
+  prune_libtool_files: support running without pkg-config installed, using sed
+  fallback.
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Re-enable split logs, now directly handled by python*_foreach_impl().
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Re-use python_parallel_foreach_impl() in distutils-r1.
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
+  python-r1.eclass:
+  Introduce the parallel variant of python_foreach_impl().
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Make python_foreach_impl() non-fatal, expect explicit die inside or outside.
 
   25 Feb 2013; Michał Górny <mgorny@gentoo.org> xorg-2.eclass:
   Bump the emul-linux-x86 blocker to match the new release.

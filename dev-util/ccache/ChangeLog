@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.118 2013/02/21 16:13:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.119 2013/02/26 14:44:00 jer Exp $
+
+  26 Feb 2013; Jeroen Roovers <jer@gentoo.org> ccache-3.1.9.ebuild:
+  Stable for HPPA (bug #457342).
 
   21 Feb 2013; Agostino Sarubbo <ago@gentoo.org> ccache-3.1.9.ebuild:
   Stable for sparc, wrt bug #457342

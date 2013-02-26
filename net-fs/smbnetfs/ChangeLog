@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/smbnetfs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/smbnetfs/ChangeLog,v 1.3 2012/05/03 04:06:32 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/smbnetfs/ChangeLog,v 1.4 2013/02/26 15:22:17 zmedico Exp $
+
+  26 Feb 2013; Zac Medico <zmedico@gentoo.org> smbnetfs-0.5.3.ebuild:
+  Add ~arm-linux and ~x86-linux keywords.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> smbnetfs-0.5.3.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -23,4 +26,3 @@
   Mikhail S. Pobolovets <styx.mp@gmail.com> for help to track down stability
   issues on amd64. And thanks to Mikhail Kshevetskiy
   <mikhail.kshevetskiy@gmail.com> for making such a great tool!
-

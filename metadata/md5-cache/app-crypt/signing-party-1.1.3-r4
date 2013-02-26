@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-crypt/gnupg-1.3.92 dev-perl/GnuPG-Interface dev-perl/text-template dev-perl/MIME-tools net-mail/qprint >=dev-perl/MailTools-1.62 virtual/mailx virtual/mta dev-lang/perl || ( dev-perl/libintl-perl dev-perl/Text-Iconv app-text/recode )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/s/signing-party/signing-party_1.1.3.orig.tar.gz
-_eclasses_=eutils	f2731576962f01811c9573b3323fa374	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=7de3fdb92dc51eb1b111180221a42fcf

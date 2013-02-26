@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXfixes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.77 2013/02/22 18:35:07 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfixes/ChangeLog,v 1.78 2013/02/26 15:25:06 mgorny Exp $
+
+*libXfixes-5.0-r1 (26 Feb 2013)
+
+  26 Feb 2013; Michał Górny <mgorny@gentoo.org> +libXfixes-5.0-r1.ebuild:
+  Enable multilib.
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> libXfixes-5.0.ebuild:
   Add ~arm-linux keyword.

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14509 2013/02/26 11:01:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14510 2013/02/26 14:43:07 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,12 +34,6 @@
 # Eray Aslan <eras@gentoo.org> (26 Feb 2013)
 # Mask release candidates
 =net-mail/dovecot-2.2_rc*
-
-# Michał Górny <mgorny@gentoo.org> (26 Feb 2013)
-# Building freetype with USE=utils is broken. Masking until I fix it.
-# Bug #455070.
-=media-libs/fontconfig-2.10.2-r1
-=media-libs/freetype-2.4.11-r1
 
 # Doug Goldstein <cardoe@gentoo.org> (24 Feb 2013)
 # Working on the next stable patchset

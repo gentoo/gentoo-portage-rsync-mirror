@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/SDL-2.540.ebuild,v 1.4 2013/02/24 11:32:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/SDL-2.540.ebuild,v 1.5 2013/02/26 14:41:27 jer Exp $
 
 EAPI=4
 MODULE_AUTHOR=JTPALMER
@@ -11,7 +11,7 @@ HOMEPAGE="http://sdl.perl.org/ http://search.cpan.org/dist/SDL/ http://github.co
 
 LICENSE="GPL-2 OFL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~hppa x86"
+KEYWORDS="amd64 hppa x86"
 IUSE=""
 
 RDEPEND=">=dev-perl/Alien-SDL-1.434
