@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.225 2013/02/26 17:44:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.226 2013/02/27 01:31:07 pinkbyte Exp $
+
+  27 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> transmission-2.77.ebuild,
+  +files/transmission-2.77-translations-path-fix.patch:
+  Add patch with fixing path for locale-specific files
 
 *transmission-2.77 (26 Feb 2013)
 
