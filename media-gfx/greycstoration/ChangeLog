@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/greycstoration
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/greycstoration/ChangeLog,v 1.8 2010/11/08 18:05:28 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/greycstoration/ChangeLog,v 1.9 2013/02/27 16:11:20 jlec Exp $
+
+*greycstoration-2.9-r1 (27 Feb 2013)
+
+  27 Feb 2013; Justin Lecher <jlec@gentoo.org> +greycstoration-2.9-r1.ebuild,
+  metadata.xml:
+  Make heavily use of pkg-config
 
   08 Nov 2010; Samuli Suominen <ssuominen@gentoo.org>
   greycstoration-2.9.ebuild:
