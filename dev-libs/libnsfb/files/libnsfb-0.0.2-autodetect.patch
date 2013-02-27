@@ -1,0 +1,33 @@
+Michael Weber https://bugs.gentoo.org/458978
+
+--- libnsfb-0.0.2/Makefile
++++ libnsfb-0.0.2/Makefile
+@@ -20,9 +20,17 @@
+ 
+ NSFB_XCB_PKG_NAMES := xcb xcb-icccm xcb-image xcb-keysyms
+ 
++ifndef NSFB_VNC_AVAILABLE
+ $(eval $(call pkg_config_package_available,NSFB_VNC_AVAILABLE,libvncserver))
++endif
++
++ifndef NSFB_SDL_AVAILABLE
+ $(eval $(call pkg_config_package_available,NSFB_SDL_AVAILABLE,sdl))
++endif
++
++ifndef NSFB_XCB_AVAILABLE
+ $(eval $(call pkg_config_package_available,NSFB_XCB_AVAILABLE,$(NSFB_XCB_PKG_NAMES)))
++endif
+ 
+ ifeq ($(NSFB_SDL_AVAILABLE),yes)
+   $(eval $(call pkg_config_package_add_flags,sdl,CFLAGS))
+@@ -63,7 +71,10 @@
+ 
+   REQUIRED_PKGS := $(REQUIRED_PKGS) $(NSFB_XCB_PKG_NAMES)
+ 
++  ifndef NSFB_XCB_UTIL_AVAILABLE
+   $(eval $(call pkg_config_package_available,NSFB_XCB_UTIL_AVAILABLE,xcb-util))
++  endif
++
+   ifeq ($(NSFB_XCB_UTIL_AVAILABLE),yes)
+     REQUIRED_PKGS := $(REQUIRED_PKGS) xcb-util
+   endif

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/libnsfb-0.0.2.ebuild,v 1.1 2012/07/18 16:00:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/libnsfb-0.0.2.ebuild,v 1.2 2013/02/27 08:00:54 xmw Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils multilib toolchain-funcs
 
@@ -13,14 +13,14 @@ SRC_URI="http://download.netsurf-browser.org/netsurf/releases/source-full/netsur
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm"
-IUSE="static-libs"
+IUSE="sdl static-libs vnc xcb"
 
-RDEPEND="media-libs/libsdl
-	net-libs/libvncserver
-	x11-libs/libxcb
-	x11-libs/xcb-util
-	x11-libs/xcb-util-image
-	x11-libs/xcb-util-keysyms"
+RDEPEND="sdl? ( media-libs/libsdl )
+	vnc? ( net-libs/libvncserver )
+	xcb? ( x11-libs/libxcb
+		x11-libs/xcb-util
+		x11-libs/xcb-util-image
+		x11-libs/xcb-util-keysyms )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -34,16 +34,28 @@ src_unpack() {
 }
 
 src_prepare() {
+	#backported from vcs
 	epatch "${FILESDIR}"/${P}-xcb-fix.patch
-	epatch "${FILESDIR}"/${P}-unused.patch
 
-	sed -e "/^INSTALL_ITEMS/s: /lib: /$(get_libdir):g" \
+	epatch "${FILESDIR}"/${P}-unused.patch
+	epatch "${FILESDIR}"/${P}-autodetect.patch
+
+	sed -e "/^CCOPT :=/s:=.*:=:" \
+		-i build/makefiles/Makefile.{gcc,clang} || die
+	sed -e '/^CFLAGS/s: -g : :' \
+		-e "/^INSTALL_ITEMS/s: /lib: /$(get_libdir):g" \
 		-i Makefile || die
 	sed -e "/^libdir/s:/lib:/$(get_libdir):g" \
 		-i ${PN}.pc.in || die
-	echo "Q := " >> Makefile.config.override
-	echo "CC := $(tc-getCC)" >> Makefile.config.override
-	echo "AR := $(tc-getAR)" >> Makefile.config.override
+
+	echo "Q  := " >> Makefile.config
+	echo "CC := $(tc-getCC)" >> Makefile.config
+	echo "AR := $(tc-getAR)" >> Makefile.config
+
+	echo "NSFB_SDL_AVAILABLE := $(usex sdl)" >> Makefile.config
+	echo "NSFB_VNC_AVAILABLE := $(usex vnc)" >> Makefile.config
+	echo "NSFB_XCB_AVAILABLE := $(usex xcb)" >> Makefile.config
+	echo "NSFB_XCB_UTIL_AVAILABLE := $(usex xcb)" >> Makefile.config
 }
 
 src_compile() {
