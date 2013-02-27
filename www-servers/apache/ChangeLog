@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.205 2013/02/27 06:56:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.206 2013/02/27 15:49:15 chainsaw Exp $
+
+*apache-2.4.4-r1 (27 Feb 2013)
+
+  27 Feb 2013; Tony Vroon <chainsaw@gentoo.org> +apache-2.4.4-r1.ebuild,
+  metadata.xml:
+  Add support for mod_proxy_fcgi; work by Dan Kozlowski rediffed by Jaco Kroon.
+  Testing by Tomas Mozes & Marios Andreopoulos in bug #421135.
 
 *apache-2.4.4 (27 Feb 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libutp/libutp-0_pre20130213-r1.ebuild,v 1.1 2013/02/27 15:17:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libutp/libutp-0_pre20130213-r1.ebuild,v 1.2 2013/02/27 16:00:51 ssuominen Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -24,7 +24,7 @@ src_prepare() {
 }
 
 src_compile() {
-	tc-export AR CXX
+	tc-export AR CXX RANLIB
 	local d
 	for d in . utp_file utp_test; do
 		emake -C ${d}
