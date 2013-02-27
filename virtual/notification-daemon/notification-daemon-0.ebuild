@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/notification-daemon-0.ebuild,v 1.9 2013/02/25 09:17:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/notification-daemon-0.ebuild,v 1.10 2013/02/27 01:57:38 wired Exp $
 
 EAPI=2
 
@@ -20,6 +20,7 @@ RDEPEND="
 		xfce-extra/xfce4-notifyd
 		x11-misc/qtnotifydaemon
 		x11-misc/notify-osd
+		x11-misc/dunst
 		>=x11-wm/awesome-3.4.4
 		x11-wm/enlightenment[enlightenment_modules_notification]
 		x11-wm/enlightenment[e_modules_notification]

@@ -3,6 +3,6 @@ DESCRIPTION=Virtual for notification daemon dbus service
 EAPI=2
 IUSE=gnome
 KEYWORDS=alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris
-RDEPEND=gnome? ( || ( x11-misc/notification-daemon gnome-base/gnome-shell ) ) !gnome? ( || ( x11-misc/notification-daemon xfce-extra/xfce4-notifyd x11-misc/qtnotifydaemon x11-misc/notify-osd >=x11-wm/awesome-3.4.4 x11-wm/enlightenment[enlightenment_modules_notification] x11-wm/enlightenment[e_modules_notification] kde-base/knotify ) )
+RDEPEND=gnome? ( || ( x11-misc/notification-daemon gnome-base/gnome-shell ) ) !gnome? ( || ( x11-misc/notification-daemon xfce-extra/xfce4-notifyd x11-misc/qtnotifydaemon x11-misc/notify-osd x11-misc/dunst >=x11-wm/awesome-3.4.4 x11-wm/enlightenment[enlightenment_modules_notification] x11-wm/enlightenment[e_modules_notification] kde-base/knotify ) )
 SLOT=0
-_md5_=64980b0ff5d443e5dbd1bdd2fc2266f9
+_md5_=6a094336c1b99b1f5adcf61c475addfa
