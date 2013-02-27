@@ -1,8 +1,23 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/meteor-0.5.6.ebuild,v 1.1 2013/02/16 00:14:14 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/meteor-0.5.6.ebuild,v 1.2 2013/02/27 06:59:27 tomwij Exp $
 
 EAPI=5
+
+QA_PRESTRIPPED="opt/meteor/mongodb/bin/mongo
+        opt/meteor/mongodb/bin/mongod"
+
+QA_TEXTRELS="opt/meteor/lib/node_modules/fibers/bin/linux-ia32-v8-3.11/fibers.node
+        opt/meteor/lib/node_modules/mongodb/node_modules/bson/build/Release/obj.target/bson.node
+        opt/meteor/lib/node_modules/mongodb/node_modules/bson/build/Release/bson.node
+        opt/meteor/lib/node_modules/websocket/build/Release/xor.node
+        opt/meteor/lib/node_modules/websocket/build/Release/obj.target/xor.node
+        opt/meteor/lib/node_modules/websocket/build/Release/obj.target/validation.node
+        opt/meteor/lib/node_modules/websocket/build/Release/validation.node"
+
+QA_PREBUILT="opt/meteor/bin/node"
+
+QA_FLAGS_IGNORED="opt/meteor/lib/node_modules/fibers/bin/linux-ia32-v8-3.11/fibers.node"
 
 inherit eutils vcs-snapshot
 

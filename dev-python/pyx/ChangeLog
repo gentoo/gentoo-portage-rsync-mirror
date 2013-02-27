@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.32 2013/02/02 14:00:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyx/ChangeLog,v 1.33 2013/02/27 06:39:16 xarthisius Exp $
+
+*pyx-0.10-r1 (27 Feb 2013)
+
+  27 Feb 2013; Kacper Kowalik <xarthisius@gentoo.org> +pyx-0.10-r1.ebuild:
+  Reintroduce mistakenly removed stable version. Thanks to Michael Sterrett
+  <mr_bones_@gentoo.org> for spotting this
 
   02 Feb 2013; Kacper Kowalik <xarthisius@gentoo.org> -files/pyx-0.10.patch,
   -pyx-0.10-r1.ebuild, -pyx-0.11.1.ebuild, -pyx-0.12.1.ebuild, -pyx-0.12.ebuild,

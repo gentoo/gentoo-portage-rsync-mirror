@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.204 2013/02/16 13:07:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.205 2013/02/27 06:56:36 patrick Exp $
+
+*apache-2.4.4 (27 Feb 2013)
+
+  27 Feb 2013; Patrick Lauer <patrick@gentoo.org> +apache-2.4.4.ebuild:
+  Bump for #459264 #438758
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #96436

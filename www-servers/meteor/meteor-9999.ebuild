@@ -1,12 +1,29 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/meteor-9999.ebuild,v 1.2 2013/02/08 19:26:04 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/meteor-9999.ebuild,v 1.3 2013/02/27 06:59:27 tomwij Exp $
 
 EAPI=5
 
+QA_PRESTRIPPED="opt/meteor/mongodb/bin/mongo
+        opt/meteor/mongodb/bin/mongod"
+
+QA_TEXTRELS="opt/meteor/lib/node_modules/fibers/bin/linux-ia32-v8-3.11/fibers.node
+        opt/meteor/lib/node_modules/mongodb/node_modules/bson/build/Release/obj.target/bson.node
+        opt/meteor/lib/node_modules/mongodb/node_modules/bson/build/Release/bson.node
+        opt/meteor/lib/node_modules/websocket/build/Release/xor.node
+        opt/meteor/lib/node_modules/websocket/build/Release/obj.target/xor.node
+        opt/meteor/lib/node_modules/websocket/build/Release/obj.target/validation.node
+        opt/meteor/lib/node_modules/websocket/build/Release/validation.node
+	opt/meteor/lib/node_modules/kexec/build/Release/kexec.node
+	opt/meteor/lib/node_modules/kexec/build/Release/obj.target/kexec.node"
+
+QA_PREBUILT="opt/meteor/bin/node"
+
+QA_FLAGS_IGNORED="opt/meteor/lib/node_modules/fibers/bin/linux-ia32-v8-3.11/fibers.node"
+
 inherit eutils git-2
 
-METEOR_BUNDLEV="0.2.17"
+METEOR_BUNDLEV="0.2.20"
 
 DESCRIPTION="An open-source platform for building top-quality web apps in a fraction of the time."
 HOMEPAGE="http://meteor.com/"

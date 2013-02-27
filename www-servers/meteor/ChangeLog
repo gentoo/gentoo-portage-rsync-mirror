@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/meteor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/ChangeLog,v 1.7 2013/02/22 17:31:25 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/ChangeLog,v 1.8 2013/02/27 06:59:27 tomwij Exp $
+
+  27 Feb 2013; Tom Wijsman <TomWij@gentoo.org> meteor-0.5.4-r1.ebuild,
+  meteor-0.5.5.ebuild, meteor-0.5.6.ebuild, meteor-0.5.7.ebuild,
+  meteor-9999.ebuild:
+  Hide QA notices, thanks to ago. Fixes bug #459370.
 
 *meteor-0.5.7 (22 Feb 2013)
 
