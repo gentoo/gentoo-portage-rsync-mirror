@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14513 2013/02/26 21:27:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14514 2013/02/26 23:34:53 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (26 Feb 2013)
+# Declared as obsolete by upstream. Use fortune.el with
+# the zippy file from games-misc/fortune-mod instead.
+# Masked for removal in 30 days, bug #459358.
+app-emacs/yow
 
 # Mike Gilbert <floppym@gentoo.org> (26 Feb 2013)
 # Dev channel releases are only for people who are developers or want more
