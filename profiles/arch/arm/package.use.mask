@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.127 2013/02/20 15:38:44 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.128 2013/02/27 06:25:14 vapier Exp $
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (20 Feb 2013)
 # Mask flags of calligra and dependencies due to lack of keywords
@@ -219,6 +219,10 @@ net-libs/libproxy kde
 # Justin Lecher <jlec@gentoo.org> (14 Jen 2011)
 # x11-libs/fltk is not keyworded for arm
 app-misc/nut X
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 Nov 2010)
+# sys-devel/llvm is keyworded on x86
+>=media-libs/mesa-8 -llvm
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm

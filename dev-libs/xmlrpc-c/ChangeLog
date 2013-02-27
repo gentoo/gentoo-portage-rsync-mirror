@@ -1,6 +1,24 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.133 2013/02/26 14:54:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.134 2013/02/27 06:19:23 jer Exp $
+
+  27 Feb 2013; Jeroen Roovers <jer@gentoo.org> -files/xmlrpc-c-1.05-pic.patch,
+  -files/xmlrpc-c-1.06.02-strsol.patch,
+  -files/xmlrpc-c-1.06.02-threadupdatestatus.patch,
+  -files/xmlrpc-c-1.06.03-mustbuildclient.patch,
+  -files/xmlrpc-c-1.06.09+curl-7.18.patch,
+  -files/xmlrpc-c-1.06.09-asneeded.patch, -files/xmlrpc-c-1.06.09-strsol.patch,
+  -files/xmlrpc-c-1.06.27-abyss-header-fixup.patch,
+  -files/xmlrpc-c-1.06.27-curl-easy-setopt.patch,
+  -files/xmlrpc-c-1.06.27-curl-headers.patch,
+  -files/xmlrpc-c-1.06.27-gcc43-test-fix.patch,
+  -files/xmlrpc-c-1.28.00-advanced-test.patch,
+  +files/xmlrpc-c-1.32.05-Wimplicit.patch, -files/xmlrpc-c-gcc43.patch,
+  -files/xmlrpc-c-1.18.02/cpp-depends.patch,
+  -files/xmlrpc-c-1.18.02/curl-headers.patch,
+  -files/xmlrpc-c-1.18.02/dump-symlinks.patch,
+  -files/xmlrpc-c-1.18.02/dumpvalue.patch, xmlrpc-c-1.32.05.ebuild:
+  Enable -Wimplicit only for C, not for C++.
 
   26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> xmlrpc-c-1.32.05.ebuild:
   Stable for s390, wrt bug #457298

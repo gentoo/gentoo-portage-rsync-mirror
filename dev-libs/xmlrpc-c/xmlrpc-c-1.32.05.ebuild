@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.32.05.ebuild,v 1.10 2013/02/26 14:54:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.32.05.ebuild,v 1.11 2013/02/27 06:19:23 jer Exp $
 
 EAPI="4"
 
@@ -50,6 +50,7 @@ export LC_ALL=C
 export LANG=C
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.32.05-Wimplicit.patch
 	sed -i \
 		-e "/CFLAGS_COMMON/s|-g -O3$||" \
 		-e "/CXXFLAGS_COMMON/s|-g$||" \

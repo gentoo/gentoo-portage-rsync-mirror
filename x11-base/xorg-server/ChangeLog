@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.724 2013/02/18 20:15:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.725 2013/02/27 06:21:49 zmedico Exp $
+
+  27 Feb 2013; Zac Medico <zmedico@gentoo.org> xorg-server-1.13.2.901.ebuild,
+  xorg-server-1.13.2.ebuild, xorg-server-1.13.99.902.ebuild:
+  Add ~arm-linux keywords.
 
 *xorg-server-1.13.2.901 (18 Feb 2013)
 *xorg-server-1.13.99.902 (18 Feb 2013)
