@@ -5,8 +5,4 @@
   <maintainer>
     <email>olemarkus@gentoo.org</email>
   </maintainer>
-  <maintainer>
-	  <email>pavel@senbonzakura.eu</email>
-    <description>Proxied co-maintainer, CC on all bugs</description>
-  </maintainer>
 </pkgmetadata>
