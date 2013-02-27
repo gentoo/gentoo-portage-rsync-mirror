@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/dpkg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.205 2012/11/26 12:23:18 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.207 2013/02/27 13:47:30 ago Exp $
+
+  27 Feb 2013; Agostino Sarubbo <ago@gentoo.org> dpkg-1.16.9.ebuild:
+  Stable for x86, wrt bug #459326
+
+  27 Feb 2013; Agostino Sarubbo <ago@gentoo.org> dpkg-1.16.9.ebuild:
+  Stable for amd64, wrt bug #459326
 
   26 Nov 2012; Jeroen Roovers <jer@gentoo.org> dpkg-1.16.9.ebuild:
   Set localstatedir by Lars Wendler (bug #444712 by Matthew Schultz).

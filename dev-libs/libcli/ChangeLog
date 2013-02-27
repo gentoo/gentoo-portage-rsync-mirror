@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libcli
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcli/ChangeLog,v 1.7 2012/11/10 09:08:45 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcli/ChangeLog,v 1.9 2013/02/27 13:46:53 ago Exp $
+
+  27 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libcli-1.9.4-r1.ebuild:
+  Stable for x86, wrt bug #456536
+
+  27 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libcli-1.9.4-r1.ebuild:
+  Stable for amd64, wrt bug #456536
 
 *libcli-1.9.4-r1 (10 Nov 2012)
 
@@ -36,4 +42,3 @@
   30 Oct 2006; Andrew Ross <aross@gentoo.org> +metadata.xml,
   +libcli-1.8.6.ebuild:
   Add new package dev-libs/libcli (bug #140616).
-

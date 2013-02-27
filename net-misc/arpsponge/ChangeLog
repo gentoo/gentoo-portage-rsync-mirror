@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/arpsponge
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpsponge/ChangeLog,v 1.1 2013/02/27 13:31:45 chainsaw Exp $
+
+*arpsponge-3.12.2 (27 Feb 2013)
+
+  27 Feb 2013; Tony Vroon <chainsaw@gentoo.org> +arpsponge-3.12.2.ebuild,
+  +files/arpsponge.confd, +files/arpsponge.initd, +metadata.xml:
+  Initial commit. Ebuild by me, reviewed by Richard Yao. As requested by Julian
+  Salter in the LINX engineering team.
+
