@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/librtas
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/ChangeLog,v 1.17 2012/04/24 19:50:17 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/ChangeLog,v 1.18 2013/02/27 20:49:25 ranger Exp $
+
+*librtas-1.3.8 (27 Feb 2013)
+
+  27 Feb 2013; Brent Baude <ranger@gentoo.org> librtas-1.3.6.ebuild,
+  +librtas-1.3.8.ebuild, +files/librtas-1.3.8-symlink.patch:
+  Adding -1.3.8 and stablizing 1.3.6
 
   24 Apr 2012; Samuli Suominen <ssuominen@gentoo.org> librtas-1.3.6.ebuild:
   Stop installing duplicate README and redudant COPYRIGHT into
