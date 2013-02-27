@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3-r3.ebuild,v 1.2 2012/10/19 07:19:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3-r3.ebuild,v 1.3 2013/02/27 14:06:26 jlec Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="arpack doc examples fetk mpi openmp python static-libs tools"
 REQUIRED_USE="mpi? ( !python )"
 
-DEPEND="
+RDEPEND="
 	dev-libs/maloc[mpi=]
 	virtual/blas
 	sys-libs/readline
@@ -32,7 +32,8 @@ DEPEND="
 		sci-libs/umfpack
 		sci-libs/superlu )
 	mpi? ( virtual/mpi )"
-RDEPEND="${DEPEND}"
+DEPEND="${DEPEND}
+	virtual/pkgconfig"
 
 S="${WORKDIR}"/"${MY_P}-source"
 

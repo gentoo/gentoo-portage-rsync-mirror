@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.15 2013/02/19 15:42:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.16 2013/02/27 14:06:26 jlec Exp $
 
 EAPI="3"
 
@@ -20,14 +20,15 @@ LICENSE="BSD"
 IUSE="arpack doc mpi openmp python tools"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 
-DEPEND="
+RDEPEND="
 	dev-libs/maloc[mpi=]
 	virtual/blas
 	sys-libs/readline
 	arpack? ( sci-libs/arpack )
 	tools? ( !sci-libs/gts )
 	mpi? ( virtual/mpi )"
-RDEPEND="${DEPEND}"
+DEPEND="${DEPEND}
+	virtual/pkgconfig"
 
 S="${WORKDIR}"/"${MY_P}-source"
 
