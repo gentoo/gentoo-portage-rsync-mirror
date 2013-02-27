@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libparserutils/libparserutils-0.1.1.ebuild,v 1.5 2013/02/27 08:53:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libparserutils/libparserutils-0.1.1.ebuild,v 1.6 2013/02/27 09:04:59 xmw Exp $
 
 EAPI=5
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~arm"
 IUSE="debug iconv static-libs test"
 
 RDEPEND=""
-DEPEND="test? (	dev-lang/perl )"
+DEPEND="virtual/pkgconfig
+	test? (	dev-lang/perl )"
 
 pkg_setup(){
 	netsurf_src_prepare() {
