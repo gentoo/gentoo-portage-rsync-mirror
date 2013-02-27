@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libparserutils/libparserutils-0.1.1.ebuild,v 1.6 2013/02/27 09:04:59 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libparserutils/libparserutils-0.1.1.ebuild,v 1.8 2013/02/27 09:41:06 xmw Exp $
 
 EAPI=5
 
-inherit flag-o-matic multilib toolchain-funcs
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="library for building efficient parsers, written in C"
 HOMEPAGE="http://www.netsurf-browser.org/projects/libparserutils/"
@@ -41,16 +41,14 @@ pkg_setup(){
 		use static-libs && \
 			emake COMPONENT_TYPE=lib-static BUILD=$(usex debug debug release) "$@"
 	}
-	
-	if use iconv ; then
-		append-cflags "-DWITH_ICONV_FILTER"
-	else
-		append-cflags "-DWITHOUT_ICONV_FILTER"
-	fi
+
+	append-cflags "-D$(usex iconv WITH WITHOUT)_ICONV_FILTER"
 }
 
 src_prepare() {
 	netsurf_src_prepare
+
+	epatch "${FILESDIR}"/${P}-unused.patch
 }
 
 src_configure() {

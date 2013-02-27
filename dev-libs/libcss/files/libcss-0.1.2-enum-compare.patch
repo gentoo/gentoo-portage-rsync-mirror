@@ -1,0 +1,145 @@
+--- libcss-0.1.2/src/select/properties/helpers.c
++++ libcss-0.1.2/src/select/properties/helpers.c
+@@ -52,10 +52,12 @@
+ 	uint16_t value = CSS_BACKGROUND_COLOR_INHERIT;
+ 	css_color color = 0;
+ 
+-	assert(CSS_BACKGROUND_COLOR_INHERIT == CSS_BORDER_COLOR_INHERIT);
+-	assert(CSS_BACKGROUND_COLOR_COLOR == CSS_BORDER_COLOR_COLOR);
++	assert(CSS_BACKGROUND_COLOR_INHERIT == 
++		(enum css_background_color_e)CSS_BORDER_COLOR_INHERIT);
++	assert(CSS_BACKGROUND_COLOR_COLOR == 
++		(enum css_background_color_e)CSS_BORDER_COLOR_COLOR);
+ 	assert(CSS_BACKGROUND_COLOR_CURRENT_COLOR == 
+-			CSS_BORDER_COLOR_CURRENT_COLOR);
++		(enum css_background_color_e)CSS_BORDER_COLOR_CURRENT_COLOR);
+ 
+ 	if (isInherit(opv) == false) {
+ 		switch (getValue(opv)) {
+--- libcss-0.1.2/src/parse/important.c
++++ libcss-0.1.2/src/parse/important.c
+@@ -101,9 +101,9 @@
+ 			case CSS_PROP_BACKGROUND_COLOR:
+ 			case CSS_PROP_COLUMN_RULE_COLOR:
+ 				assert(BACKGROUND_COLOR_SET == 
+-						BORDER_COLOR_SET);
++						(enum op_background_color)BORDER_COLOR_SET);
+ 				assert(BACKGROUND_COLOR_SET == 
+-						COLUMN_RULE_COLOR_SET);
++						(enum op_background_color)COLUMN_RULE_COLOR_SET);
+ 
+ 				if (value == BACKGROUND_COLOR_SET)
+ 					offset++; /* colour */
+@@ -113,10 +113,12 @@
+ 			case CSS_PROP_CUE_AFTER:
+ 			case CSS_PROP_CUE_BEFORE:
+ 			case CSS_PROP_LIST_STYLE_IMAGE:
+-				assert(BACKGROUND_IMAGE_URI == CUE_AFTER_URI);
+-				assert(BACKGROUND_IMAGE_URI == CUE_BEFORE_URI);
++				assert(BACKGROUND_IMAGE_URI == 
++						(enum op_background_image)CUE_AFTER_URI);
++				assert(BACKGROUND_IMAGE_URI == 
++						(enum op_background_image)CUE_BEFORE_URI);
+ 				assert(BACKGROUND_IMAGE_URI ==
+-						LIST_STYLE_IMAGE_URI);
++						(enum op_background_image)LIST_STYLE_IMAGE_URI);
+ 
+ 				if (value == BACKGROUND_IMAGE_URI) 
+ 					offset++; /* string table entry */
+@@ -141,9 +143,10 @@
+ 			case CSS_PROP_BORDER_LEFT_WIDTH:
+ 			case CSS_PROP_OUTLINE_WIDTH:
+ 			case CSS_PROP_COLUMN_RULE_WIDTH:
+-				assert(BORDER_WIDTH_SET == OUTLINE_WIDTH_SET);
++				assert(BORDER_WIDTH_SET == 
++						(enum op_border_width)OUTLINE_WIDTH_SET);
+ 				assert(BORDER_WIDTH_SET ==
+-						COLUMN_RULE_WIDTH_SET);
++						(enum op_border_width)COLUMN_RULE_WIDTH_SET);
+ 
+ 				if (value == BORDER_WIDTH_SET)
+ 					offset += 2; /* length + units */
+@@ -161,14 +164,14 @@
+ 			case CSS_PROP_WIDTH:
+ 			case CSS_PROP_COLUMN_WIDTH:
+ 			case CSS_PROP_COLUMN_GAP:
+-				assert(BOTTOM_SET == LEFT_SET);
+-				assert(BOTTOM_SET == RIGHT_SET);
+-				assert(BOTTOM_SET == TOP_SET);
+-				assert(BOTTOM_SET == HEIGHT_SET);
+-				assert(BOTTOM_SET == MARGIN_SET);
+-				assert(BOTTOM_SET == WIDTH_SET);
+-				assert(BOTTOM_SET == COLUMN_WIDTH_SET);
+-				assert(BOTTOM_SET == COLUMN_GAP_SET);
++				assert(BOTTOM_SET == (enum op_bottom)LEFT_SET);
++				assert(BOTTOM_SET == (enum op_bottom)RIGHT_SET);
++				assert(BOTTOM_SET == (enum op_bottom)TOP_SET);
++				assert(BOTTOM_SET == (enum op_bottom)HEIGHT_SET);
++				assert(BOTTOM_SET == (enum op_bottom)MARGIN_SET);
++				assert(BOTTOM_SET == (enum op_bottom)WIDTH_SET);
++				assert(BOTTOM_SET == (enum op_bottom)COLUMN_WIDTH_SET);
++				assert(BOTTOM_SET == (enum op_bottom)COLUMN_GAP_SET);
+ 
+ 				if (value == BOTTOM_SET) 
+ 					offset += 2; /* length + units */
+@@ -231,7 +234,7 @@
+ 			case CSS_PROP_COUNTER_INCREMENT:
+ 			case CSS_PROP_COUNTER_RESET:
+ 				assert(COUNTER_INCREMENT_NONE == 
+-						COUNTER_RESET_NONE);
++					(enum op_counter_increment)COUNTER_RESET_NONE);
+ 
+ 				while (value != COUNTER_INCREMENT_NONE) {
+ 					offset+=2; /* string + integer */
+@@ -276,7 +279,8 @@
+ 
+ 			case CSS_PROP_LETTER_SPACING:
+ 			case CSS_PROP_WORD_SPACING:
+-				assert(LETTER_SPACING_SET == WORD_SPACING_SET);
++				assert(LETTER_SPACING_SET == 
++					(enum op_letter_spacing)WORD_SPACING_SET);
+ 
+ 				if (value == LETTER_SPACING_SET)
+ 					offset += 2; /* length + units */
+@@ -296,7 +300,8 @@
+ 
+ 			case CSS_PROP_MAX_HEIGHT:
+ 			case CSS_PROP_MAX_WIDTH:
+-				assert(MAX_HEIGHT_SET == MAX_WIDTH_SET);
++				assert(MAX_HEIGHT_SET == 
++					(enum op_max_height)MAX_WIDTH_SET);
+ 
+ 				if (value == MAX_HEIGHT_SET)
+ 					offset += 2; /* length + units */
+@@ -311,11 +316,11 @@
+ 			case CSS_PROP_PAUSE_AFTER:
+ 			case CSS_PROP_PAUSE_BEFORE:
+ 			case CSS_PROP_TEXT_INDENT:
+-				assert(MIN_HEIGHT_SET == MIN_WIDTH_SET);
+-				assert(MIN_HEIGHT_SET == PADDING_SET);
+-				assert(MIN_HEIGHT_SET == PAUSE_AFTER_SET);
+-				assert(MIN_HEIGHT_SET == PAUSE_BEFORE_SET);
+-				assert(MIN_HEIGHT_SET == TEXT_INDENT_SET);
++				assert(MIN_HEIGHT_SET == (enum op_min_height)MIN_WIDTH_SET);
++				assert(MIN_HEIGHT_SET == (enum op_min_height)PADDING_SET);
++				assert(MIN_HEIGHT_SET == (enum op_min_height)PAUSE_AFTER_SET);
++				assert(MIN_HEIGHT_SET == (enum op_min_height)PAUSE_BEFORE_SET);
++				assert(MIN_HEIGHT_SET == (enum op_min_height)TEXT_INDENT_SET);
+ 
+ 				if (value == MIN_HEIGHT_SET)
+ 					offset += 2; /* length + units */
+@@ -331,10 +336,10 @@
+ 			case CSS_PROP_RICHNESS:
+ 			case CSS_PROP_STRESS:
+ 			case CSS_PROP_WIDOWS:
+-				assert(ORPHANS_SET == PITCH_RANGE_SET);
+-				assert(ORPHANS_SET == RICHNESS_SET);
+-				assert(ORPHANS_SET == STRESS_SET);
+-				assert(ORPHANS_SET == WIDOWS_SET);
++				assert(ORPHANS_SET == (enum op_orphans)PITCH_RANGE_SET);
++				assert(ORPHANS_SET == (enum op_orphans)RICHNESS_SET);
++				assert(ORPHANS_SET == (enum op_orphans)STRESS_SET);
++				assert(ORPHANS_SET == (enum op_orphans)WIDOWS_SET);
+ 
+ 				if (value == ORPHANS_SET)
+ 					offset++; /* value */

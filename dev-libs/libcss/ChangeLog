@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libcss
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcss/ChangeLog,v 1.6 2012/11/11 21:23:41 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcss/ChangeLog,v 1.8 2013/02/27 09:48:29 xmw Exp $
+
+  27 Feb 2013; Michael Weber <xmw@gentoo.org> libcss-0.1.2.ebuild:
+  Add DEPEND virtual/pkgconfig.
+
+  27 Feb 2013; Michael Weber <xmw@gentoo.org> libcss-0.1.2.ebuild,
+  +files/libcss-0.1.2-enum-compare.patch:
+  netsurf eclass preparation. Fix enum comparison.
 
   11 Nov 2012; Michael Weber <xmw@gentoo.org> libcss-0.1.2.ebuild:
   Cross compile fix (bug 431884, James Le Cuirot)
