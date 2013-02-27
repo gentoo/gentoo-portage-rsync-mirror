@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.16.ebuild,v 1.8 2012/12/02 20:42:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.16.ebuild,v 1.9 2013/02/27 05:52:29 zmedico Exp $
 
 EAPI=4
 inherit xorg-2
 DESCRIPTION="X.Org GL protocol headers"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 LICENSE="SGI-B-2.0"
 IUSE=""
 

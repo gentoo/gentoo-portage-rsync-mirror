@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.217 2013/02/05 15:46:00 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.218 2013/02/27 05:40:26 zmedico Exp $
+
+  27 Feb 2013; Zac Medico <zmedico@gentoo.org> libdrm-2.4.42.ebuild:
+  Add ~arm-linux keyword.
 
 *libdrm-2.4.42 (05 Feb 2013)
 

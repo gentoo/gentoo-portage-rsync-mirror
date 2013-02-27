@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-dummy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-dummy/ChangeLog,v 1.98 2013/01/21 01:30:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-dummy/ChangeLog,v 1.99 2013/02/27 05:41:20 zmedico Exp $
+
+  27 Feb 2013; Zac Medico <zmedico@gentoo.org> xf86-video-dummy-0.3.6.ebuild:
+  Add ~arm-linux keyword.
 
   21 Jan 2013; Mike Frysinger <vapier@gentoo.org> xf86-video-dummy-0.3.6.ebuild:
   Add s390 keywords #453114 by Sergey Popov.

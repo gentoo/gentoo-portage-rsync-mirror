@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.21.0.ebuild,v 1.6 2013/02/19 01:42:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.21.0.ebuild,v 1.7 2013/02/27 05:44:01 vapier Exp $
 
 # See `man savedconfig.eclass` for info on how to use USE=savedconfig.
 
@@ -51,7 +51,12 @@ busybox_config_option() {
 }
 
 busybox_config_enabled() {
-	grep "^CONFIG_$1=y" -q .config
+	local val=$(sed -n "/^CONFIG_$1=/s:^[^=]*=::p" .config)
+	case ${val} in
+	"") return 1 ;;
+	y)  return 0 ;;
+	*)  echo "${val}" | sed -r 's:^"(.*)"$:\1:' ;;
+	esac
 }
 
 src_prepare() {
@@ -61,7 +66,7 @@ src_prepare() {
 
 	# patches go here!
 	epatch "${FILESDIR}"/${PN}-1.19.0-bb.patch
-	epatch "${FILESDIR}"/${P}-*.patch
+	#epatch "${FILESDIR}"/${P}-*.patch
 	cp "${FILESDIR}"/ginit.c init/ || die
 
 	# flag cleanup
@@ -223,6 +228,15 @@ src_install() {
 	if busybox_config_enabled WATCHDOG; then
 		newconfd "${FILESDIR}/watchdog.confd" "busybox-watchdog"
 		newinitd "${FILESDIR}/watchdog.initd" "busybox-watchdog"
+	fi
+	if busybox_config_enabled UDHCPC; then
+		local path=$(busybox_config_enabled UDHCPC_DEFAULT_SCRIPT)
+		insinto "${path%/*}"
+		newins examples/udhcp/simple.script "${path##*/}"
+	fi
+	if busybox_config_enabled UDHCPD; then
+		insinto /etc
+		doins examples/udhcp/udhcpd.conf
 	fi
 
 	# bundle up the symlink files for use later

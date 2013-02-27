@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86rushproto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86rushproto/ChangeLog,v 1.39 2012/09/06 04:26:20 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86rushproto/ChangeLog,v 1.40 2013/02/27 05:58:12 zmedico Exp $
+
+  27 Feb 2013; Zac Medico <zmedico@gentoo.org> xf86rushproto-1.1.2-r1.ebuild:
+  Add ~arm-linux keyword.
 
   06 Sep 2012; Mike Frysinger <vapier@gentoo.org> xf86rushproto-1.1.2-r1.ebuild,
   xf86rushproto-1.1.2.ebuild:

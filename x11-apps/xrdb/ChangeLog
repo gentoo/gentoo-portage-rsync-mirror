@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xrdb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrdb/ChangeLog,v 1.91 2012/05/10 17:15:51 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrdb/ChangeLog,v 1.92 2013/02/27 06:00:56 zmedico Exp $
+
+  27 Feb 2013; Zac Medico <zmedico@gentoo.org> xrdb-1.0.9.ebuild:
+  Add ~arm-linux keyword.
 
   10 May 2012; Alexis Ballier <aballier@gentoo.org> xrdb-1.0.9.ebuild:
   keyword ~amd64-fbsd
@@ -306,4 +309,3 @@
 
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +xrdb-0.99.0.ebuild:
   Initial commit for modular X.
-

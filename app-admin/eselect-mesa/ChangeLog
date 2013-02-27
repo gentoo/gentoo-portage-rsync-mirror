@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mesa/ChangeLog,v 1.31 2013/01/20 20:21:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mesa/ChangeLog,v 1.32 2013/02/27 05:49:34 zmedico Exp $
+
+  27 Feb 2013; Zac Medico <zmedico@gentoo.org> eselect-mesa-0.0.10.ebuild:
+  Add ~arm-linux keyword.
 
   20 Jan 2013; Mike Frysinger <vapier@gentoo.org> eselect-mesa-0.0.10.ebuild:
   Add s390 keywords #453114 by Sergey Popov.

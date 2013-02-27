@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/glproto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.111 2012/12/02 20:42:49 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.112 2013/02/27 05:52:29 zmedico Exp $
+
+  27 Feb 2013; Zac Medico <zmedico@gentoo.org> glproto-1.4.16.ebuild:
+  Add ~arm-linux keyword.
 
   02 Dec 2012; Agostino Sarubbo <ago@gentoo.org> glproto-1.4.16.ebuild:
   Stable for ppc64, wrt bug #432400
