@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.7.10.ebuild,v 1.1 2013/02/26 16:29:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.7.10.ebuild,v 1.2 2013/02/27 20:22:37 floppym Exp $
 
 EAPI=5
 # py3 appears underdone, 
@@ -38,13 +38,12 @@ DEPEND="${RDEPEND}
 DISTUTILS_NO_PARALLEL_BUILD=1
 S="${WORKDIR}/${MY_P}"
 
-src_prepare() {
-	distutils-r1_src_prepare
+PATCHES=( "${FILESDIR}/${PN}-0.7-logging.handlers.patch" )
 
-	epatch "${FILESDIR}"/${PN}-0.7-logging.patch
-
+python_prepare_all() {
 	# Disable tests hardcoding function call counts specific to Python versions.
 	rm -fr test/aaa_profiling
+	distutils-r1_python_prepare_all
 }
 
 python_configure_all() {

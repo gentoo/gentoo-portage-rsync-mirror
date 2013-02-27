@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.10-r3.ebuild,v 1.8 2013/02/27 20:20:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.10-r4.ebuild,v 1.1 2013/02/27 20:20:39 jer Exp $
 
-EAPI=4
-
+EAPI=5
 inherit eutils flag-o-matic
 
 DESCRIPTION="Hypertext info and man viewer based on (n)curses"
@@ -12,17 +11,18 @@ SRC_URI="https://alioth.debian.org/frs/download.php/3351/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="nls readline"
 
 RDEPEND="
-	sys-libs/ncurses[-tinfo]
+	sys-libs/ncurses
 	nls? ( virtual/libintl )
 "
 
 DEPEND="
 	${RDEPEND}
 	sys-devel/bison
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 "
 
@@ -31,9 +31,10 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-0.6.9-as-needed.patch \
 		"${FILESDIR}"/${PN}-0.6.9-GROFF_NO_SGR.patch \
 		"${FILESDIR}"/${PN}-0.6.9-lzma-xz.patch \
-		"${FILESDIR}"/${P}-version.patch \
-		"${FILESDIR}"/${P}-info-suffix.patch \
-		"${FILESDIR}"/${P}-dir-file.patch
+		"${FILESDIR}"/${PN}-0.6.10-version.patch \
+		"${FILESDIR}"/${PN}-0.6.10-info-suffix.patch \
+		"${FILESDIR}"/${PN}-0.6.10-dir-file.patch \
+		"${FILESDIR}"/${PN}-0.6.10-tinfo.patch
 
 	# autoconf does not work as expected
 	./autogen.sh || die
@@ -42,7 +43,9 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_with readline) $(use_enable nls)
+	econf \
+		$(use_with readline) \
+		$(use_enable nls)
 }
 
 src_install() {

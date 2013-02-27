@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.7.9.ebuild,v 1.12 2013/02/26 16:29:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.7.9.ebuild,v 1.13 2013/02/27 20:22:37 floppym Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -46,7 +46,7 @@ PYTHON_MODNAME="sqlalchemy"
 src_prepare() {
 	distutils_src_prepare
 
-	epatch "${FILESDIR}"/${PN}-0.7-logging.patch
+	epatch "${FILESDIR}"/${PN}-0.7-logging.handlers.patch
 	# Disable tests hardcoding function call counts specific to Python versions.
 	rm -fr test/aaa_profiling
 }

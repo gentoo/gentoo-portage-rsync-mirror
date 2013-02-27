@@ -1,6 +1,12 @@
 # ChangeLog for app-text/pinfo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.66 2012/06/18 01:53:11 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.67 2013/02/27 20:20:39 jer Exp $
+
+*pinfo-0.6.10-r4 (27 Feb 2013)
+
+  27 Feb 2013; Jeroen Roovers <jer@gentoo.org> pinfo-0.6.10-r3.ebuild,
+  +pinfo-0.6.10-r4.ebuild, +files/pinfo-0.6.10-tinfo.patch:
+  Fix building against sys-libs/ncurses[-tinfo] (bug #459528).
 
   18 Jun 2012; Jeroen Roovers <jer@gentoo.org> -pinfo-0.6.10-r2.ebuild:
   Old.

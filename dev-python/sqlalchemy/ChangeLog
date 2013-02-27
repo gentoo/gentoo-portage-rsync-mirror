@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.96 2013/02/26 16:29:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.97 2013/02/27 20:22:37 floppym Exp $
+
+  27 Feb 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/sqlalchemy-0.7-logging.handlers.patch,
+  -files/sqlalchemy-0.7-logging.patch, sqlalchemy-0.7.10.ebuild,
+  sqlalchemy-0.7.9.ebuild:
+  Replace patch with simpler version, submitted upstream.
 
 *sqlalchemy-0.7.10 (26 Feb 2013)
 
