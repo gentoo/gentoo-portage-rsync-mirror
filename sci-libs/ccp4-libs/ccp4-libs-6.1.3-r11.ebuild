@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r11.ebuild,v 1.9 2013/02/27 14:44:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r11.ebuild,v 1.10 2013/02/27 16:46:49 jlec Exp $
 
 EAPI=3
 
@@ -60,6 +60,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	tc-export PKG_CONFIG
+
 	einfo "Applying upstream patches ..."
 	for patch in $(seq $PATCH_TOT); do
 		base="PATCH${patch}"

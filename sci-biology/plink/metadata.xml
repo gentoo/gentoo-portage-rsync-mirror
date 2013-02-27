@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>weaver@gentoo.org</email>
-		<name>Andrey Kislyuk</name>
-	</maintainer>
-	<herd>sci-biology</herd>
-	<use>
-		<flag name="webcheck">
+  <maintainer>
+    <email>weaver@gentoo.org</email>
+    <name>Andrey Kislyuk</name>
+  </maintainer>
+  <herd>sci-biology</herd>
+  <use>
+    <flag name="webcheck">
 			add support for online update checking every time the program starts
 		</flag>
-		<flag name="R">
+    <flag name="R">
 			add support R language
 		</flag>
-	</use>
+  </use>
 </pkgmetadata>

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ccp4-libs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.53 2013/02/27 14:44:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.54 2013/02/27 16:46:49 jlec Exp $
+
+  27 Feb 2013; Justin Lecher <jlec@gentoo.org> files/6.1.3-lapack.patch,
+  ccp4-libs-6.1.3-r11.ebuild:
+  Use PKG_CONFIG instead of generic pkg-config
 
   27 Feb 2013; Justin Lecher <jlec@gentoo.org> ccp4-libs-6.1.3-r11.ebuild:
   Add missing dep on virtual/pkgconfig; use tc-getPKG_CONFIG instead of generic

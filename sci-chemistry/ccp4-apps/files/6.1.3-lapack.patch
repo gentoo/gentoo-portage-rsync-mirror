@@ -567,10 +567,10 @@ index 833f483..bcfa62d 100755
 +  # gentoo is clever
 +  make_blas=
 +  make_lapack=
-+  BLASLIB=$(pkg-config --libs blas)
-+  LAPACKLIB=$(pkg-config --libs lapack)
++  BLASLIB=$(${PKG_CONFIG} --libs blas)
++  LAPACKLIB=$(${PKG_CONFIG} --libs lapack)
 +  XLAPACK_LIB="${BLASLIB} ${LAPACKLIB}"
-+  XFFLAGS_LAPACK="$(pkg-config --cflags lapack blas)"
++  XFFLAGS_LAPACK="$(${PKG_CONFIG} --cflags lapack blas)"
    # Otherwise force building of NetLib BLAS and LAPACK libs
 -  else
 -    echo

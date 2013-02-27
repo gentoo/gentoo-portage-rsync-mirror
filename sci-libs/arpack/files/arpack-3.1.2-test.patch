@@ -18,19 +18,19 @@ index 9eb51db..0764b44 100644
  #
  sssimp: sssimp.o
 -	$(FC) $(FFLAGS) sssimp.o $(ALIBS) -o sssimp
-+	$(FC) $(FFLAGS) $(LDFLAGS) sssimp.o $(ALIBS) -o sssimp `pkg-config --libs blas lapack` -larpack
++	$(FC) $(FFLAGS) $(LDFLAGS) sssimp.o $(ALIBS) -o sssimp `$(PKG_CONFIG) --libs blas lapack` -larpack
  dssimp: dssimp.o
 -	$(FC) $(FFLAGS) dssimp.o $(ALIBS) -o dssimp
-+	$(FC) $(FFLAGS) $(LDFLAGS) dssimp.o $(ALIBS) -o dssimp `pkg-config --libs blas lapack` -larpack
++	$(FC) $(FFLAGS) $(LDFLAGS) dssimp.o $(ALIBS) -o dssimp `$(PKG_CONFIG) --libs blas lapack` -larpack
  snsimp: snsimp.o
 -	$(FC) $(FFLAGS) snsimp.o $(ALIBS) -o snsimp
-+	$(FC) $(FFLAGS) $(LDFLAGS) snsimp.o $(ALIBS) -o snsimp `pkg-config --libs blas lapack` -larpack
++	$(FC) $(FFLAGS) $(LDFLAGS) snsimp.o $(ALIBS) -o snsimp `$(PKG_CONFIG) --libs blas lapack` -larpack
  dnsimp: dnsimp.o
 -	$(FC) $(FFLAGS) dnsimp.o $(ALIBS) -o dnsimp
-+	$(FC) $(FFLAGS) $(LDFLAGS) dnsimp.o $(ALIBS) -o dnsimp `pkg-config --libs blas lapack` -larpack
++	$(FC) $(FFLAGS) $(LDFLAGS) dnsimp.o $(ALIBS) -o dnsimp `$(PKG_CONFIG) --libs blas lapack` -larpack
  cnsimp: cnsimp.o
 -	$(FC) $(FFLAGS) cnsimp.o $(ALIBS) -o cnsimp 
-+	$(FC) $(FFLAGS) $(LDFLAGS) cnsimp.o $(ALIBS) -o cnsimp `pkg-config --libs blas lapack` -larpack
++	$(FC) $(FFLAGS) $(LDFLAGS) cnsimp.o $(ALIBS) -o cnsimp `$(PKG_CONFIG) --libs blas lapack` -larpack
  znsimp: znsimp.o
 -	$(FC) $(FFLAGS) znsimp.o $(ALIBS) -o znsimp  
-+	$(FC) $(FFLAGS) $(LDFLAGS) znsimp.o $(ALIBS) -o znsimp `pkg-config --libs blas lapack` -larpack
++	$(FC) $(FFLAGS) $(LDFLAGS) znsimp.o $(ALIBS) -o znsimp `$(PKG_CONFIG) --libs blas lapack` -larpack

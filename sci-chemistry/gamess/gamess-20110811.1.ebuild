@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20110811.1.ebuild,v 1.3 2012/10/19 09:48:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20110811.1.ebuild,v 1.4 2013/02/27 16:50:41 jlec Exp $
 
 EAPI=4
 
@@ -103,6 +103,7 @@ src_unpack() {
 }
 
 src_prepare() {
+	tc-export PKG_CONFIG
 	# apply LINUX-arch patches to gamess makesfiles
 	epatch "${FILESDIR}/${P}.gentoo.patch"
 	epatch "${FILESDIR}/${PN}-checktst.patch"

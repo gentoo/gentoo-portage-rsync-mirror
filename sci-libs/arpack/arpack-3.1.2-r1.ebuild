@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-3.1.2-r1.ebuild,v 1.1 2013/02/21 16:50:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-3.1.2-r1.ebuild,v 1.2 2013/02/27 16:50:37 jlec Exp $
 
 EAPI=5
 
@@ -36,6 +36,7 @@ PATCHES=(
 	)
 
 src_configure() {
+	tc-export PKG_CONFIG
 	local myeconfargs=(
 		--with-blas="$($(tc-getPKG_CONFIG) --libs blas)"
 		--with-lapack="$($(tc-getPKG_CONFIG) --libs lapack)"

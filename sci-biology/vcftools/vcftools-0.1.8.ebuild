@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vcftools/vcftools-0.1.8.ebuild,v 1.1 2012/07/19 11:31:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vcftools/vcftools-0.1.8.ebuild,v 1.2 2013/02/27 16:39:18 jlec Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="lapack"
 
-RDEPEND="virtual/lapack"
+RDEPEND="lapack? ( virtual/lapack )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -25,7 +25,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-buildsystem.patch
-	tc-export CXX
+	tc-export CXX PKG_CONFIG
 }
 
 src_compile() {

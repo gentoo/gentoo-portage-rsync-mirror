@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gamess
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.58 2012/10/19 09:48:43 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.59 2013/02/27 16:50:41 jlec Exp $
+
+  27 Feb 2013; Justin Lecher <jlec@gentoo.org> gamess-20110811.1.ebuild,
+  files/gamess-20110811.1.gentoo.patch, metadata.xml:
+  Use PKG_CONFIG instead of generic pkg-config
 
   19 Oct 2012; Justin Lecher <jlec@gentoo.org> gamess-20110811.1.ebuild,
   metadata.xml:

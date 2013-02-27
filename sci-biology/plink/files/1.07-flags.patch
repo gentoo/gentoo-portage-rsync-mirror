@@ -21,7 +21,7 @@ index 172c795..466f09f 100644
  
  # Misc
 -LIB_LAPACK = /usr/lib/liblapack.so.3
-+LIB_LAPACK = `pkg-config --libs lapack`
++LIB_LAPACK = `$(PKG_CONFIG) --libs lapack`
  
  
  # --------------------------------------------------------------------
