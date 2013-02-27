@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photopc/photopc-3.07.ebuild,v 1.2 2013/01/27 12:41:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photopc/photopc-3.07.ebuild,v 1.3 2013/02/27 04:56:03 kensington Exp $
 
-EAPI=4
+EAPI=5
 
 inherit toolchain-funcs
 
@@ -14,6 +14,10 @@ LICENSE="photopc"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
+
+src_compile() {
+	emake AR="$(tc-getAR)"
+}
 
 src_install() {
 	dodoc README
