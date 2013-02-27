@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2011.09.12-r1.ebuild,v 1.1 2012/05/06 19:03:01 araujo Exp $i
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2011.09.12-r1.ebuild,v 1.2 2013/02/27 00:20:07 mr_bones_ Exp $
 
 EAPI=4
 

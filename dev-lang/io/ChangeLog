@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/io
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.12 2012/12/24 00:54:56 araujo Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.13 2013/02/27 00:20:07 mr_bones_ Exp $
+
+  27 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> io-2011.09.12-r1.ebuild,
+  io-2011.09.12-r2.ebuild:
+  header fix
 
 *io-2011.09.12-r2 (24 Dec 2012)
 

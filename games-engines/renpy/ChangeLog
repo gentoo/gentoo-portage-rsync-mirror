@@ -1,0 +1,12 @@
+# ChangeLog for games-engines/renpy
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/ChangeLog,v 1.1 2013/02/27 00:20:19 hasufell Exp $
+
+*renpy-6.14.1 (27 Feb 2013)
+
+  27 Feb 2013; Julian Ospald <hasufell@gentoo.org> +renpy-6.14.1.ebuild,
+  +files/renpy-6.14.1-av_close_input_stream.patch,
+  +files/renpy-6.14.1-multiple-abi.patch,
+  +files/renpy-6.14.1-remove-AVFormatParameters.patch, +metadata.xml:
+  initial import wrt #301324
+

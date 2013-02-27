@@ -1,15 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/numad-9999.ebuild,v 1.1 2012/06/14 05:13:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/numad-9999.ebuild,v 1.2 2013/02/27 00:28:26 mr_bones_ Exp $
 
 EAPI=4
 
 inherit linux-info git-2
 
-if [[ ${PV} = *9999* ]]; then
+if [[ ${PV} = "9999" ]]; then
 	inherit git-2
 	EGIT_REPO_URI="git://git.fedorahosted.org/numad.git"
-	KEYWORDS="-arm -s390"
+	KEYWORDS=""
 else
 	SRC_URI=""
 	KEYWORDS="~amd64 ~x86 -arm -s390"

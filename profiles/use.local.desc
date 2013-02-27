@@ -1980,6 +1980,7 @@ games-engines/odamex:master - Build master server target (advertises odamex serv
 games-engines/odamex:odalaunch - Build the wxwidgets based launcher.
 games-engines/odamex:portmidi - Enable portmidi support.
 games-engines/odamex:server - Build server target.
+games-engines/renpy:development - Install IDE for game developers and an empty game template
 games-engines/scummvm:fluidsynth - compile with support for fluidsynth
 games-fps/alienarena:vidmode - Link against x11-libs/libXxf86vm. Required for full-screen support.
 games-fps/darkplaces:cdsound - Enables using CD audio in the engine

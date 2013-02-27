@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/numad
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/ChangeLog,v 1.4 2012/08/04 10:24:25 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/ChangeLog,v 1.5 2013/02/27 00:28:26 mr_bones_ Exp $
+
+  27 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> numad-9999.ebuild:
+  fix PV check; empty KEYWORDS
 
   04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> numad-0.5.ebuild:
   stable for amd64, #427588
@@ -19,4 +22,3 @@
   +numad-9999.ebuild, +metadata.xml:
   Add initial version of numad, a daemon for monitoring and rebalancing
   assignment of NUMA resources.
-
