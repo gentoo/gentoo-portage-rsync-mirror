@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/atpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/ChangeLog,v 1.8 2013/01/15 23:15:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/ChangeLog,v 1.11 2013/02/27 07:29:29 xarthisius Exp $
+
+  27 Feb 2013; Kacper Kowalik <xarthisius@gentoo.org> -atpy-0.9.5.3.ebuild:
+  Drop old
+
+  27 Feb 2013; Mike Gilbert <floppym@gentoo.org> atpy-0.9.5.3.ebuild:
+  Drop sqlite from IUSE.
+
+  27 Feb 2013; Mike Gilbert <floppym@gentoo.org> atpy-0.9.5.3.ebuild:
+  Remove optional runtime dependency on pysqlite to fix the depgraph.
 
   15 Jan 2013; Michał Górny <mgorny@gentoo.org> atpy-0.9.6.ebuild:
   Fix sqlite3 module dependency -- the package supports only built-in Python
