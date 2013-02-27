@@ -1,0 +1,56 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.0.ebuild,v 1.1 2013/02/27 22:13:05 hasufell Exp $
+
+EAPI=5
+
+inherit eutils gnome2-utils games
+
+DESCRIPTION="Bishoujo-style visual novel set in the fictional Yamaku High School for disabled children"
+HOMEPAGE="http://katawa-shoujo.com/"
+SRC_URI="http://naodesu.org/files/katawa-shoujo/${P}.tar.bz2
+	http://dev.gentoo.org/~hasufell/distfiles/katawa-shoujo-48.png
+	http://dev.gentoo.org/~hasufell/distfiles/katawa-shoujo-256.png"
+
+LICENSE="CC-BY-NC-ND-3.0"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE="doc"
+
+RDEPEND="games-engines/renpy"
+
+S="${WORKDIR}/Katawa Shoujo-linux-x86"
+
+src_install() {
+	insinto "${GAMES_DATADIR}/${PN}"
+	doins -r game/.
+
+	games_make_wrapper ${PN} "renpy '${GAMES_DATADIR}/${PN}'"
+
+	local i
+	for i in 48 256; do
+		newicon -s ${i} "${DISTDIR}"/${PN}-${i}.png ${PN}.png
+	done
+
+	make_desktop_entry ${PN} "Katawa Shoujo"
+
+	if use doc ; then
+		newdoc "Game Manual.pdf" manual.pdf
+	fi
+
+	prepgamesdirs
+}
+
+pkg_preinst() {
+	games_pkg_preinst
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
+}
