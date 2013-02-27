@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/oosuite
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/ChangeLog,v 1.6 2012/11/01 19:30:56 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oosuite/ChangeLog,v 1.7 2013/02/27 21:57:45 bicatali Exp $
+
+*oosuite-0.43 (27 Feb 2013)
+
+  27 Feb 2013; Sébastien Fabbro <bicatali@gentoo.org> +oosuite-0.43.ebuild,
+  -oosuite-0.38.ebuild, -oosuite-0.39.ebuild, metadata.xml:
+  Version bump. Switch to python-r1 framework. Re-organize SpaceFuncs to make it
+  work
 
 *oosuite-0.42 (01 Nov 2012)
 

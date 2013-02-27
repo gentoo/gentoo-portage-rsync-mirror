@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.154 2013/02/21 21:55:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.155 2013/02/27 21:58:13 mgorny Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,58 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (27 Feb 2013)
+# Mask the abi_x86_32 on packages belonging to emul-linux-x86-xlibs
+# until all of them are unmasked. This avoids our users hitting
+# the emul-linux <-> package blocker.
+dev-libs/libpthread-stubs abi_x86_32
+x11-libs/libICE abi_x86_32
+x11-libs/libSM abi_x86_32
+x11-libs/libX11 abi_x86_32
+x11-libs/libXScrnSaver abi_x86_32
+x11-libs/libXau abi_x86_32
+x11-libs/libXaw abi_x86_32
+x11-libs/libXcomposite abi_x86_32
+x11-libs/libXcursor abi_x86_32
+x11-libs/libXdamage abi_x86_32
+x11-libs/libXdmcp abi_x86_32
+x11-libs/libXext abi_x86_32
+x11-libs/libXfixes abi_x86_32
+x11-libs/libXi abi_x86_32
+x11-libs/libXinerama abi_x86_32
+x11-libs/libXmu abi_x86_32
+x11-libs/libXp abi_x86_32
+x11-libs/libXpm abi_x86_32
+x11-libs/libXrandr abi_x86_32
+x11-libs/libXrender abi_x86_32
+x11-libs/libXt abi_x86_32
+x11-libs/libXtst abi_x86_32
+x11-libs/libXv abi_x86_32
+x11-libs/libXvMC abi_x86_32
+x11-libs/libXxf86dga abi_x86_32
+x11-libs/libXxf86vm abi_x86_32
+x11-libs/libpciaccess abi_x86_32
+x11-libs/libvdpau abi_x86_32
+x11-libs/libxcb abi_x86_32
+x11-proto/compositeproto abi_x86_32
+x11-proto/damageproto abi_x86_32
+x11-proto/fixesproto abi_x86_32
+x11-proto/inputproto abi_x86_32
+x11-proto/kbproto abi_x86_32
+x11-proto/printproto abi_x86_32
+x11-proto/randrproto abi_x86_32
+x11-proto/recordproto abi_x86_32
+x11-proto/renderproto abi_x86_32
+x11-proto/scrnsaverproto abi_x86_32
+x11-proto/videoproto abi_x86_32
+x11-proto/xcb-proto abi_x86_32
+x11-proto/xextproto abi_x86_32
+x11-proto/xf86bigfontproto abi_x86_32
+x11-proto/xf86dgaproto abi_x86_32
+x11-proto/xf86vidmodeproto abi_x86_32
+x11-proto/xineramaproto abi_x86_32
+x11-proto/xproto abi_x86_32
 
 # Justin Lecher <jlec@gentoo.org> (21 Feb 2013)
 # cuda only works on x86 and amd64

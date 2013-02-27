@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.10 2013/02/22 14:42:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.12 2013/02/27 21:47:38 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
@@ -10,10 +10,10 @@
 # The autotools-multilib.eclass is an autotools-utils.eclass(5) wrapper
 # introducing support for building for more than one ABI (multilib).
 #
-# Inheriting this eclass sets IUSE=multilib and exports autotools-utils
+# Inheriting this eclass sets the USE flags and exports autotools-utils
 # phase function wrappers which build the package for each supported ABI
-# if the flag is enabled. Otherwise, it works like regular
-# autotools-utils.
+# when the relevant flag is enabled. Other than that, it works like
+# regular autotools-utils.
 #
 # Note that the multilib support requires out-of-source builds to be
 # enabled. Thus, it is impossible to use AUTOTOOLS_IN_SOURCE_BUILD with
@@ -31,7 +31,11 @@ fi
 
 inherit autotools-utils multilib-build
 
-EXPORT_FUNCTIONS src_configure src_compile src_test src_install
+EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
+
+autotools-multilib_src_prepare() {
+	autotools-utils_src_prepare "${@}"
+}
 
 autotools-multilib_src_configure() {
 	multilib_parallel_foreach_abi autotools-utils_src_configure "${@}"

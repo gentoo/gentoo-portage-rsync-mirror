@@ -4,7 +4,7 @@
 <herd>sci-mathematics</herd>
 <longdescription lang='en'>
   The OpenOpt suite of Python packages contains the following modules:
-  * OpenOpt: universal numerical optimization package with
+  * openopt: universal numerical optimization package with
     several solvers (e.g. ralg) and connections to tens of other,
     graphical output of convergence. 
   * FuncDesigner: tool to rapidly build functions over
