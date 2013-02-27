@@ -257,7 +257,7 @@ index 050974a..e1496ac 100644
  AT_KEYWORDS([thread-safe ARPACK])
  AT_COMPILE_CHECK([simple/tls2.c], [simple/tls2.out], [], [internal], 
 -                 [-lpthread])
-+                 [-lpthread $(pkg-config --libs arpack)])
++                 [-lpthread $(${PKG_CONFIG} --libs arpack)])
  AT_CLEANUP
 diff --git a/tests/types.at b/tests/types.at
 index f80a6a2..45087e8 100644
@@ -268,7 +268,7 @@ index f80a6a2..45087e8 100644
  AT_KEYWORDS([sparse matrix igraph_sparsemat_t])
  AT_COMPILE_CHECK([simple/igraph_sparsemat2.c], [simple/igraph_sparsemat2.out],
 -                 [], [INTERNAL], [-lblas])
-+                 [], [INTERNAL], [$(pkg-config --libs blas)])
++                 [], [INTERNAL], [$(${PKG_CONFIG} --libs blas)])
  AT_CLEANUP
  
  AT_SETUP([Sparse matrix, indexing (igraph_sparsemat_t): ])

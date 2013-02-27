@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1-r2.ebuild,v 1.1 2013/02/27 06:55:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1-r3.ebuild,v 1.1 2013/02/27 17:17:36 jlec Exp $
 
 EAPI=3
 
@@ -60,6 +60,9 @@ src_prepare() {
 		sed -i -e 's/\.so\([\.0-9]\+\)\?/\1.dylib/g' \
 			"${T}"/eselect.lapack.reference || die
 	fi
+	sed \
+		-e '/Libs:/s|: |: -L${libdir} |g' \
+		-i lapack.pc.in || die
 }
 
 src_configure() {

@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/igraph/igraph-0.6.4.ebuild,v 1.2 2013/02/23 12:45:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/igraph/igraph-0.6.4.ebuild,v 1.3 2013/02/27 17:01:12 jlec Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=true
 
-inherit autotools-utils
+inherit autotools-utils toolchain-funcs
 
 DESCRIPTION="Creating and manipulating undirected and directed graphs"
 HOMEPAGE="http://igraph.sourceforge.net/index.html"
@@ -37,6 +37,7 @@ src_prepare() {
 }
 
 src_configure() {
+	tc-export PKG_CONFIG
 	local myeconfargs=(
 		$(use_enable gmp)
 		$(use_enable debug)
