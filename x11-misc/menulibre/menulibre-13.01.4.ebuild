@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/menulibre/menulibre-13.01.4.ebuild,v 1.1 2013/02/26 20:37:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/menulibre/menulibre-13.01.4.ebuild,v 1.2 2013/02/27 05:15:55 jer Exp $
 
 EAPI=5
 
@@ -58,10 +58,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	gnome2_icon_cache_update
-	eerror
-	elog "optional dependencies:"
-	elog "  gnome-extra/yelp (view help contents)"
-	eerror
+	elog "optional dependencies: gnome-extra/yelp (view help contents)"
 }
 
 pkg_postrm() {

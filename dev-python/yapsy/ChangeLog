@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/yapsy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yapsy/ChangeLog,v 1.7 2012/11/10 10:10:06 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yapsy/ChangeLog,v 1.8 2013/02/27 05:05:08 pinkbyte Exp $
+
+*yapsy-1.10.1 (27 Feb 2013)
+
+  27 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> +yapsy-1.10.1.ebuild:
+  Version bump
 
   10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Add python herd
