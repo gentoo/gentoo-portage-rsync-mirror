@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.111 2013/02/25 17:43:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.112 2013/02/27 08:03:21 idella4 Exp $
+
+  27 Feb 2013; Ian Delaney <idella4@gentoo.org> xen-4.2.0-r2.ebuild,
+  xen-4.2.1-r2.ebuild:
+  install fixed if IUSE efi for both sub-versions, thx to lejonet and Zorry wrt
+  Bug #45897
 
   25 Feb 2013; Ian Delaney <idella4@gentoo.org> xen-4.2.0-r2.ebuild:
   Add the intended dep to support efi in 4.2.0-r2

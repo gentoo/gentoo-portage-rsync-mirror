@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.1-r2.ebuild,v 1.1 2013/02/24 08:23:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.1-r2.ebuild,v 1.2 2013/02/27 08:03:21 idella4 Exp $
 
 EAPI=5
 
@@ -113,8 +113,11 @@ src_install() {
 	local myopt
 	use debug && myopt="${myopt} debug=y"
 	use pae && myopt="${myopt} pae=y"
+
 	#The 'make install' doesn't 'mkdir -p' the subdirs
-	use efi && mkdir -p "${D}"${EFI_MOUNTPOINT}/efi/${EFI_VENDOR} || die
+	if use efi; then
+		mkdir -p "${D}"${EFI_MOUNTPOINT}/efi/${EFI_VENDOR} || die
+	fi
 
 	emake LDFLAGS="$(raw-ldflags)" DESTDIR="${D}" -C xen ${myopt} install
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwapcaplet/libwapcaplet-0.1.1.ebuild,v 1.5 2012/07/18 14:25:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwapcaplet/libwapcaplet-0.1.1.ebuild,v 1.7 2013/02/27 08:21:27 xmw Exp $
 
 EAPI=4
 
@@ -20,14 +20,16 @@ DEPEND="virtual/pkgconfig
 	test? ( dev-libs/check )"
 
 src_prepare() {
+	sed -e "/^CCOPT :=/s:=.*:=:" \
+		-i build/makefiles/Makefile.{gcc,clang} || die
 	sed -e "/^INSTALL_ITEMS/s: /lib: /$(get_libdir):g" \
-		-e "s:-Werror::g" \
 		-i Makefile || die
 	sed -e "/^libdir/s:/lib:/$(get_libdir):g" \
 		-i ${PN}.pc.in || die
-	echo "Q := " >> Makefile.config.override
-	echo "CC := $(tc-getCC)" >> Makefile.config.override
-	echo "AR := $(tc-getAR)" >> Makefile.config.override
+
+	echo "Q  := " >> Makefile.config
+	echo "CC := $(tc-getCC)" >> Makefile.config
+	echo "AR := $(tc-getAR)" >> Makefile.config
 }
 
 src_compile() {

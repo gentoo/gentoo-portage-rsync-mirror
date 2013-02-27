@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.0-r2.ebuild,v 1.2 2013/02/25 17:43:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.0-r2.ebuild,v 1.3 2013/02/27 08:03:21 idella4 Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="custom-cflags debug efi flask pae xsm"
 
-RDEPEND="efi? ( >=sys-devel/binutils-2.22[multitarget] )"
+DEPEND="efi? ( >=sys-devel/binutils-2.22[multitarget] )"
 PDEPEND="~app-emulation/xen-tools-${PV}[${PYTHON_USEDEP}]"
 
 RESTRICT="test"
@@ -122,8 +122,11 @@ src_install() {
 	local myopt
 	use debug && myopt="${myopt} debug=y"
 	use pae && myopt="${myopt} pae=y"
+
 	#The 'make install' doesn't 'mkdir -p' the subdirs
-	use efi && mkdir -p "${D}"${EFI_MOUNTPOINT}/efi/${EFI_VENDOR} || die
+	if use efi; then
+		mkdir -p "${D}"${EFI_MOUNTPOINT}/efi/${EFI_VENDOR} || die
+	fi
 
 	emake LDFLAGS="$(raw-ldflags)" DESTDIR="${D}" -C xen ${myopt} install
 }

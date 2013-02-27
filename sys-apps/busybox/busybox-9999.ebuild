@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-9999.ebuild,v 1.13 2013/02/27 05:44:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-9999.ebuild,v 1.14 2013/02/27 08:07:27 vapier Exp $
 
 # See `man savedconfig.eclass` for info on how to use USE=savedconfig.
 
@@ -231,8 +231,8 @@ src_install() {
 	fi
 	if busybox_config_enabled UDHCPC; then
 		local path=$(busybox_config_enabled UDHCPC_DEFAULT_SCRIPT)
-		insinto "${path%/*}"
-		newins examples/udhcp/simple.script "${path##*/}"
+		exeinto "${path%/*}"
+		newexe examples/udhcp/simple.script "${path##*/}"
 	fi
 	if busybox_config_enabled UDHCPD; then
 		insinto /etc
