@@ -1,6 +1,12 @@
 # ChangeLog for app-text/podofo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.32 2012/10/28 02:45:53 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.33 2013/02/27 08:45:03 zmedico Exp $
+
+*podofo-0.9.2 (27 Feb 2013)
+
+  27 Feb 2013; Zac Medico <zmedico@gentoo.org> +podofo-0.9.2.ebuild,
+  podofo-0.9.1.ebuild:
+  Handle multilib-aware freetype headers for bug #459404, and add version 0.9.2.
 
   28 Oct 2012; Zac Medico <zmedico@gentoo.org> podofo-0.9.1.ebuild:
   Add missing unistd include in test/unit/TestUtils.cpp for bug #439784.

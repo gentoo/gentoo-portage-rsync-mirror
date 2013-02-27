@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libparserutils/libparserutils-0.1.1.ebuild,v 1.4 2012/07/18 07:16:31 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libparserutils/libparserutils-0.1.1.ebuild,v 1.5 2013/02/27 08:53:48 xmw Exp $
 
-EAPI=4
+EAPI=5
 
 inherit flag-o-matic multilib toolchain-funcs
 
@@ -13,23 +13,34 @@ SRC_URI="http://download.netsurf-browser.org/libs/releases/${P}-src.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm"
-IUSE="iconv static-libs test"
+IUSE="debug iconv static-libs test"
 
 RDEPEND=""
 DEPEND="test? (	dev-lang/perl )"
 
-src_prepare() {
-	sed -e "/^INSTALL_ITEMS/s: /lib: /$(get_libdir):g" \
-		-e "s:-Werror::g" \
-		-i Makefile || die
-	sed -e "/^libdir/s:/lib:/$(get_libdir):g" \
-		-i ${PN}.pc.in || die
-	echo "Q := " >> Makefile.config.override
-	echo "CC := $(tc-getCC)" >> Makefile.config.override
-	echo "AR := $(tc-getAR)" >> Makefile.config.override
-}
+pkg_setup(){
+	netsurf_src_prepare() {
+		sed -e "/^CCOPT :=/s:=.*:=:" \
+			-e "/^CCNOOPT :=/s:=.*:=:" \
+			-e "/^CCDBG :=/s:=.*:=:" \
+			-i build/makefiles/Makefile.{gcc,clang} || die
+		sed -e "/^INSTALL_ITEMS/s: /lib: /$(get_libdir):g" \
+			-i Makefile || die
+		sed -e "/^libdir/s:/lib:/$(get_libdir):g" \
+			-i ${PN}.pc.in || die
+	}
+	netsurf_src_configure() {
+		echo "Q := " >> Makefile.config
+		echo "CC := $(tc-getCC)" >> Makefile.config
+		echo "AR := $(tc-getAR)" >> Makefile.config
+	}
 
-src_configure() {
+	netsurf_make() {
+		emake COMPONENT_TYPE=lib-shared BUILD=$(usex debug debug release) "$@"
+		use static-libs && \
+			emake COMPONENT_TYPE=lib-static BUILD=$(usex debug debug release) "$@"
+	}
+	
 	if use iconv ; then
 		append-cflags "-DWITH_ICONV_FILTER"
 	else
@@ -37,19 +48,24 @@ src_configure() {
 	fi
 }
 
+src_prepare() {
+	netsurf_src_prepare
+}
+
+src_configure() {
+	netsurf_src_configure
+}
+
 src_compile() {
-	emake COMPONENT_TYPE=lib-shared
-	use static-libs && emake COMPONENT_TYPE=lib-static
+	netsurf_make
 }
 
 src_test() {
-	emake COMPONENT_TYPE=lib-shared test
-	use static-libs && emake COMPONENT_TYPE=lib-static test
+	netsurf_make test
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX=/usr COMPONENT_TYPE=lib-shared install
-	use static-libs && \
-		emake DESTDIR="${D}" PREFIX=/usr COMPONENT_TYPE=lib-static install
+	netsurf_make DESTDIR="${D}" PREFIX=/usr install
+
 	dodoc README docs/Todo
 }
