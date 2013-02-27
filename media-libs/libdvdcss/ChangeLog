@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libdvdcss
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.107 2012/08/05 18:07:21 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.108 2013/02/27 10:42:10 flameeyes Exp $
+
+*libdvdcss-1.2.13 (27 Feb 2013)
+
+  27 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org> +libdvdcss-1.2.13.ebuild,
+  -libdvdcss-1.2.11.ebuild:
+  Version bump; simplified ebuild, even though USE=-doc is not working properly
+  (fixed in .14 to be released soon, and the proper fix takes more time to apply
+  than the buggy behaviour). Remove old.
 
   05 Aug 2012; Raúl Porcel <armin76@gentoo.org> libdvdcss-1.2.12.ebuild:
   alpha/ia64/sh/sparc stable wrt #419085
