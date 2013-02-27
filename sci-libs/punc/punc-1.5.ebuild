@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.5.ebuild,v 1.8 2013/02/21 22:05:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.5.ebuild,v 1.9 2013/02/27 15:04:35 jlec Exp $
 
 EAPI=4
 
@@ -66,7 +66,7 @@ src_configure() {
 	export FETK_LIBRARY="${fetk_lib}"
 	export FETK_LAPACK_LIBRARY="$($(tc-getPKG_CONFIG) --libs lapack)"
 	export FETK_BLAS_LIBRARY="${fetk_lib}"
-	export FETK_SUPERLU_LIBRARY="-lsuperlu"
+	export FETK_SUPERLU_LIBRARY="$($(tc-getPKG_CONFIG) --libs superlu)"
 	export FETK_ARPACK_LIBRARY="${fetk_lib}"
 	export FETK_UMFPACK_LIBRARY="${fetk_lib}"
 	export FETK_CGCODE_LIBRARY="${fetk_lib}"

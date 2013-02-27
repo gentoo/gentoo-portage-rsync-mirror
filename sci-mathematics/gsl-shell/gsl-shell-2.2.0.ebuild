@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/gsl-shell-2.2.0.ebuild,v 1.3 2013/02/21 14:12:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/gsl-shell-2.2.0.ebuild,v 1.4 2013/02/27 15:07:24 jlec Exp $
 
 EAPI=4
 
@@ -15,16 +15,17 @@ LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc fox"
 
-DEPEND="
+RDEPEND="
 	>=sci-libs/gsl-1.14
 	virtual/blas
 	>=x11-libs/agg-2.5
 	>=media-libs/freetype-2.4.10
 	sys-libs/readline
 	|| ( media-fonts/ubuntu-font-family media-fonts/freefont media-fonts/dejavu )
-	doc? ( dev-python/sphinx[latex] )
 	fox? ( x11-libs/fox:1.6 )"
-RDEPEND="${DEPEND}"
+DEPEND="${DEPEND}
+	virtual/pkgconfig
+	doc? ( dev-python/sphinx[latex] )"
 
 S="${WORKDIR}"/${PN}
 
