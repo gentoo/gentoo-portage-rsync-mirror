@@ -1,9 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.2.8.31.ebuild,v 1.1 2011/12/04 02:17:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.2.8.31.ebuild,v 1.2 2013/02/27 03:50:55 kensington Exp $
 
-EAPI="4"
-inherit autotools confutils eutils
+EAPI=5
+
+inherit autotools eutils
 
 DESCRIPTION="A DNS-Server which gets its data from a MySQL-/PostgreSQL-database"
 HOMEPAGE="http://www.mydns.pl/"
@@ -23,9 +24,7 @@ DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.12 )
 	sys-devel/bison"
 
-pkg_setup() {
-	confutils_require_one mysql postgres
-}
+REQUIRED_USE="^^ ( mysql postgres )"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.2.8.27-m4.patch"
@@ -43,7 +42,7 @@ src_configure() {
 		$(use_enable static static-build) \
 		$(use_enable status) \
 		$(use_with ssl openssl) \
-		--without-included-gettext || die
+		--without-included-gettext
 }
 
 src_install() {

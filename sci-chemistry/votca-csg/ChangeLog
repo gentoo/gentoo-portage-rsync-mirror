@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/votca-csg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.22 2012/12/26 23:23:45 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.23 2013/02/27 03:36:51 mr_bones_ Exp $
+
+  27 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> votca-csg-1.2.3.ebuild:
+  fix broken dep
 
   26 Dec 2012; Christoph Junghans <ottxor@gentoo.org> votca-csg-1.2.2.ebuild,
   votca-csg-1.2.3.ebuild:
