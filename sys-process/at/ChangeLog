@@ -1,6 +1,15 @@
 # ChangeLog for sys-process/at
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.44 2013/02/26 20:31:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.45 2013/02/27 13:06:29 polynomial-c Exp $
+
+  27 Feb 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -files/at-3.1.10.1-Makefile.patch, -at-3.1.10.2-r1.ebuild,
+  -at-3.1.10.2-r2.ebuild,
+  -files/at-3.1.10.2-configure.in-fix-PAM-automagick-dep.patch,
+  -at-3.1.13.ebuild, at-3.1.13-r1.ebuild, at-3.1.13-r2.ebuild, +files/atd.rc7,
+  -files/at.pamd:
+  Non-maintaner commit: Added rewritten init script. Removed old versions.
+  Fixed a repoman warning.
 
 *at-3.1.13-r2 (26 Feb 2013)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.13-r1.ebuild,v 1.12 2013/02/18 17:57:48 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.13-r1.ebuild,v 1.13 2013/02/27 13:06:29 polynomial-c Exp $
 
 EAPI=4
 
-inherit autotools eutils flag-o-matic pam
+inherit autotools eutils flag-o-matic pam user
 
 DESCRIPTION="Queues jobs for later execution"
 HOMEPAGE="http://packages.qa.debian.org/a/at.html"

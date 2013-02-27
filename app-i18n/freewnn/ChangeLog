@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/freewnn
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.45 2011/11/07 08:49:51 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.46 2013/02/27 13:02:05 hattya Exp $
+
+  27 Feb 2013; Akinori Hattori <hattya@gentoo.org>
+  -files/a017/FreeWnn-1.1.1-a017.dif, -files/a017/FreeWnn-lib64.patch,
+  -files/a017/FreeWnn-s390x.patch, -files/a017/FreeWnn-sighandler.patch,
+  -files/a017/FreeWnn-uum.patch, -files/freewnn-1.1.1_alpha20-gentoo.diff,
+  -freewnn-1.1.1_alpha20-r1.ebuild, -freewnn-1.1.1_alpha20.ebuild,
+  -freewnn-1.1.1_alpha21.ebuild:
+  remove old ebuilds and unused files wrt bug #342541
 
   22 Oct 2011; Naohiro Aota <naota@gentoo.org> freewnn-1.1.1_alpha21-r1.ebuild,
   +files/freewnn-1.1.1_alpha21-ldflags.patch:

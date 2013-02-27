@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.13-r2.ebuild,v 1.1 2013/02/26 20:31:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.13-r2.ebuild,v 1.2 2013/02/27 13:06:29 polynomial-c Exp $
 
 EAPI=4
 
-inherit autotools eutils flag-o-matic pam
+inherit autotools eutils flag-o-matic pam user
 
 DESCRIPTION="Queues jobs for later execution"
 HOMEPAGE="http://packages.qa.debian.org/a/at.html"
@@ -58,7 +58,7 @@ src_configure() {
 src_install() {
 	emake install IROOT="${D}" || die
 
-	newinitd "${FILESDIR}"/atd.rc6 atd
+	newinitd "${FILESDIR}"/atd.rc7 atd
 	newconfd "${FILESDIR}"/atd.confd atd
 	newpamd "${FILESDIR}"/at.pamd-3.1.13-r1 atd
 
