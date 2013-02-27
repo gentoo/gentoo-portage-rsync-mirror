@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.1.1_p2.ebuild,v 1.1 2012/12/20 01:31:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.1.1_p2.ebuild,v 1.2 2013/02/27 21:23:26 zmedico Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.mpfr.org/mpfr-${MY_PV}/${MY_P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="static-libs"
 
 RDEPEND=">=dev-libs/gmp-4.1.4-r2[static-libs?]"
@@ -43,16 +43,16 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		$(use_enable static-libs static)
 }
 
 src_install() {
 	emake install DESTDIR="${D}" || die
-	use static-libs || rm -f "${D}"/usr/$(get_libdir)/libmpfr.la
+	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/libmpfr.la
 
 	# clean up html/license install
-	pushd "${D}"/usr/share/doc/${PF} >/dev/null
+	pushd "${ED}"/usr/share/doc/${PF} >/dev/null
 	dohtml *.html && rm COPYING* *.html || die
 	popd >/dev/null
 	# some, but not all, are already installed

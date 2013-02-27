@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.43 2013/02/26 14:35:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.44 2013/02/27 21:02:59 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -172,14 +172,6 @@ _python_set_globals() {
 	PYTHON_DEPS+="dev-python/python-exec[${PYTHON_USEDEP}]"
 }
 _python_set_globals
-
-# @ECLASS-VARIABLE: DISTUTILS_JOBS
-# @DEFAULT_UNSET
-# @DESCRIPTION:
-# The number of parallel jobs to run for distutils-r1 parallel builds.
-# If unset, the job-count in ${MAKEOPTS} will be used.
-#
-# This variable is intended to be set in make.conf.
 
 # @FUNCTION: _python_validate_useflags
 # @INTERNAL
@@ -620,70 +612,14 @@ python_foreach_impl() {
 			local BUILD_DIR=${bdir%%/}-${impl}
 			export EPYTHON PYTHON
 
-			einfo "${EPYTHON}: running ${@}" \
-				| tee -a "${T}/build-${EPYTHON}.log"
-
-			# _python_parallel() does redirection internally.
-			# note: this is a hidden API to avoid writing python_foreach_impl
-			# twice. do *not* even think of using it anywhere else.
-			if [[ ${1} == _python_parallel ]]; then
-				"${@}"
-			else
-				"${@}" 2>&1 | tee -a "${T}/build-${EPYTHON}.log"
-			fi
+			einfo "${EPYTHON}: running ${@}"
+			"${@}"
 			lret=${?}
 
 			[[ ${ret} -eq 0 && ${lret} -ne 0 ]] && ret=${lret}
 		fi
 	done
 
-	return ${ret}
-}
-
-# @FUNCTION: python_parallel_foreach_impl
-# @USAGE: <command> [<args>...]
-# @DESCRIPTION:
-# Run the given command for each of the enabled Python implementations.
-# If additional parameters are passed, they will be passed through
-# to the command.
-#
-# The function will return 0 status if all invocations succeed.
-# Otherwise, the return code from first failing invocation will
-# be returned.
-#
-# For each command being run, EPYTHON, PYTHON and BUILD_DIR are set
-# locally, and the former two are exported to the command environment.
-#
-# Multiple invocations of the command will be run in parallel, up to
-# DISTUTILS_JOBS (defaulting to '-j' option argument from MAKEOPTS).
-python_parallel_foreach_impl() {
-	debug-print-function ${FUNCNAME} "${@}"
-
-	local ret lret
-
-	_python_parallel() {
-		(
-			multijob_child_init
-			"${@}" 2>&1 | tee -a "${T}/build-${EPYTHON}.log"
-			exit ${PIPESTATUS[0]}
-		) &
-		multijob_post_fork
-	}
-
-	local opts
-	if [[ ${DISTUTILS_JOBS} ]]; then
-		opts=-j${DISTUTILS_JOBS}
-	else
-		opts=${MAKEOPTS}
-	fi
-
-	multijob_init "${opts}"
-	python_foreach_impl _python_parallel "${@}"
-	ret=${?}
-	multijob_finish
-	lret=${?}
-
-	[[ ${ret} -eq 0 ]] && ret=${lret}
 	return ${ret}
 }
 
