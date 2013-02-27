@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r3.ebuild,v 1.7 2012/12/13 16:28:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r3.ebuild,v 1.8 2013/02/27 14:38:40 jlec Exp $
 
 EAPI=4
 
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-devel/flex
 	sys-apps/sed
+	virtual/pkgconfig
 	doc? (
 		app-doc/doxygen
 		media-gfx/graphviz )"

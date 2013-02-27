@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r1.ebuild,v 1.9 2011/07/17 12:50:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r1.ebuild,v 1.10 2013/02/27 14:38:40 jlec Exp $
 
 DESCRIPTION="The Massively Parallel Quantum Chemistry Program"
 HOMEPAGE="http://www.mpqc.org/"
@@ -16,9 +16,10 @@ RDEPEND="
 	virtual/lapack
 	tk? ( dev-lang/tk )"
 DEPEND="${RDEPEND}
-	sys-devel/flex
 	dev-lang/perl
+	sys-devel/flex
 	sys-apps/sed
+	virtual/pkgconfig
 	doc? (
 		app-doc/doxygen
 		media-gfx/graphviz )"

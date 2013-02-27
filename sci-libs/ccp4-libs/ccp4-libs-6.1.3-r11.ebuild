@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r11.ebuild,v 1.8 2013/01/22 17:23:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r11.ebuild,v 1.9 2013/02/27 14:44:59 jlec Exp $
 
 EAPI=3
 
@@ -49,7 +49,8 @@ RDEPEND="
 	virtual/jpeg
 	virtual/lapack
 	virtual/blas"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -192,7 +193,7 @@ src_configure() {
 
 	export SHARE_LIB="\
 		$(tc-getCC) ${userldflags} -shared -Wl,-soname,libccp4c.so -o libccp4c.so \${CORELIBOBJS} \${CGENERALOBJS} \${CUCOBJS} \${CMTZOBJS} \${CMAPOBJS} \${CSYMOBJS} -L../ccif/ -lccif $(gcc-config -L | awk -F: '{for(i=1; i<=NF; i++) printf " -L%s", $i}') -lm && \
-		$(tc-getFC) ${userldflags} -shared -Wl,-soname,libccp4f.so -o libccp4f.so \${FORTRANLOBJS} \${FINTERFACEOBJS} -L../ccif/ -lccif -L. -lccp4c $(pkg-config --libs mmdb) $(gcc-config -L | awk -F: '{for(i=1; i<=NF; i++) printf " -L%s", $i}') -lstdc++ -lgfortran -lm"
+		$(tc-getFC) ${userldflags} -shared -Wl,-soname,libccp4f.so -o libccp4f.so \${FORTRANLOBJS} \${FINTERFACEOBJS} -L../ccif/ -lccif -L. -lccp4c $($(tc-getPKG_CONFIG) --libs mmdb) $(gcc-config -L | awk -F: '{for(i=1; i<=NF; i++) printf " -L%s", $i}') -lstdc++ -lgfortran -lm"
 
 	# Can't use econf, configure rejects unknown options like --prefix
 	./configure \

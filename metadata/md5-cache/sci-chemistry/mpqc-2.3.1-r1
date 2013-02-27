@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst test unpack
-DEPEND=virtual/blas virtual/lapack tk? ( dev-lang/tk ) sys-devel/flex dev-lang/perl sys-apps/sed doc? ( app-doc/doxygen media-gfx/graphviz )
+DEPEND=virtual/blas virtual/lapack tk? ( dev-lang/tk ) dev-lang/perl sys-devel/flex sys-apps/sed virtual/pkgconfig doc? ( app-doc/doxygen media-gfx/graphviz )
 DESCRIPTION=The Massively Parallel Quantum Chemistry Program
 HOMEPAGE=http://www.mpqc.org/
 IUSE=doc threads tk
@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=virtual/blas virtual/lapack tk? ( dev-lang/tk )
 SLOT=0
 SRC_URI=mirror://sourceforge/mpqc/mpqc-2.3.1.tar.bz2
-_md5_=3724bebd28728f3effd885a1652b4300
+_md5_=d15f889ae8d9ac4356adc8e922bc2c04
