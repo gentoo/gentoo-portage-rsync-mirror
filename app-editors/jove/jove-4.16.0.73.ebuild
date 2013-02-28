@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.73.ebuild,v 1.6 2012/09/26 04:49:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.73.ebuild,v 1.7 2013/02/28 07:12:41 ulm Exp $
 
 EAPI=4
 
@@ -16,7 +16,8 @@ KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
 RDEPEND="sys-libs/ncurses"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${PN}${PV}"
 
@@ -30,7 +31,9 @@ src_prepare() {
 src_compile() {
 	tc-export CC
 
-	emake OPTFLAGS="${CFLAGS}" SYSDEFS="-DSYSVR4 -D_XOPEN_SOURCE=500"
+	emake OPTFLAGS="${CFLAGS}" \
+		SYSDEFS="-DSYSVR4 -D_XOPEN_SOURCE=500" \
+		TERMCAPLIB="$(pkg-config --libs ncurses)"
 
 	if use doc; then
 		# Full manual (*not* man page)

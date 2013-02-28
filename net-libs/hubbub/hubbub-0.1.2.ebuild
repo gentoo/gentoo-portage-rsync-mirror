@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/hubbub/hubbub-0.1.2.ebuild,v 1.3 2012/07/18 14:24:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/hubbub/hubbub-0.1.2.ebuild,v 1.4 2013/02/28 07:28:03 xmw Exp $
 
-EAPI=4
+EAPI=5
 
-inherit multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="HTML5 compliant parsing library, written in C"
 HOMEPAGE="http://www.netsurf-browser.org/projects/hubbub/"
@@ -13,7 +13,7 @@ SRC_URI="http://download.netsurf-browser.org/libs/releases/${P}-src.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm"
-IUSE="doc static-libs test"
+IUSE="debug doc static-libs test"
 
 RDEPEND="dev-libs/libparserutils"
 DEPEND="${RDEPEND}
@@ -23,35 +23,55 @@ DEPEND="${RDEPEND}
 	test? ( dev-lang/perl
 		dev-libs/json-c )"
 
-# json_object_get_string_len does not exist
-RESTRICT="test"
+RESTRICT=test
+
+pkg_setup(){
+	netsurf_src_prepare() {
+		sed -e "/^CCOPT :=/s:=.*:=:" \
+			-e "/^CCNOOPT :=/s:=.*:=:" \
+			-e "/^CCDBG :=/s:=.*:=:" \
+			-i build/makefiles/Makefile.{gcc,clang} || die
+		sed -e "/^INSTALL_ITEMS/s: /lib: /$(get_libdir):g" \
+			-i Makefile || die
+		sed -e "/^libdir/s:/lib:/$(get_libdir):g" \
+			-i ${NETSURF_PKGCONFIG:-${PN}}.pc.in || die
+	}
+	netsurf_src_configure() {
+		echo "Q := " >> Makefile.config
+		echo "CC := $(tc-getCC)" >> Makefile.config
+		echo "AR := $(tc-getAR)" >> Makefile.config
+	}
+
+	netsurf_make() {
+		emake COMPONENT_TYPE=lib-shared BUILD=$(usex debug debug release) "$@"
+		use static-libs && \
+			emake COMPONENT_TYPE=lib-static BUILD=$(usex debug debug release) "$@"
+	}
+}
 
 src_prepare() {
-	sed -e "/^INSTALL_ITEMS/s: /lib: /$(get_libdir):g" \
-		-e "s:-Werror::g" \
-		-i Makefile || die
-	sed -e "/^libdir/s:/lib:/$(get_libdir):g" \
-		-i lib${PN}.pc.in || die
-	echo "Q := " >> Makefile.config.override
-	echo "CC := $(tc-getCC)" >> Makefile.config.override
-	echo "AR := $(tc-getAR)" >> Makefile.config.override
+	NETSURF_PKGCONFIG=lib${PN}
+	netsurf_src_prepare
+
+	epatch "${FILESDIR}"/${P}-error.patch
+}
+
+src_configure() {
+	netsurf_src_configure
 }
 
 src_compile() {
-	emake COMPONENT_TYPE=lib-shared
-	use static-libs && emake COMPONENT_TYPE=lib-static
+	netsurf_make
+
 	use doc && emake docs
 }
 
 src_test() {
-	emake COMPONENT_TYPE=lib-shared test
-	use static-libs && emake COMPONENT_TYPE=lib-static test
+	netsurf_make test
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX=/usr COMPONENT_TYPE=lib-shared install
-    use static-libs && \
-		emake DESTDIR="${D}" PREFIX=/usr COMPONENT_TYPE=lib-static install
+	netsurf_make DESTDIR="${D}" PREFIX=/usr install
 
 	dodoc README docs/{Architecture,Macros,Todo,Treebuilder,Updated}
 	use doc && dohtml build/docs/html/*
