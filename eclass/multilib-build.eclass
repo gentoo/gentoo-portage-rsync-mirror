@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.5 2013/02/27 21:02:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.6 2013/02/27 23:23:11 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -32,6 +32,7 @@ inherit multilib multiprocessing
 _MULTILIB_FLAGS=(
 	abi_x86_32:x86
 	abi_x86_64:amd64
+	abi_x86_x32:x32
 )
 
 # @ECLASS-VARIABLE: MULTILIB_USEDEP

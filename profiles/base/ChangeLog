@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.509 2013/02/26 23:04:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.510 2013/02/27 23:20:53 mgorny Exp $
+
+  27 Feb 2013; Michał Górny <mgorny@gentoo.org> use.mask:
+  Mask x32 ABI in base profile. Unmasked in specific profile.
 
   26 Feb 2013; Michał Górny <mgorny@gentoo.org> package.use.force:
   Force "development" flag on emul-linux-x86-xlibs meta-package since it is no
