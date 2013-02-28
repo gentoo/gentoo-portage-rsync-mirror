@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/aria2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.87 2012/12/28 09:58:14 dev-zero Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.88 2013/02/28 08:44:09 mgorny Exp $
+
+*aria2-1.16.3 (28 Feb 2013)
+
+  28 Feb 2013; Michał Górny <mgorny@gentoo.org> +aria2-1.16.3.ebuild:
+  Version bump. Requested in bug #456094.
 
 *aria2-1.16.1 (28 Dec 2012)
 
