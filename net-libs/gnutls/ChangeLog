@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.411 2013/02/28 00:26:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.412 2013/02/28 07:34:08 flameeyes Exp $
+
+*gnutls-3.1.9-r1 (28 Feb 2013)
+
+  28 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org> +gnutls-3.1.9-r1.ebuild,
+  -gnutls-3.1.9.ebuild:
+  Revision bump to ensure that everybody is using the new spin of the tarball
+  (upstream considers it a 3.1.9.1).
 
   28 Feb 2013; Tim Harder <radhermit@gentoo.org> Manifest:
   Fix checksums for gnutls-3.1.9 (bug #459604).

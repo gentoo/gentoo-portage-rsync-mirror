@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20091011-r2.ebuild,v 1.5 2012/09/05 07:09:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20091011-r2.ebuild,v 1.6 2013/02/28 07:59:40 ulm Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.jasspa.com/release_20090909/jasspa-mesrc-${PV}.tar.gz
 		http://www.jasspa.com/release_20090909/jasspa-mehtml-${PV}.tar.gz
 		http://www.jasspa.com/release_20060909/meicons-extra.tar.gz )"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris"
 IUSE="nanoemacs X xpm"
@@ -26,6 +26,7 @@ RDEPEND="sys-libs/ncurses
 	nanoemacs? ( !app-editors/ne )"
 
 DEPEND="${RDEPEND}
+	virtual/pkgconfig
 	X? ( x11-libs/libXt
 		x11-proto/xproto )"
 
@@ -46,7 +47,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PV}-linux3.patch"
 
 	# allow for some variables to be passed to make
-	sed -i '/make/s/\$OPTIONS/& CC="$CC" COPTIMISE="$CFLAGS" LDFLAGS="$LDFLAGS" STRIP=true/' \
+	sed -i -e \
+		'/make/s/\$OPTIONS/& CC="$CC" COPTIMISE="$CFLAGS" LDFLAGS="$LDFLAGS" CONSOLE_LIBS="$CONSOLE_LIBS" STRIP=true/' \
 		build || die "sed failed"
 }
 
@@ -57,7 +59,9 @@ src_compile() {
 	use X && type=cw
 	use xpm || export XPM_INCLUDE=.		# prevent Xpm autodetection
 
-	CC="$(tc-getCC)" ./build ${me} \
+	CC="$(tc-getCC)" \
+	CONSOLE_LIBS="$(pkg-config --libs ncurses)" \
+	./build ${me} \
 		-t ${type} \
 		-p "~/.jasspa:${pkgdatadir}/site:${pkgdatadir}" \
 		|| die "build failed"
@@ -73,9 +77,7 @@ src_install() {
 		keepdir /usr/share/jasspa/site
 		insinto /usr/share
 		doins -r "${WORKDIR}/jasspa"
-		if use X; then
-			domenu "${FILESDIR}/${PN}.desktop"
-		fi
+		use X && domenu "${FILESDIR}/${PN}.desktop"
 	fi
 
 	dodoc ../faq.txt ../readme.txt ../change.log

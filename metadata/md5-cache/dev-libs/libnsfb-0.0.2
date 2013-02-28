@@ -1,9 +1,9 @@
-DEFINED_PHASES=compile install prepare test unpack
+DEFINED_PHASES=compile configure install prepare setup test unpack
 DEPEND=sdl? ( media-libs/libsdl ) vnc? ( net-libs/libvncserver ) xcb? ( x11-libs/libxcb x11-libs/xcb-util x11-libs/xcb-util-image x11-libs/xcb-util-keysyms ) virtual/pkgconfig
 DESCRIPTION=framebuffer abstraction library, written in C
 EAPI=5
 HOMEPAGE=http://www.netsurf-browser.org/projects/libnsfb/
-IUSE=sdl static-libs vnc xcb
+IUSE=debug sdl static-libs vnc xcb
 KEYWORDS=~amd64 ~arm
 LICENSE=MIT
 RDEPEND=sdl? ( media-libs/libsdl ) vnc? ( net-libs/libvncserver ) xcb? ( x11-libs/libxcb x11-libs/xcb-util x11-libs/xcb-util-image x11-libs/xcb-util-keysyms )
@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://download.netsurf-browser.org/netsurf/releases/source-full/netsurf-2.9-full-src.tar.gz
 _eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=0d22ece8f2b1a1aff23eec7387297ecd
+_md5_=dada713d31af85dc9ad4ee22f8e7f914

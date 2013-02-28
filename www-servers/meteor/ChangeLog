@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/meteor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/ChangeLog,v 1.8 2013/02/27 06:59:27 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/meteor/ChangeLog,v 1.9 2013/02/28 07:51:32 mr_bones_ Exp $
+
+  28 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> meteor-0.5.4-r1.ebuild,
+  meteor-0.5.5.ebuild, meteor-0.5.6.ebuild, meteor-9999.ebuild:
+  whitespace
 
   27 Feb 2013; Tom Wijsman <TomWij@gentoo.org> meteor-0.5.4-r1.ebuild,
   meteor-0.5.5.ebuild, meteor-0.5.6.ebuild, meteor-0.5.7.ebuild,

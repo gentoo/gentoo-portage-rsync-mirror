@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsvgtiny
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvgtiny/ChangeLog,v 1.4 2012/07/18 15:38:34 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvgtiny/ChangeLog,v 1.5 2013/02/28 07:50:00 xmw Exp $
+
+  28 Feb 2013; Michael Weber <xmw@gentoo.org> libsvgtiny-0.0.2.ebuild:
+  netsurf eclass preparation.
 
   18 Jul 2012; Michael Weber <xmw@gentoo.org>
   -libsvgtiny-0.0.2_pre20120629.ebuild:
