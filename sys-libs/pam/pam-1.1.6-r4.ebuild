@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.6-r3.ebuild,v 1.1 2013/02/27 11:08:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.6-r4.ebuild,v 1.1 2013/02/28 05:59:27 flameeyes Exp $
 
 EAPI=5
 
@@ -101,6 +101,7 @@ src_configure() {
 
 	local myeconfargs=(
 		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html
+		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--enable-securedir="${EPREFIX}"/$(get_libdir)/security
 		--enable-isadir="${EPREFIX}"/$(get_libdir)/security
 		$(use_enable nls)
