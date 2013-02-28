@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/sendmail
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.102 2012/12/27 09:59:44 eras Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.103 2013/02/28 17:54:43 zx2c4 Exp $
+
+  28 Feb 2013; Jason A. Donenfeld <zx2c4@gentoo.org> sendmail-8.14.4.ebuild,
+  sendmail-8.14.5-r1.ebuild, sendmail-8.14.5-r2.ebuild, sendmail-8.14.5.ebuild,
+  sendmail-8.14.6.ebuild:
+  Block opensmtpd.
 
 *sendmail-8.14.6 (27 Dec 2012)
 

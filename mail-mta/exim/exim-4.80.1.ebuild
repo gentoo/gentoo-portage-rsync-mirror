@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1.ebuild,v 1.10 2012/11/11 16:31:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1.ebuild,v 1.11 2013/02/28 17:49:32 zx2c4 Exp $
 
 EAPI="3"
 
@@ -63,6 +63,7 @@ RDEPEND="${COMMON_DEPEND}
 	!mail-mta/postfix
 	!mail-mta/qmail-ldap
 	!mail-mta/sendmail
+	!mail-mta/opensmtpd
 	!<mail-mta/ssmtp-2.64-r2
 	!>=mail-mta/ssmtp-2.64-r2[mta]
 	!net-mail/mailwrapper

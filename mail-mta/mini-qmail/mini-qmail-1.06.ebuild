@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.06.ebuild,v 1.10 2012/11/06 11:15:43 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.06.ebuild,v 1.11 2013/02/28 17:50:48 zx2c4 Exp $
 
 GENQMAIL_PV=20080406
 
@@ -33,6 +33,7 @@ RDEPEND="
 	!mail-mta/qmail-ldap
 	!mail-mta/sendmail
 	!mail-mta/ssmtp
+	!mail-mta/opensmtpd
 	${DEPEND}
 	"
 

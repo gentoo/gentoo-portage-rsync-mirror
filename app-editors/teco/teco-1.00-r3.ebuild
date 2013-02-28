@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r3.ebuild,v 1.13 2012/12/27 17:30:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r3.ebuild,v 1.14 2013/02/28 17:56:16 ulm Exp $
 
 EAPI=3
 
@@ -20,7 +20,8 @@ KEYWORDS="alpha ~amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solari
 IUSE="doc"
 
 RDEPEND="sys-libs/ncurses"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 S=${WORKDIR}
 
@@ -34,14 +35,17 @@ src_unpack() {
 }
 
 src_prepare() {
-	sed -e 's:\$(CC):& $(LDFLAGS):;s:-ltermcap:-lncurses:' -i Makefile || die
+	local pkg_config=$("$(tc-getPKG_CONFIG)" --libs ncurses)
+	sed -i -e "s:\$(CC):& \$(LDFLAGS):;s:-ltermcap:${pkg_config}:" \
+		Makefile || die
 	# bug 103257
 	epatch "${FILESDIR}"/${PN}-double-free.diff
 	epatch "${FILESDIR}"/${PN}-gcc4.patch
 }
 
 src_compile() {
-	append-flags -ansi -D_POSIX_SOURCE
+	append-flags -ansi
+	append-cppflags -D_POSIX_SOURCE
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 }
 

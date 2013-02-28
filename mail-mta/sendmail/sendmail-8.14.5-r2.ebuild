@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.5-r2.ebuild,v 1.2 2012/11/06 11:21:03 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.5-r2.ebuild,v 1.3 2013/02/28 17:54:43 zx2c4 Exp $
 
 EAPI="4"
 inherit eutils multilib toolchain-funcs user
@@ -34,6 +34,7 @@ RDEPEND="${DEPEND}
 	!mail-mta/nullmailer
 	!mail-mta/postfix
 	!mail-mta/qmail-ldap
+	!mail-mta/opensmtpd
 	!<mail-mta/ssmtp-2.64-r2
 	!>=mail-mta/ssmtp-2.64-r2[mta]"
 

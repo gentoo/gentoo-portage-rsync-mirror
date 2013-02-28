@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.422 2013/02/26 14:53:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.423 2013/02/28 17:53:43 zx2c4 Exp $
+
+  28 Feb 2013; Jason A. Donenfeld <zx2c4@gentoo.org> postfix-2.10.0.ebuild,
+  postfix-2.11_pre20130211.ebuild, postfix-2.9.4.ebuild, postfix-2.9.5.ebuild,
+  postfix-2.9.6.ebuild:
+  Block opensmtpd.
 
   26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> postfix-2.9.5.ebuild:
   Stable for s390, wrt bug #452590

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.05.ebuild,v 1.15 2012/11/06 11:15:43 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.05.ebuild,v 1.16 2013/02/28 17:50:48 zx2c4 Exp $
 
 inherit eutils toolchain-funcs fixheadtails user
 
@@ -26,6 +26,7 @@ RDEPEND="
 	!mail-mta/qmail-ldap
 	!mail-mta/sendmail
 	!mail-mta/ssmtp
+	!mail-mta/opensmtpd
 	"
 
 S=${WORKDIR}/netqmail-${PV}/netqmail-${PV}

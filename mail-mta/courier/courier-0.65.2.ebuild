@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.65.2.ebuild,v 1.8 2012/11/06 11:09:08 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.65.2.ebuild,v 1.9 2013/02/28 17:48:11 zx2c4 Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -38,6 +38,7 @@ DEPEND="
 	!mail-mta/qmail-ldap
 	!mail-mta/sendmail
 	!mail-mta/ssmtp
+	!mail-mta/opensmtpd
 	"
 
 RDEPEND="${DEPEND}

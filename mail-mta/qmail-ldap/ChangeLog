@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/qmail-ldap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.34 2012/11/06 11:20:22 eras Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.35 2013/02/28 17:53:55 zx2c4 Exp $
+
+  28 Feb 2013; Jason A. Donenfeld <zx2c4@gentoo.org> qmail-ldap-1.03-r8.ebuild:
+  Block opensmtpd.
 
   06 Nov 2012; Eray Aslan <eras@gentoo.org> qmail-ldap-1.03-r8.ebuild:
   mail-mta/nbsmtp is no longer in the tree - remove from DEPEND

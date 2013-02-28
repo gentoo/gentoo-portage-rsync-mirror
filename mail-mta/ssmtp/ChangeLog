@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/ssmtp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.124 2012/07/15 11:44:43 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.125 2013/02/28 17:46:26 zx2c4 Exp $
+
+  28 Feb 2013; Jason A. Donenfeld <zx2c4@gentoo.org> ssmtp-2.64-r2.ebuild:
+  Block opensmtpd.
 
   15 Jul 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/CVE-2008-3962-r2.patch, -files/ssmtp-2.61-darwin7.patch,
