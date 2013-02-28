@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.19.ebuild,v 1.2 2009/09/22 13:14:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.21.ebuild,v 1.1 2013/02/28 20:11:00 pinkbyte Exp $
 
-inherit eutils linux-info
+EAPI=2
+
+inherit eutils linux-info toolchain-funcs
 
 #The document is the same as in hsfmodem, even if it has a different URL
 MY_DOC="100498D_RM_HxF_Released.pdf"
@@ -14,7 +16,7 @@ SRC_URI="http://www.linuxant.com/drivers/hcf/full/archive/${P}full/${P}full.tar.
 
 LICENSE="Conexant"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~x86"
 IUSE="doc"
 
 DEPEND="dev-lang/perl
@@ -28,7 +30,7 @@ QA_EXECSTACK="usr/lib/hcfpcimodem/modules/imported/hcfblam-i386.O usr/lib/hcfpci
 pkg_setup() {
 	linux-info_pkg_setup
 
-	MOD_N="hcfpci"
+	local MOD_N="hcfpci"
 	# Check to see if module is inserted into kernel, otherwise, build fails
 	if [ "`lsmod | sed '/^'$MOD_N'serial/!d'`" ]; then
 		eerror
@@ -49,22 +51,19 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.20-gentoo.patch
 }
 
 src_compile() {
-	emake all || die "make failed"
+	emake CC="$(tc-getCC)" all || die "make failed"
 }
 
 pkg_preinst() {
 	local NVMDIR="${ROOT}/etc/${PN}/nvm"
 	if [ -d "${NVMDIR}" ]; then
 		einfo "Cleaning ${NVMDIR}..."
-		rm -rf "${NVMDIR}"
+		rm -rf "${NVMDIR}" || die
 		eend
 	fi
 }

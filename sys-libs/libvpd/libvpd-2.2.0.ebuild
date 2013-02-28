@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libvpd/libvpd-2.1.3.ebuild,v 1.2 2013/02/28 20:31:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libvpd/libvpd-2.2.0.ebuild,v 1.1 2013/02/28 20:31:30 ranger Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://sourceforge.net/projects/linux-diag/files/libvpd/${PV}/libvpd-${
 
 LICENSE="IBM"
 SLOT="0"
-KEYWORDS="ppc ppc64"
+KEYWORDS="~ppc ~ppc64"
 IUSE=""
 
 DEPEND=">=dev-db/sqlite-3.7.8
