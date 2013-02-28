@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.1.2.ebuild,v 1.1 2013/02/22 06:22:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.1.2.ebuild,v 1.2 2013/02/28 10:06:41 xarthisius Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="
-	sci-libs/hdf5
+	sci-libs/hdf5:=
 	dev-python/numpy[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]

@@ -1,40 +1,43 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ldapvi-1.7-r2.ebuild,v 1.1 2013/02/28 09:29:22 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ldapvi/ldapvi-1.7_p20101214.ebuild,v 1.1 2013/02/28 10:21:21 xmw Exp $
 
 EAPI=5
 
-inherit autotools eutils
+inherit autotools
 
 DESCRIPTION="Manage LDAP entries with a text editor"
 HOMEPAGE="http://www.lichteblau.com/ldapvi/"
-SRC_URI="http://www.lichteblau.com/download/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="ssl"
+IUSE="gnutls sasl"
 
-RDEPEND="sys-libs/ncurses
-	>=net-nds/openldap-2.2
+RDEPEND="
+	sys-libs/ncurses:5
+	net-nds/openldap
 	dev-libs/popt
-	>=dev-libs/glib-2
+	dev-libs/glib:2
 	sys-libs/readline
-	ssl? ( dev-libs/openssl )"
+	gnutls? ( net-libs/gnutls )
+	!gnutls? ( dev-libs/openssl:0 )
+	sasl? ( dev-libs/cyrus-sasl:2 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}+glibc-2.10.patch"
-	epatch "${FILESDIR}/${P}-vim-encoding.patch"
+S=${WORKDIR}/${P}/${PN}
 
+src_prepare() {
+	#bug 459478
 	sed -e '/^AC_SEARCH_LIBS/s:curses ncurses:curses ncurses tinfo:' \
 		-i configure.in || die
 	eautoreconf
 }
 
 src_configure() {
-	econf $(use_with ssl libcrypto openssl)
+	econf --with-libcrypto=$(usex gnutls gnutls openssl)
 }
 
 src_install() {
