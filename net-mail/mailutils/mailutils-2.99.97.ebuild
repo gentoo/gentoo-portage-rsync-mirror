@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.97.ebuild,v 1.7 2013/02/28 11:48:53 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.97.ebuild,v 1.8 2013/02/28 13:03:29 eras Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
 
-inherit eutils python
+inherit eutils python toolchain-funcs
 
 DESCRIPTION="A useful collection of mail servers, clients, and filters."
 HOMEPAGE="http://www.gnu.org/software/mailutils/mailutils.html"
@@ -61,7 +61,7 @@ src_configure() {
 	# maildir is the Gentoo default
 	# but fails tests. So set it in config file instead.
 	#econf MU_DEFAULT_SCHEME=maildir \
-	econf CURSES_LIBS="$(pkg-config --libs ncurses)" \
+	econf CURSES_LIBS="$($(tc-getPKG_CONFIG) --libs ncurses)" \
 		$(use_with berkdb berkeley-db) \
 		$(use_with bidi fribidi) \
 		$(use_enable ipv6) \
