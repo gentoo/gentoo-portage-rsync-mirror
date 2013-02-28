@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mit-krb5-appl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/ChangeLog,v 1.35 2012/12/16 19:42:35 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/ChangeLog,v 1.36 2013/02/28 13:43:44 eras Exp $
+
+  28 Feb 2013; Eray Aslan <eras@gentoo.org> +files/mit-krb5-appl-tinfo.patch,
+  mit-krb5-appl-1.0.3.ebuild:
+  Fix building with ncurses[tinfo]
 
   16 Dec 2012; Ulrich Müller <ulm@gentoo.org> mit-krb5-appl-1.0.3.ebuild:
   Fix LICENSE, see NOTICE file, bug 447296.
@@ -131,4 +135,3 @@
   30 Apr 2010; Jeremy Olexa <darkside@gentoo.org> +mit-krb5-appl-1.0.ebuild,
   +metadata.xml:
   New ebuild by Eray Aslan, bug 312481
-

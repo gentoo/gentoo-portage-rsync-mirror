@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/mit-krb5-appl-1.0.3.ebuild,v 1.9 2012/12/16 19:42:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/mit-krb5-appl-1.0.3.ebuild,v 1.10 2013/02/28 13:43:44 eras Exp $
 
 EAPI=4
 
-inherit flag-o-matic versionator eutils
+inherit autotools eutils flag-o-matic toolchain-funcs versionator
 
 MY_P=${P/mit-}
 MAJOR_MINOR="$( get_version_component_range 1-2 )"
@@ -20,7 +20,8 @@ IUSE=""
 RDEPEND=">=app-crypt/mit-krb5-1.8.0
 	sys-libs/e2fsprogs-libs
 	sys-libs/ncurses"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
@@ -29,10 +30,16 @@ src_unpack() {
 	unpack ./"${MY_P}".tar.gz
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-tinfo.patch"
+	sed -i -e "s/-lncurses/$($(tc-getPKG_CONFIG) --libs ncurses)/" configure.ac
+	eautoreconf
+}
+
 src_configure() {
 	append-flags "-I/usr/include/et"
-	append-flags -fno-strict-aliasing
-	append-flags -fno-strict-overflow
+	append-cppflags -fno-strict-aliasing
+	append-cppflags -fno-strict-overflow
 	econf
 }
 
