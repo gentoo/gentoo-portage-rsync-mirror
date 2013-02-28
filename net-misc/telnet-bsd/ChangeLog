@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/telnet-bsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.49 2013/02/28 11:03:45 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.50 2013/02/28 17:09:38 mschiff Exp $
+
+  28 Feb 2013; Marc Schiffbauer <mschiff@gentoo.org> telnet-bsd-1.2-r1.ebuild:
+  Better fix for #459560
 
   28 Feb 2013; Marc Schiffbauer <mschiff@gentoo.org> telnet-bsd-1.2-r1.ebuild:
   EAPI bump, ebuild cleanups and fix bug #459560

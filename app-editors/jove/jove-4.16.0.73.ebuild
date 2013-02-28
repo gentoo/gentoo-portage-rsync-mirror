@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.73.ebuild,v 1.7 2013/02/28 07:12:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.73.ebuild,v 1.8 2013/02/28 17:07:15 ulm Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ src_compile() {
 
 	emake OPTFLAGS="${CFLAGS}" \
 		SYSDEFS="-DSYSVR4 -D_XOPEN_SOURCE=500" \
-		TERMCAPLIB="$(pkg-config --libs ncurses)"
+		TERMCAPLIB="$("$(tc-getPKG_CONFIG)" --libs ncurses)"
 
 	if use doc; then
 		# Full manual (*not* man page)

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20091011-r2.ebuild,v 1.6 2013/02/28 07:59:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20091011-r2.ebuild,v 1.7 2013/02/28 17:10:14 ulm Exp $
 
 EAPI=4
 
@@ -60,7 +60,7 @@ src_compile() {
 	use xpm || export XPM_INCLUDE=.		# prevent Xpm autodetection
 
 	CC="$(tc-getCC)" \
-	CONSOLE_LIBS="$(pkg-config --libs ncurses)" \
+	CONSOLE_LIBS="$("$(tc-getPKG_CONFIG)" --libs ncurses)" \
 	./build ${me} \
 		-t ${type} \
 		-p "~/.jasspa:${pkgdatadir}/site:${pkgdatadir}" \

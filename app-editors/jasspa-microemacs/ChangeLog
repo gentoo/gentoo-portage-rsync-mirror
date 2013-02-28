@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jasspa-microemacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.55 2013/02/28 07:59:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.56 2013/02/28 17:10:14 ulm Exp $
+
+  28 Feb 2013; Ulrich Müller <ulm@gentoo.org>
+  jasspa-microemacs-20091011-r2.ebuild:
+  Don't call pkg-config directly, in order not to break cross compilation.
 
   28 Feb 2013; Ulrich Müller <ulm@gentoo.org>
   jasspa-microemacs-20091011-r2.ebuild:

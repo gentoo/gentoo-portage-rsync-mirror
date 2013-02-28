@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile configure install postinst
 DEPEND=sys-libs/ncurses virtual/pkgconfig
-DESCRIPTION=Micro GNU/emacs, a port from the BSDs
+DESCRIPTION=MicroGnuEmacs, a port from the BSDs
 EAPI=4
 HOMEPAGE=http://homepage.boetes.org/software/mg/
 IUSE=livecd
@@ -10,4 +10,4 @@ RDEPEND=sys-libs/ncurses
 SLOT=0
 SRC_URI=http://homepage.boetes.org/software/mg/mg-20110905.tar.gz
 _eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=fe836fc6890d7f69f0415ea83f2572b2
+_md5_=aca602fb6fdc9b336496dd9fb3ac1409
