@@ -1,9 +1,10 @@
-DEFINED_PHASES=compile install prepare unpack
-DEPEND=virtual/pkgconfig dev-vcs/git
+DEFINED_PHASES=prepare unpack
+DEPEND=media-libs/libsdl virtual/pkgconfig dev-vcs/git
 DESCRIPTION=framebuffer abstraction library, written in C
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.netsurf-browser.org/projects/librosprite/
 LICENSE=MIT
+RDEPEND=media-libs/libsdl
 SLOT=0
 _eclasses_=git-2	e92e09651292b1bef5656592364550f7	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=5abf988cb906fe0244b768687f992657
+_md5_=a3a705debfa4e7e2fd0a0361293ac090

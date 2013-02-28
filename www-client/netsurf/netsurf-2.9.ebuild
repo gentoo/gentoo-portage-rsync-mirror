@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-2.9.ebuild,v 1.4 2012/08/20 10:52:31 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-2.9.ebuild,v 1.5 2013/02/28 08:15:38 xmw Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils multilib toolchain-funcs
 
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~arm"
 IUSE="bmp fbcon freetype gif gstreamer gtk javascript jpeg mng pdf-writer png rosprite svg svgtiny webp"
 
 RDEPEND="dev-libs/libcss
+	dev-libs/libxml2
 	net-libs/hubbub
 	net-misc/curl
 	bmp? ( media-libs/libnsbmp )
@@ -55,6 +56,8 @@ src_prepare() {
 		-i Makefile.defaults || die
 	sed -e '/^#define NSFB_TOOLBAR_DEFAULT_LAYOUT/s:blfsrut:blfsrutc:' \
 		-i framebuffer/gui.c || die
+	sed -e 's/xml2-config/${PKG_CONFIG} libxml-2.0/g' \
+		-i */Makefile.target || die
 
 	epatch "${FILESDIR}"/${P}-buildsystem.patch
 	epatch "${FILESDIR}"/${P}-includes.patch
@@ -84,6 +87,7 @@ src_configure() {
 	netsurf_set Q
 	netsurf_set CC $(tc-getCC)
 	netsurf_set LD $(tc-getCC)
+	netsurf_set PKG_CONFIG $(tc-getPKG_CONFIG)
 
 	if use svg ; then
 		if use svgtiny ; then
