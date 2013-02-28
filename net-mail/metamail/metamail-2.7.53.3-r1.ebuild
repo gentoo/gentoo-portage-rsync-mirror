@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.53.3-r1.ebuild,v 1.7 2012/12/01 19:37:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.53.3-r1.ebuild,v 1.8 2013/02/28 14:08:51 eras Exp $
 
 EAPI=4
 
 WANT_AUTOCONF="2.5"
 
-inherit eutils versionator autotools
+inherit autotools eutils toolchain-funcs versionator
 
 MY_PV=$(get_version_component_range 1-2)
 DEB_PV=${MY_PV}-$(get_version_component_range 3)
@@ -43,6 +43,10 @@ src_prepare() {
 	sed -i -e '/config.h/a #include <string.h>' \
 		"${S}"/src/metamail/shared.c || die
 
+	# Fix building with ncurses[tinfo]
+	sed -i -e "s/-lncurses/$($(tc-getPKG_CONFIG) --libs ncurses)/" \
+		src/richmail/Makefile.am \
+		src/metamail/Makefile.am || die
 	eautoreconf
 	chmod +x "${S}"/configure
 }

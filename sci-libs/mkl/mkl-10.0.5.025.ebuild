@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.16 2012/10/16 20:36:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.17 2013/02/28 14:04:00 jer Exp $
 
 inherit eutils fortran-2 multilib toolchain-funcs check-reqs
 
@@ -59,7 +59,7 @@ pkg_setup() {
 
 	# Check if we have enough free diskspace to install
 	CHECKREQS_DISK_BUILD="1100M"
-	check_reqs_pkg_setup
+	check-reqs_pkg_setup
 
 	# Check and setup fortran
 	if use fortran95; then
