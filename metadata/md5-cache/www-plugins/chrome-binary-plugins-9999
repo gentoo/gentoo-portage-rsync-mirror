@@ -8,5 +8,5 @@ LICENSE=google-chrome
 RDEPEND=www-client/chromium
 RESTRICT=bindist mirror strip
 SLOT=0
-_eclasses_=unpacker	50e1227854e96469a19a63f053496328
-_md5_=2a6ea1dc785ebe09f085cee5f49b0ec1
+_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	unpacker	50e1227854e96469a19a63f053496328
+_md5_=7a9f1061babba5e66451cd5da2e616ad
