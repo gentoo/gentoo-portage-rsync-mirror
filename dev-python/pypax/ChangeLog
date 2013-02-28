@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pypax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.50 2013/02/20 15:01:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.51 2013/02/28 14:39:44 blueness Exp $
+
+*pypax-0.8.1-r1 (28 Feb 2013)
+
+  28 Feb 2013; Anthony G. Basile <blueness@gentoo.org> +pypax-0.8.1-r1.ebuild:
+  Build with python 2.5, bug #459632
 
   20 Feb 2013; Jeroen Roovers <jer@gentoo.org> pypax-0.8.1.ebuild:
   Stable for HPPA (bug #456656).
