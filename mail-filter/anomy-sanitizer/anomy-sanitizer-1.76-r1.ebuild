@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/anomy-sanitizer-1.76-r1.ebuild,v 1.5 2012/06/04 23:33:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anomy-sanitizer/anomy-sanitizer-1.76-r1.ebuild,v 1.6 2013/02/28 04:22:14 mr_bones_ Exp $
 
 EAPI=4
 inherit eutils user
@@ -72,20 +72,20 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-		chown -R sanitizer:sanitizer ${ROOT}/${SANI_WORKDIR}
-		chmod -R a-rwx,g+X,u+rwX ${ROOT}/${SANI_WORKDIR}
-		chown -R sanitizer:sanitizer ${ROOT}/${DEST}
-		chmod -R a-rwx,g+rX,u+rX ${ROOT}/${DEST}
-		chown sanitizer:sanitizer ${ROOT}/${SANI_CONFDIR}/anomy.conf
-		chmod 0640 ${ROOT}/${SANI_CONFDIR}/anomy.conf
-		chmod u+x ${ROOT}/${DEST}/bin/*.pl
-		chmod u+x ${ROOT}/${DEST}/testcases/*.sh
-		chmod u+w ${ROOT}/${DEST}/*
-		chmod u+w ${ROOT}/${DEST}/bin
-		chmod u+w ${ROOT}/${DEST}/bin/Anomy
-		chmod u+w ${ROOT}/${DEST}/bin/Anomy/Sanitizer
-		chmod u+w ${ROOT}/${DEST}/testcases
-		chmod u+w ${ROOT}/${DEST}/testcases/results.def
+		chown -R sanitizer:sanitizer "${ROOT}"/${SANI_WORKDIR}
+		chmod -R a-rwx,g+X,u+rwX "${ROOT}"/${SANI_WORKDIR}
+		chown -R sanitizer:sanitizer "${ROOT}"/${DEST}
+		chmod -R a-rwx,g+rX,u+rX "${ROOT}"/${DEST}
+		chown sanitizer:sanitizer "${ROOT}"/${SANI_CONFDIR}/anomy.conf
+		chmod 0640 "${ROOT}"/${SANI_CONFDIR}/anomy.conf
+		chmod u+x "${ROOT}"/${DEST}/bin/*.pl
+		chmod u+x "${ROOT}"/${DEST}/testcases/*.sh
+		chmod u+w "${ROOT}"/${DEST}/*
+		chmod u+w "${ROOT}"/${DEST}/bin
+		chmod u+w "${ROOT}"/${DEST}/bin/Anomy
+		chmod u+w "${ROOT}"/${DEST}/bin/Anomy/Sanitizer
+		chmod u+w "${ROOT}"/${DEST}/testcases
+		chmod u+w "${ROOT}"/${DEST}/testcases/results.def
 
 		elog ""
 		elog "There is a howto for the integration of sanitizer"
