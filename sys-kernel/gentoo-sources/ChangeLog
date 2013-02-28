@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1068 2013/02/28 19:54:00 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1069 2013/02/28 20:47:59 tomwij Exp $
+
+*gentoo-sources-3.6.11-r1 (28 Feb 2013)
+*gentoo-sources-3.5.7-r1 (28 Feb 2013)
+
+  28 Feb 2013; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.5.7-r1.ebuild,
+  +gentoo-sources-3.6.11-r1.ebuild:
+  Backport of 1500_sock-diag-out-of-bounds.patch to branches 3.5 and 3.6, bug
+  #459124. - (CVE-2013-1763) sock_diag: Fix out-of-bounds access to
+  sock_diag_handlers[]
 
 *gentoo-sources-3.0.67 (28 Feb 2013)
 *gentoo-sources-3.2.39 (28 Feb 2013)
