@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tokyotyrant
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/ChangeLog,v 1.9 2010/08/13 10:49:15 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/ChangeLog,v 1.10 2013/02/28 04:44:22 patrick Exp $
+
+*tokyotyrant-1.1.41-r1 (28 Feb 2013)
+
+  28 Feb 2013; Patrick Lauer <patrick@gentoo.org> +tokyotyrant-1.1.41-r1.ebuild,
+  -tokyotyrant-1.1.41.ebuild, files/tokyotyrant.initd:
+  Bump to force update init script #459574
 
 *tokyotyrant-1.1.41 (13 Aug 2010)
 
@@ -52,4 +58,3 @@
   +files/tokyotyrant.initd, +metadata.xml:
   Initial import of tokyotyrant. Thanks to Johan Bergstroem for the ebuild.
   Closes #288265
-

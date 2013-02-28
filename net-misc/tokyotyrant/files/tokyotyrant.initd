@@ -1,6 +1,6 @@
 #!/sbin/runscript
 
-opts="${opts} configtest reload"
+extra_commands="configtest reload"
 
 depend() {
 	need net
