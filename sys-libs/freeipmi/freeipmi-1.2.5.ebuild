@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.2.4.ebuild,v 1.1 2013/01/13 20:00:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.2.5.ebuild,v 1.1 2013/02/28 06:07:43 flameeyes Exp $
 
-EAPI=4
+EAPI=5
 
-inherit autotools eutils multilib
+inherit autotools eutils multilib autotools-utils
 
 DESCRIPTION="Provides Remote-Console and System Management Software as per IPMI v1.5/2.0"
 HOMEPAGE="http://www.gnu.org/software/freeipmi/"
@@ -37,21 +37,21 @@ src_prepare() {
 }
 
 src_configure() {
-	econf \
-		$(use_enable debug) \
-		--disable-dependency-tracking \
-		--enable-fast-install \
-		--disable-static \
-		--disable-init-scripts \
+	local myeconfargs=(
+		$(use_enable debug)
+		--disable-static
+		--disable-init-scripts
 		--localstatedir=/var
+	)
+
+	autotools-utils_src_configure
 }
 
 # There are no tests
 src_test() { :; }
 
 src_install() {
-	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}" install
-	find "${D}" -name '*.la' -delete
+	autotools-utils_src_install docdir="/usr/share/doc/${PF}"
 
 	# freeipmi by defaults install _all_ commands to /usr/sbin, but
 	# quite a few can be run remotely as standard user, so move them
