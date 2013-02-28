@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/python-djvulibre
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-djvulibre/ChangeLog,v 1.1 2013/02/28 15:57:29 pinkbyte Exp $
+
+*python-djvulibre-0.3.9 (28 Feb 2013)
+
+  28 Feb 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +python-djvulibre-0.3.9.ebuild, +metadata.xml:
+  Initial commit, wrt bug #459624
+

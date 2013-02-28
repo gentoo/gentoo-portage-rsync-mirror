@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdome2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.43 2013/02/28 00:49:41 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.44 2013/02/28 15:33:22 jer Exp $
+
+  28 Feb 2013; Jeroen Roovers <jer@gentoo.org> gdome2-0.8.1-r4.ebuild:
+  Stable for HPPA (bug #459628).
 
   28 Feb 2013; Rick Farina <zerochaos@gentoo.org> gdome2-0.8.1-r3.ebuild:
   can't build again libxml2-2.9.0 or higher, stablereq already open for -r4

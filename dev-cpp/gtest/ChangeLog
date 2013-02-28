@@ -1,5 +1,8 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.28 2013/02/24 17:54:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.29 2013/02/28 15:47:14 jer Exp $
+
+  28 Feb 2013; Jeroen Roovers <jer@gentoo.org> gtest-1.6.0-r1.ebuild:
+  Stable for HPPA (bug #456476).
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gtest-1.6.0-r1.ebuild:
   Stable for sh, wrt bug #456476

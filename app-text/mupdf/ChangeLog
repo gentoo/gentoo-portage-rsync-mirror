@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mupdf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.56 2012/11/29 13:11:52 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.57 2013/02/28 15:46:00 xmw Exp $
+
+  28 Feb 2013; Michael Weber <xmw@gentoo.org>
+  files/mupdf-9999-buildsystem.patch:
+  Update live buildsystem patch.
 
   29 Nov 2012; Anthony G. Basile <blueness@gentoo.org> mupdf-1.1.ebuild:
   stable ppc, bug #444914
