@@ -1,6 +1,15 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.440 2013/02/21 20:15:29 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.441 2013/02/28 22:45:55 idl0r Exp $
+
+*bind-9.9.2_p1-r1 (28 Feb 2013)
+*bind-9.8.4_p1 (28 Feb 2013)
+
+  28 Feb 2013; Christian Ruppert <idl0r@gentoo.org> +bind-9.8.4_p1.ebuild,
+  +bind-9.9.2_p1-r1.ebuild, files/named.cache, +files/named.conf-r6:
+  Add bind-9.8.4_p1, bug 459518. Update named.cache, bug 456396. Fix
+  named.cache/root.cache symlink and include the real file instead of the
+  symlink, bug 450406.
 
   21 Feb 2013; Christian Ruppert <idl0r@gentoo.org> -bind-9.9.1_p4.ebuild,
   -files/bind-libxml2-2.8.x.patch:
