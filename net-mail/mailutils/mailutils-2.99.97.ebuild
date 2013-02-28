@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.97.ebuild,v 1.6 2013/02/15 19:06:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.97.ebuild,v 1.7 2013/02/28 11:48:53 eras Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -41,7 +41,8 @@ RDEPEND="!mail-client/nmh
 	tcpd? ( sys-apps/tcp-wrappers )
 	tokyocabinet? ( dev-db/tokyocabinet )"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 pkg_setup() {
 	if use python; then
@@ -60,7 +61,7 @@ src_configure() {
 	# maildir is the Gentoo default
 	# but fails tests. So set it in config file instead.
 	#econf MU_DEFAULT_SCHEME=maildir \
-	econf \
+	econf CURSES_LIBS="$(pkg-config --libs ncurses)" \
 		$(use_with berkdb berkeley-db) \
 		$(use_with bidi fribidi) \
 		$(use_enable ipv6) \
