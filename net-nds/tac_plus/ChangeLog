@@ -1,6 +1,15 @@
 # ChangeLog for net-nds/tac_plus
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/ChangeLog,v 1.15 2012/12/09 10:27:58 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/ChangeLog,v 1.16 2013/02/28 21:31:37 chainsaw Exp $
+
+*tac_plus-4.0.4.19-r4 (28 Feb 2013)
+
+  28 Feb 2013; Tony Vroon <chainsaw@gentoo.org> -tac_plus-4.0.4.14.ebuild,
+  -tac_plus-4.0.4.15.ebuild, -tac_plus-4.0.4.19-r2.ebuild,
+  +tac_plus-4.0.4.19-r4.ebuild, +files/tac_plus-4.0.4.19-deansification.patch:
+  Automatic deansification was requested by the build system but not actually
+  required. Remove to ensure compatibility with automake 1.12; closes bug
+  #438638 by Diego Elio "Flameeyes" Pettenò. Remove old non-stable ebuilds.
 
   09 Dec 2012; Ulrich Müller <ulm@gentoo.org> tac_plus-4.0.4.14.ebuild,
   tac_plus-4.0.4.15.ebuild, tac_plus-4.0.4.19-r2.ebuild,

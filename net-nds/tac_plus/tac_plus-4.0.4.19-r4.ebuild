@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/tac_plus-4.0.4.19-r2.ebuild,v 1.4 2012/12/09 10:27:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/tac_plus/tac_plus-4.0.4.19-r4.ebuild,v 1.1 2013/02/28 21:31:37 chainsaw Exp $
 
-EAPI=4
+EAPI=5
 
-inherit libtool autotools eutils
+inherit autotools base libtool
 
 MY_P="tacacs+-F${PV}"
 S="${WORKDIR}/${MY_P}"
@@ -15,16 +15,21 @@ SRC_URI="ftp://ftp.shrubbery.net/pub/tac_plus/${MY_P}.tar.gz"
 
 LICENSE="HPND RSA GPL-2" # GPL-2 only for init script
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug finger maxsess tcpd skey static-libs"
 
 DEPEND="skey? ( >=sys-auth/skey-1.1.5-r1 )
-	tcpd? ( sys-apps/tcp-wrappers )"
+	tcpd? ( sys-apps/tcp-wrappers )
+	sys-libs/pam"
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-parallelmake.patch
+PATCHES=(
+"${FILESDIR}/${P}-parallelmake.patch"
+"${FILESDIR}/${P}-deansification.patch"
+)
 
+src_prepare() {
+	base_src_prepare
 	AT_M4DIR="." eautoreconf
 	elibtoolize
 }
@@ -42,9 +47,11 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
+
+	use static-libs || find "${D}" -name '*.la' -delete || die "Unable to remove spurious libtool archive"
 	dodoc CHANGES FAQ
 
-	newinitd "${FILESDIR}/tac_plus.init" tac_plus
+	newinitd "${FILESDIR}/tac_plus.init2" tac_plus
 	newconfd "${FILESDIR}/tac_plus.confd2" tac_plus
 
 	insinto /etc/tac_plus

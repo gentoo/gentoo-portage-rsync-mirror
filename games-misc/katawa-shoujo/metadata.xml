@@ -12,6 +12,9 @@
 		<name>Maks Verver</name>
 		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
+	<use>
+		<flag name="system-renpy">Use <pkg>games-engines/renpy</pkg> instead of the bundled one (experimental)</flag>
+	</use>
 	<longdescription>
 		Katawa Shoujo is a bishoujo-style visual novel set in the fictional
 		Yamaku High School for disabled children, located somewhere in modern

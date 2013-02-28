@@ -1,6 +1,12 @@
 # ChangeLog for games-misc/katawa-shoujo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/ChangeLog,v 1.1 2013/02/27 22:13:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/ChangeLog,v 1.2 2013/02/28 21:38:07 hasufell Exp $
+
+*katawa-shoujo-1.0-r1 (28 Feb 2013)
+
+  28 Feb 2013; Julian Ospald <hasufell@gentoo.org> -katawa-shoujo-1.0.ebuild,
+  +katawa-shoujo-1.0-r1.ebuild:
+  add system-renpy useflag and fix bug #459742
 
 *katawa-shoujo-1.0 (27 Feb 2013)
 

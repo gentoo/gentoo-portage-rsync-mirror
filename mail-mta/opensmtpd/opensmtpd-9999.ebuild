@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-9999.ebuild,v 1.1 2013/02/28 17:57:15 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-9999.ebuild,v 1.2 2013/02/28 21:42:43 zx2c4 Exp $
 
 EAPI=5
 
-inherit multilib user flag-o-matic eutils pam git-2
+inherit multilib user flag-o-matic eutils pam toolchain-funcs autotools git-2
 
 DESCRIPTION="Lightweight but featured SMTP daemon from OpenBSD"
 HOMEPAGE="http://www.opensmtpd.org/"
@@ -42,11 +42,12 @@ S=${WORKDIR}/${P}.xp1
 src_prepare() {
 	epatch "${FILESDIR}"/pam.patch
 	epatch "${FILESDIR}"/build-warnings.patch
+	eautoreconf
 }
 
 src_configure() {
-	./bootstrap
-	econf \
+	tc-export AR
+	AR="$(which "$AR")" econf \
 		--with-privsep-user=smtpd \
 		--with-privsep-path=/var/empty \
 		--with-sock-dir=/var/run \

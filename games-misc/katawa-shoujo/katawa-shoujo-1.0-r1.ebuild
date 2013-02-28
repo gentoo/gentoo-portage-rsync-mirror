@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.0.ebuild,v 1.1 2013/02/27 22:13:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.0-r1.ebuild,v 1.1 2013/02/28 21:38:07 hasufell Exp $
 
 EAPI=5
 
@@ -15,17 +15,28 @@ SRC_URI="http://naodesu.org/files/katawa-shoujo/${P}.tar.bz2
 LICENSE="CC-BY-NC-ND-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="doc system-renpy"
 
-RDEPEND="games-engines/renpy"
+# make system-renpy optional due to #459742 :(
+RDEPEND="system-renpy? ( games-engines/renpy )"
+
+QA_PREBUILT="${GAMES_PREFIX_OPT}/${PN}/lib/*"
 
 S="${WORKDIR}/Katawa Shoujo-linux-x86"
 
 src_install() {
-	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r game/.
-
-	games_make_wrapper ${PN} "renpy '${GAMES_DATADIR}/${PN}'"
+	if use system-renpy ; then
+		insinto "${GAMES_DATADIR}/${PN}"
+		doins -r game/.
+		games_make_wrapper ${PN} "renpy '${GAMES_DATADIR}/${PN}'"
+	else
+		insinto "${GAMES_PREFIX_OPT}"/${PN}
+		doins -r common game lib renpy "Katawa Shoujo.py" "Katawa Shoujo.sh"
+		games_make_wrapper ${PN} "./Katawa\ Shoujo.sh" "${GAMES_PREFIX_OPT}/${PN}"
+		fperms +x "${GAMES_PREFIX_OPT}/${PN}"/lib/{python,linux-x86/python.real} \
+			"${GAMES_PREFIX_OPT}/${PN}/Katawa Shoujo.sh" \
+			"${GAMES_PREFIX_OPT}/${PN}/Katawa Shoujo.py"
+	fi
 
 	local i
 	for i in 48 256; do
@@ -47,6 +58,8 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	elog "Savegames from system-renpy and the bundled version are incompatible"
+
 	games_pkg_postinst
 	gnome2_icon_cache_update
 }
