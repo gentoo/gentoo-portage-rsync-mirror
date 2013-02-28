@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1141 2013/02/24 20:39:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1142 2013/02/28 18:38:28 ago Exp $
+
+*vanilla-sources-3.8.1 (28 Feb 2013)
+*vanilla-sources-3.7.10 (28 Feb 2013)
+*vanilla-sources-3.0.67 (28 Feb 2013)
+*vanilla-sources-3.4.34 (28 Feb 2013)
+
+  28 Feb 2013; Agostino Sarubbo <ago@gentoo.org> +vanilla-sources-3.0.67.ebuild,
+  +vanilla-sources-3.4.34.ebuild, +vanilla-sources-3.7.10.ebuild,
+  +vanilla-sources-3.8.1.ebuild:
+  Version bump for the 3.0 / 3.4 / 3.7 / 3.8 series
 
   24 Feb 2013; Jeroen Roovers <jer@gentoo.org> vanilla-sources-3.7.9.ebuild:
   Stable for HPPA (bug #458602).
