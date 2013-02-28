@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.4-r1.ebuild,v 1.6 2013/02/09 17:25:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.8.ebuild,v 1.1 2013/02/28 16:04:19 polynomial-c Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ fi
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="${SRC_URI}
-	http://dev.gentoo.org/~polynomial-c/virtualbox/patchsets/virtualbox-4.2.4-patches-01.tar.xz"
+	http://dev.gentoo.org/~polynomial-c/virtualbox/patchsets/virtualbox-4.2.8-patches-01.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -179,6 +179,12 @@ src_prepare() {
 			-i "${S}"/src/apps/adpctl/VBoxNetAdpCtl.cpp \
 			|| die
 	fi
+
+	# disable USB features which need closed source VRDE
+	#sed '/^VBOX_WITH_USB_VIDEO/s@1@0@;/^VBOX_WITH_USB_CARDREADER/s@1@0@' \
+	#	-i "${S}"/Config.kmk || die
+	#sed -e '/VBOX_WITH_USB_VIDEO/d' -e '/VBOX_WITH_USB_CARDREADER/d' \
+	#	-i "${S}"/src/VBox/Main/Makefile.kmk || die
 }
 
 src_configure() {
@@ -202,6 +208,7 @@ src_configure() {
 		--with-g++="$(tc-getCXX)" \
 		--disable-kmods \
 		--disable-dbus \
+		--disable-devmapper \
 		${myconf} \
 		|| die "configure failed"
 }

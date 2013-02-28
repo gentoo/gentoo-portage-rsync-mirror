@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.197 2013/02/28 12:16:33 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.198 2013/02/28 16:07:36 cardoe Exp $
+
+  28 Feb 2013; Doug Goldstein <cardoe@gentoo.org> qemu-9999.ebuild:
+  TODO no longer exists in the top level. Items are tracked in the bug tracker
+  now
 
   28 Feb 2013; Tiziano Müller <dev-zero@gentoo.org> qemu-1.4.0.ebuild:
   Block libcacard since qemu is libcacard upstream and bundles/installs it from

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ktoblzcheck-1.39.ebuild,v 1.4 2012/08/14 11:10:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ktoblzcheck-1.39.ebuild,v 1.5 2013/02/28 16:16:22 ottxor Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
 IUSE="python"
 
 RDEPEND="app-text/recode
-	sys-apps/gawk
+	virtual/awk
 	sys-apps/grep
 	sys-apps/sed
 	|| ( net-misc/wget www-client/lynx )"

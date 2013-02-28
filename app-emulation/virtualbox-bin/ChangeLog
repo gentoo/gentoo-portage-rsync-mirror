@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.148 2013/02/14 13:27:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.149 2013/02/28 16:02:49 polynomial-c Exp $
+
+*virtualbox-bin-4.2.8 (28 Feb 2013)
+
+  28 Feb 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-bin-4.1.22-r1.ebuild, -virtualbox-bin-4.2.4.ebuild,
+  +virtualbox-bin-4.2.8.ebuild:
+  Version bump. Removed old.
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   virtualbox-bin-4.1.24-r1.ebuild:
