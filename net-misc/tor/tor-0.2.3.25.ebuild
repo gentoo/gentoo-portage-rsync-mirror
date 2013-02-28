@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.3.25.ebuild,v 1.6 2012/12/16 19:29:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.3.25.ebuild,v 1.7 2013/02/28 15:03:37 blueness Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ S="${WORKDIR}/${MY_PF}"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="amd64 arm ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="+bufferevents nat-pmp tor-hardening transparent-proxy threads upnp selinux web"
+IUSE="-bufferevents nat-pmp tor-hardening transparent-proxy threads upnp selinux web"
 
 DEPEND="dev-libs/openssl
 	sys-libs/zlib

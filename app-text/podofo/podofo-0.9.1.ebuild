@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.1.ebuild,v 1.11 2013/02/27 08:45:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.1.ebuild,v 1.12 2013/02/28 15:03:15 zmedico Exp $
 
 EAPI=2
-inherit cmake-utils flag-o-matic multilib
+inherit cmake-utils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="PoDoFo is a C++ library to work with the PDF file format."
 HOMEPAGE="http://sourceforge.net/projects/podofo/"
@@ -38,7 +38,7 @@ src_prepare() {
 
 	# Use pkg-config to find headers for bug #459404.
 	sed_args=
-	for x in $(pkg-config --cflags freetype2) ; do
+	for x in $($(tc-getPKG_CONFIG) --cflags freetype2) ; do
 		[[ ${x} == -I* ]] || continue
 		x=${x#-I}
 		if [[ -f ${x}/ft2build.h ]] ; then
