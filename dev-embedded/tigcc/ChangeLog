@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/tigcc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.23 2012/04/30 02:54:59 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.24 2013/02/28 02:00:16 mr_bones_ Exp $
+
+  28 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> -files/a68k-fix.patch,
+  -tigcc-0.95_p3.ebuild:
+  old
 
 *tigcc-0.96_beta8 (30 Apr 2012)
 
@@ -100,4 +104,3 @@
   +tigcc-0.95_beta19-r1.ebuild, +files/a68k-fix.patch:
   Initial import as per bug #51162. Ebuild by Robert Führicht
   <the_master_of_disaster@gmx.at>
-
