@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ersatz-emacs-20060515.ebuild,v 1.8 2011/05/07 21:03:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ersatz-emacs/ersatz-emacs-20060515.ebuild,v 1.9 2013/02/28 00:28:07 ulm Exp $
 
 EAPI=4
 
@@ -16,9 +16,10 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="sys-libs/ncurses"
-RDEPEND="${DEPEND}
-	!app-editors/ee"
+RDEPEND="!app-editors/ee
+	sys-libs/ncurses"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 S="${WORKDIR}"
 
@@ -31,7 +32,7 @@ src_prepare() {
 src_compile() {
 	emake CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS} -Wall" \
-		LFLAGS="${LDFLAGS} -lncurses"
+		LFLAGS="${LDFLAGS} $(pkg-config --libs ncurses)"
 }
 
 src_install() {
