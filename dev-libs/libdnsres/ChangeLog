@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdnsres
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/ChangeLog,v 1.14 2012/11/29 05:09:54 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/ChangeLog,v 1.15 2013/02/28 19:40:12 pinkbyte Exp $
+
+  28 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> libdnsres-0.1a-r2.ebuild:
+  Stable on amd64, wrt bug #456538
 
 *libdnsres-0.1a-r2 (29 Nov 2012)
 

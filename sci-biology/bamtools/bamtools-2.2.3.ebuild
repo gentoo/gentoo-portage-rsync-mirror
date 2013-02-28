@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bamtools/bamtools-2.2.3.ebuild,v 1.1 2013/01/28 08:35:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bamtools/bamtools-2.2.3.ebuild,v 1.2 2013/02/28 20:00:59 phajdan.jr Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="static-libs"
 
 DEPEND="
-	dev-libs/jsoncpp
+	=dev-libs/jsoncpp-0.5.0
 	sys-libs/zlib"
 RDEPEND="${DEPEND}"
 
