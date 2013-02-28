@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.206 2013/02/27 15:49:15 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.207 2013/02/28 22:17:52 chainsaw Exp $
+
+*apache-2.2.24 (28 Feb 2013)
+
+  28 Feb 2013; Tony Vroon <chainsaw@gentoo.org> +apache-2.2.24.ebuild:
+  Upstream security fix adds "SSLCompression" parameter to disable flawed
+  compression support and thus protect against the CRIME attack. For security
+  bug #438680 filed by Hanno Boeck.
 
 *apache-2.4.4-r1 (27 Feb 2013)
 
