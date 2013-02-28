@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.10_p1.ebuild,v 1.1 2013/01/28 19:41:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.10_p1.ebuild,v 1.2 2013/02/28 10:01:18 xarthisius Exp $
 
-EAPI=4
+EAPI=5
 
 FORTRAN_NEEDED=fortran
 MY_P=${PN}-${PV/_p/-patch}
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.hdfgroup.org/HDF5/"
 SRC_URI="http://www.hdfgroup.org/ftp/HDF5/releases/${MY_P}/src/${MY_P}.tar.bz2"
 
 LICENSE="NCSA-HDF"
-SLOT="0"
+SLOT="0/${PV%%_p*}"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="cxx debug examples fortran fortran2003 mpi static-libs szip threads zlib"
 
@@ -105,16 +105,4 @@ src_configure() {
 src_install() {
 	default
 	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
-}
-
-pkg_postinst() {
-	if has_version "sci-libs/hdf5"; then
-		ewarn "You have upgraded hdf5 from previous version and the software"
-		ewarn "using it may start complaining about mismatch between headers"
-		ewarn "and library version. You have two options:"
-		ewarn "  1. export HDF5_DISABLE_VERSION_CHECK=2 to get rid of the"
-		ewarn "     warning/error message"
-		ewarn "  2. re-emerge all reverse dependencies (type"
-		ewarn "     'emerge --depclean -pv sci-libs/hdf5' to get the list)"
-	fi
 }
