@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qemacs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.59 2012/06/15 12:27:06 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.60 2013/02/28 00:33:54 vapier Exp $
+
+  28 Feb 2013; Mike Frysinger <vapier@gentoo.org>
+  qemacs-0.4.0_pre20090420-r1.ebuild:
+  Add arm love for ChromiumOS.
 
   15 Jun 2012; Ulrich Müller <ulm@gentoo.org>
   -qemacs-0.4.0_pre20090420.ebuild:
@@ -271,4 +275,3 @@
   files/qemacs-Makefile-gentoo.patch:
   New ebuid. Submitted by Paul Totterman <paul_totterman@yahoo.com> bug #20341.
   Massaged by Matthew Kennedy <mkennedy@gentoo.org>
-

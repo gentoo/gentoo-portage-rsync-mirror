@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.1-r3.ebuild,v 1.11 2012/05/04 18:35:51 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.1-r3.ebuild,v 1.12 2013/02/28 00:49:41 zerochaos Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -20,7 +20,8 @@ IUSE=""
 RESTRICT="test"
 
 RDEPEND=">=dev-libs/glib-2.2.0
-	>=dev-libs/libxml2-2.4.26"
+	>=dev-libs/libxml2-2.4.26
+	<dev-libs/libxml2-2.9.0"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

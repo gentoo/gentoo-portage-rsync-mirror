@@ -1,20 +1,21 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.1-r1.ebuild,v 1.12 2012/10/24 18:52:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r5.ebuild,v 1.1 2013/02/28 00:35:20 ulm Exp $
 
 EAPI=4
+WANT_AUTOMAKE="none"
 
 inherit autotools elisp-common eutils flag-o-matic multilib
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
 SRC_URI="mirror://gnu/emacs/${P}.tar.bz2
-	mirror://gentoo/${P}-patches-6.tar.bz2"
+	mirror://gentoo/${P}-patches-8.tar.bz2"
 
 LICENSE="GPL-3+ FDL-1.3+ BSD HPND MIT W3C unicode PSF-2"
-SLOT="24"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
-IUSE="alsa aqua athena dbus games gconf gif gnutls gpm gsettings gtk gtk3 gzip-el hesiod imagemagick jpeg kerberos libxml2 livecd m17n-lib motif pax_kernel png selinux sound source svg tiff toolkit-scroll-bars wide-int X Xaw3d xft +xpm"
+SLOT="23"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+IUSE="alsa aqua athena dbus games gconf gif gpm gtk gzip-el hesiod jpeg kerberos livecd m17n-lib motif pax_kernel png sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm"
 REQUIRED_USE="aqua? ( !X )"
 
 RDEPEND="sys-libs/ncurses
@@ -26,22 +27,17 @@ RDEPEND="sys-libs/ncurses
 	alsa? ( media-libs/alsa-lib )
 	gpm? ( sys-libs/gpm )
 	dbus? ( sys-apps/dbus )
-	gnutls? ( net-libs/gnutls )
-	libxml2? ( >=dev-libs/libxml2-2.2.0 )
-	selinux? ( sys-libs/libselinux )
 	X? (
 		x11-libs/libXmu
 		x11-libs/libXt
 		x11-misc/xbitmaps
 		gconf? ( >=gnome-base/gconf-2.26.2 )
-		gsettings? ( >=dev-libs/glib-2.28.6 )
 		gif? ( media-libs/giflib )
 		jpeg? ( virtual/jpeg )
 		png? ( >=media-libs/libpng-1.4:0 )
 		svg? ( >=gnome-base/librsvg-2.0 )
 		tiff? ( media-libs/tiff )
 		xpm? ( x11-libs/libXpm )
-		imagemagick? ( >=media-gfx/imagemagick-6.6.2 )
 		xft? (
 			media-libs/fontconfig
 			media-libs/freetype
@@ -51,10 +47,7 @@ RDEPEND="sys-libs/ncurses
 				>=dev-libs/m17n-lib-1.5.1
 			)
 		)
-		gtk? (
-			gtk3? ( x11-libs/gtk+:3 )
-			!gtk3? ( x11-libs/gtk+:2 )
-		)
+		gtk? ( x11-libs/gtk+:2 )
 		!gtk? (
 			Xaw3d? ( x11-libs/libXaw3d )
 			!Xaw3d? (
@@ -67,14 +60,12 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	alsa? ( virtual/pkgconfig )
 	dbus? ( virtual/pkgconfig )
-	gnutls? ( virtual/pkgconfig )
-	libxml2? ( virtual/pkgconfig )
 	X? ( virtual/pkgconfig )
 	gzip-el? ( app-arch/gzip )
 	pax_kernel? ( sys-apps/paxctl )"
 
 RDEPEND="${RDEPEND}
-	!<app-editors/emacs-vcs-24.1.9999-r1"
+	!<app-editors/emacs-vcs-${PV}"
 
 EMACS_SUFFIX="emacs-${SLOT}"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
@@ -102,11 +93,13 @@ src_prepare() {
 			|| die "unable to sed configure.in"
 	fi
 
-	AT_M4DIR=m4 eautoreconf
+	eautoreconf
 }
 
 src_configure() {
 	strip-flags
+	filter-flags -fstrict-aliasing
+	append-flags $(test-flags -fno-strict-aliasing)
 
 	if use sh; then
 		replace-flags "-O[1-9]" -O0		#262359
@@ -129,12 +122,10 @@ src_configure() {
 	if use X; then
 		myconf="${myconf} --with-x --without-ns"
 		myconf="${myconf} $(use_with gconf)"
-		myconf="${myconf} $(use_with gsettings)"
 		myconf="${myconf} $(use_with toolkit-scroll-bars)"
 		myconf="${myconf} $(use_with gif) $(use_with jpeg)"
 		myconf="${myconf} $(use_with png) $(use_with svg rsvg)"
 		myconf="${myconf} $(use_with tiff) $(use_with xpm)"
-		myconf="${myconf} $(use_with imagemagick)"
 
 		if use xft; then
 			myconf="${myconf} --with-xft"
@@ -147,9 +138,12 @@ src_configure() {
 				"USE flag \"m17n-lib\" has no effect if \"xft\" is not set."
 		fi
 
+		# GTK+ is the default toolkit if USE=gtk is chosen with other
+		# possibilities. Emacs upstream thinks this should be standard
+		# policy on all distributions
 		if use gtk; then
 			einfo "Configuring to build with GIMP Toolkit (GTK+)"
-			myconf="${myconf} --with-x-toolkit=$(usev gtk3 || echo gtk)"
+			myconf="${myconf} --with-x-toolkit=gtk"
 			local f
 			for f in athena Xaw3d motif; do
 				use ${f} && ewarn "USE flag \"${f}\" ignored" \
@@ -167,9 +161,6 @@ src_configure() {
 			einfo "Configuring to build with no toolkit"
 			myconf="${myconf} --with-x-toolkit=no"
 		fi
-
-		! use gtk && use gtk3 \
-			&& ewarn "USE flag \"gtk3\" has no effect if \"gtk\" is not set."
 	elif use aqua; then
 		einfo "Configuring to build with Cocoa support"
 		myconf="${myconf} --with-ns --disable-ns-self-contained"
@@ -195,22 +186,18 @@ src_configure() {
 		--enable-locallisppath="${EPREFIX}/etc/emacs:${EPREFIX}${SITELISP}" \
 		--with-crt-dir="${crtdir}" \
 		--with-gameuser="${GAMES_USER_DED:-games}" \
-		--without-compress-info \
-		--disable-maintainer-mode \
 		$(use_with hesiod) \
 		$(use_with kerberos) $(use_with kerberos kerberos5) \
 		$(use_with gpm) \
 		$(use_with dbus) \
-		$(use_with gnutls) \
-		$(use_with libxml2 xml2) \
-		$(use_with selinux) \
-		$(use_with wide-int) \
 		${myconf}
 }
 
 src_compile() {
 	export SANDBOX_ON=0			# for the unbelievers, see Bug #131505
-	emake CC="$(tc-getCC)"
+	emake CC="$(tc-getCC)" \
+		AR="$(tc-getAR) cq" \
+		RANLIB="$(tc-getRANLIB)"
 }
 
 src_install () {
@@ -248,6 +235,7 @@ src_install () {
 		# C source you might find via find-function
 		doins src/*.{c,h,m}
 		doins -r src/{m,s}
+		rm "${ED}"/usr/share/emacs/${FULL_VERSION}/src/Makefile.c
 		rm "${ED}"/usr/share/emacs/${FULL_VERSION}/src/{m,s}/README
 		c=""
 	fi

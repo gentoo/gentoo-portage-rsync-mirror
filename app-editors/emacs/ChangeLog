@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/emacs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.540 2012/10/24 18:52:44 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.541 2013/02/28 00:35:20 ulm Exp $
+
+*emacs-24.2-r1 (28 Feb 2013)
+*emacs-23.4-r5 (28 Feb 2013)
+
+  28 Feb 2013; Ulrich Müller <ulm@gentoo.org> +emacs-23.4-r5.ebuild,
+  -emacs-24.1-r1.ebuild, emacs-24.2.ebuild, +emacs-24.2-r1.ebuild:
+  Fix failures with separate tinfo library at build and run time, bug 459458.
+  Remove old.
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> emacs-21.4-r24.ebuild,
   emacs-22.3-r10.ebuild, emacs-23.4-r4.ebuild, emacs-24.1-r1.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdome2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.42 2013/01/02 02:59:39 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.43 2013/02/28 00:49:41 zerochaos Exp $
+
+  28 Feb 2013; Rick Farina <zerochaos@gentoo.org> gdome2-0.8.1-r3.ebuild:
+  can't build again libxml2-2.9.0 or higher, stablereq already open for -r4
 
 *gdome2-0.8.1-r4 (02 Jan 2013)
 
