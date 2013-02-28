@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.30 2013/02/22 19:18:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.31 2013/02/27 23:34:03 ottxor Exp $
+
+  27 Feb 2013; Christoph Junghans <ottxor@gentoo.org> harfbuzz-0.9.12.ebuild,
+  harfbuzz-9999.ebuild:
+  added ~x86-macos, tested by me
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> harfbuzz-0.9.12.ebuild,
   harfbuzz-9999.ebuild:

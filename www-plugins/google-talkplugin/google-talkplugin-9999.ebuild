@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-9999.ebuild,v 1.11 2013/01/09 03:22:25 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-9999.ebuild,v 1.12 2013/02/27 23:38:26 ottxor Exp $
 
 EAPI=4
 
@@ -55,13 +55,7 @@ DEPEND=""
 
 INSTALL_BASE="opt/google/talkplugin"
 
-QA_EXECSTACK="${INSTALL_BASE}/GoogleTalkPlugin"
-
-QA_TEXTRELS="${INSTALL_BASE}/lib*.so"
-
-QA_FLAGS_IGNORED="${INSTALL_BASE}/lib.*so
-	${INSTALL_BASE}/lib/libCg.*so
-	${INSTALL_BASE}/GoogleTalkPlugin"
+QA_PREBUILT="${INSTALL_BASE}/*"
 
 S="${WORKDIR}"
 
@@ -104,6 +98,8 @@ src_install() {
 	#install screen-sharing stuff - bug #397463
 	insinto "/${INSTALL_BASE}"
 	doins "${INSTALL_BASE}"/windowpicker.glade
+	doins "${INSTALL_BASE}"/remoting24x24.png
+	doins -r "${INSTALL_BASE}"/data
 
 	strip-linguas ${LANGS}
 	for l in ${LINGUAS}; do
