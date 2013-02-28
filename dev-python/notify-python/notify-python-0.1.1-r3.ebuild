@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/notify-python-0.1.1-r3.ebuild,v 1.1 2013/02/20 10:44:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/notify-python-0.1.1-r3.ebuild,v 1.2 2013/02/28 16:42:27 mgorny Exp $
 
 EAPI=5
 
@@ -26,10 +26,6 @@ DEPEND="${RDEPEND}
 PATCHES=( "${FILESDIR}"/${P}-libnotify-0.7.patch )
 
 src_prepare() {
-	# Disable byte-compilation.
-	rm -f py-compile || die
-	ln -s $(type -P true) py-compile || die
-
 	# Remove the old pynotify.c to ensure it's properly regenerated #212128.
 	rm -f src/pynotify.c || die
 	autotools-utils_src_prepare
@@ -43,17 +39,18 @@ src_compile() {
 	python_foreach_impl autotools-utils_src_compile
 }
 
+src_test() {
+	python_foreach_impl autotools-utils_src_test
+}
+
 src_install() {
-	installation() {
-		autotools-utils_src_install
-		python_optimize "${D}"$(python_get_sitedir)
-		prune_libtool_files --all
-	}
-	python_foreach_impl installation
+	python_foreach_impl autotools-utils_src_install
+	prune_libtool_files --all
 
 	# Requested from bug 351879.
 	if use examples; then
-		insinto /usr/share/doc/${PF}/examples
-		doins tests/*.{png,py}
+		docinto examples
+		dodoc tests/*.{png,py}
+		docompress -x /usr/share/doc/${PF}/examples
 	fi
 }
