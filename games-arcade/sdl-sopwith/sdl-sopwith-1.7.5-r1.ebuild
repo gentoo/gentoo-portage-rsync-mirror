@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/sdl-sopwith-1.7.5-r1.ebuild,v 1.4 2013/02/25 12:17:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/sdl-sopwith-1.7.5-r1.ebuild,v 1.5 2013/02/28 03:12:58 mr_bones_ Exp $
 
-EAPI=2
-inherit eutils autotools games
+EAPI=5
+inherit eutils autotools toolchain-funcs games
 
 MY_P=${P/sdl-/}
 DESCRIPTION="Port of the classic Sopwith game using LibSDL"
@@ -27,6 +27,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-video-fix.patch
 	eautoreconf
 }
+
+src_compile() {
+	emake AR="$(tc-getAR)"
+}
+
 
 src_install() {
 	emake DESTDIR="${D}" install || die
