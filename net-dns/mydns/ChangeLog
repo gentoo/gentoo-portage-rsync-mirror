@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/mydns
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.41 2013/02/27 13:47:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.42 2013/03/01 12:13:32 ago Exp $
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> mydns-1.2.8.31.ebuild:
+  Stable for ia64, wrt bug #426684
 
   27 Feb 2013; Agostino Sarubbo <ago@gentoo.org> mydns-1.2.8.31.ebuild:
   Stable for x86, wrt bug #426684

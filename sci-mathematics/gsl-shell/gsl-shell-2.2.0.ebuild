@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/gsl-shell-2.2.0.ebuild,v 1.4 2013/02/27 15:07:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gsl-shell/gsl-shell-2.2.0.ebuild,v 1.5 2013/03/01 12:18:24 jlec Exp $
 
 EAPI=4
 
@@ -30,7 +30,12 @@ DEPEND="${DEPEND}
 S="${WORKDIR}"/${PN}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-font.patch "${FILESDIR}"/${PN}-strip.patch "${FILESDIR}"/${PN}-usr.patch
+	tc-export PKG_CONFIG
+	epatch \
+		"${FILESDIR}"/${PN}-font.patch \
+		"${FILESDIR}"/${PN}-strip.patch \
+		"${FILESDIR}"/${PN}-usr.patch \
+		"${FILESDIR}"/${P}-pkg-config.patch
 	use fox || epatch "${FILESDIR}"/${PN}-nogui.patch
 }
 
@@ -40,10 +45,10 @@ src_compile() {
 	if use fox; then
 		local FOX_INCLUDES=`WANT_FOX=1.6 fox-config --cflags`
 		local FOX_LIBS=`WANT_FOX=1.6 fox-config --libs`
-		emake -j1 CFLAGS="${CFLAGS}" GSL_LIBS="-lgsl ${BLAS}" \
+		emake -j1 CFLAGS="${CFLAGS}" GSL_LIBS="$($(tc-getPKG_CONFIG) --libs gsl) ${BLAS}" \
 			FOX_INCLUDES="${FOX_INCLUDES}" FOX_LIBS="${FOX_LIBS}"
 	else
-		emake -j1 CFLAGS="${CFLAGS}" GSL_LIBS="-lgsl ${BLAS}"
+		emake -j1 CFLAGS="${CFLAGS}" GSL_LIBS="$($(tc-getPKG_CONFIG) --libs gsl) ${BLAS}"
 	fi
 
 	if use doc; then

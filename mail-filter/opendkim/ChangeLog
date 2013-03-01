@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.62 2013/03/01 10:58:25 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.63 2013/03/01 12:08:19 eras Exp $
+
+  01 Mar 2013; Eray Aslan <eras@gentoo.org> metadata.xml:
+  Remove USE flag description
 
 *opendkim-2.8.0-r1 (01 Mar 2013)
 

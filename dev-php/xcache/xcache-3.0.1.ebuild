@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xcache/xcache-3.0.0.ebuild,v 1.2 2013/03/01 12:21:36 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xcache/xcache-3.0.1.ebuild,v 1.1 2013/03/01 12:21:36 olemarkus Exp $
 
-EAPI="5"
+EAPI="4"
 PHP_EXT_NAME="xcache"
 PHP_EXT_INI="yes"
 PHPSAPILIST="apache2 cgi fpm"
