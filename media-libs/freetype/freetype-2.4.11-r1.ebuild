@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11-r1.ebuild,v 1.2 2013/02/26 14:40:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11-r1.ebuild,v 1.3 2013/02/28 23:17:21 mgorny Exp $
 
 EAPI=5
 
@@ -113,12 +113,12 @@ src_compile() {
 
 	if use utils; then
 		einfo "Building utils"
-		cd "${WORKDIR}/ft2demos-${PV}" || die
 		# fix for Prefix, bug #339334
-		# XXX: replace ${ARCH} assumption when bug #459210 is fixed
-		emake X11_PATH="${EPREFIX}/usr/$(get_libdir)" \
-			TOP_DIR="${S}" \
-			{BUILD_DIR,OBJ_DIR}="${S%%/}-${ARCH}"
+		# XXX: replace ${ARCH} hack when a proper solution is available
+		BUILD_DIR="${S}-${ARCH}" \
+		autotools-utils_src_compile \
+			X11_PATH="${EPREFIX}/usr/$(get_libdir)" \
+			FT2DEMOS=1 TOP_DIR_2="${WORKDIR}/ft2demos-${PV}"
 	fi
 }
 
