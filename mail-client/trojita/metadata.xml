@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<herd>qt</herd>
+<herd>kde</herd>
 <maintainer>
 	<email>jkt@gentoo.org</email>
 	<name>Jan Kundrát</name>
 </maintainer>
-<herd>qt</herd>
 </pkgmetadata>

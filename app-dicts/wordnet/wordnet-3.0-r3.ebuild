@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-3.0-r3.ebuild,v 1.5 2012/05/31 03:36:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-3.0-r3.ebuild,v 1.6 2013/03/01 13:15:19 jlec Exp $
 
 EAPI="3"
 
@@ -34,6 +34,8 @@ src_prepare() {
 	epatch "${WORKDIR}"/${P}-CVE-2008-3908.patch #211491
 	epatch "${WORKDIR}"/${P}-CVE-2008-2149.patch #211491
 
+	epatch "${FILESDIR}"/${P}-tcl8.6.patch
+
 	# Don't install all the extra docs (html, pdf, ps) without doc USE flag.
 	use doc || sed -i -e "s:SUBDIRS =.*:SUBDIRS = man:" doc/Makefile.am
 
@@ -47,7 +49,7 @@ src_prepare() {
 }
 
 src_configure() {
-	append-flags -DUNIX -I"${T}"/usr/include
+	append-cppflags -DUNIX -I"${T}"/usr/include
 
 	PLATFORM=linux WN_ROOT="${T}/usr" \
 	WN_DICTDIR="${T}/usr/share/wordnet/dict" \
