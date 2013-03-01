@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.840 2013/02/23 14:44:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.841 2013/03/01 16:33:04 jer Exp $
+
+  01 Mar 2013; Jeroen Roovers <jer@gentoo.org> udev-197-r8.ebuild:
+  Stable for HPPA (bug #457568).
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> udev-197-r8.ebuild:
   Stable for alpha, wrt bug #457568

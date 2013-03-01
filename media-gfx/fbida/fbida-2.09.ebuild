@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09.ebuild,v 1.11 2013/03/01 12:38:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09.ebuild,v 1.12 2013/03/01 16:37:10 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://www.kraxel.org/releases/${PN}/${P}.tar.gz
 	mirror://gentoo/ida.png.bz2" #370901
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ppc ppc64 sh sparc x86"
 IUSE="curl fbcon gif imagemagick lirc pdf png scanner tiff X"
 
 RDEPEND="
