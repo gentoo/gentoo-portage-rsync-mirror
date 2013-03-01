@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setproctitle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setproctitle/ChangeLog,v 1.24 2013/02/15 16:52:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setproctitle/ChangeLog,v 1.25 2013/03/01 09:12:16 swegener Exp $
+
+  01 Mar 2013; Sven Wegener <swegener@gentoo.org> setproctitle-1.1.6.ebuild:
+  Don't build for python 2.4.
 
 *setproctitle-1.1.6-r1 (15 Feb 2013)
 
