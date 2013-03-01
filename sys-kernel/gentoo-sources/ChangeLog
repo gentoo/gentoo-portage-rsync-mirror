@@ -1,6 +1,28 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1069 2013/02/28 20:47:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1071 2013/03/01 00:26:52 tomwij Exp $
+
+  01 Mar 2013; Tom Wijsman <TomWij@gentoo.org> -gentoo-sources-3.4.24.ebuild,
+  -gentoo-sources-3.4.32.ebuild, -gentoo-sources-3.7.2.ebuild,
+  -gentoo-sources-3.7.3.ebuild, -gentoo-sources-3.7.4.ebuild,
+  -gentoo-sources-3.7.6.ebuild, -gentoo-sources-3.7.7.ebuild,
+  -gentoo-sources-3.7.8.ebuild, -gentoo-sources-3.8.0.ebuild,
+  gentoo-sources-3.4.9.ebuild, gentoo-sources-3.6.11.ebuild,
+  gentoo-sources-3.7.9.ebuild:
+  Dropped testing keywords on stabilized packages as well as remove packages
+  affected by bug #459124, other keywords will dropped and eventually the
+  remaining affecting packages will be removed as newer packages go through fast
+  stabilization.
+
+*gentoo-sources-3.8.1 (01 Mar 2013)
+*gentoo-sources-3.7.10 (01 Mar 2013)
+
+  01 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.7.10.ebuild,
+  +gentoo-sources-3.8.1.ebuild:
+  Linux patches 3.7.10 and 3.8.1. Updated fbcondecor-0.9.6 to properly work with
+  the 3.7 and 3.8 kernel branches according to bug #459060 thanks to Robert
+  Cabrera. Modified kcopy patch according to bug #458426 thanks to Yvan Royon,
+  since that was focused on 3.7 I have made that apply cleanly in 3.8 as well.
 
 *gentoo-sources-3.6.11-r1 (28 Feb 2013)
 *gentoo-sources-3.5.7-r1 (28 Feb 2013)
