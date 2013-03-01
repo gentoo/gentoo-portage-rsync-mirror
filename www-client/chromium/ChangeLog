@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.819 2013/03/01 01:01:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.820 2013/03/01 02:15:33 floppym Exp $
+
+*chromium-26.0.1410.19 (01 Mar 2013)
+
+  01 Mar 2013; Mike Gilbert <floppym@gentoo.org> +chromium-26.0.1410.19.ebuild,
+  +files/chromium-launcher-r3.sh, -chromium-26.0.1410.5.ebuild,
+  chromium-27.0.1423.0.ebuild, chromium-9999-r1.ebuild, files/chromium.default:
+  Beta channel bump. Modify chromium-launcher to source all files in
+  /etc/chromium, bug 459734.
 
   01 Mar 2013; Mike Gilbert <floppym@gentoo.org>
   -files/chromium-alignment-r0.patch, -files/chromium-arm-r0.patch,
