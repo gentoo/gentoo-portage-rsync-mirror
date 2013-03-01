@@ -1,0 +1,7 @@
+*pyzy-0.1.0 (01 Mar 2013)
+
+  01 Mar 2013; Naohiro Aota <naota@gentoo.org>
+  +files/pyzy-dont-download-dictionary-file.patch, +metadata.xml,
+  +pyzy-0.1.0.ebuild:
+  New package app-i18n/pyzy. Written by  Dennis 'dlan' Lan
+  <dennis.yxun@gmail.com>
