@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/lft
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.39 2013/03/01 09:55:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.40 2013/03/01 15:01:47 ago Exp $
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> lft-3.35.ebuild:
+  Stable for ppc, wrt bug #459740
 
   01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> lft-3.35.ebuild:
   Stable for x86, wrt bug #459740
