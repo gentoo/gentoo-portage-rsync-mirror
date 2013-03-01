@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.146 2013/02/28 16:04:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.147 2013/03/01 10:05:49 polynomial-c Exp $
+
+  01 Mar 2013; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.2.8.ebuild:
+  Upstream replaced the source tarball once again (bug #459842). Removed
+  useless code from ebuild.
 
 *virtualbox-4.2.8 (28 Feb 2013)
 

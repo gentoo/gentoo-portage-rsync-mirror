@@ -1,27 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.8.ebuild,v 1.1 2013/02/28 16:04:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.8.ebuild,v 1.2 2013/03/01 10:05:49 polynomial-c Exp $
 
 EAPI=4
 
 inherit eutils fdo-mime flag-o-matic linux-info multilib pax-utils python qt4-r2 toolchain-funcs java-pkg-opt-2 udev
 
-if [[ ${PV} == "9999" ]] ; then
-	# XXX: should finish merging the -9999 ebuild into this one ...
-	ESVN_REPO_URI="http://www.virtualbox.org/svn/vbox/trunk"
-	inherit linux-mod subversion
-else
-	MY_PV="${PV/beta/BETA}"
-	MY_PV="${MY_PV/rc/RC}"
-	MY_P=VirtualBox-${MY_PV}
-	SRC_URI="http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}.tar.bz2"
-	S="${WORKDIR}/${MY_P}"
-fi
+MY_PV="${PV/beta/BETA}"
+MY_PV="${MY_PV/rc/RC}"
+MY_P=VirtualBox-${MY_PV}
+SRC_URI="http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}.tar.bz2
+	http://dev.gentoo.org/~polynomial-c/virtualbox/patchsets/virtualbox-4.2.2-patches-01.tar.xz"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="${SRC_URI}
-	http://dev.gentoo.org/~polynomial-c/virtualbox/patchsets/virtualbox-4.2.8-patches-01.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -179,12 +172,6 @@ src_prepare() {
 			-i "${S}"/src/apps/adpctl/VBoxNetAdpCtl.cpp \
 			|| die
 	fi
-
-	# disable USB features which need closed source VRDE
-	#sed '/^VBOX_WITH_USB_VIDEO/s@1@0@;/^VBOX_WITH_USB_CARDREADER/s@1@0@' \
-	#	-i "${S}"/Config.kmk || die
-	#sed -e '/VBOX_WITH_USB_VIDEO/d' -e '/VBOX_WITH_USB_CARDREADER/d' \
-	#	-i "${S}"/src/VBox/Main/Makefile.kmk || die
 }
 
 src_configure() {

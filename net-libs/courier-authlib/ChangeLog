@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.144 2013/02/25 10:53:32 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.145 2013/03/01 10:28:40 eras Exp $
+
+*courier-authlib-0.65.0-r3 (01 Mar 2013)
+
+  01 Mar 2013; Eray Aslan <eras@gentoo.org> +courier-authlib-0.65.0-r3.ebuild,
+  files/courier-authlib-0.65.0-sqlite.patch:
+  Fix building with -sqlite mysql - bug #459772
 
   25 Feb 2013; Eray Aslan <eras@gentoo.org> courier-authlib-0.65.0-r2.ebuild:
   Do not require mysql for sqlite
