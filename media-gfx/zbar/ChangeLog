@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/zbar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/ChangeLog,v 1.7 2013/02/28 11:02:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/ChangeLog,v 1.8 2013/03/01 08:00:15 xmw Exp $
+
+  01 Mar 2013; Michael Weber <xmw@gentoo.org> zbar-0.10-r2.ebuild:
+  Fix imagemagick dependency.
 
 *zbar-0.10-r2 (28 Feb 2013)
 

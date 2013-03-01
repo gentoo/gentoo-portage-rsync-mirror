@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/elvis
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.49 2012/09/09 17:10:12 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.50 2013/03/01 07:42:26 ssuominen Exp $
+
+  01 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> elvis-2.2.0-r4.ebuild:
+  Move ./configure from src_compile() to src_configure(). Fix building with
+  sys-libs/ncurses[tinfo] wrt #459654 by Diego Elio Pettenò
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> elvis-2.2.0-r3.ebuild,
   elvis-2.2.0-r4.ebuild:

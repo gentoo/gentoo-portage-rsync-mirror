@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/zbar-0.10-r2.ebuild,v 1.1 2013/02/28 11:02:42 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/zbar-0.10-r2.ebuild,v 1.2 2013/03/01 08:00:15 xmw Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.6"
@@ -17,7 +17,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gtk imagemagick jpeg python qt4 static-libs +threads v4l X xv"
 
 RDEPEND="gtk? ( =dev-libs/glib-2* x11-libs/gtk+:2 )
-	imagemagick? ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
+	imagemagick? ( 
+		|| ( media-gfx/imagemagick 
+		media-gfx/graphicsmagick[imagemagick] ) )
 	jpeg? ( virtual/jpeg )
 	python? ( gtk? ( >=dev-python/pygtk-2 ) )
 	qt4? ( x11-libs/qt-core:4 x11-libs/qt-gui:4 )

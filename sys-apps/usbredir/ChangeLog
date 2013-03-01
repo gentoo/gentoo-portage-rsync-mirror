@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/usbredir
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.29 2013/02/02 23:09:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.30 2013/03/01 07:37:01 dev-zero Exp $
+
+*usbredir-9999 (01 Mar 2013)
+
+  01 Mar 2013; Tiziano Müller <dev-zero@gentoo.org> +usbredir-9999.ebuild:
+  Add live ebuild as discussed with Cardoe ages ago.
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> usbredir-0.4.4.ebuild,
   usbredir-0.6.ebuild:
