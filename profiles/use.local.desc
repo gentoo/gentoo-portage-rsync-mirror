@@ -1057,6 +1057,7 @@ dev-db/sqlite:unlock-notify - Adds API for notifications when a database is unlo
 dev-db/unixODBC:minimal - Disable bundled drivers and extra libraries (most users don't need these)
 dev-db/unixODBC:odbcmanual - Administrator, Internal Structure, Programmer and User documentation
 dev-embedded/avrdude:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
+dev-embedded/libftdi:tools - build ftdi_eeprom helper tool
 dev-embedded/msp430-binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 dev-embedded/msp430-binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 dev-embedded/msp430-gcc:fixed-point - Enable fixed-point arithmetic support for MIPS targets in gcc (Warning: significantly increases compile time!)

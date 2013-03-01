@@ -1,6 +1,12 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.441 2013/02/26 14:50:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.442 2013/03/01 08:18:17 eras Exp $
+
+*clamav-0.97.6-r3 (01 Mar 2013)
+
+  01 Mar 2013; Eray Aslan <eras@gentoo.org> +clamav-0.97.6-r3.ebuild,
+  +files/clamd.initd-r3:
+  Be nice to gentoo/bsd - bug #459686
 
   26 Feb 2013; Jeroen Roovers <jer@gentoo.org> clamav-0.97.6-r2.ebuild:
   Stable for HPPA (bug #457144).

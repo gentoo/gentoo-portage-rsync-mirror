@@ -30,16 +30,3 @@ index 66eb35f..65f4639 100644
  
  # export API headers
  include(../ExportHeader.cmake)
-diff --git a/src/toolkit/bamtools_filter.cpp b/src/toolkit/bamtools_filter.cpp
-index 1189981..cf70199 100644
---- a/src/toolkit/bamtools_filter.cpp
-+++ b/src/toolkit/bamtools_filter.cpp
-@@ -16,7 +16,7 @@
- #include <utils/bamtools_utilities.h>
- using namespace BamTools;
- 
--#include <jsoncpp/json.h>
-+#include <json/json.h>
- using namespace Json;
- 
- #include <cstdio>

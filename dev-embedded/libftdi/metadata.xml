@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dev-embedded</herd>
+<use>
+ <flag name='tools'>build ftdi_eeprom helper tool</flag>
+</use>
 </pkgmetadata>

@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/bamtools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bamtools/ChangeLog,v 1.5 2013/02/28 20:00:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bamtools/ChangeLog,v 1.6 2013/03/01 08:16:21 jlec Exp $
+
+  01 Mar 2013; Justin Lecher <jlec@gentoo.org> bamtools-2.2.3.ebuild,
+  files/bamtools-2.2.3-unbundle.patch:
+  Update script and correct dep on jsoncpp
 
   28 Feb 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> bamtools-2.2.3.ebuild:
   Update jsoncpp dependency, bug #452234.

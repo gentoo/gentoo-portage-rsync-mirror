@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/libftdi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.62 2012/09/11 06:36:29 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.63 2013/03/01 08:16:55 vapier Exp $
+
+*libftdi-1.0 (01 Mar 2013)
+
+  01 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/libftdi-1.0-staticlibs.patch, +libftdi-1.0.ebuild,
+  -libftdi-9999.1.0.ebuild, libftdi-9999.ebuild, metadata.xml:
+  Version bump.
 
   11 Sep 2012; Mike Frysinger <vapier@gentoo.org> libftdi-0.20.ebuild:
   Do not clobber LIB_SUFFIX setting common code setup.
