@@ -1,6 +1,19 @@
 # ChangeLog for media-video/dvdstyler
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.55 2012/12/11 16:45:35 axs Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.58 2013/03/01 16:00:39 ssuominen Exp $
+
+  01 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> -dvdstyler-2.1.ebuild,
+  -dvdstyler-2.3.4.ebuild:
+  old
+
+*dvdstyler-2.4.1 (01 Mar 2013)
+
+  01 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> +dvdstyler-2.4.1.ebuild,
+  metadata.xml:
+  Version bump wrt #445544 by Fabio Bonfante. Validate dvdstyler.desktop and
+  change USE="gnome" to USE="deprecated" since libgnomeui-2 is very old and not
+  something we want by default for anyone. Rename USE="kernel_linux" to
+  USE="udev" for eg. mdev users.
 
   11 Dec 2012; Ian Stakenvicius <axs@gentoo.org> dvdstyler-2.1.ebuild,
   dvdstyler-2.3.4.ebuild:

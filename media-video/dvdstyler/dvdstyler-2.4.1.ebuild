@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-2.3.4.ebuild,v 1.2 2012/12/11 16:45:35 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-2.4.1.ebuild,v 1.2 2013/03/01 16:00:39 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 MY_P=${P/dvds/DVDS}
 WX_GTK_VER=2.8
@@ -16,37 +16,44 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug gnome kernel_linux"
+IUSE="debug deprecated +udev"
 
 COMMON_DEPEND=">=app-cdr/dvd+rw-tools-7.1
-	>=media-libs/libexif-0.6.16
-	>=media-libs/wxsvg-1.1.9
-	>=media-video/dvdauthor-0.7.0
+	media-libs/libexif
+	>=media-libs/wxsvg-1.1.13
+	>=media-video/dvdauthor-0.7
 	>=media-video/xine-ui-0.99.1
 	virtual/cdrtools
 	>=virtual/ffmpeg-0.10[encode]
 	virtual/jpeg
 	>=x11-libs/wxGTK-2.8.7:2.8[gstreamer,X]
-	gnome? ( >=gnome-base/libgnomeui-2 )
-	kernel_linux? ( virtual/udev )"
+	deprecated? ( >=gnome-base/libgnomeui-2 )
+	udev? ( virtual/udev )"
 RDEPEND="${COMMON_DEPEND}
 	>=app-cdr/dvdisaster-0.72.2"
 DEPEND="${COMMON_DEPEND}
 	virtual/yacc
 	app-arch/zip
 	app-text/xmlto
-	virtual/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	use gnome || sed -i -e '/PKG_CONFIG/s:libgnomeui-2.0:dIsAbLeAuToMaGiC&:' configure
+	# libgnomeui-2 is very old, disable for now until someone complains
+	use deprecated || sed -i -e '/PKG_CONFIG/s:libgnomeui-2.0:dIsAbLeAuToMaGiC&:' configure
 
 	# rmdir: failed to remove `tempfoobar': Directory not empty
 	sed -i -e '/rmdir "$$t"/d' docs/Makefile.in || die
 
 	sed -i -e 's:@LIBS@:& -ljpeg:' wxVillaLib/Makefile.in || die #367863
+
+	sed -i \
+		-e '/Icon/s:.png::' \
+		-e '/^Encoding/d' \
+		-e '/Categories/s:Application;::' \
+		data/dvdstyler.desktop || die
 }
 
 src_configure() {
