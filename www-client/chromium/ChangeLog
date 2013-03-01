@@ -1,6 +1,21 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.818 2013/02/28 20:03:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.819 2013/03/01 01:01:48 floppym Exp $
+
+  01 Mar 2013; Mike Gilbert <floppym@gentoo.org>
+  -files/chromium-alignment-r0.patch, -files/chromium-arm-r0.patch,
+  -files/chromium-bison-2.6-r0.patch, -files/chromium-dbus-glib-r0.patch,
+  -files/chromium-expat-r0.patch, -files/chromium-glib-r0.patch,
+  -files/chromium-gyp-settings-r0.patch,
+  -files/chromium-libyuv-system-libjpeg-r0.patch,
+  -files/chromium-media-no-sse-r0.patch,
+  -files/chromium-revert-jpeg-swizzle-r2.patch,
+  -files/chromium-selinux-r0.patch, -files/chromium-svnversion-r0.patch,
+  -files/chromium-system-icu-r0.patch, -files/chromium-system-nspr-r0.patch,
+  -files/chromium-system-speex-r0.patch, -files/chromium-tcmalloc-r0.patch,
+  -files/chromium-tcmalloc-r1.patch, -files/chromium-unistd-r0.patch,
+  -files/chromium-webkit-zlib-r0.patch, -files/chromium-zlib-r0.patch:
+  Remove obsolete patches.
 
   28 Feb 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-26.0.1410.5.ebuild, chromium-26.0.1410.12.ebuild,

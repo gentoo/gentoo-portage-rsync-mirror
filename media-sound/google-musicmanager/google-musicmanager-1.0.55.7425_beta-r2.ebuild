@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.55.7425_beta-r2.ebuild,v 1.1 2013/02/26 03:27:46 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.55.7425_beta-r2.ebuild,v 1.2 2013/03/01 01:19:56 ottxor Exp $
 
 EAPI=5
 
@@ -60,8 +60,8 @@ pkg_nofetch() {
 }
 
 pkg_setup() {
-	if type -p ifconfig > /dev/null && ! ifconfig | grep -q "^eth[0-9]" ; then
-		ewarn "${PN} needs at least one network interface named eth[0-9] (bug #455896)"
+	if type -p ifconfig > /dev/null && ! ifconfig | grep -Eq "^(eth|wlan)" ; then
+		ewarn "${PN} needs at least one network interface named eth* or wlan* (bug #455896 and bug #459816)"
 	fi
 }
 
