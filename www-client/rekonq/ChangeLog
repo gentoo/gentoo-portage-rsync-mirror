@@ -1,6 +1,12 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.57 2013/01/28 15:57:41 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.59 2013/03/01 19:35:27 ago Exp $
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> rekonq-2.1.ebuild:
+  Stable for x86, wrt bug #459894
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> rekonq-2.1.ebuild:
+  Stable for amd64, wrt bug #459894
 
 *rekonq-2.1 (28 Jan 2013)
 
