@@ -1,0 +1,72 @@
+diff --git a/RELEASE_NOTES b/RELEASE_NOTES
+index 1233905..2567a63 100644
+--- a/RELEASE_NOTES
++++ b/RELEASE_NOTES
+@@ -3,6 +3,10 @@
+ This listing shows the versions of the OpenDKIM package, the date of
+ release, and a summary of the changes in that release.
+ 
++2.8.1		2013/0?/??
++	BUILD: Fix build for versions of libdb between 3.1 and 4.6.
++		Problem noted by John Wood.
++
+ 2.8.0		2013/02/25
+ 	Feature request #SF2964383: Add DKIM_LIBFLAGS_STRICTRESIGN, which
+ 		inhibits signing of a handle tagged for resigning when the
+diff --git a/configure.ac b/configure.ac
+index ff018de..64d567a 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -14,7 +14,7 @@ AC_PREREQ(2.61)
+ #
+ m4_define([VERSION_RELEASE], 2)
+ m4_define([VERSION_MAJOR_REV], 8)
+-m4_define([VERSION_MINOR_REV], 0)
++m4_define([VERSION_MINOR_REV], 1)
+ m4_define([VERSION_PATCH], 0)
+ 
+ #
+diff --git a/libopendkim/dkim-cache.c b/libopendkim/dkim-cache.c
+index 1bb10e8..c43cc0c 100644
+--- a/libopendkim/dkim-cache.c
++++ b/libopendkim/dkim-cache.c
+@@ -508,7 +508,13 @@ dkim_cache_stats(DB *db, u_int *queries, u_int *hits, u_int *expired,
+ #if DB_VERSION_CHECK(2,0,0)
+ 		DB_HASH_STAT *sp;
+ 
++# if DB_VERSION_CHECK(4,3,0)
+ 		if (db->stat(db, NULL, (void *) &sp, 0) != 0)
++# elif DB_VERSION_CHECK(4,0,0)
++		if (db->stat(db, (void *) &sp, 0) != 0)
++# else /* DB_VERSION_CHECK(4,0,0) */
++		if (db->stat(db, (void *) &sp, NULL, 0) != 0)
++# endif /* DB_VERSION_CHECK(4,0,0) */
+ 		{
+ 			*keys = (u_int) -1;
+ 		}
+diff --git a/libopendkim/tests/t-test49.c b/libopendkim/tests/t-test49.c
+index e54cb37..318ad8a 100644
+--- a/libopendkim/tests/t-test49.c
++++ b/libopendkim/tests/t-test49.c
+@@ -53,7 +53,7 @@ main(int argc, char **argv)
+ 
+ 	int status;
+ 	int err;
+-	u_int s1, s2, s3;
++	u_int s1, s2, s3, s4;
+ 	size_t buflen;
+ 	DB *cache;
+ 	char buf[BUFRSZ + 1];
+@@ -99,10 +99,11 @@ main(int argc, char **argv)
+ 	assert(status == 1);
+ 
+ 	printf("--- retrieve cache stats\n");
+-	dkim_cache_stats(&s1, &s2, &s3);
++	dkim_cache_stats(cache, &s1, &s2, &s3, &s4, FALSE);
+ 	assert(s1 == 3);
+ 	assert(s2 == 1);
+ 	assert(s3 == 1);
++	assert(s4 == 0);
+ 
+ 	dkim_cache_close(cache);
+ #endif /* ! QUERY_CACHE */

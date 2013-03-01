@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/igraph
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/igraph/ChangeLog,v 1.5 2013/02/27 17:01:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/igraph/ChangeLog,v 1.6 2013/03/01 10:44:58 jlec Exp $
+
+  01 Mar 2013; Justin Lecher <jlec@gentoo.org> igraph-0.6.4.ebuild:
+  Swap DEPEND/RDEPEND, thanks Mr_Bones spotting this mistake
 
   27 Feb 2013; Justin Lecher <jlec@gentoo.org> igraph-0.6.4.ebuild,
   files/igraph-0.6.4-unbundle.patch:
