@@ -1,6 +1,10 @@
 # ChangeLog for www-client/w3mmee
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/ChangeLog,v 1.24 2012/10/10 13:08:13 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/ChangeLog,v 1.25 2013/03/01 13:56:03 naota Exp $
+
+  01 Mar 2013; Naohiro Aota <naota@gentoo.org>
+  +files/w3mmee-0.3.2_p24-tinfo.patch, w3mmee-0.3.2_p24-r7.ebuild:
+  Add workaround patch for tinfo. #459562
 
   10 Oct 2012;  <naota@gentoo.org> -w3mmee-0.3.2_p24-r6.ebuild:
   Drop old stable. build failure. #426682

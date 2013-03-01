@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/spyder-2.1.13.ebuild,v 1.1 2013/01/14 15:19:48 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/spyder-2.1.13.ebuild,v 1.2 2013/03/01 13:49:19 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc ipython matplotlib numpy pep8 +pyflakes pylint +rope scipy sphinx"
 
-RDEPEND=">=dev-python/PyQt4-4.4[webkit]
+RDEPEND=">=dev-python/PyQt4-4.4[svg,webkit]
 	ipython? ( dev-python/ipython )
 	matplotlib? ( dev-python/matplotlib )
 	numpy? ( dev-python/numpy )
