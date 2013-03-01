@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-0.24.1.ebuild,v 1.2 2013/01/17 19:47:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-0.24.1.ebuild,v 1.4 2013/03/01 09:54:52 ago Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ if [[ ${PV} == *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="https://github.com/${MY_PN}/${MY_PN}/archive/V${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 LICENSE="GPL-2"

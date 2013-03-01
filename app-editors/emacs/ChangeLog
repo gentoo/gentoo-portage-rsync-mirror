@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.542 2013/02/28 15:29:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.544 2013/03/01 09:54:43 ago Exp $
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r5.ebuild:
+  Stable for x86, wrt bug #459666
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> emacs-23.4-r5.ebuild:
+  Stable for amd64, wrt bug #459666
 
   28 Feb 2013; Jeroen Roovers <jer@gentoo.org> emacs-23.4-r5.ebuild,
   emacs-24.2-r1.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.39 2013/02/26 08:55:22 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.40 2013/03/01 09:50:06 ultrabug Exp $
+
+*uwsgi-1.4.6-r1 (01 Mar 2013)
+
+  01 Mar 2013; Ultrabug <ultrabug@gentoo.org> +uwsgi-1.4.6-r1.ebuild,
+  +files/uwsgi.confd-r3, +files/uwsgi.initd-r3:
+  Introduce UWSGI_GROUP and UWSGI_EMPEROR_GROUP conf.d variables
 
 *uwsgi-1.4.6 (26 Feb 2013)
 

@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/scope
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/scope/ChangeLog,v 1.7 2013/02/28 11:18:30 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/scope/ChangeLog,v 1.9 2013/03/01 09:54:13 ago Exp $
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> scope-0.04-r1.ebuild:
+  Stable for x86, wrt bug #459750
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> scope-0.04-r1.ebuild:
+  Stable for amd64, wrt bug #459750
 
   28 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Package will be maintained by Mikle Kolyada through proxy maintainers, wrt
@@ -29,4 +35,3 @@
 
   26 Oct 2005; Chris Bainbridge <chrb@gentoo.org> ChangeLog:
   new package
-

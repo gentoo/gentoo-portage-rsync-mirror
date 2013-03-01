@@ -1,6 +1,11 @@
 # ChangeLog for app-text/namazu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.41 2012/07/14 06:39:25 hattya Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.42 2013/03/01 09:47:14 naota Exp $
+
+*namazu-2.0.22_p1 (01 Mar 2013)
+
+  01 Mar 2013; Naohiro Aota <naota@gentoo.org> +namazu-2.0.22_p1.ebuild:
+  Add pre released ebuild
 
   14 Jul 2012; Akinori Hattori <hattya@gentoo.org> metadata.xml:
   format metadata.xml
@@ -156,4 +161,3 @@
   ChangeLog,Manifest,files/digest-namazu-2.0.12:
 
   Initial import. Ebuild submitted by naoto @ GentooJP
-

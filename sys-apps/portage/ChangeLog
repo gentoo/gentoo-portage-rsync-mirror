@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1203 2013/02/17 23:01:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1209 2013/03/01 10:01:19 ago Exp $
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> portage-2.1.11.52.ebuild:
+  Stable for arm, wrt bug #459748
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> portage-2.1.11.52.ebuild:
+  Stable for ppc64, wrt bug #459748
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> portage-2.1.11.52.ebuild:
+  Stable for ppc, wrt bug #459748
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> portage-2.1.11.52.ebuild:
+  Stable for alpha, wrt bug #459748
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> portage-2.1.11.52.ebuild:
+  Stable for x86, wrt bug #459748
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> portage-2.1.11.52.ebuild:
+  Stable for amd64, wrt bug #459748
 
   17 Feb 2013; Zac Medico <zmedico@gentoo.org> -portage-2.1.11.51.ebuild,
   -portage-2.2.0_alpha142.ebuild, -portage-2.2.0_alpha162.ebuild:
