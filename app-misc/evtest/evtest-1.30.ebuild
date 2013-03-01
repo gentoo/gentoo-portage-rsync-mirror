@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evtest/evtest-1.30.ebuild,v 1.1 2013/01/06 20:22:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evtest/evtest-1.30.ebuild,v 1.2 2013/03/01 20:15:37 nimiux Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://cgit.freedesktop.org/evtest/snapshot/${PN}-${P}.tar.gz -> ${P}.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm ~x86"
 IUSE="+xml"
 
 # We bundled the man pages ourselves to avoid xmlto/asciidoc.

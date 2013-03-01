@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.2-r1.ebuild,v 1.2 2013/02/24 10:52:07 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.2-r2.ebuild,v 1.1 2013/03/01 20:11:03 billie Exp $
 
 EAPI=5
 
@@ -249,10 +249,13 @@ src_install() {
 
 pkg_preinst() {
 	# remove temporary directory so it is recreated with correct permissions
-	# this ensures correct permissions when upgrading from the vulnerable
-	# versions affected by bug #452586
+	# this ensures correct permissions when upgrading from vulnerable versions
 	# remove this after some time
-	rm -rf "${ROOT%/}/var/log/hp"
+	# Gentoo bug: https://bugs.gentoo.org/show_bug.cgi?id=452586
+	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/1016507
+	if [[ $(stat -c '%A' /var/lib/hp/) =~ w.$ ]] ; then
+		rm -rf "${ROOT%/}/var/log/hp"
+	fi
 }
 
 pkg_postinst() {
@@ -263,4 +266,10 @@ pkg_postinst() {
 		elog
 		elog "Any user who wants to print must be in the lp group."
 	fi
+
+	# Change permission to allow verification of plugin installation
+	# Gentoo bug: https://bugs.gentoo.org/show_bug.cgi?id=458976
+	# Upstream bug :https://bugs.launchpad.net/hplip/+bug/1133486
+	# remove with the next update
+	chmod 755 "${ROOT%/}/var/lib/hp"
 }

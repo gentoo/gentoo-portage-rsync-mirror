@@ -1,6 +1,16 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.264 2013/02/24 10:52:07 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.266 2013/03/01 20:13:33 billie Exp $
+
+  01 Mar 2013; Daniel Pielmeier <billie@gentoo.org> -hplip-3.13.2-r1.ebuild:
+  Remove old.
+
+*hplip-3.13.2-r2 (01 Mar 2013)
+
+  01 Mar 2013; Daniel Pielmeier <billie@gentoo.org> +hplip-3.13.2-r2.ebuild:
+  Revison bump. Fix bug #458976. Wrong permissions again. This time for
+  /var/lib/hp/. Thanks to James for the report. Only remove /var/lib/hp/ if it
+  is world writeable.
 
   24 Feb 2013; Daniel Pielmeier <billie@gentoo.org> hplip-3.13.2-r1.ebuild:
   Use PYTHON_USEDEP for notify-python as it now uses python-r1.
