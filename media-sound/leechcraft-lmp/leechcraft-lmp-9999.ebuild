@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/leechcraft-lmp/leechcraft-lmp-9999.ebuild,v 1.7 2013/01/22 11:08:14 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/leechcraft-lmp/leechcraft-lmp-9999.ebuild,v 1.8 2013/03/01 14:37:47 maksbotan Exp $
 
 EAPI="4"
 
@@ -13,6 +13,7 @@ KEYWORDS=""
 IUSE="debug +graffiti kde +mpris +mp3tunes"
 
 DEPEND="~net-misc/leechcraft-core-${PV}
+		graffiti? ( media-libs/flac )
 		kde? ( media-libs/phonon )
 		!kde? ( x11-libs/qt-phonon:4 )
 		media-libs/taglib

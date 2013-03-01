@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-2.2.26-r1.ebuild,v 1.1 2013/03/01 09:14:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-2.2.26-r2.ebuild,v 1.1 2013/03/01 14:52:31 jlec Exp $
 
 EAPI=5
 
@@ -56,11 +56,11 @@ src_prepare() {
 	# Apply user C flags...
 	cd "${S}"/platform
 	sed \
-		-e 's:-O[23]\?::g' \
+		-e "s:-O[s0-9]\?:asd:g" \
 		-e 's:-m\(cpu\|arch\)=[a-zA-Z0-9]*::g' \
 		-e 's:-x[A-Z]*::g' \
 		-e 's:-pipe::g' \
-		-e "/NCBI_MAKE_SHELL *=/s:=.*:= \"${EPREFIX}\"/bin/sh:g" \
+		-e "/NCBI_MAKE_SHELL *=/s:=.*:= \"${EPREFIX}/bin/sh\":g" \
 		-e "/NCBI_AR *=/s:ar:$(tc-getAR):g" \
 		-e "/NCBI_RANLIB *=/s:ranlib:$(tc-getRANLIB):g" \
 		-e "/NCBI_CC *=/s:= [a-zA-Z0-9]* := $(tc-getCC) :g" \
@@ -69,8 +69,7 @@ src_prepare() {
 		-e "/NCBI_OGLLIBS *=/s:=.*:= $($(tc-getPKG_CONFIG) --cflags gl glu 2>/dev/null):g" \
 		-e "/OPENGL_LIBS *=/s:=.*:= $($(tc-getPKG_CONFIG) --libs gl glu 2>/dev/null):g" \
 		-e "/NCBI_OGLLIBS *=/s:=.*:= $($(tc-getPKG_CONFIG) --libs gl glu 2>/dev/null):g" \
-		-i linux-x86.ncbi.mk linux-alpha.ncbi.mk hppalinux.ncbi.mk \
-			ppclinux.ncbi.mk linux64.ncbi.mk linux.ncbi.mk || die
+		-i * || die
 
 	# We use dynamic libraries
 	sed -i -e "s/-Wl,-Bstatic//" *linux*.ncbi.mk || die

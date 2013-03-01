@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.88 2013/03/01 09:14:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.89 2013/03/01 14:52:31 jlec Exp $
+
+*ncbi-tools-2.2.26-r2 (01 Mar 2013)
+
+  01 Mar 2013; Justin Lecher <jlec@gentoo.org> -ncbi-tools-2.2.26-r1.ebuild,
+  +ncbi-tools-2.2.26-r2.ebuild:
+  Fix all config files, #459720, #459726, #459878
 
 *ncbi-tools-2.2.26-r1 (01 Mar 2013)
 
