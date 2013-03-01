@@ -1,6 +1,13 @@
 # ChangeLog for net-news/yydecode
 # Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/yydecode/ChangeLog,v 1.15 2013/02/26 11:59:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/yydecode/ChangeLog,v 1.17 2013/03/01 14:07:11 kensington Exp $
+
+  01 Mar 2013; Michael Palimaka <kensington@gentoo.org> -yydecode-0.2.10.ebuild,
+  -yydecode-0.2.9.ebuild:
+  Remove old.
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> yydecode-0.2.10-r1.ebuild:
+  Stable for alpha, wrt bug #459252
 
   26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> yydecode-0.2.10-r1.ebuild:
   Stable for arm, wrt bug #459252
