@@ -1,4 +1,6 @@
 
+  28 Feb 2013; Anthony G. Basile <blueness@gentoo.org> elfix-0.8.1.ebuild:
+  Depend on any revision of PV, for bug #459632
 
   20 Feb 2013; Jeroen Roovers <jer@gentoo.org> elfix-0.8.1.ebuild:
   Stable for HPPA (bug #456656).

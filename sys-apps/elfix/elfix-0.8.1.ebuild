@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.8.1.ebuild,v 1.9 2013/02/20 15:01:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.8.1.ebuild,v 1.10 2013/02/28 23:49:42 blueness Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ REQUIRED_USE="|| ( ptpax xtpax )"
 # These only work with a properly configured PaX kernel
 RESTRICT="test"
 
-DEPEND="=dev-python/pypax-${PV}[ptpax=,xtpax=]
+DEPEND="~dev-python/pypax-${PV}[ptpax=,xtpax=]
 	ptpax? ( dev-libs/elfutils )
 	xtpax? ( sys-apps/attr )"
 
