@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.820 2013/03/01 02:15:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.821 2013/03/01 03:30:15 floppym Exp $
+
+  01 Mar 2013; Mike Gilbert <floppym@gentoo.org> chromium-26.0.1410.19.ebuild:
+  Disable SecurityTest.CallocOverflow for M26, bug 458396.
 
 *chromium-26.0.1410.19 (01 Mar 2013)
 
