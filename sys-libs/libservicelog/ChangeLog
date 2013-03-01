@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libservicelog
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libservicelog/ChangeLog,v 1.4 2009/09/23 21:17:12 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libservicelog/ChangeLog,v 1.5 2013/03/01 19:30:19 ranger Exp $
+
+*libservicelog-1.1.11 (01 Mar 2013)
+
+  01 Mar 2013; Brent Baude <ranger@gentoo.org> libservicelog-1.0.1.ebuild,
+  +libservicelog-1.1.11.ebuild, +files/libservicelog-1.1.11.patch:
+  Adding -1.1.11 and ppc64 to 1.0.1
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   libservicelog-1.0.1.ebuild:

@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/chef-server-webui-10.16.4.ebuild,v 1.1 2012/12/27 07:10:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/chef-server-webui-10.24.0.ebuild,v 1.1 2013/03/01 19:25:42 hollow Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST=""
@@ -59,13 +59,8 @@ all_ruby_install() {
 	doinitd "${FILESDIR}/initd/chef-server-webui"
 	doconfd "${FILESDIR}/confd/chef-server-webui"
 
-	keepdir /etc/chef /var/lib/chef /var/log/chef /var/run/chef
-
 	insinto /etc/chef
 	doins "${FILESDIR}/webui.rb"
-
-	fowners chef:chef /etc/chef/{,webui.rb}
-	fowners chef:chef /var/{lib,log,run}/chef
 }
 
 pkg_postinst() {

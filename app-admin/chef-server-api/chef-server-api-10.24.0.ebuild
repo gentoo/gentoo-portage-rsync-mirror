@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-api/chef-server-api-10.12.0.ebuild,v 1.1 2012/08/11 12:47:54 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-api/chef-server-api-10.24.0.ebuild,v 1.1 2013/03/01 19:24:25 hollow Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST="spec"
@@ -54,15 +54,8 @@ all_ruby_install() {
 	doinitd "${FILESDIR}/initd/chef-server-api"
 	doconfd "${FILESDIR}/confd/chef-server-api"
 
-	keepdir /etc/chef /var/lib/chef /var/log/chef /var/run/chef \
-		/etc/chef/certificates
-
 	insinto /etc/chef
 	doins "${FILESDIR}/server.rb"
-
-	fperms 0700 /etc/chef/certificates
-	fowners chef:chef /etc/chef/{,server.rb,certificates}
-	fowners chef:chef /var/{lib,log,run}/chef
 }
 
 pkg_postinst() {

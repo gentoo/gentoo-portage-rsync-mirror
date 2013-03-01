@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/chef-server-webui
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/ChangeLog,v 1.17 2013/02/14 08:25:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/ChangeLog,v 1.18 2013/03/01 19:25:42 hollow Exp $
+
+*chef-server-webui-10.24.0 (01 Mar 2013)
+
+  01 Mar 2013; Benedikt Böhm <hollow@gentoo.org>
+  -chef-server-webui-10.12.0.ebuild, -chef-server-webui-10.16.4.ebuild,
+  -chef-server-webui-10.20.0.ebuild, -chef-server-webui-10.22.0.ebuild,
+  +chef-server-webui-10.24.0.ebuild:
+  version bump; remove broken versions
 
 *chef-server-webui-10.22.0 (14 Feb 2013)
 

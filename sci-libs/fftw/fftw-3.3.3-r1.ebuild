@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.3-r1.ebuild,v 1.1 2013/02/03 00:54:22 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.3-r1.ebuild,v 1.2 2013/03/01 19:03:46 jlec Exp $
 
 EAPI=5
 
@@ -17,6 +17,9 @@ LICENSE="GPL-2"
 SLOT="3.0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="altivec avx doc fma fortran mpi neon openmp quad sse sse2 static-libs test threads zbus"
+
+# there is no abi_x86_32 vort virtual/mpi right now
+REQUIRED_USE="amd64? ( abi_x86_32? ( !mpi ) )"
 
 RDEPEND="mpi? ( virtual/mpi )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20121202 )"
