@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.420 2013/02/26 14:52:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.421 2013/03/01 12:46:05 ago Exp $
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> util-linux-2.22.2.ebuild:
+  Stable for sh, wrt bug #458226
 
   26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> util-linux-2.22.2.ebuild:
   Stable for s390, wrt bug #458226

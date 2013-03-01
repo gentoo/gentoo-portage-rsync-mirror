@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.24.ebuild,v 1.11 2013/02/28 14:48:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.24.ebuild,v 1.12 2013/03/01 12:43:09 ago Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="ssl nls kerberos hesiod tk socks"
 
 RDEPEND="hesiod? ( net-dns/hesiod )

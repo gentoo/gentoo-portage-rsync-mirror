@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.22.ebuild,v 1.10 2012/12/29 08:52:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.22.ebuild,v 1.11 2013/03/01 12:47:50 jlec Exp $
 
 EAPI=4
 inherit eutils pam toolchain-funcs autotools linux-info user
@@ -37,7 +37,8 @@ RDEPEND="${COMMON_DEPEND}
 	samba? ( net-fs/samba )
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
-	sqlite? ( dev-perl/DBD-SQLite )"
+	sqlite? ( dev-perl/DBD-SQLite )
+	!<=sci-biology/meme-4.8.1-r1"
 
 REQUIRED_USE="tproxy? ( caps )"
 

@@ -1,6 +1,6 @@
 ## Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-4.8.1-r1.ebuild,v 1.1 2013/02/01 14:51:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-4.8.1-r2.ebuild,v 1.1 2013/03/01 12:43:54 jlec Exp $
 
 EAPI=4
 
@@ -63,10 +63,12 @@ src_test() {
 }
 
 src_install() {
+	local i
 	default
 
-	mv "${ED}"/usr/bin/{,meme-}tree || die
-	mv "${ED}"/usr/bin/{,meme-}readseq || die
+	for i in "${ED}"/usr/bin/*; do
+		"${ED}"/usr/bin/{,meme-}${i} || die
+	done
 
 	echo "PATH=/opt/${PN}/bin" > 99${PN}
 	doenvd 99${PN}

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oct2py/oct2py-0.4.0.ebuild,v 1.2 2013/02/11 15:57:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oct2py/oct2py-0.4.0-r1.ebuild,v 1.1 2013/03/01 12:32:09 jlec Exp $
 
 EAPI=5
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
-RDEPEND="sci-libs/scipy[${PYTHON_USEDEP}]
+RDEPEND="
+	sci-libs/scipy[${PYTHON_USEDEP}]
 	sci-mathematics/octave"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
@@ -37,8 +38,7 @@ python_install_all() {
 	distutils-r1_python_install_all
 
 	if use examples; then
-		docompress -x /usr/share/doc/${PF}/examples
-		docinto examples
-		doins -r example/.
+		insinto /usr/share/${PF}/
+		doins -r example
 	fi
 }

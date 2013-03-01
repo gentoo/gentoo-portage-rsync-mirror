@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.383 2013/02/21 16:55:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.384 2013/03/01 12:47:50 jlec Exp $
+
+  01 Mar 2013; Justin Lecher <jlec@gentoo.org> squid-3.1.22.ebuild,
+  squid-3.1.23.ebuild, squid-3.2.5.ebuild, squid-3.2.6.ebuild,
+  squid-3.2.7.ebuild, squid-3.3.1.ebuild, metadata.xml:
+  block all version of sci-biology/meme colliding with /usr/bin/purge, #458208
 
   21 Feb 2013; Jeroen Roovers <jer@gentoo.org> squid-3.2.6.ebuild:
   Stable for HPPA (bug #457664).

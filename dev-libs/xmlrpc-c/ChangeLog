@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.134 2013/02/27 06:19:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.135 2013/03/01 12:42:42 ago Exp $
+
+  01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> xmlrpc-c-1.32.05.ebuild:
+  Stable for sh, wrt bug #457298
 
   27 Feb 2013; Jeroen Roovers <jer@gentoo.org> -files/xmlrpc-c-1.05-pic.patch,
   -files/xmlrpc-c-1.06.02-strsol.patch,
