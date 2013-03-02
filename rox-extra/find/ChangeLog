@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/find
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/find/ChangeLog,v 1.13 2008/08/18 04:41:30 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/find/ChangeLog,v 1.14 2013/03/02 08:00:53 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   18 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org> find-007-r1.ebuild:
   fix typo in HOMEPAGE reported by Craig in bug #235045
@@ -49,4 +53,3 @@
 
   23 Oct 2005; Sergey Kuleshov <svyatogor@gentoo.org> +find-0.0.5.ebuild:
   New application - GUI interface to grep.
-

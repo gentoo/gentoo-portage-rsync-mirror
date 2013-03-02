@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/tasktray
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/ChangeLog,v 1.34 2011/11/21 22:41:19 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/ChangeLog,v 1.35 2013/03/02 07:54:08 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   21 Nov 2011; Pacho Ramos <pacho@gentoo.org> -tasktray-0.7.ebuild:
   Drop version needing old gnome-python metas that will be dropped.
@@ -157,4 +161,3 @@
   +tasktray-0.3.5.ebuild:
   New package: TaskTray-0.3.5 (based on breakmygentoo.net ebuild, thanks to
   Peter Hyman)
-

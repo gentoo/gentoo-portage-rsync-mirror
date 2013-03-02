@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/xdg-menu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/xdg-menu/ChangeLog,v 1.26 2012/04/01 14:41:30 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/xdg-menu/ChangeLog,v 1.27 2013/03/02 07:56:13 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> -xdg-menu-1.4.ebuild,
+  metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> xdg-menu-1.4.ebuild,
   xdg-menu-1.5.ebuild:
@@ -97,4 +102,3 @@
   06 Nov 2005; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
   +xdg-menu-1.0.ebuild:
   An XDG compliant system menu.
-

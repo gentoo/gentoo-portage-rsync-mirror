@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/rox-media
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-media/ChangeLog,v 1.5 2012/04/12 09:25:21 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-media/ChangeLog,v 1.6 2013/03/02 07:51:41 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> -rox-media-0.0.3.ebuild,
+  metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   12 Apr 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   rox-media-0.0.3.ebuild, rox-media-0.0.3-r1.ebuild:
@@ -24,4 +29,3 @@
   +metadata.xml:
   New package: rox-media is a replacement for DevTray that uses udev/gdu
   instead of hal
-

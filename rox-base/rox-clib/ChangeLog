@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-clib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.35 2012/05/03 04:40:44 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/ChangeLog,v 1.36 2013/03/02 07:50:07 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> rox-clib-2.1.10.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -138,4 +142,3 @@
   +rox-clib-2.1.1.ebuild:
   First commit of rox-clib. Thanks to Alexandr Simonov <devil@gentoo.org.ua> (Bug
   #51996) for the ebuild.
-

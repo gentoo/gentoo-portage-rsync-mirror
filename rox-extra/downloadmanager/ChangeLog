@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/downloadmanager
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/downloadmanager/ChangeLog,v 1.18 2009/05/21 18:07:12 lack Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/downloadmanager/ChangeLog,v 1.19 2013/03/02 07:59:26 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   21 May 2009; Jim Ramsay <lack@gentoo.org> -downloadmanager-0.1.3.ebuild:
   Version cleanup
@@ -76,4 +80,3 @@
   02 Oct 2006; <lack@gentoo.org> ChangeLog:
   New package - DownloadManager for rox desktop. Imported from
   breakmygentoo.net, big thanks to Peter Hyman.
-

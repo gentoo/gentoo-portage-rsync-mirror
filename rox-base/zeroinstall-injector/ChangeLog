@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/zeroinstall-injector
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.35 2012/12/07 19:44:14 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.36 2013/03/02 07:56:49 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org>
+  -zeroinstall-injector-0.43-r1.ebuild, metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   07 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   zeroinstall-injector-0.49.ebuild:
@@ -156,4 +161,3 @@
   +files/global.cfg, +metadata.xml, +zeroinstall-injector-0.31.ebuild:
   New package: Zeroinstall Injector allows regular users to install software
   themselves
-

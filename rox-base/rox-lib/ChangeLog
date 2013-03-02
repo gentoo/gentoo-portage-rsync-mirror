@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-lib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.45 2012/02/10 03:05:01 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.46 2013/03/02 07:51:04 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> rox-lib-2.0.6.ebuild:
   Changing python deps in preparation for 2.4 removal
@@ -176,4 +180,3 @@
   26 Nov 2004; Sergey Kuleshov <svyatogor@gentoo.org> +rox-lib-1.9.16.ebuild:
   First commit of rox-lib. Thanks to Alexandr Simonov <devil@gentoo.org.ua> (Bug
   #51996) for the ebuild.
-

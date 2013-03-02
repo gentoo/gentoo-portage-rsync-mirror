@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/traylib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.11 2012/02/10 03:06:30 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/traylib/ChangeLog,v 1.12 2013/03/02 07:55:10 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> -traylib-0.2.5.ebuild,
+  metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   10 Feb 2012; Patrick Lauer <patrick@gentoo.org> traylib-0.2.5.ebuild,
   traylib-0.3.2.1.ebuild:
@@ -43,4 +48,3 @@
   26 Nov 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml,
   +traylib-0.2.5.ebuild:
   New package: TrayLib is a convenience library used for some rox applets.
-

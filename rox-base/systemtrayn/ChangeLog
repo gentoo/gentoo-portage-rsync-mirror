@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/systemtrayn
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/systemtrayn/ChangeLog,v 1.13 2009/05/21 17:59:37 lack Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/systemtrayn/ChangeLog,v 1.14 2013/03/02 07:53:11 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   21 May 2009; Jim Ramsay <lack@gentoo.org> -systemtrayn-0.3.1-r1.ebuild:
   Version cleanup
@@ -52,4 +56,3 @@
   +systemtrayn-0.3.1.ebuild:
   New system tray manager for rox-desktop, replaces rox-base/systemtray.
   Imported from breakmygentoo.net, big thanks to Peter Hyman.
-

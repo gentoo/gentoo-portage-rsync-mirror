@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/pager
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/ChangeLog,v 1.24 2012/05/03 04:40:44 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/ChangeLog,v 1.25 2013/03/02 07:49:15 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> pager-1.1-r2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -97,4 +101,3 @@
   +pager-1.0.0.ebuild:
   First commit of pager. Thanks to Alexandr Simonov <devil@gentoo.org.ua> (Bug
   #51996) for the ebuild.
-

@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-launch
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-launch/ChangeLog,v 1.3 2008/08/30 20:02:46 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-launch/ChangeLog,v 1.4 2013/03/02 07:50:33 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   30 Aug 2008; Markus Meier <maekke@gentoo.org> rox-launch-0.3.2.ebuild:
   x86 stable, bug #236057
@@ -14,4 +18,3 @@
   +rox-launch-0.3.2.ebuild:
   New package: Launch provides facilities for launching URLs and configuring
   the applications used to launch them.
-

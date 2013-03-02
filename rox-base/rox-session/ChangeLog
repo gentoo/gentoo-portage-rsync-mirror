@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-session
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.39 2009/05/21 17:53:03 lack Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.40 2013/03/02 07:52:08 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   21 May 2009; Jim Ramsay <lack@gentoo.org> -rox-session-0.29.ebuild,
   -rox-session-0.30.ebuild:
@@ -191,4 +195,3 @@
 
   21 Aug 2003; MATSUU Takuto <matsuu@gentoo.org> rox-session-0.1.20.ebuild:
   Initial import. #801
-

@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/tasklist
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/tasklist/ChangeLog,v 1.6 2011/03/21 22:34:15 nirbheek Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/tasklist/ChangeLog,v 1.7 2013/03/02 07:53:40 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> tasklist-0.5.ebuild:
   Fix slot-deps on gnome libs
@@ -23,4 +27,3 @@
   +files/choicespath.patch, +metadata.xml, +tasklist-0.5.ebuild:
   New package - Tasklist is a ROX panel applet which lists all running windows
   (Bug 81216)
-

@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/comicthumb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/comicthumb/ChangeLog,v 1.6 2008/10/31 13:07:56 lack Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/comicthumb/ChangeLog,v 1.7 2013/03/02 07:58:12 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   31 Oct 2008; Jim Ramsay <lack@gentoo.org> comicthumb-0.1.ebuild:
   Added alternative to app-arch/unrar (Bug #244985)
@@ -23,4 +27,3 @@
   15 May 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml,
   +comicthumb-0.1.ebuild:
   New package, requested in bug 125757
-
