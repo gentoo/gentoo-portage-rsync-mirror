@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.211 2013/02/18 18:09:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.212 2013/03/02 17:30:38 aballier Exp $
+
+*ocaml-4.00.1-r1 (02 Mar 2013)
+
+  02 Mar 2013; Alexis Ballier <aballier@gentoo.org> +ocaml-4.00.1-r1.ebuild:
+  Import a patch from archlinux to build against tk8.6, drop a useless patch
+  for LDFLAGS and set the right variable
 
   18 Feb 2013; Alexis Ballier <aballier@gentoo.org> ocaml-4.00.1.ebuild:
   stop installing compiler-libs manually, let it be the standard way

@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.77 2013/02/16 21:01:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.78 2013/03/02 17:03:40 titanofold Exp $
+
+*postgis-2.0.3 (02 Mar 2013)
+
+  02 Mar 2013; Aaron W. Swenson <titanofold@gentoo.org> +postgis-2.0.3.ebuild:
+  Version bump. Depend on GEOS 3.3.8 based on upstream recommendation.
 
   16 Feb 2013; Sven Wegener <swegener@gentoo.org> postgis-1.5.8.ebuild:
   Allow building with postgresql-9.2.

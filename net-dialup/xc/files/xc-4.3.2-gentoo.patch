@@ -37,7 +37,7 @@
  
  INSTALL	= install
 -LDFLAGS	= -ltermcap editline/libedit.a
-+LIBS	= -lncurses editline/libedit.a
++LIBS	+= -lncurses editline/libedit.a
  NROFF 	= groff -mandoc
  
  # defines for use with cextract under Linux
@@ -101,3 +101,22 @@ add simple usage
      if (argc > 1) {
  	if (!strcmp(argv[1], "-x")) {
  	    Block = 128;
+--- xc-4.3.2/editline/Makefile.orig	2013-03-02 21:15:29.667344872 +0400
++++ xc-4.3.2/editline/Makefile	2013-03-02 21:15:38.434344313 +0400
+@@ -34,7 +34,7 @@
+ LDFLAGS = -ltermcap
+ 
+ ##  Set ranlib as appropriate:
+-RANLIB	= ranlib
++RANLIB	?= ranlib
+ #RANLIB	= echo
+ 
+ ##  End of configuration.
+@@ -70,6 +70,6 @@
+ 
+ libedit.a:	$(OBJECTS)
+ 	@rm -f $@
+-	ar r $@ $(OBJECTS)
++	$(AR) r $@ $(OBJECTS)
+ 	$(RANLIB) $@
+ 
