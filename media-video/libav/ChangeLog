@@ -1,6 +1,13 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.142 2013/02/25 06:57:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.143 2013/03/02 14:09:26 lu_zero Exp $
+
+  02 Mar 2013; Luca Barbato <lu_zero@gentoo.org>
+  -files/0001-build-The-libopencore-amrnb-encoder-depends-on-audio.patch,
+  -files/0001-libcdio-support-recent-cdio-paranoia.patch,
+  -files/0001-svq3-replace-unsafe-pointer-casting-with-intreadwrit.patch,
+  -libav-9.1.ebuild:
+  Remove older version
 
 *libav-9.2 (25 Feb 2013)
 
