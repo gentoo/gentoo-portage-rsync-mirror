@@ -1,6 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Filter
-KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc s390 ~sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
+KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc s390 sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
 RDEPEND=~perl-core/Filter-1.450.0
 SLOT=0
-_md5_=0309a4eed693562f6b942de201c7bdfb
+_md5_=f6ffcc364b93a65653e5f7e671185417

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py-gnupg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-gnupg/ChangeLog,v 1.12 2010/07/23 22:16:48 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-gnupg/ChangeLog,v 1.13 2013/03/02 16:56:58 mgorny Exp $
+
+*py-gnupg-0.3.2-r1 (02 Mar 2013)
+
+  02 Mar 2013; Michał Górny <mgorny@gentoo.org> +py-gnupg-0.3.2-r1.ebuild:
+  Migrate to distutils-r1.
 
   23 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   py-gnupg-0.3.2.ebuild:
@@ -38,4 +43,3 @@
   17 Sep 2003; Alastair Tse <liquidx@gentoo.org> py-gnupg-0.3.2.ebuild:
   initial commit. thanks to Derek Greentree <derek@leftwise.com> and Rob
   Cakebread <robc@myrealbox.com>
-

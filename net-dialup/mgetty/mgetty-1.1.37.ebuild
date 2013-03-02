@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.37.ebuild,v 1.1 2013/02/24 22:14:10 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.37.ebuild,v 1.2 2013/03/02 16:45:05 pinkbyte Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs user
@@ -44,16 +44,18 @@ src_prepare() {
 		-e 's:var/log/sendfax:var/log/mgetty/sendfax:' \
 		-e 's:\/\* \(\#define CNDFILE "dialin.config"\) \*\/:\1:' \
 		-e 's:\(\#define FAX_NOTIFY_PROGRAM\).*:\1 "/etc/mgetty+sendfax/new_fax":' \
-		"${S}/policy.h-dist" > "${S}/policy.h" || die 'creating policy.h failed'
+		policy.h-dist > policy.h || die 'creating policy.h failed'
 
 	sed -i -e 's:/usr/local/lib/mgetty+sendfax:/etc/mgetty+sendfax:' faxrunq.config || die 'changing mgetty config dir failed'
 	sed -i -e 's:/usr/local/bin/g3cat:/usr/bin/g3cat:' faxrunq.config fax/faxspool.rules || die 'changing g3cat path failed'
 
 	sed -e "/^doc-all:/s/mgetty.asc mgetty.info mgetty.dvi mgetty.ps/mgetty.info/" \
-		-i "${S}/doc/Makefile" || die 'first sed on doc/Makefile failed'
+		-i doc/Makefile || die 'first sed on doc/Makefile failed'
 	if use doc; then
-		sed -e "s/^doc-all:/doc-all: mgetty.ps/" \
-			-i "${S}/doc/Makefile" || die 'second sed on doc/Makefile failed'
+		sed -i \
+			-e "s/^doc-all:/doc-all: mgetty.ps/" \
+			-e "s/^all:/all: doc-all/" \
+			doc/Makefile || die 'second sed on doc/Makefile failed'
 	fi
 }
 
