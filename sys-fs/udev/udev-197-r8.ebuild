@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r8.ebuild,v 1.13 2013/03/01 16:33:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-197-r8.ebuild,v 1.15 2013/03/02 01:20:33 ssuominen Exp $
 
 EAPI=4
 
@@ -102,7 +102,7 @@ check_default_rules()
 
 pkg_setup()
 {
-	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2 ~SIGNALFD"
+	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2 ~SIGNALFD ~EPOLL"
 
 	linux-info_pkg_setup
 

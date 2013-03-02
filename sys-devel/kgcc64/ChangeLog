@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/kgcc64
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.47 2013/01/09 13:33:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.48 2013/03/02 01:17:39 dirtyepic Exp $
+
+  02 Mar 2013; Ryan Hill <dirtyepic@gentoo.org> kgcc64-4.7.2.ebuild:
+  Bump patchset.
 
   09 Jan 2013; Jeroen Roovers <jer@gentoo.org> kgcc64-4.6.3.ebuild:
   Stable for HPPA (bug #418383).
