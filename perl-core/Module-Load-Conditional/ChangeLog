@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Module-Load-Conditional
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load-Conditional/ChangeLog,v 1.37 2013/02/23 08:35:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load-Conditional/ChangeLog,v 1.38 2013/03/02 16:15:03 ago Exp $
+
+  02 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
+  Module-Load-Conditional-0.540.0.ebuild:
+  Stable for sh, wrt bug #458122
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   Module-Load-Conditional-0.540.0.ebuild:

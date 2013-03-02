@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.3.8.ebuild,v 1.1 2013/03/02 04:04:09 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.3.8-r1.ebuild,v 1.1 2013/03/02 16:09:54 titanofold Exp $
 
 EAPI=4
 
@@ -18,13 +18,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris"
 IUSE="doc php python ruby static-libs"
 
-RDEPEND="php? ( dev-lang/php:5.3[-threads] )
-	ruby? ( dev-lang/ruby )"
+RDEPEND="
+	php? ( >=dev-lang/php-5.3[-threads] )
+	ruby? ( dev-lang/ruby )
+"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	php? ( dev-lang/swig )
 	python? ( dev-lang/swig )
-	ruby? ( dev-lang/swig )"
+	ruby? ( dev-lang/swig )
+"
 
 pkg_setup() {
 	use python && python_pkg_setup
@@ -49,6 +52,7 @@ src_configure() {
 
 src_compile() {
 	emake
+
 	if use python; then
 		emake -C swig/python clean
 		python_copy_sources swig/python
@@ -62,11 +66,13 @@ src_compile() {
 		}
 		python_execute_function -s --source-dir swig/python building
 	fi
+
 	use doc && emake -C "${S}/doc" doxygen-html
 }
 
 src_install() {
 	default
+
 	if use python; then
 		installation() {
 			emake \
@@ -78,7 +84,9 @@ src_install() {
 		python_execute_function -s --source-dir swig/python installation
 		python_clean_installation_image
 	fi
-	use doc && dohtml -r "${S}/doc" doxygen_docs/html/*
+
+	use doc && dohtml -r doc/doxygen_docs/html/*
+
 	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 

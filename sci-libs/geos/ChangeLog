@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.71 2013/03/02 04:04:09 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.72 2013/03/02 16:09:54 titanofold Exp $
+
+*geos-3.3.8-r1 (02 Mar 2013)
+
+  02 Mar 2013; Aaron W. Swenson <titanofold@gentoo.org> -geos-3.3.8.ebuild,
+  +geos-3.3.8-r1.ebuild:
+  Fix bug 455118 by modifying PHP dependency. Fix bug 450998 by correcting
+  dohtml command. Fix bug 423097 by virtue of being bumped.
 
 *geos-3.3.8 (02 Mar 2013)
 

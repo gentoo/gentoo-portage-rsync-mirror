@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.64.ebuild,v 1.5 2013/02/22 00:37:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.64.ebuild,v 1.6 2013/03/02 16:07:11 cardoe Exp $
 
 EAPI=4
 
@@ -98,7 +98,9 @@ pkg_setup() {
 		ewarn "<sys-kernel/gentoo-sources-3.7"
 		ewarn "<sys-kernel/vanilla-sources-3.7"
 		ewarn ""
-		ewarn "You are on your own"
+		ewarn "You are free to utilize epatch_user to provide whatever"
+		ewarn "support you feel is appropriate, but will not receive"
+		ewarn "support as a result of those changes."
 	fi
 
 	# Since Nvidia ships 3 different series of drivers, we need to give the user

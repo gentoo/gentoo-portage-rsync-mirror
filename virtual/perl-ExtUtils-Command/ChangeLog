@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-Command
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Command/ChangeLog,v 1.32 2013/02/19 22:04:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Command/ChangeLog,v 1.33 2013/03/02 16:31:06 ago Exp $
+
+  02 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-ExtUtils-Command-1.170.0-r3.ebuild:
+  Stable for sh, wrt bug #458122
 
   19 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   perl-ExtUtils-Command-1.170.0-r3.ebuild:

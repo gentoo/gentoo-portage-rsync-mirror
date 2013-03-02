@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-CPAN-Meta-YAML
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta-YAML/ChangeLog,v 1.36 2013/02/23 08:48:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta-YAML/ChangeLog,v 1.37 2013/03/02 16:27:01 ago Exp $
+
+  02 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
+  perl-CPAN-Meta-YAML-0.8.0.ebuild:
+  Stable for sh, wrt bug #458122
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   perl-CPAN-Meta-YAML-0.8.0.ebuild:
