@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1216 2013/03/02 04:25:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1217 2013/03/02 04:34:07 zmedico Exp $
 
 *portage-2.2.0_alpha164 (02 Mar 2013)
 
@@ -17,7 +17,7 @@
   helper), bug #225821 (clarify python api docs for abssymlink function), bug
   #328113 (repoman validation of metadata.xml doctype), bug #368297 (remove
   useless 'Starting parallel fetch' message), bug #451326 (add workaround for
-  compatibility with epoll implementation in qemu-user), bug #457136 (support
+  compatibility with epoll implementation in qemu-user), bug #457508 (support
   quoted args in EXTRA_ECONF), bug #458730 (fix emerge --help docs to indicate
   that --verbose does not change output of --help), bug #459350 (unset LIGUAS in
   ebuild env when appropriate), and bug #459832 (incorrect emerge handling of
