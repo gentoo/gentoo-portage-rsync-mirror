@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/resolution
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/resolution/ChangeLog,v 1.14 2011/12/13 23:21:33 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/resolution/ChangeLog,v 1.15 2013/03/02 08:04:16 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   13 Dec 2011; Agostino Sarubbo <ago@gentoo.org> resolution-0.3.ebuild:
   Stable for AMD64, wrt bug #392821
@@ -53,4 +57,3 @@
   28 Oct 2005; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
   +resolution-0.2.ebuild:
   Rox application for changing screen resolution.
-

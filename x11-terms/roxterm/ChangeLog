@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/roxterm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.71 2012/07/31 06:12:20 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.72 2013/03/02 08:11:27 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
 *roxterm-2.6.5 (31 Jul 2012)
 
@@ -287,4 +291,3 @@
   29 Jul 2006; Saleem Abdulrasool <compnerd@gentoo.org>
   +files/roxterm-1.2.3-new-button.patch, +roxterm-1.2.3.ebuild:
   Initial import
-

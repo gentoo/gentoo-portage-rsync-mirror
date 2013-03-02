@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/roxcd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxcd/ChangeLog,v 1.15 2007/11/29 15:31:09 lack Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxcd/ChangeLog,v 1.16 2013/03/02 08:07:28 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   29 Nov 2007; Jim Ramsay <lack@gentoo.org> -roxcd-0.4.5.ebuild:
   Version cleanup
@@ -55,4 +59,3 @@
   09 Dec 2004; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
   +roxcd-0.4.5.ebuild:
   Added to portage. (Bug #51996)
-

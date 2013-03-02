@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/ripper
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/ripper/ChangeLog,v 1.14 2008/07/14 15:52:20 lack Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/ripper/ChangeLog,v 1.15 2013/03/02 08:05:05 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   14 Jul 2008; Jim Ramsay <lack@gentoo.org> ripper-007-r1.ebuild:
   Upstream has moved to code.google.com
@@ -55,4 +59,3 @@
   09 Dec 2004; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
   +ripper-0.0.3.ebuild:
   Initial commit of ebild (Bug #51996)
-

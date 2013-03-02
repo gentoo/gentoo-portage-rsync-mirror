@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/weather
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/weather/ChangeLog,v 1.16 2009/05/31 13:35:02 nixnut Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/weather/ChangeLog,v 1.17 2013/03/02 08:10:48 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   31 May 2009; nixnut <nixnut@gentoo.org> weather-0.3.1.ebuild:
   ppc stable #270738
@@ -64,4 +68,3 @@
   +weather-0.2.3.ebuild:
   New package - Weather applet for rox desktop, imported from
   breakmygentoo.net (Thanks Peter Hyman)
-

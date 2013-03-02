@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/lithium
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/lithium/ChangeLog,v 1.5 2010/02/07 12:53:28 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/lithium/ChangeLog,v 1.6 2013/03/02 08:01:38 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   07 Feb 2010; Markos Chandras <hwoarang@gentoo.org> lithium-006.ebuild:
   Stable on amd64 wrt bug #300732
@@ -19,4 +23,3 @@
   20 Nov 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml,
   +lithium-006.ebuild:
   New package: Lithium is a battery-status applet for the ROX desktop
-

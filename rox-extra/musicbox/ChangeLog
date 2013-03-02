@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/musicbox
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/musicbox/ChangeLog,v 1.11 2008/07/14 14:51:41 lack Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/musicbox/ChangeLog,v 1.12 2013/03/02 08:03:19 pacho Exp $
+
+  02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a
+  -long-time-td257264.html
 
   14 Jul 2008; Jim Ramsay <lack@gentoo.org> musicbox-027-r2.ebuild:
   Upstream has moved to code.google.com
@@ -41,4 +45,3 @@
   +files/musicbox-027-mime.patch, +metadata.xml, +musicbox-027.ebuild:
   New application: MusicBox-027. Replaces rox-extra/music-box (rename and
   version bump)
-
