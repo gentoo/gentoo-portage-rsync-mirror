@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/lablgl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.61 2012/10/06 20:46:11 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.62 2013/03/02 18:00:28 aballier Exp $
+
+*lablgl-1.04-r1 (02 Mar 2013)
+
+  02 Mar 2013; Alexis Ballier <aballier@gentoo.org> +lablgl-1.04-r1.ebuild:
+  Drop togl as it does not build with recent tk versions; eapi5 and use slot
+  deps
 
   06 Oct 2012; Alexis Ballier <aballier@gentoo.org> lablgl-1.04.ebuild:
   add missing virutal/glu dep, bug #434456

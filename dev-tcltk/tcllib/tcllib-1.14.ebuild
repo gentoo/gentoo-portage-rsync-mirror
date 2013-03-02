@@ -1,8 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/tcllib-1.14.ebuild,v 1.2 2012/06/19 15:35:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/tcllib-1.14.ebuild,v 1.3 2013/03/02 17:49:01 jlec Exp $
 
 EAPI=4
+
+inherit eutils
 
 DESCRIPTION="Tcl Standard Library"
 HOMEPAGE="http://www.tcl.tk/software/tcllib/"
@@ -17,6 +19,10 @@ RDEPEND="dev-lang/tcl"
 DEPEND="${RDEPEND}"
 
 DOCS=( DESCRIPTION.txt STATUS )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-test.patch
+}
 
 src_install() {
 	default

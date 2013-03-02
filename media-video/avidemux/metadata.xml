@@ -5,7 +5,6 @@
     <email>TomWij@gentoo.org</email>
     <name>Tom Wijsman</name>
   </maintainer>
-  <herd>qt</herd>
   <herd>video</herd>
   <use>
     <flag name="aften">Enable A/52 (AC-3) audio encoder support</flag>

@@ -1,4 +1,4 @@
-DEFINED_PHASES=install
+DEFINED_PHASES=install prepare
 DEPEND=dev-lang/tcl
 DESCRIPTION=Tcl Standard Library
 EAPI=4
@@ -9,4 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-lang/tcl
 SLOT=0
 SRC_URI=mirror://sourceforge/tcllib/tcllib-1.14.tar.gz
-_md5_=1e47932e9ffb4159a2c105d527a32fa3
+_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=c8935c567a49cb3535fb3dddd6536e73

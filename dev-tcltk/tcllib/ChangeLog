@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tcllib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.35 2013/02/20 15:37:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.36 2013/03/02 17:49:01 jlec Exp $
+
+  02 Mar 2013; Justin Lecher <jlec@gentoo.org> tcllib-1.14.ebuild,
+  +files/tcllib-1.14-test.patch, tcllib-1.15.ebuild,
+  +files/tcllib-1.15-tcl8.6-test.patch:
+  Fix test, #458454; remove colliding manpages, #458544
 
 *tcllib-1.15 (20 Feb 2013)
 

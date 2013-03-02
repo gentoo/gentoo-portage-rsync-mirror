@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/tcllib-1.15.ebuild,v 1.1 2013/02/20 15:37:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/tcllib-1.15.ebuild,v 1.2 2013/03/02 17:49:01 jlec Exp $
 
 EAPI=5
+
+inherit eutils
 
 DESCRIPTION="Tcl Standard Library"
 HOMEPAGE="http://www.tcl.tk/software/tcllib/"
@@ -18,8 +20,19 @@ DEPEND="${RDEPEND}"
 
 DOCS=( DESCRIPTION.txt STATUS )
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-tcl8.6-test.patch
+}
+
+src_test() {
+#	emake test_interactive
+	emake test_batch
+}
+
 src_install() {
 	default
+
+	rm "${ED}"/usr/share/man/mann/{try,string,variable,zlib}.n || die
 
 	dodoc devdoc/*.txt
 
