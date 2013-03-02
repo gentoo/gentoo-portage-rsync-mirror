@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.6 2013/02/27 23:23:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.7 2013/03/02 18:18:13 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -81,8 +81,13 @@ multilib_get_enabled_abis() {
 	done
 
 	if [[ ! ${found} ]]; then
-		debug-print "${FUNCNAME}: no ABIs enabled, fallback to ${DEFAULT_ABI}"
-		echo ${DEFAULT_ABI}
+		# ${ABI} can be used to override the fallback (multilib-portage),
+		# ${DEFAULT_ABI} is the safe fallback.
+		local abi=${ABI:-${DEFAULT_ABI}}
+
+		debug-print "${FUNCNAME}: no ABIs enabled, fallback to ${abi}"
+		debug-print "${FUNCNAME}: ABI=${ABI}, DEFAULT_ABI=${DEFAULT_ABI}"
+		echo ${abi}
 	fi
 }
 
@@ -98,8 +103,9 @@ multilib_get_enabled_abis() {
 multilib_foreach_abi() {
 	local initial_dir=${BUILD_DIR:-${S}}
 
+	local abis=( $(multilib_get_enabled_abis) )
 	local ABI
-	for ABI in $(multilib_get_enabled_abis); do
+	for ABI in "${abis[@]}"; do
 		multilib_toolchain_setup "${ABI}"
 		BUILD_DIR=${initial_dir%%/}-${ABI} "${@}"
 	done
@@ -122,8 +128,9 @@ multilib_parallel_foreach_abi() {
 
 	multijob_init
 
+	local abis=( $(multilib_get_enabled_abis) )
 	local ABI
-	for ABI in $(multilib_get_enabled_abis); do
+	for ABI in "${abis[@]}"; do
 		(
 			multijob_child_init
 

@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rdate
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.50 2011/04/24 04:17:43 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.51 2013/03/02 18:17:11 titanofold Exp $
+
+*rdate-1.4-r4 (02 Mar 2013)
+
+  02 Mar 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  -files/rdate-initd-1.4-r2, +rdate-1.4-r4.ebuild, -files/rdate-initd:
+  Fix bug 335159. Thanks Kevin Pyle and Michael Mair-Keimberger. Clean out
+  cruft.
 
   24 Apr 2011; Mike Frysinger <vapier@gentoo.org> rdate-1.4-r3.ebuild:
   Respect env build settings.
