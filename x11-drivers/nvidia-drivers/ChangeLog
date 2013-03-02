@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.425 2013/02/24 06:45:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.426 2013/03/02 11:30:39 ssuominen Exp $
+
+  02 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  nvidia-drivers-313.18.ebuild, +files/nvidia-drivers-313.18-linux-3.8+.patch:
+  Fix missing -I flag to get headers from arch/x86/include/uapi in use with
+  Linux 3.8.x wrt #447566, Comment #38
 
   24 Feb 2013; Doug Goldstein <cardoe@gentoo.org> nvidia-drivers-310.32.ebuild:
   stable on amd64 and x86 for stability fixes and new X.org Video ABI support
