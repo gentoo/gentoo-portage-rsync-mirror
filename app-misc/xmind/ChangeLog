@@ -1,0 +1,14 @@
+# ChangeLog for app-misc/xmind
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/ChangeLog,v 1.1 2013/03/02 03:32:55 creffett Exp $
+
+*xmind-3.3.1.201212250029 (02 Mar 2013)
+
+  02 Mar 2013; Chris Reffett <creffett@gentoo.org> +files/x-xmind.xml,
+  +files/xmind-thumbnailer, +files/xmind.16.png, +files/xmind.32.png,
+  +files/xmind.48.png, +files/xmind.schemas, +metadata.xml,
+  +xmind-3.3.1.201212250029.ebuild:
+  New package wrt bugs 295242, 375249. Thanks to Mark Dumlao
+  <madumlao@gmail.com>, Vitovt <vitovt@grusha.org.ua>, Heiu-mun Park
+  <padangustasana@gmail.com>, Tarcisio Fedrizzi <tarcisio.fedrizzi@gmail.com>
+  for work in making the ebuild.
