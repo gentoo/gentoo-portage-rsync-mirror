@@ -1,6 +1,19 @@
 # ChangeLog for app-misc/ranger
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.22 2013/01/11 22:25:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.25 2013/03/02 06:42:22 radhermit Exp $
+
+  02 Mar 2013; Tim Harder <radhermit@gentoo.org> -ranger-1.5.4.ebuild,
+  -ranger-1.5.5.ebuild:
+  Remove old.
+
+  02 Mar 2013; Tim Harder <radhermit@gentoo.org> ranger-1.6.0.ebuild,
+  ranger-9999.ebuild:
+  Combine live ebuild and latest release.
+
+*ranger-1.6.0 (02 Mar 2013)
+
+  02 Mar 2013; Tim Harder <radhermit@gentoo.org> +ranger-1.6.0.ebuild:
+  Version bump.
 
   11 Jan 2013; Tim Harder <radhermit@gentoo.org> ranger-9999.ebuild:
   Drop empty SRC_URI.
