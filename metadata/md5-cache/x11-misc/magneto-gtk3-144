@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=~app-misc/magneto-loader-144 dev-libs/gobject-introspection x11-libs/gdk-pixbuf[introspection] x11-libs/gtk+:3[introspection] x11-libs/libnotify[introspection] =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://sabayon/sys-apps/entropy-144.tar.bz2
-_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	python	89dff4d72d57f253f9f78b7f8c5d55c8	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=4065123902e4a585b03231cda9cf413f

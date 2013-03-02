@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.698 2013/03/02 07:17:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.699 2013/03/02 12:54:31 mgorny Exp $
+
+  02 Mar 2013; Michał Górny <mgorny@gentoo.org> python.eclass:
+  Remove deprecation warnings wrt bug #452160. The code will not be removed
+  anymore since the eclass will be deprecated at some point.
 
   02 Mar 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Run *_all() phases in best-impl sources, in an in-source build.

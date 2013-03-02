@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.101 2013/02/26 14:56:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.102 2013/03/02 12:40:32 idella4 Exp $
+
+  02 Mar 2013; Ian Delaney <idella4@gentoo.org>
+  +files/nose-1.2.1-skiptest.patch, nose-1.1.2-r1.ebuild, nose-1.2.1.ebuild,
+  nose-1.2.1_p2012.ebuild:
+  Added skiptest.patch for 1.2.1 versions skipping tests set to fail, wrt Bug
+  #455104
 
   26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> nose-1.1.2-r1.ebuild:
   Stable for s390, wrt bug #455724

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.2.1.ebuild,v 1.2 2013/01/02 20:54:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.2.1.ebuild,v 1.3 2013/03/02 12:40:32 idella4 Exp $
 
 EAPI=5
 
@@ -28,8 +28,10 @@ python_prepare_all() {
 	# Tests need to be converted, and they don't respect BUILD_DIR.
 	use test && DISTUTILS_IN_SOURCE_BUILD=1
 
-	# Disable sphinx.ext.intersphinx, requires network
-	epatch "${FILESDIR}/${PN}-0.11.0-disable_intersphinx.patch"
+	# Disable sphinx.ext.intersphinx, requires network, rogue test
+	epatch "${FILESDIR}/${PN}-0.11.0-disable_intersphinx.patch" \
+		"${FILESDIR}"/${P}-skiptest.patch
+
 	# Disable tests requiring network connection.
 	sed \
 		-e "s/test_resolve/_&/g" \

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/alsa-lib =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://alsaproject/pyalsa/pyalsa-1.0.26.tar.bz2
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	python	89dff4d72d57f253f9f78b7f8c5d55c8	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=00038058cdedb56a0780c7acceccf34e

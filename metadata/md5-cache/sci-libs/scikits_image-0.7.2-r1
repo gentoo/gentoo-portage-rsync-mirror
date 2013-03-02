@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=sci-libs/scikits sci-libs/scipy freeimage? ( media-libs/freeimage ) gtk? ( dev-python/pygtk ) qt4? ( dev-python/PyQt4 ) =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://pypi/s/scikit-image/scikit-image-0.7.2.tar.gz
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	ded93e450747134a079e647d888aa80b	python	e5b3412fa9f03670a666c8a137bd1060	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	ded93e450747134a079e647d888aa80b	python	89dff4d72d57f253f9f78b7f8c5d55c8	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=6f64d0fa2c69a6f6273ec1b0a005da16
