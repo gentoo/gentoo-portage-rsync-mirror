@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-10.0_pre562.ebuild,v 1.1 2013/02/15 09:11:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-10.0_pre567.ebuild,v 1.1 2013/03/02 06:28:38 radhermit Exp $
 
 EAPI=5
 
