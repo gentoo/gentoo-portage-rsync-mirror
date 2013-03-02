@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/g15daemon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.42 2012/10/12 20:22:20 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.43 2013/03/01 23:16:49 polynomial-c Exp $
+
+*g15daemon-1.9.5.3-r7 (01 Mar 2013)
+
+  01 Mar 2013; Lars Wendler <polynomial-c@gentoo.org>
+  g15daemon-1.9.5.3-r6.ebuild, +g15daemon-1.9.5.3-r7.ebuild,
+  +files/g15daemon-1.9.5.3.initd, g15daemon-9999.ebuild:
+  Non-maintainer commit. Added rewritten init script to fix bug #451966. Thanks
+  to Manuel Rüger for reporting this. Moved ebuild with g510 support to -r7.
 
 *g15daemon-1.9.5.3-r6 (12 Oct 2012)
 *g15daemon-9999 (12 Oct 2012)

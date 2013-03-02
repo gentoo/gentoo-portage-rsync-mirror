@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r6.ebuild,v 1.1 2012/10/12 20:22:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r6.ebuild,v 1.2 2013/03/01 23:16:49 polynomial-c Exp $
 
 EAPI=4
 GENTOO_DEPEND_ON_PERL="no"
@@ -15,11 +15,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="perl python static-libs"
 
 DEPEND="virtual/libusb:0
-	>=dev-libs/libg15-9999
+	>=dev-libs/libg15-1.2.4
 	>=dev-libs/libg15render-1.2
 	perl? (
 		dev-lang/perl
@@ -31,9 +31,7 @@ RDEPEND="${DEPEND}"
 PATCHES=(
 	"${FILESDIR}/${P}-forgotten-open-mode.patch"
 	"${FILESDIR}/${P}-overflow-fix.patch"
-	"${FILESDIR}/${P}-g510-keys.patch"
 )
-
 uinput_check() {
 	ebegin "Checking for uinput support"
 	local rc=1
@@ -117,7 +115,7 @@ src_install() {
 	fi
 
 	newconfd "${FILESDIR}/${PN}-1.2.7.confd" ${PN}
-	newinitd "${FILESDIR}/${PN}-1.2.7-r2.initd" ${PN}
+	newinitd "${FILESDIR}/${PN}-1.9.5.3.initd" ${PN}
 	dobin "${FILESDIR}/g15daemon-hotplug"
 	insinto /lib/udev/rules.d
 	doins "${FILESDIR}/99-g15daemon.rules"
