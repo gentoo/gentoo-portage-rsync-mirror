@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/giada/giada-0.5.6.ebuild,v 1.1 2013/01/03 03:18:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/giada/giada-0.6.0.ebuild,v 1.1 2013/03/02 09:43:20 radhermit Exp $
 
 EAPI=5
 
 inherit flag-o-matic eutils autotools
 
 DESCRIPTION="A free, minimal, hardcore audio tool for djs and live performers"
-HOMEPAGE="http://www.monocasual.com/giada/"
-SRC_URI="http://www.monocasual.com/giada/download.php?dist=source&file=${PN}_${PV}_src.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="http://www.giadamusic.com/"
+SRC_URI="http://www.giadamusic.com/download-action.php?os=source&version=${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -17,6 +17,7 @@ IUSE="+alsa jack pulseaudio"
 REQUIRED_USE="|| ( alsa jack pulseaudio )"
 
 RDEPEND="media-libs/libsndfile
+	media-libs/libsamplerate
 	media-libs/rtaudio[alsa?,jack?,pulseaudio?]
 	x11-libs/fltk:1
 	x11-libs/libXpm"
@@ -26,7 +27,7 @@ S=${WORKDIR}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.5.4-flags.patch
-	epatch "${FILESDIR}"/${PN}-0.5.4-configure.patch
+	epatch "${FILESDIR}"/${PN}-0.5.8-configure.patch
 	eautoreconf
 }
 
