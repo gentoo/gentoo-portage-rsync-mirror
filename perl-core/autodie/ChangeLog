@@ -1,0 +1,43 @@
+# ChangeLog for dev-perl/autodie
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/autodie/ChangeLog,v 1.1 2013/03/02 08:38:17 tove Exp $
+
+*autodie-2.160.0 (24 Feb 2013)
+
+  24 Feb 2013; Kent Fredric <kentfredric@gmail.com> +autodie-2.160.0.ebuild,
+  metadata.xml:
+  Version Bump
+
+*autodie-2.130.0 (10 Nov 2012)
+
+  10 Nov 2012; Kent Fredric <kentfredric@gmail.com> +autodie-2.130.0.ebuild:
+  Version Bump
+
+*autodie-2.120.0 (25 Jul 2012)
+
+  25 Jul 2012; Kent Fredric <kentfredric@gmail.com> +autodie-2.120.0.ebuild:
+  Version Bump
+
+*autodie-2.110.0 (27 Mar 2012)
+
+  27 Mar 2012; Kent Fredric <kentfredric@gmail.com> +autodie-2.110.0.ebuild:
+  Version Bump
+
+*autodie-2.100.0 (12 Apr 2011)
+*autodie-2.60.0 (12 Apr 2011)
+
+  12 Apr 2011; Kent Fredric <kentfredric@gmail.com> -autodie-2.06.ebuild,
+  -autodie-2.10.ebuild, +autodie-2.60.0.ebuild, +autodie-2.100.0.ebuild:
+  Migrate
+
+*autodie-2.10 (24 Mar 2010)
+
+  24 Mar 2010; Torsten Veller <tove@gentoo.org> +autodie-2.10.ebuild:
+  Version bump
+
+*autodie-2.06 (02 Sep 2009)
+
+  02 Sep 2009; Kent Fredric <kentfredric@gmail.com> +autodie-2.06.ebuild,
+  +metadata.xml:
+  Added
+
