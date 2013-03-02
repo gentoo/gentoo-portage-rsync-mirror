@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.57 2013/02/27 21:02:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.60 2013/03/02 07:17:50 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -228,11 +228,7 @@ esetup.py() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	local add_args=()
-	if [[ ! ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
-		if [[ ! ${BUILD_DIR} ]]; then
-			die 'Out-of-source build requested, yet BUILD_DIR unset.'
-		fi
-
+	if [[ ${BUILD_DIR} ]]; then
 		# if setuptools is used, adjust egg_info path as well
 		# (disabled since it causes build not to install scripts)
 #		if "${PYTHON:-python}" setup.py --help egg_info &>/dev/null; then
@@ -249,6 +245,8 @@ esetup.py() {
 			# make the ebuild writer lives easier
 			--build-scripts "${BUILD_DIR}/scripts"
 		)
+	elif [[ ! ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
+		die 'Out-of-source build requested, yet BUILD_DIR unset.'
 	fi
 
 	set -- "${PYTHON:-python}" setup.py \
@@ -284,11 +282,6 @@ distutils_install_for_testing() {
 	#    alternate build paths,
 	# 5) 'install' needs to go before 'bdist_egg' or the latter would
 	#    re-set install paths.
-
-	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
-		# use 'build' subdirectory to reduce the risk of collisions
-		local BUILD_DIR=${BUILD_DIR}/build
-	fi
 
 	TEST_DIR=${BUILD_DIR}/test
 	local bindir=${TEST_DIR}/scripts
@@ -540,8 +533,9 @@ distutils-r1_python_install_all() {
 # directory, with BUILD_DIR pointing at the build directory
 # and PYTHONPATH having an entry for the module build directory.
 #
-# If in-source builds are used, the command is executed in the BUILD_DIR
-# (the directory holding per-implementation copy of sources).
+# If in-source builds are used, the command is executed in the directory
+# holding the per-implementation copy of sources. BUILD_DIR points
+# to the 'build' subdirectory.
 distutils-r1_run_phase() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -549,10 +543,9 @@ distutils-r1_run_phase() {
 		if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
 			pushd "${BUILD_DIR}" >/dev/null || die
 		fi
-	else
-		local PYTHONPATH="${BUILD_DIR}/lib:${PYTHONPATH}"
-		export PYTHONPATH
+		local BUILD_DIR=${BUILD_DIR}/build
 	fi
+	local -x PYTHONPATH="${BUILD_DIR}/lib:${PYTHONPATH}"
 
 	local TMPDIR=${T}/${EPYTHON}
 
@@ -585,6 +578,9 @@ distutils-r1_run_phase() {
 # @INTERNAL
 # @DESCRIPTION:
 # Run the given command, restoring the best-implementation state.
+#
+# If in-source build is used, the command will be run in the copy
+# of sources made for the best Python interpreter.
 _distutils-r1_run_common_phase() {
 	local DISTUTILS_ORIG_BUILD_DIR=${BUILD_DIR}
 
@@ -595,8 +591,16 @@ _distutils-r1_run_common_phase() {
 
 	export EPYTHON PYTHON PYTHONPATH
 
+	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
+		pushd "${BUILD_DIR}"/.. >/dev/null || die
+	fi
+
 	einfo "common: running ${1}"
 	"${@}"
+
+	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
+		popd >/dev/null || die
+	fi
 }
 
 # @FUNCTION: _distutils-r1_multijob_init

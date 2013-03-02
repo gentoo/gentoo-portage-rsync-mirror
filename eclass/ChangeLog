@@ -1,6 +1,17 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.695 2013/02/27 23:23:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.698 2013/03/02 07:17:50 mgorny Exp $
+
+  02 Mar 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Run *_all() phases in best-impl sources, in an in-source build.
+
+  02 Mar 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Override build locations and set PYTHONPATH in in-source builds, to increase
+  compatibility with out-of-source builds.
+
+  02 Mar 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  In-source builds: append "build/" subdir to the BUILD_DIR variable. It can be
+  used alike in out-of-source builds now.
 
   27 Feb 2013; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Enable x32 ABI support.

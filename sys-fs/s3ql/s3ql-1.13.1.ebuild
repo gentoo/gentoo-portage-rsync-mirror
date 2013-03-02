@@ -1,15 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/s3ql-1.11.1.ebuild,v 1.3 2013/01/07 08:54:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/s3ql-1.13.1.ebuild,v 1.1 2013/03/02 07:29:07 radhermit Exp $
 
-EAPI="4"
+EAPI=5
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
-DISTUTILS_SRC_TEST="setup.py"
-
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="A full-featured file system for online data storage"
 HOMEPAGE="http://code.google.com/p/s3ql/"
@@ -20,30 +16,31 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="contrib doc test"
 
-RDEPEND="dev-python/setuptools
-	>=dev-python/apsw-3.7.0
-	>=dev-python/llfuse-0.37
-	dev-python/pycryptopp
-	dev-python/pyliblzma
+RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	>=dev-python/apsw-3.7.0[${PYTHON_USEDEP}]
+	>=dev-python/llfuse-0.37[${PYTHON_USEDEP}]
+	dev-python/pycryptopp[${PYTHON_USEDEP}]
+	dev-python/pyliblzma[${PYTHON_USEDEP}]
 	sys-fs/fuse
-	virtual/python-argparse"
+	virtual/python-argparse[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	test? (
+		dev-python/pytest[${PYTHON_USEDEP}]
 		net-misc/rsync[xattr]
 		virtual/python-unittest2
 	)"
 
-src_test() {
+python_test() {
 	if [[ ${EUID} -ne 0 ]] ; then
 		ewarn "Skipping tests: root privileges are required so userpriv must be disabled"
 	else
 		addwrite /dev/fuse
-		distutils_src_test
+		esetup.py test
 	fi
 }
 
-src_install() {
-	distutils_src_install
+python_install_all() {
+	distutils-r1_python_install_all
 
 	if use contrib ; then
 		exeinto /usr/share/doc/${PF}/contrib
