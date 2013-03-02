@@ -1,6 +1,11 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.143 2013/03/02 14:09:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.144 2013/03/02 14:31:36 lu_zero Exp $
+
+*libav-9.3 (02 Mar 2013)
+
+  02 Mar 2013; Luca Barbato <lu_zero@gentoo.org> +libav-9.3.ebuild:
+  New version
 
   02 Mar 2013; Luca Barbato <lu_zero@gentoo.org>
   -files/0001-build-The-libopencore-amrnb-encoder-depends-on-audio.patch,

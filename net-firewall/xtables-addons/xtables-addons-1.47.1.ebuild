@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.47.1.ebuild,v 1.1 2012/12/29 17:12:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.47.1.ebuild,v 1.2 2013/03/02 14:48:11 blueness Exp $
 
 EAPI="5"
 
@@ -67,6 +67,7 @@ pkg_setup()	{
 			ewarn "No IPV6 support in kernel. Disabling: ${SKIP_IPV6_MODULES}"
 		fi
 		kernel_is -lt 2 6 32 && die "${PN} requires kernel version >= 2.6.32"
+		kernel_is -ge 3 7 && die "${PN} requires kernel version < 3.7"
 		XA_check4internal_module tee "2 6 35" NETFILTER_XT_TARGET_TEE
 		XA_check4internal_module checksum "2 6 36" NETFILTER_XT_TARGET_CHECKSUM
 	fi
