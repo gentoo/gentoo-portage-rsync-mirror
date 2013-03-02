@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7542 2013/02/28 15:11:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7543 2013/03/02 13:46:15 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Mar 2013; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Temp mask for dev-qt/*
 
   28 Feb 2013; Justin Lecher <jlec@gentoo.org> package.mask:
   Clean package.mask

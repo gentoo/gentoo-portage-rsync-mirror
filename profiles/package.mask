@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14515 2013/02/28 15:11:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14516 2013/03/02 13:46:15 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,30 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (02 Mar 2013)
+# temporary mask for move to new category
+dev-qt/qtbearer
+dev-qt/qtcore
+dev-qt/qtdbus
+dev-qt/qtdeclarative
+dev-qt/qtdemo
+dev-qt/qthelp
+dev-qt/qtgui
+dev-qt/qtmultimedia
+dev-qt/qtopengl
+dev-qt/qtopenvg
+dev-qt/qtphonon
+dev-qt/qt3support
+dev-qt/qtscript
+dev-qt/qtsql
+dev-qt/qtsvg
+dev-qt/qttest
+dev-qt/qtwebkit
+dev-qt/qtxmlpatterns
+dev-qt/qt-creator
+dev-qt/qt-meta
+dev-qt/qt-mobility
 
 # Ulrich Müller <ulm@gentoo.org> (26 Feb 2013)
 # Declared as obsolete by upstream. Use fortune.el with
