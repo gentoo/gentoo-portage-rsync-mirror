@@ -1716,6 +1716,81 @@ dev-python/ws4py:server - Install server modules
 dev-python/wxpython:doc - Install HTML wxWidgets docs and wxpython API reference.
 dev-python/wxpython:examples - Install interactive demo module browser and sample applets.
 dev-python/zsi:twisted - add support for dev-python/twisted
+dev-qt/qt-creator:android - Build Android plugin
+dev-qt/qt-creator:autotools - Enable autotools project manager plugin
+dev-qt/qt-creator:bazaar - Add support for dev-vcs/bzr version control system
+dev-qt/qt-creator:botan-bundled - Use the bundled copy of dev-libs/botan
+dev-qt/qt-creator:clearcase - Add support for IBM ClearCase version control system (requires manual installation of ClearCase client)
+dev-qt/qt-creator:cmake - Enable cmake project manager plugin
+dev-qt/qt-creator:fakevim - Enable support for vim-like key bindings
+dev-qt/qt-creator:git - Add support for dev-vcs/git version control system
+dev-qt/qt-creator:madde - Enable integration with MADDE (Maemo Application Development and Debugging Environment)
+dev-qt/qt-creator:mercurial - Add support for dev-vcs/mercurial version control system
+dev-qt/qt-creator:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
+dev-qt/qt-creator:qnx - Build QNX/Blackberry plugin
+dev-qt/qt-creator:valgrind - Add support for memory debugging using dev-util/valgrind
+dev-qt/qt-meta:kde - Select media-libs/phonon as Phonon variant (needed for KDE)
+dev-qt/qt-meta:opengl - Enable the QtOpenGL module
+dev-qt/qt-meta:openvg - Enable the QtOpenVG module
+dev-qt/qt-meta:qt3support - Enable the Qt3Support library for Qt4
+dev-qt/qt-mobility:bearer - Build the QtBearer module
+dev-qt/qt-mobility:bluetooth - Enable Bluetooth support in QtConnectivity and QtSystemInfo modules
+dev-qt/qt-mobility:connectivity - Build the QtConnectivity module
+dev-qt/qt-mobility:contacts - Build the QtContacts module
+dev-qt/qt-mobility:feedback - Build the QtFeedback module
+dev-qt/qt-mobility:gallery - Build the QtGallery module
+dev-qt/qt-mobility:location - Build the QtLocation module
+dev-qt/qt-mobility:messaging - Build the QtMessaging module
+dev-qt/qt-mobility:multimedia - Build the QtMultimediaKit module
+dev-qt/qt-mobility:networkmanager - Enable NetworkManager support in QtBearer and QtSystemInfo modules
+dev-qt/qt-mobility:organizer - Build the QtOrganizer module
+dev-qt/qt-mobility:publishsubscribe - Build the QtPublishSubscribe module
+dev-qt/qt-mobility:pulseaudio - Enable PulseAudio support in QtMultimediaKit module
+dev-qt/qt-mobility:qml - Build QML bindings
+dev-qt/qt-mobility:sensors - Build the QtSensors module
+dev-qt/qt-mobility:serviceframework - Build the QtServiceFramework module
+dev-qt/qt-mobility:systeminfo - Build the QtSystemInfo module
+dev-qt/qt-mobility:tools - Build various useful tools (e.g.: qcrmlgen, servicexmlgen, vsexplorer, ...)
+dev-qt/qt-mobility:versit - Build the QtVersit module
+dev-qt/qt3support:c++0x - Build Qt using the C++11 standard
+dev-qt/qt3support:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/qtbearer:c++0x - Build Qt using the C++11 standard
+dev-qt/qtbearer:connman - Enable ConnMan-based bearer plugin
+dev-qt/qtbearer:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/qtbearer:networkmanager - Enable NetworkManager-based bearer plugin
+dev-qt/qtcore:c++0x - Build Qt using the C++11 standard
+dev-qt/qtcore:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/qtcore:glib - Enable dev-libs/glib eventloop support
+dev-qt/qtcore:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
+dev-qt/qtdbus:c++0x - Build Qt using the C++11 standard
+dev-qt/qtdbus:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/qtdeclarative:c++0x - Build Qt using the C++11 standard
+dev-qt/qtdeclarative:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/qtdeclarative:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
+dev-qt/qtdeclarative:webkit - Build the WebView QML component
+dev-qt/qtdemo:c++0x - Build Qt using the C++11 standard
+dev-qt/qtdemo:dbus - Build QtDBus examples and demos
+dev-qt/qtdemo:declarative - Build QtDeclarative examples and demos
+dev-qt/qtdemo:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/qtdemo:multimedia - Build QtMultimedia examples and demos
+dev-qt/qtdemo:opengl - Build QtOpenGL examples and demos
+dev-qt/qtdemo:openvg - Build QtOpenVG examples and demos
+dev-qt/qtdemo:qt3support - Build Qt3Support examples and demos
+dev-qt/qtdemo:webkit - Build QtWebKit examples and demos
+dev-qt/qtdemo:xmlpatterns - Build QtXmlPatterns examples and demos
+dev-qt/qtgui:c++0x - Build Qt using the C++11 standard
+dev-qt/qtgui:egl - Use EGL instead of default GLX to manage OpenGL contexts on the desktop
+dev-qt/qtgui:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/qtgui:glib - Enable dev-libs/glib eventloop support
+dev-qt/qtgui:gtkstyle - Build a Qt style called GTK+ that mimics the active GTK+ theme
+dev-qt/qtgui:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
+dev-qt/qtgui:trace - Build the 'trace' graphicssystem engine which allows to record all drawing operations into a trace buffer. Later it can be replayed with the qttracereplay utility
+dev-qt/qthelp:c++0x - Build Qt using the C++11 standard
+dev-qt/qthelp:compat - Build the extra compatibility layer required by a few packages, see http://labs.qt.nokia.com/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
+dev-qt/qthelp:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/qthelp:glib - Enable dev-libs/glib eventloop support
+dev-qt/qthelp:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
+dev-qt/qthelp:trace - Build the 'qttracereplay' utility which is required to play drawings recorded with the trace graphicssystem
 dev-ruby/barby:cairo - Add support for writing images (PNG, PS, EPS and, if supported, PDF and SVG) using dev-ruby/rcairo. Not available on JRuby.
 dev-ruby/barby:datamatrix - Add support for datamatrix 2D codes using dev-ruby/semacode.
 dev-ruby/barby:pdf-writer - Add support for writing PDF documents using dev-ruby/pdf-writer.
