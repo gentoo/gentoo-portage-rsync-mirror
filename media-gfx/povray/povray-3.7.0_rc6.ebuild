@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc6.ebuild,v 1.4 2012/12/30 16:34:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc6.ebuild,v 1.5 2013/03/02 00:49:41 ottxor Exp $
 
 EAPI=4
 
@@ -65,6 +65,8 @@ src_prepare() {
 	# The "+p" option on the test command line causes a pause and
 	# prompts the user to interact, so remove it.
 	sed -i -e "s:biscuit.pov -f +d +p:biscuit.pov -f +d:" Makefile.am || die
+
+	epatch_user
 
 	eautoreconf
 }
