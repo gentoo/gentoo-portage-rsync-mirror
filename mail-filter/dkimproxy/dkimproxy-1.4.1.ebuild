@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkimproxy/dkimproxy-1.4.1.ebuild,v 1.1 2013/02/28 19:14:34 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkimproxy/dkimproxy-1.4.1.ebuild,v 1.2 2013/03/02 04:10:14 zx2c4 Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-perl/Mail-DKIM
-		dev-perl/Net-Server
+		>=dev-perl/net-server-2.7.0
 		dev-perl/Error
 		dev-perl/MIME-tools"
 RDEPEND="${DEPEND}"
