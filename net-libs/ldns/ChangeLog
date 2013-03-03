@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.45 2013/02/03 21:37:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.46 2013/03/03 09:53:01 vapier Exp $
+
+  03 Mar 2013; Mike Frysinger <vapier@gentoo.org> ldns-1.6.16.ebuild:
+  Add m68k/s390/sh lovin.
 
   03 Feb 2013; Tim Harder <radhermit@gentoo.org> ldns-1.6.16.ebuild:
   Drop unused autotools eclass.

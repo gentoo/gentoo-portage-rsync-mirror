@@ -69,6 +69,7 @@ cairo
 xv
 gtk
 gtk2
+gtk3
 gnome
 gnome-keyring
 raw
