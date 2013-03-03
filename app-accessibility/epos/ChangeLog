@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/epos
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.42 2012/04/14 09:28:58 neurogeek Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.43 2013/03/03 07:10:10 dirtyepic Exp $
+
+  03 Mar 2013; Ryan Hill <dirtyepic@gentoo.org> epos-2.5.37-r1.ebuild,
+  +files/epos-2.5.37-gcc47.patch:
+  Fix build with GCC 4.7 (bug #440354).
 
   14 Apr 2012; Jesus Rivero <neurogeek@gentoo.org> epos-2.5.37-r1.ebuild:
   Bump to EAPI=4. Closes bug #382065

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.37-r1.ebuild,v 1.16 2012/04/14 09:28:58 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/epos-2.5.37-r1.ebuild,v 1.17 2013/03/03 07:10:10 dirtyepic Exp $
 
 EAPI="4"
 
@@ -21,6 +21,7 @@ RDEPEND=""
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-gcc45.patch \
+		"${FILESDIR}"/${P}-gcc47.patch \
 		"${FILESDIR}"/${P}-disable-tests.patch
 
 	sed -i -e "s/CCC/#CCC/" configure.ac || die
