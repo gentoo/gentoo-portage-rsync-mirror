@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.1.ebuild,v 1.1 2012/12/12 20:08:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.1.ebuild,v 1.2 2013/03/02 23:24:32 hwoarang Exp $
 
 EAPI=4
 
@@ -32,8 +32,8 @@ RDEPEND="
 	virtual/opengl
 	gmp? ( dev-libs/gmp[cxx] )
 	qt4? (
-		x11-libs/qt-gui:4
-		x11-libs/qt-opengl:4 )
+		dev-qt/qtgui:4
+		dev-qt/qtopengl:4 )
 	mpfi? ( sci-libs/mpfi )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"

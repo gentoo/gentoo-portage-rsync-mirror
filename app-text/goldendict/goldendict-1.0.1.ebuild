@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/goldendict-1.0.1.ebuild,v 1.8 2012/07/26 07:04:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/goldendict-1.0.1.ebuild,v 1.9 2013/03/02 19:42:28 hwoarang Exp $
 
 EAPI=4
 PLOCALES="ar_SA bg_BG cs_CZ de_DE el_GR it_IT lt_LT ru_RU uk_UA vi_VN zh_CN"
@@ -22,11 +22,11 @@ RDEPEND="
 	media-libs/libvorbis
 	sys-libs/zlib
 	x11-libs/libXtst
-	>=x11-libs/qt-core-4.5:4[exceptions,qt3support]
-	>=x11-libs/qt-gui-4.5:4[exceptions,qt3support]
-	>=x11-libs/qt-webkit-4.5:4[exceptions]
+	>=dev-qt/qtcore-4.5:4[exceptions,qt3support]
+	>=dev-qt/qtgui-4.5:4[exceptions,qt3support]
+	>=dev-qt/qtwebkit-4.5:4[exceptions]
 	!kde? ( || (
-		>=x11-libs/qt-phonon-4.5:4[exceptions]
+		>=dev-qt/qtphonon-4.5:4[exceptions]
 		media-libs/phonon
 	) )
 	kde? ( media-libs/phonon )

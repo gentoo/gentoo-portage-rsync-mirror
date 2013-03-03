@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/qt-gstreamer-0.10.2.ebuild,v 1.5 2012/11/11 22:30:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/qt-gstreamer-0.10.2.ebuild,v 1.6 2013/03/02 21:48:35 hwoarang Exp $
 
 EAPI=4
 
@@ -29,14 +29,14 @@ RDEPEND="
 	>=dev-libs/boost-1.40
 	>=media-libs/gstreamer-0.10.33:0.10
 	>=media-libs/gst-plugins-base-0.10.33:0.10
-	>=x11-libs/qt-core-${QT_MINIMAL}:4
-	>=x11-libs/qt-declarative-${QT_MINIMAL}:4
-	>=x11-libs/qt-gui-${QT_MINIMAL}:4
-	>=x11-libs/qt-opengl-${QT_MINIMAL}:4
+	>=dev-qt/qtcore-${QT_MINIMAL}:4
+	>=dev-qt/qtdeclarative-${QT_MINIMAL}:4
+	>=dev-qt/qtgui-${QT_MINIMAL}:4
+	>=dev-qt/qtopengl-${QT_MINIMAL}:4
 "
 DEPEND="
 	${RDEPEND}
-	test? ( >=x11-libs/qt-test-${QT_MINIMAL}:4 )
+	test? ( >=dev-qt/qttest-${QT_MINIMAL}:4 )
 "
 
 src_configure() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-qt/vim-qt-20130201.ebuild,v 1.1 2013/02/01 19:43:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-qt/vim-qt-20130201.ebuild,v 1.2 2013/03/02 19:22:35 hwoarang Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -29,8 +29,8 @@ IUSE="acl cscope debug gpm nls perl python ruby"
 RDEPEND="app-admin/eselect-vi
 	>=app-editors/vim-core-7.3.762[acl?]
 	sys-libs/ncurses
-	>=x11-libs/qt-core-4.7.0:4
-	>=x11-libs/qt-gui-4.7.0:4
+	>=dev-qt/qtcore-4.7.0:4
+	>=dev-qt/qtgui-4.7.0:4
 	acl? ( kernel_linux? ( sys-apps/acl ) )
 	cscope? ( dev-util/cscope )
 	gpm? ( sys-libs/gpm )

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.217 2013/02/21 13:27:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.218 2013/03/03 00:36:24 hwoarang Exp $
+
+  03 Mar 2013; Markos Chandras <hwoarang@gentoo.org> PyQt4-4.9.4-r1.ebuild,
+  PyQt4-4.9.6-r2.ebuild:
+  Move Qt dependencies to the new category
 
   21 Feb 2013; Agostino Sarubbo <ago@gentoo.org> PyQt4-4.9.6-r2.ebuild:
   Stable for ia64, wrt bug #457046

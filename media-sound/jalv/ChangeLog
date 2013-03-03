@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jalv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jalv/ChangeLog,v 1.4 2013/02/23 13:35:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jalv/ChangeLog,v 1.5 2013/03/02 21:55:48 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> jalv-1.0.0.ebuild,
+  jalv-1.2.0.ebuild, jalv-1.4.0.ebuild:
+  Move Qt dependencies to the new category
 
 *jalv-1.4.0 (23 Feb 2013)
 
@@ -21,4 +25,3 @@
   23 Apr 2012; Alexis Ballier <aballier@gentoo.org> +jalv-1.0.0.ebuild,
   +metadata.xml:
   initial import. ebuild by me.
-

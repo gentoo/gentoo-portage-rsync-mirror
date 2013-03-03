@@ -8,7 +8,7 @@
 	</maintainer>
 	<use>
 		<flag name='debug'>Enable asserts and debug logging.</flag>
-		<flag name='crash-reporter'>Build a <pkg>x11-libs/qt-gui</pkg>-based
+		<flag name='crash-reporter'>Build a <pkg>dev-qt/qtgui</pkg>-based
 			tool that allows to submit crash information to the upstream
 			backtracker.</flag>
 		<flag name='tools'>Build tools that can extract the game's data and

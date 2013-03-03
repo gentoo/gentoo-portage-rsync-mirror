@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/leechcraft-lmp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/leechcraft-lmp/ChangeLog,v 1.18 2013/03/01 14:37:47 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/leechcraft-lmp/ChangeLog,v 1.19 2013/03/02 21:56:39 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  leechcraft-lmp-0.5.85.ebuild, leechcraft-lmp-0.5.90.ebuild,
+  leechcraft-lmp-9999.ebuild:
+  Move Qt dependencies to the new category
 
   01 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org> leechcraft-lmp-9999.ebuild:
   Add media-libs/flac dependency to lmp-9999, thanks to 0xd34f00d

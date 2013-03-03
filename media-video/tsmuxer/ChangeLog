@@ -1,6 +1,9 @@
 # ChangeLog for media-video/tsmuxer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.8 2012/09/24 00:45:45 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.9 2013/03/02 22:43:17 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> tsmuxer-1.10.6-r1.ebuild:
+  Move Qt dependencies to the new category
 
   24 Sep 2012; Mike Frysinger <vapier@gentoo.org> tsmuxer-1.10.6-r1.ebuild:
   QA_DT_HASH (old/deprecated) -> QA_FLAGS_IGNORED (new hotness).

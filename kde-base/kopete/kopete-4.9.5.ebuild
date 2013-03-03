@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.9.5.ebuild,v 1.5 2013/02/23 16:49:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.9.5.ebuild,v 1.6 2013/03/02 21:26:44 hwoarang Exp $
 
 EAPI=4
 
@@ -68,7 +68,7 @@ COMMONDEPEND="
 	dev-libs/libpcre
 	$(add_kdebase_dep kdepimlibs)
 	media-libs/qimageblitz
-	>=x11-libs/qt-gui-4.4.0:4[mng]
+	>=dev-qt/qtgui-4.4.0:4[mng]
 	!aqua? ( x11-libs/libXScrnSaver )
 	gadu? ( >=net-libs/libgadu-1.8.0[threads] )
 	groupwise? ( app-crypt/qca:2 )

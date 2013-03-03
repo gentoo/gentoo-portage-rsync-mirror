@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.106 2013/01/31 08:09:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.107 2013/03/02 23:24:14 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> vtk-5.10.0.ebuild,
+  vtk-5.10.1.ebuild:
+  Move Qt dependencies to the new category
 
   31 Jan 2013; Justin Lecher <jlec@gentoo.org> files/vtk-5.10.1-tcl8.6.patch:
   Backport upstream patch for tcl/tk-8.6.0, #454762

@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/udav
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/udav/ChangeLog,v 1.10 2012/08/04 17:55:35 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/udav/ChangeLog,v 1.11 2013/03/02 23:28:48 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> udav-0.7.1.2-r1.ebuild:
+  Move Qt dependencies to the new category
 
   04 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> udav-0.7.1.2-r1.ebuild:
   Block newer mathgl

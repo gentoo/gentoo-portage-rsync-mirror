@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/cgal
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/ChangeLog,v 1.20 2012/12/12 20:08:28 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/ChangeLog,v 1.21 2013/03/02 23:24:32 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> cgal-4.0.2.ebuild,
+  cgal-4.1.ebuild:
+  Move Qt dependencies to the new category
 
 *cgal-4.1 (12 Dec 2012)
 

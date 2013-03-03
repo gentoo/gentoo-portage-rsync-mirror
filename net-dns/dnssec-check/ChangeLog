@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/dnssec-check
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-check/ChangeLog,v 1.6 2012/11/04 18:02:12 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-check/ChangeLog,v 1.7 2013/03/02 22:48:59 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> dnssec-check-1.13.ebuild,
+  dnssec-check-1.14.0.1.ebuild, dnssec-check-1.14.ebuild:
+  Move Qt dependencies to the new category
 
 *dnssec-check-1.14.0.1 (04 Nov 2012)
 

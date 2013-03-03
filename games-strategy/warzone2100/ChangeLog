@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.77 2013/02/10 01:27:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.78 2013/03/02 21:22:31 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> warzone2100-3.1.0.ebuild:
+  Move Qt dependencies to the new category
 
 *warzone2100-3.1.0 (10 Feb 2013)
 

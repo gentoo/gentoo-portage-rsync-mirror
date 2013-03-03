@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.10.0.ebuild,v 1.4 2013/02/23 16:20:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.10.0.ebuild,v 1.5 2013/03/02 21:25:46 hwoarang Exp $
 
 EAPI=5
 
@@ -93,7 +93,7 @@ DEPEND="${COMMONDEPEND}
 	nls? ( virtual/libintl )
 "
 RDEPEND="${COMMONDEPEND}
-	!x11-libs/qt-phonon
+	!dev-qt/qtphonon
 	>=app-crypt/gnupg-2.0.11
 	app-misc/ca-certificates
 	$(add_kdebase_dep kde-env)

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/acetoneiso/acetoneiso-2.3.ebuild,v 1.2 2012/07/24 22:08:20 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/acetoneiso/acetoneiso-2.3.ebuild,v 1.3 2013/03/02 19:12:42 hwoarang Exp $
 
 EAPI=4
 MY_P=${PN}_${PV}
@@ -16,12 +16,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="kde"
 
-DEPEND="x11-libs/qt-core:4
-	x11-libs/qt-dbus:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-webkit:4
+DEPEND="dev-qt/qtcore:4
+	dev-qt/qtdbus:4
+	dev-qt/qtgui:4
+	dev-qt/qtwebkit:4
 	kde? ( media-libs/phonon )
-	!kde? ( || ( x11-libs/qt-phonon:4 media-libs/phonon ) )"
+	!kde? ( || ( dev-qt/qtphonon:4 media-libs/phonon ) )"
 RDEPEND="${DEPEND}
 	sys-fs/fuseiso"
 

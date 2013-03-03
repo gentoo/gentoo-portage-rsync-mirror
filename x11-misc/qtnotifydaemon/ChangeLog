@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/qtnotifydaemon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtnotifydaemon/ChangeLog,v 1.4 2012/08/06 15:23:23 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtnotifydaemon/ChangeLog,v 1.5 2013/03/02 23:52:36 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  qtnotifydaemon-1.0.14.ebuild:
+  Move Qt dependencies to the new category
 
   06 Aug 2012; Michael Palimaka <kensington@gentoo.org>
   +files/qtnotifydaemon-1.0.14-build.patch, metadata.xml,

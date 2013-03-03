@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-2.0.5.ebuild,v 1.2 2009/10/04 15:14:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-2.0.5.ebuild,v 1.3 2013/03/02 23:18:07 hwoarang Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc"
 
-RDEPEND="x11-libs/qt-svg:4[debug?]"
+RDEPEND="dev-qt/qtsvg:4[debug?]"
 DEPEND="${DEPEND}
 	doc? ( virtual/latex-base )"
 

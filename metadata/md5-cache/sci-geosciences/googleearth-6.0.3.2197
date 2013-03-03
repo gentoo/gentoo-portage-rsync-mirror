@@ -6,9 +6,9 @@ HOMEPAGE=http://earth.google.com/
 IUSE=mdns-bundled +qt-bundled
 KEYWORDS=~amd64 ~x86
 LICENSE=googleearth GPL-2
-RDEPEND=|| ( >=sys-devel/gcc-4.2[cxx] >=sys-devel/gcc-4.2[-nocxx] ) x86? ( media-libs/fontconfig media-libs/freetype virtual/opengl x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXi x11-libs/libXext x11-libs/libXrender x11-libs/libXau x11-libs/libXdmcp sys-libs/zlib dev-libs/glib:2 !qt-bundled? ( >=x11-libs/qt-core-4.5.3:4 >=x11-libs/qt-gui-4.5.3:4 >=x11-libs/qt-webkit-4.5.3:4 ) net-misc/curl sci-libs/gdal !mdns-bundled? ( sys-auth/nss-mdns ) ) amd64? ( >=app-emulation/emul-linux-x86-xlibs-20081109 >=app-emulation/emul-linux-x86-baselibs-20081109 app-emulation/emul-linux-x86-opengl !qt-bundled? ( >=app-emulation/emul-linux-x86-qtlibs-20091231-r1 ) ) virtual/ttf-fonts
+RDEPEND=|| ( >=sys-devel/gcc-4.2[cxx] >=sys-devel/gcc-4.2[-nocxx] ) x86? ( media-libs/fontconfig media-libs/freetype virtual/opengl x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXi x11-libs/libXext x11-libs/libXrender x11-libs/libXau x11-libs/libXdmcp sys-libs/zlib dev-libs/glib:2 !qt-bundled? ( >=dev-qt/qtcore-4.5.3:4 >=dev-qt/qtgui-4.5.3:4 >=dev-qt/qtwebkit-4.5.3:4 ) net-misc/curl sci-libs/gdal !mdns-bundled? ( sys-auth/nss-mdns ) ) amd64? ( >=app-emulation/emul-linux-x86-xlibs-20081109 >=app-emulation/emul-linux-x86-baselibs-20081109 app-emulation/emul-linux-x86-opengl !qt-bundled? ( >=app-emulation/emul-linux-x86-qtlibs-20091231-r1 ) ) virtual/ttf-fonts
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=http://dl.google.com/earth/client/current/GoogleEarthLinux.bin -> GoogleEarthLinux-6.0.3.2197.bin
 _eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	unpacker	50e1227854e96469a19a63f053496328	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=6b495c3ab76977a60f2c1441fa6e2e57
+_md5_=585cab5021d748f92f0a53f6fa4566ef

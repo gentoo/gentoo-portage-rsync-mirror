@@ -1,6 +1,9 @@
 # ChangeLog for media-video/emovix
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/ChangeLog,v 1.19 2007/12/23 18:50:36 josejx Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/ChangeLog,v 1.20 2013/03/02 22:57:57 ottxor Exp $
+
+  02 Mar 2013; Christoph Junghans <ottxor@gentoo.org> emovix-0.9.0.ebuild:
+  switched to virtual/awk (bug #455738)
 
   23 Dec 2007; <jjezak@gentoo.org> emovix-0.9.0.ebuild:
   Marked ppc stable for bug #201497.
@@ -56,4 +59,3 @@
   27 Jul 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
   +emovix-0.9.0_pre1.ebuild:
   Initial submission to the tree.  Closes bug #51315.
-

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmapsi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmapsi/ChangeLog,v 1.9 2013/01/31 12:02:09 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmapsi/ChangeLog,v 1.10 2013/03/02 22:46:17 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> nmapsi-0.4.1.ebuild,
+  nmapsi-0.4.ebuild:
+  Move Qt dependencies to the new category
 
 *nmapsi-0.4.1 (31 Jan 2013)
 

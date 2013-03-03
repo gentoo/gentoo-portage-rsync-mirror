@@ -1,0 +1,14 @@
+DEFINED_PHASES=install nofetch postinst postrm preinst prepare setup unpack
+DEPEND=dev-util/patchelf >=sys-apps/sed-4
+DESCRIPTION=A 3D interface to the planet
+EAPI=5
+HOMEPAGE=http://earth.google.com/
+IUSE=+system-mdns system-qt
+KEYWORDS=~amd64 ~x86
+LICENSE=googleearth GPL-2
+RDEPEND=|| ( >=sys-devel/gcc-4.2[cxx] >=sys-devel/gcc-4.2[-nocxx] ) x86? ( media-libs/fontconfig media-libs/freetype virtual/opengl x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXi x11-libs/libXext x11-libs/libXrender x11-libs/libXau x11-libs/libXdmcp sys-libs/zlib dev-libs/glib:2 system-qt? ( >=dev-qt/qtcore-4.5.3:4 >=dev-qt/qtgui-4.5.3:4 >=dev-qt/qtwebkit-4.5.3:4 ) net-misc/curl sci-libs/gdal system-mdns? ( sys-auth/nss-mdns ) ) amd64? ( >=app-emulation/emul-linux-x86-xlibs-20081109 >=app-emulation/emul-linux-x86-baselibs-20081109 app-emulation/emul-linux-x86-opengl system-qt? ( >=app-emulation/emul-linux-x86-qtlibs-20091231-r1 ) ) virtual/ttf-fonts
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=x86? ( http://dl.google.com/dl/earth/client/current/google-earth-stable_current_i386.deb -> GoogleEarthLinux-7.0.3.8542_i386.deb ) amd64? ( http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb -> GoogleEarthLinux-7.0.3.8542_amd64.deb ) http://dev.gentoo.org/~hasufell/distfiles/googleearth-libexpat-2.1.0-novisibility.tar.xz
+_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	ded93e450747134a079e647d888aa80b	pax-utils	0ace932c4045349c7fc1af0fe7091acf	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	unpacker	50e1227854e96469a19a63f053496328	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=4ff6cf18e6c2f81aade55d07798f5dc6

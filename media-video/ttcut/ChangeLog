@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ttcut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.32 2013/02/02 16:47:42 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.33 2013/03/02 22:43:28 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> ttcut-0.19.6-r3.ebuild:
+  Move Qt dependencies to the new category
 
   02 Feb 2013; Daniel Pielmeier <billie@gentoo.org> ttcut-0.19.6-r3.ebuild:
   Remove redundant calls to fdo-mime_desktop_database_update.
@@ -146,4 +149,3 @@
   +ttcut-0.11.4_alpha.ebuild:
   Imported into portage tree from sunrise overlay. It will be proxy maintained
   by Daniel Pielmeier.
-

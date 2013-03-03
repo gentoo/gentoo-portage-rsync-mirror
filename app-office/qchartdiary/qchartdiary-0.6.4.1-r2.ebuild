@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qchartdiary/qchartdiary-0.6.4.1-r2.ebuild,v 1.3 2010/07/14 13:50:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qchartdiary/qchartdiary-0.6.4.1-r2.ebuild,v 1.4 2013/03/02 19:36:46 hwoarang Exp $
 
 EAPI="2"
 
@@ -17,8 +17,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="debug"
 
-DEPEND="x11-libs/qt-gui:4
-	x11-libs/qt-sql:4"
+DEPEND="dev-qt/qtgui:4
+	dev-qt/qtsql:4"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}"

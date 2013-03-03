@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/qtwvdialer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/ChangeLog,v 1.20 2010/01/20 20:36:54 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/ChangeLog,v 1.21 2013/03/02 22:47:54 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  qtwvdialer-0.4.4_p20091228.ebuild:
+  Move Qt dependencies to the new category
 
   20 Jan 2010; Markus Meier <maekke@gentoo.org>
   qtwvdialer-0.4.4_p20091228.ebuild:

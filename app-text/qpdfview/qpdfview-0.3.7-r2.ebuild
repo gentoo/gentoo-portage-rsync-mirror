@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.7-r2.ebuild,v 1.1 2013/02/05 12:47:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.7-r2.ebuild,v 1.2 2013/03/02 19:44:53 hwoarang Exp $
 
 EAPI=5
 PLOCALES="ast bs ca cs da de el en_GB es eu fi fr he hr id it ky my pl pt_BR ro ru sk tr ug uk zh_CN"
@@ -16,12 +16,12 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="cups dbus sqlite +svg synctex"
 
 RDEPEND="app-text/poppler[qt4]
-	x11-libs/qt-core:4[iconv]
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4[iconv]
+	dev-qt/qtgui:4
 	cups? ( net-print/cups )
-	dbus? ( x11-libs/qt-dbus:4 )
-	sqlite? ( x11-libs/qt-sql:4[sqlite] )
-	svg? ( x11-libs/qt-svg:4 )
+	dbus? ( dev-qt/qtdbus:4 )
+	sqlite? ( dev-qt/qtsql:4[sqlite] )
+	svg? ( dev-qt/qtsvg:4 )
 	!svg? ( virtual/freedesktop-icon-theme )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.8-r1.ebuild,v 1.2 2012/08/11 18:34:28 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.0.0.8-r1.ebuild,v 1.3 2013/03/02 22:54:25 hwoarang Exp $
 
 EAPI=4
 inherit eutils gnome2-utils pax-utils
@@ -45,9 +45,9 @@ RDEPEND="virtual/ttf-fonts
 			x11-libs/libXrender
 		)
 		!qt-static? (
-			x11-libs/qt-core:4
-			x11-libs/qt-dbus:4
-			x11-libs/qt-gui:4[accessibility,dbus]
+			dev-qt/qtcore:4
+			dev-qt/qtdbus:4
+			dev-qt/qtgui:4[accessibility,dbus]
 		)
 	)
 	selinux? ( sec-policy/selinux-skype )"

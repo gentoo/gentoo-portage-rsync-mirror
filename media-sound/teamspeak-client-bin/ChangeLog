@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/teamspeak-client-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.27 2013/02/13 22:30:36 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.28 2013/03/02 22:04:18 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  teamspeak-client-bin-3.0.9.2.ebuild:
+  Move Qt dependencies to the new category
 
   13 Feb 2013; Tom Wijsman <TomWij@gentoo.org>
   -teamspeak-client-bin-3.0.6.ebuild, teamspeak-client-bin-3.0.9.2.ebuild:

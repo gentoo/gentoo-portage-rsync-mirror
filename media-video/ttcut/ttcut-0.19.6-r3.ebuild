@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.6-r3.ebuild,v 1.5 2013/02/02 16:47:42 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.6-r3.ebuild,v 1.6 2013/03/02 22:43:28 hwoarang Exp $
 
 EAPI=4
 inherit eutils fdo-mime qt4-r2
@@ -15,8 +15,8 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=media-libs/libmpeg2-0.4.0
-	x11-libs/qt-gui:4
-	x11-libs/qt-opengl:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
 	virtual/glu
 	virtual/opengl"
 RDEPEND="${DEPEND}

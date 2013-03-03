@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.2.0.ebuild,v 1.3 2013/02/07 22:37:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.2.0.ebuild,v 1.4 2013/03/02 23:04:47 hwoarang Exp $
 
 EAPI=5
 
@@ -20,9 +20,9 @@ IUSE="doc"
 RDEPEND="
 	>=net-misc/csync-0.70.3
 	sys-fs/inotify-tools
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-test:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qttest:4
 "
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx virtual/latex-base )

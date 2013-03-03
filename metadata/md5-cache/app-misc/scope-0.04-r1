@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile
+DEFINED_PHASES=prepare
 DESCRIPTION=Serial Line Analyser
 EAPI=4
 HOMEPAGE=http://www.gumbley.me.uk/scope.html
@@ -7,4 +7,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.gumbley.me.uk/scope-0.04.tar.gz
 _eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=b3492357e8a578c2b033cebd49a7c47a
+_md5_=e0a5389ef90e8060bd180ca1a94aae44

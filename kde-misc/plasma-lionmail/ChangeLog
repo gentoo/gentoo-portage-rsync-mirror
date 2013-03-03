@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/plasma-lionmail
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-lionmail/ChangeLog,v 1.1 2012/10/21 01:29:45 creffett Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-lionmail/ChangeLog,v 1.2 2013/03/02 21:30:38 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  plasma-lionmail-0_p20121020.ebuild:
+  Move Qt dependencies to the new category
 
 *plasma-lionmail-0_p20121020 (21 Oct 2012)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/structure-synth/structure-synth-1.5.0.ebuild,v 1.1 2011/05/28 09:21:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/structure-synth/structure-synth-1.5.0.ebuild,v 1.2 2013/03/02 21:40:57 hwoarang Exp $
 
 EAPI=4
 
@@ -17,10 +17,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-opengl:4
-	x11-libs/qt-script:4"
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
+	dev-qt/qtscript:4"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 

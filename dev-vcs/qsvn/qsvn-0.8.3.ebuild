@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qsvn/qsvn-0.8.3.ebuild,v 1.5 2012/07/15 14:49:00 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qsvn/qsvn-0.8.3.ebuild,v 1.6 2013/03/02 21:09:03 hwoarang Exp $
 
 EAPI=4
 
@@ -18,9 +18,9 @@ IUSE=""
 DEPEND="dev-libs/apr
 	dev-libs/apr-util
 	dev-vcs/subversion
-	x11-libs/qt-core:4[qt3support]
-	x11-libs/qt-gui:4[qt3support]
-	x11-libs/qt-sql:4[sqlite]
+	dev-qt/qtcore:4[qt3support]
+	dev-qt/qtgui:4[qt3support]
+	dev-qt/qtsql:4[sqlite]
 	dev-vcs/subversion"
 RDEPEND="${DEPEND}"
 

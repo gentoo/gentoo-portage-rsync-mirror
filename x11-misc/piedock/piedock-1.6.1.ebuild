@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/piedock/piedock-1.6.1.ebuild,v 1.3 2013/01/06 18:34:32 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/piedock/piedock-1.6.1.ebuild,v 1.4 2013/03/02 23:50:51 hwoarang Exp $
 
 EAPI=4
 inherit eutils
@@ -28,8 +28,8 @@ RDEPEND="
 	)
 	kde? (
 		kde-base/kdelibs:4
-		x11-libs/qt-core:4
-		x11-libs/qt-gui:4
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
 	)
 "
 DEPEND="${RDEPEND}"

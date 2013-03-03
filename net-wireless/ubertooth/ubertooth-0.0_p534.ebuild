@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-0.0_p534.ebuild,v 1.7 2012/08/12 07:40:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-0.0_p534.ebuild,v 1.8 2013/03/02 23:12:29 hwoarang Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ REQUIRED_USE="ubertooth0-firmware? ( dfu )
 DEPEND=""
 RDEPEND="specan? ( virtual/libusb:1 )
 	dfu? ( virtual/libusb:1 )
-	specan? ( >=x11-libs/qt-gui-4.7.2:4
+	specan? ( >=dev-qt/qtgui-4.7.2:4
 	>=dev-python/pyside-1.0.2
 	>=dev-python/numpy-1.3 )
 	specan? ( >=dev-python/pyusb-1.0.0_alpha1 )

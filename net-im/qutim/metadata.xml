@@ -11,9 +11,9 @@
 	<flag name="irc">Enable IRC protocol support</flag>
 	<flag name="kinetic">Enable Growl-like kinetic popups plugin</flag>
 	<flag name="mrim">Enable mail.ru protocol support</flag>
-	<flag name="multimedia">Add sound support via <pkg>x11-libs/qt-multimedia</pkg></flag>
+	<flag name="multimedia">Add sound support via <pkg>dev-qt/qtmultimedia</pkg></flag>
 	<flag name="otr">Enable plugin for encrypted conversations (Off-The-Record messaging)</flag>
-	<flag name="phonon">Add sound support via <pkg>media-libs/phonon</pkg> or <pkg>x11-libs/qt-phonon</pkg></flag>
+	<flag name="phonon">Add sound support via <pkg>media-libs/phonon</pkg> or <pkg>dev-qt/qtphonon</pkg></flag>
 	<flag name="purple">Enable libpurple-based protocol support</flag>
 	<flag name="qml">Enable QtQuick-based chat plugin</flag>
 	<flag name="sdl">Add sound support via <pkg>media-libs/sdl-mixer</pkg></flag>

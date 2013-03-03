@@ -1,6 +1,9 @@
 # ChangeLog for games-board/kcheckers
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/ChangeLog,v 1.16 2012/10/21 08:53:17 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/ChangeLog,v 1.17 2013/03/02 21:12:39 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> kcheckers-0.8.1.ebuild:
+  Move Qt dependencies to the new category
 
   21 Oct 2012; Markus Meier <maekke@gentoo.org> kcheckers-0.8.1.ebuild:
   add ~arm, bug #425162
@@ -57,4 +60,3 @@
   07 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +kcheckers-0.5.ebuild:
   initial commit - ebuild submitted by Greg Watson via bug #69184
-

@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r6.ebuild,v 1.4 2011/11/24 21:00:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r6.ebuild,v 1.5 2013/03/02 22:55:17 ottxor Exp $
 
 EAPI=2
 
-inherit multilib eutils toolchain-funcs versionator
+inherit multilib eutils toolchain-funcs user versionator
 
 MAJOR_PV="$(get_version_component_range 1-3)"
 PATCH_VER="$(get_version_component_range 4)"
@@ -25,7 +25,7 @@ RDEPEND="dev-tcltk/expect
 	media-fonts/font-misc-misc
 	net-analyzer/gnu-netcat
 	>=net-misc/nx-2.1.0
-	sys-apps/gawk
+	virtual/awk
 	virtual/ssh
 	x11-apps/xauth
 	x11-apps/xrdb

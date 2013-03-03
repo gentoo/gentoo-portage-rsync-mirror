@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.1.ebuild,v 1.7 2013/01/16 05:50:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.1.ebuild,v 1.8 2013/03/02 21:46:51 hwoarang Exp $
 
 EAPI=5
 
@@ -38,9 +38,9 @@ RDEPEND="dev-libs/boost[python?]
 		virtual/opengl
 		)
 	qt4? (
-		x11-libs/qt-core:4
-		x11-libs/qt-gui:4
-		x11-libs/qt-opengl:4
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
+		dev-qt/qtopengl:4
 		)
 	tbb? ( dev-cpp/tbb )
 	truetype? ( >=media-libs/freetype-2 )"

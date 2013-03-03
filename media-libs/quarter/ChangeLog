@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/quarter
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/ChangeLog,v 1.5 2012/05/05 08:02:37 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/ChangeLog,v 1.6 2013/03/02 21:48:45 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> quarter-1.0.0-r1.ebuild:
+  Move Qt dependencies to the new category
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> quarter-1.0.0-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -25,4 +28,3 @@
   +metadata.xml:
   Initial commit for quarter. Ebuild by Maciej Mrozowski
   (reavertm@gmail.com)
-

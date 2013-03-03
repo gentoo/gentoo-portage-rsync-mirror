@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/yate
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.16 2012/12/16 15:00:37 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.17 2013/03/02 23:11:40 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> yate-2.0.0.ebuild:
+  Move Qt dependencies to the new category
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #260683

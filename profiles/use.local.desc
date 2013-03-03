@@ -1956,19 +1956,6 @@ dev-util/pkgconf:strict - Adhere to POSIX pkg-config specification. Useful for f
 dev-util/pkgconfig:internal-glib - Use internal copy of dev-libs/glib
 dev-util/pkgconfig-openbsd:pkg-config - Install as a replacement for dev-util/pkgconfig
 dev-util/qdevelop:plugins - Build and install additional plugins
-dev-util/qt-creator:android - Build Android plugin
-dev-util/qt-creator:autotools - Enable autotools project manager plugin
-dev-util/qt-creator:bazaar - Add support for dev-vcs/bzr version control system
-dev-util/qt-creator:botan-bundled - Use the bundled copy of dev-libs/botan
-dev-util/qt-creator:clearcase - Add support for IBM ClearCase version control system (requires manual installation of ClearCase client)
-dev-util/qt-creator:cmake - Enable cmake project manager plugin
-dev-util/qt-creator:fakevim - Enable support for vim-like key bindings
-dev-util/qt-creator:git - Add support for dev-vcs/git version control system
-dev-util/qt-creator:madde - Enable integration with MADDE (Maemo Application Development and Debugging Environment)
-dev-util/qt-creator:mercurial - Add support for dev-vcs/mercurial version control system
-dev-util/qt-creator:perforce - Add support for Perforce version control system (requires manual installation of Perforce client)
-dev-util/qt-creator:qnx - Build QNX/Blackberry plugin
-dev-util/qt-creator:valgrind - Add support for memory debugging using dev-util/valgrind
 dev-util/scanmem:gui - Enable the GameConqueror GUI
 dev-util/schroot:btrfs - Enable support for chroots using btrfs snapshots.
 dev-util/schroot:dchroot - Enables the building of a wrapper named "dchroot", replacing sys-apps/dchroot.
@@ -2146,7 +2133,7 @@ games-roguelike/angband:sound - Enable and install sounds
 games-roguelike/stone-soup:ncurses - Enable for console based build (uses ncurses).
 games-roguelike/stone-soup:tiles - Enable for graphical (tiled) build.
 games-roguelike/tomenet:server - Compile server support
-games-rpg/arx-libertatis:crash-reporter - Build a x11-libs/qt-gui-based tool that allows to submit crash information to the upstream backtracker.
+games-rpg/arx-libertatis:crash-reporter - Build a dev-qt/qtgui-based tool that allows to submit crash information to the upstream backtracker.
 games-rpg/arx-libertatis:debug - Enable asserts and debug logging.
 games-rpg/arx-libertatis:demo - Install the Arx Fatalis demo data.
 games-rpg/arx-libertatis:tools - Build tools that can extract the game's data and save files.
@@ -2464,18 +2451,18 @@ kde-base/qtruby:qwt - Compile bindings for x11-libs/qwt.
 kde-base/qtruby:webkit - Compile bindings for x11-libs/qt-webkit.
 kde-base/qyoto:phonon - Compile bindings for Phonon.
 kde-base/qyoto:qscintilla - Compile bindings for x11-libs/qscintilla.
-kde-base/qyoto:webkit - Compile bindings for x11-libs/qt-webkit.
+kde-base/qyoto:webkit - Compile bindings for dev-qt/qtwebkit.
 kde-base/smokekde:attica - Compile bindings for dev-libs/libattica.
 kde-base/smokekde:kate - Compile bindings for KDE Advanced Text Editor.
 kde-base/smokekde:okular - Compile bindings for kde-base/okular.
-kde-base/smokeqt:declarative - Compile bindings for x11-libs/qt-declarative.
-kde-base/smokeqt:multimedia - Compile bindings for x11-libs/qt-multimedia.
+kde-base/smokeqt:declarative - Compile bindings for dev-qt/qtdeclarative.
+kde-base/smokeqt:multimedia - Compile bindings for dev-qt/qtmultimedia.
 kde-base/smokeqt:phonon - Compile bindings for Phonon.
 kde-base/smokeqt:qimageblitz - Compile bindings for media-libs/qimageblitz.
 kde-base/smokeqt:qscintilla - Compile bindings for x11-libs/qscintilla.
-kde-base/smokeqt:qthelp - Compile bindings for QtHelp from x11-libs/qt-assistant.
+kde-base/smokeqt:qthelp - Compile bindings for QtHelp from dev-qt/qthelp.
 kde-base/smokeqt:qwt - Compile bindings for x11-libs/qwt.
-kde-base/smokeqt:webkit - Compile bindings for x11-libs/qt-webkit.
+kde-base/smokeqt:webkit - Compile bindings for dev-qt/qtwebkit.
 kde-base/solid:wicd - Enable Wicd wired and wireless network manager.
 kde-base/step:qalculate - Enable the libqalculate library for unit conversion
 kde-misc/akonadi-google:oldpim - Allow the use of non-akonadi kdepim-4.4
@@ -4132,9 +4119,9 @@ net-im/qutim:hunspell - Enable spellchecking using app-text/hunspell
 net-im/qutim:irc - Enable IRC protocol support
 net-im/qutim:kinetic - Enable Growl-like kinetic popups plugin
 net-im/qutim:mrim - Enable mail.ru protocol support
-net-im/qutim:multimedia - Add sound support via x11-libs/qt-multimedia
+net-im/qutim:multimedia - Add sound support via dev-qt/qtmultimedia
 net-im/qutim:otr - Enable plugin for encrypted conversations (Off-The-Record messaging)
-net-im/qutim:phonon - Add sound support via media-libs/phonon or x11-libs/qt-phonon
+net-im/qutim:phonon - Add sound support via media-libs/phonon or dev-qt/qtphonon
 net-im/qutim:purple - Enable libpurple-based protocol support
 net-im/qutim:qml - Enable QtQuick-based chat plugin
 net-im/qutim:sdl - Add sound support via media-libs/sdl-mixer
@@ -5096,7 +5083,7 @@ sci-chemistry/apbs:tools - Install optional tools
 sci-chemistry/avogadro:glsl - Enable glsl features via GLEW.
 sci-chemistry/ball:cuda - Include cuda support
 sci-chemistry/ball:sql - Include SQL database support
-sci-chemistry/ball:webkit - Uses x11-libs/qt-webkit for drawing
+sci-chemistry/ball:webkit - Uses dev-qt/qtwebkit for drawing
 sci-chemistry/ccp4:arpwarp - Add binary arp-warp for molecular replacement
 sci-chemistry/ccp4:balbes - Install sci-chemistry/balbes
 sci-chemistry/chemtool:emf - EMF export support
@@ -5184,7 +5171,7 @@ sci-geosciences/mapserver:postgis - Enable dev-db/postgis support
 sci-geosciences/mapserver:proj - Enable sci-libs/proj library support (geographic projections)
 sci-geosciences/mapserver:xslt - Enable xslt and exslt support xml-mapfile support
 sci-geosciences/merkaartor:libproxy - Use net-libs/libproxy for getting the HTTP/HTTPS/SOCKS proxy configuration
-sci-geosciences/merkaartor:webkit - Enable Webkit browser plugin using x11-libs/qt-webkit
+sci-geosciences/merkaartor:webkit - Enable Webkit browser plugin using dev-qt/qtwebkit
 sci-geosciences/opencpn:gpsd - Add support for using a GPS device through the GPSD deamon
 sci-geosciences/qgis:bundled-libs - Use internal copy of x11-libs/qwtpolar
 sci-geosciences/qgis:grass - Add support for sci-geosciences/grass
@@ -6181,92 +6168,6 @@ x11-libs/mx:glade - Build the dev-util/glade catalog files
 x11-libs/mx:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/pixman:loongson2f - Enable Loongson2f MMI optimizations.
 x11-libs/pixman:mmxext - Enable MMX2 support.
-x11-libs/qt-assistant:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-assistant:compat - Build the extra compatibility layer required by a few packages, see http://labs.qt.nokia.com/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
-x11-libs/qt-assistant:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-assistant:glib - Enable dev-libs/glib eventloop support
-x11-libs/qt-assistant:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
-x11-libs/qt-assistant:trace - Build the 'qttracereplay' utility which is required to play drawings recorded with the trace graphicssystem
-x11-libs/qt-bearer:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-bearer:connman - Enable ConnMan-based bearer plugin
-x11-libs/qt-bearer:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-bearer:networkmanager - Enable NetworkManager-based bearer plugin
-x11-libs/qt-core:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-core:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-core:glib - Enable dev-libs/glib eventloop support
-x11-libs/qt-core:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
-x11-libs/qt-dbus:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-dbus:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-declarative:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-declarative:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-declarative:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
-x11-libs/qt-declarative:webkit - Build the WebView QML component
-x11-libs/qt-demo:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-demo:dbus - Build QtDBus examples and demos
-x11-libs/qt-demo:declarative - Build QtDeclarative examples and demos
-x11-libs/qt-demo:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-demo:multimedia - Build QtMultimedia examples and demos
-x11-libs/qt-demo:opengl - Build QtOpenGL examples and demos
-x11-libs/qt-demo:openvg - Build QtOpenVG examples and demos
-x11-libs/qt-demo:qt3support - Build Qt3Support examples and demos
-x11-libs/qt-demo:webkit - Build QtWebKit examples and demos
-x11-libs/qt-demo:xmlpatterns - Build QtXmlPatterns examples and demos
-x11-libs/qt-gui:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-gui:egl - Use EGL instead of default GLX to manage OpenGL contexts on the desktop
-x11-libs/qt-gui:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-gui:glib - Enable dev-libs/glib eventloop support
-x11-libs/qt-gui:gtkstyle - Build a Qt style called GTK+ that mimics the active GTK+ theme
-x11-libs/qt-gui:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
-x11-libs/qt-gui:trace - Build the 'trace' graphicssystem engine which allows to record all drawing operations into a trace buffer. Later it can be replayed with the qttracereplay utility
-x11-libs/qt-meta:kde - Select media-libs/phonon as Phonon variant (needed for KDE)
-x11-libs/qt-meta:opengl - Enable the QtOpenGL module
-x11-libs/qt-meta:openvg - Enable the QtOpenVG module
-x11-libs/qt-meta:qt3support - Enable the Qt3Support library for Qt4
-x11-libs/qt-mobility:bearer - Build the QtBearer module
-x11-libs/qt-mobility:bluetooth - Enable Bluetooth support in QtConnectivity and QtSystemInfo modules
-x11-libs/qt-mobility:connectivity - Build the QtConnectivity module
-x11-libs/qt-mobility:contacts - Build the QtContacts module
-x11-libs/qt-mobility:feedback - Build the QtFeedback module
-x11-libs/qt-mobility:gallery - Build the QtGallery module
-x11-libs/qt-mobility:location - Build the QtLocation module
-x11-libs/qt-mobility:messaging - Build the QtMessaging module
-x11-libs/qt-mobility:multimedia - Build the QtMultimediaKit module
-x11-libs/qt-mobility:networkmanager - Enable NetworkManager support in QtBearer and QtSystemInfo modules
-x11-libs/qt-mobility:organizer - Build the QtOrganizer module
-x11-libs/qt-mobility:publishsubscribe - Build the QtPublishSubscribe module
-x11-libs/qt-mobility:pulseaudio - Enable PulseAudio support in QtMultimediaKit module
-x11-libs/qt-mobility:qml - Build QML bindings
-x11-libs/qt-mobility:sensors - Build the QtSensors module
-x11-libs/qt-mobility:serviceframework - Build the QtServiceFramework module
-x11-libs/qt-mobility:systeminfo - Build the QtSystemInfo module
-x11-libs/qt-mobility:tools - Build various useful tools (e.g.: qcrmlgen, servicexmlgen, vsexplorer, ...)
-x11-libs/qt-mobility:versit - Build the QtVersit module
-x11-libs/qt-multimedia:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-multimedia:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-opengl:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-opengl:egl - Use EGL instead of default GLX to manage OpenGL contexts on the desktop
-x11-libs/qt-opengl:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-opengl:qt3support - Enable the Qt3Support libraries for Qt4
-x11-libs/qt-openvg:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-openvg:exceptions - Build with support for exceptions
-x11-libs/qt-openvg:qt3support - Enable the Qt3Support libraries for Qt4
-x11-libs/qt-phonon:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-phonon:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-phonon:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
-x11-libs/qt-qt3support:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-qt3support:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-script:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-script:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-sql:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-sql:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-sql:qt3support - Enable the Qt3Support libraries for Qt4
-x11-libs/qt-svg:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-svg:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-test:c++0x - Build Qt using the C++11 standard
-x11-libs/qt-test:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-webkit:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-x11-libs/qt-webkit:gstreamer - Enable HTML5 audio/video support via media-libs/gstreamer
-x11-libs/qt-xmlpatterns:c++0x - Build Qt using the C++11 standard
 x11-libs/qwt:mathml - Use the MathML renderer of the Qt solutions package.
 x11-libs/vte:glade - Provide integration with dev-util/glade.
 x11-libs/vte:introspection - Use dev-libs/gobject-introspection for introspection

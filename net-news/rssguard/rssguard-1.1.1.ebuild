@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rssguard/rssguard-1.1.1.ebuild,v 1.1 2012/06/30 09:11:12 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rssguard/rssguard-1.1.1.ebuild,v 1.2 2013/03/02 23:07:58 hwoarang Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -14,12 +14,12 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="dbus"
 
-DEPEND="x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-webkit:4
-	x11-libs/qt-xmlpatterns:4
+DEPEND="dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtwebkit:4
+	dev-qt/qtxmlpatterns:4
 	x11-themes/hicolor-icon-theme
-	dbus? ( x11-libs/qt-dbus:4 )"
+	dbus? ( dev-qt/qtdbus:4 )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/rss-guard"

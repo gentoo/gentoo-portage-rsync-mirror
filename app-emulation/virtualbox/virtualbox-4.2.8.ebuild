@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.8.ebuild,v 1.2 2013/03/01 10:05:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.8.ebuild,v 1.3 2013/03/02 19:25:52 hwoarang Exp $
 
 EAPI=4
 
@@ -32,9 +32,9 @@ RDEPEND="!app-emulation/virtualbox-bin
 	>=virtual/udev-171
 	!headless? (
 		qt4? (
-			x11-libs/qt-gui:4
-			x11-libs/qt-core:4
-			opengl? ( x11-libs/qt-opengl:4 )
+			dev-qt/qtgui:4
+			dev-qt/qtcore:4
+			opengl? ( dev-qt/qtopengl:4 )
 			x11-libs/libXinerama
 		)
 		opengl? ( virtual/opengl media-libs/freeglut )

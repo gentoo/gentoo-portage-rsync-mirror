@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-1.2.2.ebuild,v 1.6 2013/01/11 21:15:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-1.2.2.ebuild,v 1.7 2013/03/02 22:40:59 hwoarang Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ IUSE="debug"
 
 DEPEND="
 	x11-libs/libXScrnSaver
-	x11-libs/qt-sql:4[sqlite]
+	dev-qt/qtsql:4[sqlite]
 	>=media-libs/xine-lib-1.1.18.1
 	$(add_kdebase_dep solid)
 "

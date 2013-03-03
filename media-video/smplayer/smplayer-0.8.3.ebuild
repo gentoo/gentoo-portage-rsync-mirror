@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.8.3.ebuild,v 1.5 2013/01/25 14:40:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.8.3.ebuild,v 1.6 2013/03/02 22:42:41 hwoarang Exp $
 
 EAPI=4
 PLOCALES="ar_SY bg ca cs da de el_GR en_US es et eu fi fr gl hr hu it ja ka ko
@@ -28,8 +28,8 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~arm hppa ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="debug"
 
-DEPEND="x11-libs/qt-core:4
-	x11-libs/qt-gui:4
+DEPEND="dev-qt/qtcore:4
+	dev-qt/qtgui:4
 	dev-libs/quazip"
 MPLAYER_USE="[libass,png,X]"
 RDEPEND="${DEPEND}

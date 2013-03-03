@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=media-libs/gstreamer:0.10 media-plugins/gst-plugins-meta:0.10[alsa?,ogg,vorbis] >=media-libs/phonon-4.6.0 >=x11-libs/qt-core-4.6.0:4[glib] >=x11-libs/qt-gui-4.6.0:4[glib] >=x11-libs/qt-opengl-4.6.0:4 virtual/opengl network? ( media-plugins/gst-plugins-soup:0.10 ) >=dev-util/automoc-0.9.87 virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
+DEPEND=media-libs/gstreamer:0.10 media-plugins/gst-plugins-meta:0.10[alsa?,ogg,vorbis] >=media-libs/phonon-4.6.0 >=dev-qt/qtcore-4.6.0:4[glib] >=dev-qt/qtgui-4.6.0:4[glib] >=dev-qt/qtopengl-4.6.0:4 virtual/opengl network? ( media-plugins/gst-plugins-soup:0.10 ) >=dev-util/automoc-0.9.87 virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
 DESCRIPTION=Phonon GStreamer backend
 EAPI=4
 HOMEPAGE=https://projects.kde.org/projects/kdesupport/phonon/phonon-gstreamer
 IUSE=alsa debug +network
 LICENSE=LGPL-2.1
-RDEPEND=media-libs/gstreamer:0.10 media-plugins/gst-plugins-meta:0.10[alsa?,ogg,vorbis] >=media-libs/phonon-4.6.0 >=x11-libs/qt-core-4.6.0:4[glib] >=x11-libs/qt-gui-4.6.0:4[glib] >=x11-libs/qt-opengl-4.6.0:4 virtual/opengl network? ( media-plugins/gst-plugins-soup:0.10 )
+RDEPEND=media-libs/gstreamer:0.10 media-plugins/gst-plugins-meta:0.10[alsa?,ogg,vorbis] >=media-libs/phonon-4.6.0 >=dev-qt/qtcore-4.6.0:4[glib] >=dev-qt/qtgui-4.6.0:4[glib] >=dev-qt/qtopengl-4.6.0:4 virtual/opengl network? ( media-plugins/gst-plugins-soup:0.10 )
 SLOT=0
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	2dda478e7e4206f6fb1aa72785cb5ef7	eutils	2824df7f5dc9f47aee293af8a6b517ed	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	git-2	e92e09651292b1bef5656592364550f7	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=66ad5bfb06e2ba4c33314b91845e9ed5
+_md5_=f5924168c5d2f72570633fd41e7a8b14

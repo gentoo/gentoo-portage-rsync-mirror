@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-9999.ebuild,v 1.13 2013/01/11 13:48:37 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-9999.ebuild,v 1.14 2013/03/02 23:02:12 hwoarang Exp $
 
 EAPI="4"
 
@@ -16,13 +16,13 @@ KEYWORDS=""
 IUSE="debug +sqlite postgres"
 
 DEPEND=">=dev-libs/boost-1.46
-		x11-libs/qt-core:4
-		x11-libs/qt-declarative:4
-		x11-libs/qt-gui:4
-		x11-libs/qt-script:4
-		x11-libs/qt-sql:4[postgres?,sqlite?]"
+		dev-qt/qtcore:4
+		dev-qt/qtdeclarative:4
+		dev-qt/qtgui:4
+		dev-qt/qtscript:4
+		dev-qt/qtsql:4[postgres?,sqlite?]"
 RDEPEND="${DEPEND}
-	x11-libs/qt-svg:4
+	dev-qt/qtsvg:4
 	|| (
 		kde-base/oxygen-icons
 		x11-themes/kfaenza

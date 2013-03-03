@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.3-r4.ebuild,v 1.1 2012/12/31 09:52:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.3-r4.ebuild,v 1.2 2013/03/02 21:58:23 hwoarang Exp $
 
 EAPI="4"
 
@@ -21,10 +21,10 @@ RDEPEND=">=dev-libs/openssl-1.0.0b
 	>=dev-libs/protobuf-2.2.0
 	sys-apps/lsb-release
 	>=sys-libs/libcap-2.15
-	x11-libs/qt-core:4[ssl]
-	|| ( x11-libs/qt-sql:4[sqlite] x11-libs/qt-sql:4[mysql] )
-	x11-libs/qt-xmlpatterns:4
-	dbus? ( x11-libs/qt-dbus:4 )
+	dev-qt/qtcore:4[ssl]
+	|| ( dev-qt/qtsql:4[sqlite] dev-qt/qtsql:4[mysql] )
+	dev-qt/qtxmlpatterns:4
+	dbus? ( dev-qt/qtdbus:4 )
 	ice? ( dev-libs/Ice )
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )"
 

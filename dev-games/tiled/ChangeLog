@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/tiled
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/tiled/ChangeLog,v 1.2 2013/01/28 10:42:53 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/tiled/ChangeLog,v 1.3 2013/03/02 19:52:38 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> tiled-0.8.1.ebuild,
+  tiled-0.9.0.ebuild:
+  Move Qt dependencies to the new category
 
 *tiled-0.9.0 (28 Jan 2013)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/package.use.mask,v 1.12 2012/04/19 15:23:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/package.use.mask,v 1.13 2013/03/02 20:45:53 pesa Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -13,21 +13,22 @@ sys-apps/hwloc numa
 www-client/firefox custom-optimization
 
 # Jeroen Roovers <jer@gentoo.org> (18 Jul 2008)
-# Mask precompiled headers (pch) USE flag for x11-libs/qt-* (bug #223775).
-x11-libs/qt-assistant pch 
-x11-libs/qt-core pch
-x11-libs/qt-dbus pch
-x11-libs/qt-demo pch
-x11-libs/qt-gui pch
-x11-libs/qt-opengl pch
-x11-libs/qt-phonon pch
-x11-libs/qt-qt3support pch
-x11-libs/qt-script pch
-x11-libs/qt-sql pch
-x11-libs/qt-svg pch
-x11-libs/qt-test pch
-x11-libs/qt-webkit pch
-x11-libs/qt-xmlpatterns pch
+# Mask precompiled headers (pch) USE flag for dev-qt/qt* (bug #223775).
+dev-qt/qt3support pch
+dev-qt/qtbearer pch
+dev-qt/qtcore pch
+dev-qt/qtdbus pch
+dev-qt/qtdemo pch
+dev-qt/qtgui pch
+dev-qt/qthelp pch 
+dev-qt/qtopengl pch
+dev-qt/qtphonon pch
+dev-qt/qtscript pch
+dev-qt/qtsql pch
+dev-qt/qtsvg pch
+dev-qt/qttest pch
+dev-qt/qtwebkit pch
+dev-qt/qtxmlpatterns pch
 
 # Jeroen Roovers <jer@gentoo.org> (15 Jul 2008)
 # media-libs/openinventor isn't ported to HPPA.

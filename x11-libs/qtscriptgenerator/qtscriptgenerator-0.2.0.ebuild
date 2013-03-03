@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.2.0.ebuild,v 1.5 2012/12/30 14:04:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.2.0.ebuild,v 1.6 2013/03/02 23:45:56 hwoarang Exp $
 
 EAPI=4
 
@@ -19,19 +19,19 @@ KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="debug kde"
 
 DEPEND="
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-opengl:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
 	!kde? ( || (
-		x11-libs/qt-phonon:4
+		dev-qt/qtphonon:4
 		media-libs/phonon
 	) )
 	kde? ( media-libs/phonon )
-	x11-libs/qt-script:4
-	x11-libs/qt-sql:4
-	x11-libs/qt-svg:4
-	x11-libs/qt-webkit:4
-	x11-libs/qt-xmlpatterns:4
+	dev-qt/qtscript:4
+	dev-qt/qtsql:4
+	dev-qt/qtsvg:4
+	dev-qt/qtwebkit:4
+	dev-qt/qtxmlpatterns:4
 "
 RDEPEND="${DEPEND}"
 

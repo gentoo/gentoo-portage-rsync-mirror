@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/qshare
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/ChangeLog,v 1.19 2013/02/15 19:05:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/ChangeLog,v 1.20 2013/03/02 22:51:15 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qshare-2.1.4.ebuild,
+  qshare-2.1.5.ebuild:
+  Move Qt dependencies to the new category
 
   15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> qshare-2.1.5.ebuild:
   Stable for x86, wrt bug #457416

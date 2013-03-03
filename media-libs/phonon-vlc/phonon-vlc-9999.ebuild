@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-9999.ebuild,v 1.10 2012/08/09 09:13:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-9999.ebuild,v 1.11 2013/03/02 21:48:01 hwoarang Exp $
 
 EAPI=4
 
@@ -23,8 +23,8 @@ IUSE="debug"
 RDEPEND="
 	>=media-libs/phonon-4.6.0
 	>=media-video/vlc-2.0.1[dbus,ogg,vorbis]
-	>=x11-libs/qt-dbus-4.6.0:4
-	>=x11-libs/qt-gui-4.6.0:4
+	>=dev-qt/qtdbus-4.6.0:4
+	>=dev-qt/qtgui-4.6.0:4
 "
 DEPEND="${RDEPEND}
 	>=dev-util/automoc-0.9.87

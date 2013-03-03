@@ -1,15 +1,15 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=dev-libs/glib:2 virtual/pam x11-libs/libxklavier x11-libs/libX11 dev-libs/libxml2 gtk? ( x11-libs/gtk+:3 x11-themes/gnome-themes-standard x11-themes/gnome-icon-theme ) introspection? ( dev-libs/gobject-introspection ) qt4? ( x11-libs/qt-core:4 x11-libs/qt-dbus:4 ) sys-apps/accountsservice dev-lang/vala:0.12 dev-util/intltool virtual/pkgconfig gnome-base/gnome-common sys-devel/gettext || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+DEPEND=dev-libs/glib:2 virtual/pam x11-libs/libxklavier x11-libs/libX11 dev-libs/libxml2 gtk? ( x11-libs/gtk+:3 x11-themes/gnome-themes-standard x11-themes/gnome-icon-theme ) introspection? ( dev-libs/gobject-introspection ) qt4? ( dev-qt/qtcore:4 dev-qt/qtdbus:4 ) sys-apps/accountsservice dev-lang/vala:0.12 dev-util/intltool virtual/pkgconfig gnome-base/gnome-common sys-devel/gettext || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
 DESCRIPTION=A lightweight display manager
 EAPI=4
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/LightDM
 IUSE=branding +gtk +introspection qt4 test
 KEYWORDS=amd64 x86
 LICENSE=GPL-3 LGPL-3
-RDEPEND=dev-libs/glib:2 virtual/pam x11-libs/libxklavier x11-libs/libX11 dev-libs/libxml2 gtk? ( x11-libs/gtk+:3 x11-themes/gnome-themes-standard x11-themes/gnome-icon-theme ) introspection? ( dev-libs/gobject-introspection ) qt4? ( x11-libs/qt-core:4 x11-libs/qt-dbus:4 ) sys-apps/accountsservice
+RDEPEND=dev-libs/glib:2 virtual/pam x11-libs/libxklavier x11-libs/libX11 dev-libs/libxml2 gtk? ( x11-libs/gtk+:3 x11-themes/gnome-themes-standard x11-themes/gnome-icon-theme ) introspection? ( dev-libs/gobject-introspection ) qt4? ( dev-qt/qtcore:4 dev-qt/qtdbus:4 ) sys-apps/accountsservice
 REQUIRED_USE=branding? ( gtk ) || ( gtk qt4 )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://launchpad.net/lightdm/1.0/1.0.11/+download/lightdm-1.0.11.tar.gz mirror://gentoo/introspection-20110205.m4.tar.bz2 gtk? ( http://dev.gentoo.org/~hwoarang/distfiles/lightdm-gentoo-patch.tar.gz )
 _eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	2824df7f5dc9f47aee293af8a6b517ed	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=64392a81a43c1a0dcbe7758f08d859c5
+_md5_=d45f9b1a67def3c81ab90fe7568ac476

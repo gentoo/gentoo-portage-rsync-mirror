@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-3.0.0.ebuild,v 1.1 2013/02/09 20:09:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-3.0.0.ebuild,v 1.2 2013/03/02 21:34:50 hwoarang Exp $
 
 EAPI=5
 
@@ -49,8 +49,8 @@ CDEPEND="
 	media-libs/tiff
 	sci-libs/clapack
 	virtual/jpeg
-	x11-libs/qt-gui:4[qt3support]
-	|| ( x11-libs/qt-sql:4[mysql] x11-libs/qt-sql:4[sqlite] )
+	dev-qt/qtgui:4[qt3support]
+	|| ( dev-qt/qtsql:4[mysql] dev-qt/qtsql:4[sqlite] )
 	addressbook? ( $(add_kdebase_dep kdepimlibs) )
 	gphoto2? ( media-libs/libgphoto2:= )
 	mysql? ( virtual/mysql )

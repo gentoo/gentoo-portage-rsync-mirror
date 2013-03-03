@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/dnetstats-1.2.6.ebuild,v 1.5 2012/05/21 19:55:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/dnetstats-1.2.6.ebuild,v 1.6 2013/03/02 23:00:01 hwoarang Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="kde gnome"
 
-DEPEND="x11-libs/qt-gui:4"
+DEPEND="dev-qt/qtgui:4"
 RDEPEND="${DEPEND}
 	app-admin/sudo
 	kde? ( kde-base/kdesu )

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fraqtive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/ChangeLog,v 1.12 2013/01/30 20:50:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/ChangeLog,v 1.13 2013/03/02 23:48:22 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> fraqtive-0.4.5.ebuild,
+  fraqtive-0.4.6.ebuild:
+  Move Qt dependencies to the new category
 
 *fraqtive-0.4.6 (30 Jan 2013)
 
@@ -55,4 +59,3 @@
   +fraqtive-0.3.1.ebuild:
   Initial import from sunrise wrt bug #97968.
   Thanks to Gleb Litvjak and Wolfgang Frisch.
-

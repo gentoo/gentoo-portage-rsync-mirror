@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.105 2013/02/21 08:07:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.106 2013/03/02 22:03:14 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> rosegarden-12.04.ebuild,
+  rosegarden-12.12.25.ebuild, rosegarden-13.02.ebuild:
+  Move Qt dependencies to the new category
 
 *rosegarden-13.02 (21 Feb 2013)
 

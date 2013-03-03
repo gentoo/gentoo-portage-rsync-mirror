@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.0.ebuild,v 1.1 2012/11/04 11:08:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.0.ebuild,v 1.2 2013/03/02 22:06:56 hwoarang Exp $
 
 EAPI=4
 PLOCALES="ca cs de el es fr it ja pt_BR ru sr sr@latin tr"
@@ -25,7 +25,7 @@ RDEPEND="
 	media-libs/libpng
 	>=dev-lang/spidermonkey-1.5-r2
 	gtk? ( >=x11-libs/gtk+-2.6.0:2 )
-	qt4? ( >=x11-libs/qt-gui-4.8.3:4 )
+	qt4? ( >=dev-qt/qtgui-4.8.3:4 )
 	x264? ( media-libs/x264 )
 	xvid? ( media-libs/xvid )
 	aften? ( media-libs/aften )

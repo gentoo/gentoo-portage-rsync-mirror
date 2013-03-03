@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=x11-libs/qt-gui:4 x11-libs/qt-dbus:4 libnotify? ( x11-libs/libnotify ) virtual/pkgconfig
+DEPEND=dev-qt/qtgui:4 dev-qt/qtdbus:4 libnotify? ( x11-libs/libnotify ) virtual/pkgconfig
 DESCRIPTION=Simple disk mount utility
 EAPI=4
 HOMEPAGE=http://github.com/limansky/tinymount
 IUSE=debug libnotify linguas_ru
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=x11-libs/qt-gui:4 x11-libs/qt-dbus:4 libnotify? ( x11-libs/libnotify ) sys-fs/udisks:0
+RDEPEND=dev-qt/qtgui:4 dev-qt/qtdbus:4 libnotify? ( x11-libs/libnotify ) sys-fs/udisks:0
 SLOT=0
 SRC_URI=mirror://github/limansky/tinymount/tinymount-0.2.6.tar.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	2824df7f5dc9f47aee293af8a6b517ed	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	ded93e450747134a079e647d888aa80b	qt4-r2	19af9102ca9b827213997cc636e7e33c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=b24790f23301596a168df9903d3ab8a0
+_md5_=278bca7baf39a9d2dc9f83cde5589e10

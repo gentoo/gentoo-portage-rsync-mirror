@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lmms
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.25 2012/07/30 12:24:25 polynomial-c Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.26 2013/03/02 21:57:09 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> lmms-0.4.13-r1.ebuild:
+  Move Qt dependencies to the new category
 
 *lmms-0.4.13-r1 (30 Jul 2012)
 
@@ -124,4 +127,3 @@
   +lmms-0.4.0_beta2.ebuild:
   Initial import. Ebuild by Thomas Kuther whom I'm proxying for this
   package. Also bug #100170
-

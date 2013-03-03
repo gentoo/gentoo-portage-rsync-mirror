@@ -1,6 +1,10 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.79 2013/02/20 15:45:05 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.80 2013/03/02 19:34:55 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> calligra-2.5.3.ebuild,
+  calligra-2.5.49.9999.ebuild, calligra-2.5.5.ebuild, calligra-9999.ebuild:
+  Move Qt dependencies to the new category
 
   20 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   calligra-2.5.49.9999.ebuild, calligra-2.5.5.ebuild, calligra-9999.ebuild:

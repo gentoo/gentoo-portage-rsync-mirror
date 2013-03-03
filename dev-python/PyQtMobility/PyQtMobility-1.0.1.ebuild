@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQtMobility/PyQtMobility-1.0.1.ebuild,v 1.2 2012/06/21 14:03:04 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQtMobility/PyQtMobility-1.0.1.ebuild,v 1.3 2013/03/03 00:36:34 hwoarang Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ unset mod
 DEPEND="
 	>=dev-python/sip-4.12.2
 	>=dev-python/PyQt4-4.8.4[X]
-	>=x11-libs/qt-mobility-1.2.0[${QTM_USE_DEPS%,}]
+	>=dev-qt/qt-mobility-1.2.0[${QTM_USE_DEPS%,}]
 "
 RDEPEND="${DEPEND}"
 

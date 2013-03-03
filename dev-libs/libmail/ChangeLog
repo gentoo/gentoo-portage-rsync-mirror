@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmail/ChangeLog,v 1.8 2013/01/31 13:16:35 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmail/ChangeLog,v 1.10 2013/03/02 23:19:18 pinkbyte Exp $
+
+*libmail-0.3-r3 (02 Mar 2013)
+
+  02 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> -libmail-0.3-r2.ebuild,
+  +libmail-0.3-r3.ebuild:
+  Revbump for last change
+
+  02 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> libmail-0.3-r2.ebuild:
+  Install missing headers, add ~amd64-linux and ~x86-linux keywords
 
   31 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> -libmail-0.3.ebuild:
   Drop old revision

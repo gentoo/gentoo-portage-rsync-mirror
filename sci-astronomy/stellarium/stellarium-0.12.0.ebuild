@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.12.0.ebuild,v 1.1 2013/02/01 17:07:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.12.0.ebuild,v 1.2 2013/03/02 23:15:03 hwoarang Exp $
 
 EAPI=5
 
@@ -28,12 +28,12 @@ RESTRICT="test"
 RDEPEND="
 	media-fonts/dejavu
 	media-libs/freetype:2
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-opengl:4
-	x11-libs/qt-script:4
-	x11-libs/qt-svg:4
-	x11-libs/qt-test:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
+	dev-qt/qtscript:4
+	dev-qt/qtsvg:4
+	dev-qt/qttest:4
 	virtual/glu
 	virtual/opengl
 	nls? ( virtual/libintl )"

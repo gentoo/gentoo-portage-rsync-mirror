@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ubertooth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.18 2013/02/05 04:23:45 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.19 2013/03/02 23:12:29 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> ubertooth-0.0_p534.ebuild,
+  ubertooth-2012.10.1.ebuild, ubertooth-9999.ebuild:
+  Move Qt dependencies to the new category
 
   05 Feb 2013; Rick Farina <zerochaos@gentoo.org> ubertooth-9999.ebuild:
   fixing EGIT_PROJECT, thanks to radhermit for pointing out the issue

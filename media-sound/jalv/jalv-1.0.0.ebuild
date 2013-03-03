@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jalv/jalv-1.0.0.ebuild,v 1.2 2012/05/05 08:33:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jalv/jalv-1.0.0.ebuild,v 1.3 2013/03/02 21:55:48 hwoarang Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND="media-libs/lv2
 	>=media-sound/jack-audio-connection-kit-0.120.0
 	gtk? ( >=x11-libs/gtk+-2.18.0:2 )
 	gtkmm? ( >=dev-cpp/gtkmm-2.20.0:2.4 )
-	qt4? ( x11-libs/qt-gui:4 )"
+	qt4? ( dev-qt/qtgui:4 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

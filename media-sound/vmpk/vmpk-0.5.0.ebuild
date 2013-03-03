@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vmpk/vmpk-0.5.0.ebuild,v 1.1 2012/08/02 12:46:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vmpk/vmpk-0.5.0.ebuild,v 1.2 2013/03/02 22:05:06 hwoarang Exp $
 
 EAPI=4
 
@@ -15,11 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="alsa dbus jack"
 
-RDEPEND=">=x11-libs/qt-core-4.8:4
-	>=x11-libs/qt-gui-4.8:4
-	>=x11-libs/qt-svg-4.8:4
+RDEPEND=">=dev-qt/qtcore-4.8:4
+	>=dev-qt/qtgui-4.8:4
+	>=dev-qt/qtsvg-4.8:4
 	alsa? ( media-libs/alsa-lib )
-	dbus? ( >=x11-libs/qt-dbus-4.8:4 )
+	dbus? ( >=dev-qt/qtdbus-4.8:4 )
 	jack? ( media-sound/jack-audio-connection-kit )"
 DEPEND="${RDEPEND}
 	app-text/docbook-xsl-stylesheets

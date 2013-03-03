@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.56 2013/02/10 23:37:24 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.57 2013/03/02 19:26:41 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> fcitx-4.2.5.ebuild,
+  fcitx-4.2.6.1.ebuild, fcitx-4.2.7.ebuild:
+  Move Qt dependencies to the new category
 
   10 Feb 2013; Naohiro Aota <naota@gentoo.org> fcitx-4.2.5.ebuild,
   fcitx-4.2.6.1.ebuild, fcitx-4.2.7.ebuild:

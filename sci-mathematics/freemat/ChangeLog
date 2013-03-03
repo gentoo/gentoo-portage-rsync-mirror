@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/freemat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.28 2012/05/04 07:46:50 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.29 2013/03/02 23:24:49 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> freemat-4.0.ebuild,
+  freemat-4.1.ebuild:
+  Move Qt dependencies to the new category
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> freemat-4.0.ebuild,
   freemat-4.1.ebuild:
@@ -131,4 +135,3 @@
   Initial import from gentooscience overlay. Thanks Andrey Grozin
   <A.G.Grozin@inp.nsk.su>, David S. Brown <davesbrown@yahoo.com> for their
   work. Closing #79499
-

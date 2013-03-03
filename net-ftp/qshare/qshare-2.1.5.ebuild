@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/qshare-2.1.5.ebuild,v 1.3 2013/02/15 19:05:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/qshare/qshare-2.1.5.ebuild,v 1.4 2013/03/02 22:51:15 hwoarang Exp $
 
 EAPI=4
 
@@ -16,9 +16,9 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="net-dns/avahi[mdnsresponder-compat]
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-webkit:4"
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtwebkit:4"
 DEPEND="${RDEPEND}"
 
 DOCS=( AUTHORS README )

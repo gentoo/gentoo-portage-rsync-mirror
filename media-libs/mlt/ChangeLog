@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.103 2013/02/07 13:11:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.104 2013/03/02 21:46:11 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> mlt-0.7.8.ebuild,
+  mlt-0.8.2.ebuild, mlt-0.8.6-r1.ebuild, mlt-0.8.8.ebuild:
+  Move Qt dependencies to the new category
 
   07 Feb 2013; Ben de Groot <yngwin@gentoo.org> -mlt-0.8.6.ebuild:
   remove old ~ ebuild

@@ -119,7 +119,7 @@ musepack
 webkit
 
 # Ben de Groot <yngwin@gentoo.org> (11 Feb 2009)
-# both x11-libs/qt-phonon and media-sound/phonon are unkeyworded
+# Both dev-qt/qtphonon and media-sound/phonon are unkeyworded
 phonon
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"

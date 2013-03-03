@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/cockatrice-20120702.ebuild,v 1.4 2012/11/19 19:14:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/cockatrice-20120702.ebuild,v 1.5 2013/03/02 21:11:59 hwoarang Exp $
 
 EAPI=3
 inherit cmake-utils eutils gnome2-utils games
@@ -17,12 +17,12 @@ IUSE="dedicated server"
 DEPEND="
 	dev-libs/libgcrypt
 	dev-libs/protobuf
-	x11-libs/qt-core:4
-	x11-libs/qt-sql:4
+	dev-qt/qtcore:4
+	dev-qt/qtsql:4
 	!dedicated? (
-		x11-libs/qt-multimedia:4
-		x11-libs/qt-svg:4
-		x11-libs/qt-gui:4
+		dev-qt/qtmultimedia:4
+		dev-qt/qtsvg:4
+		dev-qt/qtgui:4
 	)"
 
 S=${WORKDIR}/${PN}_${PV}

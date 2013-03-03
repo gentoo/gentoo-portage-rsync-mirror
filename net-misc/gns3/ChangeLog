@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gns3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3/ChangeLog,v 1.3 2013/01/26 18:04:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3/ChangeLog,v 1.4 2013/03/02 23:00:22 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> gns3-0.7.4.ebuild,
+  gns3-0.8.2.ebuild, gns3-0.8.3.1.ebuild:
+  Move Qt dependencies to the new category
 
 *gns3-0.8.3.1 (26 Jan 2013)
 

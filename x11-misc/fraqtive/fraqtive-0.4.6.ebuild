@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/fraqtive-0.4.6.ebuild,v 1.1 2013/01/30 20:50:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/fraqtive-0.4.6.ebuild,v 1.2 2013/03/02 23:48:22 hwoarang Exp $
 
 EAPI=4
 inherit eutils gnome2-utils qt4-r2
@@ -15,9 +15,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="sse2"
 
 DEPEND="
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-opengl:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
 "
 RDEPEND="${DEPEND}"
 

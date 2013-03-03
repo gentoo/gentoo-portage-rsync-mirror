@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kamerka/kamerka-0.8.5.ebuild,v 1.1 2013/02/12 00:03:46 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kamerka/kamerka-0.8.5.ebuild,v 1.2 2013/03/02 22:41:14 hwoarang Exp $
 
 EAPI=5
 KDE_LINGUAS="cs de es nl pl pt sr sr@ijekavian sr@ijekavianlatin sr@latin zh_TW"
@@ -18,6 +18,6 @@ IUSE=""
 RDEPEND="
 	media-libs/libv4l
 	media-libs/phonon
-	>=x11-libs/qt-declarative-4.7:4
+	>=dev-qt/qtdeclarative-4.7:4
 "
 DEPEND="${RDEPEND}"

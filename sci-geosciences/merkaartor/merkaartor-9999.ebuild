@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-9999.ebuild,v 1.13 2012/06/16 08:29:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-9999.ebuild,v 1.14 2013/03/02 23:21:39 hwoarang Exp $
 
 EAPI=4
 
@@ -23,12 +23,12 @@ QT_MINIMAL="4.7.2"
 RDEPEND="
 	>=sci-libs/gdal-1.6.0
 	>=sci-libs/proj-4.6
-	>=x11-libs/qt-gui-${QT_MINIMAL}:4
-	>=x11-libs/qt-svg-${QT_MINIMAL}:4
+	>=dev-qt/qtgui-${QT_MINIMAL}:4
+	>=dev-qt/qtsvg-${QT_MINIMAL}:4
 	exif? ( media-gfx/exiv2 )
 	gps? ( >=sci-geosciences/gpsd-2.92[cxx] )
 	libproxy? ( net-libs/libproxy )
-	webkit? ( >=x11-libs/qt-webkit-${QT_MINIMAL}:4 )
+	webkit? ( >=dev-qt/qtwebkit-${QT_MINIMAL}:4 )
 "
 DEPEND="${DEPEND}
 	>=dev-libs/boost-1.46

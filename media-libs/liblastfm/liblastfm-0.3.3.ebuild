@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-0.3.3.ebuild,v 1.5 2011/06/01 19:49:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-0.3.3.ebuild,v 1.6 2013/03/02 21:44:51 hwoarang Exp $
 
 EAPI="2"
 
@@ -20,12 +20,12 @@ S="${WORKDIR}/mxcl-liblastfm-1c739eb"
 COMMON_DEPEND="
 	>=media-libs/libsamplerate-0.1.4
 	sci-libs/fftw:3.0
-	>=x11-libs/qt-core-4.5:4
-	>=x11-libs/qt-sql-4.5:4
+	>=dev-qt/qtcore-4.5:4
+	>=dev-qt/qtsql-4.5:4
 "
 DEPEND="${COMMON_DEPEND}
 	dev-lang/ruby
-	>=x11-libs/qt-test-4.5:4
+	>=dev-qt/qttest-4.5:4
 "
 RDEPEND="${COMMON_DEPEND}
 	!<media-libs/lastfmlib-0.4.0

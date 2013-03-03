@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.8.0.ebuild,v 1.2 2012/08/13 15:56:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.8.0.ebuild,v 1.3 2013/03/02 19:34:29 hwoarang Exp $
 
 EAPI=4
 
@@ -18,9 +18,9 @@ IUSE="mysql postgres +sqlite test"
 CDEPEND="
 	dev-libs/boost
 	>=dev-libs/soprano-2.6.51
-	>=x11-libs/qt-gui-4.5.0:4[dbus]
-	>=x11-libs/qt-sql-4.5.0:4[mysql?,postgres?]
-	>=x11-libs/qt-test-4.5.0:4
+	>=dev-qt/qtgui-4.5.0:4[dbus]
+	>=dev-qt/qtsql-4.5.0:4[mysql?,postgres?]
+	>=dev-qt/qttest-4.5.0:4
 	x11-misc/shared-mime-info
 "
 DEPEND="${CDEPEND}

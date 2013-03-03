@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-libs/razorqt-libs-0.5.1.ebuild,v 1.5 2013/01/20 19:08:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-libs/razorqt-libs-0.5.1.ebuild,v 1.6 2013/03/02 23:14:02 hwoarang Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -30,9 +30,9 @@ DEPEND="razorqt-base/libqtxdg
 	x11-libs/libXdamage
 	x11-libs/libXfixes
 	x11-libs/libXrender
-	x11-libs/qt-core:4
-	x11-libs/qt-dbus:4
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4
+	dev-qt/qtdbus:4
+	dev-qt/qtgui:4
 	!<razorqt-base/razorqt-meta-0.5.0
 	!x11-wm/razorqt"
 RDEPEND="${DEPEND}"

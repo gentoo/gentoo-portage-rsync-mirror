@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/evolvotron-0.6.2.ebuild,v 1.1 2012/10/30 20:59:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/evolvotron-0.6.2.ebuild,v 1.2 2013/03/02 23:47:56 hwoarang Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="x11-libs/qt-gui:4"
+RDEPEND="dev-qt/qtgui:4"
 DEPEND="${RDEPEND}
 	dev-libs/boost"
 

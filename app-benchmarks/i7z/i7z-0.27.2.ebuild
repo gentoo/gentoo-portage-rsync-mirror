@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/i7z-0.27.2.ebuild,v 1.4 2012/11/21 10:58:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/i7z/i7z-0.27.2.ebuild,v 1.5 2013/03/02 19:12:23 hwoarang Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="X"
 
 RDEPEND="
 	sys-libs/ncurses
-	X? ( x11-libs/qt-gui:4 )"
+	X? ( dev-qt/qtgui:4 )"
 DEPEND="${RDEPEND}"
 
 src_prepare() {

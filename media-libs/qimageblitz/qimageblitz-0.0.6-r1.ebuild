@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qimageblitz/qimageblitz-0.0.6-r1.ebuild,v 1.6 2013/01/24 05:01:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qimageblitz/qimageblitz-0.0.6-r1.ebuild,v 1.7 2013/03/02 21:48:23 hwoarang Exp $
 
 EAPI=5
 
@@ -16,8 +16,8 @@ SLOT="0"
 IUSE="3dnow altivec debug mmx sse sse2"
 
 DEPEND="
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 "
 RDEPEND="${DEPEND}"
 

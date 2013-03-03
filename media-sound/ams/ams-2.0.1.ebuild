@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-2.0.1.ebuild,v 1.5 2012/05/05 08:05:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-2.0.1.ebuild,v 1.6 2013/03/02 21:53:05 hwoarang Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic multilib
@@ -16,8 +16,8 @@ IUSE=""
 
 RDEPEND="media-libs/alsa-lib
 	media-sound/jack-audio-connection-kit
-	x11-libs/qt-gui:4
-	x11-libs/qt-opengl:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
 	media-libs/ladspa-sdk
 	media-libs/libclalsadrv
 	!dev-ruby/amrita"

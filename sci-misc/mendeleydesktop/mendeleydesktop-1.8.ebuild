@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.8.ebuild,v 1.1 2013/01/28 14:27:52 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.8.ebuild,v 1.2 2013/03/02 23:26:19 hwoarang Exp $
 
 EAPI="4"
 
@@ -24,11 +24,11 @@ IUSE=""
 RESTRICT="fetch"
 
 DEPEND=""
-RDEPEND=">=x11-libs/qt-core-4.6:4
-	>=x11-libs/qt-gui-4.6:4
-	>=x11-libs/qt-svg-4.6:4
-	>=x11-libs/qt-webkit-4.6:4
-	>=x11-libs/qt-xmlpatterns-4.6:4"
+RDEPEND=">=dev-qt/qtcore-4.6:4
+	>=dev-qt/qtgui-4.6:4
+	>=dev-qt/qtsvg-4.6:4
+	>=dev-qt/qtwebkit-4.6:4
+	>=dev-qt/qtxmlpatterns-4.6:4"
 
 QA_PRESTRIPPED="
 	/opt/mendeleydesktop/$(get_libdir)/mendeleydesktop/libexec/.*

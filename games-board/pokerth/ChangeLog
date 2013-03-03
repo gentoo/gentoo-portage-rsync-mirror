@@ -1,6 +1,10 @@
 # ChangeLog for games-board/pokerth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.50 2013/02/24 11:30:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.51 2013/03/02 21:13:08 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> pokerth-0.9.5.ebuild,
+  pokerth-1.0.ebuild:
+  Move Qt dependencies to the new category
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pokerth-1.0.ebuild:
   Stable for x86, wrt bug #458640

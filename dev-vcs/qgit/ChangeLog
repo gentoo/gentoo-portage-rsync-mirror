@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/qgit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qgit/ChangeLog,v 1.12 2012/11/21 10:58:34 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qgit/ChangeLog,v 1.13 2013/03/02 21:08:50 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qgit-2.4.ebuild,
+  qgit-2.5.ebuild:
+  Move Qt dependencies to the new category
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> qgit-2.5.ebuild:
   Stable for x86, wrt bug #440850

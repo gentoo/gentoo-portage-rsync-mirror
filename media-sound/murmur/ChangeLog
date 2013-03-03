@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/murmur
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.37 2012/12/31 09:57:26 polynomial-c Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.38 2013/03/02 21:58:23 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> murmur-1.2.3-r4.ebuild,
+  murmur-1.2.4_beta1-r1.ebuild:
+  Move Qt dependencies to the new category
 
   31 Dec 2012; Lars Wendler <polynomial-c@gentoo.org> files/murmur.initd:
   non-maintainer commit: Minor fix in the new init script. if section in

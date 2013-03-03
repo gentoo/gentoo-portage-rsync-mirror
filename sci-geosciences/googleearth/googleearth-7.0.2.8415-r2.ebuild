@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.0.2.8415-r2.ebuild,v 1.1 2013/02/10 16:50:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.0.2.8415-r2.ebuild,v 1.2 2013/03/02 23:20:37 hwoarang Exp $
 
 EAPI=5
 
@@ -40,9 +40,9 @@ RDEPEND="|| ( >=sys-devel/gcc-${GCC_NEEDED}[cxx] >=sys-devel/gcc-${GCC_NEEDED}[-
 		sys-libs/zlib
 		dev-libs/glib:2
 		system-qt? (
-			>=x11-libs/qt-core-4.5.3:4
-			>=x11-libs/qt-gui-4.5.3:4
-			>=x11-libs/qt-webkit-4.5.3:4
+			>=dev-qt/qtcore-4.5.3:4
+			>=dev-qt/qtgui-4.5.3:4
+			>=dev-qt/qtwebkit-4.5.3:4
 		)
 		net-misc/curl
 		sci-libs/gdal

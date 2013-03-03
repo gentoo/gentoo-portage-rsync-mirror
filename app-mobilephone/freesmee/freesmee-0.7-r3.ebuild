@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/freesmee-0.7-r3.ebuild,v 1.1 2012/08/09 17:30:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/freesmee-0.7-r3.ebuild,v 1.2 2013/03/02 19:33:32 hwoarang Exp $
 
 EAPI=4
 
@@ -16,9 +16,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND="dev-util/ticpp
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-webkit:4"
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtwebkit:4"
 RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}"/${PN}-qt-4.8.1.patch "${FILESDIR}"/${PN}-gcc47.patch )

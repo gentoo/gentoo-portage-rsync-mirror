@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.7.ebuild,v 1.2 2012/12/25 02:32:53 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.7.ebuild,v 1.3 2013/03/02 23:45:25 hwoarang Exp $
 
 EAPI=5
 
@@ -18,8 +18,8 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc python"
 
 DEPEND="
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 "
 RDEPEND="${DEPEND}"
 PDEPEND="python? ( ~dev-python/qscintilla-python-${PV} )"

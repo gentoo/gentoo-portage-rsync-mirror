@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.87 2013/02/24 12:15:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.88 2013/03/02 21:46:34 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> opencv-2.3.1a-r1.ebuild,
+  opencv-2.4.2.ebuild, opencv-2.4.3.ebuild:
+  Move Qt dependencies to the new category
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> opencv-2.4.3.ebuild:
   Stable for x86, wrt bug #455506

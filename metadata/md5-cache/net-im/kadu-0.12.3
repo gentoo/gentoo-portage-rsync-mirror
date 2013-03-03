@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=app-crypt/qca-2.0.0-r2 x11-libs/libX11 x11-libs/libXfixes x11-libs/libXScrnSaver >=x11-libs/qt-dbus-4.7.0:4 >=x11-libs/qt-gui-4.7.0:4 >=x11-libs/qt-script-4.7.0:4 >=x11-libs/qt-sql-4.7.0:4[sqlite] >=x11-libs/qt-webkit-4.7.0:4 ayatana? ( dev-libs/libindicate-qt ) gadu? ( >=net-libs/libgadu-1.11.1[threads] >=x11-libs/qt-xmlpatterns-4.7.0:4 ) mpd? ( media-libs/libmpdclient ) phonon? ( || ( media-libs/phonon >=x11-libs/qt-phonon-4.7.0:4 ) ) spell? ( app-text/enchant ) xmpp? ( net-dns/libidn sys-libs/zlib ) x11-proto/fixesproto x11-proto/scrnsaverproto x11-proto/xproto sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=>=app-crypt/qca-2.0.0-r2 x11-libs/libX11 x11-libs/libXfixes x11-libs/libXScrnSaver >=dev-qt/qtdbus-4.7.0:4 >=dev-qt/qtgui-4.7.0:4 >=dev-qt/qtscript-4.7.0:4 >=dev-qt/qtsql-4.7.0:4[sqlite] >=dev-qt/qtwebkit-4.7.0:4 ayatana? ( dev-libs/libindicate-qt ) gadu? ( >=net-libs/libgadu-1.11.1[threads] >=dev-qt/qtxmlpatterns-4.7.0:4 ) mpd? ( media-libs/libmpdclient ) phonon? ( || ( media-libs/phonon >=dev-qt/qtphonon-4.7.0:4 ) ) spell? ( app-text/enchant ) xmpp? ( net-dns/libidn sys-libs/zlib ) x11-proto/fixesproto x11-proto/scrnsaverproto x11-proto/xproto sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=An open source Gadu-Gadu and Jabber/XMPP protocol Instant Messenger client.
 EAPI=4
 HOMEPAGE=http://www.kadu.net
 IUSE=ayatana +gadu mpd phonon sdk speech spell xmpp
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
-RDEPEND=>=app-crypt/qca-2.0.0-r2 x11-libs/libX11 x11-libs/libXfixes x11-libs/libXScrnSaver >=x11-libs/qt-dbus-4.7.0:4 >=x11-libs/qt-gui-4.7.0:4 >=x11-libs/qt-script-4.7.0:4 >=x11-libs/qt-sql-4.7.0:4[sqlite] >=x11-libs/qt-webkit-4.7.0:4 ayatana? ( dev-libs/libindicate-qt ) gadu? ( >=net-libs/libgadu-1.11.1[threads] >=x11-libs/qt-xmlpatterns-4.7.0:4 ) mpd? ( media-libs/libmpdclient ) phonon? ( || ( media-libs/phonon >=x11-libs/qt-phonon-4.7.0:4 ) ) spell? ( app-text/enchant ) xmpp? ( net-dns/libidn sys-libs/zlib ) app-crypt/qca-ossl:2 >=x11-libs/qt-svg-4.7.0:4 speech? ( app-accessibility/powiedz )
+RDEPEND=>=app-crypt/qca-2.0.0-r2 x11-libs/libX11 x11-libs/libXfixes x11-libs/libXScrnSaver >=dev-qt/qtdbus-4.7.0:4 >=dev-qt/qtgui-4.7.0:4 >=dev-qt/qtscript-4.7.0:4 >=dev-qt/qtsql-4.7.0:4[sqlite] >=dev-qt/qtwebkit-4.7.0:4 ayatana? ( dev-libs/libindicate-qt ) gadu? ( >=net-libs/libgadu-1.11.1[threads] >=dev-qt/qtxmlpatterns-4.7.0:4 ) mpd? ( media-libs/libmpdclient ) phonon? ( || ( media-libs/phonon >=dev-qt/qtphonon-4.7.0:4 ) ) spell? ( app-text/enchant ) xmpp? ( net-dns/libidn sys-libs/zlib ) app-crypt/qca-ossl:2 >=dev-qt/qtsvg-4.7.0:4 speech? ( app-accessibility/powiedz )
 REQUIRED_USE=|| ( gadu xmpp )
 SLOT=0
 SRC_URI=http://download.kadu.im/stable/kadu-0.12.3.tar.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	2dda478e7e4206f6fb1aa72785cb5ef7	eutils	2824df7f5dc9f47aee293af8a6b517ed	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=a656503161b59fbcef9fbff5672890d8
+_md5_=1e619fa322a1ad5d46235cd90f7026b8

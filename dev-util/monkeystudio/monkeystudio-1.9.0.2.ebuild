@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monkeystudio/monkeystudio-1.9.0.2.ebuild,v 1.1 2012/07/03 17:20:33 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monkeystudio/monkeystudio-1.9.0.2.ebuild,v 1.3 2013/03/02 21:06:04 hwoarang Exp $
 
 EAPI=4
 LANGS="be es fr ru"
@@ -18,11 +18,11 @@ LICENSE="GPL-2 LGPL-3"
 SLOT="0"
 IUSE="doc plugins"
 
-RDEPEND="plugins? ( >=x11-libs/qt-webkit-4.7.0:4 )
-	>=x11-libs/qt-assistant-4.7.0:4
-	>=x11-libs/qt-core-4.7.0:4
-	>=x11-libs/qt-gui-4.7.0:4
-	>=x11-libs/qt-sql-4.7.0:4
+RDEPEND="plugins? ( >=dev-qt/qtwebkit-4.7.0:4 )
+	>=dev-qt/qthelp-4.7.0:4
+	>=dev-qt/qtcore-4.7.0:4
+	>=dev-qt/qtgui-4.7.0:4
+	>=dev-qt/qtsql-4.7.0:4
 	x11-libs/qscintilla"
 DEPEND="${RDEPEND}
 	doc? ( >=app-doc/doxygen-1.5.8 )"

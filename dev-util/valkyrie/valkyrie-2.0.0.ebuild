@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/valkyrie-2.0.0.ebuild,v 1.1 2010/11/11 01:28:22 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/valkyrie-2.0.0.ebuild,v 1.2 2013/03/02 21:07:37 hwoarang Exp $
 
 EAPI=3
 
@@ -16,8 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-util/valgrind-3.6.0
-	x11-libs/qt-gui:4
-	x11-libs/qt-core:4"
+	dev-qt/qtgui:4
+	dev-qt/qtcore:4"
 RDEPEND="${DEPEND}"
 
 DOCS=( README )

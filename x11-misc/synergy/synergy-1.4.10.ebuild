@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.10.ebuild,v 1.7 2012/10/17 03:52:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.10.ebuild,v 1.8 2013/03/02 23:53:33 hwoarang Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/libXtst
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXinerama
-	qt4? ( x11-libs/qt-gui:4 )
+	qt4? ( dev-qt/qtgui:4 )
 	qt4? ( !x11-misc/qsynergy )"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto

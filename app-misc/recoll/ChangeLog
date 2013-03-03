@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/recoll
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.17 2013/02/16 12:02:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.18 2013/03/02 19:31:11 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> recoll-1.16.2.ebuild,
+  recoll-1.17.3-r1.ebuild, recoll-1.17.3.ebuild, recoll-1.18.1.ebuild:
+  Move Qt dependencies to the new category
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> recoll-1.18.1.ebuild:
   Don't show elog messages always (#457596)

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qtscrobbler
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtscrobbler/ChangeLog,v 1.10 2012/05/24 03:02:06 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtscrobbler/ChangeLog,v 1.11 2013/03/02 22:02:39 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qtscrobbler-0.10.ebuild:
+  Move Qt dependencies to the new category
 
   24 May 2012; Samuli Suominen <ssuominen@gentoo.org> qtscrobbler-0.10.ebuild,
   +files/qtscrobbler-0.10-free.patch:
@@ -48,4 +51,3 @@
   31 May 2008; Ben de Groot <yngwin@gentoo.org> +qtscrobbler-0.8.ebuild:
   Initial import. Ebuild based on the one in ephemeral overlay. Fixes bug
   182135.
-

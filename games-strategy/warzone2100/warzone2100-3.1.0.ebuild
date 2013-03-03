@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-3.1.0.ebuild,v 1.1 2013/02/10 01:27:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-3.1.0.ebuild,v 1.2 2013/03/02 21:22:31 hwoarang Exp $
 
 EAPI=5
 inherit autotools eutils versionator gnome2-utils games
@@ -35,12 +35,12 @@ RDEPEND=">=dev-games/physfs-2[zip]
 	virtual/opengl
 	x11-libs/libX11
 	x11-libs/libXrandr
-	x11-libs/qt-core:4
-	x11-libs/qt-script:4
+	dev-qt/qtcore:4
+	dev-qt/qtscript:4
 	nls? ( virtual/libintl )
 	qt4? (
-		x11-libs/qt-gui:4
-		x11-libs/qt-opengl:4
+		dev-qt/qtgui:4
+		dev-qt/qtopengl:4
 	)
 	!qt4? ( media-libs/libsdl[opengl,video] )"
 DEPEND="${RDEPEND}

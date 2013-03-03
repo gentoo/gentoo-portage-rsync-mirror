@@ -1,6 +1,20 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.46 2013/02/17 00:28:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.48 2013/03/02 23:20:37 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  googleearth-5.1.3535.3218-r1.ebuild, googleearth-5.2.1.1588.ebuild,
+  googleearth-6.0.2.2074.ebuild, googleearth-6.0.3.2197.ebuild,
+  googleearth-6.2.2.6613.ebuild, googleearth-7.0.2.8415-r2.ebuild,
+  googleearth-7.0.2.8415.ebuild, googleearth-7.0.3.8542.ebuild:
+  Move Qt dependencies to the new category
+
+*googleearth-7.0.3.8542 (02 Mar 2013)
+
+  02 Mar 2013; Julian Ospald <hasufell@gentoo.org>
+  +googleearth-7.0.3.8542.ebuild,
+  +files/googleearth-7.0.3.8542-desktopfile.patch:
+  version bump wrt #460040
 
   17 Feb 2013; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   set correct maintainer

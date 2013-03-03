@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.17.3-r1.ebuild,v 1.4 2013/02/15 22:10:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.17.3-r1.ebuild,v 1.5 2013/03/02 19:31:11 hwoarang Exp $
 
 EAPI="4"
 
@@ -24,8 +24,8 @@ DEPEND="
 	spell? ( app-text/aspell )
 	!inotify? ( fam? ( virtual/fam ) )
 	qt4? (
-		x11-libs/qt-core:4[qt3support]
-		x11-libs/qt-webkit:4
+		dev-qt/qtcore:4[qt3support]
+		dev-qt/qtwebkit:4
 		)
 	session? (
 		inotify? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE )

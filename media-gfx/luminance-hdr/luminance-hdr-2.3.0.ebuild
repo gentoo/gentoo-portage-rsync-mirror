@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.3.0.ebuild,v 1.5 2012/09/23 08:51:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.3.0.ebuild,v 1.6 2013/03/02 21:37:22 hwoarang Exp $
 
 EAPI="4"
 
@@ -27,10 +27,10 @@ DEPEND="
 	sci-libs/fftw:3.0[threads]
 	sci-libs/gsl
 	virtual/jpeg
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-sql:4
-	x11-libs/qt-webkit:4"
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtsql:4
+	dev-qt/qtwebkit:4"
 RDEPEND="${DEPEND}"
 
 DOCS=( AUTHORS BUGS Changelog README TODO )

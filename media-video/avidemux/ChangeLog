@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.204 2013/03/02 17:35:46 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.205 2013/03/02 22:06:56 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> avidemux-2.5.6-r2.ebuild,
+  avidemux-2.6.0.ebuild, avidemux-2.6.1.ebuild:
+  Move Qt dependencies to the new category
 
   02 Mar 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   yngwin said regarding the Qt herd removal on the same thread: "No, I don't

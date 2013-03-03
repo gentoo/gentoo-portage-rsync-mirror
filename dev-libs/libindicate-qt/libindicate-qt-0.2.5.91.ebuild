@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate-qt/libindicate-qt-0.2.5.91.ebuild,v 1.4 2012/08/16 14:55:32 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate-qt/libindicate-qt-0.2.5.91.ebuild,v 1.5 2013/03/02 20:01:29 hwoarang Exp $
 
 EAPI=4
 inherit eutils virtualx cmake-utils
@@ -18,9 +18,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND=">=dev-libs/libindicate-12.10.0
-	x11-libs/qt-gui:4"
+	dev-qt/qtgui:4"
 DEPEND="${RDEPEND}
-	test? ( x11-libs/qt-test:4 )
+	test? ( dev-qt/qttest:4 )
 	virtual/pkgconfig"
 
 src_prepare() {

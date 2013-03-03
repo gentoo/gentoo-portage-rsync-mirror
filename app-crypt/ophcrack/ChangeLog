@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/ophcrack
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.35 2012/05/06 14:13:43 ikelos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.36 2013/03/02 19:14:54 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> ophcrack-3.1.0-r2.ebuild,
+  ophcrack-3.3.0.ebuild, ophcrack-3.3.1.ebuild, ophcrack-3.4.0.ebuild:
+  Move Qt dependencies to the new category
 
 *ophcrack-3.4.0 (06 May 2012)
 
@@ -173,4 +177,3 @@
   15 May 2006; Mike Auty <ikelos@gentoo.org> +metadata.xml,
   +ophcrack-2.2.ebuild:
   Initial import of ophcrack
-

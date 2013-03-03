@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.111 2013/02/16 21:26:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.112 2013/03/02 20:45:52 pesa Exp $
 
 # Agostino Sarubbo <ago@gentoo.org> (16 Feb 2012)
 # mask because requires unstable depends not ready for the stabilization
@@ -91,8 +91,8 @@ media-video/transcode -nuv -pic
 # Davide Pesavento <pesa@gentoo.org> (30 Nov 2011)
 # JavaScriptCore JIT is supported only on amd64/arm/x86,
 # so it's masked in base profile and unmasked here.
-x11-libs/qt-script -jit
-x11-libs/qt-webkit -jit
+dev-qt/qtscript -jit
+dev-qt/qtwebkit -jit
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Nov 2011)
 # Expose USE="suid" for USE="svga" only for x86 users,

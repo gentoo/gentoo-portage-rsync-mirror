@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-6.0.0.ebuild,v 1.1 2013/01/21 04:47:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-6.0.0.ebuild,v 1.2 2013/03/02 22:41:55 hwoarang Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs versionator wxwidgets multiprocessing autotools
@@ -28,8 +28,8 @@ RDEPEND="
 	bzip2? ( app-arch/bzip2 )
 	lzo? ( dev-libs/lzo )
 	qt4? (
-		x11-libs/qt-core:4
-		x11-libs/qt-gui:4
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
 	)
 	wxwidgets? ( x11-libs/wxGTK:2.8[X] )
 "

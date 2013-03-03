@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-gui/hashcat-gui-0.5.1.ebuild,v 1.5 2012/08/25 22:32:36 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-gui/hashcat-gui-0.5.1.ebuild,v 1.6 2013/03/02 19:14:06 hwoarang Exp $
 
 EAPI=4
 
@@ -22,11 +22,11 @@ RDEPEND="app-crypt/hashcat-bin
 	app-crypt/oclhashcat-lite-bin )
 	opencl? ( app-crypt/oclhashcat-plus-bin
 	app-crypt/oclhashcat-lite-bin )
-	x11-libs/qt-gui:4
-	x11-libs/qt-core:4"
+	dev-qt/qtgui:4
+	dev-qt/qtcore:4"
 
-DEPEND="x11-libs/qt-gui:4
-	x11-libs/qt-core:4
+DEPEND="dev-qt/qtgui:4
+	dev-qt/qtcore:4
 	app-arch/unzip"
 
 S="${WORKDIR}"/scandium-hashcat-gui-b6b01be/src

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-9.1.ebuild,v 1.5 2013/01/09 12:02:41 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-9.1.ebuild,v 1.6 2013/03/02 19:58:29 hwoarang Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ IUSE="debug doc examples pedro qt4 readline threads"
 
 RDEPEND="!dev-util/mpatch
 	!dev-util/rej
-	qt4? ( x11-libs/qt-gui:4 )
+	qt4? ( dev-qt/qtgui:4 )
 	pedro? ( net-misc/pedro )
 	readline? ( app-misc/rlwrap )"
 

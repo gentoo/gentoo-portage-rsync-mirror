@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus-qt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ChangeLog,v 1.17 2013/02/10 23:57:43 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ChangeLog,v 1.18 2013/03/02 19:27:03 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> ibus-qt-1.3.0.ebuild,
+  ibus-qt-1.3.1.ebuild:
+  Move Qt dependencies to the new category
 
   10 Feb 2013; Naohiro Aota <naota@gentoo.org> -ibus-qt-1.2.0.20091216.ebuild,
   -ibus-qt-1.2.0.20091217.ebuild, ibus-qt-1.3.0.ebuild, ibus-qt-1.3.1.ebuild:

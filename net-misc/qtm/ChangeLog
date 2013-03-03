@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/qtm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/qtm/ChangeLog,v 1.27 2013/01/26 17:48:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/qtm/ChangeLog,v 1.28 2013/03/02 23:05:44 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qtm-1.3.10.ebuild,
+  qtm-1.3.12.ebuild, qtm-1.3.13.ebuild:
+  Move Qt dependencies to the new category
 
 *qtm-1.3.13 (26 Jan 2013)
 

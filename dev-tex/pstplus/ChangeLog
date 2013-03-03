@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pstplus
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pstplus/ChangeLog,v 1.12 2011/10/05 19:37:19 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pstplus/ChangeLog,v 1.13 2013/03/02 20:18:22 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> pstplus-1.6.ebuild:
+  Move Qt dependencies to the new category
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org> pstplus-1.6.ebuild:
   remove ptex dep as it is going away
@@ -56,4 +59,3 @@
   Initial import, ebuild by Vincent-Xavier JUMEL
   <vincent-xavier.jumel@centraliens-marseille.fr>, bug #206949, modified a bit
   by me
-

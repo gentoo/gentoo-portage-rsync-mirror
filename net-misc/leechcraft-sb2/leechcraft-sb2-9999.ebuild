@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-sb2/leechcraft-sb2-9999.ebuild,v 1.2 2012/12/20 13:48:44 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-sb2/leechcraft-sb2-9999.ebuild,v 1.3 2013/03/02 23:04:02 hwoarang Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ KEYWORDS=""
 IUSE="debug"
 
 DEPEND="~net-misc/leechcraft-core-${PV}
-	x11-libs/qt-declarative:4
+	dev-qt/qtdeclarative:4
 	dev-libs/qjson
 "
 RDEPEND="${DEPEND}"

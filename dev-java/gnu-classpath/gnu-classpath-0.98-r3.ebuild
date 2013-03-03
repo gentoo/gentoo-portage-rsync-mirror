@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r3.ebuild,v 1.8 2012/11/07 21:11:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98-r3.ebuild,v 1.9 2013/03/02 19:55:16 hwoarang Exp $
 
 EAPI=4
 
@@ -41,7 +41,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 				x11-libs/libXtst
 				x11-libs/pango
 		)
-		qt4? ( x11-libs/qt-gui:4 )
+		qt4? ( dev-qt/qtgui:4 )
 		xml? ( >=dev-libs/libxml2-2.6.8 >=dev-libs/libxslt-1.1.11 )"
 
 # java-config >2.1.11 needed for ecj version globbing

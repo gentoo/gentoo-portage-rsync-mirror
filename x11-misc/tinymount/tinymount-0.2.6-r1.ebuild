@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tinymount/tinymount-0.2.6-r1.ebuild,v 1.1 2012/11/06 21:02:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tinymount/tinymount-0.2.6-r1.ebuild,v 1.2 2013/03/02 23:53:47 hwoarang Exp $
 
 EAPI=4
 
@@ -25,8 +25,8 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug libnotify"
 
-COMMON_DEPEND="x11-libs/qt-gui:4
-	x11-libs/qt-dbus:4
+COMMON_DEPEND="dev-qt/qtgui:4
+	dev-qt/qtdbus:4
 	libnotify? ( x11-libs/libnotify )"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"

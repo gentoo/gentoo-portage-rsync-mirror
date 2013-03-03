@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.6.4.3.ebuild,v 1.3 2012/12/20 10:44:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.6.4.3.ebuild,v 1.4 2013/03/02 19:35:20 hwoarang Exp $
 
 EAPI=5
 
@@ -59,7 +59,7 @@ BIN_COMMON_DEPEND="
 	=dev-libs/icu-49*
 	=media-gfx/graphite2-1.2*
 	>=sys-libs/glibc-2.15-r3
-	kde? ( >=kde-base/kdelibs-4.9.3:4 >=x11-libs/qt-core-4.8.2:4 )
+	kde? ( >=kde-base/kdelibs-4.9.3:4 >=dev-qt/qtcore-4.8.2:4 )
 "
 
 COMMON_DEPEND="

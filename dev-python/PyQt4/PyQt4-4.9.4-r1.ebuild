@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.4-r1.ebuild,v 1.3 2012/11/22 21:03:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.9.4-r1.ebuild,v 1.4 2013/03/03 00:36:24 hwoarang Exp $
 
 EAPI=4
 
@@ -43,31 +43,31 @@ REQUIRED_USE="
 
 RDEPEND="
 	>=dev-python/sip-4.13.3
-	>=x11-libs/qt-core-${QT_VER}:4
-	>=x11-libs/qt-script-${QT_VER}:4
+	>=dev-qt/qtcore-${QT_VER}:4
+	>=dev-qt/qtscript-${QT_VER}:4
 	X? (
-		>=x11-libs/qt-gui-${QT_VER}:4[dbus?]
-		>=x11-libs/qt-test-${QT_VER}:4
+		>=dev-qt/qtgui-${QT_VER}:4[dbus?]
+		>=dev-qt/qttest-${QT_VER}:4
 	)
-	assistant? ( >=x11-libs/qt-assistant-${QT_VER}:4 )
+	assistant? ( >=dev-qt/qthelp-${QT_VER}:4 )
 	dbus? (
 		>=dev-python/dbus-python-0.80
-		>=x11-libs/qt-dbus-${QT_VER}:4
+		>=dev-qt/qtdbus-${QT_VER}:4
 	)
-	declarative? ( >=x11-libs/qt-declarative-${QT_VER}:4 )
-	multimedia? ( >=x11-libs/qt-multimedia-${QT_VER}:4 )
+	declarative? ( >=dev-qt/qtdeclarative-${QT_VER}:4 )
+	multimedia? ( >=dev-qt/qtmultimedia-${QT_VER}:4 )
 	opengl? (
-		>=x11-libs/qt-opengl-${QT_VER}:4
-		|| ( >=x11-libs/qt-opengl-4.8.0:4 <x11-libs/qt-opengl-4.8.0:4[-egl] )
+		>=dev-qt/qtopengl-${QT_VER}:4
+		|| ( >=dev-qt/qtopengl-4.8.0:4 <dev-qt/qtopengl-4.8.0:4[-egl] )
 	)
 	phonon? (
-		!kde? ( || ( >=x11-libs/qt-phonon-${QT_VER}:4 media-libs/phonon ) )
+		!kde? ( || ( >=dev-qt/qtphonon-${QT_VER}:4 media-libs/phonon ) )
 		kde? ( media-libs/phonon )
 	)
-	sql? ( >=x11-libs/qt-sql-${QT_VER}:4 )
-	svg? ( >=x11-libs/qt-svg-${QT_VER}:4 )
-	webkit? ( >=x11-libs/qt-webkit-${QT_VER}:4 )
-	xmlpatterns? ( >=x11-libs/qt-xmlpatterns-${QT_VER}:4 )
+	sql? ( >=dev-qt/qtsql-${QT_VER}:4 )
+	svg? ( >=dev-qt/qtsvg-${QT_VER}:4 )
+	webkit? ( >=dev-qt/qtwebkit-${QT_VER}:4 )
+	xmlpatterns? ( >=dev-qt/qtxmlpatterns-${QT_VER}:4 )
 "
 DEPEND="${RDEPEND}
 	dbus? ( virtual/pkgconfig )

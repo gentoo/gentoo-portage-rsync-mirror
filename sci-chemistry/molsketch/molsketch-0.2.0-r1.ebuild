@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molsketch/molsketch-0.2.0-r1.ebuild,v 1.4 2012/12/13 15:52:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molsketch/molsketch-0.2.0-r1.ebuild,v 1.5 2013/03/02 23:18:23 hwoarang Exp $
 
 EAPI=3
 
@@ -19,12 +19,12 @@ IUSE=""
 
 DEPEND="
 	=sci-chemistry/openbabel-2.2*
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-test:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qttest:4
 	|| (
-		>=x11-libs/qt-assistant-4.7.0:4[compat]
-		<x11-libs/qt-assistant-4.7.0:4 )"
+		>=dev-qt/qthelp-4.7.0:4[compat]
+		<dev-qt/qthelp-4.7.0:4 )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}

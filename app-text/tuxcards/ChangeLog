@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tuxcards
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.32 2012/05/10 15:28:19 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.33 2013/03/02 19:46:00 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> tuxcards-2.2.1.ebuild:
+  Move Qt dependencies to the new category
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -tuxcards-2.2.ebuild:
   Remove old
@@ -118,4 +121,3 @@
   +tuxcards-1.1.ebuild:
   Initial version. Ebuild submitted by Daniele Foci <sunscan@sunscan.org> and
   Bruce Chiarelli <meno15@juno.com>. Closes #21874.
-

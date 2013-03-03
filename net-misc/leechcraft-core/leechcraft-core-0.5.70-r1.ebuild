@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-0.5.70-r1.ebuild,v 1.4 2012/08/19 00:08:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-core/leechcraft-core-0.5.70-r1.ebuild,v 1.5 2013/03/02 23:02:12 hwoarang Exp $
 
 EAPI="4"
 
@@ -16,12 +16,12 @@ KEYWORDS="amd64 x86"
 IUSE="debug +sqlite postgres"
 
 DEPEND=">=dev-libs/boost-1.46
-		x11-libs/qt-core:4
-		x11-libs/qt-gui:4
-		x11-libs/qt-script:4
-		x11-libs/qt-sql:4[postgres?,sqlite?]"
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
+		dev-qt/qtscript:4
+		dev-qt/qtsql:4[postgres?,sqlite?]"
 RDEPEND="${DEPEND}
-		x11-libs/qt-svg:4"
+		dev-qt/qtsvg:4"
 
 pkg_setup() {
 	confutils_require_any postgres sqlite

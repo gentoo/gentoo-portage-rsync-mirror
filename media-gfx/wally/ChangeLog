@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/wally
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.44 2013/02/16 07:39:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.45 2013/03/02 21:41:16 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> wally-2.4.4.ebuild:
+  Move Qt dependencies to the new category
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> wally-2.4.4.ebuild:
   Don't show elog messages always (#457596)

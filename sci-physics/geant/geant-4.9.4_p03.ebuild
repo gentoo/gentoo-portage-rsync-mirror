@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.4_p03.ebuild,v 1.4 2012/10/16 19:00:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.4_p03.ebuild,v 1.5 2013/03/02 23:26:38 hwoarang Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ IUSE="+data dawn examples gdml geant3 granular qt4 static-libs vrml zlib"
 
 RDEPEND="
 	>=sci-physics/clhep-2.1
-	qt4? ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 )
+	qt4? ( dev-qt/qtgui:4 dev-qt/qtopengl:4 )
 	gdml? ( dev-libs/xerces-c )
 	geant3? ( sci-physics/geant:3 )
 	dawn? ( media-gfx/dawn )

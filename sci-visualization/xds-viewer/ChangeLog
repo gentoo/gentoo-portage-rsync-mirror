@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/xds-viewer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xds-viewer/ChangeLog,v 1.4 2012/08/07 04:01:01 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xds-viewer/ChangeLog,v 1.5 2013/03/02 23:29:00 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> xds-viewer-0.6.ebuild:
+  Move Qt dependencies to the new category
 
   07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
   xds-viewer-0.6.ebuild:

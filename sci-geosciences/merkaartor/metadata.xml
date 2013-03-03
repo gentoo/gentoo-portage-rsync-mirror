@@ -7,6 +7,6 @@
   </maintainer>
   <use>
     <flag name="libproxy">Use <pkg>net-libs/libproxy</pkg> for getting the HTTP/HTTPS/SOCKS proxy configuration</flag>
-    <flag name="webkit">Enable Webkit browser plugin using <pkg>x11-libs/qt-webkit</pkg></flag>
+    <flag name="webkit">Enable Webkit browser plugin using <pkg>dev-qt/qtwebkit</pkg></flag>
   </use>
 </pkgmetadata>

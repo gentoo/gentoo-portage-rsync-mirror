@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/imsettings
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/ChangeLog,v 1.13 2012/06/10 03:34:46 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/ChangeLog,v 1.14 2013/03/02 19:27:25 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> imsettings-1.2.4.ebuild,
+  imsettings-1.2.5.ebuild, imsettings-1.2.6.ebuild, imsettings-1.2.8.1.ebuild:
+  Move Qt dependencies to the new category
 
   10 Jun 2012; Jeff Horelick <jdhore@gentoo.org> imsettings-1.2.8.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -68,4 +72,3 @@
   08 Jan 2011; MATSUU Takuto <matsuu@gentoo.org> +imsettings-1.0.0.ebuild,
   +metadata.xml:
   Initial import.
-

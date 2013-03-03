@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/plcedit/plcedit-2.2.1.ebuild,v 1.4 2012/05/21 20:02:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/plcedit/plcedit-2.2.1.ebuild,v 1.5 2013/03/02 23:19:49 hwoarang Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="debug doc"
 
-RDEPEND="x11-libs/qt-gui:4"
+RDEPEND="dev-qt/qtgui:4"
 DEPEND="${RDEPEND}"
 
 src_prepare() {

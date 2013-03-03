@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/qsstv-7.1.7.ebuild,v 1.5 2012/08/01 06:49:00 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/qsstv-7.1.7.ebuild,v 1.6 2013/03/02 21:51:45 hwoarang Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="x11-libs/qt-core:4[qt3support]
+DEPEND="dev-qt/qtcore:4[qt3support]
 	media-libs/hamlib
 	media-libs/alsa-lib
 	sci-libs/fftw:3.0"

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qwriter/qwriter-0.1.9.ebuild,v 1.5 2012/07/09 17:56:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qwriter/qwriter-0.1.9.ebuild,v 1.6 2013/03/02 19:21:50 hwoarang Exp $
 
 EAPI="2"
 LANGS="ru"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="x11-libs/qt-gui:4
+DEPEND="dev-qt/qtgui:4
 	x11-libs/qscintilla"
 RDEPEND="${DEPEND}"
 

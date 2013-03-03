@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/rstudio-0.97.318.ebuild,v 1.1 2013/02/16 15:39:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/rstudio-0.97.318.ebuild,v 1.2 2013/03/02 23:25:58 hwoarang Exp $
 
 EAPI=5
 
@@ -36,11 +36,11 @@ RDEPEND=">=dev-lang/R-2.11.1
 	>=virtual/jre-1.5
 	x11-libs/pango
 	!dedicated? (
-		>=x11-libs/qt-core-${QTVER}:${QTSLOT}
-		>=x11-libs/qt-dbus-${QTVER}:${QTSLOT}
-		>=x11-libs/qt-gui-${QTVER}:${QTSLOT}
-		>=x11-libs/qt-webkit-${QTVER}:${QTSLOT}
-		>=x11-libs/qt-xmlpatterns-${QTVER}:${QTSLOT}
+		>=dev-qt/qtcore-${QTVER}:${QTSLOT}
+		>=dev-qt/qtdbus-${QTVER}:${QTSLOT}
+		>=dev-qt/qtgui-${QTVER}:${QTSLOT}
+		>=dev-qt/qtwebkit-${QTVER}:${QTSLOT}
+		>=dev-qt/qtxmlpatterns-${QTVER}:${QTSLOT}
 		server? ( virtual/pam )
 	)
 	dedicated? ( virtual/pam )"

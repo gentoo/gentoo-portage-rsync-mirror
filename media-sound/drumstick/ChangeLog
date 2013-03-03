@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/drumstick
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/ChangeLog,v 1.12 2012/05/05 08:15:50 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/ChangeLog,v 1.13 2013/03/02 21:54:43 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> drumstick-0.5.0.ebuild:
+  Move Qt dependencies to the new category
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> drumstick-0.5.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -53,4 +56,3 @@
   27 Apr 2010; Samuli Suominen <ssuominen@gentoo.org>
   +drumstick-0.3.1.ebuild:
   Initial commit.
-

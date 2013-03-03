@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=sci-libs/gdal-1.8 >=sci-libs/proj-4.7 sys-libs/zlib x11-libs/qt-gui:4[dbus?] x11-libs/qt-script:4 x11-libs/qt-sql:4[sqlite] x11-libs/qt-webkit:4 dmtx? ( media-libs/libdmtx ) exif? ( media-libs/libexif ) gps? ( >=sci-geosciences/gpsd-2.90 ) gpsbabel? ( sci-geosciences/gpsbabel ) x11-libs/qt-opengl:4 virtual/glu sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=>=sci-libs/gdal-1.8 >=sci-libs/proj-4.7 sys-libs/zlib dev-qt/qtgui:4[dbus?] dev-qt/qtscript:4 dev-qt/qtsql:4[sqlite] dev-qt/qtwebkit:4 dmtx? ( media-libs/libdmtx ) exif? ( media-libs/libexif ) gps? ( >=sci-geosciences/gpsd-2.90 ) gpsbabel? ( sci-geosciences/gpsbabel ) dev-qt/qtopengl:4 virtual/glu sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=View and upload map files, track and waypoint data to your Garmin GPS device
 EAPI=4
 HOMEPAGE=http://www.qlandkarte.org/
 IUSE=dbus dmtx exif gps +gpsbabel +gpx-extensions mikrokopter +rmap
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=>=sci-libs/gdal-1.8 >=sci-libs/proj-4.7 sys-libs/zlib x11-libs/qt-gui:4[dbus?] x11-libs/qt-script:4 x11-libs/qt-sql:4[sqlite] x11-libs/qt-webkit:4 dmtx? ( media-libs/libdmtx ) exif? ( media-libs/libexif ) gps? ( >=sci-geosciences/gpsd-2.90 ) gpsbabel? ( sci-geosciences/gpsbabel ) x11-libs/qt-opengl:4 virtual/glu
+RDEPEND=>=sci-libs/gdal-1.8 >=sci-libs/proj-4.7 sys-libs/zlib dev-qt/qtgui:4[dbus?] dev-qt/qtscript:4 dev-qt/qtsql:4[sqlite] dev-qt/qtwebkit:4 dmtx? ( media-libs/libdmtx ) exif? ( media-libs/libexif ) gps? ( >=sci-geosciences/gpsd-2.90 ) gpsbabel? ( sci-geosciences/gpsbabel ) dev-qt/qtopengl:4 virtual/glu
 SLOT=0
 SRC_URI=mirror://sourceforge/qlandkartegt/qlandkartegt-1.6.0.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	2dda478e7e4206f6fb1aa72785cb5ef7	eutils	2824df7f5dc9f47aee293af8a6b517ed	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=83d5084272a8a7b85a1c8b45e736e028
+_md5_=869f966fd56356af3bbc9059bb8fcdeb

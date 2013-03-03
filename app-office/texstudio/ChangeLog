@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texstudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.9 2013/01/07 16:08:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.10 2013/03/02 19:38:36 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> texstudio-2.3-r1.ebuild,
+  texstudio-2.4.ebuild, texstudio-2.5.2.ebuild, texstudio-2.5.ebuild:
+  Move Qt dependencies to the new category
 
 *texstudio-2.5.2 (07 Jan 2013)
 
@@ -62,4 +66,3 @@
   12 Jun 2011; Justin Lecher <jlec@gentoo.org> +texmakerx-2.1.ebuild,
   +files/texmakerx-2.1-hunspell.patch, +metadata.xml:
   Addition, #338436
-

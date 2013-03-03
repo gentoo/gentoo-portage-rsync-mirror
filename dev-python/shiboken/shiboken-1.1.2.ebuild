@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.2.ebuild,v 1.6 2012/11/21 11:27:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.2.ebuild,v 1.7 2013/03/02 20:12:41 hwoarang Exp $
 
 EAPI=4
 
@@ -22,16 +22,16 @@ IUSE="test"
 RDEPEND="
 	>=dev-libs/libxml2-2.6.32
 	>=dev-libs/libxslt-1.1.19
-	>=x11-libs/qt-core-4.7.0:4
-	>=x11-libs/qt-xmlpatterns-4.7.0:4
+	>=dev-qt/qtcore-4.7.0:4
+	>=dev-qt/qtxmlpatterns-4.7.0:4
 	!dev-python/apiextractor
 	!dev-python/generatorrunner
 "
 DEPEND="${RDEPEND}
 	test? (
 		dev-python/numpy
-		>=x11-libs/qt-gui-4.7.0:4
-		>=x11-libs/qt-test-4.7.0:4
+		>=dev-qt/qtgui-4.7.0:4
+		>=dev-qt/qttest-4.7.0:4
 	)"
 
 DOCS=( AUTHORS ChangeLog )

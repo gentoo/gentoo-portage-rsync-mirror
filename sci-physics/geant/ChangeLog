@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.70 2013/02/25 05:11:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.71 2013/03/02 23:26:38 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> geant-4.9.4_p03.ebuild,
+  geant-4.9.5_p02.ebuild, geant-4.9.6.ebuild, geant-4.9.6_p01.ebuild:
+  Move Qt dependencies to the new category
 
 *geant-4.9.6_p01 (25 Feb 2013)
 

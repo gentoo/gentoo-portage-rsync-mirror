@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r4.ebuild,v 1.1 2010/12/01 09:57:46 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r4.ebuild,v 1.2 2013/03/02 23:04:31 hwoarang Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ RESTRICT="test" #298101
 RDEPEND="
 	gtk?       ( x11-libs/gtk+:2 )
 	postgres?  ( dev-db/postgresql-base )
-	qt4?       ( x11-libs/qt-gui:4[qt3support] )
+	qt4?       ( dev-qt/qtgui:4[qt3support] )
 	ssl?       ( dev-libs/openssl )
 	tcl?       ( dev-lang/tcl )
 	X?         ( x11-libs/libXt )

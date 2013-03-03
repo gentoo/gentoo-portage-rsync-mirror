@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qdevelop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/ChangeLog,v 1.18 2012/03/18 18:32:16 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/ChangeLog,v 1.19 2013/03/02 21:06:45 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qdevelop-0.28.ebuild:
+  Move Qt dependencies to the new category
 
   18 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #118003.
@@ -101,4 +104,3 @@
 
   15 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> +qdevelop-0.20.ebuild:
   New ebuild for bug #145879
-

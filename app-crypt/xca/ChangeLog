@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/xca
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.37 2013/01/04 00:49:09 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.38 2013/03/02 19:16:54 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> xca-0.9.0.ebuild,
+  xca-0.9.1.ebuild, xca-0.9.3.ebuild:
+  Move Qt dependencies to the new category
 
 *xca-0.9.3 (04 Jan 2013)
 
@@ -165,4 +169,3 @@
   +files/xca-0.5.1-qt.diff, +xca-0.5.1.ebuild:
   Initial import as per bug #73955. Thanks to Michael Krelin
   <gentoodoo@klever.net> for the numberous patches and model ebuilds
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.3.ebuild,v 1.9 2012/12/11 05:46:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.3.ebuild,v 1.10 2013/03/02 22:44:15 hwoarang Exp $
 
 EAPI="4"
 
@@ -115,7 +115,7 @@ RDEPEND="
 		postproc? ( || ( media-video/ffmpeg media-libs/libpostproc ) )
 		projectm? ( media-libs/libprojectm )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.22 )
-		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 )
+		qt4? ( dev-qt/qtgui:4 dev-qt/qtcore:4 )
 		samba? ( >=net-fs/samba-3.4.6[smbclient] )
 		schroedinger? ( >=media-libs/schroedinger-1.0.10 )
 		sdl? ( >=media-libs/libsdl-1.2.8

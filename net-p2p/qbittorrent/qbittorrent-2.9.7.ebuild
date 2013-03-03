@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.9.7.ebuild,v 1.4 2012/05/04 06:33:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-2.9.7.ebuild,v 1.5 2013/03/02 23:09:45 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -20,9 +20,9 @@ IUSE="dbus +X geoip"
 QT_MIN="4.6.1"
 # boost version so that we always have thread support
 CDEPEND="net-libs/rb_libtorrent
-	>=x11-libs/qt-core-${QT_MIN}:4
-	X? ( >=x11-libs/qt-gui-${QT_MIN}:4 )
-	dbus? ( >=x11-libs/qt-dbus-${QT_MIN}:4 )
+	>=dev-qt/qtcore-${QT_MIN}:4
+	X? ( >=dev-qt/qtgui-${QT_MIN}:4 )
+	dbus? ( >=dev-qt/qtdbus-${QT_MIN}:4 )
 	dev-libs/boost"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"

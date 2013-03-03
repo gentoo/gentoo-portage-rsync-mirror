@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/qwriter
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qwriter/ChangeLog,v 1.5 2012/07/09 17:56:05 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qwriter/ChangeLog,v 1.6 2013/03/02 19:21:50 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qwriter-0.1.9.ebuild:
+  Move Qt dependencies to the new category
 
   09 Jul 2012; Markos Chandras <hwoarang@gentoo.org>
   +files/qwriter-0.1.9-gcc47.patch, qwriter-0.1.9.ebuild:

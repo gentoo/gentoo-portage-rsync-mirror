@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.6.2.ebuild,v 1.4 2012/11/12 11:08:16 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.6.2.ebuild,v 1.5 2013/03/02 23:44:42 hwoarang Exp $
 
 EAPI=4
 
@@ -17,14 +17,14 @@ IUSE="berkdb debug doc sql web xscreensaver zeroconf"
 
 COMMON_DEPEND="
 	x11-libs/libXrandr
-	x11-libs/qt-core:4[ssl]
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4[ssl]
+	dev-qt/qtgui:4
 	berkdb? ( >=sys-libs/db-4.6 )
-	sql? ( x11-libs/qt-sql:4 )
+	sql? ( dev-qt/qtsql:4 )
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
 "
 DEPEND="${COMMON_DEPEND}
-	doc? ( x11-libs/qt-assistant:4 )
+	doc? ( dev-qt/qthelp:4 )
 "
 RDEPEND="${COMMON_DEPEND}
 	xscreensaver? ( x11-libs/libXScrnSaver )

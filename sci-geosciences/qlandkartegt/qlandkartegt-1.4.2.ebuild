@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/qlandkartegt-1.4.2.ebuild,v 1.2 2012/08/29 19:56:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/qlandkartegt-1.4.2.ebuild,v 1.3 2013/03/02 23:22:10 hwoarang Exp $
 
 EAPI=4
 
@@ -19,15 +19,15 @@ RDEPEND="
 	>=sci-libs/gdal-1.8
 	>=sci-libs/proj-4.7
 	sys-libs/zlib
-	x11-libs/qt-gui:4[dbus?]
-	x11-libs/qt-script:4
-	x11-libs/qt-sql:4[sqlite]
-	x11-libs/qt-webkit:4
+	dev-qt/qtgui:4[dbus?]
+	dev-qt/qtscript:4
+	dev-qt/qtsql:4[sqlite]
+	dev-qt/qtwebkit:4
 	dmtx? ( media-libs/libdmtx )
 	exif? ( media-libs/libexif )
 	gps? ( >=sci-geosciences/gpsd-2.90 )
 	gpsbabel? ( sci-geosciences/gpsbabel )
-	opengl? ( x11-libs/qt-opengl:4 )
+	opengl? ( dev-qt/qtopengl:4 )
 "
 DEPEND="${RDEPEND}"
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vidalia
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.38 2012/12/02 20:37:42 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.39 2013/03/02 23:06:48 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> vidalia-0.2.12.ebuild,
+  vidalia-0.2.20.ebuild, vidalia-0.2.21.ebuild, vidalia-0.3.1.ebuild:
+  Move Qt dependencies to the new category
 
 *vidalia-0.2.21 (02 Dec 2012)
 

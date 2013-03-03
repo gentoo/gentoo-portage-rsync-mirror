@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.7-r2.ebuild,v 1.9 2013/02/23 15:50:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.7-r2.ebuild,v 1.10 2013/03/02 19:32:14 hwoarang Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ COMMONDEPEND="
 	clucene? ( >=dev-cpp/clucene-0.9.21[-debug] )
 	dbus? (
 		sys-apps/dbus
-		qt4? ( x11-libs/qt-dbus:4 )
+		qt4? ( dev-qt/qtdbus:4 )
 	)
 	exif? ( >=media-gfx/exiv2-0.17 )
 	fam? ( virtual/fam )
@@ -39,8 +39,8 @@ COMMONDEPEND="
 	hyperestraier? ( app-text/hyperestraier )
 	log? ( >=dev-libs/log4cxx-0.10.0 )
 	qt4? (
-		x11-libs/qt-core:4
-		x11-libs/qt-gui:4
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
 	)
 "
 DEPEND="${COMMONDEPEND}

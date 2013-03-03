@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ams
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.29 2012/05/05 08:05:37 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.30 2013/03/02 21:53:05 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> ams-2.0.1.ebuild:
+  Move Qt dependencies to the new category
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> ams-2.0.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -107,4 +110,3 @@
 
   09 Jul 2003; torbenh <torbenh@gentoo.org> Manifest ams-1.5.9.ebuild files/ams-fixMakefile.patch files/digest-ams-1.5.9 :
   Initial import into the repository.
-

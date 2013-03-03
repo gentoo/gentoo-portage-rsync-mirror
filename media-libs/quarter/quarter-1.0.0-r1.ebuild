@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/quarter-1.0.0-r1.ebuild,v 1.4 2012/05/05 08:02:37 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quarter/quarter-1.0.0-r1.ebuild,v 1.5 2013/03/02 21:48:45 hwoarang Exp $
 
 EAPI="2"
 
@@ -19,9 +19,9 @@ IUSE="debug doc static-libs"
 
 RDEPEND="
 	>=media-libs/coin-3.0.0[javascript]
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-opengl:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

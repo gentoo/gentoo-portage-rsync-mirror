@@ -1,6 +1,12 @@
 # ChangeLog for net-im/qutim
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/ChangeLog,v 1.22 2012/10/19 16:10:42 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/ChangeLog,v 1.24 2013/03/03 02:12:02 pesa Exp $
+
+  03 Mar 2013; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Adjust metadata for Qt category move.
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qutim-0.3.1.ebuild:
+  Move Qt dependencies to the new category
 
   19 Oct 2012; Michael Palimaka <kensington@gentoo.org> qutim-0.3.1.ebuild:
   Restrict dependency on >=net-libs/libotr-4.0.0 due to incompatibility.

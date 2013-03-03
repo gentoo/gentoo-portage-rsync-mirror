@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.7.0.ebuild,v 1.5 2012/02/05 01:56:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.7.0.ebuild,v 1.6 2013/03/02 23:21:56 hwoarang Exp $
 
 EAPI=3
 
@@ -24,11 +24,11 @@ RDEPEND="
 	>=sci-libs/gdal-1.6.1[geos,python?]
 	sci-libs/geos
 	sci-libs/gsl
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-svg:4
-	x11-libs/qt-sql:4
-	x11-libs/qt-webkit:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtsvg:4
+	dev-qt/qtsql:4
+	dev-qt/qtwebkit:4
 	x11-libs/qwt:5[svg]
 	x11-libs/qwtpolar
 	grass? ( >=sci-geosciences/grass-6.4.0_rc6[python?] )

@@ -1,6 +1,9 @@
 # ChangeLog for games-board/qgo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.43 2010/11/08 13:50:09 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.44 2013/03/02 21:13:33 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qgo-1.5.4_p20100322.ebuild:
+  Move Qt dependencies to the new category
 
   08 Nov 2010; Tupone Alfredo <tupone@gentoo.org>
   qgo-1.5.4_p20100322.ebuild, +files/qgo-1.5.4_p20100322-qt47.patch:
@@ -23,4 +26,3 @@
   22 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   +qgo-1.5.4_p20100322.ebuild:
   Initial commit.
-

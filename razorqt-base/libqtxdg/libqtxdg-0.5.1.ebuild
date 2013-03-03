@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/libqtxdg/libqtxdg-0.5.1.ebuild,v 1.6 2013/01/20 19:06:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/libqtxdg/libqtxdg-0.5.1.ebuild,v 1.7 2013/03/02 23:13:25 hwoarang Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -24,8 +24,8 @@ SLOT="0"
 IUSE=""
 
 DEPEND="sys-apps/file
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 	!<razorqt-base/razorqt-meta-0.5.0
 	!x11-wm/razorqt"
 RDEPEND="${DEPEND}

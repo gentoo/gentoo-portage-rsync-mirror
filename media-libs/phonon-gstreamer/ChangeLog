@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/phonon-gstreamer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.35 2013/03/01 15:06:11 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.36 2013/03/02 21:47:39 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  phonon-gstreamer-4.6.2-r1.ebuild, phonon-gstreamer-4.6.3.ebuild,
+  phonon-gstreamer-9999.ebuild:
+  Move Qt dependencies to the new category
 
 *phonon-gstreamer-4.6.3 (01 Mar 2013)
 

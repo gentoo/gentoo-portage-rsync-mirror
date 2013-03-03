@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmacs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.105 2012/09/16 04:52:45 grozin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.106 2013/03/02 19:37:54 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> texmacs-1.0.7.15-r1.ebuild,
+  texmacs-1.0.7.16-r1.ebuild:
+  Move Qt dependencies to the new category
 
 *texmacs-1.0.7.16-r1 (16 Sep 2012)
 

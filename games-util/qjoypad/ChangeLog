@@ -1,6 +1,9 @@
 # ChangeLog for games-util/qjoypad
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/ChangeLog,v 1.27 2012/09/29 01:36:16 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/ChangeLog,v 1.28 2013/03/02 21:22:56 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qjoypad-4.1.0.ebuild:
+  Move Qt dependencies to the new category
 
   29 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> qjoypad-4.1.0.ebuild:
   fixup the icon tray support (bug #436426)

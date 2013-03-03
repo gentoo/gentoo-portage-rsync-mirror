@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/cantata-0.9.1.ebuild,v 1.1 2012/12/23 16:19:47 dastergon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/cantata-0.9.1.ebuild,v 1.2 2013/03/02 21:53:52 hwoarang Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
@@ -17,15 +17,15 @@ IUSE="kde mtp phonon replaygain webkit"
 REQUIRED_USE="mtp? ( kde )"
 
 DEPEND="
-	x11-libs/qt-core:4
-	x11-libs/qt-dbus:4
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4
+	dev-qt/qtdbus:4
+	dev-qt/qtgui:4
 	kde? (
 		media-libs/taglib[asf,mp4]
 		media-libs/taglib-extras
 		mtp? ( media-libs/libmtp )
 	)
-	phonon? ( || ( media-libs/phonon x11-libs/qt-phonon:4 ) )
+	phonon? ( || ( media-libs/phonon dev-qt/qtphonon:4 ) )
 	replaygain? (
 		media-libs/speex
 		media-libs/taglib[asf,mp4]
@@ -33,7 +33,7 @@ DEPEND="
 		media-sound/mpg123
 		virtual/ffmpeg
 	)
-	webkit? ( x11-libs/qt-webkit:4 )
+	webkit? ( dev-qt/qtwebkit:4 )
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep oxygen-icons)

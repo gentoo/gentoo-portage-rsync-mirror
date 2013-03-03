@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.32.03-r2.ebuild,v 1.5 2012/10/16 18:50:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.32.03-r2.ebuild,v 1.6 2013/03/02 23:27:01 hwoarang Exp $
 
 EAPI=4
 
@@ -66,12 +66,12 @@ CDEPEND="
 		)
 		opengl? ( virtual/opengl virtual/glu x11-libs/gl2ps )
 		qt4? (
-			x11-libs/qt-gui:4
-			x11-libs/qt-opengl:4
-			x11-libs/qt-qt3support:4
-			x11-libs/qt-svg:4
-			x11-libs/qt-webkit:4
-			x11-libs/qt-xmlpatterns:4 )
+			dev-qt/qtgui:4
+			dev-qt/qtopengl:4
+			dev-qt/qt3support:4
+			dev-qt/qtsvg:4
+			dev-qt/qtwebkit:4
+			dev-qt/qtxmlpatterns:4 )
 		xft? ( x11-libs/libXft )
 		)
 	afs? ( net-fs/openafs )

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.99.4.ebuild,v 1.2 2013/01/12 15:52:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.99.4.ebuild,v 1.3 2013/03/02 19:42:11 hwoarang Exp $
 
 EAPI=5
 
@@ -23,8 +23,8 @@ RDEPEND="
 	dev-db/sqlite
 	net-misc/curl
 	sys-libs/zlib
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.8.0.ebuild,v 1.9 2012/08/03 22:21:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.8.0.ebuild,v 1.10 2013/03/02 19:29:05 hwoarang Exp $
 
 EAPI="4"
 inherit autotools eutils multilib elisp-common flag-o-matic
@@ -46,7 +46,7 @@ RDEPEND="X? (
 	ncurses? ( sys-libs/ncurses )
 	nls? ( virtual/libintl )
 	prime? ( app-i18n/prime )
-	qt4? ( x11-libs/qt-gui:4[qt3support] )
+	qt4? ( dev-qt/qtgui:4[qt3support] )
 	skk? ( app-i18n/skk-jisyo )
 	sqlite? ( dev-db/sqlite:3 )
 	ssl? ( dev-libs/openssl )

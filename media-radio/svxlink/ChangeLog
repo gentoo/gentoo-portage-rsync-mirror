@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/svxlink
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.21 2012/07/31 18:00:25 tomjbe Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.22 2013/03/02 21:51:56 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> svxlink-11.11.1.ebuild:
+  Move Qt dependencies to the new category
 
   31 Jul 2012; Thomas Beierlein <tomjbe@gentoo.org> svxlink-11.11.1.ebuild,
   +files/svxlink-11.11.1-gcc-47.patch:
@@ -99,4 +102,3 @@
   16 Dec 2007; Lars Weiler <pylon@gentoo.org> +files/kde.patch,
   +metadata.xml, +svxlink-070415.ebuild:
   New application for all those Gentoo ham-radio users out there.
-

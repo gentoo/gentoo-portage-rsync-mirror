@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musique
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musique/ChangeLog,v 1.8 2013/02/19 19:50:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musique/ChangeLog,v 1.9 2013/03/02 21:58:51 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> musique-1.2.1.ebuild,
+  musique-1.2.ebuild, musique-9999.ebuild:
+  Move Qt dependencies to the new category
 
   19 Feb 2013; Markos Chandras <hwoarang@gentoo.org> -musique-1.0.ebuild,
   -musique-1.1.ebuild:

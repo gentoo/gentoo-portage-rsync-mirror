@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.2-r2.ebuild,v 1.2 2013/02/07 12:55:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.2-r2.ebuild,v 1.3 2013/03/02 19:37:11 hwoarang Exp $
 
 EAPI=5
 
@@ -34,8 +34,8 @@ COMMON_DEPEND="
 	media-libs/tiff:0
 	net-print/cups
 	sys-libs/zlib[minizip]
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 	virtual/jpeg
 	cairo? ( x11-libs/cairo[X,svg] )
 	pdf? ( app-text/podofo )

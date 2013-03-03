@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/apitrace
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.14 2012/12/13 21:05:24 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.15 2013/03/02 20:19:29 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> apitrace-3.0-r1.ebuild:
+  Move Qt dependencies to the new category
 
   13 Dec 2012; Tim Harder <radhermit@gentoo.org> -apitrace-2.0-r1.ebuild,
   -files/apitrace-2.0-glxtrace-only.patch,
@@ -72,4 +75,3 @@
   09 Jun 2011; Tim Harder <radhermit@gentoo.org> +apitrace-1.0.ebuild,
   +files/apitrace-1.0-automagic-qt.patch, +metadata.xml:
   Initial import.
-

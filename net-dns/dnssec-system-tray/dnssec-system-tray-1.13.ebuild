@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-system-tray/dnssec-system-tray-1.13.ebuild,v 1.2 2012/07/28 23:10:27 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-system-tray/dnssec-system-tray-1.13.ebuild,v 1.3 2013/03/02 22:49:22 hwoarang Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="x11-libs/qt-gui:4"
+RDEPEND="dev-qt/qtgui:4"
 DEPEND="${RDEPEND}"
 
 src_configure() {

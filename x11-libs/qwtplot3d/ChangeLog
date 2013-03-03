@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwtplot3d
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.27 2012/10/08 04:38:59 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.28 2013/03/02 23:46:42 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qwtplot3d-0.2.7-r2.ebuild:
+  Move Qt dependencies to the new category
 
   08 Oct 2012; Raúl Porcel <armin76@gentoo.org> qwtplot3d-0.2.7-r2.ebuild:
   Drop alpha keywords
@@ -114,4 +117,3 @@
   +qwtplot3d-0.2.6.ebuild:
   Initial import, ebuild submitted by Martin Corley <Martin.Corley@ed.ac.uk>,
   closes bug 83294.
-

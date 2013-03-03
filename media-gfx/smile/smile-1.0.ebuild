@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/smile/smile-1.0.ebuild,v 1.6 2012/05/21 20:08:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/smile/smile-1.0.ebuild,v 1.7 2013/03/02 21:40:44 hwoarang Exp $
 
 EAPI="2"
 LANGS="de en it pl pt ru"
@@ -18,9 +18,9 @@ IUSE="debug"
 
 DEPEND="media-sound/sox
 	media-video/mplayer
-	x11-libs/qt-gui:4[debug?]
-	x11-libs/qt-opengl:4[debug?]
-	x11-libs/qt-webkit:4[debug?]
+	dev-qt/qtgui:4[debug?]
+	dev-qt/qtopengl:4[debug?]
+	dev-qt/qtwebkit:4[debug?]
 	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )"
 RDEPEND="${DEPEND}"
 

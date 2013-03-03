@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20100903.ebuild,v 1.5 2010/10/21 23:53:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20100903.ebuild,v 1.6 2013/03/02 23:23:00 hwoarang Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ IUSE="doc"
 
 RDEPEND="dev-libs/boost"
 DEPEND="${RDEPEND}
-	x11-libs/qt-gui:4
+	dev-qt/qtgui:4
 	dev-cpp/tree
 	doc? ( app-doc/doxygen )"
 

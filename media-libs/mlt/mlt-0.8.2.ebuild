@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.8.2.ebuild,v 1.4 2012/11/20 20:07:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.8.2.ebuild,v 1.5 2013/03/02 21:46:11 hwoarang Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -36,7 +36,7 @@ RDEPEND="ffmpeg? ( virtual/ffmpeg[vdpau?] )
 	rtaudio? ( kernel_linux? ( media-libs/alsa-lib ) )
 	swfdec? ( media-libs/swfdec )
 	xine? ( >=media-libs/xine-lib-1.1.2_pre20060328-r7 )
-	qt4? ( x11-libs/qt-gui:4 x11-libs/qt-svg:4 media-libs/libexif )
+	qt4? ( dev-qt/qtgui:4 dev-qt/qtsvg:4 media-libs/libexif )
 	!media-libs/mlt++
 	lua? ( >=dev-lang/lua-5.1.4-r4 )
 	ruby? ( dev-lang/ruby )"

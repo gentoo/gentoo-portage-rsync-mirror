@@ -1,20 +1,19 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-9999.ebuild,v 1.6 2012/12/02 16:58:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-9999.ebuild,v 1.7 2013/03/02 18:46:57 hasufell Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils fdo-mime git-2 gnome2-utils
 
 DESCRIPTION="An open-source jukebox for large collections of mp3/ogg/flac files"
 HOMEPAGE="http://gmusicbrowser.org/"
-SRC_URI=""
 EGIT_REPO_URI="git://github.com/squentin/${PN}.git"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="doc"
 
 GSTREAMER_DEPEND="
 	dev-perl/GStreamer
@@ -37,21 +36,12 @@ RDEPEND="dev-lang/perl
 		( ${MPLAYER_DEPEND} )
 		( ${OTHER_DEPEND} )
 	)"
-DEPEND="sys-devel/gettext"
+DEPEND="sys-devel/gettext
+	doc? ( dev-perl/Text-Markdown )"
 
-LANGS="cs de es fr hu it ko nl pl pt pt_BR ru sv zh_CN"
-for l in ${LANGS}; do
-	IUSE="$IUSE linguas_${l}"
-done
-unset l
-
-src_prepare() {
-	sed -i \
-		-e '/menudir/d' \
-		-e '/^LINGUAS=/d' \
-		Makefile || die
-
-	strip-linguas ${LANGS}
+src_compile() {
+	default
+	Markdown.pl layout_doc.mkd > layout_doc.html
 }
 
 src_install() {
@@ -63,7 +53,7 @@ src_install() {
 		miconsdir="${D}/usr/share/pixmaps" \
 		install
 
-	dohtml layout_doc.html
+	use doc && dohtml layout_doc.html
 }
 
 pkg_preinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.28.ebuild,v 1.6 2012/02/02 16:03:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.28.ebuild,v 1.7 2013/03/02 21:06:45 hwoarang Exp $
 
 EAPI=4
 
@@ -16,8 +16,8 @@ KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE="debug plugins"
 
-DEPEND="x11-libs/qt-gui:4
-	x11-libs/qt-sql:4[sqlite]"
+DEPEND="dev-qt/qtgui:4
+	dev-qt/qtsql:4[sqlite]"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}

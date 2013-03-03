@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/qjson-0.8.1.ebuild,v 1.6 2013/02/11 08:24:59 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/qjson-0.8.1.ebuild,v 1.7 2013/03/02 20:03:19 hwoarang Exp $
 
 EAPI=5
 
@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="amd64 ~arm hppa ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="debug doc test"
 
-RDEPEND="x11-libs/qt-core:4"
+RDEPEND="dev-qt/qtcore:4"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
-	test? ( x11-libs/qt-test:4 )"
+	test? ( dev-qt/qttest:4 )"
 
 DOCS=( ChangeLog README.md )
 

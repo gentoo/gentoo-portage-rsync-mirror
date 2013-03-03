@@ -1,6 +1,9 @@
 # ChangeLog for net-im/qwit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qwit/ChangeLog,v 1.7 2011/01/11 07:36:03 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/qwit/ChangeLog,v 1.8 2013/03/02 22:54:11 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qwit-1.1_pre2.ebuild:
+  Move Qt dependencies to the new category
 
   11 Jan 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> qwit-1.1_pre2.ebuild:
   x86 stable wrt bug #350587
@@ -36,4 +39,3 @@
   Moved from sunrise overlay. Fixes bug #250562. Thanks to Fabio Correa,
   Denilson Sá, Tore Kaspersen and Sergio D. Rodríguez Inclan for the
   ebuilds.
-

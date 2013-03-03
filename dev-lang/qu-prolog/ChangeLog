@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.89 2013/01/09 12:02:40 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.90 2013/03/02 19:58:29 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qu-prolog-9.1.ebuild:
+  Move Qt dependencies to the new category
 
   09 Jan 2013; <keri@gentoo.org> qu-prolog-9.1.ebuild,
   +files/qu-prolog-9.1-gcc.patch:
@@ -393,4 +396,3 @@
   +files/qu-prolog-7.1-CXXFLAGS.patch, +files/qu-prolog-7.1-gcc4.patch,
   +files/qu-prolog-7.1-portage.patch, +metadata.xml, +qu-prolog-7.1.ebuild:
   Initial import.
-

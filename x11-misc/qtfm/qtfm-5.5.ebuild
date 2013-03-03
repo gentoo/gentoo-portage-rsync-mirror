@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtfm/qtfm-5.5.ebuild,v 1.1 2012/10/20 14:37:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtfm/qtfm-5.5.ebuild,v 1.2 2013/03/02 23:52:24 hwoarang Exp $
 
 EAPI=4
 inherit fdo-mime qt4-r2
@@ -16,7 +16,7 @@ IUSE=""
 
 # file is for LIBS += -lmagic
 RDEPEND="sys-apps/file
-	x11-libs/qt-gui:4"
+	dev-qt/qtgui:4"
 DEPEND="${RDEPEND}"
 
 src_prepare() {

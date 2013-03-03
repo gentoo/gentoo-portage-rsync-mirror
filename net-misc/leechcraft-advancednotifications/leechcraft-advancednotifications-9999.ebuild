@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-advancednotifications/leechcraft-advancednotifications-9999.ebuild,v 1.4 2012/07/15 16:02:44 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-advancednotifications/leechcraft-advancednotifications-9999.ebuild,v 1.5 2013/03/02 23:01:40 hwoarang Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ KEYWORDS=""
 IUSE="debug"
 
 DEPEND="~net-misc/leechcraft-core-${PV}
-	x11-libs/qt-declarative:4"
+	dev-qt/qtdeclarative:4"
 RDEPEND="${DEPEND}"
 
 pkg_postinst() {

@@ -1,6 +1,9 @@
 # ChangeLog for games-board/cockatrice
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/ChangeLog,v 1.4 2012/11/19 19:14:12 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/ChangeLog,v 1.5 2013/03/02 21:11:59 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> cockatrice-20120702.ebuild:
+  Move Qt dependencies to the new category
 
   19 Nov 2012; Julian Ospald <hasufell@gentoo.org> cockatrice-20120702.ebuild,
   files/cockatrice-20120702-build.patch:
@@ -19,4 +22,3 @@
   +files/cockatrice-20120702-build.patch,
   +files/cockatrice-20120702-underlinking.patch, +metadata.xml:
   initial commit based on ebuild of Alexander Berntsen
-

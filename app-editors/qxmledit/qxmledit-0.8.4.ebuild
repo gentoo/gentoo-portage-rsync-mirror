@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/qxmledit-0.8.4.ebuild,v 1.1 2013/02/07 22:21:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/qxmledit-0.8.4.ebuild,v 1.2 2013/03/02 19:22:03 hwoarang Exp $
 
 EAPI=5
 
@@ -17,11 +17,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND=">=x11-libs/qt-core-4.7:4
-	>=x11-libs/qt-gui-4.7:4
-	>=x11-libs/qt-sql-4.7:4
-	>=x11-libs/qt-svg-4.7:4
-	>=x11-libs/qt-xmlpatterns-4.7:4"
+DEPEND=">=dev-qt/qtcore-4.7:4
+	>=dev-qt/qtgui-4.7:4
+	>=dev-qt/qtsql-4.7:4
+	>=dev-qt/qtsvg-4.7:4
+	>=dev-qt/qtxmlpatterns-4.7:4"
 RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS NEWS README ROADMAP TODO"

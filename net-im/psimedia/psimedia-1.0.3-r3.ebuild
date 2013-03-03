@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3-r3.ebuild,v 1.9 2012/12/02 16:56:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.3-r3.ebuild,v 1.10 2013/03/02 22:53:23 hwoarang Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.18
 	>=media-libs/gst-plugins-base-0.10.22:0.10
 	media-libs/gst-plugins-good:0.10
 	>=dev-libs/liboil-0.3
-	>=x11-libs/qt-gui-4.4:4
+	>=dev-qt/qtgui-4.4:4
 	>=media-libs/speex-1.2_rc1
 "
 RDEPEND="${COMMON_DEPEND}

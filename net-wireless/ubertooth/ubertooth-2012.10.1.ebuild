@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-2012.10.1.ebuild,v 1.4 2012/11/17 04:32:24 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-2012.10.1.ebuild,v 1.5 2013/03/02 23:12:29 hwoarang Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ REQUIRED_USE="dfu? ( python )
 DEPEND="clock_debug? ( net-wireless/bluez )"
 RDEPEND="${DEPEND}
 	specan? ( virtual/libusb:1
-		 >=x11-libs/qt-gui-4.7.2:4
+		 >=dev-qt/qtgui-4.7.2:4
 		>=dev-python/pyside-1.0.2
 		>=dev-python/numpy-1.3
 		>=dev-python/pyusb-1.0.0_alpha1 )

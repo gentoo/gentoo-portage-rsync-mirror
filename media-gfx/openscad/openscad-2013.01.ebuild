@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openscad/openscad-2013.01.ebuild,v 1.1 2013/02/11 03:23:45 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openscad/openscad-2013.01.ebuild,v 1.2 2013/03/02 21:38:15 hwoarang Exp $
 
 EAPI="2"
 
@@ -17,9 +17,9 @@ IUSE=""
 
 CDEPEND="media-gfx/opencsg
 	sci-mathematics/cgal
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-opengl:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
 	dev-cpp/eigen:2
 	dev-libs/gmp
 	dev-libs/mpfr

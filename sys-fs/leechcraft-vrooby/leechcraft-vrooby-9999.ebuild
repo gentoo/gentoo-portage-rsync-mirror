@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/leechcraft-vrooby/leechcraft-vrooby-9999.ebuild,v 1.5 2012/12/26 11:24:18 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/leechcraft-vrooby/leechcraft-vrooby-9999.ebuild,v 1.6 2013/03/02 23:36:39 hwoarang Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ KEYWORDS=""
 IUSE="debug udisks udisks2"
 
 DEPEND="~net-misc/leechcraft-core-${PV}
-		x11-libs/qt-dbus:4"
+		dev-qt/qtdbus:4"
 RDEPEND="${DEPEND}
 		udisks? ( sys-fs/udisks:0 )
 		udisks2? ( sys-fs/udisks:2 )

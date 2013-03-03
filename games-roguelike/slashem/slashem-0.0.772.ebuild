@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.772.ebuild,v 1.7 2008/03/07 20:17:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.772.ebuild,v 1.8 2013/03/02 21:20:33 hwoarang Exp $
 
 inherit eutils flag-o-matic games
 
@@ -31,7 +31,7 @@ XDEPEND="x11-libs/libXaw
 	x11-libs/libXau
 	x11-libs/libXdmcp"
 
-#	qt? ( =x11-libs/qt-2* ) this version has overflow bugs #79720
+#	qt? ( =dev-qt/qt2* ) this version has overflow bugs #79720
 RDEPEND=">=sys-libs/ncurses-5.2-r5
 	X? ( ${XDEPEND} )
 	opengl? ( virtual/opengl

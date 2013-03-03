@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/apitrace-3.0-r1.ebuild,v 1.3 2012/09/04 07:44:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/apitrace-3.0-r1.ebuild,v 1.4 2013/03/02 20:19:29 hwoarang Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -27,9 +27,9 @@ RDEPEND="app-arch/snappy
 	x11-libs/libX11
 	multilib? ( app-emulation/emul-linux-x86-baselibs )
 	qt4? (
-		>=x11-libs/qt-core-4.7:4
-		>=x11-libs/qt-gui-4.7:4
-		>=x11-libs/qt-webkit-4.7:4
+		>=dev-qt/qtcore-4.7:4
+		>=dev-qt/qtgui-4.7:4
+		>=dev-qt/qtwebkit-4.7:4
 		>=dev-libs/qjson-0.5
 	)"
 DEPEND="${RDEPEND}"

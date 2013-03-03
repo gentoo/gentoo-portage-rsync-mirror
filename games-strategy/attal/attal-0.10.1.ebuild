@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.10.1.ebuild,v 1.9 2011/10/05 22:11:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.10.1.ebuild,v 1.10 2013/03/02 21:21:40 hwoarang Exp $
 
 EAPI=2
 inherit eutils qt4-r2 games
@@ -16,9 +16,9 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-DEPEND="x11-libs/qt-gui:4
-	x11-libs/qt-sql:4
-	x11-libs/qt-qt3support:4
+DEPEND="dev-qt/qtgui:4
+	dev-qt/qtsql:4
+	dev-qt/qt3support:4
 	media-libs/libsdl
 	media-libs/sdl-mixer[vorbis]"
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psimedia
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/ChangeLog,v 1.30 2013/02/16 12:51:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/ChangeLog,v 1.31 2013/03/02 22:53:23 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> psimedia-1.0.3-r3.ebuild:
+  Move Qt dependencies to the new category
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #96436

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/brewtarget-1.2.4.ebuild,v 1.1 2012/03/14 00:16:53 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/brewtarget-1.2.4.ebuild,v 1.2 2013/03/02 19:29:44 hwoarang Exp $
 
 EAPI=4
 
@@ -17,12 +17,12 @@ KEYWORDS="~amd64"
 IUSE="kde"
 
 DEPEND="
-	>=x11-libs/qt-core-4.6:4
-	>=x11-libs/qt-gui-4.6:4
-	>=x11-libs/qt-svg-4.6:4
-	>=x11-libs/qt-webkit-4.6:4
+	>=dev-qt/qtcore-4.6:4
+	>=dev-qt/qtgui-4.6:4
+	>=dev-qt/qtsvg-4.6:4
+	>=dev-qt/qtwebkit-4.6:4
 	kde? ( media-libs/phonon )
-	!kde? ( || ( >=x11-libs/qt-phonon-4.6:4 media-libs/phonon ) )
+	!kde? ( || ( >=dev-qt/qtphonon-4.6:4 media-libs/phonon ) )
 "
 RDEPEND="${DEPEND}"
 

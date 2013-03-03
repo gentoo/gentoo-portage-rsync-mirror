@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gebabbel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gebabbel/ChangeLog,v 1.7 2012/08/01 15:57:59 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gebabbel/ChangeLog,v 1.8 2013/03/02 23:20:18 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> gebabbel-0.4.ebuild:
+  Move Qt dependencies to the new category
 
   01 Aug 2012; Justin Lecher <jlec@gentoo.org> gebabbel-0.4.ebuild,
   metadata.xml:
@@ -32,4 +35,3 @@
   06 Sep 2007; Hanno Boeck <hanno@gentoo.org> +files/gebabbel-0.3-fix.diff,
   +metadata.xml, +gebabbel-0.3.ebuild:
   Initial commit of gebabbel, frontend for gpsbabel.
-

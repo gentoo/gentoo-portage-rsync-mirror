@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/x2goclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.16 2013/01/08 10:53:53 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.17 2013/03/02 23:07:09 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> x2goclient-3.99.2.2.ebuild,
+  x2goclient-3.99.3.0.ebuild, x2goclient-4.0.0.1.ebuild:
+  Move Qt dependencies to the new category
 
 *x2goclient-4.0.0.1 (08 Jan 2013)
 

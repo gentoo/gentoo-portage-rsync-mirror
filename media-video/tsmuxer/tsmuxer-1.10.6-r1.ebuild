@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/tsmuxer-1.10.6-r1.ebuild,v 1.7 2012/09/24 00:45:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/tsmuxer-1.10.6-r1.ebuild,v 1.8 2013/03/02 22:43:17 hwoarang Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ RDEPEND="
 		sys-libs/glibc
 		media-libs/freetype:2
 		qt4? (
-			x11-libs/qt-gui:4
+			dev-qt/qtgui:4
 			media-libs/libpng:1.2
 		)
 	)

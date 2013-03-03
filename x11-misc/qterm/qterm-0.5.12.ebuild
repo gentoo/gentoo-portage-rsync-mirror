@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.5.12.ebuild,v 1.7 2012/08/21 01:14:41 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.5.12.ebuild,v 1.8 2013/03/02 23:52:12 hwoarang Exp $
 
 EAPI=3
 inherit cmake-utils eutils
@@ -14,12 +14,12 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/qt-gui-4.5:4[qt3support]
+RDEPEND=">=dev-qt/qtgui-4.5:4[qt3support]
 	dev-libs/openssl"
 DEPEND="${RDEPEND}
 	kde-base/kdelibs
-	x11-libs/qt-assistant:4
-	x11-libs/qt-webkit:4"
+	dev-qt/qthelp:4
+	dev-qt/qtwebkit:4"
 
 src_prepare() {
 	epatch "${FILESDIR}"/"${PN}"-0.5.11-gentoo.patch \

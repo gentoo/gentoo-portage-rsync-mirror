@@ -1,13 +1,13 @@
 DEFINED_PHASES=prepare
-DEPEND=qt? ( x11-libs/qt-core:4 )
+DEPEND=qt? ( dev-qt/qtcore:4 )
 DESCRIPTION=A Modular, Open-Source whole genome assembler
 EAPI=4
 HOMEPAGE=http://amos.sourceforge.net/
 IUSE=qt
 KEYWORDS=amd64 x86
 LICENSE=Artistic
-RDEPEND=qt? ( x11-libs/qt-core:4 ) dev-perl/DBI dev-perl/Statistics-Descriptive sci-biology/mummer
+RDEPEND=qt? ( dev-qt/qtcore:4 ) dev-perl/DBI dev-perl/Statistics-Descriptive sci-biology/mummer
 SLOT=0
 SRC_URI=mirror://sourceforge/amos/amos-3.1.0.tar.gz
 _eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=c0f1fe766d426a06eec91729f42e2c99
+_md5_=8786734a8e4b84973e17de80d429600b

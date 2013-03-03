@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/libattica-0.4.1.ebuild,v 1.9 2013/02/23 15:53:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/libattica-0.4.1.ebuild,v 1.10 2013/03/02 20:00:30 hwoarang Exp $
 
 EAPI=4
 
@@ -18,11 +18,11 @@ KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linu
 SLOT="0"
 IUSE="debug test"
 
-RDEPEND="x11-libs/qt-core:4"
+RDEPEND="dev-qt/qtcore:4"
 DEPEND="${RDEPEND}
 	test? (
-		x11-libs/qt-gui:4
-		x11-libs/qt-test:4
+		dev-qt/qtgui:4
+		dev-qt/qttest:4
 	)"
 
 DOCS=( AUTHORS ChangeLog README )

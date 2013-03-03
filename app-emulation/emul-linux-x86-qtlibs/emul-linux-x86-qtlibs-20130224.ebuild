@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-20130224.ebuild,v 1.1 2013/02/25 18:47:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-20130224.ebuild,v 1.2 2013/03/02 19:24:42 hwoarang Exp $
 
 EAPI=5
 inherit eutils emul-linux-x86
@@ -19,7 +19,7 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 src_install() {
 	emul-linux-x86_src_install
 
-	# Set LDPATH for not needing x11-libs/qt-core
+	# Set LDPATH for not needing dev-qt/qtcore
 	cat <<-EOF > "${T}/44qt4-emul"
 	LDPATH=/usr/lib32/qt4
 	EOF

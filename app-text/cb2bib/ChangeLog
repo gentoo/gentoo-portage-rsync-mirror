@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cb2bib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/ChangeLog,v 1.19 2013/02/10 14:55:51 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/ChangeLog,v 1.20 2013/03/02 19:40:55 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> cb2bib-1.4.9.ebuild:
+  Move Qt dependencies to the new category
 
   10 Feb 2013; Michael Palimaka <kensington@gentoo.org> -cb2bib-1.4.8.ebuild:
   Remove old.

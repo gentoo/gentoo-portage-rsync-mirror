@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.8.0.ebuild,v 1.8 2012/07/31 08:38:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.8.0.ebuild,v 1.9 2013/03/02 22:58:30 hwoarang Exp $
 
 EAPI=4
 
@@ -21,8 +21,8 @@ RESTRICT="test" #423089
 
 RDEPEND="
 	dev-python/dbus-python
-	x11-libs/qt-core:4[glib?]
-	x11-libs/qt-dbus:4
+	dev-qt/qtcore:4[glib?]
+	dev-qt/qtdbus:4
 	farsight? (
 		dev-libs/dbus-glib
 		dev-libs/libxml2
@@ -36,7 +36,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	virtual/pkgconfig
-	test? ( x11-libs/qt-test:4 )
+	test? ( dev-qt/qttest:4 )
 "
 
 PATCHES=( "${FILESDIR}/${P}-automagicness.patch" )

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/ipe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ipe/ChangeLog,v 1.2 2013/01/23 11:39:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ipe/ChangeLog,v 1.3 2013/03/02 21:36:40 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> ipe-7.1.2.ebuild,
+  ipe-7.1.3.ebuild:
+  Move Qt dependencies to the new category
 
 *ipe-7.1.3 (23 Jan 2013)
 
@@ -134,4 +138,3 @@
   08 Jan 2007; Christian Schlotter (schlotter) <again@gmx.de>
   +ipe-6.0_pre28.ebuild, +metadata.xml:
   New ebuild for bug 80448.
-

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/liblastfm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/ChangeLog,v 1.18 2012/10/22 19:17:39 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/ChangeLog,v 1.19 2013/03/02 21:44:51 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> liblastfm-0.3.3.ebuild,
+  liblastfm-1.0.2.ebuild, liblastfm-1.0.3.ebuild:
+  Move Qt dependencies to the new category
 
 *liblastfm-1.0.3 (22 Oct 2012)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-lionmail/plasma-lionmail-0_p20121020.ebuild,v 1.1 2012/10/21 01:29:45 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-lionmail/plasma-lionmail-0_p20121020.ebuild,v 1.2 2013/03/02 21:30:38 hwoarang Exp $
 
 EAPI=4
 
@@ -19,9 +19,9 @@ DEPEND="
 	$(add_kdebase_dep kdelibs)
 	$(add_kdebase_dep kdepimlibs)
 	app-office/akonadi-server
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-webkit:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtwebkit:4
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep kdepim-runtime)

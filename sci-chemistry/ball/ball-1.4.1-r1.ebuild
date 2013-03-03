@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ball-1.4.1-r1.ebuild,v 1.2 2013/01/27 14:57:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ball-1.4.1-r1.ebuild,v 1.3 2013/03/02 23:17:31 hwoarang Exp $
 
 EAPI=5
 
@@ -27,16 +27,16 @@ RDEPEND="
 	sci-mathematics/lpsolve
 	virtual/opengl
 	x11-libs/libX11
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-opengl:4
-	x11-libs/qt-test:4
-	x11-libs/qt-webkit:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
+	dev-qt/qttest:4
+	dev-qt/qtwebkit:4
 	cuda? ( dev-util/nvidia-cuda-toolkit )
 	mpi? ( virtual/mpi )
 	python? ( ${PYTHON_DEPS} )
-	sql? ( x11-libs/qt-sql:4 )
-	webkit? ( x11-libs/qt-webkit:4 )"
+	sql? ( dev-qt/qtsql:4 )
+	webkit? ( dev-qt/qtwebkit:4 )"
 DEPEND="${RDEPEND}
 	dev-python/sip
 	sys-devel/bison

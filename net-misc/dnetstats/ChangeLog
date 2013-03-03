@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dnetstats
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/ChangeLog,v 1.8 2012/05/21 19:55:45 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/ChangeLog,v 1.9 2013/03/02 23:00:01 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> dnetstats-1.2.6.ebuild:
+  Move Qt dependencies to the new category
 
   21 May 2012; Samuli Suominen <ssuominen@gentoo.org> dnetstats-1.2.6.ebuild:
   inherit eutils for make_desktop_entry
@@ -35,4 +38,3 @@
 
   16 Jan 2010; <hwoarang@gentoo.org> +dnetstats-1.2.5.ebuild, +metadata.xml:
   Initial commit of dnetstats application
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/topgit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/topgit/ChangeLog,v 1.3 2010/07/17 16:26:17 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/topgit/ChangeLog,v 1.4 2013/03/02 22:47:47 ottxor Exp $
+
+  02 Mar 2013; Christoph Junghans <ottxor@gentoo.org> topgit-0.8.ebuild:
+  switched to virtual/awk (bug #455728)
 
   17 Jul 2010; Markos Chandras <hwoarang@gentoo.org> topgit-0.8.ebuild:
   Stable on amd64 wrt bug #328479
@@ -15,4 +18,3 @@
   Initial commit, bug 250516, thanks to Alexander Potashev
   <aspotashev@gmail.com> and Benjamin Bannier
   <bbannier+gentoo_bugs@gmail.com>.
-

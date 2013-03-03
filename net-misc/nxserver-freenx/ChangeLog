@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-freenx
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.81 2011/11/24 21:00:12 voyageur Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.82 2013/03/02 22:55:17 ottxor Exp $
+
+  02 Mar 2013; Christoph Junghans <ottxor@gentoo.org>
+  nxserver-freenx-0.7.3_p104-r6.ebuild:
+  switched to virtual/awk (bug #455676) + added user.eclass due to enewuser
 
   24 Nov 2011; Bernard Cafarelli <voyageur@gentoo.org>
   -nxserver-freenx-0.7.3_p104-r5.ebuild, nxserver-freenx-0.7.3_p104-r6.ebuild:
@@ -498,4 +502,3 @@
   +files/freenx-0.1-gentoo.patch, +nxserver-freenx-0.1.ebuild:
   Initial import; based on an ebuild from Martin Honermeyer
   <maze@strahlungsfrei.de>; see bug #61874
-

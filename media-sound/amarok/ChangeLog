@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.447 2013/02/10 17:15:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.448 2013/03/02 21:52:47 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> amarok-2.5.0-r4.ebuild,
+  amarok-2.6.0.ebuild, amarok-2.7.0.ebuild:
+  Move Qt dependencies to the new category
 
   10 Feb 2013; Agostino Sarubbo <ago@gentoo.org> amarok-2.6.0.ebuild:
   Stable for ppc, wrt bug #441392

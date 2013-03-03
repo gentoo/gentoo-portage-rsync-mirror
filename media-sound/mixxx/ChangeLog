@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mixxx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.67 2012/08/24 05:05:14 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.68 2013/03/02 21:57:27 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> mixxx-1.10.1.ebuild:
+  Move Qt dependencies to the new category
 
   24 Aug 2012; Tim Harder <radhermit@gentoo.org> -mixxx-1.10.0.ebuild,
   -files/mixxx-1.10.0-libmp4v2_r479_compat.patch:
@@ -49,4 +52,3 @@
   +files/mixxx-1.10.0-no-bzr.patch, +files/mixxx-1.10.0-system-libs.patch,
   +metadata.xml:
   Initial import from sunrise (bug #310821, thanks to all contributors).
-

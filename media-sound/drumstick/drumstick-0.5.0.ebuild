@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/drumstick-0.5.0.ebuild,v 1.6 2012/05/05 08:15:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/drumstick-0.5.0.ebuild,v 1.7 2013/03/02 21:54:43 hwoarang Exp $
 
 EAPI=4
 
@@ -16,10 +16,10 @@ KEYWORDS="amd64 x86"
 IUSE="dbus doc"
 
 RDEPEND="media-libs/alsa-lib
-	x11-libs/qt-gui:4
-	x11-libs/qt-svg:4
+	dev-qt/qtgui:4
+	dev-qt/qtsvg:4
 	x11-misc/shared-mime-info
-	dbus? ( x11-libs/qt-dbus:4 )"
+	dbus? ( dev-qt/qtdbus:4 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? (

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/cb2bib-1.4.9.ebuild,v 1.3 2013/02/10 12:24:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/cb2bib-1.4.9.ebuild,v 1.4 2013/03/02 19:40:55 hwoarang Exp $
 
 EAPI=4
 
@@ -17,10 +17,10 @@ IUSE="debug +lzo +webkit"
 
 DEPEND="
 	x11-libs/libX11
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 	lzo? ( dev-libs/lzo:2 )
-	webkit? ( x11-libs/qt-webkit:4 )
+	webkit? ( dev-qt/qtwebkit:4 )
 "
 RDEPEND="${DEPEND}"
 

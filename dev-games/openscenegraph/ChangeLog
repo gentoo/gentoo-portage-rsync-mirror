@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.53 2013/02/09 00:14:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.54 2013/03/02 19:52:25 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  openscenegraph-3.0.1-r1.ebuild:
+  Move Qt dependencies to the new category
 
   08 Feb 2013; Alexis Ballier <aballier@gentoo.org>
   openscenegraph-3.0.1-r1.ebuild, +files/openscenegraph-3.0.1-libav-9.patch:

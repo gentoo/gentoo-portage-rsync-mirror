@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.2.ebuild,v 1.2 2012/07/31 07:08:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.2.ebuild,v 1.3 2013/03/02 22:58:30 hwoarang Exp $
 
 EAPI=4
 
@@ -17,8 +17,8 @@ KEYWORDS="amd64 x86"
 IUSE="debug farsight farstream test"
 
 RDEPEND="
-	x11-libs/qt-core:4
-	x11-libs/qt-dbus:4
+	dev-qt/qtcore:4
+	dev-qt/qtdbus:4
 	farsight? (
 		net-libs/telepathy-farsight
 	)
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 		dev-libs/dbus-glib
 		dev-libs/glib
 		dev-python/dbus-python
-		x11-libs/qt-test:4
+		dev-qt/qttest:4
 	)
 "
 

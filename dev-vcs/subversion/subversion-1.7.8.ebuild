@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.8.ebuild,v 1.3 2013/02/23 15:54:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.8.ebuild,v 1.4 2013/03/02 21:09:45 hwoarang Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -28,7 +28,7 @@ COMMON_DEPEND=">=dev-db/sqlite-3.4
 	berkdb? ( >=sys-libs/db-4.0.14 )
 	ctypes-python? ( ${PYTHON_DEPS} )
 	gnome-keyring? ( dev-libs/glib:2 sys-apps/dbus gnome-base/gnome-keyring )
-	kde? ( sys-apps/dbus x11-libs/qt-core:4 x11-libs/qt-dbus:4 x11-libs/qt-gui:4 >=kde-base/kdelibs-4:4 )
+	kde? ( sys-apps/dbus dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 >=kde-base/kdelibs-4:4 )
 	perl? ( dev-lang/perl )
 	python? ( ${PYTHON_DEPS} )
 	ruby? ( >=dev-lang/ruby-1.8.2:1.8 )

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libxspf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxspf/ChangeLog,v 1.12 2012/08/22 03:12:50 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxspf/ChangeLog,v 1.13 2013/03/02 21:45:44 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> libxspf-1.2.0.ebuild:
+  Move Qt dependencies to the new category
 
   22 Aug 2012; Christoph Junghans <ottxor@gentoo.org> libxspf-1.2.0.ebuild:
   added prefix keywords

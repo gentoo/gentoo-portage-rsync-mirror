@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/cagibi/cagibi-0.2.0.ebuild,v 1.1 2012/01/10 15:51:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/cagibi/cagibi-0.2.0.ebuild,v 1.2 2013/03/02 22:48:45 hwoarang Exp $
 
 EAPI=4
 
@@ -16,8 +16,8 @@ SLOT="0"
 IUSE="debug"
 
 RDEPEND="
-	x11-libs/qt-core:4
-	x11-libs/qt-dbus:4
+	dev-qt/qtcore:4
+	dev-qt/qtdbus:4
 "
 DEPEND="${RDEPEND}
 	dev-util/automoc

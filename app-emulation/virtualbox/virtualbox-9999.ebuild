@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.32 2012/08/22 10:21:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.33 2013/03/02 19:25:52 hwoarang Exp $
 
 EAPI=2
 
@@ -29,9 +29,9 @@ RDEPEND="!app-emulation/virtualbox-bin
 	sys-libs/libcap
 	!headless? (
 		qt4? (
-			x11-libs/qt-gui:4
-			x11-libs/qt-core:4
-			x11-libs/qt-opengl:4
+			dev-qt/qtgui:4
+			dev-qt/qtcore:4
+			dev-qt/qtopengl:4
 		)
 		x11-libs/libXcursor
 		x11-libs/libXinerama

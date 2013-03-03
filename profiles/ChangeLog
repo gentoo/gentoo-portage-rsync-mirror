@@ -1,10 +1,29 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7544 2013/03/02 17:50:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7548 2013/03/03 02:22:36 pesa Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Mar 2013; Davide Pesavento <pesa@gentoo.org> package.mask:
+  p.mask media-gfx/yafaray
+
+  02 Mar 2013; Luca Barbato <lu_zero@gentoo.org> package.mask:
+  Update mask for libav-9.3
+
+  02 Mar 2013; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Unmask dev-qt/*
+
+  02 Mar 2013; Davide Pesavento <pesa@gentoo.org> arch/alpha/package.use.mask,
+  arch/alpha/use.mask, arch/amd64-fbsd/todo/package.use.mask,
+  arch/amd64/package.use.mask, arch/arm/package.use.mask,
+  arch/hppa/package.use.mask, arch/ia64/package.use.mask, arch/ia64/use.mask,
+  arch/powerpc/package.use.force, arch/powerpc/package.use.mask,
+  arch/sparc/package.use.mask, arch/sparc/use.mask, arch/x86/package.use.mask,
+  base/package.use.force, base/package.use.mask, default/bsd/package.use.mask,
+  default/linux/hppa/package.use.mask, package.mask:
+  Qt category move.
 
   02 Mar 2013; Justin Lecher <jlec@gentoo.org> arch/x86/package.use.mask,
   package.mask:

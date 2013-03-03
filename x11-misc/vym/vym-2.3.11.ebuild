@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-2.3.11.ebuild,v 1.3 2013/02/09 15:31:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-2.3.11.ebuild,v 1.4 2013/03/02 23:54:15 hwoarang Exp $
 
 EAPI=5
 inherit eutils qt4-r2
@@ -17,9 +17,9 @@ VYM_LINGUAS=( cs_CZ de_DE es fr ia it pt_BR ru sv zh_CN zh_TW )
 IUSE+=" ${VYM_LINGUAS[@]/#/linguas_}"
 
 DEPEND="
-	x11-libs/qt-dbus:4
-	x11-libs/qt-gui:4[qt3support]
-	x11-libs/qt-svg:4
+	dev-qt/qtdbus:4
+	dev-qt/qtgui:4[qt3support]
+	dev-qt/qtsvg:4
 "
 RDEPEND="
 	${DEPEND}

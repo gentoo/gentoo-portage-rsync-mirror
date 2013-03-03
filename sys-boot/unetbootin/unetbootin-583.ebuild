@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-583.ebuild,v 1.3 2013/02/02 17:17:58 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-583.ebuild,v 1.4 2013/03/02 23:34:41 hwoarang Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ done
 
 S="${WORKDIR}"
 
-DEPEND="x11-libs/qt-gui:4"
+DEPEND="dev-qt/qtgui:4"
 RDEPEND="${DEPEND}
 		 sys-fs/mtools
 		 sys-boot/syslinux

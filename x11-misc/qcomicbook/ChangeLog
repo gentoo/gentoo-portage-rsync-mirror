@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/qcomicbook
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.49 2012/06/22 08:05:51 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.50 2013/03/02 23:51:19 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qcomicbook-0.8.2.ebuild,
+  qcomicbook-0.9.0.ebuild:
+  Move Qt dependencies to the new category
 
 *qcomicbook-0.9.0 (22 Jun 2012)
 
@@ -210,4 +214,3 @@
   11 Jul 2005; Jonathan Smith <smithj@gentoo.org> +metadata.xml,
   +qcomicbook-0.2.3.ebuild:
   #79598: initial commit
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-6.0-r1.ebuild,v 1.2 2012/09/05 09:27:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-6.0-r1.ebuild,v 1.3 2013/03/02 19:43:26 hwoarang Exp $
 
 EAPI=4
 KDE_REQUIRED="never"
@@ -19,9 +19,9 @@ IUSE="debug kde"
 
 RDEPEND="
 	dev-libs/chmlib
-	>=x11-libs/qt-dbus-4.5:4
-	>=x11-libs/qt-webkit-4.5:4
-	!kde? ( >=x11-libs/qt-gui-4.5:4 )
+	>=dev-qt/qtdbus-4.5:4
+	>=dev-qt/qtwebkit-4.5:4
+	!kde? ( >=dev-qt/qtgui-4.5:4 )
 	kde? (
 		$(add_kdebase_dep kdelibs)
 		!kde-base/okular[chm]

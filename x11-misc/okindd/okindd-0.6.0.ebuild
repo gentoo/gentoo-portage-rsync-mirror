@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/okindd/okindd-0.6.0.ebuild,v 1.2 2012/02/14 17:20:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/okindd/okindd-0.6.0.ebuild,v 1.3 2013/03/02 23:50:34 hwoarang Exp $
 
 EAPI="4"
 
@@ -17,8 +17,8 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="debug"
 
-DEPEND="x11-libs/qt-gui:4
-	x11-libs/qt-dbus:4"
+DEPEND="dev-qt/qtgui:4
+	dev-qt/qtdbus:4"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"

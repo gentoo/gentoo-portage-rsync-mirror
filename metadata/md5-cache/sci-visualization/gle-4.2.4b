@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare unpack
-DEPEND=sys-libs/ncurses X? ( x11-libs/libX11 ) qt4? ( x11-libs/qt-opengl:4 ) jpeg? ( virtual/jpeg ) png? ( media-libs/libpng ) tiff? ( media-libs/tiff ) emacs? ( virtual/emacs ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=sys-libs/ncurses X? ( x11-libs/libX11 ) qt4? ( dev-qt/qtopengl:4 ) jpeg? ( virtual/jpeg ) png? ( media-libs/libpng ) tiff? ( media-libs/tiff ) emacs? ( virtual/emacs ) || ( >=sys-devel/automake-1.11.1:1.11 >=sys-devel/automake-1.12:1.12 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Graphics Layout Engine
 EAPI=4
 HOMEPAGE=http://glx.sourceforge.net/
 IUSE=X qt4 jpeg png tiff doc emacs vim-syntax
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD-2 emacs? ( GPL-2 ) qt4? ( GPL-2 )
-RDEPEND=sys-libs/ncurses X? ( x11-libs/libX11 ) qt4? ( x11-libs/qt-opengl:4 ) jpeg? ( virtual/jpeg ) png? ( media-libs/libpng ) tiff? ( media-libs/tiff ) emacs? ( virtual/emacs ) app-text/ghostscript-gpl virtual/latex-base vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
+RDEPEND=sys-libs/ncurses X? ( x11-libs/libX11 ) qt4? ( dev-qt/qtopengl:4 ) jpeg? ( virtual/jpeg ) png? ( media-libs/libpng ) tiff? ( media-libs/tiff ) emacs? ( virtual/emacs ) app-text/ghostscript-gpl virtual/latex-base vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 SLOT=0
 SRC_URI=mirror://sourceforge/glx/gle-graphics-4.2.4bf-src.tar.gz doc? ( mirror://sourceforge/glx/gle-manual-4.2.2.pdf mirror://sourceforge/glx/GLEusersguide.pdf )
 _eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	base	ec46b36a6f6fd1d0b505a33e0b74e413	elisp-common	21605c8f0b2a5ffa3233faeb3f9df309	eutils	2824df7f5dc9f47aee293af8a6b517ed	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	qt4-r2	19af9102ca9b827213997cc636e7e33c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=297eca7411f345df215f6bf82f8ea979
+_md5_=4574f64278d2ef58135fca3b36441da9

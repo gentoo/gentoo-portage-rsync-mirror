@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/andromeda
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/andromeda/ChangeLog,v 1.3 2012/05/19 03:41:05 yngwin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/andromeda/ChangeLog,v 1.4 2013/03/02 23:47:01 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> andromeda-0.2.1.ebuild:
+  Move Qt dependencies to the new category
 
   19 May 2012; Ben de Groot <yngwin@gentoo.org> andromeda-0.2.1.ebuild:
   Add test useflag and conditional dependency on qt-test (bug #416445)
@@ -13,4 +16,3 @@
   29 Apr 2012; Ben de Groot <yngwin@gmail.com> +andromeda-0.2.1.ebuild,
   +metadata.xml:
   Initial commit of x11-misc/andromeda Qt4 filemanager
-

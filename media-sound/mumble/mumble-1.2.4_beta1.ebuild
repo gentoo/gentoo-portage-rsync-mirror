@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.4_beta1.ebuild,v 1.1 2012/11/16 00:56:34 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.4_beta1.ebuild,v 1.2 2013/03/02 21:58:06 hwoarang Exp $
 
 EAPI="4"
 
@@ -28,15 +28,15 @@ RDEPEND=">=dev-libs/boost-1.41.0
 	sys-apps/lsb-release
 	x11-libs/libX11
 	x11-libs/libXi
-	x11-libs/qt-core:4[ssl]
-	x11-libs/qt-gui:4
-	x11-libs/qt-opengl:4
-	x11-libs/qt-sql:4[sqlite]
-	x11-libs/qt-svg:4
-	x11-libs/qt-xmlpatterns:4
+	dev-qt/qtcore:4[ssl]
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
+	dev-qt/qtsql:4[sqlite]
+	dev-qt/qtsvg:4
+	dev-qt/qtxmlpatterns:4
 	x11-proto/inputproto
 	alsa? ( media-libs/alsa-lib )
-	dbus? ( x11-libs/qt-dbus:4 )
+	dbus? ( dev-qt/qtdbus:4 )
 	g15? ( app-misc/g15daemon )
 	portaudio? ( media-libs/portaudio )
 	pulseaudio? ( media-sound/pulseaudio )

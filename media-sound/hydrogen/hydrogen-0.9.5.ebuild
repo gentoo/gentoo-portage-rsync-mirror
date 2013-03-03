@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.5.ebuild,v 1.7 2012/11/24 15:06:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.5.ebuild,v 1.8 2013/03/02 21:55:33 hwoarang Exp $
 
 EAPI=4
 inherit eutils multilib flag-o-matic toolchain-funcs
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="alsa +archive jack ladspa lash oss portaudio"
 
-RDEPEND="x11-libs/qt-gui:4 x11-libs/qt-core:4
+RDEPEND="dev-qt/qtgui:4 dev-qt/qtcore:4
 	archive? ( app-arch/libarchive )
 	!archive? ( >=dev-libs/libtar-1.2.11-r3 )
 	>=media-libs/libsndfile-1.0.18

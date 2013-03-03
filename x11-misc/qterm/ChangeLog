@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/qterm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.46 2012/08/21 01:14:41 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.47 2013/03/02 23:52:12 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qterm-0.5.11.ebuild,
+  qterm-0.5.12.ebuild:
+  Move Qt dependencies to the new category
 
   21 Aug 2012; Naohiro Aota <naota@gentoo.org>
   +files/qterm-0.5.12-glibc216.patch, qterm-0.5.12.ebuild:

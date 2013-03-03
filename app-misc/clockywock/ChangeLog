@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/clockywock
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/ChangeLog,v 1.16 2012/05/10 15:10:08 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/clockywock/ChangeLog,v 1.17 2013/03/02 20:37:21 pinkbyte Exp $
+
+*clockywock-0.3.1a (02 Mar 2013)
+
+  02 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> +clockywock-0.3.1a.ebuild,
+  +files/clockywock-0.3.1a-makefile.patch, metadata.xml:
+  Version bump: EAPI 5, use base eclass, add ~amd64-linux and ~x86-linux
+  keywords, set new HOMEPAGE and SRC_URI, assign myself as maintainer
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -clockywock-0.2.3.ebuild:
   Remove old

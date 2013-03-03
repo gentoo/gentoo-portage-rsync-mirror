@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.10.2-r1.ebuild,v 1.3 2013/02/22 18:11:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.10.2-r1.ebuild,v 1.4 2013/03/02 20:20:59 hwoarang Exp $
 
 EAPI=4
 
@@ -24,8 +24,8 @@ DEPEND="
 	virtual/pkgconfig
 	ncurses? ( sys-libs/ncurses )
 	qt4? (
-		x11-libs/qt-core:4
-		x11-libs/qt-gui:4
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
 	)
 "
 RDEPEND="${DEPEND}

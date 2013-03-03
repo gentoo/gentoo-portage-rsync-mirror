@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.9.0.ebuild,v 1.7 2011/06/17 15:48:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.9.0.ebuild,v 1.8 2013/03/02 19:16:54 hwoarang Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/openssl-0.9.8[-bindist]
-	x11-libs/qt-gui:4"
+	dev-qt/qtgui:4"
 DEPEND="${RDEPEND}
 	doc? ( app-text/linuxdoc-tools )"
 

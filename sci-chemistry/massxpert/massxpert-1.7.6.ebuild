@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-1.7.6.ebuild,v 1.6 2012/07/26 15:12:06 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-1.7.6.ebuild,v 1.7 2013/03/02 23:18:07 hwoarang Exp $
 
 EAPI=2
 
@@ -16,9 +16,9 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND="
-	x11-libs/qt-gui:4[accessibility]
-	x11-libs/qt-svg:4
-	x11-libs/qt-xmlpatterns:4
+	dev-qt/qtgui:4[accessibility]
+	dev-qt/qtsvg:4
+	dev-qt/qtxmlpatterns:4
 	x11-libs/libSM
 	x11-libs/libICE
 	x11-libs/libXi

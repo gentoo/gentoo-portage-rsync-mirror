@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.7.0.ebuild,v 1.3 2009/06/10 19:06:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.7.0.ebuild,v 1.4 2013/03/02 21:49:24 alonbl Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.jetico.com/linux/BestCrypt-${MY_PV}.tar.gz"
 LICENSE="bestcrypt"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="virtual/linux-sources"
 RDEPEND=""

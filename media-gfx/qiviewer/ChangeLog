@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qiviewer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiviewer/ChangeLog,v 1.4 2013/02/20 12:55:25 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiviewer/ChangeLog,v 1.5 2013/03/02 21:39:47 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qiviewer-0.5.0-r1.ebuild:
+  Move Qt dependencies to the new category
 
   20 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> qiviewer-0.5.0-r1.ebuild:
   Port to readme.gentoo eclass, as suggested in bug #457604
@@ -20,4 +23,3 @@
   07 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> +qiviewer-0.5.0.ebuild,
   +files/qiviewer-use-system-webp.patch, +metadata.xml:
   New ebuild, fixes bug #432584
-

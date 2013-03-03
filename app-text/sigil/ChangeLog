@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sigil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/ChangeLog,v 1.10 2013/01/24 22:16:21 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/ChangeLog,v 1.11 2013/03/02 19:45:35 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> sigil-0.6.0.ebuild,
+  sigil-0.6.2.ebuild:
+  Move Qt dependencies to the new category
 
   24 Jan 2013; Stefan Briesenick <sbriesen@gentoo.org> -sigil-0.5.3.ebuild:
   removed also sigil-0.5.3

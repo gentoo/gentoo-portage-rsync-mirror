@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/yabause-0.9.12.ebuild,v 1.1 2013/02/18 00:36:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/yabause-0.9.12.ebuild,v 1.2 2013/03/02 21:15:10 hwoarang Exp $
 
 EAPI=5
 inherit eutils cmake-utils games
@@ -22,9 +22,9 @@ RDEPEND="
 		virtual/opengl
 	)
 	qt4? (
-		x11-libs/qt-core:4
-		x11-libs/qt-gui:4
-		opengl? ( x11-libs/qt-opengl:4 )
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
+		opengl? ( dev-qt/qtopengl:4 )
 	)
 	!qt4? (
 		dev-libs/glib:2

@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=dev-libs/libpcre media-libs/portaudio sci-libs/arpack sci-libs/fftw:3.0 sci-libs/matio sci-libs/umfpack sys-libs/ncurses virtual/glu virtual/lapack virtual/libffi virtual/opengl x11-libs/qt-gui:4 x11-libs/qt-opengl:4 x11-libs/qt-svg:4 volpack? ( media-libs/volpack ) vtk? ( sci-libs/vtk ) dev-lang/python virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=dev-libs/libpcre media-libs/portaudio sci-libs/arpack sci-libs/fftw:3.0 sci-libs/matio sci-libs/umfpack sys-libs/ncurses virtual/glu virtual/lapack virtual/libffi virtual/opengl dev-qt/qtgui:4 dev-qt/qtopengl:4 dev-qt/qtsvg:4 volpack? ( media-libs/volpack ) vtk? ( sci-libs/vtk ) dev-lang/python virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Environment for rapid engineering and scientific processing
 EAPI=4
 HOMEPAGE=http://freemat.sourceforge.net/
 IUSE=volpack vtk
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=dev-libs/libpcre media-libs/portaudio sci-libs/arpack sci-libs/fftw:3.0 sci-libs/matio sci-libs/umfpack sys-libs/ncurses virtual/glu virtual/lapack virtual/libffi virtual/opengl x11-libs/qt-gui:4 x11-libs/qt-opengl:4 x11-libs/qt-svg:4 volpack? ( media-libs/volpack ) vtk? ( sci-libs/vtk )
+RDEPEND=dev-libs/libpcre media-libs/portaudio sci-libs/arpack sci-libs/fftw:3.0 sci-libs/matio sci-libs/umfpack sys-libs/ncurses virtual/glu virtual/lapack virtual/libffi virtual/opengl dev-qt/qtgui:4 dev-qt/qtopengl:4 dev-qt/qtsvg:4 volpack? ( media-libs/volpack ) vtk? ( sci-libs/vtk )
 SLOT=0
 SRC_URI=mirror://sourceforge/freemat/FreeMat-4.1-Source.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	2dda478e7e4206f6fb1aa72785cb5ef7	eutils	2824df7f5dc9f47aee293af8a6b517ed	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	python	89dff4d72d57f253f9f78b7f8c5d55c8	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=5f12cfe2f4658254f393bac9dd0d1a79
+_md5_=ea55f885ec7b828e53759fdca3e99c3b

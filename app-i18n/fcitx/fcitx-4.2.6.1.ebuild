@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.6.1.ebuild,v 1.3 2013/02/10 23:37:24 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.6.1.ebuild,v 1.4 2013/03/02 19:26:41 hwoarang Exp $
 
 EAPI=4
 
@@ -42,8 +42,8 @@ RDEPEND="sys-apps/dbus
 	lua? ( dev-lang/lua )
 	opencc? ( app-i18n/opencc )
 	qt4? (
-		x11-libs/qt-gui:4
-		x11-libs/qt-dbus:4
+		dev-qt/qtgui:4
+		dev-qt/qtdbus:4
 	)
 	xml? (
 		app-text/iso-codes

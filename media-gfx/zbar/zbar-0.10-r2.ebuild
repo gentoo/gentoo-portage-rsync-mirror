@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/zbar-0.10-r2.ebuild,v 1.2 2013/03/01 08:00:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/zbar-0.10-r2.ebuild,v 1.3 2013/03/02 21:41:57 hwoarang Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.6"
@@ -22,7 +22,7 @@ RDEPEND="gtk? ( =dev-libs/glib-2* x11-libs/gtk+:2 )
 		media-gfx/graphicsmagick[imagemagick] ) )
 	jpeg? ( virtual/jpeg )
 	python? ( gtk? ( >=dev-python/pygtk-2 ) )
-	qt4? ( x11-libs/qt-core:4 x11-libs/qt-gui:4 )
+	qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 )
 	X? ( x11-libs/libXext
 		xv? ( x11-libs/libXv ) )"
 DEPEND="${RDEPEND}

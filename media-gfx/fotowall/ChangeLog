@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fotowall
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/ChangeLog,v 1.15 2010/10/23 00:42:19 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/ChangeLog,v 1.16 2013/03/02 21:35:24 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> fotowall-0.9-r1.ebuild:
+  Move Qt dependencies to the new category
 
   23 Oct 2010; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove myself from metadata
@@ -65,4 +68,3 @@
   09 May 2009; Markos Chandras <hwoarang@gentoo.org> +fotowall-0.6.1.ebuild,
   +metadata.xml:
   Initial commit for fotowall application
-

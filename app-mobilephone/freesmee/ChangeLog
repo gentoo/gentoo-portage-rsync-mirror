@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/freesmee
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/ChangeLog,v 1.10 2013/01/03 09:21:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/ChangeLog,v 1.11 2013/03/02 19:33:32 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> freesmee-0.7-r3.ebuild,
+  freesmee-0.81.ebuild:
+  Move Qt dependencies to the new category
 
   03 Jan 2013; Agostino Sarubbo <ago@gentoo.org> freesmee-0.81.ebuild:
   Add ~ppc, wrt bug #449956

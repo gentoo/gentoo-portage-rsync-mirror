@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsbabel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/ChangeLog,v 1.30 2013/02/04 09:12:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/ChangeLog,v 1.31 2013/03/02 23:20:56 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> gpsbabel-1.4.3.ebuild,
+  gpsbabel-1.4.4.ebuild:
+  Move Qt dependencies to the new category
 
 *gpsbabel-1.4.4 (04 Feb 2013)
 

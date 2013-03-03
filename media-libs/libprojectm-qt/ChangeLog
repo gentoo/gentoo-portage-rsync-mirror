@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libprojectm-qt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm-qt/ChangeLog,v 1.16 2013/01/25 13:55:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm-qt/ChangeLog,v 1.17 2013/03/02 21:45:16 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  libprojectm-qt-2.0.1.ebuild, libprojectm-qt-2.1.0-r1.ebuild:
+  Move Qt dependencies to the new category
 
   25 Jan 2013; Agostino Sarubbo <ago@gentoo.org> libprojectm-qt-2.1.0-r1.ebuild:
   Stable for amd64, wrt bug #453402

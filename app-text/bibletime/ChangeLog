@@ -1,6 +1,9 @@
 # ChangeLog for app-text/bibletime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.68 2013/02/14 21:55:47 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.69 2013/03/02 19:40:22 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> bibletime-2.9.1.ebuild:
+  Move Qt dependencies to the new category
 
   14 Feb 2013; Chris Reffett <creffett@gentoo.org> bibletime-2.9.1.ebuild:
   Bump EAPI, add subslot dep on icu wrt bug 455900.

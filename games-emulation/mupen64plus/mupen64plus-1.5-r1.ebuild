@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r1.ebuild,v 1.10 2012/05/04 04:38:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r1.ebuild,v 1.11 2013/03/02 21:14:43 hwoarang Exp $
 
 EAPI="2"
 
@@ -29,8 +29,8 @@ RDEPEND="virtual/opengl
 	x11-libs/gtk+:2
 	libsamplerate? ( media-libs/libsamplerate )
 	lirc? ( app-misc/lirc )
-	qt4? ( x11-libs/qt-gui:4
-		x11-libs/qt-core:4 )
+	qt4? ( dev-qt/qtgui:4
+		dev-qt/qtcore:4 )
 	app-arch/xz-utils"
 
 DEPEND="${RDEPEND}

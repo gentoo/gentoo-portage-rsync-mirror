@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobooster/pianobooster-0.6.4b.ebuild,v 1.1 2011/05/18 17:08:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobooster/pianobooster-0.6.4b.ebuild,v 1.2 2013/03/02 21:59:10 hwoarang Exp $
 
 EAPI="4"
 
@@ -19,9 +19,9 @@ IUSE="fluidsynth"
 DEPEND="fluidsynth? ( media-sound/fluidsynth )
 	media-libs/alsa-lib
 	virtual/opengl
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-opengl:4"
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4"
 RDEPEND="${DEPEND}"
 
 DOCS="ReleaseNote.txt ../README.txt"

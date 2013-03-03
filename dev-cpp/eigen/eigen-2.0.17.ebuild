@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.17.ebuild,v 1.8 2013/01/01 12:50:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.17.ebuild,v 1.9 2013/03/02 19:49:00 hwoarang Exp $
 
 EAPI=4
 
@@ -17,8 +17,8 @@ IUSE="debug doc examples"
 
 COMMON_DEPEND="
 	examples? (
-		x11-libs/qt-gui:4
-		x11-libs/qt-opengl:4
+		dev-qt/qtgui:4
+		dev-qt/qtopengl:4
 	)"
 DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )"

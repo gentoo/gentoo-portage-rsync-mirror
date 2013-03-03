@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qyoto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qyoto/ChangeLog,v 1.57 2013/02/23 17:20:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qyoto/ChangeLog,v 1.58 2013/03/03 02:29:03 pesa Exp $
+
+  03 Mar 2013; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Adjust metadata for Qt category move.
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> qyoto-4.10.0.ebuild,
   qyoto-4.9.5.ebuild:

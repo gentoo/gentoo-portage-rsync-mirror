@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/qmmp-plugin-pack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/qmmp-plugin-pack/ChangeLog,v 1.6 2013/02/21 20:46:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/qmmp-plugin-pack/ChangeLog,v 1.7 2013/03/02 21:50:26 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  qmmp-plugin-pack-0.6.3.ebuild, qmmp-plugin-pack-0.6.4.ebuild,
+  qmmp-plugin-pack-0.6.5.ebuild:
+  Move Qt dependencies to the new category
 
 *qmmp-plugin-pack-0.6.5 (21 Feb 2013)
 

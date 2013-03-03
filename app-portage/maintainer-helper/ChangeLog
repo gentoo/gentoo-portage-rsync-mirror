@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/maintainer-helper
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/ChangeLog,v 1.17 2012/12/26 19:23:05 fuzzyray Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/maintainer-helper/ChangeLog,v 1.18 2013/03/02 19:39:29 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  maintainer-helper-0.1.2.ebuild:
+  Move Qt dependencies to the new category
 
   26 Dec 2012; Paul Varner <fuzzyray@gentoo.org> metadata.xml:
   Move to maintainer-needed, due to not being maintained by anyone in the
@@ -74,4 +78,3 @@
   07 Aug 2007; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
   +maintainer-helper-0.1.ebuild:
   Initial import
-

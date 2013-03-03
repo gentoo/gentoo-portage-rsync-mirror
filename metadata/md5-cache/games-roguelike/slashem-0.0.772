@@ -9,4 +9,4 @@ RDEPEND=>=sys-libs/ncurses-5.2-r5 X? ( x11-libs/libXaw x11-libs/libXmu x11-libs/
 SLOT=0
 SRC_URI=mirror://sourceforge/slashem/se007e7f2.tar.gz http://www.juiblex.co.uk/nethack/config/conf12s.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	2824df7f5dc9f47aee293af8a6b517ed	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	games	e0a83e3f3f024b8c8ef7a8217d716cbf	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=c093542ccfdf0a86cc5fe7c0dc025b38
+_md5_=444bcc888e0e93d2fee1636a7510f2a1

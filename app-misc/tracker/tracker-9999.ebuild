@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.56 2013/01/25 22:35:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.57 2013/03/02 19:33:02 hwoarang Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -108,7 +108,7 @@ RDEPEND="
 	!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
 "
 #	strigi? ( >=app-misc/strigi-0.7 )
-#	mp3? ( qt4? (  >=x11-libs/qt-gui-4.7.1:4 ) )
+#	mp3? ( qt4? (  >=dev-qt/qtgui-4.7.1:4 ) )
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.8
 	>=dev-util/intltool-0.40

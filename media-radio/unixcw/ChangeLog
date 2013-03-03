@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/unixcw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/ChangeLog,v 1.10 2013/02/10 15:12:27 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/ChangeLog,v 1.11 2013/03/02 21:52:16 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> unixcw-2.3-r6.ebuild,
+  unixcw-3.0.2.ebuild, unixcw-3.1.1.ebuild, unixcw-3.2.0.ebuild:
+  Move Qt dependencies to the new category
 
   10 Feb 2013; Thomas Beierlein <tomjbe@gentoo.org> unixcw-3.2.0.ebuild,
   +files/unixcw-3.2.0-pulseaudio.patch:
@@ -49,4 +53,3 @@
   +files/unixcw-2.3-ldflags.patch, +files/unixcw-2.3-parallel-make.patch,
   +metadata.xml:
   Initial portage version, moved from sunrise. Bug #220027
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.0.3-r3.ebuild,v 1.18 2013/01/13 11:32:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.0.3-r3.ebuild,v 1.19 2013/03/02 19:11:26 hwoarang Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
@@ -38,7 +38,7 @@ DEPEND="
 		!bacula-nodir? ( virtual/mta )
 	)
 	qt4? (
-		x11-libs/qt-svg:4
+		dev-qt/qtsvg:4
 		x11-libs/qwt:5
 	)
 	logwatch? ( sys-apps/logwatch )

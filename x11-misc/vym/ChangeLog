@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/vym
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.31 2013/02/09 15:31:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.32 2013/03/02 23:54:15 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> vym-2.2.4.ebuild,
+  vym-2.3.11.ebuild, vym-2.3.8.ebuild:
+  Move Qt dependencies to the new category
 
   09 Feb 2013; Jeroen Roovers <jer@gentoo.org> vym-2.3.11.ebuild:
   Remove rmdir (bug #456288 by gtlinuxman).

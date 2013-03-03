@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.8.4.ebuild,v 1.4 2013/02/08 13:08:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.8.4.ebuild,v 1.5 2013/03/02 22:06:19 hwoarang Exp $
 
 EAPI=4
 LANGS="cs de en it ru"
@@ -22,9 +22,9 @@ DEPEND="media-libs/libsdl
 	virtual/ffmpeg
 	virtual/glu
 	virtual/opengl
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-opengl:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
 "
 RDEPEND="${DEPEND}
 	|| ( app-cdr/cdrkit app-cdr/cdrtools )

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/hydrogen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.102 2012/11/24 15:06:02 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.103 2013/03/02 21:55:33 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> hydrogen-0.9.5.ebuild:
+  Move Qt dependencies to the new category
 
   24 Nov 2012; Alexis Ballier <aballier@gentoo.org> hydrogen-0.9.5.ebuild,
   +files/hydrogen-0.9.5-gcc47.patch:
@@ -442,4 +445,3 @@
   Initial revision.
   
   Submitted by: Marc Hildebrand
-

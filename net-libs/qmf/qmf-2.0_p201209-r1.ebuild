@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/qmf-2.0_p201209-r1.ebuild,v 1.1 2013/02/09 09:00:11 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/qmf-2.0_p201209-r1.ebuild,v 1.2 2013/03/02 22:57:44 hwoarang Exp $
 
 EAPI=5
 
@@ -26,14 +26,14 @@ IUSE="debug doc examples test"
 RDEPEND="
 	dev-libs/icu:=
 	sys-libs/zlib
-	>=x11-libs/qt-core-4.6.0:4
-	>=x11-libs/qt-gui-4.6.0:4
-	>=x11-libs/qt-sql-4.6.0:4
-	examples? ( >=x11-libs/qt-webkit-4.6.0:4 )
+	>=dev-qt/qtcore-4.6.0:4
+	>=dev-qt/qtgui-4.6.0:4
+	>=dev-qt/qtsql-4.6.0:4
+	examples? ( >=dev-qt/qtwebkit-4.6.0:4 )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	test? ( >=x11-libs/qt-test-4.6.0:4 )
+	test? ( >=dev-qt/qttest-4.6.0:4 )
 	!!<net-libs/qmf-2.0_p201209
 "
 

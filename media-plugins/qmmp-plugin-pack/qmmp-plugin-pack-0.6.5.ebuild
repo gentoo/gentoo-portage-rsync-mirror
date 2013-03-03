@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/qmmp-plugin-pack/qmmp-plugin-pack-0.6.5.ebuild,v 1.1 2013/02/21 20:46:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/qmmp-plugin-pack/qmmp-plugin-pack-0.6.5.ebuild,v 1.2 2013/03/02 21:50:26 hwoarang Exp $
 
 EAPI=5
 
@@ -20,6 +20,6 @@ IUSE=""
 RDEPEND=">=media-libs/taglib-1.7.0
 	>=media-sound/mpg123-1.13.0
 	>=media-sound/qmmp-0.6.7
-	x11-libs/qt-gui:4"
+	dev-qt/qtgui:4"
 DEPEND="${RDEPEND}
 	dev-lang/yasm"

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.270 2013/02/22 20:56:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.271 2013/03/02 21:36:18 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> graphviz-2.28.0.ebuild:
+  Move Qt dependencies to the new category
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> graphviz-2.28.0.ebuild:
   Add ~arm-linux keyword.

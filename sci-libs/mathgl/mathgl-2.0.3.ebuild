@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-2.0.3.ebuild,v 1.5 2012/08/10 00:20:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-2.0.3.ebuild,v 1.6 2013/03/02 23:23:19 hwoarang Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ RDEPEND="
 	pdf? ( media-libs/libharu )
 	png? ( media-libs/libpng )
 	python? ( dev-python/numpy )
-	qt4? ( x11-libs/qt-gui:4 )
+	qt4? ( dev-qt/qtgui:4 )
 	wxwidgets? ( x11-libs/wxGTK:2.8 )
 	zlib? ( sys-libs/zlib )"
 

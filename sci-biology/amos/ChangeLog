@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/amos
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/ChangeLog,v 1.15 2012/07/08 17:28:51 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/ChangeLog,v 1.16 2013/03/02 23:15:20 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> amos-3.1.0.ebuild:
+  Move Qt dependencies to the new category
 
   08 Jul 2012; Justin Lecher <jlec@gentoo.org> -amos-2.0.8-r1.ebuild,
   -files/amos-2.0.8-gcc44.patch, -amos-3.0.0.ebuild, -amos-3.0.1.ebuild,
@@ -62,4 +65,3 @@
 
   26 May 2008; weaver <weaver@gentoo.org> +metadata.xml, +amos-2.0.5.ebuild:
   Initial commit. New package from sunrise, bug 175293
-

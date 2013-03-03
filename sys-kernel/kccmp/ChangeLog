@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/kccmp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.22 2012/05/21 10:20:40 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.23 2013/03/02 23:37:29 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> kccmp-0.3.ebuild:
+  Move Qt dependencies to the new category
 
   21 May 2012; Johannes Huber <johu@gentoo.org>
   -files/kccmp-0.2-r1-no-qt4-missing-include.patch, -kccmp-0.2-r2.ebuild:
@@ -81,4 +84,3 @@
   08 Oct 2007; <mike@gentoo.org> +files/kccmp-0.2-qt4.patch, +metadata.xml,
   +kccmp-0.2.ebuild:
   Initial ebuild for kccmp.
-

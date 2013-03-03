@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3diags/mp3diags-1.1.19.075.ebuild,v 1.1 2012/05/03 09:10:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3diags/mp3diags-1.1.19.075.ebuild,v 1.2 2013/03/02 21:57:44 hwoarang Exp $
 
 EAPI=4
 
@@ -20,11 +20,11 @@ IUSE=""
 
 DEPEND="
 	>=dev-libs/boost-1.37
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 "
 RDEPEND="${DEPEND}
-	x11-libs/qt-svg:4
+	dev-qt/qtsvg:4
 "
 
 S=${WORKDIR}/${MY_P}

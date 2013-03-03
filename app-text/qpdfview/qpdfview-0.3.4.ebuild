@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.4.ebuild,v 1.3 2012/10/17 03:40:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.4.ebuild,v 1.4 2013/03/02 19:44:53 hwoarang Exp $
 
 EAPI=4
 PLOCALES="cs de el pt_BR ru sk uk"
@@ -16,11 +16,11 @@ KEYWORDS="amd64 ~arm x86"
 IUSE="cups dbus svg"
 
 RDEPEND="app-text/poppler[qt4]
-	x11-libs/qt-core:4[iconv]
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4[iconv]
+	dev-qt/qtgui:4
 	cups? ( net-print/cups )
-	dbus? ( x11-libs/qt-dbus:4 )
-	svg? ( x11-libs/qt-svg:4 )"
+	dbus? ( dev-qt/qtdbus:4 )
+	svg? ( dev-qt/qtsvg:4 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

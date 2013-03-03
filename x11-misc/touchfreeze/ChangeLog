@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/touchfreeze
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchfreeze/ChangeLog,v 1.18 2012/06/08 13:21:09 pesa Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchfreeze/ChangeLog,v 1.19 2013/03/02 23:54:00 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  touchfreeze-0.2.5-r1.ebuild:
+  Move Qt dependencies to the new category
 
   08 Jun 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Cleanup metadata.
@@ -79,4 +83,3 @@
   +touchfreeze-0.2.3.ebuild, +metadata.xml:
   Initial commit from qting-edge overlay. Thanks to Jesús Pérez (Chuso)
   <chescu@gmail.com> for the initial ebuild. Fixes bug 262218
-

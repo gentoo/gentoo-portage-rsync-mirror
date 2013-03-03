@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.8.0.ebuild,v 1.1 2013/02/11 02:37:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.8.0.ebuild,v 1.2 2013/03/02 23:21:56 hwoarang Exp $
 
 EAPI=5
 
@@ -26,11 +26,11 @@ RDEPEND="
 	sci-libs/gsl
 	sci-libs/libspatialindex
 	sci-libs/proj
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-svg:4
-	x11-libs/qt-sql:4
-	x11-libs/qt-webkit:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtsvg:4
+	dev-qt/qtsql:4
+	dev-qt/qtwebkit:4
 	x11-libs/qwt:5[svg]
 	!bundled-libs? ( <x11-libs/qwtpolar-1 )
 	grass? ( >=sci-geosciences/grass-6.4.0_rc6[python?] )

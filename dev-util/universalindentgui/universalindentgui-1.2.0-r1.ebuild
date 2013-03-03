@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/universalindentgui-1.2.0-r1.ebuild,v 1.1 2012/06/08 13:16:37 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/universalindentgui-1.2.0-r1.ebuild,v 1.2 2013/03/02 21:07:26 hwoarang Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2"
@@ -17,9 +17,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug examples html perl php python ruby xml"
 
-DEPEND="x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-script:4
+DEPEND="dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtscript:4
 	x11-libs/qscintilla
 "
 RDEPEND="${DEPEND}

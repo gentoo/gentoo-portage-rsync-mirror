@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qcharselect/qcharselect-0.2.ebuild,v 1.1 2009/12/12 13:11:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qcharselect/qcharselect-0.2.ebuild,v 1.2 2013/03/02 19:36:34 hwoarang Exp $
 
 EAPI=2
 inherit multilib
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="x11-libs/qt-gui:4[qt3support]"
+DEPEND="dev-qt/qtgui:4[qt3support]"
 
 src_prepare() {
 	sed -i \

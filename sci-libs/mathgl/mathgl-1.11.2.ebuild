@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.11.2.ebuild,v 1.4 2012/03/01 07:41:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.11.2.ebuild,v 1.5 2013/03/02 23:23:19 hwoarang Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ RDEPEND="
 	jpeg? ( virtual/jpeg )
 	octave? ( >=sci-mathematics/octave-3.4.0 )
 	python? ( dev-python/numpy )
-	qt4? ( x11-libs/qt-gui:4 )
+	qt4? ( dev-qt/qtgui:4 )
 	wxwidgets? ( x11-libs/wxGTK:2.8 )"
 DEPEND="${RDEPEND}
 	sys-devel/libtool:2

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/karlyriceditor/karlyriceditor-1.4.ebuild,v 1.2 2013/02/07 18:45:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/karlyriceditor/karlyriceditor-1.4.ebuild,v 1.3 2013/03/02 21:56:03 hwoarang Exp $
 
 EAPI=5
 
@@ -19,8 +19,8 @@ RDEPEND="
 	dev-libs/openssl:0
 	media-libs/libsdl
 	>=virtual/ffmpeg-0.10
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

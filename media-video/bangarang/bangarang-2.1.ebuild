@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/bangarang-2.1.ebuild,v 1.4 2012/08/03 21:07:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/bangarang-2.1.ebuild,v 1.5 2013/03/02 22:40:16 hwoarang Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ RDEPEND="
 	)
 	media-libs/taglib
 	media-libs/phonon
-	x11-libs/qt-script:4
+	dev-qt/qtscript:4
 "
 DEPEND="${RDEPEND}
 	sys-devel/gettext

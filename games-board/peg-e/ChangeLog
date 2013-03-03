@@ -1,6 +1,10 @@
 # ChangeLog for games-board/peg-e
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/peg-e/ChangeLog,v 1.5 2013/02/19 08:24:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/peg-e/ChangeLog,v 1.6 2013/03/02 21:12:54 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> peg-e-1.1.0.ebuild,
+  peg-e-1.1.2.ebuild:
+  Move Qt dependencies to the new category
 
   19 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> -peg-e-1.1.1.ebuild:
   old

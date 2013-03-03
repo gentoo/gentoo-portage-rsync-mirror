@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.162 2013/01/31 05:57:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.163 2013/03/02 20:45:52 pesa Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Jan 2013)
 # remove mask when net-libs/libqmi is keyworded here
@@ -48,9 +48,9 @@ net-misc/tor tor-hardening
 net-libs/cyassl aes-ni cyassl-hardening
 
 # Johannes Huber <johu@gentoo.org> (9 Jul 2012)
-# x11-libs/qt-openvg not keyworded correctly.
+# dev-qt/qtopenvg not keyworded correctly.
 # ppc/ppc64 team please validate.
-=x11-libs/qt-demo-4.8* openvg
+=dev-qt/qtdemo-4.8* openvg
 
 # Michael Weber <xmw@gentoo.org> (3 Jun 2012)
 # pymol got stabled (bug 366229) but USE=apbs deps aren't keyworded

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/mozc-1.5.1090.102.ebuild,v 1.2 2012/07/23 04:20:12 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/mozc-1.5.1090.102.ebuild,v 1.3 2013/03/02 19:28:02 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -27,7 +27,7 @@ RDEPEND="dev-libs/glib:2
 	renderer? ( x11-libs/gtk+:2 )
 	scim? ( app-i18n/scim )
 	qt4? (
-		x11-libs/qt-gui:4
+		dev-qt/qtgui:4
 		app-i18n/zinnia
 	)"
 DEPEND="${RDEPEND}

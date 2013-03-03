@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/leechcraft-sb2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-sb2/ChangeLog,v 1.5 2013/02/16 21:31:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-sb2/ChangeLog,v 1.6 2013/03/02 23:04:02 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  leechcraft-sb2-0.5.90.ebuild, leechcraft-sb2-9999.ebuild:
+  Move Qt dependencies to the new category
 
   16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> leechcraft-sb2-0.5.90.ebuild:
   Stable for x86, wrt bug #457824

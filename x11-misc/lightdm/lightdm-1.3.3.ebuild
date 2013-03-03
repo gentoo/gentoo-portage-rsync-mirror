@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.3.3.ebuild,v 1.1 2012/09/11 20:30:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.3.3.ebuild,v 1.2 2013/03/02 23:49:52 hwoarang Exp $
 
 EAPI=4
 inherit autotools eutils pam
@@ -24,9 +24,9 @@ COMMON_DEPEND=">=dev-libs/glib-2.32.3:2
 	>=x11-libs/libxklavier-5
 	introspection? ( >=dev-libs/gobject-introspection-1 )
 	qt4? (
-		x11-libs/qt-core:4
-		x11-libs/qt-dbus:4
-		x11-libs/qt-gui:4
+		dev-qt/qtcore:4
+		dev-qt/qtdbus:4
+		dev-qt/qtgui:4
 		)"
 RDEPEND="${COMMON_DEPEND}
 	>=sys-auth/pambase-20101024-r2"

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/skype-call-recorder/skype-call-recorder-0.8.ebuild,v 1.2 2012/12/04 22:06:32 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/skype-call-recorder/skype-call-recorder-0.8.ebuild,v 1.3 2013/03/02 22:03:33 hwoarang Exp $
 
 EAPI="4"
 
@@ -20,9 +20,9 @@ DEPEND="
 	>=media-libs/libogg-1.2.0
 	>=media-libs/libvorbis-1.2.0
 	media-sound/lame
-	>=x11-libs/qt-core-4.4:4
-	>=x11-libs/qt-dbus-4.4:4
-	>=x11-libs/qt-gui-4.4:4[dbus]
+	>=dev-qt/qtcore-4.4:4
+	>=dev-qt/qtdbus-4.4:4
+	>=dev-qt/qtgui-4.4:4[dbus]
 "
 RDEPEND="${DEPEND}
 	net-im/skype[-qt-static(-)]

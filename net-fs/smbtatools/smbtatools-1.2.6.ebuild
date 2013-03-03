@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/smbtatools/smbtatools-1.2.6.ebuild,v 1.1 2012/09/13 18:55:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/smbtatools/smbtatools-1.2.6.ebuild,v 1.2 2013/03/02 22:50:44 hwoarang Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ DEPEND="
 	sys-libs/talloc
 	x11-libs/cairo
 	x11-libs/pango
-	x11-libs/qt-gui:4
+	dev-qt/qtgui:4
 
 "
 RDEPEND="${DEPEND}

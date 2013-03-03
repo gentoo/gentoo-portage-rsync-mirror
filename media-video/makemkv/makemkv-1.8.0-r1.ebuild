@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.8.0-r1.ebuild,v 1.1 2013/02/22 12:56:13 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.8.0-r1.ebuild,v 1.2 2013/03/02 22:31:29 hwoarang Exp $
 
 EAPI=4
 inherit eutils gnome2-utils multilib flag-o-matic
@@ -25,9 +25,9 @@ RDEPEND="dev-libs/expat
 	dev-libs/openssl:0
 	sys-libs/zlib
 	virtual/opengl
-	x11-libs/qt-core:4
-	x11-libs/qt-dbus:4
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4
+	dev-qt/qtdbus:4
+	dev-qt/qtgui:4
 	amd64? ( multilib? ( app-emulation/emul-linux-x86-baselibs ) )"
 DEPEND="${RDEPEND}"
 

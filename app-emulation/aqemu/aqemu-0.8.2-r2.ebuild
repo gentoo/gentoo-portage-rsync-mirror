@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/aqemu-0.8.2-r2.ebuild,v 1.4 2012/10/09 21:14:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/aqemu-0.8.2-r2.ebuild,v 1.5 2013/03/02 19:24:21 hwoarang Exp $
 
 EAPI=4
 
@@ -18,9 +18,9 @@ IUSE="vnc"
 DEPEND="${RDEPEND}"
 RDEPEND="app-emulation/qemu
 	vnc? ( net-libs/libvncserver )
-	x11-libs/qt-gui:4
-	x11-libs/qt-test:4
-	x11-libs/qt-xmlpatterns:4"
+	dev-qt/qtgui:4
+	dev-qt/qttest:4
+	dev-qt/qtxmlpatterns:4"
 
 DOCS="AUTHORS CHANGELOG README TODO"
 PATCHES=(

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/fotowall-0.9-r1.ebuild,v 1.5 2010/06/15 09:36:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/fotowall-0.9-r1.ebuild,v 1.6 2013/03/02 21:35:24 hwoarang Exp $
 
 EAPI="2"
 
@@ -17,9 +17,9 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="debug opengl webcam"
 
-DEPEND="x11-libs/qt-gui:4
-	x11-libs/qt-svg:4
-	opengl? ( x11-libs/qt-opengl:4 )"
+DEPEND="dev-qt/qtgui:4
+	dev-qt/qtsvg:4
+	opengl? ( dev-qt/qtopengl:4 )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"

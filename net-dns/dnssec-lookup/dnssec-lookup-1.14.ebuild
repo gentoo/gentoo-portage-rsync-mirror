@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-lookup/dnssec-lookup-1.14.ebuild,v 1.1 2012/10/15 06:15:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-lookup/dnssec-lookup-1.14.ebuild,v 1.2 2013/03/02 22:49:09 hwoarang Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="net-dns/dnssec-validator[threads]
-	x11-libs/qt-gui:4"
+	dev-qt/qtgui:4"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}

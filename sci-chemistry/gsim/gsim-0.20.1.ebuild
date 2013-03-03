@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gsim/gsim-0.20.1.ebuild,v 1.4 2013/02/27 14:19:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gsim/gsim-0.20.1.ebuild,v 1.5 2013/03/02 23:17:52 hwoarang Exp $
 
 EAPI=4
 
@@ -21,9 +21,9 @@ RDEPEND="
 	sci-libs/libcmatrix
 	sci-libs/minuit
 	virtual/blas
-	x11-libs/qt-svg:4
+	dev-qt/qtsvg:4
 	emf? ( media-libs/libemf )
-	opengl? ( x11-libs/qt-opengl:4 )"
+	opengl? ( dev-qt/qtopengl:4 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.119 2013/01/31 05:57:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.120 2013/03/02 20:45:51 pesa Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Jan 2013)
 # remove mask when net-libs/libqmi is keyworded here
@@ -51,10 +51,10 @@ dev-util/devhelp gedit
 >=dev-db/mariadb-5.5 tcmalloc jemalloc
 
 # Raúl Porcel <armin76@gentoo.org> (25 Jun 2012)
-# x11-libs/qt-webkit doesn't seem to work
+# dev-qt/qtwebkit doesn't seem to work
 dev-python/PyQt4 webkit
-x11-libs/qt-assistant webkit
-x11-libs/qt-declarative webkit
+dev-qt/qtdeclarative webkit
+dev-qt/qthelp webkit
 net-irc/kvirc webkit
 x11-misc/google-gadgets qt4
 
@@ -159,7 +159,7 @@ x11-misc/rss-glx quesoglc
 games-strategy/freeciv ggz
 
 # Ben de Groot <yngwin@gentoo.org> (16 Jan 2010)
-# qt-multimedia is not keyworded, bug 293671
+# qtmultimedia is not keyworded, bug 293671
 dev-python/PyQt4 multimedia
 
 # Raúl Porcel <armin76@gentoo.org> (07 Jul 2008)

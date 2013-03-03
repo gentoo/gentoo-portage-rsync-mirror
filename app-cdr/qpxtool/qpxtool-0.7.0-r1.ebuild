@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.7.0-r1.ebuild,v 1.2 2011/08/07 15:54:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.7.0-r1.ebuild,v 1.3 2013/03/02 19:13:36 hwoarang Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs qt4-r2
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/qt-gui:4
+DEPEND="dev-qt/qtgui:4
 	media-libs/libpng"
 
 DOCS="AUTHORS ChangeLog README ReleaseNotes TODO"

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/kphotoalbum
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.57 2013/03/01 21:11:41 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.58 2013/03/02 21:37:07 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> kphotoalbum-4.2.ebuild,
+  kphotoalbum-4.4.ebuild:
+  Move Qt dependencies to the new category
 
 *kphotoalbum-4.4 (01 Mar 2013)
 

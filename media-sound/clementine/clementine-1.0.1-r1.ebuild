@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.0.1-r1.ebuild,v 1.8 2012/07/06 03:29:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.0.1-r1.ebuild,v 1.9 2013/03/02 21:54:11 hwoarang Exp $
 
 EAPI=4
 
@@ -25,9 +25,9 @@ REQUIRED_USE="
 "
 
 COMMON_DEPEND="
-	>=x11-libs/qt-gui-4.5:4[dbus?]
-	>=x11-libs/qt-opengl-4.5:4
-	>=x11-libs/qt-sql-4.5:4[sqlite]
+	>=dev-qt/qtgui-4.5:4[dbus?]
+	>=dev-qt/qtopengl-4.5:4
+	>=dev-qt/qtsql-4.5:4[sqlite]
 	dev-db/sqlite[fts3]
 	>=media-libs/taglib-1.7[mp4]
 	>=dev-libs/glib-2.24.1-r1
@@ -69,7 +69,7 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.39
 	virtual/pkgconfig
 	sys-devel/gettext
-	x11-libs/qt-test:4
+	dev-qt/qttest:4
 	kde? ( dev-util/automoc )
 	dev-cpp/gmock
 	test? ( gnome-base/gsettings-desktop-schemas )

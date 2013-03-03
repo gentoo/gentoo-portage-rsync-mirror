@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.4.4.ebuild,v 1.1 2013/02/04 09:12:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.4.4.ebuild,v 1.2 2013/03/02 23:20:56 hwoarang Exp $
 
 EAPI=4
 
@@ -21,8 +21,8 @@ RDEPEND="
 	sci-libs/shapelib
 	virtual/libusb:0
 	qt4? (
-		x11-libs/qt-gui:4
-		x11-libs/qt-webkit:4
+		dev-qt/qtgui:4
+		dev-qt/qtwebkit:4
 	)
 "
 DEPEND="${RDEPEND}

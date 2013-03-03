@@ -1,6 +1,10 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.83 2013/02/15 21:55:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.84 2013/03/02 22:41:33 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> minitube-1.9.ebuild,
+  minitube-2.0.ebuild:
+  Move Qt dependencies to the new category
 
   15 Feb 2013; Markos Chandras <hwoarang@gentoo.org> minitube-2.0.ebuild:
   Drop unused LINGUAS. Bug #457550

@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/festival-it
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-it/ChangeLog,v 1.3 2009/05/08 21:32:51 neurogeek Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-it/ChangeLog,v 1.4 2013/03/03 01:27:25 neurogeek Exp $
+
+*festival-it-1.0-r2 (03 Mar 2013)
+
+  03 Mar 2013; <neurogeek@gentoo.org> -festival-it-1.0-r1.ebuild,
+  +festival-it-1.0-r2.ebuild:
+  Fixed homepage, deps and EAPI. Closes #446750 and #458646
 
   08 May 2009; Jesus Rivero <neurogeek@gentoo.org>
   festival-it-1.0-r1.ebuild:

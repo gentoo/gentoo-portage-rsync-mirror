@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-2.0.0.ebuild,v 1.5 2012/08/22 22:52:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-2.0.0.ebuild,v 1.6 2013/03/02 23:01:05 hwoarang Exp $
 
 EAPI=4
 
@@ -21,8 +21,8 @@ RDEPEND="
 	sys-apps/tcp-wrappers
 	sys-libs/zlib
 	virtual/jpeg
-	x11-libs/qt-core:4
-	x11-libs/qt-xmlpatterns:4
+	dev-qt/qtcore:4
+	dev-qt/qtxmlpatterns:4
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
@@ -32,7 +32,7 @@ RDEPEND="
 	x11-libs/libXrandr
 	x11-libs/libXtst
 	x11-apps/xinput
-	x11-libs/qt-gui:4"
+	dev-qt/qtgui:4"
 DEPEND="${RDEPEND}
 	x11-proto/inputproto"
 

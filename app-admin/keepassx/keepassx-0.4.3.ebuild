@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.4.3.ebuild,v 1.7 2012/07/25 05:36:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.4.3.ebuild,v 1.8 2013/03/02 19:06:31 hwoarang Exp $
 
 EAPI=4
 inherit qt4-r2
@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="debug pch"
 
-DEPEND="x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-xmlpatterns:4
+DEPEND="dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtxmlpatterns:4
 	|| ( >=x11-libs/libXtst-1.1.0 <x11-proto/xextproto-7.1.0 )"
 RDEPEND="${DEPEND}"
 

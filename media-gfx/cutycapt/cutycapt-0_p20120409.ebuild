@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cutycapt/cutycapt-0_p20120409.ebuild,v 1.2 2012/07/31 08:31:57 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cutycapt/cutycapt-0_p20120409.ebuild,v 1.3 2013/03/02 21:34:27 hwoarang Exp $
 
 EAPI=4
 inherit qt4-r2
@@ -13,7 +13,7 @@ SLOT="0"
 
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-DEPEND="x11-libs/qt-gui:4 x11-libs/qt-webkit:4 x11-libs/qt-core:4 x11-libs/qt-svg:4"
+DEPEND="dev-qt/qtgui:4 dev-qt/qtwebkit:4 dev-qt/qtcore:4 dev-qt/qtsvg:4"
 RDEPEND="${DEPEND}"
 
 src_configure() {

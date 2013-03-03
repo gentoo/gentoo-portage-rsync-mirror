@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/unixcw-2.3-r6.ebuild,v 1.5 2012/05/03 03:48:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/unixcw-2.3-r6.ebuild,v 1.6 2013/03/02 21:52:16 hwoarang Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="ncurses suid qt4"
 
 RDEPEND="ncurses? ( sys-libs/ncurses )
-	qt4? ( x11-libs/qt-gui:4[qt3support] )"
+	qt4? ( dev-qt/qtgui:4[qt3support] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	!<=app-misc/cw-1.0.16-r1"

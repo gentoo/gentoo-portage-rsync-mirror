@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.237 2013/02/16 22:40:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.238 2013/03/02 19:19:54 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> doxygen-1.5.8-r1.ebuild,
+  doxygen-1.7.6.1.ebuild, doxygen-1.8.3.1.ebuild:
+  Move Qt dependencies to the new category
 
   16 Feb 2013; Michał Górny <mgorny@gentoo.org> doxygen-1.8.3.1.ebuild:
   Migrate to python-any-r1, bug #457870.

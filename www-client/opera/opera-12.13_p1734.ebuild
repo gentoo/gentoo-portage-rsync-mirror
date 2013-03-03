@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.13_p1734.ebuild,v 1.5 2013/02/06 18:37:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-12.13_p1734.ebuild,v 1.6 2013/03/02 23:40:29 hwoarang Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils multilib pax-utils versionator
@@ -70,8 +70,8 @@ GTKRDEPEND="
 "
 KDERDEPEND="
 	kde-base/kdelibs
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 "
 GSTRDEPEND="
 	dev-libs/glib:2

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/okindd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/okindd/ChangeLog,v 1.8 2012/06/21 09:51:23 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/okindd/ChangeLog,v 1.9 2013/03/02 23:50:34 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> okindd-0.6.0.ebuild,
+  okindd-0.6.1.ebuild:
+  Move Qt dependencies to the new category
 
   21 Jun 2012; Michael Palimaka <kensington@gentoo.org>
   +files/okindd-0.6.1-gcc-4.7.patch, okindd-0.6.1.ebuild:
@@ -39,4 +43,3 @@
   17 Jul 2009; Alex Alexander <wired@gentoo.org>
   +okindd-0.5.8.ebuild, +files/okindd_home_and_naming.patch, +metadata.xml:
   New ebuild for okindd
-

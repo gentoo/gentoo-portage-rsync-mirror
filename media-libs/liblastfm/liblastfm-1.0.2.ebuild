@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-1.0.2.ebuild,v 1.1 2012/09/01 17:47:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-1.0.2.ebuild,v 1.2 2013/03/02 21:44:51 hwoarang Exp $
 
 EAPI=4
 
@@ -17,16 +17,16 @@ SLOT="0"
 IUSE="fingerprint test"
 
 COMMON_DEPEND="
-	>=x11-libs/qt-core-${QT_MINIMAL}:4
-	>=x11-libs/qt-dbus-${QT_MINIMAL}:4
+	>=dev-qt/qtcore-${QT_MINIMAL}:4
+	>=dev-qt/qtdbus-${QT_MINIMAL}:4
 	fingerprint? (
 		media-libs/libsamplerate
 		sci-libs/fftw:3.0
-		>=x11-libs/qt-sql-${QT_MINIMAL}:4
+		>=dev-qt/qtsql-${QT_MINIMAL}:4
 	)
 "
 DEPEND="${COMMON_DEPEND}
-	test? ( >=x11-libs/qt-test-${QT_MINIMAL}:4 )
+	test? ( >=dev-qt/qttest-${QT_MINIMAL}:4 )
 "
 RDEPEND="${COMMON_DEPEND}
 	!<media-libs/lastfmlib-0.4.0

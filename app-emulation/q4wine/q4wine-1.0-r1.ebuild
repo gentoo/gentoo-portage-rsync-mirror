@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/q4wine-1.0-r1.ebuild,v 1.1 2013/01/26 20:19:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/q4wine-1.0-r1.ebuild,v 1.2 2013/03/02 19:25:09 hwoarang Exp $
 
 EAPI="4"
 LANGS="cs de en es he it ru uk pl pt"
@@ -20,12 +20,12 @@ for x in ${LANGS}; do
 	IUSE+=" linguas_${x}"
 done
 
-DEPEND="x11-libs/qt-gui:4
-	x11-libs/qt-sql:4[sqlite]
+DEPEND="dev-qt/qtgui:4
+	dev-qt/qtsql:4[sqlite]
 	dev-util/cmake"
 
-RDEPEND="x11-libs/qt-gui:4
-	x11-libs/qt-sql:4[sqlite]
+RDEPEND="dev-qt/qtgui:4
+	dev-qt/qtsql:4[sqlite]
 	app-admin/sudo
 	app-emulation/wine
 	>=sys-apps/which-2.19
@@ -33,7 +33,7 @@ RDEPEND="x11-libs/qt-gui:4
 	sys-fs/fuseiso
 	kde? ( kde-base/kdesu )
 	gnome? ( x11-libs/gksu )
-	dbus? ( x11-libs/qt-dbus:4 )"
+	dbus? ( dev-qt/qtdbus:4 )"
 
 DOCS="README AUTHORS ChangeLog"
 

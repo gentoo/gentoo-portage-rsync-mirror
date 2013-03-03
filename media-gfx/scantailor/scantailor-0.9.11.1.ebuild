@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scantailor/scantailor-0.9.11.1.ebuild,v 1.1 2012/03/26 03:09:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scantailor/scantailor-0.9.11.1.ebuild,v 1.2 2013/03/02 21:40:28 hwoarang Exp $
 
 EAPI=4
 inherit cmake-utils eutils virtualx
@@ -19,8 +19,8 @@ RDEPEND=">=media-libs/libpng-1.2.43
 	sys-libs/zlib
 	virtual/jpeg
 	x11-libs/libXrender
-	x11-libs/qt-gui:4
-	opengl? ( x11-libs/qt-opengl:4 )"
+	dev-qt/qtgui:4
+	opengl? ( dev-qt/qtopengl:4 )"
 DEPEND="${RDEPEND}
 	dev-libs/boost"
 

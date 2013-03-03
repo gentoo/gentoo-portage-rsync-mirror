@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/qutecom-2.2_p20110210.ebuild,v 1.12 2013/01/18 16:17:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutecom/qutecom-2.2_p20110210.ebuild,v 1.13 2013/03/02 22:53:48 hwoarang Exp $
 
 EAPI="3"
 
@@ -30,9 +30,9 @@ RDEPEND="dev-libs/boost
 	net-misc/curl
 	virtual/ffmpeg
 	x11-libs/libX11
-	x11-libs/qt-gui:4
-	x11-libs/qt-svg:4
-	x11-libs/qt-webkit:4
+	dev-qt/qtgui:4
+	dev-qt/qtsvg:4
+	dev-qt/qtwebkit:4
 	xv? ( x11-libs/libXv )"
 DEPEND="${RDEPEND}
 	media-libs/libv4l"

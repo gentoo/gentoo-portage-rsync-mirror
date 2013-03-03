@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/clustalx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.27 2012/10/24 19:29:39 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.28 2013/03/02 23:15:41 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> clustalx-2.1.ebuild:
+  Move Qt dependencies to the new category
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> clustalx-1.83-r2.ebuild:
   Update dependency after package move from x11-libs/openmotif to
@@ -125,4 +128,3 @@
   06 Oct 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
   +clustalx-1.83.ebuild:
   Initial import.
-

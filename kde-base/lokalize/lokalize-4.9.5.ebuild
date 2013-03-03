@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/lokalize-4.9.5.ebuild,v 1.5 2013/02/23 17:12:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/lokalize-4.9.5.ebuild,v 1.6 2013/03/02 21:27:35 hwoarang Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE="debug semantic-desktop"
 
 DEPEND="
 	>=app-text/hunspell-1.2.8
-	>=x11-libs/qt-sql-4.5.0:4[sqlite]
+	>=dev-qt/qtsql-4.5.0:4[sqlite]
 	semantic-desktop? ( >=dev-libs/soprano-2.8.0 )
 "
 RDEPEND="${DEPEND}

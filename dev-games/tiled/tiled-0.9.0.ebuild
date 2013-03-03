@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/tiled/tiled-0.9.0.ebuild,v 1.1 2013/01/28 10:42:53 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/tiled/tiled-0.9.0.ebuild,v 1.2 2013/03/02 19:52:38 hwoarang Exp $
 
 EAPI=5
 
@@ -19,9 +19,9 @@ KEYWORDS="~amd64"
 IUSE="examples"
 
 DEPEND="sys-libs/zlib
-	>=x11-libs/qt-core-4.6:4
-	>=x11-libs/qt-gui-4.6:4
-	>=x11-libs/qt-opengl-4.6:4"
+	>=dev-qt/qtcore-4.6:4
+	>=dev-qt/qtgui-4.6:4
+	>=dev-qt/qtopengl-4.6:4"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}

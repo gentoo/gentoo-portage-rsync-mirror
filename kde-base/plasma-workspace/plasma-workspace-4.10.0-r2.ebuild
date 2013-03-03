@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.10.0-r2.ebuild,v 1.2 2013/02/23 17:18:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.10.0-r2.ebuild,v 1.3 2013/03/02 21:28:32 hwoarang Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ COMMONDEPEND="
 	$(add_kdebase_dep libplasmagenericshell)
 	$(add_kdebase_dep libtaskmanager)
 	$(add_kdebase_dep solid)
-	>=x11-libs/qt-core-4.8.4-r3
+	>=dev-qt/qtcore-4.8.4-r3
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
 	x11-libs/libXfixes

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/grantlee-0.1.9.ebuild,v 1.6 2012/08/19 07:58:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/grantlee-0.1.9.ebuild,v 1.7 2013/03/02 19:59:53 hwoarang Exp $
 
 EAPI=4
 
@@ -16,13 +16,13 @@ SLOT="0"
 IUSE="debug doc test"
 
 COMMON_DEPEND="
-	>=x11-libs/qt-core-4.5.0:4
-	>=x11-libs/qt-gui-4.5.0:4
-	>=x11-libs/qt-script-4.5.0:4
+	>=dev-qt/qtcore-4.5.0:4
+	>=dev-qt/qtgui-4.5.0:4
+	>=dev-qt/qtscript-4.5.0:4
 "
 DEPEND="${COMMON_DEPEND}
 	doc? ( || ( <app-doc/doxygen-1.7.6.1[-nodot] >=app-doc/doxygen-1.7.6.1[dot] ) )
-	test? ( >=x11-libs/qt-test-4.5.0:4 )
+	test? ( >=dev-qt/qttest-4.5.0:4 )
 "
 RDEPEND="${COMMON_DEPEND}"
 

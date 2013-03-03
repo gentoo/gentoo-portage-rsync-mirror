@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qgit/qgit-2.5.ebuild,v 1.4 2012/11/21 10:58:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qgit/qgit-2.5.ebuild,v 1.5 2013/03/02 21:08:50 hwoarang Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="2"
 KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
-DEPEND="x11-libs/qt-gui:4"
+DEPEND="dev-qt/qtgui:4"
 RDEPEND="${DEPEND}
 	>=dev-vcs/git-1.6
 "

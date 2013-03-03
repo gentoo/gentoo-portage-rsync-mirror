@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/kimera
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/ChangeLog,v 1.21 2012/06/01 00:18:51 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/ChangeLog,v 1.22 2013/03/02 19:27:40 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> kimera-2.11-r1.ebuild,
+  kimera-2.11.ebuild:
+  Move Qt dependencies to the new category
 
   01 Jun 2012; Zac Medico <zmedico@gentoo.org> kimera-2.11-r1.ebuild,
   kimera-2.11.ebuild:
@@ -92,4 +96,3 @@
 
   30 Oct 2005; Mamoru KOMACHI <usata@gentoo.org> +kimera-1.0.ebuild:
   Initial import.
-

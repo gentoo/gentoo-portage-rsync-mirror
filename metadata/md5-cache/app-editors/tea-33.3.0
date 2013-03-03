@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=sys-libs/zlib x11-libs/qt-core:4 x11-libs/qt-gui:4 aspell? ( app-text/aspell ) hunspell? ( app-text/hunspell ) hunspell? ( virtual/pkgconfig )
+DEPEND=sys-libs/zlib dev-qt/qtcore:4 dev-qt/qtgui:4 aspell? ( app-text/aspell ) hunspell? ( app-text/hunspell ) hunspell? ( virtual/pkgconfig )
 DESCRIPTION=Small, lightweight Qt text editor
 EAPI=5
 HOMEPAGE=http://tea-editor.sourceforge.net/
 IUSE=aspell hunspell linguas_de linguas_fr linguas_ru
 KEYWORDS=~amd64 ~ia64 ~x86 ~x86-fbsd
 LICENSE=GPL-3
-RDEPEND=sys-libs/zlib x11-libs/qt-core:4 x11-libs/qt-gui:4 aspell? ( app-text/aspell ) hunspell? ( app-text/hunspell )
+RDEPEND=sys-libs/zlib dev-qt/qtcore:4 dev-qt/qtgui:4 aspell? ( app-text/aspell ) hunspell? ( app-text/hunspell )
 SLOT=0
 SRC_URI=mirror://sourceforge/tea-editor/tea-33.3.0.tar.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	2824df7f5dc9f47aee293af8a6b517ed	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	ded93e450747134a079e647d888aa80b	qt4-r2	19af9102ca9b827213997cc636e7e33c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=a63758efbe9515312dd29da21786243b
+_md5_=4fc537c6282cf1250045e2677362a360

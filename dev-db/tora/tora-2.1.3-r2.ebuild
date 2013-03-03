@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.3-r2.ebuild,v 1.1 2012/09/26 06:50:53 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.3-r2.ebuild,v 1.2 2013/03/02 19:51:01 hwoarang Exp $
 
 EAPI=2
 
@@ -18,9 +18,9 @@ KEYWORDS="~amd64 ~ppc ~x86"
 DEPEND="
 	dev-libs/ferrisloki
 	x11-libs/qscintilla
-	x11-libs/qt-gui:4
-	x11-libs/qt-sql:4[mysql?,postgres?]
-	x11-libs/qt-xmlpatterns:4
+	dev-qt/qtgui:4
+	dev-qt/qtsql:4[mysql?,postgres?]
+	dev-qt/qtxmlpatterns:4
 	oci8-instant-client? (
 		dev-db/oracle-instantclient-basic
 		dev-db/oracle-instantclient-sqlplus

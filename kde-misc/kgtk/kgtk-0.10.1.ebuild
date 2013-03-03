@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.1.ebuild,v 1.9 2011/04/29 14:04:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.1.ebuild,v 1.10 2013/03/02 21:30:12 hwoarang Exp $
 
 EAPI=4
 KDE_LINGUAS="cs de en_GB es fr pt_BR ru zh_CN"
@@ -18,7 +18,7 @@ IUSE="debug"
 
 DEPEND="
 	x11-libs/gtk+:2
-	x11-libs/qt-gui:4
+	dev-qt/qtgui:4
 	$(add_kdebase_dep kdebase-startkde)
 "
 RDEPEND="${DEPEND}"

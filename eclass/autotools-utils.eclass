@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.62 2013/02/11 09:46:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.63 2013/03/03 00:22:56 pesa Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -37,8 +37,8 @@
 # CDEPEND="
 # 	media-libs/libpng:0
 # 	qt4? (
-# 		x11-libs/qt-core:4
-# 		x11-libs/qt-gui:4
+# 		dev-qt/qtcore:4
+# 		dev-qt/qtgui:4
 # 	)
 # 	tiff? ( media-libs/tiff:0 )
 # "

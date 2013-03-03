@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/cutemaze
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cutemaze/ChangeLog,v 1.3 2012/03/28 18:15:51 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cutemaze/ChangeLog,v 1.4 2013/03/02 21:18:46 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> cutemaze-1.1.0.ebuild:
+  Move Qt dependencies to the new category
 
   28 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> cutemaze-1.1.0.ebuild:
   Use qt4-r2 eclass with patch from Michael (kensington) (bug #410029)
@@ -14,4 +17,3 @@
   04 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
   +cutemaze-1.1.0.ebuild:
   Initial commit.
-

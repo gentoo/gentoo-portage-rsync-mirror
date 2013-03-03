@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/engauge
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/ChangeLog,v 1.13 2013/01/20 16:55:30 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/ChangeLog,v 1.14 2013/03/02 21:35:06 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> engauge-5.1.ebuild:
+  Move Qt dependencies to the new category
 
   20 Jan 2013; Denis Dupeyron <calchan@gentoo.org> -engauge-4.1-r1.ebuild,
   -files/engauge-5.1-gcc47.patch, -files/engauge-5.1-qreal-double.patch:

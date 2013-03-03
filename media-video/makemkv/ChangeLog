@@ -1,6 +1,9 @@
 # ChangeLog for media-video/makemkv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.18 2013/02/22 12:56:13 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.19 2013/03/02 22:31:29 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> makemkv-1.8.0-r1.ebuild:
+  Move Qt dependencies to the new category
 
 *makemkv-1.8.0-r1 (22 Feb 2013)
 

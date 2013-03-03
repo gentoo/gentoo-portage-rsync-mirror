@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netfleet/netfleet-0.2.1.ebuild,v 1.3 2010/06/29 08:51:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netfleet/netfleet-0.2.1.ebuild,v 1.4 2013/03/02 23:05:05 hwoarang Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="debug"
 
-DEPEND=">=x11-libs/qt-gui-4.5.0:4"
+DEPEND=">=dev-qt/qtgui-4.5.0:4"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"

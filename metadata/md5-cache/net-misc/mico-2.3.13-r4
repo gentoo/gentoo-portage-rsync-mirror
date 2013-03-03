@@ -1,14 +1,14 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=gtk? ( x11-libs/gtk+:2 ) postgres? ( dev-db/postgresql-base ) qt4? ( x11-libs/qt-gui:4[qt3support] ) ssl? ( dev-libs/openssl ) tcl? ( dev-lang/tcl ) X? ( x11-libs/libXt ) >=sys-devel/flex-2.5.2 >=sys-devel/bison-1.22
+DEPEND=gtk? ( x11-libs/gtk+:2 ) postgres? ( dev-db/postgresql-base ) qt4? ( dev-qt/qtgui:4[qt3support] ) ssl? ( dev-libs/openssl ) tcl? ( dev-lang/tcl ) X? ( x11-libs/libXt ) >=sys-devel/flex-2.5.2 >=sys-devel/bison-1.22
 DESCRIPTION=A freely available and fully compliant implementation of the CORBA standard
 EAPI=3
 HOMEPAGE=http://www.mico.org/
 IUSE=gtk postgres qt4 ssl tcl threads X
 KEYWORDS=~alpha ~amd64 ~ppc ~sparc ~x86 ~ppc-aix ~ia64-hpux ~amd64-linux ~x86-linux ~sparc-solaris ~x86-winnt
 LICENSE=GPL-2 LGPL-2
-RDEPEND=gtk? ( x11-libs/gtk+:2 ) postgres? ( dev-db/postgresql-base ) qt4? ( x11-libs/qt-gui:4[qt3support] ) ssl? ( dev-libs/openssl ) tcl? ( dev-lang/tcl ) X? ( x11-libs/libXt )
+RDEPEND=gtk? ( x11-libs/gtk+:2 ) postgres? ( dev-db/postgresql-base ) qt4? ( dev-qt/qtgui:4[qt3support] ) ssl? ( dev-libs/openssl ) tcl? ( dev-lang/tcl ) X? ( x11-libs/libXt )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.mico.org/mico-2.3.13.tar.gz mirror://gentoo/mico-2.3.13-gentoo-patches-0.1.tar.bz2
 _eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=622f93b6d32c1ba0c2984568bc8ede7e
+_md5_=bb039ed3904ebbabf6bd401dff6e7c0b

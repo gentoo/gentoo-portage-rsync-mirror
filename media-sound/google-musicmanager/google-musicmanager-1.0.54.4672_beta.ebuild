@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.54.4672_beta.ebuild,v 1.2 2013/02/02 00:29:51 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.54.4672_beta.ebuild,v 1.3 2013/03/02 21:55:09 hwoarang Exp $
 
 EAPI=4
 
@@ -36,9 +36,9 @@ RDEPEND="
 	x11-libs/libXi
 	x11-libs/libXrandr
 	x11-libs/libXrender
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-webkit:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtwebkit:4
 	log? ( dev-libs/log4cxx )
 	"
 

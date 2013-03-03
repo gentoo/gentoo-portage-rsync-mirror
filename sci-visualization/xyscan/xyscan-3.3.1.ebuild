@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/xyscan-3.3.1.ebuild,v 1.4 2012/08/07 04:52:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/xyscan-3.3.1.ebuild,v 1.5 2013/03/02 23:29:10 hwoarang Exp $
 
 EAPI=4
 LANGS="fr"
@@ -18,8 +18,8 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-DEPEND="x11-libs/qt-core:4
-	x11-libs/qt-gui:4"
+DEPEND="dev-qt/qtcore:4
+	dev-qt/qtgui:4"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"

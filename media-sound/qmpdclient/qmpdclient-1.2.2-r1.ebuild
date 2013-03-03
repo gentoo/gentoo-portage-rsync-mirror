@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.2.2-r1.ebuild,v 1.4 2012/07/10 17:53:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.2.2-r1.ebuild,v 1.5 2013/03/02 22:00:55 hwoarang Exp $
 
 EAPI=4
 inherit fdo-mime cmake-utils
@@ -15,9 +15,9 @@ KEYWORDS=""
 KEYWORDS="amd64 ppc x86"
 IUSE="debug"
 
-DEPEND="x11-libs/qt-gui:4[dbus]
-	x11-libs/qt-webkit:4
-	x11-libs/qt-xmlpatterns:4"
+DEPEND="dev-qt/qtgui:4[dbus]
+	dev-qt/qtwebkit:4
+	dev-qt/qtxmlpatterns:4"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}

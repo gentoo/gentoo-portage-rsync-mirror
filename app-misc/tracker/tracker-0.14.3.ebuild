@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.3.ebuild,v 1.3 2012/12/15 19:01:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.14.3.ebuild,v 1.4 2013/03/02 19:33:02 hwoarang Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -100,7 +100,7 @@ RDEPEND="
 	xml? ( >=dev-libs/libxml2-2.6 )
 	xmp? ( >=media-libs/exempi-2.1 )"
 #	strigi? ( >=app-misc/strigi-0.7 )
-#	mp3? ( qt4? (  >=x11-libs/qt-gui-4.7.1:4 ) )
+#	mp3? ( qt4? (  >=dev-qt/qtgui-4.7.1:4 ) )
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17

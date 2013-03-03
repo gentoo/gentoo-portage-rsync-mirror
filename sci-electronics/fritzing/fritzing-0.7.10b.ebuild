@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/fritzing-0.7.10b.ebuild,v 1.2 2013/02/07 22:40:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/fritzing-0.7.10b.ebuild,v 1.3 2013/03/02 23:19:03 hwoarang Exp $
 
 EAPI=4
 
@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-svg:4
-	x11-libs/qt-sql:4[sqlite]
+RDEPEND="dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtsvg:4
+	dev-qt/qtsql:4[sqlite]
 	dev-libs/quazip"
 DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.40"

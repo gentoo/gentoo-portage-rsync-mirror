@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qjackctl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.76 2012/11/24 15:18:07 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.77 2013/03/02 21:59:54 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qjackctl-0.3.8.ebuild,
+  qjackctl-0.3.9.ebuild:
+  Move Qt dependencies to the new category
 
   24 Nov 2012; Alexis Ballier <aballier@gentoo.org> qjackctl-0.3.9.ebuild,
   +files/qjackctl-0.3.9-gcc47.patch:
@@ -317,4 +321,3 @@
   Initial revision, ~x86 masked.
   
   Submitted by: Kasper Souren <Kasper.Souren@ircam.fr>
-

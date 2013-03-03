@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/bestcrypt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.74 2012/12/22 23:42:52 alonbl Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.75 2013/03/02 21:49:24 alonbl Exp $
+
+  02 Mar 2013; Alon Bar-Lev <alonbl@gentoo.org> bestcrypt-1.7.0.ebuild:
+  Remove stable keywords as truecrypt never been maintained properly upstream,
+  tend to break and hard to maintain, people may still use it but without us
+  making the effort of stabilization.
 
   22 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> bestcrypt-2.0.0.ebuild:
   Check for CONFIG_MODULES

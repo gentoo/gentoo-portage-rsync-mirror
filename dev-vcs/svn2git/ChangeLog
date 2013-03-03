@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/svn2git
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/ChangeLog,v 1.17 2012/12/03 19:20:25 sping Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/ChangeLog,v 1.18 2013/03/02 21:10:05 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  svn2git-0_pre20100303.ebuild, svn2git-0_pre20100324.ebuild,
+  svn2git-0_pre20100327.ebuild, svn2git-0_pre20101008.ebuild,
+  svn2git-0_pre20101101.ebuild, svn2git-1.0.2.1.ebuild, svn2git-1.0.3_p1.ebuild,
+  svn2git-1.0.4.ebuild, svn2git-1.0.5.ebuild, svn2git-1.0.6.ebuild,
+  svn2git-1.0.8.ebuild, svn2git-9999.ebuild:
+  Move Qt dependencies to the new category
 
 *svn2git-1.0.8 (03 Dec 2012)
 

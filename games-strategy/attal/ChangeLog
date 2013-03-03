@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/attal
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/ChangeLog,v 1.28 2011/10/05 22:11:09 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/ChangeLog,v 1.29 2013/03/02 21:21:40 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> attal-0.10.1.ebuild:
+  Move Qt dependencies to the new category
 
   05 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org> attal-0.10.1.ebuild:
   use qt4-r2.eclass

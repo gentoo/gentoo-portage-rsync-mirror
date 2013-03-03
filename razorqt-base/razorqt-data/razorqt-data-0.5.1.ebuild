@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-data/razorqt-data-0.5.1.ebuild,v 1.7 2013/02/14 13:31:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-data/razorqt-data-0.5.1.ebuild,v 1.8 2013/03/02 23:13:44 hwoarang Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -28,7 +28,7 @@ RDEPEND="!<razorqt-base/razorqt-lightdm-greeter-0.5.0
 	!x11-misc/lightdm-razorqt-greeter
 	!x11-wm/razorqt"
 DEPEND="${RDEPEND}
-	x11-libs/qt-gui:4[dbus]
+	dev-qt/qtgui:4[dbus]
 	doc? ( app-doc/doxygen )"
 
 src_configure() {

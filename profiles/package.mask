@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14517 2013/03/02 17:50:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14521 2013/03/03 02:22:36 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,29 +31,9 @@
 
 #--- END OF EXAMPLES ---
 
-# Ben de Groot <yngwin@gentoo.org> (02 Mar 2013)
-# temporary mask for move to new category
-dev-qt/qtbearer
-dev-qt/qtcore
-dev-qt/qtdbus
-dev-qt/qtdeclarative
-dev-qt/qtdemo
-dev-qt/qthelp
-dev-qt/qtgui
-dev-qt/qtmultimedia
-dev-qt/qtopengl
-dev-qt/qtopenvg
-dev-qt/qtphonon
-dev-qt/qt3support
-dev-qt/qtscript
-dev-qt/qtsql
-dev-qt/qtsvg
-dev-qt/qttest
-dev-qt/qtwebkit
-dev-qt/qtxmlpatterns
-dev-qt/qt-creator
-dev-qt/qt-meta
-dev-qt/qt-mobility
+# Davide Pesavento <pesa@gentoo.org> (02 Mar 2013)
+# Depends on blender, which is masked.
+media-gfx/yafaray
 
 # Ulrich Müller <ulm@gentoo.org> (26 Feb 2013)
 # Declared as obsolete by upstream. Use fortune.el with
@@ -128,7 +108,7 @@ games-strategy/freecraft
 
 # Davide Pesavento <pesa@gentoo.org> (17 Feb 2013)
 # Mask beta version for testing.
-=dev-util/qt-creator-2.7.0_beta*
+=dev-qt/qt-creator-2.7.0_beta*
 
 # Markos Chandras <hwoarang@gentoo.org> (17 Feb 2013)
 # Does not build with libav-0.8
@@ -473,8 +453,8 @@ dev-vcs/gitosis-gentoo
 # Diego Elio Pettenò <flameeyes@gentoo.org> (14 Nov 2012)
 # Masked for testing as too many packages fail.
 # See bug #443230 for tracking the progress
-=media-video/libav-9.1*
 =media-video/libav-9.2*
+=media-video/libav-9.3*
 ~virtual/ffmpeg-9
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (04 Nov 2012)

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r2.ebuild,v 1.2 2012/09/01 07:56:17 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.6-r2.ebuild,v 1.3 2013/03/02 22:06:56 hwoarang Exp $
 
 EAPI=4
 
@@ -36,10 +36,10 @@ RDEPEND="
 	mp3? ( media-sound/lame )
 	pulseaudio? ( media-sound/pulseaudio )
 	qt4? (
-		>=x11-libs/qt-gui-4.6:4
+		>=dev-qt/qtgui-4.6:4
 		opengl? (
 			virtual/opengl
-			>=x11-libs/qt-opengl-4.6:4
+			>=dev-qt/qtopengl-4.6:4
 		)
 	)
 	sdl? ( media-libs/libsdl )

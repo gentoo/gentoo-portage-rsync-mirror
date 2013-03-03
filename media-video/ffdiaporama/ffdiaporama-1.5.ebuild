@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ffdiaporama-1.5.ebuild,v 1.3 2012/12/26 19:16:37 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ffdiaporama-1.5.ebuild,v 1.4 2013/03/02 22:30:36 hwoarang Exp $
 
 EAPI=5
 
@@ -20,8 +20,8 @@ RDEPEND="media-gfx/exiv2
 	media-libs/qimageblitz
 	media-libs/taglib
 	virtual/ffmpeg[encode]
-	>=x11-libs/qt-core-4.8:4
-	>=x11-libs/qt-gui-4.8:4"
+	>=dev-qt/qtcore-4.8:4
+	>=dev-qt/qtgui-4.8:4"
 DEPEND="${RDEPEND}"
 
 DOCS=( authors.txt )

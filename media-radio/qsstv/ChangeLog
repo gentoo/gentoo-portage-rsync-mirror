@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/qsstv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/ChangeLog,v 1.13 2012/08/01 06:49:00 tomjbe Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/ChangeLog,v 1.14 2013/03/02 21:51:45 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qsstv-7.1.7.ebuild:
+  Move Qt dependencies to the new category
 
   01 Aug 2012; Thomas Beierlein <tomjbe@gentoo.org> qsstv-7.1.7.ebuild,
   +files/qsstv-7.1.7-gcc-47.patch:
@@ -33,4 +36,3 @@
   03 Jan 2012; Thomas Beierlein <tomjbe@gentoo.org> +qsstv-7.1.6.ebuild,
   +metadata.xml:
   Initial commit of new version working with Qt4
-

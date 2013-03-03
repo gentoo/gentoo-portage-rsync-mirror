@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3/gns3-0.7.4.ebuild,v 1.1 2011/06/13 09:23:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3/gns3-0.7.4.ebuild,v 1.2 2013/03/02 23:00:22 hwoarang Exp $
 
 EAPI="3"
 
@@ -19,8 +19,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/qt-gui:4
-	x11-libs/qt-svg:4
+DEPEND="dev-qt/qtgui:4
+	dev-qt/qtsvg:4
 	>=dev-python/PyQt4-4.6.1"
 RDEPEND="${DEPEND}
 	>=app-emulation/dynamips-0.2.8_rc2"

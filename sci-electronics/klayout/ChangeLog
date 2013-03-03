@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/klayout
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.14 2013/01/20 21:48:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.15 2013/03/02 23:19:23 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> klayout-0.20.2.ebuild,
+  klayout-0.22.4.ebuild:
+  Move Qt dependencies to the new category
 
   20 Jan 2013; Agostino Sarubbo <ago@gentoo.org> klayout-0.22.4.ebuild:
   Stable for x86, wrt bug #452716

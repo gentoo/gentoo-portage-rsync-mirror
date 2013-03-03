@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.49.2-r1.ebuild,v 1.3 2012/06/27 19:57:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.49.2-r1.ebuild,v 1.4 2013/03/02 22:04:48 hwoarang Exp $
 
 EAPI=4
 inherit cmake-utils eutils flag-o-matic gnome2-utils
@@ -21,8 +21,8 @@ RDEPEND=">=media-libs/flac-1.1.2
 	>=media-libs/libvorbis-1.1.2
 	>=media-sound/wavpack-4.40.0
 	>=sci-libs/fftw-3
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 	alsa? ( >=media-libs/alsa-lib-1.0.0 )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.100 )
 	lame? ( media-sound/lame )

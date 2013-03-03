@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gecode/gecode-3.6.0.ebuild,v 1.2 2012/09/03 13:41:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gecode/gecode-3.6.0.ebuild,v 1.3 2013/03/02 19:59:26 hwoarang Exp $
 
 EAPI="4"
 
@@ -14,8 +14,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples gist"
 
 DEPEND="gist? (
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 	media-libs/freetype
 	media-libs/libpng
 	>=dev-libs/glib-2

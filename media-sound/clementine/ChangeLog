@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/clementine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.73 2013/02/03 16:46:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.74 2013/03/02 21:54:11 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> clementine-1.0.1-r1.ebuild,
+  clementine-1.1.1.ebuild:
+  Move Qt dependencies to the new category
 
   03 Feb 2013; Samuli Suominen <ssuominen@gentoo.org>
   -clementine-1.0.1-r2.ebuild, -files/clementine-1.0.1-liblastfm-1.patch,

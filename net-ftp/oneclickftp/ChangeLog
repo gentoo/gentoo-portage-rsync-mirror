@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/oneclickftp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oneclickftp/ChangeLog,v 1.2 2010/10/29 12:15:12 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oneclickftp/ChangeLog,v 1.3 2013/03/02 22:51:01 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> oneclickftp-0.5.1.ebuild:
+  Move Qt dependencies to the new category
 
   29 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   oneclickftp-0.5.1.ebuild, +files/oneclickftp-0.5.1-qt47.patch:
@@ -11,4 +14,3 @@
   15 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
   +oneclickftp-0.5.1.ebuild:
   Initial commit.
-

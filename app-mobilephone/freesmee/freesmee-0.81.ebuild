@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/freesmee-0.81.ebuild,v 1.2 2013/01/03 09:21:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/freesmee/freesmee-0.81.ebuild,v 1.3 2013/03/02 19:33:32 hwoarang Exp $
 
 EAPI=5
 
@@ -16,9 +16,9 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 
 DEPEND="dev-util/ticpp
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-webkit:4"
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtwebkit:4"
 RDEPEND="${DEPEND}"
 
 src_install() {

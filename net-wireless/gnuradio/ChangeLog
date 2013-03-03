@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/gnuradio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.21 2013/01/10 19:32:51 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.22 2013/03/02 23:12:03 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> gnuradio-3.5.3.2.ebuild,
+  gnuradio-3.6.2-r1.ebuild, gnuradio-3.6.2.ebuild, gnuradio-3.6.3.ebuild,
+  gnuradio-9999.ebuild:
+  Move Qt dependencies to the new category
 
 *gnuradio-3.6.3 (10 Jan 2013)
 

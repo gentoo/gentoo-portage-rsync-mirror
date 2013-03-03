@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=dev-python/dbus-python x11-libs/qt-core:4[glib?] x11-libs/qt-dbus:4 farsight? ( dev-libs/dbus-glib dev-libs/libxml2 media-libs/gstreamer >=net-libs/telepathy-glib-0.15.1 net-libs/telepathy-farsight ) glib? ( dev-libs/glib:2 ) !net-libs/telepathy-qt4 dev-libs/libxslt virtual/pkgconfig test? ( x11-libs/qt-test:4 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=dev-python/dbus-python dev-qt/qtcore:4[glib?] dev-qt/qtdbus:4 farsight? ( dev-libs/dbus-glib dev-libs/libxml2 media-libs/gstreamer >=net-libs/telepathy-glib-0.15.1 net-libs/telepathy-farsight ) glib? ( dev-libs/glib:2 ) !net-libs/telepathy-qt4 dev-libs/libxslt virtual/pkgconfig test? ( dev-qt/qttest:4 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Qt4 bindings for the Telepathy D-Bus protocol
 EAPI=4
 HOMEPAGE=http://telepathy.freedesktop.org/
 IUSE=debug farsight glib test
 KEYWORDS=amd64 x86
 LICENSE=LGPL-2.1
-RDEPEND=dev-python/dbus-python x11-libs/qt-core:4[glib?] x11-libs/qt-dbus:4 farsight? ( dev-libs/dbus-glib dev-libs/libxml2 media-libs/gstreamer >=net-libs/telepathy-glib-0.15.1 net-libs/telepathy-farsight ) glib? ( dev-libs/glib:2 ) !net-libs/telepathy-qt4 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+RDEPEND=dev-python/dbus-python dev-qt/qtcore:4[glib?] dev-qt/qtdbus:4 farsight? ( dev-libs/dbus-glib dev-libs/libxml2 media-libs/gstreamer >=net-libs/telepathy-glib-0.15.1 net-libs/telepathy-farsight ) glib? ( dev-libs/glib:2 ) !net-libs/telepathy-qt4 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://telepathy.freedesktop.org/releases/telepathy-qt4/telepathy-qt4-0.8.0.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	2dda478e7e4206f6fb1aa72785cb5ef7	eutils	2824df7f5dc9f47aee293af8a6b517ed	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	python	89dff4d72d57f253f9f78b7f8c5d55c8	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=5dee2bef2c046dc11c843c23e319bab7
+_md5_=0bc45deb0ce72daf4498d87796198b39

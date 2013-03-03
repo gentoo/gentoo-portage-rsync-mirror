@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-4.6.2-r1.ebuild,v 1.11 2012/11/07 20:56:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-4.6.2-r1.ebuild,v 1.12 2013/03/02 21:47:39 hwoarang Exp $
 
 EAPI=4
 
@@ -29,9 +29,9 @@ RDEPEND="
 	media-libs/gstreamer:0.10
 	media-plugins/gst-plugins-meta:0.10[alsa?,ogg,vorbis]
 	>=media-libs/phonon-4.6.0
-	>=x11-libs/qt-core-4.6.0:4[glib]
-	>=x11-libs/qt-gui-4.6.0:4[glib]
-	>=x11-libs/qt-opengl-4.6.0:4
+	>=dev-qt/qtcore-4.6.0:4[glib]
+	>=dev-qt/qtgui-4.6.0:4[glib]
+	>=dev-qt/qtopengl-4.6.0:4
 	virtual/opengl
 	network? ( media-plugins/gst-plugins-soup:0.10 )
 "

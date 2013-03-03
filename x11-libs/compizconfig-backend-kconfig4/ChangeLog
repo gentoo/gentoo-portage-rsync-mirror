@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/compizconfig-backend-kconfig4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig4/ChangeLog,v 1.7 2013/01/11 21:20:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig4/ChangeLog,v 1.8 2013/03/02 23:44:01 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  compizconfig-backend-kconfig4-0.8.8.ebuild:
+  Move Qt dependencies to the new category
 
   11 Jan 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   compizconfig-backend-kconfig4-0.8.8.ebuild:
@@ -113,4 +117,3 @@
   23 Oct 2007; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
   +compizconfig-backend-kconfig-0.6.0.ebuild:
   Initial compiz-fusion commit, ebuild based on xeffects overlay.
-

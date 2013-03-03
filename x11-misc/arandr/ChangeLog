@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/arandr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/arandr/ChangeLog,v 1.10 2013/03/01 18:13:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/arandr/ChangeLog,v 1.11 2013/03/03 00:25:13 hasufell Exp $
+
+*arandr-0.1.7-r1 (03 Mar 2013)
+
+  03 Mar 2013; Julian Ospald <hasufell@gentoo.org> -arandr-0.1.7.ebuild,
+  +arandr-0.1.7-r1.ebuild, +files/arandr-0.1.7-locale.patch:
+  fix locale behavior, add missing PYTHON_USEDEP to dependencies, remove
+  unsupported python2_5, remove obsolete PYTHON_MODNAME variable, update
+  license
 
   01 Mar 2013; Jeroen Roovers <jer@gentoo.org> arandr-0.1.7.ebuild:
   Port to distutils-r1.

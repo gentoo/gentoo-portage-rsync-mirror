@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.123 2013/02/07 03:38:33 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.124 2013/03/03 00:22:56 pesa Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -106,25 +106,25 @@ unset export_fns
 
 # @ECLASS-VARIABLE: DECLARATIVE_REQUIRED
 # @DESCRIPTION:
-# Is qt-declarative required? Possible values are 'always', 'optional' and 'never'.
+# Is qtdeclarative required? Possible values are 'always', 'optional' and 'never'.
 # This variable must be set before inheriting any eclasses. Defaults to 'never'.
 DECLARATIVE_REQUIRED="${DECLARATIVE_REQUIRED:-never}"
 
 # @ECLASS-VARIABLE: QTHELP_REQUIRED
 # @DESCRIPTION:
-# Is qt-assistant required? Possible values are 'always', 'optional' and 'never'.
+# Is qthelp required? Possible values are 'always', 'optional' and 'never'.
 # This variable must be set before inheriting any eclasses. Defaults to 'never'.
 QTHELP_REQUIRED="${QTHELP_REQUIRED:-never}"
 
 # @ECLASS-VARIABLE: OPENGL_REQUIRED
 # @DESCRIPTION:
-# Is qt-opengl required? Possible values are 'always', 'optional' and 'never'.
+# Is qtopengl required? Possible values are 'always', 'optional' and 'never'.
 # This variable must be set before inheriting any eclasses. Defaults to 'never'.
 OPENGL_REQUIRED="${OPENGL_REQUIRED:-never}"
 
 # @ECLASS-VARIABLE: MULTIMEDIA_REQUIRED
 # @DESCRIPTION:
-# Is qt-multimedia required? Possible values are 'always', 'optional' and 'never'.
+# Is qtmultimedia required? Possible values are 'always', 'optional' and 'never'.
 # This variable must be set before inheriting any eclasses. Defaults to 'never'.
 MULTIMEDIA_REQUIRED="${MULTIMEDIA_REQUIRED:-never}"
 
@@ -199,7 +199,7 @@ fi
 
 # Declarative dependencies
 qtdeclarativedepend="
-	>=x11-libs/qt-declarative-${QT_MINIMAL}:4
+	>=dev-qt/qtdeclarative-${QT_MINIMAL}:4
 "
 case ${DECLARATIVE_REQUIRED} in
 	always)
@@ -215,7 +215,7 @@ unset qtdeclarativedepend
 
 # QtHelp dependencies
 qthelpdepend="
-	>=x11-libs/qt-assistant-${QT_MINIMAL}:4
+	>=dev-qt/qthelp-${QT_MINIMAL}:4
 "
 case ${QTHELP_REQUIRED} in
 	always)
@@ -230,7 +230,7 @@ unset qthelpdepend
 
 # OpenGL dependencies
 qtopengldepend="
-	>=x11-libs/qt-opengl-${QT_MINIMAL}:4
+	>=dev-qt/qtopengl-${QT_MINIMAL}:4
 "
 case ${OPENGL_REQUIRED} in
 	always)
@@ -246,7 +246,7 @@ unset qtopengldepend
 
 # MultiMedia dependencies
 qtmultimediadepend="
-	>=x11-libs/qt-multimedia-${QT_MINIMAL}:4
+	>=dev-qt/qtmultimedia-${QT_MINIMAL}:4
 "
 case ${MULTIMEDIA_REQUIRED} in
 	always)
@@ -280,15 +280,15 @@ unset cppuintdepend
 # Qt accessibility classes are needed in various places, bug 325461
 kdecommondepend="
 	dev-lang/perl
-	>=x11-libs/qt-core-${QT_MINIMAL}:4[qt3support,ssl]
-	>=x11-libs/qt-dbus-${QT_MINIMAL}:4
-	>=x11-libs/qt-gui-${QT_MINIMAL}:4[accessibility,dbus]
-	>=x11-libs/qt-qt3support-${QT_MINIMAL}:4[accessibility]
-	>=x11-libs/qt-script-${QT_MINIMAL}:4
-	>=x11-libs/qt-sql-${QT_MINIMAL}:4[qt3support]
-	>=x11-libs/qt-svg-${QT_MINIMAL}:4
-	>=x11-libs/qt-test-${QT_MINIMAL}:4
-	>=x11-libs/qt-webkit-${QT_MINIMAL}:4
+	>=dev-qt/qt3support-${QT_MINIMAL}:4[accessibility]
+	>=dev-qt/qtcore-${QT_MINIMAL}:4[qt3support,ssl]
+	>=dev-qt/qtdbus-${QT_MINIMAL}:4
+	>=dev-qt/qtgui-${QT_MINIMAL}:4[accessibility,dbus]
+	>=dev-qt/qtscript-${QT_MINIMAL}:4
+	>=dev-qt/qtsql-${QT_MINIMAL}:4[qt3support]
+	>=dev-qt/qtsvg-${QT_MINIMAL}:4
+	>=dev-qt/qttest-${QT_MINIMAL}:4
+	>=dev-qt/qtwebkit-${QT_MINIMAL}:4
 	!aqua? (
 		x11-libs/libXext
 		x11-libs/libXt

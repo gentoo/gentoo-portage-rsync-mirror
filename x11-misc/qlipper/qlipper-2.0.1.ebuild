@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qlipper/qlipper-2.0.1.ebuild,v 1.1 2012/09/02 09:13:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qlipper/qlipper-2.0.1.ebuild,v 1.2 2013/03/02 23:51:31 hwoarang Exp $
 
 EAPI=4
 PLOCALES="cs sr"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/qt-gui:4"
+DEPEND="dev-qt/qtgui:4"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

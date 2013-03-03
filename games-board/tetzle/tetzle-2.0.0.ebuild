@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/tetzle/tetzle-2.0.0.ebuild,v 1.3 2012/03/09 10:10:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/tetzle/tetzle-2.0.0.ebuild,v 1.4 2013/03/02 21:13:57 hwoarang Exp $
 
 EAPI=2
 inherit qt4-r2 games
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-gui-4.7:4
-	>=x11-libs/qt-opengl-4.7:4"
+DEPEND=">=dev-qt/qtgui-4.7:4
+	>=dev-qt/qtopengl-4.7:4"
 
 DOCS="ChangeLog CREDITS"
 

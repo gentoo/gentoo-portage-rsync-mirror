@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.896 2013/02/23 16:20:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.897 2013/03/02 21:25:46 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> kdelibs-4.10.0.ebuild,
+  kdelibs-4.9.5.ebuild:
+  Move Qt dependencies to the new category
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> kdelibs-4.10.0.ebuild,
   kdelibs-4.9.5.ebuild:

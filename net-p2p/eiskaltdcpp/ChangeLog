@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.46 2013/02/16 12:59:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.47 2013/03/02 23:09:03 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> eiskaltdcpp-2.2.7.ebuild,
+  eiskaltdcpp-9999.ebuild:
+  Move Qt dependencies to the new category
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #96436

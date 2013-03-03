@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/xyscan
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/ChangeLog,v 1.16 2012/08/07 04:52:22 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xyscan/ChangeLog,v 1.17 2013/03/02 23:29:10 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> xyscan-3.3.1.ebuild:
+  Move Qt dependencies to the new category
 
   07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
   xyscan-3.3.1.ebuild:

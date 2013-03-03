@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/topgit/topgit-0.8.ebuild,v 1.3 2010/07/17 16:26:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/topgit/topgit-0.8.ebuild,v 1.4 2013/03/02 22:47:47 ottxor Exp $
 
 inherit bash-completion
 
@@ -15,7 +15,7 @@ KEYWORDS="amd64 x86"
 IUSE="bash-completion"
 
 DEPEND="sys-apps/sed
-	sys-apps/gawk"
+	virtual/awk"
 RDEPEND="dev-vcs/git"
 
 src_compile() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtgain/qtgain-0.9.5.ebuild,v 1.2 2012/05/21 20:06:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtgain/qtgain-0.9.5.ebuild,v 1.3 2013/03/02 22:02:13 hwoarang Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="flac mp3 mp4 vorbis"
 
-DEPEND="x11-libs/qt-gui:4"
+DEPEND="dev-qt/qtgui:4"
 RDEPEND="${DEPEND}
 	flac? ( media-libs/flac )
 	mp3? ( media-sound/mp3gain )

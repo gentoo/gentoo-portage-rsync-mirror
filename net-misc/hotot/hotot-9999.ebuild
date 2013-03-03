@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-9999.ebuild,v 1.6 2013/01/28 14:03:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-9999.ebuild,v 1.7 2013/03/02 23:00:43 hwoarang Exp $
 
 EAPI=4
 
@@ -20,11 +20,11 @@ IUSE="chrome gtk kde qt4"
 
 RDEPEND="dev-python/dbus-python
 	gtk? ( dev-python/pywebkitgtk )
-	qt4? ( x11-libs/qt-webkit:4
+	qt4? ( dev-qt/qtwebkit:4
 		kde? ( kde-base/kdelibs ) )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	qt4? ( x11-libs/qt-sql:4 )"
+	qt4? ( dev-qt/qtsql:4 )"
 
 REQUIRED_USE="|| ( chrome gtk qt4 )"
 

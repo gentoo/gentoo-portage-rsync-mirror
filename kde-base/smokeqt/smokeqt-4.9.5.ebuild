@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/smokeqt-4.9.5.ebuild,v 1.5 2013/02/23 17:21:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/smokeqt-4.9.5.ebuild,v 1.6 2013/03/02 21:29:18 hwoarang Exp $
 
 EAPI=4
 
@@ -19,18 +19,18 @@ IUSE="debug +phonon qimageblitz qscintilla qwt webkit"
 # Maybe make more of Qt optional?
 DEPEND="
 	$(add_kdebase_dep smokegen)
-	x11-libs/qt-core:4
-	x11-libs/qt-dbus:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-script:4
-	x11-libs/qt-sql:4
-	x11-libs/qt-svg:4
-	x11-libs/qt-test:4
+	dev-qt/qtcore:4
+	dev-qt/qtdbus:4
+	dev-qt/qtgui:4
+	dev-qt/qtscript:4
+	dev-qt/qtsql:4
+	dev-qt/qtsvg:4
+	dev-qt/qttest:4
 	phonon? ( >=media-libs/phonon-4.4.3 )
 	qimageblitz? ( >=media-libs/qimageblitz-0.0.4 )
 	qscintilla? ( x11-libs/qscintilla )
 	qwt? ( x11-libs/qwt:5 )
-	webkit? ( x11-libs/qt-webkit:4 )
+	webkit? ( dev-qt/qtwebkit:4 )
 "
 RDEPEND="${DEPEND}"
 

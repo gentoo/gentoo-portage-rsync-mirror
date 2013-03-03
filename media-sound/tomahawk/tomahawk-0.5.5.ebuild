@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.5.5.ebuild,v 1.2 2012/08/10 23:09:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.5.5.ebuild,v 1.3 2013/03/02 22:04:34 hwoarang Exp $
 
 EAPI=4
 
@@ -36,11 +36,11 @@ DEPEND="
 	>=media-libs/phonon-4.5.0
 	media-libs/taglib
 	x11-libs/libX11
-	>=x11-libs/qt-core-${QT_MINIMAL}:4
-	>=x11-libs/qt-dbus-${QT_MINIMAL}:4
-	>=x11-libs/qt-gui-${QT_MINIMAL}:4
-	>=x11-libs/qt-sql-${QT_MINIMAL}:4[sqlite]
-	>=x11-libs/qt-webkit-${QT_MINIMAL}:4
+	>=dev-qt/qtcore-${QT_MINIMAL}:4
+	>=dev-qt/qtdbus-${QT_MINIMAL}:4
+	>=dev-qt/qtgui-${QT_MINIMAL}:4
+	>=dev-qt/qtsql-${QT_MINIMAL}:4[sqlite]
+	>=dev-qt/qtwebkit-${QT_MINIMAL}:4
 	jabber? ( net-libs/jreen )
 	twitter? ( net-libs/qtweetlib )
 "

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.98.0.ebuild,v 1.2 2013/02/13 12:44:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.98.0.ebuild,v 1.3 2013/03/02 23:28:22 hwoarang Exp $
 
 EAPI=5
 
@@ -43,7 +43,7 @@ RDEPEND="
 	coprocessing? (
 		plugins? (
 			dev-python/PyQt4
-			x11-libs/qt-gui:4
+			dev-qt/qtgui:4
 		)
 	)
 	ffmpeg? ( virtual/ffmpeg )
@@ -58,11 +58,11 @@ RDEPEND="
 		qt4? ( dev-python/PyQt4[opengl,webkit,${PYTHON_USEDEP}] )
 	)
 	qt4? (
-		x11-libs/qt-gui:4
-		x11-libs/qt-opengl:4
-		x11-libs/qt-assistant:4[compat]
-		x11-libs/qt-sql:4
-		x11-libs/qt-webkit:4
+		dev-qt/qtgui:4
+		dev-qt/qtopengl:4
+		dev-qt/qthelp:4[compat]
+		dev-qt/qtsql:4
+		dev-qt/qtwebkit:4
 	)
 	sqlite? ( dev-db/sqlite )
 	tcl? ( dev-lang/tcl )

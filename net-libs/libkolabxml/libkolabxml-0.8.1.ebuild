@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/libkolabxml-0.8.1.ebuild,v 1.10 2013/02/23 17:27:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkolabxml/libkolabxml-0.8.1.ebuild,v 1.11 2013/03/02 22:57:01 hwoarang Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ DEPEND="
 	java? ( >=dev-lang/swig-2.0.7 virtual/jre )
 	php? ( >=dev-lang/swig-2.0.7 dev-lang/php )
 	python? ( >=dev-lang/swig-2.0.7 dev-lang/python )
-	test? ( x11-libs/qt-test:4 )
+	test? ( dev-qt/qttest:4 )
 "
 
 src_configure() {

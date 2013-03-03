@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basqet/basqet-0.1.4.ebuild,v 1.1 2011/01/20 23:03:45 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basqet/basqet-0.1.4.ebuild,v 1.2 2013/03/02 23:47:25 hwoarang Exp $
 
 EAPI=3
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="x11-libs/qt-gui:4
-	x11-libs/qt-xmlpatterns:4"
+DEPEND="dev-qt/qtgui:4
+	dev-qt/qtxmlpatterns:4"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

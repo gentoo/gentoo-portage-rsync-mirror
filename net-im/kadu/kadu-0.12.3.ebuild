@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.12.3.ebuild,v 1.4 2012/12/28 10:34:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.12.3.ebuild,v 1.5 2013/03/02 22:51:54 hwoarang Exp $
 
 EAPI="4"
 
@@ -27,21 +27,21 @@ COMMON_DEPEND="
 	x11-libs/libX11
 	x11-libs/libXfixes
 	x11-libs/libXScrnSaver
-	>=x11-libs/qt-dbus-4.7.0:4
-	>=x11-libs/qt-gui-4.7.0:4
-	>=x11-libs/qt-script-4.7.0:4
-	>=x11-libs/qt-sql-4.7.0:4[sqlite]
-	>=x11-libs/qt-webkit-4.7.0:4
+	>=dev-qt/qtdbus-4.7.0:4
+	>=dev-qt/qtgui-4.7.0:4
+	>=dev-qt/qtscript-4.7.0:4
+	>=dev-qt/qtsql-4.7.0:4[sqlite]
+	>=dev-qt/qtwebkit-4.7.0:4
 	ayatana? ( dev-libs/libindicate-qt )
 	gadu? (
 		>=net-libs/libgadu-1.11.1[threads]
-		>=x11-libs/qt-xmlpatterns-4.7.0:4
+		>=dev-qt/qtxmlpatterns-4.7.0:4
 	)
 	mpd? ( media-libs/libmpdclient )
 	phonon? (
 		|| (
 			media-libs/phonon
-			>=x11-libs/qt-phonon-4.7.0:4
+			>=dev-qt/qtphonon-4.7.0:4
 		)
 	)
 	spell? ( app-text/enchant )
@@ -57,7 +57,7 @@ DEPEND="${COMMON_DEPEND}
 "
 RDEPEND="${COMMON_DEPEND}
 	app-crypt/qca-ossl:2
-	>=x11-libs/qt-svg-4.7.0:4
+	>=dev-qt/qtsvg-4.7.0:4
 	speech? ( app-accessibility/powiedz )
 "
 

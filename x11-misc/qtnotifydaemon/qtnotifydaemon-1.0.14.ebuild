@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtnotifydaemon/qtnotifydaemon-1.0.14.ebuild,v 1.4 2012/08/06 15:23:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtnotifydaemon/qtnotifydaemon-1.0.14.ebuild,v 1.5 2013/03/02 23:52:36 hwoarang Exp $
 
 EAPI=4
 inherit qt4-r2
@@ -15,9 +15,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
-	x11-libs/qt-dbus:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-qt3support:4
+	dev-qt/qtdbus:4
+	dev-qt/qtgui:4
+	dev-qt/qt3support:4
 	!x11-misc/notification-daemon
 	!x11-misc/notify-osd"
 DEPEND="${RDEPEND}"

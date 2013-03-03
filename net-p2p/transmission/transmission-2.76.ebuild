@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.76.ebuild,v 1.1 2013/01/13 06:29:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.76.ebuild,v 1.2 2013/03/02 23:10:22 hwoarang Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils qt4-r2 user
@@ -28,8 +28,8 @@ RDEPEND="
 		ayatana? ( >=dev-libs/libappindicator-0.4.90:3 )
 		)
 	qt4? (
-		x11-libs/qt-core:4
-		x11-libs/qt-gui:4[dbus]
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4[dbus]
 		)"
 
 DEPEND="${RDEPEND}

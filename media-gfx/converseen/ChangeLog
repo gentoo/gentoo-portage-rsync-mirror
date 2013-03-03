@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/converseen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/converseen/ChangeLog,v 1.6 2013/02/28 19:08:30 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/converseen/ChangeLog,v 1.7 2013/03/02 21:34:12 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> converseen-0.4.7.ebuild,
+  converseen-0.4.9.ebuild, converseen-0.5.1.ebuild, converseen-0.5.3.ebuild,
+  converseen-0.5.ebuild:
+  Move Qt dependencies to the new category
 
 *converseen-0.5.3 (28 Feb 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/cubetest
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/ChangeLog,v 1.16 2012/05/03 03:26:38 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/ChangeLog,v 1.17 2013/03/02 21:16:54 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> cubetest-0.9.4.ebuild:
+  Move Qt dependencies to the new category
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> cubetest-0.9.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -59,4 +62,3 @@
   09 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> cubetest-0.9.0.ebuild,
   metadata.xml:
   initial commit (bug #39328)
-

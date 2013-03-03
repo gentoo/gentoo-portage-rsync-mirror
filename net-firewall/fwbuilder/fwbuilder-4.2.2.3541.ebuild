@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-4.2.2.3541.ebuild,v 1.8 2012/07/19 16:22:52 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-4.2.2.3541.ebuild,v 1.9 2013/03/02 22:49:59 hwoarang Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-gui-4.3:4
+DEPEND=">=dev-qt/qtgui-4.3:4
 	dev-libs/openssl
 	dev-libs/elfutils
 	sys-devel/gnuconfig"

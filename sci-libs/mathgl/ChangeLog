@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/mathgl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.32 2012/08/10 00:20:48 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.33 2013/03/02 23:23:19 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> mathgl-1.11.2.ebuild,
+  mathgl-2.0.3.ebuild:
+  Move Qt dependencies to the new category
 
   10 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> mathgl-2.0.3.ebuild:
   Fixed for qt4 flag, thanks Egor Y. Egorov, bug #430560

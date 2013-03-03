@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-4.3.3.ebuild,v 1.5 2012/08/21 09:48:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-4.3.3.ebuild,v 1.6 2013/03/02 23:38:02 hwoarang Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND="dev-libs/libgpg-error
 	virtual/libintl
 	fox? ( x11-libs/fox:1.6 )
 	gtk? ( >=x11-libs/gtk+-2.17.5:2 )
-	qt4? ( x11-libs/qt-gui:4 )"
+	qt4? ( dev-qt/qtgui:4 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-devel/gettext

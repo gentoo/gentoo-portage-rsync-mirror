@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.7.6.ebuild,v 1.3 2013/01/27 16:17:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.7.6.ebuild,v 1.4 2013/03/02 23:01:22 hwoarang Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ DEPEND="
 	$(add_kdebase_dep systemsettings)
 	dev-libs/libnl:3
 	sys-apps/net-tools
-	x11-libs/qt-sql:4[sqlite]
+	dev-qt/qtsql:4[sqlite]
 	wifi? ( net-wireless/wireless-tools )
 "
 RDEPEND="${DEPEND}"

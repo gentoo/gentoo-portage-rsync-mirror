@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/eigen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.75 2013/02/20 19:41:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.76 2013/03/02 19:49:00 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> eigen-2.0.17.ebuild:
+  Move Qt dependencies to the new category
 
   20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> eigen-2.0.17.ebuild,
   eigen-3.0.6.ebuild:

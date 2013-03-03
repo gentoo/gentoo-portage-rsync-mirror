@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=x11-libs/qt-core-4.8:4 >=x11-libs/qt-gui-4.8:4 >=x11-libs/qt-svg-4.8:4 alsa? ( media-libs/alsa-lib ) dbus? ( >=x11-libs/qt-dbus-4.8:4 ) jack? ( media-sound/jack-audio-connection-kit ) app-text/docbook-xsl-stylesheets virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=>=dev-qt/qtcore-4.8:4 >=dev-qt/qtgui-4.8:4 >=dev-qt/qtsvg-4.8:4 alsa? ( media-libs/alsa-lib ) dbus? ( >=dev-qt/qtdbus-4.8:4 ) jack? ( media-sound/jack-audio-connection-kit ) app-text/docbook-xsl-stylesheets virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Virtual MIDI Piano Keyboard
 EAPI=4
 HOMEPAGE=http://vmpk.sourceforge.net/
 IUSE=alsa dbus jack
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=>=x11-libs/qt-core-4.8:4 >=x11-libs/qt-gui-4.8:4 >=x11-libs/qt-svg-4.8:4 alsa? ( media-libs/alsa-lib ) dbus? ( >=x11-libs/qt-dbus-4.8:4 ) jack? ( media-sound/jack-audio-connection-kit )
+RDEPEND=>=dev-qt/qtcore-4.8:4 >=dev-qt/qtgui-4.8:4 >=dev-qt/qtsvg-4.8:4 alsa? ( media-libs/alsa-lib ) dbus? ( >=dev-qt/qtdbus-4.8:4 ) jack? ( media-sound/jack-audio-connection-kit )
 SLOT=0
 SRC_URI=mirror://sourceforge/vmpk/vmpk-0.5.0.tar.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	2dda478e7e4206f6fb1aa72785cb5ef7	eutils	2824df7f5dc9f47aee293af8a6b517ed	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=710f4a45201bff826ccfca287018a74a
+_md5_=77bbb1f4b26ca412bcaa10bba56e6031

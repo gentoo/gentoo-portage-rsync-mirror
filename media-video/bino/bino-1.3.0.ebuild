@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bino/bino-1.3.0.ebuild,v 1.2 2012/10/23 17:19:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bino/bino-1.3.0.ebuild,v 1.3 2013/03/02 22:30:11 hwoarang Exp $
 
 EAPI=3
 inherit eutils
@@ -16,9 +16,9 @@ IUSE="lirc"
 
 RDEPEND=">=media-libs/glew-1.5.0
 	media-libs/openal
-	x11-libs/qt-gui:4
-	x11-libs/qt-core:4
-	x11-libs/qt-opengl:4
+	dev-qt/qtgui:4
+	dev-qt/qtcore:4
+	dev-qt/qtopengl:4
 	>=media-libs/libass-0.9.9
 	>=virtual/ffmpeg-0.6.90
 	lirc? ( app-misc/lirc )"

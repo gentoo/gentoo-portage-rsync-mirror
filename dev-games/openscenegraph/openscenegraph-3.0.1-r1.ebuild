@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-3.0.1-r1.ebuild,v 1.2 2013/02/09 00:14:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-3.0.1-r1.ebuild,v 1.3 2013/03/02 19:52:25 hwoarang Exp $
 
 EAPI=3
 
@@ -33,9 +33,9 @@ RDEPEND="
 		glut? ( media-libs/freeglut )
 		gtk? ( x11-libs/gtkglext )
 		qt4? (
-			x11-libs/qt-core:4
-			x11-libs/qt-gui:4
-			x11-libs/qt-opengl:4
+			dev-qt/qtcore:4
+			dev-qt/qtgui:4
+			dev-qt/qtopengl:4
 		)
 		sdl? ( media-libs/libsdl )
 		wxwidgets? ( x11-libs/wxGTK[opengl,X] )

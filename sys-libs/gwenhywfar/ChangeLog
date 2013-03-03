@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/gwenhywfar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.105 2012/08/21 09:48:31 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.106 2013/03/02 23:38:02 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> gwenhywfar-4.2.1.ebuild,
+  gwenhywfar-4.3.3.ebuild:
+  Move Qt dependencies to the new category
 
   21 Aug 2012; Johannes Huber <johu@gentoo.org> gwenhywfar-4.3.3.ebuild:
   Stable for x86, wrt bug #422227

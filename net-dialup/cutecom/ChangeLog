@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/cutecom
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.26 2012/04/22 15:39:02 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.27 2013/03/02 22:47:24 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> cutecom-0.20.0-r1.ebuild,
+  cutecom-0.22.0.ebuild:
+  Move Qt dependencies to the new category
 
   22 Apr 2012; Johannes Huber <johu@gentoo.org> cutecom-0.20.0-r1.ebuild,
   cutecom-0.22.0.ebuild:
@@ -120,4 +124,3 @@
   +cutecom-0.12.0.ebuild:
   Initial add and the glory goes to Jurek Bartuszek <koxta@koxta.net> in bug
   #74236
-

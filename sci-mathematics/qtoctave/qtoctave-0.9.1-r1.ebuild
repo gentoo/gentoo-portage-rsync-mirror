@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/qtoctave-0.9.1-r1.ebuild,v 1.4 2012/07/26 15:03:00 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/qtoctave-0.9.1-r1.ebuild,v 1.5 2013/03/02 23:25:44 hwoarang Exp $
 
 EAPI="2"
 
@@ -18,8 +18,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-gui-4.5:4
-	>=x11-libs/qt-svg-4.5:4"
+DEPEND=">=dev-qt/qtgui-4.5:4
+	>=dev-qt/qtsvg-4.5:4"
 
 RDEPEND="${DEPEND}
 	>=sci-mathematics/octave-3.2.0"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/capitalism/capitalism-0.5.1.ebuild,v 1.3 2011/01/15 14:36:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/capitalism/capitalism-0.5.1.ebuild,v 1.4 2013/03/02 21:11:46 hwoarang Exp $
 
 EAPI=2
 inherit eutils gnome2-utils qt4-r2 games
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="x11-libs/qt-gui:4"
+DEPEND="dev-qt/qtgui:4"
 
 S=${WORKDIR}/${MY_P}
 

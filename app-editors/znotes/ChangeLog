@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/znotes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/znotes/ChangeLog,v 1.10 2012/08/30 16:28:42 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/znotes/ChangeLog,v 1.11 2013/03/02 19:22:51 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> znotes-0.4.4.ebuild,
+  znotes-0.4.5.ebuild:
+  Move Qt dependencies to the new category
 
   30 Aug 2012; Michael Palimaka <kensington@gentoo.org>
   +files/znotes-0.4.5-gcc-4.7.patch, metadata.xml, znotes-0.4.5.ebuild:

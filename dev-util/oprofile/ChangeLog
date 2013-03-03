@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.84 2013/02/16 13:26:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.85 2013/03/02 20:23:41 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> oprofile-0.9.7.ebuild,
+  oprofile-0.9.8.ebuild:
+  Move Qt dependencies to the new category
 
 *oprofile-0.9.8 (16 Feb 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/qtm/qtm-1.3.13.ebuild,v 1.1 2013/01/26 17:48:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/qtm/qtm-1.3.13.ebuild,v 1.2 2013/03/02 23:05:44 hwoarang Exp $
 
 EAPI="4"
 
@@ -16,8 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="dbus debug ssl"
 RESTRICT="strip"
 
-RDEPEND="x11-libs/qt-gui:4
-	dbus? ( x11-libs/qt-dbus:4 )
+RDEPEND="dev-qt/qtgui:4
+	dbus? ( dev-qt/qtdbus:4 )
 	x11-proto/xproto
 	dev-lang/perl
 	virtual/perl-Digest-MD5"

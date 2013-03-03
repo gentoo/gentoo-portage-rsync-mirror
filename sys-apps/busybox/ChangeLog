@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.343 2013/02/28 22:43:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.344 2013/03/03 01:42:59 vapier Exp $
+
+  03 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/busybox-1.21.0-platform.patch, +files/busybox-1.21.0-xz.patch,
+  busybox-1.21.0.ebuild:
+  Fix applying of patches pointed out by Markos Chandras.
 
   28 Feb 2013; Mike Frysinger <vapier@gentoo.org> busybox-1.21.0.ebuild,
   busybox-9999.ebuild:

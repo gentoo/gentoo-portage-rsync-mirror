@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.6.1.ebuild,v 1.16 2013/02/03 09:33:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.6.1.ebuild,v 1.17 2013/03/02 19:19:54 hwoarang Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ for X in "${LANGS[@]}" ; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-RDEPEND="qt4? ( x11-libs/qt-gui:4 )
+RDEPEND="qt4? ( dev-qt/qtgui:4 )
 	latex? ( app-text/texlive[extra] )
 	dev-lang/perl
 	virtual/libiconv

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.133 2013/02/11 09:21:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.134 2013/03/02 20:45:52 pesa Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Jan 2013)
 # remove mask when net-libs/libqmi is keyworded here
@@ -39,17 +39,17 @@ gnome-extra/libgda reports
 >=dev-db/mariadb-5.5 systemtap tcmalloc jemalloc
 
 # Raúl Porcel <armin76@gentoo.org> (08 Jul 2012)
-# x11-libs/qt-webkit doesn't seem to work
+# dev-qt/qtwebkit doesn't seem to work
 dev-python/PyQt4 webkit
-x11-libs/qt-assistant webkit
-x11-libs/qt-declarative webkit
+dev-qt/qtdeclarative webkit
+dev-qt/qthelp webkit
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (24 Jun 2012)
 # Requires libpcre with jit
 www-apache/mod_security jit
 
 # Ben de Groot <yngwin@gentoo.org> (14 Jun 2012)
-# Since x11-libs/qt-* will no longer be available for sparc, we need
+# Since dev-qt/qt* will no longer be available for sparc, we need
 # to mask the reverse dependencies
 dev-cpp/eigen examples
 dev-tex/latex-beamer lyx
@@ -159,11 +159,11 @@ dev-libs/soprano virtuoso
 app-admin/system-config-printer-common  policykit
 
 # Ben de Groot <yngwin@gentoo.org> (16 Jan 2010)
-# qt-multimedia is not keyworded, bug 293671
+# qtmultimedia is not keyworded, bug 293671
 dev-python/PyQt4 multimedia
 
 # Ben de Groot <yngwin@gentoo.org> (11 Nov 2009)
-# Requires qt-assistant, which requires qt-webkit, bug 292838
+# Requires qthelp, which requires qtwebkit, bug 292838
 dev-libs/uriparser doc
 media-libs/libxspf doc
 

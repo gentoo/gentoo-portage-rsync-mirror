@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-kde/lightdm-kde-0.3.1.ebuild,v 1.4 2013/02/03 19:26:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-kde/lightdm-kde-0.3.1.ebuild,v 1.5 2013/03/02 23:50:11 hwoarang Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ IUSE="debug"
 
 DEPEND="
 	x11-libs/libX11
-	x11-libs/qt-declarative:4
+	dev-qt/qtdeclarative:4
 	>=x11-misc/lightdm-1.3.2[qt4]
 "
 RDEPEND="${DEPEND}"

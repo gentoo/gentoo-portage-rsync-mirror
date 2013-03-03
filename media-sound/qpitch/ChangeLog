@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qpitch
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qpitch/ChangeLog,v 1.6 2011/06/13 15:10:19 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qpitch/ChangeLog,v 1.7 2013/03/02 22:01:06 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qpitch-1.0.1.ebuild:
+  Move Qt dependencies to the new category
 
   13 Jun 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove myself from metadata.xml
@@ -24,4 +27,3 @@
   Initial commit of qpitch package. Thanks to Nico Schlömer, kavol@email.cz
   and
   Gokdeniz Karadag for the initial ebuilds. Fixes bug 235630
-

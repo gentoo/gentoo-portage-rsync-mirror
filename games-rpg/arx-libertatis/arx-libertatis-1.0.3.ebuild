@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/arx-libertatis-1.0.3.ebuild,v 1.4 2013/01/30 19:08:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/arx-libertatis-1.0.3.ebuild,v 1.5 2013/03/02 21:20:49 hwoarang Exp $
 
 EAPI=4
 
@@ -25,8 +25,8 @@ COMMON_DEPEND=">=dev-libs/boost-1.39
 	virtual/opengl
 	x11-libs/libX11
 	crash-reporter? (
-		x11-libs/qt-core:4[ssl]
-		x11-libs/qt-gui:4
+		dev-qt/qtcore:4[ssl]
+		dev-qt/qtgui:4
 		)"
 RDEPEND="${COMMON_DEPEND}
 	crash-reporter? ( sys-devel/gdb )"

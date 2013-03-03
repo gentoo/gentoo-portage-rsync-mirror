@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/connectagram
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/connectagram/ChangeLog,v 1.4 2012/04/02 21:34:58 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/connectagram/ChangeLog,v 1.5 2013/03/02 21:18:34 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  connectagram-1.0.1-r1.ebuild:
+  Move Qt dependencies to the new category
 
   02 Apr 2012; Michael Sterrett <mr_bones_@gentoo.org>
   connectagram-1.0.1-r1.ebuild:
@@ -22,4 +26,3 @@
   06 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
   +connectagram-1.0.1.ebuild:
   Initial commit.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.3.5-r1.ebuild,v 1.3 2013/02/26 11:01:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.3.5-r1.ebuild,v 1.4 2013/03/02 23:41:08 hwoarang Exp $
 
 EAPI=5
 PLOCALES="cs_CZ de_DE el_GR es_ES es_VE fa_IR fr_FR hu_HU id_ID it_IT ja_JP
@@ -20,12 +20,12 @@ KEYWORDS="amd64 x86"
 IUSE="dbus debug kde nonblockdialogs"
 
 DEPEND="
-	>=x11-libs/qt-core-4.7:4
-	>=x11-libs/qt-gui-4.7:4
-	>=x11-libs/qt-script-4.7:4
-	>=x11-libs/qt-sql-4.7:4
-	>=x11-libs/qt-webkit-4.7:4
-	dbus? ( >=x11-libs/qt-dbus-4.7:4 )"
+	>=dev-qt/qtcore-4.7:4
+	>=dev-qt/qtgui-4.7:4
+	>=dev-qt/qtscript-4.7:4
+	>=dev-qt/qtsql-4.7:4
+	>=dev-qt/qtwebkit-4.7:4
+	dbus? ( >=dev-qt/qtdbus-4.7:4 )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
@@ -47,7 +47,7 @@ src_configure() {
 	export DISABLE_DBUS=$(use dbus && echo false || echo true)
 	export KDE=$(use kde && echo true || echo false) # in future this will enable nepomuk integration
 	export NONBLOCK_JS_DIALOGS=$(use nonblockdialogs && echo true || echo false)
-	has_version '>=x11-libs/qt-webkit-4.8.0:4' && export USE_QTWEBKIT_2_2=true
+	has_version '>=dev-qt/qtwebkit-4.8.0:4' && export USE_QTWEBKIT_2_2=true
 
 	eqmake4
 }

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/qtfm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtfm/ChangeLog,v 1.12 2012/10/20 14:37:15 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qtfm/ChangeLog,v 1.13 2013/03/02 23:52:24 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qtfm-5.4.ebuild,
+  qtfm-5.5.ebuild:
+  Move Qt dependencies to the new category
 
 *qtfm-5.5 (20 Oct 2012)
 
@@ -47,4 +51,3 @@
 
   30 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> +qtfm-3.1.ebuild:
   Initial commit.
-

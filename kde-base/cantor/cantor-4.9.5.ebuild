@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/cantor-4.9.5.ebuild,v 1.5 2013/02/23 15:57:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/cantor-4.9.5.ebuild,v 1.6 2013/03/02 21:24:49 hwoarang Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="
 	)
 	postscript? ( app-text/libspectre )
 	R? ( dev-lang/R )
-	x11-libs/qt-xmlpatterns:4
+	dev-qt/qtxmlpatterns:4
 "
 DEPEND="${RDEPEND}
 	>=dev-cpp/eigen-2.0.3:2

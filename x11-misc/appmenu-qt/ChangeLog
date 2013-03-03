@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/appmenu-qt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/appmenu-qt/ChangeLog,v 1.2 2012/06/15 09:01:48 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/appmenu-qt/ChangeLog,v 1.3 2013/03/02 23:47:12 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> appmenu-qt-0.2.6.ebuild:
+  Move Qt dependencies to the new category
 
   15 Jun 2012; Johannes Huber <johu@gentoo.org> appmenu-qt-0.2.6.ebuild:
   Add ~x86 wrt bug #420909.
@@ -11,4 +14,3 @@
   +appmenu-qt-0.2.6.ebuild, +metadata.xml:
   New package, needed by kde-misc/plasma-widget-menubar wrt bug #420909. Ebuild
   based on work by "megabaks" <megabaks@jabber.ru>.
-

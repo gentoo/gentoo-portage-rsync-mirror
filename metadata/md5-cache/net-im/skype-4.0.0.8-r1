@@ -6,9 +6,9 @@ HOMEPAGE=http://www.skype.com/
 IUSE=pax_kernel selinux qt-static
 KEYWORDS=~amd64 ~x86
 LICENSE=skype-4.0.0.7-copyright skype-4.0.0.7-third-party_attributions.txt
-RDEPEND=virtual/ttf-fonts amd64? ( >=app-emulation/emul-linux-x86-baselibs-20120520 >=app-emulation/emul-linux-x86-soundlibs-20120520 >=app-emulation/emul-linux-x86-xlibs-20120520 !qt-static? ( >=app-emulation/emul-linux-x86-qtlibs-20120520 ) ) x86? ( media-libs/alsa-lib x11-libs/libX11 x11-libs/libXext x11-libs/libXScrnSaver x11-libs/libXv qt-static? ( >=dev-libs/glib-2.28 media-libs/fontconfig >=media-libs/freetype-2 >=media-libs/tiff-3.9.5-r3:3 sys-libs/zlib x11-libs/libICE x11-libs/libSM x11-libs/libXrender ) !qt-static? ( x11-libs/qt-core:4 x11-libs/qt-dbus:4 x11-libs/qt-gui:4[accessibility,dbus] ) ) selinux? ( sec-policy/selinux-skype )
+RDEPEND=virtual/ttf-fonts amd64? ( >=app-emulation/emul-linux-x86-baselibs-20120520 >=app-emulation/emul-linux-x86-soundlibs-20120520 >=app-emulation/emul-linux-x86-xlibs-20120520 !qt-static? ( >=app-emulation/emul-linux-x86-qtlibs-20120520 ) ) x86? ( media-libs/alsa-lib x11-libs/libX11 x11-libs/libXext x11-libs/libXScrnSaver x11-libs/libXv qt-static? ( >=dev-libs/glib-2.28 media-libs/fontconfig >=media-libs/freetype-2 >=media-libs/tiff-3.9.5-r3:3 sys-libs/zlib x11-libs/libICE x11-libs/libSM x11-libs/libXrender ) !qt-static? ( dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4[accessibility,dbus] ) ) selinux? ( sec-policy/selinux-skype )
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=!qt-static? ( http://download.skype.com/linux/skype-4.0.0.8.tar.bz2 ) qt-static? ( http://download.skype.com/linux/skype_static-4.0.0.8.tar.bz2 )
 _eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	ded93e450747134a079e647d888aa80b	pax-utils	0ace932c4045349c7fc1af0fe7091acf	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=09f537f26a0a9fd9ff22c5be2adde7a3
+_md5_=f4ffad2fb9dccfbdfe3d4d6b30d31cb2

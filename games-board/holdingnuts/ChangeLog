@@ -1,6 +1,10 @@
 # ChangeLog for games-board/holdingnuts
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/holdingnuts/ChangeLog,v 1.8 2010/05/31 19:25:54 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/holdingnuts/ChangeLog,v 1.9 2013/03/02 21:12:23 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  holdingnuts-0.0.5-r1.ebuild:
+  Move Qt dependencies to the new category
 
   31 May 2010; Markus Meier <maekke@gentoo.org> holdingnuts-0.0.5-r1.ebuild:
   x86 stable, bug #318879
@@ -37,4 +41,3 @@
   25 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +holdingnuts-0.0.3.ebuild:
   initial commit - ebuild submitted by Dominik Geyer via bug #267432
-

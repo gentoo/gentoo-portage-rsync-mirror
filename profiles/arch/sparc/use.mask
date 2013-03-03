@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.105 2013/01/20 10:51:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.106 2013/03/02 20:45:52 pesa Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -306,8 +306,8 @@ alsa_cards_wavefront
 # if a sub-profile want's it, it can -use.mask it
 multilib
 
-# Ben de Groot <yngwin@gentoo.org> 11 Feb 2009
-# both x11-libs/qt-phonon and media-sound/phonon are unkeyworded
+# Ben de Groot <yngwin@gentoo.org> (11 Feb 2009)
+# Both dev-qt/qtphonon and media-sound/phonon are unkeyworded
 phonon
 
 # Matt Turner <mattst88@gentoo.org) (10 Feb 2012)

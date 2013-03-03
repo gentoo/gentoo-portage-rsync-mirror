@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/holdingnuts/holdingnuts-0.0.5-r1.ebuild,v 1.3 2010/05/31 19:25:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/holdingnuts/holdingnuts-0.0.5-r1.ebuild,v 1.4 2013/03/02 21:12:23 hwoarang Exp $
 
 EAPI=2
 inherit eutils cmake-utils games
@@ -16,8 +16,8 @@ IUSE="alsa debug dedicated"
 
 RDEPEND="
 	!dedicated? (
-		x11-libs/qt-core:4
-		x11-libs/qt-gui:4
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
 		alsa? ( >=media-libs/libsdl-1.2.10[alsa] )
 	)"
 

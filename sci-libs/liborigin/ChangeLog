@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/liborigin
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.31 2011/10/30 19:30:57 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.32 2013/03/02 23:23:00 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> liborigin-20100903.ebuild,
+  liborigin-20110323.ebuild, liborigin-20110829.ebuild:
+  Move Qt dependencies to the new category
 
   30 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   liborigin-20110829.ebuild:
@@ -161,4 +165,3 @@
   +liborigin-20060616.ebuild:
   first commit. This is the library necessary for qtiplot, new version of
   which (0.8.8) should be upcoming soon.
-

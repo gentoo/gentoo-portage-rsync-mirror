@@ -1,12 +1,12 @@
 DEFINED_PHASES=configure install
-DEPEND=x11-libs/qt-gui:4 media-libs/alsa-lib
+DEPEND=dev-qt/qtgui:4 media-libs/alsa-lib
 DESCRIPTION=QMidiRoute is a filter/router for MIDI events
 EAPI=2
 HOMEPAGE=http://alsamodular.sourceforge.net
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=x11-libs/qt-gui:4 media-libs/alsa-lib
+RDEPEND=dev-qt/qtgui:4 media-libs/alsa-lib
 SLOT=0
 SRC_URI=mirror://sourceforge/alsamodular/qmidiroute-0.3.0.tar.bz2
 _eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=f6c6d63e6b35f3b98b07bcaf1fb2e052
+_md5_=0eb5f1cf5ea665787cbe8c05a3b8dea1

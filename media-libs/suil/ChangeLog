@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/suil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/ChangeLog,v 1.12 2013/02/23 13:30:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/ChangeLog,v 1.13 2013/03/02 21:49:15 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> suil-0.4.4.ebuild,
+  suil-0.6.0.ebuild, suil-0.6.10.ebuild, suil-0.6.12.ebuild, suil-0.6.2.ebuild,
+  suil-0.6.4.ebuild, suil-0.6.6.ebuild:
+  Move Qt dependencies to the new category
 
 *suil-0.6.12 (23 Feb 2013)
 
@@ -53,4 +58,3 @@
   07 Jan 2012; Alexis Ballier <aballier@gentoo.org> +suil-0.4.4.ebuild,
   +files/ldconfig.patch, +metadata.xml:
   initial import, ebuild by me
-

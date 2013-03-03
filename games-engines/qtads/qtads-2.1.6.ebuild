@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-2.1.6.ebuild,v 1.2 2013/02/04 22:26:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-2.1.6.ebuild,v 1.3 2013/03/02 21:15:26 hwoarang Exp $
 
 EAPI=5
 inherit eutils gnome2-utils fdo-mime qt4-r2 games
@@ -17,8 +17,8 @@ IUSE=""
 DEPEND="media-libs/libsdl[audio]
 	media-libs/sdl-mixer[midi,vorbis]
 	media-libs/sdl-sound[mp3]
-	x11-libs/qt-core:4
-	x11-libs/qt-gui:4"
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4"
 RDEPEND="${DEPEND}"
 
 src_configure() {

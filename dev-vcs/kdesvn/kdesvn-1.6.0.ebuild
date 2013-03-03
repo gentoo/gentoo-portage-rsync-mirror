@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/kdesvn-1.6.0.ebuild,v 1.4 2013/02/12 14:20:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/kdesvn-1.6.0.ebuild,v 1.5 2013/03/02 21:08:28 hwoarang Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ DEPEND="
 	dev-libs/apr-util:1
 	>=dev-vcs/subversion-1.7
 	sys-devel/gettext
-	x11-libs/qt-sql:4[sqlite]
+	dev-qt/qtsql:4[sqlite]
 "
 RDEPEND="${DEPEND}"
 

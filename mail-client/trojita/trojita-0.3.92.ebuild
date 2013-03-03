@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-0.3.92.ebuild,v 1.1 2013/02/28 12:22:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-0.3.92.ebuild,v 1.2 2013/03/02 21:32:12 hwoarang Exp $
 
 EAPI=4
 
@@ -28,12 +28,12 @@ for MY_LANG in ${MY_LANGS} ; do
 done
 
 RDEPEND="
-	>=x11-libs/qt-gui-${QT_REQUIRED}:4
-	>=x11-libs/qt-sql-${QT_REQUIRED}:4[sqlite]
-	>=x11-libs/qt-webkit-${QT_REQUIRED}:4
+	>=dev-qt/qtgui-${QT_REQUIRED}:4
+	>=dev-qt/qtsql-${QT_REQUIRED}:4[sqlite]
+	>=dev-qt/qtwebkit-${QT_REQUIRED}:4
 "
 DEPEND="${RDEPEND}
-	test? ( >=x11-libs/qt-test-${QT_REQUIRED}:4 )
+	test? ( >=dev-qt/qttest-${QT_REQUIRED}:4 )
 	zlib? (
 		virtual/pkgconfig
 		sys-libs/zlib

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.9.ebuild,v 1.4 2012/06/24 04:10:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.9.ebuild,v 1.5 2013/03/02 22:03:47 hwoarang Exp $
 
 EAPI=4
 inherit eutils qt4-r2 autotools fdo-mime
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="fftw id3tag jack mad ogg osc +portaudio pulseaudio"
 
-RDEPEND="x11-libs/qt-core:4
-	x11-libs/qt-gui:4
+RDEPEND="dev-qt/qtcore:4
+	dev-qt/qtgui:4
 	media-libs/libsndfile
 	media-libs/libsamplerate
 	fftw? ( sci-libs/fftw:3.0 )

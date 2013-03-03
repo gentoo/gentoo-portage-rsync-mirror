@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/speedcrunch/speedcrunch-0.10.1.ebuild,v 1.4 2012/08/04 21:52:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/speedcrunch/speedcrunch-0.10.1.ebuild,v 1.5 2013/03/02 23:16:50 hwoarang Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
-DEPEND="x11-libs/qt-gui:4"
+DEPEND="dev-qt/qtgui:4"
 RDEPEND="${DEPEND}"
 
 LANGS="ca cs de en es es_AR eu fi fr he id it nb nl no pl

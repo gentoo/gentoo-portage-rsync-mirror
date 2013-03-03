@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.9.ebuild,v 1.11 2013/02/20 10:06:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.9.ebuild,v 1.12 2013/03/02 19:42:59 hwoarang Exp $
 
 EAPI=4
 
@@ -17,8 +17,8 @@ IUSE="examples qt4"
 
 RDEPEND="dev-lang/lua
 	qt4? (
-		x11-libs/qt-gui:4
-		x11-libs/qt-core:4
+		dev-qt/qtgui:4
+		dev-qt/qtcore:4
 	)"
 DEPEND="${RDEPEND}
 	dev-libs/boost"

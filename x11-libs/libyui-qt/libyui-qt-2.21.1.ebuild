@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libyui-qt/libyui-qt-2.21.1.ebuild,v 1.3 2012/08/03 14:46:48 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libyui-qt/libyui-qt-2.21.1.ebuild,v 1.4 2013/03/02 23:44:58 hwoarang Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="x11-libs/qt-gui:4
+DEPEND="dev-qt/qtgui:4
 	x11-libs/libyui
 "
 RDEPEND="${DEPEND}"

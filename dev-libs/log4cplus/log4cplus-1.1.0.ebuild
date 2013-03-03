@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cplus/log4cplus-1.1.0.ebuild,v 1.1 2013/02/21 22:23:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cplus/log4cplus-1.1.0.ebuild,v 1.2 2013/03/02 20:02:40 hwoarang Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ REQUIRED_USE="iconv? ( !working-locale !working-c-locale )
 	working-c-locale? ( !iconv !working-locale )"
 
 RDEPEND="iconv? ( virtual/libiconv )
-	qt? ( x11-libs/qt-core )"
+	qt? ( dev-qt/qtcore )"
 DEPEND="virtual/pkgconfig
 	${RDEPEND}"
 

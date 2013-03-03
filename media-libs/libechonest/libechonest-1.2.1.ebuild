@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libechonest/libechonest-1.2.1.ebuild,v 1.5 2012/12/27 23:14:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libechonest/libechonest-1.2.1.ebuild,v 1.6 2013/03/02 21:44:00 hwoarang Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -15,10 +15,10 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/qjson-0.5
-	x11-libs/qt-core:4"
+	dev-qt/qtcore:4"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	x11-libs/qt-test:4"
+	dev-qt/qttest:4"
 
 RESTRICT="test" # network access required
 

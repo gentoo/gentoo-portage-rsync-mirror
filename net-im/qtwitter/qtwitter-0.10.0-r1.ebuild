@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/qtwitter-0.10.0-r1.ebuild,v 1.4 2012/07/26 07:27:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/qtwitter-0.10.0-r1.ebuild,v 1.5 2013/03/02 22:53:36 hwoarang Exp $
 
 EAPI=4
 PLOCALES="ca_ES cs_CZ de_DE es_ES fr_FR it_IT ja_JP nb_NO pl_PL pt_BR"
@@ -17,9 +17,9 @@ KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND="x11-libs/libX11
-	>=x11-libs/qt-core-4.5:4
-	>=x11-libs/qt-gui-4.5:4
-	>=x11-libs/qt-dbus-4.5:4
+	>=dev-qt/qtcore-4.5:4
+	>=dev-qt/qtgui-4.5:4
+	>=dev-qt/qtdbus-4.5:4
 	>=dev-libs/qoauth-1.0"
 RDEPEND="${DEPEND}"
 

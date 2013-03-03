@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/cryptokit-1.6.ebuild,v 1.4 2012/08/21 18:35:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/cryptokit-1.6.ebuild,v 1.5 2013/03/02 18:36:45 aballier Exp $
 
-EAPI="3"
+EAPI="5"
 
 OASIS_BUILD_DOCS=1
 
@@ -12,7 +12,7 @@ DESCRIPTION="Cryptographic primitives library for Objective Caml"
 HOMEPAGE="http://forge.ocamlcore.org/projects/cryptokit/"
 SRC_URI="http://forge.ocamlcore.org/frs/download.php/891/${P}.tar.gz"
 LICENSE="LGPL-2"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE="zlib"
 

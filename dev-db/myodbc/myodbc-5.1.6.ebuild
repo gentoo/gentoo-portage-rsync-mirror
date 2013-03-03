@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-5.1.6.ebuild,v 1.6 2012/07/31 09:10:56 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-5.1.6.ebuild,v 1.7 2013/03/02 19:50:00 hwoarang Exp $
 
 EAPI=2
 inherit eutils versionator autotools
@@ -18,7 +18,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="debug doc static qt4"
 RDEPEND=">=virtual/mysql-4.0
 		 dev-db/unixODBC
-		 qt4? ( >=x11-libs/qt-gui-4:4 )"
+		 qt4? ( >=dev-qt/qtgui-4:4 )"
 # perl is required for building docs
 DEPEND="${RDEPEND}
 		doc? ( dev-lang/perl )"

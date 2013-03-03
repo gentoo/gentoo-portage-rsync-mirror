@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/openmesh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.26 2013/01/11 20:16:58 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.27 2013/03/02 21:38:02 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> openmesh-1.9.6-r2.ebuild,
+  openmesh-2.0_rc5.ebuild, openmesh-2.1.ebuild, openmesh-2.2.ebuild:
+  Move Qt dependencies to the new category
 
   11 Jan 2013; Justin Bronder <jsbronder@gentoo.org> openmesh-2.0_rc5.ebuild,
   openmesh-2.1.ebuild, openmesh-2.2.ebuild:
@@ -117,4 +121,3 @@
   +files/openmesh-1.0.0-gcc41.patch, +metadata.xml, +openmesh-1.0.0.ebuild:
   Initial import based on ebuild by Seemant Kulleen, thanks to ville in bug
   #128305
-

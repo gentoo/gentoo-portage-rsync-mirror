@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/qgis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.28 2013/02/11 02:38:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.29 2013/03/02 23:21:57 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qgis-1.7.0.ebuild,
+  qgis-1.8.0.ebuild:
+  Move Qt dependencies to the new category
 
   11 Feb 2013; Julian Ospald <hasufell@gentoo.org>
   -files/qgis-1.7.4-gcc4.7.patch, -files/qgis-no-python-pyc.patch:

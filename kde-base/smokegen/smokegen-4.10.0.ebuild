@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokegen/smokegen-4.10.0.ebuild,v 1.2 2013/02/23 17:21:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokegen/smokegen-4.10.0.ebuild,v 1.3 2013/03/02 21:28:57 hwoarang Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="aqua debug"
 
 DEPEND="
-	x11-libs/qt-core:4[aqua=]
+	dev-qt/qtcore:4[aqua=]
 "
 RDEPEND="${DEPEND}"
 

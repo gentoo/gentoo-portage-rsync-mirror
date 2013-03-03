@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64plus
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.21 2012/05/22 00:04:03 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.22 2013/03/02 21:14:43 hwoarang Exp $
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> mupen64plus-1.5-r1.ebuild,
+  mupen64plus-1.5-r2.ebuild:
+  Move Qt dependencies to the new category
 
   22 May 2012; Jeff Horelick <jdhore@gentoo.org> mupen64plus-1.5-r2.ebuild:
   marked x86 per bug 413833
@@ -104,4 +108,3 @@
   +files/mupen64plus-1.5-unbundle-bzip2.patch, +metadata.xml:
   Ebuild for games-emulation/mupen64plus (bug #215426). Thanks to all Bugzilla
   thread contributors.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.11.0.ebuild,v 1.1 2013/01/10 11:08:34 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.11.0.ebuild,v 1.2 2013/03/02 23:07:49 hwoarang Exp $
 
 EAPI=5
 
@@ -17,10 +17,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="x11-libs/qt-core:4
-	x11-libs/qt-gui:4
-	x11-libs/qt-sql:4
-	x11-libs/qt-webkit:4"
+DEPEND="dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtsql:4
+	dev-qt/qtwebkit:4"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
