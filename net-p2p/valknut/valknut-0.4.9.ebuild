@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.4.9.ebuild,v 1.9 2013/03/02 23:10:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.4.9.ebuild,v 1.10 2013/03/03 13:48:03 xarthisius Exp $
 
 EAPI=2
+
+inherit eutils
 
 DESCRIPTION="A open source cross platform client for the Direct Connect network"
 HOMEPAGE="http://sourceforge.net/projects/wxdcgui/"
@@ -19,6 +21,10 @@ RDEPEND="dev-qt/qtgui:4[qt3support]
 	>=net-p2p/dclib-0.3.23"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc47.patch
+}
 
 src_configure() {
 	econf \
