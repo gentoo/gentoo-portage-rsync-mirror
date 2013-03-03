@@ -1,6 +1,14 @@
 # ChangeLog for net-print/cups-pk-helper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/ChangeLog,v 1.23 2013/01/06 10:05:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/ChangeLog,v 1.25 2013/03/03 14:50:44 pacho Exp $
+
+*cups-pk-helper-0.2.4-r1 (03 Mar 2013)
+
+  03 Mar 2013; Pacho Ramos <pacho@gentoo.org> +cups-pk-helper-0.2.4-r1.ebuild,
+  +files/cups-pk-helper-0.2.4-revert-stricter.patch,
+  -cups-pk-helper-0.2.2.ebuild, -files/cups-pk-helper-0.2.2-cups-1.6.patch:
+  Revert 'Be stricter when validating printer names', bug #459596 by plaes.
+  Drop old.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> cups-pk-helper-0.2.4.ebuild:
   Add ~sparc, wrt bug #449220

@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/cups-pk-helper-0.2.2.ebuild,v 1.12 2012/10/16 02:41:29 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/cups-pk-helper-0.2.4-r1.ebuild,v 1.1 2013/03/03 14:48:52 pacho Exp $
 
-EAPI="4"
-
+EAPI=5
 inherit eutils
 
 DESCRIPTION="PolicyKit helper to configure cups with fine-grained privileges"
@@ -12,7 +11,7 @@ SRC_URI="http://www.freedesktop.org/software/${PN}/releases/${P}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~ppc ~ppc64 x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 # Require {glib,gdbus-codegen}-2.30.0 due to GDBus changes between 2.29.92
@@ -32,8 +31,8 @@ DEPEND="${COMMON_DEPEND}
 src_prepare() {
 	DOCS="AUTHORS HACKING NEWS README"
 
-	# bug #428544, https://bugs.freedesktop.org/show_bug.cgi?id=52265
-	epatch "${FILESDIR}/${PN}-0.2.2-cups-1.6.patch"
+	# Revert "Be stricter when validating printer names", bug #459596
+	epatch "${FILESDIR}/${P}-revert-stricter.patch"
 
 	# Regenerate dbus-codegen files to fix build with glib-2.30.x; bug #410773
 	rm -v src/cph-iface-mechanism.{c,h} || die

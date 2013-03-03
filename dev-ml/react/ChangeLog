@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/react
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/react/ChangeLog,v 1.10 2012/08/07 15:30:51 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/react/ChangeLog,v 1.12 2013/03/03 14:36:06 aballier Exp $
+
+  03 Mar 2013; Alexis Ballier <aballier@gentoo.org> react-0.9.4.ebuild:
+  eapi5 and define subslot
+
+  03 Mar 2013; Alexis Ballier <aballier@gentoo.org> -react-0.9.3.ebuild:
+  remove old
 
 *react-0.9.4 (07 Aug 2012)
 

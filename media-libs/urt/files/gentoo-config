@@ -1,5 +1,5 @@
 #define ABEKASA60
-#define ABEKASA62
+##define ABEKASA62	bug #455970
 #define ALIAS
 ##define CGM
 #define CUBICOMP
@@ -30,6 +30,7 @@
 #define X_SHARED_MEMORY
 
 #defpath DEST bin
+#defpath MAN_DEST man-dest
 #defpath RI include
 #defpath RL lib
 

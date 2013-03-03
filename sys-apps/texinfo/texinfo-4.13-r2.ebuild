@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.13-r2.ebuild,v 1.1 2012/05/24 02:02:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.13-r2.ebuild,v 1.2 2013/03/03 14:57:57 ssuominen Exp $
 
 EAPI="2"
 
@@ -31,6 +31,7 @@ src_prepare() {
 	# waiting to be sent upstream for my copyright assignment form to be
 	# ready - Flameeyes
 	epatch "${FILESDIR}"/${P}-docbook.patch
+	epatch "${FILESDIR}"/${P}-tinfo.patch #457556
 }
 
 src_configure() {

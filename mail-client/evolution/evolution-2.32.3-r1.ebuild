@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3-r1.ebuild,v 1.18 2012/12/24 04:37:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3-r1.ebuild,v 1.19 2013/03/03 14:31:22 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -156,6 +156,9 @@ src_prepare() {
 	# Fix build failure with glib-2.32, bug #412111
 	epatch "${FILESDIR}/${P}-gmodule-explicit.patch"
 	epatch "${FILESDIR}/${P}-g_thread_init.patch"
+
+	# Support both old and new-buf libxml2 APIs, bug #459546
+	epatch "${FILESDIR}/${P}-libxml2-2.9.patch"
 
 	# Use NSS/NSPR only if 'ssl' is enabled.
 	if use ssl ; then

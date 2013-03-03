@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocaml-ssl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.23 2012/03/07 09:16:10 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ssl/ChangeLog,v 1.24 2013/03/03 14:52:11 aballier Exp $
+
+  03 Mar 2013; Alexis Ballier <aballier@gentoo.org> ocaml-ssl-0.4.6.ebuild:
+  eapi5: define subslot and use slot deps. cosmetics.
 
   07 Mar 2012; Alexis Ballier <aballier@gentoo.org> -ocaml-ssl-0.4.3.ebuild,
   -ocaml-ssl-0.4.4.ebuild, -ocaml-ssl-0.4.5.ebuild:

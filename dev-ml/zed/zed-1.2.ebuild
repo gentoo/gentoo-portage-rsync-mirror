@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/zed/zed-1.2.ebuild,v 1.1 2012/08/02 12:04:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/zed/zed-1.2.ebuild,v 1.2 2013/03/03 14:40:28 aballier Exp $
 
-EAPI=4
+EAPI=5
 
 OASIS_BUILD_DOCS=1
 inherit oasis
@@ -12,12 +12,12 @@ HOMEPAGE="http://forge.ocamlcore.org/projects/zed/"
 SRC_URI="http://forge.ocamlcore.org/frs/download.php/944/${P}.tar.gz"
 
 LICENSE="BSD"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-ml/camomile
-	dev-ml/react"
+DEPEND="dev-ml/camomile:=
+	dev-ml/react:="
 RDEPEND="${DEPEND}"
 DOCS=( "CHANGES" )
 
