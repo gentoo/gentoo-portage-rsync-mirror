@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.8.ebuild,v 1.4 2012/07/28 13:07:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.8.ebuild,v 1.5 2013/03/03 10:46:20 vapier Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"

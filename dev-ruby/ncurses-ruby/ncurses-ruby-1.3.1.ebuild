@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ncurses-ruby-1.3.1.ebuild,v 1.8 2012/07/22 14:26:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ncurses-ruby-1.3.1.ebuild,v 1.9 2013/03/03 10:31:29 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -25,6 +25,9 @@ RDEPEND="${DEPEND}"
 all_ruby_prepare() {
 	# Remove hardcoded CFLAGS settings.
 	sed -i -e '/CFLAGS/d' extconf.rb || die
+
+	# Use pkgconfig to determine linking, bug 459636
+	sed -i -e 's/curses_lib = "ncurses"/pkg_config("ncurses")/' extconf.rb || die
 }
 
 each_ruby_configure() {
