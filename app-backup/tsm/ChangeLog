@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/tsm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/ChangeLog,v 1.18 2013/01/16 22:29:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/ChangeLog,v 1.19 2013/03/03 19:29:05 pacho Exp $
+
+  03 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Add to proxy-maintainers herd
 
 *tsm-6.4.0.0-r1 (16 Jan 2013)
 

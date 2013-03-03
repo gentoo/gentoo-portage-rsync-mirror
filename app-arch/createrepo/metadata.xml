@@ -2,12 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>alon.barlev@gmail.com</email>
+	<email>alonbl@gentoo.org</email>
 	<name>Alon Bar-Lev</name>
-	<description>Please assign bugs</description>
-</maintainer>
-<maintainer>
-	<email>pacho@gentoo.org</email>
-	<description>proxy-maintainer, please CC on bugs</description>
 </maintainer>
 </pkgmetadata>
