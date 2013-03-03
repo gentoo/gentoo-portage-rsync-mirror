@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/scikits_learn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/ChangeLog,v 1.18 2013/02/21 00:42:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/ChangeLog,v 1.19 2013/03/03 07:39:23 bicatali Exp $
+
+*scikits_learn-0.13.1 (03 Mar 2013)
+
+  03 Mar 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  +scikits_learn-0.13.1.ebuild, -files/0.10-atlas.patch,
+  -files/0.12.1-linalg.patch:
+  Version bump
 
   21 Feb 2013; Sébastien Fabbro <bicatali@gentoo.org>
   -scikits_learn-0.12.1.ebuild, -scikits_learn-0.13.ebuild, metadata.xml:

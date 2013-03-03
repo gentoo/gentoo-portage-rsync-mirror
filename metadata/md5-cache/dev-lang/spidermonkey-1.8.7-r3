@@ -4,10 +4,10 @@ DESCRIPTION=Stand-alone JavaScript C library
 EAPI=5
 HOMEPAGE=http://www.mozilla.org/js/spidermonkey/
 IUSE=debug jit minimal static-libs test
-KEYWORDS=~alpha ~amd64 ~arm ~hppa -ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd
+KEYWORDS=~alpha ~amd64 ~arm ~hppa -ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd
 LICENSE=NPL-1.1
 RDEPEND=>=dev-libs/nspr-4.7.0 virtual/libffi
 SLOT=0/mozjs187
 SRC_URI=http://people.mozilla.com/~dmandelin/js187-1.0.0.tar.gz http://dev.gentoo.org/~anarchy/mozilla/patchsets/spidermonkey-1.8.7-patches-0.1.tar.xz
 _eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	2824df7f5dc9f47aee293af8a6b517ed	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	pax-utils	0ace932c4045349c7fc1af0fe7091acf	python	89dff4d72d57f253f9f78b7f8c5d55c8	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=64475a85cd2152f747ad7d9ce9647cd8
+_md5_=dda8b33f56a58c627addc263636b5d71

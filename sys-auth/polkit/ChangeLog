@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.135 2013/02/23 15:02:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.136 2013/03/03 07:57:45 vapier Exp $
+
+  03 Mar 2013; Mike Frysinger <vapier@gentoo.org> polkit-0.110.ebuild:
+  Add s390 keywords #457078 by Michael Palimaka.
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> polkit-0.110.ebuild:
   Stable for alpha, wrt bug #452688

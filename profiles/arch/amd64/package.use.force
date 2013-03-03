@@ -1,6 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.force,v 1.6 2011/04/21 10:30:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.force,v 1.7 2013/03/03 07:34:00 tetromino Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (03 Mar 2013)
+# wine64 is optional
+app-emulation/wine -abi_x86_64
 
 # Diego Elio Pettenò <flameeyes@gmail.com> (21 Apr 2011)
 # The plugin is 32-bit only (and I'm not even sure if it works with
