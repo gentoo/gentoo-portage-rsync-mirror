@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/ipager
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ipager/ChangeLog,v 1.3 2010/02/06 20:14:38 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ipager/ChangeLog,v 1.4 2013/03/03 05:02:49 dirtyepic Exp $
+
+  03 Mar 2013; Ryan Hill <dirtyepic@gentoo.org> ipager-1.1.0.ebuild,
+  +files/ipager-1.1.0-gcc47.patch:
+  Fix build with GCC 4.7 (bug #423215).
 
   06 Feb 2010; Samuli Suominen <ssuominen@gentoo.org> ipager-1.1.0.ebuild:
   Missing USE depend wrt #248571 by Kacper Kowalik.

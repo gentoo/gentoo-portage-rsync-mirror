@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnipper/libnipper-0.12.6-r1.ebuild,v 1.2 2011/03/19 20:08:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnipper/libnipper-0.12.6-r1.ebuild,v 1.3 2013/03/03 05:18:56 dirtyepic Exp $
 
 EAPI=4
 
@@ -18,4 +18,5 @@ IUSE=""
 
 PATCHES=(
 	"${FILESDIR}/${P}-glibc-2.10.patch"
+	"${FILESDIR}/${P}-gcc47.patch"
 )
