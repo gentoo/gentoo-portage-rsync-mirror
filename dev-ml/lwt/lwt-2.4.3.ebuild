@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/lwt-2.4.3.ebuild,v 1.1 2013/01/13 20:47:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/lwt-2.4.3.ebuild,v 1.2 2013/03/03 14:25:41 aballier Exp $
 
-EAPI=4
+EAPI=5
 
 OASIS_BUILD_TESTS=1
 OASIS_BUILD_DOCS=1
@@ -15,15 +15,15 @@ HOMEPAGE="http://ocsigen.org/lwt"
 
 IUSE="gtk +react +ssl"
 
-DEPEND="react? ( dev-ml/react )
+DEPEND="react? ( dev-ml/react:= )
 	dev-libs/libev
-	ssl? ( >=dev-ml/ocaml-ssl-0.4.0 )
-	gtk? ( dev-ml/lablgtk dev-libs/glib:2 )"
+	ssl? ( >=dev-ml/ocaml-ssl-0.4.0:= )
+	gtk? ( dev-ml/lablgtk:= dev-libs/glib:2 )"
 
 RDEPEND="${DEPEND}
 	!<www-servers/ocsigen-1.1"
 
-SLOT="0"
+SLOT="0/${PV}"
 LICENSE="LGPL-2.1-with-linking-exception"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lwt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/ChangeLog,v 1.24 2013/03/03 11:21:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/ChangeLog,v 1.25 2013/03/03 14:25:41 aballier Exp $
+
+  03 Mar 2013; Alexis Ballier <aballier@gentoo.org> lwt-2.4.3.ebuild:
+  eapi5, define subslot and use slotdeps
 
   03 Mar 2013; Alexis Ballier <aballier@gentoo.org> -lwt-2.4.0.ebuild,
   -lwt-2.4.1.ebuild, -lwt-2.4.2.ebuild:
