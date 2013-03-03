@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_gettext/fast_gettext-0.6.10.ebuild,v 1.1 2012/10/05 10:03:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_gettext/fast_gettext-0.7.0.ebuild,v 1.1 2013/03/03 20:41:47 graaff Exp $
 
-EAPI="4"
+EAPI=5
 
 # jruby support requires sqlite3 support for jruby.
 USE_RUBY="ruby18 ruby19 ree18"
@@ -27,8 +27,8 @@ ruby_add_bdepend "test? ( dev-ruby/activerecord dev-ruby/bundler )"
 all_ruby_prepare() {
 	rm Gemfile.lock || die
 
-	# Remove jeweler from Gemfile since it is not needed for tests.
-	sed -i '/jeweler/d' Gemfile || die
+	# Remove jeweler and bump from Gemfile since they are not needed for tests.
+	sed -i -e '/jeweler/d' -e '/bump/d' -e '/appraisal/d' Gemfile || die
 
 	# Avoid unneeded dependency on git.
 	sed -i -e '/git ls-files/ s:^:#:' fast_gettext.gemspec || die

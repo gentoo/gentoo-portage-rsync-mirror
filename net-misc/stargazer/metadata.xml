@@ -11,6 +11,7 @@
     <name>Tom Wijsman</name>
     <description>Committer, please CC him.</description>
   </maintainer>
+  <herd>proxy-maintainers</herd>
   <longdescription>
     Stargazer is a powerful (inter)net billing system, capable of gathering
     traffic statistics from many sources (such as NetFlow protocol,

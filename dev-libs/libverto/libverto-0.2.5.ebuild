@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/libverto-0.2.5.ebuild,v 1.11 2013/03/03 20:27:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/libverto-0.2.5.ebuild,v 1.12 2013/03/03 20:42:19 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="https://fedorahosted.org/releases/l/i/libverto/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 s390 x86 ~amd64-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 s390 sparc x86 ~amd64-fbsd"
 IUSE="glib +libev libevent tevent +threads static-libs"
 
 # file collisions

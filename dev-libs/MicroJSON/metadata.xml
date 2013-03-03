@@ -11,6 +11,7 @@
     <name>Tom Wijsman</name>
     <description>Committer, please CC him.</description>
   </maintainer>
+  <herd>proxy-maintainers</herd>
   <longdescription>
     Small and simple to use JSON generation and parsing library.
   </longdescription>

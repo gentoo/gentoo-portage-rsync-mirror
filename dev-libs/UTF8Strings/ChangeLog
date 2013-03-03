@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/UTF8Strings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/ChangeLog,v 1.6 2013/02/24 12:15:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/ChangeLog,v 1.7 2013/03/03 20:47:19 tomwij Exp $
+
+  03 Mar 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Added the proxy-maintainers herd as requested on the dev ML.
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> UTF8Strings-1.12.1.ebuild:
   Stable for x86, wrt bug #458704
