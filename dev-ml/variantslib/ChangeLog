@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/variantslib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/variantslib/ChangeLog,v 1.5 2013/02/09 00:13:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/variantslib/ChangeLog,v 1.6 2013/03/03 11:24:51 aballier Exp $
+
+  03 Mar 2013; Alexis Ballier <aballier@gentoo.org>
+  -variantslib-108.00.01.ebuild, -variantslib-108.07.01.ebuild,
+  -variantslib-109.07.00.ebuild:
+  remove old
 
 *variantslib-109.08.00 (08 Feb 2013)
 

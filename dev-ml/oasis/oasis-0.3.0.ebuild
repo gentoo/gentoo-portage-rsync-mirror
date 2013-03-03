@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/oasis/oasis-0.3.0.ebuild,v 1.3 2012/10/06 16:54:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/oasis/oasis-0.3.0.ebuild,v 1.4 2013/03/03 11:18:08 aballier Exp $
 
-EAPI=3
+EAPI=5
 
 OASIS_BUILD_TESTS=1
 OASIS_BUILD_DOCS=1
@@ -15,11 +15,11 @@ HOMEPAGE="http://oasis.forge.ocamlcore.org/index.php"
 SRC_URI="http://forge.ocamlcore.org/frs/download.php/918/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1-with-linking-exception"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND=">=dev-ml/ocaml-data-notation-0.0.3"
+RDEPEND=">=dev-ml/ocaml-data-notation-0.0.3:="
 DEPEND="${RDEPEND}
 	dev-ml/ocamlify
 	dev-ml/ocamlmod

@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.288 2013/02/04 20:19:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.289 2013/03/03 11:02:36 flameeyes Exp $
+
+*boost-1.52.0-r6 (03 Mar 2013)
+
+  03 Mar 2013; Diego E. Pettenò <flameeyes@gentoo.org> +boost-1.52.0-r6.ebuild,
+  +files/boost-1.52.0-locale-utf.patch, -boost-1.52.0-r5.ebuild:
+  Apply security patch for bug #455464; add subslot definition; depend on the
+  -r1 version of boost-build which might fix some build failures.
 
 *boost-1.53.0 (04 Feb 2013)
 
