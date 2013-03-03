@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/readme.gentoo.eclass,v 1.3 2013/02/04 18:39:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/readme.gentoo.eclass,v 1.4 2013/03/03 12:05:08 pacho Exp $
 
 # @ECLASS: readme.gentoo
 # @MAINTAINER:
@@ -63,7 +63,7 @@ readme.gentoo_create_doc() {
 		if [[ -n "${DISABLE_AUTOFORMATTING}" ]]; then
 			echo "${DOC_CONTENTS}" > "${T}"/README.gentoo
 		else
-			echo -e ${DOC_CONTENTS} | fmt > "${T}"/README.gentoo
+			echo -e ${DOC_CONTENTS} | fold -s -w 70 > "${T}"/README.gentoo
 		fi
 		eshopts_pop
 	elif [[ -f "${FILESDIR}/README.gentoo-${SLOT%/*}" ]]; then

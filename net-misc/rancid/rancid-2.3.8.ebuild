@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid/rancid-2.3.8.ebuild,v 1.2 2013/02/07 09:41:03 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid/rancid-2.3.8.ebuild,v 1.3 2013/03/03 12:06:21 pacho Exp $
 
 EAPI=4
 
@@ -74,6 +74,7 @@ pkg_preinst() {
 	fowners ${PN}:${PN} /var/${PN}/{,logs,.cloginrc}
 }
 
+DISABLE_AUTOFORMATTING="yes"
 DOC_CONTENTS="Micro-HOWTO on how to get running:
 
 1) Modify MAILPREFIX, ADMINMAILPREFIX, and LIST_OF_GROUPS

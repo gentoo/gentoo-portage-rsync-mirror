@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.702 2013/03/03 00:22:56 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.703 2013/03/03 12:05:08 pacho Exp $
+
+  03 Mar 2013; Pacho Ramos <pacho@gentoo.org> readme.gentoo.eclass:
+  Change formatting tool as discussed with Ulrich Müller in bug #460050,
+  thanks a lot to him for his help.
 
   03 Mar 2013; Davide Pesavento <pesa@gentoo.org> autotools-utils.eclass,
   kde4-base.eclass, qt4-build.eclass:

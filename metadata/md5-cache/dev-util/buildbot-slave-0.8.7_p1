@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-python/setuptools dev-python/twisted !!<dev-util/buildbot-0.8.1 !<dev-util/buildbot-0.8.3 =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://pypi/b/buildbot-slave/buildbot-slave-0.8.7p1.tar.gz
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	python	89dff4d72d57f253f9f78b7f8c5d55c8	readme.gentoo	5efd401a93b4821a9047556650a0702c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	python	89dff4d72d57f253f9f78b7f8c5d55c8	readme.gentoo	43b24e211d1b518039afb4f56cddd648	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=2f039c43898522f97bc4b13d4df67bfa

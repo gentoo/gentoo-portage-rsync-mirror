@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rancid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid/ChangeLog,v 1.3 2013/02/07 09:41:03 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid/ChangeLog,v 1.4 2013/03/03 12:06:21 pacho Exp $
+
+  03 Mar 2013; Pacho Ramos <pacho@gentoo.org> rancid-2.3.8.ebuild:
+  DISABLE_AUTOFORMATTING needs to be used to prevent README.gentoo file from
+  being really hard to read
 
   07 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> rancid-2.3.8.ebuild:
   Respect CFLAGS wrt bug #455840, fix conditions on nonexistent 'svn' USE flag
@@ -15,4 +19,3 @@
   +files/rancid-2.3.8-buildsystem.patch, +files/rancid-2.3.8-config.patch,
   +files/rancid-2.3.8-mailprefix.patch, +metadata.xml:
   Initial import, thanks to all contributors on bug 151846.
-

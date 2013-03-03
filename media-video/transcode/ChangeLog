@@ -1,6 +1,12 @@
 # ChangeLog for media-video/transcode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.304 2012/09/06 05:02:42 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.306 2013/03/03 12:14:31 ago Exp $
+
+  03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> transcode-1.1.7-r1.ebuild:
+  Stable for x86, wrt bug #459454
+
+  03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> transcode-1.1.7-r1.ebuild:
+  Stable for amd64, wrt bug #459454
 
   06 Sep 2012; Samuli Suominen <ssuominen@gentoo.org>
   -files/transcode-1.0.6-imagemagick.patch, -files/transcode-1.1.4-x264.patch,

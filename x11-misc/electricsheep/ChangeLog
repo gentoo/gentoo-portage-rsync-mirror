@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/electricsheep
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.53 2012/09/05 08:13:55 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.54 2013/03/03 12:29:45 aballier Exp $
+
+  03 Mar 2013; Alexis Ballier <aballier@gentoo.org>
+  electricsheep-2.7_beta11.ebuild,
+  +files/electricsheep-2.7_beta11-ffmpeg1.patch:
+  fix build with ffmpeg-1, bug #458912
 
   05 Sep 2012; Justin Lecher <jlec@gentoo.org> electricsheep-2.7_beta11.ebuild:
   Use domenu instead insinto + doins to install .desktop files

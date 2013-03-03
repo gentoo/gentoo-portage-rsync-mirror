@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmail/ChangeLog,v 1.10 2013/03/02 23:19:18 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmail/ChangeLog,v 1.12 2013/03/03 12:14:19 ago Exp $
+
+  03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libmail-0.3-r3.ebuild:
+  Stable for x86, wrt bug #460058
+
+  03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libmail-0.3-r3.ebuild:
+  Stable for amd64, wrt bug #460058
 
 *libmail-0.3-r3 (02 Mar 2013)
 
