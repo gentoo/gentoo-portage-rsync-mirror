@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/tw_cli
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.38 2012/12/01 15:46:09 neurogeek Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.39 2013/03/03 16:45:51 wschlich Exp $
+
+  03 Mar 2013; Wolfram Schlich <wschlich@gentoo.org> metadata.xml:
+  removed myself from metadata.xml
 
   01 Dec 2012; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
   Added myself as maintainer
@@ -198,4 +201,3 @@
   +tw_cli-7.7.1.ebuild:
   Initial commit. Based on ebuild submission by Joshua Schmidlkofer
   <menion@asylumwear.com>.
-

@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/megamgr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megamgr/ChangeLog,v 1.7 2012/02/28 05:40:58 idl0r Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megamgr/ChangeLog,v 1.8 2013/03/03 16:44:59 wschlich Exp $
+
+  03 Mar 2013; Wolfram Schlich <wschlich@gentoo.org> metadata.xml:
+  removed myself from metadata.xml
 
   28 Feb 2012; Christian Ruppert <idl0r@gentoo.org> megamgr-5.20-r2.ebuild:
   Add fetch restriction, bug 405987
@@ -34,4 +37,3 @@
   24 Apr 2008; Wolfram Schlich <wschlich@gentoo.org> +files/megamgr,
   +metadata.xml, +megamgr-5.20.ebuild:
   initial import
-

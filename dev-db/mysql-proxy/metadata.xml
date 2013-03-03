@@ -6,10 +6,6 @@
 	<name>Jesus Rivero</name> 
 	<description>Primary maintainer</description>
 </maintainer>
-<maintainer>
-	<email>wschlich@gentoo.org</email>
-	<name>Wolfram Schlich</name>
-</maintainer>
 <longdescription>
 MySQL Proxy is a simple program that sits between your client and MySQL
 server(s) that can monitor, analyze or transform their communication. Its

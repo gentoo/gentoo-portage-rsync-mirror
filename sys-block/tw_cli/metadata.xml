@@ -7,11 +7,6 @@
 	<description>Primary maintainer, PATA controllers</description>
 </maintainer>
 <maintainer>
-	<email>wschlich@gentoo.org</email>
-	<name>Wolfram Schlich</name>
-	<description>Secondary maintainer, SATA controllers</description>
-</maintainer>
-<maintainer>
 	<email>neurogeek@gentoo.org</email>
 	<name>Jesus Rivero</name>
 </maintainer>

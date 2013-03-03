@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/maatkit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.24 2011/09/20 10:12:12 nativemad Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.25 2013/03/03 16:50:07 wschlich Exp $
+
+  03 Mar 2013; Wolfram Schlich <wschlich@gentoo.org> metadata.xml:
+  removed myself from metadata.xml
 
   20 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> maatkit-7540.ebuild:
   x86 stable, see bug 383399
@@ -103,4 +106,3 @@
   06 Oct 2008; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
   +maatkit-2325.ebuild:
   initial import
-

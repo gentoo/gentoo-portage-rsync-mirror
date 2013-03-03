@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/wspr-2.00-r1.ebuild,v 1.1 2013/02/07 14:35:20 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/wspr-2.00-r1.ebuild,v 1.2 2013/03/03 16:59:10 tomjbe Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -68,7 +68,7 @@ src_prepare() {
 
 python_configure() {
 	# configure the built of the fortran module
-	econf
+	econf --with-portaudio-lib-dir=/usr/$(get_libdir)
 }
 
 python_compile() {

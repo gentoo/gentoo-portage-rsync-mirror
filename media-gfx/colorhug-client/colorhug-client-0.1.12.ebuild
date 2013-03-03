@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/colorhug-client-0.1.12.ebuild,v 1.1 2012/10/07 12:23:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/colorhug-client-0.1.12.ebuild,v 1.2 2013/03/03 16:56:35 pacho Exp $
 
 EAPI=4
 
 inherit gnome2
 
 DESCRIPTION="Client tools for the ColorHug display colorimeter"
-HOMEPAGE="http://www.hughsie.com/"
+HOMEPAGE="http://www.hughski.com/"
 SRC_URI="http://people.freedesktop.org/~hughsient/releases/${P}.tar.xz"
 
 LICENSE="GPL-2"
