@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/wspr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/ChangeLog,v 1.8 2013/03/03 16:59:10 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/ChangeLog,v 1.9 2013/03/03 18:42:51 tomjbe Exp $
+
+  03 Mar 2013; Thomas Beierlein <tomjbe@gentoo.org> wspr-2.00-r1.ebuild:
+  Improve build logic. Thanks for help Michal
 
   03 Mar 2013; Thomas Beierlein <tomjbe@gentoo.org> wspr-2.00-r1.ebuild:
   Fix lookup for portaudio (bug #459024). Thanks for reporting Michal

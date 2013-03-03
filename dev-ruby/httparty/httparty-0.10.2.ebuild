@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/httparty-0.8.3.ebuild,v 1.2 2012/09/27 09:43:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/httparty-0.10.2.ebuild,v 1.1 2013/03/03 18:42:02 graaff Exp $
 
-EAPI=2
+EAPI=5
 
 # jruby → testsuite fails (seems like a testuite bug)
 USE_RUBY="ruby18 ruby19 ree18"
@@ -12,7 +12,7 @@ USE_RUBY="ruby18 ruby19 ree18"
 RUBY_FAKEGEM_TASK_TEST="none"
 
 RUBY_FAKEGEM_TASK_DOC=""
-RUBY_FAKEGEM_EXTRADOC="README.rdoc History"
+RUBY_FAKEGEM_EXTRADOC="README.md History"
 
 inherit ruby-fakegem
 
@@ -24,7 +24,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-ruby_add_rdepend '=dev-ruby/multi_json-1* dev-ruby/multi_xml'
+ruby_add_rdepend '=dev-ruby/multi_json-1* >=dev-ruby/multi_xml-0.5.2'
 
 ruby_add_bdepend 'dev-ruby/rspec:0 dev-ruby/fakeweb'
 
@@ -34,6 +34,9 @@ USE_RUBY=ruby18 \
 all_ruby_prepare() {
 	# Remove bundler
 	rm Gemfile || die
+	sed -i -e '/[Bb]undler/ s:^:#:' Rakefile || die
+
+#	sed -i -e '/git ls-files/ s:^:#:' ${PN}.gemspec || die
 }
 
 each_ruby_test() {

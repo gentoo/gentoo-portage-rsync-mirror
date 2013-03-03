@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/crack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.28 2013/02/02 11:03:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.29 2013/03/03 18:43:26 graaff Exp $
+
+  03 Mar 2013; Hans de Graaff <graaff@gentoo.org> -crack-0.1.8.ebuild:
+  Cleanup.
 
 *crack-0.3.2 (02 Feb 2013)
 

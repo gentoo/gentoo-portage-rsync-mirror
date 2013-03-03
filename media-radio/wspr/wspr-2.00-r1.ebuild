@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/wspr-2.00-r1.ebuild,v 1.2 2013/03/03 16:59:10 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/wspr-2.00-r1.ebuild,v 1.3 2013/03/03 18:42:51 tomjbe Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -31,15 +31,7 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-PATCHES=(
-	"${FILESDIR}"/${P}-libdir.patch
-	"${FILESDIR}"/${P}-verbose.patch
-	"${FILESDIR}"/${P}-script.patch
-	)
-
 DOCS=( BUGS WSPR_Announcement.TXT WSPR_Instructions.TXT WSPR_Quick_Start.TXT )
-
-DISTUTILS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
 	fortran-2_pkg_setup
@@ -52,48 +44,50 @@ get_fcomp() {
 	esac
 }
 
-python_prepare() {
-	sed -i -e "s#/usr/local/lib#/usr/$(get_libdir)#" configure.ac || die
-	eautoreconf
-}
-
-src_prepare() {
+python_prepare_all() {
 	tc-export FC
 	get_fcomp
 	export FC="${FCOMP}"
 
+	local PATCHES=(
+		"${FILESDIR}"/${P}-libdir.patch
+		"${FILESDIR}"/${P}-verbose.patch
+		"${FILESDIR}"/${P}-script.patch
+	)
+
 	distutils-r1_python_prepare_all
-	python_foreach_impl run_in_build_dir python_prepare
+
+	sed -i -e "s#/usr/local/lib#/usr/$(get_libdir)#" configure.ac || die
+	sed -i -e '/makedirs/d' setup.py || die
+	eautoreconf
 }
 
-python_configure() {
-	# configure the built of the fortran module
+# Note: very hacky build system.
+# autoconf which doesn't really need Python
+# then custom Makefile which compiles the Python module with f2py
+# and finally hacked setup.py which relies on w.so created by make
+
+src_configure() {
+	# configure the build of the fortran module
 	econf --with-portaudio-lib-dir=/usr/$(get_libdir)
+
+	# then fork the sources
+	python_copy_sources
+	DISTUTILS_IN_SOURCE_BUILD=1
 }
 
 python_compile() {
 	# -shared is neded by f2py but cannot be set earlier as configure does
 	# not like it
+	local LDFLAGS=${LDFLAGS}
 	append-ldflags -shared
 	emake
 }
 
-src_install() {
-	doit() {
-		rm -rf build || die
-		distutils-r1_python_install
-	}
-
-	python_foreach_impl run_in_build_dir doit
+python_install_all() {
 	distutils-r1_python_install_all
 
 	dobin wspr
 	insinto /usr/share/${PN}
 	doins hamlib_rig_numbers
-}
-
-run_in_build_dir() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	"$@"
-	popd > /dev/null
 }
