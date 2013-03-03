@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/ChangeLog,v 1.14 2013/01/17 12:42:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/ChangeLog,v 1.15 2013/03/03 11:51:05 vapier Exp $
+
+  03 Mar 2013; Mike Frysinger <vapier@gentoo.org> glu-9.0.0.ebuild:
+  Add s390 lovin.
 
   17 Jan 2013; Justin Lecher <jlec@gentoo.org> glu-9.0.0.ebuild, metadata.xml:
   Add missing hyphen

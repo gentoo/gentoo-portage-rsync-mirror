@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.8.ebuild,v 1.4 2013/03/02 21:09:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.8.ebuild,v 1.5 2013/03/03 11:59:20 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -85,11 +85,6 @@ pkg_setup() {
 	depend.apache_pkg_setup
 
 	java-pkg-opt-2_pkg_setup
-
-	if use ctypes-python || use python; then
-		# for build-time scripts
-		python_export_best
-	fi
 
 	if ! use webdav-neon && ! use webdav-serf; then
 		ewarn "WebDAV support is disabled. You need WebDAV to"
@@ -187,6 +182,9 @@ src_configure() {
 	#compile for x86 on amd64, so workaround this issue again
 	#check newer versions, if this is still/again needed
 	myconf+=" --disable-disallowing-of-undefined-references"
+
+	# for build-time scripts
+	python_export_best
 
 	#force ruby-1.8 for bug 399105
 	#allow overriding Python include directory

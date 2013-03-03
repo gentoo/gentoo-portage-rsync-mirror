@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/valkyrie
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/ChangeLog,v 1.16 2013/03/02 21:07:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/ChangeLog,v 1.17 2013/03/03 11:33:01 xarthisius Exp $
+
+  03 Mar 2013; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/valkyrie-2.0.0-gcc47.patch, valkyrie-2.0.0.ebuild:
+  Fix building with gcc-4.7 wrt #421867. Thanks to LE GARREC Vincent
+  <legarrec.vincent@gmail.com> for patch
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> valkyrie-2.0.0.ebuild:
   Move Qt dependencies to the new category
