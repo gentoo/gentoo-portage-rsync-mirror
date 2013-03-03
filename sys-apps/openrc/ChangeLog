@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.265 2013/03/01 18:54:37 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.266 2013/03/03 03:46:42 williamh Exp $
+
+  03 Mar 2013; William Hubbs <williamh@gentoo.org> openrc-0.11.8.ebuild:
+  Per Mike Frysinger, on bug #459782, we should not rdepend on ncurses[-tinfo].
 
   01 Mar 2013; William Hubbs <williamh@gentoo.org> openrc-0.11.8.ebuild:
   The stable version of OpenRc does not support building with ncurses[tinfo]

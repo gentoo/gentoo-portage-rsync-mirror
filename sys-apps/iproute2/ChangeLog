@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.209 2013/02/28 19:19:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.210 2013/03/03 03:33:51 vapier Exp $
+
+  03 Mar 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Document USE=berkdb as disabling arpd only #459008 by Luis Ressel.
 
 *iproute2-3.8.0 (28 Feb 2013)
 

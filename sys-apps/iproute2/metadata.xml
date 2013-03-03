@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>base-system</herd>
 <use>
+	<flag name='berkdb'>build programs that use berkdb (just arpd)</flag>
 	<flag name='iptables'>include support for iptables filtering</flag>
 </use>
 </pkgmetadata>
