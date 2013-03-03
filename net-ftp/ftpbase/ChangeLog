@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/ftpbase
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.29 2010/09/30 20:38:25 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ChangeLog,v 1.30 2013/03/03 09:00:33 vapier Exp $
+
+  03 Mar 2013; Mike Frysinger <vapier@gentoo.org> ftpbase-0.00.ebuild,
+  ftpbase-0.01-r1.ebuild, ftpbase-0.01-r2.ebuild, ftpbase-0.01.ebuild:
+  Add missing user inherit for enew{user,group}.
 
   30 Sep 2010; Brent Baude <ranger@gentoo.org> ftpbase-0.01-r2.ebuild:
   stable ppc64, bug 317279
@@ -111,4 +115,3 @@
   It provides a /etc/ftpusers, installs the ftp:ftp user and creates the
   home directory.
   Optionally it provides /etc/pam.d/ftp
-

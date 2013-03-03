@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Algorithm-Diff
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Diff/ChangeLog,v 1.44 2012/06/24 12:58:40 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Diff/ChangeLog,v 1.45 2013/03/03 08:40:36 vapier Exp $
+
+  03 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  Algorithm-Diff-1.190.200.ebuild:
+  Mark s390/sh stable for real #355085.
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

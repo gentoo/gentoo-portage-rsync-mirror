@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-DNS-Resolver-Programmable
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Resolver-Programmable/ChangeLog,v 1.19 2012/11/18 11:30:06 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Resolver-Programmable/ChangeLog,v 1.20 2013/03/03 08:51:48 vapier Exp $
+
+  03 Mar 2013; Mike Frysinger <vapier@gentoo.org>
+  Net-DNS-Resolver-Programmable-0.3.0.ebuild:
+  Add s390 love.
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

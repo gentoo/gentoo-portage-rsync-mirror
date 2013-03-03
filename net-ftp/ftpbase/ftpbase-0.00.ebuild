@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.17 2007/05/06 10:52:00 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.18 2013/03/03 09:00:33 vapier Exp $
 
-inherit eutils pam
+inherit eutils pam user
 
 DESCRIPTION="FTP layout package"
 HOMEPAGE="http://www.gentoo.org/"

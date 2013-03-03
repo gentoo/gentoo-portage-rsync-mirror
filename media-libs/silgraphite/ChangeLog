@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/silgraphite
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.27 2012/05/09 13:17:05 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.28 2013/03/03 08:43:34 vapier Exp $
+
+  03 Mar 2013; Mike Frysinger <vapier@gentoo.org> silgraphite-2.3.1.ebuild:
+  Add s390 lovin.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> silgraphite-2.3.1.ebuild:
   keyword ~amd64-fbsd
@@ -87,4 +90,3 @@
   07 Jan 2010; Alexis Ballier <aballier@gentoo.org>
   +silgraphite-2.3.1.ebuild, +metadata.xml:
   Initial import, ebuild by me, will be needed for texlive 2009
-
