@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.19-r2.ebuild,v 1.1 2013/02/12 06:53:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.19-r2.ebuild,v 1.2 2013/03/03 20:17:37 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -16,7 +16,7 @@ HOMEPAGE="http://projects.gnome.org/ORBit2/"
 LICENSE="GPL-2 LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="static-libs test"
+IUSE="pic static-libs test"
 REQUIRED_USE="test? ( debug )"
 
 RDEPEND=">=dev-libs/glib-2.8:2
@@ -46,6 +46,9 @@ src_prepare() {
 	# https://bugzilla.gnome.org/show_bug.cgi?id=693636
 	epatch "${FILESDIR}/${PN}-2.14.19-link_protocol_is_local.patch"
 
+	# Build libname-server-2.a with -fPIC on hardened, bug #312161
+	epatch "${FILESDIR}/${PN}-2.14.19-fPIC.patch"
+
 	eautoreconf
 	gnome2_src_prepare
 }
@@ -64,7 +67,9 @@ src_configure() {
 		[ -x /usr/bin/orbit-idl-2 ] || die "Please emerge ~${CATEGORY}/${P} on the host system first"
 		G2CONF="${G2CONF} --with-idl-compiler=/usr/bin/orbit-idl-2"
 	fi
-	gnome2_src_configure $(use_enable static-libs static)
+	gnome2_src_configure \
+		$(use_enable pic libname-server-pic) \
+		$(use_enable static-libs static)
 }
 
 src_compile() {

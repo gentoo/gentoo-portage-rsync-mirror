@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/dar-2.4.9.ebuild,v 1.1 2013/02/03 16:15:11 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/dar-2.4.9.ebuild,v 1.2 2013/03/03 20:15:48 rich0 Exp $
 
 EAPI="3"
 inherit confutils eutils flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/dar/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux"
+KEYWORDS="amd64 ~ppc ~sparc ~x86 ~amd64-linux"
 IUSE="acl dar32 dar64 doc gcrypt lzo nls static static-libs"
 
 RESTRICT="test" # need to be run as root
