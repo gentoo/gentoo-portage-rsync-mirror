@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1008 2013/03/02 18:22:06 pinkbyte Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1009 2013/03/03 16:06:58 pacho Exp $
 
 -->
 <herds>
@@ -129,11 +129,6 @@
   <maintainer>
     <email>vapier@gentoo.org</email>
     <role>dcron</role>
-  </maintainer>
-  <maintainer>
-    <email>wschlich@gentoo.org</email>
-    <name>Wolfram Schlich</name>
-    <role>fcron</role>
   </maintainer>
 </herd>
 <herd>
@@ -654,11 +649,6 @@
       <role>Team leader</role>
       <name>Robin H. Johnson</name>
   </maintainer>
-  <maintainer>
-    <email>wschlich@gentoo.org</email>
-    <name>Wolfram Schlich</name>
-    <role>Bacula</role>
-  </maintainer>
 </herd>
 <herd>
   <name>net-mail</name>
@@ -1090,10 +1080,6 @@
     <name>Andrey Kislyuk</name>
   </maintainer>
   <maintainer>
-    <email>wschlich@gentoo.org</email>
-    <name>Wolfram Schlich</name>
-  </maintainer>
-  <maintainer>
     <email>xarthisius@gentoo.org</email>
     <name>Kacper Kowalik</name>
   </maintainer>
@@ -1128,11 +1114,6 @@
     <email>chainsaw@gentoo.org</email>
     <name>Tony Vroon</name>
     <role>ejabberd and jabber-base</role>
-  </maintainer>
-  <maintainer>
-    <email>wschlich@gentoo.org</email>
-    <name>Wolfram Schlich</name>
-    <role>MCabber</role>
   </maintainer>
 </herd>
 <herd>
@@ -1726,11 +1707,6 @@
     <name>Jeroen Roovers</name>
   </maintainer>
   <maintainer>
-    <email>wschlich@gentoo.org</email>
-    <name>Wolfram Schlich</name>
-    <role>Zabbix</role>
-  </maintainer>
-  <maintainer>
     <email>constanze@gentoo.org</email>
     <name>Constanze Hausner</name>
   </maintainer>
@@ -1985,11 +1961,6 @@
   <name>net-proxy</name>
   <email>net-proxy@gentoo.org</email>
   <description>Network proxies</description>
-  <maintainer>
-    <email>wschlich@gentoo.org</email>
-    <name>Wolfram Schlich</name>
-    <role>MySQL Proxy</role>
-  </maintainer>
 </herd>
 <herd>
   <name>kerberos</name>

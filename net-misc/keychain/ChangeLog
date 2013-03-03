@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/keychain
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.99 2013/03/01 23:58:00 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.101 2013/03/03 16:17:55 ago Exp $
+
+  03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> keychain-2.7.1-r1.ebuild:
+  Stable for sparc, wrt bug #459908
+
+  03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> keychain-2.7.1-r1.ebuild:
+  Stable for ppc64, wrt bug #459908
 
   01 Mar 2013; Vicente Olivert Riera <vincent@gentoo.org>
   keychain-2.7.1-r1.ebuild:

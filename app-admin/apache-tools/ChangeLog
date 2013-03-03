@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.141 2013/03/01 15:28:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.142 2013/03/03 16:17:30 ago Exp $
+
+  03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> apache-tools-2.2.24.ebuild:
+  Stable for sparc, wrt bug #438680
 
   01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> apache-tools-2.2.24.ebuild:
   Stable for hppa, wrt bug #438680

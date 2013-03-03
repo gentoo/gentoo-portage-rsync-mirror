@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.216 2013/03/01 15:28:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.217 2013/03/03 16:17:07 ago Exp $
+
+  03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> apache-2.2.24.ebuild:
+  Stable for sparc, wrt bug #438680
 
   01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> apache-2.2.24.ebuild:
   Stable for hppa, wrt bug #438680

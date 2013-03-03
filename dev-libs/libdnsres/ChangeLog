@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdnsres
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/ChangeLog,v 1.15 2013/02/28 19:40:12 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/ChangeLog,v 1.16 2013/03/03 16:18:16 ago Exp $
+
+  03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libdnsres-0.1a-r2.ebuild:
+  Stable for sparc, wrt bug #456538
 
   28 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> libdnsres-0.1a-r2.ebuild:
   Stable on amd64, wrt bug #456538
@@ -56,4 +59,3 @@
 
   21 Mar 2006; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Initial import, needed for new honeyd series
-

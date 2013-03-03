@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.4.ebuild,v 1.5 2013/03/03 15:26:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.4.ebuild,v 1.8 2013/03/03 16:13:24 ago Exp $
 
 EAPI=5
 
-inherit eutils gnome2 multilib
+inherit gnome2 flag-o-matic
 
 DESCRIPTION="Graphical IRC client based on XChat"
 SRC_URI="mirror://github/${PN}/${PN}/${P}.tar.xz"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.hexchat.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sparc x86 ~amd64-linux"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 sparc x86 ~amd64-linux"
 IUSE="dbus fastscroll +gtk ipv6 libnotify libproxy nls ntlm perl +plugins python spell ssl threads"
 
 RDEPEND="dev-libs/glib:2

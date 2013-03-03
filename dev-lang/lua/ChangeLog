@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/lua
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.174 2013/03/03 15:27:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.176 2013/03/03 16:19:05 ago Exp $
+
+  03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> lua-5.1.5.ebuild:
+  Stable for sparc, wrt bug #457882
+
+  03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> lua-5.1.5.ebuild:
+  Stable for ppc64, wrt bug #457882
 
   03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> lua-5.1.5.ebuild:
   Stable for ppc, wrt bug #457882

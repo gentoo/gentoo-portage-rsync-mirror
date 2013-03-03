@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-2.2.26-r2.ebuild,v 1.4 2013/03/02 13:09:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-2.2.26-r2.ebuild,v 1.5 2013/03/03 16:07:51 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/release/${PV}/ncbi.tar.gz 
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="~alpha amd64 ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha amd64 ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc static-libs X"
 
 RDEPEND="
