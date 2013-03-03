@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/q4wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.38 2013/03/03 15:34:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.39 2013/03/03 22:49:29 hwoarang Exp $
+
+  03 Mar 2013; Markos Chandras <hwoarang@gentoo.org> -q4wine-0.999_rc7.ebuild,
+  -q4wine-0.999_rc8.ebuild:
+  remove old
 
   03 Mar 2013; Markos Chandras <hwoarang@gentoo.org> ChangeLog:
   Version bump. Thanks to Alexey Malakhov <brezerk@gmail.com>

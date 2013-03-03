@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pysmssend
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/ChangeLog,v 1.26 2012/09/09 08:08:54 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/ChangeLog,v 1.27 2013/03/03 22:56:45 hwoarang Exp $
+
+  03 Mar 2013; Markos Chandras <hwoarang@gentoo.org> -pysmssend-1.45.ebuild:
+  remove old
 
   09 Sep 2012; Markos Chandras <hwoarang@gentoo.org> pysmssend-9999.ebuild:
   Switch from make_desktop_entry to domenu as a .desktop file is provided in the
