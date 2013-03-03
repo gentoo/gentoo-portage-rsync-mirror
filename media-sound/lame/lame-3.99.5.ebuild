@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.99.5.ebuild,v 1.14 2013/03/02 17:58:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.99.5.ebuild,v 1.15 2013/03/03 15:08:00 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -25,7 +25,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-3.96-ccc.patch \
 		"${FILESDIR}"/${PN}-3.98-gtk-path.patch \
-		"${FILESDIR}"/${P}-pkgconfig-to-get-correct-libs.patch \
+		"${FILESDIR}"/${PN}-3.99.5-tinfo.patch \
 		"${WORKDIR}"/${P}-automake-2.12.patch
 
 	mkdir libmp3lame/i386/.libs || die #workaround parallel build with nasm

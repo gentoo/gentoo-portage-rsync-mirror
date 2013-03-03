@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.68 2013/02/11 03:08:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.69 2013/03/03 15:04:56 aballier Exp $
+
+  03 Mar 2013; Alexis Ballier <aballier@gentoo.org> -ocamlnet-3.5.1.ebuild,
+  -ocamlnet-3.6.ebuild, -ocamlnet-3.6.1.ebuild, -ocamlnet-3.6.2.ebuild:
+  remove old
 
   11 Feb 2013; Alexis Ballier <aballier@gentoo.org> ocamlnet-3.6.3.ebuild:
   eapi5, add subslot and use := deps

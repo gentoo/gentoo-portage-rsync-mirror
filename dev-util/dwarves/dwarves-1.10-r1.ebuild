@@ -1,10 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/dwarves-1.10.ebuild,v 1.1 2012/08/02 15:11:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/dwarves-1.10-r1.ebuild,v 1.1 2013/03/03 15:12:43 hasufell Exp $
 
-EAPI=4
+EAPI=5
 
-inherit multilib cmake-utils
+PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
+inherit multilib cmake-utils python-single-r1
 
 DESCRIPTION="pahole (Poke-a-Hole) and other DWARF2 utilities"
 HOMEPAGE="http://git.kernel.org/?p=linux/kernel/git/acme/pahole.git;a=summary"
@@ -14,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="debug"
 
-RDEPEND=">=dev-libs/elfutils-0.131
+RDEPEND="${PYTHON_DEPS}
+	>=dev-libs/elfutils-0.131
 	sys-libs/zlib"
 DEPEND="${RDEPEND}"
 
@@ -26,6 +28,7 @@ else
 fi
 
 DOCS=( README README.ctracer NEWS )
+PATCHES=( "${FILESDIR}"/${P}-python-import.patch )
 
 src_configure() {
 	local mycmakeargs=( "-D__LIB=$(get_libdir)" )
@@ -33,3 +36,9 @@ src_configure() {
 }
 
 src_test() { :; }
+
+src_install() {
+	cmake-utils_src_install
+	python_fix_shebang "${D}"/usr/bin/ostra-cg \
+		"${D}"/usr/share/dwarves/runtime/python/ostra.py
+}

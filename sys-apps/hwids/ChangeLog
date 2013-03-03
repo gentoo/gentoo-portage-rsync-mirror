@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.84 2013/03/02 23:43:35 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.85 2013/03/03 15:25:05 ago Exp $
+
+  03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> hwids-20130302.ebuild:
+  Stable for ppc, wrt bug #459968
 
   02 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> hwids-20130302.ebuild:
   Stable on amd64, wrt bug #459968

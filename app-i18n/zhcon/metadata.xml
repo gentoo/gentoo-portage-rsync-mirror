@@ -7,11 +7,6 @@
   <name>Zhang Le, Robert</name>
   <description>Proxied maintainer</description>
 </maintainer>
-
-<maintainer>
-  <email>maintainer-needed@gentoo.org</email>
-</maintainer>
-
 <longdescription>zhcon is a Fast double-byte virtual console for
 Chinese/Japanese/Korean (CJK) running under GNU/Linux and FreeBSD.
 It adds the ability of displaying and inputting CJK double-byte

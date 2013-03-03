@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/dwarves
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.17 2013/03/03 10:27:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.18 2013/03/03 15:12:43 hasufell Exp $
+
+*dwarves-1.10-r1 (03 Mar 2013)
+
+  03 Mar 2013; Julian Ospald <hasufell@gentoo.org> -dwarves-1.10.ebuild,
+  +dwarves-1.10-r1.ebuild, +files/dwarves-1.10-python-import.patch:
+  fix bug 423817
 
   03 Mar 2013; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Drop to maintainer needed.
