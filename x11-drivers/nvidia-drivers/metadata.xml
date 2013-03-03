@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>cardoe@gentoo.org</email>
-  <description>General maintainer and POC with NVIDIA</description>
-</maintainer>
-<maintainer>
   <email>jer@gentoo.org</email>
 </maintainer>
 <maintainer>
