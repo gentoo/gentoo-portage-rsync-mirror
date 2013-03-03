@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.26.ebuild,v 1.11 2012/09/07 18:07:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.26.ebuild,v 1.12 2013/03/03 08:23:00 vapier Exp $
 
 EAPI="3"
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Use this to make tarballs :)"
 HOMEPAGE="http://www.gnu.org/software/tar/"

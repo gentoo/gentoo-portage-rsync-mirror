@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/openerp-6.1.1-r1.ebuild,v 1.1 2013/02/20 07:01:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/openerp-6.1.1-r1.ebuild,v 1.2 2013/03/03 08:27:26 vapier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit eutils distutils
+inherit eutils distutils user
 
 DESCRIPTION="Open Source ERP & CRM"
 HOMEPAGE="http://www.openerp.com/"

@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.454 2013/02/18 21:17:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.455 2013/03/03 08:15:18 tetromino Exp $
+
+*wine-1.5.25 (03 Mar 2013)
+
+  03 Mar 2013; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.5.25.ebuild,
+  wine-9999.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.5.25 for the announcement.
+  Update to autotools-multilib.eclass (bug #458756, thanks to Michał Górny),
+  so USE="win32 -win64" is now ABI_X86="32 -64".
 
 *wine-1.5.24 (18 Feb 2013)
 
