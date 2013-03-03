@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.39 2013/02/25 08:41:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.41 2013/03/03 19:45:41 ago Exp $
+
+  03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> talloc-2.0.7.ebuild:
+  Stable for alpha, wrt bug #458712
+
+  03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> talloc-2.0.7.ebuild:
+  Stable for arm, wrt bug #458712
 
   25 Feb 2013; Zac Medico <zmedico@gentoo.org> talloc-2.0.8.ebuild:
   Add ~arm-linux keyword.

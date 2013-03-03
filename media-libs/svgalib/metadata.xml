@@ -7,11 +7,6 @@
 	<name>Andrew Savchenko</name>
 	<description>Assign bugs to him</description>
 </maintainer>
-<maintainer>
-	<email>pacho@gentoo.org</email>
-	<description>Proxy maintainer, CC him in bugs. If you have a x86
-		system, please get this package.</description>
-</maintainer>
 <use>
 	<flag name="kernel-helper">Build the helper kernel module</flag>
 </use>
