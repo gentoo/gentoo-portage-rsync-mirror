@@ -1,6 +1,6 @@
-# ChangeLog for x11-libs/qt-webkit
+# ChangeLog for dev-qt/qtwebkit
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.1 2013/03/02 15:35:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.2 2013/03/03 04:22:26 yngwin Exp $
 
   31 Dec 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Cleanup metadata.

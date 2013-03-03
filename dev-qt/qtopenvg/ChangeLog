@@ -1,6 +1,6 @@
-# ChangeLog for x11-libs/qt-openvg
+# ChangeLog for dev-qt/qtopenvg
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopenvg/ChangeLog,v 1.1 2013/03/02 15:32:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopenvg/ChangeLog,v 1.2 2013/03/03 04:18:28 yngwin Exp $
 
   31 Dec 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Cleanup metadata.

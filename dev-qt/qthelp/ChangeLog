@@ -1,6 +1,6 @@
-# ChangeLog for x11-libs/qt-assistant
+# ChangeLog for dev-qt/qtassistant
 # Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.1 2013/03/02 15:30:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.2 2013/03/03 04:15:47 yngwin Exp $
 
   30 Dec 2012; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Cleanup metadata.
