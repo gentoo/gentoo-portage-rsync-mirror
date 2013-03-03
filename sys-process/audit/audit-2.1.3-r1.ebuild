@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.1.3-r1.ebuild,v 1.17 2012/12/31 21:44:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.1.3-r1.ebuild,v 1.18 2013/03/03 10:25:39 vapier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -15,7 +15,7 @@ SRC_URI="http://people.redhat.com/sgrubb/audit/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 s390 sparc x86"
 IUSE="ldap prelude python"
 # Testcases are pretty useless as they are built for RedHat users/groups and
 # kernels.

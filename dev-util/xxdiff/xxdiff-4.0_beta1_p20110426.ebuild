@@ -1,14 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-4.0_beta1_p20110426.ebuild,v 1.7 2013/03/02 21:07:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-4.0_beta1_p20110426.ebuild,v 1.8 2013/03/03 10:19:04 ssuominen Exp $
 
-EAPI=3
+EAPI=5
 
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils qt4-r2
+inherit distutils-r1 eutils qt4-r2
 
 DESCRIPTION="A graphical file and directories comparator and merge tool"
 HOMEPAGE="http://furius.ca/xxdiff/"
@@ -22,15 +20,15 @@ IUSE=""
 RDEPEND="dev-qt/qtgui:4"
 DEPEND="${RDEPEND}"
 
-PATCHES=( "${FILESDIR}"/${P}-gcc47.patch )
-
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc47.patch
+
 	pushd src >/dev/null
 	sed -i -e '/qPixmapFromMimeSource/d' *.ui || die #365019
 	qt4-r2_src_prepare
 	popd
 
-	distutils_src_prepare
+	distutils-r1_src_prepare
 }
 
 src_configure() {
@@ -38,6 +36,8 @@ src_configure() {
 	qt4-r2_src_configure
 	cat Makefile.extra >> Makefile
 	popd
+
+	distutils-r1_src_configure
 }
 
 src_compile() {
@@ -45,13 +45,13 @@ src_compile() {
 	qt4-r2_src_compile
 	popd
 
-	distutils_src_compile
+	distutils-r1_src_compile
 }
 
 src_install() {
-	dobin bin/xxdiff || die
+	dobin bin/xxdiff
 
-	distutils_src_install
+	distutils-r1_src_install
 
 	dodoc CHANGES README* TODO doc/*.txt src/doc.txt
 
@@ -59,8 +59,5 @@ src_install() {
 
 	# example tools, use these to build your own ones
 	insinto /usr/share/doc/${PF}
-	doins -r tools || die
-
-	# missing EAPI=4 support in distutils.eclass, forced to use prepalldocs
-	prepalldocs
+	doins -r tools
 }

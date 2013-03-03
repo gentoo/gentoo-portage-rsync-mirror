@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.ebuild,v 1.3 2012/09/16 10:18:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.ebuild,v 1.4 2013/03/03 10:08:32 jlec Exp $
 
 EAPI=4
 inherit autotools eutils check-reqs multilib java-pkg-opt-2 flag-o-matic
@@ -81,8 +81,10 @@ src_prepare() {
 		-e "s:VAR_TCL:tcl${tcl_version}:g" env.sh \
 			|| die "itk, itcl, tix, tk and tcl version tweaking failed!"
 
-	epatch "${FILESDIR}"/${P}-ftgl.patch
-	epatch "${FILESDIR}"/${P}-fixed-DESTDIR.patch
+	epatch \
+		"${FILESDIR}"/${P}-ftgl.patch \
+		"${FILESDIR}"/${P}-fixed-DESTDIR.patch \
+		"${FILESDIR}"/${P}-tcl8.6.patch
 
 	source env.sh
 

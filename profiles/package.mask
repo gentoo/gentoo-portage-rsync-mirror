@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14522 2013/03/03 03:35:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14523 2013/03/03 10:04:24 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -284,11 +284,6 @@ x11-misc/mkxf86config
 # Beta versions masked for testing
 =net-misc/modemmanager-0.7*
 =net-misc/networkmanager-0.9.7*
-
-# Tim Harder <radhermit@gentoo.org> (27 Jan 2013)
-# Masked due to deprecated API, use dev-python/PyGithub instead
-# Removal in 30 days
-dev-python/github2
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (25 Jan 2013)
 # Masked for testing

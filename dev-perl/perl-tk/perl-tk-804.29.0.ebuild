@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.29.0.ebuild,v 1.4 2011/11/30 18:41:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.29.0.ebuild,v 1.5 2013/03/03 10:17:13 vapier Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ inherit multilib perl-module
 DESCRIPTION="A Perl Module for Tk"
 
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND="x11-libs/libX11
