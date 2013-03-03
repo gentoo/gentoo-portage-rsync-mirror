@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mswatch/mswatch-1.2.0.ebuild,v 1.4 2012/05/03 04:18:37 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mswatch/mswatch-1.2.0.ebuild,v 1.5 2013/03/03 05:46:18 dirtyepic Exp $
 
 EAPI="4"
 
@@ -23,6 +23,7 @@ CONFIG_CHECK="~INOTIFY_USER"
 ERROR_INOTIFY_USER="${P} requires in-kernel inotify support."
 
 DOCS=( AUTHORS NEWS README THANKS TODO )
+PATCHES=( "${FILESDIR}"/${P}-gcc47.patch )
 
 src_configure() {
 	local myeconfargs=(

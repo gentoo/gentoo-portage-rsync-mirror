@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mswatch
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mswatch/ChangeLog,v 1.4 2012/05/03 04:18:37 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mswatch/ChangeLog,v 1.5 2013/03/03 05:46:18 dirtyepic Exp $
+
+  03 Mar 2013; Ryan Hill <dirtyepic@gentoo.org> mswatch-1.2.0.ebuild,
+  +files/mswatch-1.2.0-gcc47.patch:
+  Fix build with GCC 4.7 (bug #424673).
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> mswatch-1.2.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
