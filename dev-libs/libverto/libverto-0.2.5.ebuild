@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/libverto-0.2.5.ebuild,v 1.12 2013/03/03 20:42:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libverto/libverto-0.2.5.ebuild,v 1.13 2013/03/03 21:27:33 eras Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Main event loop abstraction library"
 HOMEPAGE="https://fedorahosted.org/libverto/"
