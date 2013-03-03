@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/socketstream-0.7.0-r1.ebuild,v 1.6 2008/06/16 20:14:10 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/socketstream-0.7.0-r1.ebuild,v 1.7 2013/03/03 06:30:56 dirtyepic Exp $
 
 inherit eutils
 
@@ -23,7 +23,8 @@ src_unpack() {
 	sed -i 's|^DIST_\(SUBDIRS =\)|\1|' include/Makefile.in || \
 		die "sed include/Makefile.in failed"
 
-	epatch "${FILESDIR}/${PV}-missing_includes.patch"
+	epatch "${FILESDIR}"/${PV}-missing_includes.patch
+	epatch "${FILESDIR}"/${P}-gcc47.patch
 }
 
 src_compile() {
