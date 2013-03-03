@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.8.0-r1.ebuild,v 1.7 2012/10/02 14:22:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.8.0-r1.ebuild,v 1.8 2013/03/03 13:01:44 vapier Exp $
 
 EAPI=4
 inherit eutils libtool
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug static-libs"
 
 RDEPEND="virtual/glu
