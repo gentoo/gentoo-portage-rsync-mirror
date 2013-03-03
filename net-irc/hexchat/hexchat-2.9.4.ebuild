@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.4.ebuild,v 1.8 2013/03/03 16:13:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.4.ebuild,v 1.9 2013/03/03 18:01:11 ago Exp $
 
 EAPI=5
 
@@ -40,7 +40,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.9.1-input-box.patch \
+	epatch \
+		"${FILESDIR}"/${PN}-2.9.1-input-box.patch \
 		"${FILESDIR}"/${PN}-2.9.3-cflags.patch
 
 	# use $libdir/hexchat/plugins as the plugin directory
@@ -54,7 +55,9 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --enable-shm \
+	econf \
+		--disable-tcl \
+		--enable-shm \
 		$(use_enable dbus) \
 		$(use_enable ipv6) \
 		$(use_enable nls) \

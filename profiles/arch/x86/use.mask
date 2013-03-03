@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.48 2013/02/21 19:40:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.49 2013/03/03 17:57:33 mgorny Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
@@ -173,4 +173,4 @@ win64
 # Michał Górny <mgorny@gentoo.org> (26 Jan 2013)
 # Unmask the flag corresponding to the only ABI. This allows x86 binary
 # packages to have uniform dependencies for amd64-multilib & x86.
-abi_x86_32
+-abi_x86_32

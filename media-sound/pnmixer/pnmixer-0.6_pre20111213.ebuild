@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pnmixer/pnmixer-0.6_pre20111213.ebuild,v 1.5 2013/01/30 18:53:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pnmixer/pnmixer-0.6_pre20111213.ebuild,v 1.6 2013/03/03 17:32:19 vincent Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="debug libnotify"
 
 RDEPEND="media-libs/alsa-lib
