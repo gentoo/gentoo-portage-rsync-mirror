@@ -1,6 +1,14 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.429 2013/01/15 03:56:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.430 2013/03/03 09:02:31 vapier Exp $
+
+  03 Mar 2013; Mike Frysinger <vapier@gentoo.org> openldap-2.3.43-r1.ebuild,
+  openldap-2.3.43-r3.ebuild, openldap-2.4.19-r1.ebuild, openldap-2.4.21.ebuild,
+  openldap-2.4.23.ebuild, openldap-2.4.24.ebuild, openldap-2.4.25-r1.ebuild,
+  openldap-2.4.25.ebuild, openldap-2.4.28-r1.ebuild, openldap-2.4.28.ebuild,
+  openldap-2.4.30.ebuild, openldap-2.4.31-r1.ebuild, openldap-2.4.31.ebuild,
+  openldap-2.4.32.ebuild, openldap-2.4.33-r1.ebuild, openldap-2.4.33.ebuild:
+  Add missing user inherit for enew{user,group}.
 
 *openldap-2.3.43-r3 (15 Jan 2013)
 

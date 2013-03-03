@@ -1,9 +1,9 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.6.ebuild,v 1.4 2012/05/03 19:08:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.6.ebuild,v 1.5 2013/03/03 09:18:24 vapier Exp $
 
 AUTOTOOLS_AUTO_DEPEND="no"
-inherit autotools eutils toolchain-funcs
+inherit autotools eutils toolchain-funcs multilib
 
 DESCRIPTION="Standard (de)compression library"
 HOMEPAGE="http://www.zlib.net/"

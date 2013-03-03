@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/duplicity-0.6.20.ebuild,v 1.4 2013/01/22 17:28:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/duplicity-0.6.20.ebuild,v 1.5 2013/03/03 09:22:21 mgorny Exp $
 
 EAPI="4"
 
@@ -26,7 +26,6 @@ DEPEND="
 RDEPEND="${DEPEND}
 	dev-python/paramiko
 	>=dev-python/pexpect-2.1
-	>=dev-python/py-gnupg-0.3.2
 	s3? ( dev-python/boto )
 "
 

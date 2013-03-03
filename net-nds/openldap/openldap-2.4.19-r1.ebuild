@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.19-r1.ebuild,v 1.16 2013/01/14 02:46:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.19-r1.ebuild,v 1.17 2013/03/03 09:02:31 vapier Exp $
 
 EAPI="2"
-inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs
+inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs user
 
 DESCRIPTION="LDAP suite of application and development tools"
 HOMEPAGE="http://www.OpenLDAP.org/"

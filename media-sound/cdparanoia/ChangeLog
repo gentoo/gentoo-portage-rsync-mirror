@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.109 2013/02/20 23:37:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.110 2013/03/03 09:24:39 vapier Exp $
+
+  03 Mar 2013; Mike Frysinger <vapier@gentoo.org> cdparanoia-3.10.2-r4.ebuild,
+  cdparanoia-3.10.2-r5.ebuild:
+  Add s390 lovin.
 
   20 Feb 2013; Zac Medico <zmedico@gentoo.org> cdparanoia-3.10.2-r5.ebuild:
   Add ~arm-linux keyword.

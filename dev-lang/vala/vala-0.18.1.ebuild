@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.18.1.ebuild,v 1.2 2013/02/21 18:40:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.18.1.ebuild,v 1.3 2013/03/03 09:12:27 vapier Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://live.gnome.org/Vala"
 
 LICENSE="LGPL-2.1"
 SLOT="0.18"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="test +vapigen"
 
 RDEPEND=">=dev-libs/glib-2.18:2

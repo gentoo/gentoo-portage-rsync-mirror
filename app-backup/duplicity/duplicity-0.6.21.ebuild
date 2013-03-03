@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/duplicity-0.6.21.ebuild,v 1.1 2013/01/24 03:08:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/duplicity-0.6.21.ebuild,v 1.2 2013/03/03 09:22:21 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -21,10 +21,9 @@ DEPEND="
 	app-crypt/gnupg
 "
 RDEPEND="${DEPEND}
-	dev-python/paramiko
+	dev-python/paramiko[${PYTHON_USEDEP}]
 	>=dev-python/pexpect-2.1[${PYTHON_USEDEP}]
-	>=dev-python/py-gnupg-0.3.2
-	s3? ( dev-python/boto )
+	s3? ( dev-python/boto[${PYTHON_USEDEP}] )
 "
 
 python_prepare_all() {

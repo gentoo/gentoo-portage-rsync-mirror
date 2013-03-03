@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.80 2013/02/22 19:28:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.81 2013/03/03 09:02:31 vapier Exp $
+
+  03 Mar 2013; Mike Frysinger <vapier@gentoo.org> gdk-pixbuf-2.26.4.ebuild,
+  gdk-pixbuf-2.26.5.ebuild:
+  Add s390 love.
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> gdk-pixbuf-2.26.5.ebuild:
   Add ~arm-linux keyword.
