@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/spindown
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/spindown/ChangeLog,v 1.9 2012/03/11 11:44:45 wschlich Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/spindown/ChangeLog,v 1.10 2013/03/03 17:02:32 wschlich Exp $
+
+  03 Mar 2013; Wolfram Schlich <wschlich@gentoo.org> metadata.xml:
+  removed myself from metadata.xml, added maintainer-needed@gentoo.org
 
   11 Mar 2012; Wolfram Schlich <wschlich@gentoo.org> -spindown-0.4.0-r2.ebuild,
   -files/spindownd.confd, -files/spindownd.initd:
@@ -51,4 +54,3 @@
   +files/spindown-0.2.2-CFLAGS.patch, +files/spindownd.confd,
   +files/spindownd.initd, +metadata.xml, +spindown-0.2.2.ebuild:
   initial import
-

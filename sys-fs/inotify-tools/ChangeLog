@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/inotify-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.31 2010/06/15 11:47:51 polynomial-c Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.32 2013/03/03 17:03:07 wschlich Exp $
+
+  03 Mar 2013; Wolfram Schlich <wschlich@gentoo.org> metadata.xml:
+  removed myself from metadata.xml, added maintainer-needed@gentoo.org
 
 *inotify-tools-3.14 (15 Jun 2010)
 
@@ -156,4 +159,3 @@
   30 Jul 2006; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
   +inotify-tools-2.2.ebuild:
   Initial import
-

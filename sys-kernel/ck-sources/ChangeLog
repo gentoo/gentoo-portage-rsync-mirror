@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.214 2013/02/23 18:27:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.215 2013/03/03 17:13:28 hwoarang Exp $
+
+*ck-sources-3.7.10 (03 Mar 2013)
+*ck-sources-3.6.11-r1 (03 Mar 2013)
+*ck-sources-3.4.34 (03 Mar 2013)
+*ck-sources-3.5.7-r2 (03 Mar 2013)
+
+  03 Mar 2013; Markos Chandras <hwoarang@gentoo.org> +ck-sources-3.4.34.ebuild,
+  +ck-sources-3.5.7-r2.ebuild, +ck-sources-3.6.11-r1.ebuild,
+  +ck-sources-3.7.10.ebuild, -ck-sources-3.4.18.ebuild,
+  -ck-sources-3.4.23.ebuild, -ck-sources-3.4.32.ebuild,
+  -ck-sources-3.5.7-r1.ebuild, -ck-sources-3.6.11.ebuild,
+  -ck-sources-3.7.9.ebuild:
+  Security bumps/revbumps for #459124. Fixes #459926. Thanks to Eric F. GARIOUD.
+  Removing old ebuilds of the same patch-level
 
 *ck-sources-3.4.32 (23 Feb 2013)
 *ck-sources-3.7.9 (23 Feb 2013)

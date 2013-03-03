@@ -1,0 +1,12 @@
+# ChangeLog for net-misc/samplicator
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/samplicator/ChangeLog,v 1.1 2013/03/03 17:02:11 tomwij Exp $
+
+*samplicator-1.3.7_beta6 (03 Mar 2013)
+*samplicator-1.3.6 (03 Mar 2013)
+
+  03 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +files/samplicator.8,
+  +files/samplicator.conf, +files/samplicator.initd, +metadata.xml,
+  +samplicator-1.3.6.ebuild, +samplicator-1.3.7_beta6.ebuild:
+  New ebuilds for samplicator, contributed by Vladimir Pavljuchenkov who will
+  proxy maintain this. Fixes bug #459310.

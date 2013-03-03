@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.7.9.ebuild,v 1.1 2013/02/23 18:27:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.4.34.ebuild,v 1.1 2013/03/03 17:13:28 hwoarang Exp $
 
 EAPI="3"
 ETYPE="sources"
@@ -11,7 +11,7 @@ HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/
 	http://users.on.net/~ckolivas/kernel/"
 
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="11"
+K_GENPATCHES_VER="16"
 K_SECURITY_UNSUPPORTED="1"
 K_DEBLOB_AVAILABLE="1"
 
@@ -30,8 +30,8 @@ XTRA_INCP_MAX=""
 
 #--
 
-CK_VERSION="1"
-BFS_VERSION="426"
+CK_VERSION="3"
+BFS_VERSION="424"
 
 CK_FILE="patch-${K_BRANCH_ID}-ck${CK_VERSION}.bz2"
 BFS_FILE="${K_BRANCH_ID}-sched-bfs-${BFS_VERSION}.patch"
@@ -60,13 +60,13 @@ fi
 
 #-- CK needs sometimes to patch itself... -------------------------------------
 
-CK_INCP_URI="http://ck.kolivas.org/patches/bfs/3.0/3.7/3.7-bfs426-427.patch"
-CK_INCP_LIST="${DISTDIR}/3.7-bfs426-427.patch"
+CK_INCP_URI=""
+CK_INCP_LIST=""
 
 #-- Local patches needed for the ck-patches to apply smoothly -----------------
 
-PRE_CK_FIX=""
-POST_CK_FIX=""
+PRE_CK_FIX="${FILESDIR}/${PN}-3.4-3.5-PreCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P4.patch"
+POST_CK_FIX="${FILESDIR}/${PN}-3.4-3.5-PostCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P5.patch ${FILESDIR}/${PN}-3.4.9-calc_load_idle-aCOSwt_P3.patch"
 
 #--
 
@@ -96,7 +96,7 @@ UNIPATCH_STRICTORDER="yes"
 
 src_prepare() {
 
-#-- Comment out ck's EXTRAVERSION in Makefile ---------------------------------
+#-- Comment out CK's EXTRAVERSION in Makefile ---------------------------------
 
 	sed -i -e 's/\(^EXTRAVERSION :=.*$\)/# \1/' "${S}/Makefile"
 }
@@ -104,19 +104,6 @@ src_prepare() {
 pkg_postinst() {
 
 	kernel-2_pkg_postinst
-
-	ewarn ""
-	ewarn "This release is concerned by numerous problems, non exhaustively :"
-	ewarn " - No current x11-drivers/nvidia-driver officially support it."
-	ewarn "   Their build against this release is likely to break! See https://bugs.gentoo.org/show_bug.cgi?id=447566"
-	ewarn " - Known regressions concerning several USB peripherals including pcmcia and sound devices."
-	ewarn "   See https://bugs.gentoo.org/show_bug.cgi?id=458600"
-	ewarn " - The deblobbing fails to complete exhaustively. See https://bugs.gentoo.org/show_bug.cgi?id=458032"
-	ewarn ""
-	ewarn "You are aware that, depending on the parameters given to the emerge command which triggered the installation of this package,"
-	ewarn "any future emerge --depclean might remove from your system the ck-sources < ${PVR} distributions."
-	ewarn "If you decide not to keep this release, you are invited to add the following line to your package.mask file:"
-	ewarn "=${CATEGORY}/${P}"
 
 	elog
 	elog "For more info on this patchset, see: http://forums.gentoo.org/viewtopic-t-941030-start-0.html"

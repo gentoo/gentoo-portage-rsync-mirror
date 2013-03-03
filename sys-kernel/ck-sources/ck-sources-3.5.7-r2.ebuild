@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.4.32.ebuild,v 1.1 2013/02/23 18:27:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.5.7-r2.ebuild,v 1.1 2013/03/03 17:13:28 hwoarang Exp $
 
 EAPI="3"
 ETYPE="sources"
@@ -11,7 +11,7 @@ HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/
 	http://users.on.net/~ckolivas/kernel/"
 
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="15"
+K_GENPATCHES_VER="8"
 K_SECURITY_UNSUPPORTED="1"
 K_DEBLOB_AVAILABLE="1"
 
@@ -23,14 +23,14 @@ K_BRANCH_ID="${KV_MAJOR}.${KV_MINOR}"
 
 DESCRIPTION="Full Linux ${K_BRANCH_ID} kernel sources with Con Kolivas' high performance patchset and Gentoo's genpatches."
 
-#-- If Gentoo-Sources don't follow then extra incremental patches are needed ---
+#-- If Gentoo-Sources don't follow then extra incremental patches are needed -
 
 XTRA_INCP_MIN=""
 XTRA_INCP_MAX=""
 
 #--
 
-CK_VERSION="3"
+CK_VERSION="1"
 BFS_VERSION="424"
 
 CK_FILE="patch-${K_BRANCH_ID}-ck${CK_VERSION}.bz2"
@@ -58,26 +58,33 @@ if [ -n "${XTRA_INCP_MIN}" ]; then
 	done
 fi
 
-#--
+#-- CK needs sometimes to patch itself... -------------------------------------
+
+CK_INCP_URI=""
+CK_INCP_LIST=""
 
 #-- Local patches needed for the ck-patches to apply smoothly -----------------
 
 PRE_CK_FIX="${FILESDIR}/${PN}-3.4-3.5-PreCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P4.patch"
-POST_CK_FIX="${FILESDIR}/${PN}-3.4-3.5-PostCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P5.patch ${FILESDIR}/${PN}-3.4.9-calc_load_idle-aCOSwt_P3.patch"
+POST_CK_FIX="${FILESDIR}/${PN}-3.4-3.5-PostCK-Sched_Fix_Race_In_Task_Group-aCOSwt_P5.patch"
 
 #--
 
-SRC_URI="${KERNEL_URI} ${LX_INCP_URI} ${GENPATCHES_URI} ${ARCH_URI}
+SRC_URI="${KERNEL_URI} ${LX_INCP_URI} ${GENPATCHES_URI} ${ARCH_URI} ${CK_INCP_URI}
 	!bfsonly? ( ${CK_URI} )
 	bfsonly? ( ${BFS_URI} )
 	experimental? (
 		urwlocks? ( ${XPR_1_URI} ${XPR_2_URI} ) )"
 
+UNIPATCH_LIST="${LX_INCP_LIST} ${PRE_CK_FIX} ${DISTDIR}"
+
 if ! use bfsonly ; then
-	UNIPATCH_LIST="${LX_INCP_LIST} ${PRE_CK_FIX} ${DISTDIR}/${CK_FILE} ${POST_CK_FIX}"
+	UNIPATCH_LIST="${UNIPATCH_LIST}/${CK_FILE}"
 else
-	UNIPATCH_LIST="${LX_INCP_LIST} ${PRE_CK_FIX} ${DISTDIR}/${BFS_FILE} ${POST_CK_FIX}"
+	UNIPATCH_LIST="${UNIPATCH_LIST}/${BFS_FILE}"
 fi
+
+UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_INCP_LIST} ${POST_CK_FIX}"
 
 if use experimental ; then
 	if use urwlocks ; then
@@ -87,15 +94,18 @@ fi
 
 UNIPATCH_STRICTORDER="yes"
 
-src_unpack() {
-	kernel-2_src_unpack
-}
-
 src_prepare() {
+
+#-- Comment out CK's EXTRAVERSION in Makefile ---------------------------------
+
 	sed -i -e 's/\(^EXTRAVERSION :=.*$\)/# \1/' "${S}/Makefile"
 }
 
 pkg_postinst() {
+
 	kernel-2_pkg_postinst
-	einfo "For more info on this patchset, see: http://forums.gentoo.org/viewtopic-t-941030-start-0.html"
+
+	elog
+	elog "For more info on this patchset, see: http://forums.gentoo.org/viewtopic-t-941030-start-0.html"
+	elog
 }
