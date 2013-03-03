@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.15-r1.ebuild,v 1.2 2012/07/06 16:20:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.17.ebuild,v 1.1 2013/03/03 15:56:56 jer Exp $
 
-EAPI="4"
-
+EAPI=4
 inherit autotools eutils
 
 DESCRIPTION="rxvt clone with xft and unicode support"
@@ -12,16 +11,15 @@ SRC_URI="http://dist.schmorp.de/rxvt-unicode/Attic/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
 IUSE="
-	256-color alt-font-width afterimage blink buffer-on-clear +focused-urgency
+	256-color alt-font-width blink buffer-on-clear +focused-urgency
 	fading-colors +font-styles iso14755 +mousewheel +perl pixbuf secondary-wheel
 	startup-notification xft unicode3 +vanilla wcwidth
 "
 
 RDEPEND="
 	>=sys-libs/ncurses-5.7-r6
-	afterimage? ( || ( media-libs/libafterimage x11-wm/afterstep ) )
 	kernel_Darwin? ( dev-perl/Mac-Pasteboard )
 	media-libs/fontconfig
 	perl? ( dev-lang/perl )
@@ -37,6 +35,7 @@ DEPEND="
 	x11-proto/xproto
 "
 
+RESTRICT="test"
 REQUIRED_USE="vanilla? ( !alt-font-width !buffer-on-clear focused-urgency !secondary-wheel !wcwidth )"
 
 src_prepare() {
@@ -45,13 +44,10 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-9.06-case-insensitive-fs.patch \
 		"${FILESDIR}"/${PN}-9.15-xsubpp.patch
 
-	if ! use afterimage && ! use pixbuf; then
-		einfo " + If you want transparency support, please enable either the *pixbuf*"
-		einfo "   or the *afterimage* USE flag. Enabling both will default to pixbuf."
-	fi
-
 	if ! use vanilla; then
-		ewarn " + You are going to include unsupported third-party bug fixes/features."
+		ewarn "You are going to include unsupported third-party bug fixes/features."
+		ewarn "If you want even more control over patches, then set USE=vanilla"
+		ewarn "and store your patch set in /etc/portage/patches/${CATEGORY}/${PF}/"
 
 		use wcwidth && epatch doc/wcwidth.patch
 
@@ -71,6 +67,8 @@ src_prepare() {
 		use buffer-on-clear && epatch "${FILESDIR}"/${PN}-9.14-clear.patch
 
 		use alt-font-width && epatch "${FILESDIR}"/${PN}-9.06-font-width.patch
+	else
+		epatch_user
 	fi
 
 	# kill the rxvt-unicode terminfo file - #192083
@@ -86,7 +84,6 @@ src_configure() {
 
 	econf --enable-everything \
 		$(use_enable 256-color) \
-		$(use_enable afterimage) \
 		$(use_enable blink text-blink) \
 		$(use_enable fading-colors fading) \
 		$(use_enable font-styles) \
@@ -108,11 +105,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	default
 
-	dodoc README.FAQ Changes
-	cd "${S}"/doc
-	dodoc README* changes.txt etc/* rxvt-tabbed
+	dodoc \
+		README.FAQ Changes doc/README* doc/changes.txt doc/etc/* doc/rxvt-tabbed
 
 	make_desktop_entry urxvt rxvt-unicode utilities-terminal \
 		"System;TerminalEmulator"

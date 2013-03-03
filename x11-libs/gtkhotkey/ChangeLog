@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkhotkey
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/ChangeLog,v 1.16 2012/05/05 03:52:26 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/ChangeLog,v 1.17 2013/03/03 15:44:42 pacho Exp $
+
+  03 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop to maintainer-needed as talked with him
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> gtkhotkey-0.2.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -66,4 +69,3 @@
   +gtkhotkey-0.2.0.ebuild:
   Initial import based on ebuild by Mikel Olasagasti
   <hey_neken@mundurat.net>. Fixes bug #245153.
-
