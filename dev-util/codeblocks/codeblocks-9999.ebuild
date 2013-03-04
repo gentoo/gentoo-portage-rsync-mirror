@@ -1,29 +1,33 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-9999.ebuild,v 1.4 2012/11/02 06:03:31 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-9999.ebuild,v 1.5 2013/03/04 04:57:48 dirtyepic Exp $
 
-EAPI="4"
+EAPI="5"
 WX_GTK_VER="2.8"
 
-inherit autotools eutils flag-o-matic subversion wxwidgets
+inherit autotools eutils subversion wxwidgets
 
 DESCRIPTION="The open source, cross platform, free C++ IDE."
 HOMEPAGE="http://www.codeblocks.org/"
-ESVN_REPO_URI="svn://svn.berlios.de/${PN}/trunk"
-SRC_URI=""
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
+SRC_URI=""
+ESVN_REPO_URI="svn://svn.berlios.de/${PN}/trunk"
+
 IUSE="contrib debug pch static-libs"
 
-RDEPEND="x11-libs/wxGTK:2.8[X]"
+RDEPEND="app-arch/zip
+	x11-libs/wxGTK:2.8[X]
+	contrib? (
+		app-text/hunspell
+		dev-libs/boost
+		dev-libs/libgamin
+	)"
 DEPEND="${RDEPEND}
-	app-arch/zip
-	dev-libs/libgamin
-	sys-devel/libtool:2
 	virtual/pkgconfig"
 
-src_unpack(){
+src_unpack() {
 	subversion_src_unpack
 }
 
@@ -37,11 +41,6 @@ src_prepare() {
 }
 
 src_configure() {
-	# C::B is picky on CXXFLAG -fomit-frame-pointer
-	# (project-wizard crash, instability ...)
-	filter-flags -fomit-frame-pointer
-	append-flags -fno-strict-aliasing
-
 	econf \
 		--with-wx-config="${WX_CONFIG}" \
 		$(use_enable debug) \
