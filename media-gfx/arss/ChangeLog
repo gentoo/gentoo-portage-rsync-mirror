@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/arss
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/arss/ChangeLog,v 1.3 2011/04/29 18:31:57 halcy0n Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/arss/ChangeLog,v 1.4 2013/03/04 18:49:20 kensington Exp $
+
+  04 Mar 2013; Michael Palimaka <kensington@gentoo.org> arss-0.2.3.ebuild:
+  Migrate to EAPI 5.
 
   29 Apr 2011; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   maintainer-needed is not a herd
@@ -14,4 +17,3 @@
   +metadata.xml:
   Initial commit. Fixes bug #321463. Thanks to Laurento Frittella
   <laurento.frittella@gmail.com> for the ebuild
-

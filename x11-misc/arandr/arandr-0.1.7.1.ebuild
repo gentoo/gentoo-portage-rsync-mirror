@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/arandr/arandr-0.1.7-r1.ebuild,v 1.1 2013/03/03 00:25:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/arandr/arandr-0.1.7.1.ebuild,v 1.1 2013/03/04 18:32:17 hasufell Exp $
 
 EAPI=5
 
@@ -22,8 +22,6 @@ RDEPEND=">=dev-python/pygtk-2[${PYTHON_USEDEP}]
 DEPEND=">=dev-python/docutils-0.6[${PYTHON_USEDEP}]"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-locale.patch
-
 	local i p
 	# simulate gettext behavior:
 	#  LINGUAS unset => install all

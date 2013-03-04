@@ -1,10 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/arss/arss-0.2.3.ebuild,v 1.1 2010/07/11 11:42:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/arss/arss-0.2.3.ebuild,v 1.2 2013/03/04 18:49:20 kensington Exp $
+
+EAPI=5
+CMAKE_IN_SOURCE_BUILD="true"
+MY_P=${P}-src
 
 inherit cmake-utils
-
-MY_P=${P}-src
 
 DESCRIPTION="Analysis & Resynthesis Sound Spectrograph"
 HOMEPAGE="http://arss.sourceforge.net"
@@ -20,6 +22,4 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}/src
 
-CMAKE_IN_SOURCE_BUILD="TRUE"
-
-DOCS="../AUTHORS ../ChangeLog"
+DOCS=( ../AUTHORS ../ChangeLog )

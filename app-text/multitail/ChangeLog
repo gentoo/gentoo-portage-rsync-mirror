@@ -1,6 +1,10 @@
 # ChangeLog for app-text/multitail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.95 2013/02/25 19:07:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.96 2013/03/04 18:58:11 jlec Exp $
+
+  04 Mar 2013; Justin Lecher <jlec@gentoo.org> multitail-5.2.12.ebuild,
+  +files/multitail-5.2.12-as-needed.patch:
+  Add fix for ncurses[tinfo], #459206
 
   25 Feb 2013; Justin Lecher <jlec@gentoo.org> multitail-5.2.9.ebuild,
   multitail-5.2.10.ebuild, multitail-5.2.11.ebuild, multitail-5.2.12.ebuild:
