@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2.4.ebuild,v 1.2 2012/11/11 02:18:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2.4.ebuild,v 1.3 2013/03/04 06:49:22 flameeyes Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ RDEPEND="tcmalloc? ( dev-util/google-perftools )
 		>=dev-libs/libevent-1.4
 		>=dev-libs/protobuf-2.1.0
 		dev-libs/libaio
-		>=dev-libs/boost-1.52.0-r1[threads]
+		>=dev-libs/boost-1.52.0-r1:=[threads]
 		gearman? ( >=sys-cluster/gearmand-0.12 )
 		pam? ( sys-libs/pam )
 		curl? ( net-misc/curl )

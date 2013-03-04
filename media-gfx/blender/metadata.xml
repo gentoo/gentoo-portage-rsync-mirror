@@ -8,10 +8,6 @@
     <name>Luca Barbato</name>
   </maintainer>
 
-  <maintainer>
-    <email>flameeyes@gentoo.org</email>
-  </maintainer>
-
   <longdescription>
     Blender, the open source software for 3D modeling, animation,
     rendering, post-production, interactive creation and playback.
@@ -22,10 +18,7 @@
       Adds support for space navigator devices through package
       <pkg>dev-libs/libspnav</pkg>.
     </flag>
-    <flag name='blender-game' restrict='&lt;media-gfx/blender-2.50'>
-      Adds Game Engine support to Blender.
-    </flag>
-    <flag name='game-engine' restrict='&gt;=media-gfx/blender-2.50'>
+    <flag name='game-engine'>
       Adds Game Engine support to Blender.
     </flag>
     <flag name='collada'>
@@ -35,9 +28,6 @@
     <flag name='cycles'>
       Build cycles renderer (requires <pkg>media-libs/openimageio</pkg> and
       <pkg>dev-libs/boost</pkg>).
-    </flag>
-    <flag name='verse'>
-      Adds verse clustering features to Blender.
     </flag>
     <flag name='dds'>
       Adds DDS textures support to Blender.

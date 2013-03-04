@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.244 2013/02/05 16:11:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.246 2013/03/04 06:41:46 flameeyes Exp $
+
+  04 Mar 2013; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Cleanup USE descriptions.
+
+  04 Mar 2013; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Remove myself from metadata.
 
   05 Feb 2013; Diego E. Pettenò <flameeyes@gentoo.org> -blender-2.49b-r2.ebuild,
   -files/blender-2.37-dirs.patch, -files/blender-2.44-scriptsdir.patch,
