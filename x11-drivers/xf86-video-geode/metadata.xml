@@ -9,6 +9,6 @@
 <flag name="ztv">Enable building the V4L2 ZTV driver</flag>
 </use>
 <longdescription lang="en">
-	X.Org driver for AMD Geode GX and Geode LX platforms.
+	X.Org driver for AMD Geode GX2 and Geode LX platforms.
 </longdescription>
 </pkgmetadata>
