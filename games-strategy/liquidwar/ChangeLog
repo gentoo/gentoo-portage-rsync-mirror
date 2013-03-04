@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/liquidwar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/ChangeLog,v 1.27 2012/03/22 01:20:56 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/ChangeLog,v 1.28 2013/03/04 22:36:22 hasufell Exp $
+
+*liquidwar-5.6.4-r1 (04 Mar 2013)
+
+  04 Mar 2013; Julian Ospald <hasufell@gentoo.org> +liquidwar-5.6.4-r1.ebuild:
+  fix bug 460344, bump EAPI
 
   22 Mar 2012; Michael Sterrett <mr_bones_@gentoo.org> liquidwar-5.6.4.ebuild:
   add X use dep for allegro (bug #409115)
