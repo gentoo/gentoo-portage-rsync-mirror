@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/perf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.20 2012/06/28 08:23:07 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.21 2013/03/04 08:08:14 naota Exp $
+
+*perf-3.8 (04 Mar 2013)
+
+  04 Mar 2013; Naohiro Aota <naota@gentoo.org> +perf-3.8.ebuild:
+  Version bump. #460182
 
 *perf-3.4 (28 Jun 2012)
 
@@ -124,4 +129,3 @@
   30 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org> +perf-2.6.31.ebuild,
   +metadata.xml:
   Initial import of the performance counter userland utility.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/tcllib-1.15.ebuild,v 1.2 2013/03/02 17:49:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/tcllib-1.15.ebuild,v 1.3 2013/03/04 08:02:39 jlec Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ src_test() {
 src_install() {
 	default
 
-	rm "${ED}"/usr/share/man/mann/{try,string,variable,zlib}.n || die
+	rm "${ED}"/usr/share/man/mann/{string,variable,zlib}.n || die
 
 	dodoc devdoc/*.txt
 
