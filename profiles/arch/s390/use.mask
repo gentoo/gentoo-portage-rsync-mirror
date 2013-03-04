@@ -57,37 +57,24 @@ hardened
 # Needs java
 pdfannotextractor
 
-# don't quite know about this one, I'll need to revisit
-socks5
-
 # not working for now
 mzscheme
 
-# masked until xorg builds
-pango
-cairo
-xv
+# no gnome love yet
+fits
+gconf
+gimp
 gtk
 gtk2
 gtk3
 gnome
 gnome-keyring
-raw
-X
-opengl
-xpm
-video_cards_sis
 
 # mask wayland since dev-libs/wayland isn't keyworded
 wayland
 
-# I need to have some of the bad tcltk uses fixed, until then...
-# tcl was marked stable on this platform so only adding tk to mask
-tk
-tcltk
-
-nss
 diet
+m17n-lib
 xemacs
 Xaw3d
 neXt
@@ -100,11 +87,6 @@ sdl
 lm_sensors
 wxwindows
 wxwidgets
-
-# USE=audit masked prior to testing on alpha, arm, hppa, ppc64, s390, sh.
-# Bug #184563, 18 Sep 2007 
-# Robin H. Johnson <robbat2@gentoo.org>
-audit
 
 # Samuli Suominen <ssuominen@gentoo.org> (18 Jan 2013)
 # libdlm and cman are not keyworded
@@ -137,6 +119,8 @@ video_cards_geode
 video_cards_glint
 video_cards_i128
 video_cards_i740
+video_cards_i915
+video_cards_i965
 video_cards_intel
 video_cards_mach64
 video_cards_mga
@@ -145,13 +129,19 @@ video_cards_neomagic
 video_cards_newport
 video_cards_nouveau
 video_cards_nv
+video_cards_r100
 video_cards_r128
+video_cards_r200
+video_cards_r300
+video_cards_r600
 video_cards_radeon
+video_cards_radeonsi
 video_cards_rendition
 video_cards_s3
 video_cards_s3virge
 video_cards_savage
 video_cards_siliconmotion
+video_cards_sis
 video_cards_sisusb
 video_cards_tdfx
 video_cards_tga
@@ -159,12 +149,3 @@ video_cards_trident
 video_cards_tseng
 video_cards_v4l
 video_cards_vesa
-
-# these mesa drivers do not make sense either
-video_cards_i915
-video_cards_i965
-video_cards_r100
-video_cards_r200
-video_cards_r300
-video_cards_r600
-video_cards_radeonsi

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/transifex-client/transifex-client-0.8.0-r1.ebuild,v 1.1 2013/02/06 16:46:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/transifex-client/transifex-client-0.8.0-r1.ebuild,v 1.2 2013/03/03 23:09:28 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://github.com/transifex/transifex-client/tarball/0.8 -> ${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""

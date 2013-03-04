@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lessfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/ChangeLog,v 1.61 2013/02/16 11:10:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/ChangeLog,v 1.62 2013/03/03 23:08:19 hwoarang Exp $
+
+  03 Mar 2013; Markos Chandras <hwoarang@gentoo.org> -lessfs-1.5.12.ebuild,
+  -lessfs-1.5.8.ebuild, lessfs-1.5.13.ebuild:
+  remove old. Stabilize everywhere
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> lessfs-1.5.13.ebuild:
   Don't show elog messages always (#457596)
