@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.136 2013/03/03 08:15:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.137 2013/03/04 15:44:18 tetromino Exp $
 
 EAPI="5"
 
@@ -108,7 +108,7 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 			osmesa? ( >=app-emulation/emul-linux-x86-opengl-20121028[development] )
 			scanner? ( app-emulation/emul-linux-x86-medialibs[development] )
 			v4l? ( app-emulation/emul-linux-x86-medialibs[development] )
-			app-emulation/emul-linux-x86-baselibs[development]
+			>=app-emulation/emul-linux-x86-baselibs-20130224[development]
 			>=sys-kernel/linux-headers-2.6
 		)
 	)"

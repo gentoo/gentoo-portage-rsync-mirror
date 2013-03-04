@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406.ebuild,v 1.2 2013/03/04 10:55:30 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406.ebuild,v 1.3 2013/03/04 15:53:43 ottxor Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ pkg_setup() {
 
 	# make sure user has correct HOME when flipping between
 	# the standard ntp pkg and this one
-	usermod -d /var/lib/openntpd/chroot ntp
+	usermod -d /var/lib/openntpd/chroot ntp || die
 }
 
 src_prepare() {

@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.455 2013/03/03 08:15:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.456 2013/03/04 15:44:18 tetromino Exp $
+
+  04 Mar 2013; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.5.25.ebuild,
+  wine-9999.ebuild:
+  Require >=emul-linux-x86-baselibs-20130224 to prevent build failure (bug
+  #460236, thanks to Ortwin Glueck).
 
 *wine-1.5.25 (03 Mar 2013)
 
