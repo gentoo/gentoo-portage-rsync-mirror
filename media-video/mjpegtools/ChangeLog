@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.193 2013/02/09 10:14:25 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.194 2013/03/04 19:23:34 billie Exp $
+
+  04 Mar 2013; Daniel Pielmeier <billie@gentoo.org>
+  mjpegtools-2.0.1_rc1.ebuild:
+  Switch to EAPI 5.
 
   09 Feb 2013; Daniel Pielmeier <billie@gentoo.org>
   mjpegtools-2.0.1_rc1.ebuild:

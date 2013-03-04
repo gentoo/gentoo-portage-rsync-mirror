@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rubyripper
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.45 2012/10/19 16:52:10 billie Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.46 2013/03/04 19:16:40 billie Exp $
+
+  04 Mar 2013; Daniel Pielmeier <billie@gentoo.org> rubyripper-0.6.2-r1.ebuild:
+  Switch to EAPI 5.
 
   19 Oct 2012; Daniel Pielmeier <billie@gentoo.org> -rubyripper-0.6.2.ebuild:
   Remove old.

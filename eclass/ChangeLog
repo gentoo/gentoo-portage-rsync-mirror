@@ -1,6 +1,40 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.703 2013/03/03 12:05:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.713 2013/03/04 19:31:01 mgorny Exp $
+
+  04 Mar 2013; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Introduce multilib_for_best_impl().
+
+  04 Mar 2013; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
+  Convert to use multibuild.eclass.
+
+  04 Mar 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Use multilib_for_best_variant() for the *_all() phases.
+
+  04 Mar 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
+  python-r1.eclass:
+  Introduce python_parallel_foreach_impl() and reuse it in distutils-r1.
+
+  04 Mar 2013; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Use multibuild.eclass in python-r1.
+
+  04 Mar 2013; Michał Górny <mgorny@gentoo.org> multibuild.eclass:
+  Add multibuild_for_best_variant.
+
+  04 Mar 2013; Michał Górny <mgorny@gentoo.org> multibuild.eclass:
+  Print only the "public" part of commands.
+
+  04 Mar 2013; Michał Górny <mgorny@gentoo.org> multibuild.eclass,
+  python-r1.eclass:
+  Move run_in_build_dir() to multibuild.eclass.
+
+  04 Mar 2013; Michał Górny <mgorny@gentoo.org> +multibuild.eclass:
+  Introduce multibuild.eclass to handle building multiple variants of the same
+  package in a common manner.
+
+  04 Mar 2013; Robin H. Johnson <robbat2@gentoo.org> mysql-cmake.eclass:
+  MySQL 5.6 needs to NOT have -fno-implicit-templates, also support
+  epatch_user.
 
   03 Mar 2013; Pacho Ramos <pacho@gentoo.org> readme.gentoo.eclass:
   Change formatting tool as discussed with Ulrich Müller in bug #460050,

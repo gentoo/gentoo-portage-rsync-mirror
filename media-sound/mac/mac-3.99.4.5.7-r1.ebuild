@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.7-r1.ebuild,v 1.5 2012/09/30 18:26:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.7-r1.ebuild,v 1.6 2013/03/04 19:13:20 billie Exp $
 
-EAPI=4
+EAPI=5
+
 inherit flag-o-matic versionator
 
 MY_PV=$(version_format_string '$1.$2-u$3-b$4')

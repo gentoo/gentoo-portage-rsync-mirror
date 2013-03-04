@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14524 2013/03/04 15:55:26 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14525 2013/03/04 19:17:23 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Robin H. Johnson <robbat2@gentoo.org> (04 Mar 2013)
+# MySQL 5.6 is not yet GA.
+>=dev-db/mariadb-5.6
+>=dev-db/mysql-5.6
+>=virtual/mysql-5.6
 
 # Davide Pesavento <pesa@gentoo.org> (02 Mar 2013)
 # Depends on blender, which is masked.
@@ -683,21 +689,6 @@ dev-perl/perl-PBS
 # TeX Live 2011 has a newer version, which makes the standalone package useless;
 # mask it for now, we'll see about removing it later.
 dev-tex/pdftex
-
-# Robin H. Johnson <robbat2@gentoo.org> (01 Nov 2012)
-# Update of mask to 5.6 instead of 5.5
-# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (28 Jul 2011)
-# A new update of the mysql / mariadb mask
-# Robin H. Johnson <robbat2@gentoo.org> (01 Feb 2010)
-# Mask 5.6/6.0 series that are alpha and and crazy experimental.
-# Mask 5.2/5.3 virtual that exists in the overlay as well (it is MariaDB only)
->=dev-db/mariadb-5.6
->=dev-db/mysql-5.6
->=virtual/mysql-5.6
-=dev-db/mariadb-5.2*
-=virtual/mysql-5.2*
-=dev-db/mariadb-5.3*
-=virtual/mysql-5.3*
 
 # Peter Volkov <pva@gentoo.org> (23 Jul 2011)
 # Mask release candidates

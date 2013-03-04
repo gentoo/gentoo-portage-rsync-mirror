@@ -1,6 +1,16 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.100 2013/03/02 19:34:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.102 2013/03/04 19:14:29 mschiff Exp $
+
+  04 Mar 2013; Marc Schiffbauer <mschiff@gentoo.org>
+  akonadi-server-1.9.1.ebuild:
+  Fix patch path
+
+*akonadi-server-1.9.1 (04 Mar 2013)
+
+  04 Mar 2013; Marc Schiffbauer <mschiff@gentoo.org>
+  +akonadi-server-1.9.1.ebuild:
+  Version bump
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   akonadi-server-1.8.0.ebuild, akonadi-server-1.8.1.ebuild,

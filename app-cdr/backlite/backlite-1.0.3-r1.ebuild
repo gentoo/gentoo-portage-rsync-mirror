@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/backlite-1.0.3-r1.ebuild,v 1.5 2013/03/02 19:12:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/backlite-1.0.3-r1.ebuild,v 1.6 2013/03/04 19:01:05 billie Exp $
 
-EAPI=4
+EAPI=5
 
 inherit qt4-r2 eutils
 

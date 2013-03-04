@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc3.ebuild,v 1.10 2011/11/17 17:02:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc3.ebuild,v 1.11 2013/03/04 19:08:37 ottxor Exp $
 
 EAPI="3"
 
@@ -77,6 +77,10 @@ src_configure() {
 	# config files without the following fix:
 	append-flags -DPOVLIBDIR=\\\"${EROOT}usr/share/${PN}\\\"
 	append-flags -DPOVCONFDIR=\\\"${EROOT}etc/${PN}\\\"
+
+	#460238, included in the patch for povray-3.7.0_rc6
+	has_version ">=dev-libs/boost-1.52" && \
+		append-flags "-lboost_system" "-lboost_date_time" "-DTIME_UTC=TIME_UTC_"
 
 	if ! use tiff ; then
 		non_redist_conf="NON_REDISTRIBUTABLE_BUILD=yes"

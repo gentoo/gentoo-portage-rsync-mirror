@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/povray
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.142 2013/03/02 00:49:41 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.143 2013/03/04 19:08:37 ottxor Exp $
+
+  04 Mar 2013; Christoph Junghans <ottxor@gentoo.org>
+  -povray-3.7.0_rc5-r1.ebuild, povray-3.7.0_rc3.ebuild:
+  fixed build with boost-1.52 (bug #460238), also broken intermediate version
 
   02 Mar 2013; Christoph Junghans <ottxor@gentoo.org> povray-3.7.0_rc6.ebuild:
   added epatch_user to src_prepare

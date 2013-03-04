@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.60 2013/03/02 07:17:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.62 2013/03/04 19:29:43 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -99,14 +99,6 @@ if [[ ! ${DISTUTILS_OPTIONAL} ]]; then
 	RDEPEND=${PYTHON_DEPS}
 	DEPEND=${PYTHON_DEPS}
 fi
-
-# @ECLASS-VARIABLE: DISTUTILS_JOBS
-# @DEFAULT_UNSET
-# @DESCRIPTION:
-# The number of parallel jobs to run for distutils-r1 parallel builds.
-# If unset, the job-count in ${MAKEOPTS} will be used.
-#
-# This variable is intended to be set in make.conf.
 
 # @ECLASS-VARIABLE: PATCHES
 # @DEFAULT_UNSET
@@ -551,26 +543,12 @@ distutils-r1_run_phase() {
 
 	mkdir -p "${TMPDIR}" || die
 
-	if [[ ${DISTUTILS_NO_PARALLEL_BUILD} || ${DISTUTILS_SINGLE_IMPL} ]]
-	then
-		"${@}" 2>&1 | tee -a "${T}/build-${EPYTHON}.log"
-	else
-		(
-			multijob_child_init
-			"${@}" 2>&1 | tee -a "${T}/build-${EPYTHON}.log"
-		) &
-		multijob_post_fork
-	fi
+	"${@}"
 
 	if [[ ${DISTUTILS_IN_SOURCE_BUILD} && ! ${DISTUTILS_SINGLE_IMPL} ]]
 	then
 		popd >/dev/null || die
 	fi
-
-	# Store them for reuse.
-	_DISTUTILS_BEST_IMPL=(
-		"${EPYTHON}" "${PYTHON}" "${BUILD_DIR}" "${PYTHONPATH}"
-	)
 }
 
 # @FUNCTION: _distutils-r1_run_common_phase
@@ -584,56 +562,11 @@ distutils-r1_run_phase() {
 _distutils-r1_run_common_phase() {
 	local DISTUTILS_ORIG_BUILD_DIR=${BUILD_DIR}
 
-	local EPYTHON=${_DISTUTILS_BEST_IMPL[0]}
-	local PYTHON=${_DISTUTILS_BEST_IMPL[1]}
-	local BUILD_DIR=${_DISTUTILS_BEST_IMPL[2]}
-	local PYTHONPATH=${_DISTUTILS_BEST_IMPL[3]}
+	local MULTIBUILD_VARIANTS
+	_python_obtain_impls
 
-	export EPYTHON PYTHON PYTHONPATH
-
-	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
-		pushd "${BUILD_DIR}"/.. >/dev/null || die
-	fi
-
-	einfo "common: running ${1}"
-	"${@}"
-
-	if [[ ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
-		popd >/dev/null || die
-	fi
-}
-
-# @FUNCTION: _distutils-r1_multijob_init
-# @INTERNAL
-# @DESCRIPTION:
-# Init multijob, taking the job-count from ${DISTUTILS_JOBS}.
-_distutils-r1_multijob_init() {
-	debug-print-function ${FUNCNAME} "${@}"
-
-	if [[ ! ${DISTUTILS_NO_PARALLEL_BUILD} && ! ${DISTUTILS_SINGLE_IMPL} ]]
-	then
-		local opts
-		if [[ ${DISTUTILS_JOBS} ]]; then
-			opts=-j${DISTUTILS_JOBS}
-		else
-			opts=${MAKEOPTS}
-		fi
-
-		multijob_init "${opts}"
-	fi
-}
-
-# @FUNCTION: _distutils-r1_multijob_finish
-# @INTERNAL
-# @DESCRIPTION:
-# Finish multijob if used.
-_distutils-r1_multijob_finish() {
-	debug-print-function ${FUNCNAME} "${@}"
-
-	if [[ ! ${DISTUTILS_NO_PARALLEL_BUILD} && ! ${DISTUTILS_SINGLE_IMPL} ]]
-	then
-		multijob_finish
-	fi
+	multibuild_for_best_variant _python_multibuild_wrapper \
+		distutils-r1_run_phase "${@}"
 }
 
 # @FUNCTION: _distutils-r1_run_foreach_impl
@@ -647,9 +580,12 @@ _distutils-r1_run_foreach_impl() {
 	set -- distutils-r1_run_phase "${@}"
 
 	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
-		_distutils-r1_multijob_init
-		python_foreach_impl "${@}"
-		_distutils-r1_multijob_finish
+		if [[ ${DISTUTILS_NO_PARALLEL_BUILD} || ${DISTUTILS_SINGLE_IMPL} ]]
+		then
+			python_foreach_impl "${@}"
+		else
+			python_parallel_foreach_impl "${@}"
+		fi
 	else
 		if [[ ! ${EPYTHON} ]]; then
 			die "EPYTHON unset, python-single-r1_pkg_setup not called?!"

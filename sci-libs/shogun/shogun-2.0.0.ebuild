@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/shogun-2.0.0.ebuild,v 1.1 2013/03/03 07:14:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/shogun-2.0.0.ebuild,v 1.2 2013/03/04 19:08:43 bicatali Exp $
 
 EAPI=5
 
-inherit eutils multilib versionator toolchain-funcs java-pkg-opt-2 flag-o-matic
+inherit eutils multilib versionator toolchain-funcs java-pkg-opt-2
 
 MYPV=$(get_version_component_range 1-2)
 MYPD=${PN}-data-0.4
@@ -101,7 +101,6 @@ src_configure() {
 
 	# gentoo bug #302621
 	use hdf5 && has_version sci-libs/hdf5[mpi] && export CXX=mpicxx CC=mpicc
-	use smp && append-ldflags -pthread
 	./configure \
 		--disable-cpudetection \
 		--destdir="${D}" \

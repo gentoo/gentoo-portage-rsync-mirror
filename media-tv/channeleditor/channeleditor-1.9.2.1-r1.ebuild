@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/channeleditor/channeleditor-1.9.2.1-r1.ebuild,v 1.7 2012/11/17 20:37:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/channeleditor/channeleditor-1.9.2.1-r1.ebuild,v 1.8 2013/03/04 19:20:40 billie Exp $
 
-EAPI=4
+EAPI=5
 
 JAVA_PKG_IUSE=source
 inherit eutils java-pkg-2 java-ant-2

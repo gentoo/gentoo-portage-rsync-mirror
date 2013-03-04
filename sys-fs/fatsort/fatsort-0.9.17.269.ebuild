@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/fatsort-0.9.17.269.ebuild,v 1.3 2012/07/08 12:56:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/fatsort-0.9.17.269.ebuild,v 1.4 2013/03/04 19:27:15 billie Exp $
 
-EAPI=4
+EAPI=5
 
 inherit toolchain-funcs
 

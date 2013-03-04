@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.6-r3.ebuild,v 1.6 2013/03/02 22:43:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.6-r3.ebuild,v 1.7 2013/03/04 19:25:01 billie Exp $
 
-EAPI=4
+EAPI=5
+
 inherit eutils fdo-mime qt4-r2
 
 DESCRIPTION="Tool for cutting MPEG files especially for removing commercials"
