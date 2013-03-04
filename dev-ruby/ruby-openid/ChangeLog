@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-openid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.30 2013/01/27 13:44:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.32 2013/03/04 09:21:19 ago Exp $
+
+  04 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ruby-openid-2.2.2.ebuild:
+  Stable for x86, wrt bug #460156
+
+  04 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ruby-openid-2.2.2.ebuild:
+  Stable for amd64, wrt bug #460156
 
   27 Jan 2013; Hans de Graaff <graaff@gentoo.org> ruby-openid-2.2.2.ebuild:
   Fix tests with LANG=C and ruby19, bug 454186.

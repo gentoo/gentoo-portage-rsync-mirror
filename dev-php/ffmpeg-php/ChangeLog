@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/ffmpeg-php
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ChangeLog,v 1.3 2012/01/09 15:26:53 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ChangeLog,v 1.4 2013/03/04 09:17:05 olemarkus Exp $
+
+*ffmpeg-php-0.6.0-r2 (04 Mar 2013)
+
+  04 Mar 2013; Ole Markus With <olemarkus@gentoo.org>
+  +ffmpeg-php-0.6.0-r2.ebuild, +files/ffmpeg-php-0.6.0-php5-4.patch:
+  Adds 5.4 support to ffmpeg-php. Thanks to Sergey Smirnov. Fixes bug 459006
 
   09 Jan 2012; Alexis Ballier <aballier@gentoo.org> ffmpeg-php-0.6.0-r1.ebuild,
   files/ffmpeg-php-0.6.0-ffmpeg.patch, +files/ffmpeg-php-0.6.0-log.patch:
@@ -65,4 +71,3 @@
   15 Aug 2007; Jakub Moc <jakub@gentoo.org> -ffmpeg-php-0.5.0.ebuild,
   +ffmpeg-php-0.5.0.ebuild:
   Version bump, check for gd support in PHP
-
