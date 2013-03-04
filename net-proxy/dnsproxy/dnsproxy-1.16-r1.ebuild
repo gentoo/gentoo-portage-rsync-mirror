@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dnsproxy/dnsproxy-1.16-r1.ebuild,v 1.5 2012/10/07 19:12:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dnsproxy/dnsproxy-1.16-r1.ebuild,v 1.6 2013/03/04 16:41:51 dastergon Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="The dnsproxy daemon is a proxy for DNS queries"
 HOMEPAGE="http://www.wolfermann.org/dnsproxy.html"
 SRC_URI="http://www.wolfermann.org/${P}.tar.gz"
 
-LICENSE="MIT"
+LICENSE="MIT GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
