@@ -1,14 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-6.0-r1.ebuild,v 1.3 2013/03/02 19:43:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-6.0-r1.ebuild,v 1.4 2013/03/04 18:08:16 kensington Exp $
 
-EAPI=4
-KDE_REQUIRED="never"
+EAPI=5
+KDE_REQUIRED="optional"
+KDE_LINGUAS="cs fr hu it nl pt_BR ru sv tr uk zh_CN zh_TW"
 KDE_LINGUAS_DIR="po"
-KDE_LINGUAS="cs fr hu it nl pt_BR ru sv tr zh_CN zh_TW"
-inherit fdo-mime qt4-r2 kde4-base eutils
 
-DESCRIPTION="KchmViewer is a feature rich chm file viewer, based on Qt."
+inherit base eutils fdo-mime qt4-r2 kde4-base
+
+DESCRIPTION="A feature rich chm file viewer, based on Qt."
 HOMEPAGE="http://www.kchmviewer.net/"
 SRC_URI="mirror://sourceforge/kchmviewer/${P}.tar.gz"
 
@@ -19,9 +20,10 @@ IUSE="debug kde"
 
 RDEPEND="
 	dev-libs/chmlib
-	>=dev-qt/qtdbus-4.5:4
-	>=dev-qt/qtwebkit-4.5:4
-	!kde? ( >=dev-qt/qtgui-4.5:4 )
+	dev-qt/qtcore:4
+	dev-qt/qtdbus:4
+	dev-qt/qtgui:4
+	dev-qt/qtwebkit:4
 	kde? (
 		$(add_kdebase_dep kdelibs)
 		!kde-base/okular[chm]
@@ -65,24 +67,20 @@ src_compile() {
 	if use kde; then
 		kde4-base_src_compile
 	else
-		emake || die
+		default
 	fi
-}
-
-src_test() {
-	einfo "No tests exist."
 }
 
 src_install() {
 	if use kde; then
 		kde4-base_src_install
 	else
-		dobin bin/kchmviewer || die "dobin kchmviewer failed"
-		domenu packages/kchmviewer.desktop || die
-		dodoc ChangeLog README || die
+		dobin bin/kchmviewer
+		domenu packages/kchmviewer.desktop
+		dodoc ChangeLog README
 	fi
-	doicon packages/kchmviewer.png || die
-	dodoc DBUS-bindings FAQ || die
+	doicon packages/kchmviewer.png
+	dodoc DBUS-bindings FAQ
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmetalink/libmetalink-0.1.0.ebuild,v 1.1 2012/08/01 14:35:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmetalink/libmetalink-0.1.0.ebuild,v 1.2 2013/03/04 18:24:11 ranger Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="https://launchpad.net/${PN}/trunk/${P}/+download/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ppc ~ppc64 ~x86"
 IUSE="expat test"
 
 RDEPEND="expat? ( dev-libs/expat )

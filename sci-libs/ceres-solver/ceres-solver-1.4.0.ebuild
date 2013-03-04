@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ceres-solver/ceres-solver-1.4.0.ebuild,v 1.3 2013/01/11 19:37:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ceres-solver/ceres-solver-1.4.0.ebuild,v 1.4 2013/03/04 18:28:26 bicatali Exp $
 
 EAPI=4
 
@@ -48,7 +48,10 @@ src_prepare() {
 		-e 's/EXISTS ${LAPACK_LIB}/LAPACK_LIB/g' \
 		CMakeLists.txt || die
 
+	# remove downloading minted.sty
 	sed -i \
+		-e '/minted/d' \
+		-e '/SHOW_PROGRES/d' \
 		-e "s:share/ceres/docs:share/doc/${PF}:" \
 		docs/CMakeLists.txt || die
 
