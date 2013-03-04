@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.119 2013/03/04 11:59:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.120 2013/03/04 12:09:04 aballier Exp $
 
 EAPI="4"
 
@@ -142,7 +142,7 @@ src_configure() {
 	local version3=""
 
 	# enabled by default
-	for i in debug doc network vaapi vdpau zlib; do
+	for i in debug doc network zlib; do
 		use ${i} || myconf="${myconf} --disable-${i}"
 	done
 	use bzip2 || myconf="${myconf} --disable-bzlib"
@@ -151,7 +151,7 @@ src_configure() {
 	use cpudetection || myconf="${myconf} --disable-runtime-cpudetect"
 	use openssl && myconf="${myconf} --enable-openssl --enable-nonfree"
 	# disabled by default
-	for i in gnutls iconv ; do
+	for i in gnutls iconv vaapi vdpau ; do
 		use $i && myconf="${myconf} --enable-$i"
 	done
 

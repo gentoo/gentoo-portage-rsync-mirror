@@ -1,6 +1,13 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.612 2013/03/04 11:59:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.614 2013/03/04 12:12:35 aballier Exp $
+
+  04 Mar 2013; Alexis Ballier <aballier@gentoo.org> -ffmpeg-1.0.4.ebuild,
+  -ffmpeg-1.1.2.ebuild:
+  remove old
+
+  04 Mar 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  fix vaapi/vdpau useflags that are now disabled by default
 
   04 Mar 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   add iconv useflag

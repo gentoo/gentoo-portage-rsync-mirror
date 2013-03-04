@@ -4935,8 +4935,19 @@ net-print/hplip:scanner - Enable scanner on multifunction devices which support 
 net-print/hplip:snmp - Add support for net-analyzer/net-snmp which enables this driver to work over networks (both for server and client)
 net-print/hplip:static-ppds - Use statically-generated PPDs instead of Dynamic PPDs. Although this is deprecated some printers may still need it to work properly. Use this flag if hp-setup fails to find/create a valid PPD file
 net-print/magicfilter:lprng-failsafe - Refuse options for compability with certain LPRng versions.
-net-proxy/dansguardian:kaspersky - Adds support for Kaspersky AntiVirus software
-net-proxy/dansguardian:ntlm - Enable support for the NTLM auth plugin
+net-proxy/dansguardian:avast - Enable support for the AvastD content scanner.
+net-proxy/dansguardian:backtrace - Enable logging a backtrace when a segmentation fault occurs.
+net-proxy/dansguardian:clamav - Enable support for the ClamD content scanner.
+net-proxy/dansguardian:commandline - Enable support for command-line content scanners.
+net-proxy/dansguardian:email - Enable support for email reporting functionality.
+net-proxy/dansguardian:fancydm - Enable support for the fancy download manager.
+net-proxy/dansguardian:icap - Enable support for ICAP AV server content scanner.
+net-proxy/dansguardian:kaspersky - Enable support for the Kaspersky AV daemon content scanner.
+net-proxy/dansguardian:lfs - Enable large file support on 32 bit systems.
+net-proxy/dansguardian:logrotate - Use app-admin/logrotate for rotating logs.
+net-proxy/dansguardian:ntlm - Enable support for the NTLM auth plugin.
+net-proxy/dansguardian:orig-ip - Enable support for checking the client's original destination IP address against HTTP request details when deployed as a transparent proxy (US-CERT VU#435052).
+net-proxy/dansguardian:trickledm - Enable support for the trickle download manager.
 net-proxy/obfsproxy:daemon - Run obfsproxy as a standalone daemon
 net-proxy/rejik:banlists - Install upstream provided simple banlists
 net-proxy/squid:ecap - Adds support for loadable content adaptation modules (http://www.e-cap.org)
