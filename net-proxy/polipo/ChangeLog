@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/polipo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.35 2011/12/31 21:11:37 idl0r Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.36 2013/03/04 14:34:10 dastergon Exp $
+
+  04 Mar 2013; Pavlos Ratis <dastergon@gentoo.org> polipo-1.0.4.1-r1.ebuild:
+  fixed QA issues, added GPL-2 to LICENSE, see bug #426130
 
 *polipo-1.0.4.1-r1 (31 Dec 2011)
 
@@ -173,4 +176,3 @@
   +files/polipo-0.9.8-gentoo.patch, +files/polipo.crond, +files/polipo.initd,
   +polipo-0.9.8.ebuild:
   Initial import from bug #79618.
-
