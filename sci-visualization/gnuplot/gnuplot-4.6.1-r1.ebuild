@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.1-r1.ebuild,v 1.3 2013/03/02 23:27:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.1-r1.ebuild,v 1.4 2013/03/04 11:37:51 ulm Exp $
 
 EAPI=5
 
@@ -67,7 +67,7 @@ DEPEND="${RDEPEND}
 if [[ -z ${PV%%*9999} ]]; then
 	# The live ebuild always needs an Emacs for building of gnuplot.texi
 	DEPEND="${DEPEND}
-	!emacs? ( !xemacs? ( || ( virtual/emacs app-xemacs/texinfo ) ) )"
+	|| ( virtual/emacs app-xemacs/texinfo )"
 fi
 
 S="${WORKDIR}/${MY_P}"
@@ -98,15 +98,15 @@ src_prepare() {
 	fi
 
 	DOC_CONTENTS='Gnuplot no longer links against pdflib, see the ChangeLog
-		for details.  You can use the "pdfcairo" terminal for PDF output.'
-	use cairo || DOC_CONTENTS+='  It is available with USE="cairo".'
+		for details. You can use the "pdfcairo" terminal for PDF output.'
+	use cairo || DOC_CONTENTS+=' It is available with USE="cairo".'
 	use svga && DOC_CONTENTS+='\n\nIn order to enable ordinary users to use
 		SVGA console graphics, gnuplot needs to be set up as setuid root.
 		Please note that this is usually considered to be a security hazard.
 		As root, manually "chmod u+s /usr/bin/gnuplot".'
 	use gd && DOC_CONTENTS+='\n\nFor font support in png/jpeg/gif output,
 		you may have to set the GDFONTPATH and GNUPLOT_DEFAULT_GDFONT
-		environment variables.  See the FAQ file in /usr/share/doc/${PF}/
+		environment variables. See the FAQ file in /usr/share/doc/${PF}/
 		for more information.'
 }
 
@@ -122,27 +122,6 @@ src_configure() {
 
 	tc-export CC CXX			#453174
 
-	local myconf
-	myconf="${myconf} --without-pdf"
-	myconf="${myconf} --enable-stats" #extra command save to be enabled
-	myconf="${myconf} --with-texdir=${TEXMF}/tex/latex/${PN}"
-	myconf="${myconf} $(use_with bitmap bitmap-terminals)"
-	myconf="${myconf} $(use_with cairo)"
-	myconf="${myconf} $(use_with doc tutorial)"
-	myconf="${myconf} $(use_with gd)"
-	myconf="${myconf} $(use_with ggi ggi ${EPREFIX}/usr/$(get_libdir))"
-	myconf="${myconf} $(use_with ggi xmi ${EPREFIX}/usr/$(get_libdir))"
-	myconf="${myconf} $(use_with lua)"
-	myconf="${myconf} $(use_with plotutils plot "${EPREFIX}"/usr/$(get_libdir))"
-	myconf="${myconf} $(use_with svga linux-vga)"
-	myconf="${myconf} $(use_enable thin-splines)"
-	myconf="${myconf} $(use_enable wxwidgets)"
-	myconf="${myconf} $(use_with X x)"
-	myconf="${myconf} $(use_enable qt4 qt)"
-	use readline \
-		&& myconf="${myconf} --with-readline=gnu" \
-		|| myconf="${myconf} --with-readline=builtin"
-
 	local emacs lispdir
 	if use emacs; then
 		emacs=emacs
@@ -154,7 +133,7 @@ src_configure() {
 		lispdir="${EPREFIX}/usr/lib/xemacs/site-packages/${PN}"
 	else
 		emacs=no
-		myconf="${myconf} --without-lisp-files"
+		lispdir=""
 		if [[ -z ${PV%%*9999} ]]; then
 			# Live ebuild needs an Emacs to build gnuplot.texi
 			if has_version virtual/emacs; then emacs=emacs
@@ -162,9 +141,28 @@ src_configure() {
 		fi
 	fi
 
-	econf ${myconf} \
+	econf \
+		--without-pdf \
+		--with-texdir="${TEXMF}/tex/latex/${PN}" \
+		--with-readline=$(usex readline gnu builtin) \
+		--with-lispdir="${lispdir}" \
+		--with$([[ -z ${lispdir} ]] && echo out)-lisp-files \
+		$(use_with bitmap bitmap-terminals) \
+		$(use_with cairo) \
+		$(use_with doc tutorial) \
+		$(use_with gd) \
+		"$(use_with ggi ggi "${EPREFIX}/usr/$(get_libdir)")" \
+		"$(use_with ggi xmi "${EPREFIX}/usr/$(get_libdir)")" \
+		$(use_with lua) \
+		"$(use_with plotutils plot "${EPREFIX}/usr/$(get_libdir)")" \
+		$(use_with svga linux-vga) \
+		$(use_with X x) \
+		--enable-stats \
+		$(use_enable qt4 qt) \
+		$(use_enable thin-splines) \
+		$(use_enable wxwidgets) \
 		DIST_CONTACT="http://bugs.gentoo.org/" \
-		EMACS="${emacs}" --with-lispdir="${lispdir}"
+		EMACS="${emacs}"
 }
 
 src_compile() {

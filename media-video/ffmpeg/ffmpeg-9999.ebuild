@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.116 2013/02/22 19:08:22 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.119 2013/03/04 11:59:02 aballier Exp $
 
 EAPI="4"
 
@@ -31,10 +31,10 @@ fi
 IUSE="
 	aac aacplus alsa amr avresample bindist bluray +bzip2 cdio celt
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
-	gnutls gsm +hardcoded-tables iec61883 ieee1394 jack jpeg2k libass libcaca
-	libsoxr libv4l modplug mp3 network openal openssl opus oss pic pulseaudio
-	rtmp schroedinger sdl speex static-libs test theora threads truetype twolame
-	v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
+	gnutls gsm +hardcoded-tables +iconv iec61883 ieee1394 jack jpeg2k libass
+	libcaca libsoxr libv4l modplug mp3 network openal openssl opus oss pic
+	pulseaudio rtmp schroedinger sdl speex static-libs test theora threads
+	truetype twolame v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -75,6 +75,7 @@ RDEPEND="
 	frei0r? ( media-plugins/frei0r-plugins )
 	gnutls? ( >=net-libs/gnutls-2.12.16 )
 	gsm? ( >=media-sound/gsm-1.0.12-r1 )
+	iconv? ( virtual/libiconv )
 	iec61883? ( media-libs/libiec61883 sys-libs/libraw1394 sys-libs/libavc1394 )
 	ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 )
 	jack? ( media-sound/jack-audio-connection-kit )
@@ -123,6 +124,7 @@ REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) !openssl )
 	test? ( encode )"
 
 S=${WORKDIR}/${P/_/-}
+BUILD_DIR=${S}_build
 
 src_prepare() {
 	if [ "${PV%_p*}" != "${PV}" ] ; then # Snapshot
@@ -132,6 +134,9 @@ src_prepare() {
 }
 
 src_configure() {
+	mkdir -p "${BUILD_DIR}"
+	cd "${BUILD_DIR}"
+
 	local myconf="${EXTRA_FFMPEG_CONF}"
 	# Set to --enable-version3 if (L)GPL-3 is required
 	local version3=""
@@ -145,7 +150,8 @@ src_configure() {
 
 	use cpudetection || myconf="${myconf} --disable-runtime-cpudetect"
 	use openssl && myconf="${myconf} --enable-openssl --enable-nonfree"
-	for i in gnutls ; do
+	# disabled by default
+	for i in gnutls iconv ; do
 		use $i && myconf="${myconf} --enable-$i"
 	done
 
@@ -256,8 +262,7 @@ src_configure() {
 	# Misc stuff
 	use hardcoded-tables && myconf="${myconf} --enable-hardcoded-tables"
 
-	cd "${S}"
-	./configure \
+	"${S}/configure" \
 		--prefix="${EPREFIX}/usr" \
 		--libdir="${EPREFIX}/usr/$(get_libdir)" \
 		--shlibdir="${EPREFIX}/usr/$(get_libdir)" \
@@ -274,6 +279,7 @@ src_configure() {
 }
 
 src_compile() {
+	cd "${BUILD_DIR}"
 	emake V=1
 
 	for i in ${FFTOOLS} ; do
@@ -284,23 +290,26 @@ src_compile() {
 }
 
 src_install() {
+	cd "${BUILD_DIR}"
 	emake V=1 DESTDIR="${D}" install install-man
-
-	dodoc Changelog README CREDITS doc/*.txt doc/APIchanges doc/RELEASE_NOTES
-	use doc && dohtml -r doc/*
-	if use examples ; then
-		insinto "/usr/share/doc/${PF}/examples"
-		doins -r doc/examples/*
-	fi
 
 	for i in ${FFTOOLS} ; do
 		if use fftools_$i ; then
 			dobin tools/$i
 		fi
 	done
+
+	cd "${S}"
+	dodoc Changelog README CREDITS doc/*.txt doc/APIchanges doc/RELEASE_NOTES
+	use doc && dohtml -r doc/*
+	if use examples ; then
+		dodoc -r doc/examples
+		docompress -x /usr/share/doc/${PF}/examples
+	fi
 }
 
 src_test() {
-	LD_LIBRARY_PATH="${S}/libpostproc:${S}/libswscale:${S}/libswresample:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil:${S}/libavresample" \
+	cd "${BUILD_DIR}"
+	LD_LIBRARY_PATH="${BUILD_DIR}/libpostproc:${BUILD_DIR}/libswscale:${BUILD_DIR}/libswresample:${BUILD_DIR}/libavcodec:${BUILD_DIR}/libavdevice:${BUILD_DIR}/libavfilter:${BUILD_DIR}/libavformat:${BUILD_DIR}/libavutil:${BUILD_DIR}/libavresample" \
 		emake V=1 fate
 }

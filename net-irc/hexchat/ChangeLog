@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.28 2013/03/03 18:01:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.29 2013/03/04 11:59:47 jer Exp $
+
+  04 Mar 2013; Jeroen Roovers <jer@gentoo.org> hexchat-2.9.4.ebuild:
+  Stable for HPPA (bug #459868).
 
   03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> hexchat-2.9.4.ebuild:
   Remove tcl support, not supported anymore

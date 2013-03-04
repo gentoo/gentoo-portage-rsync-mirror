@@ -1,6 +1,15 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.609 2013/03/04 10:58:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.612 2013/03/04 11:59:02 aballier Exp $
+
+  04 Mar 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  add iconv useflag
+
+  04 Mar 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  do not compress examples, they are mainly useless compressed
+
+  04 Mar 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  do an out-of-tree build
 
 *ffmpeg-1.0.5 (04 Mar 2013)
 
