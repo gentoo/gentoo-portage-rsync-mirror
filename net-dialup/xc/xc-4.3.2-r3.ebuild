@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r3.ebuild,v 1.8 2013/03/03 16:14:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r3.ebuild,v 1.9 2013/03/04 05:28:26 pinkbyte Exp $
 
 EAPI=5
 
@@ -26,6 +26,7 @@ src_prepare() {
 
 	sed -i \
 		-e "/^libdir/s:/lib/:/$(get_libdir)/:" \
+		-e "/strip/d" \
 		Makefile || die
 	# bug 459796
 	append-libs "$($(tc-getPKG_CONFIG) --libs ncurses)"
