@@ -43,7 +43,7 @@ Respect LDFLAGS,CFLAGS, fix install
  wwwget: wwwget.c
 -	$(CC) wwwget.c $(LIBSYS) -o $@
 -	$(STRIP) $@
-+	$(CC) $(LDFLAGS) wwwget.c $(LIBSYS) -o $@
++	$(CC) $(CFLAGS) $(LDFLAGS) wwwget.c $(LIBSYS) -o $@
  
  doc: sk.tex man.tex aclient.tex
  	latex man.tex
