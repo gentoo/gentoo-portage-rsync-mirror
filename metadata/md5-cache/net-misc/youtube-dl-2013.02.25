@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare setup
+DEPEND=test? ( dev-python/nose[coverage(+)] )
+DESCRIPTION=A small command-line program to download videos from YouTube.
+EAPI=5
+HOMEPAGE=http://rg3.github.com/youtube-dl/
+IUSE=offensive test python_targets_python2_5 python_targets_python2_6 python_targets_python2_7 python_single_target_python2_5 python_single_target_python2_6 python_single_target_python2_7
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris
+LICENSE=public-domain
+SLOT=0
+SRC_URI=http://youtube-dl.org/downloads/2013.02.25/youtube-dl-2013.02.25.tar.gz
+_eclasses_=bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6	eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	python-single-r1	ac5bf9438dc6ee497650a74d7a1402c2	python-utils-r1	120bfd06803274b3d1b986d506302851	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=d69de00b1e67b447af6b2117cf71c48c

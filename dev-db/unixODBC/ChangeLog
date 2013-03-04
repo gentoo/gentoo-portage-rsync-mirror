@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/unixODBC
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.113 2012/05/12 01:10:55 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.114 2013/03/03 23:36:12 neurogeek Exp $
+
+*unixODBC-2.3.1-r1 (03 Mar 2013)
+
+  03 Mar 2013; <neurogeek@gentoo.org> +unixODBC-2.3.1-r1.ebuild:
+  Added unicode USE-flag to allow for iconv default ucode conversions. Closes
+  bug #456790
 
   12 May 2012; Alexis Ballier <aballier@gentoo.org> unixODBC-2.3.1.ebuild:
   keyword ~amd64-fbsd

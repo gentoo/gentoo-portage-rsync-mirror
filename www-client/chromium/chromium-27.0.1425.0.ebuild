@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1425.0.ebuild,v 1.1 2013/03/01 18:01:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1425.0.ebuild,v 1.2 2013/03/03 23:46:22 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -52,7 +52,7 @@ RDEPEND="app-accessibility/speech-dispatcher
 	media-libs/libpng
 	media-libs/libvpx
 	>=media-libs/libwebp-0.2.0_rc1
-	!arm? ( !x86? ( media-libs/mesa[gles2] ) )
+	!arm? ( !x86? ( >=media-libs/mesa-9.1[gles2] ) )
 	media-libs/opus
 	media-libs/speex
 	pulseaudio? ( media-sound/pulseaudio )
@@ -132,6 +132,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
 
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
+	epatch "${FILESDIR}/${PN}-mesa-r1.patch"
 	epatch "${FILESDIR}/${PN}-system-v8-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r4.patch"
 

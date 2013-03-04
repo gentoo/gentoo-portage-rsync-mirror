@@ -1,0 +1,241 @@
+Index: gpu/command_buffer/client/gles2_c_lib_autogen.h
+diff --git a/gpu/command_buffer/client/gles2_c_lib_autogen.h b/gpu/command_buffer/client/gles2_c_lib_autogen.h
+index 80a4d230ad4b82abbaa82f2c328286b9d89da329..d56df6fdb0d851125148a1aac0bedbc487320682 100644
+--- a/gpu/command_buffer/client/gles2_c_lib_autogen.h
++++ b/gpu/command_buffer/client/gles2_c_lib_autogen.h
+@@ -355,7 +355,8 @@ void GLES2ShaderBinary(
+       n, shaders, binaryformat, binary, length);
+ }
+ void GLES2ShaderSource(
+-    GLuint shader, GLsizei count, const char** str, const GLint* length) {
++    GLuint shader, GLsizei count, const GLchar* const* str,
++    const GLint* length) {
+   gles2::GetGLContext()->ShaderSource(shader, count, str, length);
+ }
+ void GLES2StencilFunc(GLenum func, GLint ref, GLuint mask) {
+Index: gpu/command_buffer/client/gles2_implementation.cc
+diff --git a/gpu/command_buffer/client/gles2_implementation.cc b/gpu/command_buffer/client/gles2_implementation.cc
+index b6c354819ce5d556ff91f7b5273875c3cec83f7a..600c02f3751a2ab72eed498be7ee0f02e628130d 100644
+--- a/gpu/command_buffer/client/gles2_implementation.cc
++++ b/gpu/command_buffer/client/gles2_implementation.cc
+@@ -1173,7 +1173,7 @@ void GLES2Implementation::VertexAttribDivisorANGLE(
+ }
+ 
+ void GLES2Implementation::ShaderSource(
+-    GLuint shader, GLsizei count, const char** source, const GLint* length) {
++    GLuint shader, GLsizei count, const GLchar* const* source, const GLint* length) {
+   GPU_CLIENT_SINGLE_THREAD_CHECK();
+   GPU_CLIENT_LOG("[" << GetLogPrefix() << "] glShaderSource("
+       << shader << ", " << count << ", "
+Index: gpu/command_buffer/client/gles2_implementation_autogen.h
+diff --git a/gpu/command_buffer/client/gles2_implementation_autogen.h b/gpu/command_buffer/client/gles2_implementation_autogen.h
+index febcaf45bb5446393c7785196c9ef4a329438d0f..e4a63822ae6b3b9c950b7f9b05f173ce1ecfdb87 100644
+--- a/gpu/command_buffer/client/gles2_implementation_autogen.h
++++ b/gpu/command_buffer/client/gles2_implementation_autogen.h
+@@ -253,7 +253,7 @@ virtual void ShaderBinary(
+     GLsizei length) OVERRIDE;
+ 
+ virtual void ShaderSource(
+-    GLuint shader, GLsizei count, const char** str,
++    GLuint shader, GLsizei count, const GLchar* const* str,
+     const GLint* length) OVERRIDE;
+ 
+ virtual void StencilFunc(GLenum func, GLint ref, GLuint mask) OVERRIDE;
+Index: gpu/command_buffer/client/gles2_interface_autogen.h
+diff --git a/gpu/command_buffer/client/gles2_interface_autogen.h b/gpu/command_buffer/client/gles2_interface_autogen.h
+index b84dd71bd9139ac487a40847ddb746f839cf3593..8aafc7fd45891be4e2aa61f5825c20d0ccd1dc76 100644
+--- a/gpu/command_buffer/client/gles2_interface_autogen.h
++++ b/gpu/command_buffer/client/gles2_interface_autogen.h
+@@ -152,7 +152,8 @@ virtual void ShaderBinary(
+     GLsizei n, const GLuint* shaders, GLenum binaryformat, const void* binary,
+     GLsizei length) = 0;
+ virtual void ShaderSource(
+-    GLuint shader, GLsizei count, const char** str, const GLint* length) = 0;
++    GLuint shader, GLsizei count, const GLchar* const* str,
++    const GLint* length) = 0;
+ virtual void StencilFunc(GLenum func, GLint ref, GLuint mask) = 0;
+ virtual void StencilFuncSeparate(
+     GLenum face, GLenum func, GLint ref, GLuint mask) = 0;
+Index: gpu/command_buffer/client/gles2_interface_stub_autogen.h
+diff --git a/gpu/command_buffer/client/gles2_interface_stub_autogen.h b/gpu/command_buffer/client/gles2_interface_stub_autogen.h
+index 3c1c6696b08923142c879aa591b3902339e5874c..80e6c1003ae1be90fcd1a2871ffdde58f7237bff 100644
+--- a/gpu/command_buffer/client/gles2_interface_stub_autogen.h
++++ b/gpu/command_buffer/client/gles2_interface_stub_autogen.h
+@@ -163,7 +163,7 @@ virtual void ShaderBinary(
+     GLsizei n, const GLuint* shaders, GLenum binaryformat, const void* binary,
+     GLsizei length) OVERRIDE;
+ virtual void ShaderSource(
+-    GLuint shader, GLsizei count, const char** str,
++    GLuint shader, GLsizei count, const GLchar* const* str,
+     const GLint* length) OVERRIDE;
+ virtual void StencilFunc(GLenum func, GLint ref, GLuint mask) OVERRIDE;
+ virtual void StencilFuncSeparate(
+Index: gpu/command_buffer/client/gles2_interface_stub_impl_autogen.h
+diff --git a/gpu/command_buffer/client/gles2_interface_stub_impl_autogen.h b/gpu/command_buffer/client/gles2_interface_stub_impl_autogen.h
+index dce39c0def3ec52499c712afe1f792809c00db28..f097e8cba8e4d13af9027122a36b93f2ec28ae46 100644
+--- a/gpu/command_buffer/client/gles2_interface_stub_impl_autogen.h
++++ b/gpu/command_buffer/client/gles2_interface_stub_impl_autogen.h
+@@ -310,7 +310,7 @@ void GLES2InterfaceStub::ShaderBinary(
+     const void* /* binary */, GLsizei /* length */) {
+ }
+ void GLES2InterfaceStub::ShaderSource(
+-    GLuint /* shader */, GLsizei /* count */, const char** /* str */,
++    GLuint /* shader */, GLsizei /* count */, const GLchar* const* /* str */,
+     const GLint* /* length */) {
+ }
+ void GLES2InterfaceStub::StencilFunc(
+Index: gpu/command_buffer/client/gles2_trace_implementation_autogen.h
+diff --git a/gpu/command_buffer/client/gles2_trace_implementation_autogen.h b/gpu/command_buffer/client/gles2_trace_implementation_autogen.h
+index 46cbdccccd0e3e4074b1fd919fc6b91d95fe04a5..da02881f9d180bd26f5a2bad2d4e814a9ca085b3 100644
+--- a/gpu/command_buffer/client/gles2_trace_implementation_autogen.h
++++ b/gpu/command_buffer/client/gles2_trace_implementation_autogen.h
+@@ -163,7 +163,7 @@ virtual void ShaderBinary(
+     GLsizei n, const GLuint* shaders, GLenum binaryformat, const void* binary,
+     GLsizei length) OVERRIDE;
+ virtual void ShaderSource(
+-    GLuint shader, GLsizei count, const char** str,
++    GLuint shader, GLsizei count, const GLchar* const* str,
+     const GLint* length) OVERRIDE;
+ virtual void StencilFunc(GLenum func, GLint ref, GLuint mask) OVERRIDE;
+ virtual void StencilFuncSeparate(
+Index: gpu/command_buffer/client/gles2_trace_implementation_impl_autogen.h
+diff --git a/gpu/command_buffer/client/gles2_trace_implementation_impl_autogen.h b/gpu/command_buffer/client/gles2_trace_implementation_impl_autogen.h
+index 8aff42a6711c38b76e8767057b41fa31fe89f168..8f87a40da0f26f0dd71772e5fbcf519c8b02ad12 100644
+--- a/gpu/command_buffer/client/gles2_trace_implementation_impl_autogen.h
++++ b/gpu/command_buffer/client/gles2_trace_implementation_impl_autogen.h
+@@ -570,7 +570,8 @@ void GLES2TraceImplementation::ShaderBinary(
+ }
+ 
+ void GLES2TraceImplementation::ShaderSource(
+-    GLuint shader, GLsizei count, const char** str, const GLint* length) {
++    GLuint shader, GLsizei count, const GLchar* const* str,
++    const GLint* length) {
+   TRACE_EVENT_BINARY_EFFICIENT0("gpu", "GLES2Trace::ShaderSource");
+   gl_->ShaderSource(shader, count, str, length);
+ }
+Index: gpu/command_buffer/cmd_buffer_functions.txt
+diff --git a/gpu/command_buffer/cmd_buffer_functions.txt b/gpu/command_buffer/cmd_buffer_functions.txt
+index 2ad875a4aeaf86566c5f0334090f6583468c4781..08d33d963e3450d6fe442b333fb88089b184d86b 100644
+--- a/gpu/command_buffer/cmd_buffer_functions.txt
++++ b/gpu/command_buffer/cmd_buffer_functions.txt
+@@ -103,7 +103,7 @@ GL_APICALL void         GL_APIENTRY glRenderbufferStorage (GLenumRenderBufferTar
+ GL_APICALL void         GL_APIENTRY glSampleCoverage (GLclampf value, GLboolean invert);
+ GL_APICALL void         GL_APIENTRY glScissor (GLint x, GLint y, GLsizei width, GLsizei height);
+ GL_APICALL void         GL_APIENTRY glShaderBinary (GLsizeiNotNegative n, const GLuint* shaders, GLenumShaderBinaryFormat binaryformat, const void* binary, GLsizeiNotNegative length);
+-GL_APICALL void         GL_APIENTRY glShaderSource (GLidShader shader, GLsizeiNotNegative count, const char** str, const GLint* length);
++GL_APICALL void         GL_APIENTRY glShaderSource (GLidShader shader, GLsizeiNotNegative count, const GLchar* const* str, const GLint* length);
+ GL_APICALL void         GL_APIENTRY glStencilFunc (GLenumCmpFunction func, GLint ref, GLuint mask);
+ GL_APICALL void         GL_APIENTRY glStencilFuncSeparate (GLenumFaceType face, GLenumCmpFunction func, GLint ref, GLuint mask);
+ GL_APICALL void         GL_APIENTRY glStencilMask (GLuint mask);
+Index: third_party/khronos/GLES2/gl2.h
+diff --git a/third_party/khronos/GLES2/gl2.h b/third_party/khronos/GLES2/gl2.h
+index edebb8b23a56f6a67bb1ecfe5304bb5b372745e6..7aef573b6af7f4e3c76bdfb741374521b2f1eca4 100644
+--- a/third_party/khronos/GLES2/gl2.h
++++ b/third_party/khronos/GLES2/gl2.h
+@@ -1,7 +1,7 @@
+ #ifndef __gl2_h_
+ #define __gl2_h_
+ 
+-/* $Revision: 1.1 $ on $Date: 2013/03/03 23:46:22 $ */
++/* $Revision: 1.1 $ on $Date: 2013/03/03 23:46:22 $ */
+ 
+ #include <GLES2/gl2chromium.h>
+ #include <GLES2/gl2platform.h>
+@@ -160,7 +160,6 @@ typedef khronos_ssize_t  GLsizeiptr;
+ #define GL_INVALID_VALUE                  0x0501
+ #define GL_INVALID_OPERATION              0x0502
+ #define GL_OUT_OF_MEMORY                  0x0505
+-#define GL_CONTEXT_LOST                   0x300E  // TODO(gman): What value?
+ 
+ /* FrontFaceDirection */
+ #define GL_CW                             0x0900
+@@ -529,7 +528,7 @@ GL_APICALL void         GL_APIENTRY glGenTextures (GLsizei n, GLuint* textures);
+ GL_APICALL void         GL_APIENTRY glGetActiveAttrib (GLuint program, GLuint index, GLsizei bufsize, GLsizei* length, GLint* size, GLenum* type, GLchar* name);
+ GL_APICALL void         GL_APIENTRY glGetActiveUniform (GLuint program, GLuint index, GLsizei bufsize, GLsizei* length, GLint* size, GLenum* type, GLchar* name);
+ GL_APICALL void         GL_APIENTRY glGetAttachedShaders (GLuint program, GLsizei maxcount, GLsizei* count, GLuint* shaders);
+-GL_APICALL int          GL_APIENTRY glGetAttribLocation (GLuint program, const GLchar* name);
++GL_APICALL GLint        GL_APIENTRY glGetAttribLocation (GLuint program, const GLchar* name);
+ GL_APICALL void         GL_APIENTRY glGetBooleanv (GLenum pname, GLboolean* params);
+ GL_APICALL void         GL_APIENTRY glGetBufferParameteriv (GLenum target, GLenum pname, GLint* params);
+ GL_APICALL GLenum       GL_APIENTRY glGetError (void);
+@@ -548,7 +547,7 @@ GL_APICALL void         GL_APIENTRY glGetTexParameterfv (GLenum target, GLenum p
+ GL_APICALL void         GL_APIENTRY glGetTexParameteriv (GLenum target, GLenum pname, GLint* params);
+ GL_APICALL void         GL_APIENTRY glGetUniformfv (GLuint program, GLint location, GLfloat* params);
+ GL_APICALL void         GL_APIENTRY glGetUniformiv (GLuint program, GLint location, GLint* params);
+-GL_APICALL int          GL_APIENTRY glGetUniformLocation (GLuint program, const GLchar* name);
++GL_APICALL GLint        GL_APIENTRY glGetUniformLocation (GLuint program, const GLchar* name);
+ GL_APICALL void         GL_APIENTRY glGetVertexAttribfv (GLuint index, GLenum pname, GLfloat* params);
+ GL_APICALL void         GL_APIENTRY glGetVertexAttribiv (GLuint index, GLenum pname, GLint* params);
+ GL_APICALL void         GL_APIENTRY glGetVertexAttribPointerv (GLuint index, GLenum pname, GLvoid** pointer);
+@@ -570,7 +569,7 @@ GL_APICALL void         GL_APIENTRY glRenderbufferStorage (GLenum target, GLenum
+ GL_APICALL void         GL_APIENTRY glSampleCoverage (GLclampf value, GLboolean invert);
+ GL_APICALL void         GL_APIENTRY glScissor (GLint x, GLint y, GLsizei width, GLsizei height);
+ GL_APICALL void         GL_APIENTRY glShaderBinary (GLsizei n, const GLuint* shaders, GLenum binaryformat, const GLvoid* binary, GLsizei length);
+-GL_APICALL void         GL_APIENTRY glShaderSource (GLuint shader, GLsizei count, const GLchar** string, const GLint* length);
++GL_APICALL void         GL_APIENTRY glShaderSource (GLuint shader, GLsizei count, const GLchar* const* string, const GLint* length);
+ GL_APICALL void         GL_APIENTRY glStencilFunc (GLenum func, GLint ref, GLuint mask);
+ GL_APICALL void         GL_APIENTRY glStencilFuncSeparate (GLenum face, GLenum func, GLint ref, GLuint mask);
+ GL_APICALL void         GL_APIENTRY glStencilMask (GLuint mask);
+Index: third_party/khronos/README.chromium
+diff --git a/third_party/khronos/README.chromium b/third_party/khronos/README.chromium
+index b47cb038c3cc5b51181194a55869842118bf7a56..da2e6c511e33767a458da1a17bd1b78e87779439 100644
+--- a/third_party/khronos/README.chromium
++++ b/third_party/khronos/README.chromium
+@@ -20,7 +20,6 @@ NOTE: Please add Chromium-specific declarations to files in gpu/{GL,EGL,GLES2}
+ and not here.
+ 
+ GLES2/gl2.h
+- - Added GL_CONTEXT_LOST constant.
+  - Added include of gl2chromium.h
+ GLES2/gl2ext.h
+  - Added Chromium and Angle extensions.
+Index: ui/gl/generate_bindings.py
+diff --git a/ui/gl/generate_bindings.py b/ui/gl/generate_bindings.py
+index 16f89984bc3d1dc967d6ea3d2c4c1ed799716f8e..8422bbc8baf049f6431cea602a179296698f12b3 100755
+--- a/ui/gl/generate_bindings.py
++++ b/ui/gl/generate_bindings.py
+@@ -482,7 +482,7 @@ GL_FUNCTIONS = [
+ { 'return_type': 'void',
+   'names': ['glShaderSource'],
+   'arguments':
+-      'GLuint shader, GLsizei count, const char** str, const GLint* length',
++      'GLuint shader, GLsizei count, const char* const* str, const GLint* length',
+   'logging_code': """
+   GL_SERVICE_LOG_CODE_BLOCK({
+     for (GLsizei ii = 0; ii < count; ++ii) {
+@@ -1584,7 +1584,7 @@ namespace gfx {
+     file.write('\n')
+     file.write('%s GL_BINDING_CALL Mock_%s(%s) {\n' %
+         (func['return_type'], func['names'][0], func['arguments']))
+-    argument_names = re.sub(r'(const )?[a-zA-Z0-9]+\** ([a-zA-Z0-9]+)', r'\2',
++    argument_names = re.sub(r'(const )?[a-zA-Z0-9]+((\s*const\s*)?\*)* ([a-zA-Z0-9]+)', r'\4',
+                               func['arguments'])
+     if argument_names == 'void':
+       argument_names = ''
+Index: ui/gl/gl_bindings_skia_in_process.cc
+diff --git a/ui/gl/gl_bindings_skia_in_process.cc b/ui/gl/gl_bindings_skia_in_process.cc
+index f45626616ed6ff8e8de0c59b25165e6b51f3668d..115eac8d8a57e7abc000935e20c8eb311cd404e8 100644
+--- a/ui/gl/gl_bindings_skia_in_process.cc
++++ b/ui/gl/gl_bindings_skia_in_process.cc
+@@ -365,7 +365,7 @@ GLvoid StubGLScissor(GLint x, GLint y, GLsizei width, GLsizei height) {
+   glScissor(x, y, width, height);
+ }
+ 
+-GLvoid StubGLShaderSource(GLuint shader, GLsizei count, const char** str,
++GLvoid StubGLShaderSource(GLuint shader, GLsizei count, const char* const* str,
+                           const GLint* length) {
+   glShaderSource(shader, count, str, length);
+ }
+Index: third_party/skia/include/gpu/gl/GrGLConfig_chrome.h
+===================================================================
+--- a/third_party/skia/include/gpu/gl/GrGLConfig_chrome.h	(revision 7840)
++++ b/third_party/skia/include/gpu/gl/GrGLConfig_chrome.h	(working copy)
+@@ -37,4 +37,8 @@
+ // Non-VBO vertices and indices are not allowed in Chromium.
+ #define GR_GL_MUST_USE_VBO                          1
+ 
++// Use updated Khronos signature for glShaderSource
++// (const char* const instead of char**).
++#define GR_USE_NEW_GL_SHADER_SOURCE_SIGNATURE       1
++
+ #endif

@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.823 2013/03/01 20:56:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.824 2013/03/03 23:46:22 phajdan.jr Exp $
+
+  03 Mar 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-mesa-r0.patch, chromium-26.0.1410.19.ebuild,
+  chromium-27.0.1425.0.ebuild, chromium-9999-r1.ebuild,
+  +files/chromium-mesa-r1.patch:
+  Fix build with mesa-9.1, bug #455762 by Anthony Parsons.
 
   01 Mar 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   +files/chromium-system-ffmpeg-r4.patch:
