@@ -1,17 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dateutils/dateutils-0.2.3.ebuild,v 1.2 2013/03/04 07:43:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dateutils/dateutils-0.2.4.ebuild,v 1.1 2013/03/04 07:43:13 radhermit Exp $
 
-EAPI="4"
+EAPI=5
 
 DESCRIPTION="command line date and time utilities"
 HOMEPAGE="http://hroptatyr.github.com/dateutils/"
-SRC_URI="mirror://github/hroptatyr/${PN}/${P}.tar.xz"
+SRC_URI="https://bitbucket.org/hroptatyr/${PN}/downloads/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 DEPEND="app-arch/xz-utils
 	sys-libs/timezone-data"
