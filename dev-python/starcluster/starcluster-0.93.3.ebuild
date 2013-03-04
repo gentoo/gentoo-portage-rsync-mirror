@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/starcluster-0.93.3.ebuild,v 1.4 2012/11/13 07:27:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/starcluster/starcluster-0.93.3.ebuild,v 1.6 2013/03/04 16:22:19 idella4 Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ IUSE="doc bash-completion epydoc"
 
 RDEPEND=">=dev-python/ssh-1.7.13
 	>=dev-python/boto-2.3.0
-	=dev-python/jinja-2.6
+	>=dev-python/jinja-2.6-r1
 	>=dev-python/decorator-3.1.1
 	>=dev-python/pyasn1-0.0.13_beta
 	=dev-python/workerpool-0.9.2"
