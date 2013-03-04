@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.3-r2.ebuild,v 1.1 2013/03/03 05:21:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/nlopt/nlopt-2.3-r2.ebuild,v 1.2 2013/03/04 17:19:40 bicatali Exp $
 
 EAPI=5
 
@@ -45,8 +45,9 @@ src_prepare() {
 
 src_configure() {
 	if use octave; then
-		export OCT_INSTALL_DIR="${EPREFIX}"/usr/libexec/octave/site/oct/${CHOST}
-		export M_INSTALL_DIR="${EPREFIX}"/usr/share/octave/site/m
+		export OCT_INSTALL_DIR="$(octave-config -p LOCALOCTFILEDIR)"
+		export M_INSTALL_DIR="$(octave-config -p LOCALFCNFILEDIR)"
+
 	else
 		export MKOCTFILE=None
 	fi
@@ -82,8 +83,14 @@ src_compile() {
 }
 
 src_test() {
-	cd "${AUTOTOOLS_BUILD_DIR}"/test
 	local a f
+	cd "${BUILD_DIR}"/test
+	for a in {1..7}; do
+		for f in {5..9}; do
+			./testopt -a $a -o $f || die "algorithm $a function $f failed"
+		done
+	done
+	cd "${BUILD_DIR}_cxx"/test
 	for a in {1..9}; do
 		for f in {5..9}; do
 			./testopt -a $a -o $f || die "algorithm $a function $f failed"
