@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1-r1.ebuild,v 1.1 2013/02/06 10:46:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1-r1.ebuild,v 1.2 2013/03/04 06:15:37 idella4 Exp $
 
 EAPI=5
 
@@ -64,6 +64,7 @@ python_prepare_all() {
 		"${FILESDIR}"/${PN}-2.8.9-wxversion-scripts.patch
 		# drop editra - we have it as a separate package now
 		"${FILESDIR}"/${PN}-2.8.12-drop-editra.patch
+		"${FILESDIR}"/${PN}-2.8.12-drop-categories.patch
 	)
 
 	distutils-r1_python_prepare_all
