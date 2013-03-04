@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.442 2013/02/16 13:18:10 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.443 2013/03/04 20:53:22 scarabeus Exp $
+
+  04 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Few cleanups in live ebuild to match upstream no longer using dmake.
 
   16 Feb 2013; Mark Wright <gienah@gentoo.org>
   +files/libreoffice-3.6.4.3-boost-1.53.0.patch,

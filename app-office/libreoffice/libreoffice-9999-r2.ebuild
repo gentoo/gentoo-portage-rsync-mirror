@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.159 2013/01/31 15:36:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.160 2013/03/04 20:53:22 scarabeus Exp $
 
 EAPI=5
 
@@ -227,7 +227,6 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-3.7-system-pyuno.patch"
-	"${FILESDIR}/${PN}-3.7-separate-checks.patch"
 )
 
 REQUIRED_USE="
@@ -313,8 +312,6 @@ src_unpack() {
 
 src_prepare() {
 	# optimization flags
-	export ARCH_FLAGS="${CXXFLAGS}"
-	export LINKFLAGSOPTIMIZE="${LDFLAGS}"
 	export GMAKE_OPTIONS="${MAKEOPTS}"
 
 	# patchset
@@ -338,6 +335,13 @@ src_prepare() {
 		-e "s:%libdir%:$(get_libdir):g" \
 		-i pyuno/source/module/uno.py \
 		-i scripting/source/pyprov/officehelper.py || die
+	# sed in the tests
+	sed -i \
+		-e 's#all : build unitcheck#all : build#g' \
+		solenv/gbuild/Module.mk || die
+	sed -i \
+		-e 's#check: dev-install subsequentcheck#check: unitcheck slowcheck dev-install subsequentcheck#g' \
+		Makefile.in || die
 }
 
 src_configure() {
@@ -376,7 +380,6 @@ src_configure() {
 			--without-system-hsqldb
 			--with-ant-home="${ANT_HOME}"
 			--with-jdk-home=$(java-config --jdk-home 2>/dev/null)
-			--with-java-target-version=$(java-pkg_get-target)
 			--with-jvm-path="${EPREFIX}/usr/$(get_libdir)/"
 		"
 
@@ -420,7 +423,6 @@ src_configure() {
 	# --disable-rpath: relative runtime path is not desired
 	# --disable-systray: quickstarter does not actually work at all so do not
 	#   promote it
-	# --disable-zenity: disable build icon
 	# --enable-extension-integration: enable any extension integration support
 	# --without-{afms,fonts,myspell-dicts,ppsd}: prevent install of sys pkgs
 	# --disable-ext-report-builder: too much java packages pulled in
@@ -453,7 +455,6 @@ src_configure() {
 		--disable-online-update \
 		--disable-rpath \
 		--disable-systray \
-		--disable-zenity \
 		--with-alloc=$(use jemalloc && echo "jemalloc" || echo "system") \
 		--with-build-version="Gentoo official package" \
 		--enable-extension-integration \
