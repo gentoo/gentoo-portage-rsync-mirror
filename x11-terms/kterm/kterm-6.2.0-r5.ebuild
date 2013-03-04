@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r5.ebuild,v 1.10 2013/01/12 18:23:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r5.ebuild,v 1.11 2013/03/04 10:57:33 naota Exp $
 
 EAPI=4
 
@@ -44,8 +44,10 @@ src_prepare(){
 }
 
 src_compile(){
+	PKG_CONFIG=$(tc-getPKG_CONFIG)
 	xmkmf -a || die
-	emake CC="$(tc-getCC)" CDEBUGFLAGS="${CFLAGS}" LOCAL_LDFLAGS="${LDFLAGS}" \
+	emake CC="$(tc-getCC)" CDEBUGFLAGS="${CFLAGS}" \
+		LOCAL_LDFLAGS="${LDFLAGS} $($PKG_CONFIG --libs ncurses)" \
 		XAPPLOADDIR="${EPREFIX}"/usr/share/X11/app-defaults
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/lv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.43 2013/02/27 12:43:45 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.44 2013/03/04 10:55:57 naota Exp $
+
+  04 Mar 2013; Naohiro Aota <naota@gentoo.org> +files/lv-4.51-tinfo.patch,
+  lv-4.51-r3.ebuild:
+  Add a patch to scan ncurses pkg-config file. #459594
 
   27 Feb 2013; Akinori Hattori <hattya@gentoo.org> -lv-4.51-r1.ebuild:
   remove old ebuild

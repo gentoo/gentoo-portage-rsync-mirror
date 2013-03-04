@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/kterm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.34 2013/01/04 15:45:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.35 2013/03/04 10:57:33 naota Exp $
+
+  04 Mar 2013; Naohiro Aota <naota@gentoo.org> kterm-6.2.0-r5.ebuild:
+  Add extra LDFLAGS to add ncurses pkg-config result. #459646
 
   04 Jan 2013; Ulrich Müller <ulm@gentoo.org> kterm-6.2.0-r5.ebuild:
   Fix LICENSE, see notices in source files, bug 448274.

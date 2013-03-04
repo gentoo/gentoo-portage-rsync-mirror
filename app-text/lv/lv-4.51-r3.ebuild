@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lv/lv-4.51-r3.ebuild,v 1.7 2012/09/18 03:12:31 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/lv-4.51-r3.ebuild,v 1.8 2013/03/04 10:55:57 naota Exp $
 
 EAPI="4"
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs autotools
 
 MY_P="${PN}${PV//./}"
 
@@ -26,6 +26,8 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	epatch "${FILESDIR}"/${P}-xz.diff
+	epatch "${FILESDIR}"/${P}-tinfo.patch
+	cd "${S}"/src; eautoreconf
 }
 
 src_configure() {
