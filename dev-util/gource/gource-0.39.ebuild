@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.39.ebuild,v 1.1 2013/02/04 15:42:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.39.ebuild,v 1.2 2013/03/04 07:07:14 flameeyes Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	>=dev-libs/boost-1.46[threads(+)]
+	>=dev-libs/boost-1.46:=[threads(+)]
 	>=media-libs/glew-1.5
 	>=media-libs/libpng-1.2
 	>=media-libs/libsdl-1.2.10[video,opengl,X]
