@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-integration-spotify/gnome-integration-spotify-20130116.ebuild,v 1.1 2013/01/17 08:06:05 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-integration-spotify/gnome-integration-spotify-20130304.ebuild,v 1.1 2013/03/04 21:53:22 prometheanfire Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit gnome2-utils
 DESCRIPTION="GNOME integration for Spotify"
 HOMEPAGE="https://github.com/mrpdaemon/gnome-integration-spotify"
 SRC_URI="http://github.com/mrpdaemon/${PN}/tarball/${PV} -> ${PN}-git-${PV}.tgz"
-S="${WORKDIR}/mrpdaemon-${PN}-55ce7a3"
+S="${WORKDIR}/mrpdaemon-${PN}-9af735f"
 
 LICENSE="GPL-3"
 SLOT="0"

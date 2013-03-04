@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.7.6.ebuild,v 1.1 2013/01/26 09:23:51 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.7.6-r1.ebuild,v 1.1 2013/03/04 21:56:56 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
@@ -83,7 +83,7 @@ python_install() {
 		newins "etc/container-server.conf-sample" "container-server.conf"
 	fi
 	if use object; then
-		newinitd "${FILESDIR}/swift-object.initd" "swift-obect"
+		newinitd "${FILESDIR}/swift-object.initd" "swift-object"
 		newins "etc/object-server.conf-sample" "object-server.conf"
 		newins "etc/object-expirer.conf-sample" "object-expirer.conf"
 	fi
