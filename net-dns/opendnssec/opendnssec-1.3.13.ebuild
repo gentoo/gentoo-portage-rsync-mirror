@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.11.ebuild,v 1.1 2012/11/14 21:11:00 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.13.ebuild,v 1.1 2013/03/04 19:35:14 mschiff Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ RDEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
 	>=net-libs/ldns-1.6.12
-	auditor? ( dev-lang/ruby[ssl] >=dev-ruby/dnsruby-1.53 )
+	auditor? ( dev-lang/ruby[ssl] dev-ruby/dnsruby )
 	curl? ( net-misc/curl )
 	mysql? (
 		virtual/mysql
@@ -51,6 +51,7 @@ REQUIRED_USE="
 
 PATCHES=(
 	"${FILESDIR}/${PN}-fix-localstatedir.patch"
+	"${FILESDIR}/${PN}-fix-run-dir.patch"
 	"${FILESDIR}/${PN}-drop-privileges.patch"
 	"${FILESDIR}/${PN}-use-system-trang.patch"
 )
@@ -174,7 +175,7 @@ src_install() {
 	use eppclient && fowners root:opendnssec /etc/opendnssec/eppclientd.conf
 
 	fowners opendnssec:opendnssec /var/lib/opendnssec/{,signconf,unsigned,signed,tmp}
-	fowners opendnssec:opendnssec /var/run/opendnssec
+	fowners opendnssec:opendnssec /run/opendnssec
 
 	# install conf/init script
 	newinitd "${FILESDIR}"/opendnssec.initd opendnssec

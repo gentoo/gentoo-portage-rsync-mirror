@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.392 2013/02/18 22:46:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.393 2013/03/04 19:51:15 tove Exp $
+
+*perl-5.16.2-r1 (04 Mar 2013)
+*perl-5.12.5 (04 Mar 2013)
+
+  04 Mar 2013; Torsten Veller <tove@gentoo.org> +perl-5.12.5.ebuild,
+  +files/perl-5.12.5-rehash-5.12.5.patch, +perl-5.16.2-r1.ebuild:
+  Bump. Fixes CVE-2013-1667 and adds subslots.
 
   18 Feb 2013; Zac Medico <zmedico@gentoo.org> perl-5.16.2.ebuild:
   Add ~arm-linux keyword.
