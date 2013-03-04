@@ -132,15 +132,6 @@ diff --git a/third_party/khronos/GLES2/gl2.h b/third_party/khronos/GLES2/gl2.h
 index edebb8b23a56f6a67bb1ecfe5304bb5b372745e6..7aef573b6af7f4e3c76bdfb741374521b2f1eca4 100644
 --- a/third_party/khronos/GLES2/gl2.h
 +++ b/third_party/khronos/GLES2/gl2.h
-@@ -1,7 +1,7 @@
- #ifndef __gl2_h_
- #define __gl2_h_
- 
--/* $Revision: 1.1 $ on $Date: 2013/03/03 23:46:22 $ */
-+/* $Revision: 1.1 $ on $Date: 2013/03/03 23:46:22 $ */
- 
- #include <GLES2/gl2chromium.h>
- #include <GLES2/gl2platform.h>
 @@ -160,7 +160,6 @@ typedef khronos_ssize_t  GLsizeiptr;
  #define GL_INVALID_VALUE                  0x0501
  #define GL_INVALID_OPERATION              0x0502

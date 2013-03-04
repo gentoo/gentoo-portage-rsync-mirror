@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.824 2013/03/03 23:46:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.825 2013/03/04 01:53:16 floppym Exp $
+
+  04 Mar 2013; Mike Gilbert <floppym@gentoo.org> files/chromium-mesa-r0.patch,
+  files/chromium-mesa-r1.patch:
+  Remove CVS keywords from mesa patches. Thanks to Ben Kohler for reporting on
+  bug 455762.
 
   03 Mar 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   +files/chromium-mesa-r0.patch, chromium-26.0.1410.19.ebuild,
