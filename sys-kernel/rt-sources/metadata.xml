@@ -6,6 +6,10 @@
 		<email>psomas@gentoo.org</email>
 		<name>Stratos Psomadakis</name>
 	</maintainer>
+	<maintainer>
+		<email>eric-f.garioud@wanadoo.fr</email>
+		<name>Eric F. GARIOUD</name>
+	</maintainer>
 	<longdescription>
 		Real-time patchset for the Linux Kernel
 	</longdescription>
