@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/pecl-ssh2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-ssh2/ChangeLog,v 1.7 2012/10/21 09:14:24 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-ssh2/ChangeLog,v 1.8 2013/03/04 09:32:57 olemarkus Exp $
+
+*pecl-ssh2-0.12 (04 Mar 2013)
+
+  04 Mar 2013; Ole Markus With <olemarkus@gentoo.org> +pecl-ssh2-0.12.ebuild:
+  Version bump, bug 453840. Thanks to tazinblack
 
   21 Oct 2012; Markus Meier <maekke@gentoo.org> pecl-ssh2-0.11.3-r1.ebuild:
   x86 stable, bug #427024
@@ -73,4 +78,3 @@
   11 Aug 2009; Hanno Boeck <hanno@gentoo.org> +pecl-ssh2-0.11.0.ebuild,
   +metadata.xml:
   Initial commit of php bindings for libssh2.
-
