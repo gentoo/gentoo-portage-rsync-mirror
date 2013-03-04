@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/trf/trf-4.04.ebuild,v 1.4 2012/10/06 16:57:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/trf/trf-4.04.ebuild,v 1.5 2013/03/04 08:31:57 jlec Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ src_unpack() {
 src_install() {
 	exeinto /opt/${PN}
 	doexe trf404.linux.exe
-	dosym /opt/${PN}/${MY_P}.linux.exe /usr/bin/trf
+	dosym /opt/${PN}/${MY_P}.linux.exe /opt/bin/trf
 	# GTK version (http://tandem.bu.edu/trf/downloads/trf400.linuxgtk.exe) has broken linking
 	#if use gtk; then
 	#	doexe trf400.linuxgtk.exe || die
