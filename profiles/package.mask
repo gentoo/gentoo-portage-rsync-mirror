@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14526 2013/03/05 08:51:01 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14528 2013/03/05 11:18:26 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (05 Mar 2013)
+# Fails to compile unless system has previously installed copy
+# wrt bugs 411443 and 413753
+# Masked temporarily until fixed
+=media-libs/libcaca-0.99_beta18
 
 # Ole Markus With <olemarkus@gentoo.org> (05 Mar 2013)
 # Conflicts with app-misc/pfm (bug 460222). Upstream gone.

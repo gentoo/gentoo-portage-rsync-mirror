@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-imagick/pecl-imagick-3.0.1-r1.ebuild,v 1.2 2012/10/12 17:40:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-imagick/pecl-imagick-3.0.1-r1.ebuild,v 1.3 2013/03/05 11:19:38 olemarkus Exp $
 
-EAPI=3
+EAPI=5
 
 PHP_EXT_NAME="imagick"
 PHP_EXT_INI="yes"

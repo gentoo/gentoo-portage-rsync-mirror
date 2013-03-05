@@ -1,6 +1,12 @@
-# ChangeLog for dev-php5/pecl-lzf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-lzf/ChangeLog,v 1.1 2011/12/14 22:40:38 mabi Exp $
+# ChangeLog for dev-php/pecl-lzf
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-lzf/ChangeLog,v 1.2 2013/03/05 11:24:36 olemarkus Exp $
+
+*pecl-lzf-1.6.2 (05 Mar 2013)
+
+  05 Mar 2013; Ole Markus With <olemarkus@gentoo.org> +pecl-lzf-1.6.2.ebuild,
+  -pecl-lzf-1.5.2-r1.ebuild:
+  Version bump
 
 *pecl-lzf-1.5.2-r1 (04 Nov 2010)
 
@@ -12,4 +18,3 @@
   05 Jul 2010; Matti Bickel <mabi@gentoo.org> +pecl-lzf-1.5.2.ebuild,
   +metadata.xml:
   initial import (bug #223809)
-

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-id3/pecl-id3-0.2-r2.ebuild,v 1.1 2011/09/18 11:24:09 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-id3/pecl-id3-0.2-r2.ebuild,v 1.2 2013/03/05 11:18:24 olemarkus Exp $
 
-EAPI=3
+EAPI=5
 
 PHP_EXT_NAME="id3"
 PHP_EXT_INI="yes"

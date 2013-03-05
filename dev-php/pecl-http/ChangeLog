@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/pecl-http
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-http/ChangeLog,v 1.10 2012/10/21 09:03:42 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-http/ChangeLog,v 1.11 2013/03/05 11:17:01 olemarkus Exp $
+
+  05 Mar 2013; Ole Markus With <olemarkus@gentoo.org>
+  -pecl-http-1.7.0-r1.ebuild, -pecl-http-1.7.1.ebuild,
+  -pecl-http-1.7.3-r1.ebuild, -pecl-http-1.7.3.ebuild:
+  Removed older ebuilds
 
   21 Oct 2012; Markus Meier <maekke@gentoo.org> pecl-http-1.7.4.ebuild:
   x86 stable, bug #427024
@@ -129,4 +134,3 @@
   26 Aug 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +pecl-http-1.2.1.ebuild:
   Initial ebuild.
-

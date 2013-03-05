@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mongo/pecl-mongo-1.3.0.ebuild,v 1.1 2012/11/28 09:33:36 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mongo/pecl-mongo-1.3.4.ebuild,v 1.1 2013/03/05 11:30:15 olemarkus Exp $
 
-EAPI=3
+EAPI=5
 
 PHP_EXT_NAME="mongo"
 
