@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc6.ebuild,v 1.5 2013/03/02 00:49:41 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc6.ebuild,v 1.6 2013/03/05 01:34:02 ottxor Exp $
 
 EAPI=4
 
@@ -46,6 +46,9 @@ src_prepare() {
 		"${FILESDIR}"/3.7.0_rc3-user-conf.patch \
 		"${FILESDIR}"/${PN}-3.7.0_rc5+boost-1.50.patch \
 		"${FILESDIR}"/${PN}-3.7.0_rc5-automagic.patch
+
+	[[ ${CHOST} == *-darwin* ]] && \
+		epatch "${FILESDIR}"/${PN}-3.7.0_rc6-darwin-defaults.patch
 
 	# Change some destination directories that cannot be adjusted via configure
 	sed \

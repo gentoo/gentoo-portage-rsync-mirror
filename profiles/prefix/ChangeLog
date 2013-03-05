@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.379 2013/02/26 21:25:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.380 2013/03/05 01:41:14 ottxor Exp $
+
+  05 Mar 2013; Christoph Junghans <ottxor@gentoo.org> darwin/package.mask:
+  unmask povray on darwin
 
   26 Feb 2013; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/10.5/make.defaults, darwin/macos/10.6/make.defaults,
