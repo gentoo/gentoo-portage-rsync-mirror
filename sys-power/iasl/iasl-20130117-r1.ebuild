@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20130117.ebuild,v 1.1 2013/01/31 09:37:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20130117-r1.ebuild,v 1.1 2013/03/05 04:36:19 patrick Exp $
 
 EAPI=4
 
@@ -49,7 +49,12 @@ src_prepare() {
 		sed -r -e 's:-\<Werror\>::g' -i '{}' \
 		|| die
 
-	export BITS=64
+	# BITS is tied to ARCH - please set appropriately if you add new keywords
+	if [[ $ARCH == @(amd64|amd64-fbsd) ]] ; then
+		export BITS=64
+	else
+		export BITS=32
+	fi
 }
 
 src_configure() {
