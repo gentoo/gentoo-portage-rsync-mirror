@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r2.ebuild,v 1.5 2013/02/12 06:34:04 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r2.ebuild,v 1.6 2013/03/05 18:05:35 idella4 Exp $
 
 EAPI=5
 
@@ -229,7 +229,6 @@ src_install() {
 	export PYTHONDONTWRITEBYTECODE
 
 	emake DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" install-tools
-#		XEN_PYTHON_NATIVE_INSTALL=y install-tools
 
 	# Fix the remaining Python shebangs.
 	python_fix_shebang "${D}"
@@ -271,9 +270,13 @@ src_install() {
 		keepdir /var/log/xen-consoles
 	fi
 
+	# Set dirs for qemu files,; Bug #458818
 	if use qemu; then
-		mkdir -p "${D}"usr/lib64/xen/bin || die
-		mv "${D}"usr/lib/xen/bin/qemu* "${D}"usr/lib64/xen/bin/ || die
+		if use x86; then
+			dodir /usr/lib/xen/bin
+		elif use amd64; then
+			mv "${D}"usr/lib/xen/bin/qemu* "${D}"usr/$(get_libdir)/xen/bin/ || die
+		fi
 	fi
 
 	# For -static-libs wrt Bug 384355

@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r5.ebuild,v 1.11 2013/03/05 09:17:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r5.ebuild,v 1.12 2013/03/05 18:25:34 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
 
-inherit autotools elisp-common eutils flag-o-matic multilib
+inherit autotools elisp-common eutils flag-o-matic multilib readme.gentoo
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
@@ -267,9 +267,25 @@ src_install () {
 		rm -rf "${ED}"/Applications/Gentoo/Emacs${EMACS_SUFFIX#emacs}.app
 		mv nextstep/Emacs.app \
 			"${ED}"/Applications/Gentoo/Emacs${EMACS_SUFFIX#emacs}.app || die
-		elog "Emacs${EMACS_SUFFIX#emacs}.app is in ${EPREFIX}/Applications/Gentoo."
-		elog "You may want to copy or symlink it into /Applications by yourself."
 	fi
+
+	DOC_CONTENTS="You can set the version to be started by /usr/bin/emacs
+		through the Emacs eselect module, which also redirects man and
+		info pages. Therefore, several Emacs versions can be installed at
+		the same time. \"man emacs.eselect\" for details.
+		\\n\\nIf you upgrade from a previous major version of Emacs, then
+		it is strongly recommended that you use app-admin/emacs-updater
+		to rebuild all byte-compiled elisp files of the installed Emacs
+		packages."
+	use X && DOC_CONTENTS+="\\n\\nYou need to install some fonts for Emacs.
+		Installing media-fonts/font-adobe-{75,100}dpi on the X server's
+		machine would satisfy basic Emacs requirements under X11.
+		See also http://www.gentoo.org/proj/en/lisp/emacs/xft.xml
+		for how to enable anti-aliased fonts."
+	use aqua && DOC_CONTENTS+="\\n\\nEmacs${EMACS_SUFFIX#emacs}.app is in
+		${EPREFIX}/Applications/Gentoo. You may want to copy or symlink it
+		into /Applications by yourself."
+	readme.gentoo_create_doc
 }
 
 pkg_preinst() {
@@ -292,6 +308,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	elisp-site-regen
+	readme.gentoo_print_elog
 
 	if use livecd; then
 		# force an update of the emacs symlink for the livecd/dvd,
@@ -300,24 +317,6 @@ pkg_postinst() {
 	else
 		eselect emacs update ifunset
 	fi
-
-	if use X; then
-		elog "You need to install some fonts for Emacs."
-		elog "Installing media-fonts/font-adobe-{75,100}dpi on the X server's"
-		elog "machine would satisfy basic Emacs requirements under X11."
-		elog "See also http://www.gentoo.org/proj/en/lisp/emacs/xft.xml"
-		elog "for how to enable anti-aliased fonts."
-		elog
-	fi
-
-	elog "You can set the version to be started by /usr/bin/emacs through"
-	elog "the Emacs eselect module, which also redirects man and info pages."
-	elog "Therefore, several Emacs versions can be installed at the same time."
-	elog "\"man emacs.eselect\" for details."
-	elog
-	elog "If you upgrade from a previous major version of Emacs, then it is"
-	elog "strongly recommended that you use app-admin/emacs-updater to rebuild"
-	elog "all byte-compiled elisp files of the installed Emacs packages."
 }
 
 pkg_postrm() {

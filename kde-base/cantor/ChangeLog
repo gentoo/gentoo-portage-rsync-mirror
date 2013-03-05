@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/cantor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/ChangeLog,v 1.102 2013/03/02 21:24:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/ChangeLog,v 1.103 2013/03/05 18:20:06 kensington Exp $
+
+  05 Mar 2013; Michael Palimaka <kensington@gentoo.org> cantor-4.10.0.ebuild,
+  cantor-4.9.5.ebuild:
+  Restrict tests wrt bug #459284.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> cantor-4.10.0.ebuild,
   cantor-4.9.5.ebuild:
