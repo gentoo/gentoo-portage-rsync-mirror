@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.106 2013/03/04 18:30:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.107 2013/03/05 12:56:06 jlec Exp $
+
+*qwt-6.0.2-r1 (05 Mar 2013)
+*qwt-5.2.3-r1 (05 Mar 2013)
+
+  05 Mar 2013; Justin Lecher <jlec@gentoo.org> +qwt-5.2.3-r1.ebuild,
+  +files/qwt-5.2.3-install_qt.patch, +qwt-6.0.2-r1.ebuild:
+  Fix installation location for designer and plugin stuff, #460256; add
+  static-libs support, #260324
 
 *qwt-5.2.3 (04 Mar 2013)
 
