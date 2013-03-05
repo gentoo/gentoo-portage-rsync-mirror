@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=x11-libs/libX11 dev-qt/qtcore:4 dev-qt/qtgui:4 x11-drivers/xf86-input-synaptics
 SLOT=0
 SRC_URI=http://www.fit.vutbr.cz/~kombrink/personal/touchfreeze/touchfreeze-0.2.5.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	qt4-r2	19af9102ca9b827213997cc636e7e33c	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	qt4-r2	f735f67b3de93a007dbdec708b481831	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=8bab4de0df37a444beff4ed1f342f54f

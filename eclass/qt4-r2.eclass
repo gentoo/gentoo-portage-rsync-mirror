@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.24 2012/11/08 09:42:51 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.25 2013/03/05 19:06:19 pesa Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -235,6 +235,7 @@ eqmake4() {
 		QMAKE_CC="$(tc-getCC)" \
 		QMAKE_CXX="$(tc-getCXX)" \
 		QMAKE_LINK="$(tc-getCXX)" \
+		QMAKE_LINK_C="$(tc-getCC)" \
 		QMAKE_OBJCOPY="$(tc-getOBJCOPY)" \
 		QMAKE_RANLIB= \
 		QMAKE_STRIP= \
