@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1219 2013/03/03 19:07:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1221 2013/03/05 02:23:46 zmedico Exp $
+
+*portage-2.2.0_alpha166 (05 Mar 2013)
+
+  05 Mar 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha166.ebuild:
+  2.2.0_alpha166 version bump. This includes all of the fixes in 2.1.11.55. Bug
+  #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.11.55 (05 Mar 2013)
+
+  05 Mar 2013; Zac Medico <zmedico@gentoo.org> +portage-2.1.11.55.ebuild:
+  2.1.11.55 version bump. This fixes bug #460304 (spurious networkmanager
+  rebuilds triggered by thee wimax USE flag). Bug #459934 tracks all bugs fixed
+  since portage-2.1.11.52.
 
 *portage-2.2.0_alpha165 (03 Mar 2013)
 
