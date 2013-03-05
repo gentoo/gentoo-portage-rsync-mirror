@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/pkgconfig-openbsd-20130225.ebuild,v 1.1 2013/02/25 07:33:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig-openbsd/pkgconfig-openbsd-20130225.ebuild,v 1.2 2013/03/05 12:27:29 ssuominen Exp $
 
 EAPI=5
 
@@ -15,7 +15,8 @@ SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
+#KEYWORDS="~amd64 ~x86"
 IUSE="+pkg-config"
 
 DEPEND="
