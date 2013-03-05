@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/libsecret-0.13.ebuild,v 1.1 2013/03/02 08:51:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/libsecret-0.14.ebuild,v 1.1 2013/03/05 01:26:14 nirbheek Exp $
 
 EAPI="5"
 VALA_MIN_API_VERSION=0.18
@@ -63,9 +63,6 @@ src_prepare() {
 	sed -e '/test_get_sync);/d' \
 		-e '/test_get_async);/d' \
 		-i libsecret/tests/test-service.c || die
-
-	# https://bugzilla.gnome.org/show_bug.cgi?id=694448
-	epatch "${FILESDIR}/${P}-fix-secretvalue-get.patch"
 
 	use vala && vala_src_prepare
 	gnome2_src_prepare

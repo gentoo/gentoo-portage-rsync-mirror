@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.175 2013/03/03 23:46:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.176 2013/03/05 01:27:48 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -19,7 +19,7 @@ ESVN_REPO_URI="http://src.chromium.org/svn/trunk/src"
 LICENSE="BSD"
 SLOT="live"
 KEYWORDS=""
-IUSE="bindist cups gnome gnome-keyring gps kerberos pulseaudio selinux system-ffmpeg tcmalloc"
+IUSE="cups gnome gnome-keyring gps kerberos pulseaudio selinux tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -56,7 +56,7 @@ RDEPEND="app-accessibility/speech-dispatcher
 	media-libs/opus
 	media-libs/speex
 	pulseaudio? ( media-sound/pulseaudio )
-	system-ffmpeg? ( >=media-video/ffmpeg-1.0[opus] )
+	>=media-video/ffmpeg-1.0[opus]
 	>=net-libs/libsrtp-1.4.4_p20121108
 	sys-apps/dbus
 	sys-apps/pciutils
@@ -170,12 +170,12 @@ pkg_setup() {
 		chromium_suid_sandbox_check_kernel_config
 	fi
 
-	if use bindist && ! use system-ffmpeg; then
-		elog "bindist enabled: H.264 video support will be disabled."
-	fi
-	if ! use bindist; then
-		elog "bindist disabled: Resulting binaries may not be legal to re-distribute."
-	fi
+	# if use bindist && ! use system-ffmpeg; then
+	#	elog "bindist enabled: H.264 video support will be disabled."
+	# fi
+	# if ! use bindist; then
+	#	elog "bindist disabled: Resulting binaries may not be legal to re-distribute."
+	# fi
 }
 
 src_prepare() {
@@ -278,6 +278,7 @@ src_configure() {
 	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_flac=1
+		-Duse_system_ffmpeg=1
 		-Duse_system_harfbuzz=1
 		-Duse_system_icu=1
 		-Duse_system_jsoncpp=1
@@ -297,8 +298,7 @@ src_configure() {
 		-Duse_system_speex=1
 		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
-		-Duse_system_zlib=1
-		$(gyp_use system-ffmpeg use_system_ffmpeg)"
+		-Duse_system_zlib=1"
 
 	# TODO: Use system mesa on x86, bug #457130 .
 	if ! use x86 && ! use arm; then
@@ -355,10 +355,10 @@ src_configure() {
 	# Always support proprietary codecs.
 	myconf+=" -Dproprietary_codecs=1"
 
-	if ! use bindist && ! use system-ffmpeg; then
-		# Enable H.624 support in bundled ffmpeg.
-		myconf+=" -Dffmpeg_branding=Chrome"
-	fi
+	# if ! use bindist && ! use system-ffmpeg; then
+	#	# Enable H.624 support in bundled ffmpeg.
+	#	myconf+=" -Dffmpeg_branding=Chrome"
+	# fi
 
 	# Set up Google API keys, see http://www.chromium.org/developers/how-tos/api-keys .
 	# Note: these are for Gentoo use ONLY. For your own distribution,
@@ -540,9 +540,9 @@ src_install() {
 	newman out/Release/chrome.1 chromium${CHROMIUM_SUFFIX}.1 || die
 	newman out/Release/chrome.1 chromium-browser${CHROMIUM_SUFFIX}.1 || die
 
-	if ! use system-ffmpeg; then
-		doexe out/Release/libffmpegsumo.so || die
-	fi
+	# if ! use system-ffmpeg; then
+	#	doexe out/Release/libffmpegsumo.so || die
+	# fi
 
 	# Install icons and desktop entry.
 	local branding size

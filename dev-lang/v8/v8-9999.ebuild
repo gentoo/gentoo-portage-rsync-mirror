@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.36 2013/02/18 16:59:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.37 2013/03/05 01:11:50 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -14,9 +14,11 @@ LICENSE="BSD"
 
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="readline"
 
-DEPEND="${PYTHON_DEPS}"
+RDEPEND="readline? ( sys-libs/readline:0 )"
+DEPEND="${PYTHON_DEPS}
+	${RDEPEND}"
 
 src_unpack() {
 	subversion_src_unpack
@@ -50,8 +52,11 @@ src_configure() {
 	subversion_wc_info
 	soname_version="${PV}.${ESVN_WC_REVISION}"
 
-	# TODO: Add console=readline option once implemented upstream
-	# http://code.google.com/p/v8/issues/detail?id=1781
+	if use readline; then
+		console=readline
+	else
+		console=dumb
+	fi
 
 	# Generate the real Makefile.
 	emake V=1 \
@@ -60,6 +65,7 @@ src_configure() {
 		soname_version=${soname_version} \
 		snapshot=on \
 		hardfp=${hardfp} \
+		console=${console} \
 		out/Makefile.${myarch} || die
 }
 

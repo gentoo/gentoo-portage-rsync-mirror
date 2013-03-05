@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/libsecret
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.14 2013/03/02 08:51:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.15 2013/03/05 01:26:14 nirbheek Exp $
+
+*libsecret-0.14 (05 Mar 2013)
+
+  05 Mar 2013; Nirbheek Chauhan <nirbheek@gentoo.org> +libsecret-0.14.ebuild,
+  -files/libsecret-0.13-fix-secretvalue-get.patch, -libsecret-0.13.ebuild:
+  Bump to 0.14, and remove 0.13
 
 *libsecret-0.13 (02 Mar 2013)
 

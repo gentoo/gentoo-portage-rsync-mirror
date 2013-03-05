@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.5.ebuild,v 1.1 2013/03/01 18:34:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.5.ebuild,v 1.2 2013/03/05 01:11:50 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -15,9 +15,11 @@ LICENSE="BSD"
 soname_version="$(get_version_component_range 1-3)"
 SLOT="0/${soname_version}"
 KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~x64-macos ~x86-macos"
-IUSE=""
+IUSE="readline"
 
-DEPEND="${PYTHON_DEPS}"
+RDEPEND="readline? ( sys-libs/readline:0 )"
+DEPEND="${PYTHON_DEPS}
+	${RDEPEND}"
 
 src_configure() {
 	tc-export AR CC CXX RANLIB
@@ -42,8 +44,11 @@ src_configure() {
 	esac
 	mytarget=${myarch}.release
 
-	# TODO: Add console=readline option once implemented upstream
-	# http://code.google.com/p/v8/issues/detail?id=1781
+	if use readline; then
+		console=readline
+	else
+		console=dumb
+	fi
 
 	# Generate the real Makefile.
 	emake V=1 \
@@ -52,6 +57,7 @@ src_configure() {
 		soname_version=${soname_version} \
 		snapshot=on \
 		hardfp=${hardfp} \
+		console=${console} \
 		out/Makefile.${myarch} || die
 }
 

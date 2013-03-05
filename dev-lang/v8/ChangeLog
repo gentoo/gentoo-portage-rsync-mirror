@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.286 2013/03/01 18:34:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.287 2013/03/05 01:11:50 phajdan.jr Exp $
+
+  05 Mar 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> v8-3.17.5.ebuild,
+  v8-9999.ebuild:
+  Restore optional readline support.
 
 *v8-3.17.5 (01 Mar 2013)
 
