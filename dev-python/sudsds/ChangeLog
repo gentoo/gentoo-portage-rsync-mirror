@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/sudsds
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sudsds/ChangeLog,v 1.5 2013/01/24 14:06:13 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sudsds/ChangeLog,v 1.7 2013/03/05 15:25:23 scarabeus Exp $
+
+  05 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> sudsds-1.0.1-r1.ebuild:
+  Also support 2.5 because why not.
+
+*sudsds-1.0.1-r1 (05 Mar 2013)
+
+  05 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> +sudsds-1.0.1-r1.ebuild:
+  Add distutils-r1 using revision.
 
   24 Jan 2013; Ian Delaney <idella4@gentoo.org> sudsds-1.0.1.ebuild:
   Fixed build of docs, dropped un-needed die, fixes Bug #452822 by flameeyes

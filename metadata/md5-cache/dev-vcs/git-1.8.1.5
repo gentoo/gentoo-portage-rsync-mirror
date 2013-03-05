@@ -4,11 +4,11 @@ DESCRIPTION=GIT - the stupid content tracker, the revision control system heavil
 EAPI=4
 HOMEPAGE=http://www.git-scm.com/
 IUSE=+blksha1 +curl cgi doc emacs gnome-keyring +gpg gtk highlight +iconv +nls +pcre +perl +python ppcsha1 tk +threads +webdav xinetd cvs subversion test
-KEYWORDS=~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=GPL-2
 RDEPEND=dev-libs/openssl sys-libs/zlib pcre? ( dev-libs/libpcre ) perl? ( dev-lang/perl[-build] ) tk? ( dev-lang/tk ) curl? ( net-misc/curl webdav? ( dev-libs/expat ) ) emacs? ( virtual/emacs ) gnome-keyring? ( gnome-base/gnome-keyring ) gpg? ( app-crypt/gnupg ) perl? ( dev-perl/Error dev-perl/Net-SMTP-SSL dev-perl/Authen-SASL cgi? ( virtual/perl-CGI highlight? ( app-text/highlight ) ) cvs? ( >=dev-vcs/cvsps-2.1 dev-perl/DBI dev-perl/DBD-SQLite ) subversion? ( dev-vcs/subversion[-dso,perl] dev-perl/libwww-perl dev-perl/TermReadKey ) ) python? ( gtk? ( >=dev-python/pygtk-2.8 dev-python/pygtksourceview:2 ) ) python? ( =dev-lang/python-2* )
 REQUIRED_USE=cgi? ( perl ) cvs? ( perl ) subversion? ( perl ) webdav? ( curl )
 SLOT=0
 SRC_URI=http://git-core.googlecode.com/files/git-1.8.1.5.tar.gz mirror://kernel/software/scm/git/git-1.8.1.5.tar.gz http://git-core.googlecode.com/files/git-manpages-1.8.1.5.tar.gz mirror://kernel/software/scm/git/git-manpages-1.8.1.5.tar.gz doc? ( mirror://kernel/software/scm/git/git-htmldocs-1.8.1.5.tar.gz http://git-core.googlecode.com/files/git-htmldocs-1.8.1.5.tar.gz )
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	bash-completion-r1	fcc2dafb65a2b662dd4b076f2103f6a6	elisp-common	21605c8f0b2a5ffa3233faeb3f9df309	eutils	2824df7f5dc9f47aee293af8a6b517ed	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	825d3d7654c88c5c4dec7400d3612578	python	89dff4d72d57f253f9f78b7f8c5d55c8	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=564d0bf1b971cada7c58b50e9e77eff5
+_md5_=573d25765b54230a3fcb7150b937dd4e
