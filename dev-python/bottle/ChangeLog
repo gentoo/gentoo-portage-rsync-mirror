@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/bottle
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.4 2012/11/13 10:41:41 idella4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.5 2013/03/05 09:23:49 scarabeus Exp $
+
+*bottle-0.11.6 (05 Mar 2013)
+
+  05 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> +bottle-0.11.6.ebuild:
+  Add latest version as contributed by Ondrej Sukup during the Gentoo track on
+  installfest. The test phase was removed as it was not actually doing much of
+  the real testing.
 
   14 Nov 2012; Ian Delaney <idella4@gentoo.org> metadata.xml:
   Updating maintainer, metadata.xml

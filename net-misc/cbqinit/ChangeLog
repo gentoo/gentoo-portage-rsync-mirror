@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/cbqinit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/ChangeLog,v 1.22 2012/03/18 17:53:05 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cbqinit/ChangeLog,v 1.24 2013/03/05 09:19:28 scarabeus Exp $
+
+  05 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> cbqinit-0.7.3-r1.ebuild:
+  Forgot to split the phases.
+
+  05 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> -cbqinit-0.7.2.ebuild,
+  cbqinit-0.7.3-r1.ebuild:
+  Cleanup old keep only latest. Bump to eapi5 and use src_uri arrows.
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> cbqinit-0.7.3-r1.ebuild:
   alpha/sparc stable wrt #404835

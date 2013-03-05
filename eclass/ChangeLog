@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.713 2013/03/04 19:31:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.714 2013/03/05 09:09:17 hd_brummy Exp $
+
+  05 Mar 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  vdr-plugin-2.eclass, adapted to the new plugin makefile handling; cleanup for
+  unusede function 'delete_orphan_plugindb_file'; more unneeded source cleanup
 
   04 Mar 2013; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Introduce multilib_for_best_impl().

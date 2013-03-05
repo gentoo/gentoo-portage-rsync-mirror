@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.68 2013/03/03 16:15:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.69 2013/03/05 09:12:43 ago Exp $
+
+  05 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libedit-20120311.3.0-r1.ebuild:
+  Stable for sh, wrt bug #459824
 
   03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libedit-20120311.3.0-r1.ebuild:
   Stable for sparc, wrt bug #459824
