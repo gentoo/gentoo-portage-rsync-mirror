@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gnome-system-log
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-log/ChangeLog,v 1.7 2013/02/07 21:15:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-log/ChangeLog,v 1.8 2013/03/05 22:35:55 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-system-log-3.4.1.ebuild:
+  Clean up old revision.
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> gnome-system-log-3.6.1.ebuild:
   Move Creative Commons licenses to shorter names.

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-tools-backends
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.76 2012/05/31 02:45:53 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.77 2013/03/05 22:44:22 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -system-tools-backends-2.10.1.ebuild:
+  Clean up old revision.
 
   31 May 2012; Zac Medico <zmedico@gentoo.org>
   system-tools-backends-2.10.1.ebuild, system-tools-backends-2.10.2.ebuild:

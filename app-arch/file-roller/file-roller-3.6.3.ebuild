@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.6.3.ebuild,v 1.2 2013/02/07 21:17:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.6.3.ebuild,v 1.3 2013/03/05 22:46:31 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://fileroller.sourceforge.net/"
 LICENSE="GPL-2+ CC-BY-SA-3.0"
 SLOT="0"
 IUSE="nautilus packagekit"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 
 # gdk-pixbuf used extensively in the source
 # cairo used in eggtreemultidnd.c

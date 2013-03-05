@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.349 2013/02/07 21:35:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.350 2013/03/05 22:56:04 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -gedit-3.4.2.ebuild:
+  Clean up old revision.
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> gedit-3.6.2-r1.ebuild:
   Move Creative Commons licenses to shorter names.

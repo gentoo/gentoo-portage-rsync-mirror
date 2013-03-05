@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.117 2013/02/07 21:13:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.118 2013/03/05 22:31:34 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -orca-3.4.2.ebuild:
+  Clean up old revision.
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> orca-3.6.3-r1.ebuild:
   Move Creative Commons licenses to shorter names.

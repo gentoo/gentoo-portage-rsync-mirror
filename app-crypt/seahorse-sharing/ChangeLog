@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse-sharing
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-sharing/ChangeLog,v 1.4 2012/12/16 19:20:27 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-sharing/ChangeLog,v 1.5 2013/03/05 22:54:53 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -seahorse-sharing-3.4.0.ebuild:
+  Clean up old revision.
 
   16 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   seahorse-sharing-3.4.0.ebuild, seahorse-sharing-3.6.1.ebuild:

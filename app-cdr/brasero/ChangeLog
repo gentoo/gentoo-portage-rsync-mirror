@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.150 2013/02/07 21:18:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.151 2013/03/05 22:50:29 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/0001-Fix-build-link-libbrasero-burn-against-libm-for-ceil.patch,
+  -files/brasero-2.91.6-build-plugins-against-local-library.patch,
+  -brasero-3.4.1.ebuild:
+  Clean up old revision.
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> brasero-3.6.1.ebuild:
   Move Creative Commons licenses to shorter names.

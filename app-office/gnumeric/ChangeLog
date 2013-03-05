@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.238 2012/12/29 09:37:46 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.239 2013/03/05 23:00:45 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -gnumeric-1.12.0.ebuild:
+  Clean up old revisions.
 
 *gnumeric-1.12.0-r1 (29 Dec 2012)
 
