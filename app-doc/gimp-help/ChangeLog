@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.76 2013/03/03 16:12:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.77 2013/03/05 16:04:43 jer Exp $
+
+  05 Mar 2013; Jeroen Roovers <jer@gentoo.org> gimp-help-2.6.1.ebuild:
+  Stable for HPPA (bug #447812).
 
   03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gimp-help-2.6.1.ebuild:
   Stable for sparc, wrt bug #447812
