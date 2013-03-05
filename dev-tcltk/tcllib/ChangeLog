@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tcllib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.37 2013/03/04 08:02:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.38 2013/03/05 11:43:28 jlec Exp $
+
+*tcllib-1.15-r1 (05 Mar 2013)
+
+  05 Mar 2013; Justin Lecher <jlec@gentoo.org> +tcllib-1.15-r1.ebuild:
+  Add backports for test failures and manpage collision
 
   04 Mar 2013; Justin Lecher <jlec@gentoo.org> tcllib-1.15.ebuild:
   Clean collision fix

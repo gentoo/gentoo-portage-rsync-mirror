@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/openofficeorg-thumbnail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/openofficeorg-thumbnail/ChangeLog,v 1.8 2013/03/04 18:13:38 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/openofficeorg-thumbnail/ChangeLog,v 1.9 2013/03/05 11:48:51 kensington Exp $
+
+*openofficeorg-thumbnail-1.0.0-r2 (05 Mar 2013)
+
+  05 Mar 2013; Michael Palimaka <kensington@gentoo.org>
+  +openofficeorg-thumbnail-1.0.0-r2.ebuild,
+  -openofficeorg-thumbnail-1.0.0-r1.ebuild:
+  Revision bump to prevent conflict with binpackages as per user request.
 
 *openofficeorg-thumbnail-1.0.0-r1 (04 Mar 2013)
 

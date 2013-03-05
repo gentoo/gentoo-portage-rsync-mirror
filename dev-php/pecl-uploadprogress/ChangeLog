@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/pecl-uploadprogress
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-uploadprogress/ChangeLog,v 1.2 2012/01/26 09:12:41 olemarkus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-uploadprogress/ChangeLog,v 1.3 2013/03/05 11:47:24 olemarkus Exp $
+
+  05 Mar 2013; Ole Markus With <olemarkus@gentoo.org>
+  -pecl-uploadprogress-1.0.1-r1.ebuild, pecl-uploadprogress-1.0.3.1.ebuild:
+  Ensure that the working SAPI is installed
 
 *pecl-uploadprogress-1.0.3.1 (26 Jan 2012)
 
@@ -23,4 +27,3 @@
   26 Apr 2010; Steve Dibb <beandog@gentoo.org>
   +pecl-uploadprogress-1.0.1.ebuild, +metadata.xml:
   Initial commit, bug 306523; Thanks to Razvan Stanga for ebuild
-

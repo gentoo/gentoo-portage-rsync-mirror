@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-ps/pecl-ps-1.3.6-r1.ebuild,v 1.1 2011/12/14 22:45:23 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-ps/pecl-ps-1.3.6-r1.ebuild,v 1.2 2013/03/05 11:35:34 olemarkus Exp $
 
-EAPI=3
+EAPI=5
 
 PHP_EXT_NAME="ps"
 PHP_EXT_INI="yes"

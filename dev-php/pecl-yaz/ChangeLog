@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/pecl-yaz
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-yaz/ChangeLog,v 1.3 2011/12/18 13:03:03 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-yaz/ChangeLog,v 1.4 2013/03/05 11:49:49 olemarkus Exp $
+
+  05 Mar 2013; Ole Markus With <olemarkus@gentoo.org>
+  -pecl-yaz-1.0.14-r1.ebuild, pecl-yaz-1.1.1.ebuild:
+  Removed older ebuilds. EAPI bump
 
   18 Dec 2011; Raúl Porcel <armin76@gentoo.org> pecl-yaz-1.1.1.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #393965
@@ -179,4 +183,3 @@
 
   18 Aug 2005; <stuart@gentoo.org> ChangeLog:
   Initial version; replaces older dev-php/* packages
-
