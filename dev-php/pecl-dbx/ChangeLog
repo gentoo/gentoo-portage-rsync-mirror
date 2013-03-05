@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-dbx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-dbx/ChangeLog,v 1.2 2012/01/15 16:51:30 olemarkus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-dbx/ChangeLog,v 1.3 2013/03/05 11:00:44 olemarkus Exp $
+
+  05 Mar 2013; Ole Markus With <olemarkus@gentoo.org> pecl-dbx-1.1.2.ebuild:
+  EAPI bump
 
 *pecl-dbx-1.1.2 (15 Jan 2012)
 
@@ -54,4 +57,3 @@
 
   18 Aug 2005; <stuart@gentoo.org> ChangeLog:
   Initial version; replaces older dev-php/* packages
-

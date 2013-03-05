@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r4.ebuild,v 1.12 2010/10/19 15:55:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r4.ebuild,v 1.13 2013/03/05 10:56:31 ssuominen Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils toolchain-funcs games
 
 DEB_PATCH_VER=16
 DESCRIPTION="collection of games from NetBSD"
@@ -24,7 +24,8 @@ RDEPEND="!games-misc/wtf
 	sys-apps/miscfiles"
 DEPEND="${RDEPEND}
 	sys-devel/flex
-	sys-devel/bison"
+	sys-devel/bison
+	virtual/pkgconfig"
 
 # Set GAMES_TO_BUILD variable to whatever you want
 export GAMES_TO_BUILD=${GAMES_TO_BUILD:=adventure arithmetic atc
@@ -41,6 +42,11 @@ src_prepare() {
 		"${FILESDIR}"/${P}-bg.patch \
 		"${FILESDIR}"/${P}-gcc4.patch \
 		"${FILESDIR}"/${P}-glibc2.10.patch
+	
+	# Use pkg-config to query Libs: from ncurses.pc (for eg. -ltinfo) wrt #459652
+	sed -i \
+		-e "/ncurses_lib/s:-lncurses:'$($(tc-getPKG_CONFIG) --libs-only-l ncurses)':" \
+		configure || die
 
 	sed -i \
 		-e "s:/usr/games:${GAMES_BINDIR}:" \

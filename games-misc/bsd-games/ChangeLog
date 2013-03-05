@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/bsd-games
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.47 2010/10/19 08:05:02 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.48 2013/03/05 10:56:31 ssuominen Exp $
+
+  05 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> bsd-games-2.17-r4.ebuild:
+  Use pkg-config to query Libs: from ncurses.pc (for eg. -ltinfo) wrt #459652
+  by Diego Elio Pettenò
 
   19 Oct 2010; Tupone Alfredo <tupone@gentoo.org> bsd-games-2.17-r4.ebuild:
   Respect LDFLAGS. Bug #331833 by flameeyes@gentoo.org
