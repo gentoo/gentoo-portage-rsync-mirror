@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/h323plus/h323plus-1.25.0.ebuild,v 1.1 2013/02/22 19:04:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/h323plus/h323plus-1.25.0.ebuild,v 1.2 2013/03/05 18:34:21 chithanh Exp $
 
 EAPI=5
 
@@ -35,6 +35,7 @@ S="${WORKDIR}/${PN}"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.25.0-ptrace-param.patch
 	epatch "${FILESDIR}"/${PN}-1.25.0-ptrace-debugoptionlist.patch
+	epatch "${FILESDIR}"/${PN}-1.25.0-ptlib-2.10.10.patch
 }
 
 src_configure() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ninja
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.7 2013/01/11 22:42:26 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.8 2013/03/05 18:39:10 ago Exp $
+
+  05 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ninja-1.1.0.ebuild:
+  Add ~alpha,~ppc64,~sparc, wrt to bug #456890
 
   11 Jan 2013; Christoph Junghans <ottxor@gentoo.org> -ninja-1.0.0.ebuild,
   ninja-1.1.0.ebuild:
