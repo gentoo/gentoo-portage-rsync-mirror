@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.33 2013/02/21 15:40:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.35 2013/03/05 03:44:16 floppym Exp $
+
+  05 Mar 2013; Mike Gilbert <floppym@gentoo.org> tortoisehg-2.7.ebuild,
+  tortoisehg-9999.ebuild:
+  Install mergetools.rc as documentation, bug 460364.
+
+  05 Mar 2013; Mike Gilbert <floppym@gentoo.org> tortoisehg-2.7.ebuild,
+  tortoisehg-9999.ebuild:
+  Rename svg logo used by desktop file, bug 460364.
 
   21 Feb 2013; Mike Gilbert <floppym@gentoo.org> tortoisehg-2.7.ebuild,
   tortoisehg-9999.ebuild:

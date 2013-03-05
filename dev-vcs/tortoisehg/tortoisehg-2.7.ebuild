@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.7.ebuild,v 1.3 2013/02/21 15:40:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.7.ebuild,v 1.5 2013/03/05 03:44:16 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -63,11 +63,11 @@ python_compile_all() {
 
 python_install_all() {
 	distutils-r1_python_install_all
-	dodoc doc/ReadMe*.txt doc/TODO
+	dodoc doc/ReadMe*.txt doc/TODO contrib/mergetools.rc
 	if use doc ; then
 		dohtml -r doc/build/html/
 	fi
-	newicon -s scalable icons/scalable/apps/thg-logo.svg tortoisehg_logo.svg
+	newicon -s scalable icons/scalable/apps/thg-logo.svg thg_logo.svg
 	domenu contrib/${PN}.desktop
 }
 
