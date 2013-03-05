@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/libeXosip-3.3.0.ebuild,v 1.6 2010/07/18 12:32:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/libeXosip-4.0.0.ebuild,v 1.1 2013/03/05 16:47:49 chithanh Exp $
 
-EAPI="2"
+EAPI="5"
 
-inherit eutils autotools
+inherit eutils versionator
 
 MY_PV=${PV%.?}-${PV##*.}
 MY_PV=${PV}
@@ -13,20 +13,16 @@ DESCRIPTION="library that hides the complexity of using the SIP protocol for mul
 HOMEPAGE="http://savannah.nongnu.org/projects/exosip/"
 SRC_URI="http://download.savannah.nongnu.org/releases/exosip/${MY_P}.tar.gz"
 
-KEYWORDS="amd64 ppc x86 ~ppc-macos ~x86-macos"
-SLOT="0"
+KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x86-macos"
+SLOT="0/$(get_version_component_range 1-2)"
 LICENSE="GPL-2"
 IUSE="+srv ssl"
 
-DEPEND=">=net-libs/libosip-3.2.0
+DEPEND=">=net-libs/libosip-4.0.0:=
 	ssl? ( dev-libs/openssl )"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-automagic-openssl.patch"
-	AT_M4DIR="scripts" eautoreconf
-}
 
 src_configure() {
 	econf \
@@ -36,6 +32,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog NEWS README
 }

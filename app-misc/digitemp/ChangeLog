@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/digitemp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.18 2012/01/09 07:15:10 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.19 2013/03/05 16:44:43 ago Exp $
+
+  05 Mar 2013; Agostino Sarubbo <ago@gentoo.org> digitemp-3.5.0-r1.ebuild:
+  Stable for amd64, wrt bug #437334
 
   09 Jan 2012; Samuli Suominen <ssuominen@gentoo.org> digitemp-3.3.2.ebuild,
   digitemp-3.5.0.ebuild, digitemp-3.5.0-r1.ebuild:
@@ -75,4 +78,3 @@
   submitted by: mike wakerly <mikew@wakerly.com> in bug #26516.  Please
   note, that Mike will be maintaining this package indirectly, so he needs
   to be cc'd on any and all incoming bug reports
-

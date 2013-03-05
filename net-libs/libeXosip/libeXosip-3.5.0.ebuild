@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/libeXosip-3.5.0.ebuild,v 1.5 2012/01/06 15:04:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/libeXosip-3.5.0.ebuild,v 1.6 2013/03/05 16:47:49 chithanh Exp $
 
 EAPI="2"
 
@@ -19,6 +19,7 @@ LICENSE="GPL-2"
 IUSE="+srv ssl"
 
 DEPEND=">=net-libs/libosip-3.2.0
+	<net-libs/libosip-4
 	ssl? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-1.0.3.ebuild,v 1.3 2013/03/03 15:27:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-1.0.3.ebuild,v 1.4 2013/03/05 16:43:52 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://github.com/eartle/liblastfm"
 SRC_URI="http://cdn.last.fm/client/${P}.tar.gz"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ~ppc64 ~x86"
 SLOT="0"
 IUSE="fingerprint test"
 

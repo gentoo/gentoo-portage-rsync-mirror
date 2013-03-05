@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libosip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.52 2013/02/14 22:08:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.53 2013/03/05 16:44:43 chithanh Exp $
+
+*libosip-4.0.0 (05 Mar 2013)
+
+  05 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libosip-4.0.0.ebuild, -libosip-2.2.2.ebuild, -libosip-3.3.0.ebuild:
+  Version bump.
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libosip-3.6.0.ebuild:
   Stable for ppc, wrt bug #457420

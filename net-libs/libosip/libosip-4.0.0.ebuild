@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/libosip-3.3.0.ebuild,v 1.7 2010/07/18 12:31:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/libosip-4.0.0.ebuild,v 1.1 2013/03/05 16:44:43 chithanh Exp $
 
-EAPI="2"
+EAPI="5"
 
-inherit eutils autotools
+inherit eutils autotools versionator
 
 MY_PV=${PV%.?}-${PV##*.}
 MY_PV=${PV}
@@ -14,14 +14,14 @@ HOMEPAGE="http://www.gnu.org/software/osip/"
 SRC_URI="mirror://gnu/osip/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
-SLOT="2"
-KEYWORDS="amd64 ppc ~sparc x86 ~ppc-macos ~x86-macos"
+SLOT="2/$(get_version_component_range 1-2)"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~ppc-macos ~x86-macos"
 IUSE="test"
 
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-out-source-build.patch"
+	epatch "${FILESDIR}/${PN}-3.3.0-out-source-build.patch"
 	AT_M4DIR="scripts" eautoreconf
 }
 
@@ -31,6 +31,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Failed to install"
-	dodoc AUTHORS ChangeLog FEATURES HISTORY README NEWS TODO || die
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ChangeLog FEATURES HISTORY README NEWS TODO
 }
