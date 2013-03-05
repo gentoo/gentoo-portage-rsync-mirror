@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.49 2013/01/16 07:23:15 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.50 2013/03/05 21:26:50 hwoarang Exp $
+
+*collectd-5.2.1 (05 Mar 2013)
+
+  05 Mar 2013; Markos Chandras <hwoarang@gentoo.org> +collectd-5.2.1.ebuild:
+  Version bump. #454594. Thanks to Johan Bergström <bugs@bergstroem.nu>
 
   16 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> collectd-5.2.0-r1.ebuild:
   Sort eclasses inherit order, wrt bug #448480. Changes by Johan Bergström

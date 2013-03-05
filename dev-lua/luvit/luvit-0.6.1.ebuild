@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luvit/luvit-9999.ebuild,v 1.2 2013/03/05 21:09:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luvit/luvit-0.6.1.ebuild,v 1.1 2013/03/05 21:09:17 hasufell Exp $
 
 EAPI=5
 
-inherit toolchain-funcs multilib git-2
+inherit toolchain-funcs multilib
 
 # TODO: FHS https://github.com/luvit/luvit/issues/379
 
 DESCRIPTION="Takes node.js' architecture and dependencies and fits it in the Lua language"
 HOMEPAGE="http://luvit.io/"
-EGIT_REPO_URI="git://github.com/luvit/luvit.git"
+SRC_URI="http://luvit.io/dist/latest/${P}.tar.gz"
 
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="examples +system-libs"
 # luvit Apache-2.0
@@ -33,23 +33,13 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-EGIT_HAS_SUBMODULES=1
-
 src_prepare() {
 	if use system-libs ; then
 		MY_YAJL_VERSION=$(pkg-config --modversion yajl)
-	else
-		MY_YAJL_VERSION=$(git --git-dir deps/yajl/.git describe --tags)
+		sed -i \
+			-e "s:^YAJL_VERSION=.*:YAJL_VERSION=${MY_YAJL_VERSION}:" \
+			Makefile || die "setting yajl version failed"
 	fi
-	MY_HTTP_VERSION=$(git --git-dir deps/http-parser/.git describe --tags)
-	MY_UV_VERSION=$(git --git-dir deps/uv/.git describe --all --long | cut -f 3 -d -)
-
-	sed \
-		-e "s:^YAJL_VERSION=.*:YAJL_VERSION=${MY_YAJL_VERSION}:" \
-		-e "s:^LUAJIT_VERSION=.*:LUAJIT_VERSION=${MY_LUAJIT_VERSION}:" \
-		-e "s:^HTTP_VERSION=.*:HTTP_VERSION=${MY_HTTP_VERSION}:" \
-		-e "s:^UV_VERSION.*:UV_VERSION=${MY_UV_VERSION}:" \
-		-i Makefile || die "sed failed"
 
 	sed -i \
 		-e "s/-Werror//" \
