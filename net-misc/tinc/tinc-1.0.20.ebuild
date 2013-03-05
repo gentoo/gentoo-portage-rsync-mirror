@@ -1,10 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.18.ebuild,v 1.3 2012/05/12 05:28:45 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.20.ebuild,v 1.1 2013/03/05 02:34:20 blueness Exp $
 
-EAPI="4"
-
-inherit eutils autotools
+EAPI="5"
 
 DESCRIPTION="tinc is an easy to configure VPN implementation"
 HOMEPAGE="http://www.tinc-vpn.org/"
@@ -12,7 +10,7 @@ SRC_URI="http://www.tinc-vpn.org/packages/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="+lzo uml vde +zlib"
 
 DEPEND=">=dev-libs/openssl-0.9.7
@@ -20,11 +18,6 @@ DEPEND=">=dev-libs/openssl-0.9.7
 	zlib? ( >=sys-libs/zlib-1.1.4 )"
 RDEPEND="${DEPEND}
 	vde? ( net-misc/vde )"
-
-src_prepare() {
-	epatch "${FILESDIR}"/fix-ac-arg-enable.patch
-	eautoreconf
-}
 
 src_configure() {
 	econf \
