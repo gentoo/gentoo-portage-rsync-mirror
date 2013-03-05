@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1-r2.ebuild,v 1.9 2013/03/05 13:34:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.6.1-r3.ebuild,v 1.1 2013/03/05 13:34:34 flameeyes Exp $
 
-EAPI=4
+EAPI=5
 inherit autotools eutils flag-o-matic toolchain-funcs versionator
 
 DESCRIPTION="A network programming library in C++"
@@ -11,8 +11,8 @@ SRC_URI="http://wvstreams.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc sparc x86"
-IUSE="pam doc +ssl +dbus debug"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+IUSE="pam doc +ssl +dbus debug boost"
 
 #Tests fail if openssl is not compiled with -DPURIFY. Gentoo's isn't. FAIL!
 RESTRICT="test"
@@ -25,23 +25,21 @@ RDEPEND="sys-libs/readline
 	sys-libs/zlib
 	dbus? ( >=sys-apps/dbus-1.4.20 )
 	dev-libs/openssl:0
-	pam? ( sys-libs/pam )"
+	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
-	|| ( >=sys-devel/gcc-4.1 >=dev-libs/boost-1.34.0 )
 	virtual/pkgconfig
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )
+	boost? ( >=dev-libs/boost-1.34.1:= )"
 
 DOCS="ChangeLog README*"
 
-pkg_setup() {
-	if has_version '>=sys-devel/gcc-4.1' && ! has_version '>=dev-libs/boost-1.34.1'
-	then
-		if ! version_is_at_least 4.1 "$(gcc-fullversion)"
-		then
-			eerror "This package requires the active gcc to be at least version 4.1"
-			eerror "or >=dev-libs/boost-1.34.1 must be installed."
-			die "Please activate >=sys-devel/gcc-4.1 with gcc-config."
-		fi
+pkg_pretend() {
+	[[ ${MERGE_TYPE} == "binary" ]] && return
+
+	if ! use boost && ! version_is_at_least 4.1 "$(gcc-fullversion)"; then
+		eerror "This package requires the active gcc to be at least version 4.1"
+		eerror "or USE=boost must be installed."
+		die "Please activate >=sys-devel/gcc-4.1 with gcc-config."
 	fi
 }
 
@@ -63,6 +61,8 @@ src_configure() {
 	append-flags -fno-tree-dce -fno-optimize-sibling-calls #421375
 
 	tc-export CXX
+
+	use boost && export ac_cv_header_tr1_functional=no
 
 	econf \
 		--localstatedir=/var \

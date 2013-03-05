@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bdelta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bdelta/ChangeLog,v 1.16 2013/02/23 20:56:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bdelta/ChangeLog,v 1.17 2013/03/05 13:35:01 slyfox Exp $
+
+  05 Mar 2013; Sergei Trofimovich <slyfox@gentoo.org> bdelta-0.3.1.ebuild,
+  bdelta-9999.ebuild:
+  Follow upstream's switch to LICENSE=MPL-2.0.
 
 *bdelta-0.3.1 (23 Feb 2013)
 

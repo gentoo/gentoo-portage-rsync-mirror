@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.24.0-r1.ebuild,v 1.7 2012/12/28 23:52:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.24.0-r1.ebuild,v 1.8 2013/03/05 13:37:07 voyageur Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils gnustep-base
 
 DESCRIPTION="A library of general-purpose, non-graphical Objective C objects."
@@ -16,7 +16,7 @@ IUSE="+icu +libffi ssl zeroconf"
 
 RDEPEND="${GNUSTEP_CORE_DEPEND}
 	>=gnustep-base/gnustep-make-2.6.0
-	icu? ( >=dev-libs/icu-4.0 )
+	icu? ( >=dev-libs/icu-4.0:= )
 	!libffi? ( dev-libs/ffcall
 		gnustep-base/gnustep-make[-native-exceptions] )
 	libffi? ( virtual/libffi )

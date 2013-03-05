@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bdelta/bdelta-9999.ebuild,v 1.4 2013/02/17 22:35:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bdelta/bdelta-9999.ebuild,v 1.5 2013/03/05 13:35:01 slyfox Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ DESCRIPTION="Binary Delta - Efficient difference algorithm and format"
 HOMEPAGE="http://bdelta.org"
 
 SLOT="0"
-LICENSE="GPL-2"
+LICENSE="MPL-2.0"
 IUSE=""
 
 src_compile() {
