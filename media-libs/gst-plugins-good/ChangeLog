@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-good
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.156 2013/03/03 12:49:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.157 2013/03/05 22:09:42 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-good-0.10.30.ebuild, -gst-plugins-good-1.0.3.ebuild:
+  Clean up old revisions.
 
   03 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gst-plugins-good-1.0.5.ebuild:
   Stable for sh, wrt bug #458188

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-3.6.2-r1.ebuild,v 1.2 2013/02/07 21:12:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-3.6.2-r1.ebuild,v 1.3 2013/03/05 22:21:17 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -25,9 +25,9 @@ RDEPEND="
 	dev-libs/atk[introspection]
 	>=dev-libs/glib-2.28:2
 	dev-libs/gobject-introspection
-	>=dev-python/ipython-0.11
+	>=dev-python/ipython-0.11[${PYTHON_USEDEP}]
 	>=dev-python/pyatspi-2.1.5[${PYTHON_USEDEP}]
-	dev-python/pycairo
+	dev-python/pycairo[${PYTHON_USEDEP}]
 	x11-libs/gdk-pixbuf[introspection]
 	x11-libs/libwnck:3[introspection]
 	x11-libs/pango[introspection]

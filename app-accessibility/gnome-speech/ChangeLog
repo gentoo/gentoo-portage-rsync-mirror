@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.154 2013/02/02 22:18:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.155 2013/03/05 22:30:28 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-speech-0.4.25.ebuild:
+  Clean up old revision.
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gnome-speech-0.4.25-r1.ebuild:
   Add ~arm, wrt bug #449220

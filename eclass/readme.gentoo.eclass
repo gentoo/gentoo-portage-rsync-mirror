@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/readme.gentoo.eclass,v 1.4 2013/03/03 12:05:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/readme.gentoo.eclass,v 1.5 2013/03/05 22:28:41 ulm Exp $
 
 # @ECLASS: readme.gentoo
 # @MAINTAINER:
@@ -10,7 +10,7 @@
 # @BLURB: An eclass for installing a README.gentoo doc file recording tips
 # shown via elog messages.
 # @DESCRIPTION:
-# An eclass for installing a README.gentoo doc file recording tips           
+# An eclass for installing a README.gentoo doc file recording tips
 # shown via elog messages. With this eclass, those elog messages will only be
 # shown at first package installation and a file for later reviewing will be
 # installed under /usr/share/doc/${PF}
@@ -40,7 +40,7 @@ EXPORT_FUNCTIONS src_install pkg_postinst
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # If non-empty, DOC_CONTENTS information will be strictly respected,
-# not getting it automatically formatted by fmt. If empty, it will 
+# not getting it automatically formatted by fmt. If empty, it will
 # rely on fmt for formatting and 'echo -e' options to tweak lines a bit.
 
 # @ECLASS-VARIABLE: FORCE_PRINT_ELOG
@@ -51,7 +51,7 @@ EXPORT_FUNCTIONS src_install pkg_postinst
 # @FUNCTION: readme.gentoo_create_doc
 # @DESCRIPTION:
 # Create doc file with ${DOC_CONTENTS} variable (preferred) and, if not set,
-# look for "${FILESDIR}/README.gentoo" contents. You can use 
+# look for "${FILESDIR}/README.gentoo" contents. You can use
 # ${FILESDIR}/README.gentoo-${SLOT} also.
 # Usually called at src_install phase.
 readme.gentoo_create_doc() {
@@ -63,7 +63,8 @@ readme.gentoo_create_doc() {
 		if [[ -n "${DISABLE_AUTOFORMATTING}" ]]; then
 			echo "${DOC_CONTENTS}" > "${T}"/README.gentoo
 		else
-			echo -e ${DOC_CONTENTS} | fold -s -w 70 > "${T}"/README.gentoo
+			echo -e ${DOC_CONTENTS} | fold -s -w 70 \
+				| sed 's/[[:space:]]*$//' > "${T}"/README.gentoo
 		fi
 		eshopts_pop
 	elif [[ -f "${FILESDIR}/README.gentoo-${SLOT%/*}" ]]; then

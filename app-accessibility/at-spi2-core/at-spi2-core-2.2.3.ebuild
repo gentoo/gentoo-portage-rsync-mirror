@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/at-spi2-core-2.2.3.ebuild,v 1.11 2012/12/23 02:49:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/at-spi2-core-2.2.3.ebuild,v 1.12 2013/03/05 22:28:08 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://live.gnome.org/Accessibility"
 
 LICENSE="LGPL-2+"
 SLOT="2"
-KEYWORDS="amd64 arm ~hppa ~ia64 ~ppc64 x86 ~amd64-fbsd"
+KEYWORDS="amd64 arm x86"
 IUSE="+introspection"
 
 RDEPEND=">=dev-libs/glib-2.28:2

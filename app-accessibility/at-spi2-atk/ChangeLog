@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/at-spi2-atk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.22 2013/02/25 08:47:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.23 2013/03/05 22:24:36 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -at-spi2-atk-2.4.0.ebuild, -at-spi2-atk-2.6.1.ebuild:
+  Clean up old revision.
 
   25 Feb 2013; Zac Medico <zmedico@gentoo.org> at-spi2-atk-2.6.2.ebuild:
   Add ~arm-linux keyword.
