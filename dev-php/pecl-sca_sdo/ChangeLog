@@ -1,6 +1,10 @@
-# ChangeLog for dev-php5/pecl-sca_sdo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-sca_sdo/ChangeLog,v 1.1 2011/12/14 22:46:43 mabi Exp $
+# ChangeLog for dev-php/pecl-sca_sdo
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-sca_sdo/ChangeLog,v 1.2 2013/03/05 09:44:47 olemarkus Exp $
+
+  05 Mar 2013; Ole Markus With <olemarkus@gentoo.org>
+  pecl-sca_sdo-1.2.4-r2.ebuild:
+  EAPI bump
 
 *pecl-sca_sdo-1.2.4-r2 (04 Nov 2010)
 
@@ -61,4 +65,3 @@
   24 Nov 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +pecl-sca_sdo-1.1.0.ebuild:
   Initial ebuild.
-

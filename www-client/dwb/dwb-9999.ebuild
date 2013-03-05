@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/dwb-9999.ebuild,v 1.4 2013/01/02 21:16:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dwb/dwb-9999.ebuild,v 1.5 2013/03/05 09:38:49 radhermit Exp $
 
 EAPI=5
 
@@ -18,6 +18,7 @@ KEYWORDS=""
 IUSE="examples gtk3"
 
 RDEPEND=">=net-libs/libsoup-2.32:2.4
+	dev-libs/json-c
 	!gtk3? (
 		>=net-libs/webkit-gtk-1.8.0:2
 		x11-libs/gtk+:2

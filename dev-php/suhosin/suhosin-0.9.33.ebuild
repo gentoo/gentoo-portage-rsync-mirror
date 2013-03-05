@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/suhosin/suhosin-0.9.33.ebuild,v 1.10 2012/08/25 08:22:22 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/suhosin/suhosin-0.9.33.ebuild,v 1.11 2013/03/05 09:39:32 olemarkus Exp $
 
-EAPI="2"
+EAPI="5"
 
 PHP_EXT_NAME="suhosin"
 PHP_EXT_INI="yes"
