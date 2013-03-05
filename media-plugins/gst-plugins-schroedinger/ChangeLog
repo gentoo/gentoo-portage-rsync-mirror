@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-schroedinger
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-schroedinger/ChangeLog,v 1.17 2013/02/21 16:53:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-schroedinger/ChangeLog,v 1.18 2013/03/05 08:41:18 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-schroedinger-0.10.22.ebuild,
+  -gst-plugins-schroedinger-1.0.3.ebuild:
+  Clean up old revisions.
 
   21 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-schroedinger-1.0.5.ebuild:
