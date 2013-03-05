@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7556 2013/03/05 11:05:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7557 2013/03/05 17:58:03 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Mask sys-auth/polkit-kde for removal
 
   05 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask libcaca _beta18 because it won't compile unless it's already installed.

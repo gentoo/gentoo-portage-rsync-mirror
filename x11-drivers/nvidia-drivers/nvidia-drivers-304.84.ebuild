@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.84.ebuild,v 1.1 2013/03/04 23:44:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.84.ebuild,v 1.2 2013/03/05 17:33:39 jer Exp $
 
 EAPI=4
 
@@ -93,7 +93,7 @@ pkg_setup() {
 	fi
 
 	if use kernel_linux && kernel_is ge 3 7 ; then
-		ewarn "Gentoo supports kernel's which are supported by NVIDIA"
+		ewarn "Gentoo supports kernels which are supported by NVIDIA"
 		ewarn "which are limited to the following kernels:"
 		ewarn "<sys-kernel/gentoo-sources-3.7"
 		ewarn "<sys-kernel/vanilla-sources-3.7"
