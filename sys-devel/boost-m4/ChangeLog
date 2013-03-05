@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/boost-m4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.8 2013/03/05 14:11:53 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.9 2013/03/05 21:40:46 ottxor Exp $
+
+  05 Mar 2013; Christoph Junghans <ottxor@gentoo.org> boost-m4-0.3.ebuild:
+  added *-macos keywords
 
   05 Mar 2013; Nathan Phillip Brink <binki@gentoo.org> -boost-m4-0.2.ebuild:
   Drop old boost-m4-0.2.

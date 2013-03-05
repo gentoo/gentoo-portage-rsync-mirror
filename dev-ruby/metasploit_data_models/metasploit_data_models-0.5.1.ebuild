@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metasploit_data_models/metasploit_data_models-0.5.1.ebuild,v 1.1 2013/03/05 21:03:38 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metasploit_data_models/metasploit_data_models-0.5.1.ebuild,v 1.2 2013/03/05 21:41:21 zerochaos Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ each_ruby_install() {
 	ruby_fakegem_install_gemspec
 
 	local _gemlibdirs="${RUBY_FAKEGEM_EXTRAINSTALL}"
-	for directory in app bin lib script spec; do
+	for directory in app bin db lib script spec; do
 		[[ -d ${directory} ]] && _gemlibdirs="${_gemlibdirs} ${directory}"
 	done
 
