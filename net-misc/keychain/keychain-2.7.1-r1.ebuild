@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-2.7.1-r1.ebuild,v 1.7 2013/03/03 16:17:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-2.7.1-r1.ebuild,v 1.8 2013/03/05 06:45:07 radhermit Exp $
 
 EAPI=4
 
 DESCRIPTION="manage ssh and GPG keys in a convenient and secure manner. Frontend for ssh-agent/ssh-add"
-HOMEPAGE="http://www.funtoo.org/en/security/keychain/intro/"
+HOMEPAGE="http://www.funtoo.org/wiki/Keychain"
 SRC_URI="http://www.funtoo.org/archive/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
