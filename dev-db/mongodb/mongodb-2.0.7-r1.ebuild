@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.7-r1.ebuild,v 1.2 2012/11/22 03:45:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.7-r1.ebuild,v 1.3 2013/03/05 14:08:39 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -36,7 +36,7 @@ pkg_setup() {
 	enewgroup mongodb
 	enewuser mongodb -1 -1 /var/lib/${PN} mongodb
 
-	scons_opts="  --cc=$(tc-getCC) --cxx=$(tc-getCXX)"
+	scons_opts="  --cc=$(tc-getCC) --cxx=$(tc-getCXX) --sharedclient"
 	scons_opts+=" --use-system-pcre"
 	scons_opts+=" --use-system-snappy"
 

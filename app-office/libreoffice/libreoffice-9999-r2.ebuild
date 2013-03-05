@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.160 2013/03/04 20:53:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.161 2013/03/05 14:21:48 scarabeus Exp $
 
 EAPI=5
 
@@ -341,6 +341,7 @@ src_prepare() {
 		solenv/gbuild/Module.mk || die
 	sed -i \
 		-e 's#check: dev-install subsequentcheck#check: unitcheck slowcheck dev-install subsequentcheck#g' \
+		-e 's#Makefile.gbuild all slowcheck#Makefile.gbuild all#g' \
 		Makefile.in || die
 }
 
