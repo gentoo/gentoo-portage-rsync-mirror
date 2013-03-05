@@ -1,6 +1,19 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.145 2013/03/02 19:33:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.147 2013/03/04 23:13:09 eva Exp $
+
+  04 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/tracker-0.12.3-strigi.patch, -tracker-0.12.10-r1.ebuild,
+  -files/tracker-0.14.2-icu-no-LC_ALL.patch, -tracker-0.14.3.ebuild,
+  tracker-0.14.5.ebuild:
+  Clean up old revisions. Remove unneeded extra blank lines.
+
+*tracker-0.14.5 (04 Mar 2013)
+
+  04 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> +tracker-0.14.5.ebuild,
+  tracker-9999.ebuild:
+  Version bump. Switch to python-any-r1, revisit test restrictions, add
+  subslot.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> tracker-0.12.10-r1.ebuild,
   tracker-0.14.3.ebuild, tracker-0.14.4.ebuild, tracker-9999.ebuild:
