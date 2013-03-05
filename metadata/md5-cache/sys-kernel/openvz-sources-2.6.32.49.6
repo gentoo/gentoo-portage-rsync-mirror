@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm preinst setup test unpack
-DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 )
+DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) deblob? ( =dev-lang/python-2* )
 DESCRIPTION=Kernel sources with OpenVZ patchset
 HOMEPAGE=http://www.openvz.org
 IUSE=symlink build deblob
@@ -10,5 +10,5 @@ RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl )
 RESTRICT=binchecks strip
 SLOT=2.6.32.49.6
 SRC_URI=mirror://kernel/linux/kernel/v2.6/linux-2.6.32.tar.bz2 deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-2.6.32.N/deblob-2.6.32 mirror://gentoo/deblob-check-2.6.32 ) http://download.openvz.org/kernel/branches/rhel6-2.6.32/042stab049.6/patches/patch-042stab049.6-combined.gz
-_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	kernel-2	dd451098928ff900df7c254820871c00	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	2824df7f5dc9f47aee293af8a6b517ed	kernel-2	35c7fef4783d73f107ac30e16496e1f3	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=c568fa5cc5162a7754df3d976be26bb1

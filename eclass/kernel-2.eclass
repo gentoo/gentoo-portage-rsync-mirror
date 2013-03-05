@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.277 2012/06/24 17:52:38 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.278 2013/03/05 19:52:08 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -458,6 +458,7 @@ if [[ ${ETYPE} == sources ]]; then
 			DEBLOB_URI="${DEBLOB_HOMEPAGE}/${DEBLOB_URI_PATH}/${DEBLOB_A}"
 			HOMEPAGE="${HOMEPAGE} ${DEBLOB_HOMEPAGE}"
 
+			DEPEND+=" deblob? ( =dev-lang/python-2* )"
 			KERNEL_URI="${KERNEL_URI}
 				deblob? (
 					${DEBLOB_URI}
@@ -1165,8 +1166,7 @@ kernel-2_src_compile() {
 
 	if [[ $K_DEBLOB_AVAILABLE == 1 ]] && use deblob ; then
 		echo ">>> Running deblob script ..."
-		sh "${T}/${DEBLOB_A}" --force || \
-			die "Deblob script failed to run!!!"
+		EPYTHON="python2" sh "${T}/${DEBLOB_A}" --force || die "Deblob script failed to run!!!"
 	fi
 }
 

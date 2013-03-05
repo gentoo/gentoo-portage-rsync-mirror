@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.715 2013/03/05 19:06:19 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.716 2013/03/05 19:52:08 mpagano Exp $
+
+  05 Mar 2013; Michael Pagano <mpagano@gentoo.org> kernel-2.eclass:
+  Force python 2* for USE=deblob as deblob script does not yet support python3.
+  Thanks to Arfrever. See bug #458032
 
   05 Mar 2013; Davide Pesavento <pesa@gentoo.org> qt4-r2.eclass:
   eqmake4: override also QMAKE_LINK_C, used by packages with

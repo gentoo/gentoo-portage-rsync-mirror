@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.231 2013/03/02 22:53:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.232 2013/03/05 19:59:54 maksbotan Exp $
+
+  05 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org> psi-0.14-r4.ebuild:
+  Fix compilation with gcc-4.7, bug #422763. Thanks to Rion.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> psi-0.14-r4.ebuild,
   psi-9999.ebuild:

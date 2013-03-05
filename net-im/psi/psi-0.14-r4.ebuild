@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.12 2013/03/02 22:53:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.13 2013/03/05 19:59:54 maksbotan Exp $
 
 EAPI=4
 
@@ -55,6 +55,8 @@ src_prepare() {
 	epatch "${FILESDIR}/psi-0.14-minizip-detection.patch"
 	epatch "${FILESDIR}/psi-0.14-input-validation.patch"
 	epatch "${FILESDIR}/psi-0.14-drop-debug-cflags.patch"
+	sed -i '/#include <errno.h>/a #include <unistd.h>' \
+		iris/src/irisnet/corelib/netinterface_unix.cpp || die 'sed failed'
 
 	if use extras; then
 		# some patches from psi+ project http://code.google.com/p/psi-dev
