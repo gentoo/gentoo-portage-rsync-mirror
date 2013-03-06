@@ -1,5 +1,0 @@
-version="VERSION"
-requires="unix"
-linkopts="-cclib -lz"
-archive(byte)="zip.cma"
-archive(native)="zip.cmxa"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pxp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.31 2012/08/22 15:26:05 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.32 2013/03/06 11:43:22 aballier Exp $
+
+  06 Mar 2013; Alexis Ballier <aballier@gentoo.org> -pxp-1.2.2.ebuild:
+  remove old
 
   22 Aug 2012; Johannes Huber <johu@gentoo.org> pxp-1.2.3.ebuild:
   Stable for x86, wrt bug #428976

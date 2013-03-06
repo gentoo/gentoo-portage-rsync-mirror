@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/camlzip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.25 2013/02/12 16:57:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.26 2013/03/06 11:45:34 aballier Exp $
+
+  06 Mar 2013; Alexis Ballier <aballier@gentoo.org>
+  -files/camlzip-1.03-Makefile-findlib.patch, -camlzip-1.04.ebuild,
+  -files/META:
+  remove old
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> camlzip-1.05.ebuild:
   Stable for ppc, wrt bug #456552
