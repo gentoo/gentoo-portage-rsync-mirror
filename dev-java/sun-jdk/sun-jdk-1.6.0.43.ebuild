@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.39.ebuild,v 1.4 2013/02/14 13:14:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.43.ebuild,v 1.1 2013/03/06 09:12:44 sera Exp $
 
 EAPI="5"
 
@@ -10,10 +10,9 @@ inherit eutils java-vm-2 prefix versionator
 JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk6downloads-1902814.html"
 JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html"
 # This is a list of archs supported by this update. Currently ia64 comes and goes ...
-AT_AVAILABLE=( amd64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
+AT_AVAILABLE=( amd64 ia64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
 # somtimes the demos are missing
-#DEMOS_AVAILABLE=( amd64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
-DEMOS_AVAILABLE=()
+DEMOS_AVAILABLE=( amd64 ia64 x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"
@@ -51,7 +50,7 @@ SRC_URI+=" jce? ( ${JCE_FILE} )"
 
 LICENSE="Oracle-BCLA-JavaSE examples? ( BSD )"
 SLOT="1.6"
-KEYWORDS="amd64 -ia64 x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+X alsa derby doc examples jce kernel_SunOS nsplugin pax_kernel source"
 
 RESTRICT="fetch strip"

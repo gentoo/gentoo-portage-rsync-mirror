@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.3_rc1.ebuild,v 1.1 2013/03/05 13:49:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.3_rc1.ebuild,v 1.2 2013/03/06 09:05:37 ulm Exp $
 
 EAPI=5
 
@@ -289,8 +289,6 @@ src_install () {
 	use aqua && DOC_CONTENTS+="\\n\\nEmacs${EMACS_SUFFIX#emacs}.app is in
 		${EPREFIX}/Applications/Gentoo. You may want to copy or symlink it
 		into /Applications by yourself."
-	[[ ${REPLACING_VERSIONS} =~ (^|[[:space:]])24\.[12]($|[^0-9]) ]] \
-		&& FORCE_PRINT_ELOG=1
 	readme.gentoo_create_doc
 }
 
@@ -314,6 +312,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	elisp-site-regen
+
+	[[ ${REPLACING_VERSIONS} =~ (^|[[:space:]])24\.[12]($|[^0-9]) ]] \
+		&& FORCE_PRINT_ELOG=1
 	readme.gentoo_print_elog
 
 	if use livecd; then

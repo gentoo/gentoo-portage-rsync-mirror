@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the BSD license
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/files/celery.initd,v 1.4 2013/02/09 13:49:36 iksaif Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/files/celery.initd,v 1.5 2013/03/06 09:16:20 iksaif Exp $
 
 extra_started_commands="reload"
 
@@ -30,7 +30,7 @@ export CELERY_LOADER
 
 if yesno "$CELERY_DJANGO"; then
 	CELERYD=${CELERYD:-"celeryd_detach"}
-	CELERYCTL=${CELERYCTL:-"python manage.py celeryd"}
+	CELERYCTL=${CELERYCTL:-"python manage.py celery"}
 	CELERYD_MULTI=${CELERYD_MULTI:-"python manage.py celeryd_multi"}
 	CELERYBEAT=${CELERYBEAT:-"python manage.py celerybeat"}
 	CELERYEV=${CELERYEV:-"python manage.py celeryev"}
@@ -263,5 +263,6 @@ reload() {
 status() {
 	checkconfig || return 1
 
-	${CELERYCTL} status
+	celery_chdir && \
+	    ${CELERYCTL} status
 }

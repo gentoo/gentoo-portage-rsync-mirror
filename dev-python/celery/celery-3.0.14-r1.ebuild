@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.9.ebuild,v 1.2 2012/12/31 12:58:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.14-r1.ebuild,v 1.1 2013/03/06 09:16:20 iksaif Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ RESTRICT_PYTHON_ABIS="2.[5-6]"
 SUPPORT_PYTHON_ABIS="1"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Celery is an open source asynchronous task queue/job queue based on distributed message passing."
 HOMEPAGE="http://celeryproject.org/ http://pypi.python.org/pypi/celery"
@@ -26,18 +26,20 @@ IUSE="doc examples sql test"
 # jython would need: threadpool, simplejson
 # python2.5 would need: ordereddict, test? unittest2
 # python2.6 would need: multiprocessing, test? simplejson
-RDEPEND=">=dev-python/kombu-2.2.5
+RDEPEND=">=dev-python/kombu-2.4.7
 	<dev-python/kombu-3.0
 	sql? ( dev-python/sqlalchemy )
 	dev-python/python-dateutil
 	>=dev-python/anyjson-0.3.3
 	virtual/pyparsing
-	>=dev-python/billiard-2.7.3.12
+	>=dev-python/billiard-2.7.3.17
+	dev-python/pytz
 	"
 DEPEND="${RDEPEND}
 	test? (
 		dev-python/gevent
 		>=dev-python/mock-0.7.0
+		virtual/python-unittest2
 		dev-python/pyopenssl
 		dev-python/nose-cover3
 		dev-python/sqlalchemy
