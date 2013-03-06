@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.4.0_pre1.ebuild,v 1.1 2013/03/04 12:41:03 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.4.0_pre1.ebuild,v 1.2 2013/03/06 06:17:37 tomwij Exp $
 
 EAPI="5"
 
@@ -30,8 +30,8 @@ DOCS="BUGS CREDITS NEWS README SUPPORT doc/README* doc/*.txt doc/SOCKS4.protocol
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PN}-1.3.0-socksify.patch
+	epatch	"${FILESDIR}"/${PN}-1.3.0-socksify.patch \
+		"${FILESDIR}"/${PN}-1.4.0-osdep-format-macro.patch
 
 	sed -i \
 		-e 's:/etc/socks\.conf:"${EPREFIX}"/etc/socks/socks.conf:' \
