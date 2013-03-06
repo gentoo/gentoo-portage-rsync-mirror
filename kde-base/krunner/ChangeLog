@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/krunner
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.159 2013/02/23 16:54:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.160 2013/03/06 13:42:04 dilfridge Exp $
+
+*krunner-4.10.1 (06 Mar 2013)
+
+  06 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +krunner-4.10.1.ebuild:
+  Version bump KDE SC 4.10.1
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> krunner-4.10.0.ebuild,
   krunner-4.9.5.ebuild:

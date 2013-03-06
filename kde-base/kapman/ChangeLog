@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kapman
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapman/ChangeLog,v 1.128 2013/02/23 16:04:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapman/ChangeLog,v 1.129 2013/03/06 13:41:38 dilfridge Exp $
+
+*kapman-4.10.1 (06 Mar 2013)
+
+  06 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> +kapman-4.10.1.ebuild:
+  Version bump KDE SC 4.10.1
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> kapman-4.10.0.ebuild,
   kapman-4.9.5.ebuild:

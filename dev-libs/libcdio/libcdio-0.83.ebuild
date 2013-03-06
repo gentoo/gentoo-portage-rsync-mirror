@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.83.ebuild,v 1.15 2012/06/16 10:37:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.83.ebuild,v 1.16 2013/03/06 13:47:11 ssuominen Exp $
 
 EAPI=4
 
@@ -17,7 +17,8 @@ IUSE="cddb +cxx minimal static-libs"
 
 RDEPEND="cddb? ( >=media-libs/libcddb-1.0.1 )
 	!minimal? ( >=sys-libs/ncurses-5.7-r7 )
-	virtual/libintl"
+	virtual/libintl
+	!dev-libs/libcdio-paranoia"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig"

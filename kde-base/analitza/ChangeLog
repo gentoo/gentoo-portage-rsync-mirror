@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/analitza
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/analitza/ChangeLog,v 1.41 2013/02/23 15:54:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/analitza/ChangeLog,v 1.42 2013/03/06 13:41:40 dilfridge Exp $
+
+*analitza-4.10.1 (06 Mar 2013)
+
+  06 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +analitza-4.10.1.ebuild:
+  Version bump KDE SC 4.10.1
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> analitza-4.10.0.ebuild,
   analitza-4.9.5.ebuild:

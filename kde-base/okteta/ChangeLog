@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/okteta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.141 2013/02/23 17:14:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.142 2013/03/06 13:41:22 dilfridge Exp $
+
+*okteta-4.10.1 (06 Mar 2013)
+
+  06 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> +okteta-4.10.1.ebuild:
+  Version bump KDE SC 4.10.1
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> okteta-4.10.0.ebuild,
   okteta-4.9.5.ebuild:
