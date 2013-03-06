@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.2.1.ebuild,v 1.1 2013/03/05 21:26:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.2.1.ebuild,v 1.2 2013/03/06 17:49:09 hwoarang Exp $
 
 EAPI="4"
 
@@ -288,8 +288,11 @@ src_configure() {
 		myconf+=" --with-libiptc=no"
 	fi
 
-	# The perl bindings
-	myconf+=" $(use_with perl perl-bindings=INSTALLDIRS=vendor)"
+	if use perl; then
+		myconf+=" --with-perl-bindings=INSTALLDIRS=vendor"
+	else
+		myconf+=" --without-perl-bindings"
+	fi
 
 	# Finally, run econf.
 	KERNEL_DIR="${KERNEL_DIR}" econf --config-cache --without-included-ltdl $(use_enable static-libs static) --localstatedir=/var ${myconf}

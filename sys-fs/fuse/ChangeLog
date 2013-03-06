@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.174 2013/02/17 20:27:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.175 2013/03/06 17:46:59 ssuominen Exp $
+
+  06 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> fuse-2.9.2.ebuild:
+  Since oldest util-linux in tree is 2.19.1 and --fake --no-canonicalize for
+  mount and umount has worked since 2.18 assume it's present to avoid sandbox
+  violation with mtab writability wrt #438250 by Attila Tóth and Canek Peláez
+  Valdés
 
   17 Feb 2013; Zac Medico <zmedico@gentoo.org> fuse-2.8.6.ebuild,
   fuse-2.8.7.ebuild, fuse-2.9.0.ebuild, fuse-2.9.1-r1.ebuild, fuse-2.9.1.ebuild,
