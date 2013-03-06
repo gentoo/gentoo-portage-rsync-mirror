@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/mksh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.37 2013/02/22 08:42:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.38 2013/03/06 03:55:18 patrick Exp $
+
+*mksh-44 (06 Mar 2013)
+
+  06 Mar 2013; Patrick Lauer <patrick@gentoo.org> +mksh-44.ebuild:
+  Bump
 
 *mksh-43 (22 Feb 2013)
 *mksh-41c (22 Feb 2013)

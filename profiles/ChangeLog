@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7559 2013/03/06 01:49:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7560 2013/03/06 03:33:20 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
+  hardened/linux/mips/mipsel/multilib/n32/parent,
+  hardened/linux/mips/mipsel/multilib/n64/parent,
+  hardened/linux/mips/mipsel/n32/parent, hardened/linux/mips/mipsel/n64/parent,
+  hardened/linux/mips/multilib/n32/parent,
+  hardened/linux/mips/multilib/n64/parent, hardened/linux/mips/n32/parent,
+  hardened/linux/mips/n64/parent:
+  Switch hardened/linux/mips profiles to 13.0
 
   06 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:

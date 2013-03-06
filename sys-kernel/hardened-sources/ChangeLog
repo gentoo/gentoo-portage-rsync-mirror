@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.779 2013/03/02 01:34:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.782 2013/03/06 03:45:53 blueness Exp $
+
+  06 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-2.6.32-r149.ebuild, -hardened-sources-2.6.32-r150.ebuild,
+  -hardened-sources-3.2.38-r1.ebuild, -hardened-sources-3.2.38.ebuild,
+  -hardened-sources-3.7.6.ebuild, -hardened-sources-3.7.8.ebuild:
+  Remove older unstable kernels
+
+  06 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-2.6.32-r116.ebuild, -hardened-sources-2.6.32-r130.ebuild,
+  -hardened-sources-3.2.23-r1.ebuild, -hardened-sources-3.2.30.ebuild:
+  Remove older stable kernels
+
+  06 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-3.4.5.ebuild, -hardened-sources-3.5.4-r1.ebuild,
+  -hardened-sources-3.7.5.ebuild:
+  Remove kernel susceptible to sock_diag out-of-bounds, bug #459124
 
 *hardened-sources-3.8.0-r1 (02 Mar 2013)
 
