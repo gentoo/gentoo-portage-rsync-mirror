@@ -1,6 +1,13 @@
 # ChangeLog for net-voip/openmcu
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/openmcu/ChangeLog,v 1.4 2009/02/13 05:22:23 darkside Exp $
+# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/openmcu/ChangeLog,v 1.5 2013/03/06 19:00:03 chithanh Exp $
+
+*openmcu-2.2.5 (06 Mar 2013)
+
+  06 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +openmcu-2.2.5.ebuild, -files/openmcu-2.2.0-gentoo.diff,
+  -openmcu-2.2.0.ebuild:
+  Version bump, how part of the H.323 app suite. Fix license, bug #426132.
 
 *openmcu-2.2.1 (13 Feb 2009)
 
@@ -50,4 +57,3 @@
 
   12 Sep 2003; Michael Imhof <tantive@gentoo.org> :
   Initial release.
-
