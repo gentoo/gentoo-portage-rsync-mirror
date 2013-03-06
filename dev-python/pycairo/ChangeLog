@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.130 2013/01/14 17:29:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.131 2013/03/06 12:54:42 mgorny Exp $
+
+  06 Mar 2013; Michał Górny <mgorny@gentoo.org> pycairo-1.10.0-r4.ebuild:
+  Add a note about use of xpyb.
 
   14 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org> pycairo-1.10.0-r4.ebuild:
   Keyworded amd64-linux and x86-linux
