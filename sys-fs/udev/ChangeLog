@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.843 2013/03/02 01:12:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.844 2013/03/06 20:13:38 armin76 Exp $
+
+  06 Mar 2013; Raúl Porcel <armin76@gentoo.org> udev-197-r8.ebuild:
+  m68k/s390/sh/sparc stable wrt #457568
 
   02 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> -files/40-gentoo.rules,
   -udev-197-r4.ebuild:

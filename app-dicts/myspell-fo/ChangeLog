@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/myspell-fo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fo/ChangeLog,v 1.20 2012/06/13 17:35:18 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fo/ChangeLog,v 1.21 2013/03/06 20:08:30 scarabeus Exp $
+
+*myspell-fo-0.4.2 (06 Mar 2013)
+
+  06 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> +myspell-fo-0.4.2.ebuild:
+  Version bump to latest release.
 
 *myspell-fo-0.4.1 (13 Jun 2012)
 
@@ -73,4 +78,3 @@
   01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
   +myspell-fo-20060316.ebuild:
   New ebuild for Faroese myspell dictionary
-

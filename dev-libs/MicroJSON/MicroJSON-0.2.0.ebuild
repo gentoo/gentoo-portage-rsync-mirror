@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/MicroJSON/MicroJSON-0.2.0.ebuild,v 1.1 2013/02/14 15:23:45 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/MicroJSON/MicroJSON-0.2.0.ebuild,v 1.2 2013/03/06 20:28:14 tomwij Exp $
+
+EAPI="5"
 
 inherit cmake-utils
 

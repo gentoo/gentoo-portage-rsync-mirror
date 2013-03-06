@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/lockdev
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/ChangeLog,v 1.6 2009/11/26 17:17:59 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/ChangeLog,v 1.7 2013/03/06 20:20:49 steev Exp $
+
+  06 Mar 2013; Steev Klimaszewski <steev@gentoo.org>
+  lockdev-1.0.3.1.2-r1.ebuild:
+  Add ~arm keyword. Tested on cortex a15,a9 and a8 machines.
 
   26 Nov 2009; Markus Meier <maekke@gentoo.org> lockdev-1.0.3.1.2-r1.ebuild:
   amd64 stable, bug #289428

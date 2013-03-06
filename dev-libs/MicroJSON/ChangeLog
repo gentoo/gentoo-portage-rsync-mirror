@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/MicroJSON
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/MicroJSON/ChangeLog,v 1.2 2013/03/03 20:46:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/MicroJSON/ChangeLog,v 1.3 2013/03/06 20:28:14 tomwij Exp $
+
+  06 Mar 2013; Tom Wijsman <TomWij@gentoo.org> MicroJSON-0.2.0.ebuild:
+  EAPI 5, thanks to Chris Reffett for reporting. Fixes bug #460572.
 
   03 Mar 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Added the proxy-maintainers herd as requested on the dev ML.
