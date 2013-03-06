@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.2.1-r2.ebuild,v 1.6 2012/05/03 07:27:47 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.2.1-r2.ebuild,v 1.7 2013/03/06 13:20:30 chithanh Exp $
 
 EAPI="3"
 
@@ -18,6 +18,8 @@ IUSE="doc gtk ipv6 ncurses nls video"
 RDEPEND=">=media-libs/mediastreamer-2.3.0[video?]
 	>=net-libs/libeXosip-3.0.2
 	>=net-libs/libosip-3.0.0
+	<net-libs/libosip-4
+	<net-libs/libeXosip-4
 	>=net-libs/ortp-0.16.1
 	gtk? ( dev-libs/glib:2
 		>=gnome-base/libglade-2.4.0:2.0

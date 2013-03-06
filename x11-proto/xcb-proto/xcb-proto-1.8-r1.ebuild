@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.8-r1.ebuild,v 1.1 2013/02/25 23:08:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.8-r1.ebuild,v 1.2 2013/03/06 13:05:53 mgorny Exp $
 
 EAPI=5
 
-PYTHON_DEPEND="*"
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
 XORG_MULTILIB=yes
-inherit python xorg-2
+inherit python-single-r1 xorg-2
 
 DESCRIPTION="X C-language Bindings protocol headers"
 HOMEPAGE="http://xcb.freedesktop.org/"
@@ -17,20 +17,15 @@ EGIT_REPO_URI="git://anongit.freedesktop.org/git/xcb/proto"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
-RDEPEND=""
+RDEPEND="${PYTHON_DEPS}"
 DEPEND="${RDEPEND}
 	dev-libs/libxml2"
 
-src_prepare() {
-	python_clean_py-compile_files
-	xorg-2_src_prepare
+pkg_setup() {
+	python-single-r1_pkg_setup
+	xorg-2_pkg_setup
 }
 
 pkg_postinst() {
-	python_mod_optimize xcbgen
 	ewarn "Please rebuild both libxcb and xcb-util if you are upgrading from version 1.6"
-}
-
-pkg_postrm() {
-	python_mod_cleanup xcbgen
 }

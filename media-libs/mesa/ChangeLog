@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.462 2013/02/27 06:06:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.463 2013/03/06 13:18:52 mgorny Exp $
+
+  06 Mar 2013; Michał Górny <mgorny@gentoo.org> mesa-9.1.ebuild:
+  Migrate to python-r1.
 
   27 Feb 2013; Zac Medico <zmedico@gentoo.org> mesa-9.1.ebuild:
   Add ~arm-linux keyword.

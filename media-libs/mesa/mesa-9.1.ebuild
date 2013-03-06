@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.1.ebuild,v 1.2 2013/02/27 06:06:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.1.ebuild,v 1.3 2013/03/06 13:18:52 mgorny Exp $
 
 EAPI=5
 
@@ -11,7 +11,9 @@ if [[ ${PV} = 9999* ]]; then
 	EXPERIMENTAL="true"
 fi
 
-inherit base autotools multilib flag-o-matic toolchain-funcs ${GIT_ECLASS}
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit base autotools multilib flag-o-matic python-single-r1 toolchain-funcs ${GIT_ECLASS}
 
 OPENGL_DIR="xorg-x11"
 
@@ -115,8 +117,8 @@ DEPEND="${RDEPEND}
 		r600-llvm-compiler? ( >=sys-devel/llvm-3.1 )
 		video_cards_radeonsi? ( >=sys-devel/llvm-3.1 )
 	)
-	=dev-lang/python-2*
-	dev-libs/libxml2[python]
+	${PYTHON_DEPS}
+	dev-libs/libxml2[python,${PYTHON_USEDEP}]
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig
@@ -139,6 +141,8 @@ QA_WX_LOAD="usr/lib*/opengl/xorg-x11/lib/libGL.so*"
 pkg_setup() {
 	# workaround toc-issue wrt #386545
 	use ppc64 && append-flags -mminimal-toc
+
+	python-single-r1_pkg_setup
 }
 
 src_unpack() {
@@ -260,6 +264,7 @@ src_configure() {
 		$(use_enable xorg) \
 		--with-dri-drivers=${DRI_DRIVERS} \
 		--with-gallium-drivers=${GALLIUM_DRIVERS} \
+		PYTHON2="${PYTHON}" \
 		${myconf}
 }
 

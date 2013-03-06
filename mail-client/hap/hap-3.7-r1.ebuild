@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/hap/hap-3.7-r1.ebuild,v 1.7 2012/11/15 15:16:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/hap/hap-3.7-r1.ebuild,v 1.8 2013/03/06 13:20:21 eras Exp $
 
 EAPI=4
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="A terminal mail notification program (replacement for biff)"
 HOMEPAGE="http://www.transbay.net/~enf/sw.html"
@@ -22,7 +22,7 @@ S="${WORKDIR}/${PN}"
 
 src_prepare() {
 	# Fix configure to use ncurses instead of termcap (bug #103105)
-	sed -i -e '/AC_CHECK_LIB/s~termcap~ncurses~' configure.in || die
+	epatch "${FILESDIR}/${P}-ncurses.patch"
 
 	# Fix Makefile.in to use our CFLAGS and LDFLAGS
 	sed -i -e "s/^CFLAGS=-O/CFLAGS=${CFLAGS}/" \

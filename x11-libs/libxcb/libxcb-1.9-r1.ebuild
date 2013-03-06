@@ -1,12 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.9-r1.ebuild,v 1.1 2013/02/25 23:09:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.9-r1.ebuild,v 1.2 2013/03/06 13:11:03 mgorny Exp $
 
 EAPI=5
 
+PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} )
+PYTHON_REQ_USE=xml
+
 XORG_DOC=doc
 XORG_MULTILIB=yes
-inherit xorg-2
+inherit python-single-r1 xorg-2
 
 DESCRIPTION="X C-language Bindings library"
 HOMEPAGE="http://xcb.freedesktop.org/"
@@ -23,7 +26,8 @@ RDEPEND="dev-libs/libpthread-stubs[${MULTILIB_USEDEP}]
 DEPEND="${RDEPEND}
 	dev-lang/python[xml]
 	dev-libs/libxslt
-	>=x11-proto/xcb-proto-1.7-r1[${MULTILIB_USEDEP}]"
+	>=x11-proto/xcb-proto-1.7-r1[${MULTILIB_USEDEP},${PYTHON_USEDEP}]
+	${PYTHON_DEPS}"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.9-python-3-iteritems.patch
@@ -31,6 +35,7 @@ PATCHES=(
 )
 
 pkg_setup() {
+	python-single-r1_pkg_setup
 	xorg-2_pkg_setup
 	XORG_CONFIGURE_OPTIONS=(
 		$(use_enable doc build-docs)
