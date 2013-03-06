@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7557 2013/03/05 17:58:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7558 2013/03/06 00:50:51 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
+  default/linux/mips/10.0/mipsel/multilib/n32/deprecated,
+  default/linux/mips/10.0/mipsel/multilib/n64/deprecated:
+  Fix deprecation message for default/linux/mips/10.0/mipsel/multilib/n{32,64}
 
   05 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask sys-auth/polkit-kde for removal
