@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-recaptcha/django-recaptcha-0.0.6.ebuild,v 1.1 2013/02/22 08:53:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-recaptcha/django-recaptcha-0.0.6.ebuild,v 1.2 2013/03/06 19:13:49 idella4 Exp $
 
 EAPI="3"
 
@@ -23,6 +23,5 @@ IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}
 		dev-python/setuptools"
-
 # Test not supported, missing dependency
 # test? ( >=dev-python/django-setuptest-0.0.6 )
