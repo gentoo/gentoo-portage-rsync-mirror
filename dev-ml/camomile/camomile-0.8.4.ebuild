@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/camomile-0.8.4.ebuild,v 1.3 2012/05/29 19:38:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camomile/camomile-0.8.4.ebuild,v 1.4 2013/03/06 15:20:25 aballier Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit findlib eutils
 
@@ -11,11 +11,11 @@ HOMEPAGE="http://github.com/yoriyuki/Camomile/wiki"
 SRC_URI="http://github.com/downloads/yoriyuki/Camomile/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64 ppc x86"
 IUSE="debug +ocamlopt"
 
-RDEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]"
+RDEPEND=">=dev-lang/ocaml-3.10.2:=[ocamlopt?]"
 DEPEND="${RDEPEND}"
 
 src_configure() {
@@ -23,9 +23,9 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 byte unidata unimaps charmap_data locale_data || die "failed to build"
+	emake -j1 byte unidata unimaps charmap_data locale_data
 	if use ocamlopt; then
-		emake -j1 opt || die "failed to build native code"
+		emake -j1 opt
 	fi
 }
 
