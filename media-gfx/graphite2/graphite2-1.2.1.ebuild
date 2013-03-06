@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.1.ebuild,v 1.1 2013/03/06 20:08:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.1.ebuild,v 1.2 2013/03/06 20:41:32 scarabeus Exp $
 
 EAPI=4
 
-PYTHON_DEPEND="test? 2"
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
+
 GENTOO_DEPEND_ON_PERL="no"
-inherit base cmake-utils perl-module python
+inherit base eutils cmake-utils perl-module python-any-r1
 
 DESCRIPTION="Library providing rendering capabilities for complex non-Roman writing systems"
 HOMEPAGE="http://graphite.sil.org/"
@@ -26,6 +27,7 @@ DEPEND="${RDEPEND}
 		dev-libs/glib:2
 		media-libs/fontconfig
 		media-libs/silgraphite
+		${PYTHON_DEPS}
 	)
 "
 
@@ -38,10 +40,7 @@ PATCHES=(
 
 pkg_setup() {
 	use perl && perl-module_pkg_setup
-	if use test; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
+	use test && python-any-r1_pkg_setup
 }
 
 src_prepare() {
@@ -96,6 +95,5 @@ src_install() {
 		fixlocalpod
 	fi
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
-
+	prune_libtool_files --all
 }
