@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-input-wacom
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/ChangeLog,v 1.72 2013/01/08 10:47:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/ChangeLog,v 1.73 2013/03/06 19:53:23 chithanh Exp $
+
+*xf86-input-wacom-0.20.0 (06 Mar 2013)
+
+  06 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-input-wacom-0.20.0.ebuild, -xf86-input-wacom-0.14.0.ebuild,
+  -xf86-input-wacom-0.15.0.ebuild, -xf86-input-wacom-0.16.1.ebuild:
+  Version bump.
 
   08 Jan 2013; Agostino Sarubbo <ago@gentoo.org> xf86-input-wacom-0.19.0.ebuild:
   Add ~sparc, wrt to bug #449220

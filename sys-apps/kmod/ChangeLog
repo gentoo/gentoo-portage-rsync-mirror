@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.75 2013/02/23 14:45:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.76 2013/03/06 19:55:30 armin76 Exp $
+
+  06 Mar 2013; Raúl Porcel <armin76@gentoo.org> kmod-12-r1.ebuild:
+  m68k/s390/sh/sparc stable wrt #457568
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> kmod-12-r1.ebuild:
   Stable for alpha, wrt bug #457568

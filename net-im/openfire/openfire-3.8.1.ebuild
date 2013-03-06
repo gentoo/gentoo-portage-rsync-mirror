@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.8.0.ebuild,v 1.1 2013/02/19 09:07:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.8.1.ebuild,v 1.1 2013/03/06 19:53:03 slyfox Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -42,7 +42,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-buildxml.patch
+	epatch "${FILESDIR}"/${PN}-3.8.0-buildxml.patch
 	epatch "${FILESDIR}"/buildxml-ant.patch
 
 	# TODO should replace jars in build/lib with ones packaged by us -nichoj
