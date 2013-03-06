@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-2.0.7.ebuild,v 1.1 2013/03/04 10:21:46 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-2.0.7.ebuild,v 1.2 2013/03/06 09:57:43 kensington Exp $
 
 EAPI=5
 
@@ -16,9 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug plasma"
 
 DEPEND="plasma? ( $(add_kdebase_dep plasma-workspace) )"
-RDEPEND="${DEPEND}
-	net-p2p/mldonkey
-"
+RDEPEND="${DEPEND}"
 
 src_configure() {
 	local mycmakeargs=(
@@ -26,4 +24,11 @@ src_configure() {
 	)
 
 	kde4-base_src_configure
+}
+
+pkg_postinst() {
+	if ! has_version net-p2p/mldonkey ; then
+		elog ${PN} is a only a client, and requires access to an instance of
+		elog net-p2p/mldonkey to function.
+	fi
 }
