@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7-r2.ebuild,v 1.1 2013/03/06 04:46:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.7-r2.ebuild,v 1.3 2013/03/06 16:28:54 jer Exp $
 
 EAPI="5"
 
@@ -15,26 +15,29 @@ SRC_URI="http://oss.oetiker.ch/rrdtool/pub/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos ~x86-solaris"
-IUSE="dbi doc lua perl python ruby rrdcgi tcl tcpd"
+IUSE="dbi doc +graph lua perl python ruby rrdcgi static-libs tcl tcpd"
 
-# This versions are minimal versions upstream tested with.
 RDEPEND="
-	>=media-libs/libpng-1.5.10
-	>=dev-libs/libxml2-2.7.8
-	>=x11-libs/cairo-1.10.2[svg]
-	>=dev-libs/glib-2.28.7
-	>=x11-libs/pango-1.28
+	>=dev-libs/glib-2.28.7[static-libs=]
+	>=dev-libs/libxml2-2.7.8[static-libs=]
+	dbi? ( dev-db/libdbi[static-libs=] )
+	graph? (
+		>=media-libs/libpng-1.5.10[static-libs=]
+		>=x11-libs/cairo-1.10.2[svg,static-libs=]
+		>=x11-libs/pango-1.28
+	)
 	lua? ( dev-lang/lua[deprecated] )
 	perl? ( dev-lang/perl )
 	python? ( ${PYTHON_DEPS} )
 	ruby? ( >=dev-lang/ruby-1.8.6_p287-r13 )
 	tcl? ( dev-lang/tcl )
 	tcpd? ( sys-apps/tcp-wrappers )
-	dbi? ( dev-db/libdbi )"
+"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	virtual/awk"
+	virtual/awk
+"
 
 python_compile() {
 	cd bindings/python || die 'can not enter to python bindings directory'
@@ -83,18 +86,19 @@ src_configure() {
 	fi
 
 	econf \
-		--disable-static \
-		$(use_enable rrdcgi) \
-		$(use_enable lua) \
+		$(use_enable graph rrd_graph) \
 		$(use_enable lua lua-site-install) \
-		$(use_enable ruby) \
-		$(use_enable ruby ruby-site-install) \
-		$(use_enable perl) \
+		$(use_enable lua) \
 		$(use_enable perl perl-site-install) \
-		--with-perl-options=INSTALLDIRS=vendor \
+		$(use_enable perl) \
+		$(use_enable python) \
+		$(use_enable rrdcgi) \
+		$(use_enable ruby ruby-site-install) \
+		$(use_enable ruby) \
+		$(use_enable static-libs static) \
 		$(use_enable tcl) \
 		$(use_with tcl tcllib "${EPREFIX}"/usr/$(get_libdir)) \
-		$(use_enable python) \
+		--with-perl-options=INSTALLDIRS=vendor \
 		${myconf[@]}
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.252 2013/03/05 14:20:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.253 2013/03/06 16:28:03 cardoe Exp $
+
+  06 Mar 2013; Doug Goldstein <cardoe@gentoo.org> libvirt-1.0.3.ebuild,
+  metadata.xml:
+  Add USE=fuse for LXC containers.
 
 *libvirt-1.0.3 (05 Mar 2013)
 

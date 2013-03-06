@@ -5,5 +5,6 @@
   <longdescription>A system to store and display time-series data</longdescription>
   <use>
     <flag name='rrdcgi'>Build rrdcgi support</flag>
+    <flag name='graph'>Enable support for graphing functions</flag>
   </use>
 </pkgmetadata>
