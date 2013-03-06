@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/canlock/canlock-2b.ebuild,v 1.3 2011/10/10 18:35:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/canlock/canlock-2b.ebuild,v 1.4 2013/03/06 07:13:28 radhermit Exp $
 
 EAPI=4
 
@@ -25,7 +25,12 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)"
+	local targets="shared"
+	if use static-libs || use test ; then
+		targets+=" static"
+	fi
+
+	emake CC="$(tc-getCC)" AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)" ${targets}
 }
 
 src_install() {

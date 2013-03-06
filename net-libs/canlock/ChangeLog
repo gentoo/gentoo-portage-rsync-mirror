@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/canlock
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/canlock/ChangeLog,v 1.4 2012/08/24 21:59:07 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/canlock/ChangeLog,v 1.5 2013/03/06 07:13:28 radhermit Exp $
+
+  06 Mar 2013; Tim Harder <radhermit@gentoo.org> canlock-2b.ebuild,
+  files/canlock-2b-make.patch:
+  Fix linking issue (bug #446746).
 
   24 Aug 2012; Tim Harder <radhermit@gentoo.org> files/canlock-2b-make.patch:
   Respect cflags and ldflags (bug #432622).
