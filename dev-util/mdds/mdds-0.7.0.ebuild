@@ -1,10 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/mdds-0.7.0.ebuild,v 1.1 2013/02/25 13:37:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/mdds-0.7.0.ebuild,v 1.2 2013/03/06 21:19:59 scarabeus Exp $
 
-EAPI=4
-
-inherit base
+EAPI=5
 
 DESCRIPTION="A collection of multi-dimensional data structure and indexing algorithm"
 HOMEPAGE="http://code.google.com/p/multidimalgorithm/"
@@ -27,3 +25,8 @@ src_configure() {
 }
 
 src_compile() { :; }
+
+src_test() {
+	tc-export CXX
+	default
+}
