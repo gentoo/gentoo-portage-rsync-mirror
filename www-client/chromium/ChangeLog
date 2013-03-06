@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.829 2013/03/05 13:17:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.830 2013/03/06 04:49:53 floppym Exp $
+
+  06 Mar 2013; Mike Gilbert <floppym@gentoo.org> chromium-25.0.1364.152.ebuild,
+  chromium-26.0.1410.19.ebuild, chromium-27.0.1425.0.ebuild:
+  Add slot operator dep for protobuf.
 
   05 Mar 2013; Agostino Sarubbo <ago@gentoo.org> chromium-25.0.1364.152.ebuild:
   Stable for x86, wrt bug #460318

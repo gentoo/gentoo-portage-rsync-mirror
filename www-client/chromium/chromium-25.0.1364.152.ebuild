@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1364.152.ebuild,v 1.3 2013/03/05 13:17:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1364.152.ebuild,v 1.4 2013/03/06 04:49:53 floppym Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -35,7 +35,7 @@ RDEPEND="app-accessibility/speech-dispatcher
 	dev-libs/libxml2[icu]
 	dev-libs/libxslt
 	>=dev-libs/nss-3.12.3
-	dev-libs/protobuf
+	dev-libs/protobuf:=
 	gnome? ( >=gnome-base/gconf-2.24.0 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2 )
 	>=media-libs/alsa-lib-1.0.19
