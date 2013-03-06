@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/leechcraft-blogique
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-blogique/ChangeLog,v 1.6 2013/03/02 23:01:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-blogique/ChangeLog,v 1.7 2013/03/06 06:57:32 maksbotan Exp $
+
+  06 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org>
+  leechcraft-blogique-9999.ebuild, metadata.xml:
+  Add 'hestia' dependency to 9999 ebuild, thanks to 0xd34df00d
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   leechcraft-blogique-0.5.90.ebuild, leechcraft-blogique-9999.ebuild:

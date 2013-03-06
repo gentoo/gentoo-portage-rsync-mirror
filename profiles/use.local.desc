@@ -4624,6 +4624,7 @@ net-misc/icecast:logrotate - Install support files for app-admin/logrotate?
 net-misc/icecast:yp - Build support for yp public directory listings
 net-misc/iputils:SECURITY_HAZARD - Allow non-root users to flood (ping -f). This is generally a very bad idea.
 net-misc/knock:server - Installs the knockd server daemon.
+net-misc/leechcraft-blogique:hestia - Allows one to keep a local blog
 net-misc/leechcraft-blogique:metida - Support for the LiveJournal blogging platform
 net-misc/leechcraft-full:unstable - Pull plugins from ~arch
 net-misc/leechcraft-netstoremanager:googledrive - Support Google Drive storage backend
