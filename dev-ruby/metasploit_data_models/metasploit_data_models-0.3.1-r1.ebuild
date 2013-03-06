@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metasploit_data_models/metasploit_data_models-0.3.1-r1.ebuild,v 1.3 2013/01/16 01:11:10 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metasploit_data_models/metasploit_data_models-0.3.1-r1.ebuild,v 1.4 2013/03/06 02:27:33 zerochaos Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ inherit ruby-fakegem
 
 DESCRIPTION="The database layer for Metasploit"
 HOMEPAGE="https://github.com/rapid7/metasploit_data_models"
-SRC_URI="https://github.com/rapid7/${PN}/archive/${PV}.zip -> ${P}.zip"
+SRC_URI="https://github.com/rapid7/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

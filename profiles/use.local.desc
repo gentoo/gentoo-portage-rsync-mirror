@@ -4976,6 +4976,7 @@ net-voip/ekiga:h323 - Enable H.323 protocol
 net-voip/ekiga:shm - Enable the Shared Memory Extension from libXext
 net-voip/ekiga:static - Statically link to opal and ptlib
 net-voip/ekiga:xcap - Enable XML Configuration Access Protocal
+net-voip/gnugk:ssh - Enable support for SSH port forwarding using net-libs/libssh
 net-voip/linphone:gsm-nonstandard - Support non-standard GSM frequencies
 net-voip/linphone:video - Enable video support (display/capture)
 net-voip/sflphone:doxygen - Support for building documentation with doxygen
