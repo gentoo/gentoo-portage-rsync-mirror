@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.576 2013/03/04 18:34:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.577 2013/03/06 10:29:19 ago Exp $
+
+  06 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ruby-1.8.7_p371.ebuild:
+  Stable for sh, wrt bug #437366
 
   04 Mar 2013; Brent Baude <ranger@gentoo.org> ruby-1.8.7_p371.ebuild:
   Marking ruby-1.8.7_p371 ppc for bug 437366
