@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.228 2013/02/06 14:53:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.229 2013/03/06 21:41:31 scarabeus Exp $
+
+  06 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> -icu-50.1.1.ebuild,
+  icu-50.1-r2.ebuild, icu-50.1.2.ebuild:
+  Remove icu 50.1.1 which has broken abi, compared the abi between 50.1 and
+  50.1.2 and it seems they are equal so use the same subslot and for further
+  refference whomever touches this package must check the abi and adjust the
+  subslot correctly. If that won't be done I will bring my pitchfork and do
+  naughty stuff to such dev.
 
   06 Feb 2013; Tomáš Chvátal <scarabeus@gentoo.org> +files/icu-50.1.2-bsd.patch,
   icu-50.1.2.ebuild:

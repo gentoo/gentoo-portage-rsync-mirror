@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-50.1.2.ebuild,v 1.3 2013/02/06 14:53:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-50.1.2.ebuild,v 1.4 2013/03/06 21:41:31 scarabeus Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.icu-project.org/"
 SRC_URI="http://download.icu-project.org/files/icu4c/${PV/_/}/icu4c-${PV//./_}-src.tgz"
 
 LICENSE="BSD"
-SLOT="0/${PV}"
+SLOT="0/50.1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="debug doc examples static-libs"
 
