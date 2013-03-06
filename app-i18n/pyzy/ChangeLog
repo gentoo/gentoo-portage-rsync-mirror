@@ -1,3 +1,10 @@
+# ChangeLog for app-i18n/pyzy
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/pyzy/ChangeLog,v 1.3 2013/03/06 15:34:38 naota Exp $
+
+  06 Mar 2013; Naohiro Aota <naota@gentoo.org> metadata.xml:
+  Add proxy-mainters herd
+
   03 Mar 2013; Naohiro Aota <naota@gentoo.org> metadata.xml:
   Set proxy maintainership
 
