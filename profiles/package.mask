@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14529 2013/03/05 17:58:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14530 2013/03/06 01:49:31 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -110,10 +110,6 @@ dev-python/pysqlite:0
 # See bug #457832
 # Masked for removal in 30 days, on 2013-03-23
 net-misc/wxdfast
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Feb 2013)
-# Packages building against it still act funny
-=net-libs/h323plus-1.25.0
 
 # Jeroen Roovers <jer@gentoo.org> (22 Feb 2013)
 # Masked until bug #456788 is fixed.

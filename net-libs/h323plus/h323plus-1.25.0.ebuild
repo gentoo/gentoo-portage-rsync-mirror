@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/h323plus/h323plus-1.25.0.ebuild,v 1.2 2013/03/05 18:34:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/h323plus/h323plus-1.25.0.ebuild,v 1.3 2013/03/06 01:48:11 chithanh Exp $
 
 EAPI=5
 
@@ -13,11 +13,11 @@ HOMEPAGE="http://www.h323plus.org/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-v${PV//./_}.tar.gz"
 
 IUSE="aec +audio debug +video"
-SLOT="0"
+SLOT="0/${PV}"
 LICENSE="MPL-1.1"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 
-DEPEND=">=net-libs/ptlib-2.6.4
+DEPEND=">=net-libs/ptlib-2.6.4:=[wav]
 	aec? ( >=media-libs/speex-1.2_rc1 )
 	audio? (
 		media-sound/gsm

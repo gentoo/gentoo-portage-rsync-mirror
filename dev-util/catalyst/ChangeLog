@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.259 2013/01/31 15:01:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.260 2013/03/06 01:39:57 zerochaos Exp $
+
+  06 Mar 2013; Rick Farina <zerochaos@gentoo.org> catalyst-9999.ebuild:
+  adding new depend on syslinux for isohybrid support
 
   31 Jan 2013; Jeroen Roovers <jer@gentoo.org> catalyst-2.0.12.2.ebuild,
   catalyst-9999.ebuild:
