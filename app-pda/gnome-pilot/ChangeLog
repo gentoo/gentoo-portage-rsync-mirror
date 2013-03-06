@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnome-pilot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.75 2012/05/03 20:20:58 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.76 2013/03/05 23:02:01 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-pilot-2.32.0.ebuild:
+  Clean up old revision.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gnome-pilot-2.32.0.ebuild,
   gnome-pilot-2.32.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/atkmm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.32 2012/05/04 03:44:58 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.33 2013/03/05 23:07:05 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -atkmm-2.22.5.ebuild:
+  Clean up old revision.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> atkmm-2.22.5.ebuild,
   atkmm-2.22.6.ebuild:

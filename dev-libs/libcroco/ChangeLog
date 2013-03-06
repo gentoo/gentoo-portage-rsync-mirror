@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcroco
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.82 2013/02/21 18:38:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.83 2013/03/05 23:14:46 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -libcroco-0.6.7.ebuild:
+  Clean up old revision.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> libcroco-0.6.8.ebuild:
   Add ~arm-linux keyword.

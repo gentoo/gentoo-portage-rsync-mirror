@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gconfmm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.97 2012/05/04 03:44:57 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.98 2013/03/05 23:07:50 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gconfmm-2.28.2-r1.ebuild:
+  Clean up old revision.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gconfmm-2.28.2-r1.ebuild,
   gconfmm-2.28.3.ebuild:

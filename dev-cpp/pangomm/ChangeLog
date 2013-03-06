@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/pangomm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.60 2012/05/04 03:44:56 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.61 2013/03/05 23:11:11 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -pangomm-2.28.2.ebuild,
+  -pangomm-2.28.3.ebuild:
+  Clean up old revisions.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> pangomm-2.28.2.ebuild,
   pangomm-2.28.3.ebuild, pangomm-2.28.4.ebuild:

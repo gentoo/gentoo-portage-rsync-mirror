@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.68 2012/06/04 04:08:31 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.69 2013/03/05 23:06:33 eva Exp $
+
+  05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -wv-1.2.3-r1.ebuild,
+  -wv-1.2.7.ebuild, -wv-1.2.9.ebuild:
+  Clean up old revisions.
 
   04 Jun 2012; Zac Medico <zmedico@gentoo.org> wv-1.2.9-r1.ebuild,
   wv-1.2.9.ebuild:
