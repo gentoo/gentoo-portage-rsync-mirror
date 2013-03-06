@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.3-r2.ebuild,v 1.1 2013/03/06 08:37:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.3-r2.ebuild,v 1.2 2013/03/06 12:11:18 jlec Exp $
 
 EAPI=5
 
@@ -94,7 +94,7 @@ src_install () {
 		EOF
 		sed -i -e 's:../qwtconfig:qwtconfig:' examples/examples.pro || die
 		cp *.pri examples/ || die
-		insinto /usr/share/${PN}
+		insinto /usr/share/${PN}5
 		doins -r examples
 	fi
 }

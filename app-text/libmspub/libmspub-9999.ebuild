@@ -1,13 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmspub/libmspub-9999.ebuild,v 1.4 2013/02/13 07:11:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmspub/libmspub-9999.ebuild,v 1.5 2013/03/06 12:19:38 scarabeus Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/libreoffice/${PN}/"
-[[ ${PV} == 9999 ]] && vcs="autotools git-2"
-inherit base ${vcs}
-unset vcs
+[[ ${PV} == 9999 ]] && inherit autotools git-2
+inherit base eutils
 
 DESCRIPTION="Library parsing the Microsoft Publisher documents"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/libmspub"
@@ -51,5 +50,5 @@ src_configure() {
 
 src_install() {
 	default
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files --all
 }

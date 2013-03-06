@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmetalink
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmetalink/ChangeLog,v 1.7 2013/03/04 18:24:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmetalink/ChangeLog,v 1.8 2013/03/06 12:23:09 ago Exp $
+
+  06 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libmetalink-0.1.0.ebuild:
+  Stable for amd64, wrt bug #456074
 
   04 Mar 2013; Brent Baude <ranger@gentoo.org> libmetalink-0.1.0.ebuild:
   Marking libmetalink-0.1.0 ppc for bug 456074

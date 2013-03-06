@@ -1,6 +1,12 @@
 # ChangeLog for app-text/libmspub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmspub/ChangeLog,v 1.6 2013/02/13 07:11:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmspub/ChangeLog,v 1.7 2013/03/06 12:19:38 scarabeus Exp $
+
+*libmspub-0.0.5 (06 Mar 2013)
+
+  06 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libmspub-0.0.5.ebuild,
+  -libmspub-0.0.4.ebuild, libmspub-9999.ebuild:
+  Bump to 0.0.5 and drop older.
 
   13 Feb 2013; Tomáš Chvátal <scarabeus@gentoo.org> libmspub-0.0.4.ebuild,
   libmspub-9999.ebuild:
