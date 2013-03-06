@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.5.ebuild,v 1.2 2012/05/19 15:05:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.5.ebuild,v 1.3 2013/03/06 17:27:03 ssuominen Exp $
 
-EAPI="3"
+EAPI="5"
 
 inherit autotools eutils linux-info toolchain-funcs
 
@@ -29,6 +29,7 @@ get_headers() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-linux-3.8.patch
 	eautoreconf
 }
 
@@ -38,12 +39,11 @@ src_configure() {
 		--prefix=/ \
 		--libdir=/usr/$(get_libdir) \
 		--includedir=/usr/include \
-		--with-linux-headers="$(get_headers)" \
-		|| die "econf failed"
+		--with-linux-headers="$(get_headers)"
 }
 
 src_install () {
-	emake install DESTDIR="${D}" || die "make install failed"
-	dodoc AUTHORS ChangeLog README THANKS TODO
-	dodoc doc/{FAQ,FIREWALL,HOWTO,PROJECTS,RPM-GPG-KEY,SMPNOTES,WISHLIST}
+	emake install DESTDIR="${D}"
+	dodoc AUTHORS ChangeLog README THANKS TODO \
+		doc/{FAQ,FIREWALL,HOWTO,PROJECTS,RPM-GPG-KEY,SMPNOTES,WISHLIST}
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1423.0.ebuild,v 1.4 2013/03/01 02:15:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1430.0.ebuild,v 1.1 2013/03/06 17:22:07 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -14,12 +14,12 @@ inherit chromium eutils flag-o-matic multilib \
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.xz"
+SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}-lite.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bindist cups gnome gnome-keyring gps kerberos pulseaudio selinux system-ffmpeg tcmalloc"
+IUSE="cups gnome gnome-keyring gps kerberos pulseaudio selinux tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -34,13 +34,13 @@ RDEPEND="app-accessibility/speech-dispatcher
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat
 	>=dev-libs/icu-49.1.1-r1:=
-	=dev-libs/jsoncpp-0.5.0
+	>=dev-libs/jsoncpp-0.5.0-r1
 	>=dev-libs/libevent-1.4.13
 	dev-libs/libxml2[icu]
 	dev-libs/libxslt
 	dev-libs/nspr
 	>=dev-libs/nss-3.12.3
-	dev-libs/protobuf
+	dev-libs/protobuf:=
 	dev-libs/re2
 	gnome? ( >=gnome-base/gconf-2.24.0 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2 )
@@ -50,12 +50,13 @@ RDEPEND="app-accessibility/speech-dispatcher
 	media-libs/harfbuzz
 	>=media-libs/libjpeg-turbo-1.2.0-r1
 	media-libs/libpng
+	media-libs/libvpx
 	>=media-libs/libwebp-0.2.0_rc1
-	!arm? ( !x86? ( media-libs/mesa[gles2] ) )
+	!arm? ( !x86? ( >=media-libs/mesa-9.1[gles2] ) )
 	media-libs/opus
 	media-libs/speex
 	pulseaudio? ( media-sound/pulseaudio )
-	system-ffmpeg? ( >=media-video/ffmpeg-1.0[opus] )
+	>=media-video/ffmpeg-1.0[opus]
 	>=net-libs/libsrtp-1.4.4_p20121108
 	sys-apps/dbus
 	sys-apps/pciutils
@@ -111,12 +112,12 @@ pkg_setup() {
 		chromium_suid_sandbox_check_kernel_config
 	fi
 
-	if use bindist && ! use system-ffmpeg; then
-		elog "bindist enabled: H.264 video support will be disabled."
-	fi
-	if ! use bindist; then
-		elog "bindist disabled: Resulting binaries may not be legal to re-distribute."
-	fi
+	# if use bindist && ! use system-ffmpeg; then
+	#	elog "bindist enabled: H.264 video support will be disabled."
+	# fi
+	# if ! use bindist; then
+	#	elog "bindist disabled: Resulting binaries may not be legal to re-distribute."
+	# fi
 }
 
 src_prepare() {
@@ -132,7 +133,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-v8-r0.patch"
-	epatch "${FILESDIR}/${PN}-system-ffmpeg-r3.patch"
+	epatch "${FILESDIR}/${PN}-system-ffmpeg-r4.patch"
 
 	epatch_user
 
@@ -153,7 +154,6 @@ src_prepare() {
 		\! -path 'third_party/leveldatabase/*' \
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libphonenumber/*' \
-		\! -path 'third_party/libvpx/*' \
 		\! -path 'third_party/libxml/chromium/*' \
 		\! -path 'third_party/libXNVCtrl/*' \
 		\! -path 'third_party/libyuv/*' \
@@ -215,10 +215,10 @@ src_configure() {
 	# TODO: use_system_hunspell (upstream changes needed).
 	# TODO: use_system_ssl (http://crbug.com/58087).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
-	# TODO: use_system_libvpx (http://crbug.com/174287).
 	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_flac=1
+		-Duse_system_ffmpeg=1
 		-Duse_system_harfbuzz=1
 		-Duse_system_icu=1
 		-Duse_system_jsoncpp=1
@@ -227,6 +227,7 @@ src_configure() {
 		-Duse_system_libpng=1
 		-Duse_system_libsrtp=1
 		-Duse_system_libusb=1
+		-Duse_system_libvpx=1
 		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
 		-Duse_system_minizip=1
@@ -237,8 +238,7 @@ src_configure() {
 		-Duse_system_speex=1
 		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
-		-Duse_system_zlib=1
-		$(gyp_use system-ffmpeg use_system_ffmpeg)"
+		-Duse_system_zlib=1"
 
 	# TODO: Use system mesa on x86, bug #457130 .
 	if ! use x86 && ! use arm; then
@@ -251,6 +251,10 @@ src_configure() {
 		myconf+="
 			-Duse_system_yasm=1"
 	fi
+
+	# TODO: re-enable on vp9 libvpx release (http://crbug.com/174287).
+	myconf+="
+		-Dmedia_use_libvpx=0"
 
 	# Optional dependencies.
 	# TODO: linux_link_kerberos, bug #381289.
@@ -291,10 +295,10 @@ src_configure() {
 	# Always support proprietary codecs.
 	myconf+=" -Dproprietary_codecs=1"
 
-	if ! use bindist && ! use system-ffmpeg; then
-		# Enable H.624 support in bundled ffmpeg.
-		myconf+=" -Dffmpeg_branding=Chrome"
-	fi
+	# if ! use bindist && ! use system-ffmpeg; then
+	#	# Enable H.624 support in bundled ffmpeg.
+	#	myconf+=" -Dffmpeg_branding=Chrome"
+	# fi
 
 	# Set up Google API keys, see http://www.chromium.org/developers/how-tos/api-keys .
 	# Note: these are for Gentoo use ONLY. For your own distribution,
@@ -343,7 +347,7 @@ src_configure() {
 src_compile() {
 	local test_targets
 	for x in base cacheinvalidation crypto \
-		googleurl gpu media net printing sql; do
+		googleurl gpu printing sql; do
 		test_targets+=" ${x}_unittests"
 	done
 
@@ -476,9 +480,9 @@ src_install() {
 	newman out/Release/chrome.1 chromium${CHROMIUM_SUFFIX}.1 || die
 	newman out/Release/chrome.1 chromium-browser${CHROMIUM_SUFFIX}.1 || die
 
-	if ! use system-ffmpeg; then
-		doexe out/Release/libffmpegsumo.so || die
-	fi
+	# if ! use system-ffmpeg; then
+	#	doexe out/Release/libffmpegsumo.so || die
+	# fi
 
 	# Install icons and desktop entry.
 	local branding size
