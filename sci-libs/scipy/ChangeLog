@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.87 2013/02/21 22:08:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.88 2013/03/07 14:37:21 jlec Exp $
+
+  07 Mar 2013; Justin Lecher <jlec@gentoo.org> scipy-0.9.0-r1.ebuild,
+  files/scipy-0.9.0-qhull.patch:
+  Fix for latest stable media-libs/qhull
 
   21 Feb 2013; Justin Lecher <jlec@gentoo.org> scipy-0.9.0-r1.ebuild,
   scipy-0.11.0-r1.ebuild, metadata.xml:

@@ -13,7 +13,7 @@ index 91e22b3..e433ae9 100644
 -#include "qhull/src/qset.h"
 -#include "qhull/src/qhull.h"
 +#include "qhull/qset.h"
-+#include "qhull/qhull.h"
++#include "qhull/libqhull.h"
  #include "qhull_blas.h"
  
  

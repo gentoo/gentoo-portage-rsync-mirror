@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0-r1.ebuild,v 1.12 2013/02/21 22:08:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0-r1.ebuild,v 1.13 2013/03/07 14:37:21 jlec Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 CDEPEND="
 	>=dev-python/numpy-1.5[lapack]
-	media-libs/qhull
+	>=media-libs/qhull-2012.1-r1
 	sci-libs/arpack
 	sci-libs/superlu
 	virtual/cblas

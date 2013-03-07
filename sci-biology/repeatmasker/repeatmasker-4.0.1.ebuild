@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/repeatmasker/repeatmasker-3.2.9.ebuild,v 1.1 2011/02/03 01:34:28 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/repeatmasker/repeatmasker-4.0.1.ebuild,v 1.1 2013/03/07 14:53:28 jlec Exp $
 
-EAPI="2"
+EAPI=5
 
 MY_PV=${PV//\./-}
 
@@ -16,9 +16,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="sci-biology/rmblast
+RDEPEND="
+	sci-biology/rmblast
 	sci-biology/trf
-	>=sci-biology/repeatmasker-libraries-20090604"
+	sci-biology/repeatmasker-libraries"
 
 S="${WORKDIR}/RepeatMasker"
 
