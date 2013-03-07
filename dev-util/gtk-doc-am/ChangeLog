@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.79 2013/02/19 02:26:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.80 2013/03/07 08:08:41 eva Exp $
+
+  07 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -gtk-doc-am-1.17.ebuild:
+  Clean up old revision.
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> gtk-doc-am-1.18.ebuild:
   Add ~arm-linux keyword.

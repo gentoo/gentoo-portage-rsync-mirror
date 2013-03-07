@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/gmp-ecm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/ChangeLog,v 1.8 2013/03/07 07:51:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/ChangeLog,v 1.9 2013/03/07 08:05:21 jlec Exp $
+
+  07 Mar 2013; Justin Lecher <jlec@gentoo.org> gmp-ecm-6.4.3-r5.ebuild,
+  gmp-ecm-6.4.4.ebuild, gmp-ecm-9999.ebuild, metadata.xml:
+  Fix download location; bump to EAPI=5 and clean some die
 
 *gmp-ecm-6.4.4 (07 Mar 2013)
 

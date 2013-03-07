@@ -8,4 +8,5 @@ LICENSE=MIT
 RDEPEND=dev-libs/boost
 SLOT=0
 SRC_URI=http://multidimalgorithm.googlecode.com/files/mdds_0.7.0.tar.bz2
-_md5_=081122f9b3373f67f6e9dc2ac4bd0dab
+_eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_md5_=9b2a5a8868d3b7ffe3d7d481f37827e2

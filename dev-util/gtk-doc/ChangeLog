@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gtk-doc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.180 2012/07/15 17:15:34 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.181 2013/03/07 08:08:31 eva Exp $
+
+  07 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -gtk-doc-1.17.ebuild,
+  -gtk-doc-1.17-r1.ebuild, -files/gtk-doc-1.17-buildir-docs.patch,
+  -gtk-doc-1.18.ebuild:
+  Clean up old revisions.
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> gtk-doc-1.18-r1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #410611

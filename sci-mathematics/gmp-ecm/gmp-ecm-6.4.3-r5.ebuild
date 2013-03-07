@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/gmp-ecm-6.4.3-r5.ebuild,v 1.1 2013/01/01 17:08:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/gmp-ecm-6.4.3-r5.ebuild,v 1.2 2013/03/07 08:05:21 jlec Exp $
 
 EAPI=4
 DESCRIPTION="Elliptic Curve Method for Integer Factorization"
@@ -29,7 +29,7 @@ S=${WORKDIR}/ecm-${PV}
 src_configure() {
 	if use gwnum; then myconf="--with-gwnum=/usr/lib"; fi
 	# --enable-shellcmd is broken
-	econf $(use_enable openmp) $myconf || die
+	econf $(use_enable openmp) $myconf
 }
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/nemiver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.46 2013/02/25 19:31:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.47 2013/03/07 08:10:22 eva Exp $
+
+  07 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -nemiver-0.9.3.ebuild:
+  Clean up old revision.
 
   25 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop remi from metadata (#458984#c8)

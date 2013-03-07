@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/sass-3.1.21.ebuild,v 1.4 2013/01/15 06:47:25 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/sass-3.1.21.ebuild,v 1.5 2013/03/07 08:10:07 hollow Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ DESCRIPTION="An extension of CSS3, adding nested rules, variables, mixins, selec
 HOMEPAGE="http://sass-lang.com/"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x64-macos"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x64-macos ~x86"
 SLOT="0"
 IUSE=""
 

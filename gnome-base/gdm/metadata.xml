@@ -18,9 +18,5 @@
 		<pkg>sys-boot/plymouth</pkg></flag>
 	<flag name="remote">Enables support for secure remote connections</flag>
 	<flag name="smartcard">Enables experimental smartcard authentication</flag>
-	<flag name="systemd">Use <pkg>sys-apps/systemd</pkg> for session
-		tracking</flag>
-	<flag name="xklavier">Use <pkg>x11-libs/libxklavier</pkg> for keyboard
-		management</flag>
 </use>
 </pkgmetadata>

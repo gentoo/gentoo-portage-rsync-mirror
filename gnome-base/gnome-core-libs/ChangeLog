@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-core-libs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-libs/ChangeLog,v 1.9 2013/02/02 22:34:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-libs/ChangeLog,v 1.10 2013/03/07 08:28:44 eva Exp $
+
+  07 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-core-libs-3.4.1.ebuild:
+  Clean up old revision.
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> gnome-core-libs-3.6.2.ebuild:
   Add ~arm, wrt bug #449220

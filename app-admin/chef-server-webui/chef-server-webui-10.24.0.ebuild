@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/chef-server-webui-10.24.0.ebuild,v 1.1 2013/03/01 19:25:42 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/chef-server-webui-10.24.0.ebuild,v 1.2 2013/03/07 08:10:46 hollow Exp $
 
 EAPI=4
 USE_RUBY="ruby19"
@@ -22,7 +22,9 @@ RDEPEND=">=dev-db/couchdb-0.10.0
 	>=net-misc/rabbitmq-server-1.7.0"
 
 ruby_add_rdepend "dev-ruby/coderay
+	>=dev-ruby/extlib-0.9.16
 	dev-ruby/haml
+	<dev-ruby/sass-3.2
 	>=dev-ruby/merb-assets-1.1.0
 	<dev-ruby/merb-assets-1.2
 	>=dev-ruby/merb-core-1.1.0
@@ -33,6 +35,7 @@ ruby_add_rdepend "dev-ruby/coderay
 	<dev-ruby/merb-helpers-1.2
 	>=dev-ruby/merb-param-protection-1.1.0
 	<dev-ruby/merb-param-protection-1.2
+	>=dev-ruby/rack-1.4.5
 	dev-ruby/ruby-openid
 	www-servers/thin"
 
