@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ninja
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.10 2013/03/06 12:10:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.11 2013/03/07 01:50:01 ottxor Exp $
+
+  07 Mar 2013; Christoph Junghans <ottxor@gentoo.org> ninja-1.1.0.ebuild:
+  added ~x86-macos (test by me)
 
   06 Mar 2013; Alexey Shvetsov <alexxy@gentoo.org> ninja-1.1.0.ebuild:
   Add keywords for prefix
