@@ -1,0 +1,12 @@
+# ChangeLog for sys-apps/heirloom-tools
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/heirloom-tools/ChangeLog,v 1.2 2013/03/07 09:02:37 patrick Exp $
+
+  07 Mar 2013; Patrick Lauer <patrick@gentoo.org> heirloom-tools-070715.ebuild:
+  Make repoman a bit more happy (whitespace)
+
+*heirloom-tools-070715 (07 Mar 2013)
+
+  07 Mar 2013; Patrick Lauer <patrick@gentoo.org> +heirloom-tools-070715.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me

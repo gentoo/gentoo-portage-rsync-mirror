@@ -1,19 +1,19 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/gmp-ecm-6.4.4.ebuild,v 1.2 2013/03/07 08:05:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/gmp-ecm-6.4.4-r1.ebuild,v 1.1 2013/03/07 09:06:37 jlec Exp $
 
 EAPI=5
+
+inherit autotools eutils flag-o-matic multilib
 
 DESCRIPTION="Elliptic Curve Method for Integer Factorization"
 HOMEPAGE="http://ecm.gforge.inria.fr/"
 SRC_URI="https://gforge.inria.fr/frs/download.php/32159/${P}.tar.gz"
 
-inherit eutils flag-o-matic
-
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+blas +custom-tune gwnum -openmp test"
+IUSE="+blas +custom-tune gwnum -openmp static-libs test"
 
 DEPEND="
 	dev-libs/gmp
@@ -29,10 +29,19 @@ S=${WORKDIR}/ecm-${PV}
 
 MAKEOPTS+=" -j1"
 
+src_prepare() {
+	sed -e '/libecm_la_LIBADD/s:$: -lgmp:g' -i Makefile.am || die
+	eautoreconf
+}
+
 src_configure() {
-	if use gwnum; then myconf="--with-gwnum=/usr/lib"; fi
+	use gwnum && local myconf="--with-gwnum="${EPREFIX}"/usr/$(get_libdir)"
 	# --enable-shellcmd is broken
-	econf $(use_enable openmp) $myconf
+	econf \
+		--enable-shared \
+		$(use_enable static-libs static)
+		$(use_enable openmp) \
+		${myconf}
 }
 
 src_compile() {

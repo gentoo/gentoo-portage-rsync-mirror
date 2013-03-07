@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7562 2013/03/06 23:35:33 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7563 2013/03/07 09:26:36 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite ~sys-fs/udev-171 and sys-apps/module-init-tools.
 
   06 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   arch/arm/use.mask, base/use.mask:
