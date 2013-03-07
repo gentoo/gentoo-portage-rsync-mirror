@@ -1,14 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/msieve-9999.ebuild,v 1.1 2013/01/06 14:20:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/msieve/msieve-9999.ebuild,v 1.2 2013/03/07 09:52:28 jlec Exp $
 
-EAPI=4
+EAPI=5
+
+inherit eutils subversion toolchain-funcs
+
 DESCRIPTION="A C library implementing a suite of algorithms to factor large integers"
 HOMEPAGE="http://sourceforge.net/projects/msieve/"
 #SRC_URI="mirror://sourceforge/${PN}/${PN}/Msieve%20v${PV}/${PN}${PV/./}src.tar.gz"
 ESVN_REPO_URI="https://msieve.svn.sourceforge.net/svnroot/msieve"
-
-inherit eutils subversion
 
 LICENSE="public-domain"
 SLOT="0"
@@ -16,7 +17,8 @@ KEYWORDS=""
 IUSE="zlib +ecm mpi"
 
 # some linking troubles with gwnum
-DEPEND="ecm? ( sci-mathematics/gmp-ecm[-gwnum] )
+DEPEND="
+	ecm? ( sci-mathematics/gmp-ecm[-gwnum] )
 	mpi? ( virtual/mpi )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
@@ -31,16 +33,14 @@ src_prepare() {
 
 src_compile() {
 	cd trunk
-	if use ecm; then
-		export "ECM=1"
-	fi
-	if use mpi; then
-		export "MPI=1"
-	fi
-	if use zlib; then
-		export "ZLIB=1"
-	fi
-	emake all || die "Failed to build"
+	use ecm && export "ECM=1"
+	use mpi && export "MPI=1"
+	use zlib && export "ZLIB=1"
+	emake \
+		CC=$(tc-getCC) \
+		AR=$(tc-getAR) \
+		OPT_FLAGS="${CFLAGS}" \
+		all
 }
 
 src_install() {

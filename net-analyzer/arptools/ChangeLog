@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arptools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arptools/ChangeLog,v 1.3 2007/09/06 16:14:22 jokey Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arptools/ChangeLog,v 1.4 2013/03/07 09:44:35 pinkbyte Exp $
+
+  07 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> arptools-1.0.2.ebuild:
+  Add ~amd64 keyword, wrt bug #460652, thanks to Andrew Savchenko
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -arptools-1.0.0.ebuild:
   Cleanup

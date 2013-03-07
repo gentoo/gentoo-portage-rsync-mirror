@@ -1,11 +1,5 @@
 --- gnfs/poly/stage2/root_sieve_deg45_x.c	2011-08-23 20:59:59.000000000 +0800
 +++ gnfs/poly/stage2/root_sieve_deg45_x.c.new	2012-11-30 17:09:22.553116526 +0800
-@@ -515,7 +515,7 @@
- 			if (obj->flags & MSIEVE_FLAG_STOP_SIEVING)
- 				break;
- 		}
--		printf("\n");
-+		printf(".");
  		return;
  	}
  

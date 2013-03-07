@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/h5py
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.16 2013/02/28 10:06:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.17 2013/03/07 09:43:56 idella4 Exp $
+
+*h5py-2.1.2-r1 (07 Mar 2013)
+
+  07 Mar 2013; Ian Delaney <idella4@gentoo.org> +files/h5py-2.1-ucode.patch,
+  +h5py-2.1.2-r1.ebuild, h5py-2.1.2.ebuild:
+  revbump; tests re-invoked, patch re locale issue filed upstream, fixes Bug
+  #450892 by flameeyes
 
   28 Feb 2013; Kacper Kowalik <xarthisius@gentoo.org> -h5py-2.1.0.ebuild,
   -h5py-2.1.1-r1.ebuild, -h5py-2.1.1.ebuild, h5py-2.1.2.ebuild:

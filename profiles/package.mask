@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14531 2013/03/07 09:26:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14532 2013/03/07 09:40:18 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -37,6 +37,7 @@
 # Removal in 90 days.
 ~sys-fs/udev-171
 ~virtual/udev-171
+<sys-fs/lvm2-2.02.95
 
 # Samuli Suominen <ssuominen@gentoo.org> (07 Mar 2013)
 # Masked in favour of sys-apps/kmod. Now is the time to file
