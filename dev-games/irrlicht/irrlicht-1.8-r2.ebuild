@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.8-r2.ebuild,v 1.1 2013/03/06 18:47:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.8-r2.ebuild,v 1.2 2013/03/07 17:15:43 hasufell Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/irrlicht/${P}.zip"
 LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug doc"
+IUSE="debug doc static-libs"
 
 RDEPEND="virtual/jpeg
 	media-libs/libpng:0
@@ -45,13 +45,13 @@ src_prepare() {
 
 src_compile() {
 	tc-export CXX CC AR
-	emake NDEBUG=$(usex debug "" "1") sharedlib staticlib
+	emake NDEBUG=$(usex debug "" "1") sharedlib $(usex static-libs "staticlib" "")
 }
 
 src_install() {
 	cd "${WORKDIR}"/${P} || die
 
-	dolib.a lib/Linux/libIrrlicht.a
+	use static-libs && dolib.a lib/Linux/libIrrlicht.a
 	dolib.so lib/Linux/libIrrlicht.so*
 
 	# create library symlinks
