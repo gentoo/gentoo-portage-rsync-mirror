@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nfacct/nfacct-1.0.0.ebuild,v 1.5 2013/03/07 05:58:57 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nfacct/nfacct-1.0.1.ebuild,v 1.2 2013/03/07 05:58:57 pinkbyte Exp $
 
-EAPI=4
+EAPI=5
 
 inherit linux-info
 
@@ -12,11 +12,10 @@ SRC_URI="http://www.netfilter.org/projects/${PN}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE=""
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="net-libs/libmnl
-	>=net-libs/libnetfilter_acct-1.0.0"
+	>=net-libs/libnetfilter_acct-1.0.2"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
