@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14532 2013/03/07 09:40:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14533 2013/03/07 10:04:46 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -491,7 +491,6 @@ app-benchmarks/ltp
 
 # Ulrich Müller <ulm@gentoo.org> (02 Nov 2012)
 # Emacs live ebuilds. Use at your own risk.
-~app-editors/emacs-vcs-24.2.9999
 ~app-editors/emacs-vcs-24.3.9999
 
 # Alexis Ballier <aballier@gentoo.org> (1 Nov 2012)
