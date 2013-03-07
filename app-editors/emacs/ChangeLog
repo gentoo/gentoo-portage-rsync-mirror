@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.557 2013/03/06 09:05:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.558 2013/03/07 15:22:30 ulm Exp $
+
+*emacs-24.3_rc2 (07 Mar 2013)
+
+  07 Mar 2013; Ulrich Müller <ulm@gentoo.org> +emacs-24.3_rc2.ebuild:
+  Version bump.
 
   06 Mar 2013; Ulrich Müller <ulm@gentoo.org> emacs-24.3_rc1.ebuild:
   Fix previous commit, REPLACING_VERSIONS is not valid in src_install.

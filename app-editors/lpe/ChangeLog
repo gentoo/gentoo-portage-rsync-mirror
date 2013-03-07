@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/lpe
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/ChangeLog,v 1.25 2011/11/16 02:24:23 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/ChangeLog,v 1.26 2013/03/07 15:24:26 ssuominen Exp $
+
+  07 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> lpe-1.2.6.13.ebuild:
+  Use pkg-config to query ncurses libraries wrt #459540 by Diego Elio Pettenò
+  Remove unused libtool archive (.la) files for plugins.
 
   16 Nov 2011; Michael Weber <xmw@gentoo.org> lpe-1.2.6.13.ebuild:
   Adding sys-libs/ncurses to RDEPEND (thanks Michael, bug 381021)
