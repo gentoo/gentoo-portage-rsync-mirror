@@ -1,6 +1,9 @@
 # ChangeLog for app-text/liblangtag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/ChangeLog,v 1.8 2013/01/16 21:26:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/ChangeLog,v 1.9 2013/03/07 11:42:38 jlec Exp $
+
+  07 Mar 2013; Justin Lecher <jlec@gentoo.org> liblangtag-0.4.0-r1.ebuild:
+  Add missing buildtime dep, #459336
 
 *liblangtag-0.4.0-r1 (16 Jan 2013)
 
