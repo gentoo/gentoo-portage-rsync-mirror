@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-3.14.17.0-r1.ebuild,v 1.1 2013/02/27 23:38:26 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-3.15.2.0.ebuild,v 1.1 2013/03/07 20:30:07 ottxor Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ fi
 DESCRIPTION="Video chat browser plug-in for Google Talk"
 
 HOMEPAGE="http://www.google.com/chat/video"
-IUSE="libnotify +system-libCg video_cards_fglrx video_cards_radeon"
+IUSE="libnotify system-libCg video_cards_fglrx video_cards_radeon"
 SLOT="0"
 
 KEYWORDS="-* ~amd64 ~x86"
