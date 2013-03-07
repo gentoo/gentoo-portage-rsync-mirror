@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/rpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.68 2013/02/22 09:17:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.70 2013/03/07 07:28:12 jlec Exp $
+
+  07 Mar 2013; Justin Lecher <jlec@gentoo.org> rpy-2.3.3.ebuild:
+  Add missing test dep
+
+*rpy-2.3.3 (07 Mar 2013)
+
+  07 Mar 2013; Justin Lecher <jlec@gentoo.org> rpy-2.3.2.ebuild,
+  +rpy-2.3.3.ebuild:
+  Version Bump; drop py support to version 2.7, #458700
 
 *rpy-2.3.2 (22 Feb 2013)
 
