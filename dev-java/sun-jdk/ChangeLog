@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.353 2013/03/06 09:12:44 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.355 2013/03/07 18:45:38 ago Exp $
+
+  07 Mar 2013; Agostino Sarubbo <ago@gentoo.org> sun-jdk-1.6.0.43.ebuild:
+  Stable for x86, wrt bug #460360
+
+  07 Mar 2013; Agostino Sarubbo <ago@gentoo.org> sun-jdk-1.6.0.43.ebuild:
+  Stable for amd64, wrt bug #460360
 
 *sun-jdk-1.6.0.43 (06 Mar 2013)
 
