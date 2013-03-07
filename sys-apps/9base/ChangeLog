@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/9base
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/9base/ChangeLog,v 1.5 2013/01/04 14:06:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/9base/ChangeLog,v 1.6 2013/03/07 08:55:05 ulm Exp $
+
+  07 Mar 2013; Ulrich Müller <ulm@gentoo.org> 9base-6-r1.ebuild:
+  Update LICENSE, MIT has been split off from the 9base license file.
 
   04 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> 9base-6-r1.ebuild:
   EAPI5

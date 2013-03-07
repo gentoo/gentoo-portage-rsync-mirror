@@ -1,32 +1,45 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ggnfs-0.77.1-r1.ebuild,v 1.3 2012/11/30 08:00:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ggnfs/ggnfs-0.77.1-r2.ebuild,v 1.1 2013/03/07 08:34:59 jlec Exp $
 
-EAPI=4
+EAPI=5
+
+inherit eutils
+
 DESCRIPTION="A suite of algorithms to help factoring large integers"
 # inactive old homepage exists, this is a fork
 HOMEPAGE="https://github.com/radii/ggnfs"
 # snapshot because github makes people stupid
-SRC_URI="http://dev.gentooexperimental.org/~dreeevil/${P}.zip
+SRC_URI="
+	http://dev.gentooexperimental.org/~dreeevil/${P}.zip
 	http://stuff.mit.edu/afs/sipb/project/pari-gp/ggnfs/Linux/src/def-par.txt
 	http://stuff.mit.edu/afs/sipb/project/pari-gp/ggnfs/Linux/src/def-nm-params.txt"
 
-inherit eutils
-
-LICENSE="GPL-2"
 SLOT="0"
-# Need to test if it actually compiles on x86
+LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND=">=dev-libs/gmp-4.3:0"
 RDEPEND="${DEPEND}
 	!sci-mathematics/cado-nfs" # file collisions, fixable
 
 S=${WORKDIR}/${PN}-master
 
+pkg_setup() {
+	einfo "There are several internal tuning options"
+	einfo "Please export ARCH being on of the following"
+	einfo "	prescott"
+	einfo "	pentium2"
+	einfo "	pentium4"
+	einfo "if your cpu is of that type"
+
+	[[ -z ${ARCH} ]] && export ARCH=generic
+}
+
 src_prepare() {
-	echo "#define GGNFS_VERSION \"0.77.1-$ARCH\"" > include/version.h
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	echo "#define GGNFS_VERSION \"0.77.1-$ARCH\"" > include/version.h || die
 	# fix directory symlink, add missing targets, rewrite variable used by portage internally
 	cd src/lasieve4 && rm -f -r asm && ln -s ppc32 asm || die
 	sed -i -e 's/all: liblasieve.a/all: liblasieve.a liblasieveI11.a liblasieveI15.a liblasieveI16.a/' asm/Makefile || die
@@ -34,6 +47,7 @@ src_prepare() {
 	sed -i -e 's/ARCH/MARCH/g' Makefile src/Makefile || die
 	sed -i -e 's/$(LSBINS) strip/$(LSBINS)/' src/Makefile || die #No stripping!
 	sed -i -e 's/SVN \$Revision\$/0.77.1 snapshot/' src/experimental/lasieve4_64/gnfs-lasieve4e.c src/lasieve4/gnfs-lasieve4e.c || die
+	tc-export CC
 }
 
 src_configure() { :; }
@@ -42,7 +56,7 @@ src_compile() {
 	# setting MARCH like this is fugly, but it uses -march=$ARCH - better fix welcome
 	# it also assumes a recent-ish compiler
 	cd src
-	HOST="generic" MARCH="native" emake -j1
+	HOST="generic" MARCH="${ARCH}" emake -j1
 }
 
 src_install() {

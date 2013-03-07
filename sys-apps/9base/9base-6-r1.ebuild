@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/9base/9base-6-r1.ebuild,v 1.4 2013/01/04 14:06:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/9base/9base-6-r1.ebuild,v 1.5 2013/03/07 08:55:05 ulm Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -9,7 +9,7 @@ DESCRIPTION="A port of various original Plan 9 tools for Unix, based on plan9por
 HOMEPAGE="http://tools.suckless.org/9base"
 SRC_URI="http://dl.suckless.org/tools/${P}.tar.gz"
 
-LICENSE="9base"
+LICENSE="9base MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""

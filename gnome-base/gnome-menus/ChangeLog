@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-menus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.182 2013/01/22 08:38:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/ChangeLog,v 1.183 2013/03/07 08:36:30 eva Exp $
+
+  07 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-menus-3.4.2-r1.ebuild, -gnome-menus-3.6.1-r2.ebuild,
+  -files/gnome-menus-3.6.1-applications-merged.patch:
+  Clean up old revisions.
 
 *gnome-menus-3.6.2 (22 Jan 2013)
 

@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-panel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.357 2012/12/24 14:47:19 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.358 2013/03/07 08:37:54 eva Exp $
+
+  07 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gnome-panel-3.2.1-gold.patch, -gnome-panel-3.4.2.1.ebuild,
+  -files/gnome-panel-3.4.2.1-gold.patch:
+  Clean up old revision.
 
 *gnome-panel-3.6.2 (24 Dec 2012)
 
