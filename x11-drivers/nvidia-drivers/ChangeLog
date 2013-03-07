@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.435 2013/03/06 15:44:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.436 2013/03/07 16:14:25 jer Exp $
+
+  07 Mar 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-96.43.23.ebuild,
+  nvidia-drivers-173.14.36.ebuild, nvidia-drivers-304.64.ebuild,
+  nvidia-drivers-304.84.ebuild, nvidia-drivers-310.32.ebuild,
+  nvidia-drivers-313.18.ebuild, nvidia-drivers-313.26.ebuild:
+  Add GPL-2 to LICENSE and bindist/mirror to RESTRICT for nvidia-settings (bug
+  #460460).
 
   06 Mar 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-313.26.ebuild:
   Remove unneeded x11-libs/pangox-compat dependency.
