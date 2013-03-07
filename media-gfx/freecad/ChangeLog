@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/freecad
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.13 2013/03/02 21:35:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.14 2013/03/07 15:54:35 axs Exp $
+
+  07 Mar 2013; Ian Stakenvicius <axs@gentoo.org> freecad-0.12.5284-r2.ebuild:
+  adjust dependency of xerces-c, re-fixing bug 295849
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   freecad-0.12.5284-r2.ebuild:
