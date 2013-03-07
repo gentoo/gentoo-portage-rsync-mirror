@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.6.ebuild,v 1.1 2013/03/06 17:18:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.6.ebuild,v 1.2 2013/03/07 00:54:35 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
 
-inherit eutils multilib pax-utils python-any-r1 toolchain-funcs versionator
+inherit eutils multilib multiprocessing pax-utils python-any-r1 toolchain-funcs versionator
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
@@ -80,16 +80,8 @@ src_compile() {
 }
 
 src_test() {
-	local arg testjobs
-	for arg in ${MAKEOPTS}; do
-		case ${arg} in
-			-j*) testjobs=${arg#-j} ;;
-			--jobs=*) testjobs=${arg#--jobs=} ;;
-		esac
-	done
-
 	tools/test-wrapper-gypbuild.py \
-		-j${testjobs:-1} \
+		-j$(makeopts_jobs) \
 		--arch-and-mode=${mytarget} \
 		--no-presubmit \
 		--progress=dots || die

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.288 2013/03/06 17:18:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.289 2013/03/07 00:54:35 floppym Exp $
+
+  07 Mar 2013; Mike Gilbert <floppym@gentoo.org> v8-3.17.6.ebuild,
+  v8-9999.ebuild:
+  Use makeopts_jobs in src_test.
 
 *v8-3.17.6 (06 Mar 2013)
 
