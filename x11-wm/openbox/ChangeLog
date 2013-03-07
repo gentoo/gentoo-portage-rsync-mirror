@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.267 2013/02/22 20:49:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.268 2013/03/07 21:22:37 hwoarang Exp $
+
+  07 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  -files/openbox-3.4.11.2-parallel-install.patch:
+  remove obsolete patch
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> openbox-3.5.0_p20130215.ebuild:
   Add ~arm-linux keyword.

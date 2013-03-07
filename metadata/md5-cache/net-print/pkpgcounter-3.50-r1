@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-python/imaging =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://www.pykota.com/software/pkpgcounter/download/tarballs/pkpgcounter-3.50.tar.gz
-_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	ded93e450747134a079e647d888aa80b	python	89dff4d72d57f253f9f78b7f8c5d55c8	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
+_eclasses_=distutils	77fc6005d2dfcc7bdb5ec363a49d9912	multilib	ded93e450747134a079e647d888aa80b	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
 _md5_=eee5981f78f06eaba76d2a44767ad4eb

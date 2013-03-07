@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.10.ebuild,v 1.6 2012/08/14 22:05:50 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.10.ebuild,v 1.7 2013/03/07 21:16:18 hwoarang Exp $
 
 EAPI="4"
 
@@ -19,6 +19,9 @@ RESTRICT="test"  # bug 249598
 RDEPEND="x11-libs/gtk+:2
 	x11-libs/libXmu
 	x11-libs/libXpm
+	x11-libs/cairo
+	x11-libs/gdk-pixbuf
+	x11-libs/libX11
 	lxde-base/lxmenu-data
 	lxde-base/menu-cache
 	alsa? ( media-libs/alsa-lib )

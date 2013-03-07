@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-9999.ebuild,v 1.3 2013/03/02 21:38:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-9999.ebuild,v 1.4 2013/03/07 21:10:14 hwoarang Exp $
 
 EAPI=4
 
@@ -46,8 +46,8 @@ src_prepare() {
 
 src_configure() {
 	local config="WithSystemCImg"
-	if ! use gimp ; then
-		config+=" WithoutGimp"
+	if use gimp ; then
+		config+=" WithGimp"
 	fi
 
 	eqmake4 "CONFIG+=${config}"
