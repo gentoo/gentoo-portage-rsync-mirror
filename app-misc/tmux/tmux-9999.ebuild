@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-9999.ebuild,v 1.8 2013/02/05 03:34:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-9999.ebuild,v 1.9 2013/03/07 22:48:48 radhermit Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ RDEPEND="${COMMON_DEPEND}
 		app-editors/vim
 		app-editors/gvim ) )"
 
-DOCS=( CHANGES FAQ NOTES TODO )
+DOCS=( CHANGES FAQ TODO )
 
 src_prepare() {
 	eautoreconf

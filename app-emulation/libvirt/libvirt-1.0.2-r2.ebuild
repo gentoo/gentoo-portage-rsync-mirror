@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.2-r2.ebuild,v 1.3 2013/02/24 11:29:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.2-r2.ebuild,v 1.4 2013/03/07 22:38:59 cardoe Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="audit avahi +caps firewalld iscsi +libvirtd lvm +lxc +macvtap nfs \
+IUSE="audit avahi +caps firewalld fuse iscsi +libvirtd lvm +lxc +macvtap nfs \
 	nls numa openvz parted pcap phyp policykit python qemu rbd sasl \
 	selinux +udev uml +vepa virtualbox virt-network xen elibc_glibc"
 REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
@@ -69,6 +69,7 @@ RDEPEND="sys-libs/readline
 	audit? ( sys-process/audit )
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	caps? ( sys-libs/libcap-ng )
+	fuse? ( >=sys-fs/fuse-2.8.6 )
 	iscsi? ( sys-block/open-iscsi )
 	lxc? ( sys-power/pm-utils )
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2 )
@@ -164,6 +165,7 @@ pkg_setup() {
 						LXC_CONFIG_CHECK+=" ~MEMCG"
 
 	CONFIG_CHECK=""
+	use fuse && CONFIG_CHECK+=" ~FUSE_FS"
 	use lxc && CONFIG_CHECK+="${LXC_CONFIG_CHECK}"
 	use macvtap && CONFIG_CHECK+="${MACVTAP}"
 	use virt-network && CONFIG_CHECK+="${VIRTNET_CONFIG_CHECK}"
@@ -253,6 +255,7 @@ src_configure() {
 	myconf="${myconf} $(use_with numa numactl)"
 	myconf="${myconf} $(use_with numa numad)"
 	myconf="${myconf} $(use_with selinux)"
+	myconf="${myconf} $(use_with fuse)"
 
 	# udev for device support details
 	myconf="${myconf} $(use_with udev)"
