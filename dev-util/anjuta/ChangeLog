@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/anjuta
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.153 2012/12/27 17:01:53 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.154 2013/03/06 23:34:06 eva Exp $
+
+  06 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -anjuta-3.4.4.ebuild,
+  anjuta-3.6.2-r1.ebuild:
+  Clean up old revision. Forward port ~sparc keyword due to dependency
+  keywording.
 
   27 Dec 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   anjuta-3.6.2-r1.ebuild:
