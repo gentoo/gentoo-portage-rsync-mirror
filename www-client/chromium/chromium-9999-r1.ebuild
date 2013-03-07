@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.177 2013/03/07 00:39:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.178 2013/03/07 20:51:59 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -19,18 +19,19 @@ ESVN_REPO_URI="http://src.chromium.org/svn/trunk/src"
 LICENSE="BSD"
 SLOT="live"
 KEYWORDS=""
-IUSE="cups gnome gnome-keyring gps kerberos pulseaudio selinux tcmalloc"
+IUSE="cups gnome gnome-keyring gps kerberos pulseaudio selinux system-sqlite tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
 
 RDEPEND="app-accessibility/speech-dispatcher:=
 	app-arch/bzip2:=
+	system-sqlite? ( dev-db/sqlite:3 )
 	cups? (
 		dev-libs/libgcrypt:=
 		>=net-print/cups-1.3.11:=
 	)
-	>=dev-lang/v8-3.16.11.1:=
+	>=dev-lang/v8-3.17.6:=
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat:=
 	>=dev-libs/icu-49.1.1-r1:=
@@ -328,6 +329,15 @@ src_configure() {
 		$(gyp_use kerberos)
 		$(gyp_use pulseaudio)
 		$(gyp_use selinux selinux)"
+
+	if use system-sqlite; then
+		elog "Enabling system sqlite. WebSQL - http://www.w3.org/TR/webdatabase/"
+		elog "will not work. Please report sites broken by this"
+		elog "to https://bugs.gentoo.org"
+		myconf+="
+			-Duse_system_sqlite=1
+			-Denable_sql_database=0"
+	fi
 
 	# Use explicit library dependencies instead of dlopen.
 	# This makes breakages easier to detect by revdep-rebuild.

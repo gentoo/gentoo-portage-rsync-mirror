@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.138 2013/03/03 17:57:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.139 2013/03/07 20:54:26 radhermit Exp $
+
+  07 Mar 2013; Tim Harder <radhermit@gentoo.org> use.mask:
+  Unmask jython2_7 for PYTHON_TARGETS.
 
   03 Mar 2013; Michał Górny <mgorny@gentoo.org> use.mask:
   Fix abi_x86_32 unmask.

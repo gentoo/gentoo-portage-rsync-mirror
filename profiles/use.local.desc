@@ -5972,6 +5972,7 @@ www-apps/viewvc:pygments - Add dev-python/pygments support for syntax highlighti
 www-apps/webdavcgi:rcs - Adds support for a revision controlled backend with RCS (dev-vcs/rcs)
 www-client/chromium:bindist - Disable patent-encumbered HTML5 video codecs
 www-client/chromium:system-ffmpeg - Use system ffmpeg instead of bundled ffmpeg.
+www-client/chromium:system-sqlite - Use system sqlite instead of bundled sqlite. This breaks WebSQL on websites, please report compatibility issues to https://bugs.gentoo.org .
 www-client/chromium:tcmalloc - Use bundled tcmalloc instead of system malloc.
 www-client/dwb:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
 www-client/elinks:bittorrent - Enable support for the BitTorrent protocol

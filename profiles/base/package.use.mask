@@ -1,10 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.441 2013/03/02 20:45:52 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.442 2013/03/07 20:44:17 phajdan.jr Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (07 Mar 2013)
+# Experimental, breaks WebSQL. Please report sites broken
+# by enabling this flag.
+www-client/chromium system-sqlite
 
 # Justin Lecher <jlec@gentoo.org> (21 Feb 2013)
 # cuda only works on x86 and amd64

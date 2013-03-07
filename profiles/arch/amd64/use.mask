@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.47 2013/02/12 04:18:29 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.48 2013/03/07 20:53:32 radhermit Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
@@ -16,9 +16,11 @@
 -ipmi
 
 # Ralph Sennhauser <sera@gentoo.org> (31 Jul 2012)
-# Keywored on amd64
+# Keyworded on amd64
 -python_targets_jython2_5
 -python_single_target_jython2_5
+-python_targets_jython2_7
+-python_single_target_jython2_7
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (05. Mar 2012)
 # Unmask, works with v4l2, #350211
