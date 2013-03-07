@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/geany-plugins
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.25 2012/12/07 18:30:48 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.26 2013/03/07 04:18:39 binki Exp $
+
+  07 Mar 2013; Nathan Phillip Brink <binki@gentoo.org>
+  -files/geany-plugins-0.20-config.h.patch,
+  -files/geany-plugins-0.20-geanyprj-outsrc-tests.patch,
+  -geany-plugins-0.20-r1.ebuild, -geany-plugins-1.22.ebuild:
+  Drop old/never-stabilized geany-plugins-0.20.0-r1 and succeeded geany-
+  plugins-1.22.
 
   07 Dec 2012; Agostino Sarubbo <ago@gentoo.org> geany-plugins-1.22-r1.ebuild:
   Stable for ppc, wrt bug #441312
