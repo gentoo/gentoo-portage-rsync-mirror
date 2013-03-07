@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libaio
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.71 2012/12/29 20:33:56 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.72 2013/03/07 16:45:24 hasufell Exp $
+
+*libaio-0.3.109-r4 (07 Mar 2013)
+
+  07 Mar 2013; Julian Ospald <hasufell@gentoo.org> +libaio-0.3.109-r4.ebuild:
+  fix multilib and bump EAPI
 
   29 Dec 2012; Mike Frysinger <vapier@gentoo.org> libaio-0.3.109-r3.ebuild:
   Mark stable for the rest of the arches.
