@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ncdu-1.9.ebuild,v 1.6 2012/12/04 11:23:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ncdu-1.9.ebuild,v 1.7 2013/03/07 12:29:33 jlec Exp $
 
 EAPI=4
 
@@ -13,5 +13,5 @@ SLOT="0"
 KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux ~x64-macos"
 IUSE=""
 
-DEPEND="sys-libs/ncurses"
+DEPEND="sys-libs/ncurses[unicode]"
 RDEPEND="${DEPEND}"

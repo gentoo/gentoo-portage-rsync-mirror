@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/log4shib
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4shib/ChangeLog,v 1.2 2011/09/13 14:45:11 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4shib/ChangeLog,v 1.3 2013/03/07 12:05:14 pinkbyte Exp $
+
+  07 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> log4shib-1.0.1.ebuild,
+  log4shib-1.0.4.ebuild:
+  Set proper HOMEPAGE, wrt bug #460674
 
 *log4shib-1.0.4 (13 Sep 2011)
 
