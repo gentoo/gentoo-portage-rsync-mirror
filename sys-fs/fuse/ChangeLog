@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.175 2013/03/06 17:46:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.177 2013/03/07 18:05:18 ago Exp $
+
+  07 Mar 2013; Agostino Sarubbo <ago@gentoo.org> fuse-2.9.2.ebuild:
+  Stable for x86, wrt bug #460564
+
+  07 Mar 2013; Agostino Sarubbo <ago@gentoo.org> fuse-2.9.2.ebuild:
+  Stable for amd64, wrt bug #460564
 
   06 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> fuse-2.9.2.ebuild:
   Since oldest util-linux in tree is 2.19.1 and --fake --no-canonicalize for

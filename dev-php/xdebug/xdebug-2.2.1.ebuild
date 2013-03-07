@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/xdebug-2.2.1.ebuild,v 1.2 2012/09/09 17:36:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/xdebug-2.2.1.ebuild,v 1.4 2013/03/07 18:17:45 ago Exp $
 
 EAPI="4"
 PHP_EXT_NAME="xdebug"
@@ -16,7 +16,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 inherit php-ext-source-r2
 
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86"
 
 DESCRIPTION="A PHP debugging and profiling extension"
 HOMEPAGE="http://www.xdebug.org/"

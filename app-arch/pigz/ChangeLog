@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pigz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.27 2013/03/07 00:06:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.28 2013/03/07 18:09:20 steev Exp $
+
+  07 Mar 2013; Steev Klimaszewski <steev@gentoo.org> pigz-2.3.ebuild:
+  Add ~arm keyword. Tested on Cortex A15, and A9.
 
 *pigz-2.3 (07 Mar 2013)
 

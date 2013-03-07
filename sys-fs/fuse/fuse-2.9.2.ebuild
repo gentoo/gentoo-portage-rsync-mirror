@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.9.2.ebuild,v 1.4 2013/03/06 17:46:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.9.2.ebuild,v 1.6 2013/03/07 18:05:18 ago Exp $
 
 EAPI=5
 inherit eutils libtool linux-info udev toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/fuse/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="kernel_linux kernel_FreeBSD static-libs"
 
 PDEPEND="kernel_FreeBSD? ( sys-fs/fuse4bsd )"
