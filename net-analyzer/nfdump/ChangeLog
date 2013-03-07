@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nfdump
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.31 2012/11/05 12:53:20 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.32 2013/03/07 10:36:30 pinkbyte Exp $
+
+*nfdump-1.6.9 (07 Mar 2013)
+
+  07 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> +nfdump-1.6.9.ebuild,
+  metadata.xml:
+  Version bump, bring back USE='readpcap'
 
   05 Nov 2012; Jeroen Roovers <jer@gentoo.org> nfdump-1.6.8.ebuild:
   USE=nftrack requires net-analyzer/rrdtool.

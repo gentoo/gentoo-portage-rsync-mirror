@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/cutecom
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.27 2013/03/02 22:47:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.28 2013/03/07 10:55:14 pinkbyte Exp $
+
+*cutecom-0.22.0-r1 (07 Mar 2013)
+
+  07 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> -cutecom-0.22.0.ebuild,
+  +cutecom-0.22.0-r1.ebuild:
+  Revision bump: EAPI 5, install desktop file properly, wrt bug #299268. Drop
+  old revision
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> cutecom-0.20.0-r1.ebuild,
   cutecom-0.22.0.ebuild:
