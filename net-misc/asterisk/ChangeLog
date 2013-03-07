@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.445 2013/03/05 13:54:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.446 2013/03/06 23:16:36 chainsaw Exp $
+
+*asterisk-11.2.1-r2 (06 Mar 2013)
+
+  06 Mar 2013; Tony Vroon <chainsaw@gentoo.org> -asterisk-11.2.1-r1.ebuild,
+  +asterisk-11.2.1-r2.ebuild:
+  Stop installing the /var/run directory structure, closes bug #451808. Two
+  additional stability fixes, closes bug #460568. Removing -r1 ebuild as the
+  reload protections within it are incomplete. Use -r2 or last stable. All
+  patching by Jaco Kroon.
 
 *asterisk-11.2.1-r1 (05 Mar 2013)
 

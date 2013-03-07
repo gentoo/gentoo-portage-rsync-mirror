@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.258 2013/02/21 03:40:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.259 2013/03/06 23:16:40 eva Exp $
+
+  06 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -libxslt-1.1.27.ebuild,
+  -files/libxslt-1.1.27-python-includes.patch:
+  Clean up old revision.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> libxslt-1.1.28-r1.ebuild:
   Fix for prefix and add ~arm-linux + ~x86-linux keywords.

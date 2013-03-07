@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/link-grammar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.53 2012/11/30 19:28:09 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.54 2013/03/06 23:19:28 eva Exp $
+
+  06 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/link-grammar-4.2.4-tokenize.patch, -link-grammar-4.7.4.ebuild:
+  Clean up old revision.
 
   30 Nov 2012; Ulrich Müller <ulm@gentoo.org> link-grammar-4.7.4.ebuild,
   link-grammar-4.7.6.ebuild, link-grammar-4.7.8.ebuild:
