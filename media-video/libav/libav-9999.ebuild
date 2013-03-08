@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.56 2013/01/17 11:29:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.57 2013/03/08 11:15:02 lu_zero Exp $
 
 EAPI=5
 
@@ -198,7 +198,7 @@ src_configure() {
 	use frei0r && myconf+=" --enable-frei0r"
 	use truetype &&  myconf+=" --enable-libfreetype"
 
-	# Threads; we only support pthread for now but ffmpeg supports more
+	# Threads; we only support pthread for now
 	use threads && myconf+=" --enable-pthreads"
 
 	# Decoders
@@ -229,7 +229,7 @@ src_configure() {
 	# Try to get cpu type based on CFLAGS.
 	# Bug #172723
 	# We need to do this so that features of that CPU will be better used
-	# If they contain an unknown CPU it will not hurt since ffmpeg's configure
+	# If they contain an unknown CPU it will not hurt since configure
 	# will just ignore it.
 	for i in $(get-flag march) $(get-flag mcpu) $(get-flag mtune) ; do
 		[[ "${i}" == "native" ]] && i="host" # bug #273421
@@ -316,17 +316,6 @@ src_install() {
 			dobin tools/${i}
 		done
 	fi
-
-	for i in $(usex sdl avplay "") $(usex network avserver "") avprobe; do
-		dosym  ${i} /usr/bin/${i/av/ff}
-	done
-}
-
-pkg_postinst() {
-	elog "Please note that the programs formerly known as ffplay, ffserver"
-	elog "and ffprobe are now called avplay, avserver and avprobe."
-	elog
-	elog "ffmpeg had been replaced by the feature incompatible avconv"
 }
 
 src_test() {
