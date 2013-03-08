@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r3.ebuild,v 1.9 2013/03/04 05:28:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r3.ebuild,v 1.10 2013/03/08 05:44:23 pinkbyte Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="unix dialout program"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/apps/serialcomm/dialout/"
 SRC_URI="http://www.ibiblio.org/pub/Linux/apps/serialcomm/dialout/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="xc-radley"
 SLOT="0"
 KEYWORDS="amd64 ~mips ppc ppc64 sparc x86"
 IUSE=""

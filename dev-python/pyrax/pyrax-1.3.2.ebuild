@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrax/pyrax-1.3.0.ebuild,v 1.1 2013/03/04 20:37:29 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrax/pyrax-1.3.2.ebuild,v 1.1 2013/03/08 05:56:44 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )

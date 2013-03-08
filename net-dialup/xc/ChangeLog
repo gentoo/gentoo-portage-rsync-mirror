@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/xc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/ChangeLog,v 1.33 2013/03/04 05:28:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/ChangeLog,v 1.34 2013/03/08 05:44:23 pinkbyte Exp $
+
+  08 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> xc-4.3.2-r3.ebuild:
+  Set correct package license
 
   04 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> xc-4.3.2-r3.ebuild:
   Remove unnecessary binary striping, wrt bug #460112. Thanks to Agostino
