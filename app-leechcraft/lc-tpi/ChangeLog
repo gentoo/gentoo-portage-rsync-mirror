@@ -1,0 +1,32 @@
+# ChangeLog for app-leechcraft/lc-tpi
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-tpi/ChangeLog,v 1.1 2013/03/08 22:08:14 maksbotan Exp $
+
+*lc-tpi-9999 (08 Mar 2013)
+*lc-tpi-0.5.90 (08 Mar 2013)
+
+  08 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org> +lc-tpi-0.5.90.ebuild,
+  +lc-tpi-9999.ebuild, +metadata.xml:
+  Move to app-leechcraft/category
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  leechcraft-tpi-0.5.90.ebuild, leechcraft-tpi-9999.ebuild:
+  Move Qt dependencies to the new category
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> leechcraft-tpi-0.5.90.ebuild:
+  Stable for x86, wrt bug #457824
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> leechcraft-tpi-0.5.90.ebuild:
+  Stable for amd64, wrt bug #457824
+
+*leechcraft-tpi-0.5.90 (25 Dec 2012)
+
+  25 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-tpi-0.5.90.ebuild:
+  Bump LeechCraft to 0.5.90, thanks to 0xd34df00d
+
+*leechcraft-tpi-9999 (10 Nov 2012)
+
+  10 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> +leechcraft-tpi-9999.ebuild,
+  +metadata.xml:
+  Initial commit, thanks to 0xd34df00d

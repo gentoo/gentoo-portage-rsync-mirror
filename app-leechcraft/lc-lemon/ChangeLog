@@ -1,0 +1,36 @@
+# ChangeLog for app-leechcraft/lc-lemon
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lemon/ChangeLog,v 1.1 2013/03/08 22:01:10 maksbotan Exp $
+
+*lc-lemon-9999 (08 Mar 2013)
+*lc-lemon-0.5.90 (08 Mar 2013)
+
+  08 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org> +lc-lemon-0.5.90.ebuild,
+  +lc-lemon-9999.ebuild, +metadata.xml:
+  Move to app-leechcraft/category
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  leechcraft-lemon-0.5.90.ebuild, leechcraft-lemon-9999.ebuild:
+  Move Qt dependencies to the new category
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> leechcraft-lemon-0.5.90.ebuild:
+  Stable for x86, wrt bug #457824
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> leechcraft-lemon-0.5.90.ebuild:
+  Stable for amd64, wrt bug #457824
+
+*leechcraft-lemon-0.5.90 (25 Dec 2012)
+
+  25 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-lemon-0.5.90.ebuild:
+  Bump LeechCraft to 0.5.90, thanks to 0xd34df00d
+
+  20 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  leechcraft-lemon-9999.ebuild:
+  Add qt-bearer dependency
+
+*leechcraft-lemon-9999 (18 Dec 2012)
+
+  18 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-lemon-9999.ebuild, +metadata.xml:
+  Add leechraft-lemon, thanks to 0xd34df00d

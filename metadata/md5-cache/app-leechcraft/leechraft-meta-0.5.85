@@ -1,0 +1,10 @@
+DEFINED_PHASES=-
+DESCRIPTION=Metapackage containing all ready-to-use LeechCraft plugins
+EAPI=4
+HOMEPAGE=http://leechcraft.org/
+IUSE=kde
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=~app-leechcraft/lc-popishu-0.5.85 ~app-leechcraft/lc-monocle-0.5.85 ~app-leechcraft/lc-hotstreams-0.5.85 ~app-leechcraft/lc-lmp-0.5.85 ~app-leechcraft/lc-lastfmscrobble-0.5.85 ~app-leechcraft/lc-networkmonitor-0.5.85 ~app-leechcraft/lc-azoth-0.5.85 ~app-leechcraft/lc-advancednotifications-0.5.85 kde? ( ~app-leechcraft/lc-anhero-0.5.85 ) ~app-leechcraft/lc-auscrie-0.5.85 ~app-leechcraft/lc-core-0.5.85 ~app-leechcraft/lc-cstp-0.5.85 ~app-leechcraft/lc-dbusmanager-0.5.85 ~app-leechcraft/lc-gacts-0.5.85 ~app-leechcraft/lc-glance-0.5.85 ~app-leechcraft/lc-historyholder-0.5.85 ~app-leechcraft/lc-kinotify-0.5.85 ~app-leechcraft/lc-knowhow-0.5.85 ~app-leechcraft/lc-lackman-0.5.85 ~app-leechcraft/lc-launchy-0.5.85 ~app-leechcraft/lc-liznoo-0.5.85 ~app-leechcraft/lc-newlife-0.5.85 ~app-leechcraft/lc-netstoremanager-0.5.85 ~app-leechcraft/lc-otlozhu-0.5.85 ~app-leechcraft/lc-qrosp-0.5.85 ~app-leechcraft/lc-pintab-0.5.85 ~app-leechcraft/lc-secman-0.5.85 ~app-leechcraft/lc-sidebar-0.5.85 ~app-leechcraft/lc-summary-0.5.85 ~app-leechcraft/lc-tabpp-0.5.85 ~app-leechcraft/lc-tabslist-0.5.85 ~app-leechcraft/lc-tabsessmanager-0.5.85 ~app-leechcraft/lc-aggregator-0.5.85 ~app-leechcraft/lc-bittorrent-0.5.85 ~app-leechcraft/lc-xproxy-0.5.85 ~app-leechcraft/lc-vrooby-0.5.85 ~app-leechcraft/lc-deadlyrics-0.5.85 ~app-leechcraft/lc-dolozhee-0.5.85 ~app-leechcraft/lc-poshuku-0.5.85 ~app-leechcraft/lc-vgrabber-0.5.85 ~app-leechcraft/lc-seekthru-0.5.85
+SLOT=0
+_md5_=3220e262e98cf4a9ce544aa53cce055f

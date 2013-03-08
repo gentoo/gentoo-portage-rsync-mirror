@@ -1,0 +1,26 @@
+# ChangeLog for app-leechcraft/lc-touchstreams
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-touchstreams/ChangeLog,v 1.1 2013/03/08 22:07:58 maksbotan Exp $
+
+*lc-touchstreams-9999 (08 Mar 2013)
+*lc-touchstreams-0.5.90 (08 Mar 2013)
+
+  08 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org>
+  +lc-touchstreams-0.5.90.ebuild, +lc-touchstreams-9999.ebuild, +metadata.xml:
+  Move to app-leechcraft/category
+
+  02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  leechcraft-touchstreams-0.5.90.ebuild, leechcraft-touchstreams-9999.ebuild:
+  Move Qt dependencies to the new category
+
+*leechcraft-touchstreams-0.5.90 (25 Dec 2012)
+
+  25 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-touchstreams-0.5.90.ebuild:
+  Bump LeechCraft to 0.5.90, thanks to 0xd34df00d
+
+*leechcraft-touchstreams-9999 (18 Dec 2012)
+
+  18 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-touchstreams-9999.ebuild, +metadata.xml:
+  Add leechraft-touchstreams, thanks to 0xd34df00d

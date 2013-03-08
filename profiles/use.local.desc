@@ -666,6 +666,26 @@ app-leechcraft/lc-azoth:xtazy - Build Xtazy for publishing currently playing tun
 app-leechcraft/lc-azoth:zheet - Build Zheet, libmsn-based plugin for Windows Live Messenger support (deprecated, use 'msn' for new versions)
 app-leechcraft/lc-blogique:hestia - Allows one to keep a local blog
 app-leechcraft/lc-blogique:metida - Support for the LiveJournal blogging platform
+app-leechcraft/lc-lmp:graffiti - Build media tags editor plugin
+app-leechcraft/lc-lmp:mp3tunes - Build plugin for supporting the mp3tunes.com music locker service.
+app-leechcraft/lc-lmp:mpris - Enable MPRIS support
+app-leechcraft/lc-monocle:fb2 - Enable support for FictionBook format
+app-leechcraft/lc-monocle:spectre - Enable PostScript backend for Monocle using the app-text/libspectre
+app-leechcraft/lc-musiczombie:acoustid - Use media-libs/chromaprint for acoustic fingerprinting
+app-leechcraft/lc-netstoremanager:googledrive - Support Google Drive storage backend
+app-leechcraft/lc-netstoremanager:yandexdisk - Support Yandex.Disk storage backend
+app-leechcraft/lc-poshuku:cleanweb - Build CleanWeb for ad blocking compatible with Firefox's AdBlock+.
+app-leechcraft/lc-poshuku:fatape - Build FatApe, GreaseMonkey userscripts support layer.
+app-leechcraft/lc-poshuku:filescheme - Build FileScheme for accessing local URLs.
+app-leechcraft/lc-poshuku:fua - Build FUA for faking user agents for different hosts.
+app-leechcraft/lc-poshuku:keywords - Build Keywords for adjusting search shortcuts.
+app-leechcraft/lc-poshuku:onlinebookmarks - Build OnlineBookmarks for syncing bookmarks with social bookmarking services like Read It Later.
+app-leechcraft/lc-poshuku:pcre - Use dev-libs/libpcre for rules matching in CleanWeb instead of slower QRegExp.
+app-leechcraft/lc-poshuku:pogooglue - Build Pogooglue for searching for selected words in Google in two clicks
+app-leechcraft/lc-poshuku:wyfv - Build WYFV for replacing Flash-based video players on some sites.
+app-leechcraft/lc-vrooby:udisks - Use sys-fs/udisks:0 for block device access (e.g., automounting)
+app-leechcraft/lc-vrooby:udisks2 - Use sys-fs/udisks:2 for block device access (e.g., automounting)
+app-leechcraft/leechraft-meta:unstable - Pull plugins from ~arch
 app-misc/anki:furigana - Enable support for furigana generation
 app-misc/anki:graph - Enable support for making graphs
 app-misc/anki:recording - Enable support for audio recording

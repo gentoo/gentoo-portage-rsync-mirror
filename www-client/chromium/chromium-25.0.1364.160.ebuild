@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1364.160.ebuild,v 1.3 2013/03/08 18:51:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1364.160.ebuild,v 1.4 2013/03/08 22:09:17 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -345,10 +345,12 @@ src_configure() {
 	# the build to fail because of that.
 	myconf+=" -Dwerror="
 
-	# Avoid CFLAGS problems, bug #352457, bug #390147.
+	# Avoid CFLAGS problems, bug #352457, bug #390147, bug #459126.
 	if ! use custom-cflags; then
+		append-flags -mno-sse4
 		replace-flags "-Os" "-O2"
 		strip-flags
+		strip-unsupported-flags
 	fi
 
 	egyp_chromium ${myconf} || die
