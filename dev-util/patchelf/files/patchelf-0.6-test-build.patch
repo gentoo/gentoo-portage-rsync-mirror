@@ -1,8 +1,8 @@
- tests/Makefile.am | 22 +++++++++++-----------
- 1 file changed, 11 insertions(+), 11 deletions(-)
+ tests/Makefile.am | 24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
 
 diff --git a/tests/Makefile.am b/tests/Makefile.am
-index 9d9b6bc..f345f46 100644
+index 9d9b6bc..93677a3 100644
 --- a/tests/Makefile.am
 +++ b/tests/Makefile.am
 @@ -11,38 +11,38 @@ simple_SOURCES = simple.c
@@ -14,9 +14,10 @@ index 9d9b6bc..f345f46 100644
 +main: main.o libfoo.so libbar.so
 +	$(CC) $(LDFLAGS) $(CFLAGS) -Wl,--disable-new-dtags -o main main.o -L . -lfoo -lbar
  
- main-scoped: main.o libfoo-scoped.so
+-main-scoped: main.o libfoo-scoped.so
 -	LD_LIBRARY_PATH=. gcc -Wl,--enable-new-dtags -o main-scoped main.o -L . -lfoo-scoped
-+	$(CC) $(LDFLAGS) $(CFLAGS) -Wl,--enable-new-dtags -o main-scoped main.o -L . -lfoo-scoped
++main-scoped: main.o libfoo-scoped.so libbar-scoped.so
++	LD_LIBRARY_PATH=. $(CC) $(LDFLAGS) $(CFLAGS) -Wl,--enable-new-dtags -o main-scoped main.o -L . -lfoo-scoped -lbar-scoped
  
  main.o: main.c
 -	$(CC) -fpic -o main.o -c main.c
@@ -36,7 +37,7 @@ index 9d9b6bc..f345f46 100644
  
  libbar.so: bar.o
 -	NIX_DONT_SET_RPATH=1 $(CC) -Wl,--disable-new-dtags -shared -o libbar.so bar.o -L . -Wl,-rpath,`pwd`/no-such-path
-+	NIX_DONT_SET_RPATH=1 $(CC) $(LDFLAGS) $(CFLAGS) -Wl,--disable-new-dtags -shared -o libbar.so bar.o -L . -Wl,-rpath,`pwd`/no-such-path
++	NIX_DONT_SET_RPATH=1 $(CC) $(LDFLAGS) $(CFLAGS) -Wl,--disable-new-dtags -shared -o libbar.so bar.o -L. -Wl,-rpath,`pwd`/no-such-path
  
  libbar-scoped.so: bar.o
 -	NIX_DONT_SET_RPATH=1 $(CC) -Wl,--enable-new-dtags -shared -o libbar-scoped.so bar.o
@@ -51,7 +52,7 @@ index 9d9b6bc..f345f46 100644
  
  big-dynstr: big-dynstr.o libfoo.so
 -	LD_LIBRARY_PATH=. gcc -Wl,--disable-new-dtags -o big-dynstr big-dynstr.o -L . -lfoo
-+	$(CC) $(LDFLAGS) $(CFLAGS) -Wl,--disable-new-dtags -o big-dynstr big-dynstr.o -L . -lfoo
++	LD_LIBRARY_PATH=. $(CC) $(LDFLAGS) $(CFLAGS) -Wl,--disable-new-dtags -o big-dynstr big-dynstr.o -L . -lfoo
  
  big-dynstr.c: main.c
  	cat main.c > big-dynstr.c

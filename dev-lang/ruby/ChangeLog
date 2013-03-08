@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.577 2013/03/06 10:29:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.578 2013/03/08 17:22:12 ago Exp $
+
+  08 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ruby-1.8.7_p371.ebuild:
+  Stable for arm, wrt bug #437366
 
   06 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ruby-1.8.7_p371.ebuild:
   Stable for sh, wrt bug #437366

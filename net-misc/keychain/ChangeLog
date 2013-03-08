@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/keychain
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.104 2013/03/06 16:55:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.105 2013/03/08 17:21:42 ago Exp $
+
+  08 Mar 2013; Agostino Sarubbo <ago@gentoo.org> keychain-2.7.1-r1.ebuild:
+  Stable for arm, wrt bug #459908
 
   06 Mar 2013; Jeroen Roovers <jer@gentoo.org> keychain-2.7.1-r1.ebuild:
   Stable for HPPA (bug #459908).
