@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/qgit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qgit/ChangeLog,v 1.13 2013/03/02 21:08:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qgit/ChangeLog,v 1.14 2013/03/08 08:23:07 pesa Exp $
+
+  08 Mar 2013; Davide Pesavento <pesa@gentoo.org> -qgit-2.4.ebuild:
+  Remove old.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qgit-2.4.ebuild,
   qgit-2.5.ebuild:
