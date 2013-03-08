@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/xf86-video-dummy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-dummy/ChangeLog,v 1.99 2013/02/27 05:41:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-dummy/ChangeLog,v 1.100 2013/03/08 20:56:28 chithanh Exp $
+
+*xf86-video-dummy-0.3.6-r1 (08 Mar 2013)
+
+  08 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xf86-video-dummy-0.3.6-remove-mibstore_h.patch,
+  +xf86-video-dummy-0.3.6-r1.ebuild,
+  -files/xf86-video-dummy-0.3.5-dga-support.patch,
+  -xf86-video-dummy-0.3.4.ebuild, -xf86-video-dummy-0.3.5-r1.ebuild:
+  Fix building against xorg-server-1.14, bug #460754.
 
   27 Feb 2013; Zac Medico <zmedico@gentoo.org> xf86-video-dummy-0.3.6.ebuild:
   Add ~arm-linux keyword.

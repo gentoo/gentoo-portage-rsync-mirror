@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-fbdev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-fbdev/ChangeLog,v 1.85 2013/01/04 17:55:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-fbdev/ChangeLog,v 1.86 2013/03/08 20:56:46 chithanh Exp $
+
+*xf86-video-fbdev-0.4.3-r1 (08 Mar 2013)
+
+  08 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xf86-video-fbdev-0.4.3-remove-mibstore_h.patch,
+  +xf86-video-fbdev-0.4.3-r1.ebuild, -xf86-video-fbdev-0.4.2.ebuild:
+  Fix building against xorg-server-1.14, bug #460754.
 
   04 Jan 2013; Jeroen Roovers <jer@gentoo.org> xf86-video-fbdev-0.4.3.ebuild:
   Stable for HPPA (bug #440872).

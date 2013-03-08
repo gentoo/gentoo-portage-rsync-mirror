@@ -1,6 +1,17 @@
 # ChangeLog for x11-drivers/xf86-video-vesa
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vesa/ChangeLog,v 1.64 2012/12/30 14:51:46 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vesa/ChangeLog,v 1.65 2013/03/08 20:57:01 chithanh Exp $
+
+*xf86-video-vesa-2.3.2-r1 (08 Mar 2013)
+
+  08 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xf86-video-vesa-2.3.2-remove-mibstore_h.patch,
+  +xf86-video-vesa-2.3.2-r1.ebuild,
+  -files/xf86-video-vesa-2.3.0-pci-domains.patch,
+  -files/xf86-video-vesa-2.3.0-xorg-server-1.12.patch,
+  -xf86-video-vesa-2.3.0-r1.ebuild, -xf86-video-vesa-2.3.0.ebuild,
+  -xf86-video-vesa-2.3.1.ebuild, xf86-video-vesa-2.3.2.ebuild:
+  Fix building against xorg-server-1.14, bug #460754.
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-vesa-2.3.2.ebuild:
   Stable for alpha, wrt bug #440872
