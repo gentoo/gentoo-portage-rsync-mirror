@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.1-r2.ebuild,v 1.3 2013/03/07 17:47:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.1-r2.ebuild,v 1.4 2013/03/08 10:33:14 idella4 Exp $
 
 EAPI=5
 
@@ -21,12 +21,12 @@ inherit mount-boot flag-o-matic python-single-r1 toolchain-funcs ${live_eclass}
 
 DESCRIPTION="The Xen virtual machine monitor"
 HOMEPAGE="http://xen.org/"
-
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="custom-cflags debug efi flask pae xsm"
 
-DEPEND="efi? ( >=sys-devel/binutils-2.22[multitarget] )"
+DEPEND="efi? ( >=sys-devel/binutils-2.22[multitarget] )
+	!efi? ( >=sys-devel/binutils-2.22[-multitarget] )"
 RDEPEND=""
 PDEPEND="~app-emulation/xen-tools-${PV}"
 
