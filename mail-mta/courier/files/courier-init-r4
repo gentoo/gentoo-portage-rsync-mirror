@@ -1,6 +1,6 @@
 #!/sbin/runscript
 # Portions Copyright 2003 Gentoo Linux
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/files/courier-init-r4,v 1.1 2013/03/07 23:29:28 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/files/courier-init-r4,v 1.2 2013/03/07 23:51:41 hanno Exp $
 #
 # script originally from Courier distfile original name = courier.sysvinit
 # adapted for Gentoo by Brian Jackson
@@ -24,6 +24,7 @@ depend() {
 }
 
 checkconfig() {
+	checkpath -q -d -m 0755 /var/run/courier
 
 	[ -f ${sysconfdir}/pop3d-ssl ] && . ${sysconfdir}/pop3d-ssl
 
@@ -57,7 +58,6 @@ start() {
 	ebegin "Starting Courier mail server:"
 
 	checkconfig || return 1
-	checkpath -q -d -m 0755 /var/run/courier
 
 	ebegin " Starting courierfilterd"
 	${sbindir}/courierfilter start
