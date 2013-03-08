@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.109 2013/01/08 08:47:15 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.110 2013/03/08 06:31:33 graaff Exp $
+
+*fxruby-1.6.26 (08 Mar 2013)
+
+  08 Mar 2013; Hans de Graaff <graaff@gentoo.org> +fxruby-1.6.26.ebuild:
+  Version bump.
 
   08 Jan 2013; Andreas Schuerch <nativemad@gentoo.org> fxruby-1.6.25.ebuild:
   x86 stable, see bug 430206
