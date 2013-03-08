@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.32.05.ebuild,v 1.12 2013/03/01 12:42:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.32.05.ebuild,v 1.13 2013/03/08 17:48:58 jer Exp $
 
 EAPI="4"
 
@@ -39,7 +39,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/advanced"
 
 pkg_setup() {
-	use curl || ewarn "Curl support disabled: No client library will be be built"
+	use curl || ewarn "Curl support disabled: No client library will be built"
 }
 
 #Bug 214137: We need to filter this.

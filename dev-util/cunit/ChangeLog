@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cunit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.31 2012/08/01 13:20:59 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.32 2013/03/08 17:57:11 ago Exp $
+
+  08 Mar 2013; Agostino Sarubbo <ago@gentoo.org> cunit-2.1-r1.ebuild:
+  Stable for arm, wrt bug #456074
 
   01 Aug 2012; Alexis Ballier <aballier@gentoo.org> cunit-2.1-r1.ebuild:
   keyword ~amd64-fbsd

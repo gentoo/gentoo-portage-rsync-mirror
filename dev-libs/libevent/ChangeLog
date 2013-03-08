@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.258 2013/02/24 18:05:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.259 2013/03/08 17:46:36 jer Exp $
+
+  08 Mar 2013; Jeroen Roovers <jer@gentoo.org> -libevent-2.0.19.ebuild,
+  -libevent-2.0.20.ebuild:
+  Old.
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> libevent-2.0.21.ebuild:
   Stable for sh, wrt bug #449746
