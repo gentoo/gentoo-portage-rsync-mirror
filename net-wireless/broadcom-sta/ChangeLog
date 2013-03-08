@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.46 2013/02/03 12:39:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.47 2013/03/08 04:59:30 pinkbyte Exp $
+
+  08 Mar 2013; Sergey Popov <pinkbyte@gentoo.org>
+  broadcom-sta-5.100.82.112-r2.ebuild:
+  Add epatch_user, as suggested by Ben Kohler in bug #459208
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -broadcom-sta-5.100.82.111.ebuild,
   -broadcom-sta-5.100.82.112-r1.ebuild, -broadcom-sta-5.100.82.112.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.100.82.112-r2.ebuild,v 1.4 2012/05/22 02:55:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.100.82.112-r2.ebuild,v 1.5 2013/03/08 04:59:30 pinkbyte Exp $
 
 EAPI="4"
 inherit eutils linux-mod
@@ -54,4 +54,6 @@ src_prepare() {
 		"${FILESDIR}/${PN}-5.100.82.112-linux-3.2.patch"
 	sed -e "s:^#include <asm/system.h>$:#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 4, 0)\\n\\0\\n#endif:" \
 		-i src/wl/sys/wl_linux.c || die "sed failed to patch for linux-3.4"
+
+	epatch_user
 }
