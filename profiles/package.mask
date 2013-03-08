@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14535 2013/03/08 00:03:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14536 2013/03/08 09:27:36 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -142,10 +142,6 @@ net-misc/wxdfast
 # Quite dead.  Use games-engines/stratagus instead.
 # Masked for removal on 20130320.
 games-strategy/freecraft
-
-# Davide Pesavento <pesa@gentoo.org> (17 Feb 2013)
-# Mask beta version for testing.
-=dev-qt/qt-creator-2.7.0_beta*
 
 # Markos Chandras <hwoarang@gentoo.org> (17 Feb 2013)
 # Does not build with libav-0.8

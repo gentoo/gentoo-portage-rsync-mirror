@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.7.0_beta.ebuild,v 1.1 2013/03/02 15:24:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.7.0_rc.ebuild,v 1.1 2013/03/08 09:24:01 pesa Exp $
 
-EAPI=4
+EAPI=5
 
-PLOCALES="cs de fr hu ja pl ru sl zh_CN"
+PLOCALES="cs de es fr hu it ja pl ru sl uk zh_CN zh_TW"
 
-inherit eutils flag-o-matic l10n multilib qt4-r2
+inherit eutils l10n multilib qt4-r2
 
-DESCRIPTION="Lightweight IDE for C++ development centering around Qt"
+DESCRIPTION="Lightweight IDE for C++/QML development centering around Qt"
 HOMEPAGE="http://qt-project.org/wiki/Category:Tools::QtCreator"
 LICENSE="LGPL-2.1"
 
@@ -29,23 +29,23 @@ KEYWORDS="~amd64 ~x86"
 QTC_PLUGINS=(android autotools:autotoolsprojectmanager bazaar
 	clearcase cmake:cmakeprojectmanager cvs fakevim git
 	madde mercurial perforce qnx subversion valgrind)
-IUSE="+botan-bundled debug doc examples test ${QTC_PLUGINS[@]%:*}"
+IUSE="debug doc examples test ${QTC_PLUGINS[@]%:*}"
 
 # minimum Qt version required
 QT_PV="4.8.0:4"
 
 CDEPEND="
-	>=dev-qt/qthelp-${QT_PV}[doc?]
+	=dev-libs/botan-1.10*
 	>=dev-qt/qtcore-${QT_PV}[ssl]
 	>=dev-qt/qtdeclarative-${QT_PV}
 	>=dev-qt/qtgui-${QT_PV}
+	>=dev-qt/qthelp-${QT_PV}[doc?]
 	>=dev-qt/qtscript-${QT_PV}
 	>=dev-qt/qtsql-${QT_PV}
 	>=dev-qt/qtsvg-${QT_PV}
-	!botan-bundled? ( >=dev-libs/botan-1.10.2 )
 "
 DEPEND="${CDEPEND}
-	!botan-bundled? ( virtual/pkgconfig )
+	virtual/pkgconfig
 	test? ( >=dev-qt/qttest-${QT_PV} )
 "
 RDEPEND="${CDEPEND}
@@ -78,40 +78,14 @@ src_prepare() {
 	# fix translations
 	sed -i -e "/^LANGUAGES =/ s:=.*:= $(l10n_get_locales):" \
 		share/qtcreator/translations/translations.pro || die
-
-	if ! use botan-bundled; then
-		# identify system botan and pkg-config file
-		local botan_version=$(best_version dev-libs/botan | cut -d '-' -f3 | cut -d '.' -f1,2)
-		local lib_botan=$(pkg-config --libs botan-${botan_version})
-		einfo "Major version of system's botan library to be used: ${botan_version}"
-
-		# drop bundled libBotan. Bug #383033
-		rm -rf "${S}"/src/libs/3rdparty/botan || die
-		# remove references to bundled botan
-		sed -i -e "s:botan::" "${S}"/src/libs/3rdparty/3rdparty.pro || die
-		for x in testrunner parsertests modeldemo; do
-			sed -i -e "/botan.pri/d" "${S}"/tests/valgrind/memcheck/${x}.pro || die
-		done
-		sed -i -e "/botan.pri/d" "${S}"/src/libs/utils/utils_dependencies.pri || die
-		sed -i -e "/botan.pri/d" "${S}"/tests/manual/preprocessor/preprocessor.pro || die
-		# link to system botan
-		sed -i -e "/LIBS/s:$: ${lib_botan}:" "${S}"/qtcreator.pri || die
-		sed -i -e "s:-lBotan:${lib_botan}:" "${S}"/tests/manual/appwizards/appwizards.pro || die
-		# append botan refs to compiler flags
-		append-flags $(pkg-config --cflags --libs botan-${botan_version})
-	fi
 }
 
 src_configure() {
 	eqmake4 qtcreator.pro \
 		IDE_LIBRARY_BASENAME="$(get_libdir)" \
 		IDE_PACKAGE_MODE=1 \
-		TEST=$(use test && echo 1 || echo 0)
-}
-
-src_compile() {
-	emake
-	use doc && emake docs
+		TEST=$(use test && echo 1 || echo 0) \
+		USE_SYSTEM_BOTAN=1
 }
 
 src_test() {
@@ -126,13 +100,14 @@ src_install() {
 
 	dodoc dist/{changes-2.*,known-issues}
 
-	# Install documentation
+	# install documentation
 	if use doc; then
+		emake docs
 		insinto /usr/share/doc/${PF}
 		doins share/doc/qtcreator/qtcreator{,-dev}.qch
 		docompress -x /usr/share/doc/${PF}/qtcreator{,-dev}.qch
 	fi
 
-	# Install desktop file
+	# install desktop file
 	make_desktop_entry qtcreator 'Qt Creator' QtProject-qtcreator 'Qt;Development;IDE'
 }
