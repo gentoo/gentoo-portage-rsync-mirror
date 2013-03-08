@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yafu/yafu-1.34.3.ebuild,v 1.2 2013/03/07 15:52:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yafu/yafu-1.34.3.ebuild,v 1.3 2013/03/08 03:05:30 patrick Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ MY_PV="$(get_version_component_range 1-2)"
 
 DESCRIPTION="Yet another factoring utility"
 HOMEPAGE="http://sourceforge.net/projects/yafu/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_PV}/${PN}-${MY_PV}.zip"
+SRC_URI="mirror://sourceforge/${PN}/${MY_PV}/${PN}-${MY_PV}-src.zip"
 
 SLOT="0"
 LICENSE="public-domain"

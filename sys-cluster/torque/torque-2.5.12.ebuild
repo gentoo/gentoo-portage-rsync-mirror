@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.12.ebuild,v 1.2 2013/01/16 21:05:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.12.ebuild,v 1.3 2013/03/08 03:27:01 jsbronder Exp $
 
 EAPI=4
 
@@ -87,6 +87,7 @@ src_configure() {
 
 	myeconfargs+=(
 		$(use_enable tk gui)
+		$(use_enable tk tcl-qstat)
 		$(use_enable syslog)
 		$(use_enable server)
 		$(use_enable drmaa)
