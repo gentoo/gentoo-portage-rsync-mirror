@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.95 2013/02/27 06:20:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.96 2013/03/08 00:02:36 chithanh Exp $
+
+*xorg-drivers-1.14 (08 Mar 2013)
+
+  08 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xorg-drivers-1.14.ebuild:
+  Version bump.
 
   27 Feb 2013; Zac Medico <zmedico@gentoo.org> xorg-drivers-1.13.ebuild:
   Add ~arm-linux keyword.

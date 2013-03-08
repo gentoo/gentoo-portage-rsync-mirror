@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7568 2013/03/07 20:51:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7569 2013/03/08 00:03:56 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Remove masks for prerelease xorg packages.
 
   07 Mar 2013; Tim Harder <radhermit@gentoo.org>
   desc/python_single_target.desc, desc/python_targets.desc:

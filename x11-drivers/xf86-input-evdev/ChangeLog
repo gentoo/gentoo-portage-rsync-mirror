@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.199 2013/01/08 17:10:08 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.200 2013/03/08 00:05:43 chithanh Exp $
+
+*xf86-input-evdev-2.7.3-r1 (08 Mar 2013)
+
+  08 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-input-evdev-2.7.3-r1.ebuild:
+  Revision bump for new EAPI
 
   08 Jan 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -files/xf86-input-evdev-2.7.0-horizontal-scrolling.patch,
