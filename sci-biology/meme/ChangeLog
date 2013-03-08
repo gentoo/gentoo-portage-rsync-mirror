@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/meme
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.24 2013/03/01 12:43:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/ChangeLog,v 1.25 2013/03/08 16:21:05 jlec Exp $
+
+  08 Mar 2013; Justin Lecher <jlec@gentoo.org> meme-4.8.1-r2.ebuild:
+  Fix missing command, #460372
 
 *meme-4.8.1-r2 (01 Mar 2013)
 

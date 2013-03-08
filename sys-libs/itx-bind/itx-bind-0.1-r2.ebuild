@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/itx-bind/itx-bind-0.1-r2.ebuild,v 1.1 2011/08/16 08:45:06 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/itx-bind/itx-bind-0.1-r2.ebuild,v 1.2 2013/03/08 16:05:21 haubi Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="the bind library for interix"
 HOMEPAGE="http://dev.gentoo.org/~mduft"
 SRC_URI=""
 
-LICENSE="as-is"
+LICENSE="ISC BSD-4"
 SLOT="0"
 KEYWORDS="-* ~x86-interix"
 IUSE=""

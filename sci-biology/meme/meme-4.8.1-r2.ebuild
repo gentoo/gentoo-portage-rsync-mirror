@@ -1,6 +1,6 @@
 ## Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-4.8.1-r2.ebuild,v 1.1 2013/03/01 12:43:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/meme/meme-4.8.1-r2.ebuild,v 1.2 2013/03/08 16:21:05 jlec Exp $
 
 EAPI=4
 
@@ -67,7 +67,7 @@ src_install() {
 	default
 
 	for i in "${ED}"/usr/bin/*; do
-		"${ED}"/usr/bin/{,meme-}${i} || die
+		mv "${ED}"/usr/bin/{,meme-}${i} || die
 	done
 
 	echo "PATH=/opt/${PN}/bin" > 99${PN}
