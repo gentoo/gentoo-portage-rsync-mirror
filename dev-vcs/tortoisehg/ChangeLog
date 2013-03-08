@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.35 2013/03/05 03:44:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.36 2013/03/08 13:01:37 polynomial-c Exp $
+
+*tortoisehg-2.7.1 (08 Mar 2013)
+
+  08 Mar 2013; Lars Wendler <polynomial-c@gentoo.org> -tortoisehg-2.4.3.ebuild,
+  -tortoisehg-2.5.1.ebuild, -tortoisehg-2.6.1.ebuild,
+  -files/tortoisehg-2.6.1-missing_thg_script.patch, +tortoisehg-2.7.1.ebuild:
+  Version bump. Removed old.
 
   05 Mar 2013; Mike Gilbert <floppym@gentoo.org> tortoisehg-2.7.ebuild,
   tortoisehg-9999.ebuild:
