@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.727 2013/03/08 00:02:59 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.728 2013/03/08 01:18:13 chithanh Exp $
+
+  08 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.14.0.ebuild:
+  Force eautoreconf run.
 
 *xorg-server-1.14.0 (08 Mar 2013)
 
