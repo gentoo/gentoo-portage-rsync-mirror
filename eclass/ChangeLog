@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.718 2013/03/07 21:02:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.719 2013/03/08 10:26:42 hanno Exp $
+
+  08 Mar 2013; Hanno Boeck <hanno@gentoo.org> apache-2.eclass:
+  Remove re-setting of permissions every time apache gets reinstalled. See bug
+  #398899.
 
   07 Mar 2013; Tim Harder <radhermit@gentoo.org> python.eclass:
   Add 2.7-jython.
