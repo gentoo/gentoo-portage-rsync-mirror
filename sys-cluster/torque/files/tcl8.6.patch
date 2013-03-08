@@ -1,12 +1,30 @@
- src/cmds/qstat.c                | 8 ++++----
- src/scheduler.tcl/pbs_tclWrap.c | 6 +++---
- 2 files changed, 7 insertions(+), 7 deletions(-)
+From 061f15e06d6cf85e951cd321360067de5f0b2ce0 Mon Sep 17 00:00:00 2001
+From: Justin Bronder <jsbronder@gmail.com>
+Date: Thu, 7 Mar 2013 22:33:04 -0500
+Subject: [PATCH] support tcl-8.6
+
+---
+ src/cmds/qstat.c                | 13 +++++++++----
+ src/scheduler.tcl/pbs_tclWrap.c |  6 +++---
+ 2 files changed, 12 insertions(+), 7 deletions(-)
 
 diff --git a/src/cmds/qstat.c b/src/cmds/qstat.c
-index 5f85de7..a782151 100644
+index 5f85de7..7f289ba 100644
 --- a/src/cmds/qstat.c
 +++ b/src/cmds/qstat.c
-@@ -1856,7 +1856,7 @@ tcl_init(void)
+@@ -88,6 +88,11 @@
+ #if TCL_QSTAT
+ #include <sys/stat.h>
+ #include <tcl.h>
++#if TCL_MAJOR_VERSION <=8 && TCL_MINOR_VERSION < 6
++#define Tcl_GetStringResult(x) x->result
++#define Tcl_GetErrorLine(x) x->errorLine
++#define Tcl_SetResult(x, y, z) x->result = y
++#endif
+ #if TCLX
+ #include <tclExtend.h>
+ #endif
+@@ -1856,7 +1861,7 @@ tcl_init(void)
    if (Tcl_Init(interp) == TCL_ERROR)
      {
      fprintf(stderr, "Tcl_Init error: %s",
@@ -15,7 +33,7 @@ index 5f85de7..a782151 100644
      }
  
  #if TCLX
-@@ -1869,7 +1869,7 @@ tcl_init(void)
+@@ -1869,7 +1874,7 @@ tcl_init(void)
      {
  #endif
      fprintf(stderr, "Tclx_Init error: %s",
@@ -24,7 +42,7 @@ index 5f85de7..a782151 100644
      }
  
  #endif /* TCLX */
-@@ -1980,10 +1980,10 @@ void tcl_run(
+@@ -1980,10 +1985,10 @@ void tcl_run(
      trace = (char *)Tcl_GetVar(interp, "errorInfo", 0);
  
      if (trace == NULL)
@@ -64,3 +82,6 @@ index e859ae5..194c24b 100644
      msg = pbs_geterrmsg(connector);
      sprintf(log_buffer, "%s (%d)", msg ? msg : fail, pbs_errno);
      log_err(-1, argv[0], log_buffer);
+-- 
+1.7.12.4
+

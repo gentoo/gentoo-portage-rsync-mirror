@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-3.0.6-r1.ebuild,v 1.3 2013/03/08 03:27:01 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-3.0.6-r1.ebuild,v 1.4 2013/03/08 05:02:15 jsbronder Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ RDEPEND="${DEPEND_COMMON}
 
 DOCS=( Release_Notes )
 
-PATCHES=( "${FILESDIR}"/${P}-tcl8.6.patch )
+PATCHES=( "${FILESDIR}"/tcl8.6.patch )
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
