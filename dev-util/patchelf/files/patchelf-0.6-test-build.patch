@@ -1,16 +1,18 @@
- tests/Makefile.am | 20 ++++++++++----------
- 1 file changed, 10 insertions(+), 10 deletions(-)
+ tests/Makefile.am | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
 
 diff --git a/tests/Makefile.am b/tests/Makefile.am
-index 9d9b6bc..effde41 100644
+index 9d9b6bc..f345f46 100644
 --- a/tests/Makefile.am
 +++ b/tests/Makefile.am
-@@ -12,37 +12,37 @@ main_scoped_SOURCES =
+@@ -11,38 +11,38 @@ simple_SOURCES = simple.c
+ main_scoped_SOURCES =
  
  
- main: main.o libfoo.so
+-main: main.o libfoo.so
 -	LD_LIBRARY_PATH=. gcc -Wl,--disable-new-dtags -o main main.o -L . -lfoo
-+	$(CC) $(LDFLAGS) $(CFLAGS) -Wl,--disable-new-dtags -o main main.o -L . -lfoo
++main: main.o libfoo.so libbar.so
++	$(CC) $(LDFLAGS) $(CFLAGS) -Wl,--disable-new-dtags -o main main.o -L . -lfoo -lbar
  
  main-scoped: main.o libfoo-scoped.so
 -	LD_LIBRARY_PATH=. gcc -Wl,--enable-new-dtags -o main-scoped main.o -L . -lfoo-scoped
