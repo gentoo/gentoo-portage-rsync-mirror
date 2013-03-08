@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.198 2013/02/24 19:58:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.199 2013/03/08 21:16:53 axs Exp $
+
+*thunderbird-17.0.4 (08 Mar 2013)
+
+  08 Mar 2013; Ian Stakenvicius <axs@gentoo.org> +thunderbird-17.0.4.ebuild:
+  version bump for security bug 460818
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> thunderbird-17.0.3.ebuild:
   Stable for arm, wrt bug #458390

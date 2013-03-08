@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14536 2013/03/08 09:27:36 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14537 2013/03/08 21:16:06 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -514,10 +514,6 @@ dev-ml/ocamlduce
 # Eray Aslan <eras@gentoo.org> (24 Oct 2012)
 # Mask experimental software
 =mail-client/squirrelmail-1.4.23*
-
-# Sergey Popov <pinkbyte@gentoo.org> (22 Oct 2012)
-# Mask net-misc/libteam snapshot ebuilds until release
-net-misc/libteam
 
 # Michael Palimaka <kensington@gentoo.org> (19 Oct 2012)
 # New major release breaks almost all existing consumers.
