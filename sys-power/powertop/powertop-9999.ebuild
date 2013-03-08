@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-9999.ebuild,v 1.16 2012/11/22 15:00:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-9999.ebuild,v 1.17 2013/03/08 06:16:03 vapier Exp $
 
 EAPI="4"
 
 inherit eutils linux-info
-if [ ${PV} == "9999" ] ; then
+if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://github.com/fenrus75/powertop.git"
 	inherit git-2 autotools
 	SRC_URI=""
@@ -83,7 +83,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	if [ ${PV} == "9999" ] ; then
+	if [[ ${PV} == "9999" ]] ; then
 		eautoreconf
 	fi
 }
@@ -91,6 +91,13 @@ src_prepare() {
 src_configure() {
 	export ac_cv_search_delwin=$(usex unicode -lncursesw -lncurses)
 	default
+}
+
+src_compile() {
+	# This fixes cross-compiling.  Please verify before deleting.
+	emake -C src csstoh
+	cp "${FILESDIR}"/csstoh src/ || die
+	emake
 }
 
 src_install() {

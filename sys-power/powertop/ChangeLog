@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/powertop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.74 2012/12/09 20:48:24 zerochaos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.75 2013/03/08 06:16:03 vapier Exp $
+
+  08 Mar 2013; Mike Frysinger <vapier@gentoo.org> powertop-2.2-r1.ebuild,
+  powertop-9999.ebuild:
+  Fix cross-compiling.  Again.
 
   09 Dec 2012; Rick Farina <zerochaos@gentoo.org> -powertop-1.11.ebuild,
   -powertop-2.0.ebuild, -powertop-2.1-r1.ebuild, -powertop-2.1.ebuild,

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_i18n_rails/gettext_i18n_rails-0.6.6.ebuild,v 1.1 2012/08/06 18:13:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_i18n_rails/gettext_i18n_rails-0.9.2.ebuild,v 1.1 2013/03/08 06:28:55 graaff Exp $
 
-EAPI="4"
+EAPI=5
 
 # jruby support requires sqlite3 support for jruby.
 USE_RUBY="ruby18 ruby19 ree18"
@@ -21,15 +21,15 @@ HOMEPAGE="https://github.com/grosser/gettext_i18n_rails"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/activerecord[sqlite3] dev-ruby/temple )"
-ruby_add_rdepend "dev-ruby/fast_gettext"
+ruby_add_rdepend ">=dev-ruby/fast_gettext-0.4.8"
 
 all_ruby_prepare() {
 	rm Gemfile Gemfile.lock || die
 
 	# Remove specs for slim and hamlet, template engines we don't package.
-	rm spec/gettext_i18n_rails/slim_parser_spec.rb spec/gettext_i18n_rails/hamlet_parser_spec.rb || die
+	rm spec/gettext_i18n_rails/slim_parser_spec.rb spec/gettext_i18n_rails/haml_parser_spec.rb || die
 }

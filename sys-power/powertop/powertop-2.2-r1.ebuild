@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.2-r1.ebuild,v 1.2 2012/12/09 20:48:24 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.2-r1.ebuild,v 1.3 2013/03/08 06:16:03 vapier Exp $
 
 EAPI="5"
 
 inherit eutils linux-info
-if [ ${PV} == "9999" ] ; then
+if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://github.com/fenrus75/powertop.git"
 	inherit git-2 autotools
 	SRC_URI=""
@@ -85,7 +85,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-use-package_version.patch
-	if [ ${PV} == "9999" ] ; then
+	if [[ ${PV} == "9999" ]] ; then
 		eautoreconf
 	fi
 }
@@ -96,8 +96,9 @@ src_configure() {
 }
 
 src_compile() {
-	#the clean is needed because the 2.1 tarball had object files in src/tuning/
-	emake clean
+	# This fixes cross-compiling.  Please verify before deleting.
+	emake -C src csstoh
+	cp "${FILESDIR}"/csstoh src/ || die
 	emake
 }
 
