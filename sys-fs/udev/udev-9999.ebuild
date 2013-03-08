@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.180 2013/03/02 01:20:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.183 2013/03/08 22:51:25 ssuominen Exp $
 
 EAPI=4
 
@@ -18,8 +18,7 @@ else
 	if [[ -n "${patchset}" ]]
 		then
 				SRC_URI="${SRC_URI}
-					http://dev.gentoo.org/~williamh/dist/${P}-patches-${patchset}.tar.bz2
-					http://dev.gentoo.org/~ssuominen/${P}-patches-${patchset}.tar.bz2"
+					http://dev.gentoo.org/~williamh/dist/${P}-patches-${patchset}.tar.bz2"
 			fi
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
@@ -69,8 +68,8 @@ RDEPEND="${COMMON_DEPEND}
 	!<sec-policy/selinux-base-2.20120725-r10"
 
 PDEPEND=">=virtual/udev-197-r1
-	hwdb? ( >=sys-apps/hwids-20130114[udev] )
-	openrc? ( >=sys-fs/udev-init-scripts-19-r1 )"
+	hwdb? ( >=sys-apps/hwids-20130302[udev] )
+	openrc? ( >=sys-fs/udev-init-scripts-23 )"
 
 S=${WORKDIR}/systemd-${PV}
 
@@ -125,6 +124,20 @@ pkg_setup()
 
 src_prepare()
 {
+	if ! [[ ${PV} = 9999* ]]; then
+		# secure_getenv() disable for non-glibc systems wrt bug #443030
+		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 16 ]]; then
+			eerror "The line count for secure_getenv() failed, see bug #443030"
+			die
+		fi
+
+		# gperf disable if keymaps are not requested wrt bug #452760
+	if ! [[ $(grep -i gperf Makefile.am | wc -l) -eq 27 ]]; then
+			eerror "The line count for gperf references failed, see bug 452760"
+			die
+		fi
+	fi
+
 	# backport some patches
 	if [[ -n "${patchset}" ]]
 	then
@@ -133,11 +146,9 @@ src_prepare()
 
 	# These are missing from upstream 50-udev-default.rules
 	cat <<-EOF > "${T}"/40-gentoo.rules
-	# Propably unrequired, check how it is with OSS/OSS4, then remove
-	SUBSYSTEM=="snd", GROUP="audio"
 	# Gentoo specific usb group
 	SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", GROUP="usb"
-	# Keep this for Linux 2.6.32 support wrt #457868
+	# Keep this for Linux 2.6.32 kernels with accept4() support like .60 wrt #457868
 	SUBSYSTEM=="mem", KERNEL=="null|zero|full|random|urandom", MODE="0666"
 	EOF
 
@@ -158,7 +169,7 @@ src_prepare()
 	version_is_at_least 4.6 $(gcc-version) || \
 		sed -i 's:static_assert:alsdjflkasjdfa:' src/shared/macro.h
 
-	# change rules back to group uucp instead of dialout for now
+	# change rules back to group uucp instead of dialout for now wrt #454556
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
 		-i rules/*.rules \
 	|| die "failed to change group dialout to uucp"
@@ -175,20 +186,6 @@ src_prepare()
 	else
 		check_default_rules
 		elibtoolize
-	fi
-
-	if [[ ${PV} = 9999* ]]; then
-		# secure_getenv() disable for non-glibc systems wrt bug #443030
-		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 23 ]]; then
-			eerror "The line count for secure_getenv() failed, see bug #443030"
-			die
-		fi
-
-		# gperf disable if keymaps are not requested wrt bug #452760
-		if ! [[ $(grep -i gperf Makefile.am | wc -l) -eq 27 ]]; then
-			eerror "The line count for gperf references failed, see bug 452760"
-			die
-		fi
 	fi
 
 	if ! use elibc_glibc; then #443030
@@ -214,6 +211,7 @@ src_configure()
 		--with-html-dir=/usr/share/doc/${PF}/html
 		--with-rootprefix=
 		--with-rootlibdir=/$(get_libdir)
+		--without-python
 		--disable-audit
 		--disable-coredump
 		--disable-hostnamed
@@ -359,9 +357,7 @@ src_install()
 	find "${ED}/$(systemd_get_unitdir)" -name '*.service' -exec \
 		sed -i -e "/ExecStart/s:/lib/systemd:$(systemd_get_utildir):" {} +
 
-	docinto gentoo
-	dodoc "${FILESDIR}"/80-net-name-slot.rules
-	docompress -x /usr/share/doc/${PF}/gentoo/80-net-name-slot.rules
+	keepdir /etc/udev/rules.d
 }
 
 pkg_preinst()
@@ -395,23 +391,6 @@ pkg_postinst()
 {
 	mkdir -p "${ROOT}"run
 
-	net_rules="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
-	copy_net_rules() {
-		[[ -f ${net_rules} ]] || cp "${ROOT}"usr/share/doc/${PF}/gentoo/80-net-name-slot.rules "${net_rules}"
-	}
-
-	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 197 ]]; then
-		ewarn "Because this is a upgrade we disable the new predictable network interface"
-		ewarn "name scheme by default."
-		copy_net_rules
-	fi
-
-	if has_version sys-apps/biosdevname; then
-		ewarn "Because sys-apps/biosdevname is installed we disable the new predictable"
-		ewarn "network interface name scheme by default."
-		copy_net_rules
-	fi
-
 	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
 	# So try to remove it here (will only work if empty).
 	rmdir "${ROOT}"dev/loop 2>/dev/null
@@ -424,20 +403,13 @@ pkg_postinst()
 	# people want reminders, I'll give them reminders.  Odds are they will
 	# just ignore them anyway...
 
-	# 64-device-mapper.rules now gets installed by sys-fs/device-mapper
-	# remove it if user don't has sys-fs/device-mapper installed, 27 Jun 2007
-	if [[ -f ${ROOT}etc/udev/rules.d/64-device-mapper.rules ]] &&
-		! has_version sys-fs/device-mapper
+	# 64-device-mapper.rules is related to sys-fs/device-mapper which we block
+	# in favour of sys-fs/lvm2
+	old_dm_rules=${ROOT}etc/udev/rules.d/64-device-mapper.rules
+	if [[ -f ${old_dm_rules} ]]
 	then
-			rm -f "${ROOT}"etc/udev/rules.d/64-device-mapper.rules
-			einfo "Removed unneeded file 64-device-mapper.rules"
-	fi
-
-	if [[ ${REPLACING_VERSIONS} ]] && [[ ${REPLACING_VERSIONS} < 189 ]]; then
-		ewarn
-		ewarn "Upstream has removed the persistent-cd rules"
-		ewarn "generator. If you need persistent names for these devices,"
-		ewarn "place udev rules for them in ${ROOT}etc/udev/rules.d."
+		rm -f "${old_dm_rules}"
+		einfo "Removed unneeded file ${old_dm_rules}"
 	fi
 
 	if ismounted /usr
@@ -457,15 +429,6 @@ pkg_postinst()
 		ewarn "For more information on setting up an initramfs, see the"
 		ewarn "following URL:"
 		ewarn "http://www.gentoo.org/doc/en/initramfs-guide.xml"
-	fi
-
-	if [ -n "${net_rules}" ]; then
-			ewarn
-			ewarn "udev-197 and newer introduces a new method of naming network"
-			ewarn "interfaces. The new names are a very significant change, so"
-			ewarn "they are disabled by default on live systems."
-			ewarn "Please see the contents of ${net_rules} for more"
-			ewarn "information on this feature."
 	fi
 
 	local fstab="${ROOT}"etc/fstab dev path fstype rest
@@ -489,22 +452,27 @@ pkg_postinst()
 		ewarn "Note that qfile can be found in app-portage/portage-utils"
 	fi
 
+	old_cd_rules=${ROOT}etc/udev/rules.d/70-persistent-cd.rules
 	old_net_rules=${ROOT}etc/udev/rules.d/70-persistent-net.rules
-	if [[ -f ${old_net_rules} ]]; then
-		ewarn "You still have ${old_net_rules} in place from previous udev release."
-		ewarn "Upstream has removed the possibility of renaming to existing"
-		ewarn "network interfaces. For example, it's not possible to assign based"
-		ewarn "on MAC address to existing interface eth0."
-		ewarn "See http://bugs.gentoo.org/453494 for more information."
-		ewarn "Rename your file to something else starting with 70- to silence"
-		ewarn "this warning."
-	fi
+	for old_rules in "${old_cd_rules}" "${old_net_rules}"; do
+		if [[ -f ${old_rules} ]]
+		then
+			ewarn
+			ewarn "File ${old_rules} is from old udev installation but if you still use it,"
+			ewarn "rename it to something else starting with 70- to silence this"
+			ewarn "deprecation warning."
+		fi
+	done
+
+	ewarn
+	ewarn "We don't install ${ROOT}etc/udev/rules.d/80-net-name-slot.rules anymore"
+	ewarn "and the new predictable network interface names are used by default:"
+	ewarn "http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames"
 
 	ewarn
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"
 	ewarn "into effect."
 	ewarn "The method you use to do this depends on your init system."
-	ewarn
 
 	preserve_old_lib_notify /{,usr/}$(get_libdir)/libudev$(get_libname 0)
 

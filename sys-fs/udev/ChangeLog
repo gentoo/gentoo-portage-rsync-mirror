@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.844 2013/03/06 20:13:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.846 2013/03/08 22:51:25 ssuominen Exp $
+
+  08 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Stop installing /etc/udev/rules.d/80-net-name-slot.rules and keepdir
+  /etc/udev/rules.d to keep the directory in place.
+  Pass --without-python to avoid dev-python/sphinx.
 
   06 Mar 2013; Raúl Porcel <armin76@gentoo.org> udev-197-r8.ebuild:
   m68k/s390/sh/sparc stable wrt #457568
