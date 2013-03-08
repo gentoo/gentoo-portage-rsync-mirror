@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-base/gnustep-gui
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.99 2012/12/20 15:05:31 voyageur Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.100 2013/03/08 15:41:06 voyageur Exp $
+
+*gnustep-gui-0.23.0 (08 Mar 2013)
+
+  08 Mar 2013; Bernard Cafarelli <voyageur@gentoo.org>
+  +gnustep-gui-0.23.0.ebuild:
+  Version bump, lots of changes in this release
 
   20 Dec 2012; Bernard Cafarelli <voyageur@gentoo.org>
   -gnustep-gui-0.18.0.ebuild, -files/gnustep-gui-0.18.0-libpng15.patch:
