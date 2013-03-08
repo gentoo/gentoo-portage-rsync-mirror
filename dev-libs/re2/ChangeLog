@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/re2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/ChangeLog,v 1.4 2013/02/25 21:07:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/ChangeLog,v 1.5 2013/03/07 23:19:26 phajdan.jr Exp $
+
+*re2-0_p20130115 (07 Mar 2013)
+
+  07 Mar 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -re2-0_p20121029-r1.ebuild, +re2-0_p20130115.ebuild:
+  Version bump. Remove old.
 
   25 Feb 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> re2-0_p20121127.ebuild:
   Keyword ~arm

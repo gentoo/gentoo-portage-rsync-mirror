@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/re2-0_p20121029-r1.ebuild,v 1.1 2012/11/07 04:06:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/re2-0_p20130115.ebuild,v 1.1 2013/03/07 23:19:26 phajdan.jr Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://re2.googlecode.com/files/${PN}-${PV##*_p}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 # TODO: the directory in the tarball should really be versioned.
@@ -35,7 +35,7 @@ src_compile() {
 }
 
 src_test() {
-	emake "${makeopts[@]}" shared-test shared-bigtest
+	emake "${makeopts[@]}" shared-test
 }
 
 src_install() {

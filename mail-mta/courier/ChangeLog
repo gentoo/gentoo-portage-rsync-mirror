@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/courier
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.161 2013/02/28 17:48:11 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.162 2013/03/07 23:29:28 hanno Exp $
+
+*courier-0.70 (07 Mar 2013)
+
+  07 Mar 2013; Hanno Boeck <hanno@gentoo.org> +courier-0.70.ebuild,
+  +files/courier-init-r4:
+  Version bump and use checkpath in init instead of keepdir for /var/run.
 
   28 Feb 2013; Jason A. Donenfeld <zx2c4@gentoo.org> courier-0.65.2-r1.ebuild,
   courier-0.65.2.ebuild, courier-0.66.3.ebuild, courier-0.68.2.20120626.ebuild,
