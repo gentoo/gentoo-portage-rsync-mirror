@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geomyidae/geomyidae-0.26.1.ebuild,v 1.1 2013/03/08 11:38:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geomyidae/geomyidae-0.26.1.ebuild,v 1.2 2013/03/08 12:42:20 pinkbyte Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://r-36.net/src/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 
 pkg_setup(){
 	enewgroup gopherd
