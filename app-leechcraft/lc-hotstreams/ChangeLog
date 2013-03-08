@@ -1,0 +1,50 @@
+# ChangeLog for app-leechcraft/lc-hotstreams
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-hotstreams/ChangeLog,v 1.1 2013/03/08 21:58:44 maksbotan Exp $
+
+*lc-hotstreams-9999 (08 Mar 2013)
+*lc-hotstreams-0.5.90 (08 Mar 2013)
+*lc-hotstreams-0.5.85 (08 Mar 2013)
+
+  08 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org>
+  +lc-hotstreams-0.5.85.ebuild, +lc-hotstreams-0.5.90.ebuild,
+  +lc-hotstreams-9999.ebuild, +metadata.xml:
+  Move to app-leechcraft/category
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  leechcraft-hotstreams-0.5.90.ebuild:
+  Stable for x86, wrt bug #457824
+
+  16 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
+  leechcraft-hotstreams-0.5.90.ebuild:
+  Stable for amd64, wrt bug #457824
+
+*leechcraft-hotstreams-0.5.90 (25 Dec 2012)
+
+  25 Dec 2012; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-hotstreams-0.5.90.ebuild:
+  Bump LeechCraft to 0.5.90, thanks to 0xd34df00d
+
+  21 Dec 2012; Sergey Popov <pinkbyte@gentoo.org>
+  leechcraft-hotstreams-0.5.85.ebuild, leechcraft-hotstreams-9999.ebuild:
+  Remove obsolete pkg_pretend function - overrided by eclass one
+
+  08 Oct 2012; Sergey Popov <pinkbyte@gentoo.org>
+  leechcraft-hotstreams-0.5.85.ebuild:
+  Bump LeechCraft to 0.5.85, thanks to 0xd34df00d
+
+*leechcraft-hotstreams-0.5.85 (08 Oct 2012)
+
+  08 Oct 2012; Sergey Popov <pinkbyte@gentoo.org>
+  +leechcraft-hotstreams-0.5.85.ebuild:
+  Bump LeechCraft to 0.5.85, thanks to 0xd34df00d
+
+  04 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
+  leechcraft-hotstreams-9999.ebuild:
+  Default src_configure is sufficient
+
+*leechcraft-hotstreams-9999 (04 Sep 2012)
+
+  04 Sep 2012; Sergey Popov <pinkbyte@gentoo.org>
+  +leechcraft-hotstreams-9999.ebuild, +metadata.xml:
+  Add media-sound/leechcraft-hotstreams, thanks to 0xd34df00d

@@ -637,6 +637,35 @@ app-laptop/prey:userpriv - Create a prey user group so regular users can access 
 app-laptop/prey:webcam - Use computer's webcam to take screenshots of the thief
 app-laptop/thinkfan:atasmart - include libatasmart support to get disc temperature
 app-laptop/tp_smapi:hdaps - Install a compatible HDAPS module
+app-leechcraft/lc-azoth:acetamide - Build Acetamide, the IRC protocol support
+app-leechcraft/lc-azoth:adiumstyles - Build support for Adium styles
+app-leechcraft/lc-azoth:astrality - Build Astrality, support for protocols provided by Telepathy
+app-leechcraft/lc-azoth:autoidler - Build support for automatic status changing according to user idle time
+app-leechcraft/lc-azoth:autopaste - Build Autopaste for pasting long texts to pastebins
+app-leechcraft/lc-azoth:birthdaynotifier - Build Birthday Notifier for you to not forget about birthdays of your contacts.
+app-leechcraft/lc-azoth:chathistory - Build ChatHistory which stories chat history
+app-leechcraft/lc-azoth:depester - Build Depester which enables to ignore MUC participants
+app-leechcraft/lc-azoth:embedmedia - Build EmbedMedia for embedding flash videos and images directly into chat windows
+app-leechcraft/lc-azoth:herbicide - Build Herbicide, a basic antispam plugin
+app-leechcraft/lc-azoth:hili - Build HiLi which allows to customize highlight settings in MUCs
+app-leechcraft/lc-azoth:isterique - Build Isterique plugin for neutralizing excessive caps lock usage
+app-leechcraft/lc-azoth:juick - Build plugin for the Juick.com microblogging service
+app-leechcraft/lc-azoth:keeso - Build plugin for changing text into SoMEtHInG lIKe THiS
+app-leechcraft/lc-azoth:lastseen - Build plugin for client-side recording of the last online/available time
+app-leechcraft/lc-azoth:media - Enable media calls
+app-leechcraft/lc-azoth:metacontacts - Build plugin for metacontacts support
+app-leechcraft/lc-azoth:modnok - Build Modnok for in-chat LaTeX formulae rendering (deprecated, use 'latex' for new versions)
+app-leechcraft/lc-azoth:nativeemoticons - Build support for native Azoth's emoticons packs
+app-leechcraft/lc-azoth:otroid - Build OTRoid, plugin for the Off-the-Record deniable encryption system
+app-leechcraft/lc-azoth:p100q - Build p100q, plugin for psto.net microblogging service
+app-leechcraft/lc-azoth:rosenthal - Build Rosenthal, the spellchecker plugin (deprecated, use 'spell' for new versions)
+app-leechcraft/lc-azoth:shx - Build shell command executor plugin
+app-leechcraft/lc-azoth:standardstyles - Build support for standard Azoth styles engine
+app-leechcraft/lc-azoth:xoox - Build Xoox, gloox-based plugin for XMPP support (deprecated, use 'xmpp' for new versions)
+app-leechcraft/lc-azoth:xtazy - Build Xtazy for publishing currently playing tune
+app-leechcraft/lc-azoth:zheet - Build Zheet, libmsn-based plugin for Windows Live Messenger support (deprecated, use 'msn' for new versions)
+app-leechcraft/lc-blogique:hestia - Allows one to keep a local blog
+app-leechcraft/lc-blogique:metida - Support for the LiveJournal blogging platform
 app-misc/anki:furigana - Enable support for furigana generation
 app-misc/anki:graph - Enable support for making graphs
 app-misc/anki:recording - Enable support for audio recording
@@ -4898,7 +4927,6 @@ net-p2p/ktorrent:shutdown - Shutdown when done
 net-p2p/ktorrent:stats - Shows statistics about torrents in several graphs
 net-p2p/ktorrent:webinterface - Allows control of KTorrent via a web interface
 net-p2p/ktorrent:zeroconf - Discover peers on the local network using the Zeroconf protocol
-net-p2p/leechcraft-eiskaltdcpp:emoticons - Install emoticon packs
 net-p2p/mldonkey:bittorrent - enable bittorrent support
 net-p2p/mldonkey:fasttrack - enable fasttrack support
 net-p2p/mldonkey:gnutella - enable gnutella and gnutella2 support
