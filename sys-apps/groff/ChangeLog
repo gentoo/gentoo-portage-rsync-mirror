@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.129 2013/02/20 22:45:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.130 2013/03/09 05:44:57 radhermit Exp $
+
+*groff-1.22.2 (09 Mar 2013)
+
+  09 Mar 2013; Tim Harder <radhermit@gentoo.org> +groff-1.22.2.ebuild:
+  Version bump (bug #460802), respect AR (bug #444092), and conditionally
+  remove broken symlink (bug #454196).
 
   20 Feb 2013; Zac Medico <zmedico@gentoo.org> groff-1.22.1.ebuild:
   Add ~arm-linux keyword.
