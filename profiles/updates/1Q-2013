@@ -92,3 +92,4 @@ move www-misc/leechcraft-pogooglue app-leechcraft/lc-pogooglue
 move www-misc/leechcraft-seekthru app-leechcraft/lc-seekthru
 move x11-plugins/leechcraft-lhtr app-leechcraft/lc-lhtr
 move x11-plugins/leechcraft-tpi app-leechcraft/lc-tpi
+move app-leechcraft/leechraft-meta app-leechcraft/leechcraft-meta

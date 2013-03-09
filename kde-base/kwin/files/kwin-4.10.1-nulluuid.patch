@@ -1,0 +1,44 @@
+commit 569f79c60f8fd2b3e655433c2c53f840b4c103e9
+Author: Thomas Lübking <thomas.luebking@gmail.com>
+Date:   Sat Mar 2 22:27:20 2013 +0100
+
+    Map NULL_UUID activity to ALL activities
+    
+    REVIEW: 109274
+    BUG: 314830
+    FIXED-IN: 4.10.2
+
+diff --git a/kwin/client.cpp b/kwin/client.cpp
+index 5fb6dcb..e16a1fe 100644
+--- a/kwin/client.cpp
++++ b/kwin/client.cpp
+@@ -1518,12 +1518,16 @@ void Client::setOnActivity(const QString &activity, bool enable)
+ /**
+  * set exactly which activities this client is on
+  */
++#define NULL_UUID "00000000-0000-0000-0000-000000000000"
+ void Client::setOnActivities(QStringList newActivitiesList)
+ {
+     QString joinedActivitiesList = newActivitiesList.join(",");
+     joinedActivitiesList = rules()->checkActivity(joinedActivitiesList, false);
+     newActivitiesList = joinedActivitiesList.split(',', QString::SkipEmptyParts);
+ 
++    if (newActivitiesList.contains(NULL_UUID))
++        newActivitiesList.clear(); // turn into "all"
++
+     QStringList allActivities = workspace()->activityList();
+     if ( newActivitiesList.isEmpty() ||
+         (newActivitiesList.count() > 1 && newActivitiesList.count() == allActivities.count()) ||
+@@ -2380,6 +2384,12 @@ void Client::checkActivities()
+     }
+ 
+     newActivitiesList = QString(prop).split(',');
++
++    if (newActivitiesList.contains(NULL_UUID)) {
++        setOnAllActivities(true);
++        return;
++    }
++
+     if (newActivitiesList == activityList)
+         return; //expected change, it's ok.
+ 

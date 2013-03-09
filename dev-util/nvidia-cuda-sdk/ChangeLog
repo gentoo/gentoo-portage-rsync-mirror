@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.38 2013/01/23 09:24:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.39 2013/03/09 19:42:13 jlec Exp $
+
+*nvidia-cuda-sdk-5.0.35-r1 (09 Mar 2013)
+
+  09 Mar 2013; Justin Lecher <jlec@gentoo.org>
+  +nvidia-cuda-sdk-5.0.35-r1.ebuild:
+  Install Makefile with examples, #460740
 
 *nvidia-cuda-sdk-4.2.9-r2 (23 Jan 2013)
 

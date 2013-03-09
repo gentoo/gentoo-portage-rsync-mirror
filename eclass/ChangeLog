@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.727 2013/03/09 18:18:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.728 2013/03/09 19:52:38 maksbotan Exp $
+
+  09 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org> leechcraft.eclass:
+  Fix leechcraft.eclass to support new category, bug #460958.
 
   09 Mar 2013; Michał Górny <mgorny@gentoo.org> eutils.eclass:
   Disable epunt_cxx warning since epunt_cxx is broken nowadays.

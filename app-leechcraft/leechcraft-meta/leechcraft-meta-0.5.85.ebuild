@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechraft-meta/leechraft-meta-0.5.85.ebuild,v 1.1 2013/03/08 22:09:23 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-0.5.85.ebuild,v 1.1 2013/03/09 19:33:00 maksbotan Exp $
 
 EAPI="4"
 

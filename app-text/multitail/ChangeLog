@@ -1,6 +1,10 @@
 # ChangeLog for app-text/multitail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.102 2013/03/09 19:09:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.103 2013/03/09 19:33:19 jlec Exp $
+
+  09 Mar 2013; Justin Lecher <jlec@gentoo.org> -multitail-5.2.9.ebuild,
+  -multitail-5.2.10.ebuild, -multitail-5.2.11.ebuild:
+  Drop old
 
   09 Mar 2013; Agostino Sarubbo <ago@gentoo.org> multitail-5.2.12.ebuild:
   Stable for sparc, wrt bug #456470

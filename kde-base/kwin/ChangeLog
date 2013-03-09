@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.312 2013/03/06 13:41:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.313 2013/03/09 19:44:29 dilfridge Exp $
+
+*kwin-4.10.1-r1 (09 Mar 2013)
+
+  09 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kwin-4.10.1-r1.ebuild, +files/kwin-4.10.1-nulluuid.patch:
+  Backport fix for kde-bug 314830
 
 *kwin-4.10.1 (06 Mar 2013)
 
