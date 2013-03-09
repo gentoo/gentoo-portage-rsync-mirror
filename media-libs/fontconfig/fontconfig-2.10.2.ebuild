@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.10.2.ebuild,v 1.2 2013/02/09 07:39:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.10.2.ebuild,v 1.3 2013/03/09 07:26:03 zmedico Exp $
 
 EAPI=5
 inherit autotools eutils libtool readme.gentoo
@@ -11,7 +11,7 @@ SRC_URI="http://fontconfig.org/release/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="1.0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="doc static-libs"
 
 # Purposefully dropped the xml USE flag and libxml2 support.  Expat is the
@@ -42,7 +42,7 @@ src_prepare() {
 	DOC_CONTENTS="Please make fontconfig configuration changes using
 	\`eselect fontconfig\`. Any changes made to /etc/fonts/fonts.conf will be
 	overwritten. If you need to reset your configuration to upstream defaults,
-	delete the directory ${ROOT}etc/fonts/conf.d/ and re-emerge fontconfig."
+	delete the directory ${EROOT}etc/fonts/conf.d/ and re-emerge fontconfig."
 }
 
 src_configure() {
@@ -51,10 +51,10 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable doc docbook) \
 		--enable-docs \
-		--localstatedir=/var \
-		--with-default-fonts=/usr/share/fonts \
-		--with-add-fonts=/usr/local/share/fonts \
-		--with-templatedir=/etc/fonts/conf.avail
+		--localstatedir="${EPREFIX}"/var \
+		--with-default-fonts="${EPREFIX}"/usr/share/fonts \
+		--with-add-fonts="${EPREFIX}"/usr/local/share/fonts \
+		--with-templatedir="${EPREFIX}"/etc/fonts/conf.avail
 }
 
 src_install() {
@@ -74,9 +74,9 @@ src_install() {
 	dodoc doc/fontconfig-user.{txt,pdf}
 	dodoc AUTHORS ChangeLog README
 
-	if [[ -e ${D}usr/share/doc/fontconfig/ ]];  then
-		mv "${D}"usr/share/doc/fontconfig/* "${D}"/usr/share/doc/${P}
-		rm -rf "${D}"usr/share/doc/fontconfig
+	if [[ -e ${ED}usr/share/doc/fontconfig/ ]];  then
+		mv "${ED}"usr/share/doc/fontconfig/* "${ED}"/usr/share/doc/${P}
+		rm -rf "${ED}"usr/share/doc/fontconfig
 	fi
 
 	# Changes should be made to /etc/fonts/local.conf, and as we had
@@ -86,7 +86,7 @@ src_install() {
 
 	# As of fontconfig 2.7, everything sticks their noses in here.
 	dodir /etc/sandbox.d
-	echo 'SANDBOX_PREDICT="/var/cache/fontconfig"' > "${D}"/etc/sandbox.d/37fontconfig
+	echo 'SANDBOX_PREDICT="/var/cache/fontconfig"' > "${ED}"/etc/sandbox.d/37fontconfig
 
 	readme.gentoo_create_doc
 }
@@ -96,15 +96,15 @@ pkg_preinst() {
 	# /etc/fonts/conf.d/ contains symlinks to ../conf.avail/ to include various
 	# config files.  If we install as-is, we'll blow away user settings.
 	ebegin "Syncing fontconfig configuration to system"
-	if [[ -e ${ROOT}/etc/fonts/conf.d ]]; then
-		for file in "${ROOT}"/etc/fonts/conf.avail/*; do
+	if [[ -e ${EROOT}/etc/fonts/conf.d ]]; then
+		for file in "${EROOT}"/etc/fonts/conf.avail/*; do
 			f=${file##*/}
-			if [[ -L ${ROOT}/etc/fonts/conf.d/${f} ]]; then
-				[[ -f ${D}etc/fonts/conf.avail/${f} ]] \
-					&& ln -sf ../conf.avail/"${f}" "${D}"etc/fonts/conf.d/ &>/dev/null
+			if [[ -L ${EROOT}/etc/fonts/conf.d/${f} ]]; then
+				[[ -f ${ED}etc/fonts/conf.avail/${f} ]] \
+					&& ln -sf ../conf.avail/"${f}" "${ED}"etc/fonts/conf.d/ &>/dev/null
 			else
-				[[ -f ${D}etc/fonts/conf.avail/${f} ]] \
-					&& rm "${D}"etc/fonts/conf.d/"${f}" &>/dev/null
+				[[ -f ${ED}etc/fonts/conf.avail/${f} ]] \
+					&& rm "${ED}"etc/fonts/conf.d/"${f}" &>/dev/null
 			fi
 		done
 	fi
@@ -112,14 +112,14 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	einfo "Cleaning broken symlinks in "${ROOT}"etc/fonts/conf.d/"
-	find -L "${ROOT}"etc/fonts/conf.d/ -type l -delete
+	einfo "Cleaning broken symlinks in "${EROOT}"etc/fonts/conf.d/"
+	find -L "${EROOT}"etc/fonts/conf.d/ -type l -delete
 
 	readme.gentoo_print_elog
 
 	if [[ ${ROOT} = / ]]; then
 		ebegin "Creating global font cache"
-		/usr/bin/fc-cache -srf
+		"${EPREFIX}"/usr/bin/fc-cache -srf
 		eend $?
 	fi
 }

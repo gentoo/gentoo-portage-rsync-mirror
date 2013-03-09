@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-browser/leechcraft-browser-9999.ebuild,v 1.3 2012/02/09 12:20:38 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-browser/leechcraft-browser-9999.ebuild,v 1.4 2013/03/09 07:02:16 maksbotan Exp $
 
 EAPI="4"
 
@@ -13,5 +13,5 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-RDEPEND="www-client/leechcraft-poshuku"
+RDEPEND="app-leechcraft/lc-poshuku"
 DEPEND=""

@@ -1,9 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Metapackage containing all ready-to-use LeechCraft plugins
-EAPI=4
-HOMEPAGE=http://leechcraft.org/
-IUSE=kde
-LICENSE=GPL-3
-RDEPEND=~app-editors/leechcraft-popishu-9999 ~app-text/leechcraft-monocle-9999 ~media-sound/leechcraft-hotstreams-9999 ~media-sound/leechcraft-lmp-9999 ~media-sound/leechcraft-lastfmscrobble-9999 ~media-sound/leechcraft-musiczombie-9999 ~media-sound/leechcraft-touchstreams-9999 ~net-analyzer/leechcraft-networkmonitor-9999 ~net-im/leechcraft-azoth-9999 ~net-misc/leechcraft-advancednotifications-9999 kde? ( ~net-misc/leechcraft-anhero-9999 ) ~net-misc/leechcraft-auscrie-9999 ~net-misc/leechcraft-core-9999 ~net-misc/leechcraft-cstp-9999 ~net-misc/leechcraft-dbusmanager-9999 ~net-misc/leechcraft-gacts-9999 ~net-misc/leechcraft-glance-9999 ~net-misc/leechcraft-historyholder-9999 ~net-misc/leechcraft-kinotify-9999 ~net-misc/leechcraft-knowhow-9999 ~net-misc/leechcraft-lackman-9999 ~net-misc/leechcraft-launchy-9999 ~net-misc/leechcraft-lemon-9999 ~net-misc/leechcraft-liznoo-9999 ~net-misc/leechcraft-newlife-9999 ~net-misc/leechcraft-netstoremanager-9999 ~net-misc/leechcraft-otlozhu-9999 ~net-misc/leechcraft-qrosp-9999 ~net-misc/leechcraft-pintab-9999 ~net-misc/leechcraft-secman-9999 ~net-misc/leechcraft-summary-9999 ~net-misc/leechcraft-tabslist-9999 ~net-misc/leechcraft-tabsessmanager-9999 ~net-news/leechcraft-aggregator-9999 ~net-p2p/leechcraft-bittorrent-9999 ~net-proxy/leechcraft-xproxy-9999 ~sys-fs/leechcraft-vrooby-9999 ~virtual/leechcraft-trayarea-9999 ~www-client/leechcraft-deadlyrics-9999 ~www-client/leechcraft-dolozhee-9999 ~www-client/leechcraft-poshuku-9999 ~www-client/leechcraft-vgrabber-9999 ~www-misc/leechcraft-pogooglue-9999 ~www-misc/leechcraft-seekthru-9999 ~x11-plugins/leechcraft-tpi-9999
-SLOT=0
-_md5_=cc672418a1d5862cfe3ca1b81a468365
