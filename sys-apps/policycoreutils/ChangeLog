@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/policycoreutils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.110 2012/12/30 15:12:00 swift Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.111 2013/03/09 10:57:09 swift Exp $
+
+*policycoreutils-2.1.13-r7 (09 Mar 2013)
+
+  09 Mar 2013; Sven Vermeulen <swift@gentoo.org>
+  +policycoreutils-2.1.13-r7.ebuild:
+  Update policycoreutils-extras to fix build failure when not building with PAM
+  support, see bug #457786
 
 *policycoreutils-2.1.13-r6 (30 Dec 2012)
 
