@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.5.11.ebuild,v 1.2 2013/02/28 07:49:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.5.11.ebuild,v 1.3 2013/03/09 10:15:17 hwoarang Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://tt-rss.org/"
 SRC_URI="http://tt-rss.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="daemon mysql postgres"
 
 DEPEND=" daemon? ( dev-lang/php[mysql?,postgres?,pcntl,curl] )
