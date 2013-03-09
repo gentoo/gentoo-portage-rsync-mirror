@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13_p201211.ebuild,v 1.2 2013/02/15 18:25:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13_p201211.ebuild,v 1.3 2013/03/09 14:12:13 aballier Exp $
 
 EAPI=5
 
@@ -45,7 +45,8 @@ src_prepare() {
 	# compat bits for older ffmpeg/libav releases
 	epatch "${FILESDIR}/${PV}-channel_layout.patch" \
 		"${FILESDIR}/${PV}-iscodec.patch" \
-		"${FILESDIR}/${PV}-coma.patch"
+		"${FILESDIR}/${PV}-coma.patch" \
+		"${FILESDIR}/${PV}-gstffmpegpipe_redef.patch"
 }
 
 src_configure() {

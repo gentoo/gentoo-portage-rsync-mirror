@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.77 2013/03/09 13:24:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.78 2013/03/09 14:20:05 ago Exp $
+
+  09 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libaio-0.3.109-r4.ebuild:
+  Stable for ia64, wrt bug #460704
 
   09 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libaio-0.3.109-r4.ebuild:
   Stable for alpha, wrt bug #460704
