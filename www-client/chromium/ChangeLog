@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.839 2013/03/09 05:25:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.840 2013/03/09 18:00:25 floppym Exp $
+
+  09 Mar 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/chromium-jsoncpp-path-r0.patch, chromium-26.0.1410.19.ebuild:
+  Backport phajdan's jsoncpp include path patch to M26, bug 452234.
 
   09 Mar 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-25.0.1364.160.ebuild, chromium-26.0.1410.19.ebuild,

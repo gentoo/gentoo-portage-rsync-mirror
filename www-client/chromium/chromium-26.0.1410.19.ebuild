@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-26.0.1410.19.ebuild,v 1.6 2013/03/09 05:25:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-26.0.1410.19.ebuild,v 1.7 2013/03/09 18:00:25 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -34,7 +34,7 @@ RDEPEND="app-accessibility/speech-dispatcher
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat
 	>=dev-libs/icu-49.1.1-r1:=
-	=dev-libs/jsoncpp-0.5.0
+	dev-libs/jsoncpp
 	>=dev-libs/libevent-1.4.13
 	dev-libs/libxml2[icu]
 	dev-libs/libxslt
@@ -134,6 +134,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-mesa-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-v8-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r2.patch"
+
+	epatch "${FILESDIR}/${PN}-jsoncpp-path-r0.patch"
 
 	epatch_user
 

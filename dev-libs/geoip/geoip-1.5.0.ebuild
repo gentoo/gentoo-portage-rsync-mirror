@@ -1,27 +1,29 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.8-r1.ebuild,v 1.10 2013/01/25 14:54:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.5.0.ebuild,v 1.1 2013/03/09 17:31:47 jer Exp $
 
-EAPI=4
+EAPI=5
 
-inherit autotools
-
-MY_P=${P/geoip/GeoIP}
+MY_P="${P/geoip/GeoIP}"
+GEOLITE_URI="http://geolite.maxmind.com/download/geoip/database/"
 
 DESCRIPTION="easily lookup countries by IP addresses, even when Reverse DNS entries don't exist"
 HOMEPAGE="http://www.maxmind.com/app/ip-location"
 SRC_URI="
 	http://www.maxmind.com/download/geoip/api/c/${MY_P}.tar.gz
-	http://geolite.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz
-	ipv6? ( http://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz
-		http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz )
+	${GEOLITE_URI}asnum/GeoIPASNum.dat.gz
+	city? ( ${GEOLITE_URI}GeoLiteCity.dat.gz )
+	ipv6? (
+		${GEOLITE_URI}GeoIPv6.dat.gz
+		city? ( ${GEOLITE_URI}GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz )
+	)
 "
 
 # GPL-2 for md5.c - part of libGeoIPUpdate, MaxMind for GeoLite Country db
 LICENSE="LGPL-2.1 GPL-2 MaxMind2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
-IUSE="ipv6 perl-geoipupdate static-libs"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
+IUSE="city ipv6 perl-geoipupdate static-libs"
 
 DEPEND="sys-libs/zlib"
 RDEPEND="
@@ -40,8 +42,6 @@ src_prepare() {
 		-i apps/geoipupdate-pureperl.pl || die
 	sed -e 's|yahoo.com|98.139.183.24|g' \
 		-i test/country_test_name.txt test/region_test.txt || die
-
-	eautoreconf
 }
 
 src_configure() {
@@ -59,11 +59,12 @@ src_install() {
 
 	insinto /usr/share/GeoIP
 	doins "${WORKDIR}/GeoIPASNum.dat"
+	use city && doins "${WORKDIR}/GeoLiteCity.dat"
 
 	if use ipv6; then
-		doins "${WORKDIR}/GeoIPv6.dat" || die
-		doins "${WORKDIR}/GeoLiteCityv6.dat"
+		doins "${WORKDIR}/GeoIPv6.dat"
+		use city && doins "${WORKDIR}/GeoLiteCityv6.dat"
 	fi
 
-	newsbin "${FILESDIR}/geoipupdate-r1.sh" geoipupdate.sh
+	newsbin "${FILESDIR}/geoipupdate-r2.sh" geoipupdate.sh
 }
