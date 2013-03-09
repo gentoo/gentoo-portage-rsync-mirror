@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.3.ebuild,v 1.10 2013/01/14 07:14:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.3.ebuild,v 1.11 2013/03/09 11:18:42 pinkbyte Exp $
 
 EAPI=4
 
@@ -53,6 +53,11 @@ src_prepare() {
 
 	# QA: remove deprecated line from desktop file
 	sed -e '/Encoding=UTF-8/d' -i ${PN}.desktop || die 'sed failed'
+
+	# Fix to compile with USE=-gtk when there is no gtk installed
+	if ! use gtk ; then
+		 sed -i 's/AM_PATH_GTK_2_0//' configure.ac || die 'sed failed'
+	fi
 
 	./autogen.sh || die
 }

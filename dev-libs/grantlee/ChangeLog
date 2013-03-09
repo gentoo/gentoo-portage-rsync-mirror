@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/grantlee
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.20 2013/03/02 19:59:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.21 2013/03/09 11:28:33 dilfridge Exp $
+
+  09 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> grantlee-0.3.0.ebuild,
+  +files/grantlee-0.3.0-nonfatal-warnings.patch:
+  Do not make linker warnings fatal, fixes bug 430968
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> grantlee-0.1.9.ebuild,
   grantlee-0.2.0.ebuild, grantlee-0.3.0.ebuild:

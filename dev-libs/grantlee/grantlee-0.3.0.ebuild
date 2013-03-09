@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/grantlee-0.3.0.ebuild,v 1.2 2013/03/02 19:59:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/grantlee-0.3.0.ebuild,v 1.3 2013/03/09 11:28:32 dilfridge Exp $
 
 EAPI=4
 
@@ -32,7 +32,10 @@ DOCS=(AUTHORS CHANGELOG GOALS README)
 # Some tests fail
 RESTRICT="test"
 
-PATCHES=( "${FILESDIR}/${PN}-0.1.9-qt-test-optional.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-0.1.9-qt-test-optional.patch"
+	"${FILESDIR}/${PN}-0.3.0-nonfatal-warnings.patch"
+)
 
 src_configure() {
 	mycmakeargs=(
