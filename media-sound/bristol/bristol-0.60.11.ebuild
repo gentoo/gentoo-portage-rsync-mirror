@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/bristol-0.60.10.ebuild,v 1.1 2012/06/30 05:54:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/bristol-0.60.11.ebuild,v 1.1 2013/03/09 21:42:48 radhermit Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit eutils autotools
 
@@ -13,13 +13,13 @@ SRC_URI="mirror://sourceforge/bristol/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa oss pulseaudio static-libs"
+IUSE="alsa oss static-libs"
 # osc : configure option but no code it seems...
 # jack: fails to build if disabled
+# pulseaudio: not fully supported
 
 RDEPEND=">=media-sound/jack-audio-connection-kit-0.109.2
 	alsa? ( >=media-libs/alsa-lib-1.0.0 )
-	pulseaudio? ( media-sound/pulseaudio )
 	x11-libs/libX11"
 # osc? ( >=media-libs/liblo-0.22 )
 DEPEND="${RDEPEND}
@@ -29,7 +29,8 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS ChangeLog HOWTO NEWS README )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.60.9-cflags.patch
+	epatch "${FILESDIR}"/${P}-cflags.patch
+	epatch "${FILESDIR}"/${P}-implicit-dec.patch
 	eautoreconf
 }
 
@@ -38,8 +39,7 @@ src_configure() {
 		$(use_enable static-libs static) \
 		--disable-version-check \
 		$(use_enable oss) \
-		$(use_enable alsa) \
-		$(use_enable pulseaudio)
+		$(use_enable alsa)
 }
 
 src_install() {

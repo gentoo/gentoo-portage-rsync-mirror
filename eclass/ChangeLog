@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.730 2013/03/09 21:05:50 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.731 2013/03/09 21:36:07 robbat2 Exp $
+
+  09 Mar 2013; Robin H. Johnson <robbat2@gentoo.org> mysql-autotools.eclass:
+  Bug #401733: nested configure scripts in MySQL generate unrecognized options
+  false positives when toplevel configure passes downwards.
 
   09 Mar 2013; Tom Wijsman <TomWij@gentoo.org> kernel-2.eclass:
   Kernel sources and (gen)patches now use xz instead of bz2. Bug #421721.

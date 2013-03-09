@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14538 2013/03/09 11:04:38 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14539 2013/03/09 21:33:29 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -307,11 +307,6 @@ games-arcade/bitefusion
 # The package was not pkg-moved to fix the upstream versioning mess.
 # Removal in 30 days
 www-client/xxxterm
-
-# Michael Sterrett <mr_bones_@gentoo.org> (28 Jan 2013)
-# Doesn't work with newer KDE and upstream seems dead (bug #453756)
-# Masked for removal on 20130227
-games-puzzle/kmagnet
 
 # Samuli Suominen <ssuominen@gentoo.org> (28 Jan 2013)
 # Uncompatible with current udev and baselayout

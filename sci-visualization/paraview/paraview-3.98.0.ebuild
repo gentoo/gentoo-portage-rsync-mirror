@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.98.0.ebuild,v 1.3 2013/03/02 23:28:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.98.0.ebuild,v 1.4 2013/03/09 21:34:19 hasufell Exp $
 
 EAPI=5
 
@@ -68,13 +68,14 @@ RDEPEND="
 	tcl? ( dev-lang/tcl )
 	tk? ( dev-lang/tk )"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	boost? ( >=dev-libs/boost-1.40.0[mpi?,${PYTHON_USEDEP}] )
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	use python && python-single-r1_pkg_setup
+	python-single-r1_pkg_setup
 	PVLIBDIR=$(get_libdir)/${PN}-${MAJOR_PV}
 }
 
@@ -137,6 +138,9 @@ src_configure() {
 		-DVTK_USE_FFMPEG_ENCODER=OFF
 		-DPROTOC_LOCATION=$(type -P protoc)
 		-DVTK_Group_StandAlone=ON
+		# force this module due to incorrect build system deps
+		# wrt bug 460528
+		-DModule_vtkUtilitiesProcessXML=ON
 		)
 
 	# TODO: XDMF_USE_MYSQL?
@@ -192,7 +196,7 @@ src_configure() {
 	mycmakeargs+=(
 		$(cmake-utils_use plugins PARAVIEW_INSTALL_DEVELOPMENT)
 		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_AdiosReader)
-		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_AnalyzeNIfTIReaderWriter)
+		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_AnalyzeNIfTIIO)
 		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_ArrowGlyph)
 		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_EyeDomeLighting)
 		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_ForceTime)
@@ -200,7 +204,7 @@ src_configure() {
 		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_H5PartReader)
 		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_Moments)
 		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_NonOrthogonalSource)
-		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_Pacman)
+		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_PacMan)
 		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_PointSprite)
 		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_PrismPlugin)
 		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_QuadView)
@@ -208,7 +212,7 @@ src_configure() {
 		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_SciberQuestToolKit)
 		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_SierraPlotTools)
 		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_SurfaceLIC)
-		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_UnvertaintyRendering)
+		$(cmake-utils_use plugins PARAVIEW_BUILD_PLUGIN_UncertaintyRendering)
 		)
 
 	cmake-utils_src_configure

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.15 2013/02/13 00:40:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.16 2013/03/09 21:36:07 robbat2 Exp $
 
 # @ECLASS: mysql-autotools.eclass
 # @MAINTAINER:
@@ -456,6 +456,8 @@ mysql-autotools_src_prepare() {
 # @DESCRIPTION:
 # Configure mysql to build the code for Gentoo respecting the use flags.
 mysql-autotools_src_configure() {
+	# bug 401733
+	export QA_CONFIGURE_OPTIONS=".*"
 
 	# Make sure the vars are correctly initialized
 	mysql_init_vars
