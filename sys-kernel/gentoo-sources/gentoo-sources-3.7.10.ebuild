@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-3.7.10.ebuild,v 1.8 2013/03/06 20:21:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-3.7.10.ebuild,v 1.9 2013/03/09 21:07:31 tomwij Exp $
 
-EAPI="3"
+EAPI="5"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
 K_GENPATCHES_VER="13"

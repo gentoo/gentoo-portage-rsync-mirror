@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/rt-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/ChangeLog,v 1.17 2013/03/04 11:28:44 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/ChangeLog,v 1.18 2013/03/09 21:07:33 tomwij Exp $
+
+  09 Mar 2013; Tom Wijsman <TomWij@gentoo.org> rt-sources-3.0.27_p46.ebuild,
+  rt-sources-3.2.14_p24.ebuild, rt-sources-3.4.33_p47.ebuild:
+  EAPI 5. Kernel sources and (gen)patches now use xz instead of bz2. Bug
+  #421721.
 
   04 Mar 2013; <psomas@gentoo.org> -rt-sources-3.0.14_p31.ebuild:
   Clean older ebuild
@@ -97,4 +102,3 @@
   17 Aug 2011; Stratos Psomadakis <psomas@gentoo.org>
   +rt-sources-3.0.1_p11.ebuild, +metadata.xml:
   New package and ebuild for the real-time kernel patchset
-

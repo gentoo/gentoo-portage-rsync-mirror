@@ -1,4 +1,9 @@
 
+  09 Mar 2013; Tom Wijsman <TomWij@gentoo.org> rsbac-sources-3.1.5.ebuild,
+  rsbac-sources-3.2.19.ebuild, rsbac-sources-3.3.8.ebuild,
+  rsbac-sources-3.4.1.ebuild:
+  EAPI 5. Kernel sources and (gen)patches now use xz instead of bz2. Bug
+  #421721.
 
 *rsbac-sources-3.4.1 (09 Jun 2012)
 
@@ -26,4 +31,3 @@
   07 Jan 2012; Anthony G. Basile <blueness@gentoo.org>
   +rsbac-sources-3.1.5.ebuild, +metadata.xml:
   Initial resurrection
-

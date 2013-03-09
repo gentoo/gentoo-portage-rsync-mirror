@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/tuxonice-sources
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.152 2012/12/30 21:08:16 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.153 2013/03/09 21:07:32 tomwij Exp $
+
+  09 Mar 2013; Tom Wijsman <TomWij@gentoo.org> tuxonice-sources-3.0.35.ebuild,
+  tuxonice-sources-3.0.57.ebuild, tuxonice-sources-3.3.8-r1.ebuild,
+  tuxonice-sources-3.3.8-r2.ebuild, tuxonice-sources-3.3.8.ebuild,
+  tuxonice-sources-3.4.11.ebuild, tuxonice-sources-3.4.24.ebuild,
+  tuxonice-sources-3.5.7.ebuild, tuxonice-sources-3.6.11.ebuild,
+  tuxonice-sources-3.7.1.ebuild:
+  EAPI 5. Kernel sources and (gen)patches now use xz instead of bz2. Bug
+  #421721.
 
 *tuxonice-sources-3.4.24 (30 Dec 2012)
 *tuxonice-sources-3.0.57 (30 Dec 2012)

@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-3.6.11.ebuild,v 1.1 2012/12/27 09:13:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-3.6.11.ebuild,v 1.2 2013/03/09 21:07:33 tomwij Exp $
 
 # EAPI Version
-EAPI=4
+EAPI="5"
 
 # INCLUDED:
 # 1) linux sources from kernel.org

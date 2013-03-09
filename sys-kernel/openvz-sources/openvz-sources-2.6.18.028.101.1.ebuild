@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.18.028.101.1.ebuild,v 1.2 2013/01/11 13:31:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.18.028.101.1.ebuild,v 1.3 2013/03/09 21:07:32 tomwij Exp $
+
+EAPI="5"
 
 inherit versionator
 
@@ -17,11 +19,13 @@ OVZ_KERNEL="$(get_version_component_range 4)stab$(get_version_component_range 5)
 OVZ_REV="$(get_version_component_range 6)"
 EXTRAVERSION=-${OVZ_KERNEL}
 S=${WORKDIR}/linux-${KV_FULL}
-KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
+
 # ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH} should succeed.
 KV_MAJOR=$(get_version_component_range 1 ${OKV})
 KV_MINOR=$(get_version_component_range 2 ${OKV})
 KV_PATCH=$(get_version_component_range 3 ${OKV})
+
+KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.xz"
 
 inherit kernel-2
 

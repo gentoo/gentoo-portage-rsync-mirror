@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.187 2013/03/05 20:21:45 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.188 2013/03/09 21:07:32 tomwij Exp $
+
+  09 Mar 2013; Tom Wijsman <TomWij@gentoo.org>
+  openvz-sources-2.6.18.028.099.3.ebuild,
+  openvz-sources-2.6.18.028.101.1.ebuild, openvz-sources-2.6.32.11.1.ebuild,
+  openvz-sources-2.6.32.49.6.ebuild, openvz-sources-2.6.32.53.5.ebuild,
+  openvz-sources-2.6.32.62.2.ebuild, openvz-sources-2.6.32.68.8.ebuild,
+  openvz-sources-2.6.32.72.10.ebuild, openvz-sources-2.6.32.74.10.ebuild:
+  EAPI 5. Kernel sources and (gen)patches now use xz instead of bz2. Bug
+  #421721.
 
 *openvz-sources-2.6.32.74.10 (05 Mar 2013)
 

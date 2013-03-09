@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/rt-sources-3.0.27_p46.ebuild,v 1.1 2012/04/11 14:42:39 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/rt-sources-3.0.27_p46.ebuild,v 1.2 2013/03/09 21:07:33 tomwij Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit versionator
 

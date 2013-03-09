@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/pf-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.90 2013/02/16 11:18:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.91 2013/03/09 21:07:31 tomwij Exp $
+
+  09 Mar 2013; Tom Wijsman <TomWij@gentoo.org> pf-sources-2.6.31_p9.ebuild,
+  pf-sources-2.6.32_p16.ebuild, pf-sources-2.6.33_p4.ebuild,
+  pf-sources-2.6.34_p7.ebuild, pf-sources-2.6.35_p11.ebuild,
+  pf-sources-2.6.36_p6.ebuild, pf-sources-2.6.37_p6.ebuild,
+  pf-sources-2.6.38_p8.ebuild, pf-sources-2.6.39_p4.ebuild,
+  pf-sources-3.0.7-r2.ebuild, pf-sources-3.1.6-r2.ebuild,
+  pf-sources-3.2.7.ebuild, pf-sources-3.3.6.ebuild, pf-sources-3.4.6.ebuild,
+  pf-sources-3.5.4.ebuild, pf-sources-3.6.11.ebuild, pf-sources-3.6.12.ebuild,
+  pf-sources-3.7.1.ebuild, pf-sources-3.7.2.ebuild, pf-sources-3.7.3.ebuild,
+  pf-sources-3.7.4.ebuild:
+  EAPI 5. Kernel sources and (gen)patches now use xz instead of bz2. Bug
+  #421721.
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> pf-sources-3.7.5.ebuild:
   Don't show elog messages always (#457596)

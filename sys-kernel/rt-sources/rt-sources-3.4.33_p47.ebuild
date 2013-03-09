@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/rt-sources-3.4.33_p47.ebuild,v 1.1 2013/03/04 11:23:41 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/rt-sources-3.4.33_p47.ebuild,v 1.2 2013/03/09 21:07:33 tomwij Exp $
 
-EAPI="2"
+EAPI="5"
 ETYPE="sources"
 KEYWORDS="~amd64"
 

@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.6.16.26.ebuild,v 1.2 2007/01/02 01:49:25 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.6.16.26.ebuild,v 1.3 2013/03/09 21:07:31 tomwij Exp $
+
+EAPI="5"
 
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
