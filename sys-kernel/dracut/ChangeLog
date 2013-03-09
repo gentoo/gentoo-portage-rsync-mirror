@@ -1,6 +1,36 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.109 2013/02/02 23:12:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.110 2013/03/09 20:06:40 aidecoe Exp $
+
+*dracut-025 (09 Mar 2013)
+
+  09 Mar 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/025-0001-dracut-functions.sh-support-for-altern.patch,
+  +files/025-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +files/025-0003-rootfs-block-mount-root.sh-fixup-for-8.patch,
+  +files/025-0004-dracut.sh-reverting-return-value-chang.patch,
+  +files/025-0005-Mount-proc-before-including-dracut-lib.patch,
+  +dracut-025.ebuild:
+  Version bump.
+
+  NEWS
+  ~~~~
+
+  - do not strip signed kernel modules
+  - add sosreport script and generate /run/initramfs/sosreport.txt
+  - make short uuid specification for allow-discards work
+  - turn off RateLimit for the systemd journal
+  - fixed MAC address assignment
+  - add systemd checkisomd5 service
+  - splitout drm kernel modules from plymouth module
+  - add 'swapoff' to initramfs to fix shutdown/reboot
+  - add team device support
+  - add pre-shutdown hook
+  - kill all processes in shutdown and report remaining ones
+  - "--device" changed to "--add-device" and "add_device=" added for conf files
+  - add memory usage trace to different hook points
+  - cope with optional field #7 in /proc/self/mountinfo
+  - lots of small bugfixes
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> dracut-024-r4.ebuild:
   Add ~arm, wrt bug #449220
