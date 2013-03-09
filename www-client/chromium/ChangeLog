@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.838 2013/03/08 22:09:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.839 2013/03/09 05:25:39 phajdan.jr Exp $
+
+  09 Mar 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-25.0.1364.160.ebuild, chromium-26.0.1410.19.ebuild,
+  chromium-27.0.1430.0.ebuild, chromium-9999-r1.ebuild:
+  Revert -mno-sse4 change, it breaks systems (reported by tetromino).
 
   08 Mar 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-25.0.1364.160.ebuild, chromium-26.0.1410.19.ebuild,
