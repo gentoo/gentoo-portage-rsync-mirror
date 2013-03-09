@@ -1,18 +1,23 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-9999.ebuild,v 1.7 2013/03/09 17:13:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-0_pre20130309.ebuild,v 1.1 2013/03/09 17:13:03 hwoarang Exp $
 
 EAPI=5
 
-inherit git-2 readme.gentoo
+inherit readme.gentoo
+
+[[ "${PV}" == "9999" ]] && inherit git-2
 
 DESCRIPTION="The Gentoo Development Guide"
 HOMEPAGE="http://devmanual.gentoo.org/"
+if [[ "${PV}" == "9999" ]]; then
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/devmanual.git"
+else
+SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
+fi
 
 LICENSE="CC-BY-SA-2.0"
 SLOT="0"
-# Live ebuild but does not build anything. It should work everywhere
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh
 ~sparc ~x86"
 IUSE=""

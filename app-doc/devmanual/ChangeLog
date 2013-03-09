@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/devmanual
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/ChangeLog,v 1.6 2013/02/26 18:31:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/ChangeLog,v 1.7 2013/03/09 17:13:03 hwoarang Exp $
+
+*devmanual-0_pre20130309 (09 Mar 2013)
+
+  09 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
+  +devmanual-0_pre20130309.ebuild, devmanual-9999.ebuild:
+  Add snapshot ebuild per #460084
 
   26 Feb 2013; Markos Chandras <hwoarang@gentoo.org> devmanual-9999.ebuild:
   Typo

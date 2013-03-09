@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.245 2013/03/06 16:28:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.246 2013/03/09 17:18:53 jer Exp $
+
+  09 Mar 2013; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.7-r2.ebuild:
+  Fix USE=static-libs by Alphat-PC (bug #460576).
 
   06 Mar 2013; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.7-r2.ebuild:
   Add USE=static-libs by A.M. (bug #460348).

@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>vadimk@gentoo.org</email>
-    <name>Vadim Kuznetsov</name>
+	<email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <longdescription lang="en">
 igraph is a free software package for creating and manipulating undirected and 
