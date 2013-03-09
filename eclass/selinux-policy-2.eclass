@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.16 2013/01/26 15:01:52 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.17 2013/03/09 12:07:50 swift Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -241,6 +241,11 @@ selinux-policy-2_pkg_postinst() {
 	done
 
 	for i in ${POLICY_TYPES}; do
+		if [ "${i}" == "strict" ] && [ "${MODS}" = "unconfined" ];
+		then
+			einfo "Ignoring loading of unconfined module in strict module store.";
+			continue;
+		fi
 		einfo "Inserting the following modules into the $i module store: ${MODS}"
 
 		cd /usr/share/selinux/${i} || die "Could not enter /usr/share/selinux/${i}"

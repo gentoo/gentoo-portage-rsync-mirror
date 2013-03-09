@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.122 2013/03/09 12:01:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.123 2013/03/09 12:07:50 aballier Exp $
 
 EAPI="4"
 
@@ -142,8 +142,8 @@ src_configure() {
 	# options to use as use_enable in the foo[:bar] form.
 	# This will feed configure with $(use_enable foo bar)
 	# or $(use_enable foo foo) if no :bar is set.
-	local ffuse="bzip2:bzlib cpudetection:runtime-cpudetect debug doc gnutls
-				 iconv network openssl sdl:ffplay vaapi vdpau zlib"
+	local ffuse="avresample bzip2:bzlib cpudetection:runtime-cpudetect debug doc
+			     gnutls hardcoded-tables iconv network openssl sdl:ffplay vaapi vdpau zlib"
 	use openssl && myconf="${myconf} --enable-nonfree"
 
 	# Encoders
@@ -245,12 +245,6 @@ src_configure() {
 				;;
 		esac
 	fi
-
-	# avresample support for libav compatibility
-	use avresample && myconf="${myconf} --enable-avresample"
-
-	# Misc stuff
-	use hardcoded-tables && myconf="${myconf} --enable-hardcoded-tables"
 
 	"${S}/configure" \
 		--prefix="${EPREFIX}/usr" \

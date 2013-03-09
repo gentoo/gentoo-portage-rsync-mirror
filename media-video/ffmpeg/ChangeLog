@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.616 2013/03/09 12:01:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.617 2013/03/09 12:07:50 aballier Exp $
+
+  09 Mar 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  factorize some more code into ffuse
 
   09 Mar 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   handle enabling gpl3 the same way we handle non-free: through myconf and
