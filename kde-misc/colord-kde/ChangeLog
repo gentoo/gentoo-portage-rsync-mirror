@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/colord-kde
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/colord-kde/ChangeLog,v 1.1 2013/03/09 19:05:03 dilfridge Exp $
+
+*colord-kde-0.2.0 (09 Mar 2013)
+
+  09 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +colord-kde-0.2.0.ebuild, +metadata.xml:
+  New package, imported from KDE overlay; bug 442776
+
