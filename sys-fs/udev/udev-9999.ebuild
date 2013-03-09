@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.183 2013/03/08 22:51:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.185 2013/03/08 23:19:55 ssuominen Exp $
 
 EAPI=4
 
@@ -88,7 +88,7 @@ check_default_rules()
 {
 	# Make sure there are no sudden changes to upstream rules file
 	# (more for my own needs than anything else ...)
-	local udev_rules_md5=66bb698deeae64ab444b710baf54a412
+	local udev_rules_md5=a3e16362de3750807b52eae9525c102c
 	MD5=$(md5sum < "${S}"/rules/50-udev-default.rules)
 	MD5=${MD5/  -/}
 	if [[ ${MD5} != ${udev_rules_md5} ]]
@@ -305,6 +305,7 @@ src_install()
 		install-typelibsDATA
 		install-dist_docDATA
 		libudev-install-hook
+		install-directories-hook
 	)
 
 	if use gudev
@@ -328,6 +329,8 @@ src_install()
 				units/systemd-udev-settle.service"
 		pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 		systemunitdir="$(systemd_get_unitdir)"
+		INSTALL_DIRS='$(sysconfdir)/udev/rules.d \
+				$(sysconfdir)/udev/hwdb.d'
 	)
 	emake DESTDIR="${D}" "${targets[@]}"
 	if use doc
@@ -356,8 +359,6 @@ src_install()
 	dosym /sbin/udevd "$(systemd_get_utildir)"/systemd-udevd
 	find "${ED}/$(systemd_get_unitdir)" -name '*.service' -exec \
 		sed -i -e "/ExecStart/s:/lib/systemd:$(systemd_get_utildir):" {} +
-
-	keepdir /etc/udev/rules.d
 }
 
 pkg_preinst()
@@ -463,6 +464,13 @@ pkg_postinst()
 			ewarn "deprecation warning."
 		fi
 	done
+
+	if has_version sys-apps/biosdevname
+	then
+		ewarn
+		ewarn "You have sys-apps/biosdevname installed which has been deprecated"
+		ewarn "in favour of the predicatable network interface names."
+	fi
 
 	ewarn
 	ewarn "We don't install ${ROOT}etc/udev/rules.d/80-net-name-slot.rules anymore"
