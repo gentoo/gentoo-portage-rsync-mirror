@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare
-DEPEND=!app-text/hd2u !app-text/unix2dos virtual/libintl dev-lang/perl
+DEPEND=!app-text/hd2u !app-text/unix2dos virtual/libintl nls? ( sys-devel/gettext ) dev-lang/perl
 DESCRIPTION=Convert DOS or MAC text files to UNIX format or vice versa
 EAPI=4
 HOMEPAGE=http://www.xs4all.nl/~waterlan/dos2unix.html http://sourceforge.net/projects/dos2unix/
@@ -10,4 +10,4 @@ RDEPEND=!app-text/hd2u !app-text/unix2dos virtual/libintl
 SLOT=0
 SRC_URI=http://www.xs4all.nl/~waterlan/dos2unix/dos2unix-6.0.3.tar.gz mirror://sourceforge/dos2unix/dos2unix-6.0.3.tar.gz
 _eclasses_=multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=06bc51a9fe7bfb3bcb1b4bfb104604e8
+_md5_=3b459c89b687994242757db7356e4472

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.121 2013/01/25 21:42:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.122 2013/03/09 02:12:26 radhermit Exp $
+
+  09 Mar 2013; Tim Harder <radhermit@gentoo.org> dos2unix-6.0.2.ebuild,
+  dos2unix-6.0.3.ebuild:
+  Add gettext dep when nls is enabled.
 
 *dos2unix-6.0.3 (25 Jan 2013)
 
