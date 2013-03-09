@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.91 2013/01/22 17:31:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.92 2013/03/09 07:43:45 ulm Exp $
+
+*gentoo-syntax-1.21 (08 Mar 2013)
+
+  08 Mar 2013; Ulrich Müller <ulm@gentoo.org> -gentoo-syntax-1.19.ebuild,
+  +gentoo-syntax-1.21.ebuild:
+  Version bump. Remove old.
 
   22 Jan 2013; Agostino Sarubbo <ago@gentoo.org> gentoo-syntax-1.20.ebuild:
   Stable for x86, wrt bug #451924

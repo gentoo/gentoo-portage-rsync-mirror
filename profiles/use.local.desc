@@ -953,8 +953,6 @@ app-text/gonzui:zip - Enable ZIP archive support
 app-text/gtranslator:http - Enable support for open translation plugin using net-libs/libsoup
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
 app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
-app-text/leechcraft-monocle:fb2 - Enable support for FictionBook format
-app-text/leechcraft-monocle:spectre - Enable PostScript backend for Monocle using the app-text/libspectre
 app-text/libgxps:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/liblangtag:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/libwpd:tools - Build miscellaneous tools
@@ -4643,8 +4641,6 @@ net-misc/icecast:logrotate - Install support files for app-admin/logrotate?
 net-misc/icecast:yp - Build support for yp public directory listings
 net-misc/iputils:SECURITY_HAZARD - Allow non-root users to flood (ping -f). This is generally a very bad idea.
 net-misc/knock:server - Installs the knockd server daemon.
-net-misc/leechcraft-netstoremanager:googledrive - Support Google Drive storage backend
-net-misc/leechcraft-netstoremanager:yandexdisk - Support Yandex.Disk storage backend
 net-misc/lldpd:cdp - Enable Cisco Discovery Protocol
 net-misc/lldpd:dot1 - Enable Dot1 extension (VLAN stuff)
 net-misc/lldpd:dot3 - Enable Dot3 extension (PHY stuff)
@@ -5779,8 +5775,6 @@ sys-fs/eudev:openrc - install the OpenRC init scripts
 sys-fs/ext4magic:expert-mode - Builds ext4magic with expert mode. Highly useful in recovering data from a corrupted filesystem
 sys-fs/ext4magic:file-attr - Enable the recovery of file attributes (append, immutable, nodump etc)
 sys-fs/fur:void-chmod - Enable fake hook for "chmod" that will only return 0
-sys-fs/leechcraft-vrooby:udisks - Use sys-fs/udisks:0 for block device access (e.g., automounting)
-sys-fs/leechcraft-vrooby:udisks2 - Use sys-fs/udisks:2 for block device access (e.g., automounting)
 sys-fs/lessfs:filelog - Enable the ability to log to a file instead of syslog
 sys-fs/lessfs:memtrace - Enable leefs to create a report regarding the memory allocation. This feature should be used for debugging purposes to avoid performance degradation
 sys-fs/loop-aes:aes-ni - Enable support for Intel's AES instruction set
@@ -6004,15 +5998,6 @@ www-client/firefox:system-jpeg - Use the system-wide media-libs/libjpeg-turbo Us
 www-client/firefox:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 www-client/firefox:webm - Use system media-libs/libvpx for HTML5 WebM video support.
 www-client/google-chrome:plugins - Add system plugins path to launcher
-www-client/leechcraft-poshuku:cleanweb - Build CleanWeb for ad blocking compatible with Firefox's AdBlock+.
-www-client/leechcraft-poshuku:fatape - Build FatApe, GreaseMonkey userscripts support layer.
-www-client/leechcraft-poshuku:filescheme - Build FileScheme for accessing local URLs.
-www-client/leechcraft-poshuku:fua - Build FUA for faking user agents for different hosts.
-www-client/leechcraft-poshuku:keywords - Build Keywords for adjusting search shortcuts.
-www-client/leechcraft-poshuku:onlinebookmarks - Build OnlineBookmarks for syncing bookmarks with social bookmarking services like Read It Later.
-www-client/leechcraft-poshuku:pcre - Use dev-libs/libpcre for rules matching in CleanWeb instead of slower QRegExp.
-www-client/leechcraft-poshuku:pogooglue - Build Pogooglue for searching for selected words in Google in two clicks
-www-client/leechcraft-poshuku:wyfv - Build WYFV for replacing Flash-based video players on some sites.
 www-client/links:deprecated - Install deprecated 'links2 -> links' symlink for compability reasons temporarily
 www-client/luakit:helpers - Optional tools used by luakit
 www-client/luakit:luajit - Use the lua just-in-time compiler dev-lang/luajit instead of dev-lang/lua, which should make luakit faster.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/icalendar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.23 2013/02/22 08:26:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.24 2013/03/09 07:32:15 idella4 Exp $
+
+  09 Mar 2013; Ian Delaney <idella4@gentoo.org> icalendar-3.3.ebuild:
+  pypy support added
 
 *icalendar-3.3 (22 Feb 2013)
 
