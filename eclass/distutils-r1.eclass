@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.62 2013/03/04 19:29:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.63 2013/03/09 13:13:02 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -508,10 +508,9 @@ distutils-r1_python_install_all() {
 	fi
 
 	if declare -p EXAMPLES &>/dev/null; then
-		local DOCDESTTREE=examples
-		dodoc -r "${EXAMPLES[@]}"
-
-		docompress -x /usr/share/doc/${PF}/examples
+		local INSDESTTREE=/usr/share/doc/${PF}/examples
+		doins -r "${EXAMPLES[@]}"
+		docompress -x "${INSDESTTREE}"
 	fi
 }
 
