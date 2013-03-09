@@ -1,0 +1,11 @@
+diff -ur irc-8.0.orig/setup.py irc-8.0/setup.py
+--- irc-8.0.orig/setup.py	2013-01-12 22:14:36.000000000 +0800
++++ irc-8.0/setup.py	2013-03-09 16:53:15.012847123 +0800
+@@ -34,7 +34,6 @@
+     install_requires=[
+     ] + importlib_req + argparse_req,
+     setup_requires=[
+-        'hgtools',
+         'pytest-runner',
+     ],
+     tests_require=[
