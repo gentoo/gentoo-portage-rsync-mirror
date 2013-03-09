@@ -1,4 +1,9 @@
 
+*selinux-pan-2.20120725-r12 (09 Mar 2013)
+
+  09 Mar 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-pan-2.20120725-r12.ebuild:
+  Pushing out rev 12
 
   23 Feb 2013; Sven Vermeulen <swift@gentoo.org>
   selinux-pan-2.20120725-r11.ebuild:

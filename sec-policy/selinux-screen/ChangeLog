@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-screen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-screen/ChangeLog,v 1.42 2013/02/23 17:24:36 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-screen/ChangeLog,v 1.43 2013/03/09 12:37:04 swift Exp $
+
+*selinux-screen-2.20120725-r12 (09 Mar 2013)
+
+  09 Mar 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-screen-2.20120725-r12.ebuild:
+  Pushing out rev 12
 
   23 Feb 2013; Sven Vermeulen <swift@gentoo.org>
   selinux-screen-2.20120725-r11.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.5.2.ebuild,v 1.2 2013/03/09 08:49:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.5.2.ebuild,v 1.3 2013/03/09 12:55:52 mgorny Exp $
 
 EAPI=5
 
@@ -35,12 +35,6 @@ python_prepare_all() {
 	sed -i -e 's:xcodebuild:nocodebuild:' setup.py || die
 
 	distutils-r1_python_prepare_all
-}
-
-# XXX: temporary, needed to get ${PYTHON} set
-# https://bugs.gentoo.org/show_bug.cgi?id=460016
-python_configure() {
-	:
 }
 
 python_configure_all() {
