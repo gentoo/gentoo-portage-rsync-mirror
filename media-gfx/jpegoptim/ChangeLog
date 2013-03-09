@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/jpegoptim
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegoptim/ChangeLog,v 1.21 2011/12/02 22:33:43 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpegoptim/ChangeLog,v 1.22 2013/03/09 21:00:51 radhermit Exp $
+
+*jpegoptim-1.2.5 (09 Mar 2013)
+
+  09 Mar 2013; Tim Harder <radhermit@gentoo.org> +jpegoptim-1.2.5.ebuild:
+  Version bump.
 
   02 Dec 2011; Samuli Suominen <ssuominen@gentoo.org> -jpegoptim-1.2.3.ebuild,
   -files/jpegoptim-1.2.3-parallel_make.patch:
