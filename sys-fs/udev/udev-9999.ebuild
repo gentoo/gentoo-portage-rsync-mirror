@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.185 2013/03/08 23:19:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.186 2013/03/09 13:33:32 ssuominen Exp $
 
 EAPI=4
 
@@ -211,6 +211,7 @@ src_configure()
 		--with-html-dir=/usr/share/doc/${PF}/html
 		--with-rootprefix=
 		--with-rootlibdir=/$(get_libdir)
+		--with-bashcompletiondir=/usr/share/bash-completion
 		--without-python
 		--disable-audit
 		--disable-coredump
@@ -306,6 +307,7 @@ src_install()
 		install-dist_docDATA
 		libudev-install-hook
 		install-directories-hook
+		install-dist_bashcompletionDATA
 	)
 
 	if use gudev
@@ -331,6 +333,7 @@ src_install()
 		systemunitdir="$(systemd_get_unitdir)"
 		INSTALL_DIRS='$(sysconfdir)/udev/rules.d \
 				$(sysconfdir)/udev/hwdb.d'
+		dist_bashcompletion_DATA="shell-completion/bash/udevadm"
 	)
 	emake DESTDIR="${D}" "${targets[@]}"
 	if use doc

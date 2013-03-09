@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.14 2013/02/08 18:38:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.15 2013/03/09 13:47:44 mgorny Exp $
 
 EAPI=5
 
@@ -13,8 +13,7 @@ inherit git-2
 #endif
 
 PYTHON_COMPAT=( python2_7 )
-inherit autotools-utils bash-completion-r1 linux-info pam \
-	python-single-r1 systemd
+inherit autotools-utils linux-info pam python-single-r1 systemd user
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
@@ -22,15 +21,15 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
-IUSE="acl audit cryptsetup gcrypt http +kmod lzma pam python qrcode
-	selinux tcpd vanilla xattr"
+KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
+IUSE="acl audit cryptsetup efi gcrypt http +kmod lzma pam python
+	qrcode selinux tcpd vanilla xattr"
 
 MINKV="2.6.39"
 
 COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
 	>=sys-apps/util-linux-2.20
-	~sys-fs/udev-${PV}
+	~sys-fs/udev-${PV}[acl?]
 	sys-libs/libcap
 	acl? ( sys-apps/acl )
 	audit? ( >=sys-process/audit-2 )
@@ -85,7 +84,7 @@ src_prepare() {
 	sed -i -e 's:lib\(udev\)\.la:-l\1:' Makefile.am
 
 	local PATCHES=(
-		"${FILESDIR}"/198-0001-Disable-udev-targets.patch
+		"${FILESDIR}"/199-0001-Disable-udev-targets.patch
 	)
 
 #if LIVE
@@ -115,9 +114,13 @@ src_configure() {
 		--disable-introspection
 		--disable-gtk-doc
 		--disable-gudev
+		# just text files
+		--enable-polkit
+		# optional components/dependencies
 		$(use_enable acl)
 		$(use_enable audit)
 		$(use_enable cryptsetup libcryptsetup)
+		$(use_enable efi)
 		$(use_enable gcrypt)
 		$(use_enable http microhttpd)
 		$(use_enable kmod)
@@ -136,21 +139,24 @@ src_configure() {
 
 src_install() {
 	autotools-utils_src_install \
-		bashcompletiondir=/tmp \
 		udevlibexecdir=/lib/udev
+
+	# zsh completion
+	insinto /usr/share/zsh/site-functions
+	doins shell-completion/systemd-zsh-completion.zsh
 
 	# remove pam.d plugin .la-file
 	prune_libtool_files --modules
+
+	# move nss_myhostname to rootfs (bug #460640)
+	mv "${D}"/usr/$(get_libdir)/libnss_myhostname* "${D}"/$(get_libdir)/ \
+		|| die "Unable to move nss_myhostname to rootfs"
 
 	# compat for init= use
 	dosym ../usr/lib/systemd/systemd /bin/systemd
 	dosym ../lib/systemd/systemd /usr/bin/systemd
 	# rsyslog.service depends on it...
 	dosym ../usr/bin/systemctl /bin/systemctl
-
-	# move files as necessary
-	newbashcomp "${D}"/tmp/systemd-bash-completion.sh ${PN}
-	rm -r "${D}"/tmp || die
 
 	# we just keep sysvinit tools, so no need for the mans
 	rm "${D}"/usr/share/man/man8/{halt,poweroff,reboot,runlevel,shutdown,telinit}.8 \
@@ -203,6 +209,7 @@ optfeature() {
 }
 
 pkg_postinst() {
+	enewgroup systemd-journal
 	systemd_update_catalog
 
 	mkdir -p "${ROOT}"/run || ewarn "Unable to mkdir /run, this could mean trouble."
@@ -216,10 +223,6 @@ pkg_postinst() {
 
 	elog "To get additional features, a number of optional runtime dependencies may"
 	elog "be installed:"
-	optfeature 'for systemd-analyze' \
-		'dev-lang/python:2.7' 'dev-python/dbus-python'
-	optfeature 'for systemd-analyze plotting ability' \
-		'dev-python/pycairo[svg]'
 	optfeature 'for GTK+ systemadm UI and gnome-ask-password-agent' \
 		'sys-apps/systemd-ui'
 	elog

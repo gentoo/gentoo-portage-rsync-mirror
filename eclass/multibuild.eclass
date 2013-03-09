@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.4 2013/03/04 19:27:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.5 2013/03/09 13:51:02 mgorny Exp $
 
 # @ECLASS: multibuild
 # @MAINTAINER:
@@ -203,6 +203,27 @@ multibuild_for_best_variant() {
 
 	local MULTIBUILD_VARIANTS=( "${MULTIBUILD_VARIANTS[-1]}" )
 	multibuild_foreach_variant "${@}"
+}
+
+# @FUNCTION: multibuild_copy_sources
+# @DESCRIPTION:
+# Create per-variant copies of source tree. The source tree is assumed
+# to be in ${BUILD_DIR}, or ${S} if the former is unset. The copies will
+# be placed in directories matching BUILD_DIRs used by
+# multibuild_foreach().
+multibuild_copy_sources() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local _MULTIBUILD_INITIAL_BUILD_DIR=${BUILD_DIR:-${S}}
+
+	einfo "Will copy sources from ${_MULTIBUILD_INITIAL_BUILD_DIR}"
+
+	_multibuild_create_source_copy() {
+		einfo "${impl}: copying to ${BUILD_DIR}"
+		cp -pr "${_MULTIBUILD_INITIAL_BUILD_DIR}" "${BUILD_DIR}" || die
+	}
+
+	multibuild_foreach_variant _multibuild_create_source_copy
 }
 
 # @FUNCTION: run_in_build_dir

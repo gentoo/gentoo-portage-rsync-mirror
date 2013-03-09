@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.80 2013/03/06 14:52:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.81 2013/03/09 13:47:44 mgorny Exp $
+
+*systemd-198 (09 Mar 2013)
+
+  09 Mar 2013; Michał Górny <mgorny@gentoo.org>
+  +files/199-0001-Disable-udev-targets.patch, +systemd-198.ebuild,
+  files/198-0001-Disable-udev-targets.patch, metadata.xml, systemd-9999.ebuild:
+  Version bump. Move nss_myhostname to rootfs and install zsh completion (both
+  bug #460640). Update the live version patch.
 
   06 Mar 2013; Michał Górny <mgorny@gentoo.org>
   files/198-0001-Disable-udev-targets.patch:

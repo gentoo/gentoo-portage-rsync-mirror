@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.9 2013/03/04 19:31:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.10 2013/03/09 13:52:05 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -188,6 +188,20 @@ multilib_check_headers() {
 	else
 		echo "${cksum}" > "${cksum_file}"
 	fi
+}
+
+# @FUNCTION: multilib_copy_sources
+# @DESCRIPTION:
+# Create a single copy of the package sources for each enabled ABI.
+#
+# The sources are always copied from initial BUILD_DIR (or S if unset)
+# to ABI-specific build directory matching BUILD_DIR used by
+# multilib_foreach_abi().
+multilib_copy_sources() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local MULTIBUILD_VARIANTS=( $(multilib_get_enabled_abis) )
+	multibuild_copy_sources
 }
 
 _MULTILIB_BUILD=1

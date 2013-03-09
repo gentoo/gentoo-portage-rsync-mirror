@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.47 2013/03/04 19:28:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.49 2013/03/09 13:52:55 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -348,34 +348,19 @@ python_gen_cond_dep() {
 
 # @FUNCTION: python_copy_sources
 # @DESCRIPTION:
-# Create a single copy of the package sources (${S}) for each enabled
-# Python implementation.
+# Create a single copy of the package sources for each enabled Python
+# implementation.
 #
-# The sources are always copied from S to implementation-specific build
-# directories respecting BUILD_DIR.
+# The sources are always copied from initial BUILD_DIR (or S if unset)
+# to implementation-specific build directory matching BUILD_DIR used by
+# python_foreach_abi().
 python_copy_sources() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	_python_validate_useflags
+	local MULTIBUILD_VARIANTS
+	_python_obtain_impls
 
-	local impl
-	local bdir=${BUILD_DIR:-${S}}
-
-	debug-print "${FUNCNAME}: bdir = ${bdir}"
-	einfo "Will copy sources from ${S}"
-	# the order is irrelevant here
-	for impl in "${PYTHON_COMPAT[@]}"; do
-		_python_impl_supported "${impl}" || continue
-
-		if use "python_targets_${impl}"
-		then
-			local BUILD_DIR=${bdir%%/}-${impl}
-
-			einfo "${impl}: copying to ${BUILD_DIR}"
-			debug-print "${FUNCNAME}: [${impl}] cp ${S} => ${BUILD_DIR}"
-			cp -pr "${S}" "${BUILD_DIR}" || die
-		fi
-	done
+	multibuild_copy_sources
 }
 
 # @FUNCTION: _python_check_USE_PYTHON
@@ -591,6 +576,9 @@ _python_check_USE_PYTHON() {
 # @DESCRIPTION:
 # Set up the enabled implementation list.
 _python_obtain_impls() {
+	_python_validate_useflags
+	_python_check_USE_PYTHON
+
 	MULTIBUILD_VARIANTS=()
 
 	for impl in "${_PYTHON_ALL_IMPLS[@]}"; do
@@ -632,9 +620,6 @@ _python_multibuild_wrapper() {
 # locally, and the former two are exported to the command environment.
 python_foreach_impl() {
 	debug-print-function ${FUNCNAME} "${@}"
-
-	_python_validate_useflags
-	_python_check_USE_PYTHON
 
 	local MULTIBUILD_VARIANTS
 	_python_obtain_impls
@@ -706,8 +691,6 @@ python_export_best() {
 # having a matching shebang will be refused.
 python_replicate_script() {
 	debug-print-function ${FUNCNAME} "${@}"
-
-	_python_validate_useflags
 
 	local suffixes=()
 

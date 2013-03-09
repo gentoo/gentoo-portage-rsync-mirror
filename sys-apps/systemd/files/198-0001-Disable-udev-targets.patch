@@ -1,12 +1,12 @@
-From a354cd7838ef9c42b2f0b0b35eae78bfff9837ad Mon Sep 17 00:00:00 2001
+From 3d8c9ce43939b5b10bb29d459c6ea6cb35455765 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20G=C3=B3rny?= <mgorny@gentoo.org>
 Date: Fri, 8 Feb 2013 18:16:52 +0100
 Subject: [PATCH] Disable udev targets.
 
 ---
  Makefile-man.am |  6 +-----
- Makefile.am     | 29 ++++++++++++++++++++---------
- 2 files changed, 21 insertions(+), 14 deletions(-)
+ Makefile.am     | 32 +++++++++++++++++++++-----------
+ 2 files changed, 22 insertions(+), 16 deletions(-)
 
 diff --git a/Makefile-man.am b/Makefile-man.am
 index 8d48ee0..8dc145b 100644
@@ -40,10 +40,20 @@ index 8d48ee0..8dc145b 100644
  	man/systemd-update-utmp.8 \
  	man/systemd-user.conf.5
 diff --git a/Makefile.am b/Makefile.am
-index 35ce1fb..5399659 100644
+index 0243fa7..0f2ea1c 100644
 --- a/Makefile.am
 +++ b/Makefile.am
-@@ -379,8 +379,6 @@ dist_systemunit_DATA = \
+@@ -317,8 +317,7 @@ systemd_analyze_LDADD = \
+ 
+ dist_bashcompletion_DATA = \
+ 	shell-completion/bash/journalctl \
+-	shell-completion/bash/systemctl \
+-	shell-completion/bash/udevadm
++	shell-completion/bash/systemctl
+ 
+ dist_tmpfiles_DATA = \
+ 	tmpfiles.d/systemd.conf \
+@@ -379,8 +378,6 @@ dist_systemunit_DATA = \
  	units/quotaon.service \
  	units/systemd-ask-password-wall.path \
  	units/systemd-ask-password-console.path \
@@ -52,7 +62,7 @@ index 35ce1fb..5399659 100644
  	units/system-update.target \
  	units/initrd-parse-etc.service \
  	units/initrd-cleanup.service \
-@@ -415,9 +413,6 @@ nodist_systemunit_DATA = \
+@@ -415,9 +412,6 @@ nodist_systemunit_DATA = \
  	units/systemd-kexec.service \
  	units/systemd-fsck@.service \
  	units/systemd-fsck-root.service \
@@ -62,7 +72,7 @@ index 35ce1fb..5399659 100644
  	units/debug-shell.service
  
  dist_userunit_DATA = \
-@@ -1319,9 +1314,6 @@ nodist_systemunit_DATA += \
+@@ -1321,9 +1315,6 @@ nodist_systemunit_DATA += \
  SYSINIT_TARGET_WANTS += \
  	systemd-modules-load.service
  
@@ -72,7 +82,7 @@ index 35ce1fb..5399659 100644
  endif
  
  EXTRA_DIST += \
-@@ -1604,6 +1596,22 @@ EXTRA_DIST += \
+@@ -1606,6 +1597,22 @@ EXTRA_DIST += \
  	src/libsystemd-daemon/libsystemd-daemon.pc.in \
  	src/libsystemd-daemon/libsystemd-daemon.sym
  
@@ -95,7 +105,7 @@ index 35ce1fb..5399659 100644
  # ------------------------------------------------------------------------------
  if ENABLE_GTK_DOC
  SUBDIRS += \
-@@ -1614,7 +1622,7 @@ include_HEADERS += \
+@@ -1616,7 +1623,7 @@ include_HEADERS += \
  	src/libudev/libudev.h
  
  lib_LTLIBRARIES += \
@@ -104,7 +114,7 @@ index 35ce1fb..5399659 100644
  
  libudev_la_SOURCES =\
  	src/libudev/libudev-private.h \
-@@ -2266,6 +2274,9 @@ udevlibexec_PROGRAMS += \
+@@ -2268,6 +2275,9 @@ udevlibexec_PROGRAMS += \
  	mtd_probe
  
  # ------------------------------------------------------------------------------

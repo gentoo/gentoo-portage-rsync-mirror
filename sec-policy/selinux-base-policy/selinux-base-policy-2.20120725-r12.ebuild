@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20120725-r12.ebuild,v 1.1 2013/03/09 12:36:47 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20120725-r12.ebuild,v 1.2 2013/03/09 13:52:59 swift Exp $
 EAPI="4"
 
 inherit eutils
@@ -27,6 +27,14 @@ PATCHBUNDLE="${DISTDIR}/patchbundle-selinux-base-policy-${BASEPOL}.tar.bz2"
 # Code entirely copied from selinux-eclass (cannot inherit due to dependency on
 # itself), when reworked reinclude it. Only postinstall (where -b base.pp is
 # added) needs to remain then.
+
+pkg_pretend() {
+	for i in ${POLICY_TYPES}; do
+		if [[ "${i}" == "targeted" ]] && ! use unconfined; then
+			die "If you use POLICY_TYPES=targeted, then USE=unconfined is mandatory."
+		fi
+	done
+}
 
 src_prepare() {
 	local modfiles
