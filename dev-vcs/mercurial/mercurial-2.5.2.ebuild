@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.5.2.ebuild,v 1.1 2013/03/08 13:00:57 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.5.2.ebuild,v 1.2 2013/03/09 08:49:56 polynomial-c Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ python_configure_all() {
 	# Note: make it impl-conditional if py3 is supported
 	append-flags -fno-strict-aliasing
 
-	"${PYTHON:-python}" setup.py build_mo || die
+	"${PYTHON}" setup.py build_mo || die
 }
 
 python_compile_all() {
