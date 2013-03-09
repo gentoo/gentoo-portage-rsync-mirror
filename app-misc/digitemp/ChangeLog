@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/digitemp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.19 2013/03/05 16:44:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.20 2013/03/09 18:09:49 ago Exp $
+
+  09 Mar 2013; Agostino Sarubbo <ago@gentoo.org> digitemp-3.5.0-r1.ebuild:
+  Stable for x86, wrt bug #437334
 
   05 Mar 2013; Agostino Sarubbo <ago@gentoo.org> digitemp-3.5.0-r1.ebuild:
   Stable for amd64, wrt bug #437334

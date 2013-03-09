@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.8.3.ebuild,v 1.8 2012/11/18 18:41:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.8.14.ebuild,v 1.2 2013/03/09 18:23:17 jer Exp $
 
-EAPI="3"
-
+EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="Nodebrain is a tool to monitor and do event correlation."
@@ -28,26 +27,31 @@ RDEPEND="
 S="${WORKDIR}/nodebrain-${PV}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-configure.patch
-
 	# fdl.texi is not included in the sources
-	sed -i doc/nbTutorial/nbTutorial.texi -e '/@include fdl.texi/d' || die
+	sed -i \
+		-e '/@include fdl.texi/d' \
+		doc/nbTutorial/nbTutorial.texi || die
+
+	epatch "${FILESDIR}"/${PN}-0.8.14-include.patch
+	epatch "${FILESDIR}"/${PN}-0.8.14-configure.patch
 
 	eautoreconf
 }
 
 src_configure() {
-	econf $(use_enable static-libs static) --include=/usr/include
+	econf \
+		$(use_enable static-libs static) \
+		--include=/usr/include
 }
 
 src_compile() {
 	# Fails at parallel make
-	emake -j1 || die
+	emake -j1
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	use static-libs || find "${D}" -name '*.la' -delete
+	default
+	use static-libs || prune_libtool_files
 	dodoc AUTHORS NEWS README THANKS sample/*
 	dohtml html/*
 }

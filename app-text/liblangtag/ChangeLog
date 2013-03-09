@@ -1,6 +1,15 @@
 # ChangeLog for app-text/liblangtag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/ChangeLog,v 1.9 2013/03/07 11:42:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/ChangeLog,v 1.11 2013/03/09 18:25:30 scarabeus Exp $
+
+  09 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> -liblangtag-0.4.0.ebuild,
+  liblangtag-0.4.0-r1.ebuild:
+  Stabilise on amd64 x86 and ppc, as this version really builds on ppc. Remove
+  older ebuild.
+
+  09 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/liblangtag-0.4.0-arm.patch, liblangtag-0.4.0-r1.ebuild:
+  Add patch for the arm issue with build. Wrt bug#451520.
 
   07 Mar 2013; Justin Lecher <jlec@gentoo.org> liblangtag-0.4.0-r1.ebuild:
   Add missing buildtime dep, #459336

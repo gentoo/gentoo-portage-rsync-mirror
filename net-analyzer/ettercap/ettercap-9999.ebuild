@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-9999.ebuild,v 1.2 2013/01/08 05:20:33 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-9999.ebuild,v 1.3 2013/03/09 18:17:12 ago Exp $
 
-EAPI=4
+EAPI=5
 
 CMAKE_MIN_VERSION=2.8
 

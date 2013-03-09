@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.412 2013/03/09 17:55:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.413 2013/03/09 18:18:09 mgorny Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1276,9 +1276,9 @@ epunt_cxx() {
 			&& any_found=1
 	done < <(find "${dir}" -name configure -print0)
 
-	if [[ -z ${any_found} ]]; then
-		eqawarn "epunt_cxx called unnecessarily (no C++ checks to punt)."
-	fi
+#	if [[ -z ${any_found} ]]; then
+#		eqawarn "epunt_cxx called unnecessarily (no C++ checks to punt)."
+#	fi
 	eend 0
 }
 
