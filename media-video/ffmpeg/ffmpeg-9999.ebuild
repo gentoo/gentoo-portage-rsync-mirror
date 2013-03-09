@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.120 2013/03/04 12:09:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.122 2013/03/09 12:01:02 aballier Exp $
 
 EAPI="4"
 
@@ -138,76 +138,67 @@ src_configure() {
 	cd "${BUILD_DIR}"
 
 	local myconf="${EXTRA_FFMPEG_CONF}"
-	# Set to --enable-version3 if (L)GPL-3 is required
-	local version3=""
 
-	# enabled by default
-	for i in debug doc network zlib; do
-		use ${i} || myconf="${myconf} --disable-${i}"
-	done
-	use bzip2 || myconf="${myconf} --disable-bzlib"
-	use sdl || myconf="${myconf} --disable-ffplay"
-
-	use cpudetection || myconf="${myconf} --disable-runtime-cpudetect"
-	use openssl && myconf="${myconf} --enable-openssl --enable-nonfree"
-	# disabled by default
-	for i in gnutls iconv vaapi vdpau ; do
-		use $i && myconf="${myconf} --enable-$i"
-	done
+	# options to use as use_enable in the foo[:bar] form.
+	# This will feed configure with $(use_enable foo bar)
+	# or $(use_enable foo foo) if no :bar is set.
+	local ffuse="bzip2:bzlib cpudetection:runtime-cpudetect debug doc gnutls
+				 iconv network openssl sdl:ffplay vaapi vdpau zlib"
+	use openssl && myconf="${myconf} --enable-nonfree"
 
 	# Encoders
 	if use encode
 	then
-		use mp3 && myconf="${myconf} --enable-libmp3lame"
-		use aac && { myconf="${myconf} --enable-libvo-aacenc" ; version3=" --enable-version3" ; }
-		use amr && { myconf="${myconf} --enable-libvo-amrwbenc" ; version3=" --enable-version3" ; }
-		for i in theora twolame x264 xvid; do
-			use ${i} && myconf="${myconf} --enable-lib${i}"
+		ffuse="${ffuse} aac:libvo-aacenc amr:libvo-amrwbenc mp3:libmp3lame fdk:libfdk-aac"
+		for i in aacplus faac theora twolame x264 xvid; do
+			ffuse="${ffuse} ${i}:lib${i}"
 		done
-		use aacplus && myconf="${myconf} --enable-libaacplus --enable-nonfree"
-		use faac && myconf="${myconf} --enable-libfaac --enable-nonfree"
-		use fdk && myconf="${myconf} --enable-libfdk-aac --enable-nonfree"
+
+		# Licensing.
+		if use aac || use amr ; then
+			myconf="${myconf} --enable-version3"
+		fi
+		if use aacplus || use faac || use fdk ; then
+			myconf="${myconf} --enable-nonfree"
+		fi
 	else
 		myconf="${myconf} --disable-encoders"
 	fi
 
 	# libavdevice options
-	for i in cdio iec61883 ; do
-		use ${i} && myconf="${myconf} --enable-lib${i}"
-	done
-	use ieee1394 && myconf="${myconf} --enable-libdc1394"
-	use libcaca && myconf="${myconf} --enable-libcaca"
-	use openal && myconf="${myconf} --enable-openal"
+	ffuse="${ffuse}	cdio:libcdio iec61883:libiec61883 ieee1394:libdc1394 libcaca openal"
+
 	# Indevs
 	use v4l || myconf="${myconf} --disable-indev=v4l2"
 	for i in alsa oss jack ; do
 		use ${i} || myconf="${myconf} --disable-indev=${i}"
 	done
-	use X && myconf="${myconf} --enable-x11grab"
-	use pulseaudio && myconf="${myconf} --enable-libpulse"
-	use libv4l && myconf="${myconf} --enable-libv4l2"
+	ffuse="${ffuse}	libv4l:libv4l2 pulseaudio:libpulse X:x11grab"
+
 	# Outdevs
 	for i in alsa oss sdl ; do
 		use ${i} || myconf="${myconf} --disable-outdev=${i}"
 	done
+
 	# libavfilter options
-	for i in frei0r fontconfig libass ; do
-		use ${i} && myconf="${myconf} --enable-${i}"
-	done
-	use truetype && myconf="${myconf} --enable-libfreetype"
-	use flite    && myconf="${myconf} --enable-libflite"
+	ffuse="${ffuse} flite:libflite frei0r fontconfig libass truetype:libfreetype"
+
 	# libswresample options
-	use libsoxr && myconf="${myconf} --enable-libsoxr"
+	ffuse="${ffuse} libsoxr"
 
 	# Threads; we only support pthread for now but ffmpeg supports more
-	use threads && myconf="${myconf} --enable-pthreads"
+	ffuse="${ffuse} threads:pthreads"
 
 	# Decoders
-	use amr && { myconf="${myconf} --enable-libopencore-amrwb --enable-libopencore-amrnb" ; version3=" --enable-version3" ; }
+	ffuse="${ffuse} amr:libopencore-amrwb amr:libopencore-amrnb	jpeg2k:libopenjpeg"
+	use amr && myconf="${myconf} --enable-version3"
 	for i in bluray celt gsm modplug opus rtmp schroedinger speex vorbis vpx; do
-		use ${i} && myconf="${myconf} --enable-lib${i}"
+		ffuse="${ffuse} ${i}:lib${i}"
 	done
-	use jpeg2k && myconf="${myconf} --enable-libopenjpeg"
+
+	for i in ${ffuse} ; do
+		myconf="${myconf} $(use_enable ${i%:*} ${i#*:})"
+	done
 
 	# CPU features
 	for i in ${CPU_FEATURES}; do
@@ -234,7 +225,6 @@ src_configure() {
 	# Mandatory configuration
 	myconf="
 		--enable-gpl
-		${version3}
 		--enable-postproc
 		--enable-avfilter
 		--disable-stripping

@@ -1,6 +1,15 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.614 2013/03/04 12:12:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.616 2013/03/09 12:01:02 aballier Exp $
+
+  09 Mar 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  handle enabling gpl3 the same way we handle non-free: through myconf and
+  remove the version3 variable
+
+  09 Mar 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  build up configure options on the ffuse variable that will be fed to
+  use_enable, use_enable works fine and avoids having features disappearing
+  because the default behavior changed; factorize some code
 
   04 Mar 2013; Alexis Ballier <aballier@gentoo.org> -ffmpeg-1.0.4.ebuild,
   -ffmpeg-1.1.2.ebuild:
