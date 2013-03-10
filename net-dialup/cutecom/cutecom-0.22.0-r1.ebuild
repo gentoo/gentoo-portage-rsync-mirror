@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/cutecom-0.22.0-r1.ebuild,v 1.4 2013/03/09 11:23:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/cutecom-0.22.0-r1.ebuild,v 1.5 2013/03/10 09:03:46 pinkbyte Exp $
 
 EAPI=5
 
-inherit cmake-utils
+inherit cmake-utils eutils
 
 DESCRIPTION="CuteCom is a serial terminal, like minicom, written in qt"
 HOMEPAGE="http://cutecom.sourceforge.net"
