@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.6 2013/03/10 09:05:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.7 2013/03/10 21:00:29 mgorny Exp $
 
 # @ECLASS: multibuild
 # @MAINTAINER:
@@ -201,7 +201,10 @@ multibuild_for_best_variant() {
 	[[ ${MULTIBUILD_VARIANTS} ]] \
 		|| die "MULTIBUILD_VARIANTS need to be set"
 
-	local MULTIBUILD_VARIANTS=( "${MULTIBUILD_VARIANTS[-1]}" )
+	# bash-4.1 can't handle negative subscripts
+	local MULTIBUILD_VARIANTS=(
+		"${MULTIBUILD_VARIANTS[$(( ${#MULTIBUILD_VARIANTS[@]} - 1 ))]}"
+	)
 	multibuild_foreach_variant "${@}"
 }
 
