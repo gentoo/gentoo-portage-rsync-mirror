@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.3-r1.ebuild,v 1.3 2013/03/10 18:47:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.3-r2.ebuild,v 1.1 2013/03/10 18:47:22 jlec Exp $
 
 EAPI=5
 
 #AUTOTOOLS_AUTORECONF=1
 FORTRAN_NEEDED=fortran
 
-inherit autotools-multilib eutils flag-o-matic fortran-2 toolchain-funcs versionator
+inherit autotools-multilib eutils flag-o-matic fortran-2 multibuild toolchain-funcs versionator
 
 DESCRIPTION="Fast C library for the Discrete Fourier Transform"
 HOMEPAGE="http://www.fftw.org/"
@@ -21,12 +21,15 @@ IUSE="altivec avx doc fma fortran mpi neon openmp quad sse sse2 static-libs test
 # there is no abi_x86_32 port of virtual/mpi right now
 REQUIRED_USE="amd64? ( abi_x86_32? ( !mpi !quad ) )"
 
-RDEPEND="mpi? ( virtual/mpi )
+RDEPEND="
+	mpi? ( virtual/mpi )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20121202 )"
 DEPEND="${RDEPEND}
 	test? ( dev-lang/perl )"
 
 pkg_setup() {
+	# XXX: this looks like it should be used with BUILD_TYPE!=binary
+
 	if use openmp; then
 		if [[ $(tc-getCC) == *gcc ]] && ! tc-has-openmp; then
 			ewarn "OpenMP is not available in your current selected gcc"
@@ -34,14 +37,16 @@ pkg_setup() {
 		fi
 		FORTRAN_NEED_OPENMP=1
 	fi
+
 	fortran-2_pkg_setup
-	FFTW_DIRS="single double longdouble"
+
+	MULTIBUILD_VARIANTS=( single double longdouble )
 	if use quad; then
 		if [[ $(tc-getCC) == *gcc ]] && ! version_is_at_least 4.6 $(gcc-version); then
 			ewarn "quad precision only available for gcc >= 4.6"
 			die "need quad precision capable gcc"
 		fi
-		FFTW_DIRS+=" quad"
+		MULTIBUILD_VARIANTS+=( quad )
 	fi
 }
 
@@ -60,7 +65,9 @@ src_configure() {
 	# filter -Os according to docs
 	replace-flags -Os -O2
 
-	for x in ${FFTW_DIRS}; do
+	my_configure() {
+		local x=${MULTIBUILD_VARIANT}
+
 		myeconfargs=(
 			$(use_enable fma)
 			$(use_enable fortran)
@@ -96,42 +103,30 @@ src_configure() {
 			die "${x} precision not implemented in this ebuild"
 		fi
 
-		einfo "Configuring for ${x} precision"
-		BUILD_DIR="${S}-${x}" \
-			autotools-multilib_src_configure
-	done
+		autotools-multilib_src_configure
+	}
+
+	multibuild_foreach_variant my_configure
 }
 
 src_compile() {
-	for x in ${FFTW_DIRS}; do
-		einfo "Compiling for ${x} precision"
-		BUILD_DIR="${S}-${x}" \
-			autotools-multilib_src_compile
-	done
+	multibuild_foreach_variant autotools-multilib_src_compile
 }
 
 src_test () {
-	do_smalltest() { cd "${BUILD_DIR}" && emake -C tests smallcheck; }
 	# We want this to be a reasonably quick test, but that is still hard...
 	ewarn "This test series will take 30 minutes on a modern 2.5Ghz machine"
 	# Do not increase the number of threads, it will not help your performance
 	#local testbase="perl check.pl --nthreads=1 --estimate"
 	#		${testbase} -${p}d || die "Failure: $n"
-	for x in ${FFTW_DIRS}; do
-		einfo "Testing ${x} precision"
-		BUILD_DIR="${S}-${x}" \
-			multilib_foreach_abi do_smalltest
-	done
+	multibuild_foreach_variant autotools-multilib_src_compile -C tests smallcheck
 }
 
 src_install () {
 	local u x
 	DOCS=( AUTHORS ChangeLog NEWS README TODO COPYRIGHT CONVENTIONS )
 	HTML_DOCS=( doc/html/ )
-	for x in ${FFTW_DIRS}; do
-		BUILD_DIR="${S}-${x}" \
-			autotools-multilib_src_install
-	done
+	multibuild_foreach_variant autotools-multilib_src_install
 
 	if use doc; then
 		dodoc doc/*.pdf

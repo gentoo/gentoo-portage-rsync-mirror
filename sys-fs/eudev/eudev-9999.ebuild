@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.21 2013/02/09 07:58:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.22 2013/03/10 18:34:55 blueness Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ COMMON_DEPEND="gudev? ( dev-libs/glib:2 )
 	!<sys-libs/glibc-2.11"
 
 DEPEND="${COMMON_DEPEND}
-	dev-util/gperf
+	keymap? ( dev-util/gperf )
 	>=dev-util/intltool-0.40.0
 	virtual/pkgconfig
 	virtual/os-headers
@@ -145,6 +145,10 @@ src_prepare()
 src_configure()
 {
 	local econf_args
+
+	# Only keymap uses gperf, but configure checks
+	# for it unconditionally, bug #452760
+	use keymap || export ac_cv_path_GPERF=true
 
 	econf_args=(
 		ac_cv_search_cap_init=
