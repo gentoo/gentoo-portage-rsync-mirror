@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/shmux
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.28 2012/01/11 23:08:49 swegener Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.29 2013/03/10 01:47:35 ottxor Exp $
+
+  10 Mar 2013; Christoph Junghans <ottxor@gentoo.org> shmux-1.0.1.ebuild,
+  shmux-1.0.2.ebuild, shmux-1.0.ebuild:
+  switch to virtual/awk (bug #455748)
 
   11 Jan 2012; Sven Wegener <swegener@gentoo.org> shmux-1.0.ebuild,
   shmux-1.0.1.ebuild, shmux-1.0.2.ebuild:
@@ -115,4 +119,3 @@
   14 Jul 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   +shmux-1.0_beta3.ebuild:
   Initial import, ebuild written by me.
-

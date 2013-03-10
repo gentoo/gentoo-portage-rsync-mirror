@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-4.0.1.ebuild,v 1.7 2012/06/12 02:58:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-4.0.1.ebuild,v 1.8 2013/03/10 01:38:36 ottxor Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="ipv6 ssl"
 #snmp support is disabled
 
 #snmp? ( net-analyzer/net-snmp )
-COMMON_DEPEND="sys-apps/gawk
+COMMON_DEPEND="virtual/awk
 	dev-lang/perl
 	sys-libs/gdbm
 	dev-libs/libevent

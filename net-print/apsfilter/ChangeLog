@@ -1,6 +1,10 @@
 # ChangeLog for net-print/apsfilter
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/ChangeLog,v 1.20 2011/08/23 01:49:02 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/ChangeLog,v 1.21 2013/03/10 01:54:43 ottxor Exp $
+
+  10 Mar 2013; Christoph Junghans <ottxor@gentoo.org> apsfilter-7.2.5.ebuild,
+  apsfilter-7.2.6.ebuild, apsfilter-7.2.7.ebuild, apsfilter-7.2.8.ebuild:
+  switch to virtual/awk (bug #455680)
 
 *apsfilter-7.2.8 (23 Aug 2011)
 
@@ -62,4 +66,3 @@
 
   16 Jun 2002; Carl Perry <edolnx@gentoo.org> +apsfilter-7.2.2.ebuild:
   Added apsfilter to portage
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafaxplus/hylafaxplus-5.5.1-r1.ebuild,v 1.3 2012/08/16 18:10:55 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafaxplus/hylafaxplus-5.5.1-r1.ebuild,v 1.4 2013/03/10 01:42:10 ottxor Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	media-libs/tiff[jbig?]
 	virtual/jpeg
 	jbig? ( media-libs/jbigkit )
-	sys-apps/gawk
+	virtual/awk
 	ldap? (  net-nds/openldap )
 	pam? ( virtual/pam )
 	mgetty? ( net-dialup/mgetty[-fax] )"

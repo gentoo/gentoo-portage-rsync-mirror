@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/tiers-1.1.ebuild,v 1.12 2013/02/02 18:16:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/tiers-1.1.ebuild,v 1.13 2013/03/10 01:43:51 ottxor Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="sys-devel/gcc"
-RDEPEND="sys-apps/gawk
+RDEPEND="virtual/awk
 	sci-visualization/gnuplot"
 
 S=${WORKDIR}/${PN}${PV}

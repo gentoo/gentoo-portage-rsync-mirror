@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/apsfilter-7.2.6.ebuild,v 1.5 2011/06/02 18:19:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/apsfilter-7.2.6.ebuild,v 1.6 2013/03/10 01:54:43 ottxor Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ RDEPEND="|| ( net-print/cups net-print/lprng )
 	>=app-text/psutils-1.17
 	>=media-gfx/imagemagick-5.4.5
 	>=app-text/a2ps-4.13b-r4
-	>=sys-apps/gawk-3.1.0-r1
+	virtual/awk
 	virtual/mta"
 DEPEND="${RDEPEND}"
 

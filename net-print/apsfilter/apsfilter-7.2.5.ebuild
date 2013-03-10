@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/apsfilter-7.2.5.ebuild,v 1.10 2011/05/21 04:18:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/apsfilter-7.2.5.ebuild,v 1.11 2013/03/10 01:54:43 ottxor Exp $
 
 DESCRIPTION="Apsfilter Prints So Fine, It Leads To Extraordinary Results"
 HOMEPAGE="http://www.apsfilter.org"
@@ -14,7 +14,7 @@ RDEPEND="|| ( net-print/cups net-print/lprng )
 	>=app-text/psutils-1.17
 	>=media-gfx/imagemagick-5.4.5
 	>=app-text/a2ps-4.13b-r4
-	>=sys-apps/gawk-3.1.0-r1
+	virtual/awk
 	virtual/mta"
 DEPEND="${RDEPEND}"
 

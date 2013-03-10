@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tiers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/ChangeLog,v 1.15 2013/02/02 18:16:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/ChangeLog,v 1.16 2013/03/10 01:43:51 ottxor Exp $
+
+  10 Mar 2013; Christoph Junghans <ottxor@gentoo.org> tiers-1.1.ebuild:
+  switch to virtual/awk (bug #455678)
 
   02 Feb 2013; Ulrich Müller <ulm@gentoo.org> tiers-1.1.ebuild:
   Fix LICENSE, see COPYRIGHT file, bug 452600.
@@ -49,4 +52,3 @@
   11 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> tiers-1.1.ebuild,
   files/tiers1.1-gccfixes.patch:
   Initial commit, ebuild by robbat2@gentoo.org
-
