@@ -1,6 +1,19 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.851 2013/03/10 15:59:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.854 2013/03/10 17:28:25 ssuominen Exp $
+
+  10 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-198-r1.ebuild,
+  udev-9999.ebuild:
+  Set KV_min for 9999 to 2.6.39 because we don't patch live version.
+
+  10 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> -udev-198.ebuild:
+  old
+
+*udev-198-r1 (10 Mar 2013)
+
+  10 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> +udev-198-r1.ebuild:
+  Include accept4() patch for 198 because the function is only available for
+  x86, x86_64, ia64, sparc and mips in Linux 2.6.32.60.
 
   10 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> udev-198.ebuild,
   udev-9999.ebuild:

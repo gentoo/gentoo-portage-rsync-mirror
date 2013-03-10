@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198.ebuild,v 1.5 2013/03/10 16:45:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198.ebuild,v 1.6 2013/03/10 17:20:05 floppym Exp $
 
 EAPI=5
 
@@ -127,6 +127,7 @@ src_install() {
 	prune_libtool_files --modules
 
 	# move nss_myhostname to rootfs (bug #460640)
+	dodir /$(get_libdir)
 	mv "${D}"/usr/$(get_libdir)/libnss_myhostname* "${D}"/$(get_libdir)/ \
 		|| die "Unable to move nss_myhostname to rootfs"
 
