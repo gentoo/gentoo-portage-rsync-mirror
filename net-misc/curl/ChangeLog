@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.268 2013/03/09 19:36:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.269 2013/03/10 16:19:53 ago Exp $
+
+  10 Mar 2013; Agostino Sarubbo <ago@gentoo.org> curl-7.29.0-r1.ebuild:
+  Stable for s390, wrt bug #456074
 
   09 Mar 2013; Agostino Sarubbo <ago@gentoo.org> curl-7.29.0-r1.ebuild:
   Stable for sparc, wrt bug #456074

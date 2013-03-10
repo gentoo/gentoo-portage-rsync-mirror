@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/vamos
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.22 2013/02/08 19:23:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.24 2013/03/10 16:29:40 ago Exp $
+
+  10 Mar 2013; Agostino Sarubbo <ago@gentoo.org> vamos-0.7.1.ebuild:
+  Stable for x86, wrt bug #461004
+
+  10 Mar 2013; Agostino Sarubbo <ago@gentoo.org> vamos-0.7.1.ebuild:
+  Stable for amd64, wrt bug #461004
 
 *vamos-0.7.1 (08 Feb 2013)
 

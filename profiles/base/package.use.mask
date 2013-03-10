@@ -1,10 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.443 2013/03/10 13:57:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.444 2013/03/10 16:06:22 ottxor Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Christoph Junghans <ottxor@gentoo.org> (10 Mar 2013)
+# log4cxx has known memory leaking issues wrt bug #287697,
+# unmask when log4cxx is fixed and stable.
+media-sound/google-musicmanager log
 
 # Tom Wijsman <TomWij@gentoo.org> (10 Mar 2013)
 # Experimental, masked until it compiles and works.

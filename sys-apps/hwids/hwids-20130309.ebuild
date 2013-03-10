@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20130309.ebuild,v 1.1 2013/03/09 14:21:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20130309.ebuild,v 1.2 2013/03/10 16:03:10 ssuominen Exp $
 
 EAPI=5
 inherit udev eutils
@@ -31,6 +31,6 @@ src_install() {
 	emake UDEV=$(usex udev) install \
 		DOCDIR="${EPREFIX}/usr/share/doc/${PF}" \
 		MISCDIR="${EPREFIX}/usr/share/misc" \
-		HWDBDIR="${EPREFIX}$(udev_get_udevdir)/hwdb.d" \
+		HWDBDIR="${EPREFIX}$(get_udevdir)/hwdb.d" \
 		DESTDIR="${D}"
 }

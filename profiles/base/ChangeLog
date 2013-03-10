@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.514 2013/03/10 13:57:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.515 2013/03/10 16:06:22 ottxor Exp $
+
+  10 Mar 2013; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
+  Mask media-sound/google-musicmanager log wrt #287697, Comment #12.
 
   10 Mar 2013; Tom Wijsman <TomWij@gentoo.org> package.use.mask:
   Masking system-ffmpeg on media-video/avidemux until it compiles and works.
