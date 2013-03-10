@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/res
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.18 2013/02/12 16:59:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.19 2013/03/10 10:25:49 aballier Exp $
+
+  10 Mar 2013; Alexis Ballier <aballier@gentoo.org>
+  -files/res-3.2.0-noocamlopt.patch, -res-3.2.0.ebuild:
+  remove old
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> res-4.0.2.ebuild:
   Stable for ppc, wrt bug #456562

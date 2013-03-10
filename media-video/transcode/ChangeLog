@@ -1,6 +1,6 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.311 2013/03/10 09:44:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.312 2013/03/10 10:12:19 ssuominen Exp $
 
   10 Mar 2013; Alexis Ballier <aballier@gentoo.org> -transcode-1.1.7.ebuild:
   remove old
@@ -65,7 +65,7 @@
 
   30 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   +transcode-1.1.7-r1.ebuild, +files/transcode-1.1.7-ffmpeg-0.10.patch:
-  Fix building with media-video/ffmpeg >= 0.10 and USE="postproc" wrtt #401287
+  Fix building with media-video/ffmpeg >= 0.10 and USE="postproc" wrt #401287
   by Olaf Freyer
 
   04 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> transcode-1.1.7.ebuild:

@@ -1,0 +1,33 @@
+Do not build potracelib if system potrace is being used.
+https://bugs.launchpad.net/dvisvgm/+bug/1153182
+https://bugs.gentoo.org/show_bug.cgi?id=446902
+
+Index: dvisvgm-1.2/Makefile.am
+===================================================================
+--- dvisvgm-1.2.orig/Makefile.am
++++ dvisvgm-1.2/Makefile.am
+@@ -5,5 +5,11 @@
+ 
+ AUTOMAKE_OPTIONS = foreign
+ EXTRA_DIST = COPYING LGPL-2.1.txt
+-SUBDIRS = potracelib src tests doc 
++if HAVE_LIBPOTRACE
++SUBDIRS =
++else
++SUBDIRS = potracelib
++endif
++
++SUBDIRS += src tests doc 
+ 
+Index: dvisvgm-1.2/configure.ac
+===================================================================
+--- dvisvgm-1.2.orig/configure.ac
++++ dvisvgm-1.2/configure.ac
+@@ -61,6 +61,7 @@ if test "$HAVE_LIBPOTRACE" -eq 0; then
+ 	EXTRA_LIBS="$EXTRA_LIBS ../potracelib/libpotrace.a "
+ 	AC_MSG_NOTICE([Using bundled potrace library])
+ fi
++AM_CONDITIONAL(HAVE_LIBPOTRACE, test "x$HAVE_LIBPOTRACE" = "x1")
+ 
+ 
+ # Check how to link Ghostscript

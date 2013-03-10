@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pomap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.26 2013/02/12 16:58:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.27 2013/03/10 10:27:23 aballier Exp $
+
+  10 Mar 2013; Alexis Ballier <aballier@gentoo.org> -pomap-2.9.9.ebuild:
+  remove old
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pomap-3.0.1.ebuild:
   Stable for ppc, wrt bug #456558

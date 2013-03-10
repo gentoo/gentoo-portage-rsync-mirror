@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-2.1.0.ebuild,v 1.2 2011/10/05 19:04:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-2.3.3.ebuild,v 1.1 2013/03/10 10:22:41 aballier Exp $
+
+EAPI=4
 
 inherit toolchain-funcs
 
@@ -12,6 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 IUSE="doc test"
+S="${WORKDIR}/${P%b}"
 
 RDEPEND="virtual/latex-base
 	media-gfx/imagemagick"
@@ -20,24 +23,26 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-texlive/texlive-langgerman
 		dev-texlive/texlive-fontsrecommended
+		dev-texlive/texlive-latexextra
 		dev-tex/latex2html
 	)"
 
 src_compile() {
 	export VARTEXFONTS="${T}/fonts"
-	emake PREFIX="/usr" CC="$(tc-getCC)" || die "emake failed"
+	# Set DESTDIR here too so that compiled-in paths are correct.
+	emake DESTDIR="${EPREFIX}/usr" CC="$(tc-getCC)" || die "emake failed"
 	if use doc; then
 		cd "${S}/doc"
-		emake clean || die "cleaning docs failed"
-		emake || die "generating docs failed"
+		emake realclean
+		emake -j1
 	fi
 }
 
 src_install() {
-	dodoc README ChangeLog doc/credits
-	emake PREFIX="${D}/usr" MAN_INSTALL="${D}/usr/share/man/man1" SUPPORT_INSTALL="${D}/usr/share/doc/${PF}" install || die "make install failed"
+	dodoc README* HACKING ToDo ChangeLog doc/credits
+	emake DESTDIR="${ED}/usr" -j1 install
 	# if doc is not used, only the text version is intalled.
 	if use doc; then
-		emake INFO_INSTALL="${D}/usr/share/info" install-info || die "installing info documentation failed"
+		emake DESTDIR="${ED}/usr" install-info
 	fi
 }

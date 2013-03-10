@@ -1,6 +1,15 @@
 # ChangeLog for dev-tex/latex2rtf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.42 2012/10/10 12:56:27 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.44 2013/03/10 10:22:41 aballier Exp $
+
+*latex2rtf-2.3.3 (10 Mar 2013)
+
+  10 Mar 2013; Alexis Ballier <aballier@gentoo.org> +latex2rtf-2.3.3.ebuild:
+  version bump
+
+  10 Mar 2013; Alexis Ballier <aballier@gentoo.org> -latex2rtf-1.9.19.ebuild,
+  -files/latex2rtf-1.9.19-makefile.patch, -latex2rtf-2.1.0.ebuild:
+  remove old
 
 *latex2rtf-2.3.1 (10 Oct 2012)
 
