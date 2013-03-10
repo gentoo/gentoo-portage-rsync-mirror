@@ -1,6 +1,46 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.111 2013/03/10 09:56:34 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.112 2013/03/10 14:09:35 aidecoe Exp $
+
+*dracut-026 (10 Mar 2013)
+
+  10 Mar 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/026-0001-dracut-functions.sh-support-for-altern.patch,
+  +files/026-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +files/026-0003-Revert-crypt-dmraid-mdraid-use-for_eac.patch,
+  +dracut-026.ebuild:
+  Version bump.
+
+  Gentoo release doesn't include a fix to catch all UUIDs (for crypt, dmraid,
+  mdraid) and not only the first one, because the fix actually breaks something
+  and LUKS devices aren't detected correctly at build time. If this fix is
+  fixed it will come in dracut-026-r1 ASAP.
+
+  NEWS
+  ~~~~
+  (from announcement on mailing list)
+
+  - introduce /usr/lib/dracut/dracut.conf.d/ drop-in directory
+
+    /usr/lib/dracut/dracut.conf.d/*.conf can be overwritten by the same
+    filenames in /etc/dracut.conf.d.
+
+    Packages should use /usr/lib/dracut/dracut.conf.d rather than
+    /etc/dracut.conf.d for drop-in configuration files.
+
+    /etc/dracut.conf and /etc/dracut.conf.d belong to the system administrator.
+
+  - uses systemd-198 native initrd units
+  - totally rely on the fstab-generator in systemd mode for block devices
+  - dracut systemd now uses dracut.target rather than basic.target
+  - dracut systemd services optimize themselves away
+  - fixed hostonly parameter generation
+  - turn off curl globbing (fixes IPv6)
+  - modify the udev rules on install and not runtime time
+  - enable initramfs building without kernel modules (fixed regression)
+  - in the initqueue/timeout, reset the main loop counter, as we see new udev
+    events or initqueue/work
+  - fixed udev rule installation
 
   10 Mar 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-025.ebuild:
   Cosmetic changes.

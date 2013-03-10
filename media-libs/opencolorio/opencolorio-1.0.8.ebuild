@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/opencolorio-1.0.8.ebuild,v 1.2 2013/01/22 05:11:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/opencolorio-1.0.8.ebuild,v 1.3 2013/03/10 14:28:26 ssuominen Exp $
 
 EAPI=5
 
-PYTHON_DEPEND="python? 2"
+PYTHON_COMPAT=( python2_7 )
 
-inherit cmake-utils python vcs-snapshot
+inherit cmake-utils python-single-r1 vcs-snapshot
 
 DESCRIPTION="A color management framework for visual effects and animation"
 HOMEPAGE="http://opencolorio.org/"
@@ -25,6 +25,7 @@ RDEPEND="opengl? (
 		media-libs/freeglut
 		virtual/opengl
 		)
+	python? ( ${PYTHON_DEPS} )
 	dev-cpp/yaml-cpp
 	dev-libs/tinyxml
 	"
@@ -47,10 +48,13 @@ PATCHES=(
 )
 
 pkg_setup() {
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
+	use python && python-single-r1_pkg_setup
+}
+
+src_prepare() {
+	base_src_prepare
+
+	use python && python_fix_shebang .
 }
 
 src_configure() {
