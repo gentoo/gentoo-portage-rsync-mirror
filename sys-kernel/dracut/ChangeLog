@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.110 2013/03/09 20:06:40 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.111 2013/03/10 09:56:34 aidecoe Exp $
+
+  10 Mar 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-025.ebuild:
+  Cosmetic changes.
 
 *dracut-025 (09 Mar 2013)
 

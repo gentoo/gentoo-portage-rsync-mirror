@@ -1,22 +1,22 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-1.10-r1.ebuild,v 1.5 2011/02/12 18:45:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-2.03.ebuild,v 1.1 2013/03/10 09:55:02 aballier Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils multilib
 
 IUSE="+ocamlopt"
 
 DESCRIPTION="HeVeA is a quite complete and fast LaTeX to HTML translator"
-HOMEPAGE="http://pauillac.inria.fr/~maranget/hevea/"
-SRC_URI="ftp://ftp.inria.fr/INRIA/moscova/hevea/${P}.tar.gz"
+HOMEPAGE="http://hevea.inria.fr/"
+SRC_URI="http://hevea.inria.fr/distri/${P}.tar.gz"
 
 LICENSE="QPL"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]"
+DEPEND=">=dev-lang/ocaml-3.12:=[ocamlopt?]"
 RDEPEND="${DEPEND}"
 
 src_compile() {

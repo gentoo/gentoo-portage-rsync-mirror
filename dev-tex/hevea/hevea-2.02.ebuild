@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-2.02.ebuild,v 1.1 2013/02/04 12:54:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-2.02.ebuild,v 1.2 2013/03/10 09:51:04 aballier Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils multilib
 
@@ -16,7 +16,7 @@ LICENSE="QPL"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]"
+DEPEND=">=dev-lang/ocaml-3.10.2:=[ocamlopt?]"
 RDEPEND="${DEPEND}"
 
 src_compile() {

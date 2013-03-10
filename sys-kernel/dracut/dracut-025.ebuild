@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-025.ebuild,v 1.1 2013/03/09 20:06:40 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-025.ebuild,v 1.2 2013/03/10 09:56:34 aidecoe Exp $
 
 EAPI=4
 
@@ -107,6 +107,8 @@ DEPEND="${CDEPEND}
 	>=app-text/docbook-xsl-stylesheets-1.75.2
 	"
 
+DOCS=( AUTHORS HACKING NEWS README README.generic README.kernel README.modules
+	README.testsuite TODO )
 DRACUT_LIBDIR="/usr/lib"
 
 #
@@ -190,18 +192,17 @@ src_compile() {
 }
 
 src_install() {
+	default
+
 	local libdir="${DRACUT_LIBDIR}"
-
-	emake DESTDIR="${D}" install
-
-	dodir /var/lib/dracut/overlay
-	dodoc HACKING TODO AUTHORS NEWS README*
 
 	insinto /etc/dracut.conf.d
 	newins dracut.conf.d/gentoo.conf.example gentoo.conf
 
 	insinto /etc/logrotate.d
 	newins dracut.logrotate dracut
+
+	dodir /var/lib/dracut/overlay
 
 	dohtml dracut.html
 
@@ -223,7 +224,7 @@ src_install() {
 
 	# Following flags define set of helper modules which are base dependencies
 	# for others and as so have no practical use, so remove these modules.
-	use device-mapper  || rm_module 90dm
+	use device-mapper || rm_module 90dm
 	use net || rm_module 40network 45ifcfg 45url-lib
 
 	# Remove S/390 modules which are not tested at all
