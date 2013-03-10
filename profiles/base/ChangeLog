@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.515 2013/03/10 16:06:22 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.516 2013/03/10 18:01:20 swift Exp $
+
+  10 Mar 2013; Sven Vermeulen <swift@gentoo.org> package.mask:
+  Adding mask for SELinux backup module
 
   10 Mar 2013; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
   Mask media-sound/google-musicmanager log wrt #287697, Comment #12.

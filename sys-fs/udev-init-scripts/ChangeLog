@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.55 2013/03/06 20:06:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.56 2013/03/10 17:45:38 ssuominen Exp $
+
+  10 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  udev-init-scripts-23.ebuild, udev-init-scripts-9999.ebuild:
+  Fix offset root support wrt #458156, Comment #1 by "smkbot"
 
   06 Mar 2013; Raúl Porcel <armin76@gentoo.org> udev-init-scripts-23.ebuild:
   m68k/s390/sh/sparc stable wrt #457568

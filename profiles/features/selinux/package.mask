@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.mask,v 1.42 2013/03/07 18:25:31 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/package.mask,v 1.43 2013/03/10 18:01:20 swift Exp $
 
 # Zac Medico <zmedico@gentoo.org> (09 Aug 2011)
 # Bug #377907 - Use package.mask for compatibility with PMS section 5.2.7, and
@@ -46,6 +46,7 @@
 -sec-policy/selinux-automount
 -sec-policy/selinux-avahi
 -sec-policy/selinux-awstats
+-sec-policy/selinux-backup
 -sec-policy/selinux-bacula
 -sec-policy/selinux-base
 -sec-policy/selinux-base-policy

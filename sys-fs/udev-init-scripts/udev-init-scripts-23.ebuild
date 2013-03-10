@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-23.ebuild,v 1.10 2013/03/06 20:06:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-23.ebuild,v 1.11 2013/03/10 17:45:38 ssuominen Exp $
 
 EAPI=4
 
@@ -44,12 +44,12 @@ pkg_postinst()
 		if [[ -x "${ROOT}"etc/init.d/udev \
 			&& -d "${ROOT}"etc/runlevels/sysinit ]]
 		then
-			ln -s "${ROOT}"etc/init.d/udev "${ROOT}"/etc/runlevels/sysinit/udev
+			ln -s /etc/init.d/udev "${ROOT}"/etc/runlevels/sysinit/udev
 		fi
 		if [[ -x "${ROOT}"etc/init.d/udev-mount \
 			&& -d "${ROOT}"etc/runlevels/sysinit ]]
 		then
-			ln -s "${ROOT}"etc/init.d/udev-mount \
+			ln -s /etc/init.d/udev-mount \
 				"${ROOT}"etc/runlevels/sysinit/udev-mount
 		fi
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198.ebuild,v 1.6 2013/03/10 17:20:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198.ebuild,v 1.7 2013/03/10 17:57:28 mgorny Exp $
 
 EAPI=5
 
@@ -59,6 +59,7 @@ DEPEND="${COMMON_DEPEND}
 
 # eautomake will likely trigger a full autoreconf
 DEPEND+=" dev-libs/gobject-introspection
+	>=dev-libs/libgcrypt-1.4.5
 	>=dev-util/gtk-doc-1.18"
 
 src_prepare() {

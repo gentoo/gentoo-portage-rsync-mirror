@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.53 2012/12/30 19:43:11 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.54 2013/03/10 18:01:20 swift Exp $
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (8 Feb 2011)
 #  on behalf of QA team <qa@gentoo.org
@@ -42,6 +42,7 @@ sec-policy/selinux-at
 sec-policy/selinux-automount
 sec-policy/selinux-avahi
 sec-policy/selinux-awstats
+sec-policy/selinux-backup
 sec-policy/selinux-bacula
 sec-policy/selinux-base
 sec-policy/selinux-base-policy
