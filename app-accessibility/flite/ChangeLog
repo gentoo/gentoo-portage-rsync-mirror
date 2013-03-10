@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/flite
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.43 2012/12/28 18:44:22 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.44 2013/03/10 21:18:17 polynomial-c Exp $
+
+*flite-1.4-r2 (10 Mar 2013)
+
+  10 Mar 2013; Lars Wendler <polynomial-c@gentoo.org> -flite-1.4-r1.ebuild,
+  +flite-1.4-r2.ebuild, files/flite-1.4-ldflags.patch:
+  Non-maintainer commit: Fixed linking of shared libraries. Thanks to Andrew
+  John Hughes for providing a patch in bug #339923.
 
   28 Dec 2012; Ulrich Müller <ulm@gentoo.org> flite-1.2-r1.ebuild,
   flite-1.3.ebuild, flite-1.4-r1.ebuild:

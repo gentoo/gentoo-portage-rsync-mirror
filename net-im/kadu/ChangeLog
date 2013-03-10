@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kadu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.149 2013/03/02 22:51:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.150 2013/03/10 21:02:40 ago Exp $
+
+  10 Mar 2013; Agostino Sarubbo <ago@gentoo.org> metadata.xml:
+  Remove myself as co-maintainer
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> kadu-0.12.3.ebuild:
   Move Qt dependencies to the new category
