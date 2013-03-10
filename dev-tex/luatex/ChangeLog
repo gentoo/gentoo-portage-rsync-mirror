@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.119 2013/03/09 23:55:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.120 2013/03/10 12:51:59 dilfridge Exp $
+
+*luatex-0.70.1-r2 (10 Mar 2013)
+
+  10 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/poppler022.patch, +luatex-0.70.1-r2.ebuild:
+  Add experimental poppler-0.22 patch
 
   09 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> luatex-0.70.1.ebuild,
   luatex-0.70.1-r1.ebuild:
