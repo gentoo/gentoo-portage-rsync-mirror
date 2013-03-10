@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.3.4.ebuild,v 1.1 2013/02/16 22:27:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.3.4.ebuild,v 1.2 2013/03/10 08:20:21 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils gnome2-utils games-ggz games
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="auth dedicated ggz +gtk ipv6 nls readline sdl +sound"
-REQUIRED_USE="|| ( gtk sdl )"
+REQUIRED_USE="!dedicated? ( || ( gtk sdl ) )"
 
 RDEPEND="readline? ( sys-libs/readline )
 	sys-libs/zlib
