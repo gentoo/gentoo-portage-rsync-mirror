@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.186 2013/03/09 13:33:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.187 2013/03/10 15:59:07 ssuominen Exp $
 
 EAPI=4
 
@@ -68,7 +68,7 @@ RDEPEND="${COMMON_DEPEND}
 	!<sec-policy/selinux-base-2.20120725-r10"
 
 PDEPEND=">=virtual/udev-197-r1
-	hwdb? ( >=sys-apps/hwids-20130302[udev] )
+	hwdb? ( >=sys-apps/hwids-20130309[udev] )
 	openrc? ( >=sys-fs/udev-init-scripts-23 )"
 
 S=${WORKDIR}/systemd-${PV}
@@ -492,5 +492,9 @@ pkg_postinst()
 	elog "         fixing known issues visit:"
 	elog "         http://www.gentoo.org/doc/en/udev-guide.xml"
 
-	use hwdb && udevadm hwdb --update --root="${ROOT%/}"
+	# Keep this here in case the database format changes so it gets updated
+	# when required. Despite that this file is owned by sys-apps/hwids.
+	if use hwdb && has_version sys-apps/hwids; then
+		udevadm hwdb --update --root="${ROOT%/}"
+	fi
 }

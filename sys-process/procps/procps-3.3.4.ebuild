@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.4.ebuild,v 1.11 2013/03/09 19:06:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.4.ebuild,v 1.12 2013/03/10 15:50:10 ssuominen Exp $
 
 EAPI="4"
 
@@ -20,6 +20,8 @@ DEPEND="${RDEPEND}
 	ncurses? ( virtual/pkgconfig )"
 
 S=${WORKDIR}/${PN}-ng-${PV}
+
+RESTRICT="test" # Fixed in 3.3.6, see bug #404389
 
 src_configure() {
 	econf \

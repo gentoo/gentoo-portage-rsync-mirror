@@ -1,6 +1,26 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.77 2013/03/09 19:06:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.80 2013/03/10 15:50:10 ssuominen Exp $
+
+  10 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> procps-3.3.4.ebuild:
+  Disable broken testsuite wrt #404389 which is fixed in 3.3.6.
+
+*procps-3.3.6 (10 Mar 2013)
+
+  10 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> +procps-3.3.6.ebuild,
+  +files/procps-3.3.6-error_at_line.patch:
+  Version bump wrt #461272 by Roman Žilka
+
+  10 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -files/3.2.5-top-sort.patch, -procps-3.2.8.ebuild, -procps-3.2.8-r1.ebuild,
+  -procps-3.2.8-r2.ebuild, -procps-3.2.8_p10-r1.ebuild,
+  -files/procps-3.2.8+gmake-3.82.patch,
+  -files/procps-3.2.8-forest-prefix.patch,
+  -files/procps-3.2.8-linux-ver-init.patch, -procps-3.3.2_p2-r1.ebuild,
+  -files/procps-3.3.2-headers.patch, -files/procps-3.3.2-ncurses.patch,
+  -files/procps-3.3.2-noproc.patch, -procps-3.3.3.ebuild,
+  -files/procps-3.3.3-watch-8bit.patch:
+  old
 
   09 Mar 2013; Agostino Sarubbo <ago@gentoo.org> procps-3.3.4.ebuild:
   Stable for sparc, wrt bug #460394

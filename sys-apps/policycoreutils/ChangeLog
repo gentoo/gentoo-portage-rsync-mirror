@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.111 2013/03/09 10:57:09 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.112 2013/03/10 15:52:57 swift Exp $
+
+*policycoreutils-2.1.13-r8 (10 Mar 2013)
+
+  10 Mar 2013; Sven Vermeulen <swift@gentoo.org>
+  +policycoreutils-2.1.13-r8.ebuild:
+  Adding selinux_gentoo init script for initramfs and cpu/online support
+  (#456914)
 
 *policycoreutils-2.1.13-r7 (09 Mar 2013)
 
