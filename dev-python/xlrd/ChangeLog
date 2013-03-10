@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/xlrd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.11 2013/03/10 07:13:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.12 2013/03/10 07:33:34 idella4 Exp $
+
+  10 Mar 2013; Ian Delaney <idella4@gentoo.org> -xlrd-0.7.1.ebuild,
+  -xlrd-0.7.3.ebuild:
+  drop old
 
   10 Mar 2013; Ian Delaney <idella4@gentoo.org> xlrd-0.9.0.ebuild:
   bump
