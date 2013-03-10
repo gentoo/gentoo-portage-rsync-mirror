@@ -17,17 +17,6 @@ luatex-beta-0.70.1/source/texk/web2c/luatexdir/lua/lepdflib.cc
  
     This file is part of LuaTeX.
  
-@@ -19,8 +19,8 @@
-    with LuaTeX; if not, see <http://www.gnu.org/licenses/>. */
- 
- static const char _svn_version[] =
--    "$Id: poppler022.patch,v 1.1 2013/03/10 12:51:59 dilfridge Exp $ "
--    "$URL: http://foundry.supelec.fr/svn/luatex/tags/beta-0.70.1/source/texk/web2c/luatexdir/lua/lepdflib.cc $";
-+    "$Id: poppler022.patch,v 1.1 2013/03/10 12:51:59 dilfridge Exp $ "
-+    "$URL: https://foundry.supelec.fr/svn/luatex/trunk/source/texk/web2c/luatexdir/lua/lepdflib.cc $";
- 
- #include "image/epdf.h"
- 
 @@ -49,15 +49,13 @@
  //**********************************************************************
  

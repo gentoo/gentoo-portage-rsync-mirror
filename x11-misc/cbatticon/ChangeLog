@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/cbatticon
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cbatticon/ChangeLog,v 1.1 2013/03/10 20:29:27 hasufell Exp $
+
+*cbatticon-1.0 (10 Mar 2013)
+
+  10 Mar 2013; Julian Ospald <hasufell@gentoo.org> +cbatticon-1.0.ebuild:
+  initial import wrt #460716
+

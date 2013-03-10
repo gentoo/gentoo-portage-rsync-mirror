@@ -1,0 +1,10 @@
+# ChangeLog for games-engines/gambatte
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gambatte/ChangeLog,v 1.1 2013/03/10 20:12:09 hasufell Exp $
+
+*gambatte-0.5.0_p20130310 (10 Mar 2013)
+
+  10 Mar 2013; Julian Ospald <hasufell@gentoo.org>
+  +gambatte-0.5.0_p20130310.ebuild, +metadata.xml:
+  initial import wrt #214479 based on Jared Bs ebuild
+

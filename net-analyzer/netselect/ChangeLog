@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/netselect
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.40 2012/10/14 21:53:59 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.42 2013/03/10 20:30:49 jer Exp $
+
+  10 Mar 2013; Jeroen Roovers <jer@gentoo.org> netselect-0.3-r3.ebuild,
+  +files/netselect-0.3-glibc.patch:
+  Do not inject -g. size_t -> socklen_t.
+
+*netselect-0.3-r3 (10 Mar 2013)
+
+  10 Mar 2013; Jeroen Roovers <jer@gentoo.org> -netselect-0.3-r1.ebuild,
+  +netselect-0.3-r3.ebuild:
+  Add prefix support by Christoph Junghans (bug #461296).
 
   14 Oct 2012; Alexis Ballier <aballier@gentoo.org> netselect-0.3-r2.ebuild:
   keyword ~amd64-fbsd

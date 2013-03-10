@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
+DEPEND=sys-libs/zlib qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtopengl:4 media-libs/alsa-lib x11-libs/libX11 x11-libs/libXext x11-libs/libXrandr x11-libs/libXv ) sdl? ( media-libs/libsdl[X,audio,joystick,video] ) dev-util/scons
+DESCRIPTION=An accuracy-focused Gameboy / Gameboy Color emulator
+EAPI=5
+HOMEPAGE=http://sourceforge.net/projects/gambatte
+IUSE=qt4 +sdl
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=sys-libs/zlib qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtopengl:4 media-libs/alsa-lib x11-libs/libX11 x11-libs/libXext x11-libs/libXrandr x11-libs/libXv ) sdl? ( media-libs/libsdl[X,audio,joystick,video] )
+REQUIRED_USE=|| ( qt4 sdl )
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~hasufell/distfiles/gambatte-0.5.0_p20130310.tar.xz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	816444638a8668da9da22466b302db84	games	e0a83e3f3f024b8c8ef7a8217d716cbf	multilib	ded93e450747134a079e647d888aa80b	qt4-r2	f735f67b3de93a007dbdec708b481831	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=62da1b40473c2ca36c775bf8f981b41f
