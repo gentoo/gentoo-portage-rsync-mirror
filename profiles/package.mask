@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14539 2013/03/09 21:33:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14541 2013/03/09 23:57:28 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Julian Ospald <hasufell@gentoo.org> (10 Mar 2013)
+# Depends on maked dev-lang/python:3.3
+=media-gfx/blender-2.66
+
+# Julian Ospald <hasufell@gentoo.org> (10 Mar 2013)
+# Unsupported and full of bundled libs. Only left
+# for people who don't have python-3.3 yet.
+# Will be removed once python-3.3 and >=blender-2.66 enter ~arch.
+=media-gfx/blender-2.64a
 
 # Tom Wijsman <TomWij@gentoo.org> (09 Mar 2013)
 # 3.0.17-r2 will be removed as it is over a year old, also removing
@@ -285,12 +295,6 @@ net-wireless/rtl8192su-firmware
 # Breaks everything (bug #456108)
 =dev-libs/openssl-1.0.1d
 
-# Diego Elio Pettenò <flameeyes@gentoo.org> (05 Feb 2013)
-# Needs a complete ebuild rewrite to use CMake, and a new patchset to
-# unbundle the bundled libraries. Use at your own risk; don't ask for
-# a bump unless you can provide the two needed items (see bug #364291).
-media-gfx/blender
-
 # Michael Sterrett <mr_bones_@gentoo.org> (31 Jan 2013)
 # Old, dead upstream and require guile[deprecated]
 # Masked for removal on 20130302
@@ -376,10 +380,6 @@ sys-apps/i2c
 # Unmaintained and replaced by built-in sqlite3 module in Python.
 # Masked for removal in 30 days, bug 452122.
 >=dev-python/pysqlite-2
-
-# Maciej Mrozowski <reavertm@gentoo.org>
-# API change breaks packages, bug 449534.
->=app-text/poppler-0.22.0
 
 # Alexis Ballier <aballier@gentoo.org>
 # Not really compatible with TeX Live 2012, breaks texdoc, produces some non
