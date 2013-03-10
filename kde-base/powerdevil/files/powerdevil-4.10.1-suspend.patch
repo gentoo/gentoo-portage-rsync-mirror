@@ -1,0 +1,73 @@
+From d56bf9cf8ae4b7fa84abeb005c9ebd467909dd49 Mon Sep 17 00:00:00 2001
+From: Raymond Wooninck <tittiatcoke@gmail.com>
+Date: Thu, 7 Mar 2013 12:46:03 +0100
+Subject: [PATCH] Also check if the version of systemd is supporting the upower
+ functions
+
+BUG: 316219
+REVIEW: 109336
+FIXED-IN: 4.10.2
+---
+ .../backends/upower/powerdevilupowerbackend.cpp    | 25 ++++++++++++++++------
+ 1 file changed, 18 insertions(+), 7 deletions(-)
+
+diff --git a/powerdevil/daemon/backends/upower/powerdevilupowerbackend.cpp b/powerdevil/daemon/backends/upower/powerdevilupowerbackend.cpp
+index f9503b3..6a50b66 100644
+--- a/powerdevil/daemon/backends/upower/powerdevilupowerbackend.cpp
++++ b/powerdevil/daemon/backends/upower/powerdevilupowerbackend.cpp
+@@ -35,6 +35,21 @@
+ 
+ #define HELPER_ID "org.kde.powerdevil.backlighthelper"
+ 
++bool checkSystemdVersion(uint requiredVersion)
++{
++    bool ok;
++
++    QDBusInterface systemdIface("org.freedesktop.systemd1", "/org/freedesktop/systemd1", "org.freedesktop.systemd1.Manager",
++                                QDBusConnection::systemBus(), 0);
++    uint version = systemdIface.property("Version").toString().section(' ', 1).toUInt(&ok);
++    if (ok) {
++       return (version >= requiredVersion);
++    } else {
++       kDebug() << "Unknown version string from Systemd";
++       return false;
++    }
++}
++
+ PowerDevilUPowerBackend::PowerDevilUPowerBackend(QObject* parent)
+     : BackendInterface(parent),
+       m_brightnessControl(0),
+@@ -123,7 +138,7 @@ void PowerDevilUPowerBackend::init()
+ 
+     // Supported suspend methods
+     SuspendMethods supported = UnknownSuspendMethod;
+-    if (m_login1Interface) {
++    if (m_login1Interface && checkSystemdVersion(195)) {
+         QDBusPendingReply<QString> canSuspend = m_login1Interface.data()->asyncCall("CanSuspend");
+         canSuspend.waitForFinished();
+         if (canSuspend.isValid() && (canSuspend.value() == "yes" || canSuspend.value() == "challenge"))
+@@ -151,11 +166,7 @@ void PowerDevilUPowerBackend::init()
+     }
+ 
+     // "resuming" signal
+-    QDBusInterface systemdIface("org.freedesktop.systemd1", "/org/freedesktop/systemd1", "org.freedesktop.systemd1.Manager",
+-                                QDBusConnection::systemBus(), this);
+-    int version = systemdIface.property("Version").toString().section(' ', 1).toInt();
+-
+-    if (m_login1Interface && version > 197) {
++    if (m_login1Interface && checkSystemdVersion(198)) {
+         connect(m_login1Interface.data(), SIGNAL(PrepareForSleep(bool)), this, SLOT(slotLogin1Resuming(bool)));
+     } else {
+         connect(m_upowerInterface, SIGNAL(Resuming()), this, SIGNAL(resumeFromSuspend()));
+@@ -280,7 +291,7 @@ bool PowerDevilUPowerBackend::setBrightness(float brightnessValue, PowerDevil::B
+ 
+ KJob* PowerDevilUPowerBackend::suspend(PowerDevil::BackendInterface::SuspendMethod method)
+ {
+-    if (m_login1Interface) {
++    if (m_login1Interface && checkSystemdVersion(195)) {
+         return new Login1SuspendJob(m_login1Interface.data(), method, supportedSuspendMethods());
+     } else {
+         return new UPowerSuspendJob(m_upowerInterface, method, supportedSuspendMethods());
+-- 
+1.8.1.5
+

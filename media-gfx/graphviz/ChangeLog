@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.271 2013/03/02 21:36:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.272 2013/03/10 18:06:53 mgorny Exp $
+
+  10 Mar 2013; Michał Górny <mgorny@gentoo.org> graphviz-2.28.0.ebuild:
+  Convert to python-single-r1. Bug #457686.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> graphviz-2.28.0.ebuild:
   Move Qt dependencies to the new category

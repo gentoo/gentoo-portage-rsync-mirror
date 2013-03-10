@@ -1,11 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.17 2013/03/02 21:36:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.28.0.ebuild,v 1.18 2013/03/10 18:06:53 mgorny Exp $
 
-EAPI=4
-PYTHON_DEPEND="python? 2"
+EAPI=5
 
-inherit eutils autotools multilib python flag-o-matic
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+
+inherit autotools eutils flag-o-matic multilib python-single-r1
 
 DESCRIPTION="Open Source Graph Visualization Software"
 HOMEPAGE="http://www.graphviz.org/"
@@ -47,6 +48,7 @@ RDEPEND="
 	gtk?	( x11-libs/gtk+:2 )
 	gts?	( sci-libs/gts )
 	lasi?	( media-libs/lasi )
+	python?	( ${PYTHON_DEPS} )
 	qt4?	(
 		dev-qt/qtcore:4
 		dev-qt/qtgui:4
@@ -60,7 +62,10 @@ DEPEND="${RDEPEND}
 	java?	( dev-lang/swig )
 	nls?	( >=sys-devel/gettext-0.14.5 )
 	perl?	( dev-lang/swig )
-	python?	( dev-lang/swig )
+	python?	(
+		dev-lang/swig
+		${PYTHON_DEPS}
+	)
 	ruby?	( dev-lang/swig )
 	tcl?	( dev-lang/swig )"
 REQUIRED_USE="!cairo? ( !X !gtk !postscript !lasi )"
@@ -125,10 +130,7 @@ REQUIRED_USE="!cairo? ( !X !gtk !postscript !lasi )"
 #   with flags enabled at configure time
 
 pkg_setup() {
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
+	use python && python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -237,15 +239,14 @@ src_install() {
 	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
 
 	dodoc AUTHORS ChangeLog NEWS README
+
+	use python && python_optimize \
+		"${D}$(python_get_sitedir)" \
+		"${D}/usr/$(get_libdir)/graphviz/python"
 }
 
 pkg_postinst() {
 	# This actually works if --enable-ltdl is passed
 	# to configure
 	dot -c
-	use python && python_mod_optimize gv.py
-}
-
-pkg_postrm() {
-	use python && python_mod_cleanup gv.py
 }
