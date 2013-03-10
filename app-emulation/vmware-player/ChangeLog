@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.110 2013/01/07 21:03:01 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.111 2013/03/10 12:16:35 vadimk Exp $
+
+*vmware-player-5.0.2.1031769 (10 Mar 2013)
+
+  10 Mar 2013; Vadim Kuznetsov vadimk@gentoo.org
+  +vmware-player-5.0.2.1031769.ebuild, -vmware-player-5.0.1.894247.ebuild:
+  vmware desktop 9.0.2 version bump. Bugs 459566, 458228, 460908.
 
   07 Jan 2013; Vadim Kuznetsov vadimk@gentoo.org
   vmware-player-5.0.1.894247.ebuild:

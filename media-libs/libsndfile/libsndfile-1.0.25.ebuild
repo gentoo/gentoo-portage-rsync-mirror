@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.25.ebuild,v 1.10 2012/08/22 03:05:37 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.25.ebuild,v 1.11 2013/03/10 12:26:30 vincent Exp $
 
-EAPI=4
+EAPI=5
 inherit autotools eutils flag-o-matic multilib
 
 MY_P=${P/_pre/pre}

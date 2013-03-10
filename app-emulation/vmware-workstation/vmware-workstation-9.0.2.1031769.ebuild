@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-9.0.1.894247.ebuild,v 1.3 2013/01/07 21:00:19 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-9.0.2.1031769.ebuild,v 1.1 2013/03/10 12:17:23 vadimk Exp $
 
 EAPI="4"
 
@@ -120,6 +120,9 @@ src_unpack() {
 src_prepare() {
 	rm -f  bin/vmware-modconfig
 	rm -rf lib/modules/binary
+	# Bug 459566
+	mv lib/libvmware-netcfg.so lib/lib/
+
 	if use server; then
 		rm -f vmware-workstation-server/bin/{openssl,configure-hostd.sh}
 	fi

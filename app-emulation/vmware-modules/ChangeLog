@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.102 2013/01/07 20:51:20 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.103 2013/03/10 12:15:48 vadimk Exp $
+
+*vmware-modules-271.2 (10 Mar 2013)
+
+  10 Mar 2013; Vadim Kuznetsov vadimk@gentoo.org +vmware-modules-271.2.ebuild,
+  -vmware-modules-271.1-r1.ebuild, -vmware-modules-271.1.ebuild:
+  vmware desktop 9.0.2 version bump. Bugs 459566, 458228, 460908.
 
 *vmware-modules-264.5 (07 Jan 2013)
 

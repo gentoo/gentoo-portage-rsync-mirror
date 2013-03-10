@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsndfile
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.133 2012/08/22 03:05:37 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.134 2013/03/10 12:26:30 vincent Exp $
+
+  10 Mar 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  libsndfile-1.0.25.ebuild:
+  EAPI bump to version 5
 
   22 Aug 2012; Christoph Junghans <ottxor@gentoo.org> libsndfile-1.0.25.ebuild:
   added prefix keywords
