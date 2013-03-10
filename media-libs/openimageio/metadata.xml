@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>graphics</herd>
 	<use>
-		<flag name='opencolorio'>Use <pkg>media-gfx/opencolorio</pkg></flag>
+		<flag name='colorio'>Use <pkg>media-gfx/opencolorio</pkg></flag>
 		<flag name='opencv'>Use <pkg>media-libs/opencv</pkg></flag>
 		<flag name='tbb'>Use <pkg>dev-cpp/tbb</pkg></flag>
 	</use>

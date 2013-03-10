@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.1.ebuild,v 1.8 2013/03/02 21:46:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.1.ebuild,v 1.9 2013/03/10 13:17:50 ssuominen Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://github.com/OpenImageIO/oiio/tarball/Release-${PV} -> ${P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ~ppc64 x86"
-IUSE="jpeg2k opencolorio opencv opengl python qt4 tbb +truetype"
+IUSE="jpeg2k +colorio opencv opengl python qt4 tbb +truetype"
 
 RESTRICT="test" #431412
 
@@ -31,7 +31,7 @@ RDEPEND="dev-libs/boost[python?]
 	sys-libs/zlib
 	virtual/jpeg
 	jpeg2k? ( >=media-libs/openjpeg-1.5 )
-	opencolorio? ( >=media-libs/opencolorio-1.0.7 )
+	colorio? ( >=media-libs/opencolorio-1.0.7 )
 	opencv? ( >=media-libs/opencv-2.3 )
 	opengl? (
 		virtual/glu
@@ -76,7 +76,7 @@ src_configure() {
 		-DUSE_EXTERNAL_PUGIXML=ON
 		-DUSE_FIELD3D=OFF # missing in Portage
 		$(cmake-utils_use_use truetype freetype)
-		$(cmake-utils_use_use opencolorio OCIO)
+		$(cmake-utils_use_use colorio OCIO)
 		$(cmake-utils_use_use opencv)
 		$(cmake-utils_use_use opengl)
 		$(cmake-utils_use_use jpeg2k OPENJPEG)
