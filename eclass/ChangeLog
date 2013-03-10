@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.731 2013/03/09 21:36:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.732 2013/03/10 02:02:30 ottxor Exp $
+
+  10 Mar 2013; Christoph Junghans <ottxor@gentoo.org> vim.eclass:
+  add sys-apps/gawk dep
 
   09 Mar 2013; Robin H. Johnson <robbat2@gentoo.org> mysql-autotools.eclass:
   Bug #401733: nested configure scripts in MySQL generate unrecognized options

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.205 2012/10/24 18:55:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.206 2013/03/10 02:02:30 ottxor Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -67,6 +67,7 @@ EXPORT_FUNCTIONS ${TO_EXPORT}
 
 DEPEND="${DEPEND}
 	>=app-admin/eselect-vi-1.1
+	sys-apps/gawk
 	>=sys-apps/sed-4
 	sys-devel/autoconf
 	>=sys-libs/ncurses-5.2-r2
