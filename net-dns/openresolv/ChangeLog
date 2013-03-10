@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/openresolv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.69 2012/12/06 13:11:52 polynomial-c Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.70 2013/03/10 22:05:53 floppym Exp $
+
+*openresolv-3.5.4 (10 Mar 2013)
+
+  10 Mar 2013; Mike Gilbert <floppym@gentoo.org> +openresolv-3.5.4.ebuild:
+  Version bump. Adds systemd support.
 
 *openresolv-3.5.3 (06 Dec 2012)
 
