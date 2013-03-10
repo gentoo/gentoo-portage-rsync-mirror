@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.18 2013/03/10 15:14:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.19 2013/03/10 16:45:46 floppym Exp $
 
 EAPI=5
 
@@ -211,6 +211,10 @@ optfeature() {
 
 pkg_postinst() {
 	enewgroup systemd-journal
+	if use http; then
+		enewgroup systemd-journal-gateway
+		enewuser systemd-journal-gateway -1 -1 -1 systemd-journal-gateway
+	fi
 	systemd_update_catalog
 
 	mkdir -p "${ROOT}"/run || ewarn "Unable to mkdir /run, this could mean trouble."
