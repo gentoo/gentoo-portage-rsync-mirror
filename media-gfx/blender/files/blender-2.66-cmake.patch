@@ -1,0 +1,15 @@
+to upstream: this is a really stupid idea
+
+--- blender-2.66/source/creator/CMakeLists.txt
++++ blender-2.66/source/creator/CMakeLists.txt
+@@ -264,10 +264,6 @@
+ 
+ 
+ # important to make a clean  install each time, else old scripts get loaded.
+-install(
+-	CODE
+-	"file(REMOVE_RECURSE ${TARGETDIR_VER})"
+-)
+ 
+ if(WITH_PYTHON)
+ 	# install(CODE "message(\"copying blender scripts...\")")

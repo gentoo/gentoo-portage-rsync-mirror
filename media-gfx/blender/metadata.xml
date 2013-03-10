@@ -18,7 +18,7 @@
       Adds support for space navigator devices through package
       <pkg>dev-libs/libspnav</pkg>.
     </flag>
-    <flag name='game-engine'>
+    <flag name='game-engine' restrict='&gt;=media-gfx/blender-2.50'>
       Adds Game Engine support to Blender.
     </flag>
     <flag name='collada'>
@@ -51,5 +51,17 @@
       This flag add support for RED CODE camera digital format (5K HD
       images *.r3d) - EXPERIMENTAL.
     </flag>
+    <flag name="boost">
+      Enable features depending on boost.
+    </flag>
+	<flag name="bullet">
+      Enable Bullet (Physics Engine).
+	</flag>
+	<flag name="colorio">
+      Enable OpenColorIO color management.
+	</flag>
+	<flag name="ndof">
+      Enable NDOF input devices (SpaceNavigator and friends).
+	</flag>
   </use>
 </pkgmetadata>
