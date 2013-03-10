@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198.ebuild,v 1.3 2013/03/10 13:56:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198.ebuild,v 1.4 2013/03/10 15:14:56 mgorny Exp $
 
 EAPI=5
 
@@ -121,7 +121,7 @@ src_install() {
 
 	# zsh completion
 	insinto /usr/share/zsh/site-functions
-	doins shell-completion/systemd-zsh-completion.zsh
+	newins shell-completion/systemd-zsh-completion.zsh "_${PN}"
 
 	# remove pam.d plugin .la-file
 	prune_libtool_files --modules
