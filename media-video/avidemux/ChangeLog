@@ -1,6 +1,11 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.206 2013/03/04 16:34:51 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.207 2013/03/10 13:58:25 tomwij Exp $
+
+  10 Mar 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-2.6.1.ebuild,
+  metadata.xml:
+  Added a system-ffmpeg to =media-video/avidemux-2.6.1, currently it is disabled
+  by default and masked since it does not compile and work yet.
 
   04 Mar 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-2.6.1.ebuild:
   Split magic powder function into EAPI 5 appropriate src_configure, src_compile

@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.173 2013/03/02 23:40:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.174 2013/03/10 13:57:12 jer Exp $
+
+  10 Mar 2013; Jeroen Roovers <jer@gentoo.org> -opera-next-12.13_pre1733.ebuild:
+  Old.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   opera-next-12.13_pre1733.ebuild, opera-next-12.14_pre1737.ebuild:

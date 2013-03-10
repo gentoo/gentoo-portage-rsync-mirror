@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.3.ebuild,v 1.4 2013/03/10 13:17:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/openimageio-1.1.7.ebuild,v 1.1 2013/03/10 13:50:32 ssuominen Exp $
 
 EAPI=5
 
-PYTHON_DEPEND="python? 2:2.7"
+PYTHON_COMPAT=( python2_7 )
 
-inherit cmake-utils eutils multilib python vcs-snapshot
+inherit cmake-utils eutils multilib python-single-r1 vcs-snapshot
 
 DESCRIPTION="A library for reading and writing images"
 HOMEPAGE="http://sites.google.com/site/openimageio/ http://github.com/OpenImageIO"
@@ -15,49 +15,41 @@ SRC_URI="http://github.com/OpenImageIO/oiio/archive/Release-${PV}.tar.gz -> ${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
-IUSE="jpeg2k +colorio opencv opengl python qt4 tbb +truetype"
+IUSE="jpeg2k colorio opencv opengl python qt4 tbb +truetype"
 
 RESTRICT="test" #431412
 
 RDEPEND="dev-libs/boost[python?]
-	dev-libs/pugixml
-	media-libs/glew
-	media-libs/ilmbase
-	media-libs/libpng:0
-	>=media-libs/libwebp-0.2.1
-	media-libs/openexr
-	media-libs/tiff:0
+	dev-libs/pugixml:=
+	media-libs/glew:=
+	media-libs/ilmbase:=
+	media-libs/libpng:0=
+	>=media-libs/libwebp-0.2.1:=
+	media-libs/openexr:=
+	media-libs/tiff:0=
 	sci-libs/hdf5
-	sys-libs/zlib
+	sys-libs/zlib:=
 	virtual/jpeg
-	jpeg2k? ( >=media-libs/openjpeg-1.5 )
-	colorio? ( >=media-libs/opencolorio-1.0.7 )
-	opencv? ( >=media-libs/opencv-2.3 )
+	jpeg2k? ( >=media-libs/openjpeg-1.5:= )
+	colorio? ( >=media-libs/opencolorio-1.0.7:= )
+	opencv? ( >=media-libs/opencv-2.3:= )
 	opengl? (
 		virtual/glu
 		virtual/opengl
 		)
+	python? ( ${PYTHON_DEPS} )
 	qt4? (
 		dev-qt/qtcore:4
 		dev-qt/qtgui:4
 		dev-qt/qtopengl:4
 		)
 	tbb? ( dev-cpp/tbb )
-	truetype? ( >=media-libs/freetype-2 )"
+	truetype? ( media-libs/freetype:2= )"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${P}/src
 
-pkg_setup() {
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
-}
-
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.1.1-x86-build.patch #444784
-
 	# remove bundled code to make it build
 	# https://github.com/OpenImageIO/oiio/issues/403
 	rm */pugixml* || die
@@ -65,14 +57,16 @@ src_prepare() {
 	# fix man page building
 	# https://github.com/OpenImageIO/oiio/issues/404
 	use qt4 || sed -i -e '/list.*APPEND.*cli_tools.*iv/d' doc/CMakeLists.txt
+
+	python_fix_shebang .
 }
 
 src_configure() {
 	local mycmakeargs=(
-		-DLIB_INSTALL_DIR=/usr/$(get_libdir)
+		-DLIB_INSTALL_DIR="/usr/$(get_libdir)"
 		-DBUILDSTATIC=OFF
 		-DLINKSTATIC=OFF
-		$(use python && echo -DPYLIB_INSTALL_DIR=$(python_get_sitedir))
+		$(use python && echo -DPYLIB_INSTALL_DIR="$(python_get_sitedir)")
 		-DUSE_EXTERNAL_PUGIXML=ON
 		-DUSE_FIELD3D=OFF # missing in Portage
 		$(cmake-utils_use_use truetype freetype)

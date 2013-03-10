@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.513 2013/03/08 09:33:09 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.514 2013/03/10 13:57:28 tomwij Exp $
+
+  10 Mar 2013; Tom Wijsman <TomWij@gentoo.org> package.use.mask:
+  Masking system-ffmpeg on media-video/avidemux until it compiles and works.
 
   08 Mar 2013; Davide Pesavento <pesa@gentoo.org> package.use.force:
   Adjust entry for qt-creator.
