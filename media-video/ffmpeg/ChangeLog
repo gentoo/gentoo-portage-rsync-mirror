@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.617 2013/03/09 12:07:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.618 2013/03/10 21:31:58 vapier Exp $
+
+  10 Mar 2013; Mike Frysinger <vapier@gentoo.org> ffmpeg-1.0.5.ebuild,
+  ffmpeg-1.1.3.ebuild, ffmpeg-9999.ebuild:
+  Restore --disable-asm for ABI=x32 #427004 by devsk.
 
   09 Mar 2013; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   factorize some more code into ffuse

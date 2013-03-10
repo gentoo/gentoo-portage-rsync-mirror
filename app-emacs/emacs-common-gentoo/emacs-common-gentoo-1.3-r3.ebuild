@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.3-r3.ebuild,v 1.8 2012/09/02 17:55:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.3-r3.ebuild,v 1.9 2013/03/10 21:42:27 ulm Exp $
 
 EAPI=4
 
-inherit elisp-common eutils fdo-mime gnome2-utils user
+inherit elisp-common eutils fdo-mime gnome2-utils readme.gentoo user
 
 DESCRIPTION="Common files needed by all GNU Emacs versions"
 HOMEPAGE="http://www.gentoo.org/proj/en/lisp/emacs/"
@@ -58,6 +58,18 @@ src_install() {
 
 		gnome2_icon_savelist
 	fi
+
+	DOC_CONTENTS="All site initialisation for Gentoo-installed packages is
+		added to ${SITELISP}/site-gentoo.el. In order for this site
+		initialisation to be loaded for all users automatically, a default
+		site startup file /etc/emacs/site-start.el is installed. You are
+		responsible for maintenance of this file.
+		\n\nAlternatively, individual users can add the following command:
+		\n\n(require 'site-gentoo)
+		\n\nto their ~/.emacs initialisation files, or, for greater
+		flexibility, users may load single package-specific initialisation
+		files from the ${SITELISP}/site-gentoo.d/ directory."
+	readme.gentoo_create_doc
 }
 
 site-start-modified-p() {
@@ -96,25 +108,9 @@ pkg_postinst() {
 	# make sure that site-gentoo.el exists since site-start.el requires it
 	elisp-site-regen
 
-	local line
-	while read line; do elog "${line:- }"; done <<-EOF
-	All site initialisation for Gentoo-installed packages is added to
-	${SITELISP}/site-gentoo.el. In order for this site
-	initialisation to be loaded for all users automatically, a default
-	site startup file /etc/emacs/site-start.el is installed. You are
-	responsible for maintenance of this file.
-
-	Alternatively, individual users can add the following command:
-
-	(require 'site-gentoo)
-
-	to their ~/.emacs initialisation files, or, for greater flexibility,
-	users may load single package-specific initialisation files from
-	${SITELISP}/site-gentoo.d/.
-	EOF
+	readme.gentoo_print_elog
 
 	if [[ -e ${EROOT}${SITELISP}/site-start.el ]]; then
-		elog
 		ewarn "The location of the site startup file for Emacs has changed to"
 		ewarn "/etc/emacs/site-start.el."
 		if site-start-modified-p; then

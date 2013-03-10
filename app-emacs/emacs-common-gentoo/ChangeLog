@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.81 2012/09/02 18:27:16 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.82 2013/03/10 21:42:27 ulm Exp $
+
+  10 Mar 2013; Ulrich Müller <ulm@gentoo.org>
+  emacs-common-gentoo-1.3-r3.ebuild:
+  Use functions from readme.gentoo.eclass instead of elog.
 
   02 Sep 2012; Ulrich Müller <ulm@gentoo.org>
   -emacs-common-gentoo-1.3-r1.ebuild, metadata.xml:

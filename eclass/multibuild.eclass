@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.7 2013/03/10 21:00:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multibuild.eclass,v 1.8 2013/03/10 21:44:01 mgorny Exp $
 
 # @ECLASS: multibuild
 # @MAINTAINER:
@@ -113,11 +113,6 @@ multibuild_foreach_variant() {
 		local MULTIBUILD_VARIANT=${v}
 		local MULTIBUILD_ID=${prev_id}${v}
 		local BUILD_DIR=${bdir%%/}-${v}
-		local log_fd
-
-		# redirect_alloc_fd accepts files only. so we need to open
-		# a random file and then reuse the fd for logger process.
-		redirect_alloc_fd log_fd /dev/null
 
 		_multibuild_run() {
 			# find the first non-private command
@@ -130,14 +125,9 @@ multibuild_foreach_variant() {
 			"${@}"
 		}
 
-		# bash can't handle ${log_fd} in redirections,
-		# we need to use eval to pass fd numbers directly.
-		eval "
-			exec ${log_fd}> >(exec tee -a \"\${T}/build-\${MULTIBUILD_ID}.log\")
-			_multibuild_run \"\${@}\" >&${log_fd} 2>&1
-			lret=\${?}
-			exec ${log_fd}>&-
-		"
+		_multibuild_run "${@}" \
+			> >(exec tee -a "${T}/build-${MULTIBUILD_ID}.log") 2>&1
+		lret=${?}
 	done
 	[[ ${ret} -eq 0 && ${lret} -ne 0 ]] && ret=${lret}
 

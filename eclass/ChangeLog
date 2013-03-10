@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.734 2013/03/10 21:00:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.735 2013/03/10 21:44:00 mgorny Exp $
+
+  10 Mar 2013; Michał Górny <mgorny@gentoo.org> multibuild.eclass:
+  Make the log output redirection much simpler. Fix bash-3.2 compatibility.
 
   10 Mar 2013; Michał Górny <mgorny@gentoo.org> multibuild.eclass:
   Fix compatibility with bash-4.1 -- it does not support negative array
