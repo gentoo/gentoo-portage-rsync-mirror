@@ -1,6 +1,10 @@
 # ChangeLog for virtual/jdk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.56 2013/02/05 06:08:52 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.57 2013/03/10 11:01:08 sera Exp $
+
+  10 Mar 2013; Ralph Sennhauser <sera@gentoo.org> jdk-1.5.0.ebuild,
+  jdk-1.6.0.ebuild, jdk-1.6.0-r1.ebuild, jdk-1.7.0.ebuild:
+  More descriptive description. #460834
 
   05 Feb 2013; Rick Farina <zerochaos@gentoo.org> jdk-1.6.0-r1.ebuild:
   adding ~arm

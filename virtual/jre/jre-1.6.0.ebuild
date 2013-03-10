@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/jre-1.6.0.ebuild,v 1.16 2013/02/05 06:09:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/jre-1.6.0.ebuild,v 1.17 2013/03/10 10:56:07 sera Exp $
 
-DESCRIPTION="Virtual for JRE"
+DESCRIPTION="Virtual for Java Runtime Environment (JRE)"
 HOMEPAGE=""
 SRC_URI=""
 

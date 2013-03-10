@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/odns/odns-0.3.ebuild,v 1.3 2012/08/22 14:26:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/odns/odns-0.3.ebuild,v 1.4 2013/03/10 10:54:56 aballier Exp $
 
-EAPI=3
+EAPI=5
 
 inherit findlib eutils
 
@@ -11,11 +11,11 @@ HOMEPAGE="http://odns.tuxfamily.org/"
 SRC_URI="http://download.tuxfamily.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt]"
+RDEPEND=">=dev-lang/ocaml-3.10.2:=[ocamlopt]"
 DEPEND="${RDEPEND}"
 
 CLIBS="" # Workaround for bug #422683
@@ -27,6 +27,6 @@ src_prepare() {
 
 src_install() {
 	findlib_src_preinst
-	PREFIX="${D}/usr" emake install || die
-	dodoc AUTHORS README || die
+	PREFIX="${D}/usr" emake install
+	dodoc AUTHORS README
 }

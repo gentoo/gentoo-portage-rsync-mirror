@@ -1,7 +1,7 @@
 DEFINED_PHASES=-
-DESCRIPTION=Virtual for JRE
+DESCRIPTION=Virtual for Java Runtime Environment (JRE)
 EAPI=4
 KEYWORDS=amd64 ~arm ppc ppc64 x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
 RDEPEND=|| ( virtual/jdk:1.5 dev-java/sun-jre-bin:1.5 dev-java/jamvm:0 )
 SLOT=1.5
-_md5_=e19c2290b4d3e44e019ef7df69148ad1
+_md5_=c31103735a05a13e4e4b5804a5cf9f3f

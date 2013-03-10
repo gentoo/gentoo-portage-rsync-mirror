@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst
-DEPEND=>=x11-libs/gtk+-2.10:2 >=dev-lang/ocaml-3.10[ocamlopt?] svg? ( >=gnome-base/librsvg-2.2:2 ) glade? ( >=gnome-base/libglade-2.0.1 ) gnomecanvas? ( >=gnome-base/libgnomecanvas-2.2 ) gnome? ( || ( >=gnome-base/gnome-panel-2.32[bonobo] <gnome-base/gnome-panel-2.32 ) >=gnome-base/gnome-panel-2.4.0 >=gnome-base/libgnomeui-2.4.0 ) opengl? ( >=dev-ml/lablgl-0.98 >=x11-libs/gtkglarea-1.9:2 ) spell? ( app-text/gtkspell:2 ) sourceview? ( x11-libs/gtksourceview:2.0 ) virtual/pkgconfig >=dev-ml/findlib-1.0.4-r1
+DEPEND=>=x11-libs/gtk+-2.10:2 >=dev-lang/ocaml-3.10:=[ocamlopt?] svg? ( >=gnome-base/librsvg-2.2:2 ) glade? ( >=gnome-base/libglade-2.0.1 ) gnomecanvas? ( >=gnome-base/libgnomecanvas-2.2 ) gnome? ( || ( >=gnome-base/gnome-panel-2.32[bonobo] <gnome-base/gnome-panel-2.32 ) >=gnome-base/gnome-panel-2.4.0 >=gnome-base/libgnomeui-2.4.0 ) opengl? ( >=dev-ml/lablgl-0.98:= >=x11-libs/gtkglarea-1.9:2 ) spell? ( app-text/gtkspell:2 ) sourceview? ( x11-libs/gtksourceview:2.0 ) virtual/pkgconfig >=dev-ml/findlib-1.0.4-r1
 DESCRIPTION=Objective CAML interface for Gtk+2
-EAPI=2
+EAPI=5
 HOMEPAGE=http://lablgtk.forge.ocamlcore.org/
 IUSE=debug examples glade gnome gnomecanvas sourceview +ocamlopt opengl spell svg
 KEYWORDS=alpha amd64 ia64 ppc sparc x86 ~x86-fbsd ~x86-linux
 LICENSE=LGPL-2.1-with-linking-exception examples? ( as-is )
-RDEPEND=>=x11-libs/gtk+-2.10:2 >=dev-lang/ocaml-3.10[ocamlopt?] svg? ( >=gnome-base/librsvg-2.2:2 ) glade? ( >=gnome-base/libglade-2.0.1 ) gnomecanvas? ( >=gnome-base/libgnomecanvas-2.2 ) gnome? ( || ( >=gnome-base/gnome-panel-2.32[bonobo] <gnome-base/gnome-panel-2.32 ) >=gnome-base/gnome-panel-2.4.0 >=gnome-base/libgnomeui-2.4.0 ) opengl? ( >=dev-ml/lablgl-0.98 >=x11-libs/gtkglarea-1.9:2 ) spell? ( app-text/gtkspell:2 ) sourceview? ( x11-libs/gtksourceview:2.0 )
-SLOT=2
+RDEPEND=>=x11-libs/gtk+-2.10:2 >=dev-lang/ocaml-3.10:=[ocamlopt?] svg? ( >=gnome-base/librsvg-2.2:2 ) glade? ( >=gnome-base/libglade-2.0.1 ) gnomecanvas? ( >=gnome-base/libgnomecanvas-2.2 ) gnome? ( || ( >=gnome-base/gnome-panel-2.32[bonobo] <gnome-base/gnome-panel-2.32 ) >=gnome-base/gnome-panel-2.4.0 >=gnome-base/libgnomeui-2.4.0 ) opengl? ( >=dev-ml/lablgl-0.98:= >=x11-libs/gtkglarea-1.9:2 ) spell? ( app-text/gtkspell:2 ) sourceview? ( x11-libs/gtksourceview:2.0 )
+SLOT=2/2.16.0
 SRC_URI=http://forge.ocamlcore.org/frs/download.php/979/lablgtk-2.16.0.tar.gz
 _eclasses_=findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=b1f134ac814562d862c9fae1d94c76fb
+_md5_=4472ea26381b456a04b3e9a9e1a1d91f

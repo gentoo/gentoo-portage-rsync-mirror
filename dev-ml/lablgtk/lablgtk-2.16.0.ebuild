@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.16.0.ebuild,v 1.7 2012/12/30 15:07:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.16.0.ebuild,v 1.8 2013/03/10 10:39:09 aballier Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit multilib findlib
 
@@ -14,7 +14,7 @@ SRC_URI="http://forge.ocamlcore.org/frs/download.php/979/${P}.tar.gz"
 LICENSE="LGPL-2.1-with-linking-exception examples? ( as-is )"
 
 RDEPEND=">=x11-libs/gtk+-2.10:2
-	>=dev-lang/ocaml-3.10[ocamlopt?]
+	>=dev-lang/ocaml-3.10:=[ocamlopt?]
 	svg? ( >=gnome-base/librsvg-2.2:2 )
 	glade? ( >=gnome-base/libglade-2.0.1 )
 	gnomecanvas? ( >=gnome-base/libgnomecanvas-2.2 )
@@ -23,7 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.10:2
 		>=gnome-base/gnome-panel-2.4.0
 		>=gnome-base/libgnomeui-2.4.0
 		)
-	opengl? ( >=dev-ml/lablgl-0.98
+	opengl? ( >=dev-ml/lablgl-0.98:=
 		>=x11-libs/gtkglarea-1.9:2 )
 	spell? ( app-text/gtkspell:2 )
 	sourceview? ( x11-libs/gtksourceview:2.0 )
@@ -31,7 +31,7 @@ RDEPEND=">=x11-libs/gtk+-2.10:2
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-SLOT="2"
+SLOT="2/${PV}"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~x86-fbsd ~x86-linux"
 
 src_configure() {
@@ -48,9 +48,9 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 all || die "make failed"
+	emake -j1 all
 	if use ocamlopt; then
-		emake -j1 opt || die "Compiling native code failed"
+		emake -j1 opt
 	fi
 }
 
@@ -65,12 +65,14 @@ install_examples() {
 	use sourceview && insinto /usr/share/doc/${PF}/examples/sourceview && doins examples/sourceview/*.ml examples/sourceview/*.lang
 	use opengl && insinto /usr/share/doc/${PF}/examples/GL && doins examples/GL/*.ml
 	use gnome && insinto /usr/share/doc/${PF}/examples/panel && doins examples/panel/*
+
+	docompress -x /usr/share/doc/${PF}/examples
 }
 
 src_install () {
 	findlib_src_preinst
 	export OCAMLPATH="${OCAMLFIND_DESTDIR}"
-	emake install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}"
 
 	dodoc CHANGES README CHANGES.API
 	use examples && install_examples

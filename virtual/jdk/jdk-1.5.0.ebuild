@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.5.0.ebuild,v 1.21 2012/09/16 13:17:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.5.0.ebuild,v 1.22 2013/03/10 11:01:08 sera Exp $
 
-DESCRIPTION="Virtual for JDK"
+DESCRIPTION="Virtual for Java Development Kit (JDK)"
 HOMEPAGE=""
 SRC_URI=""
 
