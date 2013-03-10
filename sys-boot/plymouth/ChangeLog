@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.32 2013/03/03 17:45:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.33 2013/03/10 19:41:38 maksbotan Exp $
+
+*plymouth-0.8.8 (10 Mar 2013)
+
+  10 Mar 2013; Maxim Koltsov <maksbotan@gentoo.org> +plymouth-0.8.8.ebuild:
+  Bump to 0.8.8, bug #430478. Thanks to Enrico Tagliavini.
 
   03 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   This will now be proxy maintained
