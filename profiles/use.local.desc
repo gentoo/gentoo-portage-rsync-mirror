@@ -2218,6 +2218,7 @@ games-strategy/freeciv:auth - Add authentication capability
 games-strategy/freeciv:ggz - Add support for GGZ Gaming Zone
 games-strategy/freeciv:sound - Add support for sound provided by media-libs/sdl-mixer
 games-strategy/freeorion:cg - Add support for NVIDIA toolkit plugin
+games-strategy/freesynd:devtools - Build development tools
 games-strategy/heroes3:maps - Installs optional map data
 games-strategy/heroes3:music - Installs optional music data
 games-strategy/heroes3:sounds - Installs optional sound data
