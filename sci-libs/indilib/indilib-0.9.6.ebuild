@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/indilib-0.9.6.ebuild,v 1.1 2013/01/09 12:25:21 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/indilib-0.9.6.ebuild,v 1.2 2013/03/10 11:08:17 kensington Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ MY_PN="lib${PN/lib/}"
 inherit base cmake-utils
 
 DESCRIPTION="INDI Astronomical Control Protocol library"
-HOMEPAGE="http://indi.sourceforge.net/index.php/Main_Page"
+HOMEPAGE="http://www.indilib.org/"
 SRC_URI="mirror://sourceforge/${PN/lib/}/${MY_PN}_${PV}.tar.gz"
 
 LICENSE="LGPL-2"

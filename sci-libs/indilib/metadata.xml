@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>kde</herd>
-<use>
-	<flag name="nova">Enable support for nova celestial mechanics calculations</flag>
-</use>
+	<herd>kde</herd>
+	<use>
+		<flag name="nova">Enable support for nova celestial mechanics calculations</flag>
+	</use>
+	<upstream>
+		<remote-id type="sourceforge">indi</remote-id>
+	</upstream>
 </pkgmetadata>
