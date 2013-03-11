@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14542 2013/03/10 13:57:27 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14544 2013/03/11 12:22:00 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (11 Mar 2013)
+# Too many blockers with current stable, incompatible
+# with current udev for example.
+# Should be redudant in favour of the device-mapper
+# packaged in sys-fs/lvm2.
+# See, http://bugs.gentoo.org/show_bug.cgi?id=461382
+# Removal in 30 days
+sys-fs/device-mapper
 
 # Julian Ospald <hasufell@gentoo.org> (10 Mar 2013)
 # Depends on maked dev-lang/python:3.3

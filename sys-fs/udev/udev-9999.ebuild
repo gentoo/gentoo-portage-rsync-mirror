@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.189 2013/03/10 17:28:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.191 2013/03/11 12:07:22 ssuominen Exp $
 
 EAPI=4
 
@@ -24,7 +24,8 @@ else
 	if [[ -n "${patchset}" ]]
 		then
 				SRC_URI="${SRC_URI}
-					http://dev.gentoo.org/~williamh/dist/${P}-patches-${patchset}.tar.bz2"
+					http://dev.gentoo.org/~ssuominen/${P}-patches-${patchset}.tar.xz
+					http://dev.gentoo.org/~williamh/dist/${P}-patches-${patchset}.tar.xz"
 			fi
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
@@ -198,6 +199,9 @@ src_prepare()
 		echo '#define secure_getenv(x) NULL' >> config.h.in
 		sed -i -e '/error.*secure_getenv/s:.*:#define secure_getenv(x) NULL:' src/shared/missing.h || die
 	fi
+
+	# link udevd(8) to systemd-udevd.service(8) manpage
+	echo '.so systemd-udevd.service.8' > "${T}"/udevd.8
 }
 
 src_configure()
@@ -368,6 +372,9 @@ src_install()
 	dosym /sbin/udevd "$(systemd_get_utildir)"/systemd-udevd
 	find "${ED}/$(systemd_get_unitdir)" -name '*.service' -exec \
 		sed -i -e "/ExecStart/s:/lib/systemd:$(systemd_get_utildir):" {} +
+
+	# see src_prepare() where this is created
+	doman "${T}"/udevd.8
 }
 
 pkg_preinst()

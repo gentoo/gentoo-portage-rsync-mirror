@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kapow/kapow-1.4.2.ebuild,v 1.2 2013/03/02 23:49:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kapow/kapow-1.4.4.ebuild,v 1.1 2013/03/11 12:26:37 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit qt4-r2
 
 DESCRIPTION="A punch clock program designed to easily keep track of your hours"
@@ -21,4 +21,4 @@ src_configure() {
 	eqmake4 kapow.pro PREFIX=/usr
 }
 
-DOCS="ChangeLog README"
+DOCS=( ChangeLog README )
