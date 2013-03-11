@@ -1,29 +1,30 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-novaclient/python-novaclient-9999.ebuild,v 1.5 2013/03/11 01:15:08 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-novaclient/python-novaclient-2.11.1.ebuild,v 1.1 2013/03/11 01:15:08 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
 
-inherit distutils-r1 git-2
+inherit distutils-r1
 
-EGIT_REPO_URI="git://github.com/openstack/${PN}.git
-	https://github.com/openstack/${PN}.git"
-
-DESCRIPTION="This is a client for the OpenStack Nova API."
+DESCRIPTION="A client for the OpenStack Nova API"
 HOMEPAGE="https://github.com/openstack/python-novaclient"
-#SRC_URI="git://github.com/openstack/python-novaclient.git"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
+#need to package a bunch of stuff, they changed their test suite, again...
+RESTRICT="test"
+
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-		test? ( dev-python/iso8601
+		test? ( >=dev-python/iso8601-0.1.4
 				dev-python/mock
 				dev-python/nose
-				dev-python/prettytable
+				>=dev-python/prettytable-0.6
+				<dev-python/prettytable-0.7
 				dev-python/pytest
 				dev-python/pytest-runner
 				dev-python/requests
@@ -31,7 +32,10 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				virtual/python-unittest2[${PYTHON_USEDEP}] )"
 RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
 		dev-python/httplib2
+		>=dev-python/prettytable-0.6
+		<dev-python/prettytable-0.7
 		dev-python/prettytable
+		dev-python/requests
 		dev-python/simplejson[${PYTHON_USEDEP}]"
 
 python_test() {

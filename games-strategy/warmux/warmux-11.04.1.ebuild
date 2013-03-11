@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/warmux-11.04.1.ebuild,v 1.7 2012/11/05 16:58:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/warmux-11.04.1.ebuild,v 1.8 2013/03/11 01:25:07 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -37,7 +37,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gentoo.patch \
 		"${FILESDIR}"/${P}-zlib.patch \
 		"${FILESDIR}"/${P}-action.patch \
-		"${FILESDIR}"/${P}-gcc47.patch
+		"${FILESDIR}"/${P}-gcc47.patch \
+		"${FILESDIR}"/${P}-stat.patch
 	eautoreconf
 }
 
