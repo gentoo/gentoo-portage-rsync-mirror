@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/leveldb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.4 2013/02/19 12:41:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.5 2013/03/11 03:56:33 patrick Exp $
+
+*leveldb-1.9.0-r2 (11 Mar 2013)
+
+  11 Mar 2013; Patrick Lauer <patrick@gentoo.org> +leveldb-1.9.0-r2.ebuild:
+  Fixing header installation #454648
 
   19 Feb 2013; Anthony G. Basile <blueness@gentoo.org> leveldb-1.9.0-r1.ebuild:
   Keyword ~arm for net-p2p/bitcoin{d,-qt}
