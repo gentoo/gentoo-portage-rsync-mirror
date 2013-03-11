@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gudev-sharp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gudev-sharp/ChangeLog,v 1.7 2012/11/28 22:30:27 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gudev-sharp/ChangeLog,v 1.8 2013/03/11 10:36:25 ssuominen Exp $
+
+  11 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Leave the package to dotnet herd.
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> gudev-sharp-0.1.ebuild:
   Use virtual/udev.
