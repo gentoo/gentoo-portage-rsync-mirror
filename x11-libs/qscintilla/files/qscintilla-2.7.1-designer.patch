@@ -1,0 +1,13 @@
+This patch causes the designer plugin to be built against the just-built
+qscintilla, rather than trying to build against the system qscintilla
+which may not be installed yet.
+
+--- designer-Qt4Qt5/designer.pro
++++ designer-Qt4Qt5/designer.pro
+@@ -26,4 +26,5 @@
+ target.path = $$[QT_INSTALL_PLUGINS]/designer
+ INSTALLS += target
+ 
+-LIBS += -L$$[QT_INSTALL_LIBS] -lqscintilla2
++INCLUDEPATH = ../Qt4Qt5
++LIBS += -L../Qt4Qt5 -lqscintilla2

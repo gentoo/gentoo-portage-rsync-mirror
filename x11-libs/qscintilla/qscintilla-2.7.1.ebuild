@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.7.1.ebuild,v 1.1 2013/03/10 17:42:42 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.7.1.ebuild,v 1.2 2013/03/11 09:18:16 kensington Exp $
 
 EAPI=5
 
@@ -25,6 +25,10 @@ RDEPEND="${DEPEND}"
 PDEPEND="python? ( ~dev-python/qscintilla-python-${PV} )"
 
 S=${WORKDIR}/${MY_P}
+
+PATCHES=(
+	"${FILESDIR}/${PN}-2.7.1-designer.patch"
+)
 
 src_unpack() {
 	qt4-r2_src_unpack
