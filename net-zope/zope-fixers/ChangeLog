@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/zope-fixers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/ChangeLog,v 1.13 2013/02/11 21:27:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/ChangeLog,v 1.14 2013/03/11 06:32:44 patrick Exp $
+
+*zope-fixers-1.1.2 (11 Mar 2013)
+
+  11 Mar 2013; Patrick Lauer <patrick@gentoo.org> +zope-fixers-1.1.2.ebuild:
+  Bump
 
 *zope-fixers-1.0-r1 (11 Feb 2013)
 
