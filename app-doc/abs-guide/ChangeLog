@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/abs-guide
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.90 2013/01/27 22:27:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.91 2013/03/11 00:57:27 dirtyepic Exp $
+
+  11 Mar 2013; Ryan Hill <dirtyepic@gentoo.org> -abs-guide-6.5.ebuild,
+  abs-guide-6.6.ebuild:
+  Stabilize (bug #461058). Remove old.
 
   27 Jan 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.

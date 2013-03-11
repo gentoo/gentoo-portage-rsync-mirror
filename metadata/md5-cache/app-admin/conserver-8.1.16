@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=ssl? ( >=dev-libs/openssl-0.9.6g ) pam? ( virtual/pam ) tcpd? ( sys-apps/tcp-wrappers ) debug? ( dev-libs/dmalloc )
 SLOT=0
 SRC_URI=ftp://ftp.conserver.com/conserver/conserver-8.1.16.tar.gz
-_eclasses_=eutils	816444638a8668da9da22466b302db84	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	ssl-cert	0b45da48a22fda62c57c1809b8b55315	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	3251cdf35caea8f0388af92528a56705	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	ssl-cert	0b45da48a22fda62c57c1809b8b55315	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=cf0079c6341ac17f5559efd8c775a605

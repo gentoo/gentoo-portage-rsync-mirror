@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=>=dev-lang/mono-2.0 >=media-sound/banshee-2.4.0[web] >=gnome-base/gconf-2.0 dev-dotnet/gconf-sharp:2 doc? ( >=app-text/gnome-doc-utils-0.17.3 ) lastfmfingerprint? ( sci-libs/fftw:3.0 media-libs/libsamplerate ) lirc? ( app-misc/lirc ) mirage? ( dev-libs/glib:2 dev-db/sqlite:3 sci-libs/fftw:3.0 media-libs/libsamplerate >=media-libs/gstreamer-0.10.15:0.10 >=media-libs/gst-plugins-base-0.10.15:0.10 ) telepathy? ( dev-dotnet/notify-sharp >=dev-lang/mono-2.4.2 ) zeitgeist? ( dev-libs/libzeitgeist dev-dotnet/zeitgeist-sharp ) !media-plugins/banshee-lyrics !media-plugins/banshee-mirage
 SLOT=0
 SRC_URI=http://download.banshee-project.org/banshee-community-extensions/2.4.0/banshee-community-extensions-2.4.0.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	816444638a8668da9da22466b302db84	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	3251cdf35caea8f0388af92528a56705	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=8fd023f6e061bfbbe0064935d4fe0e13

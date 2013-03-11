@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mox
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mox/ChangeLog,v 1.3 2010/10/05 19:49:02 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mox/ChangeLog,v 1.4 2013/03/11 00:34:05 prometheanfire Exp $
+
+*mox-0.5.3-r1 (11 Mar 2013)
+
+  11 Mar 2013; Matthew Thode <prometheanfire@gentoo.org> +mox-0.5.3-r1.ebuild:
+  adding mox-0.5.3-r1 for eapi5 support
 
   05 Oct 2010; Markus Meier <maekke@gentoo.org> mox-0.5.3.ebuild:
   amd64/x86 stable, bug #339049

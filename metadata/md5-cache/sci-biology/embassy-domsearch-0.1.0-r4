@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~ppc ~x86 ~x86-linux ~ppc-macos
 LICENSE=LGPL-2 GPL-2
 SLOT=0
 SRC_URI=ftp://emboss.open-bio.org/pub/EMBOSS/old/6.1.0/EMBOSS-6.1.0.tar.gz mirror://gentoo/embassy-6.1.0-domsearch-0.1.0.tar.gz
-_eclasses_=embassy	2325894d6b264e7c960a3abd7666a104	eutils	816444638a8668da9da22466b302db84	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=embassy	2325894d6b264e7c960a3abd7666a104	eutils	3251cdf35caea8f0388af92528a56705	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=ef068e55a405fbf2feb6ceab8d3e5f5e

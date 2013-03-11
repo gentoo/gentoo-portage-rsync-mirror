@@ -8,5 +8,5 @@ LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=>=dev-vcs/subversion-1.1.3[perl] >=dev-perl/URI-1.34 >=dev-perl/TermReadKey-2.21 >=dev-perl/SVN-Simple-0.26 dev-perl/Data-UUID dev-perl/Class-Accessor dev-perl/TimeDate dev-perl/File-chdir dev-lang/perl[-build]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/C/CL/CLKAO/SVN-Mirror-0.75.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	816444638a8668da9da22466b302db84	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	825d3d7654c88c5c4dec7400d3612578	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	3251cdf35caea8f0388af92528a56705	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	825d3d7654c88c5c4dec7400d3612578	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=1662ade7322e773c66110220a8637ac7

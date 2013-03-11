@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/prettytable
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/prettytable/ChangeLog,v 1.1 2012/10/18 13:04:13 zx2c4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/prettytable/ChangeLog,v 1.2 2013/03/11 00:17:10 prometheanfire Exp $
+
+*prettytable-0.7.1 (11 Mar 2013)
+
+  11 Mar 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +prettytable-0.7.1.ebuild:
+  updating prettytable to 0.7.1 and adding eapi5 support at the same time
+  (along with test support)
 
 *prettytable-0.6 (18 Oct 2012)
 

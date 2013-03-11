@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=opengl? ( virtual/opengl media-libs/libsdl[audio,video,joystick,X,opengl] openal? ( media-libs/openal ) vorbis? ( media-libs/libogg media-libs/libvorbis ) voice? ( media-libs/speex ) curl? ( net-misc/curl ) ) !dedicated? ( virtual/opengl media-libs/libsdl[audio,video,joystick,X,opengl] openal? ( media-libs/openal ) vorbis? ( media-libs/libogg media-libs/libvorbis ) voice? ( media-libs/speex ) curl? ( net-misc/curl ) ) opengl? ( voice? ( mumble? ( media-sound/mumble ) ) ) !dedicated? ( voice? ( mumble? ( media-sound/mumble ) ) ) games-fps/quake3-data teamarena? ( games-fps/quake3-teamarena )
 SLOT=0
 SRC_URI=http://ioquake3.org/files/1.36/ioquake3-1.36.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	816444638a8668da9da22466b302db84	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	games	e0a83e3f3f024b8c8ef7a8217d716cbf	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	3251cdf35caea8f0388af92528a56705	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	games	e0a83e3f3f024b8c8ef7a8217d716cbf	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=c6bfea273572235e7222255470e723af

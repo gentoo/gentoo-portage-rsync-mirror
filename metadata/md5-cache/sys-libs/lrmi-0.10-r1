@@ -5,5 +5,5 @@ KEYWORDS=x86
 LICENSE=MIT
 SLOT=0
 SRC_URI=mirror://sourceforge/lrmi/lrmi-0.10.tar.gz
-_eclasses_=eutils	816444638a8668da9da22466b302db84	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	3251cdf35caea8f0388af92528a56705	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=3a0f6de77258b7f531d9016f67c171a9

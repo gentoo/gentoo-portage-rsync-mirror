@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=virtual/jre-1.4 =dev-java/junit-3.8* >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 SLOT=0
 SRC_URI=http://www.cwi.nl/projects/MetaEnv/jjtraveler/JJTraveler-0.4.3.tar.gz
-_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	816444638a8668da9da22466b302db84	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	dcda71e114d638cdf01db57b8445337d	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	3251cdf35caea8f0388af92528a56705	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	dcda71e114d638cdf01db57b8445337d	libtool	2b273eea1976cfaed3449345d94331ac	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=157b32a452189db5a24fb780c1fa2e25

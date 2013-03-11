@@ -10,5 +10,5 @@ RDEPEND=amd64? ( >=app-emulation/emul-linux-x86-baselibs-20120520 >=app-emulatio
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=qt-static? ( http://download.skype.com/linux/skype_static-2.2.0.99.tar.bz2 ) !qt-static? ( http://download.skype.com/linux/skype-2.2.0.35.tar.bz2 )
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	816444638a8668da9da22466b302db84	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	ded93e450747134a079e647d888aa80b	pax-utils	0ace932c4045349c7fc1af0fe7091acf	qt4-r2	f735f67b3de93a007dbdec708b481831	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	3251cdf35caea8f0388af92528a56705	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	ded93e450747134a079e647d888aa80b	pax-utils	0ace932c4045349c7fc1af0fe7091acf	qt4-r2	f735f67b3de93a007dbdec708b481831	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=89e9cfe9cc41c96557c6e7e91c5dfcc5

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=!<sys-fs/udev-115-r1 selinux? ( sys-libs/libselinux )
 SLOT=0
 SRC_URI=ftp://sources.redhat.com/pub/dm/device-mapper.1.02.26.tgz ftp://sources.redhat.com/pub/dm/old/device-mapper.1.02.26.tgz
-_eclasses_=eutils	816444638a8668da9da22466b302db84	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	3251cdf35caea8f0388af92528a56705	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=a8580e1f87941d7c898a09ff38b1cf0c
