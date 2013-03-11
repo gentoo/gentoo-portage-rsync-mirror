@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.32 2013/03/02 23:09:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.33 2013/03/11 19:26:35 maksbotan Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://eiskaltdc.googlecode.com/"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
-IUSE="cli daemon dbus +dht +emoticons examples -gnome -gtk -gtk3 idn -javascript json libcanberra libnotify lua +minimal pcre +qt4 sound spell sqlite upnp xmlrpc"
+IUSE="cli daemon dbus +dht +emoticons examples -gnome -gtk idn -javascript json libcanberra libnotify lua +minimal pcre +qt4 sound spell sqlite upnp xmlrpc"
 for x in ${LANGS}; do
 	IUSE="${IUSE} linguas_${x}"
 done
@@ -24,7 +24,6 @@ REQUIRED_USE="
 	emoticons? ( || ( gtk qt4 ) )
 	dbus? ( qt4 )
 	gnome? ( gtk )
-	gtk3? ( gtk )
 	javascript? ( qt4 )
 	json? ( !xmlrpc )
 	libcanberra? ( !gnome gtk )
@@ -44,6 +43,7 @@ fi
 
 RDEPEND="
 	app-arch/bzip2
+	>=dev-libs/boost-1.38
 	>=dev-libs/openssl-0.9.8
 	sys-apps/attr
 	sys-devel/gettext
@@ -64,8 +64,7 @@ RDEPEND="
 	daemon? ( xmlrpc? ( >=dev-libs/xmlrpc-c-1.19.0[abyss,cxx] ) )
 	gtk? (
 		x11-libs/pango
-		gtk3? ( x11-libs/gtk+:3 )
-		!gtk3? ( >=x11-libs/gtk+-2.24:2 )
+		x11-libs/gtk+:3
 		>=dev-libs/glib-2.24:2
 		x11-themes/hicolor-icon-theme
 		gnome? ( gnome-base/libgnome )
@@ -83,7 +82,6 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}
-	>=dev-libs/boost-1.34.1
 	virtual/pkgconfig
 "
 DOCS="AUTHORS ChangeLog.txt"
@@ -107,6 +105,7 @@ src_configure() {
 		-DLIB_INSTALL_DIR="$(get_libdir)"
 		-Dlinguas="${langs}"
 		-DLOCAL_MINIUPNP=OFF
+		-DUSE_GTK=OFF
 		"$(use cli && cmake-utils_use json USE_CLI_JSONRPC)"
 		"$(use cli && cmake-utils_use xmlrpc USE_CLI_XMLRPC)"
 		"$(cmake-utils_use daemon NO_UI_DAEMON)"
@@ -117,8 +116,7 @@ src_configure() {
 		"$(cmake-utils_use emoticons WITH_EMOTICONS)"
 		"$(cmake-utils_use examples WITH_EXAMPLES)"
 		"$(cmake-utils_use gnome USE_LIBGNOME2)"
-		"$(cmake-utils_use gtk USE_GTK)"
-		"$(cmake-utils_use gtk3 USE_GTK3)"
+		"$(cmake-utils_use gtk USE_GTK3)"
 		"$(cmake-utils_use idn USE_IDNA)"
 		"$(cmake-utils_use javascript USE_JS)"
 		"$(cmake-utils_use libcanberra LIBCANBERRA)"

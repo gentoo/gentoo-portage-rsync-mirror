@@ -1,0 +1,26 @@
+From ea7723f851b0570994f3f047c37639a8b343e616 Mon Sep 17 00:00:00 2001
+From: Boris Pek <tehnick-8@yandex.ru>
+Date: Fri, 7 Dec 2012 19:54:47 +0200
+Subject: [PATCH] Fix build with Boost >= 1.50.
+
+---
+ CMakeLists.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 928323b..161bb94 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -170,6 +170,9 @@ else (LOCAL_BOOST)
+     if (Boost_VERSION VERSION_LESS 104200)
+         add_definitions(-DTIMER_OLD_BOOST)
+     endif()
++    if (Boost_VERSION VERSION_GREATER 105000)
++        find_package(Boost COMPONENTS system REQUIRED)
++    endif()
+ endif(LOCAL_BOOST)
+ 
+ if (LIB_INSTALL_DIR)
+-- 
+1.8.1.5
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.3.ebuild,v 1.1 2013/03/11 08:27:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.3.ebuild,v 1.2 2013/03/11 19:26:52 ulm Exp $
 
 EAPI=5
 
@@ -8,7 +8,8 @@ inherit autotools elisp-common eutils flag-o-matic multilib readme.gentoo
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
-SRC_URI="mirror://gnu/emacs/${P}.tar.xz"
+SRC_URI="mirror://gnu/emacs/${P}.tar.xz
+	mirror://gentoo/${P}-patches-1.tar.xz"
 
 LICENSE="GPL-3+ FDL-1.3+ BSD HPND MIT W3C unicode PSF-2"
 SLOT="24"
@@ -85,7 +86,7 @@ FULL_VERSION="${PV%%_*}"
 S="${WORKDIR}/emacs-${FULL_VERSION}"
 
 src_prepare() {
-	#EPATCH_SUFFIX=patch epatch
+	EPATCH_SUFFIX=patch epatch
 	epatch_user
 
 	if ! use alsa; then

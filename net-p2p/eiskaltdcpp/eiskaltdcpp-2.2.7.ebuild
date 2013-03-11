@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.7.ebuild,v 1.6 2013/03/02 23:09:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.7.ebuild,v 1.7 2013/03/11 19:26:35 maksbotan Exp $
 
 EAPI="4"
 
@@ -44,6 +44,7 @@ fi
 
 RDEPEND="
 	app-arch/bzip2
+	>=dev-libs/boost-1.38
 	>=dev-libs/openssl-0.9.8
 	sys-apps/attr
 	sys-devel/gettext
@@ -83,10 +84,11 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}
-	>=dev-libs/boost-1.34.1
 	virtual/pkgconfig
 "
 DOCS="AUTHORS ChangeLog.txt"
+
+PATCHES=( "${FILESDIR}"/${P}-boost-1.50.patch )
 
 pkg_pretend() {
 	if [[ ${MERGE_TYPE} != binary ]]; then

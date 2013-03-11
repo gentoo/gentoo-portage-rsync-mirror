@@ -11,5 +11,8 @@
 		<name>Daniel Scharrer</name>
 		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
+	<use>
+		<flag name='c++0x'>Build ROOT using the C++11 standard.</flag>
+	</use>
 </pkgmetadata>
 
