@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.0-r1.ebuild,v 1.2 2012/11/22 03:45:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.0-r1.ebuild,v 1.3 2013/03/11 10:12:04 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -37,7 +37,7 @@ pkg_setup() {
 	enewgroup mongodb
 	enewuser mongodb -1 -1 /var/lib/${PN} mongodb
 
-	scons_opts="  --cc=$(tc-getCC) --cxx=$(tc-getCXX)"
+	scons_opts="  --cc=$(tc-getCC) --cxx=$(tc-getCXX) --sharedclient"
 	scons_opts+=" --use-system-tcmalloc"
 	scons_opts+=" --use-system-pcre"
 	scons_opts+=" --use-system-snappy"
@@ -53,6 +53,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.2-r1-fix-scons.patch"
 	epatch "${FILESDIR}/${PN}-2.2-r1-fix-boost.patch"
+	epatch "${FILESDIR}/${PN}-2.2-fix-sharedclient.patch"
 
 	# FIXME: apply only this fix [1] on x86 boxes as it breaks /usr/lib symlink
 	# on amd64 machines [2].

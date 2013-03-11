@@ -1,6 +1,17 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.57 2013/03/05 14:08:39 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.58 2013/03/11 10:12:04 ultrabug Exp $
+
+*mongodb-2.2.3-r1 (11 Mar 2013)
+*mongodb-2.2.2-r2 (11 Mar 2013)
+
+  11 Mar 2013; Ultrabug <ultrabug@gentoo.org> mongodb-2.2.0-r1.ebuild,
+  mongodb-2.2.0-r2.ebuild, -mongodb-2.2.1.ebuild, -mongodb-2.2.2-r1.ebuild,
+  +mongodb-2.2.2-r2.ebuild, -mongodb-2.2.3.ebuild, +mongodb-2.2.3-r1.ebuild,
+  +files/mongodb-2.2-fix-sharedclient.patch,
+  files/mongodb-2.2-fix-x86client.patch:
+  install the mongoclient shared library wrt #460764 for 2.2.x versions thx to
+  Balint SZENTE, drop useless version
 
   05 Mar 2013; Ultrabug <ultrabug@gentoo.org> mongodb-2.0.7-r1.ebuild,
   mongodb-2.0.7-r2.ebuild, mongodb-2.0.8-r1.ebuild, mongodb-2.0.8-r2.ebuild:
