@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.328 2013/03/02 23:43:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.329 2013/03/11 22:46:15 remi Exp $
+
+*cairo-1.12.12-r1 (11 Mar 2013)
+
+  11 Mar 2013; Rémi Cardona <remi@gentoo.org> +cairo-1.12.12-r1.ebuild,
+  cairo-9999.ebuild:
+  Disable automagic dependency on valgrind.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> cairo-1.10.2-r3.ebuild,
   cairo-1.12.10-r2.ebuild, cairo-1.12.12.ebuild, cairo-1.12.8.ebuild,

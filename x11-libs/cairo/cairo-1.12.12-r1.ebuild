@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.29 2013/03/11 22:46:15 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.12-r1.ebuild,v 1.1 2013/03/11 22:46:15 remi Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ RDEPEND="media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/libpng:0
 	sys-libs/zlib
-	>=x11-libs/pixman-0.22.0
+	>=x11-libs/pixman-0.28.0
 	directfb? ( dev-libs/DirectFB )
 	glib? ( >=dev-libs/glib-2.28.6:2 )
 	opengl? ( || ( media-libs/mesa[egl] media-libs/opengl-apple ) )
@@ -75,6 +75,7 @@ src_prepare() {
 	use legacy-drivers && epatch "${FILESDIR}"/${PN}-1.10.0-buggy_gradients.patch
 	epatch "${FILESDIR}"/${PN}-1.10.2-qt-surface.patch
 	epatch "${FILESDIR}"/${PN}-respect-fontconfig.patch
+	epatch "${FILESDIR}"/${P}-disable-test-suite.patch
 	epatch_user
 
 	# Slightly messed build system YAY
