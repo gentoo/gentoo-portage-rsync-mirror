@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/webtest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.45 2013/03/10 07:57:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.46 2013/03/11 01:42:15 prometheanfire Exp $
+
+*webtest-1.3.3 (11 Mar 2013)
+
+  11 Mar 2013; Matthew Thode <prometheanfire@gentoo.org> +webtest-1.3.3.ebuild:
+  webtest-1.3.3 needed for sys-cluster/quantum-2012.2.3[test]
 
 *webtest-2.0.1 (10 Mar 2013)
 
