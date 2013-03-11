@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r5.ebuild,v 1.13 2013/03/10 16:22:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r5.ebuild,v 1.14 2013/03/11 08:27:34 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -283,8 +283,8 @@ src_install () {
 		See also http://www.gentoo.org/proj/en/lisp/emacs/xft.xml
 		for how to enable anti-aliased fonts."
 	use aqua && DOC_CONTENTS+="\\n\\nEmacs${EMACS_SUFFIX#emacs}.app is in
-		${EPREFIX}/Applications/Gentoo. You may want to copy or symlink it
-		into /Applications by yourself."
+		\"${EPREFIX}/Applications/Gentoo\". You may want to copy or symlink
+		it into /Applications by yourself."
 	readme.gentoo_create_doc
 }
 
