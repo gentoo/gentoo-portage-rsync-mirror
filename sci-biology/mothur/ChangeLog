@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/mothur
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/ChangeLog,v 1.10 2012/08/14 15:37:59 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/ChangeLog,v 1.11 2013/03/11 16:14:37 jlec Exp $
+
+  11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
 
 *mothur-1.27.0 (14 Aug 2012)
 *mothur-1.13.0-r2 (14 Aug 2012)
