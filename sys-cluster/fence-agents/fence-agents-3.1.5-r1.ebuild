@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence-agents/fence-agents-3.1.5.ebuild,v 1.1 2011/09/14 10:34:42 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence-agents/fence-agents-3.1.5-r1.ebuild,v 1.1 2013/03/11 13:58:49 ultrabug Exp $
 
-EAPI=4
+EAPI=5
 
 inherit multilib versionator
 
@@ -34,6 +34,12 @@ src_configure() {
 		--docdir=/usr/share/doc/${P} \
 		--libdir=/usr/$(get_libdir) \
 		--localstatedir=/var
+}
+
+src_install() {
+	default
+	# dont force /var/run creation on installation wrt #451798
+	rm -rf "${D}"/var/run
 }
 
 pkg_postinst() {

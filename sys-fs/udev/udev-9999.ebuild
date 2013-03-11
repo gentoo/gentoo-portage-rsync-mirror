@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.192 2013/03/11 13:30:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.194 2013/03/11 13:45:54 ssuominen Exp $
 
 EAPI=4
 
@@ -80,8 +80,7 @@ QA_MULTILIB_PATHS="lib/systemd/systemd-udevd"
 
 udev_check_KV()
 {
-	if kernel_is lt ${KV_min//./ }
-	then
+	if kernel_is lt ${KV_min//./ }; then
 		return 1
 	fi
 	return 0
@@ -94,8 +93,7 @@ check_default_rules()
 	local udev_rules_md5=a3e16362de3750807b52eae9525c102c
 	MD5=$(md5sum < "${S}"/rules/50-udev-default.rules)
 	MD5=${MD5/  -/}
-	if [[ ${MD5} != ${udev_rules_md5} ]]
-	then
+	if [[ ${MD5} != ${udev_rules_md5} ]]; then
 		eerror "50-udev-default.rules has been updated, please validate!"
 		eerror "md5sum: ${MD5}"
 		die "50-udev-default.rules has been updated, please validate!"
@@ -310,8 +308,7 @@ src_install()
 		install-dist_bashcompletionDATA
 	)
 
-	if use gudev
-	then
+	if use gudev; then
 		lib_LTLIBRARIES+=" libgudev-1.0.la"
 		pkgconfiglib_DATA+=" src/gudev/gudev-1.0.pc"
 	fi
@@ -398,8 +395,7 @@ pkg_postinst()
 	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
 	# So try to remove it here (will only work if empty).
 	rmdir "${ROOT}"dev/loop 2>/dev/null
-	if [[ -d ${ROOT}dev/loop ]]
-	then
+	if [[ -d ${ROOT}dev/loop ]]; then
 		ewarn "Please make sure your remove /dev/loop,"
 		ewarn "else losetup may be confused when looking for unused devices."
 	fi
@@ -410,8 +406,7 @@ pkg_postinst()
 	# 64-device-mapper.rules is related to sys-fs/device-mapper which we block
 	# in favour of sys-fs/lvm2
 	old_dm_rules=${ROOT}etc/udev/rules.d/64-device-mapper.rules
-	if [[ -f ${old_dm_rules} ]]
-	then
+	if [[ -f ${old_dm_rules} ]]; then
 		rm -f "${old_dm_rules}"
 		einfo "Removed unneeded file ${old_dm_rules}"
 	fi
@@ -476,9 +471,9 @@ pkg_postinst()
 	ewarn "and the new predictable network interface names are used by default:"
 	ewarn "http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames"
 	ewarn
-	ewarn "You can use the following command before booting to get the required"
-	ewarn "information for determining the new interface name:"
-	ewarn "# udevadm test-builtin net_id /sys/class/net/ifname 2> /dev/null"
+	ewarn "Example command to get the information for the new interface name before booting"
+	ewarn "(replace ifname with, for example, eth0):"
+	ewarn "# udevadm test-builtin net_id /sys/class/net/<ifname> 2> /dev/null"
 
 	ewarn
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"
