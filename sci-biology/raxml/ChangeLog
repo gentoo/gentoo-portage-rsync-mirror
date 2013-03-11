@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/raxml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/raxml/ChangeLog,v 1.8 2013/02/18 12:20:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/raxml/ChangeLog,v 1.9 2013/03/11 16:51:35 jlec Exp $
+
+  11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
 
   18 Feb 2013; Justin Lecher <jlec@gentoo.org> -raxml-7.2.2.ebuild,
   -raxml-7.2.5.ebuild, -raxml-7.2.5-r1.ebuild, raxml-7.2.6.ebuild,

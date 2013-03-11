@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/shrimp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/ChangeLog,v 1.20 2013/02/17 11:14:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/ChangeLog,v 1.21 2013/03/11 16:59:06 jlec Exp $
+
+  11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
 
   17 Feb 2013; Justin Lecher <jlec@gentoo.org> shrimp-2.2.3.ebuild:
   Force sse2 support by the cpu, #337401

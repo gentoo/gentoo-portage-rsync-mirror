@@ -5,6 +5,7 @@ bin=/usr/lib/ceph/ceph_init.sh
 
 depend() {
 	after net
+	before netmount
 }
 
 start() {

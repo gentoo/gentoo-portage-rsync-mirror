@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.28 2013/01/14 09:02:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.29 2013/03/11 16:50:57 alexxy Exp $
+
+*ceph-0.56.3 (11 Mar 2013)
+*ceph-0.58 (11 Mar 2013)
+
+  11 Mar 2013; Alexey Shvetsov <alexxy@gentoo.org> +ceph-0.56.3.ebuild,
+  +ceph-0.58.ebuild, -ceph-0.51.ebuild, -ceph-0.55.1.ebuild,
+  -ceph-0.56.1.ebuild, -files/ceph-0.26-autotools.patch,
+  -files/ceph-issue1869.patch, ceph-9999.ebuild, files/ceph.initd:
+  Version bump. Also fix bugs #455582 #455584 #452842
 
 *ceph-9999 (14 Jan 2013)
 *ceph-0.56.1 (14 Jan 2013)

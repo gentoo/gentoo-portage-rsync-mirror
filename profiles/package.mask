@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14544 2013/03/11 12:22:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14545 2013/03/11 16:33:26 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (11 Mar 2013)
+# Does not build against modern xorg-server, dead upstream
+# Removal in 30 days
+x11-drivers/xf86-input-citron
 
 # Samuli Suominen <ssuominen@gentoo.org> (11 Mar 2013)
 # Too many blockers with current stable, incompatible

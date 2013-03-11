@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation.
+# Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/input_devices.desc,v 1.5 2009/09/29 22:31:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/input_devices.desc,v 1.6 2013/03/11 16:45:47 chithanh Exp $
 
 # This file contains descriptions of INPUT_DEVICES USE_EXPAND flags.
 
@@ -9,7 +9,6 @@
 acecad - INPUT_DEVICES setting to build driver for acecad input devices
 aiptek - INPUT_DEVICES setting to build driver for aiptek input devices
 calcomp - INPUT_DEVICES setting to build driver for calcomp input devices
-citron - INPUT_DEVICES setting to build driver for citron input devices
 digitaledge - INPUT_DEVICES setting to build driver for digitaledge input devices
 dmc - INPUT_DEVICES setting to build driver for dmc input devices
 dynapro - INPUT_DEVICES setting to build driver for dynapro input devices

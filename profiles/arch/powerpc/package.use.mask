@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.163 2013/03/02 20:45:52 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.164 2013/03/11 16:45:47 chithanh Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Jan 2013)
 # remove mask when net-libs/libqmi is keyworded here
@@ -174,10 +174,6 @@ media-tv/mythtv vdpau
 # Brent Baude <ranger@gentoo.org> (14 Jan 2009)
 # # Temporarily masking sql off activerecord
 dev-ruby/activerecord sqlite3
-
-# Brent Baude <ranger@gentoo.org>
-# Masking off video cards and input devices for xorg-1.5.3 stablization
-x11-base/xorg-server input_devices_spaceorb input_devices_mutouch input_devices_hyperpen input_devices_fpit input_devices_dynapro input_devices_calcomp input_devices_summa input_devices_elographics input_devices_citron input_devices_microtouch input_devices_jamstudio input_devices_elo2300 input_devices_penmount input_devices_tek4957 input_devices_dmc input_devices_digitaledge input_devices_palmax input_devices_magellan video_cards_v4l video_cards_cirrus video_cards_voodoo video_cards_sisusb video_cards_s3 video_cards_s3virge
 
 # Brent Baude <ranger@gentoo.org>
 # masking zephyr USE on pidgin

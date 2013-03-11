@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/phylip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.40 2013/02/17 11:28:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/ChangeLog,v 1.41 2013/03/11 16:42:07 jlec Exp $
+
+  11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
 
 *phylip-3.69-r1 (17 Feb 2013)
 

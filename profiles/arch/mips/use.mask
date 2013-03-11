@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.62 2013/02/06 23:32:20 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.63 2013/03/11 16:45:47 chithanh Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -90,7 +90,6 @@ video_cards_sis
 input_devices_acecad
 input_devices_aiptek
 input_devices_calcomp
-input_devices_citron
 input_devices_digitaledge
 input_devices_dmc
 input_devices_dynapro

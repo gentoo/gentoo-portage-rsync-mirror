@@ -1,18 +1,28 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.51.ebuild,v 1.1 2012/09/14 08:49:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.58.ebuild,v 1.1 2013/03/11 16:50:57 alexxy Exp $
 
-EAPI=4
+EAPI=5
 
-inherit autotools eutils multilib
+if [[ $PV = *9999* ]]; then
+	scm_eclass=git-2
+	EGIT_REPO_URI="
+		git://github.com/ceph/ceph.git
+		https://github.com/ceph/ceph.git"
+	SRC_URI=""
+	KEYWORDS=""
+else
+	SRC_URI="http://ceph.com/download/${P}.tar.bz2"
+	KEYWORDS="~amd64 ~x86"
+fi
+
+inherit autotools eutils multilib udev ${scm_eclass}
 
 DESCRIPTION="Ceph distributed filesystem"
 HOMEPAGE="http://ceph.com/"
-SRC_URI="http://ceph.com/download/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE="debug fuse gtk libatomic radosgw static-libs tcmalloc"
 
 CDEPEND="
@@ -90,4 +100,8 @@ src_install() {
 
 	newinitd "${T}/${PN}.initd" ${PN}
 	newconfd "${FILESDIR}/${PN}.confd" ${PN}
+
+	#install udev rules
+	udev_dorules udev/50-rbd.rules
+	udev_dorules udev/95-ceph-osd.rules
 }
