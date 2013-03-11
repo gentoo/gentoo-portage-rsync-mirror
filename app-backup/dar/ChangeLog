@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/dar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/ChangeLog,v 1.51 2013/03/09 19:04:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/ChangeLog,v 1.52 2013/03/11 20:26:58 rich0 Exp $
+
+*dar-2.4.10 (11 Mar 2013)
+
+  11 Mar 2013; Richard Freeman <rich0@gentoo.org> +dar-2.4.10.ebuild:
+  bump - thanks to Joost Roeleveld for discovering/testing
 
   09 Mar 2013; Agostino Sarubbo <ago@gentoo.org> dar-2.4.9.ebuild:
   Stable for sparc, wrt bug #460176
