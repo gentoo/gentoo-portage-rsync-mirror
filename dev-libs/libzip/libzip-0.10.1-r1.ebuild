@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/libzip-0.10.1-r1.ebuild,v 1.7 2013/01/14 09:57:59 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/libzip-0.10.1-r1.ebuild,v 1.8 2013/03/11 13:01:20 ssuominen Exp $
 
 EAPI=4
 
 MY_P=${P/_}
 
 AUTOTOOLS_AUTORECONF=1
-inherit autotools-utils
+inherit autotools-utils eutils
 
 DESCRIPTION="Library for manipulating zip archives"
 HOMEPAGE="http://www.nih.at/libzip/"
@@ -47,7 +47,7 @@ src_prepare() {
 
 src_install() {
 	autotools-utils_src_install
-	remove_libtool_files all
+	prune_libtool_files --all
 }
 
 src_test() {
