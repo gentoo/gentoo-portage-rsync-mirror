@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/febootstrap/febootstrap-2.11.ebuild,v 1.1 2012/06/14 17:09:49 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/febootstrap/febootstrap-2.11.ebuild,v 1.2 2013/03/11 15:47:51 maksbotan Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Fedora bootstrap scripts"
 HOMEPAGE="http://people.redhat.com/~rjones/febootstrap/"
@@ -23,6 +23,14 @@ DEPEND=">=sys-apps/fakeroot-1.11
 	sys-libs/e2fsprogs-libs"
 RDEPEND="${DEPEND}"
 QA_EXECSTACK="usr/bin/febootstrap-supermin-helper"
+
+src_prepare() {
+	# https://lists.gnu.org/archive/html/grub-devel/2012-07/msg00051.html
+	sed -i -e '/gets is a security/d' lib/stdio.in.h
+	epatch "${FILESDIR}"/remove_all-static.patch
+
+	eautoreconf
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"

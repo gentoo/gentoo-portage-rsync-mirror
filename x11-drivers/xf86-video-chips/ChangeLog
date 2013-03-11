@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-chips
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-chips/ChangeLog,v 1.59 2012/12/28 11:10:46 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-chips/ChangeLog,v 1.60 2013/03/11 15:43:03 chithanh Exp $
+
+*xf86-video-chips-1.2.5-r1 (11 Mar 2013)
+
+  11 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xf86-video-chips-1.2.5-remove-mibstore_h.patch,
+  +xf86-video-chips-1.2.5-r1.ebuild:
+  Fix building against xorg-server-1.14, bug #461236.
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-chips-1.2.5.ebuild:
   Stable for ia64, wrt bug #440872
