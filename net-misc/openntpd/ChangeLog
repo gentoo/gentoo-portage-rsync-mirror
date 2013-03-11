@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.76 2013/03/09 18:09:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.77 2013/03/11 07:39:14 ago Exp $
+
+  11 Mar 2013; Agostino Sarubbo <ago@gentoo.org> openntpd-20080406.ebuild:
+  Stable for sh, wrt bug #457454
 
   09 Mar 2013; Agostino Sarubbo <ago@gentoo.org> openntpd-20080406.ebuild:
   Stable for x86, wrt bug #457454
