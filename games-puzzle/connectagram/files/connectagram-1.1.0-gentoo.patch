@@ -1,0 +1,82 @@
+--- connectagram-1.1.0/connectagram.pro
++++ connectagram-1.1.0/connectagram.pro
+@@ -70,28 +70,28 @@
+ 
+ unix: !macx {
+ 	isEmpty(PREFIX) {
+-		PREFIX = /usr/local
++		PREFIX = /usr
+ 	}
+ 	isEmpty(BINDIR) {
+-		BINDIR = bin
++		BINDIR = @GAMES_BINDIR@
+ 	}
+ 
+-	target.path = $$PREFIX/$$BINDIR/
++	target.path = @GAMES_BINDIR@/
+ 
+-	data.files = share/connectagram/data
+-	data.path = $$PREFIX/share/connectagram/
++	data.files = data
++	data.path = @GAMES_DATADIR@/connectagram/
+ 
+ 	pixmap.files = icons/connectagram.xpm
+ 	pixmap.path = $$PREFIX/share/pixmaps/
+ 
+-	icon.files = icons/icons/hicolor/*
++	icon.files = icons/hicolor/*
+ 	icon.path = $$PREFIX/share/icons/hicolor/
+ 
+ 	desktop.files = icons/connectagram.desktop
+ 	desktop.path = $$PREFIX/share/applications/
+ 
+ 	qm.files = translations/*.qm
+-	qm.path = $$PREFIX/share/connectagram/translations
++	qm.path = @GAMES_DATADIR@/connectagram/translations/
+ 
+ 	INSTALLS += target pixmap icon desktop data qm
+ }
+--- connectagram-1.1.0/src/wordlist.cpp
++++ connectagram-1.1.0/src/wordlist.cpp
+@@ -91,9 +91,9 @@
+ 
+ QString WordList::defaultLanguage() {
+ 	QString language = QLocale().name();
+-	if (!QFile::exists("connectagram:" + language)) {
++	if (!QFile::exists("@GAMES_DATADIR@/connectagram/data/" + language)) {
+ 		language = language.left(2);
+-		if (!QFile::exists("connectagram:" + language)) {
++		if (!QFile::exists("@GAMES_DATADIR@/connectagram/data/" + language)) {
+ 			language = "en";
+ 		}
+ 	}
+@@ -110,7 +110,7 @@
+ 
+ WordList::WordListData::WordListData(const QString& language) {
+ 	// Read words from disk
+-	QFile file("connectagram:" + language + "/words");
++	QFile file("@GAMES_DATADIR@/connectagram/data/" + language + "/words");
+ 	if (!file.open(QFile::ReadOnly | QIODevice::Text)) {
+ 		return;
+ 	}
+--- connectagram-1.1.0/src/new_game_dialog.cpp
++++ connectagram-1.1.0/src/new_game_dialog.cpp
+@@ -48,7 +48,7 @@
+ 	m_wordlist = new WordList(this);
+ 	m_wordlist->setLanguage(WordList::defaultLanguage());
+ 	m_languages_box = new QComboBox(this);
+-	QStringList languages = QDir("connectagram:").entryList(QDir::Dirs | QDir::NoDotAndDotDot);
++	QStringList languages = QDir("@GAMES_DATADIR@/connectagram/data").entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+ 	foreach (const QString& language, languages) {
+ 		m_languages_box->addItem(LocaleDialog::languageName(language), language);
+ 	}
+--- connectagram-1.1.0/src/locale_dialog.cpp
++++ connectagram-1.1.0/src/locale_dialog.cpp
+@@ -87,6 +87,7 @@
+ 		paths.append(appdir);
+ 		paths.append(appdir + "/../share/" + QCoreApplication::applicationName().toLower());
+ 		paths.append(appdir + "/../Resources");
++		paths.append("@GAMES_DATADIR@/connectagram");
+ 	}
+ 	foreach (const QString& path, paths) {
+ 		if (QFile::exists(path + "/translations/")) {

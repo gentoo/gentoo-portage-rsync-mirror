@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.196 2013/03/11 14:32:47 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.197 2013/03/11 18:41:40 williamh Exp $
 
 EAPI=4
 
@@ -332,7 +332,7 @@ src_install()
 				$(sysconfdir)/udev/hwdb.d'
 		dist_bashcompletion_DATA="shell-completion/bash/udevadm"
 	)
-	emake DESTDIR="${D}" "${targets[@]}"
+	emake -j1 DESTDIR="${D}" "${targets[@]}"
 	if use doc; then
 		emake -C docs/libudev DESTDIR="${D}" install
 		use gudev && emake -C docs/gudev DESTDIR="${D}" install
