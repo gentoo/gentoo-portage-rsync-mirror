@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/glimmer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/ChangeLog,v 1.9 2010/07/16 17:29:32 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/ChangeLog,v 1.10 2013/03/11 15:17:43 jlec Exp $
+
+  11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
 
   16 Jul 2010; Markos Chandras <hwoarang@gentoo.org> glimmer-3.02-r2.ebuild:
   Stable on amd64 wrt bug #328415

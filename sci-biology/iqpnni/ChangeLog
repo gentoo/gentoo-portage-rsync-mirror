@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/iqpnni
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/iqpnni/ChangeLog,v 1.4 2011/09/25 22:25:49 weaver Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/iqpnni/ChangeLog,v 1.5 2013/03/11 15:25:40 jlec Exp $
+
+  11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
 
 *iqpnni-3.3.2 (25 Sep 2011)
 

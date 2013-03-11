@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/infernal
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/infernal/ChangeLog,v 1.13 2012/07/15 10:27:42 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/infernal/ChangeLog,v 1.14 2013/03/11 15:25:19 jlec Exp $
+
+  11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
 
   15 Jul 2012; Justin Lecher <jlec@gentoo.org> -infernal-1.0.2.ebuild:
   Cleaned old

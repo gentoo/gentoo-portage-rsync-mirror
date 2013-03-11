@@ -1,37 +1,31 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/gatk/gatk-1.6.ebuild,v 1.1 2012/09/30 17:17:21 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gatk/gatk-2.4.ebuild,v 1.1 2013/03/11 15:25:21 jlec Exp $
 
-EAPI=4
-
-MY_HASH=93333f0
-
-EGIT_REPO_URI="https://github.com/broadgsa/gatk.git"
+EAPI=5
 
 EANT_BUILD_TARGET="dist"
 EANT_NEEDS_TOOLS="true"
 JAVA_ANT_REWRITE_CLASSPATH="true"
 
-#inherit java-pkg-2 java-ant-2 git
-inherit java-pkg-2 java-ant-2
+inherit java-pkg-2 java-ant-2 vcs-snapshot
 
 DESCRIPTION="The Genome Analysis Toolkit"
 HOMEPAGE="http://www.broadinstitute.org/gsa/wiki/index.php/The_Genome_Analysis_Toolkit"
-SRC_URI="https://github.com/broadgsa/gatk/tarball/${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/broadgsa/gatk/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 IUSE=""
 KEYWORDS="~amd64"
 
 COMMON_DEPS=""
-DEPEND=">=virtual/jdk-1.6
-	dev-vcs/git
+DEPEND="
+	>=virtual/jdk-1.6
 	${COMMON_DEPS}"
-RDEPEND=">=virtual/jre-1.6
+RDEPEND="
+	>=virtual/jre-1.6
 	${COMMON_DEPS}"
-
-S="${WORKDIR}/broadgsa-gatk-${MY_HASH}"
 
 src_prepare() {
 	sed -i '/property name="ivy.home"/ s|${user.home}|'${WORKDIR}'|' build.xml || die

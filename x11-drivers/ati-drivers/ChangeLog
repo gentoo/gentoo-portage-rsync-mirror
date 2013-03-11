@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.320 2013/03/04 00:18:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.321 2013/03/11 15:02:42 chithanh Exp $
+
+  11 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -ati-drivers-12.11_beta11.ebuild, -ati-drivers-12.6_beta_pre897.ebuild,
+  -ati-drivers-12.8.ebuild, -files/ati-powermode-opt-path-2.patch:
+  Drop old versions.
 
   04 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   ati-drivers-13.1.ebuild, ati-drivers-13.1_pre897.ebuild,
