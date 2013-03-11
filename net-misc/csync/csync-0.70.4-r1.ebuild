@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/csync-0.70.4.ebuild,v 1.1 2013/02/28 23:10:40 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/csync-0.70.4-r1.ebuild,v 1.1 2013/03/11 19:39:39 creffett Exp $
 
 EAPI=5
 
@@ -64,4 +64,10 @@ src_configure() {
 		$(cmake-utils_use_with webdav Neon)
 	)
 	cmake-utils_src_configure
+}
+
+src_install() {
+	cmake-utils_src_install
+	mv "${D}/usr/etc/ocsync" "${D}/etc/"
+	rm -r "${D}/usr/etc/"
 }

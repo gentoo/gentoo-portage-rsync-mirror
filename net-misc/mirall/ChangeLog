@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/mirall
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/ChangeLog,v 1.19 2013/03/02 23:04:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/ChangeLog,v 1.20 2013/03/11 19:57:18 creffett Exp $
+
+*mirall-1.2.1-r1 (11 Mar 2013)
+
+  11 Mar 2013; Chris Reffett <creffett@gentoo.org> +mirall-1.2.1-r1.ebuild,
+  -mirall-1.2.1.ebuild:
+  Revision bump, move files from /usr/etc/ to /etc/ wrt bug 460760
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> mirall-1.2.0.ebuild,
   mirall-1.2.1.ebuild:

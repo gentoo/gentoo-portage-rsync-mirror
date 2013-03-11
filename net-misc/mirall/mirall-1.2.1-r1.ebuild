@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.2.1.ebuild,v 1.2 2013/03/02 23:04:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.2.1-r1.ebuild,v 1.1 2013/03/11 19:57:18 creffett Exp $
 
 EAPI=5
 
@@ -42,6 +42,13 @@ src_configure() {
 		$(cmake-utils_use_with doc SPHINX)
 	)
 	cmake-utils_src_configure
+}
+
+src_install() {
+	cmake-utils_src_install
+	mkdir "${D}/etc/"
+	mv "${D}/usr/etc/sync-exclude.lst" "${D}/etc/"
+	rm -r "${D}/usr/etc/"
 }
 
 pkg_postinst() {
