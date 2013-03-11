@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/synaptiks
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.35 2012/10/29 16:38:10 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.36 2013/03/11 14:32:24 creffett Exp $
+
+*synaptiks-0.8.1-r2 (11 Mar 2013)
+
+  11 Mar 2013; Chris Reffett <creffett@gentoo.org>
+  +files/synaptiks-0.8.1-removedfeatures.patch, +synaptiks-0.8.1-r2.ebuild,
+  files/synaptiks-0.8.1-templatesfix.patch:
+  Move from KDE overlay. Revision bump, add patch to remove support for
+  deprecated synaptics features wrt bug 461364. EAPI bump.
 
   29 Oct 2012; Michał Górny <mgorny@gentoo.org> synaptiks-0.8.1.ebuild:
   Use virtual for argparse.

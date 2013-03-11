@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/consed
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/consed/ChangeLog,v 1.6 2013/02/17 10:25:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/consed/ChangeLog,v 1.7 2013/03/11 15:00:03 jlec Exp $
+
+  11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
 
   17 Feb 2013; Justin Lecher <jlec@gentoo.org> consed-19-r2.ebuild,
   metadata.xml:

@@ -3,10 +3,6 @@
 <pkgmetadata>
   <herd>sci-biology</herd>
   <maintainer>
-    <email>weaver@gentoo.org</email>
-    <name>Andrey Kislyuk</name>
-  </maintainer>
-  <maintainer>
     <email>mmokrejs@fold.natur.cuni.cz</email>
     <name>Martin Mokrejs</name>
   </maintainer>

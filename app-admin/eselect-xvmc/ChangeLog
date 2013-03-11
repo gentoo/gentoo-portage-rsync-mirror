@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-xvmc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.26 2012/08/27 17:33:27 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.27 2013/03/11 14:36:20 ottxor Exp $
+
+*eselect-xvmc-0.4 (11 Mar 2013)
+
+  11 Mar 2013; Christoph Junghans <ottxor@gentoo.org> +eselect-xvmc-0.4.ebuild,
+  +files/eselect-xvmc-0.4.eselect, metadata.xml:
+  version bump (fixes bugs #393027, #292120 and #434518)
 
   27 Aug 2012; Raúl Porcel <armin76@gentoo.org> eselect-xvmc-0.3.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #424017
@@ -90,4 +96,3 @@
   +files/eselect-xvmc-0.1.eselect, +metadata.xml,
   +eselect-xvmc-0.1.ebuild:
   Decided to write an eselect module for XvMCWrapper. First version.
-

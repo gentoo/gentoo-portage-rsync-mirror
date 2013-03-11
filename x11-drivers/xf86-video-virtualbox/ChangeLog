@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.109 2013/03/01 10:13:29 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.110 2013/03/11 14:56:11 polynomial-c Exp $
+
+  11 Mar 2013; Lars Wendler <polynomial-c@gentoo.org>
+  xf86-video-virtualbox-4.1.24.ebuild:
+  Version 4.1.24 works with xorg-server-1.13.
 
   01 Mar 2013; Lars Wendler <polynomial-c@gentoo.org> Manifest:
   Upstream replaced the source tarball once again (bug #459842).

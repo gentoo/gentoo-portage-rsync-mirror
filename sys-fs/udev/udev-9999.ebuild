@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.195 2013/03/11 14:27:01 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.196 2013/03/11 14:32:47 williamh Exp $
 
 EAPI=4
 
@@ -404,7 +404,7 @@ pkg_postinst()
 	# just ignore them anyway...
 
 	# 64-device-mapper.rules is related to sys-fs/device-mapper which we block
-	# in favour of sys-fs/lvm2
+	# in favor of sys-fs/lvm2
 	old_dm_rules=${ROOT}etc/udev/rules.d/64-device-mapper.rules
 	if [[ -f ${old_dm_rules} ]]; then
 		rm -f "${old_dm_rules}"
@@ -463,7 +463,7 @@ pkg_postinst()
 	if has_version sys-apps/biosdevname; then
 		ewarn
 		ewarn "You have sys-apps/biosdevname installed which has been deprecated"
-		ewarn "in favour of the predictable network interface names."
+		ewarn "in favor of the predictable network interface names."
 	fi
 
 	ewarn

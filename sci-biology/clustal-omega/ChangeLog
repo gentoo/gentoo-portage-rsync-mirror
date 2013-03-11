@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/clustal-omega
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustal-omega/ChangeLog,v 1.1 2011/09/25 22:35:59 weaver Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustal-omega/ChangeLog,v 1.2 2013/03/11 14:54:55 jlec Exp $
+
+  11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
 
 *clustal-omega-1.0.3 (25 Sep 2011)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/allpaths
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/ChangeLog,v 1.10 2012/11/19 10:27:46 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/ChangeLog,v 1.11 2013/03/11 14:35:42 jlec Exp $
+
+  11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
 
   19 Nov 2012; Justin Lecher <jlec@gentoo.org> allpaths-2.0.ebuild,
   allpaths-3.1.ebuild, allpaths-3.1-r1.ebuild:
