@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.65 2013/02/21 21:46:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.67 2013/03/11 12:57:48 polynomial-c Exp $
+
+  11 Mar 2013; Lars Wendler <polynomial-c@gentoo.org> geany-1.23.ebuild:
+  Updatet list of locales.
+
+*geany-1.23 (11 Mar 2013)
+
+  11 Mar 2013; Lars Wendler <polynomial-c@gentoo.org> +geany-1.23.ebuild:
+  Version bump. Thanks to Elis Axelsson for reporting this in bug #461354.
 
   21 Feb 2013; Ulrich Müller <ulm@gentoo.org> geany-1.22-r1.ebuild:
   Update LICENSE, the Scintilla license is a duplicate of the HPND.

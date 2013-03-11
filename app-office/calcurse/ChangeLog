@@ -1,6 +1,14 @@
 # ChangeLog for app-office/calcurse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/ChangeLog,v 1.29 2013/02/05 12:58:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/ChangeLog,v 1.31 2013/03/11 12:57:08 jer Exp $
+
+  11 Mar 2013; Jeroen Roovers <jer@gentoo.org> calcurse-3.1.4.ebuild:
+  Remove unused eclass inherit.
+
+*calcurse-3.1.4 (11 Mar 2013)
+
+  11 Mar 2013; Jeroen Roovers <jer@gentoo.org> +calcurse-3.1.4.ebuild:
+  Version bump.
 
 *calcurse-3.1.3 (05 Feb 2013)
 
