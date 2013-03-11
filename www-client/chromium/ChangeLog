@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.840 2013/03/09 18:00:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.841 2013/03/11 22:03:28 phajdan.jr Exp $
+
+*chromium-26.0.1410.28 (11 Mar 2013)
+
+  11 Mar 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-ffmpeg-r2a.patch, -chromium-26.0.1410.12.ebuild,
+  +chromium-26.0.1410.28.ebuild:
+  Beta channel bump. Update system ffmpeg patch (bug #460846 by floppym).
+  Remove old.
 
   09 Mar 2013; Mike Gilbert <floppym@gentoo.org>
   +files/chromium-jsoncpp-path-r0.patch, chromium-26.0.1410.19.ebuild:

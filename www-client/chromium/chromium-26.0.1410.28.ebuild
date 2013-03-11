@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-26.0.1410.12.ebuild,v 1.3 2013/02/28 20:03:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-26.0.1410.28.ebuild,v 1.1 2013/03/11 22:03:28 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -34,13 +34,13 @@ RDEPEND="app-accessibility/speech-dispatcher
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat
 	>=dev-libs/icu-49.1.1-r1:=
-	=dev-libs/jsoncpp-0.5.0
+	dev-libs/jsoncpp
 	>=dev-libs/libevent-1.4.13
 	dev-libs/libxml2[icu]
 	dev-libs/libxslt
 	dev-libs/nspr
 	>=dev-libs/nss-3.12.3
-	dev-libs/protobuf
+	dev-libs/protobuf:=
 	dev-libs/re2
 	gnome? ( >=gnome-base/gconf-2.24.0 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2 )
@@ -51,7 +51,7 @@ RDEPEND="app-accessibility/speech-dispatcher
 	>=media-libs/libjpeg-turbo-1.2.0-r1
 	media-libs/libpng
 	>=media-libs/libwebp-0.2.0_rc1
-	!arm? ( !x86? ( media-libs/mesa[gles2] ) )
+	!arm? ( !x86? ( >=media-libs/mesa-9.1[gles2] ) )
 	media-libs/opus
 	media-libs/speex
 	pulseaudio? ( media-sound/pulseaudio )
@@ -131,8 +131,11 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
 
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
+	epatch "${FILESDIR}/${PN}-mesa-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-v8-r0.patch"
-	epatch "${FILESDIR}/${PN}-system-ffmpeg-r2.patch"
+	epatch "${FILESDIR}/${PN}-system-ffmpeg-r2a.patch"
+
+	epatch "${FILESDIR}/${PN}-jsoncpp-path-r0.patch"
 
 	epatch_user
 
@@ -397,6 +400,7 @@ src_test() {
 	local excluded_base_unittests=(
 		"ICUStringConversionsTest.*" # bug #350347
 		"MessagePumpLibeventTest.*" # bug #398591
+		"SecurityTest.CallocOverflow" # bug #458396
 	)
 	runtest out/Release/base_unittests "${excluded_base_unittests[@]}"
 
@@ -442,7 +446,7 @@ src_install() {
 		doins out/Release/libppGoogleNaClPluginChrome.so || die
 	fi
 
-	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
+	newexe "${FILESDIR}"/chromium-launcher-r3.sh chromium-launcher.sh || die
 	if [[ "${CHROMIUM_SUFFIX}" != "" ]]; then
 		sed "s:chromium-browser:chromium-browser${CHROMIUM_SUFFIX}:g" \
 			-i "${ED}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
