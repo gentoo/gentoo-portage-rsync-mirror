@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/UTF8Strings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/ChangeLog,v 1.8 2013/03/04 13:36:37 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/UTF8Strings/ChangeLog,v 1.9 2013/03/12 15:13:47 tomwij Exp $
+
+*UTF8Strings-1.13.1 (12 Mar 2013)
+
+  12 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +UTF8Strings-1.13.1.ebuild:
+  Version bump to 1.13.1, by Gorelov Grigory. Fixes bug #461506.
 
 *UTF8Strings-1.13.0 (04 Mar 2013)
 
