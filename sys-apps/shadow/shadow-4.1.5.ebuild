@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.5.ebuild,v 1.6 2012/08/18 21:28:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.5.ebuild,v 1.7 2013/03/12 14:19:37 vapier Exp $
 
 inherit eutils libtool toolchain-funcs pam multilib
 
@@ -34,7 +34,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-4.1.5-nscd-newline-msg.patch
 	epatch "${FILESDIR}"/${PN}-4.1.5-nscd-ignore-exit-1.patch
 	elibtoolize
-	epunt_cxx
 }
 
 src_compile() {

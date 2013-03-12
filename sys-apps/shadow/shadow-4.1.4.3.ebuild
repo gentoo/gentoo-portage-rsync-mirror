@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.4.3.ebuild,v 1.14 2012/08/18 21:28:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.4.3.ebuild,v 1.15 2013/03/12 14:19:37 vapier Exp $
 
 inherit eutils libtool toolchain-funcs pam multilib
 
@@ -34,7 +34,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-4.1.4.2-su_no_sanitize_env.patch #301957
 	epatch "${FILESDIR}"/${PN}-4.1.4.2-fix-etc-gshadow-reading.patch #327605
 	elibtoolize
-	epunt_cxx
 }
 
 src_compile() {

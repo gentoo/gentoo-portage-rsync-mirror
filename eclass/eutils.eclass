@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.414 2013/03/11 00:13:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.415 2013/03/12 14:16:15 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1269,16 +1269,19 @@ epunt_cxx() {
 	local dir=$1
 	[[ -z ${dir} ]] && dir=${S}
 	ebegin "Removing useless C++ checks"
-	local f any_found
+	local f p any_found
 	while IFS= read -r -d '' f; do
-		patch --no-backup-if-mismatch -p0 "${f}" \
-			"${PORTDIR}/eclass/ELT-patches/nocxx/nocxx.patch" > /dev/null \
-			&& any_found=1
+		for p in "${PORTDIR}"/eclass/ELT-patches/nocxx/*.patch ; do
+			if patch --no-backup-if-mismatch -p1 "${f}" "${p}" >/dev/null ; then
+				any_found=1
+				break
+			fi
+		done
 	done < <(find "${dir}" -name configure -print0)
 
-#	if [[ -z ${any_found} ]]; then
-#		eqawarn "epunt_cxx called unnecessarily (no C++ checks to punt)."
-#	fi
+	if [[ -z ${any_found} ]]; then
+		eqawarn "epunt_cxx called unnecessarily (no C++ checks to punt)."
+	fi
 	eend 0
 }
 

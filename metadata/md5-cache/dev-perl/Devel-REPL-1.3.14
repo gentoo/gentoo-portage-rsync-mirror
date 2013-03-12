@@ -8,5 +8,5 @@ LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=>=dev-perl/Moose-0.740.0 >=dev-perl/MooseX-Object-Pluggable-0.0.9 >=dev-perl/MooseX-Getopt-0.180.0 dev-perl/namespace-autoclean dev-perl/File-HomeDir virtual/perl-File-Spec virtual/perl-Term-ANSIColor dev-perl/App-Nopaste dev-perl/B-Keywords dev-perl/Data-Dump-Streamer dev-perl/Data-Dumper-Concise dev-perl/File-Next dev-perl/Lexical-Persistence dev-perl/Module-Refresh dev-perl/PPI dev-perl/Sys-SigAction dev-lang/perl[-build]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/E/ET/ETHER/Devel-REPL-1.003014.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	3251cdf35caea8f0388af92528a56705	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	825d3d7654c88c5c4dec7400d3612578	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	50d18ebffcbd8bd63614b89c2d664d0d	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	825d3d7654c88c5c4dec7400d3612578	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=ad2321e8726a23a7dc0f6a577f6ffb67

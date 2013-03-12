@@ -1,6 +1,10 @@
 # ChangeLog for sys-firmware/seabios
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.10 2013/01/24 22:10:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.11 2013/03/12 14:50:52 cardoe Exp $
+
+  12 Mar 2013; Doug Goldstein <cardoe@gentoo.org> seabios-1.6.3.ebuild,
+  seabios-1.7.0.ebuild, seabios-1.7.1.ebuild, seabios-1.7.2.ebuild:
+  Add a clear warning for people not using USE=binary.
 
   24 Jan 2013; Agostino Sarubbo <ago@gentoo.org> seabios-1.7.1.ebuild:
   Stable for x86, wrt bug #453282

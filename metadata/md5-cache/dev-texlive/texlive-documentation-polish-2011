@@ -9,5 +9,5 @@ LICENSE=GPL-2 public-domain
 RDEPEND=>=dev-texlive/texlive-documentation-base-2011 >=app-text/texlive-core-2011
 SLOT=0
 SRC_URI=mirror://gentoo/texlive-module-lshort-polish-2011.tar.xz mirror://gentoo/texlive-module-tex-virtual-academy-pl-2011.tar.xz mirror://gentoo/texlive-module-texlive-pl-2011.tar.xz mirror://gentoo/texlive-module-collection-documentation-polish-2011.tar.xz mirror://gentoo/texlive-module-lshort-polish.doc-2011.tar.xz mirror://gentoo/texlive-module-tex-virtual-academy-pl.doc-2011.tar.xz mirror://gentoo/texlive-module-texlive-pl.doc-2011.tar.xz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	3251cdf35caea8f0388af92528a56705	multilib	ded93e450747134a079e647d888aa80b	texlive-common	dcab7201316e43f118d20a1d6dab09a9	texlive-module	8bbbefc936090d9f3adce1ea865b38a5	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	50d18ebffcbd8bd63614b89c2d664d0d	multilib	ded93e450747134a079e647d888aa80b	texlive-common	dcab7201316e43f118d20a1d6dab09a9	texlive-module	8bbbefc936090d9f3adce1ea865b38a5	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=f4452c3d6d4cd434f8f8e8d9a24036b5

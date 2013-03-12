@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-5.0.4.ebuild,v 1.1 2013/01/23 18:03:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-5.0.4.ebuild,v 1.2 2013/03/12 14:20:43 vapier Exp $
 
 EAPI=4
 
@@ -18,7 +18,6 @@ IUSE="static-libs"
 
 src_prepare() {
 	elibtoolize
-	epunt_cxx
 }
 
 src_configure() {

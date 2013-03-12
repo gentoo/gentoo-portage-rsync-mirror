@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.5.1.ebuild,v 1.3 2012/08/18 21:28:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.5.1.ebuild,v 1.4 2013/03/12 14:19:37 vapier Exp $
 
 EAPI="2"
 
@@ -35,7 +35,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.1.3-dots-in-usernames.patch #22920
 	epatch_user
 	elibtoolize
-	epunt_cxx
 }
 
 src_configure() {

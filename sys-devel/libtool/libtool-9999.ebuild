@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.13 2013/01/15 04:29:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.14 2013/03/12 14:23:05 vapier Exp $
 
 EAPI="2" #356089
 
@@ -51,6 +51,7 @@ src_prepare() {
 	AT_NOELIBTOOLIZE=yes eautoreconf
 	cd ..
 	AT_NOELIBTOOLIZE=yes eautoreconf
+	epunt_cxx
 }
 
 src_configure() {

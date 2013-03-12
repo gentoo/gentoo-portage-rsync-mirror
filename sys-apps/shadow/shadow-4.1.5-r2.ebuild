@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.5-r2.ebuild,v 1.4 2012/08/18 21:28:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.5-r2.ebuild,v 1.5 2013/03/12 14:19:37 vapier Exp $
 
 inherit eutils libtool toolchain-funcs pam multilib
 
@@ -39,7 +39,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-4.1.5-grremove.patch #405409
 	epatch "${FILESDIR}"/${PN}-4.1.5-selinux-groupadd.patch #406819
 	elibtoolize
-	epunt_cxx
 }
 
 src_compile() {

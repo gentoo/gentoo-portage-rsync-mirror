@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.2.ebuild,v 1.1 2013/01/23 21:21:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.2.ebuild,v 1.2 2013/03/12 14:50:52 cardoe Exp $
 
 EAPI=5
 
 PYTHON_DEPEND="2"
 
-inherit python
+inherit python user
 
 #BACKPORTS=1
 
@@ -35,6 +35,19 @@ REQUIRED_USE="ppc? ( binary )
 DEPEND="!binary? ( sys-power/iasl )"
 RDEPEND=""
 
+pkg_pretend() {
+	if ! use binary; then
+		ewarn "You have decided to compile your own SeaBIOS. This is not"
+		ewarn "supported by upstream unless you use their recommended"
+		ewarn "toolchain (which you are not)."
+		elog
+		ewarn "If you are intending to use this build with QEMU, realize"
+		ewarn "you will not receive any support if you have compiled your"
+		ewarn "own SeaBIOS. Virtual machines subtly fail based on changes"
+		ewarn "in SeaBIOS."
+	fi
+}
+
 pkg_setup() {
 	python_set_active_version 2
 }
@@ -47,6 +60,8 @@ src_prepare() {
 		sed -e "s/VERSION=.*/VERSION=${PV}_pre${EGIT_COMMIT}/" \
 			-i "${S}/Makefile"
 	fi
+
+	epatch_user
 }
 
 src_configure() {

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/giflib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.67 2013/01/23 18:03:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.68 2013/03/12 14:20:43 vapier Exp $
+
+  12 Mar 2013; Mike Frysinger <vapier@gentoo.org> giflib-5.0.4.ebuild:
+  Drop epunt_cxx as we no longer need it here.
 
 *giflib-5.0.4 (23 Jan 2013)
 

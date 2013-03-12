@@ -10,5 +10,5 @@ RDEPEND=>=sys-apps/dbus-1.2 >=dev-libs/dbus-glib-0.75 virtual/udev[gudev] >=dev-
 REQUIRED_USE=modemmanager? ( ppp ) ^^ ( nss gnutls ) ^^ ( dhclient dhcpcd )
 SLOT=0
 SRC_URI=mirror://gnome/sources/NetworkManager/0.9/NetworkManager-0.9.4.0.tar.xz
-_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	3251cdf35caea8f0388af92528a56705	gnome.org	8fef8f967214f56e08fa92d61163d891	libtool	2b273eea1976cfaed3449345d94331ac	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	systemd	28706ddc21464b4ed255eee9fc70b516	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	fea2246732f911905d6991fed203e65c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=autotools	cf83655b19ed98f9ea3b44f4572b51a3	eutils	50d18ebffcbd8bd63614b89c2d664d0d	gnome.org	8fef8f967214f56e08fa92d61163d891	libtool	2b273eea1976cfaed3449345d94331ac	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	systemd	28706ddc21464b4ed255eee9fc70b516	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	udev	fea2246732f911905d6991fed203e65c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=f4a6f4fb40388e16d9a31eb925986082

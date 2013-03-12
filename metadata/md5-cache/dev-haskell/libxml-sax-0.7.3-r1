@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=>=dev-haskell/text-0.7:=[profile?] <dev-haskell/text-0.12:=[profile?] =dev-haskell/xml-types-0.3*:=[profile?] >=dev-lang/ghc-6.10.4:= dev-libs/libxml2
 SLOT=0/0.7.3
 SRC_URI=mirror://hackage/packages/archive/libxml-sax/0.7.3/libxml-sax-0.7.3.tar.gz
-_eclasses_=eutils	3251cdf35caea8f0388af92528a56705	ghc-package	f8674c44668a01a8b05d66a7c140008b	haskell-cabal	a2a8de4cff4a18a175b08057c65a7c4d	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	ghc-package	f8674c44668a01a8b05d66a7c140008b	haskell-cabal	a2a8de4cff4a18a175b08057c65a7c4d	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=7e2a333c8d96788097748fe141c85df1

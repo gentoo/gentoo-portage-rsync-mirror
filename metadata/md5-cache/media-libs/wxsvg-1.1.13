@@ -9,5 +9,5 @@ LICENSE=wxWinLL-3
 RDEPEND=>=dev-libs/expat-2 >=dev-libs/glib-2.28 dev-libs/libxml2 media-libs/fontconfig >=media-libs/freetype-2 x11-libs/cairo x11-libs/pango x11-libs/wxGTK:2.8[X] virtual/ffmpeg
 SLOT=0
 SRC_URI=mirror://sourceforge/wxsvg/wxsvg-1.1.13.tar.bz2
-_eclasses_=eutils	3251cdf35caea8f0388af92528a56705	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	wxwidgets	fb1a306837717dfa2af841ecdf929565
+_eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28	wxwidgets	fb1a306837717dfa2af841ecdf929565
 _md5_=830f8f39a4c90ddee9c62d16afbf7bad
