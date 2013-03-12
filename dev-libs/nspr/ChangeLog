@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.226 2013/02/26 10:17:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.227 2013/03/12 01:53:37 anarchy Exp $
+
+*nspr-4.9.5-r1 (12 Mar 2013)
+
+  12 Mar 2013; <anarchy@gentoo.org> +nspr-4.9.5-r1.ebuild,
+  +files/nspr-4.9.5_nspr_config.patch:
+  Address concerns in bug #454576
 
   26 Feb 2013; Agostino Sarubbo <ago@gentoo.org> nspr-4.9.5.ebuild:
   Stable for alpha, wrt bug #455558
