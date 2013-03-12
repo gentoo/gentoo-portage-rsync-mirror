@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/ucsc-genome-browser
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ucsc-genome-browser/ChangeLog,v 1.5 2011/12/27 09:39:04 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ucsc-genome-browser/ChangeLog,v 1.6 2013/03/12 12:11:29 jlec Exp $
+
+  12 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
 
 *ucsc-genome-browser-260 (27 Dec 2011)
 

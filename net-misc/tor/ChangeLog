@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.376 2013/02/28 15:03:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.377 2013/03/12 12:30:48 blueness Exp $
+
+*tor-0.2.4.11_alpha (12 Mar 2013)
+
+  12 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
+  +tor-0.2.4.11_alpha.ebuild, -tor-0.2.4.10_alpha.ebuild,
+  -tor-0.2.4.9_alpha.ebuild:
+  Version bump alpha and removed older
 
   28 Feb 2013; Anthony G. Basile <blueness@gentoo.org> tor-0.2.3.25.ebuild:
   Turn bufferevents off by default:

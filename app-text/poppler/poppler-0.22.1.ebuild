@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.22.1.ebuild,v 1.2 2013/03/02 19:44:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.22.1.ebuild,v 1.3 2013/03/12 12:26:07 kensington Exp $
 
 EAPI=4
 
@@ -86,7 +86,7 @@ src_install() {
 	if use cairo && use doc; then
 		# For now install gtk-doc there
 		insinto /usr/share/gtk-doc/html/poppler
-		doins -r "${S}"/glib/reference/html/* || die 'failed to install API documentation'
+		doins -r "${S}"/glib/reference/html/*
 	fi
 }
 
