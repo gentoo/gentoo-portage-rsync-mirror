@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda-xgsch2pcb/geda-xgsch2pcb-0.1.3-r2.ebuild,v 1.5 2012/06/07 04:19:26 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda-xgsch2pcb/geda-xgsch2pcb-0.1.3-r2.ebuild,v 1.6 2013/03/12 08:27:49 tomjbe Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ PYTHON_DEPEND="2"
 inherit autotools eutils fdo-mime gnome2-utils python
 
 DESCRIPTION="A graphical front-end for the gschem -> pcb workflow"
-HOMEPAGE="http://www.gpleda.org/tools/xgsch2pcb/index.html"
+HOMEPAGE="http://www.gpleda.org"
 SRC_URI="http://geda.seul.org/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
