@@ -1,6 +1,10 @@
 # ChangeLog for app-text/zathura
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.48 2013/01/27 21:50:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.49 2013/03/12 08:37:17 ssuominen Exp $
+
+  12 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> zathura-0.2.2.ebuild:
+  Include content of myzathuraconf also for testsuite wrt #454666 by Diego Elio
+  Pettenò
 
 *zathura-0.2.2 (27 Jan 2013)
 

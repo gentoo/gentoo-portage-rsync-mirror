@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-gtkmvc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gtkmvc/ChangeLog,v 1.5 2012/01/14 16:46:57 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gtkmvc/ChangeLog,v 1.6 2013/03/12 08:47:21 idella4 Exp $
+
+*python-gtkmvc-1.99.1 (12 Mar 2013)
+
+  12 Mar 2013; Ian Delaney <idella4@gentoo.org> +python-gtkmvc-1.99.1.ebuild:
+  bump
 
   14 Jan 2012; Markus Meier <maekke@gentoo.org> python-gtkmvc-1.2.2.ebuild:
   x86 stable, bug #393007
@@ -20,4 +25,3 @@
   08 Mar 2009; <blackace@gentoo.org> +metadata.xml,
   +python-gtkmvc-1.2.2.ebuild:
   Initial import, ebuild thanks to TualatriX <tualatrix@gmail.com> (bug 245135).
-

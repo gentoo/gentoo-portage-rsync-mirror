@@ -1,6 +1,21 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.112 2013/03/10 14:09:35 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.113 2013/03/12 08:47:57 aidecoe Exp $
+
+*dracut-026-r1 (12 Mar 2013)
+
+  12 Mar 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/026-0004-lsinitrd.sh-fix-for-default-initrd-not.patch,
+  +files/026-0005-lsinitrd.sh-removed-trailing.patch,
+  +files/026-0006-make-host_fs_types-a-hashmap.patch, +dracut-026-r1.ebuild:
+  Fixed crypt, dmraid and mdraid detection as explained in previous entry:
+
+  > Gentoo release doesn't include a fix to catch all UUIDs (for crypt, dmraid,
+  > mdraid) and not only the first one, because the fix actually breaks
+  > something and LUKS devices aren't detected correctly at build time. If this
+  > fix is fixed it will come in dracut-026-r1 ASAP.
+
+  Moreover lsinitrd script has been fixed.
 
 *dracut-026 (10 Mar 2013)
 

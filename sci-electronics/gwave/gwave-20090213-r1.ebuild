@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20090213-r1.ebuild,v 1.4 2011/06/28 20:23:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20090213-r1.ebuild,v 1.5 2013/03/12 08:36:06 tomjbe Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Analog waveform viewer for SPICE-like simulations"
 LICENSE="GPL-2"
-HOMEPAGE="http://www.geda.seul.org/tools/gwave/"
+HOMEPAGE="http://gwave.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 KEYWORDS="amd64 ppc x86"
