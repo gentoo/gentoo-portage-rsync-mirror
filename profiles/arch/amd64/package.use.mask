@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.156 2013/03/02 20:45:51 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.157 2013/03/12 20:33:29 ssuominen Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -222,10 +222,6 @@ www-client/firefox -ipc
 # Tomáš Chvátal <scarabeus@gentoo.org> (4 Apr 2010)$
 # x86 platforms works$
 sys-power/pm-utils -video_cards_intel -video_cards_radeon
-
-# Samuli Suominen <ssuominen@gentoo.org> (02 Feb 2009)
-# See bug #346077 for gstreamer
-app-emulation/wine gstreamer
 
 # Andrey Grozin <grozin@gentoo.org> (24 Dec 2009)
 # openmcl (aka clozurecl) is only available on x86 and amd64
