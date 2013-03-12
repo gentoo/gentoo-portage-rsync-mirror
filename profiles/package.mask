@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14545 2013/03/11 16:33:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14546 2013/03/12 17:10:40 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tom Wijsman <TomWij@gentoo.org> (12 Mar 2013)
+# 2.5.* has known security and other issues due to bundled ffmpeg,
+# see bugs #446468 and #444262.
+# 2.6.* is broken, need to be revised into multiple packages in
+# order for it to be maintainable, see bug #461496 comment #5.
+media-video/avidemux
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (11 Mar 2013)
 # Does not build against modern xorg-server, dead upstream
@@ -358,11 +365,6 @@ dev-lang/ruby-enterprise
 =virtual/ruby-rdoc-3
 =virtual/ruby-ssl-3
 =virtual/ruby-threads-3
-
-# Ben de Groot <yngwin@gentoo.org> (20 Jan 2013)
-# 2.5* has known security and other issues due to bundled ffmpeg,
-# see (bugs #446468 and #444262)
-<media-video/avidemux-2.6
 
 # Marien Zwart <marienz@gentoo.org>
 # Patch tarball is broken, meaning this builds 1.2.0 (bug #452918)
