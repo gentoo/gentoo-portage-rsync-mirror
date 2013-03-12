@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/freeorion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/ChangeLog,v 1.4 2013/02/07 22:17:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/ChangeLog,v 1.5 2013/03/12 16:59:50 tomka Exp $
+
+*freeorion-0.4.3_pre20130312 (12 Mar 2013)
+
+  12 Mar 2013; Thomas Kahle <tomka@gentoo.org>
+  +freeorion-0.4.3_pre20130312.ebuild, -freeorion-0.4.2_pre20120910-r1.ebuild,
+  -freeorion-0.4.2_pre20120910.ebuild:
+  bump, remove old
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org>
   freeorion-0.4.2_pre20120910.ebuild, freeorion-0.4.2_pre20120910-r1.ebuild,

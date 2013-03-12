@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.31 2013/01/13 11:40:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.32 2013/03/12 16:56:52 idella4 Exp $
+
+*pysvn-1.7.7 (12 Mar 2013)
+
+  12 Mar 2013; Ian Delaney <idella4@gentoo.org>
+  +files/pysvn-1.7.7-respect_flags.patch, +pysvn-1.7.7.ebuild,
+  files/pysvn-1.7.6-respect_flags.patch, pysvn-1.7.6.ebuild:
+  bump, some test scripts fial, test restrited
 
   13 Jan 2013; Agostino Sarubbo <ago@gentoo.org> pysvn-1.7.6.ebuild:
   Stable for x86, wrt bug #449782

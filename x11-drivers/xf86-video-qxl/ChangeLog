@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/xf86-video-qxl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/ChangeLog,v 1.17 2012/11/18 12:18:38 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/ChangeLog,v 1.18 2013/03/12 16:36:30 chithanh Exp $
+
+*xf86-video-qxl-0.1.0-r1 (12 Mar 2013)
+
+  12 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xf86-video-qxl-0.1.0-remove-mibstore_h.patch,
+  +xf86-video-qxl-0.1.0-r1.ebuild,
+  -files/xf86-video-qxl-0.0.17-xorg-server-1.13.patch,
+  -xf86-video-qxl-0.0.17-r1.ebuild, -xf86-video-qxl-0.0.17.ebuild:
+  Fix building against xorg-server-1.14
 
   18 Nov 2012; Agostino Sarubbo <ago@gentoo.org> xf86-video-qxl-0.1.0.ebuild:
   Stable for x86, wrt bug #440872
