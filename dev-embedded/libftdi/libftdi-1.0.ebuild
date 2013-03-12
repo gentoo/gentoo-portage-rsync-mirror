@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-1.0.ebuild,v 1.1 2013/03/01 08:16:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-1.0.ebuild,v 1.2 2013/03/12 11:17:26 vapier Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit cmake-utils eutils
 
@@ -50,11 +50,11 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	: dodoc ChangeLog README
+	dodoc AUTHORS ChangeLog README TODO
 
 	if use doc ; then
-		doman doc/man/man3/*
-		dohtml doc/html/*
+		doman "${CMAKE_BUILD_DIR}"/doc/man/man3/*
+		dohtml "${CMAKE_BUILD_DIR}"/doc/html/*
 	fi
 	if use examples ; then
 		docinto examples
