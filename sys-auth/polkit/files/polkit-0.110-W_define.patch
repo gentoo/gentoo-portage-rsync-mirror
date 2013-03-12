@@ -1,3 +1,5 @@
+http://bugs.freedesktop.org/show_bug.cgi?id=62220
+
 Failure to compile on SH4 arch because <sys/wait.h> is missing for #define's of:
 WIFEXITED, WEXITSTATUS, WIFSIGNALED, WTERMSIG
 
