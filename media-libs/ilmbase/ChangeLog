@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ilmbase
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.28 2013/03/11 20:11:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.29 2013/03/12 07:04:13 ssuominen Exp $
+
+  12 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> ilmbase-2.0.0.ebuild:
+  Use subslot 0/10 based on SONAME.
 
 *ilmbase-2.0.0 (11 Mar 2013)
 

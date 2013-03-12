@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-2.0.0.ebuild,v 1.1 2013/03/11 20:14:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-2.0.0.ebuild,v 1.2 2013/03/12 07:05:45 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils #libtool
@@ -10,12 +10,12 @@ HOMEPAGE="http://openexr.com/"
 SRC_URI="http://download.savannah.gnu.org/releases/openexr/${P}.tar.gz"
 
 LICENSE="BSD"
-SLOT="0"
+SLOT="0/20" # from SONAME
 KEYWORDS="~alpha ~amd64 -arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="examples static-libs"
 
-RDEPEND="sys-libs/zlib
-	>=media-libs/ilmbase-${PV}"
+RDEPEND="sys-libs/zlib:=
+	>=media-libs/ilmbase-${PV}:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ilmbase-2.0.0.ebuild,v 1.1 2013/03/11 20:11:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ilmbase-2.0.0.ebuild,v 1.2 2013/03/12 07:04:13 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils #libtool
@@ -10,7 +10,7 @@ HOMEPAGE="http://openexr.com/"
 SRC_URI="http://dev.gentoo.org/~ssuominen/openexr-${PV}.tar.gz"
 
 LICENSE="BSD"
-SLOT="0"
+SLOT="0/10" # from SONAME
 KEYWORDS="~alpha ~amd64 -arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="static-libs"
 
