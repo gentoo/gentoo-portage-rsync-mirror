@@ -1,0 +1,27 @@
+From c722e86c4e497efac56de674c47d5e094ea4c5c5 Mon Sep 17 00:00:00 2001
+From: Diego Sarmentero <diego.sarmentero@ninja-ide.org>
+Date: Tue, 12 Mar 2013 14:04:56 -0300
+Subject: [PATCH] Fixed Issue #1106
+
+backported by hasufell@gentoo.org for 2.1.1
+
+--- ninja_ide/gui/editor/highlighter.py
++++ ninja_ide/gui/editor/highlighter.py
+@@ -276,7 +276,7 @@
+         hls = []
+         block = self.currentBlock()
+         user_data = block.userData()
+-        if user_data is None:
++        if user_data is None or not isinstance(user_data, SyntaxUserData):
+             user_data = SyntaxUserData(False)
+         user_data.clear_data()
+         block_number = block.blockNumber()
+@@ -321,7 +321,7 @@
+         hls = []
+         block = self.currentBlock()
+         user_data = block.userData()
+-        if user_data is None:
++        if user_data is None or not isinstance(user_data, SyntaxUserData):
+             user_data = SyntaxUserData(False)
+         user_data.clear_data()
+         block_number = block.blockNumber()
