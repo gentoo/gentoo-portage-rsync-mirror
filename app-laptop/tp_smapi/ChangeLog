@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/tp_smapi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.45 2012/11/18 10:53:08 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.46 2013/03/12 17:57:29 hwoarang Exp $
+
+  12 Mar 2013; Markos Chandras <hwoarang@gentoo.org> tp_smapi-0.41.ebuild:
+  Stable everywhere. Bug #458736
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> -tp_smapi-0.40-r3.ebuild,
   metadata.xml:

@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.464 2013/03/10 15:22:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.465 2013/03/12 17:54:01 jer Exp $
+
+*wireshark-1.9.0-r1 (12 Mar 2013)
+*wireshark-1.8.6-r1 (12 Mar 2013)
+*wireshark-1.6.14-r1 (12 Mar 2013)
+
+  12 Mar 2013; Jeroen Roovers <jer@gentoo.org> +wireshark-1.6.14-r1.ebuild,
+  +wireshark-1.8.6-r1.ebuild, -wireshark-1.9.0.ebuild,
+  +wireshark-1.9.0-r1.ebuild:
+  Fix desktop file in 1.9.0. Migrate to python-single-r1 by Julian Ospald (bug
+  #461436).
 
   10 Mar 2013; Jeroen Roovers <jer@gentoo.org> -wireshark-1.6.13.ebuild,
   -wireshark-1.8.5.ebuild:

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.9.0.ebuild,v 1.7 2013/02/25 19:02:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.6-r1.ebuild,v 1.1 2013/03/12 17:54:01 jer Exp $
 
 EAPI=5
-PYTHON_DEPEND="python? 2"
-inherit autotools eutils fcaps flag-o-matic python toolchain-funcs user
+PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
+inherit autotools eutils fcaps flag-o-matic python-single-r1 toolchain-funcs user
 
 [[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && MY_P=${PN}-${PV/_} || MY_P=${P}
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
@@ -20,7 +20,6 @@ IUSE="
 "
 RDEPEND="
 	>=dev-libs/glib-2.14:2
-	dev-libs/libnl
 	adns? ( !libadns? ( >=net-dns/c-ares-1.5 ) )
 	crypt? ( dev-libs/libgcrypt )
 	geoip? ( dev-libs/geoip )
@@ -35,6 +34,7 @@ RDEPEND="
 	lua? ( >=dev-lang/lua-5.1 )
 	pcap? ( net-libs/libpcap )
 	portaudio? ( media-libs/portaudio )
+	python? ( ${PYTHON_DEPS} )
 	selinux? ( sec-policy/selinux-wireshark )
 	smi? ( net-libs/libsmi )
 	ssl? ( net-libs/gnutls dev-libs/libgcrypt )
@@ -71,16 +71,21 @@ pkg_setup() {
 		ewarn "USE=-gtk disables gtk-based gui called wireshark."
 		ewarn "Only command line utils will be built available"
 	fi
+
 	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
+		python-single-r1_pkg_setup
 	fi
 }
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch
-	sed -i -e 's|.png||g' ${PN}.desktop || die
+		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
+		"${FILESDIR}"/${PN}-1.8.3-gnutls3.patch
+
+	sed -i \
+		-e '/^Icon/s|.png||g' \
+		${PN}.desktop || die
+
 	eautoreconf
 }
 
@@ -189,7 +194,12 @@ src_install() {
 		done
 		domenu wireshark.desktop
 	fi
+
 	use pcap && chmod o-x "${ED}"/usr/bin/dumpcap #357237
+
+	if use python; then
+		python_optimize "${ED}"/usr/lib*/wireshark/python
+	fi
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.41.ebuild,v 1.2 2012/04/12 12:23:54 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.41.ebuild,v 1.3 2013/03/12 17:57:29 hwoarang Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://github/evgeni/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE="hdaps"
 
