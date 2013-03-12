@@ -6013,6 +6013,7 @@ www-client/lynx:gnutls - Use gnutls library for HTTPS support (openssl is the de
 www-client/lynx:ssl - Enable HTTPS support.
 www-client/midori:deprecated - Enable GTK+-2 instead of GTK+-3 because of external plugins like adobe-flash
 www-client/midori:unique - Enable single instance support using dev-libs/libunique
+www-client/midori:webkit2 - Enable WebKit2 API that splits web content rendering and application UI into separate processes
 www-client/midori:zeitgeist - Add support for Zeitgeist event tracking system
 www-client/netsurf:bmp - enable bmp bitmap support (media-libs/libnsbmp)
 www-client/netsurf:freetype - use media-libs/freetype for font rendering on framebuffer

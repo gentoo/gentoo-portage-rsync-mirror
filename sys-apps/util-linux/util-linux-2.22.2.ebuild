@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.22.2.ebuild,v 1.13 2013/03/01 12:46:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.22.2.ebuild,v 1.14 2013/03/12 10:21:05 vapier Exp $
 
 EAPI="3"
 
@@ -27,7 +27,7 @@ fi
 
 LICENSE="GPL-2 GPL-3 LGPL-2.1 BSD-4 MIT public-domain"
 SLOT="0"
-IUSE="+cramfs crypt ddate ncurses nls old-linux perl selinux slang static-libs udev unicode"
+IUSE="+cramfs crypt ddate ncurses nls old-linux perl selinux slang static-libs test udev unicode"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
@@ -43,6 +43,7 @@ RDEPEND="!sys-process/schedutils
 	udev? ( virtual/udev )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
+	test? ( sys-devel/bc )
 	virtual/os-headers"
 
 src_prepare() {
