@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.82 2013/03/02 20:45:51 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.83 2013/03/12 21:47:35 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -215,3 +215,6 @@ clvm
 
 -zeitgeist
 template_haskell
+
+# nvidia cg toolkit for binary drivers
+cg

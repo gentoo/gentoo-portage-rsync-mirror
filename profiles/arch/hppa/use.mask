@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.69 2013/02/18 23:53:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.70 2013/03/12 21:50:26 ssuominen Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Samuli Suominen <ssuominen@gentoo.org> (12 Mar 2013)
+# NVIDIA Cg toolkit for binary drivers
+cg
 
 # Jeroen Roovers <jer@gentoo.org> (13 Nov 2012)
 # media-libs/fdk-aac is not supported on HPPA (bug #442806)

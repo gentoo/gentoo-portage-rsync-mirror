@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.185 2013/02/21 23:59:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.186 2013/03/12 21:49:03 ssuominen Exp $
+
+  12 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> use.mask:
+  Mask USE="cg" since it is a toolkit for nvidia binary drivers.
 
   21 Feb 2013; Robin H. Johnson <robbat2@gentoo.org> package.use.mask:
   systemtap & jemalloc available on ~ia64.

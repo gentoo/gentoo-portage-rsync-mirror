@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11-r1.ebuild,v 1.3 2013/02/28 23:17:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11-r2.ebuild,v 1.1 2013/03/12 21:32:47 mgorny Exp $
 
 EAPI=5
 
@@ -73,10 +73,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.3.2-enable-valid.patch
 
 	epatch "${FILESDIR}"/${P}-auto-hinter_compile_fix.patch # 453956
-
-	# for our variable use, includedir needs to go after libdir
-	# so swap the two lines
-	sed -i -n -e '/@includedir@/{x;n;p;x};p' builds/unix/freetype-config.in || die
+	epatch "${FILESDIR}"/${P}-sizeof-types.patch # 459966
 
 	if use utils; then
 		cd "${WORKDIR}/ft2demos-${PV}" || die
@@ -100,8 +97,7 @@ src_configure() {
 
 
 	local myeconfargs=(
-		# expanded by make
-		--includedir='${libdir}/freetype2/include'
+		--enable-biarch-config
 		$(use_with bzip2)
 	)
 
