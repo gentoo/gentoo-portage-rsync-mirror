@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ferite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.36 2013/03/10 13:37:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.37 2013/03/12 18:25:17 ago Exp $
+
+  12 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ferite-1.1.17-r1.ebuild:
+  Stable for ppc, wrt bug #461090
 
   10 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ferite-1.1.17-r1.ebuild:
   Stable for x86, wrt bug #461090

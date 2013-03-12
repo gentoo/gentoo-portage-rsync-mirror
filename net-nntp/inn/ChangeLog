@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/inn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.51 2013/03/10 13:39:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.52 2013/03/12 18:29:33 ago Exp $
+
+  12 Mar 2013; Agostino Sarubbo <ago@gentoo.org> inn-2.5.3-r1.ebuild:
+  Stable for ppc, wrt bug #461216
 
   10 Mar 2013; Agostino Sarubbo <ago@gentoo.org> inn-2.5.3-r1.ebuild:
   Stable for x86, wrt bug #461216

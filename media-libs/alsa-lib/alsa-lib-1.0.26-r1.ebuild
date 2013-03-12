@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.26-r1.ebuild,v 1.1 2013/02/19 14:15:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.26-r1.ebuild,v 1.2 2013/03/12 18:18:02 ssuominen Exp $
 
 EAPI=5
 
@@ -29,7 +29,9 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/1.0.25-extraneous-cflags.diff
 	eautoreconf
-	epunt_cxx
+	# if eautoreconf'd with recent autoconf, then epunt_cxx is
+	# unncessary wrt #460974
+#	epunt_cxx
 }
 
 src_configure() {

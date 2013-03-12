@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ted
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.51 2013/03/10 13:38:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.52 2013/03/12 18:23:29 ago Exp $
+
+  12 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ted-2.22.ebuild:
+  Stable for ppc, wrt bug #461062
 
   10 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ted-2.22.ebuild:
   Stable for x86, wrt bug #461062

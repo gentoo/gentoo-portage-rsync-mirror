@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.259 2013/03/06 23:16:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.260 2013/03/12 18:07:42 ssuominen Exp $
+
+  12 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> libxslt-1.1.28.ebuild,
+  libxslt-1.1.28-r1.ebuild:
+  Remove useless use of epunt_cxx wrt #460980 by Roman Žilka
 
   06 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -libxslt-1.1.27.ebuild,
   -files/libxslt-1.1.27-python-includes.patch:

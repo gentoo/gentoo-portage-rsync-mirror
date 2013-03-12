@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.28-r1.ebuild,v 1.2 2013/02/21 03:40:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.28-r1.ebuild,v 1.3 2013/03/12 18:07:42 ssuominen Exp $
 
 EAPI=5
 
@@ -35,7 +35,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.1.28-manual-python.patch
 
 	eautoreconf
-	epunt_cxx
+	# If eautoreconf'd with new autoconf, then epunt_cxx is not necessary
+	# and it is propably otherwise too if upstream generated with new
+	# autoconf
+#	epunt_cxx
 }
 
 src_configure() {

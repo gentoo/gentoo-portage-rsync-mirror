@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.25-r1.ebuild,v 1.7 2012/04/01 15:11:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.25-r1.ebuild,v 1.8 2013/03/12 18:18:02 ssuominen Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ pkg_setup() {
 
 src_prepare() {
 	eautoreconf
-	epunt_cxx
+#	epunt_cxx
 }
 
 src_configure() {
@@ -71,12 +71,4 @@ src_install() {
 
 	dodoc ChangeLog TODO || die
 	use doc && dohtml -r doc/doxygen/html/*
-}
-
-pkg_postinst() {
-	elog "Please try in-kernel ALSA drivers instead of the alsa-driver ebuild."
-	elog "If alsa-driver works for you where a *recent* kernel does not, we want "
-	elog "to know about this. Our e-mail address is alsa-bugs@gentoo.org"
-	elog "However, if you notice no sound output or instability, please try to "
-	elog "upgrade your kernel to a newer version first."
 }
