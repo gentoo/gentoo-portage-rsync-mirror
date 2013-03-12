@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/htun
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htun/ChangeLog,v 1.8 2009/01/14 03:47:53 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htun/ChangeLog,v 1.9 2013/03/12 04:35:43 pinkbyte Exp $
+
+*htun-0.9.6 (12 Mar 2013)
+
+  12 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> +htun-0.9.6.ebuild,
+  +files/htun-0.9.6-glibc.patch, +files/htun-0.9.6-makefile.patch,
+  +files/README.gentoo:
+  Version bump, wrt bug #460656. EAPI 5, add ~amd64 keyword, add epatch_user,
+  use readme.gentoo eclass instead of simple message in pkg_postinst, respect
+  CFLAGS, LDFLAGS and compiler. Thanks to Michael Mair-Keimberger and Andrew
+  Savchenko for ebuild improvements
 
   14 Jan 2009; Mike Frysinger <vapier@gentoo.org>
   +files/htun-0.9.5-glibc.patch, htun-0.9.5.ebuild:
