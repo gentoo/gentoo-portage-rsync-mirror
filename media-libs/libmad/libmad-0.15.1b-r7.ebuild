@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b-r7.ebuild,v 1.9 2012/08/22 02:55:24 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b-r7.ebuild,v 1.10 2013/03/12 19:33:57 ssuominen Exp $
 
 EAPI=4
 
@@ -27,9 +27,10 @@ src_prepare() {
 		"${FILESDIR}"/libmad-0.15.1b-gcc44-mips-h-constraint-removal.patch
 
 	eautoreconf
-
-	elibtoolize
-	epunt_cxx #74490
+	# unnecessary when eautoreconf'd
+#	elibtoolize
+	# unnecessary when eautoreconf'd with new autoconf, for example, 2.69
+#	epunt_cxx #74490
 }
 
 src_configure() {
@@ -65,5 +66,5 @@ src_install() {
 	sed -i -e "s:^libdir.*:libdir=${EPREFIX}/usr/$(get_libdir):" \
 		"${ED}"/usr/$(get_libdir)/pkgconfig/mad.pc
 
-	find "${ED}" -name '*.la' -delete
+	prune_libtool_files --all
 }
