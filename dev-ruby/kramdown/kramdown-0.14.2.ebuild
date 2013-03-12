@@ -1,14 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/kramdown-0.13.8.ebuild,v 1.1 2012/09/01 12:35:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/kramdown-0.14.2.ebuild,v 1.1 2013/03/12 06:57:57 graaff Exp $
 
-EAPI=4
+EAPI=5
 USE_RUBY="ruby18 ruby19 ree18 jruby"
 
+RUBY_FAKEGEM_DOCDIR="htmldoc/rdoc"
 RUBY_FAKEGEM_EXTRADOC="README.md AUTHORS ChangeLog CONTRIBUTERS"
-
-RUBY_FAKEGEM_RECIPE_DOC="rdoc"
-RUBY_FAKEGEM_DOC_SOURCES="lib README.md"
 
 RUBY_FAKEGEM_EXTRAINSTALL="data"
 
@@ -25,7 +23,7 @@ IUSE="latex"
 
 LATEX_DEPS="latex? ( dev-texlive/texlive-latex dev-texlive/texlive-latexextra )"
 RDEPEND+=" ${LATEX_DEPS}"
-DEPEND+=" test? ( ${LATEX_DEPS} )"
+DEPEND+=" test? ( ${LATEX_DEPS} app-text/htmltidy )"
 
 ruby_add_bdepend "doc? ( dev-ruby/rdoc )
 	test? ( >=dev-ruby/coderay-1.0.0 )"

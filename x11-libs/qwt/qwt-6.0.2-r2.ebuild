@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.2-r2.ebuild,v 1.2 2013/03/06 12:11:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.2-r2.ebuild,v 1.3 2013/03/12 06:59:24 jlec Exp $
 
 EAPI=5
 
@@ -64,8 +64,8 @@ src_prepare() {
 
 	qt4-r2_src_prepare
 
+	multibuild_copy_sources
 	preparation() {
-		cp -rf "${S}" "${BUILD_DIR}" || die
 		[[ ${MULTIBUILD_VARIANT} == shared ]] && \
 			echo "QWT_CONFIG += QwtDll" >> "${BUILD_DIR}"/qwtconfig.pri
 	}
@@ -74,7 +74,7 @@ src_prepare() {
 }
 
 src_configure() {
-	multibuild_parallel_foreach_variant run_in_build_dir eqmake4 ${PN}.pro
+	multibuild_parallel_foreach_variant run_in_build_dir qt4-r2_src_configure
 }
 
 src_compile() {
