@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logmon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/ChangeLog,v 1.11 2011/11/22 17:42:49 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/ChangeLog,v 1.12 2013/03/13 20:49:47 tomwij Exp $
+
+  13 Mar 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Took maintainership.
 
   22 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #82110
@@ -41,4 +44,3 @@
   +logmon-0.4.4.ebuild:
   Initial commit of logmon for bug 76839. Thanks to Andrew MacKenzie
   <amackenz-gentoo at edespot dot com> and others.
-
