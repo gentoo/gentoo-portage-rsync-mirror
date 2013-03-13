@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.217 2013/03/12 21:33:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.218 2013/03/13 09:47:10 ssuominen Exp $
+
+  13 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Remask USE="gstreamer" for current stable wine wrt #461602
 
   12 Mar 2013; Michał Górny <mgorny@gentoo.org> package.use.mask:
   Unmask the abi_x86_32 support due to freetype and friends being unmasked.

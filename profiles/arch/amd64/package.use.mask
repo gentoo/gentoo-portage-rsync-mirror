@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.158 2013/03/12 21:33:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.159 2013/03/13 09:47:10 ssuominen Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -257,3 +257,7 @@ media-sound/lame mmx
 # Robert Buchholz <rbu@gentoo.org> (16 Aug 2008)
 # masked in base, unmask for x86/amd64
 dev-python/kaa-base -tls
+
+# Samuli Suominen <ssuominen@gentoo.org> (13 Mar 2013)
+# Works with new wine, doesn't work with old wine wrt #461602
+<app-emulation/wine-1.5.0 gstreamer
