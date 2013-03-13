@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.163 2013/03/13 10:08:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.164 2013/03/13 12:19:44 scarabeus Exp $
 
 EAPI=5
 
@@ -408,7 +408,6 @@ src_configure() {
 	fi
 
 	# System python 2.7 enablement:
-	export PYTHON="${PYTHON}"
 	export PYTHON_CFLAGS=`pkg-config --cflags ${EPYTHON}`
 	export PYTHON_LIBS=`pkg-config --libs ${EPYTHON}`
 
@@ -487,7 +486,7 @@ src_configure() {
 		$(use_enable gtk) \
 		$(use_enable gtk3) \
 		$(use_enable kde kde4) \
-		$(use_enable mysql ext-mysql-connector) \
+		$(use_enable mysql ext-mariadb-connector) \
 		$(use_enable odk) \
 		$(use_enable opengl) \
 		$(use_enable postgres postgresql-sdbc) \
