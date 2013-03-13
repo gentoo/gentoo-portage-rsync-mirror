@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.57 2013/03/02 19:26:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.59 2013/03/13 09:14:29 ago Exp $
+
+  13 Mar 2013; Agostino Sarubbo <ago@gentoo.org> fcitx-4.2.7.ebuild:
+  Stable for x86, wrt bug #461512
+
+  13 Mar 2013; Agostino Sarubbo <ago@gentoo.org> fcitx-4.2.7.ebuild:
+  Stable for amd64, wrt bug #461512
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> fcitx-4.2.5.ebuild,
   fcitx-4.2.6.1.ebuild, fcitx-4.2.7.ebuild:

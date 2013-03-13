@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-4.2.4.ebuild,v 1.2 2013/02/17 20:53:56 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-4.2.4.ebuild,v 1.4 2013/03/13 09:14:46 ago Exp $
 
 EAPI=4
 inherit flag-o-matic multilib toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="http://www.rarlab.com/rar/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="unRAR"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~arm-linux ~x86-fbsd ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="!<=app-arch/unrar-gpl-0.0.1_p20080417"
