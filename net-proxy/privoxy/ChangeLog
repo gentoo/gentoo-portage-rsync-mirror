@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/privoxy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.74 2012/07/29 16:57:51 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.75 2013/03/13 14:46:58 tomwij Exp $
+
+*privoxy-3.0.21 (13 Mar 2013)
+
+  13 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +privoxy-3.0.21.ebuild:
+  Version bump to 3.0.21.
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> privoxy-3.0.19.ebuild:
   alpha/sparc stable wrt #415763

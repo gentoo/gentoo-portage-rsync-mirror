@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/enet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.30 2013/02/17 17:41:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.31 2013/03/13 14:35:29 xmw Exp $
+
+*enet-1.3.7 (13 Mar 2013)
+
+  13 Mar 2013; Michael Weber <xmw@gentoo.org> +enet-1.3.7.ebuild:
+  Version bump, add subslot
 
   17 Feb 2013; Agostino Sarubbo <ago@gentoo.org> enet-1.3.6.ebuild:
   Stable for x86, wrt bug #456060
