@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1364.152.ebuild,v 1.4 2013/03/06 04:49:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1364.172.ebuild,v 1.1 2013/03/13 00:24:02 floppym Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -18,7 +18,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio selinux system-ffmpeg tcmalloc"
 
 RDEPEND="app-accessibility/speech-dispatcher

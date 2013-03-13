@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/checkbashisms
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkbashisms/ChangeLog,v 1.3 2012/02/21 08:54:08 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkbashisms/ChangeLog,v 1.4 2013/03/13 00:06:20 sochotnicky Exp $
+
+  13 Mar 2013; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  checkbashisms-2.0.0.5.ebuild:
+  Add soft block for <dev-util/rpmdevtools-8.3-r1 to fix #426828
 
 *checkbashisms-2.0.0.5 (21 Feb 2012)
 
