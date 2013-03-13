@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/dnssec-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-tools/ChangeLog,v 1.6 2012/10/15 05:33:06 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-tools/ChangeLog,v 1.7 2013/03/13 11:01:44 xmw Exp $
+
+*dnssec-tools-2.0 (13 Mar 2013)
+
+  13 Mar 2013; Michael Weber <xmw@gentoo.org> +dnssec-tools-2.0.ebuild,
+  +files/dnssec-tools-2.0-dtinitconf.patch:
+  Version bump
 
 *dnssec-tools-1.14 (15 Oct 2012)
 

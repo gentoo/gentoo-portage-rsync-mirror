@@ -4,10 +4,10 @@ DESCRIPTION=A utility for network exploration or security auditing
 EAPI=4
 HOMEPAGE=http://nmap.org/
 IUSE=gtk ipv6 +lua ncat ndiff nls nmap-update nping ssl linguas_de linguas_es linguas_fr linguas_hr linguas_hu linguas_id linguas_it linguas_ja linguas_pl linguas_pt_BR linguas_pt_PT linguas_ro linguas_ru linguas_sk linguas_zh
-KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris
+KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris
 LICENSE=GPL-2
 RDEPEND=dev-libs/apr dev-libs/libpcre net-libs/libpcap[ipv6?] gtk? ( >=x11-libs/gtk+-2.6:2 >=dev-python/pygtk-2.6 || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) ) lua? ( >=dev-lang/lua-5.1.4-r1[deprecated] ) ndiff? ( || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-lang/python:2.5[sqlite] dev-python/pysqlite:2 ) ) nls? ( virtual/libintl ) nmap-update? ( dev-libs/apr dev-vcs/subversion ) ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=http://nmap.org/dist/nmap-6.25.tar.bz2 http://dev.gentoo.org/~jer/nmap-logo-64.png
 _eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=03d4567e2a12062f5cf4c44dc8854642
+_md5_=ad6a786775cb0ce6c3e4b7f01b03892e

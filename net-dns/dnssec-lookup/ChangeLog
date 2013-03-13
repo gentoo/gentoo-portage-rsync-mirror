@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/dnssec-lookup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-lookup/ChangeLog,v 1.6 2013/03/02 22:49:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-lookup/ChangeLog,v 1.7 2013/03/13 11:23:05 xmw Exp $
+
+*dnssec-lookup-2.0 (13 Mar 2013)
+
+  13 Mar 2013; Michael Weber <xmw@gentoo.org> +dnssec-lookup-2.0.ebuild:
+  Version bump
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> dnssec-lookup-1.13.ebuild,
   dnssec-lookup-1.14.ebuild:
