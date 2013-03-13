@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/monitorix-3.0.0.ebuild,v 1.1 2013/03/13 18:21:24 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/monitorix-3.0.0-r1.ebuild,v 1.1 2013/03/13 19:28:45 tomwij Exp $
 
 EAPI="5"
 
@@ -28,10 +28,16 @@ RDEPEND="net-analyzer/rrdtool[perl]
 	lm_sensors? ( sys-apps/lm_sensors )
 	postfix? ( net-mail/pflogsumm )"
 
+pkg_setup() {
+	enewgroup ${PN}
+	enewuser ${PN} -1 -1 /var/lib/${PN} ${PN}
+}
+
 src_prepare() {
 	# Put better Gentoo defaults in the configuration file.
-	sed -i "s|\(base_dir.*\)/usr/share/monitorix|\1/usr/share/monitorix/htdocs|" ${PN}.conf
+	sed -i "s|\(base_dir.*\)/usr/share/${PN}|\1/usr/share/${PN}/htdocs|" ${PN}.conf
 	sed -i "s|\(secure_log.*\)/var/log/secure|\1/var/log/auth.log|" ${PN}.conf
+	sed -i "s|nobody|${PN}|g" ${PN}.conf
 }
 
 src_install() {
@@ -49,27 +55,27 @@ src_install() {
 	doman man/man5/${PN}.conf.5
 	doman man/man8/${PN}.8
 
-	dodir "/usr/share/monitorix"
-	dodir "/usr/share/monitorix/htdocs"
-	insinto "/usr/share/monitorix/htdocs"
-	doins logo_bot.png logo_top.png monitorixico.png
-	dodir "/usr/share/monitorix/htdocs/imgs"
+	insinto /usr/share/${PN}/htdocs
+	doins logo_bot.png logo_top.png ${PN}ico.png
 
-	dodir "/usr/share/monitorix/htdocs/cgi"
-	exeinto "/usr/share/monitorix/htdocs/cgi"
+	dodir /var/lib/${PN}/imgs
+	dosym /var/lib/${PN}/imgs /usr/share/${PN}/htdocs/imgs
+
+	exeinto /usr/share/${PN}/htdocs/cgi
 	doexe ${PN}.cgi
 
 	dodir /usr/lib/${PN}
 	exeinto /usr/lib/${PN}
 	doexe lib/*.pm
 
-	dodir /var/lib/${PN}
 	dodir /var/lib/${PN}/usage
 	insinto /var/lib/${PN}/reports
 	doins -r reports/*
 }
 
 pkg_postinst() {
+	chown monitorix:monitorix /var/lib/${PN}/imgs
+
 	elog "WARNING: ${PN} version 3.0.0 includes a brand new config"
 	elog "format, that may be incompatible with your existing config"
 	elog "file. Please take care if upgrading from an old version."
@@ -77,6 +83,6 @@ pkg_postinst() {
 	elog "${PN} includes its own web server as of version 3.0.0."
 	elog "For this reason, the dependency on the webapp framework"
 	elog "has been removed. If you wish to use your own web server,"
-	elog "the monitorix web data can be found at:"
-	elog "/usr/share/monitorix/htdocs/"
+	elog "the ${PN} web data can be found at:"
+	elog "/usr/share/${PN}/htdocs/"
 }

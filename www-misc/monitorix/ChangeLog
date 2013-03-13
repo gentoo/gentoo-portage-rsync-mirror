@@ -1,6 +1,15 @@
 # ChangeLog for www-misc/monitorix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/ChangeLog,v 1.1 2013/03/13 18:21:24 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/ChangeLog,v 1.2 2013/03/13 19:28:45 tomwij Exp $
+
+*monitorix-3.0.0-r1 (13 Mar 2013)
+
+  13 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +monitorix-3.0.0-r1.ebuild,
+  -monitorix-3.0.0.ebuild:
+  Revision bump to make the graphs work by introducing a monitorix user and
+  group and writing them to /var/lib/monitorix/imgs, since /usr/share should not
+  be writable a symlink is used; thanks to anYc, Hawk777, hasufell and Maff in
+  #gentoo-sunrise.
 
 *monitorix-3.0.0 (13 Mar 2013)
 

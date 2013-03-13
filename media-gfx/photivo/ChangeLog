@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/photivo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/ChangeLog,v 1.4 2013/03/07 21:10:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/ChangeLog,v 1.5 2013/03/13 19:17:44 hwoarang Exp $
+
+  13 Mar 2013; Markos Chandras <hwoarang@gentoo.org> photivo-9999.ebuild:
+  Fix sed pattern. Thanks to Alexander Stein <alexander.stein@informatik.tu-
+  chemnitz.de>. Bug #460732
 
 *photivo-0_pre20121212 (07 Mar 2013)
 

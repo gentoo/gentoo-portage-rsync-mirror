@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-9999.ebuild,v 1.12 2012/10/30 00:28:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mosh/mosh-9999.ebuild,v 1.13 2013/03/13 19:19:51 xmw Exp $
 
 EAPI=4
 EGIT_REPO_URI="https://github.com/keithw/mosh.git"
@@ -33,7 +33,6 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_enable test tests) \
 		$(use_enable bash-completion completion) \
 		$(use_enable client) \
 		$(use_enable server) \
@@ -47,13 +46,6 @@ src_compile() {
 	emake V=1
 }
 
-src_test() {
-	einfo "running test encrypt-decrypt"
-	./src/tests/encrypt-decrypt -q || die
-	einfo "running test ocb-aes"
-	./src/tests/ocb-aes -q || die
-}
-
 src_install() {
 	default
 
@@ -64,7 +56,7 @@ src_install() {
 
 	if use bash-completion ; then
 		insinto /usr/share/bash-completion
-		doins "${D}"/etc/bash_completion.d/mosh
-		rm -rf "${D}"/etc/bash_completion.d
+		doins "${ED}"/etc/bash_completion.d/mosh
+		rm -rf "${ED}"/etc/bash_completion.d
 	fi
 }

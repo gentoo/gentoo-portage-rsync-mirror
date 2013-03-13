@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-9999.ebuild,v 1.4 2013/03/07 21:10:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-9999.ebuild,v 1.5 2013/03/13 19:17:44 hwoarang Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ src_prepare() {
 	done
 
 	# useless check (no pkgconfig file is provided)
-	sed -e "/PKGCONFIG  += CImg/d" \
+	sed -e "/PKGCONFIG += CImg/d" \
 		-i photivoProject/photivoProject.pro || die
 	qt4-r2_src_prepare
 }
