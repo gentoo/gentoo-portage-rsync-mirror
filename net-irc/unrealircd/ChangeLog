@@ -1,6 +1,17 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.98 2013/01/27 07:31:25 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.100 2013/03/13 07:26:39 binki Exp $
+
+  13 Mar 2013; Nathan Phillip Brink <binki@gentoo.org>
+  -unrealircd-3.2.10.ebuild:
+  Drop unrealircd-3.2.10 in favour of -r1.
+
+*unrealircd-3.2.10-r1 (13 Mar 2013)
+
+  13 Mar 2013; Nathan Phillip Brink <binki@gentoo.org>
+  +unrealircd-3.2.10-r1.ebuild:
+  Install configuration files and folders with more secure, non-world-readable
+  permissions.
 
   27 Jan 2013; Nathan Phillip Brink <binki@gentoo.org> files/unrealircd.initd,
   unrealircd-3.2.10.ebuild, unrealircd-3.2.9.ebuild:

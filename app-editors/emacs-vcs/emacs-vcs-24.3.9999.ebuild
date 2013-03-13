@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.9999.ebuild,v 1.4 2013/03/05 17:39:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.9999.ebuild,v 1.5 2013/03/13 07:21:42 ulm Exp $
 
 EAPI=5
 
@@ -309,10 +309,8 @@ src_install () {
 		See also http://www.gentoo.org/proj/en/lisp/emacs/xft.xml
 		for how to enable anti-aliased fonts."
 	use aqua && DOC_CONTENTS+="\\n\\nEmacs${EMACS_SUFFIX#emacs}.app is in
-		${EPREFIX}/Applications/Gentoo. You may want to copy or symlink it
-		into /Applications by yourself."
-	[[ ${REPLACING_VERSIONS} =~ (^|[[:space:]])24\.[12]($|[^0-9]) ]] \
-		&& FORCE_PRINT_ELOG=1
+		\"${EPREFIX}/Applications/Gentoo\". You may want to copy or symlink
+		it into /Applications by yourself."
 	readme.gentoo_create_doc
 }
 
@@ -336,6 +334,11 @@ pkg_preinst() {
 
 pkg_postinst() {
 	elisp-site-regen
+
+	local pvr
+	for pvr in ${REPLACING_VERSIONS}; do
+		[[ ${pvr%%[-_]*} = 24.[12] ]] && FORCE_PRINT_ELOG=1
+	done
 	readme.gentoo_print_elog
 
 	if use livecd; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.10.ebuild,v 1.2 2013/01/27 07:31:25 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.10-r1.ebuild,v 1.1 2013/03/13 07:24:15 binki Exp $
 
 EAPI=4
 
@@ -109,8 +109,58 @@ src_install() {
 	newinitd "${FILESDIR}"/unrealircd.initd unrealircd
 	newconfd "${FILESDIR}"/unrealircd.confd-r1 unrealircd
 
-	fperms 700 /etc/unrealircd
-	fowners -R unrealircd /{etc,var/{lib,log}}/unrealircd
+	# config should be read-only
+	fperms -R 0640 /etc/unrealircd{,/aliases}
+	fperms 0750 /etc/unrealircd{,/aliases}
+	# state is editable but not owned by unrealircd directly
+	fperms 0770 /var/{lib,log}/unrealircd
+	fowners -R root:unrealircd /{etc,var/{lib,log}}/unrealircd
+}
+
+pkg_preinst() {
+	# Must pre-create directories; otherwise their permissions are lost
+	# on installation.
+
+	# Usage: _unrealircd_dir_permissions <user> <group> <mode> <dir>[, <dir>…]
+	#
+	# Ensure that directories are created with the correct permissions
+	# before portage tries to merge them to the filesystem because,
+	# otherwise, those directories are installed world-readable.
+	#
+	# If this is a first-time install, create those directories with
+	# correct permissions before installing. Otherwise, update
+	# permissions—but only if we are replacing an unrealircd ebuild at
+	# least as old as net-irc/unrealircd-3.2.10. Portage handles normal
+	# file permissions correctly, so no need for recursive
+	# chmoding/chowning.
+	_unrealircd_dir_permissions() {
+		local user=${1} group=${2} mode=${3} dir v
+		shift 3
+		while dir=${1} && shift; do
+			if [[ ! -d "${EROOT}${dir}" ]]; then
+				ebegin "Creating ${EROOT}${dir} with correct permissions"
+				install -d -m "${mode}" -o "${user}" -g "${group}" "${EROOT}${dir}" || die
+				eend ${?}
+			elif ! [[ ${REPLACING_VERSIONS} ]] || for v in ${REPLACING_VERSIONS}; do
+					# If 3.2.10 ≤ ${REPLACING_VERSIONS}, then we update
+					# existing permissions.
+					version_is_at_least "${v}" 3.2.10 && break
+				done; then
+				ebegin "Correcting permissions of ${EROOT}${dir} left by ${CATEGORY}/${PN}-${v}"
+				chmod "${mode}" "${EROOT}${dir}" \
+					&& chown ${user}:${group} "${EROOT}${dir}" \
+					|| die "Unable to correct permissions of ${EROOT}${dir}"
+				eend ${?}
+			fi
+		done
+	}
+
+	# unrealircd only needs to be able to read files in /etc/unrealircd.
+	_unrealircd_dir_permissions root unrealircd 0750 etc/unrealircd{,/aliases}
+
+	# unrealircd needs to be able to create files in /var/lib/unrealircd
+	# and /var/log/unrealircd.
+	_unrealircd_dir_permissions root unrealircd 0770 var/{lib,log}/unrealircd
 }
 
 pkg_postinst() {
@@ -120,6 +170,7 @@ pkg_postinst() {
 		if [[ ! -f "${EROOT}"/etc/unrealircd/server.cert.key ]]; then
 			install_cert /etc/unrealircd/server.cert
 			chown unrealircd "${EROOT}"/etc/unrealircd/server.cert.*
+			chmod 0640 "${EROOT}"/etc/unrealircd/server.cert.*
 			ln -snf server.cert.key "${EROOT}"/etc/unrealircd/server.key.pem
 		fi
 	fi
