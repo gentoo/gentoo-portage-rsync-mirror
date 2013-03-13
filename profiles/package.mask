@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14553 2013/03/13 19:44:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14554 2013/03/13 22:51:02 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tom Wijsman <TomWij@gentoo.org> (13 Mar 2013)
+# Masking vulnerable versions of Meteor.
+<www-servers/meteor-0.5.7.1
 
 # Markos Chandras <hwoarang@gentoo.org> (13 Mar 2013)
 # Mask because breaking updates out of the blue is bad

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.198 2013/03/13 21:57:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.199 2013/03/13 22:42:21 ssuominen Exp $
 
 EAPI=4
 
@@ -458,9 +458,7 @@ pkg_postinst() {
 			ewarn
 			ewarn "File ${old_rules} is from old udev installation but if you still use it,"
 			ewarn "rename it to something else starting with 70- to silence this deprecation"
-			ewarn "warning. This may conflict with the predictable network interface naming."
-			ewarn "Don't rename to kernel reserved namespace like eth0 or wlan1, instead use"
-			ewarn "free namespace like net0, network1, internet2, ..."
+			ewarn "warning."
 		fi
 	done
 
