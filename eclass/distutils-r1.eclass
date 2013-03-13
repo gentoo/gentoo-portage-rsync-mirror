@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.63 2013/03/09 13:13:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.64 2013/03/13 21:51:05 floppym Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -209,11 +209,13 @@ fi
 # @FUNCTION: esetup.py
 # @USAGE: [<args>...]
 # @DESCRIPTION:
-# Run the setup.py using currently selected Python interpreter
-# (if ${PYTHON} is set; fallback 'python' otherwise). The setup.py will
-# be passed default ${mydistutilsargs[@]}, then any parameters passed
-# to this command and optionally a standard option set (e.g. the build
-# directory in an ebuild using out-of-source builds).
+# Run setup.py using currently selected Python interpreter
+# (if ${PYTHON} is set; fallback 'python' otherwise).
+#
+# setup.py will be passed the following, in order:
+# 1. ${mydistutilsargs[@]}
+# 2. The 'build' command and standard build options including ${BUILD_DIR}
+# 3. Any additional arguments passed to the esetup.py function.
 #
 # This command dies on failure.
 esetup.py() {
@@ -242,7 +244,7 @@ esetup.py() {
 	fi
 
 	set -- "${PYTHON:-python}" setup.py \
-		"${mydistutilsargs[@]}" "${@}" "${add_args[@]}"
+		"${mydistutilsargs[@]}" "${add_args[@]}" "${@}"
 
 	echo "${@}" >&2
 	"${@}" || die
@@ -353,7 +355,7 @@ distutils-r1_python_configure() {
 distutils-r1_python_compile() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	esetup.py build "${@}"
+	esetup.py "${@}"
 }
 
 # @FUNCTION: distutils-r1_python_test

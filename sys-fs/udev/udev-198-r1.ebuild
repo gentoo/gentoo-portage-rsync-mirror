@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r1.ebuild,v 1.10 2013/03/11 18:41:40 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r1.ebuild,v 1.11 2013/03/13 21:57:35 ssuominen Exp $
 
 EAPI=4
 
@@ -78,16 +78,14 @@ S=${WORKDIR}/systemd-${PV}
 
 QA_MULTILIB_PATHS="lib/systemd/systemd-udevd"
 
-udev_check_KV()
-{
+udev_check_KV() {
 	if kernel_is lt ${KV_min//./ }; then
 		return 1
 	fi
 	return 0
 }
 
-check_default_rules()
-{
+check_default_rules() {
 	# Make sure there are no sudden changes to upstream rules file
 	# (more for my own needs than anything else ...)
 	local udev_rules_md5=a3e16362de3750807b52eae9525c102c
@@ -100,8 +98,7 @@ check_default_rules()
 	fi
 }
 
-pkg_setup()
-{
+pkg_setup() {
 	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2 ~SIGNALFD ~EPOLL"
 
 	linux-info_pkg_setup
@@ -121,8 +118,7 @@ pkg_setup()
 	fi
 }
 
-src_prepare()
-{
+src_prepare() {
 	if ! [[ ${PV} = 9999* ]]; then
 		# secure_getenv() disable for non-glibc systems wrt bug #443030
 		if ! [[ $(grep -r secure_getenv * | wc -l) -eq 16 ]]; then
@@ -193,8 +189,7 @@ src_prepare()
 	echo '.so systemd-udevd.service.8' > "${T}"/udevd.8
 }
 
-src_configure()
-{
+src_configure() {
 	use keymap || export ac_cv_path_GPERF=true #452760
 
 	local econf_args
@@ -246,8 +241,7 @@ src_configure()
 	econf "${econf_args[@]}"
 }
 
-src_compile()
-{
+src_compile() {
 	echo 'BUILT_SOURCES: $(BUILT_SOURCES)' > "${T}"/Makefile.extra
 	emake -f Makefile -f "${T}"/Makefile.extra BUILT_SOURCES
 	local targets=(
@@ -276,8 +270,7 @@ src_compile()
 	fi
 }
 
-src_install()
-{
+src_install() {
 	local lib_LTLIBRARIES="libudev.la" \
 		pkgconfiglib_DATA="src/libudev/libudev.pc"
 
@@ -363,8 +356,7 @@ src_install()
 	doman "${T}"/udevd.8
 }
 
-pkg_preinst()
-{
+pkg_preinst() {
 	local htmldir
 	for htmldir in gudev libudev; do
 		if [[ -d ${ROOT}usr/share/gtk-doc/html/${htmldir} ]]; then
@@ -380,16 +372,14 @@ pkg_preinst()
 
 # This function determines if a directory is a mount point.
 # It was lifted from dracut.
-ismounted()
-{
+ismounted() {
 	while read a m a; do
 		[[ $m = $1 ]] && return 0
 	done < "${ROOT}"/proc/mounts
 	return 1
 }
 
-pkg_postinst()
-{
+pkg_postinst() {
 	mkdir -p "${ROOT}"run
 
 	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
@@ -449,26 +439,39 @@ pkg_postinst()
 		ewarn "Note that qfile can be found in app-portage/portage-utils"
 	fi
 
-	old_cd_rules=${ROOT}etc/udev/rules.d/70-persistent-cd.rules
-	old_net_rules=${ROOT}etc/udev/rules.d/70-persistent-net.rules
+	local old_net_name="${ROOT}"etc/udev/rules.d/80-net-name-slot.rules
+	if [[ -f ${old_net_name} ]]; then
+		local old_net_sum=bebf4bd1b6b668e9ff34a3999aa6ff32
+		MD5=$(md5sum < "${old_net_name}")
+		MD5=${MD5/  -/}
+		if [[ ${MD5} == ${old_net_sum} ]]; then
+			ewarn "Removing unmodified file ${old_net_name} from old udev installation to enable"
+			ewarn "the new predictable network interface naming."
+			rm -f "${old_net_name}"
+		fi
+	fi
+
+	local old_cd_rules="${ROOT}"etc/udev/rules.d/70-persistent-cd.rules
+	local old_net_rules="${ROOT}"etc/udev/rules.d/70-persistent-net.rules
 	for old_rules in "${old_cd_rules}" "${old_net_rules}"; do
 		if [[ -f ${old_rules} ]]; then
 			ewarn
 			ewarn "File ${old_rules} is from old udev installation but if you still use it,"
-			ewarn "rename it to something else starting with 70- to silence this"
-			ewarn "deprecation warning."
+			ewarn "rename it to something else starting with 70- to silence this deprecation"
+			ewarn "warning. This may conflict with the predictable network interface naming."
+			ewarn "Don't rename to kernel reserved namespace like eth0 or wlan1, instead use"
+			ewarn "free namespace like net0, network1, internet2, ..."
 		fi
 	done
 
 	if has_version sys-apps/biosdevname; then
 		ewarn
 		ewarn "You have sys-apps/biosdevname installed which has been deprecated"
-		ewarn "in favor of the predictable network interface names."
+		ewarn "in favour of the predictable network interface names."
 	fi
 
 	ewarn
-	ewarn "We don't install ${ROOT}etc/udev/rules.d/80-net-name-slot.rules anymore"
-	ewarn "and the new predictable network interface names are used by default:"
+	ewarn "The new predictable network interface names are used by default, see:"
 	ewarn "http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames"
 	ewarn
 	ewarn "Example command to get the information for the new interface name before booting"

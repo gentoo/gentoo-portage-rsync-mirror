@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/yaala/yaala-0.6.3.ebuild,v 1.11 2009/10/12 00:03:59 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/yaala/yaala-0.6.3.ebuild,v 1.12 2013/03/13 21:45:55 tomwij Exp $
 
 DESCRIPTION="Yet Another Log Analyzer"
 HOMEPAGE="http://yaala.org/"
@@ -12,6 +12,7 @@ KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND=""
+RDEPEND=""
 
 src_install() {
 	dodir /usr/share/yaala
