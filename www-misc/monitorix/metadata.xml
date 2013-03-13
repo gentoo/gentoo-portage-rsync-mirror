@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>TomWij@gentoo.org</email>
+    <name>Tom Wijsman</name>
+  </maintainer>
+  <longdescription>
+    A lightweight system monitoring tool.
+  </longdescription>
+  <use>
+    <flag name='evms'>Make use of utilities for the IBM Enterprise Volume Management System with <pkg>sys-fs/evms</pkg>.</flag>
+    <flag name='hddtemp'>Use SMART to monitor the temperature of hard drives with <pkg>app-admin/hddtemp</pkg>.</flag>
+    <flag name='httpd'>Enables the CGI webserver with any package that satisfies <pkg>virtual/httpd-cgi</pkg>.</flag>
+    <flag name='lm_sensors'>Additional hardware mnitoring sensors with <pkg>sys-apps/lm_sensors</pkg>.</flag>
+    <flag name='postfix'>Analyze postfix logs with <pkg>net-mail/pflogsumm</pkg>.</flag>
+  </use>
+</pkgmetadata>
