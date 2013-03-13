@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/ec2-api-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ChangeLog,v 1.15 2012/07/29 12:59:43 lxnay Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ChangeLog,v 1.16 2013/03/13 21:20:04 tomwij Exp $
+
+*ec2-api-tools-1.6.0.1 (13 Mar 2013)
+
+  13 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +ec2-api-tools-1.6.0.1.ebuild:
+  Non-maintainer commit, version bump to 1.6.0.1.
 
 *ec2-api-tools-1.6.0.0 (29 Jul 2012)
 
