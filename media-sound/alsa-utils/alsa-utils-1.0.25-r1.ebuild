@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.25-r1.ebuild,v 1.8 2012/07/23 15:04:38 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.25-r1.ebuild,v 1.9 2013/03/13 10:56:39 ago Exp $
 
 EAPI=4
 inherit base systemd
@@ -14,7 +14,7 @@ SRC_URI="mirror://alsaproject/utils/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0.9"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE="doc nls minimal selinux"
 
 COMMON_DEPEND=">=sys-libs/ncurses-5.1

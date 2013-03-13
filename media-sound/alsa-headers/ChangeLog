@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-headers
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.219 2012/04/01 15:10:10 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.220 2013/03/13 10:57:18 ago Exp $
+
+  13 Mar 2013; Agostino Sarubbo <ago@gentoo.org> alsa-headers-1.0.25.ebuild:
+  Stable for ppc, wrt bug #406101
 
   01 Apr 2012; Raúl Porcel <armin76@gentoo.org> alsa-headers-1.0.25.ebuild:
   alpha/ia64/sh/sparc stable wrt #406101
@@ -913,4 +916,3 @@
   +alsa-headers-1.0.5a.ebuild:
   Initial commit to deal with alsa-headers not being installed with 2.6 kernels.
   See bug #55994.
-
