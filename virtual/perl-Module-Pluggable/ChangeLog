@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Module-Pluggable
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Pluggable/ChangeLog,v 1.38 2013/02/23 08:56:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Pluggable/ChangeLog,v 1.39 2013/03/13 08:13:20 tove Exp $
+
+*perl-Module-Pluggable-4.700.0 (13 Mar 2013)
+
+  13 Mar 2013; Torsten Veller <tove@gentoo.org>
+  +perl-Module-Pluggable-4.700.0.ebuild:
+  Version bump
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   perl-Module-Pluggable-4.600.0.ebuild:
