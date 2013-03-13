@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7586 2013/03/13 17:58:32 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7587 2013/03/13 18:37:34 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Remove obsolete mask on x11-misc/xdaf
 
   13 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
   Mask old sys-kernel/openvz-sources
