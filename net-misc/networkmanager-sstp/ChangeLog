@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/networkmanager-sstp
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-sstp/ChangeLog,v 1.1 2013/03/13 20:23:28 pinkbyte Exp $
+
+*networkmanager-sstp-0.9.4 (13 Mar 2013)
+
+  13 Mar 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +networkmanager-sstp-0.9.4.ebuild, +metadata.xml:
+  Initial commit, ebuild by me and Andreis Vinogradovs, who will maintain this
+  package via proxy maintainers
+
