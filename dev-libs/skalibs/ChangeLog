@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/skalibs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skalibs/ChangeLog,v 1.11 2012/06/22 07:25:28 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skalibs/ChangeLog,v 1.12 2013/03/13 13:09:16 xmw Exp $
+
+*skalibs-1.3.0 (13 Mar 2013)
+
+  13 Mar 2013; Michael Weber <xmw@gentoo.org> +skalibs-1.3.0.ebuild:
+  Version bump
 
 *skalibs-1.2.8 (22 Jun 2012)
 
