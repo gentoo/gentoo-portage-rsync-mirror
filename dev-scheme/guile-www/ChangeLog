@@ -1,6 +1,12 @@
 # ChangeLog for dev-scheme/guile-www
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.30 2012/09/09 15:24:38 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.31 2013/03/13 14:19:04 jlec Exp $
+
+*guile-www-2.35 (13 Mar 2013)
+
+  13 Mar 2013; Justin Lecher <jlec@gentoo.org> guile-www-2.34.ebuild,
+  +guile-www-2.35.ebuild, metadata.xml:
+  Version Bump; make tests verbose; correct slot of guile dep
 
   09 Sep 2012; Justin Lecher <jlec@gentoo.org> -guile-www-2.27.ebuild,
   -guile-www-2.28.ebuild, -guile-www-2.30.ebuild:

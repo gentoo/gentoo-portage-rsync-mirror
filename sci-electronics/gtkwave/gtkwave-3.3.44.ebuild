@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.3.42.ebuild,v 1.3 2013/03/13 14:18:25 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.3.44.ebuild,v 1.1 2013/03/13 14:18:25 xmw Exp $
 
 EAPI="4"
 
-inherit autotools eutils fdo-mime toolchain-funcs
+inherit eutils fdo-mime toolchain-funcs
 
 DESCRIPTION="A wave viewer for LXT, LXT2, VZT, GHW and standard Verilog VCD/EVCD files"
 HOMEPAGE="http://gtkwave.sourceforge.net/"
@@ -30,11 +30,6 @@ DEPEND="${RDEPEND}
 AT_M4DIR="${S}"
 
 src_prepare(){
-	# fix parallel make
-	epatch "${FILESDIR}"/${PN}-parallel-make.diff
-
-	eautoreconf
-	
 	# do not install doc and examples by default
 	sed -i -e 's/doc examples//' Makefile.in || die
 }
