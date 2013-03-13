@@ -1,0 +1,15 @@
+http://code.google.com/p/rar2fs/issues/detail?id=12
+
+--- Makefile.am
++++ Makefile.am
+@@ -35,9 +35,5 @@
+ 
+ if LINUX
+ install-exec-hook:
+-	cd /sbin && \
+-	rm -f mount.rar2fs && \
+-	$(LN_S) $(DESTDIR)$(bindir)/rar2fs mount.rar2fs
++	$(LN_S) rar2fs $(DESTDIR)$(bindir)/mount.rar2fs
+ endif
+-
+-
