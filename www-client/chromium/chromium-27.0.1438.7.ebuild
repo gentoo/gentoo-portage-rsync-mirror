@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1425.0.ebuild,v 1.4 2013/03/06 04:49:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-27.0.1438.7.ebuild,v 1.1 2013/03/13 22:06:28 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -19,58 +19,59 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cups gnome gnome-keyring gps kerberos pulseaudio selinux tcmalloc"
+IUSE="cups gnome gnome-keyring gps kerberos pulseaudio selinux system-sqlite tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
 
-RDEPEND="app-accessibility/speech-dispatcher
-	app-arch/bzip2
+RDEPEND="app-accessibility/speech-dispatcher:=
+	app-arch/bzip2:=
+	system-sqlite? ( dev-db/sqlite:3 )
 	cups? (
-		dev-libs/libgcrypt
-		>=net-print/cups-1.3.11
+		dev-libs/libgcrypt:=
+		>=net-print/cups-1.3.11:=
 	)
-	>=dev-lang/v8-3.16.11.1:=
+	>=dev-lang/v8-3.17.6:=
 	>=dev-libs/elfutils-0.149
-	dev-libs/expat
+	dev-libs/expat:=
 	>=dev-libs/icu-49.1.1-r1:=
-	>=dev-libs/jsoncpp-0.5.0-r1
-	>=dev-libs/libevent-1.4.13
-	dev-libs/libxml2[icu]
-	dev-libs/libxslt
-	dev-libs/nspr
-	>=dev-libs/nss-3.12.3
+	>=dev-libs/jsoncpp-0.5.0-r1:=
+	>=dev-libs/libevent-1.4.13:=
+	dev-libs/libxml2:=[icu]
+	dev-libs/libxslt:=
+	dev-libs/nspr:=
+	>=dev-libs/nss-3.12.3:=
 	dev-libs/protobuf:=
-	dev-libs/re2
-	gnome? ( >=gnome-base/gconf-2.24.0 )
-	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2 )
-	gps? ( >=sci-geosciences/gpsd-3.7[shm] )
-	>=media-libs/alsa-lib-1.0.19
-	media-libs/flac
-	media-libs/harfbuzz
-	>=media-libs/libjpeg-turbo-1.2.0-r1
-	media-libs/libpng
-	media-libs/libvpx
-	>=media-libs/libwebp-0.2.0_rc1
-	!arm? ( !x86? ( >=media-libs/mesa-9.1[gles2] ) )
-	media-libs/opus
-	media-libs/speex
-	pulseaudio? ( media-sound/pulseaudio )
-	>=media-video/ffmpeg-1.0[opus]
-	>=net-libs/libsrtp-1.4.4_p20121108
-	sys-apps/dbus
-	sys-apps/pciutils
-	sys-libs/zlib[minizip]
+	dev-libs/re2:=
+	gnome? ( >=gnome-base/gconf-2.24.0:= )
+	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28.2:= )
+	gps? ( >=sci-geosciences/gpsd-3.7:=[shm] )
+	>=media-libs/alsa-lib-1.0.19:=
+	media-libs/flac:=
+	media-libs/harfbuzz:=
+	>=media-libs/libjpeg-turbo-1.2.0-r1:=
+	media-libs/libpng:=
+	media-libs/libvpx:=
+	>=media-libs/libwebp-0.2.0_rc1:=
+	!arm? ( !x86? ( >=media-libs/mesa-9.1:=[gles2] ) )
+	media-libs/opus:=
+	media-libs/speex:=
+	pulseaudio? ( media-sound/pulseaudio:= )
+	>=media-video/ffmpeg-1.0:=[opus]
+	>=net-libs/libsrtp-1.4.4_p20121108:=
+	sys-apps/dbus:=
+	sys-apps/pciutils:=
+	sys-libs/zlib:=[minizip]
 	virtual/udev
-	virtual/libusb:1
-	x11-libs/gtk+:2
-	x11-libs/libXinerama
-	x11-libs/libXScrnSaver
-	x11-libs/libXtst
+	virtual/libusb:1=
+	x11-libs/gtk+:2=
+	x11-libs/libXinerama:=
+	x11-libs/libXScrnSaver:=
+	x11-libs/libXtst:=
 	kerberos? ( virtual/krb5 )
 	selinux? (
 		sec-policy/selinux-chromium
-		sys-libs/libselinux
+		sys-libs/libselinux:=
 	)"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
@@ -128,12 +129,7 @@ src_prepare() {
 		touch out/Release/obj/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	fi
 
-	# Fix build without NaCl glibc toolchain.
-	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
-
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
-	epatch "${FILESDIR}/${PN}-mesa-r1.patch"
-	epatch "${FILESDIR}/${PN}-system-v8-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r4.patch"
 
 	epatch_user
@@ -269,6 +265,15 @@ src_configure() {
 		$(gyp_use kerberos)
 		$(gyp_use pulseaudio)
 		$(gyp_use selinux selinux)"
+
+	if use system-sqlite; then
+		elog "Enabling system sqlite. WebSQL - http://www.w3.org/TR/webdatabase/"
+		elog "will not work. Please report sites broken by this"
+		elog "to https://bugs.gentoo.org"
+		myconf+="
+			-Duse_system_sqlite=1
+			-Denable_sql_database=0"
+	fi
 
 	# Use explicit library dependencies instead of dlopen.
 	# This makes breakages easier to detect by revdep-rebuild.

@@ -1,15 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.5.ebuild,v 1.2 2013/03/05 01:11:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.17.9.ebuild,v 1.1 2013/03/13 22:01:41 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
 
-inherit eutils multilib pax-utils python-any-r1 toolchain-funcs versionator
+inherit eutils multilib multiprocessing pax-utils python-any-r1 toolchain-funcs versionator
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
-SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.bz2"
+SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.bz2"
 LICENSE="BSD"
 
 soname_version="$(get_version_component_range 1-3)"
@@ -58,7 +58,7 @@ src_configure() {
 		snapshot=on \
 		hardfp=${hardfp} \
 		console=${console} \
-		out/Makefile.${myarch} || die
+		out/Makefile.${myarch}
 }
 
 src_compile() {
@@ -71,25 +71,17 @@ src_compile() {
 	)
 
 	# Build mksnapshot so we can pax-mark it.
-	emake "${makeargs[@]}" mksnapshot || die
+	emake "${makeargs[@]}" mksnapshot
 	pax-mark m out/${mytarget}/mksnapshot
 
 	# Build everything else.
-	emake "${makeargs[@]}" || die
-	pax-mark m out/${mytarget}/{cctest,d8,shell} || die
+	emake "${makeargs[@]}"
+	pax-mark m out/${mytarget}/{cctest,d8,shell}
 }
 
 src_test() {
-	local arg testjobs
-	for arg in ${MAKEOPTS}; do
-		case ${arg} in
-			-j*) testjobs=${arg#-j} ;;
-			--jobs=*) testjobs=${arg#--jobs=} ;;
-		esac
-	done
-
 	tools/test-wrapper-gypbuild.py \
-		-j${testjobs:-1} \
+		-j$(makeopts_jobs) \
 		--arch-and-mode=${mytarget} \
 		--no-presubmit \
 		--progress=dots || die
@@ -97,11 +89,11 @@ src_test() {
 
 src_install() {
 	insinto /usr
-	doins -r include || die
+	doins -r include
 
 	if [[ ${CHOST} == *-darwin* ]] ; then
 		# buildsystem is too horrific to get this built correctly
-		mkdir -p out/${mytarget}/lib.target
+		mkdir -p out/${mytarget}/lib.target || die
 		mv out/${mytarget}/libv8.so.${soname_version} \
 			out/${mytarget}/lib.target/libv8$(get_libname ${soname_version}) || die
 		install_name_tool \
@@ -115,10 +107,10 @@ src_install() {
 			out/${mytarget}/d8 || die
 	fi
 
-	dobin out/${mytarget}/d8 || die
+	dobin out/${mytarget}/d8
 
-	dolib out/${mytarget}/lib.target/libv8$(get_libname ${soname_version}) || die
-	dosym libv8$(get_libname ${soname_version}) /usr/$(get_libdir)/libv8$(get_libname) || die
+	dolib out/${mytarget}/lib.target/libv8$(get_libname ${soname_version})
+	dosym libv8$(get_libname ${soname_version}) /usr/$(get_libdir)/libv8$(get_libname)
 
 	dodoc AUTHORS ChangeLog || die
 }

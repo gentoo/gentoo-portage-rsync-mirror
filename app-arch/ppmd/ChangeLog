@@ -1,6 +1,16 @@
 # ChangeLog for app-arch/ppmd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.39 2012/05/10 14:43:28 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.41 2013/03/13 22:06:59 tomwij Exp $
+
+  13 Mar 2013; Tom Wijsman <TomWij@gentoo.org> ppmd-10.1_p5.ebuild,
+  ppmd-9.1_p14.ebuild, ppmd-9.1_p16.ebuild:
+  Non-maintainer commit; updated homepage according to bug #409239, thanks to df
+  for mentioning.
+
+*ppmd-10.1_p5 (13 Mar 2013)
+
+  13 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +ppmd-10.1_p5.ebuild:
+  Non-maintainer commit, version bump to 10.1.
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -ppmd-9.1_p10.ebuild:
   Remove old
@@ -133,4 +143,3 @@
   15 Nov 2003; Seemant Kulleen <seemant@gentoo.org> ppmd-9.1.ebuild:
   PPM based compressor. Ebuild submitted by Brian Harring <bdharring@wisc.edu>
   in bug #33066
-

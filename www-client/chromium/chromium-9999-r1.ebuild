@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.180 2013/03/09 05:25:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.181 2013/03/13 22:06:28 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -186,9 +186,6 @@ src_prepare() {
 			out/Release/obj/gen/sdk/toolchain/linux_x86_newlib || die
 		touch out/Release/obj/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	fi
-
-	# Fix build without NaCl glibc toolchain.
-	epatch "${FILESDIR}/${PN}-ppapi-r0.patch"
 
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r4.patch"
 
