@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/fakeidentd
-# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.38 2012/06/06 01:36:15 floppym Exp $
+# Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/ChangeLog,v 1.39 2013/03/13 05:16:18 floppym Exp $
+
+  13 Mar 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop myself from metadata.
 
   06 Jun 2012; Mike Gilbert <floppym@gentoo.org> fakeidentd-2.6.ebuild:
   Define USE_UNIX_OS. Bug 419789.
