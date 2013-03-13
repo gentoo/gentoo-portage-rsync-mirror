@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-validator/dnssec-validator-1.14.ebuild,v 1.1 2012/10/15 05:41:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-validator/dnssec-validator-1.14.ebuild,v 1.2 2013/03/13 10:08:38 xmw Exp $
 
 EAPI=4
 
@@ -16,8 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="ipv6 static-libs +threads"
 
 RDEPEND="dev-libs/openssl
-	!<net-dns/dnssec-tools-1.13
-	!net-dns/dnsval"
+	!<net-dns/dnssec-tools-1.13"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/dnsval-${PV}

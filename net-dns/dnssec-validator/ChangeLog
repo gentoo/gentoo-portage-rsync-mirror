@@ -1,6 +1,15 @@
 # ChangeLog for net-dns/dnssec-validator
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-validator/ChangeLog,v 1.2 2012/10/15 05:41:32 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-validator/ChangeLog,v 1.4 2013/03/13 10:17:27 xmw Exp $
+
+*dnssec-validator-2.0 (13 Mar 2013)
+
+  13 Mar 2013; Michael Weber <xmw@gentoo.org> +dnssec-validator-2.0.ebuild:
+  Version bump
+
+  13 Mar 2013; Michael Weber <xmw@gentoo.org> dnssec-validator-1.13.ebuild,
+  dnssec-validator-1.14.ebuild:
+  net-dns/dnsval is gone.
 
 *dnssec-validator-1.14 (15 Oct 2012)
 

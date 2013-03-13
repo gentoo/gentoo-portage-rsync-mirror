@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-validator/dnssec-validator-1.13.ebuild,v 1.3 2013/03/13 10:08:38 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnssec-validator/dnssec-validator-2.0.ebuild,v 1.1 2013/03/13 10:17:27 xmw Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/dnsval-${PV}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-respect-LDFLAGS.patch
+	epatch "${FILESDIR}"/${PN}-1.13-respect-LDFLAGS.patch
 }
 
 src_configure() {
