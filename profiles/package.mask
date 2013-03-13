@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14547 2013/03/12 21:33:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14549 2013/03/13 16:48:38 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -306,17 +306,6 @@ net-wireless/rtl8192su-firmware
 # Ryan Hill <dirtyepic@gentoo.org> (07 Feb 2013)
 # Breaks everything (bug #456108)
 =dev-libs/openssl-1.0.1d
-
-# Michael Sterrett <mr_bones_@gentoo.org> (31 Jan 2013)
-# Old, dead upstream and require guile[deprecated]
-# Masked for removal on 20130302
-games-action/trackballs
-games-misc/gnurobots
-
-# Michael Sterrett <mr_bones_@gentoo.org> (31 Jan 2013)
-# Upstream is dead and gone.
-# Masked for removal on 20130302
-games-arcade/bitefusion
 
 # Rafael G. Martins <rafaelmartins@gentoo.org> (31 Jan 2013)
 # Renamed to xombrero. Please install www-client/xombrero (bug #417555)

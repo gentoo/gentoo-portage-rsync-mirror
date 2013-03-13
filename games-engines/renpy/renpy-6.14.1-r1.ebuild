@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/renpy-6.14.1-r1.ebuild,v 1.1 2013/02/27 19:34:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/renpy-6.14.1-r1.ebuild,v 1.3 2013/03/13 16:44:10 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -94,16 +94,19 @@ python_install_all() {
 pkg_preinst() {
 	games_pkg_preinst
 	use development && gnome2_icon_savelist
-
-	einfo "running: eselect renpy update --if-unset"
-	eselect renpy update --if-unset
 }
 
 pkg_postinst() {
 	games_pkg_postinst
 	use development && gnome2_icon_cache_update
+
+	einfo "running: eselect renpy update --if-unset"
+	eselect renpy update --if-unset
 }
 
 pkg_postrm() {
 	use development && gnome2_icon_cache_update
+
+	einfo "running: eselect renpy update --if-unset"
+	eselect renpy update --if-unset
 }

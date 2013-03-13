@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-17.0.4.ebuild,v 1.1 2013/03/08 20:43:13 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-17.0.4.ebuild,v 1.2 2013/03/13 17:00:46 ago Exp $
 
 EAPI="4"
 MOZ_ESR="1"
@@ -35,7 +35,7 @@ SRC_URI="${SRC_URI}
 HOMEPAGE="http://www.mozilla.com/thunderbird"
 RESTRICT="strip mirror binchecks"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="+crashreporter"

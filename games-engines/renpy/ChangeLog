@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/renpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/ChangeLog,v 1.4 2013/03/04 16:02:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/renpy/ChangeLog,v 1.5 2013/03/13 16:41:45 hasufell Exp $
+
+  13 Mar 2013; Julian Ospald <hasufell@gentoo.org> renpy-6.14.1-r1.ebuild,
+  renpy-6.15.0.ebuild:
+  fix eselect logic wrt #461518
 
 *renpy-6.15.0 (04 Mar 2013)
 
