@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.2.ebuild,v 1.11 2013/02/08 05:12:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.2.ebuild,v 1.12 2013/03/13 17:52:48 ssuominen Exp $
 
 EAPI="5"
 
@@ -34,6 +34,7 @@ REQUIRED_USE="elibc_glibc? ( threads )" #286560
 RESTRICT="test" #72375
 
 MLIB_DEPS="amd64? (
+	gstreamer? ( app-emulation/emul-linux-x86-gstplugins )
 	truetype? ( >=app-emulation/emul-linux-x86-xlibs-2.1 )
 	X? (
 		>=app-emulation/emul-linux-x86-xlibs-2.1

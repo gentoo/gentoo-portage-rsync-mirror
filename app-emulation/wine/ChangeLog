@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.456 2013/03/04 15:44:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.457 2013/03/13 17:52:48 ssuominen Exp $
+
+  13 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> wine-1.5.0.ebuild,
+  wine-1.5.2.ebuild, wine-1.5.3.ebuild, wine-1.5.4.ebuild, wine-1.5.6.ebuild,
+  wine-1.5.7.ebuild, wine-1.5.8.ebuild, wine-1.5.9.ebuild,
+  wine-1.5.10-r1.ebuild, wine-1.5.11-r1.ebuild, wine-1.5.12-r1.ebuild,
+  wine-1.5.13-r1.ebuild, wine-1.5.14-r1.ebuild, wine-1.5.15-r2.ebuild,
+  wine-1.5.16-r1.ebuild, wine-1.5.17.ebuild, wine-1.5.18.ebuild,
+  wine-1.5.19.ebuild, wine-1.5.20.ebuild, wine-1.5.21.ebuild,
+  wine-1.5.22.ebuild, wine-1.5.23-r1.ebuild, wine-1.5.24.ebuild,
+  wine-1.5.25.ebuild:
+  Pull in emul-linux-x86-gstplugins when USE="gstreamer" is enabled for x86_64
+  wrt #461602
 
   04 Mar 2013; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.5.25.ebuild,
   wine-9999.ebuild:

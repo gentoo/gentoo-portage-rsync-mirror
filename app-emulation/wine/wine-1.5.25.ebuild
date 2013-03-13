@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.25.ebuild,v 1.2 2013/03/04 15:44:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.25.ebuild,v 1.3 2013/03/13 17:52:48 ssuominen Exp $
 
 EAPI="5"
 
@@ -96,6 +96,7 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	xcomposite? ( x11-libs/libXcomposite )
 	amd64? (
 		abi_x86_32? (
+			gstreamer? ( app-emulation/emul-linux-x86-gstplugins )
 			truetype? ( >=app-emulation/emul-linux-x86-xlibs-2.1[development] )
 			X? (
 				>=app-emulation/emul-linux-x86-xlibs-2.1[development]

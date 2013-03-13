@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.0.1-r1.ebuild,v 1.2 2013/02/09 01:00:03 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.1.1.ebuild,v 1.1 2013/03/13 17:38:32 prometheanfire Exp $
 
 EAPI="4"
 
@@ -112,7 +112,6 @@ all_ruby_install() {
 	for f in $(find ext examples -type f) ; do
 		docinto "$(dirname ${f})"; dodoc "${f}"
 	done
-	docinto conf; dodoc conf/namespaceauth.conf
 }
 
 pkg_postinst() {

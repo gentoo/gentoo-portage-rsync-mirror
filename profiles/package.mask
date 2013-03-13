@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14549 2013/03/13 16:48:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14551 2013/03/13 18:00:21 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergey Popov <pinkbyte@gentoo.org> (13 Mar 2013)
+# Old kernels, not supported by current sys-fs/udev
+# Masked by maintainer's request, removal in 30 days
+=sys-kernel/openvz-sources-2.6.18*
 
 # Tom Wijsman <TomWij@gentoo.org> (12 Mar 2013)
 # 2.5.* has known security and other issues due to bundled ffmpeg,
