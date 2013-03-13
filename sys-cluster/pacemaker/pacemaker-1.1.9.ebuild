@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.8-r1.ebuild,v 1.3 2013/03/13 13:48:26 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.9.ebuild,v 1.1 2013/03/13 13:48:26 ultrabug Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ inherit autotools base python
 
 MY_PN=Pacemaker
 MY_P=${MY_PN}-${PV}
-MY_TREE="1f8858c"
+MY_TREE="2a917dd"
 
 DESCRIPTION="Pacemaker CRM"
 HOMEPAGE="http://www.linux-ha.org/wiki/Pacemaker"
@@ -20,7 +20,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
 REQUIRED_USE="cman? ( !heartbeat )"
-IUSE="acl cman heartbeat smtp snmp static-libs"
+IUSE="-acl cman heartbeat smtp snmp static-libs"
 
 DEPEND="
 	app-text/docbook-xsl-stylesheets
@@ -36,10 +36,6 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 PDEPEND="sys-cluster/crmsh"
-
-PATCHES=(
-	"${FILESDIR}"/${PV}-backwards_compatibility.patch
-	)
 
 S="${WORKDIR}/ClusterLabs-${PN}-${MY_TREE}"
 
@@ -66,6 +62,7 @@ src_configure() {
 	fi
 	# appends lib to localstatedir automatically
 	econf \
+		--libdir=/usr/$(get_libdir) \
 		--localstatedir=/var \
 		--disable-dependency-tracking \
 		--disable-fatal-warnings \
@@ -81,10 +78,17 @@ src_configure() {
 
 src_install() {
 	base_src_install
-	rm -rf "${D}"/var/run
+	rm -rf "${D}"/var/run "${D}"/etc/init.d
 	newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
 	if has_version "<sys-cluster/corosync-2.0"; then
 		insinto /etc/corosync/service.d
 		newins "${FILESDIR}/${PN}.service" ${PN} || die
+	fi
+}
+
+pkg_postinst() {
+	if use acl ; then
+		ewarn "ACL support requires you to add root to the haclient group !"
+		ewarn "    # usermod -a -G haclient root"
 	fi
 }
