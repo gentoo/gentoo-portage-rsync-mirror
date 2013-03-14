@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/urwid
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.59 2012/11/24 02:04:27 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.60 2013/03/14 19:25:55 radhermit Exp $
+
+*urwid-1.1.1-r1 (14 Mar 2013)
+
+  14 Mar 2013; Tim Harder <radhermit@gentoo.org> +urwid-1.1.1-r1.ebuild:
+  Revbump and migrate to distutils-r1.
 
 *urwid-1.1.1 (24 Nov 2012)
 
