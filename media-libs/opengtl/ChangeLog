@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/opengtl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/ChangeLog,v 1.15 2013/02/19 18:05:42 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/ChangeLog,v 1.16 2013/03/14 15:24:40 kensington Exp $
+
+*opengtl-0.9.18 (14 Mar 2013)
+
+  14 Mar 2013; Michael Palimaka <kensington@gentoo.org>
+  +files/opengtl-0.9.18-underlinking.patch, +opengtl-0.9.18.ebuild,
+  -opengtl-0.9.16.ebuild, opengtl-0.9.17.ebuild:
+  Version bump wrt bug #460930, fixing bug #453420. Fix underlinking wrt bug
+  #450160. Don't strip RPATH created after linking since LLVM libraries are not
+  in the standard search path. Restrict tests wrt bug #377995. Remove old.
 
   19 Feb 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   opengtl-0.9.17.ebuild:

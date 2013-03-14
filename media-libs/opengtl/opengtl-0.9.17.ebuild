@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/opengtl-0.9.17.ebuild,v 1.4 2013/02/19 18:05:42 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/opengtl-0.9.17.ebuild,v 1.5 2013/03/14 15:24:40 kensington Exp $
 
 EAPI=4
 
@@ -24,6 +24,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	test? ( dev-util/lcov )
 "
+
+RESTRICT="test"
 
 S=${WORKDIR}/${MY_P}
 
