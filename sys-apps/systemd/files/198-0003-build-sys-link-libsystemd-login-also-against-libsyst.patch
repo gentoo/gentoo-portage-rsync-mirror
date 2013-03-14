@@ -1,0 +1,40 @@
+From d29dd033022b41794c7475a5ec4d9d683d18417e Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Zbigniew=20J=C4=99drzejewski-Szmek?= <zbyszek@in.waw.pl>
+Date: Wed, 13 Mar 2013 21:59:11 -0400
+Subject: [PATCH] build-sys: link libsystemd-login also against
+ libsystemd-daemon-internal
+
+https://bugs.freedesktop.org/show_bug.cgi?id=62085
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/4.6.3/../../../../lib64/libsystemd-login.so:
+undefined reference to `sd_listen_fds'
+
+In ee465038ce8 'build-sys: break dependency loop between
+libsystemd-id128.la and -shared.la', a partial fix was applied, and
+the use of functions from libsystemd-id128 was removed from
+libsystemd-shared. Nevertheless, fdset.c was still using sd_listen_fds,
+so libsystemd-login should be linked against libysystemd-daemon
+or libsystemd-daemon-internal.
+
+Tested-by: Elias Probst <mail@eliasprobst.eu>
+---
+ Makefile.am | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index a12e57e..175d14b 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -3356,7 +3356,8 @@ libsystemd_login_la_LDFLAGS = \
+ 	-Wl,--version-script=$(top_srcdir)/src/login/libsystemd-login.sym
+ 
+ libsystemd_login_la_LIBADD = \
+-	libsystemd-shared.la
++	libsystemd-shared.la \
++	libsystemd-daemon-internal.la
+ 
+ libsystemd_login_internal_la_SOURCES = \
+ 	$(libsystemd_login_la_SOURCES)
+-- 
+1.8.1.5
+

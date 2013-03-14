@@ -1,0 +1,46 @@
+From ee465038ce86bd3a0f21d5e2723393ff9d78855d Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Zbigniew=20J=C4=99drzejewski-Szmek?= <zbyszek@in.waw.pl>
+Date: Tue, 12 Mar 2013 23:05:20 -0400
+Subject: [PATCH] build-sys: break dependency loop between libsystemd-id128.la
+ and -shared.la
+
+The loop was added in d848b9cbfa0ba72 'Move generic specifier functions to shared'.
+---
+ Makefile.am | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index c8f7b8e..96262ec 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -652,8 +652,6 @@ libsystemd_shared_la_SOURCES = \
+ 	src/shared/watchdog.h \
+ 	src/shared/spawn-ask-password-agent.c \
+ 	src/shared/spawn-ask-password-agent.h \
+-	src/shared/specifier.c \
+-	src/shared/specifier.h \
+ 	src/shared/replace-var.c \
+ 	src/shared/replace-var.h \
+ 	src/shared/spawn-polkit-agent.c \
+@@ -697,7 +695,9 @@ libsystemd_units_la_SOURCES = \
+ 	src/shared/install-printf.c \
+ 	src/shared/install-printf.h \
+ 	src/shared/path-lookup.c \
+-	src/shared/path-lookup.h
++	src/shared/path-lookup.h \
++	src/shared/specifier.c \
++	src/shared/specifier.h
+ 
+ libsystemd_units_la_CFLAGS = \
+ 	$(AM_CFLAGS) \
+@@ -1235,6 +1235,7 @@ test_strv_SOURCES = \
+ 
+ test_strv_LDADD = \
+ 	libsystemd-shared.la \
++	libsystemd-units.la \
+ 	libsystemd-id128-internal.la
+ 
+ test_strxcpyx_SOURCES = \
+-- 
+1.8.1.5
+

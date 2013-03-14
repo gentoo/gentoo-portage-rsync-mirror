@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198.ebuild,v 1.7 2013/03/10 17:57:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-198-r1.ebuild,v 1.1 2013/03/14 09:25:56 mgorny Exp $
 
 EAPI=5
 
@@ -68,6 +68,8 @@ src_prepare() {
 
 	local PATCHES=(
 		"${FILESDIR}"/198-0001-Disable-udev-targets.patch
+		"${FILESDIR}"/198-0002-build-sys-break-dependency-loop-between-libsystemd-i.patch
+		"${FILESDIR}"/198-0003-build-sys-link-libsystemd-login-also-against-libsyst.patch
 	)
 
 	autotools-utils_src_prepare
