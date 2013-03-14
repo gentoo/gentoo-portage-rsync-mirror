@@ -1,48 +1,43 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.3.6.ebuild,v 1.1 2013/02/13 18:56:54 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.12.4.ebuild,v 1.1 2013/03/14 11:05:20 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
-# * IF YOU CHANGE THIS EBUILD, CHANGE ICEDTEA-6.* AS WELL *
+# * IF YOU CHANGE THIS EBUILD, CHANGE ICEDTEA-7.* AS WELL *
 # *********************************************************
 
 EAPI="4"
 
-inherit java-pkg-2 java-vm-2 pax-utils prefix versionator virtualx flag-o-matic
+inherit java-pkg-2 java-vm-2 pax-utils prefix versionator virtualx
 
-ICEDTEA_VER=$(get_version_component_range 2-)
-ICEDTEA_BRANCH=$(get_version_component_range 2-3)
-ICEDTEA_PKG=icedtea-${ICEDTEA_VER}
-CORBA_TARBALL="97a8b625f6e9.tar.gz"
-JAXP_TARBALL="d7feafb8427b.tar.gz"
-JAXWS_TARBALL="b900024eb4ba.tar.gz"
-JDK_TARBALL="6bb01322bb5a.tar.gz"
-LANGTOOLS_TARBALL="e0739a8783d1.tar.gz"
-OPENJDK_TARBALL="dd8d1a8f222f.tar.gz"
-HOTSPOT_TARBALL="bc0de5a0ece2.tar.gz"
-CACAO_TARBALL="a567bcb7f589.tar.gz"
+ICEDTEA_PKG=${PN}$(replace_version_separator 1 -)
+OPENJDK_BUILD="27"
+OPENJDK_DATE="26_oct_2012"
+OPENJDK_TARBALL="openjdk-6-src-b${OPENJDK_BUILD}-${OPENJDK_DATE}.tar.gz"
+JAXP_TARBALL="jaxp144_04.zip"
+JAXWS_TARBALL="jdk6-jaxws2_1_6-2011_06_13.zip"
+JAF_TARBALL="jdk6-jaf-b20.zip"
+# Download cacao and jamvm regardless for use with EXTRA_ECONF
+CACAO_TARBALL="68fe50ac34ec.tar.gz"
 JAMVM_TARBALL="jamvm-0972452d441544f7dd29c55d64f1ce3a5db90d82.tar.gz"
 
 DESCRIPTION="A harness to build OpenJDK using Free Software build tools and dependencies"
 HOMEPAGE="http://icedtea.classpath.org"
 SRC_URI="
 	http://icedtea.classpath.org/download/source/${ICEDTEA_PKG}.tar.gz
-	http://icedtea.classpath.org/hg/release/icedtea7-forest-${ICEDTEA_BRANCH}/archive/${OPENJDK_TARBALL}
-	http://icedtea.classpath.org/hg/release/icedtea7-forest-${ICEDTEA_BRANCH}/corba/archive/${CORBA_TARBALL}
-	http://icedtea.classpath.org/hg/release/icedtea7-forest-${ICEDTEA_BRANCH}/jaxp/archive/${JAXP_TARBALL}
-	http://icedtea.classpath.org/hg/release/icedtea7-forest-${ICEDTEA_BRANCH}/jaxws/archive/${JAXWS_TARBALL}
-	http://icedtea.classpath.org/hg/release/icedtea7-forest-${ICEDTEA_BRANCH}/jdk/archive/${JDK_TARBALL}
-	http://icedtea.classpath.org/hg/release/icedtea7-forest-${ICEDTEA_BRANCH}/hotspot/archive/${HOTSPOT_TARBALL}
-	http://icedtea.classpath.org/hg/release/icedtea7-forest-${ICEDTEA_BRANCH}/langtools/archive/${LANGTOOLS_TARBALL}
+	http://download.java.net/openjdk/jdk6/promoted/b${OPENJDK_BUILD}/${OPENJDK_TARBALL}
+	http://icedtea.classpath.org/download/drops/${JAXWS_TARBALL}
+	http://icedtea.classpath.org/download/drops/${JAF_TARBALL}
+	http://icedtea.classpath.org/download/drops/${JAXP_TARBALL}
 	http://icedtea.classpath.org/download/drops/cacao/${CACAO_TARBALL}
 	http://icedtea.classpath.org/download/drops/jamvm/${JAMVM_TARBALL}"
 
 LICENSE="Apache-1.1 Apache-2.0 GPL-1 GPL-2 GPL-2-with-linking-exception LGPL-2 MPL-1.0 MPL-1.1 public-domain W3C"
-SLOT="7"
-KEYWORDS="~amd64 ~ia64 ~x86"
+SLOT="6"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86"
 
-IUSE="+X +alsa cjk +cups debug doc examples javascript +jbootstrap +nsplugin
+IUSE="+X +alsa cacao cjk +cups debug doc examples javascript +jbootstrap +nsplugin
 	+nss pax_kernel pulseaudio +source systemtap test +webstart"
 
 # Ideally the following were optional at build time.
@@ -51,23 +46,19 @@ ALSA_COMMON_DEP="
 CUPS_COMMON_DEP="
 	>=net-print/cups-1.2.12"
 X_COMMON_DEP="
-	>=dev-libs/atk-1.30.0
-	>=dev-libs/glib-2.26
-	media-libs/fontconfig
+	dev-libs/glib
 	>=media-libs/freetype-2.3.5
-	>=x11-libs/cairo-1.8.8
-	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-2.8:2
 	>=x11-libs/libX11-1.1.3
 	>=x11-libs/libXext-1.1.1
 	>=x11-libs/libXi-1.1.3
 	>=x11-libs/libXrender-0.9.4
-	>=x11-libs/libXtst-1.0.3
-	>=x11-libs/pango-1.24.5"
+	>=x11-libs/libXtst-1.0.3"
 X_DEPEND="
 	>=x11-libs/libXau-1.0.3
 	>=x11-libs/libXdmcp-1.0.2
 	>=x11-libs/libXinerama-1.0.2
+	>=x11-libs/libXp-1.0.0
 	x11-proto/inputproto
 	>=x11-proto/xextproto-7.1.1
 	x11-proto/xineramaproto
@@ -75,7 +66,6 @@ X_DEPEND="
 
 COMMON_DEP="
 	>=media-libs/giflib-4.1.6
-	media-libs/lcms:2
 	>=media-libs/libpng-1.2
 	>=sys-libs/zlib-1.2.3
 	virtual/jpeg
@@ -84,17 +74,16 @@ COMMON_DEP="
 	pulseaudio?  ( >=media-sound/pulseaudio-0.9.11 )
 	systemtap? ( >=dev-util/systemtap-1 )"
 
-# cups is needed for X. #390945 #390975
+# media-fonts/lklug needs ppc ppc64 keywords
 RDEPEND="${COMMON_DEP}
-	!dev-java/icedtea:0
+	!dev-java/icedtea6
 	X? (
-		${CUPS_COMMON_DEP}
 		${X_COMMON_DEP}
 		media-fonts/dejavu
 		cjk? (
 			media-fonts/arphicfonts
 			media-fonts/baekmuk-fonts
-			media-fonts/lklug
+			!ppc? ( !ppc64? ( media-fonts/lklug ) )
 			media-fonts/lohit-fonts
 			media-fonts/sazanami
 		)
@@ -105,13 +94,12 @@ RDEPEND="${COMMON_DEP}
 # Only ant-core-1.8.1 has fixed ant -diagnostics when xerces+xalan are not present.
 # ca-certificates, perl and openssl are used for the cacerts keystore generation
 # xext headers have two variants depending on version - bug #288855
+# !eclipse-ecj-3.7 - bug #392587
 # autoconf - as long as we use eautoreconf, version restrictions for bug #294918
 DEPEND="${COMMON_DEP} ${ALSA_COMMON_DEP} ${CUPS_COMMON_DEP} ${X_COMMON_DEP}
 	|| (
 		>=dev-java/gcj-jdk-4.3
-		dev-java/icedtea-bin:7
 		dev-java/icedtea-bin:6
-		dev-java/icedtea:7
 		dev-java/icedtea:6
 	)
 	app-arch/cpio
@@ -124,19 +112,17 @@ DEPEND="${COMMON_DEP} ${ALSA_COMMON_DEP} ${CUPS_COMMON_DEP} ${X_COMMON_DEP}
 	>=dev-libs/libxslt-1.1.26
 	dev-libs/openssl
 	virtual/pkgconfig
-	sys-apps/attr
 	sys-apps/lsb-release
 	${X_DEPEND}
 	pax_kernel? ( sys-apps/paxctl )"
 
-PDEPEND="webstart? ( dev-java/icedtea-web:7 )
-	nsplugin? ( dev-java/icedtea-web:7[nsplugin] )"
+PDEPEND="webstart? ( dev-java/icedtea-web:6 )
+	nsplugin? ( dev-java/icedtea-web:6[nsplugin] )"
 
 S="${WORKDIR}"/${ICEDTEA_PKG}
 
 pkg_setup() {
 	JAVA_PKG_WANT_BUILD_VM="
-		icedtea-7 icedtea-bin-7 icedtea7
 		icedtea-6 icedtea-bin-6 icedtea6 icedtea6-bin
 		gcj-jdk"
 	JAVA_PKG_WANT_SOURCE="1.5"
@@ -151,22 +137,20 @@ src_unpack() {
 }
 
 java_prepare() {
-	# For bootstrap builds as the sandbox control file might not yet exist.
-	addpredict /proc/self/coredump_filter
-
 	# icedtea doesn't like some locales. #330433 #389717
 	export LANG="C" LC_ALL="C"
 }
 
 bootstrap_impossible() {
 	# Fill this according to testing what works and what not
-	has "${1}" icedtea6 icedtea-6 icedtea6-bin icedtea-bin-6
+	has "${1}" # icedtea6 icedtea-6 icedtea6-bin icedtea-bin-6
 }
 
 src_configure() {
-	local config bootstrap
+	local config bootstrap enable_cacao
 	local vm=$(java-pkg_get-current-vm)
 
+	# IcedTea6 can't be built using IcedTea7; its class files are too new
 	# Whether to bootstrap
 	bootstrap="disable"
 	if use jbootstrap; then
@@ -181,25 +165,23 @@ src_configure() {
 		# gcj-jdk ensures ecj is present.
 		use jbootstrap || einfo "bootstrap is necessary when building with ${vm}, ignoring USE=\"-jbootstrap\""
 		bootstrap="enable"
-		local ecj_jar="$(readlink "${EPREFIX}"/usr/share/eclipse-ecj/ecj.jar)"
-		config="${config} --with-ecj-jar=${ecj_jar}"
 	fi
 
 	config="${config} --${bootstrap}-bootstrap"
 
 	# Always use HotSpot as the primary VM if available. #389521 #368669 #357633 ...
-	# Otherwise use JamVM as it's the only possibility right now
-	case "${ARCH}" in
-		amd64|sparc|x86)
-			;;
-		arm)
-			config+=" --enable-jamvm" #IT1266
-			replace-flags -Os -O2 #BGO453612 #IT1267
-			;;
-		*)
-			config+=" --enable-jamvm"
-			;;
-	esac
+	# Otherwise use CACAO
+	if ! has "${ARCH}" amd64 sparc x86; then
+		enable_cacao=yes
+	elif use cacao; then
+		ewarn 'Enabling CACAO on an architecture with HotSpot support; issues may result.'
+		ewarn 'If so, please rebuild with USE="-cacao"'
+		enable_cacao=yes
+	fi
+
+	if [[ ${enable_cacao} ]]; then
+		config="${config} --enable-cacao"
+	fi
 
 	# OpenJDK-specific parallelism support. Bug #389791, #337827
 	# Implementation modified from waf-utils.eclass
@@ -218,17 +200,14 @@ src_configure() {
 
 	econf ${config} \
 		--with-openjdk-src-zip="${DISTDIR}/${OPENJDK_TARBALL}" \
-		--with-corba-src-zip="${DISTDIR}/${CORBA_TARBALL}" \
-		--with-jaxp-src-zip="${DISTDIR}/${JAXP_TARBALL}" \
-		--with-jaxws-src-zip="${DISTDIR}/${JAXWS_TARBALL}" \
-		--with-jdk-src-zip="${DISTDIR}/${JDK_TARBALL}" \
-		--with-hotspot-src-zip="${DISTDIR}/${HOTSPOT_TARBALL}" \
-		--with-langtools-src-zip="${DISTDIR}/${LANGTOOLS_TARBALL}" \
+		--with-jaxp-drop-zip="${DISTDIR}/${JAXP_TARBALL}" \
+		--with-jaxws-drop-zip="${DISTDIR}/${JAXWS_TARBALL}" \
+		--with-jaf-drop-zip="${DISTDIR}/${JAF_TARBALL}" \
 		--with-cacao-src-zip="${DISTDIR}/${CACAO_TARBALL}" \
 		--with-jamvm-src-zip="${DISTDIR}/${JAMVM_TARBALL}" \
 		--with-jdk-home="$(java-config -O)" \
 		--with-abs-install-dir=/usr/$(get_libdir)/icedtea${SLOT} \
-		--disable-downloading --disable-Werror \
+		--disable-downloading \
 		$(use_enable !debug optimizations) \
 		$(use_enable doc docs) \
 		$(use_enable nss) \
@@ -259,7 +238,7 @@ src_install() {
 	local ddest="${ED}/${dest}"
 	dodir "${dest}"
 
-	dodoc README NEWS AUTHORS
+	dodoc README NEWS AUTHORS THANKYOU
 	dosym /usr/share/doc/${PF} /usr/share/doc/${PN}${SLOT}
 
 	cd openjdk.build/j2sdk-image || die
@@ -313,8 +292,7 @@ src_install() {
 	cp -vRP cacerts "${ddest}/jre/lib/security/" || die
 	chmod 644 "${ddest}/jre/lib/security/cacerts" || die
 
-	# OpenJDK7 should be able to use fontconfig instead, but wont hurt to
-	# install it anyway. Bug 390663
+	# Bug 390663
 	cp "${FILESDIR}"/fontconfig.Gentoo.properties.src "${T}"/fontconfig.Gentoo.properties || die
 	eprefixify "${T}"/fontconfig.Gentoo.properties
 	insinto "${dest}"/jre/lib
@@ -324,16 +302,15 @@ src_install() {
 	if ! use X || ! use alsa || ! use cups; then
 		java-vm_revdep-mask "${dest}"
 	fi
-	java-vm_sandbox-predict /proc/self/coredump_filter
 }
 
 pkg_preinst() {
-	if has_version "<=dev-java/icedtea-7.2.0:7"; then
+	if has_version "<=dev-java/icedtea-6.1.10.4:${SLOT}"; then
 		# portage would preserve the symlink otherwise, related to bug #384397
-		rm -f "${EROOT}/usr/lib/jvm/icedtea7"
-		elog "To unify the layout and simplify scripts, the identifier of Icedtea-7*"
-		elog "has changed from 'icedtea7' to 'icedtea-7' starting from version 7.2.0-r1"
-		elog "If you had icedtea7 as system VM, the change should be automatic, however"
+		rm -f "${EROOT}/usr/lib/jvm/icedtea6"
+		elog "To unify the layout and simplify scripts, the identifier of Icedtea-6*"
+		elog "has changed from 'icedtea6' to 'icedtea-6' starting from version 6.1.10.4-r1"
+		elog "If you had icedtea6 as system VM, the change should be automatic, however"
 		elog "build VM settings in /etc/java-config-2/build/jdk.conf are not changed"
 		elog "and the same holds for any user VM settings. Sorry for the inconvenience."
 	fi
