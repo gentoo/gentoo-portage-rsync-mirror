@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.128 2013/03/14 06:55:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.129 2013/03/14 07:50:42 ago Exp $
+
+  14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> dos2unix-6.0.3.ebuild:
+  Stable for ia64, wrt bug #461082
 
   14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> dos2unix-6.0.3.ebuild:
   Stable for alpha, wrt bug #461082

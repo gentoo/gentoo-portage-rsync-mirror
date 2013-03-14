@@ -1,6 +1,13 @@
 # ChangeLog for app-backup/bacula
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/ChangeLog,v 1.153 2013/03/02 19:11:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/ChangeLog,v 1.154 2013/03/14 07:42:06 tomjbe Exp $
+
+*bacula-5.2.13 (14 Mar 2013)
+
+  14 Mar 2013; Thomas Beierlein <tomjbe@gentoo.org> +bacula-5.2.13.ebuild:
+  Version bump.
+  Add USE=examples as requested by bug #457504.
+  Add info about state of SQLite support (bug #445540).
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> bacula-5.0.3-r3.ebuild,
   bacula-5.2.12.ebuild:
