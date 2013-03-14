@@ -1,0 +1,9 @@
+# ChangeLog for net-libs/rabbitmq-c
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rabbitmq-c/ChangeLog,v 1.1 2013/03/14 18:50:36 olemarkus Exp $
+
+*rabbitmq-c-0.3.0 (14 Mar 2013)
+
+  14 Mar 2013; Ole Markus With <olemarkus@gentoo.org> +files/xmlto.patch,
+  +metadata.xml, +rabbitmq-c-0.3.0.ebuild:
+  New package. Thanks to Travis Hansen. Bug 433503
