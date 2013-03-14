@@ -2185,7 +2185,6 @@ games-roguelike/tomenet:server - Compile server support
 games-rpg/arx-fatalis-data:gog - Extract the data from the GOG.com installer.
 games-rpg/arx-libertatis:crash-reporter - Build a dev-qt/qtgui-based tool that allows to submit crash information to the upstream backtracker.
 games-rpg/arx-libertatis:debug - Enable asserts and debug logging.
-games-rpg/arx-libertatis:demo - Install the Arx Fatalis demo data.
 games-rpg/arx-libertatis:tools - Build tools that can extract the game's data and save files.
 games-rpg/arx-libertatis:unity-build - Build everything in one big source file, allowing for faster build times and better optimizations at the cost of higher memory usage.
 games-rpg/daimonin-client:music - Install extra music

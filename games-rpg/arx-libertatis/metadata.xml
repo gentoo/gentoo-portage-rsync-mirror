@@ -16,7 +16,6 @@
 		<flag name='unity-build'>Build everything in one big source file,
 			allowing for faster build times and better optimizations at
 			the cost of higher memory usage.</flag>
-		<flag name='demo'>Install the Arx Fatalis demo data.</flag>
 	</use>
 	<upstream>
 		<doc lang="en">http://wiki.arx-libertatis.org/</doc>
