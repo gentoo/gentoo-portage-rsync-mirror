@@ -13,6 +13,10 @@
     <email>fauli@gentoo.org</email>
     <name>Christian Faulhammer</name>
   </maintainer>
+  <maintainer>
+    <email>jlec@gentoo.org</email>
+    <name>Justin Lecher</name>
+  </maintainer>
   <use>
     <flag name="bindist">Using GnuTLS for SSL support as redistribution with OpenSSL as provider violates GPL</flag>
     <flag name="hybrid-auth">Enable hybrid authentication (certificates), only if not redistributed as compiled binary</flag>

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/i3status-2.7.ebuild,v 1.1 2013/02/27 10:56:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/i3status-2.7.ebuild,v 1.2 2013/03/14 20:03:21 xarthisius Exp $
 
 EAPI=5
 
@@ -32,6 +32,9 @@ src_compile() {
 
 pkg_postinst() {
 	fcaps cap_net_admin usr/bin/${PN}
-	elog "You need to install x11-misc/xmobar or x11-misc/dzen to use ${PN}."
-	elog "Please refer to manual: man ${PN}"
+	einfo "${PN} can be used with any of the following programs:"
+	einfo "   i3bar (x11-wm/i3)"
+	einfo "   x11-misc/xmobar"
+	einfo "   x11-misc/dzen"
+	einfo "Please refer to manual: man ${PN}"
 }
