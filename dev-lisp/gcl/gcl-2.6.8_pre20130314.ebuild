@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.8_pre20111221.ebuild,v 1.2 2012/06/07 18:59:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/gcl-2.6.8_pre20130314.ebuild,v 1.1 2013/03/14 12:06:29 grozin Exp $
 
-EAPI=3
+EAPI=5
 
 #removing flag-o-matic results in make install failing due to a segfault
 inherit elisp-common eutils flag-o-matic
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~grozin/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+ansi debug doc emacs +readline tk X"
 
 # See bug #205803
@@ -29,10 +29,6 @@ DEPEND="${RDEPEND}
 	doc? ( virtual/texi2dvi )
 	>=app-text/texi2html-1.64
 	>=sys-devel/autoconf-2.52"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-default-el.patch
-}
 
 src_configure() {
 	local myconfig=""
@@ -105,7 +101,6 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	rm -rf "${D}"usr/share/doc/${PN}-si "${D}"usr/share/doc/${PN}-tk
 
-	dosed /usr/bin/gcl
 	fperms 0755 /usr/bin/gcl
 
 	dodoc readme* RELEASE* ChangeLog* doc/*
