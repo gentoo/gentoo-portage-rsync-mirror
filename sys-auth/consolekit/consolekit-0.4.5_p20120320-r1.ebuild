@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5_p20120320-r1.ebuild,v 1.17 2013/03/03 07:59:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/consolekit-0.4.5_p20120320-r1.ebuild,v 1.18 2013/03/14 02:56:28 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit autotools eutils linux-info pam systemd
 
 MY_PN=ConsoleKit
@@ -22,17 +22,16 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="acl debug doc kernel_linux pam policykit selinux test"
 
-COMMON_DEPEND=">=dev-libs/dbus-glib-0.98
-	>=dev-libs/glib-2.22
-	sys-libs/zlib
-	x11-libs/libX11
+COMMON_DEPEND=">=dev-libs/dbus-glib-0.100:=
+	>=dev-libs/glib-2.22:2=
+	sys-libs/zlib:=
+	x11-libs/libX11:=
 	acl? (
-		sys-apps/acl
-		virtual/udev
-		!<sys-fs/udev-171-r9999[extras]
+		sys-apps/acl:=
+		>=virtual/udev-171
 		)
 	pam? ( virtual/pam )
-	policykit? ( >=sys-auth/polkit-0.104-r1 )"
+	policykit? ( >=sys-auth/polkit-0.110 )"
 RDEPEND="${COMMON_DEPEND}
 	kernel_linux? ( sys-apps/coreutils[acl?] )
 	selinux? ( sec-policy/selinux-consolekit )"
@@ -46,6 +45,8 @@ DEPEND="${COMMON_DEPEND}
 		)"
 
 S=${WORKDIR}/${MY_P}
+
+QA_MULTILIB_PATHS="usr/lib/ConsoleKit/udev-acl"
 
 pkg_setup() {
 	if use kernel_linux; then
@@ -72,7 +73,8 @@ src_configure() {
 	[[ ${PV} = *p20* ]] && myconf='--enable-maintainer-mode'
 
 	econf \
-		XMLTO_FLAGS="--skip-validation" \
+		XMLTO_FLAGS='--skip-validation' \
+		--libexecdir="${EPREFIX}"/usr/lib/${MY_PN} \
 		--localstatedir="${EPREFIX}"/var \
 		$(use_enable pam pam-module) \
 		$(use_enable doc docbook-docs) \
@@ -81,7 +83,7 @@ src_configure() {
 		$(use_enable policykit polkit) \
 		$(use_enable acl udev-acl) \
 		--with-dbus-services="${EPREFIX}"/usr/share/dbus-1/services \
-		--with-pam-module-dir=$(getpam_mod_dir) \
+		--with-pam-module-dir="$(getpam_mod_dir)" \
 		"$(systemd_with_unitdir)" \
 		${myconf}
 }

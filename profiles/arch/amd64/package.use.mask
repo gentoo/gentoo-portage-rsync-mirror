@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.159 2013/03/13 09:47:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.160 2013/03/14 02:43:20 tetromino Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -260,4 +260,4 @@ dev-python/kaa-base -tls
 
 # Samuli Suominen <ssuominen@gentoo.org> (13 Mar 2013)
 # Works with new wine, doesn't work with old wine wrt #461602
-<app-emulation/wine-1.5.0 gstreamer
+<app-emulation/wine-1.5.25 gstreamer
