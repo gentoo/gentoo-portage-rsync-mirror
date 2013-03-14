@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.359 2013/03/12 12:26:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.360 2013/03/13 23:48:02 dilfridge Exp $
+
+  13 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> poppler-0.22.2.ebuild,
+  +files/poppler-0.22.2-nojpeg.patch:
+  Fix build without libjpeg, bug 461510; build by default with libjpeg
 
   12 Mar 2013; Michael Palimaka <kensington@gentoo.org> poppler-0.20.4.ebuild,
   poppler-0.22.1.ebuild, poppler-0.22.2.ebuild:

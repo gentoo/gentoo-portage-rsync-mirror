@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r1.ebuild,v 1.12 2013/03/13 22:42:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-198-r1.ebuild,v 1.13 2013/03/13 23:48:41 williamh Exp $
 
 EAPI=4
 
@@ -465,7 +465,7 @@ pkg_postinst() {
 	if has_version sys-apps/biosdevname; then
 		ewarn
 		ewarn "You have sys-apps/biosdevname installed which has been deprecated"
-		ewarn "in favour of the predictable network interface names."
+		ewarn "in favor of the predictable network interface names."
 	fi
 
 	ewarn
