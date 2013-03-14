@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.438 2013/03/14 12:50:41 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.439 2013/03/14 16:45:49 jer Exp $
+
+  14 Mar 2013; Jeroen Roovers <jer@gentoo.org> -files/09nvidia,
+  -files/nvidia-drivers-190.53-2.6.33.patch,
+  -files/nvidia-blacklist-vga-pmu-registers-256-304.diff, -files/nvidia,
+  -files/nvidia-autostart.desktop:
+  Old.
 
   14 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> nvidia-drivers-304.84.ebuild,
   nvidia-drivers-310.40.ebuild, nvidia-drivers-313.26.ebuild:
