@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.181 2013/03/13 22:06:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.182 2013/03/13 23:27:24 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -182,7 +182,8 @@ pkg_setup() {
 src_prepare() {
 	if ! use arm; then
 		mkdir -p out/Release/obj/gen/sdk/toolchain || die
-		cp -a /usr/$(get_libdir)/nacl-toolchain-newlib \
+		# Do not preserve SELinux context, bug #460892 .
+		cp -a --no-preserve=context /usr/$(get_libdir)/nacl-toolchain-newlib \
 			out/Release/obj/gen/sdk/toolchain/linux_x86_newlib || die
 		touch out/Release/obj/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	fi
