@@ -6130,6 +6130,7 @@ www-servers/uwsgi:rsyslog - Support direct logging to a app-admin/rsyslog socket
 www-servers/uwsgi:spooler - Build a plugin which gives a network spooler (see http://projects.unbit.it/uwsgi/wiki/Spooler).
 www-servers/uwsgi:yaml - Support yaml as a configuration file format.
 www-servers/uwsgi:zeromq - Enable logging and deployment via ZeroMQ. Together with json-support this turns uwsgi into a Mongrel2 handler (see http://projects.unbit.it/uwsgi/wiki/Mongrel2).
+www-servers/varnish:jemalloc - Use dev-libs/jemalloc for allocations
 www-servers/varnish:tools - Build additional tools: varnishhist, varnishstat, varnishtop, varnishsizes
 x11-apps/ardesia:cwiid - cwiid support: collection of Linux tools written in C for interfacing to the Nintendo Wiimote.
 x11-apps/xdm:consolekit - Enable native sys-auth/consolekit support

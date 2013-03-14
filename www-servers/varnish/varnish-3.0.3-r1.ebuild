@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.3.ebuild,v 1.2 2012/11/22 20:54:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.3-r1.ebuild,v 1.1 2013/03/14 15:49:37 blueness Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit autotools-utils eutils
 
@@ -13,15 +13,21 @@ SRC_URI="http://repo.varnish-cache.org/source/${P}.tar.gz"
 LICENSE="BSD-2 GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~x86"
-IUSE="doc libedit static-libs +tools"
+IUSE="doc jemalloc libedit static-libs +tools"
 
-CDEPEND="dev-libs/libpcre
+CDEPEND="
+	dev-libs/libpcre
+	jemalloc? ( dev-libs/jemalloc )
 	libedit? ( dev-libs/libedit )
 	tools? ( sys-libs/ncurses )"
+
 #varnish compiles stuff at run time
-RDEPEND="${CDEPEND}
+RDEPEND="
+	${CDEPEND}
 	sys-devel/gcc"
-DEPEND="${CDEPEND}
+
+DEPEND="
+	${CDEPEND}
 	dev-python/docutils
 	virtual/pkgconfig"
 
@@ -34,13 +40,19 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-3.0.3-pthread-uclibc.patch
 )
 
+AUTOTOOLS_AUTORECONF="yes"
+
 src_prepare() {
+	# Remove bundled libjemalloc. We also fix
+	# automagic dep in our patches, bug #461638
+	rm -rf lib/libjemalloc
+
 	autotools-utils_src_prepare
-	eautoreconf
 }
 
 src_configure() {
 	local myeconfargs=(
+		$(use_with jemalloc)
 		$(use_with libedit)
 		$(use_with tools)
 	)
