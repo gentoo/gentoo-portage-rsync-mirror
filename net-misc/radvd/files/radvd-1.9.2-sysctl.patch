@@ -1,0 +1,85 @@
+From 140c59074c70d7951d046c751b7eaed3cc16946c Mon Sep 17 00:00:00 2001
+From: Mike Frysinger <vapier@gentoo.org>
+Date: Thu, 14 Mar 2013 10:17:58 -0400
+Subject: [PATCH] check for sys/sysctl.h availability
+
+Newer Linux ports are dropping sysctl support.  If you try to even
+include the header, you'll get build failures:
+/usr/include/bits/sysctl.h:19:3: error: #error "sysctl system call is unsupported"
+
+Check for the header before we try to use it.
+
+Signed-off-by: Mike Frysinger <vapier@gentoo.org>
+---
+ configure.ac | 1 +
+ includes.h   | 4 +++-
+ radvd.c      | 8 +++++++-
+ 3 files changed, 11 insertions(+), 2 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 55d6673..0e12d9c 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -151,6 +151,7 @@ AC_CHECK_HEADERS( \
+ 	net/if_types.h \
+ 	sys/param.h \
+ 	sys/sockio.h \
++	sys/sysctl.h \
+ 	sys/time.h \
+ 	time.h \
+ )
+diff --git a/includes.h b/includes.h
+index 882c34f..7765925 100644
+--- a/includes.h
++++ b/includes.h
+@@ -72,7 +72,9 @@
+ 
+ #include <arpa/inet.h>
+ 
+-#include <sys/sysctl.h>
++#ifdef HAVE_SYS_SYSCTL_H
++# include <sys/sysctl.h>
++#endif
+ 
+ #include <net/if.h>
+ 
+diff --git a/radvd.c b/radvd.c
+index 7b475de..444574d 100644
+--- a/radvd.c
++++ b/radvd.c
+@@ -761,7 +761,9 @@ check_conffile_perm(const char *username, const char *conf_file)
+ int
+ check_ip6_forwarding(void)
+ {
++#ifdef HAVE_SYS_SYSCTL_H
+ 	int forw_sysctl[] = { SYSCTL_IP6_FORWARDING };
++#endif
+ 	int value;
+ 	size_t size = sizeof(value);
+ 	FILE *fp = NULL;
+@@ -777,18 +779,22 @@ check_ip6_forwarding(void)
+ 		}
+ 		fclose(fp);
+ 	}
+-	else
++	else {
+ 		flog(LOG_DEBUG, "Correct IPv6 forwarding procfs entry not found, "
+ 	                       "perhaps the procfs is disabled, "
+ 	                        "or the kernel interface has changed?");
++		value = -1;
++	}
+ #endif /* __linux__ */
+ 
++#ifdef HAVE_SYS_SYSCTL_H
+ 	if (!fp && sysctl(forw_sysctl, sizeof(forw_sysctl)/sizeof(forw_sysctl[0]),
+ 	    &value, &size, NULL, 0) < 0) {
+ 		flog(LOG_DEBUG, "Correct IPv6 forwarding sysctl branch not found, "
+ 			"perhaps the kernel interface has changed?");
+ 		return(0);	/* this is of advisory value only */
+ 	}
++#endif
+ 
+ 	if (value != 1 && !warned) {
+ 		warned = 1;
+-- 
+1.8.1.2

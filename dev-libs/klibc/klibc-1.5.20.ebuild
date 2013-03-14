@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.20.ebuild,v 1.7 2011/06/23 20:19:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.20.ebuild,v 1.8 2013/03/14 14:31:04 mpagano Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -90,6 +90,9 @@ src_unpack() {
 
 	# Fix usage of -s, bug #201006
 	epatch "${FILESDIR}"/klibc-1.5.7-strip-fix-dash-s.patch
+
+	# Fix parallel make install
+	epatch "${FILESDIR}"/${P}-parallel-make.patch
 
 	# Fix infinite loop during build with make 3.82
 	# http://www.zytor.com/pipermail/klibc/2010-November/002786.html

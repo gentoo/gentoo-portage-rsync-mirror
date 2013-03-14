@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.86 2013/01/06 09:22:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.87 2013/03/14 14:31:04 mpagano Exp $
+
+  14 Mar 2013; Michael Pagano <mpagano@gentoo.org> klibc-1.5.20.ebuild,
+  +files/klibc-1.5.20-parallel-make.patch:
+  Fix parallel make issue. Bug #461016
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> klibc-1.5.25.ebuild:
   Add ~sparc, wrt bug #449220
