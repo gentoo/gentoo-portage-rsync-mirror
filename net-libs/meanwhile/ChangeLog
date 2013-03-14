@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/meanwhile
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.62 2012/07/29 18:15:14 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.63 2013/03/14 07:09:39 ago Exp $
+
+  14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> meanwhile-1.0.2-r1.ebuild:
+  Stable for arm, wrt bug #457580
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> meanwhile-1.0.2-r1.ebuild:
   alpha/ia64/sparc stable wrt #415421
@@ -237,4 +240,3 @@
   05 Jun 2004; Don Seiler <rizzo@gentoo.org>; +metadata.xml,
   +meanwhile-0.2.ebuild:
   Initial add for Bug 53071.  Thanks to Jared Breland
-

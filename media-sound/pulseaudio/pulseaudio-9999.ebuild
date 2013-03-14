@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.34 2013/02/20 11:12:06 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.35 2013/03/14 07:10:11 ford_prefect Exp $
 
 EAPI="4"
 
@@ -40,7 +40,7 @@ RDEPEND=">=media-libs/libsndfile-1.0.20
 	tcpd? ( sys-apps/tcp-wrappers )
 	lirc? ( app-misc/lirc )
 	dbus? ( >=sys-apps/dbus-1.0.0 )
-	gtk? ( x11-libs/gtk+:2 )
+	gtk? ( x11-libs/gtk+:3 )
 	gnome? ( >=gnome-base/gconf-2.4.0 )
 	bluetooth? (
 		>=net-wireless/bluez-4.99
@@ -126,7 +126,7 @@ src_configure() {
 		$(use_enable avahi) \
 		$(use_enable dbus) \
 		$(use_enable gnome gconf) \
-		$(use_enable gtk gtk2) \
+		$(use_enable gtk gtk3) \
 		$(use_enable libsamplerate samplerate) \
 		$(use_enable bluetooth bluez) \
 		$(use_enable X x11) \

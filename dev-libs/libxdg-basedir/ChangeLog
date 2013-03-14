@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxdg-basedir
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.32 2013/02/03 12:16:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.33 2013/03/14 07:14:44 ago Exp $
+
+  14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> libxdg-basedir-1.1.1.ebuild:
+  Stable for arm, wrt bug #461538
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -libxdg-basedir-1.0.2.ebuild,
   metadata.xml:

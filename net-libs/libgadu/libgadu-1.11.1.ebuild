@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.11.1.ebuild,v 1.5 2012/03/15 18:10:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.11.1.ebuild,v 1.6 2013/03/14 07:09:19 ago Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SRC_URI="http://toxygen.net/libgadu/files/${MY_P}.tar.gz"
 RESTRICT="test"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
 SLOT="0"
 IUSE="doc gnutls ssl static-libs threads"
 
