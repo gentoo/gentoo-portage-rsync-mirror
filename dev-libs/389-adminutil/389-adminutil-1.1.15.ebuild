@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/389-adminutil/389-adminutil-1.1.10.ebuild,v 1.2 2012/05/04 18:35:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/389-adminutil/389-adminutil-1.1.15.ebuild,v 1.1 2013/03/14 17:44:12 lxnay Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit libtool eutils
 
@@ -23,9 +23,9 @@ IUSE="debug"
 COMMON_DEPEND=">=dev-libs/nss-3.11.4
 	>=dev-libs/nspr-4.6.4
 	>=dev-libs/svrcore-4.0.3
-	>=dev-libs/mozldap-6.0.2
 	>=dev-libs/cyrus-sasl-2.1.19
-	>=dev-libs/icu-3.4"
+	>=dev-libs/icu-3.4
+	net-nds/openldap"
 DEPEND="virtual/pkgconfig ${COMMON_DEPEND}"
 RDEPEND="${COMMON_DEPEND}"
 
@@ -36,6 +36,7 @@ src_prepare() {
 src_configure() {
 	econf $(use_enable debug) \
 		--with-fhs \
+		--with-openldap \
 		--disable-rpath \
 		--disable-tests ||die "econf failed"
 }

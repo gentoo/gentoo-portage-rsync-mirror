@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/389-dsgw/389-dsgw-1.1.7.ebuild,v 1.1 2011/08/14 09:33:10 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/389-dsgw/389-dsgw-1.1.10.ebuild,v 1.1 2013/03/14 17:50:00 lxnay Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit autotools eutils
 
@@ -19,9 +19,9 @@ DEPEND="adminserver? ( net-nds/389-admin )
 	dev-libs/nspr
 	dev-libs/nss
 	dev-libs/cyrus-sasl
-	dev-libs/mozldap
 	dev-libs/icu
-	dev-libs/389-adminutil"
+	dev-libs/389-adminutil
+	net-nds/openldap"
 
 RDEPEND="${DEPEND}
 	dev-perl/perl-mozldap
@@ -36,7 +36,9 @@ src_prepare() {
 src_configure() {
 	econf $(use_enable debug) \
 		$(use_with adminserver) \
-		--with-fhs || die "econf failed"
+		--with-adminutil=/usr \
+		--with-fhs \
+		--with-openldap || die "econf failed"
 }
 
 src_install() {
