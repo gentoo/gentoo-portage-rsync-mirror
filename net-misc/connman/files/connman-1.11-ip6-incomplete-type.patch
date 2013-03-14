@@ -1,0 +1,11 @@
+diff -uNr connman-1.11.ORIG/src/tethering.c connman-1.11/src/tethering.c
+--- connman-1.11.ORIG/src/tethering.c	2013-03-14 12:41:25.279469705 +0000
++++ connman-1.11/src/tethering.c	2013-03-14 12:42:05.745468258 +0000
+@@ -30,6 +30,7 @@
+ #include <unistd.h>
+ #include <stdio.h>
+ #include <sys/ioctl.h>
++#include <netinet/ip6.h>
+ #include <net/if.h>
+ #include <linux/sockios.h>
+ #include <string.h>

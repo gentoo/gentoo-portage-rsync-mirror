@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/connman
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.60 2012/11/15 23:59:46 chainsaw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.61 2013/03/14 12:51:31 chainsaw Exp $
+
+*connman-1.11 (14 Mar 2013)
+
+  14 Mar 2013; Tony Vroon <chainsaw@gentoo.org> -connman-1.4.ebuild,
+  -connman-1.5.ebuild, -connman-1.6.ebuild, -connman-1.7.ebuild,
+  -connman-1.8.ebuild, +connman-1.11.ebuild,
+  +files/connman-1.11-ip6-incomplete-type.patch, +files/connman.initd2:
+  Drop dependency on libnl as requested by Gustavo Sverzut Barbieri in bug
+  #415773. Init script now includes "provide net" as requested by José Romildo
+  Malaquias in bug #438142. Fix up incomplete ip6 type as described by Amadeusz
+  Sławiński in bug #460550. Version bump as requested by Dennis "dlan" Lan in
+  bug #458672. Dropped deprecated wimax support USE-flag.
 
 *connman-1.9 (16 Nov 2012)
 *connman-1.8 (16 Nov 2012)

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.41 2013/03/12 18:31:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.42 2013/03/14 12:45:29 ago Exp $
+
+  14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> hevea-2.02.ebuild:
+  Stable for sparc, wrt bug #461172
 
   12 Mar 2013; Agostino Sarubbo <ago@gentoo.org> hevea-2.02.ebuild:
   Stable for ppc, wrt bug #461172

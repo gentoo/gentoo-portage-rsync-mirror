@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.394 2013/03/12 04:38:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.395 2013/03/14 12:46:31 tove Exp $
+
+  14 Mar 2013; Torsten Veller <tove@gentoo.org>
+  files/eblits/src_install-v50160001.eblit:
+  Use ED to remove empty directory in /usr/local (#455926)
 
 *perl-5.16.3 (12 Mar 2013)
 
