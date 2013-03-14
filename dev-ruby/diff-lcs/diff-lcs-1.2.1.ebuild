@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/diff-lcs-1.2.1.ebuild,v 1.1 2013/03/03 20:34:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/diff-lcs-1.2.1.ebuild,v 1.2 2013/03/14 06:49:17 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -26,4 +26,7 @@ ruby_add_bdepend "doc? ( >=dev-ruby/hoe-2.10 )"
 all_ruby_prepare() {
 	# Remove unneeded rspec require to avoid rspec with USE=doc.
 	sed -i -e "/require 'rspec'/d" Rakefile || die
+
+	# Remove plugins since we don't need them for USE=doc.
+	sed -i -e "/Hoe.plugin/ s:^:#:" Rakefile || die
 }

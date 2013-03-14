@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/diff-lcs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/ChangeLog,v 1.45 2013/03/03 20:34:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/ChangeLog,v 1.46 2013/03/14 06:49:17 graaff Exp $
+
+  14 Mar 2013; Hans de Graaff <graaff@gentoo.org> diff-lcs-1.2.1.ebuild:
+  Avoid hoe plugins and their dependencies. Fixes bug 461618.
 
 *diff-lcs-1.2.1 (03 Mar 2013)
 

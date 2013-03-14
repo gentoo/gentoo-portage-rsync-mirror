@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dirdiff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.16 2013/03/12 18:32:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.17 2013/03/14 06:33:40 kensington Exp $
+
+  14 Mar 2013; Michael Palimaka <kensington@gentoo.org> -dirdiff-2.1-r1.ebuild,
+  -dirdiff-2.1.ebuild:
+  Remove old.
 
   12 Mar 2013; Agostino Sarubbo <ago@gentoo.org> dirdiff-2.1-r2.ebuild:
   Stable for ppc, wrt bug #461174

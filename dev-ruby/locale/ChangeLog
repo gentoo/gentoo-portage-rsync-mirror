@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/locale
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.46 2013/01/15 05:30:13 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.47 2013/03/14 06:33:40 graaff Exp $
+
+*locale-2.0.8 (14 Mar 2013)
+
+  14 Mar 2013; Hans de Graaff <graaff@gentoo.org> +locale-2.0.8.ebuild:
+  Version bump.
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> locale-2.0.5-r3.ebuild:
   adding ~arm keywords to net-analyzer/metasploit rdeps
