@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.14.3.ebuild,v 1.10 2013/02/26 10:17:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.14.3.ebuild,v 1.11 2013/03/14 19:48:16 vapier Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -88,8 +88,9 @@ nssarch() {
 }
 
 nssbits() {
+	local cc="${1}CC" cppflags="${1}CPPFLAGS" cflags="${1}CFLAGS"
 	echo > "${T}"/test.c || die
-	${!1} ${CPPFLAGS} ${CFLAGS} -c "${T}"/test.c -o "${T}"/test.o || die
+	${!cc} ${!cppflags} ${!cflags} -c "${T}"/test.c -o "${T}"/test.o || die
 	case $(file "${T}"/test.o) in
 	*32-bit*x86-64*) echo USE_x32=1;;
 	*64-bit*|*ppc64*|*x86_64*) echo USE_64=1;;
@@ -107,7 +108,7 @@ src_compile() {
 		AR="${AR} rc \$@"
 		RANLIB="${RANLIB}"
 		OPTIMIZER=
-		$(nssbits CC)
+		$(nssbits)
 	)
 
 	# Take care of nspr settings #436216
@@ -140,7 +141,7 @@ src_compile() {
 	XCFLAGS="${BUILD_CFLAGS}" \
 	emake -j1 -C mozilla/security/coreconf \
 		CC="${BUILD_CC}" \
-		$(nssbits BUILD_CC) \
+		$(nssbits BUILD_) \
 		|| die
 	makeargs+=( NSINSTALL="${PWD}/$(find -type f -name nsinstall)" )
 

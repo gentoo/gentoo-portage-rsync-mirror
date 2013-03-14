@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/actkbd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/actkbd/ChangeLog,v 1.9 2011/03/04 08:12:18 tomka Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/actkbd/ChangeLog,v 1.10 2013/03/14 19:50:09 scarabeus Exp $
+
+*actkbd-0.2.8-r1 (14 Mar 2013)
+
+  14 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> +actkbd-0.2.8-r1.ebuild,
+  +files/actkbd.confd, +files/actkbd.initd:
+  Revision bump to add initscript and config file. Bump the ebuild to eapi5. The
+  new layout utilizes initscript rather than udev rule which didn't want to
+  behave correctly on my machine.
 
   04 Mar 2011; Thomas Kahle <tomka@gentoo.org> actkbd-0.2.8.ebuild:
   x86 stable per bug 345203
@@ -39,4 +47,3 @@
   07 Mar 2006; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   +actkbd-0.2.2.ebuild:
   Initial commit, ebuild written by me.
-
