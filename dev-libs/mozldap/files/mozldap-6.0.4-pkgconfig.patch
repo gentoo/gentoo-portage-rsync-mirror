@@ -1,6 +1,5 @@
-diff -uNr mozldap.pc.in mozldap.pc.in
---- mozldap.pc.in	2006-10-06 01:01:43.000000000 +0200
-+++ mozldap.pc.in	2007-08-06 21:27:09.000000000 +0200
+--- a/mozldap.pc.in
++++ b/mozldap.pc.in
 @@ -11,6 +11,6 @@
  Name: mozldap
  Description: Mozilla LDAP C SDK

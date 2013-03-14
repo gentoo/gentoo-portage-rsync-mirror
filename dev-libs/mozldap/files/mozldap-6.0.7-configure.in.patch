@@ -1,6 +1,7 @@
---- a/configure.in
-+++ b/configure.in
-@@ -42,7 +42,7 @@
+diff -Nurp c-sdk.orig/configure.in c-sdk/configure.in
+--- c-sdk.orig/configure.in	2011-01-06 12:05:39.000000000 +0000
++++ c-sdk/configure.in	2013-03-14 18:01:19.647224070 +0000
+@@ -42,7 +42,7 @@ dnl ***** END LICENSE BLOCK *****
  AC_PREREQ(2.12)
  AC_INIT(ldap/include/ldap.h)
  
@@ -9,7 +10,7 @@
  AC_CANONICAL_SYSTEM
  
  dnl ========================================================
-@@ -85,24 +85,6 @@
+@@ -86,24 +86,6 @@ DLLFLAGS="${DLLFLAGS=}"
  HOST_CFLAGS="${HOST_CFLAGS=}"
  HOST_LDFLAGS="${HOST_LDFLAGS=}"
  
@@ -34,7 +35,7 @@
  
  if test -n "$_WIN32_MSVC"; then
      SKIP_PATH_CHECKS=1
-@@ -151,18 +133,6 @@
+@@ -152,18 +134,6 @@ AC_ARG_WITH(mozilla,
  	        AC_DEFINE(MOZILLA_CLIENT)
  	    fi])
  
@@ -51,11 +52,11 @@
 -    fi ])
 -
  AC_ARG_ENABLE(debug,
-     [  --disable-debug         Do not compile in debugging symbols
-   --enable-debug(=val)    Enable debugging (debug flags val)],
-@@ -176,26 +146,6 @@
-             fi
- 	    fi])
+     [  --enable-debug(=val)    Enable debugging (debug flags val)],
+     [ if test "$enableval" != "no"; then
+@@ -176,26 +146,6 @@ AC_ARG_ENABLE(debug,
+             MOZ_DEBUG=
+     fi])
  
 -AC_ARG_ENABLE(win32-target,
 -    [  --enable-win32-target=\$t
@@ -80,7 +81,7 @@
  
  AC_ARG_ENABLE(64bit,
      [  --enable-64bit          Enable 64-bit support (on certain platforms)],
-@@ -261,10 +211,6 @@
+@@ -261,10 +211,6 @@ dnl svrcore implies both nspr and nss
         if test -z "$SVRCORE_CFLAGS" -o -z "$SVRCORE_LIBS" ; then
             if test -n "$_SYSTEM_SVRCORE"; then
                 AM_PATH_SVRCORE(4.0.1, [MOZ_NATIVE_SVRCORE=1], [MOZ_NATIVE_SVRCORE=])
@@ -91,7 +92,7 @@
                 if test -z "$SVRCORE_CFLAGS" -o -z "$SVRCORE_LIBS"; then
                     AM_PATH_SVRCORE(4.0.1, [MOZ_NATIVE_SVRCORE=1], [MOZ_NATIVE_SVRCORE=])
                 fi
-@@ -294,9 +240,6 @@
+@@ -294,9 +240,6 @@ dnl nss requires nspr
              _SYSTEM_NSS=no
  	    fi], _SYSTEM_NSS= )
  
@@ -101,7 +102,7 @@
  
  dnl first, see if user has specified explicit NSPR include and lib paths,
  dnl of if the user has explicitly disabled the use of nss
-@@ -308,10 +251,6 @@
+@@ -308,10 +251,6 @@ dnl next, see if user explicitly said to
  if test -n "$USE_NSS" -a -z "$NSS_CFLAGS" -a -z "$NSS_LIBS" ; then
  dnl nss requires nspr
     no_nspr=no
@@ -112,7 +113,7 @@
  dnl failing that, see if we can find nss-config or pkg-config nss
     if test -z "$NSS_CFLAGS" -a "$_SYSTEM_NSS" != "no" ; then
        AM_PATH_NSS(3.9.0, [MOZ_NATIVE_NSS=1], [MOZ_NATIVE_NSS=])
-@@ -348,10 +287,6 @@
+@@ -348,10 +287,6 @@ fi
  
  dnl next, look for in-tree nspr if user did not specify explicit system nspr
  if test "$no_nspr" = "no" -a -z "$NSPR_CFLAGS" -a -z "$NSPR_LIBS" ; then
@@ -123,56 +124,7 @@
  dnl failing that, see if we can find nspr-config or pkg-config nspr
     if test -z "$NSPR_CFLAGS" -a "$_SYSTEM_NSPR" != "no" ; then
        AM_PATH_NSPR(4.0.0, [MOZ_NATIVE_NSPR=1], [MOZ_NATIVE_NSPR=])
-@@ -390,48 +325,6 @@
- dnl than in cygwin-wrapper
- dnl ========================================================
- 
--dnl add other runtime environments that use unix style paths
--dnl *-cygwin*|*-mingw*|*-msvc*|*-mks*)
--case "$target" in
--*-cygwin*) USE_WINDOWS_PATHS=1 ;;
--esac
--
--if test -n "$_WIN32_MSVC" -a -n "$USE_WINDOWS_PATHS" ; then
--    if test -n "$NSPR_CFLAGS" -a -z "$SKIP_CYGWIN_FIXUP" ; then
--        path=`echo $NSPR_CFLAGS | sed -e 's/^-I//'`
--        path=`cygpath -m $path`
--        NSPR_CFLAGS="/I$path"
--    fi
--    if test -n "$NSPR_LIBS" -a -z "$SKIP_CYGWIN_FIXUP" ; then
--        path=`echo $NSPR_LIBS | sed -e 's/^-L//'`
--        path=`cygpath -m $path`
--        NSPR_LIBS="/LIBPATH:$path"
--    fi
--
--    if test -n "$NSS_CFLAGS" ; then
--        path=`echo $NSS_CFLAGS | sed -e 's/^-I//'`
--        path=`cygpath -m $path`
--        NSS_CFLAGS="/I$path"
--    fi
--
--    if test -n "$NSS_LIBS" ; then
--        path=`echo $NSS_LIBS | sed -e 's/^-L//'`
--        path=`cygpath -m $path`
--        NSS_LIBS="/LIBPATH:$path"
--    fi
--
--    if test -n "$SVRCORE_CFLAGS" ; then
--        path=`echo $SVRCORE_CFLAGS | sed -e 's/^-I//'`
--        path=`cygpath -m $path`
--        SVRCORE_CFLAGS="/I$path"
--    fi
--
--    if test -n "$SVRCORE_LIBS" ; then
--        path=`echo $SVRCORE_LIBS | sed -e 's/^-L//'`
--        path=`cygpath -m $path`
--        SVRCORE_LIBS="/LIBPATH:$path"
--    fi
--fi
- 
- dnl ========================================================
- dnl =
-@@ -1489,9 +1382,7 @@
+@@ -1520,9 +1455,7 @@ tools are selected during the Xcode/Deve
      ;;
  
  *-linux*)

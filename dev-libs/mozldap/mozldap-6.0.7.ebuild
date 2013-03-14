@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mozldap/mozldap-6.0.6-r2.ebuild,v 1.4 2013/03/14 17:08:10 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mozldap/mozldap-6.0.7.ebuild,v 1.1 2013/03/14 17:08:10 lxnay Exp $
 
-EAPI="2"
+EAPI="5"
 
 WANT_AUTOCONF="2.1"
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/directory/c-sdk/releases/v${PV}/s
 
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="ipv6 debug +sasl"
 
 COMMON_DEPEND=">=dev-libs/nss-3.11.4
@@ -25,14 +25,14 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 RDEPEND="${COMMON_DEPEND}"
 
-S="${WORKDIR}"/"${P}"/"mozilla/directory/c-sdk"
+S="${WORKDIR}/${P}/c-sdk"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-6.0.4-pkgconfig.patch \
-		"${FILESDIR}"/configure.in.patch \
-		"${FILESDIR}"/nss-m4.patch \
-		"${FILESDIR}"/nspr-m4.patch \
-		"${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${PN}-6.0.4-pkgconfig.patch
+	epatch "${FILESDIR}"/${P}-configure.in.patch
+	epatch "${FILESDIR}"/nss-m4.patch
+	epatch "${FILESDIR}"/nspr-m4.patch
+	epatch "${FILESDIR}"/${PN}-6.0.6-ldflags.patch
 	eautoreconf
 }
 
