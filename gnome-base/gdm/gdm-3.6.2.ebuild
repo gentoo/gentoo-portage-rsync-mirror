@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.6.2.ebuild,v 1.8 2013/02/02 22:33:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.6.2.ebuild,v 1.9 2013/03/14 04:29:23 tetromino Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -52,11 +52,11 @@ COMMON_DEPEND="
 	>=x11-misc/xdg-utils-1.0.2-r3
 
 	virtual/pam
-	sys-auth/pambase[consolekit?,systemd?]
+	sys-auth/pambase[systemd?]
 
 	accessibility? ( x11-libs/libXevie )
 	audit? ( sys-process/audit )
-	consolekit? ( sys-auth/consolekit[pam] )
+	consolekit? ( sys-auth/consolekit )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )
 	plymouth? ( sys-boot/plymouth )
 	selinux? ( sys-libs/libselinux )
