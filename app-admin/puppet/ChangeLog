@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.147 2013/03/13 18:55:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.149 2013/03/14 13:24:15 ago Exp $
+
+  14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> puppet-2.7.21.ebuild:
+  Stable for x86, wrt bug #461656
+
+  14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> puppet-2.7.21.ebuild:
+  Stable for amd64, wrt bug #461656
 
   13 Mar 2013; Jeroen Roovers <jer@gentoo.org> puppet-2.7.21.ebuild:
   Stable for HPPA (bug #461656).
