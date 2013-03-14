@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst prepare unpack
+DESCRIPTION=Spotify is a social music platform
+EAPI=4
+HOMEPAGE=https://www.spotify.com/ch-de/download/previews/
+IUSE=gnome pax_kernel pulseaudio
+KEYWORDS=~amd64 ~x86
+LICENSE=Spotify
+RDEPEND=x11-libs/libxcb x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXau x11-libs/libXext x11-libs/libXinerama x11-libs/libXdmcp x11-libs/libXScrnSaver x11-libs/libXrandr x11-libs/libXrender dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qtwebkit:4 x11-misc/xdg-utils media-libs/alsa-lib media-libs/fontconfig media-libs/freetype dev-libs/openssl:0 dev-libs/glib:2 media-libs/libpng:1.2 dev-db/sqlite:3 sys-libs/zlib app-arch/bzip2 sys-apps/dbus sys-apps/util-linux dev-libs/expat >=dev-libs/nspr-4.9 gnome-base/gconf:2 x11-libs/gtk+:2 dev-libs/nss dev-libs/glib:2 net-print/cups pulseaudio? ( >=media-sound/pulseaudio-0.9.21 ) gnome? ( gnome-extra/gnome-integration-spotify )
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=x86? ( http://repository.spotify.com/pool/non-free/s/spotify/spotify-client_0.8.8.323.gd143501.250-1_i386.deb ) amd64? ( http://repository.spotify.com/pool/non-free/s/spotify/spotify-client_0.8.8.323.gd143501.250-1_amd64.deb )
+_eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	multilib	ded93e450747134a079e647d888aa80b	pax-utils	0ace932c4045349c7fc1af0fe7091acf	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=370d7369eb1ca6200e27353e9642aa1a
