@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.24 2013/02/11 03:02:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.25 2013/03/14 03:01:47 floppym Exp $
+
+*paver-1.2.0 (14 Mar 2013)
+
+  14 Mar 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/paver-1.2.0-skip-cog-tests.patch, +paver-1.2.0.ebuild:
+  Version bump. Adds python3 support. Resolves bug 461338.
 
   11 Feb 2013; Mike Gilbert <floppym@gentoo.org> paver-1.1.1-r1.ebuild:
   Add pypy.

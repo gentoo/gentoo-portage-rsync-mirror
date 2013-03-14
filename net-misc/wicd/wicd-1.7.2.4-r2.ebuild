@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r2.ebuild,v 1.7 2013/01/20 09:39:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r2.ebuild,v 1.8 2013/03/14 03:08:15 ssuominen Exp $
 
 EAPI=3
 
@@ -132,8 +132,8 @@ pkg_postinst() {
 	elog "(For example, rc_hotplug=\"!net.eth* !net.wlan*\")"
 	# Maintainer's note: the consolekit use flag short circuits a dbus rule and
 	# allows the connection. Else, you need to be in the group.
-	if ! has_version sys-auth/pambase[consolekit]; then
-			ewarn "Wicd-1.6 and newer requires your user to be in the 'users' group. If"
-			ewarn "you are not in that group, then modify /etc/dbus-1/system.d/wicd.conf"
+	if ! has_version sys-auth/consolekit; then
+		ewarn "Wicd-1.6 and newer requires your user to be in the 'users' group. If"
+		ewarn "you are not in that group, then modify /etc/dbus-1/system.d/wicd.conf"
 	fi
 }
