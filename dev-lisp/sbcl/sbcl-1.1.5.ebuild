@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.2.ebuild,v 1.1 2012/12/14 12:53:31 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.5.ebuild,v 1.1 2013/03/14 04:53:42 grozin Exp $
 
-EAPI=3
+EAPI=5
 inherit multilib eutils flag-o-matic pax-utils
 
 #same order as http://www.sbcl.org/platform-table.html
 BV_X86=1.0.58
-BV_AMD64=1.1.2
+BV_AMD64=1.1.5
 BV_PPC=1.0.28
 BV_SPARC=1.0.28
 BV_ALPHA=1.0.28
@@ -29,11 +29,11 @@ RESTRICT="mirror"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="+asdf ldb source +threads +unicode debug doc cobalt"
+IUSE="+asdf cobalt debug doc ldb source +threads +unicode"
 
 DEPEND="doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 )"
 RDEPEND="elibc_glibc? ( >=sys-libs/glibc-2.3 || ( <sys-libs/glibc-2.6[nptl] >=sys-libs/glibc-2.6 ) )
-		asdf? ( >=dev-lisp/gentoo-init-1.0 )"
+	asdf? ( >=dev-lisp/gentoo-init-1.0 )"
 
 # Disable warnings about executable stacks, as this won't be fixed soon by upstream
 QA_EXECSTACK="usr/bin/sbcl"
@@ -71,8 +71,8 @@ EOF
 
 src_unpack() {
 	unpack ${A}
-	mv sbcl-*-linux sbcl-binary
-	cd "${S}"
+	mv sbcl-*-linux sbcl-binary || die
+	cd "${S}" || die
 }
 
 src_prepare() {
@@ -87,11 +87,11 @@ src_prepare() {
 
 	use source && sed 's%"$(BUILD_ROOT)%$(MODULE).lisp "$(BUILD_ROOT)%' -i contrib/vanilla-module.mk
 
-	# Some shells(such as dash) don't have "time" as builtin
+	# Some shells (such as dash) don't have "time" as builtin
 	# and we don't want to DEPEND on sys-process/time
-	sed "s,^time ,," -i make.sh
-	sed "s,/lib,/$(get_libdir),g" -i install.sh
-	sed "s,/usr/local/lib,/usr/$(get_libdir),g" -i src/runtime/runtime.c # #define SBCL_HOME ...
+	sed "s,^time ,," -i make.sh || die
+	sed "s,/lib,/$(get_libdir),g" -i install.sh || die
+	sed "s,/usr/local/lib,/usr/$(get_libdir),g" -i src/runtime/runtime.c || die # #define SBCL_HOME ...
 
 	find . -type f -name .cvsignore -delete
 }
@@ -129,7 +129,7 @@ src_compile() {
 		"sh ${bindir}/run-sbcl.sh --no-sysinit --no-userinit --disable-debugger" \
 		|| die "make failed"
 
-	# need to set HOME because libpango(used by graphviz) complains about it
+	# need to set HOME because libpango (used by graphviz) complains about it
 	if use doc; then
 		env - HOME="${T}" make -C doc/manual info html || die "Cannot build manual"
 		env - HOME="${T}" make -C doc/internals info html || die "Cannot build internal docs"
@@ -178,15 +178,15 @@ EOF
 		doinfo doc/internals/sbcl-internals.info
 		docinto internals-notes && dodoc doc/internals-notes/*
 	else
-		rm -Rv "${D}/usr/share/doc/${PF}"
+		rm -Rv "${D}/usr/share/doc/${PF}" || die
 	fi
 
-	dodoc BUGS CREDITS INSTALL NEWS OPTIMIZATIONS PRINCIPLES README STYLE TLA TODO
+	dodoc BUGS CREDITS INSTALL NEWS OPTIMIZATIONS PRINCIPLES README TLA TODO
 
 	# install the SBCL source
 	if use source; then
 		./clean.sh
-		cp -av src "${D}/usr/$(get_libdir)/sbcl/"
+		cp -av src "${D}/usr/$(get_libdir)/sbcl/" || die
 	fi
 
 	# necessary for running newly-saved images
