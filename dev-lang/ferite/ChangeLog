@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ferite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.37 2013/03/12 18:25:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ferite/ChangeLog,v 1.39 2013/03/14 13:49:11 kensington Exp $
+
+  14 Mar 2013; Michael Palimaka <kensington@gentoo.org> -ferite-1.0.2.ebuild:
+  Remove old.
+
+  14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ferite-1.0.2.ebuild,
+  ferite-1.1.17-r1.ebuild:
+  Drop sparc, wrt to bug #461720
 
   12 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ferite-1.1.17-r1.ebuild:
   Stable for ppc, wrt bug #461090
