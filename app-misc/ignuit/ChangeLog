@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/ignuit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ChangeLog,v 1.19 2012/03/04 11:59:29 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ChangeLog,v 1.20 2013/03/14 08:50:57 tomwij Exp $
+
+*ignuit-2.20.0 (14 Mar 2013)
+
+  14 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +ignuit-2.20.0.ebuild:
+  Non-maintainer commit, version bump to 2.20.0.
 
   04 Mar 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #206112
@@ -84,4 +89,3 @@
   10 Mar 2008; Kenneth Prugh <ken69267@gentoo.org> +ignuit-0.0.5.ebuild,
   +files/ignuit-0.0.5-desktop-entry.patch, +metadata.xml:
   New ebuild for bug #212887
-

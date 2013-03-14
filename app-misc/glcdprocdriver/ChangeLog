@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/glcdprocdriver
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/ChangeLog,v 1.15 2012/08/04 09:43:08 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/ChangeLog,v 1.16 2013/03/14 08:40:18 tomwij Exp $
+
+*glcdprocdriver-0.0.6 (14 Mar 2013)
+
+  14 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +glcdprocdriver-0.0.6.ebuild:
+  Non-maintainer commit, version bump to 0.0.6.
 
   04 Aug 2012; Agostino Sarubbo <ago@gentoo.org> glcdprocdriver-0.0.5.ebuild:
   Stable for amd64, wrt bug #425376
@@ -72,4 +77,3 @@
   08 Oct 2006; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
   +glcdprocdriver-0.0.3.ebuild:
   Initial version, ebuild contributed by Lucian Muresan
-

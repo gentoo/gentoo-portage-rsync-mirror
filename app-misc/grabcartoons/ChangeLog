@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/grabcartoons
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grabcartoons/ChangeLog,v 1.7 2012/10/29 08:27:51 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grabcartoons/ChangeLog,v 1.8 2013/03/14 08:46:48 tomwij Exp $
+
+*grabcartoons-2.4 (14 Mar 2013)
+
+  14 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +grabcartoons-2.4.ebuild:
+  Non-maintainer commit, version bump to 2.4.
 
   29 Oct 2012; Agostino Sarubbo <ago@gentoo.org> grabcartoons-2.1.ebuild:
   EAPI4, add rdepend, add ~amd64

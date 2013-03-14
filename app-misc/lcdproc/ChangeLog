@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lcdproc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.73 2012/07/29 16:19:03 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.74 2013/03/14 08:56:28 tomwij Exp $
+
+*lcdproc-0.5.6 (14 Mar 2013)
+
+  14 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +lcdproc-0.5.6.ebuild:
+  Non-maintainer commit, version bump to 0.5.6.
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> lcdproc-0.5.2-r1.ebuild,
   lcdproc-0.5.5.ebuild:
