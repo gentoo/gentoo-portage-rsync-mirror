@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2012.2.3-r1.ebuild,v 1.1 2013/02/26 21:44:05 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2012.2.3-r2.ebuild,v 1.1 2013/03/14 20:40:51 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
@@ -46,6 +46,7 @@ RDEPEND="=dev-python/amqplib-0.6.1
 PATCHES=(
 			"${FILESDIR}/nova-folsom-CVE-2013-1664.patch"
 			"${FILESDIR}/nova-folsom-3-CVE-2013-0335.patch"
+			"${FILESDIR}/nova-folsom-3-CVE-2013-1838.patch"
 )
 
 python_install() {
