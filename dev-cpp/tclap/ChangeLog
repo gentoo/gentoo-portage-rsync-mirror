@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/tclap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tclap/ChangeLog,v 1.11 2012/11/21 11:15:44 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tclap/ChangeLog,v 1.12 2013/03/14 09:44:01 tomwij Exp $
+
+*tclap-1.2.1 (14 Mar 2013)
+
+  14 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +tclap-1.2.1.ebuild:
+  Non-maintainer commit, version bump to 1.2.1.
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> tclap-1.2.0.ebuild:
   Stable for x86, wrt bug #443976
