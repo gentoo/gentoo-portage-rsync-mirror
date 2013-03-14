@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/gallery
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.189 2013/01/23 17:12:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.190 2013/03/14 02:10:01 blueness Exp $
+
+*gallery-3.0.5 (14 Mar 2013)
+
+  14 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
+  +files/postinstall-en.txt, +files/postupgrade-en.txt, +gallery-3.0.5.ebuild:
+  Version bump, bug #421761
 
   23 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> gallery-2.3.1.ebuild:
   Change homepage, wrt bug #421761
