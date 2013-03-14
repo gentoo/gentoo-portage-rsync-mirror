@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/389-admin-1.1.23.ebuild,v 1.2 2011/08/16 20:15:51 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/389-admin-1.1.31.ebuild,v 1.1 2013/03/14 18:02:26 lxnay Exp $
 
-EAPI="2"
+EAPI=5
 
 WANT_AUTOMAKE="1.9"
 
@@ -28,11 +28,11 @@ COMMON_DEPEND=">=app-admin/389-admin-console-1.1.0
 	dev-libs/389-adminutil
 	dev-libs/cyrus-sasl
 	dev-libs/icu
-	dev-libs/mozldap
 	dev-libs/nss[utils]
 	|| ( <=dev-libs/nspr-4.8.3-r3[ipv6?] >=dev-libs/nspr-4.8.4 )
 	dev-libs/svrcore
 	net-analyzer/net-snmp[ipv6?]
+	net-nds/openldap
 	selinux? (
 		sys-apps/checkpolicy
 		sys-apps/policycoreutils
@@ -76,10 +76,12 @@ src_configure() {
 	econf \
 		--enable-threading \
 		--disable-rpath \
-		--with-fhs \
+		--with-adminutil=/usr \
 		--with-apr-config \
 		--with-apxs=${APXS} \
+		--with-fhs \
 		--with-httpd=${APACHE_BIN} \
+		--with-openldap \
 		${myconf} || die "econf failed"
 }
 

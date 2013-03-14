@@ -6,7 +6,7 @@
 		<name>Fabio Erculiani</name>
 	</maintainer>
 	<use>
-		<flag name='matter'>Pull in app-admin/matter</flag>
+		<flag name='entropy'>Add Entropy support</flag>
 	</use>
 </pkgmetadata>
 

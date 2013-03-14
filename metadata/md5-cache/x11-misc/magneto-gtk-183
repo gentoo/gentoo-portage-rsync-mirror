@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst postrm
+DEPEND==dev-lang/python-2*
+DESCRIPTION=Entropy Package Manager notification applet GTK2 frontend
+EAPI=3
+HOMEPAGE=http://www.sabayon.org
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=GPL-2
+RDEPEND=~app-misc/magneto-loader-183 dev-python/notify-python dev-python/pygtk:2 =dev-lang/python-2*
+SLOT=0
+SRC_URI=mirror://sabayon/sys-apps/entropy-183.tar.bz2
+_eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	multilib	ded93e450747134a079e647d888aa80b	python	dd56675d8e9f7e85d815a28c87383141	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=102bfd04f02b64f6a344e3235bca57f3

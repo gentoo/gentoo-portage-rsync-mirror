@@ -161,6 +161,7 @@ app-admin/keepass:aot - Generate native code at build time, rather than runtime.
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-admin/logrotate:acl - Installs acl support
 app-admin/logrotate:selinux - Installs Security Enhanced Linux support
+app-admin/matter:entropy - Add Entropy support
 app-admin/mcollective:client - Install client utilities
 app-admin/openrc-settingsd:systemd - Use the versions of dbus and polkit files provided by sys-apps/systemd
 app-admin/packagekit-base:connman - Add support for net-misc/connman
@@ -5449,6 +5450,7 @@ sys-apps/dmtcp:trace - Enable ptrace support (only valid with debug enabled).
 sys-apps/dstat:wifi - Enable wireless network functions
 sys-apps/elfix:ptpax - Enable PT_PAX_FLAGS support.
 sys-apps/elfix:xtpax - Enable XATTR_PAX_FLAGS support.
+sys-apps/entropy-server:matter - Pull in app-admin/matter
 sys-apps/etckeeper:bazaar - Support dev-vcs/bzr based repository
 sys-apps/etckeeper:cron - Install cron script
 sys-apps/flashrom:atahpt - Highpoint (HPT) ATA/RAID controller support

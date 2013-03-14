@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/rigo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rigo/ChangeLog,v 1.4 2012/09/27 11:02:15 lxnay Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rigo/ChangeLog,v 1.5 2013/03/14 18:25:14 lxnay Exp $
+
+*rigo-183 (14 Mar 2013)
+
+  14 Mar 2013; Fabio Erculiani <lxnay@gentoo.org> +rigo-183.ebuild:
+  version bump
 
 *rigo-144 (27 Sep 2012)
 
