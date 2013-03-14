@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1364.172.ebuild,v 1.1 2013/03/13 00:24:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-25.0.1364.172.ebuild,v 1.2 2013/03/14 00:59:34 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2:2.6"
@@ -160,6 +160,9 @@ src_prepare() {
 	EOF
 
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r0.patch"
+
+	# Fix build issue with smhasher, bug #459126 .
+	epatch "${FILESDIR}/${PN}-smhasher-r0.patch"
 
 	epatch_user
 

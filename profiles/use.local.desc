@@ -2182,6 +2182,7 @@ games-roguelike/angband:sound - Enable and install sounds
 games-roguelike/stone-soup:ncurses - Enable for console based build (uses ncurses).
 games-roguelike/stone-soup:tiles - Enable for graphical (tiled) build.
 games-roguelike/tomenet:server - Compile server support
+games-rpg/arx-fatalis-data:gog - Extract the data from the GOG.com installer.
 games-rpg/arx-libertatis:crash-reporter - Build a dev-qt/qtgui-based tool that allows to submit crash information to the upstream backtracker.
 games-rpg/arx-libertatis:debug - Enable asserts and debug logging.
 games-rpg/arx-libertatis:demo - Install the Arx Fatalis demo data.

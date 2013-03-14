@@ -12,5 +12,8 @@
 		<name>Daniel Scharrer</name>
 		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
+	<use>
+		<flag name='gog'>Extract the data from the GOG.com installer.</flag>
+	</use>
 </pkgmetadata>
 
