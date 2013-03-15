@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/kstars-4.10.1.ebuild,v 1.1 2013/03/06 13:41:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/kstars-4.10.1.ebuild,v 1.2 2013/03/15 13:53:34 kensington Exp $
 
 EAPI=5
 
@@ -18,6 +18,8 @@ DEPEND="
 	indi? ( >=sci-libs/indilib-0.9.1 )
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-build.patch" )
 
 src_configure() {
 	# Bug 308903

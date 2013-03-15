@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.258 2013/03/06 13:41:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.259 2013/03/15 13:53:34 kensington Exp $
+
+  15 Mar 2013; Michael Palimaka <kensington@gentoo.org>
+  +files/kstars-4.10.1-build.patch, kstars-4.10.1.ebuild:
+  Backport patch from upstream to fix build with USE="-fits indi".
 
 *kstars-4.10.1 (06 Mar 2013)
 
