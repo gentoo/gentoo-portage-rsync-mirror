@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/django-evolution-0.6.7-r1.ebuild,v 1.3 2013/01/16 02:42:49 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/django-evolution-0.6.7-r1.ebuild,v 1.4 2013/03/15 09:33:33 patrick Exp $
 
 EAPI=5
 
@@ -22,7 +22,8 @@ IUSE="test"
 
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	dev-python/django"
+	dev-python/django
+	test? ( dev-python/nose )"
 
 S=${WORKDIR}/${MY_P}
 
