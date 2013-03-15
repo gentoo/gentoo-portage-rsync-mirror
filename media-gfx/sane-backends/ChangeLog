@@ -1,6 +1,19 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.222 2013/02/22 21:02:33 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.223 2013/03/15 08:15:52 phosphan Exp $
+
+*sane-backends-1.0.23-r1 (15 Mar 2013)
+
+  15 Mar 2013; Patrick Kursawe <phosphan@gentoo.org>
+  +sane-backends-1.0.23-r1.ebuild,
+  +files/sane-backends-1.0.23-saned_pidfile_location.patch,
+  +files/kodakaio-fixes.patch, +files/saned.confd, +files/saned.initd:
+  Bug #456018: Showing message about the "scanner" group.
+  Bug #458472: Added files for openrc
+  Bug #458580: No more linking to libsnmp unless specified.
+  Bug #460252: Reacting on some QA issues.
+  Bug #460440: Using debug output for debug message.
+
 
   22 Feb 2013; Patrick Kursawe <phosphan@gentoo.org>
   sane-backends-1.0.23.ebuild:

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/rawtherapee-4.0.8.ebuild,v 1.2 2012/05/05 07:00:21 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/rawtherapee-4.0.10.ebuild,v 1.1 2013/03/15 08:07:51 radhermit Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit cmake-utils toolchain-funcs
 
@@ -18,18 +18,19 @@ IUSE="bzip2 doc openmp"
 RDEPEND="bzip2? ( app-arch/bzip2 )
 	>=dev-cpp/gtkmm-2.12:2.4
 	>=dev-cpp/glibmm-2.16:2
+	dev-libs/expat
 	dev-libs/libsigc++:2
+	media-libs/libcanberra
 	media-libs/tiff
 	media-libs/libpng
 	media-libs/libiptcdata
 	media-libs/lcms:2
+	sci-libs/fftw:3.0
 	sys-libs/zlib
 	virtual/jpeg"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig"
-
-PATCHES=( "${FILESDIR}"/${P}-nohg.patch )
 
 pkg_setup() {
 	if use openmp ; then
@@ -45,11 +46,10 @@ src_configure() {
 		-DCREDITSDIR=/usr/share/${PN}
 		-DLICENCEDIR=/usr/share/${PN}
 	)
-
 	cmake-utils_src_configure
 }
 
 src_install() {
 	cmake-utils_src_install
-	use doc && dodoc doc/built/pdf/en/RawTherapeeManual_${PV}.pdf
+	use doc && dodoc doc/RawTherapeeManual_en.pdf
 }
