@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.83-r1.ebuild,v 1.3 2012/03/08 09:21:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.83-r1.ebuild,v 1.5 2013/03/15 12:17:31 pinkbyte Exp $
 
 EAPI="4"
 inherit eutils multilib
@@ -12,12 +12,12 @@ SRC_URI="mirror://sourceforge/gigabase/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="doc"
+IUSE="doc static-libs"
 
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND=""
 
-S=${WORKDIR}/gigabase
+S="${WORKDIR}/${PN}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-fix-dereferencing.patch"
@@ -26,7 +26,7 @@ src_prepare() {
 src_configure() {
 	mf="${S}/Makefile"
 
-	econf
+	econf $(use_enable static-libs static)
 	sed -r -i -e 's/subsql([^\.]|$)/subsql-gdb\1/' ${mf} || die
 }
 
@@ -37,7 +37,7 @@ src_compile() {
 
 src_test() {
 	pwd
-	cd ${S}
+	cd "${S}"
 	local TESTS
 	local -i failcnt=0
 	TESTS="testddl testidx testidx2 testiref testleak testperf testperf2 testspat testtl testsync testtimeseries"
@@ -50,6 +50,7 @@ src_test() {
 
 src_install() {
 	einstall
+	prune_libtool_files
 
 	dodoc CHANGES
 	use doc && dohtml GigaBASE.htm

@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/gigabase
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/ChangeLog,v 1.56 2013/02/16 12:30:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/ChangeLog,v 1.57 2013/03/15 12:15:31 pinkbyte Exp $
+
+  15 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> gigabase-3.83-r1.ebuild:
+  Install static libraries optionally, prune unnecessary libtool files, wrt bug
+  #405523. Thanks to Agostino Sarubbo for discovering this issue
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> -gigabase-3.82-r1.ebuild,
   -gigabase-3.83.ebuild, metadata.xml:
