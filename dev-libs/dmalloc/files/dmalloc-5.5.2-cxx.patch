@@ -1,6 +1,5 @@
-diff -ur dmalloc-5.5.2.orig/configure.ac dmalloc-5.5.2/configure.ac
---- dmalloc-5.5.2.orig/configure.ac	2007-05-14 20:26:14.000000000 +0300
-+++ dmalloc-5.5.2/configure.ac	2007-12-27 18:13:18.000000000 +0200
+--- a/configure.ac
++++ b/configure.ac
 @@ -55,11 +55,12 @@
  AC_PROG_CC
  AC_PROG_CXX
