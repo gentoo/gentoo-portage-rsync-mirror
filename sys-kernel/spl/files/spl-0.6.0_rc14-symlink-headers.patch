@@ -1,0 +1,13 @@
+diff --git a/Makefile.am b/Makefile.am
+index 4d8ab0e..6c1a7a5 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -35,6 +35,8 @@ install-data-local:
+ 	for instfile in $(noinst_HEADERS) module/$(LINUX_SYMBOLS); do \
+ 		$(INSTALL) -m 644 -D $$instfile $$instdest/$$instfile; \
+ 	done
++	release=$(SPL_META_VERSION)-$(SPL_META_RELEASE); \
++	ln -s spl-$$release/$(LINUX_VERSION) $(DESTDIR)/usr/src/spl;
+ endif
+ 
+ ctags:

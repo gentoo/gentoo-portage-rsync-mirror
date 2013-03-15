@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.45 2013/02/11 23:27:03 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.46 2013/03/15 13:17:03 ryao Exp $
+
+*spl-0.6.0_rc14-r2 (15 Mar 2013)
+
+  15 Mar 2013; Richard Yao <ryao@gentoo.org> +files/spl-0.6.0_rc14-hostid.patch,
+  +files/spl-0.6.0_rc14-linux-3.9-compat.patch,
+  +files/spl-0.6.0_rc14-symlink-headers.patch, +spl-0.6.0_rc14-r2.ebuild,
+  -spl-0.6.0_rc14-r1.ebuild, spl-0.6.0_rc10.ebuild, spl-0.6.0_rc11-r2.ebuild,
+  spl-0.6.0_rc12-r1.ebuild, spl-0.6.0_rc13-r2.ebuild, spl-9999.ebuild:
+  Linux 3.9 Support; Install symlinks to make building lustre easier for the
+  Gentoo Cluster team; dodoc miscellaneous documentation; Update github urls on
+  older ebuilds to make repoman happy
 
   11 Feb 2013; Richard Yao <ryao@gentoo.org> -spl-0.6.0_rc11.ebuild,
   -spl-0.6.0_rc12.ebuild, -spl-0.6.0_rc13-r1.ebuild, -spl-0.6.0_rc13.ebuild,

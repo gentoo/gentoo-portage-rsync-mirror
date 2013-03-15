@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install postinst prepare
+DESCRIPTION=Protection against buffer overflow vulnerabilities
+EAPI=5
+HOMEPAGE=http://www.research.avayalabs.com/gcm/usa/en-us/initiatives/all/nsr.htm&Filter=ProjectTitle:Libsafe&Wrapper=LabsProjectDetails&View=LabsProjectDetails
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1
+SLOT=0
+SRC_URI=http://www.research.avayalabs.com/project/libsafe/src/libsafe-2.0-16.tgz
+_eclasses_=eutils	50d18ebffcbd8bd63614b89c2d664d0d	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	ded93e450747134a079e647d888aa80b	readme.gentoo	2705553a0f031d715b57878cc0d9bf64	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=4febdaa5ad53e54de393be0c2d2afc8b

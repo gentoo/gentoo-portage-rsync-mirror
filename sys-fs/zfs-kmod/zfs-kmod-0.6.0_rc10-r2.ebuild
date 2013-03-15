@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc10-r1.ebuild,v 1.1 2013/02/11 23:36:17 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc10-r2.ebuild,v 1.1 2013/03/15 13:20:45 ryao Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ if [ ${PV} == "9999" ] ; then
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
-	SRC_URI="https://github.com/downloads/zfsonlinux/zfs/zfs-${MY_PV}.tar.gz"
+	SRC_URI="mirror://github/zfsonlinux/zfs/zfs-${MY_PV}.tar.gz"
 	S="${WORKDIR}/zfs-${MY_PV}"
 	KEYWORDS="~amd64"
 fi
@@ -24,7 +24,7 @@ fi
 DESCRIPTION="Linux ZFS kernel module for sys-fs/zfs"
 HOMEPAGE="http://zfsonlinux.org/"
 
-LICENSE="CDDL"
+LICENSE="CDDL debug? ( GPL-2+ )"
 SLOT="0"
 IUSE="custom-cflags debug +rootfs"
 RESTRICT="test"
@@ -83,7 +83,13 @@ src_prepare() {
 
 		# Cast constant for 32-bit compatibility
 		epatch "${FILESDIR}/${PN}-0.6.0_rc14-cast-const-for-32bit-compatibility.patch"
+
+		# Fix barrier regression on Linux 2.6.37 and later
+		epatch "${FILESDIR}/${PN}-0.6.0_rc14-flush-properly.patch"
 	fi
+
+	# Remove GPLv2-licensed ZPIOS unless we are debugging
+	use debug || sed -e 's/^subdir-m += zpios$//' -i "${S}/module/Makefile.in"
 
 	autotools-utils_src_prepare
 }
@@ -94,6 +100,7 @@ src_configure() {
 	local myeconfargs=(
 		--bindir="${EPREFIX}/bin"
 		--sbindir="${EPREFIX}/sbin"
+	dodoc AUTHORS COPYRIGHT DISCLAIMER README.markdown
 		--with-config=kernel
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"

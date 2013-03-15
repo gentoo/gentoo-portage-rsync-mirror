@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epydoc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.70 2013/03/14 16:17:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.71 2013/03/15 13:24:54 ago Exp $
+
+  15 Mar 2013; Agostino Sarubbo <ago@gentoo.org> epydoc-3.0.1-r2.ebuild:
+  Stable for sh, wrt bug #459204
 
   14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> epydoc-3.0.1-r2.ebuild:
   Stable for s390, wrt bug #459204

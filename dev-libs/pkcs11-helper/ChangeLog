@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pkcs11-helper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.63 2013/03/14 16:20:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.64 2013/03/15 13:27:25 ago Exp $
+
+  15 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pkcs11-helper-1.10.ebuild:
+  Stable for sh, wrt bug #461106
 
   14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pkcs11-helper-1.10.ebuild:
   Stable for s390, wrt bug #461106

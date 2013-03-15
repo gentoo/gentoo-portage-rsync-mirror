@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libsafe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/ChangeLog,v 1.11 2013/02/03 12:44:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/ChangeLog,v 1.12 2013/03/15 13:14:59 pinkbyte Exp $
+
+*libsafe-2.0_p16-r3 (15 Mar 2013)
+
+  15 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> +libsafe-2.0_p16-r3.ebuild:
+  Revision bump: EAPI 5, epatch_user, use readme.gentoo eclass, respect
+  LDFLAGS, wrt bug #338209
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #22900

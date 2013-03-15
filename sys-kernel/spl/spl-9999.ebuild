@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.28 2013/02/06 01:45:21 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-9999.ebuild,v 1.29 2013/03/15 13:17:03 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
@@ -50,7 +50,7 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 8 || die "Linux 3.8 is the latest supported version."; }
+		{ kernel_is le 3 9 || die "Linux 3.9 is the latest supported version."; }
 
 	check_extra_config
 }
@@ -59,6 +59,9 @@ src_prepare() {
 	# Workaround for hard coded path
 	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/check.sh || die
 
+	# Provide /usr/src/spl symlink for lustre
+	epatch "${FILESDIR}/${P}-symlink-headers.patch"
+
 	if [ ${PV} != "9999" ]
 	then
 		# Fix x86 build failures on Linux 3.4 and later, bug #450646
@@ -66,7 +69,13 @@ src_prepare() {
 
 		# Fix autotools check that fails on ~ppc64
 		epatch "${FILESDIR}/${P}-fix-mutex-owner-check.patch"
+
+		# Linux 3.9 Support
+		epatch "${FILESDIR}/${P}-linux-3.9-compat.patch"
 	fi
+
+	# splat is unnecessary unless we are debugging
+	use debug || sed -e 's/^subdir-m += splat$//' -i "${S}/module/Makefile.in"
 
 	autotools-utils_src_prepare
 }
@@ -86,6 +95,11 @@ src_configure() {
 		$(use_enable debug-log)
 	)
 	autotools-utils_src_configure
+}
+
+src_install() {
+	autotools-utils_src_install
+	dodoc AUTHORS DISCLAIMER INSTALL README.markdown
 }
 
 src_test() {

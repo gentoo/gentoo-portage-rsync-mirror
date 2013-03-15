@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-6.0.3.ebuild,v 1.11 2013/03/14 16:21:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-6.0.3.ebuild,v 1.12 2013/03/15 13:29:04 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 ~sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
 IUSE="debug nls"
 
 RDEPEND="
