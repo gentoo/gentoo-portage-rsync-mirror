@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.2.6.ebuild,v 1.1 2012/12/22 12:27:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.2.10.ebuild,v 1.1 2013/03/15 15:41:36 polynomial-c Exp $
 
 EAPI=2
 
@@ -127,6 +127,9 @@ src_install() {
 	cd "${S}/out/linux.${ARCH}/release/bin/additions"
 	insinto /usr/$(get_libdir)/xorg/modules/drivers
 
+#	# xorg-server-1.14.x
+#	if has_version ">=x11-base/xorg-server-1.13.99" ; then
+#		newins vboxvideo_drv_114.so vboxvideo_drv.so || die
 	# xorg-server-1.13.x
 	if has_version ">=x11-base/xorg-server-1.12.99" ; then
 		newins vboxvideo_drv_113.so vboxvideo_drv.so || die

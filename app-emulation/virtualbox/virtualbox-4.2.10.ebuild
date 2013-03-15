@@ -1,27 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.6-r1.ebuild,v 1.2 2013/03/02 19:25:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.10.ebuild,v 1.1 2013/03/15 15:40:42 polynomial-c Exp $
 
 EAPI=4
 
 inherit eutils fdo-mime flag-o-matic linux-info multilib pax-utils python qt4-r2 toolchain-funcs java-pkg-opt-2 udev
 
-if [[ ${PV} == "9999" ]] ; then
-	# XXX: should finish merging the -9999 ebuild into this one ...
-	ESVN_REPO_URI="http://www.virtualbox.org/svn/vbox/trunk"
-	inherit linux-mod subversion
-else
-	MY_PV="${PV/beta/BETA}"
-	MY_PV="${MY_PV/rc/RC}"
-	MY_P=VirtualBox-${MY_PV}
-	SRC_URI="http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}.tar.bz2"
-	S="${WORKDIR}/${MY_P}"
-fi
+MY_PV="${PV/beta/BETA}"
+MY_PV="${MY_PV/rc/RC}"
+MY_P=VirtualBox-${MY_PV}
+SRC_URI="http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}.tar.bz2
+	http://dev.gentoo.org/~polynomial-c/virtualbox/patchsets/virtualbox-4.2.2-patches-01.tar.xz"
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
-SRC_URI="${SRC_URI}
-	http://dev.gentoo.org/~polynomial-c/virtualbox/patchsets/virtualbox-4.2.6-patches-01.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
