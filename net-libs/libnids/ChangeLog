@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libnids
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.55 2012/06/09 06:28:15 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.56 2013/03/15 17:41:20 jer Exp $
+
+*libnids-1.24-r3 (15 Mar 2013)
+
+  15 Mar 2013; Jeroen Roovers <jer@gentoo.org> -libnids-1.24-r1.ebuild,
+  +libnids-1.24-r3.ebuild:
+  Respect AR.
 
   09 Jun 2012; Jeff Horelick <jdhore@gentoo.org> libnids-1.24-r2.ebuild:
   marked x86 per bug 419271

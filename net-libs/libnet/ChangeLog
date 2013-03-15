@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.99 2013/02/19 05:00:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.100 2013/03/15 17:58:17 jer Exp $
+
+*libnet-1.2_rc1 (15 Mar 2013)
+
+  15 Mar 2013; Jeroen Roovers <jer@gentoo.org> +libnet-1.2_rc1.ebuild:
+  Version bump.
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> libnet-1.1.6.ebuild:
   Add ~arm-linux keyword.

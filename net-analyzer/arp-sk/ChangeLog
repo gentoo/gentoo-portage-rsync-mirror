@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/arp-sk
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/ChangeLog,v 1.12 2008/11/18 04:29:19 darkside Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/ChangeLog,v 1.13 2013/03/15 17:42:12 jer Exp $
+
+*arp-sk-0.0.16-r2 (15 Mar 2013)
+
+  15 Mar 2013; Jeroen Roovers <jer@gentoo.org> +arp-sk-0.0.16-r2.ebuild,
+  +files/arp-sk-0.0.16-libnet1_2.patch:
+  Fix building against net-libs/libnet-1.2 / remove unneeded version test.
 
   18 Nov 2008; Jeremy Olexa <darkside@gentoo.org> arp-sk-0.0.16-r1.ebuild:
   amd64 stable, bug #246765
