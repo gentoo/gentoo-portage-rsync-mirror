@@ -1,0 +1,18 @@
+--- motif-2.3.4-orig/configure.ac
++++ motif-2.3.4/configure.ac
+@@ -179,13 +179,13 @@
+ LIBDIR="${libdir}/X11"
+ AC_SUBST(LIBDIR)
+ 
+-MWMRCDIR="${libdir}/X11"
++MWMRCDIR="${sysconfdir}/X11/mwm"
+ AC_SUBST(MWMRCDIR)
+ 
+ INCDIR="${includedir}/X11"
+ AC_SUBST(INCDIR)
+ 
+-XMBINDDIR_FALLBACK="${libdir}/X11/bindings"
++XMBINDDIR_FALLBACK="${datadir}/X11/bindings"
+ AC_SUBST(XMBINDDIR_FALLBACK)
+ 
+ RM="rm -f"

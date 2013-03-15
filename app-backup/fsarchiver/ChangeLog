@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/fsarchiver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/fsarchiver/ChangeLog,v 1.4 2013/02/09 10:10:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/fsarchiver/ChangeLog,v 1.5 2013/03/15 19:17:08 hwoarang Exp $
+
+*fsarchiver-0.6.17 (15 Mar 2013)
+
+  15 Mar 2013; Markos Chandras <hwoarang@gentoo.org> +fsarchiver-0.6.17.ebuild:
+  Version bump
 
 *fsarchiver-0.6.16 (09 Feb 2013)
 
