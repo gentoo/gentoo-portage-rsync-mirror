@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paste
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.18 2013/02/12 23:37:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.19 2013/03/15 04:12:07 patrick Exp $
+
+  15 Mar 2013; Patrick Lauer <patrick@gentoo.org> paste-1.7.5.1-r1.ebuild:
+  Make things work
 
 *paste-1.7.5.1-r1 (12 Feb 2013)
 

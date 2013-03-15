@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/paste-1.7.5.1-r1.ebuild,v 1.1 2013/02/12 23:37:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/paste-1.7.5.1-r1.ebuild,v 1.2 2013/03/15 04:12:07 patrick Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ python_prepare_all() {
 }
 
 python_compile_all() {
-	"${PYTHON}" setup.py build_sphinx || die
+	"${PYTHON}" setup.py build || die
 }
 
 python_test() {
