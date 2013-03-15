@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/manuel/manuel-1.7.1.ebuild,v 1.1 2013/03/15 19:19:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/manuel/manuel-1.7.1.ebuild,v 1.2 2013/03/15 20:48:58 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} python{3_1,3_2} pypy{1_9,2_0} )
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~idella4/tarballs/${P}-20130316.tar.bz2"
 
 LICENSE="ZPL"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND="dev-python/six[${PYTHON_USEDEP}]"

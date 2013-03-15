@@ -1,13 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testfixtures/testfixtures-2.3.4.ebuild,v 1.3 2013/03/15 20:58:09 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testfixtures/testfixtures-3.0.0.ebuild,v 1.1 2013/03/15 20:58:09 idella4 Exp $
 
-EAPI=4
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS=1
-RESTRICT_PYTHON_ABIS="3.* *-pypy-* *-jython"
-DISTUTILS_SRC_TEST="py.test"
-inherit distutils eutils
+EAPI=5
+PYTHON_COMPAT=( python2_{6,7} python3_2 )
+
+inherit distutils-r1
 
 DESCRIPTION="A collection of helpers and mock objects for unit tests and doc tests"
 HOMEPAGE="http://pypi.python.org/pypi/testfixtures/"
@@ -20,30 +18,27 @@ IUSE="doc test"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	doc? ( dev-python/sphinx )
-	test? ( dev-python/manuel )"
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
+	test? ( dev-python/manuel[${PYTHON_USEDEP}] )"
 
 src_prepare() {
 	sed -e s':../bin/sphinx-build:/usr/bin/sphinx-build:' \
 		-i docs/Makefile || die
-	epatch "${FILESDIR}"/${P}-adjust_tests.patch
 
 	# remove test that tests the stripped zope-component test_components.ComponentsTests
 	rm -f testfixtures/tests/test_components.py || die
-	distutils_src_prepare
+	distutils-r1_src_prepare
 }
-src_compile() {
-	distutils_src_compile
 
+python_compile_all() {
 	use doc && emake -C docs html
 }
 
-src_test() {
-	distutils_src_test ${PN}/tests/
+python_test() {
+	py.test -v ${PN}/tests || die
 }
 
-src_install() {
-	distutils_src_install
+python_install_all() {
 	if use doc; then
 		dohtml -r docs/_build/html/
 	fi

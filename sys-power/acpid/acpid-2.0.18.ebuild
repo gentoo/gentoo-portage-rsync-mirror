@@ -1,17 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.17.ebuild,v 1.7 2013/01/03 12:59:15 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-2.0.18.ebuild,v 1.1 2013/03/15 20:50:03 miska Exp $
 
-EAPI=4
+EAPI=5
 inherit systemd
 
 DESCRIPTION="Daemon for Advanced Configuration and Power Interface"
-HOMEPAGE="http://tedfelix.com/linux/acpid-netlink.html"
-SRC_URI="http://tedfelix.com/linux/${P}.tar.xz"
+HOMEPAGE="http://sourceforge.net/projects/acpid2"
+SRC_URI="mirror://sourceforge/${PN}2/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ia64 -ppc x86"
+KEYWORDS="~amd64 ~ia64 -ppc ~x86"
 IUSE="selinux"
 
 RDEPEND="selinux? ( sec-policy/selinux-apm )"
@@ -30,6 +30,8 @@ src_install() {
 
 	exeinto /etc/acpi
 	newexe "${FILESDIR}"/${PN}-1.0.6-default.sh default.sh
+	exeinto /etc/acpi/actions
+	newexe samples/powerbtn/powerbtn.sh powerbtn.sh
 	insinto /etc/acpi/events
 	newins "${FILESDIR}"/${PN}-1.0.4-default default
 
