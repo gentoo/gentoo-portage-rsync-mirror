@@ -1,10 +1,12 @@
 # ChangeLog for dev-util/umockdev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/umockdev/ChangeLog,v 1.1 2013/03/15 01:09:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/umockdev/ChangeLog,v 1.2 2013/03/15 15:14:17 zmedico Exp $
+
+  15 Mar 2013; Zac Medico <zmedico@gentoo.org> umockdev-0.2.1.ebuild:
+  Fix SRC_URI.
 
 *umockdev-0.2.1 (15 Mar 2013)
 
   15 Mar 2013; Tim Harder <radhermit@gentoo.org> +umockdev-0.2.1.ebuild,
   +files/umockdev-0.2.1-make.patch, +metadata.xml:
   Initial import.
-

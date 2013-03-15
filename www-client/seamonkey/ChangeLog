@@ -1,6 +1,17 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.442 2013/03/13 17:03:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.443 2013/03/15 15:30:33 polynomial-c Exp $
+
+  15 Mar 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -seamonkey-2.0.14-r1.ebuild,
+  -files/seamonkey-2.0.14-curl7217-includes-fix.patch,
+  -files/seamonkey-2.3.1-scrollbar-mouse-interaction-improvement.patch,
+  -seamonkey-2.16.ebuild, -files/enigmail/70_enigmail-fix.patch,
+  -files/seamonkey-2.2-curl7217-includes-fix.patch, -seamonkey-2.4.1-r1.ebuild,
+  -files/firefox-15.0-fix-gstreamer-html5-crash.patch,
+  -files/Copy_xpcshell_only_if_tests_are_enabled.patch, metadata.xml:
+  Big cleanup requested by ago. All old, non-working and/or vulnerable versions
+  are now gone.
 
   13 Mar 2013; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.16.2.ebuild:
   Stable for x86, wrt bug #460818

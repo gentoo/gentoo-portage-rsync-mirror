@@ -10,19 +10,12 @@
 	<flag name='chatzilla'>Build Mozilla's IRC client (default on)</flag>
 	<flag name='custom-optimization'>Fine-tune custom compiler
 		optimizations</flag>
-	<flag name='composer'>Build Mozilla's HTML editor component (default on)</flag>
 	<flag name="ipc">Use inter-process communication between tabs and plugins.
 		Allows for greater stability in case of plugin crashes</flag>
-	<flag name='mailclient'>Build Mozilla's Mail client (default on)</flag>
-	<flag name="methodjit">Enable JIT for JavaScript using MethodJIT for faster
-		JS performance. Hardened users can disable this USE-flag to use MPROTECT
-		on grsecurity kernels.</flag>
 	<flag name='roaming'>Build roaming extension support (default on)</flag>
 	<flag name="system-jpeg">Use the system-wide <pkg>media-libs/libjpeg-turbo</pkg>
 		Use system jpeg instead of bundled.</flag>
 	<flag name='system-sqlite'>Use the system-wide <pkg>dev-db/sqlite</pkg>
 		installation with secure-delete enabled</flag>
-	<flag name="webm">Use system <pkg>media-libs/libvpx</pkg> for HTML5 WebM
-		video support.</flag>
 </use>
 </pkgmetadata>
