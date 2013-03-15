@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.18-r3.ebuild,v 1.1 2013/02/18 13:41:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.18-r3.ebuild,v 1.2 2013/03/15 10:10:16 pinkbyte Exp $
 
 EAPI=5
 
+AUTOTOOLS_IN_SOURCE_BUILD=1
 AUTOTOOLS_AUTORECONF=1
 inherit autotools-utils eutils toolchain-funcs
 
@@ -34,6 +35,7 @@ PATCHES=(
 	"${FILESDIR}/${P}-gcc47.patch" # bug #424291
 	"${FILESDIR}/${P}-lilypond.patch" # bug #437540
 	"${FILESDIR}/${P}-lilypond-tremolo.patch" # bug #437540
+	"${FILESDIR}/${P}-automake-1.12.patch" # bug #459466
 )
 
 src_prepare() {
