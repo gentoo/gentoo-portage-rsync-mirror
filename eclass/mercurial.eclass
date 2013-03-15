@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.20 2012/12/26 23:08:53 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.21 2013/03/15 21:47:58 ottxor Exp $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:
@@ -49,8 +49,8 @@ DEPEND="dev-vcs/mercurial"
 
 # @ECLASS-VARIABLE: EHG_QUIET
 # @DESCRIPTION:
-# Suppress some extra noise from mercurial, set it to 'OFF' to be louder.
-: ${EHG_QUIET:="ON"}
+# Suppress some extra noise from mercurial, set it to 'ON' to be quiet.
+: ${EHG_QUIET:="OFF"}
 [[ "${EHG_QUIET}" == "ON" ]] && EHG_QUIET_CMD_OPT="--quiet"
 
 # @ECLASS-VARIABLE: EHG_CLONE_CMD

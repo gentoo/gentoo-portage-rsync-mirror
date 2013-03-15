@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.737 2013/03/13 21:51:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.738 2013/03/15 21:47:58 ottxor Exp $
+
+  15 Mar 2013; Christoph Junghans <ottxor@gentoo.org> mercurial.eclass:
+  default to EHG_QUIET="OFF" (bug #461858)
 
   13 Mar 2013; Mike Gilbert <floppym@gentoo.org> distutils-r1.eclass:
   Reverse order of $add_args and $@ in esetup.py. Remove duplicate build
