@@ -1,6 +1,14 @@
 # ChangeLog for app-doc/elisp-manual
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.50 2013/01/13 11:35:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.51 2013/03/15 08:41:27 ulm Exp $
+
+*elisp-manual-24.3 (12 Mar 2013)
+
+  12 Mar 2013; Ulrich Müller <ulm@gentoo.org> elisp-manual-21.2.8-r2.ebuild,
+  elisp-manual-22.2.9.ebuild, elisp-manual-23.4.ebuild,
+  elisp-manual-24.2.ebuild, +elisp-manual-24.3.ebuild,
+  +files/elisp-manual-24.3-direntry.patch:
+  Version bump. Specify LICENSE more precisely.
 
   13 Jan 2013; Agostino Sarubbo <ago@gentoo.org> elisp-manual-24.2.ebuild:
   Stable for x86, wrt bug #450724

@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.673 2013/03/04 11:45:07 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.674 2013/03/15 08:55:15 olemarkus Exp $
+
+*php-5.5.0_alpha6 (15 Mar 2013)
+*php-5.4.13 (15 Mar 2013)
+*php-5.3.23 (15 Mar 2013)
+
+  15 Mar 2013; Ole Markus With <olemarkus@gentoo.org> +php-5.3.23.ebuild,
+  +php-5.4.13.ebuild, +php-5.5.0_alpha6.ebuild:
+  Version bump. Removes kolab support (bug #416859). Pic built unconditionally
+  for all shared objects (bug 354695)
 
 *php-5.3.22 (04 Mar 2013)
 *php-5.4.12 (04 Mar 2013)
