@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/inotify-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.32 2013/03/03 17:03:07 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.33 2013/03/15 11:56:02 pinkbyte Exp $
+
+  15 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> -inotify-tools-3.12.ebuild,
+  -inotify-tools-3.13.ebuild, inotify-tools-3.13-r1.ebuild,
+  inotify-tools-3.14.ebuild:
+  Change HOMEPAGE, wrt bug #457858, drop old versions
 
   03 Mar 2013; Wolfram Schlich <wschlich@gentoo.org> metadata.xml:
   removed myself from metadata.xml, added maintainer-needed@gentoo.org

@@ -1,6 +1,12 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.6 2013/03/02 23:07:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.8 2013/03/15 11:56:53 ago Exp $
+
+  15 Mar 2013; Agostino Sarubbo <ago@gentoo.org> quiterss-0.11.0.ebuild:
+  Stable for x86, wrt bug #461312
+
+  15 Mar 2013; Agostino Sarubbo <ago@gentoo.org> quiterss-0.11.0.ebuild:
+  Stable for amd64, wrt bug #461312
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> quiterss-0.11.0.ebuild:
   Move Qt dependencies to the new category

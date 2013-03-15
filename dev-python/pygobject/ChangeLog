@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.190 2013/01/28 13:43:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.192 2013/03/15 11:56:44 ago Exp $
+
+  15 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pygobject-3.2.2-r1.ebuild:
+  Stable for x86, wrt bug #458992
+
+  15 Mar 2013; Agostino Sarubbo <ago@gentoo.org> pygobject-3.2.2-r1.ebuild:
+  Stable for amd64, wrt bug #458992
 
   28 Jan 2013; Alexis Ballier <aballier@gentoo.org> pygobject-3.4.2-r1.ebuild:
   keyword ~amd64-fbsd, bug #453136

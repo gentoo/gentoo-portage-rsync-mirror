@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/inotify-tools-3.14.ebuild,v 1.1 2010/06/15 11:47:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/inotify-tools-3.14.ebuild,v 1.2 2013/03/15 11:56:02 pinkbyte Exp $
 
 EAPI="2"
 
 DESCRIPTION="a set of command-line programs providing a simple interface to inotify"
-HOMEPAGE="http://inotify-tools.sourceforge.net/"
+HOMEPAGE="https://github.com/rvoicilas/inotify-tools/wiki"
 SRC_URI="http://github.com/downloads/rvoicilas/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
