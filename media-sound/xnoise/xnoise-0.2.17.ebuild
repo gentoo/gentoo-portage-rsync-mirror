@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.2.14.ebuild,v 1.2 2013/02/23 19:02:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.2.17.ebuild,v 1.1 2013/03/16 08:11:37 angelos Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils
@@ -13,17 +13,19 @@ SRC_URI="mirror://bitbucket/shuerhaaken/${PN}/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+lastfm +lyrics"
+IUSE="ayatana +lastfm +lyrics"
 
 RDEPEND="x11-libs/gtk+:3
 	>=dev-libs/glib-2.30:2
-	media-libs/gstreamer:0.10
-	media-libs/gst-plugins-base:0.10
-	media-plugins/gst-plugins-meta:0.10
+	gnome-base/librsvg:2
+	media-libs/gstreamer:1.0
+	media-libs/gst-plugins-base:1.0
+	media-plugins/gst-plugins-meta:1.0
 	dev-db/sqlite:3
-	media-libs/taglib
+	media-libs/libtaginfo
 	x11-libs/cairo
 	x11-libs/libX11
+	ayatana? ( dev-libs/libappindicator:3 )
 	lastfm? ( net-libs/libsoup:2.4 )
 	lyrics? ( net-libs/libsoup:2.4
 		dev-libs/libxml2:2 )"
@@ -36,6 +38,7 @@ DOCS=( AUTHORS README )
 
 src_configure() {
 	econf \
+		$(use_enable ayatana appindicator) \
 		$(use_enable lyrics lyricwiki) \
 		$(use_enable lastfm) \
 		--enable-mpris \
@@ -43,7 +46,6 @@ src_configure() {
 		--enable-mediakeys \
 		$(use_enable lyrics chartlyrics) \
 		$(use_enable lyrics azlyrics) \
-		--disable-ubuntuone \
 		--enable-magnatune
 }
 
