@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.87 2013/03/14 14:31:04 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.88 2013/03/16 14:55:18 mpagano Exp $
+
+*klibc-2.0.2 (16 Mar 2013)
+
+  16 Mar 2013; Michael Pagano <mpagano@gentoo.org> +klibc-2.0.2.ebuild:
+  Version bump. Bug #442822. Thanks to AlphatPC.
 
   14 Mar 2013; Michael Pagano <mpagano@gentoo.org> klibc-1.5.20.ebuild,
   +files/klibc-1.5.20-parallel-make.patch:
