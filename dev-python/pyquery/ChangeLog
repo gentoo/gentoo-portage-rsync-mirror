@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyquery
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.27 2013/03/13 06:17:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.28 2013/03/16 11:30:51 idella4 Exp $
+
+  16 Mar 2013; Ian Delaney <idella4@gentoo.org> pyquery-1.2.4.ebuild:
+  correct docs, fixes Bug #461776
 
   13 Mar 2013; Ian Delaney <idella4@gentoo.org> -pyquery-0.6.1.ebuild,
   -pyquery-1.0.ebuild:

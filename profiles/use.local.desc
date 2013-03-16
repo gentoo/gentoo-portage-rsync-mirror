@@ -2795,6 +2795,9 @@ media-libs/allegro:vga - Enables the VGA graphics driver
 media-libs/alsa-lib:alisp - Enable support for ALISP (ALSA LISP) interpreter for advanced features.
 media-libs/alure:dumb - Enable media-libs/dumb module library support
 media-libs/alure:fluidsynth - Enables Fluidsynth MIDI software synthesis
+media-libs/avidemux-core:aften - Enable A/52 (AC-3) audio encoder support
+media-libs/avidemux-core:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr
+media-libs/avidemux-core:system-ffmpeg - Use the ffmpeg provided by the system.
 media-libs/babl:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/babl:vala - Enable bindings for dev-lang/vala
 media-libs/cal3d:16bit-indices - Enables use of 16bit indices
@@ -3433,7 +3436,6 @@ media-video/arista:faac - Use external faac library for AAC encoding
 media-video/arista:nautilus - Add an entry in the Nautilus context menu to transcode media files for a specified device.
 media-video/avidemux:aften - Enable A/52 (AC-3) audio encoder support
 media-video/avidemux:amr - Enable Adaptive Multi-Rate format support via media-libs/opencore-amr
-media-video/avidemux:system-ffmpeg - Use the ffmpeg provided by the system.
 media-video/avidemux:vpx - Enable VP8 codec support via media-libs/libvpx
 media-video/bombono-dvd:gnome - Use GVFS for desktop integration
 media-video/chaplin:transcode - Enable DVD ripping and transcoding

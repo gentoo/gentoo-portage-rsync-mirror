@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.444 2013/03/10 16:06:22 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.446 2013/03/16 11:28:14 tomwij Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -13,7 +13,7 @@ media-sound/google-musicmanager log
 
 # Tom Wijsman <TomWij@gentoo.org> (10 Mar 2013)
 # Experimental, masked until it compiles and works.
-media-video/avidemux system-ffmpeg
+media-libs/avidemux-core system-ffmpeg
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (07 Mar 2013)
 # Experimental, breaks WebSQL. Please report sites broken

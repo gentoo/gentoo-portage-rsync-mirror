@@ -1,6 +1,15 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.208 2013/03/11 12:41:18 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.209 2013/03/16 11:22:50 tomwij Exp $
+
+*avidemux-2.6.2 (16 Mar 2013)
+
+  16 Mar 2013; Tom Wijsman <TomWij@gentoo.org> +avidemux-2.6.2.ebuild,
+  -avidemux-2.6.0.ebuild, -avidemux-2.6.1.ebuild, metadata.xml:
+  Version bump to 2.6.2 where I revised the way it builds using separated core
+  libraries, should work properly. Removed old versions that had a broken
+  intermediate build system. Removed some unused things, fixed a QA warning and
+  more...
 
   11 Mar 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-2.6.1.ebuild:
   Fixed conversion from IUSE flags to cmake arguments to support USE flags that
