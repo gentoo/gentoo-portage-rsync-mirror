@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/wxhexeditor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.4 2013/02/05 18:38:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.5 2013/03/16 20:36:53 dirtyepic Exp $
+
+*wxhexeditor-0.21 (16 Mar 2013)
+
+  16 Mar 2013; Ryan Hill <dirtyepic@gentoo.org> -wxhexeditor-0.11.ebuild,
+  -files/wxhexeditor-0.11-makefile.patch, +wxhexeditor-0.21.ebuild,
+  +files/wxhexeditor-0.21-desktop-validation.patch,
+  +files/wxhexeditor-0.21-makefile.patch:
+  Version bump (Bug #455956 by Dave Armstrong). Fix .desktop file validation
+  warnings. Remove old.
 
   05 Feb 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.

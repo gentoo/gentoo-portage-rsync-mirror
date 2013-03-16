@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/wxhexeditor-0.11.ebuild,v 1.1 2011/08/19 04:44:27 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/wxhexeditor-0.21.ebuild,v 1.1 2013/03/16 20:36:53 dirtyepic Exp $
 
-EAPI="4"
+EAPI="5"
 WX_GTK_VER="2.8"
 
 inherit eutils toolchain-funcs wxwidgets
@@ -18,13 +18,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-libs/udis86
+DEPEND="app-crypt/mhash
+	dev-libs/udis86
 	x11-libs/wxGTK:2.8[X]"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}"
 
+pkg_pretend() {
+	tc-has-openmp \
+		|| die "${PN} uses OpenMP libraries. Please use an OpenMP-capable compiler."
+}
+
 src_prepare() {
+	# parts sent upstream : https://sourceforge.net/p/wxhexeditor/patches/8/
 	epatch "${FILESDIR}"/${P}-makefile.patch
-	tc-export CXX
+	# sent upstream : https://sourceforge.net/p/wxhexeditor/patches/9/
+	epatch "${FILESDIR}"/${P}-desktop-validation.patch
 }
