@@ -1,0 +1,36 @@
+From 8c0db5f5fa48ca3580bc3f7fe9fdea346857c20e Mon Sep 17 00:00:00 2001
+From: Ritesh Raj Sarraf <rrs@debian.org>
+Date: Sat, 16 Mar 2013 17:00:27 +0530
+Subject: [PATCH 17/20] Initialize variables early, before being referenced
+
+---
+ usr/sbin/laptop_mode | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/usr/sbin/laptop_mode b/usr/sbin/laptop_mode
+index bc1d02a..48e6ad4 100755
+--- a/usr/sbin/laptop_mode
++++ b/usr/sbin/laptop_mode
+@@ -508,6 +508,9 @@ lmt_load_config ()
+     fi
+ 
+     
++    INIT=0          # Display info in init script format?
++    FORCE=0         # Force reapplying the current state?
++    INITSCRIPT_STOP=0	# Track stop command from init script. Consumer is lm-polling daemon
+ 
+     # Evaluate options passed to laptop_mode in here
+     if [ "$1" = "status" ] ; then
+@@ -599,9 +602,6 @@ lmt_load_config ()
+ 	    exit 1
+     fi
+ 
+-    INIT=0          # Display info in init script format?
+-    FORCE=0         # Force reapplying the current state?
+-    INITSCRIPT_STOP=0	# Track stop command from init script. Consumer is lm-polling daemon
+     while [ "$1" != "" ] ; do
+ 	    case "$1" in 
+ 		    init) INIT=1 ;;
+-- 
+1.8.1.5
+

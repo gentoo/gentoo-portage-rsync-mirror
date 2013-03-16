@@ -1,6 +1,23 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.70 2013/03/16 10:14:25 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.71 2013/03/16 22:53:01 alonbl Exp $
+
+*laptop-mode-tools-1.62-r2 (16 Mar 2013)
+
+  16 Mar 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/1.62/0001-Do-not-ship-the-board-specific-folder-in-default-ins.patch,
+  +files/1.62/0004-add-LIB_D-so-it-can-give-the-possibility-to-install-.patch,
+  +files/1.62/0008-Re-order-the-check-because-HAL-is-deprecated.patch,
+  +files/1.62/0014-Kick-the-power-savings-back-in-as-soon-as-the-stick-.patch,
+  +files/1.62/0015-Don-t-hardcode-the-path.patch,
+  +files/1.62/0016-show-the-errors-if-any.patch,
+  +files/1.62/0017-Initialize-variables-early-before-being-referenced.patch,
+  +files/1.62/0018-install-remove-unused-substitute-for-udev-rule.patch,
+  +files/1.62/0019-install-use-customizable-udev-directory.patch,
+  +files/1.62/0020-install-make-systemd-optional-and-configurable-locat.patch,
+  +laptop-mode-tools-1.62-r2.ebuild:
+  cherry-pick upstream patches, among other fixes bug#450248, bug#461670, add
+  own patch to customize udev and systemd directories, add systemd USE
 
   16 Mar 2013; Alon Bar-Lev <alonbl@gentoo.org> metadata.xml:
   Add upstream maintainer per his request

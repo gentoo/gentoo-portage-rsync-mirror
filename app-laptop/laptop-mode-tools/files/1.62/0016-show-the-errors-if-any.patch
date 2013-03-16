@@ -1,0 +1,25 @@
+From 7bde97466a824bdec0f2f4bc545e9790eac62e41 Mon Sep 17 00:00:00 2001
+From: Ritesh Raj Sarraf <rrs@debian.org>
+Date: Sat, 16 Mar 2013 16:35:19 +0530
+Subject: [PATCH 16/20] show the errors, if any
+
+---
+ install.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/install.sh b/install.sh
+index cde2a0a..b36c8ca 100755
+--- a/install.sh
++++ b/install.sh
+@@ -202,7 +202,7 @@ if ( ! $INSTALL -D -m 644 etc/rules/99-laptop-mode.rules "$DESTDIR/etc/udev/rule
+     echo "$0: Failed to install udev rule into /etc/udev/rules.d/ Installation failed."
+     exit 23
+ else
+-    sed -i -e "s|@LIB_D@|$LIB_D|g" $DESTDIR/etc/udev/rules.d/99-laptop-mode.rules >/dev/null 2>&1
++    sed -i -e "s|@LIB_D@|$LIB_D|g" $DESTDIR/etc/udev/rules.d/99-laptop-mode.rules
+ fi
+ 
+ # udev helper tool
+-- 
+1.8.1.5
+

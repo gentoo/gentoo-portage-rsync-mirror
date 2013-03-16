@@ -1,0 +1,26 @@
+From 7fb36a367d5faa935b31b2191e7255149c8a9823 Mon Sep 17 00:00:00 2001
+From: Alon Bar-Lev <alon.barlev@gmail.com>
+Date: Sat, 16 Mar 2013 23:42:21 +0200
+Subject: [PATCH 18/20] install: remove unused substitute for udev rule
+
+Signed-off-by: Alon Bar-Lev <alon.barlev@gmail.com>
+---
+ install.sh | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/install.sh b/install.sh
+index b36c8ca..900a596 100755
+--- a/install.sh
++++ b/install.sh
+@@ -201,8 +201,6 @@ fi
+ if ( ! $INSTALL -D -m 644 etc/rules/99-laptop-mode.rules "$DESTDIR/etc/udev/rules.d/99-laptop-mode.rules" ) ; then
+     echo "$0: Failed to install udev rule into /etc/udev/rules.d/ Installation failed."
+     exit 23
+-else
+-    sed -i -e "s|@LIB_D@|$LIB_D|g" $DESTDIR/etc/udev/rules.d/99-laptop-mode.rules
+ fi
+ 
+ # udev helper tool
+-- 
+1.8.1.5
+
