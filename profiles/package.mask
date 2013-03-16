@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14557 2013/03/16 13:32:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14558 2013/03/16 14:22:29 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Aaron W. Swenson <titanofold@gentoo.org> (16 Mar 2013)
+# The PostgreSQL 8.3 series has reached End of Life and is no longer
+# supported here or upstream. Please migrate to a more recent series
+# as this series will be removed 2013-05-16.
+<dev-db/postgresql-docs-8.4.0
+<dev-db/postgresql-base-8.4.0
+<dev-db/postgresql-server-8.4.0
 
 # Samuli Suominen <ssuominen@gentoo.org> (16 Mar 2013)
 # Temporary mask, waiting for the emul-linux-x86-soundlibs
