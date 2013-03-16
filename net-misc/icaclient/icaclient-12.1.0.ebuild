@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-12.1.0.ebuild,v 1.4 2012/11/26 23:11:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-12.1.0.ebuild,v 1.5 2013/03/16 11:49:28 ulm Exp $
 
 EAPI=4
 
@@ -55,10 +55,10 @@ RDEPEND="x11-terms/xterm
 		>=x11-libs/motif-2.3.1:0
 	)
 	amd64? (
+		>=app-emulation/emul-linux-x86-xlibs-20110129
 		|| (
-			( >=app-emulation/emul-linux-x86-xlibs-20110129
-			>=app-emulation/emul-linux-x86-motif-20110129 )
-			<app-emulation/emul-linux-x86-xlibs-20110129
+			>=x11-libs/motif-2.3.4:0[abi_x86_32]
+			>=app-emulation/emul-linux-x86-motif-20110129
 		)
 		>=app-emulation/emul-linux-x86-soundlibs-20110928
 		>=app-emulation/emul-linux-x86-gtklibs-20110928

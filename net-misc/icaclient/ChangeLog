@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/icaclient
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.88 2012/11/26 23:11:25 fauli Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.89 2013/03/16 11:49:28 ulm Exp $
+
+  16 Mar 2013; Ulrich Müller <ulm@gentoo.org> icaclient-12.1.0.ebuild:
+  Update dependency, multilib-enabled x11-libs/motif will replace
+  app-emulation/emul-linux-x86-motif.
 
   26 Nov 2012; Christian Faulhammer <fauli@gentoo.org> icaclient-12.1.0.ebuild:
   fix sandbox violation as reported in bug 435246 by Fabiano
