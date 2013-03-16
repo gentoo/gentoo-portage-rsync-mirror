@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14559 2013/03/16 17:00:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14560 2013/03/16 19:09:24 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -739,12 +739,6 @@ app-pda/libopensync-plugin-evolution2
 app-pda/libopensync-plugin-gnokii
 app-pda/libopensync-plugin-gpe
 app-pda/multisync-gui
-
-# Ryan Hill <dirtyepic@gentoo.org> (22 Jan 2011)
-# Mask development versions due to unstable API
-# as requested by leio
->=dev-python/wxpython-2.9
->=x11-libs/wxGTK-2.9
 
 # Michael Sterrett <mr_bones_@gentoo.org> (20 Jan 2010)
 # testing mask for upcoming exult release

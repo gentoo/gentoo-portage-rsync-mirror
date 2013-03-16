@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7596 2013/03/16 17:00:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7597 2013/03/16 19:09:23 dirtyepic Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Mar 2013; Ryan Hill <dirtyepic@gentoo.org> package.mask:
+  Unmask wxGTK/wxpython:2.9 (bug #446998).
 
   16 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask new revision of libv4l with ABI_X86="32" support temporarily while
