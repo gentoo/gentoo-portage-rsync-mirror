@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/source-pro
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/source-pro/ChangeLog,v 1.3 2012/12/16 05:46:44 zx2c4 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/source-pro/ChangeLog,v 1.4 2013/03/16 07:13:57 nirbheek Exp $
+
+*source-pro-20130316 (16 Mar 2013)
+
+  16 Mar 2013; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +source-pro-20130316.ebuild:
+  Update to source code pro: new weight (medium) and misc bug fixes
 
   16 Dec 2012; Jason A. Donenfeld <zx2c4@gentoo.org>
   -source-pro-20121014.ebuild:
