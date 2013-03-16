@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20130224.ebuild,v 1.1 2013/02/25 18:48:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20130224.ebuild,v 1.2 2013/03/16 10:51:34 ssuominen Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -11,6 +11,7 @@ IUSE="alsa"
 
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 	~app-emulation/emul-linux-x86-medialibs-${PV}
+	!>=media-libs/libmikmod-3.2.0-r1[abi_x86_32]
 	!>=sci-libs/fftw-3.3.3-r1[abi_x86_32]"
 
 src_prepare() {
