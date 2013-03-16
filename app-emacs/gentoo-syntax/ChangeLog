@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.92 2013/03/09 07:43:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.93 2013/03/16 09:27:58 ulm Exp $
+
+  16 Mar 2013; Ulrich Müller <ulm@gentoo.org> gentoo-syntax-1.21.ebuild:
+  Use readme.gentoo instead of elog.
 
 *gentoo-syntax-1.21 (08 Mar 2013)
 

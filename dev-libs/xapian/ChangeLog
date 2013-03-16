@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.97 2013/02/15 22:02:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.98 2013/03/16 09:09:51 blueness Exp $
+
+*xapian-1.2.14 (16 Mar 2013)
+
+  16 Mar 2013; Anthony G. Basile <blueness@gentoo.org> +xapian-1.2.14.ebuild:
+  Version bump
 
   15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> xapian-1.2.13.ebuild:
   Stable for arm, wrt bug #457296

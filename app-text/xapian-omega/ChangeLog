@@ -1,6 +1,12 @@
 # ChangeLog for app-text/xapian-omega
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/ChangeLog,v 1.24 2013/03/14 06:59:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/ChangeLog,v 1.25 2013/03/16 09:26:40 blueness Exp $
+
+*xapian-omega-1.2.14 (16 Mar 2013)
+
+  16 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
+  +xapian-omega-1.2.14.ebuild:
+  Version bump
 
   14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> xapian-omega-1.2.13.ebuild:
   Stable for arm, wrt bug #461088

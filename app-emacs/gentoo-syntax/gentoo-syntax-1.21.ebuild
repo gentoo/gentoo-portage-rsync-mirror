@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-1.21.ebuild,v 1.1 2013/03/09 07:43:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-1.21.ebuild,v 1.2 2013/03/16 09:27:58 ulm Exp $
 
 EAPI=5
 
-inherit elisp
+inherit readme.gentoo elisp
 
 DESCRIPTION="Emacs modes for editing ebuilds and other Gentoo specific files"
 HOMEPAGE="http://www.gentoo.org/proj/en/lisp/emacs/"
@@ -17,10 +17,5 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~sparc-fbsd ~x86-fbs
 DOCS="ChangeLog keyword-generation.sh"
 ELISP_TEXINFO="${PN}.texi"
 SITEFILE="50${PN}-gentoo.el"
-
-pkg_postinst() {
-	elisp-site-regen
-
-	elog "Some optional features may require installation of additional"
-	elog "packages, like app-portage/gentoolkit-dev for echangelog."
-}
+DOC_CONTENTS="Some optional features may require installation of additional
+	packages, like app-portage/gentoolkit-dev for echangelog."
