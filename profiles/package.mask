@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14556 2013/03/16 11:24:37 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14557 2013/03/16 13:32:01 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -250,16 +250,6 @@ dev-ruby/rack-test:0.5
 dev-ruby/mysql2:0.2
 
 # Doug Goldstein <cardoe@gentoo.org> (10 Feb 2013)
-# Use the in-kernel saa717x driver, available since at least 2.6.25
-# Removal in 30 days
-media-tv/ivtv
-
-# Matt Turner <mattst88@gentoo.org> (10 Feb 2013)
-# Use the in-kernel AT76C50X_USB driver.
-# Removal in 30 days.
-net-wireless/at76c503a
-
-# Doug Goldstein <cardoe@gentoo.org> (10 Feb 2013)
 # For most use cases you can unmask this and use this
 # as there has been ample interested. This however breaks
 # a number of features fundamental to me.
@@ -283,39 +273,6 @@ media-gfx/picasa
 # Removal in a month.
 dev-python/papyon
 net-voip/telepathy-butterfly
-
-# Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
-# The firmware cleanup, part #1. Can be unmasked after
-# cleaning up the package if it's still needed.
-# Some of these install to wrong directory, /lib64/firmware
-# as opposed to correct /lib/firmware
-# Some of these don't have maintainer
-# Some of these are replaced by the firmware from the
-# linux-firmware package:
-# emerge -av linux-firmware
-# If you still have a reason to keep the package, please
-# let us know by filing a bug report.
-# Removal in 30 days
-net-wireless/ar9271-firmware
-net-wireless/libertas-firmware
-net-wireless/rt2860-firmware
-net-wireless/rt2870-firmware
-net-wireless/rt73-firmware
-sys-firmware/rt61-firmware
-net-wireless/i2400m-fw
-
-# Samuli Suominen <ssuominen@gentoo.org> (10 Feb 2013)
-# There is no license file available for prism54-firmware
-# since it's been extracted from windows binary blob
-# drivers. And this is for very old hardware.
-# Removal in 30 days
-net-wireless/prism54-firmware
-
-# Rick Farina <zerochaos@gentoo.org> (10 Feb 2013)
-# This firmware has been replaced by rtlwifi/*
-# which is already in the linux-firmware package.
-# Removal in 30 days
-net-wireless/rtl8192su-firmware
 
 # Ryan Hill <dirtyepic@gentoo.org> (07 Feb 2013)
 # Breaks everything (bug #456108)
