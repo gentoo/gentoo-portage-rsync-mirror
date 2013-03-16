@@ -1,22 +1,21 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-4.01.01.ebuild,v 1.7 2013/03/16 16:43:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-4.01.05.ebuild,v 1.1 2013/03/16 16:43:20 jlec Exp $
 
-EAPI=4
+EAPI=5
+
+MY_PN="App-ClusterSSH"
+MODULE_AUTHOR="DUNCS"
+MODULE_VERSION="4.01_05"
 
 inherit eutils perl-module versionator
 
-MY_PN="App-ClusterSSH"
-MY_PV="$(replace_version_separator 2 _)"
-MY_P="${MY_PN}-${MY_PV}"
-
 DESCRIPTION="Concurrent Multi-Server Terminal Access"
 HOMEPAGE="http://clusterssh.sourceforge.net"
-SRC_URI="mirror://sourceforge/clusterssh/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="
@@ -36,9 +35,9 @@ DEPEND="
 	dev-perl/File-Which
 	virtual/perl-Module-Build
 	dev-perl/Test-Pod
-	test? ( dev-perl/Test-Differences )"
+	dev-perl/Test-Differences"
 
-S="${WORKDIR}"/${MY_P}
+#S="${WORKDIR}"/${MY_P}
 
 SRC_TEST="do parallel"
 
@@ -50,6 +49,5 @@ src_prepare() {
 		-i MANIFEST || die
 	rm t/boilerplate.t t/manifest.t || die
 
-	epatch "${FILESDIR}"/${P}-testfix-1.patch
 	perl-module_src_prepare
 }

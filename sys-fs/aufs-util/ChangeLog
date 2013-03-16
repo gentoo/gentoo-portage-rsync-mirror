@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/aufs-util
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.10 2013/03/15 09:49:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.11 2013/03/16 16:53:09 jlec Exp $
+
+  16 Mar 2013; Justin Lecher <jlec@gentoo.org> aufs-util-3.8_p20130318.ebuild:
+  Fine grade blocker of sys-fs/aufs3, #461810
 
 *aufs-util-3.8_p20130318 (15 Mar 2013)
 

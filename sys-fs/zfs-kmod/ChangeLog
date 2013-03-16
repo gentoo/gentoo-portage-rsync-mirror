@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.21 2013/03/15 13:20:45 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.22 2013/03/16 16:59:35 ryao Exp $
+
+  16 Mar 2013; Richard Yao <ryao@gentoo.org>
+  -files/zfs-kmod-0.6.0_rc14-symlink-headers.patch,
+  zfs-kmod-0.6.0_rc10-r2.ebuild, zfs-kmod-0.6.0_rc11-r3.ebuild,
+  zfs-kmod-0.6.0_rc12-r3.ebuild, zfs-kmod-0.6.0_rc13-r4.ebuild,
+  zfs-kmod-0.6.0_rc14-r4.ebuild, zfs-kmod-9999.ebuild:
+  Switch to linux-info eclass; Replace zfs-kmod-0.6.0_rc14-symlink-headers.patch
+  with dosym in src_install()
 
 *zfs-kmod-0.6.0_rc14-r4 (15 Mar 2013)
 *zfs-kmod-0.6.0_rc12-r3 (15 Mar 2013)

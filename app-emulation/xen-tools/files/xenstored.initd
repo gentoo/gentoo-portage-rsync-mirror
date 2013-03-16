@@ -1,10 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xenstored.initd,v 1.2 2011/04/05 21:25:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xenstored.initd,v 1.3 2013/03/16 16:46:57 idella4 Exp $
 
 depend() {
-	need net
 	before xendomains xend sshd ntp-client ntpd nfs nfsmount rsyncd portmap dhcp 
 }
 

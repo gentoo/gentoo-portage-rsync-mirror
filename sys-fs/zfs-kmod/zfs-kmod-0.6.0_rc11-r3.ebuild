@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc11-r3.ebuild,v 1.1 2013/03/15 13:20:45 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.0_rc11-r3.ebuild,v 1.2 2013/03/16 16:59:35 ryao Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ AT_M4DIR="config"
 AUTOTOOLS_AUTORECONF="1"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
-inherit bash-completion-r1 flag-o-matic linux-mod toolchain-funcs autotools-utils
+inherit bash-completion-r1 flag-o-matic linux-info toolchain-funcs autotools-utils
 
 if [ ${PV} == "9999" ] ; then
 	inherit git-2
@@ -39,6 +39,7 @@ RDEPEND="${DEPEND}
 "
 
 pkg_setup() {
+	linux-info_pkg_setup
 	CONFIG_CHECK="!DEBUG_LOCK_ALLOC
 		BLK_DEV_LOOP
 		EFI_PARTITION

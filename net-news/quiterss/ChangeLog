@@ -1,6 +1,13 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.8 2013/03/15 11:56:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.9 2013/03/16 17:00:08 pinkbyte Exp $
+
+*quiterss-0.12.3 (16 Mar 2013)
+
+  16 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> +quiterss-0.12.3.ebuild,
+  +files/quiterss-0.12.3-unbundle-sqlite.patch:
+  Version bump, wrt bug #458170, thanks to Denis M. <god AT politeia.in> for
+  updated ebuild and patch
 
   15 Mar 2013; Agostino Sarubbo <ago@gentoo.org> quiterss-0.11.0.ebuild:
   Stable for x86, wrt bug #461312

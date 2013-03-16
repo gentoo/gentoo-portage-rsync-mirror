@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14558 2013/03/16 14:22:29 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14559 2013/03/16 17:00:34 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -40,9 +40,10 @@
 <dev-db/postgresql-server-8.4.0
 
 # Samuli Suominen <ssuominen@gentoo.org> (16 Mar 2013)
-# Temporary mask, waiting for the emul-linux-x86-soundlibs
-# to be bumped for abi_x86_32 here.
+# Waiting for new emul-linux-x86-{media,sound}libs without
+# the duplicate files.
 >=media-libs/libmikmod-3.2.0-r1
+>=media-libs/libv4l-0.8.9-r1
 
 # Tom Wijsman <TomWij@gentoo.org> (13 Mar 2013)
 # Masking vulnerable versions of Meteor.
@@ -231,11 +232,6 @@ games-strategy/x2-demo
 # but followed by very keen users.  It will be either
 # abandonned or implemented down the track pending further support
 =app-emulation/xen-tools-4.2.1-r2
-
-# Samuli Suominen <ssuominen@gentoo.org> (11 Feb 2013)
-# The 3 files from this package are part of the linux-firmware
-# package now. Removal in 30 days.
-media-tv/cx18-firmware
 
 # Hans de Graaff <graaff@gentoo.org> (11 Feb 2013)
 # No longer supported upstream even for security bugs.

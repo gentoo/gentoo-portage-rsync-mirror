@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7595 2013/03/16 14:22:29 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.7596 2013/03/16 17:00:33 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask new revision of libv4l with ABI_X86="32" support temporarily while
+  waiting for new emul-linux-x86-medialibs release.
 
   16 Mar 2013; Aaron W. Swenson <titanofold@gentoo.org> package.mask:
   Mask dev-db/postgresql-{docs,base,server}:8.3 for removal 2013-05-16. (EOL)

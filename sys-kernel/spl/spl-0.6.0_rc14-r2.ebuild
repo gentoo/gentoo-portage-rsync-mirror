@@ -1,14 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc14-r2.ebuild,v 1.1 2013/03/15 13:17:03 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc14-r2.ebuild,v 1.2 2013/03/16 16:59:00 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
 
-inherit flag-o-matic linux-mod autotools-utils
+inherit flag-o-matic linux-info autotools-utils
 
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-2
+	MY_PV=9999
 	EGIT_REPO_URI="git://github.com/zfsonlinux/${PN}.git"
 else
 	inherit eutils versionator
@@ -37,6 +38,7 @@ AT_M4DIR="config"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 
 pkg_setup() {
+	linux-info_pkg_setup
 	CONFIG_CHECK="
 		!DEBUG_LOCK_ALLOC
 		!GRKERNSEC_HIDESYM
@@ -58,9 +60,6 @@ pkg_setup() {
 src_prepare() {
 	# Workaround for hard coded path
 	sed -i "s|/sbin/lsmod|/bin/lsmod|" scripts/check.sh || die
-
-	# Provide /usr/src/spl symlink for lustre
-	epatch "${FILESDIR}/${P}-symlink-headers.patch"
 
 	if [ ${PV} != "9999" ]
 	then
@@ -100,6 +99,9 @@ src_configure() {
 src_install() {
 	autotools-utils_src_install
 	dodoc AUTHORS DISCLAIMER INSTALL README.markdown
+
+	# Provide /usr/src/spl symlink for lustre
+	dosym "spl-${MY_PV}/${KV_FULL}" /usr/src/spl
 }
 
 src_test() {
