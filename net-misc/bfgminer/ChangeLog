@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.34 2013/02/25 13:30:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.35 2013/03/16 17:32:13 blueness Exp $
+
+  16 Mar 2013; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Fix Luke's bugzilla email addr
 
   25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> bfgminer-2.5.0.ebuild:
   Stable for x86, wrt bug #430210

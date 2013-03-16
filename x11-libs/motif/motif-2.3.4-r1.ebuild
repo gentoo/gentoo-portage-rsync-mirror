@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.1 2013/03/15 19:16:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.2 2013/03/16 17:58:06 ulm Exp $
 
 EAPI=5
 
@@ -106,17 +106,16 @@ src_compile() {
 	multilib_foreach_abi my_other_abi_compile
 }
 
-multilib_src_install() {
-	emake DESTDIR="${D}" install
-	use examples && emake -C demos DESTDIR="${D}" install-data
-}
-
 multilib_src_install_all() {
 	# mwm default configs
 	insinto /usr/share/X11/app-defaults
 	newins "${FILESDIR}"/Mwm.defaults Mwm
 
 	if use examples; then
+		my_install_demos() {
+			emake -C "${BUILD_DIR}"/demos DESTDIR="${D}" install-data
+		}
+		multilib_for_best_abi my_install_demos
 		dodir /usr/share/doc/${PF}/demos
 		mv "${ED}"/usr/share/Xm/* "${ED}"/usr/share/doc/${PF}/demos || die
 	fi
