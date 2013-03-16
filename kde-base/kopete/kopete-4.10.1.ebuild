@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.10.1.ebuild,v 1.1 2013/03/06 13:41:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.10.1.ebuild,v 1.2 2013/03/15 23:04:40 creffett Exp $
 
 EAPI=5
 
@@ -15,6 +15,8 @@ IUSE="debug ssl v4l"
 
 # tests hang, last checked for 4.2.96
 RESTRICT=test
+
+PATCHES=( "${FILESDIR}/${PN}-4.10.1-nofatalwarn.patch" )
 
 # Available plugins
 #

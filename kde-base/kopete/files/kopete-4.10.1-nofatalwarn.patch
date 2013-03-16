@@ -1,0 +1,13 @@
+diff -ruN kopete-4.10.1/CMakeLists.txt kopete-4.10.1-patched/CMakeLists.txt
+--- kopete-4.10.1/CMakeLists.txt	2013-03-15 18:42:36.582537588 -0400
++++ kopete-4.10.1-patched/CMakeLists.txt	2013-03-15 18:52:43.437521238 -0400
+@@ -28,6 +28,9 @@
+    set(CMAKE_REQUIRED_INCLUDES  ${KDEWIN_INCLUDES} )
+ endif (WIN32)
+ 
++set ( CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--no-fatal-warnings")
++set ( CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} -Wl,--no-fatal-warnings")
++
+ macro_optional_find_package(KdepimLibs)
+ # find_package(X11VidMode) not used at this time
+ 
