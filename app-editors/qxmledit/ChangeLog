@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/qxmledit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/ChangeLog,v 1.40 2013/03/15 19:10:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/ChangeLog,v 1.41 2013/03/16 21:54:57 pesa Exp $
+
+  16 Mar 2013; Davide Pesavento <pesa@gentoo.org> -qxmledit-0.8.2.ebuild:
+  old
 
 *qxmledit-0.8.5 (15 Mar 2013)
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/avidemux-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/ChangeLog,v 1.1 2013/03/16 11:14:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/ChangeLog,v 1.2 2013/03/16 22:00:45 tomwij Exp $
+
+  16 Mar 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-core-2.6.2.ebuild:
+  Made avidemux-core block old versions of avidemux that had the core libraries,
+  this resolves file collisions.
 
 *avidemux-core-2.6.2 (16 Mar 2013)
 
