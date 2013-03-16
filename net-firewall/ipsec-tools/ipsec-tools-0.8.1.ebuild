@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.8.1.ebuild,v 1.1 2013/03/16 00:52:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.8.1.ebuild,v 1.2 2013/03/16 08:48:44 blueness Exp $
 
 EAPI="5"
 
@@ -186,7 +186,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.8.0-sysctl.patch #425770
 
 	AT_M4DIR="${S}" eautoreconf
-	epunt_cxx
 }
 
 src_configure() {
