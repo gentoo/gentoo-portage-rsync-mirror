@@ -4,11 +4,11 @@ DESCRIPTION=Provides precompiled 32bit libraries
 EAPI=5
 HOMEPAGE=http://dev.gentoo.org/~pacho/emul.html
 IUSE=+development
-KEYWORDS=-* ~amd64
+KEYWORDS=-* amd64
 LICENSE=Artistic GPL-1 GPL-2 GPL-3 BSD BSD-2 BZIP2 AFL-2.1 LGPL-2.1 BSD-4 MIT public-domain LGPL-3 LGPL-2 GPL-2-with-exceptions MPL-1.1 OPENLDAP Sleepycat UoI-NCSA ZLIB openafs-krb5-a HPND ISC RSA IJG libmng libtiff openssl tcp_wrappers_license
 RDEPEND=!<app-emulation/emul-linux-x86-medialibs-10.2 >=sys-libs/glibc-2.15
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-baselibs-20130224.tar.xz
 _eclasses_=emul-linux-x86	c34950dbcd2b4725fa3d91047c677902	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=694b6af447199ad6557b1631629e93ee
+_md5_=245aae0374ea3223cbd82aa7055a2a0d

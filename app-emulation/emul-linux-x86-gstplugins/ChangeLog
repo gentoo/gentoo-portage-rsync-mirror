@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-gstplugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gstplugins/ChangeLog,v 1.10 2013/02/25 18:41:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gstplugins/ChangeLog,v 1.11 2013/03/16 15:20:08 pacho Exp $
+
+  16 Mar 2013; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-gstplugins-20130224.ebuild:
+  amd64 stable, bug #461674
 
 *emul-linux-x86-gstplugins-20130224 (25 Feb 2013)
 

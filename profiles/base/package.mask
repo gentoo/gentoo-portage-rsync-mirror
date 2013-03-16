@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.54 2013/03/10 18:01:20 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.55 2013/03/16 15:12:29 swift Exp $
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (8 Feb 2011)
 #  on behalf of QA team <qa@gentoo.org
@@ -26,6 +26,7 @@ sys-apps/policycoreutils
 sys-libs/libselinux
 sys-libs/libsemanage
 sys-libs/libsepol
+sec-policy/selinux-abrt
 sec-policy/selinux-acct
 sec-policy/selinux-ada
 sec-policy/selinux-afs

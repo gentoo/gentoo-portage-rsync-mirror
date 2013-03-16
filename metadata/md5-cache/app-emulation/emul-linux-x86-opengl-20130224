@@ -4,11 +4,11 @@ DESCRIPTION=Provides precompiled 32bit libraries
 EAPI=5
 HOMEPAGE=http://dev.gentoo.org/~pacho/emul.html
 IUSE=+development
-KEYWORDS=-* ~amd64 ~amd64-linux
+KEYWORDS=-* amd64 ~amd64-linux
 LICENSE=BSD MIT LGPL-3 SGI-B-2.0
 RDEPEND=>=app-emulation/emul-linux-x86-xlibs-20100611 !<app-emulation/emul-linux-x86-xlibs-20100611 media-libs/mesa
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pacho/emul/emul-linux-x86-opengl-20130224.tar.xz
 _eclasses_=emul-linux-x86	c34950dbcd2b4725fa3d91047c677902	multilib	ded93e450747134a079e647d888aa80b	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e
-_md5_=2cfd1293d69c574f4170b3a27a5612fe
+_md5_=072118a86fed21f3008a897b1f6e541e

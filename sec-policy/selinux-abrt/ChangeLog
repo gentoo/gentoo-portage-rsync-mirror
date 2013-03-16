@@ -1,0 +1,12 @@
+# ChangeLog for sec-policy/selinux-abrt
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-abrt/ChangeLog,v 1.1 2013/03/16 15:20:36 swift Exp $
+
+*selinux-abrt-9999 (16 Mar 2013)
+*selinux-abrt-2.20120725-r12 (16 Mar 2013)
+
+  16 Mar 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-abrt-2.20120725-r12.ebuild, +selinux-abrt-9999.ebuild,
+  +metadata.xml:
+  Initial package for abrt SELinux policy
+
