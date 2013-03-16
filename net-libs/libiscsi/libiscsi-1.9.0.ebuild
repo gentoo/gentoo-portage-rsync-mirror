@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libiscsi/libiscsi-9999.ebuild,v 1.2 2013/03/16 05:15:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libiscsi/libiscsi-1.9.0.ebuild,v 1.2 2013/03/16 05:18:16 cardoe Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://github.com/sahlberg/libiscsi.git"
 	KEYWORDS=""
 else
-	SRC_URI="https://github.com/sahlberg/libiscsi/archive/${PV}.tar.gz"
+	SRC_URI="https://github.com/sahlberg/libiscsi/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 

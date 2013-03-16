@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=iscsi client library and utilities
+EAPI=5
+HOMEPAGE=https://github.com/sahlberg/libiscsi
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 LGPL-2
+SLOT=0
+SRC_URI=https://github.com/sahlberg/libiscsi/archive/1.9.0.tar.gz -> libiscsi-1.9.0.tar.gz
+_md5_=7168955ceb1c5e400fc72f3239346aee
