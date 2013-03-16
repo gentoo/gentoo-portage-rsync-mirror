@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.2.ebuild,v 1.2 2013/03/12 14:50:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.2.ebuild,v 1.3 2013/03/16 02:38:33 cardoe Exp $
 
 EAPI=5
 
 PYTHON_DEPEND="2"
 
-inherit python user
+inherit eutils python
 
 #BACKPORTS=1
 
