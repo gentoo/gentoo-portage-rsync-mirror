@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/setconf
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/setconf/ChangeLog,v 1.1 2013/03/16 18:51:02 ssuominen Exp $
+
+*setconf-0.5.3 (16 Mar 2013)
+
+  16 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> +setconf-0.5.3.ebuild:
+  Initial commit.
+
