@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.95 2013/01/21 15:54:24 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.96 2013/03/16 21:15:52 ottxor Exp $
+
+*filezilla-3.6.0.2-r1 (16 Mar 2013)
+
+  16 Mar 2013; Christoph Junghans <ottxor@gentoo.org>
+  +filezilla-3.6.0.2-r1.ebuild:
+  added prefix support (bug #461292)
 
   21 Jan 2013; Bernard Cafarelli <voyageur@gentoo.org>
   filezilla-3.6.0.2.ebuild, +files/filezilla-3.6.0.2-tests_link.patch:
@@ -497,4 +503,3 @@
   22 Dec 2007; Jason Smathers <jsin@gentoo.org> +filezilla-3.0.4.ebuild:
   New ebuild, thanks to the users whom contributed:  Matthew Schultz, Kalidarn,
   Paul Bredbury, zhoumi, Alois Hammer, and Pham Ngoc Hai.  Bug #89290
-
