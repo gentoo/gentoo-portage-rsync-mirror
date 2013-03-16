@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.362 2013/03/16 11:52:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.363 2013/03/16 17:13:11 dilfridge Exp $
+
+  16 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> poppler-0.22.2.ebuild:
+  Do not install ChangeLog, even compressed it is huge
 
   16 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   -poppler-0.20.4.ebuild, -poppler-0.22.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.22.2.ebuild,v 1.4 2013/03/16 11:40:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.22.2.ebuild,v 1.5 2013/03/16 17:13:11 dilfridge Exp $
 
 EAPI=5
 
@@ -50,7 +50,7 @@ RDEPEND="${COMMON_DEPEND}
 	cjk? ( >=app-text/poppler-data-0.4.4 )
 "
 
-DOCS=(AUTHORS ChangeLog NEWS README README-XPDF TODO)
+DOCS=(AUTHORS NEWS README README-XPDF TODO)
 
 PATCHES=(
 	"${FILESDIR}/${P}-nojpeg.patch"

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler-data
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.58 2012/10/18 21:15:04 reavertm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.59 2013/03/16 17:24:47 jer Exp $
+
+  16 Mar 2013; Jeroen Roovers <jer@gentoo.org> poppler-data-0.4.6.ebuild:
+  Stable for HPPA (bug #456472).
 
 *poppler-data-0.4.6 (18 Oct 2012)
 

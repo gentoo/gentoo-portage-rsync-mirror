@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.152 2013/03/14 02:56:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.153 2013/03/16 17:11:49 ssuominen Exp $
+
+*consolekit-0.4.5_p20120320-r2 (16 Mar 2013)
+
+  16 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  consolekit-0.4.5_p20120320-r1.ebuild, +consolekit-0.4.5_p20120320-r2.ebuild:
+  Fix use of QA_MULTILIB_PATHS and revision bump because the helpers are also
+  used by gnome-base/gdm moved wrt #461866 by Alphat-PC
 
   14 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
   consolekit-0.4.5_p20120320-r1.ebuild:
