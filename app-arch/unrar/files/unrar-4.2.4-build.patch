@@ -1,0 +1,37 @@
+do not let these targets depend on clean, otherwise it could run in
+parallel with the object compile which runs into races
+https://bugs.gentoo.org/461806
+
+While we're in here, fix up a few other things:
+ - do not bother with `rm` in the output since linking will clober it
+ - use CXXFLAGS when linking
+ - append LIBFLAGS to the individual targets instead of the final link
+
+--- a/makefile.unix
++++ b/makefile.unix
+@@ -116,9 +116,8 @@
+ clean:
+ 	@rm -f *.o *.bak *~
+ 
+-unrar:	clean $(OBJECTS) $(UNRAR_OBJ)
+-	@rm -f unrar
+-	$(LINK) -o unrar $(LDFLAGS) $(OBJECTS) $(UNRAR_OBJ) $(LIBS)	
++unrar:	$(OBJECTS) $(UNRAR_OBJ)
++	$(LINK) -o unrar $(CXXFLAGS) $(LDFLAGS) $(OBJECTS) $(UNRAR_OBJ) $(LIBS)
+ 	$(STRIP) unrar
+ 
+ sfx:	WHAT=SFX_MODULE
+@@ -128,10 +127,9 @@
+ 	$(STRIP) default.sfx
+ 
+ lib:	WHAT=RARDLL
+-lib:	CXXFLAGS+=$(LIBFLAGS)
+-lib:	clean $(OBJECTS) $(LIB_OBJ)
+-	@rm -f libunrar.so
+-	$(LINK) -shared -o libunrar.so $(LDFLAGS) $(OBJECTS) $(LIB_OBJ)
++$(OBJECTS) $(LIB_OBJ):	CXXFLAGS+=$(LIBFLAGS)
++lib:	$(OBJECTS) $(LIB_OBJ)
++	$(LINK) -shared -o libunrar.so $(CXXFLAGS) $(LDFLAGS) $(OBJECTS) $(LIB_OBJ)
+ 
+ install-unrar:
+ 			install -D unrar $(DESTDIR)/bin/unrar
