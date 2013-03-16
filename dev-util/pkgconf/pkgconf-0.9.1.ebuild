@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/pkgconf-0.8.11.ebuild,v 1.1 2013/02/24 16:14:18 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/pkgconf-0.9.1.ebuild,v 1.1 2013/03/16 18:23:40 jdhore Exp $
 
 EAPI="4"
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc12-r1.ebuild,v 1.7 2013/03/16 16:59:00 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/spl-0.6.0_rc12-r1.ebuild,v 1.8 2013/03/16 18:05:53 ryao Exp $
 
 EAPI="4"
 AUTOTOOLS_AUTORECONF="1"
 
-inherit flag-o-matic linux-info autotools-utils
+inherit flag-o-matic linux-info linux-mod autotools-utils
 
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-2

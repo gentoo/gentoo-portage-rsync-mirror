@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cvector
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cvector/ChangeLog,v 1.8 2012/03/01 20:02:17 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cvector/ChangeLog,v 1.9 2013/03/16 18:16:02 jlec Exp $
+
+*cvector-1.0.3.1 (16 Mar 2013)
+
+  16 Mar 2013; Justin Lecher <jlec@gentoo.org> +cvector-1.0.3.1.ebuild,
+  +files/cvector-1.0.3.1-LDFLAGS.patch, metadata.xml:
+  Version BUmp
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> cvector-1.0.3-r1.ebuild:
   Marking cvector-1.0.3-r1 ppc for bug 393999
