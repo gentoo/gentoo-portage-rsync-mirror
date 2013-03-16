@@ -1,9 +1,0 @@
-DEFINED_PHASES=install
-DESCRIPTION=Firmware for the Marvell Libertas wlan chipsets (OLPC, GuruPlug)
-EAPI=5
-HOMEPAGE=http://git.kernel.org/?p=linux/kernel/git/dwmw2/linux-firmware.git;a=tree;f=libertas;hb=HEAD
-KEYWORDS=~arm
-LICENSE=libertas-fw
-SLOT=0
-SRC_URI=mirror://gentoo/libertas-firmware-20101019.tar.bz2
-_md5_=5e542cae88ab5f53c7b5d24925ae0eef

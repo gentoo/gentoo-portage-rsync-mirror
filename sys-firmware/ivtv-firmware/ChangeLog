@@ -1,6 +1,14 @@
 # ChangeLog for sys-firmware/ivtv-firmware
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ivtv-firmware/ChangeLog,v 1.4 2013/02/11 20:13:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ivtv-firmware/ChangeLog,v 1.6 2013/03/16 13:30:42 ssuominen Exp $
+
+  16 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -ivtv-firmware-20080701.ebuild:
+  old
+
+  16 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  ivtv-firmware-20080701-r1.ebuild:
+  amd64/ppc/x86 stable
 
 *ivtv-firmware-20080701-r1 (11 Feb 2013)
 
