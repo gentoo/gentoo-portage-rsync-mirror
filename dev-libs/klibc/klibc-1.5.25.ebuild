@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.25.ebuild,v 1.5 2013/01/06 09:22:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.25.ebuild,v 1.6 2013/03/16 23:12:15 mpagano Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -144,7 +144,7 @@ src_compile() {
 
 	emake \
 		EXTRA_KLIBCAFLAGS="-Wa,--noexecstack" \
-		EXTRA_KLIBCLDFLAGS="-z,noexecstack" \
+		EXTRA_KLIBCLDFLAGS="-z noexecstack" \
 		HOSTCC="${HOSTCC}" CC="${CC}" \
 		INSTALLDIR="/usr/${libdir}/klibc" \
 		KLIBCARCH=${KLIBCARCH} \
@@ -188,7 +188,7 @@ src_install() {
 
 	emake \
 		EXTRA_KLIBCAFLAGS="-Wa,--noexecstack" \
-		EXTRA_KLIBCLDFLAGS="-z,noexecstack" \
+		EXTRA_KLIBCLDFLAGS="-z noexecstack" \
 		HOSTCC="${HOSTCC}" CC="${CC}" \
 		INSTALLDIR="/usr/${libdir}/klibc" \
 		INSTALLROOT="${D}" \
