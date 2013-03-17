@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/localepurge
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.52 2013/02/24 18:11:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.53 2013/03/17 20:56:16 nimiux Exp $
+
+  17 Mar 2013; Chema Alonso <nimiux@gentoo.org> localepurge-0.5.4-r2.ebuild:
+  Stable for amd64 wrt bug #461052
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> localepurge-0.5.4-r1.ebuild:
   Stable for sh, wrt bug #451062
