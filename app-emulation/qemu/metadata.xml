@@ -12,6 +12,9 @@
     <flag name='brltty'>Adds support for braille displays using brltty</flag>
 	<flag name='curl'>Support ISOs / -cdrom directives vis HTTP or HTTPS.</flag>
     <flag name='fdt'>Enables firmware device tree support</flag>
+	<flag name='iscsi'>Enable direct iSCSI support via
+		<pkg>net-libs/libiscsi</pkg> instead of indirectly via the Linux
+		block layer that <pkg>sys-block/open-iscsi</pkg> does.</flag>
 	<flag name='mixemu'>Enable audio mixer emulation. On Fedora, known to cause performance problems when using SDL output and ALSA. For OSS, locks the sound device from other applications.</flag>
     <flag name='ncurses'>Enable the ncurses-based console</flag>
     <flag name='pulseaudio'>Enable pulseaudio output for sound emulation</flag>
