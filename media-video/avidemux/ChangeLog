@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.209 2013/03/16 11:22:50 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.210 2013/03/17 08:33:00 tomwij Exp $
+
+  17 Mar 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-2.6.2.ebuild:
+  Check for presence of file before changing its permissions. Bug #461962,
+  reported by Peter Norman, thanks.
 
 *avidemux-2.6.2 (16 Mar 2013)
 

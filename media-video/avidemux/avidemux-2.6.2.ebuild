@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.2.ebuild,v 1.1 2013/03/16 11:22:50 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.2.ebuild,v 1.2 2013/03/17 08:33:00 tomwij Exp $
 
 EAPI="5"
 
@@ -131,8 +131,13 @@ src_install() {
 
 	cd "${S}" || die "Can't enter source folder."
 
-	fperms +x /usr/bin/avidemux3_cli
-	fperms +x /usr/bin/avidemux3_jobs
+	if [[ -f "${ED}"/usr/bin/avidemux3_cli ]] ; then
+		fperms +x /usr/bin/avidemux3_cli
+	fi
+
+	if [[ -f "${ED}"/usr/bin/avidemux3_jobs ]] ; then
+		fperms +x /usr/bin/avidemux3_jobs
+	fi
 	use gtk && fperms +x /usr/bin/avidemux3_gtk
 	use qt4 && fperms +x /usr/bin/avidemux3_qt4
 
