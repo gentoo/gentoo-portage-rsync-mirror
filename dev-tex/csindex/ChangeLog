@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/csindex
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/ChangeLog,v 1.10 2011/12/03 10:52:46 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/ChangeLog,v 1.11 2013/03/17 14:51:29 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   03 Dec 2011; Markos Chandras <hwoarang@gentoo.org> csindex-2.11c-r1.ebuild:
   Stable on amd64 wrt bug #391621
@@ -36,4 +39,3 @@
   27 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> csindex-2.11c.ebuild:
   Initial import. Ebuild submitted by Jaromir Malenko <malenko@email.cz>,
   see bug #31657
-

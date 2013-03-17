@@ -1,12 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r6.ebuild,v 1.9 2013/03/17 14:46:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r7.ebuild,v 1.2 2013/03/17 14:46:03 jlec Exp $
 
-EAPI="3"
+EAPI=5
+
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 PYTHON_DEPEND="2"
 
-inherit eutils fortran-2 multilib prefix python toolchain-funcs
+inherit eutils fortran-2 multilib prefix python-single-r1 toolchain-funcs
 
 MY_PV="${PV//./_}"
 
@@ -16,8 +18,10 @@ SRC_URI="http://cci.lbl.gov/cctbx_build/results/${MY_PV}/${PN}_bundle.tar.gz -> 
 
 LICENSE="cctbx-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="+minimal openmp threads"
+
+REQUIRED_USE="?? ( openmp threads )"
 
 RDEPEND="
 	>=dev-libs/boost-1.48[python]
@@ -27,7 +31,7 @@ RDEPEND="
 		sci-chemistry/cns
 		sci-chemistry/shelx )"
 DEPEND="${RDEPEND}
-	!prefix? ( >=dev-util/scons-1.2 )"
+	!prefix? ( >=dev-util/scons-1.2[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}"
 MY_S="${WORKDIR}"/cctbx_sources
@@ -42,8 +46,7 @@ pkg_setup() {
 		FORTRAN_NEED_OPENMP=1
 	fi
 	fortran-2_pkg_setup
-	python_set_active_version 2
-	python_pkg_setup
+	python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -61,16 +64,16 @@ src_prepare() {
 
 	eprefixify "${MY_S}"/scitbx/libtbx_refresh.py
 
-	rm -rf "${MY_S}/boost" "${MY_S}/PyCifRW" || die
+	rm -rvf "${MY_S}/boost" "${MY_S}/PyCifRW" >> "${T}"/clean.log || die
 	if ! use prefix; then
-		rm -rvf "${MY_S}/scons"
-		echo "import os, sys; os.execvp('scons', sys.argv)" > "${MY_S}"/libtbx/command_line/scons.py
+		rm -rvf "${MY_S}/scons" >> "${T}"/clean.log || die
+		echo "import os, sys; os.execvp('scons', sys.argv)" > "${MY_S}"/libtbx/command_line/scons.py || die
 	fi
 
-	find "${MY_S}/clipper" -name "*.h" -delete || die
+	find "${MY_S}/clipper" -name "*.h" -print -delete >> "${T}"/clean.log || die
 
 	sed \
-		-e "/LIBS/s:boost_python:boost_python-${PYTHON_ABI}:g" \
+		-e "/LIBS/s:boost_python:boost_python-$(echo ${EPYTHON} | sed 's/python//'):g" \
 		-i "${MY_S}"/boost_adaptbx/SConscript "${MY_S}"/scitbx/boost_python/SConscript || die
 }
 
@@ -84,11 +87,9 @@ src_configure() {
 	myconf="${myconf} --compiler=${compiler}"
 
 	# Additional USE flag usage
-	check_use openmp
-	myconf="${myconf} --enable-openmp-if-possible=${USE_openmp}"
+	myconf="${myconf} --enable-openmp-if-possible=$(usex openmp true false)"
 
-	use threads && USEthreads="--enable-boost-threads" && \
-		ewarn "If using boost threads openmp support is disabled"
+	use threads && USEthreads="--enable-boost-threads"
 
 	myconf="${myconf} ${USE_threads} --scan-boost --use_environment_flags"
 
@@ -98,7 +99,7 @@ src_configure() {
 	myconf="${myconf} --build=release fftw3tbx rstbx smtbx mmtbx clipper_adaptbx fable"
 	einfo "configuring with ${python} ${myconf}"
 
-	$(PYTHON) ${myconf} || die "configure failed"
+	${EPYTHON} ${myconf} || die "configure failed"
 }
 
 src_compile() {
@@ -142,26 +143,27 @@ src_install(){
 		rm -r "${S}"/cctbx_sources/{clipper,ccp4io,ucs-fonts,TAG} || die "failed to remove uneeded scons"
 		find -O3 "${S}" -type f \
 			\( -name "*conftest*" -o -name "*.o" -o -name "*.c" -o -name "*.f" -o -name "*.cpp" -o \
-			-name "*.pyc" -o -name "SCons*" -o -name "Makefile" -o -name "config.log" \) -delete || die
-		find "${S}" -type d -empty -delete || die
-		find "${MY_B}" -maxdepth 1 -type f -delete || die
+			-name "*.pyc" -o -name "SCons*" -o -name "Makefile" -o -name "config.log" \) -delete \
+			-print >> "${T}"/clean.log || die
+		find "${S}" -type d -empty -delete -print >> "${T}"/clean.log || die
+		find "${MY_B}" -maxdepth 1 -type f -delete -print >> "${T}"/clean.log || die
 	eend
 
-	dobin "${MY_B}"/bin/* || die
-	rm -rf "${MY_B}/bin"
-	dolib.so "${MY_B}"/lib/lib* || die
+	dobin "${MY_B}"/bin/*
+	rm -vrf "${MY_B}/bin" >> "${T}"/clean.log || die
+	dolib.so "${MY_B}"/lib/lib*
 	mv "${ED}"/usr/$(get_libdir)/libscitbx_min{,i}pack.so || die
-	rm -f "${MY_B}"/lib/lib*
+	rm -vf "${MY_B}"/lib/lib* >> "${T}"/clean.log || die
 
 	for lib in "${ED}"/usr/$(get_libdir)/*.so; do
 		baselib=$(basename ${lib})
-		mv ${lib}{,.0.0}
+		mv ${lib}{,.0.0} || die
 		dosym ${baselib}.0.0 /usr/$(get_libdir)/${baselib}
 	done
 
 	insinto /usr/include
 	doins -r "${MY_B}"/include/* || die
-	rm -rf "${MY_B}/include"
+	rm -rvf "${MY_B}/include" >> "${T}"/clean.log || die
 
 	insinto /usr/libexec/${PN}
 	doins -r "${MY_B}"/* || die
@@ -169,10 +171,10 @@ src_install(){
 
 	cd "${MY_S}"
 	insinto $(python_get_sitedir)
-	doins -r * || die
+	doins -r *
 	exeinto $(python_get_sitedir)
-	doexe "${MY_B}"/lib/* || die
-	rm -rf "${MY_B}/lib"
+	doexe "${MY_B}"/lib/*
+	rm -rvf "${MY_B}/lib" >> "${T}"/clean.log || die
 
 	sed \
 		-e "/PYTHONPATH/s:${MY_S}:$(python_get_sitedir):g" \
@@ -185,23 +187,5 @@ src_install(){
 		-e "s:${MY_B}/exe_dev/:${EPREFIX}/usr/libexec/${PN}/exe_dev/:g" \
 		-i "${ED}"/usr/bin/* || die
 
-}
-
-pkg_postinst () {
-	python_mod_optimize boost_adaptbx cbflib_adaptbx ccp4io_adaptbx cctbx chiltbx clipper_adaptbx crys3d fable fftw3tbx gltbx iotbx libtbx mmtbx omptbx rstbx scitbx smtbx spotfinder tntbx
-}
-
-pkg_postrm () {
-	python_mod_cleanup boost_adaptbx cbflib_adaptbx ccp4io_adaptbx cctbx chiltbx clipper_adaptbx crys3d fable fftw3tbx gltbx iotbx libtbx mmtbx omptbx rstbx scitbx smtbx spotfinder tntbx
-}
-
-check_use() {
-	for var in $@; do
-		if use ${var}; then
-			printf -v "USE_$var" True
-		else
-			printf -v "USE_$var" False
-		fi
-	shift
-	done
+	python_optimize
 }

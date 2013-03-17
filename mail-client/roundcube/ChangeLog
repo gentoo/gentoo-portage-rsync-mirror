@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.103 2013/03/09 11:29:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.105 2013/03/17 14:45:46 ago Exp $
+
+  17 Mar 2013; Agostino Sarubbo <ago@gentoo.org> roundcube-0.8.5.ebuild:
+  Stable for x86, wrt bug #456664
+
+  17 Mar 2013; Agostino Sarubbo <ago@gentoo.org> roundcube-0.8.5.ebuild:
+  Stable for amd64, wrt bug #456664
 
   09 Mar 2013; Agostino Sarubbo <ago@gentoo.org> roundcube-0.8.5.ebuild:
   Stable for ppc, wrt bug #456664

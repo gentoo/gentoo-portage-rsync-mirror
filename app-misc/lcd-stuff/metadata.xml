@@ -2,9 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>lcd</herd>
-<maintainer>
-<email>maintainer-needed@gentoo.org</email>
-</maintainer>
+<herd>proxy-maintainers</herd>
 <maintainer>
 <email>bernhard.walle@gmx.de</email>
 <name>Bernhard Walle</name>

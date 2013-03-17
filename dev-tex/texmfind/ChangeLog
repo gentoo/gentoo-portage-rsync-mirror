@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/texmfind
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texmfind/ChangeLog,v 1.18 2012/04/17 17:29:54 nativemad Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texmfind/ChangeLog,v 1.19 2013/03/17 14:51:18 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   17 Apr 2012; Andreas Schuerch <nativemad@gentoo.org> texmfind-2010.1.ebuild:
   x86 stable, see bug 383919
@@ -71,4 +74,3 @@
   01 Mar 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
   +texmfind-0.1.ebuild:
   Initial import, thanks a lot Alexandre
-
