@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Term-Shell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-Shell/ChangeLog,v 1.8 2013/02/16 12:35:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-Shell/ChangeLog,v 1.9 2013/03/17 17:49:21 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #96436

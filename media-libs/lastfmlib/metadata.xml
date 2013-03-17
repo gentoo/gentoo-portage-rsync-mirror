@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sound</herd>
-	<maintainer>
-		<email>hwoarang@gentoo.org</email>
-		<name>Markos Chandras</name>
-	</maintainer>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>dirk.vdb@gmail.com</email>
 		<name>Dirk Vanden Boer</name>

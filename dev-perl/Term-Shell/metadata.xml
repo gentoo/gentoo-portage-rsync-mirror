@@ -6,6 +6,7 @@
 	<name>Azamat Hackimov</name>
 </maintainer>
 <herd>perl</herd>
+<herd>proxy-maintainers</herd>
 <upstream>
 <remote-id type="cpan">Term-Shell</remote-id>
 <remote-id type="cpan-module">Term::Shell</remote-id>

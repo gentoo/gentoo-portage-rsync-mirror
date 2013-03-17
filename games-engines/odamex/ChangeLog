@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/odamex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/odamex/ChangeLog,v 1.7 2013/02/23 20:23:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/odamex/ChangeLog,v 1.8 2013/03/17 17:40:55 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   23 Feb 2013; Julian Ospald <hasufell@gentoo.org> odamex-0.6.2.ebuild,
   +files/odamex-0.6.2-libagar.patch:

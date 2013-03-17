@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Plack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plack/ChangeLog,v 1.17 2013/02/01 20:15:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plack/ChangeLog,v 1.18 2013/03/17 17:44:00 tove Exp $
+
+*Plack-1.1.800 (17 Mar 2013)
+
+  17 Mar 2013; Torsten Veller <tove@gentoo.org> +Plack-1.1.800.ebuild:
+  Version bump
 
 *Plack-1.1.600 (01 Feb 2013)
 

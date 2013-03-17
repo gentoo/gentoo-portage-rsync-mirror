@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>perl</herd>
-  <maintainer>
-    <email>kentfredric@gmail.com</email>
-    <name>Kent Fredric</name>
-  </maintainer>
   <use>
     <flag name="recommended">Install recommended support modules</flag>
   </use>

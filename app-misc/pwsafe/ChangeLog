@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pwsafe
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pwsafe/ChangeLog,v 1.17 2012/08/16 13:56:44 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pwsafe/ChangeLog,v 1.18 2013/03/17 17:34:07 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   16 Aug 2012; Johannes Huber <johu@gentoo.org> -pwsafe-0.2.0-r1.ebuild,
   -pwsafe-0.2.0.ebuild:

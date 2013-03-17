@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>x11</herd>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>eva@gentoo.org</email>
 		<name>Gilles Dartiguelongue</name>

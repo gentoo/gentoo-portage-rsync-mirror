@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-mbpurple
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-mbpurple/ChangeLog,v 1.12 2012/05/05 05:11:59 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-mbpurple/ChangeLog,v 1.13 2013/03/17 17:43:45 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   pidgin-mbpurple-0.3.0-r2.ebuild:
@@ -55,4 +58,3 @@
   +metadata.xml:
   initial commit for bug 242942, ebuild provided by Nils Andresen <nils AT
   nils-andresen DOT de>, who will be proxied by me
-

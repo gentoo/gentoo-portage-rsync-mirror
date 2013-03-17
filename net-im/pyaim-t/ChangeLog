@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pyaim-t
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/ChangeLog,v 1.12 2011/10/08 16:34:54 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/ChangeLog,v 1.13 2013/03/17 17:40:11 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pyaim-t-0.8.0.1.ebuild:
   x86 stable wrt bug #385907
@@ -50,4 +53,3 @@
   +metadata.xml, +pyaim-t-0.8a.ebuild:
   Initial import of pyaim-t into portage as requested by Chris Carlin
   <carlin@jlab.org> (closes bug #123160).
-

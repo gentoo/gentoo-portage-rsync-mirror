@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/push
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/push/ChangeLog,v 1.10 2012/09/19 20:17:19 darkside Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/push/ChangeLog,v 1.11 2013/03/17 17:45:27 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   19 Sep 2012; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   update metadata
@@ -34,4 +37,3 @@
   08 May 2012; Jeremy Olexa <darkside@gentoo.org> +push-1.5.ebuild,
   +metadata.xml:
   New ebuild by Martin Väth
-

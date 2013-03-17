@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.87 2013/02/18 20:23:16 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.88 2013/03/17 18:00:44 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *xf86-input-synaptics-1.6.3 (18 Feb 2013)
 

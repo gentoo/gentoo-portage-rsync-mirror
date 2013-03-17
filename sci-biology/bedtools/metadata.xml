@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sci-biology</herd>
+  <herd>proxy-maintainers</herd>
   <maintainer>
     <email>mmokrejs@fold.natur.cuni.cz</email>
     <name>Martin Mokrejs</name>

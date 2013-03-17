@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>perl</herd>
+  <herd>proxy-maintainers</herd>
   <maintainer>
     <email>atj@pulsewidth.org.uk</email>
     <name>Adam James</name>

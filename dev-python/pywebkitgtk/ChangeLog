@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pywebkitgtk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.27 2012/05/04 15:12:15 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.28 2013/03/17 17:58:25 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org> pywebkitgtk-1.1.8.ebuild:
   Migrating dev-util/pkgconfig -> virtual/pkgconfig
@@ -116,4 +119,3 @@
   +pywebkitgtk-1.0.2.ebuild:
   Initial commit. Proxy mantained by me for Sergio Rodriguez
   <srinclan@gmail.com>
-

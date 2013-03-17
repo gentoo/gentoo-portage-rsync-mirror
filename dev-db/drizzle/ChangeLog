@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/drizzle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.34 2013/03/04 06:49:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.35 2013/03/17 17:39:35 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   04 Mar 2013; Diego E. Pettenò <flameeyes@gentoo.org> drizzle-7.2.4.ebuild:
   Use sub-slot dependency for boost.

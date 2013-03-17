@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/phpsyslogng
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/phpsyslogng/ChangeLog,v 1.13 2012/07/09 15:58:37 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/phpsyslogng/ChangeLog,v 1.14 2013/03/17 17:41:34 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   09 Jul 2012; Michael Palimaka <kensington@gentoo.org> -files/logrotate.php,
   -phpsyslogng-2.8-r1.ebuild, -phpsyslogng-2.8.ebuild,

@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>net-im</herd>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>carlin@jlab.org</email>
 		<name>Chris Carlin</name>

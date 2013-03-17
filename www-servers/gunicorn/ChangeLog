@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/gunicorn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.27 2013/01/11 01:12:15 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.28 2013/03/17 17:44:34 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *gunicorn-0.17.2 (11 Jan 2013)
 
@@ -138,4 +141,3 @@
   12 Dec 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
   +gunicorn-0.11.2.ebuild, +metadata.xml:
   Initial commit. Thanks to Johan Bergström (bug #303649)
-

@@ -3,7 +3,6 @@
 # Allow the user to override command-line flags, bug #357629.
 # This is based on Debian's chromium-browser package, and is intended
 # to be consistent with Debian.
-shopt -s nullglob
 for f in /etc/chromium/*; do
     [[ -f ${f} ]] && source "${f}"
 done

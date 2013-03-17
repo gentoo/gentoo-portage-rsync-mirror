@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ogg2mp3
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogg2mp3/ChangeLog,v 1.14 2010/01/05 03:34:04 josejx Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogg2mp3/ChangeLog,v 1.15 2013/03/17 17:51:25 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   05 Jan 2010; Joseph Jezak <josejx@gentoo.org> ogg2mp3-0.6.1.ebuild:
   Marked ppc stable for bug #291021.
@@ -65,4 +68,3 @@
   30 Nov 2004; Tony Vroon <chainsaw@gentoo.org> +ogg2mp3-0.3.ebuild:
   Initial commit. Ebuild based on the one submitted by Ryan James
   <rinkydinksrj@gmail.com> in bug #64777.
-
