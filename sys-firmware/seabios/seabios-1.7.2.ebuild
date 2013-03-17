@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.2.ebuild,v 1.3 2013/03/16 02:38:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.2.ebuild,v 1.4 2013/03/17 03:14:42 cardoe Exp $
 
 EAPI=5
 
@@ -32,7 +32,10 @@ IUSE="+binary"
 REQUIRED_USE="ppc? ( binary )
 	ppc64? ( binary )"
 
-DEPEND="!binary? ( sys-power/iasl )"
+DEPEND="!binary? (
+		>=sys-power/iasl-20060912
+		<sys-power/iasl-20130117
+		)"
 RDEPEND=""
 
 pkg_pretend() {
