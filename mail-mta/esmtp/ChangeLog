@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/esmtp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/ChangeLog,v 1.34 2012/11/06 11:13:13 eras Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/ChangeLog,v 1.35 2013/03/17 20:01:03 zx2c4 Exp $
+
+  17 Mar 2013; Jason A. Donenfeld <zx2c4@gentoo.org> esmtp-1.2.ebuild:
+  Block OpenSMTPD.
 
   06 Nov 2012; Eray Aslan <eras@gentoo.org> esmtp-1.2.ebuild:
   mail-mta/nbsmtp is no longer in the tree - remove from DEPEND

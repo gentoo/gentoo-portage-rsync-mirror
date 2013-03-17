@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14560 2013/03/16 19:09:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14561 2013/03/17 19:37:26 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Markos Chandras <hwoarang@gentoo.org> (17 Mar 2013)
+# module is included in the mainline kernel.
+# Enable CONFIG_TABLET_USB_WACOM to get it
+# Bug #347892. Removal in 30 days
+sys-kernel/linuxwacom-module
+
+# 
 # Aaron W. Swenson <titanofold@gentoo.org> (16 Mar 2013)
 # The PostgreSQL 8.3 series has reached End of Life and is no longer
 # supported here or upstream. Please migrate to a more recent series

@@ -1,20 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-9999.ebuild,v 1.3 2013/03/01 23:08:42 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3_p1.ebuild,v 1.1 2013/03/17 19:59:36 zx2c4 Exp $
 
 EAPI=5
 
-inherit multilib user flag-o-matic eutils pam toolchain-funcs autotools git-2
+inherit multilib user flag-o-matic eutils pam toolchain-funcs autotools
 
 DESCRIPTION="Lightweight but featured SMTP daemon from OpenBSD"
 HOMEPAGE="http://www.opensmtpd.org/"
-SRC_URI=""
-EGIT_BRANCH="portable"
-EGIT_REPO_URI="git://github.com/poolpOrg/OpenSMTPD.git"
+SRC_URI="http://www.opensmtpd.org/archives/${P/_}.tar.gz"
 
 LICENSE="ISC BSD BSD-1 BSD-2 BSD-4"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="pam"
 
 DEPEND="dev-libs/openssl
@@ -37,7 +35,7 @@ DEPEND="dev-libs/openssl
 "
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${P}.xp1
+S=${WORKDIR}/${P/_}
 
 src_prepare() {
 	epatch "${FILESDIR}"/build-warnings.patch
@@ -48,6 +46,9 @@ src_configure() {
 	tc-export AR
 	AR="$(which "$AR")" econf \
 		--with-privsep-user=smtpd \
+		--with-filter-user=smtpf \
+		--with-queue-user=smtpq \
+		#--with-lookup-user=smtpl  will be available in the release after 5.3p1
 		--with-privsep-path=/var/empty \
 		--with-sock-dir=/var/run \
 		--sysconfdir=/etc/opensmtpd \
@@ -63,4 +64,12 @@ src_install() {
 pkg_preinst() {
 	enewgroup smtpd 25
 	enewuser smtpd 25 -1 /var/empty smtpd
+	enewgroup smtpf 251
+	enewuser smtpf 251 -1 /var/empty smtpf
+	enewgroup smtpq 252
+	enewuser smtpq 252 -1 /var/empty smtpq
+
+	# For release after 5.3p1:
+	#enewgroup smtpl 253
+	#enewuser smtpl 253 -1 /var/empty smtpl
 }

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-9999.ebuild,v 1.4 2013/03/03 21:44:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-9999.ebuild,v 1.5 2013/03/17 19:33:14 hwoarang Exp $
 
 EAPI=4
 
-inherit eutils multilib
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Homer Conferencing (short: Homer) is a free SIP softphone with advanced audio and video support."
 HOMEPAGE="http://www.homer-conferencing.com"
@@ -54,6 +54,7 @@ src_prepare() {
 }
 
 src_compile() {
+	tc-export CXX
 	emake -C HomerBuild default \
 		INSTALL_PREFIX=/usr/bin \
 		INSTALL_LIBDIR=/usr/$(get_libdir) \

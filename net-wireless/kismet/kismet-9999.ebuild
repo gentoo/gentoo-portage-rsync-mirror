@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-9999.ebuild,v 1.7 2013/02/08 06:20:07 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-9999.ebuild,v 1.8 2013/03/17 19:33:57 zerochaos Exp $
 
 EAPI=5
 
@@ -62,7 +62,7 @@ src_compile() {
 	emake
 
 	if use plugin-autowep; then
-		cd "${S}"/plugin-autowep
+		cd "${S}"/restricted-plugin-autowep
 		KIS_SRC_DIR="${S}" emake
 	fi
 	if use plugin-btscan; then
@@ -74,7 +74,7 @@ src_compile() {
 		KIS_SRC_DIR="${S}" emake
 	fi
 	if use plugin-ptw; then
-		cd "${S}"/plugin-ptw
+		cd "${S}"/restricted-plugin-ptw
 		KIS_SRC_DIR="${S}" emake
 	fi
 	if use plugin-spectools; then
@@ -89,7 +89,7 @@ src_compile() {
 
 src_install() {
 	if use plugin-autowep; then
-		cd "${S}"/plugin-autowep
+		cd "${S}"/restricted-plugin-autowep
 		KIS_SRC_DIR="${S}" emake DESTDIR="${ED}" LIBDIR="$(get_libdir)" install
 	fi
 	if use plugin-btscan; then
@@ -101,7 +101,7 @@ src_install() {
 		KIS_SRC_DIR="${S}" emake DESTDIR="${ED}" LIBDIR="$(get_libdir)" install
 	fi
 	if use plugin-ptw; then
-		cd "${S}"/plugin-ptw
+		cd "${S}"/restricted-plugin-ptw
 		KIS_SRC_DIR="${S}" emake DESTDIR="${ED}" LIBDIR="$(get_libdir)" install
 	fi
 	if use plugin-spectools; then
