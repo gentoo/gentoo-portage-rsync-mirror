@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/tar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tar/ChangeLog,v 1.13 2012/12/10 21:53:13 slyfox Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tar/ChangeLog,v 1.14 2013/03/17 16:09:04 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   10 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> tar-0.3.2.0.ebuild:
   stable on alpha/ia64/sparc (bug #421351)

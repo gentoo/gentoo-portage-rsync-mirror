@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>kernel-misc</herd>
+  <herd>proxy-maintainers</herd>
   <maintainer>
     <email>pete4abw@comcast.net</email>
     <name>Peter Hyman</name>

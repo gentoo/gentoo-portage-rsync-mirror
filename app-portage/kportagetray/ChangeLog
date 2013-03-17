@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/kportagetray
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/ChangeLog,v 1.12 2012/03/24 19:40:56 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/ChangeLog,v 1.13 2013/03/17 16:04:23 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *kportagetray-0.2.4-r1 (24 Mar 2012)
 
@@ -62,4 +65,3 @@
   01 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   +kportagetray-0.1.ebuild:
   Initial commit.
-

@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>cluster</herd>
+<herd>proxy-maintainers</herd>
   <maintainer>
     <email>ultrabug@ultrabug.net</email>
     <description>maintainer</description>

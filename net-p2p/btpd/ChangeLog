@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/btpd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btpd/ChangeLog,v 1.9 2012/03/13 12:02:54 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btpd/ChangeLog,v 1.10 2013/03/17 16:23:14 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   13 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> btpd-0.13.ebuild,
   btpd-0.15.ebuild:
@@ -44,4 +47,3 @@
   +btpd-0.9.ebuild:
   New Package. Ricardo will be the maintainer and me as his proxy this closes
   bug #113055.
-

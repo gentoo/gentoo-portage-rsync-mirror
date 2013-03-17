@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/csync2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.35 2012/05/04 07:20:30 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.36 2013/03/17 16:21:20 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> csync2-1.34-r2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -154,4 +157,3 @@
   27 Apr 2005; Christian Zoffoli <xmerlin@gentoo.org> +metadata.xml,
   +files/csync2.xinetd, +csync2-1.16.ebuild:
   csync2 added to portage
-

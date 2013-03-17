@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hashtables
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/ChangeLog,v 1.10 2013/01/06 09:20:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/ChangeLog,v 1.11 2013/03/17 16:09:55 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> hashtables-1.0.1.8.ebuild:
   Add ~sparc, wrt bug #449220

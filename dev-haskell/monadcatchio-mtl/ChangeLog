@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/monadcatchio-mtl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monadcatchio-mtl/ChangeLog,v 1.4 2012/11/18 13:59:18 gienah Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monadcatchio-mtl/ChangeLog,v 1.5 2013/03/17 16:08:00 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   18 Nov 2012; Mark Wright <gienah@gentoo.org> monadcatchio-mtl-0.3.0.5.ebuild:
   rdep cgi has ~ppc ~sparc ~x86 keywords

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.7-r2.ebuild,v 1.4 2013/03/17 13:48:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.3.7-r2.ebuild,v 1.5 2013/03/17 16:05:28 dilfridge Exp $
 
 EAPI=5
 PLOCALES="ast bs ca cs da de el en_GB es eu fi fr he hr id it ky my pl pt_BR ro ru sk tr ug uk zh_CN"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~arm x86"
 IUSE="cups dbus sqlite +svg synctex"
 
-RDEPEND="app-text/poppler[qt4]
+RDEPEND="app-text/poppler:=[qt4]
 	dev-qt/qtcore:4[iconv]
 	dev-qt/qtgui:4
 	cups? ( net-print/cups )

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mjpg-streamer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpg-streamer/ChangeLog,v 1.6 2012/06/28 07:35:44 aidecoe Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpg-streamer/ChangeLog,v 1.7 2013/03/17 16:05:48 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   28 Jun 2012; Amadeusz Żołnowski <aidecoe@gentoo.org>
   -mjpg-streamer-0_pre20110522.ebuild:

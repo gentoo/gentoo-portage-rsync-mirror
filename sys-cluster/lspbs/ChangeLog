@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/lspbs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lspbs/ChangeLog,v 1.12 2010/12/30 15:09:25 jsbronder Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lspbs/ChangeLog,v 1.13 2013/03/17 16:21:35 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   30 Dec 2010; Justin Bronder <jsbronder@gentoo.org> -lspbs-1.1.ebuild,
   lspbs-1.1-r1.ebuild:
@@ -45,4 +48,3 @@
   03 May 2004; Michael Imhof <tantive@gentoo.org> lspbs-1.0.ebuild:
   Initial ebuild. Submitted by Joseph Spadavecchia 
   <j.spadavecchia@ed.ac.uk>. Closes #49842.
-

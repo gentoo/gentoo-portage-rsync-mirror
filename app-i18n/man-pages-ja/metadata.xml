@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>cjk</herd>
+  <herd>proxy-maintainers</herd>
   <longdescription>
     Japanese translation of portage/gentoolkit man pages are contributed by
     Gentoo Linux User Group Japan and maintained by that mailing list

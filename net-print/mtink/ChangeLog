@@ -1,6 +1,9 @@
 # ChangeLog for net-print/mtink
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.39 2012/10/24 19:25:00 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/ChangeLog,v 1.40 2013/03/17 16:21:53 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> mtink-1.0.11.ebuild,
   mtink-1.0.16-r1.ebuild:
@@ -148,4 +151,3 @@
 
   08 Aug 2003; lanius@gentoo.org files/mtinkd.confd, files/mtinkd.rc:
   initial release, thx to Otavio R. Piske <angusy@brturbo.com>
-

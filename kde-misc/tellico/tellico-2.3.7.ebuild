@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.7.ebuild,v 1.4 2013/03/02 21:31:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.7.ebuild,v 1.5 2013/03/17 16:12:04 dilfridge Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ DEPEND="
 	dev-qt/qtdbus:4
 	addressbook? ( $(add_kdebase_dep kdepimlibs) )
 	cddb? ( $(add_kdebase_dep libkcddb) )
-	pdf? ( >=app-text/poppler-0.12.3-r3[qt4] )
+	pdf? ( app-text/poppler:=[qt4] )
 	scanner? ( $(add_kdebase_dep libksane) )
 	semantic-desktop? ( dev-libs/soprano[raptor,redland] )
 	taglib? ( >=media-libs/taglib-1.5 )

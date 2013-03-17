@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
+<herd>proxy-maintainers</herd>
 <maintainer>
 	<email>agk@redhat.com</email>
 	<name>Alasdair Kergon</name>

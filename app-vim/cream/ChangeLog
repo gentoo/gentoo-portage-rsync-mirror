@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cream
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.58 2012/03/07 23:44:40 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.59 2013/03/17 16:17:48 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   07 Mar 2012; Tim Harder <radhermit@gentoo.org> -cream-0.41-r2.ebuild,
   -files/cream-0.41-ctrl-o.patch:
@@ -224,5 +227,3 @@
   07 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> cream-0.28.ebuild,
   metadata.xml:
   Initial ebuild, thanks to TGL <degrenier@easyconnect.fr> in bug #40522
-
-

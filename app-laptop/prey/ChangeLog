@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/prey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/ChangeLog,v 1.12 2013/02/15 18:47:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/ChangeLog,v 1.13 2013/03/17 16:16:48 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   15 Feb 2013; Pacho Ramos <pacho@gentoo.org> prey-0.5.4-r1.ebuild:
   Don't show elog messages always (#457596)

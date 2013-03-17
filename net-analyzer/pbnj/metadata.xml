@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
+<herd>proxy-maintainers</herd>
 <maintainer>
   <email>jabra@ccs.neu.edu</email>
 </maintainer>

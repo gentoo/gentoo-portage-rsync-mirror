@@ -2,5 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>printing</herd>
+<herd>proxy-maintainers</herd>
 <maintainer><email>SebastianLuther@gmx.de</email></maintainer>
 </pkgmetadata>

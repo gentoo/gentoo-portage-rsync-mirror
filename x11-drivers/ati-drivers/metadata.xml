@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>x11</herd>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>jkarlson@cc.hut.fi</email>
 		<description>Proxy maintainer. Assign to herd and CC him on bugs</description>

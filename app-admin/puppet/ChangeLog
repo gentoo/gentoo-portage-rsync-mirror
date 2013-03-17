@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.150 2013/03/14 15:09:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.152 2013/03/17 16:10:02 prometheanfire Exp $
+
+  17 Mar 2013; Matthew Thode <prometheanfire@gentoo.org> -puppet-2.7.18.ebuild,
+  -puppet-2.7.19-r1.ebuild:
+  removing old vulnerable versions of puppet for bug 461656
+
+  17 Mar 2013; Agostino Sarubbo <ago@gentoo.org> puppet-2.7.21.ebuild:
+  Stable for sparc, wrt bug #461656
 
   14 Mar 2013; Agostino Sarubbo <ago@gentoo.org> puppet-2.7.21.ebuild:
   Stable for ppc, wrt bug #461656

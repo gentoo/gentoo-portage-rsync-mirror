@@ -11,4 +11,5 @@
 		<description>Upstream Maintainer (please CC on bugs)</description>
 	</maintainer>
 	<herd>sysadmin</herd>
+	<herd>proxy-maintainers</herd>
 </pkgmetadata>

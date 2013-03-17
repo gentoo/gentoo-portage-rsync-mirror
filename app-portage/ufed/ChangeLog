@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/ufed
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.94 2013/02/05 18:10:33 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.95 2013/03/17 16:04:04 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   05 Feb 2013; Paul Varner <fuzzyray@gentoo.org> ufed-9999.ebuild:
   Remove usage of prefix eclass, since ufed makefile now handles it natively.

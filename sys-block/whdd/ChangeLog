@@ -1,6 +1,9 @@
-# ChangeLog for sys-apps/whdd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/whdd/ChangeLog,v 1.1 2012/08/10 14:47:56 maksbotan Exp $
+# ChangeLog for sys-block/whdd
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/whdd/ChangeLog,v 1.2 2013/03/17 16:22:04 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *whdd-9999 (08 Mar 2012)
 *whdd-1.0 (08 Mar 2012)
@@ -8,4 +11,3 @@
   08 Mar 2012; Maxim Koltsov <maksbotan@gentoo.org> +metadata.xml,
   +whdd-1.0.ebuild, +whdd-9999.ebuild:
   Add sys-apps/whdd, thanks to Andrey Utkin <andrey.krieger.utkin@gmail.com>
-

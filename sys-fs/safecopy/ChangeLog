@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/safecopy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/ChangeLog,v 1.9 2012/04/26 10:58:20 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/ChangeLog,v 1.10 2013/03/17 16:19:20 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *safecopy-1.7 (26 Apr 2012)
 
@@ -40,4 +43,3 @@
   27 May 2009; Tomáš Chvátal <scarabeus@gentoo.org> +safecopy-1.3.ebuild,
   +files/safecopy-1.3-sandbox.patch, +metadata.xml:
   Intial commit. Per bug #257714. Thanks to Corvus Corax for ebuild.
-

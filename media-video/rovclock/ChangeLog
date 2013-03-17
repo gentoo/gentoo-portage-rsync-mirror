@@ -1,6 +1,9 @@
 # ChangeLog for media-video/rovclock
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rovclock/ChangeLog,v 1.7 2011/03/18 20:35:48 angelos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/rovclock/ChangeLog,v 1.8 2013/03/17 16:06:11 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   18 Mar 2011; Christoph Mende <angelos@gentoo.org> rovclock-0.6e.ebuild,
   +files/rovclock-0.6e-ldflags.patch:
@@ -26,4 +29,3 @@
   13 Jan 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +rovclock-0.6e.ebuild:
   New ebuild thanks to Sebastian Witt <se.witt@gmx.net> and t35t0r in bug 102919
-

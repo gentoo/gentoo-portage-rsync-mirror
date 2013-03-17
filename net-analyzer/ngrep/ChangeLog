@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ngrep
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.72 2013/01/16 09:39:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.73 2013/03/17 16:07:17 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   16 Jan 2013; Ulrich Müller <ulm@gentoo.org> ngrep-1.45-r3.ebuild:
   Fix LICENSE, see LICENSE.txt, bug 452012.

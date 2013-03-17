@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>desktop-misc</herd>
+	<herd>proxy-maintainers</herd>
 <maintainer>
   <email>jss2k2@chello.no</email>
   <name>Unknown</name>

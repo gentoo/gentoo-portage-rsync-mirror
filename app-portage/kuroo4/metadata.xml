@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>tools-portage</herd>
+	<herd>proxy-maintainers</herd>
 	<herd>kde</herd>
 	<longdescription lang='en'>Graphical Portage frontend based on KDE4/Qt4</longdescription>
 	<maintainer>

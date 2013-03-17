@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/async
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/async/ChangeLog,v 1.1 2012/11/18 12:56:20 gienah Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/async/ChangeLog,v 1.2 2013/03/17 16:10:42 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *async-2.0.1.4 (18 Nov 2012)
 

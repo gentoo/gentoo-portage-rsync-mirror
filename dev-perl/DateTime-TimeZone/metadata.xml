@@ -247,6 +247,7 @@
     <remote-id type="cpan-module">DateTime::TimeZone::Asia::Karachi</remote-id>
     <remote-id type="cpan-module">DateTime::TimeZone::Asia::Kashgar</remote-id>
     <remote-id type="cpan-module">DateTime::TimeZone::Asia::Kathmandu</remote-id>
+    <remote-id type="cpan-module">DateTime::TimeZone::Asia::Khandyga</remote-id>
     <remote-id type="cpan-module">DateTime::TimeZone::Asia::Kolkata</remote-id>
     <remote-id type="cpan-module">DateTime::TimeZone::Asia::Krasnoyarsk</remote-id>
     <remote-id type="cpan-module">DateTime::TimeZone::Asia::Kuala_Lumpur</remote-id>
@@ -282,6 +283,7 @@
     <remote-id type="cpan-module">DateTime::TimeZone::Asia::Tokyo</remote-id>
     <remote-id type="cpan-module">DateTime::TimeZone::Asia::Ulaanbaatar</remote-id>
     <remote-id type="cpan-module">DateTime::TimeZone::Asia::Urumqi</remote-id>
+    <remote-id type="cpan-module">DateTime::TimeZone::Asia::Ust_Nera</remote-id>
     <remote-id type="cpan-module">DateTime::TimeZone::Asia::Vientiane</remote-id>
     <remote-id type="cpan-module">DateTime::TimeZone::Asia::Vladivostok</remote-id>
     <remote-id type="cpan-module">DateTime::TimeZone::Asia::Yakutsk</remote-id>

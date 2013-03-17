@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/minit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/ChangeLog,v 1.12 2012/08/04 16:55:19 vostorga Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/ChangeLog,v 1.13 2013/03/17 16:12:50 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   04 Aug 2012; Víctor Ostorga <vostorga@gentoo.org> minit-0.10.ebuild:
   Allowing minit to cross-compile, bug 375653. Patch thanks to Bertrand Jacquin

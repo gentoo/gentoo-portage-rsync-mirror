@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vdr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.167 2012/09/17 19:41:44 hd_brummy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.168 2013/03/17 16:05:16 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   17 Sep 2012; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.6.0_p2-r11.ebuild:
   fixed variable name
