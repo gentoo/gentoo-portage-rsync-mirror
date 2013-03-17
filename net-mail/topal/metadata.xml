@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>net-mail</herd>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>sascha_lucas@web.de</email>
 		<name>Sascha Lucas</name>

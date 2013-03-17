@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/acr38u
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/ChangeLog,v 1.6 2012/12/11 14:50:43 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/ChangeLog,v 1.7 2013/03/17 15:16:20 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   11 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> acr38u-1.7.10-r1.ebuild,
   acr38u-1.7.11.ebuild, acr38u-1.7.11-r1.ebuild:
@@ -30,4 +33,3 @@
   +files/92-pcscd-acr38u.rules, +acr38u-1.7.10-r1.ebuild, +metadata.xml:
   Initial import of acr38u. thanks to Vincent Hardy in bug #187422 for writing
   the ebuild and proxy-maintaining it.
-

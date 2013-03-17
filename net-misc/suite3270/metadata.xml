@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>s390</herd>
+  <herd>proxy-maintainers</herd>
   <maintainer>
     <email>robbat2@gentoo.org</email>
     <name>Robin H. Johnson</name>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libroadnav
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libroadnav/ChangeLog,v 1.10 2010/02/07 09:10:25 dirtyepic Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libroadnav/ChangeLog,v 1.11 2013/03/17 15:15:04 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   07 Feb 2010; Ryan Hill <dirtyepic@gentoo.org> libroadnav-0.19.ebuild:
   Remove deprecated use of 'need-wxwidgets gtk2'.
@@ -51,4 +54,3 @@
   23 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> ChangeLog:
   Initial import, ebuild by Andrew Cremins <andrew.cremins@gmail.com>, bug
   138945.
-

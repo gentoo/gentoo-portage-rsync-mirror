@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/s3cmd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.19 2013/03/09 18:46:37 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.20 2013/03/17 15:07:13 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   09 Mar 2013; Aaron W. Swenson <titanofold@gentoo.org> s3cmd-1.0.1.ebuild:
   Added or die as reported by Chema Alonso in bug 460766.
@@ -79,4 +82,3 @@
   23 Sep 2007; Josh Glover <jmglov@gentoo.org> +metadata.xml,
   +s3cmd-0.9.4.ebuild:
   This package was submitted by Josh Glover in bug #193380
-

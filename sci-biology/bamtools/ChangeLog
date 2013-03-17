@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/bamtools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bamtools/ChangeLog,v 1.7 2013/03/11 14:38:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bamtools/ChangeLog,v 1.8 2013/03/17 15:10:31 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
@@ -43,4 +46,3 @@
 
   24 Jun 2011; Justin Lecher <jlec@gentoo.org> bamtools-9999.ebuild:
   Moved from 'git' to 'git-2'
-

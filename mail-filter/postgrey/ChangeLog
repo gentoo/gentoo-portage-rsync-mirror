@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/postgrey
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.80 2012/11/21 10:59:50 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.81 2013/03/17 15:03:34 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   21 Nov 2012; Agostino Sarubbo <ago@gentoo.org> postgrey-1.34-r1.ebuild:
   Stable for x86, wrt bug #439066

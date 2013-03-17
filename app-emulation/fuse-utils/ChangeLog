@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/fuse-utils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/ChangeLog,v 1.14 2012/05/03 18:49:07 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/ChangeLog,v 1.15 2013/03/17 15:23:45 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> fuse-utils-1.0.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -62,4 +65,3 @@
   30 May 2008; Jeremy Olexa <darkside@gentoo.org> +metadata.xml,
   +fuse-utils-0.9.0.ebuild:
   Initial commit, thanks to rinus for writing the ebuild. bug #222735
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xdoclet
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.31 2008/01/10 23:13:22 caster Exp $
+# Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.32 2013/03/17 15:25:02 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   10 Jan 2008; Vlastimil Babka <caster@gentoo.org> xdoclet-1.2.3.ebuild:
   Restrict junit dependency.
@@ -118,4 +121,3 @@
   xdoclet-1.2.0_beta1.ebuild, files/digest-xdoclet-1.2.0_beta1 :
 
   Initial import.
-

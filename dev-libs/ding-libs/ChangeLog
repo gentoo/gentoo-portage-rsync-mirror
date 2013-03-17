@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ding-libs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ding-libs/ChangeLog,v 1.9 2012/11/03 10:35:05 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ding-libs/ChangeLog,v 1.10 2013/03/17 15:14:53 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   03 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Correct metadata, requested by Andreis Vinogradovs

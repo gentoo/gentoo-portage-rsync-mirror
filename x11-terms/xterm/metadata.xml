@@ -6,6 +6,7 @@
     <name>Thomas Dickey</name>
   </maintainer>
   <herd>x11</herd>
+  <herd>proxy-maintainers</herd>
   <use>
     <flag name="toolbar">Enable the xterm toolbar to be built</flag>
   </use>

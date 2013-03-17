@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.36 2011/04/27 00:16:59 c1pher Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.37 2013/03/17 15:28:12 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   26 Apr 2011; Dane Smith <c1pher@gentoo.org> metadata.xml:
   Updated metadata to reflect new maintainers. Thanks Robert Kowalski

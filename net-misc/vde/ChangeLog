@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vde
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.26 2012/06/08 12:57:02 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.27 2013/03/17 15:05:09 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   08 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer from metadata as talked with him, bug #90641.
@@ -123,4 +126,3 @@
 
   06 Feb 2005; <rphillips@gentoo.org> vde-1.5.7.ebuild:
   Initial commit. thanks to Nico Baggus.
-

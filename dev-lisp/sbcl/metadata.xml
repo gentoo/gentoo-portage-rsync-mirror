@@ -12,6 +12,7 @@
     <description>second-maintainer</description>
   </maintainer>
   <herd>common-lisp</herd>
+  <herd>proxy-maintainers</herd>
   <longdescription>Steel Bank Common Lisp is an open source Common
   Lisp implementation. It provides an integrated native compiler,
   interpreter, and debugger. SBCL is a fork off of the main branch

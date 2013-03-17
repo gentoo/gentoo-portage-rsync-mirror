@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>java</herd>
+<herd>proxy-maintainers</herd>
 <longdescription>
   XDoclet is an extended Javadoc Doclet engine. It's a generic Java
   tool that lets you create custom Javadoc @tags and based on those

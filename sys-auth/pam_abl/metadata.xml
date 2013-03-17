@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>pam</herd>
+<herd>proxy-maintainers</herd>
 <maintainer>
   <email>swapon@gmail.com</email>
   <name>Alessio Cassibba</name>

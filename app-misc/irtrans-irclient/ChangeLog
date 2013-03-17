@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/irtrans-irclient
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irclient/ChangeLog,v 1.9 2011/02/07 17:25:33 hd_brummy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/irtrans-irclient/ChangeLog,v 1.10 2013/03/17 15:01:45 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   07 Feb 2011; Joerg Bornkessel <hd_brummy@gentoo.org> metadata.xml:
   mail address fixed
@@ -54,4 +57,3 @@
   +files/irtrans-irclient-5.9.01-missing-include.diff, +metadata.xml,
   +irtrans-irclient-5.9.01.ebuild:
   initial ebuild, thanks to M.Fetka ( proxied Maintainer ) on bug #187099
-

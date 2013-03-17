@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libspectrum
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.32 2012/05/03 18:49:07 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.33 2013/03/17 15:22:10 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> libspectrum-0.2.2-r1.ebuild,
   libspectrum-0.4.0.ebuild, libspectrum-0.5.0.1.ebuild,

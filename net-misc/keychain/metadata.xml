@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
+<herd>proxy-maintainers</herd>
 <maintainer>
 	<email>drobbins@funtoo.org</email>
 	<name>Daniel Robbins</name>

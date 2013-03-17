@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/wstx
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wstx/ChangeLog,v 1.5 2010/01/20 02:49:01 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wstx/ChangeLog,v 1.6 2013/03/17 15:26:12 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   20 Jan 2010; Brent Baude <ranger@gentoo.org> wstx-3.2.8.ebuild:
   Marking wstx-3.2.8 ppc64 for bug 287619
@@ -20,4 +23,3 @@
   +wstx-3.2.8.ebuild:
   Moved from java-experimental to main tree. Fixes bug #257831. Thanks to
   Mike Weissman <mike@weisso.com> for the ebuild.
-

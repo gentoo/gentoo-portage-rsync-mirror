@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/slimrat
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slimrat/ChangeLog,v 1.6 2011/11/11 11:32:06 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slimrat/ChangeLog,v 1.7 2013/03/17 15:06:19 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   11 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop me from maint.
@@ -27,4 +30,3 @@
   10 Mar 2010; Tomáš Chvátal <scarabeus@gentoo.org> +slimrat-1.0.ebuild,
   +metadata.xml:
   Initial commit. Per bug #247580.
-

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screenie
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.24 2011/04/27 00:13:41 c1pher Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.25 2013/03/17 15:02:41 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   26 Apr 2011; Dane Smith <c1pher@gentoo.org> metadata.xml:
   Updated metadata.xml to reflect new maintainers. Thanks Robert Kowalski 
@@ -90,4 +93,3 @@
   +screenie-1.19.0.ebuild:
   Initial import into the tree. This closes bug #104782. Thanks to Henry
   Bucklow for providing the draft ebuild.
-

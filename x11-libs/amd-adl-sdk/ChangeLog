@@ -1,4 +1,7 @@
 
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
+
   25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> amd-adl-sdk-4.0.ebuild:
   Stable for x86, wrt bug #430210
 

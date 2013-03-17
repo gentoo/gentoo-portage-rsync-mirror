@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/backupninja
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backupninja/ChangeLog,v 1.11 2013/01/04 14:49:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backupninja/ChangeLog,v 1.12 2013/03/17 15:12:15 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *backupninja-1.0.1 (04 Jan 2013)
 

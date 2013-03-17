@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/topal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.15 2013/02/26 09:51:15 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.16 2013/03/17 15:03:51 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   26 Feb 2013; Eray Aslan <eras@gentoo.org> -files/64-Makefile.patch,
   -files/72-Makefile.patch, -topal-64.ebuild, -topal-72.ebuild:
