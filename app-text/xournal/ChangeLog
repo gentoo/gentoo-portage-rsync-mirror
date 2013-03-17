@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xournal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.43 2013/03/17 00:30:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.44 2013/03/17 12:25:53 dilfridge Exp $
+
+  17 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org> xournal-0.4.7.ebuild,
+  xournal-9999.ebuild:
+  EAPI=5 and poppler subslot dependency
 
   17 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   -xournal-0.4.5_p20111022-r2.ebuild,

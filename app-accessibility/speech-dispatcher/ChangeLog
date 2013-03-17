@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.81 2013/01/01 11:33:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.82 2013/03/17 12:15:09 jlec Exp $
+
+*speech-dispatcher-0.7.1-r2 (17 Mar 2013)
+
+  17 Mar 2013; Justin Lecher <jlec@gentoo.org>
+  +speech-dispatcher-0.7.1-r2.ebuild, +files/speech-dispatcher-0.7.1-doc.patch,
+  +files/speech-dispatcher-0.7.1-gold.patch,
+  +files/speech-dispatcher-0.7.1-pthread.patch, metadata.xml:
+  Fix linking with gold, #442332; move to new python eclasses, #456978
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org>
   speech-dispatcher-0.7.1-r1.ebuild:

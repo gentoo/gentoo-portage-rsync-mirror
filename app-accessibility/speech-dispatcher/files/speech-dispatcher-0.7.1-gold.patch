@@ -1,0 +1,29 @@
+ src/audio/Makefile.am | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/audio/Makefile.am b/src/audio/Makefile.am
+index 3b596f6..ec23c9f 100644
+--- a/src/audio/Makefile.am
++++ b/src/audio/Makefile.am
+@@ -11,7 +11,7 @@ endif
+ 
+ if pulse_support
+ PULSE_FLAGS = -DWITH_PULSE
+-PULSE_LIBS = -lpulse-simple
++PULSE_LIBS = -lpulse-simple -lpulse
+ endif
+ 
+ if alsa_support
+@@ -31,7 +31,8 @@ endif
+ EXTRA_DIST = alsa.c libao.c oss.c nas.c pulse.c
+ 
+ AM_CFLAGS = $(am_cflags) $(NAS_FLAGS) $(PULSE_FLAGS) $(ALSA_FLAGS) $(LIBAO_FLAGS) $(LIBOSS_FLAGS)
+-libsdaudio_la_LDFLAGS = -version-info @LIB_SDAUDIO_CURRENT@:@LIB_SDAUDIO_REVISION@:@LIB_SDAUDIO_AGE@ -lpthread $(NAS_LIBS) $(PULSE_LIBS) $(ALSA_LIBS) $(LIBAO_LIBS)
++libsdaudio_la_LDFLAGS = -version-info @LIB_SDAUDIO_CURRENT@:@LIB_SDAUDIO_REVISION@:@LIB_SDAUDIO_AGE@
++libsdaudio_la_LIBADD = -lpthread $(NAS_LIBS) $(PULSE_LIBS) $(ALSA_LIBS) $(LIBAO_LIBS)
+ 
+ spdlib_LTLIBRARIES = libsdaudio.la
+ 
+ src/audio/Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+

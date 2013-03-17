@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.7.ebuild,v 1.4 2013/02/14 20:19:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.7.ebuild,v 1.5 2013/03/17 12:25:53 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 GCONF_DEBUG=no
 
@@ -32,7 +32,7 @@ else
 fi
 
 COMMONDEPEND="
-	app-text/poppler[cairo]
+	app-text/poppler:=[cairo]
 	dev-libs/atk
 	dev-libs/glib
 	gnome-base/libgnomecanvas

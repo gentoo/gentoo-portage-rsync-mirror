@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.4.ebuild,v 1.3 2013/03/02 19:38:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.5.2-r1.ebuild,v 1.1 2013/03/17 12:27:57 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit base fdo-mime qt4-r2
 
@@ -17,7 +17,7 @@ IUSE="video"
 
 COMMON_DEPEND="
 	app-text/hunspell
-	app-text/poppler[qt4]
+	app-text/poppler:=[qt4]
 	x11-libs/libX11
 	x11-libs/libXext
 	>=dev-qt/qtgui-4.6.1:4
@@ -37,15 +37,16 @@ DEPEND="${COMMON_DEPEND}
 S="${WORKDIR}"/${P/-/}
 
 PATCHES=(
-	"${FILESDIR}"/${P}-hunspell.patch
-	"${FILESDIR}"/${P}-desktop.patch
-# Get it from fedora once they have bumped
-#	"${FILESDIR}"/${P}-xdg-open.patch
+	"${FILESDIR}"/${PN}-2.5-hunspell.patch
+# 441914
+#	"${FILESDIR}"/${P}-qtsingle.patch
+	"${FILESDIR}"/${PN}-2.4-desktop.patch
+# Get it from fedora
+	"${FILESDIR}"/${PN}-2.5-viewers-use-xdg-open.patch
 	)
 
 src_prepare() {
-	find hunspell -delete
-	sed 's:hunspell/hunspell:hunspell:g' -i *.h || die
+	find hunspell utilities/poppler-data -delete || die
 	if use video; then
 		sed "/^PHONON/s:$:true:g" -i ${PN}.pro || die
 	fi

@@ -1,0 +1,13 @@
+Index: speech-dispatcher/src/c/api/Makefile.am
+===================================================================
+--- speech-dispatcher.orig/src/c/api/Makefile.am	2010-10-01 20:17:24.000000000 +0200
++++ speech-dispatcher/src/c/api/Makefile.am	2010-10-01 20:17:26.000000000 +0200
+@@ -8,6 +8,6 @@
+ libspeechd_la_SOURCES = libspeechd.c
+ libspeechd_la_HEADERS = libspeechd.h
+ libspeechd_ladir = $(includedir)
+-libspeechd_la_LDFLAGS = -version-info @LIB_SPD_CURRENT@:@LIB_SPD_REVISION@:@LIB_SPD_AGE@ -lpthread
+-libspeechd_la_LIBADD = @glib_libs@
++libspeechd_la_LDFLAGS = -version-info @LIB_SPD_CURRENT@:@LIB_SPD_REVISION@:@LIB_SPD_AGE@
++libspeechd_la_LIBADD = @glib_libs@ -lpthread
+ 

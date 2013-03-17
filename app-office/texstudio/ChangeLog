@@ -1,6 +1,12 @@
 # ChangeLog for app-office/texstudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.10 2013/03/02 19:38:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.11 2013/03/17 12:27:57 jlec Exp $
+
+*texstudio-2.5.2-r1 (17 Mar 2013)
+
+  17 Mar 2013; Justin Lecher <jlec@gentoo.org> -texstudio-2.3-r1.ebuild,
+  -texstudio-2.4.ebuild, -texstudio-2.5.ebuild, +texstudio-2.5.2-r1.ebuild:
+  Add subslot operator for app-text/poppler, #462020
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> texstudio-2.3-r1.ebuild,
   texstudio-2.4.ebuild, texstudio-2.5.2.ebuild, texstudio-2.5.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-1.12.ebuild,v 1.2 2013/03/17 12:31:06 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-1.10-r1.ebuild,v 1.1 2013/03/17 12:31:06 tomka Exp $
 
-EAPI=5
+EAPI="5"
 
 inherit eutils multilib systemd
 
@@ -13,9 +13,7 @@ SRC_URI="mirror://kernel/linux/network/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+atmodem bluetooth +cdmamodem +datafiles doc dundee examples +isimodem +phonesim +provision +qmimodem threads test tools +udev"
-
-REQUIRED_USE="dundee? ( bluetooth )"
+IUSE="+atmodem bluetooth +cdmamodem doc examples +isimodem +phonesim threads tools +udev"
 
 RDEPEND=">=sys-apps/dbus-1.4
 	>=dev-libs/glib-2.28
@@ -31,8 +29,7 @@ DOCS=( ChangeLog AUTHORS )
 
 src_prepare() {
 	default
-
-	epatch "${FILESDIR}"/${P}-sys-types.patch
+	epatch  "${FILESDIR}/${PN}-1.12-sys-types.patch"
 }
 
 src_configure() {
@@ -42,15 +39,10 @@ src_configure() {
 		$(use_enable isimodem) \
 		$(use_enable atmodem) \
 		$(use_enable cdmamodem) \
-		$(use_enable datafiles) \
-		$(use_enable dundee) \
 		$(use_enable bluetooth) \
 		$(use_enable phonesim) \
-		$(use_enable provision) \
-		$(use_enable qmimodem) \
 		$(use_enable tools) \
-		$(use_enable test) \
-		--disable-maintainer-mode \
+		--enable-test \
 		--localstatedir=/var \
 		--with-systemdunitdir="$(systemd_get_unitdir)"
 }
