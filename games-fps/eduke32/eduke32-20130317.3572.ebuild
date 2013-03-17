@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/eduke32/eduke32-20130201.3453.ebuild,v 1.1 2013/02/02 18:36:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/eduke32/eduke32-20130317.3572.ebuild,v 1.1 2013/03/17 21:16:21 hasufell Exp $
 
 # TODO/FIXME:
 # lunatic broken
@@ -8,8 +8,6 @@
 # $(usex lunatic "LUNATIC=1" "LUNATIC=0")
 #
 # extras? ( games-fps/${PN}-extras )
-#
-# clang does not build
 
 EAPI=5
 
@@ -26,7 +24,7 @@ SRC_URI="http://dukeworld.duke4.net/eduke32/synthesis/${MY_PV}-${MY_BUILD}/${PN}
 LICENSE="GPL-2 BUILDLIC"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cdinstall debug demo +opengl +png +server tools +vpx"
+IUSE="cdinstall debug demo gtk +opengl +png samples +server tools +vpx"
 REQUIRED_USE="vpx? ( opengl )"
 
 RDEPEND="media-libs/flac
@@ -35,7 +33,7 @@ RDEPEND="media-libs/flac
 	media-libs/libvorbis
 	media-libs/sdl-mixer[timidity]
 	sys-libs/zlib
-	x11-libs/gtk+:2
+	gtk? ( x11-libs/gtk+:2 )
 	opengl? ( virtual/glu
 		virtual/opengl )
 	png? ( media-libs/libpng:0
@@ -76,6 +74,7 @@ src_compile() {
 		STRIP=touch
 		LINKED_GTK=1
 		CPLUSPLUS=0
+		$(usex gtk "WITHOUT_GTK=0" "WITHOUT_GTK=1")
 		$(usex debug "DEBUGANYWAY=1" "DEBUGANYWAY=0")
 		$(usex x86 "NOASM=0" "NOASM=1")
 		$(usex server "NETCODE=1" "NETCODE=0")
@@ -96,7 +95,7 @@ src_install() {
 
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins package/{SEHELP.HLP,STHELP.HLP,m32help.hlp,names.h,tiles.cfg}
-	doins -r package/samples
+	use samples && doins -r package/samples
 
 	local i
 	for i in 16 32 128 256 ; do

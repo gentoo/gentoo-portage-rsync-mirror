@@ -59,7 +59,7 @@ Subject: build system
  PROFILER?=0
  MUDFLAP?=0
  
-@@ -269,10 +268,9 @@
+@@ -269,11 +268,9 @@
  
  # compiler flags etc.
  BASECFLAGS=
@@ -67,36 +67,45 @@ Subject: build system
 -BASECXXFLAGS= -fno-exceptions -fno-rtti -fpermissive -Wno-write-strings -Wno-narrowing
 -BASEASFLAGS=-s #-g
 -BASELDFLAGS=
+-
 +BASECONLYFLAGS = $(CFLAGS) -std=gnu89 -Wimplicit -Wdeclaration-after-statement
 +BASECXXFLAGS = $(CXXFLAGS) -fno-exceptions -fno-rtti -fpermissive -Wno-write-strings -Wno-narrowing
 +BASELDFLAGS = $(LDFLAGS)
  
- 
  ifeq (1,$(strip $(shell expr $(GCC_MAJOR) \>= 4)))
-@@ -300,14 +298,11 @@
-         debug=-g
-     else ifeq ($(PLATFORM), WII)
-         debug=-g
--    else
--        debug=-ggdb
-     endif
+     ifeq (1,$(strip $(shell expr $(GCC_MINOR) \>= 1)))
+@@ -293,20 +290,8 @@
  endif
  
+ 
+-ifneq ($(RELEASE)$(DEBUGANYWAY),10)
+-    # debug build or DEBUGANYWAY=1 --> -g flag
+-    ifneq (0,$(CLANG))
+-        debug=-g
+-    else ifeq ($(PLATFORM), WII)
+-        debug=-g
+-    else
+-        debug=-ggdb
+-    endif
+-endif
+-
  ifneq (0,$(RELEASE))
      # Debugging disabled
 -    debug+= -O$(OPTLEVEL)
      ifeq (0,$(CLANG))
          debug+= -funswitch-loops
          ifeq (1,$(strip $(shell expr $(GCC_MAJOR) \< 4)))
-@@ -330,7 +325,6 @@
+@@ -328,9 +313,6 @@
+         debug+= -DUSING_LTO -flto
      endif
  else
-     # Debugging enabled
+-    # Debugging enabled
 -    debug+= -O0
- 
+-
      ifeq (0,$(DEBUGANYWAY))
          debug+= -DDEBUGGINGAIDS
-@@ -411,7 +405,7 @@
+     else
+@@ -411,7 +393,7 @@
  
  #### Lunatic development, do not touch!
  LUNATIC=0
@@ -104,8 +113,8 @@ Subject: build system
 +LUAJIT=$(shell command -v luajit || command -v luajit-2 || command -v luajit-2.0)
  
  # for LJ headers:
- LUAJIT_WIN_SRC:= g:/mod/LuaJIT-2.0.0-beta8/src
-@@ -424,14 +418,14 @@
+ LUAJIT_WIN_SRC:= g:/mod/luajit-2.0/src
+@@ -424,7 +406,7 @@
      ifeq ($(PLATFORM),WINDOWS)
          BASECOMMONFLAGS+= -I$(LUAJIT_WIN_SRC)
      else
@@ -114,6 +123,7 @@ Subject: build system
      endif
      BASECOMMONFLAGS+= -I$(SRC)/lunatic -DLUNATIC
  
+@@ -436,7 +418,7 @@
      ifeq ($(PLATFORM),WINDOWS)
          BASELIBS+= -lluajit
      else

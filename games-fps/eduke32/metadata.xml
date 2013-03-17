@@ -8,6 +8,8 @@
 	</maintainer>
 	<use>
 		<flag name="demo">Install <pkg>games-fps/duke3d-demodata</pkg> as well</flag>
+		<flag name="gtk">Compile with gtk launcher</flag>
+		<flag name="samples">Install samples</flag>
 		<flag name="server">Compile with server support</flag>
 		<flag name="tools">Build several tools for modding and development</flag>
 		<flag name="vpx">Enable support for WebM VP8 Codecs</flag>

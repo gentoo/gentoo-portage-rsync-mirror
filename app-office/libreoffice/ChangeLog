@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.450 2013/03/13 14:03:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.451 2013/03/17 21:02:54 gienah Exp $
+
+  17 Mar 2013; Mark Wright <gienah@gentoo.org>
+  +files/libreoffice-4.0.1.2-boost-1.53.0.patch, libreoffice-4.0.1.2.ebuild:
+  Fix bug 454274 >=app-office/libreoffice-4.0.0.2: fails to build with dev-
+  libs/boost-1.53.0. Thanks to cJ for earlier proposed patch and testing.
 
   13 Mar 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
   Raise the dep over mdds.

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/soulseek-qt/soulseek-qt-20130212.ebuild,v 1.2 2013/03/02 23:09:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/soulseek-qt/soulseek-qt-20130310.ebuild,v 1.1 2013/03/17 21:12:09 zx2c4 Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Official binary Qt SoulSeek client."
 HOMEPAGE="http://www.soulseekqt.net/"
@@ -17,10 +17,8 @@ SRC_URI="
 	amd64? ( ${BASE_URI}-64bit.tgz )
 	"
 DEPEND=""
-RDEPEND="
-	dev-qt/qtgui:4
-	dev-qt/qtcore:4
-	"
+RDEPEND="dev-qt/qtgui:4
+	dev-qt/qtcore:4"
 RESTRICT="mirror"
 S="${WORKDIR}"
 
