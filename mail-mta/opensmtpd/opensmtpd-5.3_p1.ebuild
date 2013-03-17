@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3_p1.ebuild,v 1.1 2013/03/17 19:59:36 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3_p1.ebuild,v 1.2 2013/03/17 21:44:53 zx2c4 Exp $
 
 EAPI=5
 
@@ -48,11 +48,11 @@ src_configure() {
 		--with-privsep-user=smtpd \
 		--with-filter-user=smtpf \
 		--with-queue-user=smtpq \
-		#--with-lookup-user=smtpl  will be available in the release after 5.3p1
 		--with-privsep-path=/var/empty \
 		--with-sock-dir=/var/run \
 		--sysconfdir=/etc/opensmtpd \
 		$(use_with pam)
+		#--with-lookup-user=smtpl  will be available in the release after 5.3p1
 }
 
 src_install() {
