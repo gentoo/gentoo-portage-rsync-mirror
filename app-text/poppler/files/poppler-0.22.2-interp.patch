@@ -1,0 +1,28 @@
+From 66e13949ce245e4e444028be627250dacd698b8f Mon Sep 17 00:00:00 2001
+From: Adrian Johnson <ajohnson@redneon.com>
+Date: Sun, 17 Mar 2013 19:39:14 +1030
+Subject: [PATCH] cairo: Don't change image interpolation when printing
+
+Bug 62418
+---
+ poppler/CairoOutputDev.cc |    4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/poppler/CairoOutputDev.cc b/poppler/CairoOutputDev.cc
+index dfa3e0e..127aa24 100644
+--- a/poppler/CairoOutputDev.cc
++++ b/poppler/CairoOutputDev.cc
+@@ -1790,6 +1790,10 @@ CairoOutputDev::getFilterForSurface(cairo_surface_t *image,
+   if (orig_width == 0 || orig_height == 0)
+ 	  return CAIRO_FILTER_NEAREST;
+ 
++  /* When printing, don't change the interpolation. */
++  if (printing)
++    return CAIRO_FILTER_NEAREST;
++
+   int scaled_width, scaled_height;
+   getScaledSize (orig_width, orig_height, &scaled_width, &scaled_height);
+ 
+-- 
+1.7.10.4
+
