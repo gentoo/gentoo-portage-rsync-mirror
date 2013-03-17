@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pdf2svg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pdf2svg/ChangeLog,v 1.6 2012/05/05 07:00:25 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pdf2svg/ChangeLog,v 1.7 2013/03/17 13:20:46 ssuominen Exp $
+
+  17 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> pdf2svg-0.2.1.ebuild:
+  Use subslot dependency for app-text/poppler wrt #462020
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> pdf2svg-0.2.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

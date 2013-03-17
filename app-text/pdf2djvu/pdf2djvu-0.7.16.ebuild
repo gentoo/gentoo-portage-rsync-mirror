@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/pdf2djvu-0.7.16.ebuild,v 1.1 2013/01/09 16:30:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/pdf2djvu-0.7.16.ebuild,v 1.2 2013/03/17 13:22:13 ssuominen Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -15,11 +15,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+graphicsmagick nls openmp test"
 
 RDEPEND="
-	>=app-text/djvu-3.5.21
-	>=app-text/poppler-0.16.7
-	dev-libs/libxml2
-	dev-libs/libxslt
-	graphicsmagick? ( media-gfx/graphicsmagick )
+	>=app-text/djvu-3.5.21:=
+	>=app-text/poppler-0.16.7:=
+	dev-libs/libxml2:=
+	dev-libs/libxslt:=
+	graphicsmagick? ( media-gfx/graphicsmagick:= )
 "
 DEPEND="${RDEPEND}
 	dev-cpp/pstreams

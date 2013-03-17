@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-poppler/zathura-pdf-poppler-0.2.2.ebuild,v 1.2 2013/01/27 21:54:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-poppler/zathura-pdf-poppler-0.2.2.ebuild,v 1.3 2013/03/17 13:14:48 ssuominen Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -14,10 +14,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
-RDEPEND="app-text/poppler[cairo]
+RDEPEND="app-text/poppler:=[cairo]
 	>=app-text/zathura-0.2.2
 	>=dev-libs/girara-0.1.5:2
-	x11-libs/cairo"
+	x11-libs/cairo:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdf2djvu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/ChangeLog,v 1.17 2013/01/09 17:43:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/ChangeLog,v 1.18 2013/03/17 13:22:13 ssuominen Exp $
+
+  17 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> pdf2djvu-0.7.16.ebuild:
+  Use subslot dependency for app-text/poppler wrt #462020
 
   09 Jan 2013; Samuli Suominen <ssuominen@gentoo.org> -pdf2djvu-0.7.14.ebuild,
   -pdf2djvu-0.7.15.ebuild:

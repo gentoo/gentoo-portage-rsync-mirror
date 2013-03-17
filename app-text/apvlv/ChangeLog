@@ -1,6 +1,17 @@
 # ChangeLog for app-text/apvlv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/ChangeLog,v 1.21 2012/08/08 16:57:17 dilfridge Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/ChangeLog,v 1.24 2013/03/17 13:20:04 ssuominen Exp $
+
+  17 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -files/apvlv-0.1.0-poppler-0.16.patch, -apvlv-0.1.2-r1.ebuild,
+  -files/apvlv-0.1.2-poppler-0.18.patch:
+  old
+
+  17 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> apvlv-0.1.4.ebuild:
+  amd64/x86 stable
+
+  17 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> apvlv-0.1.4.ebuild:
+  Use subslot dependency for app-text/poppler wrt #462020
 
   08 Aug 2012; Andreas K. Huettel <dilfridge@gentoo.org> apvlv-0.1.2-r1.ebuild,
   apvlv-0.1.4.ebuild:
