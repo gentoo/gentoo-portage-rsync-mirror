@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/getdelta
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.23 2012/08/20 02:55:43 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.24 2013/03/17 04:55:34 patrick Exp $
+
+*getdelta-0.7.9-r2 (17 Mar 2013)
+
+  17 Mar 2013; Patrick Lauer <patrick@gentoo.org> +getdelta-0.7.9-r2.ebuild:
+  Fix make.conf location #461726
 
 *getdelta-0.7.9-r1 (20 Aug 2012)
 
