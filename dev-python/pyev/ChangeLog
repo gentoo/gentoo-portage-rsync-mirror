@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pyev
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyev/ChangeLog,v 1.1 2013/03/17 12:36:38 tomka Exp $
+
+*pyev-0.8.1 (17 Mar 2013)
+
+  17 Mar 2013; Thomas Kahle <tomka@gentoo.org> +metadata.xml,
+  +pyev-0.8.1.ebuild:
+  Initial commit, bug 461498, Ebuild by Dennis Lan, proxy commit.

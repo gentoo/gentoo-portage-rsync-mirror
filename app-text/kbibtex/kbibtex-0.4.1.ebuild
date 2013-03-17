@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/kbibtex-0.4.1.ebuild,v 1.3 2012/12/16 16:33:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbibtex/kbibtex-0.4.1.ebuild,v 1.4 2013/03/17 12:31:16 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 inherit versionator kde4-base
 
@@ -22,7 +22,7 @@ SLOT="4"
 IUSE="debug"
 
 DEPEND="
-	app-text/poppler[qt4]
+	app-text/poppler:=[qt4]
 	dev-libs/libxml2
 	dev-libs/libxslt
 	virtual/tex-base

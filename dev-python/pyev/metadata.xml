@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>python</herd>
+  <maintainer>
+    <email>dennis.yxun@gmail.com</email>
+    <name>Dennis (dlan) Lan</name>
+    <description>maintainer, assign bugs</description>
+  </maintainer>
+  <maintainer>
+    <email>tomka@gentoo.org</email>
+    <name>Thomas Kahle</name>
+    <description>proxy maintainer, CC on bugs</description>
+  </maintainer>
+  <longdescription lang="en">
+	 Pyev is the python interface of <pkg>dev-libs/libev</pkg>
+	 which provides event loop, support select, poll, the
+	 Linux-specific epoll, and so on.
+  </longdescription>
+</pkgmetadata>
+

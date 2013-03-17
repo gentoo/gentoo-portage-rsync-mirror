@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pdf2oo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2oo/ChangeLog,v 1.9 2010/06/15 16:19:24 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2oo/ChangeLog,v 1.10 2013/03/17 12:34:02 dilfridge Exp $
+
+  17 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  pdf2oo-20090715.ebuild:
+  EAPI=5 and poppler subslot dependency
 
   15 Jun 2010; Markos Chandras <hwoarang@gentoo.org> pdf2oo-20090715.ebuild:
   Fix imagemagick dependencies wrt bug #314235

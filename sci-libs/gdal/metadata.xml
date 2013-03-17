@@ -2,13 +2,17 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sci-geosciences</herd>
-  <longdescription>GDAL is the Geospatial Data Abstraction Library, a set of tools for converting between geospatial raster data formats (includes OGR for vector data).</longdescription>
+  <longdescription>
+GDAL is the Geospatial Data Abstraction Library, a set of tools for
+converting between geospatial raster data formats (includes OGR for
+vector data).
+</longdescription>
   <use>
     <flag name="armadillo">Use <pkg>sci-libs/armadillo</pkg> for faster TPS transform computation</flag>
     <flag name="aux_xml">Enable Portable Auxilliary Metadata generation</flag>
     <flag name="ecwj2k">Enable support for alternate jpeg2k library <pkg>sci-libs/libecwj2</pkg></flag>
     <flag name="fits">Enable support for NASA's <pkg>sci-libs/cfitsio</pkg> library</flag>
-    <flag name="geos">Add support for geometry engine (<pkg>sci-libs/geos</pkg></flag>
+    <flag name="geos">Add support for geometry engine (<pkg>sci-libs/geos</pkg>)</flag>
     <flag name="gml">Enable support for <pkg>dev-libs/xerces-c</pkg> C++ API</flag>
     <flag name="hdf">Add support for the Hierarchical Data Format v. 4 (<pkg>sci-libs/hdf</pkg>)</flag>
     <flag name="mdb">Enable support for Microsoft Access database</flag>

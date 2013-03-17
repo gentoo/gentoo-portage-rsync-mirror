@@ -5246,7 +5246,7 @@ sci-libs/gdal:armadillo - Use sci-libs/armadillo for faster TPS transform comput
 sci-libs/gdal:aux_xml - Enable Portable Auxilliary Metadata generation
 sci-libs/gdal:ecwj2k - Enable support for alternate jpeg2k library sci-libs/libecwj2
 sci-libs/gdal:fits - Enable support for NASA's sci-libs/cfitsio library
-sci-libs/gdal:geos - Add support for geometry engine (sci-libs/geos
+sci-libs/gdal:geos - Add support for geometry engine (sci-libs/geos)
 sci-libs/gdal:gml - Enable support for dev-libs/xerces-c C++ API
 sci-libs/gdal:hdf - Add support for the Hierarchical Data Format v. 4 (sci-libs/hdf)
 sci-libs/gdal:mdb - Enable support for Microsoft Access database
