@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.86 2013/01/27 22:28:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.87 2013/03/16 23:46:00 naota Exp $
+
+  16 Mar 2013; Naohiro Aota <naota@gentoo.org> files/nfs.initd:
+  Update init script. #459696
 
   27 Jan 2013; Alexis Ballier <aballier@gentoo.org> freebsd-usbin-9.1.ebuild:
   drop isdn useflag, by Yuta SATOH, bug #448502
