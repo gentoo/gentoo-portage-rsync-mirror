@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/yagf-0.9.2.ebuild,v 1.2 2013/03/02 19:46:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/yagf-0.9.2.ebuild,v 1.3 2013/03/17 17:08:57 pinkbyte Exp $
 
 EAPI="5"
 
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 	cuneiform? ( app-text/cuneiform )
 	tesseract? ( app-text/tesseract )
 	scanner? ( media-gfx/xsane )
-	pdf? ( || ( app-text/poppler[utils] app-text/ghostscript-gpl ) )"
+	pdf? ( || ( app-text/poppler:=[utils] app-text/ghostscript-gpl ) )"
 
 DOCS=( AUTHORS ChangeLog DESCRIPTION README )
 

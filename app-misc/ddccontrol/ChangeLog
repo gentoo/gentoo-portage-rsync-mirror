@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ddccontrol
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.29 2012/11/18 11:51:06 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ChangeLog,v 1.30 2013/03/17 17:03:33 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Ensure upstream dev is in metadata.

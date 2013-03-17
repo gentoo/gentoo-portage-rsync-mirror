@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/root-docs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.28 2013/02/25 04:44:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.29 2013/03/17 17:12:53 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml (forced because of broken rdeps)
 
 *root-docs-5.34.05 (23 Feb 2013)
 

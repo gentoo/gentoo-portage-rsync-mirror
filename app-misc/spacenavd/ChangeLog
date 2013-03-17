@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/spacenavd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/ChangeLog,v 1.14 2013/02/12 16:51:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/spacenavd/ChangeLog,v 1.15 2013/03/17 17:03:15 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   12 Feb 2013; Agostino Sarubbo <ago@gentoo.org> spacenavd-0.5-r4.ebuild:
   Stable for ppc64, wrt bug #456454
