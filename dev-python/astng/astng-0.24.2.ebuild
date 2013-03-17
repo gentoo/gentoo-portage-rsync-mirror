@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.24.2.ebuild,v 1.1 2013/03/14 16:34:13 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.24.2.ebuild,v 1.2 2013/03/17 05:28:58 patrick Exp $
 
 EAPI=5
 
@@ -26,14 +26,11 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/logilab-${P}"
 
 python_test() {
-	# Make sure that the tests use correct modules & paths, for now at least
-	# python3 currently doesn't pass all tests on std testing
+	distutils_install_for_testing
 
-	cd "${BUILD_DIR}"/lib || die
-	[[ "${EPYTHON:6:1}" == '3' ]] && return
-	pushd logilab/astng > /dev/null || return 1
-	pytest $(find . -name test) || die "Tests fail with ${EPYTHON}"
-	popd > /dev/null || return 1
+	# Make sure that the tests use correct modules.
+	cd "${TEST_DIR}"/lib || die
+	pytest -v || die "Tests fail with ${EPYTHON}"
 }
 
 python_install() {
