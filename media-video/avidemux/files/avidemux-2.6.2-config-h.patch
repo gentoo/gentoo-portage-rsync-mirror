@@ -1,0 +1,18 @@
+--- avidemux_plugins/CMakeLists.txt	2012-07-13 09:50:08.000000000 +0200
++++ avidemux_plugins/CMakeLists.txt.2	2013-03-17 15:16:36.804417808 +0100
+@@ -98,13 +98,8 @@
+     set(ADM_INC "NOTFOUND")
+     FIND_PATH(ADM_INC config.h "${AVIDEMUX_SEARCH_INCLUDE_DIR}/avidemux/2.6/${flavor}")
+     #MESSAGE(STATUS "result : ${ADM_INC_NOT_FOUND},${ADM_INC}")
+-    IF(${ADM_INC} MATCHES "NOTFOUND")
+-        SET(${result} 0)
+-        MESSAGE(STATUS "Include for ${flavor} not found")
+-    ELSE(${ADM_INC} MATCHES "NOTFOUND")
+-        SET(${result} 1)
+-        MESSAGE(STATUS "Include for ${flavor} found")
+-    ENDIF(${ADM_INC} MATCHES "NOTFOUND")
++    SET(${result} 1)
++    MESSAGE(STATUS "Include for ${flavor} forced.")
+ ENDMACRO(CHECK_ADM_CONFIG_H flavor result)
+ 
+ APPEND_SUMMARY_LIST("User Interface" "Common" "${DO_COMMON}")

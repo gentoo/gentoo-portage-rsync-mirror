@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.2.ebuild,v 1.2 2013/03/17 08:33:00 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.2.ebuild,v 1.3 2013/03/17 14:22:55 tomwij Exp $
 
 EAPI="5"
 
@@ -61,6 +61,9 @@ src_prepare() {
 	# Fix QA warnings that complain a trailing ; is missing and Application is deprecated.
 	sed -i -e 's/Application;AudioVideo/AudioVideo;/g' ${PN}-2.6.desktop
 	sed -i -e 's/Application;AudioVideo/AudioVideo;/g' ${PN}-2.6-gtk.desktop
+
+	# Force the config checks to pass.
+	epatch "${FILESDIR}"/avidemux-2.6.2-config-h.patch
 }
 
 src_configure() {

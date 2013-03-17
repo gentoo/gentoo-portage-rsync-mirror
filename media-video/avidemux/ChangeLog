@@ -1,6 +1,12 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.210 2013/03/17 08:33:00 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.211 2013/03/17 14:22:55 tomwij Exp $
+
+  17 Mar 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/avidemux-2.6.2-config-h.patch, avidemux-2.6.2.ebuild:
+  Forcing config.h checks to pass, checked that without avidemux present it
+  compiles for me (and others). This is an attempt to fix bug #461962 reported
+  by Peter Norman.
 
   17 Mar 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-2.6.2.ebuild:
   Check for presence of file before changing its permissions. Bug #461962,
