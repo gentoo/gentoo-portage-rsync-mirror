@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/exheres-syntax
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/exheres-syntax/ChangeLog,v 1.10 2011/09/21 08:00:27 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/exheres-syntax/ChangeLog,v 1.11 2013/03/17 18:06:02 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org>
   exheres-syntax-99999999.ebuild:
@@ -46,4 +49,3 @@
   20 May 2008; Santiago M. Mola <coldwind@gentoo.org> +metadata.xml,
   +exheres-syntax-99999999.ebuild:
   Initial ebuild.
-

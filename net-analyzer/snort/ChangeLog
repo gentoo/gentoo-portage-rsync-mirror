@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.199 2012/12/30 21:16:14 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.200 2013/03/17 18:02:01 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> snort-2.9.2.3.ebuild:
   Add ~sparc, wrt to bug #407795

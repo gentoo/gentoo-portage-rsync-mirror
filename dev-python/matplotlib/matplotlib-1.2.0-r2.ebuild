@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r2.ebuild,v 1.6 2013/02/24 11:45:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.2.0-r2.ebuild,v 1.7 2013/03/17 18:20:51 xarthisius Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2} )
+PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} )
 PYTHON_REQ_USE='tk?'
 
 inherit distutils-r1 eutils flag-o-matic

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyev/pyev-0.8.1.ebuild,v 1.1 2013/03/17 12:36:38 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyev/pyev-0.8.1.ebuild,v 1.2 2013/03/17 18:15:05 zmedico Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ MY_P=${P}-4.04
 DESCRIPTION="Python libev interface, an event loop"
 HOMEPAGE="http://code.google.com/p/pyev/
 	http://pythonhosted.org/pyev/"
-SRC_URI="http://pypi.python.org/pypi/pyev/${MY_P}.tar.gz"
+SRC_URI="mirror://pypi/p/pyev/${MY_P}.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"

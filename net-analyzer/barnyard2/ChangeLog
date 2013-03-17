@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/barnyard2
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard2/ChangeLog,v 1.5 2011/04/02 12:54:23 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard2/ChangeLog,v 1.6 2013/03/17 18:03:09 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   02 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> barnyard2-1.8.ebuild,
   barnyard2-1.9.ebuild:
@@ -24,4 +27,3 @@
   +files/barnyard2.initd, +barnyard2-1.8.ebuild, +metadata.xml:
   Initial import. Ebuild by Jason Wallace based on work by Fabio
   Scaccabarozzi and Han Boetes . Closes #279019 and #307783
-

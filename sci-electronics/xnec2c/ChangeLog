@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/xnec2c
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/ChangeLog,v 1.9 2013/03/12 08:56:45 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/ChangeLog,v 1.10 2013/03/17 18:05:13 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *xnec2c-2.3_beta (12 Mar 2013)
 
