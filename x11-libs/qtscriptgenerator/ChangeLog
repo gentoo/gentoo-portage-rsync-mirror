@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qtscriptgenerator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.28 2013/03/02 23:45:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.29 2013/03/17 09:41:32 pinkbyte Exp $
+
+  17 Mar 2013; Sergey Popov <pinkbyte@gentoo.org>
+  qtscriptgenerator-0.2.0.ebuild:
+  Add ~arm keyword, wrt bug #448136
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   qtscriptgenerator-0.2.0.ebuild:
