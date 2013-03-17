@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-python/setuptools[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] firebird? ( dev-python/kinterbasdb ) mssql? ( dev-python/pymssql ) mysql? ( dev-python/mysql-python ) postgres? ( >=dev-python/psycopg-2 ) sqlite? ( >=dev-db/sqlite-3.3.13 ) test? ( >=dev-db/sqlite-3.3.13 >=dev-python/nose-0.10.4[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] ) python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
+DESCRIPTION=Python SQL toolkit and Object Relational Mapper
+EAPI=5
+HOMEPAGE=http://www.sqlalchemy.org/ http://pypi.python.org/pypi/SQLAlchemy
+IUSE=doc examples firebird mssql mysql postgres +sqlite test python_targets_python2_6 python_targets_python2_7
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
+LICENSE=MIT
+RDEPEND=dev-python/setuptools[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] firebird? ( dev-python/kinterbasdb ) mssql? ( dev-python/pymssql ) mysql? ( dev-python/mysql-python ) postgres? ( >=dev-python/psycopg-2 ) sqlite? ( >=dev-db/sqlite-3.3.13 ) python_targets_python2_6? ( dev-lang/python:2.6 ) python_targets_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
+SLOT=0
+SRC_URI=mirror://pypi/S/SQLAlchemy/SQLAlchemy-0.8.0.tar.gz
+_eclasses_=distutils-r1	b0e385aa50f6f85a0eb08281706524f9	eutils	50d18ebffcbd8bd63614b89c2d664d0d	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multibuild	09ecc885e84a763742480174a993ee70	multilib	ded93e450747134a079e647d888aa80b	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	9e27078cbd192d8f424351fa8e0ee975	python-utils-r1	c5012e18184f3e0473a1f1a7b9662ab0	toolchain-funcs	69a2016af67775a812f4c03ba4b0e03e	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=fe5ec9ee57e42d40977f5721bce3d574
