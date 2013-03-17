@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnome-office</herd>
+<herd>proxy-maintainers</herd>
 <maintainer>
 <email>remi@gentoo.org</email>
 </maintainer>

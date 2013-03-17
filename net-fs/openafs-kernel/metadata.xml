@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-fs</herd>
+<herd>proxy-maintainers</herd>
 <maintainer>
 	<email>andrej.filipcic@ijs.si</email>
 	<name>Andrej Filipcic</name>

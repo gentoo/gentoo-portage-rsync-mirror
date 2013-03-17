@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/pekwm-themes-hewphoria
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/pekwm-themes-hewphoria/ChangeLog,v 1.7 2012/10/04 20:55:02 axs Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/pekwm-themes-hewphoria/ChangeLog,v 1.8 2013/03/17 15:31:51 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   04 Oct 2012; Ian Stakenvicius <axs@gentoo.org>
   pekwm-themes-hewphoria-20080404.ebuild,
@@ -32,4 +35,3 @@
   08 Apr 2008; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
   +pekwm-themes-hewphoria-20080404.ebuild:
   Initial commit. Ebuild contributed by Nico Wohlgemuth, maintainer by proxy.
-

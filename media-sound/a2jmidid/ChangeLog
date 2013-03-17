@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/a2jmidid
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/ChangeLog,v 1.5 2012/05/05 08:02:52 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/ChangeLog,v 1.6 2013/03/17 15:39:08 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> a2jmidid-4.ebuild,
   a2jmidid-5.ebuild, a2jmidid-6.ebuild:
@@ -24,4 +27,3 @@
   06 Aug 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
   +a2jmidid-4.ebuild:
   initial import, thanks to Jouni Rinne.
-

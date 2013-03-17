@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.62 2012/07/01 18:43:11 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.63 2013/03/17 15:36:08 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   01 Jul 2012; Raúl Porcel <armin76@gentoo.org> ksh-93.20120229.ebuild:
   alpha/ia64/s390/sparc stable wrt #418633
@@ -237,4 +240,3 @@
 
   29 May 2003; Tavis Ormandy <taviso@gentoo.org> ksh-93.20030422.ebuild:
   Initial import of David Korn's original shell.
-

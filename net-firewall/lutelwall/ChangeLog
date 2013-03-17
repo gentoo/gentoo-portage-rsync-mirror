@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/lutelwall
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/lutelwall/ChangeLog,v 1.17 2011/11/22 18:00:29 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/lutelwall/ChangeLog,v 1.18 2013/03/17 16:01:22 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   22 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #82110
@@ -62,4 +65,3 @@
 
   27 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> +lutelwall-0.96.ebuild:
   Initial commit. Fixes bug 73992. Thanks to Tomek Lutelmowski <tomek@lutel.pl>.
-

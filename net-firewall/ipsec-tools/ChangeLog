@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.109 2013/03/16 08:48:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.110 2013/03/17 15:54:27 ago Exp $
+
+  17 Mar 2013; Agostino Sarubbo <ago@gentoo.org> ipsec-tools-0.8.0-r5.ebuild:
+  Stable for arm, wrt bug #461882
 
   16 Mar 2013; Anthony G. Basile <blueness@gentoo.org>
   ipsec-tools-0.8.0-r5.ebuild, ipsec-tools-0.8.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/plasma-network-status
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-network-status/ChangeLog,v 1.1 2012/03/16 10:27:00 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-network-status/ChangeLog,v 1.2 2013/03/17 15:35:31 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *plasma-network-status-0.1.1 (16 Mar 2012)
 
@@ -8,4 +11,3 @@
   +plasma-network-status-0.1.1.ebuild:
   New ebuild wrt bug #407203. Imported from kde overlay and written by Pavlos
   Ratis <dastergon@gmail.com>.
-

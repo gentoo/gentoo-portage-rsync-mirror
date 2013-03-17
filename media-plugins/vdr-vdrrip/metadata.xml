@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>media-tv</herd>
+<herd>proxy-maintainers</herd>
 
 <maintainer>
 <email>erm67@yahoo.it</email>

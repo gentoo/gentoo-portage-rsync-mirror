@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-dxr3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.25 2012/05/05 08:27:18 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.26 2013/03/17 15:33:49 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> vdr-dxr3-0.2.12.ebuild,
   vdr-dxr3-0.2.13.ebuild:
@@ -115,4 +118,3 @@
   07 May 2006; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
   +vdr-dxr3-0.2.6.ebuild:
   Initial import of ebuild. Based on version taken from the gentoo.de-overlay.
-

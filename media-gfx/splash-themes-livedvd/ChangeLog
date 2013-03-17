@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/splash-themes-livedvd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livedvd/ChangeLog,v 1.4 2013/03/12 11:25:36 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livedvd/ChangeLog,v 1.5 2013/03/17 15:51:31 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *splash-themes-livedvd-12.0-r1 (12 Mar 2013)
 

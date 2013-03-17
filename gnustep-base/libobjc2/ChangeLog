@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/libobjc2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/ChangeLog,v 1.10 2012/07/25 12:11:23 voyageur Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/ChangeLog,v 1.11 2013/03/17 15:37:33 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *libobjc2-1.6.1 (25 Jul 2012)
 
@@ -54,4 +57,3 @@
   +metadata.xml:
   Initial commit, use temporary gnustep-make so real gnustep-make can depend
   on this one day
-

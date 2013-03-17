@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>app-dicts</herd>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>mg_gentoo@yahoo.com</email>
 		<name>Mark Gilbert</name>

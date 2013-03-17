@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyFoam
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyFoam/ChangeLog,v 1.10 2010/12/30 21:54:37 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyFoam/ChangeLog,v 1.11 2013/03/17 16:00:34 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   30 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   PyFoam-0.5.4-r1.ebuild:
@@ -62,4 +65,3 @@
   24 Jun 2008; Oliver Borm (boroli) <oli.borm@web.de> +PyFoam-0.4.3.ebuild,
   +metadata.xml:
   New ebuild for bug 229245
-

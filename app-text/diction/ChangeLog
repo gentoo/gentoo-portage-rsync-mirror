@@ -1,6 +1,9 @@
 # ChangeLog for app-text/diction
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.40 2010/11/04 20:07:53 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.41 2013/03/17 15:46:57 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   04 Nov 2010; Jeroen Roovers <jer@gentoo.org>
   -files/diction-1.07-style-fail-on-bad-lang.patch,

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/stk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/stk/ChangeLog,v 1.15 2012/11/24 16:14:53 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stk/ChangeLog,v 1.16 2013/03/17 15:52:47 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   24 Nov 2012; Alexis Ballier <aballier@gentoo.org> -stk-4.4.4.ebuild:
   remove old
@@ -91,4 +94,3 @@
   +files/stk-4.3.1-missing.patch, +metadata.xml, +stk-4.3.1.ebuild:
   Initial import; ebuild mainly by Thomas Kuther who I'm proxy maintaining
   the package for.
-

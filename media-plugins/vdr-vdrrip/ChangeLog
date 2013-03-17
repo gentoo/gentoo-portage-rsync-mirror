@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-vdrrip
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrrip/ChangeLog,v 1.8 2009/08/08 22:24:39 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrrip/ChangeLog,v 1.9 2013/03/17 15:32:05 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   08 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   vdr-vdrrip-0.3.0-r7.ebuild, +files/vdr-vdrrip-0.3.0-glibc-2.10.patch:
@@ -51,4 +54,3 @@
   +files/vdrrip-qh.conf, +metadata.xml, +vdr-vdrrip-0.3.0-r4.ebuild:
   Initial import of ebuild, based on gentoo.de-version, maintained by E.
   Scaglione <erm67@yahoo.it>.
-

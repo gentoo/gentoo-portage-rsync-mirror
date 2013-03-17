@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-fs</herd>
+<herd>proxy-maintainers</herd>
 <maintainer>
 	<email>gentoobugsie.20.dsurawicz@spamgourmet.com</email>
 	<name>Dustin Polke</name>

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.5.ebuild,v 1.4 2013/03/02 19:34:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.5.5.ebuild,v 1.5 2013/03/17 15:55:20 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -109,7 +109,7 @@ RDEPEND="
 	opengtl? ( >=media-libs/opengtl-0.9.15 )
 	openexr? ( media-libs/openexr )
 	pdf? (
-		app-text/poppler
+		app-text/poppler:=
 		media-gfx/pstoedit
 	)
 	postgres? (

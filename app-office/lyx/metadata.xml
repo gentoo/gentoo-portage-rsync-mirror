@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>tex</herd>
+<herd>proxy-maintainers</herd>
 <herd>cjk</herd>
 <maintainer>
   <email>aballier@gentoo.org</email>

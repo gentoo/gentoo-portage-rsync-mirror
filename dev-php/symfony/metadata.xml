@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>php</herd>
+  <herd>proxy-maintainers</herd>
   <herd>web-apps</herd>
   <maintainer>
     <email>jamie-lists@boxlightmedia.com</email>

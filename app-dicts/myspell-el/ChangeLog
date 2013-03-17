@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-el
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-el/ChangeLog,v 1.20 2012/06/27 09:49:21 tampakrap Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-el/ChangeLog,v 1.21 2013/03/17 15:49:24 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *myspell-el-0.8 (27 Jun 2012)
 
@@ -73,4 +76,3 @@
   01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
   +myspell-el-20060316.ebuild:
   New ebuild for Greek myspell dictionary
-

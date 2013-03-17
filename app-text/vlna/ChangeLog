@@ -1,6 +1,9 @@
 # ChangeLog for app-text/vlna
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.41 2012/05/09 17:28:12 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.42 2013/03/17 15:47:23 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> vlna-1.5.ebuild:
   keyword ~amd64-fbsd
@@ -125,4 +128,3 @@
   27 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> vlna-1.2.ebuild:
   Initial import. Thanks to Jaromir Malenko <malenko@email.cz>,
   see bug #31657
-

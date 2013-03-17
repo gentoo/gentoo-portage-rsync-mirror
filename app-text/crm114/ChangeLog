@@ -1,6 +1,9 @@
 # ChangeLog for app-text/crm114
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.51 2012/03/09 11:27:13 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.52 2013/03/17 15:45:42 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   09 Mar 2012; Tim Harder <radhermit@gentoo.org> -crm114-20090807.ebuild:
   Remove old.
@@ -234,4 +237,3 @@
   24 Sep 2003; Seemant Kulleen <seemant@gentoo.org> crm114-20030920.ebuild:
   Controllable Reg-ex Mutilator. Ebuild submission by the venerable Peter Simons
   <simons@cryp.to> in bug #29126
-

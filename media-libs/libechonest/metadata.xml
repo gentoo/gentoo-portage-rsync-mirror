@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sound</herd>
+  <herd>proxy-maintainers</herd>
   <maintainer>
     <email>nikoli@lavabit.com</email>
     <name>Nikoli</name>

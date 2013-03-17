@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocaml-data-notation
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ChangeLog,v 1.13 2013/02/07 15:23:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ChangeLog,v 1.14 2013/03/17 15:50:43 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   07 Feb 2013; Alexis Ballier <aballier@gentoo.org>
   ocaml-data-notation-0.0.10.ebuild:
@@ -67,4 +70,3 @@
   +ocaml-data-notation-0.0.3.ebuild, +metadata.xml:
   initial import, ebuild by Vladimir Ivanov, bug #355759, with some
   modifications by me
-

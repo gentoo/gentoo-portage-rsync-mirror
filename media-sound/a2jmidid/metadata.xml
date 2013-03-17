@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>proaudio</herd>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>aballier@gentoo.org</email>
 		<name>Alexis Ballier</name>

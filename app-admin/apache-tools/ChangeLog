@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.149 2013/03/05 12:14:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.150 2013/03/17 15:31:22 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   05 Mar 2013; Agostino Sarubbo <ago@gentoo.org> -apache-tools-2.2.22.ebuild,
   -apache-tools-2.2.23.ebuild, -apache-tools-2.4.3-r1.ebuild:

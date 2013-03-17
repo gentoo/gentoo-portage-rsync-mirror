@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/joomla
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.57 2011/12/13 19:44:49 fauli Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.58 2013/03/17 15:36:55 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *joomla-1.7.3 (13 Dec 2011)
 *joomla-1.5.25 (13 Dec 2011)
@@ -294,4 +297,3 @@
   28 Sep 2005; Renat Lumpau <rl03@gentoo.org> +files/postinstall-en.txt,
   +metadata.xml, +joomla-1.0.1.ebuild:
   Initial ebuild wrt bug #107129.
-

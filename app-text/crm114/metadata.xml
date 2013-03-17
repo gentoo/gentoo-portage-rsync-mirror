@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>shell-tools</herd>
+<herd>proxy-maintainers</herd>
 <maintainer>
   <email>steev@gentoo.org</email>
   <name>Steev Klimaszewski</name>

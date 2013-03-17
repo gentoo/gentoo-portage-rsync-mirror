@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rtf2html
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/ChangeLog,v 1.10 2013/02/03 12:07:40 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/ChangeLog,v 1.11 2013/03/17 15:47:54 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   03 Feb 2013; Thomas Kahle <tomka@gentoo.org> metadata.xml:
   Pick up for proxy maintainership

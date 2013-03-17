@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.34 2013/03/02 19:34:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.35 2013/03/17 15:55:20 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -38,7 +38,9 @@ esac
 LICENSE="GPL-2"
 SLOT="4"
 
-[[ ${PV} == *9999 ]] || KEYWORDS="~amd64 ~arm ~x86"
+# Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
+[[ ${PV} == *9999 ]] || \
+KEYWORDS="~amd64 ~arm ~x86"
 
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
 gsl +jpeg jpeg2k +kdcraw kdepim +lcms marble mysql +okular opengtl openexr
@@ -105,7 +107,7 @@ RDEPEND="
 	opengtl? ( >=media-libs/opengtl-0.9.15 )
 	openexr? ( media-libs/openexr )
 	pdf? (
-		app-text/poppler
+		app-text/poppler:=
 		media-gfx/pstoedit
 	)
 	postgres? (

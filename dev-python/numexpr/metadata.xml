@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>python</herd>
+<herd>proxy-maintainers</herd>
 <herd>sci</herd>
 <maintainer>
   <email>timcera@earthlink.net</email>

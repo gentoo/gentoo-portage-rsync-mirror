@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/arx-fatalis-data
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-fatalis-data/ChangeLog,v 1.5 2013/03/14 01:00:40 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-fatalis-data/ChangeLog,v 1.6 2013/03/17 15:45:25 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *arx-fatalis-data-1.21-r2 (14 Mar 2013)
 

@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci</herd>
+<herd>proxy-maintainers</herd>
 <maintainer>
   <email>dongxuli2011@gmail.com</email>
   <description>please assign bugs</description>

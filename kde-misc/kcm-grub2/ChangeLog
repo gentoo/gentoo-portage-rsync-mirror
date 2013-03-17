@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kcm-grub2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/ChangeLog,v 1.7 2012/06/18 16:19:08 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/ChangeLog,v 1.8 2013/03/17 15:35:43 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
 *kcm-grub2-0.5.8 (18 Jun 2012)
 
@@ -33,4 +36,3 @@
   +files/kcm-grub2-use-gentoo-grub-commands.patch, +kcm-grub2-0.5.0.ebuild,
   +metadata.xml:
   Add grub2 kcm module for in-kde configuration.
-

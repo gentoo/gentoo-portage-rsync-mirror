@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Net-SSLeay
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.109 2013/03/15 14:45:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.111 2013/03/17 16:00:31 ago Exp $
+
+  17 Mar 2013; Agostino Sarubbo <ago@gentoo.org> Net-SSLeay-1.520.0.ebuild:
+  Stable for sparc, wrt bug #461676
+
+  17 Mar 2013; Agostino Sarubbo <ago@gentoo.org> Net-SSLeay-1.520.0.ebuild:
+  Stable for arm, wrt bug #461676
 
   15 Mar 2013; Jeroen Roovers <jer@gentoo.org> Net-SSLeay-1.520.0.ebuild:
   Stable for HPPA (bug #461676).

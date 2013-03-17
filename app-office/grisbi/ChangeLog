@@ -1,6 +1,9 @@
 # ChangeLog for app-office/grisbi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.62 2012/12/25 12:37:11 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.63 2013/03/17 15:54:18 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   25 Dec 2012; Pacho Ramos <pacho@gentoo.org> -grisbi-0.8.8.ebuild,
   -grisbi-0.8.9.ebuild:

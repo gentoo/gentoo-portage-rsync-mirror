@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aiksaurus
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.40 2012/08/05 21:01:16 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.41 2013/03/17 15:46:06 hwoarang Exp $
+
+  17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add proxy-maintainers to metadata.xml
 
   05 Aug 2012; Anthony G. Basile <blueness@gentoo.org> aiksaurus-1.2.1.ebuild:
   Keyword ~arm

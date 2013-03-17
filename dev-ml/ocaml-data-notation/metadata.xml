@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>ml</herd>
+<herd>proxy-maintainers</herd>
 <maintainer>
   <email>v.ivanov@ymail.com</email>
   <name>Vladimir Ivanov</name>

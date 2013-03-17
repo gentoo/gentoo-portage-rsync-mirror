@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>kde</herd>
+  <herd>proxy-maintainers</herd>
   <herd>qt</herd>
   <maintainer>
     <email>dastergon@gmail.com</email>

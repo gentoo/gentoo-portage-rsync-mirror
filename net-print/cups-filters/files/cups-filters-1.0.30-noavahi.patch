@@ -1,0 +1,35 @@
+diff -ruN cups-filters-1.0.30.orig/configure.ac cups-filters-1.0.30/configure.ac
+--- cups-filters-1.0.30.orig/configure.ac	2013-03-07 19:19:51.000000000 +0100
++++ cups-filters-1.0.30/configure.ac	2013-03-17 16:34:35.000000000 +0100
+@@ -204,6 +204,10 @@
+ dnl Check for pkg-config, which is used for some other tests later on...
+ AC_PATH_PROG(PKGCONFIG, pkg-config)
+ 
++PKG_CHECK_MODULES(GLIB, [glib-2.0 >= 2.30.2])
++AC_SUBST(GLIB_CFLAGS)
++AC_SUBST(GLIB_LIBS)
++
+ dnl Avahi for cups-browsed
+ AVAHI_LIBS=""
+ AVAHI_CFLAGS=""
+@@ -229,6 +233,8 @@
+ 		AVAHI_CFLAGS="$AVAHI_CFLAGS `$PKGCONFIG --cflags avahi-client`"
+ 		AVAHI_LIBS="$AVAHI_LIBS `$PKGCONFIG --libs avahi-client`"
+ 		AC_DEFINE(HAVE_AVAHI, [], [Define if you have the avahi library])
++
++		PKG_CHECK_MODULES(AVAHI_GLIB, [avahi-glib])
+ 	else
+ 		AC_MSG_RESULT(no)
+ 	fi
+@@ -237,11 +243,6 @@
+ AC_SUBST(AVAHI_LIBS)
+ AC_SUBST(AVAHI_CFLAGS)
+ 
+-PKG_CHECK_MODULES(GLIB, [glib-2.0 >= 2.30.2])
+-AC_SUBST(GLIB_CFLAGS)
+-AC_SUBST(GLIB_LIBS)
+-
+-PKG_CHECK_MODULES(AVAHI_GLIB, [avahi-glib])
+ AC_SUBST(AVAHI_GLIB_CFLAGS)
+ AC_SUBST(AVAHI_GLIB_LIBS)
+ 
