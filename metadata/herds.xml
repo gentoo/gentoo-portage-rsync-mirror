@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1015 2013/03/17 14:59:05 floppym Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1016 2013/03/17 16:41:25 ago Exp $
 
 -->
 <herds>
@@ -613,6 +613,10 @@
     <email>blueness@gentoo.org</email>
     <name>Anthony G. Basile</name>
   </maintainer>
+  <maintainer>
+    <email>ago@gentoo.org</email>
+    <name>Agostino Sarubbo</name>
+  </maintainer>
 </herd>
 <herd>
   <name>games</name>
@@ -1132,6 +1136,10 @@
     <email>xmw@gentoo.org</email>
     <name>Michael Weber</name>
   </maintainer>
+  <maintainer>
+    <email>ago@gentoo.org</email>
+    <name>Agostino Sarubbo</name>
+  </maintainer>
 </herd>
 <herd>
   <name>mips</name>
@@ -1576,6 +1584,10 @@
     <email>jer@gentoo.org</email>
     <name>Jeroen Roovers</name>
   </maintainer>
+  <maintainer>
+    <email>ago@gentoo.org</email>
+    <name>Agostino Sarubbo</name>
+  </maintainer>
 </herd>
 <herd>
   <name>arm</name>
@@ -1607,6 +1619,10 @@
   <maintainer>
     <email>ssuominen@gentoo.org</email>
     <name>Samuli Suominen</name>
+  </maintainer>
+  <maintainer>
+    <email>ago@gentoo.org</email>
+    <name>Agostino Sarubbo</name>
   </maintainer>
 </herd>
 <herd>
@@ -1675,6 +1691,10 @@
     <email>mattst88@gentoo.org</email>
     <name>Matt Turner</name>
   </maintainer>
+  <maintainer>
+    <email>ago@gentoo.org</email>
+    <name>Agostino Sarubbo</name>
+  </maintainer>
 </herd>
 <herd>
   <name>ia64</name>
@@ -1685,6 +1705,10 @@
   </maintainer>
   <maintainer>
   <email>armin76@gentoo.org</email>
+  </maintainer>
+  <maintainer>
+    <email>ago@gentoo.org</email>
+    <name>Agostino Sarubbo</name>
   </maintainer>
 </herd>
 <herd>
@@ -1757,6 +1781,10 @@
   <maintainer>
     <email>armin76@gentoo.org</email>
   </maintainer>
+  <maintainer>
+    <email>ago@gentoo.org</email>
+    <name>Agostino Sarubbo</name>
+  </maintainer>
 </herd>
 <herd>
   <name>sh</name>
@@ -1768,6 +1796,10 @@
   <maintainer>
     <email>armin76@gentoo.org</email>
     <name>Raúl Porcel</name>
+  </maintainer>
+  <maintainer>
+    <email>ago@gentoo.org</email>
+    <name>Agostino Sarubbo</name>
   </maintainer>
 </herd>
 <herd>

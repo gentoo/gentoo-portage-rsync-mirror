@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.6.2.ebuild,v 1.1 2013/03/04 17:05:02 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.6.2.ebuild,v 1.2 2013/03/17 16:32:36 kensington Exp $
 
 EAPI=5
 
@@ -40,6 +40,13 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 DOCS=( AUTHORS )
+
+src_configure() {
+	local mycmakeargs=(
+		-DPhonon_DIR=/usr/$(get_libdir)/cmake/phonon/
+	)
+	cmake-utils_src_configure
+}
 
 pkg_postinst() {
 	elog "For more verbose debug information, export the following variables:"
