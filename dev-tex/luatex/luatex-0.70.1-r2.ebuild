@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.70.1-r2.ebuild,v 1.1 2013/03/10 12:51:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.70.1-r2.ebuild,v 1.2 2013/03/17 00:27:02 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 inherit libtool eutils texlive-common
 
@@ -18,7 +18,7 @@ IUSE="doc"
 
 RDEPEND="dev-libs/zziplib
 	>=media-libs/libpng-1.4
-	app-text/poppler[xpdf-headers(+)]
+	app-text/poppler:=[xpdf-headers(+)]
 	sys-libs/zlib
 	>=dev-libs/kpathsea-6.0.1_p20110627"
 DEPEND="${RDEPEND}
