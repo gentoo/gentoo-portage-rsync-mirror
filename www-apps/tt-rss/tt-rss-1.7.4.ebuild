@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.6.1.ebuild,v 1.2 2013/03/09 10:15:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.7.4.ebuild,v 1.1 2013/03/17 19:23:32 hwoarang Exp $
 
 EAPI="2"
 
@@ -29,8 +29,8 @@ pkg_setup() {
 	use postgres && require_php_with_use postgres
 
 	if use daemon; then
-		enewgroup ttrssd
-		enewuser ttrssd -1 /bin/sh /dev/null ttrssd
+			enewgroup ttrssd
+			enewuser ttrssd -1 /bin/sh /dev/null ttrssd
 	fi
 }
 
@@ -40,11 +40,11 @@ src_prepare() {
 	mv config.php{-dist,} || die "Could not rename config.php-dist to config.php."
 
 	if use mysql && ! use postgres; then
-		sed -e "/define('DB_TYPE',/{s:pgsql:mysql:}" -i config.php || die "sed failed"
+			sed -e "/define('DB_TYPE',/{s:pgsql:mysql:}" -i config.php || die "sed failed"
 	fi
 
 	sed -e "/define('DB_TYPE',/{s:// \(or mysql\):// pgsql \1:}" -i config.php \
-		|| die "sed failed"
+			|| die "sed failed"
 }
 
 src_install() {
@@ -57,17 +57,17 @@ src_install() {
 	insinto /etc/logrotate.d/
 	newins "${FILESDIR}"/ttrssd.logrotated ttrssd || die "Installing ttrssd logrotate config failed."
 
-	for DIR in cache cache/magpie cache/simplepie cache/images cache/export lock feed-icons; do
-		webapp_serverowned "${MY_HTDOCSDIR}/${DIR}"
+	for DIR in cache cache/simplepie cache/images cache/export lock feed-icons; do
+			webapp_serverowned "${MY_HTDOCSDIR}/${DIR}"
 	done
 
 	webapp_configfile "${MY_HTDOCSDIR}"/config.php
 	if use daemon; then
-		webapp_postinst_txt en "${FILESDIR}"/postinstall-en-with-daemon.txt
-		newinitd "${FILESDIR}"/ttrssd.initd ttrssd
-		newconfd "${FILESDIR}"/ttrssd.confd ttrssd
+			webapp_postinst_txt en "${FILESDIR}"/postinstall-en-with-daemon.txt
+			newinitd "${FILESDIR}"/ttrssd.initd ttrssd
+			newconfd "${FILESDIR}"/ttrssd.confd ttrssd
 	else
-		webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
+			webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 	fi
 
 	webapp_src_install

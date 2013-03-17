@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/pidgin-sipe-1.14.1.ebuild,v 1.1 2013/01/02 20:18:23 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/pidgin-sipe-1.14.1.ebuild,v 1.2 2013/03/17 19:27:42 thev00d00 Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/gmime-2.4.16
 	voice? (
 		>=dev-libs/glib-2.28.0
 		>=net-libs/libnice-0.1.0
-		media-libs/gstreamer
+		media-libs/gstreamer:0.10
 		>=net-im/pidgin-2.8.0[gnutls]
 	)
 	!voice? (
