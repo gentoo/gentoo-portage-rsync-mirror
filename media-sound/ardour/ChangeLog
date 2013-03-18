@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.110 2013/01/04 21:47:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.111 2013/03/18 12:34:30 nativemad Exp $
+
+*ardour-3.0 (18 Mar 2013)
+
+  18 Mar 2013; Andreas Schuerch <nativemad@gentoo.org> ardour-2.8.14-r1.ebuild,
+  ardour-2.8.16.ebuild, +ardour-3.0.ebuild, +files/ardour-3.0-syslibs.patch:
+  new ebuild for ardour-3.0 and slotmove and icon correction for ardour-2.0
 
   04 Jan 2013; Tim Harder <radhermit@gentoo.org>
   -files/ardour-2.8.11-soundtouch.patch, -ardour-2.8.12.ebuild,

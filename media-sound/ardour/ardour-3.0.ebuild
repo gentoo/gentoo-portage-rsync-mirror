@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.8.14-r1.ebuild,v 1.4 2013/03/18 12:34:30 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.0.ebuild,v 1.1 2013/03/18 12:34:30 nativemad Exp $
 
-EAPI=4
-inherit eutils flag-o-matic toolchain-funcs scons-utils
+EAPI=5
+inherit eutils flag-o-matic toolchain-funcs waf-utils
 
 DESCRIPTION="Digital Audio Workstation"
 HOMEPAGE="http://ardour.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-SLOT="2"
+SLOT="3"
 KEYWORDS="~amd64 ~x86"
-IUSE="altivec curl debug nls lv2 sse"
+IUSE="altivec curl debug doc nls lv2 sse"
 
 RDEPEND="media-libs/aubio
 	media-libs/liblo
@@ -46,39 +46,40 @@ RDEPEND="media-libs/aubio
 	lv2? (
 		>=media-libs/slv2-0.6.1
 		media-libs/lilv
-		media-libs/suil
+		media-libs/sratom
+		dev-libs/sord
 	)"
+
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	doc? ( app-doc/doxygen )"
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PN}-2.8.11-flags.patch \
-		"${FILESDIR}"/${P}-syslibs.patch \
-		"${FILESDIR}"/${P}-boost-150.patch
-
+	epatch "${FILESDIR}"/${P}-syslibs.patch
+	sed 's/python/python2/' -i waf
 }
 
-src_compile() {
-	local FPU_OPTIMIZATION=$($(use altivec || use sse) && echo 1 || echo 0)
+src_configure() {
 	tc-export CC CXX
 	mkdir -p "${D}"
-
-	escons \
-		DESTDIR="${D}" \
-		FPU_OPTIMIZATION="${FPU_OPTIMIZATION}" \
-		PREFIX=/usr \
-		SYSLIBS=1 \
-		$(use_scons curl FREESOUND) \
-		$(use_scons debug DEBUG) \
-		$(use_scons nls NLS) \
-		$(use_scons lv2 LV2)
+	waf-utils_src_configure \
+		--destdir="${D}" \
+		--prefix=/usr \
+		--jobs=${MAKEOPTS:2} \
+		$(use lv2 && echo "--lv2" || echo "--no-lv2") \
+		$(use nls && echo "--nls" || echo "--no-nls") \
+		$(use debug && echo "--stl-debug" && echo "--rt-alloc-debug") \
+		$((use altivec || use sse) && echo "--fpu-optimization" || echo "--no-fpu-optimization") \
+		$(use curl || echo "--no-freesound") \
+		$(use doc && echo "--docs")
+#		$(use test && echo "--test")
 }
 
 src_install() {
-	escons install
-	doman ${PN}.1
-	newicon icons/icon/ardour_icon_mac.png ${PN}.png
-	make_desktop_entry ardour2 ardour2 ardour AudioVideo
+	waf-utils_src_install
+	mv ${PN}.1 ${PN}${SLOT}.1
+	doman ${PN}${SLOT}.1
+	newicon icons/icon/ardour_icon_mac.png ${PN}${SLOT}.png
+	make_desktop_entry ardour3 ardour3 ardour3 AudioVideo
 }
