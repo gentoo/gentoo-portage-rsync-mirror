@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vim</herd>
-	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>ferret@explodingferret.com</email>
 		<description>Please Cc: James Noble (ferret on IRC, not a Gentoo

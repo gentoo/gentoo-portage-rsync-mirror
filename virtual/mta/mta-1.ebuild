@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mta/mta-1.ebuild,v 1.3 2013/03/17 20:05:48 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mta/mta-1.ebuild,v 1.4 2013/03/17 23:43:28 zx2c4 Exp $
 
 EAPI=4
 
@@ -27,5 +27,5 @@ RDEPEND="|| (	mail-mta/nullmailer
 				mail-mta/postfix
 				mail-mta/qmail-ldap
 				mail-mta/sendmail
-				mail-mta/opensmptd
+				mail-mta/opensmtpd
 				mail-mta/citadel[-postfix] )"
