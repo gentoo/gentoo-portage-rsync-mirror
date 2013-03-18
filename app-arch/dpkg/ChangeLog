@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.216 2013/03/10 16:22:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.217 2013/03/18 19:49:36 jer Exp $
+
+*dpkg-1.16.10 (18 Mar 2013)
+
+  18 Mar 2013; Jeroen Roovers <jer@gentoo.org> +dpkg-1.16.10.ebuild:
+  Version bump.
 
   10 Mar 2013; Agostino Sarubbo <ago@gentoo.org> dpkg-1.16.9.ebuild:
   Stable for s390, wrt bug #459326

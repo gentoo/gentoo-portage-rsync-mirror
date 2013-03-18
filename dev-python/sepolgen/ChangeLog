@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sepolgen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.27 2012/11/17 16:52:06 swift Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.28 2013/03/18 19:45:29 swift Exp $
+
+*sepolgen-1.1.8-r1 (18 Mar 2013)
+
+  18 Mar 2013; Sven Vermeulen <swift@gentoo.org> +sepolgen-1.1.8-r1.ebuild:
+  Fix bug #462234, change getstatusoutput with supported method
 
   17 Nov 2012; <swift@gentoo.org> sepolgen-1.1.8.ebuild:
   Stabilization

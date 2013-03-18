@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11-r2.ebuild,v 1.1 2013/03/12 21:32:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.11-r2.ebuild,v 1.2 2013/03/18 19:52:13 mgorny Exp $
 
 EAPI=5
 
@@ -83,18 +83,17 @@ src_prepare() {
 		fi
 	fi
 
+	# we need non-/bin/sh to run configure
+	[[ -n ${CONFIG_SHELL} ]] && \
+		sed -i -e "1s:^#![[:space:]]*/bin/sh:#!$CONFIG_SHELL:" \
+			"${S}"/builds/unix/configure
+
 	autotools-utils_src_prepare
 }
 
 src_configure() {
 	append-flags -fno-strict-aliasing
 	type -P gmake &> /dev/null && export GNUMAKE=gmake
-
-	# we need non-/bin/sh to run configure
-	[[ -n ${CONFIG_SHELL} ]] && \
-		sed -i -e "1s:^#![[:space:]]*/bin/sh:#!$CONFIG_SHELL:" \
-			"${S}"/builds/unix/configure
-
 
 	local myeconfargs=(
 		--enable-biarch-config
@@ -110,9 +109,7 @@ src_compile() {
 	if use utils; then
 		einfo "Building utils"
 		# fix for Prefix, bug #339334
-		# XXX: replace ${ARCH} hack when a proper solution is available
-		BUILD_DIR="${S}-${ARCH}" \
-		autotools-utils_src_compile \
+		multilib_for_best_abi autotools-utils_src_compile \
 			X11_PATH="${EPREFIX}/usr/$(get_libdir)" \
 			FT2DEMOS=1 TOP_DIR_2="${WORKDIR}/ft2demos-${PV}"
 	fi
@@ -122,13 +119,16 @@ src_install() {
 	autotools-multilib_src_install
 
 	if use utils; then
-		einfo "Installing utils"
-		rm "${WORKDIR}"/ft2demos-${PV}/bin/README || die
-		local ft2demo
-		for ft2demo in ../ft2demos-${PV}/bin/*; do
-			"${S%%/}-${ARCH}"/libtool --mode=install $(type -P install) -m 755 "$ft2demo" \
-				"${ED}"/usr/bin || die
-		done
+		install_utils() {
+			einfo "Installing utils"
+			rm "${WORKDIR}"/ft2demos-${PV}/bin/README || die
+			local ft2demo
+			for ft2demo in ../ft2demos-${PV}/bin/*; do
+				"${BUILD_DIR}"/libtool --mode=install $(type -P install) -m 755 "$ft2demo" \
+					"${ED}"/usr/bin || die
+			done
+		}
+		multilib_for_best_abi install_utils
 	fi
 
 	if use fontforge; then
