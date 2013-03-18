@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Color-Calc
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Color-Calc/ChangeLog,v 1.1 2013/03/18 11:04:34 pinkbyte Exp $
+
+*Color-Calc-1.73.0 (18 Mar 2013)
+
+  18 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> +Color-Calc-1.73.0.ebuild,
+  +metadata.xml:
+  Initial import from perl-experimental overlay with some improvements, wrt bug
+  #311031
+

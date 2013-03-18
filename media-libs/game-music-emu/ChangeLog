@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/game-music-emu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/game-music-emu/ChangeLog,v 1.12 2012/08/04 15:15:56 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/game-music-emu/ChangeLog,v 1.13 2013/03/18 11:26:11 ssuominen Exp $
+
+*game-music-emu-0.6.0 (18 Mar 2013)
+
+  18 Mar 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +game-music-emu-0.6.0.ebuild:
+  Version bump.
 
   04 Aug 2012; Jeroen Roovers <jer@gentoo.org>
   game-music-emu-0.6.0_pre20120802.ebuild:
