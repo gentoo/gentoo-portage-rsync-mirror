@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/suse-build
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.11 2012/12/17 10:02:37 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.13 2013/03/18 10:23:04 miska Exp $
+
+  18 Mar 2013; Michal Hrusecky <miska@gentoo.org>
+  -suse-build-2012.11.23.ebuild, suse-build-2013.02.27.ebuild:
+  Fast stabilization to prevent broken stable
+
+*suse-build-2013.02.27 (18 Mar 2013)
+
+  18 Mar 2013; Michal Hrusecky <miska@gentoo.org>
+  +suse-build-2013.02.27.ebuild, suse-build-9999.ebuild, metadata.xml:
+  Fixing paths (bug#446074), version update, new symlink use flag (bug#433681)
 
   17 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   -suse-build-2012.09.27.ebuild, suse-build-2012.11.23.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdf2oo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2oo/ChangeLog,v 1.10 2013/03/17 12:34:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2oo/ChangeLog,v 1.12 2013/03/18 10:20:05 kensington Exp $
+
+  18 Mar 2013; Michael Palimaka <kensington@gentoo.org> pdf2oo-20090715.ebuild:
+  Drop poppler subslot since there are no binary links.
 
   17 Mar 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   pdf2oo-20090715.ebuild:
@@ -35,4 +38,3 @@
   +metadata.xml:
   Initial commit, original ebuild by Mike Pagano in the sunrise overlay, bug
   143919
-

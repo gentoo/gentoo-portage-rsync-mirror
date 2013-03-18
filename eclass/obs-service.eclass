@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/obs-service.eclass,v 1.9 2013/01/31 09:26:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/obs-service.eclass,v 1.10 2013/03/18 10:07:44 miska Exp $
 
 # @ECLASS: obs-service.eclass
 # @MAINTAINER:
@@ -83,7 +83,7 @@ obs-service_src_prepare() {
 	debug-print-function ${FUNCNAME} "$@"
 	debug-print "Replacing all paths to find suse-build in Gentoo"
 	find "${S}" -type f -exec \
-		sed -i 's|/usr/lib/build|/usr/share/suse-build|g' {} +
+		sed -i 's|/usr/lib/build|/usr/libexec/suse-build|g' {} +
 }
 
 # @FUNCTION: obs-service_src_install
@@ -92,14 +92,14 @@ obs-service_src_prepare() {
 obs-service_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 	debug-print "Installing service \"${OBS_SERVICE_NAME}\""
-	exeinto /usr/lib/obs/service
+	exeinto /usr/libexec/obs/service
 	newexe "${S}"/${OBS_SERVICE_NAME}-${PV} ${OBS_SERVICE_NAME}
-	insinto /usr/lib/obs/service
+	insinto /usr/libexec/obs/service
 	newins "${S}"/${OBS_SERVICE_NAME}-${PV}.service ${OBS_SERVICE_NAME}.service
 	if [[ -n ${ADDITIONAL_FILES} ]]; then
 		debug-print "Installing following additional files:"
 		debug-print "	${ADDITIONAL_FILES}"
-		exeinto /usr/lib/obs/service/${OBS_SERVICE_NAME}.files
+		exeinto /usr/libexec/obs/service/${OBS_SERVICE_NAME}.files
 		for i in ${ADDITIONAL_FILES}; do
 			newexe "${S}"/${i}-${PV} ${i}
 		done

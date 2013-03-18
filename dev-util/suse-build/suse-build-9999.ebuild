@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-9999.ebuild,v 1.5 2012/10/02 11:17:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-9999.ebuild,v 1.6 2013/03/18 10:18:58 miska Exp $
 
-EAPI=4
+EAPI=5
 
 EGIT_REPO_URI="git://github.com/openSUSE/obs-build.git"
 
@@ -24,7 +24,7 @@ HOMEPAGE="https://build.opensuse.org/package/show?package=build&project=openSUSE
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+IUSE="symlink"
 [[ "${PV}" == "9999" ]] || KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
@@ -41,13 +41,15 @@ S="${WORKDIR}/${PN/suse/obs}-${PV//.}"
 src_compile() { :; }
 
 src_install() {
-	emake DESTDIR="${ED}" pkglibdir=/usr/share/suse-build install
+	emake DESTDIR="${ED}" pkglibdir=/usr/libexec/suse-build install
 	cd "${ED}"/usr
 	find bin -type l | while read i; do
 		mv "${i}" "${i/bin\//bin/suse-}"
+		use symlink && dosym "${i/bin\//suse-}" "/usr/${i}"
 	done
 	find share/man/man1 -type f | while read i; do
 		mv "${i}" "${i/man1\//man1/suse-}"
+		use symlink && dosym "${i/man1\//suse-}" "/usr/${i}"
 	done
-	find . -type f -exec sed -i 's|/usr/lib/build|/usr/share/suse-build|' {} +
+	find . -type f -exec sed -i 's|/usr/lib/build|/usr/libexec/suse-build|' {} +
 }

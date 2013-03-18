@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dahdi-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.23 2012/06/26 07:45:29 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.24 2013/03/18 10:19:55 chainsaw Exp $
+
+*dahdi-tools-2.6.2 (18 Mar 2013)
+
+  18 Mar 2013; Tony Vroon <chainsaw@gentoo.org> +dahdi-tools-2.6.2.ebuild:
+  Bugfix release, with an additional patch to fix compilation against >3.7
+  linux headers. Patches researched & forward ported by Oliver Jaksch, closes
+  bug #447896 & bug #461782.
 
   26 Jun 2012; Jeff Horelick <jdhore@gentoo.org> dahdi-tools-2.6.1.ebuild:
   marked x86 per bug 422143

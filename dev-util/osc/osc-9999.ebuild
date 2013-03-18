@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-9999.ebuild,v 1.7 2012/11/19 13:33:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-9999.ebuild,v 1.8 2013/03/18 10:26:27 miska Exp $
 
 EAPI=5
 
@@ -25,7 +25,10 @@ HOMEPAGE="http://en.opensuse.org/openSUSE:OSC"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-[[ "${PV}" == "9999" ]] || KEYWORDS="~amd64 ~x86"
+
+# Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
+[[ "${PV}" == "9999" ]] || \
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="
 	dev-python/urlgrabber
@@ -49,7 +52,8 @@ src_install() {
 	dosym osc-wrapper.py /usr/bin/osc
 	keepdir /usr/lib/osc/source_validators
 	cd "${ED}"/usr/
-	find . -type f -exec sed -i 's|/usr/bin/build|/usr/bin/suse-build|g'   {} +
-	find . -type f -exec sed -i 's|/usr/lib/build|/usr/share/suse-build|g' {} +
+	find . -type f -exec sed -i 's|/usr/bin/build|/usr/bin/suse-build|g'     {} +
+	find . -type f -exec sed -i 's|/usr/lib/build|/usr/libexec/suse-build|g' {} +
+	find . -type f -exec sed -i 's|/usr/lib/obs|/usr/libexec/obs|g'          {} +
 	rm -f "${ED}"/usr/share/doc/${PN}*/TODO*
 }
