@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.9999.ebuild,v 1.23 2013/03/12 21:22:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.9999.ebuild,v 1.24 2013/03/18 09:50:12 scarabeus Exp $
 
 EAPI=5
 
@@ -408,8 +408,8 @@ src_configure() {
 
 	# System python 2.7 enablement:
 	export PYTHON="${PYTHON}"
-	export PYTHON_CFLAGS=`pkg-config --cflags ${EPYTHON}`
-	export PYTHON_LIBS=`pkg-config --libs ${EPYTHON}`
+	export PYTHON_CFLAGS=`pkg-config --cflags python-${EPYTHON#python}`
+	export PYTHON_LIBS=`pkg-config --libs python-${EPYTHON#python}`
 
 	# system headers/libs/...: enforce using system packages
 	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster

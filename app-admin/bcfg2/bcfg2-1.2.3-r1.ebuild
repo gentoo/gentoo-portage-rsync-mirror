@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.2.2.ebuild,v 1.4 2012/06/29 06:16:32 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.2.3-r1.ebuild,v 1.1 2013/03/18 09:50:56 xmw Exp $
 
 EAPI="4"
 
@@ -26,9 +26,10 @@ RDEPEND="app-portage/gentoolkit
 	cheetah? ( dev-python/cheetah )
 	genshi? ( dev-python/genshi )
 	server? (
-		virtual/fam
+		dev-libs/libgamin[python]
 		dev-python/lxml
-		dev-libs/libgamin[python] )"
+		dev-python/nose
+		virtual/fam )"
 
 PYTHON_MODNAME="Bcfg2"
 

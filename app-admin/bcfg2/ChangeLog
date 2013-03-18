@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/bcfg2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/ChangeLog,v 1.28 2013/03/17 15:30:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/ChangeLog,v 1.30 2013/03/18 09:53:41 xmw Exp $
+
+  18 Mar 2013; Michael Weber <xmw@gentoo.org> -bcfg2-1.2.2.ebuild,
+  -bcfg2-1.2.2-r1.ebuild:
+  Drop old versions
+
+*bcfg2-1.2.3-r1 (18 Mar 2013)
+
+  18 Mar 2013; Michael Weber <xmw@gentoo.org> +bcfg2-1.2.3-r1.ebuild:
+  Revbump to include dev-python/nose RDEPEND (thanks Alexandr Tiurin, bug
+  447396)
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
