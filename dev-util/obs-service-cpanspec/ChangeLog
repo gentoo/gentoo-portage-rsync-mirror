@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/obs-service-cpanspec
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-cpanspec/ChangeLog,v 1.4 2012/11/15 19:54:29 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-cpanspec/ChangeLog,v 1.6 2013/03/18 10:40:03 miska Exp $
+
+  18 Mar 2013; Michal Hrusecky <miska@gentoo.org>
+  -obs-service-cpanspec-20101129.ebuild, obs-service-cpanspec-20130318.ebuild:
+  Fast stabilization to minimize broken stable
+
+*obs-service-cpanspec-20130318 (18 Mar 2013)
+
+  18 Mar 2013; Michal Hrusecky <miska@gentoo.org>
+  +obs-service-cpanspec-20130318.ebuild:
+  Version bump to force reinstall with new paths (bug#446074)
 
   15 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org>
   obs-service-cpanspec-20101129.ebuild:
