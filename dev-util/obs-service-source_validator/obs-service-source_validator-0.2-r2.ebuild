@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-source_validator/obs-service-source_validator-0.2-r1.ebuild,v 1.1 2012/11/19 13:16:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-source_validator/obs-service-source_validator-0.2-r2.ebuild,v 1.2 2013/03/18 11:39:34 miska Exp $
 
 EAPI=5
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-4.0.9.ebuild,v 1.6 2012/05/21 09:37:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-4.0.9.ebuild,v 1.7 2013/03/18 11:40:19 kensington Exp $
 
 EAPI=4
 KDE_LINGUAS="bs cs de el es fr hu it ja lt nl pl pt ru sl sv tr uk zh_CN"
@@ -23,6 +23,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+PATCHES=( "${FILESDIR}/${P}-freetype-include.patch" )
 DOCS=( AUTHORS README TODO )
 
 src_configure() {
