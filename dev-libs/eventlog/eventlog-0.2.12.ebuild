@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/eventlog-0.2.12.ebuild,v 1.8 2010/09/13 03:14:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/eventlog-0.2.12.ebuild,v 1.9 2013/03/18 14:52:33 mr_bones_ Exp $
 
 EAPI=2
 inherit libtool eutils
@@ -17,7 +17,6 @@ IUSE="static-libs"
 DEPEND=""
 
 src_prepare() {
-	epunt_cxx
 	elibtoolize
 }
 

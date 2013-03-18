@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eventlog
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.49 2010/09/13 03:14:19 josejx Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.50 2013/03/18 14:52:33 mr_bones_ Exp $
+
+  18 Mar 2013; Michael Sterrett <mr_bones_@gentoo.org> eventlog-0.2.12.ebuild:
+  remove unnecessary epunt_cxx (bug #462156)
 
   13 Sep 2010; Joseph Jezak <josejx@gentoo.org> eventlog-0.2.12.ebuild:
   Marked ppc stable for bug #332327.
@@ -173,4 +176,3 @@
   02 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +eventlog-0.2.4.ebuild:
   initial commit
-
