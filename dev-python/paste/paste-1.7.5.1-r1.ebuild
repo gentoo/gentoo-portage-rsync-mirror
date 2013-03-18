@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/paste-1.7.5.1-r1.ebuild,v 1.2 2013/03/15 04:12:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/paste-1.7.5.1-r1.ebuild,v 1.3 2013/03/17 23:19:59 floppym Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ python_prepare_all() {
 }
 
 python_compile_all() {
-	"${PYTHON}" setup.py build || die
+	use doc && esetup.py build_sphinx
 }
 
 python_test() {
@@ -56,6 +56,6 @@ python_test() {
 }
 
 python_install_all() {
-	use doc && local HTML_DOCS=( build/sphinx/html/. )
+	use doc && local HTML_DOCS=( "${BUILD_DIR}"/sphinx/html/. )
 	distutils-r1_python_install_all
 }

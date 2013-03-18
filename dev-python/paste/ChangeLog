@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/paste
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.19 2013/03/15 04:12:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.20 2013/03/17 23:19:59 floppym Exp $
+
+  17 Mar 2013; Mike Gilbert <floppym@gentoo.org> paste-1.7.5.1-r1.ebuild:
+  Actually make things work; docs should only be built with USE=doc, and they
+  are output in BUILD_DIR.
 
   15 Mar 2013; Patrick Lauer <patrick@gentoo.org> paste-1.7.5.1-r1.ebuild:
   Make things work
