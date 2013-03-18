@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-4.0.1.ebuild,v 1.1 2013/03/18 13:10:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-4.0.1.ebuild,v 1.2 2013/03/18 17:35:47 jlec Exp $
 
 EAPI=5
 
@@ -48,23 +48,16 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
-PATCHES=(
-	"${FILESDIR}"/${P}-hunspell.patch
-	)
+PATCHES=( "${FILESDIR}"/${P}-hunspell.patch )
+
+DOCS=( utilities/AUTHORS utilities/CHANGELOG.txt )
+
 src_configure() {
 	eqmake4 \
 		${PN}.pro \
-		PREFIX="${EPREFIX}"/usr \
-		DESKTOPDIR=/usr/share/applications \
-		ICONDIR=/usr/share/pixmaps
-}
-
-src_install() {
-	emake INSTALL_ROOT="${ED}" install
-
-	doicon utilities/texmaker*.png utilities/texmaker.svg
-
-	dodoc utilities/AUTHORS utilities/CHANGELOG.txt
+		PREFIX="${EPREFIX}/usr" \
+		DESKTOPDIR="${EPREFIX}/usr/share/applications" \
+		ICONDIR="${EPREFIX}/usr/share/pixmaps"
 }
 
 pkg_postinst() {

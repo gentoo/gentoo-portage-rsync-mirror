@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.43 2013/03/01 23:16:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.44 2013/03/18 17:49:55 polynomial-c Exp $
+
+*g15daemon-1.9.5.3-r8 (18 Mar 2013)
+
+  18 Mar 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -g15daemon-1.9.5.3-r6.ebuild, g15daemon-1.9.5.3-r7.ebuild,
+  +g15daemon-1.9.5.3-r8.ebuild, files/g15daemon-1.9.5.3.initd:
+  Non-maintainer commit. Fixed module loading logic. Moved ebuild with g510
+  support to -r8.
 
 *g15daemon-1.9.5.3-r7 (01 Mar 2013)
 

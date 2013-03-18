@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/python-uinput
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-uinput/ChangeLog,v 1.1 2013/03/18 17:43:50 chutzpah Exp $
+
+*python-uinput-0.9 (18 Mar 2013)
+
+  18 Mar 2013; Patrick McLean <chutzpah@gentoo.org> +python-uinput-0.9.ebuild:
+  New package python-uinput
+

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/files/g15daemon-1.9.5.3.initd,v 1.1 2013/03/01 23:16:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/files/g15daemon-1.9.5.3.initd,v 1.2 2013/03/18 17:49:55 polynomial-c Exp $
 
 # Init script for g15daemon
 
@@ -19,7 +19,7 @@ depend() {
 start_pre() {
 	# Does the input device already exist?
 	if [ -e "/proc/modules" ] ; then
-		if [ ! -e "/dev/input/uinput" ] || [ ! -e "/dev/uinput" ] ; then
+		if [ ! -e "/dev/input/uinput" ] && [ ! -e "/dev/uinput" ] ; then
 			# We can load modules, but uinput device does not exist
 			einfo "Loading uinput module"
 			/sbin/modprobe uinput > /dev/null 2> /dev/null
