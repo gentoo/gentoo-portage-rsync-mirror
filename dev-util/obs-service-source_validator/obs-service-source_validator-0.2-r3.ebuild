@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-source_validator/obs-service-source_validator-0.2-r2.ebuild,v 1.2 2013/03/18 11:39:34 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-source_validator/obs-service-source_validator-0.2-r3.ebuild,v 1.2 2013/03/18 13:51:26 miska Exp $
 
 EAPI=5
 
@@ -21,14 +21,14 @@ src_unpack() {
 
 src_install() {
 	# different folder and files in this module
-	exeinto /usr/lib/obs/service
+	exeinto /usr/libexec/obs/service
 	doexe ${OBS_SERVICE_NAME}
 
-	insinto /usr/lib/obs/service
+	insinto /usr/libexec/obs/service
 	doins ${OBS_SERVICE_NAME}.service
 
-	exeinto /usr/lib/obs/service/${OBS_SERVICE_NAME}s
+	exeinto /usr/libexec/obs/service/${OBS_SERVICE_NAME}s
 	doexe [0-9]*
-	exeinto /usr/lib/obs/service/${OBS_SERVICE_NAME}s/helpers/
+	exeinto /usr/libexec/obs/service/${OBS_SERVICE_NAME}s/helpers/
 	doexe helpers/*
 }
