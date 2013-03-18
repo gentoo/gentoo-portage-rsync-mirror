@@ -1,6 +1,26 @@
 # ChangeLog for dev-lang/python
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.627 2012/12/19 18:03:41 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.631 2013/03/18 19:16:14 ago Exp $
+
+  18 Mar 2013; Agostino Sarubbo <ago@gentoo.org> python-2.5.4-r5.ebuild,
+  python-2.6.8-r1.ebuild, python-2.7.3-r3.ebuild, python-3.1.5-r1.ebuild,
+  python-3.2.3-r2.ebuild:
+  Stable for ppc64, wrt bug #458318
+
+  18 Mar 2013; Agostino Sarubbo <ago@gentoo.org> python-2.5.4-r5.ebuild,
+  python-2.6.8-r1.ebuild, python-2.7.3-r3.ebuild, python-3.1.5-r1.ebuild,
+  python-3.2.3-r2.ebuild:
+  Stable for ppc, wrt bug #458318
+
+  18 Mar 2013; Agostino Sarubbo <ago@gentoo.org> python-2.5.4-r5.ebuild,
+  python-2.6.8-r1.ebuild, python-2.7.3-r3.ebuild, python-3.1.5-r1.ebuild,
+  python-3.2.3-r2.ebuild:
+  Stable for x86, wrt bug #458318
+
+  18 Mar 2013; Agostino Sarubbo <ago@gentoo.org> python-2.5.4-r5.ebuild,
+  python-2.6.8-r1.ebuild, python-2.7.3-r3.ebuild, python-3.1.5-r1.ebuild,
+  python-3.2.3-r2.ebuild:
+  Stable for amd64, wrt bug #458318
 
   19 Dec 2012; Mike Gilbert <floppym@gentoo.org> python-2.5.4-r5.ebuild,
   python-2.6.8-r1.ebuild, python-2.7.3-r3.ebuild, python-3.1.5-r1.ebuild,
