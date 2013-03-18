@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vim</herd>
-	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>degrenier@easyconnect.fr</email>
 		<description>Please Cc: Thomas de Grenier de Latour (not a Gentoo

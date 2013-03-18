@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/vagrant-1.0.5.ebuild,v 1.1 2012/09/21 00:14:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/vagrant-1.0.7.ebuild,v 1.1 2013/03/18 01:39:29 radhermit Exp $
 
-EAPI="4"
+EAPI="5"
 USE_RUBY="ruby18 ruby19"
 
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"
@@ -14,6 +14,7 @@ inherit ruby-fakegem
 
 DESCRIPTION="A tool for building and distributing virtual machines using VirtualBox"
 HOMEPAGE="http://vagrantup.com/"
+SRC_URI="https://github.com/mitchellh/vagrant/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -48,12 +49,9 @@ all_ruby_prepare() {
 	rm Gemfile || die
 
 	# loosen unslotted dependencies
-	sed -i -e '/childprocess\|erubis\|json\|log4r\|net-scp\|net-ssh/s/~>/>=/' \
+	sed -e '/childprocess\|erubis\|log4r\|net-scp\|net-ssh/s/~>/>=/' \
 		-e '/archive-tar-minitar/s/=/>=/' \
-		${PN}.gemspec || die
-
-	# avoid calling git
-	sed -i '/git ls-files/d' ${PN}.gemspec || die
+		-i ${PN}.gemspec || die
 }
 
 pkg_postinst() {
