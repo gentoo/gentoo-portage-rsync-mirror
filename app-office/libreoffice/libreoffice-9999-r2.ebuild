@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.166 2013/03/18 09:50:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.167 2013/03/18 18:59:00 scarabeus Exp $
 
 EAPI=5
 
@@ -81,7 +81,6 @@ LO_EXTS="nlpsolver presenter-minimizer scripting-beanshell scripting-javascript 
 # numbertext, typo, validator, watch-window: ^^
 # oooblogger: no homepage or anything
 # Extensions that need extra work:
-# report-builder: missing java packages
 for lo_xt in ${LO_EXTS}; do
 	IUSE+=" libreoffice_extensions_${lo_xt}"
 done
@@ -426,7 +425,7 @@ src_configure() {
 	#   promote it
 	# --enable-extension-integration: enable any extension integration support
 	# --without-{afms,fonts,myspell-dicts,ppsd}: prevent install of sys pkgs
-	# --disable-ext-report-builder: too much java packages pulled in
+	# --disable-report-builder: too much java packages pulled in without pkgs
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}/" \
 		--with-system-headers \
@@ -450,7 +449,7 @@ src_configure() {
 		--disable-fetch-external \
 		--disable-gnome-vfs \
 		--disable-gstreamer-0-10 \
-		--disable-ext-report-builder \
+		--disable-report-builder \
 		--disable-kdeab \
 		--disable-kde \
 		--disable-online-update \

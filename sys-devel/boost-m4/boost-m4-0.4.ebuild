@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/boost-m4-0.3.ebuild,v 1.2 2013/03/05 21:40:46 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/boost-m4-0.4.ebuild,v 1.1 2013/03/18 18:47:36 binki Exp $
 
 EAPI=4
 
