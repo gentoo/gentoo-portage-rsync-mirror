@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14561 2013/03/17 19:37:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.14562 2013/03/18 05:43:18 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (18 Mar 2013)
+# Masked for testing
+=app-emulation/vagrant-1.1*
 
 # Markos Chandras <hwoarang@gentoo.org> (17 Mar 2013)
 # module is included in the mainline kernel.
