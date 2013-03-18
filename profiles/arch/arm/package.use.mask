@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.129 2013/03/02 20:45:51 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.130 2013/03/18 07:01:20 ago Exp $
+
+# Agostino Sarubbo <ago@gentoo.org> (18 Mar 2013)
+# Mask java because of bug #461108 comment #7
+dev-libs/xapian-bindings java
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (20 Feb 2013)
 # Mask flags of calligra and dependencies due to lack of keywords
