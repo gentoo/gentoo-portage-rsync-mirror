@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-2.0.3.ebuild,v 1.2 2013/03/02 23:12:08 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-2.0.3.ebuild,v 1.3 2013/03/18 21:25:44 williamh Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ if [[ ${PV} == "9999" ]]; then
 	inherit git-2
 else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-	KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+	KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 fi
 
 inherit eutils
