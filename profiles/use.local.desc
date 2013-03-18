@@ -2482,6 +2482,7 @@ kde-base/marble:designer-plugin - Enable designer plugin
 kde-base/marble:shapefile - Enable support for ESRI shapefiles
 kde-base/okular:chm - Enable support for Microsoft Compiled HTML Help files
 kde-base/okular:ebook - Add E-Book support
+kde-base/oxygen-icons:bindist - Additionally install the svg sources of the bitmap icons (needed for redistribution)
 kde-base/perlkde:akonadi - Compile bindings for Akonadi.
 kde-base/perlkde:attica - Compile bindings for dev-libs/libattica.
 kde-base/perlkde:kate - Compile bindings for KDE Advanced Text Editor.

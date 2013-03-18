@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.24 2013/03/18 21:28:11 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.25 2013/03/18 22:50:12 floppym Exp $
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit multilib toolchain-funcs
 
 if [[ ${PV} != 9999 ]]; then
 	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
@@ -40,5 +40,6 @@ src_install() {
 		DESTDIR="${D}" \
 		prefix=/usr \
 		bindir=/sbin \
+		libdir=/usr/$(get_libdir) \
 		mandir=/usr/share/man
 }
